@@ -19,7 +19,7 @@ l10n:
 ## メソッド
 
 - {{domxref("Storage.key()")}}
-  - : 数値 `n`` を渡すと、ストレージ内で n 番目のキーの名称を返します。
+  - : 数値 n を渡すと、ストレージ内で n 番目のキーの名称を返します。
 - {{domxref("Storage.getItem()")}}
   - : キーの名称を渡すと、キーに対する値を返します。
 - {{domxref("Storage.setItem()")}}
@@ -63,7 +63,8 @@ function setStyles() {
 }
 ```
 
-> **メモ:** 完全に動作する例として実行する様子を見るために、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
+> [!NOTE]
+> 完全に動作する例として実行する様子を見るために、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
 
 ## 仕様書
 

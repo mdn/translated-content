@@ -39,9 +39,9 @@ Content-Security-Policy: script-src <source> <source>;
 
 ### ソース
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#ソース)にあるいずれかの値を取ることができます。
+`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#関連ディレクティブ)）で使用できます。
+なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
 
 ## 例
 
@@ -76,7 +76,7 @@ document.getElementById("btn").addEventListener("click", doSomething);
 
 ### 安全ではないインラインスクリプト
 
-> **メモ:**
+> [!NOTE]
 > インラインスタイルとインラインスクリプトを禁止することは、CSP が提供するセキュリティ上の最大の利点の一つです。
 > どうしても使用しなければならない場合は、それらを許可する仕組みがいくつかあります。
 > ハッシュはインラインのスクリプトやスタイルに適用されますが、イベントハンドラーには適用されません。

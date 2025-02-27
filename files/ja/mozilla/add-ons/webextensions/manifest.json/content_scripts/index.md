@@ -31,7 +31,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
   </tbody>
 </table>
 
-与えられたパターンに URL がマッチしているページに[コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)をロードすることをブラウザに教えます。
+与えられたパターンに URL がマッチしているページに[コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)をロードすることをブラウザーに教えます。
 
 このキーは配列です。それぞれのアイテムは以下の条件を満たすオブジェクトです:
 
@@ -309,8 +309,8 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 
 - `matches`: [マッチパターン](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)の配列
 - `exclude_matches:` [マッチパターン](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)の配列
-- `include_globs`: [globs](/ja/Add-ons/WebExtensions/manifest.json/content_scripts#globs) の配列
-- `exclude_globs:` [globs](/ja/Add-ons/WebExtensions/manifest.json/content_scripts#globs) の配列
+- `include_globs`: [globs](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#globs) の配列
+- `exclude_globs:` [globs](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#globs) の配列
 
 これらのプロパティにマッチするには、URL は配列内で少なくとも 1 つの項目にマッチしなければなりません。例えばこのようなプロパティが与えられたら:
 
@@ -365,4 +365,4 @@ glob は単にワイルドカードを含むことのある文字列です。ワ
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.content_scripts")}}
+{{Compat}}

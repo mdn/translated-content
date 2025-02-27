@@ -30,7 +30,7 @@ WWW-Authenticate: <type> realm=<realm>
 ## Directives
 
 - \<type>
-  - : [Type d'authentification](/fr/docs/Web/HTTP/Authentication#Authentication_schemes). Un type commun est ["Basic"](/fr/docs/Web/HTTP/Authentication#Basic_authentication_scheme). IANA maintient une [liste des schémas d'authentification](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
+  - : [Type d'authentification](/fr/docs/Web/HTTP/Authentication#authentication_schemes). Un type commun est ["Basic"](/fr/docs/Web/HTTP/Authentication#basic_authentication_scheme). IANA maintient une [liste des schémas d'authentification](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
 - realm=\<realm>
   - : Une description de la zone protégée. Si aucun domaine n'est spécifié, les clients affichent souvent un nom de domaine formaté à la place.
 - charset=\<charset>

@@ -7,13 +7,13 @@ slug: Web/CSS/gradient
 
 ## Resumen
 
-El tipo de datos [CSS](/es/docs/CSS) `<gradient>` indica un tipo de {{cssxref("&lt;image&gt;")}} que consiste de una transición progresiva entre dos o más colores (Degradado).
+El tipo de datos [CSS](/es/docs/Web/CSS) `<gradient>` indica un tipo de {{cssxref("&lt;image&gt;")}} que consiste de una transición progresiva entre dos o más colores (Degradado).
 
 {{EmbedInteractiveExample("pages/css/type-gradient.html")}}
 
 Un gradiente de CSS no es un {{cssxref("&lt;color&gt;")}} pero tampoco es una imagen con [dimensiones intrínsecas](/es/docs/Web/CSS/image#no_intrinsic); es decir, que no tiene tamaño natural o preferido, ni una relación preferida. Su tamaño concreto coincidirá con los elementos a los que se aplica.
 
-**Funciones de las Gradientes**
+## Funciones de las Gradientes
 
 Hay tres tipos de gradientes de color:
 
@@ -143,4 +143,4 @@ Cada tipo de gradiente tiene una matriz de compatibilidad diferente. Por favor, 
 
 ## Ver también
 
-- [Usando Gradientes CSS](/es/docs/CSS/Using_CSS_gradients), {{cssxref("&lt;gradient&gt;")}}, {{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}
+- [Usando Gradientes CSS](/es/docs/Web/CSS/CSS_images/Using_CSS_gradients), {{cssxref("&lt;gradient&gt;")}}, {{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}

@@ -9,12 +9,14 @@ slug: Web/API/AudioScheduledSourceNode/stop
 
 每次在同一个节点上调用 `stop()` 时，指定的时间将替换任何未发生的计划停止时间。如果节点已经停止，则此方法无效。
 
-> **备注：** 如果计划的停止时间发生在节点计划的开始时间之前，则节点永远不会开始运行。
+> [!NOTE]
+> 如果计划的停止时间发生在节点计划的开始时间之前，则节点永远不会开始运行。
 
 ## 语法
 
-```
-AudioScheduledSourceNode.stop([when]);
+```js-nolint
+stop()
+stop(when)
 ```
 
 ### 参数
@@ -58,7 +60,7 @@ osc.stop(context.currentTime + 1);
 
 ## See also
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - {{domxref("AudioScheduledSourceNode.start", "start()")}}
 - {{domxref("AudioScheduledSourceNode")}}
 - {{domxref("AudioBufferSourceNode")}}

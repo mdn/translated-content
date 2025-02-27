@@ -1,6 +1,8 @@
 ---
 title: "<img> : l'élément d'image embarquée"
 slug: Web/HTML/Element/img
+l10n:
+  sourceCommit: 93b34fcdb9cf91ff44f5dfe7f4dcd13e961962da
 ---
 
 {{HTMLSidebar}}
@@ -12,19 +14,19 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<img>`** permet d'intégrer une image d
 L'exemple qui précède illustre l'utilisation de l'élément `<img>`&nbsp;:
 
 - L'attribut `src` est **obligatoire**, et contient le chemin vers l'image qu'on veut intégrer.
-- L'attribut `alt` contient une description textuelle de l'image, ce qui n'est pas obligatoire mais **extrêmement utile** pour l'accessibilité. En effet, les outils de lecture d'écran utilisent cette description pour la lire afin que les personnes sachent ce que l'image représente. Ce texte alternatif sera également affiché sur la page si l'image ne peut pas être chargée (par exemple s'il y a des erreurs réseau, du blocage de contenu ou un lien périmé).
+- L'attribut `alt` est obligatoire et contient une description textuelle de l'image, ce qui est **extrêmement utile**. En effet, les outils de lecture d'écran utilisent cette description pour la lire afin que les personnes sachent ce que l'image représente. Ce texte alternatif sera également affiché sur la page si l'image ne peut pas être chargée (par exemple s'il y a des erreurs réseau, du blocage de contenu ou un lien périmé).
 
 Il existe de nombreux autres attributs&nbsp;:
 
 - Le contrôle du [référent](/fr/docs/Web/HTTP/Headers/Referrer-Policy) et de la politique de gestion des ressources d'origines multiples ([CORS](/fr/docs/Glossary/CORS)) avec les attributs `crossorigin` et `referrerpolicy`.
-- `width` et `height` qui permettent de définir la taille intrinsèque de l'image, lui permettant ainsi de prendre l'espace nécessaire avant son chargement (évitant ainsi d'avoir des décalages indésirables lors du chargement de la page).
-- Des indications <i lang="en">responsives</i> avec `sizes` et `srcset` (voir également l'élément [`<picture>`](/fr/docs/Web/HTML/Element/picture) et [le tutoriel sur les images adaptatives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)).
+- [`width`](#width) et [`height`](#height) qui permettent de définir la taille intrinsèque de l'image, lui permettant ainsi de prendre l'espace nécessaire avant son chargement (évitant ainsi d'avoir des décalages indésirables lors du chargement de la page).
+- Des indications <i lang="en">responsives</i> avec [`sizes`](#sizes) et [`srcset`](#srcset) (voir également l'élément [`<picture>`](/fr/docs/Web/HTML/Element/picture) et [le tutoriel sur les images adaptatives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)).
 
 ## Formats d'image pris en charge
 
 Le standard HTML n'indique pas les formats d'image qui doivent être pris en charge, les agents utilisateurs peuvent prendre en charge différents formats.
 
-> **Note :** [Le guide sur les types de fichier et formats d'image](/fr/docs/Web/Media/Formats/Image_types) contient de nombreuses informations sur les formats d'image et leur prise en charge dans les navigateurs. La section qui suit n'est qu'un résumé&nbsp;!
+> [!NOTE] [Le guide sur les types de fichier et formats d'image](/fr/docs/Web/Media/Formats/Image_types) contient de nombreuses informations sur les formats d'image et leur prise en charge dans les navigateurs. La section qui suit n'est qu'un résumé&nbsp;!
 
 Les formats d'image qu'on rencontre le plus fréquemment sur le Web sont&nbsp;:
 
@@ -42,7 +44,7 @@ SVG reste le format recommandé pour les images qui doivent être dessinées ave
 
 ## Erreur de chargement d'une image
 
-Si une erreur se produit lors du chargement ou du rendu de l'image et qu'un gestionnaire d'évènement [`onerror`](/fr/docs/Web/HTML/Global_attributes#onerror) a été défini pour intercepter l'évènement [`error`](/fr/docs/Web/API/Element/error_event), le gestionnaire sera appelé. Cela peut arriver pour plusieurs raisons&nbsp;:
+Si une erreur se produit lors du chargement ou du rendu de l'image et qu'un gestionnaire d'évènement `onerror` a été défini pour intercepter l'évènement [`error`](/fr/docs/Web/API/HTMLElement/error_event), le gestionnaire sera appelé. Cela peut arriver pour plusieurs raisons&nbsp;:
 
 - L'attribut `src` est vide (`""`) ou absent (`null` pour le DOM).
 - L'URL utilisée pour l'attribut `src` est la même que celle de la page courante.
@@ -58,7 +60,8 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
   - : Définit une description textuelle alternative pour l'image.
 
-    > **Note :** Il se peut que les navigateurs n'affichent pas l'image, cela peut se produire si&nbsp;:
+    > [!NOTE]
+    > Il se peut que les navigateurs n'affichent pas l'image, cela peut se produire si&nbsp;:
     >
     > - Le navigateur n'est pas doté d'une interface visuelle
     > - La personne a configuré son navigateur pour ne pas afficher les images (afin d'économiser de la bande passante ou pour des raisons de vie privée)
@@ -66,9 +69,38 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     >
     > Dans ces situations, le navigateur peut remplacer l'image avec le texte fourni par cet attribut. Aussi, il est grandement préférable de fournir une valeur utile pour `alt` dès que possible.
 
-    L'absence totale d'attribut `alt` indique que l'image n'est pas importante pour le contenu et qu'aucun équivalent textuel n'est disponible. Utiliser la chaîne de caractères vide comme valeur pour cet attribut (`alt=""`) indique que cette image _n'est pas_ importante pour le contenu (par exemple une décoration ou un pixel de pistage), dans ce cas, les navigateurs non-visuels peuvent ne pas la traiter pour le rendu. Les navigateurs visuels masqueront l'icône de l'image cassée si `alt` est vide et que le chargement de l'image a échoué.
+    Utiliser la chaîne de caractères vide comme valeur pour cet attribut (`alt=""`) indique que cette image _n'est pas_ importante pour le contenu (par exemple une décoration ou un pixel de pistage), dans ce cas, les navigateurs non-visuels peuvent ne pas la traiter pour le rendu. Les navigateurs visuels masqueront l'icône de l'image cassée si `alt` est vide et que le chargement de l'image a échoué.
 
     Cet attribut est également utilisé pour copier/coller l'image vers du texte ou pour enregistrer un marque-page avec l'image associée.
+
+- `attributionsrc` {{experimental_inline}}
+
+  - : Indique au navigateur d'envoyer un en-tête [`Attribution-Reporting-Eligible`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Eligible) avec la requête pour l'image.
+
+    Côté serveur, cela sert à déclencher l'envoi d'un en-tête [`Attribution-Reporting-Register-Source`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source) ou [`Attribution-Reporting-Register-Trigger`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger) dans la réponse afin d'enregistrer une [source d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources) ou [un déclencheur d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers). L'en-tête de réponse renvoyé dépend de la valeur de l'en-tête `Attribution-Reporting-Eligible` ayant déclenché l'enregistrement.
+
+    La source ou le déclencheur correspondant est éteint lorsque le navigateur reçoit la réponse contenant le fichier image.
+
+    > [!NOTE]
+    > Voir [l'API sur les rapports d'attribution](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
+
+    Il existe deux versions de cet attribut&nbsp;:
+
+    - Une forme booléenne (c'est-à-dire l'utilisation du nom `attributionsrc` seul) qui indique qu'on souhaite envoyer l'en-tête [`Attribution-Reporting-Eligible`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Eligible) au même serveur que celui vers lequel pointe l'attribut `src`. Cela fonctionne quand la source d'attribution ou le déclencheur d'enregistrement sont gérés sur le même serveur. Lors de l'enregistrement d'un déclencheur d'attribution, cette propriété est optionnelle et une valeur booléenne sera utilisée si elle est absente.
+    - Une valeur contenant une ou plusieurs URL, comme&nbsp;:
+
+    ```html
+    <img
+      src="image-file.png"
+      alt="Ma description d'image"
+      attributionsrc="https://a.example/register-source
+                         https://b.example/register-source" />
+    ```
+
+    Cette forme s'avère utile lorsque la ressource demandée n'est pas située sur un serveur que vous contrôler, ou si vous souhaitez gérer l'enregistrement de la source d'attribution sur un serveur différent. Dans ce cas, on indique une ou plusieurs URL pour la valeur de `attributionsrc`. Lorsque la requête pour la ressource est émise, l'en-tête [`Attribution-Reporting-Eligible`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Eligible) sera envoyé aux URL indiquées dans `attributionSrc`, ainsi qu'à l'origine de la ressource. Ces URL pourront ensuite répondre avec un en-tête [`Attribution-Reporting-Register-Source`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source) ou [`Attribution-Reporting-Register-Trigger`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger) afin de finaliser l'enregistrement.
+
+    > [!NOTE]
+    > Indiquer plusieurs URL signifie que plusieurs sources d'attribution peuvent être enregistrées pour la même fonctionnalité. On peut par exemple avoir plusieurs campagnes dont on souhaite mesurer les performances, via différents rapports sur différentes données.
 
 - `crossorigin`
 
@@ -98,17 +130,38 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     - `auto`
       - : La valeur par défaut qui indique qu'il n'y a pas de préférence. C'est le navigateur qui décide alors ce qui est le mieux.
 
+- [`elementtiming`](/fr/docs/Web/HTML/Attributes/elementtiming)
+
+  - : Indique que l'image doit être observée par l'API [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming). La valeur fournie devient un identifiant pour l'élément observé. Voir aussi la page de l'atttribut [`elementtiming`](/fr/docs/Web/HTML/Attributes/elementtiming).
+
+- `fetchpriority`
+
+  - : Fournit une indication de la priorité relative à utiliser pour la récupération de l'image. Les valeurs autorisées sont&nbsp;:
+
+    - `high`
+      - : L'image est récupérée avec une priorité plus élevée que les autres images.
+    - `low`
+      - : L'image est récupérée avec une priorité plus faible que les autres images.
+    - `auto`
+      - : La valeur par défaut. Il n'y a pas de préférence pour la priorité.
+
+    Voir [`HTMLImageElement.fetchPriority`](/fr/docs/Web/API/HTMLImageElement/fetchPriority) pour plus d'informations.
+
 - `height`
 
   - : La hauteur intrinsèque de l'image, exprimée en pixels. Cette valeur doit être un nombre entier, sans unité.
+
+    > [!NOTE]
+    > Inclure `height` et [`width`](#width) permet au navigateur de calculer les proportions de l'image avant son chargement. Ces proportions sont utilisées pour réserver l'espace nécessaire afin d'afficher l'image et de réduire voire d'empêcher tout décalage à l'affichage, permettant ainsi une navigation plus agréable et de meilleures performances.
 
 - `ismap`
 
   - : Cet attribut booléen indique que l'image fait partie d'une [carte côté serveur](https://en.wikipedia.org/wiki/Image_map#Server-side). Dans ce cas, les coordonnées du clic sur l'image sont envoyés au serveur.
 
-    > **Note :** Cet attribut est uniquement autorisé lorsque l'élément `<img>` est un descendant d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) disposant d'un attribut `href` valide. Cela fournit une alternative lorsque la navigation se fait sans dispositif de pointage.
+    > [!NOTE]
+    > Cet attribut est uniquement autorisé lorsque l'élément `<img>` est un descendant d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) disposant d'un attribut `href` valide. Cela fournit une alternative lorsque la navigation se fait sans dispositif de pointage.
 
-- `loading` {{experimental_inline}}
+- `loading`
 
   - : Indique comment le navigateur devrait charger l'image&nbsp;:
 
@@ -118,7 +171,11 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
       - : Le chargement de l'image est retardé jusqu'à ce que celle-ci soit située à une certaine distance, définie par le navigateur, de la zone d'affichage. L'idée est d'éviter de consommer de la bande passante et des ressources réseaux avant d'être relativement certain que l'image est nécessaire. Pour la plupart des cas d'usage, cela permet d'améliorer les performances.
 
-      > **Note :** Le retardement du chargement est uniquement activé lorsque JavaScript est activé dans le navigateur. Il s'agit d'une mesure pour limiter le pistage. En effet, si les scripts sont désactivés pour le navigateur et que le chargement retardé est actif, le pistage d'un utilisateur en fonction de sa position sur la page serait toujours possible (via des images placées à intervalle régulier sur la page).
+      > [!NOTE]
+      > Le retardement du chargement est uniquement activé lorsque JavaScript est activé dans le navigateur. Il s'agit d'une mesure pour limiter le pistage. En effet, si les scripts sont désactivés pour le navigateur et que le chargement retardé est actif, le pistage d'un utilisateur en fonction de sa position sur la page serait toujours possible (via des images placées à intervalle régulier sur la page).
+
+      > [!NOTE]
+      > Les images avec `loading` qui vaut `lazy` ne seront jamais chargées si elles n'ont pas d'intersection avec une partie visible d'un élément. Fournir les attributs `width` et `height` pour les images chargées à la demande règle ce problème et est [recommandé par la spécification](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element).
 
 - `referrerpolicy`
 
@@ -129,7 +186,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     - `no-referrer-when-downgrade`
       - : L'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) ne sera pas envoyé aux origines sans TLS/HTTPS.
     - `origin`:
-      - : Le référent envoyé sera limité à l'origine de la page référente, c'est-à-dire qu'il ne contiendra que le [schéma, l'hôte et le port](/fr/docs/Learn/Common_questions/What_is_a_URL).
+      - : Le référent envoyé sera limité à l'origine de la page référente, c'est-à-dire qu'il ne contiendra que le [schéma, l'hôte et le port](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL).
     - `origin-when-cross-origin`
       - : Le référent envoyé aux autres origines sera limité au schéma, à l'hôte et au port. La navigation vers la même origine contiendra le chemin.
     - `same-origin`
@@ -145,7 +202,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
   - : Une ou plusieurs chaînes de caractères séparées par des virgules et qui indiquent un ensemble de tailles de source possible. Chaque taille de source consiste en&nbsp;:
 
-    1. Une [condition de média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries). Celle-ci doit être absente pour le dernier élément de la liste.
+    1. Une [condition de média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries). Celle-ci doit être absente pour le dernier élément de la liste.
     2. Une valeur de taille de source.
 
     La condition de média décrit les propriétés de _la zone d'affichage_ et pas de _l'image_. Ainsi, `(max-height: 500px) 1000px` proposera d'utiliser une source de largeur 1000px, si _la zone d'affichage_ n'est pas plus haute que 500px.
@@ -180,7 +237,8 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
   - : L'URL partielle (commençant par `#`) d'une [carte d'image](/fr/docs/Web/HTML/Element/map) associée à l'élément.
 
-    > **Note :** Cet attribut est invalide si l'élément `<img>` est à l'intérieur d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) ou d'un élément [`<button>`](/fr/docs/Web/HTML/Element/Button).
+    > [!NOTE]
+    > Cet attribut est invalide si l'élément `<img>` est à l'intérieur d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) ou d'un élément [`<button>`](/fr/docs/Web/HTML/Element/button).
 
 ### Attributs dépréciés
 
@@ -207,15 +265,12 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
   - : Le nombre de pixels d'espace blanc à droite et à gauche de l'image. La propriété [`margin`](/fr/docs/Web/CSS/margin) doit être utilisée à la place.
 
-- `intrinsicsize` {{deprecated_inline}}
-
-  - : Cet attribut indique au navigateur d'ignorer la taille intrinsèque de l'image pour prendre en compte celle fournie par l'attribut.
-
 - `longdesc` {{deprecated_inline}}
 
   - : Un lien vers une description plus détaillée de l'image. Les valeurs pouvaient être une URL ou l'identifiant d'un autre élément.
 
-    > **Note :** Cet attribut est mentionné dans la spécification [HTML 5.2 du W3C](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc), mais a été retiré [du standard évolutif HTML du WHATWG](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). Son avenir est incertain et mieux vaut utiliser une alternative WAI-ARIA comme [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) ou [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details).
+    > [!NOTE]
+    > Cet attribut est mentionné dans la spécification [HTML 5.2 du W3C](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc), mais a été retiré [du standard évolutif HTML du WHATWG](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). Son avenir est incertain et mieux vaut utiliser une alternative WAI-ARIA comme [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) ou [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details).
 
 - `name` {{deprecated_inline}}
 
@@ -228,7 +283,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
 `<img>` est [un élément remplacé](/fr/docs/Web/CSS/Replaced_element). Sa propriété [`display`](/fr/docs/Web/CSS/display) par défaut vaut `inline`, mais ses dimensions par défaut sont définies par les valeurs intrinsèques de l'image, à la façon de `inline-block`. Il est tout à fait possible d'utiliser les propriétés [`border`](/fr/docs/Web/CSS/border)/[`border-radius`](/fr/docs/Web/CSS/border-radius), [`padding`](/fr/docs/Web/CSS/padding)/[`margin`](/fr/docs/Web/CSS/margin), [`width`](/fr/docs/Web/CSS/width), et [`height`](/fr/docs/Web/CSS/height) sur une image.
 
-`<img>` n'a pas de ligne de base, donc lorsque les images sont utilisées dans un contexte de mise en forme en ligne avec [`vertical-align`](/fr/docs/Web/CSS/vertical-align)`: baseline`, le bas de l'image sera placé sur la ligne de base du texte.
+`<img>` n'a pas de ligne de base, donc lorsque les images sont utilisées dans un contexte de mise en forme en ligne avec [`vertical-align: baseline`](/fr/docs/Web/CSS/vertical-align), le bas de l'image sera placé sur la ligne de base du texte.
 
 La propriété [`object-position`](/fr/docs/Web/CSS/object-position) peut être utilisée afin de positionner l'image au sein de la boîte fournie par l'élément. La propriété [`object-fit`](/fr/docs/Web/CSS/object-fit) peut être utilisée pour ajuster le dimensionnement de l'image au sein de la boîte (par exemple pour étirer ou rogner l'image dans la boîte si nécessaire).
 
@@ -244,7 +299,7 @@ Dans l'exemple qui suit, l'image est accompagnée d'un texte alternatif qui sert
 <img src="favicon144.png" alt="Logo de MDN" />
 ```
 
-{{EmbedLiveSample('', '100%', '160')}}
+{{EmbedLiveSample('fournir_un_texte_alternatif', '100%', '160')}}
 
 ### Créer un lien avec une image
 
@@ -256,7 +311,7 @@ Cet exemple intègre l'image précédente et la transforme en lien. Pour cela, l
 </a>
 ```
 
-{{EmbedLiveSample('', '100%', '160')}}
+{{EmbedLiveSample('créer_un_lien_avec_une_image', '100%', '160')}}
 
 ### Utiliser l'attribut `srcset`
 
@@ -266,7 +321,7 @@ Dans cet exemple, on utilise l'attribut `srcset` avec une référence vers une v
 <img src="favicon72.png" alt="Logo MDN" srcset="favicon144.png 2x" />
 ```
 
-{{EmbedLiveSample("", "100%", "160")}}
+{{EmbedLiveSample("utiliser_lattribut_srcset", "100%", "160")}}
 
 ### Utiliser les attributs `srcset` et `sizes`
 
@@ -280,7 +335,7 @@ L'attribut `src` est ignoré par les agents utilisateurs qui le prennent en char
   sizes="(max-width: 600px) 200px, 50vw" />
 ```
 
-{{EmbedLiveSample("", "100%", 350)}}
+{{EmbedLiveSample("#utiliser_les_attributs_srcset_et_sizes", "100%", 350)}}
 
 ## Sécurité et vie privée
 
@@ -304,6 +359,10 @@ La valeur d'un attribut `alt` devrait toujours décrire le contenu de l'image de
 <img alt="Un manchot Rockhopper sur une plage." src="pingouin.jpg" />
 ```
 
+Un test important pour l'accessibilité consiste à lire le contenu de l'attribut `alt` avec le contenu texte précédent afin de voir si cela fournit les mêmes informations que l'image. Ainsi, si l'image était précédée de la phrase «&nbsp;Lors de mon voyage, j'ai vu un animal mignon&nbsp;:&nbsp;». Dans l'exemple de la mauvaise pratique, cela aurait donné «&nbsp;Lors de mon voyage, j'ai vu un animal mignon&nbsp;: image&nbsp;», ce qui n'a pas de sens. Avec la bonne pratique et cet exemple, on aurait obtenu «&nbsp;Lors de mon voyage, j'ai vu un animal mignon&nbsp;: Un manchot Rockhopper sur une plage.&nbsp;», ce qui est plus parlant.
+
+Pour les images déclenchant une action, par exemple celles incluses dans un lien [`<a>`](/fr/docs/Web/HTML/Element/a) ou un bouton [`<button>`](/fr/docs/Web/HTML/Element/button), il faut penser à décrire l'action déclenchée dans `alt`. On peut ainsi écrire `alt="page suivante"` plutôt que `alt="flèche droite"`. Vous pouvez inclure une description complémentaire dans l'attribut `title`, qui pourra être lu par les lecteurs d'écrans si l'utilisatrice ou l'utilisateur en fait la demande.
+
 Lorsque l'attribut `alt` n'est pas présent sur une image, certains lecteurs d'écran pourront annoncer le nom du fichier de l'image. Cela peut être source de confusion si le nom du fichier n'est pas représentatif du contenu de l'image.
 
 - [Un arbre de décision pour `alt` • Images • Tutoriel WAI sur l'accessibilité web (en anglais)](https://www.w3.org/WAI/tutorials/images/decision-tree/)
@@ -311,6 +370,14 @@ Lorsque l'attribut `alt` n'est pas présent sur une image, certains lecteurs d'�
 - [Comment optimiser votre texte alternatif&nbsp;: une introduction — Deque (en anglais)](https://www.deque.com/blog/great-alt-text-introduction/)
 - [MDN Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Comprendre les critères de succès 1.1.1 | W3C Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
+
+### Identifier le contenu SVG comme image
+
+En raison [d'un bug VoiceOver](https://webkit.org/b/216364), ce dernier n'annonce pas correctement les images SVG comme étant des images. Il faut inclure [`role="img"`](/fr/docs/Web/Accessibility/ARIA/Roles/img_role) pour les éléments `<img>` basés sur des fichiers sources SVG afin de s'assurer que les outils d'assistance annoncent le contenu SVG comme une image.
+
+```html
+<img src="mdn.svg" alt="MDN" role="img" />
+```
 
 ### L'attribut `title`
 
@@ -328,10 +395,10 @@ La valeur de l'attribut `title` est généralement affichée via une bulle d'inf
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a>
+        <a href="/fr/docs/Web/HTML/Content_categories">Catégories de contenu</a>
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux">Contenu de flux</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_phrasé">contenu phrasé</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_intégré">contenu intégré</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_tangible">contenu tangible</a>. Si l'élément utilise l'attribut <code>usemap</code>, il fait également partie de la catégorie de contenu interactif.
+        <a href="/fr/docs/Web/HTML/Content_categories#contenu_de_flux">Contenu de flux</a>, <a href="/fr/docs/Web/HTML/Content_categories#contenu_phrasé">contenu phrasé</a>, <a href="/fr/docs/Web/HTML/Content_categories#contenu_intégré">contenu intégré</a>, <a href="/fr/docs/Web/HTML/Content_categories#contenu_tangible">contenu tangible</a>. Si l'élément utilise l'attribut <code>usemap</code>, il fait également partie de la catégorie de contenu interactif.
       </td>
     </tr>
     <tr>
@@ -350,7 +417,7 @@ La valeur de l'attribut `title` est généralement affichée via une bulle d'inf
       <th scope="row">Rôle ARIA implicite</th>
       <td>
         <ul>
-          <li>Avec un attribut <code>alt</code> non vide ou aucun attribut <code>alt</code>&nbsp;: <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/Role_Img">img</a></code></li>
+          <li>Avec un attribut <code>alt</code> non vide ou aucun attribut <code>alt</code>&nbsp;: <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/img_role">img</a></code></li>
           <li>Avec un attribut <code>alt</code> vide&nbsp;: <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">pas de rôle correspondant</a></li>
         </ul>
       </td>
@@ -372,7 +439,7 @@ La valeur de l'attribut `title` est généralement affichée via une bulle d'inf
               <li><a href="https://w3c.github.io/aria/#scrollbar"><code>scrollbar</code></a></li>
               <li><a href="https://w3c.github.io/aria/#separator"><code>separator</code></a></li>
               <li><a href="https://w3c.github.io/aria/#slider"><code>slider</code></a></li>
-              <li><a href="/fr/docs/Web/Accessibility/ARIA/Roles/Switch_role"><code>switch</code></a></li>
+              <li><a href="/fr/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a></li>
               <li><a href="/fr/docs/Web/Accessibility/ARIA/Roles/Tab_Role"><code>tab</code></a></li>
               <li><a href="https://w3c.github.io/aria/#treeitem"><code>treeitem</code></a></li>
             </ul>
@@ -410,5 +477,6 @@ La valeur de l'attribut `title` est généralement affichée via une bulle d'inf
   - [`object-fit`](/fr/docs/Web/CSS/object-fit),
   - [`object-position`](/fr/docs/Web/CSS/object-position),
   - [`image-orientation`](/fr/docs/Web/CSS/image-orientation),
-  - [`image-rendering`](/fr/docs/Web/CSS/Image-rendering),
+  - [`image-rendering`](/fr/docs/Web/CSS/image-rendering),
   - [`image-resolution`](/fr/docs/Web/CSS/image-resolution).
+- L'interface du DOM qui correspond à cet élément [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement)

@@ -112,7 +112,7 @@ svg {
   </tbody>
 </table>
 
-Le décalage est généralement exprimé en unités résolues par {{SVGAttr('pathLength')}} mais si un [\<percentage>](/fr/SVG/Content_type#Percentage) est utilisé, alors la valeur est résolue en pourcentage du viewport.
+Le décalage est généralement exprimé en unités résolues par {{SVGAttr('pathLength')}} mais si un [\<percentage>](/fr/docs/SVG/Content_type#percentage) est utilisé, alors la valeur est résolue en pourcentage du viewport.
 
 ## Spécifications
 

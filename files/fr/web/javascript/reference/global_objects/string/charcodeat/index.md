@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 
 La méthode **`charCodeAt()`** retourne un entier compris entre 0 et 65535 qui correspond au code UTF-16 d'un caractère de la chaîne situé à une position donnée.
 
-{{EmbedInteractiveExample("pages/js/string-charcodeat.html")}}
+{{InteractiveExample("JavaScript Demo: String.charCodeAt()")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const index = 4;
+
+console.log(
+  `Character code ${sentence.charCodeAt(index)} is equal to ${sentence.charAt(
+    index,
+  )}`,
+);
+// Expected output: "Character code 113 is equal to q"
+```
 
 Le codet UTF-16 renvoyé correspond au codet Unicode si le caractère peut être représenté sur un seul codet. Si le codet Unicode ne peut pas être représenté sur un seul codet UTF-16 (car sa valeur est supérieure à `0xFFFF`), seule la première partie de la paire sera renvoyée. Si vous souhaitez obtenir l'ensemble de la valeur, vous pouvez utiliser la méthode {{jsxref("String.prototype.codePointAt()","codePointAt()")}}.
 
@@ -28,7 +41,7 @@ Un nombre qui représente la valeur du point de code UTF-16 pour le caractère �
 
 ## Description
 
-Les codets Unicode vont de 0 à 1 114 111 (0x10FFFF). Les 128 premiers caractères Unicode correspondent aux caractères ASCII (leur encodage est le même). Pour plus d'informations sur la gestion de l'Unicode en JavaScript, voir le [Guide JavaScript](/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux#Unicode).
+Les codets Unicode vont de 0 à 1 114 111 (0x10FFFF). Les 128 premiers caractères Unicode correspondent aux caractères ASCII (leur encodage est le même). Pour plus d'informations sur la gestion de l'Unicode en JavaScript, voir le [Guide JavaScript](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#unicode).
 
 La méthode `charCodeAt()` renverra toujours une valeur inférieure à 65 536. En effet, les caractères encodés sur les plus grandes valeurs sont encodés sur deux « demi-codets » (appelés _surrogate pair_ en anglais). Pour recomposer de tels caractères, il faut donc utiliser `charCodeAt(i)` **et aussi** `charCodeAt(i+1)` afin de pouvoir récupérer chaque demi-codet. Pour plus de détails, voir le deuxième et troisième exemples.
 

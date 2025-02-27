@@ -35,15 +35,11 @@ for (var i = 0, j = 9; i <= 9; i++, j--)
 
 ## Especificações
 
-| Specification                                                | Status             | Comment            |
-| ------------------------------------------------------------ | ------------------ | ------------------ |
-| 1ª Edição ECMAScript.                                        | Padrão             | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-11.14', 'Comma operator')}}        | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-comma-operator', 'Comma operator')}} | {{Spec2('ES6')}}   |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.comma")}}
+{{Compat}}
 
 ## Veja também
 

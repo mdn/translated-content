@@ -3,7 +3,7 @@ title: URL
 slug: Web/API/URL
 ---
 
-{{ApiRef("URL API")}}
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
 Интерфейс **`URL`** используется для разбора, создания, нормализации и кодирования {{glossary("URL", "URL-адресов")}}. Он предоставляет свойства, которые позволяют легко читать и изменять части URL-адреса.
 
@@ -105,7 +105,7 @@ const response = await fetch(
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -113,6 +113,6 @@ const response = await fetch(
 
 - Полифил для `URL` доступен в [core-js](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - [URL API](/ru/docs/Web/API/URL_API)
-- [Что такое URL-адрес?](/ru/docs/Learn/Common_questions/What_is_a_URL)
+- [Что такое URL-адрес?](/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 - Свойство для получения объекта `URL`: {{domxref("URL")}}.
 - {{domxref("URLSearchParams")}}.

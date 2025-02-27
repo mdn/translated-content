@@ -14,4 +14,4 @@ l10n:
 ## 같이 보기
 
 - 위키백과의 [URI](https://ko.wikipedia.org/wiki/%ED%86%B5%ED%95%A9_%EC%9E%90%EC%9B%90_%EC%8B%9D%EB%B3%84%EC%9E%90)
-- [URL에 관한 RFC 3986](http://tools.ietf.org/html/rfc3986)
+- [URL에 관한 RFC 3986](https://tools.ietf.org/html/rfc3986)

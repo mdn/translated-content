@@ -3,7 +3,7 @@ title: Math.exp()
 slug: Web/JavaScript/Reference/Global_Objects/Math/exp
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Sumário
 
@@ -40,7 +40,7 @@ Math.exp(1); // 2.718281828459045
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.exp")}}
+{{Compat}}
 
 ## Veja também
 

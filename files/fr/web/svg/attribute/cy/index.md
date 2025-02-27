@@ -42,17 +42,9 @@ Pour un élément {{SVGElement('circle')}}, `cy` définit la coordonnée y de so
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        >
-        |
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
-            >&#x3C;percentage></a
-          ></strong
-        >
-      </td>
+      <td><a href="/fr/docs/Web/CSS/length-percentage">
+        <code>&lt;length-percentage&gt;</code>
+      </a></td>
     </tr>
     <tr>
       <th scope="row">Valeur par défaut</th>
@@ -65,7 +57,8 @@ Pour un élément {{SVGElement('circle')}}, `cy` définit la coordonnée y de so
   </tbody>
 </table>
 
-> **Note :** À partir de SVG2, `cy` est une _propriété de géométrie_, ce qui signifie que cet attribut peut être utilisé comme propriété CSS pour les cercles.
+> [!NOTE]
+> À partir de SVG2, `cy` est une _propriété de géométrie_, ce qui signifie que cet attribut peut être utilisé comme propriété CSS pour les cercles.
 
 ## ellipse
 
@@ -75,17 +68,9 @@ Pour un élément {{SVGElement('ellipse')}}, `cy` définit la coordonnée y de s
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        >
-        |
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
-            >&#x3C;percentage></a
-          ></strong
-        >
-      </td>
+      <td><a href="/fr/docs/Web/CSS/length-percentage">
+        <code>&lt;length-percentage&gt;</code>
+      </a></td>
     </tr>
     <tr>
       <th scope="row">Valeur par défaut</th>
@@ -98,21 +83,20 @@ Pour un élément {{SVGElement('ellipse')}}, `cy` définit la coordonnée y de s
   </tbody>
 </table>
 
-> **Note :** À partir de SVG2, `cy` est une _propriété de géométrie_, ce qui signifie que cet attribut peut être utilisé comme propriété CSS pour les ellipses.
+> [!NOTE]
+> À partir de SVG2, `cy` est une _propriété de géométrie_, ce qui signifie que cet attribut peut être utilisé comme propriété CSS pour les ellipses.
 
 ## radialGradient
 
-Pour un élément {{SVGElement('radialGradient')}}, `cy` définit la coordonnées x du plus grand cercle pour le dégradé radial (c'est-à-dire du plus externe). Le dégradé sera dessiné de telle façon que la [limite de dégradé](/fr/docs/SVG/Element/stop) de **100%** corresponde au périmètre de ce plus grand cercle.
+Pour un élément {{SVGElement('radialGradient')}}, `cy` définit la coordonnées x du plus grand cercle pour le dégradé radial (c'est-à-dire du plus externe). Le dégradé sera dessiné de telle façon que la [limite de dégradé](/fr/docs/Web/SVG/Element/stop) de **100%** corresponde au périmètre de ce plus grand cercle.
 
 <table class="standard-table">
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        >
-      </td>
+      <td><a href="/fr/docs/Web/CSS/length-percentage">
+        <code>&lt;length-percentage&gt;</code>
+      </a></td>
     </tr>
     <tr>
       <th scope="row">Valeur par défaut</th>
@@ -186,3 +170,8 @@ svg {
 ## Spécifications
 
 {{Specifications}}
+
+## Voir aussi
+
+- [`cx`](/fr/docs/Web/SVG/Attribute/cx)
+- [`r`](/fr/docs/Web/SVG/Attribute/r)

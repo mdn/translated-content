@@ -3,7 +3,7 @@ title: round
 slug: Web/XPath/Functions/round
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `round` 함수는 인수로 준 수에 가장 가까운 정수를 반환합니다.
 
@@ -30,7 +30,7 @@ _`decimal`_
 
 ### 정의
 
-[XPath 1.0 4.4](http://www.w3.org/TR/xpath#function-round)
+[XPath 1.0 4.4](https://www.w3.org/TR/xpath#function-round)
 
 ### Gecko 지원
 

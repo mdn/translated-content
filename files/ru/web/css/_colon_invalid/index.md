@@ -1,5 +1,5 @@
 ---
-title: ":invalid"
+title: :invalid
 slug: Web/CSS/:invalid
 ---
 
@@ -7,7 +7,7 @@ slug: Web/CSS/:invalid
 
 ## Описание
 
-CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:invalid` находит любые {{ HTMLElement("input") }} или {{ HTMLElement("form") }} элементы, контент которых не проходит [валидацию](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation), в соответствии с типом поля. Он позволяет вам легко менять внешний вид полей, что позволяет пользователю видеть и исправлять ошибки.
+CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:invalid` находит любые {{ HTMLElement("input") }} или {{ HTMLElement("form") }} элементы, контент которых не проходит [валидацию](/ru/docs/Web/HTML/Constraint_validation), в соответствии с типом поля. Он позволяет вам легко менять внешний вид полей, что позволяет пользователю видеть и исправлять ошибки.
 
 По умолчанию, Gecko не применяет стили к псевдоклассу `:invalid`. Однако, применяет стили (красное "свечение", используя свойство {{ Cssxref("box-shadow") }}) к псевдоклассу {{ Cssxref(":-moz-ui-invalid") }}, который применяется в подгруппе случаев для `:invalid`.
 
@@ -81,7 +81,7 @@ input:required {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

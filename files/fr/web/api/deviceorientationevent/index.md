@@ -9,7 +9,8 @@ slug: Web/API/DeviceOrientationEvent
 
 L'évènement `DeviceOrientationEvent` met à la disposition du développeur des informations sur l'orientation de l'appareil visitant une page Web
 
-> **Attention :** à l'heure actuelle, Firefox et Chrome ne gèrent pas les cordonnées de la même façon. Tenez-en compte lors de l'utilisation de cette API.
+> [!WARNING]
+> À l'heure actuelle, Firefox et Chrome ne gèrent pas les cordonnées de la même façon. Tenez-en compte lors de l'utilisation de cette API.
 
 ## Propriétés
 
@@ -45,5 +46,5 @@ window.addEventListener("deviceorientation", function (event) {
 - L'évènement [`deviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event)
 - [`DeviceMotionEvent`](/fr/docs/Web/API/DeviceMotionEvent)
 - L'évènement [`devicemotion`](/fr/docs/Web/API/Window/devicemotion_event)
-- [Détection de l'orientation de l'appareil](/fr/docs/Web/Events/Detecting_device_orientation)
-- [Explication des données d'orientation et de mouvement](/fr/docs/Web/Events/Orientation_and_motion_data_explained)
+- [Détection de l'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [Explication des données d'orientation et de mouvement](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)

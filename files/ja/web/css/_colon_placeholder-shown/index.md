@@ -1,5 +1,5 @@
 ---
-title: ":placeholder-shown"
+title: :placeholder-shown
 slug: Web/CSS/:placeholder-shown
 ---
 
@@ -13,6 +13,8 @@ slug: Web/CSS/:placeholder-shown
   border: 2px solid silver;
 }
 ```
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-placeholder-shown.html", "tabbed-shorter")}}
 
 ## 構文
 

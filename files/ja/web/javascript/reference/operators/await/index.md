@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Operators")}}
 
-**`await`** 演算子はプロミス ({{jsxref("Promise")}}) を待ち、履行値を取得するために使用します。[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)の中、または[module](/ja/docs/Web/JavaScript/Guide/Modules)の最上位でのみ使用することができます。
+**`await`** 演算子はプロミス ({{jsxref("Promise")}}) を待ち、履行値を取得するために使用します。[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)の中、または[モジュール](/ja/docs/Web/JavaScript/Guide/Modules)の最上位でのみ使用することができます。
 
 ## 構文
 
@@ -237,7 +237,7 @@ function foo(name) {
 
 余分な `then()` ハンドラーは必要なく、このハンドラーはコンストラクターに渡される実行内容にマージすることができますが、`then()` ハンドラーの存在は、コードが完了するまでに 1 ティック余分にかかるということを意味しています。これは `await` でも同じことが起こります。したがって、`await` は必要なときだけ使用するようにしてください（プロミスをその値にアンラップするため）。
 
-他にも、非同期関数が再開する前にマイクロタスクを実行することができます。この例では、[`queueMicrotask()`](/ja/docs/Web/API/queueMicrotask) を使用して、それぞれの `await` 式が発生したときにマイクロタスクキューを処理する方法を示しています。
+他にも、非同期関数が再開する前にマイクロタスクを実行することができます。この例では、[`queueMicrotask()`](/ja/docs/Web/API/Window/queueMicrotask) を使用して、それぞれの `await` 式が発生したときにマイクロタスクキューを処理する方法を示しています。
 
 ```js
 let i = 0;
@@ -335,7 +335,7 @@ withAwait();
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 

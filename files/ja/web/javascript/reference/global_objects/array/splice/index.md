@@ -2,44 +2,57 @@
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 l10n:
-  sourceCommit: 9b38f886d21c5d0a428f58acb20c4d0fc6c2e098
+  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
 {{JSRef}}
 
-**`splice()`** メソッドは、[その場](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0)で既存の要素を取り除いたり、置き換えたり、新しい要素を追加したりすることで、配列の内容を変更します。
+**`splice()`** は {{jsxref("Array")}} インスタンスのメソッドで、[その場 (in-place)](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0) で既存の要素を取り除いたり、置き換えたり、新しい要素を追加したりすることで、配列の内容を変更します。
 
-{{EmbedInteractiveExample("pages/js/array-splice.html")}}
+元の配列を変更せずに、ある部分を除去したり置き換えたりした新しい配列を作成するには {{jsxref("Array/toSpliced", "toSpliced()")}} を使用してください。配列を変更せずに配列の一部にアクセスするには {{jsxref("Array/slice", "slice()")}} を参照してください。
+
+{{InteractiveExample("JavaScript Demo: Array.splice()")}}
+
+```js interactive-example
+const months = ["Jan", "March", "April", "June"];
+months.splice(1, 0, "Feb");
+// Inserts at index 1
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+months.splice(4, 1, "May");
+// Replaces 1 element at index 4
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+```
 
 ## 構文
 
-```js
-splice(start);
-splice(start, deleteCount);
-splice(start, deleteCount, item1);
-splice(start, deleteCount, item1, item2, itemN);
+```js-nolint
+splice(start)
+splice(start, deleteCount)
+splice(start, deleteCount, item1)
+splice(start, deleteCount, item1, item2)
+splice(start, deleteCount, item1, item2, /* …, */ itemN)
 ```
 
 ### 引数
 
 - `start`
 
-  - : 配列を変更する先頭の位置です。
-
-    配列の長さより大きい場合、`start` は配列の長さに設定されます。
-    この場合、削除される要素はありませんが、このメソッドは追加関数として動作し、提供された項目の数だけ要素を追加します。
-
-    値が負の数の場合は、配列の末尾から要素数だけ戻ったところから始まります。
-    （`-1` が原点で、`-n` は最後の要素から `n` 番目であることを意味し、したがって位置が `array.length - n` であるのと同等です）。
-    `start` が `-Infinity` であった場合は、 `0` の位置から始まります。
+  - : 配列の変更を始める位置のゼロから始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
+    - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `start < 0` の場合、 `start + array.length` が使用されます。
+    - `start < -array.length` の場合は `0` が使用されます。
+    - `start >= array.length` の場合、要素は削除されませんが、メソッドは追加関数として動作し、指定された数だけ要素を追加します。
+    - `start` が省略された場合（そして `splice()` が引数なしで呼び出された場合）、何も削除されません。これは `undefined` を渡すと `0` に変換されるのとは異なります。
 
 - `deleteCount` {{optional_inline}}
 
   - : 配列の `start` の位置から取り除く古い要素の個数を示す整数です。
 
-    `deleteCount` 引数が省略された場合、または `array.length - start` 以上 (つまり、`start` から始めて配列に残っている要素の数以上) の場合、`start` 以降のすべての要素が取り除かれます。ただし、 `item1` 引数が存在する場合は省略できません。
+    `deleteCount` が省略された場合、または `deleteCount` の値が `start` で指定した位置より後の要素数以上の場合、 `start` から配列の末尾までのすべての要素が削除されます。ただし、任意の `itemN` 引数を渡したい場合は、 `start` より後の要素をすべて削除するために `deleteCount` として `Infinity` を渡す必要があります。明示的に `undefined` を渡すと、[変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)されて `0` になるからです。
 
-    `deleteCount` が `0` または負の数の場合、どの要素も取り除かれません。この場合、少なくとも 1 つの新しい要素を指定する必要があります (以下参照)。
+    `deleteCount` が `0` または負の数の場合、どの要素も取り除かれません。この場合、少なくとも 1 つの新しい要素を指定する必要があります（以下参照）。
 
 - `item1`, …, `itemN` {{optional_inline}}
 
@@ -57,7 +70,11 @@ splice(start, deleteCount, item1, item2, itemN);
 
 ## 解説
 
-取り除こうとする要素数と異なる数の要素を挿入するように指定した場合、配列の `length` は変更されます。
+`splice()` メソッドは[変更メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)です。 `this` の内容を変更します。指定した挿入する要素数と除去される要素数が異なる場合、配列の `length` も変更されます。同時に、 [`[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species) を使用して、返す新しい配列インスタンスを作成します。
+
+削除された部分が[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)の場合、 `splice()` が返す配列も疎配列になり、対応するインデックスは空のスロットになります。
+
+`splice()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。このメソッドは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。文字列も配列風ですが、文字列は不変なので、このメソッドを適用するのには適していません。
 
 ## 例
 
@@ -81,14 +98,38 @@ const removed = myFish.splice(2, 0, "drum", "guitar");
 // removed は [] であり、どの要素も取り除かれていない
 ```
 
+### 0（ゼロ）個の要素を 0 の位置から削除して、"angel" を挿入
+
+`splice(0, 0, ...elements)` は、{{jsxref("Array/unshift", "unshift()")}} のように配列の先頭に要素を挿入します。
+
+```js
+const myFish = ["clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(0, 0, "angel");
+
+// myFish は ["angel", "clown", "mandarin", "sturgeon"]
+// アイテムは削除されない
+```
+
+### 0（ゼロ）個の要素を末尾の位置から削除して、"sturgeon" を挿入
+
+`splice(array.length, 0, ...elements)` は、{{jsxref("Array/push", "push()")}} のように配列の末尾に要素を挿入します。
+
+```js
+const myFish = ["angel", "clown", "mandarin"];
+const removed = myFish.splice(myFish.length, 0, "sturgeon");
+
+// myFish は ["angel", "clown", "mandarin", "sturgeon"]
+// アイテムは削除されない
+```
+
 ### 3 の位置から 1 つ取り除く
 
 ```js
 const myFish = ["angel", "clown", "drum", "mandarin", "sturgeon"];
 const removed = myFish.splice(3, 1);
 
-// removed は ["mandarin"]
 // myFish は ["angel", "clown", "drum", "sturgeon"]
+// removed は ["mandarin"]
 ```
 
 ### 2 の位置から 1 つ取り除いて "trumpet" を挿入
@@ -141,6 +182,33 @@ const removed = myFish.splice(2);
 // removed は ["mandarin", "sturgeon"]
 ```
 
+### 疎配列に対する splice() の使用
+
+`splice()` メソッドは疎配列であることを維持します。
+
+```js
+const arr = [1, , 3, 4, , 6];
+console.log(arr.splice(1, 2)); // [empty, 3]
+console.log(arr); // [1, 4, empty, 6]
+```
+
+### 配列以外のオブジェクトに対する splice() の呼び出し
+
+`splice()` メソッドは `this` の `length` プロパティを読み込みます。そして、必要に応じて整数キーのプロパティと `length` プロパティを更新します。
+
+```js
+const arrayLike = {
+  length: 3,
+  unrelated: "foo",
+  0: 5,
+  2: 4,
+};
+console.log(Array.prototype.splice.call(arrayLike, 0, 1, 2, 3));
+// [ 5 ]
+console.log(arrayLike);
+// { '0': 2, '1': 3, '3': 4, length: 4, unrelated: 'foo' }
+```
+
 ## 仕様書
 
 {{Specifications}}
@@ -151,6 +219,12 @@ const removed = myFish.splice(2);
 
 ## 関連情報
 
-- {{jsxref("Array.prototype.push()", "push()")}} / {{jsxref("Array.prototype.pop()", "pop()")}}— 配列の末尾の要素の追加/削除
-- {{jsxref("Array.prototype.unshift()", "unshift()")}} / {{jsxref("Array.prototype.shift()", "shift()")}}— 配列の先頭の要素の追加/削除
-- {{jsxref("Array.prototype.concat()", "concat()")}}— 配列に他の配列や値をつないでできた新しい配列を返す
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.concat()")}}
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.pop()")}}
+- {{jsxref("Array.prototype.shift()")}}
+- {{jsxref("Array.prototype.slice()")}}
+- {{jsxref("Array.prototype.toSpliced()")}}
+- {{jsxref("Array.prototype.unshift()")}}

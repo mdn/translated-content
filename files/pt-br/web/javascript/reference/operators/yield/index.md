@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/yield
 
 {{jsSidebar("Operators")}}
 
-A palavra-chave `yield` é usada para pausar e resumir uma generator function ({{jsxref("Statements/function*", "function*")}} or [generator function legada](/pt-BR/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)).
+A palavra-chave `yield` é usada para pausar e resumir uma generator function ({{jsxref("Statements/function*", "function*")}} or [generator function legada](/pt-BR/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)).
 
 ## Sintaxe
 
@@ -14,7 +14,7 @@ A palavra-chave `yield` é usada para pausar e resumir uma generator function ({
 ```
 
 - `expressão`
-  - : Define o valor que retorna de uma generator function via [o protocolo iterator](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol). Se omitido, será retornado `undefined`.
+  - : Define o valor que retorna de uma generator function via [o protocolo iterator](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol). Se omitido, será retornado `undefined`.
 - `rv`
   - : Retorna o valor opcional passado para o metódo `next()` do generator e resume sua execução.
 
@@ -58,14 +58,11 @@ console.log(iterator.next()); // { value: undefined, done: true }
 
 ## Especificações
 
-| Especificação                         | Situação             | Comentário         |
-| ------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#', 'Yield')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#', 'Yield')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.yield")}}
+{{Compat}}
 
 ## Notas específicas do Firefox
 
@@ -76,7 +73,7 @@ console.log(iterator.next()); // { value: undefined, done: true }
 
 ## Veja também
 
-- [O protocolo Iterator](/pt-BR/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [O protocolo Iterator](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield*", "yield*")}}

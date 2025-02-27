@@ -15,11 +15,12 @@ var offsetWidth =element.offsetWidth;
 
 `offsetWidth` é uma propriedade somente leitura.
 
-> **Nota:** Esta propriedade irá arredondar o valor para um inteiro. se você precisa um valor fracionado, use {{ domxref("element.getBoundingClientRect()") }}.
+> [!NOTE]
+> Esta propriedade irá arredondar o valor para um inteiro. se você precisa um valor fracionado, use {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Exemplo
 
-![Image:Dimensions-offset.png](/@api/deki/files/186/=Dimensions-offset.png)
+![Image:Dimensions-offset.png](dimensions-offset.png)
 
 ## Especificações
 
@@ -33,4 +34,4 @@ var offsetWidth =element.offsetWidth;
 
 - {{domxref("Element.clientWidth")}}
 - {{domxref("Element.scrollWidth")}}
-- [Determinando as dimensões dos elementos](/pt-BR/docs/Determining_the_dimensions_of_elements)
+- [Determinando as dimensões dos elementos](/pt-BR/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

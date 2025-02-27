@@ -3,7 +3,7 @@ title: bookmarks.get()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 **`bookmarks.get()`** は、指定した {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} の ID（または ID の配列）にマッチするノードを取得するメソッドです。
 
@@ -29,7 +29,7 @@ browser.bookmarks.get(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.get")}}
+{{Compat}}
 
 ## 使用例
 
@@ -52,7 +52,8 @@ function doesBookmarkExist(bookmarkId) {
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-get) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードに基づいて作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> [!NOTE]
+> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-get) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードに基づいて作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

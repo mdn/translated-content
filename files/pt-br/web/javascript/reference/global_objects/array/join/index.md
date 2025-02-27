@@ -3,9 +3,22 @@ title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
 ---
 
-{{JSRef}}O método **`join()`** junta todos os elementos de um array (ou um [array-like object](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)) em uma string e retorna esta string.
+{{JSRef}}O método **`join()`** junta todos os elementos de um array (ou um [array-like object](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)) em uma string e retorna esta string.
 
-{{EmbedInteractiveExample("pages/js/array-join.html")}}
+{{InteractiveExample("JavaScript Demo: Array.join()")}}
+
+```js interactive-example
+const elements = ["Fire", "Air", "Water"];
+
+console.log(elements.join());
+// Expected output: "Fire,Air,Water"
+
+console.log(elements.join(""));
+// Expected output: "FireAirWater"
+
+console.log(elements.join("-"));
+// Expected output: "Fire-Air-Water"
+```
 
 ## Sintaxe
 
@@ -26,7 +39,8 @@ Uma string com todos os elementos do array juntos. Se `arr.length` é `0`, uma s
 
 As conversões em string de todos os elementos de um array são juntados em apenas uma string.
 
-> **Aviso:** Obs: Se um elemento é `undefined` ou `null`, ele é convertido em uma string vazia.
+> [!WARNING]
+> Se um elemento é `undefined` ou `null`, ele é convertido em uma string vazia.
 
 ## Exemplos
 
@@ -34,7 +48,20 @@ As conversões em string de todos os elementos de um array são juntados em apen
 
 O exemplo interativo a seguir cria um array, `a`, com três elementos, e o junta três vezes: a primeira com virgulas, a segunda so junta os elementos e a terceira com um sinal de menos.
 
-{{EmbedInteractiveExample("pages/js/array-join.html")}}
+{{InteractiveExample("JavaScript Demo: Array.join()")}}
+
+```js interactive-example
+const elements = ["Fire", "Air", "Water"];
+
+console.log(elements.join());
+// Expected output: "Fire,Air,Water"
+
+console.log(elements.join(""));
+// Expected output: "FireAirWater"
+
+console.log(elements.join("-"));
+// Expected output: "Fire-Air-Water"
+```
 
 ### Juntando um array-like object (objeto estilo-array)
 
@@ -55,7 +82,7 @@ f(1, "a", true);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.join")}}
+{{Compat}}
 
 ## Veja Também
 

@@ -3,13 +3,11 @@ title: FormData.append()
 slug: Web/API/FormData/append
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
 {{domxref("FormData")}} 接口的 **`append()`** 方法会添加一个新值到 `FormData` 对象内的一个已存在的键中，如果键不存在则会添加该键。
 
 {{domxref("FormData.set")}} 和 `append()` 的区别在于，如果指定的键已经存在， {{domxref("FormData.set")}} 会使用新值覆盖已有的值，而 `append()` 会把新值添加到已有值集合的后面。
-
-> **备注：** 这个方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 中可用。
 
 ## 语法
 
@@ -29,7 +27,8 @@ formData.append(name, value, filename);
 - `filename` {{optional_inline}}
   - : 传给服务器的文件名称 (一个 {{domxref("USVString")}}), 当一个 {{domxref("Blob")}} 或 {{domxref("File")}} 被作为第二个参数的时候， {{domxref("Blob")}} 对象的默认文件名是 "blob"。 {{domxref("File")}} 对象的默认文件名是该文件的名称。
 
-> **备注：** 如果你指定一个 {{domxref("Blob")}} 作为数据添加到 `FormData` 对象中，文件名会被放在 "Content-Disposition" 头部（常常会根据浏览器变化而变化）传给服务器。
+> [!NOTE]
+> 如果你指定一个 {{domxref("Blob")}} 作为数据添加到 `FormData` 对象中，文件名会被放在 "Content-Disposition" 头部（常常会根据浏览器变化而变化）传给服务器。
 
 ### 返回值
 
@@ -67,9 +66,7 @@ formData.append("userpic[]", myFileInput2.files[0], "chris2.jpg");
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

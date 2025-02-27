@@ -21,7 +21,7 @@ request callback이 작동하는 방식에 대해 자세히알아 보려면, [Co
 
 ## Example
 
-[Cooperative Scheduling of Background Tasks API](/ko/docs/Web/API/Background_Tasks_API)의 [complete example](/ko/docs/Web/API/Background_Tasks_API#Example)를 참조하세요.
+[Cooperative Scheduling of Background Tasks API](/ko/docs/Web/API/Background_Tasks_API)의 [complete example](/ko/docs/Web/API/Background_Tasks_API#example)를 참조하세요.
 
 ## 명세서
 

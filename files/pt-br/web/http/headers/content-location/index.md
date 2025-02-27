@@ -7,7 +7,7 @@ slug: Web/HTTP/Headers/Content-Location
 
 O cabeçalho **`Content-Location`** indica uma localização alternativa para os dados retornados. O principal uso é para indicar o URL de um recurso transmitido como resultado de uma [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation).
 
-{{HTTPHeader("Location")}} e `Content-Location` são diferentes. `Location` indica o URL de um redirecionamento, enquanto `Content-Location` indica o URL direto usado para acessar o recurso, sem qualquer outra negociação de conteúdo no futuro. `Location` é um cabeçalho associado com a resposta, enquanto `Content-Location` é associado com os dados retornados. Essa distinção parece abstrata sem exemplos. Essa distinção pode parecer abstrata sem [exemplos](#Exemplos).
+{{HTTPHeader("Location")}} e `Content-Location` são diferentes. `Location` indica o URL de um redirecionamento, enquanto `Content-Location` indica o URL direto usado para acessar o recurso, sem qualquer outra negociação de conteúdo no futuro. `Location` é um cabeçalho associado com a resposta, enquanto `Content-Location` é associado com os dados retornados. Essa distinção parece abstrata sem exemplos. Essa distinção pode parecer abstrata sem [exemplos](#exemplos).
 
 <table class="properties">
   <tbody>
@@ -31,7 +31,7 @@ Content-Location: <url>
 ## Diretivas
 
 - \<url>
-  - : Uma URL [relativa](/pt-BR/docs/Learn/Common_questions/What_is_a_URL#Examples_of_relative_URLs) (à URL da requisição) ou URL [absoluta](/pt-BR/docs/Learn/Common_questions/What_is_a_URL#Examples_of_absolute_URLs).
+  - : Uma URL [relativa](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#examples_of_relative_urls) (à URL da requisição) ou URL [absoluta](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#examples_of_absolute_urls).
 
 ## Exemplos
 
@@ -45,7 +45,7 @@ Digamos que uma API de um site pode retornar dados em formatos {{glossary("JSON"
 | `Accept: application/xml, text/xml`   | `Content-Location: /documents/foo.xml`  |
 | `Accept: text/plain, text/*`          | `Content-Location: /documents/foo.txt`  |
 
-Estas URLs são exemplos — o site pode servir diferentes formatos de arquivos com qualquer padrão URL que ele deseje, como por exemplo, um [query string parameter](/pt-BR/docs/Web/API/HTMLHyperlinkElementUtils/search): `/documents/foo?format=json`, `/documents/foo?format=xml`, entre outros.
+Estas URLs são exemplos — o site pode servir diferentes formatos de arquivos com qualquer padrão URL que ele deseje, como por exemplo, um [query string parameter](/pt-BR/docs/Web/API/HTMLAnchorElement/search): `/documents/foo?format=json`, `/documents/foo?format=xml`, entre outros.
 
 Então o cliente pode lembrar que a versão JSON está disponível em uma URL em particular, evitando negociação de conteúdo da próxima vez que ele requerer aquele documento.
 
@@ -122,7 +122,7 @@ Content-Location: /meus-recibos/38
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Content-Location")}}
+{{Compat}}
 
 ## Veja também
 

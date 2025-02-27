@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 **`bind()`** 메소드가 호출되면 새로운 함수를 생성합니다. 받게되는 첫 인자의 value로는 `this` 키워드를 설정하고, 이어지는 인자들은 바인드된 함수의 인수에 제공됩니다.
 
-{{EmbedInteractiveExample("pages/js/function-bind.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Function.bind()", "taller")}}
+
+```js interactive-example
+const module = {
+  x: 42,
+  getX: function () {
+    return this.x;
+  },
+};
+
+const unboundGetX = module.getX;
+console.log(unboundGetX()); // The function gets invoked at the global scope
+// Expected output: undefined
+
+const boundGetX = unboundGetX.bind(module);
+console.log(boundGetX());
+// Expected output: 42
+```
 
 ## 구문
 
@@ -127,7 +144,8 @@ flower.bloom();
 
 ### 생성자로 쓰이는 바인딩된 함수
 
-> **경고:** 이 부분은 JavaScript 능력을 보이고 `bind()` 메소드의 일부 극단 상황(edge case)을 기록합니다. 아래 보이는 메소드는 일을 하는 가장 좋은 방법은 아니며 아마도 상용 환경에서 전혀 사용되지 않을 겁니다.
+> [!WARNING]
+> 이 부분은 JavaScript 능력을 보이고 `bind()` 메소드의 일부 극단 상황(edge case)을 기록합니다. 아래 보이는 메소드는 일을 하는 가장 좋은 방법은 아니며 아마도 상용 환경에서 전혀 사용되지 않을 겁니다.
 
 바인딩된 함수는 자동으로 대상 함수에 의해 생성되는 새로운 인스턴스를 생성하는 {{jsxref("Operators/new", "new")}} 연산자와 함께 쓰기에 적합합니다. 바인딩된 함수가 값을 생성하는 데 쓰이는 경우, 제공된 `this`는 무시됩니다. 그러나, 제공된 인수는 여전히 생성자 호출에 (인수부) 앞에 붙습니다:
 

@@ -1,6 +1,8 @@
 ---
 title: border-right
 slug: Web/CSS/border-right
+l10n:
+  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
 {{CSSRef}}
@@ -9,21 +11,21 @@ slug: Web/CSS/border-right
 
 {{EmbedInteractiveExample("pages/css/border-right.html")}}
 
-他の一括指定プロパティと同様に、 `border-right` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。つまり……
+他の一括指定プロパティと同様に、 `border-right` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。次のコードを考えてください。
 
 ```css
 border-right-style: dotted;
 border-right: thick green;
 ```
 
-……は、実際には以下と同じです……
+これは、実際には以下と同じです。
 
 ```css
 border-right-style: dotted;
 border-right: none thick green;
 ```
 
-……そして、 `border-right` の前で設定された {{cssxref("border-right-style")}} の値は無視されます。 {{cssxref("border-right-style")}} の既定値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
+`border-right` の前で設定された {{cssxref("border-right-style")}} の値は無視されます。 {{cssxref("border-right-style")}} の既定値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
 
 ## 構成要素のプロパティ
 
@@ -44,6 +46,7 @@ border-right: medium dashed green;
 border-right: inherit;
 border-right: initial;
 border-right: revert;
+border-right: revert-layer;
 border-right: unset;
 ```
 
@@ -68,17 +71,17 @@ border-right: unset;
 
 ## 例
 
-<h3 id="Applying_a_right_border">右側の境界の適用</h3>
+### 右側の境界の適用
 
 #### HTML
 
-```html
+```html live-sample___applying_a_right_border
 <div>このボックスには右側に境界線があります。</div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___applying_a_right_border
 div {
   border-right: 4px dashed blue;
   background-color: gold;

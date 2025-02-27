@@ -34,7 +34,7 @@ var month = today.getUTCMonth();
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getUTCMonth")}}
+{{Compat}}
 
 ## Veja também
 

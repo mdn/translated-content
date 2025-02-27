@@ -36,7 +36,7 @@ slug: Web/HTML/Element/rt
 
 ## 属性
 
-该元素仅仅包含 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
+该元素仅仅包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 ## 示例
 
@@ -52,7 +52,7 @@ slug: Web/HTML/Element/rt
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{HTMLElement("ruby")}}
 - {{HTMLElement("rp")}}

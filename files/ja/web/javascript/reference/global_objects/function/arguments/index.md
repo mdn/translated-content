@@ -51,7 +51,7 @@ console.log("returned: " + g.arguments);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Function.arguments")}}
+{{Compat}}
 
 ## 関連情報
 

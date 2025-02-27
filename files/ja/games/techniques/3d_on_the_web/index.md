@@ -34,7 +34,7 @@ WebGL を使用すると、さらに多くのことができます。シェー�
 
 ### WebVR
 
-仮想現実の概念は新しいものではありませんが、[Oculus Rift](https://www.oculus.com/ja/rift/) などのハードウェアの進歩と VR ハードウェアから情報をキャプチャして JavaScript アプリケーションで使用できるようにするための (現在実験的な) [WebVR API](/ja/docs/Web/API/WebVR_API) のおかげで、ウェブに押し寄せています。 詳細については、[WebVR — ウェブによる仮想現実](/ja/docs/Games/Techniques/3D_on_the_web/WebVR)をご覧ください。
+仮想現実の概念は新しいものではありませんが、[Oculus Rift](https://www.oculus.com/ja/rift/) などのハードウェアの進歩と VR ハードウェアから情報をキャプチャして JavaScript アプリケーションで使用できるようにするための (現在実験的な) [WebVR API](/ja/docs/Web/API/WebVR_API) のおかげで、ウェブに押し寄せています。 詳細については、[WebVR — ウェブによる仮想現実](/ja/docs/Games/Techniques/3D_on_the_web/WebXR)をご覧ください。
 
 また、[A-Frame を使った基本的なデモの構築](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame)の記事では、 [A-Frame](https://aframe.io/) フレームワークを使用して仮想現実の 3D 環境を構築することがいかに簡単であるかを示しています。
 

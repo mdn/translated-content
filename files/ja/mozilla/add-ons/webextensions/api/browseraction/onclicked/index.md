@@ -3,11 +3,11 @@ title: browserAction.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-ブラウザアクションアイコンがクリックされたときに発火します。このイベントはブラウザアクションがポップアップを持っているときは発火しません。
+ブラウザーアクションアイコンがクリックされたときに発火します。このイベントはブラウザーアクションがポップアップを持っているときは発火しません。
 
-右クリックを定義するには、[`contextMenus`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus) API の"browser_action" [context type](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/ContextType)を利用してください。
+右クリックを定義するには、[`contextMenus`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus) API の"browser_action" [context type](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType)を利用してください。
 
 ## 書式
 
@@ -28,7 +28,7 @@ browser.browserAction.onClicked.hasListener(listener);
 
 ## addListener の書式
 
-### パラメータ
+### パラメーター
 
 - `callback`
 
@@ -39,11 +39,11 @@ browser.browserAction.onClicked.hasListener(listener);
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.browserAction.onClicked")}}
+{{Compat}}
 
 ## 例
 
-ユーザがアイコンをクリックすると、アクティブなタブではアイコンを無効にし、タブの URL をログします:
+ユーザーがアイコンをクリックすると、アクティブなタブではアイコンを無効にし、タブの URL をログします:
 
 ```js
 browser.browserAction.onClicked.addListener((tab) => {
@@ -56,7 +56,8 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の[`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#event-onClicked) API に基づいています。このドキュメントは Chromium コードの[`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)から派生したものです。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、Creative Commons Attribution 3.0 United States License のもとにここに含まれています。
+> [!NOTE]
+> この API は Chromium の[`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#event-onClicked) API に基づいています。このドキュメントは Chromium コードの[`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)から派生したものです。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、Creative Commons Attribution 3.0 United States License のもとにここに含まれています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

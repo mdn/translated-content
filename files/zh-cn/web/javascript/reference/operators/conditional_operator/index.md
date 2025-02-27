@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/Conditional_operator
 
 **条件（三元）运算符**是 JavaScript 唯一使用三个操作数的运算符：一个条件后跟一个问号（`?`），如果条件为{{Glossary("truthy", "真值")}}，则执行冒号（`:`）前的表达式；若条件为{{Glossary("falsy", "假值")}}，则执行最后的表达式。该运算符经常当作 [`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 语句的简捷形式来使用。
 
-{{EmbedInteractiveExample("pages/js/expressions-conditionaloperators.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Conditional operator")}}
+
+```js interactive-example
+function getFee(isMember) {
+  return isMember ? "$2.00" : "$10.00";
+}
+
+console.log(getFee(true));
+// Expected output: "$2.00"
+
+console.log(getFee(false));
+// Expected output: "$10.00"
+
+console.log(getFee(null));
+// Expected output: "$10.00"
+```
 
 ## 语法
 
@@ -61,10 +76,10 @@ function example() {
   return condition1
     ? value1
     : condition2
-    ? value2
-    : condition3
-    ? value3
-    : value4;
+      ? value2
+      : condition3
+        ? value3
+        : value4;
 }
 ```
 
@@ -97,5 +112,5 @@ function example() {
 - [if 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)
 - [空值合并运算符（`??`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [可选链运算符（`?.`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- [在代码中做决定——条件语句](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [在代码中做决定——条件语句](/zh-CN/docs/Learn_web_development/Core/Scripting/Conditionals)
 - [表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators)

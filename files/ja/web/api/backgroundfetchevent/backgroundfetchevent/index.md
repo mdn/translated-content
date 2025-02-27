@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-コンストラクター **`BackgroundFetchEvent()`** は新しい {{domxref("BackgroundFetchEvent")}} オブジェクトを生成します。このコンストラクタは通常、使用されることはありません。なぜなら、これらのオブジェクトはブラウザによって自動で生成され、バックグラウンドのフェッチイベントのコールバックに渡されるからです。
+コンストラクター **`BackgroundFetchEvent()`** は新しい {{domxref("BackgroundFetchEvent")}} オブジェクトを生成します。このコンストラクターは通常、使用されることはありません。なぜなら、これらのオブジェクトはブラウザーによって自動で生成され、バックグラウンドのフェッチイベントのコールバックに渡されるからです。
 
 ## 構文
 

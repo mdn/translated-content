@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/Date
 
 **`Date()`** 构造函数可以创建一个 {{jsxref("Date")}} 实例或返回代表当前时间的字符串。
 
-{{EmbedInteractiveExample("pages/js/date-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Date Constructor")}}
+
+```js interactive-example
+const date1 = new Date("December 17, 1995 03:24:00");
+// Sun Dec 17 1995 03:24:00 GMT...
+
+const date2 = new Date("1995-12-17T03:24:00");
+// Sun Dec 17 1995 03:24:00 GMT...
+
+console.log(date1 === date2);
+// Expected output: false
+
+console.log(date1 - date2);
+// Expected output: 0
+```
 
 ## 语法
 
@@ -27,7 +41,8 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 Date()
 ```
 
-> **备注：** 调用 `Date()` 时可以使用或不使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，但是它们有不同的效果。参见[返回值](#返回值)部分。
+> [!NOTE]
+> 调用 `Date()` 时可以使用或不使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，但是它们有不同的效果。参见[返回值](#返回值)部分。
 
 ### 参数
 
@@ -48,7 +63,8 @@ Date()
 
   - : 一个代表日期的字符串值，其格式由 {{jsxref("Date.parse()")}} 方法所识别。（ECMA262 规范规定了 [ISO 8601 的简化版本](https://tc39.es/ecma262/#sec-date-time-string-format)，但其他格式可以由实现者定义，通常包括[符合 IETF 的 RFC 2822 时间戳](https://datatracker.ietf.org/doc/html/rfc2822#page-14)。）
 
-    > **备注：** 当用 `Date` 构造函数（和 `Date.parse`，它们是等价的）解析日期字符串时，一定要确保输入符合 ISO 8601 格式（`YYYY-MM-DDTHH:mm:ss.ssZ`），其他格式的解析行为是实现定义的，可能无法在所有浏览器上运行。对 [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) 格式字符串的支持只是惯例。如果要适应许多不同的格式，库可以提供帮助。
+    > [!NOTE]
+    > 当用 `Date` 构造函数（和 `Date.parse`，它们是等价的）解析日期字符串时，一定要确保输入符合 ISO 8601 格式（`YYYY-MM-DDTHH:mm:ss.ssZ`），其他格式的解析行为是实现定义的，可能无法在所有浏览器上运行。对 [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) 格式字符串的支持只是惯例。如果要适应许多不同的格式，库可以提供帮助。
     >
     > 仅有日期的字符串（例如 `"1970-01-01"`）被视为 UTC，而日期时间的字符串（例如 `"1970-01-01T12:00"`）被视为本地时间。因此，我们也建议你确保这两种类型的输入格式是一致的。
 

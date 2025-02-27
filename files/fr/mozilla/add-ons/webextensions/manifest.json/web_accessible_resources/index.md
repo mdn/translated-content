@@ -38,7 +38,7 @@ Avec la clé `web_accessible_resources` liste toutes les ressources packagées q
 
 Notez que les scripts de contenu n'ont pas besoin d'être listés comme ressources accessibles sur le Web.
 
-Si une extension veut utiliser {{WebExtAPIRef("webRequest")}}} pour rediriger une URL publique (par exemple, HTTPS) vers une page qui est packagée dans l'extension, alors l'extension doit lister la page dans la clé `web_accessible_resources`.
+Si une extension veut utiliser {{WebExtAPIRef("webRequest")}} pour rediriger une URL publique (par exemple, HTTPS) vers une page qui est packagée dans l'extension, alors l'extension doit lister la page dans la clé `web_accessible_resources`.
 
 ### Utiliser web_accessible_resources
 
@@ -66,9 +66,10 @@ moz-extension://<extension-UUID>/images/my-image.png"
 
 `<extension-UUID>` n'est **pas** l'identifiant de votre extension. Il est généré de manière aléatoire pour chaque instance de navigateur. Ceci empêche les sites Web de prendre les empreintes digitales d'un navigateur en examinant les extensions qu'il a installées.
 
-> **Note :** Dans Chrome, l'ID d'une extension est fixe. Quand une ressource est listée dans `web_accessible_resources`, elle est accessible comme `chrome-extension://<your-extension-id>/<path/to/resource>`.
+> [!NOTE]
+> Dans Chrome, l'ID d'une extension est fixe. Quand une ressource est listée dans `web_accessible_resources`, elle est accessible comme `chrome-extension://<your-extension-id>/<path/to/resource>`.
 
-L'approche recommandée pour obtenir l'URL de la ressource est d'utiliser [`runtime.getURL`](/fr/Add-ons/WebExtensions/API/runtime/getURL) en passant le chemin relatif à manifest.json, par exemple :
+L'approche recommandée pour obtenir l'URL de la ressource est d'utiliser [`runtime.getURL`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL) en passant le chemin relatif à manifest.json, par exemple :
 
 ```js
 browser.runtime.getURL("images/my-image.png");

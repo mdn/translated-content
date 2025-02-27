@@ -3,11 +3,13 @@ title: <input type="checkbox">
 slug: Web/HTML/Element/input/checkbox
 ---
 
+{{HTMLSidebar}}
+
 El elemento HTML **`<input type="checkbox">`** es un elemento de entrada que te permite insertar un vector o array de valores. El atributo **value** es usado para definr el valor enviado por el **checkbox**. El atributo **checked** se usa para indicar que el elemento está seleccionado. El atributo **indeterminate** se usa para indicar que el **checkbox** esta en un estado indeterminado (en la mayoria de las plataformas, esto dibuja una linea horizontal que atraviesa el **checkbox**).
 
 ## Atributos
 
-Este elemento posee los "[atributos globales](/es/docs/HTML/Global_attributes)".
+Este elemento posee los "[atributos globales](/es/docs/Web/HTML/Global_attributes)".
 
 - `checked`
   - : Cuando el valor del atributo **type** es **`checkbox`**, la presencia de este atributo booleano indica que el control se selecciona de forma predeterminada; de lo contrario, se ignora.

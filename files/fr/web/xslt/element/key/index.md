@@ -3,7 +3,7 @@ title: key
 slug: Web/XSLT/Element/key
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:key>` déclare une clef nommée qui peut être utilisée dans toute la feuille de styles à l'aide de la fonction `key( )`.
 
@@ -33,7 +33,7 @@ Haut niveau, doit être l'enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`.
 
 ### Définition
 
-[XSLT 1.0, section 12.2](http://www.w3.org/TR/xslt#key).
+[XSLT 1.0, section 12.2](https://www.w3.org/TR/xslt#key).
 
 ### Support Gecko
 

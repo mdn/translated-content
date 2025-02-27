@@ -16,7 +16,7 @@ slug: Web/SVG/Attribute/stroke-linecap
 | 属性值   | butt \| round \| square \| inherit |
 | 可动画化 | 是                                 |
 
-## Example
+## 示例
 
 ```html
 <?xml version="1.0"?>
@@ -57,16 +57,14 @@ slug: Web/SVG/Attribute/stroke-linecap
 </svg>
 ```
 
-**实时样例**
-
-{{ EmbedLiveSample('Example','120','120') }}
+{{ EmbedLiveSample('示例','120','120') }}
 
 ## 元素
 
 以下元素可以使用`stroke-linecap` 属性
 
-- [图形元素](/zh-CN/docs/Web/SVG/Element#Shape) »
-- [文本内容元素](/zh-CN/docs/Web/SVG/Element#TextContent) »
+- [图形元素](/zh-CN/docs/Web/SVG/Element#shape) »
+- [文本内容元素](/zh-CN/docs/Web/SVG/Element#textcontent) »
 
 ## 规范
 

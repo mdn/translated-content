@@ -7,7 +7,29 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 O método **`slice()`** retorna uma cópia de parte de um array a partir de um subarray criado entre as posições `início` e `fim` (fim não é incluído) de um array original. O Array original não é modificado.
 
-{{EmbedInteractiveExample("pages/js/array-slice.html")}}
+{{InteractiveExample("JavaScript Demo: Array.slice()")}}
+
+```js interactive-example
+const animals = ["ant", "bison", "camel", "duck", "elephant"];
+
+console.log(animals.slice(2));
+// Expected output: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice(1, 5));
+// Expected output: Array ["bison", "camel", "duck", "elephant"]
+
+console.log(animals.slice(-2));
+// Expected output: Array ["duck", "elephant"]
+
+console.log(animals.slice(2, -1));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice());
+// Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+```
 
 ## Syntaxe
 
@@ -198,7 +220,7 @@ Embora os objetos de host (como objetos DOM) não sejam obrigados pela especific
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.slice")}}
+{{Compat}}
 
 ## Veja também
 

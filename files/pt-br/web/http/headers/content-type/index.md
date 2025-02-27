@@ -36,7 +36,7 @@ Content-Type: multipart/form-data; boundary=something
 ## Diretivas
 
 - `media-type`
-  - : O [MIME type](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types) do recurso ou dado.
+  - : O [MIME type](/pt-BR/docs/Web/HTTP/MIME_types) do recurso ou dado.
 - charset
   - : O encoding da string
 - boundary
@@ -84,7 +84,7 @@ Content-Type: text/plain
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Content-Type")}}
+{{Compat}}
 
 ## Ver também
 

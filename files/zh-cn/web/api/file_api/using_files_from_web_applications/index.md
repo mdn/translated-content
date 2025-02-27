@@ -1,9 +1,11 @@
 ---
 title: 在 web 应用程序中使用文件
 slug: Web/API/File_API/Using_files_from_web_applications
+l10n:
+  sourceCommit: 88467d31d2ad7bdfade8b38ec69f6702fee080d1
 ---
 
-{{APIRef("File API")}}
+{{DefaultAPISidebar("File API")}}{{AvailableInWorkers}}
 
 通过使用文件 API，web 内容可以要求用户选择本地文件，然后读取这些文件的内容。这种选择可以通过使用 HTML `{{HTMLElement("input/file", '&lt;input type="file"&gt;')}}` 元素或通过拖放来完成。
 
@@ -85,12 +87,13 @@ const numFiles = files.length;
       uploadInput.addEventListener(
         "change",
         () => {
-          // Calculate total size
+          // 计算总大小
           let numberOfBytes = 0;
           for (const file of uploadInput.files) {
             numberOfBytes += file.size;
           }
-          // Approximate to the closest prefixed unit
+
+          // 近似到最接近的前缀单位
           const units = [
             "B",
             "KiB",
@@ -109,10 +112,11 @@ const numFiles = files.length;
           const approx = numberOfBytes / 1024 ** exponent;
           const output =
             exponent === 0
-              ? `${numberOfBytes} bytes`
+              ? `${numberOfBytes} 字节`
               : `${approx.toFixed(3)} ${
                   units[exponent]
-                } (${numberOfBytes} bytes)`;
+                }（${numberOfBytes} 字节）`;
+
           document.getElementById("fileNum").textContent =
             uploadInput.files.length;
           document.getElementById("fileSize").textContent = output;
@@ -242,7 +246,7 @@ function drop(e) {
 
 ## 示例：显示用户选择的图片的缩略图
 
-比方说，你正在开发一个炫酷的下一代图片分享网站，并且想使用 HTML 来展示用户在实际上传之前的图片的缩略图。你可以像我们之前讨论的那样创建自己的 input 元素或者 drop 区域，然后对它们使用一个回调函数，比如下面的 `handleFiles()`。
+比方说，你正在开发一个炫酷的下一代图片分享网站，并且想使用 HTML 来展示用户在实际上传之前的图片的缩略图。你可以像我们之前讨论的那样创建自己的 input 元素或者 drop 区域，然后对它们使用一个回调函数，比如下面的 `handleFiles()` 函数。
 
 ```js
 function handleFiles(files) {
@@ -275,7 +279,7 @@ function handleFiles(files) {
 
 ## 使用对象 URL
 
-DOM 的 {{DOMxRef("URL.createObjectURL()")}} 和 {{DOMxRef("URL.revokeObjectURL()")}} 方法让你创建简单的 URL 字符串，可以用来引用任何可以用 DOM {{DOMxRef("File")}} 对象引用的数据，包括用户电脑中的本地文件。
+DOM 的 {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}} 和 {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} 方法让你创建简单的 URL 字符串，可以用来引用任何可以用 DOM {{DOMxRef("File")}} 对象引用的数据，包括用户电脑中的本地文件。
 
 当你需要在 HTML 中通过 URL 来引用一个 {{DOMxRef("File")}} 对象时，你可以创建一个对象 URL，就像这样：
 
@@ -283,7 +287,7 @@ DOM 的 {{DOMxRef("URL.createObjectURL()")}} 和 {{DOMxRef("URL.revokeObjectURL(
 const objectURL = window.URL.createObjectURL(fileObj);
 ```
 
-这个对象 URL 是一个标识 {{DOMxRef("File")}} 对象的字符串。每次你调用 {{DOMxRef("URL.createObjectURL()")}} ，都会创建一个唯一的对象 URL，即使你已经为该文件创建了一个对象 URL。每一个 URL 都必须被释放。虽然它们会在文档卸载时自动释放，但如果你的页面动态地使用它们，你应该通过调用 {{DOMxRef("URL.revokeObjectURL()")}} 明确地释放它们：
+这个对象 URL 是一个标识 {{DOMxRef("File")}} 对象的字符串。每次你调用 {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}}，都会创建一个唯一的对象 URL，即使你已经为该文件创建了一个对象 URL。每一个 URL 都必须被释放。虽然它们会在文档卸载时自动释放，但如果你的页面动态地使用它们，你应该通过调用 {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} 明确地释放它们：
 
 ```js
 URL.revokeObjectURL(objectURL);
@@ -308,7 +312,7 @@ URL.revokeObjectURL(objectURL);
 </div>
 ```
 
-这就建立了我们的文件 {{HTMLElement("input")}} 元素，以及调用文件选取器的链接（因为我们把文件 input 隐藏起来，以防止显示那个不那么吸引人的用户界面）。这在[使用 click() 方法隐藏文件 input 元素](<#通过_click()_方法使用隐藏的_file_input_元素>)一节中有所说明，调用文件选取器的方法也是如此。
+这就建立了我们的文件 {{HTMLElement("input")}} 元素，以及调用文件选取器的链接（因为我们把文件 input 隐藏起来，以防止显示那个不那么吸引人的用户界面）。这在[使用 click() 方法使用隐藏的文件 input 元素](#通过_click_方法使用隐藏的文件_input_元素)一节中有所说明，调用文件选取器的方法也是如此。
 
 `handleFiles()` 方法如下：
 
@@ -331,16 +335,17 @@ fileSelect.addEventListener(
 fileElem.addEventListener("change", handleFiles, false);
 
 function handleFiles() {
+  fileList.textContent = "";
   if (!this.files.length) {
-    fileList.innerHTML = "<p>没有选择任何文件！</p>";
+    const p = document.createElement("p");
+    p.textContent = "没有选择任何文件！";
+    fileList.appendChild(p);
   } else {
-    fileList.innerHTML = "";
     const list = document.createElement("ul");
     fileList.appendChild(list);
     for (let i = 0; i < this.files.length; i++) {
       const li = document.createElement("li");
       list.appendChild(li);
-
       const img = document.createElement("img");
       img.src = URL.createObjectURL(this.files[i]);
       img.height = 60;
@@ -349,7 +354,7 @@ function handleFiles() {
       };
       li.appendChild(img);
       const info = document.createElement("span");
-      info.innerHTML = `${this.files[i].name}: ${this.files[i].size} bytes`;
+      info.textContent = `${this.files[i].name}：${this.files[i].size} 字节`;
       li.appendChild(info);
     }
   }
@@ -366,9 +371,9 @@ function handleFiles() {
 
    1. 创建一个新的列表项（{{HTMLElement("li")}}）元素并插入到列表中。
    2. 创建一个新的图片（{{HTMLElement("img")}}）元素。
-   3. 设置图片的源为一个新的指代文件的对象 URL，使用 {{DOMxRef("URL.createObjectURL()")}} 来创建 blob URL。
+   3. 设置图片的源为一个新的指代文件的对象 URL，使用 {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}} 来创建 blob URL。
    4. 设置图片的高度为 60 像素。
-   5. 设置图片的 load 事件处理器来释放对象 URL，当图片加载完成之后对象 URL 就不再需要了。这个可以通过调用 {{DOMxRef("URL.revokeObjectURL()")}} 方法并且传递 `img.src`中的对象 URL 字符串来实现。
+   5. 设置图片的 load 事件处理器来释放对象 URL，当图片加载完成之后对象 URL 就不再需要了。这个可以通过调用 {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} 方法并且传递 `img.src` 中的对象 URL 字符串来实现。
    6. 将新的列表项添加到列表中。
 
 这是上面代码的一个在线示例：
@@ -377,7 +382,10 @@ function handleFiles() {
 
 ## 示例：上传一个用户选择的文件
 
-另一件你可能想要做的事是让用户将选定的一个或多个文件（例如前一个示例中选择的图像）上传到服务器。这用异步可以很容易地完成。
+此示例展示了如何让用户将文件（例如使用上一个示例选择的图像）上传到服务器。
+
+> [!NOTE]
+> 通常最好使用 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 而不是 {{domxref("XMLHttpRequest")}} 发起 HTTP 请求。但是，在这种情况下，我们想向用户显示上传进度，而 Fetch API 仍然不支持此特性，因此示例使用 `XMLHttpRequest`。使用 Fetch API 跟踪进度通知标准化的工作位于 <https://github.com/whatwg/fetch/issues/607>。
 
 ### 创建上传任务
 
@@ -393,7 +401,7 @@ function sendFiles() {
 }
 ```
 
-第 2 行获取了文档中所有 CSS 类为 `obj` 的元素的 {{DOMxRef("NodeList")}}，命名为 `imgs`。在我们的例子中，这些是包含所有图像缩略图的列表。有了这个列表，遍历并为每一项创建一个新的 `FileUpload` 实例就很简单了。每个实例都可以处理相应文件的上传。
+`document.querySelectorAll` 获取了文档中所有 CSS 类为 `obj` 的元素的 {{DOMxRef("NodeList")}}，命名为 `imgs`。在我们的例子中，这些是包含所有图像缩略图的列表。有了这个列表，遍历并为每一项创建一个新的 `FileUpload` 实例就很简单了。每个实例都可以处理相应文件的上传。
 
 ### 处理文件的上传过程
 
@@ -429,7 +437,7 @@ function FileUpload(img, file) {
   );
   xhr.open(
     "POST",
-    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
+    "https://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
   );
   xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
   reader.onload = (evt) => {
@@ -479,14 +487,14 @@ function createThrobber(img) {
 
 这个例子演示了如何异步上传文件，在服务器端使用了 PHP，在客户端使用了 JavaScript。
 
-```js
+```php
 <?php
 if (isset($_FILES['myFile'])) {
-    // Example:
+    // 示例：
     move_uploaded_file($_FILES['myFile']['tmp_name'], "uploads/" . $_FILES['myFile']['name']);
     exit;
 }
-?><!DOCTYPE html>
+?><!doctype html>
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
@@ -537,7 +545,7 @@ if (isset($_FILES['myFile'])) {
 
 对象 URL 可以用于图像之外的其他东西！它可以用于显示嵌入的 PDF 文件或任何其他浏览器能显示的资源。
 
-在 Firefox 中，要让 PDF 嵌入式地显示在 iframe 中（而不是作为下载的文件弹出），必须将 `pdfjs.disabled` 设为 `false` {{non-standard_inline()}}.
+在 Firefox 中，要让 PDF 嵌入式地显示在 iframe 中（而不是作为下载的文件弹出），必须将 `pdfjs.disabled` 设为 `false`。
 
 ```html
 <iframe id="viewer"></iframe>
@@ -571,4 +579,4 @@ URL.revokeObjectURL(obj_url);
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("URL")}}
 - {{DOMxRef("XMLHttpRequest")}}
-- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

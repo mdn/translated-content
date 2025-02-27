@@ -25,7 +25,7 @@ if (document.currentScript.async) {
 }
 ```
 
-[View Live Examples](/samples/html/currentScript.html)
+[View Live Examples](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
 ## Nota
 
@@ -33,11 +33,11 @@ Se o código estiver sendo chamado como um callback ou manipulador de eventos, e
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.currentScript")}}
+{{Compat}}
 
 ## Especificações
 
-- [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-currentscript)
+- [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-currentscript)
 
 ## Veja também
 

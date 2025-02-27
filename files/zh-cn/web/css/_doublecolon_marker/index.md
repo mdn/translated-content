@@ -1,5 +1,5 @@
 ---
-title: "::marker"
+title: ::marker
 slug: Web/CSS/::marker
 ---
 
@@ -20,7 +20,8 @@ slug: Web/CSS/::marker
 - {{CSSxRef("content")}} 属性
 - 所有的 [animation](/zh-CN/docs/Web/CSS/CSS_animations#css_属性) 和 [transition](/zh-CN/docs/Web/CSS/CSS_transitions#css_属性) 属性
 
-> **备注：** 规范指出，将来可能会支持其他 CSS 属性。
+> [!NOTE]
+> 规范指出，将来可能会支持其他 CSS 属性。
 
 ## 语法
 

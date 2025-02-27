@@ -11,11 +11,12 @@ JavaScript 本质上是一门单线程语言。对于在它被设计出来的那
 
 当然，随着时间的流逝，计算机已经发展成为强大的多核系统，而 JavaScript 已经成为计算世界中使用最广泛的语言之一。大量最流行的应用程序至少有一部分是基于 JavaScript 代码的。为了支持这一点，有必要找到方法让项目摆脱单线程语言的限制。
 
-自从定时器（{{domxref("setTimeout()")}} 和 {{domxref("setInterval()")}}）加入到 Web API 后，浏览器提供的 JavaScript 环境就已经逐渐发展到包含任务调度、多线程应用开发等强大的特性。了解 JavaScript 运行时是如何安排和运行代码的对了解 `queueMicrotask()` 会非常有作用。
+自从定时器（{{domxref("Window.setTimeout", "setTimeout()")}} 和 {{domxref("Window.setInterval", "setInterval()")}}）加入到 Web API 后，浏览器提供的 JavaScript 环境就已经逐渐发展到包含任务调度、多线程应用开发等强大的特性。了解 JavaScript 运行时是如何安排和运行代码的对了解 `queueMicrotask()` 会非常有作用。
 
 ## JavaScript 执行上下文
 
-> **备注：** 对于大多数 JavaScript 开发人员来说，这些细节并不重要。这里提供的信息只用于了解为什么微任务非常有用以及它们是如何工作的。如果你并不关心这些内容，你可以跳过这部分或者在你觉得需要的时候再倒回来查看。
+> [!NOTE]
+> 对于大多数 JavaScript 开发人员来说，这些细节并不重要。这里提供的信息只用于了解为什么微任务非常有用以及它们是如何工作的。如果你并不关心这些内容，你可以跳过这部分或者在你觉得需要的时候再倒回来查看。
 
 当一段 JavaScript 代码在运行的时候，它实际上是运行在**执行上下文**中。下面 3 种类型的代码会创建一个新的执行上下文：
 
@@ -117,7 +118,7 @@ greetUser("Veronica");
 
 #### 任务 vs 微任务
 
-一个**任务**就是指计划由标准机制来执行的任何 JavaScript，如程序的初始化、事件触发的回调等。除了使用事件，你还可以使用 {{domxref("setTimeout()")}} 或者 {{domxref("setInterval()")}} 来添加任务。
+一个**任务**就是指计划由标准机制来执行的任何 JavaScript，如程序的初始化、事件触发的回调等。除了使用事件，你还可以使用 {{domxref("Window.setTimeout", "setTimeout()")}} 或者 {{domxref("Window.setInterval", "setInterval()")}} 来添加任务。
 
 任务队列和微任务队列的区别很简单，但却很重要：
 
@@ -134,7 +135,7 @@ greetUser("Veronica");
 
 使用 [web worker](/zh-CN/docs/Web/API/Web_Workers_API) 可以让主线程另起新的线程来运行脚本，这能够缓解上面的情况。一个设计良好的网站或应用会把一些复杂的或者耗时的操作交给 worker 去做，这样可以让主线程除了更新、布局和渲染网页之外，尽可能少的去做其他事情。
 
-通过使用像 [promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 这样的[异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous) 技术可以使得主线程在等待请求返回结果的同时继续往下执行，这能够更进一步减轻上面提到的情况。然而，一些更接近于基础功能的代码——比如一些框架代码，可能更需要将代码安排在主线程上一个安全的时间来运行，它与任何请求的结果或者任务无关。
+通过使用像 [promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 这样的[异步 JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS) 技术可以使得主线程在等待请求返回结果的同时继续往下执行，这能够更进一步减轻上面提到的情况。然而，一些更接近于基础功能的代码——比如一些框架代码，可能更需要将代码安排在主线程上一个安全的时间来运行，它与任何请求的结果或者任务无关。
 
 微任务是另一种解决该问题的方案，通过将代码安排在下一次事件循环开始之前运行而不是必须要等到下一次开始之后才执行，这样可以提供一个更好的访问级别。
 
@@ -143,8 +144,8 @@ greetUser("Veronica");
 ## 参见
 
 - [微任务指南](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide)
-- {{domxref("queueMicrotask()")}}
-- [异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)
-  - [异步 JavaScript 简介](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - [合作的异步 JavaScript：超时和间隔](/zh-CN/docs/Learn/JavaScript/Asynchronous)
-  - [用 Promise 进行优雅的异步编程](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises)
+- {{domxref("Window.queueMicrotask()")}}
+- [异步 JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)
+  - [异步 JavaScript 简介](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Introducing)
+  - [合作的异步 JavaScript：超时和间隔](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)
+  - [用 Promise 进行优雅的异步编程](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Promises)

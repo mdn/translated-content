@@ -1,25 +1,54 @@
 ---
 title: font
 slug: Web/CSS/font
+l10n:
+  sourceCommit: 3fd4e2ff8c4da3b4ff7be34eeda4dd0cbbfc1a15
 ---
 
 {{CSSRef}}
 
-## 概述
-
-`font` 属性可以用来作为 {{ Cssxref("font-style") }}, {{ Cssxref("font-variant") }}, {{ Cssxref("font-weight") }}, {{ Cssxref("font-size") }}, {{ Cssxref("line-height") }} 和 {{ Cssxref("font-family") }} 属性的简写，或将元素的字体设置为系统字体。
+CSS [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) `font` 可设置某元素字体的不同属性，或将元素的字体设置为系统字体。
 
 {{EmbedInteractiveExample("pages/css/font.html")}}
 
-与任何简写属性一样，任何未指定的值都将设置为其对应的初始值（可能覆盖先前使用非简写属性设置的值）。虽然不能通过 font 直接设置，但是{{ cssxref("font-stretch") }}，{{ cssxref("font-size-adjust") }} 和 {{ cssxref("font-kerning") }} 也会重置为初始值。
+与任何简写属性一样，任何未指定的值都将设置为其对应的初始值（可能覆盖先前使用非简写属性设置的值）。虽然不能通过 `font` 直接设置，但是 {{cssxref("font-size-adjust")}} 和 {{cssxref("font-kerning")}} 也会重置为初始值。
+
+## 组成属性
+
+该属性是以下 CSS 属性的简写：
+
+- {{cssxref("font-family")}}
+- {{cssxref("font-size")}}
+- {{cssxref("font-stretch")}}
+- {{cssxref("font-style")}}
+- {{cssxref("font-variant")}}
+- {{cssxref("font-weight")}}
+- {{cssxref("line-height")}}
 
 ## 语法
 
-可以将`font`属性指定为单个关键字，它将选择系统字体，或者作为字体相关的属性的简写。
+```css-nolint
+/* font-size font-family */
+font: 1.2em "Fira Sans", sans-serif;
 
-如果将 `font` 指定为系统关键字，则它必须是以下之一：[`caption`](/zh-CN/docs/Web/CSS/font#caption), [`icon`](/zh-CN/docs/Web/CSS/font#icon), [`menu`](/zh-CN/docs/Web/CSS/font#menu), [`message-box`](/zh-CN/docs/Web/CSS/font#message-box), [`small-caption`](/zh-CN/docs/Web/CSS/font#small-caption), [`status-bar`](/zh-CN/docs/Web/CSS/font#status-bar)。
+/* font-size/line height font-family */
+font: 1.2em/2 "Fira Sans", sans-serif;
 
-如果 `font` 字体相关的属性的简写：
+/* font-style font-weight font-size font-family */
+font: italic bold 1.2em "Fira Sans", sans-serif;
+
+/* font-stretch font-variant font-size font-family */
+font: ultra-condensed small-caps 1.2em "Fira Sans", sans-serif;
+
+/* 系统字体 */
+font: caption;
+```
+
+可以将 `font` 属性指定为单个关键字，它将选择系统字体，或者作为字体相关的属性的简写。
+
+如果将 `font` 指定为系统关键字，则它必须是 `caption`、`icon`、`menu`、`message-box`、`small-caption`、`status-bar` 之一。
+
+如果 `font` 指定为字体相关的属性的简写：
 
 - 必须包含以下值：
 
@@ -31,32 +60,36 @@ slug: Web/CSS/font
   - {{cssxref("&lt;font-style&gt;")}}
   - {{cssxref("&lt;font-variant&gt;")}}
   - {{cssxref("&lt;font-weight&gt;")}}
+  - {{cssxref("&lt;font-stretch&gt;")}}
   - {{cssxref("&lt;line-height&gt;")}}
 
-- `font-style`, `font-variant` 和 `font-weight` 必须在 `font-size` 之前
-- 在 CSS 2.1 中 `font-variant` 只可以是 `normal` 和 `small-caps`
-- `line-height` 必须跟在 `font-size` 后面，由 "/" 分隔，例如 "`16px/3`"
+- `font-style`、`font-variant` 和 `font-weight` 必须在 `font-size` 之前
+- `font-variant` 只可以使用 CSS 2.1 定义的值，即 `normal` 和 `small-caps`
+- `font-stretch` 必须是单个关键字值
+- `line-height` 必须跟在 `font-size` 后面，由“/”分隔，例如“`16px/3`”
 - `font-family` 必须最后指定
 
 ### 值
 
 - `<'font-style'>`
-  - : 见 {{ Cssxref("font-style") }} 属性。
+  - : 见 {{cssxref("font-style")}} 属性。
 - `<'font-variant'>`
-  - : 见 {{ Cssxref("font-variant") }} 属性。
+  - : 见 {{cssxref("font-variant")}} 属性。
 - `<'font-weight'>`
-  - : 见 {{ Cssxref("font-weight") }} 属性。
+  - : 见 {{cssxref("font-weight")}} 属性。
+- `<'font-stretch'>`
+  - : 见 {{cssxref("font-stretch")}} 属性。
 - `<'font-size'>`
-  - : 见 {{ Cssxref("font-size") }} 属性。
+  - : 见 {{cssxref("font-size")}} 属性。
 - `<'line-height'>`
-  - : 见 {{ cssxref("line-height") }} 属性。
+  - : 见 {{cssxref("line-height")}} 属性。
 - `<'font-family'>`
-  - : 见 {{ Cssxref("font-family") }} 属性。
+  - : 见 {{cssxref("font-family")}} 属性。
 
 #### 系统字体
 
 - `caption`
-  - : 用于标题控件（如按钮，下拉列表等）的系统字体。
+  - : 用于标题控件（如按钮、下拉列表等）的系统字体。
 - `icon`
   - : 用于标签图标的系统字体。
 - `menu`
@@ -67,40 +100,41 @@ slug: Web/CSS/font
   - : 用于小标题控件的系统字体。
 - `status-bar`
   - : 用于窗口状态栏的系统字体。
-- 系统关键字前缀
-  - : 浏览器经常会多实现几个带前缀的关键字；Gecko 实现了 `-moz-window`, `-moz-document`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list`, 和 `-moz-field`.
+- 带前缀的系统字体关键字
+  - : 浏览器经常会实现多个带前缀的关键字；Gecko 实现了 `-moz-window`、`-moz-document`、`-moz-desktop`、`-moz-info`、`-moz-dialog`、`-moz-button`、`-moz-pull-down-menu`、`-moz-list` 和 `-moz-field`。
 
-### 形式语法
+## 形式定义
 
-{{csssyntax("font")}}
+{{CSSInfo}}
+
+## 形式语法
+
+{{CSSSyntax}}
 
 ## 示例
 
 ### 设置字体属性
 
 ```css
-/* Set the font size to 12px and the line height to 14px.
-   Set the font family to sans-serif */
+/* 设置字体大小为 12px，行高为 14px，字体家族为 sans-serif */
 p {
   font: 12px/14px sans-serif;
 }
 
-/* Set the font size to 80% of the parent element
-   or default value (if no parent element present).
-   Set the font family to sans-serif */
+/* 将字体大小设置为父元素的 80% 或默认值（如果没有父元素存在），设置字体家族为 sans-serif */
 p {
   font: 80% sans-serif;
 }
 
-/* Set the font weight to bold,
-   the font-style to italic,
-   the font size to large,
-   and the font family to serif. */
+/* 设置字体粗细为 bold，
+   风格为斜体，
+   大小为 large，
+   家族为 serif。*/
 p {
   font: bold italic large serif;
 }
 
-/* Use the same font as the status bar of the window */
+/* 使用与窗体状态栏一致的字体 */
 p {
   font: status-bar;
 }
@@ -109,9 +143,7 @@ p {
 ### 运行实例
 
 ```html hidden
-<p>
-  Change the radio buttons below to see the generated shorthand and its effect.
-</p>
+<p>改变下方的单选钮，查看生成的简写属性及其效果。</p>
 <form action="createShortHand()">
   <div class="cf">
     <div class="setPropCont">
@@ -350,7 +382,7 @@ p {
   </div>
 </form>
 
-<div class="fontShortHand">This is some sample text.</div>
+<div class="fontShortHand">这是一段示例文字。</div>
 <br /><br /><br /><br /><br /><br />
 ```
 
@@ -437,8 +469,7 @@ function getCheckedValue(radioName) {
 }
 
 function setCss() {
-  getProperties();
-  injectCss(shortText);
+  injectCss(getProperties());
 }
 
 function injectCss(cssFragment) {
@@ -463,3 +494,9 @@ setCss();
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{cssxref("font-style")}}
+- {{cssxref("font-weight")}}
+- [文本和字体样式基础](/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals)

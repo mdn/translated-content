@@ -13,7 +13,33 @@ slug: Web/HTML/Element/input/datetime-local
 <input id="datetime" type="datetime-local" />
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/input-datetime-local.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;datetime-local&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="meeting-time">Choose a time for your appointment:</label>
+
+<input
+  type="datetime-local"
+  id="meeting-time"
+  name="meeting-time"
+  value="2018-06-12T19:30"
+  min="2018-06-07T00:00"
+  max="2018-06-14T00:00" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 Для тех из вас, кто не использует поддерживающий браузер, Chrome/Opera datetime-local control выглядит как скриншот ниже. Нажатие на стрелку вниз с правой стороны приводит к выбору даты, чтобы вы могли выбрать дату; вы должны ввести время вручную.
 
@@ -27,7 +53,7 @@ slug: Web/HTML/Element/input/datetime-local
 
 | **[Value](#value)**             | A {{domxref("DOMString")}} representing a date and time, or empty.                                                                                                                                                          |
 | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **события**                     | {{event("change")}} и {{event("input")}}.                                                                                                                                                                                   |
+| **события**                     | [`change`](/ru/docs/Web/API/HTMLElement/change_event) и [`input`](/ru/docs/Web/API/Element/input_event).                                                                                                                    |
 | **Supported Common Attributes** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`list`](/ru/docs/Web/HTML/Element/input#list), [`readonly`](/ru/docs/Web/HTML/Element/input#readonly), and [`step`](/ru/docs/Web/HTML/Element/input#step). |
 | **IDL attributes**              | `list`, `value`, `valueAsNumber`.                                                                                                                                                                                           |
 | **методы**                      | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}.                                                             |
@@ -49,7 +75,8 @@ slug: Web/HTML/Element/input/datetime-local
 
 Одна вещь, чтобы отметить, что отображаемый формат даты отличается от фактического `значения` — отображаемый формат даты будет выбран на основе установленного языкового стандарта операционной системы пользователя, в то время как дата `значение` всегда форматируется `yyyy-MM-ddThh:mm`. Когда значение передаётся на сервер, например, это будет выглядеть `partydate=2017-06-01T08:30`.
 
-> **Примечание:** также имейте в виду, что если такие данные поступают через http-запрос Get, двоеточие нужно экранировать для включения в параметры URL, например `partydate=2017-06-01T08%3A30`.
+> [!NOTE]
+> Также имейте в виду, что если такие данные поступают через http-запрос Get, двоеточие нужно экранировать для включения в параметры URL, например `partydate=2017-06-01T08%3A30`.
 
 Вы также можете получить и установить значение даты в JavaScript, используя {{domxref("HTMLInputElement.value")}} свойство, например:
 
@@ -100,7 +127,8 @@ dateControl.value = "2017-06-01T08:30";
 - Могут быть выбраны только дни из Июня 2017 — только дни, которые входят в заданный диапазон дат доступны для выбора, и в виджете нельзя увидеть даты, не принадлежащие Июню.
 - В зависимости от того, какой браузер вы используете, вы можете заметить, что время вне заданного диапазона не доступно к выбору (e.g. Edge), или доступно к выбору(e.g. Chrome) но невалидно (see [Validation](#validation)).
 
-> **Примечание:** Существует возможность использовать [`step`](/ru/docs/Web/HTML/Element/input#step) атрибут для того, чтобы установить количество дней, которые будут пропущены каждый раз, когда дата увеличивается (например, если вы хотите сделать доступными для выбора только Субботы). Однако, на момент написание этой статьи это нет эффективной реализации этой функции.
+> [!NOTE]
+> Существует возможность использовать [`step`](/ru/docs/Web/HTML/Element/input#step) атрибут для того, чтобы установить количество дней, которые будут пропущены каждый раз, когда дата увеличивается (например, если вы хотите сделать доступными для выбора только Субботы). Однако, на момент написание этой статьи это нет эффективной реализации этой функции.
 
 ### Controlling input size
 
@@ -108,7 +136,7 @@ dateControl.value = "2017-06-01T08:30";
 
 ### Setting timezones
 
-One thing the `datetime-local` input type doesn't provide is a way to set the timezone/locale of the datetime. This was available in the [`datetime`](/ru/docs/Web/HTML/Element/input/datetime) input type, but this type is now obsolete, having been removed from the spec. The main reasons why this was removed are a lack of implementation in browsers, and concerns over the user interface/experience. It is easier to just have a control (or controls) for setting the date/time and then deal with the locale in a separate control.
+One thing the `datetime-local` input type doesn't provide is a way to set the timezone/locale of the datetime. This was available in the [`datetime`](/ru/docs/Web/HTML/Element/input/datetime-local) input type, but this type is now obsolete, having been removed from the spec. The main reasons why this was removed are a lack of implementation in browsers, and concerns over the user interface/experience. It is easier to just have a control (or controls) for setting the date/time and then deal with the locale in a separate control.
 
 For example, if you are creating a system where the user is likely to already be logged in, with their locale already set, you could provide the timezone in a [`hidden`](/ru/docs/Web/HTML/Element/input/hidden) input type. For example:
 
@@ -133,7 +161,8 @@ On the other hand, if you were required to allow the user to enter a timezone al
 
 In either case, the timedate and timezone values would be submitted to the server as separate data points, and then you'd need to store them appropriately in the database on the server-side.
 
-> **Примечание:** The above code snippet is taken from [All world timezones in an HTML select element](https://gist.github.com/nodesocket/3919205).
+> [!NOTE]
+> The above code snippet is taken from [All world timezones in an HTML select element](https://gist.github.com/nodesocket/3919205).
 
 ## Validation
 
@@ -279,7 +308,7 @@ input:valid + span:after {
 }
 ```
 
-The best way to deal with dates in forms in a cross-browser way at the moment is to get the user to enter the day, month, year, and time in separate controls ({{htmlelement("select")}} elements being popular — see below for an implementation), or use JavaScript libraries such as [jQuery date picker](https://jqueryui.com/datepicker/), and the [jQuery timepicker plugin](http://timepicker.co/).
+The best way to deal with dates in forms in a cross-browser way at the moment is to get the user to enter the day, month, year, and time in separate controls ({{htmlelement("select")}} elements being popular — see below for an implementation), or use JavaScript libraries such as [jQuery date picker](https://jqueryui.com/datepicker/), and the [jQuery timepicker plugin](https://timepicker.co/).
 
 ## Examples
 
@@ -520,15 +549,15 @@ daySelect.onchange = function () {
 };
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-- [Date and Time picker tutorial](/ru/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker)
+- [Date and Time picker tutorial](/ru/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)

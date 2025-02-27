@@ -3,6 +3,8 @@ title: Пробельные символы
 slug: Glossary/Whitespace
 ---
 
+{{GlossarySidebar}}
+
 **Пробельные символы** — это множество {{Glossary("Character", "символов")}} использующихся для горизонтального или вертикального разделения остальных символов. Они используются для разделения токенов в {{Glossary("HTML")}}, {{Glossary("CSS")}}, {{Glossary("JavaScript")}} и других компьютерных языках.
 
 ## В HTML
@@ -15,7 +17,7 @@ slug: Glossary/Whitespace
 
 2. Ссылки
 
-   1. [Пробельные символы в модели DOM](/ru/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM)
+   1. [Пробельные символы в модели DOM](/ru/docs/Web/API/Document_Object_Model/Whitespace)
    2. {{cssxref("white-space")}}
 
 3. [Глоссарий](/ru/docs/Glossary)

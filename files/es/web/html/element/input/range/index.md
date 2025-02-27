@@ -195,13 +195,19 @@ HTML
 Captura de pantalla
 ![Screenshot of a plain slider control on macOS](macslider-labels.png)
 
-> **Nota:** Actualmente, ningún navegador soporta todas estas características. Firefox no soporta ni marcas ni etiquetas, mientras que Chrome soporta las marcas pero no las etiquetas.
+> [!NOTE]
+> Actualmente, ningún navegador soporta todas estas características. Firefox no soporta ni marcas ni etiquetas, mientras que Chrome soporta las marcas pero no las etiquetas.
 
 ### Cambiar la orientación
 
+### Crear controles de rango vertical
+
 Por defecto, si un navegador renderiza un input range, lo mostrará como un "slider" (deslizador) que se desliza hacia la izquierda y hacia la derecha. By default, if a browser renders a range input as a slider, it will render it so that the knob slides left and right. Sin embargo puedes cambiar esto fácilmente para que se deslice hacia arriba y hacia abajo simplemente usando CSS
 
-> **Nota:** Esto aún no está implementado por los principales navegadores. This is not actually implemented yet by any of the major browsers. See Firefox [Error 981916 en Firefox](https://bugzil.la/981916), [Chrome bug 341071](https://bugs.chromium.org/p/chromium/issues/detail?id=341071).
+> [!NOTE]
+> Esto aún no está implementado por los principales navegadores. This is not actually implemented yet by any of the major browsers. See Firefox [Error 981916 en Firefox](https://bugzil.la/981916), [Chrome bug 341071](https://bugs.chromium.org/p/chromium/issues/detail?id=341071).
+
+#### Control de rango horizontal
 
 Si tenemos el siguiente control range:
 
@@ -209,34 +215,35 @@ Si tenemos el siguiente control range:
 <input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
-{{EmbedLiveSample("Orientation_sample1", 200, 200, "orientation_sample1.png")}}
+{{EmbedLiveSample("Control de rango horizontal", 200, 40)}}
 
-Dicho control se muestra en horizontal (al menos en los principales navegadores, o otros puede variar). Presentarlo en vertical es tan simple como añadir CSS para cambiar las dimensiones del control, de la siguiente manera:
+Dicho control se muestra en horizontal (al menos en los principales navegadores, o otros puede variar).
 
-#### CSS
+#### Usando la propiedad de appearance
+
+La propiedad {{cssxref('appearance')}} tiene un valor no estándar de `slider-vertical` que, bueno, hace que los controles deslizantes sean verticales.
+
+Usamos el mismo HTML que en los ejemplos anteriores:
+
+```html
+<input type="range" min="0" max="11" value="7" step="1" />
+```
+
+Nos dirigimos solo a las entradas con un tipo de rango:
 
 ```css
-#volume {
-  height: 150px;
-  width: 50px;
+input[type="range"] {
+  appearance: slider-vertical;
 }
 ```
 
-#### HTML
+{{EmbedLiveSample("Usando la propiedad de appearance", 200, 200)}}
 
-```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1" />
-```
-
-#### Result
-
-{{EmbedLiveSample("Orientation_sample2", 200, 200, "orientation_sample2.png")}}
-
-**En la actualidad, ninguno de los navegadores principales soporta la creación de inputs range usando este CSS, incluso a perar de que la especificación recomienda que lo hagan.**
+#### Control de rango vertical
 
 La especificación HTML recomienda que los navegadores cambien la orientación del range si el ancho especificado es menor que el alto. Desafortunadamente, ninguno de los principales navegadores soportar controles range verticales directamente. Para conseguir un range vertical, la forma más fácil es usar CSS, aplicando {{cssxref("transform")}} para rotar el elemento y mostrarlo en vertical. Veamos cómo.
 
-#### HTML
+##### HTML
 
 El HTML necesita que el elemento {{HTMLElement("input")}} esté dentro de un elemento {{HTMLElement("div")}} :
 
@@ -246,7 +253,7 @@ El HTML necesita que el elemento {{HTMLElement("input")}} esté dentro de un ele
 </div>
 ```
 
-#### CSS
+##### CSS
 
 Ahora necesitamos un poco de CSS. Primero escribimos el CSS del div contenedor; especificamos el modo de display y el tamaño que queremos que tenga, reservando un área en la página para el "slider" que vamos a rotar.
 
@@ -273,9 +280,9 @@ Después ponemos la información para el elemento `<input>`:
 
 El tamaño del range es 150 pixeles de ancho por 20 pixeles de alto. Ponemos los márgenes a 0 y con {{cssxref("transform-origin")}} cambiamos centro que usaremos para rotar el range. Como el input mide 150 pixeles de ancho y largo, girará en una cuadrado de 150 pixeles de lado. Colocamos el centro de giro a 75px horizontal y verticalmente y, finalmente, rotamos 90º en sentido contrario a las agujas del reloj. El resultado final es un input range que ha girado y cuyo valor máximo está en la parte superior y el valor mínimo en la parte inferior.
 
-#### Result
+##### Resultado
 
-{{EmbedLiveSample("Orientation_sample3", 200, 200, "orientation_sample3.png")}}
+{{EmbedLiveSample("Control de rango vertical", 200, 200)}}
 
 ## Validación
 
@@ -302,6 +309,6 @@ Además de los ejemplos anteriores, encontrarás más ejemplos en los siguientes
 
 ## Ver también
 
-- [HTML Forms](/es/docs/Learn/HTML/Forms)
+- [HTML Forms](/es/docs/Learn/Forms)
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
 - [`<input type="number">`](/es/docs/Web/HTML/Element/input/number)

@@ -48,13 +48,14 @@ Pour commencer, revenons à notre jeu de devinettes numériques — sauf que cet
 
    , cela ne fonctionne pas!
 
-> **Note :** Votre propre version de l'exemple de jeu ne fonctionne pas, vous pourriez vouloir la corriger ! Il nous semble plus efficace que vous travailliez sur notre version boguée, afin que vous puissiez apprendre les techniques que nous enseignons ici. Ensuite, vous pouvez revenir en arrière et essayer de réparer votre exemple.
+> [!NOTE]
+> Votre propre version de l'exemple de jeu ne fonctionne pas, vous pourriez vouloir la corriger ! Il nous semble plus efficace que vous travailliez sur notre version boguée, afin que vous puissiez apprendre les techniques que nous enseignons ici. Ensuite, vous pouvez revenir en arrière et essayer de réparer votre exemple.
 
-À ce stade, consultons la [console du développeur](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs) pour voir si nous pouvons voir des erreurs de syntaxe, puis essayez de les corriger. Vous apprendrez comment ci-dessous.
+À ce stade, consultons la [console du développeur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) pour voir si nous pouvons voir des erreurs de syntaxe, puis essayez de les corriger. Vous apprendrez comment ci-dessous.
 
 ## Réparer les erreurs de syntaxe
 
-Antérieurement dans le cours, nous vous avons demandé de taper quelques commandes JavaScript simples dans la [console JavaScript](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs) [des outils de développement](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs) (si vous ne pouvez pas vous rappeler comment l'ouvrir dans votre navigateur, suivez le lien précédent pour savoir comment). Ce qui est encore plus utile, c'est que la console vous donne des messages d'erreur chaque fois qu'une erreur de syntaxe existe dans le JavaScript qui est introduit dans le moteur JavaScript du navigateur. Maintenant partons en chasse !
+Antérieurement dans le cours, nous vous avons demandé de taper quelques commandes JavaScript simples dans la [console JavaScript](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) [des outils de développement](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) (si vous ne pouvez pas vous rappeler comment l'ouvrir dans votre navigateur, suivez le lien précédent pour savoir comment). Ce qui est encore plus utile, c'est que la console vous donne des messages d'erreur chaque fois qu'une erreur de syntaxe existe dans le JavaScript qui est introduit dans le moteur JavaScript du navigateur. Maintenant partons en chasse !
 
 1. Allez à l'onglet dans lequel est affiché `number-game-errors.html`, et ouvrez la console JavaScript. Vous devriez voir un message d'erreur dans les lignes qui suivent&nbsp;: ![](not-a-function.png)
 2. C'est une erreur très facile à trouver, et le navigateur vous fournit quelques indices pour vous en sortir (la copie d'écran ci‑dessus provient de Firefox, mais les autres navigateurs donnent des indications semblables). De gauche à droite, nous avons :
@@ -74,7 +75,8 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
 4. Le message d'erreur dit "guessSubmit.addeventListener n'est pas une fonction", donc nous avons probablement mal orthographié quelque chose. Si vous n'êtes pas sûr de la bonne orthographe d'un élément syntaxique, il est fréquemment opportun de regarder dans MDN. Actuellement, la meilleure façon d'opérer consiste à faire une recherche pour "mdn _nom-de-fonctionnalité_" avec votre moteur de recherche préféré. Voici un raccourci pour gagner un peu de temps dans le cas présent : [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener).
 5. Donc, en regardant cette page, il apparaît que nous avions mal orthographié le nom de la fonction ! Souvenez-vous que JavaScript est sensible à la casse, et que la moindre différence dans l'orthographe ou la casse déclenchera une erreur. Remplacer `addeventListener` par `addEventListener` corrigera cela. Faisons‑le maintenant.
 
-> **Note :** Voyez la page relative à [TypeError: "x" is not a function](/fr/docs/Web/JavaScript/Reference/Errors/Not_a_function) pour plus de précisions à propos de cette erreur.
+> [!NOTE]
+> Voyez la page relative à [TypeError: "x" is not a function](/fr/docs/Web/JavaScript/Reference/Errors/Not_a_function) pour plus de précisions à propos de cette erreur.
 
 ### Erreurs de syntaxe&nbsp;: deuxième tour
 
@@ -84,7 +86,8 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
 
    > **Note :** [`Null`](/fr/docs/Glossary/Null) est une valeur spéciale signifiant "rien" ou "aucune valeur". Or `lowOrHi` a été déclaré et initialisé, mais sans valeur signifiante — il n'a ni type ni valeur.
 
-   > **Note :** Cette erreur n'apparaît pas au moment du chargement de la page car elle survient à l'intérieur d'une fonction (dans `checkGuess() { ... }`). Comme vous l'apprendrez de manière plus précise plus loin dans l'article à propos des fonctions, le code dans les fonctions s'exécute dans une instance séparée du code en dehors des fonctions. Dans notre cas, le code n'avait pas été exécuté et l'erreur ne pouvait pas survenir avant que la fonction `checkGuess()` soit lancée à la ligne 86.
+   > [!NOTE]
+   > Cette erreur n'apparaît pas au moment du chargement de la page car elle survient à l'intérieur d'une fonction (dans `checkGuess() { ... }`). Comme vous l'apprendrez de manière plus précise plus loin dans l'article à propos des fonctions, le code dans les fonctions s'exécute dans une instance séparée du code en dehors des fonctions. Dans notre cas, le code n'avait pas été exécuté et l'erreur ne pouvait pas survenir avant que la fonction `checkGuess()` soit lancée à la ligne 86.
 
 4. Regardez à la ligne 78, vous verrez ce code&nbsp;:
 
@@ -104,7 +107,7 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
    console.log(lowOrHi);
    ```
 
-   > **Note :** [`console.log()`](/fr/docs/Web/API/Console/log) est vraiment utile pour déboguer une fonction en affichant sa valeur sur la console. Donc, elle affichera sur cette dernière la valeur de `lowOrHi` que nous avons essayé de définir à la ligne 48.
+   > **Note :** [`console.log()`](/fr/docs/Web/API/console/log_static) est vraiment utile pour déboguer une fonction en affichant sa valeur sur la console. Donc, elle affichera sur cette dernière la valeur de `lowOrHi` que nous avons essayé de définir à la ligne 48.
 
 7. Enregistrez et actualisez la page, et vous verrez le résultat de `console.log()` sur la console. ![](console-log-output.png) C'est sûr, la valeur de `lowOrHi` est `null` à ce niveau&nbsp;; il y a bien un problème à la ligne 48.
 8. Quel est ce problème&nbsp;? Réfléchissons. À la ligne 48, nous avons utilisé la méthode [`document.querySelector()`](/fr/docs/Web/API/Document/querySelector) pour obtenir une référence sur un élément avec un sélecteur CSS. En regardant plus en amont dans notre fichier, nous pouvons trouver le paragraphe en question&nbsp;:
@@ -116,7 +119,8 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
 9. Donc, il nous faut un sélecteur de classe ici, précédé d'un point (.), alors que le sélecteur passé à la méthode `querySelector()` en ligne 48 n'en a pas. Ce pourrait être le problème&nbsp;! Changeons `lowOrHi` en `.lowOrHi` à la ligne 48.
 10. Enregistrons et actualisons à nouveau, et la directive `console.log()` renvoie bien l'élément `<p>` attendu. Pfff&nbsp;! Une autre erreur corrigée&nbsp;! On peut enlever la ligne `console.log()` maintenant, ou bien la garder pour s'y reporter plus tard — comme vous l'entendez.
 
-> **Note :** Voyez la page relative à [TypeError: "x" is (not) "y"](/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_type) pour plus de précisions à propos de cette erreur.
+> [!NOTE]
+> Voyez la page relative à [TypeError: "x" is (not) "y"](/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_type) pour plus de précisions à propos de cette erreur.
 
 ### Erreurs de syntaxe&nbsp;: troisième tour
 
@@ -198,7 +202,8 @@ let userGuess === Number(guessField.value);
 
 cela déclenchera cette même erreur car le logiciel pense que vous êtes en train de faire quelque chose d'autre. Vous devez vous assurer que vous n'avez pas confondu l'opérateur d'assignation (`=`) — qui fixe une valeur donnée à une variable — avec l'opérateur (`===`) qui teste la stricte égalité de deux valeurs, et renvoie un résultat `true`/`false` (vrai/faux).
 
-> **Note :** Voyez la page relative à [SyntaxError: missing ; before statement](/fr/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) pour plus de précisions à propos de cette erreur.
+> [!NOTE]
+> Voyez la page relative à [SyntaxError: missing ; before statement](/fr/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_token) pour plus de précisions à propos de cette erreur.
 
 ### Le programme dit que vous avez gagné quelle que soit votre suggestion
 
@@ -220,7 +225,8 @@ le test renverra toujours `true` (vrai) et le programme indiquera que vous avez 
 
 Cette erreur est triviale — elle indique en général que vous avez oublié une parenthèse fermante à la fin de l'appel d'une fonction ou d'une méthode.
 
-> **Note :** Voyez la page relative à [SyntaxError: missing ) after argument list](/fr/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) pour plus de précisions à ce propos.
+> [!NOTE]
+> Voyez la page relative à [SyntaxError: missing ) after argument list](/fr/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) pour plus de précisions à ce propos.
 
 ### SyntaxError: missing : after property id
 
@@ -248,7 +254,8 @@ Ces erreurs signalent généralement l'oubli de guillemets ouvrants ou fermants 
 
 Pour toutes ces erreurs, revoyez comment nous avons opéré dans les exemples de ce parcours. Quand une erreur survient, regardez le numéro de ligne indiqué, allez à cette ligne et voyez si vous remarquez ce qui ne va pas. N'oubliez pas que l'erreur n'est pas forcément sur la ligne indiquée, et qu'elle ne provient pas forcément d'un des problèmes évoqués plus haut&nbsp;!
 
-> **Note :** Voyez les pages relatives à [SyntaxError: Unexpected token](/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_token) et [SyntaxError: unterminated string literal](/fr/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal) pour plus de précisions à ce propos.
+> [!NOTE]
+> Voyez les pages relatives à [SyntaxError: Unexpected token](/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_token) et [SyntaxError: unterminated string literal](/fr/docs/Web/JavaScript/Reference/Errors/String_literal_EOL) pour plus de précisions à ce propos.
 
 ## Résumé
 

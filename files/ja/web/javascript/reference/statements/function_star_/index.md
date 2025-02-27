@@ -11,7 +11,22 @@ l10n:
 
 ジェネレーター関数は {{jsxref("GeneratorFunction")}} コンストラクターや、関数式の構文を使用して定義することもできます。
 
-{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Function*")}}
+
+```js interactive-example
+function* generator(i) {
+  yield i;
+  yield i + 10;
+}
+
+const gen = generator(10);
+
+console.log(gen.next().value);
+// Expected output: 10
+
+console.log(gen.next().value);
+// Expected output: 20
+```
 
 ## 構文
 
@@ -27,7 +42,8 @@ function* name(param0, param1, /* … ,*/ paramN) {
 }
 ```
 
-> **メモ:** ジェネレーター関数には、対応するアロー関数はありません。
+> [!NOTE]
+> ジェネレーター関数には、対応するアロー関数はありません。
 
 ### 引数
 

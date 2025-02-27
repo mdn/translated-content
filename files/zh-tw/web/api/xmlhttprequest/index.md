@@ -41,7 +41,8 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("E
 - {{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}
   - : 回傳一個 {{domxref("DOMString")}} 表示 HTTP 伺服器回應之字串。和 {{domxref("XMLHTTPRequest.status")}} 不同的是，`XMLHttpRequest.statusText` 包含了回應的整個文字訊息（如 "`200 OK`"）。
 
-> **備註：** The HTTP/2 specification ([8.1.2.4](https://http2.github.io/http2-spec/#rfc.section.8.1.2.4) [Response Pseudo-Header Fields](https://http2.github.io/http2-spec/#HttpResponse)), HTTP/2 does not define a way to carry the version or reason phrase that is included in an HTTP/1.1 status line.
+> [!NOTE]
+> The HTTP/2 specification ([8.1.2.4](https://http2.github.io/http2-spec/#rfc.section.8.1.2.4) [Response Pseudo-Header Fields](https://http2.github.io/http2-spec/#HttpResponse)), HTTP/2 does not define a way to carry the version or reason phrase that is included in an HTTP/1.1 status line.
 
 - {{domxref("XMLHttpRequest.timeout")}}
   - : 為一無符號長整數（`unsigned long`），代表一個請求在逾時而被自動中止前的可等待時間（毫秒）。
@@ -71,7 +72,7 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("E
 
 所有瀏覽器都支援 `XMLHttpRequest` 物件實體的 `onreadystatechange` 屬性。
 
-之後，各個瀏覽器實作了多種額外的事件處理器（如 `onload`、`onerror`、`onprogress` 等）。請參考[使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)。
+之後，各個瀏覽器實作了多種額外的事件處理器（如 `onload`、`onerror`、`onprogress` 等）。請參考[使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)。
 
 除了以 `on*` 屬性來設定事件處理函式，更多現代覽瀏器（包括 Firefox）也支援使用標準的 [`addEventListener()`](/zh-TW/docs/Web/API/EventTarget/addEventListener) API 註冊監聽 `XMLHttpRequest` 的事件。
 
@@ -98,7 +99,8 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("E
 
   - : 使用 C++ 程式時，用來初始化這個物件。
 
-    > **警告：** 請勿在 JavaScript 中呼叫這個方法。
+    > [!WARNING]
+    > 請勿在 JavaScript 中呼叫這個方法。
 
 - {{domxref("XMLHttpRequest.openRequest()")}}
   - : 初始化請求。這方法是用於原生程式，若想在 JavaScript 中初始化一個請求，請使用 [`open()`](</zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest#open()>) 這個方法來代替。請參照 `open()` 的相關文件。
@@ -115,15 +117,6 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("E
 
 ## 參見
 
-- MDN 上涵蓋 XMLHttpRequest 的相關教學：
-
-  - [Ajax](/zh-TW/docs/Web/Guide/AJAX)
-  - [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-  - [HTML in XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-  - [`FormData`](/zh-TW/docs/Web/API/FormData)
-
-- [HTML5 Rocks — New Tricks in XMLHttpRequest2](http://www.html5rocks.com/en/tutorials/file/xhr2/)
-- `Chrome scope availability` — how to access XMLHttpRequest from JSM modules etc., which do not have access to DOM
-
-  - [Components.utils.importGlobalProperties](/zh-TW/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.importGlobalProperties)
-  - [nsIXMLHttpRequest](/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest)
+- {{domxref("XMLSerializer")}}：將 DOM 樹解析為 XML 物件
+- [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Fetch API](/zh-TW/docs/Web/API/Fetch_API)

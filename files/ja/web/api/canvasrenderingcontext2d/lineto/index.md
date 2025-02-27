@@ -7,7 +7,7 @@ slug: Web/API/CanvasRenderingContext2D/lineTo
 
 {{domxref("CanvasRenderingContext2D")}} の **`lineTo()`** はキャンバス 2D API のメソッドで、現在のサブパスに対して、その終点から指定された `(x, y)` 座標に向けて直線を追加します。
 
-現在のパスを変更するほかのメソッドと同様に、このメソッドは直悦は何も描画しません。パスをキャンバス上に描くには、 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} または {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} メソッドを使用します。
+現在のパスを変更するほかのメソッドと同様に、このメソッドは直接は何も描画しません。パスをキャンバス上に描くには、 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} または {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} メソッドを使用します。
 
 ## 構文
 

@@ -3,7 +3,7 @@ title: substring
 slug: Web/XPath/Functions/substring
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `substring` 함수는 인수로 준 문자열의 부분을 반환합니다.
 
@@ -39,7 +39,7 @@ substring(string ,start [,length] )
 
 ### 정의
 
-[XPath 1.0 4.2](http://www.w3.org/TR/xpath#function-substring)
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-substring)
 
 ### Gecko 지원
 

@@ -17,7 +17,7 @@ l10n:
 
   - : スロットの名前です。
 
-    **_名前付きスロット_**は、 `<slot>` 要素に `name` 属性が付きます。
+    **名前付きスロット**は、 `<slot>` 要素に `name` 属性が付きます。
 
 ## 例
 
@@ -65,7 +65,8 @@ l10n:
 </template>
 ```
 
-> **メモ:** この完全な例は、 [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details) で見ることができます（[ライブ実行](https://mdn.github.io/web-components-examples/element-details/)もご覧ください）。また、[テンプレートとスロットの利用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)にも説明があります。
+> [!NOTE]
+> この完全な例は、 [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details) で見ることができます（[ライブ実行](https://mdn.github.io/web-components-examples/element-details/)もご覧ください）。また、[テンプレートとスロットの利用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)にも説明があります。
 
 ## 技術的概要
 
@@ -92,7 +93,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>

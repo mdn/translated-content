@@ -3,7 +3,7 @@ title: Symbol.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toString
 ---
 
-{{JSRef("Global_Objects", "Symbol")}}
+{{JSRef}}
 
 ## 概述
 
@@ -52,6 +52,6 @@ Symbol.for("foo").toString(); // "Symbol(foo)"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Object.prototype.toString()")}}

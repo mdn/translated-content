@@ -7,7 +7,8 @@ slug: Web/API/Clipboard_API
 
 L'**API Clipboard** (en français&nbsp;: API Presse-papiers) fournit la possibilité de répondre aux commandes du presse-papiers (couper, copier et coller) ainsi que de lire et écrire sur le presse-papiers système de façon asynchrone. L'accès aux contenus du presse-papiers est protégé par l'[API Permissions](/fr/docs/Web/API/Permissions_API)&nbsp;: la permission `clipboard-write` est donnée automatiquement aux pages lorsqu'elles sont dans l'onglet actif. La permission `clipboard-read` doit quant à elle être demandée, ce que vous pouvez faire en tentant de lire les données du presse-papiers.
 
-> **Note :** Cette API _n'est pas disponible_ dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API) (elle n'est pas exposée via {{domxref("WorkerNavigator")}}).
+> [!NOTE]
+> Cette API _n'est pas disponible_ dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API) (elle n'est pas exposée via {{domxref("WorkerNavigator")}}).
 
 Cette API est conçue pour remplacer l'accès au presse-papiers précédemment proposé via {{domxref("document.execCommand()")}}.
 

@@ -3,7 +3,7 @@ title: otherwise
 slug: Web/XSLT/Element/otherwise
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 L'élément `<xsl:otherwise>` est utilisé pour définir une action qui doit être exécutée lorsqu'aucune condition `<xsl:when>` ne s'applique. Elle est comparable aux instructions `else` ou `default` d'autres langages de programmation.
 
@@ -29,7 +29,7 @@ Sous-instruction, doit apparaître comme le dernier enfant d'un élément `<xsl:
 
 ### Définition
 
-[XSLT 1.0, section 9.2](http://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:choose).
+[XSLT 1.0, section 9.2](https://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:choose).
 
 ### Support Gecko
 

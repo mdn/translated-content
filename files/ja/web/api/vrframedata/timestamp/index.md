@@ -7,7 +7,8 @@ slug: Web/API/VRFrameData/timestamp
 
 **`timestamp`** は {{domxref("VRFrameData")}} インターフェイスの読み取り専用プロパティで、フレームの更新が発生した時刻を表す、常に増加するタイムスタンプ値を返します。
 
-> **メモ:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> [!NOTE]
+> このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 タイムスタンプは、位置状態データがハードウェアから更新されたかどうかを判断するのに便利です。値は常に増加していくので、更新の順序を決定するために比較することができます。新しい値は常に古い値より大きいか等しくなります。
 
@@ -65,5 +66,4 @@ function drawVRScene() {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

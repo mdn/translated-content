@@ -16,7 +16,7 @@ var mySyncEvent = new SyncEvent(type, init)
 ### パラメータ
 
 - _type_
-  - : イベントの型。.
+  - : イベントの型。
 - _init_ {{optional_inline}}
 
   - : イベントオブジェクトに適用するカスタム設定を含むオプションオブジェクト。オプションは次の通りです:
@@ -26,4 +26,4 @@ var mySyncEvent = new SyncEvent(type, init)
 
 ## ブラウザーの互換性
 
-{{Compat("api.SyncEvent.SyncEvent")}}
+{{Compat}}

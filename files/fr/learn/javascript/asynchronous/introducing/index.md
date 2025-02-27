@@ -24,7 +24,7 @@ La programmation asynchrone est une technique qui permet à un programme de dém
 
 De nombreuses fonctions fournies par les navigateurs, dont les plus intéressantes, peuvent prendre un certain temps et sont donc asynchrone. On y trouve par exemple&nbsp;:
 
-- L'envoi de requêtes [`fetch()`](/fr/docs/Web/API/fetch)
+- L'envoi de requêtes [`fetch()`](/fr/docs/Web/API/Window/fetch)
 - L'accès à la caméra ou au micro de la personne avec [`getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia)
 - La sélection de fichiers avec [`showOpenFilePicker()`](/fr/docs/Web/API/Window/showOpenFilePicker)
 
@@ -109,9 +109,8 @@ function genererNbPremiers(quota) {
 document.querySelector("#generer").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   const nbPremiers = genererNbPremiers(quota);
-  document.querySelector(
-    "#output",
-  ).textContent = `Génération de ${quota} nombres premiers terminée !`;
+  document.querySelector("#output").textContent =
+    `Génération de ${quota} nombres premiers terminée !`;
 });
 
 document.querySelector("#recharger").addEventListener("click", () => {
@@ -177,9 +176,8 @@ function genererNbPremiers(quota) {
 document.querySelector("#generer").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   const nbPremiers = genererNbPremiers(quota);
-  document.querySelector(
-    "#output",
-  ).textContent = `Génération de ${quota} nombres premiers terminée !`;
+  document.querySelector("#output").textContent =
+    `Génération de ${quota} nombres premiers terminée !`;
 });
 
 document.querySelector("#recharger").addEventListener("click", () => {

@@ -9,9 +9,10 @@ Com o básico de CSS compreendido, o próximo passo para você se concentrar ser
 
 ## Pré-requisites
 
-Antes de começar este módulo, você já deverá ter familiaridade básica com HTML, como dissemos no módulos [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML), e estar confortável com os fundamentos de CSS, como discutido em [Introdução ao CSS](/pt-BR/docs/Learn/CSS/Introduction_to_CSS).
+Antes de começar este módulo, você já deverá ter familiaridade básica com HTML, como dissemos no módulos [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML), e estar confortável com os fundamentos de CSS, como discutido em [Introdução ao CSS](/pt-BR/docs/Learn/CSS/First_steps).
 
-> **Nota:** Se você está usando um computador/tablet/outro dispositivo onde não tem a possibilidade de criar seus próprios arquivos, você poderá treinar os códigos-exemplo em um programa de código online como [JSBin](http://jsbin.com/), [CodePen](https://codepen.io/) or [Thimble](https://thimble.mozilla.org/).
+> [!NOTE]
+> Se você está usando um computador/tablet/outro dispositivo onde não tem a possibilidade de criar seus próprios arquivos, você poderá treinar os códigos-exemplo em um programa de código online como [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
 ## Guias
 
@@ -30,5 +31,5 @@ Este módulo contém os seguintes artigos que ensinarão você todos os fundamen
 
 A seguinte avaliação testará seu entendimento das técnicas de estilização de texto cobertas pelo guia acima.
 
-- [Estilizando a homepage de um escola comunitária](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)
+- [Estilizando a homepage de um escola comunitária](/pt-BR/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)
   - : Nesta avaliação nos testeremos seu entendimento de estilização de texto fazendo com que você estilize a homepage de uma escola comunitária.

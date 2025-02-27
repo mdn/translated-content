@@ -1,8 +1,9 @@
 ---
-title: MouseEvent.button
+title: "MouseEvent: button プロパティ"
+short-title: button
 slug: Web/API/MouseEvent/button
 l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("UI Events")}}

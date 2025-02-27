@@ -13,7 +13,7 @@ Un document ne peut pas avoir plus d'un seul élément `<main>` sans attribut [`
 
 ## Attributs
 
-Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes
 
@@ -62,7 +62,7 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 
 ### Balisage du document
 
-L'élément `<main>` a le rôle d'une [balise `main`](/fr/docs/Web/Accessibility/ARIA/Roles/Main_role). Dans le contexte de l'accessibilité, les [balises](/fr/docs/Accessibilité/ARIA/Techniques_ARIA) peuvent être utilisées par les outils d'assistance afin d'identifier et de naviguer rapidement entre les grandes sections d'un document. On privilégiera l'élément `<main>` à l'ajout du `role="main"`, à moins qu'il faille [prendre en charge d'anciens navigateurs](/fr/docs/Web/HTML/Element/main#Compatibilité_des_navigateurs).
+L'élément `<main>` a le rôle d'une [balise `main`](/fr/docs/Web/Accessibility/ARIA/Roles/Main_role). Dans le contexte de l'accessibilité, les [balises](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques) peuvent être utilisées par les outils d'assistance afin d'identifier et de naviguer rapidement entre les grandes sections d'un document. On privilégiera l'élément `<main>` à l'ajout du `role="main"`, à moins qu'il faille [prendre en charge d'anciens navigateurs](#Compatibilité_des_navigateurs).
 
 ### Navigation rapide
 
@@ -86,7 +86,7 @@ Ajouter un attribut [`id`](/fr/docs/Web/HTML/Global_attributes#id) à l'élémen
 
 ### Mode lecture
 
-Les fonctionnalités « mode lecture » d'un navigateur vérifient la présence d'un élément `<main>` ainsi que la présence de [titres](/fr/docs/Web/HTML/Element/Heading_Elements) et de [sections](/fr/docs/Web/HTML/Element#Sectionnement_du_contenu) lors de la convertion du document pour le mode lecture.
+Les fonctionnalités « mode lecture » d'un navigateur vérifient la présence d'un élément `<main>` ainsi que la présence de [titres](/fr/docs/Web/HTML/Element/Heading_Elements) et de [sections](/fr/docs/Web/HTML/Element#sectionnement_du_contenu) lors de la convertion du document pour le mode lecture.
 
 - [Construire des sites web pour le mode lecture de Safari et pour les autres applications de lecture (en anglais)](https://medium.com/@mandy.michael/building-websites-for-safari-reader-mode-and-other-reading-apps-1562913c86c9)
 

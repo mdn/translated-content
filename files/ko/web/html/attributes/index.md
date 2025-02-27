@@ -101,7 +101,6 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
       <td>
         {{ HTMLElement("button") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("select") }},
         {{ HTMLElement("textarea") }}
       </td>
@@ -188,11 +187,6 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
         media capture spec,
         specifies a new file can be captured.
       </td>
-    </tr>
-    <tr>
-      <td><code>challenge</code></td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>공개 키와 같이 전송된 challenge 문자열입니다.</td>
     </tr>
     <tr>
       <td><code>charset</code></td>
@@ -401,7 +395,6 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
         {{ HTMLElement("command") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("optgroup") }},
         {{ HTMLElement("option") }},
         {{ HTMLElement("select") }},
@@ -475,7 +468,6 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
         {{ HTMLElement("button") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("label") }},
         {{ HTMLElement("meter") }},
         {{ HTMLElement("object") }},
@@ -739,11 +731,6 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
       <td></td>
     </tr>
     <tr>
-      <td><code>keytype</code></td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>Specifies the type of key generated.</td>
-    </tr>
-    <tr>
       <td><code>kind</code></td>
       <td>{{ HTMLElement("track") }}</td>
       <td>Specifies the kind of text track.</td>
@@ -895,7 +882,6 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("iframe") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("object") }},
         {{ HTMLElement("output") }},
         {{ HTMLElement("select") }},
@@ -1244,8 +1230,8 @@ Most of the time, IDL attributes will return their values as they are really use
 
 IDL attributes are not always strings; for example, `input.maxlength` is a number (a signed long). When using IDL attributes, you read or set values of the desired type, so `input.maxlength` is always going to return a number and when you set `input.maxlength` ,it wants a number. If you pass another type, it is automatically converted to a number as specified by the standard JavaScript rules for type conversion.
 
-IDL attributes can [reflect other types](http://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes) such as unsigned long, URLs, booleans, etc. Unfortunately, there are no clear rules and the way IDL attributes behave in conjunction with their corresponding content attributes depends on the attribute. Most of the time, it will follow [the rules laid out in the specification](http://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes), but sometimes it doesn't. HTML specifications try to make this as developer-friendly as possible, but for various reasons (mostly historical), some attributes behave oddly (`select.size`, for example) and you should read the specifications to understand how exactly they behave.
+IDL attributes can [reflect other types](https://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes) such as unsigned long, URLs, booleans, etc. Unfortunately, there are no clear rules and the way IDL attributes behave in conjunction with their corresponding content attributes depends on the attribute. Most of the time, it will follow [the rules laid out in the specification](https://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes), but sometimes it doesn't. HTML specifications try to make this as developer-friendly as possible, but for various reasons (mostly historical), some attributes behave oddly (`select.size`, for example) and you should read the specifications to understand how exactly they behave.
 
 ## 같이 보기
 
-- [HTML 요소](/ko/docs/HTML/Element)
+- [HTML 요소](/ko/docs/Web/HTML/Element)

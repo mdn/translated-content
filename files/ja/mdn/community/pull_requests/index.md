@@ -2,7 +2,7 @@
 title: プルリクエストの提出とレビューのガイドライン
 slug: MDN/Community/Pull_requests
 l10n:
-  sourceCommit: 45288da627c96fdb745b8a0a63ec27e24a6522ad
+  sourceCommit: 6610050dace0bfa2bba703576225aef6f84f36fe
 ---
 
 {{MDNSidebar}}
@@ -21,7 +21,7 @@ MDN Web Docs へのコンテンツの変更には以下のものが含まれま�
 
 1. **変更の送信:** プルリクエストの作成者として、プルリクエストを開いて変更を送信します。
    [始める前に](#始める前に)、[プルリクエストを開く](#プルリクエストを開く)、[プルリクエストを開いた後](#プルリクエストを開いた後)の節を参照して、プロセスについてもっと学びましょう。
-2. **変更点のレビュー:** 変更点は [MDN メンバーとボランティア](#プルリクエストのレビュープロセス)がレビューします。
+2. **変更点のレビュー:** 変更点は MDN メンバーとボランティアがレビューします。
    詳細は[プルリクエストのレビュープロセス](#プルリクエストのレビュープロセス)の節を参照してください。
 3. **発行された変更の閲覧:** `mdn/content` で更新されたコンテンツは、24 時間に一度のサイト再構築により、マージされてから 1 日以内に公開されます。
 
@@ -32,7 +32,7 @@ MDN Web Docs へのコンテンツの変更には以下のものが含まれま�
 私たちは MDN Web Docs が、誰もが誇りに思えるような、歓迎され、友好的なコミュニティであることを望んでいます。
 すべての参加者は、私たちの[行動規範](https://github.com/mdn/content/blob/main/CODE_OF_CONDUCT.md)に従う必要があり、それは [Mozilla コミュニティ参加ガイドライン](https://www.mozilla.org/ja/about/governance/policies/participation/)を遵守することを意味します。
 プルリクエストを開くため、レビューコメントを書くため、プルリクエスト作成者や他のコミュニティメンバーと対話するときは、礼儀正しく、建設的であるべきです。
-もし誰かが違法となりうる行為や、あなたや他の誰かを危険、歓迎されない、不快にさせるような行為に及んだ場合には、[報告](https://www.mozilla.org/ja/about/governance/policies/participation/reporting/) をすることをおすすめします。
+あなたや他の誰かが、違法である可能性のある行動を経験したり、安全でない、歓迎されていない、または不快に感じたりした場合は、[報告する](https://www.mozilla.org/ja/about/governance/policies/participation/reporting/) ことをお勧めします。
 
 ### 始める前に
 
@@ -47,13 +47,11 @@ MDN プロジェクトに協力しようとするとき、あなたは以下の�
   その課題が誰かに割り当てられていないこと、誰もそのタスクのためのプルリクエストを開いていないことを確認してください。
   `good first issue` とラベル付けされた課題は、手始めに良いものです。
 
-- **MDN で問題を見つけた場合**、まず課題を開いてください。**課題は、作業を始める前にメンテナーからのレスポンスが必要**です。これにより、プルリクエストで対処した問題が有効であり、プルリクが受け入れられることがわかるからです。その課題に関するより詳しい情報は、[GitHub の課題に関するコミュニティのページ](https://github.com/mdn/mdn/issues/new?assignees=schalkneethling&labels=proposal%2Cneeds+triage&template=content-or-feature-suggestion.yml&title=Enter+your+proposal+here)で見つけることができます。
+- **MDN で問題を見つけた場合**、まず課題を開いてください。**課題は、作業を始める前にメンテナーからのレスポンスが必要**です。これにより、プルリクエストで対処した問題が有効であり、プルリクが受け入れられることがわかるからです。その課題に関するより詳しい情報は、[GitHub の課題に関するコミュニティのページ](https://github.com/mdn/mdn/issues/new?labels=proposal%2Cneeds+triage&template=content-or-feature-suggestion.yml&title=Enter+your+proposal+here)で見つけることができます。
 
 - **新しいコンテンツや機能を提案したい場合**は、 'New content or feature suggestion' という [GitHub の課題テンプレート](https://github.com/mdn/mdn/issues/new/choose)から送信してください。
 
-<!-- TODO: when we have Discord:
-If you're not sure where to start, reach out to us on [Discord]() and ask for feedback.
--->
+どこから始めたらいいかわからない場合は、 [Discord サーバー](/discord)で私たちに声をかけてフィードバックを求めてください。
 
 ### プルリクエストを開く
 
@@ -65,8 +63,8 @@ If you're not sure where to start, reach out to us on [Discord]() and ask for fe
 - **閉じる課題へのリンクを追加してください。** プルリクエストの説明文に、その課題を完全に解決する場合は 'Fixes' を、関連する課題である場合は 'Relates to' を追加します。
   プルリクエストの課題へのリンクに関する詳しい情報は、[GitHub のドキュメント](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)にあります。
 - 先にマージしなければならないプルリクエストがある場合、依存関係へのリンクを持つ **'depends on' を追加してください**（例：他のリポジトリーにあるコードの例など）。
-- **コード例の変更は、コンテンツの変更と一緒に行ってください。** これは、更新された例が正しく提供されることを確実にするために重要です。
-  例が使用される方法に影響を与えるようなコンテンツの変更を行う場合、関連するコード例も更新する必要があります。
+- **サンプルコードの変更は、コンテンツの変更と一緒に行ってください。** これは、更新された例が正しく提供されることを確実にするために重要です。
+  例が使用される方法に影響を与えるようなコンテンツの変更を行う場合、関連するサンプルコードも更新する必要があります。
 - **レビュアーを追加します。** チームメンバーやトピックオーナーなど、プルリクエストをレビューすべき人が既に決まっている場合、レビュアーを追加することができます。
 - **文法だけの変更はしないでください。** MDN Web Docs は技術ドキュメントです。文法が間違っている場合を除いて、文のスタイルの変更を提案すべきではありません。
 - 特定の書式設定に従ったページでは、**むやみに改行を追加したり削除したりしないようにしましょう。**
@@ -117,7 +115,7 @@ MDN Web Docs チームは、レビュアーと担当者 (assignee) を使用し�
 
 ### プルリクエストのレビュー
 
-プルリクエストの変更点に関して言えば、コンテンツと文章は [MDN 執筆スタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide)に、コード例は[コードスタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)に従わなければなりません。
+プルリクエストの変更点に関して言えば、コンテンツと文章は [MDN 執筆スタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide)に、サンプルコードは[コードスタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)に従わなければなりません。
 
 プルリクエストをレビューするときは、次のようにしてください。
 
@@ -131,6 +129,11 @@ MDN Web Docs チームは、レビュアーと担当者 (assignee) を使用し�
 - あなたの仕事が手一杯で、レビューのための余裕がない場合は、**負荷分散をリクエストしてください**。
   `@core-yari-content` チームにタグ付けして、他の誰かが手順を踏めるかどうか依頼してください。
 - 'depends on' で示されたプルリクエストが先にマージされていない状態で、 **マージを行わないでください**。
+- **テストに失敗したプルリクエストをマージしないでください。**
+  [オープンソースのエチケット](/ja/docs/MDN/Community/Open_source_etiquette) として、 `main` ブランチを安定に保つことは、協力者やメンテナー、自動化されたプロセスの混乱を避けるために良いことです。
+  不安定な `main` ブランチは、他のすべてのプルリクエストをブロックし、他の貢献者のレビューやマージが困難になります。
+  さらに、リポジトリーを見ている協力者は大量の通知を受け取り、テストの失敗によって発生させられる不要なノイズに苛立つことになります。
+  失敗したテストを修正する方法がわからない場合は、[助けを求める](/ja/docs/MDN/Community/Communication_channels)か、プルリクエストを他の人に割り当ててください。
 
 もしプルリクエストが、小さな誤字や他にも小さな課題を除けば良いものに見えたら、その問題を直接修正したいと思うかもしれません。
 [プルリクエストが変更を許可する](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork)ように設定されている場合は、これを行うことができます。

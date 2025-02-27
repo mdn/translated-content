@@ -19,9 +19,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 Функции - обработчику передаётся объект `details` который содержит информацию о запросе. Она содержит ID запроса, который обеспечен для включения надстройки, которая позволяет соотносить события, ассоциируемые с одним запросом. Это уникально в пределах сессии и контекста надстройки. Информация остаётся одинаковой везде на протяжении запроса, даже при перенаправлениях и обменах аутентификации.
 
-Для использования webRequest API для определённого хоста, расширение должно иметь "webRequest" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) и [host permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) для этого хоста. Для использования возможности "блокирования" расширение должно также иметь "webRequestBlocking" API разрешение.
+Для использования webRequest API для определённого хоста, расширение должно иметь "webRequest" [API permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) и [host permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) для этого хоста. Для использования возможности "блокирования" расширение должно также иметь "webRequestBlocking" API разрешение.
 
-Для перехвата ресурсов, загруженных страницей (таких как картинки, скрипты или таблицы стилей), расширение должно иметь разрешение хоста для ресурса также как и для главной страницы, запрашивающей ресурс. К примеру, если страница на "https\://developer.mozilla.org" загружает картинку из "https\://mdn.mozillademos.org", тогда расширение должно иметь разрешения обоих хостов чтобы перехватить запрос картинки.
+Для перехвата ресурсов, загруженных страницей (таких как картинки, скрипты или таблицы стилей), расширение должно иметь разрешение хоста для ресурса также как и для главной страницы, запрашивающей ресурс. К примеру, если страница на `https://developer.mozilla.org` загружает картинку из `https://mdn.mozillademos.org`, тогда расширение должно иметь разрешения обоих хостов чтобы перехватить запрос картинки.
 
 ## Модифицирование заголовков
 
@@ -62,7 +62,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 Для того, чтобы модифицировать тело HTTP ответа на запрос, вызовите {{WebExtAPIRef("webRequest.filterResponseData")}}, и передайте ID запроса. Это возвратит объект {{WebExtAPIRef("webRequest.StreamFilter")}} который вы сможете использовать чтобы исследовать и изменять данные когда они получены браузером.
 
-Чтобы сделать это, у вас должно быть "webRequestBlocking" API разрешение, а также "webRequest" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) и [host permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) от соответствующего хоста.
+Чтобы сделать это, у вас должно быть "webRequestBlocking" API разрешение, а также "webRequest" [API permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) и [host permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) от соответствующего хоста.
 
 ## Types
 
@@ -118,17 +118,16 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 - {{WebExtAPIRef("webRequest.onErrorOccurred")}}
   - : Fired when an error occurs.
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-[Extra notes on Chrome incompatibilities](/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webRequest_incompatibilities).
+[Extra notes on Chrome incompatibilities](/ru/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webrequest_incompatibilities).
 
 {{WebExtExamples("h2")}}
 
-> **Примечание:** Это API основано на API Chromium [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest). Эта документация основана на [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) из кода Chromium.
->
-> Информация о совместимости Microsoft Edge предоставлена корпорацией Microsoft и включена здесь под лицензией Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> Этот API основан на Chromium API [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Эта документация основана на [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) из кода Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

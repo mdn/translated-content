@@ -1,38 +1,58 @@
 ---
 title: 403 Forbidden
 slug: Web/HTTP/Status/403
+l10n:
+  sourceCommit: a8038dcd29e001192ba1b2166dfbff5b76f1ce55
 ---
 
 {{HTTPSidebar}}
 
-HTTP の **`403 Forbidden`** クライアントエラーレスポンスコードは、サーバーがリクエストを理解したものの、認可が拒否されたことを示します。
+HTTP の **`403 Forbidden`** [クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)ステータスコードは、サーバーがリクエストを理解したものの、処理を拒否したことを示します。
+このステータスは {{HTTPStatus("401")}} と似ていますが、 **`403 Forbidden`** レスポンスが異なるのは、認証または再認証を行っても違いがないことです。
+リクエストの失敗は、リソースに対するその権限の不足やアクションなどのアプリケーションロジックに関連したものです。
 
-このステータスは {{HTTPStatus("401")}} に似ていますが、この場合は再認証しても結果は変わりません。アクセスは恒久的に禁止されており、リソースにアクセスする権限が不足しているなど、アプリケーションのロジックに結びついたものです。
+`403` レスポンスを受け取ったクライアントは、リクエストを変更せずに繰り返しても、同じエラーで失敗する可能性があることを想定しておくべきです。
+サーバーの所有者は、権限のないクライアントにリソースの存在を通知することが望ましくない場合、{{HTTPStatus("404")}} レスポンスを 403 の代わりに送信することを選択できます。
 
 ## ステータス
 
-```
+```http
 403 Forbidden
 ```
 
-## レスポンスの例
+## 例
 
+### リクエストが権限が不十分なため失敗
+
+次の例のリクエストは、ユーザー管理用の API に対して行われます。
+リクエストには {{HTTPHeader("Authorization")}} ヘッダーが含まれており、アクセストークンを含む `Bearer` [認証スキーム](/ja/docs/Web/HTTP/Authentication#認証スキーム)を使用しています。
+
+```http
+DELETE /users/123 HTTP/1.1
+Host: example.com
+Authorization: Bearer abcd123
 ```
+
+サーバーはリクエストを認証しましたが、権限が不十分なためアクションは失敗し、レスポンス本体には失敗の理由が格納されています。
+
+```http
 HTTP/1.1 403 Forbidden
-Date: Wed, 21 Oct 2015 07:28:00 GMT
+Date: Tue, 02 Jul 2024 12:56:49 GMT
+Content-Type: application/json
+Content-Length: 88
+
+{
+  "error": "InsufficientPermissions",
+  "message": "Deleting users requires the 'admin' role."
+}
 ```
 
 ## 仕様書
 
-| 仕様書                                     | 題名                            |
-| ------------------------------------------ | ------------------------------- |
-| {{RFC("7231", "403 Forbidden" , "6.5.3")}} | HTTP/1.1: Semantics and Content |
-
-## ブラウザーの互換性
-
-{{Compat("http.status.403")}}
+{{Specifications}}
 
 ## 関連情報
 
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
 - {{HTTPStatus("401")}}
-- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [HTTP Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.403)

@@ -1,11 +1,11 @@
 ---
-title: ":read-write"
+title: :read-write
 slug: Web/CSS/:read-write
 ---
 
 {{CSSRef}}
 
-La [pseudo-clase](/es/docs/CSS/Pseudo-classes) **`:read-write`** de [CSS](/es/docs/Web/CSS) representa un elemento (como un [input](/es/docs/Web/HTML/Element/input)) que es editable por el usuario.
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:read-write`** de [CSS](/es/docs/Web/CSS) representa un elemento (como un [input](/es/docs/Web/HTML/Element/input)) que es editable por el usuario.
 
 ```css
 /* Selecciona cualquier elemento <input> que sea editable */
@@ -20,7 +20,8 @@ input:read-write {
 }
 ```
 
-> **Nota:** Este selector no solo selecciona texto de {{htmlElement("input")}}; seleccionará _cualquier_ elemento que pueda editar el usuario, como un elemento {{htmlelement("p")}} con [`contenteditable`](/es/docs/Web/HTML/Global_attributes#contenteditable) establecido en él.
+> [!NOTE]
+> Este selector no solo selecciona texto de {{htmlElement("input")}}; seleccionará _cualquier_ elemento que pueda editar el usuario, como un elemento {{htmlelement("p")}} con [`contenteditable`](/es/docs/Web/HTML/Global_attributes#contenteditable) establecido en él.
 
 ## Sintaxis
 

@@ -3,7 +3,7 @@ title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Sumário
 
@@ -45,7 +45,7 @@ console.log(denseKeys); // [0, 1, 2]
 
 ## Compatibilidade de Browser
 
-{{Compat("javascript.builtins.Array.keys")}}
+{{Compat}}
 
 ## Veja também
 

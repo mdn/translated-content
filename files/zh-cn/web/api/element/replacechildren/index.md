@@ -3,25 +3,27 @@ title: Element.replaceChildren()
 slug: Web/API/Element/replaceChildren
 ---
 
-{{APIRef("DOM")}}{{seecompattable}}
+{{APIRef("DOM")}}
 
-**`Element.replaceChildren()`** 方法将一个 {{domxref("Node")}} 的后代替换为指定的后代集合。这些新的后代可以为 {{domxref("DOMString")}} 或 {{domxref("Node")}} 对象。
+**`Element.replaceChildren()`** 方法将一个 {{domxref("Node")}} 的后代替换为指定的后代集合。这些新的后代可以为字符串或 {{domxref("Node")}} 对象。
 
 ## 语法
 
-```plain
-// [Throws, Unscopable]
-Element.replaceChildren(...nodesOrDOMStrings) // 返回 undefined
+```js-nolint
+replaceChildren(param1)
+replaceChildren(param1, param2)
+replaceChildren(param1, param2, /* …, */ paramN)
 ```
 
 ### 参数
 
-- `nodesOrDOMStrings`
-  - : 一组用于替换 `Element` 现有后代的 {{domxref("Node")}} 或 {{domxref("DOMString")}} 对象。若没有指定替代对象时，`Element` 的所有后代都将被清空。
+- `param1`、…、`paramN`
+  - : 一组用于替换 `Element` 现有后代的 {{domxref("Node")}} 或字符串对象。若没有指定替代对象时，`Element` 的所有后代都将被清空。
 
 ### 异常
 
-- {{domxref("HierarchyRequestError")}}: 当违反了[节点树的约束条件](https://dom.spec.whatwg.org/#concept-node-tree)时抛出。
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+  - : 当违反了[节点树的约束条件](https://dom.spec.whatwg.org/#concept-node-tree)时抛出。
 
 ## 示例
 
@@ -145,7 +147,6 @@ noBtn.addEventListener("click", () => {
 
 ## 参见
 
-- {{domxref("Element")}} and {{domxref("ChildNode")}}
 - {{domxref("Element.prepend()")}}
 - {{domxref("Element.append()")}}
 - {{domxref("NodeList")}}

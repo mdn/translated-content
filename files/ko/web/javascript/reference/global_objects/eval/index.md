@@ -5,11 +5,25 @@ slug: Web/JavaScript/Reference/Global_Objects/eval
 
 {{jsSidebar("Objects")}}
 
-> **경고:** **주의:** 문자열로부터 **`eval()`**을 실행하는 것은 엄청나게 위험합니다. **`eval()`**을 사용하면 해커가 위험한 코드를 사용할 수 있습니다. 아래에 [eval을 절대 사용하지 말 것!](<#eval을 절대 사용하지 말 것!>)을 확인하세요.
+> **경고:** **주의:** 문자열로부터 **`eval()`** 을 실행하는 것은 엄청나게 위험합니다. **`eval()`** 을 사용하면 해커가 위험한 코드를 사용할 수 있습니다. 아래에 [eval을 절대 사용하지 말 것!](<#eval을 절대 사용하지 말 것!>)을 확인하세요.
 
-**`eval()`**은 문자로 표현된 JavaScript 코드를 실행하는 함수입니다.
+**`eval()`** 은 문자로 표현된 JavaScript 코드를 실행하는 함수입니다.
 
-{{EmbedInteractiveExample("pages/js/globalprops-eval.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - eval()")}}
+
+```js interactive-example
+console.log(eval("2 + 2"));
+// Expected output: 4
+
+console.log(eval(new String("2 + 2")));
+// Expected output: 2 + 2
+
+console.log(eval("2 + 2") === eval("4"));
+// Expected output: true
+
+console.log(eval("2 + 2") === eval(new String("2 + 2")));
+// Expected output: false
+```
 
 ## 구문
 
@@ -20,7 +34,7 @@ eval(string);
 ### 매개변수
 
 - `string`
-  - : 자바스크립트 표현식, 명령문, 또는 연속되는 다수의 명령문을 나타내는 문자열. 표현식은 이미 존재하는 객체의 변수나 속성을 포함할 수 있습니다.
+  - : JavaScript 표현식, 명령문, 또는 연속되는 다수의 명령문을 나타내는 문자열. 표현식은 이미 존재하는 객체의 변수나 속성을 포함할 수 있습니다.
 
 ### 반환값
 
@@ -30,7 +44,7 @@ eval(string);
 
 `eval()`은 전역 객체의 함수 속성입니다.
 
-`eval()`의 인자는 문자열입니다. 인자가 표현식을 나타낸다면 `eval()`은 표현식을 평가합니다. 인자가 하나 이상의 JavaScript 명령문을 나타낸다면 모두 실행합니다. 연산식을 계산하기 위해 `eval()`을 호출하지 마세요. 자바스크립트는 연산식을 알아서 계산합니다.
+`eval()`의 인자는 문자열입니다. 인자가 표현식을 나타낸다면 `eval()`은 표현식을 평가합니다. 인자가 하나 이상의 JavaScript 명령문을 나타낸다면 모두 실행합니다. 연산식을 계산하기 위해 `eval()`을 호출하지 마세요. JavaScript는 연산식을 알아서 계산합니다.
 
 문자열로 연산식을 구성하면 나중에 `eval()`로 계산할 수 있습니다. `x` 라는 변수가 있다고 가정하면 `x`가 포함된 연산식을 문자열로, 예를 들어 "`3 * x + 2`"로 나타내고 나중에 `eval()`을 호출해서 계산을 연기할 수 있습니다.
 
@@ -48,7 +62,7 @@ var expression = new String("2 + 2");
 eval(expression.toString()); // 4를 반환
 ```
 
-`eval`을 직접 호출하지 않고 참조를 통해 _간접적으로_ 사용한다면 [ECMAScript 5부터는](http://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2) 지역 범위가 아니라 전역 범위에서 동작합니다. 예를 들어 `eval()`로 함수를 선언하면 전역 함수가 되고, 실행되는 코드는 실행되는 위치의 지역 범위에 접근할 수 없습니다.
+`eval`을 직접 호출하지 않고 참조를 통해 _간접적으로_ 사용한다면 [ECMAScript 5부터는](https://www.ecma-international.org/ecma-262/5.1/#sec-10.4.2) 지역 범위가 아니라 전역 범위에서 동작합니다. 예를 들어 `eval()`로 함수를 선언하면 전역 함수가 되고, 실행되는 코드는 실행되는 위치의 지역 범위에 접근할 수 없습니다.
 
 ```js
 function test() {
@@ -67,7 +81,7 @@ function test() {
 
 또한 최신 JS 엔진에서 여러 코드 구조를 최적화하는 것과 달리 `eval()`은 JS 인터프리터를 사용해야 하기 때문에 다른 대안들보다 느립니다.
 
-추가로, 최신 JavaScript 인터프리터는 자바스크립트를 기계 코드로 변환합니다. 즉, 변수명의 개념이 완전히 없어집니다. 그러나 `eval`을 사용하면 브라우저는 기계 코드에 해당 변수가 있는지 확인하고 값을 대입하기 위해 길고 무거운 변수명 검색을 수행해야 합니다. 또한 `eval()`을 통해 자료형 변경 등 변수에 변화가 일어날 수 있으며, 브라우저는 이에 대응하기 위해 기계 코드를 재작성해야 합니다. 그러나, (다행히) [window.Function](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function)이라는 `eval`보다 훨씬 나은 대안이 있습니다. `eval()`을 사용하는 코드를 `Function()`으로 바꾸는 방법에 대해서는 아래를 참조하세요.
+추가로, 최신 JavaScript 인터프리터는 JavaScript를 기계 코드로 변환합니다. 즉, 변수명의 개념이 완전히 없어집니다. 그러나 `eval`을 사용하면 브라우저는 기계 코드에 해당 변수가 있는지 확인하고 값을 대입하기 위해 길고 무거운 변수명 검색을 수행해야 합니다. 또한 `eval()`을 통해 자료형 변경 등 변수에 변화가 일어날 수 있으며, 브라우저는 이에 대응하기 위해 기계 코드를 재작성해야 합니다. 그러나, (다행히) [window.Function](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function)이라는 `eval`보다 훨씬 나은 대안이 있습니다. `eval()`을 사용하는 코드를 `Function()`으로 바꾸는 방법에 대해서는 아래를 참조하세요.
 
 `eval`을 사용하는 나쁜 코드:
 
@@ -164,7 +178,7 @@ var propname = getPropName(); // "a" 또는 "b"를 반환
 eval("var result = obj." + propname);
 ```
 
-그러나 여기에서 `eval()`을 쓸 필요가 없고, 지양되어야 합니다. 그 대신 훨씬 빠르고 안전한 [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors)를 사용하여야 합니다.
+그러나 여기에서 `eval()`을 쓸 필요가 없고, 지양되어야 합니다. 그 대신 훨씬 빠르고 안전한 [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)를 사용하여야 합니다.
 
 ```js
 var obj = { a: 20, b: 30 };
@@ -235,7 +249,7 @@ JSON 문법은 JavaScript 문법에 비해 제약이 있기 때문에, 유효한
 
 ### 코드 대신 데이터 전달하기
 
-예를 들어, 웹 페이지의 내용을 추출하는 확장 프로그램은 JavaScript 코드 대신 [XPath](/ko/docs/XPath)에 스크랩 규칙을 정의할 수 있습니다.
+예를 들어, 웹 페이지의 내용을 추출하는 확장 프로그램은 JavaScript 코드 대신 [XPath](/ko/docs/Web/XPath)에 스크랩 규칙을 정의할 수 있습니다.
 
 ### 제한된 권한으로 코드 실행하기
 
@@ -308,5 +322,5 @@ var fct2 = eval(fctStr2); // 함수를 반환
 ## 참고
 
 - {{jsxref("Global_Objects/uneval", "uneval()")}}
-- [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 - [WebExtensions: Using eval in content scripts](<https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts#Using_eval()_in_content_scripts>)

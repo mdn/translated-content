@@ -13,7 +13,8 @@ Beacon API の主な用途は、クライアント側でのイベントやセッ
 
 この API を使用する動機と使用法の詳細は、{{domxref("navigator.sendBeacon()")}} メソッドのドキュメントを参照してください。
 
-> **メモ:** この API は [Web Workers](/ja/docs/Web/API/Web_Workers_API) では _使用できません_。({{domxref("WorkerNavigator")}} 経由では公開されていません)
+> [!NOTE]
+> この API は [Web Workers](/ja/docs/Web/API/Web_Workers_API) では _使用できません_。({{domxref("WorkerNavigator")}} 経由では公開されていません)
 
 ## インターフェイス
 

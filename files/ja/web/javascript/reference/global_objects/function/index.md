@@ -75,7 +75,7 @@ console.log(f2()); // 20
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Function")}}
+{{Compat}}
 
 ## 関連情報
 

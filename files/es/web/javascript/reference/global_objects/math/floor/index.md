@@ -3,7 +3,7 @@ title: Math.floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
 ---
 
-{{JSRef("Objetos_globales", "Math")}}
+{{JSRef}}
 
 ## Sumario
 

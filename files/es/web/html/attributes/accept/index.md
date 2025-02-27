@@ -3,6 +3,8 @@ title: "HTML el atributo: accept"
 slug: Web/HTML/Attributes/accept
 ---
 
+{{HTMLSidebar}}
+
 El atributo **`accept`** toma como valor una lista separada por comas de uno o más tipos de archivos, o [especificadores de tipo de archivo únicos](#especificadores_de_tipo_de_archivo_únicos), que describen qué tipos de archivo permitir. La propiedad «_accept_» es un atributo del tipo {{HTMLElement("input/file", "file")}} {{HTMLElement("input")}}. Se admitía en el elemento {{HTMLElement("form")}}, pero se eliminó a favor de {{HTMLElement("input/file", "file")}} en HTML5.
 
 Debido a que un determinado tipo de archivo se puede identificar de más de una manera, es útil proporcionar un conjunto completo de especificadores de tipo cuando necesiten archivos de un tipo específico, o usar el comodín para indicar que un tipo de cualquier formato es aceptable.
@@ -93,7 +95,8 @@ Esto produce la siguiente salida:
 
 {{EmbedLiveSample('Un_ejemplo_básico', 650, 60)}}
 
-> **Nota:** También puedes encontrar este ejemplo en GitHub; consulta [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html) y también puedes [verlo funcionando en vivo](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+> [!NOTE]
+> También puedes encontrar este ejemplo en GitHub; consulta [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html) y también puedes [verlo funcionando en vivo](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
 
 Independientemente del dispositivo o sistema operativo del usuario, el `<input>` de archivo proporciona un botón que abre un cuadro de diálogo selector de archivos que permite al usuario elegir un archivo.
 
@@ -146,5 +149,5 @@ div {
 
 ## Ve también
 
-- [Uso de archivos de aplicaciones web](/es/docs/Using_files_from_web_applications)
+- [Uso de archivos de aplicaciones web](/es/docs/Web/API/File_API/Using_files_from_web_applications)
 - [API de File](/es/docs/Web/API/File)

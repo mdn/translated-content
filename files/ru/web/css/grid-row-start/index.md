@@ -3,6 +3,8 @@ title: grid-row-start
 slug: Web/CSS/grid-row-start
 ---
 
+{{CSSRef}}
+
 Свойство CSS **`grid-row-start`** определяет начальную позицию элемента грид в строке, добавляя линию, span или ничего (автоматически) к его расположению в сетке, тем самым определяя начальный край inline-элемента его {{glossary("grid areas", "grid area")}}.
 
 {{EmbedInteractiveExample("pages/css/grid-row-start.html")}}
@@ -47,14 +49,19 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 
   - : Если есть именованная строка с именем '\<custom-ident>-start', он вносит первую такую строку в размещение элемента сетки.
 
-    > **Примечание:** Named grid areas automatically generate implicit named lines of this form, so specifying `grid-row-start: foo;` will choose the start edge of that named grid area (unless another line named `foo-start` was explicitly specified before it).В противном случае это обрабатывается так, как если бы целое число 1 было указано вместе с `<custom-ident>`.
+    > [!NOTE]
+    > Named grid areas automatically generate implicit named lines of this form, so specifying `grid-row-start: foo;` will choose the start edge of that named grid area (unless another line named `foo-start` was explicitly specified before it).В противном случае это обрабатывается так, как если бы целое число 1 было указано вместе с `<custom-ident>`.
 
 - `<integer> && <custom-ident>?`
   - : Вносит n-ю линию сетки в размещение элемента сетки. Если задано отрицательное целое число, вместо этого начинается обратный отсчёт, начиная с конечного края явной сетки. Если имя задано как \<custom-ident>, подсчитываются только строки с этим именем. Если существует недостаточно строк с таким именем, предполагается, что все неявные линии сетки имеют это имя для нахождения этой позиции.An {{cssxref("integer")}} value of `0` is invalid.
 - `span && [ <integer> || <custom-ident> ]`
   - : Contributes a grid span to the grid item's placement; such that the row start edge of the grid item's grid area is n lines from the end edge.If a name is given as a \<custom-ident>, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid, corresponding to the search direction, are assumed to have that name for the purpose of counting this span.If the \<integer> is omitted, it defaults to `1`. Negative integers or 0 are invalid.The `<custom-ident>` cannot take the `span` value.
 
-### Formal syntax
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
@@ -120,18 +127,16 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 
 {{ EmbedLiveSample('Examples', '230', '420') }}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-{{cssinfo}}
-
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - Related CSS properties: {{cssxref("grid-row-end")}}, {{cssxref("grid-row")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-column")}}
-- Grid Layout Guide: _[Line-based placement with CSS Grid](/ru/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
-- Video tutorial: _[Line-based placement](http://gridbyexample.com/video/series-line-based-placement/)_
+- Grid Layout Guide: _[Line-based placement with CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
+- Video tutorial: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_

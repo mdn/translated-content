@@ -11,15 +11,17 @@ L'élément HTML **`<li>`** est utilisé pour représenter un élément dans une
 
 ## Attributs
 
-Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `value`
 
   - : Cette valeur entière indique la valeur ordinale en cours de l'élément de liste tel que défini par l'élément {{HTMLElement("ol")}}. La seule valeur autorisée pour cet attribut est un nombre, même si la liste est affichée avec des chiffres romains ou des lettres. Les éléments de la liste qui suivent celui-ci continueront la numérotation à partir de la valeur indiquée. L'attribut **value** n'a pas de signification pour les listes non ordonnées ({{HTMLElement("ul")}}) ou pour les menus ({{HTMLElement("menu")}}).
 
-    > **Note :** Cet attribut a été déprécié en HTML4 mais a été réintroduit en HTML5.
+    > [!NOTE]
+    > Cet attribut a été déprécié en HTML4 mais a été réintroduit en HTML5.
 
-    > **Note :** Avant Gecko 9.0, des valeurs négatives étaient incorrectement converties en 0. A partir de Gecko 9.0, toutes les valeurs entières ont été correctement analysées.
+    > [!NOTE]
+    > Avant Gecko 9.0, des valeurs négatives étaient incorrectement converties en 0. A partir de Gecko 9.0, toutes les valeurs entières ont été correctement analysées.
 
 - `type` {{Deprecated_inline}}
 
@@ -33,7 +35,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
     Ce type surcharge celui utilisé par son élément parent {{HTMLElement("ol")}} si présent.
 
-    > **Note :** Cet attribut a été déprécié : utilisez la propriété CSS {{cssxref("list-style-type")}} à la place.
+    > [!NOTE]
+    > Cet attribut a été déprécié : utilisez la propriété CSS {{cssxref("list-style-type")}} à la place.
 
 ## Exemples
 
@@ -85,7 +88,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 {{EmbedLiveSample("Liste_non_ordonnée")}}
 
-> **Note :** Pour d'autres exemples plus détaillés, voir les pages {{HTMLElement("ol")}} et {{HTMLElement("ul")}}.
+> [!NOTE]
+> Pour d'autres exemples plus détaillés, voir les pages {{HTMLElement("ol")}} et {{HTMLElement("ul")}}.
 
 ## Résumé technique
 
@@ -156,5 +160,5 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_univ
 - Les propriétés CSS qui peuvent être particulièrement utiles pour mettre en forme l'élément `<li>` :
 
   - la propriété {{cssxref("list-style")}}, pour choisir la manière d'afficher l'ordinal,
-  - les [compteurs CSS](/fr/docs/Web/CSS/Compteurs_CSS), pour gérer des listes imbriquées complexes,
+  - les [compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), pour gérer des listes imbriquées complexes,
   - la propriété {{cssxref("margin")}}, pour contrôler l'indentation de l'élément de liste.

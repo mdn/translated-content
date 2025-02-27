@@ -10,9 +10,9 @@ MathML の `<mphantom>` 要素は、表示上は不可視だが一定の広が�
 ## 属性
 
 - class, id, style
-  - : Provided for use with [stylesheets](/ja/docs/CSS).
+  - : Provided for use with [stylesheets](/ja/docs/Web/CSS).
 - mathbackground
-  - : 背景色。`#rgb`, `#rrggbb` および [HTML color names](/ja/docs/CSS/color_value#Color_Keywords) を用いることができる。
+  - : 背景色。`#rgb`, `#rrggbb` および [HTML color names](/ja/docs/Web/CSS/color_value#color_keywords) を用いることができる。
 
 ## 例
 
@@ -34,15 +34,15 @@ Rendering in your browser: <math><mrow><mi>x </mi><mo>+ </mo><mphantom><mi>y </m
 </math>
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーごとの互換性
 
-{{Compat("mathml.elements.mphantom")}}
+{{Compat}}
 
-## See also
+## 関連情報
 
 - {{ MathMLElement("mspace") }}
 - {{ MathMLElement("mpadded") }}

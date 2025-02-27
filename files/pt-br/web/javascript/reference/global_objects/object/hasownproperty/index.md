@@ -3,7 +3,7 @@ title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 ## Resumo
 
@@ -18,7 +18,7 @@ obj.hasOwnProperty(prop)
 ### Parâmetros
 
 - `prop`
-  - : Uma {{jsxref("String")}} ou [symbol](/pt-BR/docs/Glossary/Symbol) indicando o nome da propriedade a ser verificada.
+  - : Uma {{jsxref("String")}} ou [symbol](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol) indicando o nome da propriedade a ser verificada.
 
 ### Valor de Retorno
 
@@ -112,20 +112,16 @@ Observe que neste ultimo caso nenhum novo objeto é criado.
 
 ## Especificações
 
-| Especificação                                                                                  | Status             | Comentário         |
-| ---------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
-| ECMAScript 3rd Edition. Implemented in JavaScript 1.5                                          | Standard           | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}                      | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}} | {{Spec2('ES6')}}   |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.hasOwnProperty")}}
+{{Compat}}
 
 ## Veja Também
 
-- [Enumerability and ownership of properties](/pt-BR/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - [for...in](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in)
 - {{jsxref("Operators/in", "in")}}
-- [JavaScript Guide: Inheritance revisted](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_Revisited)
+- [JavaScript Guide: Inheritance revisted](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

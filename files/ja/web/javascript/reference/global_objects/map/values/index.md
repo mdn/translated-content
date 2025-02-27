@@ -2,14 +2,29 @@
 title: Map.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Map/values
 l10n:
-  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
+  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
 {{JSRef}}
 
-**`values()`** メソッドは、 `Map` オブジェクトに挿入された要素を挿入順に列挙する新しい **[イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)** オブジェクトを返します。
+**`values()`** は {{jsxref("Map")}} インスタンスのメソッドで、この `Map` オブジェクトに挿入された要素の値を挿入順に列挙する新しい[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/map-prototype-values.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.values")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("0", "foo");
+map1.set(1, "bar");
+
+const iterator1 = map1.values();
+
+console.log(iterator1.next().value);
+// Expected output: "foo"
+
+console.log(iterator1.next().value);
+// Expected output: "bar"
+```
 
 ## 構文
 
@@ -17,9 +32,13 @@ l10n:
 values()
 ```
 
+### 引数
+
+なし。
+
 ### 返値
 
-{{jsxref("Map")}} の新しいイテレーターオブジェクト。
+新しい[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
 
 ## 例
 

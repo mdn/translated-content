@@ -191,7 +191,8 @@ l10n:
   </tbody>
 </table>
 
-> **メモ:** 手軽に HTML からマイクロデータを抽出するには、 Google の[リッチリザルトテストツール](https://search.google.com/test/rich-results)が便利です。上の HTML で試してみてください。
+> [!NOTE]
+> 手軽に HTML からマイクロデータを抽出するには、 Google の[リッチリザルトテストツール](https://search.google.com/test/rich-results)が便利です。上の HTML で試してみてください。
 
 </div>
 

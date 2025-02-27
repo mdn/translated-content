@@ -3,6 +3,8 @@ title: Деструктурирующее присваивание
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
 
+{{jsSidebar("Operators")}}
+
 Синтаксис **деструктурирующего присваивания** в выражениях JavaScript позволяет извлекать данные из массивов или объектов при помощи синтаксиса, подобного объявлению массива или литералов в объекте.
 
 ## Синтаксис
@@ -144,7 +146,7 @@ console.log(bar); // true
 
 ### Загрузка модулей
 
-Деструктурирующее присваивание помогает загружать специфичные наборы модулей, как в [Add-on SDK](/en-US/Add-ons/SDK):
+Деструктурирующее присваивание помогает загружать специфичные наборы модулей, как в [Add-on SDK](/ru/docs/Mozilla/Add-ons/SDK):
 
 ```js
 const { Loader, main } = require("toolkit/loader");
@@ -239,7 +241,7 @@ whois(user); // "jdoe is John"
 
 ### Деструктурирование вычисляемых имён свойств
 
-Вычисляемые имена свойств, например, [литералы объектов](/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names), могут использоваться при деструктурирующем присваивании:
+Вычисляемые имена свойств, например, [литералы объектов](/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names), могут использоваться при деструктурирующем присваивании:
 
 ```js
 let key = "z";

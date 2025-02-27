@@ -19,7 +19,8 @@ AggregateError(errors, message)
 AggregateError(errors, message, options)
 ```
 
-> **备注：** 调用 `AggregateError()` 可以使用或不使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，两种方法都会创建一个新的 `AggregateError` 实例。
+> [!NOTE]
+> 调用 `AggregateError()` 可以使用或不使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，两种方法都会创建一个新的 `AggregateError` 实例。
 
 ### 参数
 

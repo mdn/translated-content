@@ -5,7 +5,7 @@ slug: Web/CSS/gradient/conic-gradient
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`conic-gradient()`** 创建一个由渐变组成的图像，渐变的颜色围绕一个中心点旋转（而不是从中心辐射）进行过渡。锥形渐变的例子包括饼图和{{glossary("color wheel", "色轮")}}。`conic-gradient()` 函数的结果是 {{CSSxRef("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{CSSxRef("&lt;image&gt;")}} 数据类型。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) **`conic-gradient()`** 创建一个由渐变组成的图像，渐变的颜色围绕一个中心点旋转（而不是从中心辐射）进行过渡。锥形渐变的例子包括饼图和{{glossary("color wheel", "色轮")}}。`conic-gradient()` 函数的结果是 {{CSSxRef("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{CSSxRef("&lt;image&gt;")}} 数据类型。
 
 {{EmbedInteractiveExample("pages/css/function-conic-gradient.html")}}
 
@@ -53,7 +53,8 @@ background: conic-gradient(
 
 由于 `<gradient>` 属于 `<image>` 数据类型，因此只能用在能使用 `<image>` 的地方。因此，`conic-gradient()` 在 {{CSSxRef("background-color")}} 以及其他使用 {{CSSxRef("&lt;color&gt;")}} 数据类型的属性上不起作用。
 
-> **备注：** 为什么它被称为“锥形”渐变？如果色块的一侧比另一侧亮得多，则从上面看，它可能看起来像一个圆锥体。
+> [!NOTE]
+> 为什么它被称为“锥形”渐变？如果色块的一侧比另一侧亮得多，则从上面看，它可能看起来像一个圆锥体。
 
 ### 锥形渐变的合成
 
@@ -203,7 +204,8 @@ div {
       #000 0.25turn 0.5turn,
       #fff 0.5turn 0.75turn,
       #000 0.75turn
-    ) top left / 25% 25% repeat;
+    )
+    top left / 25% 25% repeat;
   border: 1px solid;
 }
 ```

@@ -5,7 +5,7 @@ slug: Web/CSS/animation-timing-function
 
 {{CSSRef}}
 
-[CSS](/ru/docs/CSS) свойство **`animation-timing-function`** задаёт как происходит анимация в течении длительности каждого цикла.
+[CSS](/ru/docs/Web/CSS) свойство **`animation-timing-function`** задаёт как происходит анимация в течении длительности каждого цикла.
 
 {{EmbedInteractiveExample("pages/css/animation-timing-function.html")}}
 
@@ -57,7 +57,7 @@ animation-timing-function: unset;
 
 ## Примеры
 
-См. [CSS animations](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations).
+См. [CSS animations](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 
 ## Спецификации
 
@@ -69,5 +69,5 @@ animation-timing-function: unset;
 
 Смотрите также
 
-- [Использование CSS-анимаций](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Использование CSS-анимаций](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

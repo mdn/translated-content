@@ -9,9 +9,11 @@ La propriété en lecture seule **`Element.clientLeft`** représente la largeur 
 
 Lorsque la préférence [`layout.scrollbar.side`](http://kb.mozillazine.org/Layout.scrollbar.side) est paramétrée à 1 ou à 3 et que la direction du texte est de droite à gauche, **alors la barre de défilement verticale est placée à gauche** et ce placement aura donc un impact sur la valeur de `clientLeft`.
 
-> **Note :** Cette propriété sera arrondie en une valeur entière. Si vous souhaitez utiliser une valeur décimale, vous pouvez utiliser [`element.getBoundingClientRect()`](/fr/docs/Web/API/Element/getBoundingClientRect).
+> [!NOTE]
+> Cette propriété sera arrondie en une valeur entière. Si vous souhaitez utiliser une valeur décimale, vous pouvez utiliser [`element.getBoundingClientRect()`](/fr/docs/Web/API/Element/getBoundingClientRect).
 
-> **Note :** Lorsqu'un élément se voit appliquer `display: inline`, `clientLeft` renvoie `0`, quelle que soit la bordure de l'élément.
+> [!NOTE]
+> Lorsqu'un élément se voit appliquer `display: inline`, `clientLeft` renvoie `0`, quelle que soit la bordure de l'élément.
 
 ## Syntaxe
 

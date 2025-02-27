@@ -1,11 +1,15 @@
 ---
 title: text-decoration-thickness
 slug: Web/CSS/text-decoration-thickness
+l10n:
+  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
 {{CSSRef}}
 
 **`text-decoration-thickness`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素内のテキストに用いられる装飾線、例えば取り消し線、下線、上線の太さを設定します。
+
+{{EmbedInteractiveExample("pages/css/text-decoration-thickness.html")}}
 
 ## 構文
 
@@ -25,6 +29,7 @@ text-decoration-thickness: 10%;
 text-decoration-thickness: inherit;
 text-decoration-thickness: initial;
 text-decoration-thickness: revert;
+text-decoration-thickness: revert-layer;
 text-decoration-thickness: unset;
 ```
 
@@ -49,7 +54,7 @@ text-decoration-thickness: unset;
 
 ## 例
 
-<h3 id="Varying_thickness">様々な太さ</h3>
+### 様々な太さ
 
 #### HTML
 
@@ -83,13 +88,14 @@ text-decoration-thickness: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('Varying_thickness', '', '', '') }}
+{{EmbedLiveSample('Varying_thickness')}}
 
 ## 仕様書
 
 {{Specifications}}
 
-> **メモ:** このプロパティは `text-decoration-width` と呼ばれていましたが、 2019 年に `text-decoration-thickness` に更新されました。
+> [!NOTE]
+> このプロパティは `text-decoration-width` と呼ばれていましたが、 2019 年に `text-decoration-thickness` に更新されました。
 
 ## ブラウザーの互換性
 

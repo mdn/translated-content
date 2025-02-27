@@ -5,7 +5,7 @@ slug: Learn/Getting_started_with_the_web/Dealing_with_files
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 
-Um site consiste de muitos arquivos: conteúdo em texto, código, folhas de estilo, conteúdo em mídia e por aí vai. Ao criar um site, você precisa reunir esses arquivos em uma certa estrutura no computador local, certificar-se de que eles possam se comunicar e obter todo o conteúdo antes de [enviá-los para o servidor](/pt-BR/docs/Aprender/Getting_started_with_the_web/Publicando_seu_site). _Lidando com Arquivos_ discute algumas questões às quais você deve estar ciente para que você possa configurar uma estrutura de arquivos para o seu site.
+Um site consiste de muitos arquivos: conteúdo em texto, código, folhas de estilo, conteúdo em mídia e por aí vai. Ao criar um site, você precisa reunir esses arquivos em uma certa estrutura no computador local, certificar-se de que eles possam se comunicar e obter todo o conteúdo antes de [enviá-los para o servidor](/pt-BR/docs/Learn/Getting_started_with_the_web/Publishing_your_website). _Lidando com Arquivos_ discute algumas questões às quais você deve estar ciente para que você possa configurar uma estrutura de arquivos para o seu site.
 
 ## Onde seu site deve residir no seu computador?
 
@@ -32,11 +32,12 @@ A seguir, vamos ver qual estrutura seu site teste deve ter. As coisas mais comun
 3. **pasta `estilos`**: Essa pasta vai conter os códigos CSS usados para dar estilo ao seu conteúdo (por exemplo, configurando a cor do texto e do fundo da página). Crie uma pasta chamada `estilos`, dentro da pasta `site-teste`.
 4. **pasta `scripts`**: Essa pasta vai conter todos os códigos JavaScript usados para adicionar funcionalidades interativas para seu site (ex.: botões que carregam dados quando clicados). Crie uma pasta chamada `scripts`, dentro da sua pasta `site-teste`.
 
-> **Nota:** Em computadores com Windows, você deve ter problemas para ver os nomes dos arquivos, porque o Windows tem uma opção chamada **Ocultar as extensões dos tipos de arquivo conhecidos** ativada por padrão. Geralmente você pode desativar essa opção indo no Windows Explorer, selecionando a opção **Opções de pasta...**, desmarque a caixa de seleção **Ocultar as extensões dos tipos de arquivo conhecidos**, e clique em **OK**. Para mais informação sobre sua versão de Windows, procure na web.
+> [!NOTE]
+> Em computadores com Windows, você deve ter problemas para ver os nomes dos arquivos, porque o Windows tem uma opção chamada **Ocultar as extensões dos tipos de arquivo conhecidos** ativada por padrão. Geralmente você pode desativar essa opção indo no Windows Explorer, selecionando a opção **Opções de pasta...**, desmarque a caixa de seleção **Ocultar as extensões dos tipos de arquivo conhecidos**, e clique em **OK**. Para mais informação sobre sua versão de Windows, procure na web.
 
 ## Caminhos de arquivo
 
-Para fazer arquivos conversarem entre si, você tem que fornecer um caminho de arquivo entre eles — basicamente uma rota para que um arquivo saiba onde o outro está. Para demonstrar isso, nós vamos inserir um pouco de HTML no nosso arquivo `index.html`, e fazer mostrar a imagem que você escolheu no artigo ["](/en-US/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like)[Como será o seu site?](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer)["](/en-US/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like)
+Para fazer arquivos conversarem entre si, você tem que fornecer um caminho de arquivo entre eles — basicamente uma rota para que um arquivo saiba onde o outro está. Para demonstrar isso, nós vamos inserir um pouco de HTML no nosso arquivo `index.html`, e fazer mostrar a imagem que você escolheu no artigo ["](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)[Como será o seu site?](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)["](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
 
 1. Copie a imagem que você escolheu antes para sua pasta `imagens`.
 2. Abra seu arquivo `index.html` e insira o seguinte código exatamente como está escrito. Não se preocupe com o significado — nós vamos olhar com mais detalhes essa estrutura posteriormente.
@@ -69,7 +70,8 @@ Algumas regras gerais para caminhos de arquivo:
 
 Por agora, isso é tudo o que precisamos saber.
 
-> **Nota:** O sistema de arquivos do Windows tende a usar barras invertidas, não barras normais , ex.: `C:\windows`. Isso não importa — mesmo se você estiver desenvolvendo seu site no Windows, você ainda deve usar barras normais no seu código.
+> [!NOTE]
+> O sistema de arquivos do Windows tende a usar barras invertidas, não barras normais , ex.: `C:\windows`. Isso não importa — mesmo se você estiver desenvolvendo seu site no Windows, você ainda deve usar barras normais no seu código.
 
 ## O que mais deve ser feito?
 

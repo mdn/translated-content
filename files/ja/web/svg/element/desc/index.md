@@ -1,41 +1,55 @@
 ---
-title: desc
+title: <desc>
 slug: Web/SVG/Element/desc
+l10n:
+  sourceCommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
 ---
 
 {{SVGRef}}
 
-SVG 描画における各コンテナ要素またはグラフィック要素は、説明がテキストのみの **`<desc>`** 要素を用いる説明を供給することができます。
+**`<desc>`** 要素は SVG の[コンテナー要素](/ja/docs/Web/SVG/Element#コンテナー要素)または[グラフィック要素](/ja/docs/Web/SVG/Element#グラフィック要素)のアクセシブルな長文の説明を提供します。
 
-現在の SVG ドキュメントが視覚メディア上で SVG としてレンダリングされるとき、`<desc>` 要素はグラフィックとしてレンダリングされません。 代替プレゼンテーションは、`<desc>` 要素を表示するが {{SVGElement("path")}} 要素または他のグラフィックス要素を表示しない、視覚と聴覚の両方が可能です。`<desc>` 要素は一般に SVG ドキュメントのアクセシビリティを向上させます。
+`<desc>` 要素内のテキストはグラフィックの一部としてレンダリングされません。要素が可視テキストで記述できる場合、 [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 属性でそのテキストを参照することが可能です。 `aria-describedby` を使用する場合、 `<desc>` よりも優先されます。
 
-## 使用可能な場所
+`<desc>` 要素の隠しテキストは、 `aria-describedby` 値で複数の ID を使用して、他の要素の可視テキストと連結することもできます。その場合、 `<desc>` 要素は参照するための ID を提供しなければなりません。
 
-{{svginfo}}
+## 例
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="5" cy="5" r="4">
+    <desc>
+      これは円であり、その記述はこれがどのように記述できるかを示すためにここにあるのですが、このような単純な円を記述することが実に必要なのでしょうか？
+    </desc>
+  </circle>
+</svg>
+```
+
+{{EmbedLiveSample('Example', 150, '100%')}}
 
 ## 属性
 
-### グローバル属性
+この要素はグローバル属性のみがあります。
 
-- [コア属性](/ja/docs/Web/SVG/Attribute#Core_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
+## 使用コンテキスト
 
-### 専用属性
+{{svginfo}}
 
-_なし_
-
-## DOM インターフェイス
-
-この要素は {{domxref("SVGDescElement")}} インターフェイスを実装します。
-
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー互換性
+## ブラウザーの互換性
 
-{{Compat("svg.elements.desc")}}
+{{Compat}}
 
 ## 関連情報
 

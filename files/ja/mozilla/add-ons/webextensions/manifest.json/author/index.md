@@ -24,9 +24,9 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/author
   </tbody>
 </table>
 
-拡張機能の作者で、ブラウザーの UI で表示されることを目的とするものです。[developer](/ja/Add-ons/WebExtensions/manifest.json/developer) キーが与えられてそこに "name" プロパティが含まれる場合、それは author キーを上書きします。複数の作者を指定する方法はありません。
+拡張機能の作者で、ブラウザーの UI で表示されることを目的とするものです。[developer](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) キーが与えられてそこに "name" プロパティが含まれる場合、それは author キーを上書きします。複数の作者を指定する方法はありません。
 
-これは[ローカライズ可能なプロパティ](/ja/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json)です。
+これは[ローカライズ可能なプロパティ](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json)です。
 
 ## 例
 
@@ -36,4 +36,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/author
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.author")}}
+{{Compat}}

@@ -1,32 +1,63 @@
 ---
 title: 500 Internal Server Error
 slug: Web/HTTP/Status/500
+l10n:
+  sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
 ---
 
 {{HTTPSidebar}}
 
-HyperText Transfer Protocol (HTTP) の **`500 Internal Server Error`** サーバーエラーレスポンスコードは、サーバーがリクエストを実行を妨げる予期しない条件に遭遇したことを示します。
+HTTP の **`500 Internal Server Error`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Status#サーバーエラーレスポンス)のステータスコードで、サーバーが予期せぬ状況に遭遇し、リクエストの履行が妨害されたことを示します。
+このエラーは、サーバーの課題に対する一般的な「すべてをカバーする」レスポンスであり、サーバーがレスポンスとして返すのにより適切な [5XX エラー](/ja/docs/Web/HTTP/Status#サーバーエラーレスポンス)を見つけられなかったことを示します。
 
-このエラーレスポンスは一般的な "catch-all" レスポンスです。普通、これはサーバーがレスポンスに対してより適切な 5xx のエラーコードを見つけることができなかったことを示します。サーバーの管理者は、ステータスコード 500 のようなエラーレスポンスをリクエストに関する詳細情報と共に記録し、将来同じエラーが発生することを防ぐ場合もあります。
+ウェブページで `500` エラーを目にしたら、サーバーの所有者または管理者が調査を行うことが要求されます。
+`500` エラーの原因となり得るものは数多くあり、不適切なサーバー設定、メモリー不足 (OOM) の問題、未処理の例外、不適切なファイル権限、他にも複合的な要因が考えられます。
+サーバー管理者は、将来的にサービスの安定性を向上させるために、`500` ステータスコードのようなサーバーエラーレスポンスの発生を、リクエストされた内容の詳細とともに積極的に記録しておくことがあります。
 
 ## ステータス
 
-```
+```http
 500 Internal Server Error
+```
+
+## 例
+
+### 500 サーバーエラーレスポンス
+
+以下のリクエストはウェブページを取得しようとしますが、500 レスポンスが返されます。
+レスポンス本体には、サーバーの状態を記述したページと、来訪者向けのサポートページへのリンクが含まれています。
+サーバー管理者が問題の根本原因を特定するのに役立つ可能性がある方法を示すために、レスポンス本体には識別子が含まれています。
+
+```http
+GET /highlights HTTP/1.1
+Host: example.com
+User-Agent: curl/8.6.0
+Accept: */*
+```
+
+```http
+HTTP/1.1 500 Internal Server Error
+Content-Type: text/html;
+Content-Length: 123
+
+<!doctype html>
+<html lang="en">
+<head>
+  <title>500 Internal Server Error</title>
+</head>
+<body>
+  <h1>Internal Server Error</h1>
+  <p>The server was unable to complete your request. Please try again later.</p>
+  <p>If this problem persists, please <a href="https://example.com/support">contact support</a>.</p>
+  <p>Server logs contain details of this error with request ID: ABC-123.</p>
+</body>
+</html>
 ```
 
 ## 仕様書
 
-| 仕様書                                                 | 題名                                                          |
-| ------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "500 Internal Server Error" , "6.6.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
-
-## ブラウザーの互換性
-
-以下に示す情報は、 MDN の GitHub から取得したものです。 (<https://github.com/mdn/browser-compat-data>).
-
-{{Compat("http.status.500")}}
+{{Specifications}}
 
 ## 関連情報
 
-- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)

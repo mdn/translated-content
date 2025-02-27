@@ -45,7 +45,7 @@ isFinite("0"); // true, teria sido false com o
 
 ## Browser compatibilidade
 
-{{Compat("javascript.builtins.isFinite")}}
+{{Compat}}
 
 ## Veja também
 

@@ -31,7 +31,7 @@ let doc = domparser.parseFromString(string, mimeType);
 
 ### 返回值
 
-基于 **[`mimeType`](#Argument02)** 参数，返回 {{domxref("Document")}} 或 {{domxref("XMLDocument")}} 或其他文档类型。
+基于 **[`mimeType`](#argument02)** 参数，返回 {{domxref("Document")}} 或 {{domxref("XMLDocument")}} 或其他文档类型。
 
 ### 参数
 
@@ -41,7 +41,7 @@ let doc = domparser.parseFromString(string, mimeType);
   - : 要解析的 {{domxref("DOMString")}}。它必须包含 {{Glossary("HTML")}}、{{Glossary("xml")}}、{{Glossary("xhtml+xml")}} 或 {{Glossary("svg")}} 文档。
 - `mimeType`
 
-  - : 一个 {{domxref("DOMString")}}。This string determines a class of the the method's return value. The possible values are the following:
+  - : 一个 {{domxref("DOMString")}}。这个字符串决定方法返回值的类。可能的取值有：
 
 | `mimeType`              | doc.constructor            |
 | ----------------------- | -------------------------- |
@@ -147,7 +147,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 ## 参见
 
-- [Parsing and serializing XML](/zh-CN/docs/Parsing_and_serializing_XML)
+- [Parsing and serializing XML](/zh-CN/docs/Web/XML/Parsing_and_serializing_XML)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLSerializer")}}
 - {{jsxref("JSON.parse()")}} - counterpart for {{jsxref("JSON")}} documents.

@@ -3,7 +3,7 @@ title: MouseEvent.offsetX
 slug: Web/API/MouseEvent/offsetX
 ---
 
-{{APIRef("DOM Events")}}{{SeeCompatTable}}
+{{APIRef("UI Events")}}
 
 La propriété en lecture seule **`offsetX`** de l'interface {{domxref("MouseEvent")}} fournit le décalage sur l'axe X du pointeur de la souris entre cet évènement et la bordure de la marge intérieure du noeud cible.
 

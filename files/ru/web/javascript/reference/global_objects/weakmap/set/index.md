@@ -39,7 +39,7 @@ wm.set(obj, "foo").set(window, "bar"); // chainable
 wm.set(obj, "baz");
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
@@ -49,7 +49,7 @@ wm.set(obj, "baz");
 
 ## Firefox-specific notes
 
-- Prior to Firefox 33, `WeakMap.prototype.set` returned `undefined` and was not chainable. This has been fixed ({{bug(1031632)}}). The behavior can be found in Chrome/v8 as well ([issue](https://code.google.com/p/v8/issues/detail?id=3410)).
+- Prior to Firefox 33, `WeakMap.prototype.set` returned `undefined` and was not chainable. This has been fixed ([Firefox bug 1031632](https://bugzil.la/1031632)). The behavior can be found in Chrome/v8 as well ([issue](https://code.google.com/p/v8/issues/detail?id=3410)).
 
 ## Смотрите также
 

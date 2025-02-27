@@ -233,11 +233,14 @@ O elemento {{htmlelement("em")}} é inline, então como você pode ver abaixo, o
 
 {{ EmbedLiveSample('Elementos_em_bloco_versus_elementos_inline', 700, 200, "", "") }}
 
-> **Nota:** o HTML5 redefiniu as categorias de elemento em HTML5: veja [Categorias de conteúdo de elementos](http://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories). Enquanto essas definições são mais precisas e menos ambíguas que as anteriores, elas são muito mais complicadas de entender do que "em bloco" e "inline", então usaremos estas ao longo deste tópico.
+> [!NOTE]
+> o HTML5 redefiniu as categorias de elemento em HTML5: veja [Categorias de conteúdo de elementos](https://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories). Enquanto essas definições são mais precisas e menos ambíguas que as anteriores, elas são muito mais complicadas de entender do que "em bloco" e "inline", então usaremos estas ao longo deste tópico.
 
-> **Nota:** Os termos "bloco" e "inline", conforme usados neste tópico, não devem ser confundidos com os [tipos de caixas CSS](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes) com os mesmos nomes. Embora eles se correlacionem por padrão, alterar o tipo de exibição CSS não altera a categoria do elemento e não afeta em quais elementos ele pode conter e em quais elementos ele pode estar contido. Um dos motivos pelos quais o HTML5 abandonou esses termos foi evitar essa confusão bastante comum.
+> [!NOTE]
+> Os termos "bloco" e "inline", conforme usados neste tópico, não devem ser confundidos com os [tipos de caixas CSS](/pt-BR/docs/Learn/CSS/Building_blocks/The_box_model#types_of_css_boxes) com os mesmos nomes. Embora eles se correlacionem por padrão, alterar o tipo de exibição CSS não altera a categoria do elemento e não afeta em quais elementos ele pode conter e em quais elementos ele pode estar contido. Um dos motivos pelos quais o HTML5 abandonou esses termos foi evitar essa confusão bastante comum.
 
-> **Nota:** Você pode encontrar páginas de referência úteis que incluem uma lista de elementos inline e em bloco — veja [elementos em bloco](/pt-BR/docs/Web/HTML/Block-level_elements) e [elementos inline](/pt-BR/docs/Web/HTML/Inline_elements).
+> [!NOTE]
+> Você pode encontrar páginas de referência úteis que incluem uma lista de elementos inline e em bloco — veja [elementos em bloco](/pt-BR/docs/Glossary/Block-level_content) e [elementos inline](/pt-BR/docs/Glossary/Inline-level_content).
 
 ### Elementos vazios
 
@@ -252,7 +255,8 @@ Isto exibirá em sua página:
 
 {{ EmbedLiveSample('Elementos_vazios', 700, 300, "", "", "hide-codepen-jsfiddle") }}
 
-> **Nota:** Elementos vazios são também chamados de _void elements_.
+> [!NOTE]
+> Elementos vazios são também chamados de _void elements_.
 
 ## Atributos
 
@@ -536,7 +540,8 @@ Se você quiser experimentar como funciona um documento HTML no seu computador, 
 3. Colar o código no novo arquivo de texto.
 4. Salvar o arquivo com o nome `index.html`.
 
-> **Nota:** Você também pode encontrar o template básico de HTML no [MDN Learning Area Github repo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html).
+> [!NOTE]
+> Você também pode encontrar o template básico de HTML no [MDN Learning Area Github repo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html).
 
 Você pode abrir este arquivo no navegador para ver como o código renderizado se apresenta, e então, editar o código e atualizar a página no navegador para ver o resultado com as mudanças. Inicialmente será exibido assim:
 
@@ -726,7 +731,8 @@ Na saída ao vivo abaixo, você pode ver que o primeiro parágrafo deu errado, p
 
 {{EmbedLiveSample('Referências_de_entidades_incluindo_caracteres_especiais_no_HTML', 7700, 200, "", "", "hide-codepen-jsfiddle")}}
 
-> **Nota:** A tabela com todas as referências de caracteres disponíveis em HTML pode ser encontrada na Wikipédia: [List of XML and HTML character entity references](http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references). Observe que você não precisa usar referências de entidade para outros símbolos, pois os navegadores modernos manipularão os símbolos reais muito bem, desde que a codificação de caracteres do HTML esteja definida como UTF-8.
+> [!NOTE]
+> A tabela com todas as referências de caracteres disponíveis em HTML pode ser encontrada na Wikipédia: [List of XML and HTML character entity references](http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references). Observe que você não precisa usar referências de entidade para outros símbolos, pois os navegadores modernos manipularão os símbolos reais muito bem, desde que a codificação de caracteres do HTML esteja definida como UTF-8.
 
 ## Comentários no HTML
 
@@ -748,10 +754,11 @@ Como você pode ver abaixo, o primeiro parágrafo fica visível na saída ao viv
 
 Você chegou ao final do artigo — esperamos que tenha gostado do seu tour pelos princípios básicos do HTML! Nesse ponto, você deve entender como é a linguagem, como ela funciona em um nível básico e ser capaz de escrever alguns elementos e atributos. Este é o lugar perfeito para se estar agora, já que os artigos subseqüentes deste módulo abordarão algumas das coisas que você já examinou com mais detalhes e introduzirão alguns novos conceitos da linguagem. Fique ligado!
 
-> **Nota:** Nesse ponto, à medida que você começa a aprender mais sobre HTML, também pode querer explorar os conceitos básicos de Cascading Style Sheets, ou [CSS](/pt-BR/docs/Aprender/CSS). CSS é a linguagem usada para estilizar suas páginas da web (por exemplo, alterando a fonte ou as cores ou alterando o layout da página). HTML e CSS vão muito bem juntos, como você descobrirá em breve.
+> [!NOTE]
+> Nesse ponto, à medida que você começa a aprender mais sobre HTML, também pode querer explorar os conceitos básicos de Cascading Style Sheets, ou [CSS](/pt-BR/docs/Learn/CSS). CSS é a linguagem usada para estilizar suas páginas da web (por exemplo, alterando a fonte ou as cores ou alterando o layout da página). HTML e CSS vão muito bem juntos, como você descobrirá em breve.
 
 ## Veja também
 
-- [Aplicando cores a elementos HTML usando CSS](/pt-BR/docs/Web/HTML/Applying_color)
+- [Aplicando cores a elementos HTML usando CSS](/pt-BR/docs/Web/CSS/CSS_colors/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}

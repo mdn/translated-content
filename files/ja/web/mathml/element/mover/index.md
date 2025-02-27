@@ -18,13 +18,13 @@ overscript には定着した訳語がないようです。superscript（上付�
 - align
   - : オーバースクリプトの揃え位置。取り得る値は：`left`, `center` および `right`.
 - class, id, style
-  - : Provided for use with [stylesheets](/ja/docs/CSS).
+  - : Provided for use with [stylesheets](/ja/docs/Web/CSS).
 - href
   - : Used to set a hyperlink to a specified URI.
 - mathbackground
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/CSS/color_value#Color_Keywords).
+  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/Web/CSS/color_value#color_keywords).
 - mathcolor
-  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/CSS/color_value#Color_Keywords).
+  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/Web/CSS/color_value#color_keywords).
 
 ## 例
 
@@ -56,7 +56,7 @@ Rendering in your browser: <math><mover accent="true"><mrow><mi>x </mi><mo>+ </m
 
 ## ブラウザ実装状況
 
-{{Compat("mathml.elements.mover")}}
+{{Compat}}
 
 ## 関連情報
 

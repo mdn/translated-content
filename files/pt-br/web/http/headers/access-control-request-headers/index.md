@@ -43,7 +43,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Access-Control-Request-Headers")}}
+{{Compat}}
 
 ## Veja também
 

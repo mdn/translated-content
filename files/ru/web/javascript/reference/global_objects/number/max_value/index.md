@@ -3,7 +3,7 @@ title: Number.MAX_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 ---
 
-{{JSRef("Global_Objects", "Number")}}
+{{JSRef}}
 
 ## Сводка
 

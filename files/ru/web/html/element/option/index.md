@@ -17,15 +17,15 @@ slug: Web/HTML/Element/option
 
 ## Атрибуты
 
-Как и все HTML-элементы, этот элемент поддерживает [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
+Как и все HTML-элементы, этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("disabled")}} — отключён(о)
+- `disabled` — отключён(о)
   - : Если этот Boolean атрибут установлен, эта опция недоступна для выделения. Часто браузеры выделяют такой элемент управления серым цветом и ему недоступны любые события браузера, такие как клики мыши или события, связанные с фокусировкой. Если этот атрибут не установлен, этот элемент все ещё можно отключить (может не работать), если отключён внешний(one of its ancestors) элемент {{HTMLElement("optgroup")}}.
-- {{htmlattrdef("label")}} — метка, ярлык
+- `label` — метка, ярлык
   - : Этот атрибут - текст ярлыка, отображающий значение(смысл, описание) опции. Если `label` не указан (отсутствует), то его значение совпадает с текстовым содержанием элемента `<option>`.
-- {{htmlattrdef("selected")}} — выбран(о)
+- `selected` — выбран(о)
   - : (Если присутствует,) этот Boolean атрибут отображает то, что опция изначально выделена. Если элемент `<option>` принадлежит элементу {{HTMLElement("select")}}, чей атрибут [`multiple`](/ru/docs/Web/HTML/Element/select#multiple) не установлен, только одна-единственная `<option>` элемента {{HTMLElement("select")}} может иметь атрибут `selected` .
-- {{htmlattrdef("value")}} — значение, величина
+- `value` — значение, величина
   - : Содержимое(содержание) этого атрибута отображает(представляет) значение, отправляемое формой, если выбрана(выделена) данная опция. Если (этот) атрибут value отсутствует, значение берётся из текстового содержания элемента `<option>`.
 
 ## Примеры
@@ -36,10 +36,10 @@ slug: Web/HTML/Element/option
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.

@@ -3,7 +3,7 @@ title: string
 slug: Web/XPath/Functions/string
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `string` convertit l'argument passé en une chaîne.
 
@@ -36,7 +36,7 @@ Une chaîne.
 
 ### Définition
 
-[XPath 1.0, section 4.2](http://www.w3.org/TR/xpath#function-string).
+[XPath 1.0, section 4.2](https://www.w3.org/TR/xpath#function-string).
 
 ### Support Gecko
 

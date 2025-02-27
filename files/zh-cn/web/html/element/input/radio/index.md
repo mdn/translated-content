@@ -9,13 +9,47 @@ slug: Web/HTML/Element/input/radio
 
 在给定单选组中，同时只可以选择一个选项。单选按钮通常渲染为小圆圈，当选中该选项时，圆圈被填充或高亮。
 
-{{EmbedInteractiveExample("pages/tabbed/input-radio.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;radio&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<fieldset>
+  <legend>Select a maintenance drone:</legend>
+
+  <div>
+    <input type="radio" id="huey" name="drone" value="huey" checked />
+    <label for="huey">Huey</label>
+  </div>
+
+  <div>
+    <input type="radio" id="dewey" name="drone" value="dewey" />
+    <label for="dewey">Dewey</label>
+  </div>
+
+  <div>
+    <input type="radio" id="louie" name="drone" value="louie" />
+    <label for="louie">Louie</label>
+  </div>
+</fieldset>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 它们被称为单选按钮，因为它们的外观和操作方式与老式无线电上的按钮类似，如下图所示。
 
 ![旧时收音机上的按钮。](old-radio.jpg)
 
-> **备注：** [复选框](/zh-CN/docs/Web/HTML/Element/Input/checkbox)类似于单选按钮，但是有个重要的区别——单选按钮为选择集合中的其中一项而设计，然而复选框允许决定单个值的选定情况。当多个控件存在时，单选按钮允许选择其中的一个，而多选按钮允许选择其中多个。
+> **备注：** [复选框](/zh-CN/docs/Web/HTML/Element/input/checkbox)类似于单选按钮，但是有个重要的区别——单选按钮为选择集合中的其中一项而设计，然而复选框允许决定单个值的选定情况。当多个控件存在时，单选按钮允许选择其中的一个，而多选按钮允许选择其中多个。
 
 ## 值
 
@@ -64,7 +98,8 @@ slug: Web/HTML/Element/input/radio
 
 如果你在 HTML 中省略了 `value` 属性，那么提交的表单数据就会将该值分配到 `on` 上。在这种情况下，如果用户选中了“电话”选项并提交了表单，提交的表单数据将是 `contact=on`，这并没有什么用。所以别忘了设置你的 `value` 属性！
 
-> **备注：** 如果在提交表单时没有选择任何单选按钮，则提交的表单数据中根本不包括单选组，因为没有要报告的值。
+> [!NOTE]
+> 如果在提交表单时没有选择任何单选按钮，则提交的表单数据中根本不包括单选组，因为没有要报告的值。
 
 在没有选择任何一组单选按钮的情况下提交表单的情况并不多见，所以通常明智的做法是让一个单选按钮默认为“选中”状态。参见下面的[默认选择单选按钮](#默认选择单选按钮)。
 
@@ -170,7 +205,8 @@ form.addEventListener(
 
 在这个示例中，第一个单选按钮默认是选择状态。
 
-> **备注：** 如果你在多于一个单选按钮上指定了 `checked` 属性，后面的实例将覆盖前面的实例；也就是说，最后一个包含 `checked` 属性的单选按钮是当前选择的按钮。这是因为一个单选按钮组只能同时选取一个单选按钮，用户代理会在选择新的单选按钮时自动取消选择其他单选按钮。
+> [!NOTE]
+> 如果你在多于一个单选按钮上指定了 `checked` 属性，后面的实例将覆盖前面的实例；也就是说，最后一个包含 `checked` 属性的单选按钮是当前选择的按钮。这是因为一个单选按钮组只能同时选取一个单选按钮，用户代理会在选择新的单选按钮时自动取消选择其他单选按钮。
 
 ### 为你的单选按钮提供一个较大的选择区域
 
@@ -271,9 +307,10 @@ button:active {
 }
 ```
 
-这里最值得注意的是 {{cssxref("appearance")}} 属性的使用（为了支持某些浏览器，需要加前缀）。默认情况下，单选按钮（和[复选框](/zh-CN/docs/Web/HTML/Element/Input/checkbox)）的样式使用了操作系统对这些控件的本地样式。通过指定 `appearance: none`，你可以完全删除本地样式，并为它们创建自己的样式。这里我们使用了 {{cssxref("border")}} 和 {{cssxref("border-radius")}}，以及 {{cssxref("transition")}} 来创建一个漂亮的带动画单选。请注意 {{cssxref(":checked")}} 伪类是如何用来指定单选按钮被选中时的外观样式的。
+这里最值得注意的是 {{cssxref("appearance")}} 属性的使用（为了支持某些浏览器，需要加前缀）。默认情况下，单选按钮（和[复选框](/zh-CN/docs/Web/HTML/Element/input/checkbox)）的样式使用了操作系统对这些控件的本地样式。通过指定 `appearance: none`，你可以完全删除本地样式，并为它们创建自己的样式。这里我们使用了 {{cssxref("border")}} 和 {{cssxref("border-radius")}}，以及 {{cssxref("transition")}} 来创建一个漂亮的带动画单选。请注意 {{cssxref(":checked")}} 伪类是如何用来指定单选按钮被选中时的外观样式的。
 
-> **备注：** 如果你想使用 {{cssxref("appearance")}} 属性，你需要小心测试。即使大多数流行浏览器都支持它，它的实现变化很广。在老式浏览器中，即使是关键字 `none`，不同浏览器之间差异也很大，有些浏览器根本不支持。在新的浏览器中，差别就会小得多。
+> [!NOTE]
+> 如果你想使用 {{cssxref("appearance")}} 属性，你需要小心测试。即使大多数流行浏览器都支持它，它的实现变化很广。在老式浏览器中，即使是关键字 `none`，不同浏览器之间差异也很大，有些浏览器根本不支持。在新的浏览器中，差别就会小得多。
 
 {{EmbedLiveSample('为单选按钮添加样式', 600, 120)}}
 
@@ -291,7 +328,7 @@ button:active {
     </tr>
     <tr>
       <td><strong>事件</strong></td>
-      <td>{{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}}</td>
+      <td>{{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("Element/input_event", "input")}}</td>
     </tr>
     <tr>
       <td><strong>支持的通用属性</strong></td>
@@ -332,4 +369,4 @@ button:active {
 
 - {{HTMLElement("input")}} 和实现它的 {{domxref("HTMLInputElement")}} 接口。
 - {{domxref("RadioNodeList")}}：描述一系列单选按钮的接口
-- [CSS 属性兼容性](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性兼容性](/zh-CN/docs/Learn_web_development/Extensions/Forms)

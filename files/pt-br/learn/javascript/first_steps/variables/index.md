@@ -13,7 +13,7 @@ Depois de ler os últimos artigos, você deve saber agora o que é o JavaScript,
 
 ## Ferramentas que você precisa
 
-Ao longo deste artigo, pediremos que você digite linhas de código para testar seu entendimento do conteúdo. Se você estiver utilizando um navegador em um computador, o melhor lugar para digitar seus código de exemplos é o console JavaScript do seu navegador (veja o artigo [O que são as ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/ferramentas_de_desenvolvimento_do_navegador) para mais informações sobre como acessar essa ferramenta).
+Ao longo deste artigo, pediremos que você digite linhas de código para testar seu entendimento do conteúdo. Se você estiver utilizando um navegador em um computador, o melhor lugar para digitar seus código de exemplos é o console JavaScript do seu navegador (veja o artigo [O que são as ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) para mais informações sobre como acessar essa ferramenta).
 
 No entanto, nós também providenciamos um simples console JavaScript incorporado à página logo abaixo para que você inserir o código, caso não esteja usando um navegador com um console JavaScript facilmente disponível, ou se achar o console incorporado mais confortável.
 
@@ -64,7 +64,8 @@ Variáveis simplesmente fazem sentido, e a medida que você for aprendendo mais 
 
 Outra coisa especial sobra as variáveis é que elas podem conter praticamente qualquer coisa — não apenas cadeias de texto e números. Variáveis também podem conter dados complexos e até mesmo funções completas para fazer coisas incríveis. Você irá aprender mais sobre isso a medida que continuarmos.
 
-> **Nota:** Perceba que dissemos que as variáveis contém valores. Essa é uma distinção importante a se fazer. Elas não são os valores; e sim os containers para eles. Você pode pensar nelas sendo pequenas caixas de papelão nas quais você pode guardar coisas..
+> [!NOTE]
+> Perceba que dissemos que as variáveis contém valores. Essa é uma distinção importante a se fazer. Elas não são os valores; e sim os containers para eles. Você pode pensar nelas sendo pequenas caixas de papelão nas quais você pode guardar coisas..
 
 ![](boxes.png)
 
@@ -79,7 +80,8 @@ var minhaIdade;
 
 Aqui, estamos criando duas variáveis chamadas `meuNome` e `minhaIdade`. Tente agora digitar essas linhas no console do seu navegador. Depois disso, tente criar uma variável (ou duas) com suas próprias escolhas de nomes.
 
-> **Nota:** No JavaScript, todas as intruções em código deve terminar com um ponto e vírgula (`;`) — seu código pode até funcionar sem o ponto e vírgula em linhas únicas, mas provavelmente não irá funcionar quando estiver escrevendo várias linhas de código juntas. Tente pegar o hábito de sempre incluir o ponto e vírgula.
+> [!NOTE]
+> No JavaScript, todas as intruções em código deve terminar com um ponto e vírgula (`;`) — seu código pode até funcionar sem o ponto e vírgula em linhas únicas, mas provavelmente não irá funcionar quando estiver escrevendo várias linhas de código juntas. Tente pegar o hábito de sempre incluir o ponto e vírgula.
 
 Você pode testar se os valores agora existem no ambiente de execução digitando apenas os nomes das variáveis, ex.:
 
@@ -94,7 +96,8 @@ Elas atualmente não possuem valor; são containers vazios. Quando você insere 
 scoobyDoo;
 ```
 
-> **Nota:** Não confunda uma variável que existe mas não tenho valor definido com uma variável que não existe — são coisas bem diferentes.
+> [!NOTE]
+> Não confunda uma variável que existe mas não tenho valor definido com uma variável que não existe — são coisas bem diferentes.
 
 ## Inicializando uma variável
 
@@ -142,7 +145,8 @@ logNome();
 var meuNome;
 ```
 
-> **Nota:** Isso não funcionará ao digitar linhas individuais em um console JavaScript, apenas ao executar várias linhas de JavaScript em um documento da web.
+> [!NOTE]
+> Isso não funcionará ao digitar linhas individuais em um console JavaScript, apenas ao executar várias linhas de JavaScript em um documento da web.
 
 Isso funciona por causa do **hoisting** — leia [var hoisting](/pt-BR/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) pra mais detalhes.
 
@@ -189,12 +193,13 @@ Você pode chamar uma variável praticamente qualquer nome que queira, mas há l
 - Você não deve usar outros caracteres porque eles podem causar erros ou ser difíceis de entender por uma audiência internacional.
 - Não use underline no início do nome de variáveis — isso é utilizado em certos construtores JavaScript para significar coisas específicas, então pode deixar as coisas confusas.
 - Não use número no início do nome de variáveis. Isso não é permitido e irá causar um erro.
-- Uma conveção segura e se ater é a chamada ["lower camel case"](https://pt.wikipedia.org/wiki/CamelCase), onde você junta várias palavras, usando minúscula para a primeira palavra inteira e, em seguida, maiusculiza a primeira letra das palavras subsequentes. Temos utilizado esse procedimento para os nomes das nossas variáveis nesse artigo até aqui.
+- Uma conveção segura é se ater à chamada ["lower camel case"](https://pt.wikipedia.org/wiki/CamelCase), onde você junta várias palavras, usando minúscula para a primeira palavra inteira e, em seguida, maiusculiza a primeira letra das palavras subsequentes. Temos utilizado esse procedimento para os nomes das nossas variáveis nesse artigo até aqui.
 - Faça nomes de variáveis intuitivos, para que descrevam o dado que ela contém. Não use letras ou números únicos, ou frases muito longas.
 - As variáveis diferenciam letras maiúsculas e minúsculas — então `minhaidade` é uma variável diferente de `minhaIdade`.
 - Um último ponto — você também precisa evitar utilizar palavras reservadas pelo JavaScript como nome para suas variáveis — com isso, queremos dizer as palavras que fazem parte da sintaxe do JavaScript! Então você não pode usar palavras como `var`, `function`, `let` e `for` como nome de variáveis. Os navegadores vão reconhecê-las como itens de código diferentes e, portanto, você terá erros.
 
-> **Nota:** Você pode encontrar uma lista bem completa de palavras reservadas para evitar em [Gramática léxica — Palavras-chave](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Palavras-chave).
+> [!NOTE]
+> Você pode encontrar uma lista bem completa de palavras reservadas para evitar em [Gramática léxica — Palavras-chave](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#palavras-chave).
 
 Exemplos de bons nomes:
 
@@ -248,7 +253,7 @@ var despedidaGolfinho = "Até logo e obrigado por todos os peixes!";
 
 ### _Booleans_ (boleanos)
 
-_Booleans_ são valores verdadeiro/falso (_true/false_) — eles podem ter dois valores, `true` (verdadeiro) ou `false` (falso). São geralmente usados para verificar uma condição, que em seguida o código é executado apopriadamente. Por exemplo, um caso simples seria:
+_Booleans_ são valores verdadeiro/falso (_true/false_) — eles podem ter dois valores, `true` (verdadeiro) ou `false` (falso). São geralmente usados para verificar uma condição, que em seguida o código é executado apropriadamente. Por exemplo, um caso simples seria:
 
 ```js
 var estouVivo = true;
@@ -341,7 +346,7 @@ diasNaSemana = 8;
 
 ## Teste suas habilidades!
 
-Você chegou ao final deste artigo, mas consegue se lembrar das informações mais importantes? Você pode encontrar alguns testes adicionais para verificar se você reteve essas informações antes de prosseguir — veja [Teste suas habilidades: variáveis](/pt-BR/docs/Learn/JavaScript/First_steps/Teste_suas_habilidades:_variaveis).
+Você chegou ao final deste artigo, mas consegue se lembrar das informações mais importantes? Você pode encontrar alguns testes adicionais para verificar se você reteve essas informações antes de prosseguir — veja [Teste suas habilidades: variáveis](/pt-BR/docs/Learn/JavaScript/First_steps/Test_your_skills:_variables).
 
 ## Sumário
 

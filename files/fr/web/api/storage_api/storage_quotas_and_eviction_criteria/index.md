@@ -5,9 +5,11 @@ slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 
 {{DefaultAPISidebar("IndexedDB")}}
 
-> **Note :** Il existe un certain nombre de technologies Web qui stockent des données d'un type ou d'un autre du côté client (c'est-à-dire sur le disque local). Le processus par lequel le navigateur calcule l'espace alloué au stockage de données Web et les données à supprimer quand la limite est atteinte n'est pas simple et diffère d'un navigateur à l'autre. Cet article tente d'expliquer comment tout cela fonctionne.
+> [!NOTE]
+> Il existe un certain nombre de technologies Web qui stockent des données d'un type ou d'un autre du côté client (c'est-à-dire sur le disque local). Le processus par lequel le navigateur calcule l'espace alloué au stockage de données Web et les données à supprimer quand la limite est atteinte n'est pas simple et diffère d'un navigateur à l'autre. Cet article tente d'expliquer comment tout cela fonctionne.
 
-> **Note :** Les informations ci-dessous devraient être assez précises pour la plupart des navigateurs modernes, mais les spécificités du navigateur sont évoquées quand elles sont connues. Opera et Chrome devraient se comporter de la même manière dans tous les cas. Mais [Opera Mini](http://www.opera.com/mobile/mini) (encore basé sur presto du côté serveur) ne stocke aucune donnée sur le client.
+> [!NOTE]
+> Les informations ci-dessous devraient être assez précises pour la plupart des navigateurs modernes, mais les spécificités du navigateur sont évoquées quand elles sont connues. Opera et Chrome devraient se comporter de la même manière dans tous les cas. Mais [Opera Mini](https://www.opera.com/mobile/mini) (encore basé sur presto du côté serveur) ne stocke aucune donnée sur le client.
 
 ## Les différents types de stockage des données
 
@@ -55,13 +57,17 @@ Chaque type de stockage représente un référentiel distinct, voici la cartogra
 - `<profile>/storage/temporary` — répertoire de stockage des données temporaires.
 - `<profile>/storage/default` — répertoire de stockage des données par défaut.
 
-> **Note :** Depuis l'introduction de l' [API Storage](/fr/docs/Web/API/Storage_API) , le dossier "permanent" peut être considéré comme obsolète, il n'est plus utilisé que pour les bases de données de type persistant IndexedDB. Peu importe le mode, "best-effort" _(meilleur effort)_ ou "persistant", les données sont stockées sous `<profile>/storage/default`.
+> [!NOTE]
+> Depuis l'introduction de l' [API Storage](/fr/docs/Web/API/Storage_API) , le dossier "permanent" peut être considéré comme obsolète, il n'est plus utilisé que pour les bases de données de type persistant IndexedDB. Peu importe le mode, "best-effort" _(meilleur effort)_ ou "persistant", les données sont stockées sous `<profile>/storage/default`.
 
-> **Note :** Dans Firefox, vous pouvez trouver votre dossier profil en entrant : `support` dans la barre d'URL et en appuyant sur le bouton _Show in.._. _(Afficher dans ...)_ (par exemple, _"Show in Finder"_ sur Mac OS X) à côté du titre _"Profile Folder" (dossier de profil)_ .
+> [!NOTE]
+> Dans Firefox, vous pouvez trouver votre dossier profil en entrant : `support` dans la barre d'URL et en appuyant sur le bouton _Show in.._. _(Afficher dans ...)_ (par exemple, _"Show in Finder"_ sur Mac OS X) à côté du titre _"Profile Folder" (dossier de profil)_ .
 
-> **Note :** Si vous regardez dans votre profil les répertoires de données stockées, vous pouvez voir un quatrième dossier : `persistent` . À la base, le dossier `persistent` a été renommé `permanent,` il y a quelques temps, pour faciliter les mises à niveau / migrations.
+> [!NOTE]
+> Si vous regardez dans votre profil les répertoires de données stockées, vous pouvez voir un quatrième dossier : `persistent` . À la base, le dossier `persistent` a été renommé `permanent,` il y a quelques temps, pour faciliter les mises à niveau / migrations.
 
-> **Note :** Les utilisateurs ne doivent pas ajouter leurs propres répertoires ou fichiers sous `<profile>/storage` . Cela entraînerait l'échec de l'initialisation du stockage ; par exemple {{domxref ("IDBFactory.open ()", "open ()")}} déclencherait un événement d'erreur.
+> [!NOTE]
+> Les utilisateurs ne doivent pas ajouter leurs propres répertoires ou fichiers sous `<profile>/storage` . Cela entraînerait l'échec de l'initialisation du stockage ; par exemple {{domxref ("IDBFactory.open ()", "open ()")}} déclencherait un événement d'erreur.
 
 ## Limites de stockage
 
@@ -85,7 +91,8 @@ Les deux limites reagissent différemment quand la limite est atteinte :
 - La limite de groupe est également appelée «limite dure»: elle ne déclenche pas l'éviction d'origine.
 - La limite globale est une «limite douce» car il est possible que certains espaces soient libérés et que l'opération puisse se poursuivre.
 
-> **Note :** Si la limite de groupe est dépassée, ou si l'éviction d'origine ne crée pas assez d'espace libre, le navigateur lance `QuotaExceededError`.
+> [!NOTE]
+> Si la limite de groupe est dépassée, ou si l'éviction d'origine ne crée pas assez d'espace libre, le navigateur lance `QuotaExceededError`.
 
 ## Politique LRU
 
@@ -97,7 +104,7 @@ Nous traçons le "dernier temps d'accès" pour chaque origine utilisant le stock
 
 Dans Firefox, les technologies suivantes utilisent le stockage de données du navigateur pour stocker des données au besoin. Nous les qualifions de "quota clients" dans ce contexte :
 
-- [IndexedDB](/fr/docs/Web/API/API_IndexedDB)
+- [IndexedDB](/fr/docs/Web/API/IndexedDB_API)
 - [asm.js](http://asmjs.org/) caching
 - [Cache API](/fr/docs/Web/API/Cache)
 

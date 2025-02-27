@@ -13,7 +13,7 @@ WebGPU 是 {{domxref("WebGL_API", "WebGL", "", 1)}} 的继任者，为现代 GPU
 
 很公平地说，{{domxref("WebGL_API", "WebGL", "", 1)}} 在 2011 年左右首次出现后，在图形功能方面彻底改变了 web。WebGL 是 [OpenGL ES 2.0](https://registry.khronos.org/OpenGL-Refpages/es2.0/) 图形库的 JavaScript 端口，允许 web 页面直接将渲染计算传递给设备的 GPU，这会以非常高的速度处理，并在 {{htmlelement("canvas")}} 内渲染结果。
 
-WebGL 和用于编写 WebGL 着色器代码的 [GLSL](<https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)>) 语言十分负责，因此创建了几个 WebGL 库，以便更轻松地编写 WebGL 应用程序：流行的示例包括 [Three.js](https://threejs.org/)、[Babylon.js](https://www.babylonjs.com/) 以及 [PlayCanvas](https://playcanvas.com/)。开发者可以使用这些工具去构建身临其境的基于 web 3D 的游戏、音乐视频、培训和建模工具、VR 和 AR 体验等。
+WebGL 和用于编写 WebGL 着色器代码的 [GLSL](<https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)>) 语言十分复杂，因此创建了几个 WebGL 库，以便更轻松地编写 WebGL 应用程序：流行的示例包括 [Three.js](https://threejs.org/)、[Babylon.js](https://www.babylonjs.com/) 以及 [PlayCanvas](https://playcanvas.com/)。开发者可以使用这些工具去构建身临其境的基于 web 3D 的游戏、音乐视频、培训和建模工具、VR 和 AR 体验等。
 
 然而，WebGL 有一些需要解决的基本问题：
 
@@ -33,9 +33,10 @@ WebGPU 解决了这些问题，其提供了与现代 GPU API 兼容的更新的�
 
   - 集显（Integrated GPU），与 CPU 位于同一主板上，并共享其内存。
   - 独显（Discrete GPU），位于单独的显卡上，与 CPU 分开。
-  - 核显（Software "GPU"），在 CPU 上实现。
+  - 软件 GPU（Software "GPU"），在 CPU 上实现。
 
-  > **备注：** 上图假设仅有一个 CPU 设备。
+  > [!NOTE]
+  > 上图假设仅有一个 CPU 设备。
 
 - 本机 GPU API 是操作系统（例如 macOS 上的 Metal）的一部分，是一种允许本机应用程序使用 GPU 功能的编程接口。API 指令通过驱动程序发送到 GPU（并接收响应）。一个系统可以有多个本机操作系统 API 和驱动程序可用于与 GPU 通信，尽管上述图示仅假设一个设备仅有一个本机 API/驱动器程序。
 - 浏览器的 WebGPU 实现了通过本机 GPU API 与 GPU 进行通信。WebGPU 设配器在你的代码中实际上表示地是一个物理 GPU 和可利用的驱动程序。
@@ -130,7 +131,8 @@ fn fragment_main(fragData: VertexOut) -> @location(0) vec4f
 `;
 ```
 
-> **备注：** 在我们的演示中，我们将我们的代码存储在模板字面量中，但是你可以将其存储在任何地方，以便可以很容易地将其作为文本取回，并输入到你的 WebGPU 程序中。例如，另一种常见的作法是将着色器存储在 {{htmlelement("script")}} 元素中并且使用 {{domxref("Node.textContent")}} 取回内容。用于 WGSL 的正确 MIME 类型是 `text/wgsl`。
+> [!NOTE]
+> 在我们的演示中，我们将我们的代码存储在模板字面量中，但是你可以将其存储在任何地方，以便可以很容易地将其作为文本取回，并输入到你的 WebGPU 程序中。例如，另一种常见的作法是将着色器存储在 {{htmlelement("script")}} 元素中并且使用 {{domxref("Node.textContent")}} 取回内容。用于 WGSL 的正确 MIME 类型是 `text/wgsl`。
 
 为了确保你的着色器代码可提供给 WebGPU，你必须通过 {{domxref("GPUDevice.createShaderModule()")}} 调用，将其放入 {{domxref("GPUShaderModule")}} 中，将你的着色器代码作为描述符对象中的属性传递。例如：
 
@@ -157,7 +159,8 @@ context.configure({
 });
 ```
 
-> **备注：** 确定纹理格式的最佳做法是使用 {{domxref("GPU.getPreferredCanvasFormat()")}} 方法；这将为用户的设备选择最有效的格式（`bgra8unorm` 或 `rgba8unorm`）。
+> [!NOTE]
+> 确定纹理格式的最佳做法是使用 {{domxref("GPU.getPreferredCanvasFormat()")}} 方法；这将为用户的设备选择最有效的格式（`bgra8unorm` 或 `rgba8unorm`）。
 
 ### 创建缓冲区并将我们的三角形数据写入
 
@@ -181,7 +184,7 @@ const vertexBuffer = device.createBuffer({
 });
 ```
 
-我们将使用映射操作将我们的数据放入 `GPUBuffer`，就像我们在[计算管线实例](#基础的计算管线)中，将数据从 GPU 读回到 JavaScript。然而，在这种情况下，我们将使用便利的 {{domxref("GPUQueue.writeBuffer()")}} 方法，它将要写入缓冲区的、要写入数据源的、每个偏移值和要写入数据的的大小作为参数（我们已经指定了数据的整个长度）。然后浏览器会找出写入数据的最高效的方式。
+我们将使用映射操作将我们的数据放入 `GPUBuffer`，就像我们在[计算管线实例](#基础的计算管线)中，将数据从 GPU 读回到 JavaScript。然而，在这种情况下，我们将使用便利的 {{domxref("GPUQueue.writeBuffer()")}} 方法，它将要写入缓冲区的、要写入数据源的、每个偏移值和要写入数据的大小作为参数（我们已经指定了数据的整个长度）。然后浏览器会找出写入数据的最高效的方式。
 
 ```js
 device.queue.writeBuffer(vertexBuffer, 0, vertices, 0, vertices.length);
@@ -392,7 +395,8 @@ const bindGroup = device.createBindGroup({
 });
 ```
 
-> **备注：** 你可以通过调用 {{domxref("GPUComputePipeline.getBindGroupLayout()")}} 方法检索在创建绑定组时使用的隐式布局。还有一个可以用于渲染管线的版本：参见 {{domxref("GPURenderPipeline.getBindGroupLayout()")}}。
+> [!NOTE]
+> 你可以通过调用 {{domxref("GPUComputePipeline.getBindGroupLayout()")}} 方法检索在创建绑定组时使用的隐式布局。还有一个可以用于渲染管线的版本：参见 {{domxref("GPURenderPipeline.getBindGroupLayout()")}}。
 
 ### 创建计算管线
 
@@ -477,7 +481,8 @@ WebGPU 调用在 GPU 进程中以异步的方式进行验证。如果发现错�
 
 你可以在关于 WebGPU 错误处理的解释中找到更多有关信息——参见[对象的有效性和销毁状态](https://gpuweb.github.io/gpuweb/explainer/#invalid-and-destroyed)以及[错误](https://gpuweb.github.io/gpuweb/explainer/#errors)。[WebGPU 错误处理的最佳实践](https://toji.dev/webgpu-best-practices/error-handling)提供了很多有关真实世界的示例和建议的有用信息。
 
-> **备注：** 在 WebGL 中处理错误的历史方式是提供一个 {{domxref("WebGLRenderingContext.getError", "getError()")}} 方法，该方法返回错误的信息。这种方式存在问题，因为它会同步返回错误，这对性能是不利的——每次调用都需要往返到 GPU 并且需要所有先前发出的操作都已经完成。它的状态模型也是扁平的，这意味着错误可以在不相关的代码之间泄露。WebGPU 的创建者决定改变这一点。
+> [!NOTE]
+> 在 WebGL 中处理错误的历史方式是提供一个 {{domxref("WebGLRenderingContext.getError", "getError()")}} 方法，该方法返回错误的信息。这种方式存在问题，因为它会同步返回错误，这对性能是不利的——每次调用都需要往返到 GPU 并且需要所有先前发出的操作都已经完成。它的状态模型也是扁平的，这意味着错误可以在不相关的代码之间泄露。WebGPU 的创建者决定改变这一点。
 
 ## 接口
 

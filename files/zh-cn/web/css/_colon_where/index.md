@@ -1,5 +1,5 @@
 ---
-title: ":where()"
+title: :where()
 slug: Web/CSS/:where
 ---
 
@@ -24,7 +24,15 @@ footer p:hover {
 }
 ```
 
-`:where()` 和 {{CSSxRef(":is", ":is()")}} 的不同之处在于，`:where()` 的[优先级](/zh-CN/docs/Web/CSS/Specificity)总是为 0，但是 `:is()` 的优先级是由它的选择器列表中优先级最高的[选择器](/zh-CN/docs/Glossary/CSS_Selector)决定的。
+`:where()` 和 {{CSSxRef(":is", ":is()")}} 的不同之处在于，`:where()` 的[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)总是为 0，但是 `:is()` 的优先级是由它的选择器列表中优先级最高的[选择器](/zh-CN/docs/Glossary/CSS_Selector)决定的。
+
+## 语法
+
+```css-nolint
+:where(<complex-selector-list>) {
+  /* ... */
+}
+```
 
 ### 可容错选择器解析
 
@@ -138,15 +146,10 @@ footer a {
 
 然而，`:where()` 中的选择器的优先级是 0，所以橘色的页脚链接将被我们的简单选择器覆盖。
 
-> **备注：** 你也可以在 GitHub 上找到这个示例；参见 [is-where](https://mdn.github.io/css-examples/is-where/)。
+> [!NOTE]
+> 你也可以在 GitHub 上找到这个示例；参见 [is-where](https://mdn.github.io/css-examples/is-where/)。
 
 {{EmbedLiveSample('示例', '100%', 600)}}
-
-## 语法
-
-```
-:where( <complex-selector-list> )
-```
 
 ## 规范
 

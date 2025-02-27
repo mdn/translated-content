@@ -23,9 +23,9 @@ JavaScript Moderno — como descrito nas próximas seções — felizmente, faci
 
 ## Contruindo um loop principal em JavaScript
 
-JavaScript trabalaha melhor com eventos e chamadas de funções. Navegadores modernos esforçam-se para chamar métodos à medida que são necessários e ociosos (ou fazem suas outras tarefas) nos intervalos. É uma excelente ideia ligar seu código aos momentos apropriados a eles. Pense se a sua função realmente precisa ser chamada em um estrito intervalo de tempo, a cada frame, ou somente após algo acontecer. Ser mais específico com o navegador sobre quando a sua função precisa ser chamada permite que o navegador otimize essa chamada. Também, isso facilitará o seu trabalho.
+JavaScript trabalha melhor com eventos e chamadas de funções. Navegadores modernos esforçam-se para chamar métodos à medida que são necessários e ociosos (ou fazem suas outras tarefas) nos intervalos. É uma excelente ideia ligar seu código aos momentos apropriados a eles. Pense se a sua função realmente precisa ser chamada em um estrito intervalo de tempo, a cada frame, ou somente após algo acontecer. Ser mais específico com o navegador sobre quando a sua função precisa ser chamada permite que o navegador otimize essa chamada. Além disso, isso facilitará o seu trabalho.
 
-Alguns códigos precisam ser rodados frame por frame, então por quê ligar essas funções a qualquer coisa que não seja a atualização de tela do navegador? Na web, {{ domxref("window.requestAnimationFrame()") }} será a base da maioria dos mais bem programados loops principais do tipo frame por frame. Uma chamada de função deve ser passada dentro da função anterior quando a mesma for chamada. Esta chamdada de função será executada em um tempo adequado antes da próxima atualização de tela. Eis um exemplo de um loop principal simples:
+Alguns códigos precisam ser rodados frame por frame, então por quê ligar essas funções a qualquer coisa que não seja a atualização de tela do navegador? Na web, {{ domxref("window.requestAnimationFrame()") }} será a base da maioria dos mais bem programados loops principais do tipo frame por frame. Uma chamada de função deve ser passada dentro da função anterior quando a mesma for chamada. Esta chamada de função será executada em um tempo adequado antes da próxima atualização de tela. Eis um exemplo de um loop principal simples:
 
 ```
 window.main = function () {
@@ -41,9 +41,9 @@ main(); //Start the cycle.
 
 O trecho de código acima possui duas declarações. A primeira cria uma função como uma variável global chamada `main()`. Esta função faz algum trabalho e também diz ao navegador para camá-la na próxima frame com `window.requestAnimationFrame()`. A segunda declaração chama a função `main()`, definida na primeira declaração. Pelo fato do `main()` ser chamado uma vez na segunda declaração e cada chamada dele colocá-lo na lista de coisas a fazer na próxima frame, `main()` é sincronizado com a sua taxa de frame.
 
-É claro que esse loop não é perfeito. Antes de discutirmos maneiras de mudá-lo, deixe-nos discutir o que já está bem.
+É claro que esse loop não é perfeito. Antes de discutirmos maneiras de mudá-lo, vamos discutir o que ele já faz bem.
 
-Cronometrando o loop principal para quando o navegador atualiza a tela o permite rodar o seu loop tão frequentemente quanto o navegador queira atualizar. Você tem controle sobre cada frame de animação. Isso é muito simples por que `main()` é a única função em loop. Um jogo de primeira pessoa (ou um jogo similar) apresenta uma nova cena a cada frame. Você realmente não pode ser mais suave e receptivo do que isso.
+Cronometrando o loop principal para quando o navegador atualiza a tela o permite rodar o seu loop tão frequentemente quanto o navegador queira atualizar. Você tem controle sobre cada frame de animação. Isso é muito simples por que `main()` é a única função em loop. Um jogo de primeira pessoa (ou um jogo similar) apresenta uma nova cena a cada frame. Você realmente não pode ser mais suave e responsivo do que isso.
 
 Mas não assuma imediatamente que animações requerem controle frame por frame. Animações simples podem ser facilmente desenvolvidas até mesmo com aceleração-GPU, com animações CSS e com outras ferramentas inclusas no navegador. Existem muitas delas que farão sua vida mais fácil.
 
@@ -97,13 +97,13 @@ Para o próximo problema, parando o loop principal, você precisará cancelar a 
 })();
 ```
 
-Nós temos agora uma variável declarada no namespace do nosso `MyGame`, que nos chamamos de `stopMain`, e que contém o ID retornado pela execução mais recente do `requestAnimationFrame()` do nosso loop principal. Em algum ponto, nós podemos parar o loop principal pedindo ao browser para cancelar a requisição que corresponde ao nosso token.
+Nós temos agora uma variável declarada no namespace do nosso `MyGame`, que chamamos de `stopMain`, e que contém o ID retornado pela execução mais recente do `requestAnimationFrame()` do nosso loop principal. Em algum ponto, nós podemos parar o loop principal pedindo ao browser para cancelar a requisição que corresponde ao nosso token.
 
 ```
 window.cancelAnimationFrame( MyGame.stopMain );
 ```
 
-A chave para programar loop principal, no JavaScript, é anexá-lo a qualquer evento que deve estar dirigindo sua ação e prestar atenção a como os diferentes sistemas envolvidos interagem entre si. Você poderá ter multiplos componentes dirigidos por multiplos diferentes tipos de eventos. Isto parece complexidade desnecessária mas pode ser só uma boa otimização (não necessária, é claro). O problema é que você não está programando um loop principal típico. No JavaScript, você está usando o loop principal do browser e está tentando fazê-lo efetivamente.
+A chave para programar um loop principal, no JavaScript, é anexá-lo a qualquer evento que deve estar dirigindo sua ação e prestar atenção a como os diferentes sistemas envolvidos interagem entre si. Você poderá ter múltiplos componentes dirigidos por múltiplos diferentes tipos de eventos. Isto parece complexidade desnecessária mas pode ser só uma boa otimização (não necessária, é claro). O problema é que você não está programando um loop principal típico. No JavaScript, você está usando o loop principal do browser e está tentando fazê-lo efetivamente.
 
 ## Construindo um loop principal mais _otimizado_ no JavaScript
 
@@ -212,7 +212,7 @@ One common technique is to update the simulation at a constant frequency and the
 
   - This uses processor time even when unfocused or minimized, hogs the main thread, and is probably an artifact of traditional game loops (but it is simple.)
 
-- Draw on `requestAnimationFrame` and update on a `setInterval` or `setTimeout` in a [Web Worker](/pt-BR/docs/Web/Guide/Performance/Using_web_workers).
+- Draw on `requestAnimationFrame` and update on a `setInterval` or `setTimeout` in a [Web Worker](/pt-BR/docs/Web/API/Web_Workers_API/Using_web_workers).
 
   - This is the same as above, except update does not hog the main thread (nor does the main thread hog it). This is a more complex solution, and might be too much overhead for simple updates.
 

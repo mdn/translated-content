@@ -62,7 +62,7 @@ Cache-Control: s-maxage=<seconds>
 
 ### Расширенные инструкции `Cache-Control`
 
-Расширенные инструкции `Cache-Control` не являются частью базовых стандартов, описывающих кеширование в HTTP. В [таблице совместимости](#Browser_compatibility) указаны браузеры, которые поддерживают расширенные инструкции.
+Расширенные инструкции `Cache-Control` не являются частью базовых стандартов, описывающих кеширование в HTTP. В [таблице совместимости](#browser_compatibility) указаны браузеры, которые поддерживают расширенные инструкции.
 
 ```
 Cache-Control: immutable
@@ -132,17 +132,17 @@ Cache-Control: no-cache, no-store, must-revalidate
 Cache-Control: public, max-age=31536000
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [HTTP Caching FAQ](/ru/docs/Web/HTTP/Caching_FAQ)
+- [HTTP Caching FAQ](/ru/docs/Web/HTTP/Caching)
 - {{HTTPHeader("Age")}}
 - {{HTTPHeader("Expires")}}
 - {{HTTPHeader("Pragma")}}

@@ -1,5 +1,5 @@
 ---
-title: ":lang"
+title: :lang
 slug: Web/CSS/:lang
 ---
 
@@ -14,7 +14,8 @@ p:lang(en) {
 }
 ```
 
-> **Nota:** En HTML, el lenguaje está determinado por una combinación del atributo [`lang`](/es/docs/Web/HTML/Global_attributes#lang), el elemento {{HTMLElement("meta")}} y posiblemente por la información del protocolo (como los encabezados HTTP). Para otros tipos de documentos, puede haber otros métodos de documentos para determinar el idioma.
+> [!NOTE]
+> En HTML, el lenguaje está determinado por una combinación del atributo [`lang`](/es/docs/Web/HTML/Global_attributes#lang), el elemento {{HTMLElement("meta")}} y posiblemente por la información del protocolo (como los encabezados HTTP). Para otros tipos de documentos, puede haber otros métodos de documentos para determinar el idioma.
 
 ## Sintaxis
 
@@ -29,7 +30,7 @@ p:lang(en) {
 
 ## Ejemplo
 
-En este ejemplo, la pseudo-clase `:lang()` se usa para hacer coincidir los elementos primarios de los elementos de cita ({{htmlElement("q")}}) utilizando [selectores de hijo](/es/docs/Web/CSS/Child_selectors). Tenga en cuenta que esto no ilustra la única manera de hacerlo, y que el mejor método para usar depende del tipo de documento. También tenga en cuenta que los valores de {{glossary("Unicode")}} se utilizan para especificar algunos de los caracteres de comillas especiales.
+En este ejemplo, la pseudo-clase `:lang()` se usa para hacer coincidir los elementos primarios de los elementos de cita ({{htmlElement("q")}}) utilizando [selectores de hijo](/es/docs/Web/CSS/Child_combinator). Tenga en cuenta que esto no ilustra la única manera de hacerlo, y que el mejor método para usar depende del tipo de documento. También tenga en cuenta que los valores de {{glossary("Unicode")}} se utilizan para especificar algunos de los caracteres de comillas especiales.
 
 ### HTML
 

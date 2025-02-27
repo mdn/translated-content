@@ -7,7 +7,8 @@ slug: Web/HTTP/Headers/Date
 
 O cabeçalho geral HTTP **`Date`** contém a data e a hora que a mensagem foi gerada.
 
-> **Aviso:** Note que `Date` é listado em [nomes de cabeçalhos proibidos](https://fetch.spec.whatwg.org/#forbidden-header-name) na especificação do fetch - então este código não enviará o cabeçalho `Date`:
+> [!WARNING]
+> Note que `Date` é listado em [nomes de cabeçalhos proibidos](https://fetch.spec.whatwg.org/#forbidden-header-name) na especificação do fetch - então este código não enviará o cabeçalho `Date`:
 >
 > ```js
 > fetch("https://httpbin.org/get", {
@@ -74,7 +75,7 @@ new Date().toUTCString();
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Date")}}
+{{Compat}}
 
 ## Veja também
 

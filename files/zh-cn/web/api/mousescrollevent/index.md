@@ -3,15 +3,15 @@ title: MouseScrollEvent
 slug: Web/API/MouseScrollEvent
 ---
 
-{{APIRef("DOM Events")}}{{ non-standard_header() }}{{deprecated_header}}
+{{APIRef("UI Events")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 `MouseScrollEvent` 事件对象代表了当用户在滚动鼠标滚轮或操作其他类似的输入设备时触发的事件。
 
-要优先使用标准化过的 [WheelEvent](/zh-CN/docs/DOM/WheelEvent) 来代替该陈旧的事件对象。
+要优先使用标准化过的 [WheelEvent](/zh-CN/docs/Web/API/WheelEvent) 来代替该陈旧的事件对象。
 
 ## 方法概述
 
-```
+```webidl
 void initMouseScrollEvent(
   in DOMString typeArg,
   in boolean canBubbleArg,
@@ -54,11 +54,11 @@ void initMouseScrollEvent(
 
 ## 滚轮相关事件对比
 
-| 事件类型                                                             | 事件对象                                             | 是否标准                                                                  | 兼容性              |
-| -------------------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------- | ------------------- |
-| [mousewheel](/zh-CN/docs/DOM/DOM_event_reference/mousewheel)         | [MouseWheelEvent](/zh-CN/docs/DOM/MouseWheelEvent)   | 非标准                                                                    | 只有 Firefox 不支持 |
-| [DOMMouseScroll](/zh-CN/docs/DOM/DOM_event_reference/DOMMouseScroll) | [MouseScrollEvent](/zh-CN/docs/DOM/MouseScrollEvent) | 非标准                                                                    | 只有 Firefox 支持   |
-| [wheel](/zh-CN/docs/DOM/DOM_event_reference/wheel)                   | [WheelEvent](/zh-CN/docs/DOM/WheelEvent)             | [DOM Level 3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-wheel) | Firefox 17+ ie9+    |
+| 事件类型                                                           | 事件对象                                                 | 是否标准                                                                  | 兼容性              |
+| ------------------------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------- |
+| [mousewheel](/zh-CN/docs/Web/API/Element/mousewheel_event)         | [MouseWheelEvent](/zh-CN/docs/Web/API/WheelEvent)        | 非标准                                                                    | 只有 Firefox 不支持 |
+| [DOMMouseScroll](/zh-CN/docs/Web/API/Element/DOMMouseScroll_event) | [MouseScrollEvent](/zh-CN/docs/Web/API/MouseScrollEvent) | 非标准                                                                    | 只有 Firefox 支持   |
+| [wheel](/zh-CN/docs/Web/API/Element/wheel_event)                   | [WheelEvent](/zh-CN/docs/Web/API/WheelEvent)             | [DOM Level 3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-wheel) | Firefox 17+ ie9+    |
 
 ## 浏览器兼容性
 

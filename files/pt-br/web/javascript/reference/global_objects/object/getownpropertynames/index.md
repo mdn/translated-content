@@ -121,15 +121,11 @@ Object.getOwnPropertyNames("foo");
 
 ## Especificações
 
-| Esperificação                                                                            | Status               | Comentário                                           |
-| ---------------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.4', 'Object.getOwnPropertyNames')}}                     | {{Spec2('ES5.1')}}   | Definição inicial. Implementado no JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.getownpropertynames', 'Object.getOwnPropertyNames')}}     | {{Spec2('ES6')}}     |                                                      |
-| {{SpecName('ESDraft', '#sec-object.getownpropertynames', 'Object.getOwnPropertyNames')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.getOwnPropertyNames")}}
+{{Compat}}
 
 ## Notas específicas para SpiderMonkey
 
@@ -137,7 +133,7 @@ Antes do SpiderMonkey 28, `Object.getOwnPropertyNames` não via propriedades nã
 
 ## Veja também
 
-- [Enumerabilidade e posse de propriedades](/pt-BR/docs/Enumerability_and_ownership_of_properties)
+- [Enumerabilidade e posse de propriedades](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}

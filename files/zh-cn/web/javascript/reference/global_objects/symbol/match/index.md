@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
 
 **`Symbol.match`** 指定了匹配的是正则表达式而不是字符串。{{jsxref("String.prototype.match()")}} 方法会调用此函数。
 
-{{EmbedInteractiveExample("pages/js/symbol-match.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.match")}}
+
+```js interactive-example
+const regexp1 = /foo/;
+// console.log('/foo/'.startsWith(regexp1));
+// Expected output (Chrome): Error: First argument to String.prototype.startsWith must not be a regular expression
+// Expected output (Firefox): Error: Invalid type: first can't be a Regular Expression
+// Expected output (Safari): Error: Argument to String.prototype.startsWith cannot be a RegExp
+
+regexp1[Symbol.match] = false;
+
+console.log("/foo/".startsWith(regexp1));
+// Expected output: true
+
+console.log("/baz/".endsWith(regexp1));
+// Expected output: false
+```
 
 ## 描述
 
@@ -45,9 +61,12 @@ re[Symbol.match] = false;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [`core-js` 中 `Symbol.match` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-symbol)
+- {{jsxref("Symbol.matchAll")}}
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.search")}}
 - {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@match", "RegExp.prototype[@@match]()")}}
+- {{jsxref("String.prototype.match()")}}
+- [`RegExp.prototype[Symbol.match]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)

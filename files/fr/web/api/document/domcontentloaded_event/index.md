@@ -30,7 +30,7 @@ L'évènement **`DOMContentLoaded`** est déclenché quand le document HTML init
 
 Un évènement différent, {{domxref("Window/load_event", "load")}} doit être utilisé pour détecter que la page entière est chargée. On utilise couramment à tort `load` là où `DOMContentLoaded` serait plus approprié.
 
-Du code JavaScript synchrone va mettre en pause la création du DOM. Si vous voulez charger le DOM le plus rapidement possible, vous pouvez faire votre code [(en) JavaScript asynchrone](/fr/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) et [(en) optimiser le chargement des feuilles de styles](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery). Si vous chargez comme d'habitude, les feuilles de styles vont ralentir la création du DOM comme si elles étaient chargées en parallèle, en «volant» le trafic du document principal HTML.
+Du code JavaScript synchrone va mettre en pause la création du DOM. Si vous voulez charger le DOM le plus rapidement possible, vous pouvez faire votre code [(en) JavaScript asynchrone](/fr/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests) et [(en) optimiser le chargement des feuilles de styles](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery). Si vous chargez comme d'habitude, les feuilles de styles vont ralentir la création du DOM comme si elles étaient chargées en parallèle, en «volant» le trafic du document principal HTML.
 
 ## Exemples
 

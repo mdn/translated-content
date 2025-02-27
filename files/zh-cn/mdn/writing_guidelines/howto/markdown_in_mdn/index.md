@@ -1,15 +1,15 @@
 ---
 title: 如何使用 Markdown 来撰写文档
 slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
+l10n:
+  sourceCommit: a5682b8bcf2b9761fa576004deea720f76735aaf
 ---
-
-{{MDNSidebar}}
 
 本文介绍了如何使用 Markdown 来编写 MDN Web 文档项目中的文档。我们以 GitHub 风格的 Markdown（GFM）为基础，并添加了一些扩展来支持一些我们在 MDN 上需要而 GFM 仍不支持的东西。
 
 ## 基础：Github 风格的 Markdown
 
-MDN Markdown 的基础是 Github 风格的 Markdown（GFM）：<https://github.github.com/gfm/>。这意味着，对于本文中未指定的内容，你可以参考 GFM 规范。而 GFM 又是 CommonMark（[https://spec.commonmark.org/](https://spec.commonmark.org/)）的超集。
+MDN Markdown 的基础是 Github 风格的 Markdown（GFM）：<https://github.github.com/gfm/>。这意味着，对于本文中未指定的内容，你可以参考 GFM 规范。而 GFM 又是 CommonMark（<https://spec.commonmark.org/>）的超集。
 
 ## 链接
 
@@ -96,7 +96,7 @@ GFM 规范定义了两种基础的链接类型：
   - `django`——Django 模板
   - `svelte`——Svelte 模板
   - `handlebars`——Handlebars 模板
-  - `pug`——[Pug 模板](https://pugjs.org/zh-cn/api/getting-started.html)（可以被 [Express](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer) 使用）
+  - `pug`——[Pug 模板](https://pugjs.org/zh-cn/api/getting-started.html)（可以被 [Express](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer) 使用）
 - 其他
   - `plain`——纯文本
   - `diff`——Diff 文件
@@ -173,15 +173,19 @@ const greeting = "这是一个错误示例";
 
 ## 备注、警告和标注
 
-如果你需要特别声明一些内容。那么，可以使用一个带有特殊起始段落的 GFM 块引用。一共有三种类型：备注、警告和标注。
+有时作者需要特别强调某些内容。要做到这一点，可以使用 [GFM 备注块语法](https://github.com/orgs/community/discussions/16925)，这是一种带有特殊起始行的 GFM 块引用。一共有三种类型：备注、警告和标注。
 
-- 要添加备注，请创建一个 GFM 块引用，起始段落以 `**备注：**` 开头。
-- 要添加警告，请创建一个 GFM 块引用，起始段落以 `**警告：**` 开头。
-- 要添加标注，请创建一个 GFM 块引用，起始段落以 `**标注：**` 开头。
+> [!NOTE]
+> MDN Web 文档在 GFM 添加 noteblock 语法之前就已经支持了自己的备注块语法。因此，MDN 仅支持 GFM 支持的五种备注块类型中的两种，并且支持另一种 GFM 不支持的类型。
 
-备注和警告将在输出中渲染为“**备注：**”或“**警告：**”文本，而标注不会。当你想要提供自定义标题时，标注会是一个不错的选择。
+- 要添加备注，请创建一个 GFM 块引用，起始行为 `[!NOTE]`。
+- 要添加警告，请创建一个 GFM 块引用，起始行为 `[!WARNING]`。
+- 要添加标注，请创建一个 GFM 块引用，起始行为 `[!CALLOUT]`。
 
-标记的处理是是基于生成的 AST，而不是指定的确切字符串。这意味着，使用 `<strong>备注：</strong>` 也会生成注释。但是，请以 Markdown 语法为主要风格。
+备注和警告将在输出中添加本地化的“**备注：**”或“**警告：**”，而标注不会。当你想要提供自定义标题时，标注会是一个不错的选择。
+
+> [!WARNING]
+> 在旧的 MDN 语法中，类型是本地化的，并且会以粗体文本添加到第一个段落中，例如 `**备注：** Foo bar` 而不是 `[!NOTE] ⏎ Foo bar`。出于迁移的目的，此语法仍受支持。但请避免在新文档中使用。
 
 多行块引用由空的块引用生成，就像普通的段落一样。此外，没有空格的多行内容会像常规 Markdown 行一样被处理和连接。
 
@@ -192,7 +196,8 @@ const greeting = "这是一个错误示例";
 #### 备注
 
 ```md
-> **备注：** 这就是编写备注的方式。
+> [!NOTE]
+> 这就是编写备注的方式。
 >
 > 它可以有好几行。
 ```
@@ -201,21 +206,23 @@ const greeting = "这是一个错误示例";
 
 ```html
 <div class="notecard note">
-  <p><strong>备注：</strong> 这就是编写备注的方式。</p>
+  <p><strong>备注：</strong>这就是编写备注的方式。</p>
   <p>它可以有好几行。</p>
 </div>
 ```
 
 此 HTML 将渲染为高亮显示的框，例如：
 
-> **备注：** 这就是编写备注的方式。
+> [!NOTE]
+> 这就是编写备注的方式。
 >
 > 它可以有好几行。
 
 #### 警告
 
 ```md
-> **警告：** 这就是编写警告的方式。
+> [!WARNING]
+> 这就是编写警告的方式。
 >
 > 它可以有好几段。
 ```
@@ -224,21 +231,24 @@ const greeting = "这是一个错误示例";
 
 ```html
 <div class="notecard warning">
-  <p><strong>警告：</strong> 这就是编写警告的方式。</p>
+  <p><strong>警告：</strong>这就是编写警告的方式。</p>
   <p>它可以有好几段。</p>
 </div>
 ```
 
 此 HTML 将渲染为高亮显示的框，例如：
 
-> **警告：** 这就是编写警告的方式。
+> [!WARNING]
+> 这就是编写警告的方式。
 >
 > 它可以有好几段。
 
 #### 标注
 
 ```md
-> **标注：** **这就是编写标注的方式。**
+> [!CALLOUT]
+>
+> **这就是编写标注的方式。**
 >
 > 它可以有好几段。
 ```
@@ -254,38 +264,19 @@ const greeting = "这是一个错误示例";
 
 此 HTML 将渲染为高亮显示的框，例如：
 
-> **标注：**
+> [!CALLOUT]
 >
 > **这就是编写标注的方式。**
 >
 > 它可以有好几段。
-
-#### 警告的翻译
-
-因为文本“**备注：**”或“**警告：**”也会出现在渲染的输出中，因此必须考虑到翻译问题。实际上，这意味这 MDN 支持的每一种语言环境都必须提供这些字符串的翻译，平台必须识别到它们表明了这些结构需要特殊处理。
-
-这些本地化内容以 [gettext](https://www.gnu.org/software/gettext/) 格式存储在 [Yari](https://github.com/mdn/yari/tree/main/markdown/localizations) 的 JSON 文件中。请参考这些文件以确定应使用什么字符串来表示特定语言环境的“备注：”和“警告：”。如果未定义区域设置文件，将自动回退到英文版本。
-
-例如，如果我们想在德语中使用“Warnung”来表示“警告”，那么我们在德语页面应该写：
-
-```md
-> **Warnung:** So schreibt man eine Warnung.
-```
-
-这会产生：
-
-```html
-<div class="notecard warning">
-  <p><strong>Warnung:</strong> So schreibt man eine Warnung.</p>
-</div>
-```
 
 #### 包含代码块的备注
 
 这是一个包含代码块的例子。
 
 ````md
-> **备注：** 这是编写备注的方式。
+> [!NOTE]
+> 这是编写备注的方式。
 >
 > 它可以包含代码块。
 >
@@ -300,7 +291,7 @@ const greeting = "这是一个错误示例";
 
 ```html
 <div class="notecard note">
-  <p><strong>备注：</strong> 这是编写备注的方式。</p>
+  <p><strong>备注：</strong>这是编写备注的方式。</p>
   <p>它可以包含代码块。</p>
   <pre class="brush: js">const s = "我在代码块中";</pre>
   <p>就像这样。</p>
@@ -309,7 +300,8 @@ const greeting = "这是一个错误示例";
 
 HTML 将渲染为包含代码块的框：
 
-> **备注：** 这是编写备注的方式。
+> [!NOTE]
+> 这是编写备注的方式。
 >
 > 它可以包含代码块。
 >
@@ -482,7 +474,7 @@ GFM 表格语法的主要限制是：
 
 #### GFM 表格最大宽度
 
-有时，即使可以使用 GFM 编写表格，也应该使用 HTML。因为 GFM 使用“ASCII art”来实现表格，当表格的一行变得过长时，将变得难以阅读。例如，考虑以下表格：
+有时，即使可以使用 GFM 编写表格，也应该使用 HTML。因为 GFM 使用“{{Glossary("ASCII")}} art”来实现表格，当表格的一行变得过长时，将变得难以阅读。例如，考虑以下表格：
 
 ```html
 <table>

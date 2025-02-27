@@ -36,10 +36,6 @@ d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
 // Now: <div id="div1" width="200px" />
 ```
 
-## メモ
-
-{{ DOMAttributeMethods() }}
-
 ## 仕様書
 
 {{Specifications}}

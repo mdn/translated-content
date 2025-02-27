@@ -29,7 +29,8 @@ p.catch(function(motivo) {
 
 Internamente chamamos `Promise.prototype.then` sobre o objeto que é chamando passando parâmetros como `undefined` e `onRejected` no manipulador de eventos. Então retornamos o valor da chamada que é {{jsxref("Promise")}}.
 
-> **Aviso:** O exemplo abaixo está cuspindo uma string. Isso é considerado uma má prática. Sempre cuspir uma instance de erro (Error). Em todo caso, a parte que faz a captura deve fazer verificaçoes sobre os argumentos para saber se é uma string ou um erro e você poderá perder informações valiosas como stack traces.
+> [!WARNING]
+> O exemplo abaixo está cuspindo uma string. Isso é considerado uma má prática. Sempre cuspir uma instance de erro (Error). Em todo caso, a parte que faz a captura deve fazer verificaçoes sobre os argumentos para saber se é uma string ou um erro e você poderá perder informações valiosas como stack traces.
 
 **Demonstração de uma camada interna:**
 
@@ -114,14 +115,11 @@ p1.then(function (value) {
 
 ## Especificações
 
-| Especificação                                                                      | Status               | Comentário                              |
-| ---------------------------------------------------------------------------------- | -------------------- | --------------------------------------- |
-| {{SpecName('ES6', '#sec-promise.prototype.catch', 'Promise.prototype.catch')}}     | {{Spec2('ES6')}}     | Initial definition in an ECMA standard. |
-| {{SpecName('ESDraft', '#sec-promise.prototype.catch', 'Promise.prototype.catch')}} | {{Spec2('ESDraft')}} |                                         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Promise.catch")}}
+{{Compat}}
 
 ## Veja também
 

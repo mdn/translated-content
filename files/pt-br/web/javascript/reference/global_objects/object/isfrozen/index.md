@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 
 O método **`Object.isFrozen()`** determina se um objeto está {{jsxref("Object.freeze()", "frozen", "", 1)}}.
 
-{{EmbedInteractiveExample("pages/js/object-isfrozen.html")}}
+{{InteractiveExample("JavaScript Demo: Object.isFrozen()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+console.log(Object.isFrozen(object1));
+// Expected output: false
+
+Object.freeze(object1);
+
+console.log(Object.isFrozen(object1));
+// Expected output: true
+```
 
 ## Sintaxe
 
@@ -130,17 +144,13 @@ Object.isFrozen(1);
 // true                          (ES2015 code)
 ```
 
-## Specifications
+## Especificações
 
-| Specification                                                      | Status               | Comment                                              |
-| ------------------------------------------------------------------ | -------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.12', 'Object.isFrozen')}}         | {{Spec2('ES5.1')}}   | Initial definition. Implemented in JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.isfrozen', 'Object.isFrozen')}}     | {{Spec2('ES6')}}     |                                                      |
-| {{SpecName('ESDraft', '#sec-object.isfrozen', 'Object.isFrozen')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.isFrozen")}}
+{{Compat}}
 
 ## Veja também
 

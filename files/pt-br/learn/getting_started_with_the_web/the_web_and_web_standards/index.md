@@ -65,7 +65,7 @@ Provavelmente, você está lendo essas palavras dentro de um navegador da Web ne
 
 ### HTTP
 
-O protocolo de transferência de hipertexto, ou [HTTP](/pt-BR/docs/Web/HTTP/Basics_of_HTTP) , é um protocolo de mensagens que permite aos navegadores da web se comunicarem com os servidores da web (onde os sites da web são armazenados). Uma conversa típica é algo como
+O protocolo de transferência de hipertexto, ou [HTTP](/pt-BR/docs/conflicting/Web/HTTP) , é um protocolo de mensagens que permite aos navegadores da web se comunicarem com os servidores da web (onde os sites da web são armazenados). Uma conversa típica é algo como
 
 ```
 "Hello web server. Can you give me the files I need to render bbc.co.uk"?
@@ -116,7 +116,7 @@ A sintaxe real para mensagens HTTP (chamadas de solicitações e respostas) não
 
 Depois de aprender as tecnologias "brutas" que podem ser usadas para construir páginas da web (como HTML, CSS e JavaScript), você logo começará a encontrar várias ferramentas que podem ser usadas para tornar seu trabalho mais fácil ou mais eficiente. Exemplos incluem:
 
-- As [ferramentas de desenvolvedor](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) dentro de navegadores modernos que podem ser usadas para depurar seu código.
+- As [ferramentas de desenvolvedor](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) dentro de navegadores modernos que podem ser usadas para depurar seu código.
 - [Ferramentas de teste](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing) que podem ser usadas para executar testes para mostrar se o seu código está se comportando como você deseja.
 - Bibliotecas e estruturas construídas com base em JavaScript que permitem a você construir certos tipos de site da Web com muito mais rapidez e eficácia.
 - Os chamados "Linters", que pegam um conjunto de regras, olham para o seu código e destacam os lugares onde você não seguiu as regras corretamente.
@@ -155,4 +155,4 @@ Você encontrará os conceitos abaixo em algum momento de seus estudos.
 ## Veja também
 
 - [História da World Wide Web](https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web)
-- [Como funciona a internet?](/pt-BR/docs/Learn/Common_questions/How_does_the_Internet_work)
+- [Como funciona a internet?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)

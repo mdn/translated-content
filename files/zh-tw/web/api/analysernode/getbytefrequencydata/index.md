@@ -24,7 +24,7 @@ analyser.getByteFrequencyData(dataArray); // 將 getByteFrequencyData() 回傳�
 
 ## 範例
 
-下面的範例顯示出 {{domxref("AudioContext")}} 用於建立一個 `AnalyserNode` 的基本用法，然後 {{domxref("window.requestAnimationFrame()", "requestAnimationFrame")}} 以及 {{htmlelement("canvas")}} 用來重複收集當前聲音輸入的頻率資料並在 "winamp bargraph style" 畫出輸出。若要知道更完整的範例或是資訊，請參考 [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/) demo （看 [app.js 第 128–205 行](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) 會有相關的程式碼）。
+下面的範例顯示出 {{domxref("AudioContext")}} 用於建立一個 `AnalyserNode` 的基本用法，然後 {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame")}} 以及 {{htmlelement("canvas")}} 用來重複收集當前聲音輸入的頻率資料並在 "winamp bargraph style" 畫出輸出。若要知道更完整的範例或是資訊，請參考 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo （看 [app.js 第 128–205 行](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) 會有相關的程式碼）。
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -79,4 +79,4 @@ draw();
 
 ## 參看
 
-- [使用 Web Audio API](/zh-TW/docs/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web Audio API](/zh-TW/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

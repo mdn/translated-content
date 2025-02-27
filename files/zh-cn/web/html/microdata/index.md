@@ -18,7 +18,8 @@ slug: Web/HTML/Microdata
 
 谷歌和其他主要搜索引擎支持结构化数据的 [Schema.org](schema.org) 词汇表。此词汇表定义了一组标准类型名称和属性名称，例如，[Schema.org Music Event](https://schema.org/MusicEvent) 表示音乐会表演，[`startDate`](https://schema.org/startDate) 和 [`location`](https://schema.org/location) 属性用于指定音乐会的关键细节。在这种情况下，[Schema.org Music Event](https://schema.org/MusicEvent) 将是 `itemtype` 和 `startDate` 使用的 URL，而 `location` 将是 [Schema.org Music Event](https://schema.org/MusicEvent) 定义的 `itemprop`。
 
-> **备注：** 有关 itemtype 属性的更多信息，请访问 <https://schema.org/Thing>。
+> [!NOTE]
+> 有关 itemtype 属性的更多信息，请访问 <https://schema.org/Thing>。
 
 微数据词汇表提供了 _`Item`_ 的语义或含义。Web 开发人员可以设计自定义词汇表或使用 Web 上可用的词汇表，例如广泛使用的 [schema.org](https://schema.org) 词汇表。Schema.org 提供了一组常用的标记词汇表。
 
@@ -146,7 +147,8 @@ slug: Web/HTML/Microdata
 
 {{ EmbedLiveSample('示例', '', '100') }}
 
-> **备注：** 从 HTML 中提取微数据结构的便捷工具是 Google 的[架构标记测试工具](https://developers.google.com/structured-data/testing-tool/)。在上面显示的 HTML 上尝试一下。
+> [!NOTE]
+> 从 HTML 中提取微数据结构的便捷工具是 Google 的[结构化数据测试工具](https://developers.google.cn/search/docs/appearance/structured-data)。在上面显示的 HTML 上尝试一下。
 
 ## 浏览器兼容性
 

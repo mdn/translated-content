@@ -35,7 +35,7 @@ Proxy-Authenticate: <type> realm=<realm>
 ## ディレクティブ
 
 - \<type>
-  - : [認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)。 一般的なタイプは ["Basic"](/ja/docs/Web/HTTP/Authentication#basic_認証方式) です。 IANA は[認証方式のリスト](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)を管理しています。
+  - : [認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)。 一般的なタイプは ["Basic"](/ja/docs/Web/HTTP/Authentication#basic_認証方式) です。 IANA は[認証方式のリスト](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)を管理しています。
 - realm=\<realm>
   - : 保護された領域、つまり realm の詳細。 realm が指定されていない場合、クライアントはふつう代わりに整形されたホスト名を表示します。
 
@@ -56,7 +56,7 @@ Proxy-Authenticate: Basic realm="Access to the internal site"
 
 ## ブラウザーの対応
 
-{{Compat("http.headers.Proxy-Authenticate")}}
+{{Compat}}
 
 ## 関連情報
 

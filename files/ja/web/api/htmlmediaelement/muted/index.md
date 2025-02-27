@@ -1,8 +1,9 @@
 ---
-title: HTMLMediaElement.muted
+title: "HTMLMediaElement: muted プロパティ"
+short-title: muted
 slug: Web/API/HTMLMediaElement/muted
 l10n:
-  sourceCommit: 5e10a2aab4ec9ecbcf8cf79f589f9b7ece88ef60
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -30,6 +31,6 @@ console.log(obj.muted); // false
 
 ## 関連情報
 
-- 定義している {{domxref("HTMLMediaElement")}} インターフェイス
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.muted` プロパティを定義しているインターフェイス
 - {{domxref("HTMLMediaElement.defaultMuted")}}
 - {{domxref("HTMLMediaElement.volume")}}

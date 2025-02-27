@@ -3,11 +3,11 @@ title: webRequest.SecurityInfo
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/SecurityInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Objet décrivant les propriétés de sécurité d'une requête Web particulière. Un objet de ce type est retourné depuis l'API {{WebExtAPIRef("webRequest.getSecurityInfo()")}}.
 
-Si la requête n'est pas sécurisée par [TLS](/fr/docs/Glossaire/TLS), alors cet objet ne contiendra que l'état de la propriété `state`, dont la valeur sera `"insecure"`.
+Si la requête n'est pas sécurisée par [TLS](/fr/docs/Glossary/TLS), alors cet objet ne contiendra que l'état de la propriété `state`, dont la valeur sera `"insecure"`.
 
 ## Type
 
@@ -37,9 +37,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
     Note though that at present you can only call `getSecurityInfo()` in the `onHeaderReceived` listener, and the `onHeaderReceived` event is not fired when the handshake fails. So in practice this will never be set.
 
 - `hpkp` {{optional_inline}}
-  - : `Boolean`. `true` si l'hôte utilise [Public Key Pinning](/fr/docs/Web/Security/Public_Key_Pinning), sinon `false`.
+  - : `Boolean`. `true` si l'hôte utilise [Public Key Pinning](/fr/docs/Web/Security/Certificate_Transparency), sinon `false`.
 - `hsts` {{optional_inline}}
-  - : `Boolean`. `true` si l'hôte utilise [Strict Transport Security](/fr/docs/Sécurité/HTTP_Strict_Transport_Security), sinon `false`.
+  - : `Boolean`. `true` si l'hôte utilise [Strict Transport Security](/fr/docs/Glossary/HSTS), sinon `false`.
 - `isDomainMismatch` {{optional_inline}}
   - : `Boolean`. `true` si le nom de domaine du serveur ne correspond pas au nom de domaine dans son certificat, sinon `false`.
 - `isExtendedValidation` {{optional_inline}}

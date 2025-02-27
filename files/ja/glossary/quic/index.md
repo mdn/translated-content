@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
 ---
 
+{{GlossarySidebar}}
+
 **QUIC** は、UDP で実装された多重化トランスポートプロトコルです。HTTP/3 のトランスポート層として {{Glossary("TCP")}} の代わりに使用されます。
 
 QUIC は、HTTP 接続のセットアップの迅速化と遅延の低減を提供するために設計されました。具体的には、以下の通りです。

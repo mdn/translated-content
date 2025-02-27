@@ -1,53 +1,23 @@
 ---
-title: <slot>
+title: <slot>：Web 组件插槽元素
 slug: Web/HTML/Element/slot
+l10n:
+  sourceCommit: f47d71927e4dc46f3aabde0a56c7f940da988d9f
 ---
 
 {{HTMLSidebar}}
 
-> **备注：** 本翻译的一些术语参考了[Vuejs-中文](https://cn.vuejs.org/v2/guide/components-slots.html)页面。
-
-**HTML `<slot>` 元素**，作为 [Web Component](/zh-CN/docs/Web/API/Web_components) 技术套件的一部分，是 Web 组件内的一个占位符。该占位符可以在后期使用自己的标记语言填充，这样你就可以创建单独的 DOM 树，并将它与其他的组件组合在一起。
-
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Transparent_content_model">Transparent</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Events</th>
-   <td>{{domxref("HTMLSlotElement/slotchange_event", "slotchange")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLSlotElement")}}</td>
-  </tr>
- </tbody>
-</table>
+**`<slot>`** [HTML](/zh-CN/docs/Web/HTML) 元素是——[Web 组件](/zh-CN/docs/Web/API/Web_components)技术套件的一部分——它是一个在 web 组件内部的占位符，你可以使用自己的标记来填充该占位符，从而创建单独的 DOM 树并将其一起呈现。
 
 ## 属性
 
-此元素有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `name`
-  - : 插槽的名字。拥有 name 属性的插槽叫**具名插槽**。
+
+  - : 插槽名称。
+
+    **具名插槽**是具有 `name` 属性的 `<slot>` 元素。
 
 ## 示例
 
@@ -81,21 +51,83 @@ slug: Web/HTML/Element/slot
   </style>
   <details>
     <summary>
-      <code class="name"
-        >&lt;<slot name="element-name">NEED NAME</slot>&gt;</code
-      >
-      <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
+      <code class="name">
+        &lt;<slot name="element-name">需要名称</slot>&gt;
+      </code>
+      <span class="desc"><slot name="description">需要描述</slot></span>
     </summary>
     <div class="attributes">
-      <h4>Attributes</h4>
-      <slot name="attributes"><p>None</p></slot>
+      <h4>属性</h4>
+      <slot name="attributes"><p>无</p></slot>
     </div>
   </details>
   <hr />
 </template>
 ```
 
-> **备注：** 你可以在 [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (see it [running live](https://mdn.github.io/web-components-examples/element-details/)) 找到这个示例的完整演示版。另外，你也可以在[Using templates and slots](/zh-CN/docs/Web/API/Web_components/Using_templates_and_slots)这里找到具体的解释。
+> [!NOTE]
+> 你可以在 [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details)（参见[在线演示](https://mdn.github.io/web-components-examples/element-details/)）查看完整示例。此外，你还可以在[使用模板和插槽](/zh-CN/docs/Web/API/Web_components/Using_templates_and_slots)找到相关解释。
+
+## 技术概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+          >内容分类</a
+        >
+      </th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#透明内容模型"
+          >透明内容</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">事件</th>
+      <td>{{domxref("HTMLSlotElement/slotchange_event", "slotchange")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>
+        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >的元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐含的 ARIA 角色</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >没有对应的角色</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>没有允许的 <code>role</code></td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLSlotElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 规范
 
@@ -104,3 +136,11 @@ slug: Web/HTML/Element/slot
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- HTML {{HTMLElement("template")}} 元素
+- HTML [`slot`](/zh-CN/docs/Web/HTML/Global_attributes/slot) 属性
+- CSS {{CSSXref("::slotted")}} 伪元素
+- CSS {{cssxref(":has-slotted")}} 伪类
+- [CSS 域](/zh-CN/docs/Web/CSS/CSS_scoping)模块

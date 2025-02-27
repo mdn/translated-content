@@ -50,7 +50,7 @@ Content-Type: text/html
 
 A informação exibida acima está sendo servida do MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.451")}}
+{{Compat}}
 
 ## Veja também
 

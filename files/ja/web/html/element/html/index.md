@@ -58,8 +58,6 @@ l10n:
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- `manifest` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : ローカルにキャッシュされるべきリソースを示すリソースマニフェストの {{glossary("URI")}} を指定します。
 - `version` {{deprecated_inline}}
   - : 現在の文書を管理する HTML の{{glossary("Doctype", "文書型定義")}}のバージョンを指定します。文書型宣言のバージョン情報と重複しているため、この属性は必須ではありません。
 - `xmlns`

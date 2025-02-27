@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Statements/let
 
 **`let`**用於宣告一個「只作用在當前區塊的變數」，初始值可選擇性的設定。
 
-{{EmbedInteractiveExample("pages/js/statement-let.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Let")}}
+
+```js interactive-example
+let x = 1;
+
+if (x === 1) {
+  let x = 2;
+
+  console.log(x);
+  // Expected output: 2
+}
+
+console.log(x);
+// Expected output: 1
+```
 
 ## 語法
 
@@ -113,7 +127,7 @@ if (x) {
 }
 ```
 
-In ECMAScript 2015, **`let`** bindings are not subject to **Variable Hoisting**, which means that **`let`** declarations do not move to the top of the current execution context. Referencing the variable in the block before the initialization results in a [`ReferenceError`](/zh-TW/docs/JavaScript/Reference/Global_Objects/ReferenceError) (contrary to a variable declared with [var](/zh-TW/docs/Web/JavaScript/Reference/Statements/var#var_hoisting), which will just have the undefined value). The variable is in a "temporal dead zone" from the start of the block until the initialization is processed.
+In ECMAScript 2015, **`let`** bindings are not subject to **Variable Hoisting**, which means that **`let`** declarations do not move to the top of the current execution context. Referencing the variable in the block before the initialization results in a [`ReferenceError`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError) (contrary to a variable declared with [var](/zh-TW/docs/Web/JavaScript/Reference/Statements/var#var_hoisting), which will just have the undefined value). The variable is in a "temporal dead zone" from the start of the block until the initialization is processed.
 
 ```js
 function do_something() {
@@ -122,7 +136,7 @@ function do_something() {
 }
 ```
 
-你可能會在 [`switch`](/zh-TW/docs/JavaScript/Reference/Statements/switch) 中遇到錯誤，因為所有的 `case` 都屬於同樣的區塊中。
+你可能會在 [`switch`](/zh-TW/docs/Web/JavaScript/Reference/Statements/switch) 中遇到錯誤，因為所有的 `case` 都屬於同樣的區塊中。
 
 ```js
 switch (x) {

@@ -44,7 +44,7 @@ visibility: unset;
 
 ## アクセシビリティの考慮
 
-要素の `visibility` の値に `hidden` を使用すると、 [アクセシビリティツリー](/ja/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs)から削除されます。これは要素及びその子孫要素が読み上げ技術でアナウンスされない結果になります。
+要素の `visibility` の値に `hidden` を使用すると、 [アクセシビリティツリー](/ja/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)から削除されます。これは要素及びその子孫要素が読み上げ技術でアナウンスされない結果になります。
 
 ## 補間
 
@@ -90,7 +90,7 @@ visibility の値は*可視*及び*不可視*の間で補間可能です。従�
 }
 ```
 
-{{EmbedLiveSample('Basic_example')}}
+{{EmbedLiveSample('基本的な例')}}
 
 ### 表の例
 
@@ -132,7 +132,7 @@ td {
 }
 ```
 
-{{EmbedLiveSample('Table_example')}}
+{{EmbedLiveSample('表の例')}}
 
 ## 仕様書
 
@@ -140,7 +140,7 @@ td {
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.visibility")}}
+{{Compat}}
 
 ## 関連情報
 

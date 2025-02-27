@@ -7,6 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/supportedLocalesO
 
 **`Intl.PluralRules.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールのうち、代替する必要なく複数形の書式で対応されているものが入った配列を返します。
 
+{{InteractiveExample("JavaScript Demo: Intl.PluralRules.supportedLocalesOf")}}
+
+```js interactive-example
+const locales = ["en-US", "ban", "ar-OM", "de-DE"];
+const options = { localeMatcher: "lookup" };
+
+console.log(Intl.PluralRules.supportedLocalesOf(locales, options));
+// Expected output: Array ["en-US", "ar-OM", "de-DE"]
+```
+
 ## 構文
 
 ```js

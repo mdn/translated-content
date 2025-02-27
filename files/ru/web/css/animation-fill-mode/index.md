@@ -7,13 +7,14 @@ slug: Web/CSS/animation-fill-mode
 
 ## Описание
 
-[CSS](/en/CSS) свойство **`animation-fill-mode`** определяет, как нужно применять стили к объекту анимации до и после её выполнения.
+[CSS](/en-US/CSS) свойство **`animation-fill-mode`** определяет, как нужно применять стили к объекту анимации до и после её выполнения.
 
 {{cssinfo}}
 
 ## Синтаксис
 
 ```css
+/* Ключевые слова */
 animation-fill-mode: none;
 animation-fill-mode: forwards;
 animation-fill-mode: backwards;
@@ -30,19 +31,27 @@ animation-fill-mode: both, forwards, none;
 - `none`
   - : Стили анимации не будут применены к элементу до и после её выполнения.
 - `forwards`
-  - | : По окончании анимации элемент сохранит стили последнего ключевого кадра, который определяется значениями {{cssxref("animation-direction")}} и {{cssxref("animation-iteration-count")}}: | `animation-direction` | `animation-iteration-count` | последний ключевой кадр |
-    | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | --------------------------- | ----------------------- |
-    | `normal`                                                                                                                                                                                  | любое                 | `100%` или `to`             |
-    | `reverse`                                                                                                                                                                                 | любое                 | `0%` или `from`             |
-    | `alternate`                                                                                                                                                                               | чётное                | `0%` или `from`             |
-    | `alternate`                                                                                                                                                                               | нечётное              | `100%` или `to`             |
-    | `alternate-reverse`                                                                                                                                                                       | чётное                | `100%` или `to`             |
-    | `alternate-reverse`                                                                                                                                                                       | нечётное              | `0%` или `from`             |
+
+  - : По окончании анимации элемент сохранит стили последнего ключевого кадра, который определяется значениями {{cssxref("animation-direction")}} и {{cssxref("animation-iteration-count")}}:
+
+    | `animation-direction` | `animation-iteration-count` | последний ключевой кадр |
+    | --------------------- | --------------------------- | ----------------------- |
+    | `normal`              | любое                       | `100%` или `to`         |
+    | `reverse`             | любое                       | `0%` или `from`         |
+    | `alternate`           | чётное                      | `0%` или `from`         |
+    | `alternate`           | нечётное                    | `100%` или `to`         |
+    | `alternate-reverse`   | чётное                      | `100%` или `to`         |
+    | `alternate-reverse`   | нечётное                    | `0%` или `from`         |
+
 - `backwards`
-  - | : Элемент сохранит стиль первого [ключевого кадра](/ru/docs/CSS/@keyframes) на протяжении периода {{cssxref("animation-delay")}}. Первый ключевой кадр определяется значением {{cssxref("animation-direction")}}: | `animation-direction` | первый ключевой кадр |
-    | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | -------------------- |
-    | `normal` или `alternate`                                                                                                                                                                                          | `0%` или `from`       |
-    | `reverse` или `alternate-reverse`                                                                                                                                                                                 | `100%` или `to`       |
+
+  - : Элемент сохранит стиль первого [ключевого кадра](/ru/docs/Web/CSS/@keyframes) на протяжении периода {{cssxref("animation-delay")}}. Первый ключевой кадр определяется значением {{cssxref("animation-direction")}}:
+
+    | `animation-direction`             | первый ключевой кадр |
+    | --------------------------------- | -------------------- |
+    | `normal` или `alternate`          | `0%` или `from`      |
+    | `reverse` или `alternate-reverse` | `100%` или `to`      |
+
 - `both`
   - : Анимация будет вести себя так, как будто значения forwards и backwards заданы одновременно.
 
@@ -116,5 +125,5 @@ animation-fill-mode: both, forwards, none;
 
 ## Смотрите также
 
-- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

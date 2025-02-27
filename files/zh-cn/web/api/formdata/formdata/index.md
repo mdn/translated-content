@@ -3,11 +3,9 @@ title: FormData()
 slug: Web/API/FormData/FormData
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
 **`FormData()`** 构造函数用于创建一个新的{{domxref("FormData")}}对象。
-
-> **备注：** 该功能在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 中可用。
 
 ## 语法
 
@@ -54,7 +52,8 @@ formData.append("username", "Chris");
 </form>
 ```
 
-> **备注：** 所有的输入元素都需要有 **name** 属性，否则无法访问到值。
+> [!NOTE]
+> 所有的输入元素都需要有 **name** 属性，否则无法访问到值。
 
 ```js
 var myForm = document.getElementById("myForm");
@@ -73,9 +72,7 @@ formData = new FormData(myForm);
 
 在 Gecko 7.0 之前，如果你将{{domxref("Blob")}}作为数据添加到 form 对象中，文件名就是空的，这可能导致服务器在 HTTP 头的 Content-Disposition 中设置的文件名为空而引起错误。从 Gecko 7.0 开始，将会使用"blob"作为 Blob 数据的文件名。
 
-## 相关链接
+## 参见
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

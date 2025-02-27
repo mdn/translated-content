@@ -13,16 +13,6 @@ slug: Web/SVG/Element/feBlend
 
 ## Атрибуты
 
-### Глобальные атрибуты
-
-- [Core attributes](/ru/docs/Web/SVG/Attribute#Core_attributes)
-- [Presentation attributes](/ru/docs/Web/SVG/Attribute#Presentation_attributes)
-- [Filter primitive attributes](/ru/docs/Web/SVG/Attribute#Filter_primitive_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Специальные атрибуты
-
 - {{SVGAttr("in")}}
 - {{SVGAttr("in2")}}
 - {{SVGAttr("mode")}}
@@ -73,7 +63,7 @@ slug: Web/SVG/Element/feBlend
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -7,9 +7,25 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`for await...of`** 文は、[非同期反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)を、[同期反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)と同様に反復処理するループを作成します。この文は. [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await)　が使用できるコンテキスト、例えば[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)の本体や[モジュール](/ja/docs/Web/JavaScript/Guide/Modules)内などでのみ使用できます。
+**`for await...of`** 文は、[非同期反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)を、[同期反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)と同様に反復処理するループを作成します。この文は [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) が使用できるコンテキスト、例えば[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)の本体や[モジュール](/ja/docs/Web/JavaScript/Guide/Modules)内などでのみ使用できます。
 
-{{EmbedInteractiveExample("pages/js/statement-forawaitof.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Statement - For Await...Of", "taller")}}
+
+```js interactive-example
+async function* foo() {
+  yield 1;
+  yield 2;
+}
+
+(async function () {
+  for await (const num of foo()) {
+    console.log(num);
+    // Expected output: 1
+
+    break; // Closes iterator, triggers return
+  }
+})();
+```
 
 ## 構文
 
@@ -167,7 +183,8 @@ for (const numOrPromise of generator()) {
 // 4
 ```
 
-> **メモ:** 同期のジェネレーターから拒否されたプロミスが生み出される場合があることに注意してください。このような場合、 `for await...of` は拒否されたプロミスを消費するので、ジェネレーター内の `finally` ブロックが呼び出されません。これは、確保したリソースを `try/finally` で解放する必要がある場合は望ましくない動作になる可能性があります。
+> [!NOTE]
+> 同期のジェネレーターから拒否されたプロミスが生み出される場合があることに注意してください。このような場合、 `for await...of` は拒否されたプロミスを消費するので、ジェネレーター内の `finally` ブロックが呼び出されません。これは、確保したリソースを `try/finally` で解放する必要がある場合は望ましくない動作になる可能性があります。
 
 ```js
 function* generatorWithRejectedPromises() {

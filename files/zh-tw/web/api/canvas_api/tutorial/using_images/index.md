@@ -27,7 +27,7 @@ slug: Web/API/Canvas_API/Tutorial/Using_images
 - {{domxref("ImageBitmap")}}
   - : 可以被快速渲染的點陣圖(bitmap)，點陣圖能由上述所有來源產生.
 
-這些來源統一參照 [CanvasImageSource](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#image-sources-for-2d-rendering-contexts)型態.
+這些來源統一參照 [CanvasImageSource](https://html.spec.whatwg.org/multipage/canvas.html#image-sources-for-2d-rendering-contexts) 型態。
 
 有好幾種方法能夠取得影像用於畫布.
 
@@ -41,7 +41,7 @@ slug: Web/API/Canvas_API/Tutorial/Using_images
 
 ### 使用來自其他網域的影像
 
-Using the [`crossOrigin`](/zh-TW/docs/HTML/CORS_settings_attributes) attribute on an 透過{{HTMLElement("HTMLImageElement")}}的[`crossOrigin`](/zh-TW/docs/HTML/CORS_settings_attributes)屬性, 我們可以要求從另一個網域載入影像來使用，若是寄存網域(thehosting domain)准許跨網路存取該影像，那麼我們便可以使用它而不用污染(taint)我們的畫布，反之，使用該影像會污染畫布([taint the canvas](/zh-TW/docs/HTML/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F))。
+Using the [`crossOrigin`](/zh-TW/docs/Web/HTML/Attributes/crossorigin) attribute on an 透過{{HTMLElement("HTMLImageElement")}}的[`crossOrigin`](/zh-TW/docs/Web/HTML/Attributes/crossorigin)屬性, 我們可以要求從另一個網域載入影像來使用，若是寄存網域(thehosting domain)准許跨網路存取該影像，那麼我們便可以使用它而不用污染(taint)我們的畫布，反之，使用該影像會污染畫布([taint the canvas](/zh-TW/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f))。
 
 ### 使用其他畫布元素
 
@@ -74,11 +74,11 @@ img.addEventListener(
 img.src = "myImage.png"; // Set source path
 ```
 
-若是只要載入一份影像，可以用上面的方法，不過當需要載入、追蹤多個影像時，我們就需要更好的方法了，雖然管理多個影像載入已經超出本教學的範疇，然而如果有興趣的話，可以參考[JavaScript Image Preloader](http://www.webreference.com/programming/javascript/gr/column3/)這份文件.
+若是只要載入一份影像，可以用上面的方法，不過當需要載入、追蹤多個影像時，我們就需要更好的方法了，雖然管理多個影像載入已經超出本教學的範疇，然而如果有興趣的話，可以參考[JavaScript Image Preloader](https://webreference.com/javascript/)這份文件。
 
 ### 以 data:URL 嵌入影像
 
-另一個載入影像的方法是利用[data: url](/zh-TW/docs/data_URIs)，透過 data URL 可以直接將影像定義成 Base64 編碼的字串，然後嵌入程式碼之中.
+另一個載入影像的方法是利用 [data: url](/zh-TW/docs/Web/URI/Reference/Schemes/data)，透過 data URL 可以直接將影像定義成 Base64 編碼的字串，然後嵌入程式碼之中.
 
 ```js
 var img_src =
@@ -105,7 +105,7 @@ function getMyVideo() {
 ```
 
 上面的方法會回傳一個{{domxref("HTMLVideoElement")}}的影像物件，如前所述，這個物件可以被視為 CanvasImageSource 類別的物件來使用。
-關於如何利用\<video>元素於畫布上的進階說明，可以參考 html5Doctor 的「[video + canvas = magic](http://html5doctor.com/video-canvas-magic/)」一文.
+關於如何利用\<video>元素於畫布上的進階說明，可以參考 html5Doctor 的「[video + canvas = magic](https://html5doctor.com/video-canvas-magic/)」一文.
 
 ## 影像繪圖
 
@@ -119,8 +119,8 @@ function getMyVideo() {
 這個範例會使用外部影像作為一個小型線圖的背景。利用預先劃好的圖作為背景的話就不用再靠程式來產生背景，如此一來可以顯著地減少程式碼。下面藉由影像物件的 load 事件處理器來處理繪圖作業，其中 drawImage()方法把背景圖片放置在畫布左上角，座標點(0, 0)位置.
 
 ```html hidden
-<html>
-  <body onload="draw();">
+<html lang="zh">
+  <body>
     <canvas id="canvas" width="180" height="150"></canvas>
   </body>
 </html>
@@ -128,9 +128,9 @@ function getMyVideo() {
 
 ```js
 function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
-  var img = new Image();
-  img.onload = function () {
+  const ctx = document.getElementById("canvas").getContext("2d");
+  const img = new Image();
+  img.onload = () => {
     ctx.drawImage(img, 0, 0);
     ctx.beginPath();
     ctx.moveTo(30, 96);
@@ -143,9 +143,13 @@ function draw() {
 }
 ```
 
+```js
+draw();
+```
+
 結果如下:
 
-{{EmbedLiveSample("範例: 一條簡單的線段影像", 220, 160, "canvas_backdrop.png")}}
+{{EmbedLiveSample("範例: 一條簡單的線段影像", "", 160)}}
 
 ## 縮放
 
@@ -158,11 +162,12 @@ drawImage()的第二個型態增加了兩個新參數，讓我們在畫布上放
 
 本例我們會取一張影像作為桌布，然後透過簡單的迴圈來重複縮放、貼上影像於畫布上。在程式碼中，第一個迴圈走一遍每一列，第二個迴圈走一遍每一行，影像則縮小成原始影像的三分之一，50 x 38 像素.
 
-> **備註：** 過度縮放影像可能會造成影像模糊或產生顆粒感，所以如果影像中有文字需要閱讀，最好不要縮放影像.
+> [!NOTE]
+> 過度縮放影像可能會造成影像模糊或產生顆粒感，所以如果影像中有文字需要閱讀，最好不要縮放影像.
 
 ```html hidden
-<html>
-  <body onload="draw();">
+<html lang="zh">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
@@ -170,22 +175,24 @@ drawImage()的第二個型態增加了兩個新參數，讓我們在畫布上放
 
 ```js
 function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
-  var img = new Image();
-  img.onload = function () {
-    for (var i = 0; i < 4; i++) {
-      for (var j = 0; j < 3; j++) {
+  const ctx = document.getElementById("canvas").getContext("2d");
+  const img = new Image();
+  img.onload = () => {
+    for (let i = 0; i < 4; i++) {
+      for (let j = 0; j < 3; j++) {
         ctx.drawImage(img, j * 50, i * 38, 50, 38);
       }
     }
   };
-  img.src = "rhino.jpg";
+  img.src = "https://mdn.github.io/shared-assets/images/examples/rhino.jpg";
 }
+
+draw();
 ```
 
 結果如下:
 
-{{EmbedLiveSample("範例: 排列影像", 160, 160, "canvas_scale_image.png")}}
+{{EmbedLiveSample("範例: 排列影像", "", 160)}}
 
 ## 切割影像
 
@@ -203,23 +210,31 @@ drawImage()第三個型態接受 9 個參數，其中 8 個讓我們從原始影
 本例用和前一個範例一樣的犀牛圖，然後切出犀牛頭部影像部分再放入一個影像畫框，這個影像畫框是一個有陰影的 24 位元 PNG 圖檔，因為 24 位元 PNG 影像具備完整的 8 位元不透明色版(alpha channel)，所以不像 GIF 影像和 8 位元 PNG 影像，它能夠放任何背景之上而無須擔心產生消光色(matte color).
 
 ```html
-<html>
-  <body onload="draw();">
-    <canvas id="canvas" width="150" height="150"></canvas>
-    <div style="display:none;">
-      <img id="source" src="rhino.jpg" width="300" height="227" />
-      <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
-    </div>
-  </body>
-</html>
+<canvas id="canvas" width="150" height="150"></canvas>
+<div style="display: none;">
+  <img
+    id="source"
+    src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg"
+    width="300"
+    height="227" />
+  <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+</div>
 ```
 
 ```js
-function draw() {
-  var canvas = document.getElementById("canvas");
-  var ctx = canvas.getContext("2d");
+async function draw() {
+  // 等待所有圖片載入完畢。
+  await Promise.all(
+    Array.from(document.images).map(
+      (image) =>
+        new Promise((resolve) => image.addEventListener("load", resolve)),
+    ),
+  );
 
-  // Draw slice
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
+
+  // 繪製切割影像
   ctx.drawImage(
     document.getElementById("source"),
     33,
@@ -232,14 +247,16 @@ function draw() {
     104,
   );
 
-  // Draw frame
+  // 畫一個畫框
   ctx.drawImage(document.getElementById("frame"), 0, 0);
 }
+
+draw();
 ```
 
 這次我們不產生新的{{domxref("HTMLImageElement")}}物件，改採用直接把影像包入 HTML 的{{HTMLElement("img")}}標籤，然後再取得影像元素，其中 HTML 上的影像已經透過設定 CSS 屬性{{cssxref("display")}}為 none 來隱藏起來了.
 
-{{EmbedLiveSample("範例: 畫一個有畫框的影像", 160, 160, "canvas_drawimage2.jpg")}}
+{{EmbedLiveSample("範例: 畫一個有畫框的影像", "", 160)}}
 
 程式碼相當簡單，每個{{HTMLElement("img")}}有自己的 ID 屬性，這樣便可以利用{{domxref("document.getElementById()")}}輕易取得，之後再簡單地用 drawImage()方法切割犀牛影像然後縮放並放到畫布上，最後第二個 drawImage()再把畫框放到上面.
 
@@ -252,8 +269,8 @@ function draw() {
 從下方的程式碼範例可以很清楚看到，我們為{{domxref("document.images")}}容器內的影像，一張一張地新建畫布，其中，對於不熟悉文件物件模型 (DOM)的人來說，大慨比較值得注意之處在於使用到{{domxref("Node.insertBefore")}} 方法；insertBefore()是影像元素的父節點(亦即\<td>元素)的一個方法，這個方法會把新畫布元素插入於影像元素之前.
 
 ```html
-<html>
-  <body onload="draw();">
+<html lang="zh">
+  <body>
     <table>
       <tr>
         <td><img src="gallery_1.jpg" /></td>
@@ -298,28 +315,29 @@ td {
 
 ```js
 function draw() {
-  // Loop through all images
-  for (var i = 0; i < document.images.length; i++) {
-    // Don't add a canvas for the frame image
-    if (document.images[i].getAttribute("id") != "frame") {
-      // Create canvas element
-      canvas = document.createElement("canvas");
+  // 循環遍歷所有影像
+  for (const image of document.images) {
+    // 不要為畫框圖像添加畫布
+    if (image.getAttribute("id") !== "frame") {
+      // 建立畫布元素
+      const canvas = document.createElement("canvas");
       canvas.setAttribute("width", 132);
       canvas.setAttribute("height", 150);
 
-      // Insert before the image
-      document.images[i].parentNode.insertBefore(canvas, document.images[i]);
+      // 在影像前插入
+      image.parentNode.insertBefore(canvas, image);
 
       ctx = canvas.getContext("2d");
 
-      // Draw image to canvas
-      ctx.drawImage(document.images[i], 15, 20);
+      // 將影像繪製到畫布上
+      ctx.drawImage(image, 15, 20);
 
-      // Add frame
+      // 添加畫框
       ctx.drawImage(document.getElementById("frame"), 0, 0);
     }
   }
 }
+draw();
 ```
 
 {{EmbedLiveSample("畫廊範例", 725, 400)}}

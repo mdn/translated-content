@@ -11,7 +11,8 @@ La propriété **`Intl.Locale.prototype.numberingSystems`** est un accesseur qui
 
 Un système de numération est utilisé pour représenter les nombres. La propriété `numberingSystems` permet de connaître les différents systèmes de numération utilisés par les différents pays, les différentes régions et cultures autour du monde. Les systèmes de numération représentés par cette propriété sont standardisés avec Unicode. Un tableau des systèmes de numération Unicode suit.
 
-> **Note :** La propriété `numberingSystem` (sans S) permet de connaître le système de numération principal utilisé par une locale. Celle-ci permet d'avoir la liste des différents systèmes de numération utilisés par une locale.
+> [!NOTE]
+> La propriété `numberingSystem` (sans S) permet de connaître le système de numération principal utilisé par une locale. Celle-ci permet d'avoir la liste des différents systèmes de numération utilisés par une locale.
 
 | Valeur     | Description                                                                                             |
 | ---------- | ------------------------------------------------------------------------------------------------------- |

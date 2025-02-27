@@ -17,7 +17,8 @@ slug: Web/API/HTMLElement/innerText
 
 如果元素本身没有[被渲染](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered)（例如，从文档中分离出来或从视图中隐藏起来），返回值与 {{domxref("Node.textContent")}} 属性相同。
 
-> **警告：** 在一个节点上设置 `innerText` 会移除该节点的*所有*子节点，并用给定的字符串值的单一文本节点代替它们。
+> [!WARNING]
+> 在一个节点上设置 `innerText` 会移除该节点的*所有*子节点，并用给定的字符串值的单一文本节点代替它们。
 
 ## 示例
 

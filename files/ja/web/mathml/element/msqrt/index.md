@@ -10,7 +10,7 @@ MathML の `<msqrt>` 要素は平方根（根指数のついていない累乗�
 ## 属性
 
 - class, id, style
-  - : [CSS](/ja/docs/CSS)を用いて修飾を行なう際に使われます。
+  - : [CSS](/ja/docs/Web/CSS)を用いて修飾を行なう際に使われます。
 - href
   - : ハイパーリンクを設定する際に用いられます。
 - mathbackground
@@ -34,12 +34,12 @@ MathML の `<msqrt>` 要素は平方根（根指数のついていない累乗�
 
 ## ブラウザーの互換性
 
-{{Compat("mathml.elements.msqrt")}}
+{{Compat}}
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## See also
+## 関連情報
 
 - {{ MathMLElement("mroot") }} (Radical with an index)

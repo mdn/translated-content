@@ -3,6 +3,8 @@ title: Le fonctionnement de l'Internet
 slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Dans cet article, nous expliquons ce qu'est l'Internet et comment il fonctionne.
 
 <table class="standard-table">
@@ -43,7 +45,8 @@ L'**Internet** est l'épine dorsale du Web&nbsp;: il s'agit de l'infrastructure 
 
 Pour que deux ordinateurs puissent communiquer entre eux, ils doivent être liés soit par un lien physique (généralement par un [câble Ethernet](https://fr.wikipedia.org/wiki/Ethernet)), soit sans fil (par exemple, via [WiFi](http://fr.wikipedia.org/wiki/WiFi) ou [Bluetooth](http://fr.wikipedia.org/wiki/Bluetooth)). Tous ces types de connexions sont possibles sur les ordinateurs modernes.
 
-> **Note :** À partir de maintenant, nous ne parlerons que de connexions physiques, mais sachez que les explications ci-dessous sont tout aussi valides pour les réseaux sans fil.
+> [!NOTE]
+> À partir de maintenant, nous ne parlerons que de connexions physiques, mais sachez que les explications ci-dessous sont tout aussi valides pour les réseaux sans fil.
 
 ![Two computers linked together](internet-schema-1.png)
 
@@ -89,6 +92,6 @@ Vous aurez peut-être constaté que lorsque nous naviguons sur le Web avec un na
 
 ## Étapes suivantes
 
-- [Le fonctionnement du Web](/fr/Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web)
-- [Comprendre la différence entre une page web, un site web, un serveur web et un moteur de recherche](/fr/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
-- [Comprendre les noms de domaine](/fr/Apprendre/Comprendre_noms_de_domaine)
+- [Le fonctionnement du Web](/fr/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
+- [Comprendre la différence entre une page web, un site web, un serveur web et un moteur de recherche](/fr/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines)
+- [Comprendre les noms de domaine](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)

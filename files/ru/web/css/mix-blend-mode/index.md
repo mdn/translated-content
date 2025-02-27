@@ -47,6 +47,8 @@ mix-blend-mode: unset;
 
 ## Примеры
 
+### Влияние различных значений режима смешивания
+
 ```html hidden
 <div class="grid">
   <div class="col">
@@ -545,7 +547,8 @@ body {
 
 .container {
   position: relative;
-  background: linear-gradient(to right, #000 0%, transparent 50%, #fff 100%),
+  background:
+    linear-gradient(to right, #000 0%, transparent 50%, #fff 100%),
     linear-gradient(to bottom, #ff0 0%, #f0f 50%, #0ff 100%);
   width: 150px;
   height: 150px;
@@ -624,7 +627,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample("mix-blend-mode", "100%", 1600, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("Влияние_различных_значений_режима_смешивания", "100%", 1600)}}
 
 ### Пример HTML
 

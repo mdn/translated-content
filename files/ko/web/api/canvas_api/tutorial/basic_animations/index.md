@@ -3,7 +3,9 @@ title: 기본 애니메이션
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
 ---
 
-{{HTMLElement("canvas")}} 요소는 자바스크립트로 제어하는 것이므로, 애니메이션도 쉽게 만들 수 있습니다. 복잡한 애니메이션을 만드는 것은 추가 작업이 더 필요하고, 앞으로 그에 대한 페이지도 머지 않아 추가되기를 기대합니다.
+{{DefaultAPISidebar("Canvas API")}}
+
+{{HTMLElement("canvas")}} 요소는 JavaScript로 제어하는 것이므로, 애니메이션도 쉽게 만들 수 있습니다. 복잡한 애니메이션을 만드는 것은 추가 작업이 더 필요하고, 앞으로 그에 대한 페이지도 머지 않아 추가되기를 기대합니다.
 
 도형은 한번 만들어 놓으면 그 모습 그대로 있다는 것이 애니메이션을 만들 때의 가장 큰 제약일 것입니다. 그 도형을 움직이고자 하면 그 도형뿐만이 아니라 그 도형이 그려지기 전에 그려진 모든 것을 다시 그려야 합니다. 복잡한 장면을 다시 그리는 것은 시간도 많이 걸리며, 코드를 실행하는 컴퓨터의 능력에 따라 달라집니다.
 
@@ -30,7 +32,8 @@ slug: Web/API/Canvas_API/Tutorial/Basic_animations
 
 정해진 시간마다 특정 함수를 부를 때 사용할 수 있는 {{domxref("window.setInterval()")}}과 {{domxref("window.setTimeout()")}} 함수가 있습니다.
 
-> **참고:** 알아둘 것: 현재는 애니메이션을 만드는 방법으로 {{domxref("window.requestAnimationFrame()")}} 메소드를 추천합니다. 이에 대한 튜토리얼은 곧 업데이트할 것입니다.
+> [!NOTE]
+> 알아둘 것: 현재는 애니메이션을 만드는 방법으로 {{domxref("window.requestAnimationFrame()")}} 메소드를 추천합니다. 이에 대한 튜토리얼은 곧 업데이트할 것입니다.
 
 - `setInterval(function, delay)`
   - : `delay` 밀리세컨드(1,000분의 1초)마다 `function` 함수 반복 실행을 시작합니다.
@@ -43,7 +46,7 @@ slug: Web/API/Canvas_API/Tutorial/Basic_animations
 
 애니메이션을 제어하는 두번째 방법은 사용자 입력입니다. 게임을 만들려고 한다면, 애니메이션을 제어하기 위해 키보드나 마우스 이벤트를 사용할 수 있을 것입니다. {{domxref("EventListener")}}를 설정하여, 사용자와 상호 작용하여 애니메이션 함수를 실행합니다.
 
-사용자 상호 작용이 **필요하다면**, 우리가 만든 [애니메이션용 프레임웍(framework)](/ko/docs/JavaScript/Timers/Daemons)의 [최소 기능 버전](/ko/docs/DOM/window.setInterval#A_little_framework) 또는 [최대 기능 버전](/ko/docs/JavaScript/Timers/Daemons)을 사용할 수 있을 것입니다.
+사용자 상호 작용이 **필요하다면**, 우리가 만든 [애니메이션용 프레임웍(framework)](/ko/docs/JavaScript/Timers/Daemons)의 [최소 기능 버전](/ko/docs/Web/API/Window/setInterval#a_little_framework) 또는 [최대 기능 버전](/ko/docs/JavaScript/Timers/Daemons)을 사용할 수 있을 것입니다.
 
 ```js
 var myAnimation = new MiniDaemon(null, animateShape, 500, Infinity);
@@ -330,7 +333,7 @@ function draw() {
 <canvas id="canvas" width="800" height="200"></canvas>
 ```
 
-**Live sample**
+#### Live sample
 
 {{EmbedLiveSample("A_looping_panorama", "830", "230")}}
 
@@ -354,8 +357,8 @@ function draw() {
 ## 이것도 보세요
 
 - [JavaScript timers](/ko/docs/JavaScript/Timers)
-- [`setInterval` – A little framework](/ko/docs/DOM/window.setInterval#A_little_framework)
+- [`setInterval` – A little framework](/ko/docs/Web/API/Window/setInterval#a_little_framework)
 - [JavaScript Daemons Management](/ko/docs/JavaScript/Timers/Daemons)
-- [HTMLCanvasElement](/ko/docs/DOM/HTMLCanvasElement)
+- [HTMLCanvasElement](/ko/docs/Web/API/HTMLCanvasElement)
 
 {{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Compositing", "Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas")}}

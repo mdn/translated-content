@@ -204,7 +204,8 @@ Os desenhos e imagens SVG são criados usando uma grande variedade de elementos 
 
 ## Elementos obsoletos e descontinuados
 
-> **Aviso:** Aviso: Esses são elementos SVG antigos que foram descontinuados e não devem ser usados. Você nunca deve usá-los em novos projetos e deve susbstituí-los em projetos antigos o mais rápido possível. Eles estão listados aqui apenas para fins informativos.
+> [!WARNING]
+> Esses são elementos SVG antigos que foram descontinuados e não devem ser usados. Você nunca deve usá-los em novos projetos e deve susbstituí-los em projetos antigos o mais rápido possível. Eles estão listados aqui apenas para fins informativos.
 
 ### A
 
@@ -242,6 +243,6 @@ Os desenhos e imagens SVG são criados usando uma grande variedade de elementos 
 
 - [Referência de atributos SVG](/pt-BR/docs/Web/SVG/Attribute)
 - [SVG Tutorial](/pt-BR/docs/Web/SVG/Tutorial)
-- [SVG interface reference](/pt-BR/docs/DOM/Referencia_do_DOM#SVG_interfaces)
+- [SVG interface reference](/pt-BR/docs/Web/API/Document_Object_Model#svg_interfaces)
 
 {{SVGRef}}

@@ -40,7 +40,7 @@ Il existe trois types de <i lang="en">workers</i>&nbsp;:
 
 Dans cet article, nous allons voir un exemple décrivant le premier type, puis discuter brièvement des deux autres.
 
-## Utiliser les <i lang="en>web workers</i>
+## Utiliser les <i lang="en">web workers</i>
 
 Vous souvenez-vous du premier article où nous avions une page qui calculait les nombres premiers&nbsp;? Nous allons ici utiliser un <i lang="en">worker</i> pour calculer les nombres premiers afin que notre page reste réactive aux actions des utilisatrices et utilisateurs.
 
@@ -75,9 +75,8 @@ function generatePrimes(quota) {
 document.querySelector("#generate").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector(
-    "#output",
-  ).textContent = `Génération de ${quota} nombres premiers terminée !`;
+  document.querySelector("#output").textContent =
+    `Génération de ${quota} nombres premiers terminée !`;
 });
 
 document.querySelector("#reload").addEventListener("click", () => {
@@ -159,9 +158,8 @@ document.querySelector("#generate").addEventListener("click", () => {
 // du message, on met à jour la zone de sortie avec un texte, indiquant aussi
 // le quantité de nombres premiers générés.
 worker.addEventListener("message", (message) => {
-  document.querySelector(
-    "#output",
-  ).textContent = `Génération de ${message.data} nombres premiers terminée !`;
+  document.querySelector("#output").textContent =
+    `Génération de ${message.data} nombres premiers terminée !`;
 });
 
 document.querySelector("#reload").addEventListener("click", () => {
@@ -228,7 +226,8 @@ Le <i lang="en">worker</i> commence par écouter les messages provenant du scrip
 
 La fonction `generatePrimes()` utilise le même algorithme que la version synchrone, sauf qu'au lieu de renvoyer une valeur, nous envoyons un message au script principal lorsque le calcul est terminé. Nous utilisons la fonction [`postMessage()`](/fr/docs/Web/API/DedicatedWorkerGlobalScope/postMessage) pour cela. Comme `addEventListener()`, il s'agit d'une fonction globale dans le contexte d'un <i lang="en">worker</i>. Comme nous l'avons déjà vu, le script principal écoute ce message et mettra à jour le DOM lorsque le message sera reçu.
 
-> **Note :** Pour exécuter ce site, vous devrez exécuter un serveur web local, car les URL de type `file://` ne sont pas autorisées à charger des <i lang="en">workers</i>. Consultez notre guide pour [configurer un serveur de test local](/fr/docs/Learn/Common_questions/set_up_a_local_testing_server). Une fois que cela aura été fait, vous devriez pouvoir cliquer sur "Générer des nombres premiers" et faire en sorte que votre page principale reste réactive.
+> [!NOTE]
+> Pour exécuter ce site, vous devrez exécuter un serveur web local, car les URL de type `file://` ne sont pas autorisées à charger des <i lang="en">workers</i>. Consultez notre guide pour [configurer un serveur de test local](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server). Une fois que cela aura été fait, vous devriez pouvoir cliquer sur "Générer des nombres premiers" et faire en sorte que votre page principale reste réactive.
 >
 > Si vous rencontrez des problèmes lors de la création ou de l'exécution de l'exemple, vous pouvez voir la version finale sur <https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/finished> et l'essayer en direct sur <https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished>.
 

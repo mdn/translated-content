@@ -61,7 +61,7 @@ Caso você execute `getBaseLog(10, 1000)` será retornado `2.9999999999999996` d
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.log")}}
+{{Compat}}
 
 ## Veja também
 

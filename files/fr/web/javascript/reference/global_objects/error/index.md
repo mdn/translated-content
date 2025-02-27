@@ -40,7 +40,7 @@ En plus du constructeur `Error` générique, il existe d'autres constructeurs d'
 ## Méthodes statiques methods
 
 - [`Error.captureStackTrace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/captureStackTrace)
-  - : Une fonction non-standard implémentée par le moteur V8 qui crée la propriété [`stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack) d'une instance de `Error`.
+  - : Une fonction non-standard implémentée par le moteur V8 qui crée la propriété [`stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack) d'une instance de `Error`.
 
 ## Propriétés des instances
 
@@ -58,7 +58,7 @@ En plus du constructeur `Error` générique, il existe d'autres constructeurs d'
   - : Une propriété non-standard, implémentée par Mozilla, qui indique le numéro de la ligne du fichier à l'origine de l'erreur.
 - [`Error.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber) {{non-standard_inline}}
   - : Une propriété non-standard, implémentée par Mozilla, qui indique le numéro de la colonne de la ligne du fichier à l'origine de l'erreur.
-- [`Error.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack) {{non-standard_inline}}
+- [`Error.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack) {{non-standard_inline}}
   - : Une propriété non-standard, implémentée par Mozilla, pour fournir une trace de la pile d'appels.
 
 ## Méthodes des instances
@@ -160,9 +160,11 @@ Voir [cette question (en anglais) sur StackOverflow](https://stackoverflow.com/q
 
 #### En utilisant les classes ES2015
 
-> **Attention :** Les versions de Babel antérieures à la version 7 peuvent gérer les méthodes de classes des erreurs personnalisées uniquement lorsqu'elles sont déclarées avec [Object.defineProperty()](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Dans le cas contraire, la transpilation du code qui suit ne sera pas gérée correctement sans [configuration supplémentaire](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
+> [!WARNING]
+> Les versions de Babel antérieures à la version 7 peuvent gérer les méthodes de classes des erreurs personnalisées uniquement lorsqu'elles sont déclarées avec [Object.defineProperty()](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Dans le cas contraire, la transpilation du code qui suit ne sera pas gérée correctement sans [configuration supplémentaire](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
 
-> **Note :** Certains navigateurs incluent le constructeur `CustomError` dans la pile d'appel lorsque les classes ES2015 sont utilisées.
+> [!NOTE]
+> Certains navigateurs incluent le constructeur `CustomError` dans la pile d'appel lorsque les classes ES2015 sont utilisées.
 
 ```js
 class ErreurSpecifique extends Error {
@@ -196,7 +198,8 @@ try {
 
 #### En utilisant des objets ES5
 
-> **Attention :** Tous les navigateurs incluent le constructeur du type spécifique dans la pile d'appel lorsque la déclaration prototypale est utilisée.
+> [!WARNING]
+> Tous les navigateurs incluent le constructeur du type spécifique dans la pile d'appel lorsque la déclaration prototypale est utilisée.
 
 ```js
 function ErreurSpecifique(toto, message, fileName, lineNumber) {

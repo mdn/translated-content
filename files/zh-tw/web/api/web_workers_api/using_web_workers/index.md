@@ -1,9 +1,11 @@
 ---
-title: 使用 Web Workers
+title: 使用 Web Worker
 slug: Web/API/Web_Workers_API/Using_web_workers
 ---
 
-Web Workers 提供簡單的方法讓網頁在背景執行緒 (Thread) 中執行程式，而不干擾使用者介面運行，另外，Worker 也可以利用 [XMLHttpRequest](/zh-TW/nsIXMLHttpRequest) 執行輸出/輸入(但是 responseXML 和 channel 這兩個屬性為 null)；一個 worker 可以藉由事件處理器來和 web worker 創造端互相傳送訊息，接下來本文會提供使用 web worker 的詳細說明。
+{{DefaultAPISidebar("Web Workers API")}}
+
+Web Worker 提供簡單的方法讓網頁在背景執行緒（Thread）中執行程式，而不干擾使用者介面運行，另外，Worker 也可以利用 {{domxref("XMLHttpRequest")}} 執行輸出/輸入（但是 responseXML 和 channel 這兩個屬性為 null）；一個 worker 可以藉由事件處理器來和 web worker 創造端互相傳送訊息，接下來本文會提供使用 web worker 的詳細說明。
 
 ## Web Workers API
 
@@ -11,21 +13,22 @@ Web Workers 提供簡單的方法讓網頁在背景執行緒 (Thread) 中執行�
 
 Dedicated worker (專有 worker) 是一般 worker，只能被產生它的檔案存取，{{domxref("DedicatedWorkerGlobalScope")}} 物件代表其執行環境；而 Shared worker (共享 worker) 則能夠被不同檔案存取，{{domxref("SharedWorkerGlobalScope")}}) 物件代表其執行環境。
 
-> **備註：** worker 其他文件說明請見 [The Web Workers API landing page](/zh-TW/docs/Web/API/Web_Workers_API) 。
+> [!NOTE]
+> worker 其他文件說明請見 [The Web Workers API landing page](/zh-TW/docs/Web/API/Web_Workers_API) 。
 
-基本上 worker 能夠執行任何事情，比如說 [WebSockets](/zh-TW/docs/Web/API/WebSockets_API)、[IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API)、和 Firefox OS 特有的 [Data Store API](/zh-TW/docs/Web/API/Data_Store_API) ，然而直接存取 DOM 或是 {{domxref("window")}} 物件的一些方法和屬性則不被允許，更多細節請見 [worker 可存取知函數和類別](/zh-TW/docs/Web/API/Worker/Functions_and_classes_available_to_workers)。
+基本上 worker 能夠執行任何事情，比如說 [WebSockets](/zh-TW/docs/Web/API/WebSockets_API)、[IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API)、和 Firefox OS 特有的 [Data Store API](/zh-TW/docs/Web/API/Data_Store_API) ，然而直接存取 DOM 或是 {{domxref("window")}} 物件的一些方法和屬性則不被允許，更多細節請見 [worker 可存取知函數和類別](/zh-TW/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)。
 
 主執行緒和 worker 執行緒之間用 postMessage() 方法發送訊息，然後透過 `onmessage` 事件接受訊息 (訊息存在 {{domxref("Worker/message_event", "message")}} 事件的 data 屬性之中)，其中被傳送的資料並非共享而是複製一份後傳送。
 
-worker 可以產生新 worker，只要新 worker 的來源 (origin) 和父頁面相同，也可以利用 [XMLHttpRequest](/zh-TW/nsIXMLHttpRequest) 執行輸出/輸入(但是 responseXML 和 channel 這兩個屬性為 null)。
+worker 可以產生新 worker，只要新 worker 的來源 (origin) 和父頁面相同，也可以利用 {{domxref("XMLHttpRequest")}} 執行輸出/輸入（但是 responseXML 和 channel 這兩個屬性為 null）。
 
 ## Dedicated workers
 
-dedicated worker 只能被產生它的檔案存取，下面我們先介紹簡單的 [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)) 範例。這個範例會將兩個數字送入 worker 相乘，然後再於前端頁面顯示相乘結果。
+dedicated worker 只能被產生它的檔案存取，下面我們先介紹簡單的 [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)) 範例。這個範例會將兩個數字送入 worker 相乘，然後再於前端頁面顯示相乘結果。
 
 ### 偵測 Worker 功能
 
-為了向下相容、避免錯誤，最好是確保 worker 存在後再取用之 ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)):
+為了向下相容、避免錯誤，最好是確保 worker 存在後再取用之（[main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)）：
 
 ```js
 if (window.Worker) {
@@ -37,7 +40,7 @@ if (window.Worker) {
 
 ### 產生 dedicated worker
 
-只要呼叫 {{domxref("Worker.Worker", "Worker()")}} 建構子，傳入 JS 檔案的 URI，便可以生成一個 worker 執行緒 ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)):
+只要呼叫 {{domxref("Worker.Worker", "Worker()")}} 建構子，傳入 JS 檔案的 URI，便可以生成一個 worker 執行緒（[main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)）：
 
 ```js hidden
 var myWorker = new Worker("worker.js");
@@ -45,7 +48,7 @@ var myWorker = new Worker("worker.js");
 
 ### 和 dedicated worker 發送訊息
 
-{{domxref("Worker.postMessage", "postMessage()")}} 方法以及 {{domxref("Worker.onmessage", "onmessage")}} 事件處理器就是和 worker 發送訊息的關鍵 ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)):
+{{domxref("Worker.postMessage", "postMessage()")}} 方法以及 {{domxref("Worker.onmessage", "onmessage")}} 事件處理器就是和 worker 發送訊息的關鍵（[main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)）：
 
 ```js
 first.onchange = function () {
@@ -61,7 +64,7 @@ second.onchange = function () {
 
 範例中有兩個 {{htmlelement("input")}} 元素，first 和 second，當元素值改變時，我們會利用 postMessage() 方法告訴 worker 改變的值 (這邊用陣列，也可以用其他類別)。
 
-然後在 worker 裡我們從 `onmessage` 接收訊息 ([worker.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/worker.js)):
+然後在 worker 裡我們從 `onmessage` 接收訊息（[worker.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/worker.js)）：
 
 ```js
 onmessage = function (e) {
@@ -85,15 +88,18 @@ myWorker.onmessage = function (e) {
 
 拿到存在事件 data 中的計算值後，我們接著將值以 `textContent` 顯示出來。
 
-> **備註：** `建構 Worker` 的 URI 必須遵從[same-origin policy](/zh-TW/docs/Web/Security/Same-origin_policy)。目前各家瀏覽器在這方面存有歧異，Gecko 10.0 以後允許 data URI 而 Internet Explorer 10 不允許 Blob URI。
+> [!NOTE]
+> 建構 `Worker` 的 URI 必須遵從[same-origin policy](/zh-TW/docs/Web/Security/Same-origin_policy)。目前各家瀏覽器在這方面存有歧異，Gecko 10.0 以後允許 data URI 而 Internet Explorer 10 不允許 Blob URI。
 
-> **備註：** 在主執行緒中存取 `onmessage` `與 postMessage` 需要主動掛在 worker 物件上，在 worker 執行緒則不用，這是因為 worker 執行緒的全域物件便是 worker 物件。
+> [!NOTE]
+> 在主執行緒中存取 `onmessage` 與 `postMessage` 需要主動掛在 worker 物件上，在 worker 執行緒則不用，這是因為 worker 執行緒的全域物件便是 worker 物件。
 
-> **備註：** 和 worker 傳送的資料並非共享而是複製一份後傳送，詳細請參照 [和 workers 傳遞資料：更多細節](#和_workers_傳遞資料：更多細節)。
+> [!NOTE]
+> 和 worker 傳送的資料並非共享而是複製一份後傳送，詳細請參照 [和 workers 傳遞資料：更多細節](#和_workers_傳遞資料：更多細節)。
 
 ### 結束 worker
 
-`在主執行緒裡呼叫` {{domxref("Worker", "terminate")}} 就可結束 worker :
+在主執行緒裡呼叫 {{domxref("Worker", "terminate")}} 就可結束 worker:
 
 ```js
 myWorker.terminate();
@@ -134,23 +140,26 @@ importScripts("foo.js"); /* imports just "foo.js" */
 importScripts("foo.js", "bar.js"); /* imports two scripts */
 ```
 
-瀏覽器會載入並執行每個程式碼腳本，然後 worker 能夠存取程式碼腳本內定義的全域變數，若是腳本無法載入，會產生一個 NETWORK_ERROR，後續的程式碼不會被執行，但是先前執行過的程式碼或用 [window.setTimeout()](/zh-TW/docs/Web/API/window.setTimeout) 延遲執行的程式碼依然有效，而 importScripts() 之後宣告的函數也一樣存在，因為這些程式碼總是在其他程式碼之前就解析過了。
+瀏覽器會載入並執行每個程式碼腳本，然後 worker 能夠存取程式碼腳本內定義的全域變數，若是腳本無法載入，會產生一個 NETWORK_ERROR，後續的程式碼不會被執行，但是先前執行過的程式碼或用 [window.setTimeout()](/zh-TW/docs/Web/API/Window/setTimeout) 延遲執行的程式碼依然有效，而 importScripts() 之後宣告的函數也一樣存在，因為這些程式碼總是在其他程式碼之前就解析過了。
 
-> **備註：** 雖然程式碼腳本的下載順序不一定，但執行順序會遵照傳入 importScripts()的順序，這是同步完成的，importScripts()不會回傳直到所有的程式碼都下載並執行完。
+> [!NOTE]
+> 雖然程式碼腳本的下載順序不一定，但執行順序會遵照傳入 importScripts()的順序，這是同步完成的，importScripts()不會回傳直到所有的程式碼都下載並執行完。
 
 ## Shared workers
 
-shared worker 能夠被多個程式腳本存取，縱使跨越不同 window、iframe 或 worker。這邊的 [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](http://mdn.github.io/simple-shared-worker/)) 範例和 dedicated worker 範例類似，但多了兩個可以讓多個檔案存取的函數：_數字相乘以及數字平方_。
+shared worker 能夠被多個程式腳本存取，縱使跨越不同 window、iframe 或 worker。這邊的 [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)) 範例和 dedicated worker 範例類似，但多了兩個可以讓多個檔案存取的函數：_數字相乘以及數字平方_。
 
 請注意 dedicated worker 與 shared worker 間的差異處，範例裡會有兩份 HTML 頁面，各自都利用同一個 worker 處理運算。
 
-> **備註：** 所有的瀏覽環境都必需共享相同的來源（相同 protocol, host 和 port），shared worker 才能讓不同瀏覽環境存取。
+> [!NOTE]
+> 所有的瀏覽環境都必需共享相同的來源（相同 protocol, host 和 port），shared worker 才能讓不同瀏覽環境存取。
 
-> **備註：** 在 Firefox，shared worker 無法在一般和隱私模式間共享（[Firefox bug 1177621](https://bugzil.la/1177621)）。
+> [!NOTE]
+> 在 Firefox，shared worker 無法在一般和隱私模式間共享（[Firefox bug 1177621](https://bugzil.la/1177621)）。
 
 ### 產生 shared worker
 
-和 dedicated worker 做法差不多，只是用另一個 SharedWorker 建構子來產生 shared worker，見 [index.html](https://github.com/mdn/simple-shared-worker/blob/gh-pages/index.html) 和 [index2.html](http://mdn.github.io/simple-shared-worker/index2.html):
+和 dedicated worker 做法差不多，只是用另一個 SharedWorker 建構子來產生 shared worker，見 [index.html](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/index.html) 和 [index2.html](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/index2.html):
 
 ```js
 var myWorker = new SharedWorker("worker.js");
@@ -158,7 +167,7 @@ var myWorker = new SharedWorker("worker.js");
 
 相當不 一樣的是和 shared worker 溝通必須要透過 port 物件，其實 dedicated worker 也是如此，只不過一切是在背景後自動完成。
 
-開啟 port 連線一是在 onmessage 事件下背景完成，二是藉由主動呼叫 start() 好開始傳送訊息。範例 [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) 以及 [worker.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js) 因為註冊了 onmessage 事件，所以其實可以省略呼叫 start()，然而若是 message 事件是經由 `addEventListener()註冊，那麼便需要呼叫 start() 了。`
+開啟 port 連線一是在 onmessage 事件下背景完成，二是藉由主動呼叫 start() 好開始傳送訊息。範例 [multiply.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/multiply.js) 以及 [worker.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/worker.js) 因為註冊了 onmessage 事件，所以其實可以省略呼叫 start()，然而若是 message 事件是經由 `addEventListener()` 註冊，那麼便需要呼叫 start() 了。
 
 當使用 start() 開啟 port 連線，那麼雙向溝通便需要主執行緒和 worker 兩端都呼叫 start()。
 
@@ -172,7 +181,7 @@ port.start(); // called in worker thread, assuming the port variable references 
 
 ### 和 shared worker 發送訊息
 
-如同前面，現在可以呼叫 `postMessage()` 發送訊息，只不過這次需要透過 port 物件 (一樣請參考 [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) 和 [square.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js)):
+如同前面，現在可以呼叫 `postMessage()` 發送訊息，只不過這次需要透過 port 物件（一樣請參考 [multiply.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/multiply.js) 和 [square.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/square.js)）：
 
 ```js
 squareNumber.onchange = function () {
@@ -181,7 +190,7 @@ squareNumber.onchange = function () {
 };
 ```
 
-worker 方面也增加了一些程式碼 ([worker.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js)):
+worker 方面也增加了一些程式碼（[worker.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/worker.js)）：
 
 ```js
 onconnect = function (e) {
@@ -200,7 +209,7 @@ onconnect = function (e) {
 
 取得 port 之後，我們註冊 port 上的 onmessage 事件，當有訊息進來便取回資料進行運算後回傳回去；註冊 onmessage 事件的同時也自動建立連線，所以說不需要呼叫 start() 了。
 
-最後在主執行緒端，我們同樣由 onmessage 事件取回回傳過來的訊息 (一樣請參考 [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) 和 [square.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js)):
+最後在主執行緒端，我們同樣由 onmessage 事件取回回傳過來的訊息（一樣請參考 [multiply.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/multiply.js) 和 [square.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/square.js)）：
 
 ```js
 myWorker.port.onmessage = function (e) {
@@ -217,9 +226,9 @@ myWorker.port.onmessage = function (e) {
 
 ## 和 workers 傳遞資料：更多細節
 
-和 workers 傳遞的資料會先被複製一份，而非共享；經過序列化後 (serialized) 傳輸，然後在另一端反序列化 (de-serialized) 取出，大部份的瀏覽器都是以 [結構化複製 (structured cloning)](/zh-TW/docs/Web/Guide/API/DOM/The_structured_clone_algorithm) 實作這項特色.
+和 workers 傳遞的資料會先被複製一份，而非共享；經過序列化後 (serialized) 傳輸，然後在另一端反序列化 (de-serialized) 取出，大部份的瀏覽器都是以 [結構化複製 (structured cloning)](/zh-TW/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) 實作這項特色.
 
-下面的 `emulateMessage() 會模擬和 worker 傳遞訊息時，複製資料的行為。`
+下面的 `emulateMessage()` 會模擬和 worker 傳遞訊息時，複製資料的行為。
 
 ```js
 function emulateMessage(vVal) {
@@ -285,13 +294,13 @@ onmessage = function (oEvent) {
 };
 ```
 
-[結構化複製（structured cloning）](/zh-TW/docs/Web/Guide/API/DOM/The_structured_clone_algorithm) 演算法支援 JSON 以及迴圈參照（circular references）。
+[結構化複製（structured cloning）](/zh-TW/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) 演算法支援 JSON 以及迴圈參照（circular references）。
 
 ### 資料傳遞範例
 
 #### 範例 1: 非同步 `eval()`
 
-下面透過 [data URL](/zh-TW/docs/Web/HTTP/data_URIs) 和 `eval()，`示範如何在 worker 非同步執行允許的程式碼：
+下面透過 [data URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 和 `eval()`，示範如何在 worker 非同步執行允許的程式碼：
 
 ```js
 // Syntax: asyncEval(code[, listener])
@@ -319,7 +328,7 @@ var asyncEval = (function () {
 })();
 ```
 
-[data URL](/zh-TW/docs/Web/HTTP/data_URIs) 相當於網路請求，範例中的 data URL 會在 worker 執行下列程式碼回應訊息：
+[data URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 相當於網路請求，範例中的 data URL 會在 worker 執行下列程式碼回應訊息：
 
 ```js
 onmessage = function (oEvent) {
@@ -542,7 +551,8 @@ for (var i = 0; i < uInt8Array.length; ++i) {
 worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 ```
 
-> **備註：** 關於更多可移轉物件的資訊, 效能和功能偵測，請參考 HTML5 Rocks 上 [Transferable Objects: Lightning Fast!](http://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast) 一文。
+> [!NOTE]
+> 關於更多可移轉物件的資訊, 效能和功能偵測，請參考 HTML5 Rocks 上 [Transferable Objects: Lightning Fast!](http://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast) 一文。
 
 ## Embedded workers
 
@@ -693,7 +703,7 @@ onmessage 事件處理器會接收 worker 回傳的運算結果，然後顯示�
 
 和 worker 溝通則是利用 postMessage。
 
-[範例測試](/samples/workers/fibonacci)。
+[範例測試](https://mdn.dev/archives/media/samples/workers/fibonacci)。
 
 ### 在背景中執行 web I/O
 
@@ -707,30 +717,31 @@ onmessage 事件處理器會接收 worker 回傳的運算結果，然後顯示�
 
 除了 dedicated 和 shared web workers，還有其他種類：
 
-- [ServiceWorkers](/zh-TW/docs/Web/API/ServiceWorker_API) 基本上如同介於 web app 和瀏覽器以及網路之間的代理伺服器 (proxy server)，這類 worker 重點在實現離線服務，service worker 會攔截網路請求，然後依據網路連線和資源狀態做出反應，他們可以存取推播和背景同步 APIs。
+- [ServiceWorkers](/zh-TW/docs/Web/API/Service_Worker_API) 基本上如同介於 web app 和瀏覽器以及網路之間的代理伺服器 (proxy server)，這類 worker 重點在實現離線服務，service worker 會攔截網路請求，然後依據網路連線和資源狀態做出反應，他們可以存取推播和背景同步 APIs。
 - Chrome Workers 是 Firefox 唯一的 worker 類型，他們可以用在開發 add-ons，或是想要使用 [js-ctypes](/zh-TW/js-ctypes)。詳情請見 {{domxref("ChromeWorker")}}。
-- [Audio Workers](/zh-TW/docs/Web/API/Web_Audio_API#Audio_Workers) 主要用於音效處理部分。
+- [Audio Workers](/zh-TW/docs/Web/API/Web_Audio_API#audio_workers) 主要用於音效處理部分。
 
 ## Worker 可存取之函數與介面
 
 大多數 Javascript 的功能 worker 皆可以使用，包含：
 
 - {{domxref("Navigator")}}
-- {{domxref("XMLHttpRequest")}}
-- {{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Date", "Date")}}, {{jsxref("Global_Objects/Math", "Math")}}, 與 {{jsxref("Global_Objects/String", "String")}}
-- {{domxref("Window.requestAnimationFrame")}}, {{domxref("WindowTimers.setTimeout")}}, 與 {{domxref("WindowTimers.setInterval")}}
+- {{domxref("WorkerGlobalScope.fetch", "fetch()")}}
+- {{jsxref("Global_Objects/Array", "Array")}}、{{jsxref("Global_Objects/Date", "Date")}}、{{jsxref("Global_Objects/Math", "Math")}} 與 {{jsxref("Global_Objects/String", "String")}}
+- {{domxref("setTimeout()")}} 與 {{domxref("WorkerGlobalScope.setInterval", "setInterval()")}}
 
 worker 無法操作主頁面的物件與 DOM，如有相關需求，必須要間接透過 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} 通知主頁面，讓主頁面執行需求。
 
-> **備註：** 所有 worker 可存取功能一覽表，請見 [Functions and interfaces available to workers](/zh-TW/docs/Web/Reference/Functions_and_classes_available_to_workers).
+> [!NOTE]
+> 所有 worker 可存取功能一覽表，請見 [Functions and interfaces available to workers](/zh-TW/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
-## 標準規範
+## 規範
 
 {{Specifications}}
 
-## 延伸閱讀
+## 參見
 
-- [`Worker`](/zh-TW/docs/Web/API/Worker) interface
-- [`SharedWorker`](/zh-TW/docs/Web/API/SharedWorker) interface
-- [Functions available to workers](/zh-TW/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
-- [Advanced concepts and examples](/zh-TW/docs/Web/API/Web_Workers_API/Using_web_workers)
+- {{domxref("Worker")}} 介面
+- {{domxref("SharedWorker")}} 介面
+- [worker 中可用的函數](/zh-TW/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
+- {{domxref("OffscreenCanvas")}} 介面

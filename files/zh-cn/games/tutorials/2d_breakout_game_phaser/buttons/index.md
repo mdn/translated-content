@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Buttons
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens", "Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay")}}
 
-这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 15 步**。你可以在[Gamedev-Phaser-Content-Kit / demos / lesson15.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson15.html)完成本课程后找到源代码
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 的**第 15 步**。你可以在[Gamedev-Phaser-Content-Kit / demos / lesson15.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson15.html)完成本课程后找到源代码
 
 而不是立即开始游戏，我们可以通过添加他们可以按的开始按钮将该决定留给玩家。我们来调查如何做到这一点。
 
@@ -58,7 +58,8 @@ startButton.anchor.set(0.5);
 - `this`指定执行上下文的引用
 - 将用于*过度*，*超出*和*向下*事件的框架。
 
-> **备注：** 超越事件与悬停相同，当指针从按钮中移出时，当按下按钮时，向下移动。
+> [!NOTE]
+> 超越事件与悬停相同，当指针从按钮中移出时，当按下按钮时，向下移动。
 
 现在我们需要定义`startGame()`上面代码中引用的函数：
 
@@ -98,6 +99,6 @@ function update() {
 
 ## 下一步
 
-在本系列文章中我们将做的最后一件事情是，通过添加一些[随机化](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay)的方式，球从球上弹起来，使游戏更有趣。
+在本系列文章中我们将做的最后一件事情是，通过添加一些[随机化](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)的方式，球从球上弹起来，使游戏更有趣。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens", "Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay")}}

@@ -5,7 +5,7 @@ slug: Web/API/Event
 
 {{APIRef("DOM")}}
 
-Интерфейс **`Event`** представляет собой любое событие, которое происходит в [DOM](/ru/docs/DOM/DOM_Reference); некоторые из них генерируемые пользователем (клик мышью или нажатие клавиши на клавиатуре), а некоторые - генерируемые API (события, обозначающие завершение процесса анимации, приостановка видео и т.д.). Существует много типов событий, некоторые из них используют интерфейсы, базирующиеся на главном интерфейсе `Event`. `Event` содержит общие свойства и методы для всех событий.
+Интерфейс **`Event`** представляет собой любое событие, которое происходит в [DOM](/ru/docs/Web/API/Document_Object_Model); некоторые из них генерируемые пользователем (клик мышью или нажатие клавиши на клавиатуре), а некоторые - генерируемые API (события, обозначающие завершение процесса анимации, приостановка видео и т.д.). Существует много типов событий, некоторые из них используют интерфейсы, базирующиеся на главном интерфейсе `Event`. `Event` содержит общие свойства и методы для всех событий.
 
 ## Интерфейсы, основанные на `Event`
 
@@ -103,7 +103,7 @@ slug: Web/API/Event
 - {{domxref("Event.type")}} {{readonlyinline}}
   - : Название события (без учёта регистра символов).
 - {{domxref("Event.isTrusted")}} {{readonlyinline}}
-  - : Показывает было или нет событие инициировано браузером (например, по клику мышью) или из скрипта (например, через функцию создания события, такую как [event.initEvent](/ru/docs/DOM/event.initEvent))
+  - : Показывает было или нет событие инициировано браузером (например, по клику мышью) или из скрипта (например, через функцию создания события, такую как [event.initEvent](/ru/docs/Web/API/Event/initEvent))
 
 ## Методы
 
@@ -130,15 +130,15 @@ slug: Web/API/Event
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- Типы событий: [Event reference](/ru/docs/Web/Reference/Events)
-- [Сравнение Event Targets](/ru/docs/Web/API/Event/Comparison_of_Event_Targets) (target и currentTarget и relatedTarget и originalTarget)
-- [Creating and triggering custom events](/ru/docs/Web/Guide/DOM/Events/Creating_and_triggering_events)
+- Типы событий: [Event reference](/ru/docs/Web/Events)
+- [Сравнение Event Targets](/ru/docs/Learn/JavaScript/Building_blocks/Event_bubbling) (target и currentTarget и relatedTarget и originalTarget)
+- [Creating and triggering custom events](/ru/docs/Web/Events/Creating_and_triggering_events)
 - Для разработчиков дополнений Firefox:
 
   - [Listening to events in Firefox extensions](/ru/docs/Listening_to_events_in_Firefox_extensions)

@@ -9,7 +9,8 @@ l10n:
 
 **履歴 API** は、ブラウザーのセッション履歴 ([WebExtensions history](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history) と混同しないように) へのアクセスをグローバルの {{DOMxRef("Window.history","history")}} オブジェクトを介して提供しています。このオブジェクトは、ユーザーの履歴の中を前のページや後のページへ移動したり、履歴スタックの中を操作したりするのに便利なメソッドやプロパティが提供されています。
 
-> **メモ:** この API が利用可能なのはメインスレッド ({{domxref("Window")}}) のみです。 {{domxref("Worker")}} や {{domxref("Worklet")}} コンテキストではアクセスできません。
+> [!NOTE]
+> この API が利用可能なのはメインスレッド ({{domxref("Window")}}) のみです。 {{domxref("Worker")}} や {{domxref("Worklet")}} コンテキストではアクセスできません。
 
 ## 概念と使用方法
 

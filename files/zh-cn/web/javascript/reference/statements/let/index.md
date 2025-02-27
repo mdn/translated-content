@@ -1,13 +1,29 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
+l10n:
+  sourceCommit: 66149c2238e1beb7fc65dd998968aa0638c874a3
 ---
 
 {{jsSidebar("Statements")}}
 
-**`let`** 声明用于声明可重新赋值的块级作用域局部变量，并且可以将每个变量初始化为一个值（可选）。
+**`let`** 声明用于声明可重新赋值的块级作用域局部变量，并且可以选择将其初始化为一个值。
 
-{{EmbedInteractiveExample("pages/js/statement-let.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Let")}}
+
+```js interactive-example
+let x = 1;
+
+if (x === 1) {
+  let x = 2;
+
+  console.log(x);
+  // Expected output: 2
+}
+
+console.log(x);
+// Expected output: 1
+```
 
 ## 语法
 
@@ -22,9 +38,9 @@ let name1 = value1, name2, /* …, */ nameN = valueN;
 ### 参数
 
 - `nameN`
-  - : 要声明的变量的名称，必须是合法的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers)或[解构绑定模板](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
+  - : 要声明的变量的名称。必须是合法的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)或[解构绑定模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
 - `valueN` {{optional_inline}}
-  - : 变量的初始值，可以是任意合法的表达式。默认值为 `undefined`。
+  - : 变量的初始值。可以是任意合法的表达式。默认值为 `undefined`。
 
 ## 描述
 
@@ -37,7 +53,10 @@ let name1 = value1, name2, /* …, */ nameN = valueN;
 - 函数主体
 - 类[静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
 
-如果没有被这些结构包含，则是当前模块或脚本的顶级作用域。
+如果不是以上这些情况则是：
+
+- 当代码以[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)模式运行时，作用域是当前模块。
+- 当代码以脚本模式运行时，作用域是全局作用域。
 
 相较于 {{jsxref("Statements/var", "var")}}，`let` 声明有以下不同点：
 
@@ -45,15 +64,15 @@ let name1 = value1, name2, /* …, */ nameN = valueN;
 - `let` 声明的变量只能在执行到声明所在的位置之后才能被访问（参见[暂时性死区](#暂时性死区)）。因此，`let` 声明通常被视为是[非提升的](/zh-CN/docs/Glossary/Hoisting)。
 - `let` 声明在脚本的顶级作用域上声明变量时不会在{{jsxref("globalThis", "全局对象", "", 1)}}上创建属性。
 - `let` 声明的变量不能被同一个作用域中的任何其他声明[重复声明](#重复声明)。
-- `let` [是*声明*，而不是*语句*](/zh-CN/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations)的开头。这意味着，你不能将单独的 `let` 声明当做块的主体使用（因为这样做会让变量无法被访问）。
+- `let` [是*声明*，而不是*语句*](/zh-CN/docs/Web/JavaScript/Reference/Statements#语句和声明的区别)的开头。这意味着，你不能将单独的 `let` 声明当做块的主体使用（因为这样做会让变量无法被访问）。
 
-```js-nolint example-bad
-if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
-```
+  ```js-nolint example-bad
+  if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
+  ```
 
-注意：在[非严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下允许将 `let` 作为 `var` 或者 `function` 的标识符名称，但你应当避免将 `let` 用作标识符以防止发生不期望的语法混淆。
+注意：在[非严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下允许将 `let` 作为 `var` 或者 `function` 的标识符名称，但你应当避免将 `let` 用作标识符以防止发生意外的语法混淆。
 
-许多风格的教程（包括 [MDN 的](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript#变量声明)）推荐只要变量没有在其作用域中被重新赋值，就应该使用 {{jsxref("Statements/const", "const")}} 而不是 `let`。这样能更清楚地表明变量的类型（或值，如果其为原始值）永远不会改变。此外也推荐用 `let` 存放可变的非原始值。
+许多风格指南（包括 [MDN 的](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript#变量声明)）推荐只要变量没有在其作用域中被重新赋值，就应该使用 {{jsxref("Statements/const", "const")}} 而不是 `let`。这样能更清楚地表明变量的类型（或值，如果其为原始值）永远不会改变。此外也推荐用 `let` 存放可变的非原始值。
 
 `let` 关键字后方的列表叫做[_绑定_](/zh-CN/docs/Glossary/Binding)_列表_，使用逗号分隔，其中的逗号*不是*[逗号运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_operator)，并且 `=` 符号也*不是*[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)。后初始化的变量能够引用列表中之前初始化的变量。
 
@@ -68,14 +87,14 @@ if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a sing
 ```js example-bad
 {
   // 暂时性死区始于作用域开头
-  console.log(bar); // undefined
+  console.log(bar); // "undefined"
   console.log(foo); // ReferenceError: Cannot access 'foo' before initialization
   var bar = 1;
   let foo = 2; // 暂时性死区结束（对 foo 而言）
 }
 ```
 
-使用“暂时性”一词是因为这个区域取决于代码执行的时间点，而不是代码编写的顺序。例如，下面的代码能够运行，是因为虽然使用 `let` 变量的函数写在变量声明之前，但函数是在暂时性死区外面被调用的。
+使用“暂时性”一词是因为这个区域取决于代码执行的时间点，而不是代码编写的顺序。例如，下面的代码能够运行，是因为虽然使用 `let` 变量的函数写在变量声明之前，但函数是在暂时性死区外面被*调用*的。
 
 ```js
 {
@@ -101,6 +120,8 @@ let i = 10;
 ```js
 console.log(typeof undeclaredVariable); // "undefined"
 ```
+
+> **备注：** `let` 和 `const` 声明仅在当前脚本被处理时才会被处理。如果在一个 HTML 中有两个以脚本模式运行的 `<script>` 元素，那么第一个脚本不会受到第二个脚本中顶层 `let` 或 `const` 变量的暂时性死区限制，尽管如果你在第一个脚本中声明了一个 `let` 或 `const` 变量，在第二个脚本中再次声明它将会导致[重复声明错误](#重复声明)。
 
 ### 重复声明
 
@@ -169,7 +190,7 @@ switch (x) {
 function varTest() {
   var x = 1;
   {
-    var x = 2; // 同一个变量
+    var x = 2; // 同一个变量！
     console.log(x); // 2
   }
   console.log(x); // 2
@@ -208,13 +229,13 @@ function test() {
 test();
 ```
 
-由于外部变量 `var foo` 有值，因此会执行 `if` 语句块，但是由于词法作用域，该值在块内不可用：`if` 块内的标识符 `foo` 是 `let foo`。表达式 `foo + 55` 会抛出 `ReferenceError` 异常，是因为 `let foo` 还没完成初始化——它仍处于暂时性死区内。
+由于外部变量 `var foo` 有值，因此会执行 `if` 语句块，但是由于词法作用域，该值在块内不可用：`if` 块*内*的标识符 `foo` 是 `let foo`。表达式 `foo + 55` 会抛出 `ReferenceError` 异常，因为 `let foo` 还没完成初始化——它仍处于暂时性死区内。
 
 在下面的情况中，这种现象可能会使你感到困惑。指令 `let n of n.a` 已经处于 `for...of` 循环块的作用域内，因此，标识符 `n.a` 被解析为位于指令（`let n`）本身的 `n` 对象的属性 `a`。因为 `n` 的声明尚未执行结束，它仍然处于暂时性死区内。
 
 ```js example-bad
 function go(n) {
-  // n 在此处被定义
+  // n 在此处被定义！
   console.log(n); // { a: [1, 2, 3] }
 
   for (let n of n.a) {
@@ -252,7 +273,7 @@ console.log(b); // 2
 let x = 1;
 
 {
-  var x = 2; // 重复声明的 SyntaxError
+  var x = 2; // 重复声明的语法错误
 }
 ```
 

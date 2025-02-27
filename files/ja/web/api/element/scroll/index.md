@@ -10,7 +10,7 @@ l10n:
 
 **`scroll()`** は {{domxref("Element")}} インターフェイスのメソッドで、指定された要素内の特定の座標の組まで要素をスクロールさせます。
 
-## 例
+## 構文
 
 ```js-nolint
 scroll(x-coord, y-coord)

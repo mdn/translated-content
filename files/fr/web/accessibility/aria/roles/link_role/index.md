@@ -3,13 +3,15 @@ title: Utiliser le rôle link
 slug: Web/Accessibility/ARIA/Roles/link_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Description
 
-Cette technique présente l'utilisation du rôle [link](http://www.w3.org/TR/wai-aria/roles#link) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
+Cette technique présente l'utilisation du rôle [link](https://www.w3.org/TR/wai-aria/roles#link) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
 
 Le rôle `link` est utilisé pour identifier un élément qui crée un hyperlien vers une ressource qui peut être dans l'application ou à l'extérieur. Lorsque ce rôle est ajouté à un élément, la tabulation peut être utilisée pour donner le focus au lien et la barre d'espace ou la touche Entrée peuvent exécuter le lien.
 
-L'attribut [`tabindex`](http://www.w3.org/TR/wai-aria-practices/#focus_tabindex) peut éventuellement être utilisé avec ce rôle pour spécifier directement la position de l'élément dans l'ordre de tabulation.
+L'attribut [`tabindex`](https://www.w3.org/TR/wai-aria-practices/#focus_tabindex) peut éventuellement être utilisé avec ce rôle pour spécifier directement la position de l'élément dans l'ordre de tabulation.
 
 ### Effets possibles sur les agents utilisateurs et les technologies d'assistance
 
@@ -23,7 +25,8 @@ Les technologies d'assistance devraient être à l'écoute de tels événements 
 - Les lecteurs d'écran devraient annoncer le texte du lien ou son label lorsque l'élément avec le rôle `link` reçoit le focus, en plus du fait ce que c'est un lien. Les liens ARIA devraient être intégré dans la fonction « lister les liens » (_List Links_) des lecteurs d'écran de la même façon que les liens ordinaires, et les actions dans cette liste de dialogue, tels que « Activer le lien » ou « Déplacer le lien », devraient se comporter de la meme façon qu'avec des liens ordinaires.
 - Les loupes d'écran devraient agrandir le lien.
 
-> **Note :** il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!NOTE]
+> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
 
 ### Exemples
 
@@ -67,16 +70,16 @@ function navigateLink(evt) {
 
 ### Notes
 
-Si l'activation du lien déclenche une action mais ne déplace pas le focus du navigateur ou que cela ouvre une nouvelle page, vous devriez considérer l'utilisation du rôle [button](http://www.w3.org/TR/wai-aria/roles#button) au lieu du rôle `link`.
+Si l'activation du lien déclenche une action mais ne déplace pas le focus du navigateur ou que cela ouvre une nouvelle page, vous devriez considérer l'utilisation du rôle [button](https://www.w3.org/TR/wai-aria/roles#button) au lieu du rôle `link`.
 
 ### Attributs ARIA utilisés
 
-- [`link`](http://www.w3.org/TR/wai-aria/roles#link)
+- [`link`](https://www.w3.org/TR/wai-aria/roles#link)
 
 ### Techniques ARIA connexes
 
-- Rôle [button](http://www.w3.org/TR/wai-aria/roles#button).
+- Rôle [button](https://www.w3.org/TR/wai-aria/roles#button).
 
 ### Autres ressources
 
-- Bonnes pratiques ARIA - Rôle `Link`&nbsp;: [#link](http://www.w3.org/TR/wai-aria-practices/#link)
+- Bonnes pratiques ARIA - Rôle `Link`&nbsp;: [#link](https://www.w3.org/TR/wai-aria-practices/#link)

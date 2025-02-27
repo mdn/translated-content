@@ -3,6 +3,8 @@ title: Transférer des fichiers vers un serveur web
 slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Cet article illustre comment publier votre site en ligne grâce à des outils {{Glossary("FTP")}}.
 
 <table class="standard-table">
@@ -36,11 +38,11 @@ Cet article illustre comment publier votre site en ligne grâce à des outils {{
   </tbody>
 </table>
 
-Maintenant que vous avez [construit une page web](/fr/Learn/HTML/Write_a_simple_page_in_HTML), vous voulez peut être la mettre en ligne grâce à un serveur web. Dans cet article, nous verrons comment faire en utilisant {{Glossary("FTP")}}.
+Maintenant que vous avez [construit une page web](/fr/docs/Learn/HTML/Write_a_simple_page_in_HTML), vous voulez peut être la mettre en ligne grâce à un serveur web. Dans cet article, nous verrons comment faire en utilisant {{Glossary("FTP")}}.
 
 ## Pédagogie active
 
-_Il n'y a, pour le moment, pas d'élément de pédagogie active pour cette section. [Vous pouvez néanmoins contribuer](/fr/docs/MDN/Débuter_sur_MDN)._
+_Il n'y a, pour le moment, pas d'élément de pédagogie active pour cette section. [Vous pouvez néanmoins contribuer](/fr/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Aller plus loin
 
@@ -48,7 +50,8 @@ _Il n'y a, pour le moment, pas d'élément de pédagogie active pour cette secti
 
 Il existe de nombreux clients FTP. Dans cette démonstration, nous utiliserons FireFTP. Celui-ci est simple à installer avec Firefox car [c'est un module complémentaire](https://addons.mozilla.org/firefox/addon/fireftp/).
 
-> **Note :** Il existe de nombreuses autres options, voir [les outils de publications : les clients FTP](/fr/Apprendre/How_much_does_it_cost#Publishing_tools.3A_FTP_client) pour plus d'informations.
+> [!NOTE]
+> Il existe de nombreuses autres options, voir [les outils de publications : les clients FTP](/fr/docs/Apprendre/How_much_does_it_cost#publishing_tools.3a_ftp_client) pour plus d'informations.
 
 Pour ouvrir FireFTP dans un nouvel onglet de Firefox, il existe deux méthodes :
 
@@ -82,7 +85,8 @@ Tout d'abord, jetons un coup d'œil à `http://demozilla.hebergeurexemple.net/` 
 
 ![Our demozilla personal website, seen in a browser: it's empty](demozilla-empty.png)
 
-> **Note :** Selon l'hébergeur que vous avez choisi, vous pourriez ici voir une page avec un texte ressemblant à « Ce site web est hébergé par \[Nom de l'hébergeur] ».
+> [!NOTE]
+> Selon l'hébergeur que vous avez choisi, vous pourriez ici voir une page avec un texte ressemblant à « Ce site web est hébergé par \[Nom de l'hébergeur] ».
 
 Pour connecter votre client FTP au serveur distant, cliquez sur le bouton _« Créer un compte »_ de FireFTP, puis remplissez les informations telles qu'elles vous ont été fournies par votre hébergeur :
 
@@ -123,10 +127,10 @@ Et _voilà_ ! Notre site est en ligne !
 Le protocole FTP est l'une des méthodes les plus répandues pour publier un site web. Cependant, il en existe d'autres, en voici quelques unes :
 
 - **Les interfaces web**. Votre hébergeur peut mettre à disposition une interface web qui permet de transférer des fichiers.
-- **GitHub** (méthode avancée). Il est possible de transférer des fichiers grâce à {{Glossary("git")}} en utilisant des combinaison de méthodes qui sont liées aux opérations de commit/push. Pour plus d'informations, voir l'article sur [comment publier son site web](/fr/Apprendre/Commencer_avec_le_web/Publier_votre_site_web) qui fait partie du guide [Commencer avec le Web](/fr/Apprendre/Commencer_avec_le_web).
+- **GitHub** (méthode avancée). Il est possible de transférer des fichiers grâce à {{Glossary("git")}} en utilisant des combinaison de méthodes qui sont liées aux opérations de commit/push. Pour plus d'informations, voir l'article sur [comment publier son site web](/fr/docs/Learn/Getting_started_with_the_web/Publishing_your_website) qui fait partie du guide [Commencer avec le Web](/fr/docs/Learn/Getting_started_with_the_web).
 - **{{Glossary("Rsync")}}** (méthode avancée). Un système de synchronisation de fichiers entre un système local et un système distant.
 - **{{Glossary("WebDAV")}}**. Une extension du protocle {{Glossary("HTTP")}} qui permet de gérer des fichiers de façon plus avancée.
 
 ## Prochaines étapes
 
-Félicitations, vous avez presque fini. Il reste encore une dernière étape importante : [vérifier que votre site fonctionne correctement](/fr/Apprendre/Checking_that_your_web_site_is_working_properly).
+Félicitations, vous avez presque fini. Il reste encore une dernière étape importante : [vérifier que votre site fonctionne correctement](/fr/docs/Apprendre/Checking_that_your_web_site_is_working_properly).

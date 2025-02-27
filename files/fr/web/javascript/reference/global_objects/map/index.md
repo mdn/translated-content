@@ -7,7 +7,31 @@ slug: Web/JavaScript/Reference/Global_Objects/Map
 
 Un objet **`Map`** contient des paires de clé-valeur et mémorise l'ordre dans lequel les clés ont été insérées. N'importe quel type de valeur ([primitive](/fr/docs/Glossary/Primitive) ou objet) peut être utilisée comme clé ou comme valeur.
 
-{{EmbedInteractiveExample("pages/js/map.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Map", "taller")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("a", 1);
+map1.set("b", 2);
+map1.set("c", 3);
+
+console.log(map1.get("a"));
+// Expected output: 1
+
+map1.set("a", 97);
+
+console.log(map1.get("a"));
+// Expected output: 97
+
+console.log(map1.size);
+// Expected output: 3
+
+map1.delete("b");
+
+console.log(map1.size);
+// Expected output: 2
+```
 
 ## Description
 
@@ -315,7 +339,8 @@ console.log(clone.get(1)); // un
 console.log(original === clone); // false. Utile pour une comparaison superficielle
 ```
 
-> **Note :** La donnée contenue dans la `Map` n'est pas clonée.
+> [!NOTE]
+> La donnée contenue dans la `Map` n'est pas clonée.
 
 Il est également possible de fusionner deux `Map` en conservant le critère d'unicité sur les clés&nbsp;:
 

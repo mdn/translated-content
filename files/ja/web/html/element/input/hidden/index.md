@@ -2,20 +2,21 @@
 title: <input type="hidden">
 slug: Web/HTML/Element/input/hidden
 l10n:
-  sourceCommit: fa8a44b8bff24a4032181c4fd155c459c0dc9161
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`hidden`** 型は、フォームの送信時にユーザーが見たり変更したりすることができないデータをウェブ開発者が含めることができます。例えば、現在注文中又は編集中の ID や、一意のセキュリティトークンなどに利用できます。隠し入力欄はページの表示で完全に非表示になり、ページの中で表示させる方法はありません。
 
-> **メモ:** {{domxref("HTMLElement/input_event", "input")}} および {{domxref("HTMLElement/change_event", "change")}} の各イベントは、この入力型には適用されません。隠し入力欄は JavaScript (`hiddenInput.focus()` など) を使用してもフォーカスを与えることはできません。
+> **メモ:** {{domxref("Element/input_event", "input")}} および {{domxref("HTMLElement/change_event", "change")}} の各イベントは、この入力型には適用されません。隠し入力欄は JavaScript (`hiddenInput.focus()` など) を使用してもフォーカスを与えることはできません。
 
 ## 値
 
 {{HTMLElement("input")}} 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性は、フォームをサーバーに送信する時に含めたい隠しデータを含みます。これは特に、ユーザーインターフェイスを通じで編集したり確認したりすることはできませんが、ブラウザーの開発者ツールから値を編集することはできます。
 
-> **警告:** ページのコンテンツ内では値がユーザーに表示されませんが、ブラウザーの開発者ツールや「ソースを表示」機能を使用して、見たり編集したりすることができます。 `hidden` の入力欄をセキュリティの形として当てにしないでください。
+> [!WARNING]
+> ページのコンテンツ内では値がユーザーに表示されませんが、ブラウザーの開発者ツールや「ソースを表示」機能を使用して、見たり編集したりすることができます。 `hidden` の入力欄をセキュリティの形として当てにしないでください。
 
 ## 追加の属性
 
@@ -45,9 +46,10 @@ l10n:
 
 隠し入力欄は、ウェブサイトのセキュリティを高めるためにセキュリティトークンや秘密を格納しておくことができます。基本的な考え方としては、例えばオンラインバンキングで他の口座に送金するためのフォームなど、機密を要するフォームにユーザーが記入するときに、秘密を提供することで自分が誰であるか、正しいフォームを利用して送金リクエストを行っているかを証明することができます。
 
-これで悪意のあるユーザーが偽のフォームを作成して、銀行に成りすまし、騙されやすいユーザーを騙して別なところに送金させるようなことを防ぐことができます。この種の攻撃は[クロスサイトリクエストフォージェリ (CSRF)](/ja/docs/Learn/Server-side/First_steps/Website_security#クロスサイトリクエストフォージェリ_csrf) と呼ばれており、非常に多くの信頼されているサーバー側フレームワークがこのような攻撃を防ぐために隠した秘密を使用しています。
+これで悪意のあるユーザーが偽のフォームを作成して、銀行に成りすまし、騙されやすいユーザーを騙して別なところに送金させるようなことを防ぐことができます。この種の攻撃は[クロスサイトリクエストフォージェリ (CSRF)](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security#クロスサイトリクエストフォージェリ_csrf) と呼ばれており、非常に多くの信頼されているサーバー側フレームワークがこのような攻撃を防ぐために隠した秘密を使用しています。
 
-> **メモ:** 前述のように、隠し入力欄に秘密を配置することは、本質的に安全ではありません。鍵の組み合わせやエンコーディングによって実現すべきものです。隠し入力欄の値は秘密とデータを関連付け、フォームがサーバーに送信されるときに自動的に含められます。本当にウェブサイトを安全にするには、よく設計された秘密を使用する必要があります。
+> [!NOTE]
+> 前述のように、隠し入力欄に秘密を配置することは、本質的に安全ではありません。鍵の組み合わせやエンコーディングによって実現すべきものです。隠し入力欄の値は秘密とデータを関連付け、フォームがサーバーに送信されるときに自動的に含められます。本当にウェブサイトを安全にするには、よく設計された秘密を使用する必要があります。
 
 ## 検証
 
@@ -78,7 +80,7 @@ This is the content of my excellent blog post. I hope you enjoy it!
 </form>
 ```
 
-簡単な CSS も追加しましょう。
+CSS も追加しましょう。
 
 ```css
 html {
@@ -114,13 +116,14 @@ textarea {
 }
 ```
 
-サーバーはフォームをユーザーのブラウザーに送信する前に、 ID が "`postID`" である隠し入力欄の値にデータベース内の投稿の ID を設定し、フォームが戻されたときにこの情報を、変更された情報を更新するデータベースのレコードを知るために使用します。コンテンツの中でこれを扱うためにスクリプトは必要はありません。
+サーバーはフォームをユーザーのブラウザーに送信する前に、 ID が `postID` である隠し入力欄の値にデータベース内の投稿の ID を設定し、フォームが戻されたときにこの情報を、変更された情報を更新するデータベースのレコードを知るために使用します。コンテンツの中でこれを扱うためにスクリプトは必要はありません。
 
 出力結果は次のようになります。
 
 {{ EmbedLiveSample('Examples', '100%', 200) }}
 
-> **メモ:** この例は GitHub にもあります ([ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/hidden-input-example/index.html)および[ライブでの動作の確認](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)も参照してください)。
+> [!NOTE]
+> この例は GitHub にもあります ([ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/hidden-input-example/index.html)および[ライブでの動作の確認](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)も参照してください)。
 
 送信されるとき、サーバーへ送信されるフォームデータは以下のようになります。
 
@@ -160,7 +163,7 @@ textarea {
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>対応するロールなし</code></a></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
     </tr>
   </tbody>
 </table>
@@ -175,5 +178,5 @@ textarea {
 
 ## 関連情報
 
-- [HTML フォームガイド](/ja/docs/Learn/Forms)
+- [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} および {{domxref("HTMLInputElement")}} インターフェイス

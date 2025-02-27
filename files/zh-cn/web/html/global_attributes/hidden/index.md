@@ -17,7 +17,8 @@ slug: Web/HTML/Global_attributes/hidden
 
 类似的，你也可以将一个带有 hidden 标签的 canvas 元素作为屏幕外的缓存区域，或者在表单控件中引用一个已经隐藏的表单。
 
-> **备注：** 改变具有 hidden 属性的元素的 CSS 的 {{cssxref("display")}} 属性将覆盖该行为。例如，元素被设置为 `display: flex` 将会导致元素显示出来，尽管设置了 hidden 属性
+> [!NOTE]
+> 改变具有 hidden 属性的元素的 CSS 的 {{cssxref("display")}} 属性将覆盖该行为。例如，元素被设置为 `display: flex` 将会导致元素显示出来，尽管设置了 hidden 属性
 
 ## 规范
 
@@ -27,7 +28,7 @@ slug: Web/HTML/Global_attributes/hidden
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - 所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
-- [aria-hidden](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute)属性
+- [aria-hidden](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)属性

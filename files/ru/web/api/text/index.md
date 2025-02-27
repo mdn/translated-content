@@ -3,7 +3,7 @@ title: Текст
 slug: Web/API/Text
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
 Интерфейс **`Text`** представляет собой текстовое содержание (элемента) {{domxref("Element")}} или {{domxref("Attr")}}. Если элемент не имеет разметки внутри собственного содержимого, то он интерпретируется как a single child (implementing) `Text` ,который содержит текст элемента. Однако, если элемент содержит разметку, он разбивается на information items и `Text` nodes ,которые образуют его дочерние элементы.
 
@@ -58,4 +58,4 @@ _Наследует родительские методы, {{domxref("CharacterD
 
 ## Смотри(те) также
 
-- [The DOM interfaces index](/ru/docs/DOM/DOM_Reference).
+- [The DOM interfaces index](/ru/docs/Web/API/Document_Object_Model).

@@ -129,18 +129,14 @@ function defineProperties(obj, properties) {
 
 ## Especificações
 
-| Especificação                                                                      | Status               | Comentário                                          |
-| ---------------------------------------------------------------------------------- | -------------------- | --------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.7', 'Object.defineProperties')}}                  | {{Spec2('ES5.1')}}   | Definição inicial. Implementada no JavaScript 1.8.5 |
-| {{SpecName('ES6', '#sec-object.defineproperties', 'Object.defineProperties')}}     | {{Spec2('ES6')}}     |                                                     |
-| {{SpecName('ESDraft', '#sec-object.defineproperties', 'Object.defineProperties')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.defineProperties")}}
+{{Compat}}
 
 ## Veja também
 
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.keys()")}}
-- [Enumerabilidade e direito de propriedades](/pt-BR/docs/Enumerability_and_ownership_of_properties)
+- [Enumerabilidade e direito de propriedades](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)

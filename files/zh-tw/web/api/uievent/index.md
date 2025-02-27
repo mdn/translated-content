@@ -3,7 +3,7 @@ title: UIEvent
 slug: Web/API/UIEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`UIEvent`** 介面是使用者介面的事件的基本型態。
 
@@ -58,5 +58,5 @@ _此介面亦繼承其父－－ {{domxref("Event")}} 的方法：_
 
 ## 參見
 
-- [Introduction to events](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events)
+- [Introduction to events](/zh-TW/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Event")}}

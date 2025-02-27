@@ -10,7 +10,7 @@ original_slug: Web/API/Document/documentURIObject
 
 **Read-only**
 
-Devuelve un objeto `nsIURI` que representa la URI de [document](/es/DOM/document).
+Devuelve un objeto `nsIURI` que representa la URI de [document](/es/docs/Web/API/Document).
 
 Esto sólo funciona para programas con privilegios (UniversalXPConnect) incluidas las extensiones. Para páginas web, esta propiedad no tiene significado especial y puede usarse de igual forma que cualquier otra propiedad del usuario.
 

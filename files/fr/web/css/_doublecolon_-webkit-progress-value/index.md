@@ -1,5 +1,5 @@
 ---
-title: "::-webkit-progress-value"
+title: ::-webkit-progress-value
 slug: Web/CSS/::-webkit-progress-value
 ---
 
@@ -7,7 +7,8 @@ slug: Web/CSS/::-webkit-progress-value
 
 Le pseudo-élément **`::-webkit-progress-value`** permet de représenter la portion « remplie » de la barre d'un élément {{HTMLElement("progress")}}. C'est un pseudo-élément fils du pseudo-élément {{cssxref("::-webkit-progress-bar")}}.
 
-> **Note :** Afin que `::-webkit-progress-value` ait un effet, il faut que {{cssxref("-webkit-appearance")}} vaille `none` sur l'élément `<progress>`.
+> [!NOTE]
+> Afin que `::-webkit-progress-value` ait un effet, il faut que {{cssxref("-webkit-appearance")}} vaille `none` sur l'élément `<progress>`.
 
 ## Exemples
 

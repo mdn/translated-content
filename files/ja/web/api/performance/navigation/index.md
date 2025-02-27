@@ -1,21 +1,23 @@
 ---
-title: Performance.navigation
+title: "Performance: navigation プロパティ"
+short-title: navigation
 slug: Web/API/Performance/navigation
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
+{{APIRef("Performance API")}}{{Deprecated_Header}}
 
 古い **`Performance.navigation`** は読み取り専用プロパティで、指定された閲覧コンテキスト内で発生するナビゲーションの種類を表す {{domxref("PerformanceNavigation")}} オブジェクトを返します。リソースを取得するまでに必要なリダイレクトの数などです。
 
 このプロパティはワーカーでは利用できません。
 
-> **警告:** このプロパティは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} を使用してください。
+> [!WARNING]
+> このプロパティは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} を使用してください。
 
-## 構文
+## 値
 
-```js
-navObject = performance.navigation;
-```
+{{domxref("PerformanceNavigation")}} オブジェクトです。
 
 ## 仕様書
 

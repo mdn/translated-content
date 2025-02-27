@@ -1,19 +1,28 @@
 ---
-title: IDBDatabase.close
+title: "IDBDatabase: close() メソッド"
+short-title: close()
 slug: Web/API/IDBDatabase/close
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{ APIRef("IDBDatabase") }}
+{{ APIRef("IndexedDB") }}
 
-{{domxref("IDBDatabase")}} インターフェイスの **`close()`** は、ただちに戻り、別スレッドで接続を閉じます。
+**`close()`** は {{domxref("IDBDatabase")}} インターフェイスのメソッドで、ただちに戻り、別スレッドで接続を閉じます。
 
 実際には、この接続を使用していて生成されたすべてのトランザクションが完了するまで、接続は閉じられません。一度このメソッドが呼び出されたら、この接続では、新しいトランザクションを生成することはできません。終了処理がペンディングされている場合は、トランザクションを生成するメソッドは、例外を発生させます。
 
+{{AvailableInWorkers}}
+
 ## 構文
 
-```js
-db.close();
+```js-nolint
+close()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
@@ -22,15 +31,15 @@ db.close();
 ## 例
 
 ```js
-// 我々のデータベースを開きましょう。
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+// データベースを開く
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // これら 2 個のイベントハンドラーは､データベースが正常に開かれたか､失敗した時に動作します｡
-DBOpenRequest.onerror = function (event) {
+DBOpenRequest.onerror = (event) => {
   note.innerHTML += "<li>データベースの読み込みに失敗しました｡</li>";
 };
 
-DBOpenRequest.onsuccess = function (event) {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += "<li>データベースを初期化しました｡</li>";
 
   // データベースを開いた結果を変数 db に保存します｡
@@ -47,7 +56,7 @@ DBOpenRequest.onsuccess = function (event) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.IDBDatabase.close")}}
+{{Compat}}
 
 ## 関連項目
 

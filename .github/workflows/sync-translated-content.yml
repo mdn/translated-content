@@ -11,6 +11,9 @@ on:
     # * is a special character in YAML so you have to quote this string
     - cron: "0 1 * * *"
 
+permissions:
+  contents: read
+
 jobs:
   build:
     if: github.repository == 'mdn/translated-content'
@@ -39,7 +42,7 @@ jobs:
           path: mdn/content
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
           cache: "yarn"
@@ -59,12 +62,45 @@ jobs:
         working-directory: ${{ github.workspace }}/mdn/content
         run: yarn content sync-translated-content ${{ matrix.lang }}
 
+      - name: Gather related upstream commits
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # get upstream head sha
+          UPSTREAM_HEAD_SHA=$(cd "${{ github.workspace }}/mdn/content" && git rev-parse HEAD)
+          echo "upstream head sha: ${UPSTREAM_HEAD_SHA}"
+          # get original path of moved files
+          MOVED_FILES=$(git diff --cached --name-status --diff-filter=R | cut -f2 | sed "s|files/${{ matrix.lang }}|files/en-us|")
+          FILE_COMMIT_URLS=""
+          while read -r MOVED_FILE; do
+            # gather related upstream commits
+            COMMIT_URL=$(gh api -XGET repos/mdn/content/commits -F path="${MOVED_FILE}" -F per_page=1 -F sha="${UPSTREAM_HEAD_SHA}" --jq '.[0].html_url')
+            if [ -n "${COMMIT_URL}" ]; then
+              FILE_COMMIT_URLS+="- ${COMMIT_URL}\n"
+            fi
+          done <<< "${MOVED_FILES}"
+
+          FILE_COMMIT_URLS=$(echo -e "${FILE_COMMIT_URLS}" | grep -v '^$' | sort | uniq)
+          echo -e "commit urls:\n${FILE_COMMIT_URLS}"
+
+          # set multiline string to env
+          # https://docs.github.com/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
+          # as the commit urls would not contain 'EOF', we can use it as a delimiter
+          {
+            echo 'COMMIT_URLS<<EOF'
+            echo "${FILE_COMMIT_URLS}"
+            echo EOF
+          } >> "$GITHUB_ENV"
+
       - name: Create PR with sync for ${{ matrix.lang }}
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@dd2324fc52d5d43c699a5636bcf19fceaa70c284 # v7.0.7
         with:
           commit-message: "${{ matrix.lang }}: sync translated content"
           branch: content-sync-${{ matrix.lang }}
           title: "[${{ matrix.lang }}] sync translated content"
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
-          body: Yari generated sync
+          committer: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
+          body: "Rari generated sync. Related upstream commits:\n\n${{ env.COMMIT_URLS }}"
+          labels: |
+            automated pr
           token: ${{ secrets.AUTOMERGE_TOKEN }}

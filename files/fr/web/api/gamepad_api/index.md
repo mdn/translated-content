@@ -23,7 +23,7 @@ L'**API Gamepad** est un moyen pour les développeurs d'accéder aux signaux pro
 - [`GamepadPose`](/fr/docs/Web/API/GamepadPose)
   - : Represents the pose of a controller (e.g. position and orientation in 3D space) in the case of a [WebVR](/fr/docs/Web/API/WebVR_API)controller.
 
-See also the [extensions to the Gamepad interface](/fr/docs/Web/API/Gamepad#Experimental_extensions_to_Gamepad), for features that allow you to access the above information.
+See also the [extensions to the Gamepad interface](/fr/docs/Web/API/Gamepad#experimental_extensions_to_gamepad), for features that allow you to access the above information.
 
 ### Extensions à d'autres interfaces
 

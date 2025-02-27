@@ -111,7 +111,8 @@ flower.bloom();
 
 ### Bound functions used as constructors
 
-> **警告：** This section demonstrates JavaScript capabilities and documents some edge cases of the `bind()` method. The methods shown below are not the best way to do things and probably should not be used in any production environment.
+> [!WARNING]
+> This section demonstrates JavaScript capabilities and documents some edge cases of the `bind()` method. The methods shown below are not the best way to do things and probably should not be used in any production environment.
 
 Bound functions are automatically suitable for use with the {{jsxref("Operators/new", "new")}} operator to construct new instances created by the target function. When a bound function is used to construct a value, the provided `this` is ignored. However, provided arguments are still prepended to the constructor call:
 

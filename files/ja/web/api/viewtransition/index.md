@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef("View Transitions API")}}{{SeeCompatTable}}
 
-**`ViewTransition`** は{{domxref("View Transitions API", "ビュートランジション API", "", "nocode")}} のインターフェースで、ビュートランジションを表し、トランジションが様々な状態（例えば、アニメーションを実行する準備ができている、またはアニメーションが終了した）に達したときに反応する機能、またはトランジションを完全にスキップする機能を提供します。
+**`ViewTransition`** は{{domxref("View Transitions API", "ビュー遷移 API", "", "nocode")}} のインターフェースで、ビュー遷移を表し、トランジションが様々な状態（例えば、アニメーションを実行する準備ができている、またはアニメーションが終了した）に達したときに反応する機能、またはトランジションを完全にスキップする機能を提供します。
 
-このオブジェクト型は {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} メソッドが返します。 `startViewTransition()` が呼び出されると、[ビュートランジションのプロセス](/ja/docs/Web/API/View_Transitions_API#ビュートランジションのプロセス)で説明されている一連のステップに従います。これは様々なプロミスが履行されるタイミングについても説明しています。
+このオブジェクト型は {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} メソッドが返します。 `startViewTransition()` が呼び出されると、[ビュー遷移のプロセス](/ja/docs/Web/API/View_Transition_API#ビュー遷移のプロセス)で説明されている一連のステップに従います。これは様々なプロミスが履行されるタイミングについても説明しています。
 
 {{InheritanceDiagram}}
 
@@ -25,11 +25,11 @@ l10n:
 ## インスタンスメソッド
 
 - {{domxref("ViewTransition.skipTransition", "skipTransition()")}} {{Experimental_Inline}}
-  - : ビュートランジションのアニメーション部分をスキップします。ただし、 DOM を更新する {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} コールバックの実行はスキップしません。
+  - : ビュー遷移のアニメーション部分をスキップします。ただし、 DOM を更新する {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} コールバックの実行はスキップしません。
 
 ## 例
 
-次の例では、 {{domxref("ViewTransition.ready")}} プロミスを使用して、クリック時のユーザーカーソルの位置から発生する独自の円形表示ビュートランジションを発生させ、 {{domxref("Web Animations API", "ウェブアニメーション API", "", "nocode")}} によってアニメーションが指定されています。
+次の例では、 {{domxref("ViewTransition.ready")}} プロミスを使用して、クリック時のユーザーカーソルの位置から発生する独自の円形表示ビュー遷移を発生させ、 {{domxref("Web Animations API", "ウェブアニメーション API", "", "nocode")}} によってアニメーションが指定されています。
 
 ```js
 // 最後のクリックイベントを保存
@@ -78,7 +78,7 @@ function spaNavigate(data) {
 }
 ```
 
-このアニメーションには以下の CSS も必要です。既定のアニメーションをオフにし、古いビューと新しいビューの状態が混ざり合わないようにします（新しい状態はビュートランジションの遷移ではなく、古い状態のすぐ上に「ワイプ」されます）。
+このアニメーションには以下の CSS も必要です。既定のアニメーションをオフにし、古いビューと新しいビューの状態が混ざり合わないようにします（新しい状態はビュー遷移の遷移ではなく、古い状態のすぐ上に「ワイプ」されます）。
 
 ```css
 ::view-transition-image-pair(root) {

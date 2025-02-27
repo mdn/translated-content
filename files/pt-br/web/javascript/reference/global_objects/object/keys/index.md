@@ -121,22 +121,19 @@ if (!Object.keys) {
 
 Por favor, note que o código acima inclui chaves não-enumeráveis no IE7 (e talvez IE8), ao passar em um objeto a partir de uma janela diferente.
 
-Para um simples Browser Polyfill, veja [Javascript - Object.keys Browser Compatibility](http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html).
+Para um simples Browser Polyfill, veja [Javascript - Object.keys Browser Compatibility](https://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html).
 
 ## Especificações
 
-| Especificação                                             | Status              | Comentário                                           |
-| --------------------------------------------------------- | ------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.14', 'Object.keys')}}    | {{Spec2('ES5.1')}}  | Definição inicial. Implementado em JavaScript 1.8.5. |
-| {{SpecName('ES2015', '#sec-object.keys', 'Object.keys')}} | {{Spec2('ES2015')}} |                                                      |
+{{Specifications}}
 
 ## Browser compatibilidade
 
-{{Compat("javascript.builtins.Object.keys")}}
+{{Compat}}
 
 ## Veja também
 
-- [Enumerability and ownership of properties](/pt-BR/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}

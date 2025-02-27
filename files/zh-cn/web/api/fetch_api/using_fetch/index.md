@@ -12,7 +12,7 @@ slug: Web/API/Fetch_API/Using_Fetch
 请注意，`fetch` 规范与 `jQuery.ajax()` 主要有以下的不同：
 
 - 当接收到一个代表错误的 HTTP 状态码时，从 `fetch()` 返回的 Promise **不会被标记为 reject**，即使响应的 HTTP 状态码是 404 或 500。相反，它会将 Promise 状态标记为 resolve（如果响应的 HTTP 状态码不在 200 - 299 的范围内，则设置 resolve 返回值的 {{domxref("Response/ok", "ok")}} 属性为 false），仅当网络故障时或请求被阻止时，才会标记为 reject。
-- `fetch` **不会发送跨域 cookie**，除非你使用了 _credentials_ 的[初始化选项](/zh-CN/docs/Web/API/fetch#参数)。（自 [2018 年 8 月](https://github.com/whatwg/fetch/pull/585)以后，默认的 credentials 政策变更为 `same-origin`。Firefox 也在 61.0b13 版本中进行了修改）
+- `fetch` **不会发送跨域 cookie**，除非你使用了 _credentials_ 的[初始化选项](/zh-CN/docs/Web/API/Window/fetch#参数)。（自 [2018 年 8 月](https://github.com/whatwg/fetch/pull/585)以后，默认的 credentials 政策变更为 `same-origin`。Firefox 也在 61.0b13 版本中进行了修改）
 
 一个基本的 fetch 请求设置起来很简单。看看下面的代码：
 
@@ -78,9 +78,11 @@ fetch("https://example.com", {
 });
 ```
 
-> **备注：** 当请求使用 `credentials: 'include'` 时，响应的 `Access-Control-Allow-Origin` 不能使用通配符 "`*`"。在这种情况下，`Access-Control-Allow-Origin` 必须是当前请求的源，在使用 CORS Unblock 插件的情况下请求仍会失败。
+> [!NOTE]
+> 当请求使用 `credentials: 'include'` 时，响应的 `Access-Control-Allow-Origin` 不能使用通配符 "`*`"。在这种情况下，`Access-Control-Allow-Origin` 必须是当前请求的源，在使用 CORS Unblock 插件的情况下请求仍会失败。
 
-> **备注：** 无论怎么设置，浏览器都不应在 _预检请求_ 中发送凭据。了解更多：[跨域资源共享 > 附带身份凭证的请求](/zh-CN/docs/Web/HTTP/CORS#附带身份凭证的请求)
+> [!NOTE]
+> 无论怎么设置，浏览器都不应在 _预检请求_ 中发送凭据。了解更多：[跨域资源共享 > 附带身份凭证的请求](/zh-CN/docs/Web/HTTP/CORS#附带身份凭证的请求)
 
 如果你只想在请求 URL 与调用脚本位于同一起源处时发送凭据，请添加 `credentials: 'same-origin'`。
 
@@ -309,7 +311,7 @@ console.log(myHeaders.get("X-Custom-Header")); // null
 
 虽然一些操作只能在 {{domxref("Service_Worker_API","ServiceWorkers")}} 中使用，但是它提供了更方便的操作 Headers 的 API。
 
-如果使用了一个不合法的 HTTP Header 属性名，那么 Headers 的方法通常都抛出 TypeError 异常。如果不小心写入了一个不可写的属性（[见下方](#Guard)），也会抛出一个 TypeError 异常。除此以外的情况，失败了并不抛出异常。例如：
+如果使用了一个不合法的 HTTP Header 属性名，那么 Headers 的方法通常都抛出 TypeError 异常。如果不小心写入了一个不可写的属性（[见下方](#guard)），也会抛出一个 TypeError 异常。除此以外的情况，失败了并不抛出异常。例如：
 
 ```js
 const myResponse = Response.error();
@@ -349,7 +351,8 @@ fetch(myRequest)
 - `response`：从 response 中获得的 headers（{{domxref("Response.headers")}}）只读。
 - `immutable`：在 ServiceWorkers 中最常用的，所有的 headers 都只读。
 
-> **备注：** 你不可以添加或者修改一个 guard 属性是 `request` 的 Request Header 的 `Content-Length` 属性。同样地，插入 `Set-Cookie` 属性到一个 response header 是不允许的，因此，Service Worker 中，不能给合成的 Response 设置 cookie。
+> [!NOTE]
+> 你不可以添加或者修改一个 guard 属性是 `request` 的 Request Header 的 `Content-Length` 属性。同样地，插入 `Set-Cookie` 属性到一个 response header 是不允许的，因此，Service Worker 中，不能给合成的 Response 设置 cookie。
 
 ## Response 对象
 
@@ -376,9 +379,10 @@ addEventListener("fetch", (event) => {
 });
 ```
 
-{{domxref("Response.Response","Response()")}} 构造方法接受两个可选参数—— response 的 body 和一个初始化对象（与{{domxref("Request.Request","Request()")}} 所接受的 init 参数类似）。
+{{domxref("Response.Response","Response()")}} 构造方法接受两个可选参数——response 的 body 和一个初始化对象（与{{domxref("Request.Request","Request()")}} 所接受的 init 参数类似）。
 
-> **备注：** 静态方法 {{domxref("Response.error","error()")}} 只是返回了错误的 response。与此类似地，{{domxref("Response.redirect","redirect()")}} 只是返回了一个可以重定向至某 URL 的 response。这些也只与 Service Worker 有关。
+> [!NOTE]
+> 静态方法 {{domxref("Response.error","error()")}} 只是返回了错误的 response。与此类似地，{{domxref("Response.redirect","redirect()")}} 只是返回了一个可以重定向至某 URL 的 response。这些也只与 Service Worker 有关。
 
 ## Body
 
@@ -424,10 +428,6 @@ if (window.fetch) {
   // do something with XMLHttpRequest?
 }
 ```
-
-## Polyfill
-
-如果要在不支持的浏览器中使用 Fetch，可以使用 [Fetch Polyfill](https://github.com/github/fetch)。
 
 ## 参见
 

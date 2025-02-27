@@ -45,8 +45,8 @@ box-sizing: inherit
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.box-sizing")}}
+{{Compat}}
 
 ## Veja também
 
-- [CSS box model](/pt-BR/docs/CSS/box_model) \[Eng]
+- [CSS box model](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) \[Eng]

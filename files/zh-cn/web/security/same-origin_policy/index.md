@@ -39,7 +39,8 @@ slug: Web/Security/Same-origin_policy
 
 ## 源的更改
 
-> **警告：** 这里描述的方法（使用 {{domxref("document.domain")}} setter）已被弃用，因为它破坏了同源策略所提供的安全保护，并使浏览器中的源模型复杂化，导致互操作性问题和安全漏洞。
+> [!WARNING]
+> 这里描述的方法（使用 {{domxref("document.domain")}} setter）已被弃用，因为它破坏了同源策略所提供的安全保护，并使浏览器中的源模型复杂化，导致互操作性问题和安全漏洞。
 
 满足某些限制条件的情况下，页面是可以修改它的源。脚本可以将 {{domxref("document.domain")}} 的值设置为其当前域或其当前域的父域。如果将其设置为其当前域的父域，则这个较短的父域将用于后续源检查。
 
@@ -55,7 +56,8 @@ document.domain = "company.com";
 
 该机制有一些局限性。如果启用了 [`document-domain`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/document-domain) [`Permissions-Policy`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy)，或该文档在沙箱 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe) 下，它将抛出一个“`SecurityError`” [`DOMException`](/zh-CN/docs/Web/API/DOMException)，并且用这种方法改变源并不影响 Web API 使用的源检查（例如 [`localStorage`](/zh-CN/docs/Web/API/Window/localStorage)、[`indexedDB`](/zh-CN/docs/Web/API/IndexedDB_API)、[`BroadcastChannel`](/zh-CN/docs/Web/API/BroadcastChannel)、[`SharedWorker`](/zh-CN/docs/Web/API/SharedWorker)）。更详尽的失败案例列表可以在 [Document.domain 的错误章节](/zh-CN/docs/Web/API/Document/domain#异常)找到。
 
-> **备注：** 使用 `document.domain` 来允许子域安全访问其父域时，需要在父域和子域中设置 `document.domain` 为*相同*的值。这是必要的，即使这样做只是将父域设置回其原始值。不这样做可能会导致权限错误。
+> [!NOTE]
+> 使用 `document.domain` 来允许子域安全访问其父域时，需要在父域和子域中设置 `document.domain` 为*相同*的值。这是必要的，即使这样做只是将父域设置回其原始值。不这样做可能会导致权限错误。
 
 ## 跨源网络访问
 
@@ -141,6 +143,6 @@ JavaScript 的 API 中，如 {{domxref("HTMLIFrameElement.contentWindow", "ifram
 ## 参见
 
 - [W3C 介绍的同源策略](https://www.w3.org/Security/wiki/Same_Origin_Policy)
-- [web.dev 介绍的同源策略](https://web.dev/same-origin-policy/)
+- [web.developers.google.cn 介绍的同源策略](https://web.developers.google.cn/articles/same-origin-policy)
 - {{httpheader("Cross-Origin-Resource-Policy")}}
 - {{httpheader("Cross-Origin-Embedder-Policy")}}

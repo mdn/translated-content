@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
 
 静的な **`Reflect.getPrototypeOf()`** メソッドは、{{jsxref("Object.getPrototypeOf()")}} とほぼ同じメソッドです。これは指定したオブジェクトのプロトタイプ (つまり、内部の `[[Prototype]]` プロパティの値) を返します。
 
-{{EmbedInteractiveExample("pages/js/reflect-getprototypeof.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.getPrototypeOf()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+const proto1 = Reflect.getPrototypeOf(object1);
+
+console.log(proto1);
+// Expected output: Object {  }
+
+console.log(Reflect.getPrototypeOf(proto1));
+// Expected output: null
+```
 
 ## 構文
 
@@ -22,7 +36,7 @@ Reflect.getPrototypeOf(target)
 
 ### 返値
 
-与えられたオブジェクトのプロトタイプです。継承されたプロパティがない場合、{{jsxref("null")}} を返します。
+与えられたオブジェクトのプロトタイプです。継承されたプロパティがない場合、[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返します。
 
 ### 例外
 
@@ -67,7 +81,7 @@ Reflect.getPrototypeOf(Object("foo")); // String.prototype
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Reflect.getPrototypeOf")}}
+{{Compat}}
 
 ## 関連情報
 

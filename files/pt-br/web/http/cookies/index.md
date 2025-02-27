@@ -18,7 +18,8 @@ Cookies são usados principalmente para três propósitos:
 
 Os cookies eram usados para armazenamento geral no lado do cliente. Embora isso fosse aceitável quando eram a única forma de armazenar dados no cliente, atualmente é recomendável utilizar APIs de armazenamento mais modernas. Os cookies são enviados em todas as requisições, por isso podem prejudicar a performance (especialmente em conexões móveis). APIs modernas de armazenamento no cliente são [Web storage API](/pt-BR/docs/Web/API/Web_Storage_API) (`localStorage` e `sessionStorage`) e [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API).
 
-> **Nota:** Para visualizar os cookies armazenados (e outros armazenamentos que uma página web pode usar), pode-se habilitar o [Storage Inspector](/pt-BR/docs/Tools/Storage_Inspector) nas Ferramentas de Desenvolvimento e selecionar o item **Cookies** na árvore de armazenamento.
+> [!NOTE]
+> Para visualizar os cookies armazenados (e outros armazenamentos que uma página web pode usar), pode-se habilitar o [Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html) nas Ferramentas de Desenvolvimento e selecionar o item **Cookies** na árvore de armazenamento.
 
 ## Criando cookies
 
@@ -34,11 +35,8 @@ Set-Cookie: <cookie-name>=<cookie-value>
 
 Este cabeçalho de servidor informa ao cliente para armazenar um cookie.
 
-> **Nota:** Eis as formas de utilização do cabeçalho `Set-Cookie` em várias aplicações de servidor:- [PHP](https://secure.php.net/manual/en/function.setcookie.php)
->
-> - [Node.JS](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value)
-> - [Python](https://docs.python.org/3/library/http.cookies.html)
-> - [Ruby on Rails](http://api.rubyonrails.org/classes/ActionDispatch/Cookies.html)
+> [!NOTE]
+> Eis as formas de utilização do cabeçalho `Set-Cookie` em várias aplicações de servidor: [PHP](https://secure.php.net/manual/en/function.setcookie.php), [Node.JS](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value), [Python](https://docs.python.org/3/library/http.cookies.html), [Ruby on Rails](http://api.rubyonrails.org/classes/ActionDispatch/Cookies.html)
 
 ```
 HTTP/1.0 200 OK
@@ -69,7 +67,8 @@ Ao invés de expirar quando o cliente fecha, _cookies permanentes_ expiram em um
 Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 ```
 
-> **Nota:** Quando uma data de expiração é configurada, o tempo e a data são relativas ao cliente no qual o cookie está configurado, não ao servidor.
+> [!NOTE]
+> Quando uma data de expiração é configurada, o tempo e a data são relativas ao cliente no qual o cookie está configurado, não ao servidor.
 
 ### Cookies `Secure` e `HttpOnly`
 
@@ -114,11 +113,11 @@ O atributo SameSite pode receber um ou dois valores (case-insensitive):
 - `None`
   - : O navegador irá enviar os cookies tanto para as requisições _cross-site_ quanto _same-site_.
 - `Strict`
-  - : Se o cookie same-site possuir este atributo, o navegador enviará cookies apenas se a requisição for enviada do website que configurou este cookie, Se a requisição tem origem em outra URL, nenhum cookie com o atributo`Strict` será incluído.
+  - : Se o cookie same-site possuir este atributo, o navegador enviará cookies apenas se a requisição for enviada do website que configurou este cookie, Se a requisição tem origem em outra URL, nenhum cookie com o atributo `Strict` será incluído.
 - `Lax`
-  - : Se o atributo receber o valor Lax, os cookies same-site ficarão retidos nas sub-requisições entre sites, como chamadas para carregar imagens ou frames, mas serão enviadas quando um usuário navegar para o URL de um site externo.
+  - : Se o atributo receber o valor Lax, os cookies same-site ficarão retidos nas sub-requisições entre sites, como chamadas para carregar imagens ou frames, e também quando o usuário navegar para o URL de um site externo através de métodos "seguros" (ex.: [GET](/pt-BR/docs/Web/HTTP/Methods/GET) ou [HEAD](/pt-BR/docs/Web/HTTP/Methods/GET)) como cliques em links, mas não serão enviados em requisições "não seguras" como [POST](/pt-BR/docs/Web/HTTP/Methods/POST).
 
-O comportamento padrão se a flag não estiver setada ou sem suporte do navegador é incluir os cookies em qualquer solicitação, incluindo solicitações cross-origin.
+Se a flag não estiver setada, o atributo recebe o valor `Lax` por padrão.
 
 ### Acesso via JavaScript usando `Document.cookie`
 
@@ -131,11 +130,12 @@ console.log(document.cookie);
 // logs "yummy_cookie=choco; tasty_cookie=strawberry"
 ```
 
-Consulte as questões de segurança na seção [Segurança](/pt-BR/docs/Web/HTTP/Cookies#Security) a seguir. Os cookies disponíveis ao JavaScript podem ser roubados usando XSS.
+Consulte as questões de segurança na seção [Segurança](#Security) a seguir. Os cookies disponíveis ao JavaScript podem ser roubados usando XSS.
 
 ## Segurança
 
-> **Nota:** Informações confidenciais ou restritas nunca devem ser transmitidas via cookies HTTP, já que todo o mecanismo é intrinsecamente inseguro.
+> [!NOTE]
+> Informações confidenciais ou restritas nunca devem ser transmitidas via cookies HTTP, já que todo o mecanismo é intrinsecamente inseguro.
 
 ### Sequestro de sessões e XSS
 
@@ -197,7 +197,7 @@ Uma abordagem mais radical aos cookies são os cookies zumbi ou _Evercookies_, q
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - {{domxref("Navigator.cookieEnabled")}}
-- [Inspecionando cookies usando o Inspetor de Armazenamento](/pt-BR/docs/Tools/Storage_Inspector)
+- [Inspecionando cookies usando o Inspetor de Armazenamento](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
 - [Especificação dos cookies: RFC 6265](https://tools.ietf.org/html/rfc6265)
 - [Artigo de Nicholas Zakas sobre cookies](https://www.nczonline.net/blog/2009/05/05/http-cookies-explained/)
 - [Artigo de Nicholas Zakas sobre cookies e segurança](https://www.nczonline.net/blog/2009/05/12/cookies-and-security/)

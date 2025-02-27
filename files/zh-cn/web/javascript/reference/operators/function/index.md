@@ -17,7 +17,7 @@ let function_expression = function [name]([param1[, param2[, ..., paramN]]]) {
 };
 ```
 
-从 [ES2015](/zh-CN/docs/)开始，你也可以使用[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 。
+从 [ES2015](/zh-CN/docs/Web)开始，你也可以使用[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 。
 
 ### 参数
 
@@ -30,7 +30,7 @@ let function_expression = function [name]([param1[, param2[, ..., paramN]]]) {
 
 ## 描述
 
-函数表达式（function expression）非常类似于函数声明（function statement）（详情查看[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)），并且两者拥有几乎相同的语法。函数表达式与函数声明的最主要区别是函数名称（_function name_），在函数表达式中可省略它，从而创建匿名函数（_anonymous_ functions）。一个函数表达式可以被用作一个 IIFE（Immediately Invoked Function Expression，即时调用的函数表达式），它一旦定义就运行。更多信息请查看[函数](/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope)。
+函数表达式（function expression）非常类似于函数声明（function statement）（详情查看[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)），并且两者拥有几乎相同的语法。函数表达式与函数声明的最主要区别是函数名称（_function name_），在函数表达式中可省略它，从而创建匿名函数（_anonymous_ functions）。一个函数表达式可以被用作一个 IIFE（Immediately Invoked Function Expression，即时调用的函数表达式），它一旦定义就运行。更多信息请查看[函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)。
 
 ### 函数表达式提升 (Function expression hoisting)
 
@@ -46,7 +46,7 @@ var notHoisted = function () {
 
 ### 具名函数表达式
 
-如果你想在函数体内部引用当前函数，则需要创建一个具名函数表达式。**然后函数名称将会（且只会）作为函数体（作用域内）的本地变量**。这样也可以避免使用非标准的 [arguments.callee](/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments/callee) 属性。
+如果你想在函数体内部引用当前函数，则需要创建一个具名函数表达式。**然后函数名称将会（且只会）作为函数体（作用域内）的本地变量**。这样也可以避免使用非标准的 [arguments.callee](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee) 属性。
 
 ```js
 var math = {
@@ -100,11 +100,9 @@ button.addEventListener("click", function (event) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
+- {{jsxref("Functions/Arrow_functions", "箭头函数", "", 1)}}
+- {{jsxref("Functions", "函数", "", 1)}}
 - {{jsxref("Function")}}
-- {{jsxref("Statements/function", "function statement")}}
-- {{jsxref("Statements/function*", "function* statement")}}
-- {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("GeneratorFunction")}}
+- {{jsxref("Statements/function", "function 语句", "", 1)}}

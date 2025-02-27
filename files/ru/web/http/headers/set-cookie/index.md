@@ -152,14 +152,14 @@ Set-Cookie: __Host-id=1; Secure
 Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 ```
 
-## Specifications
+## Спецификации
 
 | Specification                                                                                    | Title                                                         |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
 | {{RFC("6265", "Set-Cookie", "4.1")}}                                                             | HTTP State Management Mechanism                               |
 | [draft-ietf-httpbis-rfc6265bis-02](https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-02) | Cookie Prefixes, Same-Site Cookies, and Strict Secure Cookies |
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -167,7 +167,7 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 
 - Starting with Chrome 52 and Firefox 52, insecure sites (`http:`) can't set cookies with the "secure" directive anymore.
 
-## See also
+## Смотрите также
 
 - [HTTP cookies](/ru/docs/Web/HTTP/Cookies)
 - {{HTTPHeader("Cookie")}}

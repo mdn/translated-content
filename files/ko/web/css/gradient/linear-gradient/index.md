@@ -180,7 +180,7 @@ body {
 
 ### 더 많은 선형 그라데이션 예제
 
-더 많은 예제를 보기 위해서는 [CSS 그라데이션 사용하기](/ko/docs/Web/CSS/CSS_Images/Using_CSS_gradients)를 참조하세요.
+더 많은 예제를 보기 위해서는 [CSS 그라데이션 사용하기](/ko/docs/Web/CSS/CSS_images/Using_CSS_gradients)를 참조하세요.
 
 ## 명세서
 
@@ -192,7 +192,7 @@ body {
 
 ## 같이 보기
 
-- [CSS 그라데이션 사용하기](/ko/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [CSS 그라데이션 사용하기](/ko/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - 다른 그라데이션 함수들: {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - {{CSSxRef("&lt;image&gt;")}}
 - {{cssxref("element", "element()")}}

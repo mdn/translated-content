@@ -5,11 +5,12 @@ slug: Web/API/AnalyserNode/fftSize
 
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AnalyserNode") }} 接口的 `fftSize` 属性的值是一个无符号长整型的值，表示（信号）样本的窗口大小。当执行[快速傅里叶变换](/zh-CN/docs/)（Fast Fourier Transfor (FFT)）时，这些（信号）样本被用来获取频域数据。
+{{ domxref("AnalyserNode") }} 接口的 `fftSize` 属性的值是一个无符号长整型的值，表示（信号）样本的窗口大小。当执行[快速傅里叶变换](/zh-CN/docs/Web)（Fast Fourier Transfor (FFT)）时，这些（信号）样本被用来获取频域数据。
 
 fftSize 属性的值必须是从 32 到 32768 范围内的 2 的非零幂; 其默认值为 2048.
 
-> **备注：** 如果其值不是 2 的幂，或者它在指定范围之外，则抛出异常 INDEX_SIZE_ERR.
+> [!NOTE]
+> 如果其值不是 2 的幂，或者它在指定范围之外，则抛出异常 INDEX_SIZE_ERR.
 
 ## 语法
 
@@ -27,7 +28,7 @@ analyser.fftSize = 2048;
 
 下面的例子展示了 [`AudioContext`](/zh-CN/docs/Web/API/AudioContext) 创建一个 `AnalyserNode`, 然后用 [`requestAnimationFrame`](/zh-CN/docs/Web/API/Window/requestAnimationFrame) 和 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas) 去反复收集当前音频的时域数据，并绘制为一个示波器风格的输出 (频谱).
 
-更多的例子/信息，查看 [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/) 演示 (相关代码在 [app.js 在 128 行\~205 行](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+更多的例子/信息，查看 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 演示 (相关代码在 [app.js 在 128 行\~205 行](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -90,4 +91,4 @@ function draw() {
 
 ## 相关内容
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

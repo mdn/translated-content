@@ -3,7 +3,7 @@ title: String.prototype.trimLeft()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
 ---
 
-{{JSRef("Global_Objects", "String")}} {{non-standard_header}}
+{{JSRef}} {{non-standard_header}}
 
 ## Сводка
 

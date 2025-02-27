@@ -65,7 +65,8 @@ content mypackage location/ contentaccessible=yes
 
 Esto no debería ser algo que se haga muy seguido, pero está disponible para aquellos casos raros en los que es necesario. Debe tomarse en cuenta que es posible que Firefox alerte al usuario que su extensión utiliza una bandera en el contentaccessible de alguna manera, ya que consituye un riesgo potencial en la seguridad.
 
-> **Nota:** Ya que Firefox 2 no entiende la bandera `contentaccessible` (ignorará la instrucción completa de que contiene la bandera), si se desea que el complemento sea compatible con Firefox 2 y Firefox 3, hay que hacer algo como esto:
+> [!NOTE]
+> Ya que Firefox 2 no entiende la bandera `contentaccessible` (ignorará la instrucción completa de que contiene la bandera), si se desea que el complemento sea compatible con Firefox 2 y Firefox 3, hay que hacer algo como esto:
 >
 > ```
 > content mypackage location/
@@ -78,7 +79,7 @@ En versiones anteriores de Firefox, había casos en los que cuando el usuario se
 
 ### Cambios en JavaScript
 
-Firefox 3 soporta [JavaScript 1.8](/en/New_in_JavaScript_1.8). Un cambio importante que quizás requiera actualizaciones en los sitios web o en las aplicaciones, es que los Script obsoletos y no-estandar no son soportados. Esto no es la etiqueta `<script>`, pero un objeto de JavaScript que nunca fue estandarizado. De cualquier manera es muy improbable que se use, así que probablemente no surgan problemas.
+Firefox 3 soporta [JavaScript 1.8](/en-US/New_in_JavaScript_1.8). Un cambio importante que quizás requiera actualizaciones en los sitios web o en las aplicaciones, es que los Script obsoletos y no-estandar no son soportados. Esto no es la etiqueta `<script>`, pero un objeto de JavaScript que nunca fue estandarizado. De cualquier manera es muy improbable que se use, así que probablemente no surgan problemas.
 
 ### Vea también
 

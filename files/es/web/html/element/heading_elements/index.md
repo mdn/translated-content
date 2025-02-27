@@ -5,22 +5,22 @@ slug: Web/HTML/Element/Heading_Elements
 
 Los elementos de **encabezado** implementan seis niveles de encabezado del documento, `<h1>` es el más importante, y `<h6>`, el menos importante. Un elemento de encabezado describe brevemente el tema de la sección que presenta. La información de encabezado puede ser usada por los agentes usuarios, por ejemplo, para construir una tabla de contenidos para un documento automáticamente.
 
-> **Nota:**
+> [!NOTE]
 >
 > - No se deben usar niveles inferiores para reducir el tamaño de la fuente: use la propiedad [CSS](/es/docs/Web/CSS) {{cssxref("font-size")}} para eso.
 > - Evite omitir niveles de encabezado: siempre comience con `<h1>`, después use `<h2>` y así sucesivamente.
 > - Con el elemento {{HTMLElement("section")}}, debe considerar evitar usar \<h1> más de una vez en una página; por costumbre, se usa para mostrar el título de la página, con todos los encabezados debajo de éste comenzando con `<h2>`. Cuando se usan secciones, debe usarse un `<h1>` por sección. Véase [Definiendo secciones](/es/docs/Sections_and_Outlines_of_an_HTML5_document#Definiendo_secciones_en_HTML5) en [Secciones y esquema de un documento HTML5](/es/docs/Sections_and_Outlines_of_an_HTML5_document) para más información.
 
-| [Categorías de contenido](/es/docs/Web/Guide/HTML/categorias_de_contenido) | [Contenido dinámico](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico), contenido de encabezados, contenido palpable.                                                                        |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                                        | [Contenido textual o estático](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_textual_o_estático).                                                                                                  |
-| Omisión de etiquetas                                                       | {{no_tag_omission}}                                                                                                                                                                                            |
-| Elementos padres permitidos                                                | Cualquier elemento que acepte [contenido dinámico](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico); no debe usarse como hijo del elemento {{HTMLElement("hgroup")}}, pues éste es obsoleto |
-| Interfaz DOM                                                               | {{domxref("HTMLHeadingElement")}}                                                                                                                                                                              |
+| [Categorías de contenido](/es/docs/Web/HTML/Content_categories) | [Contenido dinámico](/es/docs/Web/HTML/Content_categories#contenido_dinámico), contenido de encabezados, contenido palpable.                                                                        |
+| --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido                                             | [Contenido textual o estático](/es/docs/Web/HTML/Content_categories#contenido_textual_o_estático).                                                                                                  |
+| Omisión de etiquetas                                            | Ninguna, tanto la etiqueta inicial como la final son obligatorias.                                                                                                                                  |
+| Elementos padres permitidos                                     | Cualquier elemento que acepte [contenido dinámico](/es/docs/Web/HTML/Content_categories#contenido_dinámico); no debe usarse como hijo del elemento {{HTMLElement("hgroup")}}, pues éste es obsoleto |
+| Interfaz DOM                                                    | {{domxref("HTMLHeadingElement")}}                                                                                                                                                                   |
 
 ## Atributos
 
-Estos elementos incluyen los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
+Estos elementos incluyen los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
 El atributo `align` es obsoleto; no debe usarse.
 

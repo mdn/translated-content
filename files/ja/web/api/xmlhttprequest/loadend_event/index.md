@@ -1,11 +1,12 @@
 ---
 title: "XMLHttpRequest: loadend イベント"
+short-title: loadend
 slug: Web/API/XMLHttpRequest/loadend_event
 l10n:
-  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`loadend`** イベントは、リクエストが完了したときに、成功した場合（{{domxref("XMLHttpRequest/load_event", "load")}} の後）、成功しなかった場合（{{domxref("XMLHttpRequest/abort_event", "abort")}} または {{domxref("XMLHttpRequest/error_event", "error")}} の後）のどちらでも発行されます。
 
@@ -142,4 +143,4 @@ xhrButtonAbort.addEventListener("click", () => {
 ## 関連情報
 
 - 関連イベント: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
-- [進捗の監視](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
+- [進捗の監視](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#進捗の監視)

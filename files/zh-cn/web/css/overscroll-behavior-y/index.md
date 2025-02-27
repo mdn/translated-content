@@ -46,7 +46,7 @@ overscroll-behavior-y: unset;
 
 ## 示例
 
-### 阻止底部元素在垂直方向上滚动。
+### 阻止底部元素在垂直方向上滚动
 
 ```css
 .messages {
@@ -68,5 +68,5 @@ overscroll-behavior-y: unset;
 
 ## 参见
 
-- [接管你的滚动：自定义下拉刷新和溢出效果](https://developer.chrome.com/blog/overscroll-behavior/#demo)
+- [接管你的滚动：自定义下拉刷新和溢出效果](https://developer.chrome.google.cn/blog/overscroll-behavior#demo)
 - 映射的逻辑属性：{{cssxref("overscroll-behavior-inline")}}、{{cssxref("overscroll-behavior-block")}}

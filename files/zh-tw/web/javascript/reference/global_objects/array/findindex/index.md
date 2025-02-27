@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 **`findIndex()`** 方法將依據提供的測試函式，尋找陣列中符合的元素，並返回其 **index**（索引）。如果沒有符合的對象，將返回 -1 。
 
-{{EmbedInteractiveExample("pages/js/array-findindex.html")}}
+{{InteractiveExample("JavaScript Demo: Array.findIndex()")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const isLargeNumber = (element) => element > 13;
+
+console.log(array1.findIndex(isLargeNumber));
+// Expected output: 3
+```
 
 另請參見 {{jsxref("Array.find", "find()")}} 方法，它返回陣列中找到的元素的**值**，而不是其索引。
 
@@ -132,7 +141,7 @@ if (!Array.prototype.findIndex) {
 }
 ```
 
-如果您需要相容過時的不支援 [`Object.defineProperty`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 的 JavaScript 引擎，最好不要使用 polyfill 來填充 `Array.prototype` 方法，因為無法使它們成為不可枚舉的（non-enumerable）屬性。
+如果你需要相容過時的不支援 [`Object.defineProperty`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 的 JavaScript 引擎，最好不要使用 polyfill 來填充 `Array.prototype` 方法，因為無法使它們成為不可枚舉的（non-enumerable）屬性。
 
 ## 規範
 

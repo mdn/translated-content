@@ -13,7 +13,7 @@ Para tirar o máximo proveito deste módulo, é recomendável a leitura dos mód
 
 Conhecimento básico de [HTML](/pt-BR/docs/Learn/HTML) e [CSS](/pt-BR/docs/Learn/CSS) serão utéis.
 
-> **Nota:** **Notes** Se você estiver trabalhando de um dispositivo que não permita a criação de arquivos. Você pode tentar editar os arquivos em um editor online como [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
+> **Nota:** **Notes** Se você estiver trabalhando de um dispositivo que não permita a criação de arquivos. Você pode tentar editar os arquivos em um editor online como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guias
 
@@ -21,7 +21,7 @@ Conhecimento básico de [HTML](/pt-BR/docs/Learn/HTML) e [CSS](/pt-BR/docs/Learn
   - : Primeiro, vamos começar com apis de alto nível — o que elas são, como elas funcionam, quando usar no seu código, como elas são estruturadas? Nós veremos diferentes tipos de classses principais e o que elas são, e quais são as possibilidades de uso.
 - [Manipulando documentos](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
   - : Quando estiver codificando páginas da web ou aplicações, uma das coisas mais comuns que você irá fazer será manipular documentos da web de alguma forma. Normalmente isso é feito usando o Document Object Model (DOM), um conjunto de APIs para controlar o HTML e a informação sobre os estilos que usa fortemente o objeto {{domxref("Document")}}. Neste artigo vamos ver como usar o DOM em detalhes, juntamente com outras APIs interessantes que podem alterar seu ambiente de desenvolvimento de modos interessantes.
-- [Buscando dados do servidor](/pt-BR/docs/)
+- [Buscando dados do servidor](/pt-BR/docs/Web)
   - : Outra tarefa muito comum em websites modernos e aplicações é recuperar dados individuais de um servidor para atualizar partes de uma página sem ter que recarregar uma página inteira novamente. Este aparentemente pequeno detalhe tem tido um impacto enorme sobre o desempenho e comportamento de websites, desse modo neste artigo, vamos explicar esse conceito, e observar as tecnologias que tornam isso possível, tais como {{domxref("XMLHttpRequest")}} e o [Fetch API](/pt-BR/docs/Web/API/Fetch_API).
 - [Third party APIs](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
   - : The APIs we've covered so far are built into the browser, but not all APIs are. Many large websites and services such as Google Maps, Twitter, Facebook, PayPal, etc. provide APIs allowing developers to make use of their data (e.g. displaying your twitter stream on your blog) or services (e.g. displaying custom Google Maps on your site, or using Facebook login to log in your users). This article looks at the difference between browser APIs and 3rd party APIs and shows some typical uses of the latter.

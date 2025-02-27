@@ -1,7 +1,11 @@
 ---
-title: 連続的メディア (Continuous Media)
+title: Continuous Media (連続的メディア)
 slug: Glossary/Continuous_Media
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
+
+{{GlossarySidebar}}
 
 連続的なメディアは、元と送り先の間にタイミングの関連があるデータです。最もよくある例は、オーディオやモーションビデオです。連続的なメディアは、元と送り先に「強い」タイミング関連があるリアルタイム (インタラクティブ)であったり、関連はそこまで厳しくないストリーミング (プレイバック)であったりします。
 

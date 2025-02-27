@@ -7,7 +7,8 @@ slug: Web/API/Notification/close
 
 La méthode `close()` de l'interface {{domxref("Notification")}} est utilisée pour fermer / supprimer une notification précédemment affichée.
 
-> **Note :** Cette API ne doit pas être utilisée uniquement pour supprimer la notification de l'écran après un délai fixe, car cette méthode supprimera également la notification de toute barre de notification, empêchant ainsi les utilisateurs d'interagir avec elle après son affichage initial. Une utilisation valable de cette API serait de supprimer une notification qui n'est plus pertinente (par exemple, l'utilisateur a déjà lu la notification sur la page Web dans le cas d'une application de messagerie ou la chanson suivante est déjà en cours de lecture dans une application musicale).
+> [!NOTE]
+> Cette API ne doit pas être utilisée uniquement pour supprimer la notification de l'écran après un délai fixe, car cette méthode supprimera également la notification de toute barre de notification, empêchant ainsi les utilisateurs d'interagir avec elle après son affichage initial. Une utilisation valable de cette API serait de supprimer une notification qui n'est plus pertinente (par exemple, l'utilisateur a déjà lu la notification sur la page Web dans le cas d'une application de messagerie ou la chanson suivante est déjà en cours de lecture dans une application musicale).
 
 ## Syntaxe
 

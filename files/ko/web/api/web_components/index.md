@@ -13,9 +13,7 @@ slug: Web/API/Web_components
 
 웹 컴포넌트는 다음 문제들을 해결하는 것을 목표로 합니다 — 세 가지 주요 기술들로 구성되며, 재사용을 원하는 어느곳이든 코드 충돌에 대한 걱정이 없는 캡슐화된 기능을 갖춘 다용도의 커스텀 엘리먼트를 생성하기 위해 함께 사용될 수 있습니다.
 
-**커스텀 엘리먼트**: 커스텀 엘리먼트와 그 동작을 정의할 수 있도록 해주는 JavaScript API 의 집합으로, 사용자 인터페이스에서 원했던대로 사용될 수 있습니다.
-
-- **Custom elements**: 사용자 인터페이스에서 원하는대로 사용할 수있는 사용자 정의 요소 및 해당 동작을 정의 할 수있는 JavaScript API 세트입니다.
+- **Custom elements**: 사용자 인터페이스에서 원하는 대로 사용할 수 있는 사용자 정의 요소 및 해당 동작을 정의 할 수 있는 JavaScript API 세트입니다.
 - **Shadow DOM**: 캡슐화된 "그림자" DOM 트리를 엘리먼트 — 메인 다큐먼트 DOM 으로부터 독립적으로 렌더링 되는 — 를 추가하고 연관된 기능을 제어하기 위한 JavaScript API 의 집합. 이 방법으로 엘리먼트의 기능을 프라이빗하게 유지할 수 있어, 다큐먼트의 다른 부분과의 충돌에 대한 걱정 없이 스크립트와 스타일을 작성할 수 있습니다.
 - **HTML 템플릿**: {{HTMLElement("template")}} 과 {{HTMLElement("slot")}} 엘리먼트는 렌더링된 페이지에 나타나지 않는 마크업 템플릿을 작성할 수 있게 해줍니다. 그 후, 커스텀 엘리먼트의 구조를 기반으로 여러번 재사용할 수 있습니다.
 
@@ -29,11 +27,11 @@ slug: Web/API/Web_components
 
 ## 튜토리얼
 
-- [커스텀 엘리먼트 사용하기](/ko/docs/Web/Web_Components/Using_custom_elements)
+- [커스텀 엘리먼트 사용하기](/ko/docs/Web/API/Web_components/Using_custom_elements)
   - : 간단한 웹 컴포넌트를 생성하는 커스텀 엘리먼트의 기능을 사용하는 방법과 라이프사이클 콜백 및 그 외 고급 기능들을 보여주는 가이드입니다.
-- [shadow DOM 사용하기](/ko/docs/Web/Web_Components/Using_shadow_DOM)
+- [shadow DOM 사용하기](/ko/docs/Web/API/Web_components/Using_shadow_DOM)
   - : shadow DOM 기본을 살펴보고, shadow DOM 을 엘리먼트에 추가하고, shadow DOM 트리를 추가하고 스타일링하는 방법 등을 보여주는 가이드입니다.
-- [템플릿과 슬롯 사용하기](/ko/docs/Web/Web_Components/Using_templates_and_slots)
+- [템플릿과 슬롯 사용하기](/ko/docs/Web/API/Web_components/Using_templates_and_slots)
   - : {{htmlelement("template")}} 과 {{htmlelement("slot")}} 엘리먼트를 사용해 재사용가능한 HTML 구조를 정의하는 방법과 웹 컴포넌트 내에서 그 구조를 사용하는 방법을 보여주는 가이드입니다.
 
 ## 레퍼런스
@@ -44,7 +42,7 @@ slug: Web/API/Web_components
   - : 커스텀 엘리먼트와 관련된 기능을 포함하며, 새로운 커스텀 엘리먼트를 등록하여 다큐먼트에서 사용할 수 있도록 해주는 {{domxref("CustomElementRegistry.define()")}} 메소드가 가장 주요합니다.
 - {{domxref("Window.customElements")}}
   - : `CustomElementRegistry` 객체에 대한 참조를 반환합니다.
-- [라이프 사이클 콜백](/ko/docs/Web/Web_Components/Using_custom_elements#Using_the_lifecycle_callbacks)
+- [라이프 사이클 콜백](/ko/docs/Web/API/Web_components/Using_custom_elements#using_the_lifecycle_callbacks)
 
   - : 커스텀 엘리먼트의 클래스 정의 내에 정의되어 동작에 영향을 주는 특별한 콜백 함수입니다.
 
@@ -65,9 +63,9 @@ slug: Web/API/Web_components
   - : 커스텀 엘리먼트에 관련된 수도 클래스입니다.
 
     - {{cssxref(":defined")}}: 내장 엘리먼트와 `CustomElementRegistry.define()` 으로 정의된 커스텀 엘리먼트를 포함해, 정의된 모든 엘리먼트와 일치합니다.
-    - {{cssxref(":host")}}: 대상 CSS 를 내부에 포함하고 있는 [shadow DOM](/ko/docs/Web/Web_Components/Using_shadow_DOM) 의 shadow 호스트를 선택합니다.
-    - {{cssxref(":host()")}}: 대상 CSS 를 내부에 포함하고 있는 [shadow DOM](/ko/docs/Web/Web_Components/Using_shadow_DOM) 의 shadow 호스트를 선택합니다(따라서 shadow DOM 내부에서 커스텀 엘리먼트를 선택할 수 있습니다) — 함수의 파라미터로써 주어진 셀렉터가 shadow 호스트에 일치하는 경우에만 해당합니다.
-    - {{cssxref(":host-context()")}}: 대상 CSS 를 내부에 포함하고 있는 [shadow DOM](/ko/docs/Web/Web_Components/Using_shadow_DOM) 의 shadow 호스트를 선택합니다(따라서 shadow DOM 내부에서 커스텀 엘리먼트를 선택할 수 있습니다) — 함수의 파라미터로써 주어진 셀렉터가 DOM 계층 내에 위치한 shadow 호스트의 조상에 일치하는 경우에만 해당합니다.
+    - {{cssxref(":host")}}: 대상 CSS 를 내부에 포함하고 있는 [shadow DOM](/ko/docs/Web/API/Web_components/Using_shadow_DOM) 의 shadow 호스트를 선택합니다.
+    - {{cssxref(":host()")}}: 대상 CSS 를 내부에 포함하고 있는 [shadow DOM](/ko/docs/Web/API/Web_components/Using_shadow_DOM) 의 shadow 호스트를 선택합니다(따라서 shadow DOM 내부에서 커스텀 엘리먼트를 선택할 수 있습니다) — 함수의 파라미터로써 주어진 셀렉터가 shadow 호스트에 일치하는 경우에만 해당합니다.
+    - {{cssxref(":host-context()")}}: 대상 CSS 를 내부에 포함하고 있는 [shadow DOM](/ko/docs/Web/API/Web_components/Using_shadow_DOM) 의 shadow 호스트를 선택합니다(따라서 shadow DOM 내부에서 커스텀 엘리먼트를 선택할 수 있습니다) — 함수의 파라미터로써 주어진 셀렉터가 DOM 계층 내에 위치한 shadow 호스트의 조상에 일치하는 경우에만 해당합니다.
 
 ### Shadow DOM
 
@@ -120,7 +118,7 @@ slug: Web/API/Web_components
 
     - {{cssxref("::slotted")}}: 슬롯으로 삽입된 모든 컨텐츠와 일치합니다.
 
-- {{event("slotchange")}} 이벤트
+- {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} 이벤트
   - : 슬롯에 포함된 노드가 변경될 때 {{domxref("HTMLSlotElement")}} 인스턴스({{htmlelement("slot")}} 엘리먼트)에서 실행됩니다.
 
 ## 예제

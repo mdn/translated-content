@@ -1,94 +1,83 @@
 ---
-title: ARIA live regions
+title: ARIA 实时区域
 slug: Web/Accessibility/ARIA/ARIA_Live_Regions
+l10n:
+  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
 
-使用 JavaScript，我们可以动态更改页面的某些部分，而无需重新加载整个页面——例如，可以动态更新搜索结果列表，或者显示不需要用户交互的警告或通知。虽然这些更改对于能够看到页面的用户来说通常是显而易见的，但是对于残疾用户来说，它们可能并不明显。ARIA Live 区域填补了这个空白，并提供了一种以编程方式显现动态内容更改的方法，这种方式可以由残疾辅助技术提供提示。
+{{AccessibilitySidebar}}
 
-> **备注：** 辅助技术将播报实时区域内容的动态变化。必须首先显示活动区域（通常是空的），以便浏览器和辅助技术可以知道它。然后宣布任何后续更改。
->
-> 在页面加载时的初始标记中简单地添加一个 `aria-live` 属性或者一个特殊的活动区域角色 ( `role` ) (例如 `role="alert"`) 将不会起作用。
->
-> 向文档中动态添加一个包含 `aria-live` 属性的元素或者特殊的角色 ( `role` ) 也不会导致辅助技术工具的任何播报（在那个时间点，浏览器/辅助技术工具还没有检测到活动区域）所以你不能监控它的变化)。
->
-> 总是确保实时区域首先出现在文档中，然后再动态添加/更改任何内容。
->
-> 只要在更改发生之前添加属性，就可以在要宣布更改的元素上包含 `aria-live` 属性或专门的活动区域角色（例如`role =“ alert”`）——在原始标记中或动态地使用 JavaScript。
+使用 JavaScript，我们可以动态更改页面的某些部分，而无需重新加载整个页面——例如，可以动态更新搜索结果列表，或者显示不需要用户交互的警告或通知。虽然这些更改对于能够看到页面的用户来说通常是显而易见的，但是对于使用辅助技术的用户来说，它们可能并不明显。ARIA 实时区域（live region）填补了这个空白，并提供了一种以编程方式显现动态内容更改的方法，这种方式可以由辅助技术提供宣告。
 
-## 简单的活动区域
+> [!NOTE]
+> 辅助技术通常只会宣告实时区域中的*动态*内容变更。在你希望宣告发生变更的元素，你只需要在变更发生之前在相应的元素上包含 `aria-live` 属性或专门的实时区域 `role`（例如 [`role="status"`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/status_role)）——无论是在原始标记中，还是使用 JavaScript 动态添加。首先创建一个空的实时区域，然后——在单独的步骤中——更改区域内的内容。虽然在规范中没有明确记录，但浏览器/辅助技术确实对 [`role="alert"`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/alert_role) 包含了特殊处理：在大多数情况下，即使页面的初始标记中已经存在包含通知/消息的 `role="alert"` 区域，或者动态注入到页面中，该区域内的内容也会被宣告。但是，请注意，`role="alert"` 区域在被宣告时会根据特定的浏览器/辅助技术组合自动添“警报”前缀。
 
-在不重新加载页面的情况下更新的动态内容通常是区域或窗口小部件。非交互式的简单内容更改应标记为实时区域。以下是每个相关的 ARIA 活动区域属性的列表，并带有说明。
+## 实时区域
 
-1. **`aria-live`**: `aria-live=POLITENESS_SETTING` 被用来设置屏幕阅读器对待活动区域更新的优先级 - 可能的设置：`off`, `polite` or `assertive` 。默认设置是 `off` 。这个设置是到目前为止最重要的。
-2. **`aria-controls`**: `aria-controls=[IDLIST]` 被用来将控制动作与它控制的区域相关联。区域就像`div` 里面的 `id` 被鉴别；多区域可以被一个带空格的控制动作关联，例如： `aria-controls="myRegionID1 myRegionsID2"` 。
+无需页面重新加载即可更新的动态内容通常是区域或微件（widget）。不涉及交互的简单内容更改应标记为实时区域。使用 `aria-live` 属性显式标记实时区域。
 
-   > **警告：** 尚不知道在当前的辅助技术工具中是否实现了实时区域的 ARIA 控制方面。需要研究。
+**`aria-live`**：`aria-live=POLITENESS_SETTING` 用于设置屏幕阅读器处理实时区域更新的优先级——可能的设置有：`off`、`polite` 或 `assertive`。该属性是迄今为止最重要的。
 
-正常来说，只有 `aria-live="polite"` 被使用。任何对用户来说很重要但又不至于令人讨厌的更新的区域都应该被设置此属性。每当用户空闲时，屏幕阅读器都会说出更改。
+通常只使用 `aria-live="polite"`。任何接收对用户重要但不会如此频繁而令人讨厌的更新的区域应该接收该属性。当用户处于空闲状态时，屏幕阅读器将朗读更改。
 
-对于不重要的区域或由于快速更新或其他原因而烦人的区域，请使用 `aria-live="off"` 将其静音。
+`aria-live="assertive"` 应仅用于时间敏感/关键通知，这些通知绝对需要用户立即关注。通常，对 assertive 动态区域的更改将中断屏幕阅读器当前正在进行的任何宣告。因此，它可能会非常让人讨厌并具有破坏性，应该谨慎使用。
 
-### 让下拉框更新有用的屏幕信息
+与直觉相反，`aria-live="off"` 不表示不应该宣告更改。当元素具有 `aria-live="off"`（或具有此隐含值的 `role`，例如 `role="marquee"` 或 `role="timer"`）时，仅应在焦点位于元素上或内部时才宣告元素内容的更改。
 
-一个专门提供有关行星信息的网站提供了一个下拉框。从下拉列表中选择一个行星时，页面上的区域会更新有关所选行星的信息。
+### 基本示例：下拉框更新屏幕上有用的信息
 
-#### HTML
+一个专门提供有关行星信息的网站提供了一个下拉框。当从下拉框中选择一个行星时，页面上的一个区域将被更新为有关所选行星的信息。
 
 ```html
 <fieldset>
-  <legend>Planet information</legend>
-  <label for="planetsSelect">Planet:</label>
+  <legend>行星信息</legend>
+  <label for="planetsSelect">行星：</label>
   <select id="planetsSelect" aria-controls="planetInfo">
-    <option value="">Select a planet&hellip;</option>
-    <option value="mercury">Mercury</option>
-    <option value="venus">Venus</option>
-    <option value="earth">Earth</option>
-    <option value="mars">Mars</option>
+    <option value="">选择一个行星…</option>
+    <option value="mercury">水星</option>
+    <option value="venus">金星</option>
+    <option value="earth">地球</option>
+    <option value="mars">火星</option>
   </select>
-  <button id="renderPlanetInfoButton">Go</button>
+  <button id="renderPlanetInfoButton">确定</button>
 </fieldset>
 
 <div role="region" id="planetInfo" aria-live="polite">
-  <h2 id="planetTitle">No planet selected</h2>
-  <p id="planetDescription">Select a planet to view its description</p>
+  <h2 id="planetTitle">未选择行星</h2>
+  <p id="planetDescription">选择一个行星以查看其描述</p>
 </div>
 
 <p>
-  <small
-    >Information courtesy
-    <a href="https://en.wikipedia.org/wiki/Solar_System#Inner_Solar_System"
-      >Wikipedia</a
-    ></small
-  >
+  <small>
+    信息来自<a href="https://zh.wikipedia.org/wiki/太阳系">维基百科</a>
+  </small>
 </p>
 ```
-
-#### JavaScript
 
 ```js
 const PLANETS_INFO = {
   mercury: {
-    title: "Mercury",
+    title: "水星",
     description:
-      "Mercury is the smallest and innermost planet in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods.",
+      "水星是太阳系中最小、最靠近太阳的行星。它以罗马信使神水星命名。",
   },
 
   venus: {
-    title: "Venus",
+    title: "金星",
     description:
-      "Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.",
+      "金星（英语：Venus）是离太阳第二近的行星。在英语中，它以罗马爱与美之女神“维纳斯（Venus）”命名。",
   },
 
   earth: {
-    title: "Earth",
+    title: "地球",
     description:
-      "Earth is the third planet from the Sun and the only object in the Universe known to harbor life.",
+      "地球是距离太阳第三近的行星，也是宇宙中唯一已知存在生命的天体。",
   },
 
   mars: {
-    title: "Mars",
+    title: "火星",
     description:
-      'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war, and is often referred to as the "Red Planet".',
+      "火星是距离太阳第四近的行星，也是太阳系中仅次于水星的第二小行星。火星在英文中得名于罗马战神，通常被称为“红色星球”。",
   },
 };
 
@@ -100,8 +89,8 @@ function renderPlanetInfo(planet) {
     planetTitle.textContent = PLANETS_INFO[planet].title;
     planetDescription.textContent = PLANETS_INFO[planet].description;
   } else {
-    planetTitle.textContent = "No planet selected";
-    planetDescription.textContent = "Select a planet to view its description";
+    planetTitle.textContent = "未选择行星";
+    planetDescription.textContent = "选择一个行星以查看其描述";
   }
 }
 
@@ -118,87 +107,121 @@ renderPlanetInfoButton.addEventListener("click", (event) => {
 });
 ```
 
-{{EmbedLiveSample('让下拉框更新有用的屏幕信息', '', 350)}}
+{{EmbedLiveSample('基本示例：下拉框更新屏幕上有用的信息', '', 350)}}
 
-当用户选择一个新的行星时，活动区域的信息会被播报。因为这个活动区域有 `aria-live="polite"` 属性，屏幕阅读器将会等待用户暂停后再播报更新。这样的话，在列表中向下滑动并选择其他星球将不会在实时区域中播报更新。仅会针对最终选择的星球播报实时区域的更新。
+用户选择新的行星时，实时区域中的信息将被宣告。由于实时区域具有 `aria-live="polite"`，屏幕阅读器会等待用户暂停，然后再宣告更新。因此，在列表中向下移动并选择另一个行星不会宣告动态区域中的更新。动态区域中的更新只会针对最终选择的行星进行宣告。
 
-这是 Mac 上 VoiceOver 的屏幕截图，播报对实时区域的更新（通过字幕）：![A screenshot of VoiceOver on Mac announcing the update to a live region. Subtitles are shown in the picture.](web_accessibility_aria_aria_live_regions.png)
+以下是 VoiceOver 在 Mac 上宣告实时区域的更新（通过字幕显示）的屏幕截图：
 
-## 更好的专业活动区域角色
+![VoiceOver 在 Mac 上宣告实时区域的更新的屏幕截图。图中显示了字幕。](web_accessibility_aria_aria_live_regions.png)
 
-在以下众所周知的预定义情况下，最好使用提供的特定“活动区域角色”：
+## 具有隐式实时区域属性的角色
 
-| 角色   | 描述                                                                                                                                       | 兼容性提示                                                                                                                                                                    |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 日志   | 对话、错误、游戏或者其他类型的日志                                                                                                         | 为最大化兼容性，当你使用这个角色时，请加入额外的`aria-live="polite"` 参数。                                                                                                   |
-| 状态   | 一个状态栏或者屏幕上提供持续更新某种状态的区域。屏幕阅读器用户有一个特殊的命令用来读取当前的状态。                                         | 为最大化兼容性，当你使用这个角色时，请加入额外的`aria-live="polite"` 参数。                                                                                                   |
-| 警告   | 在屏幕上闪烁的错误或警告信息。警报对于向用户发出客户端验证通知特别重要。（待定：带有 ARIA 信息的 ARIA 表单教程链接）                       | 为最大化兼容性，当你使用这个角色时，请加入额外的`aria-live="assertive"` 参数。但是，同时添加 `aria-live` 和 `role="alert"` 会导致在 iOS 平台上出现 VoiceOver 的双重播报问题。 |
-| 进度条 | 小部件和活动区域之间的混合体。将此参数与 `aria-valuemin` ， `aria-valuenow` 和`aria-valuemax` 结合使用。（_待定_：请在此处添加更多信息）。 |                                                                                                                                                                               |
-| 选框   | 用于滚动文本，例如股票行情自动收录器。                                                                                                     |                                                                                                                                                                               |
-| 计时器 | 或任何类型的计时器或时钟，例如倒数计时器或秒表读数。                                                                                       |                                                                                                                                                                               |
+以下 [`role="…"`](/zh-CN/docs/Web/Accessibility/ARIA/Roles) 值的元素默认表现为实时区域：
 
-## 高级活动区域
+<table style="width: 100%;">
+ <thead>
+  <tr>
+   <th scope="col">角色</th>
+   <th scope="col">描述</th>
+   <th scope="col">兼容性说明</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>log</td>
+   <td>聊天、错误、游戏或其他类型的日志</td>
+   <td>为了最大程度的兼容性，在使用此角色时添加冗余的 <code>aria-live="polite"</code>。</td>
+  </tr>
+  <tr>
+   <td>status</td>
+   <td>提供更新状态的状态栏或屏幕区域。屏幕阅读器用户有一个特殊命令来读取当前状态。</td>
+   <td>为了最大程度的兼容性，在使用此角色时添加冗余的 <code>aria-live="polite"</code>。</td>
+  </tr>
+  <tr>
+   <td>alert</td>
+   <td>屏幕闪烁的错误或警告消息。警报对于向客户发出客户端验证通知尤为重要。<a href="https://www.w3.org/WAI/ARIA/apg/example-index/alert/alert.html" class="external" rel=" noopener">警报示例。</a></td>
+   <td>为了最大程度的兼容性，有些人建议在使用此角色时添加冗余的 <code>aria-live="assertive"</code>。然而，在 iOS 上的 VoiceOver 中同时添加 <code>aria-live</code> 和 <code>role="alert"</code> 会导致双重朗读问题。</td>
+  </tr>
+  <tr>
+   <td>progressbar</td>
+   <td>微件和实时区域的混合体。与 <code>aria-valuemin</code>、<code>aria-valuenow</code> 和 <code>aria-valuemax</code> 一起使用。（待定：在此添加更多信息。）</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>marquee</td>
+   <td>滚动的文本，例如股票行情。</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>timer</td>
+   <td>任何类型的计时器或时钟，例如倒计时器或秒表读数。</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-（_待定_：有关操作系统 / 浏览器 / 辅助技术工具组合对单个属性的支持的更详细的信息）
+## 附加的实时区域属性
 
-JAWS 10.0 版中已添加对实时区域的常规支持。Windows Eyes 从 8.0 版开始支持“在 Microsoft Internet Explorer 和 Mozilla Firefox 的浏览模式之外使用”的实时区域。NVDA 早在 2008 年就为 Mozilla Firefox 添加了对实时区域的一些基本支持，并在 2010 年和 2014 年进行了改进。2015 年，还为 Internet Explorer（MSHTML）添加了基本支持。
+实时区域得到了很好的支持。Paciello Group 在 2014 年发布了[有关实时区域支持状态的信息](https://www.tpgi.com/screen-reader-support-aria-live-regions/)。Paul J. Adam 特别研究了 [`aria-atomic` 和 `aria-relevant` 的支持情况](https://pauljadam.com/demos/aria-atomic-relevant.html)。
 
-Paciello Group 有一些 [与活动区域支持状态有关的信息](https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/)(2014)，Paul J. Adam 特别研究了[对于 `Aria-Atomic` 与 `Aria-Relevant` 的支持](http://pauljadam.com/demos/aria-atomic-relevant.html)。
+1. **`aria-atomic`**：`aria-atomic=BOOLEAN` 用于设置屏幕阅读器是否应始终将实时区域呈现为一个整体，即使只有部分区域发生更改。可能的设置有：`false` 或 `true`。默认设置为 `false`。
+2. [**`aria-relevant`**](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)：`aria-relevant=[LIST_OF_CHANGES]` 用于设置哪些类型的更改对于实时区域是相关的。可能的设置是 `additions`、`removals`、`text`、`all` 中的一个或多个。默认设置为 `additions text`。
 
-1. **`aria-atomic`**: `aria-atomic=BOOLEAN` 被用来设置屏幕阅读器是否应该总是将活动区域整个播报，即使区域中只有一部分内容改变。可能的值为 `false` 或者 `true`。默认值为 `false`。
-2. [**`aria-relevant`**](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)：`aria-relevant=[LIST_OF_CHANGES]` 被用来设置哪些类型的改变与活动区域有关。可能的值由以下的一个或者更多组成：`additions`、`removals`、`text`、`all`。默认值是 `additions text`。
-3. **`aria-labelledby`** : `aria-labelledby=[IDLIST]` 被用来将一个区域与其标签关联起来，与 aria-control 类似，但将标签与区域关联。标签标识符间用空格隔开。
-4. **`aria-describedby`** : `aria-describedby=[IDLIST]` 被用来将一个区域与其描述关联起来，与 aria-control 类似，但将标签与描述关联。描述标识符间用空格隔开。
+### 基本示例：`aria-atomic`
 
-### 高级用例：时钟
-
-为了举例说明 `aria-atomic` ，请考虑一个带有简单时钟的站点，其中显示了小时和分钟。时钟每分钟更新一次，而新的剩余时间仅会覆盖当前内容。
+为演示 `aria-atomic`，考虑一个具有简单时钟的网站，显示小时和分钟。每分钟更新时钟，新的剩余时间会覆盖当前内容。
 
 ```html
-<div id="clock" role="timer" aria-live="polite"></div>
+<div id="clock" role="timer" aria-live="polite">
+  <span id="clock-hours"></span>
+  <span id="clock-mins"></span>
+</div>
 ```
 
 ```js
-/* basic JavaScript to update the clock */
+/* 更新时钟的基本 JavaScript */
+function updateClock() {
+  const now = new Date();
+  document.getElementById("clock-hours").textContent = now.getHours();
+  document.getElementById("clock-mins").textContent =
+    `0${now.getMinutes()}`.substr(-2);
+}
 
-setInterval(function () {
-  var now = new Date();
-  document.getElementById("clock").innerHTML =
-    "Time: " + now.getHours() + ":" + ("0" + now.getMinutes()).substr(-2);
-}, 60000);
+/* 第一次运行 */
+updateClock();
+
+/* 每分钟更新 */
+setInterval(updateClock, 60000);
 ```
 
-该函数第一次执行时，将播报所添加字符串的全部。在随后的调用中，将仅播报内容与先前内容相比已更改的部分。例如，当时钟从“17:33”更改为“17:34”时，辅助技术工具将仅播报“4”，这对用户不是很有用。
+第一次执行函数时，将会宣告要添加的整个字符串。在后续的调用中，只会宣告与前一内容相比发生了变化的部分内容。例如，当时钟从“17:33”变为“17:34”时，辅助技术将只宣布“34”，这对用户来说不太有用。
 
-解决此问题的一种方法是，首先清除活动区域的内容，然后注入新内容。但是，有时这可能不可靠，因为这取决于这两个更新的确切时间。
+一个解决方法是首先清除实时区域的所有内容（在本例中，将 `<span id="clock-hours">` 和 `<span id="clock-mins">` 的 `innerHTML` 都设置为空），然后再注入新内容。然而，这种方法有时可能不太可靠，因为它依赖于这两者更新的精确时机。
 
-`aria-atomic="true"` 确保每次更新实时区域时，全部内容都会被完整播报 (例如 "时间：17:34").
+`aria-atomic="true"` 确保每次更新实时区域时，内容的整体都会被完整宣告（例如“17:34”）。
 
 ```html
-<div id="clock" role="timer" aria-live="polite" aria-atomic="true"></div>
+<div id="clock" role="timer" aria-live="polite" aria-atomic="true">…</div>
 ```
 
-> **备注：** 正如我们观察到的那样，重新设置/更新 innerHTML 会导致整个文本被重新播报，无论你是否设置 `aria-atomic="true"` ，所以以上的时钟示例并不能像预期那样地工作。
-
-一个简单的年份控件的工作示例，可以帮助你更好地理解：
+`aria-atomic` 的另一个示例——作为用户操作的结果而进行的更新/通知。
 
 ```html
 <div id="date-input">
-  <label
-    >Year:
-    <input type="text" id="year" value="1990" onblur="change(event)" />
-  </label>
+  <label for="year">年份：</label>
+  <input type="text" id="year" value="1990" onblur="change(event)" />
 </div>
 
-<div id="date-output" aria-live="polite">
-  The set year is:
-  <span id="year-output">1990</span>
+<div id="date-output" aria-atomic="true" aria-live="polite">
+  设定的年份是：<span id="year-output">1990</span>
 </div>
 ```
 
 ```js
 function change(event) {
-  var yearOut = document.getElementById("year-output");
+  const yearOut = document.getElementById("year-output");
+
   switch (event.target.id) {
     case "year":
       yearOut.innerHTML = event.target.value;
@@ -209,26 +232,26 @@ function change(event) {
 }
 ```
 
-如果没有 `aria-atomic="true"` ，屏幕阅读器只会播报"年"的数值的改变。
+没有 `aria-atomic="true"`，屏幕阅读器只会宣告年份的更改值。有了 `aria-atomic="true"`，屏幕阅读器会宣告“设定的年份是：_更改值_”。
 
-如果有 `aria-atomic-="true"` ，屏幕阅读器会播报"设置的年为：_改变的值_"。
+### 基本示例：`aria-relevant`
 
-### 高级用例：名册
+使用 `aria-relevant`，你可以指定应该宣告哪些类型的实时区域变化/更新。
 
-一个聊天站点想要显示当前登录用户的列表。列表将动态反映用户的登录和注销状态的用户（无需重新加载页面）。
+举个例子，考虑一个聊天网站，希望显示当前已登录的用户列表。我们不仅想要宣告当前已登录的用户，还希望在用户从列表中被*移除*时触发一条通知。我们可以通过指定 `aria-relevant="additions removals"` 来实现这一点。
 
 ```html
 <ul id="roster" aria-live="polite" aria-relevant="additions removals">
-  <!-- use JavaScript to add remove users here-->
+  <!-- 在此使用 JavaScript 添加和删除用户 -->
 </ul>
 ```
 
-ARIA 活动属性的细分：
+ARIA 实时区域属性的详细说明：
 
-- `aria-live="polite"` 指示屏幕阅读器应该等到用户空闲后再播报更新。这是最常用的值，因为用 `“assertive”` 值会打扰用户，打断他们的操作流程。
-- `aria-atomic` 没有设置 (默认为 `false` ) ，这样就只能说出添加或删除的用户，而不是整个名单。
-- `aria-relevant="additions removals"` 确保在在线名册中添加用户与移除用户的时候都会被播报。
+- `aria-live="polite"` 表示屏幕阅读器应该在用户空闲时才呈现更新给用户。这是最常用的值，因为使用“assertive”可能会打断用户的流程。
+- `aria-atomic` 没有设置（默认为 `false`），因此每次只有添加或删除的用户应该被宣告，而不是每次都宣告整个名单。
+- `aria-relevant="additions removals"` 确保新增或从名单中删除的用户都会被宣告。
 
-## 参考
+## 参见
 
 - [ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)

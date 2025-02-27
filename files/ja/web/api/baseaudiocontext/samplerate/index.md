@@ -1,13 +1,15 @@
 ---
-title: BaseAudioContext.sampleRate
+title: "BaseAudioContext: sampleRate プロパティ"
+short-title: sampleRate
 slug: Web/API/BaseAudioContext/sampleRate
 l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
 {{ APIRef("Web Audio API") }}
 
-`sampleRate` は {{domxref("BaseAudioContext") }} インターフェイスのプロパティで、この音声コンテキスト内のすべてのノードが使用するサンプリングレートを、1 秒あたりのサンプル数で表した浮動小数点数を返すものです。この制限は、サンプリングレートコンバーターに対応していないことを意味します。
+`sampleRate` は {{domxref("BaseAudioContext")}} インターフェイスのプロパティで、この音声コンテキスト内のすべてのノードが使用するサンプリングレートを、1 秒あたりのサンプル数で表した浮動小数点数を返すものです。
+この制限は、サンプリングレートコンバーターに対応していないことを意味します。
 
 ## 値
 
@@ -15,7 +17,8 @@ l10n:
 
 ## 例
 
-> **メモ:** 完全なウェブオーディオの実装の例は、[GitHub の MDN リポジトリー](https://github.com/mdn/webaudio-examples) にあるいずれかのウェブオーディオのデモを参照してください。
+> [!NOTE]
+> 完全なウェブオーディオの実装の例は、[GitHub の MDN リポジトリー](https://github.com/mdn/webaudio-examples) にあるいずれかのウェブオーディオのデモを参照してください。
 > ブラウザーのコンソールで `audioCtx.sampleRate` と入力してみてください。
 
 ```js

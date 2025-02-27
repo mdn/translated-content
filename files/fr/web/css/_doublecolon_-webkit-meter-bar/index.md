@@ -1,5 +1,5 @@
 ---
-title: "::-webkit-meter-bar"
+title: ::-webkit-meter-bar
 slug: Web/CSS/::-webkit-meter-bar
 ---
 
@@ -36,7 +36,8 @@ meter::-webkit-meter-bar {
 
 {{EmbedLiveSample('Exemples')}}
 
-> **Note :** Cela fonctionnera uniquement pour les navigateurs Webkit/Blink.
+> [!NOTE]
+> Cela fonctionnera uniquement pour les navigateurs Webkit/Blink.
 
 ## Spécifications
 
@@ -55,4 +56,4 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
   - {{cssxref("::-webkit-meter-optimum-value")}}
   - {{cssxref("::-webkit-meter-suboptimum-value")}}
 
-- [Les extensions CSS WebKit](/fr/docs/Web/CSS/Webkit_Extensions)
+- [Les extensions CSS WebKit](/fr/docs/Web/CSS/WebKit_Extensions)

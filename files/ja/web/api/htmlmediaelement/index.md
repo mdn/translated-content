@@ -2,7 +2,7 @@
 title: HTMLMediaElement
 slug: Web/API/HTMLMediaElement
 l10n:
-  sourceCommit: 066257cb0d23e29e269703450e4b1216a65e3b26
+  sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
 {{APIRef("HTML DOM")}}
@@ -23,7 +23,8 @@ _このインターフェイスは祖先である {{domxref("HTMLElement")}}, {{
 
   - : 論理値で、 HTML の [`autoplay`](/ja/docs/Web/HTML/Element/video#autoplay) 属性の値を反映し、中断なしに再生できるだけの十分なデータが揃った時点で自動的に再生を始めるかどうかを示します。
 
-    > **メモ:** ユーザーが期待していない、あるいは望んでいないときに自動的に音声を再生すると、ユーザーに不快な体験をさせることになるため、ほとんどの場合避けるべきですが、例外も存在します。詳しくは、[メディアとウェブオーディオ API のガイド](/ja/docs/Web/Media/Autoplay_guide)を参照してください。ブラウザーは自動再生要求を無視する可能性があることを念頭に置き、コードが自動再生の動作に依存していないことを確認する必要があります。
+    > [!NOTE]
+    > ユーザーが期待していない、あるいは望んでいないときに自動的に音声を再生すると、ユーザーに不快な体験をさせることになるため、ほとんどの場合避けるべきですが、例外も存在します。詳しくは、[メディアとウェブオーディオ API のガイド](/ja/docs/Web/Media/Autoplay_guide)を参照してください。ブラウザーは自動再生要求を無視する可能性があることを念頭に置き、コードが自動再生の動作に依存していないことを確認する必要があります。
 
 - {{domxref("HTMLMediaElement.buffered")}} {{ReadOnlyInline}}
   - : `buffered` プロパティにアクセスした時点で、ブラウザーがバッファリングしているメディアソースの範囲を（もしあれば） {{domxref("TimeRanges")}} オブジェクトで返します。
@@ -51,8 +52,8 @@ _このインターフェイスは祖先である {{domxref("HTMLElement")}}, {{
   - : 直近のエラーに対応する {{domxref("MediaError")}} オブジェクトを返すか、エラーが発生していない場合は `null` を返します。
 - {{domxref("HTMLMediaElement.loop")}}
   - : 論理型で、 HTML の [`loop`](/ja/docs/Web/HTML/Element/video#loop) 属性を反映し、末尾に達したときにメディア要素が再び再生を始めるかどうかを示します。
-- {{domxref("HTMLMediaElement.mediaKeys")}} {{ReadOnlyInline}}
-  - : {{domxref("MediaKeys")}} オブジェクトまたは `null` を返します。 MediaKeys は、関連付けられた HTMLMediaElement が再生中にメディアデータの復号に使用できるキーのセットです。
+- {{domxref("HTMLMediaElement.mediaKeys")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
+  - : {{domxref("MediaKeys")}} オブジェクトで、再生中にその要素がメディアデータを復号するために使用することができる一連のキーを返します。利用できるキーがない場合は `null` となります。
 - {{domxref("HTMLMediaElement.muted")}}
   - : 音声がミュートされているかどうかを判断するための論理値です。ミュートされている場合は `true` で、そうでない場合は `false` となります。
 - {{domxref("HTMLMediaElement.networkState")}} {{ReadOnlyInline}}
@@ -69,12 +70,14 @@ _このインターフェイスは祖先である {{domxref("HTMLElement")}}, {{
   - : 音のピッチを保持するかどうかを決定する論理値です。 `false` に設定すると、ピッチは音声の速度に合わせられます。
 - {{domxref("HTMLMediaElement.readyState")}} {{ReadOnlyInline}}
   - : メディアの準備状態を示す `unsigned short` （列挙値）を返します。
+- {{domxref("HTMLMediaElement.remote")}} {{ReadOnlyInline}}
+  - : このメディア要素に関連付けられた {{domxref("RemotePlayback")}} オブジェクトインスタンスを返します。
 - {{domxref("HTMLMediaElement.seekable")}} {{ReadOnlyInline}}
   - : ユーザーがシークできる時間帯があれば、それを含む {{domxref('TimeRanges')}} オブジェクトを返します。
 - {{domxref("HTMLMediaElement.seeking")}} {{ReadOnlyInline}}
   - : メディアが新しい位置へのシーク中であるかどうかを論理値で返します。
-- {{domxref("HTMLMediaElement.sinkId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 出力を配信する音声機器の一意の ID を文字列で返します。ユーザーエージェントの既定値を使用している場合は、空の文字列を返します。この ID は {{domxref("MediaDevices.enumerateDevices()")}} から返される `MediaDeviceInfo.deviceid` 値、 `id-multimedia` 値、 `id-communications` 値のいずれかである必要があります。
+- {{domxref("HTMLMediaElement.sinkId")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
+  - : 出力する音声機器の固有の ID を文字列で返します。ユーザーエージェントの既定の音声機器を使用している場合は、空文字列を返します。
 - {{domxref("HTMLMediaElement.src")}}
   - : 使用するメディアリソースの URL を記した HTML の [`src`](/ja/docs/Web/HTML/Element/video#src) 属性を反映した文字列です。
 - {{domxref("HTMLMediaElement.srcObject")}}
@@ -86,13 +89,6 @@ _このインターフェイスは祖先である {{domxref("HTMLElement")}}, {{
 - {{domxref("HTMLMediaElement.volume")}}
   - : `double` で音声の音量を示します。 0.0 (無音) から 1.0 (最大) の間です。
 
-### イベントハンドラー
-
-- {{domxref("HTMLMediaElement.onencrypted")}}
-  - : メディアが暗号化されたときに呼び出されるイベントハンドラーを設定します。
-- {{domxref("HTMLMediaElement.onwaitingforkey")}}
-  - : 暗号化キー待ちで再生がブロックされたときに呼び出されるイベントハンドラーを設定します。
-
 ## 廃止されたプロパティ
 
 これらのプロパティは廃止されており、たとえブラウザーがまだ対応していても使わないでください。
@@ -100,7 +96,7 @@ _このインターフェイスは祖先である {{domxref("HTMLElement")}}, {{
 - {{domxref("HTMLMediaElement.controller")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 要素に割り当てられたメディアコントローラーを表す {{domxref("MediaController")}} オブジェクト、または何も割り当てられていない場合は `null` です。
 - {{domxref("HTMLMediaElement.mediaGroup")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : 所属する要素のグループ名を示す HTML の [`mediagroup`](/ja/docs/Web/HTML/Element/video#mediagroup) 属性を反映した文字列です。メディア要素のグループは、共通の {{domxref('MediaController')}} を共有します。
+  - : 所属する要素のグループ名を示す HTML の `mediagroup` 属性を反映した文字列です。メディア要素のグループは、共通の {{domxref('MediaController')}} を共有します。
 - {{domxref("HTMLMediaElement.mozAudioCaptured")}} {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : 論理値を返します。オーディオストリームキャプチャに関連します。
 - {{domxref("HTMLMediaElement.mozFragmentEnd")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
@@ -124,11 +120,11 @@ _このインターフェイスには祖先である {{domxref("HTMLElement")}},
   - : 再生を一時停止します。
 - {{domxref("HTMLMediaElement.play()")}}
   - : 再生を開始します。
-- {{domxref("HTMLMediaElement.seekToNextFrame()")}} {{Deprecated_Inline}}
+- {{domxref("HTMLMediaElement.seekToNextFrame()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : メディア内の次のフレームをシークします。この非標準的で実験的なメソッドにより、メディアの読み込みとレンダリングをカスタム速度で手動で行ったり、メディアをフレーム単位で移動してフィルタリングやその他の操作を行ったりすることが可能になります。
-- {{domxref("HTMLMediaElement.setMediaKeys()")}}
-  - : {{jsxref("Promise")}} オブジェクトを返します。再生に利用する{{domxref("MediaKeys")}} を指定します。
-- {{domxref("HTMLMediaElement.setSinkId()")}}
+- {{domxref("HTMLMediaElement.setMediaKeys()")}} {{SecureContext_Inline}}
+  - : {{jsxref("Promise")}} オブジェクトを返します。再生に利用する {{domxref("MediaKeys")}} を指定します。
+- {{domxref("HTMLMediaElement.setSinkId()")}} {{SecureContext_Inline}}
   - : 出力に使用するオーディオ機器の ID を設定し、{{jsxref("Promise")}} を返します。これは、アプリケーションが指定された機器の使用が許可されている場合のみ動作します。
 
 ## 廃止されたメソッド
@@ -140,11 +136,13 @@ _これらのメソッドは廃止されているため、たとえブラウザ�
 - {{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : \[説明を入力]
 - {{domxref("HTMLMediaElement.mozGetMetadata()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : 再生中のメディアデータに対するメタデータを {{jsxref('Object')}} として返します。呼び出すたびに、オブジェクトのコピーが新しく作られます。このメソッドを呼び出すには、[loadedmetadata](/ja/docs/Web/API/HTMLMediaElement/loadedmetadata_event) イベントが発行された後でなければなりません。
+  - : 再生中のメディアデータに対するメタデータを {{jsxref('Object')}} として返します。呼び出すたびに、オブジェクトのコピーが新しく作られます。このメソッドを呼び出すには、[`loadedmetadata`](/ja/docs/Web/API/HTMLMediaElement/loadedmetadata_event) イベントが発行された後でなければなりません。
 
 ## イベント
 
-_親である {{domxref("HTMLElement")}}_ からメソッドを継承しています。これらのイベントを待ち受けするには、 [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使用するか、このインターフェイスの `onイベント名` プロパティにイベントリスナーを代入するかしてください。
+_親である {{domxref("HTMLElement")}} からイベントを継承しています。_
+
+これらのイベントを待ち受けするには、{{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用するか、このインターフェイスの `onイベント名` プロパティにイベントリスナーを代入するかしてください。
 
 - {{domxref("HTMLMediaElement.abort_event", 'abort')}}
   - : リソースが完全にロードされておらず、かつその結果がエラーでない場合に発行されます。
@@ -212,5 +210,5 @@ _親である {{domxref("HTMLElement")}}_ からメソッドを継承してい�
 
 - [ウェブメディア技術](/ja/docs/Web/Media)
 - 学習領域: [動画および音声コンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [ウェブ上のメディア型と形式のガイド](/ja/docs/Web/Media/Formats)
+- [メディア型と形式のガイド](/ja/docs/Web/Media/Formats)
 - [ウェブコンテンツにおけるメディア対応の問題の扱い](/ja/docs/Web/Media/Formats/Support_issues)

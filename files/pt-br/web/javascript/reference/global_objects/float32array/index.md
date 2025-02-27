@@ -84,7 +84,7 @@ Todos os objetos `Float32Array` herdam de {{jsxref("TypedArray.prototype", "%Typ
   - : Retorna o último (maior) índex de um elemento dentro da array igual ao valor especificado, ou -1 se nenhum for encontrado. Veja também {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Float32Array.prototype.map()")}}
   - : Cria uma nova array com os resultados da função chamada em cada elemento nesta array. Veja também {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Float32Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
+- {{jsxref("TypedArray.move", "Float32Array.prototype.move()")}} {{non-standard_inline}}
   - : Versão antiga não padrão de {{jsxref("TypedArray.copyWithin", "Float32Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Float32Array.prototype.reduce()")}}
   - : Aplica uma função contra um acumulador e cada valor na array (da esquerda para a direita) com o intuito de reduzí-la a um único valor. Veja também {{jsxref("Array.prototype.reduce()")}}.
@@ -150,7 +150,7 @@ var float32 = new Float32Array(iterable);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Float32Array")}}
+{{Compat}}
 
 ## Notas de compatibilidade
 
@@ -169,6 +169,6 @@ var dv = new Float32Array([1, 2, 3]);
 
 ## Veja também
 
-- [JavaScript arrays tipadas](/pt-BR/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript arrays tipadas](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

@@ -1,8 +1,9 @@
 ---
-title: InputEvent.getTargetRanges()
+title: "InputEvent: getTargetRanges() メソッド"
+short-title: getTargetRanges()
 slug: Web/API/InputEvent/getTargetRanges
 l10n:
-  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{APIRef("UI Events")}}
@@ -42,7 +43,7 @@ function isBeforeInputEventAvailable() {
 
 ### 基本的な使い方
 
-以下の例では、 `contentitable` 要素を選択して、 [`beforeinput`](/ja/docs/Web/API/HTMLElement/beforeinput_event) イベントを利用して `getTargetRanges()` の結果をログ出力しています。
+以下の例では、 `contentitable` 要素を選択して、 [`beforeinput`](/ja/docs/Web/API/Element/beforeinput_event) イベントを利用して `getTargetRanges()` の結果をログ出力しています。
 
 ```js
 const editableElem = document.querySelector('[contenteditable="true"]');

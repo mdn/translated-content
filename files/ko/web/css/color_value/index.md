@@ -13,7 +13,8 @@ slug: Web/CSS/color_value
 - RGB 3차원 좌표계 사용 (# + 16진수 표기법 또는 `rgb()`, `rgba()`의 함수형 표기법)
 - HSL 실린더형 좌표계 사용 (`hsl()`, `hsla()`의 함수형 표기법)
 
-> **참고:** 이 글은 `<color>` 자료형에 대해 상세히 기술합니다. HTML에서 실제로 색을 쓰는 법이 더 알고 싶으시면 [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/HTML/Applying_color)를 참고하세요.
+> [!NOTE]
+> 이 글은 `<color>` 자료형에 대해 상세히 기술합니다. HTML에서 실제로 색을 쓰는 법이 더 알고 싶으시면 [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/CSS/CSS_colors/Applying_color)를 참고하세요.
 
 ## 구문
 
@@ -44,7 +45,8 @@ slug: Web/CSS/color_value
 
 - 많은 키워드를 [X11](https://ko.wikipedia.org/wiki/X_%EC%9C%88%EB%8F%84_%EC%8B%9C%EC%8A%A4%ED%85%9C)에서 가져오긴 했지만, 제조사들이 X11 색상을 특정 하드웨어에 맞춰 조절한 경우도 있었기에 RGB값은 차이가 존재할 수 있습니다.
 
-> **참고:** CSS의 진화와 함께 색상 키워드도 많은 변화를 겪었습니다.
+> [!NOTE]
+> CSS의 진화와 함께 색상 키워드도 많은 변화를 겪었습니다.
 >
 > - CSS Level 1은 16개의 기본 색상만 지니고 있었습니다. VGA 그래픽 카드가 표현할 수 있는 색에서 가져온 것이기에 [VGA](https://ko.wikipedia.org/wiki/%EB%B9%84%EB%94%94%EC%98%A4_%EA%B7%B8%EB%9E%98%ED%94%BD%EC%8A%A4_%EC%96%B4%EB%A0%88%EC%9D%B4) 색상이라고 칭했습니다.
 > - CSS Level 2에서는 `orange` 키워드를 추가했습니다.
@@ -850,7 +852,8 @@ RGB 색상 모델은 빨강, 초록, 파랑을 통해 특정 색을 표현합니
 
 RGB 색상은 # 뒤의 16진수 표기법이나 함수형 표기법(`rgb()`, `rgba()`)으로 표현할 수 있습니다.
 
-> **참고:** CSS Colors Level 4부터 `rgba()`는 `rgb()`의 다른 이름입니다. Level 4 표준을 구현한 브라우저에서는 같은 매개변수를 받고 동일하게 행동합니다.
+> [!NOTE]
+> CSS Colors Level 4부터 `rgba()`는 `rgb()`의 다른 이름입니다. Level 4 표준을 구현한 브라우저에서는 같은 매개변수를 받고 동일하게 행동합니다.
 
 - 16진수 표기법: `#RRGGBB[AA]`
   - : `R`(빨강), `G`(초록), `B`(파랑), `A`(알파)는 16진수 문자(0-9, A-F)입니다. `A`는 선택사항입니다. 예를 들어 `#ff0000`은 `#ff0000ff`와 같습니다.
@@ -943,7 +946,8 @@ HSL 색상 모델은 색상, 채도, 명도를 통해 특정 색상을 표현합
 
 HSL 색상은 함수형 <a id="hsl()" name="hsl()"><code>hsl()</code></a>과 <a id="hsla()" name="hsla()"><code>hsla()</code></a> 표기법을 사용합니다.
 
-> **참고:** CSS Colors Level 4부터 `hsla()`는 `hsl()`의 다른 이름입니다. Level 4 표준을 구현한 브라우저에서는 같은 매개변수를 받고 동일하게 행동합니다.
+> [!NOTE]
+> CSS Colors Level 4부터 `hsla()`는 `hsl()`의 다른 이름입니다. Level 4 표준을 구현한 브라우저에서는 같은 매개변수를 받고 동일하게 행동합니다.
 
 - 함수형 포기법: `hsl(H, S, L[, A])` 또는 `hsla(H, S, L, A)`
 
@@ -1195,11 +1199,11 @@ hsla(240 100% 50% / 5%)   /*   5% opaque blue */
 
 ## 보간
 
-애니메이션과 [그레이디언트](/ko/docs/Web/CSS/CSS_Images/Using_CSS_gradients)는 `<color>` 값의 빨강, 초록, 파랑 각 구성 성분을 부동소수점 실수를 사용해 보간합니다. 보간 중 예상하지 못한 무채색이 등장하는걸 방지하기 위해 계산은 [알파 채널을 미리 곱한 sRGBA 색 공간](https://www.gimp.org/docs/plug-in/appendix-alpha.html)에서 수행합니다. 애니메이션에서 보간의 속도는 [타이밍 함수](/ko/docs/Web/CSS/single-transition-timing-function)가 결정합니다.
+애니메이션과 [그레이디언트](/ko/docs/Web/CSS/CSS_images/Using_CSS_gradients)는 `<color>` 값의 빨강, 초록, 파랑 각 구성 성분을 부동소수점 실수를 사용해 보간합니다. 보간 중 예상하지 못한 무채색이 등장하는걸 방지하기 위해 계산은 [알파 채널을 미리 곱한 sRGBA 색 공간](https://www.gimp.org/docs/plug-in/appendix-alpha.html)에서 수행합니다. 애니메이션에서 보간의 속도는 [타이밍 함수](/ko/docs/Web/CSS/easing-function)가 결정합니다.
 
 ## 접근성 고려사항
 
-색을 구별하기 어려운 사람도 있으므로, [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) 권고안은 특정 메시지, 행동, 또는 결과를 나타내는 방법으로 오직 색만 사용하는걸 강력히 반대하고 있습니다. [색과 색상 대비](/ko/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast)를 참고하세요.
+색을 구별하기 어려운 사람도 있으므로, [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) 권고안은 특정 메시지, 행동, 또는 결과를 나타내는 방법으로 오직 색만 사용하는걸 강력히 반대하고 있습니다. [색과 색상 대비](/ko/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast)를 참고하세요.
 
 ## 명세
 
@@ -1213,4 +1217,4 @@ hsla(240 100% 50% / 5%)   /*   5% opaque blue */
 
 - {{Cssxref("opacity")}} 속성으로 요소 자체의 투명도를 바꿀 수 있습니다.
 - `<color>`를 지정할 수 있는 흔히 쓰이는 속성: {{Cssxref("color")}}, {{Cssxref("background-color")}}, {{Cssxref("border-color")}}, {{Cssxref("box-shadow")}}, {{Cssxref("outline-color")}}, {{Cssxref("text-shadow")}}
-- [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/HTML/Applying_color)
+- [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/CSS/CSS_colors/Applying_color)

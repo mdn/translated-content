@@ -73,7 +73,7 @@ Not part of any standard.
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.InternalError")}}
+{{Compat}}
 
 ## See also
 

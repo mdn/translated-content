@@ -9,7 +9,7 @@ l10n:
 
 [Sensor APIs](/ja/docs/Web/API/Sensor_APIs) の **`OrientationSensor`** インターフェイスは、向きセンサーのベースクラスです。このインターフェイスを直接使用することはできません。かわりに、このインターフェイスは継承するインターフェイスからアクセスされるプロパティとメソッドを提供します。
 
-この機能はサーバーで設定された [Permissions Policy](/ja/docs/Web/HTTP/Permissions_Policy) でブロックされる可能性があります。
+この機能はサーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy) でブロックされる可能性があります。
 
 {{InheritanceDiagram}}
 

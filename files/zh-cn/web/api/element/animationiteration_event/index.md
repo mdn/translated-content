@@ -1,23 +1,21 @@
 ---
-title: GlobalEventHandlers.onanimationiteration
+title: Element：animationiteration 事件
 slug: Web/API/Element/animationiteration_event
 ---
 
-{{APIRef("CSS3 Animations")}}
+{{APIRef}}
 
-[`animationiteration`](/zh-CN/docs/Web/API/Element/animationiteration_event)事件的处理器 . 当 [CSS Animation](/zh-CN/docs/Web/CSS/CSS_animations) 运动到最后一帧时触发。An iteration ends when a single pass through the sequence of animation instructions is completed by executing the last animation step.
+**`animationiteration`** 事件会在一次 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)迭代的结束和另一次迭代的开始时触发。此事件不会与 {{domxref("Element/animationend_event", "animationend")}} 事件同时发生，因此其不会发生在 `animation-iteration-count` 为 1 的动画上。
 
 ## 语法
 
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+
+```js
+addEventListener("animationiteration", (event) => {});
+
+onanimationiteration = (event) => {};
 ```
-var animIterationHandler = target.onanimationiteration;
-
-target.onanimationiteration = {{jsxref("Function")}}
-```
-
-### Value
-
-A {{jsxref("Function")}} to be called when an [`animationiteration`](/zh-CN/docs/Web/API/Element/animationiteration_event) event occurs indicating that a CSS animation has reached the end of an iteration while running on the _`target`_, where the target object is an HTML element ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as input a single parameter: an {{domxref("AnimationEvent")}} object describing the event which occurred.
 
 ## 示例
 

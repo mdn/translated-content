@@ -25,12 +25,10 @@ SyntaxError: for-in loop variable declaration may not have an initializer. (Chro
 
 下面这个示例会报语法错误（`SyntaxError`）：
 
-```js example-bad
-"use strict";
+```js-nolint example-bad
+const obj = { a: 1, b: 2, c: 3 };
 
-var obj = {a: 1, b: 2, c: 3 };
-
-for (var i = 0 in obj) {
+for (const i = 0 in obj) {
   console.log(obj[i]);
 }
 
@@ -53,7 +51,7 @@ for (var i in obj) {
 
 ### 数组迭代
 
-for...in 循环[不应该应用于数组迭代中](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in#Array_iteration_and_for...in)。是否考虑使用 [`for`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for) 循环而不是 `for-in` 循环来遍历数组（{{jsxref("Array")}}）？在 for 循环中是允许使用初始化语句的：
+for...in 循环[不应该应用于数组迭代中](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in#array_iteration_and_for...in)。是否考虑使用 [`for`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for) 循环而不是 `for-in` 循环来遍历数组（{{jsxref("Array")}}）？在 for 循环中是允许使用初始化语句的：
 
 ```js example-good
 var arr = ["a", "b", "c"];

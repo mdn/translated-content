@@ -80,7 +80,8 @@ const header = (
 );
 ```
 
-> **Note :** Les parenthèses dans l'extrait de code précédent ne sont pas propres à JSX et n'ont aucun effet sur votre application. Elles sont un signal pour vous (et votre ordinateur) que plusieurs lignes de code à l'intérieur font partie de la même expression. Vous pourriez tout aussi bien écrire l'expression d'en-tête comme ceci&nbsp;:
+> [!NOTE]
+> Les parenthèses dans l'extrait de code précédent ne sont pas propres à JSX et n'ont aucun effet sur votre application. Elles sont un signal pour vous (et votre ordinateur) que plusieurs lignes de code à l'intérieur font partie de la même expression. Vous pourriez tout aussi bien écrire l'expression d'en-tête comme ceci&nbsp;:
 >
 > ```js
 > const header = (
@@ -145,7 +146,8 @@ Cela crée un répertoire `moz-todo-react`, et réalise plusieurs choses à l'in
 - Crée une structure de fichiers et de répertoires qui définissent l'architecture de base de l'application.
 - Initialise le répertoire en tant que dépôt Git, au cas où Git est installé sur l'ordinateur.
 
-> **Note :** si vous avez installé le gestionnaire de paquets Yarn, create-react-app l'utilisera par défaut à la place de npm. Si vous avez installé les deux gestionnaires de paquets et que vous souhaitez explicitement utiliser npm, vous pouvez ajouter l'indicateur `--use-npm` lorsque vous exécutez create-react-app&nbsp;:
+> [!NOTE]
+> Si vous avez installé le gestionnaire de paquets Yarn, create-react-app l'utilisera par défaut à la place de npm. Si vous avez installé les deux gestionnaires de paquets et que vous souhaitez explicitement utiliser npm, vous pouvez ajouter l'indicateur `--use-npm` lorsque vous exécutez create-react-app&nbsp;:
 >
 > ```bash
 > npx create-react-app moz-todo-react --use-npm
@@ -333,7 +335,8 @@ La ligne 7 exécute la fonction `ReactDOM.render()` de React avec deux arguments
 
 Tout cela indique à React que nous voulons afficher notre application React avec le composant `App` comme racine ou premier composant.
 
-> **Note :** En JSX, les composants React et les éléments HTML doivent avoir des barres obliques (<i lang="en">slash</i>) de fermeture. Écrire uniquement `<App>` ou simplement `<img>` provoquera une erreur.
+> [!NOTE]
+> En JSX, les composants React et les éléments HTML doivent avoir des barres obliques (<i lang="en">slash</i>) de fermeture. Écrire uniquement `<App>` ou simplement `<img>` provoquera une erreur.
 
 Les [<i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers) sont des éléments de code intéressants qui améliorent les performances des applications et permettent aux fonctionnalités de vos applications web d'être disponibles hors ligne, mais ils ne sont pas abordés dans cet article. Vous pouvez supprimer la ligne 5, ainsi que les lignes 9 à 12.
 

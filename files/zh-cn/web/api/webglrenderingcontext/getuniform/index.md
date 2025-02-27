@@ -7,8 +7,8 @@ slug: Web/API/WebGLRenderingContext/getUniform
 
 ## 语法
 
-```
-any gl.getUniform(program, location);
+```js-nolint
+getUniform(program, location)
 ```
 
 ### 参数

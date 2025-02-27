@@ -46,11 +46,11 @@ gl.getExtension("WEBGL_lose_context").loseContext();
 // будет выведено "webglcontextlost".
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

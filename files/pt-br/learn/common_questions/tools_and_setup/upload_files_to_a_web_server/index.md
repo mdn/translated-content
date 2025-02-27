@@ -46,7 +46,8 @@ Se você construiu uma página web básica (veja [HTML basics](/pt-BR/docs/Learn
 
 Existem vários clientes SFTP . Nossa demo cobre o FileZilla, já que é gratuito e está disponível para Windows, macOS e Linux. Para instalar o FileZilla, vá para a página de downloads do FileZilla, clique no botão Download grande e instale a partir do arquivo de instalação da maneira usual.
 
-> **Nota:** Claro que existem outras opções. Consulte [Publishing tools](/en-US/Learn/How_much_does_it_cost#Publishing_tools.3A_FTP_client) para mais informações.
+> [!NOTE]
+> Claro que existem outras opções. Consulte [Publishing tools](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#publishing_tools.3a_ftp_client) para mais informações.
 
 Abra o FileZilla, você verá algo semelhante a isso:
 
@@ -76,7 +77,8 @@ Primeiramente, olhe em `http://demozilla.examplehostingprovider.net/` — como v
 
 ![Our demozilla personal website, seen in a browser: it's empty](demozilla-empty.png)
 
-> **Nota:** Dependendo do seu provedor de hospedagem, na maioria das vezes você verá uma página dizendo algo como como "Este site é hospedado por \[serviço de hospedagem]".Isso é claro, quando você acessa seu endereço da web pela primeira vez.
+> [!NOTE]
+> Dependendo do seu provedor de hospedagem, na maioria das vezes você verá uma página dizendo algo como como "Este site é hospedado por \[serviço de hospedagem]".Isso é claro, quando você acessa seu endereço da web pela primeira vez.
 
 Para conectar seu cliente SFTP ao servidor, siga estas etapas:
 
@@ -158,7 +160,7 @@ Novamente, você teria que obter as credenciais de conexão do seu provedor de h
 
 Github permite você publicar páginas por meio do [GitHub pages](https://pages.github.com/) (gh-pages).
 
-Cobrimos o básico de como usar isso no [Publishing your website](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website) artigo do guia [Getting started with the Web](/en-US/Learn/Getting_started_with_the_web) , então não vamos repetir tudo aqui.
+Cobrimos o básico de como usar isso no [Publishing your website](/pt-BR/docs/Learn/Getting_started_with_the_web/Publishing_your_website) artigo do guia [Getting started with the Web](/pt-BR/docs/Learn/Getting_started_with_the_web) , então não vamos repetir tudo aqui.
 
 No entanto, é importante saber que você também pode hospedar um site no GitHub, mas usar um domínio personalizado com ele. Para obter um guia detalhado, consulte [Using a custom domain with GitHub Pages](https://help.github.com/articles/using-a-custom-domain-with-github-pages/) .
 

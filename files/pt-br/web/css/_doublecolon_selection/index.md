@@ -1,11 +1,11 @@
 ---
-title: "::selection"
+title: ::selection
 slug: Web/CSS/::selection
 ---
 
 {{CSSRef}}
 
-O [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elementos) CSS **`::selection`** aplica estilos para partes do documento que foram selecionadas pelo usuário (tal como clicar e arrastar o ponteiro do mouse através de um texto.
+O [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elements) CSS **`::selection`** aplica estilos para partes do documento que foram selecionadas pelo usuário (tal como clicar e arrastar o ponteiro do mouse através de um texto.
 
 ```css
 ::selection {
@@ -26,7 +26,8 @@ Apenas certas propriedades podem ser usadas com o `::selection`:
 - {{CSSxRef("text-emphasis-color")}}
 - {{CSSxRef("text-shadow")}}
 
-> **Warning:** Em particular, {{CSSxRef("background-image")}} é ignorada.
+> [!WARNING]
+> Em particular, {{CSSxRef("background-image")}} é ignorada.
 
 ## Sintaxe
 
@@ -98,7 +99,7 @@ Facilite para os usuários ver e ouvir o conteúdo, incluindo a separação do p
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.selection")}}
+{{Compat}}
 
 ## Veja também
 

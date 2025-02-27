@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
 
 El método **`Object.freeze()`** _congela_ un objeto, es decir: impide que se le agreguen nuevas propiedades; impide que se puedan eliminar las propiedades ya existentes; impide que dichas propiedades, o su capacidad de enumeración, configuración, o escritura, puedan ser modificadas; impide también que se pueda modificar su prototipo. El método devuelve el objeto recibido.
 
-{{EmbedInteractiveExample("pages/js/object-freeze.html")}}
+{{InteractiveExample("JavaScript Demo: Object.freeze()")}}
+
+```js interactive-example
+const obj = {
+  prop: 42,
+};
+
+Object.freeze(obj);
+
+obj.prop = 33;
+// Throws an error in strict mode
+
+console.log(obj.prop);
+// Expected output: 42
+```
 
 El código de este ejemplo interactivo está almacenado en un repositorio de GitHub. Si quieres contribuir al proyecto de ejemplos interactivos, puedes clonar <https://github.com/mdn/interactive-examples> y enviarnos un _pull request_.
 
@@ -62,7 +76,7 @@ assert(Object.isFrozen(obj) === true);
 obj.foo = "quux"; // No hace nada de manera silenciosa
 obj.quaxxor = "the friendly duck"; // No agrega una nueva propiedad, de manera silenciosa
 
-// ...y en modo estrico tal intento arrojará TypeErrors
+// ...y en modo estricto tal intento arrojará TypeErrors
 function fail() {
   "use strict";
   obj.foo = "sparky"; // arroja un TypeError

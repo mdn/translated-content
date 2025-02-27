@@ -3,7 +3,7 @@ title: Array.prototype.unshift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Introdução
 
@@ -51,7 +51,7 @@ arr.unshift([-3]);
 
 ## Compatibilidade entre browsers
 
-{{Compat("javascript.builtins.Array.unshift")}}
+{{Compat}}
 
 ## Veja também
 

@@ -9,7 +9,21 @@ El constructor **`RegExp`** crea un objeto de expresión regular para hacer coin
 
 Para ver la introducción a las expresiones regulares, lee el {{JSxRef("../Guide/Regular_Expressions", "capítulo sobre expresiones regulares")}} en la {{JSxRef("../Guide", "Guía de JavaScript")}}.
 
-{{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Constructor")}}
+
+```js interactive-example
+const regex1 = /\w+/;
+const regex2 = new RegExp("\\w+");
+
+console.log(regex1);
+// Expected output: /\w+/
+
+console.log(regex2);
+// Expected output: /\w+/
+
+console.log(regex1 === regex2);
+// Expected output: false
+```
 
 La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
 
@@ -50,7 +64,7 @@ RegExp(patrón[, banderas])
     - `s` («_dotAll_» o punto para todo)
       - : Permite que el punto (`.` coincida con nuevas líneas o no.
     - `u` (unicode)
-      - : Trata el `patrón` como una secuencia de puntos de código Unicode. (Consulta también [Cadenas binarias](/es/docs/Web/API/DOMString/Binary)).
+      - : Trata el `patrón` como una secuencia de puntos de código Unicode. (Consulta también [Cadenas binarias](/es/docs/Web/API/Window/btoa)).
     - `y` (sticky)
       - : Coincide solo con el índice indicado por la propiedad `lastIndex` de esta expresión regular en la cadena destino. No intenta coincidir con índices posteriores.
 

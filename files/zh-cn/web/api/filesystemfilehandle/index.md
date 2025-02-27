@@ -1,11 +1,13 @@
 ---
 title: FileSystemFileHandle
 slug: Web/API/FileSystemFileHandle
+l10n:
+  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
-{{domxref("File System API", "File System API", "", "nocode")}} 的 **`FileSystemFileHandle`** 接口表示一个指向文件系统条目的句柄。可通过 {{domxref('window.showOpenFilePicker()')}} 方法来访问此接口。
+{{domxref("File System API", "文件系统 API", "", "nocode")}} 的 **`FileSystemFileHandle`** 接口表示一个指向文件系统条目的句柄。可通过 {{domxref('window.showOpenFilePicker()')}} 方法来访问此接口。
 
 注意，读写操作所依赖的文件访问权限在刷新或关闭页面并且页面所属的源没有其他标签页保持打开的情况下不会继续保有。{{domxref("FileSystemHandle")}} 接口的 {{domxref("FileSystemHandle.queryPermission()", "queryPermission")}} 方法可用于在访问文件前验证权限状态。
 
@@ -20,7 +22,7 @@ _从父类 {{DOMxRef("FileSystemHandle")}} 继承属性。_
 _从父类 {{DOMxRef("FileSystemHandle")}} 继承方法。_
 
 - {{domxref('FileSystemFileHandle.getFile', 'getFile()')}}
-  - : 返回一个 {{jsxref('Promise')}} 对象，可兑现一个 {{domxref('File')}} 对象，该对象表示句柄所代表的的条目在磁盘上的状态。
+  - : 返回一个 {{jsxref('Promise')}} 对象，可兑现一个 {{domxref('File')}} 对象，该对象表示句柄所代表的条目在磁盘上的状态。
 - {{domxref('FileSystemFileHandle.createSyncAccessHandle', 'createSyncAccessHandle()')}}
   - : 返回一个 {{jsxref('Promise')}} 对象，可兑现一个 {{domxref('FileSystemSyncAccessHandle')}} 对象，该对象可用于同步读写文件。此方法的同步特性带来了性能优势，但是只能在专用的 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中使用。
 - {{domxref('FileSystemFileHandle.createWritable', 'createWritable()')}}
@@ -112,7 +114,8 @@ onmessage = async (e) => {
 };
 ```
 
-> **备注：** 在规范早期版本中，{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} 被错误地定义为异步方法。此问题现已被[修正](https://github.com/whatwg/fs/issues/7)，但某些浏览器依然支持异步版本。
+> [!NOTE]
+> 在规范的早期版本中，{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} 被错误地指定为异步方法，并且某些较旧版本的浏览器以这种方式实现它们。然而，当前所有支持这些方法的浏览器都将它们实现为同步方法。
 
 ## 规范
 
@@ -125,4 +128,4 @@ onmessage = async (e) => {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://web.dev/file-system-access/)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.google.cn/docs/capabilities/web-apis/file-system-access)

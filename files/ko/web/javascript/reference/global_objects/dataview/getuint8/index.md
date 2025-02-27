@@ -2,7 +2,7 @@
 title: DataView.prototype.getUint8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
 l10n:
-  sourceCommit: 3a006e92b14a2733e485a26d0dc3a1472968fd9b
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
@@ -10,7 +10,18 @@ l10n:
 {{jsxref("DataView")}} 인스턴스의 **`getUint8()`** 메서드는 이 `DataView`의 지정된 바이트 오프셋에서
 1바이트를 읽고 이를 8비트 부호 없는 정수로 해석합니다.
 
-{{EmbedInteractiveExample("pages/js/dataview-getuint8.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.getUint8()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setUint8(1, 255); // Max unsigned 8-bit integer
+
+console.log(view.getUint8(1));
+// Expected output: 255
+```
 
 ## 구문
 
@@ -25,9 +36,9 @@ getUint8(byteOffset)
 
 ### 반환 값
 
-부호 없는 8비트 정수.
+0 이상 255 이하의 정수.
 
-### 발생하는 에러
+### 예외
 
 - {{jsxref("RangeError")}}
   - : 뷰의 끝을 넘어 읽는 수도 있는 `byteOffset`이 설정된 경우 발생합니다.
@@ -38,12 +49,12 @@ getUint8(byteOffset)
 
 ## 예제
 
-### getUint8 메서드 사용하기
+### getUint8() 메서드 사용하기
 
 ```js
-const buffer = new ArrayBuffer(8);
+const { buffer } = new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
 const dataview = new DataView(buffer);
-dataview.getUint8(1); // 0
+console.log(dataview.getUint8(1)); // 1
 ```
 
 ## 명세서
@@ -56,5 +67,7 @@ dataview.getUint8(1); // 0
 
 ## 같이 보기
 
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 가이드
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}
+- {{jsxref("Uint8Array")}}

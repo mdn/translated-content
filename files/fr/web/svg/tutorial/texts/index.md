@@ -3,13 +3,15 @@ title: Textes
 slug: Web/SVG/Tutorial/Texts
 ---
 
+{{SVGRef}}
+
 {{PreviousNext("Web/SVG/Tutoriel/Motifs", "Web/SVG/Tutoriel/Transformations_de_base")}}
 
 Lorsqu'on parle de texte en SVG, on doit différencier deux choses pratiquement complètement séparées: 1. l'inclusion et l'affichage de texte dans une image, 2. les polices SVG. Un article séparé sera dédié aux polices SVG, celui-ci se concentrera uniquement sur le fait d'insérer du texte.
 
 ## Les bases
 
-Nous avons vu dans l'[exemple de l'introduction](/fr/docs/Web/SVG/Tutoriel/Premiers_pas) que l'élément `text` peut être utilisé pour mettre du texte dans des documents SVG:
+Nous avons vu dans l'[exemple de l'introduction](/fr/docs/Web/SVG/Tutorial/Getting_Started) que l'élément `text` peut être utilisé pour mettre du texte dans des documents SVG:
 
 ```xml
 <text x="10" y="10">Hello World!</text>

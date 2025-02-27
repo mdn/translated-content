@@ -3,21 +3,24 @@ title: Teclado (Keyboard)
 slug: Web/Accessibility/Understanding_WCAG/Keyboard
 ---
 
+{{AccessibilitySidebar}}
+
 Para ser completamente accesible, una página web debe ser operable por alguién utilizando únicamente un teclado para acceder y controlarla. Esto incluye usuarios de lectores de pantalla, pero también puede incluir a quienes tienen dificultades utilizando un dispositivo apuntador como un ratón o una bola de rastreo, o aquellos cuyo ratón no esta funcionando temporalmente, o la gente que simplemente prefiere usar un teclado como entrada siempre que les sea posible.
 
 ## Los elementos enfocables deben tener una semántica interactiva
 
 Si un elemento puede ser enfocado utilizando un teclado, entonces debería ser interactivo, es decir, el usuario debería ser capaz de hacer algo y producir un cambio de algún tipo (por ejemplo, activar un enlace o cambiar una opción).
 
-> **Nota:** Una excepción importante a esta regla es si el elemento tiene aplicado `role="document"`, **dentro** un contexto interactivo (como un `role="application"`). En tal caso, enfocar el documento anidado es la única forma de devolver la tecnología de asistencia a un estado de no interactividad (comúnmente llamado "modo navegador").
+> [!NOTE]
+> Una excepción importante a esta regla es si el elemento tiene aplicado `role="document"`, **dentro** un contexto interactivo (como un `role="application"`). En tal caso, enfocar el documento anidado es la única forma de devolver la tecnología de asistencia a un estado de no interactividad (comúnmente llamado "modo navegador").
 
 La mayoría de los elementos son enfocables por defecto, y se puede hacer que un elemento sea enfocable al añadir el atributo `tabindex=0`. Sin embargo, sólo se debería añadir `tabindex` si el elemento también se hace interactivo, por ejemplo, definiendo los eventos de teclado apropiados para los manejadores de eventos.
 
 ### Ver también
 
 - Atributo HTML global [tabindex](/es/docs/Web/HTML/Global_attributes/tabindex)
-- Manejador de evento global: [onkeydown](/es/docs/Web/API/GlobalEventHandlers/onkeydown)
-- Manejador de evento global: [onkeyup](/es/docs/Web/API/GlobalEventHandlers/onkeyup)
+- Manejador de evento global: [onkeydown](/es/docs/conflicting/Web/API/Element/keydown_event)
+- Manejador de evento global: [onkeyup](/es/docs/conflicting/Web/API/Element/keyup_event)
 
 ## Evitar usar el atributo `tabindex` con un valor mayor a cero
 
@@ -29,7 +32,7 @@ Esto genera una confusión para usuarios que solo usen el teclado cuando el orde
 
 - Atributo HTML globlal [tabindex](/es/docs/Web/HTML/Global_attributes/tabindex)
 - [Entendiento el orden del enfoque](https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html)
-- [No use un tabindex mayor que 0](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html)
+- [No use un tabindex mayor que 0](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html)
 
 ## Los elementos a los que se les puede hacer click deben ser enfocables y deberían tener semánticas interactivas
 
@@ -40,8 +43,8 @@ A un elemento se le puede hacer click si tiene in manejador de evento `onclick` 
 ### Ver también
 
 - El atributo global HTML [tabindex](/es/docs/Web/HTML/Global_attributes/tabindex)
-- Manejador de evento global: [onkeydown](/es/docs/Web/API/GlobalEventHandlers/onkeydown)
-- Manejador de evento global: [onkeyup](/es/docs/Web/API/GlobalEventHandlers/onkeyup)
+- Manejador de evento global: [onkeydown](/es/docs/conflicting/Web/API/Element/keydown_event)
+- Manejador de evento global: [onkeyup](/es/docs/conflicting/Web/API/Element/keyup_event)
 
 ## Los elementos interactivos deben ser capaz de ser activos utilizando un teclado
 
@@ -49,8 +52,8 @@ Si el usuario puede interactuar con un elemento utilizando el tacto o un disposi
 
 ### Ver también
 
-- Manejador de evento global: [onkeydown](/es/docs/Web/API/GlobalEventHandlers/onkeydown)
-- Manejador de evento global: [onkeyup](/es/docs/Web/API/GlobalEventHandlers/onkeyup)
+- Manejador de evento global: [onkeydown](/es/docs/conflicting/Web/API/Element/keydown_event)
+- Manejador de evento global: [onkeyup](/es/docs/conflicting/Web/API/Element/keyup_event)
 
 ## Los elementos interactivos deben ser enfocables
 

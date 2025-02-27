@@ -1,17 +1,20 @@
 ---
 title: "Document: execCommand() メソッド"
+short-title: execCommand()
 slug: Web/API/Document/execCommand
 l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
 ---
 
 {{ApiRef("DOM")}}{{deprecated_header}}
 
-HTML 文書がデザインモード ([`designMode`](/ja/docs/Web/API/Document/designMode)) に切り替わっていると、その `document` オブジェクトは **`execCommand`** メソッドを公開して、[フォーム入力欄](/ja/docs/Web/HTML/Element/input)や [`contentEditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) を持った要素など、現在編集可能な領域を操作するためのコマンドが実行できるようにします。
+**`execCommand`** メソッドは、複数の異なるコマンドを実装しています。クリップボードへのアクセスを提供するものもあれば、[フォーム入力フィールド](/ja/docs/Web/HTML/Element/input)や [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) の要素、文書全体（[デザインモード](/ja/docs/Web/API/Document/designMode)に切り替えた場合）を編集するためのものもあります。
 
-多くのコマンドは、文書の[選択範囲](/ja/docs/Web/API/Selection)に対して影響を及ぼしますが（太字、イタリック、など）、他にも新しい要素の挿入（リンクの追加）や行全体に影響するもの（字下げ）もあります。 `contentEditable` を使用した場合、 `execCommand()` は現在アクティブな編集可能要素に影響を及ぼします。
+クリップボードにアクセスするには、`execCommand()` よりも新しい[クリップボード API](/ja/docs/Web/API/Clipboard_API) が推奨されます。しかし、編集コマンドを置き換えるものはありません。DOM を直接操作するのとは異なり、`execCommand()` によって実行された変更はアンドゥバッファ (編集履歴) を保持します。
 
-[クリップボード API](/ja/docs/Web/API/Clipboard_API) は多くの場合、`execCommand` の代わりに使用することができますが、`execCommand` が便利なこともあります。特に、クリップボード API は `insertText` コマンドの代わりを提供していません。これは `textarea` や `input` 要素でアンドゥバッファー（編集履歴）に保存してからカーソル位置のテキストをプログラムから置き換えるのに使うことができます。
+多くのコマンドは、文書の[選択範囲](/ja/docs/Web/API/Selection)に対して影響を及ぼします。例えば、一部のコマンド（太字、斜体など）は現在選択されているテキストを整形する一方で、他のコマンドは選択範囲を削除したり、新しい要素を挿入したり（選択範囲を置き換えたり）、行全体に影響を与えたり（インデント）します。変更することができるのは現在アクティブになっている編集可能な要素だけですが、一部のコマンド（`copy`など）は編集可能な要素がなくても動作します。
+
+> **メモ:** `execCommand()` によって行われた変更は、ブラウザーや構成によって {{domxref("Element/beforeinput_event", "beforeinput")}} と {{domxref("Element/input_event", "input")}} イベントを発生させる場合と発生させない場合があります。起動されると、イベントのハンドラーは `execCommand()` を返す前に実行されます。制作者はこのような再帰的な呼び出し、特にこれらのイベントに応答して `execCommand()` を呼び出す場合には注意が必要です。Firefox 82 以降、入れ子になった `execCommand()` 呼び出しは常に失敗します。[バグ 1634262](https://bugzil.la/1634262) を参照してください。
 
 ## 構文
 
@@ -118,7 +121,8 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `useCSS` {{Deprecated_inline}}
 
       - : 生成するマークアップに HTML タグと CSS のどちらを使用するかを切り替えます。引数として true または false の真偽値が必要です。
-        > **メモ:** この引数は論理が逆です（つまり、`false` で CSS が使用され、`true` で HTML が使用される）。これは `styleWithCSS` に置き換えられ、非推奨になりました。
+        > [!NOTE]
+        > この引数は論理が逆です（つまり、`false` で CSS が使用され、`true` で HTML が使用される）。これは `styleWithCSS` に置き換えられ、非推奨になりました。
 
     - `styleWithCSS`
       - : `useCSS` コマンドを置き換えるものです。`true` はマークアップ時に `style` 属性が生成または変更され、false では書式要素が生成されます。
@@ -134,7 +138,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
 論理値で、コマンドが対応していないか無効であれば `false` になります。
 
-> **メモ:** `document.execCommand()` はユーザーの操作の中で行われた場合にのみ `true` を返します。コマンドを呼び出す前に、ブラウザーが対応しているかどうかを調べるために返値を使用しないでください。 Firefox 82 以降は、`document.execCommand()` を重ねて呼び出すと常に `false` を返します。
+> **メモ:** `document.execCommand()` はユーザーの操作の中で行われた場合にのみ `true` を返します。コマンドを呼び出す前に、ブラウザーが対応しているかどうかを調べるために返値を使用しないでください。
 
 ## 例
 
@@ -213,7 +217,7 @@ function insertText(newText, selector) {
 
 ## 仕様書
 
-この機能は現行の仕様書に含まれていません。標準化の予定もありません。
+この機能は現在のどの仕様にも属しませんが、これを規定しようとする[非公式な草案](https://w3c.github.io/editing/docs/execCommand/)があります。
 
 ## ブラウザーの互換性
 

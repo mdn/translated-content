@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 
 {{jsxref("Number")}} 值的 **`toExponential()`** 方法返回一个以指数表示法表示该数字的字符串。
 
-{{EmbedInteractiveExample("pages/js/number-toexponential.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toExponential()")}}
+
+```js interactive-example
+function expo(x, f) {
+  return Number.parseFloat(x).toExponential(f);
+}
+
+console.log(expo(123456, 2));
+// Expected output: "1.23e+5"
+
+console.log(expo("123456"));
+// Expected output: "1.23456e+5"
+
+console.log(expo("oink"));
+// Expected output: "NaN"
+```
 
 ## 语法
 
@@ -23,7 +38,7 @@ toExponential(fractionDigits)
 
 ### 返回值
 
-一个以指数表示法表示给定 {{jsxref("Number")}} 对象的的字符串，其小数点前为一位数字，小数点后舍入到 `fractionDigits` 位。
+一个以指数表示法表示给定 {{jsxref("Number")}} 对象的字符串，其小数点前为一位数字，小数点后舍入到 `fractionDigits` 位。
 
 ### 异常
 

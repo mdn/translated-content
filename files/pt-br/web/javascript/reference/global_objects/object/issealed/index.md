@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 
 O método **`Object.isSealed()`** determina se um objeto está selado.
 
-{{EmbedInteractiveExample("pages/js/object-issealed.html")}}
+{{InteractiveExample("JavaScript Demo: Object.isSealed()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+console.log(Object.isSealed(object1));
+// Expected output: false
+
+Object.seal(object1);
+
+console.log(Object.isSealed(object1));
+// Expected output: true
+```
 
 ## Sintaxe
 
@@ -94,15 +108,11 @@ Object.isSealed(1);
 
 ## Especificações
 
-| Especificação                                                      | Estado               | Comentário                                           |
-| ------------------------------------------------------------------ | -------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.11', 'Object.isSealed')}}         | {{Spec2('ES5.1')}}   | Definição inicial. Implementado no JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.issealed', 'Object.isSealed')}}     | {{Spec2('ES6')}}     |                                                      |
-| {{SpecName('ESDraft', '#sec-object.issealed', 'Object.isSealed')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.isSealed")}}
+{{Compat}}
 
 ## Veja também
 

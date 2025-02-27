@@ -19,7 +19,7 @@ l10n:
 
 - [CSS Nesting](/ja/docs/Web/CSS/CSS_nesting) モジュールと [`&` ネスティングセレクター](/ja/docs/Web/CSS/Nesting_selector) を Firefox でサポートしました。これは入れ子になった CSS を開発者が書くことを可能にして、CSS スタイルシートの可読性、モジュール性、保守性の向上に役立ちます。また、CSS のファイルサイズの縮小に役立つ可能性もあり、ダウンロードサイズも削減します。([Firefox bug 1835066](https://bugzil.la/1835066)、[Firefox bug 1840781](https://bugzil.la/1840781))
 
-- [`math-style`](/ja/docs/Web/CSS/math-style) および [`math-depth`](/ja/docs/Web/CSS/math-depth) プロパティをサポートしました。また、[`font-size`](/ja/docs/Web/CSS/font-size#values) プロパティの値 `math` もサポートしました ([Firefox bug 1845516](https://bugzil.la/1845516))。
+- [`math-style`](/ja/docs/Web/CSS/math-style) および [`math-depth`](/ja/docs/Web/CSS/math-depth) プロパティをサポートしました。また、[`font-size`](/ja/docs/Web/CSS/font-size#値) プロパティの値 `math` もサポートしました ([Firefox bug 1845516](https://bugzil.la/1845516))。
 
 - [`contain-intrinsic-size: auto none`](/ja/docs/Web/CSS/contain-intrinsic-size) の構文をサポートしました。これは、可能であれば最後に記憶した要素のサイズを使用しますが、それ以外の場合は `contain-intrinsic-size: none` にフォールバックすることができます。
   これはグリッドや段組みのレイアウトで、要素を高さ 0px の代わりに、内容物がないかのようにレイアウトすることに役立ちます ([Firefox bug 1835813](https://bugzil.la/1835813))。
@@ -53,7 +53,7 @@ l10n:
 #### WebDriver BiDi
 
 - ユーザーがすべての WebDriver セッションを終了してブラウザーを閉じることを可能にする `browser.close` コマンドを追加しました ([Firefox bug 1829334](https://bugzil.la/1829334))。
-- ユーザーがトップレベルのブラウジングコンテキストの寸法を変更することを可能にする `browsingContext.setViewport` コマンドを追加しました ([Firefox bug 1838664](https://bugzil.la/1838664))。
+- ユーザーがトップレベルの閲覧コンテキストの寸法を変更することを可能にする `browsingContext.setViewport` コマンドを追加しました ([Firefox bug 1838664](https://bugzil.la/1838664))。
 - ドキュメント内のナビゲーションに対して発生する `browsingContext.fragmentNavigated` イベントを追加しました ([Firefox bug 1841039](https://bugzil.la/1841039))。
 - `browsingContext.create` コマンドの引数 `background` をサポートしました。これは、新しいコンテキストをバックグラウンドで作成することを強制します。この引数は省略可能で既定値が `false` ですので、`browsingContext.create` はデフォルトで新しいコンテキストをフォアグラウンドで開きます ([Firefox bug 1843507](https://bugzil.la/1843507))。
 - `browsingContext.captureScreenshot` コマンドの引数 `clip` をサポートしました。これは、スクリーンショットを指定した領域または要素に制限できます。要素を切り抜くとき、スクリーンショットを取得する前に要素がビューに入るようにスクロールすることができます ([Firefox bug 1840998](https://bugzil.la/1840998))。

@@ -1,9 +1,11 @@
 ---
 title: FileSystemHandle：kind 属性
 slug: Web/API/FileSystemHandle/kind
+l10n:
+  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
 {{domxref("FileSystemHandle")}} 接口的 **`kind`** 只读属性返回条目的类型。如果关联的条目是一个文件，则此值为 `'file'`，否则为 `'directory'`。其用于在遍历目录内容时区分文件和目录。
 
@@ -45,4 +47,4 @@ async function getFile() {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://web.dev/file-system-access/)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.google.cn/docs/capabilities/web-apis/file-system-access)

@@ -11,7 +11,15 @@ Geralmente, o operador retorna o valor do primeiro operando {{Glossary("falsy")}
 
 ## Exemplo
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical AND", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 && b > 0);
+// Expected output: false
+```
 
 ## Sintaxe
 
@@ -75,7 +83,7 @@ console.log(A() && B());
 
 ### Operador precedente
 
-O operador AND tem uma precedência maior que o operador OR, o que significa que o operador `&&` é executado antes do operador `||` (consulte [precedência de operadores](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
+O operador AND tem uma precedência maior que o operador OR, o que significa que o operador `&&` é executado antes do operador `||` (consulte [precedência de operadores](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
 ```js
 true || (false && false); // true

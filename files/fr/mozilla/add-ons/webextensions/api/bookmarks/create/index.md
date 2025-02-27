@@ -3,13 +3,14 @@ title: bookmarks.create()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Crée un signet ou un dossier en tant qu'enfant de {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} avec `parentId` spécifié. Pour créer un dossier, omettez ou laissez vide le paramètre {{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}}.
 
-> **Attention :** Si votre extension tente de créer un nouveau signet dans le nœud racine de l'arborescence du signet, une erreur est générée: "_La racine du signet ne peut pas être modifiée_" et le signet ne sera pas créé.
+> [!WARNING]
+> Si votre extension tente de créer un nouveau signet dans le nœud racine de l'arborescence du signet, une erreur est générée: "_La racine du signet ne peut pas être modifiée_" et le signet ne sera pas créé.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -26,7 +27,7 @@ var createBookmark = browser.bookmarks.create(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} qui décrit le nouveau noeud de marque pages.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} qui décrit le nouveau noeud de marque pages.
 
 ## Exemples
 
@@ -51,9 +52,9 @@ createBookmark.then(onCreated);
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

@@ -3,14 +3,15 @@ title: "Element: mousewheel イベント"
 short-title: mousewheel
 slug: Web/API/Element/mousewheel_event
 l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+  sourceCommit: d0b23f3f26637aa405ee9ee0a0892fc6e9b742ef
 ---
 
 {{APIRef}}{{deprecated_header}}{{ Non-standard_header() }}
 
-古い標準外の **`mousewheel`** イベントは、このイベントは {{domxref("Element")}} で非同期に発生し、マウスホイールまたは類似の機器を操作している間の更新を提供します。`mousewheel` イベントはどの標準にも含まれておらず、いくつかのブラウザーで実装されていましたが、Firefox で実装されることはありませんでした。
+古い標準外の **`mousewheel`** イベントは、このイベントは {{domxref("Element")}} で非同期に発生し、マウスホイールまたは類似の機器を操作している間の更新を提供します。`mousewheel` イベントはどの標準にも含まれておらず、いくつかのブラウザーで実装されていましたが、 Firefox で実装されることはありませんでした。
 
-> **メモ:** この古いイベントの代わりに、標準の {{domxref("Element.wheel_event", "wheel")}} イベントを使用してください。
+> [!NOTE]
+> この古いイベントの代わりに、標準の {{domxref("Element.wheel_event", "wheel")}} イベントを使用してください。
 
 ## 構文
 
@@ -24,7 +25,7 @@ onmousewheel = (event) => {};
 
 ## イベント型
 
-{{domxref("WheelEvent")}} です。{{domxref("Event")}} を継承しています。
+{{domxref("WheelEvent")}} です。 {{domxref("MouseEvent")}}、{{domxref("UIEvent")}}、{{domxref("Event")}} を継承しています。
 
 {{InheritanceDiagram("WheelEvent")}}
 
@@ -59,7 +60,8 @@ _このインターフェイスには、祖先である {{DOMxRef("MouseEvent")}
 
 {{domxref("UIEvent/detail", "detail")}} プロパティの値は常にゼロです。ただし、Opera では `detail` は Firefox 専用の {{domxref("Element.DOMMouseScroll_event", "DOMMouseScroll")}} イベントの `detail` 値はスクロール距離を行単位で示し、負の値はスクロール移動が下方向または右方向であることを示し、正の値は上方向または左方向であることを示します。
 
-> **メモ:** macOS では、スクロール距離（したがって `detail` の値）は加速スクロール距離に基づいて計算されます。
+> [!NOTE]
+> macOS では、スクロール距離（したがって `detail` の値）は加速スクロール距離に基づいて計算されます。
 
 Linux では、`2` または `-2` がネイティブのホイールイベントごとに設定されます。
 

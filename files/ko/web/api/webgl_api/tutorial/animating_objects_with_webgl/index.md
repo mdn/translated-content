@@ -91,7 +91,7 @@ mvTranslate([squareXOffset, squareYOffset, squareZOffset]);
 
 이제 정사각형이 화면에서 좌, 우, 위, 아래, 앞, 뒤로 완전히 자기멋대로 움직이면서 회전하는 것을 볼 수 있습니다. 어찌보면 바탕화면 보호기 같기도 합니다.
 
-WebGL이 지원되는 브라우저라면, [여기](/samples/webgl/sample4/index.html)에서 실제 동작하는 예제를 확인할 수 있습니다.
+WebGL이 지원되는 브라우저라면, [여기](http://mdn.github.io/webgl-examples/tutorial/sample4/index.html)에서 실제 동작하는 예제를 확인할 수 있습니다.
 
 ## 추가적인 행렬 연산
 

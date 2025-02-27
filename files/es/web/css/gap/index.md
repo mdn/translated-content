@@ -99,4 +99,4 @@ CSS
 ## See also
 
 - Related CSS properties: {{cssxref("grid-row-gap")}}, {{cssxref("grid-column-gap")}}
-- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Gutters)_
+- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)_

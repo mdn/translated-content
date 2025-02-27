@@ -197,20 +197,16 @@ Quando usar a sintaxe de espalhamento para chamada de funções, esteja ciente d
 
 ## Sintaxe Rest (parâmetros)
 
-A _sintaxe rest_ se parece exatamente como a _sintaxe de espalhamento_, mas esta é usada para desestruturar arrays e objetos. De certa forma, a _sintaxe rest_ é o oposto da _sintaxe de espalhamento_: A _sintaxe de espalhamento (spread)_ 'expande' um array em vários elementos, enquanto a _sintaxe rest_ coleta multiplos elementos e 'condensa' eles em um único elemento. Veja [parâmetros rest.](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters)
+A _sintaxe rest_ se parece exatamente como a _sintaxe de espalhamento_, mas esta é usada para desestruturar arrays e objetos. De certa forma, a _sintaxe rest_ é o oposto da _sintaxe de espalhamento_: A _sintaxe de espalhamento (spread)_ 'expande' um array em vários elementos, enquanto a _sintaxe rest_ coleta multiplos elementos e 'condensa' eles em um único elemento. Veja [parâmetros rest.](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 
 ## Especificações
 
-| Specification                                                                                | Status               | Comment                                                                                                                                                                                                                            |
-| -------------------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES2015', '#sec-array-initializer')}}                                             | {{Spec2('ES2015')}}  | Defined in several sections of the specification: [Array Initializer](http://www.ecma-international.org/ecma-262/6.0/#sec-array-initializer), [Argument Lists](http://www.ecma-international.org/ecma-262/6.0/#sec-argument-lists) |
-| {{SpecName('ESDraft', '#sec-array-initializer')}}                                            | {{Spec2('ESDraft')}} | No changes.                                                                                                                                                                                                                        |
-| [Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) | Draft                | Stage 3 draft.                                                                                                                                                                                                                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.spread")}}
+{{Compat}}
 
 ## Veja também
 
-- [Parâmetros Rest](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters) (also '`...`')
+- [Parâmetros Rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters) (also '`...`')

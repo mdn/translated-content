@@ -16,11 +16,11 @@ El readyState de un documento puede tener uno de los siguientes valores:
 - loading
   - : El {{ domxref("document") }} todavía esta cargando.
 - interactive
-  - : El documento ha terminado de cargar y ha sido analizado pero los sub-recursos como imágenes, estilos y frames aún siguen cargando. El estado indica que el evento [`DOMContentLoaded`](/es/docs/Web/Reference/Events/DOMContentLoaded) ha sido disparado.
+  - : El documento ha terminado de cargar y ha sido analizado pero los sub-recursos como imágenes, estilos y frames aún siguen cargando. El estado indica que el evento [`DOMContentLoaded`](/es/docs/Web/API/Document/DOMContentLoaded_event) ha sido disparado.
 - complete
-  - : El documento y todos los sub-recursos han cargado completamente. El estado indica que el evento [`load`](/es/docs/Web/Reference/Events/load) ha sido disparado.
+  - : El documento y todos los sub-recursos han cargado completamente. El estado indica que el evento [`load`](/es/docs/Web/API/Window/load_event) ha sido disparado.
 
-Cuando el valor de esta propiedad cambia, un evento [`readystatechange`](/es/docs/Web/Reference/Events/readystatechange) se dispara en el objecto {{ domxref("document") }}.
+Cuando el valor de esta propiedad cambia, un evento [`readystatechange`](/es/docs/Web/API/Document/readystatechange_event) se dispara en el objecto {{ domxref("document") }}.
 
 ## Sintaxis
 
@@ -84,6 +84,6 @@ document.onreadystatechange = function () {
 
 ## Ver también
 
-- Evento [`readystatechange`](/es/docs/Web/Reference/Events/readystatechange)
-- Evento [`DOMContentLoaded`](/es/docs/Web/Reference/Events/DOMContentLoaded)
-- Evento [`load`](/es/docs/Web/Reference/Events/load)
+- Evento [`readystatechange`](/es/docs/Web/API/Document/readystatechange_event)
+- Evento [`DOMContentLoaded`](/es/docs/Web/API/Document/DOMContentLoaded_event)
+- Evento [`load`](/es/docs/Web/API/Window/load_event)

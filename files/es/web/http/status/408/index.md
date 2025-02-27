@@ -11,7 +11,8 @@ Un servidor debe enviar "close" en el campo de la cabecera {{HTTPHeader("Connect
 
 Esta respuesta es usada mucho más desde que algunos navegadores, como Chrome, Firefox 27+, y IE9, usan el mecanizmo de pre-conexión HTTP para acelerar la naveación.
 
-> **Nota:** Algunos servidores simplemente cierran la conexión sin enviar este mensaje.
+> [!NOTE]
+> Algunos servidores simplemente cierran la conexión sin enviar este mensaje.
 
 ## Estado
 

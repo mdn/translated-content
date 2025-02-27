@@ -1,5 +1,5 @@
 ---
-title: ":-moz-last-node"
+title: :-moz-last-node
 slug: Web/CSS/:-moz-last-node
 ---
 
@@ -7,7 +7,8 @@ slug: Web/CSS/:-moz-last-node
 
 La pseudo-classe **`:-moz-last-node`** correspond à un élément si celui-ci est le dernier nœud d'un autre élément. Cette pseudo-classe est différente de {{cssxref(":last-child")}} car elle ne cible pas le dernier élément qui possède du texte (hors blancs).
 
-> **Note :** Tout blanc qui serait à la fin d'un élément est ignoré pour la détermination de `:-moz-last-node`.
+> [!NOTE]
+> Tout blanc qui serait à la fin d'un élément est ignoré pour la détermination de `:-moz-last-node`.
 
 ## Syntaxe
 

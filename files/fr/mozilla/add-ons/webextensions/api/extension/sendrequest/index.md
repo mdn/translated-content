@@ -5,7 +5,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/extension/sendRequest
 
 {{AddonSidebar}}{{Deprecated_Header}}
 
-> **Attention :** Cette méthode est dépréciée. utilisez {{WebExtAPIRef("runtime.sendMessage")}} à la place.
+> [!WARNING]
+> Cette méthode est dépréciée. utilisez {{WebExtAPIRef("runtime.sendMessage")}} à la place.
 
 Envoie une seule requête aux autres écouteurs de l'extension. Similaire à {{WebExtAPIRef('runtime.connect')}},mais envoie seulement une seule requête avec une réponse optionnelle. L'événement {{WebExtAPIRef('extension.onRequest')}} est déclenché dans chaque page de l'extension
 
@@ -19,7 +20,7 @@ chrome.extension.sendRequest(
 )
 ```
 
-Cette API est également disponible en tant que `browser.extension.sendRequest()` dans une [version qui renvoie une promise](/fr/Add-ons/WebExtensions/API#Callbacks_and_promises).
+Cette API est également disponible en tant que `browser.extension.sendRequest()` dans une [version qui renvoie une promise](/fr/docs/Mozilla/Add-ons/WebExtensions/API#callbacks_and_promises).
 
 ### Paramètres
 
@@ -40,9 +41,9 @@ Cette API est également disponible en tant que `browser.extension.sendRequest()
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

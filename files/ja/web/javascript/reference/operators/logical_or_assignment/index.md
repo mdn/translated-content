@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
 
 論理和代入演算子 (`x ||= y`) は、`x` が{{Glossary("falsy", "偽値")}}である場合にのみ代入を行います。
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-or-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical OR assignment")}}
+
+```js interactive-example
+const a = { duration: 50, title: "" };
+
+a.duration ||= 10;
+console.log(a.duration);
+// Expected output: 50
+
+a.title ||= "title is empty.";
+console.log(a.title);
+// Expected output: "title is empty."
+```
 
 ## 構文
 
@@ -55,7 +67,7 @@ document.getElementById("lyrics").textContent ||= "No lyrics.";
 
 ここでの短絡評価は、要素が不必要に更新されることがなく、追加のパースやレンダリング作業、フォーカスの損失などの望ましくない副作用を引き起こすことがないので、特に有益です。
 
-注意: チェック対象の API が返す値に注意してください。空の文字列 ({{Glossary("falsy", "偽値")}}) が返される場合は、`||=` を使用する必要があります。それ以外の場合 (返値が {{jsxref("null")}} または {{jsxref("undefined")}} の場合) は `??=` 演算子を使用してください。
+注意: チェック対象の API が返す値に注意してください。空の文字列 ({{Glossary("falsy", "偽値")}}) が返される場合は、`||=` を使用する必要があります。それ以外の場合 (返値が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または {{jsxref("undefined")}} の場合) は `??=` 演算子を使用してください。
 
 ## 仕様書
 
@@ -68,7 +80,7 @@ document.getElementById("lyrics").textContent ||= "No lyrics.";
 ## 関連情報
 
 - [論理和演算子 (||)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [Null 合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Null 合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [ビット論理和代入演算子 (`|=`)](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
 - {{Glossary("Truthy", "真値")}}
 - {{Glossary("Falsy", "偽値")}}

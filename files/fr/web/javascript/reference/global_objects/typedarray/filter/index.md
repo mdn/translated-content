@@ -5,9 +5,21 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
 
 {{JSRef}}
 
-La méthode **`filter()`** crée un nouveau tableau qui contient l'ensemble des éléments qui remplissent une condition fournie par la fonction de test passée en argument. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.filter()")}}_._ _TypedArray_ est utilisé ici de façon générique pour représenter [l'un des types de tableaux typés possibles](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
+La méthode **`filter()`** crée un nouveau tableau qui contient l'ensemble des éléments qui remplissent une condition fournie par la fonction de test passée en argument. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.filter()")}}_._ _TypedArray_ est utilisé ici de façon générique pour représenter [l'un des types de tableaux typés possibles](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
 
-{{EmbedInteractiveExample("pages/js/typedarray-filter.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.filter()")}}
+
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([-10, 20, -30, 40, -50]);
+const negInt8 = int8.filter(isNegative);
+
+console.log(negInt8);
+// Expected output: Int8Array [-10, -30, -50]
+```
 
 ## Syntaxe
 
@@ -36,7 +48,7 @@ La méthode `filter()` appelle une fonction `callback` appelée une fois pour ch
 2. l'indice de l'élément
 3. le tableau typé courant
 
-Si le paramètre `thisArg` est fourni, il sera utilisé comme objet `this` lors de l'appel de la fonction `callback`. Sinon, la valeur `undefined` sera utilisée à la place. Par ailleurs, la valeur de `this` accessible depuis la fonction `callback` est déterminée selon [les règles usuelles déterminant la valeur this au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this).
+Si le paramètre `thisArg` est fourni, il sera utilisé comme objet `this` lors de l'appel de la fonction `callback`. Sinon, la valeur `undefined` sera utilisée à la place. Par ailleurs, la valeur de `this` accessible depuis la fonction `callback` est déterminée selon [les règles usuelles déterminant la valeur this au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Operators/this).
 
 `filter()` ne modifie pas le tableau typé sur lequel elle a été appelée.
 
@@ -58,7 +70,7 @@ new Uint8Array([12, 5, 8, 130, 44]).filter(supSeuil);
 
 ### Filtrer les éléments d'un tableau typé avec les fonctions fléchées
 
-[Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) permettent d'utiliser une syntaxe plus concise pour réaliser le même test que montré précédemment :
+[Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) permettent d'utiliser une syntaxe plus concise pour réaliser le même test que montré précédemment :
 
 ```js
 new Uint8Array([12, 5, 8, 130, 44]).filter((élém) => élém >= 10);

@@ -45,6 +45,6 @@ _从其父级 {{domxref("Node")}} 继承方法，并且实现了 {{domxref("Chil
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference).
+- [The DOM interfaces index](/zh-CN/docs/Web/API/Document_Object_Model).

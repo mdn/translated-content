@@ -9,12 +9,12 @@ slug: Web/CSS/min-width
 
 La propiedad `min-width` se usa para determinar la anchura mínima de un elemento. Previene que la propiedad {{ Cssxref("width") }} pueda ser inferior que `min-width`.
 
-- {{ Xref_cssinitial() }}: 0
+- [Valor inicial](/es/docs/Web/CSS/initial_value): 0
 - Aplicable a: elementos de tipo bloque.
-- {{ Xref_cssinherited() }}: no
+- [Heredable](/es/docs/Web/CSS/Inheritance): no
 - Porcentajes: se refieren a la anchura del bloque contenedor.
-- Media: {{ Xref_cssvisual() }}
-- {{ Xref_csscomputed() }}:
+- Media: {{cssxref("Media/Visual", "visual")}}
+- [Valor calculado](/es/docs/Web/CSS/computed_value):
 
 ### Sintaxis
 
@@ -43,16 +43,12 @@ form{min-width: 0;}
 
 ### Especificaciones
 
-- [CSS 2.1](http://www.w3.org/TR/CSS2/visudet.html#min-max-widths)
+{{Specifications}}
 
-### Compatibilidad entre navegadores
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 6              |
-| Netscape          | 6              |
-| Opera             | 3.5            |
+{{Compat}}
 
 ### Ver también
 
-[box model](/es/CSS/box_model), {{ Cssxref("min-height") }}, {{ Cssxref("-moz-box-sizing") }}, {{ Cssxref("width") }}, {{ Cssxref("max-width") }}
+[box model](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{ Cssxref("min-height") }}, {{ Cssxref("-moz-box-sizing") }}, {{ Cssxref("width") }}, {{ Cssxref("max-width") }}

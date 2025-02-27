@@ -3,16 +3,14 @@ title: FormData.entries()
 slug: Web/API/FormData/entries
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
-The **`FormData.entries()`** 方法返回一个 {{jsxref("Iteration_protocols",'iterator')}}对象，此对象可以遍历访问 FormData 中的键值对。其中键值对的 key 是一个 {{domxref("USVString")}} 对象；value 是一个 {{domxref("USVString")}} , 或者 {{domxref("Blob")}}对象。
-
-> **备注：** 此方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 可用。
+**`FormData.entries()`** 方法返回一个 {{jsxref("Iteration_protocols",'iterator')}}对象，此对象可以遍历访问 {{domxref("FormData")}} 中的键值对。其中键值对的键是一个字符串对象；值是一个字符串或者 {{domxref("Blob")}} 对象。
 
 ## 语法
 
-```
-formData.entries();
+```js-nolint
+entries()
 ```
 
 ### 返回值
@@ -35,7 +33,7 @@ for (var pair of formData.entries()) {
 
 执行结果为：
 
-```
+```plain
 key1, value1
 key2, value2
 ```
@@ -48,9 +46,7 @@ key2, value2
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

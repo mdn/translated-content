@@ -1,15 +1,14 @@
 ---
-title: HTMLMediaElement.buffered
+title: "HTMLMediaElement: buffered プロパティ"
+short-title: buffered
 slug: Web/API/HTMLMediaElement/buffered
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: 2b554506d84d016d3ddf612c593bd8315833c64d
 ---
 
 {{APIRef("HTML DOM")}}
 
 **`buffered`** は {{domxref("HTMLMediaElement")}} オブジェクトの読み取り専用プロパティで、この `buffered` プロパティがアクセスされた時点でユーザーエージェントがバッファリングしているメディアリソースの範囲があれば，それを表す新しい静的な[正規化された `TimeRanges` オブジェクト](/ja/docs/Web/API/TimeRanges#normalized_timeranges_objects)を返します。
-
-> **メモ:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)では利用できません。
 
 ## 値
 
@@ -32,4 +31,4 @@ console.log(obj.buffered); // TimeRanges { length: 0 }
 
 ## 関連情報
 
-- これを定義しているインターフェイスである {{domxref("HTMLMediaElement")}}
+- {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.buffered` プロパティを定義しているインターフェイス

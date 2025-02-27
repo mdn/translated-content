@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Operators/Property_accessors
 
 Os assessores de propriedade fornecem acesso as propriedades de um objeto usando a notação de ponto ou a notação de colchetes.
 
-{{EmbedInteractiveExample("pages/js/expressions-propertyaccessors.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Property accessors")}}
+
+```js interactive-example
+const person1 = {};
+person1["firstname"] = "Mario";
+person1["lastname"] = "Rossi";
+
+console.log(person1.firstname);
+// Expected output: "Mario"
+
+const person2 = {
+  firstname: "John",
+  lastname: "Doe",
+};
+
+console.log(person2["lastname"]);
+// Expected output: "Doe"
+```
 
 ## Sintaxe
 
@@ -97,7 +114,7 @@ A saída também é "value", já que ambos foo e bar são convertidos para a mes
 
 ### Ligação de método
 
-Um método não é limitado ao objeto de quem é metodo. Especificamente, `this` não é fixo em um método, i.e., `this` não se referece necessariamente ao objeto contendo o método. Ao invés disso, `this` é "passado" pela função call. Veja [method binding](/pt-BR/docs/Web/JavaScript/Reference/Operators/this#Method_binding).
+Um método não é limitado ao objeto de quem é metodo. Especificamente, `this` não é fixo em um método, i.e., `this` não se referece necessariamente ao objeto contendo o método. Ao invés disso, `this` é "passado" pela função call. Veja [method binding](/pt-BR/docs/Web/JavaScript/Reference/Operators/this#method_binding).
 
 ### Nota sobre `eval`
 
@@ -115,16 +132,11 @@ x = document.forms["form_name"].elements[strFormControl].value;
 
 ## Especificações
 
-| Specification                                                            | Status               | Comment                                            |
-| ------------------------------------------------------------------------ | -------------------- | -------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-property-accessors', 'Property Accessors')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-property-accessors', 'Property Accessors')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ES5.1', '#sec-11.2.1', 'Property Accessors')}}               | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES1', '#sec-11.2.1', 'Property Accessors')}}                 | {{Spec2('ES1')}}     | Initial definition. Implemented in JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.property_accessors")}}
+{{Compat}}
 
 ## Veja também
 

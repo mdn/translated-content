@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 
 **`replaceAll()`** 方法返回一个新字符串，其中所有匹配 `pattern` 的部分都被替换为 `replacement`。`pattern` 可以是一个字符串或一个 {{jsxref("RegExp")}}，`replacement` 可以是一个字符串或一个在每次匹配时调用的函数。原始字符串保持不变。
 
-{{EmbedInteractiveExample("pages/js/string-replaceall.html")}}
+{{InteractiveExample("JavaScript Demo: String.replaceAll()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+console.log(paragraph.replaceAll("dog", "monkey"));
+// Expected output: "I think Ruth's monkey is cuter than your monkey!"
+
+// Global flag required when calling replaceAll with regex
+const regex = /Dog/gi;
+console.log(paragraph.replaceAll(regex, "ferret"));
+// Expected output: "I think Ruth's ferret is cuter than your ferret!"
+```
 
 ## 语法
 
@@ -56,7 +68,7 @@ console.log(unsafeRedactName(report, "ha.*er")); // "A [REDACTED]s in their name
 console.log(safeRedactName(report, "ha.*er")); // "A hacker called [REDACTED] used special characters in their name to breach the system."
 ```
 
-如果 `pattern` 是一个具有 [`Symbol.replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 方法的对象（包括 `RegExp` 对象），则该方法将被调用，并以目标字符串和 `replacement` 作为参数。它的返回值成为 `replaceAll()` 的返回值。在这种情况下，`replaceAll()` 的行为完全取决于 `@@replace` 方法，因此除了额外的输入验证（即正则表达式必须是全局的）之外，它将具有与 `replace()` 相同的结果。
+如果 `pattern` 是一个具有 [`Symbol.replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 方法的对象（包括 `RegExp` 对象），则该方法将被调用，并以目标字符串和 `replacement` 作为参数。它的返回值成为 `replaceAll()` 的返回值。在这种情况下，`replaceAll()` 的行为完全取决于 `[Symbol.replace]()` 方法，因此除了额外的输入验证（即正则表达式必须是全局的）之外，它将具有与 `replace()` 相同的结果。
 
 如果 `pattern` 是一个空字符串，则替换内容将插入到每个 UTF-16 码元之间，类似于 [`split()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 的行为。
 
@@ -64,7 +76,7 @@ console.log(safeRedactName(report, "ha.*er")); // "A hacker called [REDACTED] us
 "xxx".replaceAll("", "_"); // "_x_x_x_"
 ```
 
-有关正则表达式属性（尤其是 [sticky](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) 标志）如何与 `replaceAll()` 交互的更多信息，请参阅 [`RegExp.prototype[@@replace]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)。
+有关正则表达式属性（尤其是 [sticky](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) 标志）如何与 `replaceAll()` 交互的更多信息，请参阅 [`RegExp.prototype[Symbol.replace]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)。
 
 ## 示例
 

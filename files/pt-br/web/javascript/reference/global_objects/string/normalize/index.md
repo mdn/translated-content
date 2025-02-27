@@ -177,16 +177,13 @@ str.normalize("NFKD"); // '\u0073\u0323\u0307'
 
 ## Especificações
 
-| Especificação                                                                            | Status               | Comentário         |
-| ---------------------------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-string.prototype.normalize', 'String.prototype.normalize')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-string.prototype.normalize', 'String.prototype.normalize')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.normalize")}}
+{{Compat}}
 
 ## Veja também
 
-- [Unicode Standard Annex #15, Unicode Normalization Forms](http://www.unicode.org/reports/tr15/)
+- [Unicode Standard Annex #15, Unicode Normalization Forms](https://www.unicode.org/reports/tr15/)
 - [Unicode equivalence](http://en.wikipedia.org/wiki/Unicode_equivalence)

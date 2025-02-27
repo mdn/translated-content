@@ -11,9 +11,11 @@ slug: Web/API/ClipboardItem
 
 クリップボードの内容へのアクセスは[権限 API](/ja/docs/Web/API/Permissions_API) の下で制限されています。クリップボードへの書き込み権限は、ページがアクティブなタブにあるときに自動的に付与されます。 `clipboard-read` 権限は要求する必要があり、これはクリップボードからデータを読もうとすることで行えます。
 
-> **メモ:** テキストを扱うには、 {{domxref("Clipboard")}} インターフェイスの {{domxref("Clipboard.readText()")}} および {{domxref("Clipboard.writeText()")}} メソッドをご覧ください。
+> [!NOTE]
+> テキストを扱うには、 {{domxref("Clipboard")}} インターフェイスの {{domxref("Clipboard.readText()")}} および {{domxref("Clipboard.writeText()")}} メソッドをご覧ください。
 
-> **メモ:** 一度に渡すことができるクリップボードの項目は 1 つだけです。
+> [!NOTE]
+> 一度に渡すことができるクリップボードの項目は 1 つだけです。
 
 ## コンストラクター
 

@@ -145,9 +145,6 @@ l10n:
       <td>
         <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
           >メタデータコンテンツ</a
-        >、 <code>scoped</code> 属性が提供された場合:
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
-          >フローコンテンツ</a
         >
       </td>
     </tr>

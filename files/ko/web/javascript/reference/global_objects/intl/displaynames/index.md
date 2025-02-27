@@ -2,14 +2,27 @@
 title: Intl.DisplayNames
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 l10n:
-  sourceCommit: 77176b1f35f73f319bb5b959e5c90db8b5a0f9ea
+  sourceCommit: 6e93ec8fc9e1f3bd83bf2f77e84e1a39637734f8
 ---
 
 {{JSRef}}
 
 **`Intl.DisplayNames`** 객체를 사용하면 언어, 지역 그리고 문자 체계 표시 이름을 일관되게 번역할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.DisplayNames")}}
+
+```js interactive-example
+const regionNamesInEnglish = new Intl.DisplayNames(["en"], { type: "region" });
+const regionNamesInTraditionalChinese = new Intl.DisplayNames(["zh-Hant"], {
+  type: "region",
+});
+
+console.log(regionNamesInEnglish.of("US"));
+// Expected output: "United States"
+
+console.log(regionNamesInTraditionalChinese.of("US"));
+// Expected output: "美國"
+```
 
 ## 생성자
 
@@ -27,8 +40,8 @@ l10n:
 
 - {{jsxref("Object/constructor", "Intl.DisplayNames.prototype.constructor")}}
   - : 인스턴스 객체를 만든 생성자 함수입니다. `Intl.DisplayNames` 인스턴스의 경우 초기 값은 {{jsxref("Intl/DisplayNames/DisplayNames", "Intl.DisplayNames")}} 생성자입니다.
-- `Intl.DisplayNames.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 속성의 초기 값은 문자열 `"Intl.DisplayNames"`입니다. 이 속성은 {{jsxref("Object.prototype.toString()")}}에서 사용됩니다.
+- `Intl.DisplayNames.prototype[Symbol.toStringTag]`
+  - : [`Symbol.toStringTag`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 속성의 초기 값은 문자열 `"Intl.DisplayNames"`입니다. 이 속성은 {{jsxref("Object.prototype.toString()")}}에서 사용됩니다.
 
 ## 인스턴스 메서드
 

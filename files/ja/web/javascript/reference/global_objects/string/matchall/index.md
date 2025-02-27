@@ -2,14 +2,27 @@
 title: String.prototype.matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
 l10n:
-  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
+  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
 {{JSRef}}
 
-**`matchAll()`** は[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)に一致するすべての文字列を、[キャプチャグループ](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)を含み、イテレーターで返すメソッドです。
+**`matchAll()`** は {{jsxref("String")}} 値のメソッドで、この文字列と[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)を照合したすべての結果を、[キャプチャグループ](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)を含み、イテレーターで返すメソッドです。
 
-{{EmbedInteractiveExample("pages/js/string-matchall.html")}}
+{{InteractiveExample("JavaScript Demo: String.matchAll()")}}
+
+```js interactive-example
+const regexp = /t(e)(st(\d?))/g;
+const str = "test1test2";
+
+const array = [...str.matchAll(regexp)];
+
+console.log(array[0]);
+// Expected output: Array ["test1", "e", "st1", "1"]
+
+console.log(array[1]);
+// Expected output: Array ["test2", "e", "st2", "2"]
+```
 
 ## 構文
 
@@ -29,7 +42,7 @@ matchAll(regexp)
 
 ### 返値
 
-一致したものの[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)（再起動不可能なもの）です。それぞれの一致する配列は {{jsxref("RegExp.prototype.exec()")}} の返値と同じ形です。
+一致したものの[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)（再起動不可能なもの）、または一致するものがなければ空のイテレーターです。イテレーターが生成するそれぞれの値は、{{jsxref("RegExp.prototype.exec()")}} の返値と同じ形です。
 
 ### 例外
 
@@ -38,7 +51,7 @@ matchAll(regexp)
 
 ## 解説
 
-`String.prototype.matchAll` の実装自体は、正規表現がグローバルであるという余分な入力検証を除けば）非常にシンプルで、引数の文字列を最初の引数として `Symbol.matchAll` メソッドを呼び出すだけです。実際の実装は [`RegExp.prototype[@@matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll) から来ています。
+`String.prototype.matchAll` の実装自体は、正規表現がグローバルであるという余分な入力検証を除けば）非常にシンプルで、引数の文字列を最初の引数として `Symbol.matchAll` メソッドを呼び出すだけです。実際の実装は [`RegExp.prototype[Symbol.matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll) から来ています。
 
 ## 例
 
@@ -92,7 +105,7 @@ str.matchAll(regexp);
 // TypeError
 ```
 
-`matchAll` では内部的に `regexp` の複製を作成します。そのため {{jsxref("Global_Objects/RegExp/exec", "regexp.exec()")}} とは違って文字列をスキャンした際に `lastIndex` が変わることはありません。
+`matchAll` では内部的に `regexp` の複製を作成します。そのため {{jsxref("RegExp/exec", "regexp.exec()")}} とは違って文字列をスキャンした際に `lastIndex` が変わることはありません。
 
 ```js
 const regexp = /[a-c]/g;
@@ -108,7 +121,7 @@ Array.from(str.matchAll(regexp), (m) => `${regexp.lastIndex} ${m[0]}`);
 
 `matchAll` はキャプチャグループへのよりよいアクセスを実現します。
 
-{{jsxref("Global_Objects/String/match", "match()")}} では、グローバル `g` フラグを使用するとキャプチャグループが無視されてしまいます。
+{{jsxref("String/match", "match()")}} では、グローバル `g` フラグを使用するとキャプチャグループが無視されてしまいます。
 
 ```js
 const regexp = /t(e)(st(\d?))/g;
@@ -128,7 +141,7 @@ array[1];
 // ['test2', 'e', 'st2', '2', index: 5, input: 'test1test2', length: 4]
 ```
 
-### matchAll() を RegExp ではない @@matchAll を実装しているオブジェクトで使用
+### matchAll() を RegExp ではない `[Symbol.matchAll]()` を実装しているオブジェクトで使用
 
 オブジェクトに `Symbol.matchAll` メソッドがあれば、それをカスタムマッチャーとして使うことができます。`Symbol.matchAll` の返値は `matchAll()` の返値となる。
 
@@ -154,9 +167,9 @@ str.matchAll({
 
 - [`String.prototype.matchAll` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.match()")}}
-- [JavaScript での正規表現の使用](/ja/docs/Web/JavaScript/Guide/Regular_expressions)
-- [キャプチャグループ](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
+- [JavaScript での正規表現の使用](/ja/docs/Web/JavaScript/Guide/Regular_expressions)ガイド
+- [グループと後方参照](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)ガイド
 - {{jsxref("RegExp")}}
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}
-- [`RegExp.prototype[@@matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
+- [`RegExp.prototype[Symbol.matchAll]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)

@@ -29,7 +29,7 @@ Neste artigo, iremos apresentar diversos conceitos relacionados à Web: páginas
 
 ## Sumário
 
-Como qualquer outra área do conhecimento, a web possui um grande número de jargões. Não se preocupe, nós não iremos te sobrecarregar com todos eles (temos um [glossário](/pt-BR/docs/Glossario) se você estiver curioso). Todavia, existem alguns termos básicos que você precisa conhecer inicialmente, já que você sempre ouvirá estas expressões enquanto estiver lendo sobre o assunto. É muito fácil confundir tais termos ocasionalmente, uma vez que eles se referem a funcionalidades relacionadas porém diferentes. Na verdade, às vezes você verá esses termos mal utilizados nos noticiários e em outros lugares, portanto, misturá-los é compreensível.
+Como qualquer outra área do conhecimento, a web possui um grande número de jargões. Não se preocupe, nós não iremos te sobrecarregar com todos eles (temos um [glossário](/pt-BR/docs/Glossary) se você estiver curioso). Todavia, existem alguns termos básicos que você precisa conhecer inicialmente, já que você sempre ouvirá estas expressões enquanto estiver lendo sobre o assunto. É muito fácil confundir tais termos ocasionalmente, uma vez que eles se referem a funcionalidades relacionadas porém diferentes. Na verdade, às vezes você verá esses termos mal utilizados nos noticiários e em outros lugares, portanto, misturá-los é compreensível.
 
 Cobriremos esses termos e tecnologias com mais detalhes à medida que exploramos mais, mas essas definições rápidas serão um ótimos começo para você:
 
@@ -57,7 +57,7 @@ Comparemos a biblioteca com um servidor web:
 
 ## Aprendizado ativo
 
-_Ainda não há nenhum aprendizado ativo. [Por favor, considere fazer uma contribuição](/pt-BR/docs/MDN/Primeiros_Passos)._
+_Ainda não há nenhum aprendizado ativo. [Por favor, considere fazer uma contribuição](/pt-BR/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Imersão a Fundo
 
@@ -65,7 +65,7 @@ Bem, então vamos escavar um pouco mais a fundo sobre estes quatro termos, em co
 
 ### Página web
 
-Uma **página web** é simplesmente um documento que é renderizado ("mostrado") por um [navegador](/pt-BR/docs/Glossario/Navegador). Tais documentos são escritos com uso da linguagem {{Glossary("HTML")}} (a qual iremos ver em maiores detalhes em [outros artigos](/pt-BR/docs/Web/HTML)). Uma página web pode possuir uma variedade de diferentes tipos de recursos incorporados a ela, como:
+Uma **página web** é simplesmente um documento que é renderizado ("mostrado") por um [navegador](/pt-BR/docs/Glossary/Browser). Tais documentos são escritos com uso da linguagem {{Glossary("HTML")}} (a qual iremos ver em maiores detalhes em [outros artigos](/pt-BR/docs/Web/HTML)). Uma página web pode possuir uma variedade de diferentes tipos de recursos incorporados a ela, como:
 
 - _informação de estilo_ — controlando como a página se apresenta e se comporta (_look-and-feel_)
 - _scripts_ — os quais são responsáveis por adicionar interatividade à página
@@ -107,5 +107,5 @@ Aqui há uma instância do Firefox mostrando uma caixa de pesquisa do Google com
 
 ## Próximos passos
 
-- Escavando a fundo: [O que é um servidor web](/pt-BR/docs/Learn/What_is_a_web_server)
-- Veja como páginas web são vinculadas dentro de um website: [Entendendo links na web](/pt-BR/docs/Learn/Common_questions/What_are_hyperlinks)
+- Escavando a fundo: [O que é um servidor web](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- Veja como páginas web são vinculadas dentro de um website: [Entendendo links na web](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks)

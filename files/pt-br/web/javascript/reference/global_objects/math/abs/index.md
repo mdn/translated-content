@@ -3,7 +3,7 @@ title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Sumário
 
@@ -55,7 +55,7 @@ Math.abs(); // NaN
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.abs")}}
+{{Compat}}
 
 ## Veja Também
 

@@ -63,7 +63,7 @@ Range: bytes=0-499, -500
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Range")}}
+{{Compat}}
 
 ## Veja também
 

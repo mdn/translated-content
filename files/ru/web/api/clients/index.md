@@ -5,7 +5,7 @@ slug: Web/API/Clients
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-Интерфейс `Clients` [Service Workers API](/ru/docs/Web/API/ServiceWorker_API) представляет собой контейнер со списком объектов {{domxref("Client")}}.
+Интерфейс `Clients` [Service Workers API](/ru/docs/Web/API/Service_Worker_API) представляет собой контейнер со списком объектов {{domxref("Client")}}.
 
 ## Методы
 
@@ -41,8 +41,8 @@ clients.matchAll(options).then(function (clients) {
 
 ## Смотрите также
 
-- [Using Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web workers](/ru/docs/Web/Guide/Performance/Using_web_workers)
+- [Using web workers](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)

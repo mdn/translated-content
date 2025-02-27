@@ -25,7 +25,8 @@ async function logJSONData() {
 
 {{domxref("Response")}} 객체 역시 JSON 응답 본문을 그대로 포함하지는 않습니다. `Response`는 HTTP 응답 전체를 나타내는 객체로, JSON 본문 콘텐츠를 추출하기 위해서는 {{domxref("Response.json()", "json()")}} 메서드를 호출해야 합니다. `json()`은 응답 본문 텍스트를 JSON으로 파싱한 결과로 이행하는, 또 다른 프로미스를 반환합니다.
 
-> **참고:** 다른 유형의 본문 콘텐츠를 추출할 수 있는 비슷한 메서드들을 [본문](#본문) 절에서 확인하세요.
+> [!NOTE]
+> 다른 유형의 본문 콘텐츠를 추출할 수 있는 비슷한 메서드들을 [본문](#본문) 절에서 확인하세요.
 
 취득 요청은 가져오려는 리소스의 지시문이 아닌, [`Content-Security-Policy`](/ko/docs/Web/HTTP/Headers/Content-Security-Policy) 헤더의 `connect-src` 지시문에 의해 제어됩니다.
 
@@ -106,7 +107,8 @@ fetch("https://example.com", {
 
 > **참고:** `credentials: 'include'`를 추가한 경우, `Access-Control-Allow-Origin`에 와일드카드를 사용할 수 없습니다. 자격 증명을 포함하려는 경우에는 반드시 정확한 출처를 지정해야 합니다. CORS 해제 확장 프로그램을 사용하더라도 와일드카드를 지정한 요청은 실패할 것입니다.
 
-> **참고:** 자격 증명 옵션의 값에 상관 없이, 브라우저는 프리플라이트 요청에는 자격 증명을 전송하지 않아야 합니다. 자세한 정보는 [자격 증명을 포함한 CORS 요청](/ko/docs/Web/HTTP/CORS#자격_증명을_포함한_요청)을 참고하세요.
+> [!NOTE]
+> 자격 증명 옵션의 값에 상관 없이, 브라우저는 프리플라이트 요청에는 자격 증명을 전송하지 않아야 합니다. 자세한 정보는 [자격 증명을 포함한 CORS 요청](/ko/docs/Web/HTTP/CORS#자격_증명을_포함한_요청)을 참고하세요.
 
 요청 URL이 스크립트와 같은 출처일 때만 자격 증명을 전송하려면 `credentials: 'same-origin'`을 추가하세요.
 
@@ -312,7 +314,8 @@ const anotherRequest = new Request(myRequest, myInit);
 
 요청과 응답 본문은 한 번만 읽을 수 있으므로 복사본 생성은 꽤 유용합니다. 이런 식으로 복사본을 생성하면, 기존에 생성해둔 요청/응답 객체를 다시 사용하되 `init` 옵션만 교체할 수도 있습니다. 복사본은 원본의 본문을 읽기 전에 생성해야 합니다.
 
-> **참고:** 복사본 생성만을 위한 {{domxref("Request.clone", "clone()")}} 메서드도 있습니다. 생성자와 이 메서드 모두, 이미 본문을 읽은 요청 또는 응답을 복사하려고 시도하면 실패합니다. 복사본의 본문을 읽어도 원본에는 영향을 주지 않습니다.
+> [!NOTE]
+> 복사본 생성만을 위한 {{domxref("Request.clone", "clone()")}} 메서드도 있습니다. 생성자와 이 메서드 모두, 이미 본문을 읽은 요청 또는 응답을 복사하려고 시도하면 실패합니다. 복사본의 본문을 읽어도 원본에는 영향을 주지 않습니다.
 
 ## 헤더
 
@@ -394,7 +397,8 @@ async function fetchJSON(request) {
 - `response`: 응답({{domxref("Response.headers")}})에서 획득한 헤더 객체를 보호합니다.
 - `immutable`: 헤더 객체를 읽기 전용으로 설정합니다. 대부분 서비스 워커에서 사용합니다.
 
-> **참고:** 가드가 적용된 응답 헤더에는 `Content-Length` 헤더를 추가하거나 설정할 수 없습니다. 마찬가지로,`Set-Cookie` 헤더 또한 응답에 추가할 수 없습니다. 즉, 서비스 워커에서 응답을 합성해서 쿠키를 설정하는 것은 불가능합니다.
+> [!NOTE]
+> 가드가 적용된 응답 헤더에는 `Content-Length` 헤더를 추가하거나 설정할 수 없습니다. 마찬가지로,`Set-Cookie` 헤더 또한 응답에 추가할 수 없습니다. 즉, 서비스 워커에서 응답을 합성해서 쿠키를 설정하는 것은 불가능합니다.
 
 ## 응답 객체
 
@@ -474,7 +478,7 @@ if (window.fetch) {
 
 ## 같이 보기
 
-- [ServiceWorker API](/ko/docs/Web/API/ServiceWorker_API)
+- [ServiceWorker API](/ko/docs/Web/API/Service_Worker_API)
 - [HTTP 접근 제어 (CORS)](/ko/docs/Web/HTTP/CORS)
 - [HTTP](/ko/docs/Web/HTTP)
 - [Fetch 폴리필](https://github.com/github/fetch)

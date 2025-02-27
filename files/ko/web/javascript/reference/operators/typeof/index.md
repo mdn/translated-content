@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/typeof
 
 **`typeof`** 연산자는 피연산자의 평가 전 자료형을 나타내는 문자열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - typeof")}}
+
+```js interactive-example
+console.log(typeof 42);
+// Expected output: "number"
+
+console.log(typeof "blubber");
+// Expected output: "string"
+
+console.log(typeof true);
+// Expected output: "boolean"
+
+console.log(typeof undeclaredVariable);
+// Expected output: "undefined"
+```
 
 ## 구문
 
@@ -40,9 +54,10 @@ typeof (operand);
 | {{glossary("Function")}} 객체 (ECMA-262 표현으로는 [[Call]]을 구현하는 객체) | `"function"`                    |
 | 다른 모든 객체                                                               | `"object"`                      |
 
-> **참고:** ECMAScript 2019 and older permitted implementations to have `typeof` return any implementation-defined string value for non-callable non-standard exotic objects.
+> [!NOTE]
+> ECMAScript 2019 and older permitted implementations to have `typeof` return any implementation-defined string value for non-callable non-standard exotic objects.
 >
-> The only known browser to have actually taken advantage of this is old Internet Explorer (see [below](#IE-specific_notes)).
+> The only known browser to have actually taken advantage of this is old Internet Explorer (see [below](#ie-specific_notes)).
 
 ## 예제
 
@@ -107,7 +122,7 @@ typeof Math.sin === "function";
 typeof null === "object";
 ```
 
-자바스크립트를 처음 구현할 때, 자바스크립트 값은 타입 태그와 값으로 표시되었습니다. 객체의 타입 태그는 0이었습니다. `null`은 Null pointer(대부분의 플랫폼에서 `0x00`)로 표시되었습니다. 그 결과 null은 타입 태그로 0을 가지며, 따라서 `typeof`는 object를 반환합니다. ([참고 문서](https://2ality.com/2013/10/typeof-null.html))
+JavaScript를 처음 구현할 때, JavaScript 값은 타입 태그와 값으로 표시되었습니다. 객체의 타입 태그는 0이었습니다. `null`은 Null pointer(대부분의 플랫폼에서 `0x00`)로 표시되었습니다. 그 결과 null은 타입 태그로 0을 가지며, 따라서 `typeof`는 object를 반환합니다. ([참고 문서](https://2ality.com/2013/10/typeof-null.html))
 
 ECMAScript에 수정이 제안(opt-in을 통해)되었으나 [거절되었습니다](https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null). 제안된 것은 다음과 같습니다. `typeof null === 'null'.`
 

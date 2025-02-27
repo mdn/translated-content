@@ -1,52 +1,79 @@
 ---
-title: <style>
+title: <style>：样式信息元素
 slug: Web/HTML/Element/style
+l10n:
+  sourceCommit: 176953b8260e0dd4328a7e788e8179accbafb8e1
 ---
 
 {{HTMLSidebar}}
 
-## 概要
+[HTML](/zh-CN/docs/Web/HTML) 的 **`<style>`** 元素包含文档的样式信息或文档的部分内容。其中的 CSS 会应用于包含 `<style>` 元素的文档内容。
 
-**HTML** 的 `<style>` 元素包含文档的样式信息或者文档的部分内容。默认情况下，该标签的样式信息通常是[CSS](/zh-CN/docs/Web/CSS)的格式。
+{{InteractiveExample("HTML Demo: &lt;style&gt;", "tabbed-standard")}}
 
-{{EmbedInteractiveExample("pages/tabbed/style.html", "tabbed-standard")}}
+```html interactive-example
+<style>
+  p {
+    color: #26b72b;
+  }
+  code {
+    font-weight: bold;
+  }
+</style>
 
-- _[内容类别](/zh-CN/docs/HTML/Content_categories)_[元数据内容](/zh-CN/docs/Web/HTML/Content_categories#Metadata_content)，如果指定了 `scoped` 属性：[流内容](/zh-CN/docs/Web/HTML/Content_categories#Flow_content)
-- *允许的内容*与 `type` 属性相匹配的文本内容，也就是 `text/css`
-- _标签忽略_ {{no_tag_omission}}
-- _允许的父元素_ 任意接受[元数据内容](/zh-CN/docs/Web/HTML/Content_categories#Metadata_content)的元素
-- \_Permitted ARIA roles_None
-- _DOM 接口_ {{domxref("HTMLStyleElement")}}
+<p>
+  This text will be green. Inline styles take precedence over CSS included
+  externally.
+</p>
+
+<p style="color: blue">
+  The <code>style</code> attribute can override it, though.
+</p>
+```
+
+```css interactive-example
+p {
+  color: #f00;
+}
+```
+
+`<style>` 元素必须包含在文档的 {{htmlelement("head")}} 内。一般来说，最好将样式放在外部样式表中，然后使用 {{htmlelement("link")}} 元素应用它们。
+
+如果在文档中包含多个 `<style>` 和 `<link>` 元素，它们将按照在文档中包含的顺序应用到 DOM，请确保按照正确的顺序包含它们，以避免出现意想不到的层叠问题。
+
+与 `<link>` 元素的方式相同，`<style>` 元素可以包含用于[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)的 `media` 属性，这样就可以根据视口宽度等媒体特性，有选择性地将内部样式表应用到文档中。
 
 ## 属性
 
 该元素包含所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- `type`
-  - : 该属性以 MIME 类型（不应该指定字符集）定义样式语言。如果该属性未指定，则默认为 `text/css`。
+- `blocking`
+  - : 该属性明确指出在获取关键子资源时应阻止某些操作。通常，[`@import`](/zh-CN/docs/Web/CSS/@import) 样式表被视为关键子资源，而 [`background-image`](/zh-CN/docs/Web/CSS/background-image) 和字体则不被视为关键子资源。要阻止的操作必须是下面列出的以空格分隔的阻止标记列表。
+    - `render`：屏幕上的内容渲染被阻断。
 - `media`
-  - : 该属性规定该样式适用于哪个媒体。属性的取值[CSS 媒体查询](/zh-CN/docs/Web/Guide/CSS/Media_queries)，默认值为 `all`。
+  - : 该属性规定该样式适用于哪个媒体。属性的取值为[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)，如果属性缺失，则默认为 `all`。
 - `nonce`
-  - : 一种加密的随机数（一次使用的数字），用于在[style-src Content-Security-Policy](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/style-src)中将内联样式列入白名单。服务器每次发送策略时都必须生成一个唯一的随机数值。提供一个无法猜测的随机数非常重要，因为绕开资源策略是微不足道的。
+  - : 用于允许在 [style-src Content-Security-Policy](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) 中使用内联样式的密码学 nonce（只使用一次的数字）。每次传输策略时，服务器都必须生成一个唯一的 nonce 值。提供一个无法猜测的 nonce 值至关重要，否则绕过资源策略将变得微不足道。
 - `title`
-  - : 指定可选的样式表。
+  - : 该属性指定[替代样式表](/zh-CN/docs/Web/HTML/Attributes/rel/Alternate_stylesheet)集。
 
-### 已淘汰属性
+### 已弃用的属性
 
-- `scoped` {{non-standard_inline}} {{deprecated_inline}}
-  - : 此属性指定样式仅适用于其父项和子项的元素。
-    > **备注：** 以后可能会根据<https://github.com/w3c/csswg-drafts/issues/3547>重新引入此属性。如果要立即使用该属性，则可以使用[polyfill](https://github.com/samthor/scoped)。
+- `type` {{deprecated_inline}}
+  - : 不应提供该属性：如果提供，唯一允许的值是空字符串或不区分大小写匹配的 `text/css`。
 
 ## 示例
 
-### 一个简单的样式表
+### 基础样式表
 
-在下面的例子中，我们将简单的样式应用到文档中：
+在下面的例子中，我们将简短的样式应用到文档中：
 
 ```html
 <!doctype html>
-<html>
+<html lang="zh-CN">
   <head>
+    <meta charset="UTF-8" />
+    <title>测试页面</title>
     <style>
       p {
         color: red;
@@ -54,21 +81,23 @@ slug: Web/HTML/Element/style
     </style>
   </head>
   <body>
-    <p>This is my paragraph.</p>
+    <p>这是一个段落。</p>
   </body>
 </html>
 ```
 
-{{EmbedLiveSample('一个简单的样式表', '100%', '60')}}
+{{EmbedLiveSample('基础样式表', '100%', '100')}}
 
-### 多种样式元素
+### 多个样式元素
 
-在这个例子中包含两种样式 `<style>` 元素
+在本例中，我们包含了两个 `<style>` 元素。请注意，如果后一个 `<style>` 元素中的[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)相同，那么后一个元素中的冲突声明将覆盖前一个元素中的冲突声明。
 
 ```html
 <!doctype html>
-<html>
+<html lang="zh-CN">
   <head>
+    <meta charset="UTF-8" />
+    <title>测试页面</title>
     <style>
       p {
         color: white;
@@ -85,21 +114,23 @@ slug: Web/HTML/Element/style
     </style>
   </head>
   <body>
-    <p>This is my paragraph.</p>
+    <p>这是一个段落。</p>
   </body>
 </html>
 ```
 
-{{EmbedLiveSample('多种样式元素', '100%', '60')}}
+{{EmbedLiveSample('多个样式元素', '100%', '100')}}
 
-### 包含媒体 (media) 选择
+### 包含媒体查询
 
-这个例子根据前一个例子构建，在第二个 `<style>` 中，视图宽度小于 500px 时生效
+在这个示例中，我们在前一个示例的基础上，在第二个 `<style>` 元素上加入了 `media` 属性，因此只有当视口宽度小于 500px 时才会应用该属性。
 
 ```html
 <!doctype html>
-<html>
+<html lang="zh-CN">
   <head>
+    <meta charset="UTF-8" />
+    <title>测试页面</title>
     <style>
       p {
         color: white;
@@ -116,12 +147,65 @@ slug: Web/HTML/Element/style
     </style>
   </head>
   <body>
-    <p>This is my paragraph.</p>
+    <p>这是一个段落。</p>
   </body>
 </html>
 ```
 
-{{EmbedLiveSample('包含媒体 (media) 选择', '100%', '60')}}
+{{EmbedLiveSample('包含媒体查询', '100%', '100')}}
+
+## 技术概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+          >内容分类</a
+        >
+      </th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#元数据内容"
+          >元数据内容</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th>允许的内容</th>
+      <td>
+        与 <code>type</code> 属性匹配的文本内容，即 <code>text/css</code>。
+      </td>
+    </tr>
+    <tr>
+      <th>标签省略</th>
+      <td>开始和结束标签都不允许省略。</td>
+    </tr>
+    <tr>
+      <th>允许的父元素</th>
+      <td>
+        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#元数据内容"
+          >元数据内容</a
+        >的元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐含的 ARIA 角色</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >没有相应的角色</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>没有允许的 <code>role</code></td>
+    </tr>
+    <tr>
+      <th>DOM 接口</th>
+      <td>{{domxref("HTMLStyleElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 规范
 
@@ -131,7 +215,7 @@ slug: Web/HTML/Element/style
 
 {{Compat}}
 
-## 查看更多
+## 参见
 
-- {{HTMLElement("link")}}元素允许使用外部的样式表。
-- [Alternative Style Sheets](/zh-CN/docs/Web/CSS/Alternative_style_sheets)
+- {{HTMLElement("link")}} 元素允许我们在文档中应用外部样式表。
+- [替代样式表](/zh-CN/docs/Web/HTML/Attributes/rel/Alternate_stylesheet)

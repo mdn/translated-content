@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/String/big
 
 O método **big()** cria um elemento HTML [\<big>](/pt-BR/docs/Web/HTML/Element/big) fazendo com que o texto dentro dele seja exibido uma uma fonte maior.
 
-> **Nota:** O elemento \<big> foi removido no [HTML5](/pt-BR/docs/Web/Guide/HTML/HTML5) e não deve mais ser usado. Em vez disso, web developers devem usar a [propriedade CSS correspondente](/pt-BR/docs/Web/CSS/font-size).
+> [!NOTE]
+> O elemento \<big> foi removido no [HTML5](/pt-BR/docs/Glossary/HTML5) e não deve mais ser usado. Em vez disso, web developers devem usar a [propriedade CSS correspondente](/pt-BR/docs/Web/CSS/font-size).
 
 ## Sintaxe
 
@@ -46,13 +47,11 @@ document.getElementById("#oIdDoElemento").style.fontSize = "2em";
 
 ## Especificações
 
-| Specification                                                                |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.big', 'String.prototype.big')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.big")}}
+{{Compat}}
 
 ## Veja também
 

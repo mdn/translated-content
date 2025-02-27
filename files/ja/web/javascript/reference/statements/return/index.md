@@ -9,7 +9,22 @@ l10n:
 
 **`return`** 文は関数の実行を終了して、関数の呼び出し元に返す値を指定します。
 
-{{EmbedInteractiveExample("pages/js/statement-return.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Return")}}
+
+```js interactive-example
+function getRectArea(width, height) {
+  if (width > 0 && height > 0) {
+    return width * height;
+  }
+  return 0;
+}
+
+console.log(getRectArea(3, 4));
+// Expected output: 12
+
+console.log(getRectArea(-3, 4));
+// Expected output: 0
+```
 
 ## 構文
 
@@ -63,7 +78,8 @@ a + b;
 
 コンソールは "unreachable code after return statement" と警告します。
 
-> **メモ:** Firefox 40 以降から `return` 文の後に到達不可能なコードが見つかった場合、コンソールに警告が表示されます。
+> [!NOTE]
+> Firefox 40 以降から `return` 文の後に到達不可能なコードが見つかった場合、コンソールに警告が表示されます。
 
 括弧を使用することで、この問題を回避する（ASI を防ぐ）ことができます。
 

@@ -3,6 +3,8 @@ title: time
 slug: Web/HTML/Element/time
 ---
 
+{{HTMLSidebar}}
+
 El **elemento HTML `<time>`** representa un periodo específico en el tiempo. Puede incluir el atributo `datetime` para convertir las fechas en un formato interno legible por un ordenador, permitiendo mejores resultados en los motores de búsqueda o características personalizadas como recordatorios.
 
 Puede representar uno de los contenidos siguientes:
@@ -11,7 +13,25 @@ Puede representar uno de los contenidos siguientes:
 - Una fecha precisa en el [Calendario Gregoriano](https://es.wikipedia.org/wiki/Calendario_gregoriano) (con hora y zona horaria opcionales)
 - [Un periodo de tiempo válido](https://www.w3.org/TR/2014/REC-html5-20141028/infrastructure.html#valid-duration-string)
 
-{{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;time&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>
+  The Cure will be celebrating their 40th anniversary on
+  <time datetime="2018-07-07">July 7</time> in London's Hyde Park.
+</p>
+
+<p>
+  The concert starts at <time datetime="20:00">20:00</time> and you'll be able
+  to enjoy the band for at least <time datetime="PT2H30M">2h 30m</time>.
+</p>
+```
+
+```css interactive-example
+time {
+  font-weight: bold;
+}
+```
 
 La fuente de este ejemplo interactivo está almacenada en un repositorio de GitHub. Si desea contribuir al projecto, por favor clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples)y envíe su solicitud de extracción (pull request).
 
@@ -68,7 +88,7 @@ La fuente de este ejemplo interactivo está almacenada en un repositorio de GitH
 
 ## Atributos
 
-Como todos los elementos de HTML, este elemento soporta los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
+Como todos los elementos de HTML, este elemento soporta los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
 - `datetime`
   - : Este atributo indica la hora y/o fecha del elemento y debe estar escrito en uno de los formatos que se muestran posteriomente.

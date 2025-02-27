@@ -9,7 +9,7 @@ slug: WebAssembly/JavaScript_interface/Global
 
 ## 생성자
 
-- [`WebAssembly.Global()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global)
+- [`WebAssembly.Global()`](/ko/docs/WebAssembly/JavaScript_interface/Global/Global)
   - : 새로운 `Global` 객체를 생성합니다.
 
 ## 전역 인스턴스

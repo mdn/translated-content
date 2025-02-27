@@ -9,7 +9,8 @@ La propriété **`background-position-y`** définit la position verticale initia
 
 {{EmbedInteractiveExample("pages/css/background-position-y.html")}}
 
-> **Note :** La valeur de cette propriété sera surchargée par n'importe quelle déclaration avec {{cssxref("background")}} ou {{cssxref("background-position")}} située après la déclaration.
+> [!NOTE]
+> La valeur de cette propriété sera surchargée par n'importe quelle déclaration avec {{cssxref("background")}} ou {{cssxref("background-position")}} située après la déclaration.
 
 ## Syntaxe
 
@@ -79,4 +80,4 @@ background-position-y: unset;
 - {{cssxref("background-position-x")}}
 - {{cssxref("background-position-inline")}}
 - {{cssxref("background-position-block")}}
-- [Manipuler plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Manipuler plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

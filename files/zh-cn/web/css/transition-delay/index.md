@@ -3,7 +3,7 @@ title: transition-delay
 slug: Web/CSS/transition-delay
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 CSS 的**transition-delay**属性规定了在[过渡效果](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)开始作用之前需要等待的时间。
 

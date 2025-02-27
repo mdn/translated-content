@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/has
 
 O método **`has()`** retorna um booleano indicando se o elemento com a chave especificada existe ou não.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.has()")}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set("bar", "foo");
+
+console.log(map1.has("bar"));
+// Expected output: true
+
+console.log(map1.has("baz"));
+// Expected output: false
+```
 
 ## Sintaxe
 

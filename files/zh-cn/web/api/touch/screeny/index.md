@@ -1,31 +1,26 @@
 ---
-title: Touch.screenY
+title: Touch：screenY 属性
 slug: Web/API/Touch/screenY
+l10n:
+  sourceCommit: eb289996538d1242cd7eaa54cbd9e20da0cb908c
 ---
 
-{{ ApiRef() }}
+{{ APIRef("Touch Events") }}
 
-### 概述
+返回触摸点相对于屏幕的 Y 坐标，不包括任何滚动偏移。
 
-返回触点相对于屏幕上边沿的 Y 坐标。不包含页面滚动的偏移量。
+## 值
 
-### 语法
+数字。
 
-```plain
-var y = touchItem.screenY;
-```
+## 示例
 
-### 返回值
+[Touch.screenX 示例](/zh-CN/docs/Web/API/Touch/screenX#示例)包含了此属性的使用示例。
 
-- `y`
-  - : 触点相对于屏幕上边沿的 Y 坐标。不包含页面滚动的偏移量。
+## 规范
 
-### 标准定义
+{{Specifications}}
 
-[Touch Events Specification](http://www.w3.org/TR/touch-events/)
+## 浏览器兼容性
 
-### 相关链接
-
-- {{ domxref("Touch.screenX") }}
-- {{ domxref("Touch.clientY") }}
-- {{ domxref("Touch.pageY") }}
+{{Compat}}

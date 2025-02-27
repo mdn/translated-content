@@ -1,6 +1,8 @@
 ---
 title: 密码学
 slug: Glossary/Cryptography
+l10n:
+  sourceCommit: 0025477aa4af0321b4c1e3e60c8f6bca08983a60
 ---
 
 {{GlossarySidebar}}

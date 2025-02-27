@@ -17,7 +17,8 @@ C'est un outil pratique pour WebXR et les jeux vidéo.
 
 Dans l'espace en trois dimensions, c'est la seule façon de réaliser des effets audio réalistes. Des bibliothèques tierces comme [three.js](https://threejs.org/) et [A-frame](https://aframe.io/) l'utilisent pour gérer le son. On notera quand même qu'il n'y a pas _forcément_ besoin de déplacer le son dans un espace en trois dimensions, on peut tout à fait utiliser cette interface pour gérer un son dans un espace en deux dimensions.
 
-> **Note :** Il existe également [`StereoPannerNode`](/fr/docs/Web/API/StereoPannerNode) qui permet de gérer des effets simples de défilement à gauche ou à droite. Celle-ci est plus simple à utiliser, mais est moins flexible. Si vous souhaitez un simple effet de panoramique stéréo, voyez [l'exemple `StereoPannerNode`](https://mdn.github.io/webaudio-examples/stereo-panner-node/) ([le code source correspondant](https://github.com/mdn/webaudio-examples/tree/master/stereo-panner-node)), qui devrait vous fournir ce dont vous avez besoin.
+> [!NOTE]
+> Il existe également [`StereoPannerNode`](/fr/docs/Web/API/StereoPannerNode) qui permet de gérer des effets simples de défilement à gauche ou à droite. Celle-ci est plus simple à utiliser, mais est moins flexible. Si vous souhaitez un simple effet de panoramique stéréo, voyez [l'exemple `StereoPannerNode`](https://mdn.github.io/webaudio-examples/stereo-panner-node/) ([le code source correspondant](https://github.com/mdn/webaudio-examples/tree/master/stereo-panner-node)), qui devrait vous fournir ce dont vous avez besoin.
 
 ## Démo avec le radiocassette en 3D
 
@@ -29,7 +30,8 @@ Le radiocassette est placé dans un espace (défini par les bords de la zone d'a
 
 Lorsqu'on déplace le radiocassette, le son produit change de façon correspondante, se décalant de droite à gauche selon le déplacement ou s'atténuant si on l'éloigne dans le fond ou si on le pivote pour que les hauts-parleurs nous tournent le dos. Ces effets sont obtenus en jouant sur les différentes propriétés de l'objet `PannerNode` lors du mouvement, pour émuler cette spatialisation.
 
-> **Note :** Le résultat obtenu sera bien meilleur si vous utilisez un casque ou des écouteurs ou un système stéréo surround.
+> [!NOTE]
+> Le résultat obtenu sera bien meilleur si vous utilisez un casque ou des écouteurs ou un système stéréo surround.
 
 ## Créer un auditeur
 
@@ -160,7 +162,7 @@ Nous allons maintenant déplacer le radiocassette dans cette «&nbsp;pièce&nbsp
 
 Le son provient de l'avant des hauts-parleurs du radiocassette et lorsqu'on le tourne, on peut modifier la direction du son (par exemple, diffuser le son vers l'arrière si le radiocassette est tourné de 180° et nous tourne le dos).
 
-Nous devons paramétrer quelques éléments pour l'interface. Pour commencer, nous obtenons des références pour les éléments que nous voulons déplacer, pour les valeurs que nous changerons à l'aide de [transformations CSS](/fr/docs/Web/CSS/CSS_Transforms) pour que le mouvement apparaisse à l'écran. Enfin, nous appliquons des limites pour que le radiocassette ne puisse pas aller trop loin dans n'importe quelle direction&nbsp;:
+Nous devons paramétrer quelques éléments pour l'interface. Pour commencer, nous obtenons des références pour les éléments que nous voulons déplacer, pour les valeurs que nous changerons à l'aide de [transformations CSS](/fr/docs/Web/CSS/CSS_transforms) pour que le mouvement apparaisse à l'écran. Enfin, nous appliquons des limites pour que le radiocassette ne puisse pas aller trop loin dans n'importe quelle direction&nbsp;:
 
 ```js
 const moveControls = document
@@ -520,7 +522,8 @@ Pour une exploration plus avancée de la lecture et du contrôle audio, ainsi qu
 
 Nous espérons que cet article vous a permis de mieux comprendre le fonctionnement de la spatialisation avec l'API Web Audio et le rôle des propriétés de [`PannerNode`](/fr/docs/Web/API/PannerNode) (il y en a un certain nombre). La manipulation de ces valeurs peut s'avérer délicate selon le cas d'usage, c'est normal que de passer du temps à les paramétrer.
 
-> **Note :** Il existe quelques différences entre les navigateurs pour ce qui concerne la spatialisation audio. Le nœud panoramique manipule des opérations mathématiques avancées et il existe [plusieurs tests](https://wpt.fyi/results/webaudio/the-audio-api/the-pannernode-interface?label=stable&aligned=true) que vous pouvez consulter pour connaître l'état d'avancement sur ce type de nœud sur les différentes plateformes.
+> [!NOTE]
+> Il existe quelques différences entre les navigateurs pour ce qui concerne la spatialisation audio. Le nœud panoramique manipule des opérations mathématiques avancées et il existe [plusieurs tests](https://wpt.fyi/results/webaudio/the-audio-api/the-pannernode-interface?label=stable&aligned=true) que vous pouvez consulter pour connaître l'état d'avancement sur ce type de nœud sur les différentes plateformes.
 
 À nouveau, vous pouvez [consulter la version finale de la démo ici](https://mdn.github.io/webaudio-examples/spatialization/), ainsi que [le code source de l'exemple final](https://github.com/mdn/webaudio-examples/tree/master/spatialization). Cette démonstration est [également disponible sur CodePen](https://codepen.io/Rumyra/pen/MqayoK?editors=0100).
 

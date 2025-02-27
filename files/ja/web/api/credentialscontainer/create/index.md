@@ -1,11 +1,12 @@
 ---
 title: "CredentialsContainer: create() メソッド"
+short-title: create()
 slug: Web/API/CredentialsContainer/create
 l10n:
-  sourceCommit: 44d490f2fd2d04452797c210ca1cc5e9d4090396
+  sourceCommit: 314cb0ba882e2c59204e7729aeb948df6f402b1f
 ---
 
-{{APIRef("Credential Management API")}}
+{{APIRef("Credential Management API")}}{{SecureContext_Header}}
 
 **`create()`** は {{domxref("CredentialsContainer")}} インターフェイスのメソッドで、指定されたオプションに基づく新しい資格情報のインスタンスに解決する {{jsxref("Promise")}} を返します。このインスタンスの情報は保存することができ、後で {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} でユーザー認証に使用することができます。
 
@@ -16,7 +17,8 @@ l10n:
 
 下記のリファレンスページでは、まず構文の節で、異なる API すべてに適用される一般的なメソッド呼び出し構造と引数を説明しています。この部分の後で、各 API に固有の引数、返値、例を提供する別個の節に分けています。
 
-> **メモ:** このメソッドは最上位の{{glossary("browsing context", "閲覧コンテキスト")}}（すなわち、ブラウザータブ内で直接実行している文書で、他の文書に埋め込まれていないもの）に限定されます。`<iframe>` 要素内から呼び出すと、何もせずに解決します。
+> [!NOTE]
+> このメソッドは最上位の{{glossary("browsing context", "閲覧コンテキスト")}}（すなわち、ブラウザータブ内で直接実行している文書で、他の文書に埋め込まれていないもの）に限定されます。`<iframe>` 要素内から呼び出すと、何もせずに解決します。
 
 ## 一般的な構文
 
@@ -31,17 +33,17 @@ create(options)
 
   - : リクエストされた新しい `Credentials` オブジェクトのオプションを格納するオブジェクト。以下のプロパティを格納することができます。
 
-    - _資格情報の種別_
-
-      - : リクエストされた資格情報の種類を定義するオブジェクト。これは、以下の何れかです。
-
-        - `federated`: フェデレーション ID プロバイダーの資格情報を作成するための要件を格納したオブジェクトです。[フェデレーション資格情報管理 API (FedCM)](/ja/docs/Web/API/FedCM_API) は、この資格情報の種類よりも優先されることに注意してください。詳細は下記の[資格情報管理 API](#資格情報管理_api) の節を参照してください。
-        - `password`: パスワード資格情報を作成するための要件を格納したオブジェクトです。詳細は下記の[資格情報管理 API](#資格情報管理_api) の節を参照してください。
-        - `publicKey`: 公開鍵資格情報を作成するための要件を格納したオブジェクトです。`create()` の呼び出しを発生させ、ユーザーエージェントが認証機能を使って新しい資格情報を作成するようにリクエストします。詳細は下記の[ウェブ認証 API](#ウェブ認証_api) の節を参照してください。
-
     - `signal` {{optional_inline}}
-
       - : 進行中の `create()` 処理を中止させるための {{domxref("AbortSignal")}} オブジェクトのインスタンスです。中止された操作は、（完全に処理が終了した後に中止を受け取った場合は）正常に完了することもあれば、"`AbortError`" の {{domxref("DOMException")}} で拒否されることもあります。
+
+    以下のプロパティはそれぞれ、作成する _資格情報の種別_ を表します。指定できるのは1つだけです：
+
+    - `federated` {{optional_inline}}
+      - : フェデレーション ID プロバイダーの資格情報を作成するための要件を格納したオブジェクトです。[フェデレーション資格情報管理 API (FedCM)](/ja/docs/Web/API/FedCM_API) は、この資格情報の種類よりも優先されることに注意してください。詳細は下記の[資格情報管理 API](#資格情報管理_api) の節を参照してください。
+    - `password` {{optional_inline}}
+      - : パスワード資格情報を作成するための要件を格納したオブジェクトです。詳細は下記の[資格情報管理 API](#資格情報管理_api) の節を参照してください。
+    - `publicKey` {{optional_inline}}
+      - : 公開鍵資格情報を作成するための要件を格納したオブジェクトです。`create()` の呼び出しを発生させ、ユーザーエージェントが認証機能を使って新しい資格情報を作成するようにリクエストします。詳細は下記の[ウェブ認証 API](#ウェブ認証_api) の節を参照してください。
 
 ## 資格情報管理 API
 
@@ -107,10 +109,12 @@ create(options)
 ```js
 navigator.credentials
   .create({
-    id: "ergnjregoith5y9865jhokmfdskl;vmfdl;kfd...",
-    name: "fluffybunny",
-    origin: "example.com",
-    password: "fluffyhaxx0r",
+    password: {
+      id: "ergnjregoith5y9865jhokmfdskl;vmfdl;kfd...",
+      name: "fluffybunny",
+      origin: "example.com",
+      password: "fluffyhaxx0r",
+    },
   })
   .then((pwdCred) => {
     console.log(pwdCred.name);
@@ -131,13 +135,20 @@ navigator.credentials
 
   - : 資格情報作成時に認証ステートメント（すなわち、認証子とそのデータの真正性の検証可能な証拠の提供）をどのように伝えるかについて、信頼当事者 (relying party) の環境設定を指定する文字列です。値は以下のいずれかです。
 
-    - `"none"`: 信頼当事者が認証者の検証に関心を持っていないことを指定します。これは、認証プロセスをより円滑にするために、識別情報を中継するために頼っているサーバーへの往復や、認証認証局(CA)への往復に対するユーザーの追加同意を避けるためかもしれません。もし `attestation` の値として `"none"` が選ばれ、認証局が認証ステートメントを生成するために CA を使用することを指示した場合、クライアントアプリは認証ステートメントを "None" に置き換えて、認証ステートメントが使用できないことを示します。
+    - `"none"`
 
-    - `"direct"`: 信頼当事者が、認証者が生成した認証ステートメントの受信を希望することを指定します。
+      - : 信頼当事者が認証者の検証に関心を持っていないことを指定します。これは、認証プロセスをより円滑にするために、識別情報を中継するために頼っているサーバーへの往復や、認証認証局(CA)への往復に対するユーザーの追加同意を避けるためかもしれません。もし `attestation` の値として `"none"` が選ばれ、認証局が認証ステートメントを生成するために CA を使用することを指示した場合、クライアントアプリは認証ステートメントを "None" に置き換えて、認証ステートメントが使用できないことを示します。
 
-    - `"enterprise"`: 信頼当事者が、固有の識別情報を含めることができる認証ステートメントを受け取りたいことを指定します。これは、組織が登録を固有の認証子に結びつけることを望む、企業内の制御する展開のために意図されています。
+    - `"direct"`
 
-    - `"indirect"`: 信頼当事者が検証可能な認証ステートメントを受信することを指定しますが、その受信方法をクライア ントが決定することを許可します。例えば、クライアントは、ユーザーのプライバシーを保護するために、認証者のアサーションステートメントを匿名化 CA が生成したものと置き換えることを選ぶことができます。
+      - : 信頼当事者が、認証者が生成した認証ステートメントの受信を希望することを指定します。
+
+    - `"enterprise"`
+
+      - : 信頼当事者が、固有の識別情報を含めることができる認証ステートメントを受け取りたいことを指定します。これは、組織が登録を固有の認証子に結びつけることを望む、企業内の制御する展開のために意図されています。
+
+    - `"indirect"`
+      - : 信頼当事者が検証可能な認証ステートメントを受信することを指定しますが、その受信方法をクライア ントが決定することを許可します。例えば、クライアントは、ユーザーのプライバシーを保護するために、認証者のアサーションステートメントを匿名化 CA が生成したものと置き換えることを選ぶことができます。
 
     `attestation` を除外すると、既定値で `"none"` となります。
 
@@ -151,30 +162,50 @@ navigator.credentials
 
   - : そのプロパティは、資格情報作成処理のために潜在的な認証子をフィルタリングするために使用される基準であるオブジェクトです。このオブジェクトには、プロパティを格納することができます。
 
-    - `authenticatorAttachment` {{optional_inline}}: 選ばれた認証子に対して、どの認証子添付型を許可すべきかを示す文字列です。使用可能な値は以下の通りです。
+    - `authenticatorAttachment` {{optional_inline}}
 
-      - `"platform"`: 認証器は WebAuthn が動作する機器 (**プラットフォーム認証器**と呼ぶ) の一部であるため、WebAuthn はプラットフォーム固有の API など、そのプラットフォームで利用できるトランスポートを使用して認証器と通信します。プラットフォーム認証器にバインドされた公開鍵資格情報は、**プラットフォーム資格情報**と呼ばれます。
-      - `"cross-platform"`: 認証器は WebAuthn が動作している 機器（異なる機器間を移動できるため **ローミング認証器**と呼ばれる）の一部ではないため、WebAuthn は Bluetooth や NFC などのクロスプラットフォーム伝送プロトコルを使用して通信します。ローミング認証器にバインドされた公開鍵資格情報は、**ローミング資格情報**と呼ばれます。
+      - : 選ばれた認証子に対して、どの認証子添付型を許可すべきかを示す文字列です。使用可能な値は以下の通りです。
 
-    - `requireResidentKey` {{optional_inline}} : 論理値です。このプロパティは非推奨ですが、WebAuthn Level 1 との後方互換性を保つために一部の実装ではまだ利用できます。`residentKey` が `"required"` に設定されている場合、値は `true` に設定する必要があります。
+        - `"platform"`
+          - : 認証器は WebAuthn が動作する機器 (**プラットフォーム認証器**と呼ぶ) の一部であるため、WebAuthn はプラットフォーム固有の API など、そのプラットフォームで利用できるトランスポートを使用して認証器と通信します。プラットフォーム認証器にバインドされた公開鍵資格情報は、**プラットフォーム資格情報**と呼ばれます。
+        - `"cross-platform"`
 
-      省略した場合、`requireResidentKey` の既定値は `false` となります。
+          - : 認証器は WebAuthn が動作している機器（異なる機器間を移動できるため **ローミング認証器**と呼ばれる）の一部ではないため、WebAuthn は Bluetooth や NFC などのクロスプラットフォーム伝送プロトコルを使用して通信します。ローミング認証器にバインドされた公開鍵資格情報は、**ローミング資格情報**と呼ばれます。
 
-    - `residentKey` {{optional_inline}}: 信頼当事者が**クライアント側発見可能資格情報**（すなわち、信頼当事者が資格 ID を提供しない認証リクエストで使用可能なもの - {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} が `allowCredentials` 値が空の状態で呼ばれる）をどの程度作成したいかを指定する文字列です。その代わり、**サーバ側資格情報**で、信頼当事者が `get()` `allowCredentials` 値で資格情報 ID を提供しなければなりません。使用可能な値は以下の通りです。
+            省略すると、資格情報作成処理に、プラットフォームまたはクロスプラットフォームの任意の型 の認証子を選択できます。
 
-      - `"discouraged"`: 信頼当事者は、サーバ側資格情報の作成をできれば好ましいと考えるが、クライアント側発見可能資格情報を受け入れます。
-      - `"preferred"`: 信頼当事者は、クライアント側の発見可能な資格情報の作成を強く希望しますが、サーバー側の資格情報 も受け入れられます。ユーザーエージェントは、発見可能な資格情報を作成するために、必要であればユーザー検証を設定するようにユーザーをガイドする必要があります。これは `userVerification` 設定に優先します。
-      - `"required"`: 信頼当事者は、クライアント側発見可能資格情報を必要とします。生成できない場合は、エラーが発生します。
+    - `requireResidentKey` {{optional_inline}}
 
-      省略した場合、 `residentKey` は `requireResidentKey`が `true` ならば `"required"` に、そうでなければ `"discouraged"` に既定値として設定されます。
+      - : 論理値です。このプロパティは非推奨ですが、WebAuthn Level 1 との後方互換性を保つために一部の実装ではまだ利用できます。`residentKey` が `"required"` に設定されている場合、値は `true` に設定する必要があります。
 
-    - `userVerification` {{optional_inline}}: `create()` 処理に関するユーザー検証のための信頼当事者の要件を指定する文字列です。使用可能な値は以下の通りです。
+        省略した場合、`requireResidentKey` の既定値は `false` となります。
 
-      - `"discouraged"`: 信頼当事者は、ユーザーの使い勝手の低下を最小限に抑えるという観点から、`create()`操作のためのユーザー検証を行わないことを選択します。
-      - `"preferred"`: 信頼当事者は `create()` の処理にユーザーの環境設定を優先しますが、ユーザー認証が行えない場合でも失敗することはありません。
-      - `"required"`: 信頼当事者が `create()` 操作にユーザー認証を要求します。ユーザー認証を実行できない場合は、エラーが発生します。
+    - `residentKey` {{optional_inline}}
 
-      省略した場合、`userVerification` の既定値は `"preferred"` となります。
+      - : 信頼当事者が**クライアント側発見可能資格情報**（すなわち、信頼当事者が資格 ID を提供しない認証リクエストで使用可能なもの - {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} が `allowCredentials` 値が空の状態で呼ばれる）をどの程度作成したいかを指定する文字列です。その代わり、**サーバー側資格情報**で、信頼当事者が `get()` `allowCredentials` 値で資格情報 ID を提供しなければなりません。
+        使用可能な値は以下の通りです。
+
+        - `"discouraged"`
+          - : 信頼当事者は、サーバー側資格情報の作成をできれば好ましいと考えるが、クライアント側発見可能資格情報を受け入れます。
+        - `"preferred"`
+          - : 信頼当事者は、クライアント側の発見可能な資格情報の作成を強く希望しますが、サーバー側の資格情報 も受け入れられます。ユーザーエージェントは、発見可能な資格情報を作成するために、必要であればユーザー検証を設定するようにユーザーをガイドする必要があります。これは `userVerification` 設定に優先します。
+        - `"required"`
+          - : 信頼当事者は、クライアント側発見可能資格情報を必要とします。生成できない場合は、エラーが発生します。
+
+        省略した場合、 `residentKey` は `requireResidentKey`が `true` ならば `"required"` に、そうでなければ `"discouraged"` に既定値として設定されます。
+
+    - `userVerification` {{optional_inline}}
+
+      - : `create()` 処理に関するユーザー検証のための信頼当事者の要件を指定する文字列です。使用可能な値は以下の通りです。
+
+        - `"discouraged"`
+          - : 信頼当事者は、ユーザーの使い勝手の低下を最小限に抑えるという観点から、`create()`操作のためのユーザー検証を行わないことを選択します。
+        - `"preferred"`
+          - : 信頼当事者は `create()` の処理にユーザーの環境設定を優先しますが、ユーザー認証が行えない場合でも失敗することはありません。
+        - `"required"`
+          - : 信頼当事者が `create()` 操作にユーザー認証を要求します。ユーザー認証を実行できない場合は、エラーが発生します。
+
+        省略した場合、`userVerification` の既定値は `"preferred"` となります。
 
 - `challenge`
 
@@ -184,11 +215,16 @@ navigator.credentials
 
   - : このユーザーアカウントに割り当てられた既存の資格情報を記述するオブジェクトの {{jsxref("Array")}} です（`user.id` で識別されます）。これは信頼当事者によって提供され、ユーザーエージェントによって調べられます。指定したユーザーアカウントに割り当てられた資格情報をすでに持っている認証子に対して、新しい公開鍵資格情報を作成することを避けるためです。各項目は、以下の形式でなければなりません。
 
-    - `id`: 既存の資格情報を表す {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} のいずれかです。
+    - `id`
 
-    - `transports` {{optional_inline}}: 許可されるトランスポートを表す文字列の配列 ({{jsxref("Array")}}) です。使用可能なトランスポートは、`"ble"`、`"hybrid"`、"internal"`、"nfc"`、`"usb"` です（詳細は {{domxref("AuthenticatorAttestationResponse.getTransports", "getTransports()")}} を参照）。
+      - : 既存の資格情報を表す {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} のいずれかです。
 
-    - `type`: 作成する公開鍵資格情報の種類を定義する文字列。これは現在 1 つの値 `"public-key"` を導きますが、将来的にはさらに多くの値が追加されるかもしれません。
+    - `transports` {{optional_inline}}
+
+      - : 許可されるトランスポートを表す文字列の配列 ({{jsxref("Array")}}) です。使用可能なトランスポートは、`"ble"`、`"hybrid"`、"internal"`、"nfc"`、`"usb"` です（詳細は {{domxref("AuthenticatorAttestationResponse.getTransports", "getTransports()")}} を参照）。
+
+    - `type`
+      - : 作成する公開鍵資格情報の種類を定義する文字列。これは現在 1 つの値 `"public-key"` を導きますが、将来的にはさらに多くの値が追加されるかもしれません。
 
     `create()` の呼び出しが認証子で重複した公開鍵認証情報を作成しようとしている場合、ユーザーエージェントは異なる認証子を使用して認証情報を作成するようにユーザーをガイドするか、それが不可能な場合は失敗します。
 
@@ -204,13 +240,16 @@ navigator.credentials
 
   - : 信頼当事者が対応している鍵の種類と署名アルゴリズムを指定するオブジェクトの({{jsxref("Array")}}) で、最も好ましいものから最も好ましくないものへと並べる。クライアントと認証器は、使用可能な最も好ましい種類の資格情報を作成するよう最善の努力をします。これらのオブジェクトは、以下のプロパティを格納します。
 
-    - `alg`: [COSE アルゴリズム識別子](https://www.iana.org/assignments/cose/cose.xhtml#algorithms)に等しい数値です。この資格情報 の種類に使用する暗号化アルゴリズムを表します。広範囲の認証者を対応したい信頼当事者は、指定された選択肢に少なくとも以下の値を含めることが推奨されます。
+    - `alg`
 
-      - `-8`: Ed25519
-      - `-7`: ES256
-      - `-257`: RS256
+      - : [COSE アルゴリズム識別子](https://www.iana.org/assignments/cose/cose.xhtml#algorithms)に等しい数値です。この資格情報 の種類に使用する暗号化アルゴリズムを表します。広範囲の認証者を対応したい信頼当事者は、指定された選択肢に少なくとも以下の値を含めることが推奨されます。
 
-    - `type`: 作成する公開鍵資格情報の種類を定義する文字列。これは現在 1 つの値 `"public-key"` を取りますが、将来的にはより多くの値を追加する可能性があります。
+        - `-8`: Ed25519
+        - `-7`: ES256
+        - `-257`: RS256
+
+    - `type`
+      - : 作成する公開鍵資格情報の種類を定義する文字列。これは現在 1 つの値 `"public-key"` を取りますが、将来的にはより多くの値を追加する可能性があります。
 
     掲載されている資格情報のいずれもが作成できない場合、`create()` 操作は失敗します。
 
@@ -218,21 +257,24 @@ navigator.credentials
 
   - : 資格情報の作成をリクエストされた信頼当事者を記述しているオブジェクト。以下のプロパティを格納することができます。
 
-    - `id` {{optional_inline}}: 信頼当事者の ID を表す文字列。公開鍵資格情報は、登録した信頼当事者（{{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} 呼び出しの `publicKey.rpId` で識別）と同じ認証にしか使用できません。ID は一致している必要があります。
+    - `id` {{optional_inline}}
 
-      `id` には標準のオリジンのようにポートやスキームを含めることはできませんが、ドメインスキームは `https` スキームである必要があります。`id` は元の実質的なドメイン、またはそのドメインサフィックスと同じである必要があります。例えば、信頼当事者のオリジンが `https://login.example.com:1337` の場合、次の `id` が有効です。
+      - : 信頼当事者の ID を表す文字列。公開鍵資格情報は、登録した信頼当事者（{{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} 呼び出しの `publicKey.rpId` で識別）と同じ認証にしか使用できません。ID は一致している必要があります。
 
-      - `login.example.com`
-      - `example.com`
+        `id` には標準のオリジンのようにポートやスキームを含めることはできませんが、ドメインスキームは `https` スキームである必要があります。`id` は元の実質的なドメイン、またはそのドメインサフィックスと同じである必要があります。例えば、信頼当事者のオリジンが `https://login.example.com:1337` の場合、次の `id` が有効です。
 
-      しかし、下記のものは有効にはなりません。
+        - `login.example.com`
+        - `example.com`
 
-      - `m.login.example.com`
-      - `com`
+        しかし、下記のものは有効にはなりません。
 
-      省略した場合、`id` は文書のオリジンを既定値とします。上記の例では `login.example.com` となります。
+        - `m.login.example.com`
+        - `com`
 
-    - `name`: 信頼当事者の名前を表す文字列（例：`"Facebook"`）。 これは、WebAuthn を作成したり、処理を検証したりするときに、ユーザーが表示する名前です。
+        省略した場合、`id` は文書のオリジンを既定値とします。上記の例では `login.example.com` となります。
+
+    - `name`
+      - : 信頼当事者の名前を表す文字列（例：`"Facebook"`）。 これは、WebAuthn を作成したり、処理を検証したりするときに、ユーザーが表示する名前です。
 
 - `timeout` {{optional_inline}}
 
@@ -242,11 +284,29 @@ navigator.credentials
 
   - : 資格情報が生成されるユーザーアカウントを記述しているオブジェクトです。以下のプロパティを格納することができます。
 
-    - `displayName`: 人間にとってわかりやすいユーザーの表示名（例えば、`"John Doe"`）を提供する文字列で、信頼当事者の初期登録時にユーザーによって設定されるものです。
+    - `displayName`
 
-    - `id`: ユーザーアカウントに対して固有のIDを表す {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} です。この値は最大 64 バイトの長さを持ち、ユーザーに表示されることを意図していません。
+      - : 人間にとってわかりやすいユーザーの表示名（例えば、`"John Doe"`）を提供する文字列で、信頼当事者の初期登録時にユーザーによって設定されるものです。
 
-    - `name`: `displayName` が似ている異なるアカウントを判別するのに役立つ、ユーザーアカウントの親しみやすい識別子を提供する文字列です。この例では、メールアドレス（例えば "john.doe@example.com"`）、電話番号（例えば "+12345678901"`）、または他にもユーザーアカウントの識別子（例えば "johndoe667"`）が考えられます。
+    - `id`
+
+      - : ユーザーアカウントに対して固有のIDを表す {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} です。この値は最大 64 バイトの長さを持ち、ユーザーに表示されることを意図していません。
+
+    - `name`
+      - : `displayName` が似ている異なるアカウントを判別するのに役立つ、ユーザーアカウントの親しみやすい識別子を提供する文字列です。この例では、メールアドレス（例えば "john.doe@example.com"`）、電話番号（例えば "+12345678901"`）、または他にもユーザーアカウントの識別子（例えば "johndoe667"`）が考えられます。
+
+- `hints` {{optional_inline}}
+
+  - : ユーザーエージェントがユーザーに提供すべき認証 UI のヒントを示す文字列の配列です。
+
+    値は以下のいずれかになります。
+
+    - `"security-key"`
+      - : 認証には、鍵を提供するための別個の専用物理端末が要求されます。
+    - `"client-device"`
+      - : ユーザーは自分自身で携帯電話などの端末を使用して認証します。
+    - `"hybrid"`
+      - : 認証は、認可/認証メソッドの組み合わせに頼っており、ユーザーベースとサーバーベースの両方のメカニズムに頼っている可能性があります。
 
 ### 返値
 
@@ -254,8 +314,11 @@ navigator.credentials
 
 ### 例外
 
-- `SecurityError` {{domxref("DOMException")}}
-  - : {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)により、使用がブロックされました。
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : 以下のような原因で発生します。
+    - {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)により、使用がブロックされました。
+    - この関数がオリジン間で呼び出されましたが、iframe の [`allow`](/ja/docs/Web/HTML/Element/iframe#allow) 属性に適切な {{HTTPHeader("Permissions-Policy/publickey-credentials-create", "publickey-credentials-create")}} ポリシーが設定されていません。
+    - この関数がオリジン間で呼び出されましたが、`<iframe>` は{{glossary("transient activation", "一時的な有効化")}}が行われていません。
 
 ## 例
 
@@ -297,14 +360,15 @@ navigator.credentials.create({ publicKey }).then((publicKeyCredential) => {
   // Return public key algorithm identifier
   const pkAlgo = response.getPublicKeyAlgorithm();
 
-  // Return permissable transports array
+  // Return permissible transports array
   const transports = response.getTransports();
 });
 ```
 
 このデータの一部は、この資格情報に対する将来の認証処理のためにサーバーに格納する必要があります。例えば、公開鍵、使用するアルゴリズム、許可されるトランスポートなどです。
 
-> **メモ:** 全体的にどのように作業が流れるかについての詳しい情報は、[キーペアを生成してユーザーを登録](/ja/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user)を参照してください。
+> [!NOTE]
+> 全体的にどのように作業が流れるかについての詳しい情報は、[キーペアを生成してユーザーを登録](/ja/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user)を参照してください。
 
 ## 仕様書
 

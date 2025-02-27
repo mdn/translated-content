@@ -3,6 +3,8 @@ title: WCAG
 slug: Glossary/WCAG
 ---
 
+{{GlossarySidebar}}
+
 _Web Content Accessibility Guidelines_ (**WCAG**) は {{Glossary("W3C")}} の {{Glossary("WAI","Web Accessibility Initiative")}} が発行している勧告です。まずは障害のある人や、そのほか携帯電話のように端末に制限のあるユーザーのために、コンテンツをアクセシブルにする基準を示したガイドライン集を定めています。
 
 2008 年 12 月 11 日に WCAG 1.0 の次となる WCAG 2.0 が W3C から勧告されました。アクセシビリティの 4 つの原則 (知覚可能、操作可能、理解可能、および堅牢性) に基づき、12 のガイドラインがあり、各ガイドラインには検証可能な達成基準が設けられています。
@@ -22,4 +24,4 @@ WCAG には 3 つの適合レベルが定義されています :
 ### Technical knowledge
 
 - [MDN でのアクセシビリティ情報](/ja/docs/Web/Accessibility/Information_for_Web_authors)
-- [The WCAG 2.0 recommendation at the W3C](http://www.w3.org/TR/WCAG20/)
+- [The WCAG 2.0 recommendation at the W3C](https://www.w3.org/TR/WCAG20/)

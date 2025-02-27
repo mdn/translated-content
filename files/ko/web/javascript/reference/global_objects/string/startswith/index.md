@@ -1,13 +1,25 @@
 ---
 title: String.prototype.startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
+l10n:
+  sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
 ---
 
 {{JSRef}}
 
-**`startsWith()`** 메서드는 어떤 문자열이 특정 문자로 시작하는지 확인하여 결과를 `true` 혹은 `false`로 반환합니다.
+**`startsWith()`**는 {{jsxref("String")}} 값의 메서드로, 어떤 문자열의 문자로 시작하는지 확인하여 결과를 적절하게 `true` 혹은 `false`로 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-startswith.html")}}
+{{InteractiveExample("JavaScript Demo: String.startsWith()")}}
+
+```js interactive-example
+const str1 = "Saturday night plans";
+
+console.log(str1.startsWith("Sat"));
+// Expected output: true
+
+console.log(str1.startsWith("Sat", 3));
+// Expected output: false
+```
 
 ## 구문
 
@@ -19,9 +31,9 @@ startsWith(searchString, position)
 ### 매개변수
 
 - `searchString`
-  - : 문자열의 시작 지점에서 탐색할 문자열. 정규표현식이 올 수 없습니다.
+  - : 이 문자열의 시작 부분에서 검색할 문자. [정규식](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes)이 될 수 없습니다. 정규식이 아닌 모든 값은 [문자열로 강제로 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)되므로 이를 생략하거나 `undefined`를 전달하면 `startsWith()`가 `"undefined"` 문자열을 검색하게 되는데, 이는 원하는 경우가 거의 없습니다.
 - `position` {{optional_inline}}
-  - : `searchString`을 탐색할 위치. 기본값은 `0`.
+  - : `searchString`이 발견될 것으로 예상되는 시작 위치(`searchString`의 첫 번째 문자의 인덱스)입니다. 기본값은 `0`입니다.
 
 ### 반환 값
 
@@ -48,7 +60,7 @@ console.log(str.startsWith("not to be")); // false
 console.log(str.startsWith("not to be", 10)); // true
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

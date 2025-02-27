@@ -18,7 +18,7 @@ SyntaxError: Unexpected reserved word (Chrome)
 
 ## 哪里出错了？
 
-[保留字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords) 用作标记符将会出错。这些标记符在严格模式和非严格模式下保留：
+[保留字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) 用作标记符将会出错。这些标记符在严格模式和非严格模式下保留：
 
 - `enum`
 
@@ -73,4 +73,4 @@ class DocArchiver {}
 
 ## 相关内容
 
-- [Good variable names](http://wiki.c2.com/?GoodVariableNames)
+- [Good variable names](https://wiki.c2.com/?GoodVariableNames)

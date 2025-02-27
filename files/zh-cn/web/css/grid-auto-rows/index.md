@@ -122,5 +122,5 @@ grid-auto-rows: unset;
 ## 参见
 
 - 相关的 CSS 属性： {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}
-- 网格布局指南：_[网格布局中的自动定位 - 隐式网格中的行尺寸](/zh-CN/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout#Sizing_rows_in_the_implicit_grid)_
-- 视频教程：_[引入网格自动放置和排序](http://gridbyexample.com/video/series-auto-placement-order/)_
+- 网格布局指南：_[网格布局中的自动定位 - 隐式网格中的行尺寸](/zh-CN/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout#sizing_rows_in_the_implicit_grid)_
+- 视频教程：_[引入网格自动放置和排序](https://gridbyexample.com/video/series-auto-placement-order/)_

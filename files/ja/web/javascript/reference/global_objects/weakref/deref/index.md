@@ -2,12 +2,12 @@
 title: WeakRef.prototype.deref()
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
 l10n:
-  sourceCommit: 270351317fdaa57ba9123a19aa281e9e40bb0baa
+  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
 {{JSRef}}
 
-`deref` メソッドは {{jsxref("WeakRef")}} インスタンスのターゲットオブジェクトを返します。そのオブジェクトが既にガベージコレクションされている場合は `undefined` を返します。
+**`deref()`** は {{jsxref("WeakRef")}} インスタンスのメソッドで、この `WeakRef` のターゲット値、またはその値が既にガベージコレクションされている場合は `undefined` を返します。
 
 ## 構文
 
@@ -21,7 +21,7 @@ deref()
 
 ### 返値
 
-WeakRef の参照先となるターゲット値で、オブジェクトまたは[未登録のシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー)でなければなりません。そのオブジェクトが既にガベージコレクションされている場合は `undefined` です。
+この WeakRef の参照先となるターゲット値で、オブジェクトまたは[未登録のシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー)のどちらかです。その値が既にガベージコレクションされている場合は `undefined` です。
 
 ## 解説
 
@@ -29,7 +29,7 @@ WeakRef の参照先となるターゲット値で、オブジェクトまたは
 
 ## 例
 
-### deref の使用
+### deref() の使用
 
 完全な例については {{jsxref("WeakRef")}} ページ内の[例](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#例)の節を参照してください。
 

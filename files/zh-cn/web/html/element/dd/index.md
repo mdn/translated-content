@@ -34,7 +34,7 @@ slug: Web/HTML/Element/dd
 
 ## 属性
 
-该元素包含[全局属性](/zh-CN/docs/HTML/Global_attributes)。
+该元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `nowrap` {{Non-standard_inline}}
   - : 如果这个属性的值为 yes，那么定义的描述文字将不会包裹。默认值为 no。

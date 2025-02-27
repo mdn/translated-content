@@ -19,7 +19,7 @@ getSupportedExtensions()
 
 ### 返回值
 
-一个字符串{{jsxref("Array", "数组", "", "true")}}，包含所有支持 WebGL 的扩展。
+一个字符串{{jsxref("Array", "数组", "", 1)}}，包含所有支持 WebGL 的扩展。
 
 ## 示例
 

@@ -1,10 +1,15 @@
 ---
 title: 文档结构
 slug: MDN/Writing_guidelines/Page_structures
+l10n:
+  sourceCommit: 514d1d2690c6374cd65921193ff6b166677395fd
 ---
 
-{{MDNSidebar}}
+在 MDN 上，有一些文档结构被用于确保信息在 MDN 文章中的呈现方式一致。本页面列出了描述这些结构的文章，以便你可以根据需要对你编写、编辑或翻译的文档内容进行适当修改。
 
-在 MDN 上有各式各样的可重复使用的文档结构，以使 MDN 文章中的内容有一致性的表现。这里的文章描述了这些结构。因此作为一名 MDN 的作者，你可以识别、应用并修改成适合于你撰写、编辑或翻译的文档。
+{{SubpagesWithSummaries}}
 
-{{LandingPageListSubPages()}}
+## 参见
+
+- [页面模板](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Page_types#页面模板)
+- [页面部件](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide#页面部件)

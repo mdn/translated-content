@@ -9,7 +9,7 @@ L'interface TimeRanges est utilisée pour représenter un ensemble de plages de 
 
 Un objet TimeRanges comprend une ou plusieurs plages de temps, chacune définie par une position de début et de fin. On récupère ces valeurs en utilisant les méthodes start() et end(), en passant en paramètre l'index de la plage de temps que l'on souhaite récupérer.
 
-Le terme "[normalized TimeRanges object](http://www.w3.org/TR/html5/the-iframe-element.html#normalized-timeranges-object)" (objet TimeRanges normalisé) indique que les plages dans un tel objet sont ordonnées, ne se chevauchent pas, ne sont pas vides, et ne se touchent pas (les plages adjacentes sont encapsulées dans une plage plus grande).
+Le terme "[normalized TimeRanges object](https://www.w3.org/TR/html5/the-iframe-element.html#normalized-timeranges-object)" (objet TimeRanges normalisé) indique que les plages dans un tel objet sont ordonnées, ne se chevauchent pas, ne sont pas vides, et ne se touchent pas (les plages adjacentes sont encapsulées dans une plage plus grande).
 
 ### Propriétés
 
@@ -46,4 +46,4 @@ Le terme "[normalized TimeRanges object](http://www.w3.org/TR/html5/the-iframe-e
 
 ### Spécification
 
-- [WHATWG Working Draft](http://www.whatwg.org/specs/web-apps/current-work/#timeranges)
+- [WHATWG Working Draft](https://www.whatwg.org/specs/web-apps/current-work/#timeranges)

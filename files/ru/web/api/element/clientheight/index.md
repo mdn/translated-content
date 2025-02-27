@@ -9,7 +9,8 @@ slug: Web/API/Element/clientHeight
 
 Значение `clientHeight` может быть вычислено по формуле CSS `height` + CSS `padding` - высота горизонтального скролла (если присутствует).
 
-> **Примечание:** При вычислении значения свойства, результат округляется до ближайшего целого. Если требуется дробное значение, используйте {{ domxref("element.getBoundingClientRect()") }}.
+> [!NOTE]
+> При вычислении значения свойства, результат округляется до ближайшего целого. Если требуется дробное значение, используйте {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Синтаксис
 
@@ -21,7 +22,7 @@ var h = element.clientHeight;
 
 ## Пример
 
-![Image:Dimensions-client.png](/@api/deki/files/185/=Dimensions-client.png)
+![Как свойство clientHeight определяет внутреннюю высоту элемента с учетом высоты и заполнения](dimensions-client.png)
 
 ## Спецификации
 
@@ -35,4 +36,4 @@ var h = element.clientHeight;
 
 - {{domxref("HTMLElement.offsetHeight")}}
 - {{domxref("Element.scrollHeight")}}
-- [Determining the dimensions of elements](/ru/docs/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/ru/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

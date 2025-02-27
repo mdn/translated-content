@@ -18,7 +18,7 @@ slug: MDN/Community
 Для получения дополнительной информации о вкладе в MDN, смотрите:
 
 - [Начало работы](/ru/docs/Project:Getting_started) для идей о вещах, которые вы можете сделать.
-- [Вклад в MDN](/ru/docs/MDN/Contribute)
+- [Вклад в MDN](/ru/docs/MDN/Community/Contributing)
 
 ## Присоединение к беседе
 

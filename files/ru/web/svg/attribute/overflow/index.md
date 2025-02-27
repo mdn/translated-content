@@ -3,6 +3,8 @@ title: overflow
 slug: Web/SVG/Attribute/overflow
 ---
 
+{{SVGRef}}
+
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 Атрибут `overflow` имеет те же значения, что определены для {{ cssxref("overflow","CSS-свойства overflow") }}. Но имеют место также следующие дополнительные моменты:
@@ -19,11 +21,11 @@ slug: Web/SVG/Attribute/overflow
 
 ## Контекст использования
 
-| Категории            | Презентационный атрибут                                                           |
-| -------------------- | --------------------------------------------------------------------------------- |
-| Значение             | visible \| hidden \| scroll \| auto \| inherit                                    |
-| Анимируемый          | Да                                                                                |
-| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/masking.html#OverflowProperty) |
+| Категории            | Презентационный атрибут                                                            |
+| -------------------- | ---------------------------------------------------------------------------------- |
+| Значение             | visible \| hidden \| scroll \| auto \| inherit                                     |
+| Анимируемый          | Да                                                                                 |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/masking.html#OverflowProperty) |
 
 ## Пример
 

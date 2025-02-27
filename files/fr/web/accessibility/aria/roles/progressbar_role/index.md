@@ -3,6 +3,8 @@ title: Utiliser le rôle progressbar
 slug: Web/Accessibility/ARIA/Roles/progressbar_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Description
 
 Cette technique présente l'utilisation du rôle [`progressbar`](https://www.w3.org/TR/wai-aria/#progressbar).
@@ -13,17 +15,20 @@ Une barre de progression indique que la requête de l'utilisateur a été prise 
 
 Lorsqu'une tâche progresse, la valeur `aria-valuenow` doit être dynamiquement actualisée pour indiquer la progression aux produits de technologies d'assistance.
 
-Si le rôle `progressbar` décrit la progression du chargement d'une zone particulière d'une page, l'auteur **DOIT** utiliser l'attribut [`aria-describedby`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby) pour pointer vers l'état courant, et définir l'attribut [`aria-busy`](https://www.w3.org/TR/wai-aria-1.1/#aria-busy) à `true` pour la zone jusqu'à la fin du chargement. Il n'est pas possible à l'utilisateur de modifier la valeur de `progressbar` car elle est toujours en lecture seule.
+Si le rôle `progressbar` décrit la progression du chargement d'une zone particulière d'une page, l'auteur **DOIT** utiliser l'attribut [`aria-describedby`](https://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby) pour pointer vers l'état courant, et définir l'attribut [`aria-busy`](https://www.w3.org/TR/wai-aria-1.1/#aria-busy) à `true` pour la zone jusqu'à la fin du chargement. Il n'est pas possible à l'utilisateur de modifier la valeur de `progressbar` car elle est toujours en lecture seule.
 
-> **Note :** généralement les technologies d'assistance retourneront la valeur de l'attribut [`aria-valuenow`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuenow) sous la forme d'un pourcentage d'une plage de valeurs comprise entre [`aria-valuemin`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuemin) et [`aria-valuemax`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuemax), sauf si [`aria-valuetext`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuetext) est spécifié. Il est préférable de définir les valeurs pour les attributs `aria-valuemin`, `aria-valuemax` et `aria-valuenow` de façon appropriée pour ce calcul.
+> [!NOTE]
+> Généralement les technologies d'assistance retourneront la valeur de l'attribut [`aria-valuenow`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuenow) sous la forme d'un pourcentage d'une plage de valeurs comprise entre [`aria-valuemin`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuemin) et [`aria-valuemax`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuemax), sauf si [`aria-valuetext`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuetext) est spécifié. Il est préférable de définir les valeurs pour les attributs `aria-valuemin`, `aria-valuemax` et `aria-valuenow` de façon appropriée pour ce calcul.
 
-> **Note :** les éléments possédant le rôle `progressbar` ont une valeur `aria-readonly` implicite définie à `true`.
+> [!NOTE]
+> Les éléments possédant le rôle `progressbar` ont une valeur `aria-readonly` implicite définie à `true`.
 
 ### Effets possibles sur les agents utilisateurs et les technologies d'assistance
 
 Les lecteurs devraient annoncer les mises à jour de la progression dès qu'elles se produisent. Si la barre de progression a un label, il devrait également être mentionné.
 
-> **Note :** il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!NOTE]
+> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
 
 ### Exemples
 

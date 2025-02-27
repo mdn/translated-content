@@ -84,13 +84,13 @@ slug: Web/HTML/Element/tfoot
     > **주의:**
     >
     > - `left`, `center`, `right` 또는 `justify` 값과 같은 효과를 내고 싶다면, CSS {{cssxref("text-align")}} 속성을 적용하세요.
-    > - `char` 값과 같은 효과를 내고 싶다면, CSS3에서 [`char`](/ko/docs/Web/HTML/Element/tfoot#char)의 값을 {{cssxref("text-align")}} 속성의 {{unimplemented_inline}} 값으로 사용할 수 있습니다.
+    > - `char` 값과 같은 효과를 내고 싶다면, CSS3에서 [`char`](#char)의 값을 {{cssxref("text-align")}} 속성의 값으로 사용할 수 있습니다.
 
 - `bgcolor` {{Deprecated_inline}}
   - : 표의 배경 색입니다. '`#`'이 앞에 붙는 [6자리의 16진수 RGB 코드](/ko/docs/Web/CSS/color_value#rgb_colors) 형식으로 작성합니다. 이미 정의되어 있는 [color keywords](/ko/docs/Web/CSS/color_value#color_keywords) 도 사용할 수 있습니다.
     비슷한 효과를 적용하고 싶다면 CSS {{cssxref("background-color")}} 속성을 사용합니다.
 - `char` {{deprecated_inline}}
-  - : 이 특성은 열을 특정 문자에 대해 정렬하도록 지정합니다. 숫자 또는 통화 값을 정렬할 때에는 일반적으로 마침표(.)가 포함됩니다. 만약 [`align`](/ko/docs/Web/HTML/Element/tfoot#align) 이 `char`로 설정되어 있지 않으면, 이 특성은 무시됩니다.
+  - : 이 특성은 열을 특정 문자에 대해 정렬하도록 지정합니다. 숫자 또는 통화 값을 정렬할 때에는 일반적으로 마침표(.)가 포함됩니다. 만약 [`align`](#align) 이 `char`로 설정되어 있지 않으면, 이 특성은 무시됩니다.
 - `charoff` {{deprecated_inline}}
   - : 이 특성은 `char` 특성으로 지정된 정렬 문자에서 열 데이터를 오프셋할 문자의 수를 나타내는 데 사용됩니다.
 - `valign` {{deprecated_inline}}

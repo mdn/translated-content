@@ -331,35 +331,36 @@ browser.pkcs11.installModule("my_module");
 
 如果想要全局可见，使用下面的路径创建注册表：
 
-```
+```plain
 HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\NativeMessagingHosts\<name>
 ```
 
-```
+```plain
 HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\ManagedStorage\<name>
 ```
 
-```
+```plain
 HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\<name>
 ```
 
 注册表应该有单个默认值，值里存放到清单文件的路径。
 
-> **警告：** 从 Firefox 64 开始，将首先检查 32 位注册表视图 [Wow6432Node](https://zh.wikipedia.org/wiki/WoW64#Registry_and_file_system) 的键，然后是“native”注册表视图。请使用适合你的应用程序的那一个。
+> [!WARNING]
+> 从 Firefox 64 开始，将首先检查 32 位注册表视图 [Wow6432Node](https://zh.wikipedia.org/wiki/WoW64#Registry_and_file_system) 的键，然后是“native”注册表视图。请使用适合你的应用程序的那一个。
 >
 > **对于 Firefox 63 和更早的版本**：这个键不应该在 [Wow6432Node](https://zh.wikipedia.org/wiki/WoW64#Registry_and_file_system) 下创建，即使应用程序是 32 位的。以前版本的浏览器总是在注册表的“native”视图下寻找该键，而不是在 32 位模拟视图下寻找。为了确保在“native”视图中创建键，你可以在 `RegCreateKeyEx` 中传递 `KEY_WOW64_64KEY` 或 `KEY_WOW64_32KEY` 标志。参见[访问备用注册表视图](https://docs.microsoft.com/windows/win32/winprog64/accessing-an-alternate-registry-view)。
 
 如果想要用户级别可见，使用下面的路径创建注册表：
 
-```
+```plain
 HKEY_CURRENT_USER\SOFTWARE\Mozilla\NativeMessagingHosts\<name>
 ```
 
-```
+```plain
 HKEY_CURRENT_USER\SOFTWARE\Mozilla\ManagedStorage\<name>
 ```
 
-```
+```plain
 HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<name>
 ```
 
@@ -369,29 +370,29 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<name>
 
 如果想要全局可见，将清单文件存放在：
 
-```
+```plain
 /Library/Application Support/Mozilla/NativeMessagingHosts/<name>.json
 ```
 
-```
+```plain
 /Library/Application Support/Mozilla/ManagedStorage/<name>.json
 ```
 
-```
+```plain
 /Library/Application Support/Mozilla/PKCS11Modules/<name>.json
 ```
 
 如果想要用户级别可见，将清单文件存放在：
 
-```
+```plain
 ~/Library/Application Support/Mozilla/NativeMessagingHosts/<name>.json
 ```
 
-```
+```plain
 ~/Library/Application Support/Mozilla/ManagedStorage/<name>.json
 ```
 
-```
+```plain
 ~/Library/Application Support/Mozilla/PKCS11Modules/<name>.json
 ```
 
@@ -399,42 +400,42 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<name>
 
 如果想要全局可见，将清单文件存放在：
 
-```
+```plain
 /usr/lib/mozilla/native-messaging-hosts/<name>.json
 ```
 
-```
+```plain
 /usr/lib/mozilla/managed-storage/<name>.json
 ```
 
-```
+```plain
 /usr/lib/mozilla/pkcs11-modules/<name>.json
 ```
 
 或者：
 
-```
+```plain
 /usr/lib64/mozilla/native-messaging-hosts/<name>.json
 ```
 
-```
+```plain
 /usr/lib64/mozilla/managed-storage/<name>.json
 ```
 
-```
+```plain
 /usr/lib64/mozilla/pkcs11-modules/<name>.json
 ```
 
 如果想要用户级别可见，将清单文件存放在：
 
-```
+```plain
 ~/.mozilla/native-messaging-hosts/<name>.json
 ```
 
-```
+```plain
 ~/.mozilla/managed-storage/<name>.json
 ```
 
-```
+```plain
 ~/.mozilla/pkcs11-modules/<name>.json
 ```

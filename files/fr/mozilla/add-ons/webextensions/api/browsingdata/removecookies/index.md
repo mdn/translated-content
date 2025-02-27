@@ -3,7 +3,7 @@ title: browsingData.removeCookies()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Efface les cookies du navigateur
 
@@ -12,7 +12,7 @@ Vous pouvez utiliser le paramètre `removalOptions`, qui est un objet {{WebExtAP
 - Efface seulement les cookies créés après un temps donné
 - Contrôlez si les cookies doivent être supprimés uniquement à partir des pages Webnormales ou si vous souhaitez supprimer les cookies des applications et des extensions hébergées.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -29,7 +29,7 @@ var removing = browser.browsingData.removeCookies(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans argument lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
 
 ## Compatibilité des navigateurs
 
@@ -61,7 +61,7 @@ browser.browsingData
 
 Supprime tous les cookies :
 
-> **Attention :**
+> [!WARNING]
 >
 > L'utilisation de l'API pour supprimer tous les cookies effacera simultanément tous les objets de stockage locaux (y compris ceux des autres extensions).
 >
@@ -81,9 +81,9 @@ browser.browsingData.removeCookies({}).then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

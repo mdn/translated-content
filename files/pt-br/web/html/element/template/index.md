@@ -53,7 +53,7 @@ Pense no template como um fragmento de conteúdo, que é armazenado para um poss
     </tr>
     <tr>
       <th scope="row">Tags omitidas</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Elementos pais permitidos</th>
@@ -152,7 +152,7 @@ table td {
 
 ## Compatibilidade de Navegadores
 
-{{Compat("html.elements.template")}}
+{{Compat}}
 
 ## Veja também
 

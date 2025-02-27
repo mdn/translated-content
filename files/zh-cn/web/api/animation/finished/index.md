@@ -7,7 +7,8 @@ slug: Web/API/Animation/finished
 
 Animation.finished 只读属性允许你返回动画的完成状态。
 
-> **备注：** The Promise is replaced with a new (pending) Promise object every time the animation leaves the `finished` play state.
+> [!NOTE]
+> The Promise is replaced with a new (pending) Promise object every time the animation leaves the `finished` play state.
 
 ## 语法
 

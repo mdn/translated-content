@@ -1,17 +1,18 @@
 ---
 title: OOP
 slug: Glossary/OOP
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
 
-**OOP**（面向对象编程）是一种编程方法，其中数据封装在**{{glossary("object","对象")}}**中，对象本身在其上运行，而不是其组成部分。
+**OOP**（面向对象编程）是一种编程方法，其中数据封装在[**对象**](/zh-CN/docs/Glossary/Object)中，且操作面向的是对象本身而不是其组成部分。
 
-{{glossary("JavaScript")}} 是高度面向对象的。它遵循基于原型的模型（[与基于类的模型相反](/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Class-based_vs._prototype-based_languages)）。
+{{glossary("JavaScript")}} 是高度面向对象的。它遵循[基于**原型**的模型](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)，但它也同时提供了[类语法](/zh-CN/docs/Web/JavaScript/Guide/Using_classes)来支持经典的 OOP 范式。
 
-## 了解更多
+## 参见
 
-### 常识
-
-- 维基百科：[Object-oriented programming](https://zh.wikipedia.org/wiki/Object-oriented_programming)
-- [JavaScript 面向对象简介](/zh-CN/docs/Learn/JavaScript/Objects)
+- 维基百科上的[面向对象程序设计](https://zh.wikipedia.org/wiki/面向对象程序设计)
+- [JavaScript 对象入门](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
+- [继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

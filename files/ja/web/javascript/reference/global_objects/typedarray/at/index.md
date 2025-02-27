@@ -2,16 +2,28 @@
 title: TypedArray.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/at
 l10n:
-  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: a815a95e4ab4adf391d8a7bc66a3abbce1a686d8
 ---
 
 {{JSRef}}
 
-**`at()`** メソッドは整数値を受け取り、その位置にある項目を返します。正の整数値と負の整数値が使用できます。負の整数は、配列の最後の項目から前へ数えます。
+**`at()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで整数値を受け取り、そのインデックスにある項目を返します。整数値には正の整数と負の整数が使用できます。負の整数の場合は、この型付き配列の末尾の項目から前に数えます。このメソッドは {{jsxref("Array.prototype.at()")}} と同じアルゴリズムです。
 
-これは、角括弧記法を使用することに何らかの問題があることを示唆しているわけではありません。例えば、 `array[0]` は最初の項目を返します。しかし、後方の項目、例えば最後の項目には {{jsxref('Array.prototype.length','array.length')}} を使用する代わりに、 `array.at(-1)` を呼び出すことで取得することができます。[（下記の例を参照してください）](#例)
+{{InteractiveExample("JavaScript Demo: TypedArray.at()")}}
 
-{{EmbedInteractiveExample("pages/js/typedarray-at.html")}}
+```js interactive-example
+const int8 = new Int8Array([0, 10, -10, 20, -30, 40, -50]);
+
+let index = 1;
+
+console.log(`An index of ${index} returns the item ${int8.at(index)}`);
+// Expected output: "An index of 1 returns the item 10"
+
+index = -2;
+
+console.log(`An index of ${index} returns the item ${int8.at(index)}`);
+// Expected output: "An index of -2 returns the item 40"
+```
 
 ## 構文
 
@@ -22,11 +34,15 @@ at(index)
 ### 引数
 
 - `index`
-  - : 返される配列要素の添字（位置）。負の添字を使用した場合は、配列の末尾からの相対位置指定に対応しています。つまり、負の数を使用した場合は、配列の末尾から数えて返される要素を見つけることになります。
+  - : 返される型付き配列要素のゼロ基点のインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。負の添字を使用した場合は、型付き配列の末尾から逆に数えた位置です。 `index < 0` であれば、 `index + array.length` がアクセスされます。
 
 ### 返値
 
-指定された位置に一致する配列の要素です。指定された位置が見つからない場合は {{jsxref('undefined')}} を返します。
+指定されたインデックスに一致する型付き配列の要素です。 `index < -array.length` または `index >= array.length` の場合は、対応するプロパティにアクセスしようとせずに常に {{jsxref("undefined")}} を返します。
+
+## 解説
+
+詳細は {{jsxref("Array.prototype.at()")}} を参照してください。このメソッドは汎用的ではなく、型付き配列インスタンスに対してのみ呼び出すことができます。
 
 ## 例
 
@@ -48,7 +64,7 @@ console.log(lastItem); // 18
 
 ### メソッドの比較
 
-ここでは、{{jsxref('TypedArray')}} の最後から 2 番目の項目を選択するさまざまな方法を比較しています。以下に示すどの方法も有効ですが、`at()` メソッドの簡潔さと読みやすさが際立っています。
+ここでは、 {{jsxref("TypedArray")}} の最後から 2 番目の項目を選択するさまざまな方法を比較しています。以下に示すどの方法も有効ですが、`at()` メソッドの簡潔さと読みやすさが際立っています。
 
 ```js
 // Our typed array with values
@@ -78,7 +94,10 @@ console.log(atWay); // 11
 ## 関連情報
 
 - [`TypedArray.prototype.at` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#relative-indexing-method)
-- [at() メソッドのポリフィル](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
-- {{jsxref("TypedArray.prototype.find()")}} – 指定されたテストに基づき値を返す。
-- {{jsxref("TypedArray.prototype.includes()")}} – 値が配列内にあるかどうかを調べて返す。
-- {{jsxref("TypedArray.prototype.indexOf()")}} – 指定された要素のインデックスを返す。
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
+- {{jsxref("TypedArray")}}
+- {{jsxref("TypedArray.prototype.findIndex()")}}
+- {{jsxref("TypedArray.prototype.indexOf()")}}
+- {{jsxref("TypedArray.prototype.with()")}}
+- {{jsxref("Array.prototype.at()")}}
+- {{jsxref("String.prototype.at()")}}

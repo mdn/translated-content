@@ -50,7 +50,7 @@ Dans l'exemple qui suit, on crée une barre de défilement fine avec une piste v
 
 Lors du paramétrage des barres de défilement, on s'assurera que le contraste avec les éléments alentour est suffisant et que la surface d'interaction est suffisamment grande pour les personnes qui utilisent une interface tactile.
 
-- [Règles de base pour l'utilisabilité des barres de défilement, par Adrian Roselli (en anglais)](http://adrianroselli.com/2019/01/baseline-rules-for-scrollbar-usability.html)
+- [Règles de base pour l'utilisabilité des barres de défilement, par Adrian Roselli (en anglais)](https://adrianroselli.com/2019/01/baseline-rules-for-scrollbar-usability.html)
 
 ## Spécifications
 

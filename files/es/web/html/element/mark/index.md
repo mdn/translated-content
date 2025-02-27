@@ -7,7 +7,29 @@ slug: Web/HTML/Element/mark
 
 El **Elemento HTML Mark `<mark>`** representa un texto **marcado** o **resaltado** como referencia o anotación, debido a su relevancia o importancia en un contexto particular.
 
-{{EmbedInteractiveExample("pages/tabbed/mark.html", "tabbed-shorter")}}The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
+{{InteractiveExample("HTML Demo: &lt;mark&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>Search results for "salamander":</p>
+
+<hr />
+
+<p>
+  Several species of <mark>salamander</mark> inhabit the temperate rainforest of
+  the Pacific Northwest.
+</p>
+
+<p>
+  Most <mark>salamander</mark>s are nocturnal, and hunt for insects, worms, and
+  other small creatures.
+</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+mark {
+}
+```
 
 <table class="properties">
   <tbody>
@@ -27,7 +49,7 @@ El **Elemento HTML Mark `<mark>`** representa un texto **marcado** o **resaltado
     </tr>
     <tr>
       <th>Omisión de etiquetas</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th>Elementos padre permitidos</th>
@@ -64,7 +86,7 @@ El **Elemento HTML Mark `<mark>`** representa un texto **marcado** o **resaltado
 
 ## Atributos
 
-Este elemento no tiene atributos que no sean los [atributos globales](/es/docs/Web/HTML/Atributos_Globales), comunes a todos los elementos.
+Este elemento no tiene atributos que no sean los [atributos globales](/es/docs/Web/HTML/Global_attributes), comunes a todos los elementos.
 
 ## Notas de uso
 
@@ -72,7 +94,8 @@ Este elemento no tiene atributos que no sean los [atributos globales](/es/docs/W
 - Por otro lado, `<mark>` indica una parte del contenido del documento que probablemente sea relevante para el usuario. Por ejemplo, se puede utilizar en una página que muestra los resultados de búsqueda para resaltar cada uno de estos por palabra.
 - No uses el elemento `<mark>` para resaltado de sintaxis; usa el elemento {{ HTMLElement("span") }} para este fin.
 
-> **Nota:** No se debe confundir el elemento `<mark>` con el elemento {{ HTMLElement("strong") }}. El elemento {{ HTMLElement("strong") }} se utiliza para denotar intervalos de texto de especial _importancia,_ mientras que el elemento `<mark>` se utiliza para denotar intervalos de texto de especial _relevancia._
+> [!NOTE]
+> No se debe confundir el elemento `<mark>` con el elemento {{ HTMLElement("strong") }}. El elemento {{ HTMLElement("strong") }} se utiliza para denotar intervalos de texto de especial _importancia,_ mientras que el elemento `<mark>` se utiliza para denotar intervalos de texto de especial _relevancia._
 
 ## Ejemplos
 
@@ -128,4 +151,4 @@ El resultado se vería:
 
 ## Consulta también
 
-- Otros [elementos de la semántica a nivel de texto](/en/HTML/Text-level_semantics_elements) : {{ HTMLElement("a") }}, {{ HTMLElement("em") }}, {{ HTMLElement("strong") }}, {{ HTMLElement("cite") }} , {{ HTMLElement("q") }} , {{ HTMLElement("dfn") }}, {{ HTMLElement("abbr") }}, {{ HTMLElement("time") }} , {{ HTMLElement("code") }} ,{{ HTMLElement("var") }}, {{ HTMLElement("samp") }} ,{{ HTMLElement("kbd") }} ,{{ HTMLElement("sub") }} , {{ HTMLElement("sup") }} ,{{ HTMLElement("i") }} , {{ HTMLElement("b") }}, {{ HTMLElement("mark") }} , {{ HTMLElement("ruby") }} , {{ HTMLElement("rp") }} , {{ HTMLElement("rt") }} , {{ HTMLElement("bdo") }}, {{ HTMLElement("span") }} , {{ HTMLElement("br") }} , {{ HTMLElement("wbr") }}.
+- Otros [elementos de la semántica a nivel de texto](/es/docs/HTML/Text-level_semantics_elements) : {{ HTMLElement("a") }}, {{ HTMLElement("em") }}, {{ HTMLElement("strong") }}, {{ HTMLElement("cite") }} , {{ HTMLElement("q") }} , {{ HTMLElement("dfn") }}, {{ HTMLElement("abbr") }}, {{ HTMLElement("time") }} , {{ HTMLElement("code") }} ,{{ HTMLElement("var") }}, {{ HTMLElement("samp") }} ,{{ HTMLElement("kbd") }} ,{{ HTMLElement("sub") }} , {{ HTMLElement("sup") }} ,{{ HTMLElement("i") }} , {{ HTMLElement("b") }}, {{ HTMLElement("mark") }} , {{ HTMLElement("ruby") }} , {{ HTMLElement("rp") }} , {{ HTMLElement("rt") }} , {{ HTMLElement("bdo") }}, {{ HTMLElement("span") }} , {{ HTMLElement("br") }} , {{ HTMLElement("wbr") }}.

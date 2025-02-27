@@ -90,9 +90,11 @@ digest(algorithm, data)
   </tbody>
 </table>
 
-> **警告:** SHA-1 は現在脆弱であると見なされているため、暗号化アプリケーションには使用しないでください。
+> [!WARNING]
+> SHA-1 は現在脆弱であると見なされているため、暗号化アプリケーションには使用しないでください。
 
-> **メモ:** キー付きハッシュメッセージ認証コード ([HMAC](/ja/docs/Glossary/HMAC)) の作成方法をここで探している場合は、代わりに [SubtleCrypto.sign()](/ja/docs/Web/API/SubtleCrypto/sign#hmac) を使用する必要があります。
+> [!NOTE]
+> キー付きハッシュメッセージ認証コード ([HMAC](/ja/docs/Glossary/HMAC)) の作成方法をここで探している場合は、代わりに [SubtleCrypto.sign()](/ja/docs/Web/API/SubtleCrypto/sign#hmac) を使用する必要があります。
 
 ## 例
 

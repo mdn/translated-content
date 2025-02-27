@@ -1,107 +1,193 @@
 ---
 title: 使用历史记录 API
 slug: Web/API/History_API/Working_with_the_History_API
+l10n:
+  sourceCommit: 56bbf2804abdfdbf9ad93386ba4c956196d06a37
 ---
 
 {{DefaultAPISidebar("History API")}}
 
-{{DOMxRef("History.pushState", "pushState()")}} 和 {{DOMxRef("History.replaceState", "replaceState()")}} 方法分别添加和修改历史条目。这些方法与 {{domxref("Window/popstate_event", "popstate")}} 事件一起工作。
+历史记录 API 使网站能够与浏览器的会话历史记录（即用户在给定窗口中访问过的页面列表）进行交互。当用户通过点击链接等方式访问新页面时，这些新页面就会被添加到会话历史记录中。用户还可以使用浏览器的“后退”和“前进”按钮在历史记录中来回移动。
 
-## 添加和修改历史记录
+历史记录 API 中定义的主要接口是 {{domxref("History")}} 接口，它定义了两套截然不同的方法：
 
-使用 {{DOMxRef("History.pushState", "pushState()")}} 可以改变在你改变状态后创建的 {{domxref("XMLHttpRequest")}} 对象的 HTTP 标头中使用的 referrer。referrer 将是创建 {{domxref("XMLHttpRequest")}} 对象时其窗口为 `this` 的文档的 URL。
+1. 在会话历史记录中导航到页面的方法：
 
-### pushState() 方法示例
+   - {{domxref("History.back()")}}
+   - {{domxref("History.forward()")}}
+   - {{domxref("History.go()")}}
 
-假设 `https://mozilla.org/foo.html` 执行下面的 JavaScript:
+2. 修改会话历史记录的方法：
+
+   - {{domxref("History.pushState()")}}
+   - {{domxref("History.replaceState()")}}
+
+在本指南中，我们将只关注第二组方法，因为这些方法的行为更为复杂。
+
+`pushState()` 方法会向会话历史记录添加新条目，而 `replaceState()` 方法则会更新当前页面的会话历史记录条目。这两种方法都接收一个 `state` 参数，该参数可包含任何{{Glossary("Serializable_object", "可序列化对象")}}。当浏览器导航到该历史条目时，浏览器会触发 {{domxref("Window.popstate_event", "popstate")}} 事件，其中包含与该条目相关的状态对象。
+
+这些 API 的主要目的是支持像{{Glossary("SPA", "单页应用")}}这样的网站，它们使用 JavaScript API（如 {{domxref("fetch()")}}）来更新页面的新内容，而不是加载整个新页面。
+
+## 单页应用和会话历史记录
+
+传统上，网站是以页面集合的形式实现的。当用户通过点击链接浏览网站的不同部分时，浏览器每次都会加载一个全新的页面。
+
+虽然这对许多网站来说很好，但也有一些缺点：
+
+- 如果只需要更新页面的一部分，每次加载整个页面的效率会很低。
+- 跨页面导航时很难保持应用程序状态
+
+由于这些原因，{{Glossary("SPA", "单页应用")}}（SPA）是一种流行的 web 应用程序模式，在这种模式中，网站由一个页面组成，当用户点击链接时，页面会：
+
+1. 阻止加载新页面的默认行为
+2. {{domxref("fetch()", "获取", "", "nocode")}}要显示的新内容
+3. 用新内容更新页面
+
+例如：
 
 ```js
-const stateObj = {
-  foo: "bar",
+document.addEventListener("click", async (event) => {
+  const creature = event.target.getAttribute("data-creature");
+  if (creature) {
+    // 阻止新页面加载
+    event.preventDefault();
+    try {
+      // 获取新内容
+      const response = await fetch(`creatures/${creature}.json`);
+      const json = await response.json();
+      // 用新内容更新页面
+      displayContent(json);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+});
+```
+
+在该单击处理器中，如果链接包含数据属性 `"data-creature"`，我们就会使用该属性的值来获取包含页面新内容的 JSON 文件。
+
+JSON 文件可能如下所示：
+
+```json
+{
+  "description": "Bald eagles are not actually bald.",
+  "image": {
+    "src": "images/eagle.jpg",
+    "alt": "A bald eagle"
+  },
+  "name": "Eagle"
+}
+```
+
+`displayContent()` 函数使用 JSON 内容更新页面：
+
+```js
+// 使用新内容更新页面
+function displayContent(content) {
+  document.title = `生物：${content.name}`;
+
+  const description = document.querySelector("#description");
+  description.textContent = content.description;
+
+  const photo = document.querySelector("#photo");
+  photo.setAttribute("src", content.image.src);
+  photo.setAttribute("alt", content.image.alt);
+}
+```
+
+问题在于，它破坏了浏览器“后退”和“前进”按钮的预期行为。
+
+从用户的角度来看，他们点击了一个链接，页面就更新了，所以看起来像是一个新页面。如果用户按下浏览器的“后退”按钮，就会返回到点击链接之前的状态。
+
+但在浏览器看来，最后一个链接并没有加载新页面，因此“后退”按钮会将浏览器带回到用户打开 SPA 之前加载的页面。
+
+这正是 `pushState()`、`replaceState()` 和 `popstate` 事件所要解决的问题。它们使我们能够合成历史条目，并在当前会话历史条目更改为这些条目之一（例如，由于用户按下了“后退”或“前进”按钮）时收到通知。
+
+## 使用 `pushState()`
+
+我们可以像下面这样在单击事件处理器中添加历史记录条目：
+
+```js
+document.addEventListener("click", async (event) => {
+  const creature = event.target.getAttribute("data-creature");
+  if (creature) {
+    event.preventDefault();
+    try {
+      const response = await fetch(`creatures/${creature}.json`);
+      const json = await response.json();
+      displayContent(json);
+      // 向历史记录中添加新条目
+      // 模拟了新页面的加载
+      history.pushState(json, "", creature);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+});
+```
+
+这里，我们使用三个参数调用了 `pushState()`：
+
+- `json`：这是我们刚刚获取的内容。它将与历史条目一起存储，之后将作为 {{domxref("PopStateEvent.state", "state")}} 属性包含在传递给 `popstate` 事件处理器的参数中。
+- `""`：这是与传统网站向后兼容所必需的，应始终为空字符串。
+- `creature`：这将用作条目的 URL。它将显示在浏览器的 URL 栏中，并在页面发出的任何 HTTP 请求中用作 {{httpheader("Referer")}} 标头的值。请注意，这必须与页面{{Glossary("Same-origin policy", "同源")}} 。
+
+## 使用 `popstate` 事件
+
+假设用户：
+
+1. 点击了 SPA 中的一个链接，因此我们使用 `pushState()` 更新页面并添加历史记录条目 A
+2. 点击 SPA 中的另一个链接，因此我们使用 `pushState()` 更新页面并添加历史记录条目 B
+3. 按下“后退”按钮
+
+现在，新的当前历史记录条目是 A，因此浏览器触发了 `popstate` 事件，事件处理器参数包括我们在处理导航到 A 时传递给 `pushState()` 的 JSON，这意味着我们可以通过这样的事件处理器来恢复正确的内容：
+
+```js
+// 处理前进/回退按钮
+window.addEventListener("popstate", (event) => {
+  // 如果提供了一个状态（state），我们“模拟”一个页面并更新当前页面
+  if (event.state) {
+    // 模拟前一个页面加载
+    displayContent(event.state);
+  }
+});
+```
+
+## 使用 `replaceState()`
+
+我们还需要添加一项内容。当用户加载 SPA 时，浏览器会添加一个历史记录条目。由于这是一次实际的页面加载，因此该条目没有与之相关的状态。因此，假设用户：
+
+1. 加载 SPA：浏览器添加历史记录条目
+2. 点击 SPA 中的一个链接：点击处理程序会更新页面，并使用 `pushState()` 添加一个历史记录条目
+3. 按下“后退”按钮
+
+现在我们想回到 SPA 的初始状态，但由于这是同一文档中的导航，页面不会被重新加载，而且初始页面的历史条目没有状态，我们无法使用 `popstate` 恢复它。
+
+解决办法是使用 `replaceState()` 为初始页面设置状态对象。例如：
+
+```js
+// 在页面加载时创建状态，并用其替换当前历史记录
+const image = document.querySelector("#photo");
+const initialState = {
+  description: document.querySelector("#description").textContent,
+  image: {
+    src: image.getAttribute("src"),
+    alt: image.getAttribute("alt"),
+  },
+  name: "Home",
 };
-
-history.pushState(stateObj, "page 2", "bar.html");
+history.replaceState(initialState, "", document.location.href);
 ```
 
-这将导致地址栏显示 `https://mozilla.org/bar.html`，但不会导致浏览器加载 `bar.html` 或甚至检查 `bar.html` 是否存在。
+在页面加载时，我们会收集页面的所有部分，以便在用户返回 SPA 的起点时还原这些部分。这与我们在处理其他导航时获取的 JSON 结构相同。我们将这个 `initialState` 对象传递给 `replaceState()`，这样就能有效地将状态对象添加到当前历史记录条目中。
 
-假设现在用户导航到 `https://google.com`，然后点击了**返回**按钮。这时，地址栏将显示 `https://mozilla.org/bar.html`，`history.state` 将包含 `stateObj`。`popstate` 事件将不会被触发，因为页面已经被重新加载。页面本身将看起来像 `bar.html`。
+当用户返回到我们的起点时，`popstate` 事件将包含此初始状态，我们可以使用 `displayContent()` 函数更新页面。
 
-如果用户再次点击**返回**，URL 将变为 `https://mozilla.org/foo.html`，并且文档将得到一个 `popstate` 事件，这次是一个 `null` 状态对象。在这里，返回也不会改变文档的内容，尽管文档在收到 `popstate` 事件后可能会手动更新其内容。
+## 一个完整的示例
 
-### pushState() 方法
-
-`pushState()` 需要三个参数：一个**状态对象**；一个**标题**（目前忽略）；以及一个（可选）**URL**。
-
-让我们详细地解释一下这三个参数
-
-- **状态对象**
-  - : 状态对象是一个 JavaScript 对象，它与由 `pushState()` 创建的新历史条目相关。每当用户浏览到新的状态时，一个 `popstate` 事件被触发，该事件的 `state` 属性包含历史条目的状态对象的副本。状态对象可以是任何可以被序列化的东西。因为 Firefox 将状态对象保存在用户的磁盘上，以便在用户重新启动浏览器后恢复，所以我们对状态对象的序列化表示法规定了 640k 字符的大小限制。如果你传递给 `pushState()` 的状态对象的序列化表示大于这个大小，该方法将抛出一个异常。如果你需要比这更多的空间，我们鼓励你使用 `sessionStorage` 和/或 `localStorage`。
-- **标题**
-  - : [除了 Safari，所有的浏览器目前都忽略了这个参数](https://github.com/whatwg/html/issues/2174)，尽管它们在未来可能会使用这个参数。在这里传递空字符串应该是安全的，可以避免将来对该方法的修改。另外，你也可以为你要移动的状态传入一个简短的标题。
-- **URL**
-  - : 新的历史条目的 URL 是由这个参数给出的。注意，在调用 `pushState()` 后，浏览器不会尝试加载这个 URL，但它可能会在以后尝试加载这个 URL，例如在用户重新启动浏览器后。新的 URL 不需要是绝对的；如果它是相对的，它就会相对于当前的 URL 进行解析。新的 URL 必须与当前的 URL 同源；否则，`pushState()` 将抛出一个异常。这个参数是可选的；如果没有指定它，它将被设置为文档的当前 URL。
-
-在某种意义上，调用 `pushState()` 类似于设置 `window.location = "#foo"`，因为两者都将创建并激活与当前文档相关的另一个历史条目。
-
-但是 `pushState()` 有几条优势：
-
-- 新的 URL 可以是与当前 URL 同源的任何 URL。相比之下，只有当你只修改锚点值时，设置 `window.location` 使你保持在同一个 {{ domxref("document") }}。
-- 如果你不愿意，你不必改变 URL。相反，设置 `window.location = "#foo";` 只在当前锚点值不是 `#foo` 的情况下创建一个新的历史条目。
-- 你可以将任意的数据与你的新历史条目联系起来。使用基于哈希的方法，你需要将所有的相关数据编码成一个短字符串。
-- 如果 `title` 随后被浏览器使用，这个数据可以被利用（而锚点值会独立于每个历史条目）。
-
-请注意，`pushState()` 永远不会触发 `hashchange` 事件，即使新的 URL 与旧的 URL 只在锚点值上有所不同。
-
-在其他文档中，它创建了一个具有 `null` 命名空间 URI 的元素。
-
-### replaceState() 方法
-
-`history.replaceState()` 的操作与 `history.pushState()` 完全一样，只是 `replaceState()` 修改了当前的历史条目，而不是创建一个新的。注意，这并不妨碍在全局浏览器历史中创建一个新条目。
-
-`replaceState()` 在你想更新当前历史条目的状态对象或 URL 以响应某些用户操作时特别有用。
-
-### replaceState() 方法示例
-
-假设 `https://mozilla.org/foo.html` 执行了下列 JavaScript 代码：
-
-```js
-const stateObj = {
-  foo: "bar",
-};
-history.pushState(stateObj, "page 2", "bar.html");
-```
-
-上面这两行的解释可以在上面的 [_pushState() 方法的例子_](#pushstate_方法示例)部分找到。
-
-然后，假设 `https://mozilla.org/bar.html` 执行了下列 JavaScript 代码：
-
-```js
-history.replaceState(stateObj, "page 3", "bar2.html");
-```
-
-这将导致 URL 栏显示 `https://mozilla.org/bar2.html`，但不会导致浏览器加载 `bar2.html` 或甚至检查 `bar2.html` 是否存在。
-
-假设现在用户导航到 `https://www.microsoft.com`，然后点击**返回**按钮。此时，URL 栏将显示 `https://mozilla.org/bar2.html`。如果用户现在再次点击**返回**，URL 栏将显示`https://mozilla.org/foo.html`，完全绕过了 `bar.html`。
-
-### popstate 事件
-
-每次活动的历史条目发生变化时，都会向窗口派发一个 `popstate` 事件。如果被激活的历史条目是通过调用 {{DOMxRef("History.pushState", "pushState")}} 创建的，或通过调用 {{DOMxRef("History.replaceState", "replaceState")}} 影响的，`popstate` 事件的 `state` 属性包含历史条目的状态对象副本。
-
-请参阅 {{domxref("Window/popstate_event", "popstate")}} 了解使用示例。
-
-### 读取当前状态
-
-当你的页面加载时，它可能有一个非空的状态对象。例如，如果页面设置了一个状态对象（使用 {{DOMxRef("History.pushState", "pushState()")}} 或 {{DOMxRef("History.replaceState", "replaceState()")}}），然后用户重新启动他们的浏览器，这种情况就会发生。当页面重新加载时，该页面将收到一个 `onload` 事件，但没有 `popstate` 事件。然而，如果你读取 {{DOMxRef("History.state", "history.state")}} 属性，你会重新得到 `popstate` 事件发生时应该得到的状态对象。
-
-你可以使用 {{DOMxRef("History.state", "history.state")}} 属性读取当前历史条目的状态，而不需要等待 `popstate` 事件，像这样：
-
-```js
-const currentState = history.state;
-```
+你可以在 <https://github.com/mdn/dom-examples/tree/main/history-api> 中看到完整的示例，并在 <https://mdn.github.io/dom-examples/history-api/> 访问到实时运行的版本。
 
 ## 参见
 
 - [历史记录 API](/zh-CN/docs/Web/API/History_API)
-- [历史导航示例](/zh-CN/docs/Web/API/History_API/Example)
 - {{domxref("window.history", "history")}} 全局对象

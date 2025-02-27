@@ -26,7 +26,7 @@ l10n:
 - [ウェブでアクセス可能なリソース](#web_accessible_resources)
   - : まとめられたコンテンツをウェブページやコンテンツスクリプトにアクセス可能とする。
 
-![ウェブ拡張機能の構成要素。manifest.JSON は、すべての拡張機能で存在する必要があります。これは、バックグラウンドページ、コンテンツスクリプト、ブラウザーアクション、ページアクション、オプションページ、およびウェブアクセス可能リソースへのポインターを提供します。バックグラウンドページは HTML と JS で構成されます。コンテンツスクリプトは、 JS と CSS から構成されています。ユーザがアイコンをクリックすることでブラウザアクションとページアクションが発生し、その結果表示されるポップアップが HTML、CSS、JS で構成されています。オプションページは、HTML、CSS、JS で構成されます。](webextension-anatomy.png)
+![ウェブ拡張機能の構成要素。manifest.JSON は、すべての拡張機能で存在する必要があります。これは、バックグラウンドページ、コンテンツスクリプト、ブラウザーアクション、ページアクション、オプションページ、およびウェブアクセス可能リソースへのポインターを提供します。バックグラウンドページは HTML と JS で構成されます。コンテンツスクリプトは、 JS と CSS から構成されています。ユーザーがアイコンをクリックすることでブラウザーアクションとページアクションが発生し、その結果表示されるポップアップが HTML、CSS、JS で構成されています。オプションページは、HTML、CSS、JS で構成されます。](webextension-anatomy.png)
 
 詳細は [`manifest.json`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) のリファレンスを参照してください。
 
@@ -49,7 +49,7 @@ l10n:
 - [サイドバー](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)
   - : ブラウザーウィンドウの左側の、ウェブページの横に表示されるペインです。
 - [ポップアップ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
-  - : ユーザーが[ツールバーボタン](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action)や[アドレスバーボタン](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)をクリックした時に表示されるダイアログです。
+  - : ユーザーが[ツールバーボタン](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)や[アドレスバーボタン](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)をクリックした時に表示されるダイアログです。
 - [オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)
   - : ユーザーがブラウザーネイティブのアドオンマネージャー内でアドオン設定にアクセスする時に表示するページです。
 

@@ -3,7 +3,7 @@ title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 ## Resumo
 
@@ -18,7 +18,8 @@ new Date(dataString);
 new Date(ano, mês, dia, hora, minuto, segundo, milissegundo);
 ```
 
-> **Nota:** Note que objetos JavaScript `Date` só podem ser instanciados chamando JavaScript `Date` como um construtor: chamá-lo como uma função regular (ou seja, sem o operador [new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)) irá retornar uma string ao invés de um objeto `Date`; ao contrário de outros tipos de objetos JavaScript, objetos JavaScript `Date` não têm sintaxe literal.
+> [!NOTE]
+> Note que objetos JavaScript `Date` só podem ser instanciados chamando JavaScript `Date` como um construtor: chamá-lo como uma função regular (ou seja, sem o operador [new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)) irá retornar uma string ao invés de um objeto `Date`; ao contrário de outros tipos de objetos JavaScript, objetos JavaScript `Date` não têm sintaxe literal.
 
 ### Parâmetros para o constructor Date
 
@@ -30,7 +31,7 @@ Nota: Quando Date for chamado como um construtor com mais de um argumento, se os
 
 - _`dataString`_
 
-  - : Um valor do tipo String que representa uma data. A string deverá estar uma formato reconhecido pelo método {{jsxref("Date.parse()")}} ([IETF-compliant RFC 2822 timestamps](http://tools.ietf.org/html/rfc2822#page-14) e também uma [versão da ISO8601](http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15)).
+  - : Um valor do tipo String que representa uma data. A string deverá estar uma formato reconhecido pelo método {{jsxref("Date.parse()")}} ([IETF-compliant RFC 2822 timestamps](https://tools.ietf.org/html/rfc2822#page-14) e também uma [versão da ISO8601](https://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15)).
 
 - _`year`_
 
@@ -90,7 +91,7 @@ Todas as instâncias `Date` são herdadas de {{jsxref("Date.prototype")}}. O obj
 
 ### Métodos
 
-{{ page("/pt-BR/docs/JavaScript/Reference/Global_Objects/Date/prototype", "Methods") }}
+<!-- TODO: page macro not supported:  page("/pt-BR/docs/JavaScript/Reference/Global_Objects/Date/prototype", "Methods")  -->
 
 ## Exemplos
 
@@ -98,7 +99,8 @@ Todas as instâncias `Date` são herdadas de {{jsxref("Date.prototype")}}. O obj
 
 Os seguintes exemplos mostram várias formas de se criar datas em JavaScript:
 
-> **Nota:** a conversão de _strings_ com o construtor de `Date` (`Date.parse` é equivalente ao contrutor) é fortemente desencorajada devido às inconsistências e diferenças dos navegadores.
+> [!NOTE]
+> A conversão de _strings_ com o construtor de `Date` (`Date.parse` é equivalente ao contrutor) é fortemente desencorajada devido às inconsistências e diferenças dos navegadores.
 
 ```js
 var today = new Date();
@@ -163,7 +165,8 @@ function imprimirTempoDecorrido(fTeste) {
 retornoDaSuaFuncao = imprimirTempoDecorrido(suaFuncao);
 ```
 
-> **Nota:** Nota: Em navegadores que suportam a API de Desempenho Web ({{domxref("window.performance", "Web Performance API", "", 1)}}) com o recurso de tempo de alta resolução, {{domxref("Performance.now()")}} pode fornecer medidas de tempo decorrido mais confiáveis e precisas do que {{jsxref("Date.now()")}}.
+> [!NOTE]
+> Em navegadores que suportam a API de Desempenho Web ({{domxref("window.performance", "Web Performance API", "", 1)}}) com o recurso de tempo de alta resolução, {{domxref("Performance.now()")}} pode fornecer medidas de tempo decorrido mais confiáveis e precisas do que {{jsxref("Date.now()")}}.
 
 ## Especificações
 
@@ -171,4 +174,4 @@ retornoDaSuaFuncao = imprimirTempoDecorrido(suaFuncao);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date")}}
+{{Compat}}

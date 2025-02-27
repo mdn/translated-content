@@ -14,5 +14,5 @@ l10n:
 
 ## 같이 보기
 
-- [FTP를 통한 파일 업로드 초보자 가이드](/ko/Learn/Upload_files_to_a_web_server)
+- [FTP를 통한 파일 업로드 초보자 가이드](/ko/docs/Learn/Upload_files_to_a_web_server)
 - 위키피디아의 [FTP](https://ko.wikipedia.org/wiki/%ED%8C%8C%EC%9D%BC_%EC%A0%84%EC%86%A1_%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C)

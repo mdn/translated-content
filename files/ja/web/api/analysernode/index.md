@@ -75,7 +75,8 @@ _親である {{domxref("AudioNode")}} から継承したメソッドもあり�
 
 ## 例
 
-> **メモ:** 音声の視覚化を作成するための詳細は、[ウェブオーディオ API の視覚化](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)のガイドを参照してください。
+> [!NOTE]
+> 音声の視覚化を作成するための詳細は、[ウェブオーディオ API の視覚化](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)のガイドを参照してください。
 
 ### 基本的な使い方
 

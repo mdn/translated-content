@@ -1,11 +1,13 @@
 ---
-title: "::part()"
+title: ::part()
 slug: Web/CSS/::part
+l10n:
+  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
 ---
 
 {{CSSRef}}
 
-**`::part`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、一致する [`part`](/ja/docs/Web/HTML/Global_attributes#part) 属性を持つ[シャドウツリー](/ja/docs/Web/API/Web_components/Using_shadow_DOM)内の要素を表します。
+**`::part`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、一致する [`part`](/ja/docs/Web/HTML/Global_attributes#part) 属性を持つ[シャドウツリー](/ja/docs/Web/API/Web_components/Using_shadow_DOM)内の任意の要素を表します。
 
 ```css
 custom-element::part(foo) {
@@ -15,7 +17,11 @@ custom-element::part(foo) {
 
 ## 構文
 
-{{CSSSyntax}}
+```css
+::part(<ident>+) {
+  /* ... */
+}
+```
 
 ## 例
 
@@ -23,7 +29,7 @@ custom-element::part(foo) {
 
 ```html
 <template id="tabbed-custom-element">
-  <style type="text/css">
+  <style>
     *,
     ::before,
     ::after {
@@ -52,18 +58,20 @@ tabbed-custom-element::part(tab) {
 
 tabbed-custom-element::part(tab):hover {
   background-color: #0c0d19;
+  color: #ffffff;
   border-color: #0c0d33;
 }
 
 tabbed-custom-element::part(tab):hover:active {
   background-color: #0c0d33;
+  color: #ffffff;
 }
 
 tabbed-custom-element::part(tab):focus {
   box-shadow:
     0 0 0 1px #0a84ff inset,
     0 0 0 1px #0a84ff,
-    0 0 0 4px rgba(10, 132, 255, 0.3);
+    0 0 0 4px rgb(10 132 255 / 30%);
 }
 
 tabbed-custom-element::part(active) {
@@ -80,9 +88,7 @@ globalThis.customElements.define(
   template.id,
   class extends HTMLElement {
     constructor() {
-      super();
-      this.attachShadow({ mode: "open" });
-      this.shadowRoot.appendChild(template.content);
+      super().attachShadow({ mode: "open" }).append(template.content);
     }
   },
 );
@@ -102,6 +108,6 @@ globalThis.customElements.define(
 
 ## 関連情報
 
-- [`part`](/ja/docs/Web/HTML/Global_attributes#part) 属性 - `::part()` セレクタで選択できるパーツを定義するために使用されます
-- [`exportparts`](/ja/docs/Web/HTML/Global_attributes#exportparts) 属性 - ネストされたシャドウツリーにシャドウパーツを推移的にエクスポートするために使用されます。
-- [Explainer: CSS Shadow ::part and ::theme](https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md)
+- [`part`](/ja/docs/Web/HTML/Global_attributes#part) 属性 - `::part()` セレクターで選択できるパーツを定義するために使用されます
+- [`exportparts`](/ja/docs/Web/HTML/Global_attributes#exportparts) 属性 - 入れ子になったシャドウツリーにシャドウパーツを推移的にエクスポートするために使用されます。
+- [CSS シャドウパーツ](/ja/docs/Web/CSS/CSS_shadow_parts)モジュール

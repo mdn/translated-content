@@ -3,16 +3,16 @@ title: Feed content access API
 slug: orphaned/Feed_content_access_API
 ---
 
-[Firefox 2](/ja/Firefox_2) と Thunderbird 2 は拡張製作者に RSS と Atom フィードへのアクセスを簡単にする一連のインターフェースを導入します。
+[Firefox 2](/ja/Firefox_2) と Thunderbird 2 は拡張製作者に RSS と Atom フィードへのアクセスを簡単にする一連のインターフェイスを導入します。
 
-## フィードインタフェース
+## フィードインターフェイス
 
 - [`nsIFeed`](/ja/NsIFeed)
   - : RSS あるいは Atom フィードを表します。
 - [`nsIFeedContainer`](/ja/NsIFeedContainer)
-  - : サブクラスされたフィード関連の様々なインタフェースのベースクラス。
+  - : サブクラスされたフィード関連の様々なインターフェイスのベースクラス。
 - [`nsIFeedElementBase`](/ja/NsIFeedElementBase)
-  - : サブクラスされたフィード関連の他の様々なインタフェースのベースクラス。
+  - : サブクラスされたフィード関連の他の様々なインターフェイスのベースクラス。
 - [`nsIFeedEntry`](/ja/NsIFeedEntry)
   - : RSS あるいは Atom フィードの単一のエントリを表します。
 - [`nsIFeedGenerator`](/ja/NsIFeedGenerator)
@@ -34,7 +34,7 @@ slug: orphaned/Feed_content_access_API
 
 ## 例: Web からフィードを読む
 
-フィードを読み込みパースすることは本当に簡単です。 フィードを読み込むために [`XMLHttpRequest`](/ja/XMLHttpRequest) を使い、次にフィードをパースするためにその文字列を [`nsIFeedProcessor`](/ja/NsIFeedProcessor) に渡します。
+フィードを読み込みパースすることは本当に簡単です。 フィードを読み込むために [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) を使い、次にフィードをパースするためにその文字列を [`nsIFeedProcessor`](/ja/NsIFeedProcessor) に渡します。
 
 フィードを読み込み、パーサにそれを渡すことはこのようなコードを使って行うことができます:
 
@@ -77,7 +77,7 @@ slug: orphaned/Feed_content_access_API
   }
 ```
 
-[`nsIFeedProcessor`](/ja/NsIFeedProcessor) インタフェースであなたはいくつかの可能なソースからフィードデータをパースできます; この場合、ドキュメントを文字列に読み込み、次に `parseFromString()` メソッドを使ってパースしています。しかし `parseFromStream()` を使ってファイルから、`parseAsync()` を使って直接 URL からパースすることもできます。
+[`nsIFeedProcessor`](/ja/NsIFeedProcessor) インターフェイスであなたはいくつかの可能なソースからフィードデータをパースできます; この場合、ドキュメントを文字列に読み込み、次に `parseFromString()` メソッドを使ってパースしています。しかし `parseFromStream()` を使ってファイルから、`parseAsync()` を使って直接 URL からパースすることもできます。
 
 パースされたフィードの実際の処理は `FeedTestResultListener` オブジェクトの `handleResult()` を使って行われます。そのコードはこのようになります:
 
@@ -150,4 +150,4 @@ slug: orphaned/Feed_content_access_API
 
 フィードのフェッチを初期化するには、単に `fetch(url)` と呼びます。これはフィードコンテンツを含む新しいウィンドウを開ききます。それはそれぞれのアイテムのタイトル(記事自体へのクリック可能なリンクを持っています)を持っています。
 
-フィードアクセスインタフェースそれぞれの詳細は、個別のリファレンスページを見てください。
+フィードアクセスインターフェイスそれぞれの詳細は、個別のリファレンスページを見てください。

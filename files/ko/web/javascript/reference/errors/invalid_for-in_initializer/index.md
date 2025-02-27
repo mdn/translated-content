@@ -25,12 +25,10 @@ slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 
 이 예제는 `SyntaxError`를 발생시킵니다.
 
-```js example-bad
-"use strict";
+```js-nolint example-bad
+const obj = { a: 1, b: 2, c: 3 };
 
-var obj = {a: 1, b: 2, c: 3 };
-
-for (var i = 0 in obj) {
+for (const i = 0 in obj) {
   console.log(obj[i]);
 }
 
@@ -53,7 +51,7 @@ for (var i in obj) {
 
 ### 배열 반복
 
-for...in 반복문은 [배열을 반복하는데에는 사용하지 않습니다](/ko/docs/Web/JavaScript/Reference/Statements/for...in#Array_iteration_and_for...in). 배열({{jsxref("Array")}})을 반복하기 위해 `for-in` 반복문 대신에 [`for`](/ko/docs/Web/JavaScript/Reference/Statements/for) 반복문을 사용하려고 한 적이 있습니까? `for` 반복문은 선언부에서 초기화도 할 수 있습니다:
+for...in 반복문은 [배열을 반복하는데에는 사용하지 않습니다](/ko/docs/Web/JavaScript/Reference/Statements/for...in#array_iteration_and_for...in). 배열({{jsxref("Array")}})을 반복하기 위해 `for-in` 반복문 대신에 [`for`](/ko/docs/Web/JavaScript/Reference/Statements/for) 반복문을 사용하려고 한 적이 있습니까? `for` 반복문은 선언부에서 초기화도 할 수 있습니다:
 
 ```js example-good
 var arr = ["a", "b", "c"];

@@ -35,7 +35,11 @@ create() と get() メソッドが全体像の中でどのように位置づけ�
 
 ![ウェブ認証 API のコンポーネントの登録とデータフロー図](webauthn_registration_r4.png)
 
+<!-- markdownlint-disable no-emphasis-as-heading -->
+
 _図 1 - ウェブ認証による登録手順と各アクションに関連する重要なデータの流れを示す図_
+
+<!-- markdownlint-enable no-emphasis-as-heading -->
 
 まず（図中のステップ 0）、アプリケーションは最初の登録要求を行います。このリクエストのプロトコルとフォーマットは、ウェブ認証 API の範囲外です。
 
@@ -113,7 +117,8 @@ _図 2 - 図 1 と同様、ウェブ認証による認証手順と各アクシ�
 
 ### 使用法の例
 
-> **警告:** セキュリティの観点から、ウェブ認証の呼び出し（{{domxref('CredentialsContainer.create','create()')}} や {{domxref('CredentialsContainer.get','get()')}}）が保留されている間にブラウザーウィンドウのフォーカスが失われると、呼び出しはキャンセルされます。
+> [!WARNING]
+> セキュリティの観点から、ウェブ認証の呼び出し（{{domxref('CredentialsContainer.create','create()')}} や {{domxref('CredentialsContainer.get','get()')}}）が保留されている間にブラウザーウィンドウのフォーカスが失われると、呼び出しはキャンセルされます。
 
 ```js
 // 登録のサンプル引数
@@ -144,9 +149,9 @@ var createCredentialDefaultArgs = {
 
     challenge: new Uint8Array([
       // サーバーから暗号学的にランダムな値が送られていなければならない
-      0x8c, 0x0a, 0x26, 0xff, 0x22, 0x91, 0xc1, 0xe9, 0xb9, 0x4e, 0x2e, 0x17, 0x1a,
-      0x98, 0x6a, 0x73, 0x71, 0x9d, 0x43, 0x48, 0xd5, 0xa7, 0x6a, 0x15, 0x7e, 0x38,
-      0x94, 0x52, 0x77, 0x97, 0x0f, 0xef,
+      0x8c, 0x0a, 0x26, 0xff, 0x22, 0x91, 0xc1, 0xe9, 0xb9, 0x4e, 0x2e, 0x17,
+      0x1a, 0x98, 0x6a, 0x73, 0x71, 0x9d, 0x43, 0x48, 0xd5, 0xa7, 0x6a, 0x15,
+      0x7e, 0x38, 0x94, 0x52, 0x77, 0x97, 0x0f, 0xef,
     ]).buffer,
   },
 };
@@ -158,9 +163,9 @@ var getCredentialDefaultArgs = {
     // allowCredentials: [newCredential] // 下記参照
     challenge: new Uint8Array([
       // サーバーから暗号学的にランダムな値が送られていなければならない
-      0x79, 0x50, 0x68, 0x71, 0xda, 0xee, 0xee, 0xb9, 0x94, 0xc3, 0xc2, 0x15, 0x67,
-      0x65, 0x26, 0x22, 0xe3, 0xf3, 0xab, 0x3b, 0x78, 0x2e, 0xd5, 0x6f, 0x81, 0x26,
-      0xe2, 0xa6, 0x01, 0x7d, 0x74, 0x50,
+      0x79, 0x50, 0x68, 0x71, 0xda, 0xee, 0xee, 0xb9, 0x94, 0xc3, 0xc2, 0x15,
+      0x67, 0x65, 0x26, 0x22, 0xe3, 0xf3, 0xab, 0x3b, 0x78, 0x2e, 0xd5, 0x6f,
+      0x81, 0x26, 0xe2, 0xa6, 0x01, 0x7d, 0x74, 0x50,
     ]).buffer,
   },
 };
@@ -201,32 +206,32 @@ navigator.credentials
 
 ### Credential
 
-{{Compat("api.Credential")}}
+{{Compat}}
 
 ### CredentialsContainer
 
-{{Compat("api.CredentialsContainer")}}
+{{Compat}}
 
 ### PublicKeyCredential
 
-{{Compat("api.PublicKeyCredential")}}
+{{Compat}}
 
 ### AuthenticatorResponse
 
-{{Compat("api.AuthenticatorResponse")}}
+{{Compat}}
 
 ### AuthenticatorAttestationResponse
 
-{{Compat("api.AuthenticatorAttestationResponse")}}
+{{Compat}}
 
 ### AuthenticatorAssertionResponse
 
-{{Compat("api.AuthenticatorAssertionResponse")}}
+{{Compat}}
 
 ### PublicKeyCredentialCreationOptions
 
-{{Compat("api.PublicKeyCredentialCreationOptions")}}
+{{Compat}}
 
 ### PublicKeyCredentialRequestOptions
 
-{{Compat("api.PublicKeyCredentialRequestOptions")}}
+{{Compat}}

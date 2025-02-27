@@ -5,7 +5,7 @@ slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame
 
 {{GamesSidebar}}
 
-[WebVR](/ja/docs/Games/Techniques/3D_on_the_web/WebVR) API と [WebGL](/ja/docs/Web/API/WebGL_API) API によって、ウェブブラウザー内で仮想現実 (VR) 体験を作成し始めることが可能になっていますが、コミュニティはもっと簡単に作れるツールやライブラリーが現れるのを待っています。Mozilla の [A-Frame](https://aframe.io/) フレームワークは、ウェブ開発者が慣れ親しんでいるシステムを用いて 3D VR 空間を構築するマークアップ言語を提供しています。このシステムはゲーム開発のコーディング原則に従っています。これはプロトタイプやデモを、大量の JavaScript や GLSL を書かずに、迅速にうまく構築するのに役立ちます。この記事では A-Frame をどうやって起動するか、そしてそれをつかって簡単なデモを構築する方法を説明します。
+[WebVR](/ja/docs/Games/Techniques/3D_on_the_web/WebXR) API と [WebGL](/ja/docs/Web/API/WebGL_API) API によって、ウェブブラウザー内で仮想現実 (VR) 体験を作成し始めることが可能になっていますが、コミュニティはもっと簡単に作れるツールやライブラリーが現れるのを待っています。Mozilla の [A-Frame](https://aframe.io/) フレームワークは、ウェブ開発者が慣れ親しんでいるシステムを用いて 3D VR 空間を構築するマークアップ言語を提供しています。このシステムはゲーム開発のコーディング原則に従っています。これはプロトタイプやデモを、大量の JavaScript や GLSL を書かずに、迅速にうまく構築するのに役立ちます。この記事では A-Frame をどうやって起動するか、そしてそれをつかって簡単なデモを構築する方法を説明します。
 
 ## 高水準の概要
 
@@ -20,7 +20,7 @@ A-Frame で何かを作るために環境設定を始めましょう。デモを
 - WebGL に十分対応している最新のブラウザー (もし利用可能な VR ハードウェアがある場合は WebVR に対応しているブラウザー)、例えば最新の Firefox や Chrome を使っているか確認してください。 [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/) または Chrome (v54 以降) をダウンロードしてください。
 - (必要に応じて) Oculus Rift や Google Cardboard のような VR 機器をセットアップします。
 - プロジェクトを保存する新しいディレクトリーを作成します。
-- そのディレクトリーに、最新の [A-Frame JavaScript ライブラリーファイル](https://github.com/aframevr/aframe/tree/master/dist) (GitHub 最新の安定開発版リポジトリーを確認してください) のコピーを保存します。
+- そのディレクトリーに、最新の [A-Frame JavaScript ライブラリーファイル](https://github.com/aframevr/aframe/tree/main/dist) (GitHub 最新の安定開発版リポジトリーを確認してください) のコピーを保存します。
 - 別のタブで [A-Frame documentation](https://aframe.io/docs/) を開いておきます — 参照するのに便利なので。
 
 ## HTML の構造
@@ -47,7 +47,8 @@ A-Frame で何かを作るために環境設定を始めましょう。デモを
 
 シーンは、すべてが起こる場所です。このデモでは新しいオブジェクトを作成したら、それら全てをシーンへ追加していきます。そうすることで、それらのオブジェクトが画面上に表示されるようになります。 A-Frame の中では、シーンは [Scene エンティティ](https://aframe.io/docs/core/scene.html)で表現されます。
 
-> **メモ:** エンティティは任意の要素です — box や cylinder や cone のようなオブジェクトだけでなく、camera、light、sound sourceもエンティティです。
+> [!NOTE]
+> エンティティは任意の要素です — box や cylinder や cone のようなオブジェクトだけでなく、camera、light、sound sourceもエンティティです。
 
 `<body>` 要素の中に `<a-scene>` 要素を追加して、シーンを作成しましょう。
 
@@ -65,7 +66,8 @@ A-Frame で何かを作るために環境設定を始めましょう。デモを
 
 いくつかの定義済み引数、 `color`、`position`、`rotation` が含まれています。かなり分かりやすいと思いますが、立方体の色や 3D シーン内の位置、そして立方体の回転状態を定義しています。
 
-> **メモ:** 距離の値 (例えば、立方体の y 方向の位置) は単位がなく、シーンに適切と思える好きな単位 — ミリメートル、メートル、フィート、マイル — と考えてください。あなた次第です。
+> [!NOTE]
+> 距離の値 (例えば、立方体の y 方向の位置) は単位がなく、シーンに適切と思える好きな単位 — ミリメートル、メートル、フィート、マイル — と考えてください。あなた次第です。
 
 ### 背景の追加: スカイボックス
 
@@ -201,7 +203,7 @@ scene.appendChild(cylinder);
 </a-box>
 ```
 
-他のエンティティでも同様に、アニメーション用のキープロパティを定義できます。ここでは `rotation` 属性を `20 0 0` から `20 360 0` へとアニメーションさせているので、1周回転することになります。アニメーションの方向 (direction) は、alternate に設定されているため、順方向にアニメーションが再生されます。継続時間 (duration) を 4 秒に、そして繰り返し (repeat) がずっと続く (indefinite) ように設定してします。アニメーションの easing は `ease` を使っています。これは内部的に実装されている [tween.js](https://github.com/tweenjs/tween.js/) によって実行されます。
+他のエンティティでも同様に、アニメーション用のキープロパティを定義できます。ここでは `rotation` 属性を `20 0 0` から `20 360 0` へとアニメーションさせているので、1周回転することになります。アニメーションの方向 (direction) は、alternate に設定されているため、順方向にアニメーションが再生されます。再生時間 (duration) を 4 秒に、そして繰り返し (repeat) がずっと続く (indefinite) ように設定してします。アニメーションの easing は `ease` を使っています。これは内部的に実装されている [tween.js](https://github.com/tweenjs/tween.js/) によって実行されます。
 
 ### 拡大縮小
 
@@ -264,7 +266,6 @@ render();
 ## 関連情報
 
 - [A-Frame ウェブサイト](https://aframe.io/)
-- [Mozilla Mixed Reality ウェブサイト](https://mixedreality.mozilla.org/)
 - [Introducing A-Frame 0.1.0 article](https://aframe.io/blog/2015/12/16/introducing-aframe/)
 - [Made with A-Frame Tumblr](https://aframevr.tumblr.com/)
 - [A-Frame physics plugin](https://github.com/ngokevin/aframe-physics-components)

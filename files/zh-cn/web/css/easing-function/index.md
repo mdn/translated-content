@@ -5,7 +5,7 @@ slug: Web/CSS/easing-function
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) **`<easing-function>`** 表示描述某数值变化速率的数学函数。
+[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) **`<easing-function>`** 表示描述某数值变化速率的数学函数。
 
 这种两值之间的过渡可应用于不同情境，可用于描述属性值在动画中变化的快慢程度，由此得以在动画的持续过程中改变其速度。你可为 CSS [过渡](/zh-CN/docs/Web/CSS/transition-timing-function)和[动画](/zh-CN/docs/Web/CSS/animation-timing-function)指定缓动函数。
 
@@ -303,7 +303,8 @@ steps(2, start)
 steps(2)
 ```
 
-> **备注：** 若动画含有多个定格，则在 `steps()` 中所指定的步子将应用于每一段。因此含三个区段和 `steps(2)` 的动画将总共含有 6 步，每段 2 步。
+> [!NOTE]
+> 若动画含有多个定格，则在 `steps()` 中所指定的步子将应用于每一段。因此含三个区段和 `steps(2)` 的动画将总共含有 6 步，每段 2 步。
 
 这些缓动函数无效：
 

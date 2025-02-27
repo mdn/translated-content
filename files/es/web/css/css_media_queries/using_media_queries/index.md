@@ -10,9 +10,10 @@ Las _media queries_ se utilizan para lo siguiente:
 
 - Para aplicar estilos condicionalmente utilizando las [reglas de arroba](/es/docs/Web/CSS/At-rule) [CSS](/es/docs/Web/CSS) {{cssxref("@media")}} e {{cssxref("@import")}}.
 - Para segmentar medios específicos para {{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}} y otros [HTML](/es/docs/Web/HTML) con el atributo `media=`.
-- Para [probar y monitorear los estados de los medios](/es/docs/Web/CSS/Media_Queries/Testing_media_queries) usando los métodos {{domxref("Window.matchMedia()")}} y {{domxref("EventTarget.addEventListener()")}}.
+- Para [probar y monitorear los estados de los medios](/es/docs/Web/CSS/CSS_media_queries/Testing_media_queries) usando los métodos {{domxref("Window.matchMedia()")}} y {{domxref("EventTarget.addEventListener()")}}.
 
-> **Nota:** Los ejemplos en esta página usan `@media` de CSS con fines ilustrativos, pero la sintaxis básica sigue siendo la misma para todos los tipos de consultas de medios.
+> [!NOTE]
+> Los ejemplos en esta página usan `@media` de CSS con fines ilustrativos, pero la sintaxis básica sigue siendo la misma para todos los tipos de consultas de medios.
 
 ## Sintaxis
 
@@ -65,7 +66,8 @@ Las consultas de medios no distinguen entre mayúsculas y minúsculas.
 Una _media query_ se calcula como `true` cuando el tipo de medio (si se especifica) coincide con el dispositivo en el que se muestra un documento y todas las expresiones de características de medios se computan como verdaderas.
 Las consultas que involucran tipos de medios desconocidos siempre son falsas.
 
-> **Nota:** Una hoja de estilo con una _media query_ adjunta a su etiqueta {{HTMLElement("link")}} [se descargará](https://scottjehl.github.io/CSS-Download-Tests/) incluso si la consulta devuelve `false`, la descarga se realizará pero la prioridad de la descarga será mucho menor.
+> [!NOTE]
+> Una hoja de estilo con una _media query_ adjunta a su etiqueta {{HTMLElement("link")}} [se descargará](https://scottjehl.github.io/CSS-Download-Tests/) incluso si la consulta devuelve `false`, la descarga se realizará pero la prioridad de la descarga será mucho menor.
 > No obstante, su contenido no se aplicará a menos que y hasta que el resultado de la consulta cambie a `true`.
 > Puede leer por qué sucede esto en el blog de Tomayac [Por qué el navegador descarga hojas de estilo con consultas de medios que no coinciden](https://medium.com/@tomayac/why-browsers-download-stylesheets-with-non-matching-media-consultas-eb61b91b85a2).
 
@@ -136,7 +138,8 @@ En el ejemplo anterior, ya vimos el operador `and` usado para agrupar un _tipo_ 
 El operador `and` también puede combinar múltiples características de medios en una sola _media query_. Mientras tanto, el operador `not` niega una _media query_, básicamente invirtiendo su significado normal.
 El operador `only` evita que los navegadores antiguos apliquen los estilos.
 
-> **Nota:** En la mayoría de los casos, el tipo de medios `all` se usa de forma predeterminada cuando no se especifica ningún otro tipo.
+> [!NOTE]
+> En la mayoría de los casos, el tipo de medios `all` se usa de forma predeterminada cuando no se especifica ningún otro tipo.
 > Sin embargo, si usa los operadores `not` u `only`, debe especificar explícitamente un tipo de medio.
 
 ### Combinación de múltiples tipos o características
@@ -233,7 +236,8 @@ _No tiene efecto en los navegadores modernos._
 La especificación Media Queries Level 4 incluye algunas mejoras de sintaxis para hacer que las _media queries_ utilicen características que tienen un tipo de "rango", por ejemplo, ancho o alto, menos detallado.
 El nivel 4 agrega un _contexto de rango_ para escribir tales consultas. Por ejemplo, usando la funcionalidad `max-` para el ancho, podríamos escribir lo siguiente:
 
-> **Nota:** La especificación Media Queries Level 4 tiene un soporte razonable en los navegadores modernos, pero algunas características multimedia no son compatibles.
+> [!NOTE]
+> La especificación Media Queries Level 4 tiene un soporte razonable en los navegadores modernos, pero algunas características multimedia no son compatibles.
 > Consulte la [tabla de compatibilidad del navegador de `@media`](/es/docs/Web/CSS/@media#browser_compatibility) para obtener más detalles.
 
 ```css
@@ -292,8 +296,8 @@ Por ejemplo, las siguientes consultas de prueba para dispositivos que tienen una
 ## Véase también
 
 - [@media](/es/docs/Web/CSS/@media)
-- [_Container queries_](/es/docs/Web/CSS/CSS_Container_Queries)
-- [Prueba de _media queries_ programáticamente](/es/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [_Container queries_](/es/docs/Web/CSS/CSS_containment/Container_queries)
+- [Prueba de _media queries_ programáticamente](/es/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - [Animaciones CSS entre _media queries_](https://davidwalsh.name/animate-media-queries)
 - [Características multimedia extendidas de Mozilla](/es/docs/Web/CSS/Mozilla_Extensions#media_features)
 - [Características multimedia extendidas de WebKit](/es/docs/Web/CSS/WebKit_Extensions#media_features)

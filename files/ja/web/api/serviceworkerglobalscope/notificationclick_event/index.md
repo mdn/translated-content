@@ -1,13 +1,16 @@
 ---
 title: "ServiceWorkerGlobalScope: notificationclick イベント"
+short-title: notificationclick
 slug: Web/API/ServiceWorkerGlobalScope/notificationclick_event
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: 28848ba41c082db2a8c55e85c804bd06363afb57
 ---
 
-{{APIRef}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
-**`notificationclick`** イベントは、 {{domxref("ServiceWorkerRegistration.showNotification()")}} によって生み出されたシステム通知がクリックされたことを示すために発生します。
+**`notificationclick`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスのイベントで、 {{domxref("ServiceWorkerRegistration.showNotification()")}} によって生み出されたシステム通知がクリックされたことを示すために発生します。
+
+メインスレッドまたは {{domxref("Notification.Notification","Notification()")}} コンストラクターを使用するサービスワーカーではないワーカーで作成された通知は、{{domxref("Notification/click_event", "click")}} イベントを代わりに {{domxref("Notification")}} オブジェクト自体で受け取ります。
 
 このイベントはキャンセル不可で、バブリングしません。
 
@@ -23,13 +26,13 @@ onnotificationclick = (event) => {};
 
 ## イベント型
 
-{{domxref("NotificationEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxref("NotificationEvent")}} です。{{domxref("ExtendableEvent")}} および {{domxref("Event")}} を継承しています。
 
 {{InheritanceDiagram("NotificationEvent")}}
 
 ## イベントプロパティ
 
-_親である {{domxref("Event")}} からプロパティを継承しています_。
+_祖先である {{domxref("ExtendableEvent")}} および {{domxref("Event")}} からプロパティを継承しています_。
 
 - {{domxref("NotificationEvent.notification")}} {{ReadOnlyInline}}
   - : クリックされイベントが発行された通知を表す {{domxref("Notification")}} オブジェクトを返します。
@@ -86,11 +89,11 @@ self.onnotificationclick = (event) => {
 };
 ```
 
-イベントのアクションは `event.action` を使って {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} イベントハンドラーの中で処理することができます。
+イベントのアクションは `event.action` を使って `notificationclick` イベントハンドラーの中で処理することができます。
 
 ```js
 navigator.serviceWorker.register("sw.js");
-Notification.requestPermission((result) => {
+Notification.requestPermission().then((result) => {
   if (result === "granted") {
     navigator.serviceWorker.ready.then((registration) => {
       // Archive というタイトルのアクションを含んだ通知を表示します。

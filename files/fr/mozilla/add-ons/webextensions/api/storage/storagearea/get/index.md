@@ -3,11 +3,11 @@ title: StorageArea.get()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Récupère un ou plusieurs éléments de la zone de stockage.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -22,13 +22,14 @@ let gettingItem = browser.storage.<storageType>.get(
 ### Paramètres
 
 - `keys`
-  - : Une clé (chaîne) ou des clés (un tableau de chaînes ou un objet spécifiant des valeurs par défaut) pour identifier le ou les articles à extraire du stockage. Si vous passez une chaîne vide, un objet ou un tableau ici, un objet vide sera récupéré. Si vous passez `null`, ou une valeur indéfinie, le contenu entier du stockage sera récupéré.
+  - : Une clé (chaîne) ou des clés (un tableau de chaînes ou un objet spécifiant des valeurs par défaut) pour identifier le ou les articles à extraire du stockage. Si vous passez un objet ou un tableau vide ici, un objet vide sera récupéré. Si vous passez `null`, ou une valeur indéfinie, le contenu entier du stockage sera récupéré.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet de `resultat` contenant tous les objets dans les `clefs` trouvées dans la zone de stockage. Si l'opération a échoué, la promesse sera rejetée avec un message d'erreur. Si le stockage géré n'est pas défini, les données `non définies` seront retournées.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet de `resultat` contenant tous les objets dans les `clefs` trouvées dans la zone de stockage. Si l'opération a échoué, la promesse sera rejetée avec un message d'erreur. Si le stockage géré n'est pas défini, les données `non définies` seront retournées.
 
-> **Attention :** Lorsqu'elle est utilisée dans un script de contenu dans les versions de Firefox antérieures à 52, la promesse retournée par `browser.storage.local.get()` est remplie avec un tableau contenant un objet. L'objet dans le tableau contient les `clefs` trouvées dans la zone de stockage, comme décrit ci-dessus. La promesse est correctement remplie avec un objet lorsqu'il est utilisé dans le contexte d'arrière-plan
+> [!WARNING]
+> Lorsqu'elle est utilisée dans un script de contenu dans les versions de Firefox antérieures à 52, la promesse retournée par `browser.storage.local.get()` est remplie avec un tableau contenant un objet. L'objet dans le tableau contient les `clefs` trouvées dans la zone de stockage, comme décrit ci-dessus. La promesse est correctement remplie avec un objet lorsqu'il est utilisé dans le contexte d'arrière-plan
 > (scripts d'arrière-plan, popups, pages d'options, etc.). Lorsque cette API est utilisée en tant que `chrome.storage.local.get()`, elle transmet correctement un objet à la fonction de rappel.
 
 ## Compatibilité des navigateurs
@@ -134,8 +135,8 @@ chrome.storage.local.get("kitten", (items) => {
 });
 ```
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/extensions/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

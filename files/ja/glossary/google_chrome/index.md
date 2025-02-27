@@ -3,7 +3,9 @@ title: Google Chrome
 slug: Glossary/Google_Chrome
 ---
 
-Google Chrome は Google が開発した無償の{{glossary("browser", "ブラウザー")}}です。オープンソースプロジェクトである [Chromium](http://www.chromium.org/) がベースとなっています。重要な違いについては [Chromium wiki](https://code.google.com/p/chromium/wiki/ChromiumBrowserVsGoogleChrome) で説明されています。 Chrome は独自のレイアウトエンジンである {{glossary("Blink")}} に対応しています。なお、 iOS 版の Chrome は Blink ではなくプラットフォームの WebView を使用しています。
+{{GlossarySidebar}}
+
+Google Chrome は Google が開発した無償の{{glossary("browser", "ブラウザー")}}です。オープンソースプロジェクトである [Chromium](https://www.chromium.org/) がベースとなっています。重要な違いについては [Chromium wiki](https://code.google.com/p/chromium/wiki/ChromiumBrowserVsGoogleChrome) で説明されています。 Chrome は独自のレイアウトエンジンである {{glossary("Blink")}} に対応しています。なお、 iOS 版の Chrome は Blink ではなくプラットフォームの WebView を使用しています。
 
 ## Learn more
 

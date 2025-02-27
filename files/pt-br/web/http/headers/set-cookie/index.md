@@ -75,7 +75,8 @@ Set-Cookie: <nome-cookie>=<valor-cookie>; Domain=<domain-value>; Secure; HttpOnl
 
   - : Um cookie seguro apenas será enviado para o servidor quando uma requisição utilizando os protocol SSL e HTTPS for realizada. No entanto, informações confidenciais ou sensíveis não deverão ser armazenadas ou transmitidas em Cookies HTTP pois todo o mecanismo é inerentemente inseguro e isso não significa, por exemplo que qualquer informação é criptografada.
 
-    > **Nota:** Sites inseguros (`http:`) não podem mais atribuir cookies com a diretiva "secure" (novo em Chrome 52+ firefox Firefox 52+).
+    > [!NOTE]
+    > Sites inseguros (`http:`) não podem mais atribuir cookies com a diretiva "secure" (novo em Chrome 52+ firefox Firefox 52+).
 
 - HttpOnly {{optional_inline}}
   - : Cookies HttpOnly não são acessíveis via JavaScript através da propriedade {{domxref("Document.cookie")}}, as API's {{domxref("XMLHttpRequest")}} e {{domxref("Request")}} são utilizadas para aliviar ataques de cross-site scripting ({{Glossary("XSS")}}).
@@ -139,7 +140,7 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Set-Cookie")}}
+{{Compat}}
 
 ## Notas de compatibilidade
 

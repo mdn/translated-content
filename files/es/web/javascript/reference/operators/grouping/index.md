@@ -15,7 +15,7 @@ El operador de agrupación `( )` controla la precedencia de las expresiones a ev
 
 ## Descripción
 
-El operador de agrupación consiste en un par de paréntesis alrededor de la expresión (o sub-expresión) que sobrescribe el comportamiento por defecto de la [precedencia de operadores](/es/docs/Web/JavaScript/Reference/Operators/Operator_Precedence), lo que causa que expresiones con menor precedencia puedan ser evaluadas antes que expresiones con una mayor precedencia.
+El operador de agrupación consiste en un par de paréntesis alrededor de la expresión (o sub-expresión) que sobrescribe el comportamiento por defecto de la [precedencia de operadores](/es/docs/Web/JavaScript/Reference/Operators/Operator_precedence), lo que causa que expresiones con menor precedencia puedan ser evaluadas antes que expresiones con una mayor precedencia.
 
 ## Ejemplos
 
@@ -49,6 +49,6 @@ a * c + b * c; // 9
 
 ## Temas relacionados
 
-- [Precedencia de operadores](/es/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [Precedencia de operadores](/es/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Operators/typeof", "typeof")}}

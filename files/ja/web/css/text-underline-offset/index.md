@@ -1,11 +1,15 @@
 ---
 title: text-underline-offset
 slug: Web/CSS/text-underline-offset
+l10n:
+  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
 {{CSSRef}}
 
 **`text-underline-offset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 ({{cssxref("text-decoration")}} を使用して適用された) 下線のテキスト装飾線の本来の位置からのオフセット距離を設定します。
+
+{{EmbedInteractiveExample("pages/css/text-underline-offset.html")}}
 
 `text-underline-offset` は {{cssxref('text-decoration')}} の一括指定の一部ではありません。一つの要素が複数の `text-decoration` による線を持つため、 `text-underline-offset` は下線のみに影響し、 `overline` や `line-through` などの他の装飾線には影響**しません**。
 
@@ -26,6 +30,7 @@ text-underline-offset: 20%;
 text-underline-offset: inherit;
 text-underline-offset: initial;
 text-underline-offset: revert;
+text-underline-offset: revert-layer;
 text-underline-offset: unset;
 ```
 
@@ -48,31 +53,31 @@ text-underline-offset: unset;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### text-underline-offset のデモ
 
-```html
-<p class="oneline">Here's some text with an offset wavy red underline!</p>
+```html-nolint live-sample___examples
+<p class="one-line">こちらはテキストと、オフセットさせた赤い下線です。</p>
 <br />
-<p class="twolines">
-  This text has lines both above and below it. Only the bottom one is offset.
+<p class="two-lines">
+  このテキストには、上線と下線の両方があります。下線のみがオフセットされています。
 </p>
 ```
 
-```css
+```css live-sample___examples
 p {
   text-decoration: underline wavy red;
   text-underline-offset: 1em;
 }
 
-.twolines {
+.two-lines {
   text-decoration-color: purple;
   text-decoration-line: underline overline;
 }
 ```
 
-{{ EmbedLiveSample('Examples', '', '', '') }}
+{{EmbedLiveSample('Examples')}}
 
 ## 仕様書
 

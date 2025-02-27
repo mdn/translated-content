@@ -14,7 +14,3 @@ Web 控制台中显示的错误可能包含指向下面相应页面的链接，�
 在此列表中，每个页面按名称（错误类型）和信息（更详细的容易理解的错误信息）列出。总之，这两者提供了理解和解决错误的线索。有关更多信息，请按照以下链接！
 
 {{ListSubPages("/zh-CN/docs/Web/JavaScript/Reference/Errors")}}
-
-## 相关链接
-
-- [What went wrong? Troubleshooting JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong): Beginner's introductory tutorial on fixing JavaScript errors.

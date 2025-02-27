@@ -20,15 +20,14 @@ _从其父级 {{domxref("HTMLElement")}} 继承属性._
 
 _没有特定的方法；继承其父方法 {{domxref("HTMLElement")}}._
 
-## 规格
+## 规范
 
-- [HTML Living Standard](https://html.spec.whatwg.org/multipage/interactive-elements.html#htmldetailselement)
-- [HTML 5.2 (W3C Proposed Recommendation)](https://www.w3.org/TR/html52/interactive-elements.html#htmldetailselement)
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - 实现此接口的 HTML 元素： {{HTMLElement("details")}}

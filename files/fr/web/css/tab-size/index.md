@@ -75,4 +75,4 @@ tab-size: unset;
 
 ## Voir aussi
 
-- [Contrôler la taille du caractère de tabulation (U+0009)](http://lists.w3.org/Archives/Public/www-style/2008Dec/0009.html), un e-mail d'Anne van Kesteren pour le CSSWG afin de proposer la standardisation de cette propriété (en anglais).
+- [Contrôler la taille du caractère de tabulation (U+0009)](https://lists.w3.org/Archives/Public/www-style/2008Dec/0009.html), un e-mail d'Anne van Kesteren pour le CSSWG afin de proposer la standardisation de cette propriété (en anglais).

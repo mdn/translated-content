@@ -3,7 +3,7 @@ title: Exemple d'empilement 1
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1
 ---
 
-{{PreviousMenuNext("Web/CSS/Comprendre_z-index/L'empilement_de_couches","Web/CSS/Comprendre_z-index/Exemple_2", "Web/CSS/Comprendre_z-index")}}
+{{CSSRef}}{{PreviousMenuNext("Web/CSS/Comprendre_z-index/L'empilement_de_couches","Web/CSS/Comprendre_z-index/Exemple_2", "Web/CSS/Comprendre_z-index")}}
 
 ## Premier exemple
 
@@ -30,7 +30,8 @@ Dans le contexte d'empilement, les blocs _DIV #1_ et _DIV #3_ sont simplement as
   - DIV #2 (z-index 1)
   - DIV #4 (z-index 2)
 
-> **Note :** Les blocs _DIV #1_ et _DIV #3_ ne sont pas translucides. Il est important de se souvenir que d'assigner une valeur d'opacité inférieure à 1 à un élément positionné, crée implicitement un contexte d'empilement, de la même façon que l'ajout de propriétés `z-index`. Et cet exemple montre ce qui arrive lorsqu'un élément parent ne crée pas de contexte d'empilement.
+> [!NOTE]
+> Les blocs _DIV #1_ et _DIV #3_ ne sont pas translucides. Il est important de se souvenir que d'assigner une valeur d'opacité inférieure à 1 à un élément positionné, crée implicitement un contexte d'empilement, de la même façon que l'ajout de propriétés `z-index`. Et cet exemple montre ce qui arrive lorsqu'un élément parent ne crée pas de contexte d'empilement.
 
 ## Exemple
 

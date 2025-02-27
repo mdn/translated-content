@@ -174,7 +174,7 @@ comer(); // objeto global
 
 Propriedades de instâncias devem ser definidas dentro dos métodos da classe:
 
-```
+```js
 class Retangulo {
   constructor(altura, largura) {
     this.altura = altura;
@@ -185,7 +185,7 @@ class Retangulo {
 
 Propriedades de dados estáticos e propriedades de dados prototipados (prototype) devem ser definidos fora da declaração do corpo da classe.
 
-```
+```js
 Retangulo.larguraEstatico = 20;
 Retangulo.prototype.larguraPrototipagem = 25;
 ```
@@ -348,7 +348,7 @@ console.log(humano.falar());
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## Rodando com Scratchpad
 

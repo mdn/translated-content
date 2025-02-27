@@ -60,12 +60,12 @@ HTTP 请求是由客户端发出的消息，用来使服务器执行动作。_�
 
 ### 主体（Body）
 
-请求的最后一部分是它的主体。不是所有的请求都有一个主体：例如获取资源的请求，像 `GET`、`HEAD`、`DELETE` 和 `OPTIONS`，通常它们不需要主体。有些请求将数据发送到服务器以便更新数据：常见的的情况是 POST 请求（包含 HTML 表单数据）。
+请求的最后一部分是它的主体。不是所有的请求都有一个主体：例如获取资源的请求，像 `GET`、`HEAD`、`DELETE` 和 `OPTIONS`，通常它们不需要主体。有些请求将数据发送到服务器以便更新数据：常见的情况是 POST 请求（包含 HTML 表单数据）。
 
 主体大致可分为两类：
 
 - 单一资源（Single-resource）主体，由一个单文件组成。该类型的主体由两个标头定义：{{HTTPHeader("Content-Type")}} 和 {{HTTPHeader("Content-Length")}}。
-- [多资源（Multiple-resource）主体](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data)，由多部分主体组成，每一部分包含不同的信息位。通常是和 [HTML 表单](/zh-CN/docs/Learn/Forms)连系在一起。
+- [多资源（Multiple-resource）主体](/zh-CN/docs/Web/HTTP/MIME_types#multipartform-data)，由多部分主体组成，每一部分包含不同的信息位。通常是和 [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)连系在一起。
 
 ## HTTP 响应
 
@@ -99,7 +99,7 @@ HTTP 响应的起始行被称作*状态行*（status line），包含以下信�
 
 - 单资源（Single-resource）主体，由**已知**长度的单个文件组成。该类型主体由两个标头定义：{{HTTPHeader("Content-Type")}} 和 {{HTTPHeader("Content-Length")}}。
 - 单资源（Single-resource）主体，由**未知**长度的单个文件组成。通过将 {{HTTPHeader("Transfer-Encoding")}} 设置为 `chunked` 来使用分块编码。
-- [多资源（Multiple-resource）主体](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data)，由多部分 body 组成，每部分包含不同的信息段。但这是比较少见的。
+- [多资源（Multiple-resource）主体](/zh-CN/docs/Web/HTTP/MIME_types#multipartform-data)，由多部分 body 组成，每部分包含不同的信息段。但这是比较少见的。
 
 ## HTTP/2 帧
 

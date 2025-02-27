@@ -3,16 +3,18 @@ title: <main>
 slug: Web/HTML/Element/main
 ---
 
+{{HTMLSidebar}}
+
 ## Resumen
 
 El **elemento HTML `<main>`** representa el contenido principal del {{HTMLElement("body")}} de un documento o aplicación. El área principal del contenido consiste en el contenido que está directamente relacionado, o se expande sobre el tema central de un documento o la funcionalidad central de una aplicación. Este contenido debe ser único al documento, excluyendo cualquier contenido que se repita a través de un conjunto de documentos como barras laterales, enlaces de navegación, información de derechos de autor, logos del sitio y formularios de búsqueda (a menos, claro, que la función principal del documento sea un formulario de búsqueda).
 
 > **Nota:** **no debe haber** más de un elemento `<main>` en un documento, y este **no debe ser** descendiente de un elemento {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, o {{HTMLElement("nav")}}.
 
-- _[Content categories](/es/docs/Web/HTML/Content_categories)_[Flow content](/es/docs/Web/HTML/Content_categories#Flow_content), palpable content.
-- _Contenido permitido_ [Flow content](/es/docs/Web/HTML/Content_categories#Flow_content).
+- _[Content categories](/es/docs/Web/HTML/Content_categories)_[Flow content](/es/docs/Web/HTML/Content_categories#flow_content), palpable content.
+- _Contenido permitido_ [Flow content](/es/docs/Web/HTML/Content_categories#flow_content).
 - _Omisión de etiquetas_ Ninguna; ambas etiqueta inical y de fin son obligatorias.
-- _Elementos padres permitidos_ Cualquier elemento que acepte [flow content](/es/docs/Web/HTML/Content_categories#Flow_content), pero no debe ser un descendiente de un elemento {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, o {{HTMLElement("nav")}}.
+- _Elementos padres permitidos_ Cualquier elemento que acepte [flow content](/es/docs/Web/HTML/Content_categories#flow_content), pero no debe ser un descendiente de un elemento {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, o {{HTMLElement("nav")}}.
 - _Interfaz DOM_ {{domxref("HTMLElement")}}
 
 ## Atributos

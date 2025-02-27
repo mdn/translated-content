@@ -38,5 +38,5 @@ _`PositionError` 接口没有继承任何属性。_
 
 ## 请参见
 
-- [Using geolocation](/zh-CN/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-CN/docs/Web/API/Geolocation_API)
 - The {{domxref("Geolocation")}} interface that use it.

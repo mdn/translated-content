@@ -2,48 +2,85 @@
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
 l10n:
-  sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
 
-**`Array.of()`** メソッドは、引数の数や型にかかわらず、可変長引数から、新しい `Array` インスタンスを生成します。
+**`Array.of()`** 静的メソッドは、引数の数や型にかかわらず、可変長引数から、新しい `Array` インスタンスを生成します。
 
-**`Array.of()`** と `Array` コンストラクタの違いは整数引数の扱いにあります。**`Array.of(7)`** は単一の要素、`7` を持つ配列を作成しますが、**`Array(7)`** は `length` プロパティが 7 の空の配列を作成します（これは {{jsxref("undefined")}} の値を持つ実在のスロットではなく、7 つの空のスロットの配列を意味します）。
+{{InteractiveExample("JavaScript Demo: Array.of()", "shorter")}}
 
-```js
-Array.of(7); // [7]
-Array(7); // array of 7 empty slots
+```js interactive-example
+console.log(Array.of("foo", 2, "bar", true));
+// Expected output: Array ["foo", 2, "bar", true]
 
-Array.of(1, 2, 3); // [1, 2, 3]
-Array(1, 2, 3); // [1, 2, 3]
+console.log(Array.of());
+// Expected output: Array []
 ```
 
 ## 構文
 
-```js
-Array.of(element0);
-Array.of(element0, element1);
-Array.of(element0, element1, /* … ,*/ elementN);
+```js-nolint
+Array.of()
+Array.of(element1)
+Array.of(element1, element2)
+Array.of(element1, element2, /* …, */ elementN)
 ```
 
 ### 引数
 
-- `elementN`
+- `element1`, …, `elementN`
   - : 生成する配列の要素。
 
 ### 返値
 
 新しい {{jsxref("Array")}} インスタンス。
 
+## 解説
+
+`Array.of()` と [`Array()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Array) コンストラクターの違いは整数引数の扱いにあります。 `Array.of(7)` は単一の要素、`7` を持つ配列を作成しますが、 `Array(7)` は `length` プロパティが 7 の空の配列を作成します（これは {{jsxref("undefined")}} の値を持つ実在のスロットではなく、7 つの空のスロットの配列を意味します）。
+
+```js
+Array.of(7); // [7]
+Array(7); // 7 つの空スロットの配列
+
+Array.of(1, 2, 3); // [1, 2, 3]
+Array(1, 2, 3); // [1, 2, 3]
+```
+
+`Array.of()` メソッドは汎用ファクトリーメソッドです。例えば、 `Array` のサブクラスが `of()` メソッドを継承した場合、継承した `of()` メソッドは `Array` インスタンスではなく、サブクラスの新しいインスタンスを返します。実際には、 `this` 値には新しい配列の長さを表す単一の引数を受け入れる任意のコンストラクター関数を指定することができ、コンストラクターは `of()` に渡された引数の数だけ呼び出されます。最終的な `length` は、すべての要素が代入されたときに再度設定されます。もし `this` の値がコンストラクター関数でない場合、代わりにプレーンな `Array` コンストラクターが使用されます。
+
 ## 例
 
-### Array.of の使用
+### Array.of() の使用
 
 ```js
 Array.of(1); // [1]
 Array.of(1, 2, 3); // [1, 2, 3]
 Array.of(undefined); // [undefined]
+```
+
+### 配列以外のコンストラクターに対する of() の呼び出し
+
+`of()` メソッドは、新しい配列の長さを表す単一の引数を受け入れるコンストラクター関数で呼び出すことができます。
+
+```js
+function NotArray(len) {
+  console.log("NotArray called with length", len);
+}
+
+console.log(Array.of.call(NotArray, 1, 2, 3));
+// NotArray called with length 3
+// NotArray { '0': 1, '1': 2, '2': 3, length: 3 }
+
+console.log(Array.of.call(Object)); // [Number: 0] { length: 0 }
+```
+
+`this` の値がコンストラクターでない場合は、プレーンな `Array` オブジェクトを返します。
+
+```js
+console.log(Array.of.call({}, 1)); // [ 1 ]
 ```
 
 ## 仕様書
@@ -57,9 +94,8 @@ Array.of(undefined); // [undefined]
 ## 関連情報
 
 - [`Array.of` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
-- [ポリフィル](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
+- {{jsxref("Array/Array", "Array()")}}
 - {{jsxref("Array.from()")}}
 - {{jsxref("TypedArray.of()")}}
-- [`Array.of()` と `Array.from()` の提案](https://gist.github.com/rwaldron/1074126)
-- [`Array.of()` のポリフィル](https://gist.github.com/rwaldron/3186576)

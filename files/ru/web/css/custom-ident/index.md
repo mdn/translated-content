@@ -78,8 +78,9 @@ bili.bob          Только буквы, цифры, _ и - можно не э
 
 ## Совместимость с браузерами
 
-_As this type is not a real type but a convenience type used to simplify the description of allowed values, there is no browser compatibility information as such._
+_Поскольку этот тип не является реальным типом, а служит соглашением, используемым для упрощения описания допустимых значений, информация о совместимости браузера как таковая отсутствует._
 
 ## Смотрите также
 
-- {{CSSxRef("&lt;ident&gt;")}}
+- [&lt;ident&gt;](/ru/docs/Web/CSS/ident)
+- [&lt;dashed-ident&gt;](/ru/docs/Web/CSS/dashed-ident)

@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 
 **`Set`** 物件可讓你儲存任何類型的唯一值（unique），不論是{{Glossary("Primitive", "基本型別（primitive）值")}}或物件參考（references）。
 
-{{EmbedInteractiveExample("pages/js/set-prototype-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype Constructor")}}
+
+```js interactive-example
+const set1 = new Set([1, 2, 3, 4, 5]);
+
+console.log(set1.has(1));
+// Expected output: true
+
+console.log(set1.has(5));
+// Expected output: true
+
+console.log(set1.has(6));
+// Expected output: false
+```
 
 ## 語法
 
@@ -26,17 +39,17 @@ new Set([iterable]);
 
 ## 描述
 
-`Set` 對象是數值的收集器。您可以按插入順序迭代收集器中的元素。在 `Set` 裡的元素只會出現一次**；** 意即在`Set`裡的元素都是獨一無二
+`Set` 對象是數值的收集器。你可以按插入順序迭代收集器中的元素。在 `Set` 裡的元素只會出現一次；意即在 `Set` 裡的元素都是獨一無二
 
 ### 值的相等性
 
-因為在 Set 裡每個值都是獨立的，所以都會檢查值的相等性。在早期的 ECMAScript 規範版本中，此處算法跟基於===操作符中使用的算法並不相同。具體來說，在 `Set`裡+0(在嚴格模式是和-0 相等)和-0 是不同的值。然而在 ECMAScript 2015 規範中這點已被更改。請參閱 [瀏覽器兼容性](#Browser_compatibility) 中的"Value equality for -0 and 0"。
+因為在 Set 裡每個值都是獨立的，所以都會檢查值的相等性。在早期的 ECMAScript 規範版本中，此處算法跟基於===操作符中使用的算法並不相同。具體來說，在 `Set` 裡 +0（在嚴格模式是和 -0 相等）和 -0 是不同的值。然而在 ECMAScript 2015 規範中這點已被更改。請參閱[瀏覽器相容性](#瀏覽器相容性)中的「Value equality for -0 and 0」。
 
 另外，NaN 和 undefined 都可以被放置在 Set 中， NaN 之間被視為相同的值（儘管 NaN !== NaN）。
 
 - `Set.length`
   - : The value of the `length` property is 0.
-- {{jsxref("Set.@@species", "get Set[@@species]")}}
+- [`Set[Symbol.species]`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species)
   - : The constructor function that is used to create derived objects.
 - {{jsxref("Set.prototype")}}
   - : Represents the prototype for the `Set` constructor. Allows the addition of properties to all `Set` objects.
@@ -47,8 +60,8 @@ All `Set` instances inherit from {{jsxref("Set.prototype")}}.
 
 ### 屬性
 
-- `Set.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Set"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Set.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`Symbol.toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Set"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("Set.prototype.size")}}
   - : Returns the number of values in the `Set` object.
 
@@ -62,7 +75,7 @@ All `Set` instances inherit from {{jsxref("Set.prototype")}}.
   - : Removes the element associated to the `value` and returns a boolean asserting whether an element was successfully removed or not. `Set.prototype.has(value)` will return `false` afterwards.
 - {{jsxref("Set.prototype.has()")}}
   - : Returns a boolean asserting whether an element is present with the given value in the `Set` object or not.
-- {{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}
+- [`Set.prototype[Symbol.iterator]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
 - {{jsxref("Set.prototype.values()")}}
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.

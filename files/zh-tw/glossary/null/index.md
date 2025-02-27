@@ -9,13 +9,8 @@ slug: Glossary/Null
 
 在 {{Glossary("JavaScript")}} 中， null 是一種原始值({{Glossary("Primitive", "primitive values")}})。
 
-## 了解更多
+## 參見
 
-### 基礎知識
-
-- 維基百科上的 [Null pointer](https://zh.wikipedia.org/wiki/Null_pointer)
-
-### 技術參考
-
+- 維基百科上的[空指標](https://zh.wikipedia.org/wiki/空指標)
 - [JavaScript 的數據類型和結構](/zh-TW/docs/Web/JavaScript/Data_structures)
-- JavaScript 全域物件: {{jsxref("null")}}
+- JavaScript 全域物件：{{jsxref("null")}}

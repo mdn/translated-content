@@ -1,39 +1,47 @@
 ---
-title: BatteryManager（电源管理）
+title: BatteryManager
 slug: Web/API/BatteryManager
+l10n:
+  sourceCommit: 8d54a21ae2677dba11569e7b7d918eac828af0b3
 ---
 
-{{APIRef}}
+{{ApiRef("Battery API")}}{{securecontext_header}}
 
-[电池状态 API](/zh-CN/docs/Web/API/Battery_Status_API) 中的 `BatteryManager` 接口提供了系统电池电量的一些信息。{{domxref("navigator.getBattery()")}} 方法返回一个 promise 对象，该 promise 在完成状态时将返回一个 `BatteryManager` 接口。
+{{domxref("Battery Status API", "电池状态 API", "", "nocode")}} 的 **`BatteryManager`** 接口提供了系统电池电量的一些信息。{{domxref("navigator.getBattery()")}} 方法返回一个 promise 对象，其兑现一个 `BatteryManager` 接口。
+
+自 Chrome 103 起，{{domxref("Battery Status API", "电池状态 API", "", "nocode")}} 的 `BatteryManager` 接口只在安全上下文中暴露。
 
 {{InheritanceDiagram}}
 
-## 属性
+## 实例属性
+
+_也从其父接口 {{domxref("EventTarget")}} 继承属性。_
 
 - {{domxref("BatteryManager.charging")}} {{ReadOnlyInline}}
-  - : 一个布尔值，说明当前电池是否正在充电。
+  - : 一个指示当前电池是否正在充电的布尔值。
 - {{domxref("BatteryManager.chargingTime")}} {{ReadOnlyInline}}
-  - : 一个数字，代表距离充电完毕还需多少秒，如果为 0 则充电完毕。
+  - : 一个表示电池距离充电完毕还需多少秒的数字，或为 0 则表示电池已充电完毕。
 - {{domxref("BatteryManager.dischargingTime")}} {{ReadOnlyInline}}
-  - : 一个数字，代表距离电池耗电至空且系统挂起需要多少秒。
+  - : 一个表示距离电池完全耗电且系统挂起需要多少秒的数字。
 - {{domxref("BatteryManager.level")}} {{ReadOnlyInline}}
-  - : 一个数字，代表系统电量的水平，这个值放缩在 0.0 至 1.0 之间。
+  - : 一个表示系统的电池电量水平的数字，其值介于 0.0 和 1.0 之间。
 
-## 方法
+## 实例方法
 
-_方法继承自其父接口_：{{domxref("EventTarget")}}。
+_也从其父接口 {{domxref("EventTarget")}} 继承方法。_
 
-### 事件
+## 事件
+
+_也从其父接口 {{domxref("EventTarget")}} 继承事件。_
 
 - {{domxref("BatteryManager.chargingchange_event", "chargingchange")}}
-  - : 当电池充电状态（{{domxref("BatteryManager.charging", "charging")}} 属性）更新时被触发。
+  - : 当电池充电状态（{{domxref("BatteryManager.charging", "charging")}} 属性）更新时触发。
 - {{domxref("BatteryManager.chargingtimechange_event", "chargingtimechange")}}
-  - : 当电池充电时间（{{domxref("BatteryManager.chargingTime", "chargingTime")}} 属性）更新时被触发。
+  - : 当电池充电时间（{{domxref("BatteryManager.chargingTime", "chargingTime")}} 属性）更新时触发。
 - {{domxref("BatteryManager.dischargingtimechange_event", "dischargingtimechange")}}
-  - : 当电池断开充电的时间（{{domxref("BatteryManager.dischargingTime", "dischargingTime")}} 属性）更新时被触发。
+  - : 当电池续航时间（{{domxref("BatteryManager.dischargingTime", "dischargingTime")}} 属性）更新时触发。
 - {{domxref("BatteryManager.levelchange_event", "levelchange")}}
-  - : 当电池电量（{{domxref("BatteryManager.level", "level")}} 属性）更新时被触发。
+  - : 当电池电量（{{domxref("BatteryManager.level", "level")}} 属性）更新时触发。
 
 ## 规范
 
@@ -45,5 +53,5 @@ _方法继承自其父接口_：{{domxref("EventTarget")}}。
 
 ## 参见
 
-- [电池状态 API](/zh-CN/docs/Web/API/Battery_Status_API)
-- {{domxref("navigator.getBattery")}}
+- {{domxref("Battery Status API", "电池状态 API", "", "nocode")}}
+- {{domxref("Navigator.getBattery()")}}

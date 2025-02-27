@@ -3,7 +3,7 @@ title: Date.prototype.getHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 ## Resumo
 
@@ -42,7 +42,7 @@ console.log(hours); // 23
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getHours")}}
+{{Compat}}
 
 ## Veja também
 

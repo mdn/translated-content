@@ -1,24 +1,26 @@
 ---
-title: 隣接兄弟結合子
+title: 次兄弟結合子
 slug: Web/CSS/Next-sibling_combinator
-original_slug: Web/CSS/Adjacent_sibling_combinator
+l10n:
+  sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
-**隣接兄弟結合子** (adjacent sibling combinator, `+`) は 2 つのセレクターを接続し、 2 つ目の要素が 1 つ目の要素の _直後_ にあって、両者が同じ親{{DOMxRef("element", "要素")}}の子同士である場合に一致します。
+**次兄弟結合子** (next-sibling combinator, `+`) は 2 つのセレクターを接続し、 2 つ目の要素が 1 つ目の要素の _直後_ にあって、両者が同じ親{{DOMxRef("element", "要素")}}の子同士である場合に一致します。
 
 ```css
 /* 画像の直後に来る段落 */
 img + p {
-  font-style: bold;
+  font-weight: bold;
 }
 ```
 
 ## 構文
 
-```css
-直前の要素 + 対象の要素 { <em>スタイルプロパティ</em> }
+```css-nolint
+/* 結合子の前後の空白はオプションですが、推奨されます。 */
+直前の要素 + 対象の要素 { スタイルプロパティ }
 ```
 
 ## 例
@@ -55,4 +57,4 @@ li:first-of-type + li {
 
 ## 関連情報
 
-- [一般兄弟結合子](/ja/docs/Web/CSS/General_sibling_combinator)
+- [後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator)

@@ -12,34 +12,34 @@ slug: Web/CSS/content
 content: normal;
 content: none;
 
-/* значение <url>  */
+/* Значение <url>  */
 content: url("http://www.example.com/test.png");
 
-/* значение <image>  */
+/* Значение <image>  */
 content: linear-gradient(#e66465, #9198e5);
 
-/* указанные ниже значения могут быть применены только к сгенерированному контенту с использованием ::before и ::after */
+/* Указанные ниже значения могут быть применены только к сгенерированному контенту с использованием ::before и ::after */
 
-/* значение <string>  */
+/* Значение <string>  */
 content: "prefix";
 
-/* значения <counter> */
+/* Значения <counter> */
 content: counter(chapter_counter);
 content: counters(section_counter, ".");
 
-/* значение attr() связано со значением атрибута HTML */
+/* Значение attr() связано со значением атрибута HTML */
 content: attr(value string);
 
-/* языко- и позиция-зависимые ключевые слова */
+/* Значения <quote> */
 content: open-quote;
 content: close-quote;
 content: no-open-quote;
 content: no-close-quote;
 
-/* несколько значений могут использоваться вместе */
+/* Несколько значений могут использоваться вместе */
 content: open-quote chapter_counter;
 
-/* глобальные значения */
+/* Глобальные значения */
 content: inherit;
 content: initial;
 content: unset;
@@ -62,7 +62,7 @@ content: unset;
 - {{cssxref("&lt;image&gt;")}}
   - : {{cssxref("&lt;image&gt;")}}, указанный типом данных {{cssxref("&lt;url&gt;")}} или {{cssxref("&lt;gradient&gt;")}}, или частью веб-страницы, определяемой функцией {{cssxref("element", "element()")}}, указывающей содержимое для обозначения.
 - {{cssxref("&lt;counter&gt;")}}
-  - : Значение [CSS счётчика](/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters), как правило число. Его можно отобразить с помощью функций {{cssxref("counter()")}} или{{cssxref("counters()")}}.Функция `counter()` имеет две формы записи: 'counter(_имя_)' или 'counter(_имя_, _стиль_)'. Сгенерированный текст - это значение самого вложенного счётчика с заданным именем в области видимости данного элемента. Он отформатирован в указанном стиле (по умолчанию `decimal`).Функция `counters()` также имеет две формы записи: 'counters(_name_, _string_)' или 'counters(_name_, _string_, _style_)'. Сгенерированный текст - это значение всех счётчиков с заданным именем в области видимости данного элемента, от крайнего к вложенному. разделённых указанной строкой. Счётчики отображаются в указанном стиле (по умолчанию `decimal`).
+  - : Значение [CSS счётчика](/ru/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), как правило число. Его можно отобразить с помощью функций {{cssxref("counter()")}} или{{cssxref("counters()")}}.Функция `counter()` имеет две формы записи: 'counter(_имя_)' или 'counter(_имя_, _стиль_)'. Сгенерированный текст - это значение самого вложенного счётчика с заданным именем в области видимости данного элемента. Он отформатирован в указанном стиле (по умолчанию `decimal`).Функция `counters()` также имеет две формы записи: 'counters(_name_, _string_)' или 'counters(_name_, _string_, _style_)'. Сгенерированный текст - это значение всех счётчиков с заданным именем в области видимости данного элемента, от крайнего к вложенному. разделённых указанной строкой. Счётчики отображаются в указанном стиле (по умолчанию `decimal`).
 - `attr(x)`
   - : Значение атрибута `x` элемента в виде строки. Если атрибут `x` отсутствует, вернётся пустая строка. Чувствительность к регистру в названии атрибута зависит от языка документа.
 - `open-quote` | `close-quote`
@@ -263,9 +263,9 @@ li {
 
 {{EmbedLiveSample('Замена_элемента', '100%', 160)}}
 
-## Проблемы доступности
+## Доступность
 
-Сгенерированный CSS контент не включён в [DOM](/ru/docs/Web/API/Document_Object_Model/Introduction). Из-за этого он не будет представлен в [accessibility tree](/ru/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs) и некоторые комбинации вспомогательных технологий/браузеров не будут его объявлять. Если контент содержит информацию, которая имеет решающее значение для понимания цели страницы, лучше включить её в основной документ.
+Сгенерированный CSS контент не включён в [DOM](/ru/docs/Web/API/Document_Object_Model/Introduction). Из-за этого он не будет представлен в [accessibility tree](/ru/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) и некоторые комбинации вспомогательных технологий/браузеров не будут его объявлять. Если контент содержит информацию, которая имеет решающее значение для понимания цели страницы, лучше включить её в основной документ.
 
 - [Accessibility support for CSS generated content – Tink](https://tink.uk/accessibility-support-for-css-generated-content/)
 - [Explanation of WCAG, Guideline 1.3 – MDN](/ru/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
@@ -275,7 +275,7 @@ li {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

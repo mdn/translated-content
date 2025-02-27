@@ -17,14 +17,14 @@ L'élément `<select>` possède certains attributs spécifiques dont `multiple` 
 
 Il est possible de regrouper plusieurs éléments `<option>` à l'intérieur d'éléments {{htmlelement("optgroup")}} afin de créer des groupes d'options distincts.
 
-Pour plus d'exemples, voir [les contrôles natifs pour les formulaires](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs#Contenu_déroulant).
+Pour plus d'exemples, voir [les contrôles natifs pour les formulaires](/fr/docs/Learn/Forms/Basic_native_form_controls#contenu_déroulant).
 
 ## Attributs
 
-Comme tous les autres éléments HTML, celui-ci inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Comme tous les autres éléments HTML, celui-ci inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `autocomplete`
-  - : Une chaîne de caractères qui fournit une indication à l'agent utilisateur pour les fonctionnalités d'autocomplétion. Voir [la page sur l'attribut `autocomplete`](/fr/docs/Web/HTML/Attributs/autocomplete) pour une liste des valeurs utilisables et de leurs impacts sur l'autocomplétion.
+  - : Une chaîne de caractères qui fournit une indication à l'agent utilisateur pour les fonctionnalités d'autocomplétion. Voir [la page sur l'attribut `autocomplete`](/fr/docs/Web/HTML/Attributes/autocomplete) pour une liste des valeurs utilisables et de leurs impacts sur l'autocomplétion.
 - `autofocus`
   - : Cet attribut booléen permet d'indiquer si ce contrôle du formulaire devrait recevoir le focus au chargement de la page. Pour un même document, seul un élément de formulaire peut avoir l'attribut `autofocus` activé.
 - `disabled`
@@ -42,14 +42,14 @@ Comme tous les autres éléments HTML, celui-ci inclut [les attributs universels
 
 ## Mise en forme avec CSS
 
-Il est communément admis que l'élément `<select>` est difficilement mis en forme avec CSS. Certains aspects de l'élément, [son modèle de boîte](/fr/docs/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte), [la police utilisée](/fr/docs/Web/CSS/CSS_Fonts) ou encore l'apparence ({{cssxref("appearance")}}), peuvent être modifiés.
+Il est communément admis que l'élément `<select>` est difficilement mis en forme avec CSS. Certains aspects de l'élément, [son modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model), [la police utilisée](/fr/docs/Web/CSS/CSS_fonts) ou encore l'apparence ({{cssxref("appearance")}}), peuvent être modifiés.
 
 Toutefois, ces propriétés peuvent fournir des résultats incohérents entre les différents navigateurs et il peut être difficile d'aligner différents contrôles sur une colonne.Aussi, si la structure interne de cet élément est trop complexe, on pourra créer un tel contrôle en utilisant des éléments non sémantiques, du code JavaScript et WAI-ARIA afin de décrire la sémantique du contrôle.
 
 Pour plus d'informations sur la mise en forme de `<select>` :
 
-- [Mettre en forme les formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms)
+- [Mettre en forme les formulaires HTML](/fr/docs/Learn/Forms/Styling_web_forms)
+- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_form_styling)
 
 ## Exemples
 
@@ -106,7 +106,8 @@ Vous pourrez voir que :
 - Les éléments `<optgroup>` ont été utilisés pour diviser les choix en différents groupes. Cela applique un effet simplement visuel (avec le nom en gras et les options indentées).
 - Le choix "Hamster" est présent avec l'attribut `disabled` et ne peut donc pas être sélectionné.
 
-> **Note :** Sur un ordinateur de bureau, on pourra maintenir les touches <kbd>Ctrl</kbd>, <kbd>Command</kbd>, ou <kbd>Shift</kbd> en cliquant afin de sélectionner/déselectionner plusieurs options.
+> [!NOTE]
+> Sur un ordinateur de bureau, on pourra maintenir les touches <kbd>Ctrl</kbd>, <kbd>Command</kbd>, ou <kbd>Shift</kbd> en cliquant afin de sélectionner/déselectionner plusieurs options.
 
 ### Sélectionner plusieurs options
 
@@ -114,7 +115,8 @@ Sur un ordinateur de bureau, il existe différentes façons de sélectionner plu
 
 Pour les personnes qui utilisent la souris, il est possible de maintenir les touches <kbd>Ctrl</kbd>, <kbd>Command</kbd> ou <kbd>Shift</kbd> (selon le système d'exploitation utilisé) et de cliquer sur les différentes options afin de les sélectionner/déselectionner.
 
-> **Attention :** Les moyens décrits ci-après pour sélectionner des options qui ne sont pas contigües semblent ne fonctionner qu'avec Firefox. On notera également que sur macOS, les raccourcis <kbd>Ctrl</kbd> + <kbd>Bas</kbd> et <kbd>Ctrl</kbd> + <kbd>Haut</kbd> sont utilisées par défaut par le système d'exploitation et qu'il faut les désactiver si on souhaite qu'ils fonctionnent dans le navigateurs.
+> [!WARNING]
+> Les moyens décrits ci-après pour sélectionner des options qui ne sont pas contigües semblent ne fonctionner qu'avec Firefox. On notera également que sur macOS, les raccourcis <kbd>Ctrl</kbd> + <kbd>Bas</kbd> et <kbd>Ctrl</kbd> + <kbd>Haut</kbd> sont utilisées par défaut par le système d'exploitation et qu'il faut les désactiver si on souhaite qu'ils fonctionnent dans le navigateurs.
 
 Les utilisateurs du clavier pourront sélectionner des options contigües de la façon suivante :
 
@@ -212,7 +214,7 @@ Les utilisateurs du clavier pourront sélectionner des options non-contigües de
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
@@ -244,5 +246,5 @@ Les utilisateurs du clavier pourront sélectionner des options non-contigües de
 
 ## Voir aussi
 
-- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}
-- Les évènements déclenchés par `<select>` : [`input`](/fr/docs/Web/Events/input), [`change`](/fr/docs/Web/Events/change)
+- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}
+- Les évènements déclenchés par `<select>` : [`input`](/fr/docs/Web/API/Element/input_event), [`change`](/fr/docs/Web/API/HTMLElement/change_event)

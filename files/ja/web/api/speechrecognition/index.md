@@ -9,7 +9,8 @@ l10n:
 
 **`SpeechRecognition`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) のインターフェイスで、 認識サービスの制御インターフェイスです。これは、認識サービスから送信された {{domxref("SpeechRecognitionEvent")}} も処理します。
 
-> **メモ:** Chrome など一部のブラウザーでは、ウェブページ上で音声認識を使用するとサーバーベースの認識エンジンが使用されます。音声を認識処理するためにウェブサービスへ送信するため、オフラインでは動作しません。
+> [!NOTE]
+> Chrome など一部のブラウザーでは、ウェブページ上で音声認識を使用するとサーバーベースの認識エンジンが使用されます。音声を認識処理するためにウェブサービスへ送信するため、オフラインでは動作しません。
 
 {{InheritanceDiagram}}
 
@@ -121,7 +122,7 @@ recognition.onresult = (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.SpeechRecognition")}}
+{{Compat}}
 
 ## 関連情報
 

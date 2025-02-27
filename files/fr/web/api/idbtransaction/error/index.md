@@ -21,7 +21,8 @@ L'{{domxref("DOMError","erreur","",1)}} correspondante qui est un objet `DOMErro
 
 Cette propriété vaut `null` si la transaction n'est pas terminée ou qu'elle est terminée avec succès ou qu'elle a été annulée avec la méthode {{domxref("IDBTransaction.abort","abort")}}.
 
-> **Note :** Dans Chrome 48+ cette propriété renvoie une exception {{domxref ("DOMException")}} parce que le type {{domxref("DOMError")}} a été retiré de la norme DOM.
+> [!NOTE]
+> Dans Chrome 48+ cette propriété renvoie une exception {{domxref ("DOMException")}} parce que le type {{domxref("DOMError")}} a été retiré de la norme DOM.
 
 ## Exemples
 
@@ -87,7 +88,8 @@ function addData() {
 }
 ```
 
-> **Note :** pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!NOTE]
+> Pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 
@@ -99,7 +101,7 @@ function addData() {
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Initier une connexion : {{domxref("IDBDatabase")}}
 - Utiliser les transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}

@@ -7,11 +7,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 
 **`Object.setPrototypeOf()`** 静态方法可以将一个指定对象的原型（即内部的 `[[Prototype]]` 属性）设置为另一个对象或者 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
 
-> **警告：** 由于现代 JavaScript 引擎优化属性访问所带来的特性的关系，更改对象的 `[[Prototype]]` 在各个浏览器和 JavaScript 引擎上都是一个很慢的操作。此外，修改继承的影响是微妙和广泛的，并不仅限于在 `Object.setPrototypeOf(...)` 语句上的时间花费，而是可能扩展到*任何*访问已更改 `[[Prototype]]` 属性的对象的代码。你可以在 [JavaScript 引擎基础知识：优化原型](https://mathiasbynens.be/notes/prototypes)中了解更多信息。
+> [!WARNING]
+> 由于现代 JavaScript 引擎优化属性访问所带来的特性的关系，更改对象的 `[[Prototype]]` 在各个浏览器和 JavaScript 引擎上都是一个很慢的操作。此外，修改继承的影响是微妙和广泛的，并不仅限于在 `Object.setPrototypeOf(...)` 语句上的时间花费，而是可能扩展到*任何*访问已更改 `[[Prototype]]` 属性的对象的代码。你可以在 [JavaScript 引擎基础知识：优化原型](https://mathiasbynens.be/notes/prototypes)中了解更多信息。
 >
 > 由于这个特性是语言的一部分，因此引擎开发人员实现该特性的性能（理想情况下）仍然是一个负担。在引擎开发人员解决这个问题之前，如果你担心性能问题，应该避免设置对象的 `[[Prototype]]` 属性。而是使用 {{jsxref("Object.create()")}} 创建一个具有所需 `[[Prototype]]` 属性的新对象。
 
-{{EmbedInteractiveExample("pages/js/object-setprototypeof.html")}}
+{{InteractiveExample("JavaScript Demo: Object.setPrototypeOf()")}}
+
+```js interactive-example
+const obj = {};
+const parent = { foo: "bar" };
+
+console.log(obj.foo);
+// Expected output: undefined
+
+Object.setPrototypeOf(obj, parent);
+
+console.log(obj.foo);
+// Expected output: "bar"
+```
 
 ## 语法
 
@@ -101,7 +115,8 @@ console.log(superMan.speak());
 
 在下面的示例中，也使用了类，`SuperHero` 使用 `setPrototypeOf` 而不是 `extends` 来继承 `Human`。
 
-> **警告：** 由于性能和可读性的原因，不建议使用 `setPrototypeOf` 来代替 `extends`。
+> [!WARNING]
+> 由于性能和可读性的原因，不建议使用 `setPrototypeOf` 来代替 `extends`。
 
 ```js
 class Human {}

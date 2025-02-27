@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 72e6429af2f0ad138223623fb2c86087a008d4dd
 ---
 
+{{GlossarySidebar}}
+
 {{Glossary("JavaScript")}} において、**プリミティブ** (primitive、プリミティブ値、プリミティブデータ型) は{{Glossary("object","オブジェクト")}}でなく、{{glossary("method","メソッド")}}を持たないデータのことです。 7 種類のプリミティブデータ型があります。
 
 - {{Glossary("string","文字列")}}
@@ -25,7 +27,7 @@ l10n:
 
 - [JavaScript のデータ型](/ja/docs/Web/JavaScript/Data_structures)
 - Wikipedia の [プリミティブ型](https://ja.wikipedia.org/wiki/プリミティブ型) の記事
-- [用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("JavaScript")}}
   - {{Glossary("string", "文字列")}}

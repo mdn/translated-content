@@ -74,7 +74,7 @@ fetch(url, {
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Access-Control-Allow-Credentials")}}
+{{Compat}}
 
 ## 関連情報
 

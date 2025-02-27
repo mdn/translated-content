@@ -63,7 +63,7 @@ void removeProp(
 - `attr`
   - : The property to remove from the dataset.
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

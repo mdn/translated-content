@@ -3,11 +3,11 @@ title: browserAction.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Action quand l'icone d'action du navigateur est cliqué. Cet événement ne déclenchera pas si l'action du navigateur comporte une fenêtre contextuelle.
 
-Pour définir une action de clic droit, utilisez l'API [`contextMenus`](/fr/Add-ons/WebExtensions/API/contextMenus) avec le [type de contexte](/fr/Add-ons/WebExtensions/API/contextMenus/ContextType) "browser_action".
+Pour définir une action de clic droit, utilisez l'API [`contextMenus`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus) avec le [type de contexte](/fr/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/ContextType) "browser_action".
 
 ## Syntaxe
 
@@ -56,7 +56,7 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
 >

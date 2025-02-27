@@ -120,7 +120,7 @@ animation:
 
 {{EmbedLiveSample('赛隆人之眼')}}
 
-更多示例请参阅[使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#Examples)。
+更多示例请参阅[使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#examples)。
 
 ## 潜在的问题
 
@@ -144,5 +144,5 @@ animation:
 
 ## 参见
 
-- [Using CSS animations](/zh-CN/docs/CSS/Tutorials/Using_CSS_animations)
+- [Using CSS animations](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API

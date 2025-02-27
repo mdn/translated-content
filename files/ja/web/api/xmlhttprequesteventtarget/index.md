@@ -2,10 +2,10 @@
 title: XMLHttpRequestEventTarget
 slug: Web/API/XMLHttpRequestEventTarget
 l10n:
-  sourceCommit: 073f70e052ff92ab715df3c20678c11c9b51747f
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 `XMLHttpRequestEventTarget` インターフェイスは、 {{domxref("XMLHttpRequest")}} と {{domxref("XMLHttpRequestUpload")}} で共有されるイベントハンドラーを示します。
 
@@ -23,6 +23,7 @@ l10n:
 - {{domxref("XMLHttpRequest/loadend_event", "loadend")}}
 - {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}
 - {{domxref("XMLHttpRequest/progress_event", "progress")}}
+- {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}}
 - {{domxref("XMLHttpRequest/timeout_event", "timeout")}}
 
 ## `XMLHttpRequestUpload` への継承

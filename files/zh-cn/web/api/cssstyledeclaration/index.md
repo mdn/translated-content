@@ -62,4 +62,4 @@ console.log(styleObj.cssText);
 
 ## 参见
 
-- [DOM CSS Properties](/zh-CN/docs/Web/CSS/CSS_Properties_Reference)
+- [DOM CSS Properties](/zh-CN/docs/Web/CSS/Reference#索引)

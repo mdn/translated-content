@@ -7,13 +7,14 @@ slug: Web/API/WebRTC_API/Using_data_channels
 
 {{domxref("RTCPeerConnection")}} 인터페이스를 사용하여 WebRTC Peerconnction을 연결하면 이제 두 Peer간의 커넥션을 통하여 미디어 데이터를 주고 받을수 있게됩니다. 그뿐아니라 WebRTC로 할수 있는 일은 더 있습니다. 이 가이드에서 우리는 peer connection에 데이터 채널을 추가하는 방법과 임의의 데이터, 즉 우리가 원하는 어떠한 포멧의 데이터들을 안전하게 주고 받는 방법을 배우게 될 것 입니다.
 
-> **참고:** 모든 WebRTC 컴포넌트들은 암호화를 사용하게 되어 있기 때문에 `RTCDataChannel`을 이용하는 어떤 데이터 전송도 자동적으로 Datagram Transport Layer Security (**DTLS**)을 사용하여 암호화 됩니다. 자세한 내용은 [Security](#security) 를 참고하십시오.
+> [!NOTE]
+> 모든 WebRTC 컴포넌트들은 암호화를 사용하게 되어 있기 때문에 `RTCDataChannel`을 이용하는 어떤 데이터 전송도 자동적으로 Datagram Transport Layer Security (**DTLS**)을 사용하여 암호화 됩니다. 자세한 내용은 [Security](#security) 를 참고하십시오.
 
 ## 데이터 채널 만들기
 
 {{domxref("RTCDataChannel")}}를 이용한 기초적인 데이터 전송은 아래의 두 방법중 하나를 이용하여 만들수 있습니다.
 
-- WebRTC가 전송수단을 만들게 하고 {{event("datachannel")}} 이벤트를 수신 받게 하여 remote peer에 알립니다. 참 쉽죠? 이 단순한 로직을 바탕으로 수많은 활용법을 만들어 낼 수 있습니다. 하지만 단순하기 때문에 구현하고자하는 모든 요구를 만족해주지는 못합니다.
+- WebRTC가 전송수단을 만들게 하고 {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}} 이벤트를 수신 받게 하여 remote peer에 알립니다. 참 쉽죠? 이 단순한 로직을 바탕으로 수많은 활용법을 만들어 낼 수 있습니다. 하지만 단순하기 때문에 구현하고자하는 모든 요구를 만족해주지는 못합니다.
 - 데이터 전송을 할 수 있는 코드를 스스로 작성하고 새로운 채널이 연결되었다는 것을 알려줄수 있는 코드를 작성해주십시오.
 
 위에서 언급한 두가지 방법을 각각 살펴보겠습니다. 우선은 가장 일반적으로 사용되는 첫번째 방법부터 살펴보겠습니다.
@@ -58,17 +59,13 @@ requestRemoteChannel(dataChannel.id);
 
 WebRTC 데이터채널은 아웃바운드 데이터에 대해 버퍼링을 제공합니다. 이것은 자동적으로 처리가됩니다. buffer의 사이즈를 컨트롤 할 수 없는 동안 당신은 얼마나 많은 데이터가 현재 버퍼 되어 있는지 배울 수 있고 큐 데이터의 버퍼가 고갈되기 시작할 때 알림을 받도록 선택할 수 도 있습니다. 이것은 메모리 과다사용이나 채널을 완전히 밀어내버리는 것을 없애고 언제나 데이터를 보낼수 있도록 효과적인 루틴을 만들기 쉽게 해줍니다.
 
-**<<\<write more about using bufferedAmount, bufferedAmountLowThreshold, onbufferedamountlow, and bufferedamountlow here>>>**
-
-...
-
 ## 메세지 크기 제한에 대해 이해하기
 
 네트워크를 통하여 전송되는 데이터라면 그 데이터는 반드시 사이즈가 제한됩니다. 기초적인 레벨의 이야기를 하자면, 각각의 네트워크 패킷은 어떠한 값보다 클 수 없습니다. (정확한 숫자는 네트워크와 전송 계층이 사용하고 있는 것에 따라 다릅니다.) 어플리케이션 계층에서는 — 즉 당신의 코드가 돌아가고 있는 WebRTC {{Glossary("user agent", "user agent's")}} — WebRTC가 네트워크의 전송계층위의 최대 패킷사이즈보다 메시지가 더 큰지 확인하는 것을 구현할 수 있습니다.
 
 만약 당신이 사이즈 제한 크기가 궁금하지 않다거나 대용량 메세지를 보내거나 받는 것이 필요하지 않다면 이 이야기는 복잡한 이야기가 될 수 있습니다. Even when user agents share the same underlying library for handling Stream Control Transmission Protocol (SCTP) data, there can still be variations due to how the library is used. 예를들어 Firefox와 구글 크롬은 SCTP를 구현하기 위해 [`usrsctp`](https://github.com/sctplab/usrsctp) 라이브러리를 사용합니다. 이때 그 두 브라우저가 어떻게 라이브러리에 요청하고 이벤트에 반응하는지에 따라 `RTCDataChannel` 을 이용한 데이터 전송이 실패하는 경우가 있습니다.
 
-두 유저가 파이어폭스에 있는 데이터채널을 사용하여 통실할 때 메세지 사이즈의 제한은 파이어폭스와 크롬을 각각 사용할 때보다 큽니다. 왜냐하면 파이어폭스의 구현 방법은 현재 다중 SCTP메세지를 전송하는 기술을 deprecated하여 놓았습니다. 하지만 크롬은 여전히 가능합니다. 크롬은 완성 될것이라 확신하는 메시지 시리즈를 보는 대신 RTCDataChannel을 다중 메시지로서 수신하는 것으로 대채할 것입니다.
+두 유저가 Firefox에 있는 데이터채널을 사용하여 통실할 때 메세지 사이즈의 제한은 Firefox와 크롬을 각각 사용할 때보다 큽니다. 왜냐하면 Firefox의 구현 방법은 현재 다중 SCTP메세지를 전송하는 기술을 deprecated하여 놓았습니다. 하지만 크롬은 여전히 가능합니다. 크롬은 완성 될것이라 확신하는 메시지 시리즈를 보는 대신 RTCDataChannel을 다중 메시지로서 수신하는 것으로 대채할 것입니다.
 
 메세지가 16kiB 작다면 별다른 무리 없이 보낼 수 있을 것 입니다. 대부분의 메이저 user agents도 동일하게 다룹니다.
 

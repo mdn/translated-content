@@ -68,15 +68,13 @@ div {
 
 ## Specification
 
-| Specification                                                                             | Status                              | Comment            |
-| ----------------------------------------------------------------------------------------- | ----------------------------------- | ------------------ |
-| {{SpecName("CSS Logical Properties", "#propdef-margin-inline-end", "margin-inline-end")}} | {{Spec2("CSS Logical Properties")}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{cssxref("margin-inline-start")}}
 - The mapped physical properties: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}

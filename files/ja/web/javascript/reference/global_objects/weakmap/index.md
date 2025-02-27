@@ -108,12 +108,12 @@ class ClearableWeakMap {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakMap")}}
+{{Compat}}
 
 ## 関連情報
 
-- [JavaScript ガイド内の `WeakMap`](/ja/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object)
-- [Hiding Implementation Details with ECMAScript 6 WeakMaps](http://fitzgeraldnick.com/weblog/53/)
+- [JavaScript ガイド内の `WeakMap`](/ja/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
+- [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgeraldnick.com/weblog/53/)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}

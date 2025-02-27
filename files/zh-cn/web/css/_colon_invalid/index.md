@@ -1,5 +1,5 @@
 ---
-title: ":invalid"
+title: :invalid
 slug: Web/CSS/:invalid
 ---
 
@@ -174,5 +174,5 @@ button {
 
 - 其他验证相关的伪类：{{ cssxref(":required") }}、{{ cssxref(":optional") }}、{{ cssxref(":valid") }}
 - 相关的 Mozilla 伪类：{{cssxref(":user-invalid")}}、{{cssxref(":-moz-submit-invalid")}}
-- [表单数据验证](/zh-CN/docs/Learn/HTML/Forms/Form_validation)
+- [表单数据验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - 从 JavaScript 中访问[有效性状态](/zh-CN/docs/Web/API/ValidityState)

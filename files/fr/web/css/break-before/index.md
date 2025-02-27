@@ -104,7 +104,8 @@ Pour des raisons de compatibilité, la propriété historique [`page-break-befor
 | `avoid`             | `avoid`        |
 | `always`            | `page`         |
 
-> **Note :** La valeur `always` pour `page-break-*` a été implémentée par les navigateurs comme une rupture de page et non comme une rupture de colonne. C'est pourquoi l'alias ici utilisé est `page` et non `always`.
+> [!NOTE]
+> La valeur `always` pour `page-break-*` a été implémentée par les navigateurs comme une rupture de page et non comme une rupture de colonne. C'est pourquoi l'alias ici utilisé est `page` et non `always`.
 
 ## Définition formelle
 

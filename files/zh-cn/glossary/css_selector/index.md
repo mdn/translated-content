@@ -1,6 +1,8 @@
 ---
 title: CSS 选择器
 slug: Glossary/CSS_Selector
+l10n:
+  sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
 ---
 
 {{GlossarySidebar}}
@@ -9,7 +11,7 @@ slug: Glossary/CSS_Selector
 
 ## 示例
 
-看下面的 CSS：
+考虑如下 CSS：
 
 ```css
 p {
@@ -38,18 +40,14 @@ div.warning {
 我们可以把上面的 CSS 应用到 HTML 中，如下：
 
 ```html
-<p>This is happy text.</p>
+<p>这是个开心的文本</p>
 
-<div class="warning">
-  Be careful! There are wizards present, and they are quick to anger!
-</div>
+<div class="warning">小心，有巫师！他们很容易被激怒！</div>
 
 <div id="customized">
-  <p>This is happy text.</p>
+  <p>这是个开心的文本</p>
 
-  <div class="warning">
-    Be careful! There are wizards present, and they are quick to anger!
-  </div>
+  <div class="warning">小心，有巫师！他们很容易被激怒！</div>
 </div>
 ```
 
@@ -59,7 +57,7 @@ div.warning {
 
 ## 参见
 
-- 查看我们的关于选择器的介绍 [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
+- 在 CSS 介绍中[学习更多 CSS 选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 - 基础选择器
 
   - [标签选择器](/zh-CN/docs/Web/CSS/Type_selectors) `elementname`
@@ -69,7 +67,7 @@ div.warning {
   - [属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors) `[attr=value]`
   - [状态选择器](/zh-CN/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
 
-- 组选择器
+- 分组选择器
 
   - [选择器列表](/zh-CN/docs/Web/CSS/Selector_list) `A, B`
 

@@ -3,6 +3,8 @@ title: grid-auto-flow
 slug: Web/CSS/grid-auto-flow
 ---
 
+{{CSSRef}}
+
 CSS-свойство управляет поведением автоматически размещаемых элементов, точно указывая, как они попадают в сетку.
 
 {{EmbedInteractiveExample("pages/css/grid-auto-flow.html")}}
@@ -10,7 +12,7 @@ CSS-свойство управляет поведением автоматич�
 ## Синтаксис
 
 ```css
-/* Ключевые свойства и значения */
+/* Ключевые слова */
 grid-auto-flow: row;
 grid-auto-flow: column;
 grid-auto-flow: dense;
@@ -37,11 +39,15 @@ grid-auto-flow: unset;
 - `dense`
   - : Ключевое слово, указывающее заполнять элементами свободное пространство сетки. Это может привести к нарушению порядка, т.к. элементы будут выстраиваться не в соответствии со своим расположением, а в соответствии с размером.Если свойство не используется, алгоритм разместит элементы строго по порядку, вне зависимости от наличия свободных ячеек.
 
-### Formal syntax
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
-## Пример
+## Примеры
 
 ### HTML Content
 
@@ -113,18 +119,16 @@ function changeGridAutoFlow() {
 
 {{EmbedLiveSample("Пример", "200px", "230px")}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-{{cssinfo}}
-
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - Related CSS properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}
-- Grid Layout Guide: _[Auto-placement in grid layout](/ru/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)_
-- Video tutorial: _[Introducing Grid auto-placement and order](http://gridbyexample.com/video/series-auto-placement-order/)_
+- Grid Layout Guide: _[Auto-placement in grid layout](/ru/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)_
+- Video tutorial: _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_

@@ -83,6 +83,6 @@ slug: Web/CSS/CSS_scroll_snap
 - [CSS 滚动条样式化](/zh-CN/docs/Web/CSS/CSS_scrollbars_styling)模块
 - [纯键盘滚动区域](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html)（载于 adrianroselli.com，2022 年）
 - [滚动吸附示例](https://codepen.io/collection/KpqBGW)（载于 Codepen，2022 年）
-- [用 CSS 滚动吸附明确控制滚动](https://web.dev/css-scroll-snap/)（载于 web.dev，2021 年）
+- [用 CSS 滚动吸附明确控制滚动](https://web.developers.google.cn/articles/css-scroll-snap)（载于 web.developers.google.cn，2021 年）
 - [实用 CSS 滚动吸附](https://css-tricks.com/practical-css-scroll-snapping/)（载于 CSS-Tricks，2020 年）
 - [CSS 滚动吸附](https://12daysofweb.dev/2022/css-scroll-snap/)（载于 12 Days of Web，2019 年）

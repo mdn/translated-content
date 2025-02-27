@@ -7,13 +7,15 @@ slug: WebAssembly/Using_the_JavaScript_API
 
 Se você já [compilou um módulo de outra linguagem usando ferramentas como Emscripten](/pt-BR/docs/WebAssembly/C_to_Wasm) ou [carregou e executou o código você mesmo](/pt-BR/docs/WebAssembly/Loading_and_running), a próxima etapa é aprender mais sobre como usar os outros recursos da API JavaScript WebAssembly. Este artigo ensina o que você precisa saber.
 
-> **Nota:** Se você não estiver familiarizado com os conceitos básicos mencionados neste artigo e precisar de mais explicações, leia [Conceitos do WebAssembly](/pt-BR/docs/WebAssembly/Concepts) primeiro e depois volte.
+> [!NOTE]
+> Se você não estiver familiarizado com os conceitos básicos mencionados neste artigo e precisar de mais explicações, leia [Conceitos do WebAssembly](/pt-BR/docs/WebAssembly/Concepts) primeiro e depois volte.
 
 ## Alguns exemplos simples
 
 Vamos percorrer alguns exemplos que explicam como usar a API WebAssembly JavaScript e como usá-la para carregar um módulo Wasm em uma página da web.
 
-> **Nota:** você pode encontrar o código de exemplo em nosso [webassembly-examples](https://github.com/mdn/webassembly-examples) repositório do GitHub.
+> [!NOTE]
+> Você pode encontrar o código de exemplo em nosso [webassembly-examples](https://github.com/mdn/webassembly-examples) repositório do GitHub.
 
 ### Preparando o exemplo
 
@@ -39,7 +41,7 @@ Vamos percorrer alguns exemplos que explicam como usar a API WebAssembly JavaScr
 
 ### Transmitindo o módulo WebAssembly
 
-Uma novidade no Firefox 58 é a capacidade de compilar e instanciar módulos WebAssembly diretamente de fontes subjacentes. Isso é obtido usando [`WebAssembly.compileStreaming()`](/pt-BR/docs/WebAssembly/JavaScript_interface/compileStreaming) e [`WebAssembly.instantiateStreaming()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiateStreaming). Esses métodos são mais fáceis do que suas contrapartes sem streaming, porque eles podem transformar o código de byte diretamente em instâncias `Module`/`Instance`, eliminando a necessidade de colocar separadamente o {{domxref("Response")}} em um {{jsxref("ArrayBuffer")}}.
+Uma novidade no Firefox 58 é a capacidade de compilar e instanciar módulos WebAssembly diretamente de fontes subjacentes. Isso é obtido usando [`WebAssembly.compileStreaming()`](/pt-BR/docs/WebAssembly/JavaScript_interface/compileStreaming_static) e [`WebAssembly.instantiateStreaming()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static). Esses métodos são mais fáceis do que suas contrapartes sem streaming, porque eles podem transformar o código de byte diretamente em instâncias `Module`/`Instance`, eliminando a necessidade de colocar separadamente o {{domxref("Response")}} em um {{jsxref("ArrayBuffer")}}.
 
 Este exemplo (consulte nossa demonstração [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) no GitHub e [visualize it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html) também) mostra como usar `instantiateStreaming()` para buscar um módulo Wasm, importar uma função JavaScript nele, compilá-lo e instanciá-lo e acessar sua função exportada - tudo em uma única etapa.
 
@@ -53,11 +55,12 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 O resultado disso é que chamamos nossa função WebAssembly exportada `exported_func`, que por sua vez chama nossa função JavaScript importada `imported_func`, que registra o valor fornecido dentro da instância WebAssembly (42) no console. Se você salvar seu código de exemplo agora e carregá-lo em um navegador compatível com WebAssembly, verá isso em ação!
 
-> **Nota:** Este é um exemplo complicado e prolixo que alcança muito pouco, mas serve para ilustrar o que é possível — usar código WebAssembly juntamente com JavaScript em seus aplicativos da web. Como dissemos em outro lugar, o WebAssembly não pretende substituir o JavaScript; os dois, em vez disso, podem trabalhar juntos aproveitando os pontos fortes um do outro.
+> [!NOTE]
+> Este é um exemplo complicado e prolixo que alcança muito pouco, mas serve para ilustrar o que é possível — usar código WebAssembly juntamente com JavaScript em seus aplicativos da web. Como dissemos em outro lugar, o WebAssembly não pretende substituir o JavaScript; os dois, em vez disso, podem trabalhar juntos aproveitando os pontos fortes um do outro.
 
 ### Carregando nosso módulo Wasm sem streaming
 
-Se você não pode ou não quer usar os métodos de streaming descritos acima, você pode usar os métodos sem streaming [`WebAssembly.compile()`](/pt-BR/docs/WebAssembly/JavaScript_interface/compile) / [`WebAssembly.instantiate()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiate) em vez disso.
+Se você não pode ou não quer usar os métodos de streaming descritos acima, você pode usar os métodos sem streaming [`WebAssembly.compile()`](/pt-BR/docs/WebAssembly/JavaScript_interface/compile_static) / [`WebAssembly.instantiate()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiate_static) em vez disso.
 
 Esses métodos não acessam diretamente o código de byte, então requerem uma etapa extra para transformar a resposta em um {{jsxref("ArrayBuffer")}} antes de compilar/instanciar o módulo Wasm.
 
@@ -133,7 +136,8 @@ Vamos tornar as afirmações acima mais claras observando um exemplo de memória
 
 1. faça uma cópia local de `memory.wasm` no mesmo diretório de antes.
 
-   > **Nota:** você pode ver a representação de texto do módulo em [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat).
+   > [!NOTE]
+   > Você pode ver a representação de texto do módulo em [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat).
 
 2. Volte para seu arquivo de exemplo `memory.html` e busque, compile e instancie seu módulo Wasm como antes — adicione o seguinte ao final de seu script:
 
@@ -165,7 +169,8 @@ As importações de memória funcionam exatamente como as importações de funç
 - Eles permitem que o JavaScript busque e crie o conteúdo inicial da memória antes ou simultaneamente com a compilação do módulo.
 - Eles permitem que um único objeto de memória seja importado por várias instâncias de módulo, o que é um bloco de construção crítico para implementar a vinculação dinâmica no WebAssembly.
 
-> **Nota:** Você pode encontrar nossa demonstração completa em [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) .
+> [!NOTE]
+> Você pode encontrar nossa demonstração completa em [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) .
 
 ## Tabelas
 
@@ -185,7 +190,8 @@ Vejamos um exemplo de tabela simples — um módulo WebAssembly que cria e expor
 
 1. Faça uma cópia local de `table.wasm` em um novo diretório.
 
-   > **Nota:** você pode ver a representação de texto do módulo em [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat).
+   > [!NOTE]
+   > Você pode ver a representação de texto do módulo em [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat).
 
 2. Crie uma nova cópia do nosso [modelo HTML](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) no mesmo diretório e chame-o de `table.html`.
 3. Como antes, busque, compile e instancie seu módulo Wasm — adicione o seguinte a um elemento {{htmlelement("script")}} na parte inferior do corpo do HTML:
@@ -206,7 +212,8 @@ Vejamos um exemplo de tabela simples — um módulo WebAssembly que cria e expor
 
 Este código acessa cada referência de função armazenada na tabela por sua vez e as instâncias para imprimir os valores que contêm no console — observe como cada referência de função é recuperada com um [`Table.prototype.get()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Table/get), adicionamos um conjunto extra de parênteses no final para realmente invocar a função.
 
-> **Nota:** você pode encontrar nossa demonstração completa em [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)).
+> [!NOTE]
+> Você pode encontrar nossa demonstração completa em [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)).
 
 ## Globais
 
@@ -261,7 +268,8 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 );
 ```
 
-> **Nota:** Você pode ver o exemplo [executando ao vivo no GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html); consulte também o [código-fonte](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).
+> [!NOTE]
+> Você pode ver o exemplo [executando ao vivo no GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html); consulte também o [código-fonte](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).
 
 ## Multiplicidade
 

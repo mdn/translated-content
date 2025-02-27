@@ -3,7 +3,7 @@ title: runtime.lastError
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/lastError
 ---
 
-{{AddonSidebar()}}Cette valeur est utilisée pour signaler un message d'erreur provenant d'une API asynchrone, lorsque l'API asynchrone reçoit un rappel. Cela est utile pour les extensions qui utilisent la valeur basée sur le rappel des API WebExtension.Vpous n'avez pas besoin de vérifier cette propriété si vous utilisez la version basée sur la promesse des API : à la place, passez un gestionnaire d'erreurs à la promesse :
+{{AddonSidebar}}Cette valeur est utilisée pour signaler un message d'erreur provenant d'une API asynchrone, lorsque l'API asynchrone reçoit un rappel. Cela est utile pour les extensions qui utilisent la valeur basée sur le rappel des API WebExtension.Vpous n'avez pas besoin de vérifier cette propriété si vous utilisez la version basée sur la promesse des API : à la place, passez un gestionnaire d'erreurs à la promesse :
 
 ```js
 var gettingCookies = browser.cookies.getAll();
@@ -22,7 +22,7 @@ var myError = browser.runtime.lastError; // null or Error object
 
 ### Valeur
 
-Un objet [Error](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error) représentant une erreur. La propriété [`message`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/message) est un `string` avec une description lisible par l'utilisateur de l'erreur. Si `lastError` n'a pas été défini, la valeur est `null`.
+Un objet [Error](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error) représentant une erreur. La propriété [`message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message) est un `string` avec une description lisible par l'utilisateur de l'erreur. Si `lastError` n'a pas été défini, la valeur est `null`.
 
 ## Examples
 
@@ -64,9 +64,9 @@ setCookie.then(logCookie, logError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

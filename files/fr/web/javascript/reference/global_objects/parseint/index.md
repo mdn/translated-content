@@ -7,9 +7,29 @@ slug: Web/JavaScript/Reference/Global_Objects/parseInt
 
 La fonction **`parseInt()`** analyse une chaîne de caractère fournie en argument et renvoie un entier exprimé dans une base donnée.
 
-{{EmbedInteractiveExample("pages/js/globalprops-parseint.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseInt()")}}
 
-> **Attention :** On veillera à bien utiliser le second paramètre de la fonction pour éviter toute ambiguité sur la base numérique utilisée.
+```js interactive-example
+console.log(parseInt("123"));
+// 123 (default base-10)
+console.log(parseInt("123", 10));
+// 123 (explicitly specify base-10)
+console.log(parseInt("   123 "));
+// 123 (whitespace is ignored)
+console.log(parseInt("077"));
+// 77 (leading zeros are ignored)
+console.log(parseInt("1.9"));
+// 1 (decimal part is truncated)
+console.log(parseInt("ff", 16));
+// 255 (lower-case hexadecimal)
+console.log(parseInt("0xFF", 16));
+// 255 (upper-case hexadecimal with "0x" prefix)
+console.log(parseInt("xyz"));
+// NaN (input can't be converted to an integer)
+```
+
+> [!WARNING]
+> On veillera à bien utiliser le second paramètre de la fonction pour éviter toute ambiguité sur la base numérique utilisée.
 
 ## Syntaxe
 
@@ -25,7 +45,8 @@ parseInt(string, base);
 
   - : Un entier compris entre 2 et 36 qui représente la [base](https://fr.wikipedia.org/wiki/Base_%28arithmétique%29) utilisée pour la valeur représentée dans la chaîne. La base communément utilisée est la base décimale et on utilisera donc `10` dans ce cas pour ce paramètre.
 
-    > **Attention :** La base par défaut n'est pas 10. Ce paramètre doit toujours être utilisé, en effet s'il n'est pas spécifié, le comportement de la fonction n'est pas garanti et peut varier d'une plate-forme à une autre.
+    > [!WARNING]
+    > La base par défaut n'est pas 10. Ce paramètre doit toujours être utilisé, en effet s'il n'est pas spécifié, le comportement de la fonction n'est pas garanti et peut varier d'une plate-forme à une autre.
 
     Voir cependant la description ci-après qui explicite le comportement par défaut attendu.
 

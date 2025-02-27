@@ -3,7 +3,7 @@ title: key
 slug: Web/XPath/Functions/key
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `key` 함수는 인수로 준 키와 값을 갖는 노드 집합을 반환합니다.
 
@@ -32,7 +32,7 @@ key(keyname ,value )
 
 ### 정의
 
-[XSLT 1.0 12.2](http://www.w3.org/TR/xslt#function-key)
+[XSLT 1.0 12.2](https://www.w3.org/TR/xslt#function-key)
 
 ### Gecko 지원
 

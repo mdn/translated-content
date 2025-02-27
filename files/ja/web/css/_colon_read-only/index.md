@@ -1,5 +1,5 @@
 ---
-title: ":read-only"
+title: :read-only
 slug: Web/CSS/:read-only
 ---
 
@@ -17,6 +17,8 @@ p:read-only {
   background-color: #ccc;
 }
 ```
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-read-only.html", "tabbed-shorter")}}
 
 ## 構文
 

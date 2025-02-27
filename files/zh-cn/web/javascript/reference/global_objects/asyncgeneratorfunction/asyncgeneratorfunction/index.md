@@ -1,11 +1,13 @@
 ---
-title: AsyncGeneratorFunction() constructor
+title: AsyncGeneratorFunction() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction/AsyncGeneratorFunction
+l10n:
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
 
-**`AsyncGeneratorFunction()`** 构造函数创建一个新的 {{jsxref("AsyncGeneratorFunction")}} 对象。在 JavaScript 中，每个[异步生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)实际上都是一个 `AsyncGeneratorFunction` 对象。
+**`AsyncGeneratorFunction()`** 构造函数创建 {{jsxref("AsyncGeneratorFunction")}} 对象。
 
 注意，`AsyncGeneratorFunction` 不是全局对象。它可以通过执行以下代码获取。
 
@@ -19,23 +21,24 @@ const AsyncGeneratorFunction = async function* () {}.constructor;
 
 ```js-nolint
 new AsyncGeneratorFunction(functionBody)
-new AsyncGeneratorFunction(arg0, functionBody)
-new AsyncGeneratorFunction(arg0, arg1, functionBody)
-new AsyncGeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+new AsyncGeneratorFunction(arg1, functionBody)
+new AsyncGeneratorFunction(arg1, arg2, functionBody)
+new AsyncGeneratorFunction(arg1, arg2, /* …, */ argN, functionBody)
 
 AsyncGeneratorFunction(functionBody)
-AsyncGeneratorFunction(arg0, functionBody)
-AsyncGeneratorFunction(arg0, arg1, functionBody)
-AsyncGeneratorFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+AsyncGeneratorFunction(arg1, functionBody)
+AsyncGeneratorFunction(arg1, arg2, functionBody)
+AsyncGeneratorFunction(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
-> **备注：** 无论是否使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用 `AsyncGeneratorFunction()`，都可以创建一个新的 `AsyncGeneratorFunction` 实例。
+> [!NOTE]
+> 无论是否使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用 `AsyncGeneratorFunction()`，都可以创建一个新的 `AsyncGeneratorFunction` 实例。
 
 ### 参数
 
 参见 {{jsxref("Function/Function", "Function()")}}。
 
-## 参见
+## 示例
 
 ### 使用构造函数
 
@@ -58,8 +61,8 @@ asyncGen.next().then((res) => console.log(res.value)); // 20
 
 ## 参见
 
-- [`async function*` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)
+- [`async function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)
 - [`async function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function*)
 - [`Function()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
-- [迭代器和生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- [迭代器和生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)指南
 - {{jsxref("Functions", "函数", "", 1)}}

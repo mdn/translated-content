@@ -1,11 +1,13 @@
 ---
 title: background-origin
 slug: Web/CSS/background-origin
+l10n:
+  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
 ---
 
 {{CSSRef}}
 
-[CSS](/ja/docs/Web/CSS) の **`background-origin`** プロパティは、背景配置領域を境界の開始位置、境界の内部、パディングの内部から設定します。
+**`background-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、背景配置領域を境界の開始位置、境界の内部、パディングの内部から設定します。
 
 {{EmbedInteractiveExample("pages/css/background-origin.html")}}
 
@@ -23,6 +25,7 @@ background-origin: content-box;
 background-origin: inherit;
 background-origin: initial;
 background-origin: revert;
+background-origin: revert-layer;
 background-origin: unset;
 ```
 
@@ -71,7 +74,8 @@ background-origin: unset;
 
 ```css
 div {
-  background-image: url("logo.jpg"), url("mainback.png"); /* 背景に 2 つの画像を適用 */
+  background-image:
+    url("logo.jpg"), url("mainback.png"); /* 背景に 2 つの画像を適用 */
   background-position:
     top right,
     0px 0px;
@@ -79,7 +83,7 @@ div {
 }
 ```
 
-<h3 id="Using_two_gradients">2 つのグラデーションの使用</h3>
+### 2 つのグラデーションの使用
 
 この例では、ボックスに太い点線の境界線が付いています。最初のグラデーションでは、 `padding-box` を `background-origin` として使用しているため、背景は境界線の内側に表示されます。2 つ目のグラデーションは、`content-box`を使用しているため、コンテンツの後ろにのみ表示されます。
 
@@ -87,12 +91,14 @@ div {
 .box {
   margin: 10px 0;
   color: #fff;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       90deg,
-      rgba(131, 58, 180, 1) 0%,
-      rgba(253, 29, 29, 0.6) 60%,
-      rgba(252, 176, 69, 1) 100%
-    ), radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 28%);
+      rgb(131 58 180 / 100%) 0%,
+      rgb(253 29 29 / 60%) 60%,
+      rgb(252 176 69 / 100%) 100%
+    ),
+    radial-gradient(circle, rgb(255 255 255 / 100%) 0%, rgb(0 0 0 / 100%) 28%);
   border: 20px dashed black;
   padding: 20px;
   width: 400px;

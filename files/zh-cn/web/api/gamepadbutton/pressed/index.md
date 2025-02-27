@@ -37,4 +37,4 @@ if (gp.buttons[0].pressed == true) {
 
 ## 参见
 
-- [使用 Gamepad API](/zh-CN/docs/Web/Guide/API/Gamepad)
+- [使用 Gamepad API](/zh-CN/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

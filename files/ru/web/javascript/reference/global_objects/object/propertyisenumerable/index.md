@@ -3,7 +3,7 @@ title: Object.prototype.propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -104,7 +104,7 @@ o.propertyIsEnumerable("firstMethod"); // вернёт false
 
 ## Смотрите также
 
-- [Перечисляемость и собственность свойств](/ru/docs/Enumerability_and_ownership_of_properties)
+- [Перечисляемость и собственность свойств](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.defineProperty()")}}

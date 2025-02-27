@@ -1,5 +1,5 @@
 ---
-title: ":checked"
+title: :checked
 slug: Web/CSS/:checked
 ---
 
@@ -17,7 +17,8 @@ La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:checked` de [CSS](/es/docs/
 
 El usuario puede activar este estado marcando/seleccionando un elemento, o desactivándolo desmarcando/deseleccionando el elemento.
 
-> **Nota:** Debido a que los navegadores a menudo tratan las `<option>` s como [elementos reemplazados](/es/docs/Web/CSS/Replaced_element), la medida en que se pueden diseñar con la pseudo-clase `:checked` varía de un navegador a otro.
+> [!NOTE]
+> Debido a que los navegadores a menudo tratan las `<option>` s como [elementos reemplazados](/es/docs/Web/CSS/Replaced_element), la medida en que se pueden diseñar con la pseudo-clase `:checked` varía de un navegador a otro.
 
 ## Sintaxis
 
@@ -176,7 +177,8 @@ Este ejemplo utiliza la pseudoclase `:checked` para permitir al usuario alternar
 
 Puede usar la pseudoclase `:checked` para crear una galería de imágenes con imágenes de tamaño completo que solo se muestran cuando el usuario hace clic en una miniatura. Vea [esta demostración](css-checked-gallery.zip).
 
-> **Nota:** Para un efecto análogo, pero basado en la pseudoclase [`:hover`](/es/docs/CSS/:hover) y sin radioboxes ocultos, vea [esta demostración](css-gallery.zip), tomada de la página de referencia [:hover](/es/docs/CSS/:hover).
+> [!NOTE]
+> Para un efecto análogo, pero basado en la pseudoclase [`:hover`](/es/docs/Web/CSS/:hover) y sin radioboxes ocultos, vea [esta demostración](css-gallery.zip), tomada de la página de referencia [:hover](/es/docs/Web/CSS/:hover).
 
 ## Especificaciones
 

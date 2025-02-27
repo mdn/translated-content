@@ -5,7 +5,7 @@ slug: Web/CSS/sin
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`sin()`** 为三角函数，返回某数的正弦值，此值介于 `-1` 和 `1` 之间。此函数含有单个计算式，此式须将参数结果按弧度数解析为 {{CSSXref("&lt;number&gt;")}} 或 {{CSSXref("&lt;angle&gt;")}}，即 `sin(45deg)`、`sin(0.125turn)` 和 `sin(3.14159 / 4)` 均表示同一值，约为 `0.707`。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) **`sin()`** 为三角函数，返回某数的正弦值，此值介于 `-1` 和 `1` 之间。此函数含有单个计算式，此式须将参数结果按弧度数解析为 {{CSSXref("&lt;number&gt;")}} 或 {{CSSXref("&lt;angle&gt;")}}，即 `sin(45deg)`、`sin(0.125turn)` 和 `sin(3.14159 / 4)` 均表示同一值，约为 `0.707`。
 
 ## 语法
 

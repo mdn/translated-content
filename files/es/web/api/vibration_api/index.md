@@ -3,6 +3,8 @@ title: Vibración API
 slug: Web/API/Vibration_API
 ---
 
+{{DefaultAPISidebar("Vibration API")}}
+
 La mayoría de los dispositivos modernos pueden vibrar a través del hardware, esto permite que a través del código de software se pueda emitir estas vibraciones. La **Vibration API** ofrece a las aplicaciones web la capacidad de acceder a este hardware en caso este lo soporte, caso contrario el dispositivo no hace nada.
 
 ## Describiendo vibraciones
@@ -83,4 +85,4 @@ Esta API es claramente accesible a través de dispositivos móbiles. Vibration A
 ## Ver También
 
 - {{domxref("window.navigator.vibrate()")}}
-- [Vibration API - David Walsh](http://davidwalsh.name/vibration-api)
+- [Vibration API - David Walsh](https://davidwalsh.name/vibration-api)

@@ -3,13 +3,14 @@ title: String.prototype.big()
 slug: Web/JavaScript/Reference/Global_Objects/String/big
 ---
 
-{{JSRef("Global_Objects", "String")}} {{deprecated_header}}
+{{JSRef}} {{deprecated_header}}
 
 ## Сводка
 
 Метод **`big()`** создаёт HTML-элемент {{HTMLElement("big")}}, заставляющий строку отображаться большим шрифтом.
 
-> **Примечание:** элемент \<big> был удалён из [HTML5](/ru/docs/Web/Guide/HTML/HTML5) и больше не должен использоваться. Вместо него веб-разработчикам следует использовать свойства [CSS](/ru/docs/Web/CSS).
+> [!NOTE]
+> Элемент \<big> был удалён из [HTML5](/ru/docs/Glossary/HTML5) и больше не должен использоваться. Вместо него веб-разработчикам следует использовать свойства [CSS](/ru/docs/Web/CSS).
 
 ## Синтаксис
 

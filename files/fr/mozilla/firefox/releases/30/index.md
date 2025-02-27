@@ -27,9 +27,9 @@ _Pas de changement._
 
 ### JavaScript
 
-- Nouvelles [compréhensions de tableaux](/fr/docs/Web/JavaScript/Reference/Operators/Array_comprehensions) compatibles ES6 `[for (item of iterable) item]` et [compréhensions de générateur](/fr/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions) `(for (item of iterable) item)` ont été implémentées ([bug Firefox 979865](https://bugzil.la/979865)).
-- [Les tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Property_access) sont désormais extensibles et prennent en charge de nouvelles propriétés nommées ([bug Firefox 695438](https://bugzil.la/695438)).
-- La propriété {{jsxref("Error.prototype.stack")}} contient désormais des numéros de colonne ([bug Firefox 762556](https://bugzil.la/762556)) et a été améliorée [lors de l'utilisation des appels `Function()` et `eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack#Stack_of_eval'ed_code). Cela peut vous aider à mieux déboguer le code JavaScript minifié ou généré.
+- Nouvelles [compréhensions de tableaux](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) compatibles ES6 `[for (item of iterable) item]` et [compréhensions de générateur](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) `(for (item of iterable) item)` ont été implémentées ([bug Firefox 979865](https://bugzil.la/979865)).
+- [Les tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#property_access) sont désormais extensibles et prennent en charge de nouvelles propriétés nommées ([bug Firefox 695438](https://bugzil.la/695438)).
+- La propriété {{jsxref("Error.prototype.stack")}} contient désormais des numéros de colonne ([bug Firefox 762556](https://bugzil.la/762556)) et a été améliorée [lors de l'utilisation des appels `Function()` et `eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack#stack_of_eval'ed_code). Cela peut vous aider à mieux déboguer le code JavaScript minifié ou généré.
 - La méthode `Promise.cast()` a été renommée {{jsxref("Promise.resolve()")}} ([bug Firefox 966348](https://bugzil.la/966348)).
 
 ### Interfaces/APIs/DOM
@@ -43,7 +43,7 @@ _Pas de changement._
 - La prise en charge de base des régions Hit sur canvas a été ajouté: les méthodes {{domxref("CanvasRenderingContext2D.addHitRegion()")}} et {{domxref("CanvasRenderingContext2D.removeHitRegion()")}} ont été ajoutées. Ceux-ci sont désactivés par défaut; pour les activer, définissez la préférence `canvas.hitregions.enabled` sur `true` ([bug Firefox 966591](https://bugzil.la/966591)).
 - Le non standard, et obsolète depuis Firefox 15, {{domxref("Blob.mozSlice")}} n'est plus supporté ([bug Firefox 961804](https://bugzil.la/961804)).
 - Les non standards {{domxref("ArchiveReader")}} et {{domxref("ArchiveRequest")}} ne sont plus exposés au Web ([bug Firefox 968883](https://bugzil.la/968883)).
-- Les [constructeurs WebIDL](http://dxr.mozilla.org/mozilla-central/source/dom/webidl/) ne peuvent plus être appelés en tant que fonctions. Ils doivent être précédés du mot-clé `new` ([bug Firefox 916644](https://bugzil.la/916644)).
+- Les [constructeurs WebIDL](https://searchfox.org/mozilla-central/source/dom/webidl/) ne peuvent plus être appelés en tant que fonctions. Ils doivent être précédés du mot-clé `new` ([bug Firefox 916644](https://bugzil.la/916644)).
 - Ajout du support d'une nouvelle valeur (`alpha`) pour le deuxième paramètre, optionnel, de la méthode {{domxref("HTMLCanvasElement.getContext()")}} permettant de définir si le mélange alpha doit être stocké ou non pour ce contexte. Dans le cas contraire, la valeur alpha par pixel dans ce magasin est toujours de `1.0`. Cela permet au back-end de mettre en œuvre une procédure accélérée ([bug Firefox 982480](https://bugzil.la/982480)).
 - {{domxref("GlobalWorkerScope.consle")}} renvoie maintenant pour le {{domxref("Console")}} normal ; {{domxref("WorkerConsole")}} a été supprimé ([bug Firefox 965860](https://bugzil.la/965860)).
 - L'extension {{domxref("WebGL_debug_shaders")}} WebGL a été implémentée ([bug Firefox 968374](https://bugzil.la/968374)).

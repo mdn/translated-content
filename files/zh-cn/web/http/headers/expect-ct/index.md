@@ -13,9 +13,11 @@ slug: Web/HTTP/Headers/Expect-CT
 - 握手期间发送的 `signed_certificate_timestamp` 类型的 TLS 扩展
 - 支持 OCSP 装订（即，`status_request` TLS 扩展）并提供 `SignedCertificateTimestampList`
 
-> **备注：** 当站点启用 `Expect-CT` 标头时，会要求浏览器检查当前站点的证书是否出现在[**公共证书透明度日志**](https://github.com/google/certificate-transparency-community-site/blob/master/docs/google/known-logs.md)之中。
+> [!NOTE]
+> 当站点启用 `Expect-CT` 标头时，会要求浏览器检查当前站点的证书是否出现在[**公共证书透明度日志**](https://github.com/google/certificate-transparency-community-site/blob/master/docs/google/known-logs.md)之中。
 
-> **备注：** 浏览器会**忽略** HTTP 连接的 `Expect-CT` 标头；该标头仅在 HTTPS 连接中有效。
+> [!NOTE]
+> 浏览器会**忽略** HTTP 连接的 `Expect-CT` 标头；该标头仅在 HTTPS 连接中有效。
 
 > **备注：** `Expect-CT` 标头可能会在 2021 年 6 月废弃。从 2018 年 5 月起，新的证书默认支持证书签署时间戳（SCT）。2018 年 3 月之前的证书的有效期为 39 个月，这些证书都会在 2021 年 6 月前过期。
 
@@ -34,7 +36,7 @@ slug: Web/HTTP/Headers/Expect-CT
 
 ## 语法
 
-```
+```http
 Expect-CT: report-uri="<uri>",
            enforce,
            max-age=<age>
@@ -64,7 +66,7 @@ Expect-CT: report-uri="<uri>",
 
 以下示例指定在 24 小时内遵守证书透明度政策，并向 `foo.example.com` 报告违规行为。
 
-```
+```http
 Expect-CT: max-age=86400, enforce, report-uri="https://foo.example.com/report"
 ```
 

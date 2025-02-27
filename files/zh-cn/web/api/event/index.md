@@ -1,11 +1,13 @@
 ---
 title: Event
 slug: Web/API/Event
+l10n:
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-**`Event`** 接口表示在 DOM 中出现的事件。
+**`Event`** 接口表示在 [`EventTarget`](/zh-CN/docs/Web/API/EventTarget) 上出现的事件。
 
 一些事件是由用户触发的，例如鼠标或键盘事件；或者由 API 生成以表示异步任务的进度。事件也可以通过编程方式触发，例如对元素调用 [`HTMLElement.click()`](/zh-CN/docs/Web/API/HTMLElement/click) 方法，或者定义一些自定义事件，再使用 [`EventTarget.dispatchEvent()`](/zh-CN/docs/Web/API/EventTarget/dispatchEvent) 方法将自定义事件派发往指定的目标（target）。
 
@@ -13,9 +15,10 @@ slug: Web/API/Event
 
 很多 DOM 元素可以被设计接收 (或者监听) 这些事件，并且执行代码去响应（或者处理）它们。通过 [`EventTarget.addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 方法可以将事件处理器绑定到不同的 [HTML 元素](/zh-CN/docs/Web/HTML/Element)上（比如 `<button>`、`<div>`、`<span>` 等等）。这种方式基本替换了老版本中使用 HTML [事件处理器属性](/zh-CN/docs/Web/HTML/Global_attributes)的方式。此外，在正确添加后，还可以使用 [`removeEventListener()`](/zh-CN/docs/Web/API/EventTarget/removeEventListener) 方法移除这些事件处理器。
 
-> **备注：** 一个元素可以绑定多个事件处理器，甚至是对于完全相同的事件。尤其是相互独立的代码模块出于不同的目的附加事件处理器。（比如，一个网页同时有着广告模块和统计模块同时监听视频播放。）
+> [!NOTE]
+> 一个元素可以绑定多个事件处理器，甚至是对于完全相同的事件。尤其是相互独立的代码模块出于不同的目的附加事件处理器。（比如，一个网页同时有着广告模块和统计模块同时监听视频播放。）
 
-当有很多嵌套的元素，每个元素都有着自己的事件处理器，事件处理过程会变得非常复杂。尤其当一个父元素和子元素绑定完全相同的事件时，因为结构上的重叠，事件在技术层面发生在两个元素中，触发的顺序取决于每个处理器的[事件冒泡和事件捕获](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#事件冒泡及捕获)的设置。
+当有很多嵌套的元素，每个元素都有着自己的事件处理器，事件处理过程会变得非常复杂。尤其当一个父元素和子元素绑定完全相同的事件时，因为结构上的重叠，事件在技术层面发生在两个元素中，触发的顺序取决于每个处理器的[事件冒泡](/zh-CN/docs/Learn_web_development/Core/Scripting/Event_bubbling)的设置。
 
 ## 基于 Event 的接口
 
@@ -94,7 +97,7 @@ slug: Web/API/Event
 - {{domxref("Event.timeStamp")}} {{ReadOnlyInline}}
   - : 事件创建时的时间戳（精度为毫秒）。按照规范，这个时间戳是 Unix 纪元起经过的毫秒数，但实际上，在不同的浏览器中，对此时间戳的定义也有所不同。另外，规范正在将其修改为 {{domxref("DOMHighResTimeStamp")}}。
 - {{domxref("Event.type")}} {{ReadOnlyInline}}
-  - : 事件的类型，不区分大小写。
+  - : 事件的类型的名称。
 
 ### 遗留属性和非标准属性
 
@@ -133,8 +136,9 @@ slug: Web/API/Event
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - 可用的事件类型：[Event 参考](/zh-CN/docs/Web/Events)
-- [Event 目标的比较](/zh-CN/docs/Web/API/Event/Comparison_of_Event_Targets)（目标 `target` vs 当前目标 `currentTarget` vs 相关目标 `relatedTarget` vs 初始目标 `originalTarget`）
+- [事件介绍](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)
+- [事件冒泡](/zh-CN/docs/Learn_web_development/Core/Scripting/Event_bubbling)
 - [创建和触发自定义事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events)

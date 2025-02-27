@@ -1,15 +1,17 @@
 ---
-title: Semantics（语义）
+title: 语义
 slug: Glossary/Semantics
+l10n:
+  sourceCommit: a29769d6d10261f771321eb60f3990029c160924
 ---
 
 {{GlossarySidebar}}
 
-在编程中，**语义**指的是一段代码的含义 — 例如 "运行这行 JavaScript 代码会产生怎样的影响？", 或者 "这个 HTML 的元素有什么作用，扮演了什么样的角色"（而不只是 "它看上去像是什么？"。）
+程序设计中，**语义**指的是一段代码的含义。例如，“运行这行 JavaScript 代码会产生怎样的影响？”、“这个 HTML 的元素有什么作用，扮演了什么样的角色”（而不只是“它看上去像是什么？”）
 
 ## JavaScript 中的语义
 
-JavaScript 中，考虑一个函数，该函数接受一个字符串参数，然后返回一个以该字符串为文本内容的{{htmlelement("li")}}元素。如果该函数调用是`build('Peach')`，你会需要去看代码才能理解该函数做了什么吗，如果是`createLiWithContent('Peach')`呢？
+JavaScript 中，考虑一个函数，该函数接受一个字符串参数，然后返回一个以该字符串为文本内容的 {{htmlelement("li")}} 元素。如果该函数调用是 `build('Peach')`，你会需要去看代码才能理解该函数做了什么吗？`createLiWithContent('Peach')` 呢？
 
 ## CSS 中的语义
 
@@ -17,25 +19,23 @@ CSS 中，考虑给一个列表设置样式，`li` 元素代表不同类型的�
 
 ## HTML 中的语义
 
-HTML 中，例如，{{htmlelement("h1")}} 元素是一个语义化元素，赋予了它包裹着的文本“这个页面中最高级别标题功能“的角色 (或含义) 。
+HTML 中，例如，{{htmlelement("h1")}} 元素是一个语义化元素，赋予了它包裹着的文本“这个页面中最高级别标题”的角色（或含义）。
 
 ```html
-<h1>This is a top level heading</h1>
+<h1>这是顶级标题</h1>
 ```
 
-默认情况下，绝大多数浏览器的 [user agent stylesheet](/zh-CN/docs/Web/CSS/Cascade#User-agent_stylesheets) 将会赋予一个 {{htmlelement("h1")}} 元素很大的字号尺寸从而使它看上去更像是一个标题（虽然你可以把它格式化为任何你想要的样式），但是更重要的是它的语义会被在很多地方以不同的方式被使用到，例如搜索引擎会把它包含的内容作为一个重要的关键词，从而影响这个页面在搜索结果中的排序（参见{{ glossary ("SEO")}}），而且屏幕阅读器会使用它来帮助视障用户更好的使用这个页面。
+默认情况下，绝大多数浏览器的[用户代理样式表](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#用户代理样式表)会赋予 {{htmlelement("h1")}} 元素很大的字号尺寸从而让它看上去更像是一个标题（虽然你可以把它格式化为任何你想要的样式）。
 
-另一方面，你可以通过样式（CSS）来让任何的元素*看上去*像是一个最高级别的标题，就像下面所展示的方法一样：
+另一方面，你可以让任何的元素*看上去*像是最高级别的标题，就像下面所展示的一样：
 
 ```html
-<span style="font-size: 32px; margin: 21px 0;"
-  >Is this a top level heading?</span
->
+<span style="font-size: 32px; margin: 21px 0;">这不是一个顶级标题！</span>
 ```
 
-这将会把这个元素渲染得像是一个最高级别的标题，但是它的值没有对应到最“最高级别标题”这一语义，所以在此之上，它不会获得更多额外的描述（只是一个普通“span”元素而不是“最高级别标题”这一语义）。所以在恰当的需求下使用恰当的 HTML 元素是一个不错的主意。
+这会让它看上去像是一个顶级标题，但是它没有语义价值，所以它不会得到上面描述的额外的好处。因此，使用正确的 HTML 元素来做正确的工作是一个好主意。
 
-HTML 应该编写为表示将要填充的数据，而不是基于其默认的演示样式。演示（应该是什么样子），是 [CSS](/zh-CN/docs/Web/CSS) 的唯一责任。
+HTML 应该编写为表示将要填充的*数据*，而不是基于其默认的演示样式。演示（应该是什么样子），是 [CSS](/zh-CN/docs/Web/CSS) 的唯一责任。
 
 写语义标记的一些好处如下：
 
@@ -49,7 +49,7 @@ HTML 应该编写为表示将要填充的数据，而不是基于其默认的演
 
 ## 语义化元素
 
-这是一些语义化的元（[source](https://www.w3schools.com/html/html5_semantic_elements.asp)）。
+这里是大约 100 个语义化[元素](/zh-CN/docs/Web/HTML/Element)中的一些：
 
 - {{htmlelement("article")}}
 - {{htmlelement("aside")}}
@@ -65,28 +65,11 @@ HTML 应该编写为表示将要填充的数据，而不是基于其默认的演
 - {{htmlelement("summary")}}
 - {{htmlelement("time")}}
 
-## 了解更多
+## 参见
 
-- [HTML element reference](/zh-CN/docs/Web/HTML/Element#Inline_text_semantics) on MDN
-- [Using HTML sections and outlines](/zh-CN/docs/Web/HTML/Element/Heading_Elements#Problems_solved_by_HTML5) on MDN
-- [HTML5 Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp) on w3schools
-- [The meaning of semantics in computer science](https://zh.wikipedia.org/wiki/Semantics#Computer_science) on Wikipedia
-- [MDN Web Docs Glossary](/zh-CN/docs/Glossary)
+- MDN 上的 [HTML 元素参考](/zh-CN/docs/Web/HTML/Element#inline_text_semantics)
+- MDN 上的[使用 HTML 章节和大纲](/zh-CN/docs/Web/HTML/Element/Heading_Elements#使用要点)
+- 维基百科上的[计算机科学中语义的意义](https://en.wikipedia.org/wiki/Semantics#Computer_science)
+- 相关术语：
 
   - {{Glossary("SEO")}}
-
-- Some of semantic elements in HTML
-
-  - {{htmlelement("article")}}
-  - {{htmlelement("aside")}}
-  - {{htmlelement("details")}}
-  - {{htmlelement("figcaption")}}
-  - {{htmlelement("figure")}}
-  - {{htmlelement("footer")}}
-  - {{htmlelement("header")}}
-  - {{htmlelement("main")}}
-  - {{htmlelement("mark")}}
-  - {{htmlelement("nav")}}
-  - {{htmlelement("section")}}
-  - {{htmlelement("summary")}}
-  - {{htmlelement("time")}}

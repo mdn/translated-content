@@ -101,7 +101,7 @@ A tabela a seguir lista os métodos de objetos {{jsxref("String")}}.
 
 ### Template strings com várias linhas
 
-[Template strings](/pt-BR/docs/Web/JavaScript/Reference/template_strings) são strings literais que permitem expressões no seu conteúdo. Você pode usar os recursos de strings com multiplas linhas e interpolações de string com as template strings.
+[Template strings](/pt-BR/docs/Web/JavaScript/Reference/Template_literals) são strings literais que permitem expressões no seu conteúdo. Você pode usar os recursos de strings com multiplas linhas e interpolações de string com as template strings.
 
 Template strings são declaradas com o acento grave (\`\`) ao invés de aspas simples ou aspas duplas. Essas strings podem conter place holders. Os place holders são indicados pelo cifrão e com chaves ( `${expressao}` ).
 
@@ -149,7 +149,7 @@ console.log(`Quinze é ${a + b} e\nnão ${2 * a + b}.`);
 // não 20."
 ```
 
-Para mais informações, leia sobre [Template strings](/pt-BR/docs/Web/JavaScript/Reference/template_strings) na [referência JavaScript](/pt-BR/docs/Web/JavaScript/Reference).
+Para mais informações, leia sobre [Template strings](/pt-BR/docs/Web/JavaScript/Reference/Template_literals) na [referência JavaScript](/pt-BR/docs/Web/JavaScript/Reference).
 
 ## Internacionalização
 

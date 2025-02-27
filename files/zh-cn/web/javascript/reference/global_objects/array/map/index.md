@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/map
 
 **`map()`** 方法**创建一个新数组**，这个新数组由原数组中的每个元素都调用一次提供的函数后的返回值组成。
 
-{{EmbedInteractiveExample("pages/js/array-map.html")}}
+{{InteractiveExample("JavaScript Demo: Array.map()")}}
+
+```js interactive-example
+const array1 = [1, 4, 9, 16];
+
+// Pass a function to map
+const map1 = array1.map((x) => x * 2);
+
+console.log(map1);
+// Expected output: Array [2, 8, 18, 32]
+```
 
 ## 语法
 
@@ -45,7 +55,8 @@ map(callbackFn, thisArg)
 - 对已访问索引的更改不会导致再次在这些元素上调用 `callbackFn`。
 - 如果数组中一个现有的、尚未访问的元素被 `callbackFn` 更改，则它传递给 `callbackFn` 的值将是该元素被修改后的值。被[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)的元素则不会被访问。
 
-> **警告：** 上述类型的并发修改经常导致难以理解的代码，通常应避免（特殊情况除外）。
+> [!WARNING]
+> 上述类型的并发修改经常导致难以理解的代码，通常应避免（特殊情况除外）。
 
 `map()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 
@@ -233,7 +244,7 @@ const filteredNumbers = numbers.map((num, index) => {
 ## 参见
 
 - [`core-js` 中 `Array.prototype.map` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.from()")}}

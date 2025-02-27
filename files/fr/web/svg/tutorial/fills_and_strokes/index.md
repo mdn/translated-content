@@ -3,6 +3,8 @@ title: Remplissages et contours
 slug: Web/SVG/Tutorial/Fills_and_Strokes
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutoriel/Paths", "Web/SVG/Tutoriel/Gradients") }}
 
 Il y a différentes manières de colorer des formes: utiliser différents attributs SVG sur l'objet, utiliser du {{glossary("CSS")}} en ligne, une section CSS ou un fichier CSS externe. La plupart des {{glossary("SVG")}} que vous trouverez sur le Web utilisent du CSS en ligne, mais il y a des avantages et inconvénients pour chaque manière.
@@ -21,7 +23,8 @@ La coloration peut être faite en définissant deux attributs sur l'objet: `fill
 
 De plus, vous pouvez spécifier l'opacité de `fill` et/ou `stroke`. Celle-ci est contrôlé par les attributs `fill-opacity` et `stroke-opacity` respectivement.
 
-> **Note :** Dans Firefox 3+, les valeurs rgba sont autorisés, ce qui donne le même effet qu'utiliser les attributs d'opacité. En revanche, pour être compatible avec les autres navigateurs, il est souvent préférable de spécifier fill/stoke-opacity séparemment. Si vous spécifiez à la fois une valeur rgba et fill/stoke-opacity, les deux seront appliquées.
+> [!NOTE]
+> Dans Firefox 3+, les valeurs rgba sont autorisés, ce qui donne le même effet qu'utiliser les attributs d'opacité. En revanche, pour être compatible avec les autres navigateurs, il est souvent préférable de spécifier fill/stoke-opacity séparemment. Si vous spécifiez à la fois une valeur rgba et fill/stoke-opacity, les deux seront appliquées.
 
 ### Options du contour
 
@@ -144,7 +147,8 @@ Finalement, vous pouvez également créer des lignes pointillées en spécifiant
 
 L'attribut `stroke-dasharray` prend une série de nombres séparés par une virgule en argument.
 
-> **Note :** Contrairement aux paths, ces nombres **_doivent_** être séparés par des virgules (les espaces sont ignorés).
+> [!NOTE]
+> Contrairement aux paths, ces nombres **_doivent_** être séparés par des virgules (les espaces sont ignorés).
 
 Le premier nombre spécifie la distance du trait et le second la distance de l'espace. Dans l'exemple précédent, la ligne rouge commence par un trait de 5 suivit d'un espace de 5 (`5,5`), motif qui se répète sur le reste de la ligne. Vous pouvez spécifier davantage de nombres pour créer un motif de pointillés plus complexe. Pour la ligne noire on a spécifié trois nombres (`5,10,5`), ce qui a pour effet d'alterner le motif: (5 trait, 10 espace, 5 trait), (5 espace, 10 trait, 5 espace), etc.
 
@@ -160,7 +164,8 @@ Il existe d'autres propriétés disponibles:
 
 En plus de définir des attributs sur des objets, vous pouvez également utiliser CSS pour styliser les remplissages et les contours. Tous les attributs ne peuvent pas être définis via CSS. Ceux qui traitent le remplissage et le contour le sont généralement, `fill`, `stroke`, `stroke-dasharray`, etc... peuvent donc être définis de cette manière. Les attributs tels que `width`, `height`, ou les commandes des paths, ne peuvent pas être définis par CSS. Le plus simple est de tester pour découvrir ce qui est disponible et ce qui ne l'est pas.
 
-> **Note :** La [spécification SVG](http://www.w3.org/TR/SVG/propidx.html) décide strictement entre les attributs qui sont des _propriétés_ et les autres. Les premiers peuvent être modifiés avec CSS, les derniers non.
+> [!NOTE]
+> La [spécification SVG](https://www.w3.org/TR/SVG/propidx.html) décide strictement entre les attributs qui sont des _propriétés_ et les autres. Les premiers peuvent être modifiés avec CSS, les derniers non.
 
 #### En ligne
 
@@ -172,7 +177,7 @@ CSS peut être inséré en ligne avec l'élément via l'attribut `style`:
 
 #### Dans un section style
 
-Sinon, il peut être déplacé vers une section `style`. Au lieu de l'insérer dans une section `<head>` comme vous le feriez en HTML, on la place dans la zone [`<defs>`](/fr/SVG/Element/defs) du SVG. `<defs>` (abbréviation de definitions) est l'endroit où vous placez les éléments qui n'apparaissent pas dans le SVG directement, mais qui sont utilisés par les autres éléments.
+Sinon, il peut être déplacé vers une section `style`. Au lieu de l'insérer dans une section `<head>` comme vous le feriez en HTML, on la place dans la zone [`<defs>`](/fr/docs/SVG/Element/defs) du SVG. `<defs>` (abbréviation de definitions) est l'endroit où vous placez les éléments qui n'apparaissent pas dans le SVG directement, mais qui sont utilisés par les autres éléments.
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -200,7 +205,7 @@ Déplacer les styles dans une zone comme ceci peut rendre les choses plus simple
 
 #### Dans un fichier externe
 
-Ou vous pouvez spécifier une feuille de style externe pour vos règles CSS avec la [syntaxe XML pour les stylesheets](http://www.w3.org/TR/xml-stylesheet/):
+Ou vous pouvez spécifier une feuille de style externe pour vos règles CSS avec la [syntaxe XML pour les stylesheets](https://www.w3.org/TR/xml-stylesheet/):
 
 ```xml
 <?xml version="1.0" standalone="no"?>

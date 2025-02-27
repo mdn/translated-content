@@ -3,13 +3,26 @@ title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Resumo
 
 O método **splice()** altera o conteúdo de uma lista, adicionando novos elementos enquanto remove elementos antigos.
 
-{{EmbedInteractiveExample("pages/js/array-splice.html")}}
+{{InteractiveExample("JavaScript Demo: Array.splice()")}}
+
+```js interactive-example
+const months = ["Jan", "March", "April", "June"];
+months.splice(1, 0, "Feb");
+// Inserts at index 1
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+months.splice(4, 1, "May");
+// Replaces 1 element at index 4
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+```
 
 ## Sintaxe
 
@@ -38,7 +51,7 @@ array.splice(indice) // SpiderMonkey/Firefox extension
 
 Uma lista contendo os elementos removidos. Se apenas um elemento é removido, por exemplo, uma lista contendo apenas um elemento é retornada. Se nenhum elemento é removido, uma lista vazia é retornada.
 
-**Descrição**
+## Descrição
 
 Se você especificar um número diferente de elementos a inserir comparado ao número de elementos que você está removendo, a lista terá um tamanho diferente no final da execução.
 
@@ -83,7 +96,7 @@ removed = myFish.splice(3, Number.MAX_VALUE);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.splice")}}
+{{Compat}}
 
 ## Veja Também
 

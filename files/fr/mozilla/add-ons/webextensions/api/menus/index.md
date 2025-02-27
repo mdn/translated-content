@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/menus
 
 Ajoutez des éléments au système de menus du navigateur.
 
-Cette API est modélisée dans l'API ["contextMenus"](https://developer.chrome.com/extensions/contextMenus) de Chrome, qui permet aux extensions Chrome d'ajouter des éléments au menu contextuel du navigateur. L'API `browser.menus` ajoute quelques fonctionnalités à l'API de Chrome.
+Cette API est modélisée dans l'API ["contextMenus"](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) de Chrome, qui permet aux extensions Chrome d'ajouter des éléments au menu contextuel du navigateur. L'API `browser.menus` ajoute quelques fonctionnalités à l'API de Chrome.
 
 Avant Firefox 55, cette API s'appelait à l'origine `contextMenus`, et ce nom a été retenu comme alias. Vous pouvez donc utiliser `contextMenus` pour écrire du code qui fonctionne dans Firefox et dans d'autres navigateurs.
 
@@ -34,7 +34,7 @@ Si vous avez créé plus d'un élément de menu contextuel ou plus d'un élémen
 
 ## Icônes
 
-Si vous avez spécifié des icônes pour votre extension à l'aide de la [clé de manifest "icons"](/fr/Add-ons/WebExtensions/manifest.json/icons), votre élément de menu affichera l'icône spécifiée à côté de son libellé. Le navigateur va essayer de choisir une icône de 16x16 pixels pour un affichage normal ou une icône de 32x32 pixels pour un affichage haute définition :
+Si vous avez spécifié des icônes pour votre extension à l'aide de la [clé de manifest "icons"](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons), votre élément de menu affichera l'icône spécifiée à côté de son libellé. Le navigateur va essayer de choisir une icône de 16x16 pixels pour un affichage normal ou une icône de 32x32 pixels pour un affichage haute définition :
 
 ![](menus-2.png)
 
@@ -166,9 +166,9 @@ browser.menus.create(
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
+> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

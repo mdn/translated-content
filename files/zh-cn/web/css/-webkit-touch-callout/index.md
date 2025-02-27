@@ -1,39 +1,52 @@
 ---
-title: "-webkit-touch-callout"
+title: -webkit-touch-callout
 slug: Web/CSS/-webkit-touch-callout
+l10n:
+  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-{{CSSRef}} {{Non-standard_header}}
+{{CSSRef}}{{Non-standard_header}}
 
-## 概述
+`-webkit-touch-callout` [CSS](/zh-CN/docs/Web/CSS) 属性控制触摸并按住触摸目标时显示的默认标注。
 
-`-webkit-touch-callout` 这个[CSS](/zh-CN/docs/Web/CSS) 属性禁用了默认的 callout 展示，callout 是指当触摸并按住一个元素的时候出现的提示。
-
-当在 iOS 上一直按住一个目标元素时，Safari 会展示一个关于这个链接的 callout 信息。`webkit-touch-callout`属性允许禁用掉这一行为。
+在 iOS 上，当目标被触摸并长按时，Safari 会显示关于链接的标注信息。此属性允许禁用该行为。
 
 ## 语法
 
-```
-Formal syntax: default | none
-```
-
 ```css
--webkit-touch-callout: default; /* displays the callout */
--webkit-touch-callout: none; /* disables the callout */
+/* 关键字值 */
+-webkit-touch-callout: default;
+-webkit-touch-callout: none;
 
+/* 全局值 */
 -webkit-touch-callout: initial;
 -webkit-touch-callout: inherit;
+-webkit-touch-callout: revert;
+-webkit-touch-callout: revert-layer;
 -webkit-touch-callout: unset;
 ```
 
-### 可能的值
+### 值
 
 - `default`
-  - : 此值表示显示默认的 callout
+  - : 显示默认的标注。
 - `none`
-  - : 此值表示禁用 callout
+  - : 禁用标注。
+
+## 形式定义
+
+{{CSSInfo}}
+
+## 形式语法
+
+```plain
+-webkit-touch-callout =
+  default | none
+```
 
 ## 示例
+
+### 关闭触摸呼叫框
 
 ```css
 .example {
@@ -41,6 +54,15 @@ Formal syntax: default | none
 }
 ```
 
+## 规范
+
+不属于任何标准。Apple 在 [Safari CSS 参考中有相关描述](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout)。
+
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)
+- [Apple 开发者文档中的 -webkit-touch-callout](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout)

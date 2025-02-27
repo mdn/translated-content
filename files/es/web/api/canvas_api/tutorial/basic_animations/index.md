@@ -41,7 +41,8 @@ Primero {{domxref("window.setInterval()")}}, {{domxref("window.setTimeout()")}},
 
 Si no quieres ninguna interacción del usuario puedes usar la función `setInterval()` que repite la ejecución del código suministrado. Si lo que queremos es hacer un juego, podríamos usar eventos de teclado o el mouse para controlar la animación y usar `setTimeout()`. Al establecer los {{domxref("EventListener")}}, capturamos cualquier interacción del usuario y ejecutamos nuestras funciones de animación.
 
-> **Nota:** En los siguiente ejemplo,usaremos el método para controlar animaciones {{domxref("window.requestAnimationFrame()")}}. El método `requestAnimationFrame` provee formas amigables y mas eficientes para animar llamando cada marco de animación cuando el sistema esta listo para dibujar. La cantidad de devoluciones de llamadas suele ser 60 veces por segundo y podría ser reducido a menor periodo cuando se corre en un segundo plano. Para mas información acerca de los ciclos de animación, especialmente para juegos, Ver el Articulo [Anatomía de un videojuego](/es/docs/Games/Anatomy) en nuestra [GameZona de desarrollo de Juegos](/es/docs/Games).
+> [!NOTE]
+> En los siguiente ejemplo,usaremos el método para controlar animaciones {{domxref("window.requestAnimationFrame()")}}. El método `requestAnimationFrame` provee formas amigables y mas eficientes para animar llamando cada marco de animación cuando el sistema esta listo para dibujar. La cantidad de devoluciones de llamadas suele ser 60 veces por segundo y podría ser reducido a menor periodo cuando se corre en un segundo plano. Para mas información acerca de los ciclos de animación, especialmente para juegos, Ver el Articulo [Anatomía de un videojuego](/es/docs/Games/Anatomy) en nuestra [GameZona de desarrollo de Juegos](/es/docs/Games).
 
 ## Un sistema solar animado
 
@@ -324,8 +325,6 @@ Debajo esta el elemento {{HTMLElement("canvas")}} en el cual va la imagen se va 
 
 ## Otros ejemplos
 
-- [Un ray-caster básico](/es/docs/Web/API/Canvas_API/A_basic_ray-caster)
-  - : Un buen ejemplo de como hacer animaciones usando como control el teclado.
 - [Animaciones avanzadas](/es/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
   - : Vamos a echar un vistazo a algunas técnicas de animación avanzadas y física en el próximo capítulo.
 

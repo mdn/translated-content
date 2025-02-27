@@ -35,7 +35,7 @@ El siguiente ejemplo HTML completo muestra la forma en que es utilizada la propi
 
 ### Ver también
 
-[window.locationbar](/en/DOM/window.locationbar), [window.personalbar](/en/DOM/window.personalbar), [window.scrollbars](/en/DOM/window.scrollbars), [window.statusbar](/en/DOM/window.statusbar), [window.toolbar](/en/DOM/window.toolbar)
+[window.locationbar](/es/docs/Web/API/Window/locationbar), [window.personalbar](/es/docs/Web/API/Window/personalbar), [window.scrollbars](/es/docs/Web/API/Window/scrollbars), [window.statusbar](/es/docs/Web/API/Window/statusbar), [window.toolbar](/es/docs/Web/API/Window/toolbar)
 
 ### Especificación
 

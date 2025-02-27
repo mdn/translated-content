@@ -57,7 +57,8 @@ scroll-snap-type: unset;
 - `proximity`
   - : 若滚动容器当前未在滚动，则其可见视口可以吸附至吸附位置。是否吸附由用户代理根据滚动参数决定。若指定了吸附轴，则此为默认的吸附程度。
 
-> **备注：** 若吸附口中的内容发生变动（如被添加、移动、删除或改变尺寸）或者与滚动吸附相关的任意属性（如 `scroll-snap-type` 或 `scroll-margin`）的值发生变化，则滚动容器将按照 `scroll-snap-type` 最新的值[重新吸附](https://drafts.csswg.org/css-scroll-snap/#re-snap)。
+> [!NOTE]
+> 若吸附口中的内容发生变动（如被添加、移动、删除或改变尺寸）或者与滚动吸附相关的任意属性（如 `scroll-snap-type` 或 `scroll-margin`）的值发生变化，则滚动容器将按照 `scroll-snap-type` 最新的值[重新吸附](https://drafts.csswg.org/css-scroll-snap/#re-snap)。
 
 ## 形式定义
 
@@ -231,4 +232,4 @@ scroll-snap-type: unset;
 ## 参见
 
 - [CSS 滚动吸附](/zh-CN/docs/Web/CSS/CSS_scroll_snap)
-- [用 CSS 滚动吸附明确控制滚动](https://web.dev/css-scroll-snap/)
+- [用 CSS 滚动吸附明确控制滚动](https://web.developers.google.cn/articles/css-scroll-snap)

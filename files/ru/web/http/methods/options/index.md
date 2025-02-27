@@ -76,7 +76,7 @@ Content-Length: 0
 
 ### Предзапросы по технологии CORS
 
-По технологии [CORS](/ru/docs/Web/HTTP/Access_control_CORS), с помощью метода `OPTIONS` направляется предварительный запрос, поэтому сервер может ответить приемлемо ли отправлять запросы этим методом. {{HTTPHeader("Access-Control-Request-Method")}} заголовок уведомляет сервер в составе предварительного запроса о том что, запрос `OPTIONS` будет отправляться на сервер вместе с `POST` запросом. {{HTTPHeader("Access-Control-Request-Headers")}} заголовок уведомляет сервер о том, что при отправке фактического запроса, он будет отправлен с помощью пользовательских заголовков `X-PINGOTHER` и `Content-Type`. В этом случае сервер имеет возможность определять возможно ли принять запрос с такими параметрами.
+По технологии [CORS](/ru/docs/Web/HTTP/CORS), с помощью метода `OPTIONS` направляется предварительный запрос, поэтому сервер может ответить приемлемо ли отправлять запросы этим методом. {{HTTPHeader("Access-Control-Request-Method")}} заголовок уведомляет сервер в составе предварительного запроса о том что, запрос `OPTIONS` будет отправляться на сервер вместе с `POST` запросом. {{HTTPHeader("Access-Control-Request-Headers")}} заголовок уведомляет сервер о том, что при отправке фактического запроса, он будет отправлен с помощью пользовательских заголовков `X-PINGOTHER` и `Content-Type`. В этом случае сервер имеет возможность определять возможно ли принять запрос с такими параметрами.
 
 ```
 OPTIONS /resources/post-here/ HTTP/1.1
@@ -84,7 +84,6 @@ Host: bar.other
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-us,en;q=0.5
 Accept-Encoding: gzip,deflate
-Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
 Connection: keep-alive
 Origin: http://foo.example
 Access-Control-Request-Method: POST
@@ -122,4 +121,4 @@ Content-Type: text/plain
 ## Смотрите также
 
 - {{HTTPHeader("Allow")}} заголовок
-- [CORS](/ru/docs/Web/HTTP/Access_control_CORS)
+- [CORS](/ru/docs/Web/HTTP/CORS)

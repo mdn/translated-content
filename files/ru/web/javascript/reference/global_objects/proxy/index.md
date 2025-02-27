@@ -3,6 +3,8 @@ title: Прокси
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
 
+{{JSRef}}
+
 Объект `Proxy` позволяет создать прокси для другого объекта, может перехватывать и переопределить основные операции для данного объекта.
 
 ## Введение
@@ -265,7 +267,7 @@ console.log(products.latestBrowser); // 'Chrome'
 
 ### Поиск элемента массива по его свойству
 
-Данный прокси расширяет массив дополнительными возможностями. Как вы видите, вы можете гибко "задавать" свойства без использования [`Object.defineProperties`](/ru/docs/JavaScript/Reference/Global_Objects/Object/defineProperties). Данный пример также может быть использован для поиска строки таблицы по её ячейке. В этом случае целью будет [`table.rows`](/ru/docs/DOM/table.rows).
+Данный прокси расширяет массив дополнительными возможностями. Как вы видите, вы можете гибко "задавать" свойства без использования [`Object.defineProperties`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties). Данный пример также может быть использован для поиска строки таблицы по её ячейке. В этом случае целью будет [`table.rows`](/ru/docs/Web/API/HTMLTableElement/rows).
 
 ```js
 let products = new Proxy(
@@ -330,7 +332,7 @@ console.log(products.number); // 3
 
 ### Пример использования всех перехватчиков
 
-В данном примере, использующем все виды перехватчиков, мы попытаемся проксировать _не нативный_ объект, который частично приспособлен для этого - `docCookies,` созданном в разделе ["little framework" и опубликованном на странице `document.cookie`](/ru/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support).
+В данном примере, использующем все виды перехватчиков, мы попытаемся проксировать _не нативный_ объект, который частично приспособлен для этого - `docCookies,` созданном в разделе ["little framework" и опубликованном на странице `document.cookie`](/ru/docs/Web/API/document/cookie#a_little_framework.3a_a_complete_cookies_reader.2fwriter_with_full_unicode_support).
 
 ```js
 /*
@@ -419,7 +421,7 @@ alert(docCookies.my_cookie1);
 
 ## Смотрите также
 
-- ["Proxies are awesome" презентация Brendan Eich на JSConf](http://jsconf.eu/2010/speaker/be_proxy_objects.html) ([слайды](http://www.slideshare.net/BrendanEich/metaprog-5303821))
+- ["Proxies are awesome" презентация Brendan Eich на JSConf](http://jsconf.eu/2010/speaker/be_proxy_objects.html) ([слайды](https://www.slideshare.net/BrendanEich/metaprog-5303821))
 - [Страница предложения ECMAScript Harmony Proxy](http://wiki.ecmascript.org/doku.php?id=harmony:proxies) и [страница ECMAScript Harmony proxy semantics](http://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics)
 - [Руководство по прокси](http://soft.vub.ac.be/~tvcutsem/proxies/)
 - [Старая страница Proxy API](/ru/docs/JavaScript/Old_Proxy_API)
@@ -427,4 +429,4 @@ alert(docCookies.my_cookie1);
 
 ## Лицензионные примечания
 
-Некоторое содержимое (текст, примеры) данной страницы было скопировано или адаптировано со страниц [вики ECMAScript](http://wiki.ecmascript.org/doku.php), имеющей лицензию [CC 2.0 BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/2.0/)
+Некоторое содержимое (текст, примеры) данной страницы было скопировано или адаптировано со страниц [вики ECMAScript](http://wiki.ecmascript.org/doku.php), имеющей лицензию [CC 2.0 BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/2.0/)

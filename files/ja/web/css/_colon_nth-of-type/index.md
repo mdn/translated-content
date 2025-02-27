@@ -1,5 +1,5 @@
 ---
-title: ":nth-of-type()"
+title: :nth-of-type()
 slug: Web/CSS/:nth-of-type
 ---
 
@@ -14,6 +14,8 @@ p:nth-of-type(4n) {
   color: lime;
 }
 ```
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-of-type.html", "tabbed-shorter")}}
 
 ## 構文
 
@@ -71,7 +73,8 @@ p.fancy:nth-of-type(2n + 1) {
 
 {{EmbedLiveSample('Basic_example', 250, 250)}}
 
-> **メモ:** このセレクターを使用して n 番目のクラスを選択する方法はありません。このセレクターは、一致するリストを作成する際に型だけを見ます。しかし、上の例のように `:nth-of-type` の位置**と**クラスに基づいて要素に CSS を適用することができます。
+> [!NOTE]
+> このセレクターを使用して n 番目のクラスを選択する方法はありません。このセレクターは、一致するリストを作成する際に型だけを見ます。しかし、上の例のように `:nth-of-type` の位置**と**クラスに基づいて要素に CSS を適用することができます。
 
 ## 仕様書
 

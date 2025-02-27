@@ -3,17 +3,19 @@ title: map
 slug: Web/HTML/Element/map
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - descripción de uno o dos párrafos
 
   - : **Sus etiquetas son**: \<map> y \</map> (ambas obligatorias).
 
-    **Crea una caja**: [En bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **Crea una caja**: [En bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
-    **Está definido como**: [Elemento especial](/es/HTML/Elemento/Tipos_de_elementos#especial).
+    **Está definido como**: [Elemento especial](/es/docs/HTML/Elemento/Tipos_de_elementos#especial).
 
-    **Puede contener**: Uno o más elementos [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque), o elementos [area](/es/HTML/Elemento/area)
+    **Puede contener**: Uno o más elementos [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque), o elementos [area](/es/docs/Web/HTML/Element/area)
 
 #### Atributos
 
@@ -113,6 +115,7 @@ slug: Web/HTML/Element/map
 
 secciones futuras: == Soporte de los navegadores == == Valores por defecto y visualización en Firefox ==
 
-> **Nota:** Este documento está siendo editado, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!NOTE]
+> Este documento está siendo editado, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
 >
 > ¿Quieres participar en la elaboración de este documento? Para saber como hacerlo consulta MDC:Como ayudar.

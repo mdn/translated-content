@@ -129,7 +129,8 @@ Google などの主要な検索エンジンは、構造化データのために 
   </tbody>
 </table>
 
-> **メモ:** HTML からマイクロデータを抽出するのに手軽なツールとして、 Google の[構造化データテストツール](https://developers.google.com/search/docs/advanced/structured-data)があります。こちらの HTML で試してみてください。
+> [!NOTE]
+> HTML からマイクロデータを抽出するのに手軽なツールとして、 Google の[構造化データテストツール](https://developers.google.com/search/docs/advanced/structured-data)があります。こちらの HTML で試してみてください。
 
 #### HTML
 

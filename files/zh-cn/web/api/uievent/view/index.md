@@ -1,24 +1,22 @@
 ---
-title: 用户界面项目视图
+title: UIEvent：view 属性
 slug: Web/API/UIEvent/view
+l10n:
+  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
-The **`UIEvent.view`** 只读属性返回的生成事件的 {{domxref("document.defaultView")}} (`window` of the document) 对象。在浏览器中，这是事件所在的 {{ domxref("Window") }} 对象。
+**`UIEvent.view`** 只读属性返回 {{glossary("WindowProxy")}} 生成事件的对象。在浏览器中，这个事件发生在 {{domxref("Window")}} 对象。
 
-## 语法
-
-```plain
-var view = event.view;
-```
+## 值
 
 - `view` 是对 `AbstractView` 对象的引用。
 
-## 技术参数
+## 规范
 
 {{Specifications}}
 
-## 浏览器的兼容性
+## 浏览器兼容性
 
 {{Compat}}

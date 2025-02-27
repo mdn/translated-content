@@ -9,7 +9,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
 
 此方法替代 {{jsxref("Date.prototype.getYear()", "getYear()")}} 。
 
-{{EmbedInteractiveExample("pages/js/date-getfullyear.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getFullYear()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+
+console.log(moonLanding.getFullYear());
+// Expected output: 1969
+```
 
 ## 语法
 
@@ -44,7 +51,7 @@ var year = today.getFullYear();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCFullYear()")}}
 - {{jsxref("Date.prototype.setFullYear()")}}

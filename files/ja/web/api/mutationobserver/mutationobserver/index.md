@@ -1,81 +1,143 @@
 ---
-title: MutationObserver.MutationObserver()
+title: "MutationObserver: MutationObserver() コンストラクター"
+short-title: MutationObserver()
 slug: Web/API/MutationObserver/MutationObserver
+l10n:
+  sourceCommit: ca0ef1bb638a3fa4c2436796e8d85f5959996209
 ---
 
 {{APIRef("DOM WHATWG")}}
 
-**MutationObserver()** コンストラクタ ({{domxref("MutationObserver")}} インターフェースの一部) は、指定されたコールバックを DOM イベントが発生したときに実行するオブザーバを作成して返します。DOM の監視はすぐに開始されるわけではありません。最初に {{domxref("MutationObserver.observe", "observe()")}} メソッドを呼び出し、DOM のどの部分を監視し、どのような変更を監視するかを決めなければなりません。
+DOM の **`MutationObserver()`** コンストラクターは、{{domxref("MutationObserver")}} インターフェイスの一部で、指定されたコールバックを DOM イベントが発生したときに実行するオブザーバーを作成して返します。
+
+DOM の監視はすぐに開始されるわけではありません。最初に {{domxref("MutationObserver.observe", "observe()")}} メソッドを呼び出し、DOM のどの部分を監視し、どのような変更を監視するかを決めなければなりません。
 
 ## 構文
 
-```
-var observer = new MutationObserver(callback);
+```js-nolint
+new MutationObserver(callback)
 ```
 
 ### 引数
 
 - `callback`
-  - : 対象となるノードやサブツリー、および指定されたオプションの条件を満たす DOM の変更が起きるたびに呼び出される関数。このコールバック関数は、２つの引数を受け取ります。発生したそれぞれの変更を記述した {{domxref("MutationRecord")}} オブジェクトの配列、そしてコールバックを実行した {{domxref("MutationObserver")}} です。詳細については、以下の[例](#例)を参照してください。
 
-### 戻り値
+  - : 対象となるノードやサブツリー、および指定されたオプションの条件を満たす DOM の変更が起きるたびに呼び出される関数です。
+
+    この `callback` 関数は、2 つの引数を受け取ります。
+
+    1. 発生したそれぞれの変更を記述した {{domxref("MutationRecord")}} オブジェクトの配列。
+    2. `callback` を呼び出した {{domxref("MutationObserver")}} です。これは {{domxref("MutationObserver.disconnect()")}} を使用してオブザーバーを切断するときによく使われます。
+
+    詳細については、以下の[例](#例)を参照してください。
+
+### 返値
 
 指定されたコールバックを DOM の変更が発生したときに呼び出すように設定された {{domxref("MutationObserver")}} オブジェクト。
 
 ## 例
 
-この例では、ノードとそのすべての子において、ツリーへの要素の追加と削除、およびツリー内の要素の属性の変更を監視するように設定された MutationObserver を作成します。
-
 ### コールバック関数
 
-```js
-function callback(mutationList, observer) {
-  mutationList.forEach((mutation) => {
-    switch (mutation.type) {
-      case "childList":
-        /* ツリーに１つ以上の子が追加されたか、ツリーから削除された。
-           mutation.addedNodes と mutation.removedNodes を参照。 */
-        break;
-      case "attributes":
-        /* Mutation.target の要素の属性値が変更された。
-           属性名は mutation.attributeName にあり、
-           以前の値は mutation.oldValue にある。 */
-        break;
-    }
-  });
+この例には、リストに {{htmlelement("li")}} 要素を追加するボタンと、リストから最初の `<li>` を除去するボタンがあります。
+
+リストの変更を通知してもらうために、`MutationObserver` を使用します。コールバック内で、追加と除去をログ出力し、リストが空になったらすぐにオブザーバーを切断します。
+
+「例をリセット」ボタンは、この例を元の状態にリセットします。
+
+#### HTML
+
+```html
+<button id="add">子を追加</button>
+<button id="remove">子を除去</button>
+<button id="reset">例をリセット</button>
+
+<ul id="container"></ul>
+
+<pre id="log"></pre>
+```
+
+#### CSS
+
+```css
+#container,
+#log {
+  height: 150px;
+  overflow: scroll;
+}
+
+#container li {
+  background-color: paleturquoise;
+  margin: 0.5rem;
 }
 ```
 
-callback() 関数は、{{domxref("MutationObserver.observe", "observe()")}} を呼び出して DOM の監視を開始するときに指定された監視リクエストの設定と一致する変更をオブザーバが確認したときに実行されます。
-
-発生した変更の種類 (子のリストの変更または属性の変更のいずれか) は、{{domxref("MutationRecord.type", "mutation.type")}} プロパティを調べることによって判明します。
-
-### オブザーバの作成と開始
-
-このコードでは、実際に監視プロセスを設定します。
+#### JavaScript
 
 ```js
-var targetNode = document.querySelector("#someElement");
-var observerOptions = {
+const add = document.querySelector("#add");
+const remove = document.querySelector("#remove");
+const reset = document.querySelector("#reset");
+const container = document.querySelector("#container");
+const log = document.querySelector("#log");
+
+let namePrefix = 0;
+
+add.addEventListener("click", () => {
+  const newItem = document.createElement("li");
+  newItem.textContent = `item ${namePrefix}`;
+  container.appendChild(newItem);
+  namePrefix++;
+});
+
+remove.addEventListener("click", () => {
+  const itemToRemove = document.querySelector("li");
+  if (itemToRemove) {
+    itemToRemove.parentNode.removeChild(itemToRemove);
+  }
+});
+
+reset.addEventListener("click", () => {
+  document.location.reload();
+});
+
+function logChanges(records, observer) {
+  for (const record of records) {
+    for (const addedNode of record.addedNodes) {
+      log.textContent = `追加: ${addedNode.textContent}\n${log.textContent}`;
+    }
+    for (const removedNode of record.removedNodes) {
+      log.textContent = `除去: ${removedNode.textContent}\n${log.textContent}`;
+    }
+    if (record.target.childNodes.length === 0) {
+      log.textContent = `切断しました\n${log.textContent}`;
+      observer.disconnect();
+    }
+    console.log(record.target.childNodes.length);
+  }
+}
+
+const observerOptions = {
   childList: true,
-  attributes: true,
-  subtree: true, // 省略するか、false に設定すると、親ノードへの変更のみを監視する。
+  subtree: true,
 };
 
-var observer = new MutationObserver(callback);
-observer.observe(targetNode, observerOptions);
+const observer = new MutationObserver(logChanges);
+observer.observe(container, observerOptions);
 ```
 
-目的のサブツリーは、ID が "someElement" の要素を検索することで見つかります。オブザーバのオプションのセットは、observerOptions のレコードで設定します。この中で、childList と attributes の両方に true の値を指定することで、目的の情報を得ることができます。
+#### 結果
 
-そして、callback() 関数を指定して observer をインスタンス化し、対象のノードとオプションのレコードを指定して observe() を呼び出すことで、対象の DOM ノードの監視を開始します。
+「子を追加」をクリックするとリストアイテムが追加され、「子を除去」をクリックするとリストアイテムが除去されます。 オブザーバーのコールバックは追加と除去をログ出力します。 リストが空になるとすぐに、オブザーバーは「切断」メッセージをログ出力し、オブザーバーを切断します。
 
-この時点から {{domxref("MutationObserver.disconnect", "disconnect()")}} が呼び出されるまで、targetNode をルートとする DOM ツリーに要素が追加されたり削除されたり、あるいは要素の属性が変更されるたびに `callback()` が呼び出されます。
+「例をリセット」ボタンを押すと、この例が再読み込みされるので、もう一度試すことができます。
+
+{{EmbedLiveSample("Observing child elements", 0, 400)}}
 
 ## 仕様書
 
 {{Specifications}}
 
-## 各ブラウザの対応状況
+## ブラウザーの互換性
 
-{{Compat("api.MutationObserver.MutationObserver")}}
+{{Compat}}

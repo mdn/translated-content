@@ -84,7 +84,7 @@ console.log(document.getElementById("div"));
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.background-blend-mode")}}
+{{Compat}}
 
 ## Veja também
 

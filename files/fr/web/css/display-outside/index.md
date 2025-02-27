@@ -23,9 +23,11 @@ Une valeur `<display-outside>` peut être l'un des mots-clés suivants.
 
     Les éléments _run-in_ se comportent comme des éléments de bloc ou en ligne selon les éléments environnants. Autrement dit, si la boîte _run-in_ contient une boîte de bloc, l'élément se comportera comme un bloc. Si la boîte de bloc suit une boîte _run-in_, la boîte _run-in_ deviendra la première boîte en ligne de la boîte de bloc. Si une boîte en ligne succède à l'élément, la boîte _run-in_ deviendra une boîte de bloc.
 
-> **Note :** Browsers that support the two value syntax, on finding the outer value only, such as when `display: block` or `display: inline` is specified, will set the inner value to `flow`. This will result in expected behavior; for example if you specify an element to be block, you would expect that the children of that element would participate in block and inline normal flow layout.
+> [!NOTE]
+> Browsers that support the two value syntax, on finding the outer value only, such as when `display: block` or `display: inline` is specified, will set the inner value to `flow`. This will result in expected behavior; for example if you specify an element to be block, you would expect that the children of that element would participate in block and inline normal flow layout.
 >
-> **Note :** Les navigateurs qui prennent en charge la syntaxe avec deux valeurs utiliseront la valeur par défaut `flow` pour le mode intérieur si `display: block` ou `display: inline`. On a ainsi le résultat attendu (si on souhaite qu'un élément se comporte comme un bloc, on s'attend à ce que les éléments fils de cet élément contribuent à la disposition normale en bloc et en ligne).
+> [!NOTE]
+> Les navigateurs qui prennent en charge la syntaxe avec deux valeurs utiliseront la valeur par défaut `flow` pour le mode intérieur si `display: block` ou `display: inline`. On a ainsi le résultat attendu (si on souhaite qu'un élément se comporte comme un bloc, on s'attend à ce que les éléments fils de cet élément contribuent à la disposition normale en bloc et en ligne).
 
 ### Syntaxe formelle
 
@@ -68,5 +70,5 @@ span {
   - {{CSSxRef("&lt;display-box&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [Block and Inline layout in Normal Flow](/fr/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [Formatting Contexts explained](/fr/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
+- [Block and Inline layout in Normal Flow](/fr/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
+- [Formatting Contexts explained](/fr/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)

@@ -24,7 +24,7 @@ slug: Web/CSS/CSS_positioned_layout
 
 ## Guías
 
-- [Entendiendo la propiedad CSS z-index](/es/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
+- [Entendiendo la propiedad CSS z-index](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
   - : Presenta la noción de contexto de apilamiento y explica cómo funciona el ordenamiento en el eje-Z a través de varios ejemplos.
 
 ## Especificaciones

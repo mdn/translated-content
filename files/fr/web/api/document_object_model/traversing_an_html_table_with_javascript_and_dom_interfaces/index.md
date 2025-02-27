@@ -3,11 +3,14 @@ title: Explorer un tableau HTML avec des interfaces DOM et JavaScript
 slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 ---
 
+{{DefaultAPISidebar("DOM")}}
+
 ## Introduction
 
 Cet article propose une vue d'ensemble de certaines méthodes DOM Level 1 fondamentales et la façon de les utiliser depuis JavaScript. Vous y apprendrez à créer, accéder, contrôler et supprimer dynamiquement des éléments HTML. Les méthodes DOM décrites ne sont pas spécifiques au HTML et s'appliquent également au XML. Les exemples fonctionneront dans tous les navigateurs offrant le support complet du DOM niveau 1, ce qui est le cas de tous les navigateurs basés sur Mozilla comme Firefox ou Netscape. Les morceaux de code de ce document fonctionneront également dans Internet Explorer 5.
 
-> **Note :** Les méthodes décrites ici font partie de la spécification Document Object Model level 1 (Core). DOM level 1 comprend des méthodes destinées à l'accès et à la manipulation des documents (DOM 1 core) ainsi que des méthodes spécifiques aux documents HTML (DOM 1 HTML).
+> [!NOTE]
+> Les méthodes décrites ici font partie de la spécification Document Object Model level 1 (Core). DOM level 1 comprend des méthodes destinées à l'accès et à la manipulation des documents (DOM 1 core) ainsi que des méthodes spécifiques aux documents HTML (DOM 1 HTML).
 
 ## Création d'un tableau HTML dynamiquement
 
@@ -214,7 +217,8 @@ En exécutant cet exemple, vous pouvez remarquer que les mots «&nbsp;hello&nbsp
 
 ![](sample2b2.jpg)
 
-> **Note :** L'utilisation de `createTextNode` et de `appendChild` permet aisément d'ajouter un espace entre ces deux mots. Notez cependant que la méthode `appendChild` ajoute le nouvel enfant à la suite de ceux déjà présents, à la manière de «&nbsp;world&nbsp;» placé après «&nbsp;hello&nbsp;». Pour ajouter un nœud texte entre «&nbsp;hello&nbsp;» et «&nbsp;world&nbsp;» (par exemple un espace), utilisez `insertBefore` à la place de `appendChild`.
+> [!NOTE]
+> L'utilisation de `createTextNode` et de `appendChild` permet aisément d'ajouter un espace entre ces deux mots. Notez cependant que la méthode `appendChild` ajoute le nouvel enfant à la suite de ceux déjà présents, à la manière de «&nbsp;world&nbsp;» placé après «&nbsp;hello&nbsp;». Pour ajouter un nœud texte entre «&nbsp;hello&nbsp;» et «&nbsp;world&nbsp;» (par exemple un espace), utilisez `insertBefore` à la place de `appendChild`.
 
 ### Création de nouveaux éléments avec l'objet document et la méthode `createElement(...)`
 
@@ -263,7 +267,8 @@ On peut décomposer la création du tableau de Exemple1.html en trois étapes&nb
 
 Le code source qui suit est un exemple commenté qui crée le tableau de Exemple1.
 
-> **Note :** Il y a une ligne de code supplémentaire à la fin de la fonction `start()`, qui définit la propriété bordure du tableau en employant la méthode `setAttribute`. `setAttribute` utilise deux arguments&nbsp;: le nom de l'attribut et sa valeur, et permet de définir n'importe quelle propriété de n'importe quel élément.
+> [!NOTE]
+> Il y a une ligne de code supplémentaire à la fin de la fonction `start()`, qui définit la propriété bordure du tableau en employant la méthode `setAttribute`. `setAttribute` utilise deux arguments&nbsp;: le nom de l'attribut et sa valeur, et permet de définir n'importe quelle propriété de n'importe quel élément.
 
 ```html
 <head>
@@ -316,7 +321,8 @@ Le code source qui suit est un exemple commenté qui crée le tableau de Exemple
 
 Cet exemple présente deux nouveaux attributs DOM. D'abord, l'attribut `childNodes` qui est utilisé pour récupérer la liste des nœuds enfants de `cel`. A la différence de `getElementsByTagName`, la liste renvoyée par `childNodes` comporte tous les enfants sans considération de type. Une fois la liste obtenue, la notation `[x]` est employée pour sélectionner l'élément enfant désiré. Dans cet exemple, le nœud texte de la seconde cellule de la seconde ligne du tableau est enregistré dans `celtext`. Ensuite, un nouveau nœud texte contenant les données de `celtext` est greffé en tant qu'enfant sur l'élément \<body>.
 
-> **Note :** Si l'objet est un nœud texte, vous pouvez récupérer le texte qu'il contient en employant l'attribut `data`.
+> [!NOTE]
+> Si l'objet est un nœud texte, vous pouvez récupérer le texte qu'il contient en employant l'attribut `data`.
 
 ```js
 mybody = document.getElementsByTagName("body")[0];

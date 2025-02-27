@@ -7,7 +7,8 @@ slug: Web/API/Attr/localName
 
 La propriété **`Attr.localName`**, en lecture seule, renvoie la partie locale du nom qualifié d'un élément.
 
-> **Note :** Avant DOM4, cette API était définie dans l'interface {{domxref("Node")}}.
+> [!NOTE]
+> Avant DOM4, cette API était définie dans l'interface {{domxref("Node")}}.
 
 ## Syntaxe
 
@@ -45,7 +46,8 @@ element.addEventListener("click", function () {
 
 Le nom local d'un attribut est la partie du nom qualifié de cet attribut avant les deux points. les noms qualifiés sont utilisés en XML, dans les espaces de nom de certains documents.
 
-> **Note :** dans Gecko 1.9.2 et avant, cette propriété renvoie le nom en majuscule pour les attributs HTML du DOM HTML (contrairement aux atttributs XHTML ). Dans les versions plus récentes, en accord avec HTML5, cette propriété renvoie la casse correspondante au DOM utilisé, c'est-à-dire en minuscule pour les attributs du DOM XHTMl et du DOM HTML.
+> [!NOTE]
+> Dans Gecko 1.9.2 et avant, cette propriété renvoie le nom en majuscule pour les attributs HTML du DOM HTML (contrairement aux atttributs XHTML ). Dans les versions plus récentes, en accord avec HTML5, cette propriété renvoie la casse correspondante au DOM utilisé, c'est-à-dire en minuscule pour les attributs du DOM XHTMl et du DOM HTML.
 
 ## Spécifications
 

@@ -3,17 +3,17 @@ title: API de MediaStream
 slug: Web/API/Media_Capture_and_Streams_API
 ---
 
-{{SeeCompatTable}}
+{{DefaultAPISidebar("Media Capture and Streams")}}{{SeeCompatTable}}
 
-La API de proceso **_MediaStream_**, a veces llamada _Media Stream API_ o _Stream API_, es parte de la norma [WebRTC](/es/docs/WebRTC) y describe un flujo de datos de audio o video, los métodos para trabajar con ellos, las limitaciones asociadas con este tipo de datos, las respuestas de error y éxito al usar los datos asincrónicamente y los eventos que se disparan durante el proceso.
+La API de proceso **_MediaStream_**, a veces llamada _Media Stream API_ o _Stream API_, es parte de la norma [WebRTC](/es/docs/Web/API/WebRTC_API) y describe un flujo de datos de audio o video, los métodos para trabajar con ellos, las limitaciones asociadas con este tipo de datos, las respuestas de error y éxito al usar los datos asincrónicamente y los eventos que se disparan durante el proceso.
 
 ## Conceptos Básicos
 
-La API está basada sobre la manipulación de un objeto {{domxref("MediaStream")}} que representa un flujo de datos de audio o video. Generalmente, un objeto `MediaStream` es una simple cadena URL que puede ser usada para referirse a datos almacenados en un {{domxref("Archivo")}} DOM o un objeto {{domxref("Blob")}} creado con {{domxref("window.URL.createObjectURL()")}}, como se lo describe en[**Obtener el video**](/es/docs/WebRTC/taking_webcam_photos#Get_the_video).
+La API está basada sobre la manipulación de un objeto {{domxref("MediaStream")}} que representa un flujo de datos de audio o video. Generalmente, un objeto `MediaStream` es una simple cadena URL que puede ser usada para referirse a datos almacenados en un {{domxref("Archivo")}} DOM o un objeto {{domxref("Blob")}} creado con {{domxref("window.URL.createObjectURL()")}}, como se lo describe en[**Obtener el video**](/es/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos#get_the_video).
 
 Un `MediaStream` está compuesto por más objetos [\[i\]](#_edn1){{domxref("MediaStreamTrack")}} que representan varias **pistas** de audio o video. Cada `MediaStreamTrack` puede tener uno o más **canales**. El canal representa la unidad menor de un flujo de medio, como una señal de audio asociada a un parlante específico, como el _izquierdo_ o el _derecho_ en una pista de audio estéreo.
 
-Los objetos `MediaStream` poseen una sola **entrada** y **salida[**\[ii\]**](#edn2).** Un objeto `MediaStream` creado con [**getUserMedia()**](/es/docs/Web/API/Navigator.getUserMedia?redirectlocale=en-US&redirectslug=WebRTC%2Fnavigator.getUserMedia) se denomina _local_ y tiene como origen de entrada una de las cámaras o micrófonos del usuario. Un MediaStream no local puede estar representando un elemento de medio como {{HTMLElement("video")}} o {{HTMLElement("audio")}}, un flujo originado en la red y obtenido a través de la [\[iii\]](#_edn3)[_**PeerConnection API**_](/es/docs/WebRTC/PeerConnection_API) o un flujo creado con la [**API de Audio Web**](/es/docs/Web_Audio_API) [\[iv\]](#edn4){{domxref("MediaStreamAudioSourceNode")}}. La salida de un objeto `MediaStream` está enlazada a un **consumidor.** El mismo puede ser un elemento de medio como `<audio> o <video>`, la [**PeerConnection API**](/es/docs/WebRTC/PeerConnection_API) de WebRTC o una [**API de Audio Web**](/es/docs/Web_Audio_API) [\[v\]](#_edn5){{domxref("MediaStreamAudioDestinationNode")}}.
+Los objetos `MediaStream` poseen una sola **entrada** y **salida[**\[ii\]**](#edn2).** Un objeto `MediaStream` creado con [**getUserMedia()**](/es/docs/Web/API/Navigator.getUserMedia?redirectlocale=en-US&redirectslug=WebRTC%2Fnavigator.getUserMedia) se denomina _local_ y tiene como origen de entrada una de las cámaras o micrófonos del usuario. Un MediaStream no local puede estar representando un elemento de medio como {{HTMLElement("video")}} o {{HTMLElement("audio")}}, un flujo originado en la red y obtenido a través de la [\[iii\]](#_edn3)[_**PeerConnection API**_](/es/docs/WebRTC/PeerConnection_API) o un flujo creado con la [**API de Audio Web**](/es/docs/Web/API/Web_Audio_API) [\[iv\]](#edn4){{domxref("MediaStreamAudioSourceNode")}}. La salida de un objeto `MediaStream` está enlazada a un **consumidor.** El mismo puede ser un elemento de medio como `<audio> o <video>`, la [**PeerConnection API**](/es/docs/WebRTC/PeerConnection_API) de WebRTC o una [**API de Audio Web**](/es/docs/Web/API/Web_Audio_API) [\[v\]](#_edn5){{domxref("MediaStreamAudioDestinationNode")}}.
 
 ## Referencia
 
@@ -225,6 +225,6 @@ Remueve una MediaStreamTrack de la lista de pistas.
 
 ## Ver también
 
-- [WebRTC](/es/docs/WebRTC) - la página de introducción a la API
-- [getUserMedia()](/es/docs/WebRTC/navigator.getUserMedia)
-- [Taking webcam photos](/es/docs/WebRTC/taking_webcam_photos) - un tutorial para usar getUserMedia()
+- [WebRTC](/es/docs/Web/API/WebRTC_API) - la página de introducción a la API
+- [getUserMedia()](/es/docs/Web/API/Navigator/getUserMedia)
+- [Taking webcam photos](/es/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - un tutorial para usar getUserMedia()

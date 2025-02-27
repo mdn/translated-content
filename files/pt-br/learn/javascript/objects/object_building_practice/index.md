@@ -37,7 +37,7 @@ Nos artigos anteriores, analisamos todos os detalhes essenciais da teoria e da s
 
 Neste artigo, vamos escrever uma demo clássica de "bolas saltitantes", para mostrar o quão úteis os objetos podem ser em JavaScript. Nossas bolinhas vão saltar pela tela e mudam de cor quando se tocam. O exemplo acabado vai parecer um pouco assim:![](bouncing-balls.png)
 
-Este exemplo fará uso da [Canvas API](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics), para desenhar as bolas na tela, e da [requestAnimationFrame](/pt-BR/docs/Web/API/window/requestAnimationFrame) API para animar toda a exibição — você não precisa ter nenhum conhecimento prévio dessas APIs e esperamos que, no momento em que você terminar este artigo, você esteja interessado em explorá-los mais. Ao longo do caminho, faremos uso de alguns objetos bacanas, e mostraremos algumas técnicas legais, como bolas quicando nas paredes, e verificando se elas se chocaram (também conhecidas como **detecção de colisão**).
+Este exemplo fará uso da [Canvas API](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics), para desenhar as bolas na tela, e da [requestAnimationFrame](/pt-BR/docs/Web/API/Window/requestAnimationFrame) API para animar toda a exibição — você não precisa ter nenhum conhecimento prévio dessas APIs e esperamos que, no momento em que você terminar este artigo, você esteja interessado em explorá-los mais. Ao longo do caminho, faremos uso de alguns objetos bacanas, e mostraremos algumas técnicas legais, como bolas quicando nas paredes, e verificando se elas se chocaram (também conhecidas como **detecção de colisão**).
 
 ## Começando
 
@@ -295,7 +295,8 @@ Agora, para um pouco de diversão, vamos adicionar alguma detecção de colisão
 
 3. Salve e atualize a demonstração novamente, e você verá suas bolas mudando de cor quando colidirem!
 
-> **Nota:** If you have trouble getting this example to work, try comparing your JavaScript code against our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (also see it [running live](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
+> [!NOTE]
+> If you have trouble getting this example to work, try comparing your JavaScript code against our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (also see it [running live](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
 
 ## Sumário
 
@@ -306,7 +307,7 @@ Esperamos que você tenha se divertido escrevendo seu próprio exemplo de bolas 
 ## Veja também
 
 - [Canvas tutorial](/pt-BR/docs/Web/API/Canvas_API/Tutorial) — um guia para iniciantes sobre o uso de telas (canvas) 2D .
-- [requestAnimationFrame()](/pt-BR/docs/Web/API/window/requestAnimationFrame)
+- [requestAnimationFrame()](/pt-BR/docs/Web/API/Window/requestAnimationFrame)
 - [2D collision detection](/pt-BR/docs/Games/Techniques/2D_collision_detection)
 - [3D collision detection](/pt-BR/docs/Games/Techniques/3D_collision_detection)
 - [2D breakout game using pure JavaScript](/pt-BR/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — um ótimo tutorial para iniciantes que mostra como criar um jogo 2D.

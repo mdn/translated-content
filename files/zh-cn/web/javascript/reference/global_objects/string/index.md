@@ -43,7 +43,7 @@ const string4 = new String("A String object");
 "cat"[1]; // gives value "a"
 ```
 
-当使用方括号表示法进行字符串访问时，尝试删除或为其复制的行为将不成功。涉及的属性既不可写（writable）也不可配置（configurable）（更多细节，请参见 {{jsxref("Object.defineProperty()")}}）。
+当使用方括号表示法进行字符串访问时，尝试删除或为其赋值的行为将不成功。涉及的属性既不可写（writable）也不可配置（configurable）（更多细节，请参见 {{jsxref("Object.defineProperty()")}}）。
 
 ### 比较字符串
 
@@ -112,7 +112,8 @@ console.log(typeof strPrim3); // "string"
 console.log(typeof strObj); // "object"
 ```
 
-> **警告：** 你应该基本不会将 `String` 作为构造函数使用。
+> [!WARNING]
+> 你应该基本不会将 `String` 作为构造函数使用。
 
 使用 {{jsxref("Global_Objects/eval", "eval()")}} 时，字符串原始值和 `String` 对象也会给出不同的结果。传递给 `eval` 的原始值被当作源代码处理；而 `String` 对象则被当作对象处理，返回对象。例如：
 
@@ -142,7 +143,7 @@ console.log(eval(s2.valueOf())); // 返回数字 4
 - 使用与 [`toString(10)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 相同的算法转换数字。
 - 使用与 [`toString(10)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) 相同的算法转换 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)。
 - [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 抛出 {{jsxref("TypeError")}}。
-- 对于对象，首先，通过依次调用其 [`[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（hint 为 `"string"`）、`toString()` 和 `valueOf()` 方法将其[转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。然后将生成的原始值转换为一个字符串。
+- 对于对象，首先，通过依次调用其 [`[Symbol.toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（hint 为 `"string"`）、`toString()` 和 `valueOf()` 方法将其[转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。然后将生成的原始值转换为一个字符串。
 
 有几种方法可以在 JavaScript 中实现几乎相同的效果。
 
@@ -156,7 +157,7 @@ console.log(eval(s2.valueOf())); // 返回数字 4
 
 字符串基本上表示为 [UTF-16 码元](https://zh.wikipedia.org/wiki/UTF-16)的序列。在 UTF-16 编码中，每个码元都是 16 位长。这意味着最多有 2<sup>16</sup> 个或 65536 个可能的字符可表示为单个 UTF-16 码元。该字符集称为[基本多语言平面（BMP）](https://zh.wikipedia.org/wiki/Unicode字符平面映射)，包含最常见的字符，如拉丁字母、希腊字母、西里尔字母以及许多东亚字符。每个码元都可以用以 `\u` 开头的 4 个十六进制数字写在一个字符串中。
 
-然而，整个 Unicode 字符集比 65536 大得多。额外的字符以*代理对*（surrogate pair）的形式存储在 UTF-16 中，代理对是一对 16 位码元，表示一个单个字符。为了避免起义，配对的两个部分必须介于 `0xD800` 和 `0xDFFF` 之间，并且这些码元不用于编码单码元字符。（更准确地说，前导代理，也称为高位代理，其值在 `0xD800` 和 `0xDBFF` 之间（含），而后尾代理，也称为低位代理，其值在 `0xDC00` 和 `0xDFFF` 之间（含）。）每个 Unicode 字符由一个或者两个 UTF-16 码元组成，也称为 _Unicode 码位_（code point）。每个 Unicode 码位都可以使用 `\u{xxxxxx}` 写成一个字符串，其中 `xxxxxx` 表示 1–6 个十六进制数字。
+然而，整个 Unicode 字符集比 65536 大得多。额外的字符以*代理对*（surrogate pair）的形式存储在 UTF-16 中，代理对是一对 16 位码元，表示一个单个字符。为了避免歧义，配对的两个部分必须介于 `0xD800` 和 `0xDFFF` 之间，并且这些码元不用于编码单码元字符。（更准确地说，前导代理，也称为高位代理，其值在 `0xD800` 和 `0xDBFF` 之间（含），而后尾代理，也称为低位代理，其值在 `0xDC00` 和 `0xDFFF` 之间（含）。）每个 Unicode 字符由一个或者两个 UTF-16 码元组成，也称为 _Unicode 码位_（code point）。每个 Unicode 码位都可以使用 `\u{xxxxxx}` 写成一个字符串，其中 `xxxxxx` 表示 1–6 个十六进制数字。
 
 “单独代理项（lone surrogate）”是指满足以下描述之一的 16 位码元：
 
@@ -167,7 +168,7 @@ console.log(eval(s2.valueOf())); // 返回数字 4
 
 除了 Unicode 字符之外，还有某些 Unicode 字符序列应视为一个视觉单元，被称为*字素簇*（grapheme cluster）。最常见的情况是 emoji：许多具有多种变体的 emoji 实际上是由多个 emoji 组成的，通常由 \<ZWJ>（`U+200D`）字符连接。
 
-你必须小心迭代字符级别。例如，[`split("")`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 将按照 UTF-16 码元分割并将代理对分开。字符串索引也是指的每个 UTF-16 码元的索引。另一方面，[`@@iterator()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) 按 Unicode 码位迭代。遍历字素簇将需要一些自定义代码。
+你必须小心迭代字符级别。例如，[`split("")`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 将按照 UTF-16 码元分割并将代理对分开。字符串索引也是指的每个 UTF-16 码元的索引。另一方面，[`[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) 按 Unicode 码位迭代。遍历字素簇将需要一些自定义代码。
 
 ```js
 "😄".split(""); // ['\ud83d', '\ude04']; splits into two lone surrogates
@@ -292,12 +293,13 @@ console.log(eval(s2.valueOf())); // 返回数字 4
   - : 修剪字符串开头的空格。
 - {{jsxref("String.prototype.valueOf()")}}
   - : 返回指定对象的原始值。重写 {{jsxref("Object.prototype.valueOf()")}} 方法。
-- {{jsxref("String.prototype.@@iterator()", "String.prototype[@@iterator]()")}}
+- [`String.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)
   - : 返回一个新的迭代器对象，该对象迭代 String 值的码位，将每个码位作为 String 值返回。
 
 ## HTML 包装器方法
 
-> **警告：** 已弃用。请避免使用这些方法。
+> [!WARNING]
+> 已弃用。请避免使用这些方法。
 >
 > 它们的用途有限，因为它们基于非常古老的 HTML 标准并且仅提供当前可用的 HTML 标记和属性的一个子集。现在已经为它们创建了已弃用或非标准的标记。此外，它们在没有任何验证或清理的情况下进行简单的字符串连接，这使得它们在使用 [`innerHTML`](/zh-CN/docs/Web/API/Element/innerHTML) 直接插入时成为潜在的安全威胁。请改用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)，例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)。
 
@@ -366,5 +368,5 @@ String(undefinedVar); // "undefined"
 
 ## 参见
 
-- [JavaScript 指南中的文本格式化](/zh-CN/docs/Web/JavaScript/Guide/Text_formatting)
+- [数字与字符串](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_strings)指南
 - {{jsxref("RegExp")}}

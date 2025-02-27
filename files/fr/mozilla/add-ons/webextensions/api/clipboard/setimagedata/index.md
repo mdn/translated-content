@@ -3,11 +3,11 @@ title: clipboard.setImageData()
 slug: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Copie une image dans le presse-papiers. L'image est recodée avant d'être écrite dans le presse-papiers. Si l'image n'est pas valide, le presse-papiers n'est pas modifié.
 
-L'image est fournie en tant que [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer) contenant l'image codée. Les formats JPEG et PNG sont pris en charge.
+L'image est fournie en tant que [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) contenant l'image codée. Les formats JPEG et PNG sont pris en charge.
 
 Bien que cette API soit basée sur l'API [`clipboard.setImageData()`](https://developer.chrome.com/apps/clipboard) de Chrome, il existe certaines différentes :
 
@@ -16,7 +16,7 @@ Bien que cette API soit basée sur l'API [`clipboard.setImageData()`](https://de
 - L'API de Chrome utilise des rappels et cette API ne prend en charge que les promises.
 - Cette API ne prend pas en charge le paramètre `additionalItems`.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -27,13 +27,13 @@ browser.clipboard.setImageData(imageData, imageType);
 ### Paramètres
 
 - `imageData`
-  - : [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer). Les données de l'image codées.
+  - : [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). Les données de l'image codées.
 - `imageType`
   - : Un {{domxref("DOMString")}} indiquant le type d'image contenue dans le fichier `imageData`: `"png"` ou `"jpeg"`.
 
 ### Valeur de retour
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments si l'opération a réussi, ou rejetée, s'il y a une erreur (par exemple parce que les données ne représentaient pas une image valide).
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments si l'opération a réussi, ou rejetée, s'il y a une erreur (par exemple parce que les données ne représentaient pas une image valide).
 
 ## Compatibilité des navigateurs
 
@@ -65,6 +65,6 @@ fetch(browser.runtime.getURL("image.png"))
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard).

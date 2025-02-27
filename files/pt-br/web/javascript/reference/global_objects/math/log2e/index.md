@@ -35,7 +35,7 @@ getLog2e(); // 1.4426950408889634
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.LOG2E")}}
+{{Compat}}
 
 ## Veja também
 

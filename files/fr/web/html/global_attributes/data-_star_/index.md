@@ -5,7 +5,7 @@ slug: Web/HTML/Global_attributes/data-*
 
 {{HTMLSidebar("Global_attributes")}}
 
-Les [attributs universels](/fr/docs/Web/HTML/Attributs_universels) **`data-*`** forment une classe d'attributs, appelés attributs de données (_data attributes_). Ils permettent d'échanger des données propriétaire entre le [HTML](/fr/docs/Web/HTML) et la représentation du [DOM](/fr/docs/Web/API/Référence_du_DOM_Gecko), qu'on peut manipuler avec des scripts.
+Les [attributs universels](/fr/docs/Web/HTML/Global_attributes) **`data-*`** forment une classe d'attributs, appelés attributs de données (_data attributes_). Ils permettent d'échanger des données propriétaire entre le [HTML](/fr/docs/Web/HTML) et la représentation du [DOM](/fr/docs/Web/API/Document_Object_Model), qu'on peut manipuler avec des scripts.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-data.html","tabbed-standard")}}
 
@@ -30,7 +30,7 @@ Lorsqu'on ajoute des attributs de données `data-*`, on peut utiliser les élém
 </img>
 ```
 
-Pour un tutoriel plus avancé à propos des attributs de données HTML, lire l'article [Manipuler les attributs de données](/fr/Apprendre/HTML/Comment/Utiliser_attributs_donnes).
+Pour un tutoriel plus avancé à propos des attributs de données HTML, lire l'article [Manipuler les attributs de données](/fr/docs/Learn/HTML/Howto/Use_data_attributes).
 
 ## Spécifications
 
@@ -42,5 +42,5 @@ Pour un tutoriel plus avancé à propos des attributs de données HTML, lire l'a
 
 ## Voir aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Attributs_universels)
+- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
 - La propriété {{domxref("HTMLElement.dataset")}} qui permet d'accéder à ces valeurs et de les modifier.

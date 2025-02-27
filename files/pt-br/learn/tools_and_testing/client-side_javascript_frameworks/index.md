@@ -33,7 +33,8 @@ Você deve aprender o básico das principais linguagens para web(**HTML**, **CSS
 
 ## Tutoriais de React
 
-> **Nota:** Tutoriais de React testados pela última vez em Maio de 2020, com React/ReactDOM 16.13.1 e create-react-app 3.4.1.
+> [!NOTE]
+> Tutoriais de React testados pela última vez em Maio de 2020, com React/ReactDOM 16.13.1 e create-react-app 3.4.1.
 >
 > Se você precisar conferir seu código em relação à nossa versão, você pode encontrar a versão finalizada do código de exemplo da aplicação React em nosso [repositório todo-react](https://github.com/mdn/todo-react). Para uma versão executada ao vivo, veja <https://mdn.github.io/todo-react-build/>.
 
@@ -54,7 +55,8 @@ Você deve aprender o básico das principais linguagens para web(**HTML**, **CSS
 
 ## Ember tutorials
 
-> **Nota:** Ember tutorials last tested in May 2020, with Ember/Ember CLI version 3.18.0.
+> [!NOTE]
+> Ember tutorials last tested in May 2020, with Ember/Ember CLI version 3.18.0.
 >
 > If you need to check your code against our version, you can find a finished version of the sample Ember app code in the [ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc). For a running live version, see <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> (this also includes a few additional features not covered in the tutorial).
 
@@ -73,7 +75,8 @@ Você deve aprender o básico das principais linguagens para web(**HTML**, **CSS
 
 ## Vue tutorials
 
-> **Nota:** Vue tutorials last tested in May 2020, with Vue 2.6.11.
+> [!NOTE]
+> Vue tutorials last tested in May 2020, with Vue 2.6.11.
 >
 > If you need to check your code against our version, you can find a finished version of the sample Vue app code in our [todo-vue repository](https://github.com/mdn/todo-vue). For a running live version, see <https://mdn.github.io/todo-vue/dist/>.
 

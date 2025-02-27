@@ -7,6 +7,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
 
 **`Intl.DateTimeFormat.prototype.formatToParts()`** メソッドは、ロケールを考慮した {{jsxref("Intl.DateTimeFormat")}} フォーマッターが生成する文字列のロケールを考慮した書式化を可能にします。
 
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.formatToParts()", "taller")}}
+
+```js interactive-example
+const date = new Date(2012, 5);
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+const dateTimeFormat = new Intl.DateTimeFormat("en-US", options);
+
+const parts = dateTimeFormat.formatToParts(date);
+const partValues = parts.map((p) => p.value);
+
+console.log(partValues);
+// Expected output: "["Friday", ", ", "June", " ", "1", ", ", "2012"]"
+```
+
 ## 構文
 
 ```js

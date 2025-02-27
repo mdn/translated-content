@@ -3,6 +3,8 @@ title: Using the alert role
 slug: Web/Accessibility/ARIA/Roles/alert_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Descripción
 
 Esta técnica demuestra como usar el rol [alert](https://www.w3.org/TR/wai-aria-1.1/#alert) y describe el efecto que tiene en los navegadores y tecnologías de asistencia.
@@ -27,7 +29,8 @@ Productos de tecnología asistencial deben escuchar por dicho evento y notificar
 - Lectores de pantalla pueden interrumpir la entrada actual (sea por voz o braile) e inmediatamente anunciar o desplegar el mensaje de alerta.
 - Lupas de pantalla pueden indicar visualmente que una alerta ha ocurrido y que texto tuvo la alerta.
 
-> **Nota:** Opiniones pueden diferir en como tecnologías de asistencia deben manejar esta técnica. La información proveida anteriormente es una de estas opiniones y por lo tanto no es normativa.
+> [!NOTE]
+> Opiniones pueden diferir en como tecnologías de asistencia deben manejar esta técnica. La información proveida anteriormente es una de estas opiniones y por lo tanto no es normativa.
 
 ### Ejemplos
 
@@ -103,7 +106,7 @@ document.getElementById("expirationWarning").className = "";
 
 - Usar el rol de alerta en un elemento implica que ese elemento tiene `aria-live="assertive"`.
 - El rol de alerta solo debería ser utilizada para contenido de texto estático. El elemento que en el que el rol de alerta es utilizado no debe ser capaz de recibir el foco, pues lectores de pantalla automáticamente anunciarán la alerta sin importar donde el foco del teclado esta actualmente localizado.
-- Si una alerta también provee controles interactivos (como controles del formulario que permitan al usuario rectificar un problema, o un boton de "OK" que descarte la alerta) el rol de [alertdialog](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role) debe ser utilizado en lugar de éste.
+- Si una alerta también provee controles interactivos (como controles del formulario que permitan al usuario rectificar un problema, o un boton de "OK" que descarte la alerta) el rol de [alertdialog](/en-US/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role) debe ser utilizado en lugar de éste.
 
 ### Atributos ARIA utilizados
 
@@ -111,8 +114,8 @@ document.getElementById("expirationWarning").className = "";
 
 ### Técnicas ARIA relacionadas
 
-- [Utilizando el rol alertdialog](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
-- [Utilizando la propiedad aria-invalid](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property)
+- [Utilizando el rol alertdialog](/en-US/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
+- [Utilizando la propiedad aria-invalid](/en-US/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property)
 
 ### Compatibilidad
 

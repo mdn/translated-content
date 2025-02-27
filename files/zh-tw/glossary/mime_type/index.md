@@ -9,17 +9,11 @@ slug: Glossary/MIME_type
 
 它的目的與 Microsoft Windows 的副檔名相似。裡面的名字，是源自最初用於 E-Mail 的 [MIME](/zh-TW/docs/Glossary/mime) 標準。
 
-## 了解更多
+## 參見
 
-### 基礎知識
-
-- 維基百科上的 [Internet media type](https://zh.wikipedia.org/wiki/Internet_media_type)
-
-### 技術參考
-
+- 維基百科上的[網際網路媒體型式](https://zh.wikipedia.org/wiki/互联网媒体类型)
 - [MIME 類型列表](https://www.iana.org/assignments/media-types/media-types.xhtml)
-- [正確的伺服器 MIME 類型配置](/zh-TW/docs/Properly_Configuring_Server_MIME_Types)
-- [MIME 類型](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types)在網頁文本中的詳細用法
-- [Incomplete list of MIME types](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types)
-- [Mozilla 如何決定 MIME 類型](/zh-TW/docs/Mozilla/How_Mozilla_determines_MIME_Types)
+- [正確的伺服器 MIME 類型配置](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types)
+- [MIME 類型](/zh-TW/docs/Web/HTTP/MIME_types)在 Web 上下文中的詳細用法
+- [MIME 類型的不完整列表](/zh-TW/docs/Web/HTTP/MIME_types/Common_types)
 - [MediaRecorder.mimeType](/zh-TW/docs/Web/API/MediaRecorder/mimeType)

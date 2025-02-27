@@ -1,57 +1,67 @@
 ---
 title: Atomics.wait()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/wait
+l10n:
+  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
 {{JSRef}}
 
-静态方法 **`Atomics.wait()`** 确保了一个在 {{jsxref("Int32Array")}} 数组中给定位置的值没有发生变化、仍然是给定的值时进程将会睡眠，直到被唤醒或超时。该方法返回一个字符串，值为`"ok"`, `"not-equal"`, 或 `"timed-out"` 之一。
+**`Atomics.wait()`** 静态方法验证共享内存特定位置是否仍然包含给定值，如果是则休眠，直到被唤醒或超时。其返回一个内容为 `"ok"`、`"not-equal"` 或 `"timed-out"` 的字符串。
 
-> **备注：** 这项操作仅允许同一个共享内存的 {{jsxref("Int32Array")}} 配合使用并且无法运行在主线程中。
+> [!NOTE]
+> 此操作仅适用于基于 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}} 视图，并且在主线程中可能不可用。有关此方法的非阻塞异步版本，请参见 {{jsxref("Atomics.waitAsync()")}}。
 
 ## 语法
 
-```plain
-Atomics.wait(typedArray, index, value[, timeout])
+```js-nolint
+Atomics.wait(typedArray, index, value)
+Atomics.wait(typedArray, index, value, timeout)
 ```
 
 ### 参数
 
 - `typedArray`
-  - : 一个共享内存的 {{jsxref("Int32Array")}} 数组。
+  - : 基于 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}}。
 - `index`
-  - : 给定需要检测的 `typedArray` 数组的位置索引。
+  - : `typedArray` 中要等待的位置。
 - `value`
-  - : 给定需要检测的位置索引的预期值。
+  - : 要测试的期望值。
 - `timeout` {{optional_inline}}
-  - : 超时前等待的毫秒数。 {{jsxref("Infinity")}}, 如未提供该参数，将为无穷大。
+  - : 等待时间，以毫秒为单位。{{jsxref("NaN")}}（以及会被转换为 `NaN` 的值，例如 `undefined`）会被转换为 {{jsxref("Infinity")}}。负值会被转换为 `0`。
 
 ### 返回值
 
-一个 {{jsxref("String")}} 字符串，值为 "`ok`", "`not-equal`", 或 "`timed-out`" 三种之一。
+一个内容为 `"ok"`、`"not-equal"` 或 `"timed-out"` 的字符串。
 
 ### 异常
 
-- 如果参数 `typedArray` 不是一个共享内存的 {{jsxref("Int32Array")}} 数组，将会抛出一个 {{jsxref("TypeError")}} 。
-- 如果参数 `index` 超出了参数 `typedArray`的边界，将会抛出一个 {{jsxref("RangeError")}} 。
+- {{jsxref("TypeError")}}
+  - : 有下列情况之一，则抛出该异常：
+    - 如果 `typedArray` 不是一个基于 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}}。
+    - 如果当前线程无法被阻塞（例如主线程）。
+- {{jsxref("RangeError")}}
+  - : 如果 `index` 超出 `typedArray` 的范围，则抛出该异常。
 
 ## 示例
 
-创建一个共享内存的 `Int32Array` :
+### 使用 wait()
+
+给定一个共享的 `Int32Array`：
 
 ```js
-var sab = new SharedArrayBuffer(1024);
-var int32 = new Int32Array(sab);
+const sab = new SharedArrayBuffer(1024);
+const int32 = new Int32Array(sab);
 ```
 
-检测给定的数组索引 0 的值，如果它如预期一般的等于我们给定的值 0，则这个读取线程将会睡眠等待。一旦当有一个写入线程在这个位置存储了一个新值，它将会收到写入线程的通知并且返回新值 (123) :
+令一个读取线程休眠并在位置 0 处等待，预期该位置的值为 0。只要条件一直为真，则将不会继续运行。然而，一旦写入线程存储了一个新的值，它将被读取线程唤醒并返回新的值（123）。
 
 ```js
 Atomics.wait(int32, 0, 0);
 console.log(int32[0]); // 123
 ```
 
-一旦某个写入线程存储了一个新值到`int32` 的索引 0 位置，则通知给该等待线程：
+写入线程存储一个新的值并在写入后唤醒等待的线程：
 
 ```js
 console.log(int32[0]); // 0;
@@ -67,7 +77,8 @@ Atomics.notify(int32, 0, 1);
 
 {{Compat}}
 
-## 相关参阅
+## 参见
 
 - {{jsxref("Atomics")}}
+- {{jsxref("Atomics.waitAsync()")}}
 - {{jsxref("Atomics.notify()")}}

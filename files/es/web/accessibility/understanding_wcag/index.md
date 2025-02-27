@@ -3,6 +3,8 @@ title: Understanding the Web Content Accessibility Guidelines
 slug: Web/Accessibility/Understanding_WCAG
 ---
 
+{{AccessibilitySidebar}}
+
 Esto es parte de un grupo de artículos que explican rápidamente los pasos necesario para cumplir con la normativa de W3C Web Content Accessibility Guides 2.0 o 2.1 (también conocida como WCAG).
 
 La norma WCAG 2.0 y 2.1 provee unas guías detalladas para lograr que el contenido de nuestro sitio sea accesible para personas con distintos tipos de discapacidades. Es exhaustivo y muy detallado, por lo que cuesta comprenderlo rápidamente. Por esta razón, hemos resumido los pasos a seguir para que puedas cumplir con las diferentes recomendaciones e incluimos links al pie para más detalles en los lugares necesarios.
@@ -46,4 +48,4 @@ WCAG 2.1 incluye:
 
 Esta guía tiene como objetivo proveer información para que puedas construir mejores sitios, más accesibles. Sin embargo, no somos abogados y nada de esto es un asesoramiento legal. Si estás preocupado/a por las implicaciones legales de la accesibilidad web recomendamos que investigues la legislación de tu país o que consultes a un abogado calificado.
 
-[¿Qué es la accesibilidad?](/es/docs/Learn/Accessibility/What_is_accessibility) y [guías de accesibilidad y sobre la ley](/es/docs/Learn/Accessibility/What_is_accessibility#Accessibility_guidelines_and_the_law) proveen más información al respecto (en inglés).
+[¿Qué es la accesibilidad?](/es/docs/Learn/Accessibility/What_is_accessibility) y [guías de accesibilidad y sobre la ley](/es/docs/Learn/Accessibility/What_is_accessibility#accessibility_guidelines_and_the_law) proveen más información al respecto (en inglés).

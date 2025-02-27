@@ -29,13 +29,14 @@ image-rendering: unset;
 
 - **`auto`**
   - : 기본값입니다.
-    이미지의 스케일링 알고리즘은 이미지를 최대치로 활용해서 나타냅니다. 특히, 스케일링 알고리즘은 이중선형보간법같은 알고리즘이 보기에 괜찮은 "부드러운"색상을 나타냅니다. 사진같은 종류의 것들을 위해 GEcko엔진 1.9버전(파이어폭스 3.0) 에서는 이중선형 리샘플링(고품질) 을 사용해왔습니다.
+    이미지의 스케일링 알고리즘은 이미지를 최대치로 활용해서 나타냅니다. 특히, 스케일링 알고리즘은 이중선형보간법같은 알고리즘이 보기에 괜찮은 "부드러운"색상을 나타냅니다. 사진같은 종류의 것들을 위해 GEcko엔진 1.9버전(Firefox 3.0) 에서는 이중선형 리샘플링(고품질) 을 사용해왔습니다.
 - **`crisp-edges`**
   - : 이미지 스케일링 알고리즘은 반드시 색상대조와 이미지의 표준을 맞게 보존해야 합니다. 그리고 smooth 하지 못한 색상 혹은 이미지의 흐림효과 또한 알고리즘 공정에 있어야합니다. 이 속성은 픽셀아트같은 의도되어 만들어진 이미지들에게 필요합니다.
 - **`pixelated`**
   - : 이미지 스케일링을 크게 확대할 때는 "nearest neighbor" 혹은 비슷한 알고리즘을 반드시 사용해야 합니다. 그래서 이미지의 큰 픽셀로 구성해서 나타낼 수 있습니다. 이미지를 작게 축소할 때는 "auto" 속성과 같습니다.
 
-> **참고:** The values `optimizeQuality` and `optimizeSpeed` present in early draft (and coming from its SVG counterpart) are defined as synonyms for the `auto` value.
+> [!NOTE]
+> The values `optimizeQuality` and `optimizeSpeed` present in early draft (and coming from its SVG counterpart) are defined as synonyms for the `auto` value.
 
 ### 공식 문법
 
@@ -87,7 +88,8 @@ div {
 
 {{Specifications}}
 
-> **참고:** Though initially close from the SVG `image-rendering` property, the values are quite different now.
+> [!NOTE]
+> Though initially close from the SVG `image-rendering` property, the values are quite different now.
 
 ## 브라우저 지원
 

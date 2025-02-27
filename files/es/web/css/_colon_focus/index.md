@@ -1,5 +1,5 @@
 ---
-title: ":focus"
+title: :focus
 slug: Web/CSS/:focus
 ---
 
@@ -14,7 +14,8 @@ input:focus {
 }
 ```
 
-> **Nota:** Esta pseudo-clase se aplica solo al elemento enfocado en sí mismo. Utilice {{cssxref(":focus-within")}} si desea seleccionar un elemento que contenga un elemento enfocado.
+> [!NOTE]
+> Esta pseudo-clase se aplica solo al elemento enfocado en sí mismo. Utilice {{cssxref(":focus-within")}} si desea seleccionar un elemento que contenga un elemento enfocado.
 
 ## Sintaxis
 

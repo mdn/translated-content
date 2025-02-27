@@ -36,12 +36,12 @@ slug: Web/SVG/Attribute/style
 
 以下元素可以使用 style 属性
 
-- [Container elements](/zh-CN/SVG/Element#Container) »
-- [Filter primitive elements](/zh-CN/SVG/Element#FilterPrimitive) »
-- [Gradient elements](/zh-CN/SVG/Element#Gradient) »
-- [Graphics elements](/zh-CN/SVG/Element#Graphics) »
-- [Structural elements](/zh-CN/SVG/Element#Structural) »
-- [Text content elements](/zh-CN/SVG/Element#TextContent) »
+- [Container elements](/zh-CN/docs/Web/SVG/Element#container) »
+- [Filter primitive elements](/zh-CN/docs/Web/SVG/Element#filterprimitive) »
+- [Gradient elements](/zh-CN/docs/Web/SVG/Element#gradient) »
+- [Graphics elements](/zh-CN/docs/Web/SVG/Element#graphics) »
+- [Structural elements](/zh-CN/docs/Web/SVG/Element#structural) »
+- [Text content elements](/zh-CN/docs/Web/SVG/Element#textcontent) »
 - {{ SVGElement("clipPath") }}
 - {{ SVGElement("filter") }}
 - {{ SVGElement("font") }}

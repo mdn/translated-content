@@ -18,7 +18,7 @@ slug: Web/HTTP/Permissions_Policy
 - モバイル環境でサードパーティの動画の自動再生の既定の動作を変更する。
 - カメラやマイクなどの注意が必要な API をサイトが使用することを制限する。
 - iframe から[全画面 API](/ja/docs/Web/API/Fullscreen_API) が利用できるようにする。
-- [同期 XHR](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) や {{domxref("document.write()")}} のような古い API の使用をブロックする。
+- [同期 XHR](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest) や {{domxref("document.write()")}} のような古い API の使用をブロックする。
 - 画像が正しい大きさであり、ビューポートに対して大きすぎないことを確認する。
 
 ## 概念と使い方
@@ -102,7 +102,7 @@ The features include:
 ## 例
 
 - [機能ポリシーの使用](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
-- 数多くのポリシーの使用例については [Feature Policy Demos](http://feature-policy-demos.appspot.com/) をご覧ください。
+- 数多くのポリシーの使用例については [Feature Policy Demos](https://feature-policy-demos.appspot.com/) をご覧ください。
 
 ## 仕様書
 
@@ -110,7 +110,7 @@ The features include:
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Permissions-Policy")}}
+{{Compat}}
 
 ## 関連情報
 

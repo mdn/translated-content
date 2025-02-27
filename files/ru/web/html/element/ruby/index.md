@@ -3,13 +3,15 @@ title: <ruby>
 slug: Web/HTML/Element/ruby
 ---
 
-`HTML-элемент<ruby>` предназначен для добавления небольшой аннотации сверху или снизу от заданного текста. Такая форма записи преимущественно используется для идеографической письменности вроде китайского языка, но может применяться и для других языков, если требуется написать один текст над другим.
+{{HTMLSidebar}}
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Основной поток(Flow content)](/ru/docs/Web/HTML/Content_categories#Flow_content), [текстовой контент(phrasing content)](/ru/docs/Web/HTML/Content_categories#Phrasing_content), явный контент(palpable content). |
+HTML-элемент **`<ruby>`** предназначен для добавления небольшой аннотации сверху или снизу от заданного текста. Такая форма записи преимущественно используется для идеографической письменности вроде китайского языка, но может применяться и для других языков, если требуется написать один текст над другим.
+
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Основной поток(Flow content)](/ru/docs/Web/HTML/Content_categories#flow_content), [текстовой контент(phrasing content)](/ru/docs/Web/HTML/Content_categories#phrasing_content), явный контент(palpable content). |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                      | [Текстовый контент(phrasing content)](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                                                     |
-| Пропуск тегов                                              | {{no_tag_omission}}                                                                                                                                                                                               |
-| Допустимые родители                                        | Любой элемент который согласован с [текстовым контентом(phrasing content)](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                    |
+| Допустимое содержимое                                      | [Текстовый контент(phrasing content)](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                                                                                     |
+| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                  |
+| Допустимые родители                                        | Любой элемент который согласован с [текстовым контентом(phrasing content)](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                                                |
 | Допустимые ARIA-роли                                       | Любые                                                                                                                                                                                                             |
 | DOM-интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                                                                                        |
 
@@ -47,5 +49,3 @@ slug: Web/HTML/Element/ruby
 - {{HTMLElement("rp")}}
 - {{HTMLElement("rb")}}
 - {{HTMLElement("rtc")}}
-
-{{HTMLSidebar}}

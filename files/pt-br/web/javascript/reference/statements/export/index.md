@@ -117,7 +117,8 @@ export { function1, function2 };
 
 Mas onde `function1` e `function2` não ficam disponíveis dentro do módulo atual.
 
-> **Nota:** Os exemplos a seguir são sintaticamente inválidos apesar de sua equivalência com o import:
+> [!NOTE]
+> Os exemplos a seguir são sintaticamente inválidos apesar de sua equivalência com o import:
 
 ```js
 import DefaultExport from "bar.js"; // Válido
@@ -200,17 +201,14 @@ console.log(cube(3)); // 27
 
 ## Especificações
 
-| Especificação                                      | Estado               | Comentário          |
-| -------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-exports', 'Exports')}}     | {{Spec2('ES6')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-exports', 'Exports')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidade
 
-{{Compat("javascript.statements.export")}}
+{{Compat}}
 
 ## Veja também
 
 - {{jsxref("Statements/import", "import")}}
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+- [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)

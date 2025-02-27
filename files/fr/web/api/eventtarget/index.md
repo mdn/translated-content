@@ -3,13 +3,13 @@ title: EventTarget
 slug: Web/API/EventTarget
 ---
 
-{{ApiRef("DOM Events")}}
+{{APIRef("DOM")}}
 
 `EventTarget` est une interface DOM implémentée par des objets qui peuvent recevoir des événements et peuvent avoir des écouteurs pour eux.
 
 {{domxref ("Element")}}, {{domxref ("Document")}} et {{domxref ("Window")}} sont les cibles d'événements les plus fréquentes, mais d'autres objets peuvent également être des cibles d'événements. Par exemple {{domxref ("XMLHttpRequest")}}, {{domxref ("AudioNode")}}, {{domxref ("AudioContext")}} et autres.
 
-De nombreuses cibles d'événements (y compris des éléments, des documents et des fenêtres) supporte également la définition de [gestionnaires d'événements](/fr/docs/Web/Guide/DOM/Events/Event_handlers) via les propriétés et attributs `onevent`.
+De nombreuses cibles d'événements (y compris des éléments, des documents et des fenêtres) supporte également la définition de [gestionnaires d'événements](/fr/docs/Web/Events/Event_handlers) via les propriétés et attributs `onevent`.
 
 {{InheritanceDiagram}}
 
@@ -89,6 +89,6 @@ EventTarget.prototype.dispatchEvent = function (event) {
 
 ## Voir aussi
 
-- [Référence d'événement](/fr/docs/Web/Reference/Events) - les événements disponibles sur la plateforme.
-- [Guide du développeur d'événements](/fr/docs/Web/Guide/DOM/Events)
+- [Référence d'événement](/fr/docs/Web/Events) - les événements disponibles sur la plateforme.
+- [Guide du développeur d'événements](/fr/docs/Web/Events)
 - {{domxref("Event")}} interface

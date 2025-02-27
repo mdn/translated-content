@@ -1,5 +1,5 @@
 ---
-title: ":focus"
+title: :focus
 slug: Web/CSS/:focus
 ---
 
@@ -9,7 +9,8 @@ slug: Web/CSS/:focus
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-focus.html", "tabbed-shorter")}}
 
-> **备注：** 此伪类仅适用于焦点的元素自身。如果要选择*包含*焦点元素的元素，请使用 {{cssxref(":focus-within")}}。
+> [!NOTE]
+> 此伪类仅适用于焦点的元素自身。如果要选择*包含*焦点元素的元素，请使用 {{cssxref(":focus-within")}}。
 
 ## 语法
 

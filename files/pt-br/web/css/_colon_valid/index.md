@@ -1,5 +1,5 @@
 ---
-title: ":valid"
+title: :valid
 slug: Web/CSS/:valid
 ---
 
@@ -30,9 +30,9 @@ Veja {{cssxref(":invalid")}} para um exemplo.
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.valid")}}
+{{Compat}}
 
 ## Veja também
 
 - Outras pseudo-classe relacionada com validação: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}
-- [Form data validation](/pt-BR/docs/Learn/HTML/Forms/Form_validation)
+- [Form data validation](/pt-BR/docs/Learn/Forms/Form_validation)

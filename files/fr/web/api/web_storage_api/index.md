@@ -14,13 +14,16 @@ Les deux mécanismes au sein du web storage sont les suivantes:
 - `sessionStorage` maintient une zone de stockage distinct pour chaque origine donnée qui est disponible pour la durée de la session de la page (tant que le navigateur est ouvert, y compris les rechargements et restaure)
 - `localStorage` fait la même chose, mais persiste même lorsque le navigateur est fermé et rouvert.
 
-Ces mécanismes sont disponibles via les propriétés {{domxref("Window.sessionStorage")}} et {{domxref("Window.localStorage")}} (pour être plus précis, pour le support des navigateurs, l'objet `Window` implemente le `WindowLocalStorage` et l'object `WindowSessionStorage`, dont les propriétés `localStorage` et `sessionStorage` dépendent) — L'appel de l'une de ces propriétés va créer une instance de l'objet {{domxref("Storage")}}, à travers de laquelle les éléments de données peuvent être définis, récupérés et éliminés. Un objet de stockage différent est utilisé pour le sessionStorage et le localStorage pour chaque origine — ils fonctionnent et sont contrôlés séparément.
+Ces mécanismes sont disponibles via les propriétés {{domxref("Window.sessionStorage")}} et {{domxref("Window.localStorage")}} (pour être plus précis, pour le support des navigateurs, l'objet `Window` implemente le `WindowLocalStorage` et l'object `WindowSessionStorage`, dont les propriétés `localStorage` et `sessionStorage` dépendent) — L'appel à l'une de ces propriétés va créer une instance de l'objet {{domxref("Storage")}}, au travers duquel les éléments de données peuvent être définis, récupérés et éliminés. Un objet de stockage différent est utilisé pour le sessionStorage et le localStorage pour chaque origine — ils fonctionnent et sont contrôlés séparément.
 
-> **Note :** À partir de Firefox 45, lorsque le navigateur se bloque / redémarre, la quantité de données sauvegardées par origine est limitée à 10 Mo. Cela a été mis en place pour éviter les problèmes de mémoire causés par une utilisation excessive du stockage Web.
+> [!NOTE]
+> À partir de Firefox 45, lorsque le navigateur se bloque / redémarre, la quantité de données sauvegardées par origine est limitée à 10 Mo. Cela a été mis en place pour éviter les problèmes de mémoire causés par une utilisation excessive du stockage Web.
 
-> **Note :** L'accès au Web Storage à partir d'iframes externes est interdit si l'utilisateur a [désactivé les cookies tierce-partie](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (Firefox a adopté ce comportement à partir de la [version 43](/fr/docs/Mozilla/Firefox/Releases/43) et suivantes.)
+> [!NOTE]
+> L'accès au Web Storage à partir d'iframes externes est interdit si l'utilisateur a [désactivé les cookies tierce-partie](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (Firefox a adopté ce comportement à partir de la [version 43](/fr/docs/Mozilla/Firefox/Releases/43) et suivantes.)
 
-> **Note :** Le <i lang="en">Web Storage</i> n'est pas identique au `mozStorage` (interfaces XPCOM de Mozilla vers SQLite) ou l'API <i lang="en">Session Store</i> (un utilitaire de stockage XPCOM utilisable par des extensions).
+> [!NOTE]
+> Le <i lang="en">Web Storage</i> n'est pas identique au `mozStorage` (interfaces XPCOM de Mozilla vers SQLite) ou l'API <i lang="en">Session Store</i> (un utilitaire de stockage XPCOM utilisable par des extensions).
 
 ## Web Storage interfaces
 
@@ -54,5 +57,5 @@ Les développeuses et développeurs doivent connaître ces différentes impléme
 ## Voir aussi
 
 - [Utiliser l'API Web Storage](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- [Limites de stockage du navigateur et critères d'éviction](/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria)
+- [Limites de stockage du navigateur et critères d'éviction](/fr/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)
 - [HTML5 Storage API By Venkatraman](https://medium.com/@ramsunvtech/onfocus-html5-storage-apis-b45d92aa424b)

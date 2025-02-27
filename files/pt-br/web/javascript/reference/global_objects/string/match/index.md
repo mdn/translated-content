@@ -3,11 +3,11 @@ title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 ---
 
-{{JSRef("Global_Objects", "String")}}
+{{JSRef}}
 
 ## Resumo
 
-O método `match()` retorna uma correspondência entre uma string com uma [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions).
+O método `match()` retorna uma correspondência entre uma string com uma [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions).
 
 ## Sintaxe
 
@@ -19,7 +19,7 @@ str.match(regexp);
 
 - `regexp`
 
-  - : Um objeto de [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions). Se _`regexp`_ não for uma **`RegExp`**, o mesmo será convertido para uma nova RegExp usando `new RegExp(regexp)`.
+  - : Um objeto de [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions). Se _`regexp`_ não for uma **`RegExp`**, o mesmo será convertido para uma nova RegExp usando `new RegExp(regexp)`.
 
     Se você não fornecer nenhum parâmetro ao usar o método `match()`, você obterá um {{jsxref ("Array")}} com uma string vazia: `[""]`.
 
@@ -38,7 +38,7 @@ str.match(regexp);
 Conforme explicado acima, alguns resultados contêm propriedades adicionais conforme descrito abaixo.
 
 - `groups`
-  - : Um objeto de grupos de captura nomeados cujas chaves são os nomes, e valores são os grupos de captura ou {{jsxref ("undefined")}} se nenhum grupo de captura nomeado foi definido. Consulte [Grupos e Intervalos](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) para obter mais informações.
+  - : Um objeto de grupos de captura nomeados cujas chaves são os nomes, e valores são os grupos de captura ou {{jsxref ("undefined")}} se nenhum grupo de captura nomeado foi definido. Consulte [Grupos e Intervalos](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) para obter mais informações.
 - `index`
   - : O índice da pesquisa em que o resultado foi encontrado.
 - `input`
@@ -93,7 +93,8 @@ console.log(matches_array);
 // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
 ```
 
-> **Nota:** Veja também {{jsxref("String.prototype.matchAll()")}} e [Pesquisa avançada com sinalizadores](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions#Pesquisa_avan%C3%A7ada_com_Flags).
+> [!NOTE]
+> Veja também {{jsxref("String.prototype.matchAll()")}} e [Pesquisa avançada com sinalizadores](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions#Pesquisa_avan%C3%A7ada_com_Flags).
 
 ### Usando grupos de captura nomeados
 
@@ -138,15 +139,11 @@ str3.match(null); // retorna ["null"]
 
 ## Especificações
 
-| Especificações                                                               | Estado             | Comentário                                        |
-| ---------------------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
-| ECMAScript 3rd Edition.                                                      | Standard           | Definição inicial. Implementado no JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-15.5.4.10', 'String.prototype.match')}}            | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-string.prototype.match', 'String.prototype.match')}} | {{Spec2('ES6')}}   |                                                   |
+{{Specifications}}
 
 ## Navegadores compatíveis
 
-{{Compat("javascript.builtins.String.match")}}
+{{Compat}}
 
 ## Veja também
 

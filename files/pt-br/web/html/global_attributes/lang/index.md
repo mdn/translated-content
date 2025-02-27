@@ -11,8 +11,10 @@ O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **`lang`** ajuda a d
 
 Se o valor do atributo é uma _string vazia_ (`lang=""`), o idioma é definido como _unknown (desconhecido)_; se a tag de idioma não é válida conforme o BCP47, ela é definida como _invalid (invalida)_.
 
-> **Note:** ## Sintaxe da tag de idiomaA sintaxe completa do BCP47 é profunda o suficente para caracterizar dialetos de linguagem extremamente expecíficos, mas a maioria dos usos são bem mais simples.Uma tag de idioma é feita de _subtags de idioma_ separadas por hífen, onde cada subtag indica uma certa propriedade da língua. As três subtags mais comuns são:- Subtag de idioma - : Necessária. Um código de 2 ou 3 caracteres que define o idioma base, tipicamente escrita em letras minúsculas. Por exemplo, o código para Inglês é `en` e o código para Português é `pt`.
->
+## Sintaxe da tag de idioma
+
+A sintaxe completa do BCP47 é profunda o suficente para caracterizar dialetos de linguagem extremamente expecíficos, mas a maioria dos usos são bem mais simples.Uma tag de idioma é feita de _subtags de idioma_ separadas por hífen, onde cada subtag indica uma certa propriedade da língua. As três subtags mais comuns são:- Subtag de idioma - : Necessária. Um código de 2 ou 3 caracteres que define o idioma base, tipicamente escrita em letras minúsculas. Por exemplo, o código para Inglês é `en` e o código para Português é `pt`
+
 > - Subtag de script
 >   - : Opcional. Essa subtag define o sistema de escrita usado para a linguagem, e sempre tem 4 caracteres, com a primeira letra maiúscula. Por exemplo, Francês em Braile é `fr-Brai` e `ja-Kana` é Japonês escrito no alfabeto Katakana. Se a língua é escrita em uma maneira tipicamente comum, como Inglês no alfabeto Latino, não é necessário o uso da subtag.
 > - Subtag de região
@@ -28,7 +30,7 @@ Para as pseudo-classes CSS {{cssxref(":lang")}}, dois nomes de idiomas inválido
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.global_attributes.lang")}}
+{{Compat}}
 
 ## Veja também
 

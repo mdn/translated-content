@@ -9,23 +9,16 @@ slug: Web/API/WebGLRenderingContext/texImage2D
 
 ## 语法
 
-```
-// WebGL1:
-void gl.texImage2D(target, level, internalformat, width, height, border, format, type, ArrayBufferView? pixels);
-void gl.texImage2D(target, level, internalformat, format, type, ImageData? pixels);
-void gl.texImage2D(target, level, internalformat, format, type, HTMLImageElement? pixels);
-void gl.texImage2D(target, level, internalformat, format, type, HTMLCanvasElement? pixels);
-void gl.texImage2D(target, level, internalformat, format, type, HTMLVideoElement? pixels);
-void gl.texImage2D(target, level, internalformat, format, type, ImageBitmap? pixels);
+```js-nolint
+// WebGL1
+texImage2D(target, level, internalformat, width, height, border, format, type, pixels)
+texImage2D(target, level, internalformat, format, type, pixels)
 
-// WebGL2:
-void gl.texImage2D(target, level, internalformat, width, height, border, format, type, GLintptr offset);
-void gl.texImage2D(target, level, internalformat, width, height, border, format, type, HTMLCanvasElement source);
-void gl.texImage2D(target, level, internalformat, width, height, border, format, type, HTMLImageElement source);
-void gl.texImage2D(target, level, internalformat, width, height, border, format, type, HTMLVideoElement source);
-void gl.texImage2D(target, level, internalformat, width, height, border, format, type, ImageBitmap source);
-void gl.texImage2D(target, level, internalformat, width, height, border, format, type, ImageData source);
-void gl.texImage2D(target, level, internalformat, width, height, border, format, type, ArrayBufferView srcData, srcOffset);
+
+// WebGL2
+texImage2D(target, level, internalformat, width, height, border, format, type, offset)
+texImage2D(target, level, internalformat, width, height, border, format, type, source)
+texImage2D(target, level, internalformat, width, height, border, format, type, srcData, srcOffset)
 ```
 
 ### 参数
@@ -242,7 +235,7 @@ gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.createTexture()")}}
 - {{domxref("WebGLRenderingContext.bindTexture()")}}

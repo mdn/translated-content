@@ -1,5 +1,5 @@
 ---
-title: ":read-write"
+title: :read-write
 slug: Web/CSS/:read-write
 ---
 
@@ -17,6 +17,8 @@ p:read-write {
   background-color: #bbf;
 }
 ```
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-read-write.html", "tabbed-shorter")}}
 
 ## 構文
 

@@ -19,13 +19,13 @@ En plus de l'ensemble des fonctions standard [JavaScript](/fr/docs/Web/JavaScrip
 
 Certaines des fonctions qui sont accessibles depuis tous les types de <i lang="en">service workers</i> et depuis le fil d'exécution principal (via `WindowOrWorkerGlobalScope`) sont&nbsp;:
 
-- [`atob()`](/fr/docs/Web/API/atob)
-- [`btoa()`](/fr/docs/Web/API/btoa)
-- [`clearInterval()`](/fr/docs/Web/API/clearInterval)
-- [`clearTimeout()`](/fr/docs/Web/API/clearTimeout)
+- [`atob()`](/fr/docs/Web/API/Window/atob)
+- [`btoa()`](/fr/docs/Web/API/Window/btoa)
+- [`clearInterval()`](/fr/docs/Web/API/Window/clearInterval)
+- [`clearTimeout()`](/fr/docs/Web/API/Window/clearTimeout)
 - [`dump()`](/fr/docs/Web/API/Window/dump) {{non-standard_inline}}
-- [`setInterval()`](/fr/docs/Web/API/setInterval)
-- [`setTimeout()`](/fr/docs/Web/API/setTimeout)
+- [`setInterval()`](/fr/docs/Web/API/Window/setInterval)
+- [`setTimeout()`](/fr/docs/Web/API/Window/setTimeout)
 
 Les fonctions suivantes sont **uniquement** disponibles pour les pour les <i lang="en">workers</i>&nbsp;:
 
@@ -34,7 +34,8 @@ Les fonctions suivantes sont **uniquement** disponibles pour les pour les <i lan
 
 ## Les API web disponibles pour les <i lang="en">workers</i>
 
-> **Note :** Si une API listée ici est prise en charge par une plateforme donnée pour une version donnée, on peut généralement partir du principe que l'API fonctionnera pour les <i lang="en">web workers</i>.
+> [!NOTE]
+> Si une API listée ici est prise en charge par une plateforme donnée pour une version donnée, on peut généralement partir du principe que l'API fonctionnera pour les <i lang="en">web workers</i>.
 
 Les API web suivantes sont disponibles pour les <i lang="en">workers</i>&nbsp;:
 

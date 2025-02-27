@@ -16,7 +16,7 @@ new Uint8Array(objeto);
 new Uint8Array(buffer [, byteOffset [, tamaño]]);
 ```
 
-Para más información acerca de la sintaxis del constructor y sus parámetros, mire _[TypedArray](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+Para más información acerca de la sintaxis del constructor y sus parámetros, mire _[TypedArray](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntax)_.
 
 ## Propiedades
 
@@ -83,7 +83,7 @@ Todos los objetos `Uint8Array` son heredados de {{jsxref("TypedArray.prototype",
   - : Devuelve el último (mayor) índice de un elemento dentro del array igual al valor especificado, o -1 si no fue encontrado. Véase también {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Uint8Array.prototype.map()")}}
   - : Crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos. Véase también {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Uint8Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
+- {{jsxref("TypedArray.move", "Uint8Array.prototype.move()")}} {{non-standard_inline}}
   - : Primera versión no-estandar de {{jsxref("TypedArray.copyWithin", "Uint8Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Uint8Array.prototype.reduce()")}}
   - : Aplica una función a un acumulador y a cada valor de un array (de izquierda a derecha) para reducirlo a un único valor. Véase también {{jsxref("Array.prototype.reduce()")}}.
@@ -144,6 +144,6 @@ var z = new Uint8Array(buffer, 1, 4);
 
 ## Véase también
 
-- [JavaScript typed arrays](/es/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/es/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

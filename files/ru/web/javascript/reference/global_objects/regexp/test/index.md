@@ -3,7 +3,7 @@ title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
 ---
 
-{{JSRef("Global_Objects", "RegExp")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -56,5 +56,5 @@ function testinput(re, str) {
 
 ## Смотрите также
 
-- Глава про [регулярные выражения](/ru/docs/Web/JavaScript/Guide/Regular_Expressions) в [руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide)
+- Глава про [регулярные выражения](/ru/docs/Web/JavaScript/Guide/Regular_expressions) в [руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide)
 - {{jsxref("Global_Objects/RegExp", "RegExp")}}

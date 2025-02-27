@@ -38,7 +38,7 @@ Les navigateurs web modernes permettent aux sites web de stocker des données su
 
 ## Stockage côté client ?
 
-Ailleurs dans la zone d'apprentissage de MDN, nous avons parlé de la différence entre les [sites statiques](/fr/docs/Learn/Server-side/First_steps/Client-Server_overview#Static_sites) et les [sites dynamiques](/fr/docs/Learn/Server-side/First_steps/Client-Server_overview#Dynamic_sites) — ces derniers stockent des données [côté serveur](/fr/docs/Learn/Server-side) en utilisant une base de données. Ensuite, ils exécutent du code pour récupérer les données et les insérer dans des templates de page statique. Finalement, le HTML résultant est envoyé au client, qui est alors affiché par le navigateur de l'utilisateur.
+Ailleurs dans la zone d'apprentissage de MDN, nous avons parlé de la différence entre les [sites statiques](/fr/docs/Learn/Server-side/First_steps/Client-Server_overview#static_sites) et les [sites dynamiques](/fr/docs/Learn/Server-side/First_steps/Client-Server_overview#dynamic_sites) — ces derniers stockent des données [côté serveur](/fr/docs/Learn/Server-side) en utilisant une base de données. Ensuite, ils exécutent du code pour récupérer les données et les insérer dans des templates de page statique. Finalement, le HTML résultant est envoyé au client, qui est alors affiché par le navigateur de l'utilisateur.
 
 Le stockage côté client fonctionne sur des principes similaires, mais pour une utilisation différente. Le stockage côté client repose sur des APIs JavaScript qui permettent de stocker des données sur la machine de l'utilisateur et de les récupérer au besoin. Cela peut se révéler utile dans différents cas comme :
 
@@ -49,28 +49,30 @@ Le stockage côté client fonctionne sur des principes similaires, mais pour une
 
 Souvent, le stockage côté client et côté serveur sont utilisés ensemble. Par exemple, vous pouvez télécharger à partir d'une base de données côté serveur une série de fichiers mp3 utilisés par un site web (comme un jeu ou une application de musique) vers une base de données côté client et ainsi pouvoir les lire quand vous le voulez. Avec cette stratégie, l'utilisateur n'a à télécharger le fichier qu'une seule fois — les visites suivantes, ils sont récupérés à partir de la base de données locale.
 
-> **Note :** La quantité de données que l'on peut stocker à l'aide des APIs de stockage côté client est limitée (limite par API et limite globale), la limite exacte dépend du navigateur et des configurations. Voir [Limites de stockage du navigateur et critères d'éviction](/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria) pour plus d'informations.
+> [!NOTE]
+> La quantité de données que l'on peut stocker à l'aide des APIs de stockage côté client est limitée (limite par API et limite globale), la limite exacte dépend du navigateur et des configurations. Voir [Limites de stockage du navigateur et critères d'éviction](/fr/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria) pour plus d'informations.
 
 ### À l'ancienne : les cookies
 
 Le concept de stockage côté client existe depuis longtemps. Au début du web, les sites utilisaient des [cookies](/fr/docs/Web/HTTP/Cookies) pour stocker des informations et personnaliser l'expérience utilisateur. C'est la méthode de stockage côté client la plus couramment utilisée et la plus ancienne.
 
-De par leur histoire, les cookies souffrent d'un certain nombre de problèmes — tant techniques qu'au niveau de l'expérience utilisateur. Ces problèmes sont suffisamment importants pour imposer un message d'information aux utilisateurs habitant en Europe lors de leur première visite si le site utilise des cookies pour stocker des informations sur eux. Cela est dû à une loi de l'Union Européenne connue sous le nom de [directive Cookie](/fr/docs/Web/HTTP/Cookies#EU_cookie_directive).
+De par leur histoire, les cookies souffrent d'un certain nombre de problèmes — tant techniques qu'au niveau de l'expérience utilisateur. Ces problèmes sont suffisamment importants pour imposer un message d'information aux utilisateurs habitant en Europe lors de leur première visite si le site utilise des cookies pour stocker des informations sur eux. Cela est dû à une loi de l'Union Européenne connue sous le nom de [directive Cookie](/fr/docs/Web/HTTP/Cookies#eu_cookie_directive).
 
 ![](cookies-notice.png)
 
-Pour ces raisons, nous ne verrons pas dans cet article comment utiliser les cookies. Entre le fait qu'ils sont dépassés, les [problèmes de sécurité](/fr/docs/Web/HTTP/Cookies#Security) qu'ils présentent et l'incapacité de stocker des données complexes, les cookies ne sont pas la meilleure manière pour stocker des données. Il y a de meilleures alternatives, modernes, permettant de stocker des données variées sur l'ordinateur de l'utilisateur.
+Pour ces raisons, nous ne verrons pas dans cet article comment utiliser les cookies. Entre le fait qu'ils sont dépassés, les [problèmes de sécurité](/fr/docs/Web/HTTP/Cookies#security) qu'ils présentent et l'incapacité de stocker des données complexes, les cookies ne sont pas la meilleure manière pour stocker des données. Il y a de meilleures alternatives, modernes, permettant de stocker des données variées sur l'ordinateur de l'utilisateur.
 
 Le seul avantage des cookies est qu'ils sont supportés par des navigateurs anciens : si votre projet requiert le support de navigateurs obsolètes (comme Internet Explorer 8 et inférieur), les cookies peuvent se révéler utiles. Pour la plupart des projets, vous ne devriez pas avoir besoin d'y recourir.
 
-> **Note :** Pourquoi existe-t-il encore de nouveaux sites crées à l'aide de cookies? Principalement de par les habitudes des développeurs, l'utilisation de bibliothèques anciennes qui utilisent encore des cookies et l'existence de nombreux sites web fournissant des formations et références dépassées pour apprendre à stocker des données.
+> [!NOTE]
+> Pourquoi existe-t-il encore de nouveaux sites crées à l'aide de cookies? Principalement de par les habitudes des développeurs, l'utilisation de bibliothèques anciennes qui utilisent encore des cookies et l'existence de nombreux sites web fournissant des formations et références dépassées pour apprendre à stocker des données.
 
 ### La nouvelle école : Web Storage et IndexedDB
 
 Les navigateurs modernes ont des APIs beaucoup plus efficaces et faciles d'utilisation pour stocker des données côté client.
 
 - L'[API Web Storage](/fr/docs/Web/API/Web_Storage_API) fournit une syntaxe très simple pour stocker et récupérer des données de petite taille, basé sur un système de clé/valeur. C'est utile lorsque vous avez besoin de stocker des données simples, comme le nom de l'utilisateur, le fait qu'il soit connecté ou non, la couleur à utiliser pour l'arrière-plan de l'écran, etc.
-- L'[API IndexedDB](/fr/docs/Web/API/API_IndexedDB) fournit au navigateur un système de base de données complet pour stocker des données complexes. C'est utile pour des choses allant de simples sauvegardes côté client (texte) au stockage de données complexes tels que des fichiers audio ou vidéo.
+- L'[API IndexedDB](/fr/docs/Web/API/IndexedDB_API) fournit au navigateur un système de base de données complet pour stocker des données complexes. C'est utile pour des choses allant de simples sauvegardes côté client (texte) au stockage de données complexes tels que des fichiers audio ou vidéo.
 
 Vous en apprendrez plus sur ces APIs ci-dessous.
 
@@ -247,9 +249,11 @@ Nous allons construire cet exemple pas à pas, cela vous permettra de comprendre
 
 Notre exemple est terminé — bien joué ! Il ne vous reste plus qu'à enregistrer votre code et tester votre page HTML dans un navigateur. Vous pouvez voir notre [version terminée en direct ici](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html) (ou le [code JavaScript terminé](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/index.js)).
 
-> **Note :** Vous pouvez trouver un exemple un peu plus complexe dans l'article [Utiliser l'API de stockage web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API).
+> [!NOTE]
+> Vous pouvez trouver un exemple un peu plus complexe dans l'article [Utiliser l'API de stockage web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API).
 
-> **Note :** Dans la ligne `<script src="index.js" defer></script>` de notre version finie, l'attribut `defer` spécifie que le contenu de l'élément {{htmlelement("script")}} ne doit pas s'exécuter avant que la page ait fini de charger.
+> [!NOTE]
+> Dans la ligne `<script src="index.js" defer></script>` de notre version finie, l'attribut `defer` spécifie que le contenu de l'élément {{htmlelement("script")}} ne doit pas s'exécuter avant que la page ait fini de charger.
 
 ## Stocker des données complexes — IndexedDB
 
@@ -297,7 +301,7 @@ Voyons maintenant la première chose à faire, mettre en place la base de donné
    window.onload = function () {};
    ```
 
-   On écrira tout notre code dans le gestionnaire d'événement `window.onload`, appelé quand l'événement [`load`](/fr//docs/Web/API/Window/load_event) de la fenêtre est chargé, pour s'assurer qu'on n'essaiera pas d'utiliser IndexedDB avant que l'application ne soit complètement chargée (ça ne marcherait pas sinon).
+   On écrira tout notre code dans le gestionnaire d'événement `window.onload`, appelé quand l'événement [`load`](/fr_docs/Web/API/Window/load_event) de la fenêtre est chargé, pour s'assurer qu'on n'essaiera pas d'utiliser IndexedDB avant que l'application ne soit complètement chargée (ça ne marcherait pas sinon).
 
 3. À l'intérieur de `window.onload`, ajoutez ce qui suit :
 
@@ -313,7 +317,8 @@ Voyons maintenant la première chose à faire, mettre en place la base de donné
 
    Pour gérer cela dans IndexedDB, on crée d'abord une requête (que vous pouvez appeler comme vous le voulez — on l'appelle `request` pour que ce soit plus explicite). On utilise ensuite des gestionnaire d'événement pour exécuter du code lorsque les requêtes sont terminées, échouent, etc, ce que l'on va voir ci-dessous.
 
-   > **Note :** Le numéro de version est important. Si vous voulez mettre à jour votre base de données (par exemple, pour modifier la structure de la table), vous devez ré-exécuter votre code avec un numéro de version supérieur et spécifier le schéma de la base de données avec le gestionnaire d'événement `onupgradeneeded`. Nous ne verrons pas la mise à jour de base de données dans ce tutoriel.
+   > [!NOTE]
+   > Le numéro de version est important. Si vous voulez mettre à jour votre base de données (par exemple, pour modifier la structure de la table), vous devez ré-exécuter votre code avec un numéro de version supérieur et spécifier le schéma de la base de données avec le gestionnaire d'événement `onupgradeneeded`. Nous ne verrons pas la mise à jour de base de données dans ce tutoriel.
 
 4. Maintenant, ajoutez les gestionnaires d'événement suivants, juste en dessous des lignes précédentes — toujours à l'intérieur de `window.onload`&nbsp;:
 
@@ -548,13 +553,14 @@ function deleteItem(e) {
 }
 ```
 
-- On récupère l'ID de l'entrée à supprimer avec `Number(e.target.parentNode.getAttribute('data-note-id'))` — souvenez-vous qu'on a mis l'ID de l'entrée dans l'attribut `data-note-id` du `<li>` au moment de l'afficher. On fait passer l'id à travers l'objet global [Number()](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Number), puisqu'on a actuellement une chaîne de caractères et on a besoin d'un nombre pour qu'il soit reconnu par la base de données.
+- On récupère l'ID de l'entrée à supprimer avec `Number(e.target.parentNode.getAttribute('data-note-id'))` — souvenez-vous qu'on a mis l'ID de l'entrée dans l'attribut `data-note-id` du `<li>` au moment de l'afficher. On fait passer l'id à travers l'objet global [Number()](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number), puisqu'on a actuellement une chaîne de caractères et on a besoin d'un nombre pour qu'il soit reconnu par la base de données.
 - On récupère ensuite une référence à l'object store de la même manière que précédemment, et on utilise la méthode {{domxref("IDBObjectStore.delete()")}} pour supprimer l'entrée de la base de données, en lui passant l'ID.
 - Quand la transaction est terminée, on supprime le `<li>` du DOM, et on vérifie si le `<ul>` est maintenant vide. Si c'est le cas, on insère un message pour l'indiquer.
 
 Et voilà ! L'exemple devrait maintenant fonctionner.
 
-> **Note :** Si vous rencontrez des difficultés, n'hésitez pas à consulter [notre exemple en direct](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/notes/) (ou voir [le code source](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.js)).
+> [!NOTE]
+> Si vous rencontrez des difficultés, n'hésitez pas à consulter [notre exemple en direct](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/notes/) (ou voir [le code source](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.js)).
 
 ### Stocker des données complexes avec IndexedDB
 
@@ -688,11 +694,12 @@ C'est là qu'interviennet les [Service workers](/fr/docs/Web/API/Service_Worker_
 
 Un service worker est un fichier JavaScript qui, pour faire simple, est associé à une origine (un site web à un domaine donné) lorsque le navigateur y accède. Une fois associé, il peut contrôler les pages disponibles pour cette origine. Il le fait en s'installant entre la page chargée et le réseau, interceptant les requêtes réseau visant cette origine.
 
-Quand le service worker intercepte une requête, il peut faire tout ce que vous voulez (voir quelques [idées de cas d'utilisation](/fr/docs/Web/API/Service_Worker_API#Autres_idées_de_cas_d'utilisation)), mais l'exemple le plus classique est de sauvegarder les réponses réseau hors-ligne pour fournir ces réponses aux requêtes qui suivent au lieu d'utiliser le réseau. Ainsi, cela vous permet de faire fonctionner un site web complètement hors-ligne.
+Quand le service worker intercepte une requête, il peut faire tout ce que vous voulez (voir quelques [idées de cas d'utilisation](/fr/docs/Web/API/Service_Worker_API#autres_idées_de_cas_d'utilisation)), mais l'exemple le plus classique est de sauvegarder les réponses réseau hors-ligne pour fournir ces réponses aux requêtes qui suivent au lieu d'utiliser le réseau. Ainsi, cela vous permet de faire fonctionner un site web complètement hors-ligne.
 
 L'API Cache est un autre mécanisme de stockage côté client, il a été conçu pour enregistrer les réponses HTTP et fonctionne donc très bien en synergie avec les service workers.
 
-> **Note :** Les Service workers et Cache sont pris en charge par la plupart des navigateurs modernes aujourd'hui. Au moment de la rédaction de cet article, Safari était encore occupé à l'implémenter, mais il devrait bientôt être disponible.
+> [!NOTE]
+> Les Service workers et Cache sont pris en charge par la plupart des navigateurs modernes aujourd'hui. Au moment de la rédaction de cet article, Safari était encore occupé à l'implémenter, mais il devrait bientôt être disponible.
 
 ### Un exemple service worker
 
@@ -721,7 +728,8 @@ if ("serviceWorker" in navigator) {
 - On utilise la méthode {{domxref("ServiceWorkerContainer.register()")}} afin d'enregistrer le service worker `sw.js` pour l'origine où il se situe, ainsi il pourra contrôler les pages qui sont dans le même répertoire que lui, ou dans un sous-répertoire.
 - Lorsque la promesse est résolue, c'est que le service worker est enregistré.
 
-> **Note :** Le chemin du fichier `sw.js` est relatif à l'origine du site, et non au fichier JavaScript qui l'appelle.
+> [!NOTE]
+> Le chemin du fichier `sw.js` est relatif à l'origine du site, et non au fichier JavaScript qui l'appelle.
 > Le service worker est sur `https://mdn.github.io/learning-area/.../sw.js`. L'origine est `https://mdn.github.io`. Le chemin donné doit donc être `/learning-area/.../sw.js`.
 > Si vous vouliez héberger cet exemple sur votre propre serveur, vous devriez changer le chemin en conséquence. C'est plutôt inhabituel, mais cela doit fonctionner de cette façon pour des raisons de sécurité.
 
@@ -794,7 +802,7 @@ C'est tout pour l'instant. Nous espérons que vous avez trouvé notre récapitul
 ## Voir aussi
 
 - [Web storage API](/fr/docs/Web/API/Web_Storage_API)
-- [IndexedDB API](/fr/docs/Web/API/API_IndexedDB)
+- [IndexedDB API](/fr/docs/Web/API/IndexedDB_API)
 - [Cookies](/fr/docs/Web/HTTP/Cookies)
 - [Service worker API](/fr/docs/Web/API/Service_Worker_API)
 

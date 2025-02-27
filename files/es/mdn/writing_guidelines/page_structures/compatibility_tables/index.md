@@ -61,4 +61,5 @@ Las llamadas a las macros generan las siguientes tablas (y el correspondiente co
 
 {{Specifications}}
 
-> **Nota:** El metadato `browser-compat` solo es utilizado en el contenido en Inglés.
+> [!NOTE]
+> El metadato `browser-compat` solo es utilizado en el contenido en Inglés.

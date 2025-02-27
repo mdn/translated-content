@@ -41,4 +41,4 @@ _此介面繼承了其父 {{domxref("Event")}} 的 methods。_
 
 ## 延伸閱讀
 
-- [Using web workers](/zh-TW/docs/Web/Guide/Performance/Using_web_workers), most likely objects to raise such an event
+- [Using web workers](/zh-TW/docs/Web/API/Web_Workers_API/Using_web_workers), most likely objects to raise such an event

@@ -1,25 +1,27 @@
 ---
 title: margin-left
 slug: Web/CSS/margin-left
+l10n:
+  sourceCommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
 ---
 
 {{CSSRef}}
 
-**`margin-left`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の[マージン領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
+**`margin-left`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の[マージン領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
 
 {{EmbedInteractiveExample("pages/css/margin-left.html")}}
 
-二つの隣り合うボックスの垂直マージンは融合することがあります。これは[_マージンの相殺_](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)と呼ばれています。
+2 つの隣り合うボックスの垂直マージンは融合することがあります。これは[_マージンの相殺_](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)と呼ばれています。
 
 まれに幅の制約がきつすぎると (つまり、 `width`, `margin-left`, `border`, `padding`, コンテンツ領域, `margin-right` がすべて定義されていた場合)、 `margin-left` は無視され、 `auto` が設定されていたときと同じ計算値になります。
 
 ## 構文
 
-```
+```css
 /* <length> 値 */
-margin-left: 10px;  /* 絶対的な寸法 */
-margin-left: 1em;   /* 文字の寸法からの相対 */
-margin-left: 5%;    /* 直近のブロックコンテナーの幅からの相対 */
+margin-left: 10px; /* 絶対的な寸法 */
+margin-left: 1em; /* 文字の寸法からの相対 */
+margin-left: 5%; /* 直近のブロックコンテナーの幅からの相対 */
 
 /* キーワード値 */
 margin-left: auto;
@@ -28,6 +30,7 @@ margin-left: auto;
 margin-left: inherit;
 margin-left: initial;
 margin-left: revert;
+margin-left: revert-layer;
 margin-left: unset;
 ```
 
@@ -38,7 +41,7 @@ margin-left: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : マージンの寸法を固定値で表したものです。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : マージンの寸法を包含ブロックの*幅*に対するパーセント値で表したものです。
+  - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
 - `auto`
 
   - : 左マージンは未使用の水平方向の余白を共有します。これは主に使用されているレイアウトモードによって決定されます。 `margin-left` と `margin-right` の両方が `auto` の場合は、両方に均等に割り当てられます。それ以外の場合は以下の表のとおりです。
@@ -136,19 +139,38 @@ margin-left: unset;
 
 ## 例
 
-### ピクセル数とパーセント値を使用した左マージンの設定
+### margin-left をパーセント値で指定
 
-```css
-.content {
-  margin-left: 5%;
-}
-.sidebox {
-  margin-left: 10px;
-}
-.logo {
-  margin-left: -5px;
+`margin-left` をパーセント値で指定すると、コンテナーのインラインサイズに対する相対サイズになります。
+
+#### HTML
+
+```html live-sample___setting_margin-left_as_a_percentage
+<p>
+  A large rose-tree stood near the entrance of the garden: the roses growing on
+  it were white, but there were three gardeners at it, busily painting them red.
+</p>
+<p class="example">
+  Alice thought this a very curious thing, and she went nearer to watch them,
+  and just as she came up to them she heard one of them say, "Look out now,
+  Five! Don't go splashing paint over me like that!"
+</p>
+<p>
+  "I couldn't help it," said Five, in a sulky tone; "Seven jogged my elbow."
+</p>
+```
+
+#### CSS
+
+```css live-sample___setting_margin-left_as_a_percentage
+.example {
+  margin-left: 50%;
 }
 ```
+
+### 結果
+
+{{EmbedLiveSample("Setting margin-left as a percentage","","250")}}
 
 ## 仕様書
 
@@ -160,5 +182,8 @@ margin-left: unset;
 
 ## 関連情報
 
-- {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} と {{cssxref("margin")}} 一括指定
-- 対応付けられる論理的プロパティ: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}} および一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}
+- {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}
+- 一括指定の {{cssxref("margin")}}
+- {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}
+- 一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}
+- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール

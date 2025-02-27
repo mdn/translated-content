@@ -57,7 +57,7 @@ O tipo Null tem exatamente um valor: `null`. Consulte [`null`](/pt-BR/docs/Web/J
 
 ### Tipo Undefined
 
-Uma variável que não recebeu um valor tem o valor `undefined`. Consulte {{jsxref("undefined")}} e [Undefined](/pt-BR/docs/Glossary/undefined) para mais detalhes.
+Uma variável que não recebeu um valor tem o valor `undefined`. Consulte {{jsxref("undefined")}} e [Undefined](/pt-BR/docs/Glossary/Undefined) para mais detalhes.
 
 ### Tipos numéricos
 
@@ -67,7 +67,8 @@ ECMAScript tem dois tipos numéricos integrados: [Number](#number-type) e [BigIn
 
 O tipo Number é um [valor IEEE 754 de formato binário de 64 bits de precisão dupla](https://en.wikipedia.org/wiki/Double_precision_floating-point_format). É capaz de armazenar números de ponto flutuante positivos entre 2^-1074 ({{jsxref("Number.MIN_VALUE")}}) e 2^1024 ({{jsxref("Number.MAX_VALUE")}}), bem como números de ponto flutuante negativos entre -(2^-1074) e -(2^1024), mas só pode armazenar com segurança inteiros no intervalo -(2^53 − 1) ({{jsxref("Number.MIN_SAFE_INTEGER") }}) para 2^53 − 1 ({{jsxref("Number.MAX_SAFE_INTEGER")}}).
 
-> **Nota:** Você pode verificar se um número está dentro do intervalo de inteiros seguros usando {{jsxref("Number.isSafeInteger()")}}. Fora do intervalo de {{jsxref("Number.MIN_SAFE_INTEGER")}} a {{jsxref("Number.MAX_SAFE_INTEGER")}}, o JavaScript não pode mais representar inteiros com segurança; eles serão representados por uma aproximação de ponto flutuante de precisão dupla.
+> [!NOTE]
+> Você pode verificar se um número está dentro do intervalo de inteiros seguros usando {{jsxref("Number.isSafeInteger()")}}. Fora do intervalo de {{jsxref("Number.MIN_SAFE_INTEGER")}} a {{jsxref("Number.MAX_SAFE_INTEGER")}}, o JavaScript não pode mais representar inteiros com segurança; eles serão representados por uma aproximação de ponto flutuante de precisão dupla.
 
 Valores fora do intervalo ±(2^-1074 a 2^1024) são convertidos automaticamente:
 
@@ -85,9 +86,10 @@ console.log(42 / +0); // Infinity
 console.log(42 / -0); // -Infinity
 ```
 
-Embora um número geralmente represente apenas seu valor, o JavaScript fornece [operadores bitwise](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators).
+Embora um número geralmente represente apenas seu valor, o JavaScript fornece [operadores bitwise](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators).
 
-> **Nota:** embora os operadores bit a bit _podem_ ser usados para representar vários valores booleanos em um único número usando [mascaramento de bits](https://en.wikipedia.org/wiki/Mask_%28computing%29), isso geralmente é considerada uma má prática. JavaScript oferece outros meios para representar um conjunto de booleanos (como uma matriz de booleanos ou um objeto com valores booleanos atribuídos a propriedades nomeadas). O mascaramento de bits também tende a tornar o código mais difícil de ler, entender e manter.
+> [!NOTE]
+> Embora os operadores bit a bit _podem_ ser usados para representar vários valores booleanos em um único número usando [mascaramento de bits](https://en.wikipedia.org/wiki/Mask_%28computing%29), isso geralmente é considerada uma má prática. JavaScript oferece outros meios para representar um conjunto de booleanos (como uma matriz de booleanos ou um objeto com valores booleanos atribuídos a propriedades nomeadas). O mascaramento de bits também tende a tornar o código mais difícil de ler, entender e manter.
 
 Pode ser necessário usar essas técnicas em ambientes muito restritos, como ao tentar lidar com as limitações do armazenamento local ou em casos extremos (como quando cada bit na rede conta). Esta técnica só deve ser considerada quando for a última medida que pode ser tomada para otimizar o tamanho.
 
@@ -176,7 +178,8 @@ As propriedades de dados associam uma chave a um valor. Pode ser descrito pelos 
 
 Associa uma chave com uma das duas funções de acesso (`get` e `set`) para recuperar ou armazenar um valor.
 
-> **Nota:** É importante reconhecer que é o acessor _property_ — não o acessor _method_. Podemos fornecer acessores semelhantes a classes a um objeto JavaScript usando uma função como valor — mas isso não torna o objeto uma classe.
+> [!NOTE]
+> É importante reconhecer que é o acessor _property_ — não o acessor _method_. Podemos fornecer acessores semelhantes a classes a um objeto JavaScript usando uma função como valor — mas isso não torna o objeto uma classe.
 
 Uma propriedade do acessor tem os seguintes atributos:
 
@@ -205,7 +208,7 @@ Ao representar datas, a melhor opção é usar o [utilitário `Date`](/pt-BR/doc
 
 Além disso, arrays herdam de `Array.prototype`, que fornece a eles um punhado de métodos convenientes para manipular arrays. Por exemplo, [`indexOf()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) (pesquisando um valor no array) ou [`push()`](/en- US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) (adicionando um elemento à matriz) e assim por diante. Isso torna os Arrays um candidato perfeito para representar listas ou conjuntos.
 
-[Typed Arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays) apresentam uma visão semelhante a um array de um buffer de dados binários subjacente e oferecem muitos métodos que têm semântica semelhante aos equivalentes de array. "Typed array" é um termo abrangente para uma variedade de estruturas de dados, incluindo `Int8Array`, `Float32Array`, etc. Verifique a página [typed array](/pt-BR/docs/Web/JavaScript/Typed_arrays) para obter mais informações .
+[Typed Arrays](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays) apresentam uma visão semelhante a um array de um buffer de dados binários subjacente e oferecem muitos métodos que têm semântica semelhante aos equivalentes de array. "Typed array" é um termo abrangente para uma variedade de estruturas de dados, incluindo `Int8Array`, `Float32Array`, etc. Verifique a página [typed array](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays) para obter mais informações .
 
 ### Coleções chaveadas: Maps, Sets, WeakMaps, WeakSets
 

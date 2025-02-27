@@ -7,13 +7,13 @@ slug: Web/JavaScript/Guide/Functions
 
 Les fonctions font partie des briques fondamentales de JavaScript. Une fonction est une procédure JavaScript, un ensemble d'instructions effectuant une tâche ou calculant une valeur. Afin d'utiliser une fonction, il est nécessaire de l'avoir auparavant définie au sein de la portée dans laquelle on souhaite l'appeler.
 
-On pourra également lire [le chapitre de la référence JavaScript sur les fonctions](/fr/docs/Web/JavaScript/Reference/Fonctions) pour étudier plus en détails ce concept
+On pourra également lire [le chapitre de la référence JavaScript sur les fonctions](/fr/docs/Web/JavaScript/Reference/Functions) pour étudier plus en détails ce concept
 
 ## Définir des fonctions
 
 ### Les déclarations de fonctions
 
-Une **définition de fonction** (aussi appelée **déclaration de fonction** ou **instruction de fonction**) est construite avec le mot-clé [`function`](/fr/docs/Web/JavaScript/Reference/Instructions/function), suivi par :
+Une **définition de fonction** (aussi appelée **déclaration de fonction** ou **instruction de fonction**) est construite avec le mot-clé [`function`](/fr/docs/Web/JavaScript/Reference/Statements/function), suivi par :
 
 - Le nom de la fonction.
 - Une liste d'arguments à passer à la fonction, entre parenthèses et séparés par des virgules.
@@ -27,7 +27,7 @@ function carré(nombre) {
 }
 ```
 
-La fonction `carré` prend un seul argument, appelé `nombre`. La fonction est composée d'une seule instruction qui renvoie l'argument de la fonction (`nombre`) multiplié par lui-même. L'instruction [`return`](/fr/docs/Web/JavaScript/Reference/Instructions/return) spécifie la valeur qui est renvoyée par la fonction.
+La fonction `carré` prend un seul argument, appelé `nombre`. La fonction est composée d'une seule instruction qui renvoie l'argument de la fonction (`nombre`) multiplié par lui-même. L'instruction [`return`](/fr/docs/Web/JavaScript/Reference/Statements/return) spécifie la valeur qui est renvoyée par la fonction.
 
 ```js
 return nombre * nombre;
@@ -52,7 +52,8 @@ y = mavoiture.fabricant; // y aura la valeur "Toyota"
 // (la propriété fabricant a été modifiée par la fonction)
 ```
 
-> **Note :** Affecter un nouvel objet au paramètre n'aura **pas** d'effet en dehors de la fonction car cela revient à changer la valeur du paramètre plutôt que la valeur d'une des propriétés de l'objet. Par exemple :
+> [!NOTE]
+> Affecter un nouvel objet au paramètre n'aura **pas** d'effet en dehors de la fonction car cela revient à changer la valeur du paramètre plutôt que la valeur d'une des propriétés de l'objet. Par exemple :
 
 ```js
 function maFonction(monObjet) {
@@ -72,7 +73,7 @@ Dans le premier exemple, l'objet `mavoiture` était passé à la fonction `maFon
 
 ### Les expressions de fonction
 
-Syntaxiquement, la déclaration de fonction utilisée ci-dessus est une instruction. On peut également créer une fonction grâce à une **[expression de fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function)**. De telles fonctions peuvent être **anonymes** (ne pas avoir de nom correspondant). La fonction `carré` aurait pu être définie de la façon suivante :
+Syntaxiquement, la déclaration de fonction utilisée ci-dessus est une instruction. On peut également créer une fonction grâce à une **[expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function)**. De telles fonctions peuvent être **anonymes** (ne pas avoir de nom correspondant). La fonction `carré` aurait pu être définie de la façon suivante :
 
 ```js
 var carré = function (nombre) {
@@ -125,7 +126,7 @@ if (num === 0) {
 
 Une autre façon de définir des fonctions est d'utiliser le constructeur de l'objet {{jsxref("Function")}} afin de créer des fonctions à partir d'une chaîne lors de l'exécution, de la même façon que {{jsxref("Objets_globaux/eval", "eval()")}}.
 
-Une **méthode** est une fonction étant une propriété d'un objet. Vous trouverez plus de détails sur ces éléments dans le chapitre suivant du guide : [Utiliser les objets](/fr/docs/JavaScript/Guide/Utiliser_les_objets).
+Une **méthode** est une fonction étant une propriété d'un objet. Vous trouverez plus de détails sur ces éléments dans le chapitre suivant du guide : [Utiliser les objets](/fr/docs/Web/JavaScript/Guide/Working_with_objects).
 
 ## Appeler des fonctions
 
@@ -149,7 +150,8 @@ function carré(n) {
 
 La portée d'une fonction est la fonction dans laquelle elle est déclarée ou le programme entier si elle est déclarée au niveau le plus haut.
 
-> **Note :** Cela ne fonctionne que si la définition de la fonction utilise la syntaxe précédente (`function nomFonction(){}`). Le code ci-dessous ne fonctionnera pas :
+> [!NOTE]
+> Cela ne fonctionne que si la définition de la fonction utilise la syntaxe précédente (`function nomFonction(){}`). Le code ci-dessous ne fonctionnera pas :
 
 ```js example-bad
 console.log(carré); // La fonction carré est remontée/hoisted mais vaut undefined
@@ -168,7 +170,7 @@ let carré2 = function (n) {
 };
 ```
 
-Les arguments d'une fonction ne sont pas limités aux chaînes de caractères et aux nombres. Il est possible de passer des objets. La fonction `show_props` (définie dans le chapitre sur [l'utilisation des objets](/fr/docs/JavaScript/Guide/Utiliser_les_objets)) est un exemple de fonction utilisant un argument qui est un objet.
+Les arguments d'une fonction ne sont pas limités aux chaînes de caractères et aux nombres. Il est possible de passer des objets. La fonction `show_props` (définie dans le chapitre sur [l'utilisation des objets](/fr/docs/Web/JavaScript/Guide/Working_with_objects)) est un exemple de fonction utilisant un argument qui est un objet.
 
 Une fonction peut être récursive, c'est-à-dire qu'elle peut s'appeler elle-même. Voici la fonction qui calcule récursivement la factorielle d'un nombre :
 
@@ -231,7 +233,7 @@ getScore(); // Renvoie "Licorne a marqué 5"
 Une fonction peut faire référence à elle-même et s'appeler elle-même. Il existe trois moyens pour qu'une fonction fasse référence à elle-même :
 
 1. Le nom de la fonction
-2. [`arguments.callee`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/callee)
+2. [`arguments.callee`](/fr/docs/Web/JavaScript/Reference/Functions/arguments/callee)
 3. Une variable de la portée qui fait référence à la fonction
 
 Par exemple, avec la définition de fonction suivante :
@@ -273,7 +275,7 @@ function boucle(x) {
 boucle(0);
 ```
 
-Malgré cela, certains algorithmes ne peuvent pas être convertis en boucles itératives. Ainsi, récupérer l'ensemble des nœuds d'un arbre (le [DOM](/fr/docs/Web/API/Référence_du_DOM_Gecko) par exemple) se fait plus simplement en utilisant la récursivité :
+Malgré cela, certains algorithmes ne peuvent pas être convertis en boucles itératives. Ainsi, récupérer l'ensemble des nœuds d'un arbre (le [DOM](/fr/docs/Web/API/Document_Object_Model) par exemple) se fait plus simplement en utilisant la récursivité :
 
 ```js
 function parcourirArbre(noeud) {
@@ -330,7 +332,8 @@ En résumé :
 
 - La fonction imbriquée forme une fermeture : elle peut utiliser les arguments et les variables de la fonction parente. En revanche, la fonction parente ne peut pas utiliser les arguments et les variables de la fonction fille.
 
-> **Note :** Sur les fermetures, voir également [l'article à ce sujet](/fr/docs/Web/JavaScript/Closures).
+> [!NOTE]
+> Sur les fermetures, voir également [l'article à ce sujet](/fr/docs/Web/JavaScript/Closures).
 
 L'exemple qui suit illustre l'imbrication de fonctions :
 
@@ -497,7 +500,7 @@ var créerAnimal = function (nom) {
 };
 ```
 
-L'opérateur [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this) doit être traité avec précaution dans les fermetures. Attention, `this` fait référence au contexte où la fonction est appelée et non à l'endroit où il est défini.
+L'opérateur [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) doit être traité avec précaution dans les fermetures. Attention, `this` fait référence au contexte où la fonction est appelée et non à l'endroit où il est défini.
 
 ## Utiliser l'objet `arguments`
 
@@ -572,11 +575,11 @@ function multiplier(a, b = 1) {
 multiplier(5); // 5
 ```
 
-Pour plus de détails, voir [la page sur les paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_défaut_des_arguments) dans la référence.
+Pour plus de détails, voir [la page sur les paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters) dans la référence.
 
 ### Les paramètres du reste
 
-La syntaxe des [paramètres du reste](/fr/docs/Web/JavaScript/Reference/Fonctions/paramètres_du_reste) permet de représenter un nombre indéfini d'arguments contenus dans un tableau. Dans l'exemple suivant, on utilise les paramètres du reste pour collecter les arguments à partir du deuxième et jusqu'au dernier. Ces arguments sont multipliés par le premier. Dans cet exemple, on utilise une fonction fléchée, concept qui est présenté et illustré dans la section qui suit.
+La syntaxe des [paramètres du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters) permet de représenter un nombre indéfini d'arguments contenus dans un tableau. Dans l'exemple suivant, on utilise les paramètres du reste pour collecter les arguments à partir du deuxième et jusqu'au dernier. Ces arguments sont multipliés par le premier. Dans cet exemple, on utilise une fonction fléchée, concept qui est présenté et illustré dans la section qui suit.
 
 ```js
 function multiplier(facteur, ...lesArgs) {
@@ -589,7 +592,7 @@ console.log(arr); // [2, 4, 6]
 
 ## Fonctions fléchées
 
-[Une expression de fonction fléchée](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) permet d'utiliser une syntaxe plus concise que les expressions de fonctions classiques. Une telle fonction ne possède alors pas de valeur propre pour [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this), [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments), [`super`](/fr/docs/Web/JavaScript/Reference/Opérateurs/super) ou [`new.target`](/fr/docs/Web/JavaScript/Reference/Opérateurs/new.target). Les fonctions fléchées sont nécessairement anonymes.
+[Une expression de fonction fléchée](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) permet d'utiliser une syntaxe plus concise que les expressions de fonctions classiques. Une telle fonction ne possède alors pas de valeur propre pour [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](/fr/docs/Web/JavaScript/Reference/Functions/arguments), [`super`](/fr/docs/Web/JavaScript/Reference/Operators/super) ou [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new.target). Les fonctions fléchées sont nécessairement anonymes.
 
 Les fonctions fléchées ont été introduites pour deux raisons principales : une syntaxe plus courte et l'absence de `this` rattaché à la fonction. Voir aussi [ce billet sur tech.mozfr.org sur les fonctions fléchées](https://tech.mozfr.org/post/2015/06/10/ES6-en-details-%3A-les-fonctions-flechees).
 
@@ -610,7 +613,7 @@ console.log(a3); // affiche [8, 6, 7, 9]
 
 ### Pas de `this` distinct
 
-Avant les fonctions fléchées, chaque nouvelle fonction définissait sa propre valeur [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this) (un nouvel objet dans le cas d'un constructeur, `undefined` lors des appels en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), l'objet courant dans le cas d'une méthode, etc.). Cela pouvait poser quelques problèmes avec un style de programmation orienté objet.
+Avant les fonctions fléchées, chaque nouvelle fonction définissait sa propre valeur [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) (un nouvel objet dans le cas d'un constructeur, `undefined` lors des appels en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), l'objet courant dans le cas d'une méthode, etc.). Cela pouvait poser quelques problèmes avec un style de programmation orienté objet.
 
 ```js
 function Personne() {
@@ -628,7 +631,7 @@ function Personne() {
 var p = new Personne();
 ```
 
-Avec ECMAScript 3/5, ce problème fut résolu avec l'affectation de la valeur de `this` dans une variable a variable that could be closed over.
+Avec ECMAScript 3/5, ce problème fut résolu en affectant la valeur de `this` à une variable incluse dans la fermeture.
 
 ```js
 function Personne() {
@@ -672,7 +675,7 @@ JavaScript possède plusieurs fonctions natives, disponibles au plus haut niveau
 - {{jsxref("Objets_globaux/isFinite","isFinite()")}}
   - : La fonction **`isFinite()`** détermine si la valeur passée est un nombre fini. Si nécessaire, le paramètre sera converti en un nombre.
 - {{jsxref("Objets_globaux/isNaN","isNaN()")}}
-  - : La fonction **`isNaN()`** détermine si une valeur est {{jsxref("NaN")}} ou non. Note : On pourra également utiliser {{jsxref("Number.isNaN()")}} défini avec ECMAScript 6 ou utiliser [`typeof`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_typeof) afin de déterminer si la valeur est **N**ot-**A**-**N**umber.
+  - : La fonction **`isNaN()`** détermine si une valeur est {{jsxref("NaN")}} ou non. Note : On pourra également utiliser {{jsxref("Number.isNaN()")}} défini avec ECMAScript 6 ou utiliser [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof) afin de déterminer si la valeur est **N**ot-**A**-**N**umber.
 - {{jsxref("Objets_globaux/parseFloat","parseFloat()")}}
   - : La fonction **`parseFloat()`** convertit une chaîne de caractères en un nombre flottant.
 - {{jsxref("Objets_globaux/parseInt","parseInt()")}}

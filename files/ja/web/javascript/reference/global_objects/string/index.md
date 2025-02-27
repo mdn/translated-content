@@ -2,7 +2,7 @@
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
 l10n:
-  sourceCommit: 270351317fdaa57ba9123a19aa281e9e40bb0baa
+  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
 {{JSRef}}
@@ -11,7 +11,7 @@ l10n:
 
 ## 解説
 
-文字列は、テキスト形式で表現可能なデータを保持するのに便利です。最もよく使われる操作として、文字列の長さをチェックする {{jsxref("String/length", "length")}} プロパティ、 [文字列に対する + および += 演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#文字列演算子)を用いた文字列の連結、文字列の中の部分文字列の存在や位置をチェックする {{jsxref("String.prototype.indexOf()", "indexOf()")}} メソッド、部分文字列を取り出す {{jsxref("String.prototype.substring()", "substring()")}} メソッドが挙げられます。
+文字列は、テキスト形式で表現可能なデータを保持するのに便利です。最もよく使われる操作として、文字列の長さをチェックする {{jsxref("String/length", "length")}} プロパティ、 [文字列に対する `+` および `+=` 演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#文字列演算子)を用いた文字列の連結、文字列の中の部分文字列の存在や位置をチェックする {{jsxref("String/indexOf", "indexOf()")}} メソッド、部分文字列を取り出す {{jsxref("String/substring", "substring()")}} メソッドが挙げられます。
 
 ### 文字列の生成
 
@@ -34,7 +34,7 @@ const string4 = new String("文字列オブジェクト");
 
 ### 文字へのアクセス
 
-文字列内の個々の文字へのアクセス方法には、2 通りの方法があります。そのひとつは {{jsxref("String.prototype.charAt()", "charAt()")}} メソッドです。
+文字列内の個々の文字へのアクセス方法には、2 通りの方法があります。そのひとつは {{jsxref("String/charAt", "charAt()")}} メソッドです。
 
 ```js
 "ねこ".charAt(1); // "こ" が返される
@@ -99,7 +99,7 @@ areEqual("ı", "I", "tr"); // true
 
 ### 文字列プリミティブと String オブジェクト
 
-JavaScript では、 `String` オブジェクトと{{Glossary("Primitive", "プリミティブ文字列")}}は区別されることに注意してください。（{{jsxref("Boolean")}} や {{jsxref("Global_Objects/Number", "Number")}} にも同じことが言えます。）
+JavaScript では、 `String` オブジェクトと{{Glossary("Primitive", "プリミティブ文字列")}}は区別されることに注意してください。（{{jsxref("Boolean")}} や {{jsxref("Number", "Number")}} にも同じことが言えます。）
 
 文字列リテラル（二重引用符または単一引用符で示されます）、および `String` 関数をコンストラクター以外の場面で（すなわち {{jsxref("Operators/new", "new")}} キーワードを使わずに）呼び出した場合はプリミティブの文字列になります。
 文字列プリミティブに対してメソッドを呼び出したり、プロパティを参照したりするコンテキストでは、JavaScript は自動的に文字列プリミティブをラップし、ラッパーオブジェクトに対してメソッドを呼び出したり、プロパティを参照したりします。
@@ -129,7 +129,7 @@ console.log(eval(s2)); // 文字列の "2 + 2" を返す
 
 こういった理由から、プリミティブの文字列を期待して実装されたコードは `String` オブジェクトでうまく動作しないことがあります。しかし、一般的にはこれらの違いを考慮しなければならないことはあまりありません。
 
-なお、`String` オブジェクトは {{jsxref("String.prototype.valueOf()", "valueOf()")}} メソッドを用いることで、プリミティブの文字列に変換することができます。
+なお、`String` オブジェクトは {{jsxref("String/valueOf", "valueOf()")}} メソッドを用いることで、プリミティブの文字列に変換することができます。
 
 ```js
 console.log(eval(s2.valueOf())); // 数値の 4 を返す
@@ -146,7 +146,7 @@ console.log(eval(s2.valueOf())); // 数値の 4 を返す
 - 数値は [`toString(10)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) と同じアルゴリズムで変換されます。
 - [長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)は [`toString(10)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) と同じアルゴリズムで変換されます。
 - [シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)は {{jsxref("TypeError")}} が発生します。
-- オブジェクトは最初に[プリミティブに変換](/ja/docs/Web/JavaScript/Data_structures#primitive_coercion)され、これは [`[@@toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) を（`"string"` をヒントとして）呼び出すことで行われ、次に `toString()`、そして `valueOf()` メソッドがこの順序で呼び出されます。結果のプリミティブはそれから文字列に変換されます。
+- オブジェクトは最初に[プリミティブに変換](/ja/docs/Web/JavaScript/Data_structures#プリミティブ変換)され、これは [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) を（`"string"` をヒントとして）呼び出すことで行われ、次に `toString()`、そして `valueOf()` メソッドがこの順序で呼び出されます。結果のプリミティブはそれから文字列に変換されます。
 
 JavaScript でほぼ同じ効果を得る方法はいくつかあります。
 
@@ -160,18 +160,18 @@ JavaScript でほぼ同じ効果を得る方法はいくつかあります。
 
 文字列は基本的に [UTF-16 コード単位](https://ja.wikipedia.org/wiki/UTF-16)の並びとして表します。UTF-16 エンコーダーでは、すべてのコード単位は正確に 16 ビット長です。つまり、単一の UTF-16 コード単位として表現可能な文字は、最大で 2<sup>16</sup> 個、つまり 65536 通りあります。この文字集合は[基本多言語面 (BMP)](https://ja.wikipedia.org/wiki/基本多言語面) と呼ばれ、ラテン語、ギリシャ語、キリル文字のような最も一般的な文字や多くの東アジアの文字を含みます。各コード単位は `u` の文字列の後にちょうど 4 つの 16 進数を続けて書くことができます。
 
-しかし、Unicode の文字集合全体は 65536 よりはるかにずっと大きいのです。追加の文字は UTF-16 でサロゲートペアとして格納されます。これは単一の文字を表す 16 ビットのコード単位のペアです。曖昧さを避けるために、ペアの 2 つの部分は `0xD800` と `0xDFFF` の間でなければならず、これらのコード単位は単一のコード単位の文字をエンコードするためには使用しません。（より正確には、高サロゲートは `0xD800` から `0xDBFF` までの値があり、低サロゲートは `0xDC00` から `0xDFFF` までの値があります）。各 Unicode 文字は、 1 つないし 2 つの UTF-16 コード単位から成っており、Unicode コードポイントとも呼ばれます。各 Unicode コードポイントは文字列の中で `\u{xxxxxx}` と書くことができ、ここで `xxxxxx` は 1-6 桁の 16 進数を表します。
+しかし、Unicode の文字集合全体は 65536 よりはるかにずっと大きいのです。追加の文字は UTF-16 でサロゲートペアとして格納されます。これは単一の文字を表す 16 ビットのコード単位のペアです。曖昧さを避けるために、ペアの 2 つの部分は `0xD800` と `0xDFFF` の間でなければならず、これらのコード単位は単一のコード単位の文字をエンコードするためには使用しません。（より正確に言えば、上位サロゲート（上位サロゲートコード単位とも呼ばれる）は、`0xD800`から`0xDBFF`（両端値を含む）までの値を持ち、下位サロゲート（下位サロゲートコード単位とも呼ばれる）は、`0xDC00` から `0xDFFF`（両端値を含む）までの値を持ちます。各 Unicode コードポイントは文字列の中で `\u{xxxxxx}` と書くことができ、ここで `xxxxxx` は 1-6 桁の 16 進数を表します。
 
 「孤立サロゲート」とは、下記の記述のいずれかを満たす 16 ビットのコード単位です。
 
-- `0xD800` から `0xDBFF` までの範囲（つまり高サロゲート）にあるものの、文字列の最後のコード単位であるか、次のコード単位が低サロゲートではないもの。
-- `0xDC00` から `0xDFFF` までの範囲（つまり低サロゲート）にあるものの、文字列の最初のコード単位であるか、前のコード単位が高サロゲートではないもの。
+- `0xD800` から `0xDBFF` までの範囲（つまり上位サロゲート）にあるものの、文字列の最後のコード単位であるか、次のコード単位が下位サロゲートではないもの。
+- `0xDC00` から `0xDFFF` までの範囲（つまり下位サロゲート）にあるものの、文字列の最初のコード単位であるか、前のコード単位が上位サロゲートではないもの。
 
 孤立サロゲートは Unicode 文字を表しません。すべて UTF-16 コード単位に基づいて動作するため、ほとんどの JavaScript 組み込みメソッドは正しく扱いますが、他のシステムとやりとりするとき、孤立サロゲートはしばしば有効な値ではありません。例えば、[`encodeURI()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) は孤立サロゲートがあると {{jsxref("URIError")}} が発生します。これは URI エンコーディングが UTF-8 エンコーディングを使用しており、孤立サロゲートに対するエンコーディングを持たないためです。孤立サロゲートを格納しない文字列は _well-formed_ 文字列と呼ばれ、UTF-16 を扱わない関数（`encodeURI()` や {{domxref("TextEncoder")}} など）で使用しても安全です。{{jsxref("String/isWellFormed", "isWellFormed()")}} メソッドで文字列が整形されているか調べたり、{{jsxref("String/toWellFormed", "toWellFormed()")}} メソッドで孤立サロゲートをサニタイズすることができます。
 
 Unicode 文字の上に、書記素クラスターと呼ばれる 1 つの視覚単位として扱われるべき Unicode 文字並びがあります。最も一般的なケースは絵文字で、様々なバリエーションがある絵文字の多くは、実際には複数の絵文字で形成されており、たいていの場合、\<ZWJ> (`U+200D`) 文字で結合されています。
 
-どのレベルの文字を反復処理するのかに注意する必要があります。例えば、[`split("")`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) は UTF-16 コード単位で分割し、サロゲートペアを区切ります。文字列インデックスも各 UTF-16 コード単位のインデックスを参照します。他にも、[`@@iterator()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) はUnicode コードポイントで反復処理します。書記素クラスターを反復処理するには独自のコードが必要です。
+どのレベルの文字を反復処理するのかに注意する必要があります。例えば、[`split("")`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) は UTF-16 コード単位で分割し、サロゲートペアを区切ります。文字列インデックスも各 UTF-16 コード単位のインデックスを参照します。他にも、[`[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) はUnicode コードポイントで反復処理します。書記素クラスターを反復処理するには独自のコードが必要です。
 
 ```js
 "😄".split(""); // ['\ud83d', '\ude04']; 孤立サロゲートを 2 つに分割
@@ -194,7 +194,7 @@ Unicode 文字の上に、書記素クラスターと呼ばれる 1 つの視覚
 ## コンストラクター
 
 - {{jsxref("String/String", "String()")}}
-  - : 新しい `String` オブジェクトを生成するために使用します。コンストラクターではなく関数として呼び出されたときは型変換を行うので、普通はより有用です。
+  - : `String` オブジェクトを生成します。関数として呼び出された場合、`String` 型のプリミティブ値を返します。
 
 ## 静的メソッド
 
@@ -221,7 +221,7 @@ Unicode 文字の上に、書記素クラスターと呼ばれる 1 つの視覚
 
 - {{jsxref("String.prototype.at()")}}
   - : 指定した `index` にある文字（UTF-16 コード単位）を返します。負の整数を受け入れ、その場合は文字列の最後の文字から遡ります。
-- {{jsxref("String.prototype.charAt()")}}
+- {{jsxref("String/charAt")}}
   - : `index` で指定された位置の文字（UTF-16 コード単位 1 つ）を返します。
 - {{jsxref("String.prototype.charCodeAt()")}}
   - : `index` で指定された位置の文字の UTF-16 コード単位の値を示す数を返します。
@@ -234,11 +234,11 @@ Unicode 文字の上に、書記素クラスターと呼ばれる 1 つの視覚
 - {{jsxref("String.prototype.includes()")}}
   - : 呼び出した文字列に `searchString` が含まれているかを返します。
 - {{jsxref("String.prototype.indexOf()")}}
-  - : 呼び出す {{jsxref("String")}} オブジェクト内で、`searchValue` が最初に現れる位置を返します。見つからなかった場合は `-1` を返します。
+  - : この文字列内で、`searchValue` が最初に現れる位置を返します。見つからなかった場合は `-1` を返します。
 - {{jsxref("String.prototype.isWellFormed()")}}
-  - : 文字列に[孤立サロゲート](#utf-16_characters_unicode_code_points_and_grapheme_clusters)が含まれているかどうかを示す論理値を返します。
+  - : 文字列に[孤立サロゲート](#utf-16_文字、unicode_コードポイント、書記素クラスター)が含まれているかどうかを示す論理値を返します。
 - {{jsxref("String.prototype.lastIndexOf()")}}
-  - : 呼び出した {{jsxref("String")}} オブジェクト内で、`searchValue` が最後に現れる位置を返します。見つからない場合は `-1` を返します。
+  - : この文字列内で、`searchValue` が最後に現れる位置を返します。見つからない場合は `-1` を返します。
 - {{jsxref("String.prototype.localeCompare()")}}
   - : 参照文字列 `compareString` が、並べ替え順において、与えられた文字列の前になるか後になるか、あるいは、同じかどうかを示す数値を返します。
 - {{jsxref("String.prototype.match()")}}
@@ -265,21 +265,21 @@ Unicode 文字の上に、書記素クラスターと呼ばれる 1 つの視覚
   - : 呼び出した文字列を、部分文字列 `sep` が現れるところで分割し、文字列の配列を生成して返します。
 - {{jsxref("String.prototype.startsWith()")}}
   - : 呼び出した文字列が文字列 `searchString` で開始されているかを判断します。
-- {{jsxref("String.prototype.substr()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.substr()")}} {{deprecated_inline}}
   - : 指定されたインデックスから、指定された文字数だけ文字列の一部を返します。
-- {{jsxref("String.prototype.substring()")}}
+- {{jsxref("String/substring")}}
   - : 呼び出した文字列の指定された位置以降（または区間）にある文字が入った新しい文字列を返します。
 - {{jsxref("String.prototype.toLocaleLowerCase()")}}
 
   - : 文字列内の文字が、現在のロケールに沿って小文字に変換されます。
 
-    ほとんどの言語では、これは {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} と同じものを返します。
+    ほとんどの言語では、これは {{jsxref("String/toLowerCase", "toLowerCase()")}} と同じものを返します。
 
 - {{jsxref("String.prototype.toLocaleUpperCase()")}}
 
   - : 文字列内の文字が、現在のロケールに沿って大文字に変換されます。
 
-    ほとんどの言語では、これは {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}} と同じものを返します。
+    ほとんどの言語では、これは {{jsxref("String/toUpperCase", "toUpperCase()")}} と同じものを返します。
 
 - {{jsxref("String.prototype.toLowerCase()")}}
   - : 小文字に変換された文字列の値を呼び出して返します。
@@ -295,42 +295,43 @@ Unicode 文字の上に、書記素クラスターと呼ばれる 1 つの視覚
   - : 文字列の末尾にあるホワイトスペースを削除します。
 - {{jsxref("String.prototype.trimStart()")}}
   - : 文字列の先頭にあるホワイトスペースを削除します。
-- {{jsxref("String.prototype.valueOf()")}}
+- {{jsxref("String/valueOf")}}
   - : 指定されたオブジェクトのプリミティブ値を返します。{{jsxref("Object.prototype.valueOf()")}} メソッドを上書きします。
-- [`String.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)
+- [`String.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)
   - : 文字列値のコードポイントを反復処理し、文字列値として各コードポイントを返す、新しいイテレーターオブジェクトを返します。
 
 ### HTML ラッパーメソッド
 
-> **メモ:** 非推奨です。これらのメソッドは避けてください。
+> [!NOTE]
+> 非推奨です。これらのメソッドは避けてください。
 >
 > これらはとても古い HTML 標準に基づいており、現在利用できる HTML タグや属性のサブセットしか提供していないため、使用するのには限界があります。多くが今日では非推奨または標準外のマークアップを生成します。さらに、単純な文字列の連結を検証やサニタイズなしに行うため、[`innerHTML`](/ja/docs/Web/API/Element/innerHTML) を使用して直接挿入するとセキュリティ上の脅威となる可能性があります。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model)、例えば [`document.createElement()`](/ja/docs/Web/API/Document/createElement) など使用してください。
 
-- {{jsxref("String.prototype.anchor()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.anchor()")}} {{deprecated_inline}}
   - : [`<a name="name">`](/ja/docs/Web/HTML/Element/a#name)（ハイパーテキストのターゲット）
-- {{jsxref("String.prototype.big()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.big()")}} {{deprecated_inline}}
   - : {{HTMLElement("big")}}
-- {{jsxref("String.prototype.blink()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.blink()")}} {{deprecated_inline}}
   - : `<blink>`
-- {{jsxref("String.prototype.bold()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.bold()")}} {{deprecated_inline}}
   - : {{HTMLElement("b")}}
-- {{jsxref("String.prototype.fixed()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.fixed()")}} {{deprecated_inline}}
   - : {{HTMLElement("tt")}}
-- {{jsxref("String.prototype.fontcolor()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.fontcolor()")}} {{deprecated_inline}}
   - : [`<font color="color">`](/ja/docs/Web/HTML/Element/font#color)
-- {{jsxref("String.prototype.fontsize()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.fontsize()")}} {{deprecated_inline}}
   - : [`<font size="size">`](/ja/docs/Web/HTML/Element/font#size)
-- {{jsxref("String.prototype.italics()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.italics()")}} {{deprecated_inline}}
   - : {{HTMLElement("i")}}
-- {{jsxref("String.prototype.link()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.link()")}} {{deprecated_inline}}
   - : [`<a href="url">`](/ja/docs/Web/HTML/Element/a#href)（URL へのリンク）
-- {{jsxref("String.prototype.small()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.small()")}} {{deprecated_inline}}
   - : {{HTMLElement("small")}}
-- {{jsxref("String.prototype.strike()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.strike()")}} {{deprecated_inline}}
   - : {{HTMLElement("strike")}}
-- {{jsxref("String.prototype.sub()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.sub()")}} {{deprecated_inline}}
   - : {{HTMLElement("sub")}}
-- {{jsxref("String.prototype.sup()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.sup()")}} {{deprecated_inline}}
   - : {{HTMLElement("sup")}}
 
 これらのメソッドは文字列そのものが HTML タグを含むかどうかを調べないので、無効な HTML を作成する可能性があることに注意してください。
@@ -349,15 +350,17 @@ Unicode 文字の上に、書記素クラスターと呼ばれる 1 つの視覚
 
 ### 文字列変換
 
-`String` を使用すると、 {{jsxref("String.prototype.toString()", "toString()")}} よりも信頼性の高い代替手段となり、[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) および {{jsxref("undefined")}} に対して使用することもできます。
+`String()` 関数は、値の {{jsxref("String.prototype.toString()", "toString()")}} メソッドを呼び出すよりも、値を文字列に変換する信頼性の高い方法です。前者は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) や {{jsxref("undefined")}} に対して使用しても動作するからです。例を示します。
 
 ```js
+// null や undefined のプロパティにアクセスすることはできない
+
 const nullVar = null;
-nullVar.toString(); // TypeError: nullVar is null
+nullVar.toString(); // TypeError: Cannot read properties of null
 String(nullVar); // "null"
 
 const undefinedVar = undefined;
-undefinedVar.toString(); // TypeError: undefinedVar is undefined
+undefinedVar.toString(); // TypeError: Cannot read properties of undefined
 String(undefinedVar); // "undefined"
 ```
 
@@ -371,5 +374,5 @@ String(undefinedVar); // "undefined"
 
 ## 関連情報
 
-- [JavaScript ガイドのテキスト処理](/ja/docs/Web/JavaScript/Guide/Text_formatting)
+- [テキスト処理](/ja/docs/Web/JavaScript/Guide/Text_formatting)ガイド
 - {{jsxref("RegExp")}}

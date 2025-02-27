@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 
 O método **`Object.defineProperty()`** define uma nova propriedade diretamente em um objeto, ou modifica uma propriedade já existente em um objeto, e retorna o objeto.
 
-> **Nota:** Você invoca este método diretamente no construtor do {{jsxref("Object")}} ao invés de invocar em uma instância do tipo `Object`.
+> [!NOTE]
+> Você invoca este método diretamente no construtor do {{jsxref("Object")}} ao invés de invocar em uma instância do tipo `Object`.
 
 ## Sintaxe
 
@@ -422,15 +423,11 @@ console.log(myclass.prototype.y); // 1
 
 ## Especificações
 
-| Especificação                                                                  | Status               | Comentários                                          |
-| ------------------------------------------------------------------------------ | -------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.6', 'Object.defineProperty')}}                | {{Spec2('ES5.1')}}   | Definição inicial. Implementada no JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.defineproperty', 'Object.defineProperty')}}     | {{Spec2('ES6')}}     |                                                      |
-| {{SpecName('ESDraft', '#sec-object.defineproperty', 'Object.defineProperty')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.defineProperty")}}
+{{Compat}}
 
 ## Notas de compatibilidade
 
@@ -444,7 +441,7 @@ Versões do Chrome que implementam `Object.defineProperty()` em algumas circunst
 
 Versões do Safari que implementam `Object.defineProperty()` ignoram um valor para `length` diferente do valor atual da propriedade {{jsxref("Array.length", "length")}}, e tentantivas de alterar o atributo `writable` executam sem erros embora não modifiquem seu comportamento.
 
-Apenas o Internet Explorer 9 a posteriores, e o Firefox 23 e posteriores, parecem implementar total e corretamente a redefinição da propriedade {{jsxref("Array.length", "length")}} de arrays. Por enquanto, não confie que a redefinição da propriedade {{jsxref("Array.length", "length")}} vá funcionar, mesmo que de uma forma particular. E mesmo quando você _puder_ confiar, [existem boas razões para não fazer isso](http://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/).
+Apenas o Internet Explorer 9 a posteriores, e o Firefox 23 e posteriores, parecem implementar total e corretamente a redefinição da propriedade {{jsxref("Array.length", "length")}} de arrays. Por enquanto, não confie que a redefinição da propriedade {{jsxref("Array.length", "length")}} vá funcionar, mesmo que de uma forma particular. E mesmo quando você _puder_ confiar, [existem boas razões para não fazer isso](https://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/).
 
 ### Notas específicas para o Internet Explorer 8
 
@@ -456,7 +453,7 @@ O Internet Explorer 8 implementa o método `Object.defineProperty()` para uso [a
 
 ## Veja também
 
-- [Enumerabilidade and posse de propriedades](/pt-BR/docs/Enumerability_and_ownership_of_properties)
+- [Enumerabilidade and posse de propriedades](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

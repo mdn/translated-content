@@ -75,7 +75,7 @@ Accept-Language: en-US,en;q=0.5
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Accept-Language")}}
+{{Compat}}
 
 ## 関連情報
 

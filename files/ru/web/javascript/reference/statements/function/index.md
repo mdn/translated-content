@@ -74,7 +74,7 @@ function calc_sales(units_a, units_b, units_c) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

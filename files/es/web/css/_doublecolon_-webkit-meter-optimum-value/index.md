@@ -1,5 +1,5 @@
 ---
-title: "::-webkit-meter-optimum-value"
+title: ::-webkit-meter-optimum-value
 slug: Web/CSS/::-webkit-meter-optimum-value
 ---
 
@@ -32,7 +32,8 @@ meter::-webkit-meter-optimum-value {
 
 {{ EmbedLiveSample('Ejemplos', '100%', 50) }}
 
-> **Nota:** Sólo funciona en navegadores basado en Webkit/Blink.
+> [!NOTE]
+> Sólo funciona en navegadores basado en Webkit/Blink.
 
 ## Especificaciones
 

@@ -3,7 +3,7 @@ title: update
 slug: Mozilla/Add-ons/WebExtensions/API/theme/update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Met à jour le thème du navigateur en fonction du contenu de l'objet {{WebExtAPIRef("theme.Theme", "Theme")}} donné.
 

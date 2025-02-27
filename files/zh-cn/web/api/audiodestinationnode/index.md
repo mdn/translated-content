@@ -58,7 +58,7 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 ```
 
-更多的例子，请查看 MDN Web Audio 示例，例如[Voice-change-o-matic](http://mdn.github.io/voice-change-o-matic/) 或者 [Violent Theremin](http://mdn.github.io/violent-theremin/).
+更多的例子，请查看 MDN Web Audio 示例，例如[Voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) 或者 [Violent Theremin](https://mdn.github.io/violent-theremin/).
 
 ## 标准
 

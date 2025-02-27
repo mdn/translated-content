@@ -11,7 +11,23 @@ O método **`Promise.allSettled()`** retorna uma promessa que é resolvida após
 
 Para comparação, a promessa retornada por {{jsxref("Promise.all()")}} pode ser mais apropriada para tarefas que dependem umas das outras, ou se você precisa que todas as tarefas sejam rejeitadas quando apenas uma é.
 
-{{EmbedInteractiveExample("pages/js/promise-allsettled.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.allSettled()")}}
+
+```js interactive-example
+const promise1 = Promise.resolve(3);
+const promise2 = new Promise((resolve, reject) =>
+  setTimeout(reject, 100, "foo"),
+);
+const promises = [promise1, promise2];
+
+Promise.allSettled(promises).then((results) =>
+  results.forEach((result) => console.log(result.status)),
+);
+
+// Expected output:
+// "fulfilled"
+// "rejected"
+```
 
 ## Sintaxe
 
@@ -22,7 +38,7 @@ promise.allSettled(iterable);
 ### Parâmetros
 
 - `iterable`
-  - : Um objeto [iterável](/pt-BR/docs/Web/JavaScript/Guide/iterable), como um {{jsxref("Array")}}, onde cada membro é uma `Promise`.
+  - : Um objeto [iterável](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols), como um {{jsxref("Array")}}, onde cada membro é uma `Promise`.
 
 ### Valor retornado
 
@@ -30,15 +46,13 @@ Uma {{jsxref("Promise")}} **pendente** que vai ser **preenchida assíncronamente
 
 Para cada objeto no array retornado, existe uma string `status`. Se o status for `fulfilled`, então o campo `value` estará presente. Se o status for `rejected`, então o campo `reason` estará presente. O valor (value) ou o motivo da falha (reason) refletem o valor com que cada promessa foi completada (ou rejeitada).
 
-## Especificaçṍes
+## Especificações
 
-| Specification                                                                               | Status               | Comment |
-| ------------------------------------------------------------------------------------------- | -------------------- | ------- |
-| [`Promise.allSettled()` (TC39 Stage 4 Draft)](https://tc39.es/proposal-promise-allSettled/) | {{Spec2('ESDraft')}} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Promise.allSettled")}}
+{{Compat}}
 
 ## Veja também
 

@@ -3,6 +3,8 @@ title: Exemples
 slug: Web/API/Document_Object_Model/Examples
 ---
 
+{{DefaultAPISidebar("DOM")}}
+
 Cette page présente quelques exemples plus détaillés de développement Web et XML utilisant le DOM. Partout où c'est possible, les exemples utilisent des API courantes, des astuces et des modèles en JavaScript pour manipuler l'objet de document.
 
 ## Exemple 1&nbsp;: _height_ (hauteur) et width _(largeur)_
@@ -49,14 +51,16 @@ L'exemple qui suit montre l'utilisation des propriétés `height` et `width` pou
   <body onload="init();">
     <p>
       Image 1: no height, width, or style
-      <img id="image1" src="http://www.mozilla.org/images/mozilla-banner.gif" />
+      <img
+        id="image1"
+        src="https://www.mozilla.org/images/mozilla-banner.gif" />
     </p>
 
     <p>
       Image 2: height="50", width="500", but no style
       <img
         id="image2"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         height="50"
         width="500" />
     </p>
@@ -65,7 +69,7 @@ L'exemple qui suit montre l'utilisation des propriétés `height` et `width` pou
       Image 3: no height, width, but style="height: 50px; width: 500px;"
       <img
         id="image3"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         style="height: 50px; width: 500px;" />
     </p>
 
@@ -303,7 +307,7 @@ Cet exemple montre comment la méthode {{domxref("window.getComputedStyle")}} pe
 
 Cet exemple utilise des méthodes DOM pour afficher les propriétés d'un objet {{domxref("window.onload")}} {{domxref("event")}} et leurs valeurs dans un tableau. Il montre également une technique utile utilisant une boucle `for..in` pour parcourir les propriétés d'un objet et obtenir leurs valeurs.
 
-Les propriétés des objets `event` diffèrent sensiblement entre les différents navigateurs, la [spécification norme DOM](http://www.w3.org/TR/DOM-Level-2-Events/events.html) liste les propriétés standard, mais beaucoup de navigateurs ont ajouté un bon nombre de propriétés supplémentaires.
+Les propriétés des objets `event` diffèrent sensiblement entre les différents navigateurs, la [spécification norme DOM](https://www.w3.org/TR/DOM-Level-2-Events/events.html) liste les propriétés standard, mais beaucoup de navigateurs ont ajouté un bon nombre de propriétés supplémentaires.
 
 Placez le code qui suit dans une fichier texte vide et chargez-le dans différents navigateurs, vous serez surpris des différences entre le nombre et le nom des propriétés. Vous pouvez également ajouter quelques éléments à la page et appeler cette fonction depuis d'autres gestionnaires d'évènements.
 
@@ -410,11 +414,11 @@ Pour ajouter une ligne et quelques cellules à un tableau existant&nbsp;:
 
 - N'utilisez jamais la propriété {{domxref("element.innerHTML","innerHTML")}} d'un tableau pour le modifier, même si vous pouvez l'utiliser pour créer un tableau entier ou le contenu d'une cellule.
 - Si vous utilisez les méthodes DOM Core {{domxref("document.createElement")}} et {{domxref("Node.appendChild")}} pour créer des lignes et cellules de tableau, il est nécessaire de les ajouter à un élément `tbody` dans Internet Explorer, tandis que les autres navigateurs vous permettront de les ajouter à un élément `table` (les lignes seront ajoutées au dernier élément `tbody`).
-- Un certain nombre d'autres méthodes utilitaires faisant partie de l'[interface table](/fr/docs/Web/API/HTMLTableElement#Méthodes) peuvent être utilisées pour créer et modifier des tableaux.
+- Un certain nombre d'autres méthodes utilitaires faisant partie de l'[interface table](/fr/docs/Web/API/HTMLTableElement#méthodes) peuvent être utilisées pour créer et modifier des tableaux.
 
 ## Subnav
 
 - [Référence DOM](/fr/docs/Web/API/Document_Object_Model)
 - [Introduction à DOM](/fr/docs/Web/API/Document_Object_Model/Introduction)
-- [Les événements et DOM](/fr/docs/Web/API/Document_Object_Model/Events)
-- [Exemples](/fr/docs/Web/API/Document_Object_Model/Exemples)
+- [Les événements et DOM](/fr/docs/Learn/JavaScript/Building_blocks/Events)
+- [Exemples](/fr/docs/Web/API/Document_Object_Model/Examples)

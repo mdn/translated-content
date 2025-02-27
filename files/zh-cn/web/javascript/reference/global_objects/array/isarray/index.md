@@ -1,13 +1,29 @@
 ---
 title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
+l10n:
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
 
-**`Array.isArray()`** 静态方法用于确定传递的值是否是一个 {{jsxref("Array")}}。
+**`Array.isArray()`** 静态方法用于确定传递的值是否是一个{{jsxref("Array", "数组", "", 1)}}。
 
-{{EmbedInteractiveExample("pages/js/array-isarray.html")}}
+{{InteractiveExample("JavaScript Demo: Array.isArray()")}}
+
+```js interactive-example
+console.log(Array.isArray([1, 3, 5]));
+// Expected output: true
+
+console.log(Array.isArray("[]"));
+// Expected output: false
+
+console.log(Array.isArray(new Array(5)));
+// Expected output: true
+
+console.log(Array.isArray(new Int16Array([15, 33])));
+// Expected output: false
+```
 
 ## 语法
 
@@ -30,7 +46,7 @@ Array.isArray(value)
 
 有关更多细节，请参阅文章[“确定 JavaScript 对象是否为数组”](https://web.mit.edu/jwalden/www/isArray.html)。
 
-`Array.isarray()` 也拒绝原型链中带有 `Array.prototype`，而实际不是数组的对象，但 `instanceof Array` 会接受。
+`Array.isArray()` 也拒绝原型链中带有 `Array.prototype`，而实际不是数组的对象，但 `instanceof Array` 会接受。
 
 ## 示例
 
@@ -60,7 +76,7 @@ Array.isArray(new Uint8Array(32));
 Array.isArray({ __proto__: Array.prototype });
 ```
 
-### instanceof vs. Array.isArray()
+### instanceof 和 Array.isArray()
 
 当检测 `Array` 实例时，`Array.isArray` 优于 `instanceof`，因为 `Array.isArray` 能跨领域工作。
 
@@ -87,5 +103,5 @@ arr instanceof Array; // false
 ## 参见
 
 - [`core-js` 中 `Array.isArray` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)指南
 - {{jsxref("Array")}}

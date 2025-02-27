@@ -219,7 +219,7 @@ professeur1.saluer();
 
 Tout cela devrait parfaitement fonctionner. Les instructions des lignes 1, 2, 3 et 6 accèdent à des membres hérités de la classe générique `Personne()` via son constructeur, tandis que la ligne 4 accède de façon plus spécifique à un membre qui n'est disponible que via le constructeur de la classe spécialisée `Professeur()`.
 
-**Note :** Si vous rencontrez un problème pour faire fonctionner ce code, comparez-le à notre [version finalisée](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html) (ou regardez tourner [notre démo en ligne](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html)).
+**Note :** Si vous rencontrez un problème pour faire fonctionner ce code, comparez-le à notre [version finalisée](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html) (ou regardez tourner [notre démo en ligne](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html)).
 
 La méthode que nous avons détaillée ici n'est pas la seule permettant de mettre en place l'héritage de classes en JavaScript, mais elle fonctionne parfaitement et vous permet d'avoir une bonne idée de comment implémenter l'héritage en JavaScript.
 
@@ -231,7 +231,7 @@ Un moyen habituel est d'utiliser les bibliothèques JavaScript — la plupart de
 
 ## Un exercice plus complexe
 
-Dans notre [section sur la programmation orientée objet](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters), nous avons également inclus une classe `Etudiant` comme un concept qui hérite de toutes les fonctionnalités de la classe `Personne` et qui a également une méthode `saluer()` différente de celle de `Personne`, beaucoup moins formelle que la méthode `saluer()` de `Professeur()`. Jetez un œil à ce à quoi ressemble la méthode `saluer()` de la classe `Etudiant` dans cette section et essayez d'implémenter votre propre constructeur `Etudiant()` qui hérite de toutes les fonctionnalités de `Personne()` et la fonction `saluer()` différente.
+Dans notre [section sur la programmation orientée objet](/fr/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#object-oriented_programming_from_10000_meters), nous avons également inclus une classe `Etudiant` comme un concept qui hérite de toutes les fonctionnalités de la classe `Personne` et qui a également une méthode `saluer()` différente de celle de `Personne`, beaucoup moins formelle que la méthode `saluer()` de `Professeur()`. Jetez un œil à ce à quoi ressemble la méthode `saluer()` de la classe `Etudiant` dans cette section et essayez d'implémenter votre propre constructeur `Etudiant()` qui hérite de toutes les fonctionnalités de `Personne()` et la fonction `saluer()` différente.
 
 **Note :** Si vous rencontrez un problème pour faire fonctionner ce code, comparez-le à notre [version finalisée](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) (ou regardez tourner [notre démo en ligne](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html)).
 

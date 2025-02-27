@@ -66,7 +66,7 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 ## Notes d'utilisation
 
 - Généralement, un élément `<figure>` est utilisé pour une image, une illustration, un diagramme, un fragment de code ou autre qui est référencé depuis le flux principal du document. Toutefois, cet élément peut être déplacé vers une autre partie du document ou en annexe sans que cela ait un impact sur le flux principal.
-- `<figure>` est [une racine de sectionnement](/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_roots), son contenu est donc exclu du plan général du document.
+- `<figure>` est [une racine de sectionnement](/fr/docs/Web/HTML/Element/Heading_Elements#sectioning_roots), son contenu est donc exclu du plan général du document.
 - Une légende peut être associée avec l'élément `<figure>` en insérant un élément [`<figcaption>`](/fr/docs/Web/HTML/Element/figcaption) à l'intérieur (en premier ou dernier élément enfant). C'est le premier élément `<figcaption>` qui sera trouvé dans la figure qui sera affiché comme légende.
 
 ## Exemples

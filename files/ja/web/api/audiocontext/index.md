@@ -70,7 +70,7 @@ const finish = audioCtx.destination;
 // etc.
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

@@ -3,7 +3,7 @@ title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 **Math** é um objeto embutido que tem propriedades e métodos para constantes e funções matemáticas. Não é um objeto de função.
 
@@ -32,7 +32,8 @@ Ao contrário de outros objetos globais, `Math` não é um construtor. Todas as 
 
 ## Métodos
 
-> **Nota:** Note que as funções trigonométricas (sin(), cos(), tan(), asin(), acos(), atan(), atan2()) recebem ou retornam ângulos em radianos. Divida por (`Math.PI/180`) para converter radianos em graus, ou multiplique por esse valor para fazer a conversão inversa.
+> [!NOTE]
+> Note que as funções trigonométricas (sin(), cos(), tan(), asin(), acos(), atan(), atan2()) recebem ou retornam ângulos em radianos. Divida por (`Math.PI/180`) para converter radianos em graus, ou multiplique por esse valor para fazer a conversão inversa.
 
 - {{jsxref("Global_Objects/Math/abs", "Math.abs(x)")}}
 
@@ -243,7 +244,7 @@ Ao contrário de outros objetos globais, `Math` não é um construtor. Todas as 
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math")}}
+{{Compat}}
 
 ## Veja também
 

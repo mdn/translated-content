@@ -1,8 +1,9 @@
 ---
-title: KeyboardEvent.key
+title: "KeyboardEvent: key プロパティ"
+short-title: key
 slug: Web/API/KeyboardEvent/key
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("UI Events")}}
@@ -21,7 +22,7 @@ l10n:
 - 一部の特殊なキーボードのキー（マルチメディアキーボードでメディアを制御するための拡張キーなど）は、 Windows ではキーコードを生成しません。その代わりに、 `WM_APPCOMMAND` イベントが発生します。これらのイベントは DOM キーボードイベントにマッピングされ、 Windows の「仮想キーコード」にリストアップされます（実際にはキーコードではありませんが）。
 - キーを特定できない場合、返される値は `Unidentified` になります。
 
-> **注目:**
+> [!CALLOUT]
 >
 > [キー値の完全なリスト](/ja/docs/Web/API/UI_Events/Keyboard_event_key_values)をご覧ください。
 
@@ -170,26 +171,21 @@ window.addEventListener(
     }
 
     switch (event.key) {
-      case "Down": // IE/Edge specific value
       case "ArrowDown":
         // Do something for "down arrow" key press.
         break;
-      case "Up": // IE/Edge specific value
       case "ArrowUp":
         // Do something for "up arrow" key press.
         break;
-      case "Left": // IE/Edge specific value
       case "ArrowLeft":
         // Do something for "left arrow" key press.
         break;
-      case "Right": // IE/Edge specific value
       case "ArrowRight":
         // Do something for "right arrow" key press.
         break;
       case "Enter":
         // Do something for "enter" or "return" key press.
         break;
-      case "Esc": // IE/Edge specific value
       case "Escape":
         // Do something for "esc" key press.
         break;

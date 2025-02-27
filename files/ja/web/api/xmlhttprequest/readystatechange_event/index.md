@@ -1,15 +1,17 @@
 ---
 title: "XMLHttpRequest: readystatechange イベント"
+short-title: readystatechange
 slug: Web/API/XMLHttpRequest/readystatechange_event
 l10n:
-  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef}}
+{{APIRef("XMLHttpRequest API")}}
 
 `readystatechange` イベントは、 {{domxref("XMLHttpRequest")}} の {{domxref("XMLHttpRequest.readyState", "readyState")}} プロパティが変化するたびに発生します。
 
-> **警告:** これは同期リクエストで使用してはいけません。また、ネイティブコードから使用してはいけません。
+> [!WARNING]
+> これは同期リクエストで使用してはいけません。また、ネイティブコードから使用してはいけません。
 
 ## 構文
 

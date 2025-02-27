@@ -3,7 +3,7 @@ title: "ARIA: rowgroup ロール"
 slug: Web/Accessibility/ARIA/Roles/rowgroup_role
 ---
 
-行グループロール (`role="rowgroup"`) を持つ要素は、表形式の構造内の行 ([`row`](/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role)) のグループです。 行グループ (`rowgroup`) には、グリッド ([`grid`](/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role))、表 ([`table`](/ja/docs/Web/Accessibility/ARIA/Roles/Table_Role))、ツリーグリッド ([`treegrid`](/ja/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role)) 内のセル ([`cell`](/ja/docs/Web/Accessibility/ARIA/Roles/Cell_Role))、グリッドセル ([`gridcell`](/ja/docs/Web/Accessibility/ARIA/Roles/Gridcell_role))、列ヘッダー ([`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role))、行ヘッダー ([`rowheader`](/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_Role)) の行が 1 つ以上含まれます。
+行グループロール (`role="rowgroup"`) を持つ要素は、表形式の構造内の行 ([`row`](/ja/docs/Web/Accessibility/ARIA/Roles/row_role)) のグループです。 行グループ (`rowgroup`) には、グリッド ([`grid`](/ja/docs/Web/Accessibility/ARIA/Roles/grid_role))、表 ([`table`](/ja/docs/Web/Accessibility/ARIA/Roles/table_role))、ツリーグリッド ([`treegrid`](/ja/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role)) 内のセル ([`cell`](/ja/docs/Web/Accessibility/ARIA/Roles/cell_role))、グリッドセル ([`gridcell`](/ja/docs/Web/Accessibility/ARIA/Roles/gridcell_role))、列ヘッダー ([`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role))、行ヘッダー ([`rowheader`](/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_Role)) の行が 1 つ以上含まれます。
 
 ```html
 <div role="table" aria-label="人口" aria-describedby="country_population_desc">
@@ -29,27 +29,28 @@ slug: Web/Accessibility/ARIA/Roles/rowgroup_role
 
 ## 説明
 
-行グループ (`rowgroup`) は、所有する行の要素間の関係を確立し、HTML の表ヘッダー ([`<thead>`](/ja/docs/Web/HTML/Element/thead))、表フッター ([`<tfoot>`](/ja/docs/Web/HTML/Element/tfoot)) 、および表本体 ([`<tbody>`](/ja/docs/Web/HTML/Element/tbody)) の要素と構造的に同等です。 ただし、異なる種類の行グループ間には区別がありません。 それらの要素は、表 ([`table`](/ja/docs/Web/Accessibility/ARIA/Roles/Table_Role)) やグリッド ([`grid`](/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role)) のロールを持つ要素に含まれているか、またはそれらの要素によって所有されている必要があります。 可能な限り、ネイティブな HTML の [`<thead>`](/ja/docs/Web/HTML/Element/thead)、[`<tfoot>`](/ja/docs/Web/HTML/Element/tfoot)、[`<tbody>`](/ja/docs/Web/HTML/Element/tbody) の要素を使用することを強く推奨します。
+行グループ (`rowgroup`) は、所有する行の要素間の関係を確立し、HTML の表ヘッダー ([`<thead>`](/ja/docs/Web/HTML/Element/thead))、表フッター ([`<tfoot>`](/ja/docs/Web/HTML/Element/tfoot)) 、および表本体 ([`<tbody>`](/ja/docs/Web/HTML/Element/tbody)) の要素と構造的に同等です。 ただし、異なる種類の行グループ間には区別がありません。 それらの要素は、表 ([`table`](/ja/docs/Web/Accessibility/ARIA/Roles/table_role)) やグリッド ([`grid`](/ja/docs/Web/Accessibility/ARIA/Roles/grid_role)) のロールを持つ要素に含まれているか、またはそれらの要素によって所有されている必要があります。 可能な限り、ネイティブな HTML の [`<thead>`](/ja/docs/Web/HTML/Element/thead)、[`<tfoot>`](/ja/docs/Web/HTML/Element/tfoot)、[`<tbody>`](/ja/docs/Web/HTML/Element/tbody) の要素を使用することを強く推奨します。
 
 ARIA の表ヘッダー、表フッター、表本体を作成するには、行グループロール (`role="rowgroup"`) を要素に追加します。 その行グループは、1 つ以上の行のグループを含むグリッド、表、またはツリーグリッド内にネストするべきです。 各行には子のセルが含まれています。 これらのセルには、列や行のヘッダー、プレーンなセルやグリッドセルとさまざまな種類のセルがあります。
 
-> **メモ:** 可能な限り、ネイティブな HTML の表要素（`<table>`）を表ヘッダー（`<thead>`）、表フッター（`<tfoot>`）、表本体（`<tbody>`）の要素と共に使用することを強く推奨します。
+> [!NOTE]
+> 可能な限り、ネイティブな HTML の表要素（`<table>`）を表ヘッダー（`<thead>`）、表フッター（`<tfoot>`）、表本体（`<tbody>`）の要素と共に使用することを強く推奨します。
 
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 
 #### コンテキストロール
 
-- [role="table"](/ja/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [role="table"](/ja/docs/Web/Accessibility/ARIA/Roles/table_role)
   - : グリッドとツリーグリッドと並んで、行を見つけることができる 3 つのコンテキストの 1 つです。 ネイティブな HTML の [`<table>`](/ja/docs/Web/HTML/Element/table) 要素と同様に、行と列に配置されたデータを含むインタラクティブでない表構造の一部として行を識別します。
-- [role="grid"](/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role)
+- [role="grid"](/ja/docs/Web/Accessibility/ARIA/Roles/grid_role)
   - : 表とツリーグリッドと並んで、行を見つけることができる 3 つのコンテキストの 1 つです。 ネイティブな HTML の [`<table>`](/ja/docs/Web/HTML/Element/table) 要素と同様に、行と列に配置されたデータを含むインタラクティブでない表構造の一部として行を識別します。
 - [role="treegrid"](/ja/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role)
   - : グリッドに似ていますが、ツリー (`tree`) と同じ方法で展開と折りたたみができる行があります (訳注: [W3C のツリーグリッドによるメール受信ボックスの例](https://www.w3.org/TR/wai-aria-practices-1.1/examples/treegrid/treegrid-1.html)では、行単位でのインタラクションも可能となっています) 。
 
 #### 子孫のロール
 
-- [role="row"](/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role)
-  - : 表形式の構造内のセルの一行。 行には、1 つ以上のセル（[`cell`](/ja/docs/Web/Accessibility/ARIA/Roles/Cell_Role)）、グリッドセル（[`gridcell`](/ja/docs/Web/Accessibility/ARIA/Roles/Gridcell_role)）、または列ヘッダー（[`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role)）が含まれ、場合によっては行ヘッダー（[`rowheader`](/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_Role)）も含まれます。
+- [role="row"](/ja/docs/Web/Accessibility/ARIA/Roles/row_role)
+  - : 表形式の構造内のセルの一行。 行には、1 つ以上のセル（[`cell`](/ja/docs/Web/Accessibility/ARIA/Roles/cell_role)）、グリッドセル（[`gridcell`](/ja/docs/Web/Accessibility/ARIA/Roles/gridcell_role)）、または列ヘッダー（[`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role)）が含まれ、場合によっては行ヘッダー（[`rowheader`](/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_Role)）も含まれます。
 
 ### キーボードインタラクション
 
@@ -59,7 +60,8 @@ ARIA の表ヘッダー、表フッター、表本体を作成するには、行
 
 無し。
 
-> **メモ:** ARIA の使用の第一のルールは、要素を転用して ARIA のロール、ステート、プロパティを**追加する**ことでアクセス可能にするのではなく、必要としている意味論と振る舞いがすでに組み込まれているネイティブな機能を使用できることです。 可能な限り、ARIA の表ロールの代わりに HTML の `<table>` 要素を使用してください。
+> [!NOTE]
+> ARIA の使用の第一のルールは、要素を転用して ARIA のロール、ステート、プロパティを**追加する**ことでアクセス可能にするのではなく、必要としている意味論と振る舞いがすでに組み込まれているネイティブな機能を使用できることです。 可能な限り、ARIA の表ロールの代わりに HTML の `<table>` 要素を使用してください。
 
 ## 例
 
@@ -139,7 +141,7 @@ ARIA の表ヘッダー、表フッター、表本体を作成するには、行
 
 無し
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

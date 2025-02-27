@@ -42,17 +42,17 @@ mix-blend-mode: unset;
 - {{cssxref("&lt;blend-mode&gt;")}}
   - : 適用する混合モードを表す {{cssxref("&lt;blend-mode&gt;")}} です。
 
-## Formal definition
+## 公式定義
 
 {{cssinfo}}
 
-## Formal syntax
+## 形式文法
 
 {{csssyntax}}
 
 ## 例
 
-<h3 id="Effect_of_different_mix-blend-mode_values">mix-blend-mode の様々な値の効果</h3>
+### mix-blend-mode の様々な値の効果
 
 ```html hidden
 <div class="grid">
@@ -552,7 +552,8 @@ body {
 
 .container {
   position: relative;
-  background: linear-gradient(to right, #000 0%, transparent 50%, #fff 100%),
+  background:
+    linear-gradient(to right, #000 0%, transparent 50%, #fff 100%),
     linear-gradient(to bottom, #ff0 0%, #f0f 50%, #0ff 100%);
   width: 150px;
   height: 150px;
@@ -631,9 +632,9 @@ body {
 }
 ```
 
-{{EmbedLiveSample("Effect_of_different_mix-blend-mode_values", "100%", 1600, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("mix-blend-mode の様々な値の効果", "100%", 1600, "", "", "example-outcome-frame")}}
 
-<h3 id="Using_mix-blend-mode_with_HTML">HTML での mix-blend-mode の使用</h3>
+### HTML での mix-blend-mode の使用
 
 #### HTML
 
@@ -679,9 +680,9 @@ body {
 
 #### 結果
 
-{{EmbedLiveSample("Using_mix-blend-mode_with_HTML", "100%", "180")}}
+{{EmbedLiveSample("HTML での mix-blend-mode の使用", "100%", "180")}}
 
-<h3 id="Using_mix-blend-mode_with_SVG">SVG での mix-blend-mode の使用</h3>
+### SVG での mix-blend-mode の使用
 
 #### SVG
 
@@ -708,7 +709,7 @@ circle {
 
 #### 結果
 
-{{EmbedLiveSample("Using_mix-blend-mode_with_SVG", "100%", "180")}}
+{{EmbedLiveSample("SVG での mix-blend-mode の使用", "100%", "180")}}
 
 ## 仕様書
 

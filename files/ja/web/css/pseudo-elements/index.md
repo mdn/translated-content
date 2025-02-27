@@ -1,21 +1,13 @@
 ---
 title: 擬似要素
 slug: Web/CSS/Pseudo-elements
+l10n:
+  sourceCommit: ceb7507408b15730166596ea3b2de282c4edae1f
 ---
 
 {{CSSRef}}
 
-CSS の **擬似要素** (Pseudo-elements) は、セレクターに付加するキーワードで、選択された要素の特定の部分にスタイル付けできるようにするものです。例えば {{CSSxRef("::first-line")}} 擬似要素は、段落の最初の行のフォントを変更するために使用することができます。
-
-```css
-/* すべての <p> 要素の最初の行です。 */
-p::first-line {
-  color: blue;
-  text-transform: uppercase;
-}
-```
-
-> **メモ:** 擬似要素とは対照的に、{{CSSxRef("pseudo-classes", "擬似クラス")}}は要素の<em>状態</em>に基づいてスタイル付けを行うことができます。
+CSS の **擬似要素** (Pseudo-elements) は、セレクターに付加するキーワードで、選択された要素の特定の部分にスタイル付けできるようにするものです。
 
 ## 構文
 
@@ -25,22 +17,36 @@ selector::pseudo-element {
 }
 ```
 
-擬似要素は 1 つのセレクターに 1 つだけ使用することができます。文内の単純セレクターの後に置く必要があります。
+例えば {{CSSxRef("::first-line")}} 擬似要素は、段落の最初の行のフォントを変更するために使用することができます。
 
-> **メモ:** ルールとして、単一コロン (`:`) の代わりに二重コロン (`::`) を使用してください。これで擬似要素と擬似クラスを区別します。但し、この区別は W3C の古いバージョンの仕様書には存在しなかったため、多くのブラウザーは元々の擬似要素に対して両方の構文に対応しています。
+```css
+/* すべての <p> 要素の最初の行です。 */
+p::first-line {
+  color: blue;
+  text-transform: uppercase;
+}
+```
 
-## 索引
+擬似要素にはダブルコロン (`::`) を使用します。これは、単一のコロン (`:`) を使用する[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)と区別するためです。
+
+1つのセレクターで使用できる擬似要素は1つだけです。擬似要素が現れる場所は、それが現れる[複雑](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複雑セレクター)セレクターまたは[複合](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複合セレクター)セレクター内の他のすべての要素の後でなければなりません。例えば、段落の最初の行は `p::first-line` を使用して選択することができますが、最初の行の子やポインターが当たっている最初の行は選択できません。つまり、 `p::first-line > *` と `p::first-line:hover` はどちらも無効です。
+
+擬似要素を使用して、状態に基づいて要素を選択することはできませんが、擬似要素を使用して、すでに状態が適用されている要素の一部を選択してスタイル設定することはできます。例えば、 `p:hover::first-line` は、段落自体にポインターが当たっているとき（擬似クラス）に、段落の最初の行（擬似要素）を選択します。
+
+> **メモ:** [セレクターリスト](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#セレクターリスト)に無効なセレクターが含まれている場合、そのスタイルブロック全体が無効になります。
+
+## 擬似要素の一覧
 
 CSS の一連の仕様で定義される擬似要素には、以下のようなものがあります。
 
 A
 
-- {{CSSxRef("::after", "::after (:after)")}}
+- {{CSSxRef("::after")}}
 
 B
 
-- {{CSSxRef("::backdrop")}} {{Experimental_Inline}}
-- {{CSSxRef("::before", "::before (:before)")}}
+- {{CSSxRef("::backdrop")}}
+- {{CSSxRef("::before")}}
 
 C
 
@@ -49,8 +55,8 @@ C
 
 F
 
-- {{CSSxRef("::first-letter", "::first-letter (:first-letter)")}}
-- {{CSSxRef("::first-line", "::first-line (:first-line)")}}
+- {{CSSxRef("::first-letter")}}
+- {{CSSxRef("::first-line")}}
 - {{CSSxRef("::file-selector-button")}}
 
 G
@@ -59,12 +65,12 @@ G
 
 M
 
-- {{CSSxRef("::marker")}} {{Experimental_Inline}}
+- {{CSSxRef("::marker")}}
 
 P
 
-- {{CSSxRef("::part", "::part()")}} {{Experimental_Inline}}
-- {{CSSxRef("::placeholder")}} {{Experimental_Inline}}
+- {{CSSxRef("::part", "::part()")}}
+- {{CSSxRef("::placeholder")}}
 
 S
 
@@ -76,54 +82,16 @@ T
 
 - {{CSSxRef("::target-text")}} {{Experimental_Inline}}
 
+> [!NOTE]
+> ブラウザーは元の 4 つの擬似要素、 `::before`、`::after`、`::first-line`、`::first-letter` のみで単一コロンの構文に対応しています。
+
 ## 仕様書
 
 {{Specifications}}
 
-## ブラウザーの互換性
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>ブラウザー</th>
-      <th>対応開始バージョン</th>
-      <th>対応内容</th>
-    </tr>
-    <tr>
-      <td rowspan="2">Internet Explorer</td>
-      <td>8.0</td>
-      <td><code>:pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td>9.0</td>
-      <td><code>:pseudo-element ::pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2">Firefox (Gecko)</td>
-      <td>1.0 (1.0)</td>
-      <td><code>:pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td>1.0 (1.5)</td>
-      <td><code>:pseudo-element ::pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2">Opera</td>
-      <td>4.0</td>
-      <td><code>:pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td>7.0</td>
-      <td><code>:pseudo-element ::pseudo-element</code></td>
-    </tr>
-    <tr>
-      <td>Safari (WebKit)</td>
-      <td>1.0 (85)</td>
-      <td><code>:pseudo-element ::pseudo-element</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ## 関連情報
 
+- [CSS 擬似要素](/ja/docs/Web/CSS/CSS_pseudo-elements)モジュール
 - [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
+- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
+- [CSS 構成要素: 擬似クラスと擬似要素](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)

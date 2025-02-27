@@ -21,13 +21,13 @@ unsigned long 型の数。
 
 未定
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.SourceBufferList.length")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Date
 
 Los objetos **`Date`** representan en JavaScript un momento fijo en el tiempo en un formato independiente. El objeto `Date` contiene un `Number` que representa los milisegundos transcurridos desde el 1 de Enero de 1970 UTC.
 
-> **Nota:** TC39 está trabajando en [Temporal](https://tc39.es/proposal-temporal/docs/index.html), una nueva API de Date/Time. Lee más acerca de ello en el [blog Igalia](https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/). Aún no está lista para su uso en producción.
+> [!NOTE]
+> TC39 está trabajando en [Temporal](https://tc39.es/proposal-temporal/docs/index.html), una nueva API de Date/Time. Lee más acerca de ello en el [blog Igalia](https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/). Aún no está lista para su uso en producción.
 
 ## Descripción
 
@@ -15,7 +16,8 @@ Los objetos **`Date`** representan en JavaScript un momento fijo en el tiempo en
 
 Una fecha en JavaScript es fundamentalmente especificada como el número de milisegundos que han pasado desde la [Época ECMAScript](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-time-values-and-time-range) la cuál está definida como el 1 de Enero de 1970, UTC. Esta fecha y hora no son los mismos que en la **Época Unix** (el número de segundos que han pasado desde la media noche del 1 de Enero de 1970, UTC), el cual es el valor predominante base para representar los valores de fecha y hora en los ordenadores.
 
-> **Nota:** Es importante tener en cuenta que mientras el valor de la hora en el núcleo del objeto `Date` está en UTC, los métodos básicos para recibir la fecha y la hora o sus derivados trabajan todos en la zona horaria local (por ejemplo: máquina huesped).
+> [!NOTE]
+> Es importante tener en cuenta que mientras el valor de la hora en el núcleo del objeto `Date` está en UTC, los métodos básicos para recibir la fecha y la hora o sus derivados trabajan todos en la zona horaria local (por ejemplo: máquina huesped).
 
 Se debe tener en cuenta que el valor máximo de `Date` no es el mismo que el valor del máximo entero seguro (`Number.MAX_SAFE_INTEGER` es 9,007,199,254,740,991). En su lugar, fue definido en ECMA-262 que un máximo de ±100,000,000 (cien millones) días relativos al 1 de Enero de 1970, UTC (que es, 20 de Abril de 271821 a. e. c. \~ 13 de Septiembre de 275760 a. e. c.) pueden ser representados por el objeto estandar `Date` (equivalente a ±8,640,000,000,000,000 milisegundos).
 
@@ -40,7 +42,8 @@ Sumado a los métodos para leer y manipular los componentes individuales de la f
 
   - : Transforma la cadena que representa una fecha y retorna el número de milisegundos transcurridos desde el 1 de Enero de 1970, 00:00:00 UTC, ignorando los segundos intercalares.
 
-    > **Nota:** Transforma las cadenas con `Date.parse` es muy poco recomendado debido a diferencias e inconsistencias entre navegadores.
+    > [!NOTE]
+    > Transforma las cadenas con `Date.parse` es muy poco recomendado debido a diferencias e inconsistencias entre navegadores.
 
 - {{jsxref("Date.UTC()")}}
   - : Acepta los mismos parámetros de la forma extendida del constructor (por ejemplo: del 2 al 7 ) y retorna el número de milisegundos transcurridos desde el 1 de Enero de 1970, 00:00:00 UTC, ignorando los segundos intercalares.
@@ -146,7 +149,8 @@ Sumado a los métodos para leer y manipular los componentes individuales de la f
 
 Los siguientes ejemplos muestran distintas maneras de crear fechas en JavaScript:
 
-> **Nota:** Transformar las cadenas de fechas con el constructor `Date` (y `Date.parse`, son equivalentes) es escasamente recomendado debido las diferencias e inconsistencias entre navegadores.
+> [!NOTE]
+> Transformar las cadenas de fechas con el constructor `Date` (y `Date.parse`, son equivalentes) es escasamente recomendado debido las diferencias e inconsistencias entre navegadores.
 
 ```js
 let today = new Date();
@@ -242,7 +246,8 @@ function printElapsedTime(fTest) {
 let yourFunctionReturn = printElapsedTime(yourFunction);
 ```
 
-> **Nota:** En los navegadores que soportan la funcionalidad de alta resolución temporal de {{domxref("performance_property", "Web Performance API", "", 1)}}, {{domxref("Performance.now()")}} puede proveer una medida más precisa y confiable del tiempo transcurrido que {{jsxref("Date.now()")}}.
+> [!NOTE]
+> En los navegadores que soportan la funcionalidad de alta resolución temporal de {{domxref("performance_property", "Web Performance API", "", 1)}}, {{domxref("Performance.now()")}} puede proveer una medida más precisa y confiable del tiempo transcurrido que {{jsxref("Date.now()")}}.
 
 ### Obtener el número de segundos desde la Época ECMAScript
 

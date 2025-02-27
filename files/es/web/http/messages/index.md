@@ -65,7 +65,7 @@ La parte final de la petición el el cuerpo. No todas las peticiones llevan uno:
 Los cuerpos pueden ser dividos en dos categorias:
 
 - Cuerpos con un único dato, que consisten en un único archivo defindo por las dos cabeceras: {{HTTPHeader("Content-Type")}} y {{HTTPHeader("Content-Length")}}.
-- [Cuerpos con múltiples datos](/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data), que están formados por distintos contenidos, normalmente estan asociados con los [formularios HTML](/es/docs/Web/Guide/HTML/Forms).
+- [Cuerpos con múltiples datos](/es/docs/Web/HTTP/MIME_types#multipartform-data), que están formados por distintos contenidos, normalmente estan asociados con los [formularios HTML](/es/docs/Learn/Forms).
 
 ## Respuestas HTTP
 
@@ -99,7 +99,7 @@ De forma general, los cuerpos se pueden diferenciar en tres categorias:
 
 - Cuerpos con un único dato, consisten en un simple archivo, de longitud conocida y definido en las cabeceras: {{HTTPHeader("Content-Type")}} y {{HTTPHeader("Content-Length")}}.
 - Cuerpos con un único dato, consisten en un simple archivo, de longitud desconocida, y codificado en partes, indicadas con {{HTTPHeader("Transfer-Encoding")}} valor `chunked` (que significa: 'partido' en inglés).
-- [Cuerpos con múltiples datos](/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data), consisten de varios datos, cada uno con una sección distinta de información. Este caso es relativamente raro y poco común.
+- [Cuerpos con múltiples datos](/es/docs/Web/HTTP/MIME_types#multipartform-data), consisten de varios datos, cada uno con una sección distinta de información. Este caso es relativamente raro y poco común.
 
 ## Tramas HTTP/2
 

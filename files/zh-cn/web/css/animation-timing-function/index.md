@@ -46,7 +46,8 @@ animation-timing-function: revert-layer;
 animation-timing-function: unset;
 ```
 
-> **备注：** 当你在 `animation-*` 属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxref("animation-name")}} 属性中指定的动画。有关更多信息，请参阅[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values)。
+> [!NOTE]
+> 当你在 `animation-*` 属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxref("animation-name")}} 属性中指定的动画。有关更多信息，请参阅[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)。
 
 ### 值
 
@@ -57,7 +58,7 @@ animation-timing-function: unset;
     非阶跃（non-step）关键字值（如 ease、linear、ease-in-out 等）代表了固定的四点值的三次贝塞尔曲线，而 cubic-bezier() 函数允许使用非预定义值。而阶跃时间函数将输入时间分成一定数量相等的间隔，由步数和步骤位置定义。
 
 - `ease`
-  - : 等同于 `cubic-bezier(0.25, 0.1, 0.25, 1.0)`，即默认值，表示动画在中间加速，在结束时减速。。
+  - : 等同于 `cubic-bezier(0.25, 0.1, 0.25, 1.0)`，即默认值，表示动画在中间加速，在结束时减速。
 - `linear`
   - : 等同于 `cubic-bezier(0.0, 0.0, 1.0, 1.0)`，表示动画以匀速运动。
 - `ease-in`
@@ -245,7 +246,7 @@ animation-timing-function: unset;
 
 ## 参见
 
-- [使用 CSS 动画](/zh-CN/docs/CSS/Tutorials/Using_CSS_animations)
+- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{cssxref('easing-function')}}
 - JavaScript {{domxref("AnimationEvent")}} API
 - [cubic-bezier.com](https://cubic-bezier.com)

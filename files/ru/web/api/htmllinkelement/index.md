@@ -18,7 +18,7 @@ _Наследует свойства от своего родителя, {{domxr
   - : Это {{domxref("DOMString")}} представляющий тип контента загружаемый по HTML ссылке.
 
 - {{domxref("HTMLLinkElement.crossOrigin")}} {{experimental_inline}}
-  - : Is a {{domxref("DOMString")}} that corresponds to the CORS setting for this link element. See [CORS settings attributes](/ru/docs/HTML/CORS_settings_attributes) for details.
+  - : Is a {{domxref("DOMString")}} that corresponds to the CORS setting for this link element. See [CORS settings attributes](/ru/docs/Web/HTML/Attributes/crossorigin) for details.
 - {{domxref("HTMLLinkElement.disabled")}}
   - : Is a `Boolean` which represents whether the link is disabled; currently only used with style sheet links.
 - {{domxref("HTMLLinkElement.href")}}
@@ -48,7 +48,8 @@ _Наследует свойства от своего родителя, {{domxr
 
   - : Is a {{domxref("DOMString")}} representing the reverse relationship of the linked resource from the resource to the document.
 
-    > **Примечание:** Currently the W3C HTML 5.2 spec states that `rev` is no longer obsolete, whereas the WHATWG living standard still has it labeled obsolete. Until this discrepancy is resolved, you should still assume it is obsolete.
+    > [!NOTE]
+    > Currently the W3C HTML 5.2 spec states that `rev` is no longer obsolete, whereas the WHATWG living standard still has it labeled obsolete. Until this discrepancy is resolved, you should still assume it is obsolete.
 
 - {{domxref("HTMLLinkElement.target")}}
   - : Is a {{domxref("DOMString")}} representing the name of the target frame to which the resource applies.
@@ -61,7 +62,7 @@ _Не имеет методов; наследует методы от своег
 
 {{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 

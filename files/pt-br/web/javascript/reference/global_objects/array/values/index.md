@@ -45,7 +45,7 @@ console.log(eArr.next().value); // p
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.values")}}
+{{Compat}}
 
 ## Notas específicas do Firefox
 

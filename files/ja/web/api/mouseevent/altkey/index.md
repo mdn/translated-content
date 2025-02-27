@@ -1,8 +1,9 @@
 ---
-title: MouseEvent.altKey
+title: "MouseEvent: altKey プロパティ"
+short-title: altKey
 slug: Web/API/MouseEvent/altKey
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("UI Events")}}
@@ -12,7 +13,8 @@ l10n:
 オペレーティングシステムによっては、ブラウザーがいつでも <kbd>alt</kbd> キーを検出できるとは限りらないことに注意してください。
 例えば、一部の Linux では、 <kbd>alt</kbd> キーを押しながらマウスの左クリックが、ウィンドウの移動またはリサイズに使われています。
 
-> **メモ:** Macintosh のキーボードでは、このキーは <kbd>option</kbd> キーとも呼ばれています。
+> [!NOTE]
+> Macintosh のキーボードでは、このキーは <kbd>option</kbd> キーとも呼ばれています。
 
 ## 値
 

@@ -7,7 +7,7 @@ slug: Web/SVG/Element/linearGradient
 
 `linearGradient`元素用来定义线性渐变，用于图形元素的填充或描边。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
@@ -44,9 +44,9 @@ svg {
 
 ### Global 属性
 
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
-- [Xlink 属性](/zh-CN/SVG/Attribute#XLink) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
+- [Xlink 属性](/zh-CN/docs/SVG/Attribute#xlink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -64,7 +64,7 @@ svg {
 
 ## DOM 接口
 
-该元素实现了 [`SVGLinearGradientElement`](/zh-CN/DOM/SVGLinearGradientElement) 接口。
+该元素实现了 [`SVGLinearGradientElement`](/zh-CN/docs/DOM/SVGLinearGradientElement) 接口。
 
 ## 浏览器兼容性
 

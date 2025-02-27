@@ -7,14 +7,14 @@ slug: Learn/CSS/CSS_layout
 
 Neste ponto, vimos os fundamentos do CSS, como estilizar o texto e como estilizar e manipular as caixas dentro das quais seu conteúdo se encontra. Agora é hora de ver como organizar corretamente suas caixas em relação à viewport, bem como umas às outras. Cobrimos os pré-requisitos necessários, então vamos nos aprofundar no layout CSS, examinando vários recursos como: diferentes configurações de exibição, posicionamento, ferramentas de layout modernas como flexbox e grade CSS e algumas das técnicas herdadas que você ainda pode querer saber. cerca de.
 
-> **Callout:**
+> [!CALLOUT]
 >
 > #### Quer se tornar um desenvolvedor web front-end?
 >
 > Reunimos um curso que inclui todas as informações essenciais que você precisa para
 > trabalhe em direção ao seu objetivo.
 >
-> [**Primeiros passos**](/pt-BR/docs/Learn/Front-end_web_developer)
+> [**Primeiros passos**](/pt-BR/docs/orphaned/Learn/Front-end_web_developer)
 
 ## Pré-requisitos
 
@@ -24,7 +24,8 @@ Antes de iniciar este módulo, você já deve:
 2. Esteja familiarizado com os fundamentos do CSS, conforme discutido em [Introdução ao CSS](/pt-BR/docs/Learn/CSS/First_steps).
 3. Entenda como [estilizar caixas](/pt-BR/docs/Learn/CSS/Building_blocks).
 
-> **Nota:** Se você estiver trabalhando em um computador/tablet/outro dispositivo em que não tenha a capacidade de criar seus próprios arquivos, experimente (a maioria) os exemplos de código em um programa de codificação on-line, como como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> [!NOTE]
+> Se você estiver trabalhando em um computador/tablet/outro dispositivo em que não tenha a capacidade de criar seus próprios arquivos, experimente (a maioria) os exemplos de código em um programa de codificação on-line, como como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guias
 

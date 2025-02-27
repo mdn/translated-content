@@ -3,7 +3,9 @@ title: event.layerX
 slug: Web/API/MouseEvent/layerX
 ---
 
-{{APIRef("DOM Events")}} {{Non-standard_header}}
+{{Non-standard_Header}}
+
+{{APIRef("UI Events")}}
 
 La propriété en lecture seule **`UIEvent.layerX`** retourne la coordonnée horizontale de l'évènement relativement à la couche en cours.
 

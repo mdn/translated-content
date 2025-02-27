@@ -9,7 +9,8 @@ slug: Web/API/AuthenticatorAttestationResponse
 
 このインターフェイスは {{domxref("AuthenticatorResponse")}} を継承しています。
 
-> **メモ:** このインターフェイスは最上位のコンテキストに限定されています。 {{HTMLElement("iframe")}} 要素の中で使用しても、何も効果がありません。
+> [!NOTE]
+> このインターフェイスは最上位のコンテキストに限定されています。 {{HTMLElement("iframe")}} 要素の中で使用しても、何も効果がありません。
 
 ## プロパティ
 
@@ -61,7 +62,7 @@ navigator.credentials.create({ publicKey })
 
 ## ブラウザーの互換性
 
-{{Compat("api.AuthenticatorAttestationResponse")}}
+{{Compat}}
 
 ## 関連情報
 

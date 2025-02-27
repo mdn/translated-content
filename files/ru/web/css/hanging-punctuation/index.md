@@ -8,7 +8,7 @@ slug: Web/CSS/hanging-punctuation
 Свойство **`hanging-punctuation`** определяет как браузер будет отображать знаки пунктуации, попадающие в начало или в конец строки. Висячая пунктуация может располагаться за границами контейнера.
 
 ```css
-/* Значения ключевых слов */
+/* Ключевые слова */
 hanging-punctuation: none;
 hanging-punctuation: first;
 hanging-punctuation: last;
@@ -95,6 +95,6 @@ p {
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}

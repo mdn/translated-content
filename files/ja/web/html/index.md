@@ -1,8 +1,9 @@
 ---
 title: "HTML: ハイパーテキストマークアップ言語"
+short-title: HTML
 slug: Web/HTML
 l10n:
-  sourceCommit: 667f693fd8957cf531f09aa3438a594dd52f85d5
+  sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
 {{HTMLSidebar}}
@@ -13,7 +14,7 @@ l10n:
 
 HTML ではウェブブラウザーのテキスト、画像、その他のコンテンツを記述するために「マークアップ」を使用します。 HTML のマークアップには、 {{HTMLElement("head")}}, {{HTMLElement("title")}}, {{HTMLElement("body")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("p")}}, {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("img")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("datalist")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("nav")}}, {{HTMLElement("search")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("video")}}, {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("li")}} その他のたくさんの特殊な「要素」を用います。
 
-HTML 要素は文書中で、 "`<`" および "`>`" で囲まれた要素名で構成される「タグ」によって区別されます。タグ内の要素名は、大文字と小文字の区別がありません。つまり、大文字でも、小文字でも、混在して書いても構いません。例えば、 `<title>` タグは `<Title>` や `<TITLE>` やその他の方法で書くことができます。ただし、タグを小文字で書くのが慣習となっており、推奨されています。
+HTML 要素は文書中で、`<` および `>` で囲まれた要素名で構成される「タグ」によって区別されます。タグ内の要素名は、大文字と小文字の区別がありません。つまり、大文字でも、小文字でも、混在して書いても構いません。例えば、 `<title>` タグは `<Title>` や `<TITLE>` やその他の方法で書くことができます。ただし、タグを小文字で書くのが慣習となっており、推奨されています。
 
 以下の記事が HTML についてもっと学ぶのに役立ちます。
 
@@ -25,14 +26,6 @@ HTML 要素は文書中で、 "`<`" および "`>`" で囲まれた要素名で�
   - : チュートリアルや例を含む HTML の使用方法に関する記事は、[HTML 学習エリア](/ja/docs/Learn/HTML)を確認してください。
 - HTML リファレンス
   - : 広範な [HTML リファレンス](/ja/docs/Web/HTML/Reference)の章で、 HTML のすべての要素と属性についての詳細が分かります。
-
-> **注目:**
->
-> #### フロントエンドのウェブ開発者を目指している方へ
->
-> ゴールに向かって頑張るために必要な情報をまとめたコースをご用意しました。
->
-> [**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
 
 ## 初心者向けチュートリアル
 
@@ -70,6 +63,8 @@ HTML 要素は文書中で、 "`<`" および "`>`" で囲まれた要素名で�
   - : グローバル属性は、*標準仕様で規定されていないものを含む*すべての [HTML 要素](/ja/docs/Web/HTML/Element)に指定できるものです。つまり、あらゆる標準外の要素も、それを使用することで文書が HTML5 に準拠しなくなるとしても、グローバル属性を受け入れなければならないということです。
 - [インラインレベル要素](/ja/docs/Glossary/Inline-level_content)と[ブロックレベル要素](/ja/docs/Glossary/Block-level_content)
   - : 通常、 HTML の要素は「インラインレベル」要素または「ブロックレベル」要素のどちらかです。インラインレベル要素は、要素を定義するタグによって指定された範囲のみを占有します。ブロックレベル要素は親要素（コンテナー）の範囲全体を占有し、それによって「ブロックボックス」を作成します。
+- [HTML コメント](/ja/docs/Web/HTML/Comments)
+  - : HTML コメントは、マークアップに説明メモを追加したり、文書内の特定の部分をブラウザーが解釈しないようにしたりするために使用します。
 - [ウェブにおけるメディア種別と形式のガイド](/ja/docs/Web/Media/Formats)
   - : {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素では、外部のソフトウェアの支援を必要とせずにコンテンツの中でネイティブに音声や動画を再生できます。
 - [HTML コンテンツカテゴリー](/ja/docs/Web/HTML/Content_categories)
@@ -80,4 +75,4 @@ HTML 要素は文書中で、 "`<`" および "`>`" で囲まれた要素名で�
 ## 関連トピック
 
 - [CSS を使って HTML の要素に色をつける](/ja/docs/Web/CSS/CSS_colors/Applying_color)
-  - : この記事では、 CSS を使用して HTML コンテンツに色をつける方法、 HTML 文書のどの部分に色付けできるかの一覧、使用する CSS プロパティについて説明します。例えば、パレット作成ツールへのリンクなどが含みます。
+  - : この記事では、 CSS を使用して HTML コンテンツに色をつける方法、 HTML 文書のどの部分に色付けできるかの一覧、使用する CSS プロパティについて説明します。

@@ -5,7 +5,7 @@ slug: Web/CSS/alpha-value
 
 {{CSSRef}}
 
-Le [type de donnée](/fr/docs/Web/CSS/Types_CSS) CSS **`<alpha-value>`** représente une valeur qui peut être un nombre ({{cssxref("&lt;number&gt;")}}) ou un pourcentage ({{cssxref("&lt;percentage&gt;")}}) et qui indique le [canal alpha](https://fr.wikipedia.org/wiki/Canal_alpha) ou _l'opacité_ d'une couleur.
+Le [type de donnée](/fr/docs/Web/CSS/CSS_Types) CSS **`<alpha-value>`** représente une valeur qui peut être un nombre ({{cssxref("&lt;number&gt;")}}) ou un pourcentage ({{cssxref("&lt;percentage&gt;")}}) et qui indique le [canal alpha](https://fr.wikipedia.org/wiki/Canal_alpha) ou _l'opacité_ d'une couleur.
 
 ## Syntaxe
 
@@ -15,7 +15,7 @@ Lorsque la valeur est fournie en pourcentage 0% correspond à une transparence c
 
 ## Interpolation
 
-Lorsqu'une animation fait évoluer une valeur de type `<alpha-value>`, les valeurs sont interpolées comme des nombres réels à point flottant. La vitesse de l'interpolation est déterminée par la [fonction de temporisation](/fr/docs/Web/CSS/timing-function) associée à l'animation.
+Lorsqu'une animation fait évoluer une valeur de type `<alpha-value>`, les valeurs sont interpolées comme des nombres réels à point flottant. La vitesse de l'interpolation est déterminée par la [fonction de temporisation](/fr/docs/Web/CSS/easing-function) associée à l'animation.
 
 ## Exemples
 

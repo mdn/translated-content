@@ -9,15 +9,15 @@ HTML 标记文本元素 (< Mark >) 表示为引用或符号目的而标记或突
 
 这个 _HTML mark_ 标签代表突出显示的文字，例如可以为了**标记**特定上下文中的文本而使用这个标签**.** 举个例子，它可以用来显示搜索引擎搜索后关键词
 
-- _内容分类_ [Flow content](/zh-CN/docs/HTML/Content_categories#Flow_content), [phrasing content](/zh-CN/docs/HTML/Content_categories#Phrasing_content), palpable content.
-- _允许的内容_ [Phrasing content](/zh-CN/docs/HTML/Content_categories#Phrasing_content).
-- _标签省略_ {{no_tag_omission}}
-- *允许的父元素*任何接受[phrasing content](/zh-CN/docs/HTML/Content_categories#Phrasing_content) 的元素。
+- _内容分类_ [Flow content](/zh-CN/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/zh-CN/docs/Web/HTML/Content_categories#phrasing_content), palpable content.
+- _允许的内容_ [Phrasing content](/zh-CN/docs/Web/HTML/Content_categories#phrasing_content).
+- _标签省略_：不允许，开始标签和结束标签都不能省略。
+- *允许的父元素*任何接受[phrasing content](/zh-CN/docs/Web/HTML/Content_categories#phrasing_content) 的元素。
 - _DOM 接口_ {{domxref("HTMLElement")}}
 
 ## 属性
 
-这个元素只包含了 [全局属性](/zh-CN/docs/HTML/Global_attributes).
+这个元素只包含了 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes).
 
 ## 使用说明
 
@@ -27,7 +27,8 @@ HTML 标记文本元素 (< Mark >) 表示为引用或符号目的而标记或突
 - 另外，\<mark>元素还用来显示与用户当前活动相关的一部分文档内容。例如，它可能被用于显示匹配搜索结果中的单词。
 - 不要为了语法高亮而用 `<mark>` 元素; 你应该用 _{{HTMLElement("strong")}}_ 元素结合适当的 CSS 来实现这个目的（语法高亮）。
 
-> **备注：** 不要把 `<mark>` 元素和 {{HTMLElement("strong")}} 元素搞混淆；{{HTMLElement("strong")}} 元素用来表示文本在上下文的重要性的，而 `<mark>` 元素是用来表示上下文的关联性的。
+> [!NOTE]
+> 不要把 `<mark>` 元素和 {{HTMLElement("strong")}} 元素搞混淆；{{HTMLElement("strong")}} 元素用来表示文本在上下文的重要性的，而 `<mark>` 元素是用来表示上下文的关联性的。
 
 ## 示例
 

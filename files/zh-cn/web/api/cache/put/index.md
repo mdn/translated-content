@@ -22,14 +22,13 @@ fetch(url).then(function (response) {
 
 > **备注：** {{domxref("Cache.add")}}/{{domxref("Cache.addAll")}} 不会缓存 `Response.status` 值不在 200 范围内的响应，而 {{domxref("Cache.put")}} 允许你存储任何请求/响应对。因此，{{domxref("Cache.add")}}/{{domxref("Cache.addAll")}} 不能用于不透明的响应，而 {{domxref("Cache.put")}} 可以。
 
-> **备注：** 当响应主体完全写入磁盘时，初始 Cache 执行 (在 Blink 和 Gecko 中) resolve {{domxref("Cache.add")}}、{{domxref("Cache.addAll")}} 和 {{domxref("Cache.put")}} promise. 更新的规范版本中声明：即使响应主体仍在流式传输，一旦条目被记录到数据库中，浏览器就可以 resolve promise.
+> [!NOTE]
+> 当响应主体完全写入磁盘时，初始 Cache 执行 (在 Blink 和 Gecko 中) resolve {{domxref("Cache.add")}}、{{domxref("Cache.addAll")}} 和 {{domxref("Cache.put")}} promise. 更新的规范版本中声明：即使响应主体仍在流式传输，一旦条目被记录到数据库中，浏览器就可以 resolve promise.
 
 ## 语法
 
-```
-cache.put(request, response).then(function() {
-  // request/response pair has been added to the cache
-});
+```js-nolint
+put(request, response)
 ```
 
 ### 参数
@@ -43,7 +42,8 @@ cache.put(request, response).then(function() {
 
 A {{jsxref("Promise")}} that resolves with void.
 
-> **备注：** The promise will reject with a `TypeError` if the URL scheme is not `http` or `https`.
+> [!NOTE]
+> The promise will reject with a `TypeError` if the URL scheme is not `http` or `https`.
 
 ## 示例
 
@@ -80,8 +80,8 @@ var cachedResponse = caches
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("WorkerGlobalScope.caches")}}
+- {{domxref("Window.caches")}} 和 {{domxref("WorkerGlobalScope.caches")}}

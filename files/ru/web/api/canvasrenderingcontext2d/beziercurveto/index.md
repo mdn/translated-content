@@ -124,4 +124,4 @@ window.addEventListener("load", drawCanvas);
 ## Смотрите также
 
 - Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}
-- [Статья в Википедии про кривые Безье](https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B8%D0%B2%D0%B0%D1%8F_%D0%91%D0%B5%D0%B7%D1%8C%D0%B5).
+- [Кривая Безье](https://ru.wikipedia.org/wiki/Кривая_Безье) в Википедии

@@ -75,7 +75,8 @@ Les attributs qui suivent sont dépréciés et ne devraient pas être utilisés.
 
     Si cet attribut n'est pas renseigné, la valeur `left` est prise par défaut.
 
-    > **Note :** Pour réaliser le même effet qu'avec les valeurs `left`, `center`, `right` ou `justify`, utilisez la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align) sur cet élément.
+    > [!NOTE]
+    > Pour réaliser le même effet qu'avec les valeurs `left`, `center`, `right` ou `justify`, utilisez la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align) sur cet élément.
     >
     > - Pour réaliser le même effet qu'avec `char`, vous pouvez, en CSS3, utiliser la valeur de `char` comme valeur pour la propriété [`text-align`](/fr/docs/Web/CSS/text-align) (non implémenté à date).
 
@@ -106,7 +107,8 @@ Les attributs qui suivent sont dépréciés et ne devraient pas être utilisés.
     - `top`
       - : Place le texte au plus haut de la cellule.
 
-    > **Note :** Cet attribut étant maintenant obsolète (et n'étant plus pris en charge), il est fortement déconseillé de l'utiliser. La propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align) doit être utilisée à la place.
+    > [!NOTE]
+    > Cet attribut étant maintenant obsolète (et n'étant plus pris en charge), il est fortement déconseillé de l'utiliser. La propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align) doit être utilisée à la place.
 
 ## Exemples
 

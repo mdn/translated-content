@@ -3,6 +3,8 @@ title: Range.createContextualFragment()
 slug: Web/API/Range/createContextualFragment
 ---
 
+{{ApiRef("DOM")}}
+
 La méthode **`Range.createContextualFragment()`** retourne un {{domxref("DocumentFragment")}} en invoquant l'algorithme d'analyse de fragment HTML ou l'algorithme d'analyse de fragment XML, avec le début du `range` (le _parent_ du nœud sélectionné) comme nœud de contexte. L'algorithme d'analyse de fragment HTML est utilisé si le `range` appartient à un `Document` dont le bit «&nbsp;HTMLness&nbsp;» est défini. Dans le cas du HTML, si le nœud de contexte est censé être `html`, pour des raisons historiques l'algorithme d'analyse de fragment est invoqué avec `body` pour contexte à la place.
 
 ## Syntaxe
@@ -37,4 +39,4 @@ document.body.appendChild(documentFragment);
 
 ## Voir aussi
 
-- [Index des interfaces DOM](/fr/docs/DOM/DOM_Reference)
+- [Index des interfaces DOM](/fr/docs/Web/API/Document_Object_Model)

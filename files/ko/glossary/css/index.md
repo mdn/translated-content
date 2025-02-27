@@ -30,7 +30,7 @@ p {
 
 ## 같이 보기
 
-- [CSS 배우기](/ko/Learn/CSS)
+- [CSS 배우기](/ko/docs/Learn/CSS)
 - 위키백과의 [CSS](https://ko.wikipedia.org/wiki/CSS)
 - [MDN의 CSS 문서](/ko/docs/Web/CSS)
-- [CSS Working Group의 현재 작업사항](http://www.w3.org/Style/CSS/current-work)
+- [CSS Working Group의 현재 작업사항](https://www.w3.org/Style/CSS/current-work)

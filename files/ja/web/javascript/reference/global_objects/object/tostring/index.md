@@ -1,19 +1,40 @@
 ---
 title: Object.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
+l10n:
+  sourceCommit: 6e93ec8fc9e1f3bd83bf2f77e84e1a39637734f8
 ---
 
 {{JSRef}}
 
-**`toString()`** メソッドは、オブジェクトを表す文字列を返します。
+**`toString()`** は {{jsxref("Object")}} インスタンスのオブジェクトで、このオブジェクトを表す文字列を返します。このメソッドは、独自の[型変換](/ja/docs/Web/JavaScript/Data_structures#型変換)ロジックのために派生オブジェクトがオーバーライドするためのものです。
 
-{{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.toString()")}}
+
+```js interactive-example
+function Dog(name) {
+  this.name = name;
+}
+
+const dog1 = new Dog("Gabby");
+
+Dog.prototype.toString = function dogToString() {
+  return `${this.name}`;
+};
+
+console.log(dog1.toString());
+// Expected output: "Gabby"
+```
 
 ## 構文
 
+```js-nolint
+toString()
 ```
-obj.toString()
-```
+
+### 引数
+
+既定では、 `toString()` は引数を取りません。ただし、Object を継承するオブジェクトは、パラメーターを取る独自の実装で toString() をオーバーライドできます。例えば、 [`Number.prototype.toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) および [`BigInt.prototype.toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) メソッドは、オプションで引数 `radix` を取ります。
 
 ### 返値
 
@@ -21,114 +42,100 @@ obj.toString()
 
 ## 解説
 
-すべてのオブジェクトは `toString` メソッドを持ち、オブジェクトが文字列値として表される場面や、文字列が期待される構文で参照されたときに自動的に呼び出されます。既定で、 `toString()` メソッドは `Object` の子孫にあたるあらゆるオブジェクトに継承されています。このメソッドがカスタムオブジェクト中で上書きされていない場合、 `toString()` は "`[object type]`" という文字列を返します (`type` は そのオブジェクトの型)。以下のコードがこれを例示しています。
+JavaScript は `toString` メソッドを[オブジェクトをプリミティブ値に変換](/ja/docs/Web/JavaScript/Data_structures#型変換)するために呼び出します。 `toString` を呼び出す必要があるのは稀です。 JavaScript は、プリミティブ値が期待されるオブジェクトに遭遇すると、自動的に `toString` メソッドを呼び出します。
+
+このメソッドは[文字列変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)によって優先的に呼び出されますが、[数値変換](/ja/docs/Web/JavaScript/Data_structures#数値変換)と[プリミティブ変換](/ja/docs/Web/JavaScript/Data_structures#プリミティブ変換)は `valueOf()` を優先的に呼び出します。ただし、基底の [`valueOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) メソッドはオブジェクトを返すので、オブジェクトが `valueOf()` をオーバーライドしない限り、通常は最後に `toString()` メソッドが呼び出されます。例えば、 `+[1]` は `1` を返しますが、これは [`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) メソッドが `"1"` を返し、それが数値に変換されるからです。
+
+`Object.prototype` を継承するすべてのオブジェクト（ [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)を除くすべてのオブジェクト）は `toString()` メソッドを継承します。独自オブジェクトを作成するときは、`toString()` をオーバーライドして独自メソッドを呼び出し、独自オブジェクトを文字列値に変換できるようにします。また、[`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) メソッドを追加することもできます。このメソッドでは、変換処理をより細かく制御することができ、どの型の変換についても常に `valueOf` または `toString` よりも優先されます。
+
+基底となる `Object.prototype.toString()` をオーバーライドされているオブジェクトで使用する（または `null` や `undefined` に対して呼び出す）には、 {{jsxref("Function.prototype.call()")}} または {{jsxref("Function.prototype.apply()")}} を呼び出す必要があり、最初の引数（`thisArg` と呼ばれる）として検査したいオブジェクトを渡します。
 
 ```js
-const o = new Object();
-o.toString(); // [object Object] を返す
+const arr = [1, 2, 3];
+
+arr.toString(); // "1,2,3"
+Object.prototype.toString.call(arr); // "[object Array]"
 ```
 
-> **メモ:** JavaScript 1.8.5 から、 `toString()` を {{jsxref("null")}} に対して呼び出した場合には `[object Null]` を、 {{jsxref("undefined")}} に対して呼び出した場合には `[object Undefined]` を返すようになり、これは ECMAScript 5th Edition とその後のエラッタによって定義されました。
->
-> [toString() を使用したオブジェクトクラスの検出](#Using_toString_to_detect_object_class)を参照してください。
+`Object.prototype.toString()` は、 `"[object Type]"` を返し、 `Type` のところがオブジェクト型になります。オブジェクトに値が文字列である [`Symbol.toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティがある場合、その値が `Type` として使用されます。 [`Map`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map) および [`Symbol`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol) を含む多くの組み込みオブジェクトには、 `Symbol.toStringTag` があります。 ES6 以前のオブジェクトの中には `Symbol.toStringTag` を持たないものもありますが、それでも特別なタグを持っています。これには次のようなものがあります（タグは下記で指定された型名と同じです）。
 
-## 引数
+- [`Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [`Function`](/ja/docs/Web/JavaScript/Reference/Functions) （[`typeof`](/ja/docs/Web/JavaScript/Reference/Operators/typeof) が `"function"` を返すものすべて）
+- [`Error`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error)
+- [`Boolean`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+- [`Number`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number)
+- [`String`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String)
+- [`Date`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date)
+- [`RegExp`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
-Number と BigInt の `toString()` は、オプションの引数 `radix` で基数の値を取り、最小値は 2 で最大値は 36 です。
+[`arguments`](/ja/docs/Web/JavaScript/Reference/Functions/arguments) オブジェクトは `"[object Arguments]"` を返します。それ以外のものはすべて、ユーザー定義クラスを含み、独自の `Symbol.toStringTag` をない限り、 `"[object Object]"` を返します。
 
-`radix` を使用すると、十進数 (1,2,3,4,5,.........) を他の基数の数字に変換することができます。以下の例では十進数を二進数 (バイナリ) に変換しています。
-
-```
-let baseTenInt = 10;
-console.log(baseTenInt.toString(2));
-// 期待される結果は "1010"
-```
-
-BigInt についても同じです。
-
-```js
-let bigNum = BigInt(20);
-console.log(bigNum.toString(2));
-// 期待される結果は "10100"
-```
-
-よくある基数としては次のものがあります。
-
-- 2 は[二進数](https://ja.wikipedia.org/wiki/%E4%BA%8C%E9%80%B2%E6%B3%95)になります。
-- 8 は[八進数](https://ja.wikipedia.org/wiki/%E5%85%AB%E9%80%B2%E6%B3%95)になります。
-- 10 は [十進数](https://ja.wikipedia.org/wiki/%E5%8D%81%E9%80%B2%E6%B3%95)になります。
-- 16 は [十六進数](https://ja.wikipedia.org/wiki/%E5%8D%81%E5%85%AD%E9%80%B2%E6%B3%95)になります。
+`Object.prototype.toString()` を [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) および {{jsxref("undefined")}} に対して呼び出すと、それぞれ `[object Null]` および `[object Undefined]` を返します。
 
 ## 例
 
-### 既定の toString メソッドの上書き
+### 独自オブジェクトの toString のオーバーライド
 
-既定の `toString()` メソッドに代わって呼び出される関数を作ることができます。 `toString()` メソッドは引数を取らず、文字列を返す必要があります。 `toString()` メソッドを作成した場合は好きな文字列を返すことができますが、オブジェクトに関する情報を伝えるのが一番役に立つでしょう。
+既定の `toString()` メソッドに代わって呼び出される関数を作ることができます。 `toString()` メソッドは文字列を返す必要があります。オブジェクトを返し、そのメソッドが[型変換](/ja/docs/Web/JavaScript/Data_structures#型変換)の際に暗黙的に呼び出された場合、その結果は無視され、代わりに相対メソッド {{jsxref("Object/valueOf", "valueOf()")}} の値が使われます。これらのメソッドのどちらもがプリミティブ値を返さない場合は `TypeError` が発生します。
 
-以下のコードは `Dog` オブジェクト型を定義し、 `Dog` 型のオブジェクト `theDog` を生成しています。
+以下のコードは `Dog` クラスを定義しています。
 
 ```js
-function Dog(name, breed, color, sex) {
-  this.name = name;
-  this.breed = breed;
-  this.color = color;
-  this.sex = sex;
+class Dog {
+  constructor(name, breed, color, sex) {
+    this.name = name;
+    this.breed = breed;
+    this.color = color;
+    this.sex = sex;
+  }
 }
-
-theDog = new Dog("Gabby", "Lab", "chocolate", "female");
 ```
 
 このカスタムオブジェクト上で `toString()` メソッドを呼び出した場合、メソッドは {{jsxref("Object")}} から継承された既定値を返します。
 
 ```js
-theDog.toString(); // [object Object] を返す
+const theDog = new Dog("Gabby", "Lab", "chocolate", "female");
+
+theDog.toString(); // "[object Object]"
+`${theDog}`; // "[object Object]"
 ```
 
-以下のコードでは、 `dogToString()` を生成および割り当てし、既定の `toString()` メソッドを上書きします。この関数はオブジェクトの `name`, `breed`, `color`, `sex` を "`property = value;`" の形で含む文字列を生成します。
+以下のコードは既定の `toString()` メソッドを上書きします。このメソッドはオブジェクトの `name`, `breed`, `color`, `sex` を格納した文字列を生成します。
 
 ```js
-Dog.prototype.toString = function dogToString() {
-  const ret =
-    "Dog " +
-    this.name +
-    " is a " +
-    this.sex +
-    " " +
-    this.color +
-    " " +
-    this.breed;
-  return ret;
-};
+class Dog {
+  constructor(name, breed, color, sex) {
+    this.name = name;
+    this.breed = breed;
+    this.color = color;
+    this.sex = sex;
+  }
+  toString() {
+    return `Dog ${this.name} is a ${this.sex} ${this.color} ${this.breed}`;
+  }
+}
 ```
 
-または、 ES6 の {{jsxref("Template_literals", "テンプレート文字列", "", 1)}}を使用した例です。
+上記のコードの中で、 `Dog` が文字列の文脈で使用されるたびに、 JavaScript は自動的に `toString()` 関数を呼び出し、以下の文字列を返します。
 
 ```js
-Dog.prototype.toString = function dogToString() {
-  return `Dog ${this.name} is a ${this.sex} ${this.color} ${this.breed}`;
-};
+const theDog = new Dog("Gabby", "Lab", "chocolate", "female");
+
+`${theDog}`; // "Dog Gabby is a female chocolate Lab"
 ```
 
-前者のコードの中で、 `theDog` が文字列の文脈で使用されるたびに、 JavaScript は自動的に `dogToString()` 関数を呼び出し、以下の文字列を返します。
-
-```js
-"Dog Gabby is a female chocolate Lab";
-```
-
-### toString() を使用したオブジェクトクラスの判別
+### toString() を使用してオブジェクトクラスの判別
 
 `toString()` はすべてのオブジェクトに対し、(既定では) そのクラスを得るために使用することができます。
-
-すべてのオブジェクトで `Object.prototype.toString()` を使うためには、 {{jsxref("Function.prototype.call()")}} または {{jsxref("Function.prototype.apply()")}} を、第 1 引数 (`thisArg`) に調べたいオブジェクトを渡して呼び出す必要があります。
 
 ```js
 const toString = Object.prototype.toString;
 
 toString.call(new Date()); // [object Date]
 toString.call(new String()); // [object String]
+// Math には Symbol.toStringTag　がある
 toString.call(Math); // [object Math]
 
-// Since JavaScript 1.8.5
 toString.call(undefined); // [object Undefined]
 toString.call(null); // [object Null]
 ```
@@ -152,11 +159,12 @@ Object.prototype.toString.call(new Date()); // [object prototype polluted]
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.toString")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{jsxref("Object.prototype.toSource()")}}
+- [`Object.prototype.toString` で `Symbol.toStringTag` に対応したポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.prototype.valueOf()")}}
 - {{jsxref("Number.prototype.toString()")}}
 - {{jsxref("Symbol.toPrimitive")}}
+- {{jsxref("Symbol.toStringTag")}}

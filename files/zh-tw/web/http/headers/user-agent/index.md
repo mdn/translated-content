@@ -1,115 +1,141 @@
 ---
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
+l10n:
+  sourceCommit: ed041385cf874deec203e820fd415bdcd6f98a19
 ---
 
 {{HTTPSidebar}}
 
-User-Agent 請求標頭（request header）含有能令網路協議同級層（peer）識別發出該[用戶代理](/zh-TW/docs/Glossary/User_agent)請求的軟體類型或版本號、該軟體使用的作業系統、還有軟體開發者的字詞串。
+HTTP **User-Agent** {{Glossary("request header", "請求標頭")}}是一個讓伺服器和網路對等端識別發起請求的{{Glossary("user agent", "使用者代理")}}的應用程式、操作系統、供應商和/或版本的特徵字串。
 
-> **備註：** 請讀讀[透過用戶代理偵測瀏覽器](/zh-TW/docs/Web/HTTP/Browser_detection_using_the_user_agent)以理解為什麼給不同的瀏覽器不同的頁面或服務是餿主意。
+> [!WARNING]
+> 參閱[透過使用者代理進行瀏覽器檢測](/zh-TW/docs/Web/HTTP/Browser_detection_using_the_user_agent)，了解為何給不同的瀏覽器提供不同的內容通常是不好的主意。
 
-| 標頭類型                              | {{Glossary("Request header")}} |
-| ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | 否                             |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">標頭類型</th>
+      <td>{{Glossary("Request header", "請求標頭")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 語法
 
-```plain
+```http
 User-Agent: <product> / <product-version> <comment>
 ```
 
-瀏覽器常見格式：
+Web 瀏覽器的常見格式：
 
-```plain
+```http
 User-Agent: Mozilla/5.0 (<system-information>) <platform> (<platform-details>) <extensions>
 ```
 
-網路瀏覽器常用的格式：
+### 指令
 
-```plain
-User-Agent: Mozilla/<version> (<system-information>) <platform> (<platform-details>) <extensions>
-```
-
-## 指令
-
-- \<product>
-  - : 產品識別符：通常是名字或開發代號。
-- \<product-version>
-  - : 產品版本號。
-- \<comment>
-  - : 關於產品資訊的註解（如副產品訊息）。可能有、或沒有。
+- `<product>`
+  - : 產品識別碼——它的名稱或開發代號。
+- `<product-version>`
+  - : 產品的版本號。
+- `<comment>`
+  - : 零個或多個包含更多詳細訊息的評論。例如，次產品訊息。
 
 ## Firefox UA 字串
 
-關於 Firefox 和基於 Gecko 的用戶代理字串，請參閱 [Firefox 用戶代理字串參考](/zh-TW/docs/Web/HTTP/Headers/User-Agent/Firefox)。Firefox 用戶代理字串大略上分成以下四個部份：
+關於基於 Firefox 和 Gecko 的使用者代理字串的更多訊息，請參見 [Firefox 使用者代理字串參考](/zh-TW/docs/Web/HTTP/Headers/User-Agent/Firefox)。Firefox 的 UA 字串分為四個部分：
 
-**Mozilla/5.0 (_platform_; rv:_geckoversion_) Gecko/_geckotrail_ Firefox/_firefoxversion_**
+```plain
+Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail Firefox/firefox-version
+```
 
-1. `Mozilla/5.0` is the general token that says the browser is Mozilla-compatible. For historical reasons, almost every browser today sends it.
-2. **_platform_** describes the native platform the browser is running on (Windows, Mac, Linux, Android, etc.), and if it's a mobile phone. [Firefox OS](/zh-TW/docs/Glossary/Firefox_OS) phones simply say `Mobile` — the web is the platform. Note that **_platform_** can consist of multiple `"; "`-separated tokens. See below for further details and examples.
-3. **rv:_geckoversion_** indicates the release version of Gecko (such as _"17.0"_). In recent browsers, **_geckoversion_** is the same as **_firefoxversion_**.
-4. **_Gecko/geckotrail_** indicates that the browser is based on [Gecko](/zh-TW/docs/Mozilla/Gecko). (On Desktop, _**geckotrail**_ is always the fixed string `20100101`.)
-5. _**Firefox/firefoxversion**_ indicates the browser is Firefox, and provides the version (such as "_17.0"_).
+1. `Mozilla/5.0` 是一個通用標記，表示瀏覽器與 Mozilla 兼容。出於歷史原因，幾乎每個瀏覽器現今都會發送它。
+2. **_platform_** 描述瀏覽器運行的本地平台（Windows、Mac、Linux、Android 等）以及是否是手機。{{Glossary("Firefox OS")}} 手機顯示 `Mobile`——Web 即平台。請注意，**_platform_** 可以包含多個以 `;` 分隔的標記。詳細訊息和範例見下文。
+3. **rv:_gecko-version_** 表示 Gecko 的發布版本（例如 "_17.0_"）。在最近的瀏覽器中，**_gecko-version_** 與 **_firefox-version_** 相同。
+4. **_Gecko/gecko-trail_** 表示瀏覽器基於 Gecko。（在桌面上，**_gecko-trail_** 始終是固定字串 `20100101`。）
+5. **_Firefox/firefox-version_** 表示瀏覽器是 Firefox 並提供版本（例如 "_17.0_"）。
 
-### 示例
+### 範例
 
 ```plain
 Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0
 Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0
 ```
 
-## Chrome 用戶代理字串
+## Chrome UA 字串
 
-Chrome（或基於 Chromium/blink 引擎的瀏覽器）的用戶代理字串看起來像 Firefox。出於相容性的理由，它還會加上「KHTML, like Gecko」與「Safari」的字串。
+Chrome（或基於 Chromium/Blink 引擎）user agent 字串類似於 Firefox 的。為了兼容性，它添加了 `KHTML, like Gecko` 和 `Safari` 字串。
 
-### 字串
+### 範例
 
 ```plain
 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
 ```
 
-## Opera 用戶代理字串
+## Opera UA 字串
 
-因為 Opera 瀏覽器的引擎也是基於 blink 的，所以語法也看起來也會很像。不過，還會加上「 OPR/\<version>」一詞。
+Opera 瀏覽器也是基於 Blink 引擎，這就是為什麼它幾乎與 Chrome UA 字串相同，但增加了 `"OPR/<version>"`。
 
-### 示例
+### 範例
 
 ```plain
 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36 OPR/38.0.2220.41
 ```
 
-Opera 在使用 Presto 排版時的用戶代理字串
+較舊的基於 Presto 的 Opera 版本使用：
 
 ```plain
 Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.00
 Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1
 ```
 
-## Safari 用戶代理字串
+## Microsoft Edge UA 字串
 
-此例的 safari 用戶代理字串是攜帶版，所以會出現「Mobile」一詞。
+Edge 瀏覽器也是基於 Blink 引擎。它添加了 `"Edg/<version>"`。
 
-### 示例
+### 範例
 
 ```plain
-Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.59
 ```
 
-## Internet Explorer 用戶代理字串
+## Safari UA 字串
 
-### 示例
+在這個範例中，user agent 字串是行動版 Safari 的版本。它包含 `"Mobile"` 一詞。
+
+### 範例
 
 ```plain
-Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)
+Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1
 ```
 
-## 網路爬蟲與機器人的用戶代理字串
+## 爬蟲和機器人 UA 字串
 
-### 示例
+### 範例
 
 ```plain
-Googlebot/2.1 (+http://www.google.com/bot.html)
+Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+```
+
+```plain
+Mozilla/5.0 (compatible; YandexAccessibilityBot/3.0; +http://yandex.com/bots)
+```
+
+## 庫和網路工具 UA 字串
+
+### 範例
+
+```plain
+curl/7.64.1
+```
+
+```plain
+PostmanRuntime/7.26.5
 ```
 
 ## 規範
@@ -120,8 +146,9 @@ Googlebot/2.1 (+http://www.google.com/bot.html)
 
 {{Compat}}
 
-## 參閱
+## 參見
 
-- [User-Agent detection, history and checklist](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/)
-- [Firefox 用戶代理字串參考](/zh-TW/docs/Web/HTTP/Headers/User-Agent/Firefox)
-- [透過用戶代理偵測瀏覽器](/zh-TW/docs/Web/HTTP/Browser_detection_using_the_user_agent)
+- [User-Agent 檢測、歷史和清單](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/)
+- [Firefox 使用者代理字串參考](/zh-TW/docs/Web/HTTP/Headers/User-Agent/Firefox)
+- [透過使用者代理進行瀏覽器檢測](/zh-TW/docs/Web/HTTP/Browser_detection_using_the_user_agent)
+- [用戶端提示](/zh-TW/docs/Web/HTTP/Client_hints)

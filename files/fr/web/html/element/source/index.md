@@ -5,18 +5,18 @@ slug: Web/HTML/Element/source
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<source>`** définit différentes ressources média pour un élément {{HTMLElement("picture")}}, {{HTMLElement("audio")}} ou {{HTMLElement("video")}}. C'est un élément vide : il ne possède pas de contenu et ne nécessite pas de balise fermante. Il est généralement utilisé pour distribuer le même contenu en utilisant [les différents formats pris en charge par les différents navigateurs](/fr/docs/Web/HTML/formats_media_support).
+L'élément HTML **`<source>`** définit différentes ressources média pour un élément {{HTMLElement("picture")}}, {{HTMLElement("audio")}} ou {{HTMLElement("video")}}. C'est un élément vide : il ne possède pas de contenu et ne nécessite pas de balise fermante. Il est généralement utilisé pour distribuer le même contenu en utilisant [les différents formats pris en charge par les différents navigateurs](/fr/docs/Web/Media/Formats).
 
 {{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `media`
-  - : [Une requête média](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries) pour sélectionner la source du média. Cet attribut doit uniquement être utilisé pour un élément {{HTMLElement("picture")}}.
+  - : [Une requête média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) pour sélectionner la source du média. Cet attribut doit uniquement être utilisé pour un élément {{HTMLElement("picture")}}.
 - `sizes`
-  - : Cet attribut est une liste de chaîne de caractères, séparées par des virgules, dont chacune décrit une condition de taille. Cette information est utilisée par le navigateur, avant la disposition de la page, pour déterminer quelle image parmi celles définies via l'attribut [`srcset`](/fr/docs/Web/HTML/Element/source#srcset). Cet attribut aura un effet uniquement lorsque l'élément {{HTMLElement("source")}} est un élément fils direct d'un élément {{HTMLElement("picture")}}.
+  - : Cet attribut est une liste de chaîne de caractères, séparées par des virgules, dont chacune décrit une condition de taille. Cette information est utilisée par le navigateur, avant la disposition de la page, pour déterminer quelle image parmi celles définies via l'attribut [`srcset`](#srcset). Cet attribut aura un effet uniquement lorsque l'élément {{HTMLElement("source")}} est un élément fils direct d'un élément {{HTMLElement("picture")}}.
 - `src`
   - : Cet attribut est obligatoire pour les éléments {{HTMLElement("audio")}} et {{HTMLElement("video")}}. Il définit l'adresse de la ressource. La valeur de cet attribut est ignorée lorsque l'élément `<source>` est à l'intérieur d'un élément{{HTMLElement("picture")}}.
 - `srcset`
@@ -41,7 +41,7 @@ L'élément `<source>` est un _élément vide_ ce qui signifie qu'il n'a aucun c
 
 ### Vidéo
 
-Dans cet exemple, on voit comment distribuer une vidéo au format Ogg pour les navigateurs qui prennent en charge ce format, la même vidéo au format QuickTime pour d'autres voire au format webm. Si le navigateur ne prend pas en charge `<audio>` ou `<video>`, un message sera affiché. Si le navigateur prend en charge l'élément mais aucun des formats proposé, un évènement `error` sera déclenché et le lecteur média (s'il est activé) indiquera une erreur. [Cette page indique les différents formats pris en charge par les navigateurs](/fr/docs/Web/HTML/formats_media_support) pour les éléments `<audio>` et `<video>`.
+Dans cet exemple, on voit comment distribuer une vidéo au format Ogg pour les navigateurs qui prennent en charge ce format, la même vidéo au format QuickTime pour d'autres voire au format webm. Si le navigateur ne prend pas en charge `<audio>` ou `<video>`, un message sera affiché. Si le navigateur prend en charge l'élément mais aucun des formats proposé, un évènement `error` sera déclenché et le lecteur média (s'il est activé) indiquera une erreur. [Cette page indique les différents formats pris en charge par les navigateurs](/fr/docs/Web/Media/Formats) pour les éléments `<audio>` et `<video>`.
 
 #### HTML
 

@@ -22,7 +22,7 @@ slug: Web/Security
   - : **電子証明書の透明性**は、証明書の誤発行を防止し、監視するために設計されたオープンなフレームワークです。新しく発行された証明書は、公開されている、多くの場合独立した CT ログに「記録」され、発行された TLS 証明書の追加のみの暗号的に保証された記録を維持します。
 - [混在コンテンツ](/ja/docs/Web/Security/Mixed_content)
   - : HTTPS のページの中に通常の平文の HTTP で送られてくるコンテンツが含まれている場合、**混在コンテンツ**と呼ばれます。このようなページは部分的にしか暗号化されておらず、盗聴者や中間者攻撃者が暗号化されていないコンテンツにアクセスできてしまいます。
-- [混在コンテンツでブロックされるウェブサイトを修正するには](/ja/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
+- [混在コンテンツでブロックされるウェブサイトを修正するには](/ja/docs/Web/Security/Mixed_content#developer_console)
   - : ウェブサイトを HTTPS で配信している場合、ページ上にある [能動的な混在コンテンツ](/ja/docs/Web/Security/Mixed_content#mixed_active_content)はすべて既定でブロックされます。結果として、ユーザーからはそのウェブサイトが壊れているように見えるかもしれません (iframe やプラグインが読み込まれないなど)。一方、[受動的な混在コンテンツ](/ja/docs/Web/Security/Mixed_content#mixed_passivedisplay_content)は既定で表示されますが、このようなコンテンツをブロックするようにユーザーが設定することも可能です。このページでは、ウェブ開発者として知っておくべきことを説明します。
 - [安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
   - : **安全なコンテキスト (Secure Context)** とは、(HTTPS/TLS を介して) コンテンツが安全に配信され、安全**ではない**コンテキストとの通信の可能性が限られているという合理的な確信がある `Window`、または `Worker` のことです。多くの Web API が安全なコンテキストでのみ利用可能です。安全なコンテキストの主目的は、[中間者攻撃者](https://ja.wikipedia.org/wiki/中間者攻撃)が被害者に更なる危険にさらす可能性がある強力な API にアクセスするのを防ぐことにあります。
@@ -58,7 +58,7 @@ slug: Web/Security
 - [HTTP の Access-Control-Allow-Origin](/ja/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
   - : **`Access-Control-Allow-Origin`** レスポンスヘッダーは、指定された{{glossary("origin", "オリジン")}}からのリクエストを行うコードでレスポンスが共有できるかどうかを示します。
 - [HTTP X-Content-Type-Options](/ja/docs/Web/HTTP/Headers/X-Content-Type-Options)
-  - : **`X-Content-Type-Options`** は HTTP のレスポンスヘッダーで、{{HTTPHeader("Content-Type")}} ヘッダーで示された [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)を変更せずに従うべきであることを示すために、サーバーによって使用されるマーカーです。これにより、[MIME タイプのスニッフィング](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing)を抑止することができます。すなわち、ウェブマスターが自分が何をしているかを分かっていると言う手段です。
+  - : **`X-Content-Type-Options`** は HTTP のレスポンスヘッダーで、{{HTTPHeader("Content-Type")}} ヘッダーで示された [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)を変更せずに従うべきであることを示すために、サーバーによって使用されるマーカーです。これにより、[MIME タイプのスニッフィング](/ja/docs/Web/HTTP/MIME_types#mime_sniffing)を抑止することができます。すなわち、ウェブマスターが自分が何をしているかを分かっていると言う手段です。
 
 ## クリックジャックからの保護
 

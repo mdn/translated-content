@@ -62,7 +62,8 @@ function setStyles() {
 }
 ```
 
-> **備註：** 想要看這個範例完整運行，可以參考我們的 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> [!NOTE]
+> 想要看這個範例完整運行，可以參考我們的 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
 ## 規範
 

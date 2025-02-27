@@ -5,7 +5,7 @@ slug: Web/API/PerformanceLongTaskTiming
 
 {{SeeCompatTable}}{{APIRef("Long Tasks")}}
 
-L'interface **`PerformanceLongTaskTiming`** de [l'API _Long Tasks_](/fr/docs/Web/API/Long_Tasks_API) signale les instances de tâches longues.
+L'interface **`PerformanceLongTaskTiming`** de [l'API _Long Tasks_](/fr/docs/Web/API/PerformanceLongTaskTiming) signale les instances de tâches longues.
 
 {{InheritanceDiagram}}
 

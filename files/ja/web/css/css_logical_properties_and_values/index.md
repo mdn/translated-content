@@ -11,7 +11,7 @@ slug: Web/CSS/CSS_logical_properties_and_values
 
 ### ブロックとインライン
 
-論理プロパティと値は、*ブロック*と*インライン*という抽象的な用語を使用して、流れに対する方向を記述します。これらの用語の物理的な意味は、[書字方向](/ja/docs/Web/CSS/CSS_Writing_Modes)に依存します。
+論理的プロパティと値は、*ブロック*と*インライン*という抽象的な用語を使用して、流れに対する方向を記述します。これらの用語の物理的な意味は、[書字方向](/ja/docs/Web/CSS/CSS_writing_modes)に依存します。
 
 - ブロック方向
   - : 行内のテキストの流れとは垂直の方向、つまり、横書きでは垂直方向、縦書きでは水平方向です。標準的な英語のテキストでは、垂直方向になります。
@@ -108,10 +108,10 @@ slug: Web/CSS/CSS_logical_properties_and_values
 
 ### ガイド
 
-- [論理的プロパティと値の基本概念](/ja/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts)
-- [寸法の論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties/Sizing)
-- [マージン、境界、パディングの論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties/Margins_borders_padding)
-- [浮動と位置指定の論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties/Floating_and_positioning)
+- [論理的プロパティと値の基本概念](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
+- [寸法の論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Sizing)
+- [マージン、境界、パディングの論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding)
+- [浮動と位置指定の論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning)
 
 ## 仕様書
 

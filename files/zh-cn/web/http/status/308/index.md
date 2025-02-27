@@ -9,7 +9,8 @@ slug: Web/HTTP/Status/308
 
 在重定向过程中，请求方法和消息主体不会发生改变，然而在返回 {{HTTPStatus("301")}} 状态码的情况下，请求方法有时候会被客户端错误地修改为 {{HTTPMethod("GET")}} 方法。
 
-> **备注：** 一些 Web 应用可能会将 308 Permanent Redirect 以一种非标准的方式使用以及用作其他用途。例如，Google Drive 会使用 308 Resume Incomplete 状态码来告知客户端文件上传终止且不完整。[\[1\]](https://developers.google.com/drive/v3/web/manage-uploads#resumable)
+> [!NOTE]
+> 一些 Web 应用可能会将 308 Permanent Redirect 以一种非标准的方式使用以及用作其他用途。例如，Google Drive 会使用 308 Resume Incomplete 状态码来告知客户端文件上传终止且不完整。[\[1\]](https://developers.google.cn/drive/api/guides/manage-uploads)
 
 ## 状态
 
@@ -25,7 +26,7 @@ slug: Web/HTTP/Status/308
 
 {{Compat}}
 
-## 更多可见
+## 参见
 
 - {{HTTPStatus("301")}} `Moved Permanently`
 - {{HTTPStatus("302")}} `Found`, the temporary redirect

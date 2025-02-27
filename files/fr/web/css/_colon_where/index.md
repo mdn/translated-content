@@ -1,5 +1,5 @@
 ---
-title: ":where()"
+title: :where()
 slug: Web/CSS/:where
 l10n:
   sourceCommit: 62681c2ef134407009c5c11fa679db1f485e016d
@@ -125,7 +125,8 @@ Cela ne fonctionnera pas pour les liens rouges, car les sélecteurs à l'intéri
 
 Cependant, les sélecteurs à l'intérieur de `:where()` ont une spécificité à 0, et le lien orange du pied de page sera surchargé par le sélecteur simple.
 
-> **Note :** Vous pouvez également consulter [cet exemple sur GitHub](https://mdn.github.io/css-examples/is-where/).
+> [!NOTE]
+> Vous pouvez également consulter [cet exemple sur GitHub](https://mdn.github.io/css-examples/is-where/).
 
 {{EmbedLiveSample('', '100%', 600)}}
 

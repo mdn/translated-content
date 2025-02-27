@@ -13,7 +13,7 @@ La propiedad {{ Cssxref("font") }} permite establecer de una sola vez los valore
 
 ## Sintaxis
 
-`font:` \[ <[font-style](/es/CSS/font-style)> || <[font-variant](/es/CSS/font-variant)> || <[font-weight](/es/CSS/font-weight)> ]? <[font-size](/es/CSS/font-size)> \[ / <[line-height](/es/CSS/line-height)> ]? <[font-family](/es/CSS/font-family)>
+`font:` \[ <[font-style](/es/docs/Web/CSS/font-style)> || <[font-variant](/es/docs/Web/CSS/font-variant)> || <[font-weight](/es/docs/Web/CSS/font-weight)> ]? <[font-size](/es/docs/Web/CSS/font-size)> \[ / <[line-height](/es/docs/Web/CSS/line-height)> ]? <[font-family](/es/docs/Web/CSS/font-family)>
 
 `font:` `caption` | `icon` | `menu` | `message-box` | `small-caption` | `status-bar` | `-moz-window` | `-moz-document` | `-moz-workspace` | `-moz-desktop` | `-moz-info` | `-moz-dialog` | `-moz-button` | `-moz-pull-down-menu` | `-moz-list` | `-moz-field`
 
@@ -44,7 +44,7 @@ También se pueden especificar los tipos de letra del sistema usando la propieda
 
 ## Ejemplos
 
-[Ver El Ejemplo Vivo](/samples/cssref/font.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/font.html)
 
 ```
 /* Ajusta el tamaño de letra a 12pt y el alto de línea a 14pt. La familia tipográfica es sans-serif */
@@ -69,17 +69,10 @@ Si no se establece un valor concreto, las propiedades tomarán el valor por defe
 
 La propiedad {{ Cssxref("font-size-adjust") }} también se establece a su valor inicial (`none`) cuando se usa la propiedad general {{ Cssxref("font") }}.
 
-## Especificaciones
+### Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#font)
-- [CSS 2](http://www.w3.org/TR/1998/REC-CSS2-19980512/fonts.html#propdef-font) (para {{ Cssxref("font-size-adjust") }})
-- [CSS 2.1](http://www.w3.org/TR/CSS21/fonts.html#propdef-font)
-- [css3-ui](http://www.w3.org/TR/css3-ui/#font) (para los nuevos valores de fuentes de sistema])
+{{Specifications}}
 
-## Compatibilidades
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 3              |
-| Netscape          | 4              |
-| Opera             | 3.5            |
+{{Compat}}

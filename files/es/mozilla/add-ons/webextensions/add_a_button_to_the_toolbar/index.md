@@ -41,7 +41,7 @@ Primero, crear una nueva carpeta "botón", y crea un archivo con el nombre de "m
 }
 ```
 
-Esto especifica que tenemos un [background script](/es/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) llamado "background.js", y un **browser action** (butón) cuyo icono va a estar en la carpeta "icons".
+Esto especifica que tenemos un [background script](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) llamado "background.js", y un **browser action** (butón) cuyo icono va a estar en la carpeta "icons".
 
 Estos iconos son de [bitsies!](https://www.iconfinder.com/iconsets/bitsies) conjunto de iconos creados por Recep Kütük.
 
@@ -77,7 +77,7 @@ button/
     manifest.json
 ```
 
-Ahora [instala la extensión](/es/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) y da click en el botón:
+Ahora [instala la extensión](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) y da click en el botón:
 
 {{EmbedYouTube("kwwTowgT-Ys")}}
 
@@ -191,7 +191,7 @@ Ahora vamos a recargar la extensión, click en el botón otra vez e intenta dar 
 
 ## Acciones de página
 
-[Acciones de página](/es/docs/Mozilla/Add-ons/WebExtensions/Page_actions) son como las acciones del navegador, excepto que son acciones relevantes solo para algunas página en particular.
+[Acciones de página](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) son como las acciones del navegador, excepto que son acciones relevantes solo para algunas página en particular.
 
 Mientras de las acciones del navegaro siembre son mostradas, las acciones de página son solo mostradas en pestañas donde son relevantes. Los botones de las acciones de página son mostradas en la barra URL , en vez de la barra de herramientas del navegador.
 

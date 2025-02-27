@@ -21,7 +21,8 @@ addEventListener("contentvisibilityautostatechange", (event) => {});
 oncontentvisibilityautostatechange = (event) => {};
 ```
 
-> **备注：** 事件的类型为 {{domxref("ContentVisibilityAutoStateChangeEvent")}}。
+> [!NOTE]
+> 事件的类型为 {{domxref("ContentVisibilityAutoStateChangeEvent")}}。
 
 ## 示例
 

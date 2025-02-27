@@ -1,11 +1,13 @@
 ---
 title: AsyncFunction() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction/AsyncFunction
+l10n:
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
 
-**`AsyncFunction()`** 构造函数创建一个新的 {{jsxref("AsyncFunction")}} 对象。在 JavaScript 中，每个[异步函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)实际上都是一个 `AsyncFunction` 对象。
+**`AsyncFunction()`** 构造函数创建一个新的 {{jsxref("AsyncFunction")}} 对象。
 
 注意，`AsyncFunction` *不是*全局对象。它可以通过以下代码获取：
 
@@ -19,17 +21,18 @@ const AsyncFunction = async function () {}.constructor;
 
 ```js-nolint
 new AsyncFunction(functionBody)
-new AsyncFunction(arg0, functionBody)
-new AsyncFunction(arg0, arg1, functionBody)
-new AsyncFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+new AsyncFunction(arg1, functionBody)
+new AsyncFunction(arg1, arg2, functionBody)
+new AsyncFunction(arg1, arg2, /* …, */ argN, functionBody)
 
 AsyncFunction(functionBody)
-AsyncFunction(arg0, functionBody)
-AsyncFunction(arg0, arg1, functionBody)
-AsyncFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+AsyncFunction(arg1, functionBody)
+AsyncFunction(arg1, arg2, functionBody)
+AsyncFunction(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
-> **备注：** 无论是否使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用 `AsyncFunction()`，都可以创建一个新的 `AsyncFunction` 实例。
+> [!NOTE]
+> 无论是否使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用 `AsyncFunction()`，都可以创建一个新的 `AsyncFunction` 实例。
 
 ### 参数
 

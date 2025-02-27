@@ -5,9 +5,9 @@ slug: Web/API/DOMParser
 
 {{APIRef("DOM")}}
 
-`DOMParser` может парсить XML или HTML источник содержащийся в строке в DOM [Document](/ru/docs/DOM/document). Спецификация `DOMParser находится в` [DOM Parsing and Serialization](https://w3c.github.io/DOM-Parsing/).
+`DOMParser` может парсить XML или HTML источник содержащийся в строке в DOM [Document](/ru/docs/Web/API/Document). Спецификация `DOMParser находится в` [DOM Parsing and Serialization](https://w3c.github.io/DOM-Parsing/).
 
-Заметьте, что [XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest) поддерживает парсинг XML и HTML из интернет ресурсов (по ссылке)
+Заметьте, что [XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest) поддерживает парсинг XML и HTML из интернет ресурсов (по ссылке)
 
 ## Создание DOMParser
 
@@ -26,7 +26,7 @@ var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 
 ### Обработка ошибок
 
-Заметьте, если процесс парсинга не удастся , `DOMParser` теперь не выдаёт исключение, но вместо этого выдаёт документ ошибки (see {{Bug(45566)}}):
+Заметьте, если процесс парсинга не удастся , `DOMParser` теперь не выдаёт исключение, но вместо этого выдаёт документ ошибки (see [Firefox bug 45566](https://bugzil.la/45566)):
 
 ```xml
 <parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml">
@@ -108,13 +108,13 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Анализ и сериализация XML](/ru/docs/Parsing_and_serializing_XML)
-- [XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest)
-- [XMLSerializer](/ru/docs/XMLSerializer)
-- [Parsing HTML to DOM](/en-US/Add-ons/Code_snippets/HTML_to_DOM)
+- [Анализ и сериализация XML](/ru/docs/Web/XML/Parsing_and_serializing_XML)
+- [XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest)
+- [XMLSerializer](/ru/docs/Web/API/XMLSerializer)
+- [Parsing HTML to DOM](/ru/docs/Mozilla/Add-ons/Code_snippets/HTML_to_DOM)

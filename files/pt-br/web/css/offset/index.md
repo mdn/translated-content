@@ -7,7 +7,8 @@ slug: Web/CSS/offset
 
 A propriedade CSS **`offset`** é uma propriedade abreviada para animar um elemento ao longo de um caminho definido.
 
-> **Nota:** As primeiras versões da especificação chamam essa propriedade de `motion`.
+> [!NOTE]
+> As primeiras versões da especificação chamam essa propriedade de `motion`.
 
 {{cssinfo}}
 
@@ -80,4 +81,4 @@ offset: url(arc.svg) 30deg / 50px 100px;
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.offset")}}
+{{Compat}}

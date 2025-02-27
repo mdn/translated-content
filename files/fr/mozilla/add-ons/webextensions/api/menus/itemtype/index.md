@@ -3,7 +3,7 @@ title: menus.ItemType
 slug: Mozilla/Add-ons/WebExtensions/API/menus/ItemType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type d'élément de menu.
 
@@ -26,9 +26,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont:
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
+> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -1,8 +1,9 @@
 ---
-title: EyeDropper()
+title: "EyeDropper: EyeDropper() コンストラクター"
+short-title: EyeDropper()
 slug: Web/API/EyeDropper/EyeDropper
 l10n:
-  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("EyeDropper API")}}{{SeeCompatTable}}
@@ -17,7 +18,7 @@ new EyeDropper()
 
 ### 引数
 
-なし
+なし。
 
 ## 仕様書
 

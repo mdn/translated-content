@@ -33,7 +33,7 @@ Para começar esta avaliação, você deve:
 - [Pegue o arquivo HTML](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html) para o exemplo e salve uma cópia local deste arquivo como index.html em um novo diretório em algum local do seu computador. Este arquivo ainda contém o CSS para estilizar o exemplo contido no arquivo.
 - Vá para a [página que contém o texto bruto](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt) e matenha-a aberta em uma aba separada do navegador em algum lugar. Você precisará dela mais tarde.
 
-> **Nota:** Alternativamente, você pode utilizar um site como [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) para fazer a sua avaliação. Você pode colar o HTML, CSS e javaScript em um desses editores online. Se o editor online que você estiver utilizando não possuir um painel separado para javaScript, sinta-se a vontade para inseri-lo em um elemento \<script> dentro da página HTML.
+Alternativamente, você pode utilizar um site como [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) para fazer a sua avaliação. Você pode colar o HTML, CSS e javaScript em um desses editores online. Se o editor online que você estiver utilizando não possuir um painel separado para javaScript, sinta-se a vontade para inseri-lo em um elemento \<script> dentro da página HTML.
 
 ## Resumo do projeto
 
@@ -47,7 +47,7 @@ A seguinte captura de tela mostra um exemplo do que o programa concluído deve p
 
 ![](assessment-1.png)
 
-Para dar-lhe mais uma ideia, [dê uma olhada no exemplo concluído](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/assessment-finished/) (sem espreitar o código fonte!)
+Para dar-lhe mais uma ideia, [dê uma olhada no exemplo concluído](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/assessment-finished/) (sem espreitar o código fonte!)
 
 ## Passos para completar
 

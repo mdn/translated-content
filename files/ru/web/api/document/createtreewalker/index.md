@@ -3,7 +3,9 @@ title: Document.createTreeWalker()
 slug: Web/API/Document/createTreeWalker
 ---
 
-{{ApiRef("Document")}}Вызов метода **`Document.createTreeWalker()`** возвращает новый объект класса {{domxref("TreeWalker")}}.
+{{APIRef("Document")}}
+
+Вызов метода **`Document.createTreeWalker()`** возвращает новый объект класса {{domxref("TreeWalker")}}.
 
 ## Синтаксис
 
@@ -17,7 +19,7 @@ document.createTreeWalker(root, whatToShow[, filter[, entityReferenceExpansion]]
   - : корневой узел {{domxref("Node")}} для {{domxref("TreeWalker")}}. Чаще всего это элемент принадлежащий document.
 - `whatToShow` {{optional_inline}}
 
-  - : A `unsigned long` representing a bitmask created by combining the constant properties of [`NodeFilter`](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter). It is a convenient way of filtering for certain types of node. It defaults to `0xFFFFFFFF` representing the `SHOW_ALL` constant.
+  - : A `unsigned long` representing a bitmask created by combining the constant properties of [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter). It is a convenient way of filtering for certain types of node. It defaults to `0xFFFFFFFF` representing the `SHOW_ALL` constant.
 
     | Константа                                                | Числовое значение                               | Описание                                                                                                                                                                                                                                                                                                                                                                                  |
     | -------------------------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -65,14 +67,14 @@ var nodeList = [];
 while (treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - The interface of the object it creates: {{domxref("TreeWalker")}}.

@@ -1,11 +1,16 @@
 ---
-title: Blob.type
+title: Blob：type 属性
 slug: Web/API/Blob/type
+l10n:
+  sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-[`Blob`](/zh-CN/docs/Web/API/Blob) 对象的 **`type`** 属性给出文件的 {{Glossary("MIME type", "MIME 类型")}}。
+{{domxref("Blob")}} 接口的 **`type`** 属性给出文件的 {{Glossary("MIME type", "MIME 类型")}}。
+
+> [!NOTE]
+> 基于当前的实现，浏览器不会读取文件的字节流来确定其媒体类型。其根据文件扩展名进行假设；一个被重命名为 .txt 的 PNG 图像文件会返回“_text/plain_”而不是“_image/png_”。此外，`blob.type` 通常只对常见的文件类型（如图像、HTML 文档、音频和视频）有效。不常见的文件扩展名会返回空字符串。客户端配置（例如 Windows 注册表）可能会导致常见类型出现意外值。**开发者不应该仅依赖此属性作为验证方案。**
 
 ## 值
 

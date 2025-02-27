@@ -21,7 +21,6 @@ slug: Web/CSS/Replaced_element
 - {{HTMLElement("audio")}}
 - {{HTMLElement("canvas")}}
 - {{HTMLElement("object")}}
-- {{HTMLElement("applet")}}
 
 Спецификация HTML также указывает, что элемент {{HTMLElement("input")}} может быть замещаемым, поскольку элемент {{HTMLElement("input")}} с типом image является замещаемым элементом наподобие {{HTMLElement("img")}}. Однако другие элементы форм, включая другие типы элементов {{HTMLElement("input")}}, явно отнесены к незамещаемым элементам (для описания их отображения по умолчанию, которое может быть разным на разных платформах, спецификация использует термин «Виджеты»).
 
@@ -41,11 +40,11 @@ CSS обрабатывает замещаемые элементы особым 
   - [@-правила](/ru/docs/Web/CSS/At-rule)
   - [комментарии](/ru/docs/Web/CSS/Comments)
   - [специфичность](/ru/docs/Web/CSS/Specificity)
-  - [наследование](/ru/docs/Web/CSS/inheritance)
-  - [блочная модель](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [наследование](/ru/docs/Web/CSS/Inheritance)
+  - [блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [режимы компоновки](/ru/docs/Web/CSS/Layout_mode)
   - [модели визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
-  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Значения
     - [начальные](/ru/docs/Web/CSS/initial_value)
     - [вычисленные](/ru/docs/Web/CSS/computed_value)

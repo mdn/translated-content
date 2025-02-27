@@ -1,31 +1,47 @@
 ---
 title: Object.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
+l10n:
+  sourceCommit: 5e878acadb7afcf0443b619b1d2f70a4dfafd679
 ---
 
 {{JSRef}}
 
-**`toLocaleString()`** メソッドは、オブジェクトを表す文字列を返します。このメソッドは、ロケール固有の目的のために派生オブジェクトによって上書きするためのものです。
+**`toLocaleString()`** は {{jsxref("Object")}} インスタンスのメソッドで、オブジェクトを表す文字列を返します。このメソッドは、ロケール固有の目的のために派生オブジェクトによってオーバーライドするためのものです。
 
-{{EmbedInteractiveExample("pages/js/object-prototype-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.tolocalestring()")}}
+
+```js interactive-example
+const date1 = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+
+console.log(date1.toLocaleString("ar-EG"));
+// Expected output: "٢٠‏/١٢‏/٢٠١٢ ٤:٠٠:٠٠ ص"
+
+const number1 = 123456.789;
+
+console.log(number1.toLocaleString("de-DE"));
+// Expected output: "123.456,789"
+```
 
 ## 構文
 
+```js-nolint
+toLocaleString()
 ```
-obj.toLocaleString()
-```
+
+### 引数
+
+なし。ただし、このメソッドをオーバーライドするすべてのオブジェクトは、 {{jsxref("Date.prototype.toLocaleString")}} のように `locales` と `options` に対応する最大 2 つの引数を受け取ることが期待されます。これらの引数の位置は、他の目的には使用しないでください。
 
 ### 返値
 
-オブジェクトを表現する文字列です。
+`this.toString()` 呼び出しの返値です。
 
 ## 解説
 
-{{jsxref("Object")}} の `toLocaleString` は {{jsxref("Object.toString", "toString()")}} を呼び出した結果を返します。
+`Object.prototype` 継承するすべてのオブジェクト（つまり、 [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)を除くすべてのオブジェクト）は、 `toLocaleString()` メソッドを継承します。 {{jsxref("Object")}}'s `toLocaleString` は、 {{jsxref("Object/toString", "this.toString()")}} を呼び出した結果を返します。
 
-この関数は、すべての人が使うわけではありませんが、オブジェクトに汎用的な `toLocaleString` メソッドを与えるために提供されています。以下のリストを参照してください。
-
-### toLocaleString を上書きしているオブジェクト
+この関数は、オブジェクトに汎用的な `toLocaleString` メソッドを提供するために用意されています。コア言語では、これらの組み込みオブジェクトは `toLocaleString` をオーバーライドしてロケール特有の書式設定を行います。
 
 - {{jsxref("Array")}}: {{jsxref("Array.prototype.toLocaleString()")}}
 - {{jsxref("Number")}}: {{jsxref("Number.prototype.toLocaleString()")}}
@@ -35,16 +51,27 @@ obj.toLocaleString()
 
 ## 例
 
-### Array における toLocaleString() の上書き
+### 基底の toLocaleString() メソッドの使用
 
-{{jsxref("Array")}} オブジェクトでは、 {{jsxref("Array.toLocaleString", "toLocaleString()")}} を使用して配列の値を文字列として表示したり、オプションでロケール固有の識別子 (通貨記号など) を付加して表示したりすることができます。
+基底の `toLocaleString()` メソッドは、単純に `toString()` を呼び出します。
 
-例を示します。
+```js
+const obj = {
+  toString() {
+    return "My Object";
+  },
+};
+console.log(obj.toLocaleString()); // "My Object"
+```
+
+### Array における toLocaleString() のオーバーライド
+
+{{jsxref("Array.prototype.toLocaleString()")}}は、各要素の `toLocaleString()` メソッドを呼び出して、結果をロケール特有の区切り文字で連結することで、配列の値を文字列として出力するために使用されます。例を示します。
 
 ```js
 const testArray = [4, 7, 10];
 
-let euroPrices = testArray.toLocaleString("fr", {
+const euroPrices = testArray.toLocaleString("fr", {
   style: "currency",
   currency: "EUR",
 });
@@ -53,35 +80,31 @@ let euroPrices = testArray.toLocaleString("fr", {
 
 ### Date における toLocaleString() の上書き
 
-{{jsxref("Date")}} オブジェクトでは、 {{jsxref("Date.toLocaleString", "toLocaleString()")}} を使用して、特定のロケールに適した日付表示を出力します。
-
-例を示します。
+{{jsxref("Date.prototype.toLocaleString()")}} は、特定のロケールに適した日付表示を出力するために使用されます。例を示します。
 
 ```js
-const testDate = new Date(Date.now());
-// "Date Fri May 29 2020 18:04:24 GMT+0100 (British Summer Time)"
+const testDate = new Date();
+// "Date Fri May 29 2020 18:04:24 GMT+0100 （イギリス夏時間）"
 
-let deDate = testDate.toLocaleString("de");
+const deDate = testDate.toLocaleString("de");
 // "29.5.2020, 18:04:24"
 
-var frDate = testDate.toLocaleString("fr");
-//"29/05/2020 à 18:04:24"
+const frDate = testDate.toLocaleString("fr");
+// "29/05/2020, 18:04:24"
 ```
 
 ### Number における toLocaleString() の上書き
 
-{{jsxref("Number")}} オブジェクトでは、 {{jsxref("Number.toLocaleString", "toLocaleString()")}} を使用して、特定のロケールに適した数値表示、例えば正しい区切り文字を使って出力します。
-
-例を示します。
+{{jsxref("Number.prototype.toLocaleString()")}} は、特定のロケールに適した数値表示を出力するために使用されます。例を示します。
 
 ```js
 const testNumber = 2901234564;
 // "2901234564"
 
-let deNumber = testNumber.toLocaleString("de");
+const deNumber = testNumber.toLocaleString("de");
 // "2.901.234.564"
 
-let frNumber = testNumber.toLocaleString("fr");
+const frNumber = testNumber.toLocaleString("fr");
 // "2 901 234 564"
 ```
 
@@ -91,7 +114,7 @@ let frNumber = testNumber.toLocaleString("fr");
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.toLocaleString")}}
+{{Compat}}
 
 ## 関連情報
 

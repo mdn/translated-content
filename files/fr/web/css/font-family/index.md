@@ -15,7 +15,8 @@ Pour fixer `font-family` et d'autres propriétés liées aux polices de caractè
 
 Les auteurs doivent toujours inclure une famille de police générique dans cette liste car il n'y a aucune certitude qu'une police donnée aura été installée sur l'ordinateur ni qu'elle pourra être téléchargée grâce à {{cssxref("@font-face")}}. L'utilisation d'une famille de police générique permet au navigateur d'utiliser une police acceptable en recours si besoin.
 
-> **Note :** La propriété `font-family` définit une liste de police, ordonnée par priorité, de la plus haute à la plus basse. La sélection de la police ne se fait pas pour l'ensemble du texte mais **caractère par caractère**. Ainsi si une police ne dispose pas du caractère à représenter, ce sera la police suivante qui sera utilisée pour représenter le caractère. Pour Internet Explorer, cela ne fonctionne pas avec la version 6 et les version antérieures.
+> [!NOTE]
+> La propriété `font-family` définit une liste de police, ordonnée par priorité, de la plus haute à la plus basse. La sélection de la police ne se fait pas pour l'ensemble du texte mais **caractère par caractère**. Ainsi si une police ne dispose pas du caractère à représenter, ce sera la police suivante qui sera utilisée pour représenter le caractère. Pour Internet Explorer, cela ne fonctionne pas avec la version 6 et les version antérieures.
 >
 > Les propriétés {{cssxref("font-style")}}, {{cssxref("font-variant")}} et {{cssxref("font-size")}} permettront d'influencer le choix en fonction du style, de la variante ou de la taille disponible parmi les polices de la liste.
 

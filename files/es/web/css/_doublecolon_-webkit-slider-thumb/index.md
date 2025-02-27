@@ -1,5 +1,5 @@
 ---
-title: "::-webkit-slider-thumb"
+title: ::-webkit-slider-thumb
 slug: Web/CSS/::-webkit-slider-thumb
 ---
 
@@ -22,4 +22,4 @@ No es parte de ninguna especificación. Es un pseudo-elemento propietario y espe
   - {{cssxref("::-ms-thumb")}}
 
 - [CSS-Tricks: Dando estilos con CSS a elementos Input de tipo range para que se muestren correctamente en distintos navegadores](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode: Dando estilos y aplicando scripts a elementos deslizantes](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [QuirksMode: Dando estilos y aplicando scripts a elementos deslizantes](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

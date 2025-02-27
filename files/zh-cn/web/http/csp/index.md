@@ -19,7 +19,8 @@ CSP 被设计成完全向后兼容（除 CSP2 在向后兼容有明确提及的�
   content="default-src 'self'; img-src https://*; child-src 'none';" />
 ```
 
-> **备注：** 某些功能（例如发送 CSP 违规报告）仅在使用 HTTP 标头时可用。
+> [!NOTE]
+> 某些功能（例如发送 CSP 违规报告）仅在使用 HTTP 标头时可用。
 
 ## 威胁
 

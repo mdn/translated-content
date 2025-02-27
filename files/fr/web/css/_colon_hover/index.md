@@ -1,5 +1,5 @@
 ---
-title: ":hover"
+title: :hover
 slug: Web/CSS/:hover
 ---
 
@@ -19,7 +19,8 @@ La mise en forme ciblée par cette pseudo-classe peut être surchargée par d'au
 
 La pseudo-classe `:hover` peut être appliquée à n'importe quel [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements). {{experimental_inline}}
 
-> **Note :** sur les écrans tactiles, `:hover` est problématique voire impossible. La pseudo-classe `:hover` n'est jamais valide, ou seulement pendant un très court instant après avoir touché l'élément. Puisque les appareils à écrans tactiles sont très courants, il est important que les développeurs web ne placent pas de contenu accessible seulement lors du survol, puisque ce contenu sera caché pour les utilisateurs de tels appareils.
+> [!NOTE]
+> Sur les écrans tactiles, `:hover` est problématique voire impossible. La pseudo-classe `:hover` n'est jamais valide, ou seulement pendant un très court instant après avoir touché l'élément. Puisque les appareils à écrans tactiles sont très courants, il est important que les développeurs web ne placent pas de contenu accessible seulement lors du survol, puisque ce contenu sera caché pour les utilisateurs de tels appareils.
 
 ## Syntaxe
 
@@ -47,7 +48,8 @@ a:hover {
 
 {{EmbedLiveSample('Exemples')}}
 
-> **Note :** On peut utiliser la pseudo-classe `:checked` dans une galerie d'images afin d'afficher une version agrandie de l'image lorsqu'on survole la vignette.
+> [!NOTE]
+> On peut utiliser la pseudo-classe `:checked` dans une galerie d'images afin d'afficher une version agrandie de l'image lorsqu'on survole la vignette.
 
 ## Spécifications
 

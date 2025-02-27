@@ -89,7 +89,7 @@ slug: Games/Introduction_to_HTML5_Game_Development
   - : マウスなどのポインティングデバイスをゲームのインターフェイス内にロックします。
 - [SVG](/ja/docs/Web/SVG) (Scalable Vector Graphics)
   - : ユーザーの画面の大きさや解像度に関わらず、滑らかに拡大縮小できるベクターグラフィックを構築することができます。
-- [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
   - : JavaScript から生のバイナリーデータにアクセスし、GLテクスチャやゲームデータなど、あらゆるものを操作することができます。
 - [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
   - : オーディオの再生、合成、操作をリアルタイムに制御します。

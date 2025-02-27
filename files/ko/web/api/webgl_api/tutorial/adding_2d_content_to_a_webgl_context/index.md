@@ -5,7 +5,7 @@ slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
-일단 성공적으로 [WebGL컨텍스트를 생성](/en/WebGL/Getting_started_with_WebGL)하면 그 안에 렌더링을 시작할 수 있습니다. 가장 간단히 해볼 수 있는 것은 텍스쳐가 없는 2D 객체를 렌더링 하는 것입니다. 한번 사각형을 그리는 코드를 작성하는 것으로 시작해봅시다.
+일단 성공적으로 [WebGL컨텍스트를 생성](/en-US/WebGL/Getting_started_with_WebGL)하면 그 안에 렌더링을 시작할 수 있습니다. 가장 간단히 해볼 수 있는 것은 텍스쳐가 없는 2D 객체를 렌더링 하는 것입니다. 한번 사각형을 그리는 코드를 작성하는 것으로 시작해봅시다.
 
 ## 장면(scene)에 조명효과 추가하기
 
@@ -13,7 +13,7 @@ slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 ### 쉐이더 초기화
 
-쉐이더는[OpenGL ES 쉐이딩 언어](http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf)를 사용하여 지정됩니다. 컨텐츠의 유지보수와 업데이트를 쉽게하기 위해 쉐이더를 '불러오기위한' 코드를 직접 작성하겠습니다. 다시 말하자면 쉐이더를 직접 새로 만드는 것이 아니라 HTML문서에서 쉐이더를 '찾아오는' 자바스크립트 코드입니다. 이 작업을 처리하는 initShaders()함수의 일반적인 형태를 살펴보겠습니다.
+쉐이더는[OpenGL ES 쉐이딩 언어](https://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf)를 사용하여 지정됩니다. 컨텐츠의 유지보수와 업데이트를 쉽게하기 위해 쉐이더를 '불러오기위한' 코드를 직접 작성하겠습니다. 다시 말하자면 쉐이더를 직접 새로 만드는 것이 아니라 HTML문서에서 쉐이더를 '찾아오는' JavaScript 코드입니다. 이 작업을 처리하는 initShaders()함수의 일반적인 형태를 살펴보겠습니다.
 
 ```js
 function initShaders() {
@@ -165,7 +165,7 @@ function initBuffers() {
 
 이 예제에서는 장면(scene)의 기본적인 속성만을 보여주기 위해, 루틴이 다소 지나치게 단순화되어있습니다. 정점들을 저장할 버퍼를 얻기 위해 `gl` 객체의 createBuffer() 메서드를 호출하는 것으로 시작합니다. 그 다음 `bindBuffer()` 메서드를 불러와 컨텍스트에 연결합니다.
 
-이 과정이 끝난 뒤 사각형의 각 정점 좌표를 담고있는 자바스크립트 배열을 생성합니다. 그런 다음 배열을 WebGL floats 배열로 변환한 뒤 gl객체의 bufferData() 메서드로 전달해 객체의 정점을 설정합니다.
+이 과정이 끝난 뒤 사각형의 각 정점 좌표를 담고있는 JavaScript 배열을 생성합니다. 그런 다음 배열을 WebGL floats 배열로 변환한 뒤 gl객체의 bufferData() 메서드로 전달해 객체의 정점을 설정합니다.
 
 ## 장면(Scene) 그리기
 
@@ -191,11 +191,11 @@ function drawScene() {
 
 그런 다음 identity(항등) position을 불러오고 카메라에서 6단위 만큼 translate(변환)하여 사각형의 위치를 정합니다 . 그 다음 사각형 정점 버퍼를 컨텍스트에 연결해 구성한 뒤 drawArrays() 메서드를 불러와 객체를 그립니다.
 
-브라우저가 웹GL을 지원한다면 다음 링크에서 확인 할 수 있습니다. [try out this demo by clicking here](/samples/webgl/sample2)
+브라우저가 웹GL을 지원한다면 다음 링크에서 확인 할 수 있습니다. [try out this demo by clicking here](http://mdn.github.io/webgl-examples/tutorial/sample2)
 
 ## 행렬 유틸리티를 이용한 연산
 
-행렬 연산은 꽤 복잡합니다. 행렬을 다루기 위한 코드를 직접 작성하고 싶은 사람은 아무도 없을 것입니다. 다행히도 벡터와 행렬 연산을 자바스크립트에서 다루는 데 아주 편리한 라이브러리인 [Sylvester](http://sylvester.jcoglan.com/)가 있습니다.
+행렬 연산은 꽤 복잡합니다. 행렬을 다루기 위한 코드를 직접 작성하고 싶은 사람은 아무도 없을 것입니다. 다행히도 벡터와 행렬 연산을 JavaScript에서 다루는 데 아주 편리한 라이브러리인 [Sylvester](http://sylvester.jcoglan.com/)가 있습니다.
 
 이 데모에서 사용한glUtils.js 파일은 웹에 떠돌아 다니는 많은 WebGL 데모에서 사용하고 있습니다. 이 파일이 어디서 나온 것인지 명확히 아는 사람은 아무도 없는것 같습니다만, HTML 로 출력하기 위한 메소드 뿐만 아니라 특별한 형태의 행렬을 만들기 위한 메소드를 추가되어 있어 Sylvester를 보다 정말 단순화 시켜놓았습니다.
 
@@ -229,7 +229,7 @@ function setMatrixUniforms() {
 
 ## See also
 
-- [Matrices](http://mathworld.wolfram.com/Matrix.html) on Wolfram MathWorld
+- [Matrices](https://mathworld.wolfram.com/Matrix.html) on Wolfram MathWorld
 - [Matrix](<http://en.wikipedia.org/wiki/Matrix_(mathematics)>) on Wikipedia
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

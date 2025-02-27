@@ -82,7 +82,8 @@ Un autre exemple. Cette fonction crée un nouvel élément H1, y ajoute du texte
 
 Cette référence tente de décrire les différents objets et types de la manière la plus simple possible. Mais il y a un certain nombre de types de données utilisées par l'API que vous devez connaître.
 
-> **Note :** Parce que la vaste majorité de codes qui utilisent le DOM gravitent autour de la manipulation de documents HTML, il est courant de toujours se référer aux nœuds du DOM comme éléments, étant donné que dans le document HTML, chaque nœud est un élément. Bien que n'étant pas strictement exact, la documentation que vous trouverez dans MDN fera souvent la même chose, à cause de la fréquence de cette hypothèse.
+> [!NOTE]
+> Parce que la vaste majorité de codes qui utilisent le DOM gravitent autour de la manipulation de documents HTML, il est courant de toujours se référer aux nœuds du DOM comme éléments, étant donné que dans le document HTML, chaque nœud est un élément. Bien que n'étant pas strictement exact, la documentation que vous trouverez dans MDN fera souvent la même chose, à cause de la fréquence de cette hypothèse.
 
 **NDTR:** (Pour simplifier, les exemples de syntaxe présentés dans cette référence se réfèreront aux nœuds en les appelant `elements`, aux tableaux de nœuds en tant que `nodeLists` (ou même simplement éléments), et aux nœuds d'attributs en tant qu'`attributes)`.
 

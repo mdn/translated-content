@@ -37,7 +37,7 @@ slug: Web/HTML/Element/meter
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -103,7 +103,7 @@ Google Chrome에서는 다음 그림처럼 보입니다.
 
 ### 높은 범위와 낮은 범위
 
-[`min`](/ko/docs/Web/HTML/Element/meter#min) 특성의 기본값이 0이므로 생략한 것을 참고하세요.
+[`min`](#min) 특성의 기본값이 0이므로 생략한 것을 참고하세요.
 
 #### HTML
 

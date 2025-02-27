@@ -5,36 +5,56 @@ slug: Web/HTML/Element/ol
 
 {{HTMLSidebar}}
 
-**HTML-элемент `<ol>`** используется для упорядоченного списка — в частности для пронумерованного списка.
+HTML-элемент **`<ol>`** используется для упорядоченного списка, в частности для пронумерованного списка.
 
-{{EmbedInteractiveExample("pages/tabbed/ol.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;ol&gt;", "tabbed-shorter")}}
 
-| [Категории контента](/ru/docs/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Flow_content), и если дочерний элемент `<ol>` включает в себя хотя бы один элемент {{HTMLElement("li")}}, [явный контент](/ru/docs/Web/Guide/HTML/Content_categories#Palpable_content).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                  | Ноль или больше {{HTMLElement("li")}} элементов, которые, в свою очередь, содержат вложенные элементы {{ HTMLElement("ol") }} или {{ HTMLElement("ul") }}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Допустимые родители                                    | Любой элемент, который принимает [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Flow_content).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Допустимые ARIA-роли                                   | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/directory_role">directory</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/menubar_role">menubar</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/radiogroup_role">radiogroup</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/tablist_role">tablist</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/toolbar_role">toolbar</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/tree_role">tree</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code> |
-| DOM-интерфейс                                          | {{DOMxRef("HTMLOListElement")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+```html interactive-example
+<ol>
+  <li>Mix flour, baking powder, sugar, and salt.</li>
+  <li>In another bowl, mix eggs, milk, and oil.</li>
+  <li>Stir both mixtures together.</li>
+  <li>Fill muffin tray 3/4 full.</li>
+  <li>Bake for 20 minutes.</li>
+</ol>
+```
+
+```css interactive-example
+li {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+  margin-bottom: 0.5rem;
+}
+```
+
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Основной поток](/ru/docs/Web/HTML/Content_categories#flow_content), и если дочерний элемент `<ol>` включает в себя хотя бы один элемент {{HTMLElement("li")}}, [явный контент](/ru/docs/Web/HTML/Content_categories#palpable_content).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                      | Ноль или больше {{HTMLElement("li")}} элементов, которые, в свою очередь, содержат вложенные элементы {{ HTMLElement("ol") }} или {{ HTMLElement("ul") }}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Допустимые родители                                        | Любой элемент, который принимает [основной поток](/ru/docs/Web/HTML/Content_categories#flow_content).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Допустимые ARIA-роли                                       | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/directory_role">directory</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/menubar_role">menubar</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/radiogroup_role">radiogroup</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/tablist_role">tablist</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/toolbar_role">toolbar</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/tree_role">tree</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code> |
+| DOM-интерфейс                                              | {{DOMxRef("HTMLOListElement")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
 ## Свойства
 
-Этот элемент включает [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
+Этот элемент включает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-- {{HTMLAttrDef("reversed")}}
+- `reversed`
   - : Атрибут логического значения (bool) показывает, что предметы указаны по списку в обратном порядке. Пункты в списке будут пронумерованы от большего к меньшему.
-- {{HTMLAttrDef("start")}}
+- `start`
   - : Нумерация начнётся с указанного числа. Арабскими цифрами (1, 2, 3, и т.д.), даже когда нумерация `type` в буквах или Римском исчислении. Например, чтобы начать нумерацию с буквы "г" или Римской "iv", используйте `start="4"`.
-- {{HTMLAttrDef("type")}}
+- `type`
   - : Задаёт тип нумерации:
     - `a` для строчных букв
     - `A` для заглавных букв
     - `i` для строчной Римской нумерации
     - `I` для заглавной Римской нумерации
     - `1` для цифр (по умолчанию)указанный тип используется для всего списка, если только не указан любой другой атрибут [`type`](/ru/docs/Web/HTML/Element/li#type) в элементе {{HTMLElement("li")}}.
-      > **Примечание:** Если тип цифр в списке не имеет значения (к примеру, юридические или технические документы, где элементы обозначены буквами/цифрами), используйте свойство CSS {{CSSxRef("list-style-type")}}.
+      > [!NOTE]
+      > Если тип цифр в списке не имеет значения (к примеру, юридические или технические документы, где элементы обозначены буквами/цифрами), используйте свойство CSS {{CSSxRef("list-style-type")}}.
 
-## Примечания об использовании
+## Примечания по использованию
 
 Обычно, элементы списка отображены с [маркером](/ru/docs/Web/CSS/::marker), предшествующим цифрам или буквам.
 
@@ -145,7 +165,7 @@ slug: Web/HTML/Element/ol
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -155,6 +175,6 @@ slug: Web/HTML/Element/ol
 - CSS-свойства, которые могут быть полезны для стилизации `<ol>` элемента:
 
   - свойство {{CSSxRef("list-style")}}, для порядковых показов
-  - [CSS счётчики](/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters), для более сложных вложенных списков
-  - свойство [line-height](/ru/docs/Web/CSS/line-height), для замены убранного свойства [compact](/ru/docs/Web/HTML/Element/ol#attr-compact)
+  - [CSS счётчики](/ru/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), для более сложных вложенных списков
+  - свойство [line-height](/ru/docs/Web/CSS/line-height), для замены убранного свойства `compact`
   - Свойство [margin](/ru/docs/Web/CSS/margin), для контроля отступа в списке

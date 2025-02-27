@@ -3,8 +3,6 @@ title: 如何研究一项技术
 slug: MDN/Writing_guidelines/Howto/Research_technology
 ---
 
-{{MDNSidebar}}
-
 本文提供有关如何记录各种技术的实用信息。
 
 ## 进行准备工作
@@ -38,13 +36,14 @@ slug: MDN/Writing_guidelines/Howto/Research_technology
 - [如何阅读 web 规范（第 1 部分）——又名：WebVR，你的原理是什么？](https://surma.dev/things/reading-specs/)虽然仅阐述了阅读 WebVR 规范的步骤，却属如何阅读 web API 规范的不错的介绍。
 - [如何阅读 web 规范（第 2a 部分）——又名：ECAMScript Symbol](https://surma.dev/things/reading-specs-2/) 为上一链接的第二部分，包含如何理解 ECMAScript 规范的信息，此规范描绘了 JavaScript 语言的大纲。
 
-此外，我们有关于 [WebIDL 文件所含信息](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file)的指南，在阅读 web API 规范时大有裨益。
+此外，我们有关于 [WebIDL 文件所含信息](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file)的指南，在阅读 web API 规范时大有裨益。
 
 ## 探索特性
 
 在记录一项技术的过程中，你将反反复复书写代码示例或构建演示，而先花时间熟悉这项技术的原理将非常有用。这是十分有价值的实践，可以让你很好地理解用例（*为何*开发者要使用这项技术），且同时有助于创造一些代码示例。
 
-> **备注：** 若因规范近期的更新导致某个方法现在有不同的定义，但是旧的方法在浏览器中仍然有效，则为了同时涵盖旧方法和新方法，常常需要在同一处同时记录两者。如需帮助，请参考你所找到的演示或询问工程师。
+> [!NOTE]
+> 若因规范近期的更新导致某个方法现在有不同的定义，但是旧的方法在浏览器中仍然有效，则为了同时涵盖旧方法和新方法，常常需要在同一处同时记录两者。如需帮助，请参考你所找到的演示或询问工程师。
 
 ## 创建待写或待更新页面列表
 
@@ -52,7 +51,7 @@ slug: MDN/Writing_guidelines/Howto/Research_technology
 
 ### 侧边栏
 
-所写页面的侧边栏可能也需要进行定义或更新。为获知是否有必要操作及如何操作，请查阅[侧边栏指南](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars)。
+所写页面的侧边栏可能也需要进行定义或更新。为获知是否有必要操作及如何操作，请查阅[侧边栏指南](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)。
 
 ### 代码示例
 

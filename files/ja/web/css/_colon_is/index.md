@@ -1,5 +1,5 @@
 ---
-title: ":is()"
+title: :is()
 slug: Web/CSS/:is
 l10n:
   sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
@@ -9,7 +9,8 @@ l10n:
 
 **`:is()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、セレクターのリストを引数に取り、リスト中のセレクターの何れか一つに当てはまる要素をすべて選択します。数多くのセレクターを小さくまとめて書くのに便利です。
 
-> **メモ:** 元々は `:matches()` （と `:any()`）という名前でしたが、[CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258) で `:is()` に改名されました。
+> [!NOTE]
+> 元々は `:matches()` （と `:any()`）という名前でしたが、[CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258) で `:is()` に改名されました。
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-is.html", "tabbed-shorter")}}
 

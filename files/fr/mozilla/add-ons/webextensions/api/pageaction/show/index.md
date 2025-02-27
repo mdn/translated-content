@@ -3,7 +3,7 @@ title: pageAction.show()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/show
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Affiche l'action de la page pour un onglet donné. L'action de la page est affichée chaque fois que l'onglet donné est l'onglet actif.
 
@@ -26,7 +26,7 @@ browser.pageAction.show(
 
 ### Valeur renvoyée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec `undefined`.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec `undefined`.
 
 ## Compatibilité des navigateurs
 
@@ -34,7 +34,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 ## Exemples
 
-Cette exemple montre l'action de la page pour l'onglet actif lorsque l'utilisateur sélectionne un élément de menu contextuel. Notez que vous aurez besoin de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `contextMenus` dans votre [manifest](/fr/Add-ons/WebExtensions/manifest.json) pour créer des éléments de menu contextuel.
+Cette exemple montre l'action de la page pour l'onglet actif lorsque l'utilisateur sélectionne un élément de menu contextuel. Notez que vous aurez besoin de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `contextMenus` dans votre [manifest](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) pour créer des éléments de menu contextuel.
 
 ```js
 browser.contextMenus.create({
@@ -51,7 +51,7 @@ browser.contextMenus.onClicked.addListener(function (info, tab) {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
 >

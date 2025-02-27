@@ -1,5 +1,6 @@
 ---
 title: "CanvasRenderingContext2D: createImageData() メソッド"
+short-title: createImageData()
 slug: Web/API/CanvasRenderingContext2D/createImageData
 l10n:
   sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070

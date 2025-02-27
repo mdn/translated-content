@@ -9,7 +9,7 @@ l10n:
 
 [MediaStream 収録 API](/ja/docs/Web/API/MediaStream_Recording_API) を使用すると、音声や動画のストリームを簡単に記録できます。 {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}} と一緒に使用すると、ユーザーの入力機器から記録して結果を即座にウェブアプリで使用するための簡単な方法が提供されます。
 
-音声と映像の両方を別々にまたは一緒に記録することができます。 この記事では、この API を提供する `MediaRecorder` インターフェースの使用方法に関する基本的なガイドを提供することを目的としています。
+音声と映像の両方を別々にまたは一緒に記録することができます。 この記事では、この API を提供する `MediaRecorder` インターフェイスの使用方法に関する基本的なガイドを提供することを目的としています。
 
 ## サンプルアプリ: ウェブディクタフォン
 
@@ -148,11 +148,12 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 - **成功コールバック**: このコードは、`getUserMedia` の呼び出しが正常に完了した後に実行されます。
 - **エラーコールバック**: 何らかの理由で `getUserMedia` の呼び出しが失敗した場合、このコードが実行されます。
 
-> **メモ:** 以下のコードはすべて `getUserMedia` の Success callback 内にあります。
+> [!NOTE]
+> 以下のコードはすべて `getUserMedia` の Success callback 内にあります。
 
 ## メディアストリームのキャプチャ
 
-`getUserMedia` がメディアストリームを正常に作成したら、`MediaRecorder()` コンストラクタを使用して新しい Media Recorder のインスタンスを作成し、それに直接ストリーム (stream)を渡します。 これが MediaStream 収録 API を使用するためのエントリーポイントです。 これで、ストリームをブラウザーの既定のエンコード形式で {{domxref("Blob")}} にキャプチャする準備ができました。
+`getUserMedia` がメディアストリームを正常に作成したら、`MediaRecorder()` コンストラクターを使用して新しい Media Recorder のインスタンスを作成し、それに直接ストリーム (stream)を渡します。 これが MediaStream 収録 API を使用するためのエントリーポイントです。 これで、ストリームをブラウザーの既定のエンコード形式で {{domxref("Blob")}} にキャプチャする準備ができました。
 
 ```js
 const mediaRecorder = new MediaRecorder(stream);
@@ -182,7 +183,8 @@ mediaRecorder.ondataavailable = (e) => {
 };
 ```
 
-> **メモ:** ブラウザーは必要に応じて `dataavailable` イベントを発生させますが、この間隔を制御するために `start()` メソッドを呼び出すときにタイムスライス（例えば `start(10000)` ）を含めることも、必要なときに {{domxref("MediaRecorder.requestData()")}} を呼び出してイベントを発生させることもできます。
+> [!NOTE]
+> ブラウザーは必要に応じて `dataavailable` イベントを発生させますが、この間隔を制御するために `start()` メソッドを呼び出すときにタイムスライス（例えば `start(10000)` ）を含めることも、必要なときに {{domxref("MediaRecorder.requestData()")}} を呼び出してイベントを発生させることもできます。
 
 最後に、停止ボタンが押されたときに {{domxref("MediaRecorder.stop()")}} メソッドを使用して録音を停止し、アプリの他の場所で使用できるように {{domxref("Blob")}} を完成させます。
 

@@ -9,8 +9,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
 
 ## 语法
 
-```plain
-Reflect.set(target, propertyKey, value[, receiver])
+```js-nolint
+Reflect.set(target, propertyKey, value)
+Reflect.set(target, propertyKey, value, receiver)
 ```
 
 ### 参数
@@ -70,7 +71,7 @@ Reflect.getOwnPropertyDescriptor(obj, "undefined");
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Reflect")}}
 - [属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)

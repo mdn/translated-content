@@ -22,7 +22,7 @@ Proxy-Authenticate: <type> realm=<realm>
 ## 指令
 
 - \<type>
-  - : [身份验证类型](/zh-CN/docs/Web/HTTP/Authentication#Authentication_schemes)。一个常见的类型是 ["基本验证"。](/zh-CN/docs/Web/HTTP/Authentication#Basic_authentication_scheme)IANA 机构维护了 [一系列的身份验证机制](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)。
+  - : [身份验证类型](/zh-CN/docs/Web/HTTP/Authentication#authentication_schemes)。一个常见的类型是 ["基本验证"。](/zh-CN/docs/Web/HTTP/Authentication#basic_authentication_scheme)IANA 机构维护了 [一系列的身份验证机制](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)。
 - realm=\<realm>
   - : 对于被保护区域（即安全域）的描述。如果没有指定安全域，客户端通常用一个格式化的主机名来代替。
 
@@ -38,7 +38,7 @@ Proxy-Authenticate: Basic realm="Access to the internal site"
 
 {{Specifications}}
 
-## 相关内容
+## 参见
 
 - [HTTP authentication](/zh-CN/docs/Web/HTTP/Authentication)
 - {{HTTPHeader("Authorization")}}

@@ -19,7 +19,8 @@ Fetch 提供了 {{domxref("Request")}} 與 {{domxref("Response")}} 物件，還�
 
 你也可以直接用 {{domxref("Request.Request","Request()")}} 與 {{domxref("Response.Response","Response()")}} 建構子來建立請求與回應，不過你不太可能直接使用他，反而更可能是以其他 API 行動的結果為形式存在。（例如來自 service worker 的 {{domxref("FetchEvent.respondWith")}}）
 
-> **備註：** 你可以在[使用 Fetch](/zh-TW/docs/Web/API/Fetch_API/Using_Fetch)深入理解 Fetch，並在[Fetch 的基本概念](/zh-TW/docs/Web/API/Fetch_API/Basic_concepts)文章內理解概念。
+> [!NOTE]
+> 你可以在[使用 Fetch](/zh-TW/docs/Web/API/Fetch_API/Using_Fetch)深入理解 Fetch，並在[Fetch 的基本概念](/zh-TW/docs/Web/API/Fetch_API/Using_Fetch)文章內理解概念。
 
 ### 中斷一次 Fetch
 
@@ -52,8 +53,8 @@ Fetch 提供了 {{domxref("Request")}} 與 {{domxref("Response")}} 物件，還�
 ## 參見
 
 - [使用 Fetch](/zh-TW/docs/Web/API/Fetch_API/Using_Fetch)
-- [ServiceWorker API](/zh-TW/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-TW/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-TW/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/zh-TW/docs/Web/HTTP/CORS)
 - [HTTP](/zh-TW/docs/Web/HTTP)
-- [Fetch polyfill](https://github.com/github/fetch)
-- [Fetch 基本概念](/zh-TW/docs/Web/API/Fetch_API/Basic_concepts)
+- [Fetch polyfill](https://github.com/JakeChampion/fetch)
+- [Fetch 基本概念](/zh-TW/docs/Web/API/Fetch_API/Using_Fetch)

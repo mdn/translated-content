@@ -3,6 +3,8 @@ title: Cryptographic hash function (暗号学的ハッシュ関数)
 slug: Glossary/Cryptographic_hash_function
 ---
 
+{{GlossarySidebar}}
+
 暗号学的ハッシュ関数は、*ダイジェスト関数*とも呼ばれますが、任意のサイズのメッセージを{{glossary("digest","ダイジェスト")}}と呼ばれる固定サイズのメッセージに変換する{{glossary("cryptography", "暗号学的")}}プリミティブです。暗号学的ハッシュ関数は、認証、{{Glossary("digital signature", "デジタル署名")}}、および{{Glossary("HMAC", "メッセージ認証コード")}}に使用されます。
 
 暗号学に使用するためには、ハッシュ関数は以下の性質を持っていなければなりません。
@@ -15,6 +17,6 @@ slug: Glossary/Cryptographic_hash_function
 MD5 や SHA-1 などの暗号化ハッシュ関数は、衝突耐性を大幅に低下させる攻撃が見つかったため、破損しているとみなされています。
 
 - Wikipedia 上の [暗号学的ハッシュ関数](https://ja.wikipedia.org/wiki/暗号学的ハッシュ関数)
-- [MDN Web Docs 用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("Symmetric-key cryptography", "共通鍵暗号")}}

@@ -20,7 +20,7 @@ slug: Web/CSS/grid-template
 ## Синтаксис
 
 ```css
-/* Ключевые слова в качестве значения */
+/* Ключевые слова */
 grid-template: none;
 
 /* Значения в формате grid-template-rows / grid-template-columns */
@@ -60,7 +60,8 @@ grid-template: unset;
 
 **Примечание:** при перечислении грид-полос нельзя использовать функцию {{cssxref("repeat()")}}, поскольку предполагается, что ряды и колонки будут располагаться вместе другом с другом в стиле "ASCII-рисунков".
 
-> **Примечание:** сокращённое свойство {{cssxref("grid")}} имеет тот же самый формат значений, но также сбрасывает неявные грид-свойства к их первоначальным значениям. Используйте `grid` (в отличие от `grid-template`), чтобы предотвратить каскадирование этих значений по отдельности.
+> [!NOTE]
+> Сокращённое свойство {{cssxref("grid")}} имеет тот же самый формат значений, но также сбрасывает неявные грид-свойства к их первоначальным значениям. Используйте `grid` (в отличие от `grid-template`), чтобы предотвратить каскадирование этих значений по отдельности.
 
 ## Формальное определение
 
@@ -128,13 +129,13 @@ footer {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - Связанные CSS-свойства: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}
-- Руководство по грид-раскладке: _[Расположение элементов по грид-линиям с помощью CSS Grid](/ru/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
-- Руководство по грид-раскладке: _[Шаблоны грид-областей - сокращённое определение грида](/ru/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#grid_definition_shorthands)_
-- Обучающее видео: _[Grid Template shorthand](http://gridbyexample.com/video/grid-template-shorthand/)_
+- Руководство по грид-раскладке: _[Расположение элементов по грид-линиям с помощью CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
+- Руководство по грид-раскладке: _[Шаблоны грид-областей - сокращённое определение грида](/ru/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#grid_definition_shorthands)_
+- Обучающее видео: _[Grid Template shorthand](https://gridbyexample.com/video/grid-template-shorthand/)_

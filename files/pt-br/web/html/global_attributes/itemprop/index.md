@@ -194,7 +194,8 @@ An element introducing a property can also introduce multiple properties at once
 </div>
 ```
 
-> **Note:** Note: There is no relationship between the microdata and the content of the document where the microdata is marked up.
+> [!NOTE]
+> There is no relationship between the microdata and the content of the document where the microdata is marked up.
 
 ### Same structured data marked up in two different ways
 
@@ -282,7 +283,8 @@ A property is an unordered set of unique tokens that are case-sensitive and repr
 
    1. A string that contains no "**.**" (U+002E FULL STOP) characters and no "**:**" characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).
 
-> **Note:** the rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.
+> [!NOTE]
+> The rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.
 
 ## Values
 
@@ -298,7 +300,7 @@ The property value of a name-value pair is as given for the first matching case 
 
 - If the element is an **audio**, **embed**, **iframe**, **img**, **source**, **track**, or **video** element
 
-  - The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the [Microdata DOM API](/pt-BR/docs/Web/API/Microdata_DOM_API)) of the element at the time the attribute is set
+  - The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the [Microdata DOM API](/pt-BR/docs/Web/HTML/Microdata)) of the element at the time the attribute is set
 
 - If the element is an **a**, **area**, or **link** element
 
@@ -421,7 +423,7 @@ Names are unordered relative to each other, but if a particular name has multipl
 
 ### Result
 
-{{EmbedLiveSample('HTML_2', '', '', '', 'Web/HTML/Global_attributes/itemprop')}}
+{{EmbedLiveSample('HTML_2')}}
 
 ## Specifications
 
@@ -431,7 +433,7 @@ Names are unordered relative to each other, but if a particular name has multipl
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.global_attributes.itemprop")}}
+{{Compat}}
 
 ## See also
 

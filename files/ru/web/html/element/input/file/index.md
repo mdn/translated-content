@@ -5,26 +5,36 @@ slug: Web/HTML/Element/input/file
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} элемент с атрибутом **`type="file"`** позволяет пользователю выбрать один файл или более из файлового хранилища своего устройства. После выбора эти файлы могут быть загружены на сервер при помощи [формы](/ru/docs/Learn/HTML/Forms), или обработаны JavaScript и [File API](/ru/docs/Using_files_from_web_applications).
+{{HTMLElement("input")}} элемент с атрибутом **`type="file"`** позволяет пользователю выбрать один файл или более из файлового хранилища своего устройства. После выбора эти файлы могут быть загружены на сервер при помощи [формы](/ru/docs/Learn/Forms), или обработаны JavaScript и [File API](/ru/docs/Web/API/File_API/Using_files_from_web_applications).
 
-```html
-<input name="myFile" type="file" />
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="avatar">Choose a profile picture:</label>
+
+<input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
 ```
 
-{{EmbedLiveSample('file-example', 650, 40)}}
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
 
-| **[Value](#value)**         | {{domxref("DOMString")}} представляет собой путь до выбранного файла.                                                                                              |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Действия**                | {{event("change")}} и{{event("input")}}                                                                                                                            |
-| **Поддерживаемые атрибуты** | [`accept`](/ru/docs/Web/HTML/Element/input#accept), [`multiple`](/ru/docs/Web/HTML/Element/input#multiple), [`required`](/ru/docs/Web/HTML/Element/input#required) |
-| **IDL атрибуты**            | `files` and `value`                                                                                                                                                |
-| **Методы**                  | {{domxref("HTMLInputElement.select", "select()")}}                                                                                                                 |
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
-## Value
+## Значение
 
-Атрибут [`value`](/ru/docs/Web/HTML/Element/input#value) элемента input содержит {{domxref("DOMString")}}, который представляет путь к выбранным файлам. Если пользователь выбрал несколько файлов, `value` представляет первый файл из списка. Остальные файлы можно определить используя {{domxref("HTMLInputElement.files")}} свойство элемента input.
+Атрибут [`value`](/ru/docs/Web/HTML/Element/input#value) элемента `input` содержит строку, представляющую путь к выбранному файлу или файлам. Если пользователь выбрал несколько файлов, `value` представляет первый файл из списка. Остальные файлы можно определить используя [свойство `HTMLInputElement.files` элемента `input`](/ru/docs/Web/API/File_API/Using_files_from_web_applications#getting_information_about_selected_files).
 
-> **Примечание:**1. Если выбрано несколько файлов, строка представляет собой первый выбранный файл. JavaScript предоставляет доступ к остальным файлам через свойство [`FileList`](</ru/docs/Using_files_from_web_applications#Getting_information_about_selected_file(s)>). 2. Если не выбрано ни одного файла, .строка равна `""` (пустая). 3. Строка [начинается с `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly), для предотвращения определения файловой структуры пользователя вредоносным ПО.
+> [!NOTE]
+> Значение [всегда представляет собой имя файла, начинающееся с `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly) и не является настоящим расположением файла. Это сделано для того, чтобы вредоносное ПО не могло получить информацию о файловой структуре пользователя.
 
 ## Additional attributes
 
@@ -57,9 +67,10 @@ div {
 
 This produces the following output:
 
-{{EmbedLiveSample('A_basic_example', 650, 60)}}
+{{EmbedLiveSample('A_basic_example', 650, 90)}}
 
-> **Примечание:** You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+> [!NOTE]
+> You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
 
 Regardless of the user's device or operating system, the file input provides a button that opens up a file picker dialog that allows the user to choose a file.
 
@@ -69,7 +80,7 @@ When the form is submitted, each selected file's name will be added to URL param
 
 ### Getting information on selected files
 
-The selected files' are returned by the element's {{domxref("HTMLElement.files", "files")}} property, which is a {{domxref("FileList")}} object containing a list of {{domxref("File")}} objects. The `FileList` behaves like an array, so you can check its `length` property to get the number of selected files.
+The selected files' are returned by the element's `HTMLInputElement.files` property, which is a {{domxref("FileList")}} object containing a list of {{domxref("File")}} objects. The `FileList` behaves like an array, so you can check its `length` property to get the number of selected files.
 
 Each `File` object contains the following information:
 
@@ -82,15 +93,16 @@ Each `File` object contains the following information:
 - `size`
   - : The size of the file in bytes.
 - `type`
-  - : The file's [MIME type](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
+  - : The file's [MIME type](/ru/docs/Web/HTTP/MIME_types).
 - webkitRelativePath {{non-standard_inline}}
   - : A string specifying the file's path relative to the base directory selected in a directory picker (that is, a `file` picker in which the [`webkitdirectory`](/ru/docs/Web/HTML/Element/input#webkitdirectory) attribute is set). _This is non-standard and should be used with caution._
 
-> **Примечание:** You can set as well as get the value of `HTMLInputElement.files` in all modern browsers; this was most recently added to Firefox, in version 57 (see {{bug(1384030)}}).
+> [!NOTE]
+> You can set as well as get the value of `HTMLInputElement.files` in all modern browsers; this was most recently added to Firefox, in version 57 (see [Firefox bug 1384030](https://bugzil.la/1384030)).
 
 ### Limiting accepted file types
 
-Often you won't want the user to be able to pick any arbitrary type of file; instead, you often want them to select files of a specific type or types. For example, if your file input lets users upload a profile picture, you probably want them to select web-compatible image formats, such as [JPEG](/ru/docs/Glossary/jpeg) or [PNG](/ru/docs/Glossary/PNG).
+Often you won't want the user to be able to pick any arbitrary type of file; instead, you often want them to select files of a specific type or types. For example, if your file input lets users upload a profile picture, you probably want them to select web-compatible image formats, such as [JPEG](/ru/docs/Glossary/JPEG) or [PNG](/ru/docs/Glossary/PNG).
 
 Acceptable file types can be specified with the [`accept`](/ru/docs/Web/HTML/Element/input#accept) attribute, which takes a comma-separated list of allowed file extensions or MIME types. Some examples:
 
@@ -125,9 +137,10 @@ div {
 
 This produces a similar-looking output to the previous example:
 
-{{EmbedLiveSample('Limiting_accepted_file_types', 650, 60)}}
+{{EmbedLiveSample('Limiting_accepted_file_types', 650, 90)}}
 
-> **Примечание:** You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-with-accept.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
+> [!NOTE]
+> You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-with-accept.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
 
 It may look similar, but if you try selecting a file with this input, you'll see that the file picker only lets you select the file types specified in the `accept` value (the exact nature differs across browsers and operating systems).
 
@@ -141,7 +154,8 @@ Because of this, you should make sure that the `accept` attribute is backed up b
 
 In this example, we'll present a slightly more advanced file chooser that takes advantage of the file information available in the {{domxref("HTMLInputElement.files")}} property, as well as showing off a few clever tricks.
 
-> **Примечание:** You can see the complete source code for this example on GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). We won't explain the CSS; the JavaScript is the main focus.
+> [!NOTE]
+> You can see the complete source code for this example on GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). We won't explain the CSS; the JavaScript is the main focus.
 
 First of all, let's look at the HTML:
 
@@ -337,14 +351,57 @@ The example looks like this; have a play:
 
 {{EmbedLiveSample('Examples', '100%', 200)}}
 
-## Specifications
+## Техническое резюме
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#значение">Значение</a></strong></td>
+      <td>Строка, содержащая путь к файлу</td>
+    </tr>
+    <tr>
+      <td><strong>События</strong></td>
+      <td>{{domxref("HTMLElement/change_event", "change")}} и {{domxref("HTMLElement/input_event", "input")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Поддерживаемые общие атрибуты</strong></td>
+      <td><a href="/ru/docs/Web/HTML/Element/input#attr-required"><code>required</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>Дополнительные атрибуты</strong></td>
+      <td>
+        <a href="/ru/docs/Web/HTML/Element/input#attr-accept"><code>accept</code></a>,
+        <a href="/ru/docs/Web/HTML/Attributes/capture"><code>capture</code></a>,
+        <a href="/ru/docs/Web/HTML/Element/input##attr-multiple"><code>multiple</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL-атрибуты</strong></td>
+      <td><code>files</code> и <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM-интерфейс</strong></td>
+      <td>{{domxref("HTMLInputElement")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Методы</strong></td>
+      <td>{{domxref("HTMLInputElement.select", "select()")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Неявная ARIA-роль</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>нет соответствующей роли</code></a></td>
+    </tr>
+  </tbody>
+</table>
+
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [Using files from web applications](/ru/docs/Using_files_from_web_applications) — contains a number of other useful examples related to `<input type="file">` and the [File API](/ru/docs/Web/API/File).
+- [Using files from web applications](/ru/docs/Web/API/File_API/Using_files_from_web_applications) — contains a number of other useful examples related to `<input type="file">` and the [File API](/ru/docs/Web/API/File).

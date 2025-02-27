@@ -71,9 +71,11 @@ slug: Web/HTML/Attributes/rel/preload
 - `worker`：JavaScript web worker 或 shared worker。
 - `video`：视频文件，通常在 {{htmlelement("video")}} 中使用。
 
-> **备注：** 预加载 `font` 和 `fetch` 资源需要设置 `crossorigin` 属性；请参阅下文的[启用 CORS 的获取请求](#启用_cors_的获取请求)。
+> [!NOTE]
+> 预加载 `font` 和 `fetch` 资源需要设置 `crossorigin` 属性；请参阅下文的[启用 CORS 的获取请求](#启用_cors_的获取请求)。
 
-> **备注：** 关于这些值以及它们所期望被使用的 web 功能的更多细节可以在预加载规范中找到——请参见[链接元素扩展](https://w3c.github.io/preload/#link-element-extensions)。此外，请注意，`as` 属性可以接受的值的完整列表受 Fetch 规范的约束——请参见[请求目标](https://fetch.spec.whatwg.org/#concept-request-destination)。
+> [!NOTE]
+> 关于这些值以及它们所期望被使用的 web 功能的更多细节可以在预加载规范中找到——请参见[链接元素扩展](https://w3c.github.io/preload/#link-element-extensions)。此外，请注意，`as` 属性可以接受的值的完整列表受 Fetch 规范的约束——请参见[请求目标](https://fetch.spec.whatwg.org/#concept-request-destination)。
 
 ## 包括 MIME 类型
 
@@ -110,7 +112,7 @@ slug: Web/HTML/Attributes/rel/preload
 
 ## 启用 CORS 的获取请求
 
-在预加载启用 [CORS](/zh-CN/docs/Web/HTTP/CORS) 的资源（例如 [`fetch()`](/zh-CN/docs/Web/API/fetch)、[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 或[字体](/zh-CN/docs/Web/CSS/@font-face)）时，需要特别注意在你的 [`<link>`](/zh-CN/docs/Web/HTML/Element/link) 元素上设置 [`crossorigin`](/zh-CN/docs/Web/HTML/Element/link#crossorigin) 属性。该属性需要设置为与资源的 CORS 和凭据模式相匹配，即使获取请求不跨域也需要设置。
+在预加载启用 [CORS](/zh-CN/docs/Web/HTTP/CORS) 的资源（例如 [`fetch()`](/zh-CN/docs/Web/API/Window/fetch)、[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 或[字体](/zh-CN/docs/Web/CSS/@font-face)）时，需要特别注意在你的 [`<link>`](/zh-CN/docs/Web/HTML/Element/link) 元素上设置 [`crossorigin`](/zh-CN/docs/Web/HTML/Element/link#crossorigin) 属性。该属性需要设置为与资源的 CORS 和凭据模式相匹配，即使获取请求不跨域也需要设置。
 
 如上所述，其中一个适用的有趣情况是字体文件。由于各种原因，这些文件必须使用匿名模式的 CORS 进行获取（参见[字体获取要求](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)）。
 
@@ -193,7 +195,8 @@ slug: Web/HTML/Attributes/rel/preload
 
 ## 脚本和预加载
 
-> **备注：** 如果你正在使用 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，请使用 [`<link rel="modulepreload">`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload)。
+> [!NOTE]
+> 如果你正在使用 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，请使用 [`<link rel="modulepreload">`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload)。
 
 关于这些预加载的另一个好处是，你可以使用脚本来执行它们。例如，这里我们创建一个 {{domxref("HTMLLinkElement")}} 实例，然后将其附加到 DOM 中：
 
@@ -220,7 +223,7 @@ document.body.appendChild(preloadedScript);
 还存在其他预加载特性，但都不如 `<link rel="preload">` 适合该目的：
 
 - `<link rel="prefetch">` 在浏览器中支持已久，但它是用于预取将在下一次导航/页面加载时使用的资源（例如，当你跳转到下一页时）。这是可以的，但对于当前页面没有用！此外，浏览器会给预取（`prefetch`）的资源比预加载（`preload`）的资源更低的优先级——当前页面比下一页更重要。有关更多详细信息，请参阅{{Glossary("prefetch", "预取")}}。
-- `<link rel="prerender">` 在后台渲染指定的网页，如果用户导航到该页面，可以加速其加载。由于有可能浪费用户的带宽，Chrome 将 `prerender` 视为 [NoState 预取](https://developer.chrome.com/blog/nostate-prefetch/)。
+- `<link rel="prerender">` 在后台渲染指定的网页，如果用户导航到该页面，可以加速其加载。由于有可能浪费用户的带宽，Chrome 将 `prerender` 视为 [NoState 预取](https://developer.chrome.google.cn/blog/nostate-prefetch)。
 - `<link rel="subresource">` {{non-standard_inline}} 一段时间以前在 Chrome 中得到了支持，其目的是解决与 `preload` 相同的问题，但它存在一个问题：没有办法确定项目的优先级（`as` 当时还不存在），所以它们都是以相当低的优先级获取的。
 - 有许多基于脚本的资源加载器，但它们无法控制浏览器的获取优先级队列，并面临着同样的性能问题。
 

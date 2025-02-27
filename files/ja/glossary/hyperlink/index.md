@@ -3,6 +3,8 @@ title: Hyperlink (ハイパーリンク)
 slug: Glossary/Hyperlink
 ---
 
+{{GlossarySidebar}}
+
 ハイパーリンクはウェブページやデータ項目をお互いに接続します。HTML では {{HTMLElement("a")}} 要素が、ウェブページのある場所 (テキスト文字や画像のようなもの) から、その他のウェブページ (や同じページでも) のどこかの場所へのハイパーリンクを定義します。
 
 ## 詳細情報
@@ -10,7 +12,7 @@ slug: Glossary/Hyperlink
 ### 一般知識
 
 - Wikipedia の [Hyperlink](https://ja.wikipedia.org/wiki/Hyperlink)
-- MDN の [ハイパーリンク](/ja/docs/Web/Guide/HTML/Hyperlink) ガイド
+- MDN の [ハイパーリンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) ガイド
 
 ### 技術リファレンス
 

@@ -3,7 +3,7 @@ title: runtime.lastError
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/lastError
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 この値は、コールバック関数のある非同期 API でエラーメッセージを伝える時に使われます。拡張機能のコールバックベースの API を使っている時に便利です。
 
@@ -70,7 +70,8 @@ setCookie.then(logCookie, logError);
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#property-lastError) API に基づいています。また、このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium から作成されています。
+> [!NOTE]
+> この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#property-lastError) API に基づいています。また、このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium から作成されています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

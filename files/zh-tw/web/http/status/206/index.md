@@ -1,27 +1,29 @@
 ---
 title: 206 Partial Content
 slug: Web/HTTP/Status/206
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`206 Partial Content`** 成功狀態碼表明請求成功，且主體包含在請求標頭{{HTTPHeader("Range")}} 中所指定的資料區間。
+HTTP **`206 Partial Content`** 成功回應碼表示請求已成功，並且主體包含了請求中描述的數據範圍，這些範圍由請求的 {{HTTPHeader("Range")}} 標頭描述。
 
-若只包含一個區間，則整個回應的 {{HTTPHeader("Content-Type")}} 將會被設為該文件的類型 ，且會包含一個 {{HTTPHeader("Content-Range")}} 標頭。
+如果只有一個範圍，則整個回應的 {{HTTPHeader("Content-Type")}} 設置為文件的類型，並提供了一個 {{HTTPHeader("Content-Range")}}。
 
-若有多個區間，則整個回應的 {{HTTPHeader("Content-Type")}} 會被設為 `multipart/byteranges` ，且每個分段會對應一個區間，並有 {{HTTPHeader("Content-Range")}} 及 {{HTTPHeader("Content-Type")}} 描述各個區間。
+如果返回了多個範圍，則 {{HTTPHeader("Content-Type")}} 設置為 `multipart/byteranges`，每個片段都覆蓋一個範圍，並使用 {{HTTPHeader("Content-Range")}} 和 {{HTTPHeader("Content-Type")}} 描述它。
 
 ## 狀態
 
-```plain
+```http
 206 Partial Content
 ```
 
 ## 範例
 
-一個包含單一區間的回應：
+包含單一範圍的回應：
 
-```plain
+```http
 HTTP/1.1 206 Partial Content
 Date: Wed, 15 Nov 2015 06:25:24 GMT
 Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
@@ -29,12 +31,12 @@ Content-Range: bytes 21010-47021/47022
 Content-Length: 26012
 Content-Type: image/gif
 
-... 26012 bytes of partial image data ...
+# 26012 bytes of partial image data…
 ```
 
-一個包含多個區間的回應：
+包含多個範圍的回應：
 
-```plain
+```http
 HTTP/1.1 206 Partial Content
 Date: Wed, 15 Nov 2015 06:25:24 GMT
 Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
@@ -45,12 +47,12 @@ Content-Type: multipart/byteranges; boundary=String_separator
 Content-Type: application/pdf
 Content-Range: bytes 234-639/8000
 
-...the first range...
+# the first range
 --String_separator
 Content-Type: application/pdf
 Content-Range: bytes 4590-7999/8000
 
-...the second range
+# the second range
 --String_separator--
 ```
 

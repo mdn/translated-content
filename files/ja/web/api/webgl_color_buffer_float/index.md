@@ -11,7 +11,8 @@ l10n:
 
 WebGL 拡張は {{domxref("WebGLRenderingContext.getExtension()")}} メソッドを使用することで利用することができます。詳細な情報については、[WebGL チュートリアル](/ja/docs/Web/API/WebGL_API/Using_Extensions)の [Using Extensions](/ja/docs/Web/API/WebGL_API/Tutorial) も参照してください。
 
-> **メモ:** この拡張機能は {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}} コンテキストでのみ利用することができます。 {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} では {{domxref("EXT_color_buffer_float")}} 拡張を使用してください。
+> [!NOTE]
+> この拡張機能は {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}} コンテキストでのみ利用することができます。 {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} では {{domxref("EXT_color_buffer_float")}} 拡張を使用してください。
 >
 > {{domxref("OES_texture_float")}} 拡張は、暗黙にこの拡張を有効にします。
 

@@ -31,7 +31,8 @@ slug: Web/CSS/grid-column
 
 如果有一个名为"\<custom-ident>-start"/"\<custom-ident>-start"的命名行，则它将第一行添加到网格项目的位置。
 
-> **警告：** 命名网格区域会自动生成这种形式的隐式命名行，因此请指定`grid-column: foo;`将选择该命名网格区域的开始/结束边缘（除非在其之前明确指定了另一条名为`foo-start / foo-end`的行）。
+> [!WARNING]
+> 命名网格区域会自动生成这种形式的隐式命名行，因此请指定`grid-column: foo;`将选择该命名网格区域的开始/结束边缘（除非在其之前明确指定了另一条名为`foo-start / foo-end`的行）。
 
 否则，将其视为与`<custom-ident>`一起指定了整数 1。
 
@@ -110,4 +111,4 @@ IE11 不支持自动放置网格项目。除非用-ms-{{cssxref("grid-column")}}
 
 - Related CSS properties: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}
 - Grid Layout Guide: _[Line-based placement with CSS Grid](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
-- Video tutorial: _[Line-based placement](http://gridbyexample.com/video/series-line-based-placement/)_
+- Video tutorial: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_

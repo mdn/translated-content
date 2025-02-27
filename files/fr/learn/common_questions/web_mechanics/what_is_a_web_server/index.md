@@ -3,6 +3,8 @@ title: Qu'est-ce qu'un serveur web ?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Dans cet article, nous verrons ce que sont les serveurs web, comment ils fonctionnent et pourquoi ils sont importants.
 
 <table class="standard-table">
@@ -50,7 +52,7 @@ Par exemple, afin de produire la page web que vous voyez sur votre navigateur, l
 
 ## Pédagogie active
 
-_Il n'y a, pour le moment, pas d'élément de pédagogie active pour cette section. [Vous pouvez néanmoins contribuer](/fr/docs/MDN/Débuter_sur_MDN)._
+_Il n'y a, pour le moment, pas d'élément de pédagogie active pour cette section. [Vous pouvez néanmoins contribuer](/fr/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Aller plus loin
 
@@ -67,9 +69,9 @@ D'un point de vue technique, il serait tout à fait possible de stocker tout ces
 - conserver la même adresse IP au cours du temps (tous les fournisseurs d'accès ne fournissent pas une adresse IP fixe pour les particuliers)
 - être maintenu par un fournisseur tiers.
 
-Au regard de toutes ces raisons, il est crucial de trouver un hébergeur correct pour votre site web. Prenez donc le temps de parcourir les différentes offres afin de choisir celle qui correspond le mieux à votre besoin et à votre budget (qui pourra varier entre 0 € et plusieurs milliers d'euros par mois selon ce qui est demandé). Vous trouverez d'autres détails sur ce point [dans cet article](/fr/Apprendre/How_much_does_it_cost#Hosting).
+Au regard de toutes ces raisons, il est crucial de trouver un hébergeur correct pour votre site web. Prenez donc le temps de parcourir les différentes offres afin de choisir celle qui correspond le mieux à votre besoin et à votre budget (qui pourra varier entre 0 € et plusieurs milliers d'euros par mois selon ce qui est demandé). Vous trouverez d'autres détails sur ce point [dans cet article](/fr/docs/Apprendre/How_much_does_it_cost#hosting).
 
-Une fois que vous avez trouvé votre hébergeur et la solution d'hébergement qui vous convient, il vous suffira [de transférer vos fichiers vers le serveur web](/fr/docs/Apprendre/Transférer_des_fichiers_vers_un_serveur_web).
+Une fois que vous avez trouvé votre hébergeur et la solution d'hébergement qui vous convient, il vous suffira [de transférer vos fichiers vers le serveur web](/fr/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).
 
 ### Communiquer via HTTP
 
@@ -102,7 +104,7 @@ En résumé, un serveur peut « servir » du contenu statique ou dynamique. Un c
 
 Un site « dynamique » signifie que le serveur traite le contenu ou le génère à la volée depuis les informations contenues dans une base de données. Cette solution est plus flexible mais beaucoup plus complexe à mettre en œuvre.
 
-Prenons l'exemple de la page que vous êtes en train de lire. Sur le serveur web qui l'héberge, il y a une serveur d'applications qui tire l'article d'une base de données, le formate et l'insère dans différents modèles HTML. Une fois ce traitement effectué, le serveur envoie le fichier vers votre navigateur. Ici, le serveur d'applications s'appelle [Kuma](/fr/docs/MDN/Kuma) et est construit en [Python](https://www.python.org/) (grâce au _framework_ [Django](https://www.djangoproject.com/)). L'équipe Mozilla a construit Kuma afin qu'il réponde aux besoins spécifiques de MDN mais il existe de nombreuses autres applications, éventuellement construites sur d'autres technologies.
+Prenons l'exemple de la page que vous êtes en train de lire. Sur le serveur web qui l'héberge, il y a une serveur d'applications qui tire l'article d'une base de données, le formate et l'insère dans différents modèles HTML. Une fois ce traitement effectué, le serveur envoie le fichier vers votre navigateur. Ici, le serveur d'applications s'appelle [Kuma](https://github.com/mdn/yari/tree/main/docs/what-yari-does.md) et est construit en [Python](https://www.python.org/) (grâce au _framework_ [Django](https://www.djangoproject.com/)). L'équipe Mozilla a construit Kuma afin qu'il réponde aux besoins spécifiques de MDN mais il existe de nombreuses autres applications, éventuellement construites sur d'autres technologies.
 
 Il y a tellement de serveurs d'applications qu'il est difficile d'en suggérer un en particulier. Certains serveurs d'applications sont consacrés à certaines catégories de site web comme les blogs, les wikis, les boutiques en ligne, etc. D'autres, appelés {{Glossary("CMS")}} (pour _Content Management Systems_ en anglais ou « Systèmes de gestion des contenus ») sont plus génériques. Si vous construisez un site web dynamique, prenez le temps d'étudier les outils disponibles pour choisir celui qui correspondra à votre projet. Sauf si vous souhaitez apprendre des éléments de programmation serveur (ce qui est très intéressant), vous n'avez pas besoin de créer votre serveur d'applications de toute pièce (cela reviendrait à réinventer la roue).
 
@@ -110,6 +112,6 @@ Il y a tellement de serveurs d'applications qu'il est difficile d'en suggérer u
 
 Maintenant que vous connaissez les serveurs web, vous pourriez :
 
-- continuer votre lecture avec [combien ça coûte de faire quelque chose sur le Web](/fr/docs/Apprendre/Publier_sur_le_Web_combien_ça_coûte)
-- en savoir plus sur [les différents logiciels nécessaires à la création d'un site web](/fr/docs/Apprendre/Quels_logiciels_sont_nécessaires_pour_construire_un_site_web)
-- poursuivre avec quelque chose de plus pratique comme [comment transférer des fichiers vers un serveur web](/fr/docs/Apprendre/Transférer_des_fichiers_vers_un_serveur_web).
+- continuer votre lecture avec [combien ça coûte de faire quelque chose sur le Web](/fr/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
+- en savoir plus sur [les différents logiciels nécessaires à la création d'un site web](/fr/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
+- poursuivre avec quelque chose de plus pratique comme [comment transférer des fichiers vers un serveur web](/fr/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).

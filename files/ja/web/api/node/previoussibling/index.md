@@ -9,12 +9,13 @@ l10n:
 
 **`previousSibling`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、指定されたノードの親ノードの {{domxref("Node.childNodes", "childNodes")}} リスト内で、直前にある ノードを返します。指定されたノードがリストの先頭にあった倍は `null` を返します。
 
-> **メモ:** ブラウザーはソースのマークアップにあるホワイトスペースを表すために、文書にテキストノードを挿入します。
+> [!NOTE]
+> ブラウザーはソースのマークアップにあるホワイトスペースを表すために、文書にテキストノードを挿入します。
 > そのため、例えば [`Node.firstChild`](/ja/docs/Web/API/Node/firstChild) や `Node.previousSibling` を使用して得たノードが、取得しようとした実際のノードではなく、ホワイトスペースのテキストノードであることがあります。
 >
 > [DOM でのホワイトスペース](/ja/docs/Web/API/Document_Object_Model/Whitespace)の記事に、この動作に関する詳しい情報があります。
 >
-> [`previousElementSibling`](/ja/docs/Web/API/Element/previousElementSibling) を使用すると、（テキストノードやその他の要素以外のノードを飛ばして）次の要素を取得することができます。
+> [`previousElementSibling`](/ja/docs/Web/API/Element/previousElementSibling) を使用すると、（テキストノードやその他の要素以外のノードを飛ばして）前の要素を取得することができます。
 >
 > 子ノードのリストで反対方向に移動する場合は、 [Node.nextSibling](/ja/docs/Web/API/Node/nextSibling) を使用してください。
 

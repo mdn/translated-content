@@ -1,40 +1,40 @@
 ---
-title: <marquee>
+title: <marquee>：跑马灯元素
 slug: Web/HTML/Element/marquee
+l10n:
+  sourceCommit: cbfc561e5e577975a51acceadbd7d2fec9b8e45e
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{HTMLSidebar}}{{Deprecated_Header}}
 
-HTML marquee 元素（`<marquee>`）用来插入一段滚动的文字。你可以使用它的属性控制当文本到达容器边缘发生的事情。
-
-> **警告：** `<marquee>` 元素已经**过时**，请不要再使用。尽管一些浏览器仍然支持它，但它不是必须的。此外，使用这个元素基本上是你可以对你的用户做最糟糕的事情之一，所以请不要这样做。
+**`<marquee>`** [HTML](/zh-CN/docs/Web/HTML) 元素用于插入滚动文本区域。你可以使用它的属性控制当文本到达容器边缘发生的事情。
 
 ## 属性
 
-- `behavior`
-  - : 设置文本在 marquee 元素内如何滚动。可选值有 `scroll`，`slide` 和 `alternate`。如果未指定值，默认值为 `scroll`。
-- `bgcolor`
+- `behavior` {{Deprecated_Inline}}
+  - : 设置文本在 marquee 元素内如何滚动。可选值有 `scroll`、`slide` 和 `alternate`。如果未指定值，默认值为 `scroll`。
+- `bgcolor` {{Deprecated_Inline}}
   - : 通过颜色名称或十六进制值设置背景颜色。
-- `direction`
-  - : 设置 marquee 内文本滚动的方向。可选值有 `left`, `right`, `up` and `down。`如果未指定值，默认值为 `left`。
-- `height`
+- `direction` {{Deprecated_Inline}}
+  - : 设置 marquee 内文本滚动的方向。可选值有 `left`、`right`、`up` 和 `down`。如果未指定值，默认值为 `left`。
+- `height` {{Deprecated_Inline}}
   - : 以像素或百分比值设置高度。
-- `hspace`
+- `hspace` {{Deprecated_Inline}}
   - : 设置水平边距。
-- `loop`
+- `loop` {{Deprecated_Inline}}
   - : 设置 marquee 滚动的次数。如果未指定值，默认值为 −1，表示 marquee 将连续滚动。
-- `scrollamount`
+- `scrollamount` {{Deprecated_Inline}}
   - : 设置每次滚动时移动的长度（以像素为单位）。默认值为 6。
-- `scrolldelay`
-  - : 设置每次滚动时的时间间隔（以毫秒为单位）。默认值为 85。请注意，除非指定 truespeed 值，否则将忽略任何小于 60 的值，并改为使用 60。
-- `truespeed`
-  - : 默认情况下，会忽略小于 60 的 scrolldelay 值。如果存在 truespeed，那些值不会被忽略。
-- `vspace`
+- `scrolldelay` {{Deprecated_Inline}}
+  - : 设置每次滚动时的时间间隔（以毫秒为单位）。默认值为 85。请注意，除非指定 `truespeed` 值，否则将忽略任何小于 60 的值，并改为使用 60。
+- `truespeed` {{Deprecated_Inline}}
+  - : 默认情况下，会忽略小于 60 的 `scrolldelay` 值。如果存在 `truespeed`，那些值不会被忽略。
+- `vspace` {{Deprecated_Inline}}
   - : 以像素或百分比值设置垂直边距。
-- `width`
+- `width` {{Deprecated_Inline}}
   - : 以像素或百分比值设置宽度。
 
-## 事件回调
+## 事件处理器
 
 - `onbounce`
   - : 当 marquee 滚动到结尾时触发。它只能在 behavior 属性设置为 alternate 时触发。
@@ -45,17 +45,17 @@ HTML marquee 元素（`<marquee>`）用来插入一段滚动的文字。你可�
 
 ## 方法
 
-- start
+- `start()`
   - : 开始滚动 marquee。
-- stop
+- `stop()`
   - : 停止滚动 marquee。
 
 ## 示例
 
 ```html
-<marquee>This text will scroll from right to left</marquee>
+<marquee>该文本将从右向左滚动</marquee>
 
-<marquee direction="up">This text will scroll from bottom to top</marquee>
+<marquee direction="up">该文本将从下往上滚动</marquee>
 
 <marquee
   direction="down"
@@ -63,11 +63,24 @@ HTML marquee 元素（`<marquee>`）用来插入一段滚动的文字。你可�
   height="200"
   behavior="alternate"
   style="border:solid">
-  <marquee behavior="alternate"> This text will bounce </marquee>
+  <marquee behavior="alternate">该文本将弹跳</marquee>
 </marquee>
 ```
 
+### 结果
+
 {{EmbedLiveSample("示例", 600, 450)}}
+
+## 技术概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{DOMxRef("HTMLMarqueeElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 规范
 
@@ -76,3 +89,7 @@ HTML marquee 元素（`<marquee>`）用来插入一段滚动的文字。你可�
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{DOMxRef("HTMLMarqueeElement")}}

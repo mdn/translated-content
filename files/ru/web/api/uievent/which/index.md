@@ -1,63 +1,68 @@
 ---
-title: KeyboardEvent.which
+title: "UIEvent: свойство which"
 slug: Web/API/UIEvent/which
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef ("События DOM")}} {{Deprecated_header}}
-Свойство which только для чтения интерфейса {{domxref ("KeyboardEvent")}} возвращает числовой код клавиши нажатой клавиши или код символа (charCode) для нажатой буквенно-цифровой клавиши.
+{{APIRef("UI Events")}}{{Deprecated_Header}}
 
-## Синтаксис
+Доступное только для чтение свойство **`UIEvent.which`** интерфейса {{domxref("UIEvent")}} возвращает число, указывающее на то, какая клавиша мыши была нажата или числовой код (`keyCode`) или код символа (`charCode`) нажатой клавиши на клавиатуре.
 
-```
-var keyResult = event.which;
-```
+## Значение
 
-### Параметры
+### Значение для `KeyboardEvent` {{Non-standard_Inline}}
 
-- `keyResult содержит числовой код для конкретной нажатой клавиши, в зависимости от того, была ли нажата буквенно-цифровая или не буквенно-цифровая клавиша. Пожалуйста, смотрите {{domxref ("KeyboardEvent.charCode")}} и {{domxref ("KeyboardEvent.keyCode")}} для получения дополнительной информации.`
+Для {{domxref("KeyboardEvent")}} `event.which` содержит числовой код нажатой клавиши.
+Смотрите {{domxref("KeyboardEvent.charCode")}} и {{domxref("KeyboardEvent.keyCode")}} для дополнительной информации.
+
+> [!NOTE]
+> Для новых приложений используйте {{domxref("KeyboardEvent.key")}} или {{domxref("KeyboardEvent.code")}}.
+
+### Значение для `MouseEvent` {{Non-standard_Inline}}
+
+Для {{domxref("MouseEvent")}} `event.which` содержит число, представляющее нажатую клавишу:
+
+- `0`: Клавиша не нажата
+- `1`: Левая клавиша
+- `2`: Средняя клавиша
+- `3`: Правая клавиша
+
+Для мыши, настроенной на использование левой рукой, действия кнопок меняются на противоположные. В этом случае значения считываются справа налево.
+
+> [!NOTE]
+> Для новых приложений используйте {{domxref("MouseEvent.button")}}.
 
 ## Примеры
 
 ```html
-<html>
+<html lang="en">
   <head>
-    <title>charCode/keyCode/which example</title>
+    <title>Пример charCode/keyCode/which</title>
 
-    <script type="text/javascript">
+    <script>
       function showKeyPress(evt) {
         alert(
-          "onkeypress handler: \n" +
-            "keyCode property: " +
-            evt.keyCode +
-            "\n" +
-            "which property: " +
-            evt.which +
-            "\n" +
-            "charCode property: " +
-            evt.charCode +
-            "\n" +
-            "Character Key Pressed: " +
-            String.fromCharCode(evt.charCode) +
-            "\n",
+          `Обработчик onkeypress:\n` +
+            `свойство keyCode: ${evt.keyCode}\n` +
+            `свойство which: ${evt.which}\n` +
+            `свойство charCode: ${evt.charCode}\n` +
+            `символ нажатой клавиши: ${String.fromCharCode(evt.charCode)}\n`,
         );
       }
 
       function keyDown(evt) {
         alert(
-          "onkeydown handler: \n" +
-            "keyCode property: " +
-            evt.keyCode +
-            "\n" +
-            "which property: " +
-            evt.which +
-            "\n",
+          `Обработчик onkeydown:\n` +
+            `свойство keyCode: ${evt.keyCode}\n` +
+            `свойство which: ${evt.which}\n`,
         );
       }
     </script>
   </head>
 
   <body onkeypress="showKeyPress(event);" onkeydown="keyDown(event);">
-    <p>Please press any key.</p>
+    <p>Нажмите любую клавишу.</p>
   </body>
 </html>
 ```
@@ -66,10 +71,11 @@ var keyResult = event.which;
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- {{domxref("KeyboardEvent")}}, the interface this property belongs too.
+- {{domxref("KeyboardEvent")}}
+- {{domxref("MouseEvent")}}

@@ -3,7 +3,7 @@ title: substring-after
 slug: Web/XPath/Functions/substring-after
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `substring-after` 함수는 첫 번째 인수에서 두 번째 인수가 나타난 다음의 나머지를 반환합니다.
 
@@ -44,7 +44,7 @@ XSL 예:
 
 ### 정의
 
-[XPath 1.0 4.2](http://www.w3.org/TR/xpath#function-substring-after)
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-substring-after)
 
 ### Gecko 지원
 

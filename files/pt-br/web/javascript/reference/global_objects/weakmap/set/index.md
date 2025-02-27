@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 
 O método **`set()`** adiciona um novo elemento com a `chave` e o `valor` especificados em um objeto `WeakMap`.
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-set.html")}}
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.set()")}}
+
+```js interactive-example
+const weakmap1 = new WeakMap();
+const object1 = {};
+const object2 = {};
+
+weakmap1.set(object1, "foo");
+weakmap1.set(object2, "bar");
+
+console.log(weakmap1.get(object1));
+// Expected output: "foo"
+
+console.log(weakmap1.get(object2));
+// Expected output: "bar"
+```
 
 ## Sintaxe
 
@@ -43,14 +58,11 @@ wm.set(obj, "baz");
 
 ## Especificações
 
-| Specification                                                                  | Status               | Comment             |
-| ------------------------------------------------------------------------------ | -------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}}  | {{Spec2('ES2015')}}  | Initial definition. |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.WeakMap.set")}}
+{{Compat}}
 
 ## Notas específicas ao Firefox
 

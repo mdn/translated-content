@@ -5,11 +5,11 @@ slug: WebAssembly/JavaScript_interface/Global
 
 {{WebAssemblySidebar}}
 
-Un objet **`WebAssembly.Global`** représente une instance d'une variable globale, accessible depuis le code JavaScript et importable/exportable pour un ou plusieurs modules WebAssembly ([`WebAssembly.Module`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module)). Cela permet de lier dynamiquement plusieurs modules.
+Un objet **`WebAssembly.Global`** représente une instance d'une variable globale, accessible depuis le code JavaScript et importable/exportable pour un ou plusieurs modules WebAssembly ([`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module)). Cela permet de lier dynamiquement plusieurs modules.
 
 ## Constructeur
 
-- [`WebAssembly.Global()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global)
+- [`WebAssembly.Global()`](/fr/docs/WebAssembly/JavaScript_interface/Global/Global)
   - : Crée un nouvel objet `Global`.
 
 ## Instances `Global`
@@ -19,7 +19,7 @@ Toutes les instances de `Global` héritent du prototype du constructeur `Global(
 ### Propriétés des instances
 
 - `Global.prototype.constructor`
-  - : Renvoie la fonction qui a créé cette instance d'objet. Par défaut, c'est le constructeur [`WebAssembly.Global()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global).
+  - : Renvoie la fonction qui a créé cette instance d'objet. Par défaut, c'est le constructeur [`WebAssembly.Global()`](/fr/docs/WebAssembly/JavaScript_interface/Global/Global).
 - `Global.prototype[@@toStringTag]`
   - : La valeur initiale de la propriété [`@@toStringTag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) est la chaîne de caractères `"WebAssembly.Global"`.
 - `Global.prototype.value`
@@ -79,7 +79,8 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 );
 ```
 
-> **Note :** Cet exemple est [utilisable sur GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) et [son code source est également disponible](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).
+> [!NOTE]
+> Cet exemple est [utilisable sur GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) et [son code source est également disponible](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).
 
 ## Spécifications
 

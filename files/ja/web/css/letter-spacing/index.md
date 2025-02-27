@@ -1,6 +1,8 @@
 ---
 title: letter-spacing
 slug: Web/CSS/letter-spacing
+l10n:
+  sourceCommit: 3928d2b1004e2435e063ef4b037e06e1906d62f3
 ---
 
 {{CSSRef}}
@@ -23,6 +25,8 @@ letter-spacing: 0.3px;
 /* グローバル値 */
 letter-spacing: inherit;
 letter-spacing: initial;
+letter-spacing: revert;
+letter-spacing: revert-layer;
 letter-spacing: unset;
 ```
 
@@ -33,18 +37,18 @@ letter-spacing: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 既定の字間に*加える*字間のスペースを指定します。負の値も指定可能ですが、実装に依存した制限があるかもしれません。ユーザーエージェントは文字列を両端揃えするために、字間スペースをさらに増減させることはありません。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
-正と負のどちらでも、大きすぎる値を `letter-spacing` に指定すると読みづらくなってしまいます。正の値として大きすぎる場合、文字と文字が離れすぎるせいでひとつの単語ではなくバラバラの文字に見えてしまいます。負の値として大きすぎる場合、文字と文字が重なり合うために何が書いてあるのか分からなくなってしまいます。
+正と負のどちらでも、大きすぎる値を `letter-spacing` に指定すると、スタイル設定が適用された語句が読みにくくなります。 とても大きな正の値でスタイル設定されたテキストの場合、文字と文字の間隔が広すぎて、語句がバラバラの文字の集まりとして現れることがあります。 とても大きな負の値でスタイル設定されたテキストの場合、文字と文字が重なり合って、語句が認識できなくなることがあります。
 
 フォントの文字幅は種類ごとに異なるため、読みやすい letter-spacing もそれぞれ異なります。すべてのフォントで読みやすさを提供してくれる単一の設定値というものはありません。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## 国際化の考慮
 
-書き言葉の中には、字間のスペースを適用してはいけないものがあります。例えば、アラビア文字を使用する言語では、次の例のように、つながった文字が視覚的につながったままであることが求められます。字間スペースを適用すると、テキストが壊れたように見えてしまいます。
+書き言葉の中には、字間を適用してはいけないものがあります。例えば、アラビア文字を使用する言語では、次の例のように、つながった文字が視覚的につながったままであることが求められます。字間スペースを適用すると、テキストが壊れたように見えてしまいます。
 
 > <p lang="ar" dir="rtl">شسيبتنمك</p>
 
@@ -58,11 +62,11 @@ letter-spacing: unset;
 
 ## 例
 
-<h3 id="Setting_letter_spacing">字間の設定</h3>
+### 字間の設定
 
 #### HTML
 
-```html
+```html live-sample___setting_letter_spacing
 <p class="normal">letter spacing</p>
 <p class="em-wide">letter spacing</p>
 <p class="em-wider">letter spacing</p>
@@ -72,7 +76,7 @@ letter-spacing: unset;
 
 #### CSS
 
-```css
+```css live-sample___setting_letter_spacing
 .normal {
   letter-spacing: normal;
 }
@@ -105,3 +109,4 @@ letter-spacing: unset;
 ## 関連情報
 
 - {{cssxref("font-kerning")}}
+- {{cssxref("word-spacing")}}

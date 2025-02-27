@@ -42,7 +42,7 @@ Llamamos a esto una _llamada a función asíncrona_. Esta convención tiene vari
 
 A diferencia de las funciones callback pasadas al "viejo estilo", una promesa viene con algunas garantías:
 
-- Las funciones callback nunca serán llamadas antes de la [terminación de la ejecución actual](/es/docs/Web/JavaScript/EventLoop#Ejecutar_hasta_completar) del bucle de eventos de JavaScript.
+- Las funciones callback nunca serán llamadas antes de la [terminación de la ejecución actual](/es/docs/Web/JavaScript/Event_loop#ejecutar_hasta_completar) del bucle de eventos de JavaScript.
 - Las funciones callback añadidas con `then()` incluso después del éxito o fracaso de la operación asíncrona serán llamadas como se mostró anteriormente.
 - Múltiples funciones callback pueden ser añadidas llamando a `then()` varias veces. Cada una de ellas es ejecutada una seguida de la otra, en el orden en el que fueron insertadas.
 
@@ -97,7 +97,7 @@ hazAlgo()
   .catch(falloCallback);
 ```
 
-Los argumentos a `then` son opcionales, y `catch(falloCallBack)` es un atajo para `then(null, falloCallBack)`. Es posible que veas esto expresado con [funciones de flecha](/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions) :
+Los argumentos a `then` son opcionales, y `catch(falloCallBack)` es un atajo para `then(null, falloCallBack)`. Es posible que veas esto expresado con [funciones de flecha](/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions) :
 
 ```js
 hazAlgo()
@@ -171,7 +171,7 @@ try {
 }
 ```
 
-Esta simetría con el código síncrono culmina con la mejora sintáctica [async/await](/es/docs/Web/JavaScript/Referencia/Sentencias/funcion_asincrona) en ECMASCript 2017:
+Esta simetría con el código síncrono culmina con la mejora sintáctica [async/await](/es/docs/Web/JavaScript/Reference/Statements/async_function) en ECMASCript 2017:
 
 ```js
 async function foo() {
@@ -194,13 +194,10 @@ Las `promesas` resuelven un fallo fundamental de la pirámide de funciones callb
 
 Cuando una `promesa` es rechazada, uno de los dos eventos se envía al ámbito global (generalmente, éste es el {{domxref("window")}}, o, si se utiliza en un trabajador web, es el {{domxref("Worker")}} u otra interfaz basada en un trabajador). Los dos eventos son:
 
-**{{domxref("Window.rejectionhandled_event", "rejectionhandled")}}**
-
-Se envía cuando se rechaza una promesa, una vez que el rechazo ha sido manejado por la función `reject` del ejecutor.
-
-**{{domxref("Window.unhandledrejection_event", "unhandledrejection")}}**
-
-Se envía cuando se rechaza una promesa pero no hay un controlador de rechazo disponible.
+- {{domxref("Window.rejectionhandled_event", "rejectionhandled")}}
+  - : Se envía cuando se rechaza una promesa, una vez que el rechazo ha sido manejado por la función `reject` del ejecutor.
+- {{domxref("Window.unhandledrejection_event", "unhandledrejection")}}
+  - : Se envía cuando se rechaza una promesa pero no hay un controlador de rechazo disponible.
 
 En ambos casos, el evento (del tipo {{domxref("PromiseRejectionEvent")}}) tiene como miembros una propiedad {{domxref("PromiseRejectionEvent.promise", "promise")}} que indica que la promesa fue rechazada, y una propiedad {{domxref("PromiseRejectionEvent.reason", "reason")}} que proporciona el motivo por el cuál se rechaza la promesa.
 
@@ -327,7 +324,7 @@ console.log(1); // 1, 2, 3, 4
 
 ## Anidamiento
 
-Las cadenas de promesas simples se mantienen planas sin anidar, ya que el anidamiento puede ser el resultado de una composición descuidada. Vea [errores comunes](/es/docs/Web/JavaScript/Guide/Usar_promesas#Common_mistakes).
+Las cadenas de promesas simples se mantienen planas sin anidar, ya que el anidamiento puede ser el resultado de una composición descuidada. Vea [errores comunes](#common_mistakes).
 
 El anidamiento es una estructura de control para limitar el alcance de las sentencias `catch`. Específicamente, un `catch` anidado sólo captura fallos dentro de su contexto y por debajo, no captura errores que están más arriba en la cadena fuera del alcance del anidamiento. Cuando se usa correctamente, da mayor precisión en la recuperación de errores:
 
@@ -388,5 +385,5 @@ El uso de [async / await](/es/docs/Web/JavaScript/Reference/Statements/async_fun
 ## Vea también
 
 - {{jsxref("Promise.then()")}}
-- [Promises/A+ specification](http://promisesaplus.com/)
-- [Nolan Lawson: Tenemos un problema con las promesas — Errores comunes con las promesas](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
+- [Promises/A+ specification](https://promisesaplus.com/)
+- [Nolan Lawson: Tenemos un problema con las promesas — Errores comunes con las promesas](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)

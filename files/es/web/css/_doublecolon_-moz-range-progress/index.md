@@ -1,5 +1,5 @@
 ---
-title: "::-moz-range-progress"
+title: ::-moz-range-progress
 slug: Web/CSS/::-moz-range-progress
 ---
 
@@ -9,7 +9,8 @@ slug: Web/CSS/::-moz-range-progress
 
 El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::-moz-range-progress`** representa la parte del "camino" (la ranura sobre la que desliza) de un elemento {{HTMLElement("input")}} con `type="range"`, que se corresponde con los valores inferiores al valor seleccionado actualmente en ese "camino".
 
-> **Nota:** Si usamos `::-moz-range-progress` con cualquier otra cosa que no sea `<input type="range">` ni seleccionaremos nada ni conseguiremos ningún efecto.
+> [!NOTE]
+> Si usamos `::-moz-range-progress` con cualquier otra cosa que no sea `<input type="range">` ni seleccionaremos nada ni conseguiremos ningún efecto.
 
 ## Síntaxis
 
@@ -57,4 +58,4 @@ No es parte de ninguna especificación. Es un pseudo-elemento propietario de Gec
 
 - {{cssxref("::-ms-fill-upper")}}
 - [CSS-Tricks: Dando estilo con CSS a input con type="range" en todos los navegadores.](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode: Dando estilo y usando scripts para elementos deslizantes.](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [QuirksMode: Dando estilo y usando scripts para elementos deslizantes.](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

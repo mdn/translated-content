@@ -13,10 +13,10 @@ Os **elementos HTML** **`<h1>`–`<h6>`** representam seis níveis de título de
 
 Elementos de **cabeçalho** são implementados em seis níveis, `<h1>` é o mais importante e `<h6>` é o de menor importância. Um elemento de cabeçalho descreve brevemente o tópico da seção em que ele está. As informações de cabeçalho podem ser usadas por agentes de usuário, por exemplo, para construir uma tabela de conteúdos para um documento automaticamente.
 
-- _[Categorias do conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdos de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content), conteúdos de cabeçalho, conteúdos palpáveis.
-- _Conteúdo permitido_ [Conteúdo com texto](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content).
+- _[Categorias do conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdos de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), conteúdos de cabeçalho, conteúdos palpáveis.
+- _Conteúdo permitido_ [Conteúdo com texto](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
 - _Omissão de tag_ Não há, porém, as tags de abertura e fechamento são obrigatórias.
-- _Elementos pais permitidos_ Qualquer elemento que aceite [conteúdos de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content); ou como um elemento filho do grupo de elementos de cabeçalho {{HTMLElement("hgroup")}}
+- _Elementos pais permitidos_ Qualquer elemento que aceite [conteúdos de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content); ou como um elemento filho do grupo de elementos de cabeçalho {{HTMLElement("hgroup")}}
 - _Interface DOM_ {{domxref("HTMLHeadingElement")}}
 
 ## Atributos
@@ -82,7 +82,7 @@ Em HTML 5, use o elemento {{HTMLElement("section")}} para definir o outline de u
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.h1")}}
+{{Compat}}
 
 ## Veja também
 

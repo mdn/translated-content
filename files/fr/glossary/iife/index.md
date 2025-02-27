@@ -3,6 +3,8 @@ title: IIFE
 slug: Glossary/IIFE
 ---
 
+{{GlossarySidebar}}
+
 **IIFE** (Immediately Invoked Function Expression) _(Expression de fonction invoquée immédiatement)_ est une {{glossary("Function","fonction")}} {{glossary("JavaScript")}} qui est exécutée dès qu'elle est définie.
 
 C'est un modèle de conception qui est également connu sous le nom de {{glossary("Self-Executing Anonymous Function","Fonction anonyme auto-exécutable")}} et contient deux parties principales. La première est la fonction anonyme avec portée lexicale incluse dans l'[opérateur de groupement `()`](/fr/docs/Web/JavaScript/Reference/Operators/Grouping). Cela empêche l'accès aux variables dans l'expression idiomatique IIFE ainsi que la pollution de la portée globale.
@@ -36,7 +38,7 @@ result; // "Barry"
 
 ### Apprendre sur ce sujet
 
-- [Exemple rapide](/fr/docs/Web/JavaScript/Une_réintroduction_à_JavaScript#Les_fonctions) (à la fin de la section "Les fonctions", juste avant "Les objets personnalisés")
+- [Exemple rapide](/fr/docs/Web/JavaScript/Language_overview#les_fonctions) (à la fin de la section "Les fonctions", juste avant "Les objets personnalisés")
 
 ### Culture générale
 

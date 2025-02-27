@@ -58,7 +58,8 @@ Então, o que queremos dizer com permissivo? Bem, geralmente quando você faz al
 
 O próprio HTML não sofre de erros de sintaxe porque os navegadores o analisam permissivamente, o que significa que a página ainda é exibida mesmo se houver erros de sintaxe. Os navegadores têm regras internas para indicar como interpretar a marcação escrita incorretamente, para que você obtenha algo em execução, mesmo que não seja o esperado. Isso, claro, ainda pode ser um problema!
 
-> **Nota:** O HTML é analisado permissivamente porque, quando a web foi criada, foi decidido que permitir que as pessoas publicassem seus conteúdos era mais importante do que garantir que a sintaxe estivesse absolutamente correta. A web provavelmente não seria tão popular quanto é hoje, se tivesse sido mais rigorosa desde o início.
+> [!NOTE]
+> O HTML é analisado permissivamente porque, quando a web foi criada, foi decidido que permitir que as pessoas publicassem seus conteúdos era mais importante do que garantir que a sintaxe estivesse absolutamente correta. A web provavelmente não seria tão popular quanto é hoje, se tivesse sido mais rigorosa desde o início.
 
 ### Aprendizado Ativo: Estudando código permissivo
 
@@ -92,7 +93,7 @@ O próprio HTML não sofre de erros de sintaxe porque os navegadores o analisam 
    - Essa seção foi aninhada incorretamente: `<strong>negrito <em>negrito sublinhado?</strong> O que é isso?</em>`. Não é fácil dizer como esse trecho foi interpretado por causa do problema anterior.
    - O valor do atributo [`href`](/pt-BR/docs/Web/HTML/Element/a#href) não tem as aspas de fechamento. Isso parece ter causado o maior problema — o _link_ não foi renderizado.
 
-5. Agora vamos dar uma olhada no HTML que o navegador renderizou, comparando-o com o nosso código fonte. Para fazer isso, usaremos as ferramentas de desenvolvimento oferecidas pelo navegador. Se você não está familiarizado com estas ferramentas, dê uma olhadinha nesse tutorial: [O que são as ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools).
+5. Agora vamos dar uma olhada no HTML que o navegador renderizou, comparando-o com o nosso código fonte. Para fazer isso, usaremos as ferramentas de desenvolvimento oferecidas pelo navegador. Se você não está familiarizado com estas ferramentas, dê uma olhadinha nesse tutorial: [O que são as ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
 6. No inspetor DOM, você pode ver como o HTML renderizado fica: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
 7. Utilizando o inspetor DOM, vamos explorar nosso código detalhadamente para ver como o navegador tentou consertar os erros do código HTML (nós fizemos a análise com o Firefox, mas outros navegadores modernos _devem_ apresentar o mesmo resultado):
 
@@ -156,7 +157,8 @@ As mensagens de erros geralmente são úteis, mas algumas vezes elas não ajudam
   Exemplo: <a href="https://www.mozilla.org/>link para página da Mozilla</a> ↩ </ul>↩ </body>↩</html>
   ```
 
-  > **Nota:** Um atributo faltando uma aspas pode resultar em um elemento aberto porque o resto do documento é interpretado como conteúdo do atributo.
+  > [!NOTE]
+  > Um atributo faltando uma aspas pode resultar em um elemento aberto porque o resto do documento é interpretado como conteúdo do atributo.
 
 - "Unclosed element `ul`": Esta não ajuda em nada, já que o elemento {{htmlelement("ul")}} _está_ fechado corretamente. Este erro aparece porque o elemento {{htmlelement("a")}} não foi fechado, devido a falta de aspas de fechamento.
 

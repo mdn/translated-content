@@ -1,5 +1,5 @@
 ---
-title: Что такое WebExtensions?
+title: Что такое расширения?
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 ---
 
@@ -13,7 +13,7 @@ slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 
 Примеры: [Amazon Assistant for Firefox](https://addons.mozilla.org/en-US/firefox/addon/amazon-browser-bar/), [OneNote Web Clipper](https://addons.mozilla.org/en-US/firefox/addon/onenote-clipper/) и [Grammarly for Firefox](https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/).
 
-**Дайте пользователям продемонстрировать себя**: Дополнения могут управлять содержимым сайтов, например, позволять пользователям добавлять их любимые изображения как фоновые картинки для каждого сайта, которые они посещают. Ещё дополнения могут изменять и то, как выглядит сам интерфейс Firefox, делая это тем же способом, что и [обычные темы](/ru/docs/Mozilla/Add-ons/Themes/Theme_concepts).
+**Дайте пользователям продемонстрировать себя**: Дополнения могут управлять содержимым сайтов, например, позволять пользователям добавлять их любимые изображения как фоновые картинки для каждого сайта, которые они посещают. Ещё дополнения могут изменять и то, как выглядит сам интерфейс Firefox, делая это тем же способом, что и [обычные темы](https://extensionworkshop.com/documentation/themes/).
 
 ![Как расширение может изменить фоновую картинку сайта](https://mdn.dev/archives/media/attachments/2018/02/13/15809/ce69d140dc91da804ce6eb8f20d03c07/MyWeb_New_Tab_add_on.png)
 
@@ -25,7 +25,7 @@ slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 
 Примеры: [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/), [Reader](https://addons.mozilla.org/en-US/firefox/addon/reader/) и [Toolbox for Google Play Store™](https://addons.mozilla.org/en-US/firefox/addon/toolbox-google-play-store/).
 
-**Дайте новые инструменты и функции**: Добавляйте новые пункты в список дел или генерируйте QR-коды для текста страницы или различных ссылок. При помощи гибких опций интерфейса и мощью WebExtensions API вы можете с лёгкостью добавлять новые функции в браузер. Причём вы можете расширить таким образом функциональность любого сайта, он не обязательно должен быть вашим.
+**Дайте новые инструменты и функции**: Добавляйте новые пункты в список дел или генерируйте QR-коды для текста страницы или различных ссылок. При помощи гибких опций интерфейса и мощью WebExtension API вы можете с лёгкостью добавлять новые функции в браузер. Причём вы можете расширить таким образом функциональность любого сайта, он не обязательно должен быть вашим.
 
 ![Как выглядит генератор QR-кодов QRUTILS.com](https://mdn.dev/archives/media/attachments/2018/02/13/15806/b9070a5f71c40c18d0a4ae722bca2e4a/QR_Code_Image_Generator_add_on.png)
 
@@ -43,14 +43,10 @@ slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 
 Примеры: [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/), [Web React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) и [aXe Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/).
 
-WebExtensions - это кросс-браузерная система для разработки дополнений для браузера. В значительной степени её API совместим с [extension API](https://developer.chrome.com/extensions), который поддерживается браузерами Google Chrome и Opera. Расширения, разработанные для этих браузеров, в большинстве случаев будут работать в Firefox или Microsoft Edge с минимальными изменениями. Также API полностью совместим с [мультипроцессным Firefox](/ru/Firefox/Multiprocess_Firefox).
-
-Мы также намерены расширять API для поддержки нужд разработчиков дополнений, и если у вас есть идеи, мы будем рады услышать их. Вы можете связаться с нами через рассылку [dev-addons mailing list](https://mail.mozilla.org/listinfo/dev-addons) или на [IRC](https://wiki.mozilla.org/IRC) канале [#webextensions](irc://irc.mozilla.org/webextensions).
-
-До появления WebExtensions разработка дополнения для Firefox осуществлялась одним из трёх различных способов: [XUL/XPCOM overlays](/en-US/Add-ons/Overlay_Extensions), [bootstrapped extensions](/ru/docs/Mozilla/Add-ons/Bootstrapped_extensions) или [Add-on SDK](/ru/docs/Mozilla/Add-ons/SDK). В будущем WebExtensions станет рекомендуемым способом разработки дополнений для Firefox, а остальные способы будут считаться устаревшими.
+Расширения для Firefox создаются с помощью [WebExtension API](/ru/docs/Mozilla/Add-ons/WebExtensions) — кросс-браузерной системы разработки дополнений браузера. В значительной степени её API совместим с [extension API](https://developer.chrome.com/docs/extensions), который поддерживается браузерами Google Chrome и Opera. Расширения, разработанные для этих браузеров, в большинстве случаев будут работать в Firefox или Microsoft Edge с минимальными изменениями. Также API полностью совместим с [мультипроцессным Firefox](/ru/docs/Mozilla/Firefox/Multiprocess_Firefox).
 
 ## Что дальше?
 
-- Чтобы посмотреть примеры некоторых дополнений, см. [Example WebExtensions](/en-US/Add-ons/WebExtensions/Examples).
-- Чтобы узнать больше о структуре дополнений, см. [Anatomy of a WebExtension](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension).
-- Чтобы посмотреть пример разработки простого дополнения, см. [Ваш первый WebExtension](/ru/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension).
+- Попробуйте создать [Ваше первое расширение](/ru/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension).
+- Изучите структуру и [Внутреннее устройство расширений](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension).
+- Посмотрите другие [Примеры расширений](/ru/docs/Mozilla/Add-ons/WebExtensions/Examples).

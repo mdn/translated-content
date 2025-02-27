@@ -9,7 +9,8 @@ O cabeçalho de resposta [HTTP](/pt-BR/docs/Web/HTTP) **`X-Frame-Options`** pode
 
 A segurança adicionada é provida somente se o usuário acessando o documento está usando o navegador que suporte `X-Frame-Options`.
 
-> **Nota:** O cabeçalho HTTP {{HTTPHeader("Content-Security-Policy")}}possui uma diretiva [`frame-ancestors`](/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) que torna este cabeçalho obsoleto para navegadores que o suportam.
+> [!NOTE]
+> O cabeçalho HTTP {{HTTPHeader("Content-Security-Policy")}}possui uma diretiva [`frame-ancestors`](/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) que torna este cabeçalho obsoleto para navegadores que o suportam.
 
 <table class="properties">
   <tbody>
@@ -46,7 +47,8 @@ Se você especifica `DENY`, não somente tentativas em carregar a página em um 
 
 ## Exemplos
 
-> **Nota:** Colocar X-Frame-Options dentro de um elemento {{HTMLElement("meta")}} é inútil! Por enquanto, `<meta http-equiv="X-Frame-Options" content="deny">` não tem nenhum efeito. Não o utilize! `X-Frame-Options` funciona somente colocando a configuração através do cabeçalho HTTP, como nos exemplos abaixo.
+> [!NOTE]
+> Colocar X-Frame-Options dentro de um elemento {{HTMLElement("meta")}} é inútil! Por enquanto, `<meta http-equiv="X-Frame-Options" content="deny">` não tem nenhum efeito. Não o utilize! `X-Frame-Options` funciona somente colocando a configuração através do cabeçalho HTTP, como nos exemplos abaixo.
 
 ### Configurando o Apache
 
@@ -129,7 +131,7 @@ app.use(frameguard({ action: "SAMEORIGIN" }));
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.X-Frame-Options")}}
+{{Compat}}
 
 ## Veja também
 

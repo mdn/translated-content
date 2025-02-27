@@ -5,7 +5,7 @@ slug: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 
 {{DefaultAPISidebar("WebRTC")}}
 
-Интерфейс {{domxref("RTCDataChannel")}} является функциональностью [WebRTC API](/ru/docs/Web/API/WebRTC_API) , который позволяет открыть канал между узлами соединения, по которому можно отправлять и получать произвольные данные. Эти API намеренно сходны с [WebSocket API](/ru/docs/Web/API/WebSocket_API), для использования единой программной модели.
+Интерфейс {{domxref("RTCDataChannel")}} является функциональностью [WebRTC API](/ru/docs/Web/API/WebRTC_API) , который позволяет открыть канал между узлами соединения, по которому можно отправлять и получать произвольные данные. Эти API намеренно сходны с [WebSocket API](/ru/docs/Web/API/WebSockets_API), для использования единой программной модели.
 
 В этом примере мы откроем соединение {{domxref ("RTCDataChannel")}}, связывающее два элемента на одной странице. Хотя это явно надуманный сценарий, он полезен для демонстрации последовательности соединения двух узлов. Мы расскажем о механизме выполнения соединения, передачи и получения данных, но оставим немного информации о поиске и подключении к удалённому компьютеру для другого примера.
 
@@ -64,7 +64,7 @@ The WebRTC API makes heavy use of {{jsxref("Promise")}}s. They make it very easy
 
 ### Starting up
 
-When the script is run, we set up an {{event("load")}} event listener, so that once the page is fully loaded, our `startup()` function is called.
+When the script is run, we set up an event listener, so that once the page is fully loaded, our `startup()` function is called.
 
 ```js
 function startup() {
@@ -88,7 +88,8 @@ This is quite straightforward. We grab references to all the page elements we'll
 
 When the user clicks the "Connect" button, the `connectPeers()` method is called. We're going to break this up and look at it a bit at a time, for clarity.
 
-> **Примечание:** Even though both ends of our connection will be on the same page, we're going to refer to the one that starts the connection as the "local" one, and to the other as the "remote" end.
+> [!NOTE]
+> Even though both ends of our connection will be on the same page, we're going to refer to the one that starts the connection as the "local" one, and to the other as the "remote" end.
 
 #### Set up the local peer
 
@@ -111,13 +112,14 @@ remoteConnection = new RTCPeerConnection();
 remoteConnection.ondatachannel = receiveChannelCallback;
 ```
 
-The remote end is set up similarly, except that we don't need to explicitly create an {{domxref("RTCDataChannel")}} ourselves, since we're going to be connected through the channel established above. Instead, we set up a {{event("datachannel")}} event handler; this will be called when the data channel is opened; this handler will receive an `RTCDataChannel` object; you'll see this below.
+The remote end is set up similarly, except that we don't need to explicitly create an {{domxref("RTCDataChannel")}} ourselves, since we're going to be connected through the channel established above. Instead, we set up a event handler; this will be called when the data channel is opened; this handler will receive an `RTCDataChannel` object; you'll see this below.
 
 #### Set up the ICE candidates
 
 The next step is to set up each connection with ICE candidate listeners; these will be called when there's a new ICE candidate to tell the other side about.
 
-> **Примечание:** In a real-world scenario in which the two peers aren't running in the same context, the process is a bit more involved; each side provides, one at a time, a suggested way to connect (for example, UDP, UDP with a relay, TCP, etc.) by calling {{domxref("RTCPeerConnection.addIceCandidate()")}}, and they go back and forth until agreement is reached. But here, we just accept the first offer on each side, since there's no actual networking involved.
+> [!NOTE]
+> In a real-world scenario in which the two peers aren't running in the same context, the process is a bit more involved; each side provides, one at a time, a suggested way to connect (for example, UDP, UDP with a relay, TCP, etc.) by calling {{domxref("RTCPeerConnection.addIceCandidate()")}}, and they go back and forth until agreement is reached. But here, we just accept the first offer on each side, since there's no actual networking involved.
 
 ```js
 localConnection.onicecandidate = (e) =>
@@ -129,7 +131,7 @@ remoteConnection.onicecandidate = (e) =>
   localConnection.addIceCandidate(e.candidate).catch(handleAddCandidateError);
 ```
 
-We configure each {{domxref("RTCPeerConnection")}} to have an event handler for the {{event("icecandidate")}} event.
+We configure each {{domxref("RTCPeerConnection")}} to have an event handler for the event.
 
 #### Start the connection attempt
 
@@ -160,11 +162,12 @@ Let's go through this line by line and decipher what it means.
 6. Finally, the local connection's remote description is set to refer to the remote peer by calling localConnection's {{domxref("RTCPeerConnection.setRemoteDescription()")}}.
 7. The `catch()` calls a routine that handles any errors that occur.
 
-> **Примечание:** Once again, this process is not a real-world implementation; in normal usage, there's two chunks of code running on two machines, interacting and negotiating the connection. A side channel, commonly called a "signalling server," is usually used to exchange the description (which is in **application/sdp** form) between the two peers.
+> [!NOTE]
+> Once again, this process is not a real-world implementation; in normal usage, there's two chunks of code running on two machines, interacting and negotiating the connection. A side channel, commonly called a "signalling server," is usually used to exchange the description (which is in **application/sdp** form) between the two peers.
 
 #### Handling successful peer connection
 
-As each side of the peer-to-peer connection is successfully linked up, the corresponding {{domxref("RTCPeerConnection")}}'s {{event("icecandidate")}} event is fired. These handlers can do whatever's needed, but in this example, all we need to do is update the user interface:
+As each side of the peer-to-peer connection is successfully linked up, the corresponding {{domxref("RTCPeerConnection")}}'s event is fired. These handlers can do whatever's needed, but in this example, all we need to do is update the user interface:
 
 ```js
 function handleLocalAddCandidateSuccess() {
@@ -180,7 +183,7 @@ The only thing we do here is disable the "Connect" button when the local peer is
 
 #### Connecting the data channel
 
-Once the {{domxref("RTCPeerConnection")}} is open, the {{event("datachannel")}} event is sent to the remote to complete the process of opening the data channel; this invokes our `receiveChannelCallback()` method, which looks like this:
+Once the {{domxref("RTCPeerConnection")}} is open, the event is sent to the remote to complete the process of opening the data channel; this invokes our `receiveChannelCallback()` method, which looks like this:
 
 ```js
 function receiveChannelCallback(event) {
@@ -191,7 +194,7 @@ function receiveChannelCallback(event) {
 }
 ```
 
-The {{event("datachannel")}} event includes, in its channel property, a reference to a {{domxref("RTCDataChannel")}} representing the remote peer's end of the channel. This is saved, and we set up, on the channel, event listeners for the events we want to handle. Once this is done, our `handleReceiveMessage()` method will be called each time data is received by the remote peer, and the `handleReceiveChannelStatusChange()` method will be called any time the channel's connection state changes, so we can react when the channel is fully opened and when it's closed.
+The event includes, in its channel property, a reference to a {{domxref("RTCDataChannel")}} representing the remote peer's end of the channel. This is saved, and we set up, on the channel, event listeners for the events we want to handle. Once this is done, our `handleReceiveMessage()` method will be called each time data is received by the remote peer, and the `handleReceiveChannelStatusChange()` method will be called any time the channel's connection state changes, so we can react when the channel is fully opened and when it's closed.
 
 ### Handling channel status changes
 
@@ -240,7 +243,7 @@ The `handleReceiveChannelStatusChange()` method receives as an input parameter t
 
 ### Sending messages
 
-When the user presses the "Send" button, the sendMessage() method we've established as the handler for the button's {{event("click")}} event is called. That method is simple enough:
+When the user presses the "Send" button, the sendMessage() method we've established as the handler for the button's event is called. That method is simple enough:
 
 ```js
 function sendMessage() {
@@ -306,4 +309,4 @@ This starts by closing each peer's {{domxref("RTCDataChannel")}}, then, similarl
 
 ## Следующие шаги
 
-[Попробуйте пример в деле](https://mdn-samples.mozilla.org/s/webrtc-simple-datachannel) и посмотрите на [исходный код простого примера](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel), доступный на GitHub.
+Посмотрите на [исходный код простого примера](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel), доступный на GitHub.

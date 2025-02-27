@@ -121,7 +121,7 @@ bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument);
 
 ## 예제
 
-CodePen의 [how to use](http://codepen.io/netsi1964/full/QbLLGW/)를 참고하세요.
+CodePen의 [how to use](https://codepen.io/netsi1964/full/QbLLGW/)를 참고하세요.
 
 ## 명세
 

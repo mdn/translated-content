@@ -9,7 +9,8 @@ slug: Web/CSS/border-left-style
 
 {{EmbedInteractiveExample("pages/css/border-left-style.html")}}
 
-> **참고:** 명세는 서로 다른 스타일의 테두리가 꼭지점에서 만날 때 어떻게 그려야 할지는 정의하고 있지 않습니다.
+> [!NOTE]
+> 명세는 서로 다른 스타일의 테두리가 꼭지점에서 만날 때 어떻게 그려야 할지는 정의하고 있지 않습니다.
 
 ## 구문
 

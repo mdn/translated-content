@@ -1,36 +1,41 @@
 ---
-title: XMLHttpRequest.setRequestHeader()
+title: XMLHttpRequest：setRequestHeader() 方法
 slug: Web/API/XMLHttpRequest/setRequestHeader
+l10n:
+  sourceCommit: 9c78a44b9321fcd3fbe63d6f5b61ed749c2fa261
 ---
 
 {{APIRef('XMLHttpRequest')}}
 
-{{domxref("XMLHttpRequest")}} 物件中的 **`setRequestHeader()`** 方法用來設定 HTTP 的表頭請求。當使用 `setRequestHeader()` 的時候，必須在 {{domxref("XMLHttpRequest.open", "open()")}} 之後呼叫，同時也必須在 {{domxref("XMLHttpRequest.send", "send()")}} 之前呼叫。如果這個方法被呼叫了許多次，且設定的表頭是一樣的，那所有設定的值會被合併成一個單一的表頭請求。
+{{domxref("XMLHttpRequest")}} 的 **`setRequestHeader()`** 方法用來設定 HTTP 的請求標頭。當使用 `setRequestHeader()` 的時候，必須在 {{domxref("XMLHttpRequest.open", "open()")}} 之後呼叫，同時也必須在 {{domxref("XMLHttpRequest.send", "send()")}} 之前呼叫。如果這個方法被呼叫了許多次，且設定的標頭是一樣的，那所有設定的值會被合併成一個單一的請求標頭。
 
-在第一次呼叫 `setRequestHeader()` 之後的每一次的呼叫，都會把給定的文字附加在已存在的表頭內容之後。
+在第一次呼叫 `setRequestHeader()` 之後的每一次的呼叫，都會把給定的文字附加在已存在的標頭內容之後。
 
-If no {{HTTPHeader("Accept")}} header has been set using this, an `Accept` header with the type `"*/*"` is sent with the request when {{domxref("XMLHttpRequest.send", "send()")}} is called.
+如果沒有使用此設定 {{HTTPHeader("Accept")}} 標頭，則在呼叫 {{domxref("XMLHttpRequest.send", "send()")}} 時，將隨請求傳送類型為「`*/*`」 的 `Accept` 標頭。
 
-基於安全的理由，有些表頭只有使用者代理器可以使用。這些表頭包含了： {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} 和 {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
+出於安全原因，有幾個由使用者代理（User Agent）管控的{{Glossary("Forbidden_header_name", "禁止修改的標頭")}}。任何嘗試從前端 JavaScript 程式碼中設置這些標頭的值之行為都會被忽略，且不會發出警告或錯誤。
 
-> **備註：** For your custom fields, you may encounter a "**not allowed by Access-Control-Allow-Headers in preflight response**" exception when you send requests across domains. In this situation, you need to set up the {{HTTPHeader("Access-Control-Allow-Headers")}} in your response header at server side.
+此外，可以在請求中添加 [`Authorization`](/zh-TW/docs/Web/HTTP/Headers/Authorization) HTTP 標頭，但如果請求被跨域重定向，這個標頭將會被移除。
+
+> [!NOTE]
+> 對於你的自訂字段，跨域發送請求時可能會遇到「**not allowed by Access-Control-Allow-Headers in preflight response**」的例外狀況。在這種情況下，你需要在伺服器端的回應標頭中設定 {{HTTPHeader("Access-Control-Allow-Headers")}}。
 
 ## 語法
 
-```plain
-XMLHttpRequest.setRequestHeader(header, value)
+```js-nolint
+setRequestHeader(header, value)
 ```
 
 ### 參數
 
 - `header`
-  - : 想要設定所屬值的表頭名稱。
+  - : 想要設定所屬值的標頭名稱。
 - `value`
-  - : 用來設定表頭本身的值。
+  - : 用來設定標頭本身的值。
 
-### 回傳值
+### 傳回值
 
-未定義。
+無（{{jsxref("undefined")}}）。
 
 ## 規範
 
@@ -42,5 +47,5 @@ XMLHttpRequest.setRequestHeader(header, value)
 
 ## 參見
 
-- [Using XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML in XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [XMLHttpRequest 中的 HTML](/zh-TW/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)

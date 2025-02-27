@@ -1,13 +1,22 @@
 ---
 title: MathML
 slug: Web/MathML
+l10n:
+  sourceCommit: 6e0504e4a750ac4f495086c7aec3bfd293ad6417
 ---
 
 {{MathMLRef}}
 
-**Mathematical Markup Language (MathML)** 是一个用于描述数学公式、符号的一种 [XML](/zh-CN/docs/XML) 标记语言。
+**数学标记语言**（MathML）是一种基于 [XML](/zh-CN/docs/Web/XML) 的，用于描述数学符号的语言。
 
-在这里你可以找到有关的文档、例子和工具来帮助你使用这个强大的技术。如果想快速了解这项技术，请看 [Slides for the innovation fairs at Mozilla Summit 2013](http://fred-wang.github.io/MozSummitMathML/index.html)。
+[MathML](https://w3c.github.io/mathml/) 最初被设计为用于浏览器、办公套件、[计算机代数系统](https://zh.wikipedia.org/wiki/計算機代數系統)、[EPUB](https://www.w3.org/publishing/epub33/) 阅读器和基于 [LaTeX](https://zh.wikipedia.org/wiki/LaTeX) 的生成器的通用规范。然而，这种方法并不非常适用于 Web：[专注于语义的子集](https://w3c.github.io/mathml/#contm)从未在浏览器中实现，而[专注于数学布局](https://w3c.github.io/mathml/#presm)的子集导致了不完整和不一致的浏览器实现。
+
+[MathML Core](https://w3c.github.io/mathml-core/) 是一个基于 [LaTeX](https://zh.wikipedia.org/wiki/LaTeX) 和[开放字体格式](https://docs.microsoft.com/typography/opentype/spec/math)规则的增加了实现细节的子集。它专门为浏览器量身定制，并设计成与其他 Web 标准（包括 [HTML](/zh-CN/docs/Web/HTML)、[CSS](/zh-CN/docs/Web/CSS)、[DOM](/zh-CN/docs/Web/API/Document_Object_Model)、[JavaScript](/zh-CN/docs/Web/JavaScript)）良好配合。
+
+以下是有关 MathML 文档、示例和工具的链接。MDN 将 [MathML Core](https://w3c.github.io/mathml-core/) 用作参考规范，但由于不稳定的标准化历史，旧版 MathML 特性可能仍会出现在现有的实现和 Web 内容中。
+
+> [!NOTE]
+> 强烈建议开发人员和作者切换到 MathML Core，或许依赖其他 Web 技术来满足缺失的用例。Math WG 正在维护一组 [MathML polyfill](https://github.com/mathml-refresh/mathml-polyfills) 以便促进这一过渡。
 
 ## MathML 参考文档
 
@@ -19,24 +28,19 @@ slug: Web/MathML
   - : 可以让你理解如何使用 MathML 的例子。
 - [编写 MathML](/zh-CN/docs/Web/MathML/Authoring)
   - : 编写 MathML 的一些建议和提示，包括建议使用的编辑器以及如何将编辑器的输出集成到网页中去。
-
-[查看全部...](/zh-CN/docs/tag/MathML)
+- [MathML 教程](/zh-CN/docs/Web/MathML)
+  - : 对 MathML 的简要介绍。
 
 ## 从社区获得帮助
 
-- [IRC 频道](irc://irc.mozilla.org/%23mathml)
-- [Mozilla 贡献者的 Wiki](https://wiki.mozilla.org/MathML:Home_Page)
 - [W3C Math 主页](https://www.w3.org/Math/)
+- [在 GitHub w3c/mathml 代码库中提起议题](https://github.com/w3c/mathml/issues)
 - [www-math w3.org 邮件存档](https://lists.w3.org/Archives/Public/www-math/)
 
 ## 工具
 
 - [W3C Validator](http://validator.w3.org)
-- [Mathzilla Firefox 拓展收藏集](https://addons.mozilla.org/firefox/collections/fred_wang/mathzilla/)
-- [TeXZilla](https://github.com/fred-wang/TeXZilla) - 基于 Javascript 的 LaTeX to MathML 转换器（[在线 demo](https://fred-wang.github.io/TeXZilla/)，[Firefox OS webapp](http://r-gaia-cs.github.io/TeXZilla-webapp/)，[Firefox 拓展](https://addons.mozilla.org/en-US/firefox/addon/texzilla/)，[在网页、JS 程序中使用，等等](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla)）
-- [LaTeXML](http://dlmf.nist.gov/LaTeXML/) - 将 LaTeX 文档转换为 HTML+MathML 网页
-- [Web Equation](http://webdemo.visionobjects.com/home.html#equation) - 将手写的公式转换为 MathML 或 LaTeX
-- [MathJax](https://www.mathjax.org/) - 跨浏览器的 JavaScript 数学渲染引擎。若要强制 MathJax 使用原生 MathML，可以试试[这个 Mozilla 拓展](https://addons.mozilla.org/en-US/firefox/addon/mathjax-native-mathml/)、这个 [Safari 拓展](https://fred-wang.github.io/mathjax-native-mathml-safari/mathjax-native-mathml.safariextz)，或是这个 [UserScript 脚本](https://openuserjs.org/scripts/fred.wang/MathJax_Native_MathML/)。
+- [W3C 的 wiki 页面](https://www.w3.org/wiki/Math_Tools)
 
 ## 相关主题
 

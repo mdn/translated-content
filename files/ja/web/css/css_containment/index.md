@@ -1,138 +1,106 @@
 ---
-title: CSS 封じ込め
+title: CSS 拘束
 slug: Web/CSS/CSS_containment
+l10n:
+  sourceCommit: 559e1fa9e8d13e5b49862ebb1d53c6f39b55d79d
 ---
 
 {{CSSRef}}
-CSS 封じ込め (CSS Containment) 仕様の目的は、ウェブページの表示性能を向上させるために、開発者がページの任意のサブツリーをページのそれ以外の部分から独立させることができるようにすることです。もしページの一部が独立していることをブラウザーが知っていれば、レンダリングを最適化し、表示性能を向上させることができます。この仕様では、単一の CSS プロパティ {{cssxref("contain")}} を定義しています。この文書では、その仕様の基本的な目的を説明しています。
 
-## 基本的な例
+**CSS 拘束** (CSS Containment) モジュールでは、拘束とコンテナークエリーを定義しています。
 
-多くのウェブページは、互いに独立したいくつかのセクションで構成されています。例えば、記事の見出しと内容の一覧が、以下のようなマークアップで存在していたとします。
+拘束によって、ページのサブツリーを DOM の残りの部分から分離することができます。ブラウザーは、これらの独立した部分のレンダリングを最適化することで、パフォーマンスを向上させることができます。
 
-```html
-<h1>私のブログ</h1>
-<article>
-  <h2>良い記事の見出し</h2>
-  <p>内容はこちら。</p>
-</article>
-<article>
-  <h2>他の記事の他の見出し</h2>
-  <p>さらなる内容はこちら。</p>
-</article>
-```
-
-それぞれの記事には CSS で {{cssxref("contain")}} プロパティに `content` という値が設定されています。
-
-```css
-article {
-  contain: content;
-}
-```
-
-それぞれの記事は、ページ上の他の記事と独立していますので、 `contain: content` がこのことをブラウザーに伝えるために指定されています。それでブラウザーはこの情報を使用して、どのようにして内容を描画するかを決定します。例えば、表示される領域の外側にある記事は描画しない場合があります。
-
-それぞれの `<article>` の `contain` プロパティを `content` の値に設定すると、新しい要素が挿入されたとき、ブラウザーはそれを含む要素のサブツリー以外の領域を再レイアウトまたは再描画する必要がないことを判断します。ただし、もし `<article>` が（`height: auto` の場合のように）そのコンテンツによってサイズが変わるようスタイル付けされている場合は、ブラウザーがサイズの変化に対応する必要があるかもしれません。
-
-各記事が独立していることを `contain` プロパティで伝えています。
-
-`content` の値は `contain: layout paint` の短縮形です。これはブラウザーに、要素の内部レイアウトがページの他の部分と完全に分離しており、要素に関するすべてがその境界の内側で描画されることを伝えます。視覚的にはみ出るようなものはありません。
-
-この情報は、ページを作成するウェブ開発者にとっては、通常知っていることであり、実際、非常に明白なことです。しかし、ブラウザーはその意図を推測することができず、記事が完全に自己完結していると仮定することはできません。したがって、このプロパティは、この事実をブラウザーに説明し、その知識に基づいて表示性能を最適化することを可能にする良い方法を提供します。
-
-## 主要概念と用語
-
-この仕様では {{cssxref("contain")}} というプロパティのみを定義しています。このプロパティの値には、封じ込めの種類を指定します。
-
-### レイアウトの封じ込め
-
-```css
-article {
-  contain: layout;
-}
-```
-
-レイアウトは通常、文書全体がスコープになっています。つまり、文書全体の中から 1 つの要素を動かしただけで、すべてが動かされたかのように扱われます。 `contain: layout` を使うことで、ブラウザーに対して必要な要素のみを伝えることができます。このプロパティを指定した要素の中の全てがその要素によって封じ込められ、その他の要素には影響せず、そしてその包含ブロックは独立した整形コンテキストになります。
-
-加えて、以下の点に注意する必要があります。
-
-- `float` レイアウトはこのプロパティとは独立して作用します。
-- レイアウトの封じ込めの境界でマージンが相殺されることはありません。
-- レイアウトのコンテナーは `absolute`/`fixed` による位置指定の子要素の包含ブロックになります。
-- この包含ボックスは重ね合わせコンテキストを作ります。従って {{cssxref("z-index")}} を使用することができます。
-
-### ペイントの封じ込め
-
-```css
-article {
-  contain: paint;
-}
-```
-
-ペイントの封じ込めは、基本的に、ボックスを主要ボックスのパディングエッジでクリッピングします。視覚的なはみ出しは許されません。 `paint` 封じ込めにも `layout` 封じ込めと同じことが当てはまります（上記を参照）。
-
-もうひとつの利点は、包含ボックスが画面外にある場合、ブラウザーはその内包する要素を描く必要がないことです — これらはそのボックスによって完全に内包されているので、画面外にあるに違いないからです。
-
-### サイズの封じ込め
-
-```css
-article {
-  contain: size;
-}
-```
-
-サイズの封じ込めを単独で使用した場合、表示性能の最適化はあまり期待できません。しかし、要素の子のサイズが要素自体のサイズに影響しないことを意味し、そのサイズは子がないものとして計算されます。
-
-もし、`contain: size` をオンにした場合は、これを適用した要素のサイズも指定する必要があります。もし、手動でサイズを指定しない場合は、ほとんどの場合、サイズがゼロになってしまいます。
-
-### スタイルの封じ込め
-
-```css
-article {
-  contain: style;
-}
-```
-
-名前に反して、スタイルの封じ込めは、 [Shadow DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) で得られるようにスタイルを封じ込めるわけではありません。主な使用例は、 [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) がある要素で変更され、それがツリーの残りの部分に影響する可能性がある状況を防ぐことです。
-
-`contain: style` を使用すると、{{cssxref("counter-increment")}} と {{cssxref("counter-set")}} プロパティがそのサブツリーにのみ限定された新しいカウンターを作成することを保証します。
-
-> **メモ:** `style` の封じ込め仕様上「リスクがあり」、どこでも対応しているとは限りません (現在 Firefox は対応していません)。
-
-### 特殊な値
-
-封じ込めの特殊な値が 2 つあります。
-
-- `content`
-- `strict`
-
-1 つ目は上記の例で既に見ました。 `contain: content` を使用すると、 `layout` と `paint` の封じ込めが有効になります。仕様書では、この値を「広く適用してもそれなりに安全である」と説明しています。この値は `size` の封じ込めを適用しないので、子要素のサイズに依存して、ボックスのサイズがゼロになる危険性はありません。
-
-できるだけ多くの封じ込めを得るには、 `contain: strict` を使用します。これは `contain: size layout paint` と同じ動作をしますが、おそらく以下のようにすると、 `style` に対応しているブラウザーでは封じ込めを追加することができます。
-
-```css
-contain: strict;
-contain: strict style;
-```
+コンテナクエリーは寸法の[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)と似ていますが、クエリーがビューポートの寸法ではなく、拘束コンテキストとして定義された特定のコンテナー要素の寸法に基づいている点が異なります。コンテナークエリーにより、コンテナーの寸法、プロパティ、プロパティ値を照会し、条件付きで CSS スタイルを適用することができます。これらの条件付きスタイルを適用するとき、コンテナークエリーの長さの単位を使用することができます。コンテナークエリーの長さの単位は、クエリーコンテナーの寸法に相対する長さを指定します。追加のプロパティを定義することで、特定の要素をクエリーコンテナーとして確立し、それに固有の名前を付けることができます。
 
 ## リファレンス
 
-### CSS プロパティ
+### プロパティ
 
 - {{cssxref("contain")}}
+- {{cssxref("container")}} 一括指定
+  - {{cssxref("container-name")}}
+  - {{cssxref("container-type")}}
 - {{cssxref("content-visibility")}}
+
+### アットルールと記述子
+
+- {{cssxref("@container")}}
+- [`@container` の記述子](/ja/docs/Web/CSS/@container#descriptors):
+  - `aspect-ratio`
+  - `block-size`
+  - `height`
+  - `inline-size`
+  - `orientation`
+  - `width`
+
+### 関数
+
+- [`style()`](/ja/docs/Web/CSS/@container#container_style_queries)
+
+### データ型
+
+- [`<container-name>`](/ja/docs/Web/CSS/@container#values)
+- [`<style-feature>`](/ja/docs/Web/CSS/@container#container_style_queries)
+- [Container relative `<length>` units](/ja/docs/Web/CSS/length#container_query_length_units)
+
+### イベント
+
+- {{domxref("Element.contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
+
+### インターフェイス
+
+- {{domxref("ContentVisibilityAutoStateChangeEvent")}}
+  - {{domxref("ContentVisibilityAutoStateChangeEvent.skipped", "skipped")}} プロパティ
+- {{domxref("CSSContainerRule")}}
+  - {{domxref("CSSContainerRule.containerName")}}
+  - {{domxref("CSSContainerRule.containerQuery")}}
+
+## ガイド
+
+- [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
+
+  - : コンテナーコンテキストに名前を付けることを含む、 `@container` でコンテナクエリーを使用するガイドです。
+
+- [CSS 拘束の使用](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment)
+
+  - : CSS コンテナーの基本的な目的と、より良いユーザー体験のために `contain` と `content-visibility` を活用する方法を記述しています。
+
+## 関連概念
+
+- [レイアウトと包含ブロック](/ja/docs/Web/CSS/Containing_block)
+- [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
+
+- [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)モジュール
+
+  - {{cssxref("@media")}} アットルール
+  - [CSS 論理演算子](/ja/docs/Web/CSS/@media#論理演算子) (`not`, `or`, `and`)
+
+- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)モジュール
+
+  - {{cssxref("@starting-style")}} アットルール
+  - {{cssxref("transition-behavior")}} プロパティ
+
+- CSS ボックスサイズ調整モジュール
+
+  - {{cssxref("contain-intrinsic-size")}} 一括指定プロパティ
+  - {{CSSxRef("contain-intrinsic-inline-size")}} プロパティ
+  - {{CSSxRef("contain-intrinsic-block-size")}} プロパティ
+  - {{CSSxRef("contain-intrinsic-width")}} プロパティ
+  - {{CSSxRef("contain-intrinsic-height")}} プロパティ
+
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール
+
+  - [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)ガイド
+
+- [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting)モジュール
+  - [CSS 入れ子のアットルール](/ja/docs/Web/CSS/CSS_nesting/Nesting_at-rules)ガイド
 
 ## 仕様書
 
 {{Specifications}}
 
-## ブラウザーの互換性
-
-{{Compat("css.properties.contain")}}
-
-{{Compat("css.properties.content-visibility")}}
-
-## 外部リソース
+## 関連情報
 
 - [An Introduction to CSS Containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/)
 - [Everything You Need to Know About the CSS `will-change` Property](https://dev.opera.com/articles/css-will-change-property)

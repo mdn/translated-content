@@ -1,30 +1,26 @@
 ---
-title: ":nth-child()"
+title: :nth-child()
 slug: Web/CSS/:nth-child
+l10n:
+  sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
 
 {{CSSRef}}
 
-**`:nth-child()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中での位置に基づいて選択します。
+**`:nth-child()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中での位置に基づいて選択します。つまり `:nth-child()` セレクターは、親要素内のすべての兄弟要素同士の位置に従って子要素を選択します。
 
-```css
-/* リスト中の 2 番目の <li> 要素を選択 */
-li:nth-child(2) {
-  color: lime;
-}
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-child.html", "tabbed-shorter")}}
 
-/* 兄弟要素の中で 3 つおきに要素を選択 */
-:nth-child(4n) {
-  color: lime;
-}
-```
+> **メモ:** `element:nth-child()` の構文では、子要素のカウントにはあらゆる要素タイプの兄弟子要素が含まれます。しかし、その位置の子要素について、要素がセレクターの他の部分と一致する場合のみ、一致するとみなされます。
 
 ## 構文
 
 `:nth-child()` 擬似クラスは、引数を 1 つ指定し、リストの子要素を要素の位置で選択するためのパターンを記述します。要素の位置は 1 から始まります。
 
-```
-:nth-child( <nth> [ of <complex-selector-list> ]? )
+```css-nolint
+:nth-child(<nth> [of <complex-selector-list>]?) {
+  /* ... */
+}
 ```
 
 ### キーワード値
@@ -38,22 +34,40 @@ li:nth-child(2) {
 
 - `<An+B>`
 
-  - : リスト中の位置が、 `An+B` で定義された数値のパターンと一致する要素を表します。
+  - : 兄弟要素の並びにおける、数値で指定した位置がパターン `An+B` と一致する要素を表します。`n` の値が正の整数またはゼロの場合、次のようになります。
 
     - `A` は整数の刻み値です。
     - `B` は整数の加算値です。
     - `n` はすべての正の整数で、 0 から始まります。
 
-    リスト中の _An+B_ 番目の要素として読むことができます。
+    リスト中の `An+B` 番目の要素として読むことができます。`A` と `B` はどちらも {{cssxref("&lt;integer&gt;")}} の値が示されている必要があります。
+
+### `of <selector>` 構文
+
+セレクター引数を渡すことで、そのセレクターに一致する **n 番目**の要素を選択することができます。例えば、次のセレクターは `class="important"` を持つ最初の 3 つのリストアイテムに一致します。
+
+```css
+:nth-child(-n + 3 of li.important) {
+}
+```
+
+これは、セレクターを関数の外に移動させた場合とは異なります。例えば、
+
+```css
+li.important:nth-child(-n + 3) {
+}
+```
+
+このセレクターは、リストアイテムが最初の 3 つの子要素の中にあり、セレクター `li.important` と一致する場合に、そのリストアイテムを選択します。
 
 ## 例
 
-<h3 id="Example_selectors" name="Example_selectors">セレクターの例</h3>
+### セレクターの例
 
 - `tr:nth-child(odd)` または `tr:nth-child(2n+1)`
-  - : HTML テーブルの奇数行 (1、3、5、など) を表します。
+  - : HTML テーブルの奇数行（1、3、5、など）を表します。
 - `tr:nth-child(even)` または `tr:nth-child(2n)`
-  - : HTML テーブルの偶数行 (2、4、6、など) を表します。
+  - : HTML テーブルの偶数行（2、4、6、など）を表します。
 - `:nth-child(7)`
   - : 7 番目の要素を表します。
 - `:nth-child(5n)`
@@ -74,6 +88,8 @@ li:nth-child(2) {
   - : 兄弟要素のグループの中で 8 ～ 15 番目の `<p>` 要素を表します。
 
 ### 詳細な例
+
+#### HTML
 
 ```html
 <h3>
@@ -140,29 +156,321 @@ li:nth-child(2) {
 
 #### CSS
 
-```css
-html {
+```css hidden
+* {
   font-family: sans-serif;
 }
 
 span,
 div em {
   padding: 5px;
-  border: 1px solid green;
+  border: 1px solid tomato;
   display: inline-block;
   margin-bottom: 3px;
 }
+```
 
+```css
 .first span:nth-child(2n + 1),
 .second span:nth-child(2n + 1),
 .third span:nth-of-type(2n + 1) {
-  background-color: lime;
+  background-color: tomato;
 }
 ```
 
 #### 結果
 
 {{EmbedLiveSample('Detailed_example', 550, 550)}}
+
+### 'of &lt;selector&gt;' の使用
+
+この例では、名前付きの順序なしリストがあり、そのうちのいくつかは **noted** として `class="noted"` を使用してマークされています。これらは太い下線で強調表示されています。
+
+#### HTML
+
+```html
+<ul>
+  <li class="noted">Diego</li>
+  <li>Shilpa</li>
+  <li class="noted">Caterina</li>
+  <li>Jayla</li>
+  <li>Tyrone</li>
+  <li>Ricardo</li>
+  <li class="noted">Gila</li>
+  <li>Sienna</li>
+  <li>Titilayo</li>
+  <li class="noted">Lexi</li>
+  <li>Aylin</li>
+  <li>Leo</li>
+  <li>Leyla</li>
+  <li class="noted">Bruce</li>
+  <li>Aisha</li>
+  <li>Veronica</li>
+  <li class="noted">Kyouko</li>
+  <li>Shireen</li>
+  <li>Tanya</li>
+  <li class="noted">Marlene</li>
+</ul>
+```
+
+#### CSS
+
+```css hidden
+* {
+  font-family: sans-serif;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  font-size: 1.2rem;
+  padding-left: 0;
+}
+
+li {
+  margin: 0.125rem;
+  padding: 0.25rem;
+}
+
+li {
+  border: 1px solid tomato;
+}
+
+.noted {
+  border-bottom: 5px solid tomato;
+}
+```
+
+次のCSSでは、`class="noted"` が指定された**偶数番目**のリストアイテムを対象としています。
+
+```css
+li:nth-child(even of .noted) {
+  background-color: tomato;
+  border-bottom-color: seagreen;
+}
+```
+
+#### 結果
+
+`class="noted"` があるアイテムは太い下線があり、3、10、17 のアイテムは、`class="noted"` がある偶数のリストアイテムであるため、背景が指定されています。
+
+{{EmbedLiveSample('of_selector_syntax_example', 550, 120)}}
+
+### of セレクター構文とセレクター nth-child
+
+この例では、名前付きの順序なしリストが 2 つあります。1 つ目のリストは `li:nth-child(-n + 3 of .noted)` の効果を示し、2 つ目のリストは `li.noted:nth-child(-n + 3)` の効果を示します。
+
+#### HTML
+
+```html
+<ul class="one">
+  <li class="noted">Diego</li>
+  <li>Shilpa</li>
+  <li class="noted">Caterina</li>
+  <li>Jayla</li>
+  <li>Tyrone</li>
+  <li>Ricardo</li>
+  <li class="noted">Gila</li>
+  <li>Sienna</li>
+  <li>Titilayo</li>
+  <li class="noted">Lexi</li>
+</ul>
+<ul class="two">
+  <li class="noted">Diego</li>
+  <li>Shilpa</li>
+  <li class="noted">Caterina</li>
+  <li>Jayla</li>
+  <li>Tyrone</li>
+  <li>Ricardo</li>
+  <li class="noted">Gila</li>
+  <li>Sienna</li>
+  <li>Titilayo</li>
+  <li class="noted">Lexi</li>
+</ul>
+```
+
+#### CSS
+
+```css hidden
+* {
+  font-family: sans-serif;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  font-size: 1.2rem;
+  padding-left: 0;
+}
+
+li {
+  margin: 0.125rem;
+  padding: 0.25rem;
+}
+
+li {
+  border: 1px solid tomato;
+}
+
+.noted {
+  border-bottom: 5px solid tomato;
+}
+```
+
+```css
+ul.one > li:nth-child(-n + 3 of .noted) {
+  background-color: tomato;
+  border-bottom-color: seagreen;
+}
+
+ul.two > li.noted:nth-child(-n + 3) {
+  background-color: tomato;
+  border-bottom-color: seagreen;
+}
+```
+
+#### 結果
+
+1 つ目のケースでは、リストの最初の 3 つのアイテムであるかどうかに関わらず、最初の 3 つのリストアイテムに `class="noted"` というスタイルが適用されます。
+
+2 つ目のケースでは、リストの最初の 3 つのアイテム内にあるアイテムに `class="noted"` というスタイルが適用されます。
+
+{{EmbedLiveSample('of_selector_syntax_vs_selector_nth-child', 550, 150)}}
+
+### of セレクターを使用して表の縞模様を修正
+
+表でよく使用される方法として、行の背景色を明るい色と暗い色で交互に変える「縞模様」があります。これにより、表が読みやすくなり、アクセシビリティも向上します。行が非表示になっている場合、縞模様は統合されて表示され、意図した効果が得られなくなります。この例では、行が非表示 (`hidden`) になっている表が 2 つ表示されています。2 つ目の表では、`of:not([hidden])` を使用して非表示の行を処理しています。
+
+#### HTML
+
+```html-nolint hidden
+<div class="wrapper">
+```
+
+```html-nolint
+<table class="broken">
+  <thead>
+    <tr><th>Name</th><th>Age</th><th>Country</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Mamitiana</td><td>23</td><td>Madagascar</td></tr>
+    <tr><td>Yuki</td><td>48</td><td>Japan</td></tr>
+    <tr hidden><td>Tlayolotl</td><td>36</td><td>Mexico</td></tr>
+    <tr><td>Adilah</td><td>27</td><td>Morocco</td></tr>
+    <tr><td>Vieno</td><td>55</td><td>Finland</td></tr>
+    <tr><td>Ricardo</td><td>66</td><td>Brazil</td></tr>
+  </tbody>
+</table>
+<table class="fixed">
+  <thead>
+    <tr><th>Name</th><th>Age</th><th>Country</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Mamitiana</td><td>23</td><td>Madagascar</td></tr>
+    <tr><td>Yuki</td><td>48</td><td>Japan</td></tr>
+    <tr hidden><td>Tlayolotl</td><td>36</td><td>Mexico</td></tr>
+    <tr><td>Adilah</td><td>27</td><td>Morocco</td></tr>
+    <tr><td>Vieno</td><td>55</td><td>Finland</td></tr>
+    <tr><td>Ricardo</td><td>66</td><td>Brazil</td></tr>
+  </tbody>
+</table>
+```
+
+```html hidden
+</div>
+```
+
+#### CSS
+
+```css hidden
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+td {
+  padding: 0.125rem 0.5rem;
+}
+```
+
+```css
+.broken > tbody > tr:nth-child(even) {
+  background-color: silver;
+}
+```
+
+```css
+.fixed > tbody > tr:nth-child(even of :not([hidden])) {
+  background-color: silver;
+}
+```
+
+#### 結果
+
+最初の表では、これは単に `:nth-child(even)` を使用しているだけです。3 行目は `hidden` 属性を保有しています。この例では、3 行目は表示されず、2 行目と 4 行目は偶数としてカウントされます。これは技術的には正しいですが、視覚的には正しくありません。
+
+2 つ目の表では、`:nth-child(even of :not([hidden]))` で of 構文を使用して、非表示になって**いない** `tr` のみを対象としています。
+
+{{EmbedLiveSample('Using_of_selector_to_fix_striped_tables', 550, 180)}}
+
+### 表の列のスタイル付け
+
+表の列にスタイル設定を行う場合、{{HTMLElement("col")}} 要素にスタイルを設定することはできません。表のセルは、この要素の子ではないためです（行要素である {{HTMLElement("tr")}} では可能です）。列のセルを選択するには、`:nth-child()` のような擬似クラスが便利です。
+
+この例では、列ごとに異なるスタイルを設定しています。
+
+#### HTML
+
+```html-nolint
+<table>
+<caption>学生名簿</caption>
+<colgroup>
+  <col/>
+  <col/>
+  <col/>
+</colgroup>
+  <thead>
+    <tr><th>名前</th><th>年齢</th><th>国籍</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Mamitiana</td><td>23</td><td>Madagascar</td></tr>
+    <tr><td>Yuki</td><td>48</td><td>Japan</td></tr>
+  </tbody>
+</table>
+
+```
+
+#### CSS
+
+```css
+td {
+  padding: 0.125rem 0.5rem;
+  height: 3rem;
+  border: 1px solid black;
+}
+
+tr :nth-child(1) {
+  text-align: left;
+  vertical-align: bottom;
+  background-color: silver;
+}
+
+tbody tr :nth-child(2) {
+  text-align: center;
+  vertical-align: middle;
+}
+
+tbody tr :nth-child(3) {
+  text-align: right;
+  vertical-align: top;
+  background-color: tomato;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('Styling_a_table_column', 100, 200)}}
 
 ## 仕様書
 
@@ -174,4 +482,8 @@ div em {
 
 ## 関連情報
 
-- {{ Cssxref(":nth-of-type") }}, {{ Cssxref(":nth-last-child") }}
+- {{ Cssxref(":nth-of-type", ":nth-of-type()") }}
+- {{ Cssxref(":nth-last-child", ":nth-last-child()") }}
+- {{ Cssxref(":has", ":has()") }}: 親要素を選択する擬似クラス
+- [ツリー構造擬似クラス](/ja/docs/Web/CSS/Pseudo-classes#ツリー構造擬似クラス)
+- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール

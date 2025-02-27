@@ -11,7 +11,8 @@ Si vous souhaitez contribuer en ajoutant une recette à celles présentées dans
 
 **Une bonne recette consiste en la version la plus simple possible d'un motif utile pour concevoir une page web.** Chaque ligne de CSS écrite dans la recette doit servir à illustrer le motif. Tout ce qui est purement décoratif pour l'exemple doit être exclus. L'idée est que la recette puisse servir de base à n'importe qui et de pouvoir appliquer ses propres styles sur l'exemple si besoin.
 
-> **Note :** Quant à la traduction et aux recettes en anglais, une recette (l'exemple interactif, la version téléchargeable et la page MDN) doit d'abord être créée en anglais avant de pouvoir être mise à disposition en français. La suite de ce guide explique en français ce qu'il faut réaliser mais la majeure partie du contenu produit devra être en anglais.
+> [!NOTE]
+> Quant à la traduction et aux recettes en anglais, une recette (l'exemple interactif, la version téléchargeable et la page MDN) doit d'abord être créée en anglais avant de pouvoir être mise à disposition en français. La suite de ce guide explique en français ce qu'il faut réaliser mais la majeure partie du contenu produit devra être en anglais.
 
 ## Les étapes pour la publication
 
@@ -71,11 +72,12 @@ Ouvrez une _pull request_ depuis votre _fork_ vers le [dépôt des exemples CSS]
 
 ### 5. Créer la page sur MDN
 
-Une fois l'exemple fusionné, vous pouvez créer l'article correspondant sur MDN. Pour cela, vous aurez besoin d'un compte et [des permissions pour la création de page](/fr/docs/MDN/Contribute/Howto/Create_and_edit_pages#Getting_page_creation_permissions). Vous pourrez alors créer une page comme sous-page de la section. [Cette page modèle pourra vous servir de point de départ pour votre contenu](/fr/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template).
+Une fois l'exemple fusionné, vous pouvez créer l'article correspondant sur MDN. Pour cela, vous aurez besoin d'un compte et [des permissions pour la création de page](/fr/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#getting_page_creation_permissions). Vous pourrez alors créer une page comme sous-page de la section. [Cette page modèle pourra vous servir de point de départ pour votre contenu](/fr/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template).
 
 Le modèle explique le contenu de chaque section. Vous pouvez également consulter les recettes existantes comme références. Si vous cliquez sur le bouton d'édition en haut de page, vous pourrez ainsi accéder au contenu « brut » de la page et voir comment les macros sont utilisées afin d'intégrer les données de compatibilité ou les exemples interactifs.
 
-> **Note :** Si vous souhaitez effectuer la traduction d'une recette existante, vous pouvez consulter [la page modèle en français](/fr/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template).
+> [!NOTE]
+> Si vous souhaitez effectuer la traduction d'une recette existante, vous pouvez consulter [la page modèle en français](/fr/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template).
 
 Si vous avez besoin d'une aide générale sur l'utilisation de MDN, vous pouvez consulter les pages d'aide.
 

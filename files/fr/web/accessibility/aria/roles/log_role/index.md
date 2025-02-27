@@ -3,11 +3,13 @@ title: Utiliser le rôle log
 slug: Web/Accessibility/ARIA/Roles/log_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Description
 
-Cette technique présente l'utilisation du rôle [`log`](http://www.w3.org/TR/wai-aria/roles#log) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
+Cette technique présente l'utilisation du rôle [`log`](https://www.w3.org/TR/wai-aria/roles#log) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
 
-Le rôle `log` est utilisé pour identifier un élément qui crée [une zone live](http://www.w3.org/WAI/PF/aria/terms#def_liveregion) où de nouvelles informations sont ajoutées dans un ordre significatif et où les anciennes informations peuvent être supprimées. Par exemple, un journal de salon de discussion, l'historique d'une messagerie ou un fichier d'erreurs. Contrairement aux autres types de zones live, ce rôle est ordonné de façon séquentielle et les nouvelles informations sont uniquement ajoutées à la fin de l'enregistrement. Lorsque ce rôle est ajouté à un élément, le navigateur émettra un événement `log` accessible aux produits de technologie d'assistance qui pourront alors le notifier à l'utilisateur.
+Le rôle `log` est utilisé pour identifier un élément qui crée [une zone live](https://www.w3.org/WAI/PF/aria/terms#def_liveregion) où de nouvelles informations sont ajoutées dans un ordre significatif et où les anciennes informations peuvent être supprimées. Par exemple, un journal de salon de discussion, l'historique d'une messagerie ou un fichier d'erreurs. Contrairement aux autres types de zones live, ce rôle est ordonné de façon séquentielle et les nouvelles informations sont uniquement ajoutées à la fin de l'enregistrement. Lorsque ce rôle est ajouté à un élément, le navigateur émettra un événement `log` accessible aux produits de technologie d'assistance qui pourront alors le notifier à l'utilisateur.
 
 Par défaut, les mises à jour ne contiennent que les changements apportés à la zone live et elles sont annoncées à l'utilisateur lorsqu'il est inactif. Si l'utilisateur a besoin d'entendre l'ensemble de la zone live lorsqu'un changement se produit, il faut utiliser `aria-atomic="true"`. Pour faire les annonces le plus tôt possible et lorsque l'utilisateur peut être interrompu, `aria-live="assertive"` peut être défini pour lancer des mises à jour plus agressives.
 
@@ -23,7 +25,8 @@ Les technologies d'assistance devraient être à l'écoute de tels événements 
 - Les lecteurs d'écran devraient annoncer les changements intervenus dans le fichier de journalisation lorsque l'utilisateur est inactif, à moins que `aria-live="assertive"` soit défini, dans quel cas l'utilisateur peut être interrompu.
 - Les loupes d'écran devraient indiquer visuellement la disponibilité d'une mise à jour du fichier de journalisation.
 
-> **Note :** il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!NOTE]
+> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
 
 ### Exemples
 
@@ -67,12 +70,12 @@ Voir l'[exemple](http://codetalks.org/source/live/chat.html) sur CodeTalks pour 
 
 ### Attributs ARIA utilisés
 
-- [log](http://www.w3.org/TR/wai-aria/roles#log).
+- [log](https://www.w3.org/TR/wai-aria/roles#log).
 
 ### Techniques ARIA connexes
 
-- Rôle [marquee](http://www.w3.org/TR/wai-aria/roles#marquee).
+- Rôle [marquee](https://www.w3.org/TR/wai-aria/roles#marquee).
 
 ### Autres ressources
 
-- Bonnes pratiques ARIA – Implémentation des zones live&nbsp;: [#LiveRegions](http://www.w3.org/TR/wai-aria-practices/#LiveRegions).
+- Bonnes pratiques ARIA – Implémentation des zones live&nbsp;: [#LiveRegions](https://www.w3.org/TR/wai-aria-practices/#LiveRegions).

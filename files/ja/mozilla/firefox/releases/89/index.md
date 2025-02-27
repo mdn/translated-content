@@ -7,7 +7,8 @@ slug: Mozilla/Firefox/Releases/89
 
 このページでは、開発者に影響する Firefox 89 の変更点をまとめています。Firefox 89 は、米国時間 2021 年 6 月 1 日にリリースされました。
 
-> **メモ:** Mozilla Hacks の [Looking fine with Firefox 89](https://hacks.mozilla.org/2021/06/looking-fine-with-firefox-89/) もご覧ください。
+> [!NOTE]
+> Mozilla Hacks の [Looking fine with Firefox 89](https://hacks.mozilla.org/2021/06/looking-fine-with-firefox-89/) もご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 
@@ -57,7 +58,7 @@ _変更なし。_
 
 ## アドオン開発者向けの変更点
 
-- [動的な JS モジュールの読み込み](/ja/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading) が、WebExtension のコンテンツスクリプトで動作するようになりました ([Firefox バグ 1536094](https://bugzil.la/1536094))。
+- [動的な JS モジュールの読み込み](/ja/docs/Web/JavaScript/Guide/Modules#動的なモジュールの読み込み) が、WebExtension のコンテンツスクリプトで動作するようになりました ([Firefox バグ 1536094](https://bugzil.la/1536094))。
 - [web_accessible_resources](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) に記載した拡張機能のリソースが、要求の CORS モードにかかわらず読み込まれるようになりました ([Firefox バグ 1694679](https://bugzil.la/1694679))。
 - Firefox の UI を再設計したため、{{WebExtAPIRef("theme")}} API の使用に影響があります。`tab_background_separator` および `toolbar_field_separator` プロパティをサポートしなくなりました。`tab_line` および `toolbar_vertical_separator` の動作が変わりました。詳しくは [Changes to themeable areas of Firefox in version 89](https://blog.mozilla.org/addons/2021/04/19/changes-to-themeable-areas-of-firefox-in-version-89/) をご覧ください。
 - {{WebExtAPIRef("pageAction")}} ボタンをアドレスバーにピン止めおよびピン止め解除することができなくなりました。デフォルトで三点リーダーアイコンのメニューが表示されないためです ([Firefox バグ 1691454](https://bugzil.la/1691454))。この結果、[`page_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) マニフェストキーの `pinned` プロパティは効果がなくなりました ([Firefox バグ 1703537](https://bugzil.la/1703537))。

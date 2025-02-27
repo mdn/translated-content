@@ -3,7 +3,7 @@ title: Element.insertAdjacentHTML()
 slug: Web/API/Element/insertAdjacentHTML
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
 **`insertAdjacentHTML()`** разбирает указанный текст как HTML или XML и вставляет полученные узлы (nodes) в DOM дерево в указанную позицию. Данная функция не переписывает имеющиеся элементы, что предотвращает дополнительную сериализацию и поэтому работает быстрее, чем манипуляции с {{domxref("Element.innerHTML", "innerHTML")}}.
 
@@ -39,7 +39,8 @@ foo
 <!-- afterend -->
 ```
 
-> **Примечание:** позиции `beforebegin` и `afterend` работают только если узел имеет родительский элемент.
+> [!NOTE]
+> Позиции `beforebegin` и `afterend` работают только если узел имеет родительский элемент.
 
 ## Пример
 
@@ -70,4 +71,4 @@ d1.insertAdjacentHTML("afterend", '<div id="two">two</div>');
 
 ## Смотрите также
 
-[hacks.mozilla.org guest post by Henri Sivonen including benchmark showing that insertAdjacentHTML can be way faster in some cases.](http://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/)
+[hacks.mozilla.org guest post by Henri Sivonen including benchmark showing that insertAdjacentHTML can be way faster in some cases.](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/)

@@ -44,7 +44,7 @@ A Web aberta apresenta oportunidades incríveis para os desenvolvedores. Para ti
   - : Gráficos vetoriais escaláveis permitem que você crie imagens que podem ser dimensionadas suavemente para qualquer tamanho.
 - [MathML](/pt-BR/docs/Web/MathML)
   - : MathML permite exibir notações matemáticas complexas na Web.
-- [Componentes da Web](/pt-BR/docs/Web/Web_Components)
+- [Componentes da Web](/pt-BR/docs/Web/API/Web_components)
   - : Componentes Web são elementos personalizados que você pode definir e reutilizar em seus aplicativos Web.
 - [WebDriver](/pt-BR/docs/Web/WebDriver)
   - : WebDriver é um mecanismo de automação de navegador para controlar remotamente um navegador emulando as ações de uma pessoa real usando o navegador. É amplamente usado para testes entre navegadores de aplicativos da Web.

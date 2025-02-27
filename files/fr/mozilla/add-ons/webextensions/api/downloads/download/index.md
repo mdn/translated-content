@@ -3,14 +3,14 @@ title: downloads.download()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`download()`** de l'API {{WebExtAPIRef("downloads")}} télécharge le fichier, compte tenu de son URL et d'autres préférences optionnelles.
 
 - Si l'`url` spécifiée utilise le protocole HTTP ou HTTPS, la requête inclura tous les cookies actuellement définis pour son nom d'hôte.
 - Si à la fois le `nom de fichier` et `saveAs` sont spécifiés, la boîte de dialogue Enregistrer sous s'affiche, pré-remplie avec le `nom du fichier` spécifié.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -51,16 +51,17 @@ var downloading = browser.downloads.download(
 
         Si cette option est omise, le navigateur affichera le sélecteur de fichier ou non en fonction de la préférence générale de l'utilisateur pour ce comportement (dans Firefox cette préférence est intitulée "Toujours vous demander où enregistrer les fichiers" dans about:preferences, ou `browser.download.useDownloadDir` dans about:config).
 
-        > **Note :** Firefox pour Android provoque une erreur si `saveAs` est à `true`. Le paramètre est ignoré lorsque `saveAs` est `false` ou non inclus.
+        > [!NOTE]
+        > Firefox pour Android provoque une erreur si `saveAs` est à `true`. Le paramètre est ignoré lorsque `saveAs` est `false` ou non inclus.
 
     - `url`
       - : Un `string` représentant l'URL à télécharger.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si le téléchargement a démarré avec succès, la promesse sera remplie avec l'`id` de la nouvelle {{WebExtAPIRef("downloads.DownloadItem")}}. Sinon, la promesse sera rejetée avec un message d'erreur venant de {{WebExtAPIRef("downloads.InterruptReason")}}.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si le téléchargement a démarré avec succès, la promesse sera remplie avec l'`id` de la nouvelle {{WebExtAPIRef("downloads.DownloadItem")}}. Sinon, la promesse sera rejetée avec un message d'erreur venant de {{WebExtAPIRef("downloads.InterruptReason")}}.
 
-Si vous utilisez [URL.createObjectURL()](/fr/docs/Web/API/URL/createObjectURL) pour télécharger des données créées en JavaScript et que vous voulez révoquer l'URL de l'objet (avec [revokeObjectURL](/fr/docs/Web/API/URL/revokeObjectURL)) plus tard (comme il est fortement recommandé), vous devez le faire après le téléchargement. Pour ce faire, écoutez l'événement [downloads.onChanged](/fr/Add-ons/WebExtensions/API/downloads/onChanged).
+Si vous utilisez [URL.createObjectURL()](/fr/docs/Web/API/URL/createObjectURL_static) pour télécharger des données créées en JavaScript et que vous voulez révoquer l'URL de l'objet (avec [revokeObjectURL](/fr/docs/Web/API/URL/revokeObjectURL_static)) plus tard (comme il est fortement recommandé), vous devez le faire après le téléchargement. Pour ce faire, écoutez l'événement [downloads.onChanged](/fr/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged).
 
 ## Compatibilité des navigateurs
 
@@ -92,9 +93,9 @@ downloading.then(onStartedDownload, onFailed);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -3,20 +3,9 @@ title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
 
-{{JSRef()}}
+{{JSRef}}
 
-Объект **`Boolean`** является объектом-обёрткой над примитивом логического типа.
-
-## Синтаксис
-
-```
-new Boolean([value])
-```
-
-### Параметры
-
-- `value`
-  - : Необязательный параметр. Начальное значение объекта `Boolean`.
+Объект **`Boolean`** представляет значения истинности: `true` или `false`.
 
 ## Описание
 
@@ -60,50 +49,46 @@ var s = new Boolean(myString); // начальное значение равно
 
 Не используйте объект `Boolean` вместо примитива логического типа.
 
-## Свойства
+## Конструктор
 
-- `Boolean.length`
-  - : Свойство `length` логического значения равно 1.
-- {{jsxref("Boolean.prototype")}}
-  - : Представляет прототип конструктора объекта `Boolean`.
+- {{jsxref("Boolean/Boolean", "Boolean()")}}
+  - : Создаёт новый объект `Boolean`.
 
-## Методы
+## Свойства экземпляра
 
-Глобальный объект `Boolean` не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов:
+Эти свойства определены в `Boolean.prototype` и есть у всех экземпляров `Boolean`.
 
-## Экземпляры объекта `Boolean`
+- {{jsxref("Object/constructor", "Boolean.prototype.constructor")}}
+  - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `Boolean` начальным значением является конструктор {{jsxref("Boolean/Boolean", "Boolean")}}.
 
-Все экземпляры объекта `Boolean` наследуются от {{jsxref("Boolean.prototype")}}. Как и все конструкторы, объект прототипа предоставляет экземплярам свойства и методы.
+## Методы экземпляра
 
-### Свойства
-
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Properties')}}
-
-### Методы
-
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Methods')}}
+- {{jsxref("Boolean.prototype.toString()")}}
+  - : Возвращает строку `true` или `false` в зависимости от значения объекта. Переопределяет метод {{jsxref("Object.prototype.toString()")}}.
+- {{jsxref("Boolean.prototype.valueOf()")}}
+  - : Возвращает примитивное значение объекта {{jsxref("Boolean")}}. Переопределяет метод {{jsxref("Object.prototype.valueOf()")}}.
 
 ## Примеры
 
-### Пример: создание объектов `Boolean` с начальным значением, равным `false`
+### Создание объектов `Boolean` с начальным значением равным `false`
 
 ```js
-var bNoParam = new Boolean();
-var bZero = new Boolean(0);
-var bNull = new Boolean(null);
-var bEmptyString = new Boolean("");
-var bfalse = new Boolean(false);
+const bNoParam = new Boolean();
+const bZero = new Boolean(0);
+const bNull = new Boolean(null);
+const bEmptyString = new Boolean("");
+const bfalse = new Boolean(false);
 ```
 
-### Пример: создание объектов `Boolean` с начальным значением, равным `true`
+### Создание объектов `Boolean` с начальным значением равным `true`
 
 ```js
-var btrue = new Boolean(true);
-var btrueString = new Boolean("true");
-var bfalseString = new Boolean("false");
-var bSuLin = new Boolean("Су Лин");
-var bArrayProto = new Boolean([]);
-var bObjProto = new Boolean({});
+const btrue = new Boolean(true);
+const btrueString = new Boolean("true");
+const bfalseString = new Boolean("false");
+const bSuLin = new Boolean("Su Lin");
+const bArrayProto = new Boolean([]);
+const bObjProto = new Boolean({});
 ```
 
 ## Спецификации
@@ -116,6 +101,6 @@ var bObjProto = new Boolean({});
 
 ## Смотрите также
 
-- {{jsxref("Boolean.prototype")}}
 - {{Glossary("Boolean")}}
-- [Логический тип данных (Википедия)](https://ru.wikipedia.org/wiki/Логический_тип)
+- [Примитивные значения булева типа](/ru/docs/Web/JavaScript/Data_structures#булевый_тип_данных)
+- [Логический тип](https://ru.wikipedia.org/wiki/Логический_тип) в Википедии

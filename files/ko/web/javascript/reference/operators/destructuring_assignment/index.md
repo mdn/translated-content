@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
 
 **구조 분해 할당** 구문은 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 JavaScript 표현식입니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-destructuringassignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Destructuring assignment")}}
+
+```js interactive-example
+let a, b, rest;
+[a, b] = [10, 20];
+
+console.log(a);
+// Expected output: 10
+
+console.log(b);
+// Expected output: 20
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+
+console.log(rest);
+// Expected output: Array [30, 40, 50]
+```
 
 ## 구문
 
@@ -366,7 +382,7 @@ whois(user); // "jdoe is John"
 
 ### 계산된 속성 이름과 구조 분해
 
-계산된 속성 이름(computed property name)은, [객체 리터럴](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names)과 비슷하게 구조 분해에도 사용될 수 있습니다.
+계산된 속성 이름(computed property name)은, [객체 리터럴](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names)과 비슷하게 구조 분해에도 사용될 수 있습니다.
 
 ```js
 let key = "z";
@@ -407,5 +423,5 @@ console.log(fizzBuzz); // "true"
 
 ## 같이 보기
 
-- [할당 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
+- [할당 연산자](/ko/docs/Web/JavaScript/Reference/Operators#Assignment_operators)
 - ["ES6 in Depth: Destructuring" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/)

@@ -17,13 +17,13 @@ Quand l'élément contenant une description apparaît à l'utilisateur sous form
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)&nbsp;»
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)&nbsp;»
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
 ### Attributs spécifiques
 
-_(Aucun)_
+_Aucun._
 
 ## Interface DOM
 

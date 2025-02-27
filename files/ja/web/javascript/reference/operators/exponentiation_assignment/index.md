@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Operators/Exponentiation_assignment
 
 べき乗代入演算子 (`**=`) は、変数の値を右オペランドでべき乗します。
 
-{{EmbedInteractiveExample("pages/js/expressions-exponentiation-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation assignment operator")}}
+
+```js interactive-example
+let a = 3;
+
+console.log((a **= 2));
+// Expected output: 9
+
+console.log((a **= 0));
+// Expected output: 1
+
+console.log((a **= "hello"));
+// Expected output: NaN
+```
 
 ## 構文
 
@@ -37,5 +50,5 @@ bar **= "foo"; // NaN
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子)
+- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)
 - [べき乗演算子](/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation)

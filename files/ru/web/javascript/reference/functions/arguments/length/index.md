@@ -37,7 +37,7 @@ function adder(base /*, n2, ... */) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

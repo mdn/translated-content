@@ -1,17 +1,19 @@
 ---
 title: z-index
 slug: Web/CSS/z-index
+l10n:
+  sourceCommit: e48b828fa5386202eb60303cde48eeea8f79203c
 ---
 
 {{CSSRef}}
 
-**`z-index`** は CSS のプロパティで、[位置指定](/ja/docs/Web/CSS/position)要素とその子孫要素、またはフレックスアイテムの z 順を定義します。より大きな z-index を持つ要素はより小さな要素の上に重なります。
+**`z-index`** は CSS のプロパティで、[位置指定](/ja/docs/Web/CSS/position)要素とその子孫要素、またはフレックスアイテムやグリッドアイテムの z 順を定義します。 z-index がより大きな要素はより小さな要素の上に重なります。
 
 {{EmbedInteractiveExample("pages/css/z-index.html")}}
 
-位置指定されたボックス (つまり、`position` が `static` 以外のもの) では、`z-index` プロパティが以下のことを定義します。
+位置指定されたボックス（つまり、`position` が `static` 以外のもの）では、`z-index` プロパティが以下のことを定義します。
 
-1. 現在の[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)におけるボックスの重ね合わせレベル
+1. 現在の[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)におけるボックスの重ね合わせレベル
 2. ボックスがローカルな重ね合わせコンテキストを作るかどうか
 
 ## 構文
@@ -30,6 +32,7 @@ z-index: -1; /* 負の数はより低い優先度になる */
 z-index: inherit;
 z-index: initial;
 z-index: revert;
+z-index: revert-layer;
 z-index: unset;
 ```
 
@@ -52,21 +55,21 @@ z-index: unset;
 
 ## 例
 
-<h3 id="Visually_layering_elements">視覚的な階層を持つ要素</h3>
+### 視覚的な階層を持つ要素
 
 #### HTML
 
-```html
+```html live-sample___visually_layering_elements
 <div class="wrapper">
-  <div class="dashed-box">Dashed box</div>
-  <div class="gold-box">Gold box</div>
-  <div class="green-box">Green box</div>
+  <div class="dashed-box">破線のボックス</div>
+  <div class="gold-box">金色のボックス</div>
+  <div class="green-box">緑色のボックス</div>
 </div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___visually_layering_elements
 .wrapper {
   position: relative;
 }
@@ -81,7 +84,7 @@ z-index: unset;
 }
 .gold-box {
   position: absolute;
-  z-index: 3; /* put .gold-box above .green-box and .dashed-box */
+  z-index: 3; /* .gold-box を .green-box や .dashed-box の上に置く */
   background: gold;
   width: 80%;
   left: 60px;
@@ -89,7 +92,7 @@ z-index: unset;
 }
 .green-box {
   position: absolute;
-  z-index: 2; /* put .green-box above .dashed-box */
+  z-index: 2; /* .green-box を .dashed-box の上に置く */
   background: lightgreen;
   width: 20%;
   left: 65%;
@@ -101,7 +104,7 @@ z-index: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('Visually_layering_elements', '550', '200', '') }}
+{{EmbedLiveSample('Visually_layering_elements', '550', '200')}}
 
 ## 仕様書
 
@@ -114,4 +117,4 @@ z-index: unset;
 ## 関連情報
 
 - CSS {{Cssxref("position")}} プロパティ
-- [CSS の z-index を理解する](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
+- [CSS の z-index を理解する](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)

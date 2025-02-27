@@ -5,9 +5,9 @@ slug: Web/API/Element/getClientRects
 
 {{APIRef("DOM")}}
 
-{{domxref("Element")}} 인터페이스의 **`getClientRects()`** 메서드는 클라이언트에 있는 각 [CSS 테두리 박스](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)에 대한 경계 사각형을 나타내는 {{DOMxRef("DOMRect")}} 객체의 컬렉션을 반환합니다.
+{{domxref("Element")}} 인터페이스의 **`getClientRects()`** 메서드는 클라이언트에 있는 각 [CSS 테두리 박스](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)에 대한 경계 사각형을 나타내는 {{DOMxRef("DOMRect")}} 객체의 컬렉션을 반환합니다.
 
-대부분의 엘리먼트는 각각 하나의 border box만을 갖지만, 여러 줄의 [인라인 엘리먼트](/ko/docs/Web/HTML/Inline_elements)(예를 들면, 여러 줄의 {{HTMLElement("span")}} 엘리먼트)는 각각의 줄을 감싸는 테두리 박스를 갖습니다.
+대부분의 엘리먼트는 각각 하나의 border box만을 갖지만, 여러 줄의 [인라인 엘리먼트](/ko/docs/Glossary/Inline-level_content)(예를 들면, 여러 줄의 {{HTMLElement("span")}} 엘리먼트)는 각각의 줄을 감싸는 테두리 박스를 갖습니다.
 
 ## 구문
 
@@ -21,7 +21,8 @@ let rectCollection = object.getClientRects();
 
 원래 Microsoft는 각각의 텍스트 _줄_ 에 대한 `TextRectangle` 객체를 반환하기 위해 이 메서드를 만들었습니다. 하지만 CSSOM 작업 초안은 이 메서드가 각각의 _테두리 박스_ 에 대한 {{DOMxRef("DOMRect")}}를 반환하도록 명세합니다. 인라인 엘리먼트의 경우 두 정의가 동일합니다. 하지만 블록 엘리먼트의 경우 Mozilla는 단 하나의 사각형만 반환합니다.
 
-> **참고:** Firefox 3.5는 `width`와 `height` 속성을 `TextRectangle` 객체에 추가합니다.
+> [!NOTE]
+> Firefox 3.5는 `width`와 `height` 속성을 `TextRectangle` 객체에 추가합니다.
 
 뷰포트 영역(또는 기타 스크롤 가능한 엘리먼트)에서 수행된 스크롤 양은 사각형을 계산할 때 고려됩니다.
 

@@ -28,8 +28,8 @@ isCollapsed = range.collapsed;
 
 Devuelve un valor boleano verdadero si los puntos límite inicial y final del rango están en el mismo punto en el DOM, y devuelve un valor falso si no lo están.
 
-Un rango plegado está vacío, sin tener algún contenido, especificando un simple punto en el árbol del DOM. La propiedad plegada es de sólo lectura. Para plegar un rango, vea el método [collapse](/es/DOM/range.collapse).
+Un rango plegado está vacío, sin tener algún contenido, especificando un simple punto en el árbol del DOM. La propiedad plegada es de sólo lectura. Para plegar un rango, vea el método [collapse](/es/docs/Web/API/range/collapse).
 
 ### Especificación
 
-[collapsed](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-attr-collapsed)
+[collapsed](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-attr-collapsed)

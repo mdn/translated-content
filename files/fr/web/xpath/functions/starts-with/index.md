@@ -3,7 +3,7 @@ title: starts-with
 slug: Web/XPath/Functions/starts-with
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `starts-with` vérifie si la première chaîne débute par la seconde, et retourne `true` ou `false`.
 
@@ -29,7 +29,7 @@ starts-with( meule , aiguille)
 
 ### Définition
 
-[XPath 1.0, section 4.2](http://www.w3.org/TR/xpath#function-starts-with).
+[XPath 1.0, section 4.2](https://www.w3.org/TR/xpath#function-starts-with).
 
 ### Support Gecko
 

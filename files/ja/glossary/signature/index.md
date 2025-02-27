@@ -3,6 +3,8 @@ title: Signature (シグネチャ)
 slug: Glossary/Signature
 ---
 
+{{GlossarySidebar}}
+
 **シグネチャ**は状況によって色々な意味を持ちます。
 こちらを参照してください。
 

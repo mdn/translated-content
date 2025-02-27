@@ -140,7 +140,7 @@ Estes elementos incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attri
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.body")}}
+{{Compat}}
 
 ## Veja também
 

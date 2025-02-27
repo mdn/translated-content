@@ -3,6 +3,8 @@ title: 行動無障礙檢核清單
 slug: Web/Accessibility/Mobile_accessibility_checklist
 ---
 
+{{AccessibilitySidebar}}
+
 本文提供行動應用程式開發者一個簡潔的無障礙必備要件檢核清單，本文將隨著更多模型產生而不斷地演進。
 
 ## 顏色
@@ -14,7 +16,8 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 
 - 透過顏色傳遞資訊 **必須** 能藉由其他方式獲得資訊 (底線文字表示連結等)
 
-> **備註：** Jon Snook 已撰寫實用的 [Colour Contrast Checker](http://snook.ca/technical/colour_contrast/colour.html) 能用於檢查背景與前景顏色的對比。同樣地，[Tanaguru Contrast-Finder](http://contrast-finder.tanaguru.com/) 也提供類似功能，而且建議相似且更好的對比顏色提供你考量使用。
+> [!NOTE]
+> Jon Snook 已撰寫實用的 [Colour Contrast Checker](http://snook.ca/technical/colour_contrast/colour.html) 能用於檢查背景與前景顏色的對比。同樣地，[Tanaguru Contrast-Finder](http://contrast-finder.tanaguru.com/) 也提供類似功能，而且建議相似且更好的對比顏色提供你考量使用。
 
 ## 可視性
 
@@ -45,7 +48,7 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 
 ## 處理狀態
 
-- 標準控制措施如選項按鈕與核取框可被作業系統處理。然而，其他客製的控制措施狀態改變必須透過[ARIA 狀態](https://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header)如 `aria-checked`、`aria-disabled`、`ria-selected`、`aria-expanded`與`aria-pressed`來提供。
+- 標準控制措施如選項按鈕與核取框可被作業系統處理。然而，其他客製的控制措施狀態改變必須透過[ARIA 狀態](https://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header)如 `aria-checked`、`aria-disabled`、`ria-selected`、`aria-expanded` 與 `aria-pressed` 來提供。
 
 ## 一般準則
 
@@ -65,4 +68,4 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 
 > **備註：** [Tanaguru 自動無障礙測試服務](http://www.tanaguru.com/)提供有用的方法去發現一些發生於網頁或安裝的網頁應用程式(如 Firefox OS)無障礙錯誤。你可在[tanaguru.org](http://tanaguru.org/)找到更多關於 Tanaguru 技術開發，以及貢獻該專案的資訊。
 
-> **備註：** [本文件原始版本](http://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)由[Yura Zenevich](http://yzen.github.io/)撰寫。
+> **備註：** [本文件原始版本](https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)由 [Yura Zenevich](https://yzen.github.io/) 撰寫。

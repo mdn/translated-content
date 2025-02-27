@@ -17,7 +17,7 @@ slug: Web/CSS/Layout_cookbook/Split_Navigation
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/split-navigation.html", '100%', 520)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/split-navigation--download.html)
 
@@ -35,8 +35,8 @@ slug: Web/CSS/Layout_cookbook/Split_Navigation
 
 ### フレックスボックス
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## 関連情報
 
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)

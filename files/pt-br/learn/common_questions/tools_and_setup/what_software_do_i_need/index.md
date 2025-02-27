@@ -5,9 +5,9 @@ slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
 
 Neste artigo nós destacamos quais _softwares_ você precisa para editar, fazer _upload_ ou visualizar um _site_.
 
-| Pré requisitos: | Você deve saber [a diferença entre páginas _web_, _sites web_, servidores*web*, e mecanismos de busca.](/pt-BR/docs/Learn/page_vs_site_vs_server_vs_search_engine) |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Objetivo:       | Aprender quais _softwares_ você precisa se quiser editar, fazer _upload_, ou visualizar um _site_.                                                                 |
+| Pré requisitos: | Você deve saber [a diferença entre páginas _web_, _sites web_, servidores*web*, e mecanismos de busca.](/pt-BR/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines) |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Objetivo:       | Aprender quais _softwares_ você precisa se quiser editar, fazer _upload_, ou visualizar um _site_.                                                                                               |
 
 ## Sumário
 
@@ -23,7 +23,7 @@ Quase todos os sistemas operacionais incluem por padrão um editor de texto e um
 
 ## Práticas
 
-Ainda não existem práticas disponíveis. [Por favor, considere contribuir](/pt-BR/docs/MDN/Getting_started).
+Ainda não existem práticas disponíveis. [Por favor, considere contribuir](/pt-BR/docs/MDN/Community/Contributing/Getting_started).
 
 ## Aprofundando
 
@@ -139,7 +139,7 @@ Todos os sistemas operacionais _desktop_ possuem um editor de texto básico. Tod
       </td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td></td>
       <td>
         <ul>
@@ -160,11 +160,11 @@ Aqui está uma captura de tela de um editor de texto online:
 
 ### Fazendo _upload_ de arquivos na _web_
 
-Quando seu _site_ está pronto para visualização pública, você precisa fazer _upload_ de suas páginas _web_ para o seu servidor*web.* Você precisa comprar espaço em um servidor, entre vários provedores (veja [Quanto custa fazer algo na _web_](/pt-BR/docs/Learn/Common_questions/How_much_does_it_cost)). Após você decidir qual provedor usar, o provador te enviará um _e-mail_ com suas informações de acesso, normalmente em forma de uma SFTP URL, nome de usuário, senha, e outra informação necessária para conectar no servidor. Tenha em mente que (S)FTP está um tanto quanto antiquado, e outros sistemas de _upload_ de arquivos estão se tornando populares, como [RSync](https://en.wikipedia.org/wiki/Rsync) e [Git/GitHub](https://help.github.com/articles/using-a-custom-domain-with-github-pages/).
+Quando seu _site_ está pronto para visualização pública, você precisa fazer _upload_ de suas páginas _web_ para o seu servidor*web.* Você precisa comprar espaço em um servidor, entre vários provedores (veja [Quanto custa fazer algo na _web_](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)). Após você decidir qual provedor usar, o provador te enviará um _e-mail_ com suas informações de acesso, normalmente em forma de uma SFTP URL, nome de usuário, senha, e outra informação necessária para conectar no servidor. Tenha em mente que (S)FTP está um tanto quanto antiquado, e outros sistemas de _upload_ de arquivos estão se tornando populares, como [RSync](https://en.wikipedia.org/wiki/Rsync) e [Git/GitHub](https://help.github.com/articles/using-a-custom-domain-with-github-pages/).
 
 > **Nota:**FTP é inerentemente inseguro. Você precisa se certificar que seu provedor permite o uso de uma conexão segura, por exemplo o SFTP ou RSync com SSH.
 
-Fazer _upload_ de arquivos para um servidor _web_ é um importante passo durante a criação de um _site_, por isso cobrimos isso detalhadamente em um [artigo separado](/pt-BR/docs/Learn/Upload_files_to_a_web_server). Agora, aqui está uma pequena lista de clientes (S)FTP básicos e gratuítos:
+Fazer _upload_ de arquivos para um servidor _web_ é um importante passo durante a criação de um _site_, por isso cobrimos isso detalhadamente em um [artigo separado](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server). Agora, aqui está uma pequena lista de clientes (S)FTP básicos e gratuítos:
 
 <table class="standard-table">
   <thead>
@@ -220,7 +220,7 @@ Fazer _upload_ de arquivos para um servidor _web_ é um importante passo durante
       </td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td>
         <ul>
           <li>
@@ -240,10 +240,9 @@ Como você já sabe, é necessário um navegador _web_ para visualizar _sites_. 
 
 - [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - [Google Chrome](https://www.google.com/chrome/)
-- [Microsoft Internet Explorer](http://windows.microsoft.com/en-US/internet-explorer/download-ie)
-- [Apple Safari](http://www.apple.com/safari/)
+- [Apple Safari](https://www.apple.com/safari/)
 
-Se você estiver buscando um grupo espécífico (como usuários de uma plataforma ou de algum país), deve testar seu _site_ em navegadores adicionais, como [Opera](http://www.opera.com/), [Konqueror](http://www.konqueror.org/), ou [UC Browser](http://www.ucweb.com/ucbrowser/).
+Se você estiver buscando um grupo espécífico (como usuários de uma plataforma ou de algum país), deve testar seu _site_ em navegadores adicionais, como [Opera](https://www.opera.com/) ou [Konqueror](https://apps.kde.org/konqueror/).
 
 Mas testar é complicado, pois alguns navegadores apenas funcionam em determinados sistemas operacionais. O _Apple Safari_ funciona no _iOS_ e no _Mac OS_, enquanto o _Internet Explorer_ funciona apenas no _Windows_. É melhor se valer dos benefícios de serviços como o [Browsershots](http://browsershots.org/) ou [Browserstack](http://www.browserstack.com/). O _Browsershots_ fornece capturas de tela de como seu _site_ é visto por vários navegadores. O _Browserstack_ atualmente concede a você total acesso remoto à máquinas virtuais de forma que você pode testar seu site nos ambientes mais comuns. Alternativamente você pode configurar sua própria máquina virtual, mas isso demanda certos conhecimentos específicos. (Se você quiser seguir esse caminho, a _Microsoft_ possui algumas ferramentas para desenvoledores, incluíndo uma máquina virtual pronta para o uso, chamada [modern.ie](https://modern.ie).).
 
@@ -251,6 +250,6 @@ Por todos os meios possíveis, execute testes em dispositivos reais, especialmen
 
 ## Próximos passos
 
-- Alguns desses _software_ são gratis, mas não todos eles. [Descubra quanto custa fazer algo na _web_](/pt-BR/docs/Learn/Common_questions/How_much_does_it_cost)[.](/pt-BR/docs/Learn/How_much_does_it_cost)
-- Se você deseja aprender mais sobre editores de texto, leia nosso artigo sobre [como escolher e instalar um editor de texto.](/pt-BR/docs/Learn/Choose,_Install_and_set_up_a_text_editor)
-- Se você está se perguntando como publicar seu*site* na*web*, veja ["Como fazer _upload_ para um servidor*web*"](/pt-BR/docs/Learn/Upload_files_to_a_web_server).
+- Alguns desses _software_ são gratis, mas não todos eles. [Descubra quanto custa fazer algo na _web_](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)[.](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
+- Se você deseja aprender mais sobre editores de texto, leia nosso artigo sobre [como escolher e instalar um editor de texto.](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors)
+- Se você está se perguntando como publicar seu*site* na*web*, veja ["Como fazer _upload_ para um servidor*web*"](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).

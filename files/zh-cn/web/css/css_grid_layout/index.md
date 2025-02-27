@@ -117,14 +117,14 @@ slug: Web/CSS/CSS_grid_layout
 ### 术语表
 
 - [网格（Grid）](/zh-CN/docs/Glossary/Grid)
-- [网格线（Grid lines）](/zh-CN/docs/Glossary/Grid_lines)
-- [网格轨道（Grid tracks）](/zh-CN/docs/Glossary/Grid_tracks)
-- [网格单元格（Grid cell）](/zh-CN/docs/Glossary/Grid_cell)
-- [网格区域（Grid areas）](/zh-CN/docs/Glossary/Grid_areas)
+- [网格线（Grid lines）](/zh-CN/docs/Glossary/Grid_Lines)
+- [网格轨道（Grid tracks）](/zh-CN/docs/Glossary/Grid_Tracks)
+- [网格单元格（Grid cell）](/zh-CN/docs/Glossary/Grid_Cell)
+- [网格区域（Grid areas）](/zh-CN/docs/Glossary/Grid_Areas)
 - [网格间隙（Gutters）](/zh-CN/docs/Glossary/Gutters)
 - [网格轴（Grid Axis）](/zh-CN/docs/Glossary/Grid_Axis)
-- [网格行（Grid row）](/zh-CN/docs/Glossary/Grid_rows)
-- [网格列（Grid column）](/zh-CN/docs/Glossary/Grid_column)
+- [网格行（Grid row）](/zh-CN/docs/Glossary/Grid_Row)
+- [网格列（Grid column）](/zh-CN/docs/Glossary/Grid_Column)
 
 ## 指南
 
@@ -135,19 +135,18 @@ slug: Web/CSS/CSS_grid_layout
 - [Layout using named grid lines](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
 - [Auto-placement in CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
 - [Box alignment in CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [CSS Grid, Logical Values and Writing Modes](/zh-CN/docs/Web/CSS/CSS_grid_layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+- [CSS Grid, Logical Values and Writing Modes](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 - [CSS Grid Layout and accessibility](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [CSS Grid and progressive enhancement](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-- [Realising common layouts using CSS Grid](/zh-CN/docs/Web/CSS/CSS_grid_layout/Realising_common_layouts_using_CSS_Grid_)
+- [Realising common layouts using CSS Grid](/zh-CN/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 ## 外部资源
 
-- [Examples from Jen Simmons](http://labs.jensimmons.com/)
-- [Grid by Example - a collection of usage examples and video tutorials](http://gridbyexample.com/)
+- [Examples from Jen Simmons](https://labs.jensimmons.com/)
+- [Grid by Example - a collection of usage examples and video tutorials](https://gridbyexample.com/)
 - [Codrops Grid Reference](https://tympanus.net/codrops/css_reference/grid/)
-- [Firefox DevTools CSS Grid Inspector](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
+- [Firefox DevTools CSS Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 - [CSS Grid Playground](https://mozilladevelopers.github.io/playground/)
-- [Grid Garden](http://cssgridgarden.com/) - 一个学习 CSS 网格的游戏
+- [Grid Garden](https://cssgridgarden.com/) - 一个学习 CSS 网格的游戏
 - <https://css-tricks.com/snippets/css/complete-guide-grid/>
 - <https://css-tricks.com/snippets/css/css-grid-starter-layouts/>
 - <https://css-tricks.com/getting-started-css-grid/>

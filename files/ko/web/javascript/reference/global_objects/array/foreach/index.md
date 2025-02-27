@@ -9,7 +9,17 @@ l10n:
 
 {{jsxref("Array")}} 인스턴스의 **`forEach()`** 메서드는 각 배열 요소에 대해 제공된 함수를 한 번씩 실행합니다.
 
-{{EmbedInteractiveExample("pages/js/array-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Array.forEach()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+array1.forEach((element) => console.log(element));
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## 구문
 
@@ -47,7 +57,8 @@ forEach(callbackFn, thisArg)
 - 이미 방문한 인덱스를 변경해도 `callbackFn`이 해당 인덱스에 대해 다시 호출되지 않습니다.
 - 배열의 아직 방문하지 않은 기존 요소가 `callbackFn`에 의해 변경되는 경우, `callbackFn`에 전달된 값은 해당 요소가 방문될 당시의 값이 됩니다. [삭제된](/ko/docs/Web/JavaScript/Reference/Operators/delete) 요소는 방문되지 않습니다.
 
-> **경고:** 위에서 설명한 종류의 동시 수정은 이해하기 어려운 코드를 만드는 경우가 많으므로 일반적으로 지양해야 합니다(특별한 경우 제외).
+> [!WARNING]
+> 위에서 설명한 종류의 동시 수정은 이해하기 어려운 코드를 만드는 경우가 많으므로 일반적으로 지양해야 합니다(특별한 경우 제외).
 
 `forEach()` 메서드는 [범용](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#범용_배열_메서드)입니다. `this` 값에는 `length` 속성과 정수 키 속성만 있을 것으로 예상합니다.
 
@@ -116,7 +127,8 @@ items.forEach((item) => {
 
 ### 배열 콘텐츠 출력
 
-> **참고:** 배열의 내용을 콘솔에 표시하려면,
+> [!NOTE]
+> 배열의 내용을 콘솔에 표시하려면,
 > 배열의 포멧된 버전을 출력하는 {{domxref("console/table", "console.table()")}}을 사용할 수 있습니다.
 >
 > 다음 예제는 `forEach()`를 사용하는 또다른 접근 방식을 보여줍니다.
@@ -164,7 +176,8 @@ console.log(obj.sum); // 16
 
 `thisArg` 매개변수(`this`)는 `forEach()`에 제공되므로 호출될 때마다 콜백에 전달됩니다. 콜백은 이를 `this` 값으로 사용합니다.
 
-> **참고:** 콜백 함수를 전달할 때
+> [!NOTE]
+> 콜백 함수를 전달할 때
 > [화살표 함수 표현식](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)을 사용하는 경우,
 > 모든 화살표 함수가 이 값을 문법적으로(lexical) 바인딩하므로
 > {{jsxref("Operators/this", "this")}} 매개 변수를 생략할 수 있습니다.

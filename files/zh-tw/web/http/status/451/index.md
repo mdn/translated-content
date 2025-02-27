@@ -1,42 +1,41 @@
 ---
 title: 451 Unavailable For Legal Reasons
 slug: Web/HTTP/Status/451
+l10n:
+  sourceCommit: 4dec42ed700040565e8af0e14ff104054ebc20f5
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`451 Unavailable For Legal Reasons`** 用戶端錯誤回應碼表明用戶請求的資源，出於法律原因而無法使用，例如遭受法律訴訟的網頁。
+HTTP **`451 Unavailable For Legal Reasons`** [用戶端回應錯誤](/zh-TW/docs/Web/HTTP/Status#用戶端回應錯誤)狀態碼表示用戶請求的資源由於法律原因而無法提供，例如遭受法律訴訟的網頁。
 
 ## 狀態
 
-```plain
+```http
 451 Unavailable For Legal Reasons
 ```
 
-## 示例
+## 範例
 
-此示例擷取自 IETF RFC（參見以下章節）、包含了[萬世魔星](https://zh.wikipedia.org/wiki/萬世魔星)的引用。
+### 帶有 Link 標頭的回應
 
-**註：**{{HTTPHeader("Link")}} 標頭可能包含 `rel="blocked-by"` 以表明是誰封鎖該資源，而非來自其他強制力量。
+此範例回應來自 IETF RFC（參見下文），並包含對[《萬世魔星》](https://zh.wikipedia.org/wiki/蒙提·派森之布莱恩的一生)的參考。
 
-需要為該資源無效的負責者，例如請求法律移除內容的人名或組織名，並不會放在 `rel="blocked-by"` link 裡面。
+> **備註：** {{HTTPHeader("Link")}} 標頭也可能包含 `rel="blocked-by"` 關係，識別實施封鎖的實體，而不是強制執行封鎖的任何其他實體。
 
-```plain
+任何試圖識別最終負責資源不可用的實體的嘗試都應該放在響應主體中，而不是在 `rel="blocked-by"` 連接中。這包括對造成內容被刪除的法律要求的人或組織的名稱。
+
+```http
 HTTP/1.1 451 Unavailable For Legal Reasons
 Link: <https://spqr.example.org/legislatione>; rel="blocked-by"
 Content-Type: text/html
-```
 
-```plain
 <html>
       <head><title>Unavailable For Legal Reasons</title></head>
       <body>
             <h1>Unavailable For Legal Reasons</h1>
-            <p>This request may not be serviced in the Roman Province
-            of Judea due to the Lex Julia Majestatis, which disallows
-            access to resources hosted on servers deemed to be
-            operated by the People's Front of Judea.</p>
-     </body>
+            <p>此請求可能無法在羅馬行省猶太行省處理，因為《尤利亞叛國法》禁止存取被認定由猶太人民陣線運營的伺服器上所託管的資源。</p>
+      </body>
 </html>
 ```
 
@@ -44,13 +43,8 @@ Content-Type: text/html
 
 {{Specifications}}
 
-## 瀏覽器相容性
-
-The information shown below has been pulled from MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
-
-{{Compat}}
-
 ## 參見
 
-- [維基百科的 HTTP 451](https://zh.wikipedia.org/wiki/HTTP_451)
-- [維基百科的華氏 451 度](https://zh.wikipedia.org/wiki/華氏451度)（該請求碼的數字詞源）
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
+- [維基百科：HTTP 451](https://zh.wikipedia.org/wiki/HTTP_451)
+- [維基百科：華氏 451 度](https://zh.wikipedia.org/wiki/華氏451度)（該回應碼的數字詞源）

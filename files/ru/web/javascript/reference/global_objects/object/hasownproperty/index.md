@@ -3,7 +3,7 @@ title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -107,8 +107,8 @@ Object.prototype.hasOwnProperty.call(foo, "bar"); // true
 
 ## Смотрите также
 
-- [Перечисляемость и собственность свойств](/ru/docs/Enumerability_and_ownership_of_properties)
+- [Перечисляемость и собственность свойств](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [Руководство по JavaScript: повторное наследование](/ru/docs/Web/JavaScript/Guide/Inheritance_Revisited)
+- [Руководство по JavaScript: повторное наследование](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

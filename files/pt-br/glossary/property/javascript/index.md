@@ -3,6 +3,8 @@ title: Propriedade (JavaScript)
 slug: Glossary/Property/JavaScript
 ---
 
+{{GlossarySidebar}}
+
 Uma **propriedade Javascript** é uma característica de um objeto, frequentemente descrita como atributos associados à uma estrutura de dados.
 
 Há dois tipos de propriedades:
@@ -17,4 +19,4 @@ Uma propriedade tem nome (uma {{glossary("string")}}) e um valor ({{glossary("pr
 ### Conhecimento geral
 
 - [Property (programming)](<https://pt.wikipedia.org/wiki/Propriedade_(programação)>) on Wikipedia
-- [Introdução a objetos em JavaScript](/pt-BR/docs/Aprender/JavaScript/Objetos)
+- [Introdução a objetos em JavaScript](/pt-BR/docs/Learn/JavaScript/Objects)

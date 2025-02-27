@@ -3,13 +3,16 @@ title: FormData.append()
 slug: Web/API/FormData/append
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 O método **`append()`** da Interface {{domxref("FormData")}} adiciona um novo valor dentro de uma chave existente dentro do objeto `FormData` ou adiciona a chave caso ainda não exista.
 
 A diferença entre {{domxref("FormData.set")}} e `append()` é que se uma chave específica já exista, {{domxref("FormData.set")}} irá substituir o valor existente com um novo valor, já o `append()` irá adicionar um novo valor no fim do conjunto de valores.
 
-> **Nota:** Este metodo esta desponivel no [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Este metodo esta desponivel no [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
 ## Sintaxe
 
@@ -29,7 +32,8 @@ formData.append(name, value, filename);
 - `filename` {{optional_inline}}
   - : O filename reporta para o servidor (a {{domxref("USVString")}}), quando a {{domxref("Blob")}} ou {{domxref("File")}} é passado como o segundo parametro. O default filename para {{domxref("Blob")}} o objecto é "blob".
 
-> **Nota:** Se espisificares {{domxref("Blob")}} como a data append para o objecto `FormData` , o filename a ser reportado para o servidor no "Content-Disposition" header usado para mudar de browser em browser.
+> [!NOTE]
+> Se espisificares {{domxref("Blob")}} como a data append para o objecto `FormData` , o filename a ser reportado para o servidor no "Content-Disposition" header usado para mudar de browser em browser.
 
 ### Retorna
 
@@ -61,6 +65,6 @@ formData.append("userpic", myFileInput.files[0], "chris.jpg");
 ## Veja Tambem
 
 - {{domxref("XMLHTTPRequest")}}
-- [Usando XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [UsandoFormData objects](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [UsandoFormData objects](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

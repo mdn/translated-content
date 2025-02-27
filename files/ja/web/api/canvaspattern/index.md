@@ -1,32 +1,36 @@
 ---
 title: CanvasPattern
 slug: Web/API/CanvasPattern
+l10n:
+  sourceCommit: e811fc31b67e145c5882e8e3f128d1938c627a51
 ---
 
 {{APIRef("Canvas API")}}
 
-**`CanvasPattern`** インターフェースは、{{domxref("CanvasRenderingContext2D.createPattern()")}} メソッドによって（画像、 canvas 要素、video 要素をもとに）生成される不透明なオブジェクトです。
+**`CanvasPattern`** インターフェイスは、画像、キャンバス、動画をもとに生成される[不透明オブジェクト](https://en.wikipedia.org/wiki/Opaque_data_type)を表し、{{domxref("CanvasRenderingContext2D.createPattern()")}} メソッドによって作成されます。
 
-## プロパティ
+{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} または {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} として使用することができます。
 
-_不透明なオブジェクトを表し、公開されたプロパティはありません。_
+## インスタンスプロパティ
+
+_不透明なオブジェクトを表し、公開されているプロパティはありません。_
 
 ## メソッド
 
 _継承されたメソッドはありません。_
 
-- {{domxref("CanvasPattern.setTransform()")}} {{experimental_inline}}
-  - : パターンに線形の変化を表す {{domxref("SVGMatrix")}} を適用する。
+- {{domxref("CanvasPattern.setTransform()")}}
+  - : パターンに線形の座標変換を表す {{domxref("DOMMatrix")}} を適用します。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
-{{Compat("api.CanvasPattern")}}
+{{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{domxref("CanvasRenderingContext2D.createPattern()")}}
-- The {{HTMLElement("canvas")}} 要素と関連するインターフェースである {{domxref("HTMLCanvasElement")}}
+- The {{HTMLElement("canvas")}} 要素と関連するインターフェイスである {{domxref("HTMLCanvasElement")}}

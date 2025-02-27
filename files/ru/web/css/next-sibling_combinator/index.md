@@ -1,10 +1,9 @@
 ---
 title: Смежные селекторы
 slug: Web/CSS/Next-sibling_combinator
-original_slug: Web/CSS/Adjacent_sibling_combinator
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 Указывает на смежный или следующий селектор. Обеспечивает выбор только элемента расположенного непосредственно за определённым в первой части элементом.
 
@@ -51,10 +50,10 @@ img + span.caption {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Селекторы следующего элемента](/ru/docs/Web/CSS/General_sibling_selectors)
+- [Селекторы следующего элемента](/ru/docs/Web/CSS/Subsequent-sibling_combinator)

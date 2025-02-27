@@ -3,16 +3,16 @@ title: border-spacing
 slug: Web/CSS/border-spacing
 ---
 
-<< [Volver](/es/Gu%c3%ada_de_referencia_de_CSS)
+{{CSSRef}}
 
 ### Resumen
 
-La propiedad de {{ Cssxref("border-spacing", "espaciado de borde") }} especifica la distancia entre los bordes de celdas adyacentes (sólo para el modelo de [separación de borde](/es/CSS/border-collapse)). Es el equivalente al atributo `cellspacing` en HTML.
+La propiedad de {{ Cssxref("border-spacing", "espaciado de borde") }} especifica la distancia entre los bordes de celdas adyacentes (sólo para el modelo de [separación de borde](/es/docs/Web/CSS/border-collapse)). Es el equivalente al atributo `cellspacing` en HTML.
 
 - {{ Cssxref("initial", "Valor inicial") }}: 0
 - Se aplica a: tablas y elementos con la propiedad `inline-table`
 - {{ Cssxref("inheritance", "Valor heredado") }}: sí
-- Medio: {{ Xref_cssvisual() }}
+- Medio: {{cssxref("Media/Visual", "visual")}}
 - {{ Cssxref("computed value", "Valor calculado") }}: dos largos absolutos.
 
 ### Sintaxis
@@ -26,7 +26,7 @@ border-spacing: \<length> | \<length> \<length> | inherit
 
 ### Ejemplos
 
-[Ver El Ejemplo Vivo](/samples/cssref/border-spacing.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/border-spacing.html)
 
 ```
 table#space {
@@ -43,23 +43,12 @@ El espaciado de borde también se utiliza en los bordes exteriores de las tablas
 
 ### Especificaciones
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/tables.html#propdef-border-spacing)
+{{Specifications}}
 
-### Compatibilidades
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Netscape          | 6              |
-| Internet Explorer | 7              |
-| Firefox           | 1              |
-| Mozilla           | 1              |
-| Safari            | 1              |
-| Opera             | 6              |
+{{Compat}}
 
 ### Ver también
 
 {{ Cssxref("border-collapse") }}
-
-Categorías
-
-Interwiki Languages

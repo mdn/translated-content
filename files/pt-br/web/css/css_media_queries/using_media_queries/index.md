@@ -131,13 +131,15 @@ media_feature: width | min-width | max-width
 
 _Media queries_ são _case insensitive_. _Media queries_ envolvidas em _media types_ desconhecidos serão sempre falsas.
 
-> **Nota:** Parenteses são obrigatórios em volta de expressões; a falta deles é um erro.
+> [!NOTE]
+> Parenteses são obrigatórios em volta de expressões; a falta deles é um erro.
 
 ## Características de mídia
 
 A maioria das _media features_ podem ter prefixo "min-" ou "max-" para expressar as restrições "maior ou igual" ou "menor ou igual". Isto evita o uso dos símbolos "<" e ">" , que entrem em conflito com HTML e XML. Se você usar uma _media feature_ sem especificar um valor, a expressão retorna verdadeiro, se o valor da _feature_ for diferente de zero.
 
-> **Nota:** Se uma media feature não se aplicar ao dispositivo onde o navegador esta sendo executado, as expressões que envolvem essa media feature são sempre falsas. Por exemplo, consultar um aspecto de um dispositivo sonoro, sempre resulta em falso.
+> [!NOTE]
+> Se uma media feature não se aplicar ao dispositivo onde o navegador esta sendo executado, as expressões que envolvem essa media feature são sempre falsas. Por exemplo, consultar um aspecto de um dispositivo sonoro, sempre resulta em falso.
 
 ### cor
 
@@ -147,7 +149,8 @@ A maioria das _media features_ podem ter prefixo "min-" ou "max-" para expressar
 
 Indica o número de bits por componente de cor no dispositivo de saída. Se o dispositivo não é um dispositivo de cor, o valor é zero.
 
-> **Nota:** Se os componentes de cor têm diferentes números de bits por componente de cor, o menor valor é utilizado. Por exemplo, se o display usa 5 bits para azul e vermelho e 6 bits para verde, então o dispositivo considera 5 bits por componente de cor. Se o dispositivo usar cores indexadas, o menor número de bits por componente de cor na tabela de cores é usado.
+> [!NOTE]
+> Se os componentes de cor têm diferentes números de bits por componente de cor, o menor valor é utilizado. Por exemplo, se o display usa 5 bits para azul e vermelho e 6 bits para verde, então o dispositivo considera 5 bits por componente de cor. Se o dispositivo usar cores indexadas, o menor número de bits por componente de cor na tabela de cores é usado.
 
 #### Exemplos
 
@@ -272,7 +275,8 @@ Para aplicar um estilo a dispositivos postáteis com 15-carácteres ou uma tela 
 @media handheld and (grid) and (max-width: 15em) { ... }
 ```
 
-> **Nota:** A unidade "em" tem um significado especial para dispositivos de grade, uma vez que a exata largura de um "em" não pode ser determinada, 1em é assumido para ser a largura de uma célula da grade horizontalmente, e a altura de uma célula verticalmente.
+> [!NOTE]
+> A unidade "em" tem um significado especial para dispositivos de grade, uma vez que a exata largura de um "em" não pode ser determinada, 1em é assumido para ser a largura de uma célula da grade horizontalmente, e a altura de uma célula verticalmente.
 
 ### height
 
@@ -282,7 +286,8 @@ Para aplicar um estilo a dispositivos postáteis com 15-carácteres ou uma tela 
 
 A característica `height` descreve a altura da superfície de renderização do dispositivo de saída (tal como a altura do viewport ou da caixa de página em uma impressora).
 
-> **Nota:** Como o usuário redimensiona a janela, o Firefox muda as folhas de estilo como apropriado, com base nas media queries, usando as media features `width` e `height`.
+> [!NOTE]
+> Como o usuário redimensiona a janela, o Firefox muda as folhas de estilo como apropriado, com base nas media queries, usando as media features `width` e `height`.
 
 ### monochrome
 
@@ -322,7 +327,8 @@ Para aplicar a folha de estilo apenas em orientação _portrait_:
 @media all and (orientation: portrait) { ... }
 ```
 
-> **Nota:** Este valor não corresponde com a orientação real do dispositivo. Abrindo o teclado virtual na maioria dos dispositivos na orientação retrato fará com que o viewport torne-se mais largo do que alto, fazendo assim que o navegador use estilos de paisagem em vez de retrato.
+> [!NOTE]
+> Este valor não corresponde com a orientação real do dispositivo. Abrindo o teclado virtual na maioria dos dispositivos na orientação retrato fará com que o viewport torne-se mais largo do que alto, fazendo assim que o navegador use estilos de paisagem em vez de retrato.
 
 ### resolution
 
@@ -406,7 +412,7 @@ Mozilla oferece várias _media features_ para específicos _Gecko_ . Algumas des
 **Mídia:** {{cssxref("Media/Visual")}}
 **Aceita prefixos min/max:** não
 
-Se o dispositivo permite aparecer imagens nos menus, o valor é 1; caso contrário, o valor é 0. Isto corresponde ao {{ cssxref(":-moz-system-metric(images-in-menus)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
+Se o dispositivo permite aparecer imagens nos menus, o valor é 1; caso contrário, o valor é 0. Isto corresponde ao {{ cssxref(":-moz-system-metric(images-in-menus)") }} CSS [pseudo-class](/pt-BR/docs/Web/CSS/Pseudo-classes).
 
 ### -moz-mac-graphite-theme
 
@@ -416,7 +422,7 @@ Se o dispositivo permite aparecer imagens nos menus, o valor é 1; caso contrár
 
 Se o usuário tenha configurado seu dispositivo para usar a aparência _"Graphite"_ no _Mac OS X_, o valor é 1. Se o usuário está usando a aparência padrão _blue_, ou não está num _Mac OS X_, o valor é 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(mac-graphite-theme)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
+Isto corresponde ao {{ cssxref(":-moz-system-metric(mac-graphite-theme)") }} CSS [pseudo-class](/pt-BR/docs/Web/CSS/Pseudo-classes).
 
 ### -moz-maemo-classic
 
@@ -426,7 +432,7 @@ Isto corresponde ao {{ cssxref(":-moz-system-metric(mac-graphite-theme)") }} CSS
 
 Se o usuário está usando _Maemo_ com o tema original, o valor é 1; Se está usando o mais novo tema _Fremantle_, o valor é 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(maemo-classic)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
+Isto corresponde ao {{ cssxref(":-moz-system-metric(maemo-classic)") }} CSS [pseudo-class](/pt-BR/docs/Web/CSS/Pseudo-classes).
 
 ### -moz-device-pixel-ratio
 
@@ -453,7 +459,8 @@ Exemplo:
 
 Veja este artigo [CSSWG](https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/) para ccompatibilidade de boas práticas em relação a _`resolution`_ e _`dppx`_.
 
-> **Nota:** Esta _media feature_ é também implementada pelo Webkit e pelo [IE 11 para Windows Phone 8.1](<https://msdn.microsoft.com/en-us/library/ie/dn760733(v=vs.85).aspx>)como -webkit-device-pixel-ratio. Os prefixos min e max implementados pelo Gecko são nomeados min--moz-device-pixel-ratio e max--moz-device-pixel-ratio; mas os mesmos prefixos implementados pelo Webkit são chamados -webkit-min-device-pixel-ratio e -webkit-max-device-pixel-ratio.
+> [!NOTE]
+> Esta _media feature_ é também implementada pelo Webkit e pelo [IE 11 para Windows Phone 8.1](<https://msdn.microsoft.com/en-us/library/ie/dn760733(v=vs.85).aspx>)como -webkit-device-pixel-ratio. Os prefixos min e max implementados pelo Gecko são nomeados min--moz-device-pixel-ratio e max--moz-device-pixel-ratio; mas os mesmos prefixos implementados pelo Webkit são chamados -webkit-min-device-pixel-ratio e -webkit-max-device-pixel-ratio.
 
 ### -moz-os-version
 
@@ -478,7 +485,7 @@ Isto é fornecido pelas _skins das aplicações_ e outros códigos do chrome par
 
 Se a interface do usuário do dispositivo exibe uma seta para trás no final da barra de rolagem, o valor é 1. Caso contrário, é 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-end-backward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
+Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-end-backward)") }} CSS [pseudo-class](/pt-BR/docs/Web/CSS/Pseudo-classes).
 
 ### -moz-scrollbar-end-forward
 
@@ -488,7 +495,7 @@ Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-end-backward)") }}
 
 Se a interface do usuário do dispositivo a forward arrow button at the end of scrollbars, this is 1. Otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-end-forward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
+Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-end-forward)") }} CSS [pseudo-class](/pt-BR/docs/Web/CSS/Pseudo-classes).
 
 ### -moz-scrollbar-start-backward
 
@@ -498,7 +505,7 @@ Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-end-forward)") }} 
 
 Se a interface do usuário do dispositivo a backward arrow button at the beginning of scrollbars, this is 1. Otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-start-backward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
+Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-start-backward)") }} CSS [pseudo-class](/pt-BR/docs/Web/CSS/Pseudo-classes).
 
 ### -moz-scrollbar-start-forward
 
@@ -508,7 +515,7 @@ Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-start-backward)") 
 
 Se a interface do usuário do dispositivo a forward arrow button at the beginning of scrollbars, this is 1. Otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-start-forward)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
+Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-start-forward)") }} CSS [pseudo-class](/pt-BR/docs/Web/CSS/Pseudo-classes).
 
 ### -moz-scrollbar-thumb-proportional
 
@@ -518,7 +525,7 @@ Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-start-forward)") }
 
 Se a interface do usuário do dispositivo the thumb of scrollbars proportionally (that is, sized based on the percentage of the document that is visible), this is 1. Otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-thumb-proportional)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
+Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-thumb-proportional)") }} CSS [pseudo-class](/pt-BR/docs/Web/CSS/Pseudo-classes).
 
 ### -moz-touch-enabled
 
@@ -528,7 +535,7 @@ Isto corresponde ao {{ cssxref(":-moz-system-metric(scrollbar-thumb-proportional
 
 If the device supports touch events (for a touch screen), this is 1. Otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(touch-enabled)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
+Isto corresponde ao {{ cssxref(":-moz-system-metric(touch-enabled)") }} CSS [pseudo-class](/pt-BR/docs/Web/CSS/Pseudo-classes).
 
 #### Exemplo
 
@@ -542,7 +549,7 @@ You might use this to render your buttons slightly larger, for example, if the u
 
 If the user is using Windows unthemed (in classic mode instead of using uxtheme), this is 1; otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-classic)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
+Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-classic)") }} CSS [pseudo-class](/pt-BR/docs/Web/CSS/Pseudo-classes).
 
 ### -moz-windows-compositor
 
@@ -552,7 +559,7 @@ Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-classic)") }} CSS [p
 
 If the user is using Windows with the DWM compositor, this is 1; otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-compositor)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
+Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-compositor)") }} CSS [pseudo-class](/pt-BR/docs/Web/CSS/Pseudo-classes).
 
 ### -moz-windows-default-theme
 
@@ -562,7 +569,7 @@ Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-compositor)") }} CSS
 
 If the user is currently using one of the default Windows themes (Luna, Royale, Zune, or Aero (including Vista Basic, Vista Advanced, and Aero Glass), this is 1. Otherwise it's 0.
 
-Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-default-theme)") }} CSS [pseudo-class](/pt-BR/docs/CSS/Pseudo-classes).
+Isto corresponde ao {{ cssxref(":-moz-system-metric(windows-default-theme)") }} CSS [pseudo-class](/pt-BR/docs/Web/CSS/Pseudo-classes).
 
 ### -moz-windows-glass
 
@@ -593,7 +600,7 @@ Isto é previsto para _skins_ de aplicativo e outro código de aplicações de c
 ## See also
 
 - [CSS 3 media query specification](https://www.w3.org/TR/css3-mediaqueries/)
-- [Media types](/pt-BR/docs/CSS/@media)
-- [Using media queries from code](/pt-BR/docs/CSS/Using_media_queries_from_code)
+- [Media types](/pt-BR/docs/Web/CSS/@media)
+- [Using media queries from code](/pt-BR/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - [List of mobile and tablet viewport sizes with pixel ratios and physical sizes](http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/)
-- [CSS Animations Between Media Queries](http://davidwalsh.name/animate-media-queries) by David Walsh
+- [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries) by David Walsh

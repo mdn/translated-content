@@ -38,20 +38,17 @@ var x = function* (y) {
 
 ## Especificações
 
-| Especificação                             | Situação             | Comentário         |
-| ----------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#', 'function*')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#', 'function*')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.generator_function")}}
+{{Compat}}
 
 ## Veja também
 
 - {{jsxref("Statements/function*", "function* statement")}}
 - {{jsxref("GeneratorFunction")}} object
-- [The Iterator protocol](/pt-BR/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
 - {{jsxref("Function")}} object

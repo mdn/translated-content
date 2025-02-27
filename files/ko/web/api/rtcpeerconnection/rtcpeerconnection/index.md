@@ -45,13 +45,15 @@ pc = new RTCPeerConnection([configuration]);
 
       - : 연결 인증에 사용할 {{domxref("RTCCertificate")}}를 담은 {{jsxref("Array")}}입니다. 지정하지 않을 경우 {{domxref("RTCPeerConnection")}} 인스턴스 각각에 대해 인증서가 자동으로 생성됩니다. 주어진 연결에 대해 하나의 인증서만 사용되지만, 다양한 알고리즘을 사용하는 여러 인증서를 제공하면 특정 상황에서의 연결 성공률을 높일 수 있습니다. 아래의 [인증서 사용하기](#인증서_사용하기)에서 더 많은 정보를 확인하세요.
 
-        > **참고:** 이 옵션은 처음 지정한 이후 변경할 수 없습니다. 인증서를 설정한 후엔 모든 {{domxref("RTCPeerConnection.setConfiguration()")}}이 무시됩니다.
+        > [!NOTE]
+        > 이 옵션은 처음 지정한 이후 변경할 수 없습니다. 인증서를 설정한 후엔 모든 {{domxref("RTCPeerConnection.setConfiguration()")}}이 무시됩니다.
 
     - `iceCandidatePoolSize` {{optional_inline}}
 
       - : ICE candidate 풀의 크기를 지정하는 부호 없는 16비트 정수 값입니다. 기본 값은 0으로 candidate 를 미리 가져오지 않을 것임을 나타냅니다. 연결 시도 전부터 ICE 에이전트가 ICE candidate를 가져올 수 있도록 허용하면 {{domxref("RTCPeerConnection.setLocalDescription()")}} 호출 시점에 이미 candidate를 조사할 수 있으므로 특정 상황에서 연결 속도가 빨라질 수 있습니다.
 
-        > **참고:** ICE candidate 풀의 크기를 변경하면 ICE 수집이 시작할 수 있습니다.
+        > [!NOTE]
+        > ICE candidate 풀의 크기를 변경하면 ICE 수집이 시작할 수 있습니다.
 
     - `iceServers` {{optional_inline}}
       - : ICE 에이전트가 사용할 수 있는 서버(보통 STUN/TURN)를 설명하는 {{domxref("RTCIceServer")}} 객체의 배열입니다. 지정하지 않을 경우 STUN/TURN 서버를 사용하지 않고 연결 시도를 하므로 연결이 로컬 피어로 제한됩니다.
@@ -114,6 +116,6 @@ the cost of generating new keys.
 ## 참고
 
 - [Signaling and video calling](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
-- [WebRTC architecture overview](/ko/docs/Web/API/WebRTC_API/Architecture)
+- [WebRTC architecture overview](/ko/docs/Web/API/WebRTC_API/Protocols)
 - [Lifetime of a WebRTC session](/ko/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}

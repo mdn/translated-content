@@ -10,7 +10,7 @@ JavaScript는 애플리케이션에 다양한 상호작용을 추가하기 위�
 
 여기서 다룬 명령문들의 자세한 설명은 [JavaScript 참고서](/ko/docs/Web/JavaScript/Reference/Statements)에서 읽을 수 있습니다. 세미콜론(`;`)은 두 명령문을 분리하기 위해 사용했습니다.
 
-모든 JavaScript 표현식은 명령문이기도 합니다. 표현식에 대한 자세한 정보는 [표현식과 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators)에서 확인하세요.
+모든 JavaScript 표현식은 명령문이기도 합니다. 표현식에 대한 자세한 정보는 [표현식과 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators)에서 확인하세요.
 
 ## 블록문
 
@@ -37,7 +37,8 @@ while (x < 10) {
 
 여기서 `{ x++; }`가 블록문입니다.
 
-> **참고:** ECMA2015 (제6판) 이전의 JavaScript에는 블록 스코프가 **없었습니다**! 구형 JavaScript 코드에서는 블록 내에 정의한 변수의 스코프를 그 블록이 아니라, 변수 선언을 포함한 함수 또는 스크립트로 설정합니다. 때문에 변수 할당의 영향은 블록을 넘어서도 확인할 수 있습니다. 즉, 블록문이 스코프를 정의하지 않습니다.
+> [!NOTE]
+> ECMA2015 (제6판) 이전의 JavaScript에는 블록 스코프가 **없었습니다**! 구형 JavaScript 코드에서는 블록 내에 정의한 변수의 스코프를 그 블록이 아니라, 변수 선언을 포함한 함수 또는 스크립트로 설정합니다. 때문에 변수 할당의 영향은 블록을 넘어서도 확인할 수 있습니다. 즉, 블록문이 스코프를 정의하지 않습니다.
 >
 > JavaScript의 "독립 블록"은 C나 Java에서 기대할 수 있는 것과는 완전히 다른 결과를 낳습니다. 예를 들어,
 >

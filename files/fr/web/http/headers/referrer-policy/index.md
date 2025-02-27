@@ -22,7 +22,8 @@ L'en-tête {{glossary("HTTP header")}} **`Referrer-Policy`** contrôle la quanti
 
 ## Syntaxe
 
-> **Note :** Le nom originel de l'en-tête, {{HTTPHeader("Referer")}}, est une faute de frappe du mot anglais "referrer". L'en-tête `Referrer-Policy` ne comporte pas cette erreur.
+> [!NOTE]
+> Le nom originel de l'en-tête, {{HTTPHeader("Referer")}}, est une faute de frappe du mot anglais "referrer". L'en-tête `Referrer-Policy` ne comporte pas cette erreur.
 
 ```
 Referrer-Policy: no-referrer
@@ -56,7 +57,8 @@ Referrer-Policy: unsafe-url
 
   - : Envoie l'origine, le chemin et les paramètres de requête pour toutes les requêtes sans tenir compte du niveau de sécurité.
 
-    > **Attention :** Cette valeur divulgera des informations potentiellement confidentielles de la part des URL de ressources HTTPS vers des origines non sécurisées. Considérez les conséquences de ce paramétrage avant de vous en servir.
+    > [!WARNING]
+    > Cette valeur divulgera des informations potentiellement confidentielles de la part des URL de ressources HTTPS vers des origines non sécurisées. Considérez les conséquences de ce paramétrage avant de vous en servir.
 
 ## Intégration avec HTML
 
@@ -78,7 +80,8 @@ Autrement, une [relation de lien](/fr/docs/Web/HTML/Attributes/rel) définie à 
 <a href="http://example.com" rel="noreferrer"></a>
 ```
 
-> **Attention :** Comme vu précédemment, la relation de lien `noreferrer` s'écrit sans trait d'union. Toutefois, quand la règle de référent est spécifiée pour le document entier avec un élément {{HTMLElement("meta")}}, il faut mettre le trait d'union : `<meta name="referrer" content="no-referrer">`.
+> [!WARNING]
+> Comme vu précédemment, la relation de lien `noreferrer` s'écrit sans trait d'union. Toutefois, quand la règle de référent est spécifiée pour le document entier avec un élément {{HTMLElement("meta")}}, il faut mettre le trait d'union : `<meta name="referrer" content="no-referrer">`.
 
 ## Intégration avec CSS
 
@@ -197,7 +200,8 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 
 Ici, `no-referrer` ne sera utilisée que si `strict-origin-when-cross-origin` n'est pas supportée par le navigateur.
 
-> **Note :** Spécifier plusieurs valeurs n'est supporté que dans l'en-tête HTTP `Referrer-Policy` et non dans l'attribut `referrerpolicy`.
+> [!NOTE]
+> Spécifier plusieurs valeurs n'est supporté que dans l'en-tête HTTP `Referrer-Policy` et non dans l'attribut `referrerpolicy`.
 
 ## Spécifications
 

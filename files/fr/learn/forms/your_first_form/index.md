@@ -69,7 +69,8 @@ Cet élément définit un formulaire. C'est un élément conteneur au même titr
 - L'attribut `action` définit l'emplacement (une URL) où doivent être envoyées les données collectées par le formulaire.
 - L'attribut `method` définit la méthode HTTP utilisée pour envoyer les données (cela peut être « get » ou « post »).
 
-> **Note :** Si vous souhaitez en savoir plus sur le fonctionnement de ces attributs, cela est détaillé dans l'article [«&nbsp;Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires)&nbsp;».
+> [!NOTE]
+> Si vous souhaitez en savoir plus sur le fonctionnement de ces attributs, cela est détaillé dans l'article [«&nbsp;Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires)&nbsp;».
 
 Pour le moment, ajoutez l'élément {{htmlelement("form")}} ci dessus dans le corps de votre HTML.
 
@@ -98,7 +99,7 @@ En terme de code HTML, nous avons besoin de quelque chose qui ressemble à ceci 
 </form>
 ```
 
-Les éléments {{HTMLElement("div")}} sont ici pour structurer notre code et rendre la mise en page plus facile (voir ci-dessous). Veuillez noter l'utilisation de l'attribut `for` sur tous les éléments {{HTMLElement("label")}}. C'est une manière formelle de lier un libellé à un élément du formulaire. Cet attribut fait référence à l'`id` de l'élément correspondant. Il y a plusieurs avantages à faire ainsi. Le plus évident de permettre à l'utilisateur de cliquer sur l'étiquette pour activer le bloc correspondant. Si vous souhaitez mieux comprendre les bénéfices de cet attribut, tout est détaillé dans cet article : [Comment structurer un formulaire HTML](/fr/docs/HTML/Formulaires/Comment_structurer_un_formulaire_HTML).
+Les éléments {{HTMLElement("div")}} sont ici pour structurer notre code et rendre la mise en page plus facile (voir ci-dessous). Veuillez noter l'utilisation de l'attribut `for` sur tous les éléments {{HTMLElement("label")}}. C'est une manière formelle de lier un libellé à un élément du formulaire. Cet attribut fait référence à l'`id` de l'élément correspondant. Il y a plusieurs avantages à faire ainsi. Le plus évident de permettre à l'utilisateur de cliquer sur l'étiquette pour activer le bloc correspondant. Si vous souhaitez mieux comprendre les bénéfices de cet attribut, tout est détaillé dans cet article : [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/How_to_structure_a_web_form).
 
 Concernant l'élément {{HTMLElement("input")}}, l'attribut le plus important est l'attribut `type`. Ce dernier est extrêmement important puisqu'il définit le comportement de l'élément {{HTMLElement("input")}}. Il peut radicalement changer le sens de l'élément, faites-y attention. Si vous voulez en savoir plus à ce propos, vous pouvez lire l'article au sujet des [widgets natifs pour formulaire](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs).
 
@@ -135,13 +136,15 @@ Comme vous le voyez l'élément {{htmlelement("button")}} accepte aussi un attri
 - Un clic sur un bouton `reset` réinitialise tous les widgets du formulaire à leurs valeurs par défaut immédiatement. Du point de vue de l'expérience utilisateur, utiliser un tel bouton est une mauvaise pratique.
 - Un clic sur un bouton `button` ne fait... rien ! Cela peut paraître stupide mais c'est en réalité très pratique pour concevoir des boutons personnalisés avec JavaScript.
 
-> **Note :** Vous pouvez aussi utiliser l'élément {{HTMLElement("input")}} avec le type approprié pour produire un bouton, par exemple `<input type="submit">`. Le principal avantage de {{HTMLElement("button")}} par rapport à l'élément {{HTMLElement("input")}} est que ce dernier ne permet d'utiliser que du texte comme étiquette tandis que l'élément {{HTMLElement("button")}} permet d'utiliser n'importe quel contenu HTML, autorisant ainsi des textes de bouton plus complexes et créatifs.
+> [!NOTE]
+> Vous pouvez aussi utiliser l'élément {{HTMLElement("input")}} avec le type approprié pour produire un bouton, par exemple `<input type="submit">`. Le principal avantage de {{HTMLElement("button")}} par rapport à l'élément {{HTMLElement("input")}} est que ce dernier ne permet d'utiliser que du texte comme étiquette tandis que l'élément {{HTMLElement("button")}} permet d'utiliser n'importe quel contenu HTML, autorisant ainsi des textes de bouton plus complexes et créatifs.
 
 ## Mise en page élémentaire du formulaire
 
 Nous avons désormais notre formulaire HTML, et si vous le regardez dans votre navigateur préféré, vous verrez qu'il est plutôt laid.
 
-> **Note :** Si vous pensez que vous n'avez pas écrit un code HTML correct, faites la comparaison avec celui de notre exemple terminé — voyez [first-form.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form.html) (ou [également directement](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html)).
+> [!NOTE]
+> Si vous pensez que vous n'avez pas écrit un code HTML correct, faites la comparaison avec celui de notre exemple terminé — voyez [first-form.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form.html) (ou [également directement](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html)).
 
 Les formulaires sont notoirement embêtants à présenter joliment. Apprendre la mise en page ou la décoration des formulaires sort du cadre de cet article, donc pour le moment nous allons simplement ajouter quelques indications au CSS pour lui donner un air convenable.
 
@@ -231,7 +234,8 @@ button {
 
 Désormais notre formulaire a une bien meilleure allure.
 
-> **Note :** Il est sur GitHub dans [first-form-styled.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html) (à voir aussi [directement](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)).
+> [!NOTE]
+> Il est sur GitHub dans [first-form-styled.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html) (à voir aussi [directement](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)).
 
 ## Envoyer les données au serveur Web
 

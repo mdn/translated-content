@@ -16,7 +16,7 @@ var gl = canvas.getContext("webgl");
 gl.getParameter(gl.LINE_WIDTH);
 ```
 
-其中一些常量也由 [WebGL 扩展](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions) 提供，如下方提供的 [清单](#Constants_defined_in_WebGL_extensions)：
+其中一些常量也由 [WebGL 扩展](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions) 提供，如下方提供的 [清单](#constants_defined_in_webgl_extensions)：
 
 ```js
 var debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
@@ -27,9 +27,9 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 
 ## 常量表
 
-- [标准 WebGL 1 常量](#Standard_WebGL_1_constants)
-- [标准 WebGL 2 常量](#Additional_constants_defined_WebGL_2)
-- [WebGL 扩展常量](#Constants_defined_in_WebGL_extensions)
+- [标准 WebGL 1 常量](#standard_webgl_1_constants)
+- [标准 WebGL 2 常量](#additional_constants_defined_webgl_2)
+- [WebGL 扩展常量](#constants_defined_in_webgl_extensions)
 
 ## 标准 WebGL 1 常量
 

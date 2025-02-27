@@ -2,14 +2,14 @@
 title: JavaScript のデータ型とデータ構造
 slug: Web/JavaScript/Data_structures
 l10n:
-  sourceCommit: 97ad54b6eb1427c994ca15cae352850b71b154aa
+  sourceCommit: 0b0cac4814d37f8a62d69de1b0d76dbe20d085ec
 ---
 
 {{jsSidebar("More")}}
 
 プログラミング言語には、どれにも組み込みデータ構造がありますが、ふつうは言語ごとに異なります。この記事では、JavaScript で使用可能な組み込みデータ構造の一覧と、他のデータ構造の構築にも使えるように、それらがどのような性質を持ち合わせているかについて述べることにします。
 
-[言語概要](/ja/docs/Web/JavaScript/Language_Overview)では、一般的なデータ型を同様にまとめていますが、もっと他の言語との比較も行っています。
+[言語概要](/ja/docs/Web/JavaScript/Language_overview)では、一般的なデータ型を同様にまとめていますが、もっと他の言語との比較も行っています。
 
 ## 動的かつ弱い型付け
 
@@ -29,7 +29,7 @@ const result = foo + "1"; // JavaScript は、foo を文字列に変換し、他
 console.log(result); // 421
 ```
 
-暗黙の型変換はとても便利ですが、開発者が変換を意図していなかったり、他の方向への変換（例えば、数値から文字列ではなく文字列から数値）を意図していた場合、足かせになる可能性があります。[シンボル](#シンボル型)と[長整数](#長整数型)については、JavaScript は意図的に特定の暗黙の型変換を禁止してきました。
+暗黙の型変換はとても便利ですが、想定外の変換が発生したり、想定外の方向（例えば、文字列から数値ではなく、数値から文字列）で変換が発生したりすると、微妙なバグを作成する可能性があります。[シンボル](#シンボル型)と[長整数](#長整数型)については、JavaScript は意図的に特定の暗黙の型変換を禁止してきました。
 
 ## プリミティブ値
 
@@ -78,9 +78,9 @@ Undefined 型には、値が [`undefined`](/ja/docs/Web/JavaScript/Reference/Glo
 
 ### 数値型
 
-数値型 ({{jsxref("Number")}}) は [IEEE 754 の倍精度浮動小数点形式の値](https://ja.wikipedia.org/wiki/倍精度浮動小数点数)です。2<sup>-1074</sup> ({{jsxref("Number.MIN_VALUE")}}) から 2<sup>1024</sup> ({{jsxref("Number.MAX_VALUE")}}) までの正の浮動小数点数の値が格納できるようになっていますが、安全に格納できるのは -(2<sup>53</sup> − 1) ({{jsxref("Number.MIN_SAFE_INTEGER")}}) から 2<sup>53</sup> − 1 ({{jsxref("Number.MAX_SAFE_INTEGER")}}) の範囲です。この範囲を外れると、JavaScript は整数を安全に表現できなくなり、代わりに倍精度浮動小数点数の近似値で表現されます。数値が安全な整数の範囲内かどうかは {{jsxref("Number.isSafeInteger()")}} を用いて調べることができます。
+数値型 ({{jsxref("Number")}}) は [IEEE 754 の倍精度浮動小数点形式の値](https://ja.wikipedia.org/wiki/倍精度浮動小数点数)です。2<sup>-1074</sup> ({{jsxref("Number.MIN_VALUE")}}) から 2<sup>1023</sup> × (2 - 2<sup>-52</sup>) ({{jsxref("Number.MAX_VALUE")}}) の正の浮動小数点数、および同じ範囲の負の浮動小数点数の値が格納できるようになっていますが、安全に格納できるのは -(2<sup>53</sup> − 1) ({{jsxref("Number.MIN_SAFE_INTEGER")}}) から 2<sup>53</sup> − 1 ({{jsxref("Number.MAX_SAFE_INTEGER")}}) の範囲です。この範囲を外れると、JavaScript は整数を安全に表現できなくなり、代わりに倍精度浮動小数点数の近似値で表現されます。数値が安全な整数の範囲内かどうかは {{jsxref("Number.isSafeInteger()")}} を用いて調べることができます。
 
-±(2<sup>-1074</sup> to 2<sup>1024</sup>) の範囲を外れた値は、自動的に次のように変換されます。
+表現可能な範囲外の値は、自動的に次のように変換されます。
 
 - {{jsxref("Number.MAX_VALUE")}} より大きな正の数は `+Infinity` に変換されます。
 - {{jsxref("Number.MIN_VALUE")}} より小さな正の数は `+0` に変換されます。
@@ -98,9 +98,10 @@ console.log(42 / -0); // -Infinity
 
 {{jsxref("NaN")}} ("**N**not **a** **N**umber") は、特殊な数値の一種で、演算操作の結果が数値として発生しない場合によく遭遇します。また、JavaScript で唯一、それ自身と等しくない値でもあります。
 
-数値は概念的には「数学的な値」であり、常に暗黙のうちに浮動小数点`でエンコードされていますが、JavaScriptでは[ビット演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#ビット演算子)を提供しています。ビット演算子を運営する場合、最初の数値は 32 ビット整数に変換されます。
+数値は概念的には「数学的な値」であり、常に暗黙のうちに浮動小数点`でエンコードされていますが、JavaScriptでは[ビット演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#ビット演算子)を提供しています。ビット演算子を運営する場合、最初の数値は 32 ビット整数に変換されます。
 
-> **メモ:** ビット演算子で[ビットマスク](https://ja.wikipedia.org/wiki/マスク_%28情報工学%29)を使用すれば、 1 つの数値で複数の論理値を表現することも可能ですが、 JavaScript は（論理型の配列や名前付きプロパティに論理値が割り当てられたオブジェクトのような）論理値の集合を表現する手段を提供しているため、この行いは悪い習慣として見なされています。ビットマスクはコードの可読性、わかりやすさ、保守性を大きく損ないます。
+> [!NOTE]
+> ビット演算子で[ビットマスク](https://ja.wikipedia.org/wiki/マスク_%28情報工学%29)を使用すれば、 1 つの数値で複数の論理値を表現することも可能ですが、 JavaScript は（論理型の配列や名前付きプロパティに論理値が割り当てられたオブジェクトのような）論理値の集合を表現する手段を提供しているため、この行いは悪い習慣として見なされています。ビットマスクはコードの可読性、わかりやすさ、保守性を大きく損ないます。
 
 ローカルストレージの制限に対処しようとするときや、極端な用途（ネットワーク上の各ビットがカウントされる場合など）のように、非常に制約された環境では、このような技術を使用する必要がある場合があります。この技術は、サイズを最適化するために導ける最後の手段である場合にのみ考えることができます。
 
@@ -127,7 +128,7 @@ Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; // true。両方と
 
 ### 文字列型
 
-文字列型 ({{jsxref("String")}}) は、テキストデータを表し、[UTF-16 コード単位](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_cluster) を表す 16 ビット符号なし整数値のシーケンスとしてエンコードさます。文字列の各要素は、文字列の中の位置を占めます。最初の要素は位置 `0` にあり、次の要素は位置 `1` にある、という具合になります。文字列の [length](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/length) は、その中の UTF-16 コード単位の個数で、実際の Unicode 文字数とは異なる場合があります。詳細は [`String`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters) を参照してください。
+文字列型 ({{jsxref("String")}}) は、テキストデータを表し、[UTF-16 コード単位](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター) を表す 16 ビット符号なし整数値のシーケンスとしてエンコードさます。文字列の各要素は、文字列の中の位置を占めます。最初の要素は位置 `0` にあり、次の要素は位置 `1` にある、という具合になります。文字列の [length](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/length) は、その中の UTF-16 コード単位の個数で、実際の Unicode 文字数とは異なる場合があります。詳細は [`String`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター) のリファレンスページを参照してください。
 
 JavaScriptの文字列は不変です。つまり、一度文字列が作成されると、それを変更することはできません。文字列メソッドは、現在の文字列の内容に基づいて新しい文字列を作成します。例えば、次のような場面です。
 
@@ -140,7 +141,7 @@ JavaScriptの文字列は不変です。つまり、一度文字列が作成さ�
 
 - 結合することで、複合文字列を簡単に作成できます。
 - 文字列はデバッグしやすいです（出力される情報は常に文字列に含まれているものです）。
-- 文字列は多くの API（[入力フィールド](/ja/docs/Web/API/HTMLInputElement)、[ローカルストレージ](/ja/docs/Web/API/Web_Storage_API)の値、 [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) の `responseText` を使用したレスポンス、など）において共通分母であり、文字列だけで作業したいという誘惑に駆られることがあります。
+- 文字列は多くの API（[入力フィールド](/ja/docs/Web/API/HTMLInputElement)、[ローカルストレージ](/ja/docs/Web/API/Web_Storage_API)の値、[`fetch()`](/ja/docs/Web/API/Window/fetch) の {{domxref("Response.text()")}} を使用したレスポンス、など）において共通分母であり、文字列だけで作業したいという誘惑に駆られることがあります。
 
 規則さえあれば、どのようなデータ構造でも文字列で表現することが可能ですが、これは良い考えとは言えません。例えば、区切り文字を使用することでリストを模倣することができますが（JavaScript の配列の方が適しています）、残念なことに区切り文字がリストの要素で使用されてしまった場合、リストが壊れてしまいます。エスケープした文字を使用することでこの問題に対処することは可能ですが、その規則をすべてに用意する必要がある上、不必要なメンテナンスの負担を生み出します。
 
@@ -156,7 +157,7 @@ JavaScriptの文字列は不変です。つまり、一度文字列が作成さ�
 
 ### プロパティ
 
-JavaScript では、オブジェクトはプロパティの集合として見ることができます。[オブジェクトリテラル構文](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#オブジェクトリテラル)は、初期化される限定された一連のプロパティです。その後でプロパティは追加したり削除したりすることができます。プロパティのキーは、[文字列](#文字列型)または[シンボル](#シンボル型)のどちらかです。プロパティの値は、他のオブジェクトを含め、どのような種類の値でもよいので、複雑なデータ構造を構築することが可能です。
+JavaScript では、オブジェクトはプロパティの集合として見ることができます。[オブジェクトリテラル構文](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#オブジェクトリテラル)は、初期化される限定された一連のプロパティです。その後でプロパティは追加したり削除したりすることができます。プロパティのキーは、[文字列](#文字列型)または[シンボル](#シンボル型)のどちらかです。他の型（数値など）を使用してオブジェクトに索引を付ける場合、値は暗黙的に文字列に変換されます。プロパティの値は、他のオブジェクトを含め、どのような種類の値でもよいので、複雑なデータ構造を構築することが可能です。
 
 オブジェクトプロパティには、[データプロパティ](#データプロパティ)と[アクセサープロパティ](#アクセサープロパティ)の 2 種類があります。それぞれのプロパティには、対応する属性があります。それぞれの属性は、JavaScript エンジンが内部でアクセスしますが、{{jsxref("Object.defineProperty()")}} で設定したり、{{jsxref("Object.getOwnPropertyDescriptor()")}} で読み取ったりすることができます。様々なニュアンスについては、{{jsxref("Object.defineProperty()")}} のページで詳しく解説しています。
 
@@ -177,7 +178,8 @@ JavaScript では、オブジェクトはプロパティの集合として見る
 
 キーを、値を取り出したり保存したりするための 1 つまたは 2 つのアクセサー関数 (`get` および `set`) と関連づけるものです。
 
-> **メモ:** アクセサー _プロパティ_ であり、アクセサー _メソッド_ ではないことを認識することが重要です。関数を値として用いることで、JavaScript オブジェクトにクラスのようなアクセサーを表すことができますが、それはオブジェクトをクラスにするわけではありません。
+> [!NOTE]
+> アクセサー _プロパティ_ であり、アクセサー _メソッド_ ではないことを認識することが重要です。関数を値として用いることで、JavaScript オブジェクトにクラスのようなアクセサーを表すことができますが、それはオブジェクトをクラスにするわけではありません。
 
 アクセサープロパティには、以下の属性があります。
 
@@ -204,7 +206,7 @@ JavaScript では、オブジェクトはプロパティの集合として見る
 
 さらに、配列は `Array.prototype` を継承しており、配列を操作するための便利なメソッドを提供しています。例えば、 [`indexOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) (配列中の値の検索) や [`push()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/push) (配列への要素の追加) などです。これにより、配列はリストや集合を表現するのに最適な候補となります。
 
-[型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)は、基盤となるバイナリーデータバッファーの配列風のビューを表現し、配列と同様の意味づけを持つメソッドを数多く提供します。「型付き配列」は `Int8Array`、`Float32Array` などの様々なデータ構造の総称である。より詳しい情報は[型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)のページを調べてください。型付き配列は、よく {{jsxref("ArrayBuffer")}} や {{jsxref("DataView")}} と併用して使用します。
+[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)は、基盤となるバイナリーデータバッファーの配列風のビューを表現し、配列と同様の意味づけを持つメソッドを数多く提供します。「型付き配列」は `Int8Array`、`Float32Array` などの様々なデータ構造の総称である。より詳しい情報は[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)のページを調べてください。型付き配列は、よく {{jsxref("ArrayBuffer")}} や {{jsxref("DataView")}} と併用して使用します。
 
 ### キー付きコレクション: Map, Set, WeakMap, WeakSet
 
@@ -214,7 +216,7 @@ JavaScript では、オブジェクトはプロパティの集合として見る
 
 通常、DOM ノードにデータをバインドするには、オブジェクトに直接プロパティを設定するか、 `data-*` 属性を使用します。これらの手法は同じコンテクストで実行されるあらゆるスクリプトからデータの利用が可能であるため、不都合な面を持ち合わせていました。 `Map` や `WeakMap` を使うと、オブジェクトへの*プライベート*なデータバインドを簡単に行うことができます。
 
-`WeakMap` と `WeakSet` はオブジェクトのキーしか使用できず、キーが集合に残っていてもガベージコレクションの対象とすることができます。これらは、[メモリー使用の最適化](/ja/docs/Web/JavaScript/Memory_Management#メモリー管理を支援するデータ構造)に固有の仕様として使用します。
+`WeakMap` および `WeakSet` では、キーとしてオブジェクトまたは[未登録のシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry)のいずれかであるガベージコレクターで回収可能な値のみが許可され、キーがコレクション内に残っていても、キーが回収される場合があります。これらは、[メモリー使用の最適化](/ja/docs/Web/JavaScript/Memory_management#%e3%83%a1%e3%83%a2%e3%83%aa%e3%83%bc%e7%ae%a1%e7%90%86%e3%82%92%e6%94%af%e6%8f%b4%e3%81%99%e3%82%8b%e3%83%87%e3%83%bc%e3%82%bf%e6%a7%8b%e9%80%a0)に固有の仕様として使用します。
 
 ### 構造化データ: JSON
 
@@ -230,23 +232,23 @@ JavaScript には組み込みオブジェクトの標準ライブラリーがあ
 
 ### プリミティブ変換
 
-[プリミティブ変換](https://tc39.es/ecma262/#sec-toprimitive)処理は、プリミティブ値が期待されるものの、実際の入力する種類に強い希望がない場合に使用します。[文字列](#文字列型)、[数値](#数値型)、[長整数](#長整数型)が同じように受け入れられる場合がほとんどです。例を示します。
+[プリミティブ変換](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-toprimitive)処理は、プリミティブ値が期待されるものの、実際の入力する種類に強い希望がない場合に使用します。[文字列](#文字列型)、[数値](#数値型)、[長整数](#長整数型)が同じように受け入れられる場合がほとんどです。例を示します。
 
 - [`Date()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) コンストラクターは、`Date` インスタンスでない引数を 1 つ受け取ります。文字列は日付文字列を表し、数値はタイムスタンプを表します。
 - [`+`](/ja/docs/Web/JavaScript/Reference/Operators/Addition) 演算子は、一方のオペランドが文字列の場合、文字列の連結を行い、それ以外の場合は数値の加算を行います。
 - [`==`](/ja/docs/Web/JavaScript/Reference/Operators/Equality) 演算子は、オペランドの一方がプリミティブで、もう一方がオブジェクトの場合、オブジェクトは入力する種類が決まっていないプリミティブ値に変換されます。
 
-この操作は、値が既にプリミティブである場合、変換を行いません。オブジェクトは、その [`[@@toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) （`"default"` をヒントとして）、`valueOf()`、`toString()` の順にメソッドが呼び出されてプリミティブに変換されます。プリミティブ変換では `toString()` の前に `valueOf()` が呼び出されますが、これは[数値変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値変換)の動作と同様であり、[文字列変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)とは異なっていることに注意ください。
+この操作は、値が既にプリミティブである場合、変換を行いません。オブジェクトは、その [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) （`"default"` をヒントとして）、`valueOf()`、`toString()` の順にメソッドが呼び出されてプリミティブに変換されます。プリミティブ変換では `toString()` の前に `valueOf()` が呼び出されますが、これは[数値変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値変換)の動作と同様であり、[文字列変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)とは異なっていることに注意ください。
 
-`[@@toPrimitive]()` メソッドは、存在する場合、プリミティブを返す必要があります。オブジェクトを返すと {{jsxref("TypeError")}} になります。`valueOf()` と `toString()` については、一方がオブジェクトを返す場合、その返値は無視され、代わりにもう一方の返値が使用されます。どちらも存在しなかった場合、またはどちらもプリミティブ値を返さなかった場合は {{jsxref("TypeError")}} が発生します。例として、以下のコードで説明します。
+`[Symbol.toPrimitive]()` メソッドは、存在する場合、プリミティブを返す必要があります。オブジェクトを返すと {{jsxref("TypeError")}} になります。`valueOf()` と `toString()` については、一方がオブジェクトを返す場合、その返値は無視され、代わりにもう一方の返値が使用されます。どちらも存在しなかった場合、またはどちらもプリミティブ値を返さなかった場合は {{jsxref("TypeError")}} が発生します。例として、以下のコードで説明します。
 
 ```js
 console.log({} + []); // "[object Object]"
 ```
 
-`{}` にも `[]` にも `[@@toPrimitive]()` メソッドはありません。`{}` と `[]` は両方とも `valueOf()` を {{jsxref("Object.prototype.valueOf")}} から継承しており、これはオブジェクト自体を返します。返値がオブジェクトなので、これは無視されます。従って、代わりに `toString()` が呼び出されます。 [`{}.toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) は `"[object Object]"` を返し、一方 [`[].toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) っは `""` を返すので、結果はこれらを結合した `"[object Object]"` となります。
+`{}` にも `[]` にも `[Symbol.toPrimitive]()` メソッドはありません。`{}` と `[]` は両方とも `valueOf()` を {{jsxref("Object.prototype.valueOf")}} から継承しており、これはオブジェクト自体を返します。返値がオブジェクトなので、これは無視されます。従って、代わりに `toString()` が呼び出されます。 [`{}.toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) は `"[object Object]"` を返し、一方 [`[].toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) っは `""` を返すので、結果はこれらを結合した `"[object Object]"` となります。
 
-プリミティブ型に変換する場合は、常に `[@@toPrimitive]()` メソッドが優先されます。プリミティブ型の変換は、一般に `valueOf()` が優先的に呼び出されるため、数値の変換と同じように振る舞います。しかし、独自の `[@@toPrimitive]()` メソッドを持つオブジェクトは、任意のプリミティブ型を返すことができます。組み込みオブジェクトの中で、{{jsxref("Date")}} と {{jsxref("Symbol")}} オブジェクトのみが、`[@@toPrimitive]()` メソッドを上書きします。[`Date.prototype[@@toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive) は `"default"` ヒントを `"string"` であるかのように扱い、[`Symbol. prototype[@@toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive) はヒントを無視し、常にシンボルを返します。
+プリミティブ型に変換する場合は、常に `[Symbol.toPrimitive]()` メソッドが優先されます。プリミティブ型の変換は、一般に `valueOf()` が優先的に呼び出されるため、数値の変換と同じように振る舞います。しかし、独自の `[Symbol.toPrimitive]()` メソッドを持つオブジェクトは、任意のプリミティブ型を返すことができます。組み込みオブジェクトの中で、{{jsxref("Date")}} と {{jsxref("Symbol")}} オブジェクトのみが、`[Symbol.toPrimitive]()` メソッドを上書きします。[`Date.prototype[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) は `"default"` ヒントを `"string"` であるかのように扱い、[`Symbol. prototype[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive) はヒントを無視し、常にシンボルを返します。
 
 ### 数値変換
 
@@ -260,15 +262,13 @@ console.log({} + []); // "[object Object]"
 
 お気づきかもしれませんが、オブジェクトをプリミティブに変換する経路は 3 つあります。
 
-- [プリミティブ変換](#プリミティブ変換): `[@@toPrimitive]("default")` → `valueOf()` → `toString()`
-- [数値変換](#数値変換)、[数値型への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)、[長整数型への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion): `[@@toPrimitive]("number")` → `valueOf()` → `toString()`
-- [文字列変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion): `[@@toPrimitive]("string")` → `toString()` → `valueOf()`
+- [プリミティブ変換](#プリミティブ変換): `[Symbol.toPrimitive]("default")` → `valueOf()` → `toString()`
+- [数値変換](#数値変換)、[数値型への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)、[長整数型への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_の変換): `[Symbol.toPrimitive]("number")` → `valueOf()` → `toString()`
+- [文字列変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion): `[Symbol.toPrimitive]("string")` → `toString()` → `valueOf()`
 
-すべての場合において、`[@@toPrimitive]()` が存在する場合は、呼び出し可能でプリミティブを返す必要があり、`valueOf` や `toString` が呼び出し可能でないかオブジェクトを返さない場合は無視されます。この処理の終わりには、成功すれば結果がプリミティブであることが保証されます。結果として得られるプリミティブは、コンテキストに応じてさらなる変換が行われることがあります。
+すべての場合において、`[Symbol.toPrimitive]()` が存在する場合は、呼び出し可能でプリミティブを返す必要があり、`valueOf` や `toString` が呼び出し可能でないかオブジェクトを返さない場合は無視されます。この処理の終わりには、成功すれば結果がプリミティブであることが保証されます。結果として得られるプリミティブは、コンテキストに応じてさらなる変換が行われることがあります。
 
 ## 関連情報
 
-- [JavaScript Data Structures and Algorithms by Oleksii Trekhleb](https://github.com/trekhleb/javascript-algorithms)
-- [Nicholas Zakas による、JavaScript における一般的なデータ構造とアルゴリズムのまとめ](https://github.com/humanwhocodes/computer-science-in-javascript)
-- [Search Tre(i)es implemented in JavaScript](https://github.com/monmohan/dsjslib)
-- [Data Types and Values in the ECMAScript specification](https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values)
+- [JavaScript Data Structures and Algorithms](https://github.com/trekhleb/javascript-algorithms) (Oleksii Trekhleb)
+- [Computer Science in JavaScript](https://github.com/humanwhocodes/computer-science-in-javascript) (Nicholas C. Zakas)

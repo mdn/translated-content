@@ -5,19 +5,43 @@ slug: Web/HTML/Element/main
 
 {{HTMLSidebar}}
 
-**HTML-элемент `<main>`** предназначен для основного контента (содержимого) {{HTMLElement("body")}} документа (страницы). Основной контент состоит из контента, который непосредственно относится к главной теме документа или её развивает.
+HTML-элемент **`<main>`** представляет основное содержимое {{HTMLElement("body", "тела")}} документа. Эта область должна состоять из содержимого, которое напрямую связано с центральной темой документа или с основными функциями приложения.
 
-{{EmbedInteractiveExample("pages/tabbed/main.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;main&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<header>Gecko facts</header>
+
+<main>
+  <p>
+    Geckos are a group of usually small, usually nocturnal lizards. They are
+    found on every continent except Antarctica.
+  </p>
+
+  <p>
+    Many species of gecko have adhesive toe pads which enable them to climb
+    walls and even windows.
+  </p>
+</main>
+```
+
+```css interactive-example
+header {
+  font:
+    bold 7vw Arial,
+    sans-serif;
+}
+```
 
 Документ не должен иметь более одного элемента `<main>` у которого не указан атрибут [`hidden`](/ru/docs/Web/HTML/Global_attributes#hidden).
 
-| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [явный контент](/ru/docs/Web/Guide/HTML/Content_categories#Явный_контент).                                                                                                                                                |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Допустимое содержимое                                            | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток).                                                                                                                                                                                                                           |
-| Пропуск тегов                                                    | Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.                                                                                                                                                                                                                                |
-| Допустимые родители                                              | Те, в которых разрешается [контент основного потока](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток) в качестве содержимого, но только если это [иерархически корректный `main` элемент](https://html.spec.whatwg.org/multipage/grouping-content.html#hierarchically-correct-main-element). |
-| Допустимые ARIA-роли                                             | Роль `main` применяется к `<main>` по умолчанию, и роль [`presentation`](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role) также разрешена.                                                                                                                                 |
-| DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                             |
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток), [явный контент](/ru/docs/Web/HTML/Content_categories#явный_контент).                                                                                                                                                      |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Допустимое содержимое                                      | [Основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток).                                                                                                                                                                                                                           |
+| Пропуск тегов                                              | Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.                                                                                                                                                                                                                          |
+| Допустимые родители                                        | Те, в которых разрешается [контент основного потока](/ru/docs/Web/HTML/Content_categories#основной_поток) в качестве содержимого, но только если это [иерархически корректный `main` элемент](https://html.spec.whatwg.org/multipage/grouping-content.html#hierarchically-correct-main-element). |
+| Допустимые ARIA-роли                                       | Роль `main` применяется к `<main>` по умолчанию, и роль [`presentation`](/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role) также разрешена.                                                                                                                                               |
+| DOM-интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                       |
 
 ## Атрибуты
 
@@ -60,11 +84,11 @@ slug: Web/HTML/Element/main
 
 {{EmbedLiveSample("Пример")}}
 
-## Проблемы доступности
+## Доступность
 
 ### Ориентир
 
-Элемент `<main>` ведёт себя как [роль-ориентир `main`](/ru/docs/Web/Accessibility/ARIA/Roles/Main_role). [Ориентиры](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques#Landmark_roles) могут использоваться вспомогательными технологиями для быстрой идентификации и навигации по большим разделам документа. Предпочтительно использовать элемент `<main>` вместо объявления `role="main"`, если не нужна [поддержка старых браузеров](/ru/docs/Web/HTML/Element/main#%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0_%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D0%B0%D0%BC%D0%B8).
+Элемент `<main>` ведёт себя как [роль-ориентир `main`](/ru/docs/Web/Accessibility/ARIA/Roles/Main_role). [Ориентиры](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) могут использоваться вспомогательными технологиями для быстрой идентификации и навигации по большим разделам документа. Предпочтительно использовать элемент `<main>` вместо объявления `role="main"`, если не нужна [поддержка старых браузеров](/ru/docs/Web/HTML/Element/main#%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0_%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D0%B0%D0%BC%D0%B8).
 
 ### Пропуск навигации
 
@@ -96,7 +120,7 @@ slug: Web/HTML/Element/main
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 Элемент `<main>` широко поддерживается. Для Internet Explorer 11 и ниже предлагается добавить роль {{glossary("ARIA")}} `"main"` в элемент `<main>`, чтобы обеспечит его доступность (программы для чтения с экрана, такие как JAWS, используемые совместно со старыми версиями Internet Explorer, смогут понять семантическое значение элемента `<main>` после добавления атрибута `role`).
 

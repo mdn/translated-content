@@ -1,23 +1,32 @@
 ---
-title: Document.clear()
+title: "Document: clear() メソッド"
+short-title: clear()
 slug: Web/API/Document/clear
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}{{ Deprecated_header() }}
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
-**`Document.clear()`** メソッドは指定された文書全体を消去するもので、初期 (1.0 以前) の Mozilla アプリケーションにありました。
-
-近年のバージョンの Mozilla ベースアプリケーションでも、 Internet Explorer や Netscape 4 でも、このメソッドは何も行いません。
+**`Document.clear()`** メソッドは何も行わず、何もエラーを発生しません。
 
 ## 構文
 
+```js-nolint
+clear()
 ```
-document.clear();
-```
+
+### 引数
+
+なし。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 仕様書
 
-- [HTML5](https://www.whatwg.org/html/#dom-document-clear)
+{{Specifications}}
 
 ## ブラウザーの互換性
 

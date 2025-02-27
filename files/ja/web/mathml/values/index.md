@@ -1,11 +1,11 @@
 ---
 title: MathML の属性値
 slug: Web/MathML/Values
+l10n:
+  sourceCommit: 1bb0a2834d8e90495319ee9e52ecbc55e856e913
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/ja/docs/Web/MathML")}}
-</section>
+{{MathMLRef}}
 
 ## MathML 固有の型
 
@@ -18,9 +18,9 @@ slug: Web/MathML/Values
 
 {{deprecated_header}}
 
-[`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) の代わりに、 MathML は独自の[長さを記述するための型](https://www.w3.org/TR/MathML3/chapter2.html#type.length)を定義していました。受け入れられる値には、単位のないゼロ以外の長さの値（例えば、 `500%` を意味する `5`）、ドットで終わる数字を含む値（例えば、 `34.px`）、名前付きの空間（例えば、 `thinmathspace`）が含まれていました。互換性のために、等価な [`<percentage>`](/ja/docs/Web/CSS/percentage) 値でゼロでない単位なしの長さの値を置き換えること、数字で不要なドットを削除すること、名前付きの長さには以下の置き換えを使用することが推奨されています。
+{{cssxref("length-percentage")}} の代わりに、 MathML は独自の[長さを記述するための型](https://www.w3.org/TR/MathML3/chapter2.html#type.length)を定義していました。受け入れられる値には、単位のないゼロ以外の長さの値（例えば、 `500%` を意味する `5`）、ドットで終わる数字を含む値（例えば、 `34.px`）、名前付きの空間（例えば、 `thinmathspace`）が含まれていました。互換性のために、等価な {{cssxref("percentage")}} 値でゼロでない単位なしの長さの値を置き換えること、数字で不要なドットを削除すること、名前付きの長さには以下の置き換えを使用することが推奨されています。
 
-```
+```plain
 veryverythinmathspace  => 0.05555555555555555em
 verythinmathspace      => 0.1111111111111111em
 thinmathspace          => 0.16666666666666666em
@@ -46,22 +46,22 @@ veryverythickmathspace => 0.3888888888888889em
 
 ### 定数
 
-| 定数                             | 値        |
-| -------------------------------- | --------- |
-| `veryverythinmathspace`          | 1/18`em`  |
-| `verythinmathspace`              | 2/18`em`  |
-| `thinmathspace`                  | 3/18`em`  |
-| `mediummathspace`                | 4/18`em`  |
-| `thickmathspace`                 | 5/18`em`  |
-| `verythickmathspace`             | 6/18`em`  |
-| `veryverythickmathspace`         | 7/18`em`  |
-| `negativeveryverythinmathspace`  | -1/18`em` |
-| `negativeverythinmathspace`      | -2/18`em` |
-| `negativethinmathspace`          | -3/18`em` |
-| `negativemediummathspace`        | -4/18`em` |
-| `negativethickmathspace`         | -5/18`em` |
-| `negativeverythickmathspace`     | -6/18`em` |
-| `negativeveryverythickmathspace` | -7/18`em` |
+| 定数                             | 値         |
+| -------------------------------- | ---------- |
+| `veryverythinmathspace`          | 1/18 `em`  |
+| `verythinmathspace`              | 2/18 `em`  |
+| `thinmathspace`                  | 3/18 `em`  |
+| `mediummathspace`                | 4/18 `em`  |
+| `thickmathspace`                 | 5/18 `em`  |
+| `verythickmathspace`             | 6/18 `em`  |
+| `veryverythickmathspace`         | 7/18 `em`  |
+| `negativeveryverythinmathspace`  | -1/18 `em` |
+| `negativeverythinmathspace`      | -2/18 `em` |
+| `negativethinmathspace`          | -3/18 `em` |
+| `negativemediummathspace`        | -4/18 `em` |
+| `negativethickmathspace`         | -5/18 `em` |
+| `negativeverythickmathspace`     | -6/18 `em` |
+| `negativeveryverythickmathspace` | -7/18 `em` |
 
 ## ブラウザーの互換性
 

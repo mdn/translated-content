@@ -13,7 +13,8 @@ HTML 仕様書は、以下の一連の標準メタデータ名を定義してい
 
 - `application-name`: ウェブページで動作しているアプリケーションの名前です。
 
-  > **メモ:** ブラウザーはアプリケーションを識別するためにこれを使用することがあります。これはふつうアプリケーション名が含まれるものの、文書名や状態などの情報も含まれる {{HTMLElement("title")}} 要素とは異なります。
+  > [!NOTE]
+  > ブラウザーはアプリケーションを識別するためにこれを使用することがあります。これはふつうアプリケーション名が含まれるものの、文書名や状態などの情報も含まれる {{HTMLElement("title")}} 要素とは異なります。
   >
   > - 単なるウェブサイトにはアプリケーション名を定義するべきではありません。
 
@@ -42,7 +43,7 @@ HTML 仕様書は、以下の一連の標準メタデータ名を定義してい
 
   ブラウザーは、この情報をユーザーのブラウザーや端末の設定と合わせて使用し、背景や前景、フォームコントロールやスクロールバーなど、あらゆるものに使用する色を決定します。 `<meta name="color-scheme">` の主な用途は、ライトモードとダークモードの互換性と優先順位を示すことです。
 
-  `color-scheme` の [`content`](/ja/docs/Web/HTML/Element/meta#content)nt/meta#content) プロパティは次のうちの一つになります。
+  `color-scheme` の [`content`](/ja/docs/Web/HTML/Element/meta#content) プロパティは次のうちの一つになります。
 
   - `normal`
     - : この文書は配色を意識していないので、既定のカラーパレットを使って描画する必要があります。
@@ -75,7 +76,8 @@ CSS Device Adaptation 仕様書は、以下のメタデータ名を定義して�
   | `user-scalable` | `yes` または `no`                             | `no` に設定された場合は、ユーザーがウェブページを拡大縮小することができなくなります。既定値は `yes` です。ブラウザーの設定でこの規則を無視することができ、iOS 10 以降では既定で無視されます。                                                                                                                                                                                                                                                   |
   | `viewport-fit`  | `auto`, `contain`, `cover`                    | `auto` の値は、初期レイアウトのビューポートに影響を与えず、ウェブページ全体が表示されます。`contain` の値は、ディスプレイに内接する最大の長方形に合わせてビューポートが拡大されることを意味します。`cover` の値は、ビューポートが端末のディスプレイいっぱいになるように縮小されることを意味します。重要なコンテンツがディスプレイの外に出てしまわないように、 [safe-area-inset-\*](/ja/docs/Web/CSS/env) 変数を使用することを強くお勧めします。 |
 
-  > **メモ:** この宣言は標準化されていませんが、事実上の優位性から、ほとんどのモバイルブラウザーで尊重されています。
+  > [!NOTE]
+  > この宣言は標準化されていませんが、事実上の優位性から、ほとんどのモバイルブラウザーで尊重されています。
   >
   > - 既定値は、端末やブラウザーによって異なる場合があります。
   > - Firefox for Mobile でのこの宣言については、[こちらの記事](/ja/docs/Mobile/Viewport_meta_tag)を参照してください。
@@ -84,7 +86,7 @@ CSS Device Adaptation 仕様書は、以下のメタデータ名を定義して�
 
 `user-scalable` を `no` に設定して拡大縮小機能を無効にすると、弱視の人がページの内容を読んだり理解したりすることができなくなります。
 
-- [MDN WCAG を理解する、ガイドライン 1.4 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN WCAG を理解する、ガイドライン 1.4 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ### その他のメタデータ名
@@ -109,7 +111,8 @@ CSS Device Adaptation 仕様書は、以下のメタデータ名を定義して�
   | `noimageindex` | このページをインデックスされた画像の参照ページとして表示しないよう要求します。 | [Google](https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives)                                                                                                                                                                   |
   | `nocache`      | `noarchive` と同等です。                                                       | [Bing](https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240)                                                                                                                                                                                                     |
 
-  > **メモ:** 協力的なロボットだけがこのルールに従っています。メールアドレスの自動収集プログラムを抑制できるとは期待しないでください。
+  > [!NOTE]
+  > 協力的なロボットだけがこのルールに従っています。メールアドレスの自動収集プログラムを抑制できるとは期待しないでください。
   >
   > - ロボットがこれらのルールを読むためには、ページにアクセスする必要があります。帯域幅の消費を防ぐには、 _{{Glossary("robots.txt")}}_ ファイルを使用してください。
   > - ページを削除したい場合、 `noindex` で行うことができますが、ロボットがそのページに再びアクセスした後のことになります。 `robots.txt` ファイルが再訪問を妨害していないことを確認してください。

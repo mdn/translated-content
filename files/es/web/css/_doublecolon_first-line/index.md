@@ -1,11 +1,11 @@
 ---
-title: "::first-line (:first-line)"
+title: ::first-line (:first-line)
 slug: Web/CSS/::first-line
 ---
 
 {{CSSRef}}
 
-El [Pseudoelemento](/es/docs/Web/CSS/Pseudoelementos) **`::first-line`** aplica estilos a la primera línea de un [elemento de bloque](/es/docs/Web/HTML/Block-level_elements). Nótese que la longitud de la primera línea depende de muchos factores, incluyendo el ancho del elemento, el ancho del documento y el tamaño de fuente del texto.
+El [Pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) **`::first-line`** aplica estilos a la primera línea de un [elemento de bloque](/es/docs/Glossary/Block-level_content). Nótese que la longitud de la primera línea depende de muchos factores, incluyendo el ancho del elemento, el ancho del documento y el tamaño de fuente del texto.
 
 ```css
 /* Selecciona la primera línea de un <p> */
@@ -14,7 +14,8 @@ p::first-line {
 }
 ```
 
-> **Nota:** CSS3 introdujo la notación `::first-line` (con doble dos puntos) para distinguir [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) de [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores también aceptan `:first-line`, añadido en CSS2.
+> [!NOTE]
+> CSS3 introdujo la notación `::first-line` (con doble dos puntos) para distinguir [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) de [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores también aceptan `:first-line`, añadido en CSS2.
 
 ## Propiedades permitidas
 

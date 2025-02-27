@@ -1,32 +1,50 @@
 ---
 title: Math.tan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tan
+l10n:
+  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
 {{JSRef}}
 
-**`Math.tan()`** 関数は、数値のタンジェントを返します。
+**`Math.tan()`** 静的メソッドは、数値の正接（タンジェント）を返します。
 
-{{EmbedInteractiveExample("pages/js/math-tan.html")}}
+{{InteractiveExample("JavaScript Demo: Math.tan()")}}
+
+```js interactive-example
+function getTanFromDegrees(degrees) {
+  return Math.tan((degrees * Math.PI) / 180);
+}
+
+console.log(getTanFromDegrees(0));
+// Expected output: 0
+
+console.log(getTanFromDegrees(45));
+// Expected output: 0.9999999999999999
+
+console.log(getTanFromDegrees(90));
+// Expected output: 16331239353195370
+```
 
 ## 構文
 
-```
+```js-nolint
 Math.tan(x)
 ```
 
 ### 引数
 
 - `x`
-  - : 数値です。
+  - : ラジアンで角度を表す数値です。
 
 ### 返値
 
-与えられた数値のタンジェントです。
+`x` の正接（タンジェント）です。 `x` が {{jsxref("Infinity")}} の場合は `-Infinity`、 {{jsxref("NaN")}} の場合は {{jsxref("NaN")}} を返します。
+
+> [!NOTE]
+> 浮動小数点の精度により、正確な値 π/2 を得ることはできないため、 `NaN` でなければ、結果は常に有限となります。
 
 ## 解説
-
-`Math.tan()` メソッドは、ある角度のタンジェントを表す数値を返します。
 
 `tan()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.tan()` として使用するようにしてください (`Math` はコンストラクターではありません)。
 
@@ -35,14 +53,30 @@ Math.tan(x)
 ### Math.tan() の使用
 
 ```js
+Math.tan(-Infinity); // NaN
+Math.tan(-0); // -0
+Math.tan(0); // 0
 Math.tan(1); // 1.5574077246549023
+Math.tan(Math.PI / 4); // 0.9999999999999999 (浮動小数点エラー)
+Math.tan(Infinity); // NaN
 ```
+
+### Math.tan() および π/2
+
+正確に `tan(π/2)` を計算することはでいません。
+
+```js
+Math.tan(Math.PI / 2); // 16331239353195370
+Math.tan(Math.PI / 2 + Number.EPSILON); // -6218431163823738
+```
+
+### Math.tan() に角度の値を使用
 
 `Math.tan()` 関数はラジアンを受け付けますが、角度で使用したほうが簡単な場合が多いので、次の関数は角度の値を受け付け、それをラジアンに変換してタンジェントを返します。
 
 ```js
 function getTanDeg(deg) {
-  var rad = (deg * Math.PI) / 180;
+  const rad = (deg * Math.PI) / 180;
   return Math.tan(rad);
 }
 ```
@@ -53,7 +87,7 @@ function getTanDeg(deg) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.tan")}}
+{{Compat}}
 
 ## 関連情報
 

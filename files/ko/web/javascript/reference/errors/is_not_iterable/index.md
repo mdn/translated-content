@@ -18,13 +18,13 @@ slug: Web/JavaScript/Reference/Errors/is_not_iterable
 
 ## 무엇이 문제인가요?
 
-{{jsxref("Promise.all")}} 또는 {{jsxref("TypedArray.from")}} 과 같은 함수의 아규먼트 또는 [for…of](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) 의 right hand-side 로 주어진 값이 [iterable 객체](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)가 아닙니다. iterable 은 {{jsxref("Array")}}, {{jsxref("String")}} 또는 {{jsxref("Map")}}, 생성자 결과, 또는 [iterable protocol](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol) 구현 객체와 같은 내장 iterable 타입이 될 수 있습니다.
+{{jsxref("Promise.all")}} 또는 {{jsxref("TypedArray.from")}} 과 같은 함수의 아규먼트 또는 [for…of](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) 의 right hand-side 로 주어진 값이 [iterable 객체](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)가 아닙니다. iterable 은 {{jsxref("Array")}}, {{jsxref("String")}} 또는 {{jsxref("Map")}}, 생성자 결과, 또는 [iterable protocol](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) 구현 객체와 같은 내장 iterable 타입이 될 수 있습니다.
 
 ## 예제
 
 ### 모든 객체 프로퍼티 iterating
 
-JavaScript 에서 [iterable protocol](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol) 을 구현하지 않은 {{jsxref("Object")}} 는 iterable 이 아닙니다.
+JavaScript 에서 [iterable protocol](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) 을 구현하지 않은 {{jsxref("Object")}} 는 iterable 이 아닙니다.
 그러므로, 객체의 프로퍼티를 반복하기 위해 [for…of](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) 를 사용하면 안됩니다.
 
 ```js example-bad
@@ -68,7 +68,7 @@ for (const [country, capital] of map.entries()) console.log(country, capital);
 
 ### Generator iterating
 
-[Generators](/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators) 는 iterable 객체를 생성하기 위해 호출하는 함수입니다.
+[Generators](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators#generators) 는 iterable 객체를 생성하기 위해 호출하는 함수입니다.
 
 ```js example-bad
 function* generate(a, b) {
@@ -93,9 +93,9 @@ for (let x of generate(1, 2)) console.log(x);
 
 ## 함께 보기
 
-- [iterable protocol](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol)
+- [iterable protocol](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
 - {{jsxref("Object.keys")}}
 - {{jsxref("Object.entries")}}
 - {{jsxref("Map")}}
-- [generators](/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators)
+- [generators](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators#generators)
 - [for…of](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)

@@ -26,7 +26,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
   </tbody>
 </table>
 
-Политика защиты содержимого применяется к расширениям автоматически. Изначальная политика защиты содержимого ограничивает источники, из которых расширение может загружать [\<script>](/ru/docs/Web/HTML/Element/script) и [\<object>](/ru/docs/Web/HTML/Element/object) ресурсы, а так же препятствует потенциально опасным практикам, например использованию [`eval()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/eval). Смотрите [изначальные правила защиты содержимого](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#Изначальные_правила_по_защите_содержимого), чтобы узнать о конкретных последствиях применения изначальных правил.
+Политика защиты содержимого применяется к расширениям автоматически. Изначальная политика защиты содержимого ограничивает источники, из которых расширение может загружать [\<script>](/ru/docs/Web/HTML/Element/script) и [\<object>](/ru/docs/Web/HTML/Element/object) ресурсы, а так же препятствует потенциально опасным практикам, например использованию [`eval()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/eval). Смотрите [изначальные правила защиты содержимого](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#изначальные_правила_по_защите_содержимого), чтобы узнать о конкретных последствиях применения изначальных правил.
 
 Ключ `"content_security_policy"` в manifest.json используется для ослабления или ужесточения политики защиты содержимого. Значения для этого ключа устанавливаются в точно таком же виде, как и для Content-Security-Policy HTTP заголовка. Смотрите [Использование политики содержимого](/ru/docs/Web/HTTP/CSP) для получения общего представления о синтаксисе для написания правил политики.
 
@@ -50,7 +50,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
 
 ### Работающие примеры
 
-Разрешает загрузку скриптов из "https://example.com": (_смотрите примечание_ [1](#exampleNote_1))
+Разрешает загрузку скриптов из "https://example.com": (_смотрите примечание_ [1](#examplenote_1))
 
 ```json
 "content_security_policy": "script-src 'self' https://example.com; object-src 'self'"
@@ -126,6 +126,6 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
 
 _Примечание: Работающие примеры демонстрируют правильное написание политики защиты содержимого. Тем не менее, расширения с политикой, включающей ключевые словами 'unsafe-eval', 'unsafe-inline', разрешающей загрузку удалённых скриптов и ресурсов, а так же blob файлов не будут допущены к распространению на addons.mozilla.org из-за значительных проблем с безопасностью._
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

@@ -9,13 +9,13 @@ slug: Web/SVG/Attribute/end
 
 这个属性值是一个分号分隔的数列值。每个单独值可以是定义在{{ SVGAttr("begin") }}属性中同种类型。
 
-## 用法
+## 使用说明
 
-| 类别     | 动画定时属性                                                                |
-| -------- | --------------------------------------------------------------------------- |
-| 值       | \<End-value-list>                                                           |
-| 可变性   | No                                                                          |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#EndAttribute) |
+| 类别     | 动画定时属性                                                                 |
+| -------- | ---------------------------------------------------------------------------- |
+| 值       | \<End-value-list>                                                            |
+| 可变性   | No                                                                           |
+| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#EndAttribute) |
 
 欲知在`<end-value-list>`中允许用哪些值，请阅读{{ SVGAttr("begin") }}属性。
 
@@ -25,7 +25,7 @@ slug: Web/SVG/Attribute/end
 
 下列元素可以使用`end`属性：
 
-- [Animation elements](/zh-CN/SVG/Element#Animation) »
+- [Animation elements](/zh-CN/docs/Web/SVG/Element#animation) »
 
 ## 规范
 

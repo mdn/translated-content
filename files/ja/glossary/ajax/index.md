@@ -1,24 +1,25 @@
 ---
-title: AJAX
+title: Ajax
 slug: Glossary/AJAX
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-**AJAX** (Asynchronous {{Glossary("JavaScript")}} And {{Glossary("XML")}}) は、 {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}} として知られる技術を用いて、より複雑で動的なウェブページを構築するプログラミング手法のことです。
+{{GlossarySidebar}}
 
-AJAX によって、ウェブページ全体を再読み込みせずに、 {{Glossary("HTML")}} ページの {{Glossary("DOM")}} の一部分を更新することができます。 AJAX は非同期処理も可能です。つまり、ウェブページのある部分を再読み込みしようとする間もコードは実行され続けます (ウェブページのある部分の再読み込みが終わるまでコードの実行がブロックされる同期処理と比べて)。
+**AJAX** （Asynchronous JavaScript and XML、非同期 JavaScript と XML）は、ウェブアプリケーションが非同期 HTTP リクエストを行うことでサーバーからコンテンツを取得し、その新しいコンテンツを使用してページの関連部分を更新するウェブ開発技術です。更新が必要な部分のみがリクエストされるため、ページの応答性が向上します。
 
-対話型のウェブサイトや最新のウェブ標準では、AJAX は徐々に JavaScript フレームワーク内の関数や公式の {{domxref("Fetch API")}} 標準に置き換えられています。
+Ajax は{{Glossary("SPA", "単一ページアプリケーション")}}の作成にも使用でき、その場合、ウェブアプリケーション全体が単一の文書で構成され、必要に応じてそのコンテンツを更新するために Ajax が使用されます。
+
+当初、 Ajax は {{domxref("XMLHttpRequest")}} インターフェイスを使用して実装されていましたが、現代のウェブアプリケーションには {{domxref("Window/fetch", "fetch()")}} API がもっと適しています。より強力で柔軟性があり、[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)などの基本的なウェブアプリケーション技術との統合も優れています。現代のウェブフレームワークは、 Ajax 用の抽象化も提供しています。
+
+この技術は近年のウェブ開発では一般的であるため、 "Ajax" という特定の用語はほとんど使用されません。
 
 ## 関連情報
 
-- [AJAX](https://ja.wikipedia.org/wiki/AJAX) (ウィキペディア)
-- [AJAX](/ja/docs/Web/Guide/AJAX)
-- [AJAX - 始めましょう](/ja/docs/Web/Guide/AJAX/Getting_Started)
-- [用語集](/ja/docs/Glossary):
-
-  - {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}
-
+- [学習: ネットワークリクエストを JavaScript で作成](/ja/docs/Learn_web_development/Core/Scripting/Network_requests)
+- [フェッチ API](/ja/docs/Web/API/Fetch_API)
+- 関連用語:
+  - {{Glossary("SPA", "単一ページアプリケーション")}}
 - {{DOMxRef("XMLHttpRequest")}}
-- {{DOMxRef("Fetch API")}}
-- [Fetch API の使用](/ja/docs/Web/API/Fetch_API/Using_Fetch)
-- [Synchronous vs. Asynchronous Communications](https://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)
+- [AJAX](https://ja.wikipedia.org/wiki/AJAX) (ウィキペディア)

@@ -54,7 +54,7 @@ span {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.display.display-outside", 10)}}
+{{Compat}}
 
 ## Veja também
 
@@ -67,4 +67,4 @@ span {
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
 - [Layout de bloco e embutido no fluxo normal](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [Contextos de formatação explicados](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained)
+- [Contextos de formatação explicados](/pt-BR/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)

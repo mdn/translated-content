@@ -32,7 +32,8 @@ En réalité, les méthodes et attributs sont définis dans l'attribut `prototyp
 
 En programmation orientée objet classique, les classes sont définies, puis lorsque des instances sont créées, l'ensemble des attributs et des méthodes sont copiés dans l'instance. En JavaScript en revanche, tout n'est pas copié&nbsp;: on établit un lien entre l'objet instancié et son constructeur (c'est un lien dans la chaîne de prototypage). On détermine alors les méthodes et les attributs en remontant la chaîne.
 
-> **Note :** Il faut bien comprendre qu'il y a une différence entre la notion de prototype d'un objet (qu'on obtient via [`Object.getPrototypeOf(obj)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf), ou via la propriété dépréciée [`__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) ) et l' attribut `prototype` d'une fonction constructrice. La première concerne chaque instance, le dernier existe uniquement sur une fonction constructrice. Cela dit, `Object.getPrototypeOf(new Object())` renvoie au même object que `Object.prototype`.
+> [!NOTE]
+> Il faut bien comprendre qu'il y a une différence entre la notion de prototype d'un objet (qu'on obtient via [`Object.getPrototypeOf(obj)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf), ou via la propriété dépréciée [`__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) ) et l' attribut `prototype` d'une fonction constructrice. La première concerne chaque instance, le dernier existe uniquement sur une fonction constructrice. Cela dit, `Object.getPrototypeOf(new Object())` renvoie au même object que `Object.prototype`.
 
 Prenons un exemple afin de rendre cela un peu plus clair.
 
@@ -74,9 +75,11 @@ Cette méthode renvoie simplement la valeur de l'objet pour lequel elle est appe
 - Aucune n'est présente, le navigateur vérifie donc si le prototype objet de `personne1` (`Personne`) contient cette méthode.
 - Pas de `valueOf()` non plus, donc le navigateur regarde si le prototype objet du constructeur `Personne()` (`Object`) possède cette méthode. Il y en a une, donc il l'appelle et tout va bien&nbsp;!
 
-> **Note :** Encore une fois, il est important d'insister sur le fait que les méthodes et attributs ne sont **pas** copiés d'un objet à un autre, mais qu'on y accède à chaque fois en remontant la chaine de prototypage.
+> [!NOTE]
+> Encore une fois, il est important d'insister sur le fait que les méthodes et attributs ne sont **pas** copiés d'un objet à un autre, mais qu'on y accède à chaque fois en remontant la chaine de prototypage.
 
-> **Note :** Il n'existe pas de façon officielle d'accéder directement au prototype d'un objet donné. Les «&nbsp;liens&nbsp;» entre les éléments de la chaine sont définis au sein d'une propriété interne appelée `[[prototype]]` définie dans la spécification de JavaScript. (voir [ECMAScript](/fr/docs/Web/JavaScript/Language_Resources)). Néanmoins, la plupart des navigateurs modernes implémentent l'attribut [`__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) (deux tirets soulignés ou _underscore_ de chaque côté) qui contient le prototype objet d'un objet. Vous pouvez tenter `personne1.__proto__` et `personne1.__proto__.__proto__` pour voir à quoi ressemble une chaine de prototypage dans la console&nbsp;!
+> [!NOTE]
+> Il n'existe pas de façon officielle d'accéder directement au prototype d'un objet donné. Les «&nbsp;liens&nbsp;» entre les éléments de la chaine sont définis au sein d'une propriété interne appelée `[[prototype]]` définie dans la spécification de JavaScript. (voir [ECMAScript](/fr/docs/Web/JavaScript/JavaScript_technologies_overview)). Néanmoins, la plupart des navigateurs modernes implémentent l'attribut [`__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) (deux tirets soulignés ou _underscore_ de chaque côté) qui contient le prototype objet d'un objet. Vous pouvez tenter `personne1.__proto__` et `personne1.__proto__.__proto__` pour voir à quoi ressemble une chaine de prototypage dans la console&nbsp;!
 
 ## L'attribut prototype&nbsp;: là où l'on définit les éléments héritables
 
@@ -88,7 +91,8 @@ Ainsi [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_O
 
 [`Object.is()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is), [`Object.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys), ainsi que d'autres membres non définis dans `prototype` ne sont pas hérités par les instances d'objet ou les objets qui héritent de `Object.prototype`. Ces méthodes et attributs sont disponibles uniquement pour le constructeur `Object()`.
 
-> **Note :** Ça paraît bizarre, d'avoir une méthode définie au sein d'un constructeur qui est lui même une fonction non&nbsp;? Eh bien, une fonction est aussi un type d'objet — vous pouvez jeter un œil à la documentation du constructeur [`Function()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) si vous ne nous croyez pas.
+> [!NOTE]
+> Ça paraît bizarre, d'avoir une méthode définie au sein d'un constructeur qui est lui même une fonction non&nbsp;? Eh bien, une fonction est aussi un type d'objet — vous pouvez jeter un œil à la documentation du constructeur [`Function()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) si vous ne nous croyez pas.
 
 1. Vous pouvez vérifier les attributs du prototype en reprenant l'exemple précédent et en entrant le code suivant dans la console JavaScript&nbsp;:
 
@@ -112,7 +116,8 @@ let maChaine = "Ceci est ma chaine de caractères.";
 
 `maChaine` possède aussitôt plusieurs méthodes utiles pour manipuler les chaines de caractères telles que [`split()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace)…
 
-> **Attention :** L'attribut `prototype` est un des éléments JavaScript qui peut le plus prêter à confusion. On pourrait penser qu'il s'agit du prototype objet de l'objet courant mais ça ne l'est pas (on peut y accéder via `__proto__`). L'attribut `prototype` est un attribut qui contient un objet où l'on définit les éléments dont on va pouvoir hériter.
+> [!WARNING]
+> L'attribut `prototype` est un des éléments JavaScript qui peut le plus prêter à confusion. On pourrait penser qu'il s'agit du prototype objet de l'objet courant mais ça ne l'est pas (on peut y accéder via `__proto__`). L'attribut `prototype` est un attribut qui contient un objet où l'on définit les éléments dont on va pouvoir hériter.
 
 ## Revenons sur create()
 
@@ -127,7 +132,7 @@ Nous avons vu précédemment que la méthode [`Object.create()`](/fr/docs/Web/Ja
 2. En réalité `create()` se contente de créer un nouvel objet à partir d'un prototype spécifique. Dans cet exemple, `personne2` est créé à partir de `personne1` qui agit en tant que prototype. Vous pouvez le vérifier via&nbsp;:
 
    ```js
-   person2.__proto__;
+   personne2.__proto__;
    ```
 
 Cela renverra l'objet `personne1`.

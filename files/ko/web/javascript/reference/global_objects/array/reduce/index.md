@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 
 **`reduce()`** 메서드는 배열의 각 요소에 대해 주어진 리듀서 (reducer) 함수를 실행하고, 하나의 결과값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/array-reduce.html")}}
+{{InteractiveExample("JavaScript Demo: Array.reduce()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+console.log(sumWithInitial);
+// Expected output: 10
+```
 
 **리듀서** 함수는 네 개의 인자를 가집니다.
 
@@ -286,7 +300,8 @@ var allbooks = friends.reduce(
 
 ### 배열의 중복 항목 제거
 
-> **참고:** 참고: {{jsxref("Set")}}과 {{jsxref("Array.from()")}}을 사용할 수 있는 환경이라면, `let orderedArray = Array.from(new Set(myArray));`를 사용해 중복 요소를 제거할 수도 있습니다.
+> [!NOTE]
+> 참고: {{jsxref("Set")}}과 {{jsxref("Array.from()")}}을 사용할 수 있는 환경이라면, `let orderedArray = Array.from(new Set(myArray));`를 사용해 중복 요소를 제거할 수도 있습니다.
 
 ```js
 let arr = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];

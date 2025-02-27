@@ -111,7 +111,7 @@ Le code HTML pour nos exemples de liste ressemble à ceci&nbsp;:
 
 {{EmbedLiveSample('','100%',770)}}
 
-Si vous allez à l'exemple réel maintenant, et examinez les éléments de la liste en utilisant [les outils de développement des navigateurs](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools), vous noterez quelques valeurs de style par défaut&nbsp;:
+Si vous allez à l'exemple réel maintenant, et examinez les éléments de la liste en utilisant [les outils de développement des navigateurs](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), vous noterez quelques valeurs de style par défaut&nbsp;:
 
 - Les éléments [`<ul>`](/fr/docs/Web/HTML/Element/ul) et [`<ol>`](/fr/docs/Web/HTML/Element/ol) ont une propriété [`margin`](/fr/docs/Web/CSS/margin) de `16px` (`1em`) en haut et en bas et une propriété [`padding-left`](/fr/docs/Web/CSS/padding-left) de `40px` (`2.5em`).
 - Les éléments de la liste ([`<li>`](/fr/docs/Web/HTML/Element/li)) n'ont aucun paramètre d'espacement par défaut.
@@ -324,7 +324,8 @@ L'attribut [`reversed`](/fr/docs/Web/HTML/Element/ol#attr-reversed) inverse la n
 
 {{ EmbedLiveSample('', '100%', 150) }}
 
-> **Note :** S'il existe plus d'éléments dans une liste inversée que la valeur de l'attribut `start`, la numérotation continuera à zéro, puis à des valeurs négatives.
+> [!NOTE]
+> S'il existe plus d'éléments dans une liste inversée que la valeur de l'attribut `start`, la numérotation continuera à zéro, puis à des valeurs négatives.
 
 ### Valeurs individualisées
 
@@ -351,7 +352,8 @@ L'attribut [`value`](/fr/docs/Web/HTML/Element/ol#attr-value) vous permet de num
 
 {{ EmbedLiveSample('', '100%', 150) }}
 
-> **Note :** Même si vous utilisez une propriété [`list-style-type`](/fr/docs/Web/CSS/list-style-type) avec des caractères non‑numériques, vous devez toujours utiliser les valeurs numériques équivalentes avec l'attribut `value`.
+> [!NOTE]
+> Même si vous utilisez une propriété [`list-style-type`](/fr/docs/Web/CSS/list-style-type) avec des caractères non‑numériques, vous devez toujours utiliser les valeurs numériques équivalentes avec l'attribut `value`.
 
 ## Apprentissage actif&nbsp;: définir le style d'une liste imbriquée
 

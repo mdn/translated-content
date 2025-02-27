@@ -1,265 +1,180 @@
 ---
-title: div
+title: "<div>: El elemento de división de contenido"
 slug: Web/HTML/Element/div
+l10n:
+  sourceCommit: e31cb5978e9f3c731c49db9ed0a15795b870e141
 ---
 
-### Definición
+{{HTMLSidebar}}
 
-- **div** de "division" -_división_ . Sirve para crear secciones o agrupar contenidos.
+El elemento de [HTML](/es/docs/Web/HTML) **`<div>`** es el contenedor genérico para el contenido. No tiene efecto en el contenido o en el diseño hasta que se le aplica un estilo de alguna manera usando {{glossary("CSS")}} (p. ej. se le aplica un estilo directamente o se aplica algún tipo de modelo de diseño como [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout) a su elemento principal).
 
-  - : **Sus etiquetas son**: `<div>` y `</div>` (ambas obligatorias).
+{{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}
 
-    **Está definido como**: [Elemento en bloque](/es/docs/Web/HTML/Block-level_elements).
+```html interactive-example
+<div class="warning">
+  <img
+    src="/shared-assets/images/examples/leopard.jpg"
+    alt="An intimidating leopard." />
+  <p>Beware of the leopard</p>
+</div>
+```
 
-    **Crea una caja**: En bloque.
+```css interactive-example
+.warning {
+  border: 10px ridge #f00;
+  background-color: #ff0;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
 
-    **Puede contener**: Texto, y/o cero o más elementos [en bloque](/es/HTML/Elemento/Tipos_de_elementos#enbloque) o [en linea](/es/HTML/Elemento/Tipos_de_elementos#enlinea).
+.warning img {
+  width: 100%;
+}
 
-#### Atributos
+.warning p {
+  font: small-caps bold 1.2rem sans-serif;
+  text-align: center;
+}
+```
 
-<table class="fullwidth-table standard-table">
-  <tbody>
-    <tr>
-      <th>atributo</th>
-      <th>descripción</th>
-      <th>valor</th>
-    </tr>
-    <tr>
-      <th colspan="3">Genéricos</th>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-title"
-          >title</a
-        >
-      </td>
-      <td>
-        Texto informativo o título del elemento. Suele mostrarse a modo de "tool
-        tip".
-      </td>
-      <td>
-        Texto legible por personas. Sensible a
-        <abbr title="diferencia entre Mayúsculas y minúsculas">M/m.</abbr>. Por
-        defecto: Lo fija el navegador.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-id"
-          >id</a
-        >
-      </td>
-      <td>
-        Le da un nombre al elemento que lo diferencia de todos los demás del
-        documento.
-      </td>
-      <td>
-        Un
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#type-id"
-          >nombre único</a
-        >. Sensible a
-        <abbr title="diferencia entre Máyusculas y minúsculas">M/m.</abbr> Por
-        defecto: Lo fija el navegador.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/global.html#adef-class"
-          >class</a
-        >
-      </td>
-      <td>Asigna nombres de clases al elemento. Por defecto, clases CSS.</td>
-      <td>
-        Lista de clases separadas por espacio en blanco. Sensible a
-        <abbr title="diferencia entre Máyusculas y minúsculas">M/m.</abbr> Por
-        defecto: Lo fija el navegador.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/styles.html#adef-style"
-          >style</a
-        >
-      </td>
-      <td>
-        Permite especificar
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/present/styles.html"
-          >información de estilo</a
-        >. Por defecto, estilos CSS.
-      </td>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#type-style"
-          >Declaraciones de estilo</a
-        >. Por defecto: Lo fija el navegador.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-lang"
-          >lang</a
-        >
-      </td>
-      <td>
-        Información sobre el
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html"
-          >idioma del contenido</a
-        >
-        del elemento y del valor de sus atributos.
-      </td>
-      <td>
-        Un
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/types.html#type-langcode"
-          >código de idioma</a
-        >. Por defecto: "desconocido". Lo fija el navegador.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html#adef-dir"
-          >dir</a
-        >
-      </td>
-      <td>
-        Indica la
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/struct/dirlang.html"
-          >dirección de texto</a
-        >
-        y tablas.
-      </td>
-      <td>
-        Uno de los siguientes: <abbr title="Left-to-right">'ltr' </abbr>o
-        <abbr title="Right-to-left">'rtl'. </abbr>Por defecto: En castellano
-        'ltr'. Lo fija el navegador.
-      </td>
-    </tr>
-    <tr>
-      <td colspan="3">
-        <a
-          class="external"
-          href="http://html.conclase.net/w3c/html401-es/interact/scripts.html#events"
-          >Eventos:</a
-        >
-        <code style="color: green"
-          >onclick, ondblclick, onmousedown, onmouseup, onmouseover,
-          onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.</code
-        >
-      </td>
-    </tr>
-    <tr>
-      <th colspan="3">Específicos</th>
-    </tr>
-    <tr>
-      <td><code style="color: green">datasrc</code></td>
-      <td>
-        Enlaza a una fuente de datos externa (individual o tabular). Reservado
-        para posibles usos futuros.
-      </td>
-      <td>Una dirección URI. Por defecto: Lo fija el navegador.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">datafld</code></td>
-      <td>
-        El nombre de una propiedad o columna de
-        <code style="color: green">datasrc</code>. Reservado para posibles usos
-        futuros.
-      </td>
-      <td>Por defecto: Lo fija el navegador.</td>
-    </tr>
-    <tr>
-      <td><code style="color: green">dataformatas</code></td>
-      <td>
-        Indica como deben ser tratados los datos obtenidos de
-        <code style="color: green">datasrc</code>. Reservado para posibles usos
-        futuros.
-      </td>
-      <td>
-        Uno de los siguientes: <code>'paintext'</code> o <code>'html</code>'.
-        Por defecto: <code>'plaintext'</code>
-      </td>
-    </tr>
-    <tr>
-      <th colspan="3">De transición</th>
-    </tr>
-    <tr>
-      <td><code style="color: green">align</code></td>
-      <td>Alineación del texto.</td>
-      <td>
-        Uno de los siguientes: <code>"left", "center", "right",</code> o
-        "justify". Por defecto: <code>'left'</code>, lo fija el navegador
-      </td>
-    </tr>
-    <tr>
-      <th>atributo</th>
-      <th>descripción</th>
-      <th>valor</th>
-    </tr>
-  </tbody>
-</table>
+Como contenedor "puro", el elemento `<div>` no representa nada inherentemente. En cambio, se usa para agrupar contenido de modo que se pueda diseñar fácilmente usando los atributos [`class`](/es/docs/Web/HTML/Global_attributes#class) o [`id`](/es/docs/Web/HTML/Global_attributes#id), marcando una sección de un documento como escrita en un idioma diferente (usando el atributo [`lang`](/es/docs/Web/HTML/Global_attributes#lang)), y así sucesivamente.
 
-### Ejemplos de uso
+## Atributos
 
-#### Div y span
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
-código:
+> [!NOTE]
+> El atributo `align` está obsoleto; no lo uses más. En su lugar, deberías usar propiedades o técnicas de CSS como [CSS Grid](/es/docs/Web/CSS/CSS_grid_layout) o [CSS Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox) para alinear y posicionar elementos `<div>` en la página.
+
+## Notas de uso
+
+- El elemento `<div>` debe usarse solo cuando ningún otro elemento semántico (como {{HTMLElement("article")}} o {{HTMLElement("nav")}}) sea apropiado.
+
+## Preocupaciones de accesibilidad
+
+El elemento `<div>` tiene [un rol implícito de `generic`](https://www.w3.org/TR/wai-aria-1.2/#generic), y no ninguno. Esto puede afectar a cierta combinación de declaraciones ARIA que esperan un elemento descendiente directo con cierto rol para funcionar correctamente.
+
+## Ejemplos
+
+### Un ejemplo simple
 
 ```html
-<div style="color: blue;">
-  <h2>Ejemplo de div y span</h2>
+<div>
   <p>
-    Esto es un párrafo dentro de un div,
-    <span style="color: red;"> y esto un span dentro de un párrafo.</span>
+    Cualquier tipo de contenido aquí. Como &lt;p&gt;, &lt;table&gt;. ¡Lo que
+    quieras!
   </p>
 </div>
 ```
 
-Resultado:
+#### Resultado
 
-{{EmbedLiveSample}}
+{{EmbedLiveSample("Un_ejemplo_simple", 650, 60)}}
 
-### Estilo predeterminado
+### Un ejemplo con estilos
 
-### Notas
+Este ejemplo crea un cuadro sombreado aplicando un estilo al `<div>` usando CSS. Ten en cuenta que el uso del atributo [`class`](/es/docs/Web/HTML/Global_attributes#class) en el `<div>` para aplicar el estilo llamado `"shadowbox"` al elemento.
 
-### Referencia
+#### HTML
 
-- El elemento [**div** en la especificación](http://html.conclase.net/w3c/html401-es/struct/global.html#edef-DIV) de html 4.01
+```html
+<div class="shadowbox">
+  <p>
+    Aquí hay una nota muy interesante exhibida en un hermoso cuadro sombreado.
+  </p>
+</div>
+```
 
-### Soporte
+#### CSS
 
-Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html.php#support-html401-div): IE 6 - IE 7 - FF 1.5 - OP 9.
+```css
+.shadowbox {
+  width: 15em;
+  border: 1px solid #333;
+  box-shadow: 8px 8px 5px #444;
+  padding: 8px 12px;
+  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+}
+```
 
----
+#### Resultado
 
-> **Nota:** Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
->
-> ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
+{{EmbedLiveSample("Un_ejemplo_con_estilos", 650, 120)}}
 
-Categoría
+## Resumen técnico
 
-interwiki links
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/es/docs/Web/HTML/Content_categories"
+          >Categorías de contenido</a
+        >
+      </th>
+      <td>
+        <a href="/es/docs/Web/HTML/Content_categories#flujo_de_contenido"
+          >Flujo de contenido</a
+        >, <a href="/es/docs/Web/HTML/Content_categories#contenido_palpable">contenido palpable</a>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenido permitido</th>
+      <td>
+        <a href="/es/docs/Web/HTML/Content_categories#flujo_de_contenido"
+          >Flujo de contenido</a
+        >.<br />O (en {{glossary("WHATWG")}} HTML): Si el padre es un
+        elemento {{HTMLElement("dl")}}: uno o más
+        elementos {{HTMLElement("dt")}} seguidos de uno o más
+        elementos {{HTMLElement("dd")}}, opcionalmente entremezclados
+        con elementos {{HTMLElement("script")}} y {{HTMLElement("template")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omisión de etiqueta</th>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
+    </tr>
+    <tr>
+      <th scope="row">Padres permitidos</th>
+      <td>
+        Cualquier elemento que acepte
+        <a href="/es/docs/Web/HTML/Content_categories#flujo_de_contenido"
+          >flujo de contenido</a
+        >.<br />O (en {{glossary("WHATWG")}} HTML):
+        Elemento {{HTMLElement("dl")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rol ARIA implícito</th>
+      <td>
+        <code
+          ><a href="/es/docs/Web/Accessibility/ARIA/Roles/generic_role"
+            >generic</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Roles ARIA permitidos</th>
+      <td>Cualquier</td>
+    </tr>
+    <tr>
+      <th scope="row">Interfaz en el DOM</th>
+      <td>{{domxref("HTMLDivElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
-automatismos
+## Especificaciones
+
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
+
+## Véase también
+
+- Elementos de seccionamiento semántico: {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}
+- Elemento {{HTMLElement("span")}} para diseñar el contenido de la frase

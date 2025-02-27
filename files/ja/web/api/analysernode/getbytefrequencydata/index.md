@@ -8,13 +8,13 @@ l10n:
 
 {{ APIRef("Web Audio API") }}
 
-**`getByteFrequencyData()`** は {{domxref("AnalyserNode")}} インターフェースのメソッドで、渡された {{jsxref("Uint8Array")}} （符号なしバイト配列）に現在の周波数データをコピーします．
+**`getByteFrequencyData()`** は {{domxref("AnalyserNode")}} インターフェイスのメソッドで、渡された {{jsxref("Uint8Array")}} （符号なしバイト配列）に現在の周波数データをコピーします．
 
 周波数データは、 0 から 255 まで の範囲の整数で構成されます。
 
 配列の各項目は、固有の周波数のデシベル値を表します。周波数はサンプルレートの 0 から 1/2 まで直線的に広がります。例えば、サンプルレートが `48000` の場合、配列の最後の項目は `24000` Hz のデシベル値を表します。
 
-配列の持つ要素が {{domxref("AnalyserNode.fftSize")}} より少なかった場合、余分な要素は削除されます。必要以上の要素があった場合、余分な要素は無視されます。
+配列の持つ要素が {{domxref("AnalyserNode.frequencyBinCount")}} より少なかった場合、余分な要素は削除されます。必要以上の要素があった場合、余分な要素は無視されます。
 
 ## 構文
 
@@ -25,8 +25,8 @@ getByteFrequencyData(array)
 ### 引数
 
 - `array`
-  - : 周波数領域データがコピーされる {{jsxref("Uint8Array")}}。無音のサンプルの場合、値は `-Infinity` です。
-    配列の持つ要素が {{domxref("AnalyserNode.fftSize")}} より少なかった場合、余分な要素は削除されます。必要以上の要素があった場合、余分な要素は無視されます。
+  - : 周波数領域データがコピーされる {{jsxref("Uint8Array")}}。
+    配列の持つ要素が {{domxref("AnalyserNode.frequencyBinCount")}} より少なかった場合、余分な要素は削除されます。必要以上の要素があった場合、余分な要素は無視されます。
 
 ### 返値
 

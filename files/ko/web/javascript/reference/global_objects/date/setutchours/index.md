@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
 
 **`setUTCHours()`** 메서드는 표준시에 따라 지정된 날짜의 시간을 설정하고 1970년 1월 1일 00:00:00 UTC 이후 업데이트 된 {{jsxref("Date")}} 인스턴스에 의해 표시되는 시간(밀리 초)을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/date-setutchours.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCHours()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30 GMT-3:00");
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 20 Aug 1975 02:15:30 GMT"
+
+console.log(event.getUTCHours());
+// Expected output: 2
+
+event.setUTCHours(23);
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 20 Aug 1975 23:15:30 GMT"
+```
 
 ## 구문
 

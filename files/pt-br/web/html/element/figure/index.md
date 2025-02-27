@@ -38,7 +38,7 @@ O elemento **`<figure>`** [HTML](/pt-BR/docs/Web/HTML) representa conteúdo auto
     </tr>
     <tr>
       <th scope="row">Omissão de tag</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Pais permitidos</th>

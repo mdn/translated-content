@@ -60,7 +60,8 @@ The `font-size` property is specified in one of the following ways:
 - {{cssxref("&lt;percentage&gt;")}}
   - : A positive {{cssxref("&lt;percentage&gt;")}} value, relative to the parent element's font size.
 
-> **Nota:** To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
+> [!NOTE]
+> To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
 
 ### Formal syntax
 
@@ -80,7 +81,8 @@ Setting the font size in pixel values (`px`) is a good choice when you need pixe
 
 Font sizing settings can also be used in combination. For example, if a parent element is set to `16px` and its child element is set to `larger`, the child element displays larger than the parent element in the page.
 
-> **Nota:** Defining font sizes in `px` is _[not accessible](https://en.wikipedia.org/wiki/Web_accessibility)_, because the user cannot change the font size from the browser. For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer. Avoid using them for font sizes if you wish to create an inclusive design.
+> [!NOTE]
+> Defining font sizes in `px` is _[not accessible](https://en.wikipedia.org/wiki/Web_accessibility)_, because the user cannot change the font size from the browser. For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer. Avoid using them for font sizes if you wish to create an inclusive design.
 
 ### Ems
 
@@ -204,15 +206,10 @@ span {
 
 ## Specifications
 
-| Specification                                                       | Status                        | Comment                            |
-| ------------------------------------------------------------------- | ----------------------------- | ---------------------------------- |
-| {{SpecName('CSS3 Fonts', '#font-size-prop', 'font-size')}}          | {{Spec2('CSS3 Fonts')}}       | No change.                         |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'font-size')}}    | {{Spec2('CSS3 Transitions')}} | Defines `font-size` as animatable. |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-size', 'font-size')}} | {{Spec2('CSS2.1')}}           | No change.                         |
-| {{SpecName('CSS1', '#font-size', 'font-size')}}                     | {{Spec2('CSS1')}}             | Initial definition.                |
+{{Specifications}}
 
 {{cssinfo}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.font-size")}}
+{{Compat}}

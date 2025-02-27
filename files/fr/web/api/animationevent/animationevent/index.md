@@ -39,7 +39,7 @@ new AnimationEvent(type, options);
 
 ## Voir aussi
 
-- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - Les propriétés CSS et règles @ relatives aux animations&nbsp;:
   - [`animation`](/fr/docs/Web/CSS/animation)
   - [`animation-delay`](/fr/docs/Web/CSS/animation-delay)

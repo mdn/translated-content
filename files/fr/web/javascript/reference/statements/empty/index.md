@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Statements/Empty
 
 Une **instruction vide** est utilisée pour ne fournir aucune instruction là où JavaScript en attendrait une.
 
-{{EmbedInteractiveExample("pages/js/statement-empty.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Empty")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+// Assign all array values to 0
+for (let i = 0; i < array1.length; array1[i++] = 0 /* empty statement */);
+
+console.log(array1);
+// Expected output: Array [0, 0, 0]
+```
 
 ## Syntaxe
 
@@ -33,7 +43,8 @@ console.log(arr);
 // [0, 0, 0]
 ```
 
-> **Note :** Cela peut être raisonnable que de commenter l'utilisation d'une instruction vide pour la rendre visible et l'expliciter. Par exemple, dans le code qui suit, le point-virgule ne semble pas intentionnel :
+> [!NOTE]
+> Cela peut être raisonnable que de commenter l'utilisation d'une instruction vide pour la rendre visible et l'expliciter. Par exemple, dans le code qui suit, le point-virgule ne semble pas intentionnel :
 
 ```js
 if (condition); // Attention, ce "if" ne fait rien !

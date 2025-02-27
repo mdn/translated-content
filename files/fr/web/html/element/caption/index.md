@@ -84,7 +84,8 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     - `bottom`
       - : La légende est affichée en dessous du tableau
 
-    > **Note :** Ne pas utiliser cet attribut. Il a été déprécié. L'élément `<caption>` devrait être mis en forme grâce au [CSS](/fr/docs/Web/CSS). Afin d'obtenir des effets similaires à cet attribut, on utilisera les propriétés CSS [`caption-side`](/fr/docs/Web/CSS/caption-side) et [`text-align`](/fr/docs/Web/CSS/text-align).
+    > [!NOTE]
+    > Ne pas utiliser cet attribut. Il a été déprécié. L'élément `<caption>` devrait être mis en forme grâce au [CSS](/fr/docs/Web/CSS). Afin d'obtenir des effets similaires à cet attribut, on utilisera les propriétés CSS [`caption-side`](/fr/docs/Web/CSS/caption-side) et [`text-align`](/fr/docs/Web/CSS/text-align).
 
 ## Notes d'utilisation
 

@@ -9,7 +9,8 @@ l10n:
 
 このページでは、開発者に影響する Firefox 84 の変更点をまとめています。Firefox 84 は、2020 年 12 月 15 日にリリースされました。
 
-> **メモ:** Mozilla Hacks の [And now for … Firefox 84](https://hacks.mozilla.org/2020/12/and-now-for-firefox-84/) もご覧ください。
+> [!NOTE]
+> Mozilla Hacks の [And now for … Firefox 84](https://hacks.mozilla.org/2020/12/and-now-for-firefox-84/) もご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 
@@ -62,8 +63,8 @@ _変更なし。_
 
 - `WebDriver:PerformActions` および `WebDriver:ReleaseActions` に、chrome スコープのサポートを追加しました ([Firefox バグ 1365886](https://bugzil.la/1365886))。
 - 新しい Fission 互換 API をデフォルトで有効にしました。以前の API に戻すには、設定項目 `marionette.actors.enabled` を `false` に設定します ([Firefox バグ 1669169](https://bugzil.la/1669169))。
-- `WebDriver:SwitchToWindow` を、常にトップレベルのブラウジングコンテキストへ戻すように修正しました ([Firefox バグ 1305822](https://bugzil.la/1305822))。
-- `WebDriver:SwitchToParentFrame` の、ブラウジングコンテキストの確認を改良しました ([Firefox バグ 1671622](https://bugzil.la/1671622))。
+- `WebDriver:SwitchToWindow` を、常にトップレベルの閲覧コンテキストへ戻すように修正しました ([Firefox バグ 1305822](https://bugzil.la/1305822))。
+- `WebDriver:SwitchToParentFrame` の、閲覧コンテキストの確認を改良しました ([Firefox バグ 1671622](https://bugzil.la/1671622))。
 - `WebDriver:Back` で、現在選択されている [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) がアンロードされたときにハングアップする問題を修正しました ([Firefox バグ 1672758](https://bugzil.la/1672758))。
 
 #### 既知の不具合

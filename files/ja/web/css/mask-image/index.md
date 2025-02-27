@@ -20,7 +20,8 @@ mask-image: linear-gradient(rgba(0, 0, 0, 1), transparent);
 mask-image: image(url(mask.png), skyblue);
 
 /* 複数の値 */
-mask-image: image(url(mask.png), skyblue), linear-gradient(rgba(0, 0, 0, 1), transparent);
+mask-image:
+  image(url(mask.png), skyblue), linear-gradient(rgba(0, 0, 0, 1), transparent);
 
 /* グローバル値 */
 mask-image: inherit;

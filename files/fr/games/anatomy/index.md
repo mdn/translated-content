@@ -107,7 +107,7 @@ La clé pour programmer une boucle principale, en JavaScript, est d'attacher n'i
 
 ## Construire une boucle principale encore plus optimisée en JavaScript
 
-En fin de compte, en JavaScript, le navigateur roule sa propre boucle principale et votre code existe dans certaines de ses étapes. La section ci-dessus décrit des boucles principales qui essaient de ne pas lâcher le contrôle du navigateur. Ces méthodes principales s'attachent à `window.requestAnimationFrame()`, qui demandent au navigateur le contrôle sur la prochaine image qui arrive. C'est au navigateur de décider de la gestion de sa boucle principale. Les spécifications du [W3C en matière de requestAnimationFrame](http://www.w3.org/TR/animation-timing/) ne définissent pas exactement quand les navigateur doivent éxécuter les rappels de requestAnimationFrame. Cela pourrait être bénéfique car cela laisse aux concepteurs de navigateurs la liberté d'expérimenter les solutions qu'ils pensent être les meilleures au travers du temps.
+En fin de compte, en JavaScript, le navigateur roule sa propre boucle principale et votre code existe dans certaines de ses étapes. La section ci-dessus décrit des boucles principales qui essaient de ne pas lâcher le contrôle du navigateur. Ces méthodes principales s'attachent à `window.requestAnimationFrame()`, qui demandent au navigateur le contrôle sur la prochaine image qui arrive. C'est au navigateur de décider de la gestion de sa boucle principale. Les spécifications du [W3C en matière de requestAnimationFrame](https://www.w3.org/TR/animation-timing/) ne définissent pas exactement quand les navigateur doivent éxécuter les rappels de requestAnimationFrame. Cela pourrait être bénéfique car cela laisse aux concepteurs de navigateurs la liberté d'expérimenter les solutions qu'ils pensent être les meilleures au travers du temps.
 
 Les versions modernes de Firefox et Google Chrome (et probablement d'autres)_tentent_ de connecter les rappels de `requestAnimationFrame` à leur fil principal au tout début de chaque image. De ce fait, le déroulement principal _essaye_ d'être le plus possible comme ci-dessous:
 
@@ -205,7 +205,7 @@ Une technique commune est de mettre à jour la simulation à une fréquence cons
 
   - Cela utilise le temps du processeur même quand il n'a pas l'attention ou qu'il est minimisé, qu'il ne monopolise pas le fil principal, et est probablement un artefact de la traditionnelle boucle principale (mais plus simple).
 
-- Dessiner à chaque `requestAnimationFrame` et mettre à jour sur un `setInterval` ou `setTimeout` dans un [Web Worker](/fr/docs/Web/Guide/Performance/Using_web_workers).
+- Dessiner à chaque `requestAnimationFrame` et mettre à jour sur un `setInterval` ou `setTimeout` dans un [Web Worker](/fr/docs/Web/API/Web_Workers_API/Using_web_workers).
 
   - C'est la même chose que ci-dessus, excepté que la mise à jour ne monopolise pas le fil principal (ni le fil principal ne le monopolise). C'est une solution plus complexe, et ce pourrait être trop de travail pour de simples mises à jours.
 

@@ -1,13 +1,13 @@
 ---
 title: 重ね合わせコンテキストの例 1
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1
+l10n:
+  sourceCommit: e1b6d7d2d02a07f7e86268c81678713fad4d9a5d
 ---
 
 {{CSSRef}}
 
-« [CSS](/ja/docs/Web/CSS) « [CSS の z-index を理解する](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
-
-## 重ね合わせコンテキストの例 1
+## 解説
 
 基礎的な例から始めましょう。ルートの重ね合わせコンテキストに、2 つの DIV (DIV #1 と DIV #3) があって、どちらも relative の位置指定がされていますが、 z-index プロパティの指定はありません。 DIV #1 の中に absolute の位置指定がされた DIV #2 があり、一方 DIV #3 の中には absolute の位置指定がされた DIV #4 があります。どちらも z-index プロパティの指定はありません。
 
@@ -29,10 +29,11 @@ DIV #2 に正の (ゼロでなく auto でもない) z-index 値が代入され�
 
 - ルートの重ね合わせコンテキスト
 
-  - DIV #2 (z-index 1)
-  - DIV #4 (z-index 2)
+  - DIV #2 (`z-index`: 1)
+  - DIV #4 (`z-index`: 2)
 
-> **メモ:** DIV #1 と DIV #3 は半透明ではありません。位置指定された要素に1未満の不透明度を与えると、ちょうど z-index 値を追加したのと同じように、暗黙的に重ね合わせコンテキストが作られることを忘れないのは大切です。また、この例は、親要素が重ね合わせコンテキストを作らないときに、何が起こるのかを示しています。
+> [!NOTE]
+> DIV #1 と DIV #3 は半透明ではありません。位置指定された要素に1未満の不透明度を与えると、ちょうど z-index 値を追加したのと同じように、暗黙的に重ね合わせコンテキストが作られることを忘れないのは大切です。また、この例は、親要素が重ね合わせコンテキストを作らないときに、何が起こるのかを示しています。
 
 ## 例
 
@@ -40,37 +41,33 @@ DIV #2 に正の (ゼロでなく auto でもない) z-index 値が代入され�
 
 ```html
 <div id="div1">
-<br /><span class="bold">DIV #1</span>
-<br />position: relative;
-   <div id="div2">
-   <br /><span class="bold">DIV #2</span>
-   <br />position: absolute;
-   <br />z-index: 1;
-   </div>
+  <br /><span class="bold">DIV #1</span> <br />position: relative;
+  <div id="div2">
+    <br /><span class="bold">DIV #2</span> <br />position: absolute;
+    <br />z-index: 1;
+  </div>
 </div>
 
 <br />
 
 <div id="div3">
-<br /><span class="bold">DIV #3</span>
-<br />position: relative;
-   <div id="div4">
-   <br /><span class="bold">DIV #4</span>
-   <br />position: absolute;
-   <br />z-index: 2;
-   </div>
+  <br /><span class="bold">DIV #3</span> <br />position: relative;
+  <div id="div4">
+    <br /><span class="bold">DIV #4</span> <br />position: absolute;
+    <br />z-index: 2;
+  </div>
 </div>
-
-</body></html>
 ```
 
 ### CSS
 
 ```css
 .bold {
+  font-family: Arial;
+  font-size: 12px;
   font-weight: bold;
-  font: 12px Arial;
 }
+
 #div1,
 #div3 {
   height: 80px;
@@ -79,6 +76,7 @@ DIV #2 に正の (ゼロでなく auto でもない) z-index 値が代入され�
   background-color: #ccffcc;
   padding-left: 5px;
 }
+
 #div2 {
   opacity: 0.8;
   z-index: 1;
@@ -91,6 +89,7 @@ DIV #2 に正の (ゼロでなく auto でもない) z-index 値が代入され�
   background-color: #ffdddd;
   text-align: center;
 }
+
 #div4 {
   opacity: 0.8;
   z-index: 2;
@@ -112,9 +111,9 @@ DIV #2 に正の (ゼロでなく auto でもない) z-index 値が代入され�
 
 ## 関連情報
 
-- [z-index なしの重ね合わせ](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index): 既定の重ね合わせ規則
-- [浮動ブロックの重ね合わせ](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float): 浮動要素が重ね合わせでどのように扱われるか
-- [z-index の使用](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index): `z-index` を使って既定の重ね合わせ変更する方法
-- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context): 重ね合わせコンテキストについてのメモ
-- [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2): 2 階層の HTML 構造、全レベルの z-index
-- [重ね合わせコンテキストの例 3](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3): 3 階層の HTML 構造、第 2 階層の z-index
+- [z-index なしの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index): `z-index` が使用されなかった場合に適用される既定の重ね合わせ規則
+- [浮動ブロックの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements): 浮動要素が重ね合わせでどのように扱われるか
+- [z-index の使用](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index): `z-index` を使って既定の重ね合わせ変更する方法
+- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context): 重ね合わせコンテキストについてのメモ
+- [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2): 2 階層の HTML 構造、全レベルの `z-index`
+- [重ね合わせコンテキストの例 3](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3): 3 階層の HTML 構造、第 2 階層の `z-index`

@@ -7,7 +7,8 @@ slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 
 **可变字体（Variable fonts）**是 OpenType 字体规范上的演进，它允许将同一字体的多个变体统合进单独的字体文件中。从而无需再将不同字宽、字重或不同样式的字体分割成不同的字体文件。你只需通过 CSS 与一行{{cssxref("@font-face")}}引用，即可获取包含在这个单一文件中的各种字体变体。本文将介绍如何在 Web 中使用可变字体。
 
-> **警告：** 为了能够在你的操作系统上正确地使用可变字体，请确定你的操作系统已经升级到最新版本。例如各 Linux 发行版，应将 Freetype 升级到最新版本。10.13 版本之前的 macOS 不支持可变字体。如果你的操作系统没有升级到最新版，你将无法在网页和 Firefox Developer Tools 中使用可变字体。
+> [!WARNING]
+> 为了能够在你的操作系统上正确地使用可变字体，请确定你的操作系统已经升级到最新版本。例如各 Linux 发行版，应将 Freetype 升级到最新版本。10.13 版本之前的 macOS 不支持可变字体。如果你的操作系统没有升级到最新版，你将无法在网页和 Firefox Developer Tools 中使用可变字体。
 
 ## 可变字体：何谓与何异
 
@@ -54,9 +55,9 @@ slug: Web/CSS/CSS_fonts/Variable_fonts_guide
      "GRAD" 88;
    ```
 
-   `wght` (weight) 是一个注册轴， `GRAD` (grade) 是一个自定义轴。
+   `wght`（weight）是一个注册轴，`GRAD`（grade）是一个自定义轴。
 
-2. 如果你使用 `font-variation-settings` 设置了值并想要更改其中一个值，则必须重新声明所有值。你可以通过对各个值使用[CSS 自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)（CSS 变量）来解决此限制，并只需修改单个自定义属性的值。该指南末尾有示例代码。
+2. 如果你使用 `font-variation-settings` 设置了值并想要更改其中一个值，则必须重新声明所有值。你可以通过对各个值使用[CSS 自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)（CSS 变量）来解决此限制，并只需修改单个自定义属性的值。该指南末尾有示例代码。
 
 ### 字重
 
@@ -78,7 +79,8 @@ font-variation-settings: "wght" 375;
 
 字宽（由 `wdth` 标签表示）定义字形可以是多窄或多宽（印刷术语中称为压缩或扩展）的设计轴。这通常在 CSS 中通过使用 {{cssxref("font-stretch")}} 属性设置，该属性值表示为高于或低于“正常”的百分比（100％），任何大于 0 的数字在技术上都是有效的 - 尽管它的范围更有可能是接近 100％的，例如 75％-125％。如果提供的数字值超出了字体编码的范围，浏览器应该以允许的最接近值渲染字体。
 
-> **备注：** 在使用 `font-variation-settings` 时不需要使用%。
+> [!NOTE]
+> 在使用 `font-variation-settings` 时不需要使用%。
 
 ```css
 font-stretch: 115%;
@@ -110,7 +112,8 @@ font-variation-settings: "ital" 1;
 
 Slant（由 `slnt` 标签表示），或者它经常被称为“oblique” - 与真正的斜体不同之处在于它改变了字体的角度但不执行任何类型的字符替换。它也是可变的，因为它表示为数值范围。这允许字体沿该轴的任何位置变化。允许的范围通常为 0（直立）到 20 度 — 可以使用该范围内的任何数值，因此字体可以倾斜一点点。但是，-90-90 度的任何值都是有效的。
 
-> **备注：** 在使用 `font-variation-settings` 时不需要使用 `deg` 这个关键字。
+> [!NOTE]
+> 在使用 `font-variation-settings` 时不需要使用 `deg` 这个关键字。
 
 ```css
 font-style: oblique 14deg;
@@ -173,9 +176,11 @@ font-variation-settings: "GRAD" 88;
 }
 ```
 
-> **备注：** 并非所有浏览器都实现了字体格式的完整语法，因此请仔细测试。如果你将字体格式设置为仅文件格式，而不是格式变体（即 `woff2` 而不是 `woff2-variations`），那么支持可变字体的所有浏览器仍将渲染它们，但如果可能，最好使用正确的语法。
+> [!NOTE]
+> 并非所有浏览器都实现了字体格式的完整语法，因此请仔细测试。如果你将字体格式设置为仅文件格式，而不是格式变体（即 `woff2` 而不是 `woff2-variations`），那么支持可变字体的所有浏览器仍将渲染它们，但如果可能，最好使用正确的语法。
 
-> **备注：** 如果使用适当的属性（即 `font-weight`或 `font-stretch`），提供 `font-weight`， `font-stretch`和 `font-style`的值范围将使浏览器不会尝试渲染超出该范围的轴，但不会阻止你通过 `font-variation-settings` 使用无效值，因此请小心使用。
+> [!NOTE]
+> 如果使用适当的属性（即 `font-weight`或 `font-stretch`），提供 `font-weight`， `font-stretch`和 `font-style`的值范围将使浏览器不会尝试渲染超出该范围的轴，但不会阻止你通过 `font-variation-settings` 使用无效值，因此请小心使用。
 
 ## 使用旧版本浏览器
 

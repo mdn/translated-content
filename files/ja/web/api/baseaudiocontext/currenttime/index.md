@@ -1,6 +1,9 @@
 ---
-title: BaseAudioContext.currentTime
+title: "BaseAudioContext: currentTime プロパティ"
+short-title: currentTime
 slug: Web/API/BaseAudioContext/currentTime
+l10n:
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -14,18 +17,17 @@ slug: Web/API/BaseAudioContext/currentTime
 ## 例
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
 // 古い webkit/blink ブラウザーでは接頭辞が必要です
 
-...
+// …
 
 console.log(audioCtx.currentTime);
 ```
 
 ## 時刻の精度の縮小
 
-タイミング攻撃やフィンガープリントに対する保護を提供するために、ブラウザーの設定によっては `audioCtx.currentTime` の値が丸められることがあります。
+タイミング攻撃や[フィンガープリント](/ja/docs/Glossary/Fingerprinting)に対する保護を提供するために、ブラウザーの設定によっては `audioCtx.currentTime` の値が丸められることがあります。
 Firefox では、環境設定の `privacy.reduceTimerPrecision` が既定で有効になっており、 Firefox 59 では 20us、60 では 2ms になっています。
 
 ```js
@@ -34,14 +36,14 @@ audioCtx.currentTime;
 // 23.404
 // 24.192
 // 25.514
-// ...
+// …
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 audioCtx.currentTime;
 // 49.8
 // 50.6
 // 51.7
-// ...
+// …
 ```
 
 Firefox では、 `privacy.resistFingerprinting` を有効にすると、精度は 100ms または `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` の値のどちらか大きいほうになります。

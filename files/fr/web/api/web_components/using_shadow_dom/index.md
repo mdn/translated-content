@@ -7,7 +7,8 @@ slug: Web/API/Web_components/Using_shadow_DOM
 
 Un aspect important des composants web est l'encapsulation — être capable de garder la structure de balisage, le style et le comportement cachés et séparés du reste de code de la page tel que différentes parties n'entrent pas en conflit et que le code puisse rester agréable et propre. L'API Shadow DOM est un moyen d'y parvenir, fournissant une manière d'associer à un élément un DOM séparé et caché. Cet article couvre les bases de l'utilisation du DOM fantôme.
 
-> **Note :** L'API Shadow DOM est supportée par défaut dans Firefox (63 et suivants), Chrome, Opera, et Safari. Le nouveau Edge basé sur Chromium (75 et suivants) le supportent aussi; le vieux Edge ne le supporte pas.
+> [!NOTE]
+> L'API Shadow DOM est supportée par défaut dans Firefox (63 et suivants), Chrome, Opera, et Safari. Le nouveau Edge basé sur Chromium (75 et suivants) le supportent aussi; le vieux Edge ne le supporte pas.
 
 ## Vue de haut niveau
 
@@ -70,7 +71,8 @@ let monDomFantome = monElementPerso.shadowRoot;
 
 Si vous associez une racine fantôme à un élément personnalisé avec la propriété `mode` définie à `closed`, vous ne serez pas autorisé à accéder au DOM fantôme depuis l'extérieur — `monElementPerso.shadowRoot` retournera `null`. C'est le cas avec les éléments natifs contenant des DOM fantômes tels que `<video>`.
 
-> **Note :** Comme montre [cet article de blog](https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af) (en anglais), il est actuellement assez simple de pénétrer les DOM fantômes fermés, et les cacher complètement n'en vaut souvent pas la peine.
+> [!NOTE]
+> Comme montre [cet article de blog](https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af) (en anglais), il est actuellement assez simple de pénétrer les DOM fantômes fermés, et les cacher complètement n'en vaut souvent pas la peine.
 
 Si vous voulez associer un DOM fantôme à un élément personnalisé en tant que partie de son constructeur (de loin la plus utile application du DOM fantôme), vous devriez utiliser une instruction comme :
 
@@ -196,7 +198,7 @@ wrapper.appendChild(info);
 
 ### Utiliser notre élément personnalisé
 
-Une fois que la classe est définie, utiliser l'élément est aussi simple que de le définir, et l'ajouter sur la page, comme expliqué dans [Utiliser les éléments personnalisés](/fr/docs/Web/Web_Components/Using_custom_elements) :
+Une fois que la classe est définie, utiliser l'élément est aussi simple que de le définir, et l'ajouter sur la page, comme expliqué dans [Utiliser les éléments personnalisés](/fr/docs/Web/API/Web_components/Using_custom_elements) :
 
 ```js
 // Définit le nouvel élément
@@ -232,5 +234,5 @@ De nombreux navigateurs modernes implantent une optimisation pour les balises [`
 
 ## Voir aussi
 
-- [Utiliser les éléments personnalisés](/fr/docs/Web/Web_Components/Using_custom_elements)
-- [Utiliser les modèles (templates) et les emplacements (slots)](/fr/docs/Web/Web_Components/Using_templates_and_slots)
+- [Utiliser les éléments personnalisés](/fr/docs/Web/API/Web_components/Using_custom_elements)
+- [Utiliser les modèles (templates) et les emplacements (slots)](/fr/docs/Web/API/Web_components/Using_templates_and_slots)

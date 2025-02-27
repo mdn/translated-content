@@ -73,7 +73,7 @@ try {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.TypeError")}}
+{{Compat}}
 
 ## 関連情報
 

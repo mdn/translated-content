@@ -5,7 +5,7 @@ slug: Web/CSS/element
 
 {{CSSRef}}{{SeeCompatTable}}
 
-A função [CSS](/pt-BR/docs/CSS) **`element()`** define uma {{cssxref("&lt;image&gt;")}} gerada de um elemento HTML qualquer. Essa imagem é **_dinamica_**, significando que se o elemento HTML for mudado, a propriedade CSS usando este valor será atualizada automaticamente.
+A função [CSS](/pt-BR/docs/Web/CSS) **`element()`** define uma {{cssxref("&lt;image&gt;")}} gerada de um elemento HTML qualquer. Essa imagem é **_dinamica_**, significando que se o elemento HTML for mudado, a propriedade CSS usando este valor será atualizada automaticamente.
 
 Um cenario particularmente util para usar esta função seria colocar uma imagem em um elemento {{HTMLElement("canvas")}}, e então usar-lo como um _background_.
 
@@ -24,7 +24,7 @@ Onde:
 
 ## Exemplos
 
-Esses exemplos podem ser [vistos em tempo real](/samples/cssref/moz-element.html) em versões do Firefox que suportam `-moz-element()`.
+Esses exemplos podem ser [vistos em tempo real](https://mdn.dev/archives/media/samples/cssref/moz-element.html) em versões do Firefox que suportam `-moz-element()`.
 
 ### Um exemplo de alguma maneira real
 
@@ -49,7 +49,7 @@ Esse exemplo usa uma {{HTMLElement("div")}} escondida como _background_. O eleme
 
 A {{HTMLElement("div")}} com ID "myBackground1" é usada como _background_, mantendo o paragrafo "This box uses the element with the #myBackground1 ID as its background!".
 
-![example1.png](/@api/deki/files/4624/=example1.png)
+![example1.png](example1.png)
 
 ### Um exemplo ainda mais bizarro
 
@@ -64,7 +64,7 @@ Esse exemplo usa um elemento {{HTMLElement("button")}} se repetindo como _backgr
 </div>
 ```
 
-![example2.png](/@api/deki/files/4625/=example2.png)
+![example2.png](example2.png)
 
 ## Especificações
 
@@ -72,7 +72,7 @@ Esse exemplo usa um elemento {{HTMLElement("button")}} se repetindo como _backgr
 
 ## Compatibilidade dos navegadores
 
-{{Compat("css.types.image.element")}}
+{{Compat}}
 
 ## Veja tambem
 

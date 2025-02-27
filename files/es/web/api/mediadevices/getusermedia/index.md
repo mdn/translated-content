@@ -5,7 +5,7 @@ slug: Web/API/MediaDevices/getUserMedia
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-El método **`MediaDevices.getUserMedia()`** solicita al usuario permisos para usar un dispositivo de entrada de vídeo y/o uno de audio como una cámara o compartir la pantalla y/o micrófono. Si el usuario proporciona los permisos, entonces le retornará un {{domxref("Promise")}} que es resuelto por el resultado del objeto [`MediaStream`](/es/docs/WebRTC/MediaStream_API#LocalMediaStream). Si el usuario niega el permiso, o si el recurso multimedia no es válido, entonces el promise es rechazado con `NotAllowedError` o `NotFoundError` respectivamente. Nótese que es posible que el promise retornado no sea ni resuelto ni rechazado, ya que no se requiere que el usuario tome una decisión.
+El método **`MediaDevices.getUserMedia()`** solicita al usuario permisos para usar un dispositivo de entrada de vídeo y/o uno de audio como una cámara o compartir la pantalla y/o micrófono. Si el usuario proporciona los permisos, entonces le retornará un {{domxref("Promise")}} que es resuelto por el resultado del objeto [`MediaStream`](/es/docs/Web/API/Media_Capture_and_Streams_API#localmediastream). Si el usuario niega el permiso, o si el recurso multimedia no es válido, entonces el promise es rechazado con `NotAllowedError` o `NotFoundError` respectivamente. Nótese que es posible que el promise retornado no sea ni resuelto ni rechazado, ya que no se requiere que el usuario tome una decisión.
 
 ## Sintaxis
 
@@ -37,7 +37,7 @@ navigator.mediaDevices.getUserMedia(myConstraints).then(function(mediaStream) {
     { audio: true, video: true }
     ```
 
-    Mientras que la información acerca de las cámaras y micrófonos de los usuarios se encuentran inaccesibles por razones de privacidad, una aplicación puede solicitar la cámara y las capacidades del micrófono que este requiera, usando restricciones adicionales. El siguiente código es para mosrtar una resolución de una cámara de 1280x720.
+    Mientras que la información acerca de las cámaras y micrófonos de los usuarios se encuentran inaccesibles por razones de privacidad, una aplicación puede solicitar la cámara y las capacidades del micrófono que este requiera, usando restricciones adicionales. El siguiente código es para mostrar una resolución de una cámara de 1280x720.
 
     ```js
     {
@@ -211,7 +211,7 @@ var constraints = { video: { facingMode: front ? "user" : "environment" } };
 
 ## Permisos
 
-Para usar `getUserMedia()` en una app instalable (por ejemplo, una [Firefox OS app](/en-US/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)), necesitas especificar uno o ambos de los siguientes campos dentro de tu archivo manifest:
+Para usar `getUserMedia()` en una app instalable (por ejemplo, una [Firefox OS app](/es/docs/Web/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)), necesitas especificar uno o ambos de los siguientes campos dentro de tu archivo manifest:
 
 ```js
 "permissions": {
@@ -224,7 +224,7 @@ Para usar `getUserMedia()` en una app instalable (por ejemplo, una [Firefox OS a
 }
 ```
 
-Ver [permission: audio-capture](/en-US/Apps/Developing/App_permissions#audio-capture) y [permission: video-capture](/en-US/Apps/Developing/App_permissions#video-capture) para más información.
+Ver [permission: audio-capture](/es/docs/Web/Apps/Developing/App_permissions#audio-capture) y [permission: video-capture](/es/docs/Web/Apps/Developing/App_permissions#video-capture) para más información.
 
 ## Especificaciones
 
@@ -238,6 +238,6 @@ Ver [permission: audio-capture](/en-US/Apps/Developing/App_permissions#audio-cap
 
 - The older [navigator.getUserMedia](/es/docs/Web/API/Navigator/getUserMedia) legacy API.
 - [navigator.enumerateDevices](/es/docs/Web/API/MediaDevices/enumerateDevices) - learn the types and number of devices the user has available.
-- [WebRTC](/es/docs/WebRTC) - the introductory page to the API
-- [MediaStream API](/es/docs/WebRTC/MediaStream_API) - the API for the media stream objects
-- [Taking webcam photos](/es/docs/WebRTC/taking_webcam_photos) - a tutorial on using `getUserMedia() for taking photos rather than video.`
+- [WebRTC](/es/docs/Web/API/WebRTC_API) - the introductory page to the API
+- [MediaStream API](/es/docs/Web/API/Media_Capture_and_Streams_API) - the API for the media stream objects
+- [Taking webcam photos](/es/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - a tutorial on using `getUserMedia() for taking photos rather than video.`

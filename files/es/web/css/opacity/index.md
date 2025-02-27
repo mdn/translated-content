@@ -9,7 +9,7 @@ slug: Web/CSS/opacity
 
 La propiedad CSS `opacity` define la transparencia de un elemento, esto es, en qué grado se superpone el fondo al elemento.
 
-Usar esta propiedad con un valor diferente a 1 situa al elemento en un nuevo [contexto de apilamiento](/en/CSS/Understanding_z-index/The_stacking_context).
+Usar esta propiedad con un valor diferente a 1 situa al elemento en un nuevo [contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
 
 {{cssinfo}}
 

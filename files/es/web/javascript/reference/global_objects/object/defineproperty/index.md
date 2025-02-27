@@ -3,13 +3,14 @@ title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 ## Resumen
 
 El método estático **`Object.defineProperty()`** define una nueva propiedad sobre un objeto, o modifica una ya existente, y devuelve el objeto modificado.
 
-> **Nota:** Ud. puede llamar a este método directamente mediante el constructor {{jsxref("Object")}} en vez de crear una instancia del tipo `Object`.
+> [!NOTE]
+> Ud. puede llamar a este método directamente mediante el constructor {{jsxref("Object")}} en vez de crear una instancia del tipo `Object`.
 
 ## Sintaxis
 
@@ -323,7 +324,7 @@ console.log(instance.myname); // this is my name string
 
 ## See also
 
-- [Enumerability and ownership of properties](/es/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

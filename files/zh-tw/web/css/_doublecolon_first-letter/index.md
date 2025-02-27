@@ -1,61 +1,103 @@
 ---
-title: "::first-letter (:first-letter)"
+title: ::first-letter
 slug: Web/CSS/::first-letter
+l10n:
+  sourceCommit: 632289fcc10e926d166e1b49e5ba3505de182856
 ---
 
 {{CSSRef}}
 
-## 概要
+**`::first-letter`** [CSS](/zh-TW/docs/Web/CSS) [偽元素](/zh-TW/docs/Web/CSS/Pseudo-elements)用來對[區塊容器](/zh-TW/docs/Web/CSS/Visual_formatting_model#區塊容器)中第一行的第一個字母進行樣式設定，但僅限於前面沒有其他內容（如圖片或內嵌表格）時。
 
-`::first-letter` [CSS](/zh-TW/docs/Web/CSS) [虛擬元素](/zh-TW/docs/CSS/Pseudo-elements)選取了一個區塊第一行的第一個字母，如果那一行前面沒有其他內容（例如圖片或是行內表格）。
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-first-letter.html", "tabbed-shorter")}}
 
-The first letter of an element is not necessarily trivial to identify:
+識別一個元素的第一個字母並不總是那麼簡單：
 
-- Punctuation, that is any characters defined in Unicode in the _open_ (Ps), _close_ (Pe), _initial quote_ (Pi), _final quote_ (Pf) and _other punctuation_ (Po) classes, preceding or immediately following the first letter is also matched by this pseudo-element.
-- Similarly some languages have digraphs that are always capitalized together, like the `IJ` in Dutch. In these rare cases, both letters of the digraph should be matched by the `::first-letter` pseudo-element. (This is poorly supported by browsers, check the [browser compatibility table](/zh-TW/docs/CSS/::first-letter#瀏覽器相容性)).
-- Finally, a combination of the {{ cssxref("::before") }} pseudo-element and the {{ cssxref("content") }} property may inject some text at the beginning of the element. In that case, `::first-letter` will match the first letter of this generated content.
+- 在第一個字母前後的標點符號會被包含在匹配中。標點符號包括任何 Unicode 字符，這些字符定義在*起始符號*（Ps）、_閉合符號_（Pe）、_起始引號_（Pi）、_結束引號_（Pf）和*其他標點符號*（Po）類別中。
+- 有些語言有雙字母組合（如荷蘭語中的 `IJ`），這些組合總是一起大寫。在這些情況下，`::first-letter` 偽元素應該匹配這個雙字母組合的兩個字母。
+- 結合 {{ cssxref("::before") }} 偽元素和 {{ cssxref("content") }} 屬性，可能會在元素的開頭插入一些文字。在這種情況下，`::first-letter` 將匹配這些生成內容的第一個字母。
 
-A first line has meaning only in a [block-container box](/zh-TW/docs/CSS/Visual_formatting_model#block-level_elements_and_block_boxes), therefore the `::first-letter` pseudo-element has an effect only on elements with a {{ cssxref("display") }} value of `block`, `inline-block`, `table-cell`, `list-item` or `table-caption`. In all other cases, `::first-letter` has no effect.
+> [!NOTE]
+> CSS 引入了 `::first-letter` 表示法（使用兩個冒號）來區分[偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)和[偽元素](/zh-TW/docs/Web/CSS/Pseudo-elements)。為了向後相容，瀏覽器也接受較早引入的 `:first-letter`。
+>
+> 瀏覽器對荷蘭語中像 `IJ` 這樣的雙字母組合的支持較差。請查閱下面的相容性表格以查看當前的支持狀況。
 
-Only a small subset of all CSS properties can be used inside a declaration block of a CSS ruleset containing a selector using the `::first-letter` pseudo-element:
+## 允許的屬性
 
-- All font properties : {{ Cssxref("font") }}, {{ Cssxref("font-style") }}, {{cssxref("font-feature-settings")}}, {{cssxref("font-kerning")}}, {{cssxref("font-language-override")}}, {{cssxref("font-stretch")}}, {{cssxref("font-synthesis")}}, {{ Cssxref("font-variant") }}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{ Cssxref("font-weight") }}, {{ Cssxref("font-size") }}, {{cssxref("font-size-adjust")}}, {{ Cssxref("line-height") }} and {{ Cssxref("font-family") }}.
-- All background properties : {{ Cssxref("background") }}, {{ Cssxref("background-color") }}, {{ Cssxref("background-image") }}, {{cssxref("background-clip")}}, {{cssxref("background-origin")}}, {{ Cssxref("background-position") }}, {{ Cssxref("background-repeat") }}, {{ cssxref("background-size") }}, {{ Cssxref("background-attachment") }}, and {{cssxref("background-blend-mode")}}.
-- All margin properties: {{ Cssxref("margin") }}, {{ Cssxref("margin-top") }}, {{ Cssxref("margin-right") }}, {{ Cssxref("margin-bottom") }}, {{ Cssxref("margin-left") }}.
-- All padding properties: {{ Cssxref("padding") }}, {{ Cssxref("padding-top") }}, {{ Cssxref("padding-right") }}, {{ Cssxref("padding-bottom") }}, {{ Cssxref("padding-left") }}.
-- All border properties: the shorthands {{ Cssxref("border") }}, {{ Cssxref("border-style") }}, {{ Cssxref("border-color") }}, {{ cssxref("border-width") }}, {{ cssxref("border-radius") }}, {{cssxref("border-image")}}, and the longhands properties.
-- The {{ cssxref("color") }} property.
-- The {{ cssxref("text-decoration") }}, {{cssxref("text-shadow")}}, {{ cssxref("text-transform") }}, {{ cssxref("letter-spacing") }}, {{ cssxref("word-spacing") }} (when appropriate), {{ cssxref("line-height") }}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, {{cssxref("box-shadow")}}, {{ cssxref("float") }}, {{ cssxref("vertical-align") }} (only if `float` is `none`) CSS properties.
+只有少數 CSS 屬性可以與 `::first-letter` 偽元素一起使用：
 
-As this list will be extended in the future, it is recommended that you not use any other properties inside the declaration block, in order to keep the CSS future-proof.
+- 所有字體屬性：{{ Cssxref("font") }}、{{ Cssxref("font-style") }}、{{cssxref("font-feature-settings")}}、{{cssxref("font-kerning")}}、{{cssxref("font-language-override")}}、{{cssxref("font-stretch")}}、{{cssxref("font-synthesis")}}、{{ Cssxref("font-variant") }}、{{cssxref("font-variant-alternates")}}、{{cssxref("font-variant-caps")}}、{{cssxref("font-variant-east-asian")}}、{{cssxref("font-variant-ligatures")}}、{{cssxref("font-variant-numeric")}}、{{cssxref("font-variant-position")}}、{{ Cssxref("font-weight") }}、{{ Cssxref("font-size") }}、{{cssxref("font-size-adjust")}}、{{ Cssxref("line-height") }} 和 {{ Cssxref("font-family") }}
+- 所有背景屬性：{{ Cssxref("background") }}、{{ Cssxref("background-color") }}、{{ Cssxref("background-image") }}、{{cssxref("background-clip")}}、{{cssxref("background-origin")}}、{{ Cssxref("background-position") }}、{{ Cssxref("background-repeat") }}、{{ cssxref("background-size") }}、{{ Cssxref("background-attachment") }}、和 {{cssxref("background-blend-mode")}}
+- 所有邊距屬性：{{ Cssxref("margin") }}、{{ Cssxref("margin-top") }}、{{ Cssxref("margin-right") }}、{{ Cssxref("margin-bottom") }}、{{ Cssxref("margin-left") }}
+- 所有內邊距屬性：{{ Cssxref("padding") }}、{{ Cssxref("padding-top") }}、{{ Cssxref("padding-right") }}、{{ Cssxref("padding-bottom") }}、{{ Cssxref("padding-left") }}
+- 所有邊框屬性：簡寫形式 {{ Cssxref("border") }}、{{ Cssxref("border-style") }}、{{ Cssxref("border-color") }}、{{ cssxref("border-width") }}、{{ cssxref("border-radius") }}、{{cssxref("border-image")}}，以及長寫形式的屬性
+- {{ cssxref("color") }} 屬性
+- {{ cssxref("text-decoration") }}、{{cssxref("text-shadow")}}、{{ cssxref("text-transform") }}、{{ cssxref("letter-spacing") }}、{{ cssxref("word-spacing") }}（當適用時）、{{ cssxref("line-height") }}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-style")}}、{{cssxref("box-shadow")}}、{{ cssxref("float") }}、{{ cssxref("vertical-align") }}（僅當 `float` 為 `none` 時）CSS 屬性
 
-> **備註：** In CSS 2, pseudo-elements were prefixed with a single colon character. As pseudo-classes were also following the same convention, they were indistinguishable. To solve this, CSS 2.1 changed the convention for pseudo-elements. Now a pseudo-element is prefixed with two colon characters, and a pseudo-class is still prefixed with a single colon.As several browsers already implemented the CSS 2 version in a release version, all browsers supporting the two-colon syntax also support the old one-colon syntax.If legacy browsers must be supported, `:first-letter` is the only viable choice; if not, `::first-letter` is preferred.
+## 語法
 
-## Example
+```css
+::first-letter {
+  /* ... */
+}
+```
 
-Make the first letter of every paragraph red and big.
+## 範例
 
-### HTML Content
+### 基本的首字母放大效果
+
+在這個例子中，我們將使用 `::first-letter` 偽元素來創建段落第一個字母的首字母放大效果，這段段落位於 `<h2>` 之後。
+
+#### HTML
 
 ```html
+<h2>My heading</h2>
 <p>
   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
   eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
   voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-  kasd gubergren, no sea takimata sanctus est. Lorem ipsum dolor sit amet. Lorem
-  ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy amet.
+  kasd gubergren, no sea takimata sanctus est.
 </p>
 <p>
   Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
   consequat.
 </p>
+```
+
+#### CSS
+
+```css
+p {
+  width: 500px;
+  line-height: 1.5;
+}
+
+h2 + p::first-letter {
+  color: white;
+  background-color: black;
+  border-radius: 2px;
+  box-shadow: 3px 3px 0 red;
+  font-size: 250%;
+  padding: 6px 3px;
+  margin-right: 6px;
+  float: left;
+}
+```
+
+#### 結果
+
+{{ EmbedLiveSample('基本的首字母放大效果', '100%', 350) }}
+
+### 標點符號和非拉丁字符的效果
+
+此範例演示 `::first-letter` 對特殊標點符號和非拉丁字符的效果。
+
+#### HTML
+
+```html
 <p>
-  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
-  dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-  dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te
-  feugait nulla facilisi.
+  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+  consequat.
 </p>
 <p>-The beginning of a special punctuation mark.</p>
 <p>_The beginning of a special punctuation mark.</p>
@@ -63,24 +105,58 @@ Make the first letter of every paragraph red and big.
 <p>'The beginning of a special punctuation mark.</p>
 <p>*The beginning of a special punctuation mark.</p>
 <p>#The beginning of a special punctuation mark.</p>
-<p>「特殊的汉字标点符号开头。</p>
-<p>《特殊的汉字标点符号开头。</p>
-<p>“特殊的汉字标点符号开头。</p>
+<p>「特殊的漢字標點符號開頭。</p>
+<p>《特殊的漢字標點符號開頭。</p>
+<p>"特殊的漢字標點符號開頭。</p>
 ```
 
-### CSS Content
+#### CSS
 
 ```css
 p::first-letter {
-  /* Use :first-letter if support for IE 8 or earlier is needed */
   color: red;
-  font-size: 130%;
+  font-size: 150%;
 }
 ```
 
-### Output
+#### 結果
 
-{{ EmbedLiveSample('Example', 679, 390) }}
+{{ EmbedLiveSample('標點符號和非拉丁字符的效果', '100%', 350) }}
+
+### 在 SVG 文本元素中設定首字母樣式
+
+在這個例子中，我們使用 `::first-letter` 偽元素來設定 SVG {{SVGElement("text")}} 元素中的首字母樣式。
+
+> [!NOTE]
+> 截至撰寫本文時，這項功能的[支持有限](#瀏覽器相容性)。
+
+#### HTML
+
+```html
+<svg viewBox="0 0 300 40">
+  <text y="30">First letter in &lt;text&gt; SVG</text>
+</svg>
+```
+
+#### CSS
+
+```css
+text {
+  font-family: sans-serif;
+}
+
+text::first-letter {
+  font-family: serif;
+  font-size: 2rem;
+  font-weight: 600;
+  fill: tomato;
+  stroke: indigo;
+}
+```
+
+#### 結果
+
+{{ EmbedLiveSample('在 SVG 文本元素中設定首字母樣式', '100%', '100') }}
 
 ## 規範
 
@@ -92,4 +168,4 @@ p::first-letter {
 
 ## 參見
 
-- {{cssxref("::first-line")}} 虛擬元素。
+- {{cssxref("::first-line")}}

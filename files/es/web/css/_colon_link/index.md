@@ -1,5 +1,5 @@
 ---
-title: ":link"
+title: :link
 slug: Web/CSS/:link
 ---
 
@@ -16,7 +16,8 @@ a:link {
 
 Los estilos definidos por la pseudo-clase `:link` serán anulados por cualquier pseudo-clase posterior relacionada con el enlace ({{cssxref(":active")}}, {{cssxref(":hover")}}, o {{cssxref(":visited")}}) que tenga al menos la misma especificidad. Para darle un estilo apropiado a los enlaces, coloque la regla `:link` antes de todas las demás reglas relacionadas con el enlace, tal como lo define el _orden LVHA_: `:link` — `:visited` — `:hover` — `:active`.
 
-> **Nota:** Use {{cssxref(":any-link")}} para seleccionar un elemento independientemente de si ha sido visitado o no.
+> [!NOTE]
+> Use {{cssxref(":any-link")}} para seleccionar un elemento independientemente de si ha sido visitado o no.
 
 ## Sintaxis
 

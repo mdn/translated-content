@@ -3,13 +3,15 @@ title: Transforming XML with XSLT
 slug: Web/XSLT/Transforming_XML_with_XSLT
 ---
 
+{{XsltSidebar}}
+
 ### [개요](/ko/Transforming_XML_with_XSLT/An_Overview)
 
 내용과 겉모양의 분리가 [XML](/ko/XML)의 중요한 설계 특징입니다. XML 문서 구조는 결국 이 데이터를 어떻게 표시하는 게 좋을지에 관한 어떤 암시를 줄 필요로 방해받지 않은 내용 자체의 서로 다른 면(aspect) 사이의 중요한 관계를 반영하고 명확히 하기 위해 설계했습니다. 이 지적인 구조화는 데이터 전송이 더욱 자동화되는 것만큼 특히 중요하고 네트워크로 연결된 매우 이질적인 컴퓨터 사이에 일어난다.
 
 아직은 결국 XML 문서에 저장된 많은 내용을 읽는 사람에게 표시할 필요가 있습니다. 왜냐하면 브라우저가 친근하고 유연성이 높은 인터페이스를 제공하기 때문에, 그것은 XML 내용의 표시 버전 같은 이상적인 전달 메커니즘입니다. 철저하게 아주 다양한 XML 기술을 이용하게 만들었기 때문에, Mozilla는 원 XML 문서와 스타일 입히기와 클라이언트 측 처리로 인한 서버 부담을 줄이기 위해 HTML 표시에 그들을 놓기로 쓰는 특수 스타일시트 둘 다를 처리할 필요가 있는 모든 메커니즘을 자체에 통합시킵니다.
 
-오늘날, Gecko(the layout engine behind Mozilla와 Firefox)는 두 형태(form)의 XML 스타일시트를 지원합니다. 겉모습(글꼴, 색, 자리들)의 기본 조절을 위해 Gecko는 [DHTML](/ko/DHTML)과 친근한 [CSS](/ko/CSS)를 씁니다. CSS1 전부와 CSS2 대부분을 지원합니다. 최근 생겨난 CSS3 표준 지원은 개발중입니다. CSS에 관한 추가 정보는 [Eric Meyer's CSS pages](http://www.meyerweb.com/eric/css/)를 보시기 바랍니다.
+오늘날, Gecko(the layout engine behind Mozilla와 Firefox)는 두 형태(form)의 XML 스타일시트를 지원합니다. 겉모습(글꼴, 색, 자리들)의 기본 조절을 위해 Gecko는 [DHTML](/ko/DHTML)과 친근한 [CSS](/ko/docs/Web/CSS)를 씁니다. CSS1 전부와 CSS2 대부분을 지원합니다. 최근 생겨난 CSS3 표준 지원은 개발중입니다. CSS에 관한 추가 정보는 [Eric Meyer's CSS pages](https://www.meyerweb.com/eric/css/)를 보시기 바랍니다.
 
 여기서 우리의 관심은 Gecko가 지원하는 스타일시트의 두 번째 형태인 XSLT 스타일시트에 대해서입니다. XSLT는 eXtensible Stylesheet Language/Transform을 나타내고 그 이름은 적절합니다. XSLT는 스타일시트 만든 이가 그러길 바란다면 컨텐트를 모조리 다시 정리하고 다른 형식으로 변환하는 것을 포함하는 컨텐트 조작(manipulating)과 정렬이라는 중요한 두 방식으로 본래 XML 문서를 변환하게 합니다(그리고 Mozilla의 경우에, 초점은 브라우저에 표시될 수 있는 HTML로 즉시 변환하는 데 있습니다).
 

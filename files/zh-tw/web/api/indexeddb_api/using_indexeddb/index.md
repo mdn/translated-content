@@ -3,11 +3,13 @@ title: 使用IndexedDB
 slug: Web/API/IndexedDB_API/Using_IndexedDB
 ---
 
+{{DefaultAPISidebar("IndexedDB")}}
+
 IndexedDB 提供了在瀏覽器上儲存保留資料的功能，藉由它，不論是線上或線下我們的應用都可以進行資料存取。
 
 ## 關於本文
 
-本文會帶領各位操作非同步 IndexedDB 的 API，如果不知道甚麼是 IndexedDB，請先看看["IndexedDB 基本礎念"](/zh-TW/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB)。
+本文會帶領各位操作非同步 IndexedDB 的 API，如果不知道甚麼是 IndexedDB，請先看看["IndexedDB 基本礎念"](/zh-TW/docs/Web/API/IndexedDB_API/Basic_Terminology)。
 
 ## 基本操作步驟
 
@@ -68,9 +70,9 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 
 注意到了嗎，開啟資料庫必須要進行請求。
 
-開啟請求並不會立刻開啟資料庫或交易，呼叫 open()方法會回傳一個[`IDBOpenDBRequest`](/zh-TW/docs/IndexedDB/IDBOpenDBRequest)物件，這個物件擁有兩個事件(success 和 error)。大部分 IndexedDB 的非同步功能都會回傳一個[`IDBDatabase`](/zh-TW/docs/IndexedDB/IDBDatabase)類物件，然後我們可以註冊成功和失敗事件處理器。
+開啟請求並不會立刻開啟資料庫或交易，呼叫 open()方法會回傳一個[`IDBOpenDBRequest`](/zh-TW/docs/Web/API/IDBOpenDBRequest)物件，這個物件擁有兩個事件(success 和 error)。大部分 IndexedDB 的非同步功能都會回傳一個[`IDBDatabase`](/zh-TW/docs/Web/API/IDBDatabase)類物件，然後我們可以註冊成功和失敗事件處理器。
 
-Open 方法第二個參數是資料庫版本，資料庫版本決定了資料庫結構，也就是資料庫物件存檔的結構。如果請求版本不存在(比如因為這是一個新資料庫或是資料庫版本已升級)，onupgradeneeded 事件會被觸發，然後我們可以在 onupgradeneeded 事件處理器中再建立新的版本，下面[升級資料庫版本](#Updating_the_version_of_the_database)有更詳細的說明。
+Open 方法第二個參數是資料庫版本，資料庫版本決定了資料庫結構，也就是資料庫物件存檔的結構。如果請求版本不存在(比如因為這是一個新資料庫或是資料庫版本已升級)，onupgradeneeded 事件會被觸發，然後我們可以在 onupgradeneeded 事件處理器中再建立新的版本，下面[升級資料庫版本](#updating_the_version_of_the_database)有更詳細的說明。
 
 #### 產生事件處理器
 
@@ -134,7 +136,8 @@ request.onupgradeneeded = function (event) {
 
 資料庫版本是 unsigned long long 的數字，所以能夠非常長。
 
-> **警告：** 請注意這也意味著版本不能為浮點數，否則小數點部分將會無條件捨去，而交易也可能不會開始，upgradeneeded 事件也不會觸發。不要像以下例子以 2.4 作版本:
+> [!WARNING]
+> 請注意這也意味著版本不能為浮點數，否則小數點部分將會無條件捨去，而交易也可能不會開始，upgradeneeded 事件也不會觸發。不要像以下例子以 2.4 作版本:
 >
 > ```js
 > var request = indexedDB.open("MyTestDatabase", 2.4); // don't do this, as the version will be rounded to 2
@@ -205,7 +208,7 @@ request.onupgradeneeded = function (event) {
 
 本例還創建一個稱為"name"的索引，"name"索引查找目標為資料的"name"屬性，且不設立其獨特旗標(unique 為 false)，同樣地，我們又呼叫[createIndex](</zh-TW/docs/Web/API/IDBObjectStore?redirectlocale=en-US&redirectslug=IndexedDB%2FIDBObjectStore#createIndex()>)方法創建了一個"email"索引，不過"email"索引具備獨特旗標(unique 為 true)。雖然存在"name"索引，但資料不一定要含有"name"屬性，只是當搜索"name"索引時資料不會出現。
 
-接下來我們可以開始用 ssn 從物件存檔中取出資料，或是用索引找出資料(請參考[使用索引](/zh-TW/docs/IndexedDB/Using_IndexedDB#.E4.BD.BF.E7.94.A8.E7.B4.A2.E5.BC.95))。
+接下來我們可以開始用 ssn 從物件存檔中取出資料，或是用索引找出資料（請參考[使用索引](#使用索引)）。
 
 ### 使用資料鍵產生器
 
@@ -235,7 +238,7 @@ request.onupgradeneeded = function (event) {
 };
 ```
 
-關於資料鍵產生器細節，請參考["W3C Key Generators"](http://www.w3.org/TR/IndexedDB/#key-generator-concept)。
+關於資料鍵產生器細節，請參考["W3C Key Generators"](https://www.w3.org/TR/IndexedDB/#key-generator-concept)。
 
 ## 新增和刪除資料
 
@@ -361,7 +364,8 @@ objectStore.openCursor().onsuccess = function (event) {
 };
 ```
 
-> **警告：** 以下範例不是 IndexedDB 標準!
+> [!WARNING]
+> 以下範例不是 IndexedDB 標準!
 
 Mozilla 瀏覽器自己做了一個 getAll()方法來方便一次取得所有 cursor 下的資料值，這個方法相當方便，不過請小心未來它有可能會消失。以下程式碼的效果和上面的一樣:
 
@@ -511,7 +515,7 @@ function useDatabase(db) {
 
 ## 安全性
 
-IndexedDB 遵守[同源政策](/zh-TW/docs/Web/JavaScript/Same_origin_policy_for_JavaScript)，所以它綁定創建它的來源網站，其他來源網站無法存取。就像對載入 {{ HTMLElement("frame") }} 和 {{ HTMLElement("iframe") }} 網頁的第三方 cookie 所設下的安全性和隱私權考量限制，IndexedDB 無法在載入 {{ HTMLElement("frame") }} 和 {{ HTMLElement("iframe") }} 網頁上運作，詳情請見 [Firefox bug 595307](https://bugzil.la/595307)。
+IndexedDB 遵守[同源政策](/zh-TW/docs/Web/Security/Same-origin_policy)，所以它綁定創建它的來源網站，其他來源網站無法存取。就像對載入 {{ HTMLElement("frame") }} 和 {{ HTMLElement("iframe") }} 網頁的第三方 cookie 所設下的安全性和隱私權考量限制，IndexedDB 無法在載入 {{ HTMLElement("frame") }} 和 {{ HTMLElement("iframe") }} 網頁上運作，詳情請見 [Firefox bug 595307](https://bugzil.la/595307)。
 
 ## 瀏覽器關閉風險
 
@@ -1092,7 +1096,7 @@ input {
     if (typeof store == "undefined")
       store = getObjectStore(DB_STORE_NAME, "readwrite");
 
-    // As per spec http://www.w3.org/TR/IndexedDB/#object-store-deletion-operation
+    // As per spec https://www.w3.org/TR/IndexedDB/#object-store-deletion-operation
     // the result of the Object Store Deletion Operation algorithm is
     // undefined, so it's not possible to know if some records were actually
     // deleted by looking at the request result.
@@ -1220,27 +1224,28 @@ input {
 
 ## 下一步
 
-請參考[IndexedDB 文件](/zh-TW/docs/IndexedDB)，看看有甚麼 IndexedDB API 可供使用，實際試玩一下吧。
+請參考[IndexedDB 文件](/zh-TW/docs/Web/API/IndexedDB_API)，看看有甚麼 IndexedDB API 可供使用，實際試玩一下吧。
 
 ## 延伸閱讀
 
 參照
 
 - [IndexedDB API Reference](/zh-TW/IndexedDB)
-- [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
+- [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
 - [Using IndexedDB in chrome](/zh-TW/docs/IndexedDB/Using_IndexedDB_in_chrome)
 
 相關教學
 
-- [A simple TODO list using HTML5 IndexedDB](http://www.html5rocks.com/tutorials/indexeddb/todo/).
+- [A simple TODO list using HTML5 IndexedDB](https://www.html5rocks.com/tutorials/indexeddb/todo/).
 
-  > **備註：** 請注意此教學範例用到的已經廢棄的`setVersion()`方法。
+  > [!NOTE]
+  > 請注意此教學範例用到的已經廢棄的`setVersion()`方法。
 
-- [Databinding UI Elements with IndexedDB](http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
+- [Databinding UI Elements with IndexedDB](https://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
 
 相關文章
 
-- [IndexedDB — The Store in Your Browser](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)
+- [IndexedDB — The Store in Your Browser](<https://learn.microsoft.com/en-us/previous-versions/msdn10/gg679063(v=msdn.10)>)
 
 Firefox
 

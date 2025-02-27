@@ -36,9 +36,9 @@ Neste artigo, veremos a sintaxe fundamental de objetos JavaScript e revisitaremo
 
 Um objeto é uma coleção de dados e/ou funcionalidades relacionadas (que geralmente consistem em diversas variáveis e funções — que são chamadas de propriedades e métodos quando estão dentro de objetos). Vamos trabalhar com um exemplo para entender como eles são.
 
-Para começar, faça uma cópia do nosso arquivo [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html). Isto contém muito pouco — um elemento {{HTMLElement("script")}} para escrevermos nosso código-fonte. Vamos usar isto como base para explorar a sintaxe básica do objeto. Ao trabalhar com este exemplo, você deve ter seu [console de ferramentas de desenvolvedor JavaScript](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools#The_JavaScript_console) aberto e pronto para digitar alguns comandos.
+Para começar, faça uma cópia do nosso arquivo [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html). Isto contém muito pouco — um elemento {{HTMLElement("script")}} para escrevermos nosso código-fonte. Vamos usar isto como base para explorar a sintaxe básica do objeto. Ao trabalhar com este exemplo, você deve ter seu [console de ferramentas de desenvolvedor JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools#the_javascript_console) aberto e pronto para digitar alguns comandos.
 
-Como acontece com muitas coisas em JavaScript, a criação de um objeto geralmente começa com a definição e a inicialização de uma variável. Tente digitar o código a seguir no arquivo que você baixou, salve e atualize:
+Assim como é comum em JavaScript, a criação de um objeto geralmente começa com a definição e a inicialização de uma variável. Tente digitar o código a seguir no arquivo que você baixou, salve e atualize:
 
 ```js
 var pessoa = {};
@@ -50,7 +50,7 @@ Se você inserir `pessoa` no seu console JS e pressionar o botão, deverá obter
 [object Object]
 ```
 
-Parabéns, você acabou de criar seu primeiro objeto. Tarefa concluída! Mas este é um objeto vazio, então não podemos fazer muita coisa com isso. Vamos atualizar nosso objeto para ficar assim:
+Parabéns! Você acaba de criar seu primeiro objeto. Tarefa concluída! No entanto, como este objeto está vazio, não podemos realizar muitas operações com ele. Vamos atualizá-lo para ficar da seguinte forma:
 
 ```js
 var pessoa = {
@@ -91,7 +91,8 @@ pessoa.saudacao();
 
 Agora você tem alguns dados e funcionalidades dentro de seu objeto e é capaz de acessá-los com uma sintaxe simples e agradável!
 
-> **Nota:** Se você está tendo problemas para fazer isto funcionar, tente comparar seu código com a nossa versão — veja [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (ou [veja um exemplo funcionando](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). O exemplo lhe dará uma tela em branco, mas tudo bem — novamente, abra seu devtools e tente digitar os comandos acima para ver a estrutura do objeto.
+> [!NOTE]
+> Se você está tendo problemas para fazer isto funcionar, tente comparar seu código com a nossa versão — veja [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (ou [veja um exemplo funcionando](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). O exemplo lhe dará uma tela em branco, mas tudo bem — novamente, abra seu devtools e tente digitar os comandos acima para ver a estrutura do objeto.
 
 Então, o que está acontecendo? Bem, um objeto é composto de vários membros, cada um com um nome (ex.: `nome` e `idade` vistos acima), e um valor (ex.: `['Bob', 'Smith']` e `32`). Cada par nome/valor deve ser separado por uma vírgula e o nome e valor, em cada caso, separados por dois pontos. A sintaxe sempre segue esse padrão:
 
@@ -111,7 +112,7 @@ Um objeto como esse é chamado de **objeto literal** — ao pé da letra, escrev
 
 ## Notação de ponto
 
-Acima, você acessou as propriedades de objetos e métodos usando **notação de ponto**. O objeto nome (pessoa) atua como **namespace** (espaço de nomes) — ele deve ser digitado primeiro para que você acesse qualquer coisa **encapsulada** dentro do objeto. Depois você escreve um ponto, então o item que quer acessar — isso pode ser o nome de uma simples propriedade, um item de um array ou a chamada para um dos métodos do objeto, por exemplo:
+Acima, você acessou as propriedades de objetos e métodos usando **notação de ponto**. O objeto nome (pessoa) atua como **namespace** (espaço de nomes) — ele deve ser digitado primeiro para que você acesse qualquer valor **encapsulada** dentro do objeto. Depois você escreve um ponto, então o item que quer acessar — isso pode ser o nome de uma simples propriedade, um item de um array ou a chamada para um dos métodos do objeto, por exemplo:
 
 ```js
 pessoa.idade;
@@ -175,7 +176,7 @@ pessoa["idade"];
 pessoa["nome"]["primeiro"];
 ```
 
-Fica muito parecido com a maneira que acessamos itens de um array, e é basicamente a mesma coisa, só que ao invés de usarmos um número de índice para selecionar um item, usamos o nome associado a cada valor. Não é por menos que objetos às vezes são chamados de **arrays associativos** — eles mapeiam strings a valores do mesmo modo que arrays mapeiam números a valores.
+Fica muito parecido com a maneira que acessamos itens de um array, e, na realidade, segue o mesmo princípio. Só que ao invés de usarmos um número de índice para selecionar um item, usamos o nome associado a cada valor. Não é por menos que objetos às vezes são chamados de **arrays associativos** — eles mapeiam strings a valores do mesmo modo que arrays mapeiam números a valores.
 
 ## Setando membros do objeto
 
@@ -196,7 +197,8 @@ pessoa["nome"]["ultimo"];
 Não podemos apenas atualizar valores existentes de propriedades e métodos; podemos também criar membros completamente novos. Tente isso aqui no console:
 
 ```js
-pessoa["olhos"] = "castanho".pessoa.despedida = function () {
+pessoa["olhos"] = "castanho";
+pessoa.despedida = function () {
   alert("Adeus a todos!");
 };
 ```
@@ -247,7 +249,7 @@ saudacao: function(){
 }
 ```
 
-Você deve estar se perguntando o que é o "this". A palavra-chave `this` se refere ao objeto atual em que o código está sendo escrito — nesse caso o `this` se refere a `pessoa`. Então por que simplesmente não escrever `pessoa`? Como verá no artigo [Orientaçã a objeto em JavaScript para iniciantes](/pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS), quando começamos a criar funções construtoras, etc, o `this` é muito útil — sempre lhe assegurará que os valores corretos estão sendo usados quando o contexto de um membro muda (exemplo: duas instâncias diferentes do objeto `pessoa` podem ter diferentes nomes, mas vão querer usar seu próprio nome ao usar a saudação).
+Você deve estar se perguntando o que é o "this". A palavra-chave `this` se refere ao objeto atual em que o código está sendo escrito — nesse caso o `this` se refere a `pessoa`. Então por que simplesmente não escrever `pessoa`? Como verá no artigo [Orientaçã a objeto em JavaScript para iniciantes](/pt-BR/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript), quando começamos a criar funções construtoras, etc, o `this` é muito útil — sempre lhe assegurará que os valores corretos estão sendo usados quando o contexto de um membro muda (exemplo: duas instâncias diferentes do objeto `pessoa` podem ter diferentes nomes, mas vão querer usar seu próprio nome ao usar a saudação).
 
 Vamos ilustrar o que queremos dizer com um par de objetos pessoa:
 
@@ -300,11 +302,12 @@ var minhaNotificacao = new Notification("Hello!");
 
 Novamente, olharemos constructores num artigo mais na frente.
 
-> **Nota:** É útil pensar sobre como os objetos se comunicam **passando mensagens** - quando um objeto precisa de outro objeto para realizar algum tipo de ação, ele freqüentemente enviará uma mensagem para outro objeto através de um de seus métodos e aguardará uma resposta, que reconhecemos como um valor de retorno.
+> [!NOTE]
+> É útil pensar sobre como os objetos se comunicam **passando mensagens** - quando um objeto precisa de outro objeto para realizar algum tipo de ação, ele freqüentemente enviará uma mensagem para outro objeto através de um de seus métodos e aguardará uma resposta, que reconhecemos como um valor de retorno.
 
 ## Teste suas habilidades !
 
-Você chegou ao fim desse artigo,entretanto você consegue lembrar as informações mais importantes? Você pode encontrar mais testes para verificar se você consolidou as informações antes que você siga adiante — veja [Test your skills: Object basics](/pt-BR/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics).
+Você chegou ao fim desse artigo, entretanto, você consegue lembrar as informações mais importantes? Você pode encontrar mais testes para verificar se você consolidou as informações antes que você siga adiante — veja [Test your skills: Object basics](/pt-BR/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics).
 
 ## Resumo
 
@@ -317,9 +320,9 @@ No próximo artigo vamos começar a ver a teoria de programação orientada a ob
 ## Nesse módulo
 
 - [Noções Básicas de Objetos](/pt-BR/docs/Learn/JavaScript/Objects/Basics)
-- [Orientação a objetos Javascript para iniciantes](/pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS)
+- [Orientação a objetos Javascript para iniciantes](/pt-BR/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript)
 - [Protótipos de Objetos](/pt-BR/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Herança no Javascript](/pt-BR/docs/Learn/JavaScript/Objects/Inheritance)
-- [Trabalhando com JSON](/pt-BR/docs/Aprender/JavaScript/Objetos/JSON)
-- [Prática de construção de Objetos](/pt-BR/docs/Aprender/JavaScript/Objetos/Object_building_practice)
-- [Adicionando recursos à nossa demonstração de bolas pulantes](/pt-BR/docs/Aprender/JavaScript/Objetos/Adding_bouncing_balls_features)
+- [Herança no Javascript](/pt-BR/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
+- [Trabalhando com JSON](/pt-BR/docs/Learn/JavaScript/Objects/JSON)
+- [Prática de construção de Objetos](/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice)
+- [Adicionando recursos à nossa demonstração de bolas pulantes](/pt-BR/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

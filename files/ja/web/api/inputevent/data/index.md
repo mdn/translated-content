@@ -1,8 +1,9 @@
 ---
-title: InputEvent.data
+title: "InputEvent: data プロパティ"
+short-title: data
 slug: Web/API/InputEvent/data
 l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{APIRef("UI Events")}}
@@ -15,7 +16,7 @@ l10n:
 
 ## 例
 
-以下の例では、イベントリスナーが [input](/ja/docs/Web/API/HTMLElement/input_event) イベントを受信します。 {{htmlelement("input")}} 要素に対してテキストの変更が行われると、 `InputEvent.data` によって取得し、 [`Node.textContent`](/ja/docs/Web/API/Node/textContent) プロパティを使用して段落に挿入します。
+以下の例では、イベントリスナーが [input](/ja/docs/Web/API/Element/input_event) イベントを受信します。 {{htmlelement("input")}} 要素に対してテキストの変更が行われると、 `InputEvent.data` によって取得し、 [`Node.textContent`](/ja/docs/Web/API/Node/textContent) プロパティを使用して段落に挿入します。
 
 ```html
 <p>テキストをコピーおよび貼り付けしてください。</p>

@@ -1,5 +1,5 @@
 ---
-title: ":only-of-type"
+title: :only-of-type
 slug: Web/CSS/:only-of-type
 ---
 
@@ -9,7 +9,8 @@ slug: Web/CSS/:only-of-type
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-only-of-type.html", "tabbed-shorter")}}
 
-> **备注：** 根据原来的定义，被选择的元素必须具有父元素。直到 Selectors Level 4 开始，这个要求就不是必须的了。
+> [!NOTE]
+> 根据原来的定义，被选择的元素必须具有父元素。直到 Selectors Level 4 开始，这个要求就不是必须的了。
 
 ## 语法
 

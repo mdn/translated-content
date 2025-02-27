@@ -36,4 +36,4 @@ var currentTimeZoneOffsetInHours = x.getTimezoneOffset() / 60;
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getTimezoneOffset")}}
+{{Compat}}

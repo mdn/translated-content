@@ -1,11 +1,12 @@
 ---
 title: "XMLHttpRequest: progress イベント"
+short-title: progress
 slug: Web/API/XMLHttpRequest/progress_event
 l10n:
-  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`progress`** イベントは、リクエストがもっとデータを受信した際に定期的に発行されます。
 
@@ -142,4 +143,4 @@ xhrButtonAbort.addEventListener("click", () => {
 ## 関連情報
 
 - 関連イベント: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
-- [進捗の監視](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
+- [進捗の監視](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)

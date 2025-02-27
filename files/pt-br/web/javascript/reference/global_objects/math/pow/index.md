@@ -57,7 +57,7 @@ Math.pow(-7, 1 / 3); // NaN
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.pow")}}
+{{Compat}}
 
 ## Veja também
 
@@ -65,4 +65,4 @@ Math.pow(-7, 1 / 3); // NaN
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.sqrt()")}}
-- [Operador Exponencial](/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation) {{experimental_inline}}
+- [Operador Exponencial](/pt-BR/docs/Web/JavaScript/Reference/Operators#exponentiation) {{experimental_inline}}

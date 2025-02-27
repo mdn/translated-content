@@ -3,6 +3,8 @@ title: Блоковая модель (боксовая модель, box model)
 slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 ---
 
+{{CSSRef}}
+
 ## Описание
 
 В HTML-документе каждому элементу на странице соответствует прямоугольная область (бокс или блок). Движок рендеринга в браузере определяет размеры и положение боксов на странице, а также их свойства вроде цвета, фоновой картинки для того, чтобы отобразить их на экране.
@@ -25,30 +27,23 @@ slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 
 Величина отступов задаётся по отдельности в разных направлениях свойствами {{ cssxref("margin-top") }}, {{ cssxref("margin-right") }}, {{ cssxref("margin-bottom") }}, {{ cssxref("margin-left") }} или общим свойством {{ cssxref("margin") }}.
 
-Отступы двух соседних элементов, расположенных друг над другом или вложенных друг в друга, могут накладываться. Это называется схлопывание границ ([margin collapsing](/ru/docs/Web/CSS/margin_collapsing)). Схлопываются только вертикальные отступы.
+Отступы двух соседних элементов, расположенных друг над другом или вложенных друг в друга, могут накладываться. Это называется схлопывание границ ([margin collapsing](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)). Схлопываются только вертикальные отступы.
 
 Для элементов с {{ cssxref("display") }}`: inline` (или `inline-block, inline-table`) на занимаемое по высоте место также влияет значение свойства {{ cssxref('line-height') }}.
 
-## Стандарты
-
-| Стандарт                                                                       | Статус                | Примечание                                                 |
-| ------------------------------------------------------------------------------ | --------------------- | ---------------------------------------------------------- |
-| [CSS Level 2 (revision 1)](http://www.w3.org/TR/CSS21/box.html#box-dimensions) | {{ Spec2('CSS2.1') }} | Though more precisely worded, there is no practical change |
-| [CSS Level 1](http://www.w3.org/TR/REC-CSS1/#formatting-model)                 | {{ Spec2('CSS1') }}   |                                                            |
-
 ## Смотрите также
 
-- [Справочник по CSS](/ru/CSS/CSS_Reference)
+- [Справочник по CSS](/ru/docs/CSS/CSS_Reference)
 - Ключевые концепции CSS
   - [Синтаксис CSS](/ru/docs/Web/CSS/Syntax)
   - [@-правила](/ru/docs/Web/CSS/At-rule)
   - [комментарии](/ru/docs/Web/CSS/Comments)
   - [специфичность](/ru/docs/Web/CSS/Specificity)
-  - [наследование](/ru/docs/Web/CSS/inheritance)
+  - [наследование](/ru/docs/Web/CSS/Inheritance)
   - [блочная модель](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [режимы компоновки](/ru/docs/Web/CSS/Layout_mode)
   - [модели визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
-  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Значения
     - [начальные](/ru/docs/Web/CSS/initial_value)
     - [вычисленные](/ru/docs/Web/CSS/computed_value)

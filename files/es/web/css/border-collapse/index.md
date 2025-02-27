@@ -3,7 +3,7 @@ title: border-collapse
 slug: Web/CSS/border-collapse
 ---
 
-<< [Volver](/es/Gu%c3%ada_de_referencia_de_CSS)
+{{CSSRef}}
 
 ### Resumen
 
@@ -15,7 +15,7 @@ En el modelo de separación, cada celda adyacente tiene su propio borde (la dist
 
 - {{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("separate", "separado") }}
 - {{ Cssxref("inheritance", "Valor heredado") }}: Yes
-- Media: {{ Xref_cssvisual() }}
+- Media: {{cssxref("Media/Visual", "visual")}}
 - {{ Cssxref("computed value", "Valor calculado") }}:
 
 ### Sintaxis
@@ -32,7 +32,7 @@ border-collapse: value
 
 ### Ejemplos
 
-[Ver El Ejemplo Vivo](/samples/cssref/border-collapse.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/border-collapse.html)
 
 ```
 <table border="1" style="border-collapse: collapse" bordercolor="#111111" width="500">
@@ -50,21 +50,12 @@ CSS 2 especifica que el valor inicial para esta propiedad es `collapse`, pero CS
 
 ### Especificaciones
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/tables.html#collapsing-borders)
-- [CSS 3](http://www.w3.org/TR/REC-CSS2/tables.html#borders)
+{{Specifications}}
 
-### Compatibilidades
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 5.5            |
-| Netscape          | 7              |
-| Opera             | 5              |
+{{Compat}}
 
 ### Ver también
 
 {{ Cssxref("border-spacing") }}
-
-Categorías
-
-Interwiki Languages

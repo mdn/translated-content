@@ -1,23 +1,35 @@
 ---
-title: CanvasRenderingContext2D.beginPath()
+title: "CanvasRenderingContext2D: beginPath() メソッド"
+short-title: beginPath()
 slug: Web/API/CanvasRenderingContext2D/beginPath
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
 
 **`CanvasRenderingContext2D.beginPath()`** はキャンバス 2D API のメソッドで、サブパスのリストを空にすることにより新しいパスを開始します。新しいパスを作成したい場合は、このメソッドを呼び出してください。
 
-> **メモ:**しいサブパス (つまり、現在のキャンバスの状態に一致するサブパス) を作成する場合、{{domxref("CanvasRenderingContext2D.moveTo()")}}を使用できます。
+> [!NOTE]
+> 新しいサブパス（つまり、現在のキャンバスの状態に一致するサブパス）を作成する場合、 {{domxref("CanvasRenderingContext2D.moveTo()")}} が使用できます。
 
 ## 構文
 
-```js
-void ctx.beginPath();
+```js-nolint
+beginPath()
 ```
+
+### 引数
+
+なし。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
-### 異なるパスの作成
+### 独立したパスの作成
 
 この例では、それぞれが 1 本の直線を含む 2 つのパスを作成します。
 

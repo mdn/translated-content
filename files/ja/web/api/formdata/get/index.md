@@ -3,14 +3,15 @@ title: "FormData: get() メソッド"
 short-title: get()
 slug: Web/API/FormData/get
 l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
-**`get()`** は {{domxref("FormData")}} インターフェイスのメソッドで、`FormData` オブジェクトの中から、指定されたキーに関連付けられた最初の値を返します。。複数の値を期待し、すべてが欲しい場合は、代わりに {{domxref("FormData.getAll()","getAll()")}} メソッドを使用してください。
+**`get()`** は {{domxref("FormData")}} インターフェイスのメソッドで、`FormData` オブジェクトの中から、指定されたキーに関連付けられた最初の値を返します。複数の値を期待し、すべてが欲しい場合は、代わりに {{domxref("FormData.getAll()","getAll()")}} メソッドを使用してください。
 
-> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
+> [!NOTE]
+> このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
 ## 構文
 
@@ -52,5 +53,5 @@ formData.get("username"); // "Chris" を返す
 
 ## 関連情報
 
-- [FormData オブジェクトの使用](/ja/docs/Web/API/FormData/Using_FormData_Objects)
+- [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

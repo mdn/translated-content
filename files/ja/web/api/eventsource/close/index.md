@@ -9,7 +9,8 @@ l10n:
 
 **`close()`** は {{domxref("EventSource")}} インターフェイスのメソッドで、コネクションが構築されていればそれを閉じ、 {{domxref("EventSource.readyState")}} 属性を `2` （接続終了）に設定します。
 
-> **メモ:** コネクションが既に閉じられていた場合、このメソッドは何も行いません。
+> [!NOTE]
+> コネクションが既に閉じられていた場合、このメソッドは何も行いません。
 
 ## 構文
 
@@ -37,7 +38,8 @@ button.onclick = () => {
 };
 ```
 
-> **メモ:** 完全な例は GitHub で見られます。 [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/main/server-sent-events) を参照してください。
+> [!NOTE]
+> 完全な例は GitHub で見られます。 [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/main/server-sent-events) を参照してください。
 
 ## 仕様書
 

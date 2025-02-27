@@ -7,7 +7,8 @@ slug: Web/HTML/Element/input/hidden
 
 {{HTMLElement("input")}} elements of type **`"hidden"`** let web developers include data that cannot be seen or modified by users when a form is submitted. For example, the ID of the content that is currently being ordered or edited, or a unique security token. Hidden inputs are completely invisible in the rendered page, and there is no way to make it visible in the page's content.
 
-> **Nota:** Hay un ejemplo en vivo debajo de las siguientes líneas de código — si esta funcionando correctamente no debería ver algo.
+> [!NOTE]
+> Hay un ejemplo en vivo debajo de las siguientes líneas de código — si esta funcionando correctamente no debería ver algo.
 
 ## Ejemplo
 
@@ -28,7 +29,8 @@ slug: Web/HTML/Element/input/hidden
 
 El atributo [`value`](/es/docs/Web/HTML/Element/input#value) del elemento {{HTMLElement("input")}} tiene un {{domxref("DOMString")}} que contiene la información oculta que se desea incluir en el formulario cuando sea remitido al servidor. Específicamente no puede ser editado por el usuario o mostrado a éste por medio la interfaz de usuario, aunque puede ser editado por medio de las herramientas para desarrolladores del navegador.
 
-> **Advertencia:** Mientras que el valor no es desplegado al usuario en el contenido de la página, si es visible —y puede ser modificado—usando las herramientas para desarrolladores de cualquier navegador o la funcionalidad "Ver código fuente" (View Source). No confíe en `hidden` inputs como una forma de seguridad.
+> [!WARNING]
+> Mientras que el valor no es desplegado al usuario en el contenido de la página, si es visible —y puede ser modificado—usando las herramientas para desarrolladores de cualquier navegador o la funcionalidad "Ver código fuente" (View Source). No confíe en `hidden` inputs como una forma de seguridad.
 
 ## Utilizando hidden inputs
 
@@ -52,7 +54,8 @@ Hidden inputs también son usados para almacenar y enviar token de seguirdad o s
 
 Esto evitaría que un usuario malicioso creara un formulario falso, fingiendo ser un banco y enviando el formulario por correo electrónico a usuarios desprevenidos para engañarlos y que transfieran dinero al lugar equivocado. Este tipo de ataque es llamado como [Cross Site Request Forgery (CSRF)](</es/docs/Learn/Server-side/First_steps/Website_security#Cross_Site_Request_Forgery_(CSRF)>); prácticamente cualquier marco de trabajo que goce de buena reputación utiliza secretos ocultos para evitar tales ataques.
 
-> **Nota:** Como se menciono anteriormenre, colocando el secreto en un hidden input no lo hace inherentemente seguro. La composición y codificación de la llave haría eso. El valor del hidden input es que mantiene el secreto asociado con la información y automáticamente lo incluye cuando el formulario es enviado al servidor. Se necesita usar secretos bien diseñados para realmente mantener seguro el sitio web.
+> [!NOTE]
+> Como se menciono anteriormenre, colocando el secreto en un hidden input no lo hace inherentemente seguro. La composición y codificación de la llave haría eso. El valor del hidden input es que mantiene el secreto asociado con la información y automáticamente lo incluye cuando el formulario es enviado al servidor. Se necesita usar secretos bien diseñados para realmente mantener seguro el sitio web.
 
 ## Validación
 
@@ -129,7 +132,8 @@ La salida se vería como:
 
 {{ EmbedLiveSample('Examples', '100%', 200) }}
 
-> **Nota:** Puede encontrar el ejemplo en GitHub (vea el [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/hidden-input-example/index.html), y también [veálo corriendo en vivo](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)).
+> [!NOTE]
+> Puede encontrar el ejemplo en GitHub (vea el [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/hidden-input-example/index.html), y también [veálo corriendo en vivo](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)).
 
 Cuando se envían, los datos del formulario enviados al servidor tendrán un aspecto parecido a este:
 
@@ -147,5 +151,5 @@ A pesar de que los hiden input no se pueden ver en absoluto, sus datos se siguen
 
 ## Ver también
 
-- [HTML forms guide](/es/docs/Learn/HTML/Forms)
+- [HTML forms guide](/es/docs/Learn/Forms)
 - {{HTMLElement("input")}} y la interfaz {{domxref("HTMLInputElement")}} en la que se basa

@@ -1,8 +1,9 @@
 ---
-title: PointerEvent.width
+title: "PointerEvent: width プロパティ"
+short-title: width
 slug: Web/API/PointerEvent/width
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
 {{ APIRef("Pointer Events") }}
@@ -17,7 +18,7 @@ l10n:
 
 ## 例
 
-この例では、{{domxref("PointerEvent")}} インターフェイスの {{domxref("PointerEvent.width","width")}} プロパティと {{domxref("PointerEvent.height","height")}} プロパティを使用して接触面積を計算する方法を示します。
+この例では、{{domxref("PointerEvent")}} インターフェイスの `width` プロパティと {{domxref("PointerEvent.height","height")}} プロパティを使用して接触面積を計算する方法を示します。
 
 ```js
 target.addEventListener(

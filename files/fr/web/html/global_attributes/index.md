@@ -12,8 +12,8 @@ Les attributs universels peuvent être définis sur tous [les éléments HTML](/
 En plus des attributs universels HTML, il existe également les attributs universels suivants :
 
 - `xml:lang` et `xml:base` : ces attributs proviennent des spécifications XHTML. Ils sont désormais dépréciés mais conservés pour des raisons de compatibilité.
-- Les nombreux attributs [`aria-*`](/fr/docs/Accessibilité/ARIA) utilisés afin d'améliorer l'accessibilité.
-- Les attributs utilisés pour [les gestionnaires d'événements](/fr/docs/Web/Guide/DOM/Events/Event_handlers) déclarés directement sur les éléments : **`onabort`**, **`onautocomplete`**, **`onautocompleteerror`**, **`onblur`**, **`oncancel`**, **`oncanplay`**, **`oncanplaythrough`**, **`onchange`**, **`onclick`**, **`onclose`**, **`oncontextmenu`**, **`oncuechange`**, **`ondblclick`**, **`ondrag`**, **`ondragend`**, **`ondragenter`**, **`ondragexit`**, **`ondragleave`**, **`ondragover`**, **`ondragstart`**, **`ondrop`**, **`ondurationchange`**, **`onemptied`**, **`onended`**, **`onerror`**, **`onfocus`**, **`oninput`**, **`oninvalid`**, **`onkeydown`**, **`onkeypress`**, **`onkeyup`**, **`onload`**, **`onloadeddata`**, **`onloadedmetadata`**, **`onloadstart`**, **`onmousedown`**, **`onmouseenter`**, **`onmouseleave`**, **`onmousemove`**, **`onmouseout`**, **`onmouseover`**, **`onmouseup`**, **`onmousewheel`**, **`onpause`**, **`onplay`**, **`onplaying`**, **`onprogress`**, **`onratechange`**, **`onreset`**, **`onresize`**, **`onscroll`**, **`onseeked`**, **`onseeking`**, **`onselect`**, **`onshow`**, **`onsort`**, **`onstalled`**, **`onsubmit`**, **`onsuspend`**, **`ontimeupdate`**, **`ontoggle`**, **`onvolumechange`**, **`onwaiting`**.
+- Les nombreux attributs [`aria-*`](/fr/docs/Web/Accessibility/ARIA) utilisés afin d'améliorer l'accessibilité.
+- Les attributs utilisés pour [les gestionnaires d'événements](/fr/docs/Web/Events/Event_handlers) déclarés directement sur les éléments : **`onabort`**, **`onautocomplete`**, **`onautocompleteerror`**, **`onblur`**, **`oncancel`**, **`oncanplay`**, **`oncanplaythrough`**, **`onchange`**, **`onclick`**, **`onclose`**, **`oncontextmenu`**, **`oncuechange`**, **`ondblclick`**, **`ondrag`**, **`ondragend`**, **`ondragenter`**, **`ondragexit`**, **`ondragleave`**, **`ondragover`**, **`ondragstart`**, **`ondrop`**, **`ondurationchange`**, **`onemptied`**, **`onended`**, **`onerror`**, **`onfocus`**, **`oninput`**, **`oninvalid`**, **`onkeydown`**, **`onkeypress`**, **`onkeyup`**, **`onload`**, **`onloadeddata`**, **`onloadedmetadata`**, **`onloadstart`**, **`onmousedown`**, **`onmouseenter`**, **`onmouseleave`**, **`onmousemove`**, **`onmouseout`**, **`onmouseover`**, **`onmouseup`**, **`onmousewheel`**, **`onpause`**, **`onplay`**, **`onplaying`**, **`onprogress`**, **`onratechange`**, **`onreset`**, **`onresize`**, **`onscroll`**, **`onseeked`**, **`onseeking`**, **`onselect`**, **`onshow`**, **`onsort`**, **`onstalled`**, **`onsubmit`**, **`onsuspend`**, **`ontimeupdate`**, **`ontoggle`**, **`onvolumechange`**, **`onwaiting`**.
 
 ## Liste des attributs universels
 
@@ -29,7 +29,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
     - `characters` : toutes les lettres sont écrites en majuscules par défaut
 
 - `class`
-  - : Une liste de classes, séparées par des espaces, qui permettent de catégoriser l'élément. Les classes permettent au CSS et à JavaScript de manipuler des éléments spécifiques grâce à [des sélecteurs de classe](/fr/docs/Web/CSS/Sélecteurs_de_classe) (pour CSS) ou grâce à des fonctions telles que {{domxref("Document.getElementsByClassName()")}} (pour JavaScript).
+  - : Une liste de classes, séparées par des espaces, qui permettent de catégoriser l'élément. Les classes permettent au CSS et à JavaScript de manipuler des éléments spécifiques grâce à [des sélecteurs de classe](/fr/docs/Web/CSS/Class_selectors) (pour CSS) ou grâce à des fonctions telles que {{domxref("Document.getElementsByClassName()")}} (pour JavaScript).
 - `contenteditable`
 
   - : Un attribut à valeur contrainte qui indique si l'élément peut être édité par l'utilisateur. Si c'est le cas, le navigateur modifie l'interface utilisateur afin de permettre l'édition. Les valeur autorisées pour cet attribut sont :
@@ -51,14 +51,14 @@ En plus des attributs universels HTML, il existe également les attributs univer
 
 - `draggable`
 
-  - : Un attribut à valeur contrainte qui indique qu'un élément peut être glissé/déposé grâce à l'[API _Drag & Drop_](/fr/docs/Web/API/API_HTML_Drag_and_Drop). Les valeurs autorisées pour cet attribut sont :
+  - : Un attribut à valeur contrainte qui indique qu'un élément peut être glissé/déposé grâce à l'[API _Drag & Drop_](/fr/docs/Web/API/HTML_Drag_and_Drop_API). Les valeurs autorisées pour cet attribut sont :
 
     - `true` : l'élément peut être glissé/déposé
     - `false` : l'élément ne peut pas être glissé/déposé.
 
 - `dropzone` {{experimental_inline}}
 
-  - : Un attribut à valeur contrainte qui indique le type de contenu qui peut être déposé sur un élément grâce à l'[API _Drag & Drop_](/fr/docs/Web/API/API_HTML_Drag_and_Drop). Les valeurs autorisées pour cet attribut sont :
+  - : Un attribut à valeur contrainte qui indique le type de contenu qui peut être déposé sur un élément grâce à l'[API _Drag & Drop_](/fr/docs/Web/API/HTML_Drag_and_Drop_API). Les valeurs autorisées pour cet attribut sont :
 
     - `copy` : lorsque l'élément est déposé, une copie de l'élément est créée
     - `move` : lorsque l'élément est déposé, il est déplacé vers ce nouvel emplacement
@@ -73,7 +73,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - `inputmode`
   - : Cet attribut fournit une indication au navigateur quant au type de contenu qui sera saisi dans le champ et qui aide à déterminer la configuration du clavier virtuel qui peut être affiché pour la saisie. Ce type est principalement utilisé pour les éléments {{HTMLElement("input")}} mais peut tout à fait être utilisé sur n'importe quel élément avec le mode [`contenteditable`](#contenteditable).
 - `is`
-  - : Cet attribut indique qu'un élément HTML standard devrait se comporter comme un élément personnalisé natif (voir [Manipuler les custom elements](/fr/docs/Web/Web_Components/Using_custom_elements) pour plus d'informations).
+  - : Cet attribut indique qu'un élément HTML standard devrait se comporter comme un élément personnalisé natif (voir [Manipuler les custom elements](/fr/docs/Web/API/Web_components/Using_custom_elements) pour plus d'informations).
 - `itemid`
   - : L'identifiant unique, global, d'un objet. Cet attribut est lié [aux microdonnées](https://html.spec.whatwg.org/multipage/#toc-microdata).
 - `itemprop`
@@ -89,7 +89,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - `part` {{experimental_inline}}
   - : Une liste séparée par des espaces avec les noms des parties (_parts_) de l'élément. Les noms des parties permettent au CSS de cibler et de mettre en forme certains éléments d'un arbre _shadow_ via le pseudo-élément {{cssxref("::part")}}.
 - `slot`
-  - : Cet attribut affecte un créneau de l'arbre du _[shadow DOM](/fr/docs/Web/Web_Components/Shadow_DOM)_ pour un élément. L'élément ayant l'attribut `slot` est affecté au créneau créé par l'élément {{HTMLElement("slot")}} pour lequel l'attribut [`name`](/fr/docs/Web/HTML/Element/slot#name) correspond à la valeur de l'attribut `slot`.
+  - : Cet attribut affecte un créneau de l'arbre du _[shadow DOM](/fr/docs/Web/API/Web_components/Using_shadow_DOM)_ pour un élément. L'élément ayant l'attribut `slot` est affecté au créneau créé par l'élément {{HTMLElement("slot")}} pour lequel l'attribut [`name`](/fr/docs/Web/HTML/Element/slot#name) correspond à la valeur de l'attribut `slot`.
 - `spellcheck` {{experimental_inline}}
 
   - : Un attribut à valeur contrainte qui définit s'il faut détecter les fautes d'orthographe/grammaire dans le texte de l'élément. Les valeurs autorisées pour cet attribut sont :
@@ -98,7 +98,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
     - `false` qui indique qu'il ne faut pas vérifier les erreurs.
 
 - `style`
-  - : Cet attribut contient les déclarations [CSS](/fr/docs/Web/CSS/) utilisées pour mettre en forme l'élément. Note : il est recommandé d'utiliser un ou plusieurs fichiers séparés, plutôt que cet attribut, pour définir les règles de mise en forme. Le rôle de l'élément {{HTMLElement("style")}} consiste à permettre une mise en forme rapide, notamment pour des tests.
+  - : Cet attribut contient les déclarations [CSS](/fr/docs/Web/CSS) utilisées pour mettre en forme l'élément. Note : il est recommandé d'utiliser un ou plusieurs fichiers séparés, plutôt que cet attribut, pour définir les règles de mise en forme. Le rôle de l'élément {{HTMLElement("style")}} consiste à permettre une mise en forme rapide, notamment pour des tests.
 - `tabindex`
 
   - : Cet attribut à valeur entière indique l'ordre dans lequel l'élément participe à la navigation au clavier via la tabulation. Il peut prendre différente valeur :

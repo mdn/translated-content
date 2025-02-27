@@ -56,7 +56,8 @@ Cette propriété peut être définie selon deux formes&nbsp;:
 
   - : Cette fonction active l'affichage des ornements tels que les [fleurons](<https://fr.wikipedia.org/wiki/Fleuron_(typographie)>) et autres casseaux. Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Cette valeur correspond à la valeur OpenType `ornm` (par exemple `ornm 2`).
 
-    > **Note :** Afin de préserver la sémantique de la fonte, les fondeurs sont invités à ne pas créer de casseaux qui correspondent aux caractères Unicode déjà définis comme variantes d'ornement pour la puce (`U+2022`). De nombreuses fontes passent outre cette règle et perdent ainsi en qualité.
+    > [!NOTE]
+    > Afin de préserver la sémantique de la fonte, les fondeurs sont invités à ne pas créer de casseaux qui correspondent aux caractères Unicode déjà définis comme variantes d'ornement pour la puce (`U+2022`). De nombreuses fontes passent outre cette règle et perdent ainsi en qualité.
 
 - `annotation()`
   - : Cette fonction active l'affichage des annotations (telles que les chiffres entourés ou les caractères inversés). Le paramètre est un nom lié à la fonte auquel est associé un nombre. Cette valeur correspond à la valeur OpenType `nalt` (par exemple `nalt 2`).
@@ -101,7 +102,8 @@ p {
 
 #### Résultat
 
-> **Note :** Pour que cet exemple fonctionne, il faut avoir installé la fonte Open Type Leitura Display Swashes. Une version de test est disponible sur [fontsgeek.com](https://fontsgeek.com).
+> [!NOTE]
+> Pour que cet exemple fonctionne, il faut avoir installé la fonte Open Type Leitura Display Swashes. Une version de test est disponible sur [fontsgeek.com](https://fontsgeek.com).
 
 {{EmbedLiveSample('')}}
 

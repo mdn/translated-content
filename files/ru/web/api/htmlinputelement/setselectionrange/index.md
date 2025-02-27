@@ -28,32 +28,28 @@ inputElement.setSelectionRange(selectionStart, selectionEnd, [optional] selectio
 
 ## Пример
 
-Следующий код:
+Кликните на кнопку, чтобы выбрать третий, четвёртый и пятый символы в текстовом поле ("zil" в слове "Mozilla").
+
+### HTML
 
 ```html
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>JS Bin</title>
-    <script>
-      function SelectText() {
-        var input = document.getElementById("mytextbox");
-        input.focus();
-        input.setSelectionRange(2, 5);
-      }
-    </script>
-  </head>
-  <body>
-    <p><input type="text" id="mytextbox" size="20" value="Mozilla" /></p>
-    <p><button onclick="SelectText()">Select text</button></p>
-  </body>
-</html>
+<input type="text" id="text-box" size="20" value="Mozilla" />
+<button onclick="selectText()">Выбрать текст</button>
 ```
 
-приведёт к следующему результату:
+### JavaScript
 
-![example.png](/@api/deki/files/6104/=example.png)
+```js
+function selectText() {
+  const input = document.getElementById("text-box");
+  input.focus();
+  input.setSelectionRange(2, 5);
+}
+```
+
+### Result
+
+{{EmbedLiveSample("Пример")}}
 
 ## Спецификации
 

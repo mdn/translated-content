@@ -46,7 +46,8 @@ PWA 可以在任何时候缓存资源，但在实践中，大多数 PWA 选择�
 
 - **在 service worker 的 `install` 事件处理程序中（预缓存）**：当 service worker 被安装时，浏览器会在 service worker 的全局作用域中触发一个名为 {{domxref("ServiceWorkerGlobalScope.install_event", "install")}} 的事件。此时，service worker 可以*预缓存*资源，从网络获取它们并将它们存储在缓存中。
 
-  > **备注：** service worker 的安装时间与 PWA 的安装时间不同。一个 service worker 的 `install` 事件会在 service worker 被下载和执行后立即触发，这通常会发生在用户首次访问你的网站时。
+  > [!NOTE]
+  > service worker 的安装时间与 PWA 的安装时间不同。一个 service worker 的 `install` 事件会在 service worker 被下载和执行后立即触发，这通常会发生在用户首次访问你的网站时。
   >
   > 即使用户从未将你的网站安装为 PWA，其 service worker 也会被安装和激活。
 
@@ -207,5 +208,5 @@ PWA 应该在 service worker 的 {{domxref("ServiceWorkerGlobalScope.activate_ev
 - [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API)
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
 - [存储配额和驱逐标准](/zh-CN/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)
-- developer.chrome.com 上的 [service worker 缓存策略](https://developer.chrome.com/docs/workbox/caching-strategies-overview/)（2021）
-- web.dev 上的[离线应用程序开发指南](https://web.dev/offline-cookbook/)（2020）
+- developer.chrome.google.cn 上的 [service worker 缓存策略](https://developer.chrome.google.cn/docs/workbox/caching-strategies-overview)（2021）
+- web.developers.google.cn 上的[离线应用程序开发指南](https://web.developers.google.cn/articles/offline-cookbook)（2020）

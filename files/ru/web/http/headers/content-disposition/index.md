@@ -107,10 +107,10 @@ value2
 
 ## Замечания по совместимости
 
-- Firefox 5 обрабатывает `Content-Disposition заголовка` HTTP-ответа response более эффективно, если присутствуют оба параметра `filename` и `filename*`; он просматривает сначала все предоставленные имена `filename*`, даже есть вначале идут `filename`. Ранее использовалось первое найденное имя. See {{bug(588781)}}.
+- Firefox 5 обрабатывает `Content-Disposition заголовка` HTTP-ответа response более эффективно, если присутствуют оба параметра `filename` и `filename*`; он просматривает сначала все предоставленные имена `filename*`, даже есть вначале идут `filename`. Ранее использовалось первое найденное имя. See [Firefox bug 588781](https://bugzil.la/588781).
 
 ## Смотрите также
 
-- [HTML-формы](/ru/docs/Web/Guide/HTML/Forms)
+- [HTML-формы](/ru/docs/Learn/Forms)
 - {{HTTPHeader("Content-Type")}} определяет границу для частей составного тела.
 - Интерфейс {{domxref("FormData")}} используется для обработки данных форм для использования в API {{domxref("XMLHttpRequest")}}.

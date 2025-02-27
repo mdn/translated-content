@@ -44,7 +44,8 @@ const request = window.indexedDB.open("MyTestDatabase", 3);
 
 open メソッドの第 2 引数は、データベースのバージョンです。データベースのバージョンは、データベースのスキーマ、すなわちデータベース内のオブジェクトストアとその構造を決定します。データベースが存在しない場合に `open` 操作でデータベースが作成されると、`onupgradeneeded` イベントが発生し、そのイベントハンドラーでデータベースのスキーマを作成することができます。データベースが存在する場合に従来より高いバージョン番号を指定すると、すぐに `onupgradeneeded` イベントが発生して、そのイベントハンドラーで更新されたスキーマを提供することができます。詳しくは、後ほど[データベースのバージョンの作成と更新](#データベースのバージョンの作成と更新)で説明します。また、 {{ domxref("IDBFactory.open") }} のリファレンスページもご覧ください。
 
-> **警告:** バージョン番号は `unsigned long long` 型の数値であり、とても大きい整数にすることができます。また浮動小数点数値は使用できず、使用した場合は `upgradeneeded` イベントが発生せず、もっとも近い小さな数値に変換されてトランザクションが始まるでしょう。よって、例えばバージョン番号として 2.4 を使用しないでください。
+> [!WARNING]
+> バージョン番号は `unsigned long long` 型の数値であり、とても大きい整数にすることができます。また浮動小数点数値は使用できず、使用した場合は `upgradeneeded` イベントが発生せず、もっとも近い小さな数値に変換されてトランザクションが始まるでしょう。よって、例えばバージョン番号として 2.4 を使用しないでください。
 > `const request = indexedDB.open("MyTestDatabase", 2.4); // 行ってはいけません。バージョンは 2 に丸められます`
 
 #### ハンドラーの生成
@@ -53,7 +54,7 @@ open メソッドの第 2 引数は、データベースのバージョンです
 
 ```js
 request.onerror = (event) => {
-  // request.errorCode に対して行うこと!
+  // request.error に対して行うこと!
 };
 request.onsuccess = (event) => {
   // request.result に対して行うこと!
@@ -62,9 +63,9 @@ request.onsuccess = (event) => {
 
 2 つの関数 `onsuccess()` と `onerror()` のどちらが呼び出されるのでしょう? すべてが成功すると成功イベント (すなわち `type` プロパティが `"success"` である DOM イベント) が、`request` を `target` として発生します。イベントが発生すると `request` の `onsuccess()` 関数が、success イベントを引数として呼び出されます。一方、何らかの問題がある場合はエラーイベント (すなわち `type` プロパティが `"error"` である DOM イベント) が `request` で発生します。これは、エラーイベントを引数として `onerror()` 関数を呼び出します。
 
-IndexedDB API は必要なエラー処理を最小限にするよう設計されていますので、多くのエラーイベントを見ることはないでしょう (少なくとも、API に慣れていなければ)。しかしデータベースを開く場合は、エラーイベントが発生する一般的な状況があります。もっとも多いであろう問題は、データベースを作成する許可をユーザーがウェブアプリに与えなかったことです。IndexedDB の主要な設計目標のひとつが、オフラインで使用するために大量のデータを保存できるようにすることです。(各ブラウザーでどれだけの量のストレージを持てるかについては、[ストレージの制限](/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#ストレージの制限)をご覧ください)
+IndexedDB API は必要なエラー処理を最小限にするよう設計されていますので、多くのエラーイベントを見ることはないでしょう (少なくとも、API に慣れていなければ)。しかしデータベースを開く場合は、エラーイベントが発生する一般的な状況があります。もっとも多いであろう問題は、データベースを作成する許可をユーザーがウェブアプリに与えなかったことです。IndexedDB の主要な設計目標のひとつが、オフラインで使用するために大量のデータを保存できるようにすることです。(各ブラウザーでどれだけの量のストレージを持てるかについては、[ブラウザーのストレージ制限と削除基準ページ内のどれだけのデータが格納できるか](/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#どれだけのデータが格納できるか)をご覧ください)
 
-広告ネットワークやコンピューターを汚染させる悪意のあるウェブサイトをブラウザーが許可したくないことは明らかですので、ブラウザーは ウェブアプリが初めてストレージ用に IndexedDB を開こうとしたときに、ユーザーへプロンプトを表示します。ユーザーはアクセスを許可または拒否できます。またブラウザーのプライバシーモードでの IndexedDB ストレージは、匿名のセッションを閉じるまでの間だけメモリー上に存在します (Firefox のプライベートブラウジングモードや Chrome のシークレットモードのことですが、2021 年 5 月現在の Firefox ではこれが[未実装です](https://bugzilla.mozilla.org/show_bug.cgi?id=781982)ので、Firefox のプライベートブラウジングでは IndexedDB をまったく使用できません)。
+広告ネットワークやコンピューターを汚染させる悪意のあるウェブサイトをブラウザーが許可したくないことは明らかですので、ブラウザーは ウェブアプリが初めてストレージ用に IndexedDB を開こうとしたときに、ユーザーへプロンプトを表示します。ユーザーはアクセスを許可または拒否できます。またブラウザーのプライバシーモードでの IndexedDB ストレージは、匿名のセッションを閉じるまでの間だけメモリー上に存在します。
 
 ユーザーがデータベース作成の要求を許可して、成功コールバックを実行する成功イベントを受け取ったと想定します。次は何を行うのでしょうか? 以下のリクエストは `indexedDB.open()` の呼び出しを伴って生成されており、`request.result` は `IDBDatabase` のインスタンスですので、以降のためにこれを保存したいことは確実です。よって、コードは以下のようになるでしょう。
 
@@ -89,7 +90,7 @@ request.onsuccess = (event) => {
 db.onerror = (event) => {
   // このデータベースのリクエストに対するすべてのエラー用の
   // 汎用エラーハンドラー!
-  console.error(`Database error: ${event.target.errorCode}`);
+  console.error(`Database error: ${event.target.error?.message}`);
 };
 ```
 
@@ -264,7 +265,8 @@ request.onupgradeneeded = (event) => {
 
 既存のオブジェクトストアからレコードを読み出すには、トランザクションで `readonly` モードまたは `readwrite` モードを使用できます。既存のオブジェクトストアに変更処理を行うには、トランザクションを `readwrite` モードにしなければなりません。このようなトランザクションは {{domxref("IDBDatabase.transaction")}} で開きます。このメソッドの引数は 2 つあり、`storeNames` (アクセスしたいオブジェクトストアの配列で定義されるスコープ) とトランザクションの `mode` (`readonly` または `readwrite`) です。またこのメソッドは、{{domxref("IDBTransaction.objectStore")}} メソッドを持つトランザクションオブジェクトを返します。`objectStore` メソッドは、オブジェクトストアにアクセスするために使用できます。デフォルトでは、モードを指定しなければ `readonly` モードでトランザクションを開きます。
 
-> **メモ:** Firefox 40 で、IndexedDB トランザクションはパフォーマンスを向上させるために、永続性の保証を緩和しました ([Firefox バグ 1112702](https://bugzil.la/1112702) を参照)。以前は `readwrite` モードのトランザクションで、すべてのデータをディスク上に反映したことが保証された場合に限り {{domxref("IDBTransaction.complete_event", "complete")}} 発生しました。Firefox 40 以降では OS がデータの書き込みを指示した時点で `complete` が発生しており、実際にはデータがディスク上に反映されていない可能性があります。これにより `complete` イベントをより早く発生させられますが、データをディスク上に反映する前に OS のクラッシュや電源断が発生するとトランザクション全体を失う危険性が若干あります。このような破壊的な事象はまれですので、ほとんどの利用者は心配する必要がないでしょう。何らかの理由 (例えば、後で再計算できない重要なデータを保存する) で永続性を保証しなければならない場合は、実験的 (非標準) な `readwriteflush` モード ({{domxref("IDBDatabase.transaction")}} を参照) を使用してトランザクションを生成すると、`complete` イベントを発生させる前にディスクへの反映を強制させることができます。
+> [!NOTE]
+> Firefox 40 で、IndexedDB トランザクションはパフォーマンスを向上させるために、永続性の保証を緩和しました ([Firefox バグ 1112702](https://bugzil.la/1112702) を参照)。以前は `readwrite` モードのトランザクションで、すべてのデータをディスク上に反映したことが保証された場合に限り {{domxref("IDBTransaction.complete_event", "complete")}} 発生しました。Firefox 40 以降では OS がデータの書き込みを指示した時点で `complete` が発生しており、実際にはデータがディスク上に反映されていない可能性があります。これにより `complete` イベントをより早く発生させられますが、データをディスク上に反映する前に OS のクラッシュや電源断が発生するとトランザクション全体を失う危険性が若干あります。このような破壊的な事象はまれですので、ほとんどの利用者は心配する必要がないでしょう。何らかの理由 (例えば、後で再計算できない重要なデータを保存する) で永続性を保証しなければならない場合は、実験的 (非標準) な `readwriteflush` モード ({{domxref("IDBDatabase.transaction")}} を参照) を使用してトランザクションを生成すると、`complete` イベントを発生させる前にディスクへの反映を強制させることができます。
 
 トランザクションで適切なスコープおよびモードを使用すると、データアクセスを高速化できます。ヒントを 2 つ紹介します。
 
@@ -392,7 +394,8 @@ request.onsuccess = (event) => {
 
 ここでは `objectStore` を作成して、ssn の値 (`444-44-4444`) で特定される顧客レコードの取り出しを要求しています。リクエストの結果を変数 (`data`) に代入して、そのオブジェクトの `age` プロパティを更新します。そして、顧客レコードを `objectStore` に書き戻して前の値を上書きする、第 2 のリクエスト (`requestUpdate`) を作成します。
 
-> **メモ:** このケースではデータベースから読み出すだけでなく書き込みも行いたいので、`readwrite` トランザクションを指定しました。
+> [!NOTE]
+> このケースではデータベースから読み出すだけでなく書き込みも行いたいので、`readwrite` トランザクションを指定しました。
 
 ### カーソルの使用
 
@@ -430,7 +433,8 @@ objectStore.openCursor().onsuccess = (event) => {
 };
 ```
 
-> **メモ:** それ以外に、このような処理を行うために `getAll()` (および `getAllKeys()`)。を使用することができます。以下のコードは、前出の例とまったく同じことを行います。
+> [!NOTE]
+> それ以外に、このような処理を行うために `getAll()` (および `getAllKeys()`)。を使用することができます。以下のコードは、前出の例とまったく同じことを行います。
 >
 > ```js
 > objectStore.getAll().onsuccess = (event) => {
@@ -477,7 +481,7 @@ index.openCursor().onsuccess = (event) => {
 index.openKeyCursor().onsuccess = (event) => {
   const cursor = event.target.result;
   if (cursor) {
-    // cursor.key は "Bill" のような名前、cursor.value は SSN です。
+    // cursor.key は "Bill" のような名前、cursor.primaryKey は SSN です。
     // 保存されたオブジェクトの他の部分を直接取得する方法はありません。
     console.log(`Name: ${cursor.key}, SSN: ${cursor.primaryKey}`);
     cursor.continue();
@@ -638,7 +642,8 @@ Mozilla は Firefox 43 以降に、IndexedDB のデータでロケールを意�
 
 また {{domxref("IDBIndex")}} には、ロケールが指定されているか、およびどのロケールが指定されているかを特定するために追加された新たなプロパティがあります。`locale` (指定されたロケール、または未指定であれば null を返します) と `isAutoLocale` (プラットフォームの既定のロケールを使用する自動ロケールでインデックスが作成されていれば `true`、そうでなければ `false` を返します) です。
 
-> **メモ:** 現在、この機能はフラグで隠されています。有効化して実験するには、about:config に移動して `dom.indexedDB.experimental` を有効化してください。
+> [!NOTE]
+> 現在、この機能はフラグで隠されています。有効化して実験するには、about:config に移動して `dom.indexedDB.experimental` を有効化してください。
 
 ## 包括的な IndexedDB の例
 
@@ -659,17 +664,17 @@ IndexedDB API を使用した完全な例があります。この例では、出
 
 ### チュートリアルとガイド
 
-- [Databinding UI Elements with IndexedDB (2012)](https://web.dev/indexeddb-uidatabinding/)
-- [IndexedDB — The Store in Your Browser](<https://docs.microsoft.com/previous-versions/msdn10/gg679063(v=msdn.10)>)
+- [Databinding UI Elements with IndexedDB (2012)](https://web.dev/articles/indexeddb-uidatabinding/)
+- [IndexedDB — The Store in Your Browser](<https://learn.microsoft.com/ja-jp/previous-versions/msdn10/gg679063(v=msdn.10)>)
 
 ### ライブラリー
 
 - [localForage](https://localforage.github.io/localForage/): クライアント側のデータストレージ向けに、シンプルな name:value 形式の構文を提供するポリフィルです。バックグラウンドで IndexedDB を使用しますが、IndexedDB をに対応していないブラウザーでは Web SQL （非推奨）や localStorage にフォールバックします。
 - [Dexie.js](https://dexie.org/): 優良でシンプルな構文により高速なコード開発を可能にする、IndexedDB のラッパーです。
 - [JsStore](https://jsstore.net/): SQL 風の構文による IndexedDB のラッパーです。
-- [MiniMongo](https://github.com/mWater/minimongo): クライアント側のインメモリーの mongodb で localstorage と server sync over http を元にしたもの。MiniMongo は MeteorJS で使われています。
-- [PouchDB](https://pouchdb.com): クライアント側のブラウザー内の CouchDB 実装で IndexedDB を使っています。
+- [MiniMongo](https://github.com/mWater/minimongo): クライアント側のインメモリーの Mongodb で localstorage と server sync over http を元にしたもの。MiniMongo は MeteorJS で使われています。
+- [PouchDB](https://pouchdb.com/): クライアント側のブラウザー内の CouchDB 実装で IndexedDB を使っています。
 - [IDB](https://github.com/jakearchibald/idb): IndexedDB API をほぼ反映した小さなライブラリーですが、使いやすさを大きく変える小さな改良が加えられています。
 - [idb-keyval](https://www.npmjs.com/package/idb-keyval): IndexedDB で実装された超シンプルで小さな (\~600B) プロミスベースのキーバリューストア
 - [$mol_db](https://github.com/hyoo-ru/mam_mol/tree/master/db): 小さな (\~1.3kB) TypeScript のファサードで、プロミスベースの API と自動マイグレーションを備えています。
-- [RxDB](https://rxdb.info/) IndexedDB の上に使用することができる NoSQL クライアントサイドデータベースです。インデックス、圧縮、レプリケーションに対応して います。また、 IndexedDB にクロスタブ機能やオブザーバー機能を追加しています。
+- [RxDB](https://rxdb.info/): IndexedDB の上に使用することができる NoSQL クライアントサイドデータベースです。インデックス、圧縮、レプリケーションに対応して います。また、 IndexedDB にクロスタブ機能やオブザーバー機能を追加しています。

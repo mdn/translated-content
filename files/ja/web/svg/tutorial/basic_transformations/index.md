@@ -2,8 +2,10 @@
 title: 基本的な座標変換
 slug: Web/SVG/Tutorial/Basic_Transformations
 l10n:
-  sourceCommit: b63ef3f9e01f3bd46009be8e722f7cb8ec0ecee4
+  sourceCommit: 50d5e7cdb972c64a8f02a34a229bbc5ed7305c24
 ---
+
+{{SVGRef}}
 
 {{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}
 
@@ -22,11 +24,11 @@ l10n:
 
 {{ EmbedLiveSample('Example', '', '100') }}
 
-以下の座標変換はすべて、要素の `transform` 属性をまとめたものです。座標変換はホワイトスペース文字区切りで連結することで、連鎖させることができます。
+以下の変形（座標変換）はすべて、要素の `transform` 属性をまとめたものです。座標変換はホワイトスペース文字区切りで連結することで、連鎖させることができます。
 
 ## 移動
 
-属性で属性の位置を決めることができますが、移動させなければならないことがあります。そのために、`translate()` 変換が用意されています。
+たとえ属性で位置指定できても、要素を移動させる必要があるかもしれません。そのために `translate()` 座標変換が用意されています。
 
 ```html
 <svg width="40" height="50" style="background-color:#bff;">
@@ -34,11 +36,11 @@ l10n:
 </svg>
 ```
 
-この例では長方形を描画しますが、描画位置を (0, 0) ではなく (30, 40) に移します。
+この例では長方形を描画しますが、描画位置を (0,0) ではなく (30,40) に移します。
 
 {{ EmbedLiveSample('Translation', '', '100') }}
 
-2 番目の値が与えられない場合は、_0_ であるとみなします。
+2 番目の値が与えられなかった場合は、_0_ であるとみなします。
 
 ## 回転
 
@@ -71,21 +73,26 @@ l10n:
 
 この例では、前の例と同じく小さな正方形を表示していますが、同時に 45 度回転させています。
 
-## 傾斜
+## 歪め
 
-矩形からひし形を作るために、 `skewX()` と `skewY()` の変換が利用できます。それぞれ、要素をどの程度傾けるかを決める角度を受け取ります。
+矩形からひし形を作るために、 `skewX()` と `skewY()` の座標変換が利用できます。それぞれ、要素をどの程度傾けるかを決める角度を受け取ります。
 
-## 拡大縮小
+## 変倍
 
-`scale()` は、要素のサイズを変更します。これは 2 つの数値を受け取って、拡大または縮小の比率として用います。_0.5 は 50% への縮小を表します。2 番目の数値を省略した場合は、1 番目の値と同じであるとみなします。_
+`scale()` は、要素のサイズを変更します。これは 2 つの数値を受け取って、変倍の比率として用います。_0.5 は 50% への縮小を表します。2 番目の数値を省略した場合は、1 番目の値と同じであるとみなします。_
 
 ## `matrix()` を用いた複雑な座標変換
 
 以上の座標変換はすべて、 2x3 の変換行列で表現することができます。複数の変換を組み合わせるには、結果として得られる行列を `matrix(a, b, c, d, e, f)` 変換で直接設定します。この変換は、以前の座標系から新しい座標系への座標の割り当てを，次のようにして行います。
 
-<math display="block"><semantics><mrow><mo>{</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub><mo>=</mo><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>e</mi></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub><mo>=</mo><mi>b</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>f</mi></mtd></mtr></mtable></mrow><annotation encoding="TeX">\left\{ \begin{matrix} x\_{\mathrm{prevCoordSys}} = a x\_{\mathrm{newCoordSys}} + c y\_{\mathrm{newCoordSys}} + e \\ y\_{\mathrm{prevCoordSys}} = b x\_{\mathrm{newCoordSys}} + d y\_{\mathrm{newCoordSys}} + f \end{matrix} \right.</annotation></semantics></math>
+<!-- Note: the {} need to be double-escaped, once for Yari -->
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mo>{</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub><mo>=</mo><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>e</mi></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub><mo>=</mo><mi>b</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>f</mi></mtd></mtr></mtable></mrow><annotation encoding="TeX">\left\\{ \begin{matrix} x_{\mathrm{prevCoordSys}} = a x_{\mathrm{newCoordSys}} + c y_{\mathrm{newCoordSys}} + e \\ y_{\mathrm{prevCoordSys}} = b x_{\mathrm{newCoordSys}} + d y_{\mathrm{newCoordSys}} + f \end{matrix} \right.</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-[SVG の transform のドキュメントにおける具体例](/ja/docs/Web/SVG/Attribute/transform#general_transformation)を参照してください。このプロパティに関する詳細情報は、[SVG 勧告](https://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined)で得ることができます。
+[SVG 座標変換のドキュメントにおける具体例](/ja/docs/Web/SVG/Attribute/transform#行列)を参照してください。このプロパティに関する詳細情報は、[SVG 勧告](https://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined)で得ることができます。
 
 ## 座標系に与える効果
 

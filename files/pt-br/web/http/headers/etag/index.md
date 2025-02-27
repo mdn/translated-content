@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/ETag
 
 {{HTTPSidebar}}
 
-O HTTP provê no cabeçalho (header) da resposta (response), a **`ETag`** que é um identificador para uma versão específica de um recurso. A ETag permite que o cache torne-se mais eficiente e preserve o tráfego de dados (largura de banda), assim um web server não precisa reenviar uma resposta com todos os dados que não tiveram nenhuma mudança em seu conteúdo. Além disso, as ETags ajudam a impedir que atualizações simultâneas de um recurso sejam feitas por outros. Veja sobre (["mid-air collisions"](#Caching_of_unchanged_resources)).
+O HTTP provê no cabeçalho (header) da resposta (response), a **`ETag`** que é um identificador para uma versão específica de um recurso. A ETag permite que o cache torne-se mais eficiente e preserve o tráfego de dados (largura de banda), assim um web server não precisa reenviar uma resposta com todos os dados que não tiveram nenhuma mudança em seu conteúdo. Além disso, as ETags ajudam a impedir que atualizações simultâneas de um recurso sejam feitas por outros. Veja sobre (["mid-air collisions"](#caching_of_unchanged_resources)).
 
 Se o recurso numa URL sofre mudança, a `Etag` assume um novo valor que deve ser gerado pelo Web Server. Uma comparação entre elas podem determinar se as duas representações do recurso são iguais. Etags são similares às nossas impressões digitais, e por isso também podem ser usadas por alguns servidores como um forma de rastreamento. Elas podem ser configuradas a fim de que possam ser persistidas idenfinidamente por um servidor de rastreamento.
 
@@ -79,7 +79,7 @@ O servidor irá comparar a `ETag` do cliente (enviada com `If-None-Match`) com a
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.ETag")}}
+{{Compat}}
 
 ## Veja também
 

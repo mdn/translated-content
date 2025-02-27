@@ -17,7 +17,8 @@ Les [fonctions génératrices](/fr/docs/Web/JavaScript/Reference/Statements/func
 
 Tous les arguments passés à la fonction sont traités comme les noms des identifiants des paramètres de la fonction à créer, dans l'ordre dans lequel ils sont passés.
 
-> **Note :** Les [fonctions génératrices](/fr/docs/Web/JavaScript/Reference/Statements/function*) créées avec un constructeur ne créent pas de fermetures avec leur contexte de création. Elles sont toujours créées dans la portée globale.
+> [!NOTE]
+> Les [fonctions génératrices](/fr/docs/Web/JavaScript/Reference/Statements/function*) créées avec un constructeur ne créent pas de fermetures avec leur contexte de création. Elles sont toujours créées dans la portée globale.
 >
 > Lors de leur exécution, elles ne pourront accéder qu'à leurs variables locales et aux variables globales, pas à celles de la portée dans laquelle le constructeur a été appelé.
 >

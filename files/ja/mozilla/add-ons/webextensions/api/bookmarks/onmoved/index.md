@@ -3,9 +3,9 @@ title: bookmarks.onMoved
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onMoved
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-ブックマークやフォルダが、異なる親フォルダやフォルダ内の別の場所へ移された際に発火します。
+ブックマークやフォルダーが、異なる親フォルダーやフォルダー内の別の場所へ移された際に発火します。
 
 ## 構文
 
@@ -48,19 +48,19 @@ browser.bookmarks.onMoved.hasListener(listener)
 ### moveInfo
 
 - `parentId`
-  - : 新しい親フォルダを表す {{jsxref("string")}}
+  - : 新しい親フォルダーを表す {{jsxref("string")}}
 - `index`
   - : この要素が親から見て何番目にあるかを表す整数
 - `oldParentId`
-  - : 移動前の親フォルダを表す {{jsxref("string")}}
+  - : 移動前の親フォルダーを表す {{jsxref("string")}}
 - `oldIndex`
   - : `移動前において、`この要素が親から見て何番目にあったかを表す整数
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.onMoved")}}
+{{Compat}}
 
-## Examples
+## 例
 
 ```js
 function handleMoved(id, moveInfo) {
@@ -80,7 +80,8 @@ chrome.browserAction.onClicked.addListener(handleClick);
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge compatibility の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> [!NOTE]
+> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge compatibility の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

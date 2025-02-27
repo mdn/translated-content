@@ -3,17 +3,19 @@ title: s
 slug: Web/HTML/Element/s
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - Muestra el texto tachado con una linea horizontal.
 
   - : **Sus etiquetas son**: \<s> y \</s> (Ambas obligatorias)
 
-    **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
+    **Crea una caja**: [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea).
 
-    **Está definido como**:[Elemento de estilo de fuente](/es/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente).
+    **Está definido como**:[Elemento de estilo de fuente](/es/docs/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente).
 
-    **Puede contener**: cero o más elementos [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **Puede contener**: cero o más elementos [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 #### Atributos
 
@@ -105,4 +107,5 @@ slug: Web/HTML/Element/s
 
 ### Comentarios
 
-> **Advertencia:** DESAPROBADO
+> [!WARNING]
+> DESAPROBADO

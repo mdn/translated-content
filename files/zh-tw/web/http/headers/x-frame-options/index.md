@@ -9,7 +9,8 @@ slug: Web/HTTP/Headers/X-Frame-Options
 
 僅當訪問文件的用戶使用支持 `X-Frame-Options` 的瀏覽器時，才提供附加的安全性。
 
-> **備註：** 在支援的瀏覽器中，{{HTTPHeader("Content-Security-Policy")}} 的 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} 指令標準已經[取代](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options)了非標準的 `X-Frame-Options`。
+> [!NOTE]
+> 在支援的瀏覽器中，{{HTTPHeader("Content-Security-Policy")}} 的 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} 指令標準已經[取代](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options)了非標準的 `X-Frame-Options`。
 
 ## 使用 X-Frame-Options
 
@@ -64,7 +65,8 @@ add_header X-Frame-Options SAMEORIGIN;
 rspadd X-Frame-Options:\ SAMEORIGIN
 ```
 
-> **備註：** 設定 Meta tag 是無效的，像是 \<meta http-equiv="X-Frame-Options" content="deny"> 便沒有任何效果，只有透過設定 HTTP header 才有效果，請勿採用。
+> [!NOTE]
+> 設定 Meta tag 是無效的，像是 \<meta http-equiv="X-Frame-Options" content="deny"> 便沒有任何效果，只有透過設定 HTTP header 才有效果，請勿採用。
 
 ## 規範
 
@@ -78,5 +80,5 @@ rspadd X-Frame-Options:\ SAMEORIGIN
 
 - {{HTTPHeader("Content-Security-Policy")}} 的 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} 指令
 - [HTTP Header Field X-Frame-Options - RFC 7034](https://datatracker.ietf.org/doc/html/rfc7034)
-- [ClickJacking Defenses - IEBlog](https://docs.microsoft.com/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses)
-- [Combating ClickJacking with X-Frame-Options - IEInternals](https://docs.microsoft.com/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options)
+- [ClickJacking Defenses - IEBlog](https://learn.microsoft.com/zh-tw/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses)
+- [Combating ClickJacking with X-Frame-Options - IEInternals](https://learn.microsoft.com/zh-tw/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options)

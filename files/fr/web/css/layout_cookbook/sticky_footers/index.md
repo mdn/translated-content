@@ -22,7 +22,8 @@ Voici les spécifications rapides pour décrire le résultat qu'on souhaite obte
 
 > **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/sticky-footer--download.html)
 
-> **Note :** Dans cet exemple, ainsi que dans le suivant, on utilise un élément enveloppant avec `min-height: 100%` afin que l'exemple intégré à la page fonctionne. Pour reproduire cela sur une page complète, on peut utiliser {{cssxref("min-height")}} avec la valeur `100vh` sur l'élément {{htmlelement("body")}} qu'on utilise comme conteneur de grille.
+> [!NOTE]
+> Dans cet exemple, ainsi que dans le suivant, on utilise un élément enveloppant avec `min-height: 100%` afin que l'exemple intégré à la page fonctionne. Pour reproduire cela sur une page complète, on peut utiliser {{cssxref("min-height")}} avec la valeur `100vh` sur l'élément {{htmlelement("body")}} qu'on utilise comme conteneur de grille.
 
 ## Choix effectués
 
@@ -44,4 +45,4 @@ On commence de la même façon mais on utilise `display:flex` plutôt que `displ
 
 ## Voir aussi
 
-- [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)

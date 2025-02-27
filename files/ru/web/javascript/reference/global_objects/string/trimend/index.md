@@ -3,7 +3,7 @@ title: String.prototype.trimRight()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 ---
 
-{{JSRef("Global_Objects", "String")}} {{non-standard_header}}
+{{JSRef}}
 
 ## Сводка
 

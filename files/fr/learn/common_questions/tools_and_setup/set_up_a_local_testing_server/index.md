@@ -3,6 +3,8 @@ title: Comment configurer un serveur de test local ?
 slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Cet article explique comment configurer un serveur de test local simple sur votre machine, et les bases pour l'utiliser.
 
 <table class="standard-table">
@@ -82,12 +84,13 @@ Voilà la marche à suivre :
 
 5. Par défaut, il affiche la liste des fichiers du dossier sur un serveur de développement, sur le port 8000. Vous pouvez aller à ce serveur en saisissant l'URL `localhost:8000` dans votre navigateur web. Vous verrez le listing du dossier dans lequel le serveur tourne — cliquer le fichier HTML que vous voulez exécuter.
 
-> **Note :** Si le port 8000 est occupé, vous pouvez choisir un autre port en spécifiant une autre valeur après la commande par exemple `python -m http.server 7800` (Python 3.x) ou `python -m SimpleHTTPServer 7800` (Python 2.x). Vous pouvez maintenant accéder à votre contenu à l'adresse `localhost:7800`.
+> [!NOTE]
+> Si le port 8000 est occupé, vous pouvez choisir un autre port en spécifiant une autre valeur après la commande par exemple `python -m http.server 7800` (Python 3.x) ou `python -m SimpleHTTPServer 7800` (Python 2.x). Vous pouvez maintenant accéder à votre contenu à l'adresse `localhost:7800`.
 
 ## Faire fonctionner localement des langages serveur
 
 Le module `SimpleHTTPServer` de Python est utile, mais il ne sait pas comment exécuter du code écrit dans des langages comme PHP ou Python. Pour gérer ça, vous aurez besoin de quelque chose en plus — ce dont vous aurez besoin exactement dépend du language serveur que vous essayez d'exécuter. Voici quelques exemples :
 
-- Pour exécuter du code Python coté-serveur, vous aurez besoin d'utiliser un framework web Python. Vous pouvez découvrir comment utiliser le framework Django en lisant [Django Web Framework (Python)](/fr/docs/Learn/Server-side/Django). [Flask](http://flask.pocoo.org/) est une alternative à Django, un peu plus légère. Pour l'exécuter, vous aurez besoin d'[installer Python/PIP](/fr/docs/Learn/Server-side/Django/development_environment#Installing_Python_3), puis Flask en utilisant `pip3 install flask`. À ce point, vous devriez être capable d'exécuter les exemples Python Flask en utilisant par exemple `python3 python-example.py`, puis consulter `localhost:5000` dans votre navigateur.
+- Pour exécuter du code Python coté-serveur, vous aurez besoin d'utiliser un framework web Python. Vous pouvez découvrir comment utiliser le framework Django en lisant [Django Web Framework (Python)](/fr/docs/Learn/Server-side/Django). [Flask](http://flask.pocoo.org/) est une alternative à Django, un peu plus légère. Pour l'exécuter, vous aurez besoin d'[installer Python/PIP](/fr/docs/Learn/Server-side/Django/development_environment#installing_python_3), puis Flask en utilisant `pip3 install flask`. À ce point, vous devriez être capable d'exécuter les exemples Python Flask en utilisant par exemple `python3 python-example.py`, puis consulter `localhost:5000` dans votre navigateur.
 - Pour exécuter du code Node.js (JavaScript) côté-serveur, vous aurez besoin d'utiliser un noeud brut ou un framework construit par dessus ce dernier. Express est un bon choix — voir [Express Web Framework (Node.js/JavaScript)](/fr/docs/Learn/Server-side/Express_Nodejs).
 - Pour exécuter du code PHP côté serveur, vous aurez besoin d'une configuration serveur qui peut interpréter PHP. De bonnes options pour tester PHP localement sont [MAMP](https://www.mamp.info/en/downloads/) (Mac and Windows) , [AMPPS](http://ampps.com/download) (Mac, Windows, Linux) and [LAMP](https://www.linux.com/learn/easy-lamp-server-installation) (Linux, Apache, MySQL, et PHP/Python/Perl). Ce sont des paquets complets qui créent des configurations locales vous permettant d'exécuter un serveur Apache, PHP et des bases de données MySQL.

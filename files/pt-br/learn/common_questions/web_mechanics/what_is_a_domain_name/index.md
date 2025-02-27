@@ -41,7 +41,7 @@ Qualquer computador conectado na Internet pode ser alcançado através de um end
 
 ## Active Learning
 
-_There is no active learning available yet. [Please, consider contributing](/pt-BR/docs/MDN/Getting_started)._
+_There is no active learning available yet. [Please, consider contributing](/pt-BR/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Deeper dive
 
@@ -120,7 +120,8 @@ O processo é bastante simples:
 3. Preencher o formulário com todos os detalhes requeridos. Certifique-se especialmente de que você não digitou incorretamente o domain name desejado. Uma vez pago, é tarde demais!
 4. O registrador informará quando o domain name estiver registrado corretamente. Dentro de algumas horas, todos os servidores de DNS receberão suas informações de DNS.
 
-> **Nota:** Este tempo é frequentemente chamado de **tempo de propagação.** No entanto, este termo não é preciso, pois a atualização não está se propagando (top → down). Os servidores DNS consultados pelo seu computador (abaixo) são aqueles que buscam as informações do servidor autoritativo (superior) quando precisam.
+> [!NOTE]
+> Este tempo é frequentemente chamado de **tempo de propagação.** No entanto, este termo não é preciso, pois a atualização não está se propagando (top → down). Os servidores DNS consultados pelo seu computador (abaixo) são aqueles que buscam as informações do servidor autoritativo (superior) quando precisam.
 
 #### Atualização de DNS
 
@@ -143,7 +144,7 @@ Como já vimos, quando você deseja exibir uma página da Web em seu navegador, 
 
 Ok, conversamos muito sobre processos e arquitetura. Hora de seguir em frente.
 
-- Se você quer se envolver, é um bom momento para começar a investigar o design e explorar a [anatomia de uma página da web.](/en-US/Learn/Anatomy_of_a_web_page)
-- É importante notar também que alguns aspectos da construção de um site custam dinheiro. Por favor, [consulte quanto custa construir um site](/pt-BR/docs/Learn/How_much_does_it_cost).
+- Se você quer se envolver, é um bom momento para começar a investigar o design e explorar a [anatomia de uma página da web.](/pt-BR/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts)
+- É importante notar também que alguns aspectos da construção de um site custam dinheiro. Por favor, [consulte quanto custa construir um site](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost).
 - Ou leia mais sobre o [nome de domínio](http://en.wikipedia.org/wiki/Domain_name) na Wikipedia.
 - Você também pode encontrar [aqui](https://howdns.works/) uma explicação divertida e colorida de como o DNS funciona.

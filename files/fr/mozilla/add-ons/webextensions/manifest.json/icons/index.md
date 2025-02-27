@@ -69,7 +69,8 @@ Vous pouvez utiliser SVG et le navigateur mettra à l'échelle appropriée votre
    }
    ```
 
-> **Note :** si vous utilisez un programme comme Inkscape pour créer un SVG, vous voudrez peut-être l'enregistrer en tant que "SVG simple". Firefox peut être gêné par des espaces de noms spéciaux, et ne pas afficher votre icône.
+> [!NOTE]
+> Si vous utilisez un programme comme Inkscape pour créer un SVG, vous voudrez peut-être l'enregistrer en tant que "SVG simple". Firefox peut être gêné par des espaces de noms spéciaux, et ne pas afficher votre icône.
 
 ## Compatibilité des navigateurs
 

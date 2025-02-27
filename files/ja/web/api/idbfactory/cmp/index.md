@@ -1,17 +1,17 @@
 ---
-title: IDBFactory.cmp()
+title: "IDBFactory: cmp() メソッド"
+short-title: cmp()
 slug: Web/API/IDBFactory/cmp
 l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+  sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 **`cmp()`** は {{domxref("IDBFactory")}} インターフェイスのメソッドで、格納や反復処理などの IndexedDB 処理において、2 つの値をキーとして比較し、等しさや順序を決定します。
 
-{{AvailableInWorkers}}
-
-> **メモ:** このメソッドを任意の JavaScript における値の比較に使用してはいけません。なぜなら、JavaScript の値の多くは IndexedDB の有効なキーではない（例えば、boolean や object）か、IndexedDB で等価なキーとして扱われるためです（例えば、IndexedDB は数値以外のプロパティを持つ配列を無視して空の配列として扱うため、数値でない配列は全て等価として扱われます）。このメソッドは、値のうちいずれかが有効なキーでないとき、例外を投げます。
+> [!NOTE]
+> このメソッドを任意の JavaScript における値の比較に使用してはいけません。なぜなら、JavaScript の値の多くは IndexedDB の有効なキーではない（例えば、論理値やオブジェクト）か、IndexedDB で等価なキーとして扱われるためです（例えば、IndexedDB は数値以外のプロパティを持つ配列を無視して空の配列として扱うため、数値でない配列は全て等価として扱われます）。このメソッドは、値のうちいずれかが有効なキーでないとき、例外を投げます。
 
 ## 構文
 

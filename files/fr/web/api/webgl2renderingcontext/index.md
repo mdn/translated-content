@@ -14,7 +14,8 @@ var canevas = document.getElementById("monCanevas");
 var gl = canevas.getContext("webgl2");
 ```
 
-> **Note :** WebGL 2 est une extension de WebGL 1. L'interface `WebGL2RenderingContext` implémente tous les membres de l'interface {{domxref("WebGLRenderingContext")}}. Certaines méthodes du contexte WebGL 1 peuvent accepter des valeurs supplémentaires lorsqu'elles sont utilisées dans un contexte WebGL 2. Vous trouverez cette information sur les pages de référence WebGL 1.
+> [!NOTE]
+> WebGL 2 est une extension de WebGL 1. L'interface `WebGL2RenderingContext` implémente tous les membres de l'interface {{domxref("WebGLRenderingContext")}}. Certaines méthodes du contexte WebGL 1 peuvent accepter des valeurs supplémentaires lorsqu'elles sont utilisées dans un contexte WebGL 2. Vous trouverez cette information sur les pages de référence WebGL 1.
 
 Le [didacticiel WebGL](/fr/docs/Web/API/WebGL_API/Tutorial) contient plus d'informations, d'exemples et de ressources sur la façon de démarrer avec WebGL.
 

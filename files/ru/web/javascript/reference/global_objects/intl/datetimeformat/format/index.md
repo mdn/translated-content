@@ -3,7 +3,7 @@ title: Intl.DateTimeFormat.prototype.format
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
 ---
 
-{{JSRef("Global_Objects", "DateTimeFormat", "Intl,Collator,NumberFormat")}}
+{{JSRef}}
 
 ## Сводка
 

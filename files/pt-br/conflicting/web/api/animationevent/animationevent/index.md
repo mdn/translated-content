@@ -11,7 +11,8 @@ O **`AnimationEvent.initAnimationEvent()`** é um método iniciado com o evento 
 
 `AnimationEvent` criado desse modo não é confiável.
 
-> **Nota:** Durante o processo de padronização, esse método foi removido das especificações. É que ele foi depreciado e esse processo foi removido da maioria das implementações . **Não use este método**; ao invés, use o construtor padrão, {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}}, para criar um sintético {{domxref("AnimationEvent")}}.
+> [!NOTE]
+> Durante o processo de padronização, esse método foi removido das especificações. É que ele foi depreciado e esse processo foi removido da maioria das implementações . **Não use este método**; ao invés, use o construtor padrão, {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}}, para criar um sintético {{domxref("AnimationEvent")}}.
 
 ## Syntax
 
@@ -46,10 +47,10 @@ animationEvent.initAnimationEvent(typeArg, canBubbleArg, cancelableArg, animatio
 
 ## Compatibilidade com navegadores
 
-{{Compat()}}
+{{Compat}}
 
 ## See also
 
-- [Using CSS animations](/pt-BR/docs/CSS/Using_CSS_animations)
+- [Using CSS animations](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - Animation-related CSS properties and at-rules: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
 - The {{domxref("AnimationEvent")}} interface it belongs to.

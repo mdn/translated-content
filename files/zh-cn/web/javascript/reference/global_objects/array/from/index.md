@@ -9,7 +9,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/from
 
 转换[异步的可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)对象到数组，可以使用 {{jsxref("Array.fromAsync()")}}。
 
-{{EmbedInteractiveExample("pages/js/array-from.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.from()", "shorter")}}
+
+```js interactive-example
+console.log(Array.from("foo"));
+// Expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], (x) => x + x));
+// Expected output: Array [2, 4, 6]
+```
 
 ## 语法
 
@@ -47,7 +55,8 @@ Array.from(arrayLike, mapFn, thisArg)
 
 `Array.from()` 有一个可选的参数 `mapFn`，该参数允许你在创建数组时为每个元素执行一个函数，类似于 {{jsxref("Array.prototype.map()", "map()")}}。更明确地说，`Array.from(obj, mapFn, thisArg)` 和 `Array.from(obj).map(mapFn, thisArg)` 具有相同的结果，只是它不会创建中间数组，并且 `mapFn` 仅接受两个参数（`element`、`index`），不接受数组，因为数组仍然在构建中。
 
-> **备注：** 此行为对于[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)更为重要，因为中间数组的值必须被截断，以适应相应的类型。`Array.from()` 的实现与 {{jsxref("TypedArray.from()")}} 具有相同的签名。
+> [!NOTE]
+> 此行为对于[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)更为重要，因为中间数组的值必须被截断，以适应相应的类型。`Array.from()` 的实现与 {{jsxref("TypedArray.from()")}} 具有相同的签名。
 
 `Array.from()` 方法是一个通用的工厂方法。例如，如果一个数组类的子类继承 `from()` 方法，继承的 `from()` 方法将返回新的子类的实例，而不是数组的实例。事实上，`this` 值可以是任意的构造函数，只要该构造函数接受一个表示新数组长度的单个参数。当一个迭代器对象作为类数组传递时，不带参数调用构造函数；当传递类数组对象时，将携带类数组对象的[规范化长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#长度属性的规范化)调用构造函数。迭代完成时，将再次设置最终的 `length`。如果 `this` 值并不是构造函数，则使用 `Array` 构造函数。
 
@@ -180,7 +189,7 @@ console.log(Array.from.call({}, { length: 1, 0: "foo" })); // [ 'foo' ]
 ## 参见
 
 - [`core-js` 中的 `Array.from` Polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array/Array", "Array()")}}
 - {{jsxref("Array.of()")}}

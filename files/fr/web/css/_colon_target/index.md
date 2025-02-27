@@ -1,5 +1,5 @@
 ---
-title: ":target"
+title: :target
 slug: Web/CSS/:target
 ---
 
@@ -27,7 +27,8 @@ L'élément suivant sera donc ciblé par le sélecteur `:target` avec l'URL pré
 <section id="section2">Exemple</section>
 ```
 
-> **Note :** L'attribut `id` a été ajouté avec HTML 4 (décembre 1997). Dans les anciennes versions de HTML, `<a>` était nécessairement l'élément cible. La pseudo-classe `:target` permet également de gérer ces cibles.
+> [!NOTE]
+> L'attribut `id` a été ajouté avec HTML 4 (décembre 1997). Dans les anciennes versions de HTML, `<a>` était nécessairement l'élément cible. La pseudo-classe `:target` permet également de gérer ces cibles.
 
 ## Syntaxe
 

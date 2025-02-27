@@ -5,11 +5,25 @@ slug: Web/JavaScript/Reference/Global_Objects/undefined
 
 {{jsSidebar("Objects")}}
 
-La propriété globale **`undefined`** représente la valeur primitive [`undefined`](/fr/docs/Glossary/undefined). Cette valeur est l'[un des types primitifs](/fr/docs/Web/JavaScript/Data_structures#le_type_indéfini) de JavaScript.
+La propriété globale **`undefined`** représente la valeur primitive [`undefined`](/fr/docs/Glossary/Undefined). Cette valeur est l'[un des types primitifs](/fr/docs/Web/JavaScript/Data_structures#le_type_indéfini) de JavaScript.
 
 {{js_property_attributes(0,0,0)}}
 
-{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - undefined")}}
+
+```js interactive-example
+function test(t) {
+  if (t === undefined) {
+    return "Undefined value!";
+  }
+  return t;
+}
+
+let x;
+
+console.log(test(x));
+// Expected output: "Undefined value!"
+```
 
 ## Syntaxe
 
@@ -19,13 +33,14 @@ undefined;
 
 ## Description
 
-`undefined` est une propriété de _l'objet global_, c'est-à-dire qu'elle est accessible globalement. La valeur initiale d'`undefined` est la valeur primitive [`undefined`](/fr/docs/Glossary/undefined).
+`undefined` est une propriété de _l'objet global_, c'est-à-dire qu'elle est accessible globalement. La valeur initiale d'`undefined` est la valeur primitive [`undefined`](/fr/docs/Glossary/Undefined).
 
 Dans les navigateurs modernes (JavaScript 1.8.5 / Firefox 4+), d'après la spécification ECMAScript 5, `undefined` est une propriété non-configurable et non accessible en écriture. Si, toutefois, elle peut être modifiée dans l'environnement utilisé, il faut éviter de l'écraser.
 
 Une variable pour laquelle aucune valeur n'a été assignée sera de type `undefined`. Une méthode ou instruction renvoie également `undefined` si la variable à évaluer n'a pas de valeur assignée. Une fonction renvoie `undefined` si aucune valeur n'a été [renvoyée](/fr/docs/Web/JavaScript/Reference/Statements/return).
 
-> **Attention :** Puisque `undefined` n'est pas un [mot réservé du langage JavaScript](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#mots-clés), il peut être utilisé comme [identifiant](/fr/docs/Glossary/Identifier) (nom de variable) dans toute portée autre que la portée globale. Ceci est une très mauvaise idée pour la lisibilité du code et sa maintenabilité.
+> [!WARNING]
+> Puisque `undefined` n'est pas un [mot réservé du langage JavaScript](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#mots-clés), il peut être utilisé comme [identifiant](/fr/docs/Glossary/Identifier) (nom de variable) dans toute portée autre que la portée globale. Ceci est une très mauvaise idée pour la lisibilité du code et sa maintenabilité.
 >
 > ```js example-bad
 > // À NE PAS FAIRE
@@ -57,7 +72,8 @@ if (x === undefined) {
 }
 ```
 
-> **Note :** L'opérateur d'égalité stricte doit être utilisé ici plutôt que l'opérateur _d'égalité simple_. En effet, `x == undefined` vérifie également si `x` vaut `null`, tandis que l'égalité stricte ne le fait pas. `null` n'est pas équivalent à `undefined`.
+> [!NOTE]
+> L'opérateur d'égalité stricte doit être utilisé ici plutôt que l'opérateur _d'égalité simple_. En effet, `x == undefined` vérifie également si `x` vaut `null`, tandis que l'égalité stricte ne le fait pas. `null` n'est pas équivalent à `undefined`.
 >
 > Voir la page sur les [opérateurs de comparaison](/fr/docs/Web/JavaScript/Reference/Operators) pour plus de détails.
 
@@ -124,4 +140,4 @@ if (y === void 0) {
 ## Voir aussi
 
 - Les [valeurs primitives](/fr/docs/Glossary/Primitive) de JavaScript
-- [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null)
+- [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null)

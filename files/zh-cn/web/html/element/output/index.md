@@ -18,8 +18,8 @@ slug: Web/HTML/Element/output
    <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语元素</a></td>
   </tr>
   <tr>
-   <th scope="row">省略标签</th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许父元素</th>
@@ -38,7 +38,7 @@ slug: Web/HTML/Element/output
 
 ## 属性
 
-这个标签具有 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
+这个标签具有 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `for`
   - : 其他影响计算结果的标签的 ID，可以多个。

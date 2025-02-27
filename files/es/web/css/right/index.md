@@ -11,12 +11,12 @@ La propiedad `right` especifica parte de la posición de un elemento (posicionad
 
 Para los elementos con una posición absoluta (aquellos que tienen la propiedad {{ Cssxref("position") }}`: absolute` ó `position: fixed`), la propiedad right determina la distancia entre el margen derecho del elemento y el borde derecho de su bloque contenedor.
 
-- {{ Xref_cssinitial() }}: {{ Cssxref("auto") }}
-- Se aplica a: [positioned elements](/es/CSS/position)
-- {{ Xref_cssinherited() }}: no
+- [Valor inicial](/es/docs/Web/CSS/initial_value): {{ Cssxref("auto") }}
+- Se aplica a: [positioned elements](/es/docs/Web/CSS/position)
+- [Heredable](/es/docs/Web/CSS/Inheritance): no
 - Porcentajes: se refiere al ancho del bloque contenedor.
-- Media: {{ Xref_cssvisual() }}
-- {{ Xref_csscomputed() }}: valor absoluto, porcentaje ó auto.
+- Media: {{cssxref("Media/Visual", "visual")}}
+- [Valor calculado](/es/docs/Web/CSS/computed_value): valor absoluto, porcentaje ó auto.
 
 ### Sintaxis
 
@@ -42,22 +42,13 @@ div {
 }
 ```
 
-### Notas
-
 ### Especificaciones
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/visuren.html#propdef-right)
-- [CSS 3](http://www.w3.org/Style/CSS/current-work#positioning)
+{{Specifications}}
 
-### Compatibilidad entre navegadores
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | ?              |
-| Firefox           | 1              |
-| Netscape          | ?              |
-| Opera             | ?              |
-| Safari            | ?              |
+{{Compat}}
 
 ### Ver también
 

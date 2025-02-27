@@ -1,5 +1,5 @@
 ---
-title: ":placeholder-shown"
+title: :placeholder-shown
 slug: Web/CSS/:placeholder-shown
 ---
 
@@ -132,4 +132,4 @@ input.studentid:placeholder-shown {
 
 - {{CSSxRef("::placeholder")}} 伪元素为占位符*自身*设置样式。
 - 相关的 HTML 元素：{{HTMLElement("input")}}、{{HTMLElement("textarea")}}
-- [HTML 表单](/zh-CN/docs/Learn/Forms)
+- [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)

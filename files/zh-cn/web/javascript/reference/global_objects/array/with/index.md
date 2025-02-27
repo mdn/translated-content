@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/with
 ## 语法
 
 ```js-nolint
-array.with(index, value)
+arrayInstance.with(index, value)
 ```
 
 ### 参数
@@ -33,7 +33,9 @@ array.with(index, value)
 
 ## 描述
 
-`with()` 通过返回一个指定索引处的值被新值替换的新数组，来改变数组中指定索引处的值。原数组不会被修改。这使得你可以以链式调用数组方法的方式来对数组进行操作。
+`with()` 通过返回一个指定索引处的值被新值替换的新数组，来改变数组中指定索引处的值。原数组不会被修改，这使得你可以以链式调用数组方法的方式来对数组进行操作。
+
+通过组合使用`with()` 和 {{jsxref("Array/at", "at()")}} 函数，可分别地写入和读取数组，索引使用正数负数均可。
 
 `with()` 方法永远不会产生[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)。如果原数组是稀疏的，新数组对应的空白索引位置会替换为 `undefined`。
 
@@ -69,7 +71,7 @@ console.log(arr.with(0, 2)); // [2, undefined, 3, 4, undefined, 6]
 
 ### 在非数组对象上调用 with()
 
-`with()` 方法会读取 `this` 上的 `length` 属性，之后读取 `this` 上的每个整数键并写入到新数组中，同时 `value` 会被写入指定的 `index`。
+`with()` 方法创建并返回一个新数组。它读取 `this` 的 `length` 属性，然后访问其键是小于 `length` 的非负整数的每个属性。当 `this` 的每个属性被访问后，索引等于该属性的键的数组元素被设置为该属性的值。最后，将 `index` 的数组值设置为 `value`。
 
 ```js
 const arrayLike = {
@@ -77,6 +79,7 @@ const arrayLike = {
   unrelated: "foo",
   0: 5,
   2: 4,
+  3: 3, // 由于 length 属性的值为 3，with() 会忽略该值
 };
 console.log(Array.prototype.with.call(arrayLike, 0, 1));
 // [ 1, undefined, 4 ]
@@ -93,7 +96,9 @@ console.log(Array.prototype.with.call(arrayLike, 0, 1));
 ## 参见
 
 - [`core-js` 中 `Array.prototype.with` 的 polyfill](https://github.com/zloirock/core-js#change-array-by-copy)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)指南
 - {{jsxref("Array.prototype.toReversed()")}}
 - {{jsxref("Array.prototype.toSorted()")}}
 - {{jsxref("Array.prototype.toSpliced()")}}
+- {{jsxref("Array.prototype.at()")}}
 - {{jsxref("TypedArray.prototype.with()")}}

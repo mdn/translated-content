@@ -1,6 +1,8 @@
 ---
 title: <display-outside>
 slug: Web/CSS/display-outside
+l10n:
+  sourceCommit: b9db4e51b6f1cddba3af708643fc9804849d61c2
 ---
 
 {{CSSRef}}
@@ -16,9 +18,15 @@ slug: Web/CSS/display-outside
 - `inline`
   - : 要素は自分自身の前後に改行を生成しない、一つ以上のインライン要素ボックスを生成します。通常フローでは、次の要素は空間があれば同じ行に来ます。
 
-> **メモ:** 二つの値の構文に対応しているブラウザーは、 `display: block` や `display: inline` などの外部表示種別のみが指定されていると、内部表示種別を `flow` に設定します。これで期待通りに動作します。例えば、ある要素を block になるよう指定した場合、その要素の子はブロックおよびインラインの通常フローレイアウトに加わることを期待するでしょう。
+> [!NOTE]
+> 2 つの値の構文に対応しているブラウザーは、**外部** `display` 値（`display: block` や `display: inline` など）のみが指定されていると、内部表示種別を `flow` に設定します（`display: block flow` や `display: inline flow` など）。
+> これは単一のキーワード構文との下位互換性があります。
 
-<h2 id="Examples">例</h2>
+## 形式文法
+
+{{csssyntax}}
+
+## 例
 
 以下の例では、 span 要素 (通常はインライン要素として表示) に `display: block` が設定されているので、改行が行われ、コンテナーのインライン方向を埋めるように拡張されます。
 
@@ -47,7 +55,7 @@ span {
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.display.display-outside", 10)}}
+{{Compat}}
 
 ## 関連情報
 
@@ -59,5 +67,5 @@ span {
   - {{CSSxRef("&lt;display-box&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [整形コンテキストの紹介](/ja/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
+- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
+- [整形コンテキストの紹介](/ja/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)

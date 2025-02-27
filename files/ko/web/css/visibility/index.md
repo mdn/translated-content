@@ -122,7 +122,7 @@ td {
 
 ## 접근성 고려사항
 
-`visibility` 값을 `hidden`으로 설정한 요소는 [접근성 트리](/ko/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs)에서 제외됩니다. 즉 해당 요소와, 그 모든 자손 요소는 스크린 리더가 읽지 않습니다.
+`visibility` 값을 `hidden`으로 설정한 요소는 [접근성 트리](/ko/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)에서 제외됩니다. 즉 해당 요소와, 그 모든 자손 요소는 스크린 리더가 읽지 않습니다.
 
 ## 참고
 

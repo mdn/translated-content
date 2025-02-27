@@ -38,7 +38,7 @@ var float32 = new Float32Array(2);
 float32[0] = 42;
 console.log(float32[0]); // 42
 console.log(float32.length); // 2
-console.log(float32.BYTES_PER_ELEMENT); // 8
+console.log(float32.BYTES_PER_ELEMENT); // 4
 
 // From an array
 var arr = new Float32Array([21, 31]);
@@ -67,7 +67,7 @@ var float32 = new Float32Array(iterable);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Float32Array.Float32Array")}}
+{{Compat}}
 
 ### 互換性ノート
 
@@ -85,6 +85,6 @@ var dv = new Float32Array([1, 2, 3]);
 
 ## 関連情報
 
-- [JavaScript typed arrays](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 
 {{jsxref("String")}} 的 **`codePointAt()`** 方法返回一个非负整数，该整数是从给定索引开始的字符的 Unicode 码位值。请注意，索引仍然基于 UTF-16 码元，而不是 Unicode 码位。
 
-{{EmbedInteractiveExample("pages/js/string-codepointat.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: String.codePointAt()", "shorter")}}
+
+```js interactive-example
+const icons = "☃★♲";
+
+console.log(icons.codePointAt(1));
+// Expected output: "9733"
+```
 
 ## 语法
 
@@ -66,7 +73,7 @@ for (let i = 0; i < str.length; i++) {
 // '1f40e'、'dc0e'、'1f471'、'dc71'、'2764'
 ```
 
-相反，可以使用 [`for...of`](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_语句) 语句或[字符串展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)，这两种方法都会调用字符串的 [`@@iterator`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)，从而按照码位进行迭代。然后，可以使用 `codePointAt(0)` 获取每个元素的码位值。
+相反，可以使用 [`for...of`](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_语句) 语句或[字符串展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)，这两种方法都会调用字符串的 [`[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)，从而按照码位进行迭代。然后，可以使用 `codePointAt(0)` 获取每个元素的码位值。
 
 ```js
 for (const codePoint of str) {

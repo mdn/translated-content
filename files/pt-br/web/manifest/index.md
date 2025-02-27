@@ -15,9 +15,11 @@ Manifesto de aplicativos web são implementados em suas páginas HTML usando uma
 <link rel="manifest" href="/manifest.webmanifest" />
 ```
 
-> **Nota:** A extensão `.webmanifest` está especificada na sessão de [Media type registration](https://w3c.github.io/manifest/#media-type-registration) da especificação, mas no geral os navegadores suportam manifestos em outras extensões apropriadas como `.json`
+> [!NOTE]
+> A extensão `.webmanifest` está especificada na sessão de [Media type registration](https://w3c.github.io/manifest/#media-type-registration) da especificação, mas no geral os navegadores suportam manifestos em outras extensões apropriadas como `.json`
 
-> **Nota:** Se o manifesto precisa de credenciais para ser buscado, você [deve](https://github.com/w3c/manifest/issues/186#issuecomment-43939505) adicionar o atributo [`crossorigin`](/pt-BR/docs/Web/HTML/CORS_settings_attributes) mesmo que o arquivo de manifesto esteja na mesma origem da página atual.
+> [!NOTE]
+> Se o manifesto precisa de credenciais para ser buscado, você [deve](https://github.com/w3c/manifest/issues/186#issuecomment-43939505) adicionar o atributo [`crossorigin`](/pt-BR/docs/Web/HTML/Attributes/crossorigin) mesmo que o arquivo de manifesto esteja na mesma origem da página atual.
 
 ## Exemplo de manifesto
 
@@ -87,7 +89,8 @@ Define a "cor de fundo" esperada para o website. Este valor repete o que já é 
 "background_color": "red"
 ```
 
-> **Nota:** O membro `background_color` tem o único intuito de melhorar a experiência de usuário enquanto o site apontado está carregando, e não deve ser usado pelo agente de usuário como o {{cssxref("background-color", "background color")}} quando a folha de estilo do aplicativo web progressivo (PWA) estiver disponível.
+> [!NOTE]
+> O membro `background_color` tem o único intuito de melhorar a experiência de usuário enquanto o site apontado está carregando, e não deve ser usado pelo agente de usuário como o {{cssxref("background-color", "background color")}} quando a folha de estilo do aplicativo web progressivo (PWA) estiver disponível.
 
 ### description
 
@@ -113,7 +116,8 @@ Pode ter um dos valores a seguir:
 - `rtl` (right-to-left)
 - `auto` (hints to the browser to use the Unicode bidirectional algorithm to make a best guess about the text's direction.)
 
-> **Nota:** When the value is omitted, it defaults to `auto`.
+> [!NOTE]
+> When the value is omitted, it defaults to `auto`.
 
 ### display
 
@@ -191,7 +195,8 @@ Valid values are:
   </tbody>
 </table>
 
-> **Nota:** You can selectively apply CSS to your app based on the display mode, using the [display-mode](/docs/Web/CSS/@media/display-mode) media feature. This can be used to provide a consistent user experience between launching a site from an URL and launching it from a desktop icon.
+> [!NOTE]
+> You can selectively apply CSS to your app based on the display mode, using the [display-mode](/pt-BR/docs/Web/CSS/@media/display-mode) media feature. This can be used to provide a consistent user experience between launching a site from an URL and launching it from a desktop icon.
 
 ### icons
 
@@ -270,7 +275,8 @@ Specifies a boolean value that hints for the user agent to indicate to the user 
 "prefer_related_applications": false
 ```
 
-> **Nota:** If omitted, the value defaults to `false`.
+> [!NOTE]
+> If omitted, the value defaults to `false`.
 
 ### related_applications
 
@@ -336,12 +342,6 @@ In Chrome 47 and later, a splash screen is displayed for a web application launc
 
 Manifests should be served using the `application/manifest+json` MIME type. However, it is optional to do so.
 
-## Especificação
-
-| Especificação            | Status                | Comentário         |
-| ------------------------ | --------------------- | ------------------ |
-| {{SpecName('Manifest')}} | {{Spec2('Manifest')}} | Definição inicial. |
-
 ## Compatibilidade com navegadores
 
-{{Compat("html.manifest")}}
+{{Compat}}

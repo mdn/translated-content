@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 
 **`copyWithin()`** 方法會對陣列的一部分進行淺拷貝至同一陣列的另一位置並回傳此陣列，而不修改其大小。
 
-{{EmbedInteractiveExample("pages/js/array-copywithin.html")}}
+{{InteractiveExample("JavaScript Demo: Array.copyWithin()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c", "d", "e"];
+
+// Copy to index 0 the element at index 3
+console.log(array1.copyWithin(0, 3, 4));
+// Expected output: Array ["d", "b", "c", "d", "e"]
+
+// Copy to index 1 all elements from index 3 to the end
+console.log(array1.copyWithin(1, 3));
+// Expected output: Array ["d", "d", "e", "d", "e"]
+```
 
 ## 語法
 
@@ -98,8 +110,8 @@ if (!Array.prototype.copyWithin) {
           positiveT
             ? [target, stop - start, hold]
             : positiveS
-            ? [target, stop, hold]
-            : [target, start, hold],
+              ? [target, stop, hold]
+              : [target, start, hold],
         ),
         this.join(delimiter).split(delimiter).slice(zero, length)
       );

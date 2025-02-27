@@ -21,7 +21,7 @@ HTML 提供了定义标题、段落、表格等等内容的元素。与此类似
 
 ## 开始之前
 
-包括 [Inkscape](http://www.inkscape.org/)在内的很多免费应用原生支持 SVG 格式的文件。但是本教程建议在学习过程中使用 XML 或文本编辑器，因为想要理解 SVG 内部的原理，最好的方法就是动手写一些 SVG 的标记。你需要注意到你的最终目标。各种 SVG 浏览器是有差异的，因此很可能你制作了一个 SVG 图形，并且用一个工具调试正常后，却在另外一个浏览器中无法正常显示。这是因为不同的浏览器支持 SVG 标准的程度不同，另外，如果你将其他技术和 SVG 一起使用（比如 [JavaScript](/zh-CN/JavaScript)和 [CSS](/zh-CN/CSS)），也会出现类似的情况。
+包括 [Inkscape](https://www.inkscape.org/)在内的很多免费应用原生支持 SVG 格式的文件。但是本教程建议在学习过程中使用 XML 或文本编辑器，因为想要理解 SVG 内部的原理，最好的方法就是动手写一些 SVG 的标记。你需要注意到你的最终目标。各种 SVG 浏览器是有差异的，因此很可能你制作了一个 SVG 图形，并且用一个工具调试正常后，却在另外一个浏览器中无法正常显示。这是因为不同的浏览器支持 SVG 标准的程度不同，另外，如果你将其他技术和 SVG 一起使用（比如 [JavaScript](/zh-CN/docs/Web/JavaScript)和 [CSS](/zh-CN/docs/Web/CSS)），也会出现类似的情况。
 
 所有的现代浏览器都支持 SVG，在某些情况下甚至几个版本都支持 SVG。[Can I use](https://caniuse.com/#feat=svg)上有一份比较详细的支持 SVG 的浏览器列表，Firefox 1.5 以后的版本支持 SVG 的部分内容，并且支持的程度越来越高。希望通过这份教程，MDN 能帮助开发者理解 Gecko 内核和其他一些主要编译器之间的差异。
 
@@ -30,7 +30,7 @@ HTML 提供了定义标题、段落、表格等等内容的元素。与此类似
 - SVG 的元素和属性必须按标准格式书写，因为 XML 是区分大小写的（这一点和 HTML 不同）
 - SVG 里的属性值必须用引号引起来，就算是数值也必须这样做。
 
-SVG 是一个庞大的规范，本教程主要涵盖基础内容。掌握了这些内容之后，你就有能力使用[元素参考](/zh-CN/docs/Web/SVG/Element)和[接口参考](/zh-CN/docs/Web/API/Document_Object_Model#SVG_接口)，学习其他你需要知道的内容。
+SVG 是一个庞大的规范，本教程主要涵盖基础内容。掌握了这些内容之后，你就有能力使用[元素参考](/zh-CN/docs/Web/SVG/Element)和[接口参考](/zh-CN/docs/Web/API/Document_Object_Model#svg_接口)，学习其他你需要知道的内容。
 
 ## SVG 的种类
 

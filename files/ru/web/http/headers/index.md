@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers
 
 **Заголовки HTTP** позволяют клиенту и серверу отправлять дополнительную информацию с HTTP запросом или ответом. В HTTP-заголовке содержится не чувствительное к регистру название, а затем после (`:`) непосредственно значение. [Пробелы](/ru/docs/Glossary/Whitespace) перед значением игнорируются.
 
-Пользовательские собственные заголовки исторически использовались с префиксом X, но это соглашение было объявлено устаревшим в июне 2012 года из-за неудобств, вызванных тем, что нестандартные поля стали стандартом в [RFC 6648](https://tools.ietf.org/html/rfc6648); другие перечислены в реестре [IANA](http://www.iana.org/assignments/message-headers/perm-headers.html), исходное содержимое которого было определено в [RFC 4229](http://tools.ietf.org/html/rfc4229). IANA также поддерживает [реестр предлагаемых новых заголовков HTTP](https://www.iana.org/assignments/message-headers/message-headers.xhtml).
+Пользовательские собственные заголовки исторически использовались с префиксом X, но это соглашение было объявлено устаревшим в июне 2012 года из-за неудобств, вызванных тем, что нестандартные поля стали стандартом в [RFC 6648](https://tools.ietf.org/html/rfc6648); другие перечислены в реестре [IANA](https://www.iana.org/assignments/message-headers/perm-headers.html), исходное содержимое которого было определено в [RFC 4229](https://tools.ietf.org/html/rfc4229). IANA также поддерживает [реестр предлагаемых новых заголовков HTTP](https://www.iana.org/assignments/message-headers/message-headers.xhtml).
 
-HTTP-заголовки сопровождают обмен данными по протоколу HTTP. Они могут содержать описание данных и информацию, необходимую для взаимодействия между клиентом и сервером. Заголовки и их статусы перечислены в [реестре IANA](http://www.iana.org/assignments/message-headers/perm-headers.html), который постоянно обновляется.
+HTTP-заголовки сопровождают обмен данными по протоколу HTTP. Они могут содержать описание данных и информацию, необходимую для взаимодействия между клиентом и сервером. Заголовки и их статусы перечислены в [реестре IANA](https://www.iana.org/assignments/message-headers/perm-headers.html), который постоянно обновляется.
 
 Заголовки могут быть сгруппированы по следующим контекстам:
 
@@ -96,26 +96,6 @@ HTTP-заголовки сопровождают обмен данными по 
         >
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a
-            href="/ru/docs/Web/HTTP/Content_negotiation#The_Accept-Charset.3a_header"
-            title="https://developer.mozilla.org/en/HTTP/Content_negotiation#The_Accept-Charset.3a_header"
-            >Accept-Charset</a
-          ></code
-        >
-      </td>
-      <td>Список кодировок, которые ожидает клиент.</td>
-      <td>
-        <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
-          title="ru/HTTP/Content negotiation"
-          >HTTP Content Negotiation</a
-        >
-      </td>
-      <td>HTTP/1.1</td>
     </tr>
     <tr>
       <td><code>Accept-Features</code></td>
@@ -552,20 +532,6 @@ HTTP-заголовки сопровождают обмен данными по 
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Content-MD5"
-            title="en/Content-MD5"
-            >Content-MD5</a
-          ></code
-        >
-      </td>
-      <td></td>
-      <td>{{ unimplemented_inline("232030") }}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a
             href="/ru/docs/Web/HTTP/Headers/Content-Range"
             title="en/Content-Range"
             >Content-Range</a
@@ -634,7 +600,7 @@ HTTP-заголовки сопровождают обмен данными по 
         Supported by Firefox 4, Firefox 5 for mobile, IE9, and a few major
         companies.
       </td>
-      <td>{{SpecName("Tracking")}}</td>
+      <td><a href="https://www.w3.org/TR/tracking-dnt/">Tracking Preference Expression (DNT)</a></td>
     </tr>
     <tr>
       <td>
@@ -789,32 +755,6 @@ HTTP-заголовки сопровождают обмен данными по 
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a
-            href="/ru/docs/Web/HTTP/Headers/Last-Event-ID"
-            title="en/Last-Event-ID"
-            >Last-Event-ID</a
-          ></code
-        >
-      </td>
-      <td>
-        Содержит идентификатор последнего события полученного клиентом от
-        сервера в предыдущем HTTP запросе. Используется для восстановления
-        синхронизации потока <code>text/event-stream</code>.
-      </td>
-      <td>
-        <a href="/ru/docs/Server-sent_events" title="en/Server-Sent Events"
-          >Server-Sent Events</a
-        >
-      </td>
-      <td>
-        <a class="external" href="http://dev.w3.org/html5/eventsource/"
-          >Server-Sent Events spec</a
-        >
-      </td>
     </tr>
     <tr>
       <td>
@@ -1405,7 +1345,8 @@ HTTP-заголовки сопровождают обмен данными по 
 
 ## Примечание
 
-> **Примечание:** The Keep-Alive request header is not sent by Gecko 5.0; previous versions did send it but it was not formatted correctly, so the decision was made to remove it for the time being. The {{ httpheader("Connection") }} or {{ httpheader("Proxy-Connection") }} header is still sent, however, with the value "keep-alive".
+> [!NOTE]
+> The Keep-Alive request header is not sent by Gecko 5.0; previous versions did send it but it was not formatted correctly, so the decision was made to remove it for the time being. The {{ httpheader("Connection") }} or {{ httpheader("Proxy-Connection") }} header is still sent, however, with the value "keep-alive".
 
 ## Смотрите также
 

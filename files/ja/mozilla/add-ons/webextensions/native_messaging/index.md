@@ -32,7 +32,7 @@ GitHub の "webextensions-examples" リポジトリーの ["`native-messaging`" 
 
 もし拡張機能をネイティブアプリケーションと通信させたい場合、
 
-- `"nativeMessaging"` [権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)または[オプション権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)を [`manifest.json`](/ja/Add-ons/WebExtensions/manifest.json) ファイルに設定する必要があります。
+- `"nativeMessaging"` [権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)または[オプション権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)を [`manifest.json`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルに設定する必要があります。
 - アドオンIDを明示的に指定します。 [`browser_specific_settings`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) マニフェストキーを使用してください（アプリのマニフェストは、 ID への接続を許可する拡張機能のセットを識別します）。
 
 以下に manifest.json の例を示します。
@@ -66,9 +66,11 @@ GitHub の "webextensions-examples" リポジトリーの ["`native-messaging`" 
 }
 ```
 
-> **メモ:** Chrome は [browser_specific_settings](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーに対応していません。 Chrome に同等の WebExtension をインストールするには、このキーを含まない別のマニフェストを使用する必要があります。以下の [Chrome の非互換性](#chrome_での非互換性)を参照してください。
+> [!NOTE]
+> Chrome は [browser_specific_settings](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーに対応していません。 Chrome に同等の WebExtension をインストールするには、このキーを含まない別のマニフェストを使用する必要があります。以下の [Chrome の非互換性](#chrome_での非互換性)を参照してください。
 
-> **メモ:** オプションの権限を使用する場合、権限が付与されていることを確認し、必要に応じて {{WebExtAPIRef("permissions")}} API でユーザーに権限を要求してからネイティブアプリケーションと通信してください。
+> [!NOTE]
+> オプションの権限を使用する場合、権限が付与されていることを確認し、必要に応じて {{WebExtAPIRef("permissions")}} API でユーザーに権限を要求してからネイティブアプリケーションと通信してください。
 
 ### アプリマニフェスト
 
@@ -92,7 +94,8 @@ GitHub の "webextensions-examples" リポジトリーの ["`native-messaging`" 
 
 この設定では、 `"ping_pong@example.org"` という ID の 拡張機能において `"ping_pong"` という名前を {{WebExtAPIRef("runtime")}} API の関数に渡すことによる接続が許可されます。 アプリケーション自体は `"/path/to/native-messaging/app/ping_pong.py"` です。
 
-> **メモ:** Chrome は、 WebExtension の ID を使用して、`allowed_origins` という別のキーで許可される拡張機能を識別します。詳しくは [Chrome のドキュメント](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host)を参照し、以下の [Chrome での非互換性](#chrome_での非互換性)を参照してください。
+> [!NOTE]
+> Chrome は、 WebExtension の ID を使用して、`allowed_origins` という別のキーで許可される拡張機能を識別します。詳しくは [Chrome のドキュメント](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host)を参照し、以下の [Chrome での非互換性](#chrome_での非互換性)を参照してください。
 
 ### Windows セットアップ
 
@@ -136,7 +139,8 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"
 
   - このキーの既定値は、アプリケーションマニフェストへのパスへのパスとなります。
 
-> **メモ:** GitHub にあるサンプルを元に作業を行う場合は、ブラウザーに WebExtension をインストールする前に、 [readme のこの部分](https://github.com/SphinxKnight/webextensions-examples/tree/master/native-messaging#windows-setup)を読み、 `check_config_win.py` の出力をチェックしてください。
+> [!NOTE]
+> GitHub にあるサンプルを元に作業を行う場合は、ブラウザーに WebExtension をインストールする前に、 [readme のこの部分](https://github.com/SphinxKnight/webextensions-examples/tree/master/native-messaging#windows-setup)を読み、 `check_config_win.py` の出力をチェックしてください。
 
 ## メッセージの交換
 
@@ -157,7 +161,8 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"
 - アプリマニフェストの完全パス
 - (Firefox 55 以降で) 起動元のアドオンの ID (manifest.json の [browser_specific_settings](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーにて指定)
 
-> **メモ:** Chrome では引数の扱いが異なります。
+> [!NOTE]
+> Chrome では引数の扱いが異なります。
 >
 > - Linux と Macでは、Chrome は引数を、拡張機能が開始するオリジンを次の形: `chrome-extension://[extensionID]`で渡します。これによりアプリは拡張機能を識別できます。
 > - Windowsでは、Chrome は 2 つの引数を渡します、 1 つ目は拡張機能のオリジンで、 2 つ目はアプリを開始するChrome ネイティブウィンドウのハンドルです。
@@ -402,7 +407,7 @@ while True:
 
 - `runtime.connectNative()` に渡した名前がアプリマニフェスト中の名前と一致しているか確認してください。
 - OS X/Linux: アプリマニフェストのファイル名が `<name>.json` となっていることを確認してください。
-- OS X/Linux: ネイティブアプリのマニフェストの場所が[ここ](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#mac_OS_X)で述べているところにあるのを確認してください。
+- OS X/Linux: ネイティブアプリのマニフェストの場所が[ここ](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#mac_os_x)で述べているところにあるのを確認してください。
 - Windows: レジストリキーが正しい場所にあり、その名前がアプリマニフェスト中の名前と一致していることを確認してください。
 - Windows: レジストリキーに指定されたパスがアプリマニフェストを指していることを確認してください。
 

@@ -1,6 +1,8 @@
 ---
-title: "y"
+title: y
 slug: Web/SVG/Attribute/y
+l10n:
+  sourceCommit: 5f7c22deaa74973658257aeaa012ac2ec0be87ae
 ---
 
 {{SVGRef}}
@@ -9,7 +11,6 @@ slug: Web/SVG/Attribute/y
 
 この属性は、以下の SVG 要素で使用することができます。
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("cursor")}}
 - {{SVGElement("feBlend")}}
 - {{SVGElement("feColorMatrix")}}
@@ -68,36 +69,6 @@ svg {
 ```
 
 {{EmbedLiveSample("Example", '100%', 200)}}
-
-## altGlyph
-
-> **警告:** SVG2 では {{SVGElement('altGlyph')}} は非推奨であるため、使用しないでください。
-
-{{SVGElement('altGlyph')}} の場合、 `y` は代替文字の Y 軸の座標を定義します。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
-            >&#x3C;length></a
-          ></strong
-        >
-        のリスト
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可</td>
-    </tr>
-  </tbody>
-</table>
 
 ## feBlend
 
@@ -914,7 +885,7 @@ svg {
 
 ## foreignObject
 
-{{SVGElement('foreignObject')}} の場合、 `y` はこのフィルターの描画領域における左上隅の Y 座標をを定義します。
+{{SVGElement('foreignObject')}} の場合、 `y` はビューポートの左上隅の Y 座標をを定義します。
 
 <table class="properties">
   <tbody>
@@ -945,11 +916,13 @@ svg {
   </tbody>
 </table>
 
-> **メモ:** SVG2 からは、`y` は*幾何プロパティ*であり、この属性は `<foreignObject>` の CSS プロパティとして使用することもできます。
+> [!NOTE]
+> SVG2 からは、`y` は*幾何プロパティ*であり、この属性は `<foreignObject>` の CSS プロパティとして使用することもできます。
 
 ## glyphRef
 
-> **警告:** SVG2 では {{SVGElement('glyphRef')}} は非推奨であり、使用すべきではありません。
+> [!WARNING]
+> SVG2 では {{SVGElement('glyphRef')}} は非推奨であり、使用すべきではありません。
 
 {{SVGElement('glyphRef')}} の場合、 `y` が文字の Y 軸の座標を定義します。
 
@@ -1009,11 +982,12 @@ svg {
   </tbody>
 </table>
 
-> **メモ:** SVG2 からは、`y` は*幾何プロパティ*であり、この属性は画像用の CSS プロパティとしても使用できます。
+> [!NOTE]
+> SVG2 からは、`y` は*幾何プロパティ*であり、この属性は画像用の CSS プロパティとしても使用できます。
 
 ## mask
 
-{{SVGElement('mask')}} の場合、 `y` は、その影響する領域の左上隅の Y 座標を定義します。この属性の正確な効果は、 {{SVGAttr('maskUnits')}} 属性に影響されます。
+{{SVGElement('mask')}} の場合、 `y` は、その効果の領域の左上隅の Y 座標を定義します。この属性の正確な効果は、 {{SVGAttr('maskUnits')}} 属性に影響されます。
 
 <table class="properties">
   <tbody>
@@ -1104,7 +1078,8 @@ svg {
   </tbody>
 </table>
 
-> **メモ:** SVG2 からは、`y` は*幾何プロパティ*であり、この属性は矩形の CSS プロパティとして使用することもできる。
+> [!NOTE]
+> SVG2 からは、`y` は*幾何プロパティ*であり、この属性は矩形の CSS プロパティとして使用することもできる。
 
 ## svg
 
@@ -1139,7 +1114,8 @@ svg {
   </tbody>
 </table>
 
-> **メモ:** SVG2 からは、`y` は*幾何プロパティ*であり、この属性は `<svg>` の CSS プロパティとして使用することもできます。
+> [!NOTE]
+> SVG2 からは、`y` は*幾何プロパティ*であり、この属性は `<svg>` の CSS プロパティとして使用することもできます。
 
 ## text
 
@@ -1220,7 +1196,8 @@ line {
 
 ## tref
 
-> **警告:** SVG2 では {{SVGElement('tref')}} は非推奨であり、使用すべきではありません。
+> [!WARNING]
+> SVG2 では {{SVGElement('tref')}} は非推奨であり、使用すべきではありません。
 
 {{SVGElement('tref')}} にある値が 1 つの場合、 `y` は*コンテンツテキストの位置*を配置しなければならない Y 座標を定義します。*コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
 
@@ -1367,7 +1344,8 @@ line {
   </tbody>
 </table>
 
-> **メモ:** SVG2 からは、`y` は*幾何プロパティ*であり、この属性は使用される要素の CSS プロパティとしても使用できます。
+> [!NOTE]
+> SVG2 からは、`y` は*幾何プロパティ*であり、この属性は使用される要素の CSS プロパティとしても使用できます。
 
 ## 仕様書
 

@@ -1,8 +1,9 @@
 ---
-title: MouseEvent.offsetY
+title: "MouseEvent: offsetY プロパティ"
+short-title: offsetY
 slug: Web/API/MouseEvent/offsetY
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("UI Events")}}

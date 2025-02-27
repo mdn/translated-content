@@ -1,30 +1,33 @@
 ---
-title: XRReferenceSpace.getOffsetReferenceSpace()
+title: "XRReferenceSpace: getOffsetReferenceSpace() メソッド"
+short-title: getOffsetReferenceSpace()
 slug: Web/API/XRReferenceSpace/getOffsetReferenceSpace
+l10n:
+  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef("WebXR Device API")}}{{secureContext_header}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 {{domxref("XRReferenceSpace")}} インターフェイスの **`getOffsetReferenceSpace()`** メソッドは、メソッドが呼び出されたオブジェクトと 3D 空間内の特定の点との間の位置の相対的な違いを表す新しい参照空間オブジェクトを返します。 `getOffsetReferenceSpace()` によって返されるオブジェクトは、{{domxref("XRReferenceSpace")}} で呼び出された場合は `XRReferenceSpace` であり、{{domxref("XRBoundedReferenceSpace")}} で呼び出された場合は `XRBoundedReferenceSpace` です。
 
-つまり、3D 空間にオブジェクトがあり、それに対して別のオブジェクトを相対的に配置する必要がある場合は、`getOffsetReferenceSpace()` を呼び出して、*`getOffsetReferenceSpace()` を呼び出すオブジェクトの位置と向きを基準*にして、2 番目のオブジェクトに持たせる位置と向きを渡します。
+つまり、3D 空間にオブジェクトがあり、それに対して別のオブジェクトを相対的に配置する必要がある場合は、`getOffsetReferenceSpace()` を呼び出して、`getOffsetReferenceSpace()` を呼び出すオブジェクトの位置と向きを基準にして、2 番目のオブジェクトに持たせる位置と向きを渡します。
 
-次に、シーンを描画するときに、オフセット参照空間を使用して、オブジェクトを相互に相対的に配置するだけでなく、必要な変換を適用して、ビューアーの位置に基づいてオブジェクトを適切にレンダリングできます。 これは、[非 XR 入力に基づく回転の実装](#implementing_rotation_based_on_non-xr_inputs)の例で示されています。 この例では、この方法を使用して、ユーザーがマウスを使用して視野角をピッチおよびヨーできるようにする方法を示しています。
+次に、シーンを描画するときに、オフセット参照空間を使用して、オブジェクトを相互に相対的に配置するだけでなく、必要な変換を適用して、ビューアーの位置に基づいてオブジェクトを適切にレンダリングできます。 これは、[非 XR 入力に基づく回転の実装](#非_xr_入力に基づく回転の実装)の例で示されています。 この例では、この方法を使用して、ユーザーがマウスを使用して視野角をピッチおよびヨーできるようにする方法を示しています。
 
 ## 構文
 
-```
-offsetReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(originOffset);
+```js-nolint
+getOffsetReferenceSpace(originOffset)
 ```
 
-### パラメーター
+### 引数
 
 - `originOffset`
   - : 新しい参照空間の原点へのオフセットを指定する {{domxref("XRRigidTransform")}}。 これらの値は、現在の参照空間の位置と向きに追加され、その結果は、新しく作成された {{domxref("XRReferenceSpace")}} の位置と向きとして使用されます。
 
-### 返り値
+### 返値
 
-メソッドが呼び出された参照空間と同じネイティブの原点を持つが、オブジェクトから `originOffset` で指定された点までの隔たりを示す原点オフセットを持つ参照空間を記述する新しい {{domxref("XRReferenceSpace")}} オブジェクト。
+メソッドが呼び出された参照空間と同じネイティブの原点を持つが、オブジェクトから `originOffset` で指定された点までの隔たりを示す原点オフセットを持つ参照空間を記述する新しい {{domxref("XRReferenceSpace")}} オブジェクトです。
 
 このメソッドを呼び出すオブジェクトが {{domxref("XRBoundedReferenceSpace")}} の場合、返されるオブジェクトも `XRBoundedReferenceSpace` です。 新しい参照空間の {{domxref("XRBoundedReferenceSpace.boundsGeometry", "boundsGeometry")}} には、元のオブジェクトの `boundsGeometry` が設定され、それぞれの点に `originOffset` の逆行列（inverse）が乗算されます。
 
@@ -117,12 +120,12 @@ function applyMouseMovement(refSpace) {
 
 この新しい参照空間は、ビューアーの位置は変更しませんが、蓄積されたマウス入力から生成されたピッチとヨーの値に基づいて向きを変更します。 `applyMouseMovement()` は、フレームを描画するときに、{{domxref("XRFrame.getViewerPose", "getViewerPose()")}} を使用してビューアーのポーズをフェッチする直前に呼び出す必要があり、レンダリングはこの参照空間で実行する必要があります。
 
-これに似たコードが、[移動、向き、モーション](/ja/docs/Web/API/WebXR_Device_API/Movement_and_motion)という WebXR チュートリアルの幅広い記事で使用されているのを見ることができます。 特に、[WebXR セッションの開始](/ja/docs/Web/API/WebXR_Device_API/Movement_and_motion#Starting_up_the_WebXR_session)というセクションを確認してください。
+これに似たコードが、[移動、向き、モーション](/ja/docs/Web/API/WebXR_Device_API/Movement_and_motion)という WebXR チュートリアルの幅広い記事で使用されているのを見ることができます。 特に、[WebXR セッションの開始](/ja/docs/Web/API/WebXR_Device_API/Movement_and_motion#starting_up_the_webxr_session)というセクションを確認してください。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRReferenceSpace.getOffsetReferenceSpace")}}
+{{Compat}}

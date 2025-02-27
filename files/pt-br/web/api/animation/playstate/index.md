@@ -7,7 +7,8 @@ slug: Web/API/Animation/playState
 
 A propriedade **`Animation.playState`** do [Web Animations API](/pt-BR/docs/Web/API/Web_Animations_API) retorna e altera um valor enumerado que descreve o estado de reprodução da animação.
 
-> **Nota:** Essa propriedade é apenas de leitura para Animações CSS e Transições.
+> [!NOTE]
+> Essa propriedade é apenas de leitura para Animações CSS e Transições.
 
 ## Sintaxe
 
@@ -32,7 +33,7 @@ Animation.playState =novoEstado;
 
 ## Exemplo
 
-No [jogo](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) [Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) , os jogadores podem chegar ao final com a [Alice chorando em uma poça de lágrimas](http://codepen.io/rachelnabors/pen/EPJdJx?editors=0010). No jogo, por razões de performance, as lágrimas só são animadas quando estão visiveis. Então elas devem ficar pausadas enquanto a animação ocorre, como no exemplo:
+No [jogo](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) , os jogadores podem chegar ao final com a [Alice chorando em uma poça de lágrimas](https://codepen.io/rachelnabors/pen/EPJdJx?editors=0010). No jogo, por razões de performance, as lágrimas só são animadas quando estão visiveis. Então elas devem ficar pausadas enquanto a animação ocorre, como no exemplo:
 
 ```js
 // Configurando a animação das lágrimas

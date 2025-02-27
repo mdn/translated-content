@@ -1,59 +1,53 @@
 ---
-title: defs
+title: <defs>
 slug: Web/SVG/Element/defs
+l10n:
+  sourceCommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
 ---
 
 {{SVGRef}}
 
-SVG では、後で再利用できるよう描画オブジェクトを定義します。参照される要素は、可能なかぎり`defs`要素内で定義されることが推奨されています。`defs`要素内でこれらの要素を定義することは、SVG の要素の可読性を向上させ、ひいては操作性をも向上させます。`defs`要素の描画要素は、そのままでは描画されません。ビューポート上で描画したい場所へそれらの要素を描画するために、{{ SVGElement("use") }}要素を使用します。
+**`<defs>`** 要素は、後で使用するグラフィックオブジェクトを格納するために使われます。 `<defs>` 要素内に作成されたオブジェクトは直接レンダリングされません。オブジェクトを表示するには（例えば {{SVGElement("use")}} 要素で）参照する必要があります。
+
+グラフィックオブジェクトはどこからでも参照することができますが、これらのオブジェクトを `<defs>` 要素の内部で定義することは SVG コンテンツの理解しやすさを促進し、文書全体のアクセシビリティに有益です。
+
+## 例
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+  <!-- Some graphical objects to use -->
+  <defs>
+    <circle id="myCircle" cx="0" cy="0" r="5" />
+
+    <linearGradient id="myGradient" gradientTransform="rotate(90)">
+      <stop offset="20%" stop-color="gold" />
+      <stop offset="90%" stop-color="red" />
+    </linearGradient>
+  </defs>
+
+  <!-- using my graphical objects -->
+  <use x="5" y="5" href="#myCircle" fill="url('#myGradient')" />
+</svg>
+```
+
+{{EmbedLiveSample('Example', 150, '100%')}}
 
 ## 利用コンテキスト
 
 {{svginfo}}
 
-## 例
-
-```xml
-<svg width="80px" height="30px" viewBox="0 0 80 30"
-     xmlns="http://www.w3.org/2000/svg">
-
-  <defs>
-    <linearGradient id="Gradient01">
-      <stop offset="20%" stop-color="#39F" />
-      <stop offset="90%" stop-color="#F3F" />
-    </linearGradient>
-  </defs>
-
-  <rect x="10" y="10" width="60" height="10"
-        fill="url(#Gradient01)"  />
-</svg>
-```
-
-## 属性
-
-### グローバル属性
-
-- [条件的処理属性（コンディショナルプロセッシング属性）](/ja/SVG/Attribute#ConditionalProccessing) »
-- [コア属性](/ja/SVG/Attribute#Core) »
-- [描画イベント属性](/ja/SVG/Attribute#GraphicalEvent) »
-- [プレゼンテーション属性](/ja/SVG/Attribute#Presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
-
-### スペシフィック属性
-
-_スペシフィック属性はありません_
-
-## DOM インタフェース
-
-この要素は [`SVGDefsElement`](/ja/DOM/SVGDefsElement) インタフェースを実装しています。
-
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
-{{Compat("svg.elements.defs")}}
+{{Compat}}

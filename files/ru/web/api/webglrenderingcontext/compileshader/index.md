@@ -26,7 +26,7 @@ gl.shaderSource(shader, shaderSource);
 gl.compileShader(shader);
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/String/split
 
 **`split()`** 方法接受一个模式，通过搜索模式将{{jsxref("String", "字符串", "", 1)}}分割成一个有序的子串列表，将这些子串放入一个数组，并返回该数组。
 
-{{EmbedInteractiveExample("pages/js/string-split.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.split()", "taller")}}
+
+```js interactive-example
+const str = "The quick brown fox jumps over the lazy dog.";
+
+const words = str.split(" ");
+console.log(words[3]);
+// Expected output: "fox"
+
+const chars = str.split("");
+console.log(chars[8]);
+// Expected output: "k"
+
+const strCopy = str.split();
+console.log(strCopy);
+// Expected output: Array ["The quick brown fox jumps over the lazy dog."]
+```
 
 ## 语法
 
@@ -19,7 +35,7 @@ split(separator, limit)
 ### 参数
 
 - `separator`
-  - : 描述每个分割应该发生在哪里的模式。可以是 `undefined`，一个字符串，或者一个具有 [`Symbol.split`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) 方法的对象——典型的例子是{{jsxref("Global_Objects/RegExp", "正则表达式", "", 1)}}。省略 `separator` 或传递 `undefined` 会导致 `split()` 返回一个只包含所调用字符串数组。所有不是 `undefined` 的值或不具有 `@@split` 方法的对象都被[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)。
+  - : 描述每个分割应该发生在哪里的模式。可以是 `undefined`，一个字符串，或者一个具有 [`Symbol.split`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) 方法的对象——典型的例子是{{jsxref("Global_Objects/RegExp", "正则表达式", "", 1)}}。省略 `separator` 或传递 `undefined` 会导致 `split()` 返回一个只包含所调用字符串数组。所有不是 `undefined` 的值或不具有 `[Symbol.split]()` 方法的对象都被[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)。
 - `limit` {{optional_inline}}
   - : 一个非负整数，指定数组中包含的子字符串的数量限制。当提供此参数时，split 方法会在指定 `separator` 每次出现时分割该字符串，但在已经有 `limit` 个元素时停止分割。任何剩余的文本都不会包含在数组中。
     - 如果在达到极限之前就达到了字符串的末端，那么数组包含的条目可能少于 `limit`。
@@ -37,7 +53,8 @@ split(separator, limit)
 
 > **备注：** `"".split("")` 是唯一一种字符串作为 `separator` 参数传入的生成空数组的方法。
 
-> **警告：** 当空字符串（`""`）被用作分隔符时，字符串**不是**由*用户感知的字符*（[grapheme cluster](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)）或 unicode 字符（码位）分割，而是由 UTF-16 代码单位分割。这破坏了[代理对](https://unicode.org/faq/utf_bom.html#utf16-2)。请参阅 [StackOverflow 上的“How do you get a string to a character array in JavaScript?”](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402)。
+> [!WARNING]
+> 当空字符串（`""`）被用作分隔符时，字符串**不是**由*用户感知的字符*（[grapheme cluster](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)）或 unicode 字符（码位）分割，而是由 UTF-16 代码单位分割。这破坏了[代理对](https://unicode.org/faq/utf_bom.html#utf16-2)。请参阅 [StackOverflow 上的“How do you get a string to a character array in JavaScript?”](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402)。
 
 如果 `separator` 是一个匹配空字符串的正则表达式，匹配是由 UTF-16 码元（code unit）还是 Unicode 码位（code point）分割，取决于是否设置了 [`u`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) 标志。
 
@@ -99,7 +116,7 @@ splitString(monthString, comma);
 
 上述示例会产生如下输出：
 
-```
+```plain
 原始字符串为："Oh brave new world that has such people in it."
 分隔符为：" "
 分隔后的数组有 10 个元素：Oh / brave / new / world / that / has / such / people / in / it. /
@@ -130,7 +147,7 @@ console.log(nameList);
 
 上例输出两行，第一行输出原始字符串，第二行输出结果数组。
 
-```
+```plain
 Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand
 [ "Harry Trump", "Fred Barney", "Helen Rigby", "Bill Abel", "Chris Hand", "" ]
 ```

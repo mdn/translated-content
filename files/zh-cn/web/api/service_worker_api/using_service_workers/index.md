@@ -87,7 +87,8 @@ registerServiceWorker();
 
 单个 service worker 可以控制很多页面。每个你的作用域（scope）里的页面加载完的时候，安装在页面的 service worker 就可以控制它。牢记你需要小心 service worker 脚本里的全局变量：每个页面不会有自己独有的 worker。
 
-> **备注：** 关于 service worker 一个很棒的事情就是，如果你像我们上面做的那样使用特性检测，发现浏览器并不支持 service worker，但是它还是可以正常地以预期的方式在线使用你的 app。
+> [!NOTE]
+> 关于 service worker 一个很棒的事情就是，如果你像我们上面做的那样使用特性检测，发现浏览器并不支持 service worker，但是它还是可以正常地以预期的方式在线使用你的 app。
 
 #### 为什么我的 service worker 注册失败了？
 
@@ -139,7 +140,8 @@ self.addEventListener("install", (event) => {
 
 > **备注：** [Web Storage API（`localStorage`）](/zh-CN/docs/Web/API/Web_Storage_API)跟 service worker 的 cache 工作原理十分类似，但是它是同步的，所以不允许在 service worker 中使用。
 
-> **备注：** 如果你需要的话，可以在 service worker 中使用 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 来做数据存储。
+> [!NOTE]
+> 如果你需要的话，可以在 service worker 中使用 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 来做数据存储。
 
 ### 自定义请求的响应
 
@@ -383,7 +385,8 @@ self.addEventListener("fetch", (event) => {
 
 如果你的 service worker 已经被安装，但是刷新页面时有一个新版本的可用，新版的 service worker 会在后台安装，但是仍然不会被激活。当不再有任何已加载的页面在使用旧版的 service worker 的时候，新版本才会激活。一旦再也没有这样的已加载的页面，新的 service worker 就会被激活。
 
-> **备注：** 可以通过使用 [`Clients.claim()`](/zh-CN/docs/Web/API/Clients/claim) 绕过这一点。
+> [!NOTE]
+> 可以通过使用 [`Clients.claim()`](/zh-CN/docs/Web/API/Clients/claim) 绕过这一点。
 
 你想把你的新版的 service worker 里的 `install` 事件监听器改成下面这样（注意新的版本号）：
 

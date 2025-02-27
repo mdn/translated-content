@@ -3,11 +3,11 @@ title: Commencer avec WebGL
 slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 ---
 
-{{DefaultAPISidebar("WebGL")}} {{Next("Web/API/WebGL_API/Tutorial/Ajouter_du_contenu_à_WebGL")}}[WebGL](http://www.khronos.org/webgl/) permet à un contenu web d'utiliser l'API basée sur [OpenGL ES](http://www.khronos.org/opengles/) 2.0 pour effectuer un rendu 2D et 3D dans un [canvas](/fr/HTML/Canvas) dans les navigateurs qui le supportent, sans utilisation d'un module complémentaire. Les programmes WebGL sont constitués de code de contrôle écrit en JavaScript, et le code d'ombrage (GLSL) est exécuté dans l'Unité de Traitement Graphique (GPU) de l'ordinateur. Les éléments WebGL peuvent être mélangés avec d'autres éléments HTML, et composés d'autres parties de la page ou de l'arrière-plan de la page.
+{{DefaultAPISidebar("WebGL")}} {{Next("Web/API/WebGL_API/Tutorial/Ajouter_du_contenu_à_WebGL")}}[WebGL](https://www.khronos.org/webgl/) permet à un contenu web d'utiliser l'API basée sur [OpenGL ES](https://www.khronos.org/opengles/) 2.0 pour effectuer un rendu 2D et 3D dans un [canvas](/fr/docs/Web/API/Canvas_API) dans les navigateurs qui le supportent, sans utilisation d'un module complémentaire. Les programmes WebGL sont constitués de code de contrôle écrit en JavaScript, et le code d'ombrage (GLSL) est exécuté dans l'Unité de Traitement Graphique (GPU) de l'ordinateur. Les éléments WebGL peuvent être mélangés avec d'autres éléments HTML, et composés d'autres parties de la page ou de l'arrière-plan de la page.
 
 Cet article va vous donner une introduction aux bases de l'utilisation de WebGL. Il est supposé que vous avez déjà une compréhension des mathématiques impliquées dans les graphismes 3D, et cet article ne prétend pas vous enseigner les concepts des graphismes 3D par eux-mêmes.
 
-Les exemples de code de ce tutoriel peuvent aussi être trouvés dans le [webgl-examples GitHub repository](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial).
+Les exemples de code de ce tutoriel peuvent aussi être trouvés dans le [webgl-examples GitHub repository](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial).
 
 ## Préparation au rendu 3D
 
@@ -57,14 +57,14 @@ Si le contexte est initialisé avec succès, la variable `gl` sera notre référ
 
 A ce stade, votre code est suffisant pour que le contexte WebGL puisse s'initialiser avec succès, et vous devriez vous retrouver avec une grande boîte noire et vide, prête à - et attendant de - recevoir du contenu.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample1/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample1/index.html', 670, 510) }}
 
-[Voir le code complet](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample1) | [Ouvrir cette démo dans une nouvelle page](http://mdn.github.io/webgl-examples/tutorial/sample1/)
+[Voir le code complet](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample1) | [Ouvrir cette démo dans une nouvelle page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample1/)
 
 ## Voir aussi
 
 - [An introduction to WebGL](https://dev.opera.com/articles/introduction-to-webgl-part-1/)&nbsp;: écrite par Luz Caballero, publiée sur dev.opera.com. Cet article traite de ce qu'est WebGL, explique comment WebGL fonctionne (incluant le concept de pipeline de rendu), et présente quelques bibliothèques WebGL.
-- [WebGL Fundamentals](http://webglfundamentals.org/)
-- [An intro to modern OpenGL :](http://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html) une série de bons articles sur OpenGL écrits par Joe Groff, fournissant une introduction claire à OpenGL, depuis son histoire jusqu'au concept important de pipeline de graphismes, qui comprend aussi quelques exemples montrant comment OpenGL fonctionne. Si vous n'avez aucune idée de ce qu'est OpenGL, c'est un bon endroit pour commencer.
+- [WebGL Fundamentals](https://webglfundamentals.org/)
+- [An intro to modern OpenGL :](https://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html) une série de bons articles sur OpenGL écrits par Joe Groff, fournissant une introduction claire à OpenGL, depuis son histoire jusqu'au concept important de pipeline de graphismes, qui comprend aussi quelques exemples montrant comment OpenGL fonctionne. Si vous n'avez aucune idée de ce qu'est OpenGL, c'est un bon endroit pour commencer.
 
 {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}

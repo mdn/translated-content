@@ -9,7 +9,8 @@ l10n:
 
 **`linearAcceleration`** は {{domxref("VRPose")}} インターフェイスの読み取り専用プロパティで、現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の直線加速度ベクトルを表す配列を、メートル/秒/秒単位で返します。
 
-> **メモ:** このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 言い換えれば、 `x`、`y`、`z` 軸に沿ったセンサーの現在の加速度です。
 
@@ -56,5 +57,4 @@ function drawVRScene() {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームが提供するデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

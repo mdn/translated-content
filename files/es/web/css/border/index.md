@@ -3,7 +3,7 @@ title: border
 slug: Web/CSS/border
 ---
 
-{{ PreviousNext("Guía de referencia de CSS", "CSS:border-color") }}
+{{CSSRef}}{{ PreviousNext("Guía de referencia de CSS", "CSS:border-color") }}
 
 ### Propiedades Constitutivas
 
@@ -40,7 +40,7 @@ border: [border-width || border-style || border-color | inherit] ;
 
 ### Ejemplos
 
-[Ver ejemplo en vivo](/samples/cssref/border.html)
+[Ver ejemplo en vivo](https://mdn.dev/archives/media/samples/cssref/border.html)
 
 ```
 element {
@@ -54,18 +54,11 @@ Mientras que las propiedades {{ Cssxref("border-width") }}, {{ Cssxref("border-s
 
 ### Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#border)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/box.html#box-border-area)
-- [CSS 3](http://www.w3.org/TR/css3-background/#the-border-shorthands)
+{{Specifications}}
 
-### Compatibilidad
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 4              |
-| Firefox           | 1              |
-| Netscape          | 4              |
-| Opera             | 3.5            |
+{{Compat}}
 
 ### Ver también
 

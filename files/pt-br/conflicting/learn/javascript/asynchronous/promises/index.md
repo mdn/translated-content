@@ -316,7 +316,8 @@ Usando `await` aqui podemos obter todos os resultados das três promises retorna
 
 Para tratamento de erros, nós incluímos um bloco `.catch()` no nossa chamada `displayContent()`; isso vai lidar com os erros que ocorrem em ambas as funções.
 
-> **Nota:** Também é possível usar um bloco [`finally`](/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_clause) síncrono na função assíncrona, no lugar de um bloco assíncrono[`.finally()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally), para mostrar um relatório final sobre como foi a operação — você pode ver isso em ação no nosso [exemplo ao vivo](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html) (veja também o [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html)).
+> [!NOTE]
+> Também é possível usar um bloco [`finally`](/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_clause) síncrono na função assíncrona, no lugar de um bloco assíncrono[`.finally()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally), para mostrar um relatório final sobre como foi a operação — você pode ver isso em ação no nosso [exemplo ao vivo](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html) (veja também o [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html)).
 
 ## Tratando lentidão com async/await
 
@@ -341,7 +342,7 @@ async function makeResult(items) {
 
 Como resultado, seu código pode ser retardado por um número significativo de promises aguardadas acontecendo uma após a outra. Cada `await` vai esperar que o anterior termine, ao passo que, na verdade, o que você pode querer é que as promises comecem a ser processadas simultaneamente, como fariam se não estivéssemos usando async/await.
 
-Vejamos esses dois exemplos — [slow-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html) (veja [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html)) e [fast-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html) (veja [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html)). Ambos começam com uma função promise personalizada que simula um processo assíncrono com uma chamada [`setTimeout()`](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout):
+Vejamos esses dois exemplos — [slow-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html) (veja [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html)) e [fast-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html) (veja [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html)). Ambos começam com uma função promise personalizada que simula um processo assíncrono com uma chamada [`setTimeout()`](/pt-BR/docs/Web/API/Window/setTimeout):
 
 ```js
 function timeoutPromise(interval) {
@@ -530,7 +531,7 @@ A `Promise.all()` rejeita quando qualquer uma das promises de entrada é rejeita
 
 ## Async/await em métodos de classe
 
-Como nota final, antes de prosseguirmos, você pode até adicionar `async` na frente de métodos de classe / objeto para fazê-los retornar promises, e `await` promises dentro deles. Dê uma olhada no artigo [Código de classe ES que vimos em nosso JavaScript orientado a objetos](/pt-BR/docs/Learn/JavaScript/Objects/Inheritance#ecmascript_2015_classes). em seguida, olhe para nossa versão modificada com um método `async`:
+Como nota final, antes de prosseguirmos, você pode até adicionar `async` na frente de métodos de classe / objeto para fazê-los retornar promises, e `await` promises dentro deles. Dê uma olhada no artigo [Código de classe ES que vimos em nosso JavaScript orientado a objetos](/pt-BR/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#ecmascript_2015_classes). em seguida, olhe para nossa versão modificada com um método `async`:
 
 ```js
 class Person {
@@ -576,8 +577,8 @@ E aí está - async/await fornecem uma maneira agradável e simplificada de escr
 
 ## Neste módulo
 
-- [Conceitos gerais da programação assíncrona](/pt-BR/docs/Learn/JavaScript/Asynchronous/Concepts)
+- [Conceitos gerais da programação assíncrona](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing)
 - [Introdução ao JavaScript Async](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [Timeouts e intervalos](/pt-BR/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
+- [Timeouts e intervalos](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df)
 - [Programação elegante com Promises](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Escolhendo a abordagem correta](/pt-BR/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)
+- [Escolhendo a abordagem correta](/pt-BR/docs/Learn/JavaScript/Asynchronous)

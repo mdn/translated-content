@@ -3,6 +3,8 @@ title: Le chargement différé
 slug: Web/Performance/Lazy_loading
 ---
 
+{{QuickLinksWithSubPages("Web/Performance")}}
+
 Le **chargement différé** (<i lang="en">lazy loading</i> en anglais) est une stratégie d'identification des ressources non bloquantes (non critiques) afin de ne les charger qu'au moment où elles sont utiles. C'est une façon de raccourcir le [chemin critique de rendu](/fr/docs/Web/Performance/Critical_rendering_path), ce qui se traduit par une réduction du temps de chargement de la page.
 
 Le chargement différé peut se dérouler à plusieurs moments du chargement d'une application, mais il se déroule typiquement lorsque l'internaute interagit avec la page, notamment lors du défilement de la page ou de la navigation.
@@ -58,7 +60,7 @@ Très souvent, les pages web contiennent beaucoup d'images et cela contribue à 
 
 #### Attribut loading
 
-L'attribut [`loading`](/fr/docs/Web/HTML/Element/Img#attr-loading) utilisé sur un élément [`<img>`](/fr/docs/Web/HTML/Element/Img) (ou sur un élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)) peut être utilisé pour demander au navigateur de différer le chargement des images et des iframes qui se situent en dehors de la zone affichée à l'écran, jusqu'à ce que la personne visitant le site ne les affiche en faisant défiler la page.
+L'attribut [`loading`](/fr/docs/Web/HTML/Element/img#attr-loading) utilisé sur un élément [`<img>`](/fr/docs/Web/HTML/Element/img) (ou sur un élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)) peut être utilisé pour demander au navigateur de différer le chargement des images et des iframes qui se situent en dehors de la zone affichée à l'écran, jusqu'à ce que la personne visitant le site ne les affiche en faisant défiler la page.
 
 ```html
 <img src="image.jpg" alt="..." loading="lazy" />

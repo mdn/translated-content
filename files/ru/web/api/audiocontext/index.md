@@ -3,7 +3,7 @@ title: AudioContext
 slug: Web/API/AudioContext
 ---
 
-{{APIRef()}}
+{{APIRef("Web Audio API")}}
 
 Интерфейс AudioContext можно представить как граф, состоящий из связанных между собой узлов {{domxref("AudioNode")}}. С помощью этого интерфейса можно контролировать как создание узлов, из которых состоит AudioContext, так и контролировать обработку и декодирование звука. Необходимо создать AudioContext перед тем как делать что-либо ещё со звуком, так как всё что происходит при обработке звука, происходит внутри AudioContext.
 
@@ -104,4 +104,5 @@ var finish = audioCtx.destination;
 
 ## Смотрите также
 
-- [Применение Web Audio API](/ru/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Применение Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- {{domxref("OfflineAudioContext")}}

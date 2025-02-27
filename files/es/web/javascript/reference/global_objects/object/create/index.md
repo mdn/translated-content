@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/create
 
 El método **`Object.create()`** crea un objeto nuevo, utilizando un objeto existente como el prototipo del nuevo objeto creado.
 
-{{EmbedInteractiveExample("pages/js/object-create.html")}}La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone <https://github.com/mdn/interactive-examples> y envíenos una solicitud de extracción (pull request).
+{{InteractiveExample("JavaScript Demo: Object.create()")}}
+
+```js interactive-example
+const person = {
+  isHuman: false,
+  printIntroduction: function () {
+    console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+  },
+};
+
+const me = Object.create(person);
+
+me.name = "Matthew"; // "name" is a property set on "me", but not on "person"
+me.isHuman = true; // Inherited properties can be overwritten
+
+me.printIntroduction();
+// Expected output: "My name is Matthew. Am I human? true"
+```
 
 ## Sintaxis
 
@@ -86,7 +103,7 @@ MyClass.prototype.myMethod = function () {
 };
 ```
 
-{{jsxref("Object.assign()")}} copia las propiedades del prototipo _OtherSuperClass_ al prototipo de _MyClass_, haciéndolas disponibles en todas las instancias de _MyClass_. `Object.assign()` se introdujo con ES2015 y [tiene polyfill](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/assign#Polyfill). Si el soporte para navegadores antiguos es necesario, se puede utilizar [`jQuery.extend()`](https://api.jquery.com/jQuery.extend/) o [`_.assign()`](https://lodash.com/docs/#assign).
+{{jsxref("Object.assign()")}} copia las propiedades del prototipo _OtherSuperClass_ al prototipo de _MyClass_, haciéndolas disponibles en todas las instancias de _MyClass_. `Object.assign()` se introdujo con ES2015 y [tiene polyfill](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#polyfill). Si el soporte para navegadores antiguos es necesario, se puede utilizar [`jQuery.extend()`](https://api.jquery.com/jQuery.extend/) o [`_.assign()`](https://lodash.com/docs/#assign).
 
 ### Usando el argumento `propertiesObject` con `Object.create()`
 
@@ -215,7 +232,7 @@ function ShowProperties(b) {
 }
 ```
 
-_Resultados no tan simples: (especialmente si la captura silenciosa de errores había ocultado los mensajes de error)_
+_Resultados no tan simples: (especialmente si la captura silenciosa de errores había ocultado los mensajes de error)._
 
 ```js
 ob={}; ob.po=oco; ob.pn=ocn; // crear un objeto compuesto usando los objetos de prueba de arriba como valores de propiedad
@@ -227,7 +244,7 @@ ob={}; ob.po=oco; ob.pn=ocn; // crear un objeto compuesto usando los objetos de 
 Tenga en cuenta que solo se muestra la primera propiedad.
 ```
 
-_(Pero si se crea el mismo objeto simplemente en un orden diferente, al menos en algunas implementaciones ...)_
+(_Pero si se crea el mismo objeto simplemente en un orden diferente, al menos en algunas implementaciones ..._)
 
 ```js
 ob={}; ob.pn=ocn; ob.po=oco; // cree el mismo objeto compuesto nuevamente, pero cree las mismas propiedades en un orden diferente
@@ -306,7 +323,7 @@ ocn = Object.create(null); // create "null" object (same as before)
 Object.setPrototypeOf(ocn, Object.prototype); // set new object's prototype to the "generic" object (NOT standard-object)
 ```
 
-_(In addition to all the string-related functions shown above, this also adds:)_
+(_In addition to all the string-related functions shown above, this also adds:_)
 
 ```js
 > ocn.valueOf() // shows {}

@@ -3,7 +3,7 @@ title: Basic concepts of grid layout
 slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 ---
 
-[CSS Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout) presenta un sistema de cuadrícula bidimensional para CSS. Las cuadrículas se pueden utilizar para posicionar áreas principales de la página o pequeños elementos de la interfaz de usuario. Este artículo lo introduce a Grid Layout de CSS y la nueva terminología que forma parte de la especificación CSS Grid Layout Nivel 1. Las características mostradas en este resumen se explicarán con mayor detalle en el resto de esta guía.
+[CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout) presenta un sistema de cuadrícula bidimensional para CSS. Las cuadrículas se pueden utilizar para posicionar áreas principales de la página o pequeños elementos de la interfaz de usuario. Este artículo lo introduce a Grid Layout de CSS y la nueva terminología que forma parte de la especificación CSS Grid Layout Nivel 1. Las características mostradas en este resumen se explicarán con mayor detalle en el resto de esta guía.
 
 ## ¿Qué es una cuadrícula(grid)?
 
@@ -29,7 +29,7 @@ Grid contiene características de alineación para poder controlar la forma cóm
 
 Se puede colocar más de un elemento en una celda de la cuadrícula o área, las cuales pueden solaparse o superponerse total o parcialmente entre sí. Esta estratificación puede ser controlada con la propiedad {{cssxref("z-index")}}.
 
-Grid es una poderosa especificación que, cuando se combina con otras partes de CSS como [flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout), puede ayudarle a crear diseños que antes eran imposibles de construir en CSS. Todo comienza creando una cuadrícula en su **contenedor de cuadrícula**.
+Grid es una poderosa especificación que, cuando se combina con otras partes de CSS como [flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout), puede ayudarle a crear diseños que antes eran imposibles de construir en CSS. Todo comienza creando una cuadrícula en su **contenedor de cuadrícula**.
 
 ## El contenedor de Grid
 
@@ -77,7 +77,7 @@ Hago de `.wrapper` un contenedor de cuadrícula.
 
 {{ EmbedLiveSample('El_contenedor_de_Grid', '200', '330') }}
 
-Todos los descendientes directos son ahora elementos de la cuadrícula. En un navegador web, usted no verá ninguna diferencia en cómo son mostrados estos elementos antes de convertirlos en una cuadrícula ya que grid ha creado una cuadrícula de una sola columna para los elementos. En este punto usted puede encontrar útil trabajar en Firefox Developer Edition, el cual tiene disponible el [Grid Inspector](/es/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) (Inspector de cuádricula) como parte de las Herramientas de Desarrollador. Si ve este ejemplo en Firefox e inspecciona la cuadrícula, verá un icono pequeño junto al valor `grid`. Haga clic sobre este y la cuadrícula de este elemento se superpondrá en la ventana del navegador.
+Todos los descendientes directos son ahora elementos de la cuadrícula. En un navegador web, usted no verá ninguna diferencia en cómo son mostrados estos elementos antes de convertirlos en una cuadrícula ya que grid ha creado una cuadrícula de una sola columna para los elementos. En este punto usted puede encontrar útil trabajar en Firefox Developer Edition, el cual tiene disponible el [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) (Inspector de cuádricula) como parte de las Herramientas de Desarrollador. Si ve este ejemplo en Firefox e inspecciona la cuadrícula, verá un icono pequeño junto al valor `grid`. Haga clic sobre este y la cuadrícula de este elemento se superpondrá en la ventana del navegador.
 
 ![Using the Grid Highlighter in DevTools to view a grid](1-grid-inspector.png)
 
@@ -90,6 +90,8 @@ Si queremos empezar a hacer esto más parecido a una cuadrícula necesitamos agr
 Definimos filas y columnas en nuestra cuadrícula con las propiedades {{cssxref("grid-template-columns")}} y {{cssxref("grid-template-rows")}}. Éstas definen las vías de la cuadrícula. Una vía de cuadrícula es el área entre las dos líneas -horizontales o verticales- dentro de la cuadrícula. En la imagen inferior se puede ver una vía resaltada - esta es la vía de la primera fila en nuestra cuadrícula.
 
 ![](1_grid_track.png)
+
+### Ejemplo básico
 
 Puedo modificar nuestro ejemplo anterior al agregar la propiedad `grid-template-columns`, para así definir el tamaño (ancho) de las vías de cada columna.
 
@@ -132,9 +134,9 @@ Ahora he creado una cuadrícula con tres vías por columna de 200 píxeles. Los 
 }
 ```
 
-{{ EmbedLiveSample('grid_first', '610', '140') }}
+{{ EmbedLiveSample('Ejemplo_basico', '610', '140') }}
 
-### La Unidad fr
+### La unidad fr
 
 Las vías se pueden definir usando cualquier unidad de medida. Grid también introduce una unidad de longitud adicional para ayudarnos a crear vías de cuadrícula flexibles. La nueva unidad fr representa una fracción del espacio disponible en el contenedor de la cuadrícula. La siguiente definición de cuadrícula crearía tres vias con el mismo ancho, que se expanden y se encogen de acuerdo el espacio disponible.
 
@@ -175,9 +177,21 @@ Las vías se pueden definir usando cualquier unidad de medida. Grid también int
 }
 ```
 
-{{ EmbedLiveSample('La_Unidad_fr', '220', '140') }}
+{{ EmbedLiveSample('La_unidad_fr', '220', '140') }}
+
+### Tamaño desigual
 
 En el próximo ejemplo creamos una definición con una vía de `2fr` y luego dos vías de `1fr`. El espacio disponible se divide en cuatro. Dos partes corresponden a la primera vía y una parte a cada una de las dos vias restantes.
+
+```html
+<div class="wrapper">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+</div>
+```
 
 ```css
 .wrapper {
@@ -186,7 +200,41 @@ En el próximo ejemplo creamos una definición con una vía de `2fr` y luego dos
 }
 ```
 
-En este ejemplo final mezclamos las vías de tamaño absoluto con unidades de fracción(fr). La primera vía tiene 500 píxeles, por lo que este ancho fijo se sustrae del espacio disponible.El espacio restante se divide en tres y se asigna en proporción a las dos vías flexibles.
+```css hidden
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.wrapper > div {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
+}
+```
+
+{{ EmbedLiveSample('Tamaño_desigual', '220', '140') }}
+
+### Mezclando tamanaños absolutos y flexibles
+
+En este ejemplo final mezclamos las vías de tamaño absoluto con unidades de fracción(fr). La primera vía tiene 500 píxeles, por lo que este ancho fijo se sustrae del espacio disponible. El espacio restante se divide en tres y se asigna en proporción a las dos vías flexibles.
+
+```html
+<div class="wrapper">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+</div>
+```
 
 ```css
 .wrapper {
@@ -194,6 +242,28 @@ En este ejemplo final mezclamos las vías de tamaño absoluto con unidades de fr
   grid-template-columns: 500px 1fr 2fr;
 }
 ```
+
+```css hidden
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.wrapper > div {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
+}
+```
+
+{{ EmbedLiveSample('Mezclando_tamanaños_absolutos_y_flexibles', '220', '140') }}
 
 ### Listando vías con la notación `repeat()`
 
@@ -402,7 +472,7 @@ El segundo elemento comienza en la línea de columna 1 de la cuadrícula y se ex
 
 {{ EmbedLiveSample('Líneas_de_cuadrícula', '230', '420') }}
 
-No olvide que puede utilizar [Grid Inspector](/es/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) en las Herramientas de Desarrollador de Firefox para ver cómo se posicionan los elementos en las líneas de la cuadrícula.
+No olvide que puede utilizar [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) en las Herramientas de Desarrollador de Firefox para ver cómo se posicionan los elementos en las líneas de la cuadrícula.
 
 ## Celdas de cuadrícula
 
@@ -429,7 +499,8 @@ Las canaletas o callejones entre las celdas de la cuadrícula se pueden crear us
 }
 ```
 
-> **Nota:** Los navegadores más antigüos tienen {{cssxref("column-gap")}}, {{cssxref("row-gap")}} y {{cssxref("gap")}} prefijadas con el prefijo `grid-` como {{cssxref("grid-column-gap")}}, {{cssxref("grid-row-gap")}} y {{cssxref("grid-gap")}} respectivamente.
+> [!NOTE]
+> Los navegadores más antigüos tienen {{cssxref("column-gap")}}, {{cssxref("row-gap")}} y {{cssxref("gap")}} prefijadas con el prefijo `grid-` como {{cssxref("grid-column-gap")}}, {{cssxref("grid-row-gap")}} y {{cssxref("grid-gap")}} respectivamente.
 
 ```html
 <div class="wrapper">
@@ -536,13 +607,14 @@ Si establezco `box1` a `display: grid` puedo darle una definición de vía y tam
 
 {{ EmbedLiveSample('anidamiento', '600', '340') }}
 
-En este caso, la cuadrícula anidada no tiene ninguna relación con el padre. Como usted puede ver en el ejemplo, no ha heredado la [`grid-gap`](/es/docs/Web/CSS/grid-gap) del elemento padre y las líneas de la cuadrícula anidada no se alinean con las líneas de la cuadrícula padre.
+En este caso, la cuadrícula anidada no tiene ninguna relación con el padre. Como usted puede ver en el ejemplo, no ha heredado la [`grid-gap`](/es/docs/Web/CSS/gap) del elemento padre y las líneas de la cuadrícula anidada no se alinean con las líneas de la cuadrícula padre.
 
 ### Subgrid
 
 En la especificación de grid de nivel 1 hay una característica llamada _subgrid_ que nos permitiría crear cuadrículas anidadas que usan la definición de la vía de la cuadrícula padre.
 
-> **Nota:** Las Subgrids aún no están implementadas en ningún navegador y la especificación está sujeta a cambio.
+> [!NOTE]
+> Las Subgrids aún no están implementadas en ningún navegador y la especificación está sujeta a cambio.
 
 En la especificación actual, editaríamos el ejemplo de cuadrícula anidada arriba para usar `display: subgrid` en lugar de `display: grid`, y luego eliminar la definición de vía. La cuadrícula anidada utilizará las vías de la cuadrícula principal para posicionar los elementos.
 
@@ -678,7 +750,7 @@ Podemos controlar el orden en el que los artículos se apilan utilizando la prop
 
 ## Siguientes Pasos
 
-En este artículo hemos tenido una mirada muy rápida a través de la Especificación de Grid Layout. Juegue un poco con los ejemplos de código, y luego pase a [la siguiente parte de esta guía donde realmente nos vamos a adentrar en detalle dentro de CSS Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout).
+En este artículo hemos tenido una mirada muy rápida a través de la Especificación de Grid Layout. Juegue un poco con los ejemplos de código, y luego pase a [la siguiente parte de esta guía donde realmente nos vamos a adentrar en detalle dentro de CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods).
 
 <section id="Quick_links">
 <ol>

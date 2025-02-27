@@ -97,8 +97,7 @@ Comme pour tous les éléments, on peut utiliser [les attributs universels](/fr/
 
   - : Cet attribut contient un nombre entier positif indiquant le nombre de colonnes consécutives que l'élément `<colgroup>` couvre. S'il n'est pas présent, sa valeur par défaut est `1`.
 
-    > **Note :**
-    >
+    > [!NOTE]
     > Cet attribut est appliqué sur les attributs du groupe de colonnes, il n'a aucun effet sur les règles de style CSS qui lui sont associées ni, a fortiori, sur les cellules des membres du groupe de la colonne.
     >
     > - L'attribut `span` n'est pas autorisé s'il y a un ou plusieurs éléments `<col>` dans le `<colgroup>`.
@@ -119,7 +118,7 @@ Les attributs suivants sont dépréciés et ne doivent pas être utilisés. Ils 
 
     Si cet attribut n'est pas défini, la valeur `left` est adoptée. Les éléments [`<col>`](/fr/docs/Web/HTML/Element/col) descendants peuvent remplacer cette valeur en utilisant leur propre attribut [`align`](/fr/docs/Web/HTML/Element/col#attr-align).
 
-    > **Note :**
+    > [!NOTE]
     >
     > - N'essayez pas de définir la propriété [`text-align`](/fr/docs/Web/CSS/text-align) sur un sélecteur donnant un élément [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup). Comme les éléments [`<td>`](/fr/docs/Web/HTML/Element/td) ne sont pas des descendants de l'élément [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup), ils n'en hériteront pas.
     > - Si le tableau n'utilise pas d'attribut [code>colspan](/fr/docs/Web/HTML/Element/td#attr-colspan), utilisez un `td:nth-child(an+b)` sélecteur CSS par colonne, où a est le nombre total de colonnes du tableau et b est la position ordinale de cette colonne dans le tableau. Ce n'est qu'après ce sélecteur que la propriété `text-align` peut être utilisée.
@@ -144,7 +143,7 @@ Les attributs suivants sont dépréciés et ne doivent pas être utilisés. Ils 
     - `middle`, permet de centrer le texte dans la cellule ;
     - and `top`, placera le texte aussi près du haut de la cellule que possible.
 
-    > **Note :**
+    > [!NOTE]
     >
     > - N'essayez pas de définir la propriété [`vertical-align`](/fr/docs/Web/CSS/vertical-align) sur un sélecteur donnant un élément `<col>`. Comme les éléments [`<td>`](/fr/docs/Web/HTML/Element/td) ne sont pas des descendants de l'élément `<col>`, ils n'en hériteront pas.
     > - Si le tableau n'utilise pas d'attribut [`colspan`](/fr/docs/Web/HTML/Element/td#attr-colspan), utilisez le sélecteur CSS `td:nth-child(an+b)` où a est le nombre total de colonnes du tableau et b la position ordinale de la colonne dans le tableau. Ce n'est qu'après ce sélecteur que la propriété `vertical-align` peut être utilisée.

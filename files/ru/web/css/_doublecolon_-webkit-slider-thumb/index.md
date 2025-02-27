@@ -1,5 +1,5 @@
 ---
-title: "::-webkit-slider-thumb"
+title: ::-webkit-slider-thumb
 slug: Web/CSS/::-webkit-slider-thumb
 ---
 
@@ -7,9 +7,9 @@ slug: Web/CSS/::-webkit-slider-thumb
 
 ## Описание
 
-`Псевдоэлемент CSS ::-webkit-slider-thumb` представляет собой ползунок, передвигаемый пользователем по линейке элемента {{HTMLElement("input")}} типа `"range"` для изменения числового значения атрибута [value](/ru/docs/Web/HTML/Element/input#attr-value).
+`Псевдоэлемент CSS ::-webkit-slider-thumb` представляет собой ползунок, передвигаемый пользователем по линейке элемента {{HTMLElement("input")}} типа `"range"` для изменения числового значения атрибута [value](/ru/docs/Web/HTML/Element/input#value).
 
-## Спецификация
+## Спецификации
 
 Не является частью какой либо спецификации. Это проприетарный псевдоэлемент исключительно для WebKit/Blink.
 
@@ -22,4 +22,4 @@ slug: Web/CSS/::-webkit-slider-thumb
   - {{cssxref("::-ms-thumb")}}
 
 - [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode: Styling and scripting sliders](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [QuirksMode: Styling and scripting sliders](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

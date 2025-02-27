@@ -1,84 +1,85 @@
 ---
 title: downloads
 slug: Mozilla/Add-ons/WebExtensions/API/downloads
+l10n:
+  sourceCommit: f72ba695e4d6d4dd74ee71a2cc3b774410acd1ea
 ---
 
-{{AddonSidebar}}启用与浏览器的下载管理器交互的扩展。你可以使用这个 API 模块来下载文件、取消、暂停、恢复下载和在文件管理器中显示下载的文件。
+{{AddonSidebar}}
 
-为使用此 API，你需要在你的 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中声明 "downloads" [API 权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)。
+允许扩展程序与浏览器的下载管理器进行交互。你可以使用此 API 模块下载文件，取消、暂停、恢复下载，并在文件管理器中显示已下载的文件。
 
-## Types
+要使用此 API，你需要在 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中指定“downloads” [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
+
+## 类型
 
 - {{WebExtAPIRef("downloads.FilenameConflictAction")}}
-  - : 定义当一个下载的文件与现存的文件命名冲突时要做什么。
+  - : 定义当下载的文件名与现有文件冲突时的处理选项。
 - {{WebExtAPIRef("downloads.InterruptReason")}}
-  - : 定义一系列中断下载的可能理由。
+  - : 定义下载中断的可能原因。
 - {{WebExtAPIRef("downloads.DangerType")}}
-  - : 定义一组与可下载文件相关的潜在危险的常见警告。
+  - : 定义与可下载文件相关的常见危险警告。
 - {{WebExtAPIRef("downloads.State")}}
-  - : 定义当前下载可能处于的不同状态。
+  - : 定义当前下载的不同状态。
 - {{WebExtAPIRef("downloads.DownloadItem")}}
-  - : 代表下载的文件。
+  - : 表示已下载的文件。
 - {{WebExtAPIRef("downloads.StringDelta")}}
   - : 表示两个字符串之间的差异。
 - {{WebExtAPIRef("downloads.DoubleDelta")}}
-  - : 代表两个双精度浮点数之间的差异。
+  - : 表示两个双精度浮点数之间的差异。
 - {{WebExtAPIRef("downloads.BooleanDelta")}}
-  - : 代表两个布尔数之间的差异。
+  - : 表示两个布尔值之间的差异。
 - {{WebExtAPIRef("downloads.DownloadTime")}}
-  - : 代表一个下载将会花费的时间。
+  - : 表示下载完成所需的时间。
 - {{WebExtAPIRef("downloads.DownloadQuery")}}
-  - : 定义一组参数，可用于在下载管理器中搜索一组特定的下载。
+  - : 定义一组参数，这些参数可用于在下载管理器中搜索特定的下载集合。
 
-## Functions
+## 函数
 
 - {{WebExtAPIRef("downloads.download()")}}
-  - : 下载一个文件，给出它的 URL 和其他可选的参数。
+  - : 根据给定的 URL 和其他可选首选项下载文件。
 - {{WebExtAPIRef("downloads.search()")}}
-  - : 查询 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} 是否在浏览器的下载管理器中可用，返回匹配指定的搜索标准的条目。
+  - : 查询浏览器下载管理器中可用的 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}}，并返回符合指定搜索条件的项目。
 - {{WebExtAPIRef("downloads.pause()")}}
-  - : 暂停一个下载。
+  - : 暂停下载。
 - {{WebExtAPIRef("downloads.resume()")}}
-  - : 恢复一个暂停的下载。
+  - : 恢复暂停的下载。
 - {{WebExtAPIRef("downloads.cancel()")}}
-  - : 取消一个下载。
+  - : 取消下载。
 - {{WebExtAPIRef("downloads.getFileIcon()")}}
   - : 检索指定下载的图标。
 - {{WebExtAPIRef("downloads.open()")}}
-  - : 用下载的文件相关联的程序打开它。
+  - : 使用关联的应用程序打开已下载的文件。
 - {{WebExtAPIRef("downloads.show()")}}
-  - : 打开当前平台的文件管理应用来在它包含的文件夹中显示下载的文件。
+  - : 打开平台的文件管理器应用程序，以显示包含已下载文件的文件夹。
 - {{WebExtAPIRef("downloads.showDefaultFolder()")}}
-  - : 用当前平台的文件管理应用显示默认下载文件夹。
+  - : 打开平台的文件管理器应用程序，以显示默认的下载文件夹。
 - {{WebExtAPIRef("downloads.erase()")}}
-  - : 擦除浏览器的下载历史中匹配 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} 的下载记录，不会在磁盘中删除文件。
+  - : 从浏览器的下载历史记录中删除匹配的 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}}，而不从磁盘上删除下载的文件。
 - {{WebExtAPIRef("downloads.removeFile()")}}
-  - : 从磁盘中移除下载的文件，但不从浏览器的下载历史中去除。
+  - : 从磁盘上删除已下载的文件，但不从浏览器的下载历史记录中删除。
 - {{WebExtAPIRef("downloads.acceptDanger()")}}
-  - : 提示用户接受或取消危险的下载。
-- {{WebExtAPIRef("downloads.drag()")}}
-  - : 将下载的文件拖动到另一个应用程序。
+  - : 提示用户接受或取消危险下载。
 - {{WebExtAPIRef("downloads.setShelfEnabled()")}}
-  - : 启用或禁用与当前浏览器配置文件关联的每个窗口底部的灰色架子。只要至少一个扩展名已禁用该架子，它就会被禁用。
+  - : 启用或禁用与当前浏览器配置文件关联的每个窗口底部的灰色下载栏。只要至少有一个扩展程序禁用了下载栏，下载栏将保持禁用状态。
 
-## Events
+## 事件
 
 - {{WebExtAPIRef("downloads.onCreated")}}
-  - : 当一个下载开始时被 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} 对象触发。
+  - : 下载开始时，触发并传递 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} 对象。
 - {{WebExtAPIRef("downloads.onErased")}}
-  - : 当一个下载从历史中擦除时被 Fires with the `downloadId` 触发。
+  - : 从历史记录中删除下载时，触发并传递 `downloadId`。
 - {{WebExtAPIRef("downloads.onChanged")}}
-  - : 当任意一个 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} 的属性期望 `bytesReceived` 改变时，此事件被这个 `downloadId` 和包含了变化属性的对象触发。
+  - : 当 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} 的任何属性（除了 `bytesReceived`）发生变化时，触发并传递 `downloadId` 和包含更改属性的对象。
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **备注：** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.downloads`](https://developer.chrome.google.cn/docs/extensions/reference/api/downloads) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

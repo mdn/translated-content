@@ -5,7 +5,7 @@ slug: Web/HTML/Element/track
 
 {{HTMLSidebar}}
 
-O **elemento HTML `<track>` **é usado como filho dos elementos de mídia{{HTMLElement("audio")}} e {{HTMLElement("video")}}. Ele permite que você especifique faixas de texto temporizadas (ou dados baseados em tempo), por exemplo, para lidar automaticamente com legendas. As faixas são formatadas em [WebVTT format](/pt-BR/docs/Web/API/Web_Video_Text_Tracks_Format) (arquivos `.vtt`) — Web Video Text Tracks or [Timed Text Markup Language (TTML).](https://w3c.github.io/ttml2/index.html)
+O **elemento HTML `<track>` **é usado como filho dos elementos de mídia{{HTMLElement("audio")}} e {{HTMLElement("video")}}. Ele permite que você especifique faixas de texto temporizadas (ou dados baseados em tempo), por exemplo, para lidar automaticamente com legendas. As faixas são formatadas em [WebVTT format](/pt-BR/docs/Web/API/WebVTT_API) (arquivos `.vtt`) — Web Video Text Tracks or [Timed Text Markup Language (TTML).](https://w3c.github.io/ttml2/index.html)
 
 {{EmbedInteractiveExample("pages/tabbed/track.html", "tabbed-standard")}}
 
@@ -48,7 +48,7 @@ O **elemento HTML `<track>` **é usado como filho dos elementos de mídia{{HTMLE
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `default`
   - : This attribute indicates that the track should be enabled unless the user's preferences indicate that another track is more appropriate. This may only be used on one `track` element per media element.
@@ -83,7 +83,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 - `label`
   - : A user-readable title of the text track which is used by the browser when listing available text tracks.
 - `src`
-  - : Address of the track (`.vtt` file). Must be a valid URL. This attribute must be specified and its URL value must have the same origin as the document — unless the {{HTMLElement("audio")}} or {{HTMLElement("video")}} parent element of the `track` element has a [`crossorigin`](/pt-BR/docs/Web/HTML/CORS_settings_attributes) attribute.
+  - : Address of the track (`.vtt` file). Must be a valid URL. This attribute must be specified and its URL value must have the same origin as the document — unless the {{HTMLElement("audio")}} or {{HTMLElement("video")}} parent element of the `track` element has a [`crossorigin`](/pt-BR/docs/Web/HTML/Attributes/crossorigin) attribute.
 - `srclang`
   - : Language of the track text data. It must be a valid [BCP 47](https://r12a.github.io/app-subtags/) language tag. If the `kind` attribute is set to `subtitles`, then `srclang` must be defined.
 
@@ -114,17 +114,14 @@ A `media` element cannot have more than one `track` with the same `kind`, `srcla
 </video>
 ```
 
-## Specifications
+## Especificações
 
-| Specification                                                                           | Status                   | Comment            |
-| --------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG','embedded-content.html#the-track-element','track element')}}   | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName("HTML5 W3C", "embedded-content-0.html#the-track-element", "track element")}} | {{Spec2("HTML5 W3C")}}   | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.track")}}
+{{Compat}}
 
 ## See also
 
-- [WebVTT text track format](/pt-BR/docs/HTML/WebVTT)
+- [WebVTT text track format](/pt-BR/docs/Web/API/WebVTT_API)

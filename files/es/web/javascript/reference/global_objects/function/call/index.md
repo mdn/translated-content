@@ -3,7 +3,7 @@ title: Function.prototype.call()
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
 ---
 
-{{JSRef("Objetos_globales", "Function")}}
+{{JSRef}}
 
 ## Resumen
 
@@ -21,7 +21,8 @@ function.call(thisArg[, arg1[, arg2[, ...]]])
 
   - : El valor a usar como `this` cuando se llama a _`function`_.
 
-    > **Advertencia:** En ciertos casos, `thisArg` puede no ser el valor actual visto por el método.
+    > [!WARNING]
+    > En ciertos casos, `thisArg` puede no ser el valor actual visto por el método.
     >
     > Si el método es una función en {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Global_Objects/null", "null")}} y {{jsxref("Global_Objects/undefined", "undefined")}} serán reemplazados con el objeto global, y valores primitivos serán convertidos a objetos.
 
@@ -38,7 +39,8 @@ El resultado de llamar a la función con el `this` especificado y los argumentos
 
 `call()` provee un nuevo valor de `this` a la función/método. Con `call()`, puedes escribir un método ona vez y heredarlo a otro objeto, sin tener que reescribir el método en el nuevo objeto.
 
-> **Nota:** Mientras la sintaxis de esta función es casi identica a la función {{jsxref("Function.apply", "apply()")}}, la diferencia fundamental es que `call()` acepta una **lista de argumentos**, mientras `apply()` accepta un **arreglo sencillo de argumentos**.
+> [!NOTE]
+> Mientras la sintaxis de esta función es casi identica a la función {{jsxref("Function.apply", "apply()")}}, la diferencia fundamental es que `call()` acepta una **lista de argumentos**, mientras `apply()` accepta un **arreglo sencillo de argumentos**.
 
 ## Ejemplos
 
@@ -84,7 +86,8 @@ En este ejemplo, creamos una función anónima y usamos `call` para invocarla en
 
 El propósito principal de la función anónima aquí es agregar una función `print` a cada objeto, el cual puede imprimir el índice correcto en el arreglo.
 
-> **Nota:** Pasar el objeto como valor `this` no es estrictamente necesario, pero se hace con propósito explicativo.
+> [!NOTE]
+> Pasar el objeto como valor `this` no es estrictamente necesario, pero se hace con propósito explicativo.
 
 ```js
 var animales = [

@@ -3,7 +3,7 @@ title: id
 slug: Web/XPath/Functions/id
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `id` 함수는 인수로 준 id와 일치하는 노드를 찾아 그 식별된 노드를 포함하는 노드 집합을 반환합니다.
 
@@ -28,11 +28,11 @@ id(expression )
 
 ### 주의
 
-- XML 문서의 DTD가 어떤 속성이 ID인지를 결정합니다. [XPath 1.0 5.2.1](http://www.w3.org/TR/xpath#unique-id)를 보세요.
+- XML 문서의 DTD가 어떤 속성이 ID인지를 결정합니다. [XPath 1.0 5.2.1](https://www.w3.org/TR/xpath#unique-id)를 보세요.
 
 ### 정의
 
-[XPath 1.0 4.1](http://www.w3.org/TR/xpath#function-id)
+[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-id)
 
 ### Gecko 지원
 

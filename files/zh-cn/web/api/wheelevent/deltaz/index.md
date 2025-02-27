@@ -1,22 +1,22 @@
 ---
-title: WheelEvent.deltaZ
+title: WheelEvent：deltaZ 属性
 slug: Web/API/WheelEvent/deltaZ
+l10n:
+  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
-**`WheelEvent.deltaZ`** 只读属性是一个 `double` 类型值，声明 Z 轴滚动量以[`WheelEvent.deltaMode`](/zh-CN/docs/Web/API/WheelEvent/deltaMode) 为单位。
+**`WheelEvent.deltaZ`** 只读属性是一个表示以 {{domxref("WheelEvent.deltaMode")}} 为单位沿 Z 轴的滚动量的 `double` 值。
 
-## 语法
+## 值
 
-```plain
-var dZ = event.deltaZ;
-```
+数字。
 
-## 例子
+## 示例
 
 ```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {
+const syntheticEvent = new WheelEvent("syntheticWheel", {
   deltaZ: 4,
   deltaMode: 0,
 });
@@ -32,7 +32,7 @@ console.log(syntheticEvent.deltaZ);
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- [`wheel`](/zh-CN/docs/Web/API/Element/wheel_event)
+- {{domxref("Element/wheel_event","wheel")}}
 - {{domxref("WheelEvent")}}

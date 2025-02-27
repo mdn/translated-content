@@ -14,7 +14,7 @@ CSS-свойство **`grid-template-areas`** создаёт {{glossary("grid a
 ## Синтаксис
 
 ```css
-/* Ключевое слово в качестве значения */
+/* Ключевые слова */
 grid-template-areas: none;
 
 /* Строка (<string>) в качестве значения */
@@ -104,12 +104,12 @@ grid-template-areas: unset;
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - Связанные CSS-свойства: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template")}}
-- Руководство по грид-раскладке: _[Области грид-шаблона](/ru/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
-- Видеоурок: _[Grid Template Areas](http://gridbyexample.com/video/grid-template-areas/)_
+- Руководство по грид-раскладке: _[Области грид-шаблона](/ru/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)_
+- Видеоурок: _[Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)_

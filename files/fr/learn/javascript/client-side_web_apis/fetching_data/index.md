@@ -2,7 +2,7 @@
 title: Récupérer des données du serveur
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 l10n:
-  sourceCommit: 2b649ca83589bf827d99db5d450c0c65a9de7a24
+  sourceCommit: 9f24be2de6158053df593b9b466f5da96e31f928
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -47,7 +47,8 @@ Cette méthode est employée largement par les sites utilisant de nombreuses don
 - Les mises à jour des pages sont plus rapides et il n'est plus nécessaire d'attendre un rechargement de la page&nbsp;: le site apparaît alors comme plus rapide et réactif.
 - Il y a moins de données téléchargées pour chaque mise à jour, ce qui signifie une consommation moindre de la bande passante. Si cela n'était pas vraiment un problème sur un ordinateur de bureau avec une connexion à très haut débit, cela pouvait vite freiner la navigation sur les appareils mobiles et/ou aux endroits où l'accès à Internet est moins rapide.
 
-> **Note :** Au début, cette technique était intitulée [AJAX](/fr/docs/Glossary/AJAX), un acronyme anglais pour <i lang="en">[Asynchronous](/fr/docs/Glossary/Asynchronous) JavaScript and XML</i> (soit JavaScript et XML asynchrones), car c'était le format XML qui était utilisé pour l'échange de données. On rencontre aujourd'hui plutôt des données au format JSON, mais le raisonnement reste le même et vous pourrez donc voir le terme AJAX toujours utilisé pour décrire cette technique.
+> [!NOTE]
+> Au début, cette technique était intitulée [AJAX](/fr/docs/Glossary/AJAX), un acronyme anglais pour <i lang="en">[Asynchronous](/fr/docs/Glossary/Asynchronous) JavaScript and XML</i> (soit JavaScript et XML asynchrones), car c'était le format XML qui était utilisé pour l'échange de données. On rencontre aujourd'hui plutôt des données au format JSON, mais le raisonnement reste le même et vous pourrez donc voir le terme AJAX toujours utilisé pour décrire cette technique.
 
 Pour aller encore plus vite, certains sites enregistrent les ressources et les données sur l'ordinateur lorsqu'elles sont demandées pour la première fois. Lors des visites suivantes, ce sont les versions locales qui seront utilisées plutôt que d'avoir à télécharger de nouveaux exemplaires à chaque chargement. Le contenu est rechargé depuis le serveur uniquement lorsqu'il a été mis à jour.
 
@@ -134,7 +135,7 @@ fetch(url)
 
 Récapitulons ce que fait ce fragment de script.
 
-Pour commencer, on utilise la fonction globale [`fetch()`](/fr/docs/Web/API/fetch) qui est le point d'entrée de l'API <i lang="en">Fetch</i>. Cette fonction prend l'URL comme paramètre (elle peut aussi utiliser un autre paramètre optionnel, mais nous ne l'utilisons pas ici).
+Pour commencer, on utilise la fonction globale [`fetch()`](/fr/docs/Web/API/Window/fetch) qui est le point d'entrée de l'API <i lang="en">Fetch</i>. Cette fonction prend l'URL comme paramètre (elle peut aussi utiliser un autre paramètre optionnel, mais nous ne l'utilisons pas ici).
 
 Ensuite, `fetch()` est une API asynchrone qui renvoie [une promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si vous ne savez pas ce qu'est une promesse, lisez le module [JavaScript asynchrone](/fr/docs/Learn/JavaScript/Asynchronous), et notamment [l'article sur les promesses](/fr/docs/Learn/JavaScript/Asynchronous/Promises) (qui parle aussi de `fetch()`) avant de revenir à cet article.
 
@@ -262,7 +263,6 @@ Cet article illustre comment débuter avec l'API <i lang="en">Fetch</i> afin de 
 
 De nombreux sujets sont abordés dans cet article et nous n'en avons qu'effleurée la surface. Pour plus de détails sur chacun de ces thèmes, n'hésitez pas à parcourir les articles suivants&nbsp;:
 
-- [AJAX](/fr/docs/Web/Guide/AJAX)
 - [Utiliser l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API/Using_Fetch)
 - [Les promesses JavaScript](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Manipuler des données en JSON](/fr/docs/Learn/JavaScript/Objects/JSON)

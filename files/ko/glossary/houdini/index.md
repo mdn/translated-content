@@ -16,7 +16,7 @@ l10n:
 
 ## 같이 보기
 
-- [Houdini](/ko/docs/Web/Guide/Houdini)
+- [Houdini](/ko/docs/Web/API/Houdini_APIs)
 - [CSSOM](/ko/docs/Web/API/CSS_Object_Model)
 - [CSS Paint API](/ko/docs/Web/API/CSS_Painting_API)
 - [CSS Typed OM](/ko/docs/Web/API/CSS_Typed_OM_API)

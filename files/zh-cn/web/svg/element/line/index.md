@@ -7,7 +7,7 @@ slug: Web/SVG/Element/line
 
 `line`元素是一个 SVG 基本形状，用来创建一条连接两个点的线。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
@@ -35,10 +35,10 @@ svg {
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/zh-CN/docs/Web/SVG/Attribute#Core) »
-- [图形事件属性](/zh-CN/docs/Web/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/zh-CN/docs/Web/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/Web/SVG/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/Web/SVG/Attribute#presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

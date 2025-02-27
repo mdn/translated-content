@@ -14,9 +14,7 @@ slug: Web/API/Canvas_API/Tutorial/Compositing
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}
   - : Это задаёт Тип операции композиции для применения при разработке новых форм, где Тип является строкой, идентифицирующей, какие из двенадцати операций композитинг в использовании.
 
-См. [примеры компоновки](/ru/docs/Web/API/Canvas_API/Tutorial/Compositing/Example) кода из следующих примеров.
-
-{{ EmbedLiveSample("Compositing_example", "100%", 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example" )}}
+См. [примеры компоновки](/ru/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation) кода из следующих примеров.
 
 ## Обрезка контуров
 
@@ -99,6 +97,6 @@ draw();
 
 Все, что нарисовано после создания отсечённого контура, появится только внутри этого пути. Вы можете видеть это чётко в линейном градиенте, который нарисован далее. После этого набирается набор из 50 случайно расположенных и масштабированных звёзд, используя `drawStar()`. Снова звезды появляются только в пределах определённого обтравочного контура.
 
-{{EmbedLiveSample("A_clip_example", "180", "180", "canvas_clip.png")}}
+{{EmbedLiveSample("Пример_обрезки", 180, 190, "canvas_clip.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

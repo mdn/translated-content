@@ -1,20 +1,19 @@
 ---
-title: IDBFactory.open()
+title: "IDBFactory: open() メソッド"
+short-title: open()
 slug: Web/API/IDBFactory/open
 l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+  sourceCommit: ff1e97da7ade9fcb05fb3de064011d4f05debe82
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 **`open()`** は {{domxref("IDBFactory")}} インターフェイスのメソッドで、[データベースへの接続](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#データベースコネクション)を開くことを要求します。
 
 このメソッドは即座に {{domxref("IDBOpenDBRequest")}} オブジェクトを返し、そして非同期でデータベースを開きます。
-操作が成功した場合、このメソッドから返される `request` オブジェクトに `result` の属性として接続のための新しい {{domxref("IDBDatabase")}} オブジェクトが設定されて、`success` イベントが発生します。
+操作が成功した場合、このメソッドから返されるリクエストオブジェクトに `result` の属性として接続のための新しい {{domxref("IDBDatabase")}} オブジェクトが設定されて、`success` イベントが発生します。
 
 `upgradeneeded`, `blocked`, `versionchange` イベントが発生することがあります。
-
-{{AvailableInWorkers}}
 
 ## 構文
 
@@ -50,7 +49,7 @@ open(name, version)
 const request = window.indexedDB.open("toDoList", 4);
 ```
 
-次のコードスニペットは、データベースを開く要求をして、成功の場合と失敗の場合のイベントハンドラを登録しています。完璧に動作する例は、[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) アプリケーション ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/)) を見てください。
+次のコードスニペットは、データベースを開く要求をして、成功の場合と失敗の場合のイベントハンドラーを登録しています。完璧に動作する例は、[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) アプリケーション ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/)) を見てください。
 
 ```js
 const note = document.querySelector("ul");
@@ -61,11 +60,13 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 // これら 2 個のイベントハンドラーは､データベースが正常に開かれたか､
 // 失敗した時に動作します｡
 DBOpenRequest.onerror = (event) => {
-  note.innerHTML += "<li>データベースの読み込みに失敗しました。</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "データベースの読み込みに失敗しました。";
 };
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>データベースを初期化しました。</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "データベースを初期化しました。";
 
   // データベースを開いた結果を変数 db に保存します｡
   // これはトランザクションを開くときなど、
@@ -85,7 +86,7 @@ DBOpenRequest.onsuccess = (event) => {
 ## 関連情報
 
 - [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- [ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)
+- [ブラウザーのストレージ容量と削除基準](/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)
 - トランザクションの開始 : {{domxref("IDBDatabase")}}
 - トランザクションの使用 : {{domxref("IDBTransaction")}}
 - キーの範囲の設定 : {{domxref("IDBKeyRange")}}

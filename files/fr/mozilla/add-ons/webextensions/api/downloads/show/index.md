@@ -3,11 +3,11 @@ title: downloads.show()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/show
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`show()`** de l'API {{WebExtAPIRef("downloads")}} affiche le fichier téléchargé dans son dossier contenant dans le gestionnaire de fichiers de la plate-forme sous-jacente.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -24,7 +24,7 @@ var showing = browser.downloads.show(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si la demande est acceptée, la promise sera remplie avec un booléen indiquant si la demande a été acceptée. Si la demande échoue, la promise sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si la demande est acceptée, la promise sera remplie avec un booléen indiquant si la demande a été acceptée. Si la demande échoue, la promise sera rejetée avec un message d'erreur.
 
 ## Compatibilité des navigateurs
 
@@ -61,9 +61,9 @@ searching.then(openDownload, onError);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

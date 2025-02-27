@@ -7,7 +7,7 @@ slug: Web/API/Gamepad
 
 Интерфейс **`Gamepad`** [Gamepad API](/ru/docs/Web/API/Gamepad_API) определяет отдельный геймпад или контроллер, предоставляющий доступ к такой информации, как: нажатие кнопок, позиции осей, и id.
 
-Объект `Gamepad` может быть возвращён в одном из двух случаев: как свойство `gamepad` событий {{event("gamepadconnected")}} и {{event("gamepaddisconnected")}}, или считыванием любой позиции в массиве, возвращённом методом {{domxref("Navigator.getGamepads()")}}.
+Объект `Gamepad` может быть возвращён в одном из двух случаев: как свойство `gamepad` событий [`gamepadconnected`](/ru/docs/Web/API/Window/gamepadconnected_event) и {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}, или считыванием любой позиции в массиве, возвращённом методом {{domxref("Navigator.getGamepads()")}}.
 
 ## Свойства
 
@@ -30,7 +30,7 @@ slug: Web/API/Gamepad
 
 ### Экспериментальные расширения для Gamepad
 
-Следующие интерфейсы определены в спецификации {{SpecName("GamepadExtensions")}}, и предоставляют доступ к экспериментальным возможностям, таким как тактильная обратная связь (haptic feedback) и информация о положении WebVR контроллера.
+Следующие интерфейсы определены в спецификации [Gamepad Extensions](https://w3c.github.io/gamepad/extensions.html), и предоставляют доступ к экспериментальным возможностям, таким как тактильная обратная связь (haptic feedback) и информация о положении WebVR контроллера.
 
 - {{domxref("Gamepad.hand")}} {{readonlyInline}}
   - : Перечисляемое значение, которое определяет в какой руке находится контроллер.
@@ -63,5 +63,5 @@ window.addEventListener("gamepadconnected", function (e) {
 
 ## Смотрите также
 
-- [Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)
+- [Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
 - [Gamepad API](/ru/docs/Web/API/Gamepad_API)

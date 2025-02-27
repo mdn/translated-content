@@ -11,8 +11,8 @@ Firefox 19 已于 2013 年 2 月 19 日正式发布。
 
 ### JavaScript
 
-- [`Map`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Map) 和 [`Set`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Set) 对象的 `size()` 方法变成了 `size` 属性。([Firefox bug 807001](https://bugzil.la/807001))
-- [`Map`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Map) 和 [`Set`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Set) 对象新增了一个 clear() 方法。([Firefox bug 805003](https://bugzil.la/805003))
+- [`Map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 和 [`Set`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set) 对象的 `size()` 方法变成了 `size` 属性。([Firefox bug 807001](https://bugzil.la/807001))
+- [`Map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 和 [`Set`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set) 对象新增了一个 clear() 方法。([Firefox bug 805003](https://bugzil.la/805003))
 
 ### CSS
 
@@ -41,7 +41,8 @@ Firefox 19 已于 2013 年 2 月 19 日正式发布。
 
 ## 附加组件和 Mozilla 开发者需要注意的变化
 
-> **备注：** A key change in Firefox 19 is that [`nsresult`](/zh-CN/docs/XPCOM_API_Reference/nsresult) is now strongly typed. This will help make it easier to detect bugs that are caused by mishandling of return values, but may cause existing code to break if it's making incorrect assumptions in this regard.
+> [!NOTE]
+> A key change in Firefox 19 is that [`nsresult`](/zh-CN/docs/XPCOM_API_Reference/nsresult) is now strongly typed. This will help make it easier to detect bugs that are caused by mishandling of return values, but may cause existing code to break if it's making incorrect assumptions in this regard.
 
 - `getBrowserSelection()` now returns the selected text in a text input field. As a result, `gContextMenu.isTextSelected` will be `true` when the user selects text in a text input field that is not a password field. ([Firefox bug 565717](https://bugzil.la/565717))
 - [Dict.jsm](/zh-CN/docs/Mozilla/JavaScript_code_modules/Dict.jsm): [`Dict()`](/zh-CN/docs/Mozilla/JavaScript_code_modules/Dict.jsm#Creating_a_dictionary) now takes a JSON String. [`Dict.toJSON()`](</zh-CN/docs/Mozilla/JavaScript_code_modules/Dict.jsm#toJSON()>) was added, and it returns a JSON String. ([Firefox bug 727967](https://bugzil.la/727967))
@@ -53,12 +54,12 @@ Firefox 19 已于 2013 年 2 月 19 日正式发布。
 - `nsIChannel`
   - : `contentLength` 属性的类型由 `long` 改成 `int64_t`.
 
-## 相关链接
+## 参见
 
-- [Firefox 19 发行说明](http://www.mozilla.org/zh-CN/firefox/19.0/releasenotes/)
+- [Firefox 19 发行说明](https://www.mozilla.org/zh-CN/firefox/19.0/releasenotes/)
 - [Firefox 19 网站兼容性](/zh-CN/docs/Site_Compatibility_for_Firefox_19)
 - [Firefox 19 附加组件兼容性](https://blog.mozilla.org/addons/2013/02/07/compatibility-for-firefox-19/)
 
-### 更早版本
+### 更早期的版本
 
-{{Firefox_for_developers('18')}}
+{{Firefox_for_developers}}

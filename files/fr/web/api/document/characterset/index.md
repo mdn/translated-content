@@ -7,7 +7,8 @@ slug: Web/API/Document/characterSet
 
 **`Document.characterSet`** propriété en lecture seule, renvoie l'encodage du document en cours. Un encodage décrit l'ensemble des caractères possibles et la façon de décoder les octets en ces caractères.
 
-> **Note :** La propriété `document.charset` et `document.inputEncoding` sont les alias de `document.characterSet`. Ne plus les utiliser.
+> [!NOTE]
+> La propriété `document.charset` et `document.inputEncoding` sont les alias de `document.characterSet`. Ne plus les utiliser.
 
 Les utilisateurs peuvent surcharger l'encodage indiqué pour le document (transmis par l'en-tête {{HTTPHeader("Content-Type")}} ou via le {{HTMLElement("meta")}} : `<meta charset="utf-8">`) grâce au menu <kbd>Affichage → Encodage du texte</kbd>. Cela peut notamment permettre de corriger le comportement d'un document dont l'encodage indiqué est incorrect.
 

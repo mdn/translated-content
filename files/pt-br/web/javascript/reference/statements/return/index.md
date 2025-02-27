@@ -30,7 +30,7 @@ return x + y / 3;
 
 ### Inserção Automática de Ponto-e-Vírgula
 
-A declaração `return` é afetada pela [inserção automática de ponto e vírgula (ASI)](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion). Nenhum terminador de linha é permitido entre a palavra-chave `return` e a expressão.
+A declaração `return` é afetada pela [inserção automática de ponto e vírgula (ASI)](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion). Nenhum terminador de linha é permitido entre a palavra-chave `return` e a expressão.
 
 ```js-nolint
 return
@@ -46,7 +46,8 @@ a + b;
 
 O console irá alertar "unreachable code after return statement" (código inacessível após a declaração return).
 
-> **Nota:** A partir do Gecko 40, um alerta é mostrado no console se um código inacessível é encontrado após uma declaração `return`.
+> [!NOTE]
+> A partir do Gecko 40, um alerta é mostrado no console se um código inacessível é encontrado após uma declaração `return`.
 
 ## Exemplos
 
@@ -108,18 +109,13 @@ answer(1337); // 56154
 
 ## Especificações
 
-| Especificação                                                        | Situação             | Comentário         |
-| -------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES1')}}                                                  | {{Spec2('ES1')}}     | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-12.9', 'Return statement')}}               | {{Spec2('ES5.1')}}   |                    |
-| {{SpecName('ES6', '#sec-return-statement', 'Return statement')}}     | {{Spec2('ES6')}}     |                    |
-| {{SpecName('ESDraft', '#sec-return-statement', 'Return statement')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.return")}}
+{{Compat}}
 
 ## Veja também
 
-- [Funções](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope)
+- [Funções](/pt-BR/docs/Web/JavaScript/Reference/Functions)
 - [Closures](/pt-BR/docs/Web/JavaScript/Closures)

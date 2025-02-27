@@ -3,6 +3,8 @@ title: CORS-safelisted response header (CORS セーフリストレスポンス�
 slug: Glossary/CORS-safelisted_response_header
 ---
 
+{{GlossarySidebar}}
+
 _CORS セーフリストレスポンスヘッダー_ は、[CORS](/ja/docs/Web/HTTP/CORS) レスポンスに含まれる [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)で、クライアントスクリプトに公開しても _安全_ であると見なされます。セーフリストに含まれたレスポンスヘッダーのみがウェブページで利用できます。
 
 既定では以下のレスポンスヘッダーがセーフリストに含まれます。
@@ -34,7 +36,7 @@ Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding
 - [HTTP](/ja/docs/Web/HTTP)
 - [HTTP headers](/ja/docs/Web/HTTP/Headers)
 - {{HTTPHeader("Access-Control-Expose-Headers")}}
-- [用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("CORS")}}
   - {{Glossary("CORS-safelisted_request_header", "CORS セーフリストリクエストヘッダー")}}

@@ -24,9 +24,11 @@ Web Storage 包含如下两种机制：
 
 这两种机制是通过 {{domxref("Window.sessionStorage")}} 和 {{domxref("Window.localStorage")}} 属性使用（更确切的说，在支持的浏览器中 `Window` 对象实现了 `WindowLocalStorage` 和 `WindowSessionStorage` 对象并挂在其 `localStorage` 和 `sessionStorage` 属性下）——调用其中任一对象会创建 {{domxref("Storage")}} 对象，通过 {{domxref("Storage")}} 对象，可以设置、获取和移除数据项。对于每个源 `sessionStorage` 和 `localStorage` 使用不同的 Storage 对象——独立运行和控制。
 
-> **备注：** 在 Firefox 中，当浏览器崩溃或重新启动时，为了避免过度使用 Web storage 导致的内存问题，每个源的存储大小将限制在 10M。有关详细信息，请参阅[存储配额和清理标准](/zh-CN/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#firefox)。
+> [!NOTE]
+> 在 Firefox 中，当浏览器崩溃或重新启动时，为了避免过度使用 Web storage 导致的内存问题，每个源的存储大小将限制在 10M。有关详细信息，请参阅[存储配额和清理标准](/zh-CN/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#firefox)。
 
-> **备注：** 若用户[禁用第三方 cookie](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection)，那么将不允许来自第三方 IFrame 对 Web Storage 的访问。
+> [!NOTE]
+> 若用户[禁用第三方 cookie](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection)，那么将不允许来自第三方 IFrame 对 Web Storage 的访问。
 
 ## Web Storage 接口
 

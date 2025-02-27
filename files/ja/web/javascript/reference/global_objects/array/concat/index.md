@@ -2,28 +2,40 @@
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
 l10n:
-  sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
+  sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
 ---
 
 {{JSRef}}
 
-**`concat()`** メソッドは、2 つ以上の配列を結合するために使用します。このメソッドは既存の配列を変更せず、新しい配列を返します。
+**`concat()`** は {{jsxref("Array")}} インスタンスのメソッドで、2 つ以上の配列を結合するために使用します。
+このメソッドは既存の配列を変更せず、新しい配列を返します。
 
-{{EmbedInteractiveExample("pages/js/array-concat.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.concat()", "shorter")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const array2 = ["d", "e", "f"];
+const array3 = array1.concat(array2);
+
+console.log(array3);
+// Expected output: Array ["a", "b", "c", "d", "e", "f"]
+```
 
 ## 構文
 
-```js
-concat();
-concat(value0);
-concat(value0, value1);
-concat(value0, value1, /* … ,*/ valueN);
+```js-nolint
+concat()
+concat(value1)
+concat(value1, value2)
+concat(value1, value2, /* …, */ valueN)
 ```
 
 ### 引数
 
-- `valueN` {{optional_inline}}
-  - : 新しい配列に連結する配列や値です。すべての `valueN` 引数が省略された場合、 `concat` は呼び出された既存の配列の[シャローコピー](/ja/docs/Glossary/Shallow_copy)を返します。詳しくは下記の解説をお読みください。
+- `value1`, …, `valueN` {{optional_inline}}
+  - : 新しい配列に連結する配列や値です。
+    すべての `valueN` 引数が省略された場合、 `concat` は呼び出された既存の配列の[シャローコピー](/ja/docs/Glossary/Shallow_copy)を返します。
+    詳しくは下記の解説をお読みください。
 
 ### 返値
 
@@ -31,14 +43,13 @@ concat(value0, value1, /* … ,*/ valueN);
 
 ## 解説
 
-`concat` メソッドは新しい配列を作成します。この配列には、まず、このメソッドが名付けられたオブジェクトの要素が入ります。それから、それぞれの引数に対して、その値が配列に追加されます。通常のオブジェクトやプリミティブの場合、引数自体が最終的な配列の要素になります。配列や 配列風のオブジェクトで {{jsxref("Symbol.isConcatSpreadable")}} プロパティを真値に設定している場合、各引数の要素は独立して最終的に配列に追加されます。 `concat` メソッドは入れ子になった配列の引数に再帰的にアクセスすることはありません。
+`concat` メソッドは新しい配列を作成します。この配列には、まず、このメソッドが名付けられたオブジェクトの要素が入ります。それから、それぞれの引数に対して、その値が配列に追加されます。通常のオブジェクトやプリミティブの場合、引数自体が最終的な配列の要素になります。配列や 配列風のオブジェクトで [`Symbol.isConcatSpreadable`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable) プロパティを真値に設定している場合、各引数の要素は独立して最終的に配列に追加されます。 `concat` メソッドは入れ子になった配列の引数に再帰的にアクセスすることはありません。
 
-`concat` は `this` や引数として与えられた配列を変更しませんが、その代わりに元の配列から結合させた同じ要素のコピーを含む[シャローコピー](/ja/docs/Glossary/Shallow_copy)を返します。元の配列の要素は以下のようにして新しい配列にコピーされます。
+`concat()` は[コピーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods)です。 `this` や引数として与えられた配列を変更せず、代わりに元の配列の要素と同じ要素を含む[シャローコピー](/ja/docs/Glossary/Shallow_copy)を返します。
 
-- オブジェクトの参照の場合（実際のオブジェクトではない場合）、 `concat` はオブジェクトの参照を新しい配列にコピーします。元の配列も新しい配列も同じオブジェクトを参照します。これはつまり、もし参照されているオブジェクトが変更されれば、その変更は元の配列と新しい配列の両方に現れます。これは、配列引数の要素も配列である場合も含みます。
-- 文字列、数値、論理値などのデータ型の場合（{{jsxref("Global_Objects/String", "String")}}, {{jsxref("Global_Objects/Number", "Number")}}, {{jsxref("Global_Objects/Boolean", "Boolean")}} などのオブジェクトではない場合）、`concat` は文字列や数値の値を新しい配列にコピーします。
+`concat()` メソッドは、元の配列のいずれかが[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)であった場合には空のスロットを維持します。
 
-> **メモ:** 配列や値を追加しても、元の配列には手を付けません。さらに、新しい配列へどんな操作をしても、元の配列には影響しません。逆もまた同様です（オブジェクト参照である要素に対する操作を除く）。
+`concat()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。 `this` 値は他の引数と同じように扱われます（ただし、先にオブジェクトに変換されます）。つまり、素のオブジェクトは直接結果の配列に追加され、 `@isConcatSpreadable` を持つ配列風オブジェクトは結果の配列に展開されます。
 
 ## 例
 
@@ -114,6 +125,32 @@ console.log([0].concat(obj1, obj2));
 // [ 0, { '0': 1, '1': 2, '2': 3, length: 3 }, 1, 2, 3 ]
 ```
 
+### 疎配列に対する concat()
+
+元の配列のいずれかが疎配列の場合、結果の配列も疎配列になります。
+
+```js
+console.log([1, , 3].concat([4, 5])); // [1, empty, 3, 4, 5]
+console.log([1, 2].concat([3, , 5])); // [1, 2, 3, empty, 5]
+```
+
+### 配列ではないオブジェクトに対する concat() の呼び出し
+
+もし `this` の値が配列でなければ、オブジェクトに変換され、 `concat()` の引数と同じように扱われます。この場合、返値は常に新しい素の配列になります。
+
+```js
+console.log(Array.prototype.concat.call({}, 1, 2, 3)); // [{}, 1, 2, 3]
+console.log(Array.prototype.concat.call(1, 2, 3)); // [ [Number: 1], 2, 3 ]
+const arrayLike = {
+  [Symbol.isConcatSpreadable]: true,
+  length: 2,
+  0: 1,
+  1: 2,
+  2: 99, // length が 2 なので concat() からは無視される
+};
+console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
+```
+
 ## 仕様書
 
 {{Specifications}}
@@ -124,9 +161,11 @@ console.log([0].concat(obj1, obj2));
 
 ## 関連情報
 
-- [Polyfill of `Array.prototype.concat` in `core-js` with fixes and implementation of modern behavior like `Symbol.isConcatSpreadable` support](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array/push", "push()")}} / {{jsxref("Array/pop", "pop()")}} — 配列末尾への要素の追加 / 配列末尾の要素の削除
-- {{jsxref("Array/unshift", "unshift()")}} / {{jsxref("Array/shift", "shift()")}} — 配列の先頭に要素を追加 / 配列の先頭の要素を削除
-- {{jsxref("Array/splice", "splice()")}} — 配列の指定位置に要素を追加 / 指定位置の要素を削除
+- [`Array.prototype.concat` のポリフィル (`core-js`)（`Symbol.isConcatSpreadable` の対応など、最近の動作の修正と実装付き）](https://github.com/zloirock/core-js#ecmascript-array)
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.unshift()")}}
+- {{jsxref("Array.prototype.splice()")}}
 - {{jsxref("String.prototype.concat()")}}
-- {{jsxref("Symbol.isConcatSpreadable")}} — 平坦化を制御
+- {{jsxref("Symbol.isConcatSpreadable")}}

@@ -483,6 +483,6 @@ You now know how to use the basic features of multiple-column layout, another to
 ## See also
 
 - [CSS Fragmentation](/pt-BR/docs/Web/CSS/CSS_Fragmentation)
-- [Using multi-column layouts](/pt-BR/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
+- [Using multi-column layouts](/pt-BR/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}

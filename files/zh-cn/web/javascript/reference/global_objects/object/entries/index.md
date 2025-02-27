@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 
 **`Object.entries()`** 静态方法返回一个数组，包含给定对象自有的可枚举字符串键属性的键值对。
 
-{{EmbedInteractiveExample("pages/js/object-entries.html")}}
+{{InteractiveExample("JavaScript Demo: Object.entries()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+};
+
+for (const [key, value] of Object.entries(object1)) {
+  console.log(`${key}: ${value}`);
+}
+
+// Expected output:
+// "a: somestring"
+// "b: 42"
+```
 
 ## 语法
 
@@ -63,13 +78,13 @@ console.log(Object.entries(myObj)); // [ ['foo', 'bar'] ]
 
 ### 在基本类型中使用 Object.entries()
 
-非对象参数会[强制转换成对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#对象强制转换)。只有字符串可以有自己的可枚举属性，所有其他基本类型均返回一个空数组。
+非对象参数会[强制转换成对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#对象强制转换)。[`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 和 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 不能被强制转换为对象，会立即抛出 {{jsxref("TypeError")}}。只有字符串可以有自己的可枚举属性，所有其他基本类型均返回一个空数组。
 
 ```js
 // 字符串具有索引作为可枚举的自有属性
 console.log(Object.entries("foo")); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
 
-// 其他基本类型没有自有属性
+// 其他基本类型（除了 undefined 和 null）没有自有属性
 console.log(Object.entries(100)); // []
 ```
 

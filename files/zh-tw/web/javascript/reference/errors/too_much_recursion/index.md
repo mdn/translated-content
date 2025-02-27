@@ -50,4 +50,4 @@ loop(0);
 ## 參見
 
 - {{Glossary("Recursion")}}
-- [遞迴函式](/zh-TW/docs/Web/JavaScript/Guide/Functions#Recursion)
+- [遞迴函式](/zh-TW/docs/Web/JavaScript/Guide/Functions#recursion)

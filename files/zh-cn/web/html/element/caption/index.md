@@ -18,8 +18,8 @@ slug: Web/HTML/Element/caption
    <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>.</td>
   </tr>
   <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">Permitted parent elements</th>
@@ -34,7 +34,7 @@ slug: Web/HTML/Element/caption
 
 ## 特性
 
-本元素包含了所有 [全局特性](/zh-CN/docs/HTML/Global_attributes)。
+本元素包含了所有 [全局特性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `align` {{Deprecated_inline}}
 
@@ -45,7 +45,8 @@ slug: Web/HTML/Element/caption
     - `right`, 显示在表格右边
     - `bottom`, 显示在表格下面
 
-    > **备注：** 不要使用这个属性，它已经被弃用：{{HTMLElement("caption")}} 元素应该使用 [CSS](/zh-CN/docs/CSS)设置样式。要得到类似`align`属性的效果，使用 [CSS](/zh-CN/docs/CSS) 属性 {{cssxref("caption-side")}} 和 {{cssxref("text-align")}}.
+    > [!NOTE]
+    > 不要使用这个属性，它已经被弃用：{{HTMLElement("caption")}} 元素应该使用 [CSS](/zh-CN/docs/Web/CSS)设置样式。要得到类似`align`属性的效果，使用 [CSS](/zh-CN/docs/Web/CSS) 属性 {{cssxref("caption-side")}} 和 {{cssxref("text-align")}}.
 
 ## 使用说明
 

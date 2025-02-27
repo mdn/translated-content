@@ -21,7 +21,7 @@ slug: Web/HTTP
   - : **跨站点 HTTP 请求**就是从**另一个域**，而不是资源所在的域发起的 HTTP 请求。举例来说，在域 A（`http://domaina.example/`）的 HTML 页面上通过 `img` 元素来请求域 B（`http://domainb.foo/image.jpg`）上的图片资源。这在当今的 Web 页面上是很常见的——加载跨站点资源，包括 CSS 样式表、图片、脚本和其他资源。CORS 允许 Web 开发人员控制其站点对跨站点请求的反应。
 - [HTTP 客户端提示（Client Hint）](/zh-CN/docs/Web/HTTP/Client_hints)
   - : **客户端提示**是一组响应标头，服务器可以使用它来主动从客户端请求关于设备、网络、用户以及用户代理指定的首选项的信息。然后，服务器可以根据客户端选择提供的信息来确定发送哪些资源。
-- [HTTP 的演变](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
+- [HTTP 的演变](/zh-CN/docs/Web/HTTP/Evolution_of_HTTP)
   - : 简单描述了从早期版本的 HTTP 到现代 HTTP/2，新兴的 HTTP/3 以及未来版本的 HTTP 这个过程中发生的变更。
 - [Mozilla Web 安全准则](https://wiki.mozilla.org/Security/Guidelines/Web_Security)
   - : 一系列用于帮助运营团队创建安全的 Web 应用程序的技巧。
@@ -55,5 +55,5 @@ slug: Web/HTTP
   - : 一个旨在帮助开发人员，系统管理员和安全专业人员安全地配置其站点的项目。
 - [RedBot](https://redbot.org/)
   - : 用于检查与缓存相关的 HTTP 标头的工具。
-- [浏览器的工作原理（2011）](https://web.dev/howbrowserswork/)
+- [浏览器的工作原理（2011）](https://web.developers.google.cn/articles/howbrowserswork)
   - : 一篇非常全面的关于浏览器内部实现与通过 HTTP 协议的请求流的文章。可以说是所有 Web 开发者的必读内容。

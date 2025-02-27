@@ -3,6 +3,8 @@ title: Constructeur
 slug: Glossary/Constructor
 ---
 
+{{GlossarySidebar}}
+
 Un **constructeur** est associé à un {{glossary("object","objet")}} d'une classe particulière qui a été instanciée. Le constructeur initialise cet objet et peut fournir un accès à ses informations privées. Le concept de constructeur peut s'appliquer à la plupart des langages de {{glossary("OOP","programmation orientée objet")}}. Dans l'essentiel, un constructeur en {{glossary("JavaScript")}} est en général déclaré lors de l'instance d'une {{glossary("Class","classe")}}.
 
 ## Syntaxe
@@ -36,5 +38,5 @@ var defaultReference = new Default();
 
 ### Référence technique
 
-- [Le constructeur en programmation JavaScript orientée objet](/fr/docs/Learn/JavaScript/Objects#The_Constructor) sur MDN
-- [Opérateur new en JavaScript](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_new) sur MDN
+- [Le constructeur en programmation JavaScript orientée objet](/fr/docs/Learn/JavaScript/Objects#the_constructor) sur MDN
+- [Opérateur new en JavaScript](/fr/docs/Web/JavaScript/Reference/Operators/new) sur MDN

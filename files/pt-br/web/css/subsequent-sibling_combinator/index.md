@@ -1,10 +1,9 @@
 ---
 title: General sibling selectors
 slug: Web/CSS/Subsequent-sibling_combinator
-original_slug: Web/CSS/General_sibling_combinator
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 ## Resumo
 
@@ -41,8 +40,8 @@ p ~ span {
 
 ## Navegadores compatíveis
 
-{{Compat("css.selectors.general_sibling")}}
+{{Compat}}
 
 ## Veja mais
 
-- [Adjacent sibling selectors](/pt-BR/docs/Web/CSS/Adjacent_sibling_selectors)
+- [Adjacent sibling selectors](/pt-BR/docs/Web/CSS/Next-sibling_combinator)

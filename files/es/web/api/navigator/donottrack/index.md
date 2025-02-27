@@ -32,4 +32,4 @@ console.log(navigator.doNotTrack);
 
 ## Vea también
 
-- [Guía sobre el campo Do Not Track](/es/docs/Web/Security/Do_not_track_field_guide)
+- [Guía sobre el campo Do Not Track](/es/docs/Web/HTTP/Headers/DNT)

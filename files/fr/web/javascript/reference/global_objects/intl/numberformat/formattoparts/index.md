@@ -92,7 +92,7 @@ formatter.formatToParts(number);
 ]
 ```
 
-Maintenant que la chaîne est décomposée, on peut la réassembler d'une façon spécifique. On peut, par exemple utiliser {{jsxref("Array.prototype.map()")}}, [une fonction fléchée](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées), une [instruction `switch`](/fr/docs/Web/JavaScript/Reference/Instructions/switch), [des littéraux de gabarits](/fr/docs/Web/JavaScript/Reference/Littéraux_gabarits) et {{jsxref("Array.prototype.reduce()")}}.
+Maintenant que la chaîne est décomposée, on peut la réassembler d'une façon spécifique. On peut, par exemple utiliser {{jsxref("Array.prototype.map()")}}, [une fonction fléchée](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions), une [instruction `switch`](/fr/docs/Web/JavaScript/Reference/Statements/switch), [des littéraux de gabarits](/fr/docs/Web/JavaScript/Reference/Template_literals) et {{jsxref("Array.prototype.reduce()")}}.
 
 ```js
 var numberString = formatter

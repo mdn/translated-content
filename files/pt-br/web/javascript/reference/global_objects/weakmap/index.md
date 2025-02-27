@@ -3,7 +3,7 @@ title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
 ---
 
-{{JSRef("Global_Objects", "WeakMap")}}
+{{JSRef}}
 
 ## Sumário
 
@@ -85,19 +85,16 @@ wm1.has(o1); // false
 
 ## Especificações
 
-| Especificações                                             | Status               | Comentário         |
-| ---------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-weakmap-objects', 'WeakMap')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-weakmap-objects', 'WeakMap')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.WeakMap")}}
+{{Compat}}
 
 ## Veja também
 
 - [WeakMap bug at Mozilla](https://bugzilla.mozilla.org/show_bug.cgi?id=547941)
-- [Hiding Implementation Details with ECMAScript 2015 WeakMaps](http://fitzgeraldnick.com/weblog/53/)
+- [Hiding Implementation Details with ECMAScript 2015 WeakMaps](https://fitzgeraldnick.com/weblog/53/)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}

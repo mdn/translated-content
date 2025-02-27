@@ -9,7 +9,8 @@ HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `fullscreen` 
 
 既定では、最上位の文書およびその同じオリジンの子フレームが全画面モードを要求し、入ることができます。このディレクティブは別オリジンのフレームが全画面モードを使用することを許可したり拒否したりします。同じオリジンのフレームも含みます。
 
-> **メモ:** このディレクティブ (つまり `allow` 属性で設定したもの) と `allowfullscreen` 属性の両方が `<iframe>` 要素に存在する場合、このディレクティブが優先されます。以前は `fullscreen` ディレクティブが `allowfullscreen` 属性と同時に存在しないと動作しないバグがありましたが、Firefox 80 では修正されています ([Firefox バグ 1608358](https://bugzil.la/1608358))。
+> [!NOTE]
+> このディレクティブ (つまり `allow` 属性で設定したもの) と `allowfullscreen` 属性の両方が `<iframe>` 要素に存在する場合、このディレクティブが優先されます。以前は `fullscreen` ディレクティブが `allowfullscreen` 属性と同時に存在しないと動作しないバグがありましたが、Firefox 80 では修正されています ([Firefox バグ 1608358](https://bugzil.la/1608358))。
 
 ## 構文
 
@@ -61,5 +62,5 @@ iframe の属性は、選択的に特定のフレームの機能を有効にし�
 ## 関連情報
 
 - {{HTTPHeader("Feature-Policy")}} ヘッダー
-- [機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)
+- [機能ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)
 - [機能ポリシーの使用](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

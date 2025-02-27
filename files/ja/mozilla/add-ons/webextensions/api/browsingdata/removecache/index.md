@@ -3,9 +3,9 @@ title: browsingData.removeCache()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-ブラウザのキャッシュを消去します。
+ブラウザーのキャッシュを消去します。
 
 この関数は{{WebExtAPIRef("browsingData.RemovalOptions")}} オブジェクトを引数に取りますが無視されます。そのためこの関数を使うとすべてのキャッシュが消去されるため注意してください。
 
@@ -22,7 +22,7 @@ var removing = browser.browsingData.removeCache(
 ### 引数
 
 - `removalOptions` {{optional_inline}}
-  - : {{WebExtAPIRef("browsingData.RemovalOptions")}} オブジェクト このパラメータは無視されます。
+  - : {{WebExtAPIRef("browsingData.RemovalOptions")}} オブジェクト このパラメーターは無視されます。
 
 ### 返り値
 
@@ -30,11 +30,11 @@ var removing = browser.browsingData.removeCache(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.browsingData.removeCache")}}
+{{Compat}}
 
 ## 例
 
-ブラウザキャッシュを消去します。
+ブラウザーキャッシュを消去します。
 
 ```js
 function onRemoved() {
@@ -50,7 +50,8 @@ browser.browsingData.removeCache({}).then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData) API に基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!NOTE]
+> この API は Chromium の [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API に基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

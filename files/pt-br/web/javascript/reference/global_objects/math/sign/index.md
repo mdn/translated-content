@@ -86,7 +86,7 @@ No polyfill acima, nenhuma coerção de tipo extra é necessária para tornar nu
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.sign")}}
+{{Compat}}
 
 ## Veja também
 

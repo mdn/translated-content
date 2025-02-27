@@ -1,11 +1,13 @@
 ---
 title: grid-row-start
 slug: Web/CSS/grid-row-start
+l10n:
+  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
 {{CSSRef}}
 
-**`grid-row-start`** は CSS のプロパティで、グリッドの配置に線または区間を使用したり、使用しなかったりして (自動)、グリッド行内のグリッドアイテムの先頭位置、すなわち{{Glossary("grid areas", "グリッド領域")}}のインラインの先頭側の端を指定します。
+**`grid-row-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、グリッド行の中におけるグリッドアイテムの先頭の位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}のインライン方向の先頭の端を指定します。
 
 {{EmbedInteractiveExample("pages/css/grid-row-start.html")}}
 
@@ -16,21 +18,22 @@ slug: Web/CSS/grid-row-start
 grid-row-start: auto;
 
 /* <custom-ident> 値 */
-grid-row-start: somegridarea;
+grid-row-start: some-grid-area;
 
 /* <integer> + <custom-ident> 値 */
 grid-row-start: 2;
-grid-row-start: somegridarea 4;
+grid-row-start: some-grid-area 4;
 
 /* span + <integer> + <custom-ident> 値 */
 grid-row-start: span 3;
-grid-row-start: span somegridarea;
-grid-row-start: 5 somegridarea span;
+grid-row-start: span some-grid-area;
+grid-row-start: 5 some-grid-area span;
 
 /* グローバル値 */
 grid-row-start: inherit;
 grid-row-start: initial;
 grid-row-start: revert;
+grid-row-start: revert-layer;
 grid-row-start: unset;
 ```
 
@@ -50,7 +53,8 @@ grid-row-start: unset;
 
   - : `<custom-ident>-start` という名前の付いた線がある場合、これはそのような線の先頭がグリッドアイテムの配置に関わります。
 
-    > **メモ:** 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-row-start: foo;` と指定すると名前付きグリッド領域の先頭側の端を選択します (その前に `foo-start` という名前の線が明示的に存在しない限り)。
+    > [!NOTE]
+    > 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-row-start: foo;` と指定すると名前付きグリッド領域の先頭側の端を選択します (その前に `foo-start` という名前の線が明示的に存在しない限り)。
 
 そうでなければ、これは `<custom-ident>` に沿って整数の `1` が指定されたものとして扱われます。
 
@@ -86,7 +90,7 @@ grid-row-start: unset;
 
 #### HTML
 
-```html
+```html live-sample___setting_row_start_for_a_grid_item
 <div class="wrapper">
   <div class="box1">One</div>
   <div class="box2">Two</div>
@@ -98,7 +102,7 @@ grid-row-start: unset;
 
 #### CSS
 
-```css
+```css live-sample___setting_row_start_for_a_grid_item
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -119,7 +123,7 @@ grid-row-start: unset;
 }
 ```
 
-```css hidden
+```css hidden live-sample___setting_row_start_for_a_grid_item
 * {
   box-sizing: border-box;
 }
@@ -160,6 +164,10 @@ grid-row-start: unset;
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("grid-row-end")}}, {{cssxref("grid-row")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-column")}}
-- グリッドレイアウトガイド: [CSS グリッドでの行ベースの配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-- 動画チュートリアル: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_
+- {{cssxref("grid-row-end")}}
+- {{cssxref("grid-row")}}
+- {{cssxref("grid-column-start")}}
+- {{cssxref("grid-column-end")}}
+- {{cssxref("grid-column")}}
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- 動画: [Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)

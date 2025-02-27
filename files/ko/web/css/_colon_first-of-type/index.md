@@ -1,5 +1,5 @@
 ---
-title: ":first-of-type"
+title: :first-of-type
 slug: Web/CSS/:first-of-type
 ---
 
@@ -15,7 +15,8 @@ p:first-of-type {
 }
 ```
 
-> **참고:** 초기 정의에서는 부모가 있는 요소만 선택할 수 있었습니다. Selectors Level 4부터는 이 제한이 사라졌습니다.
+> [!NOTE]
+> 초기 정의에서는 부모가 있는 요소만 선택할 수 있었습니다. Selectors Level 4부터는 이 제한이 사라졌습니다.
 
 ## 구문
 

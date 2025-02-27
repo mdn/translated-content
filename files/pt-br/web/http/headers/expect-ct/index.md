@@ -13,11 +13,13 @@ Os requerimentos do CT podem ser satisfeitos utilizando qualquer um dos seguinte
 - A extensão TLS do tipo `signed_certificate_timestamp` enviada durante um _handshake_.
 - Dando suporte a OCSP (que é, a extensão TLS `status_request`) e provendo uma `SignedCertificateTimestampList`
 
-> **Nota:** Quando um site habilita o cabeçalho `Expect-CT`, ele está requisitando que o navegador verifique se qualquer certificado para aquele site aparece em **[_logs_ CT públicos](https://www.certificate-transparency.org/known-logs)**.
+> [!NOTE]
+> Quando um site habilita o cabeçalho `Expect-CT`, ele está requisitando que o navegador verifique se qualquer certificado para aquele site aparece em **[_logs_ CT públicos](https://www.certificate-transparency.org/known-logs)**.
 
 > **Nota:** **Navegadores ignoram** o cabeçalho `Expect-CT` através do HTTP; o cabeçalho só tem efeito em conexões HTTPS.
 
-> **Nota:** O `Expect-CT` provavelmente se tornará obsoleto em Junho de 2021. Desde Maio de 2018, esperasse que novos certificados suportem SCTs por padrão. Certificados de antes de Maio de 2018 eram permitidos ter uma vida útil de 39 meses, todos eles serão expirados em Junho de 2021.
+> [!NOTE]
+> O `Expect-CT` provavelmente se tornará obsoleto em Junho de 2021. Desde Maio de 2018, esperasse que novos certificados suportem SCTs por padrão. Certificados de antes de Maio de 2018 eram permitidos ter uma vida útil de 39 meses, todos eles serão expirados em Junho de 2021.
 
 <table class="properties">
   <tbody>
@@ -84,4 +86,4 @@ Versões do Chrome são desenvolvidas para parar execução de políticas de `Ex
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Expect-CT")}}
+{{Compat}}

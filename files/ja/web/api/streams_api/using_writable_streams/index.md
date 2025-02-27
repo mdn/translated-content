@@ -9,9 +9,11 @@ l10n:
 
 JavaScript 開発者として、プログラムでストリームにデータを書き込むことはとても便利です。この記事では、[ストリーム API](/ja/docs/Web/API/Streams_API) の書き込み可能なストリームの機能について説明します。
 
-> **メモ:** この記事は、書き込み可能なストリームの用途を理解し、高レベルの概念を理解していることを前提としています。 そうでない場合は、まず[ストリームの概念と使用方法の概要](/ja/docs/Web/API/Streams_API#概念と使用方法)と[ストリーム API の概念](/ja/docs/Web/API/Streams_API/Concepts)の記事を読んでから、戻ってくることをお勧めします。
+> [!NOTE]
+> この記事は、書き込み可能なストリームの用途を理解し、高レベルの概念を理解していることを前提としています。 そうでない場合は、まず[ストリームの概念と使用方法の概要](/ja/docs/Web/API/Streams_API#概念と使用方法)と[ストリーム API の概念](/ja/docs/Web/API/Streams_API/Concepts)の記事を読んでから、戻ってくることをお勧めします。
 
-> **メモ:** 読み取り可能なストリームに関する情報を探している場合は、代わりに[読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)や[読み取り可能なバイトストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams)をご覧ください。
+> [!NOTE]
+> 読み取り可能なストリームに関する情報を探している場合は、代わりに[読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)や[読み取り可能なバイトストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams)をご覧ください。
 
 ## 例の紹介
 

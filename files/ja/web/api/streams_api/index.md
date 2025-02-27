@@ -17,19 +17,20 @@ l10n:
 
 しかし、この機能はこれまで JavaScript では利用できませんでした。以前は、ある種のリソース（動画やテキストファイルなど）を処理したい場合、ファイル全体をダウンロードして、適切な形式にデシリアライズされるのを待ち、それからすべてのデータを処理しなければなりませんでした。
 
-ストリーム API を使えば、バッファーや文字列、blob ナドを生成する必要なく、利用できるようになったらすぐに、JavaScript で生のデータを少しずつ処理し始めることができます。
+ストリーム API を使えば、バッファーや文字列、blob などを生成する必要なく、利用できるようになったらすぐに、JavaScript で生のデータを少しずつ処理し始めることができます。
 
 ![ストリーム API の基本概念は、ネットワークからデータをいくつかのデータパケットに分割して取得することです。データは処理され、データパケットのストリームとしてブラウザーに送信されます。](concept.png)
 
 さらに利点もあります。 ストリームの開始または終了の検出、ストリームの連鎖、エラー処理と必要に応じたストリームのキャンセル、ストリームの読み取り速度への対応が可能です。
 
-ストリームの使い方は、レスポンスをストリームとして利用できるかどうかにかかっています。例えば、[読み取りリクエスト](/ja/docs/Web/API/fetch)が成功すると返されるレスポンス本体は {{domxref("ReadableStream")}} となり、{{domxref("ReadableStream.getReader()")}} で作成したリーダーで読み取ることができます。
+ストリームの使い方は、レスポンスをストリームとして利用できるかどうかにかかっています。例えば、[読み取りリクエスト](/ja/docs/Web/API/Window/fetch)が成功すると返されるレスポンス本体は {{domxref("ReadableStream")}} となり、{{domxref("ReadableStream.getReader()")}} で作成したリーダーで読み取ることができます。
 
 より複雑な用途では、例えば[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)内でデータを処理するために、 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} コンストラクターを使用して独自のストリームを作成することができます。
 
 {{domxref("WritableStream")}} を使用してストリームにデータを書き込むこともできます。
 
-> **メモ:** ストリームの理論と実践の詳細については、[ストリーム API の概念](/ja/docs/Web/API/Streams_API/Concepts)、[読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)、[読み取り可能なバイトストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams)、[書き込み可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_writable_streams)の記事をご覧ください。
+> [!NOTE]
+> ストリームの理論と実践の詳細については、[ストリーム API の概念](/ja/docs/Web/API/Streams_API/Concepts)、[読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)、[読み取り可能なバイトストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams)、[書き込み可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_writable_streams)の記事をご覧ください。
 
 ## ストリームのインターフェイス
 
@@ -68,9 +69,9 @@ l10n:
 ### 他の API の拡張
 
 - {{domxref("Request")}}
-  - : 新しい `Request` オブジェクトが構築されると、その `RequestInit` 辞書の `body` プロパティで {{domxref("ReadableStream")}} を渡すことができます。 次に、この `Request` を {{domxref("fetch()")}} に渡して、ストリームのフェッチを開始することができます。
+  - : 新しい `Request` オブジェクトが構築されると、その `RequestInit` 辞書の `body` プロパティで {{domxref("ReadableStream")}} を渡すことができます。 次に、この `Request` を {{domxref("Window/fetch", "fetch()")}} に渡して、ストリームのフェッチを開始することができます。
 - {{domxref("Response.body")}}
-  - : 成功した[フェッチリクエスト](/ja/docs/Web/API/fetch)によって返されたレスポンスの本体で、既定で {{domxref("ReadableStream")}} として取り出すことができ、リーダーを装着することができます。
+  - : 成功した[フェッチリクエスト](/ja/docs/Web/API/Window/fetch)によって返されたレスポンスの本体で、既定で {{domxref("ReadableStream")}} として取り出すことができ、リーダーを装着することができます。
 
 ### ByteStream 関連のインターフェイス
 

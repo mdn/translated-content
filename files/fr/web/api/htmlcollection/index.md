@@ -5,7 +5,7 @@ slug: Web/API/HTMLCollection
 
 {{APIRef("HTML DOM")}}
 
-L'interface **HTMLCollection** est constituée d'une collection générique (à la manière d'un tableau similaire à [arguments](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments)) d'éléments (dans l'ordre du document) et offre des méthodes et des propriétés pour sélectionner ces éléments dans la liste.
+L'interface **HTMLCollection** est constituée d'une collection générique (à la manière d'un tableau similaire à [arguments](/fr/docs/Web/JavaScript/Reference/Functions/arguments)) d'éléments (dans l'ordre du document) et offre des méthodes et des propriétés pour sélectionner ces éléments dans la liste.
 
 **Note:** Cette interface est appelée `HTMLCollection` pour des raisons historiques (avant DOM4, les collections implémentant cette interface pouvaient uniquement êtres constituées d'élements HTML).
 

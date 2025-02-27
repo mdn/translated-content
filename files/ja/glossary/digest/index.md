@@ -3,6 +3,8 @@ title: Digest
 slug: Glossary/Digest
 ---
 
+{{GlossarySidebar}}
+
 ダイジェストはメッセージ全体から{{glossary("cryptographic hash function", "ハッシュ関数")}}によって生成された小さな値です。理想的にはダイジェストは即座に計算でき、不可逆であり、予測不可能なため、メッセージが改ざんされたかどうかの判定に利用することができます。
 
 ダイジェストを使用して、下記のようないくつかのタスクを実行できます:

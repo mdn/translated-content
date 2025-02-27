@@ -7,7 +7,34 @@ slug: Web/HTML/Element/input/text
 
 Los elementos {{HTMLElement("input")}} de tipo `text` crean campos de texto básicos de una sola línea.
 
-{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="name">Name (4 to 8 characters):</label>
+
+<input
+  type="text"
+  id="name"
+  name="name"
+  required
+  minlength="4"
+  maxlength="8"
+  size="10" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
 
@@ -92,21 +119,22 @@ Los valores del atributo `list` son el {{DOMxRef("Element.id", "id")}} de un ele
 
 El número máximo de caracteres (como unidades de código UTF-16) que el usuario puede ingresar en la entrada de `text`. Debe ser un valor entero 0 o superior. Si no se especifica `maxlength`, o se especifica un valor no válido, el `text` de la entrada no tiene una longitud máxima. Este valor también debe ser mayor o igual que el valor de [`minlength`](/es/docs/Web/HTML/Element/input#minlength).
 
-La entrada fallará [restricción de validación](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation) si la longitud del valor de texto del campo es mayor que [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength) Unidades de código UTF-16 de longitud. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
+La entrada fallará [restricción de validación](/es/docs/Web/HTML/Constraint_validation) si la longitud del valor de texto del campo es mayor que [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength) Unidades de código UTF-16 de longitud. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
 
 ### `minlength`
 
 El número mínimo de caracteres (como unidades de código UTF-16) que el usuario puede ingresar en la entrada de `texto`. Debe ser un valor entero no negativo menor o igual al valor especificado por [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength). Si no se especifica `minlength`, o se especifica un valor no válido, la entrada de `text` no tiene una longitud mínima.
 
-La entrada fallará [restricción de validación](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation) si la longitud del texto ingresado en el campo es menor que `minlength` Unidades de código UTF-16 de longitud. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
+La entrada fallará [restricción de validación](/es/docs/Web/HTML/Constraint_validation) si la longitud del texto ingresado en el campo es menor que `minlength` Unidades de código UTF-16 de longitud. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
 
 ### `pattern`
 
-El atributo `pattern`, cuando se especifica, es una expresión regular que el [`value`](/es/docs/Web/HTML/Global_attributes#value) de la entrada debe coincidir para que el valor pase [restricciones de validación](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation). Debe ser una expresión regular de JavaScript válida, como la usada por el tipo {{JSxRef("RegExp")}} y como se documenta en la [guía sobre expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions); el indicador `'u'` se especifica al compilar la expresión regular, de modo que el patrón se trata como una secuencia de puntos de código Unicode, en lugar de ASCII. No se deben especificar barras diagonales alrededor del texto del patrón.
+El atributo `pattern`, cuando se especifica, es una expresión regular que el [`value`](/es/docs/Web/HTML/Global_attributes#value) de la entrada debe coincidir para que el valor pase [restricciones de validación](/es/docs/Web/HTML/Constraint_validation). Debe ser una expresión regular de JavaScript válida, como la usada por el tipo {{JSxRef("RegExp")}} y como se documenta en la [guía sobre expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions); el indicador `'u'` se especifica al compilar la expresión regular, de modo que el patrón se trata como una secuencia de puntos de código Unicode, en lugar de ASCII. No se deben especificar barras diagonales alrededor del texto del patrón.
 
 Si el patrón especificado no se especifica o no es válido, no se aplica ninguna expresión regular y este atributo se ignora por completo.
 
-> **Nota:** Utiliza el atributo [`title`](/es/docs/Web/HTML/Element/input#title) para especificar el texto que la mayoría de los navegadores mostrarán como información sobre herramientas para explicar cuáles son los requisitos para coincidir con el patrón. También debes incluir otro texto explicativo cercano.
+> [!NOTE]
+> Utiliza el atributo [`title`](/es/docs/Web/HTML/Element/input#title) para especificar el texto que la mayoría de los navegadores mostrarán como información sobre herramientas para explicar cuáles son los requisitos para coincidir con el patrón. También debes incluir otro texto explicativo cercano.
 
 Consulta [Especificación de un patrón](#especificación_de_un_patrón) para obtener más detalles y un ejemplo.
 
@@ -116,13 +144,15 @@ El atributo `placeholder` es una cadena que proporciona una breve pista al usuar
 
 Si el contenido del control tiene una direccionalidad ({{Glossary("LTR")}} o {{Glossary("RTL")}}) pero necesitas presentar el marcador de posición en la direccionalidad opuesta, puedes usar caracteres de formato de algoritmo bidireccional Unicode para anular la direccionalidad dentro del marcador de posición; consulta [Anulación de BiDi mediante caracteres de control Unicode](/es/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm#anulación_de_bidi_mediante_caracteres_de_control_unicode) para esos caracteres.
 
-> **Nota:** Evita utilizar el atributo `placeholder` si puedes. No es tan útil semánticamente como otras formas de explicar tu formulario y puede causar problemas técnicos inesperados con tu contenido. Consulta [Etiquetas y marcadores de posición](/es/docs/Web/HTML/Element/input#etiquetas_y_marcadores_de_posición) para obtener más información.
+> [!NOTE]
+> Evita utilizar el atributo `placeholder` si puedes. No es tan útil semánticamente como otras formas de explicar tu formulario y puede causar problemas técnicos inesperados con tu contenido. Consulta [Etiquetas y marcadores de posición](/es/docs/Web/HTML/Element/input#etiquetas_y_marcadores_de_posición) para obtener más información.
 
 ### `readonly`
 
 Un atributo booleano que, si está presente, significa que el usuario no puede editar este campo. Su `value`, sin embargo, aún se puede cambiar mediante el código JavaScript configurando directamente la propiedad {{DOMxRef("HTMLInputElement.value")}}.
 
-> **Nota:** Debido a que un campo de solo lectura no puede tener un valor, `required` no tiene ningún efecto en las entradas con el atributo `readonly` también especificado.
+> [!NOTE]
+> Debido a que un campo de solo lectura no puede tener un valor, `required` no tiene ningún efecto en las entradas con el atributo `readonly` también especificado.
 
 ### `size`
 
@@ -167,7 +197,8 @@ Una extensión de Safari, el atributo `autocorrect` es una cadena que indica si 
 
 Una extensión de Mozilla, compatible con Firefox para Android, que proporciona una pista sobre qué tipo de acción se realizará si el usuario presiona la tecla <kbd>Intro</kbd> o <kbd>Retorno</kbd> mientras edita el campo. Esta información se usa para decidir qué tipo de etiqueta usar en la tecla <kbd>Intro</kbd> del teclado virtual.
 
-> **Nota:** Este [se ha estandarizado](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) como el atributo global [`enterkeyhint`](/es/docs/Web/HTML/Global_attributes#enterkeyhint), pero aún no está ampliamente implementado. Para ver el estado del cambio que se está implementando en Firefox, consulta [Error 1490661 en Firefox](https://bugzil.la/1490661).
+> [!NOTE]
+> Este [se ha estandarizado](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) como el atributo global [`enterkeyhint`](/es/docs/Web/HTML/Global_attributes#enterkeyhint), pero aún no está ampliamente implementado. Para ver el estado del cambio que se está implementando en Firefox, consulta [Error 1490661 en Firefox](https://bugzil.la/1490661).
 
 Los valores permitidos son: `go`, `done`, `next`, `search` y `send`. El navegador decide, utilizando esta sugerencia, qué etiqueta poner en la tecla Intro.
 
@@ -248,7 +279,8 @@ El tamaño físico del cuadro de entrada se puede controlar mediante el atributo
 
 Los elementos {{HTMLElement("input")}} de tipo `text` no tienen validación automática aplicada (ya que una entrada de texto básica debe ser capaz de aceptar cualquier cadena arbitraria), pero hay algunas opciones de validación de lado del cliente disponibles, que verás a continuación.
 
-> **Nota:** La validación del formulario HTML _no_ sustituye a la de los scripts del servidor que garantizan que los datos introducidos tengan el formato adecuado. Es demasiado fácil para alguien realizar ajustes en el HTML que le permitan omitir la validación o eliminarla por completo. También es posible que alguien simplemente omita tu HTML por completo y envíe los datos directamente a tu servidor. Si tu código del lado del servidor no valida los datos que recibe, podría ocurrir un desastre cuando se ingresen en tu base de datos datos con formato incorrecto (o datos que son demasiado grandes, son del tipo incorrecto, etc.).
+> [!NOTE]
+> La validación del formulario HTML _no_ sustituye a la de los scripts del servidor que garantizan que los datos introducidos tengan el formato adecuado. Es demasiado fácil para alguien realizar ajustes en el HTML que le permitan omitir la validación o eliminarla por completo. También es posible que alguien simplemente omita tu HTML por completo y envíe los datos directamente a tu servidor. Si tu código del lado del servidor no valida los datos que recibe, podría ocurrir un desastre cuando se ingresen en tu base de datos datos con formato incorrecto (o datos que son demasiado grandes, son del tipo incorrecto, etc.).
 
 ### Una nota sobre estilizado
 
@@ -375,11 +407,12 @@ Esto se renderiza así:
 
 Si intentas enviar el formulario con menos de 4 caracteres, se te dará un mensaje de error apropiado (que difiere entre los navegadores). Si intentas ingresar más de 8 caracteres, el navegador no te lo permitirá.
 
-> **Nota:** Si especificas un `minlength` pero no especificas `required`, la entrada se considera válida, ya que no se requiere que el usuario especifique un valor.
+> [!NOTE]
+> Si especificas un `minlength` pero no especificas `required`, la entrada se considera válida, ya que no se requiere que el usuario especifique un valor.
 
 ### Especificación de un patrón
 
-Puedes utilizar el atributo [`pattern`](/es/docs/Web/HTML/Element/input#pattern) para especificar una expresión regular con la que el valor ingresado debe coincidir para que se considere válido (ve un curso intensivo simple en [Validación con una expresión regular](/es/docs/Learn/HTML/Forms/Form_validation#Validación_con_una_expresión_regular) sobre el uso de expresiones regulares para validar entradas).
+Puedes utilizar el atributo [`pattern`](/es/docs/Web/HTML/Element/input#pattern) para especificar una expresión regular con la que el valor ingresado debe coincidir para que se considere válido (ve un curso intensivo simple en [Validación con una expresión regular](/es/docs/Learn/Forms/Form_validation#validaci%c3%b3n_con_una_expresi%c3%b3n_regular) sobre el uso de expresiones regulares para validar entradas).
 
 El siguiente ejemplo restringe el valor a 4-8 caracteres y requiere que contenga solo letras minúsculas.
 
@@ -440,7 +473,7 @@ Esto se renderiza así:
 
 ## Ejemplos
 
-Puedes ver buenos ejemplos de entradas de texto utilizadas en contexto en los artículos [Mi primer formulario HTML](/es/docs/Learn/HTML/Forms/Your_first_HTML_form) y [Cómo estructurar un formulario HTML](/es/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form).
+Puedes ver buenos ejemplos de entradas de texto utilizadas en contexto en los artículos [Mi primer formulario HTML](/es/docs/Learn/Forms/Your_first_form) y [Cómo estructurar un formulario HTML](/es/docs/Learn/Forms/How_to_structure_a_web_form).
 
 ## Especificaciones
 
@@ -452,8 +485,8 @@ Puedes ver buenos ejemplos de entradas de texto utilizadas en contexto en los ar
 
 ## Ve también
 
-- [Formularios HTML](/es/docs/Learn/HTML/Forms)
+- [Formularios HTML](/es/docs/Learn/Forms)
 - {{HTMLElement("input")}} y la interfaz {{DOMxRef("HTMLInputElement")}} en que se basa.
 - [`<input type="search">`](/es/docs/Web/HTML/Element/input/search)
 - {{HTMLElement("textarea")}}: Campo de entrada de texto multilínea
-- [Compatibilidad de propiedades CSS](/es/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [Compatibilidad de propiedades CSS](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

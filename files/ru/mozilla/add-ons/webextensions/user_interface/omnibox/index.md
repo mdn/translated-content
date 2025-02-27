@@ -3,7 +3,7 @@ title: Адресная строка
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Используя {{WebExtAPIRef("omnibox")}} API, расширения могут взаимодействовать с адресной строкой и заполнять её выпадающий список предложений своими значениями, после введения пользователем определённого ключевого слова.
 

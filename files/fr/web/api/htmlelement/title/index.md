@@ -7,7 +7,8 @@ slug: Web/API/HTMLElement/title
 
 La propriété **`HTMLElement.title`** représente le titre de l'élément, le texte habituellement affiché dans une fenêtre contextuelle d''info-bulle' lorsque la souris survole le nœud affiché.
 
-> **Note :** Si un nœud n'a pas d'attribut `title`, alors l'action par défaut est de l'hériter de son nœud parent, qui peut à son tour l'hériter de son nœud parent, etc..
+> [!NOTE]
+> Si un nœud n'a pas d'attribut `title`, alors l'action par défaut est de l'hériter de son nœud parent, qui peut à son tour l'hériter de son nœud parent, etc..
 >
 > ```html
 > <div title="InfoCool">
@@ -39,4 +40,4 @@ bouton1.title = "cliquer pour rafraîchir";
 
 ## Voir aussi
 
-- L'attribut HTML global [**title**](/fr/docs/Web/HTML/Attributs_universels/title).
+- L'attribut HTML global [**title**](/fr/docs/Web/HTML/Global_attributes/title).

@@ -3,18 +3,20 @@ title: fill-opacity
 slug: Web/SVG/Attribute/fill-opacity
 ---
 
+{{SVGRef}}
+
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 Этот атрибут определяет прозрачность цвета заполнения содержимого элемента.
 
 ## Контекст использования
 
-| Категория                  | Атрибут оформления                                                                  |
-| -------------------------- | ----------------------------------------------------------------------------------- |
-| Значение                   | [\<opacity-value>](/en/SVG/Content_type#Opacity_value) \| inherit                   |
-| Предустановленное значение | 1                                                                                   |
-| Анимируемый                | Да                                                                                  |
-| Спецификация               | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#FillOpacityProperty) |
+| Категория                  | Атрибут оформления                                                                   |
+| -------------------------- | ------------------------------------------------------------------------------------ |
+| Значение                   | [\<opacity-value>](/en-US/SVG/Content_type#opacity_value) \| inherit                 |
+| Предустановленное значение | 1                                                                                    |
+| Анимируемый                | Да                                                                                   |
+| Спецификация               | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/painting.html#FillOpacityProperty) |
 
 ## Примеры
 
@@ -37,8 +39,8 @@ slug: Web/SVG/Attribute/fill-opacity
 
 Следующие группы элементов могут быть использованы с атрибутом `fill-opacity`:
 
-- [Элементы графических форм (Shape elements](/en/SVG/Element#Shape))
-- [Текстовые элементы](/en/SVG/Element#TextContent)
+- [Элементы графических форм (Shape elements](/en-US/SVG/Element#shape))
+- [Текстовые элементы](/en-US/SVG/Element#textcontent)
 
 ## Смотрите также
 

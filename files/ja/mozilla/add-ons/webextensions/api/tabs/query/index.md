@@ -3,7 +3,7 @@ title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 指定されたプロパティを持つ全てのタブを取得します。何も指定しない場合、全てのタブを取得します。
 
@@ -17,7 +17,7 @@ var querying = browser.tabs.query(
 );
 ```
 
-### パラメータ
+### パラメーター
 
 - `queryInfo`
 
@@ -34,7 +34,7 @@ var querying = browser.tabs.query(
     - `currentWindow`{{optional_inline}}
       - : `boolean`. カレントウインドウの中のタブか。
     - `discarded`{{optional_inline}}
-      - : `boolean`. タブが discard されているか。 discard されたタブはコンテンツがメモリからアンロードされているが、タブの一覧には表示されたままになります。コンテンツはタブが次にアクティブになったときにリロードされます。
+      - : `boolean`. タブが discard されているか。 discard されたタブはコンテンツがメモリーからアンロードされているが、タブの一覧には表示されたままになります。コンテンツはタブが次にアクティブになったときにリロードされます。
     - `highlighted`{{optional_inline}}
       - : `boolean`. ハイライトされているか。
     - `index`{{optional_inline}}
@@ -66,7 +66,7 @@ var querying = browser.tabs.query(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs.query", 10)}}
+{{Compat}}
 
 ## 例
 
@@ -182,7 +182,8 @@ querying.then(logTabs, onError);
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-duplicate) API に基づいています。 This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!NOTE]
+> この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-duplicate) API に基づいています。 This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

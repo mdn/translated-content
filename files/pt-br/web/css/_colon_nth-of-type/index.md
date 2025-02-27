@@ -1,5 +1,5 @@
 ---
-title: ":nth-of-type()"
+title: :nth-of-type()
 slug: Web/CSS/:nth-of-type
 ---
 
@@ -71,7 +71,7 @@ p:nth-of-type(1) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.nth-of-type")}}
+{{Compat}}
 
 ## Veja também
 

@@ -3,6 +3,8 @@ title: ウェブコンテンツ・アクセシビリティガイドラインを�
 slug: Web/Accessibility/Understanding_WCAG
 ---
 
+{{AccessibilitySidebar}}
+
 この一連の記事では、W3C {{glossary("WCAG","ウェブコンテンツ・アクセシビリティガイドライン")}} 2.0 または 2.1（WCAG、Web Content Accessibility Guidelines）で概説されている推奨事項に準拠するために必要な手順を理解するのに役立つ簡単な説明を提供します。
 
 WCAG 2.0 と 2.1 は、さまざまな障碍を持つ人々にとってウェブコンテンツをよりアクセスしやすくするための詳細なガイドラインを提供しています。 それは包括的ですが信じられないほど詳細であり、そして迅速な理解を得ることは非常に困難です。 このため、さまざまな推奨事項を満たすために必要な実際的な手順をまとめ、必要に応じて詳細へのリンクを追加しました。
@@ -16,7 +18,7 @@ WCAG は大きく 4 つの原則に分割されます — ウェブコンテン�
 - [知覚可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable): ユーザーは、1 つ以上の感覚を使って何らかの方法でそれを知覚できなければなりません。
 - [操作可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable): ユーザーは、UI 要素を制御できなければなりません（例えば、ボタンは、マウス、キーボード、音声コマンドなど、何らかの方法でクリック可能でなければならない）。
 - [理解可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable): コンテンツはそのユーザーにとって理解可能でなければなりません。
-- [堅牢](/ja/docs/Web/Accessibility/Understanding_WCAG/Robust): コンテンツは、現在および将来にわたって、さまざまなブラウザで機能する、広く採用されているウェブ標準を使用して開発する必要があります。
+- [堅牢](/ja/docs/Web/Accessibility/Understanding_WCAG/Robust): コンテンツは、現在および将来にわたって、さまざまなブラウザーで機能する、広く採用されているウェブ標準を使用して開発する必要があります。
 
 ## WCAG 2.0 と 2.1 のどちらを使うべきか？
 
@@ -44,4 +46,4 @@ WCAG 2.1 には以下が含まれます。
 
 このガイドは、より良く、よりアクセスしやすいウェブサイトを構築するのに役立つ実用的な情報を提供することを目的としています。 しかし、私たちは弁護士ではありません、そしてこれのどれも法的助言を構成しません。 ウェブのアクセシビリティが法的にどのような意味を持つのかを心配している場合は、あなたの国や地域のウェブや公共のリソースに対するアクセシビリティを規定する特定の法律を調べ、有資格の弁護士に相談することをお勧めします。
 
-[アクセシビリティとは？](/ja/docs/Learn/Accessibility/What_is_accessibility)と、その中の[アクセシビリティのガイドラインと法律](/ja/docs/Learn/Accessibility/What_is_accessibility#Accessibility_guidelines_and_the_law)のセクションには、より関連性の高い情報が記載されています。
+[アクセシビリティとは？](/ja/docs/Learn/Accessibility/What_is_accessibility)と、その中の[アクセシビリティのガイドラインと法律](/ja/docs/Learn/Accessibility/What_is_accessibility#accessibility_guidelines_and_the_law)のセクションには、より関連性の高い情報が記載されています。

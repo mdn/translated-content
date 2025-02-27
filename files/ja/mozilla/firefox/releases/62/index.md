@@ -28,7 +28,7 @@ Firefox 62 は、米国時間 2018 年 9 月 5 日 にリリースされまし�
   :screenshot <filename.png> --fullpage
   ```
 
-  `<filename.png>` は、希望するファイル名です。このファイルは、ダウンロードフォルダーに保存されます。`--fullpage` は省略可能なパラメーターであり、指定するとウェブページ全体を保存します。また、ファイル名に `-fullpage` を付加します。このコマンドで使用可能なすべてのオプションは、 `:screenshot --help` で表示できます。
+  `<filename.png>` は、希望するファイル名です。このファイルは、ダウンロードフォルダーに保存されます。`--fullpage` は省略可能な引数であり、指定するとウェブページ全体を保存します。また、ファイル名に `-fullpage` を付加します。このコマンドで使用可能なすべてのオプションは、 `:screenshot --help` で表示できます。
 
 #### 廃止
 
@@ -58,7 +58,7 @@ _変更なし。_
 - {{jsxref("Array.prototype.flat()")}} および {{jsxref("Array.prototype.flatMap()")}} メソッドをデフォルトで有効化しました ([Firefox バグ 1435813](https://bugzil.la/1435813))。
 - コンテキスト固有のメタデータを JavaScript モジュールに公開するための、[`import.meta`](/ja/docs/Web/JavaScript/Reference/Operators/import.meta) プロパティを実装しました ([Firefox バグ 1427610](https://bugzil.la/1427610))。
 - JavaScript の [文字列リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) で、 U+2028 LINE SEPARATOR や U+2029 PARAGRAPH SEPARATOR の文字を直接含めることが可能になりました。この結果、{{jsxref("JSON")}} 構文が JavaScript リテラル構文のサブセットになりました ([Firefox バグ 1435828](https://bugzil.la/1435828) および TC39 提案 [json-superset](https://github.com/tc39/proposal-json-superset))。
-- [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays) の境界を超える添字に対して、{{jsxref("Reflect.defineProperty()")}} および {{jsxref("Reflect.set()")}} が `true` ではなく `false` を返すようになりました ([Firefox バグ 1308735](https://bugzil.la/1308735))。
+- [型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays) の境界を超える添字に対して、{{jsxref("Reflect.defineProperty()")}} および {{jsxref("Reflect.set()")}} が `true` ではなく `false` を返すようになりました ([Firefox バグ 1308735](https://bugzil.la/1308735))。
 
 #### 廃止
 

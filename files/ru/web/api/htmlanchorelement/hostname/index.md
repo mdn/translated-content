@@ -3,7 +3,7 @@ title: HTMLHyperlinkElementUtils.hostname
 slug: Web/API/HTMLAnchorElement/hostname
 ---
 
-{{ApiRef("URL API")}}
+{{APIRef("HTML DOM")}}
 
 Свойство **`HTMLHyperlinkElementUtils.hostname`** – это {{domxref("USVString")}}, содержащий домен.
 

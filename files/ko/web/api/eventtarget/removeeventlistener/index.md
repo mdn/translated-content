@@ -11,7 +11,8 @@ slug: Web/API/EventTarget/removeEventListener
 
 {{domxref("EventTarget")}}의 어느 수신기 중 하나가 이벤트를 처리하는 중에 다른 수신기를 제거할 경우, 제거된 [이벤트 수신기](/ko/docs/Web/API/EventTarget/addEventListener#이벤트_수신기_콜백)는 현재 이벤트에 대해 발동하지 않습니다. 그러나 다시 부착할 수는 있습니다.
 
-> **경고:** 같은 수신기를 다른 캡처 플래그 값으로 두 번, 즉 한 번은 `capture` 플래그를 지정하고 한 번은 지정하지 않은 채 부착하는 경우 각각 따로따로 제거해야 합니다. 캡처 플래그를 지정한 수신기의 제거는 비 캡처 수신기에 영향을 주지 않고, 그 반대도 마찬가지입니다.
+> [!WARNING]
+> 같은 수신기를 다른 캡처 플래그 값으로 두 번, 즉 한 번은 `capture` 플래그를 지정하고 한 번은 지정하지 않은 채 부착하는 경우 각각 따로따로 제거해야 합니다. 캡처 플래그를 지정한 수신기의 제거는 비 캡처 수신기에 영향을 주지 않고, 그 반대도 마찬가지입니다.
 
 {{domxref("EventTarget.addEventListener", "addEventListener()")}}에 {{domxref("AbortSignal")}}을 지정한 후, 나중에 {{domxref("AbortSignal.abort", "abort()")}}를 호출해서 수신기를 제거하는 방법도 있습니다.
 

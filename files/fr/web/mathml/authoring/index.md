@@ -3,6 +3,8 @@ title: Éditer du MathML
 slug: Web/MathML/Authoring
 ---
 
+{{MathMLRef}}
+
 Cette page explique comment écrire des formules mathématiques en utilisant le langage MathML. À l'instar du HTML, le MathML est décrit par des balises et des attributs. Le code source HTML devient lourd lorsque votre document contient des structures avancées telles que des listes ou tableaux mais heureusement il existe plusieurs générateurs de HTML à partir de notations simples, des éditeurs WYSIWYG ainsi que des systèmes de gestions de contenu (CMS) qui aide à l'écriture de page Web.
 
 Les notations mathématiques sont encore plus complexes, avec des structures telles que les fractions, les racines carrées ou les matrices qui sont susceptibles de nécessiter leur propre balisage. Par conséquent, de bons outils d'édition MathML sont encore plus importants et nous en décrivons quelques-uns ci-dessous. En particulier, l'équipe MathML de Mozilla a développé [TeXZilla](https://github.com/fred-wang/TeXZilla/), un convertisseur Javascript de LaTeX vers MathML compatible avec Unicode, dont le but est d'être utilisé dans divers scénarios décrits ici. Bien sûr, la liste n'est pas exhaustive et vous êtes invité à jeter un œil à la [liste du W3C des logiciels MathML (en)](https://www.w3.org/Math/Software/) où vous pouvez trouver divers outils.
@@ -86,7 +88,7 @@ var isWebKit =
 
 #### Les fontes mathématiques
 
-Afin d'obtenir une bonne mise en page ou pour permettre différents mise en style, il est important d'avoir des fontes mathématiques disponibles. Vous pouvez ainsi fournir à vos visiteurs un lien vers les [Instructions sur les fontes de MDN](/fr/docs/Mozilla/MathML_Project/Fonts), de telle manière qu'ils puissent vérifier s'ils ont les fontes appropriées installées sur leur système ou non. Il est tout aussi bon de prévoir une alternative avec les fontes Web.
+Afin d'obtenir une bonne mise en page ou pour permettre différents mise en style, il est important d'avoir des fontes mathématiques disponibles. Vous pouvez ainsi fournir à vos visiteurs un lien vers les [Instructions sur les fontes de MDN](/fr/docs/Web/MathML/Fonts), de telle manière qu'ils puissent vérifier s'ils ont les fontes appropriées installées sur leur système ou non. Il est tout aussi bon de prévoir une alternative avec les fontes Web.
 
 Avant Gecko 31.0, il était quelque peu fastidieux d'installer des fontes mathématiques, lisez à ce propos les [instructions pour Mozilla 2.0](/fr/docs/Mozilla/MathML_Project/FontsMozilla2.0#mathml_font_selection_with_css). Depuis Gecko 31.0, c'est beaucoup plus simple et compatible avec tout moteur de rendu Web ayant un support de MathML. Par exemple, voyez-ci une feuille de style minimale pour utiliser la fonte Latin Modern pour les textes et Latin Modern Math pour les expressions mathématiques :
 

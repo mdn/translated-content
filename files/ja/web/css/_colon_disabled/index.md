@@ -1,5 +1,5 @@
 ---
-title: ":disabled"
+title: :disabled
 slug: Web/CSS/:disabled
 ---
 
@@ -13,6 +13,8 @@ input:disabled {
   background: #ccc;
 }
 ```
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-disabled.html", "tabbed-standard")}}
 
 ## 構文
 

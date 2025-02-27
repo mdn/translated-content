@@ -55,8 +55,8 @@ Gecko 기반 브라우저는 소스 마크업에서 공백을 나타내기 위�
 그러므로 예를 들어 [`Node.firstChild`](/ko/docs/Web/API/Node/firstChild)나 [`Node.previousSibling`](/ko/docs/Web/API/Node/previousSibling)을 통해서 얻은 노드는 작성자가 얻으려 한 실제 요소와는
 달리 공백 텍스트 노드를 참조할 지도 모릅니다.
 
-더 많은 정보는 [Whitespace in the DOM](/ko/docs/Whitespace_in_the_DOM)과
-[W3C DOM 3 FAQ: Why are some Text nodes empty?](http://www.w3.org/DOM/faq.html#emptytext)를 보세요.
+더 많은 정보는 [Whitespace in the DOM](/ko/docs/Web/API/Document_Object_Model/Whitespace)과
+[W3C DOM 3 FAQ: Why are some Text nodes empty?](https://www.w3.org/DOM/faq.html#emptytext)를 보세요.
 
 ## 명세
 

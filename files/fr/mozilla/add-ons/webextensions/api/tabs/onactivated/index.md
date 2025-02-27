@@ -3,7 +3,7 @@ title: tabs.onActivated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActivated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Se déclenche lorsque l'onglet actif dans une fenêtre change. Notez que l'URL de l'onglet peut ne pas être définie au moment où cet événement s'est déclenché, mais vous pouvez écouter les événements {{WebExtAPIRef("tabs.onUpdated")}} pour être averti lorsqu'une URL est définie.
 
@@ -33,7 +33,7 @@ Les événements ont trois fonctions :
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
     - `activeInfo`
-      - : [`object`](#activeInfo). ID de l'onglet qui a été activé, et ID de sa fenêtre.
+      - : [`object`](#activeinfo). ID de l'onglet qui a été activé, et ID de sa fenêtre.
 
 ## Objets supplémentaires
 
@@ -64,9 +64,9 @@ browser.tabs.onActivated.addListener(handleActivated);
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

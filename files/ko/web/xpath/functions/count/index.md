@@ -3,7 +3,7 @@ title: count
 slug: Web/XPath/Functions/count
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `count` 함수는 노드 집합의 노드 수를 세고 나서 정수로 반환합니다.
 
@@ -24,7 +24,7 @@ count(node-set )
 
 ### 정의
 
-[1.0 4.1](http://www.w3.org/TR/xpath#function-count)
+[1.0 4.1](https://www.w3.org/TR/xpath#function-count)
 
 ### Gecko 지원
 

@@ -62,15 +62,13 @@ slug: Web/SVG/Attribute/text-anchor
 </svg>
 ```
 
-**Live sample**
-
 {{ EmbedLiveSample('示例','120','120') }}
 
 ## 元素
 
 以下元素可以运用文本锚点属性：
 
-- [Text content elements](/zh-CN/SVG/Element#Text_content_elements) »
+- [Text content elements](/zh-CN/docs/Web/SVG/Element#text_content_elements) »
 
 ## 规范
 

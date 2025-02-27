@@ -8,7 +8,16 @@ slug: Web/JavaScript/Reference/Global_Objects/globalThis
 전역 **`globalThis`** 속성에는 일반적으로 [전역 객체](/ko/docs/Glossary/Global_object)와 유사한
 [전역 `this`](/ko/docs/Web/JavaScript/Reference/Operators/this#global_context) 값이 포함됩니다.
 
-{{EmbedInteractiveExample("pages/js/globalprops-globalthis.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - globalThis", "shorter")}}
+
+```js interactive-example
+function canMakeHTTPRequest() {
+  return typeof globalThis.XMLHttpRequest === "function";
+}
+
+console.log(canMakeHTTPRequest());
+// Expected output (in a browser): true
+```
 
 ## 값
 
@@ -25,7 +34,8 @@ slug: Web/JavaScript/Reference/Global_Objects/globalThis
 
 `globalThis` 속성은 환경에 무관하게 전역 `this` 값, 즉 전역 객체에 접근하는 표준 방법을 제공합니다. `window`, `self` 등 유사한 속성과는 다르게 window와 non-window 컨텍스트 모두에서의 동작을 보장합니다. 따라서 코드를 구동하는 환경을 모르더라도 전역 객체에 일관된 방식으로 접근할 수 있습니다. 이름을 기억하는 데 도움이 되도록 전역 범위에서 `this` 값은 `globalThis`라는 점만 기억하세요.
 
-> **참고:** 브라우저와 Node의 경우에서 `globalThis`는 일반적으로 전역 객체와 동일한 개념입니다(즉, `globalThis`에 속성을 추가하면 전역 변수가 됨). 그러나 호스트는 전역 객체와 관련이 없는 `globalThis`에 대해 다른 값을 제공할 수 있습니다.
+> [!NOTE]
+> 브라우저와 Node의 경우에서 `globalThis`는 일반적으로 전역 객체와 동일한 개념입니다(즉, `globalThis`에 속성을 추가하면 전역 변수가 됨). 그러나 호스트는 전역 객체와 관련이 없는 `globalThis`에 대해 다른 값을 제공할 수 있습니다.
 
 ### HTML과 WindowProxy
 

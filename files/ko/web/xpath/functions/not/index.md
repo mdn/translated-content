@@ -3,7 +3,7 @@ title: not
 slug: Web/XPath/Functions/not
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `not` 함수는 불린식을 평가하고 반대값을 반환합니다.
 
@@ -28,7 +28,7 @@ false로 평가한 식은 true; true로 평가한 식은 false.
 
 ### 정의
 
-[XPath 1.0 4.3](http://www.w3.org/TR/xpath#function-not)
+[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-not)
 
 ### Gecko 지원
 

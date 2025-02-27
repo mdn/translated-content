@@ -3,13 +3,15 @@ title: ins
 slug: Web/HTML/Element/ins
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - El elemento `ins` (insertado) marca las partes de un texto que han sido añadidos al documento.
 
   - : **Sus etiquetas son**: \<ins> e \</ins> (ambas obligatorias).
 
-    **Crea una caja**: a veces [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea) a veces [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **Crea una caja**: a veces [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea) a veces [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
     **Está definido como**:
 

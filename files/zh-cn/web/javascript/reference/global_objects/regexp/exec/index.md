@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 
 **`exec()`** 方法在一个指定字符串中执行一个搜索匹配。返回一个结果数组或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-exec.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.exec()")}}
+
+```js interactive-example
+const regex1 = RegExp("foo*", "g");
+const str1 = "table football, foosball";
+let array1;
+
+while ((array1 = regex1.exec(str1)) !== null) {
+  console.log(`Found ${array1[0]}. Next starts at ${regex1.lastIndex}.`);
+  // Expected output: "Found foo. Next starts at 9."
+  // Expected output: "Found foo. Next starts at 19."
+}
+```
 
 ## 语法
 
@@ -41,7 +53,7 @@ exec(str)
 
 在使用 `exec()` 时，`global` 标志位不会在 `sticky` 标志位被设置时生效，而 `match()` 始终会设置 `sticky` 标志位。
 
-`exec()` 是正则表达式的原始方法。许多其他的正则表达式方法会在内部调用 `exec()`——包括一些字符串方法也会调用 `exec()`，如 [`@@replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)。虽然 `exec()` 本身非常强大而又有效，但它通常不能最清楚地表示调用的目的。
+`exec()` 是正则表达式的原始方法。许多其他的正则表达式方法会在内部调用 `exec()`——包括一些字符串方法也会调用 `exec()`，如 [`[Symbol.replace]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)。虽然 `exec()` 本身非常强大而又有效，但它通常不能最清楚地表示调用的目的。
 
 - 如果你只是为了判断是否匹配，请使用 {{jsxref("RegExp.prototype.test()")}} 方法代替。
 - 如果你只是为了找出所有匹配正则表达式的字符串而又不关心捕获组，请使用 {{jsxref("String.prototype.match()")}} 方法代替。此外，{{jsxref("String.prototype.matchAll()")}} 允许你对匹配项进行迭代，这有助于简化匹配字符串的多个部分（带有匹配组）。
@@ -94,12 +106,13 @@ while ((myArray = myRe.exec(str)) !== null) {
 
 脚本运行结果如下：
 
-```
+```plain
 Found abb. Next match starts at 3
 Found ab. Next match starts at 9
 ```
 
-> **警告：** 以下情况会导致匹配变成一个无限循环！
+> [!WARNING]
+> 以下情况会导致匹配变成一个无限循环！
 >
 > - 不要把正则表达式字面量（或者 {{jsxref("RegExp")}} 构造函数）放在 `while` 条件表达式里。由于每次迭代时 {{jsxref("RegExp.lastIndex", "lastIndex")}} 的属性都被重置。
 > - 请确保设置了[全局（`g`）标志位](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions#通过标志进行高级搜索)，否则 `lastIndex` 不会被更新。

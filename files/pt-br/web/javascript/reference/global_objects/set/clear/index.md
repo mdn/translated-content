@@ -33,14 +33,11 @@ mySet.has("bar"); // false
 
 ## Especificações
 
-| Especificações                                                             | Status               | Comentário          |
-| -------------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-set.prototype.clear', 'Set.prototype.clear')}}     | {{Spec2('ES6')}}     | Definições iniciais |
-| {{SpecName('ESDraft', '#sec-set.prototype.clear', 'Set.prototype.clear')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Set.clear")}}
+{{Compat}}
 
 ## Veja também
 

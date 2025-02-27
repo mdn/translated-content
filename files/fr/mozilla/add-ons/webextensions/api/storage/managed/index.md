@@ -3,7 +3,7 @@ title: storage.managed
 slug: Mozilla/Add-ons/WebExtensions/API/storage/managed
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet {{WebExtAPIRef("storage.StorageArea")}} qui représente la zone de stockage gérée. Les éléments de stockage `géré` sont définis par l'administrateur du domaine ou d'autres applications natives installées sur l'ordinateur de l'utilisateur et sont en lecture seule pour l'extension. Essayer de modifier cette zone de stockage entraîne une erreur.
 
@@ -13,7 +13,7 @@ La procédure de provisionnement du stockage géré est différente selon les na
 
 ### manifestes natives
 
-Pour Firefox, vous devez créer un fichier manifest JSON dans un format spécifique, dans un emplacement spécifique. Pour plus de détails sur la syntaxe et l'emplacement du manifeste, voir [manifests natifs](/fr/Add-ons/WebExtensions/Native_manifests).
+Pour Firefox, vous devez créer un fichier manifest JSON dans un format spécifique, dans un emplacement spécifique. Pour plus de détails sur la syntaxe et l'emplacement du manifeste, voir [manifests natifs](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_manifests).
 
 Voici un exemple de manifest :
 
@@ -93,9 +93,9 @@ Pour plus d'informations, voir l'article de Chrome pour les zones de stockage [M
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/extensions/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

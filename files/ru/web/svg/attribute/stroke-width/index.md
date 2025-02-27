@@ -3,6 +3,8 @@ title: stroke-width
 slug: Web/SVG/Attribute/stroke-width
 ---
 
+{{SVGRef}}
+
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 Атрибут `stroke-width` указывает ширину контура текущего объекта. Его значение по умолчанию: 1. Если используется \<percentage>, значение представляет собой процент от текущего окна просмотра. Если используется значение 0, контур не будет нарисован.
@@ -11,11 +13,11 @@ slug: Web/SVG/Attribute/stroke-width
 
 ## Usage context
 
-| **Категория**        | Атрибут представления                                                                                   |
-| -------------------- | ------------------------------------------------------------------------------------------------------- |
-| **Значения**         | [\<length>](/en/SVG/Content_type#Length) \| [\<percentage>](/en/SVG/Content_type#Percentage) \| inherit |
-| **Анимируемый**      | Да                                                                                                      |
-| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#StrokeWidthProperty)                     |
+| **Категория**        | Атрибут представления                                                                                         |
+| -------------------- | ------------------------------------------------------------------------------------------------------------- |
+| **Значения**         | [\<length>](/en-US/SVG/Content_type#length) \| [\<percentage>](/en-US/SVG/Content_type#percentage) \| inherit |
+| **Анимируемый**      | Да                                                                                                            |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/painting.html#StrokeWidthProperty)                          |
 
 ## Example
 
@@ -38,5 +40,5 @@ slug: Web/SVG/Attribute/stroke-width
 
 Следующие элементы могут использовать атрибут `stroke-width`.
 
-- [Элементы форм](/ru/SVG/Element#Shape)
-- [Текстовые элементы](/ru/SVG/Element#TextContent)
+- [Элементы форм](/ru/docs/SVG/Element#shape)
+- [Текстовые элементы](/ru/docs/SVG/Element#textcontent)

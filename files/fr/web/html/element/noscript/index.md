@@ -9,7 +9,7 @@ L'élément HTML **`<noscript>`** définit un fragment HTML qui doit être affic
 
 ## Attributs
 
-On peut uniquement utiliser [les attributs universels](/fr/docs/Web/HTML/Attributs_universels) sur cet élément.
+On peut uniquement utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur cet élément.
 
 ## Exemples
 
@@ -80,7 +80,7 @@ Elle est où, la poulette&nbsp;?
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>

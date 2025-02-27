@@ -14,17 +14,17 @@ slug: Web/CSS/min-height
 ## Синтаксис
 
 ```css
+/* Ключевые слова */
+min-height: max-content;
+min-height: min-content;
+min-height: fit-content;
+min-height: fill-available;
+
 /* <length> значения */
 min-height: 3.5em;
 
 /* <percentage> значения */
 min-height: 10%;
-
-/* Значения-ключевые слова */
-min-height: max-content;
-min-height: min-content;
-min-height: fit-content;
-min-height: fill-available;
 
 /* Глобальные значения */
 min-height: inherit;
@@ -77,11 +77,11 @@ form {
 
 {{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - {{ Cssxref("height") }}, {{ Cssxref("max-height") }}
-- [Блочная модель](/ru/docs/CSS/box_model), {{ Cssxref("box-sizing") }}
+- [Блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{ Cssxref("box-sizing") }}

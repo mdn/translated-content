@@ -17,7 +17,7 @@ if (условие)
 ```
 
 - `условие`
-  - : [Выражение](/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators), которое является либо истинным, либо ложным.
+  - : [Выражение](/ru/docs/Web/JavaScript/Guide/Expressions_and_operators), которое является либо истинным, либо ложным.
 
 <!---->
 
@@ -121,7 +121,7 @@ if ((x = y)) {
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

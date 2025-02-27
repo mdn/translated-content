@@ -120,9 +120,9 @@ const APP_STATIC_RESOURCES = [ ... ];
 
 `install` 事件会在应用第一次被安装或者浏览器检测到有新版本的 service worker 时触发。当旧的 service worker 将要被新的替换时，旧的 service worker 仍然会作为 PWA 的 service worker，直到新的 service worker 被激活。
 
-全局变量 [`caches`](/zh-CN/docs/Web/API/caches) 只在安全上下文中可用，它会返回一个与当前上下文关联的 {{domxref("CacheStorage")}} 对象。{{domxref("CacheStorage.open()")}} 方法会返回一个 {{jsxref("Promise")}} 对象，可以兑现一个名称与作为参数传递的名称相符的 {{domxref("Cache")}} 对象。
+{{domxref("WorkerGlobalScope.caches")}} 属性只在安全上下文中可用，它会返回一个与当前上下文关联的 {{domxref("CacheStorage")}} 对象。{{domxref("CacheStorage.open()")}} 方法会返回一个 {{jsxref("Promise")}} 对象，可以兑现一个名称与作为参数传递的名称相符的 {{domxref("Cache")}} 对象。
 
-{{domxref("Cache.addAll()")}} 方法接收一个 URL 数组作为参数，然后会检索这些 URL，将它们的响应添加到指定的缓存中。[`waitUntil()`](/zh-CN/docs/Web/API/ExtendableEvent/waitUntil) 方法可以告诉浏览器在 Promise 被敲定前，工作仍在进行中，浏览器如果想让工作能够完成就不应该终止 service worker。浏览器负责执行并在必要时终止 service worker，`waitUntil` 方法可用于请求浏览器在任务执行时不要终止 service worker。
+{{domxref("Cache.addAll()")}} 方法接收一个 URL 数组作为参数，然后会检索这些 URL，将它们的响应添加到指定的缓存中。{{domxref("ExtendableEvent.waitUntil()")}} 方法可以告诉浏览器在 Promise 被敲定前，工作仍在进行中，浏览器如果想让工作能够完成就不应该终止 service worker。浏览器负责执行并在必要时终止 service worker，`waitUntil` 方法可用于请求浏览器在任务执行时不要终止 service worker。
 
 ```js
 self.addEventListener("install", (e) => {
@@ -162,7 +162,7 @@ self.addEventListener("install", (event) => {
 
 我们监听当前 service worker 全局作用域的 [`activate`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/activate_event) 事件。
 
-我们获取现有的命名缓存，使用 {{domxref("CacheStorage.keys()")}} 方法（重新通过全局 {{domxref("caches")}} 属性访问 `CacheStorage`），它会返回一个 {{jsxref("Promise")}} 对象，可兑现一个包含对应到按创建顺序排列的命名 {{domxref("Cache")}} 对象的字符串的数组。
+我们获取现有的命名缓存，使用 {{domxref("CacheStorage.keys()")}} 方法（重新通过 {{domxref("WorkerGlobalScope.caches")}} 属性访问 `CacheStorage`），它会返回一个 {{jsxref("Promise")}} 对象，可兑现一个包含对应到按创建顺序排列的命名 {{domxref("Cache")}} 对象的字符串的数组。
 
 我们使用 [`Promise.all()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) 方法来迭代命名缓存 Promise 列表。`all()` 方法接收一个可迭代的 Promise 列表，并返回单个 `Promise`。对于列表中的每个命名缓存，检查其是否是当前活动的缓存。如果不是，用 `Cache` 的 [`delete()`](/zh-CN/docs/Web/API/Cache/delete) 方法删除它。
 
@@ -306,7 +306,7 @@ self.addEventListener("fetch", (event) => {
 
 现在我们的 service worker 脚本已经完成了，我们需要注册 service worker。
 
-我们先从使用检查全局 [`navigator`](/zh-CN/docs/Web/API/Navigator) 对象上是否存在 [`serviceWorker`](/zh-CN/docs/Web/API/ServiceWorker) 属性的[特性检测](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection#特性检测的概念)手段来检查浏览器是否支持 [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API) 开始：
+我们先从使用检查全局 [`navigator`](/zh-CN/docs/Web/API/Navigator) 对象上是否存在 [`serviceWorker`](/zh-CN/docs/Web/API/ServiceWorker) 属性的[特性检测](/zh-CN/docs/Learn_web_development/Extensions/Testing/Feature_detection#特性检测的概念)手段来检查浏览器是否支持 [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API) 开始：
 
 ```html
 <script>
@@ -378,7 +378,7 @@ if ("serviceWorker" in navigator) {
 
 你可能会不想每次保存都要更新版本号。在你准备好将你的 PWA 的新版本投入生产并为所有人提供你的 PWA 的新版本前，你可以用注销 service worker 的方法来代替在每次保存时更改版本号。
 
-你可以通过在[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中点击 `unregister` 按钮来注销一个 service worker。强刷新页面将会重新注册 service worker 并建立新的缓存。
+你可以通过在[浏览器开发者工具](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)中点击 `unregister` 按钮来注销一个 service worker。强刷新页面将会重新注册 service worker 并建立新的缓存。
 
 ![带有停止和注销 service worker 按钮的 Firefox 开发者工具应用程序面板](firefox_sw.jpg)
 

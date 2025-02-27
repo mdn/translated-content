@@ -1,5 +1,5 @@
 ---
-title: "::-moz-color-swatch"
+title: ::-moz-color-swatch
 slug: Web/CSS/::-moz-color-swatch
 ---
 
@@ -7,7 +7,8 @@ slug: Web/CSS/::-moz-color-swatch
 
 El **`::-moz-color-swatch`** [pdseudo-elemento CSS](/es/docs/Web/CSS) es una [extension de Mozilla](/es/docs/Web/CSS/Mozilla_Extensions) que representa el color seleccionado en un {{HTMLElement("input")}} de `type="color"`.
 
-> **Nota:** Usando `::-moz-color-swatch` con cualquier cosa excepto `<input type="color">` no concuerda con nada y no tiene efecto.
+> [!NOTE]
+> Usando `::-moz-color-swatch` con cualquier cosa excepto `<input type="color">` no concuerda con nada y no tiene efecto.
 
 ## Sintaxis
 

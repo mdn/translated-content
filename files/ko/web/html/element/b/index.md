@@ -34,7 +34,7 @@ slug: Web/HTML/Element/b
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -106,4 +106,4 @@ Keywords are displayed with the default style of the
 
 ## 같이 보기
 
-- [\<b>와 \<i> 요소 사용하기 (W3C)](http://www.w3.org/International/questions/qa-b-and-i-tags)
+- [\<b>와 \<i> 요소 사용하기 (W3C)](https://www.w3.org/International/questions/qa-b-and-i-tags)

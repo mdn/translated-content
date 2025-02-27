@@ -5,7 +5,7 @@ slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 
 {{DefaultAPISidebar("MediaStream Recording")}}
 
-[媒体流 (音/视频) 录制 API](/zh-CN/docs/Web/API/MediaStream_Recording_API)让记录音频流或视频流信息更加容易。当使用[navigator.mediaDevices.getUserMedia()"](/zh-CN/docs/Web/API/Navigator/mediaDevices/getUserMedia)时，它提供了一种简单的方式从用户的输入设备中记录信息，并且可以马上在 web apps 中查看记录的信息。音/视频信息都可以被录制，可以分开也可以一块儿。本文针对于提供一个基础引导去让大家了解提供了这个 API 的 MediaRecorder 的界面。
+[媒体流 (音/视频) 录制 API](/zh-CN/docs/Web/API/MediaStream_Recording_API)让记录音频流或视频流信息更加容易。当使用[navigator.mediaDevices.getUserMedia()"](/zh-CN/docs/Web/API/MediaDevices/getUserMedia)时，它提供了一种简单的方式从用户的输入设备中记录信息，并且可以马上在 web apps 中查看记录的信息。音/视频信息都可以被录制，可以分开也可以一块儿。本文针对于提供一个基础引导去让大家了解提供了这个 API 的 MediaRecorder 的界面。
 
 ## 示例应用：Web 录音机
 
@@ -17,7 +17,7 @@ slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 
 ## CSS goodies
 
-在这个 app 应用中的网页是相当简单的，所以我们不会在这里大费周章；但有几个有点意思的 CSS 样式还是有必要提一下，所以接下来我们会讨论一下。如果你对 CSS 没有半毛钱兴趣并且想对 JavaSdcript 单刀直入，请跳转到下面的[应用基础设置](/zh-CN/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#Basic_app_setup)章节。
+在这个 app 应用中的网页是相当简单的，所以我们不会在这里大费周章；但有几个有点意思的 CSS 样式还是有必要提一下，所以接下来我们会讨论一下。如果你对 CSS 没有半毛钱兴趣并且想对 JavaSdcript 单刀直入，请跳转到下面的[应用基础设置](#Basic_app_setup)章节。
 
 ### 保持主界面对显示区域的约束，用 calc() 来忽略设备的尺寸
 
@@ -47,7 +47,8 @@ header {
 }
 ```
 
-> **备注：** 现在的浏览器对[calc()](/zh-CN/docs/Web/CSS/calc)有着良好的支持，即使是像 IE9 那样的浏览器也可以。
+> [!NOTE]
+> 现在的浏览器对[calc()](/zh-CN/docs/Web/CSS/calc)有着良好的支持，即使是像 IE9 那样的浏览器也可以。
 
 ### 用于显示/隐藏的复选框
 
@@ -146,7 +147,8 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 - 成功回调：一旦成功完成`getUserMedia`调用，此代码就会运行。
 - 错误/失败回调：如果`getUserMedia`调用由于任何原因而失败，则代码将运行。
 
-> **备注：** 下面的所有代码都放在`getUserMedia`成功回调中。
+> [!NOTE]
+> 下面的所有代码都放在`getUserMedia`成功回调中。
 
 ## 捕获媒体流
 
@@ -261,6 +263,6 @@ mediaRecorder.onstop = function (e) {
 
 ## See also
 
-- [MediaRecorder API](/zh-CN/docs/Web/API/MediaRecorder_API) landing page
+- [MediaRecorder API](/zh-CN/docs/Web/API/MediaStream_Recording_API) landing page
 - {{domxref("Navigator.getUserMedia()")}}
 - [MediaRecorder API now supported by 65% of your website users](https://addpipe.com/blog/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/)

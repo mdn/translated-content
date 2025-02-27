@@ -9,7 +9,8 @@ slug: Web/API/Window/mozInnerScreenX
 
 ウィンドウのビューポートの左上隅のX座標を、スクリーン座標で返します。
 
-> **メモ:** この座標は CSS ピクセルで報告され、ハードウェアピクセルではありません。つまり、ズームレベルによって影響を受ける可能性があります。実際の物理的な画面のピクセル数を計算するには、 `nsIDOMWindowUtils.screenPixelsPerCSSPixel` プロパティを使用する必要があります。
+> [!NOTE]
+> この座標は CSS ピクセルで報告され、ハードウェアピクセルではありません。つまり、ズームレベルによって影響を受ける可能性があります。実際の物理的な画面のピクセル数を計算するには、 `nsIDOMWindowUtils.screenPixelsPerCSSPixel` プロパティを使用する必要があります。
 
 ## 値
 

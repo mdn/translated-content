@@ -43,6 +43,6 @@ Web ページに於いては、`window` オブジェクトは*グローバルオ
 
 Yet another reason to use this property is for libraries which wish to offer OOP-versions and non-OOP versions (especially JavaScript modules). If, for example, we refer to "this.window\.location.href", a [JavaScript module](/ja/docs/Mozilla/JavaScript_code_modules) could define a property called "window" inside of a class it defined (since no global "window" variable exists for it by default) which, could be created, for example, after passing in a window object to the module class' constructor. Thus, "this.window" inside of its functions would refer to that window object. In the non-namespaced version, "this.window" would simply refer back to "window", and also be able to get the document location without trouble. Another advantage is that the objects of such a class (even if the class were defined outside of a module) could change their reference to the window at will, as they would not be able to do if they had hard-coded a reference to "window" (yet the default in the class could still be set as the current window object).
 
-## 仕様
+## 仕様書
 
 {{Specifications}}

@@ -3,7 +3,7 @@ title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -141,7 +141,7 @@ if ("function" !== typeof Array.prototype.reduceRight) {
     if (arguments.length >= 2) {
       value = arguments[1];
     } else {
-      while (k >= 0 && !k in t) {
+      while (k >= 0 && (!k) in t) {
         k--;
       }
       if (k < 0) {

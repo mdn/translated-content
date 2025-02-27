@@ -20,7 +20,7 @@ Vous pouvez directement aller voir [la démo](#démonstration) si vous préfére
 Le premier panneau à gauche possède deux composants&nbsp;:
 
 - Un élément [`<video>`](/fr/docs/Web/HTML/Element/video) qui reçoit le flux vidéo provenant de `navigator.mediaDevices.getUserMedia()`
-- Un élément [`<button>`](/fr/docs/Web/HTML/Element/Button) sur lequel la personne pourra cliquer pour capturer une image de la vidéo.
+- Un élément [`<button>`](/fr/docs/Web/HTML/Element/button) sur lequel la personne pourra cliquer pour capturer une image de la vidéo.
 
 ```html
 <div class="camera">
@@ -33,7 +33,7 @@ Ces éléments sont plutôt basiques, nous verrons comment ils sont reliés avec
 
 Pour le second panneau, nous avons un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) qui contient les images capturées (éventuellement traitées) et qui sont converties en fichiers image. Le canevas est masqué en utilisant [`display: none`](/fr/docs/Web/CSS/display) pour éviter d'encombrer l'écran. Son contenu ne représente qu'une étape qui n'a pas nécessairement à être montrée.
 
-Nous avons également un élément [`<img>`](/fr/docs/Web/HTML/Element/Img) sur lequel nous afficherons l'image, dans sa version finale.
+Nous avons également un élément [`<img>`](/fr/docs/Web/HTML/Element/img) sur lequel nous afficherons l'image, dans sa version finale.
 
 ```html
 <canvas id="canvas"> </canvas>
@@ -78,13 +78,13 @@ Les variables seront utilisées ainsi&nbsp;:
 - `canvas`
   - : Contiendra une référence à l'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) lorsque le chargement de la page aura été effectué.
 - `photo`
-  - : Contiendra une référence à l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img) lorsque le chargement de la page aura été effectué.
+  - : Contiendra une référence à l'élément [`<img>`](/fr/docs/Web/HTML/Element/img) lorsque le chargement de la page aura été effectué.
 - `startbutton`
-  - : Contiendra une référence à l'élément [`<button>`](/fr/docs/Web/HTML/Element/Button) utilisé pour déclencher la capture. Elle sera obtenue lorsque la page aura été chargée.
+  - : Contiendra une référence à l'élément [`<button>`](/fr/docs/Web/HTML/Element/button) utilisé pour déclencher la capture. Elle sera obtenue lorsque la page aura été chargée.
 
 ### La fonction `startup()`
 
-La fonction `startup()` est exécutée lorsque le chargement de la page est terminé, grâce à [`EventTarget.addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener). Le rôle de cette fonction consiste à demander l'accès à la webcam de la personne, à initialiser l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img) de sortie dans un état par défaut, puis à mettre en place les gestionnaires d'évènement nécessaires pour recevoir chaque image de la vidéo provenant de la caméra et pour réagir au clic sur le bouton pour capturer une image.
+La fonction `startup()` est exécutée lorsque le chargement de la page est terminé, grâce à [`EventTarget.addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener). Le rôle de cette fonction consiste à demander l'accès à la webcam de la personne, à initialiser l'élément [`<img>`](/fr/docs/Web/HTML/Element/img) de sortie dans un état par défaut, puis à mettre en place les gestionnaires d'évènement nécessaires pour recevoir chaque image de la vidéo provenant de la caméra et pour réagir au clic sur le bouton pour capturer une image.
 
 #### Obtenir des références aux éléments
 
@@ -180,7 +180,7 @@ On appelle ici la fonction `clearphoto()` que nous allons décrire dans la secti
 
 ### Réinitialiser le cadre contenant la photo
 
-Pour réinitialiser le contenu du cadre contenant la photo, on crée une image puis on la convertit dans un format utilisable pour un élément [`<img>`](/fr/docs/Web/HTML/Element/Img). Voici le code&nbsp;:
+Pour réinitialiser le contenu du cadre contenant la photo, on crée une image puis on la convertit dans un format utilisable pour un élément [`<img>`](/fr/docs/Web/HTML/Element/img). Voici le code&nbsp;:
 
 ```js
 function clearphoto() {
@@ -221,7 +221,8 @@ Comme pour chaque fois où il faut manipuler le contenu d'un canevas, on commenc
 
 Ensuite, si la hauteur et la largeur ne sont pas nulles (indiquant par là qu'il y a potentiellement des données d'image valides), on définit la largeur et la hauteur du canevas pour correspondre à celles de l'image capturée. Ensuite, on appelle [`drawImage()`](/fr/docs/Web/API/CanvasRenderingContext2D/drawImage) afin de dessiner l'image courante de la vidéo dans ce contexte, remplissant ainsi tous le canevas avec l'image.
 
-> **Note :** On tire parti de la ressemblance entre l'interface [`HTMLVideoElement`](/fr/docs/Web/API/HTMLVideoElement) et l'interface [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) lorsqu'on fournit `video` à `drawImage()`.
+> [!NOTE]
+> On tire parti de la ressemblance entre l'interface [`HTMLVideoElement`](/fr/docs/Web/API/HTMLVideoElement) et l'interface [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) lorsqu'on fournit `video` à `drawImage()`.
 
 Lorsque le canevas contient l'image capturée, on la convertit au format PNG à l'aide de [`HTMLCanvasElement.toDataURL()`](/fr/docs/Web/API/HTMLCanvasElement/toDataURL). Enfin, on appelle [`photo.setAttribute()`](/fr/docs/Web/API/Element/setAttribute) pour afficher l'image ainsi formée dans la boîte affichée à l'écran.
 

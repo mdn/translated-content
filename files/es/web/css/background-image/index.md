@@ -17,7 +17,8 @@ Los [bordes](/es/docs/Web/CSS/border) del elemento se dibujan encima de ellos y 
 
 Si no se puede dibujar una imagen específica (por ejemplo, cuando no se puede cargar el archivo indicado por el URI especificado), los navegadores lo manejan como si fuera un valor `none`.
 
-> **Nota:** Incluso si las imágenes son opacas y el color no se mostrará en circunstancias normales, los desarrolladores web siempre deben especificar un {{cssxref("background-color")}}. Si las imágenes no se pueden cargar, por ejemplo, cuando la red no funciona, el color de fondo se utilizará como alternativa.
+> [!NOTE]
+> Incluso si las imágenes son opacas y el color no se mostrará en circunstancias normales, los desarrolladores web siempre deben especificar un {{cssxref("background-color")}}. Si las imágenes no se pueden cargar, por ejemplo, cuando la red no funciona, el color de fondo se utilizará como alternativa.
 
 ## Sintaxis
 
@@ -26,11 +27,9 @@ Cada imagen de fondo se especifica como la palabra clave `none` o como un valor 
 Para especificar varias imágenes de fondo, proporcione varios valores, separados por una coma:
 
 ```css
-background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 0, 0.5),
-    rgba(0, 0, 255, 0.5)
-  ), url("catfront.png");
+background-image:
+  linear-gradient(to bottom, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)),
+  url("cat-front.png");
 
 /* Valores globales */
 background-image: inherit;
@@ -45,7 +44,7 @@ background-image: unset;
 - `none`
   - : Utilizado para especificar que un elemento no debe tener imagen de fondo.
 - `<image>`
-  - : Es un {{cssxref("&lt;image&gt;")}} que indica la imagen que se va a mostrar. Puede haber varios, separados por comas, ya que se admiten [fondos múltiples](/es/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds).
+  - : Es un {{cssxref("&lt;image&gt;")}} que indica la imagen que se va a mostrar. Puede haber varios, separados por comas, ya que se admiten [fondos múltiples](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds).
 
 ## Problemas de accesibilidad
 
@@ -94,7 +93,7 @@ div {
 }
 
 .catsandstars {
-  background-image: url("startransparent.gif"), url("catfront.png");
+  background-image: url("star-transparent.gif"), url("cat-front.png");
   background-color: transparent;
 }
 ```

@@ -9,7 +9,17 @@ l10n:
 
 **`trimStart()`** メソッドは、元の文字列を変更せずに、文字列の先頭のホワイトスペースを削除した新しい文字列を返します。`trimLeft()` はこのメソッドの別名です。
 
-{{EmbedInteractiveExample("pages/js/string-trimstart.html")}}
+{{InteractiveExample("JavaScript Demo: String.trimStart()")}}
+
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trimStart());
+// Expected output: "Hello world!   ";
+```
 
 ## 構文
 
@@ -37,7 +47,7 @@ String.prototype.trimLeft.name === "trimStart";
 
 ### trimStart() の使用
 
-次の例は `str` の末尾から空白を取り除きますが、先頭からは取り除きません。
+次の例は `str` の先頭から空白を取り除きますが、末尾からは取り除きません。
 
 ```js-nolint
 let str = "   foo  ";

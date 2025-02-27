@@ -3,7 +3,7 @@ title: stylesheet
 slug: Web/XSLT/Element/stylesheet
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:stylesheet>`(나 동등한 `<xsl:transform>`) 요소는 스타일시트의 최외곽 요소입니다.
 
@@ -44,7 +44,7 @@ pseudo 속성은 XSLT 스타일시트로 문서를 식별하기 위해 필요합
 
 ### 정의
 
-[XSLT section 2.2, Stylesheet Element](http://www.w3.org/TR/xslt#stylesheet-element)
+[XSLT section 2.2, Stylesheet Element](https://www.w3.org/TR/xslt#stylesheet-element)
 
 ### Gecko 지원
 

@@ -11,7 +11,8 @@ La propiedad `Element.innerHTML` devuelve o establece la sintaxis HTML describie
 
 Al establecerse se reemplaza la sintaxis HTML del elemento por la nueva.
 
-> **Nota:** Si un nodo tiene un texto secundario que incluye los caracteres `(&), (<),` o `(>)`, `innerHTML` devuelve estos caracteres como \&amp, \&lt y \&gt respectivamente. Use {{ domxref("Node.textContent") }} para conseguir una copia correcta del contenido de estos nodos de texto.
+> [!NOTE]
+> Si un nodo tiene un texto secundario que incluye los caracteres `(&), (<),` o `(>)`, `innerHTML` devuelve estos caracteres como \&amp, \&lt y \&gt respectivamente. Use {{ domxref("Node.textContent") }} para conseguir una copia correcta del contenido de estos nodos de texto.
 
 Para **insertar el código HTML** en el documento en lugar de cambiar el contenido de un elemento, use el método [insertAdjacentHTML().](/es/docs/Web/API/Element/insertAdjacentHTML)
 
@@ -25,7 +26,7 @@ element.innerHTML = htmlString;
 
 ### Valor
 
-La variable constante `content` contiene un [DOMString](/es/docs/Web/API/DOMString) que contiene el código HTML serializado describiendo todos los descendientes de `element`. Cuando se establece el valor de innerHTML, **se eliminan todos los descendientes de `element`**, analiza la cadena `htmString` y asigna los nodos resultantes como descendientes de `element`.
+La variable constante `content` contiene un [DOMString](/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String) que contiene el código HTML serializado describiendo todos los descendientes de `element`. Cuando se establece el valor de innerHTML, **se eliminan todos los descendientes de `element`**, analiza la cadena `htmString` y asigna los nodos resultantes como descendientes de `element`.
 
 ### Excepciones
 
@@ -63,7 +64,8 @@ document.documentElement.innerHTML =
   "<pre>" + document.documentElement.innerHTML.replace(/</g, "&lt;") + "</pre>";
 ```
 
-> **Nota:** Esta propiedad fue inicialmente implementada por navegadores web, y luego especificada por el WHATWG y el W3C en HTML5. Implementaciones antiguas no la implementarán exactamente igual. Por ejemplo, cuando el texto es ingresado en una caja de **texto multilinea (elemento `textarea`)**, Internet Explorer cambiará el valor de la propiedad `innerHTML` del **elemento `textarea`**, mientras que los navegadores Gecko no lo hacen.
+> [!NOTE]
+> Esta propiedad fue inicialmente implementada por navegadores web, y luego especificada por el WHATWG y el W3C en HTML5. Implementaciones antiguas no la implementarán exactamente igual. Por ejemplo, cuando el texto es ingresado en una caja de **texto multilinea (elemento `textarea`)**, Internet Explorer cambiará el valor de la propiedad `innerHTML` del **elemento `textarea`**, mientras que los navegadores Gecko no lo hacen.
 
 ### Consideración de seguridad
 
@@ -91,7 +93,7 @@ const name = "<img src='x' onerror='alert(1)'>";
 el.innerHTML = name; // con peligro, la alerta ahora si es mostrada
 ```
 
-Por esa razón, cuando solo tratamos con texto, es recomendable no usar `innerHTML`, sino [Node.textContent](/En/DOM/Node.textContent), que no interpretará la cadena pasada como HTML, sino como texto plano.
+Por esa razón, cuando solo tratamos con texto, es recomendable no usar `innerHTML`, sino [Node.textContent](/es/docs/Web/API/Node/textContent), que no interpretará la cadena pasada como HTML, sino como texto plano.
 
 ## Ejemplo
 
@@ -132,4 +134,4 @@ La siguiente cadena (string) se muestra en la ventana de la consola:
 ## Véase también
 
 - [`innerDOM`](http://innerdom.sourceforge.net/) - Para aquellos que desean adherirse a los estándares, aquí hay un conjunto de funciones JavaScript que ofrecen serializar o analizar XML para así establecer contenidos de elementos definidos como cadena(s) via el DOM o para conseguir contenidos de elementos obtenidos del DOM como cadenas.
-- [jssaxparser](http://code.google.com/p/jssaxparser/) - Una solución más robusta (aunque más pesada) que innerDOM (soporta análisis con espacios de nombres, atributos entre comillas simples, secciones CDATA, etc) es este analizador SAX2 cuando se utiliza con su manejador de contenido DOM. (Ofrece String to DOM, DOM to string es [significativamente más fácil](http://code.assembla.com/brettz9/subversion/nodes/DOMToString))
+- [jssaxparser](https://code.google.com/p/jssaxparser/) - Una solución más robusta (aunque más pesada) que innerDOM (soporta análisis con espacios de nombres, atributos entre comillas simples, secciones CDATA, etc) es este analizador SAX2 cuando se utiliza con su manejador de contenido DOM. (Ofrece String to DOM, DOM to string es [significativamente más fácil](http://code.assembla.com/brettz9/subversion/nodes/DOMToString))

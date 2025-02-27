@@ -5,13 +5,14 @@ slug: Web/CSS/object-fit
 
 {{CSSRef}}
 
-La propriété CSS **`object-fit`** définit la façon dont le contenu d'un [élément remplacé](/fr/docs/Web/CSS/Replaced_element) ([`<img>`](/fr/docs/Web/HTML/Element/Img) ou [`<video>`](/fr/docs/Web/HTML/Element/video) par exemple) doit s'adapter à son conteneur en utilisant sa largeur et sa hauteur.
+La propriété CSS **`object-fit`** définit la façon dont le contenu d'un [élément remplacé](/fr/docs/Web/CSS/Replaced_element) ([`<img>`](/fr/docs/Web/HTML/Element/img) ou [`<video>`](/fr/docs/Web/HTML/Element/video) par exemple) doit s'adapter à son conteneur en utilisant sa largeur et sa hauteur.
 
 {{EmbedInteractiveExample("pages/css/object-fit.html")}}
 
 Selon la valeur utilisée pour `object-fit`, l'élément peut être rogné, mis à l'échelle ou étiré, afin de remplir la boîte qui le contient.
 
-> **Note :** Il est possible de modifier l'alignement du contenu de l'élément remplacé au sein de la boîte de l'élément grâce à la propriété [`object-position`](/fr/docs/Web/CSS/object-position).
+> [!NOTE]
+> Il est possible de modifier l'alignement du contenu de l'élément remplacé au sein de la boîte de l'élément grâce à la propriété [`object-position`](/fr/docs/Web/CSS/object-position).
 
 ## Syntaxe
 
@@ -151,5 +152,5 @@ img {
 - Les autres propriétés CSS liées aux images&nbsp;:
   - [`object-position`](/fr/docs/Web/CSS/object-position)
   - [`image-orientation`](/fr/docs/Web/CSS/image-orientation)
-  - [`image-rendering`](/fr/docs/Web/CSS/Image-rendering)
+  - [`image-rendering`](/fr/docs/Web/CSS/image-rendering)
   - [`image-resolution`](/fr/docs/Web/CSS/image-resolution)

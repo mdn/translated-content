@@ -5,13 +5,13 @@ slug: Web/JavaScript/Guide/Modules
 
 {{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
 
-이 가이드는 자바스크립트 모듈 구문을 시작하는데 필요한 모든 것을 제공합니다.
+이 가이드는 JavaScript 모듈 구문을 시작하는데 필요한 모든 것을 제공합니다.
 
 ## A background on modules
 
-자바스크립트 프로그램은 꽤 작게 시작되었습니다. 초기에 사용 된 대부분의 스크립트는 독립적인 작업을 수행하여, 필요한 경우 웹 페이지에 약간의 상호 작용을 제공하므로 일반적으로 큰 스크립트가 필요하지 않았습니다. 몇년 후 자바스크립트는 많은 브라우저에서 실행되고 있는 완전한 애플리케이션을 실행할 수 있을 뿐 아니라, 다른 컨텍스트에서 (예를들면 [Node.js](/ko/docs/Glossary/Node.js)) 자바스크립트를 사용하게 됩니다.
+JavaScript 프로그램은 꽤 작게 시작되었습니다. 초기에 사용 된 대부분의 스크립트는 독립적인 작업을 수행하여, 필요한 경우 웹 페이지에 약간의 상호 작용을 제공하므로 일반적으로 큰 스크립트가 필요하지 않았습니다. 몇년 후 JavaScript는 많은 브라우저에서 실행되고 있는 완전한 애플리케이션을 실행할 수 있을 뿐 아니라, 다른 컨텍스트에서 (예를들면 [Node.js](/ko/docs/Glossary/Node.js)) JavaScript를 사용하게 됩니다.
 
-따라서 최근 몇 년 동안 자바스크립트 프로그램을 필요에 따라 가져올 수 있는, 별도의 모듈로 분할하기 위한 매커니즘을 제공하는 것에 대해 생각하기 시작했습니다. node.js는 오랫동안 이러한 능력을 가지고 있었고, 모듈 사용을 가능하게하는 많은 자바스크립트 라이브러리와 프레임워크가 있습니다. (예를들어 [RequireJS](https://requirejs.org/)와 같은 [CommonJS](https://en.wikipedia.org/wiki/CommonJS) 와 [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md)기반 모듈 시스템, 더 최근에는 [Webpack](https://webpack.github.io/)과 [Babel](https://babeljs.io/) 같은 모듈 기반 시스템이 있습니다.)
+따라서 최근 몇 년 동안 JavaScript 프로그램을 필요에 따라 가져올 수 있는, 별도의 모듈로 분할하기 위한 매커니즘을 제공하는 것에 대해 생각하기 시작했습니다. node.js는 오랫동안 이러한 능력을 가지고 있었고, 모듈 사용을 가능하게하는 많은 JavaScript 라이브러리와 프레임워크가 있습니다. (예를들어 [RequireJS](https://requirejs.org/)와 같은 [CommonJS](https://en.wikipedia.org/wiki/CommonJS) 와 [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md)기반 모듈 시스템, 더 최근에는 [Webpack](https://webpack.github.io/)과 [Babel](https://babeljs.io/) 같은 모듈 기반 시스템이 있습니다.)
 
 좋은 소식은 최신 브라우저가 기본적으로 모듈 기능을 지원하기 시작했으며, 이것이 이 기사의 전부입니다. 브라우저는 모듈의 로딩을 최적화 할 수 있기 때문에 라이브러리를 사용하는 것보다 더 효율적이며, 클라이언트 측에서의 추가 처리와 여분의 왕복을 모두 해야하는 것 보다 효율적입니다.
 
@@ -111,7 +111,7 @@ import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
 
 [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js)에서 이러한 코드를 볼 수 있습니다.
 
-> **주의:** 일부 모듈 시스템에서는 파일 확장명을 생략할 수 있습니다. (예: `'/modules/square'`). 이것은 네이티브 자바스크립트에서는 작동하지 않습니다. 또한 앞에 슬래시를 포함해야 합니다.
+> **주의:** 일부 모듈 시스템에서는 파일 확장명을 생략할 수 있습니다. (예: `'/modules/square'`). 이것은 네이티브 JavaScript에서는 작동하지 않습니다. 또한 앞에 슬래시를 포함해야 합니다.
 
 우리의 스크립트에 기능을 가져오면 동일한 파일 내에 정의한 것처럼 기능을 사용할 수 있습니다. 다음은 `main.js` 의 import 행 아래에 있습니다.
 
@@ -134,7 +134,7 @@ reportPerimeter(square1.length, reportList);
 <script type="module" src="main.js"></script>
 ```
 
-기본적으로 모듈 기능을 가져오는 스크립트는 최상위 모듈로 작동합니다. 이를 생략하면 파이어폭스로 예를들면, "SyntaxError: import declarations may only appear at top level of a module"라는 오류를 줍니다.
+기본적으로 모듈 기능을 가져오는 스크립트는 최상위 모듈로 작동합니다. 이를 생략하면 Firefox로 예를들면, "SyntaxError: import declarations may only appear at top level of a module"라는 오류를 줍니다.
 
 `import` 와 `export` 문(statement)은 모듈 내에서만 사용할 수 있습니다. 정규 스크립트가 아닙니다.
 
@@ -142,16 +142,16 @@ reportPerimeter(square1.length, reportList);
 
 ## Other differences between modules and standard scripts
 
-- 로컬 테스트에서의 주의 사항 — HTML파일을 로컬(예를들어 `file://` URL)에서 로드하려고 하면, 자바스크립트 모듈 보안 요구 사항으로 인해 CORS오류가 발생합니다. 서버를 통해 테스트 해야 합니다.
+- 로컬 테스트에서의 주의 사항 — HTML파일을 로컬(예를들어 `file://` URL)에서 로드하려고 하면, JavaScript 모듈 보안 요구 사항으로 인해 CORS오류가 발생합니다. 서버를 통해 테스트 해야 합니다.
 - 표준 스크립트와 달리 모듈 내부에서 정의된 스크립트 섹션과는 다르게 동작할 수 있습니다. 이는 모듈이 자동적으로 [strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode)를 사용하기 때문입니다.
-- 모듈 스크립트를 불러올 때 `defer` 속성([`<script>` attributes](/ko/docs/Web/HTML/Element/script#Attributes))를 사용할 필요가 없습니다. 모듈은 자동으로 defer됩니다.
-- 마지막으로 모듈 기능을 단일 스크립트의 스코프로 가져왔음을 분명히 해야 합니다. — 전역 스코프에서는 사용할 수 없습니다. 따라서 import한 스크립트에서 가져온 기능에만 접근할 수 있습니다. 예를들어 자바스크립트 콘솔에서 접근할 수 없습니다. DevTools에 구문 오류가 표시되지만, 사용하려고 하는 디버깅 기술 중 일부는 사용할 수 없습니다.
+- 모듈 스크립트를 불러올 때 `defer` 속성([`<script>` attributes](/ko/docs/Web/HTML/Element/script#attributes))를 사용할 필요가 없습니다. 모듈은 자동으로 defer됩니다.
+- 마지막으로 모듈 기능을 단일 스크립트의 스코프로 가져왔음을 분명히 해야 합니다. — 전역 스코프에서는 사용할 수 없습니다. 따라서 import한 스크립트에서 가져온 기능에만 접근할 수 있습니다. 예를들어 JavaScript 콘솔에서 접근할 수 없습니다. DevTools에 구문 오류가 표시되지만, 사용하려고 하는 디버깅 기술 중 일부는 사용할 수 없습니다.
 
 ## Default exports versus named exports
 
 지금까지 우리가 export 한 기능은 **named exports** 로 구성되었습니다. 각 항목(function, `const` 등)은 export 할 때 이름으로 참조되었으며, import 할 때에 이 이름을 참조하여 사용합니다.
 
-그 외에도 **default export** 라고 부르는 export 도 있습니다. 이것은 모듈이 제공하는 기본 기능을 쉽게 만들 수 있도록 설계되었습니다. 또한 자바스크립트 모듈을 기존의 CommonJS 와 AMD 모듈 시스템과 함께 사용(interpolate)하는데도 도움이 됩니다. (Jason Orendorff에 의해 작성된 [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) 에 설명되어있습니다. "Default exports"를 검색해보세요)
+그 외에도 **default export** 라고 부르는 export 도 있습니다. 이것은 모듈이 제공하는 기본 기능을 쉽게 만들 수 있도록 설계되었습니다. 또한 JavaScript 모듈을 기존의 CommonJS 와 AMD 모듈 시스템과 함께 사용(interpolate)하는데도 도움이 됩니다. (Jason Orendorff에 의해 작성된 [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) 에 설명되어있습니다. "Default exports"를 검색해보세요)
 
 예제를 가지고 어떻게 작동하는지 살펴보겠습니다. 예제 중 basic-modules 프로젝트의 `square.js` 파일에서 임의의 색상, 크기, 위치로 갖는 사각형을 만드는 `randomSquare()` 라는 함수를 찾을 수 있습니다. 이것을 기본값으로 export하려고 하므로, 파일의 맨 아래에 다음과 같이 씁니다.
 
@@ -425,7 +425,7 @@ import {
 
 ## Dynamic module loading
 
-브라우저에서 사용할 수 있는 자바스크립트 모듈 기능의 최신 부분은 동적 모듈 로딩 입니다. 이렇게 하면 모든 것을 최상위에서 불러오지 않고, 필요할 때만 모듈을 동적으로 불러올 수 있습니다. 이것은 몇 가지 분명한 성능 이점이 있습니다. 계속 읽어보고 어떻게 작동하는지 살펴봅시다.
+브라우저에서 사용할 수 있는 JavaScript 모듈 기능의 최신 부분은 동적 모듈 로딩 입니다. 이렇게 하면 모든 것을 최상위에서 불러오지 않고, 필요할 때만 모듈을 동적으로 불러올 수 있습니다. 이것은 몇 가지 분명한 성능 이점이 있습니다. 계속 읽어보고 어떻게 작동하는지 살펴봅시다.
 
 이 새로운 기능을 통해 `import()` 를 함수로 호출하여 모듈 경로를 매개 변수(parameter)로 전달할 수 있습니다. 모듈 객체([Creating a module object](#creating_a_module_object) 참조)를 사용하여 [promise](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)를 반환하면 해당 객체의 export에 접근할 수 있습니다.
 
@@ -474,6 +474,6 @@ Note that, promise fulfillment 가 모듈 객체를 반환하기 때문에 클�
 - [Using JavaScript modules on the web](https://developers.google.com/web/fundamentals/primers/modules#mjs), by Addy Osmani and Mathias Bynens
 - [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- Axel Rauschmayer's book [Exploring JS: Modules](http://exploringjs.com/es6/ch_modules.html)
+- Axel Rauschmayer's book [Exploring JS: Modules](https://exploringjs.com/es6/ch_modules.html)
 
 {{Previous("Web/JavaScript/Guide/Meta_programming")}}

@@ -1,14 +1,13 @@
 ---
-title: Float32Array() constructor
+title: Float32Array() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array
+l10n:
+  sourceCommit: dd339290fa3a42d9a7f079e17a62e1df1206f29d
 ---
 
 {{JSRef}}
 
-**`Float32Array`** 형식화 배열(TypedArray) 생성자는 플랫폼의 바이트 순서를 따르는 32비트 부동 소수점(C의
-`float` 데이터 타입에 대응) 배열을 생성합니다. 바이트 순서를 제어해야 하는 경우 대신 {{jsxref("DataView")}}를
-사용합니다. 배열의 내용은 0으로 초기화됩니다. 배열이 생성되면 객체의 메서드를 사용하거나 표준 배열 인덱스 구문
-(즉, 대괄호 표기법 사용)을 사용하여 배열의 요소를 참조할 수 있습니다.
+**`Float32Array()`** 생성자는 {{jsxref("Float32Array")}} 객체를 생성합니다. 초기 값이 명시적으로 주어지지 않으면 내용은 `0`으로 초기화 합니다.
 
 ## 구문
 
@@ -78,6 +77,6 @@ console.log(float32FromIterable);
 ## 같이 보기
 
 - [`core-js`에서 `Float32Array`의 폴리필](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 안내서
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

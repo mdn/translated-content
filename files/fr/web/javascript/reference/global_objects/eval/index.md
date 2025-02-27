@@ -7,9 +7,24 @@ slug: Web/JavaScript/Reference/Global_Objects/eval
 
 La fonction **`eval()`** permet d'évaluer du code JavaScript représenté sous forme d'une chaîne de caractères.
 
-> **Attention :** L'exécution de JavaScript à partir d'une chaîne de caractères constitue un risque de sécurité énorme. Il est beaucoup trop facile pour un mauvais acteur d'exécuter du code arbitraire lorsque vous utilisez `eval()`. Voir la section [N'utilisez eval() qu'en dernier recours !](#Nutiliser_eval_quen_dernier_recours_!) ci-dessous.
+> [!WARNING]
+> L'exécution de JavaScript à partir d'une chaîne de caractères constitue un risque de sécurité énorme. Il est beaucoup trop facile pour un mauvais acteur d'exécuter du code arbitraire lorsque vous utilisez `eval()`. Voir la section [N'utilisez eval() qu'en dernier recours !](#nutiliser_eval_quen_dernier_recours_!) ci-dessous.
 
-{{EmbedInteractiveExample("pages/js/globalprops-eval.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - eval()")}}
+
+```js interactive-example
+console.log(eval("2 + 2"));
+// Expected output: 4
+
+console.log(eval(new String("2 + 2")));
+// Expected output: 2 + 2
+
+console.log(eval("2 + 2") === eval("4"));
+// Expected output: true
+
+console.log(eval("2 + 2") === eval(new String("2 + 2")));
+// Expected output: false
+```
 
 ## Syntaxe
 
@@ -69,7 +84,7 @@ function test() {
 
 Dans de nombreux cas, il existe des alternatives plus sûres et plus performantes à `eval()`.
 
-De plus, les moteurs JavaScript modernes convertissent le code JavaScript en code machine. Les notions relatives aux noms des variables sont donc transformées. Utiliser `eval()` force le navigateur à enregistrer puis à rechercher parmi les noms existants afin de retrouver les variables. Si besoin, on peut utiliser le constructeur [`Function`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function) :
+De plus, les moteurs JavaScript modernes convertissent le code JavaScript en code machine. Les notions relatives aux noms des variables sont donc transformées. Utiliser `eval()` force le navigateur à enregistrer puis à rechercher parmi les noms existants afin de retrouver les variables. Si besoin, on peut utiliser le constructeur [`Function`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) :
 
 Avec `eval()` :
 
@@ -154,7 +169,7 @@ var nomPropriété = getNomProp(); //une méthode qui renvoie "a" ou "b"
 eval("var résultat = obj." + nomPropriété);
 ```
 
-Cependant, `eval()` n'est pas du tout nécessaire. Il est beaucoup plus simple, plus sécurisé, plus rapide, d'utiliser les [accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres) :
+Cependant, `eval()` n'est pas du tout nécessaire. Il est beaucoup plus simple, plus sécurisé, plus rapide, d'utiliser les [accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors) :
 
 ```js
 var obj = { a: 20, b: 30 };
@@ -174,7 +189,7 @@ setTimeout(function() { ... }, 1000);
 elt.addEventListener("click", function() { ... } , false);
 ```
 
-[Les fermetures (_closures_)](/fr/docs/Web/JavaScript/Guide/Closures) sont utiles lorsqu'on souhaite obtenir des fonctions paramétrées sans avoir à concaténer des chaînes de caractères.
+[Les fermetures (_closures_)](/fr/docs/Web/JavaScript/Closures) sont utiles lorsqu'on souhaite obtenir des fonctions paramétrées sans avoir à concaténer des chaînes de caractères.
 
 ### Convertir des chaînes JSON en objets JavaScript (_parsing_)
 
@@ -184,7 +199,7 @@ On notera que la syntaxe JSON est limitée relativement à la syntaxe JavaScript
 
 ### Transmettre des données et non du code
 
-Si on a par exemple une extension conçue pour parcourir le code d'une page web, on pourra transmettre des données [XPath](/fr/docs/XPath) au lieu d'un code JavaScript.
+Si on a par exemple une extension conçue pour parcourir le code d'une page web, on pourra transmettre des données [XPath](/fr/docs/Web/XPath) au lieu d'un code JavaScript.
 
 ### Exécuter du code avec des privilèges restreints
 

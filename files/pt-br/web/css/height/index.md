@@ -3,11 +3,11 @@ title: height
 slug: Web/CSS/height
 ---
 
-{{CSSRef()}}
+{{CSSRef}}
 
 ## Sumário
 
-A propriedade `height` do CSS determina a altura da área do conteúdo de um elemento. A [área de conteúdo](/pt-BR/docs/CSS/box_model#content) consiste no `padding`, `margin` e `border` do elemento.
+A propriedade `height` do CSS determina a altura da área do conteúdo de um elemento. A [área de conteúdo](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content) consiste no `padding`, `margin` e `border` do elemento.
 
 As propriedades {{Cssxref("min-height")}} e {{Cssxref("max-height")}} sobrepõem a {{Cssxref("height")}}.
 
@@ -108,8 +108,8 @@ div {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.height")}}
+{{Compat}}
 
 ## Veja também
 
-- [box model](/pt-BR/docs/CSS/box_model), {{Cssxref("width")}}, {{Cssxref("box-sizing")}}, {{Cssxref("min-height")}}, {{Cssxref("max-height")}}
+- [box model](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{Cssxref("width")}}, {{Cssxref("box-sizing")}}, {{Cssxref("min-height")}}, {{Cssxref("max-height")}}

@@ -1,13 +1,14 @@
 ---
 title: Window.requestAnimationFrame()
-slug: Web/API/window/requestAnimationFrame
+slug: Web/API/Window/requestAnimationFrame
 ---
 
 {{APIRef}}
 
 **`window.requestAnimationFrame()`**方法通知瀏覽器我們想要產生動畫，並且要求瀏覽器在下次重繪畫面前呼叫特定函數更新動畫。這個方法接受一個引數作為下次重繪前調用的回呼函數。
 
-> **備註：** 若是想要在下次重繪時產生另一個動畫，這個回呼函數內必須自行呼叫 requestAnimationFrame()。
+> [!NOTE]
+> 若是想要在下次重繪時產生另一個動畫，這個回呼函數內必須自行呼叫 requestAnimationFrame()。
 
 當準備好更新頁面上的動畫時應當呼叫這個方法。這表示向瀏覽器請求在下次重繪前呼叫這個動畫函數。回呼的次數通常落在每秒 60 次，但通常會根據 W3C 的建議符合多數瀏覽器重新整理的頻率。當頁面處於背景或隱藏狀態時 {{ HTMLElement("iframe") }} ，多數的瀏覽器會暫停 `requestAnimationFrame()` 的呼叫，從而改善效能表現及電池壽命。
 
@@ -59,13 +60,12 @@ Edge 低於 17 的版本和 Internet Explorer 無法保證在繪製循環前觸�
 
 {{Compat}}
 
-## 其他參考
+## 參見
 
 - {{domxref("Window.mozAnimationStartTime")}}
 - {{domxref("Window.cancelAnimationFrame()")}}
 - [mozRequestAnimationFrame](https://robert.ocallahan.org/2010/08/mozrequestanimationframe-frame-rate_17.html) - Blog post
-- [requestAnimationFrame for smart animating](http://paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
-- [Animating with javascript: from setInterval to requestAnimationFrame](http://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
-- [Using PC Hardware more efficiently in HTML5: New Web Performance APIs, Part 1](http://blogs.msdn.com/b/ie/archive/2011/07/05/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-1.aspx) - Blog post
-- [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](http://www.testufo.com/#test=animation-time-graph)
+- [requestAnimationFrame for smart animating](https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
+- [Animating with javascript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
+- [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)
 - Paul Irish: [requestAnimationFrame API: now with sub-millisecond precision](http://updates.html5rocks.com/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision)

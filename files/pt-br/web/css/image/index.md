@@ -36,7 +36,8 @@ O tamanho do objeto concreto é calculado usando o seguinte algoritimo:
 - Se o tamanho especificado define apenas a largura ou a altura, o valor que falta é determind se o valor espeficiado ado usando a relação intrínseca, se existir algum, as dimensões intrínsecas se o valoer espeficicado combinar, ou o tamanho do objeto padrão para esse valor ausente.
 - Se o tamanho especificado define nem largura ou altura, o tamanho concreto é calculado de modo que corresponda à proporção intrínseca da imagem mas sem exceder o tamanho padrão do objeto em qualquer dimensão. Se a imagem não tiver relação de aspecto intrínseco, o relação de aspecto intrínseco do objeto é aplicado para ser usado; se esse objeto for vazio, a largura ou altura que faltam são retirados do tamanho de objeto padrão.
 
-> **Nota:** Não são todos os navegadores que suportam cada tipo de imagem em cada propriedade. Veja a seção [compatibilidade dos navegadores](/pt-BR/docs/Web/CSS/image#Browser_compatibility) para mais detalhes.
+> [!NOTE]
+> Não são todos os navegadores que suportam cada tipo de imagem em cada propriedade. Veja a seção [compatibilidade dos navegadores](#Browser_compatibility) para mais detalhes.
 
 ## Sintaxe
 
@@ -70,7 +71,7 @@ element(#fakeid)  /* Um elemento ID deve ser um ID existente na página. */
 
 ## Compatibilidade do navegador
 
-{{Compat("css.types.image")}}
+{{Compat}}
 
 ## Veja também
 

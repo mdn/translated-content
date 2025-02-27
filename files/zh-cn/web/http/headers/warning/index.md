@@ -37,7 +37,7 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 
 ## 警告码
 
-[由 iana.org 维护的 HTTP 警告码登记表](http://www.iana.org/assignments/http-warn-codes/http-warn-codes.xhtml)规定了警告码的命名空间。
+[由 iana.org 维护的 HTTP 警告码登记表](https://www.iana.org/assignments/http-warn-codes/http-warn-codes.xhtml)规定了警告码的命名空间。
 
 | 码值 | 文字描述                         | 详细说明                                                                                           |
 | ---- | -------------------------------- | -------------------------------------------------------------------------------------------------- |
@@ -66,7 +66,7 @@ Warning: 112 - "cache down" "Wed, 21 Oct 2015 07:28:00 GMT"
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Date")}}
 - [HTTP respnose status codes](/zh-CN/docs/Web/HTTP/Status)

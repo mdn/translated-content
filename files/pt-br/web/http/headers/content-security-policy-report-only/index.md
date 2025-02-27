@@ -123,7 +123,7 @@ Como você pode ver, o relatório inclui o caminho completo para o recurso viola
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Content-Security-Policy-Report-Only")}}
+{{Compat}}
 
 ## Veja também
 

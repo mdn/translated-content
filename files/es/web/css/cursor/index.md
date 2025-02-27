@@ -7,14 +7,14 @@ slug: Web/CSS/cursor
 
 ### Resumen
 
-La propiedad [CSS:cursor](/es/CSS/cursor) especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento.
+La propiedad [CSS:cursor](/es/docs/Web/CSS/cursor) especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento.
 
-- [CSS:Valor_inicial](/es/CSS/Valor_inicial): `CSS:auto`
+- [CSS:Valor_inicial](/es/docs/Web/CSS/initial_value): `CSS:auto`
 - Se aplica a: todos los elementos
-- [CSS:inheritance](/es/CSS/inheritance): Si
+- [CSS:inheritance](/es/docs/Web/CSS/Inheritance): Si
 - Porcentaje: N/A
-- Media: [CSS:Media:Visual](/es/CSS/Media/Visual), [CSS:Media:Interactivo](/es/CSS/Media/Interactivo)
-- [CSS:Valor_calculado](/es/CSS/Valor_calculado):como sea especificado con URLs relativos convertidos a URLs absolutos.
+- Media: [CSS:Media:Visual](/es/docs/Web/CSS/@media), [CSS:Media:Interactivo](/es/docs/CSS/Media/Interactivo)
+- [CSS:Valor_calculado](/es/docs/Web/CSS/computed_value):como sea especificado con URLs relativos convertidos a URLs absolutos.
 
 ### Sintaxis
 
@@ -198,21 +198,21 @@ cursor: [<url> [<x> <y>]?,]*  <std-cursor-name> ;
 
 #### Extended Gecko CSS values
 
-| CSS name                                         | Description                                                                                                                   | Deprecation |
-| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| [`-moz-alias`](/es/CSS/-moz-alias)               | replaced by standard value `alias` as described in the previous table                                                         | Gecko 1.8a6 |
-| [`-moz-cell`](/es/CSS/-moz-cell)                 | replaced by standard value `cell` as described in the previous table                                                          | Gecko 1.8a6 |
-| [`-moz-context-menu`](/es/CSS/-moz-context-menu) | replaced by standard value `context-menu` as described in the previous table                                                  | Gecko 1.8a6 |
-| [`-moz-copy`](/es/CSS/-moz-copy)                 | replaced by standard value `copy` as described in the previous table                                                          | Gecko 1.8a6 |
-| [`-moz-grab`](/es/CSS/-moz-grab)                 | a cursor value that should indicate that an element or an object in a webpage can be grabbed                                  |             |
-| [`-moz-grabbing`](/es/CSS/-moz-grabbing)         | a cursor value that should indicate that an element or an object is currently being grabbed                                   |             |
-| [`-moz-spinning`](/es/CSS/-moz-spinning)         | replaced by standard value `progress` as described in the previous table                                                      | Gecko 1.7.1 |
-| [`-moz-zoom-in`](/es/CSS/-moz-zoom-in)           | used to indicate that an element or an object in a webpage is actually being resized, enlarged or is actually being magnified |             |
-| [`-moz-zoom-out`](/es/CSS/-moz-zoom-out)         | used to indicate that an element or an object in a webpage is actually being resized, reduced or is actually being zoomed out |             |
+| CSS name                                        | Description                                                                                                                   | Deprecation |
+| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [`-moz-alias`](/es/docs/Web/CSS/cursor)         | replaced by standard value `alias` as described in the previous table                                                         | Gecko 1.8a6 |
+| [`-moz-cell`](/es/docs/Web/CSS/cursor)          | replaced by standard value `cell` as described in the previous table                                                          | Gecko 1.8a6 |
+| [`-moz-context-menu`](/es/docs/Web/CSS/cursor)  | replaced by standard value `context-menu` as described in the previous table                                                  | Gecko 1.8a6 |
+| [`-moz-copy`](/es/docs/Web/CSS/cursor)          | replaced by standard value `copy` as described in the previous table                                                          | Gecko 1.8a6 |
+| [`-moz-grab`](/es/docs/Web/CSS/cursor#grab)     | a cursor value that should indicate that an element or an object in a webpage can be grabbed                                  |             |
+| [`-moz-grabbing`](/es/docs/Web/CSS/cursor#grab) | a cursor value that should indicate that an element or an object is currently being grabbed                                   |             |
+| [`-moz-spinning`](/es/docs/Web/CSS/cursor)      | replaced by standard value `progress` as described in the previous table                                                      | Gecko 1.7.1 |
+| [`-moz-zoom-in`](/es/docs/Web/CSS/cursor)       | used to indicate that an element or an object in a webpage is actually being resized, enlarged or is actually being magnified |             |
+| [`-moz-zoom-out`](/es/docs/Web/CSS/cursor)      | used to indicate that an element or an object in a webpage is actually being resized, reduced or is actually being zoomed out |             |
 
 ### Examples
 
-[Ver El Ejemplo Vivo](/samples/cssref/cursor.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/cursor.html)
 
 ```
 Inline:
@@ -229,23 +229,10 @@ External:
 }
 ```
 
-### Notes
+### Especificaciones
 
-While this property works on older browsers, not all values are fully supported.
+{{Specifications}}
 
-### Specifications
+### Compatibilidad con navegadores
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/ui.html#propdef-cursor)
-- [css3-ui](http://www.w3.org/TR/css3-ui/#cursor)
-
-### Browser compatibility
-
-| Browser           | Lowest Version (`<std-cursor-name>`) | Lowest Version (`<url>`) |
-| ----------------- | ------------------------------------ | ------------------------ |
-| Internet Explorer | 4                                    | 6 (only `.cur` files)    |
-| Firefox           | 1.0                                  | 1.5                      |
-| Netscape          | 6                                    | 8                        |
-| Opera             | 7                                    | -                        |
-| Konqueror         | 3.1                                  | 3.1                      |
-| Safari            | 1.2                                  | 1.2                      |
-| Safari (Win)      | 3.0                                  | 3.0                      |
+{{Compat}}

@@ -65,7 +65,8 @@ O atributo `session` é como um objeto dicionário que você pode ler e escrever
 
 O fragmento de código abaixo mostra como você pode obter, setar e deletar qualquer dado com com a chave "`my_car`", associada com a sessão atual (navegador).
 
-> **Nota:** Uma das coisas boas sobre o Django é que você não precisa pensar sobre os mecanismos que vinculam a sessão atual à requisição em sua view. Se nós usarmos os fragmentos abaixo em nossa view, saberemos que as informações sobre `my_car` estão associadas apenas com o navegador que enviou a requisição atual.
+> [!NOTE]
+> Uma das coisas boas sobre o Django é que você não precisa pensar sobre os mecanismos que vinculam a sessão atual à requisição em sua view. Se nós usarmos os fragmentos abaixo em nossa view, saberemos que as informações sobre `my_car` estão associadas apenas com o navegador que enviou a requisição atual.
 
 ```python
 # Pega um valor de sessão baseado na sua chave (ex.:'my_car'), disparando um KeyError se a chave não for encontrada.
@@ -102,7 +103,8 @@ request.session['my_car']['wheels'] = 'alloy'
 request.session.modified = True
 ```
 
-> **Nota:** Você pode mudar o comportamento do site para atualizar a base de dados/enviar cookie em qualquer requisição adicionando `SESSION_SAVE_EVERY_REQUEST = True` nas configurações (**locallibrary/locallibrary/settings.py**) do seu projeto.
+> [!NOTE]
+> Você pode mudar o comportamento do site para atualizar a base de dados/enviar cookie em qualquer requisição adicionando `SESSION_SAVE_EVERY_REQUEST = True` nas configurações (**locallibrary/locallibrary/settings.py**) do seu projeto.
 
 ## Exemplo simples - obtendo a contagem de visitas
 
@@ -118,7 +120,8 @@ def index(request):
 
     # Number of visits to this view, as counted in the session variable.
     num_visits = request.session.get('num_visits', 0)
-    request.session['num_visits'] = num_visits + 1
+    num_visits += 1
+    request.session['num_visits'] = num_visits
 
     context = {
         'num_books': num_books,
@@ -134,7 +137,8 @@ def index(request):
 
 Aqui primeiro obtemos o valor da _session key_ `'num_visits'`, setando o valor para 0 se não tiver sido definido anteriormente. Cada vez que uma requisição é recebida, nós então incrementamos o valor e armazenamos novamente na sessão (para a próxima vez que o usuário visitar a página). A variável `num_visits` é então passada para o _template_ na nossa variável _context_.
 
-> **Nota:** Também podemos testar se os cookies são suportados no navegador (veja [Como usar sessões](https://docs.djangoproject.com/en/2.1/topics/http/sessions/) para exemplos) ou projetar nossa UI (interface do usuário) para que não se importe se os _cookies_ são ou não suportados.
+> [!NOTE]
+> Também podemos testar se os cookies são suportados no navegador (veja [Como usar sessões](https://docs.djangoproject.com/en/2.1/topics/http/sessions/) para exemplos) ou projetar nossa UI (interface do usuário) para que não se importe se os _cookies_ são ou não suportados.
 
 Adicione a linha vista na parte inferior do bloco a seguir ao seu _template_ HTML principal (**/locallibrary/catalog/templates/index.html**) na parte inferior da sessão _"Dynamic content"_, para exibir a variável _context_:
 

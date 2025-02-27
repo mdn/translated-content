@@ -1,33 +1,32 @@
 ---
 title: "HTML 属性: required"
+short-title: required
 slug: Web/HTML/Attributes/required
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 0496bb2fcef13172325e1cc25a5fc71410506557
 ---
 
 {{HTMLSidebar}}
 
-論理属性の **`required`** 属性は、存在する場合、所有するフォームを送信する前にユーザーが入力に値を指定しなければならないことを示します。
+[論理](/ja/docs/Glossary/Boolean/HTML)属性の **`required`** 属性は、存在する場合、所有するフォームを送信する前にユーザーが入力に値を指定しなければならないことを示します。
 
 `required` 属性は `{{HTMLElement("input/text","text")}}`, `{{HTMLElement("input/search","search")}}`, `{{HTMLElement("input/url","url")}}`, `{{HTMLElement("input/tel","tel")}}`, `{{HTMLElement("input/email","email")}}`, `{{HTMLElement("input/password","password")}}`, `{{HTMLElement("input/date","date")}}`, `{{HTMLElement("input/month","month")}}`, `{{HTMLElement("input/week","week")}}`, `{{HTMLElement("input/time","time")}}`, `{{HTMLElement("input/datetime-local","datetime-local")}}`, `{{HTMLElement("input/number","number")}}`, `{{HTMLElement("input/checkbox","checkbox")}}`, `{{HTMLElement("input/radio","radio")}}`, `{{HTMLElement("input/file","file")}}` の {{HTMLElement("input")}} 型と {{HTMLElement("select")}} および {{HTMLElement("textarea")}} のフォームコントロール要素で対応しています。これらの入力型や要素の何れかに設定された場合、 {{cssxref(':required')}} 擬似クラスが一致します。属性が設定されていない場合は {{cssxref(':optional')}} 擬似クラスが一致します。
 
-この属性は {{HTMLElement("input/range","range")}} と {{HTMLElement("input/color","color")}} は対応していませんし、どちらも既定値を持っているので関係がありません。 {{HTMLElement("input/hidden","hidden")}} は、非表示のフォームにユーザーが記入することを期待できないため、対応していません。また、 `image` を含むボタンの種類もいずれも対応していません。
+この属性は {{HTMLElement("input/range","range")}} と {{HTMLElement("input/color","color")}} の入力型には、どちらも既定値を持っているので対応していませんし、関係がありません。 `color` 型は既定値が `#000000` です。 `range` の既定値は、 `min` と `max` の中間点です。宣言されていない場合、ほとんどのブラウザーでは `min` と `max` の既定値はそれぞれ 0 と 100 です。 `required` は {{HTMLElement("input/hidden","hidden")}} 入力型でも対応していません。ユーザーが非表示のフォームフィールドに記入することを期待できないためです。また、 {{HTMLElement("input/image","image")}} を含むボタン入力型も、いずれも対応していません。
 
-なお、 `color` と `range` は `required` に対応していませんが、 `color` 型は既定値が `#000000` であり、 `range` は、 `min` と `max` の中間点が既定値です。 — 宣言されていない場合、ほとんどのブラウザーでは `min` と `max` の既定値はそれぞれ 0 と 100 です。 — 従って、常に値があります。
-
-同じ名前が付けられた {{HTMLElement("input/radio","radio")}} ボタンのグループのでは、グループ内の一つのラジオボタンに `required` 属性が設定されていた場合、この属性が設定されているものでなくても構わないのですが、グループ内のラジオボタンの一つをチェックする必要があります。そのため、コードの保守性を向上させるために、グループ内の同じ名前のラジオボタンすべてに `required` 属性を設定するか、またはどれにも設定しないようにすることをお勧めします。
+同じ名前が付けられた {{HTMLElement("input/radio","radio")}} ボタンのグループのでは、グループ内の一つのラジオボタンに `required` 属性が設定されていた場合、この属性が設定されているものでなくても構わないのですが、グループ内のラジオボタンの一つをチェックする必要があります。コードの保守性を向上させるために、グループ内の同じ名前のラジオボタンすべてに `required` 属性を設定するか、またはどれにも設定しないようにすることをお勧めします。
 
 同じ名前が付けられた {{HTMLElement("input/checkbox","checkbox")}} 入力型のグループでは、 `required` 属性がついたチェックボックスのみが必須になります。
 
-> **メモ:** `aria-required="true"` を設定すると、ある要素（任意の要素）が必須であることを画面リーダーに伝えますが、その要素が任意であるかどうかには関係ありません。
+> **メモ:** [`aria-required="true"`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-required) を設定すると、ある要素（任意の要素）が必須であることをスクリーンリーダーに伝えますが、その要素が任意であるかどうかには関係ありません。
 
 ### 属性の相互作用
 
-読み取り専用フィールドは値を持つことができないので、 `required` は [`readonly`](/ja/docs/Web/HTML/Attributes/readonly) 属性が指定されている入力欄には影響を与えません。
+読み取り専用フィールドは値を変更することができないので、 `required` は [`readonly`](/ja/docs/Web/HTML/Attributes/readonly) 属性が指定されている入力欄には影響を与えません。
 
 ### ユーザビリティ
 
-`required`属性を設定する、その {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} が必須であることをユーザーに知らせるために、コントロールの近くに目に見える表示を提供してください。さらに、必須フォームコントロールを {{cssxref(':required')}} 擬似クラスでターゲットにし、必須であることを示すようにスタイル付けしてください。これにより、視覚障碍者のユーザーのユーザービリティが向上します。しかし、 `aria-required="true"` を追加しても、ブラウザーと画面リーダーの組み合わせがまだ `required` に対応していない場合には問題ありません。
+`required`属性を設定する、その {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} が必須であることをユーザーに知らせるために、コントロールの近くに目に見える表示を提供してください。さらに、必須フォームコントロールを {{cssxref(':required')}} 擬似クラスでターゲットにし、必須であることを示すようにスタイル付けしてください。これにより、視覚障碍者のユーザーのユーザービリティが向上します。しかし、 `aria-required="true"` を追加しても、ブラウザーとスクリーンリーダーの組み合わせがまだ `required` に対応していない場合には問題ありません。
 
 ### 制約検証
 
@@ -48,7 +47,7 @@ l10n:
     <label>Normal</label>
   </div>
   <div class="group">
-    <input type="text" required="required" />
+    <input type="text" required />
     <label>Required</label>
   </div>
   <input type="submit" />

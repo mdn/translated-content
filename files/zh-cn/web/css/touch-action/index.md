@@ -28,7 +28,7 @@ touch-action: unset;
 
 {{cssinfo}}
 
-默认情况下，平移（滚动）和缩放手势由浏览器专门处理。使用 {{domxref("Pointer_events")}} 的应用程序将在浏览器开始处理触摸手势时收到一个 [pointercancel](/zh-CN/docs/Web/Events/pointercancel) 事件。通过明确指定浏览器应该处理哪些手势，应用程序可以在 [pointermove](/zh-CN/docs/Web/CSS/Web/Events/pointermove) 和 [pointerup](/zh-CN/docs/Web/Events/pointerup) 监听器中为其余的手势提供自己的行为。使用 {{domxref("Touch_events")}} 的应用程序通过调用 {{domxref("Event.preventDefault","preventDefault()")}} 禁用浏览器处理手势，但也应使用**触摸操作**确保浏览器在调用任何事件侦听器之前，了解应用程序的意图。
+默认情况下，平移（滚动）和缩放手势由浏览器专门处理。使用 {{domxref("Pointer_events")}} 的应用程序将在浏览器开始处理触摸手势时收到一个 [pointercancel](/zh-CN/docs/Web/API/Element/pointercancel_event) 事件。通过明确指定浏览器应该处理哪些手势，应用程序可以在 [pointermove](/zh-CN/docs/Web/CSS/Web/Events/pointermove) 和 [pointerup](/zh-CN/docs/Web/API/Element/pointerup_event) 监听器中为其余的手势提供自己的行为。使用 {{domxref("Touch_events")}} 的应用程序通过调用 {{domxref("Event.preventDefault","preventDefault()")}} 禁用浏览器处理手势，但也应使用**触摸操作**确保浏览器在调用任何事件侦听器之前，了解应用程序的意图。
 
 当手势开始时，浏览器与触摸的元素及其所有祖先的**触摸动作**值相交直到一个实现手势（换句话说，第一个包含滚动元素）的**触摸动作**值。这意味着在实践中，**触摸动作**通常仅适用于具有某些自定义行为的单个元素，而无需在该元素的任何后代上明确指定**触摸动作**。手势开始之后，**触摸动作**值的更改将不会对当前手势的行为产生任何影响。
 
@@ -37,7 +37,7 @@ touch-action: unset;
 touch-action 属性可以被指定为：
 
 - 任何一个关键字 `auto`、`none`、`manipulation`，或
-- 零或任何一个关键字 `pan-x`、`pan-left`、`pan-right`，加 零或任何一个关键字 `pan-y`、`pan-up`、`pan-down`，加可选关键字 [`pinch-zoom`](/zh-CN/docs/Web/CSS/touch-action#pinch-zoom).
+- 零或任何一个关键字 `pan-x`、`pan-left`、`pan-right`，加 零或任何一个关键字 `pan-y`、`pan-up`、`pan-down`，加可选关键字 [`pinch-zoom`](#pinch-zoom).
 
 ### 值
 

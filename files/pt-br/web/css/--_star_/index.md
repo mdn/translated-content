@@ -82,8 +82,8 @@ Propriedades personalizadas participam na cascata: cada uma delas pode aparecer 
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.custom-property")}}
+{{Compat}}
 
 ## Veja também
 
-- [Utilizando variáveis CSS](/pt-BR/docs/Web/CSS/Using_CSS_variables)
+- [Utilizando variáveis CSS](/pt-BR/docs/Web/CSS/Using_CSS_custom_properties)

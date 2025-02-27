@@ -465,7 +465,7 @@ function FileUpload(img, file) {
   );
   xhr.open(
     "POST",
-    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
+    "https://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
   );
   xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
   reader.onload = function (evt) {
@@ -582,6 +582,6 @@ window.URL.revokeObjectURL(obj_url);
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileList")}}
 - {{DOMxRef("FileReader")}}
-- [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code)
+- [Using XMLHttpRequest](/en-US/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using the DOM File API in chrome code](/en-US/Extensions/Using_the_DOM_File_API_in_chrome_code)
 - {{DOMxRef("XMLHttpRequest")}}

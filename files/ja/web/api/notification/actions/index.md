@@ -11,7 +11,8 @@ l10n:
 
 アクションは、 [`showNotification()`](/ja/docs/Web/API/ServiceWorkerRegistration/showNotification) メソッドと [`Notification()`](/ja/docs/Web/API/Notification/Notification) コンストラクターの第 2 引数の `actions` オプションで設定します。
 
-> **メモ:** ブラウザーは通常、特定の通知のために表示されるアクションの最大数を制限します。静的な {{DOMxRef("Notification.maxActions")}} プロパティをチェックして、制限値を把握してください。
+> [!NOTE]
+> ブラウザーは通常、特定の通知のために表示されるアクションの最大数を制限します。静的な {{DOMxRef("Notification.maxActions")}} プロパティをチェックして、制限値を把握してください。
 
 ## 値
 

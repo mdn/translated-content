@@ -1,13 +1,14 @@
 ---
-title: PointerEvent.pointerType
+title: "PointerEvent: pointerType プロパティ"
+short-title: pointerType
 slug: Web/API/PointerEvent/pointerType
 l10n:
-  sourceCommit: c244d3b2cb6c17e6ba8692e3faec393afd9988ca
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{ APIRef("Pointer Events") }}
 
-**`pointerType`** は {{domxref("PointerEvent")}} インターフェイスの読み取り専用プロパティで、特定のポインターイベントを引き起こした機器の種類（マウス、ペン、またはタッチ）を示します。
+**`pointerType`** は {{domxref("PointerEvent")}} インターフェイスの読み取り専用プロパティで、特定のポインターイベントを引き起こした機器の種類（マウス、ペン、タッチのいずれか）を示します。
 
 ## 値
 

@@ -10,7 +10,8 @@ La méthode **`create()`**, rattachée à l'interface {{domxref("CredentialsCont
 - une nouvelle instance {{domxref("Credential")}} construite avec les options fournies
 - {{jsxref("null")}} si aucun objet `Credential` ne peut être créé.
 
-> **Note :** Cette méthode ne peut être utilisé que pour les contextes de navigation les plus hauts. Les appels lancés depuis une {{HTMLElement("iframe")}} résoudront la promesse sans aucun effet.
+> [!NOTE]
+> Cette méthode ne peut être utilisé que pour les contextes de navigation les plus hauts. Les appels lancés depuis une {{HTMLElement("iframe")}} résoudront la promesse sans aucun effet.
 
 ## Syntaxe
 

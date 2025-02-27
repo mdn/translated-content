@@ -55,7 +55,7 @@ DNS 请求需要的带宽非常小，但是延迟却有点高，这一点在手�
 
 ### 强制查询特定主机名
 
-你可以通过使用 [`rel`](/zh-CN/docs/Web/HTML/Element/link#rel) 属性值为 [link type](/zh-CN/docs/Web/HTML/Link_types) 中的 `dns-prefetch` 的 {{ HTMLElement("link") }} 标签来对特定域名进行预读取：
+你可以通过使用 [`rel`](/zh-CN/docs/Web/HTML/Element/link#rel) 属性值为 [link type](/zh-CN/docs/Web/HTML/Attributes/rel) 中的 `dns-prefetch` 的 {{ HTMLElement("link") }} 标签来对特定域名进行预读取：
 
 ```html
 <link rel="dns-prefetch" href="http://www.spreadfirefox.com/" />

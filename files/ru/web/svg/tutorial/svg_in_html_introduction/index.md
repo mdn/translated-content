@@ -3,13 +3,15 @@ title: SVG в HTML. Введение
 slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 ---
 
+{{SVGRef}}
+
 ## Описание
 
 Эта статья содержит пример использования SVG в качестве фонового изображения для формы. В примере демонстрируется, как JavaScript и CSS может быть использован для того, чтобы производить операции с векторным изображением (svg) так, будто вы используете обычный сценарий для XHTML. Необходимо понимать, что пример работоспособен лишь в браузерах, которые поддерживают XHTML (не HTML), а также интеграцию SVG.
 
 ## Код
 
-Демонстрация примера [здесь](/presentations/xtech2005/svg-canvas/SVGDemo.xml):
+Демонстрация примера [здесь](https://mdn.dev/archives/media/presentations/xtech2005/svg-canvas/SVGDemo.xml):
 
 ```html
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -86,7 +88,8 @@ slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 - С помощью JavaScript можно управлять как HTML так и SVG
 - Это полностью валидный документ, основанный на стандартах.
 
-> **Примечание:** Чтобы к изображению с DOM добавить связь встроенного SVG, необходимо использовать setAttributeNS, установив href как показано в следующем примере:
+> [!NOTE]
+> Чтобы к изображению с DOM добавить связь встроенного SVG, необходимо использовать setAttributeNS, установив href как показано в следующем примере:
 >
 > ```js
 > var img = document.createElementNS("http://www.w3.org/2000/svg", "image");
@@ -128,4 +131,4 @@ preserveAspectRatio="none"
 
 - Сохранение пропорций [ссылка](http://xiper.net/learn/svg/svg-essentials/preserving-aspect-ratio)
 - Масштабирование и сдвиг [msdn.microsoft](<https://msdn.microsoft.com/ru-ru/library/gg589508(v=vs.85).aspx>)
-- Ещё SVG в XHTML: [пример](/ru/docs/SVG/Namespaces_Crash_Course/Example)
+- Ещё SVG в XHTML: [пример](/ru/docs/Web/SVG/Namespaces_Crash_Course/Example)

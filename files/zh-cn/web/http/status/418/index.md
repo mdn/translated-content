@@ -1,17 +1,19 @@
 ---
 title: 418 I'm a teapot
 slug: Web/HTTP/Status/418
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`418 I'm a teapot`** 客户端错误响应代码表示服务器拒绝冲泡咖啡，因为它是个茶壶。
+HTTP **`418 I'm a teapot`** 客户端错误响应状态码表示服务器拒绝冲泡咖啡，因为它一直都是茶壶。暂时没有咖啡的组合式咖啡/茶壶应该返回 503。这个错误是对 1998 年和 2014 年愚人节玩笑中定义的超文本咖啡壶控制协议的参考。
 
-该错误是超文本咖啡壶控制协议的参考，和 1998 年愚人节的玩笑。
+一些网站使用这个响应来处理它们不想处理的请求，比如自动查询。
 
 ## 状态
 
-```plain
+```http
 418 I'm a teapot
 ```
 
@@ -19,10 +21,6 @@ HTTP **`418 I'm a teapot`** 客户端错误响应代码表示服务器拒绝冲�
 
 {{Specifications}}
 
-## 浏览器兼容性
+## 参见
 
-{{Compat}}
-
-## 请参见参考
-
-- [Wikipedia: Hyper Text Coffee Pot Control Protocol](https://zh.wikipedia.org/wiki/Hyper_Text_Coffee_Pot_Control_Protocol)
+- [维基百科：超文本咖啡壶控制协议](https://zh.wikipedia.org/wiki/超文本咖啡壶控制协议)

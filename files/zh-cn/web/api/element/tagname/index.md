@@ -19,7 +19,7 @@ elementName = element.tagName
 
 ## 备注
 
-在 XML (或者其他基于 XML 的语言，比如 XHTML,xul) 文档中，`tagName 的值会`保留原始的大小写。在 HTML 文档中，`tagName`会返回其大写形式。对于元素节点来说，`tagName 属性`的值和[nodeName](/zh-CN/DOM/Node.nodeName)属性的值是相同的。
+在 XML (或者其他基于 XML 的语言，比如 XHTML,xul) 文档中，`tagName 的值会`保留原始的大小写。在 HTML 文档中，`tagName`会返回其大写形式。对于元素节点来说，`tagName 属性`的值和[nodeName](/zh-CN/docs/Web/API/Node/nodeName)属性的值是相同的。
 
 ## 例子
 
@@ -40,5 +40,5 @@ alert(span.tagName);
 
 ## 规范
 
-- [DOM Level 2 Core: tagName](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-104682815)
-- [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
+- [DOM Level 2 Core: tagName](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-104682815)
+- [HTML 5: APIs in HTML documents](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)

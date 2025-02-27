@@ -74,7 +74,7 @@ if (!Array.of) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.of")}}
+{{Compat}}
 
 ## Ver também
 

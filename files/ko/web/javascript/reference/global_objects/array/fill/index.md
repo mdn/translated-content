@@ -9,7 +9,22 @@ l10n:
 
 {{jsxref("Array")}} 인스턴스의 **`fill()`** 메서드는 배열의 인덱스 범위 내에 있는 모든 요소를 정적 값으로 변경합니다. 그리고 수정된 배열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/array-fill.html")}}
+{{InteractiveExample("JavaScript Demo: Array.fill()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3, 4];
+
+// Fill with 0 from position 2 until position 4
+console.log(array1.fill(0, 2, 4));
+// Expected output: Array [1, 2, 0, 0]
+
+// Fill with 5 from position 1
+console.log(array1.fill(5, 1));
+// Expected output: Array [1, 5, 5, 5]
+
+console.log(array1.fill(6));
+// Expected output: Array [6, 6, 6, 6]
+```
 
 ## 구문
 
@@ -47,7 +62,8 @@ fill(value, start, end)
 
 `fill()` 메서드는 [범용](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#범용_배열_메서드)입니다. `this` 값에는 `length` 속성만 있을 것으로 예상합니다. 문자열도 유사 배열이지만, 문자열은 불변이므로 이 메서드를 적용하기에는 적합하지 않습니다.
 
-> **참고:** 빈 배열(`length = 0`)에 `Array.prototype.fill()`을 사용하면 배열에 수정할 내용이 없으므로 배열이 수정되지 않습니다.
+> [!NOTE]
+> 빈 배열(`length = 0`)에 `Array.prototype.fill()`을 사용하면 배열에 수정할 내용이 없으므로 배열이 수정되지 않습니다.
 > 배열을 선언할 때 `Array.prototype.fill()`을 사용하려면 배열의 길이가 0이 아닌지 확인하세요.
 > [예제](#fill을_사용하여_빈_배열_채우기)를 참조하십시오.
 

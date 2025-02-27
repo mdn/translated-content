@@ -3,7 +3,7 @@ title: Object.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
 ---
 
-{{JSRef("Objetos_globales", "Object")}}
+{{JSRef}}
 
 ## Resumen
 

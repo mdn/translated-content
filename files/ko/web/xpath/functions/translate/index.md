@@ -3,7 +3,7 @@ title: translate
 slug: Web/XPath/Functions/translate
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `translate` 함수는 문자열과 번역할 문자 집합을 평가하고 번역된 문자열을 반환합니다.
 
@@ -80,7 +80,7 @@ The quick red fdx.
 
 ### 정의
 
-[XPath 1.0 4.2](http://www.w3.org/TR/xpath#function-translate)
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-translate)
 
 ### Gecko 지원
 

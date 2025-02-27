@@ -9,7 +9,8 @@ O cabeçalho **`Save-Data`** é um booleano no qual, em requisições, indica a 
 
 Um valor de `On` indica uma opção explícita do usuário em querer reduzir a quantidade de dados usados no cliente, e quando comunicade para origens permite elas entregarem conteúdo alternativo para reduzir a quantidade de dados baixados como recursos de imagem e vídeo menores, marcação e estilo diferente, desabilitar _polling_ e atualizações automáticas, e assim por diante.
 
-> **Nota:** Desabilitar HTTP/2 Server Push ({{RFC("7540", "Server Push", "8.2")}}) pode ser desejável para reduzir o _download_ de dados.
+> [!NOTE]
+> Desabilitar HTTP/2 Server Push ({{RFC("7540", "Server Push", "8.2")}}) pode ser desejável para reduzir o _download_ de dados.
 
 ## Sintaxe
 
@@ -77,7 +78,7 @@ Content-Type: image/jpeg
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Save-Data")}}
+{{Compat}}
 
 ## Veja também
 

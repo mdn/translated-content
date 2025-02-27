@@ -3,6 +3,8 @@ title: Object (オブジェクト)
 slug: Glossary/Object
 ---
 
+{{GlossarySidebar}}
+
 [オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object)はデータとそのデータをやり取りするための命令が入ったデータ構造です。オブジェクトはしばしば現実世界の事物を参照する事があります。例えば、レーシングゲームでは `car` や `map` オブジェクトと言った具合です。{{glossary("OOP","オブジェクト指向プログラミング")}}言語の例としては、{{glossary("JavaScript")}}、Java、C++、Python、そして Ruby などが挙げられます。
 
 ## 詳細情報

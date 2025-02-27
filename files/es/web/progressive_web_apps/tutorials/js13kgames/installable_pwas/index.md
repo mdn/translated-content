@@ -13,12 +13,13 @@ Estas tecnologías permiten que la aplicación se inicie directamente desde la p
 
 Para que el sitio web sea instalable, necesitas lo siguiente:
 
-- Un manifiesto web, con los [campos correctos completados](/es/Apps/Progressive/Add_to_home_screen#Manifest)
+- Un manifiesto web, con los [campos correctos completados](/es/docs/Web/Aplicaciones/Progressive/Add_to_home_screen#manifest)
 - Que sitio web se sirva desde un dominio seguro (HTTPS)
 - Un icono para representar la aplicación en el dispositivo.
 - Un [servicio worker](/es/docs/Web/API/Service_Worker_API) registrado para permitir que la aplicación funcione sin conexión (actualmente, esto solo lo requiere Chrome para Android)
 
-> **Nota:** Actualmente, solo los navegadores basados en Chromium tal como Chrome, Edge y Samsung Internet requieren el servicio _worker_. Si desarrollas tu aplicación con Firefox, ten en cuenta que necesitarás un servicio _worker_ para que sea compatible con los navegadores basados en Chromium.
+> [!NOTE]
+> Actualmente, solo los navegadores basados en Chromium tal como Chrome, Edge y Samsung Internet requieren el servicio _worker_. Si desarrollas tu aplicación con Firefox, ten en cuenta que necesitarás un servicio _worker_ para que sea compatible con los navegadores basados en Chromium.
 
 ### El archivo de manifiesto
 
@@ -32,7 +33,8 @@ El archivo `js13kpwa.webmanifest` de la aplicación web [js13kPWA](https://mdn.g
 <link rel="manifest" href="js13kpwa.webmanifest" />
 ```
 
-> **Nota:** Hay algunos tipos comunes de archivos de manifiesto que se han utilizado en el pasado: `manifest.webapp` era popular en los manifiestos de aplicaciones de Firefox OS, y muchos usan `manifest.json` para manifestar aplicaciones web ya que el contenido está organizado en una estructura JSON. Sin embargo, el formato de archivo `.webmanifest` se menciona explícitamente en la [especificación del manifiesto W3C](https://w3c.github.io/manifest/), por lo tanto ese es el que usaremos aquí.
+> [!NOTE]
+> Hay algunos tipos comunes de archivos de manifiesto que se han utilizado en el pasado: `manifest.webapp` era popular en los manifiestos de aplicaciones de Firefox OS, y muchos usan `manifest.json` para manifestar aplicaciones web ya que el contenido está organizado en una estructura JSON. Sin embargo, el formato de archivo `.webmanifest` se menciona explícitamente en la [especificación del manifiesto W3C](https://w3c.github.io/manifest/), por lo tanto ese es el que usaremos aquí.
 
 El contenido del archivo se ve así:
 
@@ -108,7 +110,7 @@ El icono y los colores del tema y fondo se utilizan para crear esta pantalla.
 
 En este artículo, aprendimos cómo podemos hacer que las PWAs se puedan instalar con un manifiesto web correctamente configurado, y cómo el usuario puede luego instalar la PWA con la función "agregar a la pantalla de inicio" de su navegador.
 
-Para obtener más información sobre _aapi_, asegúrate de leer nuestra [guía para agregar a la pantalla de inicio](/es/docs/Web/Apps/Progressive/Add_to_home_screen). La compatibilidad con el navegador se limita actualmente a Firefox para Android 58+, Mobile Chrome y Android Webview 31+, y Opera para Android 32+, pero esto debería mejorar en un próximo futuro.
+Para obtener más información sobre _aapi_, asegúrate de leer nuestra [guía para agregar a la pantalla de inicio](/es/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable). La compatibilidad con el navegador se limita actualmente a Firefox para Android 58+, Mobile Chrome y Android Webview 31+, y Opera para Android 32+, pero esto debería mejorar en un próximo futuro.
 
 Ahora pasemos a la última pieza del rompecabezas de PWA: usar notificaciones automáticas para compartir anuncios con el usuario y ayudarlo a volver a interactuar con tu aplicación.
 

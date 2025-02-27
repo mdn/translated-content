@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/String/big
 
 {{jsxref("String")}} 值的 **`big()`** 方法创建一个 {{HTMLElement("big")}} 元素字符串，其中嵌入了调用的字符串（`<big>str</big>`），从而使该字符串以大字体显示。
 
-> **备注：** 所有的 [HTML 包装方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法)都已被弃用，并且仅为了兼容性而标准化。对于 `big()` 方法来说，在 [HTML5](/zh-CN/docs/Glossary/HTML5) 中已经移除了 `<big>` 元素，不应再使用它。Web 开发者应该使用 [CSS](/zh-CN/docs/Web/CSS) 属性来实现相应的效果。
+> [!NOTE]
+> 所有的 [HTML 包装方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法)都已被弃用，并且仅为了兼容性而标准化。对于 `big()` 方法来说，在 [HTML5](/zh-CN/docs/Glossary/HTML5) 中已经移除了 `<big>` 元素，不应再使用它。Web 开发者应该使用 [CSS](/zh-CN/docs/Web/CSS) 属性来实现相应的效果。
 
 ## 语法
 

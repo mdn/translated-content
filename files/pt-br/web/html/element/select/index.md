@@ -9,11 +9,11 @@ O elemento HTML _select_ (\<select>) representa um controle que apresenta um men
 
 ## Contexto de uso
 
-| [Categorias de conteúdo](/pt-BR/docs/HTML/Categorias_de_conteúdo) | [conteúdo fluido](/pt-BR/docs/HTML/Categorias_de_conteúdo#Conteúdo_fluido), [conteúdo fraseado](/pt-BR/docs/HTML/Categorias_de_conteúdo#Conteúdo_fraseado), [conteúdo interativo](/pt-BR/docs/HTML/Categorias_de_conteúdo#Conteúdo_interativo), [listado](/pt-BR/docs/HTML/Categorias_de_conteúdo#Listado_em_formulários), [rotulável](/pt-BR/docs/HTML/Categorias_de_conteúdo#Rotulável_em_formulários), [resetável](/pt-BR/docs/HTML/Categorias_de_conteúdo#Resetável_em_formulários), e [enviável](/pt-BR/docs/HTML/Categorias_de_conteúdo#Enviável_em_formulários) [associado a formulários](/pt-BR/docs/HTML/Categorias_de_conteúdo#Associado_a_formulários) |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Conteúdo permitido                                                | Zero ou mais elementos {{HTMLElement("option")}} ou {{HTMLElement("optgroup")}}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Omissão de tag                                                    | Nenhuma, tanto tag de início quanto de fim são obrigatórias                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Elementos pai permitidos                                          | qualquer elemento que aceite conteúdo fraseado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| [Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories) | [conteúdo fluido](/pt-BR/docs/Web/HTML/Content_categories#conteúdo_de_fluxo), [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#conteúdo_fraseado), [conteúdo interativo](/pt-BR/docs/Web/HTML/Content_categories#conteúdo_interativo), [listado](/pt-BR/docs/Web/HTML/Content_categories#listed), [rotulável](/pt-BR/docs/Web/HTML/Content_categories#labelable), [resetável](/pt-BR/docs/Web/HTML/Content_categories#resettable), e [enviável](/pt-BR/docs/Web/HTML/Content_categories#submittable) [associado a formulários](/pt-BR/docs/Web/HTML/Content_categories#conteúdo_associado_ao_form) |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Conteúdo permitido                                                | Zero ou mais elementos {{HTMLElement("option")}} ou {{HTMLElement("optgroup")}}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Omissão de tag                                                    | Nenhuma, tanto tag de início quanto de fim são obrigatórias                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Elementos pai permitidos                                          | qualquer elemento que aceite conteúdo fraseado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 ## Atributos
 
@@ -38,7 +38,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Atributos_globa
 
 ## Interface DOM
 
-Este elemento implementa a interface [`HTMLSelectElement`](/pt-BR/docs/DOM/HTMLSelectElement).
+Este elemento implementa a interface [`HTMLSelectElement`](/pt-BR/docs/Web/API/HTMLSelectElement).
 
 ## Exemplos
 
@@ -53,11 +53,11 @@ Este elemento implementa a interface [`HTMLSelectElement`](/pt-BR/docs/DOM/HTMLS
 
 ### Notas
 
-O conteúdo deste elemento é estático e não [editável](/pt-BR/docs/HTML/Content_Editable).
+O conteúdo deste elemento é estático e não [editável](/pt-BR/docs/Web/HTML/Global_attributes/contenteditable).
 
 A seguir um exemplo de como simular uma lista de seleção com opções editáveis, **mas esteja ciente** de que leitores de tela e dispositivos de acessibilidade _não_ interpretarão o formulário corretamente; este exemplo seria HTML inválido se os elementos corretos fossem usados:
 
-[Este é um exemplo](/files/4563/editable_select.html) de um select editável usando um {{HTMLElement("fieldset")}} de [botões de opção](/pt-BR/docs/HTML/Element/Input) e [caixas de texto](/pt-BR/docs/HTML/Element/Input) (**escrito somente com CSS**, sem JavaScript),
+[Este é um exemplo](/files/4563/editable_select.html) de um select editável usando um {{HTMLElement("fieldset")}} de [botões de opção](/pt-BR/docs/Web/HTML/Element/input) e [caixas de texto](/pt-BR/docs/Web/HTML/Element/input) (**escrito somente com CSS**, sem JavaScript),
 
 ## Especificações
 
@@ -65,10 +65,10 @@ A seguir um exemplo de como simular uma lista de seleção com opções editáve
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.select")}}
+{{Compat}}
 
 ## Veja também
 
-- Outros elementos relacionados a formulários: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
+- Outros elementos relacionados a formulários: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
 
 {{HTMLSidebar}}

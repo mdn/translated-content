@@ -7,7 +7,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`FragmentDirective`** インターフェイスは、現在の文書で強調表示されているテキストフラグメントを表すお武衛j句とです。
+**`FragmentDirective`** インターフェイスは、現在の文書で強調表示されているテキストフラグメントを表すオブジェクトです。
 
 これは {{domxref("Document.fragmentDirective")}} プロパティでアクセスできます。
 
@@ -60,5 +60,5 @@ items: [
 
 ## 関連情報
 
-- [テキストフラグメント](/ja/docs/Web/Text_fragments)
+- [テキストフラグメント](/ja/docs/Web/URI/Fragment/Text_fragments)
 - {{cssxref("::target-text")}}

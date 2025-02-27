@@ -9,7 +9,8 @@ La propriété **`overflow-wrap`** s'applique aux éléments en ligne (_inline_)
 
 {{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}
 
-> **Note :** À la différence de {{cssxref("word-break")}}, `overflow-wrap` créera uniquement un saut de ligne si un mot entier ne peut pas être placé sur sa propre ligne sans dépasser.
+> [!NOTE]
+> À la différence de {{cssxref("word-break")}}, `overflow-wrap` créera uniquement un saut de ligne si un mot entier ne peut pas être placé sur sa propre ligne sans dépasser.
 
 À l'origine, cette propriété était une extension non-standard sans préfixe de Microsoft et intitulée `word-wrap`. Implémentée sous ce nom par la plupart des navigateurs depuis, elle a été renommée en `overflow-wrap` et `word-wrap` est devenu un alias.
 

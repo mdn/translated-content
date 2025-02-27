@@ -31,7 +31,8 @@ touch-action: unset;
 
 ジェスチャーが開始されると、ブラウザーはタッチ要素の `touch-action` の値を、祖先のうちジェスチャーを実装しているもの (言い換えれば、最初のスクロールを含む要素) まで交差させます。つまり実際には、 `touch-action` は通常、その要素の子孫のいずれかに `touch-action` を明示的に指定する必要なく、独自の動作を持つ最上位の要素にのみ適用されます。
 
-> **メモ:** ジェスチャーが開始された後、 `touch-action` の値を変更しても、現在のジェスチャーの動作には影響を与えません。
+> [!NOTE]
+> ジェスチャーが開始された後、 `touch-action` の値を変更しても、現在のジェスチャーの動作には影響を与えません。
 
 ## 構文
 
@@ -61,7 +62,7 @@ touch-action: unset;
 
 `touch-action: none;` の宣言は、ブラウザー内蔵のズーム機能を操作することを阻害することがあります。これは弱視の人がページのコンテンツを読んで理解できるようになることを阻害します。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.4 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## 公式定義
@@ -113,4 +114,4 @@ touch-action: unset;
 - {{domxref("Pointer_events", "ポインターイベント", "", 1)}}
 - WebKit Blog [More Responsive Tapping on iOS](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/)
 - Google Developers Blog [Making touch scrolling fast by default](https://developers.google.com/web/updates/2017/01/scrolling-intervention)
-- [スクロールスナップ](/ja/docs/Web/CSS/CSS_Scroll_Snap)
+- [スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)

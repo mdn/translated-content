@@ -5,7 +5,8 @@ slug: Web/API/WorkerGlobalScope/dump
 
 {{APIRef("Web Workers API")}}
 
-> **Attention :** Cette fonctionnalité n'est ni standard, ni en voie de standardisation. Ne l'utilisez pas pour des sites accessibles sur le Web : elle ne fonctionnera pas pour tout utilisateur. Il peut également y avoir d'importantes incompatibilités entre les implémentations et son comportement peut être modifié dans le futur.
+> [!WARNING]
+> Cette fonctionnalité n'est ni standard, ni en voie de standardisation. Ne l'utilisez pas pour des sites accessibles sur le Web : elle ne fonctionnera pas pour tout utilisateur. Il peut également y avoir d'importantes incompatibilités entre les implémentations et son comportement peut être modifié dans le futur.
 
 La méthode **`dump()`** de l'interface {{domxref("WorkerGlobalScope")}} permet d'écrire des messages vers `stdout` — i.e. dans le terminal, seulement sur Firefox. C'est la même chose que {{domxref("window.dump")}} dans Firefox, mais pour les *worker*s.
 

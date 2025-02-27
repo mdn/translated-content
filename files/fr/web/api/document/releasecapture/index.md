@@ -17,7 +17,7 @@ Une fois la capture de la souris relâchée, les événements de souris ne seron
 
 ## Exemple
 
-Voir l'[exemple](/fr/docs/Web/API/element.setCapture#Example) pour {{domxref("element.setCapture()")}}.
+Voir l'[exemple](/fr/docs/Web/API/Element/setCapture#example) pour {{domxref("element.setCapture()")}}.
 
 ## Spécifications
 

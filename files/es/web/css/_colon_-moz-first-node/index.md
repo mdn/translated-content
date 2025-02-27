@@ -1,5 +1,5 @@
 ---
-title: ":-moz-first-node"
+title: :-moz-first-node
 slug: Web/CSS/:-moz-first-node
 ---
 
@@ -9,7 +9,8 @@ slug: Web/CSS/:-moz-first-node
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-first-node` representa cualquier elemento que sea el primer nodo hijo de algún otro elemento. Se diferencia de {{Cssxref(":first-child")}} en que no selecciona al primer hijo si tiene texto (que no sea espacios en blanco) detrás de él.
 
-> **Nota:** Cualquier espacion en blanco al principio del elemento se ignora a la hora de determina cual elemento es `:-moz-first-node`.
+> [!NOTE]
+> Cualquier espacion en blanco al principio del elemento se ignora a la hora de determina cual elemento es `:-moz-first-node`.
 
 ## Síntaxis
 

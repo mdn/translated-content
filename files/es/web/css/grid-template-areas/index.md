@@ -91,7 +91,7 @@ Estas áreas no están asociadas a ningún elemento particular de la cuadrícula
 
 ### Result
 
-_{{EmbedLiveSample("Example", "100%", "250px")}}_
+{{EmbedLiveSample("Example", "100%", "250px")}}
 
 ## Especificaciones
 
@@ -105,4 +105,4 @@ _{{EmbedLiveSample("Example", "100%", "250px")}}_
 
 - Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template")}}
 - Grid Layout Guide: _[Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
-- Video tutorial: _[Grid Template Areas](http://gridbyexample.com/video/grid-template-areas/)_
+- Video tutorial: _[Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)_

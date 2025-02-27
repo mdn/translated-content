@@ -35,7 +35,7 @@ height: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 높이의 절대값.
 - {{cssxref("&lt;percentage&gt;")}}
-  - [: 컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 높이의 백분율.
+  - [: 컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 높이의 백분율.
 - `border-box` {{experimental_inline}}
   - : 앞선 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}가 요소의 보더 박스에 적용.
 - `content-box` {{experimental_inline}}
@@ -123,4 +123,4 @@ div {
 
 ## 같이 보기
 
-- [box model](/ko/docs/CSS/box_model), {{cssxref("width")}}, {{cssxref("box-sizing")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}}
+- [box model](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("width")}}, {{cssxref("box-sizing")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}}

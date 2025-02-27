@@ -35,11 +35,11 @@ HTML 规范也说了 {{HTMLElement("input")}} 元素可替换，因为 `"image"`
 
 CSS 在某些情况下会对可替换元素做一些特殊处理，比如计算外边距（{{cssxref("margin")}}）和一些 `auto` 的具体值。
 
-需要注意的是，一部分（并非全部）可替换元素，其本身具有的尺寸和基线（baseline）会被一些 CSS 属性用到，加入计算之中，例如 {{cssxref("vertical-align")}}。只有可替换元素才能具有这种自带值。
+需要注意的是，一部分（并非全部）可替换元素，其本身具有的尺寸和基线（baseline）会被一些 CSS 属性（例如 {{cssxref("vertical-align")}}）加入计算之中。只有可替换元素才能具有这种自带值。
 
 ### 控制内容框中的对象位置
 
-某些 CSS 属性可用于指定 可替换元素中包含的内容对象 在该元素的盒区域内的位置或定位方式。这些属性的具体定义可以在 [CSS3 Images](https://drafts.csswg.org/css-images/) 规范中找到：
+某些 CSS 属性可用于指定可替换元素中包含的内容对象在该元素的盒区域内的位置或定位方式。这些属性的具体定义可以在 [CSS3 Images](https://drafts.csswg.org/css-images/) 规范中找到：
 
 - {{cssxref("object-fit")}}
   - : 指定可替换元素的内容对象在元素盒区域中的填充方式。（有些类似于 {{cssxref("background-size")}} ）
@@ -51,24 +51,24 @@ CSS 在某些情况下会对可替换元素做一些特殊处理，比如计算�
 - 可替换元素的 [HTML 规范](https://html.spec.whatwg.org/multipage/rendering.html#replaced-elements)
 - CSS 重要概念：
 
-  - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
-  - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
-  - [注释](/zh-CN/docs/Web/CSS/Comments)
-  - [优先级](/zh-CN/docs/Web/CSS/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/inheritance)
+  - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
+  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
+  - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
+  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
+  - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
   - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
-    - [初始值](/zh-CN/docs/Web/CSS/initial_value)
-    - [计算值](/zh-CN/docs/Web/CSS/computed_value)
+    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)
+    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)
     - [解析值](/zh-CN/docs/Web/CSS/resolved_value)
-    - [指定值](/zh-CN/docs/Web/CSS/specified_value)
-    - [应用值](/zh-CN/docs/Web/CSS/used_value)
-    - [实际值](/zh-CN/docs/Web/CSS/actual_value)
+    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/specified_value)
+    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
+    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
 
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
   - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)

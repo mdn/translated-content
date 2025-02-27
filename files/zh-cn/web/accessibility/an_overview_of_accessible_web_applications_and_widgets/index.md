@@ -1,22 +1,22 @@
 ---
-title: 可访问的 Web 应用程序和小部件概述
+title: 无障碍 Web 应用和微件概述
 slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
+l10n:
+  sourceCommit: acad5b9afc0a9e20144d49fd3fbb7f4fa92c9192
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility", 1)}}
-</section>
+{{AccessibilitySidebar}}
 
-web 正在变化。静态的、基于页面的站点逐渐被动态站点所取代，桌面式的 web 应用由大量的 JavaScript 和 AJAX 组成。设计人员完全可以通过 JavaScript，HTML 和 CSS 的组合创建令人惊叹的新的小部件和控件。这种转变有可能显着提高网络的响应能力和可用性，但是由于无障碍差距，存在许多用户有无法享用这种好处的风险。用户无法访问传统上 JavaScript 对于诸如屏幕阅读器等辅助技术，但是现在有了创建动态 Web 用户界面的方法，可以被各种用户访问。
+大多数 JavaScript 库提供了客户端微件（widget）库，模拟熟悉的桌面界面的行为。滑块、菜单栏、文件列表视图等可以通过 JavaScript、CSS 和 HTML 的组合来构建。由于 HTML4 规范不提供语义上描述这些微件的内置标签，因此开发人员通常会使用通用元素（如 {{HTMLElement('div')}} 和 {{HTMLElement('span')}}）。虽然这导致了一个看起来像桌面对应的组件，但标记中通常没有足够的辅助技术可用的语义信息。
 
 ## 问题
 
-大多数 JavaScript 工具包提供了模拟类似桌面界面行为的客户端小部件库。滑块，菜单栏，文件列表视图等可以通过 JavaScript，CSS 和 HTML 的组合构建。由于 HTML 4 规范不提供语义上描述这些窗口小部件的内置标签，因此开发人员通常会使用通用元素（如\<div>和\<span>）。虽然这导致了一个看起来像桌面对应的小部件，但标记中通常没有足够的辅助技术可用的语义信息。网页上的动态内容对于无论何种原因无法查看屏幕的用户来说都是特别有问题的。股票行情，实时 twitter 消息更新，进度指示器和类似内容以辅助技术（AT）可能不知道的方式修改 DOM。那就是[ARIA](/zh-CN/ARIA)存在的意义。
+对于由于某种原因而无法查看屏幕的用户来说，Web 页面上的动态内容都很容易成为问题。股票行情、实时 twitter 消息更新、进度条和类似内容以辅助技术（AT）可能不知道的方式修改 DOM。那就是 [ARIA](/zh-CN/docs/Web/Accessibility/ARIA) 存在的意义。
 
-_Example 1: Markup for a tabs widget built without ARIA labeling. There's no information in the markup to describe the widget's form and function._
+_示例 1：没有使用 ARIA 标签（label）的标签页（tab）组件的标记（markup）。标记中没有足够的信息来描述组件的形式和功能。_
 
 ```html
-<!-- This is a tabs widget. How would you know, looking only at the markup? -->
+<!-- 这是个标签页微件。只看 HTML 标记会知道作用如此吗？ -->
 <ol>
   <li id="ch1Tab">
     <a href="#ch1Panel">Chapter 1</a>
@@ -30,28 +30,34 @@ _Example 1: Markup for a tabs widget built without ARIA labeling. There's no inf
 </ol>
 
 <div>
-  <div id="ch1Panel">Chapter 1 content goes here</div>
-  <div id="ch2Panel">Chapter 2 content goes here</div>
-  <div id="quizPanel">Quiz content goes here</div>
+  <div id="ch1Panel">第 1 章的内容在这里</div>
+  <div id="ch2Panel">第 2 章的内容在这里</div>
+  <div id="quizPanel">测验的内容在这里</div>
 </div>
 ```
 
-_Example 2: How the tabs widget might be styled visually. Users might recognize it visually, but there are no machine-readable semantics for an assistive technology._
-![Screenshot of the tabs widget](tabs_widget.png)
+_示例 2：标签页微件的视觉样式。用户可能能够通过视觉识别，但是对于辅助技术来说，没有机器可读的语义信息。_
+
+![标签页微件的截图](tabs_widget.png)
 
 ## ARIA
 
-[WAI-ARIA](http://www.w3.org/WAI/intro/aria.php), 来自 W3C 的网络无障碍计划（[Web Accessibility Initiative](http://www.w3.org/WAI/)）的可访问的富互联网应用程序（**Accessible Rich Internet Applications**）规范，提供了一种添加辅助技术（如屏幕阅读器）所需的缺少语义的方法。ARIA 使开发人员可以通过向标记添加特殊属性来更详细地描述其小部件。旨在填补在动态 web 应用在发现的标准 HTML 标签与桌面式控件之的差距，ARIA 提供了角色和状态以描述大多数常见的 UI 小部件的行为。
+**ARIA**（无障碍富互联网应用）使开发者能够通过为标记添加特殊属性来更详细地描述微件。ARIA 旨在填补标准 HTML 标签与动态 Web 应用程序中的桌面样式控件之间的空白，它提供了角色和状态来描述大多数熟悉的 UI 微件的行为。
 
-The ARIA specification is split up into three different types of attributes: roles, states, and properties. Roles describe widgets that aren't otherwise available in HTML 4, such as sliders, menu bars, tabs, and dialogs. Properties describe characteristics of these widgets, such as if they are draggable, have a required element, or have a popup associated with them. States describe the current interaction state of an element, informing the assistive technology if it is busy, disabled, selected, or hidden.
+> [!WARNING]
+> 其中的许多是在浏览器不完全支持现代 HTML 特性时添加的。**开发者应该始终优先使用正确的语义化 HTML 元素而不是使用 ARIA**。
 
-ARIA attributes are designed to be interpreted automatically by the browser and translated to the operating system's native accessibility APIs. When ARIA is present, assistive technologies are able to recognize and interact with custom JavaScript controls in the same way that they do with desktop equivalents. This has the potential for providing a much more consistent user experience than was possible in the previous generation of web applications, since assistive technology users can apply all of their knowledge of how desktop applications work when they are using web-based applications.
+ARIA 规范分为三种不同类型的属性（attribute）：角色、状态和属性（property）。角色描述了 HTML4 中没有的微件，例如滑块、菜单栏、标签页和对话框。属性描述了这些微件的特性，例如它们是否可拖动、是否有必填元素或是否有与之关联的弹出窗口。状态描述了元素的当前交互状态，通知辅助技术它是否繁忙、禁用、选中或隐藏。
 
-_Example 3: Markup for the tabs widget with ARIA attributes added._
+ARIA 旨在由浏览器自动解释并转换为操作系统的原生无障碍 API。因此，具有 role="slider" 的元素的控制方式与操作系统上原生滑块的控制方式相同。
+
+与上一代 Web 应用程序相比，这提供了更加一致的用户体验，因为辅助技术用户在使用基于 Web 的应用程序时可以应用他们对桌面应用程序的所有知识。
+
+_示例 3：添加了 ARIA 属性的标签页微件的标记。_
 
 ```html
-<!-- Now *these* are Tabs! -->
-<!-- We've added role attributes to describe the tab list and each tab. -->
+<!-- 现在*这些*是标签页了！ -->
+<!-- 我们添加了角色属性来描述标签页列表以及每个标签页。 -->
 <ol role="tablist">
   <li id="ch1Tab" role="tab">
     <a href="#ch1Panel">Chapter 1</a>
@@ -65,114 +71,51 @@ _Example 3: Markup for the tabs widget with ARIA attributes added._
 </ol>
 
 <div>
-  <!-- Notice the role and aria-labelledby attributes we've added to describe these panels. -->
+  <!-- 注意，我们添加了用于描述这些面板的角色（role）和 aria-labelledby 属性。 -->
   <div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab">
-    Chapter 1 content goes here
+    第 1 章的内容在这里
   </div>
   <div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab">
-    Chapter 2 content goes here
+    第 2 章的内容在这里
   </div>
   <div id="quizPanel" role="tabpanel" aria-labelledby="quizTab">
-    Quiz content goes here
+    测验的内容在这里
   </div>
 </div>
 ```
 
-ARIA is supported in the latest versions of all major browsers, including Firefox, Safari, Opera, Chrome, and Internet Explorer. Many assistive technologies, such as the open source NVDA and Orca screen readers, also support ARIA. Increasingly, JavaScript widget libraries such as jQuery UI, YUI, Google Closure, and Dojo Dijit include ARIA markup as well.
+ARIA 被所有主流浏览器和许多辅助技术所[广泛支持](https://caniuse.com/#feat=wai-aria)。
 
-### 可见性变化
+### 表现变化
 
-Dynamic presentational changes include using CSS to change the appearance of content (such as a red border around invalid data, or changing the background color of a checked checkbox), as well as showing or hiding content.
+动态的表现（presentational）变化包括使用 CSS 来改变内容的外观（例如在无效数据周围使用红色边框，或者改变选中复选框的背景颜色），以及显示或隐藏内容。
 
 #### 状态变化
 
-ARIA provides attributes for declaring the current state of a UI widget. Examples include (but are certainly not limited to):
+ARIA 提供了用于声明 UI 微件当前状态的属性。例如（但不限于）：
 
 - `aria-checked`
-  - : indicates the state of a checkbox or radio button
+  - : 表示复选框或单选按钮的状态。
 - `aria-disabled`
-  - : indicates that an element is visible, but not editable or otherwise operable
+  - : 表示元素可见但不可编辑或无法操作。
 - `aria-grabbed`
-  - : indicates the 'grabbed' state of an object in a drag-and-drop operation
+  - : 表示拖放操作中对象的“抓取”状态。
 
-(For a full list of ARIA states, consult the [ARIA list of states and properties](http://www.w3.org/TR/wai-aria/states_and_properties).)
+（有关 ARIA 状态的完整列表，请参阅 [ARIA 状态和属性列表](https://www.w3.org/TR/wai-aria-1.1/#introstates)。）
 
-Developers should use ARIA states to indicate the state of UI widget elements and use CSS attribute selectors to alter the visual appearance based on the state changes (rather than using script to change a class name on the element).
+开发者应该使用 ARIA 状态来指示 UI 微件元素的状态，并使用 CSS 属性选择器以根据状态变化改变视觉外观（而不是使用脚本来更改元素上的类名）。
 
-The Open Ajax Alliance website provides an example of CSS attribute selectors based on ARIA states. The example shows a WYSIWYG editor interface with a dynamic menu system. Items currently selected in a menu, such as the font face, are visually distinguished from other items. The relevant parts of the example are explained below.
+#### 可见性变化
 
-In this example, the HTML for a menu has the form shown in Example 1a. Note how, on lines 7 and 13, the **`aria-checked`** property is used to declare the selection state of the menu items.
+当内容可见性发生变化时（即，元素被隐藏或显示），开发者应该改变 **`aria-hidden`** 属性的值。应该使用上面描述的技术来声明 CSS，使用 `display:none` 以在视觉上隐藏元素。
 
-_Example 1a. HTML for a selectable menu._
+下面是一个使用 **`aria-hidden`** 来控制小提示可见性的示例。该示例展示了一个简单的 Web 表单，其中包含与输入字段关联的提示。
 
-```html
-<ul id="fontMenu" class="menu" role="menu" aria-hidden="true">
-  <li
-    id="sans-serif"
-    class="menu-item"
-    role="menuitemradio"
-    tabindex="-1"
-    aria-controls="st1"
-    aria-checked="true">
-    Sans-serif
-  </li>
-  <li
-    id="serif"
-    class="menu-item"
-    role="menuitemradio"
-    tabindex="-1"
-    aria-controls="st1"
-    aria-checked="false">
-    Serif
-  </li>
-  ...
-</ul>
-```
-
-The CSS that is used to alter the visual appearance of the selected item is shown in Example 1b. Note that there is no custom classname used, only the status of the **`aria-checked`** attribute on line 1.
-
-_Example 1b. Attribute-based selector for indicating state._
-
-```css
-li[aria-checked="true"] {
-  font-weight: bold;
-  background-image: url("images/dot.png");
-  background-repeat: no-repeat;
-  background-position: 5px 10px;
-}
-```
-
-The JavaScript to update the **`aria-checked`** property has the form shown in Example 1c. Note that the script only updates the **`aria-checked`** attribute (lines 3 and 8); it does not need to also add or remove a custom classname.
-
-_Example 1c. JavaScript to update the aria-checked attribute_.
-
-```js
-var processMenuChoice = function (item) {
-  // 'check' the selected item
-  item.setAttribute("aria-checked", "true");
-  // 'un-check' the other menu items
-  var sib = item.parentNode.firstChild;
-  for (; sib; sib = sib.nextSibling) {
-    if (sib.nodeType === 1 && sib !== item) {
-      sib.setAttribute("aria-checked", "false");
-    }
-  }
-};
-```
-
-#### 可见度变化
-
-When content visibility is changed (i.e., an element is hidden or shown), developers should change the **`aria-hidden`** property value. The techniques described above should be used to declare CSS to visually hide an element using `display:none`.
-
-The Open Ajax Alliance website provides an example of a tooltip that uses **`aria-hidden`** to control the visibility of the tooltip. The example shows a simple web form with tooltips containing instructions associated with the entry fields. The relevant parts of the example are explained below.
-
-In this example, the HTML for the tooltip has the form shown in Example 2a. Line 9 sets the **`aria-hidden`** state to `true`.
-
-_Example 2a. HTML for a tooltip._
+在该示例中，小提示的 HTML 标记如下所示。第 9 行将 **`aria-hidden`** 状态设置为 `true`。
 
 ```html
 <div class="text">
-  <label id="tp1-label" for="first">First Name:</label>
+  <label id="tp1-label" for="first">名字：</label>
   <input
     type="text"
     id="first"
@@ -182,14 +125,12 @@ _Example 2a. HTML for a tooltip._
     aria-describedby="tp1"
     aria-required="false" />
   <div id="tp1" class="tooltip" role="tooltip" aria-hidden="true">
-    Your first name is optional
+    你的名字是可选的
   </div>
 </div>
 ```
 
-The CSS for this markup is shown in Example 2b. Note that there is no custom classname used, only the status of the **`aria-hidden`** attribute on line 1.
-
-_Example 2b. Attribute-based selector for indicating state._
+标记的 CSS 如下所示。请注意，没有使用自定义类名，只有第 1 行 **`aria-hidden`** 属性的状态。
 
 ```css
 div.tooltip[aria-hidden="true"] {
@@ -197,52 +138,46 @@ div.tooltip[aria-hidden="true"] {
 }
 ```
 
-The JavaScript to update the **`aria-hidden`** property has the form shown in Example 2c. Note that the script only updates the **`aria-hidden`** attribute (line 2); it does not need to also add or remove a custom classname.
-
-_Example 2c. JavaScript to update the aria-checked attribute._
+用于更新 **`aria-hidden`** 属性的 JavaScript 如下所示。请注意，脚本只更新 **`aria-hidden`** 属性（第 2 行）；它不需要添加或删除自定义类名。
 
 ```js
-var showTip = function (el) {
+function showTip(el) {
   el.setAttribute("aria-hidden", "false");
-};
+}
 ```
 
 ### 角色变化
 
-ARIA allows developers to declare a semantic role for an element that otherwise offers incorrect or no semantics. For example, when an unordered list is used to create a menu, the {{ HTMLElement("ul") }} should be given a **`role`** of `menubar` and each {{ HTMLElement("li") }} should be given a **`role`** of `menuitem`.
+ARIA 允许开发者在这个元素本身提供了错误语义或没有语义的情况下，为元素声明语义角色。不应改变元素的角色（**`role`**）。相反，请删除原始元素并用具有新的 **`role`** 的元素替换它。
 
-The **`role`** of an element should not change. Instead, remove the original element and replace it with an element with the new **`role`**.
+例如，考虑一个“行内编辑”微件：一个允许用户在不切换上下文的情况下编辑文本的组件。该组件有一个“预览”模式，在该模式下，文本不可编辑，但可激活，以及一个“编辑”模式，在该模式下，文本可编辑。开发者可能会尝试使用只读文本类型的 {{ HTMLElement("input") }} 元素来实现“预览”模式，并将其 ARIA **`role`** 设置为 `button`，然后在“编辑”模式下使元素可写，并删除“编辑”模式下的 **`role`** 属性（因为 {{ HTMLElement("input") }} 元素具有自己的角色语义）。
 
-For example, consider an "inline edit" widget: a component that allows users to edit a piece of text in place, without switching contexts. This component has a "view" mode, in which the text is not editable, but is activatable, and an "edit" mode, in which the text can be edited. A developer might be tempted to implement the "view" mode using a read-only text {{ HTMLElement("input") }} element and setting its ARIA **`role`** to `button`, then switching to "edit" mode by making the element writable and removing the **`role`** attribute in "edit" mode (since {{ HTMLElement("input") }} elements have their own role semantics).
-
-Do not do this. Instead, implement the "view" mode using a different element altogether, such as a {{ HTMLElement("div") }} or {{ HTMLElement("span") }} with a **`role`** of `button`, and the « edit » mode using a text {{ HTMLElement("input") }} element.
+请不要这样做。应该使用完全不同的元素来实现“预览”模式，例如具有 `button` **`role`** 的 {{ HTMLElement("div") }} 或 {{ HTMLElement("span") }}，并使用文本类型的 {{ HTMLElement("input") }} 元素来实现“编辑”模式。
 
 ### 异步内容变化
 
-> **备注：** See also [Live Regions](/zh-CN/ARIA/Live_Regions)
+> [!NOTE]
+> 正在施工中。请参见[实时区域](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)。
 
 ## 键盘导航
 
-Often times developers overlook support for the keyboard when they create custom widgets. To be accessible to a variety of users, all features of a web application or widget should also be controllable with the keyboard, without requiring a mouse. In practice, this usually involves following the conventions supported by similar widgets on the desktop, taking full advantage of the Tab, Enter, Spacebar, and arrow keys.
+开发者在创建自定义微件时经常忽略对键盘的支持。为了让各种用户都能访问，Web 应用程序或微件的所有功能都应该可以通过键盘控制，而不需要鼠标。在实践中，这通常涉及遵循桌面上类似微件支持的约定，充分利用制表键（tab）、回车、空格和方向键。
 
-Traditionally, keyboard navigation on the web has been limited to the Tab key. A user presses Tab to focus each link, button, or form on the page in a linear order, using Shift-Tab to navigate backwards. It's a one-dimensional form of navigation—forward and back, one element at a time. On fairly dense pages, a keyboard-only user often has to press the Tab key dozens of times before accessing the needed section. Implementing desktop-style keyboard conventions on the web has the potential to significantly speed up navigation for many users.
+传统意义上，Web 上的键盘导航仅限于制表键。用户按制表键将以线性顺序依次聚焦页面上的每个链接、按钮或表单，使用换档键 + 制表键则向后导航。这是一种一维导航形式——前进和后退，一次一个元素。在相当密集的页面上，仅使用键盘的用户通常需要按下制表键数十次才能访问所需的部分。在 Web 上实现桌面风格的键盘约定有可能显著加快许多用户的导航速度。
 
-Here's a summary of how keyboard navigation should work in an ARIA-enabled web application:
+下面是 ARIA 启用的 Web 应用程序中键盘导航的摘要：
 
-- The Tab key should provide focus to the widget as a whole. For example, tabbing to a menu bar should put focus on the menu's first elem.
-- The arrow keys should allow for selection or navigation within the widget. For example, using the left and right arrow keys should move focus to the previous and next menu items.
-- When the widget is not inside a form, both the Enter and Spacebar keys should select or activate the control.
-- Within a form, the Spacebar key should select or activate the control, while the Enter key should submit the form's default action.
-- If in doubt, mimic the standard desktop behavior of the control you are creating.
+- 制表键应该将焦点放到整个微件上面。例如，导航到菜单栏时**不应该**将焦点放在菜单的第一个元素上。
+- 方向键应该允许在微件内进行选择或导航。例如，使用左右方向键应该将焦点移动到上一个和下一个菜单项。
+- 当微件不在表单内时，回车和空格都应该选择或激活控件。
+- 若在表单内，空格键应该选择或激活控件，而回车键应该将表单提交到默认的地址（action）。
+- 如果不确定，请模仿你正在创建的控件的标准桌面行为。
 
-So, for the Tabs widget example above, the user should be able to navigate into and out of the widget's container (the \<ol> in our markup) using the Tab and Shift-Tab keys. Once keyboard focus is inside the container, the arrow keys should allow the user to navigate between each tab (the \<li> elements). From here, conventions vary from platform to platform. On Windows, the next tab should automatically be activated when the user presses the arrow keys. On Mac OS X, the user can press either Enter or the Spacebar to activate the next tab. An in-depth tutorial for creating [Keyboard-navigable JavaScript widgets](/zh-CN/Accessibility/Keyboard-navigable_JavaScript_widgets) describes how to implement this behavior with JavaScript.
-
-For more detail about desktop-style keyboard navigation conventions, a comprehensive [DHTML style guide](http://access.aol.com/dhtml-style-guide-working-group/) is available. It provides an overview of how keyboard navigation should work for each type of widget supported by ARIA. The W3C also offers a helpful [ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html) document that includes keyboard navigation and shortcut conventions for a variety of widgets.
+因此，对于上面的标签页微件示例，用户应该能够使用制表键和上档键 + 制表键导航到微件的容器（上面标记中的 {{HTMLElement('ol')}}）中并从其导航出来。一旦键盘焦点位于容器内，方向键应该允许用户在每个标签之间导航（{{HTMLElement('li')}} 元素）。从这里开始，约定因平台而异。在 Windows 上，当用户按下方向键时，下一个标签应该自动激活。在 macOS 上，用户可以按回车或空格键来激活下一个标签。[键盘导航的 JavaScript 微件](/zh-CN/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)的深入教程描述了如何使用 JavaScript 实现此行为。
 
 ## 参见
 
-- [ARIA](/zh-CN/ARIA)
-- [Web applications and ARIA FAQ](/zh-CN/Accessibility/Web_applications_and_ARIA_FAQ)
-- [WAI-ARIA Specification](http://www.w3.org/TR/wai-aria/)
-- [WAI-ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html)
-- [DHTML Style Guide](http://access.aol.com/dhtml-style-guide-working-group/)
+- [ARIA](/zh-CN/docs/Web/Accessibility/ARIA)
+- [键盘导航的 JavaScript 微件](/zh-CN/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- [WAI-ARIA 规范](https://www.w3.org/TR/wai-aria-1.1/)
+- [WAI-ARIA 创作实践](https://www.w3.org/WAI/ARIA/apg/)

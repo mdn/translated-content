@@ -46,7 +46,8 @@ JavaScript Object Notation (JSON) é um formato baseado em texto padrão para re
 
 O JSON existe como uma string — útil quando você deseja transmitir dados por uma rede. Ele precisa ser convertido em um objeto JavaScript nativo quando você quiser acessar os dados. Isso não é um grande problema — o JavaScript fornece um objeto [JSON](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON) global que possui métodos disponíveis para conversão entre os dois.
 
-> **Nota:** Converter uma string em um objeto nativo é chamado de análise, enquanto a conversão de um objeto nativo em uma string para que possa ser transmitida pela rede é chamada de _stringification_.
+> [!NOTE]
+> Converter uma string em um objeto nativo é chamado de análise, enquanto a conversão de um objeto nativo em uma string para que possa ser transmitida pela rede é chamada de _stringification_.
 
 Um objeto JSON pode ser armazenado em seu próprio arquivo, que é basicamente apenas um arquivo de texto com uma extensão de `.json`, e um {{glossary("MIME type")}} de `application/json`.
 
@@ -114,7 +115,8 @@ superHeroes["members"][1]["powers"][2];
 5. Dentro da propriedade `powers` está um array contendo os superpoderes do herói selecionado. Nós queremos o terceiro, então nós usamos
    `[2]`.
 
-> **Nota:** Nota: Nós fizemos o JSON visto acima disponível dentro de uma variável em nosso exemplo JSONTest.html (veja o código fonte). Tente carregar isso e depois acessar os dados dentro da variável pelo console JavaScript do seu navegador.
+> [!NOTE]
+> Nota: Nós fizemos o JSON visto acima disponível dentro de uma variável em nosso exemplo JSONTest.html (veja o código fonte). Tente carregar isso e depois acessar os dados dentro da variável pelo console JavaScript do seu navegador.
 
 ### Matrizes como JSON
 
@@ -225,7 +227,7 @@ Para obter o JSON, vamos usar uma API chamada {{domxref("XMLHttpRequest")}} (ger
 
 Aqui estamos armazenando a resposta ao nosso pedido (disponível na propriedade [`response`](/pt-BR/docs/Web/API/XMLHttpRequest/response)) em uma variável chamada `superHeroes`; essa variável agora conterá o objeto JavaScript com base no JSON! Então, estamos passando esse objeto para duas chamadas de função — a primeira preencherá o <`header>` com os dados corretos, enquanto a segunda criará uma ficha de informações para cada herói da equipe e a inserirá na `<section>`.
 
-Envolvemos o código em um manipulador de eventos que é executado quando o evento de carregamento é acionado no objeto de solicitação (consulte [`onload`](/pt-BR/docs/Web/API/XMLHttpRequestEventTarget/onload)) — isso ocorre porque o evento load é acionado quando a resposta é retornada com sucesso; Fazê-lo desta forma garante que `request.response` estará definitivamente disponível quando chegarmos a tentar fazer algo com ele.
+Envolvemos o código em um manipulador de eventos que é executado quando o evento de carregamento é acionado no objeto de solicitação (consulte [`onload`](/pt-BR/docs/Web/API/XMLHttpRequest/load_event)) — isso ocorre porque o evento load é acionado quando a resposta é retornada com sucesso; Fazê-lo desta forma garante que `request.response` estará definitivamente disponível quando chegarmos a tentar fazer algo com ele.
 
 ### Preenchendo o Cabeçalho
 
@@ -287,7 +289,7 @@ function showHeroes(jsonObj) {
 
 Para começar, armazenamos a propriedade `members` do objeto JavaScript em uma nova variável. Esta matriz contém vários objetos que contêm as informações para cada herói.
 
-Em seguida, usamos um [loop for](/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop) para percorrer cada objeto na matriz. Para cada um, nós:
+Em seguida, usamos um [loop for](/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop) para percorrer cada objeto na matriz. Para cada um, nós:
 
 1. Criamos vários novos elementos: um `<article>`, um `<h2>`, três `<p>`s, e um `<ul>`.
 2. Definimos o \<h2> para conter o `name` do herói atual.
@@ -296,9 +298,11 @@ Em seguida, usamos um [loop for](/pt-BR/docs/Learn/JavaScript/Building_blocks/Lo
 5. Usamos outro loop `for` para percorrer os superpoderes do herói atual — para cada um criamos um elemento `<li>` colocamos o super poder dentro dele e colocamos o `listItem` dentro do elemento `<ul>` (`myList`) usando `appendChild()`.
 6. A última coisa que fizemos foi acrescentar os `<h2>`, `<p>`s, e `<ul>` dentro do `<article>` (`myArticle`), depois acrescentar o `<article>` dentro do `<section>`. A ordem em que as coisas são anexadas é importante, pois essa é a ordem em que elas serão exibidas dentro do HTML.
 
-> **Nota:** Se você está com problemas pegue um exemplo para trabalhar, tente nosso código fonte [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) (veja isso [ao vivo](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) também.)
+> [!NOTE]
+> Se você está com problemas pegue um exemplo para trabalhar, tente nosso código fonte [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) (veja isso [ao vivo](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) também.)
 
-> **Nota:** Se você está tendo problemas para seguir a notação ponto / colchete que estamos usando para acessar o objeto JavaScript, pode ajudar a abrir o arquivo [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) em outra guia ou em seu editor de texto, e consultá-lo enquanto observa nosso JavaScript. Você também pode consultar o artigo sobre conceitos [O básico de objetos JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Basics) para obter mais informações sobre a notação de pontos e colchetes.
+> [!NOTE]
+> Se você está tendo problemas para seguir a notação ponto / colchete que estamos usando para acessar o objeto JavaScript, pode ajudar a abrir o arquivo [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) em outra guia ou em seu editor de texto, e consultá-lo enquanto observa nosso JavaScript. Você também pode consultar o artigo sobre conceitos [O básico de objetos JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Basics) para obter mais informações sobre a notação de pontos e colchetes.
 
 ## Conversão entre objetos e texto
 
@@ -313,7 +317,7 @@ Mas às vezes não temos muita sorte — às vezes recebemos uma string JSON bru
 - [`parse()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse): Aceita uma string JSON como um parâmetro e retorna o objeto JavaScript correspondente.
 - [`stringify()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify): Aceita um objeto como um parâmetro e retorna o formato equivalente de string JSON.
 
-Você pode ver o primeiro em ação em nosso exemplo [heroes-finished-json-parse.html](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) (veja o [source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html)) — isso faz exatamente a mesma coisa que o exemplo que construímos anteriormente, exceto pelo fato de configurarmos o XHR para retornar texto JSON bruto, em seguida, usado `parse()` para convertê-lo em um objeto JavaScript real. O trecho principal do código está aqui:
+Você pode ver o primeiro em ação em nosso exemplo [heroes-finished-json-parse.html](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) (veja o [source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html)) — isso faz exatamente a mesma coisa que o exemplo que construímos anteriormente, exceto pelo fato de configurarmos o XHR para retornar texto JSON bruto, em seguida, usado `parse()` para convertê-lo em um objeto JavaScript real. O trecho principal do código está aqui:
 
 ```js
 request.open("GET", requestURL);
@@ -347,7 +351,7 @@ Neste artigo, fornecemos um guia simples para usar o JSON em seus programas, inc
 
 - [Objeto JSON página de refência](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - [Objeto XMLHttpRequest página de refência](/pt-BR/docs/Web/API/XMLHttpRequest)
-- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest/Usando_XMLHttpRequest)
+- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - [Métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Methods)
 - [Site oficial JSON com o link para o padrão ECMA](http://json.org)
 
@@ -356,9 +360,9 @@ Neste artigo, fornecemos um guia simples para usar o JSON em seus programas, inc
 ## Nesse módulo
 
 - [O básico de objetos](/pt-BR/docs/Learn/JavaScript/Objects/Basics)
-- [Orientação a objetos em JavaScript para iniciantes](/pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS)
+- [Orientação a objetos em JavaScript para iniciantes](/pt-BR/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript)
 - [Protótipos de objetos](/pt-BR/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Herança em JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Inheritance)
+- [Herança em JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
 - [Trabalhando com dados em JSON](/pt-BR/docs/Learn/JavaScript/Objects/JSON)
 - [Prática de construção de objetos](/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice)
 - [Adicionando melhorias para nossa demo bolas saltitantes](/pt-BR/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

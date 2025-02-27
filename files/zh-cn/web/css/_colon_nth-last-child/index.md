@@ -1,5 +1,5 @@
 ---
-title: ":nth-last-child"
+title: :nth-last-child
 slug: Web/CSS/:nth-last-child
 ---
 
@@ -15,7 +15,8 @@ slug: Web/CSS/:nth-last-child
 }
 ```
 
-> **备注：** 这个伪类和 {{Cssxref(":nth-child")}} 基本一致，但它是从*结尾*计数，而不是从开始计数。
+> [!NOTE]
+> 这个伪类和 {{Cssxref(":nth-child")}} 基本一致，但它是从*结尾*计数，而不是从开始计数。
 
 ## 语法
 
@@ -113,7 +114,7 @@ tr:nth-last-child(2) {
 
 ### Quantity query
 
-数量查询样式元素取决于它们的数量。在本例中，当给定列表中至少有三个列表项时，列表项变为红色。这是通过组合`nth-last-child`和 [通用兄弟选择器](/zh-CN/docs/Web/CSS/General_sibling_selectors).的功能来实现的
+数量查询样式元素取决于它们的数量。在本例中，当给定列表中至少有三个列表项时，列表项变为红色。这是通过组合`nth-last-child`和 [通用兄弟选择器](/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator).的功能来实现的
 
 #### HTML
 

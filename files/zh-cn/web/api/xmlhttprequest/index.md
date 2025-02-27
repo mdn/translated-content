@@ -42,7 +42,8 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 
   - : 返回一个 {{domxref("DOMString")}}，其中包含 HTTP 服务器返回的响应状态。与 {{domxref("XMLHTTPRequest.status")}} 不同的是，它包含完整的响应状态文本（例如，"`200 OK`"）。
 
-    > **备注：** 根据 HTTP/2 规范（[8.1.2.4](https://http2.github.io/http2-spec/#rfc.section.8.1.2.4) [Response Pseudo-Header Fields](https://http2.github.io/http2-spec/#HttpResponse)，响应伪标头字段），HTTP/2 没有定义任何用于携带 HTTP/1.1 状态行中包含的版本（version）或者原因短语（reason phrase）的方法。
+    > [!NOTE]
+    > 根据 HTTP/2 规范（[8.1.2.4](https://http2.github.io/http2-spec/#rfc.section.8.1.2.4) [Response Pseudo-Header Fields](https://http2.github.io/http2-spec/#HttpResponse)，响应伪标头字段），HTTP/2 没有定义任何用于携带 HTTP/1.1 状态行中包含的版本（version）或者原因短语（reason phrase）的方法。
 
 - {{domxref("XMLHttpRequest.timeout")}}
   - : 一个无符号长整型（`unsigned long`）数字，表示该请求的最大请求时间（毫秒），若超出该时间，请求会自动终止。
@@ -66,7 +67,7 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 
 作为 `XMLHttpRequest` 实例的属性之一，所有浏览器都支持 `onreadystatechange`。
 
-后来，许多浏览器实现了一些额外的事件（`onload`、`onerror`、`onprogress` 等）。详见[Using XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)。
+后来，许多浏览器实现了一些额外的事件（`onload`、`onerror`、`onprogress` 等）。详见[使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)。
 
 更多现代浏览器，包括 Firefox，除了可以设置 `on*` 属性外，也提供标准的监听器 {{domxref("EventTarget.addEventListener", "addEventListener()")}} API 来监听`XMLHttpRequest` 事件。
 
@@ -122,11 +123,5 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 ## 参见
 
 - {{domxref("XMLSerializer")}}：将 DOM 树解析为 XML 对象
-- MDN 教程中的 `XMLHttpRequest`：
-
-  - [Ajax](/zh-CN/docs/Web/Guide/AJAX)
-  - [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-  - [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-  - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
-
-- [XMLHttpRequest2 中的新技巧（2011）](https://web.dev/xhr2/)
+- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Fetch API](/zh-CN/docs/Web/API/Fetch_API)

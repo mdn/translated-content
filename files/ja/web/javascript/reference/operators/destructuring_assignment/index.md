@@ -2,14 +2,30 @@
 title: 分割代入
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
 l10n:
-  sourceCommit: 0f3738f6b1ed1aa69395ff181207186e1ad9f4d8
+  sourceCommit: 8cb0caef8175e1772f13ef7bc761f9616e2c5a4b
 ---
 
 {{jsSidebar("Operators")}}
 
 **分割代入** (Destructuring assignment) 構文は、配列から値を取り出して、あるいはオブジェクトからプロパティを取り出して別個の変数に代入することを可能にする JavaScript の式です。
 
-{{EmbedInteractiveExample("pages/js/expressions-destructuringassignment.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Destructuring assignment", "taller")}}
+
+```js interactive-example
+let a, b, rest;
+[a, b] = [10, 20];
+
+console.log(a);
+// Expected output: 10
+
+console.log(b);
+// Expected output: 20
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+
+console.log(rest);
+// Expected output: Array [30, 40, 50]
+```
 
 ## 構文
 
@@ -38,7 +54,7 @@ let a, b, a1, b1, c, d, rest, pop, push;
 [a, b, ...{ pop, push }] = array;
 [a, b, ...[c, d]] = array;
 
-({ a, b } = obj); // 中括弧が必要
+({ a, b } = obj); // 括弧が必要
 ({ a: a1, b: b1 } = obj);
 ({ a: a1 = aDefault, b = bDefault } = obj);
 ({ a, b, ...rest } = obj);
@@ -53,7 +69,7 @@ let a, b, a1, b1, c, d, rest, pop, push;
 const x = [1, 2, 3, 4, 5];
 ```
 
-分割代入は似たような構文を使用しますが、代入の左辺が元の変数からどの値を受け取るかを定義します。
+分割代入では、同様の構文を使用しますが、代わりに代入の左辺で使用します。これは、元の変数から展開する値を定義します。
 
 ```js
 const x = [1, 2, 3, 4, 5];
@@ -74,9 +90,11 @@ const { a, b } = obj;
 
 この機能は、Perl や Python などの言語に存在する機能に似ています。
 
+配列またはオブジェクトの分解に関する機能については、以下の個々の[例](#例)を参照してください。
+
 ### バインドと代入
 
-オブジェクトと配列の分割代入には、2 種類の分割代入のパターンがあります。**バインドパターン**と**代入パターン**であり、構文が若干異なります。
+オブジェクトと配列の分割代入には、2 種類の分割代入のパターンがあります。**{{Glossary("binding","バインド")}}パターン**と**代入パターン**であり、構文が若干異なります。
 
 バインドパターンでは、宣言キーワード (`var`、`let`、`const`) から始めます。次に、個々のプロパティを変数にバインドするか、さらに構造化する必要があります。
 
@@ -99,6 +117,12 @@ let {
 } = obj; // d は再代入可能
 ```
 
+言語が変数をバインドする他の多くの構文でも、分割バインドパターンが使用できます。これには次のようなものがあります。
+
+- [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in)、[`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of)、[`for await...of`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of) ループのループ変数
+- [関数](/ja/docs/Web/JavaScript/Reference/Functions)の引数
+- [`catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) のバインド変数
+
 代入パターンでは、パターンはキーワードで始まりません。それぞれの分解されたプロパティが、代入先に代入されます。この代入先は `var` や `let` であらかじめ宣言されているか、他のオブジェクトのプロパティです。一般的には、代入式の左辺に現れることができるものなら何でも構いません。
 
 ```js
@@ -108,15 +132,16 @@ const obj = { a: 1, b: 2 };
 // `a` および `b` プロパティが `numbers` へ代入される
 ```
 
-> **メモ:** 宣言なしでオブジェクトリテラルの分割代入を使用する場合、代入文を囲む括弧 `( ... )` が必要です。
+> [!NOTE]
+> 宣言なしでオブジェクトリテラルの分割代入を使用する場合、代入文を囲む括弧 `( ... )` が必要です。
 >
-> `{ a, b } = { a: 1, b: 2 }` は、左辺の `{a, b}` がオブジェクトリテラルではなくブロックとみなされるため、単体では有効な構文ではありません。しかし、`({ a, b } = { a: 1, b: 2 })` は有効であり、`const { a, b } = { a: 1, b: 2 }` も同様です。
+> `{ a, b } = { a: 1, b: 2 }` は、左辺の `{a, b}` が[式文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement)のルールによりオブジェクトリテラルではなくブロックとみなされるため、単体では有効な構文ではありません。しかし、`({ a, b } = { a: 1, b: 2 })` は有効であり、`const { a, b } = { a: 1, b: 2 }` も同様です。
 >
 > もし、お使いのコーディングスタイルで末尾のセミコロンを記述していない場合は、`( ... )` 式の前にセミコロンを記述する必要がありますし、前の行の関数を実行するために使用される可能性もあります。
 
 上のコードの等価な _バインドパターン_ は、有効な構文ではないことに注意してください。
 
-```js example-bad
+```js-nolint example-bad
 const numbers = [];
 const obj = { a: 1, b: 2 };
 const { a: numbers[0], b: numbers[1] } = obj;
@@ -126,6 +151,8 @@ const { a: numbers[0], b: numbers[1] } = obj;
 //   const numbers[1] = obj.b;
 // これは完全に正しくありません。
 ```
+
+代入パターンをは[代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)の左辺としてのみ使用できます。`+=` や `*=` などの複合代入演算子では使用できません。
 
 ### 既定値
 
@@ -164,16 +191,6 @@ const [a, ...b,] = [1, 2, 3];
 // SyntaxError: rest element may not have a trailing comma
 // 常に最後の要素として残余演算子を使用することを考慮してください。
 ```
-
-### 他の構文での分解パターン
-
-言語が変数をバインドしてくれる多くの構文では、同様に分解パターンを使用することができます。これには、次のようなものがあります。
-
-- [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) および [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループのループ変数
-- [関数](/ja/docs/Web/JavaScript/Reference/Functions)の引数
-- [`catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) のバインド変数
-
-配列やオブジェクトの分解に固有の機能については、下記の個別の例を参照してください。
 
 ## 例
 
@@ -264,16 +281,15 @@ console.log(c); // 1
 
 #### 残余プロパティとしてのバインドパターンの使用
 
-配列の分割代入の残余プロパティは、別の配列やオブジェクトの結合パターンにすることができます。これにより、配列のプロパティとインデックスを同時に展開することができます。
+配列の分割代入の残余プロパティは、別の配列やオブジェクトの結合パターンにすることができます。残りの要素を集めた後に作成された配列から、内部の分割代入が構造を解除します。そのため、この方法では元の反復可能な要素に存在するプロパティにアクセスすることはできません。
 
 ```js
-const [a, b, ...{ pop, push }] = [1, 2];
-console.log(a, b); // 1 2
-console.log(pop, push); // [Function pop] [Function push]
+const [a, b, ...{ length }] = [1, 2, 3];
+console.log(a, b, length); // 1 2 1
 ```
 
 ```js
-deconst [a, b, ...[c, d]] = [1, 2, 3, 4];
+const [a, b, ...[c, d]] = [1, 2, 3, 4];
 console.log(a, b, c, d); // 1 2 3 4
 ```
 
@@ -286,7 +302,7 @@ console.log(a, b, c, d, e, f); // 1 2 3 4 5 6
 
 一方、オブジェクトの分解では、残余プロパティとして識別子しか保有することができません。
 
-```js example-bad
+```js-nolint example-bad
 const { a, ...{ b } } = { a: 1, b: 2 };
 // SyntaxError: `...` must be followed by an identifier in declaration contexts
 
@@ -449,7 +465,7 @@ function userDisplayName({ displayName: dname }) {
   return dname;
 }
 
-console.log(userDisplayName(user)); // `jdoe`
+console.log(userDisplayName(user)); // "jdoe"
 ```
 
 入れ子になっているオブジェクトも展開することができます。
@@ -569,7 +585,7 @@ console.log(foo); // "bar"
 
 #### 無効な JavaScript 識別子をプロパティ名として使用する
 
-JavaScript で有効な代替識別子を与えることにより、JavaScript で有効ではない{{glossary("Identifier", "識別子")}}であるプロパティ名を分割代入で使用できます。
+JavaScript で有効な代替識別子を与えることにより、JavaScript で有効ではない{{Glossary("Identifier", "識別子")}}であるプロパティ名を分割代入で使用できます。
 
 ```js
 const foo = { "fizz-buzz": true };
@@ -580,7 +596,7 @@ console.log(fizzBuzz); // true
 
 ### プリミティブ値の分割代入
 
-オブジェクトの分割代入は、[プロパティへのアクセス](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)とほぼ等価です。 これは、プリミティブ値を分割しようとすると、値が対応するラッパーオブジェクトに取得され、プロパティはラッパーオブジェクトにアクセスされることを意味しています。
+オブジェクトの分割代入は、[プロパティへのアクセス](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)とほぼ等価です。 これは、プリミティブ値を分割しようとすると、値が対応するラッパーオブジェクトに取得され、プロパティはラッパーオブジェクトにアクセスされることを意味しています。
 
 ```js
 const { a, toFixed } = 1;
@@ -591,7 +607,7 @@ console.log(a, toFixed); // undefined ƒ toFixed() { [native code] }
 
 ```js example-bad
 const { a } = undefined; // TypeError: Cannot destructure property 'a' of 'undefined' as it is undefined.
-const { a } = null; // TypeError: Cannot destructure property 'b' of 'null' as it is null.
+const { b } = null; // TypeError: Cannot destructure property 'b' of 'null' as it is null.
 ```
 
 これは、パターンが空のときにも起こります。
@@ -628,8 +644,9 @@ const obj = {
   },
 };
 const { self, prot } = obj;
-// self "123"
-// prot "456" (プロトタイプチェーンへのアクセス)
+
+console.log(self); // "123"
+console.log(prot); // "456"
 ```
 
 ## 仕様書
@@ -643,4 +660,4 @@ const { self, prot } = obj;
 ## 関連情報
 
 - [代入演算子](/ja/docs/Web/JavaScript/Reference/Operators#代入演算子)
-- ["ES6 in Depth: Destructuring" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/)
+- [ES6 in Depth: Destructuring](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/) (hacks.mozilla.org, 2015)

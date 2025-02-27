@@ -2,14 +2,32 @@
 title: String.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
 l10n:
-  sourceCommit: 6bd17cb9cbc2d11163617b9f71706e93fdd743c8
+  sourceCommit: c367939020b2cbd60da7bd56a14670659d5e9491
 ---
 
 {{JSRef}}
 
 **`indexOf()`** は {{jsxref("String")}} 値のメソッドで、この文字列を検索し、指定した部分文字列が最初に出現するインデックスを返します。 オプションで開始位置を取り、指定した数値以上のインデックスで指定した部分文字列が最初に出現するインデックスを返します。
 
-{{EmbedInteractiveExample("pages/js/string-indexof.html")}}
+{{InteractiveExample("JavaScript Demo: String.indexOf()", "taller")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+const searchTerm = "dog";
+const indexOfFirst = paragraph.indexOf(searchTerm);
+
+console.log(`The index of the first "${searchTerm}" is ${indexOfFirst}`);
+// Expected output: "The index of the first "dog" is 15"
+
+console.log(
+  `The index of the second "${searchTerm}" is ${paragraph.indexOf(
+    searchTerm,
+    indexOfFirst + 1,
+  )}`,
+);
+// Expected output: "The index of the second "dog" is 38"
+```
 
 ## 構文
 
@@ -26,13 +44,13 @@ indexOf(searchString, position)
 
 - `position` {{optional_inline}}
 
-  - : このメソッドは、`position`（既定値は `0`）以上の位置で、指定した部分文字列が最初に現れるインデックスを返します。`position` が呼び出された文字列の長さよりも大きい場合、このメソッドは呼び出される文字列をまったく検索しません。`position` が 0 以上の場合、このメソッドは `0` と同じように動作します。
+  - : このメソッドは、`position`（既定値は `0`）以上の位置で、指定した部分文字列が最初に現れるインデックスを返します。`position` が呼び出された文字列の長さよりも大きい場合、このメソッドは呼び出される文字列をまったく検索しません。`position` が `0` 未満の場合、このメソッドは `position` が `0` のときと同じように動作します。
 
     - `'hello world hello'.indexOf('o', -5)` は `4` を返します。これは第 2 引数が `0` であるかのように動作し、`o` が `0` 以上の位置で最初に現れるのが `4` だからです。
 
-  - `'hello world hello'.indexOf('world', 12)` は `-1` を返します。実際に部分文字列 `world` が現れるのは `6` のインデックスですが、その位置は `12` 以上ではないからです。
+    - `'hello world hello'.indexOf('world', 12)` は `-1` を返します。実際に部分文字列 `world` が現れるのは `6` のインデックスですが、その位置は `12` 以上ではないからです。
 
-  - `'hello world hello'.indexOf('o', 99)` は `-1` を返します。`99` が `hello world hello` の長さよりも大きいため、メソッドが全く文字列を検索しなくなるからです。
+    - `'hello world hello'.indexOf('o', 99)` は `-1` を返します。`99` が `hello world hello` の長さよりも大きいため、メソッドが全く文字列を検索しなくなるからです。
 
 ### 返値
 
@@ -107,7 +125,7 @@ console.log(str.indexOf("new")); // 6
 
 以下の例は 2 つの文字列の変数を定義しています。
 
-それらの変数は、2 番目の文字列が大文字を含んでいることを除けば、同じ文字列を含んでいます。1 番目の {{domxref("console.log()")}} メソッドは `19` を表示します。しかし、`indexOf()` メソッドは大文字と小文字を区別するので、`"cheddar"` という文字列は `myCapString` では見つけられません。ですから、 `console.log()` メソッドは `-1` を表示します。
+それらの変数は、2 番目の文字列が大文字を含んでいることを除けば、同じ文字列を含んでいます。1 番目の {{domxref("console/log_static", "console.log()")}} メソッドは `19` を表示します。しかし、`indexOf()` メソッドは大文字と小文字を区別するので、`"cheddar"` という文字列は `myCapString` では見つけられません。ですから、 `console.log()` メソッドは `-1` を表示します。
 
 ```js
 const myString = "brie, pepper jack, cheddar";

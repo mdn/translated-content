@@ -3,7 +3,7 @@ title: Math.fround()
 slug: Web/JavaScript/Reference/Global_Objects/Math/fround
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## 概述
 
@@ -76,20 +76,6 @@ function equal(v1, v2) {
 equal(0.1 + 0.2, 0.3); //true
 ```
 
-## Polyfill
-
-下面的函数可以模拟这个 API，前提是浏览器必须已经支持 {{jsxref("Float32Array")}}：
-
-```js
-Math.fround =
-  Math.fround ||
-  (function (array) {
-    return function (x) {
-      return (array[0] = x), array[0];
-    };
-  })(new Float32Array(1));
-```
-
 ## 规范
 
 {{Specifications}}
@@ -98,6 +84,7 @@ Math.fround =
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [`core-js` 中 `Math.fround` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.round()")}}

@@ -3,7 +3,9 @@ title: SVG animation with SMIL
 slug: Web/SVG/SVG_animation_with_SMIL
 ---
 
-Firefox 4 より、[Synchronized Multimedia Integration Language](http://www.w3.org/TR/REC-smil) (SMIL) を用いた [SVG](/ja/SVG) のアニメーションをサポートしています。SMIL では以下のようなことができます:
+{{SVGRef}}
+
+Firefox 4 より、[Synchronized Multimedia Integration Language](https://www.w3.org/TR/REC-smil) (SMIL) を用いた [SVG](/ja/docs/Web/SVG) のアニメーションをサポートしています。SMIL では以下のようなことができます:
 
 - 要素の数値属性 (x, y など) のアニメーション
 - トランスフォーム属性 (translation または rotation) のアニメーション
@@ -146,7 +148,7 @@ The {{ SVGElement("animateMotion") }} 要素は、パスに従った SVG 要素�
 </html>
 ```
 
-[View live sample](/samples/svg/svganimdemo1.html)
+[View live sample](https://mdn.dev/archives/media/samples/svg/svganimdemo1.html)
 
 ### 例 2: 曲線状の移動
 
@@ -172,6 +174,6 @@ The {{ SVGElement("animateMotion") }} 要素は、パスに従った SVG 要素�
 
 ## 参考情報
 
-- [SVG](/ja/SVG)
-- [SVG Animation Specification](http://www.w3.org/TR/SVG/animate.html)
-- [SMIL Specification](http://www.w3.org/TR/REC-smil)
+- [SVG](/ja/docs/Web/SVG)
+- [SVG Animation Specification](https://www.w3.org/TR/SVG/animate.html)
+- [SMIL Specification](https://www.w3.org/TR/REC-smil)

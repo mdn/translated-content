@@ -3,7 +3,9 @@ title: background
 slug: Web/CSS/background
 ---
 
-{{CSSRef("CSS Background")}}Сокращённое [CSS](/ru/docs/Web/CSS) свойство **`background`** устанавливает сразу все свойства стиля фона, такие как цвет, изображение, источник и размер, или метод повтора.{{EmbedInteractiveExample("pages/css/background.html")}}
+{{CSSRef}}
+
+Сокращённое [CSS](/ru/docs/Web/CSS) свойство **`background`** устанавливает сразу все свойства стиля фона, такие как цвет, изображение, источник и размер, или метод повтора.{{EmbedInteractiveExample("pages/css/background.html")}}
 
 Исходный код этого интерактивного примера хранится в репозитории GitHub. Если вы хотите внести свой вклад в проект интерактивных примеров, пожалуйста клонируйте <https://github.com/mdn/interactive-examples> и отправьте нам запрос на извлечение..
 
@@ -74,7 +76,7 @@ background: no-repeat center/80% url("../img/image.png");
 }
 
 .topbanner {
-  background: url("starsolid.gif") #00d repeat-y fixed;
+  background: url("star-solid.gif") #00d repeat-y fixed;
 }
 ```
 
@@ -95,5 +97,5 @@ background: no-repeat center/80% url("../img/image.png");
 ## Смотрите также
 
 - {{cssxref("-moz-background-inline-policy")}}
-- [Использование градиентов](/ru/docs/CSS/Using_CSS_gradients)
-- [Несколько backgrounds](/ru/docs/CSS/Multiple_backgrounds)
+- [Использование градиентов](/ru/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Несколько backgrounds](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

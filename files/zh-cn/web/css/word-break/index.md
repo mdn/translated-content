@@ -11,16 +11,19 @@ CSS 属性 `word-break` 指定了怎样在单词内断行。
 
 ## 语法
 
-```
-/* Keyword values */
+```css
+/* 关键字值 */
 word-break: normal;
 word-break: break-all;
 word-break: keep-all;
-word-break: break-word; /* deprecated */
+word-break: auto-phrase; /* 实验性 */
+word-break: break-word; /* 已弃用 */
 
-/* Global values */
+/* 全局值 */
 word-break: inherit;
 word-break: initial;
+word-break: revert;
+word-break: revert-layer;
 word-break: unset;
 ```
 
@@ -35,9 +38,10 @@ word-break: unset;
 - `break-word` {{Deprecated_Inline}}
   - : 他的效果是`word-break: normal` 和 `overflow-wrap: anywhere` 的合，不论 {{cssxref("overflow-wrap")}}的值是多少。
 
-> **备注：** 与 `word-break: break-word` 和 `overflow-wrap: break-word`（详见 {{cssxref("overflow-wrap")}}）对比，`word-break: break-word` 将在文本可能溢出其容器的确切位置创建一个断点。
+> [!NOTE]
+> 与 `word-break: break-word` 和 `overflow-wrap: break-word`（详见 {{cssxref("overflow-wrap")}}）对比，`word-break: break-word` 将在文本可能溢出其容器的确切位置创建一个断点。
 
-## 规范
+## 形式定义
 
 {{CSSInfo}}
 

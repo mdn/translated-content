@@ -39,20 +39,20 @@ slug: Web/API/DynamicsCompressorNode
 
 ## 属性
 
-_由父类 {{domxref("AudioNode")}} 派生_
+_由父类 {{domxref("AudioNode")}} 派生。_
 
 - {{domxref("DynamicsCompressorNode.threshold")}} {{readonlyInline}}
-  - : [比例系数](/zh-CN/docs/DOM/AudioParam#k-rate) {{domxref("AudioParam")}} 型。分贝高于此值时，将会进行压缩。
+  - : [比例系数](/zh-CN/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} 型。分贝高于此值时，将会进行压缩。
 - {{domxref("DynamicsCompressorNode.knee")}} {{readonlyInline}}
-  - : [比例系数](/zh-CN/docs/DOM/AudioParam#k-rate) {{domxref("AudioParam")}} 型。当超出 threshold 设置的值之后，曲线在哪个点开始朝着 ratio 设置的部分平滑变换。
+  - : [比例系数](/zh-CN/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} 型。当超出 threshold 设置的值之后，曲线在哪个点开始朝着 ratio 设置的部分平滑变换。
 - {{domxref("DynamicsCompressorNode.ratio")}} {{readonlyInline}}
-  - : [比例系数](/zh-CN/docs/DOM/AudioParam#k-rate) {{domxref("AudioParam")}} 型。输入增益变化多少来产生 1 dB 的输出。
+  - : [比例系数](/zh-CN/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} 型。输入增益变化多少来产生 1 dB 的输出。
 - {{domxref("DynamicsCompressorNode.reduction")}} {{readonlyInline}}
   - : `float` 型。表示当前压缩器使用的增益压缩值。
 - {{domxref("DynamicsCompressorNode.attack")}} {{readonlyInline}}
-  - : [比例系数](/zh-CN/docs/DOM/AudioParam#k-rate) {{domxref("AudioParam")}} 型。降低增益 10 dB 的时间（单位为秒）。
+  - : [比例系数](/zh-CN/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} 型。降低增益 10 dB 的时间（单位为秒）。
 - {{domxref("DynamicsCompressorNode.release")}} {{readonlyInline}}
-  - : [比例系数](/zh-CN/docs/DOM/AudioParam#k-rate) {{domxref("AudioParam")}} 型。提升增益 10 dB 的时间（单位为秒）。
+  - : [比例系数](/zh-CN/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} 型。提升增益 10 dB 的时间（单位为秒）。
 
 ## 方法
 
@@ -72,4 +72,4 @@ _没有自定义的方法，继承父类 {{domxref("AudioNode")}} 中的方法�
 
 ## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

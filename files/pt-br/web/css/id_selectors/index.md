@@ -3,9 +3,9 @@ title: Seletores de ID
 slug: Web/CSS/ID_selectors
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
-Em um documento HTML, os seletores de ID do CSS selecionam um elemento baseado no conteúdo de seu atributo [`ID`](/pt-BR/docs/Web/HTML/Global_attributes#ID), o qual deve ser exatamente igual ao valor dado ao seletor.
+Em um documento HTML, os seletores de ID do CSS selecionam um elemento baseado no conteúdo de seu atributo [`ID`](/pt-BR/docs/Web/HTML/Global_attributes#id), o qual deve ser exatamente igual ao valor dado ao seletor.
 
 ## Sintaxe
 
@@ -40,4 +40,4 @@ span#identificado {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.id")}}
+{{Compat}}

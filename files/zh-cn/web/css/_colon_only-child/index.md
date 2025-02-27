@@ -1,5 +1,5 @@
 ---
-title: ":only-child"
+title: :only-child
 slug: Web/CSS/:only-child
 ---
 
@@ -9,7 +9,8 @@ slug: Web/CSS/:only-child
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-only-child.html", "tabbed-shorter")}}
 
-> **备注：** 按照最初的定义，被选择的元素必须拥有一个父级元素。从选择器 Level 4 开始，这不再是必须的了。
+> [!NOTE]
+> 按照最初的定义，被选择的元素必须拥有一个父级元素。从选择器 Level 4 开始，这不再是必须的了。
 
 ## 语法
 

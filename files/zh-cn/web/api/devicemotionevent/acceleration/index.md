@@ -7,13 +7,8 @@ slug: Web/API/DeviceMotionEvent/acceleration
 
 acceleration 属性会返回设备的加速度记录（单位：[m / s2](https://en.wikipedia.org/wiki/Meter_per_second_squared)）。
 
-> **备注：** 如果硬件无法从 acceleration 数据中移除重力加速度，则该值在{{ domxref("DeviceMotionEvent") }}中可能并不存在，你应当使用{{ domxref("DeviceMotionEvent.accelerationIncludingGravity") }}代替
-
-## 语法
-
-```
-var acceleration = instanceOfDeviceMotionEvent.acceleration;
-```
+> [!NOTE]
+> 如果硬件无法从 acceleration 数据中移除重力加速度，则该值在{{ domxref("DeviceMotionEvent") }}中可能并不存在，你应当使用{{ domxref("DeviceMotionEvent.accelerationIncludingGravity") }}代替
 
 ## 值
 
@@ -41,5 +36,5 @@ var acceleration = instanceOfDeviceMotionEvent.acceleration;
 - {{ domxref("window.ondevicemotion") }}
 - [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)
 - {{ domxref("DeviceOrientationEvent") }}
-- [Detecting device orientation](/zh-CN/docs/WebAPI/Detecting_device_orientation)
-- [Orientation and motion data explained](/zh-CN/DOM/Orientation_and_motion_data_explained)
+- [Detecting device orientation](/zh-CN/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [Orientation and motion data explained](/zh-CN/docs/DOM/Orientation_and_motion_data_explained)

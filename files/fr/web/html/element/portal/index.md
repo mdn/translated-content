@@ -49,7 +49,7 @@ Par défaut, les portails reçoivent un libellé par défaut qui est le titre de
 
 Les portails utilisés à des seules fins de prérendu devraient être masqués avec l'attribut HTML `hidden` ou avec la propriété CSS [`display`](/fr/docs/Web/CSS/display) valant `none`.
 
-Lorsqu'on utilise des animations pour l'activation du portail, la [caractéristique média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries#caractéristiques_média_media_features) [`prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion) devrait être respectée.
+Lorsqu'on utilise des animations pour l'activation du portail, la [caractéristique média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#caractéristiques_média_media_features) [`prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion) devrait être respectée.
 
 ## Spécifications
 

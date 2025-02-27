@@ -22,7 +22,7 @@ Firefox 69 は、米国時間 2019 年 9 月 3 日 にリリースされまし�
 
 #### コンソール
 
-- リソースやストレージへのアクセスが何度もブロックされることによるノイズを減らすため、[トラッキング防止のエラー](/ja/docs/Web/Privacy/Tracking_Protection)、[CSP のエラー](/ja/docs/Web/HTTP/CSP)、[CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors) による [ブラウザーコンソール](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) のメッセージを自動的にグループ化するようになりました ([Firefox バグ 1522396](https://bugzil.la/1522396))。
+- リソースやストレージへのアクセスが何度もブロックされることによるノイズを減らすため、[トラッキング防止のエラー](/ja/docs/Web/Privacy/Firefox_tracking_protection)、[CSP のエラー](/ja/docs/Web/HTTP/CSP)、[CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors) による [ブラウザーコンソール](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) のメッセージを自動的にグループ化するようになりました ([Firefox バグ 1522396](https://bugzil.la/1522396))。
 - コンソールに表示されているログを、コンテキストメニューの新しい項目である \[表示メッセージをエクスポート] でファイルに保存、またはクリップボードにコピーして共有できるようになりました ([Firefox バグ 1517728](https://bugzil.la/1517728))。
 - コンソールのツールバーが、縦方向の領域を節約するためレスポンシブに高さを 1 行に減らすようになりました ([Firefox バグ 972530](https://bugzil.la/972530))。
 - Firefox UI が発したログに集中するため、コンソールでコンテンツが発したメッセージを隠せるようになりました ([Firefox バグ 1523842](https://bugzil.la/1523842))。
@@ -116,7 +116,7 @@ Firefox 69 は、米国時間 2019 年 9 月 3 日 にリリースされまし�
 
 - Marionette が、モーダルダイアログやユーザープロンプトの開く・閉じるを動的に制御するようになりました ([Firefox バグ 1477977](https://bugzil.la/1477977))。これは、複数開くプロンプトも制御されることを意味します ([Firefox バグ 1487358](https://bugzil.la/1487358))。
 - DOM の一部が削除されたり追加の通知が出たりすることを防ぐため、既定でトラッキング防止と DOM push 機能を無効化するようになりました ([Firefox バグ 1542244](https://bugzil.la/1542244))。
-- Firefox が低メモリ状態になったときにバッググラウンドのタブを自動的にアンロードする機能を無効化しました。これはタブを切り替えるときの自動化に悪影響がありました ([Firefox バグ 1553748](https://bugzil.la/1553748))。
+- Firefox が低メモリー状態になったときにバッググラウンドのタブを自動的にアンロードする機能を無効化しました。これはタブを切り替えるときの自動化に悪影響がありました ([Firefox バグ 1553748](https://bugzil.la/1553748))。
 
 ## アドオン開発者向けの変更点
 

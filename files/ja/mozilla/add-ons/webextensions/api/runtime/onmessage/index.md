@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4b10cb28d5eee0e952b2d84bd1b23cc53daa93b7
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 このイベントを使って、拡張機能の別の部品からのメッセージを受け取ることができます。
 
@@ -18,7 +18,8 @@ l10n:
 
 `onMessage()` リスナーに受信させるメッセージを送るには、{{WebExtAPIRef("runtime.sendMessage()")}}、または (コンテンツスクリプトにメッセージを送るときは) {{WebExtAPIRef("tabs.sendMessage()")}} を使います。
 
-> **メモ:** 同じ種類のメッセージに対する `onMessage` リスナーを複数作ることは避けてください。複数のリスナーが実行される順番は保証されていないからです。
+> [!NOTE]
+> 同じ種類のメッセージに対する `onMessage` リスナーを複数作ることは避けてください。複数のリスナーが実行される順番は保証されていないからです。
 >
 > 特定のリスナーへのメッセージ伝送を保証したいときは、[コネクションベースのメッセージ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#コネクションベースのメッセージ)を使ってください。
 
@@ -34,7 +35,8 @@ l10n:
 - イベントリスナーから `true` を返す。こうすることで、リスナーから復帰した後でも `sendResponse` 関数が有効なままになるため、後で実行することができます。[例を参照してください](#sendresponse_を使用した非同期の応答の送信)。
 - イベントリスナーから `Promise` を返して、応答が準備できた後にそれを解決する (またはエラーの場合は拒否する)。[例を参照してください](#プロミスを使用した非同期の応答の送信)。
 
-> **メモ:** また、[コネクションベースのメッセージ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#コネクションベースのメッセージ)を使うこともできます。
+> [!NOTE]
+> また、[コネクションベースのメッセージ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#コネクションベースのメッセージ)を使うこともできます。
 
 ## 構文
 
@@ -82,7 +84,7 @@ browser.runtime.onMessage.hasListener(listener)
 
     リスナー関数は、論理値または {{jsxref("Promise")}} のいずれかを返します。
 
-    > **メモ:** `addListener()` に非同期関数を渡すと、リスナーはメッセージを受け取るたびにプロミスを返すため、他のリスナーが応答できないようになります。
+    > **メモ:** `addListener()` に非同期関数を渡すと、リスナーはメッセージを受け取るたびにプロミスを返すため、他のリスナーが応答できなくなります。
     >
     > ```js example-bad
     > // このようにしないでください
@@ -93,7 +95,7 @@ browser.runtime.onMessage.hasListener(listener)
     > });
     > ```
     >
-    > もし、リスナーが特定の種類のメッセージにのみ応答したい場合は、リスナーを非同期関数として定義し、リスナーが応答する予定のメッセージに対してのみプロミスを返す必要があります - そうでなければ、false または undefined を返してください。
+    > もし、リスナーが特定の種類のメッセージにのみ応答したい場合は、リスナーを `async` ではない関数として定義し、リスナーが応答するメッセージに対してのみプロミスを、それ以外は false または undefined を返してください。
     >
     > ```js example-good
     > browser.runtime.onMessage.addListener((data, sender) => {
@@ -261,7 +263,7 @@ function isBookmarked(message, sender, response) {
 browser.runtime.onMessage.addListener(isBookmarked);
 ```
 
-非同期的なハンドラーがプロミスを返さない場合、明示的にプロミスを作ることができます。これは少し不自然な例ですが、[`setTimeout()`](/ja/docs/Web/API/setTimeout) を使って 1 秒の遅延を発生させた後に応答を返します。
+非同期的なハンドラーがプロミスを返さない場合、明示的にプロミスを作ることができます。これは少し不自然な例ですが、[`setTimeout()`](/ja/docs/Web/API/Window/setTimeout) を使って 1 秒の遅延を発生させた後に応答を返します。
 
 ```js
 // background-script.js
@@ -281,7 +283,8 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onMessage) API. このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。
+> [!NOTE]
+> この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onMessage) API. このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

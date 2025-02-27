@@ -42,13 +42,14 @@ function setStyles() {
 }
 ```
 
-> **Примечание:** Чтобы вживую посмотреть на работу функции, посетите страницу демонстрации [Web Storage](https://mdn.github.io/dom-examples/web-storage/).
+> [!NOTE]
+> Чтобы вживую посмотреть на работу функции, посетите страницу демонстрации [Web Storage](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

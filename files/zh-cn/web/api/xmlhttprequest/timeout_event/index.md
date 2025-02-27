@@ -3,6 +3,8 @@ title: timeout
 slug: Web/API/XMLHttpRequest/timeout_event
 ---
 
+{{APIRef("XMLHttpRequest API")}}
+
 当进度由于预定时间到期而终止时，会触发 `timeout` 事件。
 
 <table class="properties">
@@ -49,6 +51,6 @@ client.send();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)

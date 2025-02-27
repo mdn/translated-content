@@ -25,7 +25,7 @@ var mediaDevices = navigator.mediaDevices;
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [Media Capture and Streams API](/ru/docs/Web/API/Media_Streams_API): The entry point to the documentation about the entire media stream API.
+- [Media Capture and Streams API](/ru/docs/Web/API/Media_Capture_and_Streams_API): The entry point to the documentation about the entire media stream API.
 - [WebRTC API](/ru/docs/Web/API/WebRTC_API): Documentation about the WebRTC API, which is closely related.

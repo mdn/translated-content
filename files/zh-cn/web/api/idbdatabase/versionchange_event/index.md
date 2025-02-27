@@ -13,8 +13,11 @@ slug: Web/API/IDBDatabase/versionchange_event
 
 ## 语法
 
-```
-IDBDatabase.onversionchange = function(event) { ... }
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+
+```js
+addEventListener("versionchange", (event) => {});
+onversionchange = (event) => {};
 ```
 
 ## 举例

@@ -41,7 +41,7 @@ Tout d'abord, créez un nouveau dossier, «&nbsp;bouton&nbsp;», et créez un fi
 }
 ```
 
-Cela spécifie que nous aurons un script en [arrière‐plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) nommé «&nbsp;background.js&nbsp;», et une action du navigateur (bouton) et une action du navigateur (bouton) dont les icônes vont vivre dans le répertoire «&nbsp;icônes&nbsp;».
+Cela spécifie que nous aurons un script en [arrière‐plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) nommé «&nbsp;background.js&nbsp;», et une action du navigateur (bouton) et une action du navigateur (bouton) dont les icônes vont vivre dans le répertoire «&nbsp;icônes&nbsp;».
 
 Ces icônes proviennent des [bits&nbsp;!](https://www.iconfinder.com/iconsets/bitsies) icônes créées parRecep Kütük.
 
@@ -77,7 +77,7 @@ button/
     manifest.json
 ```
 
-Maintenant [installer la WebExtension](/fr/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) et cliquez sur le bouton&nbsp;:
+Maintenant [installer la WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) et cliquez sur le bouton&nbsp;:
 
 {{EmbedYouTube("kwwTowgT‐Ys")}}
 
@@ -191,7 +191,7 @@ Maintenant, rechargez l'extension, cliquez de nouveau sur le bouton et essayez d
 
 ## Actions de page
 
-Les [actions de page](/fr/docs/Mozilla/Add-ons/WebExtensions/Page_actions) sont comme les actions du navigateur, mais qui ne sont pertinentes que pour les pages particulières, plutôt que sur le navigateur dans son ensemble.
+Les [actions de page](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) sont comme les actions du navigateur, mais qui ne sont pertinentes que pour les pages particulières, plutôt que sur le navigateur dans son ensemble.
 
 Alors que les actions du navigateur sont toujours affichées, les actions de la page ne sont affichées que dans les onglets où elles sont pertinentes. Les boutons d'action de la page sont affichés dans la barre d'URL, plutôt que dans la barre d'outils du navigateur.
 

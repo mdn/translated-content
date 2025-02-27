@@ -12,7 +12,7 @@ slug: Web/CSS/background-position
 ## Синтаксис
 
 ```css
-/* Ключевые значения */
+/* Ключевые слова */
 background-position: top;
 background-position: bottom;
 background-position: left;
@@ -88,19 +88,19 @@ div {
 
 /* В этих примерах используется сокращённое свойство 'background' */
 .exampleone {
-  background: url("startransparent.gif") #ffee99 2.5cm bottom no-repeat;
+  background: url("star-transparent.gif") #ffee99 2.5cm bottom no-repeat;
 }
 .exampletwo {
-  background: url("startransparent.gif") #ffee99 3em 50% no-repeat;
+  background: url("star-transparent.gif") #ffee99 left 4em bottom 1em no-repeat;
 }
 
 /* Несколько фоновых изображений: каждое изображение сопоставляется
    с соответствующей позицией, от первого указанного до последнего. */
 .examplethree {
-  background-image: url("startransparent.gif"), url("catfront.png");
+  background-image: url("star-transparent.gif"), url("cat-front.png");
   background-position:
     0px 0px,
-    center;
+    right 3em bottom 2em;
 }
 ```
 
@@ -114,13 +114,13 @@ div {
 
 {{cssinfo}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 
 ### Quantum CSS заметки
 
-- В Gecko есть ошибка, означающая, что `background-position` не может быть {{cssxref("transition","transitioned")}} между двумя значениями, содержащими разные числа значений {{cssxref("&lt;position&gt;")}}, для примера `background-position: 10px 10px;` and `background-position: 20px 20px, 30px 30px;` (смотрите {{bug(1390446)}}). Новый параллельный CSS движок Firefox (также известный как [Quantum CSS](https://wiki.mozilla.org/Quantum) или [Stylo](https://wiki.mozilla.org/Quantum/Stylo), который планируется выпустить в Firefox 57) исправляет это.
+- В Gecko есть ошибка, означающая, что `background-position` не может быть {{cssxref("transition","transitioned")}} между двумя значениями, содержащими разные числа значений {{cssxref("&lt;position&gt;")}}, для примера `background-position: 10px 10px;` and `background-position: 20px 20px, 30px 30px;` (смотрите [Firefox bug 1390446](https://bugzil.la/1390446)). Новый параллельный CSS движок Firefox (также известный как [Quantum CSS](https://wiki.mozilla.org/Quantum) или [Stylo](https://wiki.mozilla.org/Quantum/Stylo), который планируется выпустить в Firefox 57) исправляет это.
 
 ## Смотрите также
 

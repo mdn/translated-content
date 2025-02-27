@@ -49,7 +49,7 @@ console.log(x);
 
 C나 Java와 같이 블록이 스코프를 생성하는 언어의 경우, 위 코드의 `console.log` 라인에서 `x`가 어떤 블록 스코프에도 포함되지 않기 때문에 에러가 발생해야 할 것입니다. 그러나, 블록은 `var`로 선언한 변수에 대해 스코프를 생성하지 않기 때문에, 여기서 `var` 명령문은 전역 변수를 생성합니다. 이것을 클로저와 함께 사용했을 때 어떤 버그가 발생할 수 있는지 [실제 예제](#루프에서_클로저_생성하기_일반적인_실수)가 아래 소개되어 있습니다.
 
-ES6에서, JavaScript는 블록 스코프 변수를 생성할 수 있도록 `let`과 `const` 선언과 함께 [시간상 사각지대](/ko/docs/Web/JavaScript/Reference/Statements/let#시간상_사각지대) 등을 도입했습니다.
+ES6에서, JavaScript는 블록 스코프 변수를 생성할 수 있도록 `let`과 `const` 선언과 함께 [일시적 사각지대](/ko/docs/Web/JavaScript/Reference/Statements/let#일시적_사각지대) 등을 도입했습니다.
 
 ```js
 if (Math.random() > 0.5) {
@@ -84,7 +84,7 @@ myFunc();
 한눈에 봐서는, 이 코드가 여전히 작동하는 것이 직관적으로 보이지 않을 수 있습니다. 몇몇 프로그래밍 언어에서, 함수 안의 지역 변수들은 그 함수가 처리되는 동안에만 존재합니다. `makeFunc()` 실행이 끝나면, `name` 변수에 더 이상 접근할 수 없게 될 것으로 예상하는 것이 일반적이지만, 코드는 여전히 예상대로 작동하기 때문에 JavaScript에서는 분명히 다릅니다.
 
 그 이유는 JavaScript의 함수가 클로저를 형성하기 때문입니다. 클로저는 함수와 함수가 선언된 어휘적 환경의 조합입니다. 이 환경은 클로저가 생성된 시점의 유효 범위 내에 있는 모든 지역 변수로 구성됩니다. 예시의 경우, `myFunc`은 `makeFunc`이 실행
-될 때 생성된 `displayName` 함수의 인스턴스에 대한 참조입니다. `displayName`의 인스턴스는 변수 `name` 이 있는 어휘적 환경에 대한 참조를 유지합니다. 이런 이유로, `myFunc`가 호출될 때 변수 `name`은 사용할 수 있는 상태로 남게 되고 "Mozilla" 가 `console.log` 에 전달된다.
+될 때 생성된 `displayName` 함수의 인스턴스에 대한 참조입니다. `displayName`의 인스턴스는 변수 `name` 이 있는 어휘적 환경에 대한 참조를 유지합니다. 이런 이유로, `myFunc`가 호출될 때 변수 `name`은 사용할 수 있는 상태로 남게 되고 "Mozilla" 가 `console.log` 에 전달됩니다.
 
 다음은 조금 더 흥미로운 예제인 `makeAdder` 함수입니다.
 
@@ -169,7 +169,7 @@ document.getElementById("size-16").onclick = size16;
 
 자바와 같은 몇몇 언어들은 메서드를 비공개로 선언할 수 있는 기능을 제공합니다. 이는 같은 클래스 내부의 다른 메서드에서만 그 메서드들을 호출할 수 있다는 의미입니다.
 
-[classes](/ko/docs/Web/JavaScript/Reference/Classes) 이전의 JavaScript에는 [비공개 메서드](/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields#private_methods)를 선언하는 기본 방법이 없었지만, 클로저를 사용하여 비공개 메서드를 흉내낼 수 있다는 것이 가능했습니다. 비공개 메서드는 코드에 대한 접근을 제한하는 데만 유용한 것이 아닙니다. 또한 전역 이름 공간을 관리하는 강력한 방법을 제공합니다.
+[classes](/ko/docs/Web/JavaScript/Reference/Classes) 이전의 JavaScript에는 [비공개 메서드](/ko/docs/Web/JavaScript/Reference/Classes/Private_properties#private_methods)를 선언하는 기본 방법이 없었지만, 클로저를 사용하여 비공개 메서드를 흉내낼 수 있다는 것이 가능했습니다. 비공개 메서드는 코드에 대한 접근을 제한하는 데만 유용한 것이 아닙니다. 또한 전역 이름 공간을 관리하는 강력한 방법을 제공합니다.
 
 아래 코드는 비공개 함수와 변수에 접근하는 퍼블릭 함수를 정의하기 위해 클로저를 사용하는 방법을 보여줍니다. 이렇게 클로저를 사용하는 것을 [모듈 디자인 패턴](https://www.google.com/search?q=javascript+module+pattern)을 따른다고 합니다.
 
@@ -248,7 +248,8 @@ console.log(counter2.value()); // 0.
 
 두 카운터가 서로 독립성을 유지하는 방법에 주목하세요. 각 클로저는 자체 클로저를 통해 `privateCounter` 변수의 다른 버전을 참조합니다. 카운터 중 하나가 호출될 때마다, 이 변수의 값을 변경하여 어휘 환경이 변경됩니다. 하나의 클로저에서 변수 값을 변경해도 다른 클로저의 값에는 영향을 미치지 않습니다.
 
-> **참고:** 이런 방식으로 클로저를 사용하여 객체지향 프로그래밍의 정보 은닉과 캡슐화 같은 이점들을 얻을 수 있습니다.
+> [!NOTE]
+> 이런 방식으로 클로저를 사용하여 객체지향 프로그래밍의 정보 은닉과 캡슐화 같은 이점들을 얻을 수 있습니다.
 
 ## 클로저 스코프 체인
 

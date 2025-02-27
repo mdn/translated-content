@@ -24,7 +24,7 @@ flex-grow: initial;
 flex-grow: unset;
 ```
 
-Свойство `flex-grow` указывается одним числом — значением типа [`<number>`](/ru/docs/Web/CSS/flex-grow#number).
+Свойство `flex-grow` указывается одним числом — значением типа [`<number>`](#number).
 
 ### Значения
 
@@ -101,6 +101,6 @@ flex-grow: unset;
 
 ## Смотрите также
 
-- Руководство по CSS Flexbox: _[Basic Concepts of Flexbox](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- Руководство по CSS Flexbox: _[Controlling Ratios of flex items along the main axis](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- Руководство по CSS Flexbox: _[Basic Concepts of Flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- Руководство по CSS Flexbox: _[Controlling Ratios of flex items along the main axis](/ru/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
 - [`flex-grow` is weird. Or is it?](https://css-tricks.com/flex-grow-is-weird/) статья Мануэля Матузовича (Manuel Matuzovic) на CSS-Tricks, которая показывает как работает flex-grow

@@ -11,14 +11,16 @@ slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 
 第一步是创建将用于检索视频帧的 {{ HTMLElement("video") }} 元素：
 
-> **备注：** 请将以下声明添加到“webgl-demo.js”脚本的开头：
+> [!NOTE]
+> 请将以下声明添加到“webgl-demo.js”脚本的开头：
 
 ```js
 // 当视频可以复制到纹理中时将被设置为 true
 let copyVideo = false;
 ```
 
-> **备注：** 请将以下函数添加到“webgl-demo.js”脚本中：
+> [!NOTE]
+> 请将以下函数添加到“webgl-demo.js”脚本中：
 
 ```js
 function setupVideo(url) {
@@ -73,7 +75,8 @@ function setupVideo(url) {
 
 接下来的更改是初始化纹理，这很简单，因为它不再需要加载图像文件。相反，它所做的只是创建一个空的纹理对象，在其中放置一个像素，然后设置其过滤条件以供后续使用：
 
-> **备注：** 请将“webgl-demo.js”中的 `loadTexture()` 函数替换为以下代码：
+> [!NOTE]
+> 请将“webgl-demo.js”中的 `loadTexture()` 函数替换为以下代码：
 
 ```js
 function initTexture(gl) {
@@ -114,7 +117,8 @@ function initTexture(gl) {
 }
 ```
 
-> **备注：** 请将以下函数添加到“webgl-demo.js”中：
+> [!NOTE]
+> 请将以下函数添加到“webgl-demo.js”中：
 
 ```js
 function updateTexture(gl, texture, video) {
@@ -138,16 +142,19 @@ function updateTexture(gl, texture, video) {
 
 然后，我们需要在 `main()` 函数中调用几个新的函数。
 
-> **备注：** 在你的 `main()` 函数中，将调用 `loadTexture()` 的代码替换为以下内容：
+> [!NOTE]
+> 在你的 `main()` 函数中，将调用 `loadTexture()` 的代码替换为以下内容：
 
 ```js
 const texture = initTexture(gl);
 const video = setupVideo("Firefox.mp4");
 ```
 
-> **备注：** 你还需要将 [Firefox.mp4](https://github.com/mdn/dom-examples/blob/main/webgl-examples/tutorial/sample8/Firefox.mp4) 文件下载到你本地与你的 JavaScript 文件相同的目录中。
+> [!NOTE]
+> 你还需要将 [Firefox.mp4](https://github.com/mdn/dom-examples/blob/main/webgl-examples/tutorial/sample8/Firefox.mp4) 文件下载到你本地与你的 JavaScript 文件相同的目录中。
 
-> **备注：** 在你的 `main()` 函数中，将 `render()` 函数替换为以下内容：
+> [!NOTE]
+> 在你的 `main()` 函数中，将 `render()` 函数替换为以下内容：
 
 ```js
 // 重复绘制场景
@@ -177,6 +184,6 @@ function render(now) {
 
 ## 参见
 
-- [在 Firefox 中使用音视频](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [在 Firefox 中使用音视频](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 
 {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

@@ -1,13 +1,14 @@
 ---
-title: ":host"
+title: :host
 slug: Web/CSS/:host
 ---
 
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:host`** permet de cibler l'hôte d'un _[shadow DOM](/fr/docs/Web/Web_Components/Using_shadow_DOM)_ contenant le CSS à utiliser pour cet hôte. Autrement dit, elle permet de sélectionner un élément personnalisé (_custom element_) depuis l'intérieur du _shadow DOM_.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:host`** permet de cibler l'hôte d'un _[shadow DOM](/fr/docs/Web/API/Web_components/Using_shadow_DOM)_ contenant le CSS à utiliser pour cet hôte. Autrement dit, elle permet de sélectionner un élément personnalisé (_custom element_) depuis l'intérieur du _shadow DOM_.
 
-> **Note :** Cette pseudo-classe n'a aucun effet lorsqu'elle est utilisée à l'extérieur d'un _shadow DOM_.
+> [!NOTE]
+> Cette pseudo-classe n'a aucun effet lorsqu'elle est utilisée à l'extérieur d'un _shadow DOM_.
 
 ```css
 /* Cible la racine d'un hôte de shadow DOM */
@@ -64,6 +65,6 @@ La règle `:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` permet de c
 
 ## Voir aussi
 
-- [Les composants web](/fr/docs/Web/Web_Components)
+- [Les composants web](/fr/docs/Web/API/Web_components)
 - {{cssxref(":host()")}}
 - {{cssxref(":host-context()")}}

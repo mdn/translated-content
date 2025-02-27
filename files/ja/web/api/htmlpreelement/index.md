@@ -11,7 +11,7 @@ l10n:
 
 {{InheritanceDiagram}}
 
-## インスタンスメソッド
+## インスタンスプロパティ
 
 _親である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
 

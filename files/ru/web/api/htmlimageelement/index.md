@@ -3,7 +3,7 @@ title: HTMLImageElement
 slug: Web/API/HTMLImageElement
 ---
 
-{{ApiRef}}{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}
 
 Интерфейс **`HTMLImageElement`** предоставляет специальные свойства и методы (расширяя обычный интерфейс {{domxref("HTMLElement")}} ) для управления вёрсткой и отображением элемента {{HTMLElement("img")}}.
 
@@ -19,7 +19,7 @@ _Наследует свойства родителя, {{domxref("HTMLElement")}
 | `alt`                                                 | {{domxref("DOMString")}} | Повторяет атрибут HTML [`alt`](/ru/docs/Web/HTML/Element/img#alt) указывающий на запасной контекст картинки.                                                                                                        |
 | `border`                                              | {{domxref("DOMString")}} | Ширина рамки вокруг картинки. Устарело и вместо него следует использовать свойство CSS {{cssxref("border")}}.                                                                                                       |
 | `complete` {{readonlyInline}}                         | {{domxref("Boolean")}}   | Возвращает true, если браузер закончил загрузку картинки с ошибкой или успешно. Также возвращает true, когда не установлено значение {{domxref("HTMLImageElement.src", "src")}}, во всех остальных случаях - false. |
-| `crossOrigin`                                         | {{domxref("DOMString")}} | Является {{domxref("DOMString")}}, с настройками CORS для этого элемента изображения. Дополнительная информация: [Атрибуты настроек CORS](/ru/docs/HTML/CORS_settings_attributes).                                  |
+| `crossOrigin`                                         | {{domxref("DOMString")}} | Является {{domxref("DOMString")}}, с настройками CORS для этого элемента изображения. Дополнительная информация: [Атрибуты настроек CORS](/ru/docs/Web/HTML/Attributes/crossorigin).                                |
 | `currentSrc`{{readonlyInline}}{{experimental_inline}} | {{domxref("DOMString")}} | Возвращает {{domxref("DOMString")}} с URL-адресом текущего изображения (что может измениться, например, в ответ на запросы мультимедиа).                                                                            |
 | `height`                                              | `unsigned long`          | Отражает атрибут [`height`](/ru/docs/Web/HTML/Element/img#height) HTML, указывая визуализированную высоту изображения в пикселях CSS.                                                                               |
 | `hspace`                                              | `long`                   | Space to the left and right of the image.                                                                                                                                                                           |

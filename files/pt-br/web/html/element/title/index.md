@@ -5,7 +5,7 @@ slug: Web/HTML/Element/title
 
 O **elemento HTML** `<title>` (_Elemento HTML Título_) define o título do documento, mostrado na barra de título de um navegador ou na aba da página. Pode conter somente texto e quaisquer marcações contidas no texto não são interpretadas.
 
-- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Conteúdo de metadados](/pt-BR/docs/Web/Guide/HTML/Content_categories#Metadata_content).
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdo de metadados](/pt-BR/docs/Web/HTML/Content_categories#metadata_content).
 - _Conteúdo permitido_ Texto que não seja whitespace entre elementos.
 - _Omissão de marcação_ Todas as marcações são necessárias. Perceba que suprimir `</title>` fará o navegador ignorar o resto da página.
 - _Elementos pais permitidos_ Um elemento {{ HTMLElement("head") }} que não contenha outro elemento {{ HTMLElement("title") }}.
@@ -14,7 +14,7 @@ O **elemento HTML** `<title>` (_Elemento HTML Título_) define o título do docu
 
 ## Atributos
 
-Este elemento inclui somente os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui somente os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 ## Notas de uso
 
@@ -42,8 +42,6 @@ Uma técnica comum de navegação para usuários de tecnologias assistivas é le
 
 Para ajudar o usuário, atualize o valor do `title` para refletir mudanças significativas no estado da página (como problemas de validação em formulários).
 
-#### Exemplo
-
 ```
 <title>2 erros - Seu pedido - Casa Azul Comida Chinesa - FoodYum: Faça seu pedido online!</title>
 ```
@@ -54,4 +52,4 @@ Para ajudar o usuário, atualize o valor do `title` para refletir mudanças sign
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.title")}}
+{{Compat}}

@@ -3,6 +3,8 @@ title: Function (関数)
 slug: Glossary/Function
 ---
 
+{{GlossarySidebar}}
+
 **関数** は、他のコードや自分自身、関数を参照する {{Glossary("variable", "変数")}} から呼ばれるコード断片です。関数が呼ばれると、{{Glossary("Argument", "引数")}} が関数への入力として渡され、次に関数は任意で値を戻します。{{glossary("JavaScript")}} における関数は、{{glossary("object", "オブジェクト")}} でもあります。
 
 関数名は、関数宣言の一部または関数式に含まれる {{Glossary("identifier", "識別子")}} です。関数名の {{Glossary("scope", "スコープ")}} は、関数名が宣言か式かによって決まります。

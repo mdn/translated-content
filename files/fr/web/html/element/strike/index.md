@@ -7,17 +7,19 @@ slug: Web/HTML/Element/strike
 
 L'élément HTML **`<strike>`** permet de représenter du texte barré ou avec une ligne le traversant.
 
-> **Note :** Comme tous les éléments se limitant à la présentation, {{HTMLElement("strike")}} a été déprécié en HTML 4 et XHTML 1, et rendu obsolète dans HTML5. Si on souhaite représente du contenu _supprimé_, on utilisera l'élément {{HTMLElement("del")}} ; dans les autres cas, on utilisera un élément {{HTMLElement("s")}}.
+> [!NOTE]
+> Comme tous les éléments se limitant à la présentation, {{HTMLElement("strike")}} a été déprécié en HTML 4 et XHTML 1, et rendu obsolète dans HTML5. Si on souhaite représente du contenu _supprimé_, on utilisera l'élément {{HTMLElement("del")}} ; dans les autres cas, on utilisera un élément {{HTMLElement("s")}}.
 
 ## Attributs
 
-Cet élément n'a aucun autre attribut en dehors [des attributs universels](/fr/docs/Web/HTML/Attributs_universels), communs à tous les éléments.
+Cet élément n'a aucun autre attribut en dehors [des attributs universels](/fr/docs/Web/HTML/Global_attributes), communs à tous les éléments.
 
 ## Interface DOM
 
 Cet élément implémente l'interface {{domxref("HTMLElement")}}.
 
-> **Note :** Jusqu'à Gecko 1.9.2 inclus, Firefox implémente l'interface {{domxref("HTMLSpanElement")}} pour cet élément.
+> [!NOTE]
+> Jusqu'à Gecko 1.9.2 inclus, Firefox implémente l'interface {{domxref("HTMLSpanElement")}} pour cet élément.
 
 ## Exemples
 

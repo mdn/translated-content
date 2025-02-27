@@ -61,9 +61,9 @@ l10n:
 ## アドオン開発者向けの変更点一覧
 
 - Manifest V3 の署名と、AMO で Manifest V3 拡張機能を公開する機能をサポートしました。詳しくは [Manifest v3 signing available November 21 on Firefox Nightly](https://blog.mozilla.org/addons/2022/11/17/manifest-v3-signing-available-november-21-on-firefox-nightly/) のブログ記事をご覧ください。
-- Manifest V3 拡張機能のデフォルトの [Content Security Policy (CSP)](/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) を、[`upgrade-insecure-requests` を含む](/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#upgrade_insecure_network_requests_in_manifest_v3) ように更新しました。これはデフォルトで、すべてのネットワーク要求が `https:` を使用するように更新されることを意味します。`http:` を使用することが必要な拡張機能は、[`content_security_policy`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json キーでデフォルトの CSP を上書きすることで `http:` を使用できます ([Firefox バグ 1797086](https://bugzil.la/1797086))。
+- Manifest V3 拡張機能のデフォルトの [Content Security Policy (CSP)](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) を、[`upgrade-insecure-requests` を含む](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#upgrade_insecure_network_requests_in_manifest_v3) ように更新しました。これはデフォルトで、すべてのネットワーク要求が `https:` を使用するように更新されることを意味します。`http:` を使用することが必要な拡張機能は、[`content_security_policy`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json キーでデフォルトの CSP を上書きすることで `http:` を使用できます ([Firefox バグ 1797086](https://bugzil.la/1797086))。
 - {{WebExtAPIRef("webRequest.SecurityInfo")}} に `secretKeyLength` プロパティを追加しました。これは、ウェブ要求のセキュリティプロパティにある暗号鍵の長さをビット数で表します ([Firefox バグ 1778473](https://bugzil.la/1778473))。
-- [拡張機能ボタン](https://support.mozilla.org/kb/unified-extensions) の導入に合わせて、[`action`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) および [`browser_action`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) マニフェストキーの `default_area` の既定値を `"navbar"` から `"menupanel"` に変更しました ([Firefox バグ 1799947](https://bugzil.la/1799947))。
+- [拡張機能ボタン](https://support.mozilla.org/kb/unified-extensions) の導入に合わせて、[`action`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) および [`browser_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) マニフェストキーの `default_area` の既定値を `"navbar"` から `"menupanel"` に変更しました ([Firefox バグ 1799947](https://bugzil.la/1799947))。
 
 ## 過去のバージョン
 

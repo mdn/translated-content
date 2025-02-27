@@ -114,8 +114,8 @@ h3 {
 
 ## Compatibilidade
 
-{{Compat("css.properties.padding")}}
+{{Compat}}
 
 ## Veja também
 
-- [CSS Box Model](/pt-BR/CSS/box_model)
+- [CSS Box Model](/pt-BR/docs/CSS/box_model)

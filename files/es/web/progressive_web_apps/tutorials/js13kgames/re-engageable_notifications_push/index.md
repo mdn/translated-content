@@ -67,7 +67,7 @@ Se crea una nueva notificación aleatoria cada 30 segundos hasta que se vuelve d
 
 La tecnología aún se encuentra en una etapa muy temprana; algunos ejemplos de uso utilizan la plataforma de mensajería en la nube de Google, pero se están reescribiendo para admitir IDVAP (**Id**entificación **vo**luntaria de la **ap**licación), que ofrece una capa adicional de seguridad para tu aplicación. Puedes examinar los [ejemplos del libro de recetas del servicio _workers_](https://github.com/mdn/serviceworker-cookbook/push-payload.html), intenta configurar un servidor de mensajería `push` usando [Firebase](https://firebase.google.com/), o crea tu propio servidor (utilizando Node.js, por ejemplo).
 
-Como se mencionó anteriormente, para poder recibir mensajes `push`, debes tener un servicio _worker_, cuyos conceptos básicos ya se explican en [Cómo hacer que las PWAs funcionen sin conexión con el servicio workers](/es/docs/Web/Apps/Progressive/Offline_Service_workers). Dentro del servicio _workers_, se crea un mecanismo de suscripción del servicio `push`.
+Como se mencionó anteriormente, para poder recibir mensajes `push`, debes tener un servicio _worker_, cuyos conceptos básicos ya se explican en [Cómo hacer que las PWAs funcionen sin conexión con el servicio workers](/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers). Dentro del servicio _workers_, se crea un mecanismo de suscripción del servicio `push`.
 
 ```js
 registration.pushManager.getSubscription().then(/* ... */);

@@ -3,7 +3,7 @@ title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 ---
 
-{{JSRef("Global_Objects", "Number")}}
+{{JSRef}}
 
 ## Resumo
 
@@ -55,7 +55,7 @@ Number.isNaN("blabla"); // e.g. este teria sido true com isNaN
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.isNaN")}}
+{{Compat}}
 
 ## Veja também
 

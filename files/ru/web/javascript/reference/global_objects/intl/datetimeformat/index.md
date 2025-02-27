@@ -1,188 +1,161 @@
 ---
 title: Intl.DateTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
+l10n:
+  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef("Global_Objects", "DateTimeFormat", "Intl,Collator,NumberFormat")}}
+{{JSRef}}
 
-## Сводка
+Объект **`Intl.DateTimeFormat`** предоставляет возможности форматирования даты и времени в соответствии с языковыми правилами.
 
-Объект **`Intl.DateTimeFormat`** является конструктором объектов, включающих языка-зависимое форматирование даты и времени.
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat", "taller")}}
 
-## Синтаксис
+```js interactive-example
+const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
+// Results below assume UTC timezone - your results may vary
 
+// Specify default date formatting for language (locale)
+console.log(new Intl.DateTimeFormat("en-US").format(date));
+// Expected output: "12/20/2020"
+
+// Specify default date formatting for language with a fallback language (in this case Indonesian)
+console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
+// Expected output: "20/12/2020"
+
+// Specify date and time format using "style" options (i.e. full, long, medium, short)
+console.log(
+  new Intl.DateTimeFormat("en-GB", {
+    dateStyle: "full",
+    timeStyle: "long",
+    timeZone: "Australia/Sydney",
+  }).format(date),
+);
+// Expected output: "Sunday, 20 December 2020 at 14:23:16 GMT+11"
 ```
-new Intl.DateTimeFormat([locales[, options]])
-Intl.DateTimeFormat.call(this[, locales[, options]])
-```
 
-### Параметры
+## Конструктор
 
-- `locales`
+- {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
+  - : Создаёт новый объект `Intl.DateTimeFormat`.
 
-  - : Необязательный параметр. Строка с языковой меткой BCP 47, либо массив таких строк. Описание общей формы и интерпретации аргумента `locales` смотрите на {{jsxref("Global_Objects/Intl", "странице, посвящённой объекту Intl", "#Locale_identification_and_negotiation", 1)}}. Разрешены следующие ключи расширения Unicode:
+## Статические методы
 
-    - `nu`
-      - : Используемая система нумерации. Возможные значения включают в себя: `"arab"`, `"arabext"`, `"bali"`, `"beng"`, `"deva"`, `"fullwide"`, `"gujr"`, `"guru"`, `"hanidec"`, `"khmr"`, `"knda"`, `"laoo"`, `"latn"`, `"limb"`, `"mlym"`, `"mong"`, `"mymr"`, `"orya"`, `"tamldec"`, `"telu"`, `"thai"`, `"tibt"`.
-    - `ca`
-      - : Используемый календарь. Возможные значения включают в себя: `"buddhist"`, `"chinese"`, `"coptic"`, `"ethioaa"`, `"ethiopic"`, `"gregory"`, `"hebrew"`, `"indian"`, `"islamic"`, `"islamicc"`, `"iso8601"`, `"japanese"`, `"persian"`, `"roc"`.
+- {{jsxref("Intl/DateTimeFormat/supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
+  - : Возвращает массив, содержащий локали, которые поддерживаются без необходимости возврата к локали по умолчанию.
 
-- `options`
+## Свойства экземпляра
 
-  - : Необязательный параметр. Объект с некоторыми или всеми из следующих свойств:
+Эти свойства определены в `Intl.DateTimeFormat.prototype` и есть у всех экземпляров `Intl.DateTimeFormat`.
 
-    - `localeMatcher`
-      - : Используемый алгоритм сопоставления локалей. Возможными значениями являются `"lookup"` и `"best fit"`; значением по умолчанию является `"best fit"`. Информацию по этой опции смотрите на {{jsxref("Global_Objects/Intl", "странице, посвящённой объекту Intl", "#Locale_negotiation", 1)}}.
-    - `timeZone`
-      - : Используемый часовой пояс. Единственным значением, которые реализации обязаны распознавать, является `"UTC"`; значением по умолчанию является часовой пояс по умолчанию среды выполнения. Реализации также могут распознавать названия часовых поясов из [базы данных часовых поясов IANA](https://www.iana.org/time-zones), например `"Asia/Shanghai"`, `"Asia/Kolkata"` или `"America/New_York"`.
-    - `hour12`
-      - : Определяет, использовать ли 12-часовой формат времени (в противовес 24-часовому). Возможными значениями являются `true` и `false`; значение по умолчанию зависит от локали.
-    - `formatMatcher`
-      - : Используемый алгоритм сопоставления форматов. Возможными значениями являются `"basic"` и `"best fit"`; значением по умолчанию является `"best fit"`. Смотрите следующий абзац, объясняющий, как использовать это свойство.
+- {{jsxref("Object/constructor", "Intl.DateTimeFormat.prototype.constructor")}}
+  - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `Intl.DateTimeFormat` начальным значением является конструктор {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat")}}.
+- `Intl.DateTimeFormat.prototype[@@toStringTag]`
+  - : Начальным значением свойства [`@@toStringTag`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) является строка `"Intl.DateTimeFormat"`. Это свойство используется в {{jsxref("Object.prototype.toString()")}}.
 
-    Следующие свойства описывают компоненты даты/времени, используемые в форматированном выводе, и их желаемые представления. Реализации должны поддерживать, как минимум, следующие подмножества:
+## Методы экземпляра
 
-    - `weekday`, `year`, `month`, `day`, `hour`, `minute`, `second`
-    - `weekday`, `year`, `month`, `day`
-    - `year`, `month`, `day`
-    - `year`, `month`
-    - `month`, `day`
-    - `hour`, `minute`, `second`
-    - `hour`, `minute`
-
-    Также реализации могут поддерживать другие подмножества и запросы будут сравниваться со всеми доступными подмножествами представлений для поиска наилучшего соответствия. Для такого сравнения доступно два алгоритма, нужный из которых выбирается свойством `formatMatcher`: [чётко определённый алгоритм `"basic"`](http://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher) и зависящий от реализации алгоритм `"best fit"`.
-
-    - `weekday`
-      - : Представление дней недели. Возможными значениями являются `"narrow"`, `"short"` и `"long"`.
-    - `era`
-      - : Представление эр. Возможными значениями являются `"narrow"`, `"short"` и `"long"`.
-    - `year`
-      - : Представление лет. Возможными значениями являются `"numeric"` и `"2-digit"`.
-    - `month`
-      - : Представление месяцев. Возможными значениями являются `"numeric"`, `"2-digit"`, `"narrow"`, `"short"` и `"long"`.
-    - `day`
-      - : Представление дней. Возможными значениями являются `"numeric"` и `"2-digit"`.
-    - `hour`
-      - : Представление часов. Возможными значениями являются `"numeric"` и `"2-digit"`.
-    - `minute`
-      - : Представление минут. Возможными значениями являются `"numeric"` и `"2-digit"`.
-    - `second`
-      - : Представление секунд. Возможными значениями являются `"numeric"` и `"2-digit"`.
-    - `timeZoneName`
-      - : Представление названий часовых поясов. Возможными значениями являются `"short"` и `"long"`.
-
-    Значение по умолчанию для всех свойств компонентов даты/времени является значение {{jsxref("Global_Objects/undefined", "undefined")}},но если все свойства компонентов будут равны {{jsxref("Global_Objects/undefined", "undefined")}}, то будет предполагаться, что значением свойств `year`, `month` и `day` является `"numeric"`.
-
-## Описание
-
-### Свойства
-
-- {{jsxref("DateTimeFormat.prototype", "Intl.DateTimeFormat.prototype")}}
-  - : Позволяет добавлять свойства ко всем объектам.
-
-## Методы
-
-- {{jsxref("DateTimeFormat.supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
-  - : Возвращает массив, содержащий те из предоставленных локалей, которые поддерживаются без отката к локали по умолчанию среды выполнения.
-
-## Экземпляры объекта `DateTimeFormat`
-
-### Свойства
-
-Экземпляры `DateTimeFormat` наследуют следующие свойства из своего прототипа:
-
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/prototype', 'Properties')}}
-
-### Методы
-
-Экземпляры `DateTimeFormat` наследуют следующие методы из своего прототипа:
-
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/prototype', 'Methods')}}
+- {{jsxref("Intl/DateTimeFormat/format", "Intl.DateTimeFormat.prototype.format()")}}
+  - : Функция-геттер, которая форматирует дату в соответствии с локалью и настройками форматирования этого объекта `DateTimeFormat`.
+- {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}
+  - : Этот метод принимает две [даты](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date) и форматирует диапазон дат наиболее кратким образом на основе локали и параметров, установленных при создании экземпляра `DateTimeFormat`.
+- {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}
+  - : Этот метод принимает две [даты](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date) и возвращает массив объектов, которые содержат специфичные для локали токены, представляющие каждую часть отформатированного диапазона дат.
+- {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}
+  - : Возвращает {{jsxref("Array", "массив")}} объектов, представляющих части даты, которые могут быть использованы для пользовательского форматирования с учётом локали.
+- {{jsxref("Intl/DateTimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}
+  - : Возвращает новый объект со свойствами, представляющими локаль и настройки форматирования, определённые во время инициализации объекта.
 
 ## Примеры
 
-### Пример: использование `DateTimeFormat`
+### Использование `DateTimeFormat`
 
-При базовом использовании без определения локали `DateTimeFormat` использует локаль и опции по умолчанию.
+При использовании без указания локали `DateTimeFormat` использует локаль и настройки по умолчанию.
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
-// Вывод format без аргументов зависит от реализации,
+// результат вызова без аргументов зависит от реализации,
 // локали по умолчанию и часового пояса по умолчанию
 console.log(new Intl.DateTimeFormat().format(date));
-// → "12/19/2012", если код запущен с локалью en-US и часовым поясом America/Los_Angeles
+// "12/19/2012", если код запущен с локалью en-US и часовым поясом America/Los_Angeles
 ```
 
-### Пример: использование аргумента `locales`
+### Использование параметра `locales`
 
-Этот пример показывает некоторые локализованные форматы даты и времени. Для получения формата языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) через аргумент `locales`:
+Этот пример показывает некоторые локализованные форматы даты и времени. Для получения формата языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) используя параметр `locales`:
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Форматирование ниже предполагает, что местный часовой пояс равен
 // America/Los_Angeles для локали США
 
 // В американском английском используется порядок месяц-день-год
 console.log(new Intl.DateTimeFormat("en-US").format(date));
-// → "12/19/2012"
+// "12/19/2012"
 
 // В британском английском используется порядок день-месяц-год
 console.log(new Intl.DateTimeFormat("en-GB").format(date));
-// → "20/12/2012"
+// "20/12/2012"
 
 // В корейском используется порядок год-месяц-день
 console.log(new Intl.DateTimeFormat("ko-KR").format(date));
-// → "2012. 12. 20."
+// "2012. 12. 20."
 
-// В большинстве арабоговорящих стран используют настоящие арабские цифры
+// В большинстве арабоязычных стран используют настоящие арабские цифры
 console.log(new Intl.DateTimeFormat("ar-EG").format(date));
-// → "٢٠‏/١٢‏/٢٠١٢"
+// "٢٠‏/١٢‏/٢٠١٢"
 
 // В Японии приложения могут захотеть использовать японский календарь,
 // в котором 2012 год является 24-м годом эры Хейсей
 console.log(new Intl.DateTimeFormat("ja-JP-u-ca-japanese").format(date));
-// → "24/12/20"
+// "24/12/20"
 
 // Если запрашиваемый язык может не поддерживаться, например
 // балийский, откатываемся на запасной язык, в данном случае индонезийский
 console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
-// → "20/12/2012"
+// "20/12/2012"
 ```
 
-### Пример: использование аргумента `options`
+### Использование параметра `options`
 
-Формат даты и времени может быть настроен с помощью аргумента `options`:
+Формат даты и времени может быть настроен с помощью параметра `options`:
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0, 200));
 
 // Запрашиваем день недели вместе с длинным форматом даты
-var options = {
+let options = {
   weekday: "long",
   year: "numeric",
   month: "long",
   day: "numeric",
 };
 console.log(new Intl.DateTimeFormat("de-DE", options).format(date));
-// → "Donnerstag, 20. Dezember 2012"
+// "Donnerstag, 20. Dezember 2012"
 
 // Приложение может захотеть использовать UTC и показать это
 options.timeZone = "UTC";
 options.timeZoneName = "short";
 console.log(new Intl.DateTimeFormat("en-US", options).format(date));
-// → "Thursday, December 20, 2012, GMT"
+// "Thursday, December 20, 2012, GMT"
 
-// Иногда нам нужна большая точность
+// Иногда требуется большая точность
 options = {
   hour: "numeric",
   minute: "numeric",
   second: "numeric",
+  timeZone: "Australia/Sydney",
   timeZoneName: "short",
 };
 console.log(new Intl.DateTimeFormat("en-AU", options).format(date));
-// → "2:00:00 pm AEDT"
+// "2:00:00 pm AEDT"
+
+// Иногда требуется ещё большая точность
+options.fractionalSecondDigits = 3; // количество цифр для отображения долей секунд
+console.log(new Intl.DateTimeFormat("en-AU", options).format(date));
+// "2:00:00.200 pm AEDT"
 
 // Иногда даже в США нужен 24-часовой формат времени
 options = {
@@ -193,9 +166,36 @@ options = {
   minute: "numeric",
   second: "numeric",
   hour12: false,
+  timeZone: "America/Los_Angeles",
 };
-console.log(date.toLocaleString("en-US", options));
-// → "12/19/2012, 19:00:00"
+console.log(new Intl.DateTimeFormat("en-US", options).format(date));
+// "12/19/2012, 19:00:00"
+
+// Для указания настроек, но использования локали по умолчанию, нужно передать undefined
+console.log(new Intl.DateTimeFormat(undefined, options).format(date));
+// "12/19/2012, 19:00:00"
+
+// Иногда полезно включать время суток
+options = { hour: "numeric", dayPeriod: "short" };
+console.log(new Intl.DateTimeFormat("en-US", options).format(date));
+// 10 at night
+```
+
+Форматы календаря и нумерации также можно установить независимо с помощью параметра `options`:
+
+```js
+const options = { calendar: "chinese", numberingSystem: "arab" };
+const dateFormat = new Intl.DateTimeFormat(undefined, options);
+const usedOptions = dateFormat.resolvedOptions();
+
+console.log(usedOptions.calendar);
+// "chinese"
+
+console.log(usedOptions.numberingSystem);
+// "arab"
+
+console.log(usedOptions.timeZone);
+// "America/New_York" (the users default timezone)
 ```
 
 ## Спецификации
@@ -208,4 +208,9 @@ console.log(date.toLocaleString("en-US", options));
 
 ## Смотрите также
 
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'See_also')}}
+- [Полифил `Intl.DateTimeFormat` в FormatJS](https://formatjs.io/docs/polyfills/intl-datetimeformat/)
+- {{jsxref("Intl")}}
+
+```
+
+```

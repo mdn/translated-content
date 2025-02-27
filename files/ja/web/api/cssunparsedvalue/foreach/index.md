@@ -30,7 +30,7 @@ forEach(callbackFn, thisArg)
       - : `forEach()` が呼び出されている `CSSUnparsedValue`。
 
 - `thisArg` {{Optional_inline}}
-  - : `callback` の実行中に、 **`this`** として使用する値（つまり、`Object` の参照）。.
+  - : `callback` の実行中に、 **`this`** として使用する値（つまり、`Object` の参照）。
 
 ### 返値
 

@@ -1,15 +1,14 @@
 ---
-title: IDBKeyRange.upper
+title: "IDBKeyRange: upper プロパティ"
+short-title: upper
 slug: Web/API/IDBKeyRange/upper
 l10n:
-  sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
+  sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
-{{domxref("IDBKeyRange")}} インターフェイスの読み取り専用プロパティ **`upper`** は、キーの範囲の上限を返します。
-
-{{AvailableInWorkers}}
+**`upper`** は {{domxref("IDBKeyRange")}} インターフェイスの読み取り専用プロパティで、キーの範囲の上限を返します。
 
 ## 値
 
@@ -21,7 +20,8 @@ l10n:
 
 キーの範囲を宣言した後、その `upper` プロパティの値をコンソールに記録します。これは `"W"` になるはずです。
 
-> **メモ:** キーの範囲に関する実験ができるより完全な例は、[IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) リポジトリを参照してください。([動く例も見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/))
+> [!NOTE]
+> キーの範囲に関する実験ができるより完全な例は、[IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) リポジトリーを参照してください。([動く例も見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/))
 
 ```js
 function displayData() {
@@ -40,7 +40,7 @@ function displayData() {
 
       cursor.continue();
     } else {
-      console.log("全エントリーを表示しました。");
+      console.log("全項目を表示しました。");
     }
   };
 }

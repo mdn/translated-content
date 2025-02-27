@@ -3,7 +3,7 @@ title: border-radius
 slug: Web/CSS/border-radius
 ---
 
-{{CSSRef("CSS Borders")}}
+{{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-radius`** 允许你设置元素的外边框圆角。当使用一个半径时确定一个圆形，当使用两个半径时确定一个椭圆。这个（椭）圆与边框的交集形成圆角效果。
 
@@ -174,11 +174,11 @@ pre#example-7 {
 
 ### 在线示例
 
-- 示例 1：<http://jsfiddle.net/Tripad/qnGKj/2/>
-- 示例 2：<http://jsfiddle.net/Tripad/qnGKj/3/>
-- 示例 3：<http://jsfiddle.net/Tripad/qnGKj/4/>
-- 示例 4：<http://jsfiddle.net/Tripad/qnGKj/5/>
-- 示例 5：<http://jsfiddle.net/Tripad/qnGKj/6/>
+- 示例 1：<https://jsfiddle.net/Tripad/qnGKj/2/>
+- 示例 2：<https://jsfiddle.net/Tripad/qnGKj/3/>
+- 示例 3：<https://jsfiddle.net/Tripad/qnGKj/4/>
+- 示例 4：<https://jsfiddle.net/Tripad/qnGKj/5/>
+- 示例 5：<https://jsfiddle.net/Tripad/qnGKj/6/>
 
 ## 规范
 

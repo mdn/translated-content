@@ -3,18 +3,20 @@ title: Firefox 9 pour les développeurs
 slug: Mozilla/Firefox/Releases/9
 ---
 
+{{FirefoxSidebar}}
+
 1. Notes de versions pour développeurs
 
    1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
 
 2. Modules complémentaires
 
-   1. [WebExtensions](/fr/Add-ons/WebExtensions)
-   2. [Thèmes](/fr/Add-ons/Themes)
+   1. [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
+   2. [Thèmes](/fr/docs/Mozilla/Add-ons/Themes)
 
 3. Fonctionnement interne de Firefox
 
-   1. [Le projet Mozilla](/fr/docs/Mozilla/)
+   1. [Le projet Mozilla](/fr/docs/Mozilla)
    2. [Gecko](/fr/docs/Mozilla/Gecko)
    3. [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
    4. [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
@@ -30,7 +32,7 @@ slug: Mozilla/Firefox/Releases/9
 4. Développer et contribuer
 
    1. [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
-   2. [Configuration des options de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options)
+   2. [Configuration des options de compilation](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html)
    3. [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
    4. [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
    5. [Localisation](/fr/docs/Mozilla/Localization)
@@ -45,8 +47,8 @@ Firefox 9, basé sur Gecko 9.0, est sorti le 20 décembre 2011 sur Windows. La v
 ### HTML
 
 - L'attribut `value` de [`<li>`](/fr/docs/Web/HTML/Element/li) peut désormais être négatif comme c'est indiqué dans HTML5. Auparavant les valeurs négatives été converties à 0.
-- Vous pouvez désormais [specifier le début et la fin du temps d'un média](/fr/docs/Using_HTML5_audio_and_video#Specifying_playback_range) dans l'URI en utilisant les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio) et [`<video>`](/fr/docs/Web/HTML/Element/video).
-- Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) et [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) [respectent désormais la valeur de l'attribut `lang`](/fr/docs/HTML/Controlling_spell_checking_in_HTML_forms#Controlling_the_spellchecker_language) lors de l'appel du correcteur orthographique.
+- Vous pouvez désormais [specifier le début et la fin du temps d'un média](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#specifying_playback_range) dans l'URI en utilisant les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio) et [`<video>`](/fr/docs/Web/HTML/Element/video).
+- Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) et [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) [respectent désormais la valeur de l'attribut `lang`](/fr/docs/Web/HTML/Global_attributes/spellcheck#controlling_the_spellchecker_language) lors de l'appel du correcteur orthographique.
 - Firefox sur Android permet désormais la prise de photo avec le téléphone sans devoir quitter le navigateur lorsque l'élément [`<input>`](/fr/docs/Web/HTML/Element/input) est utilisé avec `type="file"` et `accept="image/*"`.
 - Les images ICO de style PNG de Windows Vista sont à présent supportée.
 - Les images dessinées qui utilisent l'attribut [`crossorigin`](/fr/docs/Web/HTML/Attributes/crossorigin) pour demander l'accès à CORS [n'altère plus le canvas](/fr/docs/Web/HTML/CORS_enabled_image#canevas_corrompu_et_sécurité) quand CORS est accordé.
@@ -56,30 +58,30 @@ Firefox 9, basé sur Gecko 9.0, est sorti le 20 décembre 2011 sur Windows. La v
 
 - La propriété [`font-stretch`](/fr/docs/Web/CSS/font-stretch) est à présent supportée.
 - La propriété [`columns`](/fr/docs/Web/CSS/columns) est à présent supportée, avec le préfixe `-moz`. C'est un raccourci des propriétés suivantes : [`column-width`](/fr/docs/Web/CSS/column-width) et [`column-count`](/fr/docs/Web/CSS/column-count).
-- Quand une feuille de style incluse à l'aide de l'élément [`<link>`](/fr/docs/Web/HTML/Element/link) a été entièrement chargée et analysée (mais pas encore appliquée au document), l'[`load` event](/fr/docs/HTML/Element/link#Stylesheet_load_events) est désormais déclenché. En outre, si une erreur survient durant le traitement d'une feuille de style, l'événement `error` est déclenché.
+- Quand une feuille de style incluse à l'aide de l'élément [`<link>`](/fr/docs/Web/HTML/Element/link) a été entièrement chargée et analysée (mais pas encore appliquée au document), l'[`load` event](/fr/docs/Web/HTML/Element/link#stylesheet_load_events) est désormais déclenché. En outre, si une erreur survient durant le traitement d'une feuille de style, l'événement `error` est déclenché.
 - Vous pouvez à présent spécifier les paramètres de débordement pour les bords, à la fois à gauche et à droite, du contenu en utilisant une nouvelle syntaxe de deux valeurs pour [`text-overflow`](/fr/docs/Web/CSS/text-overflow).
 
 ### DOM
 
-- [Utilisation du mode plein écran](/fr/docs/DOM/Using_full-screen_mode)
+- [Utilisation du mode plein écran](/fr/docs/Web/API/Fullscreen_API)
   - : La nouvelle API pour le plein écran offre un moyen de présenter le contenu en utilisant la totalité de l'écran, sans l'interface du navigateur. C'est très bien pour les vidéos et les jeux. Cette API est encore expérimentale et préfixée.
 
 <!---->
 
 - La méthode [`Node.contains()`](/fr/docs/Web/API/Node/contains) est désormais implémentée, elle vous permet de déterminer si un nœud donné est un descendant d'un autre noeud.
 - L'attribut [`Node.parentElement`](/fr/docs/Web/API/Node/parentElement) a été implémenté, cela renvoie l'[`Element`](/fr/docs/Web/API/Element) parent d'un noeud DOM, ou `null` si le parent n'est pas un élément.
-- [Les évènements de composition](/fr/docs/DOM/CompositionEvent) du DOM Level 3 sont à présent supportés.
+- [Les évènements de composition](/fr/docs/Web/API/CompositionEvent) du DOM Level 3 sont à présent supportés.
 - L'attribut [`Document.scripts`](/fr/docs/Web/API/Document/scripts) a été implémenté, il renvoie [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) de tous les éléments [`<script>`](/fr/docs/Web/HTML/Element/script) du document.
 - la méthode [`Document.queryCommandSupported()`](/fr/docs/Web/API/Document/queryCommandSupported) a été implémentée.
 - L'ensemble des événements qui peuvent être écoutés sur les éléments [`<body>`](/fr/docs/Web/HTML/Element/body) a été révisé pour correspondre à la dernière version de la spécification HTML5. La liste des événements dans la [référence d'événements DOM](/fr/docs/Web/Events) reflète ceux qui peuvent être écoutés sur les [`<body>`](/fr/docs/Web/HTML/Element/body).
 - L'évènement `readystatechange` est désormais uniquement tiré sur le document, comme prévu.
-- Les gestionnaires d'événements sont désormais implémentés comme des interfaces IDL standard. Dans la plupart des cas, cela n'affectera pas le contenu, mais [il y a des exceptions](/fr/docs/DOM/DOM_event_handlers#Event_handler_changes_in_Firefox_9).
-- Un nouveau type de réponse, "`moz-json`", a été ajouté à `XMLHttpRequest`, laissant `XMLHttpRequest` analyser automatiquement les chaînes [JSON](/fr/docs/JSON), quand vous demandez ce type, une chaîne JSON est analysé, afin que la valeur de la propriété `response` est la résultante de l'objet JavaScript.
-- [Les évènements "progress" de `XMLHttpRequest`](/fr/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress) sont à présent correctement envoyé pour chaque bloc de données reçu, dans le passé il était possible pour que le dernier bloc de données reçu ne déclenche pas un évènement "progress". Maintenant, vous pouvez suivre uniquement la progression des évènements "progress", au lieu d'avoir également à surveiller les évènements "load" pour détecter la réception du dernier bloc de données.
-- Dans le passé, l'appel de [`addEventListener()`](/fr/docs/DOM/element.addEventListener) avec un écouteur `null` renvoyait une exception. maintenant il ne retourne plus d'erreur et est sans effet.
+- Les gestionnaires d'événements sont désormais implémentés comme des interfaces IDL standard. Dans la plupart des cas, cela n'affectera pas le contenu, mais [il y a des exceptions](/fr/docs/Web/Events/Event_handlers#event_handler_changes_in_firefox_9).
+- Un nouveau type de réponse, "`moz-json`", a été ajouté à `XMLHttpRequest`, laissant `XMLHttpRequest` analyser automatiquement les chaînes [JSON](/fr/docs/Glossary/JSON), quand vous demandez ce type, une chaîne JSON est analysé, afin que la valeur de la propriété `response` est la résultante de l'objet JavaScript.
+- [Les évènements "progress" de `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress) sont à présent correctement envoyé pour chaque bloc de données reçu, dans le passé il était possible pour que le dernier bloc de données reçu ne déclenche pas un évènement "progress". Maintenant, vous pouvez suivre uniquement la progression des évènements "progress", au lieu d'avoir également à surveiller les évènements "load" pour détecter la réception du dernier bloc de données.
+- Dans le passé, l'appel de [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) avec un écouteur `null` renvoyait une exception. maintenant il ne retourne plus d'erreur et est sans effet.
 - La nouvelle propriété [`navigator.doNotTrack`](/fr/docs/Web/API/Navigator/doNotTrack 'Renvoi le paramètre utilisateur de do-not-track. Cette valeur est "1" si l´utilisateur a demandé de ne pas être suivi par les sites web, le contenu ou la publicité.') permet à votre contenu de déterminer facilement si l'utilisateur a activé la préférence do-no-track, si la valeur est "oui", vous ne devez pas suivre l'utilisateur.
 - Les objets [`Range`](/fr/docs/Web/API/Range) et [`Selection`](/fr/docs/Web/API/Selection) se comportent désormais selon leurs spécifications lorsque [`splitText()`](/fr/docs/Web/API/Text/splitText) et [`normalize()`](/fr/docs/Web/API/Node/normalize) sont appelés.
-- La valeur de [`Node.ownerDocument`](/fr/docs/Web/API/Node/ownerDocument) pour les noeuds de doctype est désormais le document sur lequel [`createDocumentType()`](/fr/docs/DOM/DOMImplementation.createDocumentType) a été appelé pour créer le noeud, au lieu de `null`.
+- La valeur de [`Node.ownerDocument`](/fr/docs/Web/API/Node/ownerDocument) pour les noeuds de doctype est désormais le document sur lequel [`createDocumentType()`](/fr/docs/Web/API/DOMImplementation/createDocumentType) a été appelé pour créer le noeud, au lieu de `null`.
 - `window.navigator.taintEnabled` a été retiré, il n'est plus supporté depuis plusieurs années.
 
 ### Workers
@@ -88,7 +90,7 @@ Firefox 9, basé sur Gecko 9.0, est sorti le 20 décembre 2011 sur Windows. La v
 
 ### WebGL
 
-- Dans le cadre de [WebGL](/fr/docs/WebGL) les attributs `drawingBufferWidth` et `drawingBufferHeight` sont à présent supportés.
+- Dans le cadre de [WebGL](/fr/docs/Web/API/WebGL_API) les attributs `drawingBufferWidth` et `drawingBufferHeight` sont à présent supportés.
 
 ### MathML
 
@@ -97,27 +99,27 @@ Firefox 9, basé sur Gecko 9.0, est sorti le 20 décembre 2011 sur Windows. La v
 
 ### Réseau
 
-- Vous pouvez désormais envoyer le contenu de [tableaux JavaScript typés](/fr/docs/JavaScript_typed_arrays) (c'est, le contenu d'un objet [`ArrayBuffer`](/fr/docs/JavaScript_typed_arrays/ArrayBuffer)) [en utilisant XMLHttpRequest](/fr/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Sending_typed_arrays_as_binary_data).
+- Vous pouvez désormais envoyer le contenu de [tableaux JavaScript typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays) (c'est, le contenu d'un objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)) [en utilisant XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#sending_typed_arrays_as_binary_data).
 - Les connexions WebSocket permettent désormais des non-caractères autres que UTF-8 des trames de données devant être reçues, au lieu d'échouer.
 - L'en-tête HTTP `Accept` pour les réquêtes XSLT a été changée pour "\*/\*" pour simplifier. Puisque l'extraction d'XSLT est toujours retombée à "\* / \*", il était logique de faire la simplification.
-- Les tentatives faites par un serveur pour utiliser les codes de réponses `301 Moved Permanently` ou `307 Temporary Redirect` pour rediriger l'utilisateur vers une URI `javascript:` donne désormais [lieu à l'erreur "connexion incorrecte"](/fr/docs/HTTP#More_on_redirection_responses) au lieu de vraiment rediriger. Cela évite certaines attaques de type cross-site scripting.
+- Les tentatives faites par un serveur pour utiliser les codes de réponses `301 Moved Permanently` ou `307 Temporary Redirect` pour rediriger l'utilisateur vers une URI `javascript:` donne désormais [lieu à l'erreur "connexion incorrecte"](/fr/docs/Web/HTTP#more_on_redirection_responses) au lieu de vraiment rediriger. Cela évite certaines attaques de type cross-site scripting.
 - Le contenu servi par [`Content-Disposition`](/fr/docs/Web/HTTP/Headers/Content-Disposition) vide avait déjà été traité comme si [`Content-Disposition`](/fr/docs/Web/HTTP/Headers/Content-Disposition) était attachment", ce qui ne fonctionnait pas toujours comme prévu. C'est désormais traité comme si [`Content-Disposition`](/fr/docs/Web/HTTP/Headers/Content-Disposition) était "inline".
 - La taille maximale par défaut d'un élément dans le cache disque a été augmentée à 50 Mo, auparavant, seuls les éléments jusqu'à 5 Mo étaient mis en cache.
 
 ### Outils de développement
 
-- La console Web supporte désormais [les chaînes de substitutions](/fr/docs/Tools/Web_Console#String_substitutions) basiques dans ses méthodes d'exploitation.
-- Vous pouvez désormais [créer des blocs imbriqués pour la sortie](/fr/docs/Tools/Web_Console#Using_groups_in_the_console) dans la console web, pour faciliter la lecture.
+- La console Web supporte désormais [les chaînes de substitutions](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#string_substitutions) basiques dans ses méthodes d'exploitation.
+- Vous pouvez désormais [créer des blocs imbriqués pour la sortie](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#using_groups_in_the_console) dans la console web, pour faciliter la lecture.
 
 ## Changements pour les développeurs de Mozilla et de modules complémentaires
 
-Voir [Updating add-ons for Firefox 9](/fr/docs/Firefox/Updating_add-ons_for_Firefox_9) pour un aperçu des modifications que vous devriez apporter pour rendre vos extensions compatibles avec Firefox 9.
+Voir [Updating add-ons for Firefox 9](/fr/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_9) pour un aperçu des modifications que vous devriez apporter pour rendre vos extensions compatibles avec Firefox 9.
 
 ### XUL
 
 - L'élément [`tab`](/fr/docs/Mozilla/Tech/XUL/tab) dispose à présent d'un attribut [`pending`](/fr/docs/Mozilla/Tech/XUL/Attributs/pending), dont la valeur est `true`, lorsque l'onglet est en train d'être rétabli par le service de sauvegarde de session. Il peut être utilisé pour le style de l'onglet dans les thèmes. L'attribut n'est pas présent sur les onglets qui ne sont pas en attente.
 - L'élément [`tab`](/fr/docs/Mozilla/Tech/XUL/tab) dispose à présent d'un attribut [`unread`](/fr/docs/Mozilla/Tech/XUL/Attributs/unread), dont la valeur est `true`, lorsque l'onglet a changé depuis la dernière fois qu'il était actif ou si il n'a pas été sélectionné depuis que la session en cours a commencé. L'attribut n'est pas présent sur les onglets qui ne sont pas lus.
-- Vous pouvez désormais utiliser [`panel`](/fr/docs/Mozilla/Tech/XUL/panel) comme une image glissée pour les opérations DOM de glisser-déposer. Cela vous permet d'utiliser l'API standard drag & drop pour [glisser et déposer du contenu XUL](/fr/docs/DragDrop/Drag_Operations#Using_XUL_panels_as_drag_images).
+- Vous pouvez désormais utiliser [`panel`](/fr/docs/Mozilla/Tech/XUL/panel) comme une image glissée pour les opérations DOM de glisser-déposer. Cela vous permet d'utiliser l'API standard drag & drop pour [glisser et déposer du contenu XUL](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#using_xul_panels_as_drag_images).
 - La méthode [`appendNotification`](/fr/docs/Mozilla/Tech/XUL/Méthodes/appendNotification) de l'élément [`notificationbox`](/fr/docs/Mozilla/Tech/XUL/notificationbox) vous permet désormais de spécifier un rappel qui est appelé pour des événements intéressants liés à la zone de notification. Actuellement, le seul événement est "removed", qui vous indique la zone qui a été retirée de sa fenêtre.
 
 ### Changements dans le module de code JavaScript
@@ -171,13 +173,13 @@ Le parseur IDL ne supporte plus la notion de pointeurs unique qui n'a jamais ét
 
 ## Voir aussi
 
-- [Firefox 8 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/8)
-- [Firefox 7 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/7)
-- [Firefox 6 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/6)
-- [Firefox 5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/5)
-- [Firefox 4 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/4)
-- [Firefox 3.6 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3.6)
-- [Firefox 3.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3.5)
-- [Firefox 3 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3)
-- [Firefox 2 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/2)
-- [Firefox 1.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/1.5)
+- [Firefox 8 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/8)
+- [Firefox 7 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/7)
+- [Firefox 6 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/6)
+- [Firefox 5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/5)
+- [Firefox 4 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/4)
+- [Firefox 3.6 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3.6)
+- [Firefox 3.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3.5)
+- [Firefox 3 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3)
+- [Firefox 2 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/2)
+- [Firefox 1.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/1.5)

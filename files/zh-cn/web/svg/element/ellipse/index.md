@@ -9,7 +9,7 @@ slug: Web/SVG/Element/ellipse
 
 椭圆不能指定精确的椭圆倾向（假设，举个例子，你想画一个 45 度角倾斜的椭圆），但是可以利用{{ SVGAttr("transform") }}属性实现旋转。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
@@ -35,10 +35,10 @@ svg {
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/docs/SVG/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/SVG/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -53,7 +53,7 @@ svg {
 
 ## DOM 接口
 
-该元素实现了 [`SVGEllipseElement`](/zh-CN/DOM/SVGEllipseElement) 接口。
+该元素实现了 [`SVGEllipseElement`](/zh-CN/docs/DOM/SVGEllipseElement) 接口。
 
 ## 浏览器兼容性
 

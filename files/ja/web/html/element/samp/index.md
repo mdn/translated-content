@@ -27,7 +27,8 @@ samp {
 }
 ```
 
-> **メモ:** ウェブサイトや JavaScript コードによって生成された出力を含めるコンテナーとして提供する要素が必要な場合は、代わりに {{HTMLElement("output")}} 要素を使用してください。
+> [!NOTE]
+> ウェブサイトや JavaScript コードによって生成された出力を含めるコンテナーとして提供する要素が必要な場合は、代わりに {{HTMLElement("output")}} 要素を使用してください。
 
 ## 例
 
@@ -116,7 +117,7 @@ samp > kbd {
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>

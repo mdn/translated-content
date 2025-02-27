@@ -36,7 +36,7 @@ var àDéfautDeMieux = "toto";
 
 ### Les mots-clés réservés ne peuvent pas être utilisés comme noms de variables
 
-Quelques mots-clés sont [réservés](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Mots-clés) et ne peuvent pas être utilisés comme noms de variable :
+Quelques mots-clés sont [réservés](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#mots-clés) et ne peuvent pas être utilisés comme noms de variable :
 
 ```js example-bad
 var debugger = "zuuuuut";
@@ -85,6 +85,6 @@ var arr = [1, 2, 3, 4, 5];
 
 ## Voir aussi
 
-- [Choisir de bons noms de variable (en anglais)](http://wiki.c2.com/?GoodVariableNames)
-- [`var`](/fr/docs/Web/JavaScript/Reference/Instructions/var)
-- [Guide JavaScript : Les déclarations de variable](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Déclarations)
+- [Choisir de bons noms de variable (en anglais)](https://wiki.c2.com/?GoodVariableNames)
+- [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var)
+- [Guide JavaScript : Les déclarations de variable](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#déclarations)

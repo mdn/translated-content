@@ -44,7 +44,7 @@ _以下の例で align-items に触れているのと同様に、使用した重
 
 ### align-items
 
-{{Compat("css.properties.align-items")}}
+{{Compat}}
 
 ## 関連情報
 

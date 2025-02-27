@@ -67,10 +67,10 @@ background-position-y: unset;
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{cssxref("background-position")}}
 - {{cssxref("background-position-x")}}
 - {{cssxref("background-position-inline")}}
 - {{cssxref("background-position-block")}}
-- [Multiple backgrounds](/zh-CN/docs/CSS/Multiple_backgrounds)
+- [Multiple backgrounds](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

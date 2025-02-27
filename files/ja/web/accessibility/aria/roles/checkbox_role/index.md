@@ -133,7 +133,8 @@ function changeCheckbox(event) {
 
 - スクリーンリーダーは、要素をチェックボックスとしてアナウンスし、任意でアクティブ化する方法を説明する必要があります。
 
-> **メモ:** 支援技術がこの手法をどのように扱うべきかについては、意見が異なる場合があります。 上記の情報はそれらの意見の 1 つであり、したがって規範的ではありません。
+> [!NOTE]
+> 支援技術がこの手法をどのように扱うべきかについては、意見が異なる場合があります。 上記の情報はそれらの意見の 1 つであり、したがって規範的ではありません。
 
 ## ベストプラクティス
 
@@ -142,11 +143,11 @@ ARIA の第一のルールは、ネイティブな HTML の要素や属性に必
 ## 関連情報
 
 - [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox)
-- [ARIA: radio ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Radio_Role)
+- [ARIA: radio ロール](/ja/docs/Web/Accessibility/ARIA/Roles/radio_role)
 - [ARIA: menuitem ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Menuitem_Role)
 - [ARIA: menuitemcheckbox ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Menuitemcheckbox_Role)
 - [ARIA: menuitemradio ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Menuitemradio_Role)
-- [ARIA: switch ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Switch_role)
-- [ARIA: option ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Option_role)
+- [ARIA: switch ロール](/ja/docs/Web/Accessibility/ARIA/Roles/switch_role)
+- [ARIA: option ロール](/ja/docs/Web/Accessibility/ARIA/Roles/option_role)
 
 1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

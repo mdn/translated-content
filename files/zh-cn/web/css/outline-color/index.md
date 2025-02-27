@@ -87,4 +87,4 @@ Color contrast ratio is determined by comparing the luminosity of the text and b
 
 - {{cssxref("&lt;color&gt;")}} 数据类型
 - 其他与颜色有关的属性：{{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, 和{{cssxref("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/zh-CN/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)

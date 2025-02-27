@@ -1,11 +1,11 @@
 ---
-title: ":default"
+title: :default
 slug: Web/CSS/:default
 ---
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) **`:default`** находит элемент формы, установленный по умолчанию для группы связанных элементов.
+[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:default`** находит элемент формы, установленный по умолчанию для группы связанных элементов.
 
 Этот селектор используется для элементов: {{htmlelement("button")}}, [`<input type="checkbox">`](/ru/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/ru/docs/Web/HTML/Element/input/radio), и {{htmlelement("option")}} .
 
@@ -58,7 +58,7 @@ input:default + label {
 
 {{EmbedLiveSample("Пример")}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

@@ -1,30 +1,65 @@
 ---
 title: 201 Created
 slug: Web/HTTP/Status/201
+l10n:
+  sourceCommit: 3f68a9604259dfa862dd741dc88ebc8fb5fa10fe
 ---
 
 {{HTTPSidebar}}
 
-HTTP の **`201 Created`** 成功ステータスレスポンスコードは、リクエストが成功してリソースの作成が完了したことを表します。レスポンスが返される前に、新たなリソースが作成され、レスポンスメッセージの本文にて新しいリソースが返されます。その位置はリクエスト URL、または {{HTTPHeader("Location")}} ヘッダーの内容となります。
-
+HTTP の **`201 Created`** は[成功レスポンス](/ja/docs/Web/HTTP/Status#成功レスポンス)ステータスコードで、 HTTP リクエストが成功してリソースの作成が完了したことを表します。
 このステータスコードの一般的な使用例は、 {{HTTPMethod("POST")}} リクエストの結果です。
 
-## 状態
+新しいリソース、または新しいリソースの説明とリンクは、レスポンスが返される前に作成されます。
+新しく作成されたアイテムは、メッセージ本体に返され、位置は**最初のリクエストの URL**、またはレスポンスの {{HTTPHeader("Location")}} ヘッダーの値の URL のどちらかになります。
 
-```
+## ステータス
+
+```http
 201 Created
+```
+
+## 例
+
+### ユーザーを作成したことを示すレスポンスの受信
+
+ユーザー管理用の REST API があり、エンドポイントが `http://example.com/users` であるとしましょう。この例では、ユーザーを作成するために、次の本体を持つ `POST` リクエストを送信します。
+
+```http
+POST /users HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{
+  "firstName": "Brian",
+  "lastName": "Smith",
+  "email": "brian.smith@example.com"
+}
+```
+
+ユーザー作成に成功すると、 `201 Created` というレスポンスは以下のように表示されます。
+
+```http
+HTTP/1.1 201 Created
+Content-Type: application/json
+Location: http://example.com/users/123
+
+{
+  "message": "ユーザーを作成しました",
+  "user": {
+    "id": 123,
+    "firstName": "Brian",
+    "lastName": "Smith",
+    "email": "brian.smith@example.com"
+  }
+}
 ```
 
 ## 仕様書
 
-| 仕様書                                   | 題名                                                          |
-| ---------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "201 Created" , "6.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
-
-## ブラウザーの互換性
-
-{{Compat("http.status.201")}}
+{{Specifications}}
 
 ## 関連情報
 
 - [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)

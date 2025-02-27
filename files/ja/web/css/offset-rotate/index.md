@@ -9,7 +9,8 @@ slug: Web/CSS/offset-rotate
 
 {{EmbedInteractiveExample("pages/css/offset-rotate.html")}}
 
-> **メモ:** 初期のころの仕様書では、このプロパティを `motion-rotation` と呼んでいました。
+> [!NOTE]
+> 初期のころの仕様書では、このプロパティを `motion-rotation` と呼んでいました。
 
 ## 構文
 

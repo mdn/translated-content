@@ -50,7 +50,7 @@ Neste ponto, vamos consultar o console do desenvolvedor para ver se identificamo
 
 ## Consertando erros de sintaxe
 
-Anteriormente no curso, nós fizemos você digitar alguns comandos simples de JavaScript no [console JavaScript](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) (se você não se lembra como, abra o link anterior). O que é ainda mais útil é o fato do console lhe mostrar mensagens de erro sempre que existir algo errado na sintaxe dentro do JavaScript enviado ao motor de JavaScript do navegador. Agora vamos à caça.
+Anteriormente no curso, nós fizemos você digitar alguns comandos simples de JavaScript no [console JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) (se você não se lembra como, abra o link anterior). O que é ainda mais útil é o fato do console lhe mostrar mensagens de erro sempre que existir algo errado na sintaxe dentro do JavaScript enviado ao motor de JavaScript do navegador. Agora vamos à caça.
 
 1. Vá até a aba onde você tem aberto o arquivo `jogo-numero-erros.html` e abra o console JavaScript. Você deverá ver uma mensagem de erro sendo exibida:
    ![](nao-e-uma-funcao.png)
@@ -68,10 +68,11 @@ Anteriormente no curso, nós fizemos você digitar alguns comandos simples de Ja
    envioPalpite.addeventListener('click', conferir Palpite);
    ```
 
-4. O erro diz o seguinte "envioPalpite.addeventListener is not a function", que significa envioPalpite.addeventListener não é uma funçao. Então provavelmente digitamos algo errado. Se você não estiver certo da digitação correta de parte da sintaxe, é uma boa ideia procurar a funcionalidade no MDN docs. A melhor forma de fazer isso atualmente é pesquisar por "mdn _nome-da-funcionalidade_" em seu mecanismo de buscas favorito. Aqui está um atalho para te salvar algum tempo nesse caso: [`addEventListener()`](/pt-BR/docs/Web/API/Element/addEventListener).
+4. O erro diz o seguinte "envioPalpite.addeventListener is not a function", que significa envioPalpite.addeventListener não é uma funçao. Então provavelmente digitamos algo errado. Se você não estiver certo da digitação correta de parte da sintaxe, é uma boa ideia procurar a funcionalidade no MDN docs. A melhor forma de fazer isso atualmente é pesquisar por "mdn _nome-da-funcionalidade_" em seu mecanismo de buscas favorito. Aqui está um atalho para te salvar algum tempo nesse caso: [`addEventListener()`](/pt-BR/docs/Web/API/EventTarget/addEventListener).
 5. Então, olhando nessa essa página, o erro parece ser termos digitado o nome da função errado! Lembre-se de que o JavaScript diferencia letras maiúsculas de minúsculas, então qualquer diferença na digitação ou no uso de letras maiúsculas irá causar um erro. Alterar `addeventListener` para `addEventListener` deverá corrigir esse erro. Faça essa alteração no código do seu arquivo.
 
-> **Nota:** Veja nossa página de referência [TypeError: "x" is not a function](/pt-BR/docs/Web/JavaScript/Reference/Errors/Not_a_function) para mais detalhes sobre esse erro.
+> [!NOTE]
+> Veja nossa página de referência [TypeError: "x" is not a function](/pt-BR/docs/Web/JavaScript/Reference/Errors/Not_a_function) para mais detalhes sobre esse erro.
 
 ### Erros de sintaxe - segundo round
 
@@ -82,7 +83,8 @@ Anteriormente no curso, nós fizemos você digitar alguns comandos simples de Ja
 
    > **Nota:** [`Null`](/pt-BR/docs/Glossary/Null) é um valor especial que significa "nada", ou "sem valor". Então `baixoOuAlto` foi declarado e inicializado, mas não com algum valor significativo — não possui nenhum caractere ou valor.
 
-   > **Nota:** Esse erro não apareceu assim que a página foi carregada porque esse erro ocorreu dentro de uma função (dentro do bloco `conferirPalpite() { ... }` ). Como você irá aprender com mais detalhes no nosso artigo de funções mais tarde, o código localizado dentro de funções roda em um escopo separado do código presente fora das funções. Nesse caso, o código não estava rodando e o erro não estava aparecendo até a função `conferirPalpite()` ser executada na linha 86.
+   > [!NOTE]
+   > Esse erro não apareceu assim que a página foi carregada porque esse erro ocorreu dentro de uma função (dentro do bloco `conferirPalpite() { ... }` ). Como você irá aprender com mais detalhes no nosso artigo de funções mais tarde, o código localizado dentro de funções roda em um escopo separado do código presente fora das funções. Nesse caso, o código não estava rodando e o erro não estava aparecendo até a função `conferirPalpite()` ser executada na linha 86.
 
 4. Dê uma olhada na linha 78, e você verá o seguinte código:
 
@@ -102,7 +104,7 @@ Anteriormente no curso, nós fizemos você digitar alguns comandos simples de Ja
    console.log(baixoOuAlto);
    ```
 
-   > **Nota:** [`console.log()`](/pt-BR/docs/Web/API/Console/log) é uma função de debugging (correção de erros) realmente útil que exibe um valor na tela do console. Então ela irá imprimir o valor da variável `baixoOuAlto` na tela do console assim que tentarmos defini-la na linha 48.
+   > **Nota:** [`console.log()`](/pt-BR/docs/Web/API/console/log_static) é uma função de debugging (correção de erros) realmente útil que exibe um valor na tela do console. Então ela irá imprimir o valor da variável `baixoOuAlto` na tela do console assim que tentarmos defini-la na linha 48.
 
 7. Salve o arquivo e o atualize no navegador, e você deverá ver agora o resultado do `console.log()` na tela do seu console.
    ![](console-log-saida.png)
@@ -116,7 +118,8 @@ Anteriormente no curso, nós fizemos você digitar alguns comandos simples de Ja
 9. Então nós precisamos de um seletor de classe aqui, que começa com um ponto (.), mas o seletor passado pelo método `querySelector()` na linha 48 não tem o ponto. Esse pode ser o problema! Tente mudar `baixoOuAlto` para `.baixoOuAlto` na linha 48.
 10. Tente salvar o arquivo e atualizá-lo no navegador de novo, e a sua declaração `console.log()` deverá retornar o elemento `<p>` que queremos. Ufa! Outro erro resolvido! Você pode deletar a linha do seu `console.log()` agora, ou mantê-la para referência posterior — a escolha é sua.
 
-> **Nota:** Veja nossa página de referência [TypeError: "x" is (not) "y"](/pt-BR/docs/Web/JavaScript/Reference/Errors/Unexpected_type) para mais detalhes sobre esse erro.
+> [!NOTE]
+> Veja nossa página de referência [TypeError: "x" is (not) "y"](/pt-BR/docs/Web/JavaScript/Reference/Errors/Unexpected_type) para mais detalhes sobre esse erro.
 
 ### Erros de sintaxe - terceiro round
 
@@ -128,7 +131,7 @@ Anteriormente no curso, nós fizemos você digitar alguns comandos simples de Ja
 
 Nesse ponto, o jogo deve rodar normalmente, porém depois de jogá-lo algumas vezes você irá notar que o número "aleatório" que você tem que adivinhar é sempre igual a 1. Definitivamente não é como queremos que o jogo funcione!
 
-Há sem dúvida um problema na lógica do jogo em algum lugar — o jogo não está retornando nenhum erro;simplesmente não está funcionando corretamente.
+Há sem dúvida um problema na lógica do jogo em algum lugar — o jogo não está retornando nenhum erro; simplesmente não está funcionando corretamente.
 
 1. Procure pela variável `numeroAleatorio`, e as linhas onde o número aleatório é definido primeiro. A instância que armazena o número aleatório que queremos adivinhar no começo do jogo deve estar na linha 44 ou próximo a ela:
 
@@ -198,7 +201,8 @@ var palpiteUsuario === Number(campoPalpite.value);
 
 Exibe esse erro porque pensa que você está fazendo algo diferente. Você deve se certificar de não misturar o operador de atribuição (`=`) — que configura uma variável para ser igual a determinado valor — com o operador de igualdade restrita (`===`), que testa se um valor é exatamente igual a outro, e retorna um resultado `true`/`false` (verdadeiro ou falso).
 
-> **Nota:** Veja nossa página de referência [SyntaxError: missing ; before statement](/pt-BR/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) para mais detalhes sobre esse erro.
+> [!NOTE]
+> Veja nossa página de referência [SyntaxError: missing ; before statement](/pt-BR/docs/Web/JavaScript/Reference/Errors/Unexpected_token) para mais detalhes sobre esse erro.
 
 ### O programa sempre diz que você ganhou, independentemente do palpite que insira
 
@@ -220,7 +224,8 @@ o teste retornaria sempre `true` (verdadeiro), causando o programa a reportar qu
 
 Erro de sintaxe: faltando ")" depois de listar uma declaração. Esse é bem simples — geralmente significa que deixamos de fechar o parênteses no final ao invocar uma função/método.
 
-> **Nota:** Veja nossa página de referência [SyntaxError: missing ) after argument list](/pt-BR/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) para mais detalhes sobre o erro.
+> [!NOTE]
+> Veja nossa página de referência [SyntaxError: missing ) after argument list](/pt-BR/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) para mais detalhes sobre o erro.
 
 ### _SyntaxError: missing : after property id_
 
@@ -248,7 +253,8 @@ Erro de sintaxe: esperado uma expressão, obtido uma 'string' e Erro de sintaxe:
 
 Para todos esses erros, pense em como nós abordamos os exemplos em que olhamos no passo a passo. Quando um erro surge, olha o número da linha que é informado, vá até essa linha e veja se consegue localizar o que há de errado. Mantenha em mente que o erro não estará necessariamente nessa linha, e também que o erro pode não ter sido causado exatamente pelo mesmo problema que citamos acima!
 
-> **Nota:** Veja nossas páginas de referência [SyntaxError: Unexpected token](/pt-BR/docs/Web/JavaScript/Reference/Errors/Unexpected_token) e [SyntaxError: unterminated string literal](/pt-BR/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal) para mais detalhes sobre esses erros.
+> [!NOTE]
+> Veja nossas páginas de referência [SyntaxError: Unexpected token](/pt-BR/docs/Web/JavaScript/Reference/Errors/Unexpected_token) e [SyntaxError: unterminated string literal](/pt-BR/docs/Web/JavaScript/Reference/Errors/String_literal_EOL) para mais detalhes sobre esses erros.
 
 ## Sumário
 

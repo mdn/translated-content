@@ -26,27 +26,28 @@ slug: Web/API/Page_Visibility_API
 
 开发人员在过去使用不完善的代理来检测这一点。例如，通过观察 window 上的 {{domxref("Window/blur_event", "blur")}} 和 {{domxref("Window/focus_event", "focus")}} 事件，可以帮助你了解页面何时不是活动页面，但这并不能告诉你，页面实际上已被用户隐藏。页面可见性 API 可解决这一问题。
 
-> **备注：** 虽然 {{domxref("Window.blur_event", "onblur")}} 和 {{domxref("Window.focus_event", "onfocus")}} 会告诉你用户是否切换了窗口，但这并不一定意味着它被隐藏了。只有当用户切换标签页或最小化包含标签页的浏览器窗口时，页面才会被隐藏。
+> [!NOTE]
+> 虽然 {{domxref("Window.blur_event", "onblur")}} 和 {{domxref("Window.focus_event", "onfocus")}} 会告诉你用户是否切换了窗口，但这并不一定意味着它被隐藏了。只有当用户切换标签页或最小化包含标签页的浏览器窗口时，页面才会被隐藏。
 
 ### 制定有助于后台页面性能的策略
 
 在页面可见性 API 之外，用户代理会采取许多策略来减轻后台或隐藏选项卡对性能的影响。这些可能包括：
 
 - 大多数浏览器会停止向后台标签页或隐藏的 {{ HTMLElement("iframe") }} 发送 {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} 回调，以提高性能和电池寿命。
-- 在后台或不活动标签页中，{{domxref("setTimeout()")}} 等计时器会被节流，以帮助提高性能。详情请参阅[延迟时间超过指定时间的原因](/zh-CN/docs/Web/API/setTimeout#实际延时比设定值更久的原因：最小延迟时间)。
-- 浏览器实施基于预算的后台超时节流。现代浏览器的操作方式大同小异，具体细节如下：
+- 在后台或不活动标签页中，{{domxref("Window.setTimeout", "setTimeout()")}} 等计时器会被限流，以帮助提高性能。详情请参阅[延迟时间超过指定时间的原因](/zh-CN/docs/Web/API/Window/setTimeout#延时比指定值更长的原因)。
+- 浏览器实施基于预算的后台超时限流。现代浏览器的操作方式大同小异，具体细节如下：
 
   - 在 Firefox 中，后台标签页中的每个窗口都有自己的时间预算（以毫秒为单位），最大值和最小值分别为 +50 毫秒和 -150 毫秒。Chrome 浏览器与之非常相似，只是预算以秒为单位。
-  - 窗口在 30 秒后会受到节流，节流延迟规则与为窗口定时器指定的规则相同（请再次参阅[延迟时间超过指定时间的原因](/zh-CN/docs/Web/API/setTimeout#实际延时比设定值更久的原因：最小延迟时间)）。在 Chrome 浏览器中，该值为 10 秒。
+  - 窗口在 30 秒后会受到限流，限流延迟规则与为窗口定时器指定的规则相同（请再次参阅[延迟时间超过指定时间的原因](/zh-CN/docs/Web/API/Window/setTimeout#延时比指定值更长的原因)）。在 Chrome 浏览器中，该值为 10 秒。
   - 只有当预算为非负数时，才允许执行定时器任务。
   - 定时器代码一旦运行完毕，其执行时间就会从窗口的超时预算中扣除。
   - 在 Firefox 和 Chrome 浏览器中，预算以每秒 10 毫秒的速度重新生成。
 
-某些进程不受这种节流行为的影响。在这种情况下，可以使用页面可见性 API 来减少标签页隐藏时对性能的影响。
+某些进程不受这种限流行为的影响。在这种情况下，可以使用页面可见性 API 来减少标签页隐藏时对性能的影响。
 
-- 正在播放音频的标签页被视为前台进程，不会被节流。
-- 运行使用实时网络连接（[WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 和 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)）的代码的标签页不会被节流，以避免关闭这些连接时超时和意外关闭。
-- 为了避免超时，[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 进程也没有节流。
+- 正在播放音频的标签页被视为前台进程，不会被限流。
+- 运行使用实时网络连接（[WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 和 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)）的代码的标签页不会被限流，以避免关闭这些连接时超时和意外关闭。
+- 为了避免超时，[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 进程也没有限流。
 
 ## 对其他接口的扩展
 

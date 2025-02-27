@@ -3,6 +3,8 @@ title: Qu'est-ce que l'accessibilité ?
 slug: Learn/Common_questions/Design_and_accessibility/What_is_accessibility
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Cet article aborde les concepts de base qui forment l'accessibilité pour le Web.
 
 <table class="standard-table">
@@ -24,7 +26,7 @@ Que ce soit en raison de limitations physiques ou techniques, il peut arriver qu
 
 ## Pédagogie active
 
-_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/Débuter_sur_MDN)._
+_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Aller plus loin
 
@@ -69,11 +71,11 @@ Depuis 1999, le {{Glossary("W3C")}} possède un groupe de travail appelé {{Glos
 Vous pouvez vous référer à :
 
 - [L'article Wikipédia](https://fr.wikipedia.org/wiki/Accessibilité) sur l'accessibilité
-- [Le site WAI (le projet W3C's Web Accessibility Initiative) (en anglais)](http://www.w3.org/WAI/)
+- [Le site WAI (le projet W3C's Web Accessibility Initiative) (en anglais)](https://www.w3.org/WAI/)
 
 ## Prochaines étapes
 
 L'accessibilité peut avoir un impact tant sur le design d'un site que sur sa structure technique.
 
-- Pour le design, nous vous conseillons de lire [Concevoir un site pour tous les types d'utilisateurs](/fr/Apprendre/Concevoir_site_tous_types_utilisateurs).
-- Pour l'aspect technique, vous pourriez commencer par voir comment [intégrer des images dans des pages web](/fr/Apprendre/HTML/Howto/Add_images_to_a_webpage).
+- Pour le design, nous vous conseillons de lire [Concevoir un site pour tous les types d'utilisateurs](/fr/docs/Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users).
+- Pour l'aspect technique, vous pourriez commencer par voir comment [intégrer des images dans des pages web](/fr/docs/Apprendre/HTML/Howto/Add_images_to_a_webpage).

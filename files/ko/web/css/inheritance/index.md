@@ -5,7 +5,7 @@ slug: Web/CSS/Inheritance
 
 {{cssref}}
 
-MDN 내 각 [CSS 속성(property) 정의](/ko/docs/Web/CSS/CSS_Reference) 페이지의 요약절은 그 속성이 기본(default)으로 상속되는지("Inherited: Yes") 혹은 상속되지 않는지("Inherited: no") 쓰여 있습니다. 이 상속 여부는 요소의 속성에 어떤 값이 지정되지 않을 때 일어나는 일을 제어합니다.
+MDN 내 각 [CSS 속성(property) 정의](/ko/docs/Web/CSS/Reference) 페이지의 요약절은 그 속성이 기본(default)으로 상속되는지("Inherited: Yes") 혹은 상속되지 않는지("Inherited: no") 쓰여 있습니다. 이 상속 여부는 요소의 속성에 어떤 값이 지정되지 않을 때 일어나는 일을 제어합니다.
 
 ## 상속되는 속성
 
@@ -53,7 +53,7 @@ p {
 
 ## 같이 보기
 
-- [CSS 참고서](/ko/docs/Web/CSS/CSS_Reference)
+- [CSS 참고서](/ko/docs/Web/CSS/Reference)
 - CSS 주요 개념
 
   - [CSS 문법](/ko/docs/Web/CSS/Syntax)
@@ -61,10 +61,10 @@ p {
   - [주석](/ko/docs/Web/CSS/Comments)
   - [명시도](/ko/docs/Web/CSS/Specificity)
   - [상속](/ko/docs/Web/CSS/inheritance)
-  - [박스 모델](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [박스 모델](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [레이아웃 모드](/ko/docs/Web/CSS/Layout_mode)
   - [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
-  - [마진 중첩](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [마진 중첩](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 값
 
     - [초깃값](/ko/docs/Web/CSS/initial_value)

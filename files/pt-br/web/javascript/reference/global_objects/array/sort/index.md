@@ -12,13 +12,13 @@ A complexidade do tempo de execução ou a quantidade de memória utilizada pela
 ## Sintaxe
 
 ```
-arr.sort([funcaoDeComparacao])
+arr.sort(funcaoDeComparacao)
 ```
 
 ### Parâmetros
 
 - `funcaoDeComparacao` {{optional_inline}}
-  - : Especifica uma função que define a ordenação. Se omitido, o array é ordenado de acordo com a pontuação de código [Unicode](/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode) de cada um dos caracteres, de acordo com a conversão de cada elemento para string.
+  - : Especifica uma função que define a ordenação. Se omitido, o array é ordenado de acordo com a pontuação de código [Unicode](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#unicode) de cada um dos caracteres, de acordo com a conversão de cada elemento para string.
 - `primeiroElemento`
   - : O primeiro elemento para a comparação.
 - `segundoElemento`
@@ -26,7 +26,7 @@ arr.sort([funcaoDeComparacao])
 
 ### Valor de Retorno
 
-O array ordenado. Note que o array é ordenado de acordo com a pontuação de código [Unicode](/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode) de cada um dos caracteres, e nenhuma cópia é feita.
+O array ordenado. Note que o array é ordenado de acordo com a pontuação de código [Unicode](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#unicode) de cada um dos caracteres, e nenhuma cópia é feita.
 
 ## Descrição
 
@@ -47,7 +47,7 @@ things.sort(); // ['1 Word', '2 Words', 'Word', 'word']
 // as quais vêem antes das minúsculas.
 ```
 
-Se o parametro `funcaoDeComparacao` é fornecido, o array será ordenado de acordo com o valor de retorno da `funcaoDeComparacao`. Considerando que `a` e `b` são dois elementos sendo comparados, então:
+Se o parâmetro `funcaoDeComparacao` for fornecido, o array será ordenado de acordo com o valor de retorno da `funcaoDeComparacao`. Considerando que `a` e `b` são dois elementos sendo comparados, então:
 
 - Se `funcaoDeComparacao(a, b)` for menor que 0, ordena `a` para um índice anterior a `b`, i.e. a vem primeiro.
 - Se `funcaoDeComparacao(a, b)` retornar 0, deixa `a` e `b` inalterados em relação um ao outro, mas ordenado em relação a todos os outros elementos. Nota: O padrão ECMAscript não garante este comportamento, e, portanto, nem todos os navegadores (e.g. Versões do Mozilla anteriores a 2003) respeitarão isto.
@@ -77,7 +77,7 @@ function compararNumeros(a, b) {
 }
 ```
 
-O método de ordenação pode convenientemente ser usada com {{jsxref("Operators/function", "funções anônimas", "", 1)}} (e [closures](/pt-BR/docs/Web/JavaScript/Guide/Closures)):
+O método de ordenação pode convenientemente ser usada com {{jsxref("Operators/function", "funções anônimas", "", 1)}} (e [closures](/pt-BR/docs/Web/JavaScript/Closures)):
 
 ```js
 var numbers = [4, 2, 5, 1, 3];
@@ -210,7 +210,7 @@ var result = mapped.map(function (el) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.sort")}}
+{{Compat}}
 
 ## Veja também
 

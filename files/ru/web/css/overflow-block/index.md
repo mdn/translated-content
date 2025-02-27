@@ -7,7 +7,8 @@ slug: Web/CSS/overflow-block
 
 [CSS](/ru/docs/Web/CSS) свойство **`overflow-block`** устанавливает, что будет отображаться, когда содержимое переполняет начальные и конечные края блока. Это может быть ничего, полоса прокрутки или содержимое переполнения.
 
-> **Примечание:** Свойство `overflow-block` отображается на {{Cssxref("overflow-y")}} или {{Cssxref("overflow-x")}} в зависимости от режима записи документа.
+> [!NOTE]
+> Свойство `overflow-block` отображается на {{Cssxref("overflow-y")}} или {{Cssxref("overflow-x")}} в зависимости от режима записи документа.
 
 ## Синтаксис
 
@@ -37,7 +38,11 @@ overflow-block: unset;
 - `auto`
   - : Зависит от пользовательского агента. Если содержимое помещается в поле дополнения, оно выглядит так же, как visible, но всё же устанавливает новый контекст форматирования блока. Настольные браузеры устанавливают полосы прокрутки, если содержимое переполняется.
 
-### Формат синтаксиса
+## Формальное определение
+
+{{cssinfo}}
+
+## Формальный синтаксис
 
 {{csssyntax}}
 
@@ -131,14 +136,14 @@ overflow-block: unset;
 
 ## Спецификации
 
-{{Specifications}}{{cssinfo}}
+{{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - Связанные свойства CSS: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
-- [Логические свойства CSS](/ru/docs/Web/CSS/CSS_Logical_Properties)
-- [Режимы письма](/ru/docs/Web/CSS/CSS_Writing_Modes)
+- [Логические свойства CSS](/ru/docs/Web/CSS/CSS_logical_properties_and_values)
+- [Режимы письма](/ru/docs/Web/CSS/CSS_writing_modes)

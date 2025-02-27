@@ -51,5 +51,5 @@ isFinite("0"); // verdadero, hubiera sido falso en el caso de usar Number.isFini
 
 - **`Number.isFinite()`**
 - **`Number.NaN()`**
-- [**`Number.POSITIVE_INFINITY`**](/es/docs/Referencia_de_JavaScript_1.5/Objetos_globales/Number/POSITIVE_INFINITY)
-- [**`Number.NEGATIVE_INFINITY`**](/es/docs/Referencia_de_JavaScript_1.5/Objetos_globales/Number/NEGATIVE_INFINITY)
+- [**`Number.POSITIVE_INFINITY`**](/es/docs/Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY)
+- [**`Number.NEGATIVE_INFINITY`**](/es/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY)

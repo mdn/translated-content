@@ -1,15 +1,18 @@
 ---
 title: border-top-style
 slug: Web/CSS/border-top-style
+l10n:
+  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
 {{CSSRef}}
 
-**`border-top-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界 ({{CSSxRef("border")}}) における線の形状を設定します。
+**`border-top-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界 ({{CSSxRef("border")}}) における線のスタイルを設定します。
 
 {{EmbedInteractiveExample("pages/css/border-top-style.html")}}
 
-> **メモ:** 仕様書では、異なる形状の境界線を角でどのように接続するかを定義していません。
+> [!NOTE]
+> 仕様書では、異なるスタイルの境界線を角でどのように接続するかを定義していません。
 
 ## 構文
 
@@ -30,10 +33,11 @@ border-top-style: outset;
 border-top-style: inherit;
 border-top-style: initial;
 border-top-style: revert;
+border-top-style: revert-layer;
 border-top-style: unset;
 ```
 
-`border-top-style` プロパティは、 {{CSSxRef("border-style")}} プロパティで利用できるキーワードのうちの一つで指定します。
+`border-top-style` プロパティは、単一の {{cssxref("line-style")}} キーワード値で指定します。
 
 ## 公式定義
 
@@ -43,13 +47,13 @@ border-top-style: unset;
 
 {{CSSSyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### border-top-style の設定
 
 #### HTML
 
-```html
+```html live-sample___examples
 <table>
   <tr>
     <td class="b1">none</td>
@@ -72,7 +76,7 @@ border-top-style: unset;
 
 #### CSS
 
-```css
+```css live-sample___examples
 /* 表の外見を定義 */
 table {
   border-width: 2px;
@@ -130,5 +134,5 @@ td {
 
 ## 関連情報
 
-- その他の形状に関する境界のプロパティ: {{CSSxRef("border-left-style")}}, {{CSSxRef("border-right-style")}}, {{CSSxRef("border-bottom-style")}}, {{CSSxRef("border-style")}}
+- その他のスタイルに関する境界のプロパティ: {{CSSxRef("border-left-style")}}, {{CSSxRef("border-right-style")}}, {{CSSxRef("border-bottom-style")}}, {{CSSxRef("border-style")}}
 - その他の左側の境界に関するプロパティ: {{CSSxRef("border-top")}}, {{CSSxRef("border-top-color")}}, {{CSSxRef("border-top-width")}}

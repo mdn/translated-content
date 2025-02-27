@@ -31,10 +31,10 @@ Ce guide est divisé en plusieurs chapitres :
 
 ## [Contrôle du flux et gestion des erreurs](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 
-- [`if...else`](/fr/docs/Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs#Instruction_if...else)
+- [`if...else`](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#instruction_if...else)
 - [`switch`](/fr/docs/Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs#L%27instruction_switch)
 - [`try/catch/throw`](/fr/docs/Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs#L%27instruction_try...catch)
-- [Objets `Error`](/fr/docs/Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs#Utiliser_les_objets_Error)
+- [Objets `Error`](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#utiliser_les_objets_error)
 
 ## [Itération et boucles](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration)
 
@@ -54,12 +54,12 @@ Ce guide est divisé en plusieurs chapitres :
 - [Arguments](/fr/docs/Web/JavaScript/Guide/Functions#utiliser_l'objet_arguments) et [paramètres](/fr/docs/Web/JavaScript/Guide/Functions#param.c3.a8tres_des_fonctions)
 - [Fonctions fléchées](/fr/docs/Web/JavaScript/Guide/Functions#fonctions_fl.c3.a9ch.c3.a9es)
 
-## [Expressions et opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+## [Expressions et opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
-- [Affectation](/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs#Op.C3.A9rateurs_d%27affectation) et [comparaisons](/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs#Op.C3.A9rateurs_de_comparaison)
-- [Opérateurs arithmétiques](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#op.c3.a9rateurs_arithm.c3.a9tiques)
-- [Opérateurs binaires](/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs#Op.C3.A9rateurs_binaires) et [logiques](/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs#Op.C3.A9rateurs_logiques)
-- [Opérateur conditionnel](/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs#Op.C3.A9rateur_conditionnel_ternaire)
+- [Affectation](/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs#Op.C3.A9rateurs_d%27affectation) et [comparaisons](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#op.c3.a9rateurs_de_comparaison)
+- [Opérateurs arithmétiques](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#op.c3.a9rateurs_arithm.c3.a9tiques)
+- [Opérateurs binaires](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#op.c3.a9rateurs_binaires) et [logiques](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#op.c3.a9rateurs_logiques)
+- [Opérateur conditionnel](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#op.c3.a9rateur_conditionnel_ternaire)
 
 ## [Nombres et dates](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates)
 
@@ -87,18 +87,18 @@ Ce guide est divisé en plusieurs chapitres :
 - [`Set`](/fr/docs/Web/JavaScript/Guide/Keyed_collections#le_type_set)
 - [`WeakSet`](/fr/docs/Web/JavaScript/Guide/Keyed_collections#le_type_weakset)
 
-## [Utiliser les objets](/fr/docs/Web/JavaScript/Guide/Working_with_Objects)
+## [Utiliser les objets](/fr/docs/Web/JavaScript/Guide/Working_with_objects)
 
-- [Objets et propriétés](/fr/docs/Web/JavaScript/Guide/Working_with_Objects#les_objets_et_les_propri.c3.a9t.c3.a9s)
-- [Création d'objets](/fr/docs/Web/JavaScript/Guide/Working_with_Objects#cr.c3.a9er_de_nouveaux_objets)
-- [Définition de méthodes](/fr/docs/Web/JavaScript/Guide/Working_with_Objects#d.c3.a9finir_des_m.c3.a9thodes)
+- [Objets et propriétés](/fr/docs/Web/JavaScript/Guide/Working_with_objects#les_objets_et_les_propri.c3.a9t.c3.a9s)
+- [Création d'objets](/fr/docs/Web/JavaScript/Guide/Working_with_objects#cr.c3.a9er_de_nouveaux_objets)
+- [Définition de méthodes](/fr/docs/Web/JavaScript/Guide/Working_with_objects#d.c3.a9finir_des_m.c3.a9thodes)
 - [Accesseurs et mutateurs](</fr/docs/Web/JavaScript/Guide/Working_with_Objects#d.c3.a9finir_des_accesseurs_et_des_mutateurs_(getters_et_setters)>)
 
-## [Le modèle objet JavaScript en détails](/fr/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+## [Le modèle objet JavaScript en détails](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
-- [Modèle à base de prototypes](/fr/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#langages_de_prototypes_.2f_langages_de_classes)
-- [Créer des hiérarchies d'objets](/fr/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#la_cr.c3.a9ation_de_la_hi.c3.a9rarchie)
-- [Héritage](/fr/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#l'h.c3.a9ritage_de_propri.c3.a9t.c3.a9s_.3a_les_subtilit.c3.a9s)
+- [Modèle à base de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#langages_de_prototypes_.2f_langages_de_classes)
+- [Créer des hiérarchies d'objets](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#la_cr.c3.a9ation_de_la_hi.c3.a9rarchie)
+- [Héritage](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#l'h.c3.a9ritage_de_propri.c3.a9t.c3.a9s_.3a_les_subtilit.c3.a9s)
 
 ## [Promesses](/fr/docs/Web/JavaScript/Guide/Using_promises)
 
@@ -108,11 +108,11 @@ Ce guide est divisé en plusieurs chapitres :
 - [Composition](/fr/docs/Web/JavaScript/Guide/Using_promises#composition)
 - [Gestion du temps](/fr/docs/Web/JavaScript/Guide/Using_promises#gestion_du_temps)
 
-## [Itérateurs et générateurs](/fr/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+## [Itérateurs et générateurs](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators)
 
-- [Itérateurs](/fr/docs/Web/JavaScript/Guide/Iterators_and_Generators#it.c3.a9rateurs)
-- [Itérables](/fr/docs/Web/JavaScript/Guide/Iterators_and_Generators#it.c3.a9rables)
-- [Générateurs](/fr/docs/Web/JavaScript/Guide/Iterators_and_Generators#g.c3.a9n.c3.a9rateurs)
+- [Itérateurs](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators#it.c3.a9rateurs)
+- [Itérables](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators#it.c3.a9rables)
+- [Générateurs](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators#g.c3.a9n.c3.a9rateurs)
 
 ## [Métaprogrammation](/fr/docs/Web/JavaScript/Guide/Meta_programming)
 

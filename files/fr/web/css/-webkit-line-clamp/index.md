@@ -1,5 +1,5 @@
 ---
-title: "-webkit-line-clamp"
+title: -webkit-line-clamp
 slug: Web/CSS/-webkit-line-clamp
 ---
 
@@ -13,7 +13,8 @@ Dans la plupart des cas, on utilisera également {{cssxref("overflow")}} avec la
 
 Lorsqu'on applique ce style à une ancre, la troncature pourra intervenir au milieu du texte (et pas nécessairement à la fin).
 
-> **Note :** Au départ, cette propriété était implémentée dans WebKit avec quelques problèmes. Elle a été standardisée à des fins de support pour les sites historiques. Le module de spécification [CSS Overflow Module Level 3](https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp) définit également une propriété {{cssxref("line-clamp")}} qui doit remplacer `-webkit-line-clamp`.
+> [!NOTE]
+> Au départ, cette propriété était implémentée dans WebKit avec quelques problèmes. Elle a été standardisée à des fins de support pour les sites historiques. Le module de spécification [CSS Overflow Module Level 3](https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp) définit également une propriété {{cssxref("line-clamp")}} qui doit remplacer `-webkit-line-clamp`.
 
 ## Syntaxe
 

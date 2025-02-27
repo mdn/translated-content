@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/all
 
 La méthode **`Promise.all()`** renvoie une promesse ({{jsxref("Promise")}}) qui est résolue lorsque l'ensemble des promesses contenues dans l'itérable passé en argument ont été résolues ou qui échoue avec la raison de la première promesse qui échoue au sein de l'itérable.
 
-{{EmbedInteractiveExample("pages/js/promise-all.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.all()")}}
+
+```js interactive-example
+const promise1 = Promise.resolve(3);
+const promise2 = 42;
+const promise3 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, "foo");
+});
+
+Promise.all([promise1, promise2, promise3]).then((values) => {
+  console.log(values);
+});
+// Expected output: Array [3, 42, "foo"]
+```
 
 ## Syntaxe
 
@@ -18,7 +31,7 @@ Promise.all(iterable);
 ### Paramètres
 
 - `iterable`
-  - : Un objet [itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérable_») (tel qu'un tableau ({{jsxref("Array")}})) contenant des promesses.
+  - : Un objet [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») (tel qu'un tableau ({{jsxref("Array")}})) contenant des promesses.
 
 ### Valeur de retour
 

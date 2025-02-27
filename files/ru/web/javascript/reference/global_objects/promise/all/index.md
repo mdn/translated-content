@@ -18,7 +18,7 @@ Promise.all(iterable);
 ### Параметры
 
 - iterable
-  - : Перечисляемый объект, например, массив ({{jsxref("Array")}}). Смотрите [iterable](/ru/docs/Web/JavaScript/Guide/iterable).
+  - : Перечисляемый объект, например, массив ({{jsxref("Array")}}). Смотрите [iterable](/ru/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 ### Возвращаемое значение
 

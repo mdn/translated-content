@@ -9,7 +9,7 @@ slug: Web/API/CSSStyleRule
 
 ## Sintaxis
 
-La sintaxis es descrita usando el formato [WebIDL](http://dev.w3.org/2006/webapi/WebIDL/).
+La sintaxis es descrita usando el formato [WebIDL](https://dev.w3.org/2006/webapi/WebIDL/).
 
 ```
 interface CSSStyleRule : CSSRule {

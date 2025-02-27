@@ -1,11 +1,13 @@
 ---
 title: place-self
 slug: Web/CSS/place-self
+l10n:
+  sourceCommit: b505d75f1dbc5f31dd06eecab86e0b86159a4caa
 ---
 
 {{CSSRef}}
 
-**`place-self`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、アイテムのブロック軸およびインライン軸に沿ったアイテムの配置 (すなわち {{cssxref("align-self")}} および {{cssxref("justify-self")}} プロパティ) を、[グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)や[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などのレイアウトシステムにおいて、一度に指定することができます。2 番目の値が設定されていない場合、最初の値がそちらにも使用されます。
+**`place-self`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、アイテムのブロック軸およびインライン軸に沿ったアイテムの配置 (すなわち {{cssxref("align-self")}} および {{cssxref("justify-self")}} プロパティ) を一度に指定することができます。このプロパティは、ブロックレベルのボックス、絶対位置指定のボックス、グリッドアイテムに適用されます。 2 番目の値が設定されていない場合、最初の値がそちらにも使用されます。
 
 {{EmbedInteractiveExample("pages/css/place-self.html")}}
 
@@ -22,8 +24,6 @@ slug: Web/CSS/place-self
 /* キーワード値 */
 place-self: auto center;
 place-self: normal start;
-
-/* 位置による配置 */
 place-self: center normal;
 place-self: start auto;
 place-self: end normal;
@@ -31,8 +31,7 @@ place-self: self-start auto;
 place-self: self-end normal;
 place-self: flex-start auto;
 place-self: flex-end normal;
-place-self: left auto;
-place-self: right normal;
+place-self: anchor-center;
 
 /* ベースラインによる配置 */
 place-self: baseline normal;
@@ -44,6 +43,7 @@ place-self: stretch auto;
 place-self: inherit;
 place-self: initial;
 place-self: revert;
+place-self: revert-layer;
 place-self: unset;
 ```
 
@@ -57,7 +57,7 @@ place-self: unset;
     - 絶対位置のレイアウトでは、このキーワードは*置換*の絶対位置ボックスには `start` のように動作し、*その他*の絶対位置ボックスには `stretch` のように動作します。
     - 絶対位置指定レイアウトの固定位置指定時は、このキーワードは `stretch` と同様に動作します。
     - フレックスアイテムでは、このキーワードは `stretch` と同様に動作します。
-    - グリッドアイテムでは、このキーワードは `stretch` のうちの一つと似た動作をしますが、アスペクト比や固有の寸法を持つボックスは `start` のように動作します。
+    - グリッドアイテムでは、このキーワードは `stretch` のうちの一つと似た動作をしますが、{{glossary("aspect ratio","アスペクト比")}}や内在的な寸法を持つボックスは `start` のように動作します。
     - ブロックレベルボックスと表のセルでは、プロパティは適用されません。
 
 - `self-start`
@@ -65,9 +65,9 @@ place-self: unset;
 - `self-end`
   - : アイテムは交差軸の終端側に対応する配置コンテナーの端に詰めて配置されます。
 - `flex-start`
-  - : このフレックスアイテムの cross-start マージン側が、行の cross-start 側に詰められます。
+  - : このフレックスアイテムの交差軸の先頭側マージンが、行の交差軸の先頭側に詰められます。
 - `flex-end`
-  - : このフレックスアイテムの cross-end マージン側が、行の cross-end 側に詰められます。
+  - : このフレックスアイテムの交差軸の末尾側マージンが、行の交差軸の末尾側に詰められます。
 - `center`
   - : このフレックスアイテムのマージンボックスが、行の交差軸方向の中央に配置されます。アイテムの交差軸方向の寸法がフレックスコンテナーよりも大きい場合は、両方向に均等にはみ出します。
 - `baseline`, `first baseline`. `last baseline`
@@ -75,18 +75,20 @@ place-self: unset;
     `first baseline` の代替配置は `start`、`last baseline` の代替配置は `end` です。
 - `stretch`
   - : アイテムの交差軸方向の寸法の合計値が、配置コンテナーの寸法よりも小さく、アイテムの寸法が `auto` であった場合、アイテムの寸法は {{cssxref("max-height")}}/{{cssxref("max-width")}} (または同等の機能) で課された制約を尊重しつつ、均等の寸法 (比例的ではない) に拡大されるので、 `auto` が指定されたアイテムすべての寸法の合計は、ちょうど配置コンテナーの交差軸方向を埋めるようになります。
+- `anchor-center`
+  - : [アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)要素の場合、関連付けられたアンカー要素のブロックおよびインライン方向の中心にアイテムを配置します。 [`anchor-center` を使用してアンカーの中央に配置](/ja/docs/Web/CSS/CSS_anchor_positioning/Using#anchor-center_を使用してアンカーの中央に配置)を参照してください。
 
 ## 公式定義
 
 {{cssinfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 
 ## 例
 
-<h3 id="Simple_demonstration">簡単なデモ</h3>
+### 簡単なデモ
 
 以下の例では簡単な 2 x 2 のグリッドレイアウトを用意しました。最初にグリッドコンテナーには [`justify-items`](/ja/docs/Web/CSS/justify-items) および [`align-items`](/ja/docs/Web/CSS/align-items) の値を `stretch` — 既定値 — に設定し、グリッドアイテムがセルの幅全体に広がるようにしています。
 
@@ -117,6 +119,7 @@ article {
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 80px;
   grid-gap: 10px;
+  margin: 20px;
   width: 300px;
 }
 
@@ -144,10 +147,6 @@ span {
   padding: 10px;
   border-radius: 7px;
 }
-
-article {
-  margin: 20px;
-}
 ```
 
 #### 結果
@@ -164,9 +163,9 @@ article {
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS フレックスボックスガイド: _[フレックスコンテナー内でのアイテムの配置](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS グリッドガイド: _[CSS グリッドレイアウト内でのボックス配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)
-- {{cssxref("align-self")}} プロパティ
-- {{cssxref("justify-self")}} プロパティ
+- {{cssxref("align-self")}}
+- {{cssxref("justify-self")}}
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール

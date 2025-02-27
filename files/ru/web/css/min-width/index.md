@@ -14,17 +14,17 @@ slug: Web/CSS/min-width
 ## Синтаксис
 
 ```css
+/* Ключевые слова */
+min-width: max-content;
+min-width: min-content;
+min-width: fit-content;
+min-width: fill-available;
+
 /* <length> значение */
 min-width: 3.5em;
 
 /* <percentage> значение */
 min-width: 10%;
-
-/* Значения-ключевые слова */
-min-width: max-content;
-min-width: min-content;
-min-width: fit-content;
-min-width: fill-available;
 
 /* Глобальные значения */
 min-width: inherit;
@@ -74,11 +74,11 @@ form {
 
 {{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{ Cssxref("width") }}, {{ Cssxref("max-width") }}
-- [Блочная модель](/ru/docs/CSS/box_model), {{ Cssxref("box-sizing") }}
+- [Блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{ Cssxref("box-sizing") }}

@@ -59,7 +59,8 @@ svg {
   </tbody>
 </table>
 
-> **Note:** SVG2 `cx`로 시작하는 것은 _기하학적 속성_ 입니다. 즉, 이 속성은 circle의 CSS 속성으로도 사용할 수 있습니다.
+> [!NOTE]
+> SVG2 `cx`로 시작하는 것은 _기하학적 속성_ 입니다. 즉, 이 속성은 circle의 CSS 속성으로도 사용할 수 있습니다.
 
 ## ellipse
 
@@ -82,7 +83,8 @@ svg {
   </tbody>
 </table>
 
-> **Note:** SVG2 `cx`로 시작하는 것은 _기하학적 속성_ 입니다. 이는 이 속성이 ellipse의 CSS 속성으로도 사용될 수 있음을 의미합니다.
+> [!NOTE]
+> SVG2 `cx`로 시작하는 것은 _기하학적 속성_ 입니다. 이는 이 속성이 ellipse의 CSS 속성으로도 사용될 수 있음을 의미합니다.
 
 ## radialGradient
 
@@ -92,7 +94,7 @@ svg {
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td>{{cssxref("length")}}</td>
+      <td>{{cssxref("length-percentage")}}</td>
     </tr>
     <tr>
       <th scope="row">Default value</th>
@@ -169,5 +171,5 @@ svg {
 
 ## 같이 보기
 
-- [cy](/ko/docs/Web/SVG/Attribute/cy)
-- [r](/ko/docs/Web/SVG/Attribute/r)
+- {{SVGAttr("cy")}}
+- {{SVGAttr("r")}}

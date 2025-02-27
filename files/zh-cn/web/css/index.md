@@ -14,37 +14,29 @@ CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www
 ## 主要资源
 
 - CSS 介绍
-  - : 如果你是 Web 开发的新手，请务必阅读我们的 [CSS 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)文章以学习 CSS 的含义和用法。
+  - : 如果你是 Web 开发的新手，请务必阅读我们的 [CSS 基础](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)文章以学习 CSS 的含义和用法。
 - CSS 教程
-  - : 我们的 [CSS 学习区](/zh-CN/docs/Learn/CSS)包含了丰富的教程，它们覆盖了全部基础知识，能使你在 CSS 之路上从初出茅庐到游刃有余。
+  - : 我们的 [CSS 学习区](/zh-CN/docs/Learn_web_development/Core/Styling_basics)包含了丰富的教程，它们覆盖了全部基础知识，能使你在 CSS 之路上从初出茅庐到游刃有余。
 - CSS 参考
   - : 我们针对资深 Web 开发者编写的[详细参考手册](/zh-CN/docs/Web/CSS/Reference)，描述了 CSS 的各个属性与概念。
 
-> **标注：**
->
-> #### 想要成为一名前端工程师？
->
-> 我们汇总了一门课程，其中包含你实现成为前端工程师目标所需要的所有基本信息。
->
-> [**点击开始**](/zh-CN/docs/Learn/Front-end_web_developer)
-
 ## 教程
 
-我们的 [CSS 学习区](/zh-CN/docs/Learn/CSS) 以多模块、零基础为特色进行 CSS 的教学——这也就意味着你不需要任何知识基础。
+我们的 [CSS 学习区](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 以多模块、零基础为特色进行 CSS 的教学——这也就意味着你不需要任何知识基础。
 
-- [学习 CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)
+- [学习 CSS 第一步](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
   - : CSS（层叠样式表）用于设置网页的样式及布局——比如，可以更改内容的字体、颜色、大小以及间距，或是将其分列，或是添加动画及赋予内容其他装饰性的特征。本模块将通过阐述基本原理，展示语法示例，以及如何与 HTML 相联系三方面，为你日后精通 CSS 提供一个友好的开端。
-- [CSS 构建](/zh-CN/docs/Learn/CSS/Building_blocks)
+- [CSS 构建](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
 
-  - : 本模块是[学习 CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)的延续，相信你已经熟悉了这门语言及它的语法，并拥有一些使用它的基本经验，是时候更进一步了。本模块着眼于层叠和继承、所有可用的选择器类型、单位、大小、背景、边框、调试等等。
+  - : 本模块是[学习 CSS 第一步](/zh-CN/docs/Learn_web_development/Core/Styling_basics)的延续，相信你已经熟悉了这门语言及它的语法，并拥有一些使用它的基本经验，是时候更进一步了。本模块着眼于层叠和继承、所有可用的选择器类型、单位、大小、背景、边框、调试等等。
 
-    其目的在于先为你提供编写功能强大的 CSS 工具包，了解所有基础理论，之后再进行进一步的学习，诸如[样式化文本](/zh-CN/docs/Learn/CSS/Styling_text)和 [CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)。
+    其目的在于先为你提供编写功能强大的 CSS 工具包，了解所有基础理论，之后再进行进一步的学习，诸如[样式化文本](/zh-CN/docs/Learn_web_development/Core/Text_styling)和 [CSS 布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout)。
 
-- [CSS 为文本添加样式](/zh-CN/docs/Learn/CSS/Styling_text)
+- [CSS 为文本添加样式](/zh-CN/docs/Learn_web_development/Core/Text_styling)
   - : 在学习了 CSS 语言基础知识的基础上，你需要关注的下一个重点是样式化文本——这是使用 CSS 时最常用的场景之一。在这一模块将学习文本样式设置的基础知识，包括设置字体、粗体、斜体、行、字符间距、阴影以及其他文本属性。我们通过在页面上应用自定义的字体以及样式化的列表、链接来完善本模块。
-- [CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)
+- [CSS 布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout)
   - : 至此，我们已经了解了 CSS 的基本原理、如何设置文本样式，以及如何设置和操作内容所在的盒子。现在我们来看看如何将这些盒子放置在相对视口或另一些盒子之间的正确位置。我们到此已经覆盖了所有预备知识，因此现在能够深入学习 CSS 布局，研究不同的显示设置，学习像弹性盒（flexbox）、CSS 网格和定位这样的现代布局工具，以及一些你可能仍想了解的传统技术。
-- [解决常见的 CSS 相关问题](/zh-CN/docs/Learn/CSS/Howto)
+- [解决常见的 CSS 相关问题](/zh-CN/docs/Learn_web_development/Howto/Solve_CSS_problems)
   - : 本模块提供了一些内容链接，这些内容很好的回答了在创建网页时使用 CSS 所遇到的常见问题。
 
 ## 参考
@@ -52,12 +44,12 @@ CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www
 - [CSS 参考](/zh-CN/docs/Web/CSS/Reference)：针对资深 Web 开发者的详细参考手册，其中描述了 CSS 的各个属性和概念。
 - CSS 关键概念：
 
-  - [语言语法和形式](/zh-CN/docs/Web/CSS/Syntax)
-  - [特殊性（另译优先级）](/zh-CN/docs/Web/CSS/Specificity)、[继承](/zh-CN/docs/Web/CSS/Inheritance)和[级联](/zh-CN/docs/Web/CSS/Cascade)
+  - [语言语法和形式](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
+  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)、[继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)和[级联](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)和[外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - [包含块](/zh-CN/docs/Web/CSS/Containing_block)
-  - [堆叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)和[区块格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)
-  - [初始值](/zh-CN/docs/Web/CSS/initial_value)、[计算值](/zh-CN/docs/Web/CSS/computed_value)、[应用值](/zh-CN/docs/Web/CSS/used_value)和[实际值](/zh-CN/docs/Web/CSS/actual_value)
+  - [包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)
+  - [堆叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)和[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
+  - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)、[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)、[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)和[实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
   - [CSS 简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
   - [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)
   - [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)
@@ -80,6 +72,5 @@ CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www
 
 ## 参见
 
-- [CSS 演示](/zh-CN/docs/Web/Demos#css)：通过探索最新的 CSS 技术的应用实例，获得创造性的提升。
 - CSS 常常应用的 Web 语言：[HTML](/zh-CN/docs/Web/HTML)、[SVG](/zh-CN/docs/Web/SVG)、[MathML](/zh-CN/docs/Web/MathML)、{{Glossary("XHTML")}} 以及 [XML](/zh-CN/docs/Web/XML/XML_introduction)。
 - [StackOverflow 上 CSS 相关的问题](https://stackoverflow.com/questions/tagged/css)

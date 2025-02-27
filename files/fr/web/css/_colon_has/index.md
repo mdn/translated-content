@@ -1,5 +1,5 @@
 ---
-title: ":has"
+title: :has
 slug: Web/CSS/:has
 ---
 
@@ -9,7 +9,8 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:has()`** permet de cible
 
 Cette pseudo-classe `:has()` prend en paramètre une liste de sélecteurs.
 
-> **Note :** Pour des raisons de performances et dans la spécification actuelle, [`has()` n'est pas classé comme un sélecteur dynamique](https://drafts.csswg.org/selectors/#live-profile) et peut uniquement être utilisé de façon statique (par exemple avec des fonctions comme {{domxref("document.querySelector()")}}.
+> [!NOTE]
+> Pour des raisons de performances et dans la spécification actuelle, [`has()` n'est pas classé comme un sélecteur dynamique](https://drafts.csswg.org/selectors/#live-profile) et peut uniquement être utilisé de façon statique (par exemple avec des fonctions comme {{domxref("document.querySelector()")}}.
 
 ```js
 /* Avec cette ligne de JavaScript, on récupère  */

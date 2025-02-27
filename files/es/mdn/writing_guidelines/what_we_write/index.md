@@ -58,7 +58,8 @@ Nuestro objetivo principal es escribir sobre las siguientes tecnologías web fro
 
 También documentamos algunos temas más amplios, como [SVG](/es/docs/Web/SVG), [XML](/es/docs/Web/XML), [WebAssembly](/es/docs/WebAssembly) y [Accesibilidad](/es/docs/Learn/Accessibility). Además, proporcionamos extensas [guías de aprendizaje](/es/docs/Learn) para estas tecnologías y también un [glosario](/es/docs/Glossary).
 
-> **Nota:** Las tecnologías de backend generalmente tienen su propia documentación en otro lugar que MDN Web Docs no intenta reemplazar, aunque [tenemos algunas excepciones](/es/docs/Learn/Server-side).
+> [!NOTE]
+> Las tecnologías de backend generalmente tienen su propia documentación en otro lugar que MDN Web Docs no intenta reemplazar, aunque [tenemos algunas excepciones](/es/docs/Learn/Server-side).
 
 Todo el contenido de MDN Web Docs debe ser relevante para la sección de tecnología en la que aparece. Se espera que los colaboradores sigan estas [pautas de escritura de MDN](/es/docs/MDN/Writing_guidelines) para el estilo de escritura, las muestras de código y otros temas.
 

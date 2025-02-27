@@ -17,10 +17,6 @@ HTTP **303 See Other** 重定向状态码，通常作为 {{HTTPMethod("PUT")}} �
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
-## 更多可见
+## 参见
 
 - {{HTTPStatus("302")}} `Found`, the temporary redirect

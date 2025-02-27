@@ -5,9 +5,26 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 {{JSRef}}
 
-La méthode **`bind()`** crée une nouvelle fonction qui, lorsqu'elle est appelée, a pour contexte [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this) la valeur passée en paramètre et éventuellement une suite d'arguments qui précéderont ceux fournis à l'appel de la fonction créée.
+La méthode **`bind()`** crée une nouvelle fonction qui, lorsqu'elle est appelée, a pour contexte [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) la valeur passée en paramètre et éventuellement une suite d'arguments qui précéderont ceux fournis à l'appel de la fonction créée.
 
-{{EmbedInteractiveExample("pages/js/function-bind.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Function.bind()", "taller")}}
+
+```js interactive-example
+const module = {
+  x: 42,
+  getX: function () {
+    return this.x;
+  },
+};
+
+const unboundGetX = module.getX;
+console.log(unboundGetX()); // The function gets invoked at the global scope
+// Expected output: undefined
+
+const boundGetX = unboundGetX.bind(module);
+console.log(boundGetX());
+// Expected output: 42
+```
 
 ## Syntaxe
 
@@ -126,7 +143,8 @@ fleur.floraison();
 
 ### Les fonctions liées utilisées en tant que constructeurs
 
-> **Attention :** Cette section illustre des capacités marginales et des cas aux limites concernant l'usage de la méthode bind(). Les méthodes montrées ci-après ne sont pas les façons les plus propres de faire les choses et ne devraient pas être utilisées en production.
+> [!WARNING]
+> Cette section illustre des capacités marginales et des cas aux limites concernant l'usage de la méthode bind(). Les méthodes montrées ci-après ne sont pas les façons les plus propres de faire les choses et ne devraient pas être utilisées en production.
 
 Les fonctions liées sont automatiquement disponibles à l'usage pour toutes les instances initialisées avec l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}} sur la fonction cible. Quand une fonction liée est utilisée pour construire une valeur, le `this` fourni est ignoré. Cependant, les arguments fournis sont toujours préremplis lors de l'appel au constructeur :
 

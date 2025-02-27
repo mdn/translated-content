@@ -3,6 +3,8 @@ title: Abstracción
 slug: Glossary/Abstraction
 ---
 
+{{GlossarySidebar}}
+
 En {{Glossary("computer programming", "programación")}}, una abstracción es una manera de reducir la complejidad y permitir un diseño e implementación más eficientes en sistemas de software complejos. Oculta la dificultad técnica de los sistemas detrás de {{Glossary("API", "APIs")}} más simples.
 
 ## Ventajas de la Abstracción

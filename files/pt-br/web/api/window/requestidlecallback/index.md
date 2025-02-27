@@ -9,7 +9,8 @@ O método **`window.requestIdleCallback()`** enfileira uma função para ser exe
 
 Você pode chamar `requestIdleCallback()` com uma função callback ociosa para agendar outro callback para ter lugar não antes da próxima passagem pelo event loop.
 
-> **Nota:** Um `timeout` é altamento recomendado, caso contrário, é possível que vários segundos passem antes que a função callback seja chamada.
+> [!NOTE]
+> Um `timeout` é altamento recomendado, caso contrário, é possível que vários segundos passem antes que a função callback seja chamada.
 
 ## Syntax
 

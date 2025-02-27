@@ -28,11 +28,11 @@ La spécification n'avait pas l'intention de permettre des changements de métho
 
 Parfois, la ressource demandée ne peut pas être accédée à partir de son emplacement standard, mais elle peut l'être à partir d'un autre endroit. Dans ce cas, une redirection temporaire peut être utilisée. Les robots des moteurs de recherche ne mémorisent pas le nouveau lien temporaire. Les redirections temporaires sont également utilisées lors de la création, de la mise à jour et de la suppression de ressources pour présenter des pages de progression temporaires.
 
-| Code  | Texte                | Traitement des méthodes                                                                                     | Cas d'utilisation typique                                                                                                                                                                                                                                    |
-| ----- | -------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `302` | `Found`              | Requêtes {{HTTPMethod("GET")}} inchangées. Les autres peuvent être changés ou non en {{HTTPMethod("GET")}}. | La page Web n'est temporairement pas disponible pour des raisons qui n'ont pas été imprévues. De cette façon, les moteurs de recherche ne mettent pas à jour leurs liens.                                                                                    |
-| `303` | `See Other`          | Requêtes {{HTTPMethod("GET")}} inchangées. Les autres sont changées en `GET` (le corps est perdu).          | Utilisé pour rediriger après un {{HTTPMethod("PUT")}} ou un {{HTTPMethod("POST")}} pour empêcher un rafraîchissement de la page qui redéclencherait l'opération.                                                                                             |
-| `307` | `Temporary Redirect` | Méthodes et corps inchangés                                                                                 | La page Web n'est temporairement pas disponible pour des raisons qui n'ont pas été imprévues. De cette façon, les moteurs de recherche ne mettent pas à jour leurs liens. Mieux que `302` lorsque des liens/opérations non-GET sont disponibles sur le site. |
+| Code  | Texte                | Traitement des méthodes                                                                                     | Cas d'utilisation typique                                                                                                                                                                                                                    |
+| ----- | -------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `302` | `Found`              | Requêtes {{HTTPMethod("GET")}} inchangées. Les autres peuvent être changés ou non en {{HTTPMethod("GET")}}. | La page Web n'est temporairement pas disponible pour des raisons inattendues. De cette façon, les moteurs de recherche ne mettent pas à jour leurs liens.                                                                                    |
+| `303` | `See Other`          | Requêtes {{HTTPMethod("GET")}} inchangées. Les autres sont changées en `GET` (le corps est perdu).          | Utilisé pour rediriger après un {{HTTPMethod("PUT")}} ou un {{HTTPMethod("POST")}} pour empêcher un rafraîchissement de la page qui redéclencherait l'opération.                                                                             |
+| `307` | `Temporary Redirect` | Méthodes et corps inchangés                                                                                 | La page Web n'est temporairement pas disponible pour des raisons inattendues. De cette façon, les moteurs de recherche ne mettent pas à jour leurs liens. Mieux que `302` lorsque des liens/opérations non-GET sont disponibles sur le site. |
 
 La spécification n'avait pas l'intention de permettre des changements de méthode, mais il y a en pratique des agents utilisateurs qui le font. `307` a été créé pour supprimer l'ambiguïté du comportement lors de l'utilisation de méthodes autres que `GET`
 
@@ -63,7 +63,8 @@ L'attribut [`content`](/fr/docs/Web/HTML/Global_attributes#content) commence ave
 
 Bien entendu, cette méthode ne fonctionne qu'avec des pages HTML (ou similaires) et ne peut être utilisée pour des images ou tout autre type de contenu.
 
-> **Note :** Ces redirections cassent le bouton de retour dans un navigateur : vous pouvez revenir à une page avec cet en-tête mais vous serez de nouveau instantanément redirigé.
+> [!NOTE]
+> Ces redirections cassent le bouton de retour dans un navigateur : vous pouvez revenir à une page avec cet en-tête mais vous serez de nouveau instantanément redirigé.
 
 ### Redirections JavaScript
 
@@ -103,7 +104,8 @@ Un alias de domaine peut être fait pour plusieurs raisons:
 
 Lorsque vous restructurez des sites Web, les URL des ressources changent. Même si vous pouvez mettre à jour les liens internes de votre site Web pour qu'ils correspondent au nouveau schéma de nommage, vous n'avez aucun contrôle sur les URL utilisées par les ressources externes. Vous ne voulez pas briser ces liens, car ils vous apportent des utilisateurs précieux (et aident votre référencement), donc vous configurez des redirections depuis les anciennes URL vers les nouvelles.
 
-> **Note :** Même si cette technique fonctionne également pour les liens internes, vous devriez éviter d'avoir des redirections internes. Une redirection a un coût significatif sur les performances (car une requête HTTP supplémentaire est faite) et si vous pouvez l'éviter en corrigeant les liens internes, vous devez corriger ces liens.
+> [!NOTE]
+> Même si cette technique fonctionne également pour les liens internes, vous devriez éviter d'avoir des redirections internes. Une redirection a un coût significatif sur les performances (car une requête HTTP supplémentaire est faite) et si vous pouvez l'éviter en corrigeant les liens internes, vous devez corriger ces liens.
 
 ### Réponses temporaires aux requêtes non sécurisées
 
@@ -147,7 +149,7 @@ Redirect permanent / http://www.example.com
 Redirect 301 / http://www.example.com
 ```
 
-Le module [mod_rewrite](http://httpd.apache.org/docs/current/mod/mod_rewrite.html) peut également être utilisé pour créer des redirections. Il est plus flexible, mais un peu plus complexe à utiliser.
+Le module [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) peut également être utilisé pour créer des redirections. Il est plus flexible, mais un peu plus complexe à utiliser.
 
 ### Nginx
 

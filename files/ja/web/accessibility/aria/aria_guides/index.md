@@ -3,6 +3,8 @@ title: ARIA ガイド
 slug: Web/Accessibility/ARIA/ARIA_Guides
 ---
 
+{{AccessibilitySidebar}}
+
 Accessible Rich Internet Applications (**ARIA**) は障がいのある人にとってウェブをもっとアクセシブルにする方法です。それに従ういくつかのガイドラインは、ウィジェットの配置のためのドラッグアンドドロップのように、よりよいアクセシビリティを保証します。
 
 - フォームのエラー処理

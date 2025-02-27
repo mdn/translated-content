@@ -32,42 +32,48 @@ worker.postMessage(sab);
 
 ### Требования безопасности
 
-Разделяемая память и таймеры высокого разрешения были [отключены в начале 2018 года](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/) из-за атаки [Spectre](<https://ru.wikipedia.org/wiki/Spectre_(%D1%83%D1%8F%D0%B7%D0%B2%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C)>). В 2020 году был стандартизирован новый, безопасный подход, чтобы включить разделяемую память обратно. При следовании следующим мерам безопасности `postMessage() не будет выкидывать исключение для SharedArrayBuffer, и разделяемая память будет доступна в разных потоках.`
+Разделяемая память и таймеры высокого разрешения были [отключены в начале 2018 года](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/) из-за атаки [Spectre](<https://ru.wikipedia.org/wiki/Spectre_(%D1%83%D1%8F%D0%B7%D0%B2%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C)>). В 2020 году был стандартизирован новый, безопасный подход, чтобы включить разделяемую память обратно.
 
-`Основное требование — ваш документ должен находиться в безопасном контексте
+Основное требование — ваш документ должен находиться в [безопасном контексте](/ru/docs/Web/Security/Secure_Contexts).
 
-Для документов верхнего уровня нужно устновить два заголовка, чтобы изолировать ваш сайт от других источников (cross-origin):
+Для документов верхнего уровня нужно установить два заголовка, чтобы изолировать ваш сайт от других источников:
 
-Cross-Origin-Opener-Policy со значением same-origin (защищает ваш источник от атаки)Cross-Origin-Embedder-Policy со значением require-corp (защищает жертв от вашего источника)Cross-Origin-Opener-Policy: same-origin
-Cross-Origin-Embedder-Policy: require-corp
+- [`Cross-Origin-Opener-Policy`](/ru/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) со значением `same-origin`` (защищает ваш источник от атаки)
+- [`Cross-Origin-Embedder-Policy`](/ru/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) со значением `require-corp` или `credentialless` (защищает жертв от вашего источника)
 
-Чтобы проверить, что изоляция от других источников прошла успешно, протестируйте свойство crossOriginIsolated, доступное для контекстов окна и воркера:
+Чтобы проверить, что изоляция от других источников прошла успешно, протестируйте свойство [`crossOriginIsolated`](/ru/docs/Web/API/Window/crossOriginIsolated), доступное для контекстов окна и воркера:
+
+```js
+const myWorker = new Worker("worker.js");
 
 if (crossOriginIsolated) {
-// Начни работу с SharedArrayBuffer
+  const buffer = new SharedArrayBuffer(16);
+  myWorker.postMessage(buffer);
 } else {
-// Сделай что-то другое
+  const buffer = new ArrayBuffer(16);
+  myWorker.postMessage(buffer);
 }
+```
 
-Ознакомьтесь с планируемыми изменениями разделяемой памяти, которые начинают внедряться в браузерах (например, в Firefox 79).
+## Спецификации
 
-Всегда используйте оператор new для создания SharedArrayBuffer
+{{Specifications}}
 
-Конструкторы SharedArrayBuffer необходимо вызывать с помощью оператора {{jsxref("Operators/new", "new")}}. Вызов конструктора SharedArrayBuffer как функции без указания new вызовет ошибку {{jsxref("TypeError")}}.
-
-var sab = SharedArrayBuffer(1024);
-// TypeError: вызов встроенного конструктора SharedArrayBuffer
-// без new запрещеноvar sab = new SharedArrayBuffer(1024);КонструкторSharedArrayBuffer()Создаёт новый объект SharedArrayBuffer.Свойства{{jsxref("SharedArrayBuffer.prototype.byteLength")}}Размер буферного массива в байтах. Задаётся при создании массива и не может быть изменён. Только для чтения.Методы{{jsxref("SharedArrayBuffer.slice", "SharedArrayBuffer.prototype.slice(begin, end)")}}Возвращает новый SharedArrayBuffer, чьё содержимое — копия байтов изначального SharedArrayBuffer с begin (начала) включительно до end (конца), но не включая его. Если параметры begin или end отрицательны, метод обращается к индексу массива, начиная с конца, а не с начала.ПримерыСоздание нового SharedArrayBuffervar sab = new SharedArrayBuffer(1024);Нарезание SharedArrayBuffersab.slice(); // SharedArrayBuffer { byteLength: 1024 }
-sab.slice(2); // SharedArrayBuffer { byteLength: 1022 }
-sab.slice(-2); // SharedArrayBuffer { byteLength: 2 }
-sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }Использование в буфере WebGLconst canvas = document.querySelector('canvas');
-const gl = canvas.getContext('webgl');
-const buffer = gl.createBuffer();
-gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);Спецификации{{Specifications}}Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
-Смотрите также{{jsxref("Atomics")}}{{jsxref("ArrayBuffer")}}Типизированные массивы JavaScriptВеб-воркерыparlib-simple — простая библиотека, предоставляющая синхронизацию и абстракции для распределённых работ.Разделяемая память — краткая инструкция
+## Смотрите также
 
-Немного о новых примитивах JavaScript для параллелизации работ – Mozilla Hacks`
+- {{jsxref("Atomics")}}
+- {{jsxref("ArrayBuffer")}}
+- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- [Web Workers](/ru/docs/Web/API/Web_Workers_API)
+- [Shared Memory – a brief tutorial](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md) in the TC39 ecmascript-sharedmem proposal
+- [A Taste of JavaScript's New Parallel Primitives](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/) on hacks.mozilla.org (2016)
+- [COOP and COEP explained](https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit) by the Chrome team (2020)
+- {{HTTPHeader("Cross-Origin-Opener-Policy")}}
+- {{HTTPHeader("Cross-Origin-Embedder-Policy")}}
+- {{HTTPHeader("Cross-Origin-Resource-Policy")}}
+- [`crossOriginIsolated`](/ru/docs/Web/API/Window/crossOriginIsolated)
+- [SharedArrayBuffer updates in Android Chrome 88 and Desktop Chrome 92](https://developer.chrome.com/blog/enabling-shared-array-buffer/) on developer.chrome.com (2021)

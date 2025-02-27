@@ -9,9 +9,9 @@ slug: Web/API/HTMLElement/outerText
 
 ## Пример
 
-[См. ответ на StackOverflow.](http://stackoverflow.com/a/18481435)
+[См. ответ на StackOverflow.](https://stackoverflow.com/a/18481435)
 
-## Спецификация
+## Спецификации
 
 Не является частью какой-либо спецификации. Обсуждение стандарта: [whatwg/html#668](https://github.com/whatwg/html/issues/668).
 

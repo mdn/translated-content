@@ -17,7 +17,29 @@ const AsyncGeneratorFunction = async function* () {}.constructor;
 
 `AsyncGeneratorFunction` は {{jsxref("Function")}} のサブクラスです。
 
-{{EmbedInteractiveExample("pages/js/async-functionasterisk-function.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: AsyncGeneratorFunction()", "taller")}}
+
+```js interactive-example
+const AsyncGeneratorFunction = async function* () {}.constructor;
+
+const foo = new AsyncGeneratorFunction(`
+  yield await Promise.resolve('a');
+  yield await Promise.resolve('b');
+  yield await Promise.resolve('c');
+`);
+
+let str = "";
+
+async function generate() {
+  for await (const val of foo()) {
+    str = str + val;
+  }
+  console.log(str);
+}
+
+generate();
+// Expected output: "abc"
+```
 
 ## コンストラクター
 
@@ -33,7 +55,7 @@ _親である {{jsxref("Function")}} から継承したインスタンスプロ�
 - {{jsxref("Object/constructor", "AsyncGeneratorFunction.prototype.constructor")}}
   - : このインスタンスオブジェクトを生成したコンストラクター関数です。 `AsyncGeneratorFunction` インスタンスにおいては、初期値は {{jsxref("AsyncGeneratorFunction/AsyncGeneratorFunction", "AsyncGeneratorFunction")}} コンストラクターです。
 - `AsyncGeneratorFunction.prototype.prototype`
-  - : すべての非同期ジェネレータ関数は同じ [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) プロパティを共有していて、それは [`AsyncGenerator.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator) です。それぞれの非同期ジェネレーター関数のインスタンスは自分自身で `prototype` プロパティも持ちます。非同期ジェネレーター関数が呼び出されると、返される非同期ジェネレーターオブジェクトは非同期ジェネレーター関数の `prototype` プロパティを継承し、そのプロパティは `AsyncGeneratorFunction.prototype` を継承します。
+  - : すべての非同期ジェネレータ関数は同じ [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティを共有していて、それは [`AsyncGenerator.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator) です。それぞれの非同期ジェネレーター関数のインスタンスは自分自身で `prototype` プロパティも持ちます。非同期ジェネレーター関数が呼び出されると、返される非同期ジェネレーターオブジェクトは非同期ジェネレーター関数の `prototype` プロパティを継承し、そのプロパティは `AsyncGeneratorFunction.prototype` を継承します。
 - `AsyncGeneratorFunction.prototype[@@toStringTag]`
   - : [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"AsyncGeneratorFunction"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用します。
 

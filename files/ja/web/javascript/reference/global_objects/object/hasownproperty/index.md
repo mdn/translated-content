@@ -1,44 +1,60 @@
 ---
 title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
+l10n:
+  sourceCommit: 619eb04efb7c6171fd4385fd4ba926805ee08a35
 ---
 
 {{JSRef}}
 
-**`hasOwnProperty()`** メソッドは、オブジェクト自身が（継承されていない）指定されたプロパティを持っているかどうかを示す真偽値を返します。
+**`hasOwnProperty()`** は {{jsxref("Object")}} インスタンスのメソッドで、オブジェクト自身が（継承されていない）指定されたプロパティを持っているかどうかを示す論理値を返します。
 
-{{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}
+> **メモ:** {{jsxref("Object.hasOwn()")}} は `hasOwnProperty()` よりもブラウザーの対応状況の面で推奨されます。
+
+{{InteractiveExample("JavaScript Demo: Object.prototype.hasOwnProperty()")}}
+
+```js interactive-example
+const object1 = {};
+object1.property1 = 42;
+
+console.log(object1.hasOwnProperty("property1"));
+// Expected output: true
+
+console.log(object1.hasOwnProperty("toString"));
+// Expected output: false
+
+console.log(object1.hasOwnProperty("hasOwnProperty"));
+// Expected output: false
+```
 
 ## 構文
 
-```
-obj.hasOwnProperty(prop)
+```js-nolint
+hasOwnProperty(prop)
 ```
 
 ### 引数
 
-- _prop_
-  - : テストするプロパティの名前の {{jsxref("String")}} または {{Glossary("Symbol")}} 。
+- `prop`
+  - : テストするプロパティの名前の文字列または[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。
 
 ### 返値
 
-{{jsxref("Boolean")}} で、オブジェクトが指定されたプロパティを自身のプロパティとして持っているかどうかを示す
+オブジェクトが指定したプロパティを自分自身で保有している場合は `true` を返し、そうでない場合は `false` を返します。
 
 ## 解説
 
-{{jsxref("Object")}} のすべての子孫は `hasOwnProperty` メソッドを継承しています。このメソッドはあるオブジェクトが指定されたプロパティを、そのオブジェクトの直接のプロパティとして持っているかどうかを特定するのに使うことができます。 {{jsxref("Operators/in", "in")}} 演算子とは異なり、このメソッドはオブジェクトのプロトタイプチェーンをたどってチェックしません。 {{jsxref("Object")}} が {{jsxref("Array")}} の場合、 `hasOwnProperty` メソッドはある添字が存在するかどうかを調べることができます。
+**`hasOwnProperty()`** メソッドは、指定したプロパティがオブジェクトの直接のプロパティである場合 (たとえその値が `null` または `undefined` であっても) 、 `true` を返します。プロパティが継承されているか、まったく宣言されていない場合は `false` を返します。 {{jsxref("Operators/in", "in")}} 演算子とは異なり、このメソッドはオブジェクトのプロトタイプチェーンに指定したプロパティがあるかどうかを調べません。
 
-## 注
-
-`hasOwnProperty` はプロパティの値が `null` または `undefined` であっても true を返します。
+なぜなら、ほとんどのオブジェクトは {{jsxref("Object")}} の子孫であり、そのメソッドを継承しているからです。例えば配列 ({{jsxref("Array")}}) はオブジェクト {{jsxref("Object")}} なので、インデックスが存在するかどうかを調べるには `hasOwnProperty()` メソッドを使用することができます。
 
 ```js
-o = new Object();
-o.propOne = null;
-o.hasOwnProperty("propOne"); // true を返す
-o.propTwo = undefined;
-o.hasOwnProperty("propTwo"); // true を返す
+const fruits = ["Apple", "Banana", "Watermelon", "Orange"];
+fruits.hasOwnProperty(3); // true ('Orange')
+fruits.hasOwnProperty(4); // false - not defined
 ```
+
+このメソッドは、再実装されたオブジェクトや、 [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)（`Object.prototype` を継承していない）では利用できません。これらの場合の例は下記の通りです。
 
 ## 例
 
@@ -47,10 +63,17 @@ o.hasOwnProperty("propTwo"); // true を返す
 オブジェクト `o` が `prop` という名前のプロパティを持っているかどうかを特定する例を以下に示します。
 
 ```js
-o = new Object();
-o.hasOwnProperty("prop"); // false を返す
-o.prop = "exists";
-o.hasOwnProperty("prop"); // true を返す
+const example = {};
+example.hasOwnProperty("prop"); // false
+
+example.prop = "exists";
+example.hasOwnProperty("prop"); // true - 'prop' が定義されている
+
+example.prop = null;
+example.hasOwnProperty("prop"); // true - null 値を持つ独自プロパティ
+
+example.prop = undefined;
+example.hasOwnProperty("prop"); // true - undefined 値を持つ独自プロパティ
 ```
 
 ### 直接のプロパティと継承されたプロパティ
@@ -58,55 +81,84 @@ o.hasOwnProperty("prop"); // true を返す
 以下の例では、直接のプロパティとプロトタイプチェーンを通じて継承されたプロパティを区別します。
 
 ```js
-o = new Object();
-o.prop = "exists";
-o.hasOwnProperty("prop"); // true を返す
-o.hasOwnProperty("toString"); // false を返す
-o.hasOwnProperty("hasOwnProperty"); // false を返す
+const example = {};
+example.prop = "exists";
+
+// `hasOwnProperty` は直接のプロパティについてのみ true を返す
+example.hasOwnProperty("prop"); // true
+example.hasOwnProperty("toString"); // false
+example.hasOwnProperty("hasOwnProperty"); // false
+
+// 演算子 `in` は、直接または継承されたプロパティに対して true を返す
+"prop" in example; // true
+"toString" in example; // true
+"hasOwnProperty" in example; // true
 ```
 
 ### オブジェクトのプロパティの反復処理
 
-以下の例では、継承されたプロパティを除いてオブジェクトのプロパティを反復処理する方法を示します。なお、 {{jsxref("Statements/for...in", "for...in")}} ループですでに列挙可能なアイテムのみが反復処理されるので、 `hasOwnProperty` 自体は列挙可能なアイテムに厳密に限定されているため、ループ内に列挙できないプロパティが見られないことに基づいて想定するべきではありません ({{jsxref("Object.getOwnPropertyNames()")}} のように)。
+以下の例では、継承されたプロパティを除いてオブジェクトのプロパティを反復処理する方法を示します。
 
 ```js
-var buz = {
+const buz = {
   fog: "stack",
 };
 
-for (var name in buz) {
+for (const name in buz) {
   if (buz.hasOwnProperty(name)) {
-    console.log("this is fog (" + name + ") for sure. Value: " + buz[name]);
+    console.log(`this is fog (${name}) for sure. Value: ${buz[name]}`);
   } else {
     console.log(name); // toString or something else
   }
 }
 ```
 
+なお、 {{jsxref("Statements/for...in", "for...in")}} ループですでに列挙可能なアイテムのみが反復処理されるので、 `hasOwnProperty` 自体は列挙可能なアイテムに厳密に限定されているため、ループ内に列挙できないプロパティが見られないことに基づいて想定するべきではありません ({{jsxref("Object.getOwnPropertyNames()")}} のように)。
+
 ### プロパティ名としての hasOwnProperty の使用
 
-JavaScript は `hasOwnProperty` というプロパティ名を保護していません。したがって、オブジェクトがこの名前のプロパティを持っている場合が存在すれば、正しい結果を得るためには*外部の* `hasOwnProperty` を使用する必要があります。
+JavaScript は `hasOwnProperty` というプロパティ名を保護していません。この名前を持ったプロパティを持つオブジェクトでは、正しくない結果が返る可能性があります。
 
 ```js
-var foo = {
-  hasOwnProperty: function () {
+const foo = {
+  hasOwnProperty() {
     return false;
   },
   bar: "Here be dragons",
 };
 
-foo.hasOwnProperty("bar"); // 常に false を返す
+foo.hasOwnProperty("bar"); // 再実装では常に false を返す
+```
+
+この問題を克服するために推奨される方法は、代わりに {{jsxref("Object.hasOwn()")}} を使用することです（対応しているブラウザーで）。他にも、外部の `hasOwnProperty` を使用する方法があります。
+
+```js
+const foo = { bar: "Here be dragons" };
+
+// Use Object.hasOwn() method - recommended
+Object.hasOwn(foo, "bar"); // true
+
+// Use the hasOwnProperty property from the Object prototype
+Object.prototype.hasOwnProperty.call(foo, "bar"); // true
 
 // 別な Object の hasOwnProperty 使用して、
 // this を foo に設定して呼び出す
 ({}).hasOwnProperty.call(foo, "bar"); // true
-
-// この目的では、 Object プロトタイプの hasOwnProperty プロパティを
-// 使用することもできます。
-Object.prototype.hasOwnProperty.call(foo, "bar"); // true
 ```
 
 なお、後者の場合は新しくオブジェクトを生成しません。
+
+### Object.create(null) で作成されたオブジェクト
+
+[`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)は `Object.prototype` を継承していないので、 `hasOwnProperty()` はアクセス不可になります。
+
+```js
+const foo = Object.create(null);
+foo.prop = "exists";
+foo.hasOwnProperty("prop"); // Uncaught TypeError: foo.hasOwnProperty は関数ではない
+```
+
+この場合の解決策は前の節と同じです。構成については {{jsxref("Object.hasOwn()")}} を使用し、そうでなければ外部オブジェクトの `hasOwnProperty()` を使用してください。
 
 ## 仕様書
 
@@ -114,11 +166,12 @@ Object.prototype.hasOwnProperty.call(foo, "bar"); // true
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.hasOwnProperty")}}
+{{Compat}}
 
 ## 関連情報
 
-- [プロパティの列挙可能性と所有権](/ja/docs/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.hasOwn()")}}
+- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}

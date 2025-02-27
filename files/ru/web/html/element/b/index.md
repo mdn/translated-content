@@ -3,19 +3,21 @@ title: <b> - жирное выделение текста
 slug: Web/HTML/Element/b
 ---
 
+{{HTMLSidebar}}
+
 **HTML-элемент `<b>`** является частью текста стилистически отличающейся от нормального текста, не носящий какого-либо специального значения или важности, и как правило выделен жирным шрифтом.
 
-| [Content categories](/ru/docs/HTML/Content_categories) | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), palpable content.       |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённый контент                                    | [Phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                        |
-| Tag omission                                           | {{no_tag_omission}}                                                                                                                                           |
-| Permitted parents                                      | Any element that accepts [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).                                                               |
-| Permitted ARIA roles                                   | Any                                                                                                                                                           |
-| DOM interface                                          | {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the [`HTMLSpanElement`](/ru/docs/DOM/span) interface for this element. |
+| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content), palpable content. |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённый контент                                        | [Phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                                                      |
+| Tag omission                                               | Нет, открывающий и закрывающий теги обязательны.                                                                                                                |
+| Permitted parents                                          | Any element that accepts [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                             |
+| Permitted ARIA roles                                       | Any                                                                                                                                                             |
+| DOM interface                                              | {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the [`HTMLSpanElement`](/ru/docs/DOM/span) interface for this element.   |
 
 ## Атрибуты
 
-Этот элемент содержит только [global attributes](/ru/docs/HTML/Global_attributes).
+Этот элемент содержит только [global attributes](/ru/docs/Web/HTML/Global_attributes).
 
 ## Указания по применению
 
@@ -24,7 +26,7 @@ slug: Web/HTML/Element/b
 - Также не помечайте заглавия и заголовки элементом `<b>`. Для этих целей используйте элементы с {{HTMLElement("h1")}} до {{HTMLElement("h6")}} . К тому же CSS может изменять стандартный вид этих элементов, в результате чего они _не всегда_ будут выделены жирным текстом.
 - Хорошей практикой является использование атрибута **class** на элементе `<b>` для того, чтобы передать дополнительную семантическую информацию (например, `<b class="lead">` для первого предложения в абзаце). Это упрощает разработку различных стилизаций веб-документа без надобности менять его HTML-код.
 - Исторически, элемент `<b>` был задуман для выделения текста жирным шрифтом. Информация о стилизации устарела, начиная с HTML4, значение элемента `<b>` было изменено.
-- Если нет семантической причины использовать элемент \<b>, использование css свойства [font-weight](/ru/docs/CSS/font-weight) со значением bold будет более грамотным выбором для изменения толщины текста.
+- Если нет семантической причины использовать элемент \<b>, использование css свойства [font-weight](/ru/docs/Web/CSS/font-weight) со значением bold будет более грамотным выбором для изменения толщины текста.
 
 ## Пример
 
@@ -50,7 +52,7 @@ slug: Web/HTML/Element/b
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -58,5 +60,3 @@ slug: Web/HTML/Element/b
 
 - Другие элементы содержащие [text-level semantics](/ru/docs/HTML/Text_level_semantics_conveying_elements): {{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("abbr")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
 - [Using \<b> and \<i> elements (W3C)](https://www.w3.org/International/questions/qa-b-and-i-tags)
-
-{{HTMLSidebar}}

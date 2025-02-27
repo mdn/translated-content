@@ -27,7 +27,7 @@ Dans le [forum d'apprentissage du MDN](https://discourse.mozilla.org/c/mdn/learn
 
 ## Comment aider
 
-1. Tout d'abord, [créez-vous un compte MDN](/fr/docs/MDN/Contribute/Getting_started#step_1_create_an_account_on_mdn), si vous n'en avez pas déjà un. Vous n'avez pas nécessairement besoin de le faire pour contribuer à l'espace d'apprentissage, mais cela vous sera utile à long terme.
+1. Tout d'abord, [créez-vous un compte MDN](/fr/docs/MDN/Community/Contributing/Getting_started#step_1_create_an_account_on_mdn), si vous n'en avez pas déjà un. Vous n'avez pas nécessairement besoin de le faire pour contribuer à l'espace d'apprentissage, mais cela vous sera utile à long terme.
 2. Inscrivez-vous également à [Mozilla Discourse](https://discourse.mozilla.org/), si ce n'est pas déjà fait.
 3. Jetez un coup d'œil à la section [Apprendre le développement web](/fr/docs/Learn) et acquérez un niveau de familiarité de base avec ce qui s'y trouve, si ce n'est pas déjà fait (voir la section [Structure de l'espace d'apprentissage MDN](Structure_of_the_MDN_Learning_Area) ci-dessous pour vous aider).
 
@@ -59,7 +59,8 @@ Dans le [forum d'apprentissage du MDN](https://discourse.mozilla.org/c/mdn/learn
       4. Si la personne est loin d'avoir trouvé une solution, soyez gentil et encourageant et essayez de lui donner quelques indices sur la direction à prendre. Donnez-lui une autre chance d'essayer de faire mieux.
       5. Si vous avez besoin d'aide pour quoi que ce soit, demandez de l'aide dans le salon de discussion [MDN Web Docs](https://chat.mozilla.org/#/room/#mdn:mozilla.org) sur [Matrix](https://wiki.mozilla.org/Matrix).
 
-> **Attention :** Avant tout, soyez patient, amical et aimable. N'oubliez pas que la plupart de ces personnes sont des débutants.
+> [!WARNING]
+> Avant tout, soyez patient, amical et aimable. N'oubliez pas que la plupart de ces personnes sont des débutants.
 
 ## Structure de l'espace d'apprentissage MDN
 

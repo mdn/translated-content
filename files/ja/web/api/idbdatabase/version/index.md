@@ -1,17 +1,16 @@
 ---
-title: IDBDatabase.version
+title: "IDBDatabase: version プロパティ"
+short-title: version
 slug: Web/API/IDBDatabase/version
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{ APIRef("IDBDatabase") }}
+{{ APIRef("IndexedDB") }}
 
-{{domxref("IDBDatabase")}} インターフェイスの **`version`** プロパティは、接続しているデータベースのバージョンを含む [64-bit integer](/ja/docs/NSPR_API_Reference/Long_Long_%2864-bit%29_Integers) です。データベースを初めて生成した時、この属性は空文字です。
+**`version`** は {{domxref("IDBDatabase")}} インターフェイスのプロパティで、接続しているデータベースのバージョンを含む [64 ビット整数](/ja/docs/NSPR_API_Reference/Long_Long_%2864-bit%29_Integers)です。データベースを初めて生成した時、この属性は空文字です。
 
-## 構文
-
-```js
-db.version;
-```
+{{AvailableInWorkers}}
 
 ### 値
 
@@ -20,16 +19,16 @@ db.version;
 ## 例
 
 ```js
-// 我々のデータベースを開きます｡
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+// データベースを開く
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // これら 2 個のイベントハンドラーは､データベースが正常に開かれたか､失敗した時に動作します｡
-DBOpenRequest.onerror = function (event) {
-  note.innerHTML += "<li>Error loading database.</li>";
+DBOpenRequest.onerror = (event) => {
+  note.innerHTML += "<li>データベースの読み込みに失敗しました｡</li>";
 };
 
-DBOpenRequest.onsuccess = function (event) {
-  note.innerHTML += "<li>Database initialised.</li>";
+DBOpenRequest.onsuccess = (event) => {
+  note.innerHTML += "<li>データベースを初期化しました｡</li>";
 
   // データベースを開いた結果を変数 db に保存します｡これは後でたくさん使います｡
   db = DBOpenRequest.result;
@@ -45,7 +44,7 @@ DBOpenRequest.onsuccess = function (event) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.IDBDatabase.version")}}
+{{Compat}}
 
 ## 関連情報
 

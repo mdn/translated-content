@@ -18,7 +18,8 @@ Antes de iniciar este módulo, você deve ter:
 3. Familiaridade básica com HTML, como foi discutido no módulo [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML).
 4. Um entendimento do básico em CSS, como o mostrado no módulo [Primeiros Passos com CSS](/pt-BR/docs/Learn/CSS/First_steps).
 
-> **Nota:** Se você estiver usando um computador/tablet/outro dispositivo onde você não puder criar seus próprios arquivos, você pode tentar rodar (a maioria) os códigos de exemplo em um programa de codificação online como o [JSBin](http://jsbin.com/) ou [Glitch](https://glitch.com/).
+> [!NOTE]
+> Se você estiver usando um computador/tablet/outro dispositivo onde você não puder criar seus próprios arquivos, você pode tentar rodar (a maioria) os códigos de exemplo em um programa de codificação online como o [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guias
 
@@ -60,11 +61,11 @@ Este módulo contém os seguintes artigos, que cobrem a maioria das partes essen
 
 Deseja testar suas habilidades de CSS? As avaliações a seguir testarão sua compreensão do CSS abordado nos guias acima.
 
-- [Entendimento fundamental de CSS](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension)
+- [Entendimento fundamental de CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
   - : Esta avaliação testará seu entendimento da sintaxe básica, seletores, especificidade, modelo caixa, e mais.
-- [Criando uma carta timbrada ideal](/pt-BR/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper)
+- [Criando uma carta timbrada ideal](/pt-BR/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
   - : Se você deseja causar uma boa impressão, escrever uma carta em papel timbrado bonito pode ser um bom começo. Nesta avaliação, desafiaremos você a criar um modelo online para obter essa aparência.
-- [Caixa de estilo atraente](/pt-BR/docs/Learn/CSS/Styling_boxes/A_cool_looking_box)
+- [Caixa de estilo atraente](/pt-BR/docs/Learn/CSS/Building_blocks/A_cool_looking_box)
   - : Aqui você aprenderá a usar o estilo de plano de fundo e borda para criar uma caixa agradável.
 
 ## Veja também

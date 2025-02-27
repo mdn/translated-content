@@ -7,7 +7,7 @@ slug: Web/CSS/CSS_shapes/Overview_of_shapes
 
 [CSS Shapes Level 1 Specification](https://www.w3.org/TR/css-shapes/) 在 CSS 中描述了几何图形的 shape（以下叫做形状）。在“Level 1 of the specification”中定义的形状被设计用来绘制浮动的元素。这篇文章提供关于“你能如何绘制这些形状”的概览。
 
-举个例子：你在左侧设计一个浮动元素，它可以令文本环绕于该浮动元素的右侧和底部，并且以一种矩形的样式。如果你接着指定一个圆形的样式，文本就会以圆形的样式环绕。.
+举个例子：你在左侧设计一个浮动元素，它可以令文本环绕于该浮动元素的右侧和底部，并且以一种矩形的样式。如果你接着指定一个圆形的样式，文本就会以圆形的样式环绕。
 
 事实上，我们有多种方式去创建这类形状，并且我们在指导中将会发现 CSS 形状是怎么工作的，然后就可以跟着感觉走了。
 
@@ -16,7 +16,7 @@ slug: Web/CSS/CSS_shapes/Overview_of_shapes
 Specification 定义了三种新的权限：
 
 - {{cssxref("shape-outside")}} — 允许定义基本形状。
-- {{cssxref("shape-image-threshold")}} — 设定一个渗出阈值。如果一幅图像被用于定义形状，那么只有在大于等于渗出阈值的部分才会显示，其他部分不会显示出来。.
+- {{cssxref("shape-image-threshold")}} — 设定一个渗出阈值。如果一幅图像被用于定义形状，那么只有在大于等于渗出阈值的部分才会显示，其他部分不会显示出来。
 - {{cssxref("shape-margin")}} — 在形状外面加上边框。
 
 ## 定义基本的形状
@@ -59,7 +59,7 @@ Specification 定义了三种新的权限：
 
 {{EmbedGHLiveSample("css-examples/shapes/overview/box.html", '100%', 810)}}
 
-详见 [Shapes From Box Values](/zh-CN/docs/Web/CSS/CSS_shapes/Shapes_From_Box_Values)。
+详见 [Shapes From Box Values](/zh-CN/docs/Web/CSS/CSS_shapes/From_box_values)。
 
 ### 由 Image 创建的形状
 
@@ -107,7 +107,7 @@ Specification 定义了三种新的权限：
 
 ## 形状的开发工具
 
-和 CSS 形状的开发工具类似，Firefox 在 Firefox DevTools 中自带 [Shape Path Editor](/zh-CN/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes) 开发工具。这个工具让你可以查看网页中的任意形状，甚至可以实时显示改变形状之后的效果。如果你的多边形不正确，你可以用 Shapes Editor 调节，然后复制粘贴到 CSS 中。
+和 CSS 形状的开发工具类似，Firefox 在 Firefox DevTools 中自带 [Shape Path Editor](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html) 开发工具。这个工具让你可以查看网页中的任意形状，甚至可以实时显示改变形状之后的效果。如果你的多边形不正确，你可以用 Shapes Editor 调节，然后复制粘贴到 CSS 中。
 
 在 Firefox 60 当中，对于含有 `clip-path`的属性的元素默认启用 Shape Path Editor。你也可以编辑 含有 `shape-outside` 的属性的元素，但前提是开启`layout.css.shape-outside.enabled` 首选项。
 

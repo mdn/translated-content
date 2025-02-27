@@ -3,6 +3,8 @@ title: XHR (XMLHttpRequest)
 slug: Glossary/XMLHttpRequest
 ---
 
+{{GlossarySidebar}}
+
 {{domxref("XMLHttpRequest")}} (XHR) это {{Glossary("JavaScript")}} {{Glossary("API")}} для создания {{Glossary("AJAX")}} запросов. Методы этого объекта предоставляют возможность отправки сетевых запросов между {{Glossary("browser")}} и {{Glossary("server")}}.
 
 ## Узнать больше
@@ -15,4 +17,4 @@ slug: Glossary/XMLHttpRequest
 ### Техническая информация
 
 - Объект {{domxref("XMLHttpRequest")}}
-- [документация MDN о том, как использовать XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [документация MDN о том, как использовать XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

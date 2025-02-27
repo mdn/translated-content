@@ -3,11 +3,12 @@ title: GlobalEventHandlers.onclick
 slug: Web/API/Element/click_event
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
 Свойство **onclick** возвращает обработчик события `click` на текущем элементе.
 
-> **Примечание:** При использовании обработчика события `click` для вызова любого действия, убедитесь, что событие `keydown` имеет такое же действие. Это нужно для того, чтобы пользователи, которые не используют мышь или тачскрин могли использовать то же действие.
+> [!NOTE]
+> При использовании обработчика события `click` для вызова любого действия, убедитесь, что событие `keydown` имеет такое же действие. Это нужно для того, чтобы пользователи, которые не используют мышь или тачскрин могли использовать то же действие.
 
 ## Синтаксис
 
@@ -15,7 +16,7 @@ slug: Web/API/Element/click_event
 element.onclick = functionRef;
 ```
 
-где _functionRef_ это функция - зачастую это имя функции, которая объявлена где-то в другом месте или же _функциональное выражение_. См. "[JavaScript Guide:Functions](/ru/docs/JavaScript/Guide/Functions)".
+где _functionRef_ это функция - зачастую это имя функции, которая объявлена где-то в другом месте или же _функциональное выражение_. См. "[JavaScript Guide:Functions](/ru/docs/Web/JavaScript/Guide/Functions)".
 
 Единственный аргумент, переданный в определённую функцию обработчик события это {{domxref("MouseEvent")}} объект. `this` внутри обработчика будет указывать на элемент, на котором было вызвано событие.
 
@@ -76,7 +77,7 @@ p.onclick = function (event) {
 
 ## Смотрите также
 
-- {{event("click")}} event
+- [`click`](/ru/docs/Web/API/Element/click_event) event
 - Related event handlers
 
   - {{domxref("GlobalEventHandlers.onauxclick")}}

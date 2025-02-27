@@ -78,8 +78,8 @@ var classes = "header";
 classes += isLargeScreen()
   ? ""
   : item.isCollapsed
-  ? " icon-expander"
-  : " icon-collapser";
+    ? " icon-expander"
+    : " icon-collapser";
 ```
 
 В ES2015 с шаблонными литералами без вложения:
@@ -155,7 +155,7 @@ t2Closure("Hello", { foo: "World" }); // "Hello World!"
 
 ### Сырые строки
 
-Специальное свойство `raw`, доступное для первого аргумента тегового шаблона, позволяет получить строку в том виде, в каком она была введена, без [экранирования](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Использование_специальных_символов_в_строках).
+Специальное свойство `raw`, доступное для первого аргумента тегового шаблона, позволяет получить строку в том виде, в каком она была введена, без [экранирования](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#использование_специальных_символов_в_строках).
 
 ```js
 function tag(strings) {

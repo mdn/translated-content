@@ -3,6 +3,8 @@ title: Цветовой контраст
 slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 ---
 
+{{AccessibilitySidebar}}
+
 ## Описание проблемы
 
 Цветовой контраст между фоном и содержимым переднего плана (обычно текстом) должен быть минимальным, чтобы обеспечить удобство чтения. Хорошо иметь крутой дизайн на своём сайте, но он бесполезен, если ваши пользователи не могут прочитать контент.
@@ -38,11 +40,11 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 
 Если вы используете нетекстовый контент, такой как видео или анимация, вы должны следовать 1.4.11.
 
-Чтобы проверить свой контраст при выборе цвета, используйте такой инструмент, как [Color Contrast Checker](http://webaim.org/resources/contrastchecker/) от WebAIM.
+Чтобы проверить свой контраст при выборе цвета, используйте такой инструмент, как [Color Contrast Checker](https://webaim.org/resources/contrastchecker/) от WebAIM.
 
-Вы также можете проверить цветовой контраст на лету с помощью инструментов разработчика Firefox — см. наше руководство [Инспектор доступности](/ru/docs/Tools/Инспектор_доступности), и в частности раздел [Цветовой контраст](/ru/docs/Tools/Инспектор_доступности#Цветовой_контраст).
+Вы также можете проверить цветовой контраст на лету с помощью инструментов разработчика Firefox — см. наше руководство [Инспектор доступности](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html), и в частности раздел [Цветовой контраст](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#цветовой_контраст).
 
 ## Смотрите также
 
-- [Цвет и цветовой контраст](/ru/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast)
+- [Цвет и цветовой контраст](/ru/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast)
 - [Понимание нетекстового контраста](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)

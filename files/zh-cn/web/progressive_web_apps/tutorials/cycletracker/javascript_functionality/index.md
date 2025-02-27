@@ -115,9 +115,9 @@ function checkDatesInvalid(startDate, endDate) {
 
 我们使用 [Web 存储 API](/zh-CN/docs/Web/API/Web_Storage_API)，具体来说是 [window.localStorage](/zh-CN/docs/Web/API/Window/localStorage)，以字符串化的 JSON 对象形式存储开始日期和结束日期对。
 
-[LocalStorage](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage#存储简单数据_—_web_storage) 有一些局限性，但对我们的应用需求足够了。我们使用 localStorage 是为了让它简单且仅存储在客户端上。这意味着数据将只存储在单个设备上的单个浏览器上。清除浏览器数据也会失去所有存储在 local storage 的经期。对许多应用程序来说这可能看起来是一个局限，但对于这个应用程序来说，月经经期数据是个人的，并且使用此类应用程序的用户可能非常关心隐私。
+[LocalStorage](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage#存储简单数据_—_web_storage) 有一些局限性，但对我们的应用需求足够了。我们使用 localStorage 是为了让它简单且仅存储在客户端上。这意味着数据将只存储在单个设备上的单个浏览器上。清除浏览器数据也会失去所有存储在 local storage 的经期。对许多应用程序来说这可能看起来是一个局限，但对于这个应用程序来说，月经经期数据是个人的，并且使用此类应用程序的用户可能非常关心隐私。
 
-对于更健壮的应用程序，其他[客户端存储](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)选项比如 [IndexDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)（IDB）和后面讨论的 service worker 具有更好的性能。
+对于更健壮的应用程序，其他[客户端存储](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage)选项比如 [IndexDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)（IDB）和后面讨论的 service worker 具有更好的性能。
 
 `localStorage` 的局限包括：
 

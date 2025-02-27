@@ -11,7 +11,8 @@ Elementos `<input>` do tipo **`"password"`** são uma maneira do usuário digita
 
 Os detalhes de como o processo de inserção do texto funciona podem variar dependendo do navegador. Dispositivos móveis, por exemplo, frequentemente mostram o caractere digitado por um breve momento antes de ser ocultado, de forma que o usuário possa verificar se realmente digitou o caractere pretendido. Isso é útil devido ao tamanho reduzido das teclas e a facilidade de se pressionar a tecla errada, principalmente em teclados virtuais.
 
-> **Note:** Todo formulário que envolve informações sensíveis tais como senhas (ex.: formulários de login) deve ser servido usando HTTPS. Vários navegadores implementam mecanismos que avisam sobre formulários não protegidos - veja [Senhas não Protegidas](/pt-BR/docs/Security/SenhasNãoProtegidas).
+> [!NOTE]
+> Todo formulário que envolve informações sensíveis tais como senhas (ex.: formulários de login) deve ser servido usando HTTPS. Vários navegadores implementam mecanismos que avisam sobre formulários não protegidos - veja [Senhas não Protegidas](/pt-BR/docs/Security/SenhasNãoProtegidas).
 
 <table class="properties">
   <tbody>
@@ -25,7 +26,7 @@ Os detalhes de como o processo de inserção do texto funciona podem variar depe
     </tr>
     <tr>
       <td><strong>Eventos</strong></td>
-      <td>{{event("change")}} e {{event("input")}}</td>
+      <td>[`change`](/pt-BR/docs/Web/Events/change) e [`input`](/pt-BR/docs/Web/API/Element/input_event)</td>
     </tr>
     <tr>
       <td><strong>Atributos comuns suportados</strong></td>
@@ -66,7 +67,8 @@ O atributo [`value`](/pt-BR/docs/Web/HTML/Element/input#value) contém uma {{dom
 
 Se o atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) for especificado, o conteúdo de um controle `"password"` só é considerado válido se o valor passar na validação; veja [Validação](#validação) para mais informações.
 
-> **Note:** Os caracteres de quebra de linha _line feed_ (U+000A) e _carriage return_ (U+000D) não são permitidos em valores de `"password"`. Quando o valor de um campo de senha é definido, os caracteres acima são removidos do valor.
+> [!NOTE]
+> Os caracteres de quebra de linha _line feed_ (U+000A) e _carriage return_ (U+000D) não são permitidos em valores de `"password"`. Quando o valor de um campo de senha é definido, os caracteres acima são removidos do valor.
 
 ## Usando campos de senha
 

@@ -184,4 +184,4 @@ ARIA は、要素に適用できる意味づけを定義しており、これら
 
 ### MicrosoftEdge 固有のプロパティ
 
-- [`x-ms-aria-flowfrom`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-aria-flowfrom) {{Non-standard_Inline}}
+- [`x-ms-aria-flowfrom`](/ja/docs/Web/Accessibility/ARIA) {{Non-standard_Inline}}

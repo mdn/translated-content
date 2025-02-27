@@ -45,7 +45,7 @@ all: revert;
 
 ## Ejemplos
 
-**HTML**
+### HTML
 
 ```html
 <blockquote id="quote">
@@ -54,7 +54,7 @@ all: revert;
 Phasellus eget velit sagittis.
 ```
 
-**CSS**
+### CSS
 
 ```css
 html {

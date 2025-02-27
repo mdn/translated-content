@@ -3,6 +3,8 @@ title: Global object (グローバルオブジェクト)
 slug: Glossary/Global_object
 ---
 
+{{GlossarySidebar}}
+
 グローバルオブジェクトは、{{glossary("global scope", "グローバルスコープ")}}上に常時存在する{{glossary("object", "オブジェクト")}}です。
 
 JavaScript では、グローバルオブジェクトが常に定義されています。ウェブブラウザー上でスクリプトがグローバル変数を生成する時、グローバルオブジェクトのメンバーとして作成されます。 ({{Glossary("Node.js")}} ではこの限りではありません。) グローバルオブジェクトが実装する{{Glossary("interface", "インターフェイス")}}は、どのようなコンテキストでスクリプトが実行されているかによって変化します。例えば、
@@ -54,7 +56,7 @@ greeting: function greeting() {
 }
 ```
 
-- [MDN 用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{glossary("global scope", "グローバルスコープ")}}
   - {{glossary("object", "オブジェクト")}}

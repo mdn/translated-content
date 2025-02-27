@@ -5,7 +5,7 @@ slug: Web/CSS/border-left-width
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/CSS) 的 **`border-left-width`** 属性用来设置盒子的左边框的宽度。
+[CSS](/zh-CN/docs/Web/CSS) 的 **`border-left-width`** 属性用来设置盒子的左边框的宽度。
 
 {{EmbedInteractiveExample("pages/css/border-left-width.html")}}
 
@@ -38,7 +38,8 @@ border-left-width: unset;
     - `medium` 一个中等边框
     - `thick` 一个粗边框
 
-    > **备注：** 因为规范没有定义每个关键字表示的确切厚度，当使用其中之一的关键字时，需要具体实施才知道确切结果。不过，它们通常遵循下面的模式 `thin ≤ medium ≤ thick`, 在单独文档中这些值内部是恒定不变的。
+    > [!NOTE]
+    > 因为规范没有定义每个关键字表示的确切厚度，当使用其中之一的关键字时，需要具体实施才知道确切结果。不过，它们通常遵循下面的模式 `thin ≤ medium ≤ thick`, 在单独文档中这些值内部是恒定不变的。
 
 ### 形式语法
 

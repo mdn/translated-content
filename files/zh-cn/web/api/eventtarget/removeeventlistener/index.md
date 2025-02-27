@@ -11,7 +11,8 @@ slug: Web/API/EventTarget/removeEventListener
 
 如果一个 {{domxref("EventTarget")}} 上的[事件监听器](/zh-CN/docs/Web/API/EventTarget/addEventListener#事件监听回调)在另一监听器处理该事件时被移除，那么它将不能被事件触发。不过，它可以被重新绑定。
 
-> **警告：** 如果同一个事件监听器分别为“事件捕获（`capture` 为 `true`）”和“事件冒泡（`capture` 为 `false`）”注册了一次，这两个版本的监听器需要分别移除。移除捕获监听器不会影响非捕获版本的相同监听器，反之亦然。
+> [!WARNING]
+> 如果同一个事件监听器分别为“事件捕获（`capture` 为 `true`）”和“事件冒泡（`capture` 为 `false`）”注册了一次，这两个版本的监听器需要分别移除。移除捕获监听器不会影响非捕获版本的相同监听器，反之亦然。
 
 还有一种移除事件监听器的方法：可以向 {{domxref("EventTarget/addEventListener()", "addEventListener()")}} 传入一个 {{domxref("AbortSignal")}}，稍后再调用拥有该事件的控制器上的 {{domxref("AbortController/abort()", "abort()")}} 方法即可。
 

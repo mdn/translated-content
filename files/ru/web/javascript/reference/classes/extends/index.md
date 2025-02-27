@@ -93,7 +93,7 @@ Object.getPrototypeOf(nullExtends.prototype); // null
 new nullExtends(); //ReferenceError: this is not defined
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

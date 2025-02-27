@@ -11,7 +11,7 @@ slug: Web/CSS/box-shadow
 
 Свойство `box-shadow` включает отбрасывание тени от границ практически любого элемента. Если для элемента с тенью задан {{cssxref("border-radius")}}, то отбрасываемая тень также будет с закруглёнными углами. Порядок наложения нескольких теней такой же, что и у [текстовых теней](/ru/docs/Web/CSS/text-shadow): первая указанная тень будет поверх остальных.
 
-[Генератор теней](/ru/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator) — интерактивный инструмент, позволяющий сгенерировать значение для `box-shadow`.
+[Генератор теней](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator) — интерактивный инструмент, позволяющий сгенерировать значение для `box-shadow`.
 
 ## Синтаксис
 
@@ -157,7 +157,7 @@ p {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -166,4 +166,4 @@ p {
 - Тип данных {{cssxref("&lt;color&gt;")}}
 - Другие свойства, относящиеся к цвету: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}} и {{cssxref("column-rule-color")}}
 - {{cssxref("text-shadow")}}
-- [Применение цвета к HTML-элементам с помощью CSS](/ru/docs/Web/HTML/Applying_color)
+- [Применение цвета к HTML-элементам с помощью CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color)

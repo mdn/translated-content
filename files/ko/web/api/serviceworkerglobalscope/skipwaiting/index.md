@@ -47,9 +47,9 @@ self.addEventListener("install", function (event) {
 
 ## See also
 
-- [Using Service Workers](/ko/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{domxref("Clients.claim()")}}
 - {{jsxref("Promise", "Promises")}}
-- [Using web workers](/ko/docs/Web/Guide/Performance/Using_web_workers)
+- [Using web workers](/ko/docs/Web/API/Web_Workers_API/Using_web_workers)

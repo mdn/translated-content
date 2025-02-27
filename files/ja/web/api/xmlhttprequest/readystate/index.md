@@ -1,11 +1,12 @@
 ---
-title: XMLHttpRequest.readyState
+title: "XMLHttpRequest: readyState プロパティ"
+short-title: readyState
 slug: Web/API/XMLHttpRequest/readyState
 l10n:
-  sourceCommit: abf155210d826c2584d23433eb2eac45a6669d23
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 **XMLHttpRequest.readyState** プロパティは XMLHttpRequest (XHR) クライアントの状態を返します。XHR クライアントは次の状態のいずれかをとります。
 
@@ -22,7 +23,7 @@ l10n:
 - OPENED
   - : open() メソッドは実行済み。この状態の間は、リクエストヘッダーを [setRequestHeader()](/ja/docs/Web/API/XMLHttpRequest/setRequestHeader) メソッドを使ってセットでき、[send()](/ja/docs/Web/API/XMLHttpRequest/send) メソッドを呼び出すと取得を開始できる。
 - HEADERS_RECEIVED
-  - : send() は呼び出し済みで、レスポンスヘッダーを受け取り済み。
+  - : send() が呼び出され、（もしあれば）すべてのリダイレクトをたどり、 レスポンスヘッダーを受信しました。
 - LOADING
   - : レスポンス本文を受信中。 [`responseType`](/ja/docs/Web/API/XMLHttpRequest/responseType) が "text" または空文字列の場合、 [`responseText`](/ja/docs/Web/API/XMLHttpRequest/responseText) は読み込み中の部分的なテキストになる。
 - DONE
@@ -32,17 +33,17 @@ l10n:
 
 ```js
 const xhr = new XMLHttpRequest();
-console.log("UNSENT", xhr.readyState); // readyState will be 0
+console.log("UNSENT", xhr.readyState); // readyState は 0 になる
 
 xhr.open("GET", "/api", true);
-console.log("OPENED", xhr.readyState); // readyState will be 1
+console.log("OPENED", xhr.readyState); // readyState は 1 になる
 
 xhr.onprogress = () => {
-  console.log("LOADING", xhr.readyState); // readyState will be 3
+  console.log("LOADING", xhr.readyState); // readyState は 3 になる
 };
 
 xhr.onload = () => {
-  console.log("DONE", xhr.readyState); // readyState will be 4
+  console.log("DONE", xhr.readyState); // readyState は 4 になる
 };
 
 xhr.send(null);

@@ -1,11 +1,11 @@
 ---
-title: ":checked"
+title: :checked
 slug: Web/CSS/:checked
 ---
 
 {{CSSRef}}
 
-**`:checked`** CSS [伪类](/zh-CN/docs/CSS/Pseudo-classes)选择器表示任何处于选中状态的**radio**(`<input type="radio">`), **checkbox** (`<input type="checkbox">`) 或 ("select") 元素中的**option** HTML 元素 ("option")。
+**`:checked`** CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)选择器表示任何处于选中状态的**radio**(`<input type="radio">`), **checkbox** (`<input type="checkbox">`) 或 ("select") 元素中的**option** HTML 元素 ("option")。
 
 ```css
 /* 匹配任意被勾选/选中的 radio(单选按钮),checkbox(复选框),或者 option(select 中的一项) */
@@ -17,7 +17,8 @@ slug: Web/CSS/:checked
 
 用户通过勾选/选中元素或取消勾选/取消选中，来改变该元素的 :checked 状态。
 
-> **备注：** 因为浏览器经常将 `<option>` 视为[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)，因此不同的浏览器通过`:checked`伪类渲染出来的效果也不尽相同。
+> [!NOTE]
+> 因为浏览器经常将 `<option>` 视为[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)，因此不同的浏览器通过`:checked`伪类渲染出来的效果也不尽相同。
 
 ## 语法
 

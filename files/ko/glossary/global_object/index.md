@@ -9,9 +9,9 @@ l10n:
 
 전역 객체는 {{glossary("global scope", "전역 범위")}} 에 항상 존재하는 {{glossary("object", "객체")}} 를 의미합니다.
 
-자바스크립트에선, 전역 객체로 선언된 객체들이 항상 존재합니다. 웹브라우저에서, 스크립트가 [`var`](/ko/docs/Web/JavaScript/Reference/Statements/var) 키워드를 통해 전역 변수를 생성할 때, 이 때 생성되는 변수들은 전역 객체의 멤버로서 생성됩니다. (이것은 {{Glossary("Node.js")}} 에서는 예외입니다). 전역 객체의 {{Glossary("interface")}}는 스크립트가 실행되고 있는 곳의 실행 컨텍스트에 의존합니다. 예를 들어,
+JavaScript에선, 전역 객체로 선언된 객체들이 항상 존재합니다. 웹브라우저에서, 스크립트가 [`var`](/ko/docs/Web/JavaScript/Reference/Statements/var) 키워드를 통해 전역 변수를 생성할 때, 이 때 생성되는 변수들은 전역 객체의 멤버로서 생성됩니다. (이것은 {{Glossary("Node.js")}} 에서는 예외입니다). 전역 객체의 {{Glossary("interface")}}는 스크립트가 실행되고 있는 곳의 실행 컨텍스트에 의존합니다. 예를 들어,
 
-- 웹브라우저에 있는 스크립트가 특별히 백그라운드 작업으로 시작하지 않는 코드들은 그것의 전역 객체로써 {{domxref("Window")}} 를 가집니다. 이것은 Web에 있는 자바스크립트 코드의 상당수가 그렇습니다.
+- 웹브라우저에 있는 스크립트가 특별히 백그라운드 작업으로 시작하지 않는 코드들은 그것의 전역 객체로써 {{domxref("Window")}} 를 가집니다. 이것은 Web에 있는 JavaScript 코드의 상당수가 그렇습니다.
 - {{domxref("Worker")}} 에서 실행하는 코드는 그것의 전역 객체로서 {{domxref("WorkerGlobalScope")}} 를 가집니다.
 - {{Glossary("Node.js")}} 환경에서 실행하는 스크립트에는 전역 객체로 [`global`](https://nodejs.org/api/globals.html#globals_global)이라는 객체를 가집니다.
 

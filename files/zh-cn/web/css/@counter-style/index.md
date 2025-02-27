@@ -7,7 +7,7 @@ slug: Web/CSS/@counter-style
 
 ## 概要
 
-`@counter-style` 是一个 [CSS](/zh-CN/CSS) [at-rule](/zh-CN/CSS/At-rule) ，它让开发者可以自定义 counter 的样式。一个 `@counter-style` 规则定义了如何把一个计数器的值转化为字符串表示。
+`@counter-style` 是一个 [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)让开发者可以自定义计数器的样式。一个 `@counter-style` 规则定义了如何把一个计数器的值转化为字符串表示。
 
 最初版的 CSS 定义了一系列很好用的计数器样式，尽管近几年又添加了很多样式，但是这种限制方式被证明已经不能满足全球化的排版了。`@counter-style` 规则用一种开放的方式弥补了这一缺点，在预定义的样式不能满足需求时，它可以使开发者自定义他们自己的计数器样式。
 
@@ -67,7 +67,9 @@ slug: Web/CSS/@counter-style
 - {{cssxref("speak-as")}}
   - : 定义如何在语音识别器中读出计数器样式，比如屏幕阅读器。例如基于该描述符的值，标记符号的值可以作为有序列表的数字或者字幕作为无序列表的音频提示读出。
 
-## 例子
+## 示例
+
+### 使用 counter-style 指定符号
 
 ```css
 @counter-style circled-alpha {
@@ -77,7 +79,7 @@ slug: Web/CSS/@counter-style
 }
 ```
 
-上面的 counter style 规则在列表中可以如下使用：
+上面的计数器样式规则在列表中可以如下使用：
 
 ```css
 .items {
@@ -85,24 +87,28 @@ slug: Web/CSS/@counter-style
 }
 ```
 
-会产生如下列表：
+上面的代码将产生以下结果：
 
-Ⓐ One
-Ⓑ Two
-Ⓒ Three
-Ⓓ Four
-Ⓔ FIve
-....
-...
-Ⓨ Twenty Five
-Ⓩ Twenty Six
+```html hidden
+<ol class="items">
+  <li>一</li>
+  <li>二</li>
+  <li>三</li>
+  <li>四</li>
+  <li>五</li>
+</ol>
+<p>...</p>
+<ol class="items" start="25">
+  <li>二十五</li>
+  <li>二十六</li>
+  <li>二十七</li>
+  <li>二十八</li>
+</ol>
+```
 
-27 Twenty Seven
-28 Twenty Eight
-29 Twenty Nine
-30 Thirty
+{{EmbedLiveSample('使用 counter-style 指定符号', '', '300')}}
 
-查看更多例子 [demo page](https://mdn.github.io/css-counter-style-demo/).
+在[示例页面](https://mdn.github.io/css-examples/counter-style-demo/)上查看更多例子。
 
 ## 规范
 

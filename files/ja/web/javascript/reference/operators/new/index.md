@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Operators/new
 
 **`new` 演算子**を使用すると、開発者はユーザー定義のオブジェクト型やコンストラクター関数を持つ組み込みオブジェクト型のインスタンスを作成することができます。
 
-{{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - new operator")}}
+
+```js interactive-example
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+const car1 = new Car("Eagle", "Talon TSi", 1993);
+
+console.log(car1.make);
+// Expected output: "Eagle"
+```
 
 ## 構文
 
@@ -29,7 +42,8 @@ new constructor[([arguments])];
 1. 空のプレーンな JavaScript オブジェクトを生成します。
 2. 新しいオブジェクトにプロパティ (`__proto__`) を追加し、コンストラクター関数のプロトタイプオブジェクトに結びつけます。
 
-   > **メモ:** コンストラクター関数のプロトタイプに追加されたプロトタイプやオブジェクトは、そのためそのコンストラクター関数で（`new` を使用して）生成されたすべてのインスタンスからアクセスできます。
+   > [!NOTE]
+   > コンストラクター関数のプロトタイプに追加されたプロトタイプやオブジェクトは、そのためそのコンストラクター関数で（`new` を使用して）生成されたすべてのインスタンスからアクセスできます。
 
 3. 新しく生成されたオブジェクトインスタンスを `this` コンテキストとして結びつけます。
    （すなわち、コンストラクター関数内の `this` へのすべての参照は、最初のステップで作成されたオブジェクトを参照するようになります。）
@@ -53,7 +67,8 @@ new constructor[([arguments])];
    var myFoo = new Foo("Bar 1", 2021);
    ```
 
-> **メモ:** オブジェクトは、別のオブジェクトそのものをプロパティとして持つことができます。後述の例をご覧ください。
+> [!NOTE]
+> オブジェクトは、別のオブジェクトそのものをプロパティとして持つことができます。後述の例をご覧ください。
 
 コード `new Foo(...)` を実行すると、以下の処理が行われます。
 
@@ -86,7 +101,8 @@ console.log(car1.color); // 'black'
 console.log(car2.color); // 'original color'
 ```
 
-> **メモ:** コンストラクター関数は通常の関数と同様に（つまり `new` 演算子なしで）呼び出すことができますが、この場合、新しいオブジェクトは作成されず、`this` の値も異なります。
+> [!NOTE]
+> コンストラクター関数は通常の関数と同様に（つまり `new` 演算子なしで）呼び出すことができますが、この場合、新しいオブジェクトは作成されず、`this` の値も異なります。
 
 ## 例
 

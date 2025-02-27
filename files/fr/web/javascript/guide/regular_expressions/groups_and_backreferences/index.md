@@ -148,12 +148,12 @@ console.log(lines.join("\n"));
 ## Voir aussi
 
 - [Une prothèse d'émulation pour les groupes de capture nommés](https://github.com/zloirock/core-js#ecmascript-string-and-regexp), disponible avec la bibliothèque [`core-js`](https://github.com/zloirock/core-js)
-- [Guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)
 
-  - [Classes de caractères](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
-  - [Assertions](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
-  - [Quantificateurs](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
-  - [Séquences d'échappement pour les propriétés Unicode](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
+  - [Classes de caractères](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+  - [Assertions](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+  - [Quantificateurs](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+  - [Séquences d'échappement pour les propriétés Unicode](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
 
 - [Le constructeur `RegExp()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 - [`ClassRanges` dans la spécification ECMAScript](https://tc39.es/ecma262/multipage/text-processing.html#sec-classranges)

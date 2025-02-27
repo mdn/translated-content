@@ -5,7 +5,7 @@ slug: Web/API/BatteryManager/levelchange_event
 
 {{APIRef("Battery API")}}
 
-Especifica um _event listener_ para receber eventos {{event("levelchange")}}. Esses eventos ocorrem quando o {{domxref("BatteryManager.level","level")}} (nível) da bateria é atualizado.
+Especifica um _event listener_ para receber eventos [`levelchange`](/pt-BR/docs/Web/Events/levelchange). Esses eventos ocorrem quando o {{domxref("BatteryManager.level","level")}} (nível) da bateria é atualizado.
 
 ## Sintaxe
 
@@ -13,15 +13,15 @@ Especifica um _event listener_ para receber eventos {{event("levelchange")}}. Es
 navigator.battery.onlevelchange = funcRef
 ```
 
-Onde `funcRef` é uma função para ser chamada quando o evento {{event("levelchange")}} ocorre.
+Onde `funcRef` é uma função para ser chamada quando o evento [`levelchange`](/pt-BR/docs/Web/Events/levelchange) ocorre.
 
 ## Especificações
 
-{{page("/pt-BR/docs/Web/API/BatteryManager","Specifications")}}
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{page("/pt-BR/docs/Web/API/BatteryManager","Browser_compatibility")}}
+{{Compat}}
 
 ## Veja também
 

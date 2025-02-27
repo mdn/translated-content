@@ -3,7 +3,7 @@ title: 測試媒體查詢
 slug: Web/CSS/CSS_media_queries/Testing_media_queries
 ---
 
-{{SeeCompatTable}}
+{{CSSRef}}{{SeeCompatTable}}
 
 DOM 提供了一個用程式去測試 media query 的方法：那就是透過 {{domxref("MediaQueryList") }} 物件；透過 {{domxref("MediaQueryList") }} 物件上的屬性和方法，我們可以得知、觀察目前 media query 的狀態。
 
@@ -67,7 +67,7 @@ mql.removeListener(handleOrientationChange);
 
 ## 延伸閱讀
 
-- [Media queries](/zh-TW/docs/CSS/Media_queries)
+- [Media queries](/zh-TW/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - {{domxref("window.matchMedia()") }}
 - {{domxref("MediaQueryList") }}
 - {{domxref("MediaQueryListListener") }}

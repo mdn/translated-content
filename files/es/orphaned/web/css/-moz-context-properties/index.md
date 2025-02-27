@@ -6,7 +6,8 @@ original_slug: Web/CSS/-moz-context-properties
 
 {{CSSRef}}{{Non-standard_header}}
 
-> **Nota:** Este recurso esta disponible desde Firefox 55, pero solamente es compatible con imagenes SVG cargadas via `chrome://` o `resource://` URLs. Para experimentar con la caracteristica SVG en la web, es necesario poner `svg.context-properties.content.enabled` en `true`.
+> [!NOTE]
+> Este recurso esta disponible desde Firefox 55, pero solamente es compatible con imagenes SVG cargadas via `chrome://` o `resource://` URLs. Para experimentar con la caracteristica SVG en la web, es necesario poner `svg.context-properties.content.enabled` en `true`.
 
 Si mencionas una imagen SVG en una pagina web({{htmlelement("img")}} como elemento o como fondo de pagina), la imagen SVG puede coordinarse con el elemento incrustado(su contexto) para que la imagen adopte las propiedades puestas en el elemento incrustado. Para hacer esto, el elemento incrustado necesita listar las propiedades que deben estar disponibles para la imagen listadolas como valores de la propiedad **`-moz-context-properties`**, y la imagen necesita optar a usar esas propiedades utilizando valores tales como el valor de `context-fill`.
 
@@ -66,7 +67,8 @@ Ahora que has hecho eso la imagen SVG puede utlizar los valores de {{cssxref("fi
 
 Aqui hemos puesto que la imagen `src` sea una URL de datos que contiene una imagen SVG simple; el `<rect>` de dentro ha sido hecho para coger sus valores de `fill` y `stroke` de {{cssxref("fill")}} y {{cssxref("stroke")}} puestos en el elemento `<img>` poniendo `context-fill`/`context-stroke` en sus valores asi como un color para rellenar(rojo) que sera utilizado en caso que el SVG es cargado independientemente en una ventana superior(donde no tendra contexto para dar los valores ). Tener en cuenta que si un colore es directamente puesto en el SVG, pero el color del contexto tambien es especificado, el color del contexto sobreescribe el color directo.
 
-> **Nota:** Puedes en contrar un [ejemplo de ejecucion en Github](https://mdn.github.io/css-examples/moz-context-properties/).
+> [!NOTE]
+> Puedes en contrar un [ejemplo de ejecucion en Github](https://mdn.github.io/css-examples/moz-context-properties/).
 
 ## Especificaciones
 

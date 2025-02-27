@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Statements/function
 
 La déclaration **`function`** (ou l'instruction `function`) permet de définir une fonction et les paramètres que celle-ci utilise.
 
-{{EmbedInteractiveExample("pages/js/statement-function.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Function")}}
+
+```js interactive-example
+function calcRectArea(width, height) {
+  return width * height;
+}
+
+console.log(calcRectArea(5, 6));
+// Expected output: 30
+```
 
 Il est également possible de définir des fonctions en utilisant le constructeur {{jsxref("Function")}} et une {{jsxref("Opérateurs/L_opérateur_function", "expression de fonction","",1)}}.
 
@@ -143,5 +152,5 @@ function calc_ventes(nb_produits_a, nb_produits_b, nb_produits_c) {
 - L'expression {{jsxref("Opérateurs/function*", "function*")}}
 - {{jsxref("Fonctions/Fonctions_fléchées", "Les fonctions fléchées","",1)}}
 - {{jsxref("GeneratorFunction")}}
-- [L'instruction `async function` (les déclarations des fonctions asynchrones)](/fr/docs/Web/JavaScript/Reference/Instructions/async_function)
-- [L'opérateur `async function` (les expressions de fonctions asynchrones)](/fr/docs/Web/JavaScript/Reference/Opérateurs/async_function)
+- [L'instruction `async function` (les déclarations des fonctions asynchrones)](/fr/docs/Web/JavaScript/Reference/Statements/async_function)
+- [L'opérateur `async function` (les expressions de fonctions asynchrones)](/fr/docs/Web/JavaScript/Reference/Operators/async_function)

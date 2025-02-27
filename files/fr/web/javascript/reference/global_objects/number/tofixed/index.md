@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 
 La méthode **`toFixed()`** permet de formater un nombre en notation à point-fixe.
 
-{{EmbedInteractiveExample("pages/js/number-tofixed.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toFixed()")}}
+
+```js interactive-example
+function financial(x) {
+  return Number.parseFloat(x).toFixed(2);
+}
+
+console.log(financial(123.456));
+// Expected output: "123.46"
+
+console.log(financial(0.004));
+// Expected output: "0.00"
+
+console.log(financial("1.23e+5"));
+// Expected output: "123000.00"
+```
 
 ## Syntaxe
 
@@ -35,7 +50,8 @@ Une chaîne de caractères qui représente le nombre indiqué avec une notation 
 
 `toFixed()` renvoie une chaîne de caractères représentant `objetNumber` sans notation exponentielle et qui possède exactement `nbChiffres` pour la partie fractionnaire. Le nombre est arrondi si nécessaire et la partie fractionnaire est complétée par des zéros si nécessaire pour obtenir la longueur souhaitée. Si le `objetNumber` est supérieur ou égal à `1e+21`, la méthode utilise simplement {{jsxref("Number.prototype.toString()")}} et renvoie une chaîne en notation exponentielle.
 
-> **Attention :** En raison du standard [IEEE 754](https://fr.wikipedia.org/wiki/IEEE_754) qui est utilisé par JavaScript pour représenter les nombres, tous les nombres décimaux ne sont pas représentés exactement en JavaScript, ce qui peut mener à des résultats inattendus (comme `0.1 + 0.2 === 0.3` qui renvoie `false`).
+> [!WARNING]
+> En raison du standard [IEEE 754](https://fr.wikipedia.org/wiki/IEEE_754) qui est utilisé par JavaScript pour représenter les nombres, tous les nombres décimaux ne sont pas représentés exactement en JavaScript, ce qui peut mener à des résultats inattendus (comme `0.1 + 0.2 === 0.3` qui renvoie `false`).
 
 ## Exemples
 

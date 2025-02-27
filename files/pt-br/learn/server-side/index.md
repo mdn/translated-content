@@ -19,9 +19,9 @@ Um conhecimento básico de conceitos de programação (ou de uma linguagem de pr
 
 Você precisará entender "como a web funciona". Recomendamos que você leia primeiro os seguintes tópicos:
 
-- [O que é um servidor web?](/pt-BR/docs/Learn/Common_questions/What_is_a_web_server)
-- [Qual software eu preciso para construir um website?](/pt-BR/docs/Learn/Common_questions/What_software_do_I_need)
-- [Como você faz o upload de arquivos para um servidor web?](/pt-BR/docs/Learn/Common_questions/Upload_files_to_a_web_server)
+- [O que é um servidor web?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [Qual software eu preciso para construir um website?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
+- [Como você faz o upload de arquivos para um servidor web?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
 
 Com essa compreensão básica, você estará pronto para percorrer os módulos desta seção.
 

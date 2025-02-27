@@ -31,7 +31,7 @@ slug: Web/HTML/Element/script
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -84,7 +84,7 @@ slug: Web/HTML/Element/script
   - : 일반 `script` 요소는 표준 {{glossary("CORS")}}를 통과하지 못했을 때 {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}}에 최소한의 정보만 넘깁니다. `crossorigin` 속성은 정적 미디어에 대해 별도의 도메인을 사용하는 사이트의 오류 기록을 허용하기 위해 사용할 수 있습니다. 유효한 인수에 대한 보다 자세한 설명은 [CORS 설정 속](/ko/docs/Web/HTML/Attributes/crossorigin)성 문서를 참고하세요.
 - `defer`
 
-  - : 브라우저가 스크립트를 문서 분석 이후에, 그러나 {{event("DOMContentLoaded")}} 발생 이전에 실행해야 함을 나타내는 불리언 속성입니다.
+  - : 브라우저가 스크립트를 문서 분석 이후에, 그러나 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 발생 이전에 실행해야 함을 나타내는 불리언 속성입니다.
 
     `defer` 속성을 가진 스크립트는 자신의 평가가 끝나기 전까지 `DOMContentLoaded` 이벤트의 발생을 막습니다.
 
@@ -117,7 +117,8 @@ slug: Web/HTML/Element/script
     - `strict-origin-when-cross-origin`: 동일 출처 요청에는 매개변수를 제거한 전체 URL을 전송합니다. 목적지가 현재 문서와 동일하거나 더 높은 보안 수준(HTTP(S)→HTTPS)을 가진 경우 자신의 출처를 전송합니다. 그 외의 경우 아무 레퍼러 정보도 보내지 않습니다.
     - `unsafe-url`: 동일 출처와 교차 출처 요청 모두에 대해서 전체 URL을 전송합니다. TLS로 보호하는 리소스에서 안전하지 않은 출처에 경로까지 노출하므로 **안전하지 않습니다**.
 
-    > **참고:** 빈 문자열 값(`""`)은 기본값이자 `referrerpolicy` 특성을 지원하지 않는 경우 사용하는 대체값입니다. `referrerpolicy`를 `<script>` 요소에 명시하지 않은 경우 더 상위 단계의 정책, 즉 문서 자체나 도메인의 정책을 따라갑니다. 상위 단계 정책도 사용할 수 없을 땐 빈 문자열을 `no-referrer-when-downgrade`로 간주합니다.
+    > [!NOTE]
+    > 빈 문자열 값(`""`)은 기본값이자 `referrerpolicy` 특성을 지원하지 않는 경우 사용하는 대체값입니다. `referrerpolicy`를 `<script>` 요소에 명시하지 않은 경우 더 상위 단계의 정책, 즉 문서 자체나 도메인의 정책을 따라갑니다. 상위 단계 정책도 사용할 수 없을 땐 빈 문자열을 `no-referrer-when-downgrade`로 간주합니다.
 
 - `src`
   - : 외부 스크립트를 가리키는 {{glossary("URI")}}입니다. 문서 내에 스크립트를 직접 삽입하는 것 대신 사용할 수 있습니다.
@@ -125,7 +126,7 @@ slug: Web/HTML/Element/script
 
   - : 스크립트의 유형을 나타냅니다. 다음 다섯개의 범주 중 하나에 속할 수 있습니다.
 
-    - **생략 또는 JavaScript MIME 유형:** 스크립트가 JavaScript임을 나타냅니다. 이 경우, HTML5 명세는 웹 작성자가 불필요한 `type`을 포함하지 않고 완전히 제외할 것을 촉구합니다. 보다 오래된 브라우저에서는 `type` 특성의 값으로 삽입 혹은 (`src` 특성으로) 불러온 스크립트의 언어를 표시하곤 했습니다. JavaScript MIME 유형은 [명세에 나열](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types)되어 있습니다.
+    - **생략 또는 JavaScript MIME 유형:** 스크립트가 JavaScript임을 나타냅니다. 이 경우, HTML5 명세는 웹 작성자가 불필요한 `type`을 포함하지 않고 완전히 제외할 것을 촉구합니다. 보다 오래된 브라우저에서는 `type` 특성의 값으로 삽입 혹은 (`src` 특성으로) 불러온 스크립트의 언어를 표시하곤 했습니다. JavaScript MIME 유형은 [명세에 나열](/ko/docs/Web/HTTP/MIME_types#javascript_types)되어 있습니다.
     - **`module`:** 스크립트를 JavaScript 모듈로 간주합니다. 스크립트 콘텐츠 처리가 `charset`과 `defer` 특성의 영향을 받지 않습니다. `module`의 더 자세한 사용법은 MDN의 [JavaScript 모듈 안내서](/ko/docs/Web/JavaScript/Guide/Modules)를 참고하세요. 기존 스크립트와 달리, 모듈 스크립트는 교차 출처 가져오기 시 CORS 프로토콜을 사용해야 합니다.
     - **다른 모든 값:** 내장 콘텐츠를 브라우저가 처리하지 않을 데이터 블록으로 간주합니다. 개발자는 반드시 유효하면서 JavaScript가 아닌 MIME 유형을 지정해야 합니다. `src` 특성을 무시합니다.
 
@@ -138,9 +139,9 @@ slug: Web/HTML/Element/script
 
 ## 참고
 
-브라우저가 구문 분석을 진행하다 인라인 스크립트 또는 [`async`](/ko/docs/Web/HTML/Element/script#async), [`defer`](/ko/docs/Web/HTML/Element/script#defer), `type="module"` 특성이 없는 스크립트에 도달하면 스크립트를 가져온 후 실행하기 전까지 분석을 중단합니다.
+브라우저가 구문 분석을 진행하다 인라인 스크립트 또는 [`async`](#async), [`defer`](#defer), `type="module"` 특성이 없는 스크립트에 도달하면 스크립트를 가져온 후 실행하기 전까지 분석을 중단합니다.
 
-스크립트는 `text/javascript` MIME 유형을 설정해야 하나, 브라우저는 관대한 규칙을 적용하여 이미지 형태(`image/*`), 비디오 형태(`video/*`), 오디오 형태(`audio/*`), `text/csv` 형태로 스크립트를 불러오려는 경우만 차단하고 나머지는 허용합니다. 스크립트를 차단한 경우 {{event("load")}} 대신 {{event("error")}} 이벤트를 요소에 전송합니다.
+스크립트는 `text/javascript` MIME 유형을 설정해야 하나, 브라우저는 관대한 규칙을 적용하여 이미지 형태(`image/*`), 비디오 형태(`video/*`), 오디오 형태(`audio/*`), `text/csv` 형태로 스크립트를 불러오려는 경우만 차단하고 나머지는 허용합니다. 스크립트를 차단한 경우 {{domxref("HTMLElement/load_event", "load")}} 대신 {{domxref("HTMLElement/error_event", "error")}} 이벤트를 요소에 전송합니다.
 
 ## 예제
 
@@ -162,7 +163,7 @@ slug: Web/HTML/Element/script
 
 ### 모듈 대체 스크립트
 
-[`type`](/ko/docs/Web/HTML/Element/script#type) 특성이 `module`을 지원하는 브라우저는 `nomodule` 특성을 가진 모든 `<script>`를 무시합니다. 그러므로 모듈 스크립트를 사용하면서도, 미지원 브라우저를 위한 대체 스크립트를 `nomodule`로 표시해 제공할 수 있습니다.
+[`type`](#type) 특성이 `module`을 지원하는 브라우저는 `nomodule` 특성을 가진 모든 `<script>`를 무시합니다. 그러므로 모듈 스크립트를 사용하면서도, 미지원 브라우저를 위한 대체 스크립트를 `nomodule`로 표시해 제공할 수 있습니다.
 
 ```js
 <script type="module" src="main.mjs"></script>

@@ -13,10 +13,8 @@ slug: Web/CSS/env
 
 ```css
 body {
-  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px) env(
-      safe-area-inset-bottom,
-      20px
-    ) env(safe-area-inset-left, 20px);
+  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px)
+    env(safe-area-inset-bottom, 20px) env(safe-area-inset-left, 20px);
 }
 ```
 
@@ -69,10 +67,8 @@ env(safe-area-inset-left, 1.4rem);
 p {
   width: 300px;
   border: 2px solid red;
-  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px) env(
-      safe-area-inset-bottom,
-      50px
-    ) env(SAFE-AREA-INSET-LEFT, 50px);
+  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px)
+    env(safe-area-inset-bottom, 50px) env(SAFE-AREA-INSET-LEFT, 50px);
 }
 ```
 
@@ -102,8 +98,6 @@ padding: env(
 
 向下兼容的语法和自定义属性一样，允许使用逗号。但是如果属性值不支持逗号，则该值无效。
 
-**Note**: User agent properties are not reset by the [all](/zh-CN/docs/Web/CSS/all) property.
-
 ## 规范
 
 {{Specifications}}
@@ -115,6 +109,9 @@ padding: env(
 ## 参见
 
 - {{CSSxRef("var", "var(…)")}}
-- [CSS Custom Properties for Cascading Variables](/zh-CN/docs/Web/CSS/CSS_cascading_variables)
-- [Custom Properties (--\*)](/zh-CN/docs/Web/CSS/--*)
-- [Using CSS custom properties (variables)](/zh-CN/docs/Web/CSS/Using_CSS_variables)
+- [用作层叠式变量的 CSS 自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables)模块
+- [自定义属性（`--*`）：CSS 变量](/zh-CN/docs/Web/CSS/--*)
+- [使用 CSS 自定义属性（变量）](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
+- [自定义 PWA 标题栏的窗口控件叠加层](https://web.developers.google.cn/articles/window-controls-overlay)
+- [在标题栏中显示内容](https://learn.microsoft.com/zh-cn/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)
+- [打破盒子](https://alistapart.com/article/breaking-out-of-the-box/)

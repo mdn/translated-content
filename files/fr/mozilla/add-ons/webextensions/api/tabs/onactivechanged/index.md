@@ -3,9 +3,10 @@ title: tabs.onActiveChanged
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActiveChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-> **Attention :** Cet événement est obsolète. Utilisez {{WebExtAPIRef("tabs.onActivated")}} à la place.
+> [!WARNING]
+> Cet événement est obsolète. Utilisez {{WebExtAPIRef("tabs.onActivated")}} à la place.
 
 Se déclenche lorsque l'onglet sélectionné dans une fenêtre change. Notez que l'URL de l'onglet peut ne pas être définie au moment où cet événement a été déclenché, mais vous pouvez écouter les événements {{WebExtAPIRef('tabs.onUpdated')}} pour être averti lorsqu'une URL est définie.
 
@@ -42,7 +43,7 @@ Les événements ont trois fonctions :
     <!---->
 
     - `selectInfo`
-      - : [`object`](#selectInfo).
+      - : [`object`](#selectinfo).
 
 ## Objets supplémentaires
 
@@ -55,9 +56,9 @@ Les événements ont trois fonctions :
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

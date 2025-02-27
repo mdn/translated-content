@@ -7,7 +7,8 @@ slug: Web/CSS/mask
 
 La propriété **`mask`** permet de masquer un élément partiellement ou complètement en utilisant un masque apposé sur l'image ou en rognant l'image aux positions données. Cette propriété est une propriété raccourcie pour les propriétés {{cssxref("mask-image")}}, {{cssxref("mask-mode")}}, {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-clip")}}, {{cssxref("mask-origin")}}, {{cssxref("mask-size")}} et {{cssxref("mask-composite ")}}.
 
-> **Note :** La propriété raccourcie réinitialise également {{cssxref("mask-border")}} avec sa valeur initiale. Il est donc recommandé d'utiliser la propriété raccourcie à travers les feuilles de style plutôt que les propriétés raccourcies (sauf en cas d'héritage complexe).
+> [!NOTE]
+> La propriété raccourcie réinitialise également {{cssxref("mask-border")}} avec sa valeur initiale. Il est donc recommandé d'utiliser la propriété raccourcie à travers les feuilles de style plutôt que les propriétés raccourcies (sauf en cas d'héritage complexe).
 
 ## Syntaxe
 
@@ -94,5 +95,5 @@ mask: unset;
 
 - {{cssxref("clip-path")}}, {{cssxref("filter")}}
 - [Les formes CSS : "clipping" et "masking" – comment les utiliser (en anglais)](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
-- [Appliquer des effets SVG à du contenu HTML](/fr/docs/Applying_SVG_effects_to_HTML_content)
+- [Appliquer des effets SVG à du contenu HTML](/fr/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
 - [SVG](/fr/docs/Web/SVG)

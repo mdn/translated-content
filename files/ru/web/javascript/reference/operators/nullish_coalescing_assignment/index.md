@@ -7,19 +7,31 @@ slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
 
 Оператор логического нулевого присваивания (`x ??= y`) присваивает значение переменной `x`, если она содержит {{Glossary("nullish", "похожее на null значение")}} (`null` или `undefined`).
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-nullish-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing assignment")}}
+
+```js interactive-example
+const a = { duration: 50 };
+
+a.speed ??= 25;
+console.log(a.speed);
+// Expected output: 25
+
+a.duration ??= 10;
+console.log(a.duration);
+// Expected output: 50
+```
 
 ## Синтаксис
 
-```js
-expr1 ??= expr2;
+```js-nolint
+x ??= y
 ```
 
 ## Описание
 
 ### Сокращённое вычисление
 
-Оператор [нулевого слияния](/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) вычисляется слева направо, делая возможным сокращённое вычисление выражения, согласно следующему правилу:
+Оператор [нулевого слияния](/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) вычисляется слева направо, делая возможным сокращённое вычисление выражения, согласно следующему правилу:
 
 `(выражение без null или undefined) ?? следующее выражение` останавливает вычисление на левом выражении, если его результат отличен от `null` или `undefined`.
 
@@ -56,13 +68,13 @@ config({}); // { duration: 100, speed: 25 }
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Оператор нулевого слияния (`??`)](/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Оператор нулевого слияния (`??`)](/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - {{Glossary("Nullish", "Похожее на null значение")}}
 - {{Glossary("Truthy", "Истиноподобное значение")}}
 - {{Glossary("Falsy", "Ложноподобное значение")}}

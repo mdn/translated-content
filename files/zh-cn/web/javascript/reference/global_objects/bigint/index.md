@@ -48,7 +48,7 @@ typeof Object(1n) === "object"; // true
 
 ### 运算
 
-以下操作符可以和 `BigInt` 一起使用： `+`、`*`、`-`、`**`、`%`。除 `>>>` （无符号右移）之外的 [位操作](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) 也可以支持。因为 `BigInt` 都是有符号的， `>>>` （无符号右移）不能用于 `BigInt`。[为了兼容 asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs)，`BigInt` 不支持单目 (`+`) 运算符。
+以下操作符可以和 `BigInt` 一起使用： `+`、`*`、`-`、`**`、`%`。除 `>>>` （无符号右移）之外的 [位操作](/zh-CN/docs/Web/JavaScript/Reference/Operators) 也可以支持。因为 `BigInt` 都是有符号的， `>>>` （无符号右移）不能用于 `BigInt`。[为了兼容 asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs)，`BigInt` 不支持单目 (`+`) 运算符。
 
 ```js
 const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
@@ -78,7 +78,8 @@ bigN * -1n
 
 `/` 操作符对于整数的运算也没问题。可是因为这些变量是 `BigInt` 而不是 `BigDecimal` ，该操作符结果会向零取整，也就是说不会返回小数部分。
 
-> **警告：** 当使用 `BigInt` 时，带小数的运算会被取整。
+> [!WARNING]
+> 当使用 `BigInt` 时，带小数的运算会被取整。
 
 ```js
 const expected = 4n / 2n;
@@ -251,16 +252,14 @@ nthPrime(20n);
 // ↪ 73n
 ```
 
-## 标准
+## 规范
 
-| 标准                                                          | 状态      |
-| ------------------------------------------------------------- | --------- |
-| [BigInt](https://tc39.es/proposal-bigint/#sec-bigint-objects) | 第 4 阶段 |
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{JSxRef("Number")}}

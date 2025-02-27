@@ -11,7 +11,8 @@ l10n:
 
 모든 최신 브라우저들은 안전한 연결을 하기 위해서 서버가 자신의 신원을 확인하는 유효한 {{Glossary("Digital certificate", "디지털 인증서")}}를 제공하도록 요구하는 TLS 프로토콜을 지원합니다. 클라이언트와 서버 둘 다 각자 개별 디지털 인증서를 제공하면, 서로를 상호 인증해줄 수 있습니다.
 
-> **참고:** TLS 1.0 와 1.1은 2020년 초부터 대부분의 브라우저에서 지원하지 않을 예정입니다. 웹 브라우저가 TLS 1.2 나 TLS 1.3을 지원하는지 확인해보는 것이 좋습니다. Firefox는 버전 74 이후로 구 TLS 버전을 사용해서 서버에 연결을 시도할 경우 [보안 연결 실패](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) 오류를 반환합니다([Firefox bug 1606734](https://bugzil.la/1606734)).
+> [!NOTE]
+> TLS 1.0 와 1.1은 2020년 초부터 대부분의 브라우저에서 지원하지 않을 예정입니다. 웹 브라우저가 TLS 1.2 나 TLS 1.3을 지원하는지 확인해보는 것이 좋습니다. Firefox는 버전 74 이후로 구 TLS 버전을 사용해서 서버에 연결을 시도할 경우 [보안 연결 실패](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) 오류를 반환합니다([Firefox bug 1606734](https://bugzil.la/1606734)).
 
 ## 같이 보기
 

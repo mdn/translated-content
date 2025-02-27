@@ -5,9 +5,26 @@ slug: Web/JavaScript/Reference/Operators/yield
 
 {{jsSidebar("Operators")}}
 
-Ключевое слово `yield` используется для остановки и возобновления функций-генераторов ({{jsxref("Statements/function*", "function*")}} или [legacy generator function](/ru/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)).
+Ключевое слово `yield` используется для остановки и возобновления функций-генераторов ({{jsxref("Statements/function*", "function*")}} или [legacy generator function](/ru/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)).
 
-{{EmbedInteractiveExample("pages/js/expressions-yield.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - yield")}}
+
+```js interactive-example
+function* foo(index) {
+  while (index < 2) {
+    yield index;
+    index++;
+  }
+}
+
+const iterator = foo(0);
+
+console.log(iterator.next().value);
+// Expected output: 0
+
+console.log(iterator.next().value);
+// Expected output: 1
+```
 
 ## Синтаксис
 
@@ -61,5 +78,5 @@ console.log(iterator.next()); // { value:undefined, done:true }
 
 ## Смотрите также
 
-- [Итераторы](/ru/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [Итераторы](/ru/docs/Web/JavaScript/Reference/Iteration_protocols)
 - [Генераторы](/ru/docs/Web/JavaScript/Reference/Statements/function*)
