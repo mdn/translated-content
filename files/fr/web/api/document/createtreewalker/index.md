@@ -19,10 +19,9 @@ treeWalker = document.createTreeWalker(root, whatToShow, filter);
   - : est le {{domxref("Node")}} (_nœud_) racine du {{domxref("TreeWalker")}} à traverser. Généralement, ce sera un
     élément appartenant au document.
 - _whatToShow {{optional_inline}}_
-
   - : est un `unsigned long` (_long non signé_) facultatif représentant un masque de bits créé par combinaison des
-    propriétés de constante de [
-    `NodeFilter`](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter). C'est un moyen
+    propriétés de constante de
+    [`NodeFilter`](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter). C'est un moyen
     pratique de filtrage pour certains types de nœuds. Par défaut `0xFFFFFFFF` représentant la constante `SHOW_ALL`.
 
 | Constante                                                | Valeur numérique | Description                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -42,7 +41,7 @@ treeWalker = document.createTreeWalker(root, whatToShow, filter);
 | `NodeFilter.SHOW_TEXT`                                   | `0x4`            | Affiche les nœuds {{domxref("Text")}}.                                                                                                                                                                                                                                                                                                                                                                                 |
 
 - `filter` {{optional_inline}}
-  - : est un {{domxref("NodeFilter")}} (_filtre de nœud_) facultatif, c'est à dire un objet avec une méthode
+  - : est un {{domxref("NodeFilter")}} (_filtre de nœud_) facultatif, c'est-à-dire un objet avec une méthode
     `acceptNode` appelé par {{domxref("TreeWalker")}} pour déterminer s'il doit accepter ou non un nœud qui a passé le
     test `whatToShow`.
 - `entityReferenceExpansion` {{optional_inline}} {{deprecated_inline}}a
@@ -132,6 +131,7 @@ div {
   margin: 0.25em 0;
   padding: 0.25em;
 }
+
 span {
   display: inline-block;
 }
@@ -141,6 +141,7 @@ span {
 .escape {
   border: dashed;
 }
+
 .no-escape {
   border: solid;
 }
@@ -152,12 +153,11 @@ span {
 const treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT,
-  (node) =>
-    node.classList.contains("no-escape")
+  (node) => node.classList.contains("no-escape")
       ? NodeFilter.FILTER_REJECT
       : node.closest(".escape")
-      ? NodeFilter.FILTER_ACCEPT
-      : NodeFilter.FILTER_SKIP,
+        ? NodeFilter.FILTER_ACCEPT
+        : NodeFilter.FILTER_SKIP,
 );
 
 while (treeWalker.nextNode()) {
