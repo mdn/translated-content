@@ -153,7 +153,8 @@ span {
 const treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT,
-  (node) => node.classList.contains("no-escape")
+  (node) =>
+    node.classList.contains("no-escape")
       ? NodeFilter.FILTER_REJECT
       : node.closest(".escape")
         ? NodeFilter.FILTER_ACCEPT
