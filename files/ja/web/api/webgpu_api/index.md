@@ -37,7 +37,8 @@ WebGPU は、最近の GPU API と互換性があり、より「webby」な感�
   - 個別 GPU: 独自の基板にあり、CPU からは分離されています。
   - ソフトウェア「GPU」: CPU 上で実装されています。
 
-  > **メモ:** 上記の図では、GPU が 1 個だけあるデバイスを仮定しています。
+  > [!NOTE]
+  > 上記の図では、GPU が 1 個だけあるデバイスを仮定しています。
 
 - OS の一部であるネイティブ GPU API (たとえば macOS 上の Metal) は、ネイティブアプリケーションが GPU の機能を用いることができるプログラミングインターフェイスです。API 命令がドライバーを通じて GPU に送られ、結果を受け取ります。上記の図ではネイティブ API およびドライバーが 1 個だけあるデバイスを仮定していますが、システムが GPU とやり取りするための複数のネイティブ OS API やドライバーを持つことも可能です。
 - ブラウザーの WebGPU 実装は、ネイティブ GPU API ドライバーを通じた GPU とのやり取りを扱います。WebGPU のアダプターが、あなたのコード上で下層のシステムで利用可能な物理 GPU とドライバーを効率よく表します。
@@ -132,7 +133,8 @@ fn fragment_main(fragData: VertexOut) -> @location(0) vec4f
 `;
 ```
 
-> **メモ:** ここでのデモではシェーダーコードをテンプレートリテラルに格納していますが、WebGPU プログラムに渡すテキストとして取得しやすい場所ならどこに格納することもできます。たとえば、シェーダーを {{htmlelement("script")}} 要素の中に格納し、{{domxref("Node.textContent")}} を用いて内容を取り出す方法もよく用いられます。WGSL 用の正しい MIME タイプは `text/wgsl` です。
+> [!NOTE]
+> ここでのデモではシェーダーコードをテンプレートリテラルに格納していますが、WebGPU プログラムに渡すテキストとして取得しやすい場所ならどこに格納することもできます。たとえば、シェーダーを {{htmlelement("script")}} 要素の中に格納し、{{domxref("Node.textContent")}} を用いて内容を取り出す方法もよく用いられます。WGSL 用の正しい MIME タイプは `text/wgsl` です。
 
 シェーダーコードを WebGPU で利用できるようにするには、シェーダーコードをディスクリプターオブジェクトのプロパティとして {{domxref("GPUDevice.createShaderModule()")}} に渡し、{{domxref("GPUShaderModule")}} の中に格納する必要があります。これは、たとえば以下のように行います。
 
@@ -159,7 +161,8 @@ context.configure({
 });
 ```
 
-> **メモ:** 使用するテクスチャーの形式を決めるベストプラクティスは、{{domxref("GPU.getPreferredCanvasFormat()")}} メソッドを用いることです。これは、ユーザーのデバイス用の最も効率的な形式 (`bgra8unorm` または `rgba8unorm`) を選択します。
+> [!NOTE]
+> 使用するテクスチャーの形式を決めるベストプラクティスは、{{domxref("GPU.getPreferredCanvasFormat()")}} メソッドを用いることです。これは、ユーザーのデバイス用の最も効率的な形式 (`bgra8unorm` または `rgba8unorm`) を選択します。
 
 ### バッファを生成して三角形データを書き込む
 
@@ -479,7 +482,8 @@ WebGPU の呼び出しは、GPU 処理の中で非同期で検証されます。
 
 explainer で、WebGPU のエラー処理についての詳細情報を得ることができます。[Object validity and destroyed-ness](https://gpuweb.github.io/gpuweb/explainer/#invalid-and-destroyed) および [Errors](https://gpuweb.github.io/gpuweb/explainer/#errors) を参照してください。[WebGPU Error Handling best practices](https://toji.dev/webgpu-best-practices/error-handling) には有用な実世界での例やアドバイスがあります。
 
-> **メモ:** WebGL でエラーを処理する歴史上の方法は、エラーの情報を返す {{domxref("WebGLRenderingContext.getError", "getError()")}} メソッドを提供することです。これはエラーを同期式で返し、効率がよくないという問題があります。これを呼び出すごとに GPU との往復のやりとりを行い、これまで発行した処理がすべて完了するまで待つ必要があります。さらに、状態モデルはフラット、すなわち関係ないコードの間でエラーが漏れる可能性があります。WebGPU の作者はこれらの点を改善することにしました。
+> [!NOTE]
+> WebGL でエラーを処理する歴史上の方法は、エラーの情報を返す {{domxref("WebGLRenderingContext.getError", "getError()")}} メソッドを提供することです。これはエラーを同期式で返し、効率がよくないという問題があります。これを呼び出すごとに GPU との往復のやりとりを行い、これまで発行した処理がすべて完了するまで待つ必要があります。さらに、状態モデルはフラット、すなわち関係ないコードの間でエラーが漏れる可能性があります。WebGPU の作者はこれらの点を改善することにしました。
 
 ## インターフェイス
 

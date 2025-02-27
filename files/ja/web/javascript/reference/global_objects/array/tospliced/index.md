@@ -51,7 +51,7 @@ toSpliced(start, deleteCount, item1, item2, /* …, */ itemN)
 
 `toSpliced()` メソッドは `splice()` と同様に、一度に複数のことを行います。指定されたインデックスの位置から、指定された数の要素を配列から除去し、同じインデックスの位置に指定された要素を挿入します。しかし、元の配列を変更するのではなく、新しい配列を返します。したがって、削除された要素はこのメソッドからは返されません。
 
-`toSpliced()` メソッドは決して[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)を生成しません。疎配列の場合、空のスロットは新しい配列の `undefined` に置き換わります。
+`toSpliced()` メソッドは決して[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)を生成しません。疎配列の場合、空のスロットは新しい配列の `undefined` に置き換わります。
 
 `toSpliced()` メソッドは[汎用](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。 `this` の値が `length` プロパティを持っており、整数のキーのプロパティがあることのみを期待します。
 

@@ -9,7 +9,8 @@ l10n:
 
 **`VRStageParameters`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のインターフェイスで，ルームスケール体験に対応している機器用にステージエリアを記述する値を表現しています。
 
-> **メモ:** このインターフェイスは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このインターフェイスは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 このインターフェイスには {{domxref("VRDisplay.stageParameters")}} プロパティを通じてアクセスできます。
 
@@ -58,5 +59,4 @@ navigator.getVRDisplays().then((displays) => {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームが提供するデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

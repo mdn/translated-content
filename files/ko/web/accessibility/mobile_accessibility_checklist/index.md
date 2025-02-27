@@ -5,6 +5,8 @@ l10n:
   sourceCommit: f6d04a43eadf5ab26a3488942dfb318b58234eb5
 ---
 
+{{AccessibilitySidebar}}
+
 이 문서는 모바일 앱 개발자를 위해 접근성 요구 사항에 대한 간결한 체크리스트를 제공합니다. 이 문서는 다양한 패턴의 발생에 맞춰 지속적으로 진화하려는 의도로 작성되었습니다.
 
 ## 색
@@ -38,7 +40,7 @@ l10n:
 - 앱 내 엄격하게 표현되지 않은, 텍스트가 아닌 모든 요소에 대해 동일한 의미의 텍스트가 제공되어야 합니다.
 
   - _alt_ 와 _title_ 속성은 적절하게 사용되어야 합니다 (스티브 폴크너의 [HTML의 제목 특성 사용하기](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/) 가 좋은 안내서가 될 것입니다).
-  - 위 속성을 사용하기 어려운 경우 `aria-label`, `aria-labelledby`, or `aria-describedby` 등과 같은 적절한 [ARIA 속성들](http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header)을 사용하세요.
+  - 위 속성을 사용하기 어려운 경우 `aria-label`, `aria-labelledby`, or `aria-describedby` 등과 같은 적절한 [ARIA 속성들](https://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header)을 사용하세요.
 
 - 텍스트 이미지 사용은 가급적 자제 해야 합니다.
 - 레이블 텍스트 (또는 텍스트 이미지) 의 모든 사용자 인터페이스 컴포넌트는 프로그램 [이름](https://www.w3.org/TR/WCAG21/#dfn-name)으로 사용할 수 있는 것과 동일한 텍스트를 사용해야 합니다. [WCAG 2.1: Label in Name](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
@@ -46,7 +48,7 @@ l10n:
 
 ## 상태 다루기
 
-- 라디오 버튼 및 체크박스와 같은 표준 컨트롤들은 운영체제가 처리합니다. 그러나 다른 사용자 정의 컨트롤의 경우, `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`, `aria-pressed`와 같은 [ARIA States](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header)를 통해 상태 변경이 제공되어야 합니다.
+- 라디오 버튼 및 체크박스와 같은 표준 컨트롤들은 운영체제가 처리합니다. 그러나 다른 사용자 정의 컨트롤의 경우, `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`, `aria-pressed`와 같은 [ARIA States](https://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header)를 통해 상태 변경이 제공되어야 합니다.
 
 ## 방향
 

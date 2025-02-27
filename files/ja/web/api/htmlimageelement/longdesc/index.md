@@ -3,12 +3,12 @@ title: "HTMLImageElement: longDesc プロパティ"
 short-title: longDesc
 slug: Web/API/HTMLImageElement/longDesc
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 816cc4d4a5a318a23222946b6981bb92b499aebb
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-**`longDesc`** は {{domxref("HTMLImageElement")}} インターフェイスの*非推奨の*プロパティで、この画像の長い説明のテキストまたは HTML ファイルの URL を指定します。これは、[`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性で提供される短い説明の他に、オプションで追加された詳細を提供するために使用することができます。
+**`longDesc`** は {{domxref("HTMLImageElement")}} インターフェイスの*非推奨の*プロパティで、この画像の長い説明のテキストまたは HTML ファイルの URL を指定します。これは、[`title`](/ja/docs/Web/HTML/Global_attributes/title) 属性で提供される短い説明の他に、オプションで追加された詳細を提供するために使用することができます。
 
 ## 値
 
@@ -44,7 +44,7 @@ l10n:
 
 ## 仕様書
 
-この機能は、現在のどの仕様にも含まれていません。標準化される予定はありません。
+{{Specifications}}
 
 ## ブラウザーの互換性
 

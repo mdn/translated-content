@@ -100,7 +100,7 @@ Se o método requisitado não é suportado, o servidor irá responder com um err
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Access-Control-Allow-Headers")}}
+{{Compat}}
 
 ## Veja também
 

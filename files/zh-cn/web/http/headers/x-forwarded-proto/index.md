@@ -45,7 +45,7 @@ X-Url-Scheme: https
 
 不属于任何一份既有规范。这个消息首部的标准版本是 {{HTTPHeader("Forwarded")}}.
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Forwarded")}}
 - {{HTTPHeader("X-Forwarded-For")}}

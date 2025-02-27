@@ -16,11 +16,11 @@ slug: Web/JavaScript/Guide/Iterators_and_generators
 
 ## 반복자
 
-자바스크립트에서 **반복자**(**Iterator**)는 시퀀스를 정의하고 종료시의 반환값을 잠재적으로 정의하는 객체입니다. 더 구체적으로 말하자면, 반복자는 두 개의 속성( `value`, `done`)을 반환하는 next() 메소드 사용하여 객체의 [Iterator protocol](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol)을 구현합니다. 시퀀스의 마지막 값이 이미 산출되었다면 `done` 값은 true 가 됩니다. 만약 `value`값이 `done` 과 함께 존재한다면, 그것은 반복자의 반환값이 됩니다.
+JavaScript에서 **반복자**(**Iterator**)는 시퀀스를 정의하고 종료시의 반환값을 잠재적으로 정의하는 객체입니다. 더 구체적으로 말하자면, 반복자는 두 개의 속성( `value`, `done`)을 반환하는 next() 메소드 사용하여 객체의 [Iterator protocol](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol)을 구현합니다. 시퀀스의 마지막 값이 이미 산출되었다면 `done` 값은 true 가 됩니다. 만약 `value`값이 `done` 과 함께 존재한다면, 그것은 반복자의 반환값이 됩니다.
 
 반복자를 생성하면 `next()` 메소드를 반복적으로 호출하여 명시적으로 반복시킬 수 있습니다. 반복자를 반복시키는 것은 일반적으로 한 번씩만 할 수 있기 때문에, 반복자를 소모시키는 것이라고 할 수 있습니다. 마지막 값을 산출하고나서 `next()`를 추가적으로 호출하면 `{done: true}`. 가 반환됩니다.
 
-자바스크립트에서 가장 일반적인 반복자는 배열 반복자로, 배열의 각 값을 순서대로 반환합니다. 모든 반복자가 배열로 표현될수 있다고 상상할 수 있지만 , 이것은 사실은 아닙니다. 배열은 완전히 할당되어야 하지만, 반복자는 필요한만큼만 소모되므로 무제한 시퀀스로 표현할 수 있습니다. 이를 테면 0부터 무한대사이의 정수범위처럼 말이죠.
+JavaScript에서 가장 일반적인 반복자는 배열 반복자로, 배열의 각 값을 순서대로 반환합니다. 모든 반복자가 배열로 표현될수 있다고 상상할 수 있지만 , 이것은 사실은 아닙니다. 배열은 완전히 할당되어야 하지만, 반복자는 필요한만큼만 소모되므로 무제한 시퀀스로 표현할 수 있습니다. 이를 테면 0부터 무한대사이의 정수범위처럼 말이죠.
 
 여기에 실습할 수 있는 예제가 있습니다. `start`에서 `end`까지 `step` 수 만큼 띄어진 정수 시퀀스를 정의하는 간단한 범위 반복자를 만들 수 있습니다. 최종적으로 시퀀스의 크기가 반환됩니다.
 
@@ -87,7 +87,7 @@ function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
 
 객체는 값이 {{jsxref("Statements/for...of", "for..of")}} 구조 내에서 반복되는 것 같은 그 반복 동작을 정의하는 경우 반복이 가능(**iterable**)합니다. {{jsxref("Array")}} 또는 {{jsxref("Map")}}과 같은 일부 내장 형은 기본 반복 동작이 있지만 다른 형(가령 {{jsxref("Object")}})은 없습니다.
 
-**반복가능**하기 위해서, 객체는 **@@iterator** 메서드를 구현해야 합니다. 즉, 객체( 혹은 그 [프로토타입 체인](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)에 등장하는 객체 중 하나)가 {{jsxref("Symbol.iterator")}} 키를 갖는 속성이 있어야 함을 뜻합니다.
+**반복가능**하기 위해서, 객체는 **@@iterator** 메서드를 구현해야 합니다. 즉, 객체( 혹은 그 [프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)에 등장하는 객체 중 하나)가 {{jsxref("Symbol.iterator")}} 키를 갖는 속성이 있어야 함을 뜻합니다.
 
 하나의 iterable은 단 한 번, 혹은 여러번 반복가능합니다. 어떤 순간에 어떻게 사용할 지는 프로그래머에게 달려있습니다. 단 한 번 반복가능한 iterable(e.g. Generator)은 관습적으로 자신의 **@@iterator** 메소드로부터 **this**를 반환합니다. 반면, 여러 번 반복 가능한 iterables은 **@@iterator** 메소드가 호출되는 매 회 새로운 iterator를 반드시 반환해야합니다.
 
@@ -122,7 +122,7 @@ function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
 
 ### iterable을 기대하는 구문
 
-일부 문(statement) 및 식(expression)은 iterable합니다, 가령 {{jsxref("Statements/for...of","for-of")}} 루프, {{jsxref("Operators/Spread_operator","spread syntax","","true")}}, {{jsxref("Operators/yield*","yield*")}} 및 {{jsxref("Operators/Destructuring_assignment","해체 할당","","true")}}.
+일부 문(statement) 및 식(expression)은 iterable합니다, 가령 {{jsxref("Statements/for...of","for-of")}} 루프, {{jsxref("Operators/Spread_operator","spread syntax","",1)}}, {{jsxref("Operators/yield*","yield*")}} 및 {{jsxref("Operators/Destructuring_assignment","해체 할당","",1)}}.
 
 ```js
 for (let value of ["a", "b", "c"]) {

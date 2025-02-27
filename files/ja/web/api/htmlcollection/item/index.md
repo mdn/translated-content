@@ -43,6 +43,6 @@ const img1 = images[1]; // ただし、この記述方がより易しく一般�
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{domxref("NodeList.item()")}}

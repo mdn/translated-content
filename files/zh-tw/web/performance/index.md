@@ -115,13 +115,13 @@ MDN 網路性能學習領域包含現代的、最新的教程，涵蓋性能要�
 - 理解帶寬
   - : 帶寬是每秒可以發送的以兆(Mb)或千比特(Kb)為單位的數據量。本文解釋了帶寬在富媒體 internet 應用程式中的作用，如何度量它，以及如何優化應用程式以最大限度地利用可用帶寬。
 - HTTP / 2 和你
-  - : 傳輸層(即 HTTP)對 web 的功能至關重要，直到最近才以 HTTP/2 的形式出現重大更新。與它的前輩相比，HTTP/2 提供了許多開箱即用的性能改進和優勢，但它也改變了環境。在本文中，您將瞭解 HTTP/2 為您做了什麼，以及如何對應用程式進行調優，使其更進一步。
+  - : 傳輸層(即 HTTP)對 web 的功能至關重要，直到最近才以 HTTP/2 的形式出現重大更新。與它的前輩相比，HTTP/2 提供了許多開箱即用的性能改進和優勢，但它也改變了環境。在本文中，你將瞭解 HTTP/2 為你做了什麼，以及如何對應用程式進行調優，使其更進一步。
 - TLS 在性能中的作用
   - : 在創建安全的用戶體驗時，tlls(我們傾向於稱之為 HTTPS)是至關重要的。雖然硬體已經減少了 TLS 對伺服器性能的負面影響，但它仍然占了我們等待流覽器連接到伺服器所用時間的很大一部分。本文解釋了 TLS 握手過程，並提供了一些減少這種時間的技巧，如 OCSP 裝訂、HSTS 預加載頭，以及資源提示在掩蓋第三方 TLS 延遲方面的潛在作用。
 - 讀性能圖表
-  - : 開發人員工具提供有關性能、記憶體和網路請求的資訊。瞭解如何在流覽器開發人員工具中讀取瀑布圖、調用樹、跟蹤、火焰圖和分配，將有助於您在其他性能工具中理解瀑布圖和火焰圖。
+  - : 開發人員工具提供有關性能、記憶體和網路請求的資訊。瞭解如何在流覽器開發人員工具中讀取瀑布圖、調用樹、跟蹤、火焰圖和分配，將有助於你在其他性能工具中理解瀑布圖和火焰圖。
 - 分析 JavaScript 包
-  - : 毫無疑問，JavaScript 是現代 web 開發的重要組成部分。雖然您應該始終努力減少應用程式中使用的 JavaScript 的數量，但是很難知道從哪里開始。在本指南中，我們將向您展示如何分析應用程式的腳本包，以便您瞭解自己在使用什麼，以及如何檢測應用程式是否包含包之間的重複腳本。
+  - : 毫無疑問，JavaScript 是現代 web 開發的重要組成部分。雖然你應該始終努力減少應用程式中使用的 JavaScript 的數量，但是很難知道從哪里開始。在本指南中，我們將向你展示如何分析應用程式的腳本包，以便你瞭解自己在使用什麼，以及如何檢測應用程式是否包含包之間的重複腳本。
 - 延遲加載
   - : 在初始頁面加載時加載所有 web 應用程式資產並不總是必要的。延遲加載是將頁面上的資產(如腳本、圖像等)的加載延遲到以後的某個時間點。當這些資產確實需要的時候。
 - 使用 import()延遲加載 JavaScript
@@ -138,9 +138,9 @@ MDN 網路性能學習領域包含現代的、最新的教程，涵蓋性能要�
 ### 應用程式的性能
 
 - 性能的基礎
-  - : 對 Web 應用程式性能的廣泛概述，它是什麼，流覽器如何幫助改進它，以及您可以使用什麼工具和流程來測試和進一步改進它。
+  - : 對 Web 應用程式性能的廣泛概述，它是什麼，流覽器如何幫助改進它，以及你可以使用什麼工具和流程來測試和進一步改進它。
 - 優化啟動性能
-  - : 在編寫新應用程式和將應用程式從其他平臺移植到 Web 上時，幫助您提高啟動性能的技巧和建議。
+  - : 在編寫新應用程式和將應用程式從其他平臺移植到 Web 上時，幫助你提高啟動性能的技巧和建議。
 - 使用內置的剖析器進行剖析
   - : 瞭解如何使用 Firefox 的內置分析器分析應用程式性能。
 - CSS 和 JavaScript 動畫性能
@@ -155,9 +155,9 @@ HTML
 - [The `<source>` Element](/zh-TW/docs/Web/HTML/Element/source)
 - [The `<img> srcset` attribute](/zh-TW/docs/Web/HTML/Element/img#Attributes)
 
-  - [Responsive images](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+  - [Responsive images](/zh-TW/docs/Web/HTML/Responsive_images)
 
-- [Preloading content with `rel="preload"`](/zh-TW/docs/Web/HTML/Preloading_content) - [https://w3c.github.io/preload/](https://w3c.github.io/preload/)
+- [Preloading content with `rel="preload"`](/zh-TW/docs/Web/HTML/Attributes/rel/preload) - [https://w3c.github.io/preload/](https://w3c.github.io/preload/)
 
 CSS
 
@@ -168,32 +168,32 @@ CSS
 
 JavaScript
 
-- [DOMContentLoaded](/zh-TW/docs/Web/Events/DOMContentLoaded)
+- [DOMContentLoaded](/zh-TW/docs/Web/API/Document/DOMContentLoaded_event)
 - [Garbage collection](/zh-TW/docs/Glossary/Garbage_collection)
-- [requestAnimationFrame](/zh-TW/docs/Web/API/window/requestAnimationFrame)
+- [requestAnimationFrame](/zh-TW/docs/Web/API/Window/requestAnimationFrame)
 
 APIs
 
 - [Performance API](/zh-TW/docs/Web/API/Performance_API)
-- [Navigation Timing API](/zh-TW/docs/Web/API/Navigation_timing_API)
+- [Navigation Timing API](/zh-TW/docs/Web/API/Performance_API/Navigation_timing)
 - [Media Capabilities API](/zh-TW/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API)
 - [Network Information API](/zh-TW/docs/Web/API/Network_Information_API)
 - [PerformanceNavigationTiming](/zh-TW/docs/Web/API/PerformanceNavigationTiming)
 - [Battery Status API](/zh-TW/docs/Web/API/Battery_Status_API)
 - [Navigator.deviceMemory](/zh-TW/docs/Web/API/Navigator/deviceMemory)
 - [Intersection Observer](/zh-TW/docs/Web/API/Intersection_Observer_API)
-- [Using the User Timing AP](/zh-TW/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)I
-- [Long Tasks API](/zh-TW/docs/Web/API/Long_Tasks_API)
+- [Using the User Timing AP](/zh-TW/docs/Web/API/Performance_API/User_timing)I
+- [Long Tasks API](/zh-TW/docs/Web/API/PerformanceLongTaskTiming)
 - [High Resolution Timing API](/zh-TW/docs/Web/API/DOMHighResTimeStamp) ([https://w3c.github.io/hr-time/)](https://w3c.github.io/hr-time/)
-- [Resource Timing API](/zh-TW/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- [Resource Timing API](/zh-TW/docs/Web/API/Performance_API/Resource_timing)
 - [Page Visibility](/zh-TW/docs/Web/API/Page_Visibility_API)
 - [Cooperative Scheduling of Background Tasks API](/zh-TW/docs/Web/API/Background_Tasks_API)
 
   - [requestIdleCallback()](/zh-TW/docs/Web/API/Window/requestIdleCallback)
 
-- [Beacon API](/zh-TW/docs/Web/API/Beacon_API/Using_the_Beacon_API)
+- [Beacon API](/zh-TW/docs/Web/API/Beacon_API)
 - Resource Hints - [dns-prefetch](/zh-TW/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control), preconnect, [prefetch](/zh-TW/docs/Glossary/Prefetch), and prerender
-- [Fetchevent.navigationPreload](/zh-TW/docs/Web/API/FetchEvent/navigationPreload)
+- [Fetchevent.navigationPreload](/zh-TW/docs/Web/API/FetchEvent/preloadResponse)
 - [Performance Server Timing API](/zh-TW/docs/Web/API/PerformanceServerTiming)
 
 Headers
@@ -221,6 +221,6 @@ Best Practices
 
   - [Web Workers API](/zh-TW/docs/Web/API/Web_Workers_API)
 
-- [PWA](/zh-TW/docs/Web/Apps/Progressive/Offline_Service_workers)
+- [PWA](/zh-TW/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)
 - [Caching](/zh-TW/docs/Web/HTTP/Caching)
 - Content Delivery Networks (CDN)

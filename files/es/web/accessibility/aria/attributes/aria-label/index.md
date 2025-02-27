@@ -3,7 +3,9 @@ title: Utilizando el atributo  aria-label
 slug: Web/Accessibility/ARIA/Attributes/aria-label
 ---
 
-El atributo [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) se utiliza para definir una cadena que etiqueta el elemento actual. Úselo en los casos en que no haya una etiqueta de texto visible en pantalla. Si hay texto visible etiquetando el elemento, utilice [aria-labelledby](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) en su lugar.
+{{AccessibilitySidebar}}
+
+El atributo [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) se utiliza para definir una cadena que etiqueta el elemento actual. Úselo en los casos en que no haya una etiqueta de texto visible en pantalla. Si hay texto visible etiquetando el elemento, utilice [aria-labelledby](/es/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) en su lugar.
 
 Este atributo puede ser utilizado con cualquier elemento HTML típico; no se limita a los elementos que tienen un papel ARIA asignado.
 
@@ -13,7 +15,8 @@ string
 
 ### Posibles efectos sobre los agentes de usuario y la tecnología de asistencia
 
-> **Nota:** Las opiniones pueden diferir en cómo la tecnología asistencial debe manejar esta técnica. La información proporcionada más arriba es una de esas opiniones y por lo tanto no normativa.
+> [!NOTE]
+> Las opiniones pueden diferir en cómo la tecnología asistencial debe manejar esta técnica. La información proporcionada más arriba es una de esas opiniones y por lo tanto no normativa.
 
 ## Ejemplos
 
@@ -36,7 +39,7 @@ Todos los elementos del DOM
 
 ### Técnicas ARIA relacionadas
 
-- [Usando el atributo aria-labelledby](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
+- [Usando el atributo aria-labelledby](/es/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 
 ### Compatibilidad
 

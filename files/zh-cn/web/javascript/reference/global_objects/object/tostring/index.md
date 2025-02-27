@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/toString
 
 **`toString()`** 方法返回一个表示该对象的字符串。该方法旨在重写（自定义）派生类对象的[类型转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)的逻辑。
 
-{{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.toString()")}}
+
+```js interactive-example
+function Dog(name) {
+  this.name = name;
+}
+
+const dog1 = new Dog("Gabby");
+
+Dog.prototype.toString = function dogToString() {
+  return `${this.name}`;
+};
+
+console.log(dog1.toString());
+// Expected output: "Gabby"
+```
 
 ## 语法
 
@@ -29,7 +44,7 @@ JavaScript 调用 `toString` 方法[将对象转换为一个原始值](/zh-CN/do
 
 该方法由[字符串转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)优先调用，但是[数字的强制转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制数字类型转换)和[原始值的强制转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)会优先调用 `valueOf()`。然而，因为基本的 [`valueOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) 方法返回一个对象，`toString()` 方法通常在结束时调用，除非对象重写了 `valueOf()`。例如，`+[1]` 返回 `1`，因为它的 [`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) 方法返回 `"1"`，然后将其转换为数字。
 
-所有继承自 `Object.prototype` 的对象（即，除了 [`null`-prototype 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)之外的对象）都继承 `toString()` 方法。当你创建一个自定义对象时，你可以重写 `toString()` 以调用自定义方法，以便将自定义对象转换为一个字符串。或者，你可以增加一个 [`@@toPrimitive`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 方法，该方法允许对转换过程有更多的控制，并且对于任意的类型转换，且总是优先于 `valueOf` 或 `toString`。
+所有继承自 `Object.prototype` 的对象（即，除了 [`null`-prototype 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)之外的对象）都继承 `toString()` 方法。当你创建一个自定义对象时，你可以重写 `toString()` 以调用自定义方法，以便将自定义对象转换为一个字符串。或者，你可以增加一个 [`[Symbol.toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 方法，该方法允许对转换过程有更多的控制，并且对于任意的类型转换，且总是优先于 `valueOf` 或 `toString`。
 
 要将基本的 `Object.prototype.toString()` 用于重写的对象（或者在 `null` 或 `undefined` 上调用它），你需要在它上面调用 {{jsxref("Function.prototype.call()")}} 或者 {{jsxref("Function.prototype.apply()")}}，将要检查的对象作为第一个参数传递（称为 `thisArg`）。
 

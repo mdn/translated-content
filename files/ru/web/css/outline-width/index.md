@@ -16,7 +16,7 @@ l10n:
 ## Синтаксис
 
 ```css
-/* Значения в виде ключевых слов */
+/* Ключевые слова */
 outline-width: thin;
 outline-width: medium;
 outline-width: thick;
@@ -111,7 +111,7 @@ span {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

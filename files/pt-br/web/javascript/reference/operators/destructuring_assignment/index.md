@@ -183,7 +183,8 @@ var a, b;
 ({ a, b } = { a: 1, b: 2 });
 ```
 
-> **Nota:** Os parênteses `( ... )` ao redor da declaração de atribuição é uma sintaxe necessária quando se utiliza a atribuição via desestruturação de objeto literal sem uma declaração.
+> [!NOTE]
+> Os parênteses `( ... )` ao redor da declaração de atribuição é uma sintaxe necessária quando se utiliza a atribuição via desestruturação de objeto literal sem uma declaração.
 >
 > `{a, b} = {a:1, b:2}` não é uma sintaxe stand-alone válida, pois `{a, b}` no lado esquerdo é considarada um bloco, não um objeto literal.
 >
@@ -339,7 +340,7 @@ Isso extrai o `id`, `displayName` e `firstName` do objeto `user` e os imprime na
 
 ### Nomes computados de propriedade de objeto e desestruturação
 
-Nomes computados de propriedades, como em [objetos literais](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names), podem ser usados com desestruturação.
+Nomes computados de propriedades, como em [objetos literais](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names), podem ser usados com desestruturação.
 
 ```js
 let key = "z";
@@ -350,14 +351,11 @@ console.log(foo); // "bar"
 
 ## Especificações
 
-| Espeficiação                                                                         | Situação             | Comentário         |
-| ------------------------------------------------------------------------------------ | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-destructuring-assignment', 'Destructuring assignment')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-destructuring-assignment', 'Destructuring assignment')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.destructuring")}}
+{{Compat}}
 
 ## Notas específicas do Firefox
 
@@ -366,5 +364,5 @@ console.log(foo); // "bar"
 
 ## Veja também
 
-- [Operadores de Atribuição](/pt-BR/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
+- [Operadores de Atribuição](/pt-BR/docs/Web/JavaScript/Reference/Operators#Assignment_operators)
 - ["ES6 in Depth: Destructuring" on hacks.mozilla.org (em inglês)](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/)

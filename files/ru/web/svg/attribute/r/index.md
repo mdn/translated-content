@@ -7,6 +7,8 @@ slug: Web/SVG/Attribute/r
 
 Этот атрибут используют два элемента: {{SVGElement("circle")}}, и {{SVGElement("radialGradient")}}
 
+## Пример
+
 ```css hidden
 html,
 body,
@@ -40,7 +42,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('topExample', '100%', 200)}}
+{{EmbedLiveSample("Пример", '100%', 200)}}
 
 ## circle
 
@@ -51,7 +53,8 @@ svg {
 | Значение по умолчанию | `0`                                                                                                             |
 | Анимируемость         | Да                                                                                                              |
 
-> **Примечание:** Начиная с SVG2, **r** является свойством геометрии, означающим, что этот атрибут также может использоваться как CSS-свойство для кругов.
+> [!NOTE]
+> Начиная с SVG2, **r** является свойством геометрии, означающим, что этот атрибут также может использоваться как CSS-свойство для кругов.
 
 ## radialGradient
 
@@ -66,9 +69,4 @@ svg {
 
 ## Спецификации
 
-| Specification                                                                | Status              | Comment                                              |
-| ---------------------------------------------------------------------------- | ------------------- | ---------------------------------------------------- |
-| {{SpecName("SVG2", "geometry.html#R", "r")}}                                 | {{Spec2("SVG2")}}   | Definition as a geometry property                    |
-| {{SpecName("SVG2", "pservers.html#RadialGradientElementRAttribute", "r")}}   | {{Spec2("SVG2")}}   | Definition for SVG2 paint servers `<radialGradient>` |
-| {{SpecName("SVG1.1", "pservers.html#RadialGradientElementRAttribute", "r")}} | {{Spec2("SVG1.1")}} | Initial definition for `<radialGradient>`            |
-| {{SpecName("SVG1.1", "shapes.html#CircleElementRAttribute", "r")}}           | {{Spec2("SVG1.1")}} | Initial definition for `<circle>`                    |
+{{Specifications}}

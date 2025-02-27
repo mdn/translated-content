@@ -34,7 +34,7 @@ O **elemento** **HTML** **`<em>`** marca o texto que tem ênfase. O elemento \<e
     </tr>
     <tr>
       <th scope="row">Omissão de tag</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Pais permitidos</th>
@@ -100,7 +100,7 @@ Um exemplo para `<i>` poderia ser: "A _Rainha Mary_ velejou na noite passada". A
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.em")}}
+{{Compat}}
 
 ## Veja também
 

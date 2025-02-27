@@ -3,7 +3,7 @@ title: Math.atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Сводка
 

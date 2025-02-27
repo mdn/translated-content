@@ -37,7 +37,9 @@ slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 .multi-bg-example {
   width: 100%;
   height: 400px;
-  background-image: url(firefox.png), url(bubbles.png), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+  background-image:
+    url(firefox.png), url(bubbles.png),
+    linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position:
     bottom right,
@@ -56,4 +58,4 @@ slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 
 ## 参见
 
-- [Using CSS gradients](/zh-CN/docs/CSS/Using_CSS_gradients)
+- [Using CSS gradients](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)

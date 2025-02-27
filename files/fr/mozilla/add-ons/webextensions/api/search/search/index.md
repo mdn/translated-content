@@ -3,13 +3,13 @@ title: search.search()
 slug: Mozilla/Add-ons/WebExtensions/API/search/search
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Effectuer une recherche en utilisant le moteur de recherche spécifié, ou le moteur de recherche par défaut si aucun moteur de recherche n'est spécifié.
 
 Les résultats seront affichés dans un nouvel onglet, ou si l'argument tabId est donné, dans l'onglet identifié par ceci.
 
-Pour utiliser cette fonction dans votre extension, vous devez demander la [permission manifest](/fr/Add-ons/WebExtensions/manifest.json/permissions) "search".
+Pour utiliser cette fonction dans votre extension, vous devez demander la [permission manifest](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "search".
 
 Pour obtenir les moteurs de recherche installés, utilisez {{WebExtAPIRef("search.get()")}}.
 

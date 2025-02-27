@@ -7,7 +7,7 @@ Le Web fournit d'incroyables opportunités aux développeuses et développeurs. 
 
 ## Documentation pour le développement web
 
-- [Références](/fr/docs/Web/Reference)
+- [Références](/fr/docs/Web)
   - : Une liste de l'ensemble des références sur les technologies web dont celles sur HTML, CSS, etc.
 - [Guides](/fr/docs/Web/Guide)
   - : Cette page fournit différents tutoriels pour vous aider à manipuler les technologies web afin de réaliser ce que vous souhaitez.
@@ -18,7 +18,7 @@ Le Web fournit d'incroyables opportunités aux développeuses et développeurs. 
 
 ## Références des technologies web
 
-- [API Web](/fr/docs/Web/Reference/API)
+- [API Web](/fr/docs/Web/API)
   - : Les références pour l'ensemble des API qui permettent de rendre le Web interactif et scriptable. On y trouve notamment le DOM, les diverses interfaces et API utilisées pour construire du contenu et des applications web.
 - [HTML](/fr/docs/Web/HTML)
   - : _HyperText Markup Language_ est le langage utilisé pour décrire et définir le contenu d'une page web.

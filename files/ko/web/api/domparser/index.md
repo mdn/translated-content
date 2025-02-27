@@ -31,7 +31,7 @@ let doc = domparser.parseFromString(string, mimeType);
 
 #### 반환
 
-**[`mimeType`](#Argument02)** 인자를 통해 정의한 형식에 따른 {{domxref("Document")}} 또는{{domxref("XMLDocument")}} 문서를 반환한다.
+**[`mimeType`](#argument02)** 인자를 통해 정의한 형식에 따른 {{domxref("Document")}} 또는{{domxref("XMLDocument")}} 문서를 반환한다.
 
 #### 인자
 
@@ -40,13 +40,16 @@ let doc = domparser.parseFromString(string, mimeType);
 - `string`
   - : 해석할 {{domxref("DOMString")}} 문자열. 반드시 {{Glossary("HTML")}}, {{Glossary("xml")}}, {{Glossary("xhtml+xml")}} 또는 {{Glossary("svg")}} 문서 형식에 맞아야 한다.
 - `mimeType`
-  - | : 아래 표에 정의한 형식을 반환 값으로 제공할 {{domxref("DOMString")}} 문자열. | `mimeType`                   | `doc.constructor` |
-    | ----------------------------------------------------------------------------- | ---------------------------- | ----------------- |
-    | `text/html`                                                                   | `{{domxref("Document")}}`    |
-    | `text/xml`                                                                    | `{{domxref("XMLDocument")}}` |
-    | `application/xml`                                                             | `{{domxref("XMLDocument")}}` |
-    | `application/xhtml+xml`                                                       | `{{domxref("XMLDocument")}}` |
-    | `image/svg+xml`                                                               | `{{domxref("XMLDocument")}}` |
+
+  - : 아래 표에 정의한 형식을 반환 값으로 제공할 {{domxref("DOMString")}} 문자열.
+
+    | `mimeType`              | `doc.constructor`            |
+    | ----------------------- | ---------------------------- |
+    | `text/html`             | `{{domxref("Document")}}`    |
+    | `text/xml`              | `{{domxref("XMLDocument")}}` |
+    | `application/xml`       | `{{domxref("XMLDocument")}}` |
+    | `application/xhtml+xml` | `{{domxref("XMLDocument")}}` |
+    | `image/svg+xml`         | `{{domxref("XMLDocument")}}` |
 
 ## 예제
 
@@ -62,7 +65,7 @@ let doc = domparser.parseFromString(string, mimeType);
 
 ## 같이 보기
 
-- [XML 문서 직렬화와 해석](/ko/docs/Parsing_and_serializing_XML)
+- [XML 문서 직렬화와 해석](/ko/docs/Web/XML/Parsing_and_serializing_XML)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLSerializer")}}
 - {{jsxref("JSON.parse()")}} - {{jsxref("JSON")}} 문서에 대해 같은 역할을 제공한다.

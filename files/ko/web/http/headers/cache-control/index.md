@@ -62,7 +62,7 @@ Cache-control: s-maxage=<seconds>
 
 ### 확장 `Cache-Control` 디렉티브
 
-확장 `Cache-Control` 디렉티브는 핵심 HTTP 캐싱 표준 문서에 속하지 않습니다. 지원 여부는 [호환성 테이블](#Browser_compatibility)을 확인하시기 바랍니다.
+확장 `Cache-Control` 디렉티브는 핵심 HTTP 캐싱 표준 문서에 속하지 않습니다. 지원 여부는 [호환성 테이블](#browser_compatibility)을 확인하시기 바랍니다.
 
 ```
 Cache-control: immutable
@@ -105,7 +105,7 @@ Cache-control: stale-if-error=<seconds>
 - `proxy-revalidate`
   - : `must-revalidate`와 동일하지만, (프록시와 같은)공유 캐시에만 적용되며 사설 캐시에 의해서는 무시됩니다.
 - `immutable`
-  - : 응답 본문이 계속해서 변하지 않을 것이라는 것을 나타냅니다. 응답은, 만료되지 않은 경우라면, 서버 상에서 변경되지 않을 것이고 그러므로 클라이언트는 업데이트 검사를 위해 (`If-None-Match` 혹은 `If-Modified-Since`과 같은)그에 대한 조건부의 재검증을 전송해서는 안 됩니다. 이 확장을 감지하지못한 클라이언트는 HTTP 명세에 따라 그것들을 무시해야만 합니다. 파이어폭스에서, `immutable`는 `https://` 트랜잭션 상에서만 부여됩니다. 좀 더 많은 정보는 다음의 [블로그 포스트](http://bitsup.blogspot.de/2016/05/cache-control-immutable.html)를 참고하시기 바랍니다.
+  - : 응답 본문이 계속해서 변하지 않을 것이라는 것을 나타냅니다. 응답은, 만료되지 않은 경우라면, 서버 상에서 변경되지 않을 것이고 그러므로 클라이언트는 업데이트 검사를 위해 (`If-None-Match` 혹은 `If-Modified-Since`과 같은)그에 대한 조건부의 재검증을 전송해서는 안 됩니다. 이 확장을 감지하지못한 클라이언트는 HTTP 명세에 따라 그것들을 무시해야만 합니다. Firefox에서, `immutable`는 `https://` 트랜잭션 상에서만 부여됩니다. 좀 더 많은 정보는 다음의 [블로그 포스트](http://bitsup.blogspot.de/2016/05/cache-control-immutable.html)를 참고하시기 바랍니다.
 
 ### 기타
 
@@ -126,7 +126,7 @@ Cache-Control: no-cache, no-store, must-revalidate
 
 ### 정적 에셋 캐싱
 
-변경되지 않을 애플리케이션 내 파일들에 대해, 보통 적극적인 캐싱을 추가할 수 있습니다. 이것은 예를 들자면, 이미지, CSS 파일 그리고 자바스크립트 파일과 같이 애플리케이션에 의해 서브되는 정적 파일들을 포함합니다. 추가로, `Expires` 헤더를 참고하시기 바랍니다.
+변경되지 않을 애플리케이션 내 파일들에 대해, 보통 적극적인 캐싱을 추가할 수 있습니다. 이것은 예를 들자면, 이미지, CSS 파일 그리고 JavaScript 파일과 같이 애플리케이션에 의해 서브되는 정적 파일들을 포함합니다. 추가로, `Expires` 헤더를 참고하시기 바랍니다.
 
 ```bash
 Cache-Control:public, max-age=31536000
@@ -142,7 +142,7 @@ Cache-Control:public, max-age=31536000
 
 ## 함께 참고할 내용
 
-- [HTTP Caching FAQ](/ko/docs/Web/HTTP/Caching_FAQ)
+- [HTTP Caching FAQ](/ko/docs/Web/HTTP/Caching)
 - {{HTTPHeader("Age")}}
 - {{HTTPHeader("Expires")}}
 - {{HTTPHeader("Pragma")}}

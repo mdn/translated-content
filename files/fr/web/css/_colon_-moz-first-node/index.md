@@ -1,5 +1,5 @@
 ---
-title: ":-moz-first-node"
+title: :-moz-first-node
 slug: Web/CSS/:-moz-first-node
 ---
 
@@ -7,7 +7,8 @@ slug: Web/CSS/:-moz-first-node
 
 La pseudo-classe **`:-moz-first-node`** correspond à un élément si celui-ci est le premier nœud d'un autre élément. Cette pseudo-classe est différente de {{cssxref(":first-child")}} car elle ne cible pas le premier élément qui possède du texte (hors blancs).
 
-> **Note :** Tout blanc qui serait au début d'un élément est ignoré pour la détermination de `:-moz-last-node`.
+> [!NOTE]
+> Tout blanc qui serait au début d'un élément est ignoré pour la détermination de `:-moz-last-node`.
 
 ## Syntaxe
 

@@ -9,7 +9,19 @@ JavaScript에서 **함수의 `this` 키워드**는 다른 언어와 조금 다�
 
 대부분의 경우 `this`의 값은 함수를 호출한 방법에 의해 결정됩니다. 실행중에는 할당으로 설정할 수 없고 함수를 호출할 때 마다 다를 수 있습니다. ES5는 {{jsxref('Operators/this', "함수를 어떻게 호출했는지 상관하지 않고 <code>this</code> 값을 설정할 수 있는")}} {{jsxref("Function.prototype.bind()", "bind")}} 메서드를 도입했고, ES2015는 스스로의 `this` 바인딩을 제공하지 않는 [화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/%EC%95%A0%EB%A1%9C%EC%9A%B0_%ED%8E%91%EC%85%98)를 추가했습니다(이는 렉시컬 컨텍스트안의 `this`값을 유지합니다).
 
-{{EmbedInteractiveExample("pages/js/expressions-this.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - this")}}
+
+```js interactive-example
+const test = {
+  prop: 42,
+  func: function () {
+    return this.prop;
+  },
+};
+
+console.log(test.func());
+// Expected output: 42
+```
 
 ## 구문
 
@@ -74,7 +86,7 @@ f2() === undefined; // true
 
 `this`의 값을 한 문맥에서 다른 문맥으로 넘기려면 다음 예시와 같이 {{jsxref("Function.prototype.call()", "call()")}}이나 {{jsxref("Function.prototype.apply", "apply()")}}를 사용하세요.
 
-**예시 1**
+### 예시 1
 
 ```js
 // call 또는 apply의 첫 번째 인자로 객체가 전달될 수 있으며 this가 그 객체에 묶임
@@ -92,7 +104,7 @@ whatsThis.call(obj); // this는 'Custom'. 함수 내에서 obj로 설정한다.
 whatsThis.apply(obj); // this는 'Custom'. 함수 내에서 obj로 설정한다.
 ```
 
-**예시 2**
+### 예시 2
 
 ```js
 function add(c, d) {

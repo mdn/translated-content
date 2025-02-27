@@ -62,7 +62,7 @@ div {
 
 {{EmbedLiveSample("Пример", 140, 140)}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

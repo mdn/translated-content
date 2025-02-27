@@ -137,7 +137,7 @@ Atomics.notify(int32, 0, 1);
 ## 같이 보기
 
 - {{jsxref("ArrayBuffer")}}
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
 - [웹 워커](/ko/docs/Web/API/Web_Workers_API)
 - [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – 동기화 및 작업 배포 추상화를 제공하는 간단한 라이브러리입니다.
 - [Shared Memory – a brief tutorial](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)

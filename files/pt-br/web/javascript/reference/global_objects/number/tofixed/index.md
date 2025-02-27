@@ -57,7 +57,7 @@ numObj.toFixed(6); // Retorna '12345.678900': note que adicionou zeros
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.toFixed")}}
+{{Compat}}
 
 ## Veja também
 

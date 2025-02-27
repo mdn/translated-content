@@ -21,18 +21,10 @@ slug: Web/API/HTMLElement/hidden
 - 隐藏选项卡的对话框中的面板
 - 隐藏一个演示文稿中的内容，同时又希望这个内容在其他演示文稿中是可见的
 
-> **备注：** Elements that are not `hidden` must not link to elements which are.
+> [!NOTE]
+> Elements that are not `hidden` must not link to elements which are.
 
-## 语法
-
-```
-isHidden = HTMLElement.hidden;
-
-
-HTMLElement.hidden = true | false;
-```
-
-### 值
+## 值
 
 {{jsxref("Boolean")}} 类型的值，如果想要隐藏元素，则设置为 `true`，否则设置为 `false`。
 

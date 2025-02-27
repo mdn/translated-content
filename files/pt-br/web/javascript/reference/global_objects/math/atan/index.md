@@ -54,7 +54,7 @@ Talvez você queira evitar usar **±**`Infinity` por motivos estéticos. Nesse c
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.atan")}}
+{{Compat}}
 
 ## Veja também
 

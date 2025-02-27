@@ -1,5 +1,5 @@
 ---
-title: "::after (:after)"
+title: ::after
 slug: Web/CSS/::after
 ---
 
@@ -14,13 +14,15 @@ a::after {
 }
 ```
 
-> **Примечание:** Псведоэлементы, созданные с помощью `::before` и `::after` [содержатся в блоке форматирования элемента](https://www.w3.org/TR/CSS2/generate.html#before-after-content), и поэтому не применяются к _[замещаемым элементам](/ru/docs/Web/CSS/Replaced_element)_, таким как {{htmlelement("img")}} или {{htmlelement("br")}}.
+> [!NOTE]
+> Псведоэлементы, созданные с помощью `::before` и `::after` [содержатся в блоке форматирования элемента](https://www.w3.org/TR/CSS2/generate.html#before-after-content), и поэтому не применяются к _[замещаемым элементам](/ru/docs/Web/CSS/Replaced_element)_, таким как {{htmlelement("img")}} или {{htmlelement("br")}}.
 
 ## Синтаксис
 
 {{csssyntax}}
 
-> **Примечание:** В CSS3 появилась запись `::after` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Псевдо-классы) и [псевдоэлементов](/ru/docs/Web/CSS/Pseudo-elements). Браузеры также поддерживают запись `:after`, введённую в CSS2.
+> [!NOTE]
+> В CSS3 появилась запись `::after` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Pseudo-classes) и [псевдоэлементов](/ru/docs/Web/CSS/Pseudo-elements). Браузеры также поддерживают запись `:after`, введённую в CSS2.
 
 ## Примеры
 
@@ -88,7 +90,7 @@ a::after {
 
 ### Подсказки
 
-Следующий пример показывает использование [псевдоэлемента](/ru/docs/Web/CSS/Pseudo-elements) `::after` в сочетании с CSS-выражением [`attr()`](/ru/docs/Web/CSS/attr) и [пользовательского `data-*` атрибута](/ru/docs/Web/HTML/Global_attributes#attr-dataset) `data-descr` для создания _подсказки_ на чистом CSS.
+Следующий пример показывает использование [псевдоэлемента](/ru/docs/Web/CSS/Pseudo-elements) `::after` в сочетании с CSS-выражением [`attr()`](/ru/docs/Web/CSS/attr) и [пользовательского `data-*` атрибута](/ru/docs/Web/HTML/Global_attributes/data-*) `data-descr` для создания _подсказки_ на чистом CSS.
 
 #### HTML
 
@@ -140,7 +142,7 @@ span[data-descr]:hover::after {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

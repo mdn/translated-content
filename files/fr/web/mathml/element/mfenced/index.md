@@ -7,20 +7,21 @@ slug: Web/MathML/Element/mfenced
 
 {{deprecated_header}} L'élément MathML `<mfenced>` offre la possibilité d'ajouter des parenthèses ouvrantes et fermantes personnalisées ainsi que des séparateurs (comme les virgules ou points-virgules) à une expression.
 
-> **Attention :** Il a été supprimé de la dernière norme MathML et les navigateurs modernes ne le prennent plus en charge. Utilisez les éléments {{MathMLElement("mrow")}} et {{MathMLElement("mo")}} à la place.
+> [!WARNING]
+> Il a été supprimé de la dernière norme MathML et les navigateurs modernes ne le prennent plus en charge. Utilisez les éléments {{MathMLElement("mrow")}} et {{MathMLElement("mo")}} à la place.
 
 ## Attributs
 
 - class, id, style
-  - : Afin d'être utilisés avec les [feuilles de styles](/fr/docs/CSS).
+  - : Afin d'être utilisés avec les [feuilles de styles](/fr/docs/Web/CSS).
 - close
   - : Une chaîne de caractère pour le délimiteur fermant. La valeur par défaut est «&nbsp;`)`&nbsp;» et tous les blancs sont tronqués.
 - href {{Deprecated_Inline()}}
   - : Un hyperlien pointant vers un URI donné.
 - mathbackground {{Deprecated_Inline()}}
-  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/CSS/valeur_de_couleur#Mots-cl.C3.A9s).
+  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
 - mathcolor {{Deprecated_Inline()}}
-  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/CSS/valeur_de_couleur#Mots-cl.C3.A9s).
+  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
 
 <!---->
 

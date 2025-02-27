@@ -27,9 +27,11 @@ Como los métodos `{{JSxRef("Promise.then", "Promise.prototype.then()")}}` y `{{
 
 ![](promises.png)
 
-> **Nota:** Varios otros lenguajes tienen mecanismos para la evaluación diferida y el aplazamiento de un cálculo, a los que también llaman "promesas", p.ej. _Scheme_. Las promesas en JavaScript representan procesos que ya están sucediendo, que se pueden encadenar con funciones de devolución de llamada. Si está buscando evaluar lentamente una expresión, considere usar una función sin argumentos, p.ej. `f = () => expression` para crear la expresión evaluada de forma diferida, y `f()` para evaluar la expresión inmediatamente.
+> [!NOTE]
+> Varios otros lenguajes tienen mecanismos para la evaluación diferida y el aplazamiento de un cálculo, a los que también llaman "promesas", p.ej. _Scheme_. Las promesas en JavaScript representan procesos que ya están sucediendo, que se pueden encadenar con funciones de devolución de llamada. Si está buscando evaluar lentamente una expresión, considere usar una función sin argumentos, p.ej. `f = () => expression` para crear la expresión evaluada de forma diferida, y `f()` para evaluar la expresión inmediatamente.
 
-> **Nota:** Se dice que una promesa está _establecida_ si se cumple o se rechaza, pero no está pendiente. También escuchará el término _resuelto_ usado con promesas; esto significa que la promesa se establece o "bloquea" para que coincida con el estado de otra promesa. [Estados y destinos](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) contiene más detalles sobre la terminología de promesas.
+> [!NOTE]
+> Se dice que una promesa está _establecida_ si se cumple o se rechaza, pero no está pendiente. También escuchará el término _resuelto_ usado con promesas; esto significa que la promesa se establece o "bloquea" para que coincida con el estado de otra promesa. [Estados y destinos](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) contiene más detalles sobre la terminología de promesas.
 
 ### Promesas encadenadas
 
@@ -184,7 +186,8 @@ Si cambiamos esto para que el `<iframe>` en el documento escuche los mensajes de
 
 En el ejemplo anterior, el texto interno del `<iframe>` se actualizará solo si se realiza un seguimiento del objeto de configuración correspondiente. Esto se debe a que sin rastrear al titular, podemos terminar usando el entorno incorrecto para enviar el mensaje.
 
-> **Nota:** Actualmente, el seguimiento del campo titular está completamente implementado en Firefox y tiene implementaciones parciales en Chrome y Safari.
+> [!NOTE]
+> Actualmente, el seguimiento del campo titular está completamente implementado en Firefox y tiene implementaciones parciales en Chrome y Safari.
 
 ## Constructor
 

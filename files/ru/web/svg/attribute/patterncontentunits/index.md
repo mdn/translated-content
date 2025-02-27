@@ -3,7 +3,9 @@ title: patternContentUnits
 slug: Web/SVG/Attribute/patternContentUnits
 ---
 
-« [SVG Attribute reference home](/en/SVG/Attribute)
+{{SVGRef}}
+
+« [SVG Attribute reference home](/en-US/SVG/Attribute)
 
 Атрибут `patternContentUnits` определяет систему координат для содержимого {{ SVGElement("pattern") }}. Заметьте, что этот атрибут не имеет эффекта, если {{ SVGAttr("viewBox") }} определён на {{ SVGElement("pattern") }} элементе.
 
@@ -13,11 +15,11 @@ slug: Web/SVG/Attribute/patternContentUnits
 
 ## Контекст использования
 
-| Categories         | _None_                                                                                                       |
-| ------------------ | ------------------------------------------------------------------------------------------------------------ |
-| Value              | `userSpaceOnUse` \| **`objectBoundingBox`**                                                                  |
-| Animatable         | Yes                                                                                                          |
-| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/pservers.html#PatternElementPatternContentUnitsAttribute) |
+| Categories         | _None_                                                                                                        |
+| ------------------ | ------------------------------------------------------------------------------------------------------------- |
+| Value              | `userSpaceOnUse` \| **`objectBoundingBox`**                                                                   |
+| Animatable         | Yes                                                                                                           |
+| Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/pservers.html#PatternElementPatternContentUnitsAttribute) |
 
 - userSpaceOnUse
   - : Пользовательская система координат {{ SVGElement("pattern") }} element is the coordinate system that results from taking the current user coordinate system in place at the time when the {{ SVGElement("pattern") }} element is referenced (i.e., the user coordinate system for the element referencing the {{ SVGElement("pattern") }} element via a {{ SVGAttr("fill") }} or {{ SVGAttr("stroke") }} attribute) and then applying the transform specified by attribute {{ SVGAttr("patternTransform") }}.

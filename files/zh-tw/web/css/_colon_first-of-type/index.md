@@ -1,5 +1,5 @@
 ---
-title: ":first-of-type"
+title: :first-of-type
 slug: Web/CSS/:first-of-type
 ---
 
@@ -14,7 +14,8 @@ p:first-of-type {
 }
 ```
 
-> **備註：** 在初始定義中，被選取的節點必須擁有父節點。從選取器層級 4（Selectors Level 4）開始已經不再有這個限制了。
+> [!NOTE]
+> 在初始定義中，被選取的節點必須擁有父節點。從選取器層級 4（Selectors Level 4）開始已經不再有這個限制了。
 
 ## 語法
 

@@ -9,7 +9,7 @@ slug: Web/CSS/list-style-type
 
 {{EmbedInteractiveExample("pages/css/list-style-type.html")}}
 
-The [color](/zh-CN/docs/CSS/color_value) of the marker will be the same as the computed color of the element it applies to.
+The [color](/zh-CN/docs/Web/CSS/color_value) of the marker will be the same as the computed color of the element it applies to.
 
 只有几个元素 ({{HTMLElement("li")}} 和 {{HTMLElement("summary")}}) 的默认值为 `display: list-item`。但是， `list-style-type` 属性可以应用在任何 {{cssxref("display")}} 的值为 `list-item` 的元素上。此外，由于这个属性是可继承的，它可以设置在父元素上 (通常是 {{HTMLElement("ol")}} 或 {{HTMLElement("ul")}}) 以便应用于所有子元素 ({{HTMLElement("li")}})。
 
@@ -45,7 +45,7 @@ list-style-type 的属性值可以是以下任意一项：
 - a [`<custom-ident>`](/zh-CN/docs/Web/CSS/list-style-type#%3Ccustom-ident%3E) value
 - a [`symbols()`](</zh-CN/docs/Web/CSS/list-style-type#symbols()>) value
 - a [`<string>`](/zh-CN/docs/Web/CSS/list-style-type#%3Cstring%3E) value
-- the keyword [`none`](/zh-CN/docs/Web/CSS/list-style-type#none).
+- the keyword [`none`](#none).
 
 ### 取值
 
@@ -92,9 +92,9 @@ list-style-type 的属性值可以是以下任意一项：
 - `katakana` {{experimental_inline}}
   - : Dictionary-order katakana lettering
 - `hiragana-iroha` {{experimental_inline}}
-  - : [Iroha](https://zh.wikipedia.org/wiki/Iroha) is the old japanese ordering of syllabs.
+  - : [Iroha](https://zh.wikipedia.org/wiki/伊呂波歌) is the old japanese ordering of syllabs.
 - `katakana-iroha` {{experimental_inline}}
-  - : [Iroha](https://zh.wikipedia.org/wiki/Iroha) is the old japanese ordering of syllabs.
+  - : [Iroha](https://zh.wikipedia.org/wiki/伊呂波歌) is the old japanese ordering of syllabs.
 - `japanese-informal` {{experimental_inline}}
   - : Japanese informal numbering
 - `japanese-formal` {{experimental_inline}}

@@ -1,36 +1,46 @@
 ---
-title: Range.cloneRange()
+title: Range：cloneRange() 方法
 slug: Web/API/Range/cloneRange
+l10n:
+  sourceCommit: f9a4c8569397cb1c4f74026b385f07ff365bf64d
 ---
 
 {{ APIRef("DOM") }}
 
-**`Range.cloneRange()`**方法返回一个 range 对象，并且该对象的范围边界点与被克隆的 range 对象相同。
+**`Range.cloneRange()`** 方法返回一个 {{domxref("Range")}} 对象，其边界点与被克隆的 {{domxref("Range")}} 相同。
 
-克隆的对象是复制过来的，而非引用，所以这两个对象双方各自做出的改变，都不会影响另一方。
+返回的克隆是按值复制的，而非按引用复制，因此其中一个 {{domxref("Range")}} 的更改不会影响另一个。
 
 ## 语法
 
-```plain
-clone = range.cloneRange();
+```js-nolint
+cloneRange()
 ```
 
-## Example
+### 参数
+
+无。
+
+### 返回值
+
+{{domxref("Range")}} 对象。
+
+## 示例
 
 ```js
-range = document.createRange();
+const range = document.createRange();
 range.selectNode(document.getElementsByTagName("div").item(0));
-clone = range.cloneRange();
+const clone = range.cloneRange();
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference)
+- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model)

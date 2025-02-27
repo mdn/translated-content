@@ -70,7 +70,7 @@ Expect: 100-continue
 
 ## ブラウザーの対応
 
-{{Compat("http.headers.Expect")}}
+{{Compat}}
 
 ## 関連情報
 

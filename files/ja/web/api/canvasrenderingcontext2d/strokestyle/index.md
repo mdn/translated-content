@@ -1,23 +1,28 @@
 ---
 title: "CanvasRenderingContext2D: strokeStyle プロパティ"
+short-title: strokeStyle
 slug: Web/API/CanvasRenderingContext2D/strokeStyle
 l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+  sourceCommit: c8b447485fd893d5511d88f592f5f3aec29a725b
 ---
 
 {{APIRef}}
 
 **`CanvasRenderingContext2D.strokeStyle`** はキャンバス 2D API のプロパティで、図形の辺（輪郭）に使用する色、グラデーション、またはパターンを指定します。既定値は `#000` （黒色）です。
 
-> **メモ:** 輪郭と塗りつぶしのスタイル例については、 [canvas チュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)の [スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) をご覧ください。
+> [!NOTE]
+> 輪郭と塗りつぶしのスタイル例については、[キャンバスのチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)の [スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) をご覧ください。
 
 ## 値
 
 以下のいずれかです。
 
-- CSS の {{cssxref("&lt;color&gt;")}} 値として解釈される文字列。
-- {{domxref("CanvasGradient")}} オブジェクト（線形または放射状のグラデーション）。
-- {{domxref("CanvasPattern")}} オブジェクト（繰り返し画像）。
+- `color`
+  - : CSS の {{cssxref("&lt;color&gt;")}} 値として解釈される文字列。
+- `gradient`
+  - : {{domxref("CanvasGradient")}} オブジェクト（線形または放射グラデーション）。
+- `pattern`
+  - : {{domxref("CanvasPattern")}} オブジェクト（繰り返し画像）。
 
 ## 例
 
@@ -59,8 +64,8 @@ const ctx = document.getElementById("canvas").getContext("2d");
 for (let i = 0; i < 6; i++) {
   for (let j = 0; j < 6; j++) {
     ctx.strokeStyle = `rgb(
-        0,
-        ${Math.floor(255 - 42.5 * i)},
+        0
+        ${Math.floor(255 - 42.5 * i)}
         ${Math.floor(255 - 42.5 * j)})`;
     ctx.beginPath();
     ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
@@ -71,8 +76,7 @@ for (let i = 0; i < 6; i++) {
 
 結果はこのようになります。
 
-{{EmbedLiveSample("Creating_multiple_stroke_colors_using_loops", "180", "180",
-  "canvas_strokestyle.png")}}
+{{EmbedLiveSample("Creating_multiple_stroke_colors_using_loops", "", "180")}}
 
 ## 仕様書
 

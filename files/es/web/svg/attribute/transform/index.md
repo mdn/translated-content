@@ -3,17 +3,19 @@ title: transform
 slug: Web/SVG/Attribute/transform
 ---
 
+{{SVGRef}}
+
 « Indice de atributos SVG
 
 El atributo `transform` exhibe una lista de definiciones de transformación que se aplican a un elemento y a sus hijos. Los elementos en la lista de tranformación están separados por espacios en blanco y/o comas y se aplican de derecha a izquierda.
 
 ## Contexto de uso
 
-| Categorias          | None                                                                             |
-| ------------------- | -------------------------------------------------------------------------------- |
-| Valor               | **`<transform-list>`**                                                           |
-| Animable            | Yes                                                                              |
-| Documento normativo | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/coords.html#TransformAttribute) |
+| Categorias          | None                                                                              |
+| ------------------- | --------------------------------------------------------------------------------- |
+| Valor               | **`<transform-list>`**                                                            |
+| Animable            | Yes                                                                               |
+| Documento normativo | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/coords.html#TransformAttribute) |
 
 ### Tipos de definiciones de transformación
 
@@ -177,4 +179,4 @@ The following elements can use the `transform` attribute:
 - {{ SVGElement("switch") }}
 - {{ SVGElement("use") }}
 - {{ SVGElement("svg") }} (SVG 2 onwards)
-- [Graphics elements](/en/SVG/Element#Graphics) »
+- [Graphics elements](/es/docs/Web/SVG/Element#graphics) »

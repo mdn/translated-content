@@ -3,6 +3,8 @@ title: Chiffrement par clé symétrique
 slug: Glossary/Symmetric-key_cryptography
 ---
 
+{{GlossarySidebar}}
+
 Le chiffrement par clé symétrique est un terme utilisé pour décrire les algorithmes de chiffrement qui utilisent une même clé pour le chiffrage et le déchiffrage. La clé est généralement appelée « clé symétrique » ou « clé secrète ».
 
 On utilise cette appellation par contraste avec le [chiffrement par clé publique](/fr/docs/Glossary/Public-key_cryptography), qui lui va générer des paires de clés : la transformation étant réalisée par une clé et ne pouvant être inversée qu'en utilisant l'autre clé.

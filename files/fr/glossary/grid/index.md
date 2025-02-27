@@ -3,6 +3,8 @@ title: Grille
 slug: Glossary/Grid
 ---
 
+{{GlossarySidebar}}
+
 Une grille _CSS_ est définie en utilisant la valeur `grid` de la propriété `display` ; vous pouvez définir les colonnes et les lignes de votre grille en utilisant les propriétés {{cssxref("grid-template-rows")}} et {{cssxref("grid-template-columns")}}.
 
 La grille que vous définissez avec ces propriétés est décrite comme une _grille explicite_.
@@ -67,4 +69,4 @@ Dans l'exemple ci-dessous, nous avons créé une grille explicite de 3 colonnes 
 
 ### En lire plus
 
-- Guide des grilles CSS : _[Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)_
+- Guide des grilles CSS : _[Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_

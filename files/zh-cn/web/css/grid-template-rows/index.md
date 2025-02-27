@@ -130,5 +130,5 @@ grid-template-rows: unset;
 ## 参见
 
 - 相关 CSS 属性：{{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
-- 网格布局指南：_[Basic concepts of grid layout - Grid Tracks](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#Grid_Tracks)_
-- 视频教程：_[Defining a Grid](http://gridbyexample.com/video/series-define-a-grid/)_
+- 网格布局指南：_[Basic concepts of grid layout - Grid Tracks](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_tracks)_
+- 视频教程：_[Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)_

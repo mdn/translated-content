@@ -121,4 +121,4 @@ _無變動。_
 
 ## 舊版資訊
 
-{{Firefox_for_developers(60)}}
+{{Firefox_for_developers}}

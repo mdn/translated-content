@@ -62,5 +62,5 @@ x = null;
 ## Смотрите также
 
 - [Оператор `delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete)
-- [Управление памятью](/ru/docs/Web/JavaScript/Memory_Management)
+- [Управление памятью](/ru/docs/Web/JavaScript/Memory_management)
 - [TypeError: property "x" is non-configurable and can't be deleted](/ru/docs/Web/JavaScript/Reference/Errors/Cant_delete)

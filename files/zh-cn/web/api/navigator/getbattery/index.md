@@ -1,13 +1,18 @@
 ---
 title: Navigator：getBattery() 方法
 slug: Web/API/Navigator/getBattery
+l10n:
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
-{{ ApiRef("Battery API") }}
+{{ApiRef("Battery API")}}{{securecontext_header}}
 
-**`getBattery()`** 方法提供了系统的电量信息，它返回一个 battery 的 promise 对象，兑现后得到 {{domxref("BatteryManager")}} 对象，它提供了一些新的事件和方法以方便你监控电池的状态。这个方法实现了[电源状态 API](/zh-CN/docs/Web/API/Battery_Status_API)，参见那篇文档，以获得更多细节、使用方法和实例代码。
+**`getBattery()`** 方法提供了系统的电池信息，它返回一个包含电池对象的 promise 对象，兑现一个 {{domxref("BatteryManager")}} 对象，它提供了一些新的属性和事件来获取与监控电池状态。这个方法实现了 {{domxref("Battery Status API", "", "", "nocode")}}，参见那篇文档以获得更多额外的细节、使用 API 的指引和示例代码。
 
-> **备注：** 对该特性的访问可能由 {{HTTPHeader("Permissions-Policy")}} 标头的 {{HTTPHeader("Permissions-Policy/battery","battery")}} 指令控制。
+自 Chrome 103 起，{{domxref("Battery Status API", "", "", "nocode")}} 的 `Navigator.getBattery()` 方法只在严格上下文中暴露。
+
+> [!NOTE]
+> 对该特性的访问可由 {{HTTPHeader("Permissions-Policy")}} 的 {{HTTPHeader("Permissions-Policy/battery","battery")}} 指令控制。
 
 ## 语法
 
@@ -21,18 +26,18 @@ getBattery()
 
 ### 返回值
 
-一个 {{JSxRef("Promise")}} 值，当兑现时会得到含有电源状态信息的 {{DOMxRef("BatteryManager")}} 对象。
+一个 {{JSxRef("Promise")}}，兑现一个可用于获取电池状态信息的 {{DOMxRef("BatteryManager")}} 对象。
 
 ### 异常
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : 对该特性的使用被[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止。
 - `SecurityError`
-  - : 用户代理不会向不安全上下文暴露电源信息，而此方法在不安全的上下文中被调用了。
+  - : 用户代理不会向不安全上下文暴露电池信息，而此方法在不安全的上下文中被调用了。
 
 ## 示例
 
-此示例获取了电源当前充电的状态，并建立了 {{domxref("BatteryManager/chargingchange_event", "chargingchange")}} 事件的处理器，当充电状态发生变化时，其状态会被记录下来。
+此示例获取了电池当前充电的状态，并建立了 {{domxref("BatteryManager/chargingchange_event", "chargingchange")}} 事件的处理器，因此当充电状态发生变化时，其状态会被记录下来。
 
 ```js
 let batteryIsCharging = false;
@@ -46,7 +51,7 @@ navigator.getBattery().then((battery) => {
 });
 ```
 
-对于更多示例与具体信息，参见[电源状态 API](/zh-CN/docs/Web/API/Battery_Status_API)。
+对于更多示例与具体信息，参见 {{domxref("Battery Status API", "", "", "nocode")}}。
 
 ## 规范
 
@@ -58,5 +63,5 @@ navigator.getBattery().then((battery) => {
 
 ## 参见
 
-- [电源状态 API](/zh-CN/docs/Web/API/Battery_Status_API)
-- `Permissions-Policy` {{HTTPHeader("Permissions-Policy/battery", "battery")}} 特性
+- {{domxref("Battery Status API", "", "", "nocode")}}
+- {{HTTPHeader("Permissions-Policy")}} 的 {{HTTPHeader("Permissions-Policy/battery", "battery")}} 指令

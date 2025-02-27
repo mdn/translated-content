@@ -3,11 +3,14 @@ title: ARIA
 slug: Web/Accessibility/ARIA
 ---
 
+{{AccessibilitySidebar}}
+
 **접근가능한 리치 인터넷 어플리케이션**(Accessible Rich Internet Applications, **ARIA**)은 장애를 가진 사용자가 웹 콘텐츠와 웹 어플리케이션(특히 JavaScript를 사용하여 개발한 경우)에 더 쉽게 접근할 수 있는 방법을 정의하는 여러 특성을 말합니다.
 
 ARIA는 HTML을 보충해, 일반적으로 보조 기술이 알 수 없는 상호작용 및 흔히 쓰이는 어플리케이션 위젯에 필요한 정보를 제공합니다. 예를 들어 ARIA는 HTML4에서의 탐색 랜드마크, JavaScript 위젯, 폼 힌트 및 오류 메시지, 실시간 콘텐츠 업데이트 등을 접근 가능한 형태로 제공합니다.
 
-> **경고:** 여기 등장하는 많은 위젯은 나중에 HTML5로 통합됐으므로, 구현하려는 기능을 가진 요소가 존재한다면 **개발자는 되도록 의미를 가진 HTML을 ARIA보다 선호해야 합니다**. 몇 가지 예시로, 네이티브 요소는 키보드 접근성, 역할, 상태를 내장하고 있습니다. 그러나 ARIA를 쓰기로 결정했다면 브라우저 동작 방식을 따라 하는 건 개발자의 책임입니다.
+> [!WARNING]
+> 여기 등장하는 많은 위젯은 나중에 HTML5로 통합됐으므로, 구현하려는 기능을 가진 요소가 존재한다면 **개발자는 되도록 의미를 가진 HTML을 ARIA보다 선호해야 합니다**. 몇 가지 예시로, 네이티브 요소는 키보드 접근성, 역할, 상태를 내장하고 있습니다. 그러나 ARIA를 쓰기로 결정했다면 브라우저 동작 방식을 따라 하는 건 개발자의 책임입니다.
 
 다음은 진행 표시줄 위젯의 마크업입니다.
 
@@ -39,7 +42,8 @@ function updateProgress(percentComplete) {
 }
 ```
 
-> **Note:** that ARIA was invented after HTML4, so does not validate in HTML4 or its XHTML variants. However, the accessibility gains it provides far outweigh any technical invalidity. In HTML5, all ARIA attributes validate. The new landmark elements (`<main>`, `<header>`, `<nav>` etc) have built-in ARIA roles, so there is no need to duplicate them.
+> [!NOTE]
+> that ARIA was invented after HTML4, so does not validate in HTML4 or its XHTML variants. However, the accessibility gains it provides far outweigh any technical invalidity. In HTML5, all ARIA attributes validate. The new landmark elements (`<main>`, `<header>`, `<nav>` etc) have built-in ARIA roles, so there is no need to duplicate them.
 
 ## 지원
 
@@ -62,7 +66,7 @@ function updateProgress(percentComplete) {
 
 - [ARIA 랜드마크를 사용하여 페이지 탐색 고도화](https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
   - : 스크린 리더 사용자들을 위해 ARIA 랜드마크를 사용하여 웹 페이지의 탐색 기능을 향상시키는 법을 소개해주는 좋은 글입니다. [이와 더불어서 ARIA 구현 노트](http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) 및 실제 사이트에서의 활용 예시들을 참고하세요. (2011년 7월에 업데이트됨)
-- [폼 접근성 향상하기](/ko/docs/ARIA/forms)
+- [폼 접근성 향상하기](/ko/docs/Web/Accessibility/ARIA)
   - : ARIA는 동적 콘텐츠만을 위한 것이 아닙니다! ARIA 특성을 사용해 HTML 폼의 접근성을 높이는 방법을 알아보세요.
 
 ## 스크립트 처리된 위젯을 위한 ARIA
@@ -87,11 +91,11 @@ function updateProgress(percentComplete) {
 
 ## 버그 제출
 
-[브라우저, 스크린 리더, JavaScript 라이브러리의 ARIA 버그 제출하기](/en/Accessibility/ARIA/How_to_file_ARIA-related_bugs)
+[브라우저, 스크린 리더, JavaScript 라이브러리의 ARIA 버그 제출하기](/en-US/Accessibility/ARIA/How_to_file_ARIA-related_bugs)
 
 ## 관련 주제
 
-{{glossary("Accessibility", "접근성")}}, {{glossary("AJAX")}}, [JavaScript](/ko/docs/JavaScript)
+{{glossary("Accessibility", "접근성")}}, {{glossary("AJAX")}}, [JavaScript](/ko/docs/Web/JavaScript)
 
 - [웹 개발](/ko/docs/Web/Guide)
 - [접근성과 Mozilla](/ko/docs/Mozilla/Accessibility)

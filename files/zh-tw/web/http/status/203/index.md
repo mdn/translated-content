@@ -1,17 +1,19 @@
 ---
 title: 203 Non-Authoritative Information
 slug: Web/HTTP/Status/203
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`203 Non-Authoritative Information`** 狀態碼表明請求成功，但是與原始伺服器的 {{HTTPStatus("200")}} (`OK`) 回應相比，隨附的酬載已被具轉換功能的 {{Glossary("Proxy server", "代理伺服器")}} 所修改。
+HTTP **`203 Non-Authoritative Information`** 成功回應碼表示請求成功，但內含的有效負載已被轉換{{Glossary("Proxy server", "代理伺服器")}}修改，與原始伺服器的 {{HTTPStatus("200")}}（`OK`）回應不同。
 
-`203` 回應相似於 {{HTTPHeader("Warning")}} 標頭的 `214 Transformation Applied`，但後者的額外的優點在於可以套用到任何狀態碼的回應中。
+`203` 回應與 {{HTTPHeader("Warning")}} 標頭代碼 [`214`](/zh-TW/docs/Web/HTTP/Headers/Warning#warning_codes)（即 `Transformation Applied`）相似，其額外優勢是適用於具有任何狀態碼的回應。
 
 ## 狀態
 
-```plain
+```http
 203 Non-Authoritative Information
 ```
 
@@ -22,5 +24,5 @@ HTTP **`203 Non-Authoritative Information`** 狀態碼表明請求成功，但�
 ## 參見
 
 - {{HTTPStatus("200")}}
-- {{Glossary("Proxy server")}}
+- {{Glossary("Proxy server", "代理伺服器")}}
 - {{HTTPHeader("Warning")}}

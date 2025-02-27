@@ -9,7 +9,7 @@ CSS 局限规范的目标在于通过允许浏览器从页面的其余部分中�
 
 此外，此规范允许开发者标示元素究竟是否应当渲染其内容，以及在屏外时是否应当渲染其内容。由此允许用户代理在恰当的时候在元素上应用局限，并有望将布局和渲染推迟至需要时再进行。
 
-此规范定义了 CSS 属性 {{CSSXref("contain")}} 和 {{CSSXref("content-visibility")}}。本文档描述了此规范的基本目标。CSS 容器查询的细节见 [CSS 容器查询](/zh-CN/docs/Web/CSS/CSS_container_queries)。
+此规范定义了 CSS 属性 {{CSSXref("contain")}} 和 {{CSSXref("content-visibility")}}。本文档描述了此规范的基本目标。CSS 容器查询的细节见 [CSS 容器查询](/zh-CN/docs/Web/CSS/CSS_containment/Container_queries)。
 
 ## 基本示例
 

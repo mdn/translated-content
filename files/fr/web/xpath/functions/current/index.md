@@ -3,7 +3,7 @@ title: current
 slug: Web/XPath/Functions/current
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `current` peut être utilisée pour obtenir le nœud courant dans une instruction XSLT.
 
@@ -33,7 +33,7 @@ Le nœud courant est toujours identique au nœud de contexte. Les deux exemples 
 
 ### Définition
 
-[XSLT 1.0, section 12.4](http://www.w3.org/TR/xslt#function-current).
+[XSLT 1.0, section 12.4](https://www.w3.org/TR/xslt#function-current).
 
 ### Support Gecko
 

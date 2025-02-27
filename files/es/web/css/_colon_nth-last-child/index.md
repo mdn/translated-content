@@ -1,5 +1,5 @@
 ---
-title: ":nth-last-child"
+title: :nth-last-child
 slug: Web/CSS/:nth-last-child
 ---
 
@@ -16,7 +16,8 @@ La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:nth-last-child()`** de [C
 }
 ```
 
-> **Nota:** Esta pseudo-clase es esencialmente la misma que {{Cssxref(":nth-child")}}, excepto que cuenta los elementos hacia atrás desde el final, no hacia adelante desde el principio.
+> [!NOTE]
+> Esta pseudo-clase es esencialmente la misma que {{Cssxref(":nth-child")}}, excepto que cuenta los elementos hacia atrás desde el final, no hacia adelante desde el principio.
 
 ## Sintaxis
 

@@ -2,22 +2,18 @@
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
 l10n:
-  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
+  sourceCommit: dcbb1d99185118360cc84b3a0e935e77fe0a03e3
 ---
 
-{{DefaultAPISidebar("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 `XMLHttpRequest` (XHR) オブジェクトは、サーバーと対話するために使用されます。ページ全体を更新する必要なしに、データを受け取ることができます。これでユーザーの作業を中断させることなく、ウェブページの一部を更新することができます。
-
-`XMLHttpRequest` は [AJAX](/ja/docs/Web/Guide/AJAX) プログラミングで頻繁に使用されます。
 
 {{InheritanceDiagram}}
 
 `XMLHttpRequest` という名前ではあるものの、 XML だけでなく、あらゆる種類のデータを受け取るために使用することができます。
 
 通信においてサーバーからのイベントデータやメッセージデータの受信を含む必要があるのであれば、[サーバー送信イベント](/ja/docs/Web/API/Server-sent_events)の {{domxref("EventSource")}} インターフェイスを使用することも検討してください。全二重の通信では、 [WebSocket](/ja/docs/Web/API/WebSockets_API) の方が良いかもしれません。
-
-{{AvailableInWorkers("notservice")}}
 
 ## コンストラクター
 
@@ -44,9 +40,10 @@ _このインターフェイスは、 {{domxref("XMLHttpRequestEventTarget")}} �
   - : リクエストの [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)を返します。
 - {{domxref("XMLHttpRequest.statusText")}} {{ReadOnlyInline}}
 
-  - : 文字列で、HTTP サーバーから返ってきたレスポンス文字列を返します。 {{domxref("XMLHttpRequest.status")}} とは異なり、（"`OK`" のような）レスポンスメッセージの完全な文が含まれています。
+  - : 文字列で、HTTP サーバーから返ってきたレスポンス文字列を返します。 {{domxref("XMLHttpRequest.status")}} とは異なり、（`"OK"` のような）レスポンスメッセージの完全な文が含まれています。
 
-    > **メモ:** HTTP/2 仕様書 {{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}} によれば、 HTTP/2 では、 HTTP/1.1 のステータス行に含まれていたバージョンや原因の文を伝える方法が定義されていません。
+    > [!NOTE]
+    > HTTP/2 仕様書 {{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}} によれば、 HTTP/2 では、 HTTP/1.1 のステータス行に含まれていたバージョンや原因の文を伝える方法が定義されていません。
 
 - {{domxref("XMLHttpRequest.timeout")}}
   - : リクエストを自動的に終了するまでの時間をミリ秒単位で表します。
@@ -80,6 +77,8 @@ _このインターフェイスは、 {{domxref("XMLHttpRequestEventTarget")}} �
   - : サーバーから返ってくる MIME タイプを上書きします。
 - {{domxref("XMLHttpRequest.send()")}}
   - : リクエストを送信します。このリクエストが非同期（既定）の場合、このメソッドはリクエストが送るとすぐに返ります。
+- {{domxref("XMLHttpRequest.setAttributionReporting()")}} {{securecontext_inline}} {{experimental_inline}}
+  - : リクエストのレスポンスで、帰属ソースや発生するイベントを登録できるようにすることを示します。
 - {{domxref("XMLHttpRequest.setRequestHeader()")}}
   - : HTTP リクエストヘッダーの値を設定します。 `setRequestHeader()` は {{domxref("XMLHttpRequest.open", "open()")}} の後、および {{domxref("XMLHttpRequest.send", "send()")}} の前に呼び出さなくてはいけません。
 
@@ -121,11 +120,5 @@ _このインターフェイスは、 {{domxref("XMLHttpRequestEventTarget")}} �
 ## 関連情報
 
 - {{domxref("XMLSerializer")}}: DOM ツリーの XML へのシリアライズ
-- `XMLHttpRequest` に関連する MDN の記事
-
-  - [Ajax — 始めましょう](/ja/docs/Web/Guide/AJAX/Getting_Started)
-  - [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-  - [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-  - [Fetch API](/ja/docs/Web/API/Fetch_API)
-
-- [New Tricks in XMLHttpRequest2 (2011)](https://web.dev/xhr2/)
+- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [フェッチ API](/ja/docs/Web/API/Fetch_API)

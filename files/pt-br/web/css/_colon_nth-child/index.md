@@ -1,5 +1,5 @@
 ---
-title: ":nth-child()"
+title: :nth-child()
 slug: Web/CSS/:nth-child
 ---
 
@@ -158,7 +158,7 @@ div em {
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.nth-child")}}
+{{Compat}}
 
 ## Veja também
 

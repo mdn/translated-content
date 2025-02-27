@@ -5,7 +5,7 @@ slug: orphaned/Web/API/Document/documentURIObject
 
 {{ApiRef("DOM")}}{{Non-standard_header}}
 
-**`Document.documentURIObject`** プロパティは読み取り専用で、 [document](/ja/docs/Web/API/document) の URI を表す `nsIURI` オブジェクトを返します。
+**`Document.documentURIObject`** プロパティは読み取り専用で、 [document](/ja/docs/Web/API/Document) の URI を表す `nsIURI` オブジェクトを返します。
 
 このプロパティは、拡張機能のコードなどの (UniversalXPConnect) 特権を持つスクリプトでのみ機能します。ウェブコンテンツではこのプロパティは特別な意味を持たず、他のカスタムプロパティと同様に扱うことしかできません。
 

@@ -32,7 +32,7 @@ function [name]([param1, param2, ..., paramN]) {
 
 ## Descripción
 
-La expresión de una función es muy similar y tiene casi la misma sintaxis que la declaración de una función (véase {{jsxref("Sentencias/function", "function")}} para más detalles). Véase [Funciones](/es/docs/Web/JavaScript/Referencia/Funciones) para ver más información sobre las diferencias entre declaraciones de funciones y expresiones de funciones.
+La expresión de una función es muy similar y tiene casi la misma sintaxis que la declaración de una función (véase {{jsxref("Sentencias/function", "function")}} para más detalles). Véase [Funciones](/es/docs/Web/JavaScript/Reference/Functions) para ver más información sobre las diferencias entre declaraciones de funciones y expresiones de funciones.
 
 ## Ejemplos
 
@@ -59,6 +59,6 @@ var math = {
 
 ## Consulte también
 
-- [Funciones](/es/docs/Web/JavaScript/Referencia/Funciones)
+- [Funciones](/es/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Function")}}
 - Sentencias {{jsxref("Sentencias/function", "function")}}

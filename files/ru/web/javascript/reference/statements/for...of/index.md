@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Statements/for...of
 
 ## Сводка
 
-Оператор `for...of` выполняет цикл обхода [итерируемых объектов](/ru/docs/Web/JavaScript/Guide/iterable) (включая {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, объект [аргументов](/ru/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) и подобных), вызывая на каждом шаге итерации операторы для каждого значения из различных свойств объекта.
+Оператор `for...of` выполняет цикл обхода [итерируемых объектов](/ru/docs/Web/JavaScript/Reference/Iteration_protocols) (включая {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, объект [аргументов](/ru/docs/Web/JavaScript/Reference/Functions/arguments) и подобных), вызывая на каждом шаге итерации операторы для каждого значения из различных свойств объекта.
 
 ## Синтаксис
 
@@ -229,7 +229,7 @@ for (var value of iterable) {
 
 Для {{jsxref("Statements/for...in", "for...in")}} обход [перечисляемых свойств](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) объекта осуществляется в произвольном порядке.
 
-Для `for...of` обход происходит в соответствии с тем, какой порядок определён в [итерируемом объекте](/ru/docs/Web/JavaScript/Guide/iterable).
+Для `for...of` обход происходит в соответствии с тем, какой порядок определён в [итерируемом объекте](/ru/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 Следующий пример показывает различия в работе циклов `for...of` и `for...in` при обходе {{jsxref("Array")}}.
 

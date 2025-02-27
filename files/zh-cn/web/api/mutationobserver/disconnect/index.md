@@ -9,8 +9,8 @@ slug: Web/API/MutationObserver/disconnect
 
 ## 语法
 
-```
-mutationObserver.disconnect()
+```js-nolint
+disconnect()
 ```
 
 ### 参数
@@ -21,7 +21,8 @@ mutationObserver.disconnect()
 
 `undefined`。
 
-> **备注：** 所有已经检测到但是尚未向观察者报告的变动都会被丢弃。
+> [!NOTE]
+> 所有已经检测到但是尚未向观察者报告的变动都会被丢弃。
 
 ## 使用说明
 

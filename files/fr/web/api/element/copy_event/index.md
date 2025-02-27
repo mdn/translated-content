@@ -3,6 +3,8 @@ title: copy
 slug: Web/API/Element/copy_event
 ---
 
+{{APIRef}}
+
 L'événement **copy** est déclenché lorsque l'utilisateur initie une copie par le biais de l'interface du navigateur (par exemple, Ctrl/Cmd+C ou "copier" du menu contextuel) et en réponse d'un appel de {{domxref("Document.execCommand", "document.execCommand('copy')")}} autorisé.
 
 ## Informations générales
@@ -34,7 +36,7 @@ Un gestionnaire de cet événement ne peut pas lire les données du presse-papie
 
 L'action par défaut de l'événement dépend de la source de celui-ci et du comportement du gestionnaire:
 
-- Un événement de copie [synthétique](/fr/docs/Web/Guide/Events/Creating_and_triggering_events) n'a pas d'action par défaut;
+- Un événement de copie [synthétique](/fr/docs/Web/Events/Creating_and_triggering_events) n'a pas d'action par défaut;
 - Si l'événement n'a pas été annulé: Copie de la sélection (s'il y a) dans le presse-papiers;
 - Si le gestionnaire a annulé l'événement et appelé setData(): Copie le contenu de _clipboardData_ de {{domxref("ClipboardEvent")}};
 - Si le gestionnaire a annulé l'événement sans appelé setData(): Aucune action.

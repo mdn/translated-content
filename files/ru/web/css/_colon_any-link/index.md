@@ -1,5 +1,5 @@
 ---
-title: ":any-link"
+title: :any-link
 slug: Web/CSS/:any-link
 ---
 
@@ -51,7 +51,7 @@ a:-webkit-any-link {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

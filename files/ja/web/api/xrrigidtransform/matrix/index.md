@@ -59,10 +59,10 @@ let transform = new XRRigidTransform(
 drawGLObject("magic-lamp", transform.matrix);
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRRigidTransform.matrix")}}
+{{Compat}}

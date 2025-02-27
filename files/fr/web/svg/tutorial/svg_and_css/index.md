@@ -3,11 +3,16 @@ title: SVG et CSS
 slug: Web/SVG/Tutorial/SVG_and_CSS
 ---
 
+{{SVGRef}}
+
+{{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
+
 Cette page illustre l'application de CSS sur des documents [SVG](/fr/docs/Web/SVG), le langage spécialisé dans la création d'éléments graphiques vectoriels.
 
 Nous allons voir par la suite un exemple que vous pourrez copier pour l'exécuter dans votre navigateur (à la condition que celui-ci soit compatible avec SVG).
 
-> **Note :** Les éléments référencés par des éléments [`<use>`](/fr/docs/Web/SVG/Element/use) héritent des styles de cet élément. Pour leur appliquer des styles différents, il faut donc utiliser [les propriétés CSS personnalisées (_custom properties_)](/fr/docs/Web/CSS/CSS_Variables).
+> [!NOTE]
+> Les éléments référencés par des éléments [`<use>`](/fr/docs/Web/SVG/Element/use) héritent des styles de cet élément. Pour leur appliquer des styles différents, il faut donc utiliser [les propriétés CSS personnalisées (_custom properties_)](/fr/docs/Web/CSS/CSS_cascading_variables).
 
 ## Exemple
 
@@ -384,7 +389,8 @@ Notes sur cette démonstration :
 - Le document SVG lie la feuille de style de la façon habituelle.
 - Le SVG a ses propres propriétés et valeurs CSS. Certaines d'entre elles sont similaires aux propriétés CSS utilisées pour le HTML.
 
-> **Note :** Modifiez la feuille de style de sorte que les pétales intérieurs deviennent tous roses lorsque le pointeur de la souris passe sur l'un d'entre eux, sans modifier le fonctionnement des pétales extérieurs.<!--</p-->
+> [!NOTE]
+> Modifiez la feuille de style de sorte que les pétales intérieurs deviennent tous roses lorsque le pointeur de la souris passe sur l'un d'entre eux, sans modifier le fonctionnement des pétales extérieurs.<!--</p-->
 
 [Voir une solution à ce défi.](/fr/docs/Web/Guide/CSS/Getting_started/Challenge_solutions#svg_and_css)
 

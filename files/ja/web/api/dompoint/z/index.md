@@ -1,11 +1,14 @@
 ---
-title: DOMPoint.z
+title: "DOMPoint: z プロパティ"
+short-title: z
 slug: Web/API/DOMPoint/z
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
 
-**`DOMPoint`** インターフェースの **`z`** プロパティは、空間内の点の奥行き座標を指定します。
+**`DOMPoint`** インターフェイスの **`z`** プロパティは、空間内の点の奥行き座標を指定します。
 
 変換によって方向が変更されていない限り、 `z` が 0 の場合は画面の平面となり、正の値は画面の外側に向かって伸び、負の値は画面の内側へ後退していきます。
 

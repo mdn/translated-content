@@ -9,7 +9,7 @@ slug: Web/API/Web_Workers_API/Transferable_objects
 
 *可转移对象*通常用于共享资源，该资源一次仅能安全地暴露在一个 JavaScript 线程中。例如，{{jsxref("ArrayBuffer")}} 是一个拥有内存块的可转移对象。当此类缓冲区（buffer）在线程之间传输时，相关联的内存资源将从原始的缓冲区分离出来，并且附加到新线程创建的缓冲区对象中。原始线程中的缓冲区对象不再可用，因为它不再拥有属于自己的内存资源了。
 
-使用 {{domxref("structuredClone()")}} 创建对象的深层拷贝时，也可以使用转移。克隆操作后，传输的资源将被移动到克隆的对象，而不是复制。
+使用 {{DOMxRef("WorkerGlobalScope.structuredClone", "structuredClone()")}} 创建对象的深层拷贝时，也可以使用转移。克隆操作后，传输的资源将被移动到克隆的对象，而不是复制。
 
 使用转移对象资源的机制取决于对象自身。例如，当 {{jsxref("ArrayBuffer")}} 在线程之间转移时，它指向的内存资源*实际上*以快速且高效的零拷贝操作在上下文之间移动。其他对象可以通过拷贝关联的资源，然后将它从旧的上下文中删除来转移它。
 
@@ -29,11 +29,12 @@ worker.postMessage(uInt8Array, [uInt8Array.buffer]);
 console.log(uInt8Array.byteLength); // 0
 ```
 
-> **备注：** 像 {{jsxref("Int32Array")}} 和 {{jsxref("Uint8Array")}} 等[类型化数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)是{{Glossary("serializable object","可序列化的")}}，但是不能转移。然而，它们的底层缓冲区是一个 {{jsxref("ArrayBuffer")}}，它是一个可转移对象。我们可以在数据参数中发送 `uInt8Array.buffer`，但是不能在传输数组中发送 `uInt8Array`。
+> [!NOTE]
+> 像 {{jsxref("Int32Array")}} 和 {{jsxref("Uint8Array")}} 等[类型化数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)是{{Glossary("serializable object","可序列化的")}}，但是不能转移。然而，它们的底层缓冲区是一个 {{jsxref("ArrayBuffer")}}，它是一个可转移对象。我们可以在数据参数中发送 `uInt8Array.buffer`，但是不能在传输数组中发送 `uInt8Array`。
 
 ### 在进行克隆操作时转移
 
-以下代码展示了 {{domxref("structuredClone()")}} 操作，将底层缓冲区从原始对象复制到克隆对象（`clone`）。
+以下代码展示了 `structuredClone()` 操作，将底层缓冲区从原始对象复制到克隆对象（`clone`）。
 
 ```js
 const original = new Uint8Array(1024);
@@ -73,11 +74,12 @@ console.log(original.byteLength); // 0
 
 在各自对象的兼容性信息中，如果拥有 `transferable` 子特性，浏览器的支持应该被展示（示例请参阅 [`RTCDataChannel`](/zh-CN/docs/Web/API/RTCDataChannel#浏览器兼容性)）。在撰写本文时，并非所有可转移对象都已更新此信息。
 
-> **备注：** 可转移的对象在 [Web IDL 文件](https://github.com/w3c/webref/tree/main/ed/idl)中用属性 `[Transferable]` 标记。
+> [!NOTE]
+> 可转移的对象在 [Web IDL 文件](https://github.com/w3c/webref/tree/main/ed/idl)中用属性 `[Transferable]` 标记。
 
 ## 参见
 
-- [可转移对象：像闪电一样快！](https://developer.chrome.com/blog/transferable-objects-lightning-fast/)
+- [可转移对象：像闪电一样快！](https://developer.chrome.google.cn/blog/transferable-objects-lightning-fast)
 - [使用 Web Worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [HTML 规范中的可转移对象](https://html.spec.whatwg.org/multipage/structured-data.html#transferable-objects)
 - {{domxref("DedicatedWorkerGlobalScope.postMessage()")}}

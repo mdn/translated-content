@@ -1,19 +1,20 @@
 ---
-title: Document.childElementCount
+title: "Document: childElementCount プロパティ"
+short-title: childElementCount
 slug: Web/API/Document/childElementCount
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{ APIRef("DOM") }}
 
 **`Document.childElementCount`** は読み取り専用のプロパティで、文書の子要素の数を返します。
 
-特定の要素の子要素の数を取得する場合は、 {{domxref("Element.childElementCount")}} を参照してください。
+特定の要素の子要素の数を取得する場合は、{{domxref("Element.childElementCount")}} を参照してください。
 
-## 構文
+## 値
 
-```js
-document.childElementCount;
-```
+数値です。
 
 ## 例
 

@@ -5,11 +5,12 @@ slug: Web/CSS/border-left-style
 
 {{CSSRef}}
 
-The **`border-left-style`** [CSS](/zh-CN/docs/CSS) property sets the line style of an element's left {{cssxref("border")}}.
+The **`border-left-style`** [CSS](/zh-CN/docs/Web/CSS) property sets the line style of an element's left {{cssxref("border")}}.
 
 {{EmbedInteractiveExample("pages/css/border-left-style.html")}}
 
-> **备注：** The specification doesn't define how borders of different styles connect in the corners.
+> [!NOTE]
+> The specification doesn't define how borders of different styles connect in the corners.
 
 ## Syntax
 

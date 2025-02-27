@@ -1,344 +1,454 @@
 ---
 title: Element
 slug: Web/API/Element
+l10n:
+  sourceCommit: e83aa62ce6bf2e2bc44f55a3fb73b63d724fa6a6
 ---
 
 {{APIRef("DOM")}}
 
-**`Element`** 是一个通用性非常强的基类，所有 {{DOMxRef("Document")}} 对象下的对象都继承自它。这个接口描述了所有相同种类的元素所普遍具有的方法和属性。一些接口继承自 `Element` 并且增加了一些额外功能的接口描述了具体的行为。例如， {{DOMxRef("HTMLElement")}} 接口是所有 HTML 元素的基本接口，而 {{DOMxRef("SVGElement")}} 接口是所有 SVG 元素的基础。大多数功能是在这个类的更深层级（hierarchy）的接口中被进一步制定的。
+**`Element`** 是最通用的基类，{{DOMxRef("Document")}} 中的所有元素对象（即表示元素的对象）都继承自它。它只具有各种元素共有的方法和属性。更具体的类则继承自 `Element`。
+
+例如，{{DOMxRef("HTMLElement")}} 接口是所有 HTML 元素的基本接口。同样，{{DOMxRef("SVGElement")}} 接口是所有 SVG 元素的基本接口，而 {{DOMxRef("MathMLElement")}} 接口则是 MathML 元素的基础接口。大多数功能是在这个类的更深层级的接口中被进一步制定的。
 
 在 Web 平台的领域以外的语言，比如 XUL，通过 `XULElement` 接口，同样也实现了 `Element` 接口。
 
 {{InheritanceDiagram}}
 
-## 属性
+## 实例属性
 
-*所有属性继承自它的祖先接口 {{DOMxRef("Node")}}，并且扩展了 {{DOMxRef("Node")}} 的父接口 {{DOMxRef("EventTarget")}}，并且从以下部分继承了属性：{{DOMxRef("ParentNode")}}、{{DOMxRef("ChildNode")}}、{{DOMxRef("NonDocumentTypeChildNode")}}，*和 {{DOMxRef("Animatable")}}。
+_`Element` 从其父接口 {{DOMxRef("Node")}} 以及该接口的父接口 {{DOMxRef("EventTarget")}} 继承属性。_
 
-- {{DOMxRef("Element.attributes")}} {{readOnlyInline}}
-  - : 返回一个与该元素相关的所有属性集合 {{DOMxRef("NamedNodeMap")}}。
-- {{DOMxRef("Element.classList")}} {{readOnlyInline}}
-  - : 返回该元素包含的 class 属性，是一个 {{DOMxRef("DOMTokenList")}}。
+- {{DOMxRef("Element.assignedSlot")}} {{ReadOnlyInline}}
+  - : 返回一个表示节点所插入的 {{htmlelement("slot")}} 的 {{DOMxRef("HTMLSlotElement")}} 值。
+- {{DOMxRef("Element.attributes")}} {{ReadOnlyInline}}
+  - : 返回一个 {{DOMxRef("NamedNodeMap")}} 对象，其中包含相应 HTML 元素的指定属性。
+- {{domxref("Element.childElementCount")}} {{ReadOnlyInline}}
+  - : 返回此元素的子元素个数。
+- {{domxref("Element.children")}} {{ReadOnlyInline}}
+  - : 返回此元素的子元素。
+- {{DOMxRef("Element.classList")}} {{ReadOnlyInline}}
+  - : 返回该元素包含的所有 class 属性，是一个 {{DOMxRef("DOMTokenList")}}。
 - {{DOMxRef("Element.className")}}
-  - : 一个 {{DOMxRef("DOMString")}}，表示这个元素的 class。
-- {{DOMxRef("Element.clientHeight")}} {{readOnlyInline}}
-  - : 返回{{jsxref("Number")}} 表示内部相对于外层元素的高度。
-- {{DOMxRef("Element.clientLeft")}} {{readOnlyInline}}
-  - : 返回{{jsxref("Number")}}表示该元素距离它左边界的宽度。
-- {{DOMxRef("Element.clientTop")}} {{readOnlyInline}}
-  - : 返回 {{jsxref("Number")}} 表示该元素距离它上边界的高度。
-- {{DOMxRef("Element.clientWidth")}} {{readOnlyInline}}
-  - : 返回{{jsxref("Number")}} 表示该元素内部的宽度。
-- {{DOMxRef("Element.computedName")}} {{readOnlyInline}}
-  - : Returns a {{DOMxRef("DOMString")}} containing the label exposed to accessibility.
-- {{DOMxRef("Element.computedRole")}} {{readOnlyInline}}
-  - : Returns a {{DOMxRef("DOMString")}} containing the ARIA role that has been applied to a particular element.
+  - : 一个字符串，表示这个元素的类。
+- {{DOMxRef("Element.clientHeight")}} {{ReadOnlyInline}}
+  - : 返回代表元素内部高度的数值。
+- {{DOMxRef("Element.clientLeft")}} {{ReadOnlyInline}}
+  - : 返回代表元素左边界宽度的数值。
+- {{DOMxRef("Element.clientTop")}} {{ReadOnlyInline}}
+  - : 返回代表元素顶部边框宽度的数值。
+- {{DOMxRef("Element.clientWidth")}} {{ReadOnlyInline}}
+  - : 返回代表元素内部宽度的数值。
+- {{DOMxRef("Element.elementTiming")}} {{Experimental_Inline}}
+  - : 一个字符串，反映了 [`elementtiming`](/zh-CN/docs/Web/HTML/Attributes/elementtiming) 属性，该属性在 {{domxref("PerformanceElementTiming")}} API 中标记了一个观察元素。
+- {{domxref("Element.firstElementChild")}} {{ReadOnlyInline}}
+  - : 返回此元素的第一个子元素。
 - {{DOMxRef("Element.id")}}
-  - : 是一个{{DOMxRef("DOMString")}} 表示这个元素的 id。
+  - : 一个字符串，表示此元素的 id 值。
 - {{DOMxRef("Element.innerHTML")}}
-  - : 是一个{{DOMxRef("DOMString")}} 表示这个元素的内容文本。
-- {{DOMxRef("Element.localName")}} {{readOnlyInline}}
-  - : 是一个 {{DOMxRef("DOMString")}} 表示这个元素名称本地化的部分。
-- {{DOMxRef("Element.namespaceURI")}} {{readonlyInline}}
+  - : 一个字符串，表示元素内容标记。
+- {{domxref("Element.lastElementChild")}} {{ReadOnlyInline}}
+  - : 返回此元素的最后一个子元素。
+- {{DOMxRef("Element.localName")}} {{ReadOnlyInline}}
+  - : 一个字符串，代表元素限定名称的本地部分。
+- {{DOMxRef("Element.namespaceURI")}} {{ReadOnlyInline}}
 
-  - : 元素对应的 namespace URI，如果没有则返回 `null`
+  - : 元素对应的命名空间 URI，如果没有则返回 `null`。
 
-    > **备注：** In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) namespace in both HTML and XML trees.
+    > [!NOTE]
+    > 在 Firefox 3.5 及更早版本中，HTML 元素不在命名空间中。在以后的版本中，HTML 元素在 HTML 树和 XML 树中都属于 [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml/) 命名空间。
 
-- {{DOMxRef("NonDocumentTypeChildNode.nextElementSibling")}} {{readOnlyInline}}
-  - : 是一个{{DOMxRef("Element")}}, 该元素下一个兄弟节点，如果为 null 表示不存在..
+- {{DOMxRef("Element.nextElementSibling")}} {{ReadOnlyInline}}
+  - : 一个 `Element`，树中紧跟给定元素的元素，如果没有同级节点，则为 `null`。
 - {{DOMxRef("Element.outerHTML")}}
-  - : 是一个 {{DOMxRef("DOMString")}}，获取该 DOM 元素及其后代的 HTML 文本。在设置它的时候，会从给定的字符串开始解析，替换自身。
-- {{DOMxRef("Element.prefix")}} {{readOnlyInline}}
-  - : A {{DOMxRef("DOMString")}} representing the namespace prefix of the element, or `null` if no prefix is specified.
-- {{DOMxRef("NonDocumentTypeChildNode.previousElementSibling")}} {{readOnlyInline}}
-  - : 是一个 {{DOMxRef("Element")}}, 该元素上一个兄弟节点，如果为 null 表示不存在..
-- {{DOMxRef("Element.scrollHeight")}} {{readOnlyInline}}
-  - : 返回类型为： {{jsxref("Number")}}，表示元素的滚动视图高度。
+  - : 一个字符串，代表元素的标记（包括其内容）。作为 setter 使用时，将用从给定字符串解析出的节点替换元素。
+- {{DOMxRef("Element.part")}}
+  - : 代表元素的部分标识符（即使用 `part` 属性设置的标识符），以 {{domxref("DOMTokenList")}} 的形式返回。
+- {{DOMxRef("Element.prefix")}} {{ReadOnlyInline}}
+  - : 代表元素命名空间前缀的字符串，如果没有指定前缀，则为 `null`。
+- {{DOMxRef("Element.previousElementSibling")}} {{ReadOnlyInline}}
+  - : 一个 `Element`，树中紧靠给定元素的元素，如果没有同级元素，则为 `null`。
+- {{DOMxRef("Element.scrollHeight")}} {{ReadOnlyInline}}
+  - : 元素滚动视图高度的数值。
 - {{DOMxRef("Element.scrollLeft")}}
-  - : 返回类型为：{{jsxref("Number")}}，表示该元素横向滚动条距离最左的位移。
-- {{DOMxRef("Element.scrollLeftMax")}} {{Non-standard_Inline}} {{readOnlyInline}}
-  - : 返回类型为： {{jsxref("Number")}}，表示该元素横向滚动条可移动的最大值
+  - : 元素左滚动偏移量的数值。
+- {{DOMxRef("Element.scrollLeftMax")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
+  - : 元素可能的最大左滚动偏移值。
 - {{DOMxRef("Element.scrollTop")}}
-  - : 返回类型为：{{jsxref("Number")}} ，表示该元素纵向滚动条距离
-- {{DOMxRef("Element.scrollTopMax")}} {{Non-standard_Inline}} {{readOnlyInline}}
-  - : 返回类型为：{{jsxref("Number")}} ，表示该元素纵向滚动条可移动的最大值
-- {{DOMxRef("Element.scrollWidth")}} {{readOnlyInline}}
-  - : 返回类型为： {{jsxref("Number")}} ，表示元素的滚动视图宽度。
-- {{DOMxRef("Element.shadowRoot")}}{{readOnlyInline}}
-  - : Returns the open shadow root that is hosted by the element, or null if no open shadow root is present.
-- {{DOMxRef("Element.openOrClosedShadowRoot")}} {{Non-standard_Inline}}{{readOnlyInline}}
-  - : Returns the shadow root that is hosted by the element, regardless if its open or closed. **Available only to [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions).**
-- {{DOMxRef("Element.slot")}} {{Experimental_Inline}}
-  - : Returns the name of the shadow DOM slot the element is inserted in.
-- {{DOMxRef("Element.tabStop")}} {{Non-standard_Inline}}
-  - : Is a {{jsxref("Boolean")}} indicating if the element can receive input focus via the tab key.
-- {{DOMxRef("Element.tagName")}} {{readOnlyInline}}
-  - : Returns a {{jsxref("String")}} with the name of the tag for the given element.
-- {{DOMxRef("Element.undoManager")}} {{Experimental_Inline}} {{readOnlyInline}}
-  - : Returns the {{DOMxRef("UndoManager")}} associated with the element.
-- {{DOMxRef("Element.undoScope")}} {{Experimental_Inline}}
-  - : Is a {{jsxref("Boolean")}} indicating if the element is an undo scope host, or not.
+  - : 元素顶部垂直滚动的像素数。
+- {{DOMxRef("Element.scrollTopMax")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
+  - : 元素可能的最大顶部滚动偏移值。
+- {{DOMxRef("Element.scrollWidth")}} {{ReadOnlyInline}}
+  - : 代表元素滚动视图宽度的数值。
+- {{DOMxRef("Element.shadowRoot")}} {{ReadOnlyInline}}
+  - : 返回元素挂载的开放影子根；如果没有开放影子根，则返回 null。
+- {{DOMxRef("Element.slot")}}
+  - : 返回元素插入的影子 DOM 插槽的名称。
+- {{DOMxRef("Element.tagName")}} {{ReadOnlyInline}}
+  - : 返回一个字符串，包含给定元素的标签名称。
 
-> **备注：** DOM Level 3 defined `namespaceURI`, `localName` and `prefix` on the {{DOMxRef("Node")}} interface. In DOM4 they were moved to `Element`.
->
-> This change is implemented in Chrome since version 46.0 and Firefox since version 48.0.
+### ARIA 中包含的实例属性
 
-### Properties included from Slotable
+_`Element` 接口包括以下在 `ARIAMixin` 混入中定义的属性。_
 
-_The `Element` interface includes the following property, defined on the {{DOMxRef("Slotable")}} mixin._
+- {{domxref("Element.ariaAtomic")}}
+  - : 反映 [`aria-atomic`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) 属性的字符串，表示辅助技术是否将根据 [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) 属性定义的变更通知，显示全部或仅部分变更区域。
+- {{domxref("Element.ariaAutoComplete")}}
+  - : 反映 [`aria-autocomplete`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) 属性的字符串，表示输入文本是否会触发显示一个或多个用户对组合框、搜索框或文本框的预期值的预测，并指定如果进行了预测将如何显示。
+- {{domxref("Element.ariaBusy")}}
+  - : 反映 [`aria-busy`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-busy) 属性的字符串，表示元素是否正在被修改，因为辅助技术可能希望等到修改完成后再向用户展示。
+- {{domxref("Element.ariaChecked")}}
+  - : 反映 [`aria-checked`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-checked)属性的字符串，表示复选框、单选按钮和其他具有选中状态的部件的当前“选中”状态。
+- {{domxref("Element.ariaColCount")}}
+  - : 反映 [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) 属性的字符串，该属性定义了表格、网格或树状网格中的列数。
+- {{domxref("Element.ariaColIndex")}}
+  - : 反映 [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) 属性的字符串，该属性定义了元素的列索引或相对于表格、网格或树状网格中列总数的位置。
+- {{domxref("Element.ariaColIndexText")}} {{experimental_inline}}
+  - : 反映 [`aria-colindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext) 属性的字符串，该属性定义了 aria-colindex 的人类可读文本替代。
+- {{domxref("Element.ariaColSpan")}}
+  - : 反映 [`aria-colspan`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) 属性的字符串，该属性定义了表格、网格或树型网格中单元格或网格单元格所跨列数。
+- {{domxref("Element.ariaCurrent")}}
+  - : 反映 [`aria-current`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-current) 属性的字符串，表示在一个容器或一组相关元素中代表当前项目的元素。
+- {{domxref("Element.ariaDescription")}}
+  - : 反映 [`aria-description`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-description) 属性的字符串，该属性定义了描述或注释当前元素的字符串值。
+- {{domxref("Element.ariaDisabled")}}
+  - : 反映 [`aria-disabled`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) 属性的字符串，表示该元素可感知但已禁用，因此不可编辑或以其他方式操作。
+- {{domxref("Element.ariaExpanded")}}
+  - : 反映 [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) 属性的字符串，表示该元素拥有或控制的分组元素是展开还是折叠状态。
+- {{domxref("Element.ariaHasPopup")}}
+  - : 反映 [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) 属性的字符串，表示可由元素触发的交互式弹出元素（如菜单或对话框）的可用性和类型。
+- {{domxref("Element.ariaHidden")}}
+  - : 反映 [`aria-hidden`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) 属性的字符串，表示元素是否暴露于无障碍 API。
+- {{domxref("Element.ariaKeyShortcuts")}}
+  - : 反映 [`aria-keyshortcuts`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-keyshortcuts) 属性的字符串，表示作者为激活元素或将焦点赋予元素而实施的键盘快捷方式。
+- {{domxref("Element.ariaLabel")}}
+  - : 反映 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性的字符串，该属性定义了标示当前元素的字符串值。
+- {{domxref("Element.ariaLevel")}}
+  - : 反映 [`aria-level`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-level) 属性的字符串，该属性定义了结构中元素的层次级别。
+- {{domxref("Element.ariaLive")}}
+  - : 反映 [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-live) 属性的字符串，表示元素将被更新，并描述了用户代理、辅助技术和用户可期望从实时区域获得的更新类型。
+- {{domxref("Element.ariaModal")}}
+  - : 反映 [`aria-modal`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-modal) 属性的字符串，表示元素在显示时是否为模态元素。
+- {{domxref("Element.ariaMultiline")}}
+  - : 反映 [`aria-multiline`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-multiline) 属性的字符串，表示文本框是接受多行输入还是只接受单行输入。
+- {{domxref("Element.ariaMultiSelectable")}}
+  - : 反映 [`aria-multiselectable`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) 属性的字符串，表示用户可以从当前可选后代中选择多个项目。
+- {{domxref("Element.ariaOrientation")}}
+  - : 反映 [`aria-orientation`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) 属性的字符串，表示元素的方向是水平、垂直还是未知/模糊。
+- {{domxref("Element.ariaPlaceholder")}}
+  - : 反映 [`aria-placeholder`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder) 属性的字符串，它定义了一个简短的提示，目的是在控件无值时帮助用户输入数据。
+- {{domxref("Element.ariaPosInSet")}}
+  - : 反映 [`aria-posinset`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) 属性的字符串，它定义了元素在当前列表项或树状项集合中的编号或位置。
+- {{domxref("Element.ariaPressed")}}
+  - : 反映 [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) 属性的字符串，表示切换按钮当前的“按下”状态。
+- {{domxref("Element.ariaReadOnly")}}
+  - : 反映 [`aria-readonly`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) 属性的字符串，表示该元素不可编辑，但在其他方面是可操作的。
+- {{domxref("Element.ariaRelevant")}} {{Non-standard_Inline}}
+  - : 反映 [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) 属性的字符串，表示当实时区域内的无障碍树被修改时，用户代理将触发哪些通知。该属性用于描述 `aria-live` 区域中哪些变化是相关的，应予以公布。
+- {{domxref("Element.ariaRequired")}}
+  - : [`aria-required`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-required) 属性的字符串，表示在提交表单前需要用户输入。
+- {{domxref("Element.ariaRoleDescription")}}
+  - : 反映 [`aria-roledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) 属性的字符串，它定义了一个元素的角色的人类可读、作者本地化描述。
+- {{domxref("Element.ariaRowCount")}}
+  - : 反映 [`aria-rowcount`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) 属性的字符串，该属性定义了表格、网格或树状网格中的总行数。
+- {{domxref("Element.ariaRowIndex")}}
+  - : 反映 [`aria-rowindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) 属性的字符串，它定义了元素的行索引或相对于表格、网格或树状网格中总行数的位置。
+- {{domxref("Element.ariaRowIndexText")}} {{experimental_inline}}
+  - : 反映 [`aria-rowindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext) 属性的字符串，它定义了 aria-rowindex 的人类可读文本替代。
+- {{domxref("Element.ariaRowSpan")}}
+  - : 反映 [`aria-rowspan`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) 属性的字符串，该属性定义了表格、网格或树型网格中单元格或网格单元格所跨行数。
+- {{domxref("Element.ariaSelected")}}
+  - : 反映 [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 属性的字符串，表示具有选定状态的元素的当前“选定”状态。
+- {{domxref("Element.ariaSetSize")}}
+  - : 反映 [`aria-setsize`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) 属性的字符串，该属性定义了当前列表项或树状项集合中的项数。
+- {{domxref("Element.ariaSort")}}
+  - : 反映 [`aria-sort`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-sort) 属性的字符串，表示表格或网格中的项目是按升序还是降序排序。
+- {{domxref("Element.ariaValueMax")}}
+  - : 反映 [`aria-valueMax`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) 属性的字符串，该属性定义了范围部件允许的最大值。
+- {{domxref("Element.ariaValueMin")}}
+  - : 反映 [`aria-valueMin`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) 属性的字符串，该属性定义了范围部件的最小允许值。
+- {{domxref("Element.ariaValueNow")}}
+  - : 反映 [`aria-valueNow`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) 属性的字符串，该属性定义了范围部件的当前值。
+- {{domxref("Element.ariaValueText")}}
+  - : 反映 [`aria-valuetext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) 属性的字符串，该属性为范围部件定义了 aria-valuenow 的人类可读文本替代值。
 
-- {{DOMxRef("Slotable.assignedSlot")}}{{readonlyInline}}
-  - : Returns a {{DOMxRef("HTMLSlotElement")}} representing the {{htmlelement("slot")}} the node is inserted in.
+## 实例方法
 
-### 事件句柄
+_`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}} 的方法。_
 
-- {{domxref("Element.onfullscreenchange")}}
-  - : 事件 [`fullscreenchange`](/zh-CN/docs/Web/API/Document/fullscreenchange_event) 的回调方法，在元素进入或退出全屏模式时触发。不仅可用于观察（监听）可预期的过度变化，还可以观察（监听）未知的变化，如：当你的应用程序在后台运行。
-- {{domxref("Element.onfullscreenerror")}}
-  - : 事件 [`fullscreenerror`](/zh-CN/docs/Web/API/Document/fullscreenerror_event) 的回调方法，在进入全屏模式过程中出现错误时触发。
-
-## 方法
-
-_Inherits methods from its parents {{DOMxRef("Node")}}, and its own parent, {{DOMxRef("EventTarget")}}_, and implements those of {{DOMxRef("ParentNode")}}, {{DOMxRef("ChildNode")}}_, {{DOMxRef("NonDocumentTypeChildNode")}},_ _and {{DOMxRef("Animatable")}}._
-
-- {{DOMxRef("EventTarget.addEventListener()")}}
-  - : Registers an event handler to a specific event type on the element.
+- {{DOMxRef("Element.after()")}}
+  - : 在 `Element` 父节点的子节点列表中插入一组 {{domxref("Node")}} 对象或字符串，位于 `Element` 之后。
+- {{DOMxRef("Element.animate()")}}
+  - : 在元素上创建并运行动画的快捷方法。返回创建的动画对象实例。
+- {{DOMxRef("Element.append()")}}
+  - : 在元素的最后一个子元素后插入一组 {{domxref("Node")}} 对象或字符串。
 - {{DOMxRef("Element.attachShadow()")}}
-  - : Attatches a shadow DOM tree to the specified element and returns a reference to its {{DOMxRef("ShadowRoot")}}.
-- {{DOMxRef("Element.animate()")}} {{Experimental_Inline}}
-  - : A shortcut method to create and run an animation on an element. Returns the created Animation object instance.
-- {{DOMxRef("Element.closest()")}} {{Experimental_Inline}}
-  - : Returns the {{DOMxRef("Element")}} which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.
-- {{DOMxRef("Element.computedStyleMap()")}} {{Experimental_Inline}}
-  - : Returns a {{DOMxRef("StylePropertyMapReadOnly")}} interface which provides a read-only representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
-- {{DOMxRef("EventTarget.dispatchEvent()")}}
-  - : Dispatches an event to this node in the DOM and returns a {{jsxref("Boolean")}} that indicates whether no handler canceled the event.
-- {{DOMxRef("Element.getAnimations()")}} {{Experimental_Inline}}
-  - : Returns an array of Animation objects currently active on the element.
+  - : 为指定元素附加影子 DOM 树，并返回指向其 {{DOMxRef("ShadowRoot")}} 的引用。
+- {{DOMxRef("Element.before()")}}
+  - : 在 `Element` 父节点的子节点列表中插入一组 {{domxref("Node")}} 对象或字符串，位于 `Element` 之前。
+- {{DOMxRef("Element.closest()")}}
+  - : 返回 `Element` 当前元素（或当前元素本身）最接近的祖先，且与参数中给定的选择器匹配。
+- {{DOMxRef("Element.computedStyleMap()")}}
+  - : 返回一个 {{DOMxRef("StylePropertyMapReadOnly")}} 接口，该接口提供 CSS 声明块的只读表示，可替代 {{DOMxRef("CSSStyleDeclaration")}}。
+- {{DOMxRef("Element.getAnimations()")}}
+  - : 返回元素当前活动的动画对象数组。
 - {{DOMxRef("Element.getAttribute()")}}
-  - : Retrieves the value of the named attribute from the current node and returns it as an {{jsxref("Object")}}.
+  - : 从当前节点读取指定属性的值，并以字符串形式返回。
 - {{DOMxRef("Element.getAttributeNames()")}}
-  - : Returns an array of attribute names from the current element.
+  - : 返回当前元素的属性名称数组。
+- {{DOMxRef("Element.getAttributeNode()")}}
+  - : 从当前节点获取指定属性的节点表示，并以 {{DOMxRef("Attr")}} 的形式返回。
+- {{DOMxRef("Element.getAttributeNodeNS()")}}
+  - : 从当前节点读取指定名称和命名空间的属性的节点表示，并以 {{DOMxRef("Attr")}} 的形式返回。
 - {{DOMxRef("Element.getAttributeNS()")}}
-  - : Retrieves the value of the attribute with the specified name and namespace, from the current node and returns it as an {{jsxref("Object")}}.
-- {{DOMxRef("Element.getAttributeNode()")}} {{Deprecated_Inline}}
-  - : Retrieves the node representation of the named attribute from the current node and returns it as an {{DOMxRef("Attr")}}.
-- {{DOMxRef("Element.getAttributeNodeNS()")}} {{Deprecated_Inline}}
-  - : Retrieves the node representation of the attribute with the specified name and namespace, from the current node and returns it as an {{DOMxRef("Attr")}}.
+  - : 从当前节点读取指定名称空间和名称的属性值，并以字符串形式返回。
 - {{DOMxRef("Element.getBoundingClientRect()")}}
   - : 返回元素的大小及其相对于视口的位置。
+- {{domxref("Element.getBoxQuads()")}} {{Experimental_Inline}}
+  - : 返回代表节点 CSS 片段的 {{domxref("DOMQuad")}} 对象列表。
 - {{DOMxRef("Element.getClientRects()")}}
-  - : Returns a collection of rectangles that indicate the bounding rectangles for each line of text in a client.
+  - : 返回表示客户端中每行文本边界矩形的矩形集合。
 - {{DOMxRef("Element.getElementsByClassName()")}}
-  - : 参数中给出类的列表，返回一个动态的 {{DOMxRef("HTMLCollection")}} ，包含了所有持有这些类的后代元素。
+  - : 返回一个实时的 {{DOMxRef("HTMLCollection")}}，其中包含当前元素的所有后代，这些后代拥有参数中给定的类列表。
 - {{DOMxRef("Element.getElementsByTagName()")}}
-  - : Returns a live {{DOMxRef("HTMLCollection")}} containing all descendant elements, of a particular tag name, from the current element.
+  - : 返回一个实时的 {{DOMxRef("HTMLCollection")}}，其中包含当前元素的特定标签名的所有后代元素。
 - {{DOMxRef("Element.getElementsByTagNameNS()")}}
-  - : Returns a live {{DOMxRef("HTMLCollection")}} containing all descendant elements, of a particular tag name and namespace, from the current element.
+  - : 返回一个实时的 {{DOMxRef("HTMLCollection")}}，其中包含当前元素的特定标签名和命名空间的所有后代元素。
 - {{DOMxRef("Element.hasAttribute()")}}
-  - : Returns a {{jsxref("Boolean")}} indicating if the element has the specified attribute or not.
+  - : 返回一个布尔值，表示元素是否具有指定属性。
 - {{DOMxRef("Element.hasAttributeNS()")}}
-  - : Returns a {{jsxref("Boolean")}} indicating if the element has the specified attribute, in the specified namespace, or not.
+  - : 返回一个布尔值，表示元素是否在指定名称空间中具有指定属性。
 - {{DOMxRef("Element.hasAttributes()")}}
-  - : Returns a {{jsxref("Boolean")}} indicating if the element has one or more HTML attributes present.
+  - : 返回一个布尔值，表示元素是否具有一个或多个 HTML 属性。
 - {{DOMxRef("Element.hasPointerCapture()")}}
-  - : Indicates whether the element on which it is invoked has pointer capture for the pointer identified by the given pointer ID.
+  - : 指示调用该函数的元素是否具有指针捕获功能，用于捕获由给定指针 ID 标识的指针。
 - {{DOMxRef("Element.insertAdjacentElement()")}}
-  - : Inserts a given element node at a given position relative to the element it is invoked upon.
+  - : 将指定元素节点插入调用该函数的元素的指定位置。
 - {{DOMxRef("Element.insertAdjacentHTML()")}}
-  - : Parses the text as HTML or XML and inserts the resulting nodes into the tree in the position given.
+  - : 解析 HTML 或 XML 文本，并将生成的节点插入树中指定的位置。
 - {{DOMxRef("Element.insertAdjacentText()")}}
-  - : Inserts a given text node at a given position relative to the element it is invoked upon.
-- {{DOMxRef("Element.matches()")}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Boolean")}} indicating whether or not the element would be selected by the specified selector string.
-- {{DOMxRef("Element.pseudo()")}} {{Experimental_Inline}}
-  - : Returns a {{DOMxRef("CSSPseudoElement")}} representing the child pseudo-element matched by the specified pseudo-element selector.
+  - : 将给定的文本节点插入调用该函数的元素的指定位置。
+- {{DOMxRef("Element.matches()")}}
+  - : 返回一个布尔值，表示该元素是否会被指定的选择器字符串选中。
+- {{DOMxRef("Element.prepend()")}}
+  - : 在元素的第一个子元素之前插入一组 {{domxref("Node")}} 对象或字符串。
 - {{DOMxRef("Element.querySelector()")}}
-  - : Returns the first {{DOMxRef("Node")}} which matches the specified selector string relative to the element.
+  - : 返回相对于元素符合指定选择器字符串的第一个 {{DOMxRef("Node")}}。
 - {{DOMxRef("Element.querySelectorAll()")}}
-  - : Returns a {{DOMxRef("NodeList")}} of nodes which match the specified selector string relative to the element.
+  - : 返回 {{DOMxRef("NodeList")}} 中相对于元素符合指定选择器字符串的节点。
 - {{DOMxRef("Element.releasePointerCapture()")}}
-  - : Releases (stops) pointer capture that was previously set for a specific {{DOMxRef("PointerEvent","pointer event")}}.
-- {{DOMxRef("ChildNode.remove()")}} {{Experimental_Inline}}
-  - : Removes the element from the children list of its parent.
+  - : 释放（停止）之前为特定{{DOMxRef("PointerEvent", "指针事件")}}设置的指针捕捉。
+- {{DOMxRef("Element.remove()")}}
+  - : 从父元素的子元素列表中删除该元素。
 - {{DOMxRef("Element.removeAttribute()")}}
-  - : Removes the named attribute from the current node.
+  - : 从当前节点删除指定属性。
+- {{DOMxRef("Element.removeAttributeNode()")}}
+  - : 从当前节点删除指定属性的节点表示。
 - {{DOMxRef("Element.removeAttributeNS()")}}
-  - : Removes the attribute with the specified name and namespace, from the current node.
-- {{DOMxRef("Element.removeAttributeNode()")}} {{Deprecated_Inline}}
-  - : Removes the node representation of the named attribute from the current node.
-- {{DOMxRef("EventTarget.removeEventListener()")}}
-  - : Removes an event listener from the element.
-- {{DOMxRef("Element.requestFullscreen()")}} {{Experimental_Inline}}
-  - : Asynchronously asks the browser to make the element full-screen.
-- {{DOMxRef("Element.requestPointerLock()")}} {{Experimental_Inline}}
-  - : Allows to asynchronously ask for the pointer to be locked on the given element.
-- {{DOMxRef("Element.scroll()")}}
-  - : Scrolls to a particular set of coordinates inside a given element.
-- {{DOMxRef("Element.scrollBy()")}}
-  - : Scrolls an element by the given amount.
-- {{DOMxRef("Element.scrollIntoView()")}} {{Experimental_Inline}}
-  - : Scrolls the page until the element gets into the view.
-- {{DOMxRef("Element.scrollTo()")}}
-  - : Scrolls to a particular set of coordinates inside a given element.
+  - : 从当前节点删除指定名称和命名空间的属性。
+- {{DOMxRef("Element.replaceChildren()")}}
+  - : 用一组指定的新子节点替换 {{domxref("Node")}} 的现有子节点。
+- {{DOMxRef("Element.replaceWith()")}}
+  - : 用一组 {{domxref("Node")}} 对象或字符串替换父元素子元素列表中的元素。
+- {{DOMxRef("Element.requestFullscreen()")}}
+  - : 异步要求浏览器全屏显示元素。
+- {{DOMxRef("Element.requestPointerLock()")}}
+  - : 允许异步请求锁定给定元素上的指针。
+- {{domxref("Element.scroll()")}}
+  - : 滚动到指定元素内部的特定坐标。
+- {{domxref("Element.scrollBy()")}}
+  - : 以给定数值滚动元素。
+- {{DOMxRef("Element.scrollIntoView()")}}
+  - : 滚动页面，直到元素进入视图。
+- {{DOMxRef("Element.scrollIntoViewIfNeeded()")}} {{Non-standard_Inline}}
+  - : 如果当前元素尚未进入浏览器窗口的可见区域，则将其滚动到浏览器窗口的可见区域。**请使用标准的 {{DOMxRef("Element.scrollIntoView()")}}。**
+- {{domxref("Element.scrollTo()")}}
+  - : 滚动到指定元素内部的特定坐标。
 - {{DOMxRef("Element.setAttribute()")}}
-  - : Sets the value of a named attribute of the current node.
+  - : 设置当前节点的指定属性值。
+- {{DOMxRef("Element.setAttributeNode()")}}
+  - : 设置当前节点指定属性的节点表示形式。
+- {{DOMxRef("Element.setAttributeNodeNS()")}}
+  - : 设置当前节点具有指定名称和命名空间的属性的节点表示形式。
 - {{DOMxRef("Element.setAttributeNS()")}}
-  - : Sets the value of the attribute with the specified name and namespace, from the current node.
-- {{DOMxRef("Element.setAttributeNode()")}} {{Deprecated_Inline}}
-  - : Sets the node representation of the named attribute from the current node.
-- {{DOMxRef("Element.setAttributeNodeNS()")}} {{Deprecated_Inline}}
-  - : Sets the node representation of the attribute with the specified name and namespace, from the current node.
-- {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}}
-  - : Sets up mouse event capture, redirecting all mouse events to this element.
+  - : 设置当前节点指定名称和命名空间的属性值。
+- {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : 设置鼠标事件捕获，将所有鼠标事件重定向到此元素。
 - {{DOMxRef("Element.setPointerCapture()")}}
-  - : Designates a specific element as the capture target of future [pointer events](/zh-CN/docs/Web/API/Pointer_events).
+  - : 指定一个特定的元素作为未来[指针事件](/zh-CN/docs/Web/API/Pointer_events)的捕获目标。
 - {{DOMxRef("Element.toggleAttribute()")}}
-  - : Toggles a boolean attribute, removing it if it is present and adding it if it is not present, on the specified element.
+  - : 在指定的元素上切换布尔属性，如果存在则删除它，如果不存在则添加它。
 
 ## 事件
 
-Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
+使用 `addEventListener()` 或将事件监听器分配给此接口的 `oneventname` 属性来监听这些事件。
 
-- {{DOMxRef("Element/cancel_event", "cancel")}}
+- {{domxref("Element/afterscriptexecute_event","afterscriptexecute")}} {{Non-standard_Inline}}
+  - : 执行脚本时触发此事件。
+- {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
+  - : 浏览器在（处于[_被找到前隐藏_](/zh-CN/docs/Web/HTML/Global_attributes/hidden)状态的）元素因用户已通过“在页面中查找”功能或片段导航找到了该内容而即将显示时触发。
+- {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}}
+  - : 脚本即将执行时触发此事件。
+- {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} {{Experimental_Inline}}
+  - : 当元素开始或停止[与用户相关](/zh-CN/docs/Web/CSS/CSS_containment#与用户相关)和[跳过其内容](/zh-CN/docs/Web/CSS/CSS_containment#跳过其内容)时，触发任何设置了 {{cssxref("content-visibility", "content-visibility: auto")}} 的元素。
+- {{domxref("Element/scroll_event", "scroll")}}
+  - : 当文档视图或元素滚动时触发此事件。
+- {{domxref("Element/scrollend_event", "scrollend")}}
+  - : 当文档视图完成滚动时触发此事件。
+- {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
+  - : 当违反[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)时触发此事件。
+- {{domxref("Element/wheel_event","wheel")}}
+  - : 当用户旋转指向设备（通常是鼠标）上的滚轮按钮时触发此事件。
 
-  - : Fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. For example, the browser might fire this event when the user presses the&#x20;
+### 动画事件
 
-    <kbd>Esc</kbd>
-
-    &#x20;key or clicks a "Close dialog" button which is part of the browser's UI.
-    Also available via the {{DOMxRef("GlobalEventHandlers/oncancel", "oncancel")}} property.
-
-- [`error`](/zh-CN/docs/Web/API/Element/error_event)
-  - : Fired when when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onerror", "onerror")}} property.
-- {{DOMxRef("Element/scroll_event", "scroll")}}
-  - : Fired when the document view or an element has been scrolled.
-    Also available via the {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}} property.
-- {{DOMxRef("Element/select_event", "select")}}
-  - : Fired when some text has been selected.
-    Also available via the {{DOMxRef("GlobalEventHandlers.onselect", "onselect")}} property.
-    Also available via the {{DOMxRef("GlobalEventHandlers.onshow", "onshow")}} property.
-- {{DOMxRef("Element/wheel_event","wheel")}}
-  - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
-    Also available via the {{DOMxRef("GlobalEventHandlers.onwheel", "onwheel")}} property.
+- {{domxref("Element/animationcancel_event", "animationcancel")}}
+  - : 当动画意外终止时触发此事件。
+- {{domxref("Element/animationend_event", "animationend")}}
+  - : 当动画正常结束时触发此事件。
+- {{domxref("Element/animationiteration_event", "animationiteration")}}
+  - : 当动画迭代完成时触发此事件。
+- {{domxref("Element/animationstart_event", "animationstart")}}
+  - : 当动画开始时触发此事件。
 
 ### 剪贴板事件
 
-- {{DOMxRef("Element/copy_event", "copy")}}
-  - : Fired when the user initiates a copy action through the browser's user interface.
-    Also available via the {{DOMxRef("HTMLElement/oncopy", "oncopy")}} property.
-- {{DOMxRef("Element/cut_event", "cut")}}
-  - : Fired when the user initiates a cut action through the browser's user interface.
-    Also available via the {{DOMxRef("HTMLElement/oncut", "oncut")}} property.
-- {{DOMxRef("Element/paste_event", "paste")}}
-  - : Fired when the user initiates a paste action through the browser's user interface.
-    Also available via the {{DOMxRef("HTMLElement/onpaste", "onpaste")}} property.
+- {{domxref("Element/copy_event", "copy")}}
+  - : 当用户通过浏览器的用户界面初始化复制操作时触发此事件。
+- {{domxref("Element/cut_event", "cut")}}
+  - : 当用户通过浏览器的用户界面初始化剪切操作时触发此事件。
+- {{domxref("Element/paste_event", "paste")}}
+  - : 当用户通过浏览器的用户界面初始化粘贴操作时触发此事件。
 
-### Composition events
+### 合成事件
 
-- {{DOMxRef("Element/compositionend_event", "compositionend")}}
-  - : Fired when a text composition system such as an {{glossary("input method editor")}} completes or cancels the current composition session.
-- {{DOMxRef("Element/compositionstart_event", "compositionstart")}}
-  - : Fired when a text composition system such as an {{glossary("input method editor")}} starts a new composition session.
-- {{DOMxRef("Element/compositionupdate_event", "compositionupdate")}}
-  - : Fired when a new character is received in the context of a text composition session controlled by a text composition system such as an {{glossary("input method editor")}}.
+- {{domxref("Element/compositionend_event", "compositionend")}}
+  - : 当文本合成系统（如{{glossary("input method editor", "输入法编辑器")}}）完成或取消当前合成会话时触发此事件。
+- {{domxref("Element/compositionstart_event", "compositionstart")}}
+  - : 当文本合成系统（如{{glossary("input method editor", "输入法编辑器")}}）开始新的合成会话时触发此事件。
+- {{domxref("Element/compositionupdate_event", "compositionupdate")}}
+  - : 在文本合成系统（如{{glossary("input method editor", "输入法编辑器")}}）控制的文本合成会话中收到新字符时触发此事件。
 
-### Focus events
+### 聚焦事件
 
-- {{DOMxRef("Element/blur_event", "blur")}}
-  - : Fired when an element has lost focus.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onblur", "onblur")}} property.
-- {{DOMxRef("Element/focus_event", "focus")}}
-  - : Fired when an element has gained focus.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onfocus", "onfocus")}} property
-- {{DOMxRef("Element/focusin_event", "focusin")}}
-  - : Fired when an element is about to gain focus.
-- {{DOMxRef("Element/focusout_event", "focusout")}}
-  - : Fired when an element is about to lose focus.
+- {{domxref("Element/blur_event", "blur")}}
+  - : 当元素失去焦点时触发此事件。
+- {{domxref("Element/focus_event", "focus")}}
+  - : 当元素获得焦点时触发此事件。
+- {{domxref("Element/focusin_event", "focusin")}}
+  - : 当元素获得焦点时触发此事件，位于 {{domxref("Element/focus_event", "focus")}} 事件之后。
+- {{domxref("Element/focusout_event", "focusout")}}
+  - : 当元素失去焦点时触发此事件，位于 {{domxref("Element/blur_event", "blur")}} 事件之后。
 
-### Fullscreen events
+### 全屏事件
 
-- {{DOMxRef("Element/fullscreenchange_event", "fullscreenchange")}}
-  - : Sent to an {{DOMxRef("Element")}} when it transitions into or out of [full-screen](/zh-CN/docs/Web/API/Fullscreen_API/Guide) mode.
-    Also available via the {{DOMxRef("Element.onfullscreenchange", "onfullscreenchange")}} property.
-- {{DOMxRef("Element/fullscreenerror_event", "fullscreenerror")}}
-  - : Sent to an `Element` if an error occurs while attempting to switch it into or out of [full-screen](/zh-CN/docs/Web/API/Fullscreen_API/Guide) mode.
-    Also available via the {{DOMxRef("Element.onfullscreenerror", "onfullscreenerror")}} property.
+- {{domxref("Element/fullscreenchange_event", "fullscreenchange")}}
+  - : 当前 {{domxref("Element")}} 进入或退出[全屏](/zh-CN/docs/Web/API/Fullscreen_API/Guide)模式时发送给该元素。
+- {{domxref("Element/fullscreenerror_event", "fullscreenerror")}}
+  - : 如果在尝试将当前 `Element` 切换到或切换出[全屏](/zh-CN/docs/Web/API/Fullscreen_API/Guide)模式时发生错误，则向该 `Element` 发送该事件。
 
 ### 键盘事件
 
-- {{DOMxRef("Element/keydown_event", "keydown")}}
-  - : Fired when a key is pressed.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onkeydown", "onkeydown")}} property.
-- {{DOMxRef("Element/keypress_event", "keypress")}}
-  - : Fired when a key that produces a character value is pressed down. {{deprecated_inline}}
-    Also available via the {{DOMxRef("GlobalEventHandlers/onkeypress", "onkeypress")}} property.
-- {{DOMxRef("Element/keyup_event", "keyup")}}
-  - : Fired when a key is released.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onkeyup", "onkeyup")}} property.
+- {{domxref("Element/keydown_event", "keydown")}}
+  - : 当按键按下时触发此事件。
+- {{domxref("Element/keypress_event", "keypress")}} {{Deprecated_Inline}}
+  - : 当按下可产生字符值的按键时触发此事件。
+- {{domxref("Element/keyup_event", "keyup")}}
+  - : 当按键释放时触发此事件。
 
 ### 鼠标事件
 
-- {{DOMxRef("Element/auxclick_event", "auxclick")}}
-  - : Fired when a non-primary pointing device button (e.g., any mouse button other than the left button) has been pressed and released on an element.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onauxclick", "onauxclick")}} property.
-- {{DOMxRef("Element/click_event", "click")}}
-  - : Fired when a pointing device button (e.g., a mouse's primary button) is pressed and released on a single element.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onclick", "onclick")}} property.
-- {{DOMxRef("Element/contextmenu_event", "contextmenu")}}
-  - : Fired when the user attempts to open a context menu.
-    Also available via the {{DOMxRef("GlobalEventHandlers/oncontextmenu", "oncontextmenu")}} property.
-- {{DOMxRef("Element/dblclick_event", "dblclick")}}
-  - : Fired when a pointing device button (e.g., a mouse's primary button) is clicked twice on a single element.
-    Also available via the {{DOMxRef("GlobalEventHandlers/ondblclick", "ondblclick")}} property.
-- {{DOMxRef("Element/DOMActivate_event", "DOMActivate")}} {{Deprecated_Inline}}
-  - : Occurs when an element is activated, for instance, through a mouse click or a keypress.
-- {{DOMxRef("Element/mousedown_event", "mousedown")}}
-  - : Fired when a pointing device button is pressed on an element.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onmousedown", "onmousedown")}} property.
-- {{DOMxRef("Element/mouseenter_event", "mouseenter")}}
-  - : Fired when a pointing device (usually a mouse) is moved over the element that has the listener attached.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onmouseenter", "onmouseenter")}} property.
-- {{DOMxRef("Element/mouseleave_event", "mouseleave")}}
-  - : Fired when the pointer of a pointing device (usually a mouse) is moved out of an element that has the listener attached to it.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onmouseleave", "onmouseleave")}} property.
-- {{DOMxRef("Element/mousemove_event", "mousemove")}}
-  - : Fired when a pointing device (usually a mouse) is moved while over an element.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onmousemove", "onmousemove")}} property.
-- {{DOMxRef("Element/mouseout_event", "mouseout")}}
-  - : Fired when a pointing device (usually a mouse) is moved off the element to which the listener is attached or off one of its children.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onmouseout", "onmouseout")}} property.
-- {{DOMxRef("Element/mouseover_event", "mouseover")}}
-  - : Fired when a pointing device is moved onto the element to which the listener is attached or onto one of its children.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onmouseover", "onmouseover")}} property.
-- {{DOMxRef("Element/mouseup_event", "mouseup")}}
-  - : Fired when a pointing device button is released on an element.
-    Also available via the {{DOMxRef("GlobalEventHandlers/onmouseup", "onmouseup")}} property.
-- {{DOMxRef("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}}
-  - : Fired each time the amount of pressure changes on the trackpadtouchscreen.
-- {{DOMxRef("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}}
-  - : Fired after the mousedown event as soon as sufficient pressure has been applied to qualify as a "force click".
-- {{DOMxRef("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}}
-  - : Fired before the {{DOMxRef("Element/mousedown_event", "mousedown")}} event.
-- {{DOMxRef("Element/webkitmouseforceup_event", "webkitmouseforceup")}}
-  - : Fired after the {{DOMxRef("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} event as soon as the pressure has been reduced sufficiently to end the "force click".
+- {{domxref("Element/auxclick_event", "auxclick")}}
+  - : 当元素上的非主要指针设备按钮（例如除左键以外的任何鼠标按钮）被按下并释放时触发此事件。
+- {{domxref("Element/click_event", "click")}}
+  - : 指针设备按钮（如鼠标的主按钮）在单个元素上按下并释放时触发此事件。
+- {{domxref("Element/contextmenu_event", "contextmenu")}}
+  - : 当用户尝试打开上下文菜单时触发此事件。
+- {{domxref("Element/dblclick_event", "dblclick")}}
+  - : 当指针设备按钮（如鼠标的主按钮）在单个元素上被点击两次时触发此事件。
+- {{domxref("Element/DOMActivate_event", "DOMActivate")}} {{Deprecated_Inline}}
+  - : 元素被激活，例如通过鼠标点击或按键时触发此事件。
+- {{domxref("Element/DOMMouseScroll_event", "DOMMouseScroll")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : 操作鼠标滚轮或类似设备，且自上次事件以来累计滚动量超过 1 行或 1 页时触发此事件。
+- {{domxref("Element/mousedown_event", "mousedown")}}
+  - : 当元素上的指针设备按钮被按下时触发此事件。
+- {{domxref("Element/mouseenter_event", "mouseenter")}}
+  - : 当指针设备（通常是鼠标）移动到附加了监听器的元素上时触发此事件。
+- {{domxref("Element/mouseleave_event", "mouseleave")}}
+  - : 当指针设备（通常是鼠标）的指针移出附有监听器的元素时触发此事件。
+- {{domxref("Element/mousemove_event", "mousemove")}}
+  - : 当指针设备（通常是鼠标）在元素上移动时触发此事件。
+- {{domxref("Element/mouseout_event", "mouseout")}}
+  - : 当指针设备（通常是鼠标）离开监听器所连接的元素或其子元素时触发此事件。
+- {{domxref("Element/mouseover_event", "mouseover")}}
+  - : 当指针设备移动到监听器所连接的元素上或其子元素上时触发此事件。
+- {{domxref("Element/mouseup_event", "mouseup")}}
+  - : 当元素上的指针设备按钮被释放时触发此事件。
+- {{domxref("Element/mousewheel_event", "mousewheel")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : 操作鼠标滚轮或类似设备时触发此事件。
+- {{domxref("Element/MozMousePixelScroll_event", "MozMousePixelScroll")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : 操作鼠标滚轮或类似设备时触发此事件。
+- {{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}} {{Non-standard_Inline}}
+  - : 每次触控板触摸屏上的压力发生变化时触发此事件。
+- {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} {{Non-standard_Inline}}
+  - : 在鼠标按下事件后，一旦施加了足够的压力，就会触发“强制点击”。
+- {{domxref("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}} {{Non-standard_Inline}}
+  - : 在 {{domxref("Element/mousedown_event", "mousedown")}} 事件之前触发。
+- {{domxref("Element/webkitmouseforceup_event", "webkitmouseforceup")}} {{Non-standard_Inline}}
+  - : 在 {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} 事件之后，当压力充分减小以结束“强制点击”时触发。
 
-### Touch events
+### 指针事件
 
-- {{DOMxRef("Element/touchcancel_event", "touchcancel")}}
-  - : Fired when one or more touch points have been disrupted in an implementation-specific manner (for example, too many touch points are created).
-    Also available via the {{DOMxRef("GlobalEventHandlers/ontouchcancel", "ontouchcancel")}} property.
-- {{DOMxRef("Element/touchend_event", "touchend")}}
-  - : Fired when one or more touch points are removed from the touch surface.
-    Also available via the {{DOMxRef("GlobalEventHandlers/ontouchend", "ontouchend")}} property
-- {{DOMxRef("Element/touchmove_event", "touchmove")}}
-  - : Fired when one or more touch points are moved along the touch surface.
-    Also available via the {{DOMxRef("GlobalEventHandlers/ontouchmove", "ontouchmove")}} property
-- {{DOMxRef("Element/touchstart_event", "touchstart")}}
-  - : Fired when one or more touch points are placed on the touch surface.
-    Also available via the {{DOMxRef("GlobalEventHandlers/ontouchstart", "ontouchstart")}} property
+- {{domxref("Element/gotpointercapture_event", "gotpointercapture")}}
+  - : 当元素使用 {{domxref("Element/setPointerCapture", "setPointerCapture()")}} 捕捉指针时触发。
+- {{domxref("Element/lostpointercapture_event", "lostpointercapture")}}
+  - : 当[捕获指针](/zh-CN/docs/Web/API/Pointer_events#指针捕获)被释放时触发。
+- {{domxref("Element/pointercancel_event", "pointercancel")}}
+  - : 指针事件取消时触发。
+- {{domxref("Element/pointerdown_event", "pointerdown")}}
+  - : 指针变为活动状态时触发。
+- {{domxref("Element/pointerenter_event", "pointerenter")}}
+  - : 指针移动到元素或其子代的命中测试边界时触发。
+- {{domxref("Element/pointerleave_event", "pointerleave")}}
+  - : 当指针移出元素的命中测试边界时触发。
+- {{domxref("Element/pointermove_event", "pointermove")}}
+  - : 指针改变坐标时触发。
+- {{domxref("Element/pointerout_event", "pointerout")}}
+  - : 当指针移出元素的*命中测试*边界（以及其他原因）时触发。
+- {{domxref("Element/pointerover_event", "pointerover")}}
+  - : 当指针移动到元素的命中测试边界时触发。
+- {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}} {{Experimental_Inline}}
+  - : 指针改变任何属性时触发，这些属性不会触发 {{domxref("Element/pointerdown_event", "pointerdown")}} 或 {{domxref("Element/pointerup_event", "pointerup")}} 事件。
+- {{domxref("Element/pointerup_event", "pointerup")}}
+  - : 指针不再处于活动状态时触发。
+
+### 触摸事件
+
+- {{domxref("Element/gesturechange_event","gesturechange")}} {{Non-standard_Inline}}
+  - : 触控手势期间数字移动时触发。
+- {{domxref("Element/gestureend_event","gestureend")}} {{Non-standard_Inline}}
+  - : 当不再有多个手指接触触摸表面时触发，从而结束手势。
+- {{domxref("Element/gesturestart_event","gesturestart")}} {{Non-standard_Inline}}
+  - : 当多个手指接触触摸表面时触发，从而开始一个新手势。
+- {{domxref("Element/touchcancel_event", "touchcancel")}}
+  - : 当一个或多个触摸点以特定的实现方式受到破坏（例如，创建的触摸点过多）时触发。
+- {{domxref("Element/touchend_event", "touchend")}}
+  - : 当一个或多个触摸点从触摸表面移除时触发。
+- {{domxref("Element/touchmove_event", "touchmove")}}
+  - : 当一个或多个触摸点沿触摸表面移动时触发。
+- {{domxref("Element/touchstart_event", "touchstart")}}
+  - : 当一个或多个触摸点放置在触摸表面时触发。
+
+### 过渡事件
+
+- {{domxref("Element/transitioncancel_event", "transitioncancel")}}
+  - : [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions)被取消时触发的 {{domxref("Event")}}。
+- {{domxref("Element/transitionend_event", "transitionend")}}
+  - : [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions)结束播放时触发的 {{domxref("Event")}}。
+- {{domxref("Element/transitionrun_event", "transitionrun")}}
+  - : 当创建 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions)（即当它被添加到一组正在运行的过渡中时）时，一个 {{domxref("Event")}} 会被触发，但不一定会被启动。
+- {{domxref("Element/transitionstart_event", "transitionstart")}}
+  - : [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions)开始过渡时触发的 {{domxref("Event")}}。
 
 ## 规范
 

@@ -1,8 +1,9 @@
 ---
-title: ImageBitmap.width
+title: "ImageBitmap: width プロパティ"
+short-title: width
 slug: Web/API/ImageBitmap/width
 l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{APIRef("Canvas API")}}

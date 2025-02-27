@@ -1,13 +1,14 @@
 ---
-title: IntersectionObserverEntry.rootBounds
+title: "IntersectionObserverEntry: rootBounds プロパティ"
+short-title: rootBounds
 slug: Web/API/IntersectionObserverEntry/rootBounds
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{APIRef("Intersection Observer API")}}
 
-{{domxref("IntersectionObserverEntry")}} インターフェイスの読み取り専用の **`rootBounds`** プロパティは {{domxref("DOMRectReadOnly")}} のルート交差矩形に対応し、 {{domxref("IntersectionObserverEntry.target", "target")}} が指定されていればそれによるオフセットを含む {{domxref("IntersectionObserver.rootMargin")}} です。
+{{domxref("IntersectionObserverEntry")}} インターフェイスの読み取り専用の **`rootBounds`** プロパティは {{domxref("DOMRectReadOnly")}} であり、この {{domxref("IntersectionObserverEntry.target", "target")}} のルート耕作系に対応します。指定されていれば、 {{domxref("IntersectionObserver.rootMargin")}} によるオフセットを含みます。
 
 ## 値
 

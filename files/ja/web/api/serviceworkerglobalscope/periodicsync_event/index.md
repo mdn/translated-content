@@ -1,11 +1,12 @@
 ---
 title: "ServiceWorkerGlobalScope: periodicsync イベント"
+short-title: periodicsync
 slug: Web/API/ServiceWorkerGlobalScope/periodicsync_event
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: b74d47ab6e99d2bd43ef9638367d9c69fca04402
 ---
 
-{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
 **`periodicsync`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスのイベントで、 {{domxref('PeriodicSyncManager')}}を登録したときに指定された時間間隔で発行されます。
 
@@ -64,5 +65,5 @@ self.onperiodicsync = (event) => {
 
 ## 関連情報
 
-- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync)
 - [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

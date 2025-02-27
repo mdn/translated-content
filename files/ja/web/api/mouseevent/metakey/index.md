@@ -1,8 +1,9 @@
 ---
-title: MouseEvent.metaKey
+title: "MouseEvent: metaKey プロパティ"
+short-title: metaKey
 slug: Web/API/MouseEvent/metaKey
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("UI Events")}}
@@ -12,7 +13,8 @@ l10n:
 多くのオペレーティングシステムでは、 <kbd>meta</kbd> キーに特殊な機能を割り当てているため、このプロパティは実際にはキーが押されていても `false` を返す可能性があることに注意してください。
 例えば、 Windows では、このキーはスタートメニューを開きます。
 
-> **メモ:** Macintosh のキーボードでは、このキーは <kbd>command</kbd> キー (<kbd>⌘</kbd>) です。
+> [!NOTE]
+> Macintosh のキーボードでは、このキーは <kbd>command</kbd> キー (<kbd>⌘</kbd>) です。
 > Windows のキーボードでは、このキーは Windows キー (<kbd>⊞</kbd>) です。
 
 ## 値

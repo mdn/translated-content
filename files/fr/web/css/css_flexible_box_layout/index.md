@@ -50,21 +50,21 @@ Les propriétés `align-content`, `align-self`, `align-items` et `justify-conten
 
 ## Guides
 
-- [Les concepts de base des boîtes flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox)
+- [Les concepts de base des boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
   - : Un aperçu des différentes fonctionnalités offertes par les boîtes flexibles.
-- [Les liens entre _flexbox_ et les autres méthodes de disposition](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Liens_entre_flexbox_et_les_autres_dispositions)
+- [Les liens entre _flexbox_ et les autres méthodes de disposition](/fr/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
   - : Comment _flexbox_ s'articule avec les autres méthodes de disposition et les différents modules de spécification CSS.
-- [L'alignement des éléments au sein d'un conteneur flexible](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible)
+- [L'alignement des éléments au sein d'un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
   - : Le fonctionnement des propriétés d'alignement des boîtes dans le contexte des boîtes flexibles.
-- [Ordonner les éléments flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Ordonner_éléments_flexibles)
+- [Ordonner les éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
   - : Ce guide explique les différentes méthodes qui permettent de modifier l'ordre et la direction des éléments dans le conteneur flexible et aborde également les problèmes que cela peut causer.
-- [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Contrôler_les_proportions_des_boîtes_flexibles_le_long_de_l_axe_principal)
+- [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
   - : Cet article explique le fonctionnement des propriétés `flex-grow`, `flex-shrink` et `flex-basis`.
-- [Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Maîtriser_passage_à_la_ligne_des_éléments_flexibles)
+- [Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
   - : Comment créer des conteneur flexibles qui s'étendent sur plusieurs lignes et contrôler l'affichage des éléments sur ces lignes.
-- [Les cas d'utilisation classiques des boîtes flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Cas_utilisation_flexbox)
+- [Les cas d'utilisation classiques des boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
   - : Des _design patterns_ pouvant être résolus avec les boîtes flexibles.
-- [La rétrocompatibilité de _flexbox_](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Rétrocompatibilite_de_flexbox)
+- [La rétrocompatibilité de _flexbox_](/fr/docs/Glossary/Flexbox)
   - : L'état de la compatibilité des navigateurs pour les boîtes flexibles, les différents problème d'interopérabilité, la gestion des anciens navigateurs et l'évolution de la spécification.
 
 ## Spécifications
@@ -74,4 +74,4 @@ Les propriétés `align-content`, `align-self`, `align-items` et `justify-conten
 ## Voir aussi
 
 - [Flexbugs : une liste, maintenue par la communauté, des différents bugs des navigateurs relatifs aux boîtes flexibles et les éventuelles méthodes de contournements associées](https://github.com/philipwalton/flexbugs)
-- [Mixins multi-navigateurs pour flexbox](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Mixins) : cet article fournit un ensemble de mixins pour obtenir l'effet des flexbox de façon homogène sur les différents navigateurs qui ne supportent pas la syntaxe moderne pour les boîtes flexibles
+- [Mixins multi-navigateurs pour flexbox](/fr/docs/Glossary/Flexbox) : cet article fournit un ensemble de mixins pour obtenir l'effet des flexbox de façon homogène sur les différents navigateurs qui ne supportent pas la syntaxe moderne pour les boîtes flexibles

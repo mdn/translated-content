@@ -3,7 +3,9 @@ title: text-rendering
 slug: Web/SVG/Attribute/text-rendering
 ---
 
-« [SVG Attribute reference home](/en/SVG/Attribute)
+{{SVGRef}}
+
+« [SVG Attribute reference home](/en-US/SVG/Attribute)
 
 При создание SVG есть возможность указать браузеру о том, как рекомендуется рендерить (отрисовывать) текст. `text-rendering` предоставляет возможность указывать данные рекомендации.
 
@@ -11,11 +13,11 @@ slug: Web/SVG/Attribute/text-rendering
 
 ## Usage context
 
-| Категория          | Presentation attribute                                                                |
-| ------------------ | ------------------------------------------------------------------------------------- |
-| Значение           | **auto** \| optimizeSpeed \| optimizeLegibility \| geometricPrecision \| inherit      |
-| Animatable         | Yes                                                                                   |
-| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#TextRenderingProperty) |
+| Категория          | Presentation attribute                                                                 |
+| ------------------ | -------------------------------------------------------------------------------------- |
+| Значение           | **auto** \| optimizeSpeed \| optimizeLegibility \| geometricPrecision \| inherit       |
+| Animatable         | Yes                                                                                    |
+| Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/painting.html#TextRenderingProperty) |
 
 - auto
   - : Указывает на то, что браузер должен внести соответствующие компромиссы, чтобы сбалансировать скорость рендеринга, читаемость (разборчивость текста) и геометрическую точность, но читаемости уделять более пристальное внимание, чем скорости и геометрической точности.
@@ -72,6 +74,6 @@ The following elements can use the `text-rendering` attribute
 
 - {{ SVGElement("text") }}
 
-## See also
+## Смотрите также
 
 - {{ cssxref("text-rendering","CSS text-rendering") }}

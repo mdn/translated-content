@@ -3,7 +3,7 @@ title: Seletores de classe
 slug: Web/CSS/Class_selectors
 ---
 
-O **seletor de classes** [CSS](/pt-BR/docs/CSS) corresponde aos elementos com base no conteúdo de seus atributos `class.`
+O **seletor de classes** [CSS](/pt-BR/docs/Web/CSS) corresponde aos elementos com base no conteúdo de seus atributos `class.`
 
 ```css
 /* Todos os elementos com class="espaçoso" */
@@ -78,4 +78,4 @@ Observe que isso é o mesmo que [`seletor de atributo`](/pt-BR/docs/Web/CSS/Attr
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.class")}}
+{{Compat}}

@@ -47,7 +47,7 @@ slug: Web/Progressive_web_apps/Guides/Offline_and_background_operation
 
 离线操作允许 PWA 即使在设备没有网络连接时也能提供良好的用户体验。这是通过向应用程序添加 service worker 来实现的。
 
-service worker *控制*应用的部分或全部页面。在安装 service worker 后，它可以从服务器获取它控制的页面的资源（包括页面、样式、脚本和图片等），并将它们添加到本地缓存中。使用 {{domxref("Cache")}} 接口将资源添加到缓存中。在 service worker 全局作用域内，可以通过 {{domxref("caches")}} 属性访问 `Cache` 实例。
+service worker *控制*应用的部分或全部页面。在安装 service worker 后，它可以从服务器获取它控制的页面的资源（包括页面、样式、脚本和图片等），并将它们添加到本地缓存中。使用 {{domxref("Cache")}} 接口将资源添加到缓存中。在 service worker 全局作用域内，可以通过 {{domxref("WorkerGlobalScope.caches")}} 属性访问 `Cache` 实例。
 
 然后，每当应用程序请求一个资源（例如，因为用户打开了应用程序或点击了内部链接），浏览器在 service worker 的全局作用域内触发一个名为 {{domxref("ServiceWorkerGlobalScope.fetch_event", "fetch")}} 的事件。通过监听此事件，service worker 可以拦截请求。
 
@@ -116,7 +116,8 @@ self.addEventListener("fetch", (event) => {
 
 这意味着在许多情况下，即使网络连接不稳定，Web 应用程序也能正常运行。从主应用程序代码的角度来看，这完全是透明的：应用程序只需发出网络请求并获取响应。此外，由于 service worker 在单独的线程中运行，主应用程序代码可以保持对用户输入的响应，同时获取和缓存资源。
 
-> **备注：** 这里描述的策略只是 service worker 实现缓存的一种方式。具体来说，在缓存优先策略中，我们先从缓存中查找响应，然后再尝试从网络中获取，这意味着我们更有可能返回一个快速的响应而无需承担网络成本，但也更有可能返回一个过期的响应。
+> [!NOTE]
+> 这里描述的策略只是 service worker 实现缓存的一种方式。具体来说，在缓存优先策略中，我们先从缓存中查找响应，然后再尝试从网络中获取，这意味着我们更有可能返回一个快速的响应而无需承担网络成本，但也更有可能返回一个过期的响应。
 >
 > 另一种策略是*网络优先*策略，即首先尝试从服务器获取资源，如果设备离线，则回退到缓存。
 >
@@ -441,8 +442,8 @@ async function registerPeriodicSync() {
 
 ### 指南
 
-- web.dev 上的[介绍后台同步](https://developer.chrome.com/blog/background-sync/)（2017）
-- web.dev 上的[介绍后台获取](https://developer.chrome.com/blog/background-fetch/)（2022）
-- web.dev 上的[周期性后台同步 API](https://developer.chrome.com/articles/periodic-background-sync/)（2020）
-- web.dev 上的[通知](https://web.dev/notifications/)
-- web.dev 上的[具有离线流媒体的 PWA](https://web.dev/pwa-with-offline-streaming/)（2021）
+- developer.chrome.google.cn 上的[介绍后台同步](https://developer.chrome.google.cn/blog/background-sync)（2017）
+- developer.chrome.google.cn 上的[介绍后台获取](https://developer.chrome.google.cn/blog/background-fetch)（2022）
+- developer.chrome.google.cn 上的[周期性后台同步 API](https://developer.chrome.google.cn/docs/capabilities/periodic-background-sync)（2020）
+- web.developers.google.cn 上的[通知](https://web.developers.google.cn/explore/notifications)
+- web.developers.google.cn 上的[具有离线流媒体的 PWA](https://web.developers.google.cn/articles/pwa-with-offline-streaming)（2021）

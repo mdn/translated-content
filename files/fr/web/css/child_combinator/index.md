@@ -3,7 +3,7 @@ title: Sélecteurs enfant
 slug: Web/CSS/Child_combinator
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 Le combinateur `>` sépare deux sélecteurs et cible seulement les éléments correspondant au second sélecteur qui sont des enfants **directs** des éléments ciblés par le premier sélecteur.
 
@@ -63,4 +63,4 @@ div > span {
 
 ## Voir aussi
 
-- [Le combinateur de descendant](/fr/docs/Web/CSS/Sélecteurs_descendant)
+- [Le combinateur de descendant](/fr/docs/Web/CSS/Descendant_combinator)

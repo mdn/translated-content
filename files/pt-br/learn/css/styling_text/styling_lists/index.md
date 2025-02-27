@@ -5,11 +5,11 @@ slug: Learn/CSS/Styling_text/Styling_lists
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
-Este é o 10º seção do [CSS Introdução](/pt-BR/docs/Web/Guide/CSS/Getting_Started) tutorial; ele descreve como você pode usar CSS para especificar o aparecimento de listas. Você cria um novo documento de amostra contendo listas, e um novo estilo que os estilos das listas.
+Este é o 10º seção do [CSS Introdução](/pt-BR/docs/Learn/CSS/First_steps) tutorial; ele descreve como você pode usar CSS para especificar o aparecimento de listas. Você cria um novo documento de amostra contendo listas, e um novo estilo que os estilos das listas.
 
 ## Informação: Lists
 
-Se você aceitou o desafio na [última](/pt-BR/docs/Web/Guide/CSS/Getting_Started/Content) seção, em seguida, você viu como você pode adicionar conteúdo antes de qualquer elemento para exibi-lo como um item da lista.
+Se você aceitou o desafio na [última](/pt-BR/docs/Learn/CSS/Howto/Generated_content) seção, em seguida, você viu como você pode adicionar conteúdo antes de qualquer elemento para exibi-lo como um item da lista.
 
 CSS proporciona propriedades especiais que são projetados para listas. Geralmente é mais conveniente usar estas propriedades sempre que puder.
 
@@ -106,7 +106,7 @@ Browsers diferem na maneira de implementar os estilos para listas. Não espere q
 
 ### Contadores
 
-**Nota:** Alguns navegadores não suportam contadores. O [conteúdo CSS e compatibilidade do navegador](http://www.quirksmode.org/css/contents.html) página no [site de modo Quirks](http://www.quirksmode.org/) contém um gráfico detalhado de compatibilidade do navegador para este e outros recursos CSS. Páginas individuais na [referência CSS](/pt-BR/docs/Web/CSS/Reference) neste local também têm tabelas de compatibilidade do navegador.
+**Nota:** Alguns navegadores não suportam contadores. O [conteúdo CSS e compatibilidade do navegador](https://www.quirksmode.org/css/contents.html) página no [site de modo Quirks](https://www.quirksmode.org/) contém um gráfico detalhado de compatibilidade do navegador para este e outros recursos CSS. Páginas individuais na [referência CSS](/pt-BR/docs/Web/CSS/Reference) neste local também têm tabelas de compatibilidade do navegador.
 
 Você pode usar contadores para numerar quaisquer elementos, não somente itens da lista. Por exemplo, em alguns documentos você pode querer numerar cabeçalhos ou parágrafos.
 

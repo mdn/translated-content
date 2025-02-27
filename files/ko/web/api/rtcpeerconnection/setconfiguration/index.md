@@ -12,7 +12,8 @@ slug: Web/API/RTCPeerConnection/setConfiguration
 - {{domxref("RTCPeerConnection")}}가 ICE 서버를 명시하지 않고 시작된 경우. 예를 들어, {{domxref("RTCPeerConnection.RTCPeerConnection()", "RTCPeerConnection()")}} 생성자를 매개변수 없이 호출하게되면, 개발자가 직접 `setConfiguration()`를 호출해서 ICE 협상 시작 전에 ICE 서버를 추가해줘야 합니다.
 - 연결의 재협상이 필요하거나, 어떤 이유로 인해서 다른 종류의 ICE 서버를 사용해야하는 경우. 예를 들어, 사용자가 새로운 지역으로 이동을 했기 때문에 지역 ICE 서버를 바꿔야하는 경우입니다. 이런 경우에는, `setConfiguration()`를 호출해서 신규 지역 ICE 서버로 바꿔주고, [ICE restart](/ko/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart)을 시작하게됩니다.
 
-> **참고:** 연결이 이미 설정이 되어있다면, 식별 정보는 변경 할 수 없습니다.
+> [!NOTE]
+> 연결이 이미 설정이 되어있다면, 식별 정보는 변경 할 수 없습니다.
 
 ## Syntax
 

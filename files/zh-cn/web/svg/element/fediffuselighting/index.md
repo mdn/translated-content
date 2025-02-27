@@ -9,7 +9,7 @@ slug: Web/SVG/Element/feDiffuseLighting
 
 滤镜制造的光映射可以与一个纹理图像组合，使用{{SVGElement("feComposite")}}滤镜的多重 `arithmetic` 操作。在应用纹理图案之前合加多个光映射可以模拟多重光源。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
@@ -97,9 +97,9 @@ slug: Web/SVG/Element/feDiffuseLighting
 
 ### 全局属性
 
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
-- [滤镜属性](/zh-CN/SVG/Attribute#Filter) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
+- [滤镜属性](/zh-CN/docs/SVG/Attribute#filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -112,7 +112,7 @@ slug: Web/SVG/Element/feDiffuseLighting
 
 ## DOM 接口
 
-该元素实现了 [`SVGFEDiffuseLightingElement`](/zh-CN/DOM/SVGFEDiffuseLightingElement) 接口。
+该元素实现了 [`SVGFEDiffuseLightingElement`](/zh-CN/docs/DOM/SVGFEDiffuseLightingElement) 接口。
 
 ## 参见
 
@@ -135,4 +135,4 @@ slug: Web/SVG/Element/feDiffuseLighting
 - {{ SVGElement("feSpotLight") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/SVG/Tutorial/Filter_effects)

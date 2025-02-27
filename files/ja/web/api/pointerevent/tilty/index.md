@@ -1,15 +1,16 @@
 ---
-title: PointerEvent.tiltY
+title: "PointerEvent: tiltY プロパティ"
+short-title: tiltY
 slug: Web/API/PointerEvent/tiltY
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{ APIRef("Pointer Events") }}
 
 **`tiltY`** は {{domxref("PointerEvent")}} インターフェイスの読み取り専用プロパティで、ポインターの *X-Z 平面*と画面の間の角度（度単位）です。 このプロパティは通常、ペン/スタイラス型のポインターのみ役立ちます。
 
-このプロパティの説明については、[仕様の図 3](https://w3c.github.io/pointerevents/#dom-pointerevent-tilty) を参照してください。
+このプロパティの説明については、[仕様書の図 3](https://w3c.github.io/pointerevents/#dom-pointerevent-tilty) を参照してください。
 
 ## 値
 

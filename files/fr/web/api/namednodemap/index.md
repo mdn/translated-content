@@ -9,7 +9,8 @@ L'interface **`NamedNodeMap`** représente une collection d'objets {{domxref("At
 
 Un objet `NamedNodeMap` est _vivant_ et sera automatiquement mis à jour si des modifications sont apportées à son contenu (que cela provienne d'une source interne ou externe).
 
-> **Note :** Bien qu'intitulée `NamedNodeMap`, cette interface ne manipule pas d'objets {{domxref("Node")}} mais des objets {{domxref("Attr")}}. Ces derniers étaient à l'origine (et le sont toujours pour certaines implémentations) une classe spécialisée de {{domxref("Node")}}.
+> [!NOTE]
+> Bien qu'intitulée `NamedNodeMap`, cette interface ne manipule pas d'objets {{domxref("Node")}} mais des objets {{domxref("Attr")}}. Ces derniers étaient à l'origine (et le sont toujours pour certaines implémentations) une classe spécialisée de {{domxref("Node")}}.
 
 ## Propriétés
 

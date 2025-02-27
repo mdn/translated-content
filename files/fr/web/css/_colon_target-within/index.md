@@ -1,11 +1,13 @@
 ---
-title: ":target-within"
+title: :target-within
 slug: Web/CSS/:target-within
+l10n:
+  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:target-within`** représente un élément ciblé ou qui _contient_ un élément ciblé. Un élément ciblé est un élément unique disposant d'un [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) correspondant au fragment de l'URL. En d'autres termes, il représente un élément qui correspond lui-même à la pseudo-classe {{CSSxRef(":target")}} ou qui a un descendant correspondant à `:target` (cela inclut les descendants des [arbres fantômes](/fr/docs/Web/Web_Components/Using_shadow_DOM)).
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:target-within`** représente un élément ciblé ou qui _contient_ un élément ciblé. Un élément ciblé est un élément unique disposant d'un [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) correspondant au fragment de l'URL. En d'autres termes, il représente un élément qui correspond lui-même à la pseudo-classe [`:target`](/fr/docs/Web/CSS/:target) ou qui a un descendant correspondant à `:target` (cela inclut les descendants des [arbres fantômes](/fr/docs/Web/API/Web_components/Using_shadow_DOM)).
 
 ```css
 /* Sélectionne une <div> lorsqu'un de ses descendants est une cible */
@@ -16,7 +18,11 @@ div:target-within {
 
 ## Syntaxe
 
-{{CSSSyntax}}
+```css
+:target-within {
+  /* ... */
+}
+```
 
 ## Exemples
 
@@ -81,4 +87,4 @@ p:target i {
 
 ## Voir aussi
 
-- {{CSSxRef(":target")}}
+- La pseudo-classe [`:target`](/fr/docs/Web/CSS/:target)

@@ -1,6 +1,6 @@
 {
   "config": {
-    "extends": "./.markdownlint.jsonc"
+    "extends": "./.markdownlint.jsonc",
   },
   "customRules": ["markdownlint-rule-search-replace"],
   "ignores": [
@@ -8,6 +8,6 @@
     ".git",
     ".github",
     "**/conflicting/**",
-    "**/orphaned/**"
-  ]
+    "**/orphaned/**",
+  ],
 }

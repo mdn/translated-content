@@ -5,7 +5,7 @@ slug: Web/CSS/font-size
 
 {{CSSRef}}
 
-**`font-size`** [CSS](/ko/docs/CSS) 속성은 폰트의 크기(대문자 "M"의 크기)를 지정합니다. 폰트 크기를 바꾸면 `em` 과 `ex` {{cssxref("&lt;length&gt;")}} 단위로 계산된 다른 항목들의 크기를 바꿉니다.
+**`font-size`** [CSS](/ko/docs/Web/CSS) 속성은 폰트의 크기(대문자 "M"의 크기)를 지정합니다. 폰트 크기를 바꾸면 `em` 과 `ex` {{cssxref("&lt;length&gt;")}} 단위로 계산된 다른 항목들의 크기를 바꿉니다.
 
 {{EmbedInteractiveExample("pages/css/font-size.html")}}
 
@@ -75,7 +75,8 @@ The `font-size` property is specified in one of the following ways:
 
 폰트 크기 설정을 조합해서 쓸 수 있습니다다. 예를 들어, 부모 엘리먼트의 크기를 `16px` 로 정하고 자식 엘리먼트의 크기를 `larger`로 설정하면, 자식엘리먼트의 폰트 크기는 페이지에 있는 부모 엘리먼트보다 크게 보입니다.
 
-> **참고:** 폰트 크기를 픽셀로 정하는 것은 사용자가 폰트 크기를 브라우저를 이용해 바꿀 수 없기 때문에 _[접근성이 떨어집니다](https://en.wikipedia.org/wiki/Web_accessibility)_. (예를 들어 시각에 제약이 있는 사용자가 폰트 크기를 웹 디자이너가 설정한 크기보다 더 크게 설정하려고 할 수 있습니다.) 그러므로, 접근성 높은 페이지를 만들고자 한다면, 폰트 크기를 픽셀 단위로 설정하는 것을 지양해야 합니다.
+> [!NOTE]
+> 폰트 크기를 픽셀로 정하는 것은 사용자가 폰트 크기를 브라우저를 이용해 바꿀 수 없기 때문에 _[접근성이 떨어집니다](https://en.wikipedia.org/wiki/Web_accessibility)_. (예를 들어 시각에 제약이 있는 사용자가 폰트 크기를 웹 디자이너가 설정한 크기보다 더 크게 설정하려고 할 수 있습니다.) 그러므로, 접근성 높은 페이지를 만들고자 한다면, 폰트 크기를 픽셀 단위로 설정하는 것을 지양해야 합니다.
 
 ### `em` 값
 

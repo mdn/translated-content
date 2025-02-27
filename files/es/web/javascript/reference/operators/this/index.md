@@ -9,9 +9,21 @@ slug: Web/JavaScript/Reference/Operators/this
 
 La palabra clave **`this`** de una función se comporta un poco diferente en Javascript en comparación con otros lenguajes. Además tiene algunas diferencias entre el [modo estricto](/es/docs/Web/JavaScript/Referencia/Funciones/Modo_estricto) y el modo no estricto.
 
-En general, el valor de `this` está determinado por cómo se invoca a la función. No puede ser establecida mediante una asignación en tiempo de ejecución, y puede ser diferente cada vez que la función es invocada. ES5 introdujo el método {{jsxref("Function.bind()", "bind()")}} para [establecer el valor de la función `this` independientemente de como es llamada](#Funciones_enlazadas), y ES2015 introdujo las [funciones flecha](/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions) que no proporcionan su propio "binding" de `this` (se mantiene el valor de `this` del contexto léxico que envuelve a la función)
+En general, el valor de `this` está determinado por cómo se invoca a la función. No puede ser establecida mediante una asignación en tiempo de ejecución, y puede ser diferente cada vez que la función es invocada. ES5 introdujo el método {{jsxref("Function.bind()", "bind()")}} para [establecer el valor de la función `this` independientemente de como es llamada](#funciones_enlazadas), y ES2015 introdujo las [funciones flecha](/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions) que no proporcionan su propio "binding" de `this` (se mantiene el valor de `this` del contexto léxico que envuelve a la función)
 
-{{EmbedInteractiveExample("pages/js/expressions-this.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - this")}}
+
+```js interactive-example
+const test = {
+  prop: 42,
+  func: function () {
+    return this.prop;
+  },
+};
+
+console.log(test.func());
+// Expected output: 42
+```
 
 ## Sintaxis
 
@@ -37,7 +49,8 @@ this.a = 37;
 console.log(window.a); // 37
 ```
 
-> **Nota:** Puedes obtener el objeto global usando la propieda global `globalThis`, no importa el contexto donde se ejecute esta propiedad, siempre hará referencia al objeto global.
+> [!NOTE]
+> Puedes obtener el objeto global usando la propieda global `globalThis`, no importa el contexto donde se ejecute esta propiedad, siempre hará referencia al objeto global.
 
 ## Contexto de la función
 
@@ -66,7 +79,8 @@ f2() === undefined;
 
 En modo estricto, el valor de **this** se mantiene en lo que está establecida al entrar en el contexto de ejecución. Si no está definido, permanece undefined. También se puede ajustar a cualquier valor, tales como **null** o **42** o "**Yo no soy this**".
 
-> **Nota:** En el segundo ejemplo, **`this`** debería ser {{jsxref("undefined")}}, porque `f2` fue llamado sin proporcionar ninguna base (ej. `window.f2()`). Esta característica no fue implementada en algunos navegadores cuando se comenzó a dar soporte al [modo estricto](/es/docs/Web/JavaScript/Referencia/Funciones/Modo_estricto). Como resultado, retorna incorrectamente el objeto window.
+> [!NOTE]
+> En el segundo ejemplo, **`this`** debería ser {{jsxref("undefined")}}, porque `f2` fue llamado sin proporcionar ninguna base (ej. `window.f2()`). Esta característica no fue implementada en algunos navegadores cuando se comenzó a dar soporte al [modo estricto](/es/docs/Web/JavaScript/Referencia/Funciones/Modo_estricto). Como resultado, retorna incorrectamente el objeto window.
 
 Como un método de un objeto
 

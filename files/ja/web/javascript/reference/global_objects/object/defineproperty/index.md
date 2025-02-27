@@ -1,18 +1,35 @@
 ---
 title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
+l10n:
+  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
 {{JSRef}}
 
-静的メソッドの **`Object.defineProperty()`** は、あるオブジェクトに新しいプロパティを直接定義したり、オブジェクトの既存のプロパティを変更したりして、そのオブジェクトを返します。
+**`Object.defineProperty()`** は静的メソッドで、あるオブジェクトに新しいプロパティを直接定義したり、オブジェクトの既存のプロパティを変更したりして、そのオブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/object-defineproperty.html")}}
+{{InteractiveExample("JavaScript Demo: Object.defineProperty()")}}
+
+```js interactive-example
+const object1 = {};
+
+Object.defineProperty(object1, "property1", {
+  value: 42,
+  writable: false,
+});
+
+object1.property1 = 77;
+// Throws an error in strict mode
+
+console.log(object1.property1);
+// Expected output: 42
+```
 
 ## 構文
 
-```js
-Object.defineProperty(obj, prop, descriptor);
+```js-nolint
+Object.defineProperty(obj, prop, descriptor)
 ```
 
 ### 引数
@@ -20,34 +37,39 @@ Object.defineProperty(obj, prop, descriptor);
 - `obj`
   - : プロパティを定義するオブジェクトです。
 - `prop`
-  - : 定義または変更するプロパティの名前または {{jsxref("Symbol")}} です。
+  - : 文字列または {{jsxref("Symbol")}} で、定義または変更するプロパティのキーを指定します。
 - `descriptor`
   - : 定義または変更するプロパティの記述子です。
 
 ### 返値
 
-この関数に渡されたオブジェクトをそのまま返します。
+指定したプロパティが追加または変更された、関数に渡されたオブジェクト。
 
 ## 解説
 
-このメソッドで、あるオブジェクトのプロパティを明示的に追加または変更することができます。代入による通常のプロパティ追加では、プロパティ列挙 ({{jsxref("Statements/for...in", "for...in")}} ループや {{jsxref("Object.keys")}} メソッド) に現れ、値は変更可能で、また{{jsxref("Operators/delete", "削除", "", 1)}}も可能なプロパティが生成されます。このメソッドでは、これらの詳細事項を既定値から変えることが可能です。既定では、`Object.defineProperty()` を使って追加された値は不変になります。
+`Object.defineProperty()` で、あるオブジェクトのプロパティを明示的に追加または変更することができます。[代入](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)による通常のプロパティ追加では、プロパティ列挙 ({{jsxref("Statements/for...in", "for...in")}} ループや {{jsxref("Object.keys()")}} メソッドなど) に現れ、値は変更可能で、また{{jsxref("Operators/delete", "削除", "", 1)}}も可能なプロパティが生成されます。このメソッドでは、これらの詳細事項を既定値から変えることが可能です。既定では、 `Object.defineProperty()` を使って追加されたプロパティは書き込み不可、列挙不可、構成不可になります。加えて、 `Object.defineProperty()` は内部メソッドの [`[[DefineOwnProperty]]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) を [`[[Set]]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set) の代わりに使用しますので、プロパティが既に存在する場合でも[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を呼び出しません。
 
 プロパティの記述子は、データ記述子とアクセサー記述子の二つに分かれます。**データ記述子**は値を持つプロパティで、その値は書き換え可能にも不可能にもできます。**アクセサー記述子**は、関数のゲッターとセッターの組で表されるプロパティです。記述子はこれら二種類のどちらかでなければならず、両方になることはできません。
 
 どちらの形でも記述子はオブジェクトで表現します。共通して以下のオプションのキーを持つことができます (注: ここでいう**既定値**とは、`Object.defineProperty()` を使ってプロパティを定義する場合です)。
 
 - `configurable`
-  - : `true` である場合のみ、この種の記述子を変更することや、対応するオブジェクトからプロパティを削除することができます。
+
+  - : これが `false` に設定されていた場合、
+
+    - このプロパティの種類をデータプロパティとアクセサープロパティの間で変更することができません。
+    - このプロパティを削除することができません。
+    - 記述子の他の属性は変更できません（しかし、 `writable: true` のデータ記述子であれば、 `value` を変更し、 `writable` を `false` に変更することができます）。
+
     **既定値は `false` です。**
+
 - `enumerable`
-  - : `true` である場合のみ、このプロパティは対応するオブジェクトでのプロパティ列挙に現れます。
-    **既定値は `false` です。**
+  - : `true` である場合のみ、このプロパティは対応するオブジェクトでのプロパティ列挙に現れます。**既定値は `false` です。**
 
 **データ記述子**は以下のオプションキーも持ちます。
 
 - `value`
-  - : プロパティに関連づけられた値です。有効な JavaScript の値 (number, object, function など) である必要があります。<br>
-    **既定値は {{jsxref("undefined")}} です。**
+  - : プロパティに関連づけられた値です。有効な JavaScript の値（数値、オブジェクト、関数など）である必要があります。**既定値は {{jsxref("undefined")}} です。**
 - `writable`
   - : `true` である場合のみ、プロパティに関連づけられた値は{{jsxref("Operators#assignment_operators", "代入演算子", "", 1)}}で変更することができます。<br>
     **既定値は `false` です。**
@@ -63,19 +85,19 @@ Object.defineProperty(obj, prop, descriptor);
 
 記述子に `value`, `writable`, `get`, `set` のいずれのキーもない場合、データ記述子として扱われます。記述子に `value` または `writable` と、`get` または `set` のキーの両方がある場合は、例外が発生します。
 
-これらのキーは必ずしも記述子が直接所有しているとは限らないことに留意してください。継承されたプロパティも同様です。これらの既定値が存在することを保証するには、先行して {{jsxref("Object")}} を凍結しておくか、すべてのオプションを明示的に指定するか、{{jsxref("Object.create", "Object.create(null)")}} で {{jsxref("null")}} に設定するかします。
+これらのキーは必ずしも記述子が直接所有しているとは限らないことに留意してください。継承されたプロパティも同様です。これらの既定を確実に保持するためには、記述子オブジェクトのプロトタイプチェーンにある既存のオブジェクトを前もって凍結するか、すべてのオプションを明示的に指定するか、 [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)を作成します。
 
 ```js
-// __proto__ を使うやり方
-var obj = {};
-var descriptor = Object.create(null); // 意図しないキーの継承を防止します。
+const obj = {};
+// 1. null プロトタイプの使用: 継承しているプロパティなし
+const descriptor = Object.create(null);
 descriptor.value = "static";
 
-// 既定で継承不可、変更不可、書換不可のプロパティとなります。
+// 既定で継承不可、変更不可、書換不可
 Object.defineProperty(obj, "key", descriptor);
 
 // 明示的な指定
-Object.defineProperty(obj, "key", {
+Object.defineProperty(obj, "key2", {
   enumerable: false,
   configurable: false,
   writable: false,
@@ -84,13 +106,13 @@ Object.defineProperty(obj, "key", {
 
 // 同じオブジェクトを再利用
 function withValue(value) {
-  var d =
+  const d =
     withValue.d ||
     (withValue.d = {
       enumerable: false,
       writable: false,
       configurable: false,
-      value: value,
+      value,
     });
 
   // 値の代入で重複操作を防ぐ
@@ -107,6 +129,12 @@ Object.defineProperty(obj, "key", withValue("static"));
 (Object.freeze || Object)(Object.prototype);
 ```
 
+プロパティが既に存在する場合、 `Object.defineProperty()` は記述子の値とプロパティの現在の構成に従ってプロパティを変更しようとします。
+
+古い記述子の `configurable` 属性が `false` に設定されていた場合、そのプロパティは _構成不可_ と言います。設定不可能なアクセサープロパティの属性を変更することはできませんし、データプロパティとアクセサープロパティの種類を切り替えることもできません。 `writable: true` のデータプロパティでは、値を変更して `writable` 属性を `true` から `false` に変更することが可能です。データプロパティで元の値と同じ値を定義する場合を除き、設定不可能なプロパティ属性（許可されている場合は `value` と `writable` を除く）を変更しようとすると {{jsxref("TypeError")}} が発生します。
+
+現在のプロパティが構成可能な場合、属性を `undefined` に定義すると、その属性は効果的に削除されます。例えば、 `o.k` がアクセサープロパティである場合、 `Object.defineProperty(o, "k", { set: undefined })` とするとセッターを除去し、`k` はゲッターのみを持つことになるので、読み取り専用になります。新しい記述子に属性がない場合、古い記述子の属性値は保持されます（暗黙的に `undefined` に再定義されることはありません）。異なる「風味」の記述子を与えることで、データとアクセサープロパティを切り替えることが可能です。例えば、新しい記述子が（`value` または `writable` を持つ）データ記述子の場合、元の記述子の `get` 属性と `set` 属性は両方とも削除されます。
+
 ## 例
 
 ### プロパティの作成
@@ -114,7 +142,7 @@ Object.defineProperty(obj, "key", withValue("static"));
 オブジェクトに指定されたプロパティが存在しないとき、`Object.defineProperty()` は指定された形で新たなプロパティを生成します。記述子のキーは省略することができ、そのようなキーには既定値が適用されます。
 
 ```js
-var o = {}; // 新しいオブジェクトの生成
+const o = {}; // 新しいオブジェクトの生成
 
 // データ記述子により、defineProperty を用いて
 // オブジェクトプロパティを追加する例
@@ -128,12 +156,8 @@ Object.defineProperty(o, "a", {
 
 // アクセサー記述子により、defineProperty を用いて
 // オブジェクトプロパティを追加する例
-var bValue = 38;
+let bValue = 38;
 Object.defineProperty(o, "b", {
-  // メソッド名ショートハンドを利用しています(ES2015 の機能)。
-  // 次のように書いているのと同じことです:
-  // get: function() { return bValue; },
-  // set: function(newValue) { bValue = newValue; },
   get() {
     return bValue;
   },
@@ -148,7 +172,7 @@ o.b; // 38
 // その値は 38 となります
 // o.b は再定義されない限り、その値は常に bValue と同じです。
 
-// (訳注:データとアクセサーを)両方を混在させることはできません:
+// （訳注: データとアクセサーの）両方を混在させることはできません。
 Object.defineProperty(o, "conflict", {
   value: 0x9f91102,
   get() {
@@ -156,21 +180,19 @@ Object.defineProperty(o, "conflict", {
   },
 });
 // TypeError が発生します。value はデータ記述子にのみ、
-// get はアクセサー記述子にのみ存在していなければなりません。
+// get はアクセサー記述子にのみ現れます。
 ```
 
 ### プロパティの変更
 
-プロパティが既に存在している場合、`Object.defineProperty()` は記述子の値および現在のオブジェクトの設定に基づいて、プロパティの変更を試みます。元の記述子で `configurable` 属性が `false` なら、そのプロパティは「変更不可」です。変更不可のプロパティは記述子の属性を変更することができません。データプロパティで `writable` なら、値を変更することができますし、`writable` 属性を `true` から `false` に変更することができます。変更不可のプロパティはデータとアクセサーの種別を切り替えることはできません。
-
-変更不可なプロパティに変更を加えようとすると、新旧の値が同じでない限り {{jsxref("TypeError")}} が発生します (可能な場合の `value` と `writable` の変更は除きます)。
+既存のプロパティを変更するとき、操作が成功するか、何もしないか、{{jsxref("TypeError")}}が発生するかは、現在のプロパティ構成によって決まります。
 
 #### writable 属性
 
-`writable` プロパティ属性が `false` に設定されているとき、そのプロパティは「書き込み不可」になります。代入ができなくなります。
+`writable` プロパティ属性が `false` の場合、そのプロパティは「書き込み不可」になります。代入ができなくなります。書き込み不可能なプロパティに書き込もうとすると、変更されず、[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)ではエラーになります。
 
 ```js
-var o = {}; // 新しいオブジェクトの生成
+const o = {}; // 新しいオブジェクトの生成
 
 Object.defineProperty(o, "a", {
   value: 37,
@@ -179,30 +201,28 @@ Object.defineProperty(o, "a", {
 
 console.log(o.a); // 37 がログ出力されます
 o.a = 25; // エラーは発生しません
-// (strict モードでは発生します。同じ値を代入したとしても。)
+// （厳格モードでは、同じ値を代入したとしても、エラーが発生します。)
 console.log(o.a); // 37 がログ出力されます。代入文は動作しません。
 
-// strict mode
-(function () {
+// 厳格モード
+(() => {
   "use strict";
-  var o = {};
+  const o = {};
   Object.defineProperty(o, "b", {
     value: 2,
     writable: false,
   });
-  o.b = 3; // TypeError がスローされます: "b" is read-only
+  o.b = 3; // TypeError が発生: "b" is read-only
   return o.b; // 上の行は動作せず 2 が返ります(訳注:正しくは「ここに制御は来ません」)
 })();
 ```
 
-例で見たように、書き込み不可のプロパティに書き込もうとしても変更されず、またエラーは発生しません。
-
 #### enumerable 属性
 
-`enumerable` プロパティ属性は、そのプロパティが {{jsxref("Object.assign()")}} や [スプレッド](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)演算子で採り上げられるかどうかを定義します。{{jsxref("Global_Objects/Symbol", "Symbol")}} 以外のプロパティでは、 {{jsxref("Statements/for...in", "for...in")}} ループや {{jsxref("Object.keys()")}} に現れるかどうかも定義します。
+`enumerable` プロパティ属性は、そのプロパティが {{jsxref("Object.assign()")}} や [スプレッド](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)演算子で認識されるかどうかを定義します。 {{jsxref("Symbol")}} 以外のプロパティでは、 {{jsxref("Statements/for...in", "for...in")}} ループや {{jsxref("Object.keys()")}} に現れるかどうかも定義します。詳細情報については、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)を参照してください。
 
 ```js
-var o = {};
+const o = {};
 Object.defineProperty(o, "a", {
   value: 1,
   enumerable: true,
@@ -214,8 +234,7 @@ Object.defineProperty(o, "b", {
 Object.defineProperty(o, "c", {
   value: 3,
 }); // enumerable の既定値は false
-o.d = 4; // このようにプロパティを生成するとき、
-// enumerable の既定値は true
+o.d = 4; // このようにプロパティを生成するとき、 enumerable の既定値は true
 Object.defineProperty(o, Symbol.for("e"), {
   value: 5,
   enumerable: true,
@@ -225,10 +244,10 @@ Object.defineProperty(o, Symbol.for("f"), {
   enumerable: false,
 });
 
-for (var i in o) {
+for (const i in o) {
   console.log(i);
 }
-// 'a' と 'd' がログされます(順不同)
+// 'a' と 'd' がログ出力されます（常に同じ順序）
 
 Object.keys(o); // ['a', 'd']
 
@@ -239,7 +258,7 @@ o.propertyIsEnumerable("d"); // true
 o.propertyIsEnumerable(Symbol.for("e")); // true
 o.propertyIsEnumerable(Symbol.for("f")); // false
 
-var p = { ...o };
+const p = { ...o };
 p.a; // 1
 p.b; // undefined
 p.c; // undefined
@@ -250,10 +269,12 @@ p[Symbol.for("f")]; // undefined
 
 #### configurable 属性
 
-`configurable` 属性は、プロパティをオブジェクトから削除できるかとプロパティの属性 (`value` と `writable` 以外) を変更できるかを同時に制御します。
+`configurable` 属性は、プロパティをオブジェクトから削除できるかとプロパティの属性 (`value` と `writable` 以外) を変更できるかを制御します。
+
+この例は、構成可能でないアクセサープロパティを示しています。
 
 ```js
-var o = {};
+const o = {};
 Object.defineProperty(o, "a", {
   get() {
     return 1;
@@ -274,10 +295,12 @@ Object.defineProperty(o, "a", {
   get() {
     return 1;
   },
-}); // TypeError が発生 (新たな get は全く同じであるにもかかわらず)
+}); // TypeError が発生
+// (新たな get は全く同じであるにもかかわらず)
 Object.defineProperty(o, "a", {
   value: 12,
-}); // TypeError が発生 ('configurable' が false でも 'value' は変更できますが、ここでは 'get' アクセサーがあるため変更できません)
+}); // TypeError が発生
+// ('configurable' が false でも 'value' は変更できますが、ここでは 'get' アクセサーがあるため変更できません)
 
 console.log(o.a); // logs 1
 delete o.a; // 何も起きません
@@ -286,12 +309,66 @@ console.log(o.a); // logs 1
 
 `o.a` の `configurable` 属性が `true` である場合、エラーが発生することなく最終的にプロパティが削除されます。
 
-### プロパティおよび既定値の追加
-
-属性の既定値がどう適用されるかを考えることは重要です。値の割り当てにドット表記を用いた場合と `Object.defineProperty()` を用いた場合とでは、以下の例で示したとおりに違いがあります。
+この例は、構成可能ではないが書き込み可能なデータプロパティを示しています。プロパティの `value` は変更可能で、 `writable` は `true` から `false` に切り替えることができます。
 
 ```js
-var o = {};
+const o = {};
+Object.defineProperty(o, "b", {
+  writable: true,
+  configurable: false,
+});
+console.log(o.b); // undefined
+Object.defineProperty(o, "b", {
+  value: 1,
+}); // 構成可能な値が false の場合でも、オブジェクトは書き込み可能なので、値を置き換えることができる
+console.log(o.b); // 1
+o.b = 2; // 割り当てる演算子を使って値を変更することもできる
+console.log(o.b); // 2
+// プロパティの書き込み可能属性を切り替える
+Object.defineProperty(o, "b", {
+  writable: false,
+});
+Object.defineProperty(o, "b", {
+  value: 1,
+}); // TypeError: プロパティは書き込みも構成も可能でないため、変更することができない
+// この時点で、 'b' をさらに変更したり、書き込み可能な状態に
+// 戻したりする方法はありません
+```
+
+この例は構成可能な、しかし書き込み不可能なデータプロパティを示しています。プロパティの `value` は `defineProperty` で置き換えることができ（代入演算子ではなく）、`writable` は切り替えることができます。
+
+```js
+const o = {};
+Object.defineProperty(o, "b", {
+  writable: false,
+  configurable: true,
+});
+Object.defineProperty(o, "b", {
+  value: 1,
+}); // defineProperty で値を置き換えることができる
+console.log(o.b); // 1
+o.b = 2; // 厳格モードでは TypeError が発生: 書き込み不可能なプロパティの値を割り当てることで変更することはできる
+```
+
+この例は構成可能でなく、書き込み不可のデータプロパティを示しています。プロパティの`値`を含め、プロパティの属性を更新する方法はありません。
+
+```js
+const o = {};
+Object.defineProperty(o, "b", {
+  writable: false,
+  configurable: false,
+});
+Object.defineProperty(o, "b", {
+  value: 1,
+}); // TypeError: プロパティは書き込みも構成も可能ではないため、変更することはできない
+```
+
+### プロパティおよび既定値の追加
+
+属性の既定値がどう適用されるかを考えることは重要です。値の割り当てに[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を用いた場合と `Object.defineProperty()` を用いた場合とでは、以下の例で示したとおりに違いがあります。
+
+```js
+const o = {};
 
 o.a = 1;
 // これは以下と同じです。
@@ -319,8 +396,8 @@ Object.defineProperty(o, "a", {
 
 ```js
 function Archiver() {
-  var temperature = null;
-  var archive = [];
+  let temperature = null;
+  const archive = [];
 
   Object.defineProperty(this, "temperature", {
     get() {
@@ -333,12 +410,10 @@ function Archiver() {
     },
   });
 
-  this.getArchive = function () {
-    return archive;
-  };
+  this.getArchive = () => archive;
 }
 
-var arc = new Archiver();
+const arc = new Archiver();
 arc.temperature; // 'get!'
 arc.temperature = 11;
 arc.temperature = 13;
@@ -348,9 +423,9 @@ arc.getArchive(); // [{ val: 11 }, { val: 13 }]
 次の例では、ゲッターが常に同じ値を返すようにしています。
 
 ```js
-var pattern = {
+const pattern = {
   get() {
-    return "I always return this string, " + "whatever you have assigned";
+    return "I always return this string, whatever you have assigned";
   },
   set() {
     this.myname = "this is my name string";
@@ -361,7 +436,7 @@ function TestDefineSetAndGet() {
   Object.defineProperty(this, "myproperty", pattern);
 }
 
-var instance = new TestDefineSetAndGet();
+const instance = new TestDefineSetAndGet();
 instance.myproperty = "test";
 console.log(instance.myproperty);
 // I always return this string, whatever you have assigned
@@ -374,10 +449,10 @@ console.log(instance.myname); // this is my name string
 アクセサープロパティを継承されると、その派生クラスでもプロパティがアクセスされたり書き換えられるときに `get` と `set` が呼ばれます。これらのメソッドが値を保持するために変数を使っていると、すべてのオブジェクトがその値を共有することになります。
 
 ```js
-function myclass() {}
+function MyClass() {}
 
-var value;
-Object.defineProperty(myclass.prototype, "x", {
+let value;
+Object.defineProperty(MyClass.prototype, "x", {
   get() {
     return value;
   },
@@ -386,8 +461,8 @@ Object.defineProperty(myclass.prototype, "x", {
   },
 });
 
-var a = new myclass();
-var b = new myclass();
+const a = new MyClass();
+const b = new MyClass();
 a.x = 1;
 console.log(b.x); // 1
 ```
@@ -395,41 +470,41 @@ console.log(b.x); // 1
 この問題を回避する方法は値を別のプロパティで保持することです。`get` と `set` メソッド内で `this` はアクセス／変更されようとしているプロパティを納めるオブジェクトを指しています。
 
 ```js
-function myclass() {}
+function MyClass() {}
 
-Object.defineProperty(myclass.prototype, "x", {
+Object.defineProperty(MyClass.prototype, "x", {
   get() {
-    return this.stored_x;
+    return this.storedX;
   },
   set(x) {
-    this.stored_x = x;
+    this.storedX = x;
   },
 });
 
-var a = new myclass();
-var b = new myclass();
+const a = new MyClass();
+const b = new MyClass();
 a.x = 1;
 console.log(b.x); // undefined
 ```
 
-アクセサープロパティとは違い、データプロパティは常にオブジェクト自身に格納されるのであって、prototype に格納されるわけではありません。しかし、書き込み不可能なデータプロパティを継承している場合、継承先オブジェクトでも書き換えは阻止されます。
+アクセサープロパティとは違い、データプロパティは常にオブジェクト自身に格納されるのであって、プロトタイプに格納されるわけではありません。しかし、書き込み不可能なデータプロパティを継承している場合、継承先オブジェクトでも書き換えは阻止されます。
 
 ```js
-function myclass() {}
+function MyClass() {}
 
-myclass.prototype.x = 1;
-Object.defineProperty(myclass.prototype, "y", {
+MyClass.prototype.x = 1;
+Object.defineProperty(MyClass.prototype, "y", {
   writable: false,
   value: 1,
 });
 
-var a = new myclass();
+const a = new MyClass();
 a.x = 2;
 console.log(a.x); // 2
-console.log(myclass.prototype.x); // 1
-a.y = 2; // 無視されます。strict モードではエラーが発生します
+console.log(MyClass.prototype.x); // 1
+a.y = 2; // 無視されます。厳格モードではエラーが発生します
 console.log(a.y); // 1
-console.log(myclass.prototype.y); // 1
+console.log(MyClass.prototype.y); // 1
 ```
 
 ## 仕様書
@@ -444,7 +519,7 @@ console.log(myclass.prototype.y); // 1
 
 - [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
-- {{jsxref("Object.propertyIsEnumerable()")}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Functions/get", "get")}}
 - {{jsxref("Functions/set", "set")}}

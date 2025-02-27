@@ -3,7 +3,8 @@ title: with
 slug: Web/JavaScript/Reference/Statements/with
 ---
 
-> **Предупреждение:** Использование оператора `with` не рекомендуемо, т.к. он может быть источником запутанных багов и проблем совместимости. Детальная информация в параграфе "Ambiguity Contra" раздела "Description".
+> [!WARNING]
+> Использование оператора `with` не рекомендуемо, т.к. он может быть источником запутанных багов и проблем совместимости. Детальная информация в параграфе "Ambiguity Contra" раздела "Description".
 
 {{jsSidebar("Statements")}}
 
@@ -25,7 +26,8 @@ with (expression)
 
 JavaScript ищет unqualified имя, исследуя цепочку областей видимости, связанную с выполнением скрипта или функции, содержащих это unqualified имя. Оператор 'with' добавляет данный объект в начало цепочки областей видимости в ходе исследования тела его оператора. Если unqualified имя используемое в теле соответствует свойству в цепочке областей видимости, тогда имя привязывается к свойству и объекту, содержащему это свойство. В противном случае возвращается {{jsxref("ReferenceError")}}.
 
-> **Примечание:** Использование оператора `with` не рекомендуется, и недопустимо в строгом режиме ([strict mode](/ru/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)) ECMAScript 5 . Рекомендуемой альтернативой может стать связывание объекта, чьи свойства Вы хотели получить, с коротким именем переменной.
+> [!NOTE]
+> Использование оператора `with` не рекомендуется, и недопустимо в строгом режиме ([strict mode](/ru/docs/Web/JavaScript/Reference/Strict_mode)) ECMAScript 5 . Рекомендуемой альтернативой может стать связывание объекта, чьи свойства Вы хотели получить, с коротким именем переменной.
 
 ### Performance pro & contra
 
@@ -80,13 +82,13 @@ with (Math) {
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - {{jsxref("Statements/block", "block")}}
-- [Strict mode](/ru/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
+- [Strict mode](/ru/docs/Web/JavaScript/Reference/Strict_mode)
 - {{jsxref("Symbol.unscopables")}}
 - {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}

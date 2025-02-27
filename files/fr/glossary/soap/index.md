@@ -3,6 +3,8 @@ title: SOAP
 slug: Glossary/SOAP
 ---
 
+{{GlossarySidebar}}
+
 **SOAP** (Simple Object Access Protocol) est un {{glossary("Protocol","protocole")}} de transmission de données au format {{glossary('XML')}}. {{glossary('Mozilla Firefox','Firefox')}} a supprimé le support de SOAP en 2008.
 
 ## Voir aussi
@@ -14,4 +16,4 @@ slug: Glossary/SOAP
 
 ### Référence technique
 
-- [Spécification](http://www.w3.org/TR/soap12-part1/)
+- [Spécification](https://www.w3.org/TR/soap12-part1/)

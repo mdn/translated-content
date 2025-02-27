@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Operators/Property_accessors
 
 属性访问器提供了两种方式用于访问一个对象的属性，它们分别是点号和方括号。
 
-{{EmbedInteractiveExample("pages/js/expressions-propertyaccessors.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Property accessors")}}
+
+```js interactive-example
+const person1 = {};
+person1["firstname"] = "Mario";
+person1["lastname"] = "Rossi";
+
+console.log(person1.firstname);
+// Expected output: "Mario"
+
+const person2 = {
+  firstname: "John",
+  lastname: "Doe",
+};
+
+console.log(person2["lastname"]);
+// Expected output: "Doe"
+```
 
 ## 语法
 
@@ -18,7 +35,7 @@ object['property']
 
 ## 描述
 
-我们可以将对象看做是一个*关联数组（*或者：_映射_、_字典_、_哈希表_、_查询表_）。这个数组中的键就是这个对象中属性的名称。通常，当我们提及一个对象的属性时，会对属性与方法之间做个对比。然而，属性与方法之间的区别并不大。一个方法就是一个可以被调用的属性而已，例如一个指向函数 [Function](/zh-CN/docs/Glossary/Function) 实例的引用可以作为对象属性的值。
+我们可以将对象看做是一个*关联数组*（或者：_映射_、_字典_、_哈希表_、_查询表_）。这个数组中的键就是这个对象中属性的名称。通常，当我们提及一个对象的属性时，会对属性与方法之间做个对比。然而，属性与方法之间的区别并不大。一个方法就是一个可以被调用的属性而已，例如一个指向函数 [Function](/zh-CN/docs/Glossary/Function) 实例的引用可以作为对象属性的值。
 
 访问对象属性有两种方式：点号表示法和方括号表示法。
 
@@ -39,16 +56,17 @@ document.createElement("pre");
 
 如果对数字字面量使用方法，并且数字文字没有指数且没有小数点，请在方法调用之前的点之前留出空格，以防止点被解释为小数点。
 
-```js
-(77).toExponential();
+```js-nolint
+77 .toExponential();
+// 或
+77
+.toExponential();
 // 或
 (77).toExponential();
 // 或
-(77).toExponential();
+77..toExponential();
 // 或
-(77).toExponential();
-// 或
-(77.0).toExponential();
+77.0.toExponential();
 // 因为 77. === 77.0，没有歧义（no ambiguity）
 ```
 
@@ -97,7 +115,7 @@ console.log(object[bar]);
 
 ### 方法绑定
 
-一个方法没有绑定到对象上，那就意味着这个方法是不起作用的。特别要注意的是，在一个方法中`this`对象并不是固定的，例如，`this`不需要指向包含当前方法的对象。`this`可通过函数调用被传递过去的值所替换。详见[方法绑定](/zh-CN/docs/Web/JavaScript/Reference/Operators/this#Method_binding)。
+一个方法没有绑定到对象上，那就意味着这个方法是不起作用的。特别要注意的是，在一个方法中`this`对象并不是固定的，例如，`this`不需要指向包含当前方法的对象。`this`可通过函数调用被传递过去的值所替换。详见[方法绑定](/zh-CN/docs/Web/JavaScript/Reference/Operators/this#method_binding)。
 
 ### 注意`eval`
 

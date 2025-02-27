@@ -3,7 +3,7 @@ title: substring-before
 slug: Web/XPath/Functions/substring-before
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `substring-before` 함수는 첫 번째 인수에서 두 번째 인수가 나타난 앞의 나머지를 반환합니다.
 
@@ -44,7 +44,7 @@ XSL 예:
 
 ### 정의
 
-[XPath 1.0 4.2](http://www.w3.org/TR/xpath#function-substring-before)
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-substring-before)
 
 ### Gecko 지원
 

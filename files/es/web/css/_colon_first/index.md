@@ -1,5 +1,5 @@
 ---
-title: ":first"
+title: :first
 slug: Web/CSS/:first
 ---
 
@@ -13,7 +13,8 @@ slug: Web/CSS/:first
 }
 ```
 
-> **Nota:** No puede cambiar todas las propiedades de CSS con esta pseudoclase. Solo puede cambiar los márgenes, {{cssxref("orphans")}}, {{cssxref("widows")}} y saltos de página del documento. Además, solo puede usar unidades de [longitud absoluta](/es/docs/Web/CSS/length#Absolute_length_units) al definir los márgenes. Todas las otras propiedades serán ignoradas.
+> [!NOTE]
+> No puede cambiar todas las propiedades de CSS con esta pseudoclase. Solo puede cambiar los márgenes, {{cssxref("orphans")}}, {{cssxref("widows")}} y saltos de página del documento. Además, solo puede usar unidades de [longitud absoluta](/es/docs/Web/CSS/length#absolute_length_units) al definir los márgenes. Todas las otras propiedades serán ignoradas.
 
 ## Sintaxis
 

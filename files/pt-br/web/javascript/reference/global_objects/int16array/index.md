@@ -84,7 +84,7 @@ Todos `Int16Array` objetos herdam de {{jsxref("TypedArray.prototype", "%TypedArr
   - : Retorna o último (maior) índice de um elemento dentro da matriz igual ao valor especificado ou -1 se nenhum for encontrado. Veja também {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Int16Array.prototype.map()")}}
   - : Cria uma nova matriz com os resultados da chamada de uma função fornecida em todos os elementos dessa matriz. Veja também {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Int16Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
+- {{jsxref("TypedArray.move", "Int16Array.prototype.move()")}} {{non-standard_inline}}
   - : Versão não-padrão anterior de {{jsxref("TypedArray.copyWithin", "Int16Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Int16Array.prototype.reduce()")}}
   - : Aplique uma função contra um acumulador e cada valor da matriz (da esquerda para a direita) para reduzi-lo a um único valor. Veja também {{jsxref("Array.prototype.reduce()")}}.
@@ -150,7 +150,7 @@ var int16 = new Int16Array(iterable);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Int16Array")}}
+{{Compat}}
 
 ## Notas de compatibilidade
 
@@ -168,6 +168,6 @@ var dv = new Int16Array([1, 2, 3]);
 
 ## Ver também
 
-- [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
 ---
 
+{{GlossarySidebar}}
+
 HTML における **論理属性** (boolean attribute) とは、`true`（真） か `false`（偽）のどちらか一方の値をとる属性です。
 
 論理属性の注目すべき特徴として、存在していれば `true` をとり、存在していなければ `false` をとる、という点があります。

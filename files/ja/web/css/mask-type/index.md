@@ -42,7 +42,7 @@ mask-type: unset;
 
 ## 例
 
-<h3 id="Setting_an_alpha_mask">アルファマスクの設定</h3>
+### アルファマスクの設定
 
 #### HTML
 
@@ -82,9 +82,9 @@ mask-type: unset;
 
 #### 結果
 
-{{EmbedLiveSample('Setting_an_alpha_mask', '100%', '102')}}
+{{EmbedLiveSample('アルファマスクの設定', '100%', '102')}}
 
-<h3 id="Setting_a_luminance_mask">輝度マスクの設定</h3>
+### 輝度マスクの設定
 
 #### HTML
 
@@ -127,7 +127,7 @@ mask-type: unset;
 
 #### 結果
 
-{{EmbedLiveSample('Setting_a_luminance_mask', '100%', '102')}}
+{{EmbedLiveSample('輝度マスクの設定', '100%', '102')}}
 
 ## 仕様書
 

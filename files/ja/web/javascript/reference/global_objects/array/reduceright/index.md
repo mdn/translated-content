@@ -2,72 +2,54 @@
 title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 l10n:
-  sourceCommit: 9b38f886d21c5d0a428f58acb20c4d0fc6c2e098
+  sourceCommit: c607c483fe079c61de5e32fba1a6cce61896e97d
 ---
 
 {{JSRef}}
 
-**`reduceRight()`** メソッドは、アキュームレーターと配列のそれぞれの値に対して (右から左へ) 関数を適用して、単一の値にします。
+**`reduceRight()`** は {{jsxref("Array")}} インスタンスのメソッドで、アキュームレーターと配列のそれぞれの値に対して（右から左へ）関数を適用して、単一の値にします。
 
-{{EmbedInteractiveExample("pages/js/array-reduce-right.html","shorter")}}
+左から右へ適用する場合は {{jsxref("Array.prototype.reduce()")}} を参照してください。
 
-左から右へ適用する際は {{jsxref("Array.prototype.reduce()")}} を参照してください。
+{{InteractiveExample("JavaScript Demo: Array.reduceRight()")}}
+
+```js interactive-example
+const array1 = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+];
+
+const result = array1.reduceRight((accumulator, currentValue) =>
+  accumulator.concat(currentValue),
+);
+
+console.log(result);
+// Expected output: Array [4, 5, 2, 3, 0, 1]
+```
 
 ## 構文
 
-```js
-// アロー関数
-reduceRight((accumulator, currentValue) => {
-  /* … */
-});
-reduceRight((accumulator, currentValue, index) => {
-  /* … */
-});
-reduceRight((accumulator, currentValue, index, array) => {
-  /* … */
-});
-reduceRight((accumulator, currentValue, index, array) => {
-  /* … */
-}, initialValue);
-
-// コールバック関数
-reduceRight(callbackFn);
-reduceRight(callbackFn, initialValue);
-
-// コールバック畳み込み関数
-reduceRight(function (accumulator, currentValue) {
-  /* … */
-});
-reduceRight(function (accumulator, currentValue, index) {
-  /* … */
-});
-reduceRight(function (accumulator, currentValue, index, array) {
-  /* … */
-});
-reduceRight(function (accumulator, currentValue, index, array) {
-  /* … */
-}, initialValue);
+```js-nolint
+reduceRight(callbackFn)
+reduceRight(callbackFn, initialValue)
 ```
 
 ### 引数
 
 - `callbackFn`
 
-  - : 配列内のそれぞれの値に対して実行される関数です。
-
-    この関数は、以下の引数と共に呼び出されます。
-
+  - : 配列の各要素に対して実行される関数です。その返値は、次に `callbackFn` を呼び出す際の `accumulator` 引数の値になります。最後の呼び出しでは、返値は `reduceRight()` の返値となります。この関数は以下の引数で呼び出されます。
     - `accumulator`
-      - : コールバック関数の前回の呼び出しで返された値、もしくは、指定されていれば `initialValue` です。（下記参照）
+      - : 前回の `callbackFn` の呼び出し結果の値です。初回の呼び出しでは `initialValue` が指定されていた場合はその値、そうでない場合はこの配列の末尾の要素の値です。
     - `currentValue`
-      - : 配列内で現在処理中の要素です。
-    - `index`
-      - : 配列内で現在処理中の要素の位置です。
-    - `array`
+      - : 現在の要素の値です。初回の呼び出しでは `initialValue` が指定された場合は末尾の要素の値であり、そうでない場合は末尾から 2 番目の要素の値です。
+    - `currentIndex`
+      - : `currentValue` のインデックス位置です。初回の呼び出しでは、 `initialValue` が指定された場合は `array.length - 1`、そうでない場合は `array.length - 2` です。
       - : `reduceRight()` が呼び出された配列です。
 
 - `initialValue` {{optional_inline}}
-  - : `callbackFn` の最初の呼び出しのときに、アキュームレーターとして使用する値です。初期値がが渡されなかった場合は、配列の最後の要素が適用され、その要素が飛ばされます。また、 reduce または reduceRight を空の配列に対して初期値なしで呼び出すと `TypeError` になります。
+  - : `callbackFn` の最初の呼び出しのときに、アキュームレーターとして使用する値です。初期値がが渡されなかった場合は、配列の最後の要素が適用され、その要素が飛ばされます。また、 `reduceRight()` を空の配列に対して初期値なしで呼び出すと `TypeError` になります。
 
 ### 返値
 
@@ -75,9 +57,28 @@ reduceRight(function (accumulator, currentValue, index, array) {
 
 ## 解説
 
-`reduceRight` は、配列内に存在するそれぞれの要素に対してコールバック関数を一度ずつ実行します。配列内の穴は対象外です。初期値 (あるいは直前のコールバックの呼び出し結果)、現在の要素の値、現在の位置、繰り返しが行われる配列の 4 つの引数を受け取ります。
+`reduceRight()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。「縮小」コールバック関数を配列に含まれる各要素に対して昇順に一度ずつ呼び出し、その結果を単一の値に積算します。
 
-reduceRight の `callbackFn` の呼び出しは、以下のように見えるでしょう。
+`callbackFn` は値が割り当てられている配列インデックスに対してのみ呼び出されます。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)の空のスロットに対しては呼び出されません。
+
+他の[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)とは異なり、 `reduceRight()` は `thisArg` 引数を受け入れません。 `callbackFn` は常に `undefined` を `this` として呼び出され、 `callbackFn` が厳格モードでない場合は `globalThis` に置き換えられます。
+
+`reduceRight()` メソッドは呼び出し元の配列を変更しませんが、 `callbackFn` に指定された関数は変更することがあります。ただし、配列の長さは `callbackFn` を最初に呼び出す前に保存されることに注意してください。したがって、
+
+- `callbackFn` は `reduceRight()` の呼び出しを始めたときの配列の長さを超えて追加された要素にはアクセスしません。
+- 既に処理したインデックスを変更しても、 `callbackFn` が再度呼び出されることはありません。
+- まだ処理していない既存の配列要素が `callbackFn` によって変更された場合、 `callbackFn` に渡される値はその要素が取得される時点の値になります。[削除](/ja/docs/Web/JavaScript/Reference/Operators/delete)された要素は `undefined` であるかのように処理されます。
+
+> [!WARNING]
+> 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
+
+`reduceRight()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
+
+## 例
+
+### 初期値がない場合の reduceRight() の動作
+
+reduceRight の `callbackFn` の呼び出しは次のようになります：
 
 ```js
 arr.reduceRight((accumulator, currentValue, index, array) => {
@@ -108,7 +109,9 @@ arr.reduceRight((accumulator, currentValue, index, array) => {
 
 `reduceRight` の返値は、コールバック呼び出しの最後の返値である (`10`) になります。
 
-`initialValue` を渡した場合、結果は次のようになります。
+### 初期値がある場合の reduceRight() の動作
+
+ここでは、同じアルゴリズムを使用して同じ配列を縮小しますが、 `reduceRight()` の 2 つ目の引数である `initialValue` として `10` を使用します。
 
 ```js
 [0, 1, 2, 3, 4].reduceRight(
@@ -127,25 +130,11 @@ arr.reduceRight((accumulator, currentValue, index, array) => {
 
 `reduceRight` から返される値はこのときのもので、もちろん `20` です。
 
-## 例
-
 ### 配列内のすべての値を合計する
 
 ```js
 const sum = [0, 1, 2, 3].reduceRight((a, b) => a + b);
 // sum is 6
-```
-
-### 配列中の配列を平坦化する
-
-```js
-const arrays = [
-  [0, 1],
-  [2, 3],
-  [4, 5],
-];
-const flattened = arrays.reduceRight((a, b) => a.concat(b), []);
-// flattened is [4, 5, 2, 3, 0, 1]
 ```
 
 ### 一連のコールバックを使用して非同期関数のリストを実行し、それぞれの結果を次のコールバックに渡す
@@ -233,6 +222,31 @@ console.log(compose(double, inc)(2)); // 6
 console.log(compose(inc, double)(2)); // 5
 ```
 
+### reduceRight() を疎配列で使用
+
+`reduceRight()` は疎配列の欠落している要素をスキップしますが、値が `undefined` の場合はスキップしません。
+
+```js
+console.log([1, 2, , 4].reduceRight((a, b) => a + b)); // 7
+console.log([1, 2, undefined, 4].reduceRight((a, b) => a + b)); // NaN
+```
+
+### 配列以外のオブジェクトに対する reduceRight() の呼び出し
+
+`reduceRight()` メソッドは `this` の `length` プロパティを読み込み、次にキーが `length` より小さい非負の整数である各プロパティにアクセスします。
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+  3: 99, // length が 3 であるため reduceRight() からは無視される
+};
+console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
+// -1 すなわち 4 - 3 - 2
+```
+
 ## 仕様書
 
 {{Specifications}}
@@ -244,4 +258,12 @@ console.log(compose(inc, double)(2)); // 5
 ## 関連情報
 
 - [`Array.prototype.reduceRight` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Array.prototype.flat()")}}
+- {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("TypedArray.prototype.reduceRight()")}}
+- {{jsxref("Object.groupBy()")}}
+- {{jsxref("Map.groupBy()")}}

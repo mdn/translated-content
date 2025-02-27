@@ -9,7 +9,7 @@ slug: Web/CSS/CSS_multicol_layout/Basic_concepts
 
 ## 主要概念と用語
 
-段組みは他のレイアウト方法とは異なり、 CSS でコンテンツを分割し、すべての子孫要素を段に含めます。これは、印刷スタイルシートを作成するのに使われる [CSS ページ付きメディア](/ja/docs/Web/CSS/CSS_Pages)がコンテンツをページに分割するのと同様のことを行います。
+段組みは他のレイアウト方法とは異なり、 CSS でコンテンツを分割し、すべての子孫要素を段に含めます。これは、印刷スタイルシートを作成するのに使われる [CSS ページ付きメディア](/ja/docs/Web/CSS/CSS_paged_media)がコンテンツをページに分割するのと同様のことを行います。
 
 仕様書で定義されているプロパティは次の通りです。
 
@@ -90,4 +90,4 @@ slug: Web/CSS/CSS_multicol_layout/Basic_concepts
 
 ## 次のステップ
 
-このガイドでは、段組みレイアウトの基本的な利用を学びました。次のガイドでは、 [段のスタイル付け](/ja/docs/Web/CSS/CSS_Columns/Styling_Columns)がどれだけできるかを見てみます。
+このガイドでは、段組みレイアウトの基本的な利用を学びました。次のガイドでは、 [段のスタイル付け](/ja/docs/Web/CSS/CSS_multicol_layout/Styling_columns)がどれだけできるかを見てみます。

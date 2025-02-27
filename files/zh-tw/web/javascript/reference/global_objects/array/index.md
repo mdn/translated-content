@@ -7,112 +7,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 
 JavaScript 中的 **`Array`** 全域物件被用於建構陣列；陣列為高階（high-level）、似列表（list-like）的物件。陣列在 Javascript 裡面並沒有固定的長度與型別。由於陣列的長度可以隨時被改變，所以並不能保證陣列的密度。這取決於開發者如何使用陣列。一般來說，這是個非常方便的特性，但如果這並不適用於你的開發工作，你也許會考慮使用型別陣列。
 
-**建立陣列**
-
-```js
-var fruits = ["Apple", "Banana"];
-
-console.log(fruits.length);
-// 2
-```
-
-**（透過索引）取得陣列項目**
-
-```js
-var first = fruits[0];
-// Apple
-
-var last = fruits[fruits.length - 1];
-// Banana
-```
-
-**迭代陣列**
-
-```js
-fruits.forEach(function (item, index, array) {
-  console.log(item, index);
-});
-// Apple 0
-// Banana 1
-```
-
-**加入項目至陣列末端**
-
-```js
-var newLength = fruits.push("Orange");
-// ["Apple", "Banana", "Orange"]
-```
-
-**移除陣列末端項目**
-
-```js
-var last = fruits.pop(); // 移除 (最末端的) Orange
-// ["Apple", "Banana"];
-```
-
-**移除陣列前端項目**
-
-```js
-var first = fruits.shift(); // 移除 (最前端的) Apple
-// ["Banana"];
-```
-
-**加入項目至陣列前端**
-
-```js
-var newLength = fruits.unshift("Strawberry"); // 加到陣列前端
-// ["Strawberry", "Banana"];
-```
-
-**在陣列中尋找項目的索引**
-
-```js
-fruits.push("Mango");
-// ["Strawberry", "Banana", "Mango"]
-
-var pos = fruits.indexOf("Banana");
-// 1
-```
-
-**移除指定索引位置的項目**
-
-```js
-var removedItem = fruits.splice(pos, 1); // 移除 pos 起的 1 個項目
-
-// ["Strawberry", "Mango"]
-```
-
-**移除指定索引位置起的多個項目**
-
-```js
-var vegetables = ["Cabbage", "Turnip", "Radish", "Carrot"];
-console.log(vegetables);
-// ["Cabbage", "Turnip", "Radish", "Carrot"]
-
-var pos = 1,
-  n = 2;
-
-var removedItems = vegetables.splice(pos, n);
-// 這就是移除項目的方式，
-// n 表示從該位置 (pos) 開始，一直到陣列的尾端有多少項目需要移除
-
-console.log(vegetables);
-// ["Cabbage", "Carrot"] (原始的陣列被改變)
-
-console.log(removedItems);
-// ["Turnip", "Radish"]
-```
-
-**複製陣列**
-
-```js
-var shallowCopy = fruits.slice(); // 這就是複製陣列的方式
-// ["Strawberry", "Mango"]
-```
-
 ## 語法
 
-```plain
+```js-nolint
 [element0, element1, ..., elementN]
 new Array(element0, element1[, ...[, elementN]])
 new Array(arrayLength)
@@ -127,9 +24,9 @@ new Array(arrayLength)
 
 ## 說明
 
-Array（「陣列」）是類似列表（list）的物件（Object），它們的原型（Prototype）擁有方法（methods）來執行遍歷和變異操作。JavaScript 陣列的長度（元素數量），以及其元素的類型都不是固定的。取決於工程師如何選擇使用陣列，可以隨時更改陣列的長度，也可不連續儲存資料， 所以並不保證這些資料是集中的。一般情況下，這些特性很方便使用；但若這些功能都不符合您的用途，您可能會想使用型別陣列（typed arrays）。
+Array（「陣列」）是類似列表（list）的物件（Object），它們的原型（Prototype）擁有方法（methods）來執行遍歷和變異操作。JavaScript 陣列的長度（元素數量），以及其元素的類型都不是固定的。取決於工程師如何選擇使用陣列，可以隨時更改陣列的長度，也可不連續儲存資料， 所以並不保證這些資料是集中的。一般情況下，這些特性很方便使用；但若這些功能都不符合你的用途，你可能會想使用型別陣列（typed arrays）。
 
-有些人認為即便會發生警告，仍然[不應該使用關聯陣列](http://www.andrewdupont.net/2006/05/18/javascript-associative-arrays-considered-harmful/)，而應該使用 {{jsxref("Global_Objects/Object", "objects")}}。您可參考[輕量級 JavaScript 字典](http://www.less-broken.com/blog/2010/12/lightweight-javascript-dictionaries.html)當中的範例。
+有些人認為即便會發生警告，仍然[不應該使用關聯陣列](https://andrewdupont.net/2006/05/18/javascript-associative-arrays-considered-harmful/)，而應該使用 {{jsxref("Global_Objects/Object", "objects")}}。你可參考[輕量級 JavaScript 字典](http://www.less-broken.com/blog/2010/12/lightweight-javascript-dictionaries.html)當中的範例。
 
 ### 存取陣列元素
 
@@ -148,7 +45,7 @@ Array 元素同時也是物件的屬性，與 `toString` 是一種屬性相同�
 console.log(arr.0); // 語法錯誤
 ```
 
-會造成如此的原因沒有什麼特別的，在 JavaScript 當中無法用小數點的方式來參照一個名稱開頭為數字的屬性，而必須括號的表示方式來存取。舉例來說，若您有個物件的屬性名稱為「`3d`」，就只能用括號的方式來參照。
+會造成如此的原因沒有什麼特別的，在 JavaScript 當中無法用小數點的方式來參照一個名稱開頭為數字的屬性，而必須括號的表示方式來存取。舉例來說，若你有個物件的屬性名稱為「`3d`」，就只能用括號的方式來參照。
 
 請看下列範例：
 
@@ -163,7 +60,7 @@ renderer.3d.setTexture(model, 'character.png');     // 語法錯誤
 renderer['3d'].setTexture(model, 'character.png');  // 程式正常
 ```
 
-注意：以這個 `'3d'` 例子來說，必須用引號將 `3d` 包起來。您也可以將 JavaScript 陣列的索引用引號包起來（例如使用 `years['2']` 而不用 `years[2]`），但這不是必要的。JavaScript 會透過隱含的 `toString`，將 `years[2]` 當中的 2 強制轉換為字串。由於這個原因，`'2'` 與 `'02'` 會參照到 `years` 物件中的不同項目，下列程式範例結果可能回傳 `true`：
+注意：以這個 `'3d'` 例子來說，必須用引號將 `3d` 包起來。你也可以將 JavaScript 陣列的索引用引號包起來（例如使用 `years['2']` 而不用 `years[2]`），但這不是必要的。JavaScript 會透過隱含的 `toString`，將 `years[2]` 當中的 2 強制轉換為字串。由於這個原因，`'2'` 與 `'02'` 會參照到 `years` 物件中的不同項目，下列程式範例結果可能回傳 `true`：
 
 ```js
 console.log(years["2"] != years["02"]);
@@ -244,7 +141,7 @@ var myArray = myRe.exec("cdbBdbsbz");
 
 - Array.length
   - : `Array` 建構子的長度為 1。
-- {{jsxref("Array.@@species", "get Array[@@species]")}}
+- [`Array[Symbol.species]`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
   - : 用來建立衍生物件的建構函數。
 - {{jsxref("Array.prototype")}}
   - : 可加入屬性至所有陣列物件。
@@ -266,7 +163,7 @@ var myArray = myRe.exec("cdbBdbsbz");
 
 - {{jsxref("Array.prototype.length")}}
   - : Reflects the number of elements in an array.
-- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+- [`Array.prototype[Symbol.unscopables]`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables)
   - : Contains property names that were not included in the ECMAScript standard prior to the ES2015 version and that are ignored for [`with`](/zh-TW/docs/Web/JavaScript/Reference/Statements/with) statement-binding purposes.
 
 ### 方法
@@ -343,7 +240,7 @@ var myArray = myRe.exec("cdbBdbsbz");
   - : Adds one or more elements to the front of an array, and returns the new `length` of the array.
 - {{jsxref("Array.prototype.values()")}}
   - : Returns a new [_array iterator_](/zh-TW/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that contains the values for each index in the array.
-- [`Array.prototype[@@iterator]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[Symbol.iterator]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
   - : An alias for the [`values()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/values) method by default.
 
 ## 範例
@@ -360,6 +257,100 @@ msgArray[99] = "world";
 if (msgArray.length === 100) {
   console.log("The length is 100.");
 }
+```
+
+### （透過索引）取得陣列項目
+
+```js
+var first = fruits[0];
+// Apple
+
+var last = fruits[fruits.length - 1];
+// Banana
+```
+
+### 迭代陣列
+
+```js
+fruits.forEach(function (item, index, array) {
+  console.log(item, index);
+});
+// Apple 0
+// Banana 1
+```
+
+### 加入項目至陣列末端
+
+```js
+var newLength = fruits.push("Orange");
+// ["Apple", "Banana", "Orange"]
+```
+
+### 移除陣列末端項目
+
+```js
+var last = fruits.pop(); // 移除（最末端的）Orange
+// ["Apple", "Banana"];
+```
+
+### 移除陣列前端項目
+
+```js
+var first = fruits.shift(); // 移除（最前端的）Apple
+// ["Banana"];
+```
+
+### 加入項目至陣列前端
+
+```js
+var newLength = fruits.unshift("Strawberry"); // 加到陣列前端
+// ["Strawberry", "Banana"];
+```
+
+### 在陣列中尋找項目的索引
+
+```js
+fruits.push("Mango");
+// ["Strawberry", "Banana", "Mango"]
+
+var pos = fruits.indexOf("Banana");
+// 1
+```
+
+### 移除指定索引位置的項目
+
+```js
+var removedItem = fruits.splice(pos, 1); // 移除 pos 起的 1 個項目
+
+// ["Strawberry", "Mango"]
+```
+
+### 移除指定索引位置起的多個項目
+
+```js
+var vegetables = ["Cabbage", "Turnip", "Radish", "Carrot"];
+console.log(vegetables);
+// ["Cabbage", "Turnip", "Radish", "Carrot"]
+
+var pos = 1,
+  n = 2;
+
+var removedItems = vegetables.splice(pos, n);
+// 這就是移除項目的方式，
+// n 表示從該位置開始，一直到陣列的尾端有多少項目需要移除
+
+console.log(vegetables);
+// ["Cabbage", "Carrot"]（原始的陣列被改變）
+
+console.log(removedItems);
+// ["Turnip", "Radish"]
+```
+
+### 複製陣列
+
+```js
+var shallowCopy = fruits.slice(); // 這就是複製陣列的方式
+// ["Strawberry", "Mango"]
 ```
 
 ### 建立二維陣列
@@ -446,7 +437,7 @@ console.table(values);
 ## 參見
 
 - [JavaScript Guide: 「Indexing object properties」](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Indexing_object_properties)
-- [JavaScript Guide: 「Predefined Core Objects: `Array` Object」](/zh-TW/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_Object)
-- [Array comprehensions](/zh-TW/docs/Web/JavaScript/Reference/Operators/Array_comprehensions)
+- [JavaScript Guide: 「Predefined Core Objects: `Array` Object」](/zh-TW/docs/Web/JavaScript/Guide#array_object)
+- [Array comprehensions](/zh-TW/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
 - [Polyfill for JavaScript 1.8.5 Array Generics and ECMAScript 5 Array Extras](https://github.com/plusdude/array-generics)
-- [Typed Arrays](/zh-TW/docs/JavaScript_typed_arrays)
+- [Typed Arrays](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)

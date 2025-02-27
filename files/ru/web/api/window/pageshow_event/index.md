@@ -16,7 +16,8 @@ l10n:
 - Восстановление состояния ранее открытой страницы на мобильных ОС
 - Возврат на страницу по кнопкам браузера "Вперёд" и "Назад"
 
-> **Note:** во время первоначальной загрузки страницы, событие `pageshow` срабатывает _после_ события {{domxref("Window/load_event", "load")}}.
+> [!NOTE]
+> Во время первоначальной загрузки страницы, событие `pageshow` срабатывает _после_ события {{domxref("Window/load_event", "load")}}.
 
 <table class="properties">
   <tbody>
@@ -82,7 +83,7 @@ events.forEach((eventName) => window.addEventListener(eventName, eventLogger));
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

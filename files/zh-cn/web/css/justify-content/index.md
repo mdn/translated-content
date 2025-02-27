@@ -76,7 +76,8 @@ justify-content: unset;
 
   - : 如果元素沿主轴的组合尺寸小于对齐容器的尺寸，任何尺寸设置为 `auto` 的元素都会等比例地增加其尺寸（而不是按比例增加），同时仍然遵守由 {{cssxref("max-height")}}/{{cssxref("max-width")}}（或相应功能）施加的约束，以便沿主轴完全填充对齐容器的组合尺寸。
 
-    > **备注：** 虽然弹性盒子支持 `stretch` 属性，但将其应用于弹性盒子时，由于拉伸是由 {{CSSXref("flex")}} 属性控制的，所以 `stretch` 的行为与 `start` 相同。
+    > [!NOTE]
+    > 虽然弹性盒子支持 `stretch` 属性，但将其应用于弹性盒子时，由于拉伸是由 {{CSSXref("flex")}} 属性控制的，所以 `stretch` 的行为与 `start` 相同。
 
 - `safe`
   - : 如果元素溢出对齐容器，则元素将按照对齐模式为 `start` 进行对齐。所期望的对齐将不会被实现。
@@ -153,4 +154,4 @@ justifyContent.addEventListener("change", function (evt) {
 
 ## 参考
 
-- [使用 CSS 弹性元素](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Using_CSS_flexible_boxes)
+- [使用 CSS 弹性元素](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)

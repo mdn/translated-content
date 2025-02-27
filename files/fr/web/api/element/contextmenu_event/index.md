@@ -69,7 +69,7 @@ noContext.addEventListener("contextmenu", (e) => {
 
 ## Voir aussi
 
-- [Une introduction aux évènements](/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements)
+- [Une introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
 - D'autres évènements connexes
 
   - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)

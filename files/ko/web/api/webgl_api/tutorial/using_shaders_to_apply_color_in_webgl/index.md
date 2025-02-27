@@ -5,7 +5,7 @@ slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
 
-[앞 단원의 예제](/ko/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context)에서 정사각형을 그려봤으니, 이제 정사각형에 색을 칠해 보겠습니다. 셰이더를 조금 수정하면 색을 칠할 수 있습니다.
+[앞 단원의 예제](/ko/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)에서 정사각형을 그려봤으니, 이제 정사각형에 색을 칠해 보겠습니다. 셰이더를 조금 수정하면 색을 칠할 수 있습니다.
 
 ## 정점에 색상 적용
 
@@ -27,7 +27,7 @@ GL(Graphic Library)에서 객체는 정점의 집합으로 구성되며, 각 정
 }
 ```
 
-먼저 정점에 지정할 색상값을 가진 자바스크립트 배열을 생성합니다. 4개의 원소가 하나의 색을 나타내며, 정사각형의 4개의 꼭지점에 흰색, 빨간색, 파란색, 녹색이 지정되도록 값을 정합니다. 이 색상 정보 배열을 저장하기 위해 새로운 WebGL 버퍼를 생성하고, 배열은 부동소수점 형식으로 WebGL의 버퍼에 저장합니다.
+먼저 정점에 지정할 색상값을 가진 JavaScript 배열을 생성합니다. 4개의 원소가 하나의 색을 나타내며, 정사각형의 4개의 꼭지점에 흰색, 빨간색, 파란색, 녹색이 지정되도록 값을 정합니다. 이 색상 정보 배열을 저장하기 위해 새로운 WebGL 버퍼를 생성하고, 배열은 부동소수점 형식으로 WebGL의 버퍼에 저장합니다.
 
 이 색상 정보를 실제 렌더링에 사용하려면, 컬러 버퍼에서 색상 정보를 읽을 수 있도록 정점 셰이더를 수정해야 합니다:
 
@@ -92,7 +92,7 @@ gl.bindBuffer(gl.ARRAY_BUFFER, squareVerticesColorBuffer);
 gl.vertexAttribPointer(vertexColorAttribute, 4, gl.FLOAT, false, 0, 0);
 ```
 
-이제 WebGL이 호환되는 브라우저에서 [샘플](/samples/webgl/sample3/index.html)을 보면, 검정색 바탕에 아래와 같은 정사각형이 그려지는 것을 볼 수 있습니다:
+이제 WebGL이 호환되는 브라우저에서 [샘플](http://mdn.github.io/webgl-examples/tutorial/sample3/index.html)을 보면, 검정색 바탕에 아래와 같은 정사각형이 그려지는 것을 볼 수 있습니다:
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample3/index.html', 670, 510) }}
 

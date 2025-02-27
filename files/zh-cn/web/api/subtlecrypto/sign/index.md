@@ -77,7 +77,8 @@ HMAC 算法根据 [FIPS 198-1 标准](https://csrc.nist.gov/csrc/media/publicati
 
 ## 示例
 
-> **备注：** 你可以在 Github 上[尝试可用的示例](https://mdn.github.io/dom-examples/web-crypto/sign-verify/index.html)。
+> [!NOTE]
+> 你可以在 Github 上[尝试可用的示例](https://mdn.github.io/dom-examples/web-crypto/sign-verify/index.html)。
 
 ### RSASSA-PKCS1-v1_5
 

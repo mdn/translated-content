@@ -5,7 +5,7 @@ slug: orphaned/Web/Compatibility_FAQ/Empty_Background_Color.html
 
 ## 概要
 
-他ブラウザで表示されるアイコンやバナーの色が、mobile 版 Firefox では表示されません。
+他ブラウザーで表示されるアイコンやバナーの色が、mobile 版 Firefox では表示されません。
 領域が真っ白な表示になっていたり、下レイヤーの要素の背景が表示される場合があります。
 
 ![](0202.jpg)
@@ -23,7 +23,7 @@ slug: orphaned/Web/Compatibility_FAQ/Empty_Background_Color.html
     }
     ```
 
-    上記の backgound: -webkit-gradient(); は、webkit ブラウザ用の記述となります。
+    上記の backgound: -webkit-gradient(); は、webkit ブラウザー用の記述となります。
     また、[gradient](/ja/docs/Web/CSS/gradient)値を指定する代替の記述もないため、結果として、背景からグラデーション装飾が抜けてしまいました。
 
 ## 解決策
@@ -31,7 +31,7 @@ slug: orphaned/Web/Compatibility_FAQ/Empty_Background_Color.html
 要因の解決策の代表例として以下があります。
 
 1. **ベンダープレフィックス**
-    CSS3 準拠の backgound: [linear-gradient](/ja/docs/Web/CSS/linear-gradient)(); を追記します。
+    CSS3 準拠の backgound: [linear-gradient](/ja/docs/Web/CSS/gradient/linear-gradient)(); を追記します。
 
     ```css
     a.button_hoge {
@@ -40,11 +40,11 @@ slug: orphaned/Web/Compatibility_FAQ/Empty_Background_Color.html
     }
     ```
 
-    注意：[gradient](/ja/docs/Web/CSS/gradient)値や[linear-gradient()](/ja/docs/Web/CSS/linear-gradient)関数はブラウザやバージョンごとに構文が異なりますので注意が必要です。
+    注意：[gradient](/ja/docs/Web/CSS/gradient)値や[linear-gradient()](/ja/docs/Web/CSS/gradient/linear-gradient)関数はブラウザーやバージョンごとに構文が異なりますので注意が必要です。
 
 ## メリット
 
-- 他のブラウザでも互換性を維持することができます。
+- 他のブラウザーでも互換性を維持することができます。
   - 追記のみで対応可能です。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

@@ -7,7 +7,8 @@ slug: Web/API/Element/innerHTML
 
 Свойство интерфейса {{domxref("Element")}} **`innerHTML`** устанавливает или получает HTML или XML разметку дочерних элементов.
 
-> **Примечание:** Если узлы {{HTMLElement("div")}}, {{HTMLElement("span")}}, или {{HTMLElement("noembed")}} имеют дочерние текстовые узлы, содержащие символы `(&), (<),` или `(>)`, `innerHTML` вернёт эти символы как \&amp, \&lt и \&gt соответственно. Используйте {{domxref("Node.textContent")}} для получения правильной копии содержимого этих текстовых узлов.
+> [!NOTE]
+> Если узлы {{HTMLElement("div")}}, {{HTMLElement("span")}}, или {{HTMLElement("noembed")}} имеют дочерние текстовые узлы, содержащие символы `(&), (<),` или `(>)`, `innerHTML` вернёт эти символы как \&amp, \&lt и \&gt соответственно. Используйте {{domxref("Node.textContent")}} для получения правильной копии содержимого этих текстовых узлов.
 
 Чтобы вставить HTML в документ, не меняя содержимое элемента, используйте {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
 
@@ -95,7 +96,7 @@ log("Регистрация событий мыши внутри этого ко
 
 Функция `log()` создаёт сообщение получая текущее время из объекта {{jsxref("Date")}}, используя {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}, и соединяя строку с временной меткой с текстовым сообщением. Затем сообщение добавляется в элемент с классом `"log"`.
 
-Мы добавляем второй метод, который логирует информацию о событиях на основе {{domxref("MouseEvent")}} (например, {{event("mousedown")}}, {{event("click")}}, и {{event("mouseenter")}}):
+Мы добавляем второй метод, который логирует информацию о событиях на основе {{domxref("MouseEvent")}} (например, [`mousedown`](/ru/docs/Web/API/Element/mousedown_event), [`click`](/ru/docs/Web/API/Element/click_event), и [`mouseenter`](/ru/docs/Web/API/Element/mouseenter_event)):
 
 ```js
 function logEvent(event) {
@@ -171,4 +172,4 @@ HTML довольно простой для нашего примера.
 - [`innerDOM`](http://innerdom.sourceforge.net/) - Для тех, кто хочет придерживаться стандартов, вот один набор функций JavaScript, предлагающий сериализовать или разобрать XML так, чтобы установить содержимое элемента, определённое как строка(и) через DOM или получить содержимое элемента, полученное из DOM как строку.
 - {{domxref("Element.insertAdjacentHTML")}} - Альтернатива для innerHTML, позволяющая добавлять новый HTML.
 - [jssaxparser](https://github.com/ndebeiss/jsxmlsaxparser) - Более надёжным (хотя и более тяжёлым) решением, чем innerDOM (поддерживает парсинг с пространствами имён, однокавычками атрибутов, секциями CDATA и т.д.), является этот SAX2 парсер при использовании с его обработчиком DOM-контента. (Предлагает строку на DOM; DOM на строку [значительно проще](https://app.assembla.com/spaces/brettz9/bize6mebSr3B31ab7jnrAJ/source/DOMToString)).
-- Эффективность соображений: [quirksmode.](http://www.quirksmode.org/dom/innerhtml.html)
+- Эффективность соображений: [quirksmode.](https://www.quirksmode.org/dom/innerhtml.html)

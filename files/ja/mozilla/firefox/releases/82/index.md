@@ -7,13 +7,14 @@ slug: Mozilla/Firefox/Releases/82
 
 このページでは、開発者に影響する Firefox 82 の変更点をまとめています。Firefox 82 は、2020 年 10 月 20 日にリリースされました。
 
-> **メモ:** Mozilla Hacks の [Coming through with Firefox 82](https://hacks.mozilla.org/2020/10/coming-through-with-firefox-82/) もご覧ください。
+> [!NOTE]
+> Mozilla Hacks の [Coming through with Firefox 82](https://hacks.mozilla.org/2020/10/coming-through-with-firefox-82/) もご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
-- [ネットワークモニター](/ja/docs/Tools/Network_Monitor) を使用して [server-sent events を調査できる](/ja/docs/Tools/Network_Monitor/Inspecting_server-sent_events) ようになりました ([Firefox バグ 1640857](https://bugzil.la/1640857))。
+- [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) を使用して [server-sent events を調査できる](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/inspecting_server-sent_events/index.html) ようになりました ([Firefox バグ 1640857](https://bugzil.la/1640857))。
 - ネットワークモニターの*メッセージ*パネルを*応答*パネルに統合しました。メッセージ (例えば WebSockets や server-sent events) を応答の一覧で確認できます ([Firefox バグ 1636421](https://bugzil.la/1636421))。
 
 ### HTML
@@ -23,13 +24,13 @@ slug: Mozilla/Firefox/Releases/82
 
 ### CSS
 
-- {{CSSxRef("::file-selector-button", "::file-selector-button")}} 疑似要素を新たにサポートしました。この疑似要素は、[`<input type="file">`](/ja/docs/Web/HTML/Element/input/file) 要素の内部にあるファイル選択ボタンを表します ([Firefox バグ 1635675](https://bugzil.la/1635675), [Firefox バグ 1662478](https://bugzil.la/1662478))。
-- {{CSSxRef(":is", ":is()")}} および {{CSSxRef(":where", ":where()")}} 疑似クラスのエラー回復を改良しました。これらの疑似クラスは寛容なセレクターリストを受け入れるようになり、リスト内に無効なセレクターがあってもリスト全体が無効にはなりません ([Firefox バグ 1664718](https://bugzil.la/1664718))。
+- {{CSSxRef("::file-selector-button", "::file-selector-button")}} 擬似要素を新たにサポートしました。この擬似要素は、[`<input type="file">`](/ja/docs/Web/HTML/Element/input/file) 要素の内部にあるファイル選択ボタンを表します ([Firefox バグ 1635675](https://bugzil.la/1635675), [Firefox バグ 1662478](https://bugzil.la/1662478))。
+- {{CSSxRef(":is", ":is()")}} および {{CSSxRef(":where", ":where()")}} 擬似クラスのエラー回復を改良しました。これらの擬似クラスは寛容なセレクターリストを受け入れるようになり、リスト内に無効なセレクターがあってもリスト全体が無効にはなりません ([Firefox バグ 1664718](https://bugzil.la/1664718))。
 - `appearance: button` をボタンのみに適用するようになりました。従って、{{CSSxRef("appearance")}} の値 `button` は `auto` のように動作します ([Firefox バグ 1662703](https://bugzil.la/1662703))。
 
 #### 廃止
 
-- 独自仕様である [`:-moz-user-disabled`](/ja/docs/Web/CSS/:-moz-user-disabled) 疑似クラスを削除しました ([Firefox バグ 1664432](https://bugzil.la/1664432))。
+- 独自仕様である [`:-moz-user-disabled`](/ja/docs/Web/CSS/:-moz-user-disabled) 擬似クラスを削除しました ([Firefox バグ 1664432](https://bugzil.la/1664432))。
 
 ### HTTP
 
@@ -50,7 +51,7 @@ slug: Mozilla/Firefox/Releases/82
 ### WebDriver conformance (Marionette)
 
 - より現実的なユーザーナビゲーションをシミュレートするため、サポートされるすべてのナビゲーションコマンドを親プロセスに移動しました ([Firefox バグ 1612831](https://bugzil.la/1612831))。
-- WebDriver 仕様書との適合性を向上させるため、すべてのコマンドで現在またはトップレベルのブラウジングコンテキストの確認を更新しました ([Firefox バグ 1493108](https://bugzil.la/1493108))。
+- WebDriver 仕様書との適合性を向上させるため、すべてのコマンドで現在またはトップレベルの閲覧コンテキストの確認を更新しました ([Firefox バグ 1493108](https://bugzil.la/1493108))。
 - `WebDriver:ElementClick` で、click イベントが実際に合成される前にコマンドが返る場合がある不具合を修正しました ([Firefox バグ 1394354](https://bugzil.la/1394354))。
 
 ## アドオン開発者向けの変更点

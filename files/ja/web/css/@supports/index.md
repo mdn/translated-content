@@ -23,6 +23,8 @@ slug: Web/CSS/@supports
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/at-rule-supports.html", "tabbed-standard")}}
+
 JavaScript では `@supports` は CSS オブジェクトモデルインターフェイスの {{DOMxRef("CSSSupportsRule")}} からアクセスできます。
 
 ## 構文
@@ -197,5 +199,5 @@ CSS Conditional Rules Level 4 仕様では、セレクターの対応を検査�
 
 ## 関連情報
 
-- [機能クエリーの使用](/ja/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries)
+- [機能クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
 - JavaScript で同様のチェックを実行できる、CSSOM の {{DOMxRef("CSSSupportsRule")}} クラスおよび {{DOMxRef("CSS.supports()")}} メソッド

@@ -7,13 +7,33 @@ slug: Web/HTML/Element/input/number
 
 {{HTMLElement("input")}} элементы типа **`number`** используются для того, чтобы дать возможность пользователю ввести число. У них есть встроенная валидация, запрещающая вводить нечисловые значения. Браузер может предоставить возможность увеличить или уменьшить значение специальными стрелками, используя мышь или просто двигая пальцем по экрану.
 
-{{EmbedInteractiveExample("pages/tabbed/input-number.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="tentacles">Number of tentacles (10-100):</label>
+
+<input type="number" id="tentacles" name="tentacles" min="10" max="100" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 В браузерах, которые не поддерживают тип `number`, тип `number` приводится к `text`.
 
 | **[Value](#value)**             | A {{jsxref("Number")}} representing a number, or empty                                                                                                                                                                               |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Events**                      | {{event("change")}} and {{event("input")}}                                                                                                                                                                                           |
+| **Events**                      | [`change`](/ru/docs/Web/API/HTMLElement/change_event) and [`input`](/ru/docs/Web/API/Element/input_event)                                                                                                                            |
 | **Supported Common Attributes** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`list`](/ru/docs/Web/HTML/Element/input#list), [`placeholder`](/ru/docs/Web/HTML/Element/input#placeholder), [`readonly`](/ru/docs/Web/HTML/Element/input#readonly) |
 | **IDL attributes**              | `list`, `value`, `valueAsNumber`                                                                                                                                                                                                     |
 | **Methods**                     | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}                                                                       |
@@ -40,29 +60,26 @@ In addition to the attributes commonly supported by all {{HTMLElement("input")}}
 | [`readonly`](#readonly)       | A Boolean attribute controlling whether or not the value is read-only                                   |
 | [`step`](#step)               | A stepping interval to use when using up and down arrows to adjust the value, as well as for validation |
 
-### {{htmlattrdef("max")}}
+### `max`
 
-The maximum value to accept for this input. If the [`value`](/ru/docs/Web/HTML/Element/input#value) entered into the element exceeds this, the element fails [constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation). If the value of the `max` attribute isn't a number, then the element has no maximum value.
+The maximum value to accept for this input. If the [`value`](/ru/docs/Web/HTML/Element/input#value) entered into the element exceeds this, the element fails [constraint validation](/ru/docs/Web/HTML/Constraint_validation). If the value of the `max` attribute isn't a number, then the element has no maximum value.
 
 This value must be greater than or equal to the value of the `min` attribute.
 
-### {{htmlattrdef("min")}}
+### `min`
 
-The minimum value to accept for this input. If the [`value`](/ru/docs/Web/HTML/Element/input#value) of the element is less than this, the element fails [constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation). If a value is specified for `min` that isn't a valid number, the input has no minimum value.
+Минимальное значение, которое может принять это поле ввода. Если значение атрибута [`value`](/ru/docs/Web/HTML/Element/input#value) меньше, то элемент не проходит [проверку ограничений](/ru/docs/Web/HTML/Constraint_validation). Если указанное для `min` значение не является числом, то у поля ввода нет минимального значения.
 
-This value must be less than or equal to the value of the `max` attribute.
+Это значение должно быть меньше или равно значению атрибута `max`.
 
-{{page("/ru/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}
-
-{{page("/ru/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}
-
-### {{htmlattrdef("step")}}
+### `step`
 
 Атрибут `step` – это число, которое определяет точность, с которой задаётся значение, или специальное значение `any`, описанное ниже. Только значения, кратные шагу ([`min`](#min), если задано, иначе [`value`](/ru/docs/Web/HTML/Element/input#value), или подходящее стандартное значение, если ни одно из двух не задано) будут корректными.
 
 Строковое значение `any` означает, что никакое значение шага не задано и допустимо любое значение (в пределах других ограничений, таких как [`min`](#min) и [`max`](#max)).
 
-> **Примечание:** Когда значение, введённое пользователем, не подходит под заданное значение шага, {{Glossary("user agent")}} может округлить его до ближайшего допустимого значения с приоритетом в большую сторону в том случае, если значение находится ровно посередине шага.
+> [!NOTE]
+> Когда значение, введённое пользователем, не подходит под заданное значение шага, {{Glossary("user agent")}} может округлить его до ближайшего допустимого значения с приоритетом в большую сторону в том случае, если значение находится ровно посередине шага.
 
 Стандартное значение шага для поля ввода `number` – это `1`, что позволяет вводить только целые числа, _если_ только не задать значение шага нецелым числом.
 
@@ -70,9 +87,11 @@ This value must be less than or equal to the value of the `max` attribute.
 
 `<input type="number">` elements can help simplify your work when building the user interface and logic for entering numbers into a form. When you create a number input with the proper `type` value, `number`, you get automatic validation that the entered text is a number, and usually a set of up and down buttons to step the value up and down.
 
-> **Предупреждение:** **Important**: Bear in mind that logically you should not be able to enter characters inside a number of input other than numbers. There seems to be some disagreement about this among browsers; see {{bug(1398528)}}.
+> [!WARNING]
+> Logically, you should not be able to enter characters inside a number input other than numbers. Some browsers allow invalid characters, others do not; see [Firefox bug 1398528](https://bugzil.la/1398528).
 
-> **Примечание:** It's crucial to remember that a user can tinker with your HTML behind the scenes, so your site _must not_ use simple client-side validation for any security purposes. You _must_ verify on the server side any transaction in which the provided value may have any security implications of any kind.
+> [!NOTE]
+> It's crucial to remember that a user can tinker with your HTML behind the scenes, so your site _must not_ use simple client-side validation for any security purposes. You _must_ verify on the server side any transaction in which the provided value may have any security implications of any kind.
 
 Mobile browsers further help with the user experience by showing a special keyboard more suited for entering numbers when the user tries to enter a value. The following screenshot is taken from Firefox for Android:
 
@@ -91,7 +110,8 @@ In its most basic form, a number input can be implemented like this:
 
 A number input is considered valid when empty and when a single number is entered, but is otherwise invalid. If the [`required`](/ru/docs/Web/HTML/Element/input#required) attribute is used, the input is no longer considered valid when empty.
 
-> **Примечание:** Any number is an acceptable value, as long as it is a [valid floating point number](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number) (i.e. not [NaN](/ru/docs/Web/JavaScript/Reference/Global_Objects/NaN) or [Infinity](/ru/docs/Web/JavaScript/Reference/Global_Objects/Infinity)).
+> [!NOTE]
+> Any number is an acceptable value, as long as it is a [valid floating point number](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number) (i.e. not [NaN](/ru/docs/Web/JavaScript/Reference/Global_Objects/NaN) or [Infinity](/ru/docs/Web/JavaScript/Reference/Global_Objects/Infinity)).
 
 ### Placeholders
 
@@ -188,7 +208,8 @@ You can provide a list of default options from which the user can select by spec
 
 {{EmbedLiveSample("Offering_suggested_values", 600, 40)}}
 
-> **Примечание:** Use of the [`list`](/ru/docs/Web/HTML/Element/input#list) attribute with `number` inputs is not supported in all browsers. It works in Chrome and Opera, for example, but not in Firefox.
+> [!NOTE]
+> Use of the [`list`](/ru/docs/Web/HTML/Element/input#list) attribute with `number` inputs is not supported in all browsers. It works in Chrome and Opera, for example, but not in Firefox.
 
 ## Validation
 
@@ -243,9 +264,14 @@ input:valid + span:after {
 }
 ```
 
-Here we use the {{cssxref(":invalid")}} and {{cssxref(":valid")}} pseudo classes to display an appropriate invalid or valid icon as generated content on the adjacent {{htmlelement("span")}} element, indicating if the current value is valid. We put it on a separate `<span>` element for added flexibility; some browsers don't display generated content very effectively on some types of form inputs (read for example the section on [`<input type="date">` validation](/ru/docs/Web/HTML/Element/input/date#Validation)).
+Here we use the {{cssxref(":invalid")}} and {{cssxref(":valid")}} pseudo classes to display an appropriate invalid or valid icon as generated content on the adjacent {{htmlelement("span")}} element, indicating if the current value is valid. We put it on a separate `<span>` element for added flexibility; some browsers don't display generated content very effectively on some types of form inputs (read for example the section on [`<input type="date">` validation](/ru/docs/Web/HTML/Element/input/date#validation)).
 
-> **Предупреждение:** **Important**: HTML form validation is _not_ a substitute for server-side scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
+> [!WARNING]
+> HTML form validation is _not_ a substitute for server-side scripts that ensure that the entered data is in the proper format!
+>
+> It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML and submit the data directly to your server.
+>
+> If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
 
 ### Pattern validation
 
@@ -358,18 +384,19 @@ switchBtn.addEventListener("click", function () {
 
 After declaring a few variables, we add an event listener to the button to control the switching mechanism. This is pretty simple, mostly involving changing over the button class and label, and updating the display values of the two sets of inputs when the button is pressed. Note that we're not converting back and forth between meters and feet/inches here, which a real-life web application would probably do.
 
-> **Примечание:** Note that when the user clicks the button, we remove the `required` attribute(s) from the input(s) we are hiding, and empty the `value` attribute(s). This is so that we can submit the form if both input sets aren't filled in, and won't submit data that we didn't mean to submit. If we didn't do this, you'd have to fill in both feet/inches **and** meters to submit the form!
+> [!NOTE]
+> Note that when the user clicks the button, we remove the `required` attribute(s) from the input(s) we are hiding, and empty the `value` attribute(s). This is so that we can submit the form if both input sets aren't filled in, and won't submit data that we didn't mean to submit. If we didn't do this, you'd have to fill in both feet/inches **and** meters to submit the form!
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [HTML forms guide](/ru/docs/Learn/HTML/Forms)
+- [HTML forms guide](/ru/docs/Learn/Forms)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/ru/docs/Web/HTML/Element/input/tel)

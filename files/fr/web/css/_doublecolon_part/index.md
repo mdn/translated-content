@@ -1,11 +1,11 @@
 ---
-title: "::part()"
+title: ::part()
 slug: Web/CSS/::part
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::part`** représente n'importe quel élément dans un [arbre fantôme](/fr/docs/Web/Web_Components/Using_shadow_DOM) qui a un attribut [`part`](/fr/docs/Web/HTML/Global_attributes#part) correspondant.
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::part`** représente n'importe quel élément dans un [arbre fantôme](/fr/docs/Web/API/Web_components/Using_shadow_DOM) qui a un attribut [`part`](/fr/docs/Web/HTML/Global_attributes#part) correspondant.
 
 ```css
 custom-element::part(foo) {

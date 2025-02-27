@@ -62,7 +62,7 @@ Access-Control-Allow-Headers: X-Custom-Header, Upgrade-Insecure-Requests
 
 ### 追加の制約の回避
 
-{{glossary("CORS-safelisted_request_header", "CORS セーフリストリクエストヘッダー")}}は常に許可され、ふつうは `Access-Control-Allow-Headers` に列挙する必要はありませんが、それでも列挙すれば[追加の制約](/ja/docs/Glossary/CORS-safelisted_request_header#Additional_restrictions)が適用されることを回避できます。
+{{glossary("CORS-safelisted_request_header", "CORS セーフリストリクエストヘッダー")}}は常に許可され、ふつうは `Access-Control-Allow-Headers` に列挙する必要はありませんが、それでも列挙すれば[追加の制約](/ja/docs/Glossary/CORS-safelisted_request_header#additional_restrictions)が適用されることを回避できます。
 
 ```
 Access-Control-Allow-Headers: Accept
@@ -104,7 +104,7 @@ Access-Control-Max-Age: 86400
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Access-Control-Allow-Headers")}}
+{{Compat}}
 
 ## 関連情報
 

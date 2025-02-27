@@ -35,7 +35,7 @@ Content-Security-Policy: base-uri <source> <source>;
 
 ### 源
 
-此指令与其他 CSP 指令一样，使用大部分与参数相同的源值：[CSP 源值](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources)。
+此指令与其他 CSP 指令一样，使用大部分与参数相同的源值：[CSP 源值](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources)。
 
 然而，请注意，一些值对 `base-uri` 没有意义，例如关键字 `'unsafe-inline'` 和 `'strict-dynamic'`。
 
@@ -80,7 +80,7 @@ add_header Content-Security-Policy "base-uri 'self';"
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPheader("Content-Security-Policy")}}
 - {{HTMLElement("base")}}

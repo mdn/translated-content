@@ -53,7 +53,7 @@ console.log(encodeURI("\uD800"));
 console.log(encodeURI("\uDFFF"));
 ```
 
-并且需要注意，如果 URL 需要遵循较新的[RFC3986](http://tools.ietf.org/html/rfc3986)标准，那么方括号是被保留的 (给 IPv6)，因此对于那些没有被编码的 URL 部分 (例如主机)，可以使用下面的代码：
+并且需要注意，如果 URL 需要遵循较新的[RFC3986](https://tools.ietf.org/html/rfc3986)标准，那么方括号是被保留的 (给 IPv6)，因此对于那些没有被编码的 URL 部分 (例如主机)，可以使用下面的代码：
 
 ```js
 function fixedEncodeURI(str) {
@@ -69,7 +69,7 @@ function fixedEncodeURI(str) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("decodeURI")}}
 - {{jsxref("encodeURIComponent")}}

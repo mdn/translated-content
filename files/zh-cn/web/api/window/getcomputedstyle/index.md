@@ -11,8 +11,9 @@ slug: Web/API/Window/getComputedStyle
 
 ## 语法
 
-```
-let style = window.getComputedStyle(element, [pseudoElt]);
+```js-nolint
+getComputedStyle(element)
+getComputedStyle(element, pseudoElt)
 ```
 
 - element
@@ -20,7 +21,8 @@ let style = window.getComputedStyle(element, [pseudoElt]);
 - pseudoElt {{optional_inline}}
   - : 指定一个要匹配的伪元素的字符串。必须对普通元素省略（或`null`）。
 
-> **备注：** 在 Gecko 2.0 之前版本，参数 pseudoElt 是必要的。如果为 null，则不指定其他主要浏览器必须指定此参数。Gecko 已经更改为匹配其他浏览器的行为。。
+> [!NOTE]
+> 在 Gecko 2.0 之前版本，参数 pseudoElt 是必要的。如果为 null，则不指定其他主要浏览器必须指定此参数。Gecko 已经更改为匹配其他浏览器的行为。
 
 返回的`style`是一个实时的 {{domxref("CSSStyleDeclaration")}} 对象，当元素的样式更改时，它会自动更新本身。
 
@@ -84,7 +86,7 @@ function dumpComputedStyles(elem, prop) {
 
 ## 与伪元素一起使用
 
-getComputedStyle 可以从**伪元素**拉取样式信息 (比如，`::after`, `::before`, `::marker`, `::line-marker`—查看 [详情](http://dev.w3.org/csswg/css3-content/#pseudo-elements) 这里).
+getComputedStyle 可以从**伪元素**拉取样式信息 (比如，`::after`, `::before`, `::marker`, `::line-marker`—查看 [详情](https://dev.w3.org/csswg/css3-content/#pseudo-elements) 这里).
 
 ```html
 <style>
@@ -120,16 +122,16 @@ CSS 属性值可以使用`getPropertyValue(propName)`API 或直接索引到对�
 
 在 Firefox 中，属性值为`auto`的会直接返回使用值，而不是`auto`。比如，你在设定了一个元素的 css 为`height:30px; top: auto; bottom:0;`它的父元素`height:100px;`，在请求`top`的计算样式时，Firefox 会返回`'70px' = 100px - 30px;`。
 
+## 规范
+
+{{Specifications}}
+
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 规范
-
-- [DOM Level 2 Style: getComputedStyle](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle)
-- [CSS Object Model specification](http://dev.w3.org/csswg/cssom/#resolved-values)
-
 ## 参见
 
-- {{domxref("window.getDefaultComputedStyle")}}
-- {{cssxref("resolved_value", "Resolved Value")}}
+- {{DOMxRef("Window.getDefaultComputedStyle()")}}
+- {{DOMxRef("CSSStyleDeclaration.getPropertyValue", "getPropertyValue()")}}
+- [解析值](/zh-CN/docs/Web/CSS/resolved_value)

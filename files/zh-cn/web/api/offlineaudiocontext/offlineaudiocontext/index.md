@@ -26,7 +26,8 @@ new OfflineAudioContext(numberOfChannels, length, sampleRate)
 
 这里有个重要的警告，你可以通过不带参数的使用 `new AudioContext()` 构造函数创建一个新的 {{domxref("AudioContext")}}，但是 `OfflineAudioContext()` 构造函数必须带上三个参数。当你通过 {{domxref("AudioContext.createBuffer")}} 方法创建一个新的{{domxref("AudioBuffer")}} 时，你也是需要做一样的事情。想要知道更多信息，请阅读我们的基本概念指南的 [音频片段：帧，样本和声道](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#音频片段：帧，样本和声道)。
 
-> **备注：** 像普通的 `AudioContext`，`OfflineAudioContext` 可以成为事件的目标，因此它的实现是 {{domxref("EventTarget")}} 接口。
+> [!NOTE]
+> 像普通的 `AudioContext`，`OfflineAudioContext` 可以成为事件的目标，因此它的实现是 {{domxref("EventTarget")}} 接口。
 
 ## 例子
 
@@ -41,7 +42,8 @@ source = offlineCtx.createBufferSource();
 // 更多代码...
 ```
 
-> **备注：** 想要获取完整的例子，请看我们在 Github 仓库的 [offline-audio-context-promise](http://mdn.github.io/offline-audio-context-promise/) （也可以看 [源代码](https://github.com/mdn/offline-audio-context-promise) ）
+> [!NOTE]
+> 想要获取完整的例子，请看我们在 Github 仓库的 [offline-audio-context-promise](https://mdn.github.io/offline-audio-context-promise/) （也可以看 [源代码](https://github.com/mdn/offline-audio-context-promise) ）
 
 ## 规范
 

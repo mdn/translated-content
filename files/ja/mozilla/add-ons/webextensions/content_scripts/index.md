@@ -2,39 +2,20 @@
 title: コンテンツスクリプト
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 l10n:
-  sourceCommit: dd08ec8cf78926a7854d8f5f7793bf7ae199484e
+  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
 {{AddonSidebar}}
 
-コンテンツスクリプトは、特定のウェブページのコンテキストで実行される拡張機能の一部です（拡張機能の一部であるバックグラウンドスクリプトや、ウェブサイト自体の一部であるスクリプト、例えば {{HTMLElement("script")}} 要素みたいなものと対をなすような)。
+コンテンツスクリプトは、ウェブページのコンテキストで実行される拡張機能の一部です（拡張機能の一部であるバックグラウンドスクリプトや、ウェブサイト自体の一部であるスクリプト、例えば {{HTMLElement("script")}} 要素みたいなものと対照的なものです）。
 
 [バックグラウンドスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Background_scripts)はすべての [WebExtension JavaScript API](/ja/docs/Mozilla/Add-ons/WebExtensions/API) にアクセスできますが、ウェブページのコンテンツに直接アクセスすることはできません。だからあなたの拡張機能がそれを行う必要がある場合は、コンテンツスクリプトが必要です。
 
-通常のウェブページで読み込まれたスクリプトと同様に、コンテンツスクリプトは、標準の DOM API を使用してページのコンテンツを読み取り、変更することができます。
+通常のウェブページで読み込まれたスクリプトと同様に、コンテンツスクリプトは、標準の [Web API](/ja/docs/Web/API) を使用してページのコンテンツを読み取り、変更することができます。しかし、このようなことができるのは、[ウェブページのオリジンに対するホスト権限が与えられている場合](#権限)だけです。
+
+> [!NOTE] 一部の Web API は[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)に制限されており、これらのコンテキストで実行するコンテンツスクリプトにも適用されます。ただし、{{domxref("PointerEvent.getCoalescedEvents()")}} は、 Firefox の安全でないコンテキストでコンテンツスクリプトから呼び出すことができます。
 
 コンテンツスクリプトは、[WebExtension API の小さなサブセット](#webextension_api)にしかアクセスできませんが、メッセージングシステムを使用して [バックグラウンドスクリプトと通信](#バックグラウンドスクリプトとの通信)し、WebExtension API に間接的にアクセスすることができます。
-
-> **メモ:** コンテンツスクリプトは次のドメインでブロックされます。
->
-> - accounts-static.cdn.mozilla.net
-> - accounts.firefox.com
-> - addons.cdn.mozilla.net
-> - addons.mozilla.org
-> - api.accounts.firefox.com
-> - content.cdn.mozilla.net
-> - discovery.addons.mozilla.org
-> - input.mozilla.org
-> - install.mozilla.org
-> - oauth.accounts.firefox.com
-> - profile.accounts.firefox.com
-> - support.mozilla.org
-> - sync.services.mozilla.com
-> - testpilot.firefox.com
->
-> これらドメインのページにコンテンツスクリプトを挿入しようとすると、そのスクリプトは失敗し、ページは [CSP](/ja/docs/Web/HTTP/CSP) エラーをログに記録します。
->
-> これらの制限は addons.mozilla.org を含んでいるので、ユーザーはインストール直後に拡張機能を使用しようとし、それが動作しないことに気付くかもしれません。 適切な警告を追加したり、[オンボーディングページ](https://extensionworkshop.com/documentation/develop/onboard-upboard-offboard-users/)を追加して、ユーザーを `addons.mozilla.org` から遠ざけたりするとよいでしょう。
 
 ## コンテンツスクリプトの読み込み
 
@@ -43,9 +24,9 @@ l10n:
 1. インストール時に、URL パターンに一致するページ内へ。
    - : `manifest.json` の [`content_scripts`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) キーを使用して、URL が[指定されたパターンに一致する](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)ページをロードするたびにコンテンツスクリプトを読み込むようブラウザーに依頼できます。
 2. 実行時に、URL パターンに一致するページ内へ。
-   - : {{WebExtAPIRef("contentScripts")}} API を使って、URL が[指定されたパターンに一致する](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)ページを読み込むたびにコンテンツスクリプトを読み込むようブラウザーに依頼できます。これは方法 1 と似ていますが、実行時にコンテンツスクリプトを追加/削除できる点が異なります。）
+   - : {{WebExtAPIRef("scripting.registerContentScripts()")}} または（Firefox であればマニフェスト V2 の） {{WebExtAPIRef("contentScripts")}} を使って、URL が[指定されたパターンに一致する](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)ページを読み込むたびにコンテンツスクリプトを読み込むようブラウザーに依頼できます。これは方法 1 と似ていますが、実行時にコンテンツスクリプトを追加/削除できる点が異なります。）
 3. 実行時に、特定のタブへ。
-   - : Manifest V2 において、[`tabs.executeScript()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API を使用するか、Manifest V3 において、{{WebExtAPIRef("scripting.executeScript()")}} を使用すると、必要なときにコンテンツスクリプトを特定のタブに読み込むことができます。（ユーザーが[ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action)をクリックした場合など。）
+   - : {{WebExtAPIRef("scripting.executeScript()")}} または（マニフェスト V2 のみ） {{WebExtAPIRef("tabs.executeScript()")}} を使用すると、必要なときにコンテンツスクリプトを特定のタブに読み込むことができます。（ユーザーが[ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)をクリックした場合など。）
 
 *フレームごと、拡張機能ごとの*グローバルスコープしかありません。これは 1 つのコンテンツスクリプトの変数は、読み込み方にかかわらず、他のコンテンツスクリプトからアクセスできることになります。
 
@@ -55,6 +36,46 @@ l10n:
 
 > **メモ:** [ダイナミック JS モジュールインポート](/ja/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading)がコンテンツスクリプトで動作するようになりました。詳しくは[Firefox バグ 1536094](https://bugzil.la/1536094)を参照してください。
 > _moz-extension_ スキームを持つ URL のみが許可され、データ URL は除外されます ([Firefox バグ 1587336](https://bugzil.la/1587336))。
+
+## 権限、制約、制限
+
+### 権限
+
+登録されたコンテンツスクリプトは、その拡張機能にドメインの[ホスト権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#ホスト権限)が付与されている場合にのみ実行されます。
+
+プログラムでスクリプトを挿入するには、拡張機能には [`activeTab` 権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_権限)または[ホスト権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_権限)のどちらかが必要です。 `scripting` 権限は {{WebExtAPIRef("scripting")}} API のメソッドを使用するために必要となります。
+
+マニフェスト V3 以降、ホスト権限はインストール時点では自動的に付与されません。ユーザーは、拡張機能をインストールした後、ホスト権限のオプトインまたはオプトアウトを行うことができます。
+
+### ドメインの制限
+
+[ホスト権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_権限)と [`activeTab` 権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_権限)はどちらも、いくつかのドメインが例外になっています。例えば、拡張機能が特別なページを通して権限をエスカレートさせることからユーザーを保護するために、コンテンツスクリプトはこの例ではドメイン上での実行がブロックされます。
+
+Firefox では、これには次のドメインが含まれます。
+
+- accounts-static.cdn.mozilla.net
+- accounts.firefox.com
+- addons.cdn.mozilla.net
+- addons.mozilla.org
+- api.accounts.firefox.com
+- content.cdn.mozilla.net
+- discovery.addons.mozilla.org
+- install.mozilla.org
+- oauth.accounts.firefox.com
+- profile.accounts.firefox.com
+- support.mozilla.org
+- sync.services.mozilla.com
+
+他のブラウザーでも、拡張機能をインストールできるウェブサイトには同様の制限があります。例えば、 Chrome では chrome.google.com へのアクセスが制限されています。
+
+> [!NOTE]
+> これらの制限は addons.mozilla.org を含んでいるので、ユーザーはインストール直後に拡張機能を使用しようとし、それが動作しないことに気付くかもしれません。 適切な警告を追加したり、[オンボーディングページ](https://extensionworkshop.com/documentation/develop/onboard-upboard-offboard-users/)を追加して、ユーザーを `addons.mozilla.org` から遠ざけたりするとよいでしょう。
+
+一連のドメインは、エンタープライズポリシーでさらに制限することができます。 Firefox は [ExtensionSettings in mozilla/policy-templates](https://github.com/mozilla/policy-templates/blob/master/README.md#extensionsettings) で文書化されている `restricted_domains` ポリシーを認識します。Chrome の `runtime_blocked_hosts` ポリシーは [Configure ExtensionSettings policy](https://support.google.com/chrome/a/answer/9867568) で文書化されています。
+
+### 制限
+
+タブやフレーム全体を読み込むには、 [`data:` URI](/ja/docs/Web/URI/Schemes/data) や {{DOMxRef("URL.createObjectURL_static", "Blob")}} オブジェクト、その他同様のテクニックを使用して、タブやフレーム全体を読み込むことができます。このような特殊文書へのコンテンツスクリプトの挿入に対応しているかどうかはブラウザーによって異なります。詳細は [Firefox バグ #1411641 のコメント 41](https://bugzil.la/1411641#c41) を参照してください。
 
 ## コンテンツスクリプト環境
 
@@ -67,13 +88,18 @@ l10n:
 - コンテンツスクリプトはページスクリプトにて定義された JavaScript 変数を見ることができない
 - ページスクリプトが組み込み DOM プロパティを再定義した場合、コンテンツスクリプトはそのプロパティの（再定義後でなく）オリジナル値を見ている
 
-Firefox では、この挙動は [Xray vision](/ja/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#xray_vision_in_firefox) と呼ばれます。
+[Chrome の非互換性における「コンテンツスクリプト環境」](/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#コンテンツスクリプト環境)で触れている通り、動作はブラウザー間で異なります。
+
+- Firefox では、この挙動は [Xray vision](/ja/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#xray_vision_in_firefox) と呼ばれます。
+  コンテンツスクリプトは、自分自身のグローバルスコープから、またはウェブページから Xray でラップされたバージョンの JavaScript オブジェクトに遭遇するかもしれません。
+
+- Chromeでは、この動作は[隔離された世界 (isolated world)](https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/renderer/bindings/core/v8/V8BindingDesign.md#world) によって強制され、根本的に異なる手法を使用しています。
 
 次のようなウェブページを考えてみてください。
 
 ```html
 <!doctype html>
-<html lang="en-US">
+<html lang="ja">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   </head>
@@ -84,7 +110,7 @@ Firefox では、この挙動は [Xray vision](/ja/docs/Mozilla/Add-ons/WebExten
 </html>
 ```
 
-"page-script.js" スクリプトは次を実行します。
+`page-script.js` スクリプトは次を実行します。
 
 ```js
 // page-script.js
@@ -137,7 +163,8 @@ window.confirm("Are you sure?"); // calls the original window.confirm()
 ]
 ```
 
-> **メモ:** Firefox ではコンテンツスクリプトからページスクリプトによって生成された JavaScript オブジェクトにアクセスしたり、ページスクリプトにコンテンツスクリプトの JavaScript オブジェクトを公開できるようにする API が提供されます。
+> [!NOTE]
+> Firefox では [cloneInto()](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/cloneInto) および [exportFunction()](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/exportFunction) により、コンテンツスクリプトがページスクリプトによって作成された JavaScript オブジェクトにアクセスし、その JavaScript オブジェクトをページスクリプトに公開することができるようにしたりしています。
 >
 > 詳しくは[ページスクリプトとオブジェクトを共有する](/ja/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)のページを見てください。
 
@@ -178,23 +205,27 @@ window.confirm("Are you sure?"); // calls the original window.confirm()
 
 コンテンツスクリプトは通常の [`window.XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) と [`window.fetch()`](/ja/docs/Web/API/Fetch_API) API を使ってリクエストを作成できます。
 
-> **メモ:** Firefox では、コンテンツスクリプトの（例えば、[`fetch()`](/ja/docs/Web/API/Fetch_API/Using_Fetch) を使った）リクエストは、拡張機能のコンテキストで起こるので、ページコンテンツを参照する URL を絶対 URL で提供せねばなりません。
+> [!NOTE]
+> Firefox では、コンテンツスクリプトの（例えば、[`fetch()`](/ja/docs/Web/API/Fetch_API/Using_Fetch) を使った）リクエストは、拡張機能のコンテキストで起こるので、ページコンテンツを参照する URL を絶対 URL で提供せねばなりません。
 >
 > Chrome では、リクエストはページのコンテキストで起こるので、相対 URL で行われます。例えば、`/api` は `https://[現在のページの URL]/api` に送られます。
 
 コンテンツスクリプトは拡張機能の他の部分と同一のクロスドメイン権限を取得します。よって拡張機能が `manifest.json` の [`permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) キーを使ってあるドメインのクロスドメインアクセスを要求している場合、コンテンツスクリプトも同様にそのドメインのアクセスを取得します。
 
-> **メモ:** Manifest V3 を使用する場合、出力先サーバーが [CORS](/ja/docs/Web/HTTP/CORS) を使用してオプトインするとき、コンテンツスクリプトはオリジン間リクエストを実行できます。ただし、コンテンツスクリプトではホスト権限は動作しませんが、通常の拡張ページではまだ動作しています。
+> [!NOTE]
+> Manifest V3 を使用する場合、出力先サーバーが [CORS](/ja/docs/Web/HTTP/CORS) を使用してオプトインするとき、コンテンツスクリプトはオリジン間リクエストを実行できます。ただし、コンテンツスクリプトではホスト権限は動作しませんが、通常の拡張ページではまだ動作しています。
 
 これは、コンテンツスクリプトでより特権的な XHR とフェッチインスタンスを公開することによって達成されます。これは、ページ自身からのリクエストのように、[`Origin`](/ja/docs/Web/HTTP/Headers/Origin) および [`Referer`](/ja/docs/Web/HTTP/Header/Referer) ヘッダーを設定しない副作用があります。これは、クロスオリジンの性質を明らかにしないリクエストを行うにはよく望ましいとされることです。
 
-> **メモ:** Manifest V2 の Firefox では、コンテンツ自身によって送信されたかのように振る舞うリクエストを実行する必要がある拡張機能は、代わりに `content.XMLHttpRequest` と `content.fetch()` を使用することができます。
+> [!NOTE]
+> マニフェスト V2 の Firefox では、コンテンツ自身によって送信されたかのように振る舞うリクエストを実行する必要がある拡張機能は、代わりに `content.XMLHttpRequest` と `content.fetch()` を使用することができます。
 >
 > クロスブラウザー拡張機能にとってこれらの存在は機能検出となります。
 >
 > Manifest V3 では `content.XMLHttpRequest` と `content.fetch()` が利用できないため、このようなことは起こりえません。
 
-> **メモ:** Chrome ではバージョン 73 から、Firefox ではバージョン 101 からマニフェスト V3 を使用する場合、コンテンツスクリプトは、その中で実行されるページと同じ [CORS](/ja/docs/Web/HTTP/CORS) ポリシーが適用されるようになりました。バックエンドスクリプトのみ、昇格したクロスドメイン特権があります。[Chrome Extension コンテンツスクリプトにおける Cross-Origin Requests の変更点](https://www.chromium.org/Home/chromium-security/extension-content-script-fetches)を参照してください。
+> [!NOTE]
+> Chrome ではバージョン 73 から、Firefox ではバージョン 101 からマニフェスト V3 を使用する場合、コンテンツスクリプトは、その中で実行されるページと同じ [CORS](/ja/docs/Web/HTTP/CORS) ポリシーが適用されるようになりました。バックエンドスクリプトのみ、昇格したクロスドメイン特権があります。[Chrome Extension コンテンツスクリプトにおける Cross-Origin Requests の変更点](https://www.chromium.org/Home/chromium-security/extension-content-script-fetches)を参照してください。
 
 ## バックグラウンドスクリプトとの通信
 
@@ -293,7 +324,7 @@ function notify(message) {
 }
 ```
 
-この例のコードは GitHub の [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) のサンプルから簡単に適用できます。
+この例のコードは GitHub の [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) のサンプルから簡単に適用できます。
 
 ### コネクションベースのメッセージ
 
@@ -515,7 +546,7 @@ window.addEventListener("message", (event) => {
 
 Chrome では、こんな出力が生成されます:
 
-```
+```plain
 In content script, window.x: 1
 In content script, window.y: 2
 In page script, window.x: undefined
@@ -524,16 +555,17 @@ In page script, window.y: undefined
 
 Firefox では、こんな出力が生成されます:
 
-```
+```plain
 In content script, window.x: undefined
 In content script, window.y: 2
 In page script, window.x: 1
 In page script, window.y: undefined
 ```
 
-同じことは [`setTimeout()`](/ja/docs/Web/API/setTimeout)、[`setInterval()`](/ja/docs/Web/API/setInterval)、[`Function()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) にも言えます。
+同じことは {{domxref("Window.setTimeout", "setTimeout()")}}、{{domxref("Window.setInterval", "setInterval()")}}、[`Function()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) にも言えます。
 
-> **警告:** ページのコンテキストでコードを実行するときは特に注意してください！
+> [!WARNING]
+> ページのコンテキストでコードを実行するときは特に注意してください！
 >
 > ページの環境が悪意をはらんだウェブページにコントロールされ、期待しない方法であなたが操作するオブジェクトを再定義するかもしれません。
 >

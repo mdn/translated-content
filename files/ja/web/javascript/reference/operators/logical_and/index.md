@@ -1,6 +1,8 @@
 ---
 title: 論理積 (&&)
 slug: Web/JavaScript/Reference/Operators/Logical_AND
+l10n:
+  sourceCommit: 46a2eda1ce316d5c2c789104c28bc4fdaee5ab8b
 ---
 
 {{jsSidebar("Operators")}}
@@ -9,12 +11,20 @@ slug: Web/JavaScript/Reference/Operators/Logical_AND
 
 一般的には、この演算子は左から右に向けて評価した際に最初の{{Glossary("falsy", "偽値")}}のオペランドに遭遇したときにはその値を、またはすべてが{{Glossary("truthy", "真値")}}であった場合は最後のオペランドの値を返します。
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical AND", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 && b > 0);
+// Expected output: false
+```
 
 ## 構文
 
 ```js
-expr1 && expr2;
+x && y;
 ```
 
 ## 解説
@@ -40,7 +50,7 @@ result = 2 && 0; // result には 0 が代入される
 result = "foo" && 4; // result には 4 が代入される
 ```
 
-`&&` 演算子では論理値以外のオペランドを使用することができますが、返値が常に[論理型プリミティブ](/ja/docs/Web/JavaScript/Data_structures#論理型)に変換することが可能であるため、論理演算子と見なすことができます。
+`&&` 演算子では論理値以外のオペランドを使用することができますが、返値が常に[論理型プリミティブ](/ja/docs/Web/JavaScript/Data_structures#boolean_type)に変換することが可能であるため、論理演算子と見なすことができます。
 返値（または一般的な式）を対応する論理値に明示的に変換するには、二重の[否定演算子](/ja/docs/Web/JavaScript/Reference/Operators/Logical_NOT)または {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} コンストラクターを使用してください。
 
 ### 短絡評価
@@ -70,18 +80,18 @@ function B() {
 
 console.log(A() && B());
 // 関数 A の呼び出しによって "called A" をログ出力し、
-// && が false に評価され（関数 A が false を返し）、それから false をコンソールに出力します。
-// 論理積演算子はここで短絡となり、関数 B は無視されます。
+// && が false と評価し（関数 A が false を返し）、それから false をコンソールにログ出力します。
+// 論理積演算子はここで短絡となり、関数 B を無視します。
 ```
 
 ### 演算子の優先順位
 
 AND 演算子は OR 演算子よりも高い優先順位を持つので、 `&&` 演算子は `||` 演算子よりも先に実行されます（[演算子の優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)を参照）。
 
-```js
-false || (true && true); // true を返す
+```js-nolint
+true || false && false; // true を返す
 true && (false || false); // false を返す
-2 == 3 || (4 < 0 && 1 == 1); // false を返す
+(2 === 3) || (4 < 0) && (1 === 1); // false を返す
 ```
 
 ## 例
@@ -91,15 +101,15 @@ true && (false || false); // false を返す
 以下のコードは `&&` (論理積) 演算子の例を示しています。
 
 ```js
-a1 = true && true; // t && t は true を返す
-a2 = true && false; // t && f は false を返す
-a3 = false && true; // f && t は false を返す
-a4 = false && 3 == 4; // f && f は false を返す
-a5 = "Cat" && "Dog"; // t && t は "Dog" を返す
-a6 = false && "Cat"; // f && t は false を返す
-a7 = "Cat" && false; // t && f は false を返す
-a8 = "" && false; // f && f は "" を返す
-a9 = false && ""; // f && f は false を返す
+a1 = true && true; // t && t で true を返す
+a2 = true && false; // t && f で false を返す
+a3 = false && true; // f && t で false を返す
+a4 = false && 3 === 4; // f && f で false を返す
+a5 = "Cat" && "Dog"; // t && t で "Dog" を返す
+a6 = false && "Cat"; // f && t で false を返す
+a7 = "Cat" && false; // t && f で false を返す
+a8 = "" && false; // f && f で "" を返す
+a9 = false && ""; // f && f で false を返す
 ```
 
 ### 論理型の変換規則
@@ -108,28 +118,28 @@ a9 = false && ""; // f && f は false を返す
 
 **論理型**に関する以下の操作は、
 
-```js
-bCondition1 && bCondition2;
+```js-nolint
+bCondition1 && bCondition2
 ```
 
 常に以下のものと等しくなります。
 
-```js
-!(!bCondition1 || !bCondition2);
+```js-nolint
+!(!bCondition1 || !bCondition2)
 ```
 
 #### OR から AND への変換
 
 **論理型**に関する以下の操作は、
 
-```js
-bCondition1 || bCondition2;
+```js-nolint
+bCondition1 || bCondition2
 ```
 
 常に以下のものと等しくなります。
 
-```js
-!(!bCondition1 && !bCondition2);
+```js-nolint
+!(!bCondition1 && !bCondition2)
 ```
 
 ### 入れ子になった括弧の除去
@@ -138,14 +148,14 @@ bCondition1 || bCondition2;
 
 以下の**論理型**に関する複合操作は、
 
-```js
-bCondition1 || (bCondition2 && bCondition3);
+```js-nolint
+bCondition1 || (bCondition2 && bCondition3)
 ```
 
 常に以下のものと等しくなります。
 
-```js
-bCondition1 || (Condition2 && bCondition3;
+```js-nolint
+bCondition1 || bCondition2 && bCondition3
 ```
 
 ## 仕様書

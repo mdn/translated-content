@@ -70,7 +70,7 @@ A propriedade `inline-size` aproveita os mesmos valores que as propriedades {{cs
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.inline-size")}}
+{{Compat}}
 
 ## Veja também
 

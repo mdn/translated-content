@@ -1,10 +1,9 @@
 ---
 title: 인접 형제 결합자
 slug: Web/CSS/Next-sibling_combinator
-original_slug: Web/CSS/Adjacent_sibling_combinator
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 **인접 형제 결합자**(`+`)는 앞에서 지정한 요소의 **바로 다음**에 위치하는 형제 요소만 선택합니다.
 
@@ -55,4 +54,4 @@ li:first-of-type + li {
 
 ## 같이 보기
 
-- [일반 형제 결합자](/ko/docs/Web/CSS/General_sibling_combinator)
+- [일반 형제 결합자](/ko/docs/Web/CSS/Subsequent-sibling_combinator)

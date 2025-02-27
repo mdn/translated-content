@@ -1,32 +1,34 @@
 ---
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
+l10n:
+  sourceCommit: c4a47058862708136e2818a5d3d21c4a1645d89a
 ---
 
 {{JSRef}}
 
-与其他编程语言中的数组一样，**`Array`** 对象支持[在单个变量名下存储多个元素](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)，并具有[执行常见数组操作](#示例)的成员。
+与其他编程语言中的数组一样，**`Array`** 对象支持[在单个变量名下存储多个元素](/zh-CN/docs/Learn_web_development/Core/Scripting/Arrays)，并具有[执行常见数组操作](#示例)的成员。
 
 ## 描述
 
-在 JavaScript 中，数组不是[基本类型](/zh-CN/docs/Glossary/Primitive)，而是具有以下核心特征的 `Array` 对象：
+在 JavaScript 中，数组不是[原始类型](/zh-CN/docs/Glossary/Primitive)，而是具有以下核心特征的 `Array` 对象：
 
 - **JavaScript 数组是可调整大小的，并且可以包含不同的[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)**。（当不需要这些特征时，可以使用[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)。）
 - **JavaScript 数组不是关联数组**，因此，不能使用任意字符串作为索引访问数组元素，但必须使用非负整数（或它们各自的字符串形式）作为索引访问。
 - **JavaScript 数组的[索引从 0 开始](https://zh.wikipedia.org/zh-cn/從零開始的編號)**：数组的第一个元素在索引 `0` 处，第二个在索引 `1` 处，以此类推，最后一个元素是数组的 {{jsxref("Array/length", "length")}} 属性减去 `1` 的值。
 - **JavaScript [数组复制操作](#复制数组)创建[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)**。（_所有_ JavaScript 对象的标准内置复制操作都会创建浅拷贝，而不是[深拷贝](/zh-CN/docs/Glossary/Deep_copy)）。
 
-### 数组下标
+### 数组索引
 
-`Array` 对象不能使用任意字符串作为元素索引（如[关联数组](https://zh.wikipedia.org/wiki/关联数组)），必须使用非负整数（或它们的字符串形式）。通过非整数设置或访问不会设置或从数组列表本身检索元素，但会设置或访问与该数组的[对象属性集合](/zh-CN/docs/Web/JavaScript/Data_structures#属性)相关的变量。数组的对象属性和数组元素列表是分开的，数组的[遍历和修改操作](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#数组方法)不能应用于这些命名属性。
+`Array` 对象不能使用任意字符串作为元素索引（如[关联数组](https://zh.wikipedia.org/wiki/关联数组)），必须使用非负整数（或它们的字符串形式）。通过非整数设置或访问不会设置或从数组列表本身检索元素，但会设置或访问与该数组的[对象属性集合](/zh-CN/docs/Web/JavaScript/Data_structures#属性)相关的变量。数组的对象属性和数组元素列表是分开的，数组的[遍历和修改操作](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#数组方法)不能应用于这些具名属性。
 
 数组元素是对象属性，就像 `toString` 是属性一样（具体来说，`toString()` 是一种方法）。然而，尝试按以下方式访问数组的元素会抛出语法错误，因为属性名无效：
 
 ```js example-bad
-console.log(arr.0); // 语法错误
+arr.0; // 语法错误
 ```
 
-JavaScript 语法要求使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#对象和属性)而不是[点号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)来访问以数字开头的属性。也可以用引号包裹数组下标（例如，`years['2']` 而不是 `years[2]`），尽管通常没有必要。
+JavaScript 语法要求使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#对象和属性)而不是[点号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)来访问以数字开头的属性。也可以用引号包裹数组索引（例如，`years['2']` 而不是 `years[2]`），尽管通常没有必要。
 
 JavaScript 引擎通过隐式的 `toString`，将 `years[2]` 中的 `2` 强制转换为字符串。因此，`'2'` 和 `'02'` 将指向 `years` 对象上的两个不同的槽位，下面的例子可能是 `true`：
 
@@ -59,7 +61,7 @@ console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
 console.log(fruits.length); // 6
 ```
 
-增加 {{jsxref("Array/length", "length")}}。
+增加 {{jsxref("Array/length", "length")}} 会通过添加空槽来扩展数组，而不是创建任何新元素——甚至不会是 `undefined`。
 
 ```js
 fruits.length = 10;
@@ -77,73 +79,61 @@ console.log(Object.keys(fruits)); // ['0', '1']
 console.log(fruits.length); // 2
 ```
 
-这将在 {{jsxref("Array/length")}} 页中进一步解释。
+这将在 {{jsxref("Array/length", "length")}} 页中进一步解释。
 
 ### 数组方法和空槽
 
-[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽在数组方法之间的行为不一致。通常，旧方法会跳过空槽，而新方法将它们视为 `undefined`。
+数组方法在遇到空槽时有不同的行为，在[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中数组方法遇到空槽时有不同的行为。通常，较旧的方法（例如 `forEach`）处理空槽的方式与处理包含 `undefined` 索引的方式不同。
 
-在遍历多个元素的方法中，下面的方法在访问索引之前执行 [`in`](/zh-CN/docs/Web/JavaScript/Reference/Operators/in) 检查，并且不将空槽与 `undefined` 合并：
+对空槽进行特殊处理的方法包括：{{jsxref("Array/concat", "concat()")}}、{{jsxref("Array/copyWithin", "copyWithin()")}}、{{jsxref("Array/every", "every()")}}、{{jsxref("Array/filter", "filter()")}}、{{jsxref("Array/flat", "flat()")}}、{{jsxref("Array/flatMap", "flatMap()")}}、{{jsxref("Array/forEach", "forEach()")}}、{{jsxref("Array/indexOf", "indexOf()")}}、{{jsxref("Array/lastIndexOf", "lastIndexOf()")}}、{{jsxref("Array/map", "map()")}}、{{jsxref("Array/reduce", "reduce()")}}、{{jsxref("Array/reduceRight", "reduceRight()")}}、{{jsxref("Array/reverse", "reverse()")}}、{{jsxref("Array/slice", "slice()")}}、{{jsxref("Array/some", "some()")}}、{{jsxref("Array/sort", "sort()")}} 和 {{jsxref("Array/splice", "splice()")}}。诸如 `forEach` 之类的迭代方法根本不会访问空槽。其他方法，如 `concat`、`copyWithin` 等，在进行复制时会保留空槽，因此最终数组依然是稀疏的。
 
-- {{jsxref("Array/concat", "concat()")}}
-- {{jsxref("Array/copyWithin", "copyWithin()")}}
-- {{jsxref("Array/every", "every()")}}
-- {{jsxref("Array/filter", "filter()")}}
-- {{jsxref("Array/flat", "flat()")}}
-- {{jsxref("Array/flatMap", "flatMap()")}}
-- {{jsxref("Array/forEach", "forEach()")}}
-- {{jsxref("Array/indexOf", "indexOf()")}}
-- {{jsxref("Array/lastIndexOf", "lastIndexOf()")}}
-- {{jsxref("Array/map", "map()")}}
-- {{jsxref("Array/reduce", "reduce()")}}
-- {{jsxref("Array/reduceRight", "reduceRight()")}}
-- {{jsxref("Array/reverse", "reverse()")}}
-- {{jsxref("Array/slice", "slice()")}}
-- {{jsxref("Array/some", "some()")}}
-- {{jsxref("Array/sort", "sort()")}}
-- {{jsxref("Array/splice", "splice()")}}
+```js
+const colors = ["红", "黄", "蓝"];
+colors[5] = "紫";
+colors.forEach((item, index) => {
+  console.log(`${index}：${item}`);
+});
+// 输出：
+// 0：红
+// 1：黄
+// 2：蓝
+// 5：紫
 
-关于它们是如何处理空槽的，请参阅每个方法的页面。
+colors.reverse(); // ['紫', 空槽 × 2, '蓝', '黄', '红']
+```
 
-这些方法将空槽视为 `undefined`：
+较新的方法（例如 `keys`）不会对空槽进行特殊处理，而是将它们视为包含 `undefined`。将空槽合并为 `undefined` 元素方法有：{{jsxref("Array/entries", "entries()")}}、{{jsxref("Array/fill", "fill()")}}、{{jsxref("Array/find", "find()")}}、{{jsxref("Array/findIndex", "findIndex()")}}、{{jsxref("Array/findLast", "findLast()")}}、{{jsxref("Array/findLastIndex", "findLastIndex()")}}、{{jsxref("Array/includes", "includes()")}}、{{jsxref("Array/join", "join()")}}、{{jsxref("Array/keys", "keys()")}}、{{jsxref("Array/toLocaleString", "toLocaleString()")}}、{{jsxref("Array/values", "values()")}} 和 {{jsxref("Array/with", "with()")}}。
 
-- {{jsxref("Array/entries", "entries()")}}
-- {{jsxref("Array/fill", "fill()")}}
-- {{jsxref("Array/find", "find()")}}
-- {{jsxref("Array/findIndex", "findIndex()")}}
-- {{jsxref("Array/findLast", "findLast()")}}
-- {{jsxref("Array/findLastIndex", "findLastIndex()")}}
-- {{jsxref("Array/includes", "includes()")}}
-- {{jsxref("Array/join", "join()")}}
-- {{jsxref("Array/keys", "keys()")}}
-- {{jsxref("Array/toLocaleString", "toLocaleString()")}}
-- {{jsxref("Array/values", "values()")}}
+```js
+const colors = ["红", "黄", "蓝"];
+colors[5] = "紫";
+const iterator = colors.keys();
+for (const key of iterator) {
+  console.log(`${key}：${colors[key]}`);
+}
+// 输出
+// 0：红
+// 1：黄
+// 2：蓝
+// 3：undefined
+// 4：undefined
+// 5：紫
+
+const newColors = colors.toReversed(); // ['紫', undefined, undefined, '蓝', '黄', '红']
+```
 
 ### 复制方法和修改方法
 
 有些方法不会修改调用该方法的现有数组，而是返回一个新的数组。它们通过首先构造一个新数组，然后填充元素来实现。复制始终是[_浅层次的_](/zh-CN/docs/Glossary/Shallow_copy)——该方法从不复制一开始创建的数组之外的任何内容。原始数组的元素将按以下方式复制到新数组中：
 
 - 对象：对象引用被复制到新数组中。原数组和新数组都引用同一个对象。也就是说，如果一个被引用的对象被修改，新数组和原数组都可以看到更改。
-- 基本类型，如字符串、数字和布尔值（不是 {{jsxref("Global_Objects/String", "String")}}、{{jsxref("Global_Objects/Number", "Number")}} 和 {{jsxref("Global_Objects/Boolean", "Boolean")}} 对象）：它们的值被复制到新数组中。
+- 原始类型，如字符串、数字和布尔值（不是 {{jsxref("String")}}、{{jsxref("Number")}} 和 {{jsxref("Boolean")}} 对象）：它们的值被复制到新数组中。
 
 其他方法会改变调用该方法的数组，在这种情况下，它们的返回值根据方法的不同而不同：有时是对相同数组的引用，有时是新数组的长度。
 
-以下方法通过访问 [`this.constructor[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) 来创建新数组，以确定要使用的构造函数：
+以下方法通过访问 [`this.constructor[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species) 来创建新数组，以确定要使用的构造函数：{{jsxref("Array/concat", "concat()")}}、{{jsxref("Array/filter", "filter()")}}、{{jsxref("Array/flat", "flat()")}}、{{jsxref("Array/flatMap", "flatMap()")}}、{{jsxref("Array/map", "map()")}}、{{jsxref("Array/slice", "slice()")}} 和 {{jsxref("Array/splice", "splice()")}}（返回构造的已删除元素数组）
 
-- {{jsxref("Array/concat", "concat()")}}
-- {{jsxref("Array/filter", "filter()")}}
-- {{jsxref("Array/flat", "flat()")}}
-- {{jsxref("Array/flatMap", "flatMap()")}}
-- {{jsxref("Array/map", "map()")}}
-- {{jsxref("Array/slice", "slice()")}}
-- {{jsxref("Array/splice", "splice()")}}（构造返回的已删除元素数组）
-
-以下方法总是使用 `Array` 基础构造函数创建新数组：
-
-- {{jsxref("Array/toReversed", "toReversed()")}}
-- {{jsxref("Array/toSorted", "toSorted()")}}
-- {{jsxref("Array/toSpliced", "toSpliced()")}}
-- {{jsxref("Array/with", "with()")}}
+以下方法总是使用 `Array` 基础构造函数创建新数组：{{jsxref("Array/toReversed", "toReversed()")}}、{{jsxref("Array/toSorted", "toSorted()")}}、{{jsxref("Array/toSpliced", "toSpliced()")}} 和 {{jsxref("Array/with", "with()")}}。
 
 下表列出了会修改原始数组的方法，以及相应的非修改方法：
 
@@ -186,31 +176,41 @@ method(callbackFn, thisArg)
 
 `callbackFn` 的返回值取决于调用的数组方法。
 
-`thisArg` 参数（默认为 `undefined`）将在调用 `callbackFn` 时用作 `this` 值。最终由 `callbackFn` 观察到的 `this` 值根据[通常的规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 确定：如果 `callbackFn` 是[非严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)（译注：[正常模式/马虎模式](/zh-CN/docs/Glossary/Sloppy_mode)），原始 `this` 值将被包装为对象，并将 `undefined`/`null` 替换为 [`globalThis`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis)。对于使用 [箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 定义的任何 `callbackFn` 来说，`thisArg` 参数都是无关紧要的，因为箭头函数没有自己的 `this` 绑定。
+`thisArg` 参数（默认为 `undefined`）将在调用 `callbackFn` 时用作 `this` 值。最终由 `callbackFn` 观察到的 `this` 值根据[通常的规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)确定：如果 `callbackFn` 是[非严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)，原始 `this` 值将被包装为对象，并将 `undefined`/`null` 替换为 [`globalThis`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis)。对于使用[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 定义的任何 `callbackFn` 来说，`thisArg` 参数都是无关紧要的，因为箭头函数没有自己的 `this` {{Glossary("binding", "绑定")}}。
+
+如果想要在迭代期间读取另一个索引值的话，传递给 `callbackFn` 的 `array` 参数是有用的，因为可能并不总是有一个引用当前数据的现有变量。在迭代过程中，通常不应更改数组（参见 [迭代方法中的改变初始数组](#迭代方法中的改变初始数组)），但可以使用这个参数这样做。`array` 参数*不是*正在构建的数组，在类似 `map()`、`filter()` 和 `flatMap()` 方法的情况下——无法通过回调函数访问正在构建的数组。
 
 所有迭代方法都是[复制方法](#复制方法和修改方法)和[通用方法](#通用数组方法)，尽管它们在处理[空槽](#数组方法和空槽)时的行为不同。
 
-以下方法是迭代方法：
-
-- {{jsxref("Array/every", "every()")}}
-- {{jsxref("Array/filter", "filter()")}}
-- {{jsxref("Array/find", "find()")}}
-- {{jsxref("Array/findIndex", "findIndex()")}}
-- {{jsxref("Array/findLast", "findLast()")}}
-- {{jsxref("Array/findLastIndex", "findLastIndex()")}}
-- {{jsxref("Array/flatMap", "flatMap()")}}
-- {{jsxref("Array/forEach", "forEach()")}}
-- {{jsxref("Array/map", "map()")}}
-- {{jsxref("Array/some", "some()")}}
+以下方法是迭代方法：{{jsxref("Array/every", "every()")}}、{{jsxref("Array/filter", "filter()")}}、{{jsxref("Array/find", "find()")}}、{{jsxref("Array/findIndex", "findIndex()")}}、{{jsxref("Array/findLast", "findLast()")}}、{{jsxref("Array/findLastIndex", "findLastIndex()")}}、{{jsxref("Array/flatMap", "flatMap()")}}、{{jsxref("Array/forEach", "forEach()")}}、{{jsxref("Array/map", "map()")}} 和 {{jsxref("Array/some", "some()")}}。
 
 特别地，{{jsxref("Array/every", "every()")}}、{{jsxref("Array/find", "find()")}}、{{jsxref("Array/findIndex", "findIndex()")}}、{{jsxref("Array/findLast", "findLast()")}}、{{jsxref("Array/findLastIndex", "findLastIndex()")}} 和 {{jsxref("Array/some", "some()")}} 并不总是在每个元素上调用 `callbackFn`——它们在确定返回值后立即停止迭代。
 
-还有两个方法接受一个回调函数，并对数组中的每个元素最多运行一次，但它们的方法签名与典型的迭代方法略有不同（例如，它们不接受 `thisArg`）：
-
-- {{jsxref("Array/reduce", "reduce()")}}
-- {{jsxref("Array/reduceRight", "reduceRight()")}}
+{{jsxref("Array/reduce", "reduce()")}} 和 {{jsxref("Array/reduceRight", "reduceRight()")}} 方法也接受一个回调函数，并对数组中的每个元素最多运行一次，但它们的方法签名与典型的迭代方法略有不同（例如，它们不接受 `thisArg`）。
 
 {{jsxref("Array/sort", "sort()")}} 方法也接受一个回调函数，但它不是一个迭代方法。它会就地修改数组，不接受 `thisArg`，并且可能在索引上多次调用回调函数。
+
+迭代方法迭代数组，如下所示（省略许多技术细节）：
+
+```js
+function method(callbackFn, thisArg) {
+  const length = this.length;
+  for (let i = 0; i < length; i++) {
+    if (i in this) {
+      const result = callbackFn.call(thisArg, this[i], i, this);
+      // 使用 result 做一些事，也许更早地返回
+    }
+  }
+}
+```
+
+备注如下内容：
+
+1. 不是所有的方法都执行 `i in this` 验证，`find`、`findIndex`、`findLast` 和 `findLastIndex` 方法不执行，其他的会。
+2. `length` 变量在循环开始前存储。这会影响迭代过程中插入和删除的处理方式（参见[迭代方法中的改变初始数组](#迭代方法中的改变初始数组)）。
+3. `method` 方法不会存储数组内容，因此如果迭代期间，有任何索引发生更改，可以观察到新的值。
+4. 上面的代码按索引的升序迭代数组，有一些方法按索引降序迭代（`for (let i = length - 1; i >= 0; i--)`）：`reduceRight()`、`findLast()` 和 `findLastIndex()`。
+5. `reduce` 和 `reduceRight` 具有略微不同的签名，并不总是从第一个/最后一个元素开始。
 
 ### 通用数组方法
 
@@ -264,15 +264,15 @@ f("a", "b"); // 'a+b'
 
 ## 静态属性
 
-- {{jsxref("Array/@@species", "get Array[@@species]")}}
+- [`Array[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
   - : 返回 `Array` 构造函数。
 
 ## 静态方法
 
 - {{jsxref("Array.from()")}}
   - : 从数组类对象或可迭代对象创建一个新的 `Array` 实例。
-- {{jsxref("Array.fromAsync()")}} {{Experimental_Inline}}
-  - 从异步可迭代、可迭代或类数组对象创建新的 `Array` 实例。
+- {{jsxref("Array.fromAsync()")}}
+  - : 从异步可迭代、可迭代或类数组对象创建新的 `Array` 实例。
 - {{jsxref("Array.isArray()")}}
   - : 如果参数是数组则返回 `true` ，否则返回 `false` 。
 - {{jsxref("Array.of()")}}
@@ -284,7 +284,7 @@ f("a", "b"); // 'a+b'
 
 - {{jsxref("Object/constructor", "Array.prototype.constructor")}}
   - : 创建实例对象的构造函数。对于 `Array` 实例，初始值是 {{jsxref("Array/Array", "Array")}} 构造函数。
-- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+- [`Array.prototype[Symbol.unscopables]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables)
   - : 包含 ES2015 版本之前 ECMAScript 标准中没有包含的属性名，在使用 [`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with) 绑定语句时会被忽略。
 
 以下属性是每个 `Array` 实例自有的属性。
@@ -370,14 +370,15 @@ f("a", "b"); // 'a+b'
   - : 返回一个新的[_数组迭代器_](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)对象，该对象包含数组中每个索引的值。
 - {{jsxref("Array.prototype.with()")}}
   - : 返回一个新数组，其中给定索引处的元素替换为给定值，而不改变原始数组。
-- [`Array.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
   - : 默认情况下，该方法为 [`values()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/values) 方法的别名。
 
 ## 示例
 
 本节提供一些 JavaScript 中常见的数组操作示例。
 
-> **备注：** 如果你还不熟悉数组的基础知识，可以考虑先读一下 [JavaScript 第一步：数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)，它解释了[数组是什么](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays#数组是什么？)，还包括其他常见的数组操作示例。
+> [!NOTE]
+> 如果你还不熟悉数组的基础知识，可以考虑先读一下 [JavaScript 第一步：数组](/zh-CN/docs/Learn_web_development/Core/Scripting/Arrays)，它解释了[数组是什么](/zh-CN/docs/Learn_web_development/Core/Scripting/Arrays#数组是什么？)，还包括其他常见的数组操作示例。
 
 ### 创建数组
 
@@ -676,7 +677,7 @@ const fruitsCopy3 = fruits.slice();
 const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 ```
 
-你还可以使用 [`structuredClone()`](/zh-CN/docs/Web/API/structuredClone) 方法创建深拷贝，该方法的优点是允许源代码中的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)被*转移*到新的副本，而不仅仅是克隆。
+你还可以使用 {{DOMxRef("Window.structuredClone", "structuredClone()")}} 方法创建深拷贝，该方法的优点是允许源代码中的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)被*转移*到新的副本，而不仅仅是克隆。
 
 最后，重要的是要理解，将现有数组赋值给新变量并不会创建数组或其元素的副本。相反，新变量只是对原数组的引用或别名；也就是说，原来的数组名和新的变量名只是同一个对象的两个名称（因此总是被计算为[严格相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#严格相等)）。因此，如果你对原数组的值或新变量的值做了任何改变，另一个也会改变：
 
@@ -786,6 +787,144 @@ console.log(execResult); // [ "dbBd", "bB", "d" ]
 
 有关匹配结果的更多信息，请参见 {{jsxref("RegExp.prototype.exec()")}} 和 {{jsxref("String.prototype.match()")}} 页。
 
+### 迭代方法中的改变初始数组
+
+[迭代方法](#迭代方法)不会改变调用它的数组，但作为 `callbackFn` 提供的函数可以。要记住关键原则是只有 0 和 `arrayLength - 1` 之间的索引可访问，`arrayLength` 是数组方法第一次被调用时的长度值，但传递给回调的元素是访问索引时的值。因此：
+
+- `callbackFn` 不会访问任何添加到超出数组的初始化长度之外的元素，当开始调用迭代方法时。
+- 对已访问索引的变更不会导致再次对其调用 `callbackFn`。
+- 如果数组中存在但未访问的元素被 `callbackFn` 更改，则传递给 `callbackFn` 的值将是访问该元素时的值。删除的元素不会被访问。
+
+> [!WARNING]
+> 上述类型的并发修改通常会导致代码难以理解，需要避免（特殊情况除外）。
+
+下面的示例使用 `forEach` 方法作为一个例子，但以升序访问索引的其他的方法以相同的方式工作。我们将先定义一个帮助函数：
+
+```js
+function testSideEffect(effect) {
+  const arr = ["e1", "e2", "e3", "e4"];
+  arr.forEach((elem, index, arr) => {
+    console.log(`数组：[${arr.join(", ")}]，索引：${index}，元素：${elem}`);
+    effect(arr, index);
+  });
+  console.log(`最终数组：[${arr.join(", ")}]`);
+}
+```
+
+一旦达到索引，对尚未访问索引的修改将可见：
+
+```js
+testSideEffect((arr, index) => {
+  if (index + 1 < arr.length) arr[index + 1] += "*";
+});
+// 数组：[e1, e2, e3, e4]，索引：0，元素：e1
+// 数组：[e1, e2*, e3, e4]，索引：1，元素：e2*
+// 数组：[e1, e2*, e3*, e4]，索引：2，元素：e3*
+// 数组：[e1, e2*, e3*, e4*]，索引：3，元素：e4*
+// 最终数组：[e1, e2*, e3*, e4*]
+```
+
+对已访问索引的修改不会改变迭代行为，尽管之后数据会有所不同：
+
+```js
+testSideEffect((arr, index) => {
+  if (index > 0) arr[index - 1] += "*";
+});
+// 数组：[e1, e2, e3, e4]，索引：0，元素：e1
+// 数组：[e1, e2, e3, e4]，索引：1，元素：e2
+// 数组：[e1*, e2, e3, e4]，索引：2，元素：e3
+// 数组：[e1*, e2*, e3, e4]，索引：3，元素：e4
+// 最终数组：[e1*, e2*, e3*, e4]
+```
+
+在小于初始数组长度的未访问索引处插入 _n_ 元素将使它们被访问。原始数组中大于初始长度的最后 _n_ 元素将不会被访问：
+
+```js
+testSideEffect((arr, index) => {
+  if (index === 1) arr.splice(2, 0, "new");
+});
+// 数组：[e1, e2, e3, e4]，索引：0，元素：e1
+// 数组：[e1, e2, e3, e4]，索引：1，元素：e2
+// 数组：[e1, e2, new, e3, e4]，索引：2，元素：new
+// 数组：[e1, e2, new, e3, e4]，索引：3，元素：e3
+// 最终数组：[e1, e2, new, e3, e4]
+// e4 不会被访问因为它的索引是 4
+```
+
+在大于初始数组长度处插入 _n_ 元素将不会使它们被访问：
+
+```js
+testSideEffect((arr) => arr.push("new"));
+// 数组：[e1, e2, e3, e4]，索引：0，元素：e1
+// 数组：[e1, e2, e3, e4, new]，索引：1，元素：e2
+// 数组：[e1, e2, e3, e4, new, new]，索引：2，元素：e3
+// 数组：[e1, e2, e3, e4, new, new, new]，索引：3，元素：e4
+// 最终数组：[e1, e2, e3, e4, new, new, new, new]
+```
+
+对已经访问过的索引插入 _n_ 元素将不会使它们被访问，但它会将剩余元素向后移动 _n_，因此当前索引和它之前的 _n - 1_ 元素会再次被访问。
+
+```js
+testSideEffect((arr, index) => arr.splice(index, 0, "new"));
+// 数组：[e1, e2, e3, e4]，索引：0，元素：e1
+// 数组：[new, e1, e2, e3, e4]，索引：1，元素：e1
+// 数组：[new, new, e1, e2, e3, e4]，索引：2，元素：e1
+// 数组：[new, new, new, e1, e2, e3, e4]，索引：3，元素：e1
+// 最终数组：[new, new, new, new, e1, e2, e3, e4]
+// e1 不断被访问，因为它不断被移回
+```
+
+删除未访问索引处的 _n_ 元素将使它们不再被访问。因为数组已经缩小，最后 _n_ 迭代将访问越界索引。如果此方法忽略不存在的索引（参见[数组方法和空槽](#数组方法和空槽)），最后的 _n_ 次迭代将会被跳过；否则，它们将收到 `undefined`：
+
+```js
+testSideEffect((arr, index) => {
+  if (index === 1) arr.splice(2, 1);
+});
+// 数组：[e1, e2, e3, e4]，索引：0，元素：e1
+// 数组：[e1, e2, e3, e4]，索引：1，元素：e2
+// 数组：[e1, e2, e4]，索引：2，元素：e4
+// 最终数组：[e1, e2, e4]
+// 不会访问索引 3 因为它越界
+
+// 与 find() 比较，后者将不存在的索引视为未定义：
+const arr2 = ["e1", "e2", "e3", "e4"];
+arr2.find((elem, index, arr) => {
+  console.log(`数组：[${arr.join(", ")}]，索引：${index}，元素：${elem}`);
+  if (index === 1) arr.splice(2, 1);
+  return false;
+});
+// 数组：[e1, e2, e3, e4]，索引：0，元素：e1
+// 数组：[e1, e2, e3, e4]，索引：1，元素：e2
+// 数组：[e1, e2, e4]，索引：2，元素：e4
+// 数组：[e1, e2, e4]，索引：3，元素：undefined
+```
+
+删除已访问索引处的 _n_ 元素不会改变它们在删除之前被访问的事实。因为数据已经缩小，在当前索引后的下 _n_ 元素被跳过。如果此方法忽略不存在索引，最后的 _n_ 次迭代将会被跳过；否则，它们将收到 `undefined`：
+
+```js
+testSideEffect((arr, index) => arr.splice(index, 1));
+// 数组：[e1, e2, e3, e4]，索引：0，元素：e1
+// 不会范围内 e2 因为 e2 现在的索引是 0，索引 0 已经被访问过
+// 数组：[e2, e3, e4]，索引：1，元素：e3
+// 不会范围内 e4 因为 e4 现在的索引是 1，索引 1 已经被访问过
+// 最终数组：[e2, e4]
+// 索引 2 越界，索引它不会被访问
+
+// 与 find() 比较，后者将不存在的索引视为未定义：
+const arr2 = ["e1", "e2", "e3", "e4"];
+arr2.find((elem, index, arr) => {
+  console.log(`数组：[${arr.join(", ")}]，索引：${index}，元素：${elem}`);
+  arr.splice(index, 1);
+  return false;
+});
+// 数组：[e1, e2, e3, e4]，索引：0，元素：e1
+// 数组：[e2, e3, e4]，索引：1，元素：e3
+// 数组：[e2, e4]，索引：2，元素：undefined
+// 数组：[e2, e4]，索引：3，元素：undefined
+```
+
+对于按索引降序迭代的方法，插入会导致元素被跳过，删除会导致元素被多次访问，调整上面的代码以查看效果。
+
 ## 规范
 
 {{Specifications}}
@@ -796,6 +935,6 @@ console.log(execResult); // [ "dbBd", "bB", "d" ]
 
 ## 参见
 
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)指南
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}

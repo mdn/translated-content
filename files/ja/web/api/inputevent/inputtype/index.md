@@ -1,8 +1,9 @@
 ---
-title: InputEvent.inputType
+title: "InputEvent: inputType プロパティ"
+short-title: inputType
 slug: Web/API/InputEvent/inputType
 l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{APIRef("UI Events")}}
@@ -11,11 +12,11 @@ l10n:
 
 ## 値
 
-入力された入力種別を含む文字列です。`insertText`、`deleteContentBackward`、`insertFromPaste`、`formatBold` など、多くの値を取り得ます。利用可能な入力種別の完全なリストは、[Input Events Level 1 仕様の Attributes の章](https://rawgit.com/w3c/input-events/v1/index.html#interface-InputEvent-Attributes)を参照してください。
+入力された入力種別を含む文字列です。`insertText`、`deleteContentBackward`、`insertFromPaste`、`formatBold` など、多くの値を取り得ます。利用可能な入力種別の完全なリストは、[Input Events Level 2 仕様の Attributes の章](https://w3c.github.io/input-events/#interface-InputEvent-Attributes)を参照してください。
 
 ## 例
 
-この例は編集可能な {{htmlElement("div")}} の[入力イベント](/ja/docs/Web/API/HTMLElement/input_event) の `inputType` をログ出力します。
+この例は編集可能な {{htmlElement("div")}} の[入力イベント](/ja/docs/Web/API/Element/input_event) の `inputType` をログ出力します。
 
 ### HTML
 
@@ -55,7 +56,8 @@ function logInputType(event) {
 
 {{EmbedLiveSample("Examples", '100%', 500)}}
 
-> **メモ:** もっと詳細な例として [Masayuki Nakano's InputEvent test suite](https://d-toybox.com/studio/lib/input_event_viewer.html) も参照してください。
+> [!NOTE]
+> もっと詳細な例として [Masayuki Nakano's InputEvent test suite](https://d-toybox.com/studio/lib/input_event_viewer.html) も参照してください。
 
 ## 仕様書
 

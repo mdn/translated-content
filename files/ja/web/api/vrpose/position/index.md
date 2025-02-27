@@ -9,7 +9,8 @@ l10n:
 
 **`position`** は {{domxref("VRPose")}} インターフェイスの読み取り専用プロパティで、 現在の {{domxref("VRPose.timestamp")}} の位置を 3D ベクトルで返します。
 
-> **メモ:** このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 座標系は次の通りです。
 
@@ -19,13 +20,15 @@ l10n:
 
 位置は原点からのメートル単位で、この点はセンサーの最初の読み取り位置か、 {{domxref("VRDisplay.resetPose()")}} が最後に呼び出された時点のセンサーの位置のどちらかとなります。
 
-> **メモ:** 既定では、すべての位置は座ったままの空間位置として指定されます。この点を {{domxref("VRStageParameters.sittingToStandingTransform")}} で変換すると（例えばルームディスプレイで作業する場合）、この点は立っている空間の位置に変換されます。
+> [!NOTE]
+> 既定では、すべての位置は座ったままの空間位置として指定されます。この点を {{domxref("VRStageParameters.sittingToStandingTransform")}} で変換すると（例えばルームディスプレイで作業する場合）、この点は立っている空間の位置に変換されます。
 
 ## 値
 
 {{jsxref("Float32Array")}} です。または VR センサーが位置データを提供できない場合は null になります。
 
-> **メモ:** ユーザーエージェントは、ネックモデリングなどの技術によってエミュレートされた 位置値を提供することがあります。 その場合も {{domxref("VRDisplayCapabilities.hasPosition")}} を false として報告する必要があります。
+> [!NOTE]
+> ユーザーエージェントは、ネックモデリングなどの技術によってエミュレートされた 位置値を提供することがあります。 その場合も {{domxref("VRDisplayCapabilities.hasPosition")}} を false として報告する必要があります。
 
 ## 例
 
@@ -43,5 +46,4 @@ l10n:
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームが提供するデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

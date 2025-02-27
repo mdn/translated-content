@@ -7,7 +7,7 @@ slug: Learn/Server-side/First_steps
 
 Neste módulo nós iremos responder uma pergunta fundamental sobre programção server-side —"O que é?","Quão diferente é da programação client-side?", e "Por que é tão útil?".
 
-Em seguida vamos fornecer uma visão geral de alguns dos mais populares server-side web framworks juntamente com orientações sobre como selecionar o mais adequado framwork para criar seu primeiro website.
+Em seguida vamos fornecer uma visão geral de alguns dos web frameworks server-side mais populares juntamente com orientações sobre como selecionar o framework mais adequado para criar seu primeiro website.
 
 Por fim, fornecemos um artigo introdutório de alto nível sobre segurança do servidor da web
 
@@ -19,9 +19,9 @@ Antes de começarmos este módulo,você não precisa ter nenhum conhecimento de 
 
 Entretanto,você precisa saber como a web funciona.Nós recomendamos que você leia primeiro os seguintes tópicos:
 
-- [O que é um servidor?](/pt-BR/docs/Learn/Common_questions/What_is_a_web_server)
-- [Qual o software eu preciso para construir um website?](/pt-BR/docs/Learn/Common_questions/What_software_do_I_need)
-- [Como eu faço o upload de arquivos para um webserver?](/pt-BR/docs/Learn/Common_questions/Upload_files_to_a_web_server)
+- [O que é um servidor?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [Qual o software eu preciso para construir um website?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
+- [Como eu faço o upload de arquivos para um webserver?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
 
 Com o entendimento básico disso, você estará pronto para trabalhar nos módulos desta seção.
 

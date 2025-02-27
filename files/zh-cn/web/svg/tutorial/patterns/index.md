@@ -1,5 +1,5 @@
 ---
-title: Patterns
+title: 图案
 slug: Web/SVG/Tutorial/Patterns
 ---
 

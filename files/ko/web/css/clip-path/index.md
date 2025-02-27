@@ -71,7 +71,7 @@ clip-path: unset;
 - `none`
   - : 클리핑 패스를 생성하지 않습니다.
 
-> **참고:** {{cssxref("opacity")}}가 1이 아닌 값일 때와 마찬가지로, **`none`** 외의 계산값은 새로운 [쌓임 맥락](/ko/docs/CSS/Understanding_z-index/The_stacking_context)을 생성합니다.
+> **참고:** {{cssxref("opacity")}}가 1이 아닌 값일 때와 마찬가지로, **`none`** 외의 계산값은 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)을 생성합니다.
 
 ### 형식 구문
 

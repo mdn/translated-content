@@ -1,24 +1,26 @@
 ---
-title: AbortSignal.timeout()
+title: "AbortSignal: timeout() 静的メソッド"
+short-title: timeout()
 slug: Web/API/AbortSignal/timeout_static
+l10n:
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-静的な **`AbortSignal.timeout()`** メソッドは、指定した時間が経過すると自動的に中止する {{domxref("AbortSignal")}} を返すものです。
+**`AbortSignal.timeout()`** は静的メソッドで、指定した時間が経過すると自動的に中止する {{domxref("AbortSignal")}} を返すものです。
 
-このシグナルは、タイムアウト時には `TimeoutError` {{domxref("DOMException")}} で、ブラウザーの停止ボタン（または他にも組み込まれた「停止」処理）を押した場合には `AbortError` {{domxref("DOMException")}} で中止されます。
+このシグナルは、タイムアウト時には `TimeoutError` {{domxref("DOMException")}} で、ブラウザーの停止ボタン（または他の組み込まれた「停止」処理）を押した場合には `AbortError` {{domxref("DOMException")}} で中止されます。
 これにより、通常ユーザーへの通知が必要なタイムアウトエラーと、そうでないユーザーによる中止の発生を UI で区別できます。
 
-タイムアウトは経過時間ではなく活動時間に基づきます。コードが実行されているワーカーがサスペンドされている場合や、文書がバックフォワードキャッシュ ("[bfcache](https://web.dev/bfcache/)") にある場合は、事実上一時停止されます。
+タイムアウトは経過時間ではなく活動時間に基づきます。コードが実行されているワーカーがサスペンドされている場合や、文書がバックフォワードキャッシュ ("[bfcache](https://web.dev/articles/bfcache)") にある場合は、事実上一時停止されます。
 
-> **メモ:** 執筆時点では、複数のシグナルを組み合わせる方法はありません。
-> つまり、タイムアウトシグナルを使用するか、{{domxref("AbortController.abort()")}}を呼び出してダウンロードを直接中止することはできません。
+複数のシグナルを組み合わせるには、{{domxref("AbortSignal/any_static", "AbortSignal.any()")}} を使用することができます。例えば、タイムアウトシグナルまたは {{domxref("AbortController.abort()")}} を呼び出してダウンロードを直接中止させることができます。
 
 ## 構文
 
 ```js-nolint
-timeout(time)
+AbortSignal.timeout(time)
 ```
 
 ### 引数

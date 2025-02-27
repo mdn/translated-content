@@ -11,9 +11,10 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 
 - [CSS](/ja/docs/Web/CSS) の {{cssxref("@media")}} および {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/At-rule)により、条件付きでスタイルを適用する。
 - {{HTMLElement("link")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}, などの [HTML](/ja/docs/Web/HTML) 要素で `media=` 属性を付けて特定のメディアを対象とする。
-- [メディアの状態の検査と監視](/ja/docs/Web/CSS/Media_Queries/Testing_media_queries)をするために、[JavaScript](/ja/docs/Web/JavaScript) で {{domxref("Window.matchMedia()")}} および {{domxref("MediaQueryList.addListener()")}} メソッドを使用する
+- [メディアの状態の検査と監視](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)をするために、[JavaScript](/ja/docs/Web/JavaScript) で {{domxref("Window.matchMedia()")}} および {{domxref("MediaQueryList.addListener()")}} メソッドを使用する
 
-> **メモ:** このページの例では説明のために CSS の `@media` を使用していますが、基本構文はすべての種類のメディアクエリーで共通です。
+> [!NOTE]
+> このページの例では説明のために CSS の `@media` を使用していますが、基本構文はすべての種類のメディアクエリーで共通です。
 
 ## 構文
 
@@ -93,7 +94,8 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 `and` 演算子は、複数のメディア特性を 1 つのメディアクエリーに結合することもできます。一方で `not` 演算子は、メディアクエリーを反転し、基本的に普通の意味とは逆になります。
 `only` 演算子は古いブラウザーでスタイルが適用されるのを防止します。
 
-> **メモ:** 多くの場合、 `all` メディア種別が他のタイプが指定されない場合に既定で使用されます。
+> [!NOTE]
+> 多くの場合、 `all` メディア種別が他のタイプが指定されない場合に既定で使用されます。
 > しかし、 `not` または `only` 演算子を使用する場合は、メディア種別を明示的に指定する必要があります。
 
 ### 複数の種別または特性の組み合わせ
@@ -167,7 +169,8 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 Media Queries Level 4 仕様書では、例えば幅や高さについて、よりすっきりとした "range" 型を持つ特性を使ってメディアクエリーを作れるよう構文が拡張されました。
 Level 4 はこのようなクエリーを書くために*範囲コンテキスト*を追加しています。例えば、幅について `max-` の特性を使用する場合は、以下のように書くことができます。
 
-> **メモ:** Media Queries Level 4 仕様は、最新のブラウザーはそれなりに対応していますが、一部のメディア機能には十分に対応していません。詳細は [`@media` ブラウザー互換性一覧表](/ja/docs/Web/CSS/@media#ブラウザーの互換性)を参照してください。
+> [!NOTE]
+> Media Queries Level 4 仕様は、最新のブラウザーはそれなりに対応していますが、一部のメディア機能には十分に対応していません。詳細は [`@media` ブラウザー互換性一覧表](/ja/docs/Web/CSS/@media#ブラウザーの互換性)を参照してください。
 
 ```css
 @media (max-width: 30em) { ... }
@@ -211,7 +214,7 @@ Level 4 の構文に変換すると、次のようになります。
 
 ## 関連情報
 
-- [プログラムからのメディアクエリーの検査](/ja/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [プログラムからのメディアクエリーの検査](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries)
 - [Mozilla 拡張メディア特性](/ja/docs/Web/CSS/Mozilla_Extensions#media_features)
 - [WebKit 拡張メディア特性](/ja/docs/Web/CSS/WebKit_Extensions#media_features)

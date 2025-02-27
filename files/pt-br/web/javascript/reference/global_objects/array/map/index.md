@@ -3,9 +3,19 @@ title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
-{{EmbedInteractiveExample("pages/js/array-map.html")}}
+{{InteractiveExample("JavaScript Demo: Array.map()")}}
+
+```js interactive-example
+const array1 = [1, 4, 9, 16];
+
+// Pass a function to map
+const map1 = array1.map((x) => x * 2);
+
+console.log(map1);
+// Expected output: Array [2, 8, 18, 32]
+```
 
 ## Resumo
 
@@ -236,7 +246,7 @@ if (!Array.prototype.map) {
 
 ## Compatibilidade com os browsers
 
-{{Compat("javascript.builtins.Array.map")}}
+{{Compat}}
 
 ## Veja também
 

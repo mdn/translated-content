@@ -3,7 +3,7 @@ title: webRequest.StreamFilter.write()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/write
 ---
 
-{{AddonSidebar()}}Écrit quelques données de réponse dans le flux de sortie..Vous ne pouvez appeler cette fonction qu'après le déclenchement de l'événement {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}}.
+{{AddonSidebar}}Écrit quelques données de réponse dans le flux de sortie..Vous ne pouvez appeler cette fonction qu'après le déclenchement de l'événement {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}}.
 
 ## Syntaxe
 
@@ -16,7 +16,7 @@ filter.write(
 ### Paramètres
 
 - `data`
-  - : [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Uint8Array) ou [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer): tableau d'octets contenant les données à transmettre au moteur de rendu du navigateur.
+  - : [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) ou [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer): tableau d'octets contenant les données à transmettre au moteur de rendu du navigateur.
 
 ### Valeur retournée
 

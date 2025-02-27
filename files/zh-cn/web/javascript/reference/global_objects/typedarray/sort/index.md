@@ -55,6 +55,6 @@ numbers.sort(compareNumbers);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("Array.prototype.sort()")}}

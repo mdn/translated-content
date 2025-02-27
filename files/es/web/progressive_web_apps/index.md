@@ -16,13 +16,11 @@ Para poder llamar PWA a una aplicación web, técnicamente hablando debe tener l
 
 ## Ventajas de PWA
 
-Las PWA deben ser detectables, instalables, enlazables, independientes de la red, progresivas, reconectables, responsivas y seguras. Para obtener más información sobre lo que esto significa, lee [Ventajas de las aplicaciones web progresivas](/es/docs/Web/Progressive_web_apps/Advantages).
+Las PWA deben ser detectables, instalables, enlazables, independientes de la red, progresivas, reconectables, responsivas y seguras. Para obtener más información sobre lo que esto significa, lee [Ventajas de las aplicaciones web progresivas](/es/docs/Web/Progressive_web_apps).
 
-Para saber cómo implementar PWA, lee la [guía para desarrolladores de PWA](/es/docs/Web/Progressive_web_apps/Developer_guide).
+Para saber cómo implementar PWA, lee la [guía para desarrolladores de PWA](/es/docs/Web/Progressive_web_apps/Guides).
 
 ## Documentación
-
-**<-- La lista automática temporal a continuación se reemplazará pronto -->**
 
 {{LandingPageListSubpages}}
 
@@ -32,12 +30,12 @@ Para saber cómo implementar PWA, lee la [guía para desarrolladores de PWA](/es
 
 Las siguientes guías te muestran lo que debes hacer para implementar una PWA, examinando un ejemplo simple y mostrándote cómo funcionan todas las piezas.
 
-1. [Introducción a las aplicaciones web progresivas](/es/docs/Web/Progressive_web_apps/Introduction)
-2. [Estructura de la aplicación web progresiva](/es/docs/Web/Progressive_web_apps/App_structure)
-3. [Hacer que las PWAs funcionen sin conexión con el servicio de workers](/es/docs/Web/Progressive_web_apps/Offline_Service_workers)
-4. [Cómo hacer que las PWAs se puedan instalar](/es/docs/Web/Progressive_web_apps/Installable_PWAs)
-5. [Cómo hacer que las PWAs puedan volver a interactuar usando Notificaciones y Push](/es/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push)
-6. [Carga progresiva](/es/docs/Web/Progressive_web_apps/Loading)
+1. [Introducción a las aplicaciones web progresivas](/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames)
+2. [Estructura de la aplicación web progresiva](/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure)
+3. [Hacer que las PWAs funcionen sin conexión con el servicio de workers](/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)
+4. [Cómo hacer que las PWAs se puedan instalar](/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs)
+5. [Cómo hacer que las PWAs puedan volver a interactuar usando Notificaciones y Push](/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push)
+6. [Carga progresiva](/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Loading)
 
 ## Guías tecnológicas
 
@@ -46,11 +44,11 @@ Las siguientes guías te muestran lo que debes hacer para implementar una PWA, e
 - [Uso de IndexedDB](/es/docs/Web/API/IndexedDB_API/Using_IndexedDB) — los fundamentos de `IndexedDB`, explicados en detalle.
 - [Uso de la API de almacenamiento web](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) — la API de almacenamiento web simplificada.
 - [Aplicaciones web de carga instantánea con una arquitectura de intérprete de aplicaciones](https://developers.google.com/web/updates/2015/11/app-shell) — una guía para usar el patrón de codificación de intérprete de App para crear aplicaciones que se cargan rápidamente.
-- [Uso de la API Push](/es/docs/Web/API/Push_API/Using_the_Push_API) — aprende los conceptos básicos de la API Web `Push`.
+- [Uso de la API Push](/es/docs/Web/API/Push_API) — aprende los conceptos básicos de la API Web `Push`.
 - [Uso de la API de notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API) — notificaciones web en pocas palabras.
-- [Los componentes básicos del diseño responsivo](/es/docs/Web/Apps/Modern/Responsive/responsive_design_building_blocks) — aprende los conceptos básicos del diseño responsivo, un tema esencial para el diseño de aplicaciones modernas.
-- [Primero móvil](/es/docs/Web/Apps/Modern/Responsive/Mobile_first) — a menudo, al crear diseños de aplicaciones adaptables, tiene sentido crear el diseño móvil como predeterminado y construir diseños más anchos en la parte superior.
-- [Guía para agregar la pantalla de inicio](/es/docs/Web/Apps/Progressive/Add_to_home_screen) — aprende cómo tus aplicaciones pueden aprovechar agregar la pantalla de inicio (A2HS).
+- [Los componentes básicos del diseño responsivo](/es/docs/Learn/CSS/CSS_layout/Responsive_Design) — aprende los conceptos básicos del diseño responsivo, un tema esencial para el diseño de aplicaciones modernas.
+- [Primero móvil](/es/docs/Learn/CSS/CSS_layout/Responsive_Design) — a menudo, al crear diseños de aplicaciones adaptables, tiene sentido crear el diseño móvil como predeterminado y construir diseños más anchos en la parte superior.
+- [Guía para agregar la pantalla de inicio](/es/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) — aprende cómo tus aplicaciones pueden aprovechar agregar la pantalla de inicio (A2HS).
 
 ## Herramientas
 
@@ -79,4 +77,4 @@ Las siguientes guías te muestran lo que debes hacer para implementar una PWA, e
 - _[Colección de recursos, laboratorios de código y herramientas que necesitas para crear PWAs por parte del equipo de pwafire.org](https://pwafire.org)_
 - _[Configuración de tu entorno de desarrollo de aplicaciones web progresivas](https://github.com/pwafire/pwadev-tips)_
 
-_{{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}_
+{{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}

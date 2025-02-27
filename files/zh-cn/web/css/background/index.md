@@ -3,15 +3,15 @@ title: background
 slug: Web/CSS/background
 ---
 
-{{CSSRef("CSS Background")}}
+{{CSSRef}}
 
 **`background`** 是一种 [CSS](/zh-CN/docs/Web/CSS) 简写属性，用于一次性集中定义各种背景属性，包括 color, image, origin 与 size, repeat 方式等等。
 
 {{EmbedInteractiveExample("pages/css/background.html")}}
 
-此属性是一个 [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)，可以在一次声明中定义一个或多个属性：{{cssxref("background-clip")}}、{{cssxref("background-color")}}、{{cssxref("background-image")}}、{{cssxref("background-origin")}}、{{cssxref("background-position")}}、{{cssxref("background-repeat")}}、{{cssxref("background-size")}}，和 {{cssxref("background-attachment")}}。
+此属性是一个[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)，可以在一次声明中定义一个或多个属性：{{cssxref("background-clip")}}、{{cssxref("background-color")}}、{{cssxref("background-image")}}、{{cssxref("background-origin")}}、{{cssxref("background-position")}}、{{cssxref("background-repeat")}}、{{cssxref("background-size")}} 和 {{cssxref("background-attachment")}}。
 
-对于所有简写属性，任何没有被指定的值都会被设定为它们的 [初始值](/zh-CN/docs/Web/CSS/initial_value)。
+对于所有简写属性，任何没有被指定的值都会被设定为它们的 [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)。
 
 ## 语法
 
@@ -92,7 +92,7 @@ background: no-repeat center/80% url("../img/image.png");
 }
 
 .topbanner {
-  background: url("starsolid.gif") #99f repeat-y fixed;
+  background: url("star-solid.gif") #99f repeat-y fixed;
 }
 ```
 
@@ -111,5 +111,5 @@ background: no-repeat center/80% url("../img/image.png");
 ## 参见
 
 - {{ cssxref("-moz-background-size") }}, {{ cssxref("-moz-background-inline-policy") }}
-- [使用渐变背景](/zh-CN/docs/CSS/Using_CSS_gradients)
-- [多重背景](/zh-CN/docs/CSS/Multiple_backgrounds)
+- [使用渐变背景](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [多重背景](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

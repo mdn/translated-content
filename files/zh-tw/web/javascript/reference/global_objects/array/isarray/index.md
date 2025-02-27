@@ -33,7 +33,7 @@ Array.isArray(obj)
 
 檢查傳入的物件是否為陣列（{{jsxref("Array")}}），如果是便回傳 `true`，否則回傳 `false`。
 
-更多細節請參考 [「Determining with absolute accuracy whether or not a JavaScript object is an array」](http://web.mit.edu/jwalden/www/isArray.html)。
+更多細節請參考 [「Determining with absolute accuracy whether or not a JavaScript object is an array」](https://web.mit.edu/jwalden/www/isArray.html)。
 
 ## 範例
 
@@ -77,7 +77,7 @@ arr instanceof Array; // false
 
 ## Polyfill
 
-如果 `Array.isArray()` 不存在於您的環境，在其他程式碼前執行下列程式碼可建置 `Array.isArray()`。
+如果 `Array.isArray()` 不存在於你的環境，在其他程式碼前執行下列程式碼可建置 `Array.isArray()`。
 
 ```js
 if (!Array.isArray) {

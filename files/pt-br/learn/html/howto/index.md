@@ -11,46 +11,46 @@ Os links a seguir apontam para soluções de problemas comuns que você precisar
 
 A aplicação mais básica de HTML é na estrutura de um documento. Se você está começando no HTML, deve começar por aqui.
 
-- [Como criar um documento básico HTML](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Anatomy_of_an_HTML_document)
-- [Como separar uma página web em seções lógicas](/pt-BR/docs/Learn/HTML/Howto/Divide_a_webpage_into_logical_sections)
-- [Como configurar uma estrutura adequada de cabeçalhos e parágrafos](/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#The_basics_headings_and_paragraphs)
+- [Como criar um documento básico HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document)
+- [Como separar uma página web em seções lógicas](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+- [Como configurar uma estrutura adequada de cabeçalhos e parágrafos](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#the_basics_headings_and_paragraphs)
 
 ### Semântica básica em nível de texto
 
 O HTML se especializou em fornecer informação semântica para um documento, portanto o HTML responde muitas questões que você talvez tenha sobre a melhor maneira de passar sua mensagem em um documento.
 
-- [Como criar uma lista de itens com HTML](/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists)
-- [Como destacar ou enfatizar conteúdo](/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Emphasis_and_importance)
-- [Como indicar que um texto é importante](/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Emphasis_and_importance)
-- [Como mostrar código de computador com HTML](/en-US/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Representing_computer_code)
-- [Como adicionar anotações em imagens e figuras](/en-US/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#Annotating_images_with_figures_and_figure_captions)
-- [Como assinalar abreviaturas e torná-las inteligíveis](/en-US/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Abbreviations)
-- [Como adicionar citações em páginas web](/en-US/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Quotations)
+- [Como criar uma lista de itens com HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists)
+- [Como destacar ou enfatizar conteúdo](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance)
+- [Como indicar que um texto é importante](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance)
+- [Como mostrar código de computador com HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#representing_computer_code)
+- [Como adicionar anotações em imagens e figuras](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#annotating_images_with_figures_and_figure_captions)
+- [Como assinalar abreviaturas e torná-las inteligíveis](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations)
+- [Como adicionar citações em páginas web](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#quotations)
 - [Como definir termos com HTML](/pt-BR/docs/Learn/HTML/Howto/Define_terms_with_HTML)
 
 ### Hiperlinks
 
 Uma das principais atribuições do HTML é tornar a navegação mais fácil com {{Glossary("hyperlink", "hiperlinks")}}, que podem ser usados de diferentes formas:
 
-- [Como criar um hiperlink](/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Como criar um menu de navegação com HTML](/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Active_learning_creating_a_navigation_menu)
+- [Como criar um hiperlink](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [Como criar um menu de navegação com HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#active_learning_creating_a_navigation_menu)
 
 ### Imagens & multimídia
 
-- [Como adicionar imagens em uma página web](/en-US/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#How_do_we_put_an_image_on_a_webpage)
-- [Como adicionar conteúdo de vídeo em uma página web](/en-US/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [Como adicionar conteúdo de áudio em uma página web](/en-US/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Como adicionar imagens em uma página web](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#how_do_we_put_an_image_on_a_webpage)
+- [Como adicionar conteúdo de vídeo em uma página web](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Como adicionar conteúdo de áudio em uma página web](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 
 ### Scripts & estilos
 
 O HTML só configura a estrutura do documento. Para resolver problemas de apresentação, use o {{glossary("CSS")}} ou use scripts para tornar sua página interativa.
 
-- [Como usar CSS em uma página web](/en-US/Learn/CSS/Introduction_to_CSS/How_CSS_works#How_to_apply_your_CSS_to_your_HTML)
+- [Como usar CSS em uma página web](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_works#how_to_apply_your_css_to_your_html)
 - [Como usar JavaScript em uma página web](/pt-BR/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage)
 
 ### Conteúdo embutido
 
-- [Como embutir uma página web dentro de outra página web](/en-US/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
+- [Como embutir uma página web dentro de outra página web](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
 - [Como adicionar conteúdo em Flash dentro de uma página](/en-US/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#The_%3Cembed%3E_and_%3Cobject%3E_elements)
 
 ## Problemas incomuns ou avançados
@@ -59,10 +59,10 @@ Além do básico, o HTML é muito rico e oferece recursos avançados para resolv
 
 ### Formulários
 
-Formulários são uma estrutura complexa em HTML, criada para enviar dados de uma página web para um servidor web. Nós lhe encorajamos a conhecer nosso [guia completo](/pt-BR/docs/Web/Guide/HTML/Forms). Eis os tópicos onde você deve começar:
+Formulários são uma estrutura complexa em HTML, criada para enviar dados de uma página web para um servidor web. Nós lhe encorajamos a conhecer nosso [guia completo](/pt-BR/docs/Learn/Forms). Eis os tópicos onde você deve começar:
 
-- [Como criar um formulário Web simples](/pt-BR/docs/Web/Guide/HTML/Forms/My_first_HTML_form)
-- [Como estruturar um formulário Web](/pt-BR/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form)
+- [Como criar um formulário Web simples](/pt-BR/docs/Learn/Forms/Your_first_form)
+- [Como estruturar um formulário Web](/pt-BR/docs/Learn/Forms/How_to_structure_a_web_form)
 
 ### Informação tabular
 

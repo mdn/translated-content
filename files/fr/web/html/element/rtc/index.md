@@ -11,7 +11,7 @@ L'élément **`<rtc>`** permet d'ajouter des notations Ruby sémantiques. Il est
 
 ## Attributs
 
-Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Exemples
 

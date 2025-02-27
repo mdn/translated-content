@@ -16,7 +16,7 @@ slug: Web/API/StorageManager
 - {{domxref("StorageManager.persisted()")}} {{securecontext_inline}}
   - : Возвращает {{jsxref('Promise')}}, который принимает значение `true` в случае, когда сайт получил возможность хранить данные в браузере.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

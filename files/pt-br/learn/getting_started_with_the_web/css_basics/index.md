@@ -19,7 +19,7 @@ p {
 
 Vamos tentar: cole as três linhas de CSS acima em um novo arquivo, no seu editor de texto, e salve o arquivo como `estilo.css` na sua pasta `estilos`.
 
-Ainda assim, precisamos aplicar o CSS ao seu documento HTML. Do contrário, o estilo CSS não irá afetar a maneira como o seu navegador mostra seu documento HTML (se você não estiver acompanhando o nosso projeto, leia [Lidando com arquivos](/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos) e [HTML básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico) para descobrir o que você precisa fazer primeiro).
+Ainda assim, precisamos aplicar o CSS ao seu documento HTML. Do contrário, o estilo CSS não irá afetar a maneira como o seu navegador mostra seu documento HTML (se você não estiver acompanhando o nosso projeto, leia [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files) e [HTML básico](/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics) para descobrir o que você precisa fazer primeiro).
 
 1. Abra seu arquivo `index.html` e cole o seguinte código em algum lugar no cabeçalho, ou seja, entre as tags {{HTMLElement("head")}} e `</head>`:
 
@@ -88,13 +88,13 @@ Há muitos tipos diferentes de seletores. Abaixo, nós mostramos apenas os **sel
 | Seletor de atributo                                            | O(s) elemento(s) na página com o atributo especificado.                                                                                                                                                             | `img[src]` Seleciona `<img src="myimage.png">` mas não `<img>`              |
 | Seletor de pseudo-classe                                       | O(s) elemento(s) específicado(s), mas somente quando estiver no estado especificado. Ex.: com o mouse sobre ele.                                                                                                    | `a:hover` Seleciona `<a>`, mas somente quando o mouse está em cima do link. |
 
-Há muito mais seletores para explorar e você pode achar uma lista mais detalhada em nosso [Guia de seletores](/pt-BR/docs/Aprender/CSS/Introduction_to_CSS/Seletores).
+Há muito mais seletores para explorar e você pode achar uma lista mais detalhada em nosso [Guia de seletores](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors).
 
 ## Fontes e texto
 
 Agora que exploramos algumas noções básicas de CSS, vamos começar a adicionar mais regras e informações no nosso arquivo `estilo.css` para deixar nosso exemplo bonito. Vamos começar fazendo nossas fontes e textos parecerem um pouco melhores.
 
-1. Primeiro de tudo, volte e encontre a [fonte do Google Fonts](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer#Fonte) que você armazenou em algum lugar seguro. Adicione o elemento {{htmlelement ("link")}} em algum lugar dentro do cabeçalho no `index.html` (novamente, em qualquer lugar entre as tags {{HTMLElement ("head")}} e `</ head>`). Será algo parecido com isto:
+1. Primeiro de tudo, volte e encontre a [fonte do Google Fonts](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#fonte) que você armazenou em algum lugar seguro. Adicione o elemento {{htmlelement ("link")}} em algum lugar dentro do cabeçalho no `index.html` (novamente, em qualquer lugar entre as tags {{HTMLElement ("head")}} e `</ head>`). Será algo parecido com isto:
 
    ```html
    <link
@@ -110,11 +110,13 @@ Agora que exploramos algumas noções básicas de CSS, vamos começar a adiciona
    ```css
    html {
      font-size: 10px; /* px significa "pixels": o tamanho da fonte base é agora de 10 pixels */
-     font-family: "Open Sans", sans-serif; /* este deve ser o nome da fonte que você obteve no Google Fonts */
+     font-family:
+       "Open Sans", sans-serif; /* este deve ser o nome da fonte que você obteve no Google Fonts */
    }
    ```
 
-   > **Nota:** Qualquer coisa em um documento CSS entre `/*` e `*/` é um **comentário CSS**, que o navegador ignora quando renderiza o código. Este é um lugar para você escrever notas úteis sobre o que você está fazendo.
+   > [!NOTE]
+   > Qualquer coisa em um documento CSS entre `/*` e `*/` é um **comentário CSS**, que o navegador ignora quando renderiza o código. Este é um lugar para você escrever notas úteis sobre o que você está fazendo.
 
 4. Agora definiremos tamanhos de fonte para elementos que contêm texto dentro do corpo HTML ({{htmlelement ("h1")}}, {{htmlelement ("li")}} e {{htmlelement ("p")}}). Também centralizaremos o texto do nosso cabeçalho e definiremos a altura da linha e o espaçamento das letras no conteúdo do corpo para torná-lo um pouco mais legível:
 
@@ -166,7 +168,7 @@ html {
 }
 ```
 
-Essa regra define uma cor de fundo para toda a página. Mude a cor acima para a cor [que você escolheu ao planejar seu site.](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer#Cor_do_tema)
+Essa regra define uma cor de fundo para toda a página. Mude a cor acima para a cor [que você escolheu ao planejar seu site.](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#cor_do_tema)
 
 ### Separando o corpo
 
@@ -183,9 +185,9 @@ body {
 Agora para o elemento {{htmlelement ("body")}}. Há algumas declarações aqui, então vamos passar por elas uma a uma:
 
 - `width: 600px;` — Isso força o corpo a ter 600 pixels de largura.
-- `margin: 0 auto;` — Quando você define dois valores em uma propriedade como `margin` ou `padding`, o primeiro valor afeta a parte superior do elemento **e** a parte inferior (tornando-os `0` nesse caso), e no segundo valor os lados esquerdo **e** direito (aqui, `auto` é um valor especial que divide o espaço horizontal uniformemente entre esquerda e direita). Você também pode utilizar um, três ou quatro valores, como documentado [aqui](/pt-BR/docs/Web/CSS/margin#Sintaxe).
+- `margin: 0 auto;` — Quando você define dois valores em uma propriedade como `margin` ou `padding`, o primeiro valor afeta a parte superior do elemento **e** a parte inferior (tornando-os `0` nesse caso), e no segundo valor os lados esquerdo **e** direito (aqui, `auto` é um valor especial que divide o espaço horizontal uniformemente entre esquerda e direita). Você também pode utilizar um, três ou quatro valores, como documentado [aqui](/pt-BR/docs/Web/CSS/margin#sintaxe).
 - `background-color: #FF9500;` — como antes, isso define a cor de fundo do elemento. Usamos um tipo de laranja avermelhado no corpo, para opor ao azul escuro no elemento {{htmlelement ("html")}}, mas fique à vontade para ir em frente e experimentar.
-- `padding: 0 20px 20px 20px;` — temos quatro valores definidos no padding, para criar um pouco de espaço em torno do nosso conteúdo. Dessa vez, estamos definindo sem padding na parte superior do corpo, e 20 pixels no lado esquerdo, na parte inferior e no lado direito. Os valores definem a parte superior, o lado direito, a parte inferior e o lado esquerdo, nessa ordem. Como com a `margin`, você também pode usar um, dois, ou três valores, conforme documentado na [sintaxe do padding](/pt-BR/docs/Web/CSS/padding#Sintaxe).
+- `padding: 0 20px 20px 20px;` — temos quatro valores definidos no padding, para criar um pouco de espaço em torno do nosso conteúdo. Dessa vez, estamos definindo sem padding na parte superior do corpo, e 20 pixels no lado esquerdo, na parte inferior e no lado direito. Os valores definem a parte superior, o lado direito, a parte inferior e o lado esquerdo, nessa ordem. Como com a `margin`, você também pode usar um, dois, ou três valores, conforme documentado na [sintaxe do padding](/pt-BR/docs/Web/CSS/padding#sintaxe).
 - `border: 5px solid black;` — isso simplesmente define uma borda preta sólida de 5 pixels de largura em todos os lados do corpo.
 
 ### Posicionando e estilizando o título da nossa página principal
@@ -223,18 +225,20 @@ img {
 
 Finalmente, centralizaremos a imagem para melhorar a aparência. Nós poderiamos usar novamente o truque `margin: 0 auto` que aprendemos anteriormente para o corpo, mas também precisamos fazer outra coisa. O elemento {{htmlelement ("body")}} é **em nível de bloco**, o que significa que ocupa espaço na página e pode ter margens e outros valores de espaçamento aplicados a ele. Imagens, por outro lado, são elementos **em linha**, o que significa que não podem ter margens. Então, para aplicar margens a uma imagem, temos que dar o comportamento de nível de bloco a imagem usando `display: block;`.
 
-> **Nota:** As instruções acima assumem que você está usando uma imagem menor que a largura definida no corpo (600 pixels). Se sua imagem for maior, ela irá transbordar o corpo e vazar para o restante da página. Para corrigir isso, você pode 1) reduzir a largura da imagem usando um [editor gráfico](https://en.wikipedia.org/wiki/Raster_graphics_editor) (em inglês) ou 2) dimensionar a imagem usando CSS definindo a propriedade {{cssxref ("width")}} no elemento `<img>` com um valor menor (por exemplo, `400 px;`).
+> [!NOTE]
+> As instruções acima assumem que você está usando uma imagem menor que a largura definida no corpo (600 pixels). Se sua imagem for maior, ela irá transbordar o corpo e vazar para o restante da página. Para corrigir isso, você pode 1) reduzir a largura da imagem usando um [editor gráfico](https://en.wikipedia.org/wiki/Raster_graphics_editor) (em inglês) ou 2) dimensionar a imagem usando CSS definindo a propriedade {{cssxref ("width")}} no elemento `<img>` com um valor menor (por exemplo, `400 px;`).
 
-> **Nota:** Não se preocupe se você ainda não entender `display: block;` ou a distinção entre em nível de bloco / em linha. Você entenderá ao estudar CSS com mais profundidade. Você pode descobrir mais sobre os diferentes valores de exibição disponíveis em nossa [página de referência sobre display](/pt-BR/docs/Web/CSS/display).
+> [!NOTE]
+> Não se preocupe se você ainda não entender `display: block;` ou a distinção entre em nível de bloco / em linha. Você entenderá ao estudar CSS com mais profundidade. Você pode descobrir mais sobre os diferentes valores de exibição disponíveis em nossa [página de referência sobre display](/pt-BR/docs/Web/CSS/display).
 
 ## Conclusão
 
-Se você seguiu todas as instruções desse artigo, você deve terminar com uma página parecida com essa (você também pode [ver nossa versão aqui](http://mdn.github.io/beginner-html-site-styled/)):
+Se você seguiu todas as instruções desse artigo, você deve terminar com uma página parecida com essa (você também pode [ver nossa versão aqui](https://mdn.github.io/beginner-html-site-styled/)):
 
 ![a mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip.](website-screenshot-final.png)
 
 Se você emperrar, sempre poderá comparar seu trabalho com nosso código de [exemplo finalizado no Github](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css).
 
-Aqui, nós só arranhamos na superfície do CSS. Para descobrir mais, vá ao nosso [tópico de aprendizado CSS](/pt-BR/docs/Aprender/CSS).
+Aqui, nós só arranhamos na superfície do CSS. Para descobrir mais, vá ao nosso [tópico de aprendizado CSS](/pt-BR/docs/Learn/CSS).
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}

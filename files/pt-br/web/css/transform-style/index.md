@@ -43,10 +43,10 @@ transform-style: unset;
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.transform-style")}}
+{{Compat}}
 
 ## Veja também
 
-- [Using CSS transforms](/pt-BR/docs/CSS/Using_CSS_transforms)
+- [Using CSS transforms](/pt-BR/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 
 {{CSSRef}}

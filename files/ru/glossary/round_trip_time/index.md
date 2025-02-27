@@ -3,6 +3,8 @@ title: Round Trip Time (RTT)
 slug: Glossary/Round_Trip_Time
 ---
 
+{{GlossarySidebar}}
+
 **Время приёма-передачи** (англ. Round Trip Time, RTT) - это время, которое требуется для отправки пакета данных в пункт назначения, плюс время, которое требуется для подтверждения того, что этот пакет был получен обратно. RTT между сетью и сервером может быть определён с помощью команды `ping`.
 
 ```shell
@@ -22,5 +24,5 @@ round-trip min/avg/max/stddev = 23.781/26.828/34.904/4.114 ms
 
 ## Смотрите также
 
-- [Time to First Byte (TTFB)](/ru/docs/Glossary/time_to_first_byte)
+- [Time to First Byte (TTFB)](/ru/docs/Glossary/Time_to_first_byte)
 - [Latency](/ru/docs/Glossary/Latency)

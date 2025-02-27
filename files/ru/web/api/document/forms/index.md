@@ -7,7 +7,8 @@ slug: Web/API/Document/forms
 
 `forms` возвращает коллекцию ({{domxref("HTMLCollection")}}) форм в текущем документе
 
-> **Примечание:** Точно также Вы можете получить список элементов выбранной формы, используя свойство {{domxref("HTMLFormElement.elements")}}.
+> [!NOTE]
+> Точно также Вы можете получить список элементов выбранной формы, используя свойство {{domxref("HTMLFormElement.elements")}}.
 
 ## Синтаксис
 
@@ -88,13 +89,13 @@ var selectFormElement = document.forms[index].elements[index];
 
 {{Specifications}}
 
-## Браузерная поддержка
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [HTML forms](/ru/docs/Learn/HTML/Forms)
+- [HTML forms](/ru/docs/Learn/Forms)
 - {{HTMLElement("form")}} и интерфейс {{domxref("HTMLFormElement")}}
 
 {{APIRef("DOM")}}

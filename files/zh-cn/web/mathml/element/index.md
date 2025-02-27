@@ -1,17 +1,18 @@
 ---
 title: MathML 元素参考
 slug: Web/MathML/Element
+l10n:
+  sourceCommit: 3558f9be9acfcfd4b625229962b6f1b38f1b85af
 ---
 
 {{MathMLRef}}
 
-这是一份按字母排序的 MathML **呈现型**元素列表。
+这是一份按字母排序的 MathML 元素列表。所有这些元素都实现了 {{domxref("MathMLElement")}} 类。
 
-**呈现型标记**（**presentation markup**）相关条目被用来描述数学记号的布局结构，而**内容型标记**（**content markup**）则用于提供潜在的数学含义，MathML 解析器不支持渲染内容型标记（见 [Firefox bug 276028](https://bugzil.la/276028)）。若想了解更多关于内容型标记的信息，可以考虑阅读 [MathML 3 规范](http://www.w3.org/TR/MathML3/)的[第四章](http://www.w3.org/TR/MathML3/chapter4.html)。
+> [!NOTE]
+> 如主 [MathML](/zh-CN/docs/Web/MathML) 页面所述，MDN 使用 [MathML Core](https://w3c.github.io/mathml-core/) 作为参考规范。但是，文档也记录了一些浏览器仍然实现的旧版特性。你可以在 [MathML 4](https://w3c.github.io/mathml/) 中找到这些和其他特性的更多详细信息。
 
-MathML 元素实现了 {{domxref("MathMLElement")}} 类。
-
-## MathML 呈现型元素（字母排序）
+## MathML 元素（字母排序）
 
 ### math
 
@@ -20,35 +21,26 @@ MathML 元素实现了 {{domxref("MathMLElement")}} 类。
 ### A
 
 - {{MathMLElement("maction")}}（将动作绑定到子表达式）
-- {{MathMLElement("maligngroup")}}（对齐分组）
-- {{MathMLElement("malignmark")}}（对齐点）
+- {{MathMLElement("annotation")}}（数据注释）
+- {{MathMLElement("annotation-xml")}}（XML 注释）
 
 ### E
 
-- {{MathMLElement("menclose")}}（被包裹的内容）
+- {{MathMLElement("menclose")}} {{non-standard_inline}}（被包裹的内容）
 - {{MathMLElement("merror")}}（被包裹的语法错误消息）
 
 ### F
 
-- {{MathMLElement("mfenced")}}（圆括号）{{deprecated_inline}}
-- {{MathMLElement("mfrac")}}（因子 Fraction）
-
-### G
-
-- {{MathMLElement("mglyph")}}（显示非标准符号）
+- {{MathMLElement("mfenced")}} {{non-standard_inline}}{{deprecated_inline}}（圆括号）
+- {{MathMLElement("mfrac")}}（分数）
 
 ### I
 
-- {{MathMLElement("mi")}}（标识符 Identifier）
-
-### L
-
-- {{MathMLElement("mlabeledtr")}}（表格或矩阵中，带标记的行）
-- {{MathMLElement("mlongdiv")}}（长除法记号）
+- {{MathMLElement("mi")}}（标识符）
 
 ### M
 
-- {{MathMLElement("mmultiscripts")}}（Prescript 和张量指标 tensor indice）
+- {{MathMLElement("mmultiscripts")}}（前置角标和张量索引）
 
 ### N
 
@@ -56,30 +48,26 @@ MathML 元素实现了 {{domxref("MathMLElement")}} 类。
 
 ### O
 
-- {{MathMLElement("mo")}}（运算符 Operator）
+- {{MathMLElement("mo")}}（运算符）
 - {{MathMLElement("mover")}}（上标）
 
 ### P
 
 - {{MathMLElement("mpadded")}}（在内容周围增设空白）
 - {{MathMLElement("mphantom")}}（保留空白占位的不可见内容）
+- {{MathMLElement("mprescripts")}}（前置角标的分隔符）
 
 ### R
 
-- {{MathMLElement("mroot")}}（带指定根数的根号）
-- {{MathMLElement("mrow")}}（分组后的子表达式）
+- {{MathMLElement("mroot")}}（带指定根指数的根号）
+- {{MathMLElement("mrow")}}（分组子表达式）
 
 ### S
 
 - {{MathMLElement("ms")}}（字符串字面量）
-- {{MathMLElement("mscarries")}}（附注 Annotation，比如进位）
-- {{MathMLElement("mscarry")}}（单进位， {{MathMLElement("mscarries")}} 的子元素）
-- {{MathMLElement("msgroup")}}（{{MathMLElement("mstack")}} 和 {{MathMLElement("mlongdiv")}} 元素内的行组）
-- {{MathMLElement("msline")}}（在 {{MathMLElement("mstack")}} 元素内的水平行）
+- {{MathMLElement("semantics")}}（语义注释的容器）
 - {{MathMLElement("mspace")}}（空白）
-- {{MathMLElement("msqrt")}}（不带根数的平方根）
-- {{MathMLElement("msrow")}}（在 {{MathMLElement("mstack")}} 元素中的行）
-- {{MathMLElement("mstack")}}（堆叠式对齐）
+- {{MathMLElement("msqrt")}}（平方根，不带根指数）
 - {{MathMLElement("mstyle")}}（改变样式）
 - {{MathMLElement("msub")}}（下角标）
 - {{MathMLElement("msup")}}（上角标）
@@ -95,85 +83,64 @@ MathML 元素实现了 {{domxref("MathMLElement")}} 类。
 ### U
 
 - {{MathMLElement("munder")}}（下标）
-- {{MathMLElement("munderover")}}（上标 - 下标对）
+- {{MathMLElement("munderover")}}（上标下标对）
 
-### 其他元素
-
-- {{MathMLElement("semantics")}}（语义附注的容器）
-- [`<annotation>`](/zh-CN/docs/Web/MathML/Element/semantics#annotation)（数据附注）
-- [`<annotation-xml>`](/zh-CN/docs/Web/MathML/Element/semantics#annotation-xml)（XML 附注）
-
-## MathML 呈现型元素（类别分类）
+## MathML 元素（类别分类）
 
 ### 顶层元素
 
-- {{MathMLElement("math")}}
+- {{MathMLElement("math")}}（顶层元素）
 
-### 字符/符号元素
+### 标记元素
 
-- {{MathMLElement("mglyph")}}
-- {{MathMLElement("mi")}}
-- {{MathMLElement("mn")}}
-- {{MathMLElement("mo")}}
-- {{MathMLElement("ms")}}
-- {{MathMLElement("mspace")}}
-- {{MathMLElement("mtext")}}
+- {{MathMLElement("mi")}}（标识符）
+- {{MathMLElement("mn")}}（数字）
+- {{MathMLElement("mo")}}（运算符）
+- {{MathMLElement("ms")}}（字符串文字）
+- {{MathMLElement("mspace")}}（空格）
+- {{MathMLElement("mtext")}}（文本）
 
-### 通用布局元素
+### 通用布局
 
-- {{MathMLElement("menclose")}}
-- {{MathMLElement("merror")}}
-- {{MathMLElement("mfenced")}} {{deprecated_inline}}
-- {{MathMLElement("mfrac")}}
-- {{MathMLElement("mpadded")}}
-- {{MathMLElement("mphantom")}}
-- {{MathMLElement("mroot")}}
-- {{MathMLElement("mrow")}}
-- {{MathMLElement("msqrt")}}
-- {{MathMLElement("mstyle")}}
+- {{MathMLElement("menclose")}} {{non-standard_inline}}（封闭内容）
+- {{MathMLElement("merror")}}（封闭语法错误消息）
+- {{MathMLElement("mfenced")}} {{non-standard_inline}} {{deprecated_inline}}（括号）
+- {{MathMLElement("mfrac")}}（分数）
+- {{MathMLElement("mpadded")}}（内容周围的空格）
+- {{MathMLElement("mphantom")}}（具有保留空间的不可见内容）
+- {{MathMLElement("mroot")}}（具有指定指数的根式）
+- {{MathMLElement("mrow")}}（分组的子表达式）
+- {{MathMLElement("msqrt")}}（没有指数的平方根）
+- {{MathMLElement("mstyle")}}（样式更改）
 
-### 边标和角标元素
+### 附加符号和极限元素
 
-- {{MathMLElement("mmultiscripts")}}
-- {{MathMLElement("mover")}}
-- {{MathMLElement("mprescripts")}}
-- {{MathMLElement("msub")}}
-- {{MathMLElement("msubsup")}}
-- {{MathMLElement("msup")}}
-- {{MathMLElement("munder")}}
-- {{MathMLElement("munderover")}}
-- {{MathMLElement("none")}}
+- {{MathMLElement("mmultiscripts")}}（前置角标和张量索引）
+- {{MathMLElement("mover")}}（上标）
+- {{MathMLElement("mprescripts")}}（前置角标的分隔符）
+- {{MathMLElement("msub")}}（下标）
+- {{MathMLElement("msubsup")}}（上下脚标对）
+- {{MathMLElement("msup")}}（上标）
+- {{MathMLElement("munder")}}（下标）
+- {{MathMLElement("munderover")}}（上标下标对）
 
 ### 表格数学
 
-- {{MathMLElement("maligngroup")}}
-- {{MathMLElement("malignmark")}}
-- {{MathMLElement("mlabeledtr")}}
-- {{MathMLElement("mtable")}}
-- {{MathMLElement("mtd")}}
-- {{MathMLElement("mtr")}}
+- {{MathMLElement("mtable")}}（表格或矩阵）
+- {{MathMLElement("mtd")}}（表格或矩阵中的单元格）
+- {{MathMLElement("mtr")}}（表格或矩阵中的行）
 
-### 初等数学
+### 未分类元素
 
-- {{MathMLElement("mlongdiv")}}
-- {{MathMLElement("mscarries")}}
-- {{MathMLElement("mscarry")}}
-- {{MathMLElement("msgroup")}}
-- {{MathMLElement("msline")}}
-- {{MathMLElement("msrow")}}
-- {{MathMLElement("mstack")}}
+- {{MathMLElement("maction")}} {{deprecated_inline}}（绑定到子表达式的操作）
 
-### 尚无分类的元素
+## 语义注释
 
-- {{MathMLElement("maction")}}
+- {{MathMLElement("annotation")}}（数据注释）
+- {{MathMLElement("annotation-xml")}}（XML 注释）
+- {{MathMLElement("semantics")}}（语义注释的容器）
 
-## 语义附注元素
-
-- [`<annotation>`](/zh-CN/docs/Web/MathML/Element/semantics#annotation)
-- [`<annotation-xml>`](/zh-CN/docs/Web/MathML/Element/semantics#annotation-xml)
-- {{MathMLElement("semantics")}}
-
-## 请参阅
+## 参见
 
 - [MathML](/zh-CN/docs/Web/MathML)
 - [MathML 属性参考](/zh-CN/docs/Web/MathML/Attribute)

@@ -1,11 +1,13 @@
 ---
 title: margin
 slug: Web/CSS/margin
+l10n:
+  sourceCommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
 ---
 
 {{CSSRef}}
 
-**`margin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の全四辺の[マージン領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。
+**`margin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の全四辺の[マージン領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。
 
 {{EmbedInteractiveExample("pages/css/margin.html")}}
 
@@ -13,10 +15,10 @@ slug: Web/CSS/margin
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
+- {{cssxref("margin-top")}}
+- {{cssxref("margin-right")}}
 - {{cssxref("margin-bottom")}}
 - {{cssxref("margin-left")}}
-- {{cssxref("margin-right")}}
-- {{cssxref("margin-top")}}
 
 ## 構文
 
@@ -38,6 +40,7 @@ margin: 2px 1em 0 auto;
 margin: inherit;
 margin: initial;
 margin: revert;
+margin: revert-layer;
 margin: unset;
 ```
 
@@ -53,7 +56,7 @@ margin: unset;
 - {{cssxref("length")}}
   - : マージンの寸法を固定値で表したものです。
 - {{cssxref("percentage")}}
-  - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)の*幅*に対するパーセント値で表したものです。
+  - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
 - `auto`
   - : ブラウザーが適切なマージンを選択して使用します。例えば、要素を中央揃えするためにこの値を使用することもあります。
 
@@ -65,13 +68,13 @@ top および bottom のマージンは、 {{HTMLElement("span")}} または {{H
 
 ### 水平方向の中央揃え
 
-最近のブラウザーで何かを中央揃えしたい場合は、{{cssxref("display")}}`: flex;` {{cssxref("justify-content")}}`: center;` を使用することができます。
+`margin: 0 auto;` を設定すると、親要素内で要素を水平方向に中央揃えすることができます。
 
-しかし、 IE8-9 のような古いブラウザーはフレックスボックスレイアウトに対応していないため、これは利用できません。親要素内で要素を中央揃えするのであれば、 `margin: 0 auto;` を使用してください。
+要素を水平方向に中央揃えにする一般的な方法としては、コンテナー内で `display: flex;` および [`justify-content: center;`](/ja/docs/Web/CSS/justify-content) を設定する方法があります。これにより、[フレックスアイテムの子要素が中央揃え](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)になります。
 
 ### マージンの相殺
 
-要素の上下のマージンは、相殺されて 2 つのマージンのうち大きい方を取る単一のマージンになることがあります。詳しくは[マージンの相殺の習得](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)を参照してください。
+要素の上下のマージンは、相殺されて 2 つのマージンのうち大きい方を取る単一のマージンになることがあります。詳しくは[マージンの相殺の習得](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)を参照してください。
 
 ## 公式定義
 
@@ -83,19 +86,19 @@ top および bottom のマージンは、 {{HTMLElement("span")}} または {{H
 
 ## 例
 
-<h3 id="Simple_example">単純な例</h3>
+### 簡単な例
 
 #### HTML
 
-```html
-<div class="center">This element is centered.</div>
+```html-nolint live-sample___simple_example
+<div class="center">この要素は中央揃えされています。</div>
 
-<div class="outside">This element is positioned outside of its container.</div>
+<div class="outside">この要素はコンテナーの外側に配置されています。</div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___simple_example
 .center {
   margin: auto;
   background: lime;
@@ -118,27 +121,22 @@ margin: 5%; /* 全辺: 5% のマージン */
 
 margin: 10px; /* 全辺: 10px のマージン */
 
-margin: 1.6em 20px;
-/* 上と下: 1.6em のマージン */
-/* 左と右: 20px のマージン  */
+margin: 1.6em 20px; /* 上と下: 1.6em のマージン */
+/* 左と右: 20px のマージン */
 
-margin: 10px 3% -1em;
-/* 上:     10px のマージン */
+margin: 10px 3% -1em; /* 上:     10px のマージン */
 /* 左と右: 3% のマージン   */
-/* 下:     -1em のマージン  */
+/* 下:     -1em のマージン */
 
-margin: 10px 3px 30px 5px;
-/* 上:     10px のマージン */
-/* 右:     3px のマージン  */
+margin: 10px 3px 30px 5px; /* 上:     10px のマージン */
+/* 右:     3px のマージン */
 /* 下:     30px のマージン */
-/* 左:     5px のマージン  */
+/* 左:     5px のマージン */
 
-margin: 2em auto;
-/* 上と下: 2em のマージン   */
+margin: 2em auto; /* 上と下: 2em のマージン   */
 /* ボックスは水平方向に中央 */
 
-margin: auto;
-/* 上と下: 0 のマージン     */
+margin: auto; /* 上と下: 0 のマージン     */
 /* ボックスは水平方向に中央 */
 ```
 
@@ -152,7 +150,9 @@ margin: auto;
 
 ## 関連情報
 
-- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-- [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
 - {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}
-- 対応する論理的プロパティ: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}} および一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}
+- {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}
+- 一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}
+- [マージンの相殺の習得](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール

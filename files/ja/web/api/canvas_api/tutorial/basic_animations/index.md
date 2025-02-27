@@ -1,6 +1,8 @@
 ---
 title: 基本的なアニメーション
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
+l10n:
+  sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
@@ -39,9 +41,10 @@ slug: Web/API/Canvas_API/Tutorial/Basic_animations
 - {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame(callback)")}}
   - : アニメーションを実行することをブラウザーに通知し、次の再描画の前にアニメーションを更新するため、ブラウザーが指定の関数を呼び出すように要求します。
 
-ユーザーの操作が必要ない場合は、提供されたコードを繰り返し実行する `setInterval()` 関数が利用できます。ゲームを作成したい場合、キーボードまたはマウスのイベントを使用したアニメーションを制御するためには `setTimeout()` が利用できます。イベントリスナー ({{domxref("EventListener")}}) を設定することで、ユーザーの操作を取得し、アニメーション関数を実行します。
+ユーザーの操作が必要ない場合は、提供されたコードを繰り返し実行する `setInterval()` 関数が利用できます。ゲームを作成したい場合、キーボードまたはマウスのイベントを使用したアニメーションを制御するためには `setTimeout()` が利用できます。{{domxref("EventTarget/addEventListener", "addEventListener()")}} を用いてイベントリスナーを設定することで、ユーザーの操作を取得し、アニメーション関数を実行します。
 
-> **メモ:** 以下の例では、{{domxref("window.requestAnimationFrame()")}} メソッドを使用してアニメーションを制御します。`requestAnimationFrame` メソッドは、フレームを描画する準備ができた時にシステムがアニメーションフレームを呼び出すことで、よりスムーズで効率的な方法でアニメーションを提供します。通常、コールバック回数は 1 秒あたり 60 回となり、バックグラウンドタブで実行している場合は、レートが低くなることがあります。特にゲームのアニメーションループの詳細については、[ゲーム開発](/ja/docs/Games)の[ビデオゲームの解剖学](/ja/docs/Games/Anatomy)を参照してください。
+> [!NOTE]
+> 以下の例では、{{domxref("window.requestAnimationFrame()")}} メソッドを使用してアニメーションを制御します。`requestAnimationFrame` メソッドは、フレームを描画する準備ができた時にシステムがアニメーションフレームを呼び出すことで、よりスムーズで効率的な方法でアニメーションを提供します。通常、コールバック回数は 1 秒あたり 60 回となり、バックグラウンドタブで実行している場合は、レートが低くなることがあります。特にゲームのアニメーションループの詳細については、[ゲーム開発](/ja/docs/Games)の[ビデオゲームの解剖学](/ja/docs/Games/Anatomy)を参照してください。
 
 ## アニメーションする太陽系
 
@@ -56,9 +59,9 @@ slug: Web/API/Canvas_API/Tutorial/Basic_animations
 ### JavaScript
 
 ```js
-var sun = new Image();
-var moon = new Image();
-var earth = new Image();
+const sun = new Image();
+const moon = new Image();
+const earth = new Image();
 function init() {
   sun.src = "canvas_sun.png";
   moon.src = "canvas_moon.png";
@@ -67,18 +70,18 @@ function init() {
 }
 
 function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("canvas").getContext("2d");
 
   ctx.globalCompositeOperation = "destination-over";
   ctx.clearRect(0, 0, 300, 300); // clear canvas
 
-  ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
-  ctx.strokeStyle = "rgba(0, 153, 255, 0.4)";
+  ctx.fillStyle = "rgb(0 0 0 / 40%)";
+  ctx.strokeStyle = "rgb(0 153 255 / 40%)";
   ctx.save();
   ctx.translate(150, 150);
 
   // 地球
-  var time = new Date();
+  const time = new Date();
   ctx.rotate(
     ((2 * Math.PI) / 60) * time.getSeconds() +
       ((2 * Math.PI) / 60000) * time.getMilliseconds(),
@@ -122,15 +125,16 @@ init();
 ### HTML
 
 ```html
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="canvas" width="150" height="150">現在時刻</canvas>
 ```
 
 ### JavaScript
 
 ```js
 function clock() {
-  var now = new Date();
-  var ctx = document.getElementById("canvas").getContext("2d");
+  const now = new Date();
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
   ctx.save();
   ctx.clearRect(0, 0, 150, 150);
   ctx.translate(75, 75);
@@ -143,7 +147,7 @@ function clock() {
 
   // 文字盤の時
   ctx.save();
-  for (var i = 0; i < 12; i++) {
+  for (let i = 0; i < 12; i++) {
     ctx.beginPath();
     ctx.rotate(Math.PI / 6);
     ctx.moveTo(100, 0);
@@ -155,8 +159,8 @@ function clock() {
   // 文字盤の分
   ctx.save();
   ctx.lineWidth = 5;
-  for (i = 0; i < 60; i++) {
-    if (i % 5 != 0) {
+  for (let i = 0; i < 60; i++) {
+    if (i % 5 !== 0) {
       ctx.beginPath();
       ctx.moveTo(117, 0);
       ctx.lineTo(120, 0);
@@ -166,17 +170,21 @@ function clock() {
   }
   ctx.restore();
 
-  var sec = now.getSeconds();
-  var min = now.getMinutes();
-  var hr = now.getHours();
-  hr = hr >= 12 ? hr - 12 : hr;
+  const sec = now.getSeconds();
+  // スイープ秒針の時計を表示するには、次のようにしてください。
+  // const sec = now.getSeconds() + now.getMilliseconds() / 1000;
+  const min = now.getMinutes();
+  const hr = now.getHours() % 12;
 
   ctx.fillStyle = "black";
 
-  // 時針
+  // 画像の説明を書きこむ
+  canvas.innerText = `現在時刻: ${hr}:${min}`;
+
+  // Write Hours
   ctx.save();
   ctx.rotate(
-    hr * (Math.PI / 6) + (Math.PI / 360) * min + (Math.PI / 21600) * sec,
+    (Math.PI / 6) * hr + (Math.PI / 360) * min + (Math.PI / 21600) * sec,
   );
   ctx.lineWidth = 14;
   ctx.beginPath();
@@ -211,7 +219,7 @@ function clock() {
   ctx.beginPath();
   ctx.arc(95, 0, 10, 0, Math.PI * 2, true);
   ctx.stroke();
-  ctx.fillStyle = "rgba(0, 0, 0, 0)";
+  ctx.fillStyle = "rgb(0 0 0 / 0%)";
   ctx.arc(0, 0, 3, 0, Math.PI * 2, true);
   ctx.fill();
   ctx.restore();
@@ -232,6 +240,10 @@ window.requestAnimationFrame(clock);
 
 ### 結果
 
+> [!NOTE]
+> 時計は 1 秒に 1 回しか更新されませんが、アニメーション画像は 1 秒間に 60 フレーム（またはウェブブラウザーの表示リフレッシュレート）で更新されます。
+> 秒針をスイープさせて時計を表示するには、上記の `const sec` の定義をコメントアウトされたバージョンと置き換えてください。
+
 {{EmbedLiveSample("An_animated_clock", "180", "200")}}
 
 ## ループする風景
@@ -240,97 +252,92 @@ window.requestAnimationFrame(clock);
 
 ### HTML
 
-この HTML には、画像がスクロール表示される {{HTMLElement("canvas")}} が含まれます。ここで指定する幅と高さは、 JavaScript のコードにある変数 `CanvasXZSize` と `CanvasYSize` の値と一致する必要があることに注意してください。
+この HTML には、画像がスクロール表示される {{HTMLElement("canvas")}} が含まれます。ここで指定する幅と高さは、 JavaScript のコードにある変数 `canvasXSize` と `canvasYSize` の値と一致する必要があることに注意してください。
 
 ```html
-<canvas id="canvas" width="800" height="200"></canvas>
+<canvas id="canvas" width="800" height="200"
+  >ヨセミテ国立公園、エル・キャピタンの麓の草原</canvas
+>
 ```
 
 ### JavaScript
 
 ```js
-var img = new Image();
+const img = new Image();
 
 // ユーザー変数。これらをカスタマイズすると、スクロールする画像、方向、速度を
 // 変更することができます。
-
 img.src = "capitan_meadows_yosemite_national_park.jpg";
-var CanvasXSize = 800;
-var CanvasYSize = 200;
-var speed = 30; // 小さくすると速くなる
-var scale = 1.05;
-var y = -4.5; // 垂直オフセット
+const canvasXSize = 800;
+const canvasYSize = 200;
+const speed = 30; // 小さくすると速くなる
+const scale = 1.05;
+const y = -4.5; // 垂直オフセット
 
 // メインプログラム
+const dx = 0.75;
+let imgW;
+let imgH;
+let x = 0;
+let clearX;
+let clearY;
+let ctx;
 
-var dx = 0.75;
-var imgW;
-var imgH;
-var x = 0;
-var clearX;
-var clearY;
-var ctx;
-
-img.onload = function () {
+img.onload = () => {
   imgW = img.width * scale;
   imgH = img.height * scale;
 
-  if (imgW > CanvasXSize) {
-    // image larger than canvas
-    x = CanvasXSize - imgW;
-  }
-  if (imgW > CanvasXSize) {
-    // image width larger than canvas
-    clearX = imgW;
-  } else {
-    clearX = CanvasXSize;
-  }
-  if (imgH > CanvasYSize) {
-    // image height larger than canvas
-    clearY = imgH;
-  } else {
-    clearY = CanvasYSize;
+  if (imgW > canvasXSize) {
+    // キャンバスより大きな画像
+    x = canvasXSize - imgW;
   }
 
-  // get canvas context
+  // 画像の寸法がキャンバスより大きいかどうか調べる
+  clearX = Math.max(imgW, canvasXSize);
+  clearY = Math.max(imgH, canvasYSize);
+
+  // キャンバスコンテキストの取得
   ctx = document.getElementById("canvas").getContext("2d");
 
-  // set refresh rate
+  // リフレッシュレートの設定
   return setInterval(draw, speed);
 };
 
 function draw() {
-  ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
+  ctx.clearRect(0, 0, clearX, clearY); // キャンバスをクリア
 
-  // if image is <= Canvas Size
-  if (imgW <= CanvasXSize) {
-    // reset, start from beginning
-    if (x > CanvasXSize) {
+  // 画像がキャンバスの大きさ以下の場合
+  if (imgW <= canvasXSize) {
+    // リセット、最初から始める
+    if (x > canvasXSize) {
       x = -imgW + x;
     }
-    // draw additional image1
+
+    // 追加の画像 1 を描画
     if (x > 0) {
       ctx.drawImage(img, -imgW + x, y, imgW, imgH);
     }
-    // draw additional image2
+
+    // 追加の画像 2 を描画
     if (x - imgW > 0) {
       ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
     }
-  }
-
-  // image is > Canvas Size
-  else {
-    // reset, start from beginning
-    if (x > CanvasXSize) {
-      x = CanvasXSize - imgW;
+  } else {
+    // 画像がキャンバスの大きさより大きい
+    // リセット、最初から始める
+    if (x > canvasXSize) {
+      x = canvasXSize - imgW;
     }
-    // draw additional image
-    if (x > CanvasXSize - imgW) {
+
+    // 追加の画像を描画
+    if (x > canvasXSize - imgW) {
       ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
     }
   }
+
   // 画像を描画
   ctx.drawImage(img, x, y, imgW, imgH);
+
   // 移動量
   x += dx;
 }
@@ -345,7 +352,10 @@ function draw() {
 ### HTML
 
 ```html
-<canvas id="cw"></canvas>
+<canvas id="cw"
+  >画像上を移動するカーソルに続く、多色の消える光の流れを作成するアニメーション。
+  画像上を移動されるカーソルに追従する多色の光の流れ
+</canvas>
 ```
 
 ### CSS
@@ -359,7 +369,7 @@ function draw() {
 body {
   margin: 0;
   padding: 0;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgb(0 0 0 / 5%);
 }
 ```
 
@@ -453,7 +463,7 @@ function Particle(x, y, particleTrailWidth, strokeColor, rotateSpeed) {
 function anim() {
   requestAnimationFrame(anim);
 
-  context.fillStyle = "rgba(0,0,0,0.05)";
+  context.fillStyle = "rgb(0 0 0 / 5%)";
   context.fillRect(0, 0, canvas.width, canvas.height);
 
   particlesArray.forEach((particle) => particle.rotate());
@@ -466,8 +476,6 @@ function anim() {
 
 ## その他の例
 
-- [基本的なレイキャスター](/ja/docs/Web/API/Canvas_API/A_basic_ray-caster)
-  - : キーボードを使ってアニメーションをどのように制御するか説明した良いサンプルです。
 - [高度なアニメーション](/ja/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
   - : 高度なアニメーション技術と物の動きについて見ていきます。
 

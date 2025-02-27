@@ -46,17 +46,19 @@ Comme vous pouvez le voir sur le bref exemple ci-dessus, le titre consiste en un
 
 Le titre est placé directement sous la balise `<table>`.
 
-> **Note :** L'attribut [`summary`](/fr/docs/Web/HTML/Element/table#summary) peut aussi être utilisé dans un élément `<table>` pour fournir une description — il sera lu également par les lecteurs d'écran. Toutefois, nous nous devons de recommander plutôt l'utilisation de l'élément `<caption>`, car `summary` est considéré comme {{glossary("deprecated", "obsolète")}} par la norme HTML5, et ne peut être lu par l'utilisateur courant (il n'apparaît pas dans la page).
+> [!NOTE]
+> L'attribut [`summary`](/fr/docs/Web/HTML/Element/table#summary) peut aussi être utilisé dans un élément `<table>` pour fournir une description — il sera lu également par les lecteurs d'écran. Toutefois, nous nous devons de recommander plutôt l'utilisation de l'élément `<caption>`, car `summary` est considéré comme {{glossary("deprecated", "obsolète")}} par la norme HTML5, et ne peut être lu par l'utilisateur courant (il n'apparaît pas dans la page).
 
 ### Apprentissage actif&nbsp;: Ajouter un titre
 
 Essayons en revisitant un exemple rencontré dans l'article précédent.
 
-1. Ouvrez le planning du professeur de langue de la fin de [Tableaux HTML&nbsp;: notions de base](/fr/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col) ou faites une copie locale du fichier [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html).
+1. Ouvrez le planning du professeur de langue de la fin de [Tableaux HTML&nbsp;: notions de base](/fr/docs/Learn/HTML/Tables/Basics#active_learning_colgroup_and_col) ou faites une copie locale du fichier [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html).
 2. Ajoutez un titre approprié pour le tableau.
 3. Enregistrez votre code et ouvrez-le dans un navigateur pour voir à quoi il ressemble.
 
-> **Note :** Vous pouvez trouver notre version sur GitHub — voir [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([voir aussi directement](http://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
+> [!NOTE]
+> Vous pouvez trouver notre version sur GitHub — voir [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([voir aussi directement](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
 
 ## Ajout d'une structure avec \<thead>, \<tfoot>, et \<tbody>
 
@@ -70,7 +72,7 @@ Pour les utiliser :
 - L'élément `<tfoot>` doit envelopper la partie du tableau qui est le pied de page — ce peut être une dernière ligne contenant, par exemple, la somme des rangées précédentes. Vous pouvez inclure l'élément \<tfoot> à la suite du code contenant le corps du tableau, là où vous souhaitez le trouver, ou juste en-dessous de l'élément \<thead> (le navigateur l'affichera toujours en pied de tableau).
 - L'élément `<tbody>` doit couvrir toutes les parties du tableau non contenues dans un \<thead> ou un \<tfoot>. Il pourra apparaître dans le code, sous la déclaration de l'en-tête ou du pied de page, selon la façon dont vous avez décidé de le structurer (voir les notes ci‑dessus).
 
-> **Note :** `<tbody>` est toujours inclus dans tous les tableaux, implicitement si vous ne l'avez pas spécifié dans votre code. Pour le vérifier, ouvrez un tableau ne contenant pas l'élément `<tbody>` et regardez le code HTML dans les [outils de développement de votre navigateur](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) — vous verrez que le navigateur a ajouté cette balise pour vous. Si vous vous demandez pourquoi vous ennuyer à gérer ce qui est ajouté automatiquement — parce que cela vous donne plus de contrôle sur la structure et l'apparence de votre tableau.
+> **Note :** `<tbody>` est toujours inclus dans tous les tableaux, implicitement si vous ne l'avez pas spécifié dans votre code. Pour le vérifier, ouvrez un tableau ne contenant pas l'élément `<tbody>` et regardez le code HTML dans les [outils de développement de votre navigateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) — vous verrez que le navigateur a ajouté cette balise pour vous. Si vous vous demandez pourquoi vous ennuyer à gérer ce qui est ajouté automatiquement — parce que cela vous donne plus de contrôle sur la structure et l'apparence de votre tableau.
 
 ### Apprentissage actif : Ajout d'une structure au tableau
 
@@ -96,7 +98,8 @@ Mettons en œuvre ces nouveaux éléments.
 
 7. Enregistrez, actualisez et regardez le résultat. Si `<tbody>` et `<tfoot>` n'étaient pas en place, vous devriez écrire plus de commandes plus complexes (sélection/règles) pour l'application des mêmes styles.
 
-> **Note :** Nous ne nous attendons pas à ce que vous compreniez les CSS maintenant. Vous en apprendrez plus avec les modules à propos des CSS ([Introduction aux CSS](/fr/docs/Learn/CSS/Introduction_to_CSS) est un bon moyen de commencer ; il y a aussi un article spécifique sur [l'esthétique des tables](/fr/docs/Learn/CSS/Styling_boxes/Styling_tables)).
+> [!NOTE]
+> Nous ne nous attendons pas à ce que vous compreniez les CSS maintenant. Vous en apprendrez plus avec les modules à propos des CSS ([Introduction aux CSS](/fr/docs/Learn/CSS/First_steps) est un bon moyen de commencer ; il y a aussi un article spécifique sur [l'esthétique des tables](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)).
 
 Le code de votre tableau fini devrait ressembler à quelque chose comme :
 
@@ -211,7 +214,8 @@ Le code de votre tableau fini devrait ressembler à quelque chose comme :
 
 {{ EmbedLiveSample("Apprentissage_actif_Ajout_d'une_structure_au_tableau", '100%', 300) }}
 
-> **Note :** Vous pouvez aussi le trouver sur Github [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) ([voir aussi le résultat](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html) directement).
+> [!NOTE]
+> Vous pouvez aussi le trouver sur Github [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) ([voir aussi le résultat](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html) directement).
 
 ## Tableaux imbriqués
 
@@ -335,7 +339,8 @@ Rappelons brièvement comment nous utilisons les tableaux de données. Un tablea
 
 Mais que faire si vous ne pouvez pas créer ces associations visuelles ? Comment pouvez-vous lire un tableau comme celui ci-dessus ? Les personnes malvoyantes utilisent souvent un lecteur d'écran qui leur lit les informations des pages web. Ce n'est pas un problème quand vous lisez du texte brut, mais l'interprétation d'un tableau peut constituer un défi pour une personne aveugle. Néanmoins, avec le balisage approprié, nous pouvons remplacer des associations visuelles par des associations programmées.
 
-> **Note :** Il y a environ 253 millions de personnes vivant avec des déficiences visuelles selon les [données de l'OMS en 2017](http://www.who.int/mediacentre/factsheets/fs282/fr/).
+> [!NOTE]
+> Il y a environ 253 millions de personnes vivant avec des déficiences visuelles selon les [données de l'OMS en 2017](http://www.who.int/mediacentre/factsheets/fs282/fr/).
 
 Cette partie de l'article indique des techniques avancées pour rendre les tableaux les plus accessibles possible.
 
@@ -411,7 +416,8 @@ En revenant à notre exemple de tableau des dépenses et des coûts, les deux ex
 </tbody>
 ```
 
-> **Note :** Cette méthode crée des associations très précises entre en-têtes et données mais elle utilise **beaucoup** plus de balisage et ne laisse aucune marge d'erreur. L'approche `scope` est généralement suffisante pour la plupart des tableaux.
+> [!NOTE]
+> Cette méthode crée des associations très précises entre en-têtes et données mais elle utilise **beaucoup** plus de balisage et ne laisse aucune marge d'erreur. L'approche `scope` est généralement suffisante pour la plupart des tableaux.
 
 ### Apprentissage actif&nbsp;: jouer avec `scope` et `headers`
 
@@ -419,11 +425,12 @@ En revenant à notre exemple de tableau des dépenses et des coûts, les deux ex
 2. Maintenant essayez d'ajouter un attribut `scope` approprié pour améliorer ce tableau.
 3. Enfin, essayez avec une autre copie du fichier initial, de faire un tableau plus accessible en utilisant les attributs `id` et `headers`.
 
-> **Note :** Vous pouvez contrôler votre travail en le comparant à nos exemples finis — voir [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([voir aussi directement](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html))
-> et [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([voir aussi directement](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
+> [!NOTE]
+> Vous pouvez contrôler votre travail en le comparant à nos exemples finis — voir [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([voir aussi directement](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html))
+> et [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([voir aussi directement](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
 
 ## Résumé
 
-Il reste encore quelques autres choses à apprendre sur les tableaux HTML, mais nous vous avons vraiment indiqué tout ce qu'il est nécessaire de savoir pour le moment. À ce stade, vous voulez peut-être en apprendre plus sur les styles de tableaux HTML — voyez alors [Décor des tableaux](/fr/docs/Learn/CSS/Styling_boxes/Styling_tables).
+Il reste encore quelques autres choses à apprendre sur les tableaux HTML, mais nous vous avons vraiment indiqué tout ce qu'il est nécessaire de savoir pour le moment. À ce stade, vous voulez peut-être en apprendre plus sur les styles de tableaux HTML — voyez alors [Décor des tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables).
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}

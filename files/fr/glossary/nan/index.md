@@ -3,6 +3,8 @@ title: NaN
 slug: Glossary/NaN
 ---
 
+{{GlossarySidebar}}
+
 `NaN` (Not a Number — _pas un nombre_) est un {{Glossary("Type", "type de données")}} numérique qui indique une valeur indéfinie ou une valeur qui ne peut pas être représentée, en particulier le résultat d'une opération à virgule flottante.
 
 Par exemple, `NaN` peut représenter une valeur infinie, le résultat d'une division par zéro, la racine carrée d'un nombre négatif (qui est un nombre imaginaire, tandis que les nombres à virgule flottante sont des nombres réels).
@@ -17,4 +19,4 @@ Dans la pratique, si l'on divise deux variables dans un programme {{glossary("Ja
 
 ### Informations techniques
 
-- [NaN dans JavaScript](/fr/docs/Web/JavaScript/Reference/Objets_globaux/NaN)
+- [NaN dans JavaScript](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN)

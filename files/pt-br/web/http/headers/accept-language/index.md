@@ -68,7 +68,7 @@ Accept-Language: en-US,en;q=0.5
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Accept-Language")}}
+{{Compat}}
 
 ## See also
 

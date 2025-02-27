@@ -1,11 +1,12 @@
 ---
-title: ":blank"
+title: :blank
 slug: Web/CSS/:blank
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-> **Nota:** The `:blank` selector is considered at risk, as the CSSWG keeps changing it.
+> [!NOTE]
+> The `:blank` selector is considered at risk, as the CSSWG keeps changing it.
 >
 > See [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967).
 
@@ -21,7 +22,7 @@ A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS)
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.blank")}}
+{{Compat}}
 
 ## Veja também
 

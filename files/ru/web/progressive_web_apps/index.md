@@ -3,47 +3,49 @@ title: Прогрессивные веб-приложения
 slug: Web/Progressive_web_apps
 ---
 
+{{PWASidebar}}
+
 Прогрессивные веб-приложения используют современные веб-API вкупе со стратегией прогрессивного улучшения для создания кросс-платформенных приложений. Такие приложения запускаются везде и обладают рядом характеристик, обеспечивающих пользователей преимуществами, аналогичными тем, что доступны в нативных решениях.
 
 ![](discoverable.svg)
 
-[**Заметные**](/ru/docs/Web/Apps/Modern/Discoverable)
+[**Заметные**](/ru/docs/Web/Progressive_web_apps)
 
 Приложения замечаются поисковыми системами.
 
 ![](installable.svg)
 
-**[Продвинутые](/ru/docs/Web/Apps/Modern/Installable)**
+**[Продвинутые](/ru/docs/Web/Progressive_web_apps)**
 
 Доступные на любых устройствах без нужды в магазине приложений.
 
 ![](linkable.svg)
 
-**[Доступные](/ru/docs/Web/Apps/Modern/Linkable)**
+**[Доступные](/ru/docs/Web/Progressive_web_apps)**
 
 Легко поделиться ими через ссылку.
 
 ![](network-independent.svg)
 
-**[Независимые](/ru/docs/Web/Apps/Modern/Network_independent)**
+**[Независимые](/ru/docs/Web/Progressive_web_apps)**
 
 Работают в офлайне или на низкоскоростных соединениях.
 
 ![](progressive.svg)
 
-**[Передовые](/ru/docs/Web/Apps/Modern/Progressive)**
+**[Передовые](/ru/docs/Web/Progressive_web_apps)**
 
 Работают для любого пользователя.
 
 ![](responsive.svg)
 
-**[Отзывчивые](/ru/docs/Web/Apps/Modern/Responsive)**
+**[Отзывчивые](/ru/docs/Learn/CSS/CSS_layout/Responsive_Design)**
 
 Помещаются на любой экран: настольный компьютер, смартфон, планшет и т.д.
 
 ![](safe.svg)
 
-**[Безопасные](/ru/docs/Web/Apps/Modern/Safe)**
+**[Безопасные](/ru/docs/Web/Progressive_web_apps)**
 
 Специальный способ переноса данных предотвращает кражу информации.
 

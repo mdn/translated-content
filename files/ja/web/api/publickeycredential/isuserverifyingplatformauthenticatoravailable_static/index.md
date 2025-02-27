@@ -13,7 +13,8 @@ slug: Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable_
 - Windows Hello (Windows)
 - Android の端末アンロック（指紋認証、顔認証、PIN、など）
 
-> **メモ:** このメソッドは最上位のコンテキストでのみ使用することができます。例えば {{HTMLElement("iframe")}} では使用できません。
+> [!NOTE]
+> このメソッドは最上位のコンテキストでのみ使用することができます。例えば {{HTMLElement("iframe")}} では使用できません。
 
 ## 構文
 
@@ -29,9 +30,11 @@ isUserVerifyingPlatformAuthenticatorAvailable()
 
 ユーザーを認証するプラットフォーム認証が利用できるかどうかを示す論理値に解決する {{jsxref("Promise")}} です。
 
-> **メモ:** このメソッドは静的メソッドであり、インスタンスではなく {{domxref("PublicKeyCredential")}} インターフェイス上で直接呼び出されます。
+> [!NOTE]
+> このメソッドは静的メソッドであり、インスタンスではなく {{domxref("PublicKeyCredential")}} インターフェイス上で直接呼び出されます。
 
-> **メモ:** 以前の版の仕様では、論理値は、そのような認証装置が存在することを開示することに対するユーザーの同意も伝えていました。
+> [!NOTE]
+> 以前の版の仕様では、論理値は、そのような認証装置が存在することを開示することに対するユーザーの同意も伝えていました。
 
 ## 例
 

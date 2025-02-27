@@ -9,13 +9,7 @@ slug: Web/API/Window/screenTop
 
 > **备注：** `screenTop` is an alias of the older {{domxref("Window.screenY")}} property. `screenTop` was originally supported only in IE but was introduced everywhere due to popularity.
 
-## 语法
-
-```
-topWindowPos = window.screenTop
-```
-
-### 返回值
+## 值
 
 A number equal to the number of CSS pixels from the top edge of the browser viewport to the top edge of the screen.
 

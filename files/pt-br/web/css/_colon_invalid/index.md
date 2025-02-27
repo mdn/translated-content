@@ -1,11 +1,11 @@
 ---
-title: ":invalid"
+title: :invalid
 slug: Web/CSS/:invalid
 ---
 
 {{CSSRef}}
 
-A [pseudo-classe CSS](/pt-BR/docs/Web/CSS/Pseudo-classes) **`:invalid`** representa qualquer elemento {{HTMLElement("input")}} ou {{HTMLElement("form")}} cujo conteúdo não esteja [válido](/pt-BR/docs/Web/Guide/HTML/HTML5/Constraint_validation).
+A [pseudo-classe CSS](/pt-BR/docs/Web/CSS/Pseudo-classes) **`:invalid`** representa qualquer elemento {{HTMLElement("input")}} ou {{HTMLElement("form")}} cujo conteúdo não esteja [válido](/pt-BR/docs/Web/HTML/Constraint_validation).
 
 ```css
 /* Seleciona todos os inputs inválidos */
@@ -102,10 +102,10 @@ Você pode desabilitar o "brilho" usando o CSS a seguir, ou substituir completam
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.selectors.invalid")}}
+{{Compat}}
 
 ## Veja também
 
 - Outras pseudo-classes relacionadas com validações: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":valid") }}
 - Mozilla pseudo-classes relacionadas: {{cssxref(":-moz-ui-invalid")}}, {{cssxref(":-moz-submit-invalid")}}
-- [Form data validation](/pt-BR/docs/Learn/HTML/Forms/Form_validation)
+- [Form data validation](/pt-BR/docs/Learn/Forms/Form_validation)

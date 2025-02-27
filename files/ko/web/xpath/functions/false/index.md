@@ -3,7 +3,7 @@ title: "false"
 slug: Web/XPath/Functions/false
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `false` 함수는 boolean false를 반환합니다.
 
@@ -29,7 +29,7 @@ Boolean `false`.
 
 ### 정의
 
-[XPath 1.0 4.3](http://www.w3.org/TR/xpath#function-false)
+[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-false)
 
 ### Gecko 지원
 

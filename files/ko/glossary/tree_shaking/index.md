@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**트리 셰이킹**은 자바스크립트 맥락에서 죽은 코드 제거를 설명하기 위해 일반적으로 사용되는 용어입니다.
+**트리 셰이킹**은 JavaScript 맥락에서 죽은 코드 제거를 설명하기 위해 일반적으로 사용되는 용어입니다.
 
 [import](/ko/docs/Web/JavaScript/Reference/Statements/import) 및 [export](/ko/docs/Web/JavaScript/Reference/Statements/export) 문을 사용하여, JavaScript 파일에서 사용하기 위한 코드 모듈을 내보내고 가져오는 것을 감지합니다.
 

@@ -1,5 +1,6 @@
 ---
 title: "HTMLAnchorElement: referrerPolicy プロパティ"
+short-title: referrerPolicy
 slug: Web/API/HTMLAnchorElement/referrerPolicy
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
@@ -38,7 +39,7 @@ l10n:
 const elt = document.createElement("a");
 const linkText = document.createTextNode("My link");
 elt.appendChild(linkText);
-elt.href = "https://developer.mozilla.org/en-US/";
+elt.href = "https://developer.mozilla.org/ja/";
 elt.referrerPolicy = "no-referrer";
 
 const div = document.getElementById("divAround");

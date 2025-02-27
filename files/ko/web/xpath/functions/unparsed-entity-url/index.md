@@ -3,7 +3,7 @@ title: unparsed-entity-url
 slug: Web/XPath/Functions/unparsed-entity-url
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `unparsed-entity-url()` 함수는 구문해석되지 않은 엔티티의 URI를 반환합니다. 이는 소스 문서의 DTD에서 참조하는 비 XML 데이터입니다.
 
@@ -23,7 +23,7 @@ string unparsed-entity-url(string)
 
 ### 정의
 
-[XSLT 1.0 12.4](http://www.w3.org/TR/xslt#function-unparsed-entity-uri)
+[XSLT 1.0 12.4](https://www.w3.org/TR/xslt#function-unparsed-entity-uri)
 
 ### Gecko 지원
 

@@ -31,7 +31,7 @@ l10n:
 - `media-document()`
   - : 動画、画像、プラグイン、またはそのすべての引数
 - `regexp()`
-  - : 文書の URL が、指定された[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)に一致する場合に一致します。正規表現は URL 全体に一致する必要があります。
+  - : 文書の URL が、指定された[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)に一致する場合に一致します。正規表現は URL 全体に一致する必要があります。
 
 `url()`, `url-prefix()`, `domain()`, `media-document()` 関数に与える値は、単一引用符または二重引用符で囲ムこともできます。 `regexp()` 関数に与える値は、引用符で囲む*必要があります*。
 
@@ -39,7 +39,8 @@ l10n:
 
 `@document` は現在のところ Firefox のみが対応しています。 Firefox 以外のブラウザーでこの機能を再現したい場合は、[このポリフィル](https://github.com/An-Error94/Handy-Scripts/tree/master/%40document-polyfill) (@An-Error94 氏作) を使ってみてください。これは、ユーザースクリプトと [data-\* 属性](/ja/docs/Web/HTML/Global_attributes/data-*)と[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)を組み合わせて使用するものです。
 
-> **メモ:** このプロパティの -moz 接頭辞がついたバージョン `@-moz-document` があります。これは Firefox 59 の Nightly および Beta で、潜在的な CSS インジェクション攻撃を緩和するための実験として、ユーザー定義スタイルシートとユーザーエージェントスタイルシートでしか使用できないように制限されました ([Firefox バグ 1035091](https://bugzil.la/1035091) を参照)。
+> [!NOTE]
+> このプロパティの -moz 接頭辞がついたバージョン `@-moz-document` があります。これは Firefox 59 の Nightly および Beta で、潜在的な CSS インジェクション攻撃を緩和するための実験として、ユーザー定義スタイルシートとユーザーエージェントスタイルシートでしか使用できないように制限されました ([Firefox バグ 1035091](https://bugzil.la/1035091) を参照)。
 
 ## 形式文法
 

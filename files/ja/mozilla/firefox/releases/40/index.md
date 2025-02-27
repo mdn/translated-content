@@ -93,7 +93,7 @@ _変更なし。_
 
 #### DOM & HTML DOM
 
-- 最新の仕様書の要求に従い、[`srcset`](/ja/docs/Web/HTML/Element/image#srcset) をパースできないときに {{domxref("HTMLImageElement.currentSrc")}} メソッドは `null` ではなく `""` を返すようになりました ([Firefox バグ 1139560](https://bugzil.la/1139560))。
+- 最新の仕様書の要求に従い、[`srcset`](/ja/docs/Web/HTML/Element/img#srcset) をパースできないときに {{domxref("HTMLImageElement.currentSrc")}} メソッドは `null` ではなく `""` を返すようになりました ([Firefox バグ 1139560](https://bugzil.la/1139560))。
 - 画像と同様に、Firefox は非表示の {{HTMLElement("iframe")}} に対して {{domxref("Window.requestAnimationFrame()")}} を抑制するようになりました ([Firefox バグ 1145439](https://bugzil.la/1145439))。
 - {{domxref("NavigatorID/taintEnabled", "Navigator.taintEnabled")}} はウェブワーカーで使用できなくなりました ([Firefox バグ 1154878](https://bugzil.la/1154878))。
 
@@ -112,7 +112,7 @@ _変更なし。_
 
 #### IndexedDB
 
-- {{domxref("IDBTransaction")}} は、デフォルトで永続的ではなくなりました ([Firefox バグ 1112702](https://bugzil.la/1112702))。これは信頼性よりパフォーマンスを重視するものであり、また他のブラウザの動作に合致します。詳しくは [durability の定義](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#durable)をご覧ください。
+- {{domxref("IDBTransaction")}} は、デフォルトで永続的ではなくなりました ([Firefox バグ 1112702](https://bugzil.la/1112702))。これは信頼性よりパフォーマンスを重視するものであり、また他のブラウザーの動作に合致します。詳しくは [durability の定義](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#durable)をご覧ください。
 
 #### 開発者ツール
 
@@ -136,7 +136,7 @@ _変更なし。_
 
 ## セキュリティ
 
-- {{Glossary("CSP")}} でアスタリスク (`*`) を使用した場合に、`data:`、`blob:`、`:filesystem` の各スキーマは提供元のマッチング対象に含まれなくなりました。これらのスキーマを CSP でマッチさせるには、関連するヘッダで明示的に定義しなければなりません ([Firefox バグ 1086999](https://bugzil.la/1086999))。
+- {{Glossary("CSP")}} でアスタリスク (`*`) を使用した場合に、`data:`、`blob:`、`:filesystem` の各スキーマは提供元のマッチング対象に含まれなくなりました。これらのスキーマを CSP でマッチさせるには、関連するヘッダーで明示的に定義しなければなりません ([Firefox バグ 1086999](https://bugzil.la/1086999))。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 

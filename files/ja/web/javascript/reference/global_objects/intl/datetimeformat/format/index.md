@@ -7,7 +7,29 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
 
 The **`Intl.DateTimeFormat.prototype.format()`** メソッドは、この {{jsxref("Intl.DateTimeFormat")}} オブジェクトのロケールと整形オプションに従って日付や時刻を整形します。
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-format.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.format", "taller")}}
+
+```js interactive-example
+const options1 = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+const date1 = new Date(2012, 5);
+
+const dateTimeFormat1 = new Intl.DateTimeFormat("sr-RS", options1);
+console.log(dateTimeFormat1.format(date1));
+// Expected output: "петак, 1. јун 2012."
+
+const dateTimeFormat2 = new Intl.DateTimeFormat("en-GB", options1);
+console.log(dateTimeFormat2.format(date1));
+// Expected output: "Friday, 1 June 2012"
+
+const dateTimeFormat3 = new Intl.DateTimeFormat("en-US", options1);
+console.log(dateTimeFormat3.format(date1));
+// Expected output: "Friday, June 1, 2012"
+```
 
 ## 構文
 
@@ -77,7 +99,8 @@ let formattedDate = Intl.DateTimeFormat(undefined, {
 // false in IE and Edge
 ```
 
-> **メモ:** この [StackOverflow のスレッド](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)に詳細や例があります。
+> [!NOTE]
+> この [StackOverflow のスレッド](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)に詳細や例があります。
 
 ## 仕様書
 

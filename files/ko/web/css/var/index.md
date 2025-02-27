@@ -19,7 +19,8 @@ var(--header-color, blue);
 
 {{csssyntax}}
 
-> **참고:** 대체값 구문은 사용자 지정 속성 구문과 동일하게 쉼표를 허용합니다. 그러므로 `var(--foo, red, blue)`의 대체값은 쉼표까지 포함한 `red, blue`입니다. 말하자면 첫 번째 쉼표의 뒤쪽은 모두 대체값이 되는 것입니다.
+> [!NOTE]
+> 대체값 구문은 사용자 지정 속성 구문과 동일하게 쉼표를 허용합니다. 그러므로 `var(--foo, red, blue)`의 대체값은 쉼표까지 포함한 `red, blue`입니다. 말하자면 첫 번째 쉼표의 뒤쪽은 모두 대체값이 되는 것입니다.
 
 ### 값
 
@@ -71,4 +72,4 @@ body {
 ## 같이 보기
 
 - {{cssxref("env","env(…)")}} – 사용자 에이전트가 통제하는 읽기 전용 환경 변수.
-- [CSS 변수 사용하기](/ko/docs/Web/CSS/Using_CSS_variables)
+- [CSS 변수 사용하기](/ko/docs/Web/CSS/Using_CSS_custom_properties)

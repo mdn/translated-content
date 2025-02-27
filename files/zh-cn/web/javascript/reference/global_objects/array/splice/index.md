@@ -1,15 +1,30 @@
 ---
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
+l10n:
+  sourceCommit: 85d7482697cc2bf407c58e809a2a754180d6714c
 ---
 
 {{JSRef}}
 
-**`splice()`** 方法通过移除或者替换已存在的元素和/或添加新元素[就地](https://zh.wikipedia.org/wiki/原地算法)改变一个数组的内容。
+**`splice()`** 方法[就地](https://zh.wikipedia.org/wiki/原地算法)移除或者替换已存在的元素和/或添加新的元素。
 
 要创建一个删除和/或替换部分内容而不改变原数组的新数组，请使用 {{jsxref("Array/toSpliced", "toSpliced()")}}。要访问数组的一部分而不修改它，参见 {{jsxref("Array.prototype.slice()", "slice()")}}。
 
-{{EmbedInteractiveExample("pages/js/array-splice.html")}}
+{{InteractiveExample("JavaScript Demo: Array.splice()")}}
+
+```js interactive-example
+const months = ["Jan", "March", "April", "June"];
+months.splice(1, 0, "Feb");
+// Inserts at index 1
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+months.splice(4, 1, "May");
+// Replaces 1 element at index 4
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+```
 
 ## 语法
 
@@ -17,7 +32,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 splice(start)
 splice(start, deleteCount)
 splice(start, deleteCount, item1)
-splice(start, deleteCount, item1, item2, itemN)
+splice(start, deleteCount, item1, item2)
+splice(start, deleteCount, item1, item2, /* …, */ itemN)
 ```
 
 ### 参数
@@ -25,7 +41,7 @@ splice(start, deleteCount, item1, item2, itemN)
 - `start`
 
   - : 从 0 开始计算的索引，表示要开始改变数组的位置，它会被[转换成整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
-    - 负索引从数组末尾开始计算——如果 `start < 0`，使用 `start + array.length`。
+    - 负索引从数组末尾开始计算——如果 `-buffer.length <= start < 0`，使用 `start + array.length`。
     - 如果 `start < -array.length`，使用 `0`。
     - 如果 `start >= array.length`，则不会删除任何元素，但是该方法会表现为添加元素的函数，添加所提供的那些元素。
     - 如果 `start` 被省略了（即调用 `splice()` 时不传递参数），则不会删除任何元素。这与传递 `undefined` 不同，后者会被转换为 `0`。
@@ -38,7 +54,7 @@ splice(start, deleteCount, item1, item2, itemN)
 
     如果 `deleteCount` 是 `0` 或者负数，则不会移除任何元素。在这种情况下，你应该至少指定一个新元素（请参见下文）。
 
-- `item1`, …, `itemN` {{optional_inline}}
+- `item1`、…、`itemN` {{optional_inline}}
 
   - : 从 `start` 开始要加入到数组中的元素。
 
@@ -54,7 +70,7 @@ splice(start, deleteCount, item1, item2, itemN)
 
 ## 描述
 
-`splice()` 方法是一个[修改方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它可能会更改 `this` 的内容。如果指定的要插入的元素数量与要删除的元素数量不同，数组的 `length` 也将会更改。同时，它会使用 [`@@species`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) 来创建一个新数组实例并返回。
+`splice()` 方法是一个[修改方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它可能会更改 `this` 的内容。如果指定的要插入的元素数量与要删除的元素数量不同，数组的 `length` 也将会更改。同时，它会使用 [`[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species) 来创建一个新数组实例并返回。
 
 如果删除的部分是[稀疏的](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，则 `splice()` 返回的数组也是稀疏的，对应的索引为空槽。
 
@@ -62,24 +78,48 @@ splice(start, deleteCount, item1, item2, itemN)
 
 ## 示例
 
-### 移除索引 2 之前的 0（零）个元素，并插入“drum”
+### 在索引 2 处移除 0 个元素，并插入“drum”
 
 ```js
 const myFish = ["angel", "clown", "mandarin", "sturgeon"];
 const removed = myFish.splice(2, 0, "drum");
 
-// 运算后的 myFish 是 ["angel", "clown", "drum", "mandarin", "sturgeon"]
-// removed 是 []，没有元素被删除
+// myFish 是 ["angel", "clown", "drum", "mandarin", "sturgeon"]
+// removed 是 []，没有移除的元素
 ```
 
-### 移除索引 2 之前的 0（零）个元素，并插入“drum”和“guitar”
+### 在索引 2 处移除 0 个元素，并插入“drum”和“guitar”
 
 ```js
 const myFish = ["angel", "clown", "mandarin", "sturgeon"];
 const removed = myFish.splice(2, 0, "drum", "guitar");
 
-// 运算后的 myFish 是 ["angel", "clown", "drum", "guitar", "mandarin", "sturgeon"]
-// removed 是 []，没有元素被删除
+// myFish 是 ["angel", "clown", "drum", "guitar", "mandarin", "sturgeon"]
+// removed 是 []，没有移除的元素
+```
+
+### 在索引 0 处移除 0 个元素，并插入“angel”
+
+`splice(0, 0, ...elements)` 像 {{jsxref("Array/unshift", "unshift()")}} 一样在数组的开头插入元素。
+
+```js
+const myFish = ["clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(0, 0, "angel");
+
+// myFish 是 ["angel", "clown", "mandarin", "sturgeon"]
+// 没有移除的元素
+```
+
+### 在最后一个索引处移除 0 个元素，并插入“sturgeon”
+
+`splice(array.length, 0, ...elements)` 像 {{jsxref("Array/push", "push()")}} 一样在数组的末尾插入元素。
+
+```js
+const myFish = ["angel", "clown", "mandarin"];
+const removed = myFish.splice(myFish.length, 0, "sturgeon");
+
+// myFish 是 ["angel", "clown", "mandarin", "sturgeon"]
+// 没有移除的元素
 ```
 
 ### 在索引 3 处移除 1 个元素
@@ -88,7 +128,7 @@ const removed = myFish.splice(2, 0, "drum", "guitar");
 const myFish = ["angel", "clown", "drum", "mandarin", "sturgeon"];
 const removed = myFish.splice(3, 1);
 
-// 运算后的 myFish 是 ["angel", "clown", "drum", "sturgeon"]
+// myFish 是 ["angel", "clown", "drum", "sturgeon"]
 // removed 是 ["mandarin"]
 ```
 
@@ -98,7 +138,7 @@ const removed = myFish.splice(3, 1);
 const myFish = ["angel", "clown", "drum", "sturgeon"];
 const removed = myFish.splice(2, 1, "trumpet");
 
-// 运算后的 myFish 是 ["angel", "clown", "trumpet", "sturgeon"]
+// myFish 是 ["angel", "clown", "trumpet", "sturgeon"]
 // removed 是 ["drum"]
 ```
 
@@ -108,7 +148,7 @@ const removed = myFish.splice(2, 1, "trumpet");
 const myFish = ["angel", "clown", "trumpet", "sturgeon"];
 const removed = myFish.splice(0, 2, "parrot", "anemone", "blue");
 
-// 运算后的 myFish 是 ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
+// myFish 是 ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
 // removed 是 ["angel", "clown"]
 ```
 
@@ -118,27 +158,27 @@ const removed = myFish.splice(0, 2, "parrot", "anemone", "blue");
 const myFish = ["parrot", "anemone", "blue", "trumpet", "sturgeon"];
 const removed = myFish.splice(2, 2);
 
-// 运算后的 myFish 是 ["parrot", "anemone", "sturgeon"]
+// myFish 是 ["parrot", "anemone", "sturgeon"]
 // removed 是 ["blue", "trumpet"]
 ```
 
-### 从索引 -2 处移除 1 个元素
+### 在索引 -2 处移除 1 个元素
 
 ```js
 const myFish = ["angel", "clown", "mandarin", "sturgeon"];
 const removed = myFish.splice(-2, 1);
 
-// 运算后的 myFish 是 ["angel", "clown", "sturgeon"]
+// myFish 是 ["angel", "clown", "sturgeon"]
 // removed 是 ["mandarin"]
 ```
 
-### 从索引 2 开始删除所有元素
+### 删除从索引 2 开始的所有元素
 
 ```js
 const myFish = ["angel", "clown", "mandarin", "sturgeon"];
 const removed = myFish.splice(2);
 
-// 运算后的 myFish 是 ["angel", "clown"]
+// myFish 是 ["angel", "clown"]
 // removed 是 ["mandarin", "sturgeon"]
 ```
 
@@ -179,7 +219,7 @@ console.log(arrayLike);
 
 ## 参见
 
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)指南
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.concat()")}}
 - {{jsxref("Array.prototype.push()")}}

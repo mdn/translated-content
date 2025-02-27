@@ -34,7 +34,7 @@ O **elemento** **HTML `<code>` **apresenta seu conteúdo estilizado de maneira a
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -75,7 +75,7 @@ Um parágrafo que inlcui `<code>`:
 </p>
 ```
 
-A sainda gerada por esse trecho HTML se parece com isso:
+A saída gerada por esse trecho HTML se parece com isso:
 
 {{EmbedLiveSample("Example", 640, 70)}}
 
@@ -91,7 +91,7 @@ Uma regra CSS pode ser definida para o seletor `code` para sobrescrever a fonte 
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.code")}}
+{{Compat}}
 
 ## Veja também
 

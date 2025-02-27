@@ -3,7 +3,7 @@ title: Math.hypot()
 slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Сводка
 

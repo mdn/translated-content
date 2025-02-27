@@ -3,17 +3,19 @@ title: ul
 slug: Web/HTML/Element/ul
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - **ul** de "unordered list" -_lista no ordenada_ . crea una lista no ordenada.
 
   - : **Sus etiquetas son**: `<ul> y </ul>` (ambas obligatorias).
 
-    **Está definido como**: Elemento [para listas](/es/HTML/Elemento/Tipos_de_elementos#delista).
+    **Está definido como**: Elemento [para listas](/es/docs/HTML/Elemento/Tipos_de_elementos#delista).
 
     **Crea una caja**: En bloque.
 
-    **Puede contener**: Uno o más elementos [li](/es/HTML/Elemento/li)
+    **Puede contener**: Uno o más elementos [li](/es/docs/Web/HTML/Element/li)
 
 #### Atributos
 
@@ -248,7 +250,8 @@ Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html
 
 ---
 
-> **Nota:** Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!NOTE]
+> Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
 >
 > ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
 

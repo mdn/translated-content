@@ -3,12 +3,14 @@ title: loadend
 slug: Web/API/XMLHttpRequest/loadend_event
 ---
 
+{{APIRef("XMLHttpRequest API")}}
+
 El evento `loadend` es emitido cuando el progreso de la carga de un recurso se ha detenido (e.g. despues que "error", "abort", o "load" han sido emitidos). Por ejemplo, esto aplica a las llamadas de {{domxref("XMLHttpRequest")}}, y al contenido de un elemento {{htmlelement("img")}} o {{htmlelement("video")}}.
 
 ## Información General
 
 - Especificación
-  - : [Progress](http://www.w3.org/TR/progress-events/)
+  - : [Progress](https://www.w3.org/TR/progress-events/)
 - Interfaz
   - : ProgressEvent
 - Bubbles
@@ -34,13 +36,13 @@ El evento `loadend` es emitido cuando el progreso de la carga de un recurso se h
 
 ## Eventos Relacionados
 
-- [`loadstart`](/es/docs/Web/Reference/Events/loadstart)
-- [`progress`](/es/docs/Web/Reference/Events/progress)
-- [`error`](/es/docs/Web/Reference/Events/error)
-- [`abort`](/es/docs/Web/Reference/Events/abort)
-- [`load`](/es/docs/Web/Reference/Events/load)
-- [`loadend`](/es/docs/Web/Reference/Events/loadend)
+- [`loadstart`](/es/docs/Web/API/XMLHttpRequest/loadstart_event)
+- [`progress`](/es/docs/Web/API/XMLHttpRequest/progress_event)
+- [`error`](/es/docs/Web/API/HTMLElement/error_event)
+- [`abort`](/es/docs/Web/API/HTMLMediaElement/abort_event)
+- [`load`](/es/docs/Web/API/Window/load_event)
+- [`loadend`](/es/docs/Web/API/XMLHttpRequest/loadend_event)
 
 ## Ver También
 
-- [Monitoreando progreso](/es/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
+- [Monitoreando progreso](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)

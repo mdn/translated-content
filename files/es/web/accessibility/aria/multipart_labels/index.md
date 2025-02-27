@@ -3,6 +3,8 @@ title: "Etiquetas complejas: Utilizando ARIA para etiquetas con campos embebidos
 slug: Web/Accessibility/ARIA/Multipart_labels
 ---
 
+{{AccessibilitySidebar}}
+
 ## Problema
 
 Tiene un formulario donde le pregunta a su usuario una pregunta, pero la respuesta es mencionada en la misma pregunta. Un ejemplo clásico que todos conocemos de las configuraciones de nuestro navegador es la opción "Eliminar el historial despues de x días". "Eliminar el historial despues" está a la izquierda de la caja de texto, x es el número, por ejemplo 21, y la palabra "días" sigue a la caja de texto, formando una oración que es fácil de comprender.
@@ -34,7 +36,8 @@ Tanto **aria-labelledby** y **aria-describedby** se especifican en el elemento d
 
 JAWS 8.0 tiene su propia lógica para encontrar etiquetas, causando que siempre sobreescriba el nombre accesible que obtiene la caja de texto de un documento HTML. Con JAWS 8, no se ha encontrado una manera de hacer que acepte la etiqueta del ejemplo anterior. Pero NVDA y Window-Eyes funcionan correctamente, Orca on Linux tampoco tiene problemas.
 
-> **Nota:** TBD (pendiente): añadir más información sobre compatiblidad
+> [!NOTE]
+> TBD (pendiente): añadir más información sobre compatiblidad
 
 ## ¿Puede hacerse sin ARIA?
 

@@ -27,4 +27,4 @@ document.exitPointerLock();
 
 - {{domxref("Document.pointerLockElement")}}
 - {{domxref("Element.requestPointerLock()")}}
-- [L'API _Pointer Lock_](/fr/docs/WebAPI/Pointer_Lock)
+- [L'API _Pointer Lock_](/fr/docs/Web/API/Pointer_Lock_API)

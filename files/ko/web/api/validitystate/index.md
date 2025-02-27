@@ -44,5 +44,5 @@ slug: Web/API/ValidityState
 
 ## 같이 보기
 
-- [Guide: Constraint validation](/ko/docs/Web/Guide/HTML/HTML5/Constraint_validation)
-- [Tutorial: Form data validation](/ko/docs/Learn/HTML/Forms/Form_validation)
+- [Guide: Constraint validation](/ko/docs/Web/HTML/Constraint_validation)
+- [Tutorial: Form data validation](/ko/docs/Learn/Forms/Form_validation)

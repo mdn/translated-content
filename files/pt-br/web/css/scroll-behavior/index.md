@@ -103,4 +103,4 @@ scroll-page {
 
 ## Compatibilidade com navegador
 
-{{Compat("css.properties.scroll-behavior")}}
+{{Compat}}

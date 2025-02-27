@@ -1,6 +1,8 @@
 ---
 title: margin-inline-end
 slug: Web/CSS/margin-inline-end
+l10n:
+  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
 {{CSSRef}}
@@ -24,6 +26,7 @@ margin-inline-end: auto;
 margin-inline-end: inherit;
 margin-inline-end: initial;
 margin-inline-end: revert;
+margin-inline-end: revert-layer;
 margin-inline-end: unset;
 ```
 
@@ -43,19 +46,19 @@ margin-inline-end: unset;
 
 ## 例
 
-<h3 id="Setting_inline_end_margin">インライン方向の末尾側のマージンの設定</h3>
+### インライン方向の末尾側のマージンの設定
 
 #### HTML
 
-```html
+```html live-sample___setting_inline_end_margin
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___setting_inline_end_margin
 div {
   background-color: yellow;
   width: 120px;
@@ -83,6 +86,7 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - {{cssxref("margin-inline-start")}}
 - 対応づけ先の物理的なプロパティ: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

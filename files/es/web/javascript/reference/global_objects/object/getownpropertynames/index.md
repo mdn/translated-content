@@ -3,7 +3,7 @@ title: Object.getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 ## Resumen
 
@@ -113,7 +113,7 @@ console.log(nonenum_only);
 
 ## Ver también
 
-- [Enumerability and ownership of properties](/es/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.prototype.hasOwnProperty")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable")}}
 - {{jsxref("Object.create")}}

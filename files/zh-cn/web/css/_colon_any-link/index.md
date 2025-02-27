@@ -1,5 +1,5 @@
 ---
-title: ":any-link"
+title: :any-link
 slug: Web/CSS/:any-link
 ---
 
@@ -56,7 +56,7 @@ a:-webkit-any-link {
 
 ## 参见
 
-- [创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [创建超链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links)
 - 匹配 HTML 元素：具有 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性的 [`<a>`](/zh-CN/docs/Web/HTML/Element/a) 和 [`<area>`](/zh-CN/docs/Web/HTML/Element/area)
 - 相关的 CSS 选择器：
 

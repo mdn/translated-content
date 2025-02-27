@@ -3,9 +3,9 @@ title: devtools.panels.elements
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/elements
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-Un objet [`ElementsPanel`](/fr/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel) qui représente l'inspecteur HTML/CSS du navigateur
+Un objet [`ElementsPanel`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel) qui représente l'inspecteur HTML/CSS du navigateur
 
 ## Compatibilité des navigateurs
 
@@ -13,6 +13,6 @@ Un objet [`ElementsPanel`](/fr/Add-ons/WebExtensions/API/devtools.panels/Element
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).

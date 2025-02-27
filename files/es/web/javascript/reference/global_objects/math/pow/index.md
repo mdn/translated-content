@@ -3,7 +3,7 @@ title: Math.pow()
 slug: Web/JavaScript/Reference/Global_Objects/Math/pow
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Resumen
 

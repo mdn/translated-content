@@ -3,6 +3,8 @@ title: Referencia de Atributos HTML
 slug: Web/HTML/Attributes
 ---
 
+{{HTMLSidebar("Attributes")}}
+
 Los elementos en HTML tienen **atributos**; estos son valores adicionales que configuran los elementos o ajustan su comportamiento de diversas formas para cumplir los criterios de los usuarios.
 
 ## Lista de Atributos
@@ -38,12 +40,12 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>align</code></td>
-      <td>{{ HTMLElement("applet") }}, {{ HTMLElement("caption") }}, {{ HTMLElement("col") }}, {{ HTMLElement("colgroup") }}, {{ HTMLElement("hr") }}, {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }}, {{ HTMLElement("table") }}, {{ HTMLElement("tbody") }}, {{ HTMLElement("td") }}, {{ HTMLElement("tfoot") }} , {{ HTMLElement("th") }}, {{ HTMLElement("thead") }}, {{ HTMLElement("tr") }}</td>
+      <td>{{ HTMLElement("caption") }}, {{ HTMLElement("col") }}, {{ HTMLElement("colgroup") }}, {{ HTMLElement("hr") }}, {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }}, {{ HTMLElement("table") }}, {{ HTMLElement("tbody") }}, {{ HTMLElement("td") }}, {{ HTMLElement("tfoot") }} , {{ HTMLElement("th") }}, {{ HTMLElement("thead") }}, {{ HTMLElement("tr") }}</td>
       <td>Especifica el alineamiento horizontal del elemento.</td>
      </tr>
      <tr>
       <td><code>alt</code></td>
-      <td>{{ HTMLElement("applet") }}, {{ HTMLElement("area") }}, {{ HTMLElement("img") }}, {{ HTMLElement("input") }}</td>
+      <td>{{ HTMLElement("area") }}, {{ HTMLElement("img") }}, {{ HTMLElement("input") }}</td>
       <td>Texto alternativo en caso de que la imagen no se pueda mostrar.</td>
      </tr>
      <tr>
@@ -58,7 +60,7 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>autofocus</code></td>
-      <td>{{ HTMLElement("button") }}, {{ HTMLElement("input") }}, {{ HTMLElement("keygen") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }}</td>
+      <td>{{ HTMLElement("button") }}, {{ HTMLElement("input") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }}</td>
       <td>El elemento debería recibir foco automáticamente después de haberse cargado la página.</td>
      </tr>
      <tr>
@@ -97,11 +99,6 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
       <td>Contiene un rango de tiempo multimedia almacenado.</td>
      </tr>
      <tr>
-      <td><code>challenge</code></td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>Cadena de desafío que se envía junto con la clave pública.</td>
-     </tr>
-     <tr>
       <td><code>charset</code></td>
       <td>{{ HTMLElement("meta") }}, {{ HTMLElement("script") }}</td>
       <td>Declara la codificación de caracteres de la página o del script.</td>
@@ -120,16 +117,6 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
       <td><code>class</code></td>
       <td><a href="/es/docs/Web/HTML/Atributos_globales" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
       <td>Usualmente empleado con CSS para aplicar estilos a elementos con propiedades en comun.</td>
-     </tr>
-     <tr>
-      <td><code>code</code></td>
-      <td>{{ HTMLElement("applet") }}</td>
-      <td>Especifica la URL del archivo de tipo applet a ser cargado y ejecutado.</td>
-     </tr>
-     <tr>
-      <td><code>codebase</code></td>
-      <td>{{ HTMLElement("applet") }}</td>
-      <td>Este atributo contiene la URL absoluta o relativa del directorio donde los archivos de applets (.class) referenciados en el codigo se encuentran almacenados.</td>
      </tr>
      <tr>
       <td><code>color</code></td>
@@ -213,7 +200,7 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>disabled</code></td>
-      <td>{{ HTMLElement("button") }}, {{ HTMLElement("command") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("input") }}, {{ HTMLElement("keygen") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }}</td>
+      <td>{{ HTMLElement("button") }}, {{ HTMLElement("command") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("input") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }}</td>
       <td>Indica si el usuario puede interactuar con el elemento.</td>
      </tr>
      <tr>
@@ -243,7 +230,7 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>form</code></td>
-      <td>{{ HTMLElement("button") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("input") }}, {{ HTMLElement("keygen") }}, {{ HTMLElement("label") }}, {{ HTMLElement("meter") }}, {{ HTMLElement("object") }}, {{ HTMLElement("output") }}, {{ HTMLElement("progress") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }}</td>
+      <td>{{ HTMLElement("button") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("input") }}, {{ HTMLElement("label") }}, {{ HTMLElement("meter") }}, {{ HTMLElement("object") }}, {{ HTMLElement("output") }}, {{ HTMLElement("progress") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }}</td>
       <td>Indica el formulario al que pertenece el elemento.</td>
      </tr>
      <tr>
@@ -315,16 +302,6 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
       <td><code>itemprop</code></td>
       <td><a href="/es/docs/Web/HTML/Atributos_globales" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
       <td>Indica que el elemento contiene el valor de la propiedad especificada de un conjunto.</td>
-     </tr>
-     <tr>
-      <td><code>keytype</code></td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>
-       <p>Especifica el tipo de clave generada.</p>
-       <div class="note">
-       <p><strong>Nota:</strong> RSA es el valor por defecto.</p>
-       </div>
-      </td>
      </tr>
      <tr>
       <td><code>kind</code></td>
@@ -403,7 +380,7 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>name</code></td>
-      <td>{{ HTMLElement("button") }}, {{ HTMLElement("form") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("iframe") }}, {{ HTMLElement("input") }}, {{ HTMLElement("keygen") }}, {{ HTMLElement("object") }}, {{ HTMLElement("output") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }}, {{ HTMLElement("map") }}, {{ HTMLElement("meta") }}, {{ HTMLElement("param") }}</td>
+      <td>{{ HTMLElement("button") }}, {{ HTMLElement("form") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("iframe") }}, {{ HTMLElement("input") }}, {{ HTMLElement("object") }}, {{ HTMLElement("output") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }}, {{ HTMLElement("map") }}, {{ HTMLElement("meta") }}, {{ HTMLElement("param") }}</td>
       <td>Nombre del elemento. Por ejemplo utilizado por el servidor para identificar los campos en el envio de formularios.</td>
      </tr>
      <tr>
@@ -652,8 +629,8 @@ La mayoria del tiempo, los atributos IDL pueden retornar sus valores como realme
 
 Los atributos IDL no son siempre strings; por ejemplo, `input.maxlength` es un numero (marcado como long). Cuando se usan atributos IDL, lees o defines valores del tipo deseado, entonces `input.maxlength` siempre retornara un numero y cuando definas `input,maxlength`, esperara un numero. Si se le entrega otro tipo, se convierte antomaticamente a numero como se especifica en las reglas del estandar de JavaScript para conversiones de tipo.
 
-Los atributos IDL pueden [reflejar otros tipos](http://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes) como un long sin asignacion, URL's, booleanos, etc. Desafortunadamente no hay reglas claras y el comportamiento que los atributos IDL en conjunto con sus respectivos atributos de contenido depende del mismo atributo. La mayoria del tiempo, siguen [las reglas de diseño en la especificacion](http://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes), pero algunas veces no lo hacen. Las especificaciones HTML tratan de ser lo mas amigables para el dasarrollador como es posible, pero por varias razones (mayormente historicas), algunos aributos se comportan de forma extraña (`select.size`, por ejemplo) y debes leer las especificaciones para comprender como éste se comporta exactamente.
+Los atributos IDL pueden [reflejar otros tipos](https://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes) como un long sin asignacion, URL's, booleanos, etc. Desafortunadamente no hay reglas claras y el comportamiento que los atributos IDL en conjunto con sus respectivos atributos de contenido depende del mismo atributo. La mayoria del tiempo, siguen [las reglas de diseño en la especificacion](https://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes), pero algunas veces no lo hacen. Las especificaciones HTML tratan de ser lo mas amigables para el dasarrollador como es posible, pero por varias razones (mayormente historicas), algunos aributos se comportan de forma extraña (`select.size`, por ejemplo) y debes leer las especificaciones para comprender como éste se comporta exactamente.
 
 ## Ver Tambien
 
-- [Elementos](/es/docs/Web/HTML/Elemento)
+- [Elementos](/es/docs/Web/HTML/Element)

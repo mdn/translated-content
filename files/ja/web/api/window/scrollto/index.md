@@ -51,4 +51,4 @@ window.scrollTo({
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.scrollTo")}}
+{{Compat}}

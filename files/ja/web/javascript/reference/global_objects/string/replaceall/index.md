@@ -2,14 +2,26 @@
 title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 l10n:
-  sourceCommit: 6e3889be77fa45d5823216d0cc61b4f7c4b99e1b
+  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
 {{JSRef}}
 
-**`replaceAll()`** メソッドは、`pattern` に一致したすべての文字列を `replacement` で置き換えた新しい文字列を返します。`pattern` は文字列または {{jsxref("RegExp")}} を指定することができ、`replacement` は文字列または各一致に対して呼び出される関数を指定することができます。元の文字列は変更されません。
+**`replaceAll()`** は {{jsxref("String")}} 値のメソッドで、`pattern` に一致したすべての文字列を `replacement` で置き換えた新しい文字列を返します。`pattern` には文字列または {{jsxref("RegExp")}} を指定することができ、`replacement` は文字列または各一致に対して呼び出される関数を指定することができます。元の文字列は変更されません。
 
-{{EmbedInteractiveExample("pages/js/string-replaceall.html")}}
+{{InteractiveExample("JavaScript Demo: String.replaceAll()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+console.log(paragraph.replaceAll("dog", "monkey"));
+// Expected output: "I think Ruth's monkey is cuter than your monkey!"
+
+// Global flag required when calling replaceAll with regex
+const regex = /Dog/gi;
+console.log(paragraph.replaceAll(regex, "ferret"));
+// Expected output: "I think Ruth's ferret is cuter than your ferret!"
+```
 
 ## 構文
 
@@ -58,14 +70,14 @@ console.log(unsafeRedactName(report, "ha.*er")); // "A [REDACTED]s in their name
 console.log(safeRedactName(report, "ha.*er")); // "A hacker called [REDACTED] used special characters in their name to breach the system."
 ```
 
-`pattern` が [`Symbol.replace`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) メソッドを持つオブジェクト（`RegExp` オブジェクトを含む）である場合、そのメソッドは対象の文字列と `replacement` を引数として呼び出されます。その返値は `replaceAll()` の返値となります。この場合、`replaceAll()` の動作は完全に `@@replace` メソッドによってエンコードされるので、 `replace()` と同じ結果になります（正規表現がグローバルであるかどうかの余分な入力検証を除けば）。
+`pattern` が [`Symbol.replace`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) メソッドを持つオブジェクト（`RegExp` オブジェクトを含む）である場合、そのメソッドは対象の文字列と `replacement` を引数として呼び出されます。その返値は `replaceAll()` の返値となります。この場合、`replaceAll()` の動作は完全に `[Symbol.replace]()` メソッドによってエンコードされるので、 `replace()` と同じ結果になります（正規表現がグローバルであるかどうかの余分な入力検証を除けば）。
 `pattern` が空文字列の場合、[`split()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) の動作と同様に、UTF-16 のコード単位ごとに置換文字列が挿入されます。
 
 ```js
 "xxx".replaceAll("", "_"); // "_x_x_x_"
 ```
 
-正規表現プロパティ（特に [sticky](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) フラグ）と `replaceAll()` との相互作用については、[`RegExp.prototype[@@replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace) を参照してください。
+正規表現プロパティ（特に [sticky](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) フラグ）と `replaceAll()` との相互作用については、[`RegExp.prototype[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace) を参照してください。
 
 ## 例
 
@@ -103,7 +115,7 @@ console.log(safeRedactName(report, "ha.*er")); // "A hacker called [REDACTED] us
 ## 関連情報
 
 - [`String.prototype.replaceAll` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.replace", "String.prototype.replace()")}}
-- {{jsxref("String.prototype.match", "String.prototype.match()")}}
-- {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test", "RegExp.prototype.test()")}}
+- {{jsxref("String.prototype.replace()")}}
+- {{jsxref("String.prototype.match()")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

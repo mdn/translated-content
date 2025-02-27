@@ -25,7 +25,8 @@ ErrorDocument 404 /notfound.html
 
 Para um exemplo de uma página 404 personalizada, veja [MDN's 404 page](/pt-BR/404).
 
-> **Nota:** Usar um design personalizado é uma boa ideia, se usado em moderação. Sinta-se livre para fazer a sua página 404 divertida, mas tome cuidado para não confundir seus usuários.
+> [!NOTE]
+> Usar um design personalizado é uma boa ideia, se usado em moderação. Sinta-se livre para fazer a sua página 404 divertida, mas tome cuidado para não confundir seus usuários.
 
 ## Especificações
 
@@ -35,7 +36,7 @@ Para um exemplo de uma página 404 personalizada, veja [MDN's 404 page](/pt-BR/4
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.404")}}
+{{Compat}}
 
 ## Veja também
 

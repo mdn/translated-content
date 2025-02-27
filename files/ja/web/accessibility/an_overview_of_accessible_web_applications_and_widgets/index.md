@@ -2,14 +2,14 @@
 title: アクセシブルなウェブアプリケーションやウィジェットの概要
 slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 l10n:
-  sourceCommit: fc294fbbf432b5b210e0394e23b5c8950e81d734
+  sourceCommit: acad5b9afc0a9e20144d49fd3fbb7f4fa92c9192
 ---
 
 <section id="Quick_links">
-  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+  {{ListSubpagesForSidebar("/ja/docs/Web/Accessibility", 1)}}
 </section>
 
-ほとんどの JavaScript ライブラリーでは、デスクトップで慣れ親しんだインターフェースの動作を模倣した、クライアントサイドウィジェットのライブラリーが提供されています。スライダー、メニューバー、ファイルリストビューなどは、JavaScript、CSS、HTMLの組み合わせで構築することができます。HTML4 の規格では、この種のウィジェットを意味的に記述する組み込みタグが提供されていないため、開発者は一般に {{HTMLElement('div')}} や {{HTMLElement('span')}} などの汎用の要素を使用することになります。この結果、デスクトップと同じように見えるウィジェットができますが、通常、マークアップには支援技術で使用するのに十分な意味づけの情報がありません。
+ほとんどの JavaScript ライブラリーでは、デスクトップで慣れ親しんだインターフェイスの動作を模倣した、クライアントサイドウィジェットのライブラリーが提供されています。スライダー、メニューバー、ファイルリストビューなどは、JavaScript、CSS、HTMLの組み合わせで構築することができます。HTML4 の規格では、この種のウィジェットを意味的に記述する組み込みタグが提供されていないため、開発者は一般に {{HTMLElement('div')}} や {{HTMLElement('span')}} などの汎用の要素を使用することになります。この結果、デスクトップと同じように見えるウィジェットができますが、通常、マークアップには支援技術で使用するのに十分な意味づけの情報がありません。
 
 ## 問題点
 
@@ -44,7 +44,8 @@ _例 2: タブウィジェットはどのようにして視覚的にスタイル
 
 **ARIA**は、開発者がマークアップに特別な属性を追加することによって、ウィジェットをより詳細に記述することができるようにしています。標準的な HTML タグと、動的なウェブアプリケーションで得られるデスクトップスタイルのコントロールとの間のギャップを埋めるために設計された ARIA は、ほとんどの慣れた UI ウィジェットの挙動を記述する役割と状態を提供します。
 
-> **警告:** これらの多くは、ブラウザーが現代の HTML の機能に完全には対応していなかったため、後に追加されたものです。**開発者は常に、ARIA を使用するよりも正しい意味づけの HTML 要素を使用することを優先すべきです**。
+> [!WARNING]
+> これらの多くは、ブラウザーが現代の HTML の機能に完全には対応していなかったため、後に追加されたものです。**開発者は常に、ARIA を使用するよりも正しい意味づけの HTML 要素を使用することを優先すべきです**。
 
 ARIA 仕様書は 3 種類の属性に分けられています: ロール、ステート、プロパティです。ロールは HTML 4 において他の方法で利用できないウィジェット、例えばスライダー、メニューバー、タブ、ダイアログなどを説明します。プロパティはこれらのウィジェットの特徴、例えばドラッグ可能、必須の要素がある、関連づけられたポップアップがあるなどを説明します。ステートは要素について支援技術に伝える現在の対話状態、例えば動作中、無効、選択中、不可視などの状態を説明します。
 
@@ -155,7 +156,8 @@ ARIA では、開発者が要素の意味づけの役割を宣言することが
 
 ### 非同期のコンテンツ変更
 
-> **メモ:** 作成中です。[ライブリージョン](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) もご覧ください。
+> [!NOTE]
+> 作成中です。[ライブリージョン](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) もご覧ください。
 
 ## キーボード操作
 
@@ -178,4 +180,4 @@ ARIA では、開発者が要素の意味づけの役割を宣言することが
 - [ARIA](/ja/docs/Web/Accessibility/ARIA)
 - [キーボードで操作可能な JavaScript ウィジェットを書く](/ja/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
 - [WAI-ARIA Specification](https://www.w3.org/TR/wai-aria-1.1/)
-- [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/)
+- [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)

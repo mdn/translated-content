@@ -102,14 +102,11 @@ console.log(result); // "foo"
 
 ## Especificações
 
-| Especificação                         | Situação             | Comentário         |
-| ------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#', 'Yield')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#', 'Yield')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.yield_star")}}
+{{Compat}}
 
 ## Notas específicas do Firefox
 
@@ -126,7 +123,7 @@ console.log(result); // "foo"
 
 ## Veja também
 
-- [O protocolo Iterator](/pt-BR/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [O protocolo Iterator](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield", "yield")}}

@@ -7,9 +7,38 @@ slug: Web/HTML/Element/input/checkbox
 
 **`checkbox`** 类型的 {{htmlelement("input")}} 元素在默认情况下被呈现为激活时被选中（打勾）的方框，就像你在官方的政府文件表格中看到的那样。具体外观取决于浏览器运行的操作系统配置。一般来说，这是一个正方形，但它可能有圆角。复选框允许你在表格中选择单一的数值进行提交（或不提交）。
 
-{{EmbedInteractiveExample("pages/tabbed/input-checkbox.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;checkbox&quot;&gt;", "tabbed-standard")}}
 
-> **备注：** [单选按钮](/zh-CN/docs/Web/HTML/Element/Input/radio)与复选框类似，但有一个重要的区别——单选按钮被分组为一个集合，一次只能选择一个单选按钮；而复选框允许你选中/取消选中单个值。如果存在多个控件，单选按钮允许从它们中选择一个，而复选框则允许选择多个值。
+```html interactive-example
+<fieldset>
+  <legend>Choose your monster's features:</legend>
+
+  <div>
+    <input type="checkbox" id="scales" name="scales" checked />
+    <label for="scales">Scales</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="horns" name="horns" />
+    <label for="horns">Horns</label>
+  </div>
+</fieldset>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
+
+> **备注：** [单选按钮](/zh-CN/docs/Web/HTML/Element/input/radio)与复选框类似，但有一个重要的区别——单选按钮被分组为一个集合，一次只能选择一个单选按钮；而复选框允许你选中/取消选中单个值。如果存在多个控件，单选按钮允许从它们中选择一个，而复选框则允许选择多个值。
 
 <table class="properties">
   <tbody>
@@ -21,7 +50,7 @@ slug: Web/HTML/Element/input/checkbox
     </tr>
     <tr>
       <td><strong>事件</strong></td>
-      <td>{{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}}</td>
+      <td>{{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("Element/input_event", "input")}}</td>
     </tr>
     <tr>
       <td><strong>支持的常用属性</strong></td>
@@ -73,7 +102,8 @@ slug: Web/HTML/Element/input/checkbox
 
 如果复选框的 `value` 属性被省略了，则它默认具有值 `on`，在这种情况下提交的数据将是 `subscribe=on`。
 
-> **备注：** 如果一个复选框在其表单被提交时没有被选中，就不会有任何代表其未被选中的状态（例如 `value=unchecked`）的值被提交给服务器——该值根本就没有被提交给服务器！如果你想在复选框未被选中时提交一个默认值，你可以在表单中加入一个具有相同的 `name` 和 `value` 的 {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} 字段，它可以由 JavaScript 生成。
+> [!NOTE]
+> 如果一个复选框在其表单被提交时没有被选中，就不会有任何代表其未被选中的状态（例如 `value=unchecked`）的值被提交给服务器——该值根本就没有被提交给服务器！如果你想在复选框未被选中时提交一个默认值，你可以在表单中加入一个具有相同的 `name` 和 `value` 的 {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} 字段，它可以由 JavaScript 生成。
 
 ## 其他属性
 
@@ -82,7 +112,8 @@ slug: Web/HTML/Element/input/checkbox
 - `checked`
 
   - : 一个布尔属性，表示该复选框是否被默认选中（当页面加载时）。它不表示这个复选框当前是否被选中：如果复选框的状态被改变，这个内容属性不反映这个变化。此时，只有 {{domxref("HTMLInputElement")}} 的 IDL 属性 `checked` 会更新。
-    > **备注：** 与其他输入控件不同，复选框的值只有在复选框当前状态为 `checked` 时才会被包含在提交的数据中。如果它被选中，那么复选框的 `value` 属性的值就会被报告为输入的值。不像其他浏览器那样，Firefox 默认情况下在不同页面之间会[保持 `<input>` 动态选中的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。请使用 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/input#autocomplete) 属性来控制这个特性。
+    > [!NOTE]
+    > 与其他输入控件不同，复选框的值只有在复选框当前状态为 `checked` 时才会被包含在提交的数据中。如果它被选中，那么复选框的 `value` 属性的值就会被报告为输入的值。不像其他浏览器那样，Firefox 默认情况下在不同页面之间会[保持 `<input>` 动态选中的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。请使用 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/input#autocomplete) 属性来控制这个特性。
 
 - `value`
 
@@ -197,11 +228,12 @@ function updateDisplay() {
 
 {{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}
 
-> **备注：** 如果你提交一个带有不确定复选框的表单，发生的情况与复选框不被选中的情况相同——没有代表复选框的数据提交给服务器。
+> [!NOTE]
+> 如果你提交一个带有不确定复选框的表单，发生的情况与复选框不被选中的情况相同——没有代表复选框的数据提交给服务器。
 
 ## 验证方式
 
-复选框支持提供给所有 {{HTMLElement("input")}} 元素的[验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)功能。然而，大部分的 {{domxref("ValidityState")}} 值将永远为 `false`。如果复选框具有 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性，但没有被选中，那么 {{domxref("ValidityState.valueMissing")}} 将为 `true`。
+复选框支持提供给所有 {{HTMLElement("input")}} 元素的[验证](/zh-CN/docs/Web/HTML/Constraint_validation)功能。然而，大部分的 {{domxref("ValidityState")}} 值将永远为 `false`。如果复选框具有 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性，但没有被选中，那么 {{domxref("ValidityState.valueMissing")}} 将为 `true`。
 
 ## 示例
 
@@ -304,4 +336,4 @@ otherCheckbox.addEventListener("change", () => {
 
 - 通用 {{HTMLElement("input")}} 元素和用于操作该元素的接口 {{domxref("HTMLInputElement")}}
 - 基于当前状态的 {{cssxref(":checked")}} 和 {{cssxref(":indeterminate")}} CSS 选择器，可供赋予样式
-- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

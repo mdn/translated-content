@@ -1,59 +1,68 @@
 ---
 title: MessageChannel
 slug: Web/API/MessageChannel
+l10n:
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
 
-[Channel Messaging API](/ja/docs/Web/API/Channel_Messaging_API) の **`MessageChannel`** インターフェースは、新しいメッセージチャンネルを作成し、2 つの {{domxref("MessagePort")}} プロパティを通して、その間でデータを送信できます。
+**`MessageChannel`** は[チャンネルメッセージング API](/ja/docs/Web/API/Channel_Messaging_API) のインターフェイスで、新しいメッセージチャンネルを作成し、2 つの {{domxref("MessagePort")}} プロパティを通して、その間でデータを送信できます。
 
-{{AvailableInWorkers}}
+## コンストラクター
+
+- {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}}
+  - : 2 つの新しい {{domxref("MessagePort")}} オブジェクトを持つ新しい `MessageChannel` オブジェクトを返します。
 
 ## プロパティ
 
-- {{domxref("MessageChannel.port1")}} {{readonlyInline}}
+- {{domxref("MessageChannel.port1")}} {{ReadOnlyInline}}
   - : チャンネルの port1 を返します。
-- {{domxref("MessageChannel.port2")}} {{readonlyInline}}
+- {{domxref("MessageChannel.port2")}} {{ReadOnlyInline}}
   - : チャンネルの port2 を返します。
-
-## コンストラクタ
-
-- {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}}
-  - : 2 つの新しい {{domxref("MessagePort")}} オブジェクトを持つ 新しい `MessageChannel` オブジェクトを返します。
 
 ## 例
 
-次のコードブロックでは、{{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} コンストラクタを使用して作成された新しいチャンネルを知ることができます。{{HTMLElement("iframe")}} が読み込まれると、{{domxref("MessagePort.postMessage")}} にメッセージを添えて {{domxref("MessageChannel.port2")}} を {{HTMLElement("iframe")}} へ渡します。すると、`handleMessage` ハンドラが {{HTMLElement("iframe")}} から返送されたメッセージに ({{domxref("MessagePort.onmessage")}} を使用して) 返答し、これを段落に挿入します。
+次の例では、{{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} コンストラクターを使用して新しいチャンネルを作成する様子を見ることができます。
+
+iframe が読み込まれると、{{domxref("MessagePort/message_event","onmessage")}} ハンドラーを {{domxref("MessageChannel.port1")}} に登録し、{{domxref("MessageChannel.port2")}} を {{domxref("window.postMessage")}} メソッドを使用して iframe へ転送します。
+
+IFrame からメッセージが返送されると、`onMessage` 関数はそのメッセージを段落に出力します。
 
 ```js
-var channel = new MessageChannel();
-var para = document.querySelector("p");
+const channel = new MessageChannel();
+const output = document.querySelector(".output");
+const iframe = document.querySelector("iframe");
 
-var ifr = document.querySelector("iframe");
-var otherWindow = ifr.contentWindow;
+// iframe が読み込まれるのを待つ
+iframe.addEventListener("load", onLoad);
 
-ifr.addEventListener("load", iframeLoaded, false);
+function onLoad() {
+  // port1 のメッセージを待ち受けする
+  channel.port1.onmessage = onMessage;
 
-function iframeLoaded() {
-  otherWindow.postMessage("Hello from the main page!", "*", [channel.port2]);
+  // port2 を iframe へ転送する
+  iframe.contentWindow.postMessage("メインページからこんにちは！", "*", [
+    channel.port2,
+  ]);
 }
 
-channel.port1.onmessage = handleMessage;
-function handleMessage(e) {
-  para.innerHTML = e.data;
+// port1 で受け取ったメッセージを処理する
+function onMessage(e) {
+  output.innerHTML = e.data;
 }
 ```
 
-完全に動作する例は、Github 上の [channel messaging basic demo](https://github.com/mdn/channel-messaging-basic-demo) を参照してください ([実際のデモも実行できます](http://mdn.github.io/channel-messaging-basic-demo/))。
+完全に動作する例は、Github 上の [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic) を参照してください ([実際のデモも実行できます](https://mdn.github.io/dom-examples/channel-messaging-basic/))。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザの実装状況
+## ブラウザーの互換性
 
-{{Compat("api.MessageChannel")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Using channel messaging](/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [チャンネルメッセージングの使用](/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

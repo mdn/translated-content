@@ -40,4 +40,4 @@ l10n:
 - すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.contentEditable")}} および {{domxref("HTMLElement.isContentEditable")}}
 - CSS の {{cssxref("caret-color")}} プロパティ
-- [HTMLElement の `input` イベント](/ja/docs/Web/API/HTMLElement/input_event)
+- [HTMLElement の `input` イベント](/ja/docs/Web/API/Element/input_event)

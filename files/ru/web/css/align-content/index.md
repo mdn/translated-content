@@ -241,14 +241,8 @@ display.addEventListener("change", function (evt) {
 
 ## Совместимость с браузерами
 
-### Support in Flex layout
-
-{{Compat}}
-
-### Support in Grid layout
-
 {{Compat}}
 
 ## Смотрите также
 
-- [Использование гибких блоков CSS](/ru/docs/CSS/Using_CSS_flexible_boxes)
+- [Использование гибких блоков CSS](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)

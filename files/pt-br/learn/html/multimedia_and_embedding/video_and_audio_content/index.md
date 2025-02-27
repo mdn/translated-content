@@ -53,7 +53,8 @@ Uma solução nativa resolveria muito disso, se bem feita. Felizmente, alguns an
 
 Não ensinaremos como produzir arquivos de áudio e vídeo - isso requer um conjunto de habilidades completamente diferente. Nós fornecemos a você [amostras de arquivos de áudio e vídeo e exemplos de códigos](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content) para sua própria experimentação, caso você não consiga se apossar.
 
-> **Nota:** Antes de começar aqui, você também deve saber que existem algumas {{glossary("OVP","OVPs")}} (fornecedores de vídeo online) como [YouTube](https://www.youtube.com/), [Dailymotion](http://www.dailymotion.com), e [Vimeo](https://vimeo.com/), e provedores de áudio on-line como [Soundcloud](https://soundcloud.com/). Essas empresas oferecem uma maneira conveniente e fácil de hospedar e consumir vídeos, para que você não precise se preocupar com o enorme consumo de largura de banda. Os OVPs geralmente oferecem código pronto para incorporar vídeo / áudio em suas páginas da web. Se você seguir esse caminho, poderá evitar algumas das dificuldades que discutimos neste artigo. Discutiremos esse tipo de serviço um pouco mais no próximo artigo.
+> [!NOTE]
+> Antes de começar aqui, você também deve saber que existem algumas {{glossary("OVP","OVPs")}} (fornecedores de vídeo online) como [YouTube](https://www.youtube.com/), [Dailymotion](http://www.dailymotion.com), e [Vimeo](https://vimeo.com/), e provedores de áudio on-line como [Soundcloud](https://soundcloud.com/). Essas empresas oferecem uma maneira conveniente e fácil de hospedar e consumir vídeos, para que você não precise se preocupar com o enorme consumo de largura de banda. Os OVPs geralmente oferecem código pronto para incorporar vídeo / áudio em suas páginas da web. Se você seguir esse caminho, poderá evitar algumas das dificuldades que discutimos neste artigo. Discutiremos esse tipo de serviço um pouco mais no próximo artigo.
 
 ### O elemento \<video>
 
@@ -103,7 +104,8 @@ Outra situação é o sempre popular arquivo MP3. Um "arquivo MP3" é na verdade
 
 Um reprodutor de áudio tenderá a reproduzir uma faixa de áudio diretamente, por exemplo um arquivo MP3 ou Ogg. Estes não precisam de contêineres.
 
-> **Nota:** Não é tão simples, como você pode ver no nosso [tabela de compatibilidade de codec de áudio e vídeo](/pt-BR/docs/Web/Media/Formats#Browser_compatibility). Além disso, muitos navegadores de plataforma móvel podem reproduzir um formato não suportado, entregando-o ao reprodutor de mídia do sistema subjacente. Mas isso servirá por enquanto.
+> [!NOTE]
+> Não é tão simples, como você pode ver no nosso [tabela de compatibilidade de codec de áudio e vídeo](/pt-BR/docs/Web/Media/Formats#browser_compatibility). Além disso, muitos navegadores de plataforma móvel podem reproduzir um formato não suportado, entregando-o ao reprodutor de mídia do sistema subjacente. Mas isso servirá por enquanto.
 
 #### Suporte a arquivos de mídia em navegadores
 
@@ -115,7 +117,8 @@ Devido à complexidade de garantir que a mídia do aplicativo seja visível em t
 
 Um aspecto adicional a ter em mente: os navegadores móveis podem suportar formatos adicionais não compatíveis com seus equivalentes de desktop, assim como podem não suportar os mesmos formatos da versão para desktop. Além disso, os navegadores de desktop e móveis _podem_ ser projetados para descarregar o manuseio da reprodução de mídia (para todas as mídias ou apenas para tipos específicos que não podem ser tratados internamente). Isso significa que o suporte à mídia depende parcialmente do software que o usuário instalou.
 
-> **Nota:** Você pode estar se perguntando por que essa situação existe. **MP3** (para áudio) e **MP4 / H.264** (para vídeo) são amplamente suportados e de boa qualidade. No entanto, eles também são patenteados - as patentes americanas cobrem o MP3 até pelo menos 2017 e o H.264 até 2027, o que significa que os navegadores que não possuem a patente precisam pagar grandes quantias para suportar esses formatos. Além disso, muitas pessoas evitam, por princípio, software restrito, a favor de formatos abertos. É por isso que precisamos fornecer vários formatos para diferentes navegadores.
+> [!NOTE]
+> Você pode estar se perguntando por que essa situação existe. **MP3** (para áudio) e **MP4 / H.264** (para vídeo) são amplamente suportados e de boa qualidade. No entanto, eles também são patenteados - as patentes americanas cobrem o MP3 até pelo menos 2017 e o H.264 até 2027, o que significa que os navegadores que não possuem a patente precisam pagar grandes quantias para suportar esses formatos. Além disso, muitas pessoas evitam, por princípio, software restrito, a favor de formatos abertos. É por isso que precisamos fornecer vários formatos para diferentes navegadores.
 
 Então, como fazemos isso? Dê uma olhada no seguinte [exemplo atualizado](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)([tente ao vivo aqui](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html), também):
 
@@ -134,7 +137,8 @@ Aqui nós tiramos o atributo `src` (source) do {{HTMLElement("video")}} tag, mas
 
 Cada elemento `<source>` também tem um atributo [`type`](/pt-BR/docs/Web/HTML/Element/source#type). Isso é opcional, mas é recomendável que você os inclua - eles contêm o {{glossary("MIME type","MIME types")}} dos arquivos de vídeo, e os navegadores podem lê-los e pular imediatamente os vídeos que não entendem. Se não estiverem incluídos, os navegadores carregarão e tentarão reproduzir cada arquivo até encontrar um que funcione, consumindo ainda mais tempo e recursos.
 
-> **Nota:** Consulte o nosso [guia sobre tipos e formatos de mídias](/pt-BR/docs/Web/Media/Formats) (inglês) para obter ajuda na seleção dos melhores contêineres e codecs para suas necessidades, bem como procurar os tipos MIME certos para especificar cada
+> [!NOTE]
+> Consulte o nosso [guia sobre tipos e formatos de mídias](/pt-BR/docs/Web/Media/Formats) (inglês) para obter ajuda na seleção dos melhores contêineres e codecs para suas necessidades, bem como procurar os tipos MIME certos para especificar cada
 
 ### Outros recursos de \<video>
 
@@ -201,7 +205,8 @@ Isso produz algo como o seguinte em um navegador:
 
 ![A simple audio player with a play button, timer, volume control, and progress bar](audio-player.png)
 
-> **Nota:** You can [run the audio demo live](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) on Github (also see the [audio player source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
+> [!NOTE]
+> You can [run the audio demo live](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) on Github (also see the [audio player source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
 
 Isso ocupa menos espaço do que um reprodutor de vídeo, pois não há componente visual - você só precisa exibir controles para reproduzir o áudio. Outras diferenças do vídeo HTML5 são as seguintes:
 
@@ -221,7 +226,7 @@ mediaElem.load();
 
 ### Detectando adição e remoção de faixas
 
-Você pode monitorar as listas de faixas em um elemento de mídia para detectar quando as faixas são adicionadas ou removidas da mídia do elemento. Por exemplo, você pode assistir ao evento {{event ("addtrack")}} ser disparado no objeto associado {{domxref ("AudioTrackList")}} (recuperado por meio de {{domxref ("HTMLMediaElement.audioTracks")}} ) para ser informado quando as faixas de áudio forem adicionadas à mídia:
+Você pode monitorar as listas de faixas em um elemento de mídia para detectar quando as faixas são adicionadas ou removidas da mídia do elemento. Por exemplo, você pode assistir ao evento [`addtrack`](/pt-BR/docs/Web/API/VideoTrackList/addtrack_event) ser disparado no objeto associado {{domxref ("AudioTrackList")}} (recuperado por meio de {{domxref ("HTMLMediaElement.audioTracks")}} ) para ser informado quando as faixas de áudio forem adicionadas à mídia:
 
 ```
 const mediaElem = document.querySelector("video");
@@ -243,7 +248,8 @@ Agora discutiremos um conceito um pouco mais avançado que é realmente útil pa
 
 Não seria bom poder fornecer a essas pessoas uma transcrição das palavras que estão sendo ditas no áudio / vídeo? Bem, graças ao vídeo HTML5, você pode, com o formato [WebVTT](/pt-BR/docs/Web/API/WebVTT_API) e o elemento {{htmlelement ("track")}}.
 
-> **Nota:** "Transcrever" significa "escrever as palavras faladas como texto". O texto resultante é uma "transcrição".
+> [!NOTE]
+> "Transcrever" significa "escrever as palavras faladas como texto". O texto resultante é uma "transcrição".
 
 O WebVTT é um formato para gravar arquivos de texto contendo várias seqüências de texto, juntamente com metadados, como a que horas do vídeo você deseja que cada sequência de texto seja exibida e até informações limitadas sobre estilo / posicionamento. Essas cadeias de texto são chamadas de **pistas** e existem vários tipos de pistas que são usadas para propósitos diferentes. As dicas mais comuns são:
 
@@ -289,9 +295,10 @@ Isso resultará em um vídeo com legendas exibidas, mais ou menos assim:
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-Para mais detalhes, leia [Adicionando legendas e legendas ao vídeo HTML5](/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Você pode [encontrar o exemplo](http://iandevlin.github.io/mdn/video-player-with-captions/) que acompanha este artigo no Github, escrito por Ian Devlin (consulte o [código-fonte](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) também.) Este exemplo usa algum JavaScript para permitir que os usuários escolham entre diferentes legendas. Observe que, para ativar as legendas, você precisa pressionar o botão "CC" e selecionar uma opção - inglês, alemão ou espanhol.
+Para mais detalhes, leia [Adicionando legendas e legendas ao vídeo HTML5](/pt-BR/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Você pode [encontrar o exemplo](http://iandevlin.github.io/mdn/video-player-with-captions/) que acompanha este artigo no Github, escrito por Ian Devlin (consulte o [código-fonte](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) também.) Este exemplo usa algum JavaScript para permitir que os usuários escolham entre diferentes legendas. Observe que, para ativar as legendas, você precisa pressionar o botão "CC" e selecionar uma opção - inglês, alemão ou espanhol.
 
-> **Nota:** As faixas de texto também ajudam você com o {{glossary ("SEO")}}, pois os mecanismos de pesquisa prosperam especialmente no texto. As trilhas de texto permitem até que os mecanismos de pesquisa sejam vinculados diretamente a um ponto no meio do vídeo.
+> [!NOTE]
+> As faixas de texto também ajudam você com o {{glossary ("SEO")}}, pois os mecanismos de pesquisa prosperam especialmente no texto. As trilhas de texto permitem até que os mecanismos de pesquisa sejam vinculados diretamente a um ponto no meio do vídeo.
 
 ### Aprendizado ativo: incorporando seu próprio áudio e vídeo
 
@@ -311,16 +318,16 @@ Para um bônus adicional, você pode tentar pesquisar faixas de texto e descobri
 
 ## Resumo
 
-E isso é um tudo; esperamos que você tenha se divertido brincando com vídeo e áudio em páginas da web! No próximo artigo, veremos outras maneiras de incorporar conteúdo na Web, usando tecnologias como {{htmlelement ("iframe")}}} e {{htmlelement ("object")}}.
+E isso é um tudo; esperamos que você tenha se divertido brincando com vídeo e áudio em páginas da web! No próximo artigo, veremos outras maneiras de incorporar conteúdo na Web, usando tecnologias como {{htmlelement ("iframe")}} e {{htmlelement ("object")}}.
 
 ## Ver também
 
 - Os elementos de mídia HTML: {{htmlelement("audio")}}, {{htmlelement("video")}}, {{htmlelement("source")}}, {{htmlelement("track")}}.
 - [Tecnologias de mídia da Web](/pt-BR/docs/Web/Media).
 - [Guia para tipos e formatos de mídia na Web](/pt-BR/docs/Web/Media/Formats).
-- [Adicionando legendas e legendas ao vídeo HTML5](/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video).
-- [Entrega de áudio e vídeo:](/pt-BR/docs/Web/Apps/Fundamentals/Audio_and_video_delivery) muitos detalhes sobre como colocar áudio e vídeo em páginas da Web usando HTML e JavaScript.
-- [Manipulação de áudio e vídeo:](/pt-BR/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation) muitos detalhes sobre a manipulação de áudio e vídeo usando JavaScript (por exemplo, adicionando filtros).
+- [Adicionando legendas e legendas ao vídeo HTML5](/pt-BR/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video).
+- [Entrega de áudio e vídeo:](/pt-BR/docs/Web/Media/Audio_and_video_delivery) muitos detalhes sobre como colocar áudio e vídeo em páginas da Web usando HTML e JavaScript.
+- [Manipulação de áudio e vídeo:](/pt-BR/docs/Web/Media/Audio_and_video_manipulation) muitos detalhes sobre a manipulação de áudio e vídeo usando JavaScript (por exemplo, adicionando filtros).
 - Opções automatizadas para [traduzir multimídia.](http://www.inwhatlanguage.com/blog/translate-video-audio/)
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}

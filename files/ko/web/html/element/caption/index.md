@@ -67,7 +67,8 @@ The following attributes are deprecated and should not be used. They are documen
     - `bottom`
       - : The caption is displayed below the table.
 
-    > **Warning:** Do not use this attribute, as it has been deprecated. The {{HTMLElement("caption")}} element should be styled using the [CSS](/ko/docs/Web/CSS) properties {{cssxref("caption-side")}} and {{cssxref("text-align")}}.
+    > [!WARNING]
+    > Do not use this attribute, as it has been deprecated. The {{HTMLElement("caption")}} element should be styled using the [CSS](/ko/docs/Web/CSS) properties {{cssxref("caption-side")}} and {{cssxref("text-align")}}.
 
 ## 사용 일람
 

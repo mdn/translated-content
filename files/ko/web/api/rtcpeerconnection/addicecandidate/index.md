@@ -109,6 +109,6 @@ pc.addIceCandidate({ candidate: "" });
 
 - [WebRTC API](/ko/docs/Web/API/WebRTC_API)
 - [Signaling and video calling](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
-- [WebRTC architecture overview](/ko/docs/Web/API/WebRTC_API/Architecture)
+- [WebRTC architecture overview](/ko/docs/Web/API/WebRTC_API/Protocols)
 - [WebRTC connectivity](/ko/docs/Web/API/WebRTC_API/Connectivity)
 - [Lifetime of a WebRTC session](/ko/docs/Web/API/WebRTC_API/Session_lifetime)

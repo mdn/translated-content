@@ -5,11 +5,12 @@ slug: Web/CSS/counter-reset
 
 {{CSSRef}}
 
-`counter-reset` 属性用于将 [CSS 计数器](/zh-CN/docs/CSS_Counters) 重置为制定值
+**`counter-reset`** [CSS](/zh-CN/docs/Web/CSS) 属性用于创建具名 [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)，并将其初始化为指定值。它支持创建从 1 向上计数到元素数量的计数器，以及从元素数量向下计数到 1 的计数器。
 
 {{EmbedInteractiveExample("pages/css/counter-reset.html")}}
 
-> **备注：** 计数器的值能够通过 CSS 属性 {{cssxref("counter-increment")}} 控制递增或递减。
+> [!NOTE]
+> 计数器的值能够通过 CSS 属性 {{cssxref("counter-increment")}} 控制递增或递减。
 
 ## 语法
 
@@ -42,7 +43,8 @@ counter-reset: unset;
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
   - : 要递增的计数器的名称。
 
-> **备注：** 该名称由不区分大小写的字母 a 到 z，数字 0 到 9，下划线（\_）和 / 或短划线（ - ）的组合组成，并且第一个非破折号字符必须是一个字母（即，在它的开头没有数字，即使前面有破折号）。此外，在标识符的开头禁止使用两个破折号。在任何案例组合中都不能是 none，unset，initial 或 inherit。
+> [!NOTE]
+> 该名称由不区分大小写的字母 a 到 z，数字 0 到 9，下划线（\_）和 / 或短划线（ - ）的组合组成，并且第一个非破折号字符必须是一个字母（即，在它的开头没有数字，即使前面有破折号）。此外，在标识符的开头禁止使用两个破折号。在任何案例组合中都不能是 none，unset，initial 或 inherit。
 
 - {{cssxref("&lt;integer&gt;")}}
   - : 每次出现元素时将计数器重置为的值。如果不指定，则默认为 `0`。
@@ -75,7 +77,7 @@ h1 {
 
 ## 参考
 
-- [CSS Counters](/zh-CN/docs/CSS/Counters), {{Cssxref("counter-increment")}}
+- [CSS Counters](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), {{Cssxref("counter-increment")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-set")}}
 - {{cssxref("@counter-style")}}

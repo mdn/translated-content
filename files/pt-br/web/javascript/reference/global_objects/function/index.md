@@ -3,7 +3,7 @@ title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
 ---
 
-{{JSRef("Global_Objects", "Function")}}
+{{JSRef}}
 
 ## Resumo
 
@@ -28,7 +28,8 @@ Objetos `Function` criados com o construtor `Function` são _parseados_ quando a
 
 Todos os argumentos passados para a função são tratados como os nomes dos indetificadores dos parâmetros na função a ser criada, na mesma ordem na qual eles foram passados.
 
-> **Nota:** Funções criadas com o construtor `Function não criam closures` para o seu contexto de criação; elas sempre são criadas no escopo global. Quando executadas, elas terão acesso apenas às suas variáveis locais ou globais, não terão acesso às variáveis do escopo na qual o construtor `Function` foi chamado. Isto é diferente de usar {{jsxref("Global_Objects/eval", "eval")}} com o código de uma expressão de função.
+> [!NOTE]
+> Funções criadas com o construtor `Function não criam closures` para o seu contexto de criação; elas sempre são criadas no escopo global. Quando executadas, elas terão acesso apenas às suas variáveis locais ou globais, não terão acesso às variáveis do escopo na qual o construtor `Function` foi chamado. Isto é diferente de usar {{jsxref("Global_Objects/eval", "eval")}} com o código de uma expressão de função.
 
 Invocar o construtor `Function` como uma função (sem usar o operador `new`) tem o mesmo efeito de chamá-la como um construtor.
 
@@ -40,11 +41,11 @@ O objeto global `Function` não tem métodos ou propriedades próprias, no entan
 
 ### Propriedades
 
-{{page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/prototype', 'Properties')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/prototype', 'Properties') -->
 
 ### Métodos
 
-{{page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/prototype', 'Methods')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/prototype', 'Methods') -->
 
 ## `Function` instances
 
@@ -163,15 +164,11 @@ Creating functions with the `Function` constructor is one of the ways to dynamic
 
 ## Especificação
 
-| Especificação                                            | Status             | Comentário                                         |
-| -------------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| ECMAScript 1st Edition.                                  | Standard           | Definição inicial. Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.3', 'Function')}}           | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-function-objects', 'Function')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade
 
-{{Compat("javascript.builtins.Function")}}
+{{Compat}}
 
 ## See also
 

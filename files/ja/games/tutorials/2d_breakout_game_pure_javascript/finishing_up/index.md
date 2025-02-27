@@ -98,7 +98,8 @@ requestAnimationFrame(draw);
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/dfh2tpu1/","","395")}}
 
-> **メモ:** ライフの数とパドルでボールが跳ねる角度を替えてみましょう。
+> [!NOTE]
+> ライフの数とパドルでボールが跳ねる角度を替えてみましょう。
 
 ## ゲームクリア - 今のところは
 

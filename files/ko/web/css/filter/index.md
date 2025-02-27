@@ -408,7 +408,7 @@ table.standard-table td {
 - `<blur-radius>` (선택)
   - : 세 번째 {{cssxref("&lt;length&gt;")}} 값입니다. 클수록 흐려지는 반경이 커지고 그림자가 옅어집니다. 음수 값은 사용할 수 없습니다. 값을 지정하지 않으면 `0`으로 취급하여 그림자 가장자리가 날카로워집니다.
 - `<color>` (선택)
-  - : 가능한 키워드 및 표기법은 {{cssxref("&lt;color&gt;")}}를 참조하세요. 값을 지정하지 않았을 때의 색상은 브라우저에 따라 다릅니다. 보통 {{cssxref("&lt;color&gt;")}} 속성의 값을 사용하지만, 현재 사파리는 투명한 그림자를 그리는 것을 주의하세요.
+  - : 가능한 키워드 및 표기법은 {{cssxref("&lt;color&gt;")}}를 참조하세요. 값을 지정하지 않았을 때의 색상은 브라우저에 따라 다릅니다. 보통 {{cssxref("&lt;color&gt;")}} 속성의 값을 사용하지만, 현재 Safari는 투명한 그림자를 그리는 것을 주의하세요.
 
 ```css
 filter: drop-shadow(16px 16px 10px black);
@@ -1271,4 +1271,4 @@ URL 함수와 SVG 리소스를 사용하는 방법은 다음과 같습니다.
 - [HTML 콘텐츠에 SVG 효과 적용하기](/ko/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
 - {{cssxref("mask")}} 속성
 - [SVG](/ko/docs/Web/SVG)
-- [Understanding CSS filters](http://www.html5rocks.com/en/tutorials/filters/understanding-css/) (HTML5Rocks! 글)
+- [Understanding CSS filters](https://www.html5rocks.com/en/tutorials/filters/understanding-css/) (HTML5Rocks! 글)

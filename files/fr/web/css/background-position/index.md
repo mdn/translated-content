@@ -69,7 +69,8 @@ La propriété `background-position` peut être définie grâce à une ou plusie
     - Un des mots-clés parmi `top`, `left`, `bottom`, `right`. Si `left` ou `right` est utilisé, la valeur définit l'abscisse et l'autre définira l'ordonnée. Si `top` ou `bottom` est indiqué, cette valeur définira l'ordonnée et l'autre valeur définira X.
     - Une valeur de longueur ([`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Si l'autre valeur vaut `left` ou `right`, cette valeur définira l'ordonnée par rapport au bord haut. Si l'autre valeur est `top` ou `bottom`, cette valeur définira l'abscisse relativement au bord gauche. Si les deux valeurs sont des longueurs ou des pourcentages, la première définira l'abscisse et la seconde l'ordonnée.
 
-    > **Note :** Si une valeur est `top` ou `bottom`, la seconde ne peut pas être `top` ou `bottom`. Si une valeur est `left` ou `right`, la seconde ne peut pas être `left` ou `right`. Autrement dit, les combinaisons `top top`, `bottom bottom`, `top bottom`, `bottom top`, `right right`, `left left`, `left right` et `right left` seront considérées comme invalides.
+    > [!NOTE]
+    > Si une valeur est `top` ou `bottom`, la seconde ne peut pas être `top` ou `bottom`. Si une valeur est `left` ou `right`, la seconde ne peut pas être `left` ou `right`. Autrement dit, les combinaisons `top top`, `bottom bottom`, `top bottom`, `bottom top`, `right right`, `left left`, `left right` et `right left` seront considérées comme invalides.
 
     - L'ordre des mots-clés n'est pas important, le navigateur pourra les réarranger si besoin. Ainsi, `top left` et `left top` auront le même effet. En revanche, si on associe une longueur ([`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) avec un mot-clé, l'ordre est important et la valeur définissant l'abscisse doit arriver avant l'ordonnée&nbsp;: `right 20px` ne sera pas équivalent à `20px right` et cette dernière forme sera invalide. Les valeurs `left 20%` ou `20% bottom` sont valides car les abscisses et ordonnées sont bien rangées.
 
@@ -158,10 +159,10 @@ div {
 
 /* On utilise la propriété raccourcie background */
 .exemple_un {
-  background: url("startransparent.gif") #ffee99 2.5cm bottom no-repeat;
+  background: url("star-transparent.gif") #ffee99 2.5cm bottom no-repeat;
 }
 .exemple_deux {
-  background: url("startransparent.gif") #ffee99 left 4em bottom 1em no-repeat;
+  background: url("star-transparent.gif") #ffee99 left 4em bottom 1em no-repeat;
 }
 
 /*
@@ -170,7 +171,7 @@ différemment, on voit les virgules dans les déclarations.
 L'ordre est le même entre background-image et -position.
 */
 .exemple_trois {
-  background-image: url("startransparent.gif"), url("catfront.png");
+  background-image: url("star-transparent.gif"), url("cat-front.png");
   background-position:
     0px 0px,
     right 3em bottom 2em;

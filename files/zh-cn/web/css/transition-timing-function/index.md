@@ -3,11 +3,11 @@ title: transition-timing-function
 slug: Web/CSS/transition-timing-function
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 ## 概述
 
-CSS 属性受到 [transition effect](/zh-CN/docs/CSS/Tutorials/Using_CSS_transitions)的影响，会产生不断变化的中间值，而 [CSS](/zh-CN/docs/CSS) `transition-timing-function` 属性用来描述这个中间值是怎样计算的。实质上，通过这个函数会建立一条加速度曲线，因此在整个 transition 变化过程中，变化速度可以不断改变。
+CSS 属性受到 [transition effect](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)的影响，会产生不断变化的中间值，而 [CSS](/zh-CN/docs/Web/CSS) `transition-timing-function` 属性用来描述这个中间值是怎样计算的。实质上，通过这个函数会建立一条加速度曲线，因此在整个 transition 变化过程中，变化速度可以不断改变。
 
 这条加速度曲线被{{cssxref("&lt;timing-function&gt;")}}所定义，之后作用到每个 CSS 属性的过渡。
 
@@ -215,5 +215,5 @@ const intervalID = setInterval(updateTransition, 10000);
 
 ## 参见
 
-- [Using CSS transitions](/zh-CN/docs/CSS/Using_CSS_transitions)
+- [Using CSS transitions](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{ domxref("TransitionEvent") }}

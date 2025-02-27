@@ -26,7 +26,7 @@ ServiceWorkerContainer.register(scriptURL, options)
 
   - : Um objeto contendo as opções do registro. Atualmente as opções disponíveis são:
 
-    - `scope`: Uma {{domxref("USVString")}} representando uma URL que define o registro do escopo de um service worker's ; ou seja, o alcance das URLs que o service worker pode controlar. É geralmente uma URL relativa. O valor padrão é o URL que você obtém se você resolvesse './' usando a localização da página web como base. Não é, como customa-se acreditar, relativo à localização do service worker. Veja as seções de [Exemplos](#Example) para mais informações sobre como isso funciona.
+    - `scope`: Uma {{domxref("USVString")}} representando uma URL que define o registro do escopo de um service worker's ; ou seja, o alcance das URLs que o service worker pode controlar. É geralmente uma URL relativa. O valor padrão é o URL que você obtém se você resolvesse './' usando a localização da página web como base. Não é, como customa-se acreditar, relativo à localização do service worker. Veja as seções de [Exemplos](#example) para mais informações sobre como isso funciona.
 
 ### Valor retornado
 

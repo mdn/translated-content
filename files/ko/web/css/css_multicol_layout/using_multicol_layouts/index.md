@@ -3,7 +3,7 @@ title: CSS 다단 레이아웃 사용
 slug: Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 ---
 
-{{CSSRef("CSS Multi-columns")}}
+{{CSSRef}}
 
 **CSS 다단(multi-column) 레이아웃**은 다단 텍스트 정의가 쉽도록 *블록 레이아웃 모드*를 확장합니다. 사람들은 줄이 너무 긴 경우 텍스트 읽는데 어려움이 있습니다; 한 줄 끝에서 다음 줄 시작까지 눈에 옮기기 너무 긴 경우, 어느 줄을 읽고 있었는 지를 잊어버립니다. 그러므로, 큰 화면을 최대로 쓰기 위해서는, 너비가 제한된 텍스트 단을 나란히 놓아야 합니다, 바로 신문이 하는 것처럼.
 
@@ -79,7 +79,7 @@ slug: Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 
 {{ EmbedLiveSample('column_width','700px', '', '') }}
 
-정확한 세부사항은 [CSS3 스펙](http://www.w3.org/TR/css3-multicol/)에 설명되어 있습니다.
+정확한 세부사항은 [CSS3 스펙](https://www.w3.org/TR/css3-multicol/)에 설명되어 있습니다.
 
 다단 블록에서, 콘텐츠는 필요에 따라 한 단에서 다음 단으로 자동으로 흐릅니다. 모든 HTML, CSS 및 DOM 기능은 단 내에서 지원됩니다, 편집 및 인쇄 중일 때.
 

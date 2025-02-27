@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 
 **`encodeURIComponent()`** 함수는 {{glossary("URI")}}의 특정한 문자를 UTF-8로 인코딩해 하나, 둘, 셋, 혹은 네 개의 연속된 이스케이프 문자로 나타냅니다. (두 개의 대리 문자로 이루어진 문자만 이스케이프 문자 네 개로 변환됩니다.)
 
-{{EmbedInteractiveExample("pages/js/globalprops-encodeuricomponent.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - encodeURIComponent()")}}
+
+```js interactive-example
+// Encodes characters such as ?,=,/,&,:
+console.log(`?x=${encodeURIComponent("test?")}`);
+// Expected output: "?x=test%3F"
+
+console.log(`?x=${encodeURIComponent("шеллы")}`);
+// Expected output: "?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+```
 
 ## 구문
 
@@ -70,9 +79,9 @@ console.log(encodeURIComponent("\uDFFF"));
 
 예를 들어 사용자가 입력한 `"Jack & Jill"`은 `"Jack &amp; Jill"`로 인코딩 됩니다. `encodeURIComponent()`를 사용하지 않았다면 서버가 앰퍼샌드를 새로운 필드의 시작으로 인식할 수 있으므로 데이터의 무결성을 해칠 수 있습니다.
 
-[`application/x-www-form-urlencoded`](http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm)의 스페이스는 `"+"`로 치환되어야 하므로, `encodeURIComponent()`의 결과에 추가로 `"%20"`을 `"+"`로 바꾸세요.
+[`application/x-www-form-urlencoded`](https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm)의 스페이스는 `"+"`로 치환되어야 하므로, `encodeURIComponent()`의 결과에 추가로 `"%20"`을 `"+"`로 바꾸세요.
 
-비록 URI의 구분자로서 형식화된 사용처는 없지만, 그럼에도 `!`, `'`, `(`, `)`, `*`을 추가로 예약하는 [RFC 3986](http://tools.ietf.org/html/rfc3986)을 엄격하게 따르려면 아래의 코드를 사용해보세요.
+비록 URI의 구분자로서 형식화된 사용처는 없지만, 그럼에도 `!`, `'`, `(`, `)`, `*`을 추가로 예약하는 [RFC 3986](https://tools.ietf.org/html/rfc3986)을 엄격하게 따르려면 아래의 코드를 사용해보세요.
 
 ```js
 function fixedEncodeURIComponent(str) {

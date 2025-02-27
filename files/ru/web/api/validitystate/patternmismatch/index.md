@@ -3,6 +3,8 @@ title: ValidityState.patternMismatch
 slug: Web/API/ValidityState/patternMismatch
 ---
 
+{{APIRef("HTML DOM")}}
+
 Доступное только для чтения свойство **`patternMismatch`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, соответствует ли значение {{HTMLElement("input")}} шаблону, указанному в атрибуте [`pattern`](/ru/docs/Web/HTML/Attributes/pattern).
 
 Если поле поддерживает атрибут [`pattern`](/ru/docs/Web/HTML/Attributes/pattern), это значит, что {{HTMLElement("input")}} содержит `type` {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}} или {{HTMLElement("input/search", "search")}} и в значении атрибута задано валидное регулярное выражение. Если значение не соответствует ограничениям, заданным в [`pattern`](/ru/docs/Web/HTML/Attributes/pattern), свойство `patternMismatch` будет `true`.
@@ -54,7 +56,8 @@ input:invalid {
 
 Обратите внимание, что в данном примере мы получаем значение свойства `patternMismatch`, а не {{domxref('validityState.tooLong')}} или {{domxref('validityState.tooShort')}}, потому что ограничения заданы именно с помощью атрибута `pattern`. Если бы вместо него использовались атрибуты [`minlength`](/ru/docs/Web/HTML/Attributes/minlength) и [`maxlength`](/ru/docs/Web/HTML/Attributes/maxlength), для валидации можно было использовать {{domxref('validityState.tooLong')}} или {{domxref('validityState.tooShort')}}.
 
-> **Примечание:** Примечание: Если атрибут `pattern` не используется, поле `{{HTMLElement("input/email", "email")}}` требует, соответствия значения хотя бы формату `x@y`, а поле `{{HTMLElement("input/url", "url")}}` — хотя бы формату `x:`. Если поле не валидно, свойство {{domxref('validityState.typeMismatch')}} будет `true`, если не используется атрибут `pattern`.
+> [!NOTE]
+> Если атрибут `pattern` не используется, поле `{{HTMLElement("input/email", "email")}}` требует, соответствия значения хотя бы формату `x@y`, а поле `{{HTMLElement("input/url", "url")}}` — хотя бы формату `x:`. Если поле не валидно, свойство {{domxref('validityState.typeMismatch')}} будет `true`, если не используется атрибут `pattern`.
 
 ## Спецификации
 
@@ -64,8 +67,8 @@ input:invalid {
 
 {{Compat}}
 
-## Также смотрите
+## Смотрите также
 
-- [Валидация ограничений](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Валидация ограничений](/ru/docs/Web/HTML/Constraint_validation)
 - [Формы: Валидация форм](/ru/docs/Learn/Forms/Form_validation)
-- [Регулярные выражения](/ru/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Регулярные выражения](/ru/docs/Web/JavaScript/Guide/Regular_expressions)

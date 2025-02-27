@@ -19,13 +19,13 @@ TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
 
 ## Quel est le problème ?
 
-L'[opérateur `in`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_in) peut uniquement être utilisé pour vérifier qu'une propriété appartient à un objet. Il ne peut pas être utilisé pour rechercher des caractères dans des chaînes de caractères, des nombres ou dans d'autres types de données en dehors des objets.
+L'[opérateur `in`](/fr/docs/Web/JavaScript/Reference/Operators/in) peut uniquement être utilisé pour vérifier qu'une propriété appartient à un objet. Il ne peut pas être utilisé pour rechercher des caractères dans des chaînes de caractères, des nombres ou dans d'autres types de données en dehors des objets.
 
 ## Exemples
 
 ### Rechercher un texte dans une chaîne de caractères
 
-À la différence de certains langages de programmation (Python par exemple), JavaScript ne permet pas de chercher des textes dans une chaîne de caractères grâce à l'opérateur [`in`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_in).
+À la différence de certains langages de programmation (Python par exemple), JavaScript ne permet pas de chercher des textes dans une chaîne de caractères grâce à l'opérateur [`in`](/fr/docs/Web/JavaScript/Reference/Operators/in).
 
 ```js example-bad
 "Coucou" in "Coucou monde";
@@ -72,4 +72,4 @@ var arbres = ["cèdre", "bouleau", "pin", "sapin", "érable"];
 
 ## Voir aussi
 
-- [L'opérateur `in`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_in)
+- [L'opérateur `in`](/fr/docs/Web/JavaScript/Reference/Operators/in)

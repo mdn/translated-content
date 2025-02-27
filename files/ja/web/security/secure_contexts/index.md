@@ -17,7 +17,7 @@ Web の API には強力なものもあり、攻撃者に対して以下のよ�
 
 ## コンテキストが安全とみなされるのはいつですか？
 
-コンテキストは、[Secure Contexts](https://w3c.github.io/webappsec-secure-contexts/) 仕様で定義されている認証および機密性の一定の最低基準を満たしている場合に、安全ななコンテキストとみなされます。特定の文書が安全なコンテキストである[トップレベルのブラウジングコンテキスト](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context) (基本的には、安全なコンテキストであるウィンドウやタブを含むコンテキスト) の[アクティブな文書](https://html.spec.whatwg.org/multipage/browsers.html#active-document)である場合、その文書は安全なコンテキストにあるとみなされます。
+コンテキストは、[Secure Contexts](https://w3c.github.io/webappsec-secure-contexts/) 仕様で定義されている認証および機密性の一定の最低基準を満たしている場合に、安全なコンテキストとみなされます。特定の文書が安全なコンテキストである[トップレベルのブラウジングコンテキスト](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context) (基本的には、安全なコンテキストであるウィンドウやタブを含むコンテキスト) の[アクティブな文書](https://html.spec.whatwg.org/multipage/browsers.html#active-document)である場合、その文書は安全なコンテキストにあるとみなされます。
 
 例えば、{{HTMLElement("iframe")}} 内で TLS 上で配信された文書であっても、TLS 上で配信されなかった祖先がある場合には、そのコンテキストは安全であるとは見なされ**ません**。
 
@@ -25,7 +25,8 @@ Web の API には強力なものもあり、攻撃者に対して以下のよ�
 
 `http://127.0.0.1` の URL、`http://localhost` の URL、`http://*.localhost` の URL (例 `http://dev.whatever.localhost/`) 、`file://` の URL など、ローカルに配信されたリソースも安全に配信されていると考えられます。
 
-> **メモ:** Firefox 84 以降では、`http://localhost` や `http://*.localhost` というURLを信頼できるオリジンとして扱っています (以前のバージョンでは、`localhost` がローカル/ループバックアドレスにマップされると保証されていなかったため、信頼できるオリジンとしては扱っていませんでした) 。
+> [!NOTE]
+> Firefox 84 以降では、`http://localhost` や `http://*.localhost` というURLを信頼できるオリジンとして扱っています (以前のバージョンでは、`localhost` がローカル/ループバックアドレスにマップされると保証されていなかったため、信頼できるオリジンとしては扱っていませんでした) 。
 
 ローカルではないリソースが安全であるとみなされるためには、以下の基準を満たす必要があります。
 
@@ -45,7 +46,7 @@ if (window.isSecureContext) {
 }
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

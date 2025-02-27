@@ -1,6 +1,9 @@
 ---
 title: "HTMLElement: paste イベント"
+short-title: paste
 slug: Web/API/HTMLElement/paste_event
+l10n:
+  sourceCommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -28,7 +31,7 @@ onpaste = (event) => {};
 _親である {{domxref("Event")}} から継承したプロパティもあります。_
 
 - {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
-  - : {{domxref("DataTransfer")}} オブジェクトで、ユーザーが行った {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, {{domxref("HTMLElement/paste_event", "paste")}} 操作によって影響されたデータと MIME タイプが入ります。
+  - : {{domxref("DataTransfer")}} オブジェクトで、ユーザーが行った {{domxref("HTMLElement/cut_event", "cut")}}、{{domxref("HTMLElement/copy_event", "copy")}}、`paste` のいずれかの操作によって影響されたデータと MIME タイプが入ります。
 
 ## 例
 
@@ -79,5 +82,5 @@ editor.onpaste = logPaste;
 ## 関連情報
 
 - 関連イベント:
-  - {{domxref("HTMLElement.copy_event")}}
-  - {{domxref("HTMLElement.cut_event")}}
+  - {{domxref("HTMLElement.copy_event", "copy")}} イベント
+  - {{domxref("HTMLElement.cut_event", "cut")}} イベント

@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 
 **`Promise.race()`** 静态方法接受一个 promise 可迭代对象作为输入，并返回一个 {{jsxref("Promise")}}。这个返回的 promise 会随着第一个 promise 的敲定而敲定。
 
-{{EmbedInteractiveExample("pages/js/promise-race.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Promise.race()", "taller")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 500, "one");
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, "two");
+});
+
+Promise.race([promise1, promise2]).then((value) => {
+  console.log(value);
+  // Both resolve, but promise2 is faster
+});
+// Expected output: "two"
+```
 
 ## 语法
 
@@ -34,7 +50,7 @@ Promise.race(iterable)
 
 ### 使用 Promise.race()
 
-这个例子展示了如何使用 `Promise.race()` 来比较多个使用 [`setTimeout()`](/zh-CN/docs/Web/API/setTimeout) 实现的计时器。计时时间最短的计时器总是赢得竞态，并成为返回的 promise 状态。
+这个例子展示了如何使用 `Promise.race()` 来比较多个使用 {{domxref("Window.setTimeout", "setTimeout()")}} 实现的计时器。计时时间最短的计时器总是赢得竞态，并成为返回的 promise 状态。
 
 ```js
 function sleep(time, value, state) {

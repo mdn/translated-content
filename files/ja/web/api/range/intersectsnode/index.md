@@ -1,16 +1,19 @@
 ---
-title: Range.intersectsNode()
+title: "Range: intersectsNode() メソッド"
+short-title: intersectsNode()
 slug: Web/API/Range/intersectsNode
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ApiRef("DOM")}} {{SeeCompatTable}}
+{{ApiRef("DOM")}}
 
 **`Range.intersectsNode()`** メソッドは、指定された {{domxref("Node")}} が {{domxref("Range")}} と交差しているかどうかを示す論理値を返します。
 
 ## 構文
 
-```js
-intersectsNode(referenceNode);
+```js-nolint
+intersectsNode(referenceNode)
 ```
 
 ### 引数

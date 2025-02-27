@@ -30,7 +30,8 @@ Quando uma função assíncrona é chamada, ela retorna uma {{jsxref("Promise")}
 
 Uma função assíncrona pode conter uma expressão {{jsxref("Operators/await", "await")}}, que pausa a execução da função assíncrona e espera pela resolução da `Promise` passada, e depois retoma a execução da função assíncrona e retorna o valor resolvido.
 
-> **Nota:** A proposta das funções `async/await` é de simplificar o uso de forma síncrona das `Promises` e executar alguns procedimentos em um grupo de `Promises`. Assim como `Promises` são similares a `callbacks` estruturados, funções `async/await` são similares à junção de `generators` com `Promises`.
+> [!NOTE]
+> A proposta das funções `async/await` é de simplificar o uso de forma síncrona das `Promises` e executar alguns procedimentos em um grupo de `Promises`. Assim como `Promises` são similares a `callbacks` estruturados, funções `async/await` são similares à junção de `generators` com `Promises`.
 
 ## Exemplos
 
@@ -100,13 +101,11 @@ Note que no exemplo acima não tem a instrução `await` na instrução do `retu
 
 ## Especificações
 
-| Especificação                                                                | Situação             | Comentário                   |
-| ---------------------------------------------------------------------------- | -------------------- | ---------------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ESDraft')}} | Definição inicial no ES2017. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.async_function")}}
+{{Compat}}
 
 ### Notas específicas do Firefox
 

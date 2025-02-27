@@ -1,6 +1,8 @@
 ---
 title: right
 slug: Web/CSS/right
+l10n:
+  sourceCommit: 9428e6f9ac2fd4166b5cf245fb674123209787ff
 ---
 
 {{CSSRef}}
@@ -26,6 +28,7 @@ right: auto;
 right: inherit;
 right: initial;
 right: revert;
+right: revert-layer;
 right: unset;
 ```
 
@@ -48,13 +51,13 @@ right: unset;
     - *相対位置指定要素*では、通常の位置から要素までの距離は {{Cssxref("left")}} に基づきます。また、 `left` も `auto` であった場合は、水平方向には移動しません。
 
 - `inherit`
-  - : 値が親要素 (包含ブロックとは限りません) の計算値と同じであることを示すキーワードです。そして、この計算値は {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, または `auto` キーワードと同様に扱われます。
+  - : 値が親要素（包含ブロックとは限りません）の計算値と同じであることを示すキーワードです。そして、この計算値は {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, または `auto` キーワードと同様に扱われます。
 
 ## 解説
 
 `right` の効果は、要素がどの様に配置されているか (つまり、 {{cssxref("position")}} プロパティの値) によって変わります。
 
-- `position` が `absolute` または `fixed` に設定されている場合、 `right` プロパティは要素の右辺と包含ブロックの右辺との間の距離を指定します。
+- `position` が `absolute` または `fixed` に設定されている場合、 `right` プロパティは要素の右辺の外部マージンと包含ブロックの右辺の内部境界との間の距離を指定します。
 - `position` が `relative` に設定されている場合、 `right` プロパティは要素の右辺が通常位置から左方向へ移動する量を指定します。
 - `position` が `sticky` に設定されている場合、 `right` プロパティは要素がビューポート内にある場合は `position` が `relative` であるかのように、外の場合は `position` が `fixed` の場合と同様に動作します。
 - `position` が `static` に設定されている場合、 `right` プロパティは*効果がありません*。
@@ -71,7 +74,7 @@ right: unset;
 
 ## 例
 
-<h3 id="Absolute_and_relative_positioning_using_right">絶対位置指定および相対位置指定で right を使用</h3>
+### 絶対位置指定および相対位置指定で right を使用
 
 #### HTML
 
@@ -104,9 +107,9 @@ right: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('Absolute_and_relative_positioning_using_right', 500, 220) }}
+{{ EmbedLiveSample('絶対位置指定および相対位置指定で_right_を使用', 500, 220) }}
 
-<h3 id="Declaring_both_left_and_right">left と right の同時指定</h3>
+### left と right の同時指定
 
 `left` と `right` の両方が宣言されている場合、他の制約条件がそれを妨げない限り、要素は両方を満たすように伸びます。要素が両方を満たすように伸びたり縮んだりしない場合、要素の位置が*過剰指定*のとなり、コンテナーの書字方向に基づいて優先順位が決まります。コンテナーの書字方向が左書きであれば、`left` が優先されます。コンテナーの書字方向が右書きの場合は、`right` が優先されます。
 
@@ -149,7 +152,7 @@ div {
 
 #### 結果
 
-{{ EmbedLiveSample('Declaring_both_left_and_right', 500, 220) }}
+{{ EmbedLiveSample('left と right の同時指定', 500, 220) }}
 
 ## 仕様書
 

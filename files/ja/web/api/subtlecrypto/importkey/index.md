@@ -106,7 +106,7 @@ ml2FIkoovZh/8yeTKmjUMb804g6OmjUc9vVojCRV0YdaSmYkkJMJbLg=
 
 これを `importKey()` に渡せる形式に取得するには、 2 つのことを行う必要があります。
 
-- [`window.atob()`](/ja/docs/Web/API/atob) を使用して、ヘッダーとフッターの間の部分を base64 デコードします。
+- [`window.atob()`](/ja/docs/Web/API/Window/atob) を使用して、ヘッダーとフッターの間の部分を base64 デコードします。
 - 結果の文字列を [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) に変換します。
 
 [例](#例)の節を参照してください。
@@ -142,7 +142,7 @@ gQIDAQAB
 
 [PKCS #8](#pkcs_8) と同様に、これを `importKey()` に渡せる形式で取得するには、 2 つのことを行う必要があります。
 
-- [`window.atob()`](/ja/docs/Web/API/atob) を使用して、ヘッダーとフッターの間の部分を base64 デコードします。
+- [`window.atob()`](/ja/docs/Web/API/Window/atob) を使用して、ヘッダーとフッターの間の部分を base64 デコードします。
 - 結果の文字列を [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) に変換します。
 
 [例](#例)節を参照してください。
@@ -170,7 +170,8 @@ JSON ウェブ鍵は次のようなものです（これは EC 秘密鍵です�
 
 ## 例
 
-> **メモ:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/import-key/index.html) on GitHub.
+> [!NOTE]
+> You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/import-key/index.html) on GitHub.
 
 ### Raw インポート
 

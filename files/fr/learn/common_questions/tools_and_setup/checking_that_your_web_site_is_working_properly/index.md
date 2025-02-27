@@ -3,6 +3,8 @@ title: Tester le bon fonctionnement de votre site web
 slug: Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Dans cet article, nous présenterons les différentes étapes permettant de diagnostiquer les problèmes d'un site web ainsi que les mesures à prendre pour corriger certains de ces problèmes.
 
 <table class="standard-table">
@@ -35,7 +37,7 @@ Voyons donc comment diagnostiquer et résoudre ces problèmes.
 
 ## Pédagogie active
 
-_Il n'existe pas encore de matériau interactif pour cet article. [N'hésitez pas à contribuer !](/fr/docs/MDN/Débuter_sur_MDN)_
+_Il n'existe pas encore de matériau interactif pour cet article. [N'hésitez pas à contribuer !](/fr/docs/MDN/Community/Contributing/Getting_started)_
 
 ## Aller plus loin
 
@@ -88,7 +90,7 @@ Où est donc le problème ?
 
 ![Deleting the 's'](Capture%20du%202015-10-12%2018-50-56.png)
 
-Puis en sauvegardant et [en envoyant le fichier vers le serveur](/fr/Learn/Upload_files_to_a_web_server), on peut ensuite recharger la page dans le navigateur :
+Puis en sauvegardant et [en envoyant le fichier vers le serveur](/fr/docs/Learn/Upload_files_to_a_web_server), on peut ensuite recharger la page dans le navigateur :
 
 ![The image loads corectly in the browser](Capture%20du%202015-10-12%2018-53-50.png)
 
@@ -123,7 +125,7 @@ Pour voir ces erreurs, ouvrez la console (**Outils ➤ Développement web ➤ Co
 
 ![A Javascript error is shown in the Console](Capture%20du%202015-10-12%2019-10-52.png)
 
-Ici, nous voyons comment détecter une erreur, la console affiche sur quoi porte l'erreur et éventuellement comment la résoudre (nous verrons JavaScript dans [une autre série d'articles](/fr/Apprendre/JavaScript)).
+Ici, nous voyons comment détecter une erreur, la console affiche sur quoi porte l'erreur et éventuellement comment la résoudre (nous verrons JavaScript dans [une autre série d'articles](/fr/docs/Learn/JavaScript)).
 
 ### D'autres points de contrôles
 
@@ -167,5 +169,5 @@ Si vous utilisez Windows, le ping s'arrêtera après quelques envois mais si vou
 
 Félicitations ! Votre site est en ligne, fonctionne correctement et tout le monde peut le visiter. C'est une belle réussite ! Vous pouvez maintenant approfondir d'autres sujets.
 
-- De nombreuses personnes peuvent accéder à votre site, mieux vaut donc que celui-ci [soit le plus accessible possible](/fr/Apprendre/Accessibilité).
-- Le site a l'air brut de décoffrage ? C'est le bon moment pour [apprendre un peu de CSS](/fr/Apprendre/CSS/Utiliser_CSS_dans_une_page_web).
+- De nombreuses personnes peuvent accéder à votre site, mieux vaut donc que celui-ci [soit le plus accessible possible](/fr/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility).
+- Le site a l'air brut de décoffrage ? C'est le bon moment pour [apprendre un peu de CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_works).

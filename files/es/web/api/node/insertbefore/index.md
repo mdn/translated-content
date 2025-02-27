@@ -98,7 +98,7 @@ Si `sp2` no tiene ningún hermano depués de él, entonces debe ser el último h
 
 ### Ejemplo 3
 
-Inserta un elemento antes del primer elemento hijo, utilizando la propiedad [firstChild](/es/docs/DOM/Node.firstChild).
+Inserta un elemento antes del primer elemento hijo, utilizando la propiedad [firstChild](/es/docs/Web/API/Node/firstChild).
 
 ```js
 // Obtener una referencia al elemento en el que se quiere insertar un nuevo nodo

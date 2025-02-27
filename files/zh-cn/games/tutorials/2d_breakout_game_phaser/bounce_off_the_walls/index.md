@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Physics", "Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls")}}
 
-这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser)的**第 6 步**。在[Gamedev-Phaser-Content-Kit / demos / lesson06.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson06.html)完成本课后，你可以找到源代码。
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser)的**第 6 步**。在[Gamedev-Phaser-Content-Kit / demos / lesson06.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson06.html)完成本课后，你可以找到源代码。
 
 现在已经介绍了物理引擎，我们可以开始在游戏中实现碰撞检测 - 首先我们来看看墙壁。
 
@@ -35,6 +35,6 @@ ball.body.bounce.set(1);
 
 ## 下一步
 
-现在开始看起来更像是一个游戏，但是我们无法以任何方式控制它 - 现在是介绍[玩家挡板和控制的时候了](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls)。
+现在开始看起来更像是一个游戏，但是我们无法以任何方式控制它 - 现在是介绍[玩家挡板和控制的时候了](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls)。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Physics", "Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls")}}

@@ -211,7 +211,7 @@ self.addEventListener("activate", (e) => {
 });
 ```
 
-これにより、必要なファイルだけがキャッシュに保存されるので、ゴミが残ることはありません — [ブラウザーで利用可能なキャッシュスペースは限られている](/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)ので、後で自分でクリーンアップすることをお勧めします。
+これにより、必要なファイルだけがキャッシュに保存されるので、ゴミが残ることはありません — [ブラウザーで利用可能なキャッシュスペースは限られている](/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)ので、後で自分でクリーンアップすることをお勧めします。
 
 ## その他のユースケース
 

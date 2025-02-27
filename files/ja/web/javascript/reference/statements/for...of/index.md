@@ -2,7 +2,7 @@
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
 l10n:
-  sourceCommit: 0f3738f6b1ed1aa69395ff181207186e1ad9f4d8
+  sourceCommit: 3f91fdcc678991410f4f5adcbff44d1b3b1ede88
 ---
 
 {{jsSidebar("Statements")}}
@@ -10,7 +10,19 @@ l10n:
 **`for...of`** 文は、[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)をソースとした一連の値を処理するループを実行します。反復可能オブジェクトには、
 たとえば組み込みの {{jsxref("Array")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{domxref("NodeList")}}（およびその他の DOM コレクション）、同様に {{jsxref("Functions/arguments", "arguments")}} オブジェクトや、[ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*)から生成される[ジェネレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator)、ユーザー定義の反復可能オブジェクトなどがあります。
 
-{{EmbedInteractiveExample("pages/js/statement-forof.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For...Of")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+for (const element of array1) {
+  console.log(element);
+}
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## 構文
 
@@ -20,7 +32,7 @@ for (variable of iterable)
 ```
 
 - `variable`
-  - : 反復処理の各回において、一連のデータから値を受け取ります。[`const`](/ja/docs/Web/JavaScript/Reference/Statements/const), [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let), [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) の何れかで定義されたものか、[代入](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)のターゲットとなります（以前に宣言した変数や、オブジェクトプロパティなど）。
+  - : 反復処理の各回において、一連のデータから値を受け取ります。[`const`](/ja/docs/Web/JavaScript/Reference/Statements/const), [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let), [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) の何れかで定義されたものか、[代入](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)のターゲットとなります（以前に宣言した変数や、オブジェクトプロパティ、[分割代入パターン](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)など）。`var` で宣言された変数はループのローカル変数ではなく、すなわち `for...of` ループと同じスコープになります。
 - `iterable`
   - : 反復可能オブジェクトです。ループを実行する一連の値の元となるものです。
 - `statement`
@@ -30,9 +42,12 @@ for (variable of iterable)
 
 `for...of` ループは、反復可能オブジェクトから取り出した値を 1 つずつ順次処理します。ループが値に対して行う各処理は反復処理と呼ばれ、ループは反復可能オブジェクトを反復処理すると言います。それぞれの反復処理では、現在のシーケンス値を参照する可能性のある文が実行されます。
 
-`for...of` ループが反復可能オブジェクトを反復処理する場合、最初にその反復可能オブジェクトの [`[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) メソッドが呼び出されます。これは[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)を返すので、その返されたイテレーターの [`next()`](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル) メソッドを呼び出すことで、`variable` に代入される一連の値を生成することができます。
+`for...of` ループが反復可能オブジェクトを反復処理する場合、最初にその反復可能オブジェクトの [`[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) メソッドが呼び出されます。これは[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)を返すので、その返されたイテレーターの [`next()`](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル) メソッドを呼び出すことで、`variable` に代入される一連の値を生成することができます。
 
-`for...of` ループは、イテレーターが完全に処理したときに終了します（イテレーターの `next()` メソッドは `done: true` を含むオブジェクトを返します）。また、通常の制御フローを変更するために制御フロー文を使用することもできます。[`break`](/ja/docs/Web/JavaScript/Reference/Statements/break) はループを抜けてループ本体の後の最初のステートメントに進み、[`continue`](/ja/docs/Web/JavaScript/Reference/Statements/continue) は現在の反復処理の残りの文をスキップして次の反復処理に進みます。
+`for...of` ループは、イテレーターが完全に処理された時点で終了します（`next()` の結果は、`done: true` を持つオブジェクトです）。他のループ文と同様に、[フロー制御文](/ja/docs/Web/JavaScript/Reference/Statements#フロー制御)を `statement` 内部で使用することができます。
+
+- {{jsxref("Statements/break", "break")}} は、`statement` の実行を停止し、ループの後の最初の文に移動します。
+- {{jsxref("Statements/continue", "continue")}} は `statement` の実行を停止し、ループの次の反復処理に移ります。
 
 `for...of` ループが早期に終了した場合（例えば、`break` 文に遭遇したり、エラーが発生した場合）、[`return()`](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル) のメソッドが呼び出されクリーンアップ処理が行われます。
 
@@ -50,13 +65,14 @@ for (let value of iterable) {
 // 31
 ```
 
-> **メモ:** 反復処理ごとに新しい変数が作成されます。ループ本体内で変数を再代入しても、反復可能オブジェクト（この場合は配列）の元の値には影響しません。
+> [!NOTE]
+> 反復処理ごとに新しい変数が作成されます。ループ本体内で変数を再代入しても、反復可能オブジェクト（この場合は配列）の元の値には影響しません。
 
-[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)や、`for (x.y of iterable)` などのオブジェクトプロパティを使用することもできます。
+[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)を使用して複数のローカル変数に代入することもできますし、 `for (x.y of iterable)` のようなプロパティアクセサーを使用して、オブジェクトプロパティに値を代入することもできます。
 
 しかし、特別なルールにより、変数名として `async` を使用することは禁じられています。これは無効な構文です。
 
-```js example-bad
+```js-nolint example-bad
 let async;
 for (async of [1, 2, 3]); // SyntaxError: The left-hand side of a for-of loop may not be 'async'.
 ```
@@ -80,7 +96,7 @@ for (const value of iterable) {
 
 ### 文字列に対する反復処理
 
-文字列は [Unicode コードポイントで反復処理します](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)。
+文字列は [Unicode コードポイント単位で反復処理します](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)。
 
 ```js
 const iterable = "boo";
@@ -172,7 +188,7 @@ for (const paragraph of articleParagraphs) {
 
 ### ユーザー定義の反復可能オブジェクトに対する反復処理
 
-独自のイテレーターを返す `@@iterator` メソッドで、オブジェクトを反復処理します。
+独自のイテレーターを返す `[Symbol.iterator]()` メソッドで、オブジェクトを反復処理します。
 
 ```js
 const iterable = {
@@ -197,7 +213,7 @@ for (const value of iterable) {
 // 3
 ```
 
-オブジェクトを `@@iterator` ジェネレーターメソッドで反復処理します。
+オブジェクトを `[Symbol.iterator]()` ジェネレーターメソッドで反復処理します。
 
 ```js
 const iterable = {
@@ -216,7 +232,7 @@ for (const value of iterable) {
 // 3
 ```
 
-反復可能なイテレーター（`this` を返す `[@@iterator]()` メソッドを持つイテレーター）は、`for...of` などのイテレーターを想定した構文でイテレーターを使用可能にする、かなり一般的なテクニックです。
+反復可能なイテレーター（`this` を返す `[Symbol.iterator]()` メソッドを持つイテレーター）は、`for...of` などのイテレーターを想定した構文でイテレーターを使用可能にする、かなり一般的なテクニックです。
 
 ```js
 let i = 1;
@@ -262,7 +278,7 @@ for (const value of generator) {
 
 ### 早期の脱出
 
-最初のループで `break` ステートメントを実行すると、ループが早期に終了します。イテレーターはまだ完了していないので、2 つ目のループは最初のループが停止したところから継続されます。
+最初のループで `break` 文を実行すると、ループが早期に終了します。イテレーターはまだ完了していないので、2 つ目のループは最初のループが停止したところから継続されます。
 
 ```js
 const source = [1, 2, 3];
@@ -294,7 +310,7 @@ for (const value of iterator) {
 // [出力なし]
 ```
 
-ジェネレーターは [`return()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator/return) メソッドを実装しており、ループが終了するとジェネレーター関数が早期復帰するように発生しています。このため、ジェネレータはループ間で再利用することができません。
+ジェネレーターは [`return()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator/return) メソッドを実装しており、ループが終了するとジェネレーター関数が早期復帰するように発生しています。このため、ジェネレーターはループをまたいで再利用することができません。
 
 ```js example-bad
 function* source() {
@@ -361,7 +377,7 @@ for (const i of iterable) {
 
 2 番目のループは最初のものと似ていますが、{{jsxref("Object.hasOwn()")}} を使用して見つかった列挙可能なプロパティがオブジェクト自身のものであるか、すなわち継承したものでないかどうかをチェックしています。オブジェクト自身のプロパティである場合は、ログ出力します。`0`, `1`, `2`, `foo` は自身のプロパティであるため出力されます。`arrCustom` と `objCustom` は継承されたものであるために出力されません。
 
-このループは、`iterable` が[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)として定義している順序で _値_ を反復処理し、ログ出力します。オブジェクトの _要素_ である `3`, `5`, `7` は表示されますが、オブジェクトの _プロパティ_ は表示されません。
+`for...of` ループは、`iterable` が[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)として定義している順序で _値_ を反復処理し、ログ出力します。オブジェクトの _要素_ である `3`, `5`, `7` は表示されますが、オブジェクトの _プロパティ_ は表示されません。
 
 ## 仕様書
 
@@ -375,4 +391,4 @@ for (const i of iterable) {
 
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Map.prototype.forEach()")}}
-- {{jsxref("Object.entries()")}} – オブジェクトに `for...of` を使用するときに便利です。
+- {{jsxref("Object.entries()")}}

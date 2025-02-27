@@ -202,7 +202,7 @@ gl.enableVertexAttribArray(locTexUV);
 
 ## ブラウザーの互換性
 
-{{Compat("api.WebGLRenderingContext.vertexAttribPointer")}}
+{{Compat}}
 
 ## 関連項目
 

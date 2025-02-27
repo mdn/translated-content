@@ -5,7 +5,7 @@ slug: Web/CSS/gradient/linear-gradient
 
 {{CSSRef}}
 
-**`linear-gradient()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions)创建一个由两种或多种颜色沿一条直线进行线性过渡的图像，其结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{cssxref("&lt;image&gt;")}} 数据类型。
+**`linear-gradient()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)创建一个由两种或多种颜色沿一条直线进行线性过渡的图像，其结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{cssxref("&lt;image&gt;")}} 数据类型。
 
 {{EmbedInteractiveExample("pages/css/function-linear-gradient.html")}}
 
@@ -31,7 +31,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 ### 值
 
 - `<side-or-corner>`
-  - : 渐变线的起始点位置。如果指定了，则包含 `to` 和两个关键字：一个指定水平位置（`left` 或 `right`），另一个指定竖直位置（`top` 或 `bottom`）。关键词的先后顺序无影响。如果没有指定，则默认为 `to bottom`。
+  - : 渐变线的起始点位置。如果指定了，则包含 `to` 和最多两个关键字：一个指定水平位置（`left` 或 `right`），另一个指定竖直位置（`top` 或 `bottom`）。关键词的先后顺序无影响。如果没有指定，则默认为 `to bottom`。
     `to top`、`to bottom`、`to left` 和 `to right` 分别等价于 `0deg`、`180deg`、`270deg` 和 `90deg`。其余值会被转换为角度。
 - {{CSSxRef("&lt;angle&gt;")}}
   - : 渐变线的方向的角度。`0deg` 等价于 `to top`，增加值相当于顺时针旋转。

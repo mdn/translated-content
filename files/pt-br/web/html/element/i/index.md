@@ -32,7 +32,7 @@ O **elemento HTML `<i>` **representa uma parte do texto que é destacada do rest
     </tr>
     <tr>
       <th scope="row">Omissão de tag</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Pais permitidos</th>
@@ -95,7 +95,7 @@ Uma boa ideia é usar o atributo **class** para identificar porque esse elemento
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.i")}}
+{{Compat}}
 
 ## Ver também
 

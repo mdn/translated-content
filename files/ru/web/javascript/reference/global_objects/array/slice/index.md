@@ -7,7 +7,29 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 Метод **`slice()`** возвращает новый массив, содержащий копию части исходного массива.
 
-{{EmbedInteractiveExample("pages/js/array-slice.html")}}
+{{InteractiveExample("JavaScript Demo: Array.slice()")}}
+
+```js interactive-example
+const animals = ["ant", "bison", "camel", "duck", "elephant"];
+
+console.log(animals.slice(2));
+// Expected output: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice(1, 5));
+// Expected output: Array ["bison", "camel", "duck", "elephant"]
+
+console.log(animals.slice(-2));
+// Expected output: Array ["duck", "elephant"]
+
+console.log(animals.slice(2, -1));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice());
+// Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+```
 
 ## Синтаксис
 
@@ -35,7 +57,7 @@ arr.slice([begin[, end]])
 
     Если индекс отрицательный, `end` указывает смещение от конца последовательности. Вызов `slice(2, -1)` извлечёт из последовательности элементы начиная с третьего элемента с начала и заканчивая вторым с конца.
 
-    Если `end` опущен, `slice()` извлекает все элементы до конца последовательности (`arr.length`).
+    Если `end >= array.length` или `end` опущен, `slice()` извлекает все элементы до конца последовательности (`arr.length`).
 
 ### Возвращаемое значение
 

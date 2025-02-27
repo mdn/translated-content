@@ -3,13 +3,14 @@ title: String.prototype.blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
 ---
 
-{{JSRef("Global_Objects", "String")}} {{deprecated_header}}
+{{JSRef}} {{deprecated_header}}
 
 ## Сводка
 
-Метод **`blink()`** создаёт HTML-элемент {{HTMLElement("blink")}}, заставляющий строку мерцать.
+Метод **`blink()`** создаёт HTML-элемент `<blink>`, заставляющий строку мерцать.
 
-> **Предупреждение:** мерцающий текст осуждается некоторыми стандартами доступности. Сам элемент `<blink>` является нестандартным и устаревшим!
+> [!WARNING]
+> Мерцающий текст осуждается некоторыми стандартами доступности. Сам элемент `<blink>` является нестандартным и устаревшим!
 
 ## Синтаксис
 

@@ -2,12 +2,12 @@
 title: ClipboardEvent
 slug: Web/API/ClipboardEvent
 l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+  sourceCommit: 7087ffd50a4d81d1b91fe603c26456e9ce398574
 ---
 
 {{APIRef("Clipboard API")}}
 
-**`ClipboardEvent`** インターフェイスは、 クリップボードの変更に関連する情報を提供するイベントを表します。すなわち、{{domxref("Element/cut_event", "cut")}}、{{domxref("Element/copy_event", "copy")}}、{{domxref("Element/paste_event", "paste")}} イベントです。
+**`ClipboardEvent`** は[クリップボード API](/ja/docs/Web/API/Clipboard_API) のインターフェイスで、 クリップボードの変更に関連する情報を提供するイベントを表します。すなわち、{{domxref("Element/cut_event", "cut")}}、{{domxref("Element/copy_event", "copy")}}、{{domxref("Element/paste_event", "paste")}} イベントです。
 
 {{InheritanceDiagram}}
 
@@ -39,5 +39,4 @@ _固有のメソッドはありません。親である {{domxref("Event")}} か
 
 - Copy 関連イベント： {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
 - [クリップボード API](/ja/docs/Web/API/Clipboard_API)
-- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
 - [Image support for Async Clipboard article](https://web.dev/async-clipboard/)

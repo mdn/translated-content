@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Operator_precedence
 
 **연산자 우선순위**는 연산자를 실행하는 순서를 결정합니다. 우선순위가 높은 연산자가 먼저 실행됩니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-operatorprecedence.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Operator precedence")}}
+
+```js interactive-example
+console.log(3 + 4 * 5); // 3 + 20
+// Expected output: 23
+
+console.log(4 * 3 ** 2); // 4 * 9
+// Expected output: 36
+
+let a;
+let b;
+
+console.log((a = b = 5));
+// Expected output: 5
+```
 
 ## 우선순위와 결합성
 
@@ -216,7 +230,7 @@ a?.b.c; // `a`를 먼저 평가하고, `a`가 `null`또는 `undefined`라면 `un
     </tr>
     <tr>
       <td>
-        {{jsxref("Operators/Property_Accessors", "계산된 멤버 접근","#괄호_표기법", "1")}}
+        {{jsxref("Operators/Property_Accessors", "계산된 멤버 접근","#괄호_표기법", 1)}}
       </td>
       <td>좌결합성</td>
       <td><code>… [ … ]</code></td>

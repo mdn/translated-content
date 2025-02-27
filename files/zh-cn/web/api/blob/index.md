@@ -1,9 +1,11 @@
 ---
 title: Blob
 slug: Web/API/Blob
+l10n:
+  sourceCommit: de2ef1e9950eebbacdd55f072dfe03014d113bbd
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 `Blob` 对象表示一个不可变、原始数据的类文件对象。它的数据可以按文本或二进制的格式进行读取，也可以转换成 {{DOMxRef("ReadableStream")}} 来用于数据操作。
 
@@ -22,20 +24,22 @@ Blob 表示的不一定是 JavaScript 原生格式的数据。{{DOMxRef("File")}
 
 ## 实例属性
 
-- {{DOMxRef("Blob.prototype.size")}} {{ReadOnlyInline}}
+- {{DOMxRef("Blob.size")}} {{ReadOnlyInline}}
   - : `Blob` 对象中所包含数据的大小（字节）。
-- {{DOMxRef("Blob.prototype.type")}} {{ReadOnlyInline}}
+- {{DOMxRef("Blob.type")}} {{ReadOnlyInline}}
   - : 一个字符串，表明该 `Blob` 对象所包含数据的 MIME 类型。如果类型未知，则该值为空字符串。
 
 ## 实例方法
 
-- {{DOMxRef("Blob.prototype.arrayBuffer()")}}
+- {{DOMxRef("Blob.arrayBuffer()")}}
   - : 返回一个 promise，其会兑现一个包含 `Blob` 所有内容的二进制格式的 {{jsxref("ArrayBuffer")}}。
-- {{DOMxRef("Blob.prototype.slice()")}}
-  - : 返回一个新的 `Blob` 对象，包含了源 `Blob` 对象中指定范围内的数据。
-- {{DOMxRef("Blob.prototype.stream()")}}
+- {{DOMxRef("Blob.bytes()")}}
+  - : 返回一个 promise，其会兑现一个包含 `Blob` 内容的 {{jsxref("Uint8Array")}}。
+- {{DOMxRef("Blob.slice()")}}
+  - : 返回一个新的 `Blob` 对象，其中包含调用它的 blob 的指定字节范围内的数据。
+- {{DOMxRef("Blob.stream()")}}
   - : 返回一个能读取 `Blob` 内容的 {{DOMxRef("ReadableStream")}}。
-- {{DOMxRef("Blob.prototype.text()")}}
+- {{DOMxRef("Blob.text()")}}
   - : 返回一个 promise，其会兑现一个包含 `Blob` 所有内容的 UTF-8 格式的字符串。
 
 ## 示例
@@ -51,30 +55,28 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {
 });
 ```
 
-### 创建一个指向类型化数组的 URL
+### 创建一个表示类型化数组内容的 URL
 
-以下代码创建了一个 JavaScript [类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)，并创建一个新的，包含类型化数组中的数据的 `Blob`。然后调用 {{DOMxRef("URL.createObjectURL()")}} 方法，将 blob 转换为一个 {{glossary("URL")}}。
+以下代码创建了一个 JavaScript [类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)，并创建一个新的包含类型化数组中的数据的 `Blob`。然后调用 {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}} 方法，将 blob 转换为一个 {{glossary("URL")}}。
 
 #### HTML
 
 ```html
 <p>
-  此示例创建一个类型化数组，其中包含空格以及 A 到 Z 的 ASCII
-  字符。然后将其转换为一个对象 URL。并创建一个打开该对象 URL
-  的链接。点击这个链接以查看对象 URL 解码后的内容。
+  此示例创建一个包含空格字符到字母 Z 的 ASCII
+  代码的类型化数组，然后将其转换为对象 URL。将创建一个用于打开该对象 URL
+  的链接。单击该链接可查看解码后的对象 URL。
 </p>
 ```
 
 #### JavaScript
 
-该示例代码片段的主要片段是 `typedArrayToURL()` 函数，其用于从给定的类型化数组创建一个 `Blob`，并返回该 `Blob` 的对象 URL。将数据转换为对象 URL 后，可通过多种方式使用，包括：作为 {{HTMLElement("img")}} 元素 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 属性的值（当然，假设给定的数据包含了一张图片）。
+该示例代码片段的主要片段是 `typedArrayToURL()` 函数，其用于从给定的类型化数组创建一个 `Blob`，并返回该 `Blob` 的对象 URL。将数据转换为对象 URL 后，可通过多种方式使用，包括作为 {{HTMLElement("img")}} 元素 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 属性的值（当然，假设给定的数据包含了一张图片）。
 
 ```js
 function showViewLiveResultButton() {
   if (window.self !== window.top) {
-    // 如果当前文档是否在一个 frame 中，则
-    // 确保让用户在新的标签页或窗口中打开它。
-    // 否则，此示例将无法正常演示。
+    // 确保如果我们的文档在 frame 中，我们会让用户首先在新的标签页或窗口中打开它。否则，此示例将不起作用。
     const p = document.querySelector("p");
     p.textContent = "";
     const button = document.createElement("button");
@@ -110,7 +112,7 @@ if (!showViewLiveResultButton()) {
 
 #### 结果
 
-{{EmbedLiveSample("创建一个指向类型化数组的 URL", 600, 200)}}
+{{EmbedLiveSample("创建一个表示类型化数组内容的 URL", 600, 200)}}
 
 ### 从 blob 中提取数据
 
@@ -130,13 +132,13 @@ reader.readAsArrayBuffer(blob);
 const text = await new Response(blob).text();
 ```
 
-或者，也可以使用 {{DOMxRef("Blob.prototype.text()")}}：
+或者，也可以使用 {{DOMxRef("Blob.text()")}}：
 
 ```js
 const text = await blob.text();
 ```
 
-通过使用 `FileReader` 的其他方法可以把 Blob 读取为字符串或者数据 URL。
+通过使用 `FileReader` 的其他方法可以把 Blob 读取为字符串或者 data URL。
 
 ## 规范
 
@@ -150,5 +152,5 @@ const text = await blob.text();
 
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("File")}}
-- {{DOMxRef("URL.createObjectURL")}}
+- {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}}
 - [在 web 应用程序中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)

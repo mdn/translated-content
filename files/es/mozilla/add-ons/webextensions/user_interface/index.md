@@ -9,7 +9,8 @@ l10n:
 
 Las extensiones que usan las API de WebExtension se proporcionan con varias opciones de interfaz de usuario para que su funcionalidad pueda estar disponible para el usuario. A continuación se proporciona un resumen de esas opciones, con una introducción más detallada a cada opción de la interfaz de usuario en esta sección.
 
-> **Nota:** Para obtener consejos sobre el uso de estos componentes de la interfaz de usuario para crear una excelente experiencia de usuario en su extensión, consulte el artículo [Prácticas recomendadas para la experiencia del usuario](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/).
+> [!NOTE]
+> Para obtener consejos sobre el uso de estos componentes de la interfaz de usuario para crear una excelente experiencia de usuario en su extensión, consulte el artículo [Prácticas recomendadas para la experiencia del usuario](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/).
 
 <table class="standard-table">
   <thead>

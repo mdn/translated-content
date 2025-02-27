@@ -3,17 +3,19 @@ title: calcMode
 slug: Web/SVG/Attribute/calcMode
 ---
 
-« [SVG Attribute reference home](/en/SVG/Attribute)
+{{SVGRef}}
+
+« [SVG Attribute reference home](/en-US/SVG/Attribute)
 
 이 속성은 애니메이션의 interpolation 모드를 지정합니다. 기본 모드는 linear 이지만 속성이 linear interpolation을 지원하지 않으면(예: 문자열의 경우) calcMode 속성이 무시되고 discrete interpolation이 사용됩니다.
 
 ## Usage context
 
-| Categories         | Animation value attribute                                                        |
-| ------------------ | -------------------------------------------------------------------------------- |
-| Value              | discrete \| linear \| paced \| spline                                            |
-| Animatable         | No                                                                               |
-| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#CalcModeAttribute) |
+| Categories         | Animation value attribute                                                         |
+| ------------------ | --------------------------------------------------------------------------------- |
+| Value              | discrete \| linear \| paced \| spline                                             |
+| Animatable         | No                                                                                |
+| Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#CalcModeAttribute) |
 
 - discrete
   - : 이것은 애니메이션 함수가 interpolation 없이 하나의 값에서 다음 값으로 점프하도록 지정합니다.

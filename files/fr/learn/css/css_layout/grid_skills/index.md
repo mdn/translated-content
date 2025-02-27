@@ -7,7 +7,8 @@ slug: Learn/CSS/CSS_layout/Grid_skills
 
 Le but de cette tâche est de vous faire travailler avec « _CSS Grid Layout_ » (modèle de disposition en grille) et d'évaluer votre compréhension du comportement d'une grille et des éléments de grille. Vous allez compléter trois petites tâches en utilisant différents éléments des grilles CSS.
 
-> **Note :** Vous pouvez tester des solutions dans les éditeurs interactifs ci-dessous ou, si vous le préférez, sur un site comme [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/).
+> [!NOTE]
+> Vous pouvez tester des solutions dans les éditeurs interactifs ci-dessous ou, si vous le préférez, sur un site comme [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/).
 >
 > N'hésitez pas à nous contacter si vous avez besoin d'aide — voir la section [Évaluation ou aide supplémentaire](#évaluation_ou_aide_supplémentaire) au bas de cette page.
 
@@ -21,7 +22,8 @@ Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nb
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid1.html", '100%', 700)}}
 
-> **Remarque :** Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (disposition en grille 1)](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid1-download.html).
+> [!CALLOUT]
+> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (disposition en grille 1)](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid1-download.html).
 
 ## Disposition en grille 2
 
@@ -37,7 +39,8 @@ Questions supplémentaires&nbsp;:
 
 - Pouvez-vous maintenant afficher le premier élément (`.item1`) en avant sans modifier l'ordre des éléments dans le code&nbsp;?
 
-> **Remarque :** Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (disposition en grille 2)](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid2-download.html).
+> [!CALLOUT]
+> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (disposition en grille 2)](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid2-download.html).
 
 ## Disposition en grille 3
 
@@ -49,7 +52,8 @@ Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nb
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid3.html", '100%', 800)}}
 
-> **Remarque :** Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (disposition en grille 3)](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid3-download.html).
+> [!CALLOUT]
+> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (disposition en grille 3)](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid3-download.html).
 
 ## Mise en page avec Flexbox et grilles 4
 
@@ -61,7 +65,8 @@ Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nb
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid4.html", '100%', 1200)}}
 
-> **Remarque :** Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (mise en page avec Flexbox et Grilles 4)](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid4-download.html).
+> [!CALLOUT]
+> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (mise en page avec Flexbox et Grilles 4)](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid4-download.html).
 
 ## Évaluation ou aide supplémentaire
 

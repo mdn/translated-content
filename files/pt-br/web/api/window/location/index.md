@@ -41,7 +41,7 @@ location.reload(true);
 
 ### Exemplo #3
 
-Considere o exemplo a seguir, que vai recarregar a página usando o método [`replace()`](/pt-BR/docs/Web/API/Location.replace) para inserir o valor do `location.pathname`depois da hash:
+Considere o exemplo a seguir, que vai recarregar a página usando o método [`replace()`](/pt-BR/docs/Web/API/Location/replace) para inserir o valor do `location.pathname`depois da hash:
 
 ```js
 function reloadPageWithHash() {
@@ -468,5 +468,5 @@ var showBookmark = (function () {
 
 - The interface of the returned value, {{domxref("Location")}}.
 - A similar information, but attached to the {{Glossary("browsing context")}}, {{domxref("Document.location")}}.
-- [Manipulating the browser history](/pt-BR/DOM/Manipulating_the_browser_history)
-- [hashchange](/pt-BR/docs/DOM/Mozilla_event_reference/hashchange)
+- [Manipulating the browser history](/pt-BR/docs/DOM/Manipulating_the_browser_history)
+- [hashchange](/pt-BR/docs/Web/API/Window/hashchange_event)

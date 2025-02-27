@@ -3,7 +3,7 @@ title: number
 slug: Web/XPath/Functions/number
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `number` 함수는 개체를 숫자로 변환하고 그 숫자를 반환합니다.
 
@@ -32,7 +32,7 @@ number( [object] )
 
 ### 정의
 
-[XPath 1.0 4.4](http://www.w3.org/TR/xpath#function-number)
+[XPath 1.0 4.4](https://www.w3.org/TR/xpath#function-number)
 
 ### Gecko 지원
 

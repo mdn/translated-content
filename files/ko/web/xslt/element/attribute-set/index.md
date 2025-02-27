@@ -3,7 +3,7 @@ title: attribute-set
 slug: Web/XSLT/Element/attribute-set
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:attribute-set>` 요소는 CSS 안에 이름 붙인 스타일과 비슷한 방식으로 이름 붙인 속성 집합을 만듭니다. 그러면, 출력 문서에 전체로서 적용할 수 있습니다.
 
@@ -31,7 +31,7 @@ slug: Web/XSLT/Element/attribute-set
 
 ### 정의
 
-[XSLT section 7.1.4, Named Attribute Sets](http://www.w3.org/TR/xslt#attribute-sets)
+[XSLT section 7.1.4, Named Attribute Sets](https://www.w3.org/TR/xslt#attribute-sets)
 
 ### Gecko 지원
 

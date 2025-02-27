@@ -3,9 +3,12 @@ title: Animation SVG avec SMIL
 slug: Web/SVG/SVG_animation_with_SMIL
 ---
 
-> **Attention :** Bien que Chrome 45 déprécie SMIL en faveur des animations CSS et des animations Web, les développeurs Chrome ont depuis [suspendu](https://groups.google.com/a/chromium.org/d/msg/blink-dev/5o0yiO440LM/YGEJBsjUAwAJ) cette décision.
+{{SVGRef}}
 
-Firefox 4 introduit le support pour les animations [SVG](/fr/SVG) en utilisant [Synchronized Multimedia Integration Language](http://www.w3.org/TR/REC-smil) (SMIL). SMIL permet :
+> [!WARNING]
+> Bien que Chrome 45 déprécie SMIL en faveur des animations CSS et des animations Web, les développeurs Chrome ont depuis [suspendu](https://groups.google.com/a/chromium.org/d/msg/blink-dev/5o0yiO440LM/YGEJBsjUAwAJ) cette décision.
+
+Firefox 4 introduit le support pour les animations [SVG](/fr/docs/Web/SVG) en utilisant [Synchronized Multimedia Integration Language](https://www.w3.org/TR/REC-smil) (SMIL). SMIL permet :
 
 - d'animer les attributs numériques d'un élément (x, y, ...)
 - d'animer la transformation des attributs (translation ou rotation)
@@ -129,6 +132,6 @@ Le même exemple que précédemment mais avec une trajectoire courbe.
 
 ## Voir aussi
 
-- [SVG](/fr/SVG)
-- [SVG Animation Specification](http://www.w3.org/TR/SVG/animate.html)
-- [SMIL Specification](http://www.w3.org/TR/REC-smil)
+- [SVG](/fr/docs/Web/SVG)
+- [SVG Animation Specification](https://www.w3.org/TR/SVG/animate.html)
+- [SMIL Specification](https://www.w3.org/TR/REC-smil)

@@ -31,7 +31,8 @@ slug: Web/API/Touch_events
 
 This example tracks multiple touch points at a time, allowing the user to draw in a {{HTMLElement("canvas")}} with more than one finger at a time. It will only work on a browser that supports touch events.
 
-> **備註：** The text below uses the term "finger" when describing the contact with the surface, but it could, of course, also be a stylus or other contact method.
+> [!NOTE]
+> The text below uses the term "finger" when describing the contact with the surface, but it could, of course, also be a stylus or other contact method.
 
 ### Create a canvas
 
@@ -263,7 +264,7 @@ function log(msg) {
 
 If your browser supports it, you can {{LiveSampleLink('Example', 'see it live')}}.
 
-[jsFiddle example](http://jsfiddle.net/Darbicus/z3Xdx/10/)
+[jsFiddle example](https://jsfiddle.net/Darbicus/z3Xdx/10/)
 
 ## Additional tips
 

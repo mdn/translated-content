@@ -1002,7 +1002,8 @@ Aqui está a melhor regra geral: provavelmente é apropriado usar `<b>`, `<i>` o
 - {{htmlelement("b")}} é usado para transmitir um significado tradicionalmente transmitido por negrito: palavras-chave, nomes de produtos, sentença principal...
 - {{htmlelement("u")}} é usado para transmitir um significado tradicionalmente transmitido pelo sublinhado: nome próprio, erro de ortografia...
 
-> **Nota:** Um aviso amável sobre o sublinhado: **as pessoas associam fortemente o sublinhado com hiperlinks**. Portanto, na Web, é melhor sublinhar apenas os links. Use o elemento `<u>` quando for semanticamente apropriado, mas considere usar o CSS para alterar o sublinhado padrão para algo mais apropriado na Web. O exemplo abaixo ilustra como isso pode ser feito.
+> [!NOTE]
+> Um aviso amável sobre o sublinhado: **as pessoas associam fortemente o sublinhado com hiperlinks**. Portanto, na Web, é melhor sublinhar apenas os links. Use o elemento `<u>` quando for semanticamente apropriado, mas considere usar o CSS para alterar o sublinhado padrão para algo mais apropriado na Web. O exemplo abaixo ilustra como isso pode ser feito.
 
 ```html
 <!-- nomes científicos -->
@@ -1042,6 +1043,6 @@ Você chegou ao final deste artigo, mas consegue se lembrar das informações ma
 
 ## Resumo
 
-Por enquanto é isso! Este artigo deve fornecer uma boa idéia de como começar a marcar texto em HTML e apresentar alguns dos elementos mais importantes nessa área. Há muito mais elementos semânticos a serem abordados nesta área, e veremos muito mais em nosso artigo de [Formatação avançada de texto](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Formatacao_avancada_texto), mais adiante neste curso. No próximo artigo, veremos detalhadamente como [criar links](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Criando_hyperlinks), possivelmente o elemento mais importante na Web.
+Por enquanto é isso! Este artigo deve fornecer uma boa idéia de como começar a marcar texto em HTML e apresentar alguns dos elementos mais importantes nessa área. Há muito mais elementos semânticos a serem abordados nesta área, e veremos muito mais em nosso artigo de [Formatação avançada de texto](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting), mais adiante neste curso. No próximo artigo, veremos detalhadamente como [criar links](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), possivelmente o elemento mais importante na Web.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}

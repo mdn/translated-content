@@ -1,11 +1,13 @@
 ---
 title: flex
 slug: Web/CSS/flex
+l10n:
+  sourceCommit: e050b876063f44bde9bf011a2dfc94c0d90ca863
 ---
 
 {{CSSRef}}
 
-**`flex`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、フレックス*アイテム*をフレックスコンテナーの領域に収めるために、どのように伸長・収縮させるかを指定します。
+**`flex`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、{{glossary("flex item","フレックスアイテム")}}をフレックスコンテナーの領域に収めるために、どのように伸長・収縮させるかを指定します。
 
 {{EmbedInteractiveExample("pages/css/flex.html")}}
 
@@ -21,31 +23,32 @@ slug: Web/CSS/flex
 
 ```css
 /* キーワード値 */
-flex: auto;
-flex: initial;
-flex: none;
+flex: none; /* 0 0 auto */
 
-/* 単位がない数値を 1 つ指定: flex-grow */
-flex: 2;
+/* 単位がない数値を 1 つ指定: flex-grow
+この場合 flex-basis は 0 と等しくなる*/
+flex: 2; /* 2 1 0% */
 
 /* 幅または高さを 1 つ指定: flex-basis */
-flex: 10em;
+flex: auto; /* 1 1 auto */
+flex: 10em; /* 1 1 10em */
 flex: 30%;
 flex: min-content;
 
 /* 値を 2 つ指定: flex-grow | flex-basis */
-flex: 1 30px;
+flex: 1 30px; /* 1 1 30px */
 
 /* 値を 2 つ指定: flex-grow | flex-shrink */
-flex: 2 2;
+flex: 2 2; /* 2 2 0% */
 
 /* 値を 3 つ指定: flex-grow | flex-shrink | flex-basis */
 flex: 2 2 10%;
 
 /* グローバル値 */
 flex: inherit;
-flex: initial;
+flex: initial; /* 0 1 auto */
 flex: revert;
+flex: revert-layer;
 flex: unset;
 ```
 
@@ -53,46 +56,51 @@ flex: unset;
 
 - **値 1 つの構文:** 値は以下のうちの 1 つです。
 
-  - `<number>`: この場合は `flex: <number> 1 0` と解釈されます。[`<flex-shrink>`](#flex-shrink) の値は 1 と想定され、[`<flex-basis>`](#flex-basis) の値は `0` と想定されます。
-  - キーワード: `none`, `auto`, `initial` のいずれか。
+  - {{cssxref("&lt;flex-grow&gt;")}} として有効な値の場合、すべてのブラウザーで、この一括指定は `flex: <flex-grow> 1 0%` と展開されます。ただし、仕様書では `flex: <flex-grow> 1 0` と展開すべきであるとしています。
+  - {{cssxref("&lt;flex-basis&gt;")}} として有効な値の場合、一括指定は `flex: 1 1 <flex-basis>` と展開されます。
+  - キーワード `none` またはグローバルキーワードのいずれか。
 
 - **値 2 つの構文:**
 
-  - 1 つ目は次の値でなければなりません。
+  - 1 つ目は {{cssxref("flex-grow")}} として有効な値でなければなりません。
 
-    - {{cssxref("&lt;number&gt;")}} であり、`<flex-grow>` として解釈される。
+  - 2 つ目は以下のいずれかの値でなければなりません。
 
-  - 2 つ目は次の値でなければなりません。
-
-    - {{cssxref("&lt;number&gt;")}}: `<flex-shrink>` として解釈される。
-    - {{cssxref("width")}} として有効な値: `<flex-basis>` として解釈される。
+    - {{cssxref("flex-shrink")}} として有効な値の場合、すべてのブラウザーにおいて、この一括指定は `flex: <flex-grow> <flex-shrink> 0%` と展開されます。
+    - {{cssxref("flex-basis")}} として有効な値の場合、この一括指定は `flex: <flex-grow> 1 <flex-basis>` と展開されます。
 
 - **値 3 つの構文:** 値は以下の順序でなければなりません。
 
-  1. {{cssxref("&lt;number&gt;")}} で `<flex-grow>` として解釈される。
-  2. {{cssxref("&lt;number&gt;")}} で `<flex-shrink>` として解釈される。
-  3. {{cssxref("width")}} として有効な値で、`<flex-basis>` として解釈される。
+  1. {{cssxref("flex-grow")}} として有効な値。
+  2. {{cssxref("flex-shrink")}} として有効な値。
+  3. {{cssxref("flex-basis")}} として有効な値。
 
 ### 値
 
-- `initial`
-  - : アイテムは `width` および `height` プロパティによって寸法が決められます。コンテナーに合うように最小サイズまで収縮しますが、フレックスコンテナーの空き領域を埋めるために伸長することはありません。これは "`flex: 0 1 auto`" と同等です。
-- `auto`
-  - : アイテムは `width` および `height` プロパティによって寸法が決められますが、フレックスコンテナーの空き領域を埋めるために伸長したり、コンテナーに合うように最小サイズまで収縮したりします。これは "`flex: 1 1 auto`" と同等です。
-- `none`
-  - : アイテムは `width` および `height` プロパティによって寸法が決められます。寸法は完全に固定で、フレックスコンテナーに連動して収縮したり伸長したりすることはありません。これは"`flex: 0 0 auto`" と同等です。
 - `<'flex-grow'>`
   - : フレックスアイテムの {{cssxref("flex-grow")}} を定義します。負の値は無効とみなされます。省略時の既定値は `1` です。 (初期値は `0`)
 - `<'flex-shrink'>`
   - : フレックスアイテムの {{cssxref("flex-shrink")}} を定義します。負の値は無効とみなされます。省略時の既定値は `1` です。 (初期値は `1`)
 - `<'flex-basis'>`
-  - : フレックスアイテムの {{cssxref("flex-basis")}} を定義します。希望サイズが `0` ならば、自由度として解釈されないように単位をつけなければなりません。省略時の既定値は `0` です。 (初期値は `auto`)
+  - : フレックスアイテムの {{cssxref("flex-basis")}} を定義します。省略時の既定値は `0%` です。初期値は `auto` です。
+- `none`
+  - : アイテムは `width` および `height` プロパティによって寸法が決められます。寸法は完全に固定で、フレックスコンテナーに連動して収縮したり伸長したりすることはありません。これは"`flex: 0 0 auto`" と同等です。
 
-<h2 id="Description">解説</h2>
+一般的に望まれるフレックスボックスの効果は、次の `flex` 値を使用して実現できます。
 
-多くの場合、 `flex` には `auto`, `initial`, `none`, または単位のない正の数を設定してください。これらの値の効果を確認するには、以下のフレックスコンテナーの大きさを変更してみてください。
+- `initial`: フレックスアイテムは伸長しませんが、縮小することができます。これが既定値では `flex: 0 1 auto` に展開されます。アイテムのサイズは、 `flex-direction` に応じて、 `width` または `height` プロパティに従います。負の空白がある場合、アイテムはコンテナー内に収まるように最小サイズまで縮小しますが、フレックスコンテナー内で正の値があってもそれを吸収するために伸長することはありません。
+- `auto`: フレックスアイテムは伸長したり縮小したりします。この値は `flex: 1 1 auto` に展開されます。アイテムは、 `flex-direction` に応じて、その `width` または `height` プロパティに従ってサイズ指定されますが、フレックスコンテナー内で利用できる正の値を吸収するために伸長したり、負の値の場合はコンテナーに合わせて最小サイズまで縮小します。フレックスアイテムは完全に伸縮自在です。
+- `none`: フレックスアイテムは伸長も縮小もしません。この値は `flex: 0 0 auto` に展開されます。アイテムは、フレックスコンテナーの方向に応じて、 `width` または `height` プロパティに従ってサイズ調整されます。フレックスアイテムは完全に柔軟性がありません。
+- `flex: <number [1,∞]>`: フレックスアイテムの主要サイズは設定した数値に比例します。この値は `flex: <number> 1 0` に展開されます。これは `flex-basis` をゼロに設定し、フレックスアイテムを伸縮自在にします。このアイテムは最小の寸法と同じ幅または高さになり、コンテナー内で利用できる正の値は、このアイテムと兄弟フレックスアイテムの成長係数に基づいて比例配分されます。すべてのフレックスアイテムがこのパターンを使用する場合、すべてのアイテムはその数値に比例したサイズになります。
 
-```html hidden
+  > [!WARNING]
+  > ブラウザーは `flex` 値で `flex-basis` が指定されていない場合、 `flex-basis` 値に `0%` を使用します。これは仕様で言われている `flex-basis` 値の `0` とは異なります。これはフレックスレイアウトに影響を与える場合があります。この効果を[flex-basis の 0 と 0% の違い](/ja/docs/Web/CSS/flex-basis##flex-basis_の_0_と_0_の違い)の例で見てみましょう。
+
+## 解説
+
+多くの場合、 `flex` には `auto`, `initial`, `none`, または単位のない正の数を設定します。これらの値の効果を確認するには、以下のフレックスコンテナーの大きさを変更してみてください。
+
+```html hidden live-sample___description
 <div class="flex-container">
   <div class="item auto">auto</div>
   <div class="item auto">auto</div>
@@ -124,7 +132,7 @@ flex: unset;
 </div>
 ```
 
-```css hidden
+```css hidden live-sample___description
 * {
   box-sizing: border-box;
 }
@@ -173,7 +181,7 @@ flex: unset;
 }
 ```
 
-{{EmbedLiveSample("Description", 1200, 400, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("Description", 1200, 400)}}
 
 既定ではフレックスアイテムは内容物の最小の寸法よりも収縮することはありません。これを変更するには、 {{cssxref("min-width")}} または {{cssxref("min-height")}} を設定してください。
 
@@ -187,61 +195,73 @@ flex: unset;
 
 ## 例
 
-<h3 id="Setting_flex_auto">flex: auto の設定</h3>
+### flex: auto の設定
+
+この例では、 `flex: auto` を持つフレックスアイテムがコンテナー内の余白を吸収するように成長する様子を示しています。
 
 #### HTML
 
-```html
+```html-nolint live-sample___setting_flex_auto
 <div id="flex-container">
-  <div class="flex-item" id="flex">Flex box (click to toggle raw box)</div>
-  <div class="raw-item" id="raw">Raw box</div>
+  <div id="flex-auto">
+    flex: auto （クリックで `flex: initial` ボックスを削除/追加）
+  </div>
+  <div id="default">flex: initial</div>
 </div>
 ```
 
 #### CSS
 
-```css
+```css hidden live-sample___setting_flex_auto
+body * {
+  padding: 1rem;
+  text-select: none;
+  box-sizing: border-box;
+  font-family: Consolas, Arial, sans-serif;
+}
+```
+
+```css live-sample___setting_flex_auto
 #flex-container {
+  border: 2px dashed gray;
   display: flex;
-  flex-direction: row;
 }
 
-#flex-container > .flex-item {
+#flex-auto {
+  cursor: pointer;
+  background-color: wheat;
+
   flex: auto;
 }
 
-#flex-container > .raw-item {
-  width: 5rem;
+#default {
+  background-color: lightblue;
 }
 ```
 
-```js hidden
-var flex = document.getElementById("flex");
-var raw = document.getElementById("raw");
-flex.addEventListener("click", function () {
-  raw.style.display = raw.style.display == "none" ? "block" : "none";
+#### JavaScript
+
+```js live-sample___setting_flex_auto
+const flexAutoItem = document.getElementById("flex-auto");
+const defaultItem = document.getElementById("default");
+flexAutoItem.addEventListener("click", () => {
+  defaultItem.style.display =
+    defaultItem.style.display === "none" ? "block" : "none";
 });
-```
-
-```css hidden
-#flex-container {
-  width: 100%;
-  font-family: Consolas, Arial, sans-serif;
-}
-
-#flex-container > div {
-  border: 1px solid #f00;
-  padding: 1rem;
-}
-
-#flex-container > .raw-item {
-  border: 1px solid #000;
-}
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Setting_flex_auto','100%','100')}}
+このフレックスコンテナーには 2 つのフレックスアイテムがあります。
+
+- `#flex-auto` のアイテムは `flex` 値が [`auto`](#auto) です。 `auto` 値は `1 1 auto` に展開され、つまりアイテムは拡大が許可されます。
+- `#default` アイテムには `flex` 値が設定されていないので、既定値として [`initial`](#initial) 値が設定されます。 `initial` 値は `0 1 auto` に展開され、アイテムは拡大されません。
+
+`#default` アイテムはその幅が要求されるだけの空間を取りますが、それ以上空間を取るために拡大されることはありません。残りの空間はすべて `#flex-auto` アイテムが占めます。
+
+`#flex-auto` アイテムをクリックすると、 `#default` アイテムの {{cssxref("display")}} プロパティが `none` に設定され、レイアウトから除去されます。すると、 `#flex-auto` アイテムがコンテナー内で利用できる空間をすべて占めるように展開されます。もう一度 `#flex-auto` アイテムをクリックすると、 `#default` アイテムがコンテナー内に再び追加されます。
+
+{{EmbedLiveSample('Setting_flex_auto','100%','150')}}
 
 ## 仕様書
 
@@ -253,5 +273,6 @@ flex.addEventListener("click", function () {
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS フレックスボックスガイド: _[主軸に沿ったフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール

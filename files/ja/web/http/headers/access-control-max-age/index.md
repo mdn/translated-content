@@ -54,7 +54,7 @@ Access-Control-Max-Age: 600
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Access-Control-Max-Age")}}
+{{Compat}}
 
 ## 関連情報
 

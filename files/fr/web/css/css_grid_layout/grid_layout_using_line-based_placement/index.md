@@ -7,15 +7,15 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 
 {{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Les_concepts_de_base", "Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille","Web/CSS/CSS_Grid_Layout")}}
 
-Dans [l'article sur les concepts de base](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout), nous avons vu comment positionner des éléments en utilisant des numéros de lignes. Nous allons désormais étudier cette fonctionnalité de positionnement plus en détail.
+Dans [l'article sur les concepts de base](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout), nous avons vu comment positionner des éléments en utilisant des numéros de lignes. Nous allons désormais étudier cette fonctionnalité de positionnement plus en détail.
 
-Commencer par utiliser les lignes numérotées est plutôt logique car toutes les grilles possèdent des lignes numérotées. Ces lignes forment les colonnes et les lignes horizontales de la grille, elles sont numérotées à partir de 1. On notera aussi que la numérotation des lignes varie selon le mode d'écriture du document. Dans un document écrit de gauche à droite comme le français, la ligne numéro 1 est située à l'extrêmité gauche de la grille. Si l'écriture va de droite à gauche, la ligne numéro 1 sera celle qui est située le plus à droite. Nous explorerons ces notions sur les modes d'écriture dans [un prochain guide](/fr/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes).
+Commencer par utiliser les lignes numérotées est plutôt logique car toutes les grilles possèdent des lignes numérotées. Ces lignes forment les colonnes et les lignes horizontales de la grille, elles sont numérotées à partir de 1. On notera aussi que la numérotation des lignes varie selon le mode d'écriture du document. Dans un document écrit de gauche à droite comme le français, la ligne numéro 1 est située à l'extrêmité gauche de la grille. Si l'écriture va de droite à gauche, la ligne numéro 1 sera celle qui est située le plus à droite. Nous explorerons ces notions sur les modes d'écriture dans [un prochain guide](/fr/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes).
 
 ## Un exemple simple
 
 Dans cet exemple simple, on a une grille avec trois pistes pour les colonnes et trois pistes pour les lignes, on a donc 4 lignes pour chaque dimension.
 
-Dans le conteneur, on a quatre éléments fils. Si aucune autre règle de placement n'est indiquée, ces éléments seront placés automatiquement et la grille remplira les quatre premières cellules. Si vous utilisez [l'outil de mise en évidence des grilles de Firefox](/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts), vous pouvez voir les colonnes et les lignes horizontales formées par la grille.
+Dans le conteneur, on a quatre éléments fils. Si aucune autre règle de placement n'est indiquée, ces éléments seront placés automatiquement et la grille remplira les quatre premières cellules. Si vous utilisez [l'outil de mise en évidence des grilles de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html), vous pouvez voir les colonnes et les lignes horizontales formées par la grille.
 
 ![Our Grid highlighted in DevTools](3_hilighted_grid.png)
 
@@ -71,7 +71,7 @@ On peut placer les éléments d'une grille en utilisant les numéros de lignes q
 }
 ```
 
-Lorsqu'on positionne des objets sur la grille, les autres continueront d'être placés selon les règles de placement automatique. Nous verrons ces règles dans [un prochain guide](/fr/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout) mais grâce à cet exemple, on peut voir que les cellules vides sont remplies au fur et à mesure par les objets qui ne sont pas placés explicitement.
+Lorsqu'on positionne des objets sur la grille, les autres continueront d'être placés selon les règles de placement automatique. Nous verrons ces règles dans [un prochain guide](/fr/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout) mais grâce à cet exemple, on peut voir que les cellules vides sont remplies au fur et à mesure par les objets qui ne sont pas placés explicitement.
 
 On peut placer chacun des éléments individuellement et on peut également choisir de laisser certaines cellules vides. Un des avantages de la grille CSS est qu'on peut créer des espaces sans avoir à utiliser des marges ou d'autres méthodes de contournement.
 
@@ -362,7 +362,7 @@ On peut aller plus loin et définir une zone pour chaque élément grâce à une
 
 {{EmbedLiveSample('La_propriété_grid-area', '300', '330')}}
 
-L'ordre des valeurs utilisé pour `grid-area` peut sembler un peu étrange quand on connaît celui utilisé par les propriétés raccourcies pour les marges (_margin_) et le remplissage (_padding_). Cet ordre s'explique car les grilles CSS fonctionnent avec les différents modes d'écriture et on utilise des propriétés et des valeurs _logiques_ plutôt que des propriétés et des valeurs _physiques_. Nous aborderons ce point dans [un prochain article](/fr/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes) mais il faut retenir ici que l'ordre des valeurs correspond aux directions logiques suivantes :
+L'ordre des valeurs utilisé pour `grid-area` peut sembler un peu étrange quand on connaît celui utilisé par les propriétés raccourcies pour les marges (_margin_) et le remplissage (_padding_). Cet ordre s'explique car les grilles CSS fonctionnent avec les différents modes d'écriture et on utilise des propriétés et des valeurs _logiques_ plutôt que des propriétés et des valeurs _physiques_. Nous aborderons ce point dans [un prochain article](/fr/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes) mais il faut retenir ici que l'ordre des valeurs correspond aux directions logiques suivantes :
 
 - `block-start`
 - `block-end`
@@ -454,7 +454,8 @@ Dans le prochain exemple, on renverse la disposition de la grille en travaillant
 
 La spécification pour les grilles CSS permet également d'ajouter des espaces (« gouttières ») entre les colonnes et entre les lignes grâce aux propriétés {{cssxref("grid-column-gap")}} et {{cssxref("row-gap")}}. Celles-ci permettent de définir un espace, de la même façon que la propriété {{cssxref("column-gap")}} permet d'obtenir un espace pour un mode de disposition avec plusieurs colonnes.
 
-> **Note :** Les anciens navigateurs utilisent {{cssxref("column-gap")}}, {{cssxref("row-gap")}}, {{cssxref("gap")}} avec le préfixe `grid-` soit : {{cssxref("grid-column-gap")}}, {{cssxref("row-gap")}} et {{cssxref("gap")}}.
+> [!NOTE]
+> Les anciens navigateurs utilisent {{cssxref("column-gap")}}, {{cssxref("row-gap")}}, {{cssxref("gap")}} avec le préfixe `grid-` soit : {{cssxref("grid-column-gap")}}, {{cssxref("row-gap")}} et {{cssxref("gap")}}.
 >
 > Les navigateurs actuels retirent progressivement ce préfixe (la version préfixée sera maintenue sous forme d'alias). À l'heure actuelle, certains navigateurs ne prennent pas encore la version sans préfixe et c'est pourquoi certains exemples de ce guide continuent d'utiliser les versions préfixées avec `grid-`.
 
@@ -614,6 +615,6 @@ Dans le deuxième exemple, on indique la ligne de fin et le nombre de lignes occ
 
 Pour vous familiariser avec le positionnement des éléments d'une grille en utilisant les lignes, vous pouvez essayer de construire certaines dispositions fréquemment utilisées en plaçant des éléments sur des grilles avec plus ou moins de pistes. Il faut garder à l'esprit que, lorsqu'on ne place pas explicitement tous les éléments, les éléments restants seront positionnés automatiquement. Cela peut tout à fait être l'objectif recherché mais si ce n'est pas le cas et que vous voyez un élément à un endroit inapproprié, vérifiez que vous lui avez affecté une position au sein de la grille.
 
-Il faut aussi se rappeler que lorsqu'on place les éléments explicitement sur la grille, ceux-ci peuvent se chevaucher. Cela permet d'obtenir certains effets mais attention aux erreurs lorsque c'est la mauvaise ligne de début ou de fin qui est indiquée. Pour régler ce problème, on peut utiliser [l'outil de mise en évidence de la grille CSS dans Firefox](/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) pour analyser une grille compliquée.
+Il faut aussi se rappeler que lorsqu'on place les éléments explicitement sur la grille, ceux-ci peuvent se chevaucher. Cela permet d'obtenir certains effets mais attention aux erreurs lorsque c'est la mauvaise ligne de début ou de fin qui est indiquée. Pour régler ce problème, on peut utiliser [l'outil de mise en évidence de la grille CSS dans Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) pour analyser une grille compliquée.
 
 {{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Les_concepts_de_base", "Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille","Web/CSS/CSS_Grid_Layout")}}

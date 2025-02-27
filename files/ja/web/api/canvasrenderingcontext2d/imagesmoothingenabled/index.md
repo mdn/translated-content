@@ -1,26 +1,23 @@
 ---
-title: CanvasRenderingContext2D.imageSmoothingEnabled
+title: "CanvasRenderingContext2D: imageSmoothingEnabled プロパティ"
+short-title: imageSmoothingEnabled
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
 
-**`imageSmoothingEnabled`** は {{domxref("CanvasRenderingContext2D")}} インターフェイスのプロパティで、キャンバス 2D API の一部です。スケーリングされた画像を平滑化するか (`true`、既定値) またはしないか (`false`) を決定します。 `imageSmoothingEnabled` プロパティを取得すると、最後に設定された値が返されます。
+**`imageSmoothingEnabled`** は {{domxref("CanvasRenderingContext2D")}} インターフェイスのプロパティで、[キャンバス API](/ja/docs/Web/API/Canvas_API) の一部です。変倍された画像を平滑化するか (`true`、既定値) またはしないか (`false`) を決定します。 `imageSmoothingEnabled` プロパティを取得すると、最後に設定された値が返されます。
 
 このプロパティは、ピクセルアートを使用するゲームやその他のアプリで有用です。画像を拡大するとき、既定のリサイズアルゴリズムではピクセルがぼけてしまいます。このプロパティを `false` に設定すると、ピクセルの鮮明さを維持します。
 
-> **メモ:** 平滑化の品質は、 {{domxref("CanvasRenderingContext2D.imageSmoothingQuality", "imageSmoothingQuality")}} プロパティで調整することができます。
+> [!NOTE]
+> 平滑化の品質は、 {{domxref("CanvasRenderingContext2D.imageSmoothingQuality", "imageSmoothingQuality")}} プロパティで調整することができます。
 
-## 構文
+## 値
 
-```js
-ctx.imageSmoothingEnabled = value;
-```
-
-### オプション
-
-- `value`
-  - : 画像を滑らかに拡大するかどうかを示す論理値です。既定値は `true` です。
+論理値で、画像を滑らかに拡大するかどうかを示します。既定値は `true` です。
 
 ## 例
 
@@ -46,7 +43,7 @@ ctx.textAlign = "center";
 const img = new Image();
 img.src =
   "https://interactive-examples.mdn.mozilla.net/media/examples/star.png";
-img.onload = function () {
+img.onload = () => {
   const w = img.width,
     h = img.height;
 

@@ -11,7 +11,15 @@ slug: Web/JavaScript/Reference/Operators/Logical_AND
 보다 일반적으로 왼쪽에서 오른쪽으로 평가할 때 연산자는 처음으로 만나는 {{Glossary("falsy", "거짓 같은")}} 피연산자의
 값을 반환합니다. 혹은 모두 {{Glossary("truthy", "참 같은 값")}}이라면 마지막 피연산자의 값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical AND", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 && b > 0);
+// Expected output: false
+```
 
 ## 구문
 
@@ -87,7 +95,7 @@ console.log(A() && B());
 ### 연산자 우선순위
 
 AND 연산자는 OR 연산자보다 높은 우선 순위를 가지며, 이는 `&&` 연산자가 `||` 연산자보다 먼저 실행된다는 것을 의미합니다.
-([연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)참고).
+([연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence)참고).
 
 ```js
 true || (false && false); // returns true

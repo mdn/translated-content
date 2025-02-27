@@ -163,7 +163,7 @@ O modo compátivel-padrão de centralizar um bloco em si sem centralizar seu con
 
 ## Browser compatibilidade
 
-{{Compat("css.properties.text-align")}}
+{{Compat}}
 
 ## Veja também
 

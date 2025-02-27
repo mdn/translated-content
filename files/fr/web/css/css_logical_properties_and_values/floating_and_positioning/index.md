@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
 
 {{CSSRef}}
 
-[La spécification sur les propriétés et valeurs logiques](https://drafts.csswg.org/css-logical/) définit des valeurs logiques qui correspondent aux valeurs physiques utilisées pour {{cssxref("float")}} et {{cssxref("clear")}}. Elle définit aussi des propriétés logiques pour le positionnement lorsqu'on utilise une [disposition positionnée](/fr/docs/Web/CSS/CSS_Positioning). Dans ce guide, nous verrons comment utiliser ces valeurs et ces propriétés logiques.
+[La spécification sur les propriétés et valeurs logiques](https://drafts.csswg.org/css-logical/) définit des valeurs logiques qui correspondent aux valeurs physiques utilisées pour {{cssxref("float")}} et {{cssxref("clear")}}. Elle définit aussi des propriétés logiques pour le positionnement lorsqu'on utilise une [disposition positionnée](/fr/docs/Web/CSS/CSS_positioned_layout). Dans ce guide, nous verrons comment utiliser ces valeurs et ces propriétés logiques.
 
 ## Correspondance entre les propriétés et les valeurs
 
@@ -65,7 +65,8 @@ Cette spécification définit également de nouvelles propriétés logiques qui 
 - {{cssxref("inset-inline")}} — elle permet de définir les décalages sur l'axe en ligne
 - {{cssxref("inset-block")}} — elle permet de définir les décalage sur l'axe de bloc
 
-> **Note :** Les navigateurs n'ont, pour l'instant, pas implémenté ces nouvelles propriétés (décembre 2018). Pour plus d'informations sur la compatibilité des navigateurs, vous pouvez vous référer aux tableaux de compatibilité présents à la fin des pages de référence pour ces propriétés.
+> [!NOTE]
+> Les navigateurs n'ont, pour l'instant, pas implémenté ces nouvelles propriétés (décembre 2018). Pour plus d'informations sur la compatibilité des navigateurs, vous pouvez vous référer aux tableaux de compatibilité présents à la fin des pages de référence pour ces propriétés.
 
 ## Exemple de valeurs logiques pour `text-align`
 

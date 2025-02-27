@@ -7,7 +7,15 @@ slug: Web/HTML/Element/object
 
 El **elemento HTML `<object>`** representa un recurso externo, que puede ser tratado como una imagen, un contexto de navegación anidado, o como un recurso que debe ser manejado por un plugin.
 
-{{EmbedInteractiveExample("pages/tabbed/object.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;object&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<object
+  type="video/mp4"
+  data="/shared-assets/videos/flower.mp4"
+  width="250"
+  height="200"></object>
+```
 
 La fuente original de este ejemplo interactivo está almacenada en un repositorio de GitHub. Si quieres contribuir al proyecto de ejemplos interactivos, por favor clona [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples)y envíanos un pull request.
 
@@ -55,7 +63,7 @@ La fuente original de este ejemplo interactivo está almacenada en un repositori
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th scope="row">Padres permitidos</th>
@@ -110,9 +118,9 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attribute
 - `tabindex` only {{deprecated_inline}}
   - : The position of the element in the tabbing navigation order for the current document.
 - `type`
-  - : El [content type](/es/docs/Glossary/Content_type) del recurso especificado mediante **data**. Al menos uno de los dos atributos, **data** o **type**, deben estar definidos.
+  - : El [content type](/es/docs/Glossary/MIME_type) del recurso especificado mediante **data**. Al menos uno de los dos atributos, **data** o **type**, deben estar definidos.
 - `typemustmatch`
-  - : Este valor booleano indica si el atributo **type** y el [content type](/es/docs/Glossary/Content_type) real del recurso deben coincidir para porder ser usados.
+  - : Este valor booleano indica si el atributo **type** y el [content type](/es/docs/Glossary/MIME_type) real del recurso deben coincidir para porder ser usados.
 - `usemap`
   - : Una refercia hash-name a un elemento {{HTMLElement("map")}}; es decir un '#' seguido del valor de un [`name`](/es/docs/Web/HTML/Element/map#name) de un elemento map.
 - `width`
@@ -142,6 +150,5 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attribute
 
 ## See also
 
-- {{HTMLElement("applet")}} {{deprecated_inline}}
 - {{HTMLElement("embed")}}
 - {{HTMLElement("param")}}

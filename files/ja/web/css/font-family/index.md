@@ -1,15 +1,17 @@
 ---
 title: font-family
 slug: Web/CSS/font-family
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
 
-CSS の **`font-family`** プロパティは、選択した要素に対して、フォントファミリー名や総称ファミリー名の優先順位リストを指定することができます。
+**`font-family`** は [CSS](/ja/docs/Web/CSS) のプロパティで、選択した要素に対して、フォントファミリー名や総称ファミリー名の優先順位リストを指定することができます。
 
 {{EmbedInteractiveExample("pages/css/font-family.html")}}
 
-複数の値をカンマで区切って、代替フォントを示します。ブラウザーはリストの中で最初のインストール済み、または {{CSSxRef("@font-face")}} アット規則を使用してダウンロード可能なフォントを選択します。
+複数の値をカンマで区切って、代替フォントを示します。ブラウザーはリストの中で最初のインストール済み、または {{CSSxRef("@font-face")}} アットルールを使用してダウンロード可能なフォントを選択します。
 
 一括指定プロパティの {{CSSxRef("font")}} を使用すると、 `font-size` やその他のフォント関連プロパティを一度に設定できるのでふつうは便利です。
 
@@ -43,6 +45,7 @@ font-family: fangsong;
 font-family: inherit;
 font-family: initial;
 font-family: revert;
+font-family: revert-layer;
 font-family: unset;
 ```
 
@@ -57,7 +60,13 @@ font-family: "Gill Sans Extrabold", sans-serif;
 ### 値
 
 - `<family-name>`
-  - : フォントファミリーの名称。例えば、 "Times" や "Helvetica" はフォントファミリーです。空白を含むフォントファミリー名は、引用符で囲む必要があります。
+
+  - : フォントファミリの名前。これは単一の {{cssxref("string")}} 値か、空白で区切られた一連の {{cssxref("custom-ident")}} 値でなければなりません。文字列値は引用符で囲む必要がありますが、 Unicode 文字を格納することができます。カスタム識別子は引用符で囲む必要はありませんが、特定の文字はエスケープする必要があります。
+
+    空白文字や数字、ハイフン以外の句読点を含むフォントファミリの名前は引用するのがよい習慣です。
+
+    [有効なファミリ名](#有効なファミリ名)も参照してください。
+
 - `<generic-name>`
 
   - : 総称フォントファミリーは代替の仕組みです。この仕組みによって、指定されたフォントがどれも利用できなかった場合、スタイルシート製作者の意図を多少なりとも保つことができます。総称ファミリー名はキーワードであり、引用符で囲んではいけません。総称フォントファミリーは、フォントファミリー名リストの最終選択肢である必要があります。以下のキーワードが定義されています。
@@ -107,47 +116,7 @@ font-family: "Gill Sans Extrabold", sans-serif;
     - `emoji`
       - : 絵文字を表示するために特別にデザインされたフォントです。
     - `fangsong`
-      - : セリフ風の Song と手書き風の Kai の形の間にある中国語の文字の特定のスタイルです。このスタイルは政府文書によく使用されます。
-
-### 有効なファミリー名
-
-フォントファミリー名は、引用符で囲まれた文字列か、引用符で囲まれていない 1 つ以上の識別子でなければなりません。これは、引用符で囲まれていないフォントファミリー名において、各トークンの冒頭に区切り記号文字や数字がある場合、エスケープしなければならないということを意味します。
-
-ホワイトスペース、数字、ハイフン以外の区切り文字を含むフォントファミリー名を引用符でくくるのは**良い習慣**です。
-
-例えば、以下の宣言は有効です。
-
-```css example-good
-font-family: "Goudy Bookletter 1911", sans-serif;
-```
-
-以下の宣言は**無効**です。
-
-```css example-bad
-font-family:
-  Goudy Bookletter 1911,
-  sans-serif;
-font-family: Red/Black, sans-serif;
-font-family:
-  "Lucida" Grande,
-  sans-serif;
-font-family: Ahem!, sans-serif;
-font-family:
-  test @foo,
-  sans-serif;
-font-family: #POUND, sans-serif;
-font-family:
-  Hawaii 5-0,
-  sans-serif;
-```
-
-以下の例は技術的には**有効**ですが、推奨されません。
-
-```css
-font-family:
-  Gill Sans Extrabold,
-  sans-serif;
-```
+      - : セリフ風の明朝体と手書き風の楷書体との間にある中国語の文字の特定のスタイル (宋朝体) です。このスタイルは政府文書によく使用されます。
 
 ## 公式定義
 
@@ -196,24 +165,52 @@ font-family:
 ```
 
 ```html hidden
-<div class="serif">This is an example of a serif font.</div>
+<div class="serif">これは serif フォントの例です。</div>
 
-<div class="sansserif">This is an example of a sans-serif font.</div>
+<div class="sansserif">これは sans-serif フォントの例です。</div>
 
-<div class="monospace">This is an example of a monospace font.</div>
+<div class="monospace">これは monospace フォントの例です。</div>
 
-<div class="cursive">This is an example of a cursive font.</div>
+<div class="cursive">これは cursive フォントの例です。</div>
 
-<div class="fantasy">This is an example of a fantasy font.</div>
+<div class="fantasy">これは fantasy フォントの例です。</div>
 
-<div class="math">This is an example of a math font.</div>
+<div class="math">これは math フォントの例です。</div>
 
-<div class="emoji">This is an example of an emoji font.</div>
+<div class="emoji">これは emoji フォントの例です。</div>
 
-<div class="fangsong">This is an example of a fangsong font.</div>
+<div class="fangsong">これは fangsong フォントの例です。</div>
 ```
 
 {{EmbedLiveSample("Some_common_font_families", 600, 220)}}
+
+### 有効なファミリ名
+
+以下の宣言は有効です。
+
+```css example-good
+font-family: "Goudy Bookletter 1911", sans-serif;
+```
+
+以下の宣言は無効です。
+
+```css-nolint example-bad
+font-family: Goudy Bookletter 1911, sans-serif;
+font-family: Red/Black, sans-serif;
+font-family: "Lucida" Grande, sans-serif;
+font-family: Ahem!, sans-serif;
+font-family: test@foo, sans-serif;
+font-family: #POUND, sans-serif;
+font-family: Hawaii 5-0, sans-serif;
+```
+
+以下の例は技術的には有効ですが、推奨されません。
+
+```css
+font-family:
+  Gill Sans Extrabold,
+  sans-serif;
+```
 
 ## 仕様書
 
@@ -227,4 +224,4 @@ font-family:
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
+- [基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)

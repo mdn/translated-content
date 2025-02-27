@@ -28,7 +28,7 @@ JavaScript 사양과 관련 기술에 대한 자세한 내용은 [JavaScript 기
 >
 > 목표 달성에 필요한 모든 필수 정보가 포함된 과정을 마련했습니다.
 >
-> [**시작하기**](/ko/docs/Learn/Front-end_web_developer)
+> [**시작하기**](/ko/docs/orphaned/Learn/Front-end_web_developer)
 
 ## 자습서
 
@@ -58,7 +58,7 @@ JavaScript를 배우고 싶지만 JavaScript이나 프로그래밍에 대한 이
 
 - [클라이언트 측 JavaScript 프레임워크 이해](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
   - : JavaScript 프레임워크는 현대 프런트 엔드 웹 개발의 필수 부분으로, 개발자에게 확장 가능한 상호작용형 웹 응용 프로그램을 구축하기위한 입증된 도구를 제공합니다. 이 과정에서는 오늘날 가장 인기있는 일부 프레임워크를 다루는 자습서 시리즈로 이동하기 전에 클라이언트 측 프레임워크가 작동하는 방식과 도구 집합에 맞는 방식에 대한 기본적인 배경 지식을 제공합니다.
-- [자바스크립트 개요](/ko/docs/Web/JavaScript/Language_Overview)
+- [JavaScript 개요](/ko/docs/Web/JavaScript/Language_overview)
   - : 다른 프로그래밍 언어에서 넘어 온 사람들이 빨리 배울 수 있는 JavaScript의 기본 구문과 의미 체계에 대한 개요입니다.
 - [JavaScript 데이터 구조](/ko/docs/Web/JavaScript/Data_structures)
   - : JavaScript에서 이용 가능한 데이터 구조 개요입니다.
@@ -73,11 +73,11 @@ JavaScript를 배우고 싶지만 JavaScript이나 프로그래밍에 대한 이
 
 - [상속 및 프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
   - : 널리 오해 받고 과소 평가된 프로토타입 기반 상속을 설명합니다.
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
   - : JavaScript 형식화된 배열은 원시 이진 데이터에 접근하기 위한 메커니즘을 제공합니다.
-- [메모리 관리](/ko/docs/Web/JavaScript/Memory_Management)
+- [메모리 관리](/ko/docs/Web/JavaScript/Memory_management)
   - : JavaScript의 메모리 생명 주기와 가비지 컬렉션을 설명합니다.
-- [동시성 모델 및 이벤트 루프](/ko/docs/Web/JavaScript/EventLoop)
+- [동시성 모델 및 이벤트 루프](/ko/docs/Web/JavaScript/Event_loop)
   - : JavaScript는 "이벤트 루프"에 기반을 둔 동시성 모델이 있습니다.
 
 ## 참고서
@@ -87,7 +87,7 @@ JavaScript를 배우고 싶지만 JavaScript이나 프로그래밍에 대한 이
 - [표준 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects)
   - : {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}} 등 표준 내장 객체를 배웁니다.
 - [표현식 및 연산자](/ko/docs/Web/JavaScript/Reference/Operators)
-  - : JavaScript 연산자 {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}의 동작, [연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) 등을 배웁니다.
+  - : JavaScript 연산자 {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}의 동작, [연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence) 등을 배웁니다.
 - [명령문 및 선언문](/ko/docs/Web/JavaScript/Reference/Statements)
   - : {{jsxref("Statements/do...while", "do-while")}}, {{jsxref("Statements/for...in", "for-in")}}, {{jsxref("Statements/for...of", "for-of")}}, {{jsxref("Statements/try...catch", "try-catch")}}, {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/var", "var")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/if...else", "if-else")}}, {{jsxref("Statements/switch", "switch")}} 등의 JavaScript의 구문 및 키워드 작동법을 배웁니다.
 - [함수](/ko/docs/Web/JavaScript/Reference/Functions)

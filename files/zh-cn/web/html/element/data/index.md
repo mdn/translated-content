@@ -7,7 +7,23 @@ slug: Web/HTML/Element/data
 
 **HTML `<data>` 元素**将一个指定内容和机器可读的翻译联系在一起。但是，如果内容是与时间或者日期相关的，则一定要使用 {{HTMLElement("time")}}。
 
-{{EmbedInteractiveExample("pages/tabbed/data.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;data&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>New Products:</p>
+<ul>
+  <li><data value="398">Mini Ketchup</data></li>
+  <li><data value="399">Jumbo Ketchup</data></li>
+  <li><data value="400">Mega Jumbo Ketchup</data></li>
+</ul>
+```
+
+```css interactive-example
+data:hover::after {
+  content: " (ID " attr(value) ")";
+  font-size: 0.7em;
+}
+```
 
 <table class="properties">
  <tbody>
@@ -20,8 +36,8 @@ slug: Web/HTML/Element/data
    <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
   </tr>
   <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
@@ -36,7 +52,7 @@ slug: Web/HTML/Element/data
 
 ## 属性
 
-该元素支持[全局属性](/zh-CN/docs/HTML/Global_attributes)。
+该元素支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `value`
   - : 该属性指定元素内容所对应的数据，或者说“机器可读的翻译”。

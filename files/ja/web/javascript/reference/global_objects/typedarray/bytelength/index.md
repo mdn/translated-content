@@ -2,14 +2,23 @@
 title: TypedArray.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
 l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
 {{JSRef}}
 
-**`byteLength`** アクセサープロパティは、型付き配列の長さを（バイト単位で）表します。
+**`byteLength`** は {{jsxref("TypedArray")}} のアクセサープロパティで、この型付き配列の長さを（バイト単位で）返します。
 
-{{EmbedInteractiveExample("pages/js/typedarray-bytelength.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.byteLength", "shorter")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+const uint8 = new Uint8Array(buffer, 2);
+
+console.log(uint8.byteLength);
+// Expected output: 6
+```
 
 ## 解説
 
@@ -42,5 +51,5 @@ uint8offSet.byteLength; // 6 (due to the offset of the constructed Uint8Array)
 
 ## 関連情報
 
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}

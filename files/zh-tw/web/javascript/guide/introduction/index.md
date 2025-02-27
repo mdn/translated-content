@@ -9,11 +9,11 @@ slug: Web/JavaScript/Guide/Introduction
 
 ## 在開始前需具備之能力
 
-本手冊假設您具有以下基本背景：
+本手冊假設你具有以下基本背景：
 
 - 對網際網路及全球資訊網有大致上的了解
 - 對 HTML(HyperText Markup Language )語法理解至一定程度
-- 有寫過程式的經驗，若您是完全的新手，可嘗試在主頁上有關[JavaScript](/zh-TW/docs/Web/JavaScript)的教程。
+- 有寫過程式的經驗，若你是完全的新手，可嘗試在主頁上有關[JavaScript](/zh-TW/docs/Web/JavaScript)的教程。
 
 ## 什麼是 JavaScript？
 
@@ -53,13 +53,13 @@ Java 是一個為了快速執行與安全型態而設計的基於類別的程式
 | 變數資料型態沒有宣告就可使用（動態定型，dynamic typing）。                                                                          | 變數資料型態必須宣告才可使用（靜態定型，static typing）。                                                                     |
 | 無法自動覆寫到硬碟。                                                                                                                | 無法自動覆寫到硬碟。                                                                                                          |
 
-更多關於 JavaScript 和 Java 的差異比較，請參見 [Details of the Object Model](/zh-TW/docs/JavaScript/Guide/Details_of_the_Object_Model) 。
+更多關於 JavaScript 和 Java 的差異比較，請參見 [Details of the Object Model](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) 。
 
 ## JavaScript 與 ECMAScript 規格
 
-Netscape 公司發明了 JavaScript ，而 JavaScript 的第一次應用正是在 Netscape 瀏覽器。然而，Netscape 後來和 [Ecma International](http://www.ecma-international.org/)（一個致力於將資訊及通訊系統標準化的歐洲組織，前身為 ECMA - 歐洲計算機製造商協會）合作，開發一個基於 JavaScript 核心並同時兼具標準化與國際化的程式語言，這個經過標準化的 JavaScript 便稱作 ECMAScript ，和 JavaScript 有著相同的應用方式並支援相關標準。各個公司都可以使用這個開放的標準語言去開發 JavaScript 的專案。ECMAScript 標準記載於 ECMA-262 這個規格中。
+Netscape 公司發明了 JavaScript ，而 JavaScript 的第一次應用正是在 Netscape 瀏覽器。然而，Netscape 後來和 [Ecma International](https://ecma-international.org/)（一個致力於將資訊及通訊系統標準化的歐洲組織，前身為 ECMA - 歐洲計算機製造商協會）合作，開發一個基於 JavaScript 核心並同時兼具標準化與國際化的程式語言，這個經過標準化的 JavaScript 便稱作 ECMAScript ，和 JavaScript 有著相同的應用方式並支援相關標準。各個公司都可以使用這個開放的標準語言去開發 JavaScript 的專案。ECMAScript 標準記載於 ECMA-262 這個規格中。
 
-ECMA-262 標準同時也經過 [ISO](http://www.iso.ch/)（國際標準化組織）認証，成為 ISO-16262 標準。你可以在 Mozilla 的網站上找到 [PDF 版本的 ECMA-262](http://www-archive.mozilla.org/js/language/E262-3.pdf)，但這板本已過期；你也可以在 [Ecma International 的網站](http://www.ecma-international.org/publications/standards/Ecma-262.htm) 找到這個規格。 ECMAScript 規格中並沒有描述已經被 W3C（全球資訊網協會）標準化的文件物件模型（DOM）。文件物件模型定義了 HTML 文件物件（document objects）和腳本之間運作的方式。
+ECMA-262 標準同時也經過 [ISO](https://www.iso.org/home.html)（國際標準化組織）認証，成為 ISO-16262 標準。你可以在 Mozilla 的網站上找到 [PDF 版本的 ECMA-262](https://www-archive.mozilla.org/js/language/E262-3.pdf)，但這板本已過期；你也可以在 [Ecma International 的網站](https://ecma-international.org/publications-and-standards/standards/ecma-262/) 找到這個規格。 ECMAScript 規格中並沒有描述已經被 W3C（全球資訊網協會）標準化的文件物件模型（DOM）。文件物件模型定義了 HTML 文件物件（document objects）和腳本之間運作的方式。
 
 ### JavaScript 版本與 ECMAScript 版本之間的關係
 
@@ -125,9 +125,10 @@ ECMAScript 規格（ECMA-262）在 Netscape 和 Ecma International 的密切合�
   </tbody>
 </table>
 
-> **備註：** ECMA-262 第 2 版是由已修正錯誤的第 1 版並加上些微的更動構成。現今由 Ecma International 的 TC39 工作組（TC39 Working Group）所發行的版本是 ECMAScript 5.1 版
+> [!NOTE]
+> ECMA-262 第 2 版是由已修正錯誤的第 1 版並加上些微的更動構成。現今由 Ecma International 的 TC39 工作組（TC39 Working Group）所發行的版本是 ECMAScript 5.1 版
 
-[JavaScript Reference](/zh-TW/docs/JavaScript/Reference) 指出了哪些 JavaScript 的特性是相容於 ECMAScript 的。
+[JavaScript Reference](/zh-TW/docs/Web/JavaScript/Reference) 指出了哪些 JavaScript 的特性是相容於 ECMAScript 的。
 
 JavaScript 永遠包含許多非 ECMAScript 規格中的特性；
 

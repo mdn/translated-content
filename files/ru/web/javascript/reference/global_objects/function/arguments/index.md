@@ -3,7 +3,7 @@ title: Function.arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 ---
 
-{{JSRef("Global_Objects", "Function")}} {{deprecated_header}}
+{{JSRef}} {{deprecated_header}}
 
 ## Сводка
 

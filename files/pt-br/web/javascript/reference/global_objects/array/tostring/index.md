@@ -38,7 +38,7 @@ Implementado no JavaScript 1.8.5 (Firefox 4), e compatível com a 5ª versão do
 
 ## Browsers compatíveis
 
-{{Compat("javascript.builtins.Array.toString")}}
+{{Compat}}
 
 ## Veja também
 

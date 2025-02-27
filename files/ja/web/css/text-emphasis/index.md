@@ -1,6 +1,8 @@
 ---
 title: text-emphasis
 slug: Web/CSS/text-emphasis
+l10n:
+  sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
 {{CSSRef}}
@@ -48,6 +50,7 @@ text-emphasis: filled sesame #555;
 text-emphasis: inherit;
 text-emphasis: initial;
 text-emphasis: revert;
+text-emphasis: revert-layer;
 text-emphasis: unset;
 ```
 
@@ -82,9 +85,9 @@ text-emphasis: unset;
 
 {{csssyntax}}
 
-## Examples
+## 例
 
-<h3 id="A_heading_with_emphasis_shape_and_color">強調して色を付けた見出し</h3>
+### 強調して色を付けた見出し
 
 この例は、見出しの各文字に三角形の圏点を付けて描画します。
 
@@ -92,7 +95,6 @@ text-emphasis: unset;
 
 ```css
 h2 {
-  -webkit-text-emphasis: triangle #d55;
   text-emphasis: triangle #d55;
 }
 ```
@@ -103,7 +105,7 @@ h2 {
 <h2>これは重要です！</h2>
 ```
 
-#### Result
+#### 結果
 
 {{EmbedLiveSample("A_heading_with_emphasis_shape_and_color", 500, 90)}}
 

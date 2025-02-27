@@ -3,6 +3,8 @@ title: Le fonctionnement des liens sur le Web
 slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Dans cet article, nous verrons ce que sont les liens et en quoi ils sont importants pour la structure du Web.
 
 <table class="standard-table">
@@ -49,7 +51,7 @@ Les liens sont la clef de voute du Web, ils ont pu le rendre utile et prospère.
 
 ## Pédagogie active
 
-_Cette section a besoin d'être enrichie, [n'hésitez pas à contribuer !](/fr/docs/MDN/Getting_started)_
+_Cette section a besoin d'être enrichie, [n'hésitez pas à contribuer !](/fr/docs/MDN/Community/Contributing/Getting_started)_
 
 ## Aller plus loin
 
@@ -90,5 +92,5 @@ Les liens ont donc une influence sur la façon dont les moteurs de recherche von
 
 Bien entendu, après avoir lu cet article, vous voudrez ajouter des liens à votre page web !
 
-- Pour connaître le fonctionnement théorique, vous pouvez lire [les URL et leur structure](/fr/Apprendre/Understanding_URLs) car, pour être précis, chaque hyperlien pointe vers une URL donnée.
-- Pour plonger dans la pratique, vous pouvez développer un peu de HTML. Apprenez comment [écrire des documents HTML et les lier les uns aux autres.](/fr/Apprendre/HTML/Write_a_simple_page_in_HTML)
+- Pour connaître le fonctionnement théorique, vous pouvez lire [les URL et leur structure](/fr/docs/Apprendre/Understanding_URLs) car, pour être précis, chaque hyperlien pointe vers une URL donnée.
+- Pour plonger dans la pratique, vous pouvez développer un peu de HTML. Apprenez comment [écrire des documents HTML et les lier les uns aux autres.](/fr/docs/Apprendre/HTML/Write_a_simple_page_in_HTML)

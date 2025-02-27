@@ -11,7 +11,34 @@ slug: Web/HTML/Element/input/color
 
 此元素的外观会因浏览器不同而不同，它可能是一个简单的文本输入，自动验证以确保颜色信息以正确的格式输入，或一个平台标准的颜色选择器，或某种自定义的颜色选择器窗口。
 
-{{EmbedInteractiveExample("pages/tabbed/input-color.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;color&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Choose your monster's colors:</p>
+
+<div>
+  <input type="color" id="head" name="head" value="#e66465" />
+  <label for="head">Head</label>
+</div>
+
+<div>
+  <input type="color" id="body" name="body" value="#f6b73c" />
+  <label for="body">Body</label>
+</div>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 <table class="properties">
  <tbody>
@@ -25,7 +52,7 @@ slug: Web/HTML/Element/input/color
       <td><strong>事件</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} 和
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>
@@ -56,7 +83,8 @@ slug: Web/HTML/Element/input/color
 
 `color` 类型的 {{HTMLElement("input")}} 元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 总是包含一个 7 个字符的字符串，它以 16 进制格式指定 RGB 颜色。虽然你可以用大写字母或小写字母输入颜色，但它将以小写字母形式存储。该值从不以任何其他形式出现，也从不为空。
 
-> **备注：** 将该值设置为任何不是有效的、完全不透明的、RGB 颜色的*十六进制表示*，都将导致该值被设置为 `#000000`。特别是，你不能使用 CSS 的标准化颜色名称或任何 CSS 函数语法来设置该值（记住，HTML 和 CSS 是独立的语言和规范）。此外，不支持带有透明通道的颜色；用 9 个字符的十六进制表示（例如 `#009900aa`）指定颜色，也会导致颜色被设置为 `#000000`。
+> [!NOTE]
+> 将该值设置为任何不是有效的、完全不透明的、RGB 颜色的*十六进制表示*，都将导致该值被设置为 `#000000`。特别是，你不能使用 CSS 的标准化颜色名称或任何 CSS 函数语法来设置该值（记住，HTML 和 CSS 是独立的语言和规范）。此外，不支持带有透明通道的颜色；用 9 个字符的十六进制表示（例如 `#009900aa`）指定颜色，也会导致颜色被设置为 `#000000`。
 
 ## 使用 color 输入
 
@@ -76,7 +104,7 @@ slug: Web/HTML/Element/input/color
 
 ### 监听颜色变化
 
-正如其他类型的 {{HTMLElement("input")}} 元素，有两个和值的改变相关的事件，{{domxref("HTMLElement/input_event", "input")}} 和 {{domxref("HTMLElement/change_event", "change")}}。每次颜色变更都会触发 `<input>` 元素上的 `input` 事件。用户关闭选色器之后会触发 `change` 事件。对于这两个事件，都可以通过 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性获取新值。
+正如其他类型的 {{HTMLElement("input")}} 元素，有两个和值的改变相关的事件，{{domxref("Element/input_event", "input")}} 和 {{domxref("HTMLElement/change_event", "change")}}。每次颜色变更都会触发 `<input>` 元素上的 `input` 事件。用户关闭选色器之后会触发 `change` 事件。对于这两个事件，都可以通过 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性获取新值。
 
 以下代码为监听颜色值变化的示例：
 
@@ -107,7 +135,7 @@ colorWell.select();
 
 ## 示例
 
-让我们创建一个例子，通过跟踪 {{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}} 事件，对颜色输入做一些处理，将新颜色应用到文档中的每个 {{HTMLElement("p")}} 元素。
+让我们创建一个例子，通过跟踪 {{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("Element/input_event", "input")}} 事件，对颜色输入做一些处理，将新颜色应用到文档中的每个 {{HTMLElement("p")}} 元素。
 
 ### HTML
 
@@ -156,7 +184,7 @@ function startup() {
 }
 ```
 
-在一个叫做 `colorWell` 的变量中获得对颜色 `<input>` 元素的引用，然后将颜色输入的值设置为 `defaultColor` 中的值。然后颜色输入的 {{domxref("HTMLElement/input_event", "input")}} 事件被设置为调用我们的 `updateFirst()` 函数，而 {{domxref("HTMLElement/change_event", "change")}} 事件被设置为调用 `updateAll()`。这些都在下面看到。
+在一个叫做 `colorWell` 的变量中获得对颜色 `<input>` 元素的引用，然后将颜色输入的值设置为 `defaultColor` 中的值。然后颜色输入的 {{domxref("Element/input_event", "input")}} 事件被设置为调用我们的 `updateFirst()` 函数，而 {{domxref("HTMLElement/change_event", "change")}} 事件被设置为调用 `updateAll()`。这些都在下面看到。
 
 最后，如果控件被实现为文本字段，我们调用 {{domxref("HTMLInputElement.select", "select()")}} 来选择颜色输入的文本内容（如果提供的是颜色选择器接口，这就没有效果）。
 
@@ -201,4 +229,4 @@ function updateAll(event) {
 
 ## 参见
 
-- [CSS 属性兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

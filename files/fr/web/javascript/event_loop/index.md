@@ -65,9 +65,10 @@ Ce modèle possède un désavantage : lorsqu'un message prend trop de temps à �
 
 Dans les navigateurs web, des messages sont ajoutés à chaque fois qu'un événement se produit et qu'un gestionnaire d'événements y est attaché. S'il n'y a pas d'écouteur (_listener_) pour intercepter l'événement, il est perdu. Ainsi, si on clique un élément qui possède un gestionnaire d'événements pour les clics, un message sera ajouté (il en va de même avec les autres événements).
 
-La fonction [`setTimeout`](/fr/docs/DOM/window.setTimeout) est appelée avec deux arguments : un message à la suite de la queue et la durée à attendre (optionnelle, par défaut elle vaut 0). La durée représente le temps minimal à attendre avant que le message soit placé dans la queue. S'il n'y a pas d'autre message dans la queue, le message sera traîté directement. En revanche, s'il y a d'autres messages auparavant, le message de `setTimeout` devra attendre la fin du traîtement des messages précédents déjà présents dans la queue. C'est pourquoi le deuxième argument de cette fonction indique une durée minimum et non une durée garantie.
+La fonction [`setTimeout`](/fr/docs/Web/API/Window/setTimeout) est appelée avec deux arguments : un message à la suite de la queue et la durée à attendre (optionnelle, par défaut elle vaut 0). La durée représente le temps minimal à attendre avant que le message soit placé dans la queue. S'il n'y a pas d'autre message dans la queue, le message sera traîté directement. En revanche, s'il y a d'autres messages auparavant, le message de `setTimeout` devra attendre la fin du traîtement des messages précédents déjà présents dans la queue. C'est pourquoi le deuxième argument de cette fonction indique une durée minimum et non une durée garantie.
 
-> **Attention :** L'argument passé pour le délai à `setTimeout` ne correspond pas au temps exact. Cela correspond au délai minimum et non à un délai garanti. Par exemple `setTimeout(maFonction(),100);` indique uniquement que `maFonction` sera lancé **au moins** après 100 millisecondes.
+> [!WARNING]
+> L'argument passé pour le délai à `setTimeout` ne correspond pas au temps exact. Cela correspond au délai minimum et non à un délai garanti. Par exemple `setTimeout(maFonction(),100);` indique uniquement que `maFonction` sera lancé **au moins** après 100 millisecondes.
 
 Voici un exemple qui illustre ce concept (`setTimeout` ne s'exécute pas immédiatement après la fin du _timer_) :
 
@@ -89,7 +90,7 @@ while (true) {
 
 ### Zéro délai
 
-Un délai à zéro ne signifie pas que le callback sera déclenché après zéro milliseconde. Appeler [`setTimeout`](/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) avec un délai de `0` (zéro) milliseconde n'éxécute pas le callback après l'interval donné.
+Un délai à zéro ne signifie pas que le callback sera déclenché après zéro milliseconde. Appeler [`setTimeout`](/fr/docs/Web/API/Window/setTimeout) avec un délai de `0` (zéro) milliseconde n'éxécute pas le callback après l'interval donné.
 
 L'exécution dépend du nombre de tâches en attente dans la queue. Dans l'exemple ci-dessous, le message `'ceci est juste un message'` sera affiché dans la console avant que le message dans le callback soit traité, parce que le délai est le temps _minimum_ requis par l'environnement d'exécution (runtime) pour traiter la demande (pas un temps _garanti_).
 
@@ -121,11 +122,11 @@ Fondamentalement, `setTimeout` doit attendre la fin de tout le code pour les mes
 
 ### La communication entre plusieurs environnements d'exécution
 
-Un web worker ou une `iframe` d'origine multiple (_cross origin_) possède sa propre pile, son propre tas et sa propre queue de messages. Deux environnements d'exécution distincts peuvent uniquement communiquer via des messages envoyés par la méthode [`postMessage`](/fr/docs/Web/API/window.postMessage). Cette méthode permet d'ajouter un message à un autre environnement d'exécution si celui-ci « écoute » les événements `message`.
+Un web worker ou une `iframe` d'origine multiple (_cross origin_) possède sa propre pile, son propre tas et sa propre queue de messages. Deux environnements d'exécution distincts peuvent uniquement communiquer via des messages envoyés par la méthode [`postMessage`](/fr/docs/Web/API/Window/postMessage). Cette méthode permet d'ajouter un message à un autre environnement d'exécution si celui-ci « écoute » les événements `message`.
 
 ## Non bloquant
 
-Le modèle de la boucle d'événement possède une caractéristique intéressante : JavaScript, à la différence d'autres langages, ne bloque jamais. La gestion des entrées-sorties (_I/O_) est généralement traitée par des événements et des callbacks. Ainsi, quand l'application attend le résultat d'une requête [IndexedDB](/fr/docs/IndexedDB) ou d'une requête [XHR](/fr/docs/XMLHttpRequest), il reste possible de traiter d'autres éléments comme les saisies utilisateur.
+Le modèle de la boucle d'événement possède une caractéristique intéressante : JavaScript, à la différence d'autres langages, ne bloque jamais. La gestion des entrées-sorties (_I/O_) est généralement traitée par des événements et des callbacks. Ainsi, quand l'application attend le résultat d'une requête [IndexedDB](/fr/docs/Web/API/IndexedDB_API) ou d'une requête [XHR](/fr/docs/Web/API/XMLHttpRequest), il reste possible de traiter d'autres éléments comme les saisies utilisateur.
 
 Il existe certaines exceptions historiques comme `alert` ou des appels XHR synchrones. C'est une bonne pratique que de les éviter. Attention, [certaines exceptions existent](https://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311) (mais relèvent généralement de bugs d'implémentation).
 

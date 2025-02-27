@@ -11,26 +11,26 @@ slug: Web/API/XMLDocument
 
 ## プロパティ
 
-_また、 {{DOMxRef("Document")}} からプロパティを継承します_
+_また、 {{DOMxRef("Document")}} からプロパティを継承します。_
 
 - {{DOMxRef("XMLDocument.async")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : {{DOMxRef("XMLDocument.load()")}} と併用して、非同期リクエストを示します。
 
 ## メソッド
 
-_また、 {{DOMxRef("Document")}} からメソッドを継承します_
+_また、 {{DOMxRef("Document")}} からメソッドを継承します。_
 
 - {{DOMxRef("XMLDocument.load()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : XML ドキュメントをロードします。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザー実装状況
 
-{{Compat("api.XMLDocument")}}
+{{Compat}}
 
 ## 関連項目
 
-- [The DOM interfaces index.](/ja/docs/DOM/DOM_Reference)
+- [The DOM interfaces index.](/ja/docs/Web/API/Document_Object_Model)

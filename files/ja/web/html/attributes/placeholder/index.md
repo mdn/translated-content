@@ -2,7 +2,7 @@
 title: "HTML 属性: placeholder"
 slug: Web/HTML/Attributes/placeholder
 l10n:
-  sourceCommit: 1d18b939883e7278cf4f8a14cb9cfd797615ea24
+  sourceCommit: aee2bd82de11cb7331134e48e8bd548bbedafcc5
 ---
 
 {{HTMLSidebar}}
@@ -47,8 +47,8 @@ l10n:
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - HTML [`title`](/ja/docs/Web/HTML/Global_attributes/title)
-- CSS [`:placeholder-shown`](/ja/docs/Web/CSS/_colon_placeholder-shown) 擬似クラスセレクター
-- CSS [`::placeholder`](/ja/docs/Web/CSS/::placeholder) 疑似要素セレクター
+- CSS [`:placeholder-shown`](/ja/docs/Web/CSS/:placeholder-shown) 擬似クラスセレクター
+- CSS [`::placeholder`](/ja/docs/Web/CSS/::placeholder) 擬似要素セレクター

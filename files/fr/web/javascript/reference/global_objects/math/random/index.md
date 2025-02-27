@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/random
 
 La fonction **`Math.random()`** renvoie un nombre flottant pseudo-aléatoire compris dans l'intervalle `[0, 1[` (ce qui signifie que 0 est compris dans l'intervalle mais que 1 en est exclu) selon une distribution approximativement uniforme sur cet intervalle. Ce nombre peut ensuite être multiplié afin de couvrir un autre intervalle. La graine (_seed_) du générateur est choisie par l'algorithme et ne peut pas être choisie ou réinitialisée par l'utilisateur.
 
-{{EmbedInteractiveExample("pages/js/math-random.html")}}
+{{InteractiveExample("JavaScript Demo: Math.random()")}}
+
+```js interactive-example
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+console.log(getRandomInt(3));
+// Expected output: 0, 1 or 2
+
+console.log(getRandomInt(1));
+// Expected output: 0
+
+console.log(Math.random());
+// Expected output: a number from 0 to <1
+```
 
 > **Note :** `Math.random()` **ne fournit pas** de nombres aléatoires propres à une cryptographie sécurisée. Les résultats de cette méthode ne doivent pas être utilisées dans des applications liées à la sécurité. À la place, on préfèrera utiliser l'API Web Crypto et plus précisément la méthode {{domxref("RandomSource.getRandomValues()", "window.crypto.getRandomValues()")}}.
 
@@ -58,7 +73,8 @@ function getRandomInt(min, max) {
 }
 ```
 
-> **Attention :** Utiliser `Math.round()` entraînerait une distribution non-uniforme et réduirait le caractère aléatoire de la méthode.
+> [!WARNING]
+> Utiliser `Math.round()` entraînerait une distribution non-uniforme et réduirait le caractère aléatoire de la méthode.
 
 ### Obtenir un entier aléatoire dans un intervalle fermé
 

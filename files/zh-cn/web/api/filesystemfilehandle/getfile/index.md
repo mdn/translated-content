@@ -1,9 +1,11 @@
 ---
 title: FileSystemFileHandle：getFile() 方法
 slug: Web/API/FileSystemFileHandle/getFile
+l10n:
+  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
 {{domxref("FileSystemFileHandle")}} 接口的 **`getFile()`** 方法返回一个 {{jsxref('Promise')}} 对象，可兑现一个 {{domxref('File')}} 对象，其表示磁盘上句柄所代表的条目的状态。
 
@@ -25,8 +27,10 @@ getFile()
 
 ### 异常
 
-- NotAllowedError
-  - : 如果只读模式的 {{domxref('PermissionStatus.state')}} 不是 `granted` ，则抛出此异常。
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : 如果可读（`read`）模式下的 {{domxref('PermissionStatus.state')}} 不是 `granted` ，则抛出此异常。
+- `NotFoundError` {{domxref("DOMException")}}
+  - : 如果未找到当前条目，则抛出该异常。
 
 ## 示例
 
@@ -53,4 +57,4 @@ async function getTheFile() {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://web.dev/file-system-access/)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.google.cn/docs/capabilities/web-apis/file-system-access)

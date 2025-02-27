@@ -24,4 +24,5 @@ l10n:
 すべてのオブジェクトが、シリアライズ可能なオブジェクトとは限りません。
 シリアライズ可能なオブジェクトについては、[構造化複製アルゴリズム > 対応済みの型](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#対応済みの型)に一覧があります。
 
-> **メモ:** シリアライズ可能なオブジェクトは、[Web IDL ファイル](https://github.com/w3c/webref/tree/main/ed/idl) に `[Serializable]` 属性で示されています。
+> [!NOTE]
+> シリアライズ可能なオブジェクトは、[Web IDL ファイル](https://github.com/w3c/webref/tree/main/ed/idl) に `[Serializable]` 属性で示されています。

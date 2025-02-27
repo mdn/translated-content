@@ -1,11 +1,12 @@
 ---
-title: ServiceWorkerGlobalScope.registration
+title: "ServiceWorkerGlobalScope: registration プロパティ"
+short-title: registration
 slug: Web/API/ServiceWorkerGlobalScope/registration
 l10n:
-  sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
+  sourceCommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
 **`registration`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、サービスワーカーの登録を表す {{domxref("ServiceWorkerRegistration")}} オブジェクトの参照を返します。
 
@@ -25,6 +26,4 @@ l10n:
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
 - [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)

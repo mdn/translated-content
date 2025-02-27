@@ -9,9 +9,9 @@ l10n:
 
 [Sensor APIs](/ja/docs/Web/API/Sensor_APIs) の **`AbsoluteOrientationSensor`** インターフェイスは、地球の参照用座標系に対するデバイスの物理的な向きを表します。
 
-このセンサーを使用するには、ユーザーが [Permissions API](/ja/docs/Web/API/Permissions_API) により `'accelerometer'`、`'gyroscope'`、`'magnetometer'` デバイスセンサーを使用する許可を与える必要があります。
+このセンサーを使用するには、ユーザーが [権限 API](/ja/docs/Web/API/Permissions_API) により `'accelerometer'`、`'gyroscope'`、`'magnetometer'` デバイスセンサーを使用する許可を与える必要があります。
 
-この機能はサーバーで設定された [Permissions Policy](/ja/docs/Web/HTTP/Permissions_Policy) でブロックされる可能性があります。
+この機能はサーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy) でブロックされる可能性があります。
 
 {{InheritanceDiagram}}
 

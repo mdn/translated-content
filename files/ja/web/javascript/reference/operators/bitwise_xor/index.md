@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
 
 ビット排他的論理和演算子 (`^`) は、両方のオペランドの対応するビットの一方だけが `1` である位置のビットで `1` を返します。
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-xor.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise XOR")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = 3; // 00000000000000000000000000000011
+
+console.log(a ^ b); // 00000000000000000000000000000110
+// Expected output: 6
+```
 
 ## 構文
 
@@ -68,5 +76,5 @@ XOR 演算の真理値表は次のようになります。
 
 ## 関連情報
 
-- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#ビット演算子)
+- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#ビット演算子)
 - [ビット排他的論理和代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)

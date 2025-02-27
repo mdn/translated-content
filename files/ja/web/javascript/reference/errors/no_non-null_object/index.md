@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Errors/No_non-null_object
 
 {{JSSidebar("Errors")}}
 
-JavaScript の例外 "is not a non-null object" は、ある場所でオブジェクトが期待されているのに提供されなかった場合に発生します。 {{jsxref("null")}} はオブジェクトではなく、動作しません。
+JavaScript の例外 "is not a non-null object" は、ある場所でオブジェクトが期待されているのに提供されなかった場合に発生します。 [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) はオブジェクトではなく、動作しません。
 
 ## エラーメッセージ
 
@@ -22,7 +22,7 @@ TypeError: Invalid value used in weak set (Chrome)
 
 ## エラーの原因
 
-ある場所でオブジェクトが期待されていますが、提供されませんでした。 {{jsxref("null")}} はオブジェクトではなく、動作しません。与えられた状況で適切なオブジェクトを提供しなければなりません。
+ある場所でオブジェクトが期待されていますが、提供されませんでした。 [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) はオブジェクトではなく、動作しません。与えられた状況で適切なオブジェクトを提供しなければなりません。
 
 ## 例
 

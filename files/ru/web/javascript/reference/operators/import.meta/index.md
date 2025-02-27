@@ -39,7 +39,7 @@ console.log(import.meta); // { url: "file:///home/user/my-module.js" }
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

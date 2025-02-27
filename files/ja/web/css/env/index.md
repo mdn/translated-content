@@ -56,10 +56,8 @@ You can then use `env()` in your CSS:
 
 ```css
 body {
-  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px) env(
-      safe-area-inset-bottom,
-      20px
-    ) env(safe-area-inset-left, 20px);
+  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px)
+    env(safe-area-inset-bottom, 20px) env(safe-area-inset-left, 20px);
 }
 ```
 
@@ -136,10 +134,8 @@ button {
 p {
   width: 300px;
   border: 2px solid red;
-  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px) env(
-      safe-area-inset-bottom,
-      50px
-    ) env(SAFE-AREA-INSET-LEFT, 50px);
+  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px)
+    env(safe-area-inset-bottom, 50px) env(SAFE-AREA-INSET-LEFT, 50px);
 }
 ```
 
@@ -213,7 +209,7 @@ main {
 ## 関連情報
 
 - {{CSSxRef("var()", "var(…)")}}
-- [CSS カスタムプロパティと変数のカスケード](/ja/docs/Web/CSS/CSS_Variables)
+- [CSS カスタムプロパティと変数のカスケード](/ja/docs/Web/CSS/CSS_cascading_variables)
 - [カスタムプロパティ (--\*)](/ja/docs/Web/CSS/--*)
 - [CSS カスタムプロパティ (変数) の使用](/ja/docs/Web/CSS/Using_CSS_custom_properties)
 - [Customize the window controls overlay of your PWA's title bar](https://web.dev/window-controls-overlay/)

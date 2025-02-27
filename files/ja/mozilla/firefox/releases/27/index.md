@@ -3,19 +3,21 @@ title: Firefox 27 for developers
 slug: Mozilla/Firefox/Releases/27
 ---
 
+{{FirefoxSidebar}}
+
 Gecko 27 を搭載した Firefox 27 は米国時間 2014 年 2 月 4 日にリリースされました。このページでは、開発者に影響する Firefox 27 の変更点をまとめています。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
 - デバッガが、DOM イベントでブレーク可能になりました。
 - デバッガパネル内で、{ } ボタンを使用して JavaScript を整形できます。
-- インスペクタに、アドオンを必要とせずに要素の HTML を編集する機能を搭載しました。
-- インスペクタで、色や背景画像の URL をプレビュー表示します。canvas 要素にマウスポインタを載せた場合も、画像のプレビューを表示します。
+- インスペクターに、アドオンを必要とせずに要素の HTML を編集する機能を搭載しました。
+- インスペクターで、色や背景画像の URL をプレビュー表示します。canvas 要素にマウスポインターを載せた場合も、画像のプレビューを表示します。
 - リフローのログを取得します。
 - SVG 要素のスタイルが調査可能になりました。([Firefox バグ 921191](https://bugzil.la/921191))
-- CSS インスペクタで、url リンクをクリックしたときに画像を見つけられない現象を修正しました ([Firefox バグ 921686](https://bugzil.la/921686))。
+- CSS インスペクターで、url リンクをクリックしたときに画像を見つけられない現象を修正しました ([Firefox バグ 921686](https://bugzil.la/921686))。
 
 詳しくは[こちらの記事](https://hacks.mozilla.org/2013/11/firefox-developer-tools-episode-27-edit-as-html-codemirror-more/)をご覧ください。
 
@@ -44,7 +46,7 @@ Gecko 27 を搭載した Firefox 27 は米国時間 2014 年 2 月 4 日にリ�
 - 数学関数 {{jsxref("Global_Objects/Math/hypot", "Math.hypot()")}} を実装しました ([Firefox バグ 896264](https://bugzil.la/896264))。
 - `yield*` 演算子を実装しました ([Firefox バグ 666396](https://bugzil.la/666396))。
 - `MapIterator`、`SetIterator`、`ArrayIterator` の各オブジェクトが、仕様書に一致するようになりました ([Firefox バグ 881226](https://bugzil.la/881226))。
-- [for..of](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループが `StopIteration` を使用する SpiderMonkey の古い iterator protocol をやめて、ES6 の標準 [iterator protocol](/ja/docs/Web/JavaScript/Guide/The_Iterator_protocol) に準拠するようになりました。
+- [for..of](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループが `StopIteration` を使用する SpiderMonkey の古い iterator protocol をやめて、ES6 の標準 [iterator protocol](/ja/docs/Web/JavaScript/Reference/Iteration_protocols) に準拠するようになりました。
 - {{jsxref("String.match")}} および {{jsxref("String.replace")}} は、{{jsxref("RegExp.lastIndex")}} をリセットするようになりました ([Firefox バグ 501739](https://bugzil.la/501739))。
 
 ### インターフェイス/API/DOM
@@ -60,7 +62,7 @@ Gecko 27 を搭載した Firefox 27 は米国時間 2014 年 2 月 4 日にリ�
 - {{domxref("Navigator.vibrate()")}} メソッドが最終仕様に適合しました。リストが長すぎる、または項目が大きすぎる場合は例外発生ではなく `false` を返すようになりました ([Firefox バグ 884935](https://bugzil.la/884935))。
 - グローバルオブジェクトを標準化する取り組みの一環として `StyleRuleChangeEvent`、`StyleSheetApplicableStateChangeEvent`、`StyleSheetChangeEvent` といった非標準のスタイルシート変更イベントのインターフェイスを、Web content で使用不可にしました。また、{{domxref("CSSRuleList")}} の詳細実装である `CSSGroupRuleRuleList` インターフェイスを削除しました ([Firefox バグ 872934](https://bugzil.la/872934) および [Firefox バグ 916871](https://bugzil.la/916871))。
 - `atob` はホワイトスペースを無視するようになりました ([Firefox バグ 711180](https://bugzil.la/711180))。
-- [WebGL](/ja/docs/Web/WebGL): `MOZ_` 接頭辞付きの拡張機能は非推奨になりました。これらは将来削除する予定です。接頭辞のない拡張機能のみを使用してください。草案段階の拡張機能を使用するには、`webgl.enable-draft-extensions` を設定してください ([Firefox バグ 924176](https://bugzil.la/924176))。
+- [WebGL](/ja/docs/Web/API/WebGL_API): `MOZ_` 接頭辞付きの拡張機能は非推奨になりました。これらは将来削除する予定です。接頭辞のない拡張機能のみを使用してください。草案段階の拡張機能を使用するには、`webgl.enable-draft-extensions` を設定してください ([Firefox バグ 924176](https://bugzil.la/924176))。
 
 ### MathML
 
@@ -87,7 +89,7 @@ canvasRenderingContext2D.get/setLineDash を実装しました。([Firefox バ�
 
 - [Firefox 27 リリースノート](http://www.mozilla.jp/firefox/27.0/releasenotes/)
 - [Firefox 27 アドオン互換性情報](https://dev.mozilla.jp/2014/01/firefox-27-addon-compatibility/)
-- Firefox 27 での [Marionette](/ja/docs/Mozilla/QA/Marionette) の[変更点一覧](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&component=Marionette&product=Testing&target_milestone=mozilla27)
+- Firefox 27 での [Marionette](https://firefox-source-docs.mozilla.org/testing/marionette/marionette/index.html) の[変更点一覧](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&component=Marionette&product=Testing&target_milestone=mozilla27)
 
 ### 過去のバージョン
 

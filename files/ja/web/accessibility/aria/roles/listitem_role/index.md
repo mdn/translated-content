@@ -19,13 +19,14 @@ ARIA のリスト項目 (`listitem`) ロールは、項目のリスト内の項�
 
 リストとリスト項目をマークアップするためにどの要素を使用するべきかについて、鉄則はありませんが、リスト項目がリストのコンテキストで意味をなすようにするべきです (例えば、買い物リスト、料理の手順、運転の指示) 。
 
-> **警告:** 可能な限り、適切な意味論の HTML 要素を使用して、リストとそのリスト項目 ({{htmlelement("ul")}} や {{htmlelement("ol")}} と {{htmlelement("li")}}) をマークアップするべきです。 詳しい例は、[ベストプラクティス](#best_practices)を参照してください。
+> [!WARNING]
+> 可能な限り、適切な意味論の HTML 要素を使用して、リストとそのリスト項目 ({{htmlelement("ul")}} や {{htmlelement("ol")}} と {{htmlelement("li")}}) をマークアップするべきです。 詳しい例は、[ベストプラクティス](#best_practices)を参照してください。
 
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 
-- [list](/ja/docs/Web/Accessibility/ARIA/Roles/List_role)
+- [list](/ja/docs/Web/Accessibility/ARIA/Roles/list_role)
   - : 項目のリスト。 リスト (`list`) ロールを持つ要素には、子として 1 つ以上のリスト項目 (`listitem`) ロールを持つ要素か、子として 1 つ以上のリスト項目 (`listitem`) ロールを持つ要素を含む 1 つ以上のグループ (`group`) ロールを持つ要素が必要です。
-- [group](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role)
+- [group](/ja/docs/Web/Accessibility/ARIA/Roles/group_role)
   - : ページの目次に掲載されるほど重要ではなく、リスト内にネストされている場合はリスト項目に限定される、関連するオブジェクトのコレクションです。 (訳注: リスト内にグループをネストできるという仕様は、ARIA 1.2 で、無くなる予定です。)
 
 ### キーボードインタラクション
@@ -64,11 +65,13 @@ ARIA のリスト項目 (`listitem`) ロールは、項目のリスト内の項�
 </ol>
 ```
 
-> **メモ:** ARIA のリストロールとリスト項目ロールでは、順序付きリストと順序無しリストを区別しません。
+> [!NOTE]
+> ARIA のリストロールとリスト項目ロールでは、順序付きリストと順序無しリストを区別しません。
 
-> **メモ:** タブ付きインターフェイスとして機能する項目のリストをマークアップする場合は、代わりにタブ (`tab`)、タブパネル (`tabpanel`)、タブリスト (`tablist`) のロールを使用するべきです。
+> [!NOTE]
+> タブ付きインターフェイスとして機能する項目のリストをマークアップする場合は、代わりにタブ (`tab`)、タブパネル (`tabpanel`)、タブリスト (`tablist`) のロールを使用するべきです。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
@@ -83,7 +86,7 @@ TBD
 - [HTML `<li>` 要素](/ja/docs/Web/HTML/Element/li)
 - [HTML `<ul>` 要素](/ja/docs/Web/HTML/Element/ul)
 - [HTML `<ol>` 要素](/ja/docs/Web/HTML/Element/ol)
-- [ARIA: list ロール](/ja/docs/Web/Accessibility/ARIA/Roles/List_role)
-- [ARIA: group ロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role)
+- [ARIA: list ロール](/ja/docs/Web/Accessibility/ARIA/Roles/list_role)
+- [ARIA: group ロール](/ja/docs/Web/Accessibility/ARIA/Roles/group_role)
 
 1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

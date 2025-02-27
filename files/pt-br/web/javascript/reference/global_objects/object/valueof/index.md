@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 
 O método **`valueOf()`** retorna o valor primitivo do objeto especificado.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.valueOf()")}}
+
+```js interactive-example
+function MyNumberType(n) {
+  this.number = n;
+}
+
+MyNumberType.prototype.valueOf = function () {
+  return this.number;
+};
+
+const object1 = new MyNumberType(4);
+
+console.log(object1 + 3);
+// Expected output: 7
+```
 
 ## Sintaxe
 
@@ -47,7 +62,8 @@ Um método `valueOf` de um objeto é geralmente chamado pelo JavaScript, mas voc
 myNumberType.valueOf();
 ```
 
-> **Nota:** Objetos em contexto de string convertidos através do método {{jsxref("Object.toString", "toString()")}}, o que é diferente de objetos {{jsxref("String")}} convertendo para string primiriva utlizando `valueOf`. Todos os objetos têm uma conversão string, somente se "`[object type]`". Mas muitos objetos não convertem para number, boolean, or function.
+> [!NOTE]
+> Objetos em contexto de string convertidos através do método {{jsxref("Object.toString", "toString()")}}, o que é diferente de objetos {{jsxref("String")}} convertendo para string primiriva utlizando `valueOf`. Todos os objetos têm uma conversão string, somente se "`[object type]`". Mas muitos objetos não convertem para number, boolean, or function.
 
 ## Exemplos
 
@@ -66,18 +82,13 @@ var myObj = new MyNumberType(4);
 myObj + 3; // 7
 ```
 
-## Espeficações
+## Especificações
 
-| Especificação                                                                        | Status               | Cometário                                          |
-| ------------------------------------------------------------------------------------ | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                  | {{Spec2('ES1')}}     | Initial definition. Implemented in JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.2.4.4', 'Object.prototype.valueOf')}}                   | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.valueOf")}}
+{{Compat}}
 
 ## Veja também
 

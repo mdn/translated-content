@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/in
 
 **`in` 演算子**は、指定されたプロパティが指定されたオブジェクトにある場合に `true` を返します。
 
-{{EmbedInteractiveExample("pages/js/expressions-inoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - in operator")}}
+
+```js interactive-example
+const car = { make: "Honda", model: "Accord", year: 1998 };
+
+console.log("make" in car);
+// Expected output: true
+
+delete car.make;
+if ("make" in car === false) {
+  car.make = "Suzuki";
+}
+
+console.log(car.make);
+// Expected output: "Suzuki"
+```
 
 ## 構文
 
@@ -111,9 +126,10 @@ let empties = new Array(3).fill(undefined);
 
 ### プライベートフィールドとメソッド
 
-`in` 演算子を使用して、特定の[クラスのプライベートフィールドまたはメソッド](/ja/docs/Web/JavaScript/Reference/Classes/Private_class_fields)がクラスで定義されているかどうかを調べることができます。そのメソッドが存在すれば演算子は `true` を返し、そうでなければ `false` を返します。
+`in` 演算子を使用して、特定の[クラスのプライベートフィールドまたはメソッド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)がクラスで定義されているかどうかを調べることができます。そのメソッドが存在すれば演算子は `true` を返し、そうでなければ `false` を返します。
 
-> **メモ:** クラスの定義されていない*プライベート*フィールドやメソッドにアクセスしようとすると、コードで `throw` が発生します。存在しない可能性があるプライベートフィールドを `in` 演算子でチェックすると、 `try/catch` を使用するより簡潔にすることができます。
+> [!NOTE]
+> クラスの定義されていない*プライベート*フィールドやメソッドにアクセスしようとすると、コードで `throw` が発生します。存在しない可能性があるプライベートフィールドを `in` 演算子でチェックすると、 `try/catch` を使用するより簡潔にすることができます。
 
 以下のコードは、指定されたクラスが特定のプライベートメソッドやフィールドを持っているかどうかをチェックする静的関数です。
 

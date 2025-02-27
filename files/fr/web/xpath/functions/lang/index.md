@@ -3,7 +3,7 @@ title: lang
 slug: Web/XPath/Functions/lang
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `lang` détermine si le nœud de contexte correspond à la langue indiquée et retourne le booléen `true` ou `false`.
 
@@ -58,7 +58,7 @@ La sortie sera&nbsp;:
 
 ### Définition
 
-[XPath 1.0, section 4.3](http://www.w3.org/TR/xpath#function-lang).
+[XPath 1.0, section 4.3](https://www.w3.org/TR/xpath#function-lang).
 
 ### Support Gecko
 

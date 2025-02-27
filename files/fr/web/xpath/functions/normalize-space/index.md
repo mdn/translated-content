@@ -3,7 +3,7 @@ title: normalize-space
 slug: Web/XPath/Functions/normalize-space
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `normalize-space` supprime les espaces de début et de fin d'une chaîne et remplace les successions d'espaces par une seule puis retourne la chaîne résultante.
 
@@ -24,7 +24,7 @@ La chaîne nomalisée.
 
 ### Définition
 
-[XPath 1.0, section 4.2](http://www.w3.org/TR/xpath#function-normalize-space).
+[XPath 1.0, section 4.2](https://www.w3.org/TR/xpath#function-normalize-space).
 
 ### Support Gecko
 

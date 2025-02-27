@@ -1,43 +1,66 @@
 ---
 title: 503 Service Unavailable
 slug: Web/HTTP/Status/503
+l10n:
+  sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
 ---
 
 {{HTTPSidebar}}
 
-超文本傳輸協定(英文：HyperText Transfer Protocol (HTTP) ) **`503 Service Unavailable`** 表示目前伺服器暫時不能處理連線的請求。
+HTTP **`503 Service Unavailable`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Status#伺服器錯誤回應)狀態碼表示伺服器尚未準備好處理請求。
 
-起因通常是伺服器正在進行維護或是當下流量過載。這種錯誤回傳應該是暫時性的，並且{{HTTPHeader("Retry-After")}} HTTP header 中要盡可能描述到系統大概恢復正常的時間。.
+常見的原因包括伺服器正在維護或過載。在維護期間，伺服器管理員可能會暫時將所有流量導向 `503` 頁面，或者在軟體更新期間自動發生這種情況。在過載的情況下，一些伺服器端應用程式會在記憶體、CPU 或連接池等資源達到上限時，以 `503` 狀態拒絕請求。丟棄傳入的請求可以產生背壓，防止伺服器的計算資源被完全耗盡，從而避免更嚴重的故障。如果特定用戶端的請求受到{{Glossary("Rate_limit", "速率限制")}}的影響，則應返回適當的回應狀態碼 {{HTTPStatus("429", "429 Too Many Requests")}}。
 
-> **備註：** 回傳這種錯誤的同時，也要同時顯示一張對使用者友善的網頁，來簡單描述問題。
+此回應應用於臨時狀況，並且如果可能的話，應在 {{HTTPHeader("Retry-After")}} HTTP 標頭中包含服務恢復的預計時間。
 
-回傳此錯誤時，務必注意和快取存取相關的標頭（Caching-related headers），因為 503 狀態通常要是暫時性的，而這種回應不應該被暫存至快取。
+應該提供一個用戶友好的頁面來解釋問題。
+
+> [!NOTE]
+> 與此回應一起傳送的與快取相關的標頭需要特別注意；`503` 表示暫時性問題，因此通常不應該以快取回應，以免在問題解決後用戶端仍然接收到過時的錯誤頁面。
 
 ## 狀態
 
-```plain
+```http
 503 Service Unavailable
+```
+
+## 範例
+
+### 503 伺服器錯誤回應
+
+以下請求嘗試獲取網頁，但伺服器返回 `503` 回應。回應主體包含描述伺服器狀態的頁面，並附有指向支援頁面的連結。回應主體中包含一個識別碼，以顯示可能有助於伺服器管理員縮小問題根源的方法：
+
+```http
+GET /highlights HTTP/1.1
+Host: example.com
+User-Agent: curl/8.6.0
+Accept: */*
+```
+
+```http
+HTTP/1.1 503 Service Unavailable
+Content-Type: text/html;
+Content-Length: 123
+
+<!doctype html>
+<html lang="zh-TW">
+<head>
+<title>503 服務無法使用</title>
+</head>
+<body>
+<h1>503 服務無法使用</h1>
+<p>伺服器無法完成你的請求，請稍後再試。</p>
+<p>如果此問題持續發生，請<a href="https://example.com/support">聯絡支援</a>。</p>
+<p>伺服器日誌包含此錯誤的詳細資訊，請求 ID：ABC-123。</p>
+</body>
+</html>
 ```
 
 ## 規範
 
 {{Specifications}}
 
-## 瀏覽器相容性
+## 參見
 
-以下資訊是從 MDN 的 GitHub 取得 (<https://github.com/mdn/browser-compat-data>).
-
-{{Compat}}
-
-## 請參閱
-
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
 - {{HTTPHeader("Retry-After")}}
-
-## 了解更多
-
-### 一般知識
-
-- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
-- [HTTP Error 503](https://kinsta.com/blog/http-error-503/)
-- [503 Service Unvailaible WordPress](https://secure.wphackedhelp.com/blog/503-service-unavailable-error-wordpress/)
-- [如何修復在 WordPress 當中「503 Service Unavailable Error」的問題？](https://techmoon.xyz/503-service-unavailable-error/)

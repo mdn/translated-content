@@ -5,7 +5,7 @@ slug: orphaned/Web/Compatibility_FAQ/Overwrapped_Navigation.html
 
 ## 概要
 
-他のブラウザで正しく表示されているナビゲーションメニューが、Firefox で表示すると大幅に崩れてしまう場合があります。
+他のブラウザーで正しく表示されているナビゲーションメニューが、Firefox で表示すると大幅に崩れてしまう場合があります。
 一列に並ぶべきアイコンが画面横幅に収まっておらず、他のアイコンと重なって表示されてしまい、周辺のアイコンが全体的に配置崩れを起こしてしまいます。
 
 ![](0102.jpg)
@@ -72,6 +72,6 @@ slug: orphaned/Web/Compatibility_FAQ/Overwrapped_Navigation.html
 
 ## メリット
 
-- 少ない修正で他ブラウザとの互換性が取れます。
+- 少ない修正で他ブラウザーとの互換性が取れます。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

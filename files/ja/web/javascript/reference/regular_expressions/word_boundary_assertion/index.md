@@ -53,7 +53,8 @@ hasThanks("Just want to say thank you for all your work."); // true
 hasThanks("Thanksgiving is around the corner."); // false
 ```
 
-> **警告:** すべての言語で単語の境界が明確に定義されているわけではありません。日本語やタイ語のように空白の区切りがない言語を扱う場合は、代わりに {{jsxref("Intl.Segmenter")}} のような高度なライブラリーを使って単語を検索してください。
+> [!WARNING]
+> すべての言語で単語の境界が明確に定義されているわけではありません。日本語やタイ語のように空白の区切りがない言語を扱う場合は、代わりに {{jsxref("Intl.Segmenter")}} のような高度なライブラリーを使って単語を検索してください。
 
 ## 仕様書
 

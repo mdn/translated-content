@@ -3,15 +3,19 @@ title: ARIA
 slug: Web/Accessibility/ARIA
 ---
 
+{{AccessibilitySidebar}}
+
 Accessible Rich Internet Applications **(<abbr>ARIA</abbr>)** es una colección de atributos que definen como realizar contenido y aplicaciónes web (especialmente las desarrolladas con Javascript) más accesibles para las personas con discapacidades.
 
 Complementa HTML para que las interacciones y los widgets que se usan comúnmente en las aplicaciones puedan ser correctamente interpretadas por las tecnologías de asistencia cuando no existe otro mecanismo. Por ejemplo, ARIA habilita accesibilidad a widgets de JavaScript, sugerencias de formularios, mensajes de error, actualizaciones de contenido en vivo y más.
 
-> **Advertencia:** Muchos de estos widgets se incorporaron posteriormente a HTML5, y **los desarrolladores deberían preferir usar el elemento HTML semántico correcto en lugar de usar ARIA**, si tal elemento existe. Por ejemplo, los elementos nativos tienen incorporado [accesibilidad de teclado](/es/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets), roles y estados. Sin embargo, si elige usar ARIA, es responsable de imitar el comportamiento equivalente del navegador en la secuencia de comandos.
+> [!WARNING]
+> Muchos de estos widgets se incorporaron posteriormente a HTML5, y **los desarrolladores deberían preferir usar el elemento HTML semántico correcto en lugar de usar ARIA**, si tal elemento existe. Por ejemplo, los elementos nativos tienen incorporado [accesibilidad de teclado](/es/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets), roles y estados. Sin embargo, si elige usar ARIA, es responsable de imitar el comportamiento equivalente del navegador en la secuencia de comandos.
 
 [La primera regla de ARIA](https://www.w3.org/TR/using-aria/#rule1) es "Si puede usar un elemento o atributo HTML nativo con la semántica y el comportamiento que necesita ya integrado, en lugar de reutilizar un elemento y agregar un rol, estado o propiedad de ARIA para hacerlo accesible, hágalo".
 
-> **Nota:** Hay un dicho "No utilizar ARIA es mejor que utilizar una mala ARIA". En [la encuesta de WebAim de más de un millón de páginas de inicio](https://webaim.org/projects/million#aria), encontraron que las páginas de inicio con ARIA presentes promediaron un 41 % más de errores detectados que aquellas sin ARIA. Si bien ARIA está diseñado para hacer que las páginas web sean más accesibles, si se usa incorrectamente, puede hacer más daño que bien.
+> [!NOTE]
+> Hay un dicho "No utilizar ARIA es mejor que utilizar una mala ARIA". En [la encuesta de WebAim de más de un millón de páginas de inicio](https://webaim.org/projects/million#aria), encontraron que las páginas de inicio con ARIA presentes promediaron un 41 % más de errores detectados que aquellas sin ARIA. Si bien ARIA está diseñado para hacer que las páginas web sean más accesibles, si se usa incorrectamente, puede hacer más daño que bien.
 
 Aquí está el marcado para una barra de progreso:
 
@@ -53,9 +57,11 @@ Habría sido mucho más simple usar el elemento nativo {{HTMLElement('progress')
 <progress id="percent-loaded" value="75" max="100">75 %</progress>
 ```
 
-> **Nota:** El atributo `min` no está permitido para el elemento {{HTMLElement('progress')}}; su valor mínimo es siempre `0`.
+> [!NOTE]
+> El atributo `min` no está permitido para el elemento {{HTMLElement('progress')}}; su valor mínimo es siempre `0`.
 
-> **Nota:** Los elementos de referencia HTML ({{HTMLElement("main")}}, {{HTMLElement("header")}}, {{HTMLElement("nav")}} etc.) tienen roles ARIA implícitos, por lo que no es necesario duplicarlos.
+> [!NOTE]
+> Los elementos de referencia HTML ({{HTMLElement("main")}}, {{HTMLElement("header")}}, {{HTMLElement("nav")}} etc.) tienen roles ARIA implícitos, por lo que no es necesario duplicarlos.
 
 ## Soporte
 
@@ -78,7 +84,7 @@ También es importante probar su ARIA creado con tecnología de asistencia real.
 
 - [Mejora de la navegación de páginas con referencias de ARIA](https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
   - : Una buena introducción al uso de los puntos de referencia de ARIA para mejorar la navegación de la página web para los usuarios de lectores de pantalla. [Consulte también las notas de implementación históricas de ARIA](https://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) y ejemplos en sitios reales (actualizado en julio de 2011).
-- [Mejorando la accesibilidad de los formularios](/es/docs/Web/Accessibility/ARIA/forms)
+- [Mejorando la accesibilidad de los formularios](/es/docs/conflicting/Web/Accessibility/ARIA_44f49c8e1fe8e4c12920395d890bd793)
   - : ¡ARIA no es solo para contenido dinámico! Aprenda a mejorar la accesibilidad de los formularios HTML utilizando atributos ARIA adicionales.
 
 ## ARIA para widgets con scripts
@@ -116,4 +122,4 @@ Las siguientes charlas son una excelente manera de entender ARIA:
 
 ## Temas relacionados
 
-[Accesibilidad](/es/docs/Web/Accessibility), [AJAX](/es/docs/Web/Guide/AJAX), [JavaScript](/es/docs/Web/JavaScript)
+[Accesibilidad](/es/docs/Web/Accessibility), [AJAX](/es/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data), [JavaScript](/es/docs/Web/JavaScript)

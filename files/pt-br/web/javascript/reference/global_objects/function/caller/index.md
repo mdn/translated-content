@@ -80,7 +80,7 @@ Não faz parte de nenhuma especificação. Implementado no JavaScript 1.5.
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Function.caller")}}
+{{Compat}}
 
 ## Ver também
 

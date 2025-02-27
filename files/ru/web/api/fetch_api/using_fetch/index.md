@@ -3,6 +3,8 @@ title: Использование Fetch
 slug: Web/API/Fetch_API/Using_Fetch
 ---
 
+{{DefaultAPISidebar("Fetch API")}}
+
 [Fetch API](/ru/docs/Web/API/Fetch_API) предоставляет интерфейс JavaScript для работы с запросами и ответами HTTP. Он также предоставляет глобальный метод {{domxref("GlobalFetch.fetch","fetch()")}}, который позволяет легко и логично получать ресурсы по сети асинхронно.
 
 Подобная функциональность ранее достигалась с помощью {{domxref("XMLHttpRequest")}}. Fetch представляет собой лучшую альтернативу, которая может быть легко использована другими технологиями, такими как {{domxref("ServiceWorker_API", "Service Workers")}}. Fetch также обеспечивает единое логическое место для определения других связанных с HTTP понятий, такие как CORS и расширения для HTTP.
@@ -10,9 +12,7 @@ slug: Web/API/Fetch_API/Using_Fetch
 Обратите внимание, `fetch` спецификация отличается от `jQuery.ajax()` в основном в двух пунктах:
 
 - Promise возвращаемый вызовом `fetch()` **не перейдёт в состояние "отклонено" из-за ответа HTTP, который считается ошибкой**, даже если ответ HTTP 404 или 500. Вместо этого, он будет выполнен нормально (с значением false в статусе `ok` ) и будет отклонён только при сбое сети или если что-то помешало запросу выполниться.
-- По умолчанию, `fetch` **не будет отправлять или получать cookie файлы** с сервера, в результате чего запросы будут осуществляться без проверки подлинности, что приведёт к неаутентифицированным запросам, если сайт полагается на проверку пользовательской сессии (для отправки cookie файлов в аргументе [init options](/ru/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters) должно быть задано значение свойства _credentials_ отличное от значения по умолчанию `omit`).
-
-> **Примечание:** 25 августа 2017 г. в спецификации изменилось значение по умолчанию свойства _credentials_ на `same-origin`. Firefox применяет это изменение с версии 61.0b13.
+- По умолчанию, `fetch` **не будет отправлять или получать cookie файлы** с сервера, в результате чего запросы будут осуществляться без проверки подлинности, что приведёт к неаутентифицированным запросам, если сайт полагается на проверку пользовательской сессии (для отправки cookie файлов в аргументе [init options](/ru/docs/Web/API/Window/fetch#parameters) должно быть задано значение свойства _credentials_ отличное от значения по умолчанию `omit`).
 
 Базовый запрос на получение данных действительно прост в настройке. Взгляните на следующий код:
 
@@ -30,9 +30,7 @@ fetch('http://example.com/movies.json')
 
 Конечно, это просто HTTP-ответ, а не фактический JSON. Чтобы извлечь содержимое тела JSON из ответа, мы используем {{domxref("Body.json","json()")}} метод (определён миксином {{domxref("Body")}}, который реализован в объектах {{domxref("Request")}} и {{domxref("Response")}}.)
 
-> **Примечание:** Миксин Body имеет подобные методы для извлечения других типов контента; см. раздел [Тело](#тело).
-
-Fetch-запросы контролируются посредством директивы `connect-src` ([Content Security Policy](/ru/docs/Security/CSP/CSP_policy_directives)), а не директивой извлекаемых ресурсов.
+Fetch-запросы контролируются посредством директивы `connect-src` ([Content Security Policy](/ru/docs/Web/HTTP/Headers/Content-Security-Policy)), а не директивой извлекаемых ресурсов.
 
 ### Установка параметров запроса
 
@@ -118,7 +116,7 @@ try {
 
 ## Загрузка файла на сервер
 
-На сервер можно загрузить файл, используя комбинацию HTML-элемента `<input type="file" />`, {{domxref("FormData.FormData","FormData()")}} и {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}}.
+На сервер можно загрузить файл, используя комбинацию HTML-элемента `<input type="file" />`, {{domxref("FormData.FormData","FormData()")}} и {{domxref("fetch()")}}.
 
 ```js
 const formData = new FormData();
@@ -141,7 +139,7 @@ try {
 
 ## Загрузка нескольких файлов на сервер
 
-На сервер можно загрузить несколько файлов, используя комбинацию HTML-элемента `<input type="file" multiple />`, {{domxref("FormData.FormData","FormData()")}} и {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}}.
+На сервер можно загрузить несколько файлов, используя комбинацию HTML-элемента `<input type="file" multiple />`, {{domxref("FormData.FormData","FormData()")}} и {{domxref("fetch()")}}.
 
 ```js
 const formData = new FormData();
@@ -387,19 +385,17 @@ fetch("/login", {
 Поддержка Fetch API может быть обнаружена путём проверки наличия {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} или {{domxref("GlobalFetch.fetch","fetch()")}} в области видимости {{domxref("Window")}} или {{domxref("Worker")}}. Для примера:
 
 ```js
-if (self.fetch) {
+if (window.fetch) {
   // запустить мой fetch запрос здесь
 } else {
-  // Сделать что-то с XMLHttpRequest?
+  // сделать что-то с XMLHttpRequest?
 }
 ```
 
-## Полифил
+## Смотрите также
 
-Для того, чтобы использовать Fetch в неподдерживаемых браузерах, существует Fetch Polyfill , который воссоздаёт функциональность для не поддерживающих браузеров.
-
-СпецификацииSpecification Status Comment{{SpecName('Fetch')}} {{Spec2('Fetch')}} Initial definitionСовместимость браузера
-
-{{Compat("api.fetch")}}
-
-Смотрите такжеServiceWorker APIHTTP access control (CORS)HTTPFetch polyfillFetch examples on Github`
+- [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
+- [HTTP CORS](/ru/docs/Web/HTTP/CORS)
+- [HTTP](/ru/docs/Web/HTTP)
+- [Полифил Fetch](https://github.com/github/fetch)
+- [Примеры работы с Fetch](https://github.com/mdn/dom-examples/tree/main/fetch) на GitHub

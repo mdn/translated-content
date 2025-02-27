@@ -1,5 +1,5 @@
 ---
-title: ":optional"
+title: :optional
 slug: Web/CSS/:optional
 ---
 
@@ -85,4 +85,4 @@ input:optional {
 ## 参见
 
 - 其他验证相关的伪类：{{ cssxref(":required") }}、{{ cssxref(":invalid") }} 和 {{ cssxref(":valid") }}
-- [表单数据校验](/zh-CN/docs/Learn/Forms/Form_validation)
+- [表单数据校验](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)

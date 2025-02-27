@@ -57,7 +57,8 @@ Le modèle ainsi créé, décrit l'objet livre - _Book_ - avec une description g
 
 Le diagramme met aussi en évidence les relations entre les objets et la cardinalité des relations. La cardinalité est représentée par les nombres entre crochet avec, si nécessaire, un minimum et un maximum. Par exemple, un ouvrage a, au moins un genre (\[1..\*]) alors qu'un genre peut ne pas référencer un livre (\[0..\*]) ce qui se traduira en définition des objets dans models.py.
 
-> **Note :** La section ci-dessous est une introduction générale à la modélisation des objets pour les modèles de données dans Django. Gardez à l'esprit la bibliothèque locale et imaginez comment devraient être décrits les objets pour cette bibliothèque.
+> [!NOTE]
+> La section ci-dessous est une introduction générale à la modélisation des objets pour les modèles de données dans Django. Gardez à l'esprit la bibliothèque locale et imaginez comment devraient être décrits les objets pour cette bibliothèque.
 
 ## Introduction au modèle de données
 
@@ -190,7 +191,8 @@ def get_absolute_url(self):
     return reverse('model-detail-view', args=[str(self.id)])
 ```
 
-> **Note :** En supposant que vous allez utiliser des URLs du type `/myapplication/mymodelname/2` pour afficher individuellement les données des enregistrements de la table associée à votre modèle de données (où "2" est l'`id` d'un enregistrement donné), vous devrez créer un routage d'URL pour vous permettre de transmettre l'id à une vue détaillée de l'enregistrement (model detail view dans le cadriciel Django). Cette vue détaillée réalisera l'affichage de l'enregistrement. La fonction `reverse()` a pour objectif d'écrire l'URL dans un format cohérent avec le traitement des URL par les navigateurs.
+> [!NOTE]
+> En supposant que vous allez utiliser des URLs du type `/myapplication/mymodelname/2` pour afficher individuellement les données des enregistrements de la table associée à votre modèle de données (où "2" est l'`id` d'un enregistrement donné), vous devrez créer un routage d'URL pour vous permettre de transmettre l'id à une vue détaillée de l'enregistrement (model detail view dans le cadriciel Django). Cette vue détaillée réalisera l'affichage de l'enregistrement. La fonction `reverse()` a pour objectif d'écrire l'URL dans un format cohérent avec le traitement des URL par les navigateurs.
 >
 > Bien entendu, cela requiert d'écrire le routage de l'URL, la vue et le gabarit...
 
@@ -212,7 +214,8 @@ record = MyModelName(my_field_name="Instance #1")
 record.save()
 ```
 
-> **Note :** Si aucun champs n'a été défini comme une clé primaire (option `primary_key`), un champs nommé `id` ou `pk` sera affecté au modèle et sera incrémenté automatiquement. Vous pouvez requêter cet enregistrement à l'aide de ce champ ; le premier enregistrement aura habituellement la valeur entière 1.
+> [!NOTE]
+> Si aucun champs n'a été défini comme une clé primaire (option `primary_key`), un champs nommé `id` ou `pk` sera affecté au modèle et sera incrémenté automatiquement. Vous pouvez requêter cet enregistrement à l'aide de ce champ ; le premier enregistrement aura habituellement la valeur entière 1.
 
 Les champs de l'enregistrement sont accessibles à l'aide des attributs de la classe d'objet. En utilisant la syntaxe pointée, vous pouvez modifier les valeurs des champs de l'enregistrement. Vous devez utiliser la méthode `save()` pour enregistrer en base de données les modifications.
 
@@ -230,7 +233,8 @@ record.save()
 
 La classe de base `objects` permet de faire des recherches d'enregistrement qui correspondront aux critères de recherche souhaités.
 
-> **Note :** Nous utiliserons dans les explications le modèle de données d'un livre (`Book`)avec des titres (`title`) et des genres littéraires (`genre`), car expliquer la manière de rechercher sur un modèle théorique n'est pas très pédagogique.
+> [!NOTE]
+> Nous utiliserons dans les explications le modèle de données d'un livre (`Book`)avec des titres (`title`) et des genres littéraires (`genre`), car expliquer la manière de rechercher sur un modèle théorique n'est pas très pédagogique.
 
 Vous pouvez obtenir tous les enregistrements d'un modèle de données sous la forme d'un jeu de données ou `QuerySet`, en utilisant `objects.all()`. Un `QuerySet` est un objet itérable, c'est-à-dire jeu de données contenant des objets que l'on peut parcourir.
 
@@ -254,7 +258,8 @@ Le marqueur "double souligné" permet de construire une chaîne de navigation à
 books_containing_genre = Book.objects.filter(genre__name__icontains='fiction')
 ```
 
-> **Note :** Vous pouvez construire une chemin pour naviguer dans autant de niveaux de relation (`ForeignKey`/`ManyToManyField`) que vous en avez besoin en concaténant des noms de champs à l'aide (\_\_) . Si par exemple vous souhaitez trouver un livre (`Book`) qui possède différents type (`type`) de couvertures (`cover`) identifiées par des noms (`name`) alors le chemin sera du type : `type__cover__name__exact='hard'.`
+> [!NOTE]
+> Vous pouvez construire une chemin pour naviguer dans autant de niveaux de relation (`ForeignKey`/`ManyToManyField`) que vous en avez besoin en concaténant des noms de champs à l'aide (\_\_) . Si par exemple vous souhaitez trouver un livre (`Book`) qui possède différents type (`type`) de couvertures (`cover`) identifiées par des noms (`name`) alors le chemin sera du type : `type__cover__name__exact='hard'.`
 
 La mise en oeuvre des requêtes est très riches en fonction des modèles et des relations, de sous-ensemble de données, etc. Pour une informations détaillées, vous devez consulter [les requêtes](https://docs.djangoproject.com/fr/2.2/topics/db/queries/) sur le site de référence de Django.
 
@@ -376,7 +381,8 @@ De nouveaux types de champs sont utilisés :
 
 La méthode `__str__()` obligatoirement requise par Django pour manipuler les instances d'objet et les enregistrements associés en base. Elle offre cependant la particularité d'associer l'identifiant unique et le titre du livre qui lui est associé.
 
-> **Note :** Un aspect de Python:
+> [!NOTE]
+> Un aspect de Python:
 >
 > - Si vous démarrez avec une version postérieure à la version 3.6, vous pouvez utiliser le formatage des chaînes de caractère avec la fonction f-strings : `f'{self.id} ({self.book.title})'`.
 > - Dans les versions précédente ce formatage était réalisé de manière différente utilisant la fonction de formatage format : `'{0} ({1})'.format(self.id,self.book.title)`).

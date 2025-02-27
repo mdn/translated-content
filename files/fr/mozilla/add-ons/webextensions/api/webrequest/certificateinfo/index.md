@@ -3,7 +3,7 @@ title: webRequest.CertificateInfo
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/CertificateInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet décrivant un seul [certificat X.509](https://tools.ietf.org/html/rfc5280).
 
@@ -31,7 +31,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
     Par exemple: "CN=DigiCert SHA2 Secure Server CA,O=DigiCert Inc,C=US".
 
 - `rawDER`
-  - : `Array` de `Number`. Si [`webRequest.getSecurityInfo()`](/fr/Add-ons/WebExtensions/API/webRequest/getSecurityInfo) a été appelé avec l'option `rawDER` présent et mis à `true`, ceci contiendra l'encodage DER du certificat.
+  - : `Array` de `Number`. Si [`webRequest.getSecurityInfo()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo) a été appelé avec l'option `rawDER` présent et mis à `true`, ceci contiendra l'encodage DER du certificat.
 - `serialNumber`
   - : `String`. Le [numéro de série](https://tools.ietf.org/html/rfc5280#section-4.1.2.2) du certificat.
 - `subject`

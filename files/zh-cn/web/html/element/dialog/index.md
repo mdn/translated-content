@@ -32,8 +32,8 @@ slug: Web/HTML/Element/dialog
       </td>
     </tr>
     <tr>
-      <th scope="row">标签是否可省略</th>
-      <td>{{no_tag_omission}}</td>
+      <th scope="row">标签省略</th>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
     </tr>
     <tr>
       <th scope="row">允许的父元素</th>
@@ -191,6 +191,6 @@ favDialog.addEventListener("close", () => {
 
 - {{domxref("HTMLDialogElement/close_event", "close")}} 事件
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}} 事件
-- [HTML 表单指南](/zh-CN/docs/Learn/Forms)
+- [HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{cssxref("::backdrop")}} 伪元素
 - [dialog-polyfill](https://github.com/GoogleChrome/dialog-polyfill)

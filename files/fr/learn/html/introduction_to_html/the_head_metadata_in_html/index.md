@@ -47,7 +47,7 @@ Revoyons le document HTML de base de l' [article précédent](/fr/docs/Learn/HTM
 </html>
 ```
 
-Le contenu de l'en-tête HTML {{htmlelement("head")}} — à la difference du contenu de l'élément {{htmlelement("body")}} (affiché quand la page est chargée par le navigateur) — n'est pas affiché dans la page du navigateur. Le travail de la balise \<head> est de contenir les {{glossary("Metadata", "métadonnées")}} à propos du document. Dans l'exemple ci-dessus, l'en-tête est plutôt petit :
+Le contenu de l'en-tête HTML {{htmlelement("head")}} — à la différence du contenu de l'élément {{htmlelement("body")}} (affiché quand la page est chargée par le navigateur) — n'est pas affiché dans la page du navigateur. Le travail de la balise \<head> est de contenir les {{glossary("Metadata", "métadonnées")}} à propos du document. Dans l'exemple ci-dessus, l'en-tête est plutôt petit :
 
 ```html
 <head>
@@ -56,11 +56,11 @@ Le contenu de l'en-tête HTML {{htmlelement("head")}} — à la difference du co
 </head>
 ```
 
-Toutefois dans les pages plus importantes, l'en-tête peut contenir un grand nombre d'éléments — essayez d'aller sur certains de vos sites web préférés et utilisez les [outils de développement](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) pour vérifier le contenu de l'en-tête. Notre objectif ici n'est pas de vous montrer comment utiliser tout ce qui peut être mis dans l'élément \<head>, mais plutôt de vous apprendre à utiliser les outils les plus évidents, que vous souhaiterez inclure dans l'en-tête, et vous les rendre plus familiers. Commençons.
+Toutefois dans les pages plus importantes, l'en-tête peut contenir un grand nombre d'éléments — essayez d'aller sur certains de vos sites web préférés et utilisez les [outils de développement](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) pour vérifier le contenu de l'en-tête. Notre objectif ici n'est pas de vous montrer comment utiliser tout ce qui peut être mis dans l'élément \<head>, mais plutôt de vous apprendre à utiliser les outils les plus évidents, que vous souhaiterez inclure dans l'en-tête, et vous les rendre plus familiers. Commençons.
 
 ## Ajouter un titre
 
-Nous avons déjà vu l'élément {{htmlelement ("title")}} — qui peut être utilisé pour ajouter un intitulé au document. Il peut toutefois être confondu avec l'élément {{htmlelement ("h1")}}, pour ajouter un en‑tête de haut nieau au contenu de votre page dans l'élément {{htmlelement("body")}} — quelquefois désigné comme étant le « titre de la page ». Mais ce sont des choses différentes !
+Nous avons déjà vu l'élément {{htmlelement ("title")}} — qui peut être utilisé pour ajouter un intitulé au document. Il peut toutefois être confondu avec l'élément {{htmlelement ("h1")}}, pour ajouter un en‑tête de haut niveau au contenu de votre page dans l'élément {{htmlelement("body")}} — quelquefois désigné comme étant le « titre de la page ». Mais ce sont des choses différentes !
 
 - L'élément {{htmlelement("h1")}} apparaît dans la page quand elle est chargée dans le navigateur — généralement, il devrait être utilisé une fois par page, pour marquer le titre du contenu de votre page (le titre d'une histoire, ou d'une actualité, ou tout ce qui vous paraît approprié).
 - L'élément {{htmlelement("title")}} est une métadonnée qui représente l'intitulé du document HTML global (non le contenu du document).
@@ -102,7 +102,8 @@ Cet élément définit l'encodage des caractères du document - le jeu de caract
 
 ![Une page Web contenant des caractères français et japonais, l'encodage des caractères étant réglé sur ISO latin. Les caractères japonais ne s'affichent pas correctement.](fr-meta-iso.png)
 
-> **Note :** Certains navigateurs (par ex. Chrome) corrigent automatiquement les encodages incorrects, ainsi selon le navigateur utilisé, ce problème pourrait vous passer totalement inaperçu. Vous devriez quand même définir un encodage `utf-8` sur votre page de toutes façons pour éviter tout problème potentiel avec d'autres navigateurs.
+> [!NOTE]
+> Certains navigateurs (par ex. Chrome) corrigent automatiquement les encodages incorrects, ainsi selon le navigateur utilisé, ce problème pourrait vous passer totalement inaperçu. Vous devriez quand même définir un encodage `utf-8` sur votre page de toute façon pour éviter tout problème potentiel avec d'autres navigateurs.
 
 ### Apprentissage actif : expérience avec l'encodage des caractères
 
@@ -114,7 +115,7 @@ Pour cela, reportez-vous au modèle HTML simple que vous avez obtenu dans la sec
 
 ### Ajouter le nom de l'auteur et une description
 
-De nombreux éléments `<meta>` icontiennent les attributs `name` et `content` :
+De nombreux éléments `<meta>` contiennent les attributs `name` et `content` :
 
 - `name` définit le type de méta élément ; le type d'informations contenu.
 - `content` définit le contenu réel de la métadonnée.
@@ -143,7 +144,7 @@ La description est aussi utilisée dans le résultat des moteurs de recherche. F
 
    <kbd>Ctrl</kbd>
 
-   , choissisez « _Code source de la page_ » dans le menu contextuel.)
+   , choisissez « _Code source de la page_ » dans le menu contextuel.)
 
 3. Trouvez la balise méta `description`. Elle ressemble à ceci :
 
@@ -162,9 +163,11 @@ La description est aussi utilisée dans le résultat des moteurs de recherche. F
 
    ![Une page de recherche Google pour "MDN web docs"](fr-google.png)
 
-> **Note :** Avec Google, vous verrez quelques sous-pages pertinentes de MDN listées sous le lien de la page d'accueil — ce sont des liens du site ; ils sont configurables dans les outils de [Google's webmaster tools](https://www.google.com/webmasters/tools/) - ces outils sont donc un moyen de rendre les résultats de recherche de votre site meilleurs avec le moteur de recherche de Google.
+> [!NOTE]
+> Avec Google, vous verrez quelques sous-pages pertinentes de MDN listées sous le lien de la page d'accueil — ce sont des liens du site ; ils sont configurables dans les outils de [Google's webmaster tools](https://www.google.com/webmasters/tools/) - ces outils sont donc un moyen de rendre les résultats de recherche de votre site meilleurs avec le moteur de recherche de Google.
 
-> **Note :** Plusieurs fonctions `<meta>` ne sont plus utilisées. Par exemple, l'élément `<meta>` `keyword` (`<meta name= "keywords" content="mettez, vos, mot-clés, ici">`) — qui est censé fournir des mots-clés pour les moteurs de recherche, afin de déterminer la pertinence de la page pour différents termes de recherche — est ignoré par les moteurs de recherche, car les polluposteurs remplissaient simplement la liste avec des centaines de mots-clés, biaisant les résultats.
+> [!NOTE]
+> Plusieurs fonctions `<meta>` ne sont plus utilisées. Par exemple, l'élément `<meta>` `keyword` (`<meta name= "keywords" content="mettez, vos, mot-clés, ici">`) — qui est censé fournir des mots-clés pour les moteurs de recherche, afin de déterminer la pertinence de la page pour différents termes de recherche — est ignoré par les moteurs de recherche, car les polluposteurs remplissaient simplement la liste avec des centaines de mots-clés, biaisant les résultats.
 
 ### Autres types de métadonnées
 
@@ -261,7 +264,8 @@ Ne vous préoccupez pas de la mise en œuvre de tous ces types d'icônes mainten
   <script src="mon-fichier-js.js"></script>
   ```
 
-  > **Note :** L'élément `<script>` peut ressembler à un élément vide, mais ce n'est pas le cas : il faut donc une balise de fermeture. Au lieu de pointer vers un fichier de script externe, vous pouvez également choisir de mettre le code du script dans le HTML à l'intérieur d'un élément `<script>`.
+  > [!NOTE]
+  > L'élément `<script>` peut ressembler à un élément vide, mais ce n'est pas le cas : il faut donc une balise de fermeture. Au lieu de pointer vers un fichier de script externe, vous pouvez également choisir de mettre le code du script dans le HTML à l'intérieur d'un élément `<script>`.
 
 ### Apprentissage actif : appliquer des CSS et du JavaScript à une page
 
@@ -276,7 +280,8 @@ Si ç'a été fait correctement, après avoir enregistré le HTML, puis actualis
 - Le JavaScript a ajouté une liste vide à la page. Maintenant, lorsque vous cliquez n'importe où sur la liste, une boîte de dialogue s'ouvre pour vous permettre de saisir un texte. Lorsque vous appuyez sur le bouton OK, un nouvel élément de la liste est ajouté contenant le texte saisi. Lorsque vous cliquez sur un élément de liste existant, la boîte de dialogue affiche son contenu pour vous permettre de le modifier.
 - Le CSS a rendu l'arrière-plan vert et le texte plus grand. Il a également décrit le contenu que le JavaScript a ajouté à la page (la barre rouge avec la bordure noire est le style que le CSS a ajouté à la liste générée par JS).
 
-> **Note :** Si vous êtes coincé dans cet exercice et que vous ne pouvez pas obtenir le CSS / JS à appliquer, essayez de vérifier notre exemple de page [css-and-js.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/css-and-js.html) .
+> [!NOTE]
+> Si vous êtes coincé dans cet exercice et que vous ne pouvez pas obtenir le CSS / JS à appliquer, essayez de vérifier notre exemple de page [css-and-js.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/css-and-js.html) .
 
 ## Définition de la langue principale du document
 

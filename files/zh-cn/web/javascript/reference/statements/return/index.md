@@ -1,68 +1,71 @@
 ---
 title: return
 slug: Web/JavaScript/Reference/Statements/return
+l10n:
+  sourceCommit: 4c26e8a3fb50d06963b06017f51ce19364350564
 ---
 
 {{jsSidebar("Statements")}}
 
-**`return`** 语句终止函数的执行，并返回一个指定的值给函数调用者。
+**`return`** 语句用于终止函数执行，并指定要返回给调用函数的值。
 
-{{EmbedInteractiveExample("pages/js/statement-return.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Return")}}
+
+```js interactive-example
+function getRectArea(width, height) {
+  if (width > 0 && height > 0) {
+    return width * height;
+  }
+  return 0;
+}
+
+console.log(getRectArea(3, 4));
+// Expected output: 12
+
+console.log(getRectArea(-3, 4));
+// Expected output: 0
+```
 
 ## 语法
 
 ```js-nolint
-return [expression]
+return;
+return expression;
 ```
 
-- `expression`
-  - : 要返回的值的表达式。如果忽略，则返回 `undefined`。
+- `expression` {{optional_inline}}
+  - : 待返回其值的表达式。如果省略，则返回 `undefined`。
 
 ## 描述
 
-当在函数体中使用 `return` 语句时，函数将会停止执行。如果指定一个值，则该值会被返回给函数调用者。例如，以下函数返回其参数 `x` 的平方，其中 `x` 是数字。
+`return` 语句只能在函数体内使用。当 `return` 出现在函数体内部时，该函数的执行将会停止。`return` 语句在不同类型的函数中具有不同的效果：
 
-```js
-function square(x) {
-  return x * x;
-}
-const demo = square(3);
-// demo will equal 9
-```
+- 在普通函数中，对该函数的调用会返回其返回值。
+- 在异步函数中，生成的 promise 将以返回的值敲定。
+- 在生成器函数中，生成的生成器对象的 `next()` 方法将返回 `{ done: true, value: 返回的值 }`。
+- 在异步生成器函数中，生成的异步生成器对象的 `next()` 方法返回一个已兑现的 promise，其值为 `{ done: true, value: 返回的值 }`。
 
-如果省略该值，则返回 `undefined`。
+如果在 {{jsxref("Statements/try...catch", "try")}} 块内执行了 `return` 语句，它会首先执行 `finally` 块然后才实际返回值（如果存在）。
 
-下面的 return 语句都会终止函数的执行：
+### 自动分号补全
 
-```js
-return;
-return true;
-return false;
-return x;
-return x + y / 3;
-```
+语法禁止在 `return` 关键字和要返回的表达式之间使用换行符。
 
-### 自动插入分号
-
-[自动插入分号（ASI）](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号补全)规则会影响 `return` 语句。在 `return` 关键字和被返回的表达式之间不允许使用换行符。
-
-```js-nolint
+```js-nolint example-bad
 return
 a + b;
 ```
 
-根据 ASI，被转换为：
+上述代码会被[自动分号补全（ASI）](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号补全)转换为：
 
-```js
+```js-nolint
 return;
 a + b;
 ```
 
-控制台会警告“unreachable code after return statement”。
+这会使函数返回 `undefined`，而 `a + b` 表达式永远不会被计算。这可能会在[控制台中生成警告](/zh-CN/docs/Web/JavaScript/Reference/Errors/Stmt_after_return)。
 
-> **备注：** 从 Firefox 40 开始，如果在 `return` 语句后发现不可达的代码，控制台会显示一个警告。
-
-为了避免这个问题（防止 ASI），你可以使用括号：
+为避免此问题（防止 ASI），你可以使用括号：
 
 ```js-nolint
 return (
@@ -72,26 +75,26 @@ return (
 
 ## 示例
 
-### 中断一个函数的执行
+### 中断函数
 
-函数将会在 `return` 语句执行后立即中止。
+函数在调用 `return` 时立即停止执行。
 
 ```js
 function counter() {
+  // 无限循环
   for (let count = 1; ; count++) {
-    // 无限循环
-    console.log(`${count}A`); // 执行 5 次
+    console.log(`${count}A`); // 直到 5 为止
     if (count === 5) {
       return;
     }
-    console.log(`${count}B`); // 执行 4 次
+    console.log(`${count}B`); // 直到 4 为止
   }
-  console.log(`${count}C`); // 永远不会执行
+  console.log(`${count}C`); // 从不出现
 }
 
 counter();
 
-// Output:
+// 输出：
 // 1A
 // 1B
 // 2A
@@ -105,7 +108,7 @@ counter();
 
 ### 返回一个函数
 
-参见关于[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)的文章。
+请参阅有关[闭包](/zh-CN/docs/Web/JavaScript/Closures)的文章。
 
 ```js
 function magic() {

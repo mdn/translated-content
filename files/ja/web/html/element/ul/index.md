@@ -2,7 +2,7 @@
 title: "<ul>: 順序なしリスト要素"
 slug: Web/HTML/Element/ul
 l10n:
-  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
+  sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
 ---
 
 {{HTMLSidebar}}
@@ -15,13 +15,14 @@ l10n:
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- `compact` {{Deprecated_inline}} {{Non-standard_Inline}}
+- `compact` {{Deprecated_inline}}
 
   - : この論理属性は、コンパクトなスタイルでリストを描画するようブラウザーに指示するものです。この属性の解釈は{{glossary("user agent", "ユーザーエージェント")}}に委ねられ、またすべてのブラウザーで動作するものでもありません。
 
-    > **警告:** この属性は非推奨になっているため、使用しないでください。代わりに [CSS](/ja/docs/Web/CSS) を使用してください。 `compact` 属性と同様の効果を得るには、 CSS の {{cssxref("line-height")}} プロパティを用い、その値として `80%` を指定します。
+    > [!WARNING]
+    > この属性は非推奨になっているため、使用しないでください。代わりに [CSS](/ja/docs/Web/CSS) を使用してください。 `compact` 属性と同様の効果を得るには、 CSS の {{cssxref("line-height")}} プロパティを用い、その値として `80%` を指定します。
 
-- `type` {{Deprecated_inline}} {{Non-standard_Inline}}
+- `type` {{Deprecated_inline}}
 
   - : リストの行頭記号の形状を指定するために用います。 HTML3.2 および HTML 4.0/4.01 tranditional で定義されていた値は以下の通りです。
 
@@ -33,7 +34,8 @@ l10n:
 
     この属性が存在せず、[CSS](/ja/docs/Web/CSS) の {{ cssxref("list-style-type") }} プロパティがその要素に適用されていない場合は、ユーザーエージェントが行頭記号の種類を、リストの入れ子階層に応じて選択します。
 
-    > **警告:** この属性は非推奨なので使用しないでください。代替として [CSS](/ja/docs/Web/CSS) の {{ cssxref("list-style-type") }} プロパティを使用してください。
+    > [!WARNING]
+    > この属性は非推奨なので使用しないでください。代替として [CSS](/ja/docs/Web/CSS) の {{ cssxref("list-style-type") }} プロパティを使用してください。
 
 ## 使用上のメモ
 
@@ -143,7 +145,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
@@ -157,7 +159,7 @@ l10n:
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/list_role"
             >list</a
           ></code
         >

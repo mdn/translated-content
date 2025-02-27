@@ -7,7 +7,93 @@ slug: Web/HTML/Element/table
 
 [HTML](/zh-CN/docs/Web/HTML) **`<table>`** 元素表示表格数据——即在一个由包含数据的行和列组成的二维表格中呈现的信息。
 
-{{EmbedInteractiveExample("pages/tabbed/table.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;table&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Front-end web developer course 2021
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Person</th>
+      <th scope="col">Most interest in</th>
+      <th scope="col">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Chris</th>
+      <td>HTML tables</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th scope="row">Dennis</th>
+      <td>Web accessibility</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th scope="row">Sarah</th>
+      <td>JavaScript frameworks</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th scope="row">Karen</th>
+      <td>Web performance</td>
+      <td>36</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row" colspan="2">Average age</th>
+      <td>33</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+```css interactive-example
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+}
+
+thead,
+tfoot {
+  background-color: rgb(228 240 245);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -44,7 +130,7 @@ slug: Web/HTML/Element/table
     </tr>
     <tr>
       <th scope="row">标签省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
     </tr>
     <tr>
       <th scope="row">允许的父元素</th>
@@ -310,7 +396,8 @@ document
 
 下面的示例给 `document` 中每个 `<table>` 的每个 `<th>` 元素添加了一个事件处理程序；它对所有 `<tbody>` 的行进行排序，排序的基础是行中包含的 `td` 单元格。
 
-> **备注：** 这个解决方案假设 `<td>` 元素是由原始文本填充的，没有子元素。
+> [!NOTE]
+> 这个解决方案假设 `<td>` 元素是由原始文本填充的，没有子元素。
 
 ##### HTML
 
@@ -607,7 +694,7 @@ tr:last-child td {
 
 这有助于借助辅助技术（如屏幕阅读器）进行导航的人、经历低视力状况的人和有认知问题的人。
 
-- [MDN：使用 \<caption> 元素为表格添加标题](/zh-CN/docs/Learn/HTML/Tables/Advanced#使用_caption_为你的表格增加一个标题)
+- [MDN：使用 \<caption> 元素为表格添加标题](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#使用_caption_为你的表格增加一个标题)
 - [标题和总结 • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/caption-summary/)
 
 ### 确定行和列的范围
@@ -646,7 +733,7 @@ tr:last-child td {
 
 在 {{HTMLElement("th")}} 元素上提供声明 `scope="col"`，将有助于描述该单元格处于一列的顶部。在 {{HTMLElement("th")}} 元素上提供声明 `scope="row"`，将有助于描述该单元格是某一行的第一个。
 
-- [MDN：对于视力受损用户的表格](/zh-CN/docs/Learn/HTML/Tables/Advanced#对于视力受损的用户的表格)
+- [MDN：对于视力受损用户的表格](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#对于视力受损的用户的表格)
 - [有两个头部的表格 • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/two-headers/)
 - [有不标准头部的表格 • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/irregular/)
 - [H63: 使用范围属性来关联数据表中的标题单元和数据单元 | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H63.html)
@@ -659,7 +746,7 @@ tr:last-child td {
 
 如果表格不能被拆开，使用 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 和 [`headers`](/zh-CN/docs/Web/HTML/Element/td#headers) 属性的组合，以编程方式将每个表格单元与该单元所关联的标题相关联。
 
-- [MDN：对于视力受损用户的表格](/zh-CN/docs/Learn/HTML/Tables/Advanced#对于视力受损的用户的表格)
+- [MDN：对于视力受损用户的表格](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#对于视力受损的用户的表格)
 - [有多级头部的表格 • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/multi-level/)
 - [H43: 使用 id 和 headers 属性将数据单元与数据表中的标题单元联系起来 | Techniques for W3C WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
 
@@ -673,7 +760,7 @@ tr:last-child td {
 
 ## 参见
 
-- [HTML 数据表格初步](/zh-CN/docs/Learn/HTML/Tables)
+- [HTML 数据表格初步](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - 可能特别有用的关于设定表格元素样式的 CSS 属性：
 
   - {{cssxref("width")}} 控制表格的宽度；

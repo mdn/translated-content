@@ -16,9 +16,11 @@ A API de Web Storage fornece duas maneiras de armazenar dados:
 
 Esses mecanismos estão disponíveis a partir das seguintes propriedades {{domxref("Window.sessionStorage")}} e {{domxref("Window.localStorage")}} (para um maior suporte, o objeto `Window` implementa os objetos `Window.LocalStorage` e `Window.SessionStorage`) — ao invocar uma dessas propriedades, é criada uma instância do objeto {{domxref("Storage")}}, que fornece métodos para inserir, recuperar e remover os dados. Sempre será utilizado um objeto diferente para cada origem de `sessionStorage` e `localStorage, dessa forma o controle de ambos é realizado de forma separada.`
 
-> **Nota:** Nota: O acesso a API de Web storage a partir de IFrames de terceiros é negado se o usuário desabilitou cookies de terceiros (Firefox implementa esse comportamento a partir da versão 43 em diante).
+> [!NOTE]
+> Nota: O acesso a API de Web storage a partir de IFrames de terceiros é negado se o usuário desabilitou cookies de terceiros (Firefox implementa esse comportamento a partir da versão 43 em diante).
 
-> **Nota:** Nota**:** Web Storage não é o mesmo que mozStorage (interface XPCOM da Mozilla para o SQLite) ou Session store API (uma forma de armazenamento XPCOM para uso de extensões).
+> [!NOTE]
+> Nota**:** Web Storage não é o mesmo que mozStorage (interface XPCOM da Mozilla para o SQLite) ou Session store API (uma forma de armazenamento XPCOM para uso de extensões).
 
 ## Interfaces de Armazenamento na Web
 
@@ -31,9 +33,9 @@ Esses mecanismos estão disponíveis a partir das seguintes propriedades {{domxr
 
 ## Exemplos
 
-Para desmonstrar o uso de web storage, nós criamos um exemplo simples, chamado [Web Storage Demo](https://github.com/mdn/dom-examples/tree/master/web-storage). A página da demo [landing page](http://mdn.github.io/web-storage-demo/) oferece funcionalidades que permitem alterar a cor, fonte e imagem que é exibida na página. Quando você escolhe uma opção diferente, a página será atualizada imediatamente. Além disso, sua escolha foi armazenada em `localStorage`, para que quando você feche o navegador e abra novamente para acessar a página, suas escolhas sejam lembradas.
+Para desmonstrar o uso de web storage, nós criamos um exemplo simples, chamado [Web Storage Demo](https://github.com/mdn/dom-examples/tree/master/web-storage). A página da demo [landing page](https://mdn.github.io/web-storage-demo/) oferece funcionalidades que permitem alterar a cor, fonte e imagem que é exibida na página. Quando você escolhe uma opção diferente, a página será atualizada imediatamente. Além disso, sua escolha foi armazenada em `localStorage`, para que quando você feche o navegador e abra novamente para acessar a página, suas escolhas sejam lembradas.
 
-Nós também fornecemos um [event output page](http://mdn.github.io/web-storage-demo/event.html) — para quando você abrir a página em outra aba, as informações sejam atualizadas através da chamada de um {{event("StorageEvent")}}.
+Nós também fornecemos um [event output page](https://mdn.github.io/web-storage-demo/event.html) — para quando você abrir a página em outra aba, as informações sejam atualizadas através da chamada de um [`StorageEvent`](/pt-BR/docs/Web/Events/StorageEvent).
 
 ## Especificações
 

@@ -3,7 +3,7 @@ title: "HTMLImageElement: naturalHeight プロパティ"
 short-title: naturalHeight
 slug: Web/API/HTMLImageElement/naturalHeight
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
 {{APIRef("HTML DOM")}}
@@ -12,7 +12,8 @@ l10n:
 
 これは、画像の高さを制限するものがない状態で描画された場合の高さです。画像の高さが指定されなかった場合、または画像の高さを制限するか明示的に指定するコンテナー内に画像が配置されなかった場合は、この高さでレンダリングされます。
 
-> **メモ:** ほとんどの場合、自然な高さとは、サーバーから送信された画像の実際の高さです。とはいえ、ブラウザーは画像をレンダラーに送る前に画像を修正することがあります。たとえば、Chrome は[ローエンド端末で画像の解像度を低下](https://crbug.com/1187043#c7)させます。このような場合、`naturalHeight` はそのようなブラウザーの介入によって修正された画像の高さを自然な高さとみなして、この値を返します。
+> [!NOTE]
+> ほとんどの場合、自然な高さとは、サーバーから送信された画像の実際の高さです。とはいえ、ブラウザーは画像をレンダラーに送る前に画像を修正することがあります。たとえば、Chrome は[ローエンド端末で画像の解像度を低下](https://crbug.com/1187043#c7)させます。このような場合、`naturalHeight` はそのようなブラウザーの介入によって修正された画像の高さを自然な高さとみなして、この値を返します。
 
 ## 値
 
@@ -33,7 +34,7 @@ l10n:
     class="image"
     alt="A round wall clock with a white dial and black numbers" />
 </div>
-<div class="output"></div>
+<pre></pre>
 ```
 
 HTML では、 400x398 ピクセルの画像を {{HTMLElement("div")}} の中に配置するようにしています。
@@ -49,10 +50,6 @@ HTML では、 400x398 ピクセルの画像を {{HTMLElement("div")}} の中に
 .image {
   width: 100%;
 }
-
-.output {
-  padding-top: 2em;
-}
 ```
 
 上記の CSS で注目すべき点は、画像が描画されるコンテナーのスタイルが幅 200px であり、その幅いっぱい（100%）に画像が描画されることです。
@@ -60,19 +57,19 @@ HTML では、 400x398 ピクセルの画像を {{HTMLElement("div")}} の中に
 ### JavaScript
 
 ```js
-let output = document.querySelector(".output");
-let image = document.querySelector("img");
+const output = document.querySelector("pre");
+const image = document.querySelector("img");
 
-window.addEventListener("load", (event) => {
-  output.innerHTML +=
-    `自然なサイズ: ${image.naturalWidth} x ` +
-    `${image.naturalHeight} ピクセル<br>`;
-  output.innerHTML +=
-    `表示サイズ: ${image.width} x ` + `${image.height} ピクセル`;
+image.addEventListener("load", (event) => {
+  const { naturalWidth, naturalHeight, width, height } = image;
+  output.textContent = `
+自然なサイズ: ${naturalWidth} x ${naturalHeight} ピクセル
+表示サイズ: ${width} x ${height} ピクセル
+`;
 });
 ```
 
-JavaScript のコードでは、自然なサイズと表示されたサイズを、クラス `output` を持つ {{HTMLElement("div")}} にダンプしています。これは、ウィンドウの {{domxref("Window.load_event", "load")}} イベントハンドラーに応答して実行することで、幅や高さを計測しようとする前に画像が利用することを保証しています。
+JavaScript のコードでは、自然なサイズと表示されたサイズを {{HTMLElement("pre")}} にダンプしています。これは、画像の {{domxref("HTMLElement.load_event", "load")}} イベントハンドラーに応答して実行することで、幅や高さを計測しようとする前に画像が利用することを保証しています。
 
 ### 結果
 

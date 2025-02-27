@@ -67,10 +67,10 @@ var biguint64 = new BigUint64Array(iterable);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.BigUint64Array.BigUint64Array")}}
+{{Compat}}
 
 ## 関連情報
 
-- [JavaScript typed arrays](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("BigInt64Array")}}
 - {{jsxref("DataView")}}

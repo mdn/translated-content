@@ -2,14 +2,21 @@
 title: String.prototype.codePointAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 l10n:
-  sourceCommit: a49d60648404407784b04ff5ff7e16a6a8d1ac25
+  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
 {{JSRef}}
 
 **`codePointAt()`** は {{jsxref("String")}} のメソッドで、指定されたインデックスから始まる文字の Unicode コードポイント値である非負の整数を返します。インデックスは Unicode コードポイントではなく、UTF-16 コード単位に基づくことに注意してください。
 
-{{EmbedInteractiveExample("pages/js/string-codepointat.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: String.codePointAt()", "shorter")}}
+
+```js interactive-example
+const icons = "☃★♲";
+
+console.log(icons.codePointAt(1));
+// Expected output: "9733"
+```
 
 ## 構文
 
@@ -27,8 +34,8 @@ codePointAt(index)
 指定された位置 `index` にある文字のコードポイント値を表す非負の整数値です。
 
 - `index` が `0` – `str.length - 1` の範囲外であれば、`codePointAt()` は {{jsxref("undefined")}} を返します。
-- `index` の位置の要素が UTF-16 高サロゲートであった場合、そのコードポイントのサロゲートペアを返します。
-- `index` の位置の要素が UTF-16 低サロゲートであった場合、低サロゲートコードポイントのみを返します。
+- `index` の位置の要素が UTF-16 上位サロゲートであった場合、そのコードポイントのサロゲートペアを返します。
+- `index` の位置の要素が UTF-16 下位サロゲートであった場合、下位サロゲートコード単位のみを返します。
 
 ## 解説
 
@@ -57,7 +64,7 @@ Unicode のコードポイントは `0` から `1114111` (`0x10FFFF`) までの�
 
 ### codePointAt() の繰り返し
 
-要素が UTF-16 の低サロゲートである `index` へのインデックス付けは、低サロゲートのみを返すので、文字列のインデックスをループに使わない方がよいでしょう。
+文字列インデックスを使用してループ処理を行うと、同じコードポイントが 2 回参照されることになります（1 回目は上位サロゲート、2 回目は下位サロゲート）。また、2 回目に `codePointAt()` が返すのは下位サロゲートのみです。そのため、インデックスによるループ処理は避けた方が良いでしょう。
 
 ```js example-bad
 const str = "\ud83d\udc0e\ud83d\udc71\u2764";
@@ -68,7 +75,7 @@ for (let i = 0; i < str.length; i++) {
 // '1f40e', 'dc0e', '1f471', 'dc71', '2764'
 ```
 
-代わりに、[`for...of`](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) 文や[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使用してください。どちらも文字列の [`@@iterator`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) を呼び出し、コードポイント単位で反復処理をします。それから、`codePointAt(0)` でそれぞれの要素のコードポイントを取得してください。
+代わりに、[`for...of`](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) 文や[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使用してください。どちらも文字列の [`[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) を呼び出し、コードポイント単位で反復処理をします。それから、`codePointAt(0)` でそれぞれの要素のコードポイントを取得してください。
 
 ```js
 for (const codePoint of str) {

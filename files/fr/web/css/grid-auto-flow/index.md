@@ -139,5 +139,5 @@ function changeGridAutoFlow() {
 - {{cssxref("grid-auto-rows")}}
 - {{cssxref("grid-auto-columns")}}
 - {{cssxref("grid")}}
-- [Guide : le placement automatique sur la grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS)
-- Tutoriel vidéo : [Introduction au placement automatique sur la grille et à l'ordre des éléments (en anglais)](http://gridbyexample.com/video/series-auto-placement-order/)
+- [Guide : le placement automatique sur la grille](/fr/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+- Tutoriel vidéo : [Introduction au placement automatique sur la grille et à l'ordre des éléments (en anglais)](https://gridbyexample.com/video/series-auto-placement-order/)

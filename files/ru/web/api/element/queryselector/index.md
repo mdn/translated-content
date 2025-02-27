@@ -14,7 +14,7 @@ element = baseElement.querySelector(selectors);
 ```
 
 - `element` и `baseElement` это {{domxref("element")}} объекты.
-- `selectors` - это группа [селекторов](/ru/docs/Web/Guide/CSS/Getting_Started/Selectors) для поиска совпадения.
+- `selectors` - это группа [селекторов](/ru/docs/Learn/CSS/Building_blocks/Selectors) для поиска совпадения.
 
 ## Пример
 
@@ -36,7 +36,7 @@ var el = document.body.querySelector(
 
 Строка аргументов передаваемая `querySelector()` должна удовлетворять синтаксису CSS. Более подробные примеры смотрите в {{domxref("document.querySelector")}}.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

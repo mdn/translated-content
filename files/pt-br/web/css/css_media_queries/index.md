@@ -16,16 +16,11 @@ slug: Web/CSS/CSS_media_queries
 
 ## Guides
 
-- [Usando Media Queries](/pt-BR/docs/Web/Guide/CSS/CSS_Media_queries)
+- [Usando Media Queries](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries)
   - : Apresenta o que fazem as media queries (consultas de mídia) e explica as possíveis expressões.
-- [Testing media queries](/pt-BR/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Testing media queries](/pt-BR/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
   - : Explains how to test a media query programmatically, from JavaScript.
 
 ## Specifications
 
-| Specification                        | Status                          | Comment            |
-| ------------------------------------ | ------------------------------- | ------------------ |
-| {{SpecName('CSS3 Conditional')}}     | {{Spec2('CSS3 Conditional')}}   |                    |
-| {{SpecName('CSS4 Media Queries')}}   | {{Spec2('CSS4 Media Queries')}} |                    |
-| {{SpecName('CSS3 Media Queries')}}   | {{Spec2('CSS3 Media Queries')}} |                    |
-| {{SpecName('CSS2.1', 'media.html')}} | {{Spec2('CSS2.1')}}             | Initial definition |
+{{Specifications}}

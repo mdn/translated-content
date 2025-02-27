@@ -48,7 +48,7 @@ Où `<valeur>` peut optionnellement être une valeur parmi :
 - `allow-orientation-lock`
   - : Autorise la page à désactiver la possibilité de verrouiller l'orientation de l'écran.
 - `allow-pointer-lock`
-  - : Autorise la page à utiliser l'[API Pointer Lock](/fr/docs/WebAPI/Pointer_Lock).
+  - : Autorise la page à utiliser l'[API Pointer Lock](/fr/docs/Web/API/Pointer_Lock_API).
 - `allow-popups`
   - : Autorise les fenêtres intruses (comme avec `window.open`, `target="_blank"`, `showModalDialog`). Si ce mot-clé n'est pas utilisée, cette fonctionnalité échouera en silence.
 - `allow-popups-to-escape-sandbox`

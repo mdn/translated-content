@@ -7,7 +7,8 @@ slug: Web/Security/Subresource_Integrity
 
 **子资源完整性**（Subresource Integrity，SRI）是允许浏览器检查其获得的资源（例如从 [CDN](/zh-CN/docs/Glossary/CDN) 获得的）是否被篡改的一项安全特性。它通过验证获取文件的哈希值是否和你提供的哈希值一样来判断资源是否被篡改。
 
-> **备注：** 对于从嵌入文件以外的来源提供的资源的子资源完整性验证，浏览器还使用[跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/CORS)检查资源，以确保提供资源的来源允许它与请求来源共享。
+> [!NOTE]
+> 对于从嵌入文件以外的来源提供的资源的子资源完整性验证，浏览器还使用[跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/CORS)检查资源，以确保提供资源的来源允许它与请求来源共享。
 
 ## SRI 如何工作
 
@@ -25,13 +26,14 @@ slug: Web/Security/Subresource_Integrity
 
 使用 base64 编码 sha384 算法计算出摘要后的 `integrity` 值的示例：
 
-```
+```plain
 sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
 ```
 
 `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` 即“哈希”部分，`sha384` 前缀说明使用的是 sha384 哈希方法。
 
-> **备注：** 严格来说，`integrity` 值的“哈希”部分是通过对一些输入（例如，一个脚本或样式表文件）应用一个特定的哈希函数而形成的**加密摘要**。但人们通常用“哈希”来表示**加密摘要**，所以本文就用了这个词。
+> [!NOTE]
+> 严格来说，`integrity` 值的“哈希”部分是通过对一些输入（例如，一个脚本或样式表文件）应用一个特定的哈希函数而形成的**加密摘要**。但人们通常用“哈希”来表示**加密摘要**，所以本文就用了这个词。
 
 ### 生成 SRI 哈希的工具
 
@@ -49,7 +51,7 @@ cat FILENAME.js | openssl dgst -sha384 -binary | openssl base64 -A
 shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
 ```
 
-> **备注：**
+> [!NOTE]
 >
 > - 通过管道连接的 `xxd` 步骤从 `shasum` 中获取十六进制的输出，并将其转换为二进制。
 > - 通过管道连接的 `awk` 的步骤是必要的，因为 `shasum` 会将其输出中的散列文件名传递给 `xxd`。如果文件名中恰好有有效的十六进制字符，这将产生灾难性的后果——因为 `xxd` 也会对其进行解码并传递给 `base64`。
@@ -96,7 +98,8 @@ Access-Control-Allow-Origin: *
   crossorigin="anonymous"></script>
 ```
 
-> **备注：** 有关 `crossorigin` 属性的更多信息，见 [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)。
+> [!NOTE]
+> 有关 `crossorigin` 属性的更多信息，见 [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)。
 
 ## 浏览器如何处理 SRI
 

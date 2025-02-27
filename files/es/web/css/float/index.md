@@ -5,7 +5,7 @@ slug: Web/CSS/float
 
 {{CSSRef}}
 
-La propiedad CSS `float` ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los elementos de texto y en línea aparecer a su costado. El elemento es removido del normal flujo de la página, aunque aún sigue siendo parte del flujo (a diferencia del [posicionamiento absoluto](/es/docs/Web/CSS/position#Absolute_positioning)).
+La propiedad CSS `float` ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los elementos de texto y en línea aparecer a su costado. El elemento es removido del normal flujo de la página, aunque aún sigue siendo parte del flujo (a diferencia del [posicionamiento absoluto](/es/docs/Web/CSS/position#absolute_positioning)).
 
 {{EmbedInteractiveExample("pages/css/float.html")}}
 
@@ -32,7 +32,7 @@ Como `float` implica el uso del layout de bloques, este modifica el valor calcul
 | inline-grid            | grid                |
 | otros                  | sin cambios         |
 
-Nota: Al referirse a una propiedad desde JavaScript como un miembro del objeto [element.style](/es/DOM/element#element.style), hay que tener en cuenta que los navegadores modernos soportan `float` pero en navegadores más antiguos hay que escribir la propiedad como `cssFloat`, otros navegadores como Internet Explorer 8 y anteriores utilizan `styleFloat`. Fue una excepción a la regla, que el nombre del miembro DOM sea el nombre _camel-case_ (styleFloat) del nombre CSS (style-float) separado por guión (debido al hecho que "float" es una palabra reservada en JavaScript, es necesario escapar "class" como "className" y escapar "for" de la etiqueta como "htmlFor" ).
+Nota: Al referirse a una propiedad desde JavaScript como un miembro del objeto [element.style](/es/docs/Web/API/Element#element.style), hay que tener en cuenta que los navegadores modernos soportan `float` pero en navegadores más antiguos hay que escribir la propiedad como `cssFloat`, otros navegadores como Internet Explorer 8 y anteriores utilizan `styleFloat`. Fue una excepción a la regla, que el nombre del miembro DOM sea el nombre _camel-case_ (styleFloat) del nombre CSS (style-float) separado por guión (debido al hecho que "float" es una palabra reservada en JavaScript, es necesario escapar "class" como "className" y escapar "for" de la etiqueta como "htmlFor" ).
 
 ## Sintáxis
 
@@ -83,7 +83,7 @@ El elemento debe flotar en el costado de inicio de su bloque contenedor. Esto es
 
 ### Como son ubicados los elements flotantes
 
-[Ver El Ejemplo Vivo](/samples/cssref/float.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/float.html)
 
 Como se ha mencionado más arriba, cuando un elemento flota, es removido del flujo normal del documento (aunque sigue perteneciendo a él). Se cambia hacia la izquierda, o hacia la derecha, hasta que toca el límite de su caja contenedora, u _otro elemento flotante._
 
@@ -91,7 +91,7 @@ En este ejemplo, hay tres cuadrados de color. Dos flotan hacia la izquierda, y u
 
 Un elemento flotante es al menos tan alto como su elemento hijo flotante más alto. En el ejemplo se le da al elemento padre `width: 100%` y la propiedad de flotante para asegurar que es lo suficientemente alto para encajar con sus hijos flotantes, y asegurar que ocupa el ancho -width- del padre de modo de no tener que limpiar su pariente adyacente.
 
-**HTML**
+#### HTML
 
 ```html
 <section>
@@ -108,7 +108,7 @@ Un elemento flotante es al menos tan alto como su elemento hijo flotante más al
 </section>
 ```
 
-**CSS**
+#### CSS
 
 ```css
 section {
@@ -144,21 +144,12 @@ A veces querrás forzar un item a moverse por debajo de elementos flotantes. Por
 
 ### Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#float)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/visuren.html#propdef-float)
+{{Specifications}}
 
-### Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 4              |
-| Netscape          | 4              |
-| Opera             | 3.5            |
+{{Compat}}
 
 ### Ver también
 
 {{ Cssxref("clear") }}, {{ Cssxref("display") }}, {{ Cssxref("position") }}
-
-Categorías
-
-Interwiki Language

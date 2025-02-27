@@ -50,7 +50,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers
 - `name`
   - : プロトコルハンドラーを表す文字列。これはユーザーがハンドラーにリンクを開くかどうか問い合わせた時に、ユーザーに表示されます。
 - `uriTemplate`
-  - : ハンドラーの URL を表す。この文字列はプレースホルダーとして "%s" を入れる必要があります: これは処理される文書の URL がエスケープされたもので置き換えられます。この URL は本当の URL や電話番号、電子メールアドレス、などです。これは[ローカライズ可能なプロパティ](/ja/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json)です。
+  - : ハンドラーの URL を表す。この文字列はプレースホルダーとして "%s" を入れる必要があります: これは処理される文書の URL がエスケープされたもので置き換えられます。この URL は本当の URL や電話番号、電子メールアドレス、などです。これは[ローカライズ可能なプロパティ](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json)です。
 
 ## 例
 
@@ -78,4 +78,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.protocol_handlers")}}
+{{Compat}}

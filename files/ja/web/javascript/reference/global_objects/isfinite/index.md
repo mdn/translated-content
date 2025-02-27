@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/isFinite
 
 グローバル関数 **`isFinite()`** は渡された値が有限数かどうかを判定します。必要に応じて、引数はまず数値へと変換されます。
 
-{{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - isFinite()")}}
+
+```js interactive-example
+function div(x) {
+  if (isFinite(1000 / x)) {
+    return "Number is NOT Infinity.";
+  }
+  return "Number is Infinity!";
+}
+
+console.log(div(0));
+// Expected output: "Number is Infinity!""
+
+console.log(div(1));
+// Expected output: "Number is NOT Infinity."
+```
 
 ## 構文
 
@@ -56,7 +71,7 @@ isFinite("0"); // true が返される、より堅牢性の高い
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.isFinite")}}
+{{Compat}}
 
 ## 関連情報
 

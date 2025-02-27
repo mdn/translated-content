@@ -5,11 +5,29 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol
 
 {{JSRef}}
 
-**symbol** 是一种基本数据类型（{{Glossary("Primitive", "primitive data type")}}）。`Symbol()` 函数会返回 **symbol** 类型的值，该类型具有静态属性和静态方法。它的静态属性会暴露几个内建的成员对象；它的静态方法会暴露全局的 symbol 注册，且类似于内建对象类，但作为构造函数来说它并不完整，因为它不支持语法："`new Symbol()`"。
+**symbol** 是一种{{Glossary("Primitive", "原始数据类型")}}。`Symbol()` 函数会返回 **symbol** 类型的值，该类型具有静态属性和静态方法。它的静态属性会暴露几个内建的成员对象；它的静态方法会暴露全局的 symbol 注册，且类似于内建对象类，但作为构造函数来说它并不完整，因为它不支持语法："`new Symbol()`"。
 
-每个从 `Symbol()` 返回的 symbol 值都是唯一的。一个 symbol 值能作为对象属性的标识符；这是该数据类型仅有的目的。更进一步的解析见—— [glossary entry for Symbol](/zh-CN/docs/Glossary/Symbol)。
+每个从 `Symbol()` 返回的 symbol 值都是唯一的。一个 symbol 值能作为对象属性的标识符；这是该数据类型仅有的目的。更进一步的解析见——[glossary entry for Symbol](/zh-CN/docs/Glossary/Symbol)。
 
-{{EmbedInteractiveExample("pages/js/symbol-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol - Constructor")}}
+
+```js interactive-example
+const symbol1 = Symbol();
+const symbol2 = Symbol(42);
+const symbol3 = Symbol("foo");
+
+console.log(typeof symbol1);
+// Expected output: "symbol"
+
+console.log(symbol2 === 42);
+// Expected output: false
+
+console.log(symbol3.toString());
+// Expected output: "Symbol(foo)"
+
+console.log(Symbol("foo") === Symbol("foo"));
+// Expected output: false
+```
 
 ## 语法
 
@@ -123,7 +141,7 @@ typeof symObj; // "object"
   - : 返回一个包含着该 Symbol 对象描述的字符串。该方法重写了 {{jsxref("Object.prototype.toString")}} 方法
 - {{jsxref("Symbol.prototype.valueOf")}}
   - : 返回该 Symbol 对象。该方法重写了 {{jsxref("Object.prototype.valueOf")}} 方法
-- {{jsxref("Symbol.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}
+- [`Symbol.toPrimitive`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)
   - : 返回该 Symbol 对象。
 
 ## 示例

@@ -3,6 +3,8 @@ title: Microformatos
 slug: Web/HTML/microformats
 ---
 
+{{HTMLSidebar}}
+
 _Los [Microformatos](http://microformats.org)_ (en ocasiones abreviados como **μF)** son convenciones simples para incrustar semántica en HTML y para brindar rápidamente un API utilizable por los motores de búsqueda, agregadores y otras herramientas Estos pequeños patrones de HTML son usados para marcar entidades que varían entre fundamentales hasta información específica de un dominio, tales como personas, organizaciones, eventos y ubicaciones.
 
 Su formato simple busca ser útil para máquinas y también legible para humanos.

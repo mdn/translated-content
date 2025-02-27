@@ -3,6 +3,8 @@ title: 웹 성능
 slug: Web/Performance
 ---
 
+{{QuickLinksWithSubPages}}
+
 웹 성능은 객관적인 측정치이면서 로드 시간과 런타임을 어떻게 인식하는지에 대한 주관적인 사용자 경험입니다. 사이트가 로드되는 데 걸리는 시간, 로드 후 상호작용에 반응할 수 있게 되기까지의 시간, 사용자와 콘텐츠의 상호작용이 얼마나 매끄러운지(스크롤이 부드러운지, 버튼은 클릭 가능한지, 빠르게 팝업이 로드되고 표시되는지, 애니메이션이 부드럽게 표시되는지)가 바로 웹 성능입니다. 웹 성능에는 객관적 측정치(로딩 시간, 초당 프레임 수, 상호작용에 반응할 수 있게 되기까지의 시간 등)와 주관적 경험(콘텐츠의 로딩 시간이 얼마나 길다고 느끼는지)이 모두 포함됩니다.
 
 사이트 응답 시간이 길어질수록 이탈하는 사용자는 늘어납니다. 로딩 시간과 응답 시간을 최소화하고, 추가 기능을 활용해 대기 시간이 느껴지지 않게 하는 등 최대한 빠르게 웹사이트를 이용하고 상호작용할 수 있어야 합니다. 이와 동시에 최초 로드 시점 이후의 서비스를 비동기적으로 불러와놓는 것이 중요합니다.
@@ -40,12 +42,12 @@ MDN의 [웹 성능 학습 안내서](/ko/docs/Learn/Performance)에는 웹 성�
 
 - [Performance API](/ko/docs/Web/API/Performance_API/Using_the_Performance_API)
   - : 이 안내서는 [High-Resolution Time](https://w3c.github.io/hr-time/) 기준에 정의된 [`Performance`](/ko/docs/Web/API/Performance) 인터페이스를 어떻게 사용하는지 설명합니다.
-- [Resource Timing API](/ko/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
-  - : [Resource loading and timing](/ko/docs/Web/API/Resource_Timing_API) 리소스를 로딩하고, 리소스 버퍼와 CORS에 대응하는 법을 다룹니다.
+- [Resource Timing API](/ko/docs/Web/API/Performance_API/Resource_timing)
+  - : [Resource loading and timing](/ko/docs/Web/API/Performance_API/Resource_timing) 리소스를 로딩하고, 리소스 버퍼와 CORS에 대응하는 법을 다룹니다.
 - [The performance timeline](/ko/docs/Web/API/Performance_Timeline/Using_Performance_Timeline)
   - : [Performance Timeline](/ko/docs/Web/API/Performance_Timeline) 기준은 [`Performance`](/ko/docs/Web/API/Performance) 인터페이스의 확장으로, 클라이언트 차원의 대기 시간을 어플리케이션 내부에서 측정할 수 있도록 돕습니다. 두 인터페이스를 함께 사용하여 어플리케이션의 어떤 지점이 성능에 병목 현상을 일으키는지 찾을 수 있습니다.
-- [User Timing API](/ko/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
-  - : [user timing API](/ko/docs/Web/API/User_Timing_API)의 "mark"와 "measure" 타입을 활용하여 어플리케이션에 특화된 타임스탬프를 만들어 보세요. 이들은 브라우저의 Performance timeline의 일부가 됩니다.
+- [User Timing API](/ko/docs/Web/API/Performance_API/User_timing)
+  - : [user timing API](/ko/docs/Web/API/Performance_API/User_timing)의 "mark"와 "measure" 타입을 활용하여 어플리케이션에 특화된 타임스탬프를 만들어 보세요. 이들은 브라우저의 Performance timeline의 일부가 됩니다.
 - [Beacon API](/ko/docs/Web/API/Beacon_API)
   - : [Beacon](/ko/docs/Web/API/Beacon_API) 인터페이스는 비동기적이고 차단되지 않는 요청을 웹 서버에 보내도록 예약합니다.
 - [Intersection Observer API](/ko/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
@@ -121,7 +123,7 @@ HTML
 
   - [반응형 이미지](/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 
-- [`rel="preload"`를 사용해 콘텐츠 미리 불러오기](/ko/docs/Web/HTML/Link_types/preload) - <https://w3c.github.io/preload/>
+- [`rel="preload"`를 사용해 콘텐츠 미리 불러오기](/ko/docs/Web/HTML/Attributes/rel/preload) - <https://w3c.github.io/preload/>
 
 CSS
 
@@ -132,31 +134,31 @@ CSS
 
 JavaScript
 
-- [DOMContentLoaded](/ko/docs/Web/API/Window/DOMContentLoaded_event)
+- [DOMContentLoaded](/ko/docs/Web/API/Document/DOMContentLoaded_event)
 - [Garbage collection](/ko/docs/Glossary/Garbage_collection)
-- [requestAnimationFrame](/ko/docs/Web/API/window/requestAnimationFrame)
+- [requestAnimationFrame](/ko/docs/Web/API/Window/requestAnimationFrame)
 
 API
 
 - [Performance API](/ko/docs/Web/API/Performance_API)
-- [Navigation Timing API](/ko/docs/Web/API/Navigation_timing_API)
+- [Navigation Timing API](/ko/docs/Web/API/Performance_API/Navigation_timing)
 - [Media Capabilities API](/ko/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API)
 - [Network Information API](/ko/docs/Web/API/Network_Information_API)
 - [PerformanceNavigationTiming](/ko/docs/Web/API/PerformanceNavigationTiming)
 - [Battery Status API](/ko/docs/Web/API/Battery_Status_API)
 - [Navigator.deviceMemory](/ko/docs/Web/API/Navigator/deviceMemory)
 - [Intersection Observer](/ko/docs/Web/API/Intersection_Observer_API)
-- [Using the User Timing API](/ko/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
-- [Long Tasks API](/ko/docs/Web/API/Long_Tasks_API)
+- [Using the User Timing API](/ko/docs/Web/API/Performance_API/User_timing)
+- [Long Tasks API](/ko/docs/Web/API/PerformanceLongTaskTiming)
 - [High Resolution Timing API](/ko/docs/Web/API/DOMHighResTimeStamp) ([https://w3c.github.io/hr-time/)](https://w3c.github.io/hr-time/)
-- [Resource Timing API](/ko/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- [Resource Timing API](/ko/docs/Web/API/Performance_API/Resource_timing)
 - [Page Visibility](/ko/docs/Web/API/Page_Visibility_API)
 - [Cooperative Scheduling of Background Tasks API](/ko/docs/Web/API/Background_Tasks_API)
 
   - [requestIdleCallback()](/ko/docs/Web/API/Window/requestIdleCallback)
 
 - [Beacon API](/ko/docs/Web/API/Beacon_API)
-- Resource Hints - [dns-prefetch](/ko/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control), preconnect, [prefetch](/ko/docs/Web/HTTP/Link_prefetching_FAQ), and prerender
+- Resource Hints - [dns-prefetch](/ko/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control), preconnect, [prefetch](/ko/docs/Glossary/Prefetch), and prerender
 - [FetchEvent.preloadResponse](/ko/docs/Web/API/FetchEvent/preloadResponse)
 - [Performance Server Timing API](/ko/docs/Web/API/PerformanceServerTiming)
 
@@ -164,7 +166,7 @@ API
 
 - [Content-encoding](/ko/docs/Web/HTTP/Headers/Content-Encoding)
 - HTTP/2
-- [gZip](/ko/docs/Glossary/GZip_compression)
+- [gZip](/ko/docs/Glossary/gzip_compression)
 - Client Hints
 
 도구
@@ -182,6 +184,6 @@ API
 
   - [Web Workers API](/ko/docs/Web/API/Web_Workers_API)
 
-- [PWA](/ko/docs/Web/Progressive_web_apps/Offline_Service_workers)
+- [PWA](/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)
 - [Caching](/ko/docs/Web/HTTP/Caching)
 - Content Delivery Networks (CDN)

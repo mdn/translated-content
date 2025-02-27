@@ -43,7 +43,7 @@ Content-Length: <length>
 
 ## ブラウザーの対応
 
-{{Compat("http.headers.Content-Length")}}
+{{Compat}}
 
 ## 関連情報
 

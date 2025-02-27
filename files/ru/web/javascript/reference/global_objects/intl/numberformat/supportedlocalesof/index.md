@@ -3,7 +3,7 @@ title: Intl.NumberFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
 ---
 
-{{JSRef("Global_Objects", "NumberFormat", "Intl,Collator,DateTimeFormat")}}
+{{JSRef}}
 
 ## Сводка
 

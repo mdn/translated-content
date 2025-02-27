@@ -36,7 +36,8 @@ function populateStorage() {
 }
 ```
 
-> **참고:** 실 사용 예제는 [Web Storage Demo](https://github.com/mdn/web-storage-demo)를 참고하시기 바랍니다.
+> [!NOTE]
+> 실 사용 예제는 [Web Storage Demo](https://github.com/mdn/web-storage-demo)를 참고하시기 바랍니다.
 
 ## 명세서
 

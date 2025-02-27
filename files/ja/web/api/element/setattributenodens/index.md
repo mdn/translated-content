@@ -45,8 +45,6 @@ alert(d2.attributes[1].value); // 返値: `utterleft'
 
 なお、ノードを複製せずに設定しようとすると、Mozilla は NS_ERROR_DOM_INUSE_ATTRIBUTE_ERR "Attribute already in use" エラーを出します。DOM は Attr を再利用するにあたって複製することを要求しているからです（他のノードが移動できるのとは異なります）。
 
-{{ DOMAttributeMethods() }}
-
 ## 仕様書
 
 {{Specifications}}

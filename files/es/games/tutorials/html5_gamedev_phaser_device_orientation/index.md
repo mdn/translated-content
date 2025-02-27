@@ -7,7 +7,7 @@ slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 
 ## Introducción
 
-En este tutorial iremos a través del proceso de construcción de un juego en HTML5 para móviles que utilizará las _APIs_ de [Orientación para Dispositivos](/es/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) y [Vibración](/es/docs/Web/Guide/API/Vibration) para mejorar la jugabilidad y estará construido utilizando el _framework_ [Phaser](http://phaser.io/). Se recomienda tener conocimientos básicos de JavaScript para sacar mayor provecho a este tutorial.
+En este tutorial iremos a través del proceso de construcción de un juego en HTML5 para móviles que utilizará las _APIs_ de [Orientación para Dispositivos](/es/docs/Web/Aplicaciones/Build/gather_and_modify_data/responding_to_device_orientation_changes) y [Vibración](/es/docs/Web/API/Vibration_API) para mejorar la jugabilidad y estará construido utilizando el _framework_ [Phaser](http://phaser.io/). Se recomienda tener conocimientos básicos de JavaScript para sacar mayor provecho a este tutorial.
 
 ## Ejemplo
 
@@ -17,7 +17,7 @@ Al finalizar este tutorial tendrás un juego _demo_ completamente funcional: [Cy
 
 ## Phaser framework
 
-[Phaser](http://phaser.io/) es un _framework_ para construir juegos, de móvil o escritorio, en HTML5 . Es nuevo pero está creciendo velozmente gracias a la apasionada comunidad involucrada en el proceso de desarrollo. Puedes chequearlo [en GitHub](https://github.com/photonstorm/phaser) donde se encuentra como _open source._ Lee [la documentación](http://docs.phaser.io/) en línea y recorre su gran colección de [ejemplos](http://examples.phaser.io/). El _framework_ Phaser provee una serie de herramientas que acelerarán el desarrollo y te ayudaran a manejar las tareas genéricas necesarias para completar tu juego, para que así puedas concentrarte en la idea del juego en sí.
+[Phaser](http://phaser.io/) es un _framework_ para construir juegos, de móvil o escritorio, en HTML5 . Es nuevo pero está creciendo velozmente gracias a la apasionada comunidad involucrada en el proceso de desarrollo. Puedes chequearlo [en GitHub](https://github.com/photonstorm/phaser) donde se encuentra como _open source._ Lee [la documentación](https://phaser.io/docs/) en línea y recorre su gran colección de [ejemplos](https://phaser.io/examples). El _framework_ Phaser provee una serie de herramientas que acelerarán el desarrollo y te ayudaran a manejar las tareas genéricas necesarias para completar tu juego, para que así puedas concentrarte en la idea del juego en sí.
 
 ## Empezando con el proyecto
 
@@ -90,7 +90,8 @@ La linea de arriba inicializará la intancia de Phaser — los argumentos son el
 
 Es importante recordar que el _framework_ está montando métodos útiles para acelerar un montón de cosas como la manipulación de imagenes o la administración de elementos, que serían más difíciles si tuvieramos que hacerlo manualmente.
 
-> **Nota:** Puedes leer este artículo: ["Building Monster Wants Candy"](http://gamedevelopment.tutsplus.com/tutorials/getting-started-with-phaser-building-monster-wants-candy--cms-21723) para una introducción en profundidad a las funciones y métodos específicos de Phaser.
+> [!NOTE]
+> Puedes leer este artículo: ["Building Monster Wants Candy"](http://gamedevelopment.tutsplus.com/tutorials/getting-started-with-phaser-building-monster-wants-candy--cms-21723) para una introducción en profundidad a las funciones y métodos específicos de Phaser.
 
 Volviendo a los estados del juego: La linea de abajo añade un nuevo estado al juego llamado `Boot`:
 
@@ -298,7 +299,8 @@ Mientras más inclines el dispositivo, más fuerza se aplica a la pelota y la ve
 
 ![](cyber-orb-flame-orientation.png)
 
-> **Nota:** Para encontrar más sobre implementar la orientación de los dispositivos y cómo se vé en código crudo, lee [Keep it level: responding to device orientation changes](/es/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes).
+> [!NOTE]
+> Para encontrar más sobre implementar la orientación de los dispositivos y cómo se vé en código crudo, lee [Keep it level: responding to device orientation changes](/es/docs/Web/Aplicaciones/Build/gather_and_modify_data/responding_to_device_orientation_changes).
 
 #### Añadiendo el agujero
 

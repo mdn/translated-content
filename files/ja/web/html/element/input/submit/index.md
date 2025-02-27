@@ -2,16 +2,16 @@
 title: <input type="submit">
 slug: Web/HTML/Element/input/submit
 l10n:
-  sourceCommit: f6d04a43eadf5ab26a3488942dfb318b58234eb5
+  sourceCommit: 4f7251afb63ef9a40ba5c2c5a5ede2030062df19
 ---
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} 要素の **`submit`** 型は、ボタンとして描画されます。 {{domxref("Element/click_event", "click")}} イベントが発生したとき（ふつうはユーザーがボタンをクリックしたとき）、{{Glossary("user agent", "ユーザーエージェント")}}はサーバーへフォームを送信しようとします。
+{{HTMLElement("input")}} 要素の **`submit`** 型は、ボタンとして描画されます。 {{domxref("Element/click_event", "click")}} イベントが発生したとき（ふつうはユーザーがボタンをクリックしたとき）、{{Glossary("User agent", "ユーザーエージェント")}}はサーバーへフォームを送信しようとします。
 
 ## 値
 
-`<input type="submit">` 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性は、ボタンのラベルとして表示される文字列を示します。ボタンはその他の真の値を持ちません。
+`<input type="submit">` 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性は、ボタンのラベルとして表示される文字列を示します。ボタンはその他の真の値を持ちません。 `value` はボタンの{{glossary("Accessible description", "アクセシブル説明")}}を指定します。
 
 ### value 属性の設定
 
@@ -23,7 +23,7 @@ l10n:
 
 ### value 属性の省略
 
-`value` を指定しなかった場合、ボタンにはユーザーエージェントによって選ばれた既定のラベルが表示されます。このラベルは「送信」または「クエリを送信」などのものです。次のものはこのブラウザーにおける送信ボタンの既定のラベルです。
+`value` を指定しなかった場合、ボタンにはユーザーエージェントによって選ばれた既定のラベルが表示されます。このラベルは「送信」または「クエリーを送信」などのものです。次のものはこのブラウザーにおける送信ボタンの既定のラベルです。
 
 ```html
 <input type="submit" />
@@ -46,13 +46,13 @@ l10n:
 文字列で、フォームのデータをサーバーに送信する際に使われるエンコーディング方法を識別します。許されている値は 3 つです。
 
 - `application/x-www-form-urlencoded`
-  - : これは既定値で、フォームのデータを {{jsxref("encodeURI", "encodeURI()")}} などのアルゴリズムを使って [URL エンコーディング](https://ja.wikipedia.org/wiki/パーセントエンコーディング)した後で送信します。
+  - : これは既定値で、フォームのデータを {{jsxref("encodeURI", "encodeURI()")}} などのアルゴリズムを使ってテキストを{{Glossary("Percent-encoding", "パーセントエンコーディング")}}した後のテキストとして送信します。
 - `multipart/form-data`
   - : データを管理するために {{domxref("FormData")}} API を使用し、複数のファイルをサーバーに送信することができます。フォームに {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Element/input#type) が `file` ([`<input type="file">`](/ja/docs/Web/HTML/Element/input/file)) が含まれている場合は、このエンコーディング型を*使わなければなりません*。
 - `text/plain`
   - : プレーンテキストです。ほとんどデバッグでしか役に立ちませんが、送信されたデータを簡単に見ることができます。
 
-`formenctype` 属性が指定された場合、所属するフォームの [`action`](/ja/docs/Web/HTML/Element/form#action) 属性を上書きします。
+`formenctype` 属性が指定された場合、所属するフォームの [`enctype`](/ja/docs/Web/HTML/Element/form#enctype) 属性を上書きします。
 
 この属性は [`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) および {{HTMLElement("button")}} 要素でも使用できます。
 
@@ -61,9 +61,9 @@ l10n:
 文字列で、フォームのデータを送信するときに使用する HTTP メソッドを示します。この値は所有者であるフォームの [`method`](/ja/docs/Web/HTML/Element/form#method) を上書きします。許可されている値は次の通りです。
 
 - `get`
-  - : URL は `formaction` または [`action`](/ja/docs/Web/HTML/Element/form#action) 属性で指定された URL に疑問符 ("?") を追加し、 `formenctype` または [`enctype`](/ja/docs/Web/HTML/Element/form#enctype) 属性で指定された方法でエンコードされたフォームのデータが続くものになります。この URL は HTTP の {{HTTPMethod("get")}} リクエストを用いてサーバーに送信されます。このメソッドは ASCII 文字のみを含む単純なフォームでうまく動作し、副作用はありません。これが既定値です。
+  - : URL は `formaction` または [`action`](/ja/docs/Web/HTML/Element/form#action) 属性で指定された URL に疑問符 ("?") を追加し、 `formenctype` または [`enctype`](/ja/docs/Web/HTML/Element/form#enctype) 属性で指定された方法でエンコードされたフォームのデータが続くものになります。この URL は HTTP の {{HTTPMethod("GET")}} リクエストを用いてサーバーに送信されます。このメソッドは {{Glossary("ASCII")}} 文字のみを含む単純なフォームでうまく動作し、副作用はありません。これが既定値です。
 - `post`
-  - : フォームのデータは、 `formaction` または [`action`](/ja/docs/Web/HTML/Element/form#action) で指定された URL に HTTP の {{HTTPMethod("post")}} メソッドを用いて送信されるリクエストの本文に含められます。このメソッドは複雑なデータやファイルの添付に対応しています。
+  - : フォームのデータは、 `formaction` または [`action`](/ja/docs/Web/HTML/Element/form#action) で指定された URL に HTTP の {{HTTPMethod("POST")}} メソッドを用いて送信されるリクエストの本文に含められます。このメソッドは複雑なデータやファイルの添付に対応しています。
 - `dialog`
   - : このメソッドは、入力欄が関連付けられたダイアログを閉じるだけで、フォームのデータをまったく送信しない場合ことを表すために使用します。
 
@@ -84,7 +84,7 @@ l10n:
 - `_self`
   - : レスポンスを、形式を形成しているのと同じ閲覧コンテキストに読み込みます。これにより、現在の文書が受信したデータで置き換わります。これは、何も指定されなかった場合に使用される既定値です。
 - `_blank`
-  - : レスポンスを新しい、名前のない、閲覧コンテキストに読み込みます。これは通常、現在の文書内の同じウィンドウの新しいタブですが、{{Glossary("user agent", "ユーザーエージェント")}}の設定によって異なる形となる場合があります。
+  - : レスポンスを新しい、名前のない、閲覧コンテキストに読み込みます。これは通常、現在の文書内の同じウィンドウの新しいタブですが、{{Glossary("User agent", "ユーザーエージェント")}}の設定によって異なる形となる場合があります。
 - `_parent`
   - : 現在の閲覧コンテキストの親コンテキストにレスポンスを読み込みます。親コンテキストがない場合は、 `_self` と同じ動作をします。
 - `_top`
@@ -98,9 +98,9 @@ l10n:
 
 もしフォームのボタンを作成するのに `<button>` 要素を使用するのであれば、次のことに注意してください。`<button>` が {{HTMLElement("form")}} の中にある場合、そのボタンは "submit" ボタンとして扱われます。ですから、どのボタンが送信ボタンであるかを明示的に指定する習慣をつけるとよいでしょう。
 
-### 単純な送信ボタン
+### 基本的な送信ボタン
 
-まず、単純な送信ボタンを持つフォームを作成することから始めます。
+まず、基本的な送信ボタンを持つフォームを作成することから始めます。
 
 ```html
 <form>
@@ -116,17 +116,17 @@ l10n:
 
 次のように表示されます。
 
-{{EmbedLiveSample("A_simple_submit_button", 650, 100)}}
+{{EmbedLiveSample("A_basic_submit_button", 650, 100)}}
 
 テキストフィールドにいくらかテキストを入力してから、送信ボタンを押してみてください。
 
-送信すると、データの名前と値のペアがサーバーに送信されます。この例では、文字列は `text=usertext` となります。"usertext" はユーザーが入力したテキストで、特殊文字を保持するためにエンコードされています。どこでどのようにデータを送信するかは `<form>` の設定によります。詳しくは[フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)を参照してください。
+送信すると、データの名前と値のペアがサーバーに送信されます。この例では、文字列は `text=usertext` となります。"usertext" はユーザーが入力したテキストで、特殊文字を保持するためにエンコードされています。どこでどのようにデータを送信するかは `<form>` の設定によります。詳しくは[フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)を参照してください。
 
 ### 送信ボタンへのキーボードショートカットの追加
 
 キーボードショートカットは、アクセスキーやキーボード相当物とも呼ばれ、ユーザーがキーボードのキーまたはキーの組み合わせを使ってボタンを発生させることができます。送信ボタンにキーボードショートカットを追加するには、それが意味をなす他の {{HTMLElement("input")}} と同じように、[`accesskey`](/ja/docs/Web/HTML/Global_attributes/accesskey) グローバル属性を使用してください。
 
-この例では、 <kbd>s</kbd> がアクセスキーとして指定されています（<kbd>s</kbd> と、あなたのブラウザー/OS の組み合わせに応じた特定の修飾キーを押す必要があります）。ユーザーエージェント自身のキーボードショートカットとの競合を避けるために、ホストコンピュータ上の他のショートカットとは異なる修飾キーがアクセスキーに使用されます。詳しくは [`accesskey`](/ja/docs/Web/HTML/Global_attributes/accesskey) を参照してください。
+この例では、 <kbd>s</kbd> がアクセスキーとして指定されています（<kbd>s</kbd> と、あなたのブラウザー/OS の組み合わせに応じた特定の修飾キーを押す必要があります）。ユーザーエージェント自身のキーボードショートカットとの競合を避けるために、ホストコンピューター上の他のショートカットとは異なる修飾キーがアクセスキーに使用されます。詳しくは [`accesskey`](/ja/docs/Web/HTML/Global_attributes/accesskey) を参照してください。
 
 以下は、前回の例に <kbd>s</kbd> アクセスキーを追加した例です。
 
@@ -158,7 +158,8 @@ l10n:
 
 実行時に `disabled` を `true` または `false` に設定することで、ボタンを有効にしたり無効にしたりすることができます。JavaScript では、 `btn.disabled = true` または `btn.disabled = false` のようになります。
 
-> **メモ:** ボタンの有効化や無効化についてのさらなる考えは、 [`<input type="button">`](/ja/docs/Web/HTML/Element/input/button#ボタンの無効化と有効化) ページを参照してください。
+> [!NOTE]
+> ボタンの有効化や無効化についてのさらなる考えは、 [`<input type="button">`](/ja/docs/Web/HTML/Element/input/button#ボタンの無効化と有効化) ページを参照してください。
 
 ## 検証
 
@@ -166,7 +167,9 @@ l10n:
 
 ## 例
 
-上に簡単な例を記載しています。送信ボタンについては、実のところこれ以上言うべきことはありません。この種のコントロールが「単純なボタン」と呼ばれることがあるのはそのためです。
+上に基本的な例を記載しています。送信ボタンについては、実のところこれ以上言うべきことはありません。この種のコントロールが「単純なボタン」と呼ばれることがあるのはそのためです。
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
@@ -215,7 +218,6 @@ l10n:
 ## 関連情報
 
 - {{HTMLElement("input")}} およびそれが実装している {{domxref("HTMLInputElement")}} インターフェイス
-- [フォームとボタン](/ja/docs/Learn/Forms/Basic_native_form_controls#実際のボタン)
-- [HTML フォーム](/ja/docs/Learn/Forms)
+- [フォームとボタン](/ja/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#実際のボタン)
+- [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("button")}} 要素
-- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

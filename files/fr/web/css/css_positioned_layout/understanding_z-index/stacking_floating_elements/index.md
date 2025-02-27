@@ -3,7 +3,7 @@ title: Empilement et éléments flottants
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements
 ---
 
-{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_sans_z-index","Web/CSS/Comprendre_z-index/Ajout_de_z-index", "Web/CSS/Comprendre_z-index")}}
+{{CSSRef}}{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_sans_z-index","Web/CSS/Comprendre_z-index/Ajout_de_z-index", "Web/CSS/Comprendre_z-index")}}
 
 ## L'empilement et les éléments flottants
 
@@ -24,7 +24,8 @@ Ce comportement peut être expliqué en améliorant la liste précédente :
 4. Les éléments «&nbsp;en-ligne&nbsp;» enfants dans le flux normal&nbsp;;
 5. Les éléments enfants positionnés, dans leur ordre d'apparence (en HTML).
 
-> **Note :** Dans l'exemple qui suit, tous les blocs sont transparents, excepté celui qui n'est pas positionné, montrant ainsi l'ordre d'empilement. Si l'on réduit l'opacité du bloc non positionné (DIV #4), il se produit quelque chose d'étrange&nbsp;: l'arrière-plan et la bordure de cet élément se placent par dessus les blocs flottants et les blocs positionnés. Il s'agit d'une interprétation particulière des spécifications CSS : l'application de l'opacité crée un nouveau contexte d'empilement (voir l'article : [What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/) de Philip Walton ou son excellente traduction de Vincent De Oliveira, [Ce que personne ne vous a dit sur z-index](https://iamvdo.me/blog/comprendre-z-index-et-les-contextes-dempilement) et, bien-sûr, la [spécification](https://www.w3.org/TR/CSS2/zindex.html)).
+> [!NOTE]
+> Dans l'exemple qui suit, tous les blocs sont transparents, excepté celui qui n'est pas positionné, montrant ainsi l'ordre d'empilement. Si l'on réduit l'opacité du bloc non positionné (DIV #4), il se produit quelque chose d'étrange&nbsp;: l'arrière-plan et la bordure de cet élément se placent par dessus les blocs flottants et les blocs positionnés. Il s'agit d'une interprétation particulière des spécifications CSS : l'application de l'opacité crée un nouveau contexte d'empilement (voir l'article : [What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/) de Philip Walton ou son excellente traduction de Vincent De Oliveira, [Ce que personne ne vous a dit sur z-index](https://iamvdo.me/blog/comprendre-z-index-et-les-contextes-dempilement) et, bien-sûr, la [spécification](https://www.w3.org/TR/CSS2/zindex.html)).
 
 {{EmbedLiveSample("Code_source_de_lexemple", 600, 250)}}
 
@@ -107,11 +108,11 @@ b {
 
 ## Voir aussi
 
-- [L'empilement sans z-index](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index) : Règles d'empilement par défaut
-- [Ajouter z-index](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index) : Utiliser z-index pour modifier l'empilement par défaut
-- [L'empilement de couches](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) : Remarques sur l'empilement de couches
-- [Exemple d'empilement n°1](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1) : Hiérarchie HTML à 2 niveaux, z-index sur le dernier niveau
-- [Exemple d'empilement n°2](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2) : Hiérarchie HTML à 2 niveaux, z-index sur tous les éléments
-- [Exemple d'empilement n°3](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3) : Hiérarchie HTML à 3 niveaux, z-index sur le deuxième niveau
+- [L'empilement sans z-index](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index) : Règles d'empilement par défaut
+- [Ajouter z-index](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index) : Utiliser z-index pour modifier l'empilement par défaut
+- [L'empilement de couches](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) : Remarques sur l'empilement de couches
+- [Exemple d'empilement n°1](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1) : Hiérarchie HTML à 2 niveaux, z-index sur le dernier niveau
+- [Exemple d'empilement n°2](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2) : Hiérarchie HTML à 2 niveaux, z-index sur tous les éléments
+- [Exemple d'empilement n°3](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3) : Hiérarchie HTML à 3 niveaux, z-index sur le deuxième niveau
 
 {{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_sans_z-index","Web/CSS/Comprendre_z-index/Ajout_de_z-index", "Web/CSS/Comprendre_z-index")}}

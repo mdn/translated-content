@@ -1,11 +1,12 @@
 ---
-title: HTMLMediaElement.captureStream()
+title: "HTMLMediaElement: captureStream() メソッド"
+short-title: captureStream()
 slug: Web/API/HTMLMediaElement/captureStream
 l10n:
-  sourceCommit: 5e10a2aab4ec9ecbcf8cf79f589f9b7ece88ef60
+  sourceCommit: 7fb6ccccf88b71712c1b603bed7092dbb622b698
 ---
 
-{{APIRef("HTML Media Capture")}}
+{{APIRef("Media Capture and Streams")}}
 
 **`captureStream()`** は {{domxref("HTMLMediaElement")}} インターフェイスのプロパティで、このメディア要素でレンダリングされているコンテンツのリアルタイムキャプチャをストリーミングしている {{domxref('MediaStream')}} オブジェクトを返します。
 
@@ -58,7 +59,7 @@ Firefox 51 より前のバージョンでは、 `captureStream()` はソース�
 - ソースを `MediaStream` に戻すと、トラックをストリームに戻して追加し、期待どおりに機能します。
 - `mozCaptureMediaStream()` を `MediaStream` のソースを使用して要素に対して呼び出すと、要素が `MediaStream` を再生している間はトラックのみを含むストリームを返します。
 - ソースメディアのないメディア要素で `mozCaptureMediaStream()` を呼び出すと、その互換モードは最初に追加されたソースに基づきます。 例えば、`MediaStream` の場合、キャプチャストリームはそれ以降 MediaStream のソースでのみ機能します。
-- `MediaStream` 以外のソースのサポートが仕様に達した時点で、接頭辞なしのメソッドの場合、この特別なふるまいは取り除かれます。 詳細は [Firefox バグ 1259788#160](https://bugzil.la/1259788#c160) をご覧ください。
+- `MediaStream` 以外のソースのサポートが仕様に達した時点で、接頭辞なしのメソッドの場合、この特別なふるまいは取り除かれます。 詳細は [Firefox バグ 1259788](https://bugzil.la/1259788) をご覧ください。
 
 ## 関連情報
 

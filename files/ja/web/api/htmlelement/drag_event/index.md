@@ -1,13 +1,16 @@
 ---
 title: "HTMLElement: drag イベント"
+short-title: drag
 slug: Web/API/HTMLElement/drag_event
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 689be3910aa020e10ca58a81a4c9190a5819f4f2
 ---
 
 {{APIRef}}
 
 `drag` イベントは、要素や選択されたテキストをユーザーがドラッグしている間に、数百ミリ秒ごとに発生します。
+
+このイベントはキャンセル可能で、{{domxref("Document")}} オブジェクトと {{domxref("Window")}} オブジェクトまでバブルアップする可能性があります。
 
 ## 構文
 
@@ -136,7 +139,7 @@ target.addEventListener("drop", (event) => {
 
 #### 結果
 
-{{EmbedLiveSample('Drag and drop example')}}
+{{EmbedLiveSample('ドラッグ＆ドロップの例')}}
 
 ## 仕様書
 
@@ -148,17 +151,9 @@ target.addEventListener("drop", (event) => {
 
 ## 関連情報
 
-- その他のドラッグ＆ドロップイベント:
-
-  - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
-  - {{domxref("HTMLElement/dragend_event", "dragend")}}
-  - {{domxref("HTMLElement/dragover_event", "dragover")}}
-  - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
-  - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
-  - {{domxref("HTMLElement/drop_event", "drop")}}
-
-- 他のターゲットにおけるこのイベント:
-
-  - {{domxref("Window")}}: {{domxref("Window/drag_event", "drag")}} イベント
-  - {{domxref("Document")}}: {{domxref("Document/drag_event", "drag")}} イベント
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/drag_event", "drag")}} イベント
+- {{domxref("HTMLElement/dragstart_event", "dragstart")}}
+- {{domxref("HTMLElement/dragend_event", "dragend")}}
+- {{domxref("HTMLElement/dragover_event", "dragover")}}
+- {{domxref("HTMLElement/dragenter_event", "dragenter")}}
+- {{domxref("HTMLElement/dragleave_event", "dragleave")}}
+- {{domxref("HTMLElement/drop_event", "drop")}}

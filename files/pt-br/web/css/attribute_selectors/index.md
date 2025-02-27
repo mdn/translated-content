@@ -143,4 +143,4 @@ div[data-lang="zh-TW"] {
 
 ## Browser compatibilidade
 
-{{Compat("css.selectors.attribute")}}
+{{Compat}}

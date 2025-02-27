@@ -3,7 +3,7 @@ title: "Response: body プロパティ"
 short-title: body
 slug: Web/API/Response/body
 l10n:
-  sourceCommit: 84b1729de4f527c8d81e44a38fca70ea4db97922
+  sourceCommit: 802b6063046dffb7634d2138aadcd92cb22ed40c
 ---
 
 {{APIRef("Fetch API")}}
@@ -16,7 +16,8 @@ l10n:
 
 ストリームは[読み取り可能なバイトストリーム](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams)で、 {{domxref("ReadableStreamBYOBReader")}} を用いたゼロコピー移譲に対応しています。
 
-> **メモ:** 現在のブラウザーは、本体なしのレスポンス（例えば、 [`HEAD`](/ja/docs/Web/HTTP/Methods/HEAD) リクエストに対するレスポンスや、 [`204 No Content`](/ja/docs/Web/HTTP/Status/204) レスポンス）には `body` プロパティを `null` に設定するという仕様に実際には適合していません。
+> [!NOTE]
+> 現在のブラウザーは、本体なしのレスポンス（例えば、 [`HEAD`](/ja/docs/Web/HTTP/Methods/HEAD) リクエストに対するレスポンスや、 [`204 No Content`](/ja/docs/Web/HTTP/Status/204) レスポンス）には `body` プロパティを `null` に設定するという仕様に実際には適合していません。
 
 ## 例
 

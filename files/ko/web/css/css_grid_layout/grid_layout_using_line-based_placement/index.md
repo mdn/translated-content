@@ -3,7 +3,9 @@ title: Line-based placement with CSS Grid
 slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 ---
 
-[그리드 레이아웃의 기본 개념을 다룬 문서](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃의_기본_개념)에서 라인 번호를 사용하여 그리드에 아이템을 배치하는 방법을 잠깐 살펴본 적이 있습니다. 이번 문서에서는 이 기본적 기능이 어떻게 작동하는지를 자세히 살펴보겠습니다.
+{{CSSRef}}
+
+[그리드 레이아웃의 기본 개념을 다룬 문서](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)에서 라인 번호를 사용하여 그리드에 아이템을 배치하는 방법을 잠깐 살펴본 적이 있습니다. 이번 문서에서는 이 기본적 기능이 어떻게 작동하는지를 자세히 살펴보겠습니다.
 
 그리드를 연구할 때는 번호가 매겨진 라인부터 시작하는 것이 가장 논리적일 겁니다. 왜냐하면, 그리드 레이아웃을 쓸 때마다 거기엔 항상 번호가 매겨진 라인이 있기 때문입니다. 행과 열의 각 라인에는 번호가 매겨져 있으며, 라인에 번호를 매길 때는 1번부터 시작합니다. 그리드 라인은 문서의 작성 모드를 기준으로 번호가 매겨진다는 것을 명심하십시오. 영어와 같이 왼쪽에서 오른쪽으로 읽히는 언어로 쓰인 문서에서는 1번 라인이 그리드의 맨 왼쪽에 위치합니다. 반대로 오른쪽에서 왼쪽으로 읽히는 언어의 문서에서는 1번 라인이 그리드의 맨 오른쪽에 위치하게 됩니다. 문서 작성 모드와 그리드 사이의 상호 작용에 대해서는 나중에 자세히 알아보겠습니다.
 
@@ -11,7 +13,7 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 
 아주 간단한 예로, 세 개의 세로 열 트랙과 세 개의 가로 행 트랙으로 구성된 그리드의 예를 들어보겠습니다. 여기엔 각 방향으로 4개의 라인이 있습니다.
 
-그리드 컨테이너 안에는 네 개의 자식 요소가 있습니다. 이것들을 아무런 조건 없이 그대로 그리드 위에 위치시키면, 자동 배치 규칙에 따라 각 아이템은 처음에 있는 네 개의 셀 위에 놓이게 됩니다. 여기서 [Firefox의 Grid Highlighter](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)를 사용하면 그리드의 열과 행이 어떻게 정의되어 있는지 확인하실 수 있습니다.
+그리드 컨테이너 안에는 네 개의 자식 요소가 있습니다. 이것들을 아무런 조건 없이 그대로 그리드 위에 위치시키면, 자동 배치 규칙에 따라 각 아이템은 처음에 있는 네 개의 셀 위에 놓이게 됩니다. 여기서 [Firefox의 Grid Highlighter](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)를 사용하면 그리드의 열과 행이 어떻게 정의되어 있는지 확인하실 수 있습니다.
 
 ![Our Grid highlighted in DevTools](3_hilighted_grid.png)
 
@@ -604,24 +606,24 @@ CSS 그리드 표준 명세서에는 {{cssxref("grid-column-gap")}}과 {{cssxref
 
 그리드 라인을 기준으로 아이템을 배치하는 법에 익숙해지시려면, 다양한 수의 열로 이뤄진 그리드에 아이템들을 배치하시면서 몇 가지 일반적 레이아웃을 만들어보는 여러 시도를 해보시기 바랍니다. 여기서 주의할 점은 모든 아이템의 위치를 일일이 지정하지 않았다면, 나머지 아이템들은 자동 배치 규칙에 따라 배치된다는 것을 명심하시기 바랍니다. 이런 레이아웃이 원하시는 것일 수도 있지만, 만약에 의도치 않은 곳에 아이템이 표시된다면, 해당 아이템의 위치를 지정해 주었는지 꼭 확인해 보십시오.
 
-또한, 그리드에 배치된 아이템들은 원하시면 명확히 지정해서 서로 자리가 겹치게 할 수도 있다는 것을 잊지 마십시오. 이렇게 하면 특이하고 멋진 효과를 만들어 낼 수도 있습니다만, 만약에 시작 혹은 마지막 라인을 잘못 지정해 놓았다면, 의도치 않은 곳에서 서로 겹쳐 버리는 결과를 가져올 수도 있습니다. [Firefox Grid Highlighter](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)는 배우시면서 매우 유용하게 사용될 수 있는데, 특히나 그리드가 상당히 복잡한 경우에는 더 그렇습니다.
+또한, 그리드에 배치된 아이템들은 원하시면 명확히 지정해서 서로 자리가 겹치게 할 수도 있다는 것을 잊지 마십시오. 이렇게 하면 특이하고 멋진 효과를 만들어 낼 수도 있습니다만, 만약에 시작 혹은 마지막 라인을 잘못 지정해 놓았다면, 의도치 않은 곳에서 서로 겹쳐 버리는 결과를 가져올 수도 있습니다. [Firefox Grid Highlighter](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)는 배우시면서 매우 유용하게 사용될 수 있는데, 특히나 그리드가 상당히 복잡한 경우에는 더 그렇습니다.
 
 1. [**CSS**](/ko/docs/Web/CSS)
 2. [**CSS Reference**](/ko/docs/Web/CSS/Reference)
-3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout)
+3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)
 4. **가이드**
 
-   1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃의_기본_개념)
-   2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃과_다른_레이아웃_방법과의_관계)
-   3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_그리드의_라인을_기준으로_한_아이템_배치)
-   4. [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_템플릿_영역)
-   5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout/이름이_주어진_그리드_라인을_이용한_레이아웃)
-   6. [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-   7. [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-   8. [Grids, logical values and writing modes](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-   9. [CSS Grid Layout and Accessibility](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-   10. [CSS Grid Layout and Progressive Enhancement](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-   11. [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+   1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+   2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+   3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+   4. [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+   5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+   6. [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+   7. [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+   8. [Grids, logical values and writing modes](/ko/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+   9. [CSS Grid Layout and Accessibility](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+   10. [CSS Grid Layout and Progressive Enhancement](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+   11. [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 5. **프로퍼티**
 
@@ -632,12 +634,12 @@ CSS 그리드 표준 명세서에는 {{cssxref("grid-column-gap")}}과 {{cssxref
    5. [grid-auto-rows](/ko/docs/Web/CSS/grid-auto-rows)
    6. [grid-column](/ko/docs/Web/CSS/grid-column)
    7. [grid-column-end](/ko/docs/Web/CSS/grid-column-end)
-   8. [grid-column-gap](/ko/docs/Web/CSS/grid-column-gap)
+   8. [grid-column-gap](/ko/docs/Web/CSS/column-gap)
    9. [grid-column-start](/ko/docs/Web/CSS/grid-column-start)
-   10. [grid-gap](/ko/docs/Web/CSS/grid-gap)
+   10. [grid-gap](/ko/docs/Web/CSS/gap)
    11. [grid-row](/ko/docs/Web/CSS/grid-row)
    12. [grid-row-end](/ko/docs/Web/CSS/grid-row-end)
-   13. [grid-row-gap](/ko/docs/Web/CSS/grid-row-gap)
+   13. [grid-row-gap](/ko/docs/Web/CSS/row-gap)
    14. [grid-row-start](/ko/docs/Web/CSS/grid-row-start)
    15. [grid-template](/ko/docs/Web/CSS/grid-template)
    16. [grid-template-areas](/ko/docs/Web/CSS/grid-template-areas)
@@ -647,11 +649,11 @@ CSS 그리드 표준 명세서에는 {{cssxref("grid-column-gap")}}과 {{cssxref
 6. **용어집**
 
    1. [Grid](/ko/docs/Glossary/Grid)
-   2. [Grid lines](/ko/docs/Glossary/Grid_lines)
-   3. [Grid tracks](/ko/docs/Glossary/Grid_tracks)
-   4. [Grid cell](/ko/docs/Glossary/Grid_cell)
-   5. [Grid areas](/ko/docs/Glossary/Grid_areas)
+   2. [Grid lines](/ko/docs/Glossary/Grid_Lines)
+   3. [Grid tracks](/ko/docs/Glossary/Grid_Tracks)
+   4. [Grid cell](/ko/docs/Glossary/Grid_Cell)
+   5. [Grid areas](/ko/docs/Glossary/Grid_Areas)
    6. [Gutters](/ko/docs/Glossary/Gutters)
    7. [Grid Axis](/ko/docs/Glossary/Grid_Axis)
-   8. [Grid row](/ko/docs/Glossary/Grid_rows)
-   9. [Grid column](/ko/docs/Glossary/Grid_column)
+   8. [Grid row](/ko/docs/Glossary/Grid_Row)
+   9. [Grid column](/ko/docs/Glossary/Grid_Column)

@@ -67,7 +67,7 @@ function randomNotification() {
 
 这个技术还处在非常初级的阶段，一些可用示例使用了谷歌云的消息推送平台，但它们正在被重写以支持 [VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) (Voluntary Application Identification)，它能为你的应用提供一层额外的安全防护。你可以看一下 [Service Workers Cookbook 里的一些例子](https://github.com/mdn/serviceworker-cookbook/push-payload.html)，尝试用 [Firebase](https://firebase.google.com/) 配置一个消息推送服务，或者构建自己的推送服务（例如使用 Node.js）。
 
-之前提到，为了接收到推送的消息，你需要有一个 Service Worker，这部分的基础知识我们已经在文章[通过 Service workers 让 PWA 离线工作](/zh-CN/docs/Web/Apps/Progressive/Offline_Service_workers)里面解释过。在 Service Worker 内部，存在一个消息推送服务订阅机制。
+之前提到，为了接收到推送的消息，你需要有一个 Service Worker，这部分的基础知识我们已经在文章[通过 Service workers 让 PWA 离线工作](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)里面解释过。在 Service Worker 内部，存在一个消息推送服务订阅机制。
 
 ```js
 registration.pushManager.getSubscription().then(/* ... */);
@@ -194,52 +194,54 @@ document.getElementById("doIt").onclick = function () {
 
 [web-push](https://www.npmjs.com/package/web-push) 模块被用来配置 VAPID 密钥，如果没有的话，还可以生成一个。
 
-```plain
-const webPush = require('web-push');
+```js
+const webPush = require("web-push");
 
 if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
-  console.log("You must set the VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY "+
-    "environment variables. You can use the following ones:");
+  console.log(
+    "You must set the VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY " +
+      "environment variables. You can use the following ones:",
+  );
   console.log(webPush.generateVAPIDKeys());
   return;
 }
 
 webPush.setVapidDetails(
-  'https://github.com/mdn/serviceworker-cookbook/',
+  "https://github.com/mdn/serviceworker-cookbook/",
   process.env.VAPID_PUBLIC_KEY,
-  process.env.VAPID_PRIVATE_KEY
+  process.env.VAPID_PRIVATE_KEY,
 );
 ```
 
 接着，一个模块定义并导出了所有应用需要处理的路由：获取 VAPID 公钥、注册、发送通知等等。你可以看到来自 `index.js` 的 `payload`, `delay` 和`ttl` 变量在这里被用到了。
 
-```plain
-module.exports = function(app, route) {
-  app.get(route + 'vapidPublicKey', function(req, res) {
+```js
+module.exports = function (app, route) {
+  app.get(route + "vapidPublicKey", function (req, res) {
     res.send(process.env.VAPID_PUBLIC_KEY);
   });
 
-  app.post(route + 'register', function(req, res) {
-
+  app.post(route + "register", function (req, res) {
     res.sendStatus(201);
   });
 
-  app.post(route + 'sendNotification', function(req, res) {
+  app.post(route + "sendNotification", function (req, res) {
     const subscription = req.body.subscription;
     const payload = req.body.payload;
     const options = {
-      TTL: req.body.ttl
+      TTL: req.body.ttl,
     };
 
-    setTimeout(function() {
-      webPush.sendNotification(subscription, payload, options)
-      .then(function() {
-        res.sendStatus(201);
-      })
-      .catch(function(error) {
-        console.log(error);
-        res.sendStatus(500);
-      });
+    setTimeout(function () {
+      webPush
+        .sendNotification(subscription, payload, options)
+        .then(function () {
+          res.sendStatus(201);
+        })
+        .catch(function (error) {
+          console.log(error);
+          res.sendStatus(500);
+        });
     }, req.body.delay * 1000);
   });
 };
@@ -249,14 +251,14 @@ module.exports = function(app, route) {
 
 最后我们要看的文件是 Service Worker。
 
-```plain
-self.addEventListener('push', function(event) {
-    const payload = event.data ? event.data.text() : 'no payload';
-    event.waitUntil(
-        self.registration.showNotification('ServiceWorker Cookbook', {
-            body: payload,
-        })
-    );
+```js
+self.addEventListener("push", function (event) {
+  const payload = event.data ? event.data.text() : "no payload";
+  event.waitUntil(
+    self.registration.showNotification("ServiceWorker Cookbook", {
+      body: payload,
+    }),
+  );
 });
 ```
 

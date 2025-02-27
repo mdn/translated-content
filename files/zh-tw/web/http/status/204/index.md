@@ -1,17 +1,21 @@
 ---
 title: 204 No Content
 slug: Web/HTTP/Status/204
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`204 No Content`** 成功狀態碼表明請求成功，但客戶端不需要更新目前的頁面。204 回應預設是可被快取的，此類回應中會包含 {{HTTPHeader("ETag")}} 標頭。
+HTTP **`204 No Content`** 成功回應碼表示請求已成功，但用戶端不需要離開當前頁面。
 
-回傳 `204` 的常見情況是作為 {{HTTPMethod("PUT")}} 請求的回應，更新一個資源且沒有更動目前顯示給使用者的頁面內容。若是有資源被建立，{{HTTPStatus("201")}} `Created` 則應該被回傳。而若頁面應該更新為新的頁面，則應使用 {{HTTPStatus("200")}} 。
+例如，在為維基站實現「保存並繼續編輯」功能時可能會使用這個狀態碼。在這種情況下，會使用 {{HTTPMethod("PUT")}} 請求保存頁面，並發送 `204 No Content` 回應以指示編輯器不應該被其他頁面替換。
+
+默認情況下，204 回應是可緩存的（這樣的回應中包含了 {{HTTPHeader("ETag")}} 標頭）。
 
 ## 狀態
 
-```plain
+```http
 204 No Content
 ```
 
@@ -23,11 +27,9 @@ HTTP **`204 No Content`** 成功狀態碼表明請求成功，但客戶端不需
 
 {{Compat}}
 
-## 相容性事項
+### 相容性注意事項
 
-- 雖然此狀態碼意圖表示不具主體的回應，伺服器仍可能錯誤地在標頭後加入資料。通訊協定允許使用者代理更動此回應的處理方式 ([關於規範的討論請參見此處](https://github.com/httpwg/http11bis/issues/26))。這在持久連接中可以被觀察到，無效的主體可能會包含後續請求的不同回應 。
-
-  Apple Safari 拒收這些資料。Google Chrome 及 Microsoft Edge 在有效回應之前丟棄最多四個無效的位元組。Firefox 容許在有效回應之前超過 1KB 的無效資料。
+- 雖然這個狀態碼旨在描述沒有主體的回應，但伺服器可能錯誤地在標頭後包含資料。協議允許用戶端代理程式在處理這類回應時有所不同（[有關此規範文本的討論可在此找到](https://github.com/httpwg/http-core/issues/26)）。這在持久連接中是可觀察到的，無效的主體可能包含對後續請求的不同回應。Apple Safari 拒絕任何這樣的資料。Google Chrome 和 Microsoft Edge 會丟棄一個有效回應之前的最多四個無效位元組。Firefox 在有效回應之前允許超過一千位元組的無效資料。
 
 ## 參見
 

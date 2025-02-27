@@ -22,7 +22,7 @@ elements = document.getElementsByTagName(name);
 
 En el siguiente ejemplo, `getElementsByTagName` empieza por el elemento padre y busca hacia abajo recurrentemente a lo largo de todo el DOM por ese elemento padre, buscando por hijos que cumplan con el criterio: nombre = `name`.
 
-Ten en cuenta que cuando el nodo en el que se invoca `getElementsByTagName`, no es el nodo `document`, en realidad se está usando el método [element.getElementsByTagName](/es/DOM/element.getElementsByTagName).
+Ten en cuenta que cuando el nodo en el que se invoca `getElementsByTagName`, no es el nodo `document`, en realidad se está usando el método [element.getElementsByTagName](/es/docs/Web/API/Element/getElementsByTagName).
 
 ```html
 <html>

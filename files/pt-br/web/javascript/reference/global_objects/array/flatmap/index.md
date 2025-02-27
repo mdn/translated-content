@@ -3,11 +3,20 @@ title: Array.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
 O método **`flatMap()`** primeiro mapeia cada elemento usando uma função de mapeamento e, em seguida, nivela o resultado em um novo array. É idêntico a um `map` seguido por um `flat` de profundidade 1, mas **`flatMap`** é bastante útil e mescla ambos em um método um pouco mais eficiente.
 
-{{EmbedInteractiveExample("pages/js/array-flatmap.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.flatMap()", "shorter")}}
+
+```js interactive-example
+const arr1 = [1, 2, 1];
+
+const result = arr1.flatMap((num) => (num === 2 ? [2, 2] : 1));
+
+console.log(result);
+// Expected output: Array [1, 2, 2, 1]
+```
 
 ## Sintaxe
 
@@ -39,7 +48,7 @@ Uma nova array com cada elemento sendo o resultado da função callback e achata
 
 ## Descrição
 
-Veja {{jsxref("Array.prototype.map()")}} para uma detalhada descrição da função callback. O método `flatMap` é idêntico ao [`map`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido por um chamado a [`flatten`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten) de profundidade 1.
+Veja {{jsxref("Array.prototype.map()")}} para uma detalhada descrição da função callback. O método `flatMap` é idêntico ao [`map`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido por um chamado a [`flatten`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) de profundidade 1.
 
 ## Exemplos
 
@@ -95,7 +104,7 @@ arr1.reduce((acc, x) => acc.concat([x * 2]), []);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.flatMap")}}
+{{Compat}}
 
 ## Veja também
 

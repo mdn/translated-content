@@ -24,11 +24,11 @@ _Интерфейс `GeolocationPosition` не наследует свойств
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Using the Geolocation API](/ru/docs/Web/API/Geolocation_API/Using)
+- [Using the Geolocation API](/ru/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - {{domxref("Geolocation")}}

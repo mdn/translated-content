@@ -1,5 +1,5 @@
 ---
-title: "::view-transition"
+title: ::view-transition
 slug: Web/CSS/::view-transition
 ---
 
@@ -47,4 +47,4 @@ html::view-transition {
 ## 参见
 
 - [View Transitions API](/zh-CN/docs/Web/API/View_Transitions_API)
-- [使用 View Transitions API 实现平滑、简单的过渡](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [使用 View Transitions API 实现平滑、简单的过渡](https://developer.chrome.google.cn/docs/web-platform/view-transitions)

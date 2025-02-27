@@ -124,6 +124,6 @@ _方法继承自 {{domxref("RTCPeerConnectionIceEvent")}}._
 
 {{Compat}}
 
-## 参阅
+## 参见
 
-- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)

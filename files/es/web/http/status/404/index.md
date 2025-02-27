@@ -31,7 +31,8 @@ ErrorDocument 404 /no-encontrado.html
 
 Para una pagina 404 de ejemplo, mire la pagina [MDN 404](/es/404).
 
-> **Nota:** Diseños personalizados son buenos, si se usan de manera moderada. Siente libre de hacer tus paginas 404 humoristicas y humanas, pero no confundas a tus usuarios.
+> [!NOTE]
+> Diseños personalizados son buenos, si se usan de manera moderada. Siente libre de hacer tus paginas 404 humoristicas y humanas, pero no confundas a tus usuarios.
 
 ## Especificaciones
 

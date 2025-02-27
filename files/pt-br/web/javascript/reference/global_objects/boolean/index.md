@@ -58,7 +58,7 @@ var myString = new String("Hello"); // objeto String
 var s = new Boolean(myString); // valor inicial true
 ```
 
-Não use um um objeto `Boolean` no lugar de um primitivo B`oolean`.
+Não use um um objeto `Boolean` no lugar de um primitivo `Boolean`.
 
 ## Propriedades
 
@@ -77,11 +77,11 @@ Todas instâncias `Boolean` herdam de {{jsxref("Boolean.prototype")}}. Assim com
 
 ### Propriedades
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Properties')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Properties') -->
 
 ### Métodos
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Methods')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Methods') -->
 
 ## Exemplos
 
@@ -112,7 +112,7 @@ var bObjProto = new Boolean({});
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Boolean")}}
+{{Compat}}
 
 ## Veja também
 

@@ -39,7 +39,7 @@ Content-Length: <tamanho>
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Content-Length")}}
+{{Compat}}
 
 ## Veja também
 

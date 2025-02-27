@@ -3,13 +3,13 @@ title: 패스
 slug: Web/SVG/Tutorial/Paths
 ---
 
-{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
-[`<path>`](/en-US/Web/SVG/Element/path) 엘리먼트는 SVG [기본 도형](/ko/docs/Web/SVG/Tutorial/Basic_Shapes) 라이브러리에서 가장 강력한 엘리먼트이다. 선과 곡선, 호 등 다양한 형태를 그릴 수 있다.
+[`<path>`](/ko/docs/Web/SVG/Element/path) 엘리먼트는 SVG [기본 도형](/ko/docs/Web/SVG/Tutorial/Basic_Shapes) 라이브러리에서 가장 강력한 엘리먼트이다. 선과 곡선, 호 등 다양한 형태를 그릴 수 있다.
 
-패스는 여러 개의 직선과 곡선을 합쳐서 복잡한 도형을 그릴 수 있게 해준다. 직선으로만 이루어진 복잡한 도형은 [polylines](/ko/docs/Web/SVG/Tutorial/Basic_Shapes#Polyline)으로도 그릴 수 있지만, 곡선을 묘사할 때 polylines은 패스로 그린 도형에 비해 더 많은 직선이 필요에 확대가 잘 되지 않을 수 있다. 그렇기에 SVG를 그릴 때 패스에 대해 이해하는 것은 매우 중요하다고 할 수 있다. 복잡한 패스를 XML 편집기 또는 일반적인 텍스트 에디터로 그리는 것은 권장하지 않지만, SVG가 표시될 때 문제점을 찾고 고치는 데는 충분히 도움이 될 것이다.
+패스는 여러 개의 직선과 곡선을 합쳐서 복잡한 도형을 그릴 수 있게 해준다. 직선으로만 이루어진 복잡한 도형은 [polylines](/ko/docs/Web/SVG/Tutorial/Basic_Shapes#polyline)으로도 그릴 수 있지만, 곡선을 묘사할 때 polylines은 패스로 그린 도형에 비해 더 많은 직선이 필요에 확대가 잘 되지 않을 수 있다. 그렇기에 SVG를 그릴 때 패스에 대해 이해하는 것은 매우 중요하다고 할 수 있다. 복잡한 패스를 XML 편집기 또는 일반적인 텍스트 에디터로 그리는 것은 권장하지 않지만, SVG가 표시될 때 문제점을 찾고 고치는 데는 충분히 도움이 될 것이다.
 
-패스의 모양은 {{ SVGAttr("d") }} 속성 하나로 정의된다([basic shapes](/ko/docs/) 참조). `"d"` 속성은 여러 개의 명령어와 그 파라미터들로 이루어진다.
+패스의 모양은 {{ SVGAttr("d") }} 속성 하나로 정의된다([basic shapes](/ko/docs/Web) 참조). `"d"` 속성은 여러 개의 명령어와 그 파라미터들로 이루어진다.
 
 각각 명령은 특정 알파벳으로 시작한다. 예를 들면 현재 그려지는 위치를 XY 좌표계의 (10, 10)으로 이동할 때 "Move To" 명령을 사용하게 되는데, 이 명령은 알파벳 M으로 호출한다. SVG 처리기가 이 문자를 읽게 되면 다른 위치로 이동하라는 명령으로 이해하게 된다. 즉, (10, 10)으로 이동하려면 명령어 "M 10 10"을 쓰면 된다. 이후에 처리기는 다음 명령어를 읽기 시작한다.
 
@@ -171,7 +171,8 @@ slug: Web/SVG/Tutorial/Paths
 
 이 축약 명령어는 이전에 사용한 제어점으로부터 새로운 제어점을 만들어낸다. 즉, 처음에 제어점 하나만을 기술하면 끝점만을 계속 이어서 꽤 복잡한 도형을 만들 수 있다.
 
-> **참고:** Q나 T 명령어 다음에 올 때만 적용된다. 그렇지 않을 경우 제어점은 시작점의 좌표로 간주되며, 직선만 그릴 수 있게 된다.
+> [!NOTE]
+> Q나 T 명령어 다음에 올 때만 적용된다. 그렇지 않을 경우 제어점은 시작점의 좌표로 간주되며, 직선만 그릴 수 있게 된다.
 
 ![](shortcut_quadratic_bézier_with_grid.png)
 
@@ -236,6 +237,6 @@ A 명령어는 일단 x축, y축 반지름을 매개변수로 받는다. 혹시 
 
 원을 한 바퀴 도는 패스의 경우 시작점과 끝점이 같으므로 선택할 수 있는 원이 무한히 있으며, 그러므로 실제 패스가 정의되지 않는다. 이때는 시작점과 끝점을 살짝 비뚤어지게 배치하고 이 둘을 다른 패스 선으로 마저 이음으로써 비슷하게 만들 수 있지만, 이때는 실제 원이나 타원 노드를 쓰는 것이 쉬울 때가 많다.
 
-[캔버스](/ko/docs/Web/HTML/Canvas)에서 SVG로 넘어오는 사람에게는 호가 가장 배우기 어려울 수도 있지만, 그런 만큼 강력하기도 하다. 다음 반응형 예제를 보면 SVG 호의 개념을 이해하는 데 도움이 될 것이다. <http://codepen.io/lingtalfi/pen/yaLWJG> (크롬과 파이어폭스로만 테스트했으므로 일부 브라우저에서 동작하지 않을 수 있음)
+[캔버스](/ko/docs/Web/API/Canvas_API)에서 SVG로 넘어오는 사람에게는 호가 가장 배우기 어려울 수도 있지만, 그런 만큼 강력하기도 하다. 다음 반응형 예제를 보면 SVG 호의 개념을 이해하는 데 도움이 될 것이다. <https://codepen.io/lingtalfi/pen/yaLWJG> (크롬과 Firefox로만 테스트했으므로 일부 브라우저에서 동작하지 않을 수 있음)
 
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}

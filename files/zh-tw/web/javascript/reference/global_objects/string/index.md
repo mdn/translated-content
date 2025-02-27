@@ -3,7 +3,7 @@ title: 字串
 slug: Web/JavaScript/Reference/Global_Objects/String
 ---
 
-{{JSRef("Global_Objects", "String")}}
+{{JSRef}}
 
 **`String`** 全域物件為字串的構造函數，或是一個字符序列。
 
@@ -54,7 +54,8 @@ String(thing)
 | `\u{X}` ... `\u{XXXXXX}` | unicode 代碼 {{experimental_inline}} |
 | `\xXX`                   | Latin-1 字元                         |
 
-> **備註：** 和其他語言不同，JavaScript 將單引號字串和雙引號字串是做相同；因此，上述的序列可以在單引號或雙引號中作用。
+> [!NOTE]
+> 和其他語言不同，JavaScript 將單引號字串和雙引號字串是做相同；因此，上述的序列可以在單引號或雙引號中作用。
 
 ### 長字面值字串
 
@@ -102,7 +103,7 @@ return "cat"[1]; // 回傳 "a"
 
 ### 比較字串
 
-C 語言的開發者有 `strcmp()` 函式可以用來比較字串。 在 JavaScript 中，你只能用[小於和大於運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)：
+C 語言的開發者有 `strcmp()` 函式可以用來比較字串。 在 JavaScript 中，你只能用[小於和大於運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators)：
 
 ```js
 var a = "a";
@@ -161,7 +162,8 @@ console.log(eval(s2.valueOf())); // 回傳數字 4
 
 ## `String` 通用方法
 
-> **警告：** 字串通用方法是非標準化的、被棄用的，也有近期將被刪除的。
+> [!WARNING]
+> 字串通用方法是非標準化的、被棄用的，也有近期將被刪除的。
 
 The `String` instance methods are also available in Firefox as of JavaScript 1.6 (though not part of the ECMAScript standard) on the String object for applying String methods to any object:
 
@@ -170,7 +172,7 @@ var num = 15;
 alert(String.replace(num, /5/, "2"));
 ```
 
-[Generics](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_generic_methods) are also available on {{jsxref("Global_Objects/Array", "Array")}} methods.
+[Generics](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#array_generic_methods) are also available on {{jsxref("Global_Objects/Array", "Array")}} methods.
 
 The following is a shim to provide support to non-supporting browsers:
 
@@ -334,7 +336,7 @@ The following is a shim to provide support to non-supporting browsers:
 - {{jsxref("String.prototype.valueOf()")}}
   - : Returns the primitive value of the specified object. Overrides the
     {{jsxref("Object.prototype.valueOf()")}} method.
-- {{jsxref("String.prototype.@@iterator()", "String.prototype[@@iterator]()")}}
+- [`String.prototype[Symbol.iterator]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)
   - : Returns a new iterator object that iterates over the code points of a String value,
     returning each code point as a String value.
 
@@ -362,5 +364,5 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 ## 參見
 
 - {{domxref("DOMString")}}
-- [`StringView` — a C-like representation of strings based on typed arrays](/zh-TW/Add-ons/Code_snippets/StringView)
+- [`StringView` — a C-like representation of strings based on typed arrays](/zh-TW/docs/Mozilla/Add-ons/Code_snippets/StringView)
 - [Binary strings](/zh-TW/docs/Web/API/DOMString/Binary)

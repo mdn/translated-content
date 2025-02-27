@@ -5,7 +5,7 @@ slug: Web/CSS/gradient/repeating-radial-gradient
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`repeating-radial-gradient()`** 创建一个从原点辐射的重复渐变组成的 {{cssxref("&lt;image&gt;")}}，类似于 {{cssxref("gradient/radial-gradient", "radial-gradient()")}} 并且采用相同的参数，但是它会在所有方向上无限重复色标，以覆盖其整个容器，类似于 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{cssxref("&lt;image&gt;")}} 类型。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) **`repeating-radial-gradient()`** 创建一个从原点辐射的重复渐变组成的 {{cssxref("&lt;image&gt;")}}，类似于 {{cssxref("gradient/radial-gradient", "radial-gradient()")}} 并且采用相同的参数，但是它会在所有方向上无限重复色标，以覆盖其整个容器，类似于 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{cssxref("&lt;image&gt;")}} 类型。
 
 {{EmbedInteractiveExample("pages/css/function-repeating-radial-gradient.html")}}
 
@@ -47,7 +47,8 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
     | `farthest-side`   | 类似于 `closest-side`，结束形状与容器距离渐变中心点最远的一边（或最远的垂直和水平边）相切。                        |
     | `farthest-corner` | 渐变的结束形状与容器距离渐变中心点最远的一个角相交。                                                               |
 
-    > **备注：** 早期的函数实现中还包含其他关键字（`cover` 和 `contain`），分别相当于标准关键字 `farthest-corner` 和 `closest-side`。但因为在某些实现中丢弃了这些旧的关键字，所以请仅使用标准关键字。
+    > [!NOTE]
+    > 早期的函数实现中还包含其他关键字（`cover` 和 `contain`），分别相当于标准关键字 `farthest-corner` 和 `closest-side`。但因为在某些实现中丢弃了这些旧的关键字，所以请仅使用标准关键字。
 
 - `<color-stop>`
   - : 色标（color stop）的 {{cssxref("&lt;color&gt;")}} 值，然后是一个或两个可选的色标位置（沿渐变轴的 {{cssxref("&lt;percentage&gt;")}} 或 {{cssxref("&lt;length&gt;")}}）。百分比值 `0%`，或者长度值 `0`，表示渐变中心点；百分比值 `100%` 表示渐变射线与结束形状相交的点。其间的百分比值线性对应渐变射线上的点。
@@ -118,7 +119,8 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 
 这个椭圆形渐变会位于左上角靠中心 20% 的位置，在中心和最远角（右下角）之间重复 10 次。支持多位置色标的浏览器会显示为红色和绿色条纹的椭圆形。不支持这个语法的浏览器仍会从红色到黑色再由蓝色到绿色的渐变。
 
-> **备注：** 更多例子请见[使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)。
+> [!NOTE]
+> 更多例子请见[使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)。
 
 ## 规范
 

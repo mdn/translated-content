@@ -2,10 +2,10 @@
 title: サービスワーカー API
 slug: Web/API/Service_Worker_API
 l10n:
-  sourceCommit: 58af4d9f65d5cef3ea6b212aaf6644bd7f00ab62
+  sourceCommit: 4f35a8237ee0842beb9cfef3354e05464ad7ce1a
 ---
 
-{{DefaultAPISidebar("Service Workers API")}}
+{{DefaultAPISidebar("Service Workers API")}}{{AvailableInWorkers}}
 
 サービスワーカーは、基本的にウェブアプリケーション、ブラウザー、そして（もし繋がっていれば）ネットワークの間に介在するプロキシサーバーのように振る舞います。これは、よりよいオフラインの操作性を可能にするように意図されており、ネットワークのリクエストに介在してネットワークの使用可否の状況に基づいて適切な対応を取ったり、サーバー上にある資産を更新したりします。また、プッシュ通知やバックグラウンド同期の API 群へのアクセスもできるようになります。
 
@@ -20,11 +20,14 @@ l10n:
 
 サービスワーカーはセキュリティ上の理由から、 HTTPS 通信でのみ動作します。最も重要なことは、HTTP 接続は{{Glossary("MitM", "中間者")}}攻撃による悪意のあるコード注入の影響を受けやすく、こうした強力な API へのアクセスを許可されると、その攻撃はより悪いものになる可能性があるということです。Firefox では[プライベートブラウジングモード](https://support.mozilla.org/ja/kb/private-browsing-use-firefox-without-history)でサービスワーカー API を利用することはできません。
 
-> **メモ:** Firefox では、テストのためにサービスワーカーを HTTP (安全ではない) 上で実行することができます。これは、 **HTTP による サービスワーカー を有効化 (ツールボックスを開いたとき)** オプションを Firefox Devtools 設定メニューでチェックするだけです。
+> [!NOTE]
+> Firefox では、テストのためにサービスワーカーを HTTP (安全ではない) 上で実行することができます。これは、 **HTTP によるサービスワーカーを有効化 (ツールボックスを開いたとき)** オプションを Firefox Devtools 設定メニューでチェックするだけです。
 
-> **メモ:** サービスワーカーは [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag/) のような、この分野における以前の試みより勝っています。以前のものは、あなたがしようとしていることを想定していなかったり、想定が正しくなかったときに壊れたりしていたのに対して、サービスワーカーはあなたがすべてを細かく制御することができるためです。
+> [!NOTE]
+> サービスワーカーは [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag/) のような、この分野における以前の試みより勝っています。以前のものは、あなたがしようとしていることを想定していなかったり、想定が正しくなかったときに壊れたりしていたのに対して、サービスワーカーはあなたがすべてを細かく制御することができるためです。
 
-> **メモ:** サービスワーカーは[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)を頻繁に使用して、レスポンスが来るのを待ってから、成功または失敗のアクションで応答します。プロミスのアーキテクチャはこの領域に対して理想的なものです。
+> [!NOTE]
+> サービスワーカーは[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)を頻繁に使用して、レスポンスが来るのを待ってから、成功または失敗のアクションで応答します。プロミスのアーキテクチャはこの領域に対して理想的なものです。
 
 ### 登録
 
@@ -61,17 +64,24 @@ l10n:
 
 最初の基本的な例をどのように構築するかについての完全なチュートリアルは、[サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)を読んでください。
 
+### 静的ルーティングを使用して、リソースの取得方法を制御
+
+サービスワーカーは、不要なパフォーマンスコストが発生する可能性があります。しばらくぶりにページが初めて読み込まれる場合、ブラウザはサービスワーカーが起動して実行されるのを待たなければ、どのコンテンツを読み込むべきか、また、キャッシュまたはネットワークのどちらから取得すべきかを判断できません。
+
+特定のコンテンツがどこから取得されるべきか事前に分かっている場合は、サービスワーカーを完全にバイパスして、リソースを即座に取得することができます。{{domxref("InstallEvent.addRoutes()")}} メソッドは、この使用事例やその他の実装にも使用できます。
+
 ## その他の使用例
 
 サービスワーカーは次のような用途も想定しています。
 
-- バックグラウンドのデータ同期
-- 他のオリジンからのリソースのリクエストに対する応答
-- 位置情報やジャイロスコープのような計算コストの高いデータの更新を集中的に受信して、複数のページがデータの一部を利用できるようにすること
-- CoffeeScript, less, CJS/AMD モジュールなどの開発用途で、クライアント側のコンパイルや依存性管理
-- バックグラウンドサービスのフック
-- 特定の URL パターンに基づくテンプレートカスタマイズ
-- パフォーマンスの改善、例えばユーザーが近く必要とするであろう、写真アルバムの次の数枚の写真などの先読み
+- バックグラウンドのデータ同期。
+- 他のオリジンからのリソースのリクエストに対する応答。
+- 位置情報やジャイロスコープのような計算コストの高いデータの更新を集中的に受信して、複数のページがデータの一部を利用できるようにすること。
+- CoffeeScript, less, CJS/AMD モジュールなどの開発用途で、クライアント側のコンパイルや依存性管理。
+- バックグラウンドサービスのフック。
+- 特定の URL パターンに基づくテンプレートカスタマイズ。
+- パフォーマンスの向上、例えば、ユーザーが次に必要とする可能性が高いリソース（例えば、フォトアルバムの次の数枚の写真）を事前に取得するなど。
+- API のモックアップ。
 
 近い将来、サービスワーカーはネイティブアプリで実現できることに近い、その他いくつもの便利なことを、ウェブプラットフォーム上でも実現する事ができるようになるでしょう。興味深いことに、次のような他の仕様書でも、サービスワーカーのコンテキストを利用できるようになってきています。
 
@@ -87,7 +97,7 @@ l10n:
 - {{DOMxRef("CacheStorage")}}
   - : {{DOMxRef("Cache")}} オブジェクトのストレージです。これは {{DOMxRef("ServiceWorker")}} がアクセスできるすべての名前付きキャッシュのへの目録を提供し、文字列の名前から対応する {{DOMxRef("Cache")}} へのマップを保持します。
 - {{DOMxRef("Client")}}
-  - : サービスワーカークライアントのスコープを表します。サービスワーカークライアントは、ブラウザーコンテキスト内の文書または {{DOMxRef("SharedWorker")}} であり、アクティブワーカーによって制御されています。
+  - : サービスワーカークライアントのスコープを表します。サービスワーカークライアントは、閲覧コンテキスト内の文書または {{DOMxRef("SharedWorker")}} であり、アクティブワーカーによって制御されています。
 - {{DOMxRef("Clients")}}
   - : {{DOMxRef("Client")}} オブジェクトのリストのためのコンテナーであり、現在のオリジンにある有効化されたサービスワーカークライアントにアクセスする主な方法です。
 - {{DOMxRef("ExtendableEvent")}}
@@ -96,30 +106,27 @@ l10n:
   - : サービスワーカーで発生する {{domxref("ServiceWorkerGlobalScope/message_event", "message")}} イベントのイベントオブジェクト（別のコンテキストから {{DOMxRef("ServiceWorkerGlobalScope")}} でチャンネルメッセージを受信した時）の有効期限を延長します。
 - {{DOMxRef("FetchEvent")}}
   - : ハンドラー {{DOMxRef("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} に渡される引数、 `FetchEvent` は {{DOMxRef("ServiceWorkerGlobalScope")}} で配信される読み取りアクションを表現しています。これは、リクエストと結果のレスポンスに関する情報を含み、{{DOMxRef("FetchEvent.respondWith", "FetchEvent.respondWith()")}} メソッドを提供して、制御されたページに任意のレスポンスを返すことができます。
-- {{DOMxRef("InstallEvent")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : {{DOMxRef("ServiceWorkerGlobalScope.install_event", "oninstall")}} ハンドラーに渡される引数で、 `InstallEvent` インターフェースは {{DOMxRef("ServiceWorker")}} の {{DOMxRef("ServiceWorkerGlobalScope")}} に配信されるインストールアクションを表現します。 {{DOMxRef("ExtendableEvent")}} の子として、{{DOMxRef("FetchEvent")}} のような機能イベントがインストール中に配信されないことを保証しています。
+- {{DOMxRef("InstallEvent")}}
+  - : {{DOMxRef("ServiceWorkerGlobalScope.install_event", "oninstall")}} ハンドラーに渡される引数で、 `InstallEvent` インターフェイスは {{DOMxRef("ServiceWorker")}} の {{DOMxRef("ServiceWorkerGlobalScope")}} に配信されるインストールアクションを表現します。 {{DOMxRef("ExtendableEvent")}} の子として、{{DOMxRef("FetchEvent")}} のような機能イベントがインストール中に配信されないことを保証しています。
 - {{DOMxRef("NavigationPreloadManager")}}
   - : サービスワーカーによるリソースの先読みを管理するためのメソッドを提供します。
-- {{DOMxRef("Navigator.serviceWorker")}}
-  - : {{DOMxRef("ServiceWorker")}} オブジェクトを返します。これにより、[関連ドキュメント](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)に対する登録、削除、アップグレード、通信へのアクセスを提供します。
-- {{DOMxRef("NotificationEvent")}}
-  - : {{DOMxRef("ServiceWorkerGlobalScope.notificationclick_event", "onnotificationclick")}} ハンドラーに渡される引数で、`NotificationEvent` インターフェースは {{DOMxRef("ServiceWorker")}} で通知クリックイベントを表現します。
 - {{DOMxRef("ServiceWorker")}}
   - : サービスワーカーを表します。複数の閲覧コンテキスト（例：ページ、ワーカーなど）を同じ `ServiceWorker` オブジェクトに関連付けることができます。
 - {{DOMxRef("ServiceWorkerContainer")}}
   - : サービスワーカーの登録、登録解除、更新、サービスワーカーとその登録の状態へのアクセスなどの機能を含む、ネットワークエコシステムの全体ユニットとしてのサービスワーカーを表すオブジェクトを提供します。
 - {{DOMxRef("ServiceWorkerGlobalScope")}}
   - : サービスワーカーのグローバル実行コンテキストを表します。
-- {{DOMxRef("MessageEvent")}}
-  - : {{DOMxRef("ServiceWorkerGlobalScope")}} に送られるメッセージを表します。
 - {{DOMxRef("ServiceWorkerRegistration")}}
   - : サービスワーカーの登録を表します。
-- {{DOMxRef("SyncEvent")}} {{Experimental_Inline}}
-  - : SyncEvent インターフェイスはサービスワーカーの {{DOMxRef("ServiceWorkerGlobalScope")}} で配信された同期アクションを表します。
-- {{DOMxRef("SyncManager")}} {{Experimental_Inline}}
-  - : 同期登録を登録、およびリストするためのインターフェイスを提供します。
 - {{DOMxRef("WindowClient")}}
-  - : アクティブなワーカーによって制御されるブラウザーコンテキスト内の文書であるサービスワーカークライアントのスコープを表します。
+  - : アクティブなワーカーによって制御される閲覧コンテキスト内の文書であるサービスワーカークライアントのスコープを表します。これは特別な種類の {{DOMxRef("Client")}} オブジェクトで、いくつかの追加メソッドとプロパティが利用可能です。
+
+### 他のインターフェイスへの拡張
+
+- {{DOMxRef("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}
+  - : 現在のkンテキストに関連付けられた {{domxref("CacheStorage")}} オブジェクトです。
+- {{DOMxRef("Navigator.serviceWorker")}} および {{DOMxRef("WorkerNavigator.serviceWorker")}}
+  - : {{DOMxRef("ServiceWorkerContainer")}} オブジェクトを返します。このオブジェクトは、[関連付けられた文書](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)の {{DOMxRef("ServiceWorker")}} オブジェクトの登録、削除、アップグレード、通信へのアクセスを提供します。
 
 ## 仕様書
 
@@ -127,8 +134,15 @@ l10n:
 
 ## 関連情報
 
-- [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook) (英語)
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service Worker Lifecycle](https://web.dev/articles/service-worker-lifecycle) (英語)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) (英語)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/) (英語)
-- {{jsxref("Promise")}}
+- サービスワーカー APIに関連する Web API:
+  - {{domxref("Background Fetch API", "バックグラウンドフェッチ API", "", "nocode")}}
+  - {{domxref("Background Synchronization API", "バックグラウンド同期 API", "", "nocode")}}
+  - {{domxref("Content Index API", "コンテンツインデックス API", "", "nocode")}}
+  - {{domxref("Cookie Store API", "クッキーストア API", "", "nocode")}}
+  - {{domxref("Notifications API", "通知 API", "", "nocode")}}
+  - {{domxref("Payment Handler API", "決済ハンドラー API", "", "nocode")}}
+  - {{domxref("Push API", "プッシュ API", "", "nocode")}}
+  - {{domxref("Web Periodic Background Synchronization API", "ウェブ定期バックグラウンド同意 API", "", "nocode")}}

@@ -24,7 +24,7 @@ _또한 부모 인터페이스인 {{domxref("BaseAudioContext")}}로부터 속�
 ### 이벤트 처리기
 
 - {{domxref("OfflineAudioContext.oncomplete")}}
-  - : {{domxref("OfflineAudioContext.startRendering()")}}의 이벤트 기반 버전이 사용된 이후, 프로세싱이 종료되었을 때, 즉 ({{domxref("OfflineAudioCompletionEvent")}} 유형의) {{event("complete")}} 이벤트가 발생되었을 때 호출되는 [이벤트 처리기](/ko/docs/Web/Events/Event_handlers)입니다.
+  - : {{domxref("OfflineAudioContext.startRendering()")}}의 이벤트 기반 버전이 사용된 이후, 프로세싱이 종료되었을 때, 즉 ({{domxref("OfflineAudioCompletionEvent")}} 유형의) [`complete`](/ko/docs/Web/API/OfflineAudioContext/complete_event) 이벤트가 발생되었을 때 호출되는 [이벤트 처리기](/ko/docs/Web/Events/Event_handlers)입니다.
 
 ## 메서드
 
@@ -48,7 +48,7 @@ _또한 부모 인터페이스인 {{domxref("BaseAudioContext")}}로부터 메�
 
 - [`complete`](/ko/docs/Web/API/OfflineAudioContext/complete_event)
   - : 오프라인 오디오 컨텍스트의 렌더링이 완료되었을 때 발생됩니다.
-    또한 [`oncomplete`](/ko/docs/Web/API/OfflineAudioContext/oncomplete) 이벤트 처리기 속성을 사용하여 이용 가능합니다.
+    또한 [`oncomplete`](/ko/docs/Web/API/OfflineAudioContext/complete_event) 이벤트 처리기 속성을 사용하여 이용 가능합니다.
 
 ## 예제
 
@@ -58,7 +58,8 @@ _또한 부모 인터페이스인 {{domxref("BaseAudioContext")}}로부터 메�
 
 이 시점에서 우리는 다른 오디오 컨텍스트를 생성하고, 그것의 내부에 {{domxref("AudioBufferSourceNode")}}를 생성하고, 그리고 이것의 버퍼를 `AudioBuffer` 프로미스와 같게 설정합니다. 이것은 그리고 나서 간단한 표준 오디오 그래프의 일부로 재생됩니다.
 
-> **참고:** 작동하는 예제를 보려면 [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) GitHub 레포지토리를 참고하세요 ([소스 코드](https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise)도 보세요.)
+> [!NOTE]
+> 작동하는 예제를 보려면 [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) GitHub 레포지토리를 참고하세요 ([소스 코드](https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise)도 보세요.)
 
 ```js
 // 온라인과 오프라인 오디오 컨텍스트를 정의합니다

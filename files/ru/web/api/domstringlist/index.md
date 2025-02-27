@@ -5,7 +5,7 @@ slug: Web/API/DOMStringList
 
 {{APIRef("DOM")}}
 
-Тип возвращаемый некоторыми API, который содержит список [DOMString](/En/DOM/DOMString) (строки).
+Тип возвращаемый некоторыми API, который содержит список [DOMString](/en-US/DOM/DOMString) (строки).
 
 ## Свойства
 

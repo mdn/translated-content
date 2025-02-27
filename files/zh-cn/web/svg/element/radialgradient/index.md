@@ -1,13 +1,16 @@
 ---
 title: <radialGradient>
 slug: Web/SVG/Element/radialGradient
+l10n:
+  sourceCommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
 ---
 
 {{SVGRef}}
 
 **`<radialGradient>`** 用来定义径向渐变，以对图形元素进行填充或描边。
 
-> **备注：** 不要与 CSS {{cssxref('radial-gradient()')}} 搞混了，CSS 渐变只能应用在 HTML 元素上，而 SVG 渐变只能运用在 SVG 元素上。
+> [!NOTE]
+> 不要与 CSS {{cssxref('gradient/radial-gradient', 'radial-gradient()')}} 混淆，CSS 渐变只能应用在 HTML 元素上，而 SVG 渐变只能运用在 SVG 元素上。
 
 ## 示例
 
@@ -51,32 +54,19 @@ svg {
 - {{SVGAttr("fy")}}
   - : 这个属性定义了径向渐变的起点圆的 Y 坐标。_值类型_：[**\<length>**](/zh-CN/docs/Web/SVG/Content_type#长度)；_默认值_：与 `cy` 相同；_动画性_：**有**
 - {{SVGAttr("gradientUnits")}}
-  - : 这个属性定义了 `cx`、`cy`、`r`、`fx`、`fy`、`fr` 属性的坐标系统；_值类型_：`userSpaceOnUse`|`objectBoundingBox`；_默认值_：`objectBoundingBox`；_动画性_：**有**
+  - : 这个属性定义了 `cx`、`cy`、`r`、`fx`、`fy`、`fr` 属性的坐标系统；_值类型_：`userSpaceOnUse`｜`objectBoundingBox`；_默认值_：`objectBoundingBox`；_动画性_：**有**
 - {{SVGAttr("gradientTransform")}}
-  - : 这个属性为梯度坐标系提供了额外的[变换](/zh-CN/docs/Web/SVG/Atribute/transform)。_值类型_：**[\<transform-list>](/zh-CN/docs/Web/SVG/Content_type#transform-list)** ；_默认值_：_identity transform_；_动画性_：**有**
+  - : 这个属性为梯度坐标系提供了额外的[变换](/zh-CN/docs/Web/SVG/Attribute/transform)。_值类型_：**[\<transform-list>](/zh-CN/docs/Web/SVG/Content_type#平移数列)** ；_默认值_：_identity transform_；_动画性_：**有**
 - {{SVGAttr("href")}}
   - : 这个属性定义了对另一个将被用作模板 `<radialGradient>` 元素的引用。_值类型_：[**\<URL>**](/zh-CN/docs/Web/SVG/Content_type#url)；_默认值_：none；_动画性_：**有**
 - {{SVGAttr("r")}}
   - : 这个属性定义了径向渐变的终点圆的半径。梯度的绘制将使 100% 的{{SVGElement('stop','gradient stop')}} 被映射到终点圆的周长。_值类型_：[**\<length>**](/zh-CN/docs/Web/SVG/Content_type#长度)；_默认值_：`50%`；_动画性_：**有**
 - {{SVGAttr("spreadMethod")}}
   - : 这个属性表明，如果渐变在包含渐变的形状的边界内开始或结束，它将如何表现。_值类型_：`pad`|`reflect`|`repeat`；_默认值_：`pad`；_动画性_：**有**
-- {{SVGAttr("xlink:href")}}
-  - : {{Deprecated_Header}}对另一个将被用作模板的 `<radialGradient>` 元素的 [\<IRI>](/zh-CN/docs/Web/SVG/Content_type#iri) 引用。_值类型_：[**\<IRI>**](/zh-CN/docs/Web/SVG/Content_type#iri)；_默认值_：none；_动画性_：**有**
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
+  - : 对另一个将被用作模板的 `<radialGradient>` 元素的 [\<IRI>](/zh-CN/docs/Web/SVG/Content_type#iri) 引用。_值类型_：[**\<IRI>**](/zh-CN/docs/Web/SVG/Content_type#iri)；_默认值_：none；_动画性_：**有**
 
-### 全局属性
-
-- [核心属性](/zh-CN/docs/Web/SVG/Attribute/Core)
-  - : 最重要的：{{SVGAttr('id')}}
-- [样式属性](/zh-CN/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}、{{SVGAttr('style')}}
-- 事件属性
-  - : [全局事件属性](/zh-CN/docs/Web/SVG/Attribute/Events#全局事件属性)、[文档元素事件属性](/zh-CN/docs/Web/SVG/Attribute/Events#文档元素事件属性)
-- [表现属性](/zh-CN/docs/Web/SVG/Attribute/Presentation)
-  - : 最重要的：{{SVGAttr('clip-path')}}、{{SVGAttr('clip-rule')}}、{{SVGAttr('color')}}、{{SVGAttr('color-interpolation')}}、{{SVGAttr('color-rendering')}}、{{SVGAttr('cursor')}}、{{SVGAttr('display')}}、{{SVGAttr('fill')}}、{{SVGAttr('fill-opacity')}}、{{SVGAttr('fill-rule')}}、{{SVGAttr('filter')}}、{{SVGAttr('mask')}}、{{SVGAttr('opacity')}}、{{SVGAttr('pointer-events')}}、{{SVGAttr('shape-rendering')}}、{{SVGAttr('stroke')}}、{{SVGAttr('stroke-dasharray')}}、{{SVGAttr('stroke-dashoffset')}}、{{SVGAttr('stroke-linecap')}}、{{SVGAttr('stroke-linejoin')}}、{{SVGAttr('stroke-miterlimit')}}、{{SVGAttr('stroke-opacity')}}、{{SVGAttr('stroke-width')}}、{{SVGAttr("transform")}}、{{SVGAttr('vector-effect')}}、{{SVGAttr('visibility')}}
-- XLink 属性
-  - : {{SVGAttr("xlink:href")}}、{{SVGAttr("xlink:title")}}
-
-## 使用说明
+## 使用上下文
 
 {{svginfo}}
 

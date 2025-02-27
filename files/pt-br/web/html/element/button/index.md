@@ -7,27 +7,27 @@ slug: Web/HTML/Element/button
 
 O **Elemento HTML _`<button>`_** representa um botão clicável.
 
-- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content), [Conteúdo iterativo](/pt-BR/docs/HTML/Content_categories#Interactive_content), [listado](/pt-BR/docs/HTML/Content_categories#Form_listed), [rotulável](/pt-BR/docs/HTML/Content_categories#Form_labelable), e elemento [enviável](/pt-BR/docs/HTML/Content_categories#Form_submittable) [associado a formulário](/pt-BR/docs/HTML/Content_categories#Form-associated_), conteúdo palpável.
-- _Conteúdo permitido_ [Conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), [Conteúdo iterativo](/pt-BR/docs/Web/HTML/Content_categories#interactive_content), [listado](/pt-BR/docs/Web/HTML/Content_categories#form_listed), [rotulável](/pt-BR/docs/Web/HTML/Content_categories#form_labelable), e elemento [enviável](/pt-BR/docs/Web/HTML/Content_categories#form_submittable) [associado a formulário](/pt-BR/docs/Web/HTML/Content_categories#form-associated_), conteúdo palpável.
+- _Conteúdo permitido_ [Conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
 - _Omissão de Tag_ Nenhuma, as tags de abertura e fechamento são obrigatórias.
-- _Elementos pai permitidos_ Qualquer elemento que aceite [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
+- _Elementos pai permitidos_ Qualquer elemento que aceite [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
 - _Interface DOM_ {{domxref("HTMLButtonElement")}}
 - _Tipo de elemento_ Inline
 -
 
 ## Atributos
 
-Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `autofocus`
   - : Esse atributo booleano permite-o especificar que o botão possuirá o foco de entrada assim que a página carrega, a menos que o usuário sobrecreva esse comportamento digitanto um controle diferente. Apenas um elemento de um documento associado a um formulário pode ter esse atributo específico.
 - `autocomplete` {{non-standard_inline}}
-  - : O uso desse atributo em um {{HTMLElement("button")}} não está padronizado nem dentro das especificações do Firefox. Por padrão, diferente de outros navegadores, o [Firefox persiste com o estado dinâmico desativado](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("button")}} nas páginas carregadas. Definir o valor desse atributo para `off` (ex: `autocomplete="off"`) desabilita esse recurso. Veja [Erro do Firefox 654072](https://bugzil.la/654072).
+  - : O uso desse atributo em um {{HTMLElement("button")}} não está padronizado nem dentro das especificações do Firefox. Por padrão, diferente de outros navegadores, o [Firefox persiste com o estado dinâmico desativado](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("button")}} nas páginas carregadas. Definir o valor desse atributo para `off` (ex: `autocomplete="off"`) desabilita esse recurso. Veja [Erro do Firefox 654072](https://bugzil.la/654072).
 - `disabled`
 
   - : Esse atributo booleano indica que o usuário não poderá interagir com o botão. Se esse atributo não for especificado, o botão herdará a configuração do elemento que o contém, por exemplo {{HTMLElement("fieldset")}}, se não existir nenhum elemento com o atributo **disabled** definido, então o botão estará habilitado.
 
-    Firefox irá, diferente de outros navegadores, por padrão, [persiste com o estado dinâmico desativado](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("button")}} sob as páginas carregadas. Use o atributo [`autocomplete`](/pt-BR/docs/Web/HTML/Element/button#autocomplete) para controlar esse recurso.
+    Firefox irá, diferente de outros navegadores, por padrão, [persiste com o estado dinâmico desativado](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("button")}} sob as páginas carregadas. Use o atributo [`autocomplete`](#autocomplete) para controlar esse recurso.
 
 - `form`
   - : O elemento de formulário que o botão está associado (é o _formulário proprietário_). O valor do atributo deve ser o atributo **id** de um elemento {{HTMLElement("form")}} no mesmo documento. Se esse atributo não for especificado, o elemento `<button>` deve ser descendente de um elemento de formulário. Esse atributo permite que você coloque elementos `<button>` em qualquer lugar do documento, não apenas como descendente de seus elementos {{HTMLElement("form")}}.
@@ -96,9 +96,9 @@ Note que esse botão possui CSS aplicado.
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.button")}}
+{{Compat}}
 
-## Notas
+### Notas
 
 Elementos `<button>` são muito mais fáceis estilizá-los do que elementos {{HTMLElement("input")}}. Você pode adicionar dentro do conteúdo do HTML (imagine em `<em>`, `<strong>` ou mesmo `<img>`), e fazer uso do pseudo-elemento {{Cssxref(":after")}} e {{Cssxref(":before")}} para realizar renderizações complexas enquanto {{HTMLElement("input")}} apenas aceita um atributo com valor textual.
 
@@ -108,12 +108,12 @@ Esse bug foi corrigido no IE8.
 
 Firefox adicionará, com propósitos de acessibilidade, uma pequena borda pontinhada e um botão focado. Essa borda será declarada por meio de CSS, no estilo do navegador, mas você pode sobrescreve-lo se necessário para adicionar seu próprio estilo de foco usando `button{{cssxref("::-moz-focus-inner")}} { }`
 
-Firefox irá, diferente de outros navegadores, por padrão, [persistir o estado dinâmico desativado](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("button")}} sob o carregamento das páginas. Definindo o valor do atributo [`autocomplete`](/pt-BR/docs/Web/HTML/Element/button#autocomplete) para `off` desabilita esse recurso. See [Erro do Firefox 654072](https://bugzil.la/654072).
+Firefox irá, diferente de outros navegadores, por padrão, [persistir o estado dinâmico desativado](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("button")}} sob o carregamento das páginas. Definindo o valor do atributo [`autocomplete`](#autocomplete) para `off` desabilita esse recurso. See [Erro do Firefox 654072](https://bugzil.la/654072).
 
 Firefox <35 para Android define um padrão {{ cssxref("background-image") }} gradiente em todos os botões (see [Erro do Firefox 763671](https://bugzil.la/763671)). Isso pode ser desabilitado usando `background-image: none`.
 
 ## Veja também
 
-Outros elementos que são usados para criar formulários: {{HTMLElement("form")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}},{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
+Outros elementos que são usados para criar formulários: {{HTMLElement("form")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
 
 {{HTMLSidebar}}

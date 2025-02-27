@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/X-Content-Type-Options
 
 {{HTTPSidebar}}
 
-**`X-Content-Type-Options`** は HTTP のレスポンスヘッダーで、 {{HTTPHeader("Content-Type")}} ヘッダーで示された [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)を変更せずに従うべきであることを示すために、サーバーによって使用されるマーカーです。これにより、[MIME タイプのスニッフィング](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing)を抑止することができます。言い替えれば、 MIME タイプを意図的に設定することができます。
+**`X-Content-Type-Options`** は HTTP のレスポンスヘッダーで、 {{HTTPHeader("Content-Type")}} ヘッダーで示された [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)を変更せずに従うべきであることを示すために、サーバーによって使用されるマーカーです。これにより、[MIME タイプのスニッフィング](/ja/docs/Web/HTTP/MIME_types#mime_sniffing)を抑止することができます。言い替えれば、 MIME タイプを意図的に設定することができます。
 
 このヘッダーは、 Microsoft が IE 8 において、コンテンツのスニッフィングにより、実行不可能な MIME タイプを実行可能な MIME タイプに変換してしまうという事故を抑止するためのとして導入したものです。それ以来、他のブラウザーは MIME スニッフィングのアルゴリズムにそれほど積極的ではなくても、このヘッダーを導入してきました。
 

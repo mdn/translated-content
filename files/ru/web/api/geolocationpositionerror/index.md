@@ -28,15 +28,15 @@ _Интерфейс **PositionError** не наследует никаких с�
 
 **The `PositionError` interface _neither implements nor inherits any method._**
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [Using geolocation](/ru/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/ru/docs/Web/API/Geolocation_API)
 - The {{domxref("Geolocation")}} interface that use it.

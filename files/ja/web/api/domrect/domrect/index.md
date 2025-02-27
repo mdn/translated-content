@@ -1,6 +1,9 @@
 ---
-title: DOMRect()
+title: "DOMRect: DOMRect() コンストラクター"
+short-title: DOMRect()
 slug: Web/API/DOMRect/DOMRect
+l10n:
+  sourceCommit: 381c51574a3e6a07ee09c63493452440f046038d
 ---
 
 {{APIRef("Geometry Interfaces")}}
@@ -9,8 +12,8 @@ slug: Web/API/DOMRect/DOMRect
 
 ## 構文
 
-```js
-new DOMRect(x, y, width, height);
+```js-nolint
+new DOMRect(x, y, width, height)
 ```
 
 ### 引数
@@ -40,4 +43,4 @@ new DOMRect(x, y, width, height);
 
 - {{domxref("DOMPoint")}}
 - {{domxref("DOMRect")}}
-- {{domxref("DOMRect.fromRect()")}}
+- {{domxref("DOMRect.fromRect_static", "DOMRect.fromRect()")}}

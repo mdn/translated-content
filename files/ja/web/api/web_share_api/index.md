@@ -11,9 +11,11 @@ l10n:
 
 {{securecontext_header}}
 
-> **メモ:** この API は [ウェブワーカー](/ja/docs/Web/API/Web_Workers_API) では利用できません（{{domxref("WorkerNavigator")}} からは公開されていません）。
+> [!NOTE]
+> この API は [ウェブワーカー](/ja/docs/Web/API/Web_Workers_API) では利用できません（{{domxref("WorkerNavigator")}} からは公開されていません）。
 
-> **メモ:** この API を[ウェブ共有ターゲット API](/ja/docs/Web/Manifest/share_target) と混同しないでください。こちらはウェブサイトに自分自身が共有ターゲットであることを示させるものです。
+> [!NOTE]
+> この API を[ウェブ共有ターゲット API](/ja/docs/Web/Manifest/share_target) と混同しないでください。こちらはウェブサイトに自分自身が共有ターゲットであることを示させるものです。
 
 ## 概念と用途
 
@@ -27,7 +29,7 @@ l10n:
 これは{{Glossary("transient activation", "一時的な有効化")}}を必要とします。したがって、ボタンクリックのような UI イベントから発生させる必要があります。
 さらに、このメソッドでは、ネイティブ実装で共有するために対応している有効なデータを指定する必要があります。
 
-ウェブ共有 API は [web-share](/ja/docs/Web/HTTP/Headers/Feature-Policy/web-share) 権限ポリシーによって制限されています。
+ウェブ共有 API は [web-share](/ja/docs/Web/HTTP/Headers/Permissions-Policy/web-share) 権限ポリシーによって制限されています。
 ポリシーに対応しているが許可されていない場合、どちらのメソッドもデータの共有ができないことを示します。
 
 ## インターフェイス

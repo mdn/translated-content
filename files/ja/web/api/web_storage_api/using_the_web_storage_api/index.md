@@ -21,7 +21,8 @@ localStorage["colorSetting"] = "#a4509b";
 localStorage.setItem("colorSetting", "#a4509b");
 ```
 
-> **メモ:** ウェブストレージ API (`setItem`, `getItem`, `removeItem`, `key`, `length`) の使用が推奨されているのは、単純なオブジェクトをキーと値の格納崎として使うという[落とし穴](https://2ality.com/2012/01/objects-as-maps.html)を防ぐためです。
+> [!NOTE]
+> ウェブストレージ API (`setItem`, `getItem`, `removeItem`, `key`, `length`) の使用が推奨されているのは、単純なオブジェクトをキーと値の格納先として使うという[落とし穴](https://2ality.com/2012/01/objects-as-maps.html)を防ぐためです。
 
 Web Storage には、以下の 2 種類の仕組みがあります。
 
@@ -38,7 +39,8 @@ Web Storage には、以下の 2 種類の仕組みがあります。
 
 ### 利用可能かどうかの検証
 
-> **メモ:** この API は、すべての主要なブラウザーで利用可能です。利用できるかどうかのテストが必要なのは、とても古いブラウザーに対応しなければならない場合か、下記に記述する限られた状況においてのみです。
+> [!NOTE]
+> この API は、すべての主要なブラウザーで利用可能です。利用できるかどうかのテストが必要なのは、とても古いブラウザーに対応しなければならない場合か、下記に記述する限られた状況においてのみです。
 
 ローカルストレージに対応しているブラウザーは、 `window` オブジェクトに `localStorage` という名称のプロパティを持っています。しかし、単にプロパティが存在すると仮定してしまうと例外が発生する可能性があります。`localStorage` オブジェクトが存在していたとしても、さまざまなブラウザーがローカルストレージを無効化する設定を設けていますので、ローカルストレージが利用できる保証はありません。よってブラウザーがローカルストレージに対応していても、ページ上のスクリプトでは利用できる状態ではない場合があります。
 
@@ -99,7 +101,8 @@ if (storageAvailable("localStorage")) {
 
 ![Event output ページ](event-output.png)
 
-> **メモ:** 上記のリンクから実際のページを参照することができます。また、[ソースコードも確認できます](https://github.com/mdn/dom-examples/tree/main/web-storage)。
+> [!NOTE]
+> 上記のリンクから実際のページを参照することができます。また、[ソースコードも確認できます](https://github.com/mdn/dom-examples/tree/main/web-storage)。
 
 ### ストレージが存在しているかを確認する
 

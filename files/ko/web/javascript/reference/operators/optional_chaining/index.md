@@ -13,7 +13,23 @@ slug: Web/JavaScript/Reference/Operators/Optional_chaining
 
 optional chaining은 선언되지 않은 루트 객체에 사용할 수 없지만, 정의되지 않은 루트 객체와는 함께 사용할 수 있다.
 
-{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Optional chaining operator")}}
+
+```js interactive-example
+const adventurer = {
+  name: "Alice",
+  cat: {
+    name: "Dinah",
+  },
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// Expected output: undefined
+
+console.log(adventurer.someNonExistentMethod?.());
+// Expected output: undefined
+```
 
 ## 문법
 
@@ -42,7 +58,7 @@ let nestedProp = obj.first && obj.first.second;
 let nestedProp = obj.first?.second;
 ```
 
-`.` 대신에 `?.` 연산자를 사용함으로써, 자바스크립트는 `obj.first.second`에 접근하기 전에 `obj.first`가 `null` 또는 `undefined`가 아니라는 것을 암묵적으로 확인하는 것을 알고 있다. 만약 `obj.first`가 `null` 또는 `undefined`이라면, 그 표현식은 자동으로 단락되어 `undefined`가 반환된다.
+`.` 대신에 `?.` 연산자를 사용함으로써, JavaScript는 `obj.first.second`에 접근하기 전에 `obj.first`가 `null` 또는 `undefined`가 아니라는 것을 암묵적으로 확인하는 것을 알고 있다. 만약 `obj.first`가 `null` 또는 `undefined`이라면, 그 표현식은 자동으로 단락되어 `undefined`가 반환된다.
 
 이는 임시 변수가 실제로 생성되지 않는다는 점을 제외하고 다음과 동일하다.
 
@@ -96,7 +112,7 @@ function doSomething(onContent, onError) {
 
 ### 표현식에서 Optional chaining
 
-optional chaining 연산자를 속성에 표현식으로 접근할 때 대괄호 표기법([the bracket notation of the property accessor](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation))을 사용할 수 있다:
+optional chaining 연산자를 속성에 표현식으로 접근할 때 대괄호 표기법([the bracket notation of the property accessor](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation))을 사용할 수 있다:
 
 ```js
 let nestedProp = obj?.["prop" + "Name"];

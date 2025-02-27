@@ -24,6 +24,6 @@ slug: Web/API/XMLHttpRequest/responseType
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

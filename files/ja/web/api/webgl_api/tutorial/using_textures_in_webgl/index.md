@@ -1,199 +1,352 @@
 ---
 title: WebGL でのテクスチャの使用
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+l10n:
+  sourceCommit: 5a651fade3a92110761d2fb613d0e4f6da47826e
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
-現在、サンプルプログラムは回転する 3D キューブを描画します。今回はキューブの表面を単色で塗りつぶすのではなく、テクスチャをマッピングしてみましょう。
+これで、サンプルプログラムに回転する 3D 立方体ができたので、単色で塗りつぶされている立方体の表面にテクスチャを割り当ててみましょう。
 
-## テクスチャを読み込む
+## テクスチャの読み込み
 
-始めに、テクスチャを読み込むコードを追加します。今回は 1 個のテクスチャを用いて、そのテクスチャをキューブの 6 面に貼り付けますが、テクスチャがいくつある場合でも同じ方法を適用できます。
+始めに、テクスチャを読み込むコードを追加します。今回は単一のテクスチャを用いて、そのテクスチャを立方体の全 6 面に貼り付けますが、テクスチャがいくつある場合でも同じ方法が適用できます。
 
-> **メモ:** テクスチャの読み込みは[クロスドメインの規則](/ja/docs/Web/HTTP/Access_control_CORS)に従うことへの注意が重要です。従ってコンテンツが CORS で認可されているサイトからのみ、テクスチャを読み込むことができます。クロスドメインのテクスチャについては、後ほど説明します。
+> [!NOTE]
+> テクスチャの読み込みは[クロスドメインのルール](/ja/docs/Web/HTTP/CORS)に従うことへの注意が重要です。すなわち、コンテンツが CORS で認可されているサイトからのみ、テクスチャを読み込むことができます。詳しくは以下の[ドメインをまたぐテクスチャ](#ドメインをまたぐテクスチャ)を参照してください。
 
-テクスチャを読み込むコードは以下のようになります:
+> [!NOTE]
+> これら 2 つの関数を "webgl-demo.js" スクリプトに追加しましょう。
 
 ```js
-function initTextures() {
-  cubeTexture = gl.createTexture();
-  cubeImage = new Image();
-  cubeImage.onload = function () {
-    handleTextureLoaded(cubeImage, cubeTexture);
+//
+// テクスチャを初期化して画像を読み込みます。
+// 画像の読み込みが完了したら、テクスチャにコピーします。
+//
+function loadTexture(gl, url) {
+  const texture = gl.createTexture();
+  gl.bindTexture(gl.TEXTURE_2D, texture);
+
+  // 画像はインターネットでダウンロードする必要があるため、
+  // 準備ができるまで少し時間がかかることがあります。
+  // それまではテクスチャにピクセルを 1 つだけ入れて、すぐに
+  // 使用できるようにしておきます。画像のダウンロードが完了
+  // したら、画像のコンテンツでテクスチャを更新します。
+  const level = 0;
+  const internalFormat = gl.RGBA;
+  const width = 1;
+  const height = 1;
+  const border = 0;
+  const srcFormat = gl.RGBA;
+  const srcType = gl.UNSIGNED_BYTE;
+  const pixel = new Uint8Array([0, 0, 255, 255]); // 不透明の青
+  gl.texImage2D(
+    gl.TEXTURE_2D,
+    level,
+    internalFormat,
+    width,
+    height,
+    border,
+    srcFormat,
+    srcType,
+    pixel,
+  );
+
+  const image = new Image();
+  image.onload = () => {
+    gl.bindTexture(gl.TEXTURE_2D, texture);
+    gl.texImage2D(
+      gl.TEXTURE_2D,
+      level,
+      internalFormat,
+      srcFormat,
+      srcType,
+      image,
+    );
+
+    // WebGL1 は画像の大きさが 2 のべき乗であるかどうかで
+    // 要求されるものが異なるので、画像の両方の軸が 2 の
+    // べき乗かどうかを調べます。
+    if (isPowerOf2(image.width) && isPowerOf2(image.height)) {
+      // 2 のべき乗なので、 mips を作成します。
+      gl.generateMipmap(gl.TEXTURE_2D);
+    } else {
+      // 2 のべき乗ではないので、 mips をオフにして、
+      // エッジにクランプするようにラッピングを設定します。
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+    }
   };
-  cubeImage.src = "cubetexture.png";
+  image.src = url;
+
+  return texture;
 }
 
-function handleTextureLoaded(image, texture) {
-  gl.bindTexture(gl.TEXTURE_2D, texture);
-  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-  gl.texParameteri(
-    gl.TEXTURE_2D,
-    gl.TEXTURE_MIN_FILTER,
-    gl.LINEAR_MIPMAP_NEAREST,
-  );
-  gl.generateMipmap(gl.TEXTURE_2D);
-  gl.bindTexture(gl.TEXTURE_2D, null);
+function isPowerOf2(value) {
+  return (value & (value - 1)) === 0;
 }
 ```
 
-`initTextures()` ルーチンは GL の `createTexture()` 関数を呼び出して、GL のテクスチャオブジェクト `cubeTexture` を作成することから始まります。そして、テクスチャを画像ファイルから読み込むために `Image` オブジェクトを作成して、そのオブジェクトにテクスチャとして使用したい画像ファイルをロードします。`handleTextureLoaded()` コールバックルーチンは、画像の読み込みが完了したときに実行されます。
+`loadTexture()` ルーチンは WebGL の {{domxref("WebGLRenderingContext.createTexture()", "createTexture()")}} 関数を呼び出して WebGL テクスチャオブジェクト `texture` を作成することから始めます。その後、{{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}}を使用して単一の青いピクセルをアップロードします。たとえ画像をダウンロードするのにいくつか時間がかかったとしても、これによってテクスチャは青一色としてすぐに使えるようになります。
 
-実際にテクスチャを作成するために、新しいテクスチャが操作したいカレントのテクスチャであることを、`gl.TEXTURE_2D` にバインドすることで指定します。その後読み込んだ画像は、テクスチャとして書き込むために `texImage2D()` へ渡されます。
+画像ファイルからテクスチャを読み込むために、 `Image` オブジェクトを作成し、 `src` にテクスチャとして使用したい画像の URL を割り当てています。 `image.onload` に割り当てる関数は画像のダウンロードが完了すると呼び出されます。この点で、テクスチャのソースを画像として使用して、今回の {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} を再び呼び出します。その後、テクスチャのフィルタリングとラッピングを、ダウンロードした画像の大きさが、どちらの次元も 2 のべき乗であるかどうかに基づいて設定します。
 
-> **メモ:** テクスチャの幅と高さのピクセル数は**ほとんどの場合**において、それぞれ 2 のべき乗 (1、2、4、8、16……) にしなければなりません。例外については、"[2 のべき乗ではないテクスチャ](/ja/docs/Web/WebGL/Using_textures_in_WebGL#Non_power-of-two_textures)" のセクションをご覧ください。
+WebGL1 では、 2 のべき乗でない大きさのテクスチャではフィルタリングが `NEAREST` と `LINEAR` に設定されたしか使用することができず、それらのためにミップマップを生成することはできません。また、ラッピングモードも `CLAMP_TO_EDGE` に設定する必要があります。一方、テクスチャが 2 次元とも 2 のべき乗の大きさの場合、 WebGL はより高品質なフィルタリングを行うことができ、ミップマップを使用し、ラッピングモードを `REPEAT` または `MIRRORED_REPEAT` に設定することができます。
 
-その次の 2 行はテクスチャのフィルタリングを設定しています。これは画像が拡大縮小される際に適用するフィルタの設定です。今回は、画像を拡大する場合はリニアフィルタ、縮小する場合はミップマップを使用します。ミップマップは `generateMipMap()` を呼び出すことで生成され、最後は null を `gl.TEXTURE_2D` にバインドしてテクスチャの操作を終了することで完了します。
+繰り返されるテクスチャの例としては、数個のレンガの画像をタイル状に並べ、レンガの壁を覆うものがあります。
 
-### 2 のべき乗ではないテクスチャ
-
-一般的に、辺の長さが 2 のべき乗であるテクスチャを使うことが理想的です。これはビデオメモリへ効率よく保存され、また使用方法が制限されません。制作されたテクスチャを近い 2 のべき乗のサイズにスケーリングするか、2 のべき乗のサイズで制作を始めます。それぞれの辺の長さを 1、2、4、8、16、32、64、128、256、512、1024、あるいは 2048 ピクセルにすべきです。また、多くのデバイス (すべてではありません) が 4096 ピクセルをサポートします。さらに、8192 ピクセル以上をサポートするものもあります。
-
-ときおり、特殊な事情で 2 のべき乗のテクスチャを使用することが困難な場合があります。サードパーティーの素材を使用する場合はたいてい、WebGL へ渡す前に HTML5 canvas を使用して 2 のべき乗のサイズに変換すると最良の結果を得られます。引き伸ばしが明白である場合は、UV 座標も必要でしょう。
-
-一方、2 のべき乗ではない (NPOT) テクスチャが**不可欠である**場合でも、WebGL は限定的にネイティブサポートしています。NPOT テクスチャは主に、テクスチャの寸法をモニターなど他の解像度に揃えなければならない場合や、前出の提案に従うだけの価値がない場合に有用です。しかし、このようなテクスチャはミップマッピングで使用することが**できません**。また、"繰り返し" (タイルまたはラップ) を**行ってはいけません**。
-
-テクスチャの繰り返しは、例えば小さなレンガの画像をタイリングしてレンガの壁を作ることです。
-
-ミップマッピングや UV リピートは、`bindTexture()` を使用してテクスチャを作成する際に `texParameteri()` で無効化できます。これによりミップマッピング、UV ラッピング、UV タイリングを犠牲にして NPOT テクスチャを使用できます。また、デバイスがテクスチャをどのように扱うかを制御できます。
+ミップマッピングや UV リピートは、 {{domxref("WebGLRenderingContext.texParameter()", "texParameteri()")}} で無効化できます。これにより、ミップマッピング、 UV ラッピング、 UV タイリング、および機器がテクスチャをどのように扱うかの制御ができなくなる代わりに、 NPOT （2 のべき乗ではない）テクスチャが利用できるようになります。
 
 ```js
 // gl.LINEAR の代わりに gl.NEAREST も可能。ミップマップは不可
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-// S 座標のラッピング (繰り返し) を禁止
+// S 座標のラッピング（繰り返し）を禁止
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-// T 座標のラッピング (繰り返し) を禁止
+// T 座標のラッピング（繰り返し）を禁止
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
 ```
 
-繰り返しますがこれらのパラメータを付加すると、WebGL デバイスは自動的に (サポートする最大サイズまでの) 任意の解像度のテクスチャを受け入れます。しかしこれらの設定を行わないと、WebGL は黒色 (`rgba(0,0,0,1)`) を返すことになり、NPOT テクスチャの全サンプルを受け入れてはなりません。
+繰り返しますが、これらの引数を付加すると、 WebGL デバイスは自動的に（対応する最大サイズまでの）任意の解像度のテクスチャを受け入れます。上記の構成を行わないと、 WebGL は NPOT テクスチャのすべてのサンプルを、透明な黒 (`rgba(0,0,0,0)`) を返して失敗させる必要があります。
+
+画像を読み込むために、 `main()` 関数内に `loadTexture()` 関数の呼び出しを追加します。これは `initBuffers(gl)` 呼び出しの後に追加できます。
+
+しかし、ブラウザーは読み込まれたイメージのピクセルを上から下、つまり左上の角から順にコピーするのに対し、 WebGL はピクセルを下から上、つまり左下の角から順にコピーするという点に注意してください。（詳細については、 [Why is my WebGL texture upside-down?](https://jameshfisher.com/2020/10/22/why-is-my-webgl-texture-upside-down/) を参照してください。）
+
+そのため、レンダリング時に画像テクスチャが間違った方向になるのを防ぐために、 [`pixelStorei()`](/ja/docs/Web/API/WebGLRenderingContext/pixelStorei) を `gl.UNPACK_FLIP_Y_WEBGL` 引数を `true` に設定して呼び出す必要があります。
+
+> [!NOTE]
+> 以下のコードを `main()` 関数の `initBuffers()` を呼び出した直後に追加してください。
+
+```js
+// テクスチャの読み込み
+const texture = loadTexture(gl, "cubetexture.png");
+// 画像ピクセルを WebGL が期待する下から上への順序に反転させる
+gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+```
+
+> [!NOTE]
+> 最後に、 [cubetexture.png](https://raw.githubusercontent.com/mdn/dom-examples/main/webgl-examples/tutorial/sample6/cubetexture.png) ファイルを JavaScript ファイルと同じローカルディレクトリーにダウンロードしましょう。
 
 ## テクスチャを表面にマッピングする
 
-以上で、テクスチャの読み込みと使用する準備ができました。しかしテクスチャが使用できるようになるには、まずキューブの面の頂点にテクスチャの座標をマッピングする必要があります。これは `initBuffers()` にある、キューブの各面に色を設定する既存のコードの置き換えになります。
+以上で、テクスチャの読み込みと使用する準備ができました。しかしテクスチャが使用できるようになるには、まず立方体の面の頂点にテクスチャの座標をマッピングする必要があります。これには `initBuffers()` にある、立方体の各面に色を設定する既存のコードを置き換えます。
+
+> [!NOTE]
+> この関数を "init-buffer.js" モジュールに追加しましょう。
 
 ```js
-cubeVerticesTextureCoordBuffer = gl.createBuffer();
-gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesTextureCoordBuffer);
+function initTextureBuffer(gl) {
+  const textureCoordBuffer = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, textureCoordBuffer);
 
-var textureCoordinates = [
-  // 前面
-  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
-  // 背面
-  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
-  // 上面
-  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
-  // 底面
-  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
-  // 右側面
-  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
-  // 左側面
-  0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
-];
+  const textureCoordinates = [
+    // 前面
+    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+    // 背面
+    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+    // 上面
+    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+    // 下面
+    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+    // 右面
+    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+    // 左面
+    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+  ];
 
-gl.bufferData(
-  gl.ARRAY_BUFFER,
-  new WebGLFloatArray(textureCoordinates),
-  gl.STATIC_DRAW,
-);
+  gl.bufferData(
+    gl.ARRAY_BUFFER,
+    new Float32Array(textureCoordinates),
+    gl.STATIC_DRAW,
+  );
+
+  return textureCoordBuffer;
+}
 ```
 
-このコードは始めに各面のテクスチャの座標を収める GL のバッファを作成して、そのバッファを書き込みを行う配列としてバインドします。
+始めに、このコードは各面のテクスチャの座標を収める GL のバッファーを作成して、そのバッファーを書き込みを行う配列としてバインドします。
 
 `textureCoordinates` 配列は、各面の各座標に対応するテクスチャの座標を定義します。テクスチャの座標の範囲は 0.0 から 1.0 であることに注意してください。テクスチャマッピングのために、テクスチャの寸法は実際の大きさに関わらず 0.0 から 1.0 の範囲に正規化されます。
 
-テクスチャマッピングの配列を設定したら、配列をバッファに渡すことで GL がそのデータを使用する準備が完了します。
+テクスチャマッピングの配列を設定したら、配列をバッファーに渡すことで GL がそのデータを使用する準備が完了します。
 
-> **メモ:** WebKit ベースのブラウザでは、`WebGLFloatArray` の代わりに `Float32Array` を使用しなければならないでしょう。
+そしてその新しいバッファーを返します。
 
-## シェーダーを更新する
+次に、色バッファーの代わりにテクスチャー座標バッファーを作成して返すように `initBuffers()` を更新する必要があります。
 
-シェーダープログラム (およびシェーダーを初期化するコード) も、単色に代わりテクスチャを使用するように更新する必要があります。
-
-始めに `initShaders()` で必要になる、シンプルな変更点を見てみましょう:
+> [!NOTE]
+> "init-buffers.js" モジュールの `initBuffers()` 関数で、 `initColorBuffer()` の呼び出しを以下の行に置き換えましょう。
 
 ```js
-textureCoordAttribute = gl.getAttribLocation(shaderProgram, "aTextureCoord");
-gl.enableVertexAttribArray(textureCoordAttribute);
+const textureCoordBuffer = initTextureBuffer(gl);
 ```
 
-これは頂点の色属性を設定するコードを、各頂点のテクスチャ座標を包含するコードに置き換えます。
+> [!NOTE]
+> "init-buffers.js" モジュールの `initBuffers()` 関数で、 `return` 文を以下に置き換えましょう。
 
-### バーテックスシェーダー
-
-次にバーテックスシェーダーを、色のデータを取り出すものからテクスチャ座標のデータを取り出すものに置き換える必要があります。
-
-```html
-<script id="shader-vs" type="x-shader/x-vertex">
-  attribute vec3 aVertexPosition;
-  attribute vec2 aTextureCoord;
-
-  uniform mat4 uMVMatrix;
-  uniform mat4 uPMatrix;
-
-  varying highp vec2 vTextureCoord;
-
-  void main(void) {
-    gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
-    vTextureCoord = aTextureCoord;
-  }
-</script>
+```js
+return {
+  position: positionBuffer,
+  textureCoord: textureCoordBuffer,
+  indices: indexBuffer,
+};
 ```
 
-重要な変更点は、頂点の色を取り出すのに代わりテクスチャ座標を設定していることです。これは頂点に対応する、テクスチャ内の位置を指し示します。
+## シェーダーの更新
+
+シェーダープログラムも、単色の代わりにテクスチャを使用するように更新する必要があります。
+
+### 頂点シェーダー
+
+頂点シェーダーを、色データを取得する代わりに、テクスチャ座標データを取得するように置き換える必要があります。
+
+> [!NOTE]
+> 以下のように `main()` 関数の `vsSource` 宣言を更新しましょう。
+
+```js
+const vsSource = `
+    attribute vec4 aVertexPosition;
+    attribute vec2 aTextureCoord;
+
+    uniform mat4 uModelViewMatrix;
+    uniform mat4 uProjectionMatrix;
+
+    varying highp vec2 vTextureCoord;
+
+    void main(void) {
+      gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;
+      vTextureCoord = aTextureCoord;
+    }
+  `;
+```
+
+ここでの重要な変更は、頂点の色を取得する代わりに、テクスチャ座標を取得して頂点シェーダーに渡していることです。これにより、頂点に対応するテクスチャ内の位置を示します。
 
 ### フラグメントシェーダー
 
-フラグメントシェーダーも同様に更新する必要があります:
+フラグメントシェーダーも同様に更新する必要があります。
 
-```html
-<script id="shader-fs" type="x-shader/x-fragment">
-  varying highp vec2 vTextureCoord;
-
-  uniform sampler2D uSampler;
-
-  void main(void) {
-    gl_FragColor = texture2D(uSampler, vec2(vTextureCoord.s, vTextureCoord.t));
-  }
-</script>
-```
-
-色の値をフラグメントの色に割り当てるのに代わり、フラグメントの色は、サンプラーが最適とするフラグメントの位置のテクセル (テクスチャ内のピクセル) を取り出すことで算出されます。
-
-## テクスチャを貼り付けたキューブを描画する
-
-`drawScene()` 関数の変更点は簡単です (コードを明瞭にするために、キューブを空間中で動かすアニメーションのコードを取り除いて単に回転するようにした点は除きます)。
-
-色を割り当てるコードをテクスチャを割り当てるようにするためには、以下のように置き換えます:
+> [!NOTE]
+> 以下のように `main()` 関数の `fsSource` 宣言を更新しましょう。
 
 ```js
-gl.activeTexture(gl.TEXTURE0);
-gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
-gl.uniform1i(gl.getUniformLocation(shaderProgram, "uSampler"), 0);
+const fsSource = `
+    varying highp vec2 vTextureCoord;
+
+    uniform sampler2D uSampler;
+    out vec4 fragColor;
+
+    void main(void) {
+      fragColor = texture(uSampler, vTextureCoord);
+    }
+  `;
 ```
 
-GL は 32 個のテクスチャレジスタを提供し、その 1 つ目が `gl.TEXTURE0` です。前に読み込んだテクスチャをそのレジスタに結びつけて、そのテクスチャを使用するためにシェーダーサンプラー `uSampler` (シェーダープログラムにより明示されます) を設定します。
+フラグメントの色に色の値を割り当てる代わりに、フラグメントの色を {{Glossary("texel")}} （つまり、テクスチャ内のピクセル）を取得することで、色と同様に頂点間で補間される `vTextureCoord` の値に基づいて計算するようにします。
 
-以上でテクスチャが貼り付けられた、回転するキューブが完成します。
+### 属性とユニフォームの位置
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample6/index.html', 670, 510)}}
+属性を変更し、ユニフォームを追加したので、それらの位置を調べていく必要があります。
 
-[コードを確認する](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample6) | [新しいページでデモを開く](http://mdn.github.io/webgl-examples/tutorial/sample6/)
+> **メモ:** `main()` 関数の `programInfo` 宣言を次のように更新しましょう。
 
-## クロスドメインのテクスチャ
+```js
+const programInfo = {
+  program: shaderProgram,
+  attribLocations: {
+    vertexPosition: gl.getAttribLocation(shaderProgram, "aVertexPosition"),
+    textureCoord: gl.getAttribLocation(shaderProgram, "aTextureCoord"),
+  },
+  uniformLocations: {
+    projectionMatrix: gl.getUniformLocation(shaderProgram, "uProjectionMatrix"),
+    modelViewMatrix: gl.getUniformLocation(shaderProgram, "uModelViewMatrix"),
+    uSampler: gl.getUniformLocation(shaderProgram, "uSampler"),
+  },
+};
+```
 
-WebGL のテクスチャの読み込みは、クロスドメインアクセス制御に従います。コンテンツで他のドメインからテクスチャを読み込むためには、CORS で許可を得なければなりません。CORS について詳しくは、[HTTP access control](/ja/docs/HTTP_access_control) をご覧ください。
+## テクスチャを貼り付けた立方体の描画
 
-CORS で許可された画像を WebGL のテクスチャとして使用する方法の説明を [こちらの hacks.mozilla.org の記事](http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) に掲載していますので、[サンプル](http://people.mozilla.org/~bjacob/webgltexture-cors-js.html) と合わせてご覧ください。
+`drawScene()` 関数の変更点は簡単です。
 
-> **メモ:** WebGL テクスチャ向けの CORS サポートと、画像要素の `crossOrigin` 属性は Gecko 8.0 で実装されました。
+> [!NOTE]
+> "draw-scene.js" モジュールの `drawScene()` 関数内に、以下の関数を追加しましょう。
 
-汚染された (書き込みのみ) 2D canvas を WebGL のテクスチャとして使用することはできません。2D {{HTMLElement("canvas")}} が汚染されたとは例えば、クロスドメインの画像が canvas 上に描画された状態を指します。
+```js
+// テクスチャ座標をバッファーから取り出す方法を webgl に伝える。
+function setTextureAttribute(gl, buffers, programInfo) {
+  const num = 2; // すべての座標は 2 つの値からなる
+  const type = gl.FLOAT; // バッファー内のデータは 32 ビット浮動小数点数
+  const normalize = false; // 正規化なし
+  const stride = 0; // あるセットから次のセットまで、何バイトで移動するか
+  const offset = 0; // バッファ内の何バイトから開始するか
+  gl.bindBuffer(gl.ARRAY_BUFFER, buffers.textureCoord);
+  gl.vertexAttribPointer(
+    programInfo.attribLocations.textureCoord,
+    num,
+    type,
+    normalize,
+    stride,
+    offset,
+  );
+  gl.enableVertexAttribArray(programInfo.attribLocations.textureCoord);
+}
+```
 
-> **メモ:** Canvas 2D `drawImage` 向けの CORS サポートを Gecko 9.0 で実装しました。これは、CORS で許可されたクロスドメインの画像が 2D canvas を汚染しないので、2D canvas を WebGL のテクスチャ素材として引き続き使用できることを意味します。
+> [!NOTE]
+> "draw-scene.js" モジュールの `drawScene()` 関数内で、 `setColorAttribute()` の呼び出しを以下の行に置き換えましょう。
 
-> **メモ:** クロスドメインの動画に対する CORS サポートと、{{HTMLElement("video")}} 要素の`crossorigin` 属性は Gecko 12.0 で実装されました。
+```js
+setTextureAttribute(gl, buffers, programInfo);
+```
+
+次に、面にマッピングするテクスチャを指定するコードを追加します。
+
+> **メモ:** `drawScene()` 関数の中で、 `gl.uniformMatrix4fv()` を 2 回呼び出した直後に、以下のコードを追加しましょう。
+
+```js
+// テクスチャユニット 0 に影響を与えたいことを WebGL に伝える
+gl.activeTexture(gl.TEXTURE0);
+
+// テクスチャをテクスチャユニット 0 にバインドする
+gl.bindTexture(gl.TEXTURE_2D, texture);
+
+// テクスチャをテクスチャユニット 0 にバインドすることをシェーダーに伝える
+gl.uniform1i(programInfo.uniformLocations.uSampler, 0);
+```
+
+WebGL は最低 8 つのテクスチャユニットを提供します。そのうちの最初のユニットが `gl.TEXTURE0` です。ユニット 0 に適用したいことを WebGL に伝えます。そして、 {{domxref("WebGLRenderingContext.bindTexture()", "bindTexture()")}} を呼び出し、テクスチャをテクスチャユニット 0 の `TEXTURE_2D` バインドポイントにバインドします。 `uSampler` にはテクスチャユニット 0 を使用するようにシェーダーに伝えます。
+
+最後に、`drawScene()` 関数の引数として `texture` を追加します。
+
+> **メモ:** `drawScene()` 関数の宣言を更新し、新しい引数を追加しましょう。
+
+```js-nolint
+function drawScene(gl, programInfo, buffers, texture, cubeRotation) {
+```
+
+> **メモ:** `main()` 関数の `drawScene()` を呼び出す場所を更新しましょう。
+
+```js
+drawScene(gl, programInfo, buffers, texture, cubeRotation);
+```
+
+これで、回転する立方体は問題なく動作します。
+
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample6/index.html', 670, 510) }}
+
+[コードを確認する](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample6) | [新しいページでデモを開く](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample6/)
+
+## ドメインをまたぐテクスチャ
+
+WebGL のテクスチャの読み込みは、ドメイン間アクセス制御に従います。コンテンツで他のドメインからテクスチャを読み込むためには、 CORS で許可を得なければなりません。 CORS について詳しくは、 [HTTP アクセス制御](/ja/docs/Web/HTTP/CORS) をご覧ください。
+
+WebGL は安全なコンテキストからテクスチャを読み込む必要があるため、 WebGL で `file:///` の URL から読み込んだテクスチャを使用することはできません。つまり、コードのテストと展開には、安全なウェブサーバーが必要だということです。ローカルでテストする場合は[ローカルテストサーバーを用意するには](/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)を参照してください。
+
+CORS で許可された画像を WebGL のテクスチャとして使用する方法の説明を、[こちらの hacks.mozilla.org の記事](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/)に掲載しています。
+
+汚染された（書き込み専用の） 2D キャンバスを WebGL のテクスチャとして使用することはできません。 2D の {{HTMLElement("canvas")}} が汚染されたとは、例えば、別ドメインの画像が canvas 上に描画された状態を指します。
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

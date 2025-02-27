@@ -1,36 +1,55 @@
 ---
 title: text-emphasis-position
 slug: Web/CSS/text-emphasis-position
+l10n:
+  sourceCommit: a7482281c4570bb7f932dce381f510d87ddf9924
 ---
 
 {{CSSRef}}
 
-**`text-emphasis-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点が描かれる位置を設定します。ルビのテキストと同様、圏点のために十分な空間がない場合は、行の高さが広げられます。
+**`text-emphasis-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点が描かれる位置を設定します。 [`<ruby>`](/ja/docs/Web/HTML/Element/ruby) 要素で描画されたテキストと同様、圏点のために十分な空間がない場合は、行の高さが広げられます。
+
+{{EmbedInteractiveExample("pages/css/text-emphasis-position.html")}}
+
+## 構文
 
 ```css
 /* 初期値 */
-text-emphasis-position: over right;
+text-emphasis-position: auto;
 
 /* キーワード値 */
+text-emphasis-position: over;
+text-emphasis-position: under;
+
+text-emphasis-position: over right;
 text-emphasis-position: over left;
 text-emphasis-position: under right;
 text-emphasis-position: under left;
 
 text-emphasis-position: left over;
+text-emphasis-position: right over;
 text-emphasis-position: right under;
 text-emphasis-position: left under;
 
 /* グローバル値 */
 text-emphasis-position: inherit;
 text-emphasis-position: initial;
-text-emphasis-postition: revert;
+text-emphasis-position: revert;
+text-emphasis-position: revert-layer;
 text-emphasis-position: unset;
 ```
 
-## 構文
-
 ### 値
 
+このプロパティは 1 つまたは 2 つの値を受け入れます。
+
+- 指定された値が 1 つだけの場合、`auto`、`over`、`under` のいずれかになります。`over` または `under` のみが使用される場合、 `right` が既定位置として想定されます。
+- 2 つの値が指定された場合、 `over` か `under` のどちらかと `right` か `left` のどちらかが含まれていなければなりません。その順序は重要ではありません。
+
+値には次のようなものがあります。
+
+- `auto`
+  - : 横書きモードではテキストの上に、縦書きモードではテキストの右に圏点を描きます。
 - `over`
   - : 横書きモードでテキストの上に圏点を描きます。
 - `under`
@@ -40,7 +59,7 @@ text-emphasis-position: unset;
 - `left`
   - : 縦書きモードでテキストの左に圏点を描きます。
 
-## Description
+## 解説
 
 圏点の望ましい位置は言語に依存します。例えば日本語では、望ましい位置は `over right` です。一方、中国語では、望ましい位置は `under right` となります。下記の情報の表は、日本語、モンゴル語、中国語における望ましい圏点の位置をまとめたものです。
 
@@ -110,15 +129,104 @@ text-emphasis-position: unset;
 
 {{csssyntax}}
 
-## Examples
+## 例
+
+### 圏点の位置を追加
+
+ドロップダウンメニューを使用して、圏点の位置を変更します。この操作により、 `<section>` 要素のクラスが変更され、テキスト上の圏点の位置が更新されます。
+
+#### HTML
+
+```html hidden
+<p class="unsupported">ブラウザーが <code>auto</code> の値に対応していません。</p>
+<label for="position">圏点の位置:</position>
+<select id="position">
+  <option value="auto">auto</option>
+  <option value="over-right">over right</option>
+  <option value="over-left">over left</option>
+  <option value="under-right">under right</option>
+  <option value="under-left">under left</option>
+  <option value="preferred">preferred</option>
+</select>
+```
+
+```html
+<section id="setting" class="auto">
+  <p class="horizontal" lang="zh">你好世界</p>
+  <!-- Hello World in Chinese -->
+  <p class="vertical" lang="ja">世界、こんにちは。</p>
+  <!-- Hello World in Japanese -->
+</section>
+```
+
+#### CSS
+
+```css hidden
+.unsupported {
+  color: red;
+}
+@supports (text-emphasis-position: auto) {
+  .unsupported {
+    display: none;
+  }
+}
+.horizontal {
+  writing-mode: horizontal-tb;
+}
+.vertical {
+  writing-mode: vertical-rl;
+}
+section {
+  display: flex;
+  justify-content: space-around;
+}
+```
+
+```css
+section p {
+  text-emphasis: filled circle tomato;
+  text-emphasis-position: auto;
+}
+.over-right p,
+.preferred p [lang="ja"] {
+  text-emphasis-position: over right;
+}
+.over-left p {
+  text-emphasis-position: over left;
+}
+.under-right p,
+.preferred p [lang="zh"] {
+  text-emphasis-position: under right;
+}
+.under-left p {
+  text-emphasis-position: under left;
+}
+.preferred p [lang="ja"] {
+}
+```
+
+```js hidden
+const position = document.querySelector("#position");
+const setting = document.querySelector("#setting");
+const updateClass = () => {
+  const currentClass = setting.classList;
+  setting.classList.replace(currentClass, position.value);
+};
+position.addEventListener("change", updateClass);
+```
+
+#### 結果
+
+「圏点の位置」のドロップダウンを使用して、強調マークの位置を選べます。ドロップダウンで `preferred` オプションは、[解説](#解説)の節で説明したように、優先位置を使用します。
+
+{{EmbedLiveSample("Emphasis_mark_positions", 450, 250)}}
 
 ### ルビを圏点より優先させる場合
 
-編集者によっては、ルビと競合する場合に圏点を隠すことを好みます。 HTML では、これは次のスタイル規則で実現できます。
+編集者によっては、ルビと競合する場合に圏点を隠すことを好みます。 HTML では、これは次のスタイルルールで実現できます。
 
 ```css
 ruby {
-  -webkit-text-emphasis: none;
   text-emphasis: none;
 }
 ```
@@ -129,7 +237,6 @@ ruby {
 
 ```css
 em {
-  -webkit-text-emphasis: dot;
   text-emphasis: dot; /* text-emphasis を <em> 要素に設定 */
 }
 
@@ -148,4 +255,8 @@ em rt {
 
 ## 関連情報
 
-- 個別指定プロパティ {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}} および対応する一括指定プロパティ {{cssxref("text-emphasis")}}
+- {{cssxref("text-underline-position")}}
+- {{cssxref("text-emphasis-style")}}
+- {{cssxref("text-emphasis-color")}}
+- {{cssxref("text-emphasis")}} 一括指定プロパティ
+- {{cssxref("writing-mode")}}

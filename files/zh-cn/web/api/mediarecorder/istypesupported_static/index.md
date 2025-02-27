@@ -55,6 +55,6 @@ for (var i in types) {
 
 ## 看过这个的用户还浏览了以下内容：
 
-- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("MediaStreamTrack")}}
 - {{domxref("MediaStream")}}

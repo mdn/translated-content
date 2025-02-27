@@ -38,11 +38,11 @@ Todas as instâncias do `WeakSet` herdam do {{jsxref("WeakSet.prototype")}}.
 
 ### Propriedades
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype','Properties')}}
+<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype','Properties') -->
 
 ### Métodos
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype','Methods')}}
+<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype','Methods') -->
 
 ## Exemplos
 
@@ -65,14 +65,11 @@ ws.has(window); // false, window foi removido
 
 ## Especificações
 
-| Especificação                                              | Status               | Comentário        |
-| ---------------------------------------------------------- | -------------------- | ----------------- |
-| {{SpecName('ES6', '#sec-weakset-objects', 'WeakSet')}}     | {{Spec2('ES6')}}     | Definição inicial |
-| {{SpecName('ESDraft', '#sec-weakset-objects', 'WeakSet')}} | {{Spec2('ESDraft')}} |                   |
+{{Specifications}}
 
 ## Compatilidade de Browser
 
-{{Compat("javascript.builtins.WeakSet")}}
+{{Compat}}
 
 ## Veja também
 

@@ -9,7 +9,7 @@ slug: Web/API/MediaStreamTrack
 
 ## Свойства
 
-В дополнение к свойствам, перечисленным ниже, `MediaStreamTrack` имеет свойства с ограничениями, которые можно установить с помощью {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} и просмотреть с через {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} и {{domxref("MediaStreamTrack.getSettings", "getSettings()")}}. Смотрите [capabilities, constraints, and settings](/ru/docs/Web/API/Media_Streams_API/Constraints), чтобы узнать, как правильно работать со свойствами с ограничениями. Если использовать их неправильно, ваш код будет ненадёжным.
+В дополнение к свойствам, перечисленным ниже, `MediaStreamTrack` имеет свойства с ограничениями, которые можно установить с помощью {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} и просмотреть с через {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} и {{domxref("MediaStreamTrack.getSettings", "getSettings()")}}. Смотрите [capabilities, constraints, and settings](/ru/docs/Web/API/Media_Capture_and_Streams_API/Constraints), чтобы узнать, как правильно работать со свойствами с ограничениями. Если использовать их неправильно, ваш код будет ненадёжным.
 
 - {{domxref("MediaStreamTrack.contentHint")}}
   - : Строка, которую веб приложение может использовать для создания подсказок, какой тип данных содержит трек, чтобы их могли различать пользователи API.
@@ -17,7 +17,8 @@ slug: Web/API/MediaStreamTrack
 
   - : Имеет значение `true`, если трек включён, то есть может может отображать поток медиа; или `false`, если он выключен, то есть отображает не поток данных, а чёрное изображение без звука. Если трек отключён, это свойство можно менять, но это не будет давать никакого эффекта.
 
-    > **Примечание:** Вы можете создать стандартную функцию "заглушить звук", устанавливая свойство `enabled` в значение `false`. Свойство `muted` используется, когда данные отсутствуют из-за технической проблемы.
+    > [!NOTE]
+    > Вы можете создать стандартную функцию "заглушить звук", устанавливая свойство `enabled` в значение `false`. Свойство `muted` используется, когда данные отсутствуют из-за технической проблемы.
 
 - {{domxref("MediaStreamTrack.id")}} {{readonlyInline}}
   - : Возвращает объект {{domxref("DOMString")}}, содержащий уникальный идентификатор (GUID) трека; генерируется браузером.
@@ -31,7 +32,8 @@ slug: Web/API/MediaStreamTrack
 
   - : Возвращает `true`, если трек не может предоставить данные по техническим причинам.
 
-    > **Примечание:** Вы можете создать стандартную функцию "заглушить звук", устанавливая свойство `enabled` в значение `false`, и возвращать звук, снова устанавливая его в значение `true`.
+    > [!NOTE]
+    > Вы можете создать стандартную функцию "заглушить звук", устанавливая свойство `enabled` в значение `false`, и возвращать звук, снова устанавливая его в значение `true`.
 
 - {{domxref("MediaStreamTrack.readonly")}} {{readonlyInline}}
   - : Возвращает `true`, если трек предназначен только для чтения (например, если его источник - видео файл или камера, настройки которой не могут быть изменены), иначе `false`.
@@ -64,29 +66,29 @@ slug: Web/API/MediaStreamTrack
 
 - [`ended`](/ru/docs/Web/API/MediaStreamTrack/ended_event)
   - : Вызывается, когда проигрывание трека останавливается (когда значение {{domxref("MediaStreamTrack.readyState", "readyState")}} становится `ended`).
-    Обработчик может быть установлен как свойство [`onended`](/ru/docs/Web/API/MediaStreamTrack/onended).
+    Обработчик может быть установлен как свойство [`onended`](/ru/docs/Web/API/MediaStreamTrack/ended_event).
 - [`mute`](/ru/docs/Web/API/MediaStreamTrack/mute_event)
   - : Вызывается, когда {{domxref("MediaStreamTrack.muted", "muted")}} принимает значение `true`, что означает, что трек временно не может предоставлять данные (например, при плохом подключении сети).
-    Обработчик может быть установлен как свойство [`onmute`](/ru/docs/Web/API/MediaStreamTrack/onmute).
+    Обработчик может быть установлен как свойство [`onmute`](/ru/docs/Web/API/MediaStreamTrack/mute_event).
 - [`isolationchange`](/ru/docs/Web/API/MediaStreamTrack/isolationchange_event)
   - : Вызывается, когда свойство {{domxref("MediaStreamTrack.isolated", "isolated")}} принимает значение `true` из-за того, что документ больше не имеет разрешение на доступ к треку.
     Обработчик может быть установлен как свойство [`onisolationchange`](/ru/docs/Web/API/MediaStreamTrack/onisolationchange).
-- [`overconstrained`](/ru/docs/Web/API/MediaStreamTrack/overconstrained_event) {{deprecated_inline}}
+- [`overconstrained`](/ru/docs/Web/API/MediaStreamTrack) {{deprecated_inline}}
   - : Вызывается, когда источник не удовлетворяет ограничениям трека, что делает его непригодным для использования.
-    Обработчик может быть установлен как свойство [`onoverconstrained`](/ru/docs/Web/API/MediaStreamTrack/onoverconstrained).
+    Обработчик может быть установлен как свойство [`onoverconstrained`](/ru/docs/Web/API/MediaStreamTrack).
 - [`unmute`](/ru/docs/Web/API/MediaStreamTrack/unmute_event)
   - : Вызывается, когда данные снова становятся доступными, то есть пропадают технические проблемы.
-    Обработчик может быть установлен как свойство [`onunmute`](/ru/docs/Web/API/MediaStreamTrack/onunmute).
+    Обработчик может быть установлен как свойство [`onunmute`](/ru/docs/Web/API/MediaStreamTrack/unmute_event).
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Media Capture and Streams API](/ru/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/ru/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaStream")}}

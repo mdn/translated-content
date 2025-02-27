@@ -1,5 +1,5 @@
 ---
-title: Unicode property escapes
+title: Unicode 字符类转义：\p{...}、\P{...}
 slug: Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
 ---
 
@@ -7,25 +7,38 @@ slug: Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escap
 
 **Unicode property escapes** [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions) 支持根据 Unicode 属性进行匹配，例如我们可以用它来匹配出表情、标点符号、字母（甚至适用特定语言或文字）等。同一符号可以拥有多种 Unicode 属性，属性则有 binary ("boolean-like") 和 non-binary 之分。
 
-{{EmbedInteractiveExample("pages/js/regexp-unicode-property-escapes.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp Unicode property escapes", "taller")}}
 
-> **备注：** 使用 Unicode 属性转义依靠 [`\u` 标识](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)，`\u` 表示该字符串被视为一串 Unicode 代码点。参考 [`RegExp.prototype.unicode`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)。
+```js interactive-example
+const sentence = "A ticket to 大阪 costs ¥2000 👌.";
 
-> **备注：** 某些 Unicode 属性比[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)(如 `\w` 只匹配拉丁字母 `a` 到 `z`) 包含更多的字符，但后者浏览器兼容性更好（截至 2020 一月）。
+const regexpEmojiPresentation = /\p{Emoji_Presentation}/gu;
+console.log(sentence.match(regexpEmojiPresentation));
+// Expected output: Array ["👌"]
 
-## 句法
+const regexpNonLatin = /\P{Script_Extensions=Latin}+/gu;
+console.log(sentence.match(regexpNonLatin));
+// Expected output: Array [" ", " ", " 大阪 ", " ¥2000 👌."]
 
-```js
-// Non-binary 属性
-\p{Unicode 属性值}
-\p{Unicode 属性名=Unicode 属性值}
+const regexpCurrencyOrPunctuation = /\p{Sc}|\p{P}/gu;
+console.log(sentence.match(regexpCurrencyOrPunctuation));
+// Expected output: Array ["¥", "."]
+```
 
-// Binary and non-binary 属性
-\p{UnicodeBinary 属性名}
+> [!NOTE]
+> 使用 Unicode 属性转义依靠 [`\u` 标识](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)，`\u` 表示该字符串被视为一串 Unicode 代码点。参考 [`RegExp.prototype.unicode`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)。
 
-// \P 为 \p 取反
-\P{Unicode 属性值}
-\P{UnicodeBinary 属性名}
+> [!NOTE]
+> 某些 Unicode 属性比[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)(如 `\w` 只匹配拉丁字母 `a` 到 `z`) 包含更多的字符，但后者浏览器兼容性更好（截至 2020 一月）。
+
+## 语法
+
+```regex
+\p{loneProperty}
+\P{loneProperty}
+
+\p{property=value}
+\P{property=value}
 ```
 
 - [General_Category](https://unicode.org/reports/tr18/#General_Category_Property) (`gc`)
@@ -41,7 +54,8 @@ slug: Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escap
 - Unicode 属性值
   - : 很多值有同名或简写 (e.g. 对应着 `General_Category` 属性名的属性值 `Decimal_Number` 可以写作 `Nd`, `digit`, 或 `Decimal_Number`). 大多数属性值的 `Unicode 属性名` 和等号可以省去。如果想明确某 `Unicode 属性名`，必须给出它的值。
 
-> **备注：** 因为可使用的属性和值太多，这里不一一赘述，仅提供几个例子。
+> [!NOTE]
+> 因为可使用的属性和值太多，这里不一一赘述，仅提供几个例子。
 
 ## 基本原理
 
@@ -127,17 +141,24 @@ const regexpUPE = /\p{L}+/gu;
 console.table(nonEnglishText.match(regexpUPE));
 ```
 
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
 ## 参见
 
-- [Regular expressions guide](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
-
-  - [Character classes](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-  - [Assertions](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
-  - [Quantifiers](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
-  - [Groups and ranges](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_Ranges)
-
-- [The `RegExp()` constructor](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
-- [`RegExp.prototype.unicode`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)
-- [Unicode character property — Wikipedia](https://en.wikipedia.org/wiki/Unicode_character_property)
-- [A blog post from Axel Rauschmayer about Unicode property escapes](https://2ality.com/2017/07/regexp-unicode-property-escapes.html)
-- [The Unicode document for Unicode properties](https://unicode.org/reports/tr18/#Categories)
+- [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)指南
+- [正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions)
+- [字符类：`[...]`、`[^...]`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
+- [字符类转义：`\d`、`\D`、`\w`、`\W`、`\s`、`\S`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
+- [字符转义：`\n`、`\u{...}`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
+- [析取符：`|`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
+- 维基百科上的 [Unicode 字符类属性](https://en.wikipedia.org/wiki/Unicode_character_property)
+- [ES2018：RegExp Unicode 属性转义](https://2ality.com/2017/07/regexp-unicode-property-escapes.html)，由 Dr. Axel Rauschmayer 撰写（2017）
+- [Unicode 正则表达式：属性章节](https://unicode.org/reports/tr18/#Categories)
+- [Unicode 工具集：UnicodeSet](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp)
+- [RegExp 带有集合符号和字符串属性的 v 标志](https://v8.dev/features/regexp-v-flag)，载于 v8.dev（2022）

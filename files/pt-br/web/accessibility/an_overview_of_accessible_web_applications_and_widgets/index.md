@@ -33,7 +33,7 @@ _Exemplo 1: Marcação para um widget de abas construído sem as indicações AR
 ```
 
 _Exemplo 2: Como o widget de abas pode ser visto. Seus utilizadores podem reconhecer sua aparência, mas não há semântica legível por mecanismos de tecnologias assistivas._
-![Screenshot of the tabs widget](/@api/deki/files/4926/=Tabs_Widget.png)
+![Screenshot of the tabs widget](tabs_widget.png)
 
 ## ARIA
 
@@ -205,7 +205,8 @@ var showTip = function (el) {
 
 ### Mudança de Atributo (_Role_)
 
-> **Nota:** Em construção
+> [!NOTE]
+> Em construção
 
 O conjunto ARIA possibilita que os desenvolvedores possam declarar uma função semântica para um elemento que, de outro modo, não a apresentaria, ou a ofereceria de forma incorreta. Por exemplo, quando alguma lista desordenada é utilizada para criar um menu, à {{ HTMLElement("ul") }} deve ser dada uma **`role`** de `menubar` e cada {{ HTMLElement("li") }} deve ter uma **`role`** de `menuitem`.
 
@@ -217,7 +218,8 @@ Não faça isso. Em substituição, implemente o modo "_visualizar_" usando um e
 
 ### Mudanças assíncronas de conteúdo
 
-> **Nota:** Em construção. Veja, também, [Regiões Dinâmicas](/pt-BR/ARIA/Live_Regions)
+> [!NOTE]
+> Em construção. Veja, também, [Regiões Dinâmicas](/pt-BR/ARIA/Live_Regions)
 
 ## Navegação pelo Teclado
 

@@ -19,7 +19,8 @@ gainNode.gain.value = 0.5;
 
 一個 {{domxref("AudioParam")}}.
 
-> **備註：** 雖然傳回的 `AudioParam` 是唯讀的，但是它所代表的值可以更改。
+> [!NOTE]
+> 雖然傳回的 `AudioParam` 是唯讀的，但是它所代表的值可以更改。
 
 ## 範例
 
@@ -35,4 +36,4 @@ See [`BaseAudioContext.createGain()`](/zh-TW/docs/Web/API/BaseAudioContext/creat
 
 ## 參見
 
-- [Using the Web Audio API](/zh-TW/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-TW/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

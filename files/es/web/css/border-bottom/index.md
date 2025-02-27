@@ -3,7 +3,7 @@ title: border-bottom
 slug: Web/CSS/border-bottom
 ---
 
-<< [Volver](/es/Guía_de_referencia_de_CSS)
+{{CSSRef}}
 
 ### Resumen
 
@@ -13,7 +13,7 @@ La propiedad `border-bottom` permite de definir de una vez todas las propiedades
 - Se aplica a : todos los elementos
 - {{ Cssxref("inheritance", "Valor heredado") }}: no
 - Porcentajes: N/A
-- Medio: {{ Xref_cssvisual() }}
+- Medio: {{cssxref("Media/Visual", "visual")}}
 - {{ Cssxref("computed value", "Valor calculado") }}: ver propiedades individuales
 
 ### Sintaxis
@@ -33,7 +33,7 @@ border-bottom: [ <border-width> || <border-style> || <border-color> ] | inherit
 
 ### Ejemplos
 
-[Ver El Ejemplo Vivo](/samples/cssref/border.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/border.html)
 
 ```
 element {
@@ -69,23 +69,12 @@ Como el valor por defecto de {{ Cssxref("border-bottom-style") }} es `none`, el 
 
 ### Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#border-bottom)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/box.html#border-shorthand-properties)
-- [CSS 3](http://www.w3.org/TR/css3-background/#the-border-shorthands)
+{{Specifications}}
 
-### Compatibilidades
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 4              |
-| Firefox           | 1              |
-| Netscape          | 4              |
-| Opera             | 3.5            |
+{{Compat}}
 
 ### Ver también
 
 {{ Cssxref("border") }}, {{ Cssxref("border-bottom") }}, {{ Cssxref("border-bottom-width") }}, {{ Cssxref("border-bottom-style") }}, {{ Cssxref("border-bottom-color") }},
-
-Categorías
-
-Interwiki Languages

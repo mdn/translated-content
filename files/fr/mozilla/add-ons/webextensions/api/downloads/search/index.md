@@ -3,11 +3,11 @@ title: downloads.search()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/search
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`search()`** de l'API {{WebExtAPIRef("downloads")}} interroge les {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} disponibles dans le gestionnaire de téléchargements du navigateur, et renvoie celles qui correspondent aux spécifications critères de recherche.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -22,7 +22,7 @@ var searching = browser.downloads.search(query);
 
 ### Return value
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). La promise est remplie avec un `tableau d'objets` `{{WebExtAPIRef('downloads.DownloadItem')}}` qui correspondent aux critères donnés.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). La promise est remplie avec un `tableau d'objets` `{{WebExtAPIRef('downloads.DownloadItem')}}` qui correspondent aux critères donnés.
 
 ## Compatibilité des navigateurs
 
@@ -122,9 +122,9 @@ Vous pouvez voir ce code en action par exemple dans notre [dernier téléchargem
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/extensions/downloads).
+> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

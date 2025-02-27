@@ -1,11 +1,12 @@
 ---
 title: Window.requestAnimationFrame()
-slug: Web/API/window/requestAnimationFrame
+slug: Web/API/Window/requestAnimationFrame
 ---
 
 {{APIRef}}El método **`window.requestAnimationFrame`** informa al navegador que quieres realizar una animación y solicita que el navegador programe el repintado de la ventana para el próximo ciclo de animación. El método acepta como argumento una función a la que llamar antes de efectuar el repintado.
 
-> **Nota:** Si no quieres que tu animación se detenga, debes asegurarte de llamar a su vez a `requestAnimationFrame()` desde tu callback.
+> [!NOTE]
+> Si no quieres que tu animación se detenga, debes asegurarte de llamar a su vez a `requestAnimationFrame()` desde tu callback.
 
 Debes llamar a este método cuando estés preparado para actualizar tu animación en la pantalla para pedir que se programe el repintado. Ésto puede suceder hasta 60 veces por segundo en pestañas en primer plano, pero se puede ver reducido a velocidades inferiores en pestañas en segundo plano.
 
@@ -69,6 +70,6 @@ window.requestAnimationFrame(step);
 - {{ domxref("window.mozAnimationStartTime") }}
 - {{ domxref("window.cancelAnimationFrame()") }}
 - [mozRequestAnimationFrame](https://robert.ocallahan.org/2010/08/mozrequestanimationframe-frame-rate_17.html) - Blog post
-- [requestAnimationFrame for smart animating](http://paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
-- [Animating with javascript: from setInterval to requestAnimationFrame](http://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
-- [Using PC Hardware more efficiently in HTML5: New Web Performance APIs, Part 1](http://blogs.msdn.com/b/ie/archive/2011/07/05/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-1.aspx) - Blog post
+- [requestAnimationFrame for smart animating](https://paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
+- [Animating with javascript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
+- [Using PC Hardware more efficiently in HTML5: New Web Performance APIs, Part 1](https://blogs.msdn.com/b/ie/archive/2011/07/05/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-1.aspx) - Blog post

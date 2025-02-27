@@ -42,6 +42,6 @@ operated by the People's Front of Judea.</p>
 | ---------------------------------------------------- | --------------------------------------------- |
 | {{RFC("7725", "451 Unavailable For Legal Reasons")}} | An HTTP Status Code to Report Legal Obstacles |
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}

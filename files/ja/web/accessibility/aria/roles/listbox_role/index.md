@@ -23,7 +23,7 @@ HTML の選択要素や、1 項目しか選択できない場合はラジオボ�
 
 - [option](/ja/docs/Web/Accessibility/ARIA/Roles/option_role)
   - : 1 つ以上のネストされたオプションが必要です。 選択された全てのオプションでは、`aria-selected` が `true` に設定されています。 選択されていない全てのオプションでは、`aria-selected` が (訳注: 省略されるか) `false` に設定されています。 オプションが選択可能でない場合は、`aria-selected` を省略します (訳注: オプションでは、aria-selected のデフォルトは、false であり、変更できないことを示すなら、aria-disabled や aria-readonly があります) 。
-- [list](/ja/docs/Web/Accessibility/ARIA/Roles/List_role)
+- [list](/ja/docs/Web/Accessibility/ARIA/Roles/list_role)
   - : リスト項目 (`listitem`) 要素を含むセクション。
 
 #### ステートとプロパティ
@@ -140,7 +140,8 @@ HTML の選択要素や、1 項目しか選択できない場合はラジオボ�
 2. 選択状態を反映するようにオプションの外観を変更します。
 3. オプションを選択の解除へトグルしている場合でも、リストボックスの `aria-activedescendant` の値を、ユーザーが直前にインタラクトしたオプションの `id` に更新します。
 
-> **メモ:** ARIA の使用の第一のルールは、要素を転用して ARIA のロール、ステート、プロパティを追加することでアクセス可能にするのではなく、必要としている意味論と振る舞いがすでに組み込まれているネイティブな機能を使用できることです。 `<option>` 要素を子孫に持つ `<select>` 要素は、必要な全てのインタラクションをネイティブに処理します。
+> [!NOTE]
+> ARIA の使用の第一のルールは、要素を転用して ARIA のロール、ステート、プロパティを追加することでアクセス可能にするのではなく、必要としている意味論と振る舞いがすでに組み込まれているネイティブな機能を使用できることです。 `<option>` 要素を子孫に持つ `<select>` 要素は、必要な全てのインタラクションをネイティブに処理します。
 
 ## 例
 
@@ -198,7 +199,7 @@ HTML の選択要素や、1 項目しか選択できない場合はラジオボ�
 - 1 つ以上のエントリーがリストボックスの DOM の子でない場合、追加の `aria-*` プロパティを設定する必要があります ([ARIA のベストプラクティス](https://www.w3.org/TR/wai-aria-practices/#listbox_div) (英語) を参照) 。
 - リストボックスを展開 ([expand](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded)) する正当な理由がある場合は、コンボボックス ([`combobox`](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role)) ロールの方がより適切かもしれません。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
@@ -213,8 +214,8 @@ TBD
 - [HTML `<option>` 要素](/ja/docs/Web/HTML/Element/option)
 - [ARIA: `combobox` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role)
 - [ARIA: `option` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/option_role)
-- [ARIA: `list` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/List_role)
-- [ARIA: `listitem` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Listitem_role)
+- [ARIA: `list` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/list_role)
+- [ARIA: `listitem` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/listitem_role)
 - [ARIA のベストプラクティス — リストボックス](https://www.w3.org/TR/wai-aria-practices/#Listbox) (英語)
 - [ARIA のロールモデル — リストボックス](https://www.w3.org/TR/wai-aria-1.1/#listbox) (英語)
 

@@ -3,7 +3,7 @@ title: find.find()
 slug: Mozilla/Add-ons/WebExtensions/API/find/find
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 テキストによるタブ内の検索をします。
 
@@ -34,7 +34,7 @@ browser.find.find(
 );
 ```
 
-### Parameters
+### 引数
 
 - `queryphrase`
   - : `string`. 検索語。
@@ -53,7 +53,7 @@ browser.find.find(
     - `includeRectData`
       - : `boolean`. Include rectangle data in the response, which describes where in the rendered page the match was found. Defaults to `false`.
 
-### Return value
+### 返値
 
 A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an object containing up to three properties:
 
@@ -63,7 +63,7 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
 
   - : `array`. If `includeRangeData` was given in the `options` parameter, then this property will be included. It is provided as an array of `RangeData` objects, one for each match. `それぞれのRangeData` は DOM ツリー構造をしています。検索語の周りを表示することなどにも使えます。
 
-    次の `rectData`, も同様に配列で `rangeData[i]` と `rectData[i]`は 1 対 1 で対応します。.
+    次の `rectData`, も同様に配列で `rangeData[i]` と `rectData[i]`は 1 対 1 で対応します。
 
     Each `RangeData` contains the following properties:
 
@@ -80,7 +80,7 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
 
 - `rectData`{{optional_inline}}
 
-  - : `array`. 呼び出し時に`optionsで` `includeRectData` 引数を与えると結果を返します。 `RectData` objects の配列です。それらはマッチしたワードを含む、client rectangles を返します。拡張機能でハイライトなどに使えるでしょう。.
+  - : `array`. 呼び出し時に`optionsで` `includeRectData` 引数を与えると結果を返します。 `RectData` objects の配列です。それらはマッチしたワードを含む、client rectangles を返します。拡張機能でハイライトなどに使えるでしょう。
 
     Each `RectData` object はそれぞれ 1 つのマッチに対して 2 つのプロパティを持ちます。
 
@@ -91,7 +91,7 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
         - `rectList`: ４つの integer をもつ配列: `top`, `left`, `bottom`, `right`. その位置情報は viewport における左上からの位置です。
         - `textList`: 上記`rectList[i]`に含まれた `textList[i]` (string)を持つ配列です。
 
-        例えば Web ページ上で:
+        例えばウェブページ上で:
 
         ![](rects-1.png) "You may"を探すと 2 つの矩形エリアで表現されます。:
 
@@ -103,11 +103,11 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
     - `text`
       - : マッチしたテキスト全体、上の例では"You may"が丸ごと入ります。
 
-## Browser compatibility
+## ブラウザーの互換性
 
-{{Compat("webextensions.api.find.find", 10)}}
+{{Compat}}
 
-## Examples
+## 例
 
 ### Basic examples
 
@@ -124,7 +124,7 @@ function found(results) {
 browser.find.find("banana").then(found);
 ```
 
-Search for "banana" across all tabs (note that this requires the "tabs" [permission](/ja/Add-ons/WebExtensions/manifest.json/permissions), because it accesses `tab.url`):
+Search for "banana" across all tabs (note that this requires the "tabs" [permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), because it accesses `tab.url`):
 
 ```js
 async function findInAllTabs(allTabs) {

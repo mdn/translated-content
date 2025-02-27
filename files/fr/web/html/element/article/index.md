@@ -146,7 +146,7 @@ Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs
 
 ### Résultat
 
-{{EmbedLiveSample('')}}
+{{EmbedLiveSample('','','380')}}
 
 ## Spécifications
 
@@ -159,4 +159,4 @@ Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs
 ## Voir aussi
 
 - Les autres éléments liés aux sections d'un document : [`<body>`](/fr/docs/Web/HTML/Element/body), [`<nav>`](/fr/docs/Web/HTML/Element/nav), [`<section>`](/fr/docs/Web/HTML/Element/section), [`<aside>`](/fr/docs/Web/HTML/Element/aside), [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<hgroup>`](/fr/docs/Web/HTML/Element/hgroup), [`<header>`](/fr/docs/Web/HTML/Element/header), [`<footer>`](/fr/docs/Web/HTML/Element/footer), [`<address>`](/fr/docs/Web/HTML/Element/address)
-- [Sections et structure d'un document HTML5](/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)
+- [Sections et structure d'un document HTML5](/fr/docs/Web/HTML/Element/Heading_Elements)

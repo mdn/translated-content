@@ -1,11 +1,13 @@
 ---
 title: place-content
 slug: Web/CSS/place-content
+l10n:
+  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
 {{CSSRef}}
 
-**`place-content`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、ブロック方向とインライン方向の内容物の配置 (すなわち {{CSSxRef("align-content")}} および {{CSSxRef("justify-content")}}) を、[グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)や[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などのレイアウトシステムにおいて、一度に指定することができます。
+**`place-content`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、ブロック方向とインライン方向の内容物の配置 (すなわち {{CSSxRef("align-content")}} および {{CSSxRef("justify-content")}}) を、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)や[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)などのレイアウトシステムにおいて、一度に指定することができます。
 
 {{EmbedInteractiveExample("pages/css/place-content.html")}}
 
@@ -43,12 +45,14 @@ place-content: stretch space-evenly;
 place-content: inherit;
 place-content: initial;
 place-content: revert;
+place-content: revert-layer;
 place-content: unset;
 ```
 
 最初の値は {{CSSxRef("align-content")}} プロパティの値で、2 番目の値は {{CSSxRef("justify-content")}} の値です。
 
-> **メモ:** 2 番目の値がない場合、最初の値に両方に有効な値が設定されていれば、両方に使用されます。どちらかに無効な値であれば、値自体が無効になります。
+> [!NOTE]
+> 2 番目の値がない場合、最初の値に両方に有効な値が設定されていれば、両方に使用されます。どちらかに無効な値であれば、値自体が無効になります。
 
 ### 値
 
@@ -79,18 +83,22 @@ place-content: unset;
   - : 各アイテムは、配置コンテナーの中で均等に配置されます。隣接するアイテム同士の間隔、最初のアイテムの前の余白、最後のアイテムの後の余白は、まったく同じ幅になります。
 - `stretch`
   - : 各アイテムの寸法の合計が配置コンテナーの寸法よりも小さい場合、寸法が `auto` のアイテムは、 {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (または同等の機能) での制約を尊重しつつ、 (比例的にではなく) 均等に引き伸ばされ、寸法の合計が配置コンテナーを満たすようになります。
+- `safe`
+  - : 配置キーワードと並べて使用します。選択されたキーワードが、アイテムが配置コンテナーをオーバーフローしてデータ損失を引き起こす場合には、アイテムは代わりに、配置モードが `start` であるかのように配置されます。
+- `unsafe`
+  - : 配置キーワードと並べて使用します。アイテムと配置コンテナーの相対サイズに関係なく、またデータ損失の原因となるオーバーフローが発生するかどうかに関係なく、指定された配置値が優先されます。
 
 ## 公式定義
 
 {{cssinfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 
 ## 例
 
-<h3 id="Placing_content_in_a_flex_container">フレックスコンテナー内の内容物の配置</h3>
+### フレックスコンテナーのコンテンツの配置
 
 #### HTML
 
@@ -114,11 +122,13 @@ place-content: unset;
   <option value="sideways-rl">sideways-rl</option>
   <option value="sideways-lr">sideways-lr</option></select
 ><code>;</code><br />
+
 <code>direction:</code
 ><select id="direction">
   <option value="ltr" selected>ltr</option>
   <option value="rtl">rtl</option></select
 ><code>;</code><br />
+
 <code>place-content:</code
 ><select id="alignContentAlignment">
   <option value="normal">normal</option>
@@ -156,27 +166,27 @@ place-content: unset;
 ```
 
 ```js hidden
-var update = function () {
+function update() {
   document.getElementById("container").style.placeContent =
-    document.getElementById("alignContentAlignment").value +
-    " " +
-    document.getElementById("justifyContentAlignment").value;
-};
+    `${document.getElementById("alignContentAlignment").value} ` +
+    `${document.getElementById("justifyContentAlignment").value}`;
+}
 
-var alignContentAlignment = document.getElementById("alignContentAlignment");
+const alignContentAlignment = document.getElementById("alignContentAlignment");
 alignContentAlignment.addEventListener("change", update);
 
-var justifyContentAlignment = document.getElementById(
+const justifyContentAlignment = document.getElementById(
   "justifyContentAlignment",
 );
 justifyContentAlignment.addEventListener("change", update);
 
-var writingM = document.getElementById("writingMode");
-writingM.addEventListener("change", function (evt) {
+const writingM = document.getElementById("writingMode");
+writingM.addEventListener("change", (evt) => {
   document.getElementById("container").style.writingMode = evt.target.value;
 });
-var direction = document.getElementById("direction");
-direction.addEventListener("change", function (evt) {
+
+const direction = document.getElementById("direction");
+direction.addEventListener("change", (evt) => {
   document.getElementById("container").style.direction = evt.target.value;
 });
 ```
@@ -226,9 +236,9 @@ div > div {
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS フレックスボックスガイド: _[フレックスコンテナー内でのアイテムの配置](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS グリッドガイド: _[CSS グリッドレイアウト内でのボックス配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)
-- {{CSSxRef("align-content")}} プロパティ
-- {{CSSxRef("justify-content")}} プロパティ
+- {{cssxref("align-content")}}
+- {{cssxref("justify-content")}}
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール

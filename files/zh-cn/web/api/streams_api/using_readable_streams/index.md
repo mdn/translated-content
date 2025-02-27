@@ -7,9 +7,11 @@ slug: Web/API/Streams_API/Using_readable_streams
 
 作为一个 JavaScript 开发者，以编程的方式逐块地读取和操作从网络上获取的数据是非常实用的！但是你要如何使用 Stream API 的可读流功能呢？可以在这篇文章看到基本介绍。
 
-> **备注：** 本文要求你已理解可读流相关知识，并了解相关的高级概念，如果还不了解，建议你先查看[流的概念和简介](/zh-CN/docs/Web/API/Streams_API#概念和用法)以及掌握 [Stream API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)然后再阅读此文。
+> [!NOTE]
+> 本文要求你已理解可读流相关知识，并了解相关的高级概念，如果还不了解，建议你先查看[流的概念和简介](/zh-CN/docs/Web/API/Streams_API#概念和用法)以及掌握 [Stream API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)然后再阅读此文。
 
-> **备注：** 如果你正在查询关于可写流的信息，你可以尝试阅读[使用可写流](/zh-CN/docs/Web/API/Streams_API/Using_writable_streams)。
+> [!NOTE]
+> 如果你正在查询关于可写流的信息，你可以尝试阅读[使用可写流](/zh-CN/docs/Web/API/Streams_API/Using_writable_streams)。
 
 ## 寻找一些示例
 
@@ -139,7 +141,8 @@ return pump();
 3. 如果流中有更多的分块要读取，你可以处理当前的分块后，再次运行该函数。
 4. 你继续链接 `pipe` 函数，直到没有更多流要读取，在这种情况下，请遵循步骤 2。
 
-> **备注：** 该函数看起来像 `pump()` 调用自己并且导致一个潜在的深度递归。然而，因为 `pump` 是异步的并且每次调用 `pump()` 都是在 promise 处理程序的末尾，事实上，它类似于 promise 处理程序的链式结构。
+> [!NOTE]
+> 该函数看起来像 `pump()` 调用自己并且导致一个潜在的深度递归。然而，因为 `pump` 是异步的并且每次调用 `pump()` 都是在 promise 处理程序的末尾，事实上，它类似于 promise 处理程序的链式结构。
 
 ## 创建你自定义的可读流
 
@@ -227,9 +230,10 @@ readableStream
 
 但是一个自定义流仍然是 `ReadableStream` 实例，意味着你可以给它附着一个 reader。例如，看看我们的[简单随机流示例](https://github.com/mdn/dom-examples/blob/master/streams/simple-random-stream/index.html)（[也可以参见在线演示](https://mdn.github.io/dom-examples/streams/simple-random-stream/)），其创建了一个自定义的流，排入了一些随机的字符串，然后在按下 _Stop string generation_ 的按钮后，再次从流中读取数据。
 
-> **备注：** 为了使用 {{domxref("FetchEvent.respondWith()")}} 消费流，排入的流内容的类型必须是 {{jsxref("Uint8Array")}}；例如使用 {{domxref("TextEncoder")}} 进行编码。
+> [!NOTE]
+> 为了使用 {{domxref("FetchEvent.respondWith()")}} 消费流，排入的流内容的类型必须是 {{jsxref("Uint8Array")}}；例如使用 {{domxref("TextEncoder")}} 进行编码。
 
-自定义流的构造函数有一个 `start()` 方法，该方法使用 {{domxref("setInterval()")}} 去指定每秒生成一个随机的字符串。然后使用 {{domxref("ReadableStreamDefaultController.enqueue()")}} 将它排入流。当按下按钮，取消 interval，并调用名为 `readStream()` 函数再次将数据从流中读取回来。由于我们一直停止排入分块，所以我们也要关闭流。
+自定义流的构造函数有一个 `start()` 方法，该方法使用 {{domxref("Window.setInterval", "setInterval()")}} 去指定每秒生成一个随机的字符串。然后使用 {{domxref("ReadableStreamDefaultController.enqueue()")}} 将它排入流。当按下按钮，取消 interval，并调用名为 `readStream()` 函数再次将数据从流中读取回来。由于我们一直停止排入分块，所以我们也要关闭流。
 
 ```js
 const stream = new ReadableStream({

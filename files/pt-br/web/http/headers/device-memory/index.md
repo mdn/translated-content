@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/Device-Memory
 
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
-O cabeçalho **`Device-Memory`** é um cabeçalho da [Device Memory API](/pt-BR/docs/Web/API/Device_Memory_API) que funciona como os cabeçalhos [Client Hints](/pt-BR/docs/Glossary/Client_hints) que representão a quantidade aproximada de RAM que o dispositivo do cliente possui.
+O cabeçalho **`Device-Memory`** é um cabeçalho da [Device Memory API](/pt-BR/docs/Web/API/Device_Memory_API) que funciona como os cabeçalhos [Client Hints](/pt-BR/docs/Web/HTTP/Client_hints) que representão a quantidade aproximada de RAM que o dispositivo do cliente possui.
 
 <table class="properties">
   <tbody>
@@ -20,7 +20,8 @@ O cabeçalho **`Device-Memory`** é um cabeçalho da [Device Memory API](/pt-BR/
   </tbody>
 </table>
 
-> **Nota:** Client Hints são acessíveis somente em origens seguras (via TLS). O servidor pode optar em receber o cabeçalho `Device-Memory` do cliente mandando os cabeçalhos de resposta {{HTTPHeader("Accept-CH")}} e {{HTTPHeader("Accept-CH-Lifetime")}}.
+> [!NOTE]
+> Client Hints são acessíveis somente em origens seguras (via TLS). O servidor pode optar em receber o cabeçalho `Device-Memory` do cliente mandando os cabeçalhos de resposta {{HTTPHeader("Accept-CH")}} e {{HTTPHeader("Accept-CH-Lifetime")}}.
 
 ## Sintaxe
 
@@ -51,7 +52,7 @@ Device-Memory: 1
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Device-Memory")}}
+{{Compat}}
 
 ## Veja também
 

@@ -3,7 +3,9 @@ title: in
 slug: Web/SVG/Attribute/in
 ---
 
-« [SVG Attribute reference home](/fr/SVG/Attribute)
+{{SVGRef}}
+
+« [SVG Attribute reference home](/fr/docs/Web/SVG/Attribute)
 
 L'attribut `in` identifie l'entrée pour la primitive de filtre donnée.
 

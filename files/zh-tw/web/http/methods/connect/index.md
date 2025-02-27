@@ -1,41 +1,66 @@
 ---
 title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
+l10n:
+  sourceCommit: 8a9085b96d0135920be9b281d4500ff72a7a8369
 ---
 
 {{HTTPSidebar}}
 
-**HTTP `CONNECT`** 方法會利用請求資源啟動一個雙向通訊。這通常可用於建立隧道。
+**HTTP `CONNECT` 方法**用於與請求的資源建立雙向通訊。它可用於打開隧道。
 
-舉例來說，`CONNECT` 方法可以用於存取使用 {{Glossary("SSL")}} ({{Glossary("HTTPS")}}) 的網站。客戶端請求 HTTP Proxy 伺服器建立 TCP 連結的隧道到指定的位置。伺服器接著代表客戶端建立連結。一但連結建立，Proxy 伺服器會持續收送 TCP 流到客戶端。
+例如，`CONNECT` 方法可用於訪問使用 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的網站。用戶端請求 HTTP {{Glossary("Proxy server", "代理伺服器")}}將 [TCP](/zh-TW/docs/Glossary/TCP) 連接以隧道方式傳輸到所需目的地。然後代理伺服器代表用戶端建立連接。一旦連接建立，代理伺服器將繼續將 TCP 流從用戶端轉發到用戶端。
 
-`CONNECT` 是個逐跳方法。
+`CONNECT` 是一個跳躍式方法。
 
-| 請求具有 Body                                        | 否  |
-| ---------------------------------------------------- | --- |
-| 成功回覆具有 Body                                    | 是  |
-| {{Glossary("Safe")}}                                 | 否  |
-| {{Glossary("Idempotent")}}                           | 否  |
-| {{Glossary("Cacheable")}}                            | 否  |
-| 可用於 [HTML 表單](/zh-TW/docs/Web/Guide/HTML/Forms) | 否  |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">請求是否有主體</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">成功回應是否有主體</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Safe/HTTP", "安全")}}</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Idempotent", "冪等")}}</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Cacheable", "可緩存")}}</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <a href="/zh-TW/docs/Learn_web_development/Extensions/Forms">HTML 表單</a>中是否允許
+      </th>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 語法
 
-```plain
+```http
 CONNECT www.example.com:443 HTTP/1.1
 ```
 
 ## 範例
 
-有些 Proxy 伺服器也許需要授權以建立隧道。請見 {{HTTPHeader("Proxy-Authorization")}} 標頭。
+一些代理伺服器可能需要授權來建立隧道。另請參見 {{HTTPHeader("Proxy-Authorization")}} 標頭。
 
-```plain
+```http
 CONNECT server.example.com:80 HTTP/1.1
 Host: server.example.com:80
 Proxy-Authorization: basic aGVsbG86d29ybGQ=
 ```
 
-## 規格
+## 規範
 
 {{Specifications}}
 
@@ -45,5 +70,5 @@ Proxy-Authorization: basic aGVsbG86d29ybGQ=
 
 ## 參見
 
-- {{Glossary("Proxy server")}}
+- {{Glossary("Proxy server", "代理伺服器")}}
 - {{HTTPHeader("Proxy-Authorization")}}

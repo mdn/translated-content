@@ -3,7 +3,7 @@ title: URL.createObjectURL()
 slug: Web/API/URL/createObjectURL_static
 ---
 
-{{ApiRef("URL")}}{{SeeCompatTable}}
+{{APIRef("File API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 ## Определение
 
@@ -24,7 +24,7 @@ objectURL = URL.createObjectURL(blob);
 
 ## Пример
 
-Смотрите [Using object URLs to display images](/ru/docs/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images).
+Смотрите [Using object URLs to display images](/ru/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images).
 
 ## Примечания
 
@@ -34,11 +34,11 @@ objectURL = URL.createObjectURL(blob);
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - {{domxref("URL.revokeObjectURL()")}}
-- [Using files from web applications](/ru/docs/Using_files_from_web_applications)
+- [Using files from web applications](/ru/docs/Web/API/File_API/Using_files_from_web_applications)

@@ -44,10 +44,10 @@ function closeCurrentWindow() {
 }
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの実装状況
 
-{{Compat("api.Window.close")}}
+{{Compat}}

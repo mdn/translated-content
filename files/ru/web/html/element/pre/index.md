@@ -5,28 +5,56 @@ slug: Web/HTML/Element/pre
 
 {{HTMLSidebar}}
 
-**Элемент HTML `<pre>`** представляет собой предварительно отформатированный текст, который должен быть представлен точно так, как написано в HTML-файле. Текст обычно отображается с использованием непропорционального ("[monospace](/ru/docs/XUL/Style/monospace)") шрифта. Пробелы внутри этого элемента отображаются как записанные.
+HTML-элемент **`<pre>`** представляет собой предварительно отформатированный текст, который должен быть представлен точно так, как написано в HTML-файле. Текст обычно отображается с использованием непропорционального ("[monospace](/ru/docs/XUL/Style/monospace)") шрифта. Пробелы внутри этого элемента отображаются как записанные.
 
-{{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;pre&gt;", "tabbed-standard")}}
 
-| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D1%82%D0%BE%D0%BA), [Явный контент](/ru/docs/Web/Guide/HTML/Content_categories#%D0%AF%D0%B2%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82) |
-| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                            | [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content)                                                                                                                                                                                                     |
-| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                                                                                                                 |
-| Допустимые родители                                              | Любой элемент, который принимает [содержимое потока](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D1%82%D0%BE%D0%BA)                                                                                                    |
-| Неявные ARIA-роли                                                | [Нет соответствующей роли](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                                                                                                                                              |
-| Допустимые ARIA-роли                                             | Любые                                                                                                                                                                                                                                                                               |
-| DOM-интерфейс                                                    | {{domxref("HTMLPreElement")}}                                                                                                                                                                                                                                                       |
+```html interactive-example
+<pre>
+  L          TE
+    A       A
+      C    V
+       R A
+       DOU
+       LOU
+      REUSE
+      QUE TU
+      PORTES
+    ET QUI T'
+    ORNE O CI
+     VILISÉ
+    OTE-  TU VEUX
+     LA    BIEN
+    SI      RESPI
+            RER       - Apollinaire
+</pre>
+```
+
+```css interactive-example
+pre {
+  font-size: 0.7rem;
+  margin: 0;
+}
+```
+
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D1%82%D0%BE%D0%BA), [Явный контент](/ru/docs/Web/Guide/HTML/Content_categories#%D0%AF%D0%B2%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82) |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                      | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content)                                                                                                                                                                                                           |
+| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                                                                                    |
+| Допустимые родители                                        | Любой элемент, который принимает [содержимое потока](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D1%82%D0%BE%D0%BA)                                                                                                    |
+| Неявные ARIA-роли                                          | [Нет соответствующей роли](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                                                                                                                                              |
+| Допустимые ARIA-роли                                       | Любые                                                                                                                                                                                                                                                                               |
+| DOM-интерфейс                                              | {{domxref("HTMLPreElement")}}                                                                                                                                                                                                                                                       |
 
 ## Атрибуты
 
 Этот элемент включает в себя только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("cols")}} {{non-standard_inline}}
-  - : Содержит _предпочтительное_ количество символов, которое должна иметь строка. Это был нестандартный синоним [`width`](/ru/docs/Web/HTML/Element/pre#width). Чтобы добиться такого эффекта, используйте CSS {{Cssxref("width")}}.
-- {{htmlattrdef("width")}}
+- `cols` {{non-standard_inline}}
+  - : Содержит _предпочтительное_ количество символов, которое должна иметь строка. Это был нестандартный синоним [`width`](#width). Чтобы добиться такого эффекта, используйте CSS {{Cssxref("width")}}.
+- `width`
   - : Содержит _предпочтительное_ количество символов, которое должна иметь строка. Хотя технически он все ещё реализован, этот атрибут не имеет визуального эффекта; чтобы достичь такого эффекта, используйте CSS {{Cssxref("width")}}.
-- {{htmlattrdef("wrap")}} {{non-standard_inline}}
+- `wrap` {{non-standard_inline}}
   - : Подсказка, указывающая, как должен происходить перенос. В современных браузерах этот атрибут игнорируется, и никакого визуального эффекта не приводит; чтобы достичь такого эффекта, используйте CSS {{Cssxref("white-space")}}.
 
 ## Пример
@@ -46,7 +74,7 @@ body {
 
 {{EmbedLiveSample("Пример")}}
 
-## Проблемы доступности
+## Доступность
 
 Важно предоставить альтернативное описание для любых изображений или диаграмм, созданных с использованием предварительно отформатированного текста. Альтернативное описание должно чётко и лаконично описывать содержание изображения или диаграммы.
 
@@ -80,17 +108,13 @@ body {
 
 ## Характеристики
 
-| Спецификация                                                                      | Статус                   | Комментарий                                          |
-| --------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-pre-element', '&lt;pre&gt;')}}      | {{Spec2('HTML WHATWG')}} | No significant change from {{SpecName("HTML5 W3C")}} |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-pre-element', '&lt;pre&gt;')}} | {{Spec2('HTML5 W3C')}}   | No significant change from {{SpecName("HTML4.01")}}  |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.4', '&lt;pre&gt;')}}               | {{Spec2('HTML4.01')}}    | Deprecated the `cols` attribute                      |
+{{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 
-## Смотреть также
+## Смотрите также
 
 - CSS: {{Cssxref('white-space')}}, {{Cssxref('word-break')}}
 - Связанный элемент: {{HTMLElement("code")}}

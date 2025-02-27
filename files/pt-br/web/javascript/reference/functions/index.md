@@ -93,7 +93,8 @@ function [nome]([param] [, param] [..., param]) {
 
 ### O gerador de declaração de função (instrução `function*`)
 
-> **Nota:** Expressão Arrow function é uma tecnologia experimental, parte da proposta do ECMAScript 6, e ainda não é amplamente suportada pelos navegadores.
+> [!NOTE]
+> Expressão Arrow function é uma tecnologia experimental, parte da proposta do ECMAScript 6, e ainda não é amplamente suportada pelos navegadores.
 
 Uma expressão arrow function tem uma sintaxe curta e conecta seu valor lexicamente (veja [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions) para mais detalhes):
 
@@ -112,7 +113,8 @@ param => expressão
 
 ### O construtor `Function`
 
-> **Nota:** O uso do construtor Function para criar funções não é recomendado uma vez que é requerido o corpo da função como string, o que pode impedir algumas otimizações por parte do motor JS e pode também causar outros problemas.
+> [!NOTE]
+> O uso do construtor Function para criar funções não é recomendado uma vez que é requerido o corpo da função como string, o que pode impedir algumas otimizações por parte do motor JS e pode também causar outros problemas.
 
 Como todos os outros objetos, objetos {{jsxref("Function")}} podem ser criados usando o operador new:
 
@@ -129,7 +131,8 @@ Invocar o construtor Function como uma função (sem usar o operador new) the o 
 
 ## Parâmetros de Função
 
-> **Nota:** Parâmetros Default e Rest são tecnologias experimentais, parte da proposta do ECMAScript 6, e ainda não são amplamente suportados pelos navegadores.
+> [!NOTE]
+> Parâmetros Default e Rest são tecnologias experimentais, parte da proposta do ECMAScript 6, e ainda não são amplamente suportados pelos navegadores.
 
 ### Parâmetros Default
 
@@ -143,10 +146,10 @@ A sintaxe do parâmetro rest permite representar um número indefinido de argume
 
 Você pode referenciar aos argumentos da função dentro da função utilizando o objeto arguments. Veja [arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments).
 
-- [`arguments`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments): Um objeto array-like contendo os argumentos passados para a função atualmente em execução.
-- [`arguments.callee`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee) {{Deprecated_inline}}: A função atualmente em execução.
+- [`arguments`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments): Um objeto array-like contendo os argumentos passados para a função atualmente em execução.
+- [`arguments.callee`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments/callee) {{Deprecated_inline}}: A função atualmente em execução.
 - [`arguments.caller`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller): A função que invocou a função atualmente em execução.
-- [`arguments.length`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length): O número de argumentos passados para a função.
+- [`arguments.length`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments/length): O número de argumentos passados para a função.
 
 ## Definindo Métodos de Funções
 
@@ -161,7 +164,8 @@ Você pode definir getters (métodos de acesso) and setters (métodos de altera�
 
 ### Sintaxe dos métodos de funções
 
-> **Nota:** Definições de métodos são tecnologias experimentais, parte da proposta do ECMAScript 6, e ainda não são amplamente suportados pelos navegadores.
+> [!NOTE]
+> Definições de métodos são tecnologias experimentais, parte da proposta do ECMAScript 6, e ainda não são amplamente suportados pelos navegadores.
 
 Começando com ECMAScript 6, você é capaz de definir métodos próprios em uma sintaxe mais curta, semelhante aos getters e setters. Veja [method definitions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Method_definitions) para mais informações.
 
@@ -378,10 +382,10 @@ Note that in the `if` test, a reference to `noFunc` is used—there are no brack
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.functions")}}
+{{Compat}}
 
 ## Veja também
 
-- [`Function`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function)
-- [`function` statement](/pt-BR/docs/JavaScript/Reference/Statements/function)
-- [`function` operator](/pt-BR/docs/JavaScript/Reference/Operators/function)
+- [`Function`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function)
+- [`function` statement](/pt-BR/docs/Web/JavaScript/Reference/Statements/function)
+- [`function` operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/function)

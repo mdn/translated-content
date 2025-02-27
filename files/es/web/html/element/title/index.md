@@ -108,8 +108,6 @@ Una técnica de navegación común para los usuarios de tecnología de asistenci
 
 Si el envío de un formulario contiene errores y el envío vuelve a representar la página actual, el título se puede usar para ayudar a que los usuarios se den cuenta de cualquier error en su envío. Por ejemplo, actualice el valor de `title` de la página para reflejar cambios significativos en el estado de la página (como problemas de validación de formularios).
 
-### Ejemplo
-
 ```html
 <title>
   2 errores - Tu orden - Comida china Blue House - FoodYum: ¡Comida a domicilio
@@ -117,7 +115,8 @@ Si el envío de un formulario contiene errores y el envío vuelve a representar 
 </title>
 ```
 
-> **Nota:** Actualmente, los lectores de pantalla no anunciarán automáticamente la actualización dinámica del título de una página. Si va a actualizar el título de la página para reflejar cambios significativos en el estado de una página, entonces también puede ser necesario el uso de [regiones en vivo de ARIA](/es/docs/Web/Accessibility/ARIA/ARIA_Live_Regions).
+> [!NOTE]
+> Actualmente, los lectores de pantalla no anunciarán automáticamente la actualización dinámica del título de una página. Si va a actualizar el título de la página para reflejar cambios significativos en el estado de una página, entonces también puede ser necesario el uso de [regiones en vivo de ARIA](/es/docs/Web/Accessibility/ARIA/ARIA_Live_Regions).
 
 - [MDN Entendiendo las WCAG, Directriz 2.4 explicaciones](/es/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Entendiendo el Criterio de Conformidad 2.4.2 | W3C Entendiendo las WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)

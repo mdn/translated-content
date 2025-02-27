@@ -71,7 +71,8 @@ Um objeto é um iterador quando implementa um método **`next()`** com a semânt
   </tbody>
 </table>
 
-> **Nota:** Não é possível saber de forma reflexiva se um determinado objeto implementa o protocolo do iterador, no entanto, é fácil criar um objeto que satisfaça tanto o iterador quanto os protocolos iteráveis (como mostrado no exemplo abaixo). Fazer isso permite que um iterador seja consumido pelas várias sintaxes que iteráveis esperam. Assim, raramente é desejável implementar o protocolo do iterador sem também implementar iteráveis.
+> [!NOTE]
+> Não é possível saber de forma reflexiva se um determinado objeto implementa o protocolo do iterador, no entanto, é fácil criar um objeto que satisfaça tanto o iterador quanto os protocolos iteráveis (como mostrado no exemplo abaixo). Fazer isso permite que um iterador seja consumido pelas várias sintaxes que iteráveis esperam. Assim, raramente é desejável implementar o protocolo do iterador sem também implementar iteráveis.
 >
 > ```js
 > var myIterator = {
@@ -93,7 +94,7 @@ var someString = "hi";
 typeof someString[Symbol.iterator]; // "function"
 ```
 
-[O iterador padrão](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) de uma string retorna as posições dos caracteres de uma string um por um:
+[O iterador padrão](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) de uma string retorna as posições dos caracteres de uma string um por um:
 
 ```js
 var iterator = someString[Symbol.iterator]();
@@ -178,7 +179,7 @@ Veja também {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Promi
 
 ### Sintaxe que espera iteráveis
 
-Some statements and expressions expect iterables, for example the [`for-of`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) loops, [spread operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator), [`yield*`](/pt-BR/docs/Web/JavaScript/Reference/Operators/yield*), and [destructuring assignment](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+Some statements and expressions expect iterables, for example the [`for-of`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) loops, [spread operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`yield*`](/pt-BR/docs/Web/JavaScript/Reference/Operators/yield*), and [destructuring assignment](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
 
 ```
 for(let value of ['a', 'b', 'c']){
@@ -340,10 +341,7 @@ aGeneratorObject[Symbol.iterator]() === aGeneratorObject;
 
 ## Especificações
 
-| Especificação                                          | Status               | Comentário         |
-| ------------------------------------------------------ | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-iteration', 'Iteration')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-iteration', 'Iteration')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Veja também
 

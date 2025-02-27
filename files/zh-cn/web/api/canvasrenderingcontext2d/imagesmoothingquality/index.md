@@ -1,23 +1,29 @@
 ---
-title: CanvasRenderingContext2D.imageSmoothingQuality
+title: CanvasRenderingContext2D：imageSmoothingQuality 属性
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingQuality
+l10n:
+  sourceCommit: d0d8f446ab0e7330a741fd8cbf1ecb8a2077d3f0
 ---
 
-{{APIRef}} {{SeeCompatTable}}
+{{APIRef}}
 
-**CanvasRenderingContext2D.imageSmoothingQuality** 是 Canvas 2D API，用于设置图像平滑度的属性。
+Canvas 2D API 的 {{domxref("CanvasRenderingContext2D")}} 接口的 **`imageSmoothingQuality`** 属性，用于设置图像平滑度。
 
-## 语法
+> [!NOTE]
+> 要使此属性生效，{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} 属性必须为 `true`。
 
-```
-ctx.imageSmoothingQuality = value
-value = ctx.imageSmoothingQuality
-```
+## 值
 
-### 选项
+以下之一：
 
-- `value`
-  - : "low","medium","high"
+- `"low"`
+  - : 低质量。
+- `"medium"`
+  - : 中等质量。
+- `"high"`
+  - : 高质量。
+
+默认值为 `"low"`。
 
 ## 示例
 
@@ -59,5 +65,6 @@ img.onload = () => {
 
 ## 参见
 
-- 接口定义，{{domxref("CanvasRenderingContext2D")}}
+- 定义此属性的接口：{{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}
 - {{cssxref("image-rendering")}}

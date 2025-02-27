@@ -5,7 +5,7 @@ slug: Web/API/IDBObjectStore/keyPath
 
 {{APIRef("IndexedDB")}}
 
-La propriété **`keyPath`** de l'interface {{domxref("IDBObjectStore")}} renvoie le [chemin de la clé](/fr/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath) de ce magasin d'objet.
+La propriété **`keyPath`** de l'interface {{domxref("IDBObjectStore")}} renvoie le [chemin de la clé](/fr/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keypath) de ce magasin d'objet.
 
 Si cette propriété vaut `null` l'application doit fournir une clé pour chaque opération de modification.
 
@@ -87,7 +87,7 @@ function addData() {
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Initier une connexion : {{domxref("IDBDatabase")}}
 - Utiliser les transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}

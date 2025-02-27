@@ -1,39 +1,68 @@
 ---
 title: String.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
+l10n:
+  sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
 ---
 
 {{JSRef}}
 
-Метод **`includes()`** проверяет, содержит ли строка заданную подстроку, и возвращает, соответственно `true` или `false`.
+Метод **`includes()`** значений {{jsxref("String")}} проверяет с учётом регистра, содержит ли строка заданную подстроку, и возвращает, соответственно `true` или `false`.
+
+{{InteractiveExample("JavaScript Demo: String.includes()", "shorter")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const word = "fox";
+
+console.log(
+  `The word "${word}" ${
+    sentence.includes(word) ? "is" : "is not"
+  } in the sentence`,
+);
+// Expected output: "The word "fox" is in the sentence"
+```
 
 ## Синтаксис
 
-```
-str.includes(searchString[, position])
+```js-nolint
+includes(searchString)
+includes(searchString, position)
 ```
 
 ### Параметры
 
 - `searchString`
-  - : Строка для поиска в данной строке.
+  - : Подстрока для поиска. Не может быть [регулярным выражением](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp). Все значения, не являющиеся регулярными выражениями, [приводятся к строкам](/ru/docs/Web/JavaScript/Reference/Global_Objects/String), поэтому при отсутствии параметра или передаче значения `undefined` метод `includes()` будет искать подстроку `"undefined"`, что редко бывает полезно.
 - `position` {{optional_inline}}
-  - : Позиция в строке, с которой начинать поиск строки `searchString`, по умолчанию 0.
+  - : Позиция, с которой начинается поиск `searchString`. (По умолчанию `0`.)
 
 ### Возвращаемое значение
 
-**`true`**, если искомая строка была найдена в данной строке; иначе **`false`**.
+**`true`**, если искомая подстрока была найдена в данной строке (в том числе когда `searchString` является пустой строкой), и **`false`** в противном случае.
+
+### Исключения
+
+- {{jsxref("TypeError")}}
+  - : Возникает если `searchString` [является регулярным выражением](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp).
 
 ## Описание
 
-Этот метод позволяет вам определять, содержит ли строка другую строку.
+Этот метод позволяет определять, содержит ли строка другую строку.
 
 ### Чувствительность к регистру символов
 
 Метод `includes()` является регистрозависимым. Например, следующее выражение вернёт `false`:
 
 ```js
-"Синий кит".includes("синий"); // вернёт false
+"Синий кит".includes("синий"); // false
+```
+
+Для обхода этого ограничения можно преобразовать обе строки в нижний регистр:
+
+```js
+"Синий кит".toLowerCase().includes("синий"); // true
 ```
 
 ## Примеры
@@ -41,58 +70,29 @@ str.includes(searchString[, position])
 ### Использование `includes()`
 
 ```js
-var str = "Быть или не быть вот в чём вопрос.";
+const str = "Быть или не быть, вот в чём вопрос.";
 
 console.log(str.includes("Быть")); // true
 console.log(str.includes("вопрос")); // true
-console.log(str.includes("несуществующий")); // false
+console.log(str.includes("Гамлет")); // false
 console.log(str.includes("Быть", 1)); // false
 console.log(str.includes("БЫТЬ")); // false
-```
-
-## Полифил
-
-Этот метод был добавлен в спецификации ECMAScript 2015 и может быть недоступен в некоторых реализациях JavaScript. Однако, можно легко эмулировать этот метод:
-
-```js
-if (!String.prototype.includes) {
-  String.prototype.includes = function (search, start) {
-    "use strict";
-    if (typeof start !== "number") {
-      start = 0;
-    }
-
-    if (start + search.length > this.length) {
-      return false;
-    } else {
-      return this.indexOf(search, start) !== -1;
-    }
-  };
-}
+console.log(str.includes("")); // true
 ```
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
-## String.prototype.contains
-
-В Firefox с версии 18 по версию 39, этот метод назывался «contains». Он был переименован в «includes» в замечании {{bug(1102219)}} по следующей причине:
-
-Как было [сообщено](https://bugzilla.mozilla.org/show_bug.cgi?id=789036), некоторые сайты, использующие MooTools 1.2, ломаются в Firefox 17. Эта версия MooTools проверяет существование метода `String.prototype.contains()` и, если он не существует, добавляет свой собственный. С введением этого метода в Firefox 17, поведение этой проверки изменилось таким образом, что реализация `String.prototype.contains()`, основанная на MooTools, сломалась. В результате это изменение было [отключено](https://hg.mozilla.org/releases/mozilla-aurora/rev/086db97198a8) в Firefox 17. Метод `String.prototype.contains()` доступен в следующей версии Firefox — Firefox 18.
-
-MooTools 1.3 принудительно использует свою собственную версию метода `String.prototype.contains()`, так что использующие его веб-сайты не должны ломаться. Тем не менее, следует отметить, что [сигнатура метода в MooTools 1.3](http://mootools.net/core/docs/1.3.2/Types/String#String-method:-contains) отличается от сигнатуры метода в ECMAScript 2015 (во втором аргументе). [В MooTools 1.5+ сигнатура изменена для соответствия стандарту ES2015.](https://github.com/mootools/mootools-core/blob/master/Docs/Types/String.md#note)
-
-В Firefox 48, метод `String.prototype.contains()` был удалён. Следует использовать только `String.prototype.includes()`.
-
 ## Смотрите также
 
-- {{jsxref("Array.prototype.includes()")}} {{experimental_inline}}
-- {{jsxref("TypedArray.prototype.includes()")}} {{experimental_inline}}
+- [Полифил `String.prototype.includes` в `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- {{jsxref("Array.prototype.includes()")}}
+- {{jsxref("TypedArray.prototype.includes()")}}
 - {{jsxref("String.prototype.indexOf()")}}
 - {{jsxref("String.prototype.lastIndexOf()")}}
 - {{jsxref("String.prototype.startsWith()")}}

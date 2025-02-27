@@ -3,7 +3,7 @@ title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
 ---
 
-{{JSRef("Global_Objects", "JSON")}}
+{{JSRef}}
 
 ## Resumo
 
@@ -15,11 +15,11 @@ O Objeto **`JSON`** contém métodos para parsing [JavaScript Object Notation](h
 
 JSON é uma sintaxe para serialização de objetos, matrizes, números, strings, booleanos, e {{jsxref ("null")}}. Baseia-se em sintaxe Javascript, mas é distinta desta: alguns Javascript não são JSON, e alguns JSON não são Javascript.
 
-| JavaScript tipo  | JSON diferenças                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objetos e Arrays | Os nomes das propriedades devem ser strings com aspas duplas; as vírgulas à direita são proibidas.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Números          | Zeros à esquerda são proibidos; um ponto decimal deve ser seguido por pelo menos um dígito.                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Strings          | Apenas um conjunto limitado de caracteres pode ser escapado; certos caracteres de controle são proibidos; o separador de linha Unicode ([U+2028](http://unicode-table.com/en/2028/)) e o separador de parágrafo ([U+2029](http://unicode-table.com/en/2029/)) caracteres são permitidos; strings devem ter aspas duplas.Veja o exemplo a seguir, onde {{jsxref("JSON.parse()")}} funciona bem e um {{jsxref("SyntaxError")}} é lançado ao avaliar o código como JavaScript: var code = '"\u2028\u2029"'; JSON.parse(code); // works fine eval(code); // fails |
+| JavaScript tipo  | JSON diferenças                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objetos e Arrays | Os nomes das propriedades devem ser strings com aspas duplas; as vírgulas à direita são proibidas.                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Números          | Zeros à esquerda são proibidos; um ponto decimal deve ser seguido por pelo menos um dígito.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Strings          | Apenas um conjunto limitado de caracteres pode ser escapado; certos caracteres de controle são proibidos; o separador de linha Unicode ([U+2028](https://symbl.cc/en/2028/)) e o separador de parágrafo ([U+2029](https://symbl.cc/en/2029/)) caracteres são permitidos; strings devem ter aspas duplas.Veja o exemplo a seguir, onde {{jsxref("JSON.parse()")}} funciona bem e um {{jsxref("SyntaxError")}} é lançado ao avaliar o código como JavaScript: var code = '"\u2028\u2029"'; JSON.parse(code); // works fine eval(code); // fails |
 
 A sintaxe completa do JSON é a seguinte:
 
@@ -154,7 +154,7 @@ if (!window.JSON) {
 
 ## Navegador compatível
 
-{{Compat("javascript.builtins.JSON")}}
+{{Compat}}
 
 ## Veja também
 

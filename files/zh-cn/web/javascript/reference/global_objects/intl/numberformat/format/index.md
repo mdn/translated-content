@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 
 **`Intl.NumberFormat.prototype.format`** 属性返回一个根据{{jsxref("NumberFormat")}}对象的语言环境和格式化选项，来格式化一个数字的 getter 函数。
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-format.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.format")}}
+
+```js interactive-example
+const amount = 654321.987;
+
+const options1 = { style: "currency", currency: "RUB" };
+const numberFormat1 = new Intl.NumberFormat("ru-RU", options1);
+
+console.log(numberFormat1.format(amount));
+// Expected output: "654 321,99 ₽"
+
+const options2 = { style: "currency", currency: "USD" };
+const numberFormat2 = new Intl.NumberFormat("en-US", options2);
+
+console.log(numberFormat2.format(amount));
+// Expected output: "$654,321.99"
+```
 
 ## 语法
 
@@ -57,7 +73,7 @@ console.log(formatted.join("; "));
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("NumberFormat", "Intl.NumberFormat")}}
 - {{jsxref("Number.prototype.toLocaleString()")}}

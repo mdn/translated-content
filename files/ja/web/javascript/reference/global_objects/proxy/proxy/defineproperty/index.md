@@ -9,7 +9,28 @@ l10n:
 
 **`handler.defineProperty()`** は、オブジェクトの `[[DefineOwnProperty]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Object.defineProperty()")}} などの操作で使用されます。
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-defineproperty.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.defineProperty()", "taller")}}
+
+```js interactive-example
+const handler1 = {
+  defineProperty(target, key, descriptor) {
+    invariant(key, "define");
+    return true;
+  },
+};
+
+function invariant(key, action) {
+  if (key[0] === "_") {
+    throw new Error(`Invalid attempt to ${action} private "${key}" property`);
+  }
+}
+
+const monster1 = {};
+const proxy1 = new Proxy(monster1, handler1);
+
+console.log((proxy1._secret = "easily scared"));
+// Expected output: Error: Invalid attempt to define private "_secret" property
+```
 
 ## 構文
 

@@ -40,7 +40,7 @@ void gl.drawArrays(mode, first, count);
 
 - `mode` が許容された値のどれでもない場合、`gl.INVALID_ENUM` エラーがスローされます。
 - `first` や `count` が負数の場合、`gl.INVALID_VALUE` エラーがスローされます。
-- `gl.CURRENT_PROGRAM` が {{jsxref("null")}} の場合、`gl.INVALID_OPERATION` エラーがスローされます。
+- `gl.CURRENT_PROGRAM` が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) の場合、`gl.INVALID_OPERATION` エラーがスローされます。
 
 ## 例
 
@@ -54,7 +54,7 @@ gl.drawArrays(gl.POINTS, 0, 8);
 
 ## ブラウザーの対応
 
-{{Compat("api.WebGLRenderingContext.drawArrays")}}
+{{Compat}}
 
 ## 関連項目
 

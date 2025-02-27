@@ -45,7 +45,8 @@ text-rendering: unset;
 
     しかし、 `geometricPrecision` は — レンダリングエンジンが完全に対応していれば — なめらかにテキストを拡縮することができます。倍率が大きい場合、文字列の描画があまり美しくならないかもしれませんが、寸法は Windows や Linux が対応しているフォントの大きさに切り上げられたり切り捨てられたりせず、期待通りになります。
 
-    > **メモ:** WebKit は指定された値を厳密に適用しますが、 Gecko は値を `optimizeLegibility` と同様に扱います。
+    > [!NOTE]
+    > WebKit は指定された値を厳密に適用しますが、 Gecko は値を `optimizeLegibility` と同様に扱います。
 
 ## 公式定義
 
@@ -139,7 +140,7 @@ p {
 ## 関連情報
 
 - [`<canvas>` に文字を描く](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
-- [CSS テキスト装飾](/ja/docs/Web/CSS/CSS_Text_Decoration) モジュール
+- [CSS テキスト装飾](/ja/docs/Web/CSS/CSS_text_decoration) モジュール
 - 関連する CSS プロパティ
 
   - [`text-decoration`](/ja/docs/Web/CSS/text-decoration) (および [`text-decoration-line`](/ja/docs/Web/CSS/text-decoration-line), [`text-decoration-style`](/ja/docs/Web/CSS/text-decoration-style), [`text-decoration-thickness`](/ja/docs/Web/CSS/text-decoration-thickness) などの個別指定プロパティ)

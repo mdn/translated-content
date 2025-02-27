@@ -54,7 +54,8 @@ Le texte est difficile à lire en raison du schéma de couleurs actuel. Pouvez-v
 2. Pouvez-vous mettre à jour le texte de l'article pour faciliter la navigation des utilisateurs de lecteurs d'écran?
 3. La partie du menu de navigation du site ( `<div class="nav"></div>`) pourrait être rendue plus accessible en la plaçant dans un élément sémantique HTML5 approprié. Lequel devrait-il être mis à jour? Faites la mise à jour.
 
-> **Note :** Vous devrez mettre à jour les sélecteurs de règles CSS qui attribuent aux balises le même style que les balises sémantiques. Une fois que vous avez ajouté des éléments de paragraphe, vous remarquerez que le style est meilleur.
+> [!NOTE]
+> Vous devrez mettre à jour les sélecteurs de règles CSS qui attribuent aux balises le même style que les balises sémantiques. Une fois que vous avez ajouté des éléments de paragraphe, vous remarquerez que le style est meilleur.
 
 ### Les images
 

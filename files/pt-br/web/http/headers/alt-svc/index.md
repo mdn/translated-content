@@ -43,8 +43,8 @@ Alt-Svc: h3-25=":443"; ma=3600, h2=":443"; ma=3600
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Alt-Svc")}}
+{{Compat}}
 
 ## Veja também
 
-- [Identificando recursos na Web](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [Identificando recursos na Web](/pt-BR/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)

@@ -105,7 +105,7 @@ value2
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Content-Disposition")}}
+{{Compat}}
 
 ## 互換性の注意
 
@@ -113,6 +113,6 @@ value2
 
 ## 関連情報
 
-- [HTML Forms](/ja/docs/Web/Guide/HTML/Forms)
+- [HTML Forms](/ja/docs/Learn/Forms)
 - {{HTTPHeader("Content-Type")}}: マルチパート本文の境界を定義
 - {{domxref("FormData")}} インターフェイス: {{domxref("XMLHttpRequest")}} API でフォームデータを操作するために使用

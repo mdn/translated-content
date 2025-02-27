@@ -5,7 +5,7 @@ slug: Web/HTML/Attributes/minlength
 
 {{HTMLSidebar}}
 
-L'attribut **`minlength`** définit le nombre minimal de caractères (sous forme d'unités de code UTF-16) que l'utilisateur peut saisir dans un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) ou [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea). Il doit s'agir d'une valeur entière égale ou supérieure à 0. Si aucune longueur minimale n'est spécifiée, ou si une valeur invalide est spécifiée, l'entrée n'a pas de longueur minimale. Cette valeur doit être inférieure ou égale à la valeur de [`maxlength`](/fr/docs/Web/HTML/Attributes/maxlength), sinon la valeur ne sera jamais valide, car il est impossible de satisfaire aux deux critères.
+L'attribut **`minlength`** définit le nombre minimal de caractères (sous forme d'unités de code UTF-16) que l'utilisateur peut saisir dans un élément [`<input>`](/fr/docs/Web/HTML/Element/input) ou [`<textarea>`](/fr/docs/Web/HTML/Element/textarea). Il doit s'agir d'une valeur entière égale ou supérieure à 0. Si aucune longueur minimale n'est spécifiée, ou si une valeur invalide est spécifiée, l'entrée n'a pas de longueur minimale. Cette valeur doit être inférieure ou égale à la valeur de [`maxlength`](/fr/docs/Web/HTML/Attributes/maxlength), sinon la valeur ne sera jamais valide, car il est impossible de satisfaire aux deux critères.
 
 L'entrée échouera à la validation des contraintes si la longueur de la valeur textuelle du champ est inférieure à `minlength` unités de code UTF-16, avec [`validityState.tooShort`](/fr/docs/Web/API/validityState/tooShort) retournant `true`. La validation des contraintes n'est appliquée que lorsque la valeur est modifiée par l'utilisateur. En cas d'échec de la soumission, certains navigateurs affichent un message d'erreur indiquant la longueur minimale requise et la longueur actuelle.
 
@@ -47,6 +47,6 @@ input:invalid:focus {
 - L'attribut [`maxlength`](/fr/docs/Web/HTML/Attributes/maxlength)
 - L'attribut [`size`](/fr/docs/Web/HTML/Attributes/size)
 - L'attribut [`pattern`](/fr/docs/Web/HTML/Attributes/pattern)
-- [Validation des contraintes](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation)
-- L'API [Constraint validation](/fr/docs/Web/API/Constraint_validation)
-- L'élément [`<input>`](/fr/docs/Web/HTML/Element/Input)
+- [Validation des contraintes](/fr/docs/Web/HTML/Constraint_validation)
+- L'API [Constraint validation](/fr/docs/Learn/Forms/Form_validation)
+- L'élément [`<input>`](/fr/docs/Web/HTML/Element/input)

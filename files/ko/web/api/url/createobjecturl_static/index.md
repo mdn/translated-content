@@ -11,7 +11,8 @@ slug: Web/API/URL/createObjectURL_static
 
 {{AvailableInWorkers}}
 
-> **참고:** 이 기능은 메모리 누수의 가능성으로 인해 [Service Worker](/ko/docs/Web/API/Service_Worker_API)에서 사용할 수 없습니다.
+> [!NOTE]
+> 이 기능은 메모리 누수의 가능성으로 인해 [Service Worker](/ko/docs/Web/API/Service_Worker_API)에서 사용할 수 없습니다.
 
 ## 구문
 
@@ -30,7 +31,7 @@ const objectURL = URL.createObjectURL(object);
 
 ## 예제
 
-[객체 URL을 사용하여 이미지 표시하기](/ko/docs/Web/API/File/Using_files_from_web_applications#예시_객체_URL을_사용하여_이미지_표시하기)를 보세요.
+[객체 URL을 사용하여 이미지 표시하기](/ko/docs/Web/API/File_API/Using_files_from_web_applications#예시_객체_url을_사용하여_이미지_표시하기)를 보세요.
 
 ## 사용 일람
 
@@ -56,7 +57,7 @@ const objectURL = URL.createObjectURL(object);
 
 ## 같이 보기
 
-- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications)
+- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File_API/Using_files_from_web_applications)
 - {{domxref("URL.revokeObjectURL()")}}
 - {{domxref("HTMLMediaElement.srcObject")}}
 - {{domxref("FileReader.readAsDataURL()")}}

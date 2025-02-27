@@ -71,4 +71,4 @@ slug: Web/API/MediaStreamTrack
 
 ## 参见
 
-- [Using the MediaStream API](/zh-CN/docs/WebRTC/MediaStream_API)
+- [Using the MediaStream API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)

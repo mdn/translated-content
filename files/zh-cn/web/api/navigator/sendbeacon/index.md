@@ -67,7 +67,7 @@ document.addEventListener("visibilitychange", function logData() {
 2. 完成浏览后，用户切换到了其他应用程序，而不是关闭选项卡。
 3. 随后，用户通过手机的应用管理器关闭了浏览器应用。
 
-此外，`unload` 事件与现代浏览器实现的往返缓存（[bfcache](https://web.dev/bfcache/)）不兼容。在部分浏览器（如：Firefox）通过在 bfcache 中排除包含 `unload` 事件处理器的页面来解决不兼容问题，但这存在性能损失。其他浏览器，例如 Safari 和 Android 上的 Chrome 浏览器则采取用户在同一标签页下导航至其他页面时不触发 `unload` 事件的方法来解决不兼容问题。
+此外，`unload` 事件与现代浏览器实现的往返缓存（[bfcache](https://web.developers.google.cn/articles/bfcache)）不兼容。在部分浏览器（如：Firefox）通过在 bfcache 中排除包含 `unload` 事件处理器的页面来解决不兼容问题，但这存在性能损失。其他浏览器，例如 Safari 和 Android 上的 Chrome 浏览器则采取用户在同一标签页下导航至其他页面时不触发 `unload` 事件的方法来解决不兼容问题。
 
 Firefox 也会在 bfcache 中排除包含 `beforeunload` 事件处理器的页面。
 
@@ -101,6 +101,6 @@ document.addEventListener("visibilitychange", function logData() {
 - {{domxref("Beacon_API","Beacon API", "" , "true")}} 概述。
 - [Don't
   lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) 解释了为什么你应该使用 `visibilitychange` 而不是 `beforeunload`/`unload`。
-- [网页生命周期 API](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#developer-recommendations-for-each-state) 提供了有关在 Web 应用程序中处理网页生命周期行为的最佳实践。
+- [网页生命周期 API](https://developer.chrome.google.cn/docs/web-platform/page-lifecycle-api#developer_recommendations_for_each_state) 提供了有关在 Web 应用程序中处理网页生命周期行为的最佳实践。
 - [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle)：处理跨浏览器网页生命周期行为不一致的 JavaScript 库。
-- [Back/forward cache](https://web.dev/bfcache/) 解释了什么是往返缓存，以及它对各种网页生命周期事件的影响。
+- [Back/forward cache](https://web.developers.google.cn/articles/bfcache) 解释了什么是往返缓存，以及它对各种网页生命周期事件的影响。

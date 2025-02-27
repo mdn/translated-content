@@ -9,7 +9,8 @@ slug: Web/CSS/unicode-bidi
 
 `unicode-bidi` 与 {{cssxref("direction")}} 是仅有的两个不受 {{cssxref("all")}} 简写影响的属性。
 
-> **警告：** 此属性是文档类型定义（Document Type Definition, DTD）的设计者专用的。Web 设计者与其他类似的人员不应覆盖此属性。
+> [!WARNING]
+> 此属性是文档类型定义（Document Type Definition, DTD）的设计者专用的。Web 设计者与其他类似的人员不应覆盖此属性。
 
 ```css
 /* 关键字值 */

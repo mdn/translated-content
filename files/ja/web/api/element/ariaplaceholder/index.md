@@ -10,7 +10,8 @@ l10n:
 
 **`ariaPlaceholder`** は {{domxref("Element")}} インターフェイスのプロパティで、`aria-placeholder` 属性の値を反映します。この属性は、コントロールに値がない場合表示する、ユーザーのデータ入力を助けることを意図した短いヒントを定義します。
 
-> **メモ:** 可能であれば、HTML の {{htmlelement("input")}} 要素の `type="text"` と {{htmlelement("textarea")}} を使用してください。これらは意味づけがあり、ARIA 属性を必要としません。
+> [!NOTE]
+> 可能であれば、HTML の {{htmlelement("input")}} 要素の `type="text"` と {{htmlelement("textarea")}} を使用してください。これらは意味づけがあり、ARIA 属性を必要としません。
 
 ## 値
 

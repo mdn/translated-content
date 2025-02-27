@@ -9,7 +9,7 @@ slug: Web/HTTP/Status/304
 
 이에 상응하는 {{HTTPStatus("200")}} `OK` 응답에는 {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}}, {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}}, 그리고 {{HTTPHeader("Vary")}} 가 포함되어 있었을 것이다.
 
-> **참고:** [브라우저의 개발자도구 네트워크 패널](/ko/docs/Tools/Network_Monitor)은 304 응답으로 이어지는 많은 요청을 생성하며, 로컬 캐시로 액세스 하는 것을 개발자에게 보여준다.
+> **참고:** [브라우저의 개발자도구 네트워크 패널](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)은 304 응답으로 이어지는 많은 요청을 생성하며, 로컬 캐시로 액세스 하는 것을 개발자에게 보여준다.
 
 ## 상태
 

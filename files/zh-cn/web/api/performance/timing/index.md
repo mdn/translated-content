@@ -5,15 +5,10 @@ slug: Web/API/Performance/timing
 
 {{APIRef("Navigation Timing")}}{{deprecated_header}}
 
-> **警告：** 该属性在 [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete) 中已经被废弃，请使用 {{domxref("PerformanceNavigationTiming")}} 替代。
+> [!WARNING]
+> 该属性在 [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete) 中已经被废弃，请使用 {{domxref("PerformanceNavigationTiming")}} 替代。
 
 **`Performance.timing`** 只读属性返回一个 {{domxref("PerformanceTiming")}} 对象，这个对象包括了页面相关的性能信息。
-
-## 语法
-
-```
-timingInfo = performance.timing;
-```
 
 ## 规范
 
@@ -23,6 +18,6 @@ timingInfo = performance.timing;
 
 {{Compat}}
 
-## 相关
+## 参见
 
 - {{domxref("Performance")}} 接口。

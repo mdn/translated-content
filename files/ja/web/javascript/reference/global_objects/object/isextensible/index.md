@@ -1,17 +1,31 @@
 ---
 title: Object.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
+l10n:
+  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
 {{JSRef}}
 
-**`Object.isExtensible()`** メソッドは、オブジェクトが拡張可能であるか (新しいプロパティを追加することができるかどうか) を判定します。
+**`Object.isExtensible()`** メソッドは、オブジェクトが拡張可能であるか（新しいプロパティを追加することができるかどうか）を判定します。
 
-{{EmbedInteractiveExample("pages/js/object-isextensible.html")}}
+{{InteractiveExample("JavaScript Demo: Object.isExtensible()")}}
+
+```js interactive-example
+const object1 = {};
+
+console.log(Object.isExtensible(object1));
+// Expected output: true
+
+Object.preventExtensions(object1);
+
+console.log(Object.isExtensible(object1));
+// Expected output: false
+```
 
 ## 構文
 
-```
+```js-nolint
 Object.isExtensible(obj)
 ```
 
@@ -22,11 +36,11 @@ Object.isExtensible(obj)
 
 ### 返値
 
-{{jsxref("Boolean")}} で、与えられたオブジェクトが拡張可能であるかどうかを示します。
+論理値で、与えられたオブジェクトが拡張可能であるかどうかを示します。
 
 ## 解説
 
-オブジェクトは既定では拡張可能です。つまり、新しいプロパティの追加が可能であり、[`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) のプロパティに対応しているエンジンでは) `__proto__` プロパティを変更することができます。オブジェクトは {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, {{jsxref("Object.freeze()")}} の何れかを用いる事で拡張不能に設定する事が可能です。
+オブジェクトは既定では拡張可能です。つまり、新しいプロパティの追加が可能であり、 `[[Prototype]]` プロパティに再代入することができます。オブジェクトは {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, {{jsxref("Object.freeze()")}}, {{jsxref("Reflect.preventExtensions()")}} のいずれかを用いる事で拡張不能に設定する事が可能です。
 
 ## 例
 
@@ -34,25 +48,25 @@ Object.isExtensible(obj)
 
 ```js
 // 新規のオブジェクトは拡張可能
-var empty = {};
-Object.isExtensible(empty); // === true
+const empty = {};
+Object.isExtensible(empty); // true
 
 // その設定は変える事が可能
 Object.preventExtensions(empty);
-Object.isExtensible(empty); // === false
+Object.isExtensible(empty); // false
 
 // seal メソッドで封印されたオブジェクトは拡張不可と定義される
-var sealed = Object.seal({});
-Object.isExtensible(sealed); // === false
+const sealed = Object.seal({});
+Object.isExtensible(sealed); // false
 
 // freeze メソッドで凍結されたオブジェクトも拡張不可と定義される
-var frozen = Object.freeze({});
-Object.isExtensible(frozen); // === false
+const frozen = Object.freeze({});
+Object.isExtensible(frozen); // false
 ```
 
 ### オブジェクト以外の型強制
 
-ES5 では、このメソッドの引数がオブジェクトではない場合 (プリミティブの場合)、 {{jsxref("TypeError")}} が発生します。 ES2015 以降では、オブジェクトでない引数は、それが拡張不可能な通常のオブジェクトであるかのように扱われ、単に `false` を返します。
+ES5 では、このメソッドの引数がオブジェクトではない場合（プリミティブの場合）、 {{jsxref("TypeError")}} が発生します。 ES2015 以降では、オブジェクトでない引数は、それが拡張不可能な通常のオブジェクトであるかのように扱われ、単に `false` を返します。
 
 ```js
 Object.isExtensible(1);
@@ -68,7 +82,7 @@ Object.isExtensible(1);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.isExtensible")}}
+{{Compat}}
 
 ## 関連情報
 

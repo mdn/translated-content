@@ -14,13 +14,14 @@ El sistema de almacenamiento se basa en [Web Storage API](/es/docs/Web/API/Web_S
 - Los valores almacenados pueden ser cualquier valor JSON, no solo [`String`](/es/docs/Web/JavaScript/Reference/Global_Objects/String). Entre otras cosas, esto incluye: [`Array`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array) y [`Object`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object), pero solo cuando sus contenidos se pueden representar como JSON, que no incluye nodos DOM. No es necesario convertir sus valores en cadenas JSON antes de almacenarlos, pero se representan como JSON internamente, por lo tanto, el requisito de que sean responsables de JSON.
 - Se pueden establecer o recuperar múltiples pares de clave / valor en la misma llamada a la API.
 
-Para usar esta API, debe incluir el [permiso](/es/docs/) de "storage" en su archivo [manifest.json](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
+Para usar esta API, debe incluir el [permiso](/es/docs/Web) de "storage" en su archivo [manifest.json](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
 Cada extensión tiene su propia área de almacenamiento, que se puede dividir en diferentes tipos de almacenamiento.
 
 Aunque esta API es similar a {{domxref ("Window.localStorage")}}, se recomienda que no use Window\.localStorage en el código de extensión para almacenar datos relacionados con la extensión. Firefox borrará los datos almacenados por las extensiones utilizando la API localStorage en varios escenarios donde los usuarios borran su historial de navegación y los datos por razones de privacidad, mientras que los datos guardados utilizando la API [`storage.local`](/es/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) se conservarán correctamente en estos escenarios.
 
-> **Nota:** El área de almacenamiento no está encriptada y no debe utilizarse para almacenar información confidencial del usuario, como claves.
+> [!NOTE]
+> El área de almacenamiento no está encriptada y no debe utilizarse para almacenar información confidencial del usuario, como claves.
 
 ## Tipos
 
@@ -53,7 +54,7 @@ El almacenamiento tiene tres propiedades, que representan los diferentes tipos d
 
 > **Nota:** **Agradecimientos**
 >
-> Esta API se basa en la API [`chrome.storage`](https://developer.chrome.com/extensions/storage) de Chromium. Esta documentación se deriva de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) en el código de Chromium.
+> Esta API se basa en la API [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) de Chromium. Esta documentación se deriva de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) en el código de Chromium.
 >
 > Los datos de compatibilidad de Microsoft Edge son proporcionados por Microsoft Corporation y se incluyen aquí bajo la Licencia de Estados Unidos Creative Commons Attribution 3.0.
 

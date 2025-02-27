@@ -1,5 +1,5 @@
 ---
-title: "::selection"
+title: ::selection
 slug: Web/CSS/::selection
 ---
 
@@ -26,15 +26,15 @@ slug: Web/CSS/::selection
 - {{CSSxRef("text-emphasis-color")}}
 - {{CSSxRef("text-shadow")}}
 
-> **警告：** 要特别注意的是，{{ cssxref("background-image") }} 会如同其他属性一样被忽略。
+> [!WARNING]
+> 要特别注意的是，{{ cssxref("background-image") }} 会如同其他属性一样被忽略。
 
 ## 语法
 
-```
-/* Legacy Firefox syntax (version 61 and below) */
-::-moz-selection
-
-{{CSSSyntax}}
+```css
+::selection {
+  /* ... */
+}
 ```
 
 ## 示例

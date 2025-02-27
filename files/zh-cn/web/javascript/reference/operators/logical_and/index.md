@@ -9,7 +9,15 @@ slug: Web/JavaScript/Reference/Operators/Logical_AND
 
 一般来说，当从左到右求值时，该操作符返回第一个{{Glossary("falsy","假值")}}操作数的值；如果它们都是{{Glossary("truthy","真值")}}，则返回最后一个操作数的值。
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical AND", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 && b > 0);
+// Expected output: false
+```
 
 ## 语法
 
@@ -48,7 +56,7 @@ result = "foo" && 4; // 结果被赋值为 4
 
 考虑如下伪代码。
 
-```
+```plain
 (some falsy expression) && expr
 ```
 
@@ -64,7 +72,7 @@ function B() {
   return true;
 }
 console.log(A() && B());
-// 由于调用了 A 函数，故会输出 "called A" 到控制台，
+// 由于调用了 A 函数，故会输出“调用了 A”到控制台，
 // && 求值结果为 false（A 函数返回 false），然后输出 false 到控制台；
 // 与运算符在这里短路，忽略了 B 函数
 ```

@@ -2,14 +2,28 @@
 title: Array.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
 l10n:
-  sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
+  sourceCommit: a815a95e4ab4adf391d8a7bc66a3abbce1a686d8
 ---
 
 {{JSRef}}
 
 {{jsxref("Array")}} 인스턴스의 **`at()`** 메서드는 정숫값을 받아 해당 인덱스에 있는 항목을 반환하며, 양수와 음수를 사용할 수 있습니다. 음의 정수는 배열의 마지막 항목부터 거슬러 셉니다.
 
-{{EmbedInteractiveExample("pages/js/array-at.html")}}
+{{InteractiveExample("JavaScript Demo: Array.at()")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+let index = 2;
+
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of 2 returns 8"
+
+index = -2;
+
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of -2 returns 130"
+```
 
 ## 구문
 
@@ -31,6 +45,8 @@ at(index)
 인덱스가 음수가 아니라면, `at()` 메서드는 대괄호 표기법과 동일합니다. 예를 들어, `array[0]`과 `array.at(0)`은 모두 배열의 첫 번째 항목을 반환합니다. 그러나 배열의 끝에서부터 요소를 계산할 땐 Python이나 R처럼 `array[-1]`을 사용할 수 없습니다. 대괄호 안의 모든 값은 문자 그대로 문자열 속성으로 처리되므로 `array["-1"]`을 읽게 됩니다. 이는 배열 인덱스가 아닌 일반 문자열 속성입니다.
 
 일반적인 방법은 {{jsxref("Array/length", "length")}}에 접근하고, 그로부터 인덱스를 계산하는 것입니다(예: `array[array.length - 1]`). `at()` 메서드는 상대 인덱싱을 허용하므로 이를 `array.at(-1)`로 단축할 수 있습니다.
+
+`at()`와 {{jsxref("Array/with", "with()")}}를 결합하면 음수 인덱스를 사용하여 각각 배열을 읽고 쓸 수 있습니다.
 
 `at()` 메서드는 [범용적](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#범용_배열_메서드)입니다. `this` 값에는 `length` 속성과 정수 키 속성만 있을 것으로 예상합니다.
 

@@ -60,7 +60,7 @@ GET /index.html
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.methods.GET")}}
+{{Compat}}
 
 ## Veja também
 

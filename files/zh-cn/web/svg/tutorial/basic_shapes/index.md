@@ -77,7 +77,7 @@ slug: Web/SVG/Tutorial/Basic_Shapes
 
 ### 椭圆
 
-[Ellipse](/zh-CN/Web/SVG/Element/ellipse) 是`circle`元素更通用的形式，你可以分别缩放圆的 x 半径和 y 半径（通常数学家称之为长轴半径和短轴半径）。
+[Ellipse](/zh-CN/docs/Web/SVG/Element/ellipse) 是`circle`元素更通用的形式，你可以分别缩放圆的 x 半径和 y 半径（通常数学家称之为长轴半径和短轴半径）。
 
 ```xml
 <ellipse cx="75" cy="75" rx="20" ry="5"/>
@@ -94,7 +94,7 @@ slug: Web/SVG/Tutorial/Basic_Shapes
 
 ### 线条
 
-[Line](/zh-CN/Web/SVG/Element/line) 绘制直线。它取两个点的位置作为属性，指定这条线的起点和终点位置。
+[Line](/zh-CN/docs/Web/SVG/Element/line) 绘制直线。它取两个点的位置作为属性，指定这条线的起点和终点位置。
 
 ```xml
 <line x1="10" x2="50" y1="110" y2="150" stroke="black" stroke-width="5"/>
@@ -111,7 +111,7 @@ slug: Web/SVG/Tutorial/Basic_Shapes
 
 ### 折线
 
-[Polyline](/zh-CN/Web/SVG/Element/polyline)是一组连接在一起的直线。因为它可以有很多的点，折线的的所有点位置都放在一个 points 属性中：
+[Polyline](/zh-CN/docs/Web/SVG/Element/polyline)是一组连接在一起的直线。因为它可以有很多的点，折线的所有点位置都放在一个 points 属性中：
 
 ```xml
 <polyline points="60, 110 65, 120 70, 115 75, 130 80, 125 85, 140 90, 135 95, 150 100, 145"/>
@@ -122,7 +122,7 @@ slug: Web/SVG/Tutorial/Basic_Shapes
 
 ### 多边形
 
-[`polygon`](/zh-CN/SVG/Element/polygon)和折线很像，它们都是由连接一组点集的直线构成。不同的是，`polygon`的路径在最后一个点处自动回到第一个点。需要注意的是，矩形也是一种多边形，如果需要更多灵活性的话，你也可以用多边形创建一个矩形。
+[`polygon`](/zh-CN/docs/SVG/Element/polygon)和折线很像，它们都是由连接一组点集的直线构成。不同的是，`polygon`的路径在最后一个点处自动回到第一个点。需要注意的是，矩形也是一种多边形，如果需要更多灵活性的话，你也可以用多边形创建一个矩形。
 
 ```xml
 <polygon points="50, 160 55, 180 70, 180 60, 190 65, 205 50, 195 35, 205 40, 190 30, 180 45, 180"/>
@@ -133,13 +133,13 @@ slug: Web/SVG/Tutorial/Basic_Shapes
 
 ### 路径
 
-`path`可能是 SVG 中最常见的形状。你可以用 path 元素绘制矩形（直角矩形或者圆角矩形）、圆形、椭圆、折线形、多边形，以及一些其他的形状，例如贝塞尔曲线、2 次曲线等曲线。因为 path 很强大也很复杂，所以会在[下一章](/zh-CN/SVG/Tutorial/Paths)进行详细介绍。这里只介绍一个定义路径形状的属性。
+`path`可能是 SVG 中最常见的形状。你可以用 path 元素绘制矩形（直角矩形或者圆角矩形）、圆形、椭圆、折线形、多边形，以及一些其他的形状，例如贝塞尔曲线、2 次曲线等曲线。因为 path 很强大也很复杂，所以会在[下一章](/zh-CN/docs/SVG/Tutorial/Paths)进行详细介绍。这里只介绍一个定义路径形状的属性。
 
 ```xml
 <path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/>
 ```
 
 - d
-  - : 一个点集数列以及其他关于如何绘制路径的信息。请阅读[路径](/zh-CN/Web/SVG/Tutorial/Paths)章节以了解更多信息。
+  - : 一个点集数列以及其他关于如何绘制路径的信息。请阅读[路径](/zh-CN/docs/Web/SVG/Tutorial/Paths)章节以了解更多信息。
 
 {{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}

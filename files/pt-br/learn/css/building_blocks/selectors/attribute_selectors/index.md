@@ -81,7 +81,8 @@ No exemplo abaixo, o primeiro seletor corresponderá a um valor que começa com 
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/attribute-case.html", '100%', 800)}}
 
-> **Nota:** Há tambem um valor mais novo `s`, que forçará a correspondência com distinção entre maiúsculas e minúsculas em contextos em que a correspondência normalmente não diferencia maiúsculas de minúsculas; no entanto, isso não é bem suportado em navegadores e não é muito útil em um contexto HTML.
+> [!NOTE]
+> Há tambem um valor mais novo `s`, que forçará a correspondência com distinção entre maiúsculas e minúsculas em contextos em que a correspondência normalmente não diferencia maiúsculas de minúsculas; no entanto, isso não é bem suportado em navegadores e não é muito útil em um contexto HTML.
 
 ## Próximos passos
 

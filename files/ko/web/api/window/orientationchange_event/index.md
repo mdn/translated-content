@@ -3,12 +3,14 @@ title: orientationchange
 slug: Web/API/Window/orientationchange_event
 ---
 
+{{APIRef}}
+
 `orientationchange` 이벤트는 장치의 방향이 바뀔 때 호출 된다.
 
 ## General info
 
 - Specification
-  - : [Screen Orientation](http://www.w3.org/TR/screen-orientation/#event-handlers)
+  - : [Screen Orientation](https://www.w3.org/TR/screen-orientation/#event-handlers)
 - Interface
   - : Event
 - Bubbles

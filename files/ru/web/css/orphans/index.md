@@ -5,7 +5,7 @@ slug: Web/CSS/orphans
 
 {{CSSRef}}
 
-Свойство [CSS](/ru/docs/CSS) `orphans` устанавливает _минимальное_ число строк в блочном контейнере, которое должно быть показано _внизу_ [страницы](/ru/docs/Web/CSS/Paged_Media), региона или [столбца](/ru/docs/Web/CSS/CSS_Columns).
+Свойство [CSS](/ru/docs/Web/CSS) `orphans` устанавливает _минимальное_ число строк в блочном контейнере, которое должно быть показано _внизу_ [страницы](/ru/docs/Web/CSS/CSS_paged_media), региона или [столбца](/ru/docs/Web/CSS/CSS_multicol_layout).
 
 ```css
 /* <integer> значения */
@@ -18,7 +18,8 @@ orphans: initial;
 orphans: unset;
 ```
 
-> **Примечание:** В типографии, _orphan_ это первая линия абзаца, которая отображается внизу страницы. (Абзац продолжается на следующей странице.)
+> [!NOTE]
+> В типографии, _orphan_ это первая линия абзаца, которая отображается внизу страницы. (Абзац продолжается на следующей странице.)
 
 {{cssinfo}}
 
@@ -82,11 +83,11 @@ p:first-child {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - {{cssxref("widows")}}
-- [Paged media](/ru/docs/Web/CSS/Paged_Media)
+- [Paged media](/ru/docs/Web/CSS/CSS_paged_media)

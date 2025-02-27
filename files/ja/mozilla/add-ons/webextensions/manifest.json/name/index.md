@@ -22,11 +22,11 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/name
   </tbody>
 </table>
 
-拡張機能の名前です。これはブラウザーのユーザーインターフェースや addons.mozilla.org のようなサイトで拡張機能を識別するために使用されます。
+拡張機能の名前です。これはブラウザーのユーザーインターフェイスや addons.mozilla.org のようなサイトで拡張機能を識別するために使用されます。
 
 名前が UI に表示されるよう長すぎないようにするのは良い習慣です。Google Chrome と Microsoft Edge は名前を 45 文字に制限しています。
 
-これは[国際化できるプロパティ](/ja/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json)です。
+これは[国際化できるプロパティ](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json)です。
 
 ## 例
 
@@ -36,4 +36,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/name
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.name")}}
+{{Compat}}

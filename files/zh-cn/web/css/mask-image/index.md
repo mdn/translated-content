@@ -19,7 +19,8 @@ mask-image: linear-gradient(rgba(0, 0, 0, 1), transparent);
 mask-image: image(url(mask.png), skyblue);
 
 /* 多个属性值 */
-mask-image: image(url(mask.png), skyblue), linear-gradient(rgba(0, 0, 0, 1), transparent);
+mask-image:
+  image(url(mask.png), skyblue), linear-gradient(rgba(0, 0, 0, 1), transparent);
 
 /* 全局属性值 */
 mask-image: inherit;
@@ -36,7 +37,7 @@ mask-image: unset;
 - `none`
   - : 默认值，透明的黑色图像层，也就是没有遮罩层。
 - `<mask-source>`
-  - : 对 {{SVGElement("mask")}} 或 CSS 图像的 {{cssxref("url","url()")}} 引用
+  - : 一个引用了 {{SVGElement("mask")}} 或 CSS 图像的 {{cssxref("url_value", "&lt;url&gt;")}}。
 - {{cssxref("&lt;image&gt;")}}
   - : 用作蒙版图像层的图像值。
 
@@ -65,4 +66,4 @@ mask-image: unset;
 ## 参见
 
 - [CSS 中的裁剪和遮罩](https://css-tricks.com/clipping-masking-css/)
-- [使用 CSS 的 mask-image 属性对图像应用效果](https://web.dev/css-masking/)
+- [使用 CSS 的 mask-image 属性对图像应用效果](https://web.developers.google.cn/articles/css-masking)

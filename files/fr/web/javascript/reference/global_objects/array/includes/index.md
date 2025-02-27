@@ -7,9 +7,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 
 La méthode **`includes()`** permet de déterminer si un tableau contient une valeur et renvoie `true` si c'est le cas, `false` sinon.
 
-{{EmbedInteractiveExample("pages/js/array-includes.html")}}
+{{InteractiveExample("JavaScript Demo: Array.includes()")}}
 
-> **Note :** Cette méthode utilise l'algorithme de comparaison _[SameValueZero](/fr/docs/Web/JavaScript/Les_différents_tests_d_égalité#Un_modèle_pour_mieux_comprendre)_ qui fonctionne comme l'égalité stricte, à la différence que `NaN` est ici égal à lui même.
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// Expected output: true
+
+const pets = ['cat', 'dog', 'bat'];
+
+console.log(pets.includes('cat'));
+// Expected output: true
+
+console.log(pets.includes('at'));
+// Expected output: false
+```
+
+> [!NOTE]
+> Cette méthode utilise l'algorithme de comparaison _[SameValueZero](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness#un_modèle_pour_mieux_comprendre)_ qui fonctionne comme l'égalité stricte, à la différence que `NaN` est ici égal à lui même.
 
 ## Syntaxe
 
@@ -29,7 +45,8 @@ array.includes(élémentRecherché, indiceDépart);
 
 Un {{jsxref("Boolean","booléen","",1)}} qui vaut `true` si `élémentRecherché` est trouvé dans le tableau (à partir de l'`indiceDépart` si celui-ci est indiqué). Les valeurs -0, +0 et 0 sont considérées comme équivalentes mais `false` n'est pas considéré comme équivalent à 0.
 
-> **Note :** Pour être tout à fait précis, `includes()` utilise l'algorithme _[SameValueZero](/fr/docs/Web/JavaScript/Les_différents_tests_d_égalité#Un_modèle_pour_mieux_comprendre)_ afin de déterminer si un élément donné est trouvé.
+> [!NOTE]
+> Pour être tout à fait précis, `includes()` utilise l'algorithme _[SameValueZero](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness#un_modèle_pour_mieux_comprendre)_ afin de déterminer si un élément donné est trouvé.
 
 ## Exemples
 
@@ -73,7 +90,7 @@ arr.includes("c", -100); // true
 
 ### Utilisation d'`includes()` comme méthode générique
 
-`includes()` est une méthode générique : l'objet sur lequel elle est appelée ne doit pas nécessairement être un tableau. On peut l'utiliser sur des objets semblables à des tableaux (ex. [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments) ou des chaînes de caractères) :
+`includes()` est une méthode générique : l'objet sur lequel elle est appelée ne doit pas nécessairement être un tableau. On peut l'utiliser sur des objets semblables à des tableaux (ex. [`arguments`](/fr/docs/Web/JavaScript/Reference/Functions/arguments) ou des chaînes de caractères) :
 
 ```js
 function argumentsContientA() {

@@ -181,7 +181,7 @@ Dans cette situation, les clients qui visiteraient cette page la verrait avec le
 }
 ```
 
-Comme vous pouvez le constater, le rapport inclus l'URI complète de la ressource dans `blocked-uri`. Ce n'est le cas en général. Ainsi, si la page avait essayé de charger la feuille de style `http://anothercdn.example.com/stylesheet.css`, le navigateur aurait indiqué seulement `"blocked-uri": "http://anothercdn.example.com/"`, c'est à dire l'origine et non l'URI complète car l'origine de la feuille bloquée est différente de l'origine du site lui-même. La spécification de la CSP, [disponible en anglais sur le site du W3C](http://www.w3.org/TR/CSP/#security-violation-reports), explique les raisons de ce comportement qui peut surprendre de prime abord. En résumé, ce comportement évite les risques de diffuser des informations confidentielles qui pourraient être incluses dans les URI des ressources provenant d'autres origines.
+Comme vous pouvez le constater, le rapport inclus l'URI complète de la ressource dans `blocked-uri`. Ce n'est le cas en général. Ainsi, si la page avait essayé de charger la feuille de style `http://anothercdn.example.com/stylesheet.css`, le navigateur aurait indiqué seulement `"blocked-uri": "http://anothercdn.example.com/"`, c'est à dire l'origine et non l'URI complète car l'origine de la feuille bloquée est différente de l'origine du site lui-même. La spécification de la CSP, [disponible en anglais sur le site du W3C](https://www.w3.org/TR/CSP/#security-violation-reports), explique les raisons de ce comportement qui peut surprendre de prime abord. En résumé, ce comportement évite les risques de diffuser des informations confidentielles qui pourraient être incluses dans les URI des ressources provenant d'autres origines.
 
 ## Compatibilité des navigateurs
 
@@ -194,4 +194,4 @@ _Il existe une incompatibilité spécifique dans certaines versions de Safari : 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
 - [L'utilisation de CSP pour les WebExtensions.](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
-- [La gestion de CSP dans les web workers](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#Utilisation_du_CSP_dans_les_web_workers)
+- [La gestion de CSP dans les web workers](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#utilisation_du_csp_dans_les_web_workers)

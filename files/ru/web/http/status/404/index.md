@@ -25,7 +25,8 @@ ErrorDocument 404 /notfound.html
 
 Вы можете взять [MDN's 404 page](/en-US/404) в качестве вдохновения.
 
-> **Примечание:** Примечание: дизайн на 404 страницах - [an endless source of inspiration](https://www.google.fr/search?q=awesome+404+pages), но имейте в виду, что в нем также существует [a set of best practices](http://alistapart.com/article/perfect404), которые делают эти страницы полезными для пользователей веб-сайтов.
+> [!NOTE]
+> дизайн на 404 страницах - [an endless source of inspiration](https://www.google.fr/search?q=awesome+404+pages), но имейте в виду, что в нем также существует [a set of best practices](https://alistapart.com/article/perfect404), которые делают эти страницы полезными для пользователей веб-сайтов.
 
 ## Спецификации
 
@@ -33,7 +34,7 @@ ErrorDocument 404 /notfound.html
 | ------------------------------------------ | ------------------------------------------------------------- |
 | {{RFC("7231", "404 Not Found" , "6.5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

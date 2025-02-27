@@ -1,5 +1,5 @@
 ---
-title: "::view-transition-group"
+title: ::view-transition-group
 slug: Web/CSS/::view-transition-group
 ---
 
@@ -26,7 +26,8 @@ html::view-transition-group(*) {
 
 如果同时存在新旧两种视图状态，则视图过渡样式表中的样式会将该伪元素的 {{cssxref("width")}} 和 {{cssxref("height")}} 从旧视图状态的边框盒大小动画到新视图状态的边框盒大小。
 
-> **备注：** 视图过渡样式表中的样式是在视图过渡期间动态生成的；有关更多详细信息，请参阅规范中的[设置过渡伪元素](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements)和[更新伪元素样式](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles)部分。
+> [!NOTE]
+> 视图过渡样式表中的样式是在视图过渡期间动态生成的；有关更多详细信息，请参阅规范中的[设置过渡伪元素](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements)和[更新伪元素样式](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles)部分。
 
 此外，元素的变换是从旧视图状态的屏幕空间，变换到新视图状态的屏幕空间。由于动画属性的值是在过渡开始时确定的，因此此样式是动态生成的。
 
@@ -68,4 +69,4 @@ view-transition-group(embed-container) {
 ## 参见
 
 - [View Transitions API](/zh-CN/docs/Web/API/View_Transitions_API)
-- [使用 View Transitions API 实现平滑、简单的过渡](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [使用 View Transitions API 实现平滑、简单的过渡](https://developer.chrome.google.cn/docs/web-platform/view-transitions)

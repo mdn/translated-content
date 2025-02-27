@@ -1,27 +1,30 @@
 ---
 title: パンくずナビゲーション
 slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
+l10n:
+  sourceCommit: 14924a9cc3dddbce37565d152cbb30134d314308
 ---
 
 {{CSSRef}}
 
-パンくず (Breadcrumb) ナビゲーションは、来た道をたどって開始ページまで戻ることができるパンくずリストを提供することによって、ユーザーがウェブサイト内の自分の位置を理解するのに役立ちます。
+パンくず (Breadcrumb) ナビゲーションは、来た道をたどって開始ページまで戻ることができる{{glossary("breadcrumb", "パンくずリスト")}}を提供することによって、ユーザーがウェブサイト内の自分の位置を理解するのに役立ちます。
 
 ![リンクを区切り文字を付けてインラインで表示](breadcrumb-navigation.png)
 
 ## 要件
 
-項目は通常、個々のページ間の階層を示すために、区切り文字を付けてインラインで表示されます。
+インラインリンクを表示することにより、サイトの階層を表示します。項目の間には区切り文字があり、個々のページ間の階層を示し、現在のページが最後に表示されます。
 
 ## レシピ
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
 
-> **注目:**
+> [!CALLOUT]
 >
-> [この例をダウンロードする](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
+> [この例をダウンロードする](https://github.com/mdn/css-examples/blob/main/css-cookbook/breadcrumb-navigation--download.html)
 
-> **メモ:** 上記の例では 2 つのセレクターを使用して、最初の物を除いてそれぞれの `li` の前にコンテンツを挿入しています。これは次のようにすると、 1 つのセレクターのみで実現することもできます。
+> [!NOTE]
+> 上の例では、複合セレクターを使用して、最後以外のすべての `li` の前にコンテンツを挿入しています。これは、最初の要素を除くすべての `li` 要素を対象とする複合セレクターを使用しても実現できます。
 >
 > ```css
 > .breadcrumb li:not(:first-child)::before {
@@ -29,7 +32,7 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 > }
 > ```
 >
-> この解決策ではより複雑なセレクターを使用しますが、必要とするルールは少なくなります。好きな方の解決策を使用してください。
+> 好きな方の解決策を使用してください。
 
 ## 行った選択
 
@@ -37,18 +40,12 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 ## アクセシビリティの考慮
 
-[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性および [`aria-current`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-current) 属性を使用して、このナビゲーションが何であるか、そして現在のページが構造のどこにあるのかをユーザーが理解できるようにしています。 詳細については関連リンクを参照してください。
+[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性および [`aria-current`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-current) 属性を使用して、このナビゲーションが何であるか、そして現在のページが構造のどこにあるのかを支援技術のユーザーが理解できるようにしてください。 詳細については関連リンクを参照してください。
 
-## ブラウザーの互換性
-
-レイアウト方法によってブラウザーの対応状況が異なります。使用しているプロパティの基本的な対応の詳細については、以下の表を参照してください。
-
-### フレックスボックス
-
-{{Compat("css.properties.flex")}}
+`content` で追加した矢印 `→` は、スクリーンリーダーや点字ディスプレイにも公開されるので注意してください。
 
 ## 関連情報
 
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)
 - [パンくずリストの提供](https://www.w3.org/TR/WCAG20-TECHS/G65.html)（英語）
-- [aria-current 属性の使用](https://tink.uk/using-the-aria-current-attribute/)（英語）
+- [`aria-current` 属性の使用](https://tink.uk/using-the-aria-current-attribute/)（英語）

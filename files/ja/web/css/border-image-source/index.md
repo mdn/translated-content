@@ -1,6 +1,8 @@
 ---
 title: border-image-source
 slug: Web/CSS/border-image-source
+l10n:
+  sourceCommit: 5178e1e7c9edf0c9c652275ae62f090042ce2422
 ---
 
 {{CSSRef}}
@@ -25,6 +27,7 @@ border-image-source: linear-gradient(to top, red, yellow);
 border-image-source: inherit;
 border-image-source: initial;
 border-image-source: revert;
+border-image-source: revert-layer;
 border-image-source: unset;
 ```
 
@@ -67,4 +70,5 @@ border-image-source: unset;
 - {{cssxref("outline")}}
 - {{cssxref("box-shadow")}}
 - {{cssxref("background-image")}}
-- {{cssxref("url()", "url()")}} 関数
+- {{cssxref("url_value", "&lt;url&gt;")}} データ型
+- [Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/) (MDN blog, 2023)

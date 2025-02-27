@@ -28,7 +28,7 @@ new ByteLengthQueuingStrategy(highWaterMark)
 
 ### 返値
 
-{{domxref("ByteLengthQueuingStrategy")}} オブジェクトのインスタンスです。。
+{{domxref("ByteLengthQueuingStrategy")}} オブジェクトのインスタンスです。
 
 ### 例外
 

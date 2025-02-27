@@ -1,5 +1,5 @@
 ---
-title: ":link"
+title: :link
 slug: Web/CSS/:link
 ---
 
@@ -16,7 +16,8 @@ a:link {
 
 `:link` 의사 클래스로 정의한 스타일은 자신보다 뒤에 위치하고 동등한 명시성을 가진 다른 링크 의사 클래스({{cssxref(":active")}}, {{cssxref(":hover")}}, {{cssxref(":visited")}})가 덮어씁니다. 링크를 적절히 디자인하려면 LVHA-순서(`:link` — `:visited` — `:hover` — `:active`)를 따라, `:active` 규칙을 다른 모든 링크 규칙들보다 앞에 배치하세요.
 
-> **참고:** 방문 여부에 상관하지 않고 요소를 선택하려면 {{cssxref(":any-link")}}를 사용하세요.
+> [!NOTE]
+> 방문 여부에 상관하지 않고 요소를 선택하려면 {{cssxref(":any-link")}}를 사용하세요.
 
 ## 구문
 

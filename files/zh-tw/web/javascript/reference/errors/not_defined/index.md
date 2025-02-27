@@ -19,7 +19,8 @@ ReferenceError: "x" is not defined
 
 有個地方參照到不存在的變數了。這個變數需要宣告、或確定在目前腳本、或在 {{Glossary("scope")}} 裡可用。
 
-> **備註：** 如果要使用函式庫（例如 jQuery）的話，請確定在你使用諸如 $ 這樣的函式庫變數前，就已載入完畢。把載入函式庫的 {{HTMLElement("script")}} 標籤，放在你使用的程式碼之前。
+> [!NOTE]
+> 如果要使用函式庫（例如 jQuery）的話，請確定在你使用諸如 $ 這樣的函式庫變數前，就已載入完畢。把載入函式庫的 {{HTMLElement("script")}} 標籤，放在你使用的程式碼之前。
 
 ## 實例
 
@@ -66,5 +67,5 @@ console.log(num1); // 2
 ## 參閱
 
 - {{Glossary("Scope")}}
-- [Declaring variables in the JavaScript Guide](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Declaring_variables)
+- [Declaring variables in the JavaScript Guide](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#declaring_variables)
 - [Function scope in the JavaScript Guide](/zh-TW/docs/Web/JavaScript/Guide/Functions#function_scope)

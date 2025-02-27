@@ -1,8 +1,9 @@
 ---
 title: "HTMLElement: copy イベント"
+short-title: copy
 slug: Web/API/HTMLElement/copy_event
 l10n:
-  sourceCommit: 9aa9bda5722b3e1122210653ba4526eff1e05028
+  sourceCommit: dea44952741f722ccf62f8e868d1bc988e953aa0
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -30,7 +31,7 @@ oncopy = (event) => {};
 _親である {{domxref("Event")}} から継承したプロパティもあります。_
 
 - {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
-  - : {{domxref("DataTransfer")}} オブジェクトで、ユーザーが行った {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, {{domxref("HTMLElement/paste_event", "paste")}} 操作によって影響されたデータと MIME タイプが入ります。
+  - : {{domxref("DataTransfer")}} オブジェクトで、ユーザーが行った {{domxref("HTMLElement/cut_event", "cut")}}, `copy`, {{domxref("HTMLElement/paste_event", "paste")}} 操作によって影響されたデータと MIME タイプが入ります。
 
 ## 例
 

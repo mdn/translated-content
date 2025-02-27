@@ -1,5 +1,5 @@
 ---
-title: ":host"
+title: :host
 slug: Web/CSS/:host
 ---
 
@@ -7,7 +7,8 @@ slug: Web/CSS/:host
 
 **`:host`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)选择内部使用了该 CSS 的[影子 DOM（shadow DOM）](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 的影子宿主（shadow host）——换句话说，这允许你从其影子 DOM 内部选择自定义元素。
 
-> **备注：** 这不适用于在影子 DOM 之外使用。
+> [!NOTE]
+> 这不适用于在影子 DOM 之外使用。
 
 ```css
 /* 选择影子根宿主 */

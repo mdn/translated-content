@@ -3,7 +3,7 @@ title: MouseEvent.clientY
 slug: Web/API/MouseEvent/clientY
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 A propriedade **`clientY`** da interface {{domxref("MouseEvent")}} fornece a coordenada vertical do cliente dentro da aplicacão em que o evento ocorreu (ao contrário da coordenada que pertence a página).
 
@@ -21,7 +21,7 @@ O valor retornado por essa propriedade é um valor flutuante double como foi red
 
 ## Exemplo
 
-Este exemplo mostra as coordenadas do mouse quando você ativar o evento {{Event("mousemove")}}.
+Este exemplo mostra as coordenadas do mouse quando você ativar o evento [`mousemove`](/pt-BR/docs/Web/API/Element/mousemove_event).
 
 ### HTML
 

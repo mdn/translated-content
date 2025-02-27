@@ -9,7 +9,8 @@ slug: Web/API/Window/requestIdleCallback
 
 idle callback 안에서 `requestIdleCallback()` 을 호출하여 다음 패스가 이벤트 루프를 통과하는 즉시 다른 callback을 예약할 수 있습니다.
 
-> **참고:** 필수적인 작업이라면 `timeout` 옵션을 사용하는 것을 강력히 권장합니다. 사용하지 않을 경우 callback이 실행되기전에 몇 초 이상 소요될 수 있습니다.
+> [!NOTE]
+> 필수적인 작업이라면 `timeout` 옵션을 사용하는 것을 강력히 권장합니다. 사용하지 않을 경우 callback이 실행되기전에 몇 초 이상 소요될 수 있습니다.
 
 ## Syntax
 
@@ -30,7 +31,7 @@ var handle = window.requestIdleCallback(callback[, options])
 
 ## Example
 
-[Cooperative Scheduling of Background Tasks API](/ko/docs/Web/API/Background_Tasks_API) 포스트의 [complete example](/ko/docs/Web/API/Background_Tasks_API#Example) 예제를 참조해 주십시오.
+[Cooperative Scheduling of Background Tasks API](/ko/docs/Web/API/Background_Tasks_API) 포스트의 [complete example](/ko/docs/Web/API/Background_Tasks_API#example) 예제를 참조해 주십시오.
 
 ## 명세서
 

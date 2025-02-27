@@ -1,6 +1,8 @@
 ---
 title: border-bottom-width
 slug: Web/CSS/border-bottom-width
+l10n:
+  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
 {{CSSRef}}
@@ -26,6 +28,7 @@ border-bottom-width: 6px;
 border-bottom-width: inherit;
 border-bottom-width: initial;
 border-bottom-width: revert;
+border-bottom-width: revert-layer;
 border-bottom-width: unset;
 ```
 
@@ -33,13 +36,14 @@ border-bottom-width: unset;
 
 - `<line-width>`
 
-  - : 明示的な非負の {{cssxref("&lt;length&gt;")}} またはキーワードで、境界の幅を定義します。キーワードの場合、以下の値のうちの一つでなければなりません。
+  - : 境界の幅を、明示的な非負の {{cssxref("&lt;length&gt;")}} またはキーワードで定義します。キーワードの場合、以下の値のいずれかでなければなりません。
 
     - `thin`
     - `medium`
     - `thick`
 
-> **メモ:** 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、何れか一つを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
+> [!NOTE]
+> 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、いずれかを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
 
 ## 公式定義
 
@@ -51,18 +55,18 @@ border-bottom-width: unset;
 
 ## 例
 
-<h3 id="Comparing_bottom_border_widths">下境界の太さの比較</h3>
+### 下境界の太さの比較
 
 #### HTML
 
-```html
+```html live-sample___comparing_bottom_border_widths
 <div>Element 1</div>
 <div>Element 2</div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___comparing_bottom_border_widths
 div {
   border: 1px solid red;
   margin: 1em 0;
@@ -90,5 +94,5 @@ div:nth-child(2) {
 
 ## 関連情報
 
-- 他の境界の太さに関する CSS プロパティ: {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}, {{Cssxref("border-width")}}
-- 他の下境界に関する CSS プロパティ: {{Cssxref("border")}}, {{Cssxref("border-bottom")}}, {{Cssxref("border-bottom-style")}}, {{Cssxref("border-bottom-color")}}
+- 境界の太さに関する他の CSS プロパティ: {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}, {{Cssxref("border-width")}}
+- 下の境界に関する他の CSS プロパティ: {{Cssxref("border")}}, {{Cssxref("border-bottom")}}, {{Cssxref("border-bottom-style")}}, {{Cssxref("border-bottom-color")}}

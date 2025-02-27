@@ -2,14 +2,23 @@
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 l10n:
-  sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
+  sourceCommit: 57375b77984037c614982a9327bc96101824db89
 ---
 
 {{JSRef}}
 
 {{jsxref("Array")}} 인스턴스의 `filter()` 메서드는 주어진 배열의 일부에 대한 [얕은 복사본](/ko/docs/Glossary/Shallow_copy)을 생성하고, 주어진 배열에서 제공된 함수에 의해 구현된 테스트를 통과한 요소로만 필터링 합니다.
 
-{{EmbedInteractiveExample("pages/js/array-filter.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.filter()", "shorter")}}
+
+```js interactive-example
+const words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+const result = words.filter((word) => word.length > 6);
+
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+```
 
 ## 구문
 
@@ -33,7 +42,7 @@ filter(callbackFn, thisArg)
 
 ### 반환 값
 
-주어진 배열의 일부에 대한 [얕은 복사본](/ko/docs/Glossary/Shallow_copy)으로, 주어진 배열에서 제공된 함수에 의해 구현된 테스트를 통과한 요소로만 필터링 합니다. 테스트를 통과한 요소가 없으면 빈 배열이 반환됩니다.
+주어진 배열에서 테스트를 통과한 요소만 포함하는 해당 배열의 [얕은 복사본](/ko/docs/Glossary/Shallow_copy) 배열입니다. 테스트를 통과한 요소가 없으면 빈 배열이 반환됩니다.
 
 ## 설명
 
@@ -47,7 +56,8 @@ filter(callbackFn, thisArg)
 - 이미 방문한 인덱스를 변경해도 `callbackFn`이 해당 인덱스에 대해 다시 호출되지 않습니다.
 - 배열의 아직 방문하지 않은 기존 요소가 `callbackFn`에 의해 변경되는 경우, `callbackFn`에 전달된 값은 해당 요소가 방문될 당시의 값이 됩니다. [삭제된](/ko/docs/Web/JavaScript/Reference/Operators/delete) 요소는 방문되지 않습니다.
 
-> **경고:** 위에서 설명한 종류의 동시 수정은 이해하기 어려운 코드를 만드는 경우가 많으므로 일반적으로 지양해야 합니다(특별한 경우 제외).
+> [!WARNING]
+> 위에서 설명한 종류의 동시 수정은 이해하기 어려운 코드를 만드는 경우가 많으므로 일반적으로 지양해야 합니다(특별한 경우 제외).
 
 `filter()` 메서드는 [범용](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#범용_배열_메서드)입니다. `this` 값에는 `length` 속성과 정수 키 속성만 있을 것으로 예상합니다.
 
@@ -140,6 +150,26 @@ console.log(filterItems(fruits, "ap")); // ['apple', 'grapes']
 console.log(filterItems(fruits, "an")); // ['banana', 'mango', 'orange']
 ```
 
+### callbackFn의 세 번째 인수 사용하기
+
+`array` 인수는 배열의 다른 요소에 접근하려는 경우, 특히 배열을 참조하는 기존 변수가 없는 경우에 유용합니다. 다음 예제에서는 먼저 `map()`을 사용하여 각 이름에서 숫자 ID를 추출한 다음 `filter()`를 사용하여 인접한 이름보다 큰 이름을 선택합니다.
+
+```js
+const names = ["JC63", "Bob132", "Ursula89", "Ben96"];
+const greatIDs = names
+  .map((name) => parseInt(name.match(/[0-9]+/)[0], 10))
+  .filter((id, idx, arr) => {
+    // arr 인수가 없으면 변수에 저장하지 않고는
+    // 중간 배열에 쉽게 접근할 수 없습니다.
+    if (idx > 0 && id <= arr[idx - 1]) return false;
+    if (idx < arr.length - 1 && id <= arr[idx + 1]) return false;
+    return true;
+  });
+console.log(greatIDs); // [132, 96]
+```
+
+`array` 인수는 작성 중인 배열이 아닙니다. 따라서 콜백 함수에서 작성 중인 배열에 접근할 수 없습니다.
+
 ### 희소 배열에 filter() 사용
 
 `filter()`는 빈 슬롯을 건너뜁니다.
@@ -216,7 +246,7 @@ console.log(deleteWords);
 ## 같이 보기
 
 - [`core-js`의 `Array.prototype.filter` 폴리필](https://github.com/zloirock/core-js#ecmascript-array)
-- [인덱스된 컬렉션](/ko/docs/Web/JavaScript/Guide/Indexed_collections)
+- [인덱스 기반 컬렉션](/ko/docs/Web/JavaScript/Guide/Indexed_collections) 가이드
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.every()")}}

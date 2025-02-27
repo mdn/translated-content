@@ -3,7 +3,7 @@ title: tabs.onHighlighted
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlighted
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsque l'ensemble des onglets en surbrillance dans une fenêtre change
 
@@ -35,7 +35,7 @@ Les événements ont trois fonctions :
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
 
     - `highlightInfo`
-      - : [`object`](#highlightInfo). ID(s) des onglets en surbrillance, et ID de leur fenêtre.
+      - : [`object`](#highlightinfo). ID(s) des onglets en surbrillance, et ID de leur fenêtre.
 
 ## Objets supplémentaires
 
@@ -64,9 +64,9 @@ browser.tabs.onHighlighted.addListener(handleHighlighted);
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

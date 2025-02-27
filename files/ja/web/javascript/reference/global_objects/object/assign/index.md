@@ -1,25 +1,43 @@
 ---
 title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
+l10n:
+  sourceCommit: 8b6cec0ceff01e7a9d6865cf5306788e15cce4b8
 ---
 
 {{JSRef}}
 
-**`Object.assign()`** メソッドは、すべての{{jsxref("Object/propertyIsEnumerable", "列挙可能", "", 1)}}な{{jsxref("Object/hasOwnProperty", "自身のプロパティ", "", 1)}}の値を、 1 つ以上の*コピー元オブジェクト*から*コピー先オブジェクト*にコピーするために使用されます。変更されたコピー先オブジェクトを返します。
+**`Object.assign()`** 静的メソッドは、すべての{{jsxref("Object/propertyIsEnumerable", "列挙可能", "", 1)}}な{{jsxref("Object/hasOwn", "自身のプロパティ", "", 1)}}の値を、 1 つ以上の*コピー元オブジェクト*から*コピー先オブジェクト*にコピーするために使用されます。変更されたコピー先オブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/object-assign.html")}}
+{{InteractiveExample("JavaScript Demo: Object.assign()")}}
+
+```js interactive-example
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+
+const returnedTarget = Object.assign(target, source);
+
+console.log(target);
+// Expected output: Object { a: 1, b: 4, c: 5 }
+
+console.log(returnedTarget === target);
+// Expected output: true
+```
 
 ## 構文
 
-```js
-Object.assign(target, ...sources);
+```js-nolint
+Object.assign(target)
+Object.assign(target, source1)
+Object.assign(target, source1, source2)
+Object.assign(target, source1, source2, /* …, */ sourceN)
 ```
 
 ### 引数
 
 - `target`
   - : コピー先オブジェクト — コピー元のプロパティを適用するもので、変更後に返されます。
-- `sources`
+- `source1`, …, `sourceN`
   - : コピー元オブジェクト (単数または複数) — 適用したいプロパティを含むオブジェクトです。
 
 ### 返値
@@ -30,7 +48,7 @@ Object.assign(target, ...sources);
 
 コピー先オブジェクトのプロパティは、コピー元に同じ{{jsxref("Object/keys", "キー", "", 1)}}のプロパティがあると上書きされます。より後のコピー元のプロパティが、より前のものを同様に上書きします。
 
-`Object.assign()` メソッドは、コピー元オブジェクトから*列挙可能 (enumerable)* かつ*直接所有 (own)* のプロパティだけをコピー先オブジェクトにコピーします。この際、コピー元オブジェクトには `{[[Get]]`、コピー先オブジェクトには `[[Set]]` を使いますので、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)と[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を呼び出すことになります。これはプロパティの*代入 (assign)* であり、プロパティをコピーしたり新しく定義したりするのとは異なります。そのため、コピー元にゲッターが存在する場合、新しいプロパティをプロトタイプにマージする用途には不適切でしょう。
+`Object.assign()` メソッドは、コピー元オブジェクトから*列挙可能 (enumerable)* かつ*直接所有 (own)* のプロパティだけをコピー先オブジェクトにコピーします。この際、コピー元オブジェクトには `[[Get]]`、コピー先オブジェクトには `[[Set]]` を使いますので、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)と[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を呼び出すことになります。これはプロパティの*代入 (assign)* であり、プロパティをコピーしたり新しく定義したりするのとは異なります。そのため、コピー元にゲッターが存在する場合、新しいプロパティをプロトタイプにマージする用途には不適切でしょう。
 
 プロパティ定義を (列挙可能属性も含めて) プロトタイプの中にコピーするには、このメソッドではなく {{jsxref("Object.getOwnPropertyDescriptor()")}} と {{jsxref("Object.defineProperty()")}} を使用してください。
 
@@ -38,44 +56,7 @@ Object.assign(target, ...sources);
 
 エラーが発生した場合、例えばプロパティが書き込み不可の場合は、 {{jsxref("TypeError")}} が発生しますが、エラーが発生する前にプロパティが追加される場合、 `target` オブジェクトが変更されることがあります。
 
-> **メモ:** `Object.assign()` はコピー元の値が {{jsxref("null")}} や {{jsxref("undefined")}} でも例外を発生させません。
-
-## ポリフィル
-
-この[ポリフィル](/ja/docs/Glossary/Polyfill)は、 ES5 にシンボルがないため、シンボルのプロパティに対応していません。
-
-```js
-if (typeof Object.assign !== "function") {
-  // Must be writable: true, enumerable: false, configurable: true
-  Object.defineProperty(Object, "assign", {
-    value: function assign(target, varArgs) {
-      // .length of function is 2
-      "use strict";
-      if (target === null || target === undefined) {
-        throw new TypeError("Cannot convert undefined or null to object");
-      }
-
-      var to = Object(target);
-
-      for (var index = 1; index < arguments.length; index++) {
-        var nextSource = arguments[index];
-
-        if (nextSource !== null && nextSource !== undefined) {
-          for (var nextKey in nextSource) {
-            // Avoid bugs when hasOwnProperty is shadowed
-            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
-              to[nextKey] = nextSource[nextKey];
-            }
-          }
-        }
-      }
-      return to;
-    },
-    writable: true,
-    configurable: true,
-  });
-}
-```
+> **メモ:** `Object.assign()` はコピー元の値が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) や {{jsxref("undefined")}} でも例外を発生させません。
 
 ## 例
 
@@ -87,41 +68,35 @@ const copy = Object.assign({}, obj);
 console.log(copy); // { a: 1 }
 ```
 
-### 深い複製についての注意
+### ディープクローンについての注意
 
-`Object.assign()` はプロパティの値をコピーするため、深い複製を行うには別な方法を使用する必要があります。
+[ディープクローン](/ja/docs/Glossary/Deep_copy)を行う場合、別に {{DOMxRef("Window.structuredClone", "structuredClone()")}} のような代替手段を使用する必要があります。 `Object.assign()` はプロパティ値のみをコピーするからです。
 
-元の値がオブジェクトへの参照である場合、参照の値のみをコピーするからです。
+元の値がオブジェクトへの参照である場合、参照の値のみがコピーされます。
 
 ```js
-function test() {
-  "use strict";
+const obj1 = { a: 0, b: { c: 0 } };
+const obj2 = Object.assign({}, obj1);
+console.log(obj2); // { a: 0, b: { c: 0 } }
 
-  let obj1 = { a: 0, b: { c: 0 } };
-  let obj2 = Object.assign({}, obj1);
-  console.log(JSON.stringify(obj2)); // { "a": 0, "b": { "c": 0}}
+obj1.a = 1;
+console.log(obj1); // { a: 1, b: { c: 0 } }
+console.log(obj2); // { a: 0, b: { c: 0 } }
 
-  obj1.a = 1;
-  console.log(JSON.stringify(obj1)); // { "a": 1, "b": { "c": 0}}
-  console.log(JSON.stringify(obj2)); // { "a": 0, "b": { "c": 0}}
+obj2.a = 2;
+console.log(obj1); // { a: 1, b: { c: 0 } }
+console.log(obj2); // { a: 2, b: { c: 0 } }
 
-  obj2.a = 2;
-  console.log(JSON.stringify(obj1)); // { "a": 1, "b": { "c": 0}}
-  console.log(JSON.stringify(obj2)); // { "a": 2, "b": { "c": 0}}
+obj2.b.c = 3;
+console.log(obj1); // { a: 1, b: { c: 3 } }
+console.log(obj2); // { a: 2, b: { c: 3 } }
 
-  obj2.b.c = 3;
-  console.log(JSON.stringify(obj1)); // { "a": 1, "b": { "c": 3}}
-  console.log(JSON.stringify(obj2)); // { "a": 2, "b": { "c": 3}}
-
-  // Deep Clone
-  obj1 = { a: 0, b: { c: 0 } };
-  let obj3 = JSON.parse(JSON.stringify(obj1));
-  obj1.a = 4;
-  obj1.b.c = 4;
-  console.log(JSON.stringify(obj3)); // { "a": 0, "b": { "c": 0}}
-}
-
-test();
+// ディープクローン
+const obj3 = { a: 0, b: { c: 0 } };
+const obj4 = structuredClone(obj3);
+obj3.a = 4;
+obj3.b.c = 4;
+console.log(obj4); // { a: 0, b: { c: 0 } }
 ```
 
 ### オブジェクトのマージ
@@ -164,9 +139,9 @@ Object.getOwnPropertySymbols(obj); // [Symbol(foo)]
 
 ```js
 const obj = Object.create(
+  // foo is on obj's prototype chain.
   { foo: 1 },
   {
-    // foo is on obj's prototype chain.
     bar: {
       value: 2, // bar は列挙可能なプロパティではない。
     },
@@ -232,14 +207,14 @@ console.log(copy);
 // 記述子を完全にコピーする代入関数
 function completeAssign(target, ...sources) {
   sources.forEach((source) => {
-    let descriptors = Object.keys(source).reduce((descriptors, key) => {
+    const descriptors = Object.keys(source).reduce((descriptors, key) => {
       descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
       return descriptors;
     }, {});
 
     // 既定では、 Object.assign は列挙可能なシンボルもコピーする
     Object.getOwnPropertySymbols(source).forEach((sym) => {
-      let descriptor = Object.getOwnPropertyDescriptor(source, sym);
+      const descriptor = Object.getOwnPropertyDescriptor(source, sym);
       if (descriptor.enumerable) {
         descriptors[sym] = descriptor;
       }
@@ -264,7 +239,7 @@ console.log(copy);
 
 ## 関連情報
 
-- `Object.assign` のポリフィルは [`core-js`](https://github.com/zloirock/core-js#ecmascript-object) で利用できます
+- [`Object.assign` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object) で利用できます
 - {{jsxref("Object.defineProperties()")}}
 - [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - [オブジェクトリテラルでのスプレッド構文の使用](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals)

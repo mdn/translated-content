@@ -11,7 +11,8 @@ slug: Web/API/XMLHttpRequest/setRequestHeader
 
 보안상의 이유로, 어떤 헤더는 오직 사용자 에이전트에 의해서만 관리될 수 있습니다. 이 헤더는 {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}와 {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}를 포함합니다.
 
-> **참고:** 여러분의 필드에 대해서, 상호교차(cross-domain) 요청시 "**not allowed by Access-Control-Allow-Headers in preflight response**" Exception이 나타날 수 있습니다. 이런 경우, "Access-Control-Allow-Headers"를 서버 측 응답 헤더에 설정하면 됩니다.
+> [!NOTE]
+> 여러분의 필드에 대해서, 상호교차(cross-domain) 요청시 "**not allowed by Access-Control-Allow-Headers in preflight response**" Exception이 나타날 수 있습니다. 이런 경우, "Access-Control-Allow-Headers"를 서버 측 응답 헤더에 설정하면 됩니다.
 
 ## 구문
 
@@ -36,4 +37,4 @@ myReq.setRequestHeader(header, value);
 
 ## 더 보기
 
-[Using XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+[Using XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

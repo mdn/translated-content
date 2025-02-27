@@ -7,7 +7,8 @@ slug: Web/CSS/overscroll-behavior-x
 
 La propriété CSS **`overscroll-behavior-x`** définit le comportement de l'agent utilisateur lorsqu'on atteint la limite de la zone de défilement sur l'axe horizontal.
 
-> **Note :** Voir {{cssxref("overscroll-behavior")}} pour plus de détails.
+> [!NOTE]
+> Voir {{cssxref("overscroll-behavior")}} pour plus de détails.
 
 ## Syntaxe
 

@@ -5,7 +5,7 @@ slug: Learn/Server-side/Django/Admin_site
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
 
-Agora que criamos modelos para o site da [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_website_biblioteca_local), usaremos o site do Django Admin para adicionar alguns dados de livros "reais". Primeiro, mostraremos como registrar os modelos no site de administração, depois mostraremos como fazer login e criar alguns dados. No final do artigo, mostraremos algumas maneiras de melhorar ainda mais a apresentação do site Admin.
+Agora que criamos modelos para o site da [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website), usaremos o site do Django Admin para adicionar alguns dados de livros "reais". Primeiro, mostraremos como registrar os modelos no site de administração, depois mostraremos como fazer login e criar alguns dados. No final do artigo, mostraremos algumas maneiras de melhorar ainda mais a apresentação do site Admin.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -57,7 +57,8 @@ admin.site.register(Genre)
 admin.site.register(BookInstance)
 ```
 
-> **Nota:** Nota: Se você aceitou o desafio de criar um modelo para representar a linguagem natural de um livro ([consulte o artigo do tutorial de modelos](/pt-BR/docs/Learn/Server-side/Django/Models)), importe-o e registre-o também!
+> [!NOTE]
+> Nota: Se você aceitou o desafio de criar um modelo para representar a linguagem natural de um livro ([consulte o artigo do tutorial de modelos](/pt-BR/docs/Learn/Server-side/Django/Models)), importe-o e registre-o também!
 
 Essa é a maneira mais simples de registrar um modelo ou modelos no site. O site de administração é altamente personalizável e falaremos mais sobre as outras maneiras de registrar seus modelos mais abaixo.
 
@@ -91,7 +92,8 @@ Digite valores para os campos. Você pode criar novos autores ou gêneros pressi
 
 ![Admin Site - Book Add](admin_book_add.png)
 
-> **Nota:** Observação: neste ponto, gostaríamos que você passasse algum tempo adicionando alguns livros, autores e gêneros (por exemplo, Fantasia) à sua inscrição. Certifique-se de que cada autor e gênero inclua alguns livros diferentes (isso tornará suas visualizações de lista e detalhes mais interessantes quando forem implementadas posteriormente na série de artigos).
+> [!NOTE]
+> Observação: neste ponto, gostaríamos que você passasse algum tempo adicionando alguns livros, autores e gêneros (por exemplo, Fantasia) à sua inscrição. Certifique-se de que cada autor e gênero inclua alguns livros diferentes (isso tornará suas visualizações de lista e detalhes mais interessantes quando forem implementadas posteriormente na série de artigos).
 
 Quando terminar de adicionar livros, clique no link **Home** no marcador superior para ser levado de volta à página principal do administrador. Então clique no link **Books** para exibir a lista atual de livros (ou em um dos outros links para ver outras listas de modelos). Agora que você adicionou alguns livros, a lista pode ser semelhante à captura de tela abaixo. O título de cada livro é exibido; este é o valor retornado no modelo do livro pelo método `__str__()` que especificamos no último artigo.
 
@@ -205,7 +207,8 @@ class BookAdmin(admin.ModelAdmin):
 
 Infelizmente não podemos especificar diretamente a variável genre na `list_display` porque é um `ManyToManyField`(O Django evita isso porque há um grande "custo" de acesso ao banco de dados ao fazer isso). Em vez disso, vamos definir uma função `display_genre` para obter as informações como uma string (esta é a função que chamamos acima; vamos defini-lo abaixo).
 
-> **Nota:** Nota: Obtendo o `genre` pode não ser uma boa ideia aqui, por causa do "custo" da operação do banco de dados. Estamos mostrando como as funções de chamada em seus modelos podem ser muito úteis por outros motivos - por exemplo, para adicionar um link _Apagar_ ao lado de cada item da lista.
+> [!NOTE]
+> Nota: Obtendo o `genre` pode não ser uma boa ideia aqui, por causa do "custo" da operação do banco de dados. Estamos mostrando como as funções de chamada em seus modelos podem ser muito úteis por outros motivos - por exemplo, para adicionar um link _Apagar_ ao lado de cada item da lista.
 
 Adicione o seguinte código ao seu `Book` model (**models.py**). Isso cria uma string a partir dos três primeiros valores da variavel `genre` (se existirem) e cria um `short_description` que pode ser usado no site administrativo para esse método.
 
@@ -223,7 +226,8 @@ Depois de salvar o modelo e o administrador atualizado, abra o site e vá para a
 
 O `Genre` model (e a `Language` model, se você definiu um) ambos têm um único campo, portanto, não faz sentido criar um modelo adicional para exibir campos adicionais.
 
-> **Nota:** Nota: Vale a pena atualizar o`BookInstance` model list para mostrar pelo menos o status e a data de retorno esperada. Nós adicionamos isso como um desafio no final deste artigo!
+> [!NOTE]
+> Nota: Vale a pena atualizar o`BookInstance` model list para mostrar pelo menos o status e a data de retorno esperada. Nós adicionamos isso como um desafio no final deste artigo!
 
 ### Adicionando list filters
 
@@ -242,7 +246,8 @@ A visualização de lista agora incluirá uma caixa de filtro à direita. Observ
 
 Por padrão, as exibições detalhadas exibem todos os campos verticalmente, em sua ordem de declaração no modelo. Você pode alterar a ordem da declaração, quais campos são exibidos (ou excluídos), se as seções são usadas para organizar as informações, se os campos são exibidos horizontalmente ou verticalmente e até mesmo quais widgets de edição são usados nos formulários admin.
 
-> **Nota:** Nota: Os modelos _LocalLibrary_ são relativamente simples, portanto não é necessário alterar o layout; No entanto, faremos algumas alterações, só para mostrar como.
+> [!NOTE]
+> Nota: Os modelos _LocalLibrary_ são relativamente simples, portanto não é necessário alterar o layout; No entanto, faremos algumas alterações, só para mostrar como.
 
 #### Controlando quais campos são exibidos
 
@@ -260,7 +265,8 @@ No seu site, acesse a visualização de detalhes do autor. Agora, ele deve apare
 
 ![Admin Site - Improved Author Detail](admin_improved_author_detail.png)
 
-> **Nota:** Nota: você também pode usar o atributo `exclude` para declarar uma lista de atributos a serem excluídos do formulário (todos os outros atributos no modelo serão exibidos).
+> [!NOTE]
+> Nota: você também pode usar o atributo `exclude` para declarar uma lista de atributos a serem excluídos do formulário (todos os outros atributos no modelo serão exibidos).
 
 #### Seccionando a detail view
 
@@ -311,7 +317,8 @@ Agora navegue até uma view pala um `Book` no seu site - na parte inferior, voc�
 
 Nesse caso, tudo o que fizemos foi declarar nossa classe inline tabular, que apenas adiciona todos os campos do modelo embutido. Você pode especificar todos os tipos de informações adicionais para o layout, incluindo os campos a serem exibidos, sua ordem, se eles são somente leitura ou não, etc. (veja [TabularInline](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline) para maiores informações).
 
-> **Nota:** Nota: Existem alguns limites dolorosos nesta funcionalidade! Na captura de tela acima, temos três instâncias de livros existentes, seguidas de três espaços reservados para novas instâncias de livros (que são muito semelhantes!). Seria melhor não ter instâncias do livro reserva por padrão e apenas adicioná-las com o link **Add another Book instance** , ou poder listar apenas `BookInstance`s como links não legíveis daqui. A primeira opção pode ser feita configurando atributo `extra` para 0 no `BooksInstanceInline` model, tente você mesmo.
+> [!NOTE]
+> Nota: Existem alguns limites dolorosos nesta funcionalidade! Na captura de tela acima, temos três instâncias de livros existentes, seguidas de três espaços reservados para novas instâncias de livros (que são muito semelhantes!). Seria melhor não ter instâncias do livro reserva por padrão e apenas adicioná-las com o link **Add another Book instance** , ou poder listar apenas `BookInstance`s como links não legíveis daqui. A primeira opção pode ser feita configurando atributo `extra` para 0 no `BooksInstanceInline` model, tente você mesmo.
 
 ## Desafie-se
 

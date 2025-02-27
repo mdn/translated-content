@@ -3,15 +3,14 @@ title: 如何创建、移动、删除及编辑页面
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
 ---
 
-{{MDNSidebar}}
-
 本文描述了创建、移动、删除及编辑页面的方法。在所有这些情况下，最好检查我们的 [MDN 收录规则](/zh-CN/docs/MDN/Writing_guidelines/What_we_write)页面的指导方针，以确认是否应该采取这些行动，并在采取进一步措施之前与 MDN Web 文档团队在 [MDN Web 文档聊天室](/zh-CN/docs/MDN/Community/Communication_channels#聊天室)进行讨论。
 
 ## 创建页面
 
 MDN Web 文档的所有页面使用 Markdown 格式书写，所有的内容位于 `index.md` 名称的文件中，它们存储于属于自身的唯一目录中。目录名代表了页面的名称。例如，如果 `align-content` 是所要创建的新 CSS 属性参考页面，你需要在 `en-us/web/css` 下建立名为 `align-content` 的文件夹，并在其中创建 `index.md` 文件。
 
-> **备注：** 目录的名称与页面的路径名有微小的差别。最主要的区别是，路径名是符合句式大小写规则的。
+> [!NOTE]
+> 目录的名称与页面的路径名有微小的差别。最主要的区别是，路径名是符合句式大小写规则的。
 
 很多不同的[页面类型](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Page_types)具有一定的结构和支持它们的页面模板，你可以复制这些模板来开始。
 
@@ -96,7 +95,8 @@ yarn content move <from-slug> <to-slug> [locale]
 yarn content delete <document-slug> [locale]
 ```
 
-> **备注：** 你需要使用 `yarn content delete` 命令来删除 MDN Web 文档的页面。不要只是从存储库中删除它们的目录。`yarn content delete` 命令还可以处理其他必要的变化，如更新 `_wikihistory.json` 文件。
+> [!NOTE]
+> 你需要使用 `yarn content delete` 命令来删除 MDN Web 文档的页面。不要只是从存储库中删除它们的目录。`yarn content delete` 命令还可以处理其他必要的变化，如更新 `_wikihistory.json` 文件。
 
 只需指定你想删除的现有文件的标题（例如 `Learn/Accessibility`），可以选择在后面加上现有文件的地区语言（默认为 `en-US`）。
 
@@ -137,7 +137,8 @@ yarn content delete <document-slug> [locale]
 
 5. 创建拉取请求。
 
-> **备注：** 如果你想要删除的页面路径名中包含特殊字符，将其包裹在引号内，像这样：
+> [!NOTE]
+> 如果你想要删除的页面路径名中包含特殊字符，将其包裹在引号内，像这样：
 >
 > ```sh
 > yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"

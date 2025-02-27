@@ -3,10 +3,12 @@ title: grid-area
 slug: Web/CSS/grid-area
 ---
 
+{{CSSRef}}
+
 CSS-свойство `grid-area` - это [сокращённая форма записи](/ru/docs/Web/CSS/Shorthand_properties) для свойств {{cssxref("grid-row-start")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-row-end")}} и {{cssxref("grid-column-end")}}. Определяет размер и местоположение грид-элемента в пределах {{glossary("grid rows", "grid row")}}. Задаёт края {{glossary("grid areas", "грид-области")}} грид-элемента.
 
 ```css
-/* Ключевые слова в качестве значений */
+/* Ключевые слова */
 grid-area: auto;
 grid-area: auto / auto;
 grid-area: auto / auto / auto;
@@ -51,7 +53,8 @@ grid-area: unset;
   - : - ключевое слово, говорящее о том, что свойство не вносит никаких изменений в размещение грид-элемента. На элемент действует авторазмещение или размер элемента по умолчанию `1`. _(то есть, элемент занимает одну ячейку грид-сетки в заданном направлении)_
 - `<custom-ident>`
   - : если есть именованная линия с именем '`<custom-ident>-start`'/'`<custom-ident>-end`', то грид-элемент привязывается к первой из таких линий.
-    > **Примечание:** Именованные грид-области автоматически генерируют неявные именованные линии с именами подобного формата, поэтому запись `grid-area: foo;` выберет начальный/конечный край этой именованной грид-области (если, конечно, другая линия с именем `foo-start`/`foo-end` не была явно определена раньше).В противном случае, значение расценивается, как если бы число `1` было задано вместе с `<custom-ident>`.
+    > [!NOTE]
+    > Именованные грид-области автоматически генерируют неявные именованные линии с именами подобного формата, поэтому запись `grid-area: foo;` выберет начальный/конечный край этой именованной грид-области (если, конечно, другая линия с именем `foo-start`/`foo-end` не была явно определена раньше).В противном случае, значение расценивается, как если бы число `1` было задано вместе с `<custom-ident>`.
 - `<integer> && <custom-ident>?`
   - : Contributes the *n*th grid line to the grid item's placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.If a name is given as a {{cssxref("&lt;custom-ident&gt;")}}, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines are assumed to have that name for the purpose of finding this position.An {{cssxref("&lt;integer&gt;")}} value of `0` is invalid.
 - `span && [ <integer> || <custom-ident> ]`
@@ -98,16 +101,16 @@ grid-area: unset;
 
 {{EmbedLiveSample("Example", "100%", "150px")}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - Related CSS properties: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-template-areas")}}
-- Grid Layout Guide: _[Grid template areas](/ru/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
-- Video tutorial: _[Grid Template Areas](http://gridbyexample.com/video/grid-template-areas/)_
+- Grid Layout Guide: _[Grid template areas](/ru/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)_
+- Video tutorial: _[Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)_

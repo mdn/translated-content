@@ -15,7 +15,7 @@ L'utilisation de `classList` est une alternative à la propriété {{domxref("el
 const elementClasses = elementNodeReference.classList;
 ```
 
-_elementClasses_ est une [DOMTokenList](/fr/docs/DOM/DOMTokenList) représentant l'attribut class de _elementNodeReference_. Si l'attribut class n'a pas été défini ou est vide _elementClasses.length_ retourne 0. `element.classList` est en lecture seule. Pour la modifier il convient d'utiliser les méthodes `add()` et `remove()`.
+_elementClasses_ est une [DOMTokenList](/fr/docs/Web/API/DOMTokenList) représentant l'attribut class de _elementNodeReference_. Si l'attribut class n'a pas été défini ou est vide _elementClasses.length_ retourne 0. `element.classList` est en lecture seule. Pour la modifier il convient d'utiliser les méthodes `add()` et `remove()`.
 
 ## Méthodes
 
@@ -71,7 +71,8 @@ div.classList.remove(...cls);
 div.classList.replace("foo", "bar");
 ```
 
-> **Note :** Les versions de Firefox antérieures à la 26 n'implémentent pas l'utilisation de plusieurs arguments dans les méthodes add/remove/toggle. Voir <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
+> [!NOTE]
+> Les versions de Firefox antérieures à la 26 n'implémentent pas l'utilisation de plusieurs arguments dans les méthodes add/remove/toggle. Voir <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
 
 ## Prothèse d'émulation
 

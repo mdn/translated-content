@@ -7,24 +7,26 @@ slug: Learn/CSS/Building_blocks
 
 Ce cours fait suite aux [premiers pas avec CSS](/fr/docs/Learn/CSS/First_steps) : vous avez déjà acquis une bonne familiarité avec le langage et sa syntaxe, avec déjà des expériences d'utilisation de CSS. Il est donc temps d'approfondir le sujet. On examine ici les principes de cascade et d'héritage, tous les types de sélecteurs à notre disposition, les unités, le dimensionnement, les arrière-plans de style et les limites, le débogage, et bien d'autres choses.
 
-L'objectif est d'introduire les outils qui feront de vous un utilisateur CSS compétent avec une bonne compréhension du cœur de la théorie CSS. Nous étudierons plus tard des sujets plus spécifiques comme [le style de texte](/fr/docs/Learn/CSS/Styling_text) et la [mise en page CSS](/fr/docs/Apprendre/CSS/CSS_layout).
+L'objectif est d'introduire les outils qui feront de vous un utilisateur CSS compétent avec une bonne compréhension du cœur de la théorie CSS. Nous étudierons plus tard des sujets plus spécifiques comme [le style de texte](/fr/docs/Learn/CSS/Styling_text) et la [mise en page CSS](/fr/docs/Learn/CSS/CSS_layout).
 
 ## Prérequis
 
 Avant de commencer ce cours, nous vous recommandons :
 
 1. D'être familiarisé avec l'usage des ordinateurs et avec la navigation sur internet.
-2. De disposer d'un environnement de travail comme il est décrit dans l'article [installation des outils de base](/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base) et de savoir créer et gérer des fichiers (cf. leçon [gérer les fichiers](/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers)).
-3. D'être suffisamment à votre aise avec HTML (voir le cours [introduction au HTML](/fr/docs/Apprendre/HTML/Introduction_à_HTML)).
+2. De disposer d'un environnement de travail comme il est décrit dans l'article [installation des outils de base](/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software) et de savoir créer et gérer des fichiers (cf. leçon [gérer les fichiers](/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files)).
+3. D'être suffisamment à votre aise avec HTML (voir le cours [introduction au HTML](/fr/docs/Learn/HTML/Introduction_to_HTML)).
 4. D'avoir compris les bases du CSS telles qu'exposées dans le cours [premiers pas avec CSS.](/fr/docs/Learn/CSS/First_steps)
 
-> **Note :** Si vous travaillez sur un ordinateur, une tablette ou tout autre appareil sur lequel vous n'avez pas la possibilité de créer vos propres fichiers, vous pourrez tester (la plupart) des exemples de code dans un site de programmation en ligne comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/fr/).
+> [!NOTE]
+> Si vous travaillez sur un ordinateur, une tablette ou tout autre appareil sur lequel vous n'avez pas la possibilité de créer vos propres fichiers, vous pourrez tester (la plupart) des exemples de code dans un site de programmation en ligne comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guides
 
 Les articles qui composent ce module traitent la majeure partie du langage CSS. En les parcourant, vous découvrirez de nombreux exercices qui vous permettront d'évaluer votre bonne compréhension.
 
-> **Note :** Les articles dont le titre apparaît en anglais ne sont pas encore traduits au moment de la traduction de la page que vous lisez.
+> [!NOTE]
+> Les articles dont le titre apparaît en anglais ne sont pas encore traduits au moment de la traduction de la page que vous lisez.
 
 - [Cascade and inheritance (Cascade et héritage)](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
   - : Le but de cette leçon est de vous permettre d'acquérir des concepts fondamentaux du CSS : la cascade, la spécificité et l'héritage... et ainsi d'apprendre comment le CSS s'applique au HTML, et comment les conflits se résolvent.
@@ -51,7 +53,7 @@ Les articles qui composent ce module traitent la majeure partie du langage CSS. 
   - : Dans plusieurs leçons précédentes, vous avez abordé plusieurs façons de dimensionner de nombreux éléments d'une page web en utilisant le CSS. Comprendre pour anticiper les tailles des composants de votre design est important. Dans cette leçon nous résumerons par quels différents biais les éléments sont dimensionnés en CSS et définirons quelques termes qui vous aideront à l'avenir.
 - [Images, media, and form elements (images, médias et éléments de formulaires)](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
   - : Dans cet article, nous verrons comment des éléments particuliers sont traités en CSS. Les images, les autres médias, ou encore les éléments de formulaires se comportent légèrement différement des boîtes habituelles lorsque vous souhaitez leur appliquer un style CSS. Comprendre ce qu'il est possible ou non de faire vous évitera d'éventuelles déceptions cette leçon soulignera ce qu'il vous faut savoir.
-- [Mise en page des tableaux](/fr/docs/Apprendre/CSS/Building_blocks/Styling_tables)
+- [Mise en page des tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
   - : Styliser un tableau HTML n'est pas le travail qui fait rêver, mais vous pouvez parfois avoir à le faire. Cet article vous guide pour réussir l'apparence de vos tableaux en soulignant les techniques spécifiques applicables.
 - [Debugging CSS (déboguer le CSS)](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
   - : Parfois, lorsque vous écrivez du CSS, le résultat n'est pas ce que vous attendiez. Cet article vous guidera pour déboguer un problème de CSS en vous montrant comment utiliser les outils de développement contenus dans tout navigateur moderne pour vous aider à trouver ce qui se passe.
@@ -60,5 +62,5 @@ Les articles qui composent ce module traitent la majeure partie du langage CSS. 
 
 ## Voir aussi
 
-- [Effets de boîte avancés](/fr/docs/Apprendre/CSS/Building_blocks/Advanced_styling_effects)
+- [Effets de boîte avancés](/fr/docs/Learn/CSS/Building_blocks/Advanced_styling_effects)
   - : Cet article est un "trucs et astuces" vous fournissant un aperçu de fonctionnalités intéressantes comme l'ombre des boîtes, les mélanges de couleurs ou les filtres.

@@ -7,7 +7,7 @@ l10n:
 
 {{JsSidebar("Advanced")}}
 
-C のような低水準言語には、[`malloc()`](https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html) や [`free()`](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions) のような低水準のメモリー管理プリミティブがあります。これに対して JavaScript では、オブジェクトを作成するときにメモリーを自動的に確保し、使用しなくなったらメモリーを解放します（_ガーベジコレクション_）。この自動性が混乱の元になる可能性があります。メモリー管理について心配する必要がないという誤った印象を開発者に与える可能性があります。
+[C言語](https://ja.wikipedia.org/wiki/C%E8%A8%80%E8%AA%9E) のような低水準言語には、[`malloc()`](https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html) や [`free()`](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions) のような低水準のメモリー管理プリミティブがあります。これに対して JavaScript では、オブジェクトを作成するときにメモリーを自動的に確保し、使用しなくなったらメモリーを解放します（_ガベージコレクション_）。この自動性が混乱の元になる可能性があります。メモリー管理について心配する必要がないという誤った印象を開発者に与える可能性があります。
 
 ## メモリーライフサイクル
 
@@ -101,7 +101,8 @@ const a3 = a.concat(a2);
 
 ### 参照カウントのガベージコレクション
 
-> **メモ:** 現代のブラウザーで、ガベージコレクションに参照カウントを使用しているものはもうありません。
+> [!NOTE]
+> 現代のブラウザーで、ガベージコレクションに参照カウントを使用しているものはもうありません。
 
 これは、最も素朴なガベージコレクションアルゴリズムです。このアルゴリズムは、「あるオブジェクトが必要なくなった」ことを、「あるオブジェクトがその他のオブジェクトから参照されていない」ことと定義します。あるオブジェクトは、それに対する参照がゼロの時にガベージコレクション可能であると見なされます。
 
@@ -215,7 +216,8 @@ wm.set(key, { key });
 
 大まかなメンタルモデルとして、`WeakMap` は以下のような実装だと考えてください。
 
-> **警告:** これはポリフィルではなく、エンジンで実装されている方法（ガベージコレクション機構にフックしている）にも近いものです。
+> [!WARNING]
+> これはポリフィルではなく、エンジンで実装されている方法（ガベージコレクション機構にフックしている）にも近いものです。
 
 ```js
 class MyWeakMap {
@@ -264,7 +266,7 @@ function cached(getter) {
 const getImage = cached((url) => fetch(url).then((res) => res.blob()));
 ```
 
-[`FinalizationRegistry`](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) は、ガベージコレクションを監視するさらに強力なメカニズムを提供します。これは、オブジェクトを登録し、それらがガベージコレクションされたときに通知されるようにするものです。例えば、上記のキャッシュシステムでは、Blob 自体が集合に無料であっても、それを保持する `WeakRef` オブジェクトはそうではなく、時間とともに `Map` に多くの無駄な項目が蓄積される可能性があります。FinalizationRegistry`を使用することで、このような用途のクリーンアップを行うことができます。
+[`FinalizationRegistry`](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) は、ガベージコレクションを監視するさらに強力なメカニズムを提供します。これは、オブジェクトを登録し、それらがガベージコレクションされたときに通知されるようにするものです。例えば、上記のキャッシュシステムでは、Blob 自体が集合に無料であっても、それを保持する `WeakRef` オブジェクトはそうではなく、時間とともに `Map` に多くの無駄な項目が蓄積される可能性があります。`FinalizationRegistry`を使用することで、このような用途のクリーンアップを行うことができます。
 
 ```js
 function cached(getter) {
@@ -297,4 +299,4 @@ const getImage = cached((url) => fetch(url).then((res) => res.blob()));
 
 パフォーマンスとセキュリティの関係で、コールバックがいつ呼び出されるか、あるいはすべて呼び出されるかどうかは保証されていません。コールバックはクリーンアップにのみ使用すべきであり、しかも重要でないクリーンアップにのみ使用すべきです。他にも、[`try...finally`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) で常に実行される `finally` ブロックで実行するなど、より決定的にリソースを管理する方法があります。`WeakRef` と `FinalizationRegistry` は、長時間実行するプログラムのメモリー使用量を最適化するためだけに存在します。
 
-F[`WeakRef`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) および [`FinalizationRegistry`](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) の API について詳しくは、それぞれのリファレンスページを参照してください。
+[`WeakRef`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) および [`FinalizationRegistry`](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) の API について詳しくは、それぞれのリファレンスページを参照してください。

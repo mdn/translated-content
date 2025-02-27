@@ -41,7 +41,7 @@ Temos até mesmo diferentes tipos de sistemas numéricos! O decimal tem por base
 
 - **Binário** — A linguagem de menor level dos computadores; 0s e 1s.
 - **Octal** — Base 8, usa um caractere entre 0–7 em cada coluna.
-- **Hexadecimal** — Base 16, usa um caractere entre 0–9 e depois um entre a–f em cada coluna. Você pode já ter encontrado esses números anteriormente, trabalhando com [cores no CSS](/pt-BR/docs/Aprender/CSS/Introduction_to_CSS/Valores_e_unidades#Valores_hexadecimais).
+- **Hexadecimal** — Base 16, usa um caractere entre 0–9 e depois um entre a–f em cada coluna. Você pode já ter encontrado esses números anteriormente, trabalhando com [cores no CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Values_and_units#valores_hexadecimais).
 
 **Antes de se preocupar com seu cérebro estar derretendo, pare agora mesmo!** Para um começo, vamos nos ater aos números decimais no decorrer desse curso; você raramente irá se deparar com a necessidade de começar a pensar sobre os outros tipos, se é que vai precisar algum dia.
 
@@ -49,9 +49,7 @@ A segunda boa notícia é que, diferentemente de outras linguagens de programaç
 
 ### Tudo é número para mim
 
-Vamos brincar rapidamente com alguns números para nos familiarizarmos com a sintaxe básica que precisamos. Insira os comandos listados abaixo em seu [console JavaScript](/pt-BR/docs/Learn/Common_questions/ferramentas_de_desenvolvimento_do_navegador), ou use o console simples incorporado abaixo, se preferir.
-
-{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/variables/index.html", '100%', 300)}}
+Vamos brincar rapidamente com alguns números para nos familiarizarmos com a sintaxe básica que precisamos. Insira os comandos listados abaixo em seu [console JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
 
 **[Abra em uma nova janela](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/)**
 
@@ -86,9 +84,10 @@ São os operadores que utilizamos para fazer as operações aritiméticas básic
 | `/`      | Divisão                                             | Divide o número da esquerda pelo número da direita.                                          | `10 / 5`                                                                    |
 | `%`      | Restante _(Remainder_ - as vezes chamado de modulo) | Retorna o resto da divisão em números inteiros do número da esquerda pelo número da direita. | `8 % 3` (retorna 2; como três cabe duas vezes em 8, deixando 2 como resto.) |
 
-> **Nota:** Você verá algumas vezes números envolvidos em aritimética chamados de {{Glossary("Operando", "operandos")}}.
+> [!NOTE]
+> Você verá algumas vezes números envolvidos em aritimética chamados de {{Glossary("Operando", "operandos")}}.
 
-Nós provavelmente não precisamos ensinar a você como fazer matemática básica, mas gostaríamos de testar seu entendimento da sintaxe envolvida. Tente inserir os exemplos abaixo no seu [console JavaScript](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools), ou use o console incorporado visto anteriormente, se preferir, para familiarizar-se com a sintaxe.
+Nós provavelmente não precisamos ensinar a você como fazer matemática básica, mas gostaríamos de testar seu entendimento da sintaxe envolvida. Tente inserir os exemplos abaixo no seu [console JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), ou use o console incorporado visto anteriormente, se preferir, para familiarizar-se com a sintaxe.
 
 1. Primeiro tente inserir alguns exemplos simples por sua conta, como
 
@@ -139,7 +138,8 @@ Se você quiser substituir a precedência do operador, poderá colocar parêntes
 
 Tente fazer e veja como fica.
 
-> **Nota:** Uma lista completa de todos os operadores JavaScript e suas precedências pode ser vista em [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operator_precedence).
+> [!NOTE]
+> Uma lista completa de todos os operadores JavaScript e suas precedências pode ser vista em [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#operator_precedence).
 
 ## Operadores de incremento e decremento
 
@@ -149,7 +149,8 @@ Tente fazer e veja como fica.
 contagemPalpites++;
 ```
 
-> **Nota:** Eles são mais comumente usado em [Laços e iterações](/pt-BR/docs/Web/JavaScript/Guide/Lacos_e_iteracoes), que será visto no curso mais tarde. Por exemplo, digamos que você queira passar por uma lista de preços e adicionar imposto sobre vendas a cada um deles. Você usaria um loop para passar por cada valor e fazer o cálculo necessário para adicionar o imposto sobre vendas em cada caso. O incrementador é usado para mover para o próximo valor quando necessário. Na verdade, fornecemos um exemplo simples mostrando como isso é feito - [verifique ao vivo](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html) e observe o [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/maths/loop.html) para ver se consegue identificar os incrementadores! Veremos os _loops_ detalhadamente mais adiante no curso.
+> [!NOTE]
+> Eles são mais comumente usado em [Laços e iterações](/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration), que será visto no curso mais tarde. Por exemplo, digamos que você queira passar por uma lista de preços e adicionar imposto sobre vendas a cada um deles. Você usaria um loop para passar por cada valor e fazer o cálculo necessário para adicionar o imposto sobre vendas em cada caso. O incrementador é usado para mover para o próximo valor quando necessário. Na verdade, fornecemos um exemplo simples mostrando como isso é feito - [verifique ao vivo](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html) e observe o [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/maths/loop.html) para ver se consegue identificar os incrementadores! Veremos os _loops_ detalhadamente mais adiante no curso.
 
 Vamos tentar brincar com eles no seu console. Para começar, note que você não pode aplicá-las diretamente a um número, o que pode parecer estranho, mas estamos atribuindo a variável um novo valor atualizado, não operando no próprio valor. O seguinte retornará um erro:
 
@@ -178,7 +179,8 @@ num2--;
 num2;
 ```
 
-> **Nota:** Você pode fazer o navegador fazer o contrário - incrementar/decrementar a variável e depois retornar o valor, colocando o operador no início da variável ao invés do final. Tente os exemplos acima novamente, mas desta vez use `++num1` e `--num2`.
+> [!NOTE]
+> Você pode fazer o navegador fazer o contrário - incrementar/decrementar a variável e depois retornar o valor, colocando o operador no início da variável ao invés do final. Tente os exemplos acima novamente, mas desta vez use `++num1` e `--num2`.
 
 ## Operadores de atribuição
 
@@ -209,7 +211,8 @@ var y = 4; // y contém o valor 4
 x *= y; // x agora contém o valor 12
 ```
 
-> **Nota:** Existem muitos [outros operadores de atribuição disponíveis](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operador_atribuicao), mas estes são os básicos que você deve aprender agora.
+> [!NOTE]
+> Existem muitos [outros operadores de atribuição disponíveis](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#operador_atribuicao), mas estes são os básicos que você deve aprender agora.
 
 ## Aprendizado ativo: dimensionando uma canvas box
 
@@ -243,7 +246,8 @@ Não se preocupe se você estragar totalmente o código. Você sempre pode press
 | <=       | Menor ou igual que    | Verifica se o valor da esquerda é menor que ou igual ao valor da direita.      | `3 <= 2`      |
 | >=       | Maior ou igual que    | Verifica se o valor da esquerda é maior que ou igual ao valor da direita.      | `5 >= 4`      |
 
-> **Nota:** Talvez você já tenha visto alguém usando `==` e`!=` afim de testar igualdade ou desigualdade em JavaScript. Estes são operadores válidos em JavaScript, mas que diferem de `===`/`!==`. As versões anteriores testam se os valores são os mesmos, mas não se os tipos de dados dos valores são os mesmos. As últimas versões estritas testam a igualdade de ambos os valores e seus tipos de dados. Elas tendem a resultar em menos erros, por isso recomendamos que você as use.
+> [!NOTE]
+> Talvez você já tenha visto alguém usando `==` e`!=` afim de testar igualdade ou desigualdade em JavaScript. Estes são operadores válidos em JavaScript, mas que diferem de `===`/`!==`. As versões anteriores testam se os valores são os mesmos, mas não se os tipos de dados dos valores são os mesmos. As últimas versões estritas testam a igualdade de ambos os valores e seus tipos de dados. Elas tendem a resultar em menos erros, por isso recomendamos que você as use.
 
 Se você tentar inserir alguns desses valores em um console, verá que todos eles retornam `true`/`false` — aqueles booleanos que mencionamos no último artigo. Eles são muito úteis, pois nos permitem tomar decisões em nosso código, e eles são usados toda vez que queremos fazer uma escolha de algum tipo. Por exemplo, booleanos podem ser usados para:
 
@@ -282,7 +286,8 @@ function updateBtn() {
 
 Você pode ver o operador de igualdade sendo usado apenas dentro da função `updateBtn()`. Neste caso, não estamos testando se duas expressões matemáticas têm o mesmo valor, estamos testando se o conteúdo de texto de um botão contém uma certa string , mas ainda é o mesmo princípio em funcionamento. Se o botão estiver dizendo "Iniciar máquina" quando for pressionado, mudaremos o rótulo para "Parar máquina" e atualizaremos o rótulo conforme apropriado. Se o botão estiver dizendo "Parar máquina" quando for pressionado, nós trocamos a tela de volta.
 
-> **Nota:** Esse controle que troca entre dois estados geralmente é chamado de **toggle**. Ele alterna entre um estado e outro - acender, apagar, etc.
+> [!NOTE]
+> Esse controle que troca entre dois estados geralmente é chamado de **toggle**. Ele alterna entre um estado e outro - acender, apagar, etc.
 
 ## Resumo
 
@@ -290,6 +295,7 @@ Neste artigo, cobrimos as informações fundamentais que você precisa saber sob
 
 No próximo artigo, vamos explorar o texto e como o JavaScript nos permite manipulá-lo.
 
-> **Nota:** Se você gosta de matemática e quer saber mais sobre como ela é implementada em JavaScriot, você pode encontrar muito mais detalhes na seção principal de JavaScript do MDN. Ótimos lugares para começar são os artigos [Números e datas](/pt-BR/docs/Web/JavaScript/Guide/Numeros_e_datas) e [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators) .
+> [!NOTE]
+> Se você gosta de matemática e quer saber mais sobre como ela é implementada em JavaScriot, você pode encontrar muito mais detalhes na seção principal de JavaScript do MDN. Ótimos lugares para começar são os artigos [Números e datas](/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_dates) e [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators) .
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}

@@ -37,7 +37,7 @@ Cada noche, creamos Firefox a partir del más reciente código disponible en [mo
 
 Esta es una versión de Firefox hecha a la medida de desarrolladores. Cada seis semanas, cogemos las características de Firefox Nightly que son lo suficientemente estables y creamos una nueva versión de Firefox Developer Edition. Además, añadimos algunas características adicionales que solo están disponibles en este canal.
 
-[Descubre más sobre](/es/docs/Firefox/Developer_Edition)[Firefox Developer Edition](/es/docs/Firefox/Developer_Edition).
+[Descubre más sobre](/es/docs/Mozilla/Firefox/Developer_Edition)[Firefox Developer Edition](/es/docs/Mozilla/Firefox/Developer_Edition).
 
 [Descarga Firefox Developer Edition](https://www.mozilla.org/firefox/developer/)
 
@@ -57,7 +57,7 @@ Después de estabilizarse durante otras seis semanas en Beta, estamos listos par
 
 Firefox ESR es la edición de soporte a largo plazo de Firefox para escritorio para uso de grandes organizaciones, como escuelas, universidades, empresas y otras personas que necesitan un soporte extendido para implementaciones masivas.
 
-[Descubre más sobre Firefox Versión de Soporte Extendida](/es/Firefox/Firefox_ESR).
+[Descubre más sobre Firefox Versión de Soporte Extendida](/es/docs/Mozilla/Firefox/Firefox_ESR).
 
 [Descarga Firefox ESR](https://www.mozilla.org/firefox/organizations/all/)
 

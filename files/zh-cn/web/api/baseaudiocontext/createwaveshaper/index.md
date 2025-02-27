@@ -20,9 +20,10 @@ A {{domxref("WaveShaperNode")}}.
 
 ## 示例
 
-下面的例子展示了 AudioContext 创建一个波形整形器节点的基本用法。有关应用示例/信息，请查看我们的 [voice-change-O-matic demo](http://mdn.github.io/voice-change-o-matic/) 演示（有关代码，请参阅[app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js)）。
+下面的例子展示了 AudioContext 创建一个波形整形器节点的基本用法。有关应用示例/信息，请查看我们的 [voice-change-O-matic demo](https://mdn.github.io/voice-change-o-matic/) 演示（有关代码，请参阅[app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js)）。
 
-> **备注：** 实现失真曲线并不是简单的事情，你可能需要到处找资料来找到这样的算法。我们在[Stack Overflow](http://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion)上找到了以下的失真曲线代码
+> [!NOTE]
+> 实现失真曲线并不是简单的事情，你可能需要到处找资料来找到这样的算法。我们在[Stack Overflow](https://stackoverflow.com/questions/22312841/waveshaper-node-in-webaudio-how-to-emulate-distortion)上找到了以下的失真曲线代码
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -60,4 +61,4 @@ distortion.oversample = '4x';
 
 ## 参见
 
-- [使用 Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

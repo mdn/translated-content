@@ -9,7 +9,19 @@ l10n:
 
 **`get`** 구문은 객체의 속성 접근 시 호출할 함수를 바인딩합니다. 이 구문은 [classes](/ko/docs/Web/JavaScript/Reference/Classes)에서도 사용할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/functions-getter.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Getter")}}
+
+```js interactive-example
+const obj = {
+  log: ["a", "b", "c"],
+  get latest() {
+    return this.log[this.log.length - 1];
+  },
+};
+
+console.log(obj.latest);
+// Expected output: "c"
+```
 
 ## 구문
 
@@ -81,7 +93,7 @@ console.log(instance.msg); // "hello cake"
 
 접근자 속성은 클래스의 `prototype`으로 정의되므로 클래스의 모든 인스턴스에서 공유됩니다. 객체 리터럴의 접근자 속성과 달리 클래스의 접근자 속성은 열거할 수 없습니다.
 
-Static 설정자와 private 설정자는 유사한 구문을 사용하며, [`static`](/ko/docs/Web/JavaScript/Reference/Classes/static)과 [private class features](/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields) 페이지에 설명되어 있습니다.
+Static 설정자와 private 설정자는 유사한 구문을 사용하며, [`static`](/ko/docs/Web/JavaScript/Reference/Classes/static)과 [private class features](/ko/docs/Web/JavaScript/Reference/Classes/Private_properties) 페이지에 설명되어 있습니다.
 
 ### `delete` 연산자로 접근자 제거하기
 
@@ -151,7 +163,8 @@ console.log(MyConstants.foo); // 'foo', 정적 접근자의 값 변경 불가
 - 값이 지금 당장 필요하지 않은 경우. 나중에 사용할 수도 있고, 경우에 따라 아예 사용되지 않을 수 있습니다.
 - 값을 사용하면 여러 번 접근하게 되므로 변경되지 않거나 다시 계산할 필요가 없는 값은 다시 계산할 필요가 없습니다.
 
-> **참고:** 즉, 값이 변경될 것으로 예상되는 속성에 대해 게으른 접근자를 작성하면 값을 다시 계산하지 않으므로 게으른 접근자를 작성해서는 안 됩니다.
+> [!NOTE]
+> 즉, 값이 변경될 것으로 예상되는 속성에 대해 게으른 접근자를 작성하면 값을 다시 계산하지 않으므로 게으른 접근자를 작성해서는 안 됩니다.
 >
 > 모든 접근자가 처음부터 '느긋'하며 '메모화'되는 것은 아닙니다. 이런 동작이 필요하면 직접 구현해야 합니다.
 

@@ -1,11 +1,13 @@
 ---
 title: text-decoration-skip-ink
 slug: Web/CSS/text-decoration-skip-ink
+l10n:
+  sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
 {{CSSRef}}
 
-[CSS](/ja/docs/Web/CSS) の **`text-decoration-skip-ink`** プロパティは、上線や下線が文字のアセンダーやディセンダーを通過するときにどのように引くのかを指定します。
+**`text-decoration-skip-ink`** は [CSS](/ja/docs/Web/CSS) のプロパティで、上線や下線が文字のアセンダーやディセンダーを通過するときにどのように引くのかを指定します。
 
 {{EmbedInteractiveExample("pages/css/text-decoration-skip-ink.html")}}
 
@@ -20,10 +22,11 @@ text-decoration-skip-ink: auto;
 text-decoration-skip-ink: all;
 
 /* グローバルキーワード */
-text-decoration-skip: inherit;
-text-decoration-skip: initial;
+text-decoration-skip-ink: inherit;
+text-decoration-skip-ink: initial;
 text-decoration-skip-ink: revert;
-text-decoration-skip: unset;
+text-decoration-skip-ink: revert-layer;
+text-decoration-skip-ink: unset;
 ```
 
 ### 値
@@ -46,7 +49,7 @@ text-decoration-skip: unset;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 
@@ -77,7 +80,7 @@ p {
 }
 ```
 
-### Result
+### 結果
 
 {{EmbedLiveSample("Examples", "100%", 250)}}
 

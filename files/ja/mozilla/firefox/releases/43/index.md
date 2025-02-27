@@ -13,12 +13,12 @@ Firefox 43 は、米国時間 2015 年 12 月 15 日にリリースされまし�
 
 ハイライト:
 
-- [ウェブコンソールでサーバ側のログを記録](/ja/docs/Tools/Web_Console/Console_messages#server)
-- [CSS 宣言をオーバーライドしたルールをすばやく見つける](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#overridden_declarations)
-- [インスペクタのコンテキストメニュー項目 "Use in Console"](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu)
-- [ルールビューで "厳密に" フィルタリング](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#strict_search)
-- [コンソールのネットワーク項目にネットワークモニターへのリンクを追加](/ja/docs/Tools/Web_Console/Console_messages#network)
-- [マークアップビューで、擬似クラスを強制的に適用していることを示すインジケータを表示](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#setting_hover_active_focus)
+- [ウェブコンソールでサーバー側のログを記録](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#server)
+- [CSS 宣言をオーバーライドしたルールをすばやく見つける](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#overridden_declarations)
+- [インスペクターのコンテキストメニュー項目 "Use in Console"](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#element_popup_menu)
+- [ルールビューで "厳密に" フィルタリング](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#strict_search)
+- [コンソールのネットワーク項目にネットワークモニターへのリンクを追加](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#network)
+- [マークアップビューで、擬似クラスを強制的に適用していることを示すインジケータを表示](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#setting_hover_active_focus)
 - WebIDE の新たなサイドバー UI
 
 [Firefox 42 から Firefox 43 の間に解決した開発ツール関連のバグ一覧](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-09-19&query_format=advanced&chfield=resolution&chfieldfrom=2015-08-10&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=12582678).
@@ -49,7 +49,7 @@ Firefox 43 は、米国時間 2015 年 12 月 15 日にリリースされまし�
 
 #### その他の変更点
 
-- [ジェネレーター](/ja/docs/Web/JavaScript/Reference/Statements/function*)および[ジェネレーターメソッド](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)は、ES2016/ES7 に従ってコンストラクタブルではなくなりました ([Firefox バグ 1191486](https://bugzil.la/1191486))。
+- [ジェネレーター](/ja/docs/Web/JavaScript/Reference/Statements/function*)および[ジェネレーターメソッド](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)は、ES2016/ES7 に従ってコンストラクターブルではなくなりました ([Firefox バグ 1191486](https://bugzil.la/1191486))。
 
 ### インターフェイス/API/DOM
 
@@ -74,8 +74,8 @@ _変更なし。_
 #### その他
 
 - [Battery Status API](/ja/docs/Web/API/Battery_Status_API) で、最近更新された仕様で指定された {{domxref("Navigator.getBattery()")}} 向けの Promise 構文を使用するようになりました ([Firefox バグ 1050749](https://bugzil.la/1050749))。
-- `User-Agent` ヘッダが {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} のリストから外れましたので、XHR の {{domxref("XMLHttpRequest.setRequestHeader()")}} などで、[Fetch](/ja/docs/Web/API/Fetch_API) {{domxref("Headers")}} オブジェクトを設定できるようになりました ([Firefox バグ 1188932](https://bugzil.la/1188932))。
-- {{domxref("MediaRecorder.MediaRecorder()")}} コンストラクタが options Dictionary を引数としてサポートしました。記録するオーディオ/ビデオのビットレートを設定できます ([Firefox バグ 1161276](https://bugzil.la/1161276))。
+- `User-Agent` ヘッダーが {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} のリストから外れましたので、XHR の {{domxref("XMLHttpRequest.setRequestHeader()")}} などで、[Fetch](/ja/docs/Web/API/Fetch_API) {{domxref("Headers")}} オブジェクトを設定できるようになりました ([Firefox バグ 1188932](https://bugzil.la/1188932))。
+- {{domxref("MediaRecorder.MediaRecorder()")}} コンストラクターが options Dictionary を引数としてサポートしました。記録するオーディオ/ビデオのビットレートを設定できます ([Firefox バグ 1161276](https://bugzil.la/1161276))。
 - [Performance Timeline API](/ja/docs/Web/API/Performance_Timeline_API) の {{domxref("PerformanceObserver")}} インターフェイスを実装しました ([Firefox バグ 1165796](https://bugzil.la/1165796))。
 - Frame Timing API を追加しました。{{domxref("PerformanceRenderTiming")}} および {{domxref("PerformanceCompositeTiming")}} インターフェイスを使用できます ([Firefox バグ 1191178](https://bugzil.la/1191178))。
 - 最新の [画面方向 API](/ja/docs/Web/API/Screen_Orientation_API) を実装しました。接頭辞がない {{domxref("Screen.orientation")}} および {{domxref("ScreenOrientation")}} インターフェイスを使用できます ([Firefox バグ 1131470](https://bugzil.la/1131470))。非標準の {{domxref("Screen.mozOrientation")}}、{{domxref("Screen.onmozorientationchange")}}、{{domxref("Screen.mozLockOrientation()")}}、{{domxref("Screen.mozUnlockOrientation()")}} は将来削除する予定です。
@@ -83,7 +83,7 @@ _変更なし。_
 - {{domxref("Document.onselectionchange")}}、{{domxref("GlobalEventHandlers.onselectstart")}} イベントハンドラープロパティおよび {{domxref("Selection")}} イベント {{domxref("Document/selectionchange_event", "selectionchange")}}、{{domxref("Document/selectstart_event", "selectstart")}} を実験的にサポートしました ([Firefox バグ 571294](https://bugzil.la/571294))。`selectionchange` イベントは、関連付けられた `Selection` オブジェクトが関与している場合に {{domxref("Document")}} または特定の {{domxref("HTMLInputElement")}} や {{domxref("HTMLTextAreaElement")}} で発生します ([Firefox バグ 1196479](https://bugzil.la/1196479))。この機能は設定項目 `dom.select_events.enabled` で制御しており、既定値は Nightly を除き `false` です。
 - Android 版 Firefox および Firefox OS で、{{domxref("MouseEvent.offsetX")}} および {{domxref("MouseEvent.offsetY")}} のサポートを有効化しました ([Firefox バグ 1204841](https://bugzil.la/1204841))。
 - {{domxref("HTMLCanvasElement.mozFetchAsStream()")}} メソッドを削除しました ([Firefox バグ 1206030](https://bugzil.la/1206030))。
-- {{domxref("Request.Request", "Request()")}} コンストラクタは {{domxref("Window.fetch", "fetch()")}} と同様に、ユーザ名やパスワードを含む URL を使用した場合に {{jsxref("TypeError")}} 例外が発生するようになりました ([Firefox バグ 1195820](https://bugzil.la/1195820))。
+- {{domxref("Request.Request", "Request()")}} コンストラクターは {{domxref("Window.fetch", "fetch()")}} と同様に、ユーザー名やパスワードを含む URL を使用した場合に {{jsxref("TypeError")}} 例外が発生するようになりました ([Firefox バグ 1195820](https://bugzil.la/1195820))。
 
 ### MathML
 
@@ -107,7 +107,7 @@ _変更なし。_
 
 ## セキュリティ
 
-- サードパーティの iframe から Web Storage (すなわち `localStorage` および `sessionStorage`) へのアクセスは、ユーザが[サードパーティ Cookie を禁止している](https://support.mozilla.org/ja/kb/disable-third-party-cookies)場合に拒否されるようになりました ([Firefox バグ 536509](https://bugzil.la/536509))。
+- サードパーティの iframe から Web Storage (すなわち `localStorage` および `sessionStorage`) へのアクセスは、ユーザーが[サードパーティ Cookie を禁止している](https://support.mozilla.org/ja/kb/disable-third-party-cookies)場合に拒否されるようになりました ([Firefox バグ 536509](https://bugzil.la/536509))。
 - ホワイトリストを Nightly および Aurora/Dev Edition 版のブラウザーで削除しました ([Firefox バグ 1201023](https://bugzil.la/1201023))。現状では、次のバージョン (Firefox 44) の Beta および Release 版でもホワイトリストを削除する予定です。
 - {{htmlelement("script")}} およびスタイルシートにリンクする {{htmlelement("link")}} に、Subresource integrity を実装しました ([Firefox バグ 992096](https://bugzil.la/992096))。
 
@@ -131,7 +131,7 @@ _変更なし。_
 
 ### プラグイン
 
-- content をマルチプロセスに切り替える将来のリリースへの準備として、[NPAPI](/ja/Add-ons/Plugins) プラグインをページ content と同じプロセスで実行できなくなりました。`dom.ipc.plugins` から始まる設定項目は使用しません。
+- content をマルチプロセスに切り替える将来のリリースへの準備として、[NPAPI](/ja/docs/Mozilla/Add-ons/Plugins) プラグインをページ content と同じプロセスで実行できなくなりました。`dom.ipc.plugins` から始まる設定項目は使用しません。
 
 ### その他
 

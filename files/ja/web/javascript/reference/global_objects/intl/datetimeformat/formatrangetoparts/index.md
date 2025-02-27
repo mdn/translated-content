@@ -7,7 +7,32 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToP
 
 **`Intl.DateTimeFormat.prototype.formatRangeToParts()`** メソッドは、 {{jsxref("Intl.DateTimeFormat")}} フォーマッターで生成される期間の各部品を表すロケール特有のトークンを提供します。
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrangetoparts.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.formatRangeToParts()", "taller")}}
+
+```js interactive-example
+const startDate = new Date(Date.UTC(2007, 0, 10, 10, 0, 0)); // > 'Wed, 10 Jan 2007 10:00:00 GMT'
+const endDate = new Date(Date.UTC(2007, 0, 10, 11, 0, 0)); // > 'Wed, 10 Jan 2007 11:00:00 GMT'
+
+const dateTimeFormat = new Intl.DateTimeFormat("en", {
+  hour: "numeric",
+  minute: "numeric",
+});
+
+const parts = dateTimeFormat.formatRangeToParts(startDate, endDate);
+for (const part of parts) {
+  console.log(part);
+}
+// Expected output (in GMT timezone):
+// Object { type: "hour", value: "2", source: "startRange" }
+// Object { type: "literal", value: ":", source: "startRange" }
+// Object { type: "minute", value: "00", source: "startRange" }
+// Object { type: "literal", value: " – ", source: "shared" }
+// Object { type: "hour", value: "3", source: "endRange" }
+// Object { type: "literal", value: ":", source: "endRange" }
+// Object { type: "minute", value: "00", source: "endRange" }
+// Object { type: "literal", value: " ", source: "shared" }
+// Object { type: "dayPeriod", value: "AM", source: "shared" }
+```
 
 ## 構文
 
@@ -21,7 +46,8 @@ formatRangeToParts(startDate, endDate);
 
 このメソッドは2つの {{jsxref("Date")}} を受け取り、期間を書式化する際の各部品を表す*ロケール特有*のトークンを含む {{jsxref("Array")}} オブジェクトを返します。
 
-> **メモ:** 返値は現在のロケールで表示されるので、以下のものとは異なる可能性があります。
+> [!NOTE]
+> 返値は現在のロケールで表示されるので、以下のものとは異なる可能性があります。
 
 ```js
 let date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));

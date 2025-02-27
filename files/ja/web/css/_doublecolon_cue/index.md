@@ -1,5 +1,5 @@
 ---
-title: "::cue"
+title: ::cue
 slug: Web/CSS/::cue
 ---
 
@@ -13,6 +13,8 @@ slug: Web/CSS/::cue
   font-weight: bold;
 }
 ```
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-cue.html", "tabbed-shorter")}}
 
 このプロパティは、あたかも 1 つの部品であるかのように、一連のキュー全体に適用されます。 `background` とその個別指定だけは例外で、各キューに個別に適用されます。これは、ボックスが生成されて予期せずメディアの大きな領域を占めることを避けるためです。
 

@@ -1,11 +1,11 @@
 ---
-title: "::placeholder"
+title: ::placeholder
 slug: Web/CSS/::placeholder
 ---
 
 {{CSSRef}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-éléments) **`::placeholder`** représente [le texte de substitution](/fr/docs/Web/Guide/HTML/Forms_in_HTML#The_placeholder_attribute) pour un élément {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}. Cela permet aux développeurs web de personnaliser l'apparence de ce texte.
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::placeholder`** représente [le texte de substitution](/fr/docs/Learn/Forms#the_placeholder_attribute) pour un élément {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}. Cela permet aux développeurs web de personnaliser l'apparence de ce texte.
 
 ```css
 ::placeholder {
@@ -22,7 +22,8 @@ Seul un sous-ensemble des propriétés CSS peut être utilisé avec un sélecteu
 - {{cssxref("word-spacing")}}, {{cssxref("letter-spacing")}}, {{cssxref("text-decoration")}}, {{cssxref("text-transform")}} et {{cssxref("line-height")}}
 - {{cssxref("text-shadow")}}, {{cssxref("text-decoration")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} et {{cssxref("vertical-align")}}.
 
-> **Note :** Par défaut, dans la plupart des navigateurs, le texte de substitution est écrit en gris clair.
+> [!NOTE]
+> Par défaut, dans la plupart des navigateurs, le texte de substitution est écrit en gris clair.
 
 ## Syntaxe
 
@@ -102,7 +103,7 @@ Lorsque le [mode de contraste élevé de Windows](/fr/docs/Web/CSS/@media/-ms-hi
 
 Les textes de substitution ne doivent pas remplacer les éléments {{htmlelement("label")}}. Sans libellé associé grâce à [`for`](/fr/docs/Web/HTML/Element/label#for) et à [`id`](/fr/docs/Web/HTML/Global_attributes#id), les outils d'assistance tels que les lecteurs d'écran ne peuvent pas correctement analyser les éléments {{htmlelement("input")}}.
 
-- [Fournir des indications simples dans un formulaire](/fr/docs/Web/Accessibility/ARIA/forms/Basic_form_hints)
+- [Fournir des indications simples dans un formulaire](/fr/docs/Web/Accessibility/ARIA)
 - [_Placeholders in Form Fields Are Harmful_ — Nielsen Norman Group (en anglais)](https://www.nngroup.com/articles/form-design-placeholders/)
 
 ## Spécifications
@@ -117,7 +118,7 @@ Les textes de substitution ne doivent pas remplacer les éléments {{htmlelement
 
 - {{cssxref(":placeholder-shown")}} qui permet de mettre en forme un élément qui possède un _placeholder_ actif
 
-- [Les formulaires HTML](/fr/docs/Web/Guide/HTML/Forms_in_HTML)
+- [Les formulaires HTML](/fr/docs/Learn/Forms)
 - {{HTMLElement("input")}}
 - {{HTMLElement("textarea")}}
 - Les équivalents **non-standards** :

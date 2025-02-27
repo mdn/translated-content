@@ -7,7 +7,7 @@ slug: Web/CSS/align-self
 
 La propriété CSS **`align-self`** permet d'aligner les objets flexibles d'une ligne flexible ou d'une grille en surchargeant la valeur donnée par {{cssxref("align-items")}}.
 
-Si l'un des objet a une marge automatique (`auto`) pour l'axe perpendiculaire à l'axe principal, `align-self` sera ignoré. Lorsque le conteneur est une grille, `align-self` permet d'aligner l'élément au sein de [la zone de grille](/fr/docs/Glossaire/Zones_de_grille). Si le conteneur est une boîte flexible, l'alignement se fait selon [l'axe secondaire](/fr/docs/Glossaire/Axe_transversal).
+Si l'un des objet a une marge automatique (`auto`) pour l'axe perpendiculaire à l'axe principal, `align-self` sera ignoré. Lorsque le conteneur est une grille, `align-self` permet d'aligner l'élément au sein de [la zone de grille](/fr/docs/Glossary/Grid_Areas). Si le conteneur est une boîte flexible, l'alignement se fait selon [l'axe secondaire](/fr/docs/Glossary/Cross_Axis).
 
 {{EmbedInteractiveExample("pages/css/align-self.html")}}
 
@@ -148,9 +148,9 @@ align-self: unset;
 
 ## Voir aussi
 
-- [Utiliser les boîtes flexibles CSS](/fr/docs/Web/CSS/Disposition_des_boîtes_flexibles_CSS/Utilisation_des_flexbox_en_CSS)
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox)_
-- Guide sur les boîtes flexibles : _[Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible)_
-- Guide sur les grilles : _[Aligner des objets dans une grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS)_
-- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)
+- [Utiliser les boîtes flexibles CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- Guide sur les boîtes flexibles : _[Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- Guide sur les grilles : _[Aligner des objets dans une grille](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_box_alignment)
 - La propriété {{cssxref("align-items")}}

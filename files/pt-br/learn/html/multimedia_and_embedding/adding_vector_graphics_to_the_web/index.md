@@ -27,7 +27,8 @@ Vector graphics are very useful in many circumstances — they have small file s
   </tbody>
 </table>
 
-> **Nota:** This article doesn't intend to teach you SVG; just what it is, and how to add it to web pages.
+> [!NOTE]
+> This article doesn't intend to teach you SVG; just what it is, and how to add it to web pages.
 
 ## O que são vetores gráficos?
 
@@ -44,7 +45,8 @@ The difference becomes apparent when you zoom in the page — the PNG image beco
 
 ![Two star images zoomed in, one crisp and the other blurry](raster-vector-zoomed.png)
 
-> **Nota:** The images above are actually all PNGs — with the left-hand star in each case representing a raster image, and the right-hand star representing a vector image. Again, go to the [vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) demo for a real example!
+> [!NOTE]
+> The images above are actually all PNGs — with the left-hand star in each case representing a raster image, and the right-hand star representing a vector image. Again, go to the [vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) demo for a real example!
 
 Moreover, vector image files are much lighter than their raster equivalents, because they only need to hold a handful of algorithms, rather than information on every pixel in the image individually.
 
@@ -85,7 +87,8 @@ So why would anyone want to use raster graphics over SVG? Well, SVG does have so
 
 Raster graphics are arguably better for complex precision images such as photos, for the reasons described above.
 
-> **Nota:** In Inkscape, save your files as Plain SVG to save space. Also, please refer to this [article describing how to prepare SVGs for the Web](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html).
+> [!NOTE]
+> In Inkscape, save your files as Plain SVG to save space. Also, please refer to this [article describing how to prepare SVGs for the Web](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html).
 
 ## Adding SVG to your pages
 
@@ -136,7 +139,7 @@ background-size: contain;
 
 Like the `<img>` method described above, inserting SVGs using CSS background images means that the SVG can't be manipulated with JavaScript, and is also subject to the same CSS limitations.
 
-If your SVGs aren't showing up at all, it might be because your server isn't set up properly. If that's the problem, this [article will point you in the right direction](/pt-BR/docs/Web/SVG/Tutorial/Getting_Started#A_Word_on_Webservers).
+If your SVGs aren't showing up at all, it might be because your server isn't set up properly. If that's the problem, this [article will point you in the right direction](/pt-BR/docs/Web/SVG/Tutorial/Getting_Started#a_word_on_webservers).
 
 ### How to include SVG code inside your HTML
 
@@ -151,7 +154,7 @@ You can also open up the SVG file in a text editor, copy the SVG code, and paste
 #### Pros
 
 - Putting your SVG inline saves an HTTP request, and therefore can reduce a bit your loading time.
-- You can assign `class`es and `id`s to SVG elements and style them with CSS, either within the SVG or wherever you put the CSS style rules for your HTML document. In fact, you can use any [SVG presentation attribute](/pt-BR/docs/Web/SVG/Attribute#Presentation_attributes) as a CSS property.
+- You can assign `class`es and `id`s to SVG elements and style them with CSS, either within the SVG or wherever you put the CSS style rules for your HTML document. In fact, you can use any [SVG presentation attribute](/pt-BR/docs/Web/SVG/Attribute#presentation_attributes) as a CSS property.
 - Inlining SVG is the only approach that lets you use CSS interactions (like `:focus`) and CSS animations on your SVG image (even in your regular stylesheet.)
 - You can make SVG markup into a hyperlink by wrapping it in an {{htmlelement("a")}} element.
 

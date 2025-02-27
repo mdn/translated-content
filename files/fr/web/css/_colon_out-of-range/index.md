@@ -1,5 +1,5 @@
 ---
-title: ":out-of-range"
+title: :out-of-range
 slug: Web/CSS/:out-of-range
 ---
 
@@ -16,7 +16,8 @@ input:out-of-range {
 }
 ```
 
-> **Note :** Cette pseudo-classe s'applique seulement aux éléments qui ont des valeurs limites.
+> [!NOTE]
+> Cette pseudo-classe s'applique seulement aux éléments qui ont des valeurs limites.
 
 ## Syntaxe
 

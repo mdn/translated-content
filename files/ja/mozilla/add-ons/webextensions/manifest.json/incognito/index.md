@@ -40,7 +40,7 @@ This is a string which may take any of the following values:
   });
   ```
 
-- "split": the extension will be split between private and non-private windows. There are effectively two copies of the extension running: one sees only non-private windows, the other sees only private windows. Each copy has isolated access to Web APIs (so, for example, [`localStorage`](/ja/docs/Web/API/Storage/LocalStorage) is not shared). However, the WebExtension API [`storage.local`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) is shared.
+- "split": the extension will be split between private and non-private windows. There are effectively two copies of the extension running: one sees only non-private windows, the other sees only private windows. Each copy has isolated access to Web APIs (so, for example, [`localStorage`](/ja/docs/Web/API/Window/localStorage) is not shared). However, the WebExtension API [`storage.local`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) is shared.
 - "not_allowed": private tabs and windows are invisible to the extension.
 
 ## 例
@@ -59,4 +59,4 @@ This is a string which may take any of the following values:
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.incognito")}}
+{{Compat}}

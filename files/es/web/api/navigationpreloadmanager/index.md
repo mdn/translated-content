@@ -41,7 +41,7 @@ Esto se podría usar, por ejemplo, para reducir los datos enviados a solo una pa
 
 ## Ejemplos
 
-Los ejemplos aquí son de [Acelera el _Service Worker_ con precargas de navegación](https://developer.chrome.com/blog/navigation-preload/) (developer.chrome.com).
+Los ejemplos aquí son de [Acelera el _Service Worker_ con precargas de navegación](https://web.dev/navigation-preload/?hl=es-419) (developer.chrome.com).
 
 ### Detectar características y habilitar precarga de navegación
 
@@ -95,7 +95,8 @@ addEventListener("fetch", (event) => {
 El navegador envía el encabezado HTTP {{HTTPHeader("Service-Worker-Navigation-Preload")}} con solicitudes de precarga, con un valor de directiva predeterminado en `true`.
 Esto permite a los servidores diferenciar entre solicitudes de recuperación normales y precargadas, y enviar diferentes respuestas en cada caso si es necesario.
 
-> **Nota:** Si la respuesta de la precarga y las operaciones normales de recuperación pueden ser diferentes, entonces el servidor debe establecer `Vary: Service-Worker-Navigation-Preload` para garantizar que las diferentes respuestas se almacenen en caché.
+> [!NOTE]
+> Si la respuesta de la precarga y las operaciones normales de recuperación pueden ser diferentes, entonces el servidor debe establecer `Vary: Service-Worker-Navigation-Preload` para garantizar que las diferentes respuestas se almacenen en caché.
 
 El valor del encabezado se puede cambiar a cualquier otro valor de cadena usando {{domxref("NavigationPreloadManager.setHeaderValue()")}} para proporcionar contexto adicional para la operación de precarga.
 Por ejemplo, puedes establecer el valor en el ID de tu recurso almacenado en caché más reciente, de modo que el servidor no devuelva ningún recurso a menos que realmente se necesite.
@@ -113,7 +114,7 @@ navigator.serviceWorker.ready
   });
 ```
 
-[Acelera el _Service Worker_ con precargas de navegación > Respuestas personalizadas para precargas](https://developer.chrome.com/blog/navigation-preload/) proporciona un ejemplo más completo de un sitio donde se construye la respuesta para una página web de artículo desde un encabezado y pie de página en caché, de modo que solo devuelva el contenido del artículo para una precarga.
+[Acelera el _Service Worker_ con precargas de navegación > Respuestas personalizadas para precargas](https://web.dev/navigation-preload/?hl=es-419) proporciona un ejemplo más completo de un sitio donde se construye la respuesta para una página web de artículo desde un encabezado y pie de página en caché, de modo que solo devuelva el contenido del artículo para una precarga.
 
 ### Obtener el estado
 
@@ -141,4 +142,4 @@ navigator.serviceWorker.ready
 
 ## Véase también
 
-- [Acelera el _Service Worker_ con precargas de navegación](https://developer.chrome.com/blog/navigation-preload/) (developer.chrome.com)
+- [Acelera el _Service Worker_ con precargas de navegación](https://web.dev/navigation-preload/?hl=es-419) (developer.chrome.com)

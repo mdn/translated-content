@@ -9,18 +9,18 @@ slug: Learn/JavaScript
 
 ## O caminho para o aprendizado
 
-O JavaScript não é tão fácil de aprender como outras linguagens, como [HTML](/pt-BR/docs/Aprender/HTML) e [CSS](/pt-BR/docs/Aprender/CSS), que são outros dois pilares do desenvolvimento front-end. Antes de tentar aprender JavaScript, é altamente recomendável que você aprenda e se familiarize com pelo menos estas duas tecnologias primeiro. Você pode começar através dos seguintes módulos:
+O JavaScript não é tão fácil de aprender como outras linguagens, como [HTML](/pt-BR/docs/Learn/HTML) e [CSS](/pt-BR/docs/Learn/CSS), que são outros dois pilares do desenvolvimento front-end. Antes de tentar aprender JavaScript, é altamente recomendável que você aprenda e se familiarize com pelo menos estas duas tecnologias primeiro. Você pode começar através dos seguintes módulos:
 
-- [Começando na Web](/pt-BR/docs/Aprender/Getting_started_with_the_web)
-- [Introdução ao HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML)
-- [Introdução ao CSS](/pt-BR/docs/Aprender/CSS/Introduction_to_CSS)
+- [Começando na Web](/pt-BR/docs/Learn/Getting_started_with_the_web)
+- [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML)
+- [Introdução ao CSS](/pt-BR/docs/Learn/CSS/First_steps)
 
 Possuir experiência em outras linguagens de programação pode também ser útil.
 
 Depois de aprender o básico de JavaScript, você estará apto a estudar tópicos mais avançados, como:
 
 - JavaScript aprofundado, como ensinado em [Guia JavaScript](/pt-BR/docs/Web/JavaScript/Guide)
-- [Referências API Web](/pt-BR/docs/Web/Reference/API)
+- [Referências API Web](/pt-BR/docs/Web/API)
 
 ## Módulos
 
@@ -28,13 +28,13 @@ Este tópico contém os seguintes módulos, em uma ordem que sugerimos para estu
 
 - [Primeiros passos em JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps)
   - : Em nosso primeiro módulo JavaScript, primeiro responderemos algumas questões fundamentais como "o que é JavaScript?", "Como ele se parece?" E "o que ele pode fazer?", antes de passar para sua primeira experiência prática de escrever JavaScript. Depois disso, discutimos alguns recursos chave do JavaScript em detalhes, como variáveis, cadeias de caracteres, números e matrizes.
-- [Blocos de codigo JavaScript](/pt-BR/docs/Aprender/JavaScript/Elementos_construtivos)
+- [Blocos de codigo JavaScript](/pt-BR/docs/Learn/JavaScript/Building_blocks)
   - : Neste módulo, continuaremos a falar sobre os principais recursos fundamentais do JavaScript, voltando nossa atenção para os tipos mais comuns de blocos de código**,** como instruções condicionais, funções e eventos. Você já viu essas coisas no curso, mas apenas de passagem, aqui discutiremos tudo explicitamente.
-- [Introdução a objetos em JavaScript](/pt-BR/docs/Aprender/JavaScript/Objetos)
+- [Introdução a objetos em JavaScript](/pt-BR/docs/Learn/JavaScript/Objects)
   - : Em JavaScript, a maioria das coisas são objetos, desde seus principais recursos até as APIs do navegador. Você pode até criar seus próprios objetos.É importante entender a natureza orientada a objetos do JavaScript se você quiser ir mais longe com seu conhecimento da linguagem e escrever um código mais eficiente, portanto, fornecemos este módulo para ajudá-lo. Aqui ensinamos a teoria e a sintaxe de objetos em detalhes, observamos como criar seus próprios objetos e explicamos quais são os dados JSON e como trabalhar com eles.
 - **[JavaScript Assíncrono](/pt-BR/docs/Learn/JavaScript/Asynchronous)**
   - : Neste módulo, examinamos o JavaScript assíncrono, por que é importante e como ele pode ser usado para lidar efetivamente com possíveis operações de bloqueio, como a busca de recursos de um servidor.
-- [API's Web do lado cliente](/pt-BR/docs/Aprender/JavaScript/Client-side_web_APIs)
+- [API's Web do lado cliente](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs)
   - : Ao escrever JavaScript para sites ou aplicativos da Web, você não vai muito longe antes de começar a usar APIs - interfaces para manipular diferentes aspectos do navegador e do sistema operacional em que o site está sendo executado, ou até dados de outros sites ou serviços. Neste módulo, vamos explorar o que são as APIs e como usar algumas das APIs mais comuns que você encontrará com frequência em seu trabalho de desenvolvimento.
 
 ## Aprofundando
@@ -43,7 +43,7 @@ Uma vez que você se acostumar com o mundo do JavaScript aqui estão alguns outr
 
 - [Biblioteca de referência JavaScript](/pt-BR/docs/Web/JavaScript/Reference)
   - : Em nossa extensa biblioteca de referência você encontrará cada aspecto de Javascript tratado em detalhes: objetos globais, operadores, declarações e funções.
-- [Introdução à Orientação a Objetos (OO) em JavaScript](/pt-BR/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
+- [Introdução à Orientação a Objetos (OO) em JavaScript](/pt-BR/docs/Learn/JavaScript/Objects)
   - : Introdução aos conceitos de {{glossary("OOP","Programação orientada a objetos")}} em JavaScript.
 
 ## Resolvendo problemas comuns com Javascript

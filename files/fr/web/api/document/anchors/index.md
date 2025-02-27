@@ -75,4 +75,4 @@ Pour des raisons de rétrocompatibilité, la liste d'ancres retournée contient 
 
 ## Spécification
 
-- [DOM Level 2 HTML: anchors](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7577272)
+- [DOM Level 2 HTML: anchors](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7577272)

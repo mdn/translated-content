@@ -3,6 +3,8 @@ title: <acronym>
 slug: Web/HTML/Element/acronym
 ---
 
+{{HTMLSidebar}}
+
 ## Аннотация
 
 Элемент акронима (`<acronym>)` позволяет явно указать, что данная последовательность букв, являющуюся акронимом или аббревиатурой.
@@ -11,7 +13,7 @@ slug: Web/HTML/Element/acronym
 
 ## Атрибуты
 
-Этот элемент поддерживает _только_ [глобальные атрибуты](/ru/docs/HTML/global_attributes).
+Этот элемент поддерживает _только_ [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 ## Интерфейс DOM
 
@@ -42,12 +44,10 @@ slug: Web/HTML/Element/acronym
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - {{HTMLElement("abbr")}}
-
-{{HTMLSidebar}}

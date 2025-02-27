@@ -1,5 +1,5 @@
 ---
-title: ":out-of-range"
+title: :out-of-range
 slug: Web/CSS/:out-of-range
 ---
 
@@ -11,7 +11,8 @@ slug: Web/CSS/:out-of-range
 
 这个伪类很有用，可以给用户提供一个视觉提示，让他们知道字段的当前值是否超出了允许的范围。
 
-> **备注：** 该伪类仅适用于具有（并可以接受）范围限制的元素。如果没有这样的限制，元素值就无所谓“in-range”和“out-of-range”。
+> [!NOTE]
+> 该伪类仅适用于具有（并可以接受）范围限制的元素。如果没有这样的限制，元素值就无所谓“in-range”和“out-of-range”。
 
 ## 语法
 
@@ -89,4 +90,4 @@ input:out-of-range + label::after {
 ## 参见
 
 - {{cssxref(":in-range")}}
-- [表单数据校验](/zh-CN/docs/Learn/Forms/Form_validation)
+- [表单数据校验](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)

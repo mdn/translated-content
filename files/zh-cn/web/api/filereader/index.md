@@ -1,30 +1,32 @@
 ---
 title: FileReader
 slug: Web/API/FileReader
+l10n:
+  sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-**`FileReader`** 对象允许 Web 应用程序异步读取存储在用户计算机上的文件（或原始数据缓冲区）的内容，使用 {{domxref("File")}} 或 {{domxref("Blob")}} 对象指定要读取的文件或数据。
+**`FileReader`** 接口允许 Web 应用程序异步读取存储在用户计算机上的文件（或原始数据缓冲区）的内容，使用 {{domxref("File")}} 或 {{domxref("Blob")}} 对象指定要读取的文件或数据。
 
-其中 File 对象可以是来自用户在一个{{ HTMLElement("input") }}元素上选择文件后返回的{{ domxref("FileList") }}对象，也可以来自拖放操作生成的 [`DataTransfer`](/zh-CN/docs/Web/API/DataTransfer)对象，还可以是来自在一个{{ domxref("HTMLCanvasElement") }}上执行`mozGetAsFile()`方法后返回结果。
+文件对象可以从用户使用 {{HTMLElement("input")}} 元素选择文件而返回的 {{domxref("FileList")}} 对象中获取，或者从拖放操作的 {{ domxref("DataTransfer")}} 对象中获取。
 
-重要提示：FileReader 仅用于以安全的方式从用户（远程）系统读取文件内容 它不能用于从文件系统中按路径名简单地读取文件。要在 JavaScript 中按路径名读取文件，应使用标准 Ajax 解决方案进行服务器端文件读取，如果读取跨域，则使用 CORS 权限。
+`FileReader` 只能访问用户明确选择的文件内容，无论是使用 HTML `<input type="file">` 元素还是通过拖放。它不能用于从用户的文件系统中按路径名读取文件。要按路径名读取客户端文件系统上的文件，请使用[文件系统访问 API](/zh-CN/docs/Web/API/File_System_API)。要读取服务器端文件，请使用 {{domxref("Window/fetch", "fetch()")}}，如果跨源读取，则需要 [CORS](/zh-CN/docs/Web/HTTP/CORS) 权限。
 
-{{AvailableInWorkers}}
+{{InheritanceDiagram}}
 
 ## 构造函数
 
 - {{domxref("FileReader.FileReader", "FileReader()")}}
-  - : 返回一个新构造的`FileReader`。
+  - : 返回一个新的 `FileReader` 对象。
 
-有关详细信息和示例，请参阅[如何在 web 应用程序中使用文件](/zh-CN/Using_files_from_web_applications)。
+有关详细信息和示例，请参阅[在 Web 应用程序中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)。
 
-## 属性
+## 实例属性
 
-- {{domxref("FileReader.error")}} {{readonlyinline}}
-  - : 一个{{domxref("DOMException")}}，表示在读取文件时发生的错误。
-- {{domxref("FileReader.readyState")}} {{readonlyinline}}
+- {{domxref("FileReader.error")}} {{ReadOnlyInline}}
+  - : 一个表示在读取文件时发生的错误的 {{domxref("DOMException")}}。
+- {{domxref("FileReader.readyState")}} {{ReadOnlyInline}}
 
   - : 表示`FileReader`状态的数字。取值如下：
 
@@ -34,38 +36,38 @@ slug: Web/API/FileReader
     | `LOADING` | `1` | 数据正在被加载。       |
     | `DONE`    | `2` | 已完成全部的读取请求。 |
 
-- {{domxref("FileReader.result")}} {{readonlyinline}}
+- {{domxref("FileReader.result")}} {{ReadOnlyInline}}
   - : 文件的内容。该属性仅在读取操作完成后才有效，数据的格式取决于使用哪个方法来启动读取操作。
 
-### 事件处理
-
-- {{domxref("FileReader.onabort")}}
-  - : 处理[`abort`](/zh-CN/docs/Web/API/HTMLMediaElement/abort_event)事件。该事件在读取操作被中断时触发。
-- {{domxref("FileReader.onerror")}}
-  - : 处理[`error`](/zh-CN/docs/Web/API/Element/error_event)事件。该事件在读取操作发生错误时触发。
-- {{domxref("FileReader.onload")}}
-  - : 处理[`load`](/zh-CN/docs/Web/API/Window/load_event)事件。该事件在读取操作完成时触发。
-- {{domxref("FileReader.onloadstart")}}
-  - : 处理[`loadstart`](/zh-CN/docs/Web/API/XMLHttpRequest/loadstart_event)事件。该事件在读取操作开始时触发。
-- {{domxref("FileReader.onloadend")}}
-  - : 处理[`loadend`](/zh-CN/docs/Web/API/XMLHttpRequest/loadend_event)事件。该事件在读取操作结束时（要么成功，要么失败）触发。
-- {{domxref("FileReader.onprogress")}}
-  - : 处理[`progress`](/zh-CN/docs/Web/API/XMLHttpRequest/progress_event)事件。该事件在读取{{domxref("Blob")}}时触发。
-
-> **备注：** 因为 `FileReader` 继承自{{domxref("EventTarget")}}，所以所有这些事件也可以通过{{domxref("EventTarget.addEventListener()","addEventListener")}}方法使用。
-
-## 方法
+## 实例方法
 
 - {{domxref("FileReader.abort()")}}
-  - : 中止读取操作。在返回时，`readyState`属性为`DONE`。
+  - : 中止读取操作。在返回时，`readyState` 属性为 `DONE`。
 - {{domxref("FileReader.readAsArrayBuffer()")}}
-  - : 开始读取指定的 {{domxref("Blob")}}中的内容，一旦完成，result 属性中保存的将是被读取文件的 {{domxref("ArrayBuffer")}} 数据对象。
-- {{domxref("FileReader.readAsBinaryString()")}} {{non-standard_inline}}
-  - : 开始读取指定的{{ domxref("Blob") }}中的内容。一旦完成，`result`属性中将包含所读取文件的原始二进制数据。
+  - : 开始读取指定的 {{domxref("Blob")}} 中的内容，一旦完成，`result` 属性中将包含一个表示文件数据的 {{jsxref("ArrayBuffer")}} 对象。
+- {{domxref("FileReader.readAsBinaryString()")}} {{deprecated_inline}}
+  - : 开始读取指定的 {{domxref("Blob")}} 中的内容。一旦完成，`result` 属性中将包含一个表示文件中的原始二进制数据的字符串。
 - {{domxref("FileReader.readAsDataURL()")}}
-  - : 开始读取指定的{{ domxref("Blob") }}中的内容。一旦完成，`result`属性中将包含一个`data:` URL 格式的 Base64 字符串以表示所读取文件的内容。
+  - : 开始读取指定的 {{domxref("Blob")}} 中的内容。一旦完成，`result` 属性中将包含一个表示文件数据的 `data:` URL。
 - {{domxref("FileReader.readAsText()")}}
-  - : 开始读取指定的{{ domxref("Blob") }}中的内容。一旦完成，`result`属性中将包含一个字符串以表示所读取的文件内容。
+  - : 开始读取指定的 {{domxref("Blob")}} 中的内容。一旦完成，`result` 属性中将包含一个表示所读取的文件内容的字符串。可以指定可选的编码名称。
+
+## 事件
+
+使用 {{domxref("EventTarget/addEventListener", "addEventListener()")}} 方法或通过将事件侦听器分配给此接口的 `oneventname` 属性来侦听这些事件。一旦不再使用 `FileReader`，请使用 {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} 删除事件侦听器，以避免内存泄漏。
+
+- {{domxref("FileReader/abort_event", "abort")}}
+  - : 当读取被中止时触发，例如因为程序调用了 {{domxref("FileReader.abort()")}} 方法。
+- {{domxref("FileReader/error_event", "error")}}
+  - : 当读取由于错误而失败时触发。
+- {{domxref("FileReader/load_event", "load")}}
+  - : 读取成功完成时触发。
+- {{domxref("FileReader/loadend_event", "loadend")}}
+  - : 读取完成时触发，无论成功与否。
+- {{domxref("FileReader/loadstart_event", "loadstart")}}
+  - : 读取开始时触发。
+- {{domxref("FileReader/progress_event", "progress")}}
+  - : 读取数据时定期触发。
 
 ## 规范
 
@@ -75,8 +77,9 @@ slug: Web/API/FileReader
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [如何在 web 应用程序中使用文件](/zh-CN/Using_files_from_web_applications)
+- [在 Web 应用程序中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)
 - {{domxref("File")}}
 - {{domxref("Blob")}}
+- {{domxref("FileReaderSync")}}

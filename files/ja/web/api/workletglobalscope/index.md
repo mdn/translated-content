@@ -9,7 +9,8 @@ l10n:
 
 **`WorkletGlobalScope`** インターフェイスは、特定のワークレットスコープクラスの継承元となる抽象クラスです。それぞれの `WorkletGlobalScope` が新しいグローバル環境を定義します。
 
-> **メモ:** 通常このインターフェイスを扱う必要はありません。これは派生クラスが作成されることを意図した基底インターフェイスです。{{domxref("AudioWorklet")}} オブジェクトの中で派生クラスの {{domxref("AudioWorkletGlobalScope")}} が見つかり、{{domxref("PaintWorklet")}} オブジェクトの内部で {{domxref("PaintWorkletGlobalScope")}} が見つかるでしょう。
+> [!NOTE]
+> 通常このインターフェイスを扱う必要はありません。これは派生クラスが作成されることを意図した基底インターフェイスです。{{domxref("AudioWorklet")}} オブジェクトの中で派生クラスの {{domxref("AudioWorkletGlobalScope")}} が見つかり、{{domxref("PaintWorklet")}} オブジェクトの内部で {{domxref("PaintWorkletGlobalScope")}} が見つかるでしょう。
 
 ## インスタンスプロパティ
 

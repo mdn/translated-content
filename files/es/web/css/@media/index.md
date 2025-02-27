@@ -7,7 +7,7 @@ slug: Web/CSS/@media
 
 ## Resumen
 
-La [regla-at](/es/docs/Web/CSS/At-rule) [CSS](/es/docs/Web/CSS) `@media` asocia un grupo de declaraciones anidadas, en un bloque CSS delimitado por llaves, con una condición definida por un [media query](/es/docs/Web/CSS/Media_Queries). La regla-at `@media` puede ser usada no solo en el nivel superior de la hoja de estilos, sino también dentro de cualquier [grupo de reglas condicionales](/es/docs/Web/CSS/At-rule#grupos_de_reglas_condicionales).
+La [regla-at](/es/docs/Web/CSS/At-rule) [CSS](/es/docs/Web/CSS) `@media` asocia un grupo de declaraciones anidadas, en un bloque CSS delimitado por llaves, con una condición definida por un [media query](/es/docs/Web/CSS/CSS_media_queries). La regla-at `@media` puede ser usada no solo en el nivel superior de la hoja de estilos, sino también dentro de cualquier [grupo de reglas condicionales](/es/docs/Web/CSS/At-rule#grupos_de_reglas_condicionales).
 
 La regla-at `@media` puede ser accesible por medio de la interfaz de modelo de objeto {{domxref("CSSMediaRule")}}.
 
@@ -22,11 +22,12 @@ Un `<media-query>` está compuesto por un tipo de medio opcional y/o un conjunto
 - `all`
   - : Aplicable a todos los dispositivos.
 - `print`
-  - : Destinado a material paginado y documentos visibles en una pantalla en modo de vista previa para impresión. Por favor, consulte la sección de [medios paginados](/es/docs/Web/CSS/Paged_Media), y la [sección de Media en el tutorial de Introducción](/es/docs/Web/CSS/Media_Queries/Using_media_queries) para más información acerca de problemas de formateo específicos para los medios paginados.
+  - : Destinado a material paginado y documentos visibles en una pantalla en modo de vista previa para impresión. Por favor, consulte la sección de [medios paginados](/es/docs/Web/CSS/CSS_paged_media), y la [sección de Media en el tutorial de Introducción](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries) para más información acerca de problemas de formateo específicos para los medios paginados.
 - `screen`
   - : Destinado a principalmente a pantallas de computadora a color.
 
-> **Nota:** CSS2.1 y Media Queries 3 definió varios tipos de media adicionales (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`, `speech`), pero fueron descontinuados en [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) y no deben ser usados.
+> [!NOTE]
+> CSS2.1 y Media Queries 3 definió varios tipos de media adicionales (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`, `speech`), pero fueron descontinuados en [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) y no deben ser usados.
 
 ## Características de Medios (media feature)
 
@@ -41,7 +42,7 @@ Cada _característica de medios_ verifica una característica específica del na
 | [`resolution`](/es/docs/Web/CSS/@media/resolution)                                                         | Densidad de pixeles del dispositivo                                                                                                                        |                                                                                                                                  |
 | [`scan`](/es/docs/Web/CSS/@media/scan)                                                                     | Proceso de escaneo del dispositivo                                                                                                                         |                                                                                                                                  |
 | [`grid`](/es/docs/Web/CSS/@media/grid)                                                                     | ¿El dispositivo es un grid o un mapa de bits?                                                                                                              |                                                                                                                                  |
-| [`update-frequency`](/es/docs/Web/CSS/@media/update-frequency)                                             | Qué tan rápido (si lo hace) puede el dispositivo modificar la apariencia del contenido                                                                     | Incluido en Media Queries Nivel 4                                                                                                |
+| [`update-frequency`](/es/docs/Web/CSS/@media/update)                                                       | Qué tan rápido (si lo hace) puede el dispositivo modificar la apariencia del contenido                                                                     | Incluido en Media Queries Nivel 4                                                                                                |
 | [`overflow-block`](/es/docs/Web/CSS/@media/overflow-block)                                                 | Cómo maneja el dispositivo el contenido que excede los límites del viewport a lo largo del eje de bloque                                                   | Incluido en Media Queries Nivel 4                                                                                                |
 | [`overflow-inline`](/es/docs/Web/CSS/@media/overflow-inline)                                               | ¿Puede desplazarse hacia el contenido que excede los límites del viewport?                                                                                 | Incluido en Media Queries Nivel 4                                                                                                |
 | [`color`](/es/docs/Web/CSS/@media/color)                                                                   | Componente de número de bits por color del dispositivo, o cero si el dispositivo no es a color.                                                            |                                                                                                                                  |
@@ -99,5 +100,5 @@ Cada _característica de medios_ verifica una característica específica del na
 
 ## Véase también
 
-- [Media queries](/es/docs/Web/CSS/Media_Queries)
+- [Media queries](/es/docs/Web/CSS/CSS_media_queries)
 - El modelo CSSOM {{ domxref("CSSMediaRule") }} asociado a esta regla-at.

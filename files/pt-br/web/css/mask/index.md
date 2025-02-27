@@ -59,10 +59,10 @@ Se o valor é um valor URI, o elemento apontado pelo URI é usado como uma másc
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.mask")}}
+{{Compat}}
 
 ## Veja também
 
 - {{Cssxref("clip-path")}}, {{Cssxref("filter")}}
-- [Aplicanto efeitos SVG no conteúdo HTML](/pt-BR/docs/Applying_SVG_effects_to_HTML_content)
-- [SVG](/pt-BR/docs/SVG)
+- [Aplicanto efeitos SVG no conteúdo HTML](/pt-BR/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [SVG](/pt-BR/docs/Web/SVG)

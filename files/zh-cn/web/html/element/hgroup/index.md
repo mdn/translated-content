@@ -7,7 +7,37 @@ slug: Web/HTML/Element/hgroup
 
 **`<hgroup>`** [HTML](/zh-CN/docs/Web/HTML) 元素代表文档标题和与标题相关联的内容，它将一个 [`<h1>–<h6>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 元素与一个或多个 [`<p>`](/zh-CN/docs/Web/HTML/Element/p) 元素组合在一起。
 
-{{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<hgroup>
+  <h1>Frankenstein</h1>
+  <p>Or: The Modern Prometheus</p>
+</hgroup>
+<p>
+  Victor Frankenstein, a Swiss scientist, has a great ambition: to create
+  intelligent life. But when his creature first stirs, he realizes he has made a
+  monster. A monster which, abandoned by his master and shunned by everyone who
+  sees it, follows Dr Frankenstein to the very ends of the earth.
+</p>
+```
+
+```css interactive-example
+hgroup {
+  text-align: right;
+  padding-right: 16px;
+  border-right: 10px solid #00c8d7;
+}
+
+hgroup h1 {
+  margin-bottom: 0;
+}
+
+hgroup p {
+  margin: 0;
+  font-weight: bold;
+}
+```
 
 ## 属性
 
@@ -17,7 +47,7 @@ slug: Web/HTML/Element/hgroup
 
 `<hgroup>` 元素允许将一个标题与任意次要内容（例如子标题、副标题或口号）组合在一起。在 `<hgroup>` 中，这些类型的内容也表示为 `<p>` 元素。
 
-`<hgroup>` 本身对网页的的文档大纲没有任何影响。而 `<hgroup>` 中所允许的单个标题则会被用于文档大纲。
+`<hgroup>` 本身对网页的文档大纲没有任何影响。而 `<hgroup>` 中所允许的单个标题则会被用于文档大纲。
 
 ## 示例
 
@@ -69,8 +99,8 @@ slug: Web/HTML/Element/hgroup
       </td>
     </tr>
     <tr>
-      <th scope="row">省略标签</th>
-      <td>{{no_tag_omission}}</td>
+      <th scope="row">标签省略</th>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
     </tr>
     <tr>
       <th scope="row">允许的父元素</th>

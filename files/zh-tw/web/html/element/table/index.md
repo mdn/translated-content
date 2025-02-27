@@ -7,7 +7,93 @@ slug: Web/HTML/Element/table
 
 **HTML `<table>` 元件**代表表格數據 ── 換句話說，就是透過二維資料表來呈現資訊。
 
-{{EmbedInteractiveExample("pages/tabbed/table.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;table&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Front-end web developer course 2021
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Person</th>
+      <th scope="col">Most interest in</th>
+      <th scope="col">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Chris</th>
+      <td>HTML tables</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th scope="row">Dennis</th>
+      <td>Web accessibility</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th scope="row">Sarah</th>
+      <td>JavaScript frameworks</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th scope="row">Karen</th>
+      <td>Web performance</td>
+      <td>36</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row" colspan="2">Average age</th>
+      <td>33</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+```css interactive-example
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+}
+
+thead,
+tfoot {
+  background-color: rgb(228 240 245);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -42,7 +128,7 @@ slug: Web/HTML/Element/table
     </tr>
     <tr>
       <th scope="row">標籤省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>不允許，開始和結束標籤都是必須的。</td>
     </tr>
     <tr>
       <th scope="row">允許父元素</th>
@@ -61,7 +147,7 @@ slug: Web/HTML/Element/table
 
 ## 屬性
 
-這個元件包含了 [全域屬性（global attributes）](/zh-TW/docs/HTML/Global_attributes)。
+這個元件包含了 [全域屬性（global attributes）](/zh-TW/docs/Web/HTML/Global_attributes)。
 
 ### 棄用屬性
 
@@ -75,7 +161,7 @@ slug: Web/HTML/Element/table
 - `bgcolor` {{Deprecated_inline}}
   - : 定義表格的背景與內容顏色。它使用[六位十六進制 RGB code](/zh-TW/docs/Web/CSS/color_value#RGB_colors)，前缀需要加上 '`#`' 。也可以用[預先定義的顏色字串](/zh-TW/docs/Web/CSS/color_value#Color_keywords)可用。在 CSS 要得出類似效果，應該使用 {{cssxref("background-color")}} 屬性。
 - `border` {{Deprecated_inline}}
-  - : 這個屬性以像素為單位，定義了圍繞於表格框架的大小。如果設為 0，代表 [`frame`](/zh-TW/docs/Web/HTML/Element/table#frame) 屬性為空。在 CSS 要得出類似效果，應該使用 {{cssxref("border")}} 屬性。
+  - : 這個屬性以像素為單位，定義了圍繞於表格框架的大小。如果設為 0，代表 [`frame`](#frame) 屬性為空。在 CSS 要得出類似效果，應該使用 {{cssxref("border")}} 屬性。
 - `cellpadding` {{Deprecated_inline}}
   - : 這個屬性定義了元件與邊界線之間的空白，以及要不要顯示。如果輸入像素，像素長度的空白會套用到四個邊；如果輸入百分比，內容將居中、整體的垂直空間（上與下）會使用這個百分比表示。橫向空間（左與右）也適用這個規則。在 CSS 要得出類似效果，應該對 `<table>` 屬性使用 {{cssxref("border-collapse")}}；並對 {{HTMLElement("td")}} 使用 {{cssxref("padding")}}。
 - `cellspacing` {{Deprecated_inline}}
@@ -231,7 +317,7 @@ td {
 
 如此也能幫助螢幕閱讀器之類的輔具使用者、視力條件差、還有認知障礙的人。
 
-- [MDN Adding a caption to your table with \<caption>](/zh-TW/docs/Learn/HTML/Tables/Advanced#Adding_a_caption_to_your_table_with_<caption>)
+- [MDN Adding a caption to your table with \<caption>](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#Adding_a_caption_to_your_table_with_<caption>)
 - [Caption & Summary • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/caption-summary/)
 
 ### Scope 行列
@@ -270,7 +356,7 @@ td {
 
 在 {{HTMLElement("th")}} 元素提供 `scope="col"` 的宣告，有助於描述該單位屬於第一列。在 {{HTMLElement("td")}} 元素提供 `scope="row"` 則有助於描述該單位屬於第一行。
 
-- [MDN Tables for visually impaired users](/zh-TW/docs/Learn/HTML/Tables/Advanced#Tables_for_visually_impaired_users)
+- [MDN Tables for visually impaired users](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#Tables_for_visually_impaired_users)
 - [Tables with two headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/two-headers/)
 - [Tables with irregular headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/irregular/)
 - [H63: Using the scope attribute to associate header cells and data cells in data tables | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H63.html)
@@ -283,7 +369,7 @@ td {
 
 `如果表格無法切分，請結合 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id) 與 [`headers`](/zh-TW/docs/Web/HTML/Element/td#headers) 使用，以便程序化地關聯各表格單位與標題。`
 
-- [`MDN Tables for visually impaired users`](/zh-TW/docs/Learn/HTML/Tables/Advanced#Tables_for_visually_impaired_users)
+- [`MDN Tables for visually impaired users`](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#Tables_for_visually_impaired_users)
 - [`Tables with multi-level headers • Tables • W3C WAI Web Accessibility Tutorials`](https://www.w3.org/WAI/tutorials/tables/multi-level/)
 - [`H43: Using id and headers attributes to associate data cells with header cells in data tables | Techniques for W3C WCAG 2.0`](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
 

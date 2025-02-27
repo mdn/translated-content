@@ -47,7 +47,8 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
     | `farthest-side`   | Cette valeur fonctionne de façon semblable à `closest-side`, sauf que ce seront les côtés les plus éloignés qui seront utilisés.                                                                   |
     | `farthest-corner` | La valeur par défaut. Cette valeur fonctionne de façon semblable à `closest-corner`, sauf que ce sera le coin le plus éloigné du centre qui sera utilisé.                                          |
 
-    > **Note :** Les premières implémentations de cette fonction incluaient d'autres mots-clés (`cover` et `contain`) qui sont des synonymes respectifs des mots-clés standards `farthest-corner` et `closest-side`. Seuls les mots-clés standards doivent être utilisés, certaines implémentations ayant déjà abandonné ces anciennes variantes.
+    > [!NOTE]
+    > Les premières implémentations de cette fonction incluaient d'autres mots-clés (`cover` et `contain`) qui sont des synonymes respectifs des mots-clés standards `farthest-corner` et `closest-side`. Seuls les mots-clés standards doivent être utilisés, certaines implémentations ayant déjà abandonné ces anciennes variantes.
 
 - `<color-stop>`
   - : Une valeur d'arrêt de couleur, composée d'une valeur [`<color>`](/fr/docs/Web/CSS/color_value), suivie d'une ou deux positions d'arrêt optionnelles (définies par une valeur [`<percentage>`](/fr/docs/Web/CSS/percentage) ou [`<length>`](/fr/docs/Web/CSS/length) le long de l'axe du dégradé). Un pourcentage à `0%`, ou une longueur de `0`, représentera le centre du dégradé&nbsp;; la valeur `100%` représentera l'intersection de la forme du contour avec la ligne d'évolution du dégradé. Les valeurs de pourcentages intermédiaire sont positionnées linéairement le long du dégradé.
@@ -118,7 +119,8 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 
 Le dégradé elliptique a son centre situé à 20% du coin supérieur gauche et se répètera 10 fois entre le centre et le coin le plus éloigné (situé donc dans le coin inférieur droit). Les navigateurs qui prennent en charge les arrêts de couleur multiples afficheront des bandes elliptiques rouges et vertes. Les navigateurs qui n'implémentent pas cette fonctionnalité afficheront un dégradé qui va du rouge au noir puis du bleu au vert.
 
-> **Note :** Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients) pour plus d'exemples.
+> [!NOTE]
+> Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) pour plus d'exemples.
 
 ## Spécifications
 
@@ -130,7 +132,7 @@ Le dégradé elliptique a son centre situé à 20% du coin supérieur gauche et 
 
 ## Voir aussi
 
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Les autres fonctions de dégradés&nbsp;:
   - [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient)
   - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)

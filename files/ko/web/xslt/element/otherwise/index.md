@@ -3,7 +3,7 @@ title: otherwise
 slug: Web/XSLT/Element/otherwise
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 `<xsl:otherwise>` 요소는 아무런 `<xsl:when>` 조건도 적용하지 않았을 때 취하면 좋을 동작을 정의하는 데 씁니다. 다른 프로그래밍 언어의 `else`나 `default` 경우와 비슷합니다.
 
@@ -29,7 +29,7 @@ slug: Web/XSLT/Element/otherwise
 
 ### 정의
 
-[XSLT section 9.2, Conditional Processing with xsl:choose](http://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:choose)
+[XSLT section 9.2, Conditional Processing with xsl:choose](https://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:choose)
 
 ### Gecko 지원
 

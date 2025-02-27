@@ -3,11 +3,13 @@ title: Paths
 slug: Web/SVG/Tutorial/Paths
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutoriel/Formes_de_base", "Web/SVG/Tutoriel/Fills_and_Strokes") }}
 
-L'élément [`<path>`](/fr/Web/SVG/Element/path) (_chemin_ en français) est le plus versatile des éléments de la bibliothèque SVG parmi les [formes basiques](/fr/docs/Web/SVG/Tutoriel/Formes_de_base). Vous pouvez l'utiliser pour créer des lignes, des courbes, des arcs et autres.
+L'élément [`<path>`](/fr/docs/Web/SVG/Element/path) (_chemin_ en français) est le plus versatile des éléments de la bibliothèque SVG parmi les [formes basiques](/fr/docs/Web/SVG/Tutorial/Basic_Shapes). Vous pouvez l'utiliser pour créer des lignes, des courbes, des arcs et autres.
 
-Les chemins créent des formes en combinant plusieurs lignes droites ou courbes. Les formes composées uniquement de lignes droites peuvent être crées avec des [lignes brisées](/fr/docs/Web/SVG/Tutoriel/Formes_de_base#Lignes_brisées) (_polylines_). Bien que les lignes brisées et les chemins peuvent tout deux créer des formes d'apparence similaire, les lignes brisées nécessitent un grand nombre de petites lignes pour simuler des courbes, et qui ne s'adaptent pas bien aux grandes tailles. Une bonne compréhension des chemins est importante pour dessiner en SVG. Bien qu'il ne soit pas recommandé d'éditer des chemins complexes avec un éditeur XML ou texte (on utilisera plutôt un éditeur SVG tel que Inkscape ou Adobe Illustrator), comprendre comment un chemin s'écrit vous permettra éventuellement d'identifier et de corriger des erreurs d'affichage dans un SVG.
+Les chemins créent des formes en combinant plusieurs lignes droites ou courbes. Les formes composées uniquement de lignes droites peuvent être crées avec des [lignes brisées](/fr/docs/Web/SVG/Tutorial/Basic_Shapes#lignes_brisées) (_polylines_). Bien que les lignes brisées et les chemins peuvent tout deux créer des formes d'apparence similaire, les lignes brisées nécessitent un grand nombre de petites lignes pour simuler des courbes, et qui ne s'adaptent pas bien aux grandes tailles. Une bonne compréhension des chemins est importante pour dessiner en SVG. Bien qu'il ne soit pas recommandé d'éditer des chemins complexes avec un éditeur XML ou texte (on utilisera plutôt un éditeur SVG tel que Inkscape ou Adobe Illustrator), comprendre comment un chemin s'écrit vous permettra éventuellement d'identifier et de corriger des erreurs d'affichage dans un SVG.
 
 La forme d'un élément path est définie par son attribut {{ SVGAttr("d") }}. Celui-ci prend pour valeur une série de commandes suivi de paramètres utilisés par ces commandes.
 
@@ -196,7 +198,8 @@ T x y (ou t dx dy)
 
 Ce raccourci examine le précédent point de contrôle utilisé et en infère un nouveau à partir de celui-ci. Cela signifie qu'après un premier point de contrôle, vous pouvez créer des formes assez complexes en spécifiant seulement les points d'extrémités.
 
-> **Note :** Ce raccourci fonctionne uniquement si la commande précédente est une commande `Q` ou `T`. Dans le cas contraire, le point de contrôle est considéré comme le même que le point précédent, et vous ne dessinerez que des lignes.
+> [!NOTE]
+> Ce raccourci fonctionne uniquement si la commande précédente est une commande `Q` ou `T`. Dans le cas contraire, le point de contrôle est considéré comme le même que le point précédent, et vous ne dessinerez que des lignes.
 
 ![](shortcut_quadratic_bézier_with_grid.png)
 
@@ -212,7 +215,7 @@ Les deux courbes produisent des résultats similaires, bien que les courbes cubi
 
 Le dernier type de ligne courbe que vous pouvez créer avec SVG est l'arc, invoqué avec `A` (_Elliptical Arc_). Les arcs sont des sections de cercles ou d'ellipses.
 
-L'élément arc part du point actuel vers le point d'arrivée (x, y) en parcourant la ligne le long d'une ellipse définie par `rx` et `ry`. Le centre de l'ellipse (cx, cy) est calculé automatiquement pour satisfaire les contraintes imposées par les autres paramètres. Si vous avez besoin d'un rappel sur les ellipses, voyez les [formes de base](/fr/docs/Web/SVG/Tutoriel/Formes_de_base#Ellipses). Ensemble, ces quatre valeurs définissent la structure de base de l'arc.
+L'élément arc part du point actuel vers le point d'arrivée (x, y) en parcourant la ligne le long d'une ellipse définie par `rx` et `ry`. Le centre de l'ellipse (cx, cy) est calculé automatiquement pour satisfaire les contraintes imposées par les autres paramètres. Si vous avez besoin d'un rappel sur les ellipses, voyez les [formes de base](/fr/docs/Web/SVG/Tutorial/Basic_Shapes#ellipses). Ensemble, ces quatre valeurs définissent la structure de base de l'arc.
 
 ```
 A rx ry x-axis-rotation large-arc-flag sweep-flag x y
@@ -392,10 +395,10 @@ L'exemple ci-dessous montre les quatre combinaisons possibles avec `sweep-flag` 
 
 ## Conclusion
 
-Les arcs sont un moyen facile de créer des portions de cercle ou d'ellipse dans vos dessins. Par exemple pour dessiner un graphique en camembert. Si vous êtes en train de migrer vers SVG depuis [Canvas](/fr/docs/Web/HTML/Canvas), les arcs peuvent être la partie la plus difficile à appréhender, mais sont également bien plus puissants.
+Les arcs sont un moyen facile de créer des portions de cercle ou d'ellipse dans vos dessins. Par exemple pour dessiner un graphique en camembert. Si vous êtes en train de migrer vers SVG depuis [Canvas](/fr/docs/Web/API/Canvas_API), les arcs peuvent être la partie la plus difficile à appréhender, mais sont également bien plus puissants.
 
 Comme les points de départ et d'arrivée de tout chemin parcourant un cercle sont confondus, un nombre infini de cercles peuvent être choisis, par conséquent le chemin est indéfini. Il est possible d'en faire une approximation en prenant des points de départ et d'arrivée légèrement décalés, puis de les connecter à l'aide d'un autre segment de chemin. Dans ces conditions, il est souvent plus facile d'utiliser un véritable élément cercle ou ellipse à la place.
 
-Vous pouvez trouver une démo interactive à l'adresse suivante, pour vous aider à comprendre les concepts derrière les arcs SVG: <http://codepen.io/lingtalfi/pen/yaLWJG> (testé avec Chrome et Firefox seulement, peut ne pas marcher avec votre navigateur).
+Vous pouvez trouver une démo interactive à l'adresse suivante, pour vous aider à comprendre les concepts derrière les arcs SVG: <https://codepen.io/lingtalfi/pen/yaLWJG> (testé avec Chrome et Firefox seulement, peut ne pas marcher avec votre navigateur).
 
 {{ PreviousNext("Web/SVG/Tutoriel/Formes_de_base", "Web/SVG/Tutoriel/Fills_and_Strokes") }}

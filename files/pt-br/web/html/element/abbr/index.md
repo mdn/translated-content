@@ -5,19 +5,20 @@ slug: Web/HTML/Element/abbr
 
 ## Sumário
 
-O _Elemento_ _HTML `<abbr>` _(ou Elemento de Abreviação HTML) representa uma abreviação e opcionalmente fornece uma descrição completa para ela. Se presente, o atributo **`title`** deve conter a descrição completa e apenas ela.
+O _Elemento HTML `<abbr>`_ (ou Elemento de Abreviação HTML) representa uma abreviação e opcionalmente fornece uma descrição completa para ela. Se presente, o atributo **`title`** deve conter a descrição completa e apenas ela.
 
-> **Note:** Quando presente, o número gramatical (singular/plural) do texto no atributo **`title`** deve ser correspondente ao do conteúdo do elemento `<abbr>`. Isso também deve ocorrer no caso das linguagens com mais de dois números gramaticais (por exemplo, em árabe não há somente palavras no singular e plural, mas tem também uma categoria dual).
+> [!NOTE]
+> Quando presente, o número gramatical (singular/plural) do texto no atributo **`title`** deve ser correspondente ao do conteúdo do elemento `<abbr>`. Isso também deve ocorrer no caso das linguagens com mais de dois números gramaticais (por exemplo, em árabe não há somente palavras no singular e plural, mas tem também uma categoria dual).
 
-- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), [conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content), conteúdo palpável
-- _Conteúdo permitido_[Conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
-- _Omissão de tag_ {{no_tag_omission}}
-- _Elementos-pai permitidos_ Qualquer elemento que aceite como filho [conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [conteúdo de fraseamento](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), conteúdo palpável
+- _Conteúdo permitido_[Conteúdo de fraseamento](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
+- _Omissão de tag_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
+- _Elementos-pai permitidos_ Qualquer elemento que aceite como filho [conteúdo de fraseamento](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
 - _Interface DOM_ {{domxref("HTMLElement")}} Após o Gecko 1.9.2 (Firefox 3.6) (e incluindo ele), o Firefox implementou a interface {{domxref("HTMLSpanElement")}} para este elemento.
 
 ## Atributos
 
-Este elemento inclui apenas os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 Use o atributo **title** para definir a descrição completa da abreviação. Muitos navegadores exibem a descrição quando passa-se o mouse por cima da abreviação.
 
@@ -55,7 +56,7 @@ Obama é presidente dos EUA
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.abbr")}}
+{{Compat}}
 
 ## Veja também
 

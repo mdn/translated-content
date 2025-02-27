@@ -5,7 +5,7 @@ slug: Web/CSS/@keyframes
 
 {{CSSRef}}
 
-La [règle](/fr/docs/Web/CSS/Règles_@) **`@keyframes`** permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec [les transitions](/fr/docs/Web/CSS/CSS_Transitions).
+La [règle](/fr/docs/Web/CSS/At-rule) **`@keyframes`** permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec [les transitions](/fr/docs/Web/CSS/CSS_transitions).
 
 ```css
 @keyframes slidein {
@@ -157,7 +157,7 @@ p {
 
 ### Plus d'exemples ?
 
-Regardez [Utiliser les animations CSS](/fr/docs/Web/CSS/Animations_CSS/Utiliser_les_animations_CSS) pour de plus amples exemples.
+Regardez [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations) pour de plus amples exemples.
 
 ## Spécifications
 
@@ -169,5 +169,5 @@ Regardez [Utiliser les animations CSS](/fr/docs/Web/CSS/Animations_CSS/Utiliser_
 
 ## Voir aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Utiliser_les_animations_CSS)
+- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent")}}

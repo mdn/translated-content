@@ -69,7 +69,7 @@ var uintc8 = new Uint8ClampedArray(iterable);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Uint8ClampedArray.Uint8ClampedArray")}}
+{{Compat}}
 
 ### 互換性メモ
 
@@ -87,6 +87,6 @@ var dv = new Uint8ClampedArray([1, 2, 3]);
 
 ## 関連情報
 
-- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

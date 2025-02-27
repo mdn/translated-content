@@ -36,7 +36,7 @@ El elemento HTML Details **\<details>** es usado como un widget de revelación a
     </tr>
     <tr>
       <th scope="row">Omisión de etiquetas</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th scope="row">Elementos padres permitidos</th>
@@ -56,7 +56,7 @@ El elemento HTML Details **\<details>** es usado como un widget de revelación a
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globales) .
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes) .
 
 - `open`
   - : Este atributo Booleano indica si los detalles serán mostrados al usuario cuando la página se cargue . Por default el valor es `false` y por lo tanto los detalles estarán ocultos.

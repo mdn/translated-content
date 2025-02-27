@@ -270,7 +270,7 @@ li {
 
 ## 접근성 고려사항
 
-CSS로 생성한 콘텐츠는 [DOM](/ko/docs/Web/API/Document_Object_Model/소개)이 포함하지 않고, [접근성 트리](/ko/docs/Learn/접근성/What_is_accessibility)에도 들어가지 않습니다. 따라서 특정 접근성 기술/브라우저 조합이 내용을 표현하지 않을 수 있습니다. 콘텐츠가 포함한 정보가 페이지의 목적을 이해하는 것에 중요하다면 주 문서로 포함하는 것이 좋습니다.
+CSS로 생성한 콘텐츠는 [DOM](/ko/docs/Web/API/Document_Object_Model/Introduction)이 포함하지 않고, [접근성 트리](/ko/docs/Learn/Accessibility/What_is_accessibility)에도 들어가지 않습니다. 따라서 특정 접근성 기술/브라우저 조합이 내용을 표현하지 않을 수 있습니다. 콘텐츠가 포함한 정보가 페이지의 목적을 이해하는 것에 중요하다면 주 문서로 포함하는 것이 좋습니다.
 
 - [Accessibility support for CSS generated content – Tink](https://tink.uk/accessibility-support-for-css-generated-content/)
 - [Explanation of WCAG, Guideline 1.3 – MDN](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)

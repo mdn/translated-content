@@ -2,7 +2,7 @@
 title: HTMLImageElement
 slug: Web/API/HTMLImageElement
 l10n:
-  sourceCommit: f3bd33e08e22c93711db216551ce725eb2ccad2d
+  sourceCommit: 47ed48a36b456f8ea9ab6aaa5969c55d2912edcb
 ---
 
 {{APIRef("HTML DOM")}}
@@ -30,7 +30,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
   - : 現在表示されている画像が読み込まれた URL を表す文字列を返します。この文字列は、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)が適用されている場合、状況の変化に応じて画像が調整され、変更される可能性があります。
 - {{domxref("HTMLImageElement.decoding")}}
   - : ブラウザーが画像をどのようにデコードすべきかのヒントを表すオプションの文字列です。この値を指定する場合、許可されている値のいずれかでなければなりません。同期的に画像をデコードする場合は `sync`、非同期的に画像をデコードする場合は `async`、優先順位を指定しない場合は `auto` （これが既定値）です。このプロパティの値の意味については、 {{domxref("HTMLImageElement.decoding", "decoding")}} のページを参照してください。
-- {{domxref("HTMLImageElement.fetchPriority")}} {{Experimental_Inline}}
+- {{domxref("HTMLImageElement.fetchPriority")}}
   - : オプションの文字列で、他の画像との比較において画像の取得を優先させるためのブラウザーへのヒントを表します。この値を指定する場合、許可されている値のいずれかでなければなりません。高い優先度で取得する場合は `high`、低い優先度で取得する場合は `low`、優先度を設定しない場合は `auto` （これが既定値）です。
 - {{domxref("HTMLImageElement.height")}}
   - : HTML の [`height`](/ja/docs/Web/HTML/Element/img#height) 属性を反映した整数値です。画像のレンダリング時の高さを CSS ピクセル数で表します。

@@ -1,8 +1,9 @@
 ---
-title: HTMLMediaElement.load()
+title: "HTMLMediaElement: load() メソッド"
+short-title: load()
 slug: Web/API/HTMLMediaElement/load
 l10n:
-  sourceCommit: e60194342c9666ad8a2e6e5e6c25705fe818bcde
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}

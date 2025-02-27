@@ -1,11 +1,15 @@
 ---
 title: padding-inline
 slug: Web/CSS/padding-inline
+l10n:
+  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
 {{CSSRef}}
 
 **`padding-inline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、論理的なインライン方向の先頭と末尾のパディングを設定します。これは要素の書字方向やテキストの向きに応じて物理的なパディングに変換されます。
+
+{{EmbedInteractiveExample("pages/css/padding-inline.html")}}
 
 ## 構成要素のプロパティ
 
@@ -29,6 +33,7 @@ padding-inline: 5% 2%; /* 直近のブロックコンテナーの幅に対する
 padding-inline: inherit;
 padding-inline: initial;
 padding-inline: revert;
+padding-inline: revert-layer;
 padding-inline: unset;
 ```
 
@@ -39,7 +44,7 @@ padding-inline: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : パディングの寸法を固定値で指定します。負の値は指定できません。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : パディングの寸法をパーセント値で表したもので、含まれるブロックの _inline-size_ に対する相対値です。負の値は指定できません。
+  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
 
 ## 解説
 
@@ -55,19 +60,19 @@ padding-inline: unset;
 
 ## 例
 
-<h3 id="Setting_inline_padding_for_vertical_text">縦書きテキストにおけるインライン方向のパディングの設定</h3>
+### 縦書きテキストにおけるインライン方向のパディングの設定
 
 #### HTML
 
-```html
+```html live-sample___setting_inline_padding_for_vertical_text
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___setting_inline_padding_for_vertical_text
 div {
   background-color: yellow;
   width: 120px;
@@ -95,5 +100,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - 対応する物理的プロパティ: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

@@ -1,8 +1,9 @@
 ---
-title: MouseEvent.y
+title: "MouseEvent: y プロパティ"
+short-title: y
 slug: Web/API/MouseEvent/y
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
 ---
 
 {{APIRef("UI Events")}}

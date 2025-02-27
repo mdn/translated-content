@@ -1,36 +1,47 @@
 ---
 title: Host
 slug: Web/HTTP/Headers/Host
+l10n:
+  sourceCommit: edefa50f18613599b92e2eb3e9556fbde220b360
 ---
 
 {{HTTPSidebar}}
 
-**Host** 请求头指明了请求将要发送到的服务器主机名和端口号。
+HTTP **`Host`** {{Glossary("request header", "请求标头")}}指定了接收请求的服务器的主机名和端口号。
 
-如果没有包含端口号，会自动使用被请求服务的默认端口（比如 HTTPS URL 使用 443 端口，HTTP URL 使用 80 端口）。
+如果没有包含端口，则默认使用请求服务的端口（例如，HTTPS URL 默认为 `443`，HTTP URL 默认为 `80`）。
 
-所有 HTTP/1.1 请求报文中必须包含一个`Host`头字段。对于缺少`Host`头或者含有超过一个`Host`头的 HTTP/1.1 请求，可能会收到{{HTTPStatus("400")}}（Bad Request）状态码。
+所有 HTTP/1.1 请求消息中都必须发送一个 `Host` 标头字段。如果 HTTP/1.1 请求消息中缺少标头字段或包含多个 `Host` 标头字段，可能会发送 {{HTTPStatus("400", "400 Bad Request")}} 状态码。
 
-| Header type                           | {{Glossary("Request header")}} |
-| ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | yes                            |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">标头类型</th>
+      <td>{{Glossary("Request header", "请求标头")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+      <td>是</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
-```plain
+```http
 Host: <host>:<port>
 ```
 
 ## 指令
 
-- \<host>
+- `<host>`
   - : 服务器的域名（用于虚拟主机）。
-- \<port> {{optional_inline}}
+- `<port>` {{optional_inline}}
   - : 服务器监听的 TCP 端口号。
 
 ## 示例
 
-```plain
+```http
 Host: developer.mozilla.org
 ```
 
@@ -42,7 +53,7 @@ Host: developer.mozilla.org
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{HTTPStatus("400")}}
 - {{HTMLElement("base")}}

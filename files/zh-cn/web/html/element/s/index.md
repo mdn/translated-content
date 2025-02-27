@@ -19,7 +19,7 @@ slug: Web/HTML/Element/s
   </tr>
   <tr>
    <th scope="row">标签省略</th>
-   <td>{{no_tag_omission}}</td>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
@@ -38,9 +38,10 @@ slug: Web/HTML/Element/s
 
 ## 属性
 
-这个元素仅仅包含 [全局属性](/zh-CN/docs/HTML/Global_attributes)
+这个元素仅仅包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 
-> **备注：** 直到 Gecko1.9.2（包含），Firefox 为这个元素实现了 `HTMLSpanElement` 接口。
+> [!NOTE]
+> 直到 Gecko1.9.2（包含），Firefox 为这个元素实现了 `HTMLSpanElement` 接口。
 
 ## 示例
 
@@ -83,7 +84,7 @@ s::after {
 Some people who use screen readers deliberately disable announcing content that creates extra verbosity. Because of this, it is important to not abuse this technique and only apply it in situations where not knowing content has been struck out would adversely affect understanding.
 
 - [Short note on making your mark (more accessible) | The Paciello Group](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
-- [Tweaking Text Level Styles | Adrian Roselli](http://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## 规范
 

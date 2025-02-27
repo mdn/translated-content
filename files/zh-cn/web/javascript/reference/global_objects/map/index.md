@@ -7,7 +7,31 @@ slug: Web/JavaScript/Reference/Global_Objects/Map
 
 **`Map`** 对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者{{Glossary("Primitive", "原始值")}}）都可以作为键或值。
 
-{{EmbedInteractiveExample("pages/js/map.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Map", "taller")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("a", 1);
+map1.set("b", 2);
+map1.set("c", 3);
+
+console.log(map1.get("a"));
+// Expected output: 1
+
+map1.set("a", 97);
+
+console.log(map1.get("a"));
+// Expected output: 97
+
+console.log(map1.size);
+// Expected output: 3
+
+map1.delete("b");
+
+console.log(map1.size);
+// Expected output: 2
+```
 
 ## 描述
 
@@ -194,7 +218,7 @@ interface RTCStatsReport {
 
 类 `Map` 对象可以是只读的，也可以是可写的（参见上面 IDL 中的 `readonly` 关键字）。
 
-- 只读的类 `Map` 对象具有 [`size`](#map.prototype.size) 属性，以及这些方法：[`entries()`](#map.prototype.entries)、[`forEach()`](#map.prototype.foreach)、[`keys()`](#map.prototype.keys)、[`values()`](#map.prototype.values) 和 [`@@iterator`](#map.prototypeiterator) 。
+- 只读的类 `Map` 对象具有 [`size`](#map.prototype.size) 属性，以及这些方法：[`entries()`](#map.prototype.entries)、[`forEach()`](#map.prototype.foreach)、[`keys()`](#map.prototype.keys)、[`values()`](#map.prototype.values) 和 [`[Symbol.iterator]()`](#map.prototypesymbol.iterator) 。
 - 可写的类 `Map` 对象还额外具有这些方法：[`clear()`](#map.prototype.clear)、[`delete()`](#map.prototype.delete) 和 [`set()`](#map.prototype.set)。
 
 除了对键和值类型的限制外，其方法和属性的行为与 `Map` 中的对应实体相同。
@@ -215,7 +239,7 @@ interface RTCStatsReport {
 
 ## 静态属性
 
-- {{jsxref("Map/@@species", "Map[@@species]")}}
+- [`Map[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
   - : 用于创建派生对象的构造函数。
 
 ## 静态方法
@@ -231,8 +255,8 @@ interface RTCStatsReport {
   - : 创建实例对象的构造函数。对于 `Map` 实例，初始值为 {{jsxref("Map/Map", "Map")}} 构造函数。
 - {{jsxref("Map.prototype.size")}}
   - : 返回 `Map` 对象中的键值对数量。
-- `Map.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"Map"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
+- `Map.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"Map"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
 
 ## 实例方法
 
@@ -254,7 +278,7 @@ interface RTCStatsReport {
   - : 在 `Map` 对象中设置与指定的键 `key` 关联的值，并返回 `Map` 对象。
 - {{jsxref("Map.prototype.values()")}}
   - : 返回一个新的迭代对象，其中包含 `Map` 对象中所有的值，并以插入 `Map` 对象的顺序排列。
-- [`Map.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator)
+- [`Map.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
   - : 返回一个新的迭代器对象，其包含 `Map` 对象中所有元素 `[key, value]` 二元数组，以插入顺序排列。
 
 ## 示例
@@ -383,7 +407,8 @@ console.log(clone.get(1)); // one
 console.log(original === clone); // false. 浅比较 不为同一个对象的引用
 ```
 
-> **备注：** 请记住，*数据本身*未被克隆。
+> [!NOTE]
+> 请记住，*数据本身*未被克隆。
 
 `Map` 对象间可以进行合并，但是会保持键的唯一性。
 

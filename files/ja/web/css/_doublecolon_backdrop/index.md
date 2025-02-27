@@ -1,5 +1,5 @@
 ---
-title: "::backdrop"
+title: ::backdrop
 slug: Web/CSS/::backdrop
 ---
 
@@ -28,9 +28,9 @@ Backdrop は以下の状況で現れます。
 全画面モードで複数の要素が配置されたときは、それぞれに自身の `::backdrop` 疑似要素があります。
 
 ```css
-/* backdrop はダイアログが dialog.showModal() が開いている時のみ表示されます */
+/* backdrop はダイアログが dialog.showModal() で開いている時のみ表示されます */
 dialog::backdrop {
-  background: rgba(255, 0, 0, 0.25);
+  background: rgb(255 0 0 / 25%);
 }
 ```
 
@@ -40,21 +40,74 @@ dialog::backdrop {
 
 ## 例
 
-### 全画面動画の背景のスタイル付け
+### モーダルダイアログの backdrop のスタイル付け
 
-この例では、動画が全画面モードに移行したときの backdrop スタイルが、多くのブラウザーでの既定値である黒ではなく、青灰色に構成しています。
+この例では、`::backdrop` 擬似要素を使用して、モーダルで {{htmlelement("dialog")}} が開いているときの backdrop をスタイル付けします。
+
+#### HTML
+
+{{htmlelement("button")}} を設置し、それをクリックすると `<dialog>` が開くようにします。`<dialog>` が開いたら、ダイアログを閉じるためのボタンにフォーカスが当たります。
+
+```html
+<dialog>
+  <button autofocus>閉じる</button>
+  <p>このモーダルダイアログには美しい backdrop があります！</p>
+</dialog>
+<button>ダイアログを表示する</button>
+```
+
+#### CSS
+
+[CSS グラデーション](/ja/docs/Web/CSS/gradient)を使用してカラフルなドーナツを作成し、backdrop に背景を追加します。
 
 ```css
-video::backdrop {
-  background-color: #448;
+::backdrop {
+  background-image:
+    radial-gradient(
+      circle,
+      #fff 0 5vw,
+      transparent 5vw 20vw,
+      #fff 20vw 22.5vw,
+      #eee 22.5vw
+    ),
+    conic-gradient(
+      #272b66 0 50grad,
+      #2d559f 50grad 100grad,
+      #9ac147 100grad 150grad,
+      #639b47 150grad 200grad,
+      #e1e23b 200grad 250grad,
+      #f7941e 250grad 300grad,
+      #662a6c 300grad 350grad,
+      #9a1d34 350grad 400grad,
+      #43a1cd 100grad 150grad,
+      #ba3e2e
+    );
 }
 ```
 
-結果の画面は以下のようになります。
+#### JavaScript
 
-![ほぼ全画面のビデオプレイヤー。ビデオプレイヤーが完全に画面を覆わないので、プレイヤーの上下に紫が見える。](bbb-backdrop.png)
+ダイアログを [`.showModal()`](/ja/docs/Web/API/HTMLDialogElement/showModal) メソッドを使用してモーダルで開き、[`.close()`](/ja/docs/Web/API/HTMLDialogElement/close) メソッドを使用して閉じます。
 
-[動作例を見てみてください](https://mdn.github.io/css-examples/backdrop/index.html)。背景の色を変更した後、動画を全画面表示にすると、背景色の変更を確認することができます。
+```js
+const dialog = document.querySelector("dialog");
+const showButton = document.querySelector("dialog + button");
+const closeButton = document.querySelector("dialog button");
+
+// 「ダイアログを表示する」ボタンでダイアログをモーダルで開く
+showButton.addEventListener("click", () => {
+  dialog.showModal();
+});
+
+// 「閉じる」ボタンでダイアログを閉じる
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
+```
+
+#### 結果
+
+{{EmbedLiveSample("Styling a modal dialog's backdrop", 450, 300)}}
 
 ## 仕様書
 
@@ -68,4 +121,6 @@ video::backdrop {
 
 - {{cssxref(":fullscreen")}} 疑似クラス
 - {{HTMLElement("dialog")}} HTML 要素
-- [Fullscreen API](/ja/docs/Web/API/Fullscreen_API)
+- [全画面 API](/ja/docs/Web/API/Fullscreen_API)
+- [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) HTML グローバル属性
+- [ポップオーバー API](/ja/docs/Web/API/Popover_API)

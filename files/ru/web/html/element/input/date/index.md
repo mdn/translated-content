@@ -9,7 +9,33 @@ slug: Web/HTML/Element/input/date
 
 Отображение **`date`** различается в зависимости от браузера, кроме того не все браузеры поддерживают **`date`**. Подробнее см. [Browser compatibility](#browser_compatibility). В неподдерживаемых браузерах элемент будет отображаться как обычный [`<input type="text">`](/ru/docs/Web/HTML/Element/input/text).
 
-{{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;date&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="start">Start date:</label>
+
+<input
+  type="date"
+  id="start"
+  name="trip-start"
+  value="2018-07-22"
+  min="2018-01-01"
+  max="2018-12-31" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 Среди браузеров со своим интерфейсом для выбора даты, есть интерфейс браузеров Chrome и Opera, который выглядит так:
 
@@ -25,7 +51,7 @@ slug: Web/HTML/Element/input/date
 
 | [Value](#value)             | Возвращает {{domxref("DOMString")}}, с датой в формате **гггг-мм-дд**, **или **пустую строку\*\*                                                                                                                           |
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **События**                 | {{event("change")}} и {{event("input")}}                                                                                                                                                                                   |
+| **События**                 | [`change`](/ru/docs/Web/API/HTMLElement/change_event) и [`input`](/ru/docs/Web/API/Element/input_event)                                                                                                                    |
 | **Поддерживаемые атрибуты** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`list`](/ru/docs/Web/HTML/Element/input#list), [`readonly`](/ru/docs/Web/HTML/Element/input#readonly), and [`step`](/ru/docs/Web/HTML/Element/input#step) |
 | **IDL attributes**          | `list`, `value`, `valueAsDate`, `valueAsNumber`.                                                                                                                                                                           |
 | **Методы**                  | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}                                                             |
@@ -40,7 +66,8 @@ slug: Web/HTML/Element/input/date
 
 {{EmbedLiveSample('Значение', 600, 40)}}
 
-> **Примечание:** Помните, что отображаемый формат даты отличается от настоящего значения `value` – отображаемый формат даты будет выбран, _базируясь на региональных параметрах браузера пользователя_, тогда как значение `value` всегда имеет формат `гггг-мм-дд`.
+> [!NOTE]
+> Помните, что отображаемый формат даты отличается от настоящего значения `value` – отображаемый формат даты будет выбран, _базируясь на региональных параметрах браузера пользователя_, тогда как значение `value` всегда имеет формат `гггг-мм-дд`.
 
 Вы также можете получить или установить значение даты в JavaScript с помощью свойств {{domxref("HTMLInputElement.value", "value")}} и {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}} элемента input. Например:
 
@@ -63,25 +90,31 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 | [`min`](#min)   | Минимально возможная дата для установки                                                          |
 | [`step`](#step) | Шаг (в днях), с которым будет изменяться дата при нажатии кнопок вниз или вверх данного элемента |
 
-### {{htmlattrdef("max")}}
+### `max`
 
-Максимально возможная дата для установки. Если [`value`](/ru/docs/Web/HTML/Element/input#value) является более поздней датой, чем дата, указанная в атрибуте [`max`](#max), элемент отобразит ошибку при помощи [constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation). Если в атрибуте `max` указано значение, не удовлетворяющее формату `yyyy-MM-dd`, значит элемент не будет иметь максимальной даты.
+Максимально возможная дата для установки. Если [`value`](/ru/docs/Web/HTML/Element/input#value) является более поздней датой, чем дата, указанная в атрибуте [`max`](#max), элемент отобразит ошибку при помощи [constraint validation](/ru/docs/Web/HTML/Constraint_validation). Если в атрибуте `max` указано значение, не удовлетворяющее формату `yyyy-MM-dd`, значит элемент не будет иметь максимальной даты.
 
 В атрибуте `max` должна быть указана строка с датой, которая больше или равна дате, указанной в атрибуте `min`.
 
-### {{htmlattrdef("min")}}
+### `min`
 
-Минимально возможная дата для установки. Если [`value`](/ru/docs/Web/HTML/Element/input#value) является более ранней датой, чем дата, указанная в атрибуте [`min`](#min), элемент отобразит ошибку при помощи [constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation). Если в атрибуте `min` указано значение, не удовлетворяющее формату `yyyy-MM-dd`, значит элемент не будет иметь минимальной даты.
+Минимально возможная дата для установки. Если [`value`](/ru/docs/Web/HTML/Element/input#value) является более ранней датой, чем дата, указанная в атрибуте [`min`](#min), элемент отобразит ошибку при помощи [constraint validation](/ru/docs/Web/HTML/Constraint_validation). Если в атрибуте `min` указано значение, не удовлетворяющее формату `yyyy-MM-dd`, значит элемент не будет иметь минимальной даты.
 
 В атрибуте `min` должна быть указана строка с датой, которая меньше или равна дате, указанной в атрибуте `max`.
 
-### {{htmlattrdef("step")}}
+### `step`
 
-{{page("/ru/docs/Web/HTML/Element/input/number", "step-include")}}
+Атрибут `step` — это число, указывающее уровень точности, которому должно соответствовать значение, или особое значение `any`, которое описано ниже. Допустимы только значения, соответствующие основанию ([`min`](#min), если указано, [`value`](/ru/docs/Web/HTML/Element/input#value) в противном случае или любое подходящее значение по умолчанию, если не указано ни то, ни другое).
+
+Строковое значение `any` означает, что пошаговое изменение не подразумевается и разрешены любые значения (за исключением других ограничений, таких как [`min`](#min) and [`max`](#max)).
+
+> [!NOTE]
+> Когда введённые пользователем данные не соответствуют пошаговой конфигурации, {{Glossary("user agent", "агент пользователя")}} может использовать округление до ближайшего допустимого значения, предпочитая числа в положительном направлении, когда есть два одинаково близких варианта.
 
 Для полей ввода `date` значение `step` задаётся в днях; и является количеством миллисекунд, равное 86 400 000 умножить на значение `step` (получаемое числовое значение хранится в миллисекундах). Стандартное значение `step` равно 1, что означает 1 день.
 
-> **Примечание:** Для полей ввода `date` указание для `step` значения `any` даёт такой же эффект, что и значение `1`.
+> [!NOTE]
+> Для полей ввода `date` указание для `step` значения `any` даёт такой же эффект, что и значение `1`.
 
 ## Использование полей ввода c типом date
 
@@ -89,7 +122,8 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 В этом разделе мы посмотрим на простые, а затем и более сложные способы использования `<input type="date">`, и позже дадим советы по уменьшению влияния поддержки браузерами (смотрите [Handling browser support](#handling_browser_support)).
 
-> **Примечание:** Надеемся, со временем поддержка браузерами станет повсеместной, и эта проблема исчезнет.
+> [!NOTE]
+> Надеемся, со временем поддержка браузерами станет повсеместной, и эта проблема исчезнет.
 
 ### Как использовать date?
 
@@ -128,7 +162,8 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 В результате выполнения кода, пользователь сможет выбрать любой день апреля 2017 года, но не сможет выбрать и даже просмотреть дни других месяцев и годов, в том числе через виджет _date picker_.
 
-> **Примечание:** вы _должны_ уметь использовать атрибут [`step`](/ru/docs/Web/HTML/Element/input#step), чтобы менять количество дней, на которое будет происходить шаг при изменении даты (например, чтобы сделать выбираемыми только субботы). Однако, не похоже, что это где-то применялось на данный момент.
+> [!NOTE]
+> Вы _должны_ уметь использовать атрибут [`step`](/ru/docs/Web/HTML/Element/input#step), чтобы менять количество дней, на которое будет происходить шаг при изменении даты (например, чтобы сделать выбираемыми только субботы). Однако, не похоже, что это где-то применялось на данный момент.
 
 ### Controlling input size
 
@@ -465,17 +500,18 @@ daySelect.onchange = function () {
 };
 ```
 
-> **Примечание:** Remember that some years have 53 weeks in them (see [Weeks per year](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))! You'll need to take this into consideration when developing production apps.
+> [!NOTE]
+> Remember that some years have 53 weeks in them (see [Weeks per year](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))! You'll need to take this into consideration when developing production apps.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-- [Date and Time picker tutorial](/ru/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker)
+- [Date and Time picker tutorial](/ru/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)

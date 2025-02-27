@@ -22,7 +22,8 @@ CSS 自定义属性是可以级联的：每一个自定义属性可以多次出�
 - `<declaration-value>`
   - : 这个值将会由一个或者多个语法执行出来，只要这些语法是正确合理的，不包含非法语句。这个值就理应是有效语法执行出来的值。
 
-> **备注：** 自定义属性名区分大小写——`--my-color` 会被视为与 `--My-color` 不同的自定义属性。
+> [!NOTE]
+> 自定义属性名区分大小写——`--my-color` 会被视为与 `--My-color` 不同的自定义属性。
 
 ## 示例
 
@@ -78,5 +79,5 @@ CSS 自定义属性是可以级联的：每一个自定义属性可以多次出�
 
 ## 参见
 
-- [使用 CSS 变量](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)
+- [使用 CSS 变量](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
 - {{CSSXref("var", "var()")}} 函数

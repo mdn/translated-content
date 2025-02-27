@@ -9,7 +9,8 @@ slug: Web/API/Touch
 
 对象属性 {{ domxref("Touch.radiusX") }}, {{ domxref("Touch.radiusY") }}, 和 {{ domxref("Touch.rotationAngle") }} 表示用户触摸操作所作用的区域，即*触摸区域*。这些属性对于处理类似于手指触摸之类的不精确操作很有帮助。这些属性可以表示出一个尽可能匹配触控区域的椭圆形（例如用户的指尖触控）。 {{experimental_inline}}
 
-> **备注：** 以下很多属性的值需要依赖硬件设备去获取，例如，如果设备本身不支持侦测压感，那么 `force` 属性的值将始终是 0，对于 `radiusX` 和 `radiusY` 来说同样可能有这种情况，如果设备认为触点只是一个点而不是一个面，它们始终为 1。
+> [!NOTE]
+> 以下很多属性的值需要依赖硬件设备去获取，例如，如果设备本身不支持侦测压感，那么 `force` 属性的值将始终是 0，对于 `radiusX` 和 `radiusY` 来说同样可能有这种情况，如果设备认为触点只是一个点而不是一个面，它们始终为 1。
 
 ## 构造函数
 
@@ -29,9 +30,9 @@ _这个接口没有父类，不继承任何属性。_
 - **{{ domxref("Touch.screenY") }}**{{readonlyInline}}
   - : 触点相对于屏幕上边缘的 Y 坐标。
 - **{{ domxref("Touch.clientX") }}**{{readonlyInline}}
-  - : 触点相对于可见视区 ([visual viewport](http://www.quirksmode.org/mobile/viewports2.html)) 左边缘的 X 坐标。不包括任何滚动偏移。
+  - : 触点相对于可见视区 ([visual viewport](https://www.quirksmode.org/mobile/viewports2.html)) 左边缘的 X 坐标。不包括任何滚动偏移。
 - **{{ domxref("Touch.clientY") }}**{{readonlyInline}}
-  - : 触点相对于可见视区 ([visual viewport](http://www.quirksmode.org/mobile/viewports2.html)) 上边缘的 Y 坐标。不包括任何滚动偏移。
+  - : 触点相对于可见视区 ([visual viewport](https://www.quirksmode.org/mobile/viewports2.html)) 上边缘的 Y 坐标。不包括任何滚动偏移。
 - {{ domxref("Touch.pageX") }}{{readonlyInline}}
   - : 触点相对于 HTML 文档左边缘的 X 坐标。当存在水平滚动的偏移时，这个值包含了水平滚动的偏移。
 - {{ domxref("Touch.pageY") }}{{readonlyInline}}
@@ -58,7 +59,7 @@ _这个接口没有方法，也没有父类，不继承任何方法。_
 
 ## 示例
 
-请看 [example on the main Touch events article](/zh-CN/DOM/Touch_events#Example)。
+请看 [example on the main Touch events article](/zh-CN/docs/Web/API/Touch_events#example)。
 
 ## 规范
 
@@ -70,7 +71,7 @@ _这个接口没有方法，也没有父类，不继承任何方法。_
 
 ## 相关链接
 
-- [Touch events](/zh-CN/DOM/Touch_events)
+- [Touch events](/zh-CN/docs/Web/API/Touch_events)
 - {{domxref("Touch_events","Touch Events Overview")}}
 - {{ domxref("Document.createTouch()") }}
 - {{ domxref("Touch") }}

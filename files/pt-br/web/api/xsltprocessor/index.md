@@ -1,7 +1,6 @@
 ---
 title: Exemplo Avançado
 slug: Web/API/XSLTProcessor
-original_slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
 ---
 
 ## Exemplo Avançado
@@ -12,7 +11,7 @@ The XSLT file has a parameter called `myOrder` that JavaScript sets to change th
 
 Once the transformation is complete, the result is appened to the document, as shown in this example.
 
-**Figure 7 : Sorting based on div contentview example**
+**Figure 7 : Sorting based on div contentview example.**
 
 ```js
 // XHTML Fragment:

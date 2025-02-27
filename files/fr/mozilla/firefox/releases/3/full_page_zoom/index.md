@@ -33,6 +33,6 @@ docViewer.fullZoom = zoom;
 
 ### Références
 
-- Extension Page zoom par Ted Mielczarek [fullpagezoom.xpi](http://ted.mielczarek.org/code/mozilla/fullpagezoom.xpi) pour les dernières nightlies de Firefox 3.
+- Extension Page zoom par Ted Mielczarek [fullpagezoom.xpi](https://ted.mielczarek.org/code/mozilla/fullpagezoom.xpi) pour les dernières nightlies de Firefox 3.
 - Le [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=4821) concernant fullZoom sur bugzilla.
 - Documentation de l'interface [nsIMarkupDocumentViewer](http://www.xulplanet.com/references/xpcomref/ifaces/nsIMarkupDocumentViewer.html) (ne mentionne pas fullZoom pour l'instant).

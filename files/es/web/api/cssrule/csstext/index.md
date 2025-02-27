@@ -10,7 +10,8 @@ l10n:
 
 La propiedad **`cssText`** de la interfaz {{domxref("CSSRule")}} devuelve el texto real de una regla de estilo {{domxref("CSSStyleSheet")}}.
 
-> **Nota:** No confunda esta propiedad con el estilo de elemento {{domxref("CSSStyleDeclaration.cssText")}}.
+> [!NOTE]
+> No confunda esta propiedad con el estilo de elemento {{domxref("CSSStyleDeclaration.cssText")}}.
 
 Tenga en cuenta que esta propiedad ya no se puede configurar directamente, ya que [ahora se especifica](https://www.w3.org/TR/cssom-1/#changes-from-5-december-2013) para ser _funcionalmente_ solo modificable, y sin ser notado. En otras palabras, intentar configurarlo _no hace absolutamente nada_ y ni siquiera emite una advertencia o un error.
 Además, no tiene subpropiedades configurables. Por lo tanto, para modificarlo, use las propiedades {{domxref("CSSStyleRule.selectorText", ".selectorText")}} y {{domxref ("CSSStyleRule.style", ".style")}} (o sus subpropiedades). Véase [Uso de información de estilo dinámico](/es/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information) para más detalles.

@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/SourceMap
 
 {{HTTPSidebar}}
 
-**`SourceMap`** [HTTP](/zh-CN/docs/Web/HTTP) 响应头链接生成的代码到一个 [source map](/zh-CN/docs/Tools/Debugger/How_to/Use_a_source_map)，使浏览器能够重建原始的资源然后显示在调试器里。
+**`SourceMap`** [HTTP](/zh-CN/docs/Web/HTTP) 响应头链接生成的代码到一个 [source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)，使浏览器能够重建原始的资源然后显示在调试器里。
 
 | Header 类型                           | {{Glossary("Response header")}} |
 | ------------------------------------- | ------------------------------- |
@@ -39,4 +39,4 @@ SourceMap: /path/to/file.js.map
 
 ## 参见
 
-- [Firefox Developer Tools: using a source map](/zh-CN/docs/Tools/Debugger/How_to/Use_a_source_map)
+- [Firefox Developer Tools: using a source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)

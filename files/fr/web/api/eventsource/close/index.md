@@ -7,7 +7,8 @@ slug: Web/API/EventSource/close
 
 La fonction **`close()`** de l'interface {{domxref("EventSource")}} coupe la connection, si existante, et affecte à la variable {{domxref("EventSource.readyState")}} la valeur `2` (closed).
 
-> **Note :** Si la connexion est déjà fermé, la fonction n'agit pas.
+> [!NOTE]
+> Si la connexion est déjà fermé, la fonction n'agit pas.
 
 ## Syntaxe
 
@@ -35,7 +36,8 @@ bouton.onclick = function () {
 };
 ```
 
-> **Note :** Vous pouvez trouver un exemple complet sur GitHub — voir [Demo simple de SSE utilisant PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!NOTE]
+> Vous pouvez trouver un exemple complet sur GitHub — voir [Demo simple de SSE utilisant PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
 ## Spécifications
 

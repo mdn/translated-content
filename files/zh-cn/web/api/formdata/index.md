@@ -3,15 +3,13 @@ title: FormData
 slug: Web/API/FormData
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
 **`FormData`** 接口提供了一种表示表单数据的键值对 `key/value` 的构造方式，并且可以轻松的将数据通过{{domxref("XMLHttpRequest.send()")}} 方法发送出去，本接口和此方法都相当简单直接。如果送出时的编码类型被设为 `"multipart/form-data"`，它会使用和表单一样的格式。
 
 如果你想构建一个简单的`GET`请求，并且通过{{HTMLElement("form")}}的形式带有查询参数，可以将它直接传递给{{domxref("URLSearchParams")}}。
 
 实现了 `FormData` 接口的对象可以直接在{{jsxref("Statements/for...of", "for...of")}}结构中使用，而不需要调用{{domxref('FormData.entries()', 'entries()')}} : `for (var p of myFormData)` 的作用和 `for (var p of myFormData.entries())` 是相同的。
-
-> **备注：** 此特性可用于 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)。
 
 ## 构造函数
 
@@ -50,6 +48,6 @@ slug: Web/API/FormData
 ## 参见
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/zh-CN/docs/Web/API/FormData/Using_FormData_Objects)
+- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

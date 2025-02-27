@@ -1,115 +1,153 @@
 ---
 title: const
 slug: Web/JavaScript/Reference/Statements/const
+l10n:
+  sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
 {{jsSidebar("Statements")}}
 
-常量是块级范围的，非常类似用 [let](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 语句定义的变量。但常量的值是无法（通过重新赋值）改变的，也不能被重新声明。
+**`const`** 声明用于声明块作用域的局部变量。常量的值不能通过使用[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)重新赋值来更改，但是如果常量是一个[对象](/zh-CN/docs/Web/JavaScript/Data_structures#objects)，它的属性可以被添加、更新或删除。
 
-{{EmbedInteractiveExample("pages/js/statement-const.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Const")}}
+
+```js interactive-example
+const number = 42;
+
+try {
+  number = 99;
+} catch (err) {
+  console.log(err);
+  // Expected output: TypeError: invalid assignment to const 'number'
+  // (Note: the exact output may be browser-dependent)
+}
+
+console.log(number);
+// Expected output: 42
+```
 
 ## 语法
 
-```plain
-const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
+```js-nolint
+const name1 = value1;
+const name1 = value1, name2 = value2;
+const name1 = value1, name2 = value2, /* …, */ nameN = valueN;
 ```
 
 - `nameN`
-  - : 常量名称，可以是任意合法的{{Glossary("identifier","标识符")}}。
+  - : 要声明的变量的名称。每个变量名称必须是合法的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)或[解构绑定模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
 - `valueN`
-  - : 常量值，可以是任意合法的表达式。
+  - : 变量的初始值。它可以是任何合法的表达式。
 
 ## 描述
 
-此声明创建一个常量，其作用域可以是全局或本地声明的块。与[`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var)变量不同，全局常量不会变为 window 对象的属性。需要一个常数的初始化器；也就是说，你必须在声明的同一语句中指定它的值（这是有道理的，因为以后不能更改）。
+`const` 声明与 {{jsxref("Statements/let", "let")}} 非常相似：
 
-**`const` 声明**创建一个值的只读引用。但这并不意味着它所持有的值是不可变的，只是变量标识符不能重新分配。例如，在引用内容是对象的情况下，这意味着可以改变对象的内容（例如，其参数）。
+- `const` 声明的作用域既可以是块级作用域，也可以是函数作用域。
+- `const` 声明只有在声明的位置之后才能访问（参见[暂时性死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#暂时性死区)）。因此，`const` 声明通常被视为[非提升](/zh-CN/docs/Glossary/Hoisting)的声明方式。
+- 当在脚本的顶层声明时，`const` 声明不会在 {{jsxref("globalThis")}} 上创建属性。
+- 在同一作用域中，`const` 声明不能被任何其他声明[重新声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#重新声明)。
+- `const` 是[*声明*而不是*语句*](/zh-CN/docs/Web/JavaScript/Reference/Statements#语句和声明的区别)。这意味着你不能将单独的 `const` 声明用作块的主体（这是合理的，因为无法访问变量）。
 
-关于“[暂存死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)”的所有讨论都适用于[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)和`const`。
+  ```js-nolint example-bad
+  if (true) const a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
+  ```
 
-一个常量不能和它所在作用域内的其他变量或函数拥有相同的名称。
+一个常量需要一个初始值。你必须在声明同时指定它的值。（这是合理的，因为它在声明后不能被改变。）
+
+```js-nolint example-bad
+const FOO; // SyntaxError: Missing initializer in const declaration
+```
+
+`const` 声明创建了一个对值的不可变引用。它并*不*意味着它所持有的值是不可变的，只是变量标识符不能被重新赋值。例如，在内容是对象的情况下，这意味着对象的内容（例如属性）是可以被修改的。你应该将 `const` 声明理解为“创建一个*身份*保持不变”的标识符（变量），而不是“保持*值*不变的标识符”——换言之，是“创建不可变的{{Glossary("binding", "绑定")}}”，而不是“不可变的值”。
+
+许多代码风格指南（包括 [MDN 的指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript#变量声明)建议当变量在其作用域中不会重新赋值时使用 `const` 而不是 {{jsxref("Statements/let", "let")}}。这样可以清晰地表达变量的类型（或值，如果是原始类型的情况下）永远不会改变的意图。对非原始值可能改变的情况下其他人可能更喜欢使用 `let`。
+
+紧跟在 `const` 关键字后面的列表被称为[_绑定_](/zh-CN/docs/Glossary/Binding)_列表_，用逗号分隔，其中逗号*不是*[逗号运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_operator)，`=` 符号*不是*[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)。后面变量的初始值可以引用处在列表前面的变量。
 
 ## 示例
 
 ### const 基本用法
 
-常量在声明的时候可以使用大小写，但通常情况下全部用大写字母。
+常量在声明的时候可以使用大小写，但通常情况下全部用大写字母，特别是对于原始值，因为它们确实是不可变的。
 
 ```js
-// 定义常量 MY_FAV 并赋值 7
+// 定义常量 MY_FAV 并赋值为 7
 const MY_FAV = 7;
 
-// 报错 - Uncaught TypeError: Assignment to constant variable.
-MY_FAV = 20;
-
-// MY_FAV is 7
-console.log("my favorite number is: " + MY_FAV);
-
-// 尝试重新声明会报错
-// Uncaught SyntaxError: Identifier 'MY_FAV' has already been declared
-const MY_FAV = 20;
-
-// MY_FAV 保留给上面的常量，这个操作会失败
-var MY_FAV = 20;
-
-// 也会报错
-let MY_FAV = 20;
+console.log(`我最喜欢的数字是：${MY_FAV}`);
 ```
 
-### 块作用域
+```js-nolint example-bad
+// 对常量变量重新赋值会引发错误
+MY_FAV = 20; // TypeError: Assignment to constant variable
 
-注意块作用域的性质很重要
+// 重新声明常量会引发错误
+const MY_FAV = 20; // SyntaxError: Identifier 'MY_FAV' has already been declared
+var MY_FAV = 20; // SyntaxError: Identifier 'MY_FAV' has already been declared
+let MY_FAV = 20; // SyntaxError: Identifier 'MY_FAV' has already been declared
+```
 
-```js
+### 块级作用域
+
+请务必注意块作用域的特性。
+
+```js-nolint
+const MY_FAV = 7;
+
 if (MY_FAV === 7) {
-  // 没问题，并且创建了一个块作用域变量 MY_FAV
-  // (works equally well with let to declare a block scoped non const variable)
-  let MY_FAV = 20;
+  // 没有问题，因为它在新的块级作用域中
+  const MY_FAV = 20;
+  console.log(MY_FAV); // 20
 
-  // MY_FAV 现在为 20
-  console.log("my favorite number is " + MY_FAV);
-
-  // 这被提升到全局上下文并引发错误
-  var MY_FAV = 20;
+  // var 声明的范围不限于块，因此会引发错误
+  var MY_FAV = 20; // SyntaxError: Identifier 'MY_FAV' has already been declared
 }
 
-// MY_FAV 依旧为 7
-console.log("my favorite number is " + MY_FAV);
+console.log(MY_FAV); // 7
 ```
 
-### 常量要求一个初始值
+### 定义对象和数组常量
 
-```js
-// 报错
-// Uncaught SyntaxError: Missing initializer in const declaration
+`const` 也适用于对象和数组。尝试覆盖该对象会引发错误“Assignment to constant variable”。
 
-const FOO;
+```js example-bad
+const MY_OBJECT = { key: "值" };
+MY_OBJECT = { OTHER_KEY: "值" };
 ```
 
-### 常量可以定义成对象和数组
-
-常量可以定义成对象和数组
+然而，对象的键不受保护，因此以下语句可以正常执行。
 
 ```js
-const MY_OBJECT = { key: "value" };
+MY_OBJECT.key = "其他值";
+```
 
-// 重写对象和上面一样会失败
-// Uncaught TypeError: Assignment to constant variable.
-MY_OBJECT = { OTHER_KEY: "value" };
+你可能需要使用 {{jsxref("Object.freeze()")}} 来使对象不可变。
 
-// 对象属性并不在保护的范围内
-// 下面这个声明会成功执行
-MY_OBJECT.key = "otherValue"; // Use Object.freeze() to make object immutable
+这对数据同样适用。尝试覆盖该数组会引发错误“Assignment to constant variable”。
 
-// 也可以用来定义数组
+```js example-bad
 const MY_ARRAY = [];
-// 可以向数组填充数据
-MY_ARRAY.push("A"); // ["A"]
-// 但是，将一个新数组赋给变量会引发错误
-// Uncaught TypeError: Assignment to constant variable.
 MY_ARRAY = ["B"];
 ```
+
+同样地，数组的元素不受保护，因此以下语句可以正常执行。
+
+```js
+MY_ARRAY.push("A"); // ["A"]
+```
+
+### 带解构赋值的声明
+
+每个 `=` 后面的左侧也可以是绑定模式。这允许一次创建多个变量。
+
+```js
+const result = /(a+)(b+)(c+)/.exec("aaabcc");
+const [, a, b, c] = result;
+console.log(a, b, c); // "aaa" "b" "cc"
+```
+
+有关更多信息，请参阅[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
 
 ## 规范
 
@@ -119,8 +157,8 @@ MY_ARRAY = ["B"];
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/let", "let")}}
-- [Constants in the JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#Constants)
+- [JavaScript 指南中的常量](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#常量)

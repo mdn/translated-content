@@ -1,13 +1,14 @@
 ---
 title: "HTMLElement: hidePopover() メソッド"
+short-title: hidePopover()
 slug: Web/API/HTMLElement/hidePopover
 l10n:
-  sourceCommit: bb6092c4230b69c2eceae6910af68c73955cae1c
+  sourceCommit: 27977f96015d1b74e743fa3762672894e087bd3d
 ---
 
-{{ APIRef("HTML DOM") }}{{SeeCompatTable}}
+{{APIRef("Popover API")}}
 
-**`hidePopover()`** は {{domxref("HTMLElement")}} インターフェイスのメソッドで、{{domxref("Popover_API", "ポップオーバー", "", "nocode")}}要素（すなわち有効な [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) 属性がある要素）を{{glossary("top layer", "最上位レイヤー")}}から外し、`display: none` のスタイルを付けます。
+**`hidePopover()`** は {{domxref("HTMLElement")}} インターフェイスのメソッドで、[ポップオーバー](/ja/docs/Web/API/Popover_API)要素（すなわち有効な [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) 属性がある要素）を{{glossary("top layer", "最上位レイヤー")}}から外し、`display: none` のスタイルを付けます。
 
 `hidePopover()` が [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) 属性のついた表示中の要素に対して呼び出された場合、{{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} イベントが発行され、続いてポップオーバーが非表示になり、それから {{domxref("HTMLElement/toggle_event", "toggle")}} イベントが発行されます。要素が既に非表示であれば、エラーが発生します。
 
@@ -32,28 +33,20 @@ hidePopover()
 
 ## 例
 
+### ポップオーバーを非表示にする
+
 次の例では、キーボードの特定のキーを押すことで、ポップオーバーを非表示にする機能を提供します。
 
-最初に HTML です。
+#### HTML
 
 ```html
-<div id="mypopover">
-  <h2>Help!</h2>
-
-  <p>You can use the following commands to control the app</p>
-
-  <ul>
-    <li>Press <ins>C</ins> to order cheese</li>
-    <li>Press <ins>T</ins> to order tofu</li>
-    <li>Press <ins>B</ins> to order bacon</li>
-    <hr />
-    <li>Say "Service" to summon the robot waiter to take your order</li>
-    <li>Say "Escape" to engage the ejector seat</li>
-  </ul>
+<button popovertarget="mypopover">ポップオーバーの表示を切り替え</button>
+<div id="mypopover" popover="manual">
+  キーボードの <kbd>h</kbd> を押すとポップオーバーが閉じます。
 </div>
 ```
 
-そして機能をつなげる JavaScript です。
+#### JavaScript
 
 ```js
 const popover = document.getElementById("mypopover");
@@ -64,6 +57,10 @@ document.addEventListener("keydown", (event) => {
   }
 });
 ```
+
+#### 結果
+
+{{EmbedLiveSample("Hiding a popover","100%",100)}}
 
 ## 仕様書
 

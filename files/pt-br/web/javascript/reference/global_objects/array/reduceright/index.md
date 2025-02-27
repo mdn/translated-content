@@ -3,7 +3,7 @@ title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Sumário
 
@@ -164,7 +164,7 @@ if ("function" !== typeof Array.prototype.reduceRight) {
 
 ## Compatibilidade com os navegadores
 
-{{Compat("javascript.builtins.Array.reduceRight")}}
+{{Compat}}
 
 ## Ver também
 

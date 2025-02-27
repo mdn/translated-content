@@ -21,6 +21,6 @@ slug: Web/HTTP/Status/103
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{HTTPHeader("Link")}}

@@ -3,7 +3,7 @@ title: Date.prototype.getYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getYear
 ---
 
-{{JSRef("Global_Objects", "Date")}} {{deprecated_header}}
+{{JSRef}} {{deprecated_header}}
 
 ## Resumo
 
@@ -82,7 +82,7 @@ var year = Xmas.getYear(); // returns 95
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getYear")}}
+{{Compat}}
 
 ## Veja também
 

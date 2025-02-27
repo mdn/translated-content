@@ -7,7 +7,28 @@ slug: Web/HTML/Element/label
 
 **HTML `<label>` 元素**（标签）表示用户界面中某个元素的说明。
 
-{{EmbedInteractiveExample("pages/tabbed/label.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;label&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<div class="preference">
+  <label for="cheese">Do you like cheese?</label>
+  <input type="checkbox" name="cheese" id="cheese" />
+</div>
+
+<div class="preference">
+  <label for="peas">Do you like peas?</label>
+  <input type="checkbox" name="peas" id="peas" />
+</div>
+```
+
+```css interactive-example
+.preference {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0.5rem;
+}
+```
 
 将一个 `<label>` 和一个 {{htmlelement("input")}} 元素相关联主要有这些优点：
 
@@ -36,7 +57,7 @@ slug: Web/HTML/Element/label
 
 - `for`
 
-  - : 即和 `<label>` 元素在同一文档中的 [可关联标签的元素](/zh-CN/docs/Web/Guide/HTML/Content_categories#可标记的元素（labelable）) 的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id)。文档中第一个 `id` 值与 `<label>` 元素 `for` 属性值相同的元素，如果可关联标签（labelable），则为*已关联标签的控件*，其标签就是这个 `<label>` 元素。如果这个元素不可关联标签，则 `for` 属性没有效果。如果文档中还有其他元素的 `id` 值也和 `for` 属性相同，`for` 属性对这些元素也没有影响。
+  - : 即和 `<label>` 元素在同一文档中的 [可关联标签的元素](/zh-CN/docs/Web/HTML/Content_categories#可标记的元素（labelable）) 的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id)。文档中第一个 `id` 值与 `<label>` 元素 `for` 属性值相同的元素，如果可关联标签（labelable），则为*已关联标签的控件*，其标签就是这个 `<label>` 元素。如果这个元素不可关联标签，则 `for` 属性没有效果。如果文档中还有其他元素的 `id` 值也和 `for` 属性相同，`for` 属性对这些元素也没有影响。
 
     > **备注：** `<label>` 元素可同时有一个 `for` 属性和一个子代控件元素，只是 `for` 属性需要指向这个控件元素。
 
@@ -94,7 +115,7 @@ slug: Web/HTML/Element/label
 
 ### 标题
 
-在一个 `<label>` 元素内部放置标题元素（[heading elements](/zh-CN/docs/Web/HTML/Element/Heading_Elements)）会干扰许多辅助技术，原因是标题通常被用于辅助导航（[a navigation aid](/zh-CN/docs/Web/HTML/Element/Heading_Elements#Navigation)）。若标签内的文本需要做视觉上的调整，应该使用适用于 `<label>` 元素的 CSS 类。
+在一个 `<label>` 元素内部放置标题元素（[heading elements](/zh-CN/docs/Web/HTML/Element/Heading_Elements)）会干扰许多辅助技术，原因是标题通常被用于辅助导航（[a navigation aid](/zh-CN/docs/Web/HTML/Element/Heading_Elements#navigation)）。若标签内的文本需要做视觉上的调整，应该使用适用于 `<label>` 元素的 CSS 类。
 
 若一个 [表单](/zh-CN/docs/Web/HTML/Element/form)，或表单中的一部分需要一个标题，应使用 {{HTMLElement("legend")}} 元素置于 {{HTMLElement("fieldset")}} 元素中。
 
@@ -133,8 +154,8 @@ slug: Web/HTML/Element/label
    <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">Phrasing content</a>, but no descendant <code>label</code> elements. No labelable elements other than the labeled control are allowed.</td>
   </tr>
   <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>

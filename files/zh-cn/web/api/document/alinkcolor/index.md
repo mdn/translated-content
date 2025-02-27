@@ -1,26 +1,32 @@
 ---
-title: Document.alinkColor
+title: Document：alinkColor 属性
 slug: Web/API/Document/alinkColor
+l10n:
+  sourceCommit: 41c3f093216bda022f04b4a40fa55e2f0b7af5e0
 ---
 
-{{APIRef("DOM")}} {{ Deprecated_header() }}
+{{APIRef("DOM")}}{{Deprecated_header}}
 
-返回或设置文档体内的活动链接的颜色。mousedown 和 mouseup 事件之间的时间在一个链接是有效的。
+返回或设置文档正文中活动链接的颜色。在 `mousedown` 和 `mouseup` 事件之间，链接处于活动状态。
 
-## 语法
+## 值
 
-```plain
-color = document.alinkColor
-document.alinkColor  = color
-color 可以是一个“颜色名称”（例如，“blue”，“darkblue”，等）或者是一个“十六进制的颜色值”（例如，#0000ff）
-```
+包含颜色名称（例如 `blue`、`darkblue` 等）或颜色十六进制值（例如 `#0000FF`）的字符串。
 
-## 注意
+## 备注
 
-这个属性在 Mozilla Firefox 浏览器的默认值是红色的（#ee0000 十六进制）。
+Mozilla Firefox 中该属性的默认值为红色（十六进制 `#ee0000`）。
 
-document.alinkcolor 在 [DOM Level 2 HTML](<DOM Level 2 HTML>) 中不推荐使用。可以使用 CSS 伪类选择器 {{ Cssxref(":active") }}。
+在 [DOM 第 2 版 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268) 中 `document.alinkColor` 已弃用。一种替代方法是 CSS 选择器 {{Cssxref(":active")}}。
 
-另一种选择是使用 document.body.alink，虽然这在 [HTML 4.01](http://www.w3.org/TR/html401/struct/global.html#adef-alink) 中可以用 CSS 使用替代。
+另一种替代方法是 `document.body.aLink`，不过这种方法已[在 HTML 4.01 中弃用](https://www.w3.org/TR/html401/struct/global.html#adef-alink)，转而使用 CSS 替代方法。
 
-Gecko 支持 alinkcolor/:active 和 {{ Cssxref(":focus") }}。在 Internet Explorer 6/7 中 alinkcolor/:active 仅在 [HTML Elemeint A](/zh-CN/docs/Web/API/Document/en/HTML/Element/a) 上有效。
+Firefox 同时支持 `alinkColor`/`:active` 和 {{Cssxref(":focus")}}。
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}

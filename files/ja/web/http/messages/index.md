@@ -30,9 +30,11 @@ HTTP メッセージの開始行と HTTP ヘッダーは、まとめてリクエ
 
 ## HTTP リクエスト
 
-### 開始行
+### リクエスト行
 
-HTTP リクエストは、アクションを始めるためにクラアントからサーバーへ送られます。その*開始行*には、3 つの要素が含まれています。
+_メモ: HTTP リクエストにおいて、開始行は『リクエスト行』と呼ばれます。_
+
+HTTP リクエストは、アクションを始めるためにクラアントからサーバーへ送られます。そのリクエスト行には、3 つの要素が含まれています。
 
 1. _[HTTP メソッド](/ja/docs/Web/HTTP/Methods)_。実行するアクションを表わす動詞 ({{HTTPMethod("GET")}}、{{HTTPMethod("PUT")}}、{{HTTPMethod("POST")}} など) または名詞 ({{HTTPMethod("HEAD")}}、{{HTTPMethod("OPTIONS")}})。例えば `GET` はリソースを取り込むこと、`POST` はデータをサーバーへ送信すること (リソースを作成または変更する、あるいは返送する一時的なドキュメントを生成する) ことを示します。
 2. _リクエスト対象_。通常は {{glossary("URL")}} ですが、プロトコル、ポート番号、ドメインの絶対パスは通常、リクエストの状況から明らかにされます。リクエスト対象の形式は、HTTP メソッドにより異なります。以下のような形式があります。
@@ -70,7 +72,7 @@ HTTP リクエストは、アクションを始めるためにクラアントか
 本体は、大きく 2 種類に分類されます。
 
 - 単一リソースの本体。1 個のファイルで構成され、{{HTTPHeader("Content-Type")}} と {{HTTPHeader("Content-Length")}} の 2 つのヘッダーで定義されます。
-- [複数リソースの本体](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data)。マルチパートの本体で構成され、それぞれが異なる情報を持ちます。これは主に、 [HTML フォーム](/ja/docs/Learn/Forms)と関連付けられます。
+- [複数リソースの本体](/ja/docs/Web/HTTP/MIME_types#multipartform-data)。マルチパートの本体で構成され、それぞれが異なる情報を持ちます。これは主に、 [HTML フォーム](/ja/docs/Learn/Forms)と関連付けられます。
 
 ## HTTP レスポンス
 
@@ -104,7 +106,7 @@ HTTP レスポンスの開始行は*ステータス行*と呼ばれ、以下の�
 
 - 大きさが判明している 1 個のファイルで構成される、単一リソースの本体。 {{HTTPHeader("Content-Type")}} と {{HTTPHeader("Content-Length")}} の 2 つのヘッダーで定義されます。
 - 大きさが不明な 1 個のファイルで構成される、単一リソースの本体。 {{HTTPHeader("Transfer-Encoding")}} を `chunked` に設定して、 chunked 形式でエンコードされます。
-- [複数リソースの本体](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data)。マルチパートの本体で構成され、それぞれが異なる情報のセクションを持ちます。これは比較的まれです。
+- [複数リソースの本体](/ja/docs/Web/HTTP/MIME_types#multipartform-data)。マルチパートの本体で構成され、それぞれが異なる情報のセクションを持ちます。これは比較的まれです。
 
 ## HTTP/2 フレーム
 

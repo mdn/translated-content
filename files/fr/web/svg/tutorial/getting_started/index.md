@@ -3,6 +3,8 @@ title: Premiers pas
 slug: Web/SVG/Tutorial/Getting_Started
 ---
 
+{{SVGRef}}
+
 {{PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions")}}
 
 ## Un exemple simple
@@ -87,7 +89,7 @@ Content-Encoding: gzip
 Vary: Accept-Encoding
 ```
 
-Vous pouvez vérifier que votre serveur envoie le bon en-tête HTTP avec vos fichiers SVG en utilisant [le Moniteur réseau](/fr/docs/Tools/Network_Monitor) ou un site comme [websniffer.cc](https://websniffer.cc/). Fournissez l'URL d'un de vos fichiers SVG et regardez les en-têtes HTTP de la réponse. Si vous remarquez que votre serveur n'envoie pas les en-têtes avec les valeurs ci-dessus, vous devriez contacter votre hébergeur. Si vous avez du mal à le convaincre de configurer correctement leurs serveurs pour le SVG, il y a peut-être moyen de le faire vous-même. Regardez [la page de configuration d'un serveur](https://www.w3.org/services/svg-server/) sur le site w3.org pour quelques solutions simples.
+Vous pouvez vérifier que votre serveur envoie le bon en-tête HTTP avec vos fichiers SVG en utilisant [le Moniteur réseau](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) ou un site comme [websniffer.com](https://websniffer.com/). Fournissez l'URL d'un de vos fichiers SVG et regardez les en-têtes HTTP de la réponse. Si vous remarquez que votre serveur n'envoie pas les en-têtes avec les valeurs ci-dessus, vous devriez contacter votre hébergeur. Si vous avez du mal à le convaincre de configurer correctement leurs serveurs pour le SVG, il y a peut-être moyen de le faire vous-même. Regardez [la page de configuration d'un serveur](https://www.w3.org/services/svg-server/) sur le site w3.org pour quelques solutions simples.
 
 La mauvaise configuration du serveur est souvent la cause de l'échec du chargement du SVG, donc assurez-vous bien d'avoir vérifié le vôtre. Si votre serveur n'est pas configuré pour envoyer les bons en-têtes avec les fichiers SVG qu'il fournit, alors Firefox affichera le contenu du fichier comme du texte ou comme du rebut encodé, ou demandera peut-être à l'utilisateur de choisir une application pour l'ouvrir.
 

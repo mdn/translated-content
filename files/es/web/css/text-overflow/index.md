@@ -31,11 +31,11 @@ Cada valor se especificará como una de las siguientes opciones:
 ### Valores
 
 - `clip`
-  - : Este es el valor predeterminado para esta propiedad. El valor de la palabra clave truncará el texto en el límite del [área de contenido](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), por lo tanto el corte puede darse en medio de una palabra. Para recortar justo en la transición entre caracteres se puede especificar con `text-overflow` como una cadena vacía, si eso es compatible con sus navegadores: `text-overflow: '';`.
+  - : Este es el valor predeterminado para esta propiedad. El valor de la palabra clave truncará el texto en el límite del [área de contenido](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), por lo tanto el corte puede darse en medio de una palabra. Para recortar justo en la transición entre caracteres se puede especificar con `text-overflow` como una cadena vacía, si eso es compatible con sus navegadores: `text-overflow: '';`.
 - `ellipsis`
-  - : El valor de la palabra clave mostrará puntos suspensivos (`'…'`, `U+2026 Horizontal Ellipsis`) para representar texto recortado. Los puntos suspensivos se muestran dentro del [área de contenido](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), disminuyendo la cantidad de texto mostrado. Si no hay suficiente espacio para mostrar los puntos suspensivos, se recorta.
+  - : El valor de la palabra clave mostrará puntos suspensivos (`'…'`, `U+2026 Horizontal Ellipsis`) para representar texto recortado. Los puntos suspensivos se muestran dentro del [área de contenido](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), disminuyendo la cantidad de texto mostrado. Si no hay suficiente espacio para mostrar los puntos suspensivos, se recorta.
 - `<string>` {{experimental_inline}}
-  - : El {{cssxref("&lt;string&gt;")}} que será utilizado para representar texto recortado. La cadena se muestra dentro del [área de contenido](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), disminuyendo el tamaño del texto mostrado. Si no hay suficiente espacio para mostrar la cadena, se recorta.
+  - : El {{cssxref("&lt;string&gt;")}} que será utilizado para representar texto recortado. La cadena se muestra dentro del [área de contenido](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), disminuyendo el tamaño del texto mostrado. Si no hay suficiente espacio para mostrar la cadena, se recorta.
 - `fade` {{experimental_inline}}
   - : El valor de esta palabra clave recorta el contenido en línea del texto que se desborda y aplica un efecto de atenuación cerca del borde de la linea de la caja con total transparencia en el borde.
 - `fade( <length> | <percentage> )` {{experimental_inline}}

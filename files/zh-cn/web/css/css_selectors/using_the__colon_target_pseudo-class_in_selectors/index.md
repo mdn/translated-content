@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 
 {{CSSRef}}
 
-为了辅助标识那些指向文档特定部分链接的目标，[CSS3 选择器](http://www.w3.org/TR/css3-selectors/#target-pseudo) 引入了 {{cssxref(":target")}} [伪类](/zh-CN/CSS/Pseudo-classes). Netscape 7.1 已经在 Netscape 系列中加入了这个伪类的支持，这一新的举措让页面作者能够辅助用户在较大的页面中定位。
+为了辅助标识那些指向文档特定部分链接的目标，[CSS3 选择器](https://www.w3.org/TR/css3-selectors/#target-pseudo) 引入了 {{cssxref(":target")}} [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes). Netscape 7.1 已经在 Netscape 系列中加入了这个伪类的支持，这一新的举措让页面作者能够辅助用户在较大的页面中定位。
 
 ### 选择一个目标
 
@@ -13,31 +13,39 @@ slug: Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 
 假设你想修改 URI 指向的任何 h2 元素，但是又不想把样式应用到任何其他同类型的元素，那么以下示例足够简单有用：
 
-```
-h2:target {font-weight: bold;}
+```css
+h2:target {
+  font-weight: bold;
+}
 ```
 
 同样的，将样式应用于特定的文档片段也是可行的。这是通过使用 URI 中相同的标识符实现的。例如，要在 #Example 文档片段中加入边框，我们可以通过如下代码实现：
 
-```
-#Example:target {border: 1px solid black;}
+```css
+#Example:target {
+  border: 1px solid black;
+}
 ```
 
 ### 定位所有元素
 
 如果想要创建应用于所有目标元素的样式，那么可以使用通用选择器：
 
-```
-:target {color: red;}
+```css
+:target {
+  color: red;
+}
 ```
 
 ### 示例
 
 在以下示例中，5 个链接指向了同一文档中的元素。例如，选择 "First" 链接会导致 `<h1 id="one">` 成为目标元素。注意，由于目标元素有可能会被放置到浏览器窗口的顶层，因此文档可能会跳到新的滚动位置。
 
-```
-<h4 id="one">...</h4> <p id="two">...</p>
-<div id="three">...</div> <a id="four">...</a> <em id="five">...</em>
+```html
+<h4 id="one">...</h4>
+<p id="two">...</p>
+<div id="three">...</div>
+<a id="four">...</a> <em id="five">...</em>
 
 <a href="#one">First</a>
 <a href="#two">Second</a>
@@ -52,8 +60,8 @@ h2:target {font-weight: bold;}
 
 ### 相关链接
 
-- [CSS3 Selectors #target-pseudo](http://www.w3.org/TR/css3-selectors/#target-pseudo)
-- [CSS Reference :target](/En/CSS/:target)
+- [CSS3 Selectors #target-pseudo](https://www.w3.org/TR/css3-selectors/#target-pseudo)
+- [CSS Reference :target](/en-US/CSS/:target)
 
 ### Original Document Information
 

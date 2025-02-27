@@ -5,7 +5,7 @@ slug: Web/API/HTMLCanvasElement/toDataURL
 
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.toDataURL()`** — метод, который возвращает [data URI](/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) изображения в
+**`HTMLCanvasElement.toDataURL()`** — метод, который возвращает [data URI](/ru/docs/Web/URI/Schemes/data) изображения в
 формате, заданном параметром `type` (по умолчанию [PNG](https://ru.wikipedia.org/wiki/PNG)). Возвращаемое изображение имеет
 разрешение 96 dpi.
 
@@ -31,7 +31,7 @@ canvas.toDataURL(type, encoderOptions);
 
 ### Возвращаемое значение
 
-Строка ({{domxref("DOMString")}}), содержащая запрошенный [data URI](/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
+Строка ({{domxref("DOMString")}}), содержащая запрошенный [data URI](/ru/docs/Web/URI/Schemes/data).
 
 ### Исключения
 
@@ -139,4 +139,4 @@ function removeColors() {
 ## Смотрите также
 
 - Интерфейс {{domxref("HTMLCanvasElement")}}.
-- Статья о [Data URIs](/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) в разделе [HTTP](/ru/docs/Web/HTTP).
+- [Data URLs](/ru/docs/Web/URI/Schemes/data).

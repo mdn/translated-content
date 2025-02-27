@@ -5,7 +5,8 @@ slug: Web/JavaScript/Reference/Functions/arguments/callee
 
 {{jsSidebar("Functions")}}{{Deprecated_Header}}
 
-> **备注：** 在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下访问 `arguments.callee` 会抛出 {{jsxref("TypeError")}}。若一个函数必须引用自身，请为[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)命名，或使用[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)。
+> [!NOTE]
+> 在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下访问 `arguments.callee` 会抛出 {{jsxref("TypeError")}}。若一个函数必须引用自身，请为[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)命名，或使用[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)。
 
 **`arguments.callee`** 数据属性包含 arguments 所属的当前正在执行的函数。
 
@@ -138,7 +139,8 @@ console.log(
 // [ 1, 2, 6, 24, 120 ]
 ```
 
-> **备注：** 此方法为每一次迭代创建一个新的闭包，这可能会显著增加内存的使用量。这里只是为了演示这种可能性，但应该在生产环境中避免。请改用临时变量或具名函数表达式。
+> [!NOTE]
+> 此方法为每一次迭代创建一个新的闭包，这可能会显著增加内存的使用量。这里只是为了演示这种可能性，但应该在生产环境中避免。请改用临时变量或具名函数表达式。
 
 ## 规范
 

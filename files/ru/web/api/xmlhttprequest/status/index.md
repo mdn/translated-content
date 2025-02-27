@@ -42,11 +42,11 @@ xhr.send();
 
 {{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- Список [HTTP response codes](/ru/docs/Web/HTTP/Response_codes)
+- Список [HTTP response codes](/ru/docs/Web/HTTP/Status)
 - [HTTP](/ru/docs/Web/HTTP)

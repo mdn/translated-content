@@ -27,7 +27,7 @@ _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
   </tr>
   <tr>
    <th scope="row">标签省略</th>
-   <td>{{no_tag_omission}}</td>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
@@ -42,7 +42,7 @@ _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
 
 ## 属性
 
-该元素包括 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
+该元素包括 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 在 HTML5 中，**`title`** 属性拥有特殊含义，见上文。
 

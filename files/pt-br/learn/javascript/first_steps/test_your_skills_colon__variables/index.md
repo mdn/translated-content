@@ -7,19 +7,21 @@ slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
 
 O objetivo deste teste de habilidade é avaliar se você entendeu nosso artigo [Armazenando as informações que você precisa — Variáveis](/pt-BR/docs/Learn/JavaScript/First_steps/Vari%C3%A1veis).
 
-> **Nota:** Você pode experimentar soluções nos editores interativos abaixo. No entanto, pode ser útil fazer o download do código e usar uma ferramenta on-line como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) para realizar as tarefas.
+> [!NOTE]
+> Você pode experimentar soluções nos editores interativos abaixo. No entanto, pode ser útil fazer o download do código e usar uma ferramenta on-line como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) para realizar as tarefas.
 >
 > Se você travar, peça ajuda — veja a seção [Assessment or further help](#assessment_or_further_help) na parte inferior desta página.
 
-> **Nota:** Nos exemplos abaixo, se houver um erro no seu código, ele será exibido no painel de resultados da página, para ajudá-lo a tentar descobrir a resposta (ou no console JavaScript do navegador, no caso da versão para download).
+> [!NOTE]
+> Nos exemplos abaixo, se houver um erro no seu código, ele será exibido no painel de resultados da página, para ajudá-lo a tentar descobrir a resposta (ou no console JavaScript do navegador, no caso da versão para download).
 
 ## Variáveis 1
 
 Nesta tarefa, queremos que você:
 
-- Declare uma variável chamada `meuNome`.
-- Inicialize `meuNome` com um valor adequado, em uma linha separada (você pode usar seu nome real ou qualquer outra coisa).
-- Declare uma variável chamada `minhaIdade` e inicialize-a com um valor, na mesma linha.
+- Declare uma variável chamada `myName`.
+- Inicialize `myName` com um valor adequado, em uma linha separada (você pode usar seu nome real ou qualquer outra coisa).
+- Declare uma variável chamada `myAge` e inicialize-a com um valor, na mesma linha.
 
 Tente atualizar o código ativo abaixo para recriar o exemplo final:
 
@@ -29,7 +31,7 @@ Tente atualizar o código ativo abaixo para recriar o exemplo final:
 
 ## Variáveis 2
 
-Nesta tarefa, você precisa adicionar uma nova linha para corrigir o valor armazenado na variável `meuNome` existente para seu próprio nome.
+Nesta tarefa, você precisa adicionar uma nova linha para corrigir o valor armazenado na variável `myName` existente para seu próprio nome.
 
 Tente atualizar o código ativo abaixo para recriar o exemplo final:
 

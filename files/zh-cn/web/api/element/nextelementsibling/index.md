@@ -96,11 +96,11 @@ if(!("nextElementSibling" in document.documentElement)){
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [`nextSibling`](/zh-CN/DOM/Node.nextSibling)
-- [`childElementCount`](/zh-CN/DOM/Element.childElementCount)
-- [`children`](/zh-CN/DOM/Element.children)
-- [`firstElementChild`](/zh-CN/DOM/Element.firstElementChild)
-- [`lastElementChild`](/zh-CN/DOM/Element.lastElementChild)
-- [`previousElementSibling`](/zh-CN/DOM/Element.previousElementSibling)
+- [`nextSibling`](/zh-CN/docs/DOM/Node.nextSibling)
+- [`childElementCount`](/zh-CN/docs/Web/API/Element/childElementCount)
+- [`children`](/zh-CN/docs/DOM/Element.children)
+- [`firstElementChild`](/zh-CN/docs/DOM/Element.firstElementChild)
+- [`lastElementChild`](/zh-CN/docs/DOM/Element.lastElementChild)
+- [`previousElementSibling`](/zh-CN/docs/Web/API/Element/previousElementSibling)

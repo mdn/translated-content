@@ -1,5 +1,5 @@
 ---
-title: ":autofill"
+title: :autofill
 slug: Web/CSS/:autofill
 ---
 
@@ -9,7 +9,8 @@ slug: Web/CSS/:autofill
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-autofill.html", "tabbed-shorter")}}
 
-> **备注：** 许多浏览器的用户代理样式表在其 `:-webkit-autofill` 样式声明中使用 `!important`，使它们无法被网页覆盖，除非通过 JavaScript 的方式。例如，Chrome 在其内部样式表中有以下内容：
+> [!NOTE]
+> 许多浏览器的用户代理样式表在其 `:-webkit-autofill` 样式声明中使用 `!important`，使它们无法被网页覆盖，除非通过 JavaScript 的方式。例如，Chrome 在其内部样式表中有以下内容：
 >
 > ```css
 > background-color: rgb(232, 240, 254) !important;

@@ -34,7 +34,7 @@ Se o servidor retornar este status de erro, o corpo da mensagem deve conter a a 
 
 A informação mostrada abaixo foi buscada do MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.406")}}
+{{Compat}}
 
 ## Veja também
 

@@ -22,7 +22,7 @@ Aprende cómo utilizar HTTP con guías y tutoriales.
 - [Sugerencias de cliente HTTP](/es/docs/Web/HTTP/Client_hints)
   - : **Sugerencias de cliente** son un conjunto de encabezados de respuesta que un servidor puede usar para solicitar de manera proactiva información de un cliente sobre el dispositivo, la red, el usuario y las preferencias específicas del agente de usuario.
     Luego, el servidor puede determinar qué recursos enviar, según la información que el cliente elija proporcionar.
-- [Evolución de HTTP](/es/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
+- [Evolución de HTTP](/es/docs/Web/HTTP/Evolution_of_HTTP)
   - : Una breve descripción de los cambios del protocolo HTTP desde sus primeras versiones hasta el moderno HTTP/2 y más allá.
 - [Consejos de Seguridad Web de Mozilla](https://infosec.mozilla.org/guidelines/web_security)
   - : Una colección de tips para ayudar a equipos de desarrollo con la creación de aplicaciones web seguras.

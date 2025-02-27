@@ -1,33 +1,35 @@
 ---
 title: 451 Unavailable For Legal Reasons
 slug: Web/HTTP/Status/451
+l10n:
+  sourceCommit: 4dec42ed700040565e8af0e14ff104054ebc20f5
 ---
 
 {{HTTPSidebar}}
 
-HyperText Transfer Protocol (HTTP) の **`451 Unavailable For Legal Reasons`** はユーザーの要求したリソースが法的理由で使用できない場合のクライアントエラーのレスポンスコードです。
+HTTP の **`451 Unavailable For Legal Reasons`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)ステータスコードで、法的理由により利用できないリソースをユーザーがリクエストしたことを示します。例えば、訴訟が提起されたウェブページなどです。
 
 ## ステータス
 
-```
+```http
 451 Unavailable For Legal Reasons
 ```
 
 ## 例
 
+### Link ヘッダー付きのレスポンス
+
 このレスポンス例は IETF RFC 文書 (リンクは後述) にあるもので、モンティ・パイソンの[ライフ・オブ・ブライアン](https://ja.wikipedia.org/wiki/ライフ・オブ・ブライアン)からの引用を例に用いています。
 
-**注:** ISP や DNS サーバーなど、実際にユーザーによるリソースの使用を阻んでいる主体を示すときには `rel="blocked-by"` という値のついた {{HTTPHeader("Link")}} HTTP ヘッダーを使用します。
+> **メモ:** {{HTTPHeader("Link")}} ヘッダーには、ブロックを実装したエンティティを特定する `rel="blocked-by"` 関係が含まれている可能性もあります。
 
-リソースの使用を阻んでいる最終的な原因は、`rel="blocked-by"` の {{HTTPHeader("Link")}}HTTP ヘッダーではなくレスポンスの本体に記載されます。これは内容の削除を求める法的な請求を行った個人や組織などが含まれます。
+リソースが利用できないことについて最終的な責任を負うエンティティを特定する試みは、`rel="blocked-by"` リンクではなく、レスポンス本体に記載すべきです。これには、コンテンツの除去につながる法的要請を行った人物または組織の名前が含まれます。
 
-```
+```http
 HTTP/1.1 451 Unavailable For Legal Reasons
 Link: <https://spqr.example.org/legislatione>; rel="blocked-by"
 Content-Type: text/html
-```
 
-```
 <html>
       <head><title>Unavailable For Legal Reasons</title></head>
       <body>
@@ -36,23 +38,16 @@ Content-Type: text/html
             of Judea due to the Lex Julia Majestatis, which disallows
             access to resources hosted on servers deemed to be
             operated by the People's Front of Judea.</p>
-     </body>
+      </body>
 </html>
 ```
 
 ## 仕様書
 
-| 仕様書                                               | 題名                                          |
-| ---------------------------------------------------- | --------------------------------------------- |
-| {{RFC("7725", "451 Unavailable For Legal Reasons")}} | An HTTP Status Code to Report Legal Obstacles |
-
-## ブラウザーの互換性
-
-以下に示す情報は、 MDN の GitHub から取得したものです。 (<https://github.com/mdn/browser-compat-data>).
-
-{{Compat("http.status.451")}}
+{{Specifications}}
 
 ## 関連情報
 
-- ウィキペディア上の [HTTP 451](https://ja.wikipedia.org/wiki/HTTP_451) の記事
-- ウィキペディア上の [華氏451度](https://ja.wikipedia.org/wiki/華氏451度) の記事 (このステータスコードの由来)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [ウィキペディア: HTTP 451](https://ja.wikipedia.org/wiki/HTTP_451)
+- [ウィキペディア: 華氏451度](https://ja.wikipedia.org/wiki/華氏451度)（このステータスコードの由来）

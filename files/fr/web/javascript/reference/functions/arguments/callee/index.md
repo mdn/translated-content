@@ -11,11 +11,12 @@ La propriété **`arguments.callee`** contient la fonction en cours d'exécution
 
 `callee` est une propriété de l'objet `arguments`. Elle peut être utilisée afin de faire référence à la fonction en cours d'exécution à l'intérieur de cette fonction. Cette propriété peut etre utile lorsqu'on ne connait pas le nom de la fonction (fonction anonyme par exemple).
 
-> **Attention :** En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), ECMAScript 5 interdit la fonction `arguments.callee()`. Éviter de l'utiliser en utilisant un nom de fonction dans les expressions ou en utilisant une déclaration de fonction où la fonction s'appelle elle-même.
+> [!WARNING]
+> En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), ECMAScript 5 interdit la fonction `arguments.callee()`. Éviter de l'utiliser en utilisant un nom de fonction dans les expressions ou en utilisant une déclaration de fonction où la fonction s'appelle elle-même.
 
 ### Pourquoi `arguments.callee` a-t-il été retiré du mode strict ES5 ?
 
-(adapté d'une réponse [Stack Overflow par olliej](http://stackoverflow.com/a/235760/578288))
+(adapté d'une réponse [Stack Overflow par olliej](https://stackoverflow.com/a/235760/578288))
 
 Aux débuts de JavaScript, il n'était pas possible d'utiliser des expressions de fonction avec des noms. Il était donc impossible de faire une expression de fonction récursive.
 
@@ -92,9 +93,9 @@ Si l'interpréteur JavaScript ne peut pas garantir que l'ensemble des arguments 
 
 ### Utiliser `arguments.callee` pour une fonction anonyme récursive
 
-Une fonction récursive, par définition, s'appelle elle-même. Elle fait donc généralement référence à elle-même grâce à son nom. Cependant, une fonction anonyme (créée grâce ) une [expression de fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function) ou au constructeur {{jsxref("Function")}}) n'a pas de nom et la seule façon d'y faire référence est donc d'utiliser `arguments.callee`.
+Une fonction récursive, par définition, s'appelle elle-même. Elle fait donc généralement référence à elle-même grâce à son nom. Cependant, une fonction anonyme (créée grâce ) une [expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function) ou au constructeur {{jsxref("Function")}}) n'a pas de nom et la seule façon d'y faire référence est donc d'utiliser `arguments.callee`.
 
-L'exemple qui suit illustre une fonction qui définit et renvoie une fonction factorielle. Cet exemple n'a qu'un but démonstratif et ne correspond certainement pas à ce qui serait utilisé en pratique (les expressions de fonctions pouvant être [nommées](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function)).
+L'exemple qui suit illustre une fonction qui définit et renvoie une fonction factorielle. Cet exemple n'a qu'un but démonstratif et ne correspond certainement pas à ce qui serait utilisé en pratique (les expressions de fonctions pouvant être [nommées](/fr/docs/Web/JavaScript/Reference/Operators/function)).
 
 ```js
 function créer() {

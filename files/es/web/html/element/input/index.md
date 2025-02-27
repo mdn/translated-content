@@ -3,6 +3,8 @@ title: input
 slug: Web/HTML/Element/input
 ---
 
+{{HTMLSidebar}}
+
 ## Resumen
 
 El elemento HTML `<input>` se usa para crear controles interactivos para formularios basados en la web con el fin de recibir datos del usuario.Hay disponible una amplia variedad de tipos de datos de entrada y widgets de control, que dependen del dispositivo y el agente de usuario ([user agent](/es/docs/Glossary/user_agent)).El elemento `<input>` es uno de los más potentes y complejos en todo HTML debido a la gran cantidad de combinaciones de tipos y atributos de entrada.
@@ -59,7 +61,7 @@ El elemento HTML `<input>` se usa para crear controles interactivos para formula
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globales), y los indicados a continuación.
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes), y los indicados a continuación.
 
 - `type`
 
@@ -173,9 +175,9 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
     Si el atributo **autocomplete** no está especificado en un elemento input, el navegador usa el atributo **autocomplete** del formulario al que pertenece el elemento `<input>`, es decir, el elemento `form` del cual es descendiente el elemento `<input>`, o aquél cuyo **id** está especificado en el atributo **form** del elemento input. Para mayor información, véase el atributo [`autocomplete`](/es/docs/Web/HTML/Element/form#autocomplete) en {{HTMLElement("form")}}.
 
-    El atributo **autocomplete** también controla si Firefox, a diferencia de otros navegadores, [persistirá el estado deshabilitado dinámico, y (si aplica) la selección dinámica](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de un `<input>` a través de las cargas de la página. La característica de persistencia está habilitada de forma predeterminada. Estableciendo el valor de **autocomplete** como `off` se deshabilita esta característica. Esto funciona aún cuando el atributo **autocomplete** no se aplicaría normalmente al `<input>` en virtud de su atributo **type**. Véase [Error 654072 en Firefox](https://bugzil.la/654072).
+    El atributo **autocomplete** también controla si Firefox, a diferencia de otros navegadores, [persistirá el estado deshabilitado dinámico, y (si aplica) la selección dinámica](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de un `<input>` a través de las cargas de la página. La característica de persistencia está habilitada de forma predeterminada. Estableciendo el valor de **autocomplete** como `off` se deshabilita esta característica. Esto funciona aún cuando el atributo **autocomplete** no se aplicaría normalmente al `<input>` en virtud de su atributo **type**. Véase [Error 654072 en Firefox](https://bugzil.la/654072).
 
-    Para navegadores más modernos (incluyendo Firefox 38+, Google Chrome 34+, IE 11+), establecer el atributo **autocomplete** _no_ previene que el administrador de contraseñas del navegador le pregunte al usuario si desea guardar la información de inicio de sesión (usuario y contraseña), ni tampoco, de permitirlo el usuario, que se autocompleten estos campos la próxima vez que el usuario visite la página. Véase [El atributo autocomplete y campos de inicio de sesión](/es/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#The_autocomplete_attribute_and_login_fields).
+    Para navegadores más modernos (incluyendo Firefox 38+, Google Chrome 34+, IE 11+), establecer el atributo **autocomplete** _no_ previene que el administrador de contraseñas del navegador le pregunte al usuario si desea guardar la información de inicio de sesión (usuario y contraseña), ni tampoco, de permitirlo el usuario, que se autocompleten estos campos la próxima vez que el usuario visite la página. Véase [El atributo autocomplete y campos de inicio de sesión](/es/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields).
 
 - `autocorrect` {{non-standard_inline}}
 
@@ -187,20 +189,20 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
     [Documentación de `autocorrect` en la Referencia HTML de Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocorrect)
 
 - `autofocus`
-  - : Este atributo Booleano permite especificar que un control de formulario tenga el cursor cuando la página se carga, a menos que el usuario lo reemplace, por ejemplo, escribiendo en un control diferente. Solo un elemento de formulario en un mismo documento puede tener el atributo **autofocus**, el cual es Booleano. No puede ser aplicado si el atributo **type** tiene valor `hidden` (es decir, no se puede establecer automáticamente el cursor en un control oculto). Nótese que el cursor se podría establecer en el control antes de disparar el evento [`DOMContentLoaded`.](/es/docs/Web/Events/DOMContentLoaded)
+  - : Este atributo Booleano permite especificar que un control de formulario tenga el cursor cuando la página se carga, a menos que el usuario lo reemplace, por ejemplo, escribiendo en un control diferente. Solo un elemento de formulario en un mismo documento puede tener el atributo **autofocus**, el cual es Booleano. No puede ser aplicado si el atributo **type** tiene valor `hidden` (es decir, no se puede establecer automáticamente el cursor en un control oculto). Nótese que el cursor se podría establecer en el control antes de disparar el evento [`DOMContentLoaded`.](/es/docs/Web/API/Document/DOMContentLoaded_event)
 - `capture`
   - : Cuando el valor del atributo **type** es `file`, la presencia de este atributo Booleano indica que se le dará preferencia a la captura del medio directamente del ambiente del dispositivo, usando algún [mecanismo de captura de medios](https://www.w3.org/TR/html-media-capture/#dfn-media-capture-mechanism).
 - `checked`
 
   - : Cuando el valor del atributo **type** es `radio` o `checkbox`, la presencia de este atributo Booleano indica que el control está seleccionado de forma predeterminada. De lo contrario, será ignorado.
 
-    En Firefox, a diferencia de otros navegadores, de forma predeterminada, [se persiste el estado de selección dinámico](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) en un `<input>` a través de las cargas de la página. Para controlar esta característica se usa el atributo [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete).
+    En Firefox, a diferencia de otros navegadores, de forma predeterminada, [se persiste el estado de selección dinámico](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) en un `<input>` a través de las cargas de la página. Para controlar esta característica se usa el atributo [`autocomplete`](#autocomplete).
 
 - `disabled`
 
   - : Este atributo Booleano indica que el control no está disponible para interacción. En particular, el evento `click` [no será invocado](https://html.spec.whatwg.org/multipage/forms.html#enabling-and-disabling-form-controls:-the-disabled-attribute) en controles deshabilitados. De igual forma, el valor de un control deshabilitado no es enviado con el formulario.
 
-    En Firefox, a diferencia de otros navegadores, de forma predeterminada, [se persiste el estado de selección dinámico](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) en un `<input>` a través de las cargas de la página. Para controlar esta característica se usa el atributo [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete).
+    En Firefox, a diferencia de otros navegadores, de forma predeterminada, [se persiste el estado de selección dinámico](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) en un `<input>` a través de las cargas de la página. Para controlar esta característica se usa el atributo [`autocomplete`](#autocomplete).
 
 - `form`
   - : El elemento form al que está asociado el elemento (su _formulario propietario_). El valor del atributo debe ser el **id** de un elemento {{HTMLElement("form")}} en el mismo documento. Si el atributo no es especificado, este elemento `<input>` deberá ser descendiente de un elemento {{HTMLElement("form")}}. Este atributo permite poner elementos `<input>` en cualquier parte dentro de un documento, no solamente como descendientes de su formulario. Un input puede ser asociado sólo con un formulario.
@@ -211,7 +213,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
   - : Si el elemento es de tipo `submit` o `image`, este atributo especifica el tipo de contenido que es usado para enviar el formulario al servidor. Los valores posibles son:
 
     - `application/x-www-form-urlencoded`: El valor predeterminado si el atributo no es especificado.
-    - `multipart/form-data`: Se usa este valor cuando se tiene un elemento `<input>` con atributo [`type`](/es/docs/Web/HTML/Element/input#type) de valor `file`.
+    - `multipart/form-data`: Se usa este valor cuando se tiene un elemento `<input>` con atributo [`type`](#type) de valor `file`.
     - `text/plain`
 
     Si este atributo está especificado, reemplaza al atributo [`enctype`](/es/docs/Web/HTML/Element/form#enctype) del formulario al que pertenece el elemento.
@@ -239,7 +241,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 - `height`
   - : Si el valor del atributo **type** es `image`, este atributo define la altura de la imagen mostrada para el botón.
 - `incremental` {{non-standard_inline}}
-  - : Es un atributo no estándar, soportado por WebKit (Safari) y Blink (Chrome), que solo aplica cuando el atributo **type** es `search`. Si el atributo está presente, sin importar su valor, el `<input>` dispara eventos [`search`](/es/docs/Web/Events/search) conforme el usuario edita el valor. El evento solo es disparado después de que un tiempo definido en implementación haya pasado desde la última vez que se presionó una tecla. Si el atributo está ausente, el evento [`search`](/es/docs/Web/Events/search) solo se disparará cuando el usuario explícitamente inicie una búsqueda (por ejemplo, presionando la tecla Enter dentro del control). [Documentación de `incremental en la Referencia HTML de Safari`](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-incremental)
+  - : Es un atributo no estándar, soportado por WebKit (Safari) y Blink (Chrome), que solo aplica cuando el atributo **type** es `search`. Si el atributo está presente, sin importar su valor, el `<input>` dispara eventos [`search`](/es/docs/Web/API/HTMLInputElement/search_event) conforme el usuario edita el valor. El evento solo es disparado después de que un tiempo definido en implementación haya pasado desde la última vez que se presionó una tecla. Si el atributo está ausente, el evento [`search`](/es/docs/Web/API/HTMLInputElement/search_event) solo se disparará cuando el usuario explícitamente inicie una búsqueda (por ejemplo, presionando la tecla Enter dentro del control). [Documentación de `incremental en la Referencia HTML de Safari`](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-incremental)
 - `inputmode`
 
   - : Una pista para el navegador sobre qué teclado mostrar. Este atributo aplica cuando el valor del atributo **type** es text, password, email, o url. Los valores posibles son:
@@ -276,7 +278,8 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
   - : Una pista para el usuario sobre lo que puede introducir en el control. El texto no debe contener saltos de línea.
 
-    > **Nota:** No se debe usar el atributo `placeholder` en lugar de un elemento {{HTMLElement("label")}}, pues sus propósitos son diferentes. El elemento {{HTMLElement("label")}} describe el rol del elemento en el formulario (es decir, indica qué tipo de información se espera), y el atributo `placeholder` es una pista sobre el formato que debe tener el contenido. Hay casos en los que el atributo `placeholder` no es visible para el usuario, por lo que el formulario debe ser comprensible para el usuario aunque este atributo no esté presente.
+    > [!NOTE]
+    > No se debe usar el atributo `placeholder` en lugar de un elemento {{HTMLElement("label")}}, pues sus propósitos son diferentes. El elemento {{HTMLElement("label")}} describe el rol del elemento en el formulario (es decir, indica qué tipo de información se espera), y el atributo `placeholder` es una pista sobre el formato que debe tener el contenido. Hay casos en los que el atributo `placeholder` no es visible para el usuario, por lo que el formulario debe ser comprensible para el usuario aunque este atributo no esté presente.
 
 - `readonly`
   - : Este atributo indica que el usuario no puede modificar el valor del control. El valor del atributo es irrelevante. De ser necesario el acceso lectura-escritura al valor, _no_ se debe agregar el atributo "**readonly**". Es ignorado si el atributo **type** es `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, o de tipo botón (como `button` o `submit`).
@@ -316,7 +319,8 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
 ### Introducción de archivos
 
-> **Nota:** A partir de Gecko 2.0, llamar al método `click()` en un elemento `<input>` de tipo "file" abre el selector de archivos y permite al usuario seleccionar archivos. Véase [Utilizar ficheros desde aplicaciones web](/es/docs/Using_files_from_web_applications) para ejemplos y más detalles.
+> [!NOTE]
+> A partir de Gecko 2.0, llamar al método `click()` en un elemento `<input>` de tipo "file" abre el selector de archivos y permite al usuario seleccionar archivos. Véase [Utilizar ficheros desde aplicaciones web](/es/docs/Web/API/File_API/Using_files_from_web_applications) para ejemplos y más detalles.
 
 No se puede establecer el valor de un selector de archivos desde un script. Hacer algo como lo siguiente no tiene efecto alguno:
 
@@ -372,7 +376,7 @@ Nótese, sin embargo, que esto no es estándar, y no tendrá efecto en otros nav
 
 ### Usando mozactionhint en Firefox mobile
 
-Se puede usar el atributo [`mozactionhint`](/es/docs/Web/HTML/Element/input#mozactionhint) para especificar el texto para la etiqueta de la tecla Enter en el teclado virtual cuando el formulario es mostrado en Firefox mobile. Por ejemplo, para mostrar una etiqueta "Next", se puede hacer esto:
+Se puede usar el atributo [`mozactionhint`](#mozactionhint) para especificar el texto para la etiqueta de la tecla Enter en el teclado virtual cuando el formulario es mostrado en Firefox mobile. Por ejemplo, para mostrar una etiqueta "Next", se puede hacer esto:
 
 ```html
 <input type="text" mozactionhint="next" />
@@ -402,5 +406,5 @@ Firefox usa la siguiente heurística para determinar la región con la cual vali
 
 ## Véase también
 
-- Otros elementos relacionados con formularios: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+- Otros elementos relacionados con formularios: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 - [Cross-browser HTML5 placeholder text](http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text)

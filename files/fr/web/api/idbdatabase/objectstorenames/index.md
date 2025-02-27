@@ -43,7 +43,8 @@ DBOpenRequest.onsuccess = function (event) {
 };
 ```
 
-> **Note :** Pour un exemple fonctionnel complet, voir notre application de démo [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([l'exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!NOTE]
+> Pour un exemple fonctionnel complet, voir notre application de démo [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([l'exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 
@@ -55,7 +56,7 @@ DBOpenRequest.onsuccess = function (event) {
 
 ## Voir aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Démarrer des transactions : {{domxref("IDBDatabase")}}
 - Manipuler des transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}

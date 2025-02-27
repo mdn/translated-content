@@ -13,13 +13,13 @@ Firefox 38 は、米国時間 2015 年 5 月 12 日にリリースされまし�
 
 ハイライト:
 
-- [Web Audio Editor で音声ノードをバイパス](/ja/docs/Tools/Web_Audio_Editor#bypassing_nodes)
-- [ウェブコンソールの "コピー" コマンド](/ja/docs/Tools/Web_Console#helper_commands)
-- [ウェブコンソールで XmlHttpRequest をハイライトおよびフィルター](/ja/docs/Tools/Web_Console#xhr)
-- [デバッガーで、最適化により削除された変数を確認](/ja/docs/Tools/Debugger/How_to/Set_Watch_Expressions)
-- [ネットワークモニターでセキュリティの警告を確認](/ja/docs/Tools/Network_Monitor#security)
-- [ネットワークモニターで伝送サイズを確認](/ja/docs/Tools/Network_Monitor#network_request_fields)
-- [ページのアニメーションを再生/停止](/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations#animations_view)
+- [Web Audio Editor で音声ノードをバイパス](https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html#bypassing_nodes)
+- [ウェブコンソールの "コピー" コマンド](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#helper_commands)
+- [ウェブコンソールで XmlHttpRequest をハイライトおよびフィルター](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#xhr)
+- [デバッガーで、最適化により削除された変数を確認](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_watch_expressions/index.html)
+- [ネットワークモニターでセキュリティの警告を確認](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#security)
+- [ネットワークモニターで伝送サイズを確認](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#network_request_fields)
+- [ページのアニメーションを再生/停止](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#animations_view)
 
 [Firefox 37 から Firefox 38 の間に解決した開発ツール関連のバグ一覧](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-02-23&query_format=advanced&chfield=resolution&chfieldfrom=2015-01-12&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=12076303).
 
@@ -39,7 +39,7 @@ Firefox 38 は、米国時間 2015 年 5 月 12 日にリリースされまし�
   - 書字方向に依存しない {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}、{{cssxref("border-left")}} および幅、スタイル、色の個別指定プロパティ: {{cssxref("border-block-start")}}、{{cssxref("border-block-start-width")}}、{{cssxref("border-block-start-style")}}、{{cssxref("border-block-start-color")}}、{{cssxref("border-block-end")}}、{{cssxref("border-block-end-width")}}、{{cssxref("border-block-end-style")}}、{{cssxref("border-block-end-color")}}、{{cssxref("border-inline-start")}}、{{cssxref("border-inline-start-width")}}、{{cssxref("border-inline-start-style")}}、{{cssxref("border-inline-start-color")}}、{{cssxref("border-inline-end")}}、{{cssxref("border-inline-end-width")}}、{{cssxref("border-inline-end-style")}}、{{cssxref("border-inline-end-color")}} ([Firefox バグ 649142](https://bugzil.la/649142))。
   - 書字方向に依存しない {{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("bottom")}}、{{cssxref("left")}}: {{cssxref("inset-block-start")}}、`offset-block-end`、`offset-inline-start`、`offset-inline-end` ([Firefox バグ 1120283](https://bugzil.la/1120283))。
 
-- ブラウザー間で相互運用性がある動作を目指して、 [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)の始まり方を、最近の仕様変更に合致するよう変更しました ([Firefox バグ 960465](https://bugzil.la/960465))。
+- ブラウザー間で相互運用性がある動作を目指して、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)の始まり方を、最近の仕様変更に合致するよう変更しました ([Firefox バグ 960465](https://bugzil.la/960465))。
 
 ### HTML
 
@@ -52,7 +52,7 @@ Firefox 38 は、米国時間 2015 年 5 月 12 日にリリースされまし�
 - {{jsxref("Generator/return", "Generator.prototype.return()")}} を実装しました ([Firefox バグ 1115868](https://bugzil.la/1115868))。
 - {{jsxref("Functions/set", "セッター", "", 1)}}が{{jsxref("Functions/rest_parameters", "残余引数", "", 1)}}を持っている場合に{{jsxref("SyntaxError")}} が発生するようになりました ([Firefox バグ 1089632](https://bugzil.la/1089632))。
 - 関数の {{jsxref("Function/name", "name")}} プロパティが構成可能になりました ([Firefox バグ 1084019](https://bugzil.la/1084019))。
-- {{jsxref("Array")}} のメソッドのいくつかを、[型付き配列](/ja/docs/Web/JavaScript/Typed_arrays) にも実装しました。
+- {{jsxref("Array")}} のメソッドのいくつかを、[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays) にも実装しました。
 
   - {{jsxref("TypedArray.of", "of()")}} メソッドと {{jsxref("TypedArray.from", "from()")}} メソッド ([Firefox バグ 896608](https://bugzil.la/896608))。
   - {{jsxref("TypedArray.forEach", "forEach()")}} メソッド ([Firefox バグ 1107645](https://bugzil.la/1107645))。
@@ -74,7 +74,7 @@ Firefox 38 は、米国時間 2015 年 5 月 12 日にリリースされまし�
 
 ### インターフェイス/API/DOM
 
-- Fetch API の {{domxref("fetch()")}} メソッドを実装しました ([Firefox バグ 1039846](https://bugzil.la/1039846))。
+- Fetch API の {{domxref("Window/fetch", "fetch()")}} メソッドを実装しました ([Firefox バグ 1039846](https://bugzil.la/1039846))。
 - {{domxref("BroadcastChannel")}} API を実装して、[Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用可能にしました ([Firefox バグ 966439](https://bugzil.la/966439) および [Firefox バグ 1121420](https://bugzil.la/1121420))。
 - Console API が [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用可能になりました。
 - {{domxref("CanvasRenderingContext2D.clearHitRegions()")}} を実装しました ([Firefox バグ 1119527](https://bugzil.la/1119527))。

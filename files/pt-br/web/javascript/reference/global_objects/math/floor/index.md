@@ -3,7 +3,7 @@ title: Math.floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Resumo
 
@@ -112,7 +112,7 @@ Math.ceil10(-59, 1); // -50
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.floor")}}
+{{Compat}}
 
 ## Veja também
 

@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Functions/get
 
 **`get`** 構文は、オブジェクトのプロパティを関数に結びつけ、プロパティが参照された時に関数が呼び出されるようにします。
 
-{{EmbedInteractiveExample("pages/js/functions-getter.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Getter")}}
+
+```js interactive-example
+const obj = {
+  log: ["a", "b", "c"],
+  get latest() {
+    return this.log[this.log.length - 1];
+  },
+};
+
+console.log(obj.latest);
+// Expected output: "c"
+```
 
 ## 構文
 
@@ -130,7 +142,8 @@ console.log(MyConstants.foo); // 'foo' です。静的ゲッターの値は変�
 - 値がすぐに必要ではない場合。値を後で使用する、あるいはまったく使用しない場合がある状況。
 - 何度もアクセスされる値で、値が変更されないため再計算の必要がない、あるいは再計算すべきではない場合。
 
-> **メモ:** 値が変わると見込まれるプロパティで、遅延ゲッターを使用してはいけません。ゲッターが遅延である場合、値を再計算しないためです。
+> [!NOTE]
+> 値が変わると見込まれるプロパティで、遅延ゲッターを使用してはいけません。ゲッターが遅延である場合、値を再計算しないためです。
 >
 > なお、ゲッターの本質は「遅延」や「メモ化」ではありません。この動作を望む場合、この技術を実装する必要があります。
 

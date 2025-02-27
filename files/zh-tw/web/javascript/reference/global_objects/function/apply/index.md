@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 `apply()` 方法會呼叫一個以 this 的代表值和一個陣列形式的值組（或是一個 [array-like object](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)）為參數的函式。
 
-> **備註：** 這個函式的語法和 {{jsxref("Function.call", "call()")}} 幾乎一樣，最大的不同是 `call()` 接受**一連串的參數**，而 `apply()` 接受一組陣列形式的參數。
+> [!NOTE]
+> 這個函式的語法和 {{jsxref("Function.call", "call()")}} 幾乎一樣，最大的不同是 `call()` 接受**一連串的參數**，而 `apply()` 接受一組陣列形式的參數。
 
 ## 語法
 
@@ -36,13 +37,14 @@ fun.apply(thisArg, [argsArray])
 
 從 ECMAScript 5th 版本後，也可以使用陣列形式的物件，在實踐上這代表他會擁有 `length` 以及整數範圍 `(0...length-1)` 的屬性。舉例來說，你可以使用 {{domxref("NodeList")}} 或是一個像這樣的自定義屬性：`{ 'length': 2, '0': 'eat', '1': 'bananas' }`。
 
-> **備註：** 一般瀏覽器，包括 Chrome 14 及 Internet Explorer 9，仍不支援陣列形式的物件，所以會對此丟出一個錯誤。
+> [!NOTE]
+> 一般瀏覽器，包括 Chrome 14 及 Internet Explorer 9，仍不支援陣列形式的物件，所以會對此丟出一個錯誤。
 
 ## 範例
 
 ### 使用 `apply` 與建構子鏈結
 
-您可以使用 `apply` 鏈結 {{jsxref("Operators/new", "constructors", "", 1)}} 一個物件，與 Java 相似，如下範例中我們可以建立一個全域的 {{jsxref("Function")}} 方法叫 `construct`，使您可以使用類陣列的物件與建構子去替代參數列表。
+你可以使用 `apply` 鏈結 {{jsxref("Operators/new", "constructors", "", 1)}} 一個物件，與 Java 相似，如下範例中我們可以建立一個全域的 {{jsxref("Function")}} 方法叫 `construct`，使你可以使用類陣列的物件與建構子去替代參數列表。
 
 ```js
 Function.prototype.construct = function (aArgs) {
@@ -52,7 +54,8 @@ Function.prototype.construct = function (aArgs) {
 };
 ```
 
-> **備註：** 如上範例的 `Object.create()` 方法是屬於比較新的寫法。如需使用閉包的替代方法，請參考以下的範例：
+> [!NOTE]
+> 如上範例的 `Object.create()` 方法是屬於比較新的寫法。如需使用閉包的替代方法，請參考以下的範例：
 >
 > ```js
 > Function.prototype.construct = function (aArgs) {
@@ -82,7 +85,8 @@ console.log(myInstance instanceof MyConstructor); // logs 'true'
 console.log(myInstance.constructor); // logs 'MyConstructor'
 ```
 
-> **備註：** This non-native `Function.construct` method will not work with some native constructors (like {{jsxref("Date")}}, for example). In these cases you have to use the {{jsxref("Function.prototype.bind")}} method (for example, imagine having an array like the following, to be used with {{jsxref("Global_Objects/Date", "Date")}} constructor: `[2012, 11, 4]`; in this case you have to write something like: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` — anyhow this is not the best way to do things and probably should not be used in any production environment).
+> [!NOTE]
+> This non-native `Function.construct` method will not work with some native constructors (like {{jsxref("Date")}}, for example). In these cases you have to use the {{jsxref("Function.prototype.bind")}} method (for example, imagine having an array like the following, to be used with {{jsxref("Global_Objects/Date", "Date")}} constructor: `[2012, 11, 4]`; in this case you have to write something like: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` — anyhow this is not the best way to do things and probably should not be used in any production environment).
 
 ### 使用 `apply` 於內建的函數
 
@@ -145,7 +149,7 @@ someobject.foo = function () {
 };
 ```
 
-This method is especially handy where you want to debug events, or interface with something that has no API like the various `.on([event]...` events, such as those usable on the [Devtools Inspector](/zh-TW/docs/Tools/Page_Inspector#Developer_API)).
+This method is especially handy where you want to debug events, or interface with something that has no API like the various `.on([event]...` events, such as those usable on the [Devtools Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#developer_api)).
 
 ## 規範
 

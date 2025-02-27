@@ -1,6 +1,8 @@
 ---
 title: align-self
 slug: Web/CSS/align-self
+l10n:
+  sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
 ---
 
 {{CSSRef}}
@@ -27,6 +29,7 @@ align-self: self-start; /* アイテムを起点に詰めて配置 */
 align-self: self-end; /* アイテムを末端に詰めて配置 */
 align-self: flex-start; /* フレックスアイテムを起点に配置 */
 align-self: flex-end; /* フレックスアイテムを末端に配置 */
+align-self: anchor-center;
 
 /* ベースラインによる配置 */
 align-self: baseline;
@@ -42,6 +45,7 @@ align-self: unsafe center;
 align-self: inherit;
 align-self: initial;
 align-self: revert;
+align-self: revert-layer;
 align-self: unset;
 ```
 
@@ -56,7 +60,7 @@ align-self: unset;
     - 絶対位置のレイアウトでは、このキーワードは*置換*の絶対位置ボックスには `start` のように動作し、*その他*の絶対位置ボックスには `stretch` のように動作します。
     - 絶対位置指定レイアウトの固定位置指定時は、このキーワードは `stretch` と同様に動作します。
     - フレックスアイテムでは、このキーワードは `stretch` と同様に動作します。
-    - グリッドアイテムでは、このキーワードは `stretch` のうちの一つと似た動作をしますが、アスペクト比や固有の寸法を持つボックスは `start` のように動作します。
+    - グリッドアイテムでは、このキーワードは `stretch` のうちの一つと似た動作をしますが、{{glossary("aspect ratio","アスペクト比")}}や内在的な寸法を持つボックスは `start` のように動作します。
     - ブロックレベルボックスと表のセルでは、プロパティは適用されません。
 
 - `self-start`
@@ -74,6 +78,8 @@ align-self: unset;
     `first baseline` の代替配置は `start`、`last baseline` の代替配置は `end` です。
 - `stretch`
   - : アイテムの交差軸方向の寸法の合計値が、配置コンテナーの寸法よりも小さく、アイテムの寸法が `auto` であった場合、アイテムの寸法は {{cssxref("max-height")}}/{{cssxref("max-width")}} (または同等の機能) で課された制約を尊重しつつ、均等の寸法 (比例的ではない) に拡大されるので、 `auto` が指定されたアイテムすべての寸法の合計は、ちょうど配置コンテナーの交差軸方向を埋めるようになります。
+- `anchor-center`
+  - : [アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)要素の場合、関連付けられたアンカー要素のブロック方向の中心にアイテムを配置します。 [`anchor-center` を使用してアンカーの中央に配置](/ja/docs/Web/CSS/CSS_anchor_positioning/Using#anchor-center_を使用してアンカーの中央に配置)を参照してください。
 - `safe`
   - : アイテムのサイズが配置コンテナーを超えるとき、アイテムは配置モードが `start` であったかのように配置されます。
 - `unsafe`
@@ -83,11 +89,11 @@ align-self: unset;
 
 {{CSSInfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 
@@ -127,7 +133,7 @@ div:nth-child(3) {
 
 ## 仕様書
 
-{{Specifications("css.properties.align-self.grid_context")}}
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -135,8 +141,8 @@ div:nth-child(3) {
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS フレックスボックスガイド: _[フレックスコンテナー内でのアイテムの配置](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS グリッドガイド: _[CSS グリッドレイアウト内でのボックス配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)
 - {{cssxref("align-items")}} プロパティ

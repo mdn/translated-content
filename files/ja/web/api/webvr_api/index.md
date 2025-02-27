@@ -7,7 +7,8 @@ l10n:
 
 {{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
-> **メモ:** WebVR API は [WebXR API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として批准されることはなく、ごく少数のブラウザーでしか既定で実装・有効化されず、少数の端末しか対応していませんでした。
+> [!NOTE]
+> WebVR API は [WebXR API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として批准されることはなく、ごく少数のブラウザーでしか既定で実装・有効化されず、少数の端末しか対応していませんでした。
 
 WebVR は、バーチャルリアリティデバイス — 例えば Oculus Rift のようなヘッドマウントディスプレイ — をウェブアプリへ公開し、ヘッドマウントディスプレイの位置や動きを 3D 空間上の動きへと変換する手助けを行います。これによって、バーチャルな製品紹介やインタラクティブな訓練アプリといったものから超臨場感のファーストパーソン・シューティングゲームといったものまで、非常に面白い様々なアプリケーションをつくることができます。
 
@@ -130,7 +131,6 @@ WebVR API は、以下の API を継承することで、掲載されている�
 
 ## 関連情報
 
-- [vr.mozilla.org](https://mixedreality.mozilla.org/) — Mozilla の WebVR に関するメインのランディングパッドで、デモやユーティリティ、その他の情報が掲載されています。
 - [A-Frame](https://aframe.io/) — VR 体験を構築するためのオープンソースのウェブフレームワーク。
 - [webvr.info](https://webvr.info) — WebVR の最新情報、ブラウザー設定、コミュニティなど。
 - [threejs-vr-boilerplate](https://github.com/MozillaReality/vr-web-examples/tree/master/threejs-vr-boilerplate) — WebVR アプリを書き込むための有益なスターターテンプレートです。

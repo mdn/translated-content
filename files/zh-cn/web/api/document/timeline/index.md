@@ -1,30 +1,26 @@
 ---
-title: Document.timeline
+title: Document：timeline 属性
 slug: Web/API/Document/timeline
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
+{{ APIRef("Web Animations") }}
 
-{{domxref("Document")}} 接口的 `timeline` 只读属性表示当前文档的默认时间轴。此时间轴是 {{domxref("DocumentTimeline")}} 的一个特殊实例，它会在网页加载时自动创建。
+{{domxref("Document")}} 接口的 `timeline` 只读属性表示当前文档的默认时间轴。此时间轴是 {{domxref("DocumentTimeline")}} 的一个特殊实例。
 
-此时间轴对于每个文档（`document`）来说都是唯一的，并在文档的生命周期中保持不变，包括调用 {{domxref("Document.open()")}}。
+此时间轴对于每个文档（`document`）来说都是唯一的，并在文档的生命周期中持续存在，包括调用了 {{domxref("Document.open()")}} 的情况。
 
-该时间线的时间值被计算为与全局时钟的固定偏移，使得零时间对应于{{domxref("PerformanceTiming.navigationStart", "navigationStart")}}时刻加上称为原始时间的带符号的 delta。在建立导航开始时刻之前，文档时间线是不活动的。
+此时间轴以毫秒为单位表示自 {{domxref("Performance.timeOrigin")}} 以来经过的时间。在时间原点（time origin）之前，时间轴为非活动状态，它的 {{domxref("AnimationTimeline.currentTime","currentTime")}} 值为 `null`。
 
-> **备注：** 与非活动文档相关联的文档时间轴也被视为是**不活动的**。
+> [!NOTE]
+> 与非活动文档（未与 {{domxref("Window")}}、{{htmlelement("iframe")}} 或 {{htmlelement("frame")}} 关联的 {{domxref("Document")}}）关联的文档时间轴也被认为是非活动的。
 
-## 语法
-
-```js
-var pageTimeline = document.timeline;
-var thisMoment = pageTimeline.currentTime;
-```
-
-### 值
+## 值
 
 一个 {{domxref("DocumentTimeline")}} 对象。
 
-## 规则
+## 规范
 
 {{Specifications}}
 

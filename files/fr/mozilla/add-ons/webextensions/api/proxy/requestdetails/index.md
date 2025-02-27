@@ -3,7 +3,7 @@ title: proxy.RequestDetails
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/RequestDetails
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Contient des informations sur une requête Web que le navigateur est sur le point de faire. Une instance de cet objet est passée dans l'écouteur {{WebExtAPIRef("proxy.onRequest")}}.
 

@@ -1,11 +1,13 @@
 ---
 title: text-align
 slug: Web/CSS/text-align
+l10n:
+  sourceCommit: 199b1ab9210af2da7306f2a034c70980c5b873b5
 ---
 
 {{CSSRef}}
 
-**`text-align`** [CSS](/ja/docs/Web/CSS) プロパティは、ブロック要素または表のセルボックス内におけるインラインレベルコンテンツの水平方向の配置を設定します。これは {{cssxref("vertical-align")}} と同じように機能しますが、水平方向に機能することを意味します。
+**`text-align`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロック要素または表のセルボックス内におけるインラインレベルコンテンツの水平方向の配置を設定します。つまり、 {{cssxref("vertical-align")}} と同じように機能しますが、水平方向に機能します。
 
 {{EmbedInteractiveExample("pages/css/text-align.html")}}
 
@@ -19,12 +21,7 @@ text-align: left;
 text-align: right;
 text-align: center;
 text-align: justify;
-text-align: justify-all;
 text-align: match-parent;
-
-/* 表の列における文字を基準とした配置 */
-text-align: ".";
-text-align: "." center;
 
 /* ブロック配置の値 (標準外の構文) */
 text-align: -moz-center;
@@ -40,10 +37,6 @@ text-align: unset;
 
 `text-align` プロパティは、以下のいずれかの方法で指定します。
 
-- キーワード値となる `start`, `end`, `left`, `right`, `center`, `justify`, `justify-all`, `match-parent` のいずれかを使用する。
-- `<string>` 値のみを使用した場合、他の値はデフォルトで `right` になります。
-- キーワード値と [`<string>`](#string) 値の両方を使用する。
-
 ### 値
 
 - `start`
@@ -58,18 +51,14 @@ text-align: unset;
   - : インラインコンテンツはラインボックス内で中央に寄せられます。
 - `justify`
   - : インラインコンテンツは両端揃えになります。テキストは最終行を除いて、その左右の端がラインボックスの左右の端に揃うように間隔が空けられます。
-- `justify-all` {{experimental_inline}}
-  - : `justify` と同じですが、最終行も強制的に両端揃えになります。
 - `match-parent`
   - : `inherit` と似ていますが、`start` と `end` の値は親要素の {{cssxref("direction")}} に従って計算されて、適切な `left` もしくは `right` の値で置き換えられます。
-- {{cssxref("&lt;string&gt;")}} {{experimental_inline}}
-  - : 表のセルに適用する場合、セルのコンテンツが配置される位置揃え文字が指定されます。
 
-## アクセシビリティへの懸念事項
+## アクセシビリティ
 
 両端揃えによって生じる単語間の一貫性のない間隔は、ディスレクシアなどの認知的な懸念を持つ人々にとって問題となる可能性があります。
 
-- [MDN WCAG を理解する - ガイドライン 1.4 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の分離を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [MDN WCAG を理解する - ガイドライン 1.4 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.8 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## 公式定義
@@ -86,7 +75,7 @@ text-align: unset;
 
 #### HTML
 
-```html
+```html live-sample___start_alignment
 <p class="example">
   Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
   in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
@@ -96,7 +85,7 @@ text-align: unset;
 
 #### CSS
 
-```css
+```css live-sample___start_alignment
 .example {
   text-align: start;
   border: solid;
@@ -111,7 +100,7 @@ text-align: unset;
 
 #### HTML
 
-```html
+```html live-sample___centered_text
 <p class="example">
   Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
   in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
@@ -121,7 +110,7 @@ text-align: unset;
 
 #### CSS
 
-```css
+```css live-sample___centered_text
 .example {
   text-align: center;
   border: solid;
@@ -130,13 +119,13 @@ text-align: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Centered_text","100%","100%")}}
+{{EmbedLiveSample("Centered_text", "100%", "100%")}}
 
 ### "justify" を使用した例
 
 #### HTML
 
-```html
+```html live-sample___example_using_justify
 <p class="example">
   Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
   in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
@@ -146,7 +135,7 @@ text-align: unset;
 
 #### CSS
 
-```css
+```css live-sample___example_using_justify
 .example {
   text-align: justify;
   border: solid;
@@ -156,6 +145,82 @@ text-align: unset;
 #### 結果
 
 {{EmbedLiveSample('Example using "justify"',"100%","100%")}}
+
+### 表の配置
+
+この例は、 `text-align` を {{htmlelement("table")}} 要素に使用したデモです。
+
+- {{htmlelement("caption")}} は右揃えに設定されています。
+- 最初の 2 つの {{htmlelement("th")}} 要素は、 {{htmlelement("thead")}} に設定された `text-align: left` から左揃えを継承していますが、3 番目は右揃えに設定されています。
+- {{htmlelement("tbody")}} 要素の中では、最初の行は右揃えに設定されており、 2 行目は中央ぞろえ、 3 行目は既定値（左揃え）を設定しています。
+- それぞれの行の中で、一部のセル (c12, c31) は行による配置をオーバーライドしています。
+
+#### HTML
+
+```html-nolint live-sample___table_alignment
+<table>
+  <caption>
+    表の例
+  </caption>
+  <thead>
+    <tr>
+      <th>列 1</th>
+      <th>列 2</th>
+      <th class="right">列 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="right">
+      <td>11</td>
+      <td class="center">12</td>
+      <td>13</td>
+    </tr>
+    <tr class="center">
+      <td>21</td>
+      <td>22</td>
+      <td>23</td>
+    </tr>
+    <tr id="r3">
+      <td class="right">31</td>
+      <td>32</td>
+      <td>33</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### CSS
+
+```css live-sample___table_alignment
+table {
+  border-collapse: collapse;
+  border: solid black 1px;
+  width: 250px;
+  height: 150px;
+}
+
+thead {
+  text-align: left;
+}
+
+td,
+th {
+  border: solid 1px black;
+}
+
+.center {
+  text-align: center;
+}
+
+.right,
+caption {
+  text-align: right;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('Table alignment', "100%", "200")}}
 
 ## 仕様書
 

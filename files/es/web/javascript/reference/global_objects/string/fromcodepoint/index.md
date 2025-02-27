@@ -3,7 +3,7 @@ title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 ---
 
-{{JSRef("Global_Objects", "String")}}
+{{JSRef}}
 
 ## Resumen
 

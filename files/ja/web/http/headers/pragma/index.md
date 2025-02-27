@@ -58,7 +58,7 @@ Pragma: no-cache
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Pragma")}}
+{{Compat}}
 
 ## 関連情報
 

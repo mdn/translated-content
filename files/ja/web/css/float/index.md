@@ -1,11 +1,13 @@
 ---
 title: float
 slug: Web/CSS/float
+l10n:
+  sourceCommit: 6aa664dc5ccb5edf0897f99ad5feb59325dff831
 ---
 
 {{CSSRef}}
 
-**`float`** は CSS のプロパティで、要素を包含ブロックの左右どちらかの側に沿うように設置し、テキストやインライン要素がその周りを回りこめるように定義します。要素はウェブページの通常のフローから外れますが、 ([絶対位置指定](/ja/docs/Web/CSS/position#absolute_positioning) とは対照的に) フローの一部であり続けます。
+**`float`** は CSS のプロパティで、要素を包含ブロックの左右どちらかの側に沿うように設置し、テキストやインライン要素がその周りを回りこめるように定義します。要素はウェブページの通常のフローから外れますが、（[絶対位置指定](/ja/docs/Web/CSS/position#absolute_positioning) とは対照的に）フローの一部であり続けます。
 
 {{EmbedInteractiveExample("pages/css/float.html")}}
 
@@ -30,7 +32,8 @@ _浮動要素_ (floating element) とは、`float` の計算値が `none` 以外
 | `inline-grid`        | `grid`     |
 | _その他_             | _変更なし_ |
 
-> **メモ:** JavaScript で {{domxref("HTMLElement.style")}} オブジェクトのメンバーとしてこのプロパティを参照する場合、最近のブラウザーは `float` に対応していますが、古いブラウザーは `cssFloat` という綴りになり、 Internet Explorer のバージョン 8 以前では、 `styleFloat` を使用しています。これは、ダッシュ区切りの CSS 名は DOM メンバーとしてキャメルケースで綴るというルールの例外でした (これは "float" が JavaScript の予約語であるためで、 "class" を "className" とする必要があったり、 \<label> の "for" を "htmlFor" とする必要があったりするのと同じです)。
+> [!NOTE]
+> JavaScript で {{domxref("HTMLElement.style")}} オブジェクトのメンバーとしてこのプロパティを参照する場合、最近のブラウザーは `float` に対応していますが、古いブラウザーは `cssFloat` という綴りになります。これは、ハイフン区切りの CSS 名は DOM メンバーとして{{Glossary("camel_case", "キャメルケース")}}で綴るというルールの例外でした（これは "float" が JavaScript の予約語であるためで、 "class" を "className" とする必要があったり、 \<label> の "for" を "htmlFor" とする必要があったりするのと同じです）。
 
 ## 構文
 
@@ -46,6 +49,7 @@ float: inline-end;
 float: inherit;
 float: initial;
 float: revert;
+float: revert-layer;
 float: unset;
 ```
 
@@ -74,7 +78,7 @@ float: unset;
 
 ## 例
 
-<h3 id="How_floated_elements_are_positioned">浮動要素の位置をどのように決めるか</h3>
+### 浮動要素の位置をどのように決めるか
 
 上述のとおり、要素は浮動すると、文書の通常のフローから外されます (ただし、フローの一部であり続けます)。浮動要素は、包含ブロックか*他の浮動要素*の辺に触れるまで、左側または右側に移動させられます。
 
@@ -144,5 +148,5 @@ div {
 
 ## 関連情報
 
-- [ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)
+- [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
 - アイテムを浮動要素の下へ強制的に移動させるには {{cssxref("clear")}} を使用します。

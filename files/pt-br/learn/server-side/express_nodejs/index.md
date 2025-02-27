@@ -11,7 +11,8 @@ Express é um popular framework web estruturado, escrito em JavaScript que roda 
 
 Antes de iniciar este módulo, você precisará entender o que é programação web e as estruturas do lado do servidor são, o ideal é ler os tópicos em nosso [Módulo de primeiros passos da programação de sites do lado servidor](/pt-BR/docs/Learn/Server-side/First_steps). Um conhecimento geral de conceitos de programação e JavaScript é altamente recomendado, mas não é essencial para a compreensão dos conceitos fundamentais.
 
-> **Nota:** Nota: Este site possui muitos recursos úteis para aprender JavaScript no contexto do desenvolvimento do lado do cliente: JavaScript, Guia de JavaScript, princípios básicos de JavaScript, JavaScript (aprendizagem). O core JavaScript linguagem e conceitos são os mesmos para o desenvolvimento do lado do servidor no Node.js e este material será relevante. O Node.js oferece APIs adicionais para suportar funcionalidades que são úteis em ambientes sem navegador, e. Para criar servidores HTTP e acessar o sistema de arquivos, mas não suporta APIs JavaScript para trabalhar com o navegador e o DOM.
+> [!NOTE]
+> Nota: Este site possui muitos recursos úteis para aprender JavaScript no contexto do desenvolvimento do lado do cliente: JavaScript, Guia de JavaScript, princípios básicos de JavaScript, JavaScript (aprendizagem). O core JavaScript linguagem e conceitos são os mesmos para o desenvolvimento do lado do servidor no Node.js e este material será relevante. O Node.js oferece APIs adicionais para suportar funcionalidades que são úteis em ambientes sem navegador, e. Para criar servidores HTTP e acessar o sistema de arquivos, mas não suporta APIs JavaScript para trabalhar com o navegador e o DOM.
 >
 > Este guia fornecerá algumas informações sobre como trabalhar com o Node.js e o Express, e existem inúmeros outros recursos excelentes na Internet e em livros - alguns desses relacionados de Como faço para começar com Node.js (StackOverflow) e O que são os Melhores recursos para aprender Node.js? (Quora).
 
@@ -34,7 +35,7 @@ Antes de iniciar este módulo, você precisará entender o que é programação 
 - [Express Tutorial Part 5: Displaying library data](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
   - : We're now ready to add the pages that display the _LocalLibrary_ website books and other data. The pages will include a home page that shows how many records we have of each model type, and list and detail pages for all of our models. Along the way we'll gain practical experience in getting records from the database, and using templates.
 - [Express Tutorial Part 6: Working with forms](/pt-BR/docs/Learn/Server-side/Express_Nodejs/forms)
-  - : In this tutorial we'll show you how to work with [HTML Forms](/pt-BR/docs/Web/Guide/HTML/Forms) in Express, using Pug, and in particular how to write forms to create, update, and delete documents from the database.
+  - : In this tutorial we'll show you how to work with [HTML Forms](/pt-BR/docs/Learn/Forms) in Express, using Pug, and in particular how to write forms to create, update, and delete documents from the database.
 - [Express Tutorial Part 7: Deploying to production](/pt-BR/docs/Learn/Server-side/Express_Nodejs/deployment)
   - : Now you've created an awesome _LocalLibrary_ website, you're going to want to install it on a public web server so that it can be accessed by library staff and members over the Internet. This article provides an overview of how you might go about finding a host to deploy your website, and what you need to do in order to get your site ready for production.
 

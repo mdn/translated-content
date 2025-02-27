@@ -3,9 +3,11 @@ title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers("window_and_worker_except_service")}}
 
-`XMLHttpRequest` é um objeto que fornece funcionalidade ao cliente para transferir dados entre um cliente e um servidor. Ele fornece uma maneira fácil de recuperar dados de um URL sem ter que fazer uma atualização de página inteira. Isso permite que uma página da Web atualize apenas uma parte do conteúdo sem interromper o que o usuário esteja fazendo. XMLHttpRequest é usado constantemente na programação de [AJAX](/pt-BR/docs/AJAX).
+{{APIRef("XMLHttpRequest API")}}
+
+`XMLHttpRequest` é um objeto que fornece funcionalidade ao cliente para transferir dados entre um cliente e um servidor. Ele fornece uma maneira fácil de recuperar dados de um URL sem ter que fazer uma atualização de página inteira. Isso permite que uma página da Web atualize apenas uma parte do conteúdo sem interromper o que o usuário esteja fazendo. XMLHttpRequest é usado constantemente na programação de [AJAX](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data).
 
 `XMLHttpRequest` foi originalmente projetado pela Microsoft e adotado pela Mozilla, Apple e Google. Está sendo padronizado pela [WHATWG](https://xhr.spec.whatwg.org/). Apesar do nome, XMLHttpRequest pode ser usado para recuperar qualquer tipo de dados, e não apenas XML, suportando também, protocolos diferentes de [HTTP](/pt-BR/HTTP) (incluindo file e ftp ).
 
@@ -15,23 +17,7 @@ Para criar uma instância de XMLHttpRequest , basta fazer isso:
 var myRequest = new XMLHttpRequest();
 ```
 
-Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpRequest](/pt-BR/DOM/XMLHttpRequest/Using_XMLHttpRequest).
-
-## Métodos
-
-| `XMLHttpRequest(JSObject objParameters);`                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `void abort();`                                                                                                                                             |
-| `DOMString getAllResponseHeaders();`                                                                                                                        |
-| `DOMString? getResponseHeader(DOMString header);`                                                                                                           |
-| `void open(DOMString method, DOMString url, optional boolean async, optional DOMString? user, optional DOMString? password);`                               |
-| `void overrideMimeType(DOMString mime);`                                                                                                                    |
-| `void send();` `void send(ArrayBuffer data);` `void send(Blob data);` `void send(Document data);` `void send(DOMString? data);` `void send(FormData data);` |
-| `void setRequestHeader(DOMString header, DOMString value);`                                                                                                 |
-| Métodos não-padrão                                                                                                                                          |
-| `[noscript] void init(in nsIPrincipal principal, in nsIScriptContext scriptContext, in nsPIDOMWindow ownerWindow);`                                         |
-| `[noscript] void openRequest(in AUTF8String method, in AUTF8String url, in boolean async, in AString user, in AString password);`                           |
-| `void sendAsBinary(in DOMString body);`                                                                                                                     |
+Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest).
 
 ## Propriedades
 
@@ -487,7 +473,8 @@ Retorna a string contendo o texto do cabeçalho especificado, ou null se quer a 
 
 Inicializa um pedido. Este método é para ser usado a partir do código JavaScript; para inicializar um pedido do código nativo, use [`openRequest()`](</en/nsIXMLHttpRequest#openRequest()> "/en/XMLHttpRequest#openRequest()") em seu lugar.
 
-> **Nota:** Chamar esse método uma solicitação já está ativo (aquele para o qual open() ou openRequest() já foi chamado) é o equivalente de chamar abort().
+> [!NOTE]
+> Chamar esse método uma solicitação já está ativo (aquele para o qual open() ou openRequest() já foi chamado) é o equivalente de chamar abort().
 
 ```
 void open(
@@ -524,7 +511,8 @@ void overrideMimeType(DOMString mimetype);
 
 Envia a solicitação. Se o pedido é assíncrono (que é o padrão), este método retorna assim que o pedido for enviado. Se o pedido é síncrono, este método não retorna até a resposta chegar.
 
-> **Nota:** Qualquer ouvintes de eventos que pretende definir tem de ser definida antes de chamar send().
+> [!NOTE]
+> Qualquer ouvintes de eventos que pretende definir tem de ser definida antes de chamar send().
 
 ```
 void send();
@@ -541,7 +529,7 @@ Se os dados são um Document , ele é serializado antes de serem enviados. Ao en
 
 Se são uma nsIInputStream , deve ser compatível com nsIUploadChannel 's setUploadStream() método. Nesse caso, um cabeçalho Content-Length é adicionado ao pedido, com o seu valor obtido usando nsIInputStream 's available() método. Quaisquer cabeçalhos incluídos na parte superior da corrente são tratados como parte do corpo da mensagem. MIMEType da transmissão deve ser especificado definindo o cabeçalho Content-Type usando o [`setRequestHeader()`](</en/nsIXMLHttpRequest#setRequestHeader()> "/en/XMLHttpRequest#setRequestHeader()") método antes de chamar send().
 
-A melhor maneira de enviar conteúdo binário (como em arquivos de upload) está usando[ArrayBuffers](/pt-BR/docs/JavaScript/Typed_arrays/ArrayBuffer) ou [Blobs](/pt-BR/docs/DOM/Blob) em conjuncton com o send() método. No entanto, se você quiser enviar uma [stringifiable](/pt-BR/docs/JavaScript/Reference/Global_Objects/JSON/stringify) dados brutos, use o [`sendAsBinary()`](</pt-BR/docs/DOM/XMLHttpRequest#sendAsBinary()>) método em vez disso.
+A melhor maneira de enviar conteúdo binário (como em arquivos de upload) está usando[ArrayBuffers](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) ou [Blobs](/pt-BR/docs/Web/API/Blob) em conjuncton com o send() método. No entanto, se você quiser enviar uma [stringifiable](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) dados brutos, use o [`sendAsBinary()`](</pt-BR/docs/DOM/XMLHttpRequest#sendAsBinary()>) método em vez disso.
 
 ### setRequestHeader()
 
@@ -600,7 +588,7 @@ void sendAsBinary(
 );
 ```
 
-Este método, usado em conjuncton com o [`readAsBinaryString`](/pt-BR/docs/DOM/FileReader#readAsBinaryString) método do [`FileReader`](/pt-BR/docs/DOM/FileReader) API tornar possível [read and **upload** any type of file](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files) e para [stringify](/pt-BR/docs/JavaScript/Reference/Global_Objects/JSON/stringify) os dados brutos.
+Este método, usado em conjuncton com o [`readAsBinaryString`](/pt-BR/docs/Web/API/FileReader#readasbinarystring) método do [`FileReader`](/pt-BR/docs/Web/API/FileReader) API tornar possível [read and **upload** any type of file](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#submitting_forms_and_uploading_files) e para [stringify](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) os dados brutos.
 
 ##### Parametros
 
@@ -609,7 +597,7 @@ Este método, usado em conjuncton com o [`readAsBinaryString`](/pt-BR/docs/DOM/F
 
 ##### `sendAsBinary()` polyfill
 
-Desde sendAsBinary() é um recurso experimental, aqui está uma polyfill para navegadores que não suportam o sendAsBinary() método, mas o apoio [typed arrays](/pt-BR/docs/JavaScript/Typed_arrays).
+Desde sendAsBinary() é um recurso experimental, aqui está uma polyfill para navegadores que não suportam o sendAsBinary() método, mas o apoio [typed arrays](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays).
 
 ```js
 /*\
@@ -634,7 +622,8 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 }
 ```
 
-> **Nota:** É possível construir este polyfill colocar dois tipos de dados como argumento para send() : um [`ArrayBuffer`](/pt-BR/docs/JavaScript/Typed_arrays/ArrayBuffer) (ui8Data.buffer - o código comentado) ou um ArrayBufferView ( ui8Data , que é uma [typed array of 8-bit unsigned integers](/pt-BR/docs/JavaScript/Typed_arrays/Uint8Array) – descomentada código). No entanto, no Google Chrome, quando você tenta enviar uma ArrayBuffer , a seguinte mensagem de aviso aparecerá: ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead. ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead.
+> [!NOTE]
+> É possível construir este polyfill colocar dois tipos de dados como argumento para send() : um [`ArrayBuffer`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) (ui8Data.buffer - o código comentado) ou um ArrayBufferView ( ui8Data , que é uma [typed array of 8-bit unsigned integers](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) – descomentada código). No entanto, no Google Chrome, quando você tenta enviar uma ArrayBuffer , a seguinte mensagem de aviso aparecerá: ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead. ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead.
 
 ## Notas
 
@@ -646,9 +635,9 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 
 `onreadystatechange` como uma propriedade do `XMLHttpRequest` instância é suportado em todos os navegadores.
 
-Desde então, foram implementadas uma série de manipuladores de eventos adicionais em vários navegadores ( onload , onerror , onprogress , etc.). Estes são suportados no Firefox. Em particular, veja `nsIXMLHttpRequestEventTarget` and [Using XMLHttpRequest](/pt-BR/DOM/XMLHttpRequest/Using_XMLHttpRequest).
+Desde então, foram implementadas uma série de manipuladores de eventos adicionais em vários navegadores ( onload , onerror , onprogress , etc.). Estes são suportados no Firefox. Em particular, veja `nsIXMLHttpRequestEventTarget` and [Using XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest).
 
-avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpRequest eventos via padrão [`addEventListener`](/pt-BR/DOM/element.addEventListener) APIs Além de definir on propriedades para uma função de manipulador.
+avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpRequest eventos via padrão [`addEventListener`](/pt-BR/docs/Web/API/EventTarget/addEventListener) APIs Além de definir on propriedades para uma função de manipulador.
 
 ## Especificações
 
@@ -662,18 +651,18 @@ avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpR
 
 - MDN artigos sobre XMLHttpRequest:
 
-  - [AJAX - Getting Started](/pt-BR/AJAX/Getting_Started)
-  - [Using XMLHttpRequest](/pt-BR/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+  - [AJAX - Getting Started](/pt-BR/docs/conflicting/Web/Guide/AJAX)
+  - [Using XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
   - [HTML in XMLHttpRequest](/pt-BR/HTML_in_XMLHttpRequest)
-  - [`FormData`](/pt-BR/DOM/XMLHttpRequest/FormData)
+  - [`FormData`](/pt-BR/docs/DOM/XMLHttpRequest/FormData)
 
 - XMLHttpRequest referencias da W3C e navegador fornecedores:
 
   - [W3C: XMLHttpRequest](https://www.w3.org/TR/XMLHttpRequest1/) (base features)
-  - [W3C: XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) (latest editor's draft with extensions to the base functionality, formerly XMLHttpRequest Level 2
+  - [W3C: XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) (latest editor's draft with extensions to the base functionality, formerly XMLHttpRequest Level 2
   - [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
-  - [Apple developers' reference](http://developer.apple.com/internet/webcontent/xmlhttpreq.html)
+  - [Apple developers' reference](https://developer.apple.com/internet/webcontent/xmlhttpreq.html)
 
-- ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
-- [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
-- [HTML5 Rocks - New Tricks in XMLHttpRequest2](http://www.html5rocks.com/en/tutorials/file/xhr2/)
+- ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
+- [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
+- [HTML5 Rocks - New Tricks in XMLHttpRequest2](https://www.html5rocks.com/en/tutorials/file/xhr2/)

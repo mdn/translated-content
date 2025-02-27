@@ -7,7 +7,8 @@ slug: Web/API/WebVR_API/Using_the_WebVR_API
 
 La API WebVR es una fantástica adición al kit de herramientas del desarrollador web, permitiendo que las escenas de WebGL sean presentadas en pantallas de realidad virtual como el Oculus Rift y HTC Vive. Pero, ¿cómo empezar a desarrollar aplicaciones VR para la Web? Este artículo le guiará a través de los fundamentos.
 
-> **Nota:** La versión más estable de la API de WebVR (1.1) se ha implementado recientemente en Firefox 55 (Windows en versión de lanzamiento y Mac OS X sólo en Nightly) y también está disponible en Chrome cuando se usa con hardware de Google Daydream. También hay una evolución posterior de la especificación 2.0, pero esto está en una etapa temprana ahora mismo. Puede encontrar información sobre el estado más reciente de las especificaciones en [WebVR Spec Version List](https://w3c.github.io/webvr/).
+> [!NOTE]
+> La versión más estable de la API de WebVR (1.1) se ha implementado recientemente en Firefox 55 (Windows en versión de lanzamiento y Mac OS X sólo en Nightly) y también está disponible en Chrome cuando se usa con hardware de Google Daydream. También hay una evolución posterior de la especificación 2.0, pero esto está en una etapa temprana ahora mismo. Puede encontrar información sobre el estado más reciente de las especificaciones en [WebVR Spec Version List](https://w3c.github.io/webvr/).
 
 ## Empezando
 
@@ -31,9 +32,11 @@ Para ilustrar cómo funciona la API de WebVR, estudiaremos nuestro ejemplo raw-w
 
 ![](capture1.png)
 
-> **Nota:** Puedes encontrar el [código fuente de nuestra demo](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example) en GitHub, y [verlo en vivo](https://mdn.github.io/webvr-tests/raw-webgl-example/)también.
+> [!NOTE]
+> Puedes encontrar el [código fuente de nuestra demo](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example) en GitHub, y [verlo en vivo](https://mdn.github.io/webvr-tests/raw-webgl-example/)también.
 
-> **Nota:** Si WebVR no funciona en su navegador, es posible que deba asegurarse de que se está ejecutando a través de su tarjeta gráfica. Por ejemplo, para las tarjetas NVIDIA, si el panel de control de NVIDIA se ha configurado correctamente, habrá una opción de menú contextual disponible - haga clic con el botón derecho del ratón en Firefox y seleccione _Ejecutar con procesador gráfico_ > _Procesador NVIDIA de alto rendimiento._
+> [!NOTE]
+> Si WebVR no funciona en su navegador, es posible que deba asegurarse de que se está ejecutando a través de su tarjeta gráfica. Por ejemplo, para las tarjetas NVIDIA, si el panel de control de NVIDIA se ha configurado correctamente, habrá una opción de menú contextual disponible - haga clic con el botón derecho del ratón en Firefox y seleccione _Ejecutar con procesador gráfico_ > _Procesador NVIDIA de alto rendimiento._
 
 Nuestra demo presenta el santo grial de las demostraciones de WebGL - un cubo 3D giratorio. Hemos implementado esto usando raw [WebGL API](/es/docs/Web/API/WebGL_API) código. No enseñaremos ningún JavaScript básico o WebGL, solo las partes de WebVR.
 
@@ -44,7 +47,8 @@ Nuestra demo también cuenta con:
 
 Cuando miras a través del código fuente de[nuestro archivo JavaScript principal de demostraciones](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) , puede encontrar fácilmente las partes específicas de WebVR buscando la cadena "WebVR" en comentarios anteriores.
 
-> **Nota:** Para obtener más información sobre JavaScript básico y WebGL, consulte nuestro [material de aprendizaje JavaScrip](/es/docs/Learn/JavaScript) , y nuestro [WebGL Tutorial](/es/docs/Web/API/WebGL_API/Tutorial).
+> [!NOTE]
+> Para obtener más información sobre JavaScript básico y WebGL, consulte nuestro [material de aprendizaje JavaScrip](/es/docs/Learn/JavaScript) , y nuestro [WebGL Tutorial](/es/docs/Web/API/WebGL_API/Tutorial).
 
 ## ¿Como funciona?
 
@@ -150,7 +154,8 @@ Inside the promise `then()` block, we check whether the array length is more tha
           console.log('Display found');
 ```
 
-> **Nota:** Es poco probable que tenga varias pantallas VR conectadas a su computadora, y esto es sólo una demostración simple, por lo que esto lo hará por ahora.
+> [!NOTE]
+> Es poco probable que tenga varias pantallas VR conectadas a su computadora, y esto es sólo una demostración simple, por lo que esto lo hará por ahora.
 
 ### Starting and stopping the VR presentation
 
@@ -451,7 +456,7 @@ You should note that we've used a conditional expression to detect whether the l
 
 ## WebVR events
 
-The WebVR spec features a number of events that are fired, allowing our app code to react to changes in the state of the VR display (see [Window events](/es/docs/Web/API/WebVR_API#Window_events)). For example:
+The WebVR spec features a number of events that are fired, allowing our app code to react to changes in the state of the VR display (see [Window events](/es/docs/Web/API/WebVR_API#window_events)). For example:
 
 - [`vrdisplaypresentchange`](/es/docs/Web/Reference/Events/vrdisplaypresentchange) — Fires when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.
 - [`vrdisplayconnect`](/es/docs/Web/Reference/Events/vrdisplayconnect) — Fires when a compatible VR display has been connected to the computer.

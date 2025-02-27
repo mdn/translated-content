@@ -12,7 +12,8 @@ slug: Web/API/AudioNode
 
 Разные узлы могут быть связаны в _граф обработки_. Граф помещается в {{domxref("AudioContext")}}. Один `AudioNode` может принадлежать только одному {{domxref("AudioContext")}}. В общем, узлы наследуют свойства и методы AudioNode, но они могут также и определять собственный функционал.Смотрите описания конкретных узлов на страницах этих узлов перечисленных на главной странице [Web Audio API](/ru/docs/Web/API/Web_Audio_API).
 
-> **Примечание:** An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
+> [!NOTE]
+> An `AudioNode` can be target of events, therefore it implements the {{domxref("EventTarget")}} interface.
 
 ## Свойства
 
@@ -78,6 +79,6 @@ oscillator.channelCount;
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

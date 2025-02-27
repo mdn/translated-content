@@ -3,7 +3,7 @@ title: runtime.onInstalled
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 拡張機能が最初にインストールされた時や、新しいバージョンへ更新された時、ブラウザーが新しいバージョンへ更新された時に発火します。
 
@@ -68,7 +68,8 @@ browser.runtime.onInstalled.addListener(handleInstalled);
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#event-onInstalled) API に基づいています。また、このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。
+> [!NOTE]
+> この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onInstalled) API に基づいています。また、このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -1,6 +1,8 @@
 ---
 title: font-style
 slug: Web/CSS/font-style
+l10n:
+  sourceCommit: ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
 ---
 
 {{CSSRef}}
@@ -23,6 +25,7 @@ font-style: oblique 10deg;
 font-style: inherit;
 font-style: initial;
 font-style: revert;
+font-style: revert-layer;
 font-style: unset;
 ```
 
@@ -48,15 +51,38 @@ font-style: unset;
 
 TrueType または OpenType の可変フォントでは、 `"slnt"` 変数が oblique の傾く角度を様々に実装するために使用され、 `"ital"` 変数の値が 1 ならば、 italic の値を使用します。 {{cssxref("font-variation-settings")}} を参照してください。
 
-> **メモ:** 次の例を動作させるには、 CSS Fonts Level 4 の `font-style: oblique` が `<angle>` を受け入れる構文に対応したブラウザーが必要です。デモは `font-style: oblique 23deg;` を読み込みます。この値を変更すると、テキストの傾きが変わるのを確認することができます。
+下記のコードブロックの "Play" を押すと、この例を MDN Playground で編集できます。角度の数値を変更して、テキストの傾きの変化を確認してください。
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/oblique.html", '100%', 860)}}
+```html live-sample___oblique-example
+<p class="sample">
+  ...it would not be wonderful to meet a Megalosaurus, forty feet long or so,
+  waddling like an elephantine lizard up Holborn Hill.
+</p>
+```
+
+```css live-sample___oblique-example
+@font-face {
+  src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  font-family: "AmstelvarAlpha";
+  font-style: normal;
+}
+
+.sample {
+  font:
+    2rem "AmstelvarAlpha",
+    sans-serif;
+  /*font-variation-settings: "slnt" 12;*/
+  font-style: oblique 23deg;
+}
+```
+
+{{EmbedLiveSample("oblique-example", "", "200px")}}
 
 ## アクセシビリティの考慮
 
 テキストの長い区間に渡って `font-style` の値を `italic` に設定すると、失読症のような認知問題を抱える人にとって読むのが難しくなる可能性があります。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## 公式定義
@@ -69,7 +95,7 @@ TrueType または OpenType の可変フォントでは、 `"slnt"` 変数が ob
 
 ## 例
 
-<h3 id="Font_styles">フォントスタイル</h3>
+### フォントスタイル
 
 ```html hidden
 <p class="normal">This paragraph is normal.</p>
@@ -103,6 +129,6 @@ TrueType または OpenType の可変フォントでは、 `"slnt"` 変数が ob
 
 ## 関連情報
 
-- {{cssxref("font-style")}}
+- {{cssxref("font-family")}}
 - {{cssxref("font-weight")}}
 - [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)

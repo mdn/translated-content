@@ -2,12 +2,13 @@
 title: RegExp.input ($_)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/input
 l10n:
-  sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
+  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}} {{Deprecated_Header}}
 
-> **メモ:** グローバルに最後の一致状態を公開する `RegExp` の静的プロパティは、すべて非推奨です。詳しくは[非推奨の RegExp 機能](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)を参照してください。
+> [!NOTE]
+> グローバルに最後の一致状態を公開する `RegExp` の静的プロパティは、すべて非推奨です。詳しくは[非推奨の RegExp 機能](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)を参照してください。
 
 **`RegExp.input`** は静的アクセサープロパティで、正規表現の一致した文字列を返します。`RegExp.$_` はこのプロパティのエイリアスです。
 
@@ -41,8 +42,8 @@ RegExp.$_; // "hi world!"
 
 ## 関連情報
 
-- {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
-- {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
-- {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
+- {{jsxref("RegExp/lastMatch", "RegExp.lastMatch ($&amp;)")}}
+- {{jsxref("RegExp/lastParen", "RegExp.lastParen ($+)")}}
+- {{jsxref("RegExp/leftContext", "RegExp.leftContext ($`)")}}
+- {{jsxref("RegExp/rightContext", "RegExp.rightContext ($')")}}
 - {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}}

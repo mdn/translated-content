@@ -3,17 +3,19 @@ title: span
 slug: Web/HTML/Element/span
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
 - **span** - _abarcar_. Es un contenedor en línea. Sirve para aplicar estilo al texto o agrupar elementos en línea.
 
   - : **Sus etiquetas son**: `<span>` y `</span>` (ambas obligatorias).
 
-    **Está definido como**: Elemento [especial](/es/HTML/Elemento/Tipos_de_elementos#especial), y por lo tanto [en línea](/es/HTML/Elemento/Tipos_de_elementos#enlinea).
+    **Está definido como**: Elemento [especial](/es/docs/HTML/Elemento/Tipos_de_elementos#especial), y por lo tanto [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#enlinea).
 
     **Crea una caja**: En línea.
 
-    **Puede contener**: Texto, y/o Elementos [en línea](/es/HTML/Elemento/Tipos_de_elementos#enlinea).
+    **Puede contener**: Texto, y/o Elementos [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#enlinea).
 
 #### Atributos
 
@@ -254,7 +256,8 @@ Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html
 
 ---
 
-> **Nota:** Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!NOTE]
+> Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
 >
 > ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
 

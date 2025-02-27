@@ -59,7 +59,7 @@ float: inherit;
 
 ## Examples
 
-[Посмотреть живые примеры](/samples/cssref/float.html)
+[Посмотреть живые примеры](https://mdn.dev/archives/media/samples/cssref/float.html)
 
 ```html
 <style type="text/css">
@@ -91,8 +91,6 @@ As mentioned above, when an element is floated it is taken out of the normal flo
 
 In the image below, there are three red squares. Two are floated left and one is floated right. Note that the second "left" red square is placed to the right of the first. Additional squares would continue to stack to the right until they filled the containing box, after which they would wrap to the next line.
 
-![](/@api/deki/files/4927/=floats.png)
-
 ### Clearing floats
 
 In the example above, the floated elements are shorter vertically than the block of text they're floated within. However, if the text was not long enough to wrap below the bottom of all the floats, we might see unanticipated effects. If the paragraph above, for instance, only read "Lorem ipsum dolor sit amet," and was followed by another heading of the same style as the "Floats Example" heading, the second heading would appear between the red boxes. Most likely, we want the next heading to be aligned all the way to the left. To accomplish that, we'd need to clear the floats.
@@ -105,7 +103,7 @@ h2.secondHeading {
 }
 ```
 
-However, this method only works if there are no other elements within the same [block formatting context](/ru/docs/Web/CSS/block_formatting_context) that we _do_ want the heading to continue to appear next to horizontally. If our `H2` has siblings which are a sidebars floated to the left and right, using `clear` will force it to appear below both sidebars, which is probably not what we want.
+However, this method only works if there are no other elements within the same [block formatting context](/ru/docs/Web/CSS/CSS_display/Block_formatting_context) that we _do_ want the heading to continue to appear next to horizontally. If our `H2` has siblings which are a sidebars floated to the left and right, using `clear` will force it to appear below both sidebars, which is probably not what we want.
 
 If clearing floats on an element below them is not an option, another approach is to limit the block formatting context of the floats' container. Referring to the example above again, it appears that all three red boxes are within a `P` element. We can set the {{Cssxref("overflow")}} property on that P to `hidden` or `auto` to cause it to expand to contain them, but not allow them to drop out the bottom of it:
 
@@ -116,16 +114,17 @@ p.withRedBoxes {
 }
 ```
 
-> **Примечание:** Setting `overflow` to `scroll` will also contain any floated child elements, but will show scrollbars no matter the height of the content. Here we're setting `height` to `auto` even though that's the default to indicate that the container should grow to accommodate its content.
+> [!NOTE]
+> Setting `overflow` to `scroll` will also contain any floated child elements, but will show scrollbars no matter the height of the content. Here we're setting `height` to `auto` even though that's the default to indicate that the container should grow to accommodate its content.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [Block formatting context](/ru/docs/Web/CSS/block_formatting_context)
+- [Block formatting context](/ru/docs/Web/CSS/CSS_display/Block_formatting_context)

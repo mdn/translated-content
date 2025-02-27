@@ -1,13 +1,15 @@
 ---
 title: Utilisation du DOM Level 1 Core du W3C
-slug: Web/API/Document_object_model/Using_the_Document_Object_Model
+slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model
 ---
+
+{{DefaultAPISidebar("DOM")}}
 
 Le DOM Level 1 Core du W3C est un modèle objet puissant permettant de modifier l'arbre de contenu de documents. Il est géré dans Mozilla (sur lequel Firefox et Netscape sont basés) et (pour la plus grande partie) dans Internet Explorer 5 pour Windows. Il s'agit d'une base essentielle du scripting sur le Web dans l'avenir.
 
 ## Définition d'un arbre de contenu
 
-Beaucoup d'auteurs HTML peuvent penser qu'HTML est quelque chose de plat — un gros amas de texte avec quelques balises au milieu. Cependant, c'est aussi beaucoup plus que ça. Tout document HTML (ou, par ailleurs, tout document SGML ou XML) forme une structure arborescente. Par exemple, le document et la structure arborescente qui suivent sont similaires (bien que non identiques — consultez les notes sur [les espaces dans le DOM](/fr/docs/Gestion_des_espaces_dans_le_DOM))&nbsp;:
+Beaucoup d'auteurs HTML peuvent penser qu'HTML est quelque chose de plat — un gros amas de texte avec quelques balises au milieu. Cependant, c'est aussi beaucoup plus que ça. Tout document HTML (ou, par ailleurs, tout document SGML ou XML) forme une structure arborescente. Par exemple, le document et la structure arborescente qui suivent sont similaires (bien que non identiques — consultez les notes sur [les espaces dans le DOM](/fr/docs/Web/API/Document_Object_Model/Whitespace))&nbsp;:
 
 ```html
 <html>
@@ -74,10 +76,10 @@ function change() {
 
 {{ EmbedLiveSample('Un_exemple_simple', 800, 300) }}
 
-Vous pouvez voir ce script dans [un exemple complet](http://www.mozilla.org/docs/dom/technote/intro/example.html).
+Vous pouvez voir ce script dans [un exemple complet](https://www.mozilla.org/docs/dom/technote/intro/example.html).
 
 ### Pour en apprendre plus
 
-Maintenant que vous êtes familiarisé avec les concepts basiques du DOM, il existe un document expliquant [les méthodes fondamentales de DOM Level 1](/fr/docs/Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript). C'est la suite de ce document.
+Maintenant que vous êtes familiarisé avec les concepts basiques du DOM, il existe un document expliquant [les méthodes fondamentales de DOM Level 1](/fr/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces). C'est la suite de ce document.
 
 Consultez également la [spécification DOM Level 1 Core](http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html) du W3C (traduction en français non normative). C'est une spécification relativement claire, même si elle est un peu formelle. Ce qui est surtout intéressant pour les auteurs, c'est la description des différents objets DOM et de toutes leurs propriétés et méthodes. Voyez encore notre [documentation complète sur le DOM](/fr/docs/Web/API/Document_Object_Model).

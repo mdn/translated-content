@@ -1,11 +1,13 @@
 ---
 title: font-variant-caps
 slug: Web/CSS/font-variant-caps
+l10n:
+  sourceCommit: 3928d2b1004e2435e063ef4b037e06e1906d62f3
 ---
 
 {{CSSRef}}
 
-**`font-variant-caps`** は [CSS](/ja/docs/Web/CSS) のプロパティで、大文字の代替字形の使用を制御します。
+**`font-variant-caps`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スモールキャップやタイトルに使われる代替グリフの使用を制御します。
 
 {{EmbedInteractiveExample("pages/css/font-variant-caps.html")}}
 
@@ -37,6 +39,7 @@ font-variant-caps: titling-caps;
 font-variant-caps: inherit;
 font-variant-caps: initial;
 font-variant-caps: revert;
+font-variant-caps: revert-layer;
 font-variant-caps: unset;
 ```
 
@@ -47,7 +50,7 @@ font-variant-caps: unset;
 - `normal`
   - : 代替字形の使用を無効にします。
 - `small-caps`
-  - : 小さな大文字の表示を有効にします (OpenType 特性: `smcp`)。スモールキャピタルの字形はふつう、大文字の形をしていますが、小文字の大きさに縮小されています。
+  - : 小さな大文字の表示を有効にします (OpenType 特性: `smcp`)。スモールキャピタルの字形はふつう、大文字の形をしていますが、小文字と同じ大きさを使用して表示されます。
 - `all-small-caps`
   - : 大文字と小文字の両方でスモールキャピタルの表示を有効にします (OpenType 機能: `c2sc`, `smcp`)。
 - `petite-caps`
@@ -59,11 +62,11 @@ font-variant-caps: unset;
 - `titling-caps`
   - : タイトルキャピタルの表示を有効化します (OpenType 特性: `titl`)。大文字の字形は、ふつう小文字と一緒に使用するためにデザインされています。すべて大文字のタイトル文字列で使用された場合、太くなりすぎることがあります。タイトルキャピタルはこの場合に専用のデザインが行われたものです。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 長い区間のテキストに対して `font-variant` の値を `all-small-caps` や `all-petite-caps` を設定すると、失読症のような認知障害を抱えた人にとって読むのが難しくなることがあります。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## 公式定義
@@ -76,7 +79,7 @@ font-variant-caps: unset;
 
 ## 例
 
-<h3 id="Setting_the_small-caps_font_variant">スモールキャップのフォント変化形の設定</h3>
+### スモールキャップのフォント変化形の設定
 
 #### HTML
 
@@ -100,7 +103,7 @@ font-variant-caps: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_the_small-caps_font_variant') }}
+{{ EmbedLiveSample('スモールキャップのフォント変化形の設定') }}
 
 ## 仕様書
 
@@ -112,8 +115,10 @@ font-variant-caps: unset;
 
 ## 関連情報
 
-- {{cssxref("font-variant-alternates")}}
-- {{cssxref("font-variant")}}
-- {{cssxref("font-variant-east-asian")}}
-- {{cssxref("font-variant-ligatures")}}
-- {{cssxref("font-variant-numeric")}}
+- [`font-variant`](/ja/docs/Web/CSS/font-variant)
+- [`font-variant-alternates`](/ja/docs/Web/CSS/font-variant-alternates)
+- [`font-variant-east-asian`](/ja/docs/Web/CSS/font-variant-east-asian)
+- [`font-variant-emoji`](/ja/docs/Web/CSS/font-variant-emoji)
+- [`font-variant-ligatures`](/ja/docs/Web/CSS/font-variant-ligatures)
+- [`font-variant-numeric`](/ja/docs/Web/CSS/font-variant-numeric)
+- [`font-variant-position`](/ja/docs/Web/CSS/font-variant-position)

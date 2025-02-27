@@ -1,5 +1,5 @@
 ---
-title: ":nth-of-type"
+title: :nth-of-type
 slug: Web/CSS/:nth-of-type
 ---
 
@@ -68,7 +68,8 @@ p.fancy:nth-of-type(2n + 1) {
 
 {{EmbedLiveSample('基本示例', 250, 200)}}
 
-> **备注：** 使用此选择器无法选择 nth-of-class。选择器仅在创建匹配列表时查找类型。但是你可以基于 `:nth-of-type` 的位置**和**类名为元素应用 CSS，就像上面的示例中所示。
+> [!NOTE]
+> 使用此选择器无法选择 nth-of-class。选择器仅在创建匹配列表时查找类型。但是你可以基于 `:nth-of-type` 的位置**和**类名为元素应用 CSS，就像上面的示例中所示。
 
 ## 规范
 

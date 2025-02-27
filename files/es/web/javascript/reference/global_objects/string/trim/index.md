@@ -3,7 +3,7 @@ title: String.prototype.trim()
 slug: Web/JavaScript/Reference/Global_Objects/String/trim
 ---
 
-{{JSRef("Global_Objects", "String")}}
+{{JSRef}}
 
 ## Resumen
 

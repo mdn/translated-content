@@ -9,7 +9,8 @@ O cabeçalho de requisição **`From`** contém um endereço de email da Interne
 
 Se você está rodando um agente de usuário robótico (e.g. um _crawler_), o cabeçalho `From` deve ser enviado, para que você possa contatar se problemas ocorrerem em servidores, como por exemplo, o robô estar enviando requisições excessivas, não desejadas ou inválidas.
 
-> **Aviso:** Você não deve usar o cabeçalho `From` para controle de acesso ou autenticação.
+> [!WARNING]
+> Você não deve usar o cabeçalho `From` para controle de acesso ou autenticação.
 
 <table class="properties">
   <tbody>
@@ -49,7 +50,7 @@ From: webmaster@example.org
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.From")}}
+{{Compat}}
 
 ## Veja também
 

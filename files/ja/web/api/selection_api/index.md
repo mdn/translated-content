@@ -7,7 +7,8 @@ l10n:
 
 {{DefaultAPISidebar("Selection API")}}
 
-> **メモ:** この API は [Web Workers](/ja/docs/Web/API/Web_Workers_API) では _使用できません_。({{domxref("WorkerNavigator")}} 経由では公開されていません)
+> [!NOTE]
+> この API は [Web Workers](/ja/docs/Web/API/Web_Workers_API) では _使用できません_。({{domxref("WorkerNavigator")}} 経由では公開されていません)
 
 **Selection API** は、開発者がドキュメントのユーザーに選択されている部分にアクセスしたり操作したりできるようにします。
 

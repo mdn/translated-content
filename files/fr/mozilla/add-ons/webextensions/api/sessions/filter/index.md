@@ -3,7 +3,7 @@ title: sessions.Filter
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/Filter
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 L'objet `Filter` permet de restreindre le nombre d'objets {{WebExtAPIRef("sessions.Session", "Session")}} retournés par un appel à {{WebExtAPIRef("sessions.getRecentlyClosed()")}}.
 
@@ -22,9 +22,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les proriétés suivante
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/extensions/sessions).
+> Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

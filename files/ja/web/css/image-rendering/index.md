@@ -1,11 +1,13 @@
 ---
 title: image-rendering
 slug: Web/CSS/image-rendering
+l10n:
+  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
 {{CSSRef}}
 
-[CSS](/ja/docs/Web/CSS) の **`image-rendering`** プロパティは、画像を拡大縮小するアルゴリズムを設定します。このプロパティは要素自身に適用され、他のプロパティで設定されるあらゆる画像、子孫要素に適用されます。
+**`image-rendering`** は [CSS](/ja/docs/Web/CSS) のプロパティで、画像を拡大縮小するアルゴリズムを設定します。このプロパティは要素自身に適用され、他のプロパティで設定されるあらゆる画像、子孫要素に適用されます。
 
 {{EmbedInteractiveExample("pages/css/image-rendering.html")}}
 
@@ -23,6 +25,7 @@ image-rendering: pixelated;
 image-rendering: inherit;
 image-rendering: initial;
 image-rendering: revert;
+image-rendering: revert-layer;
 image-rendering: unset;
 ```
 
@@ -30,14 +33,14 @@ image-rendering: unset;
 
 - `auto`
   - : 拡大縮小のアルゴリズムはユーザーエージェントに依存します。バージョン 1.9 (Firefox 3.0) から、Gecko は*バイリニア* (bilinear) 再サンプリングを使用します (high-quality)。
-- `smooth` {{Experimental_Inline}}
+- `smooth`
   - : 画像は、画像の外見を最適化するアルゴリズムで拡大縮小されます。具体的には、バイリニア補完などの色の「円滑化」が許容されるアルゴリズムで拡大縮小されます。これは、写真のような画像を想定しています。
-- `high-quality` {{Experimental_Inline}}
+- `high-quality`
   - : `smooth` と同等ですが、より高品質な設定です。システムのリソースが制約されている場合、どの画像の品質をどの程度低下させるかを検討するとき。`high-quality` の画像は他の値よりも優先されます。
 - `crisp-edges`
-  - : 画像は、画像内のコントラストとエッジを保つアルゴリズムにより拡大縮小されます、画像の処理過程で色の円滑化やぼかしを導入は行いません。最近傍 (nearest neighbor) 法や、 2×SaI や [hqx-family](https://en.wikipedia.org/wiki/Hqx) のような[その他のスムーズ化が行われない拡大縮小アルゴリズム](https://en.wikipedia.org/wiki/Pixel-art_scaling_algorithms)などが適しています。この値はブラウザーゲームようなピクセルアート画像を想定しています。
+  - : 画像は、「最近傍法」 ("nearest neighbor") などのアルゴリズムで変倍され、画像のコントラストやエッジが維持されます。一般的に、ピクセルアートや行描画などの画像を意図通りに処理することを目的としており、不鮮明になったり色が滑らかになったりすることはありません。
 - `pixelated`
-  - : 画像を拡大する時は、最近傍 (nearest neighbor) 法が使用され、画像は画像が大きなピクセルで構成されたように表示されます。縮小する時は `auto` と同じになります。
+  - : 画像は「最近傍法」 ("nearest neighbor") などのアルゴリズムで元の画像サイズの最も近い整数倍に変倍され、その後、滑らかな補間を使用して最終的な希望のサイズに画像が調整されます。これは、拡大解像度が元の整数倍でない場合に、変倍による画質の劣化を発生させることなく、「ピクセル化」された見た目を維持することを意図しています。
 
 > **メモ:** `optimizeQuality` および `optimizeSpeed` の値は、初期の草稿で (SVG の仕様 {{SVGAttr("image-rendering")}} に似たものとして) `smooth` および `pixelated` の同義語として定義されていました。
 
@@ -51,15 +54,24 @@ image-rendering: unset;
 
 ## 例
 
-<h3 id="Setting_image_scaling_algorithms">画像の拡大縮小アルゴリズムの設定</h3>
+### 画像の拡大縮小アルゴリズムの設定
 
-実際の使用では、 `pixelated` と `crisp-edges` のルールを組み合わせることで、お互いにある程度のフォールバックを提供することができます。 (実際のルールにフォールバックを追加するだけです。) [Canvas API](/ja/docs/Web/API/Canvas_API) は手動の画像データ操作または [`imageSmoothingEnabled`](/ja/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled) によって [`pixelated` の代替ソリューション](http://phrogz.net/tmp/canvas_image_zoom.html) を提供することができます。
+この例では、画像が 3 回繰り返され、それぞれに異なる `image-rendering` 値が適用されています。
 
 ```html hidden
 <div>
-  <img class="auto" alt="auto" src="blumen.jpg" />
-  <img class="pixelated" alt="pixelated" src="blumen.jpg" />
-  <img class="crisp-edges" alt="crisp-edges" src="blumen.jpg" />
+  <img
+    class="auto"
+    alt="A small photo of some white and yellow flower against a leafy green background. The image is about 33% smaller than the size it is being displayed at. This upscaling causes the image to appear blurry, with notable soft edges between objects."
+    src="blumen.jpg" />
+  <img
+    class="pixelated"
+    alt="The same photo as the previous image, which is also being upscaled the same amount. Browsers that support the pixelated value for the image-rendering property display the image as very pixelated. Individual pixels are clearly visible and edges appear much sharper."
+    src="blumen.jpg" />
+  <img
+    class="crisp-edges"
+    alt="The same photo as the previous images, which is also being upscaled the same amount. Browsers that support the crisp-edges value for the image-rendering property display the image as very pixelated. In these examples, there is virtually no perceivable difference between the pixelated and crisp-edges versions."
+    src="blumen.jpg" />
 </div>
 ```
 
@@ -77,19 +89,17 @@ img {
 }
 
 .pixelated {
-  -ms-interpolation-mode: nearest-neighbor;
   image-rendering: pixelated;
 }
 
 .crisp-edges {
-  image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Setting_image_scaling_algorithms')}}
+{{EmbedLiveSample('Setting_image_scaling_algorithms', 260, 260)}}
 
 ## 仕様書
 
@@ -99,10 +109,11 @@ img {
 
 {{Compat}}
 
-> **メモ:** 仕様書の例にあるようなピクセルアートの拡大縮小には `crisp-edges` を使うことが想定されていますが、実際にはどのブラウザーも (2020 年 1 月時点で) 対応していません。[Firefox](https://dxr.mozilla.org/mozilla-central/rev/5fd4cfacc90ddd975c82ba27fdc56f4187b3f180/gfx/wr/webrender/src/resource_cache.rs#1727) では、 `pixelated` は最近傍法として解釈されますが、 `auto` と `crisp-edges` はトリリニア法または線形で補間されます。
->
-> Chromium と Safari (WebKit) での動作については、 [`GetInterpolationQuality`](https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/style/computed_style.cc?type=cs&q=GetInterpolationQuality&g=0&l=1160) 関数と [`CSSPrimitiveValue::operator ImageRendering()`](https://github.com/WebKit/webkit/blob/9b169b6c85394d94f172e5d75ca2f6c74830e99c/Source/WebCore/css/CSSPrimitiveValueMappings.h#L4324) をそれぞれ参照してください。
-
 ## 関連情報
 
-- その他の画像に関する CSS プロパティ: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}
+- {{cssxref("object-fit")}}
+- {{cssxref("object-position")}}
+- {{cssxref("image-orientation")}}
+- {{cssxref("image-resolution")}}
+- [CSS 画像](/ja/docs/Web/CSS/CSS_images)モジュール
+- SVG の {{SVGAttr("image-rendering")}} 属性

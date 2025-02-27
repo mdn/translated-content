@@ -1,5 +1,5 @@
 ---
-title: <hgroup>
+title: "<hgroup>: 見出しグループ要素"
 slug: Web/HTML/Element/hgroup
 l10n:
   sourceCommit: ca65963b93e69591b9362bb2bfde56f93128e2cb
@@ -45,10 +45,6 @@ l10n:
 
 {{EmbedLiveSample('Examples')}}
 
-## アクセシビリティの考慮
-
-現在のところ、 `<hgroup>` 要素に強いアクセシビリティの意味はありません。要素内のコンテンツ（見出しと、任意の段落）は、ブラウザーのアクセシビリティ API によって公開されます。
-
 ## 技術的概要
 
 <table class="properties">
@@ -75,7 +71,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
@@ -88,8 +84,10 @@ l10n:
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"
+            >group</a
+          ></code
         >
       </td>
     </tr>

@@ -47,7 +47,8 @@ return; a + b;
 
 La consola le advertirá "código inalcanzable después de la declaración de retorno".
 
-> **Nota:** A partir de Gecko 40 (Firefox 40 / Thunderbird 40 / SeaMonkey 2.37), una advertencia es mostrada en la consola si se encuentra código inalcanzable despues de una instrucción return.
+> [!NOTE]
+> A partir de Gecko 40 (Firefox 40 / Thunderbird 40 / SeaMonkey 2.37), una advertencia es mostrada en la consola si se encuentra código inalcanzable despues de una instrucción return.
 
 ## Ejemplos
 
@@ -63,4 +64,4 @@ function cuadrado(x) {
 
 ## Vea También
 
-- [Funciones](/es/docs/Web/JavaScript/Referencia/Funciones)
+- [Funciones](/es/docs/Web/JavaScript/Reference/Functions)

@@ -31,7 +31,7 @@ Muitos dos programas que temos visto até agora no curso está envolvido em algu
 
 ## Strings — O básico
 
-Em um primeiro relance, strings são tratadas de forma parecida como números, mas quando vamos mais a fundo, você começa a ver algumas diferenças importantes. Vamos começar a entrar em linhas básicas no console para nos familiarizar. Nós vamos fornecer abaixo (você pode também [abrir isto no console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) em uma guia ou janela separada, ou usar o [console do navegador](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) se você preferir).
+Em um primeiro relance, strings são tratadas de forma parecida como números, mas quando vamos mais a fundo, você começa a ver algumas diferenças importantes. Vamos começar a entrar em linhas básicas no console para nos familiarizar. Nós fornecemos um abaixo (ou use o [console de desenvolvedor do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) se preferir).
 
 ```html hidden
 <!doctype html>
@@ -211,7 +211,7 @@ var bigmouth = "I've got no right to take my place...";
 bigmouth;
 ```
 
-Isto funciona bem. Você pode escapar outros caracteres do mesmo jeito, ex.: `\"`, e há alguns códigos especiais também. Veja [Notação de escape](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation) para mais detalhes.
+Isto funciona bem. Você pode escapar outros caracteres do mesmo jeito, ex.: `\"`, e há alguns códigos especiais também. Veja [Notação de escape](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation) para mais detalhes.
 
 ## Concatenando strings
 
@@ -240,7 +240,8 @@ Isto funciona bem. Você pode escapar outros caracteres do mesmo jeito, ex.: `\"
    response;
    ```
 
-> **Nota:** Quando você coloca uma string atual no seu código dentro de aspas simples ou duplas, é chamada uma **string literal**.
+> [!NOTE]
+> Quando você coloca uma string atual no seu código dentro de aspas simples ou duplas, é chamada uma **string literal**.
 
 ### Concatenação em contexto
 

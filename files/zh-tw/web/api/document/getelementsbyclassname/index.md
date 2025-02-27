@@ -87,4 +87,4 @@ var testDivs = Array.prototype.filter.call(
 
 ## 規範
 
-- [W3C: getElementsByClassName](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-getelementsbyclassname)
+- [W3C: getElementsByClassName](https://dom.spec.whatwg.org/#dom-document-getelementsbyclassname)

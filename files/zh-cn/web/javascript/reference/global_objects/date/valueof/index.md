@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
 
 **`valueOf()`** 方法返回一个 {{jsxref("Date")}} 对象的原始值。
 
-{{EmbedInteractiveExample("pages/js/date-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Date.valueOf()")}}
+
+```js interactive-example
+const date1 = new Date(Date.UTC(96, 1, 2, 3, 4, 5));
+
+console.log(date1.valueOf());
+// Expected output: 823230245000
+
+const date2 = new Date("02 Feb 1996 03:04:05 GMT");
+
+console.log(date2.valueOf());
+// Expected output: 823230245000
+```
 
 ## 语法
 
@@ -44,7 +56,7 @@ var myVar = x.valueOf(); // assigns -424713600000 to myVar
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Object.prototype.valueOf()")}}
 - {{jsxref("Date.prototype.getTime()")}}

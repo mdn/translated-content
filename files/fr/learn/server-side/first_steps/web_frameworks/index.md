@@ -133,7 +133,8 @@ Les frameworks web fournissent souvent un mécanisme facilitant la génération 
 
 Par exemple, le système de templates Django vous permet de spécifier des variables en utilisant une syntaxe "double-handlebars" (par exemple, `\{{ variable_name }}`), qui sera remplacée par les valeurs transmises à partir de la fonction d'affichage lors du rendu d'une page. Le système de templates prend également en charge les expressions (avec la syntaxe : `{% expression %}`), qui permettent aux templates d'effectuer des opérations simples, telles que l'itération des valeurs de liste transmises au modèle.
 
-> **Note :** Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), etc.
+> [!NOTE]
+> Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), etc.
 
 L'extrait de code ci-dessous montre comment cela fonctionne. En reprenant l'exemple "youngest_teams" de la section précédente, le modèle HTML se voit transmettre par la vue une variable de liste nommée youngest_teams. Dans le squelette HTML, nous avons une expression qui vérifie d'abord si la variable youngest_teams existe, puis itère dans une boucle for. À chaque itération, le modèle affiche la valeur team_name de l'équipe dans un élément de liste.
 
@@ -179,7 +180,8 @@ Il existe de nombreux autres facteurs possibles, y compris les licences, que le 
 
 Si vous débutez en programmation, vous choisirez probablement un framework facile à prendre en main. Une documentation riche et une communauté active sont également des critères pertinents pour votre choix. Pour la suite de ce cours, nous avons choisi Django (Python) et Express (Node/JavaScript) principalement parce que ces frameworks sont faciles à apprendre et bénéficient d'un bon soutien.
 
-> **Note :** Let's go to the main websites for [Django](https://www.djangoproject.com/) (Python) and [Express](http://expressjs.com/) (Node/JavaScript) and check out their documentation and community.
+> [!NOTE]
+> Let's go to the main websites for [Django](https://www.djangoproject.com/) (Python) and [Express](http://expressjs.com/) (Node/JavaScript) and check out their documentation and community.
 >
 > 1. Navigate to the main sites (linked above)
 >
@@ -199,7 +201,8 @@ Let's now move on, and discuss a few specific server-side web frameworks.
 
 The server-side frameworks below represent _a few_ of the most popular available at the time of writing. All of them have everything you need to be productive — they are open source, are under active development, have enthusiastic communities creating documentation and helping users on discussion boards, and are used in large numbers of high-profile websites. There are many other great server-side frameworks that you can discover using a basic internet search.
 
-> **Note :** Descriptions come (partially) from the framework websites!
+> [!NOTE]
+> Descriptions come (partially) from the framework websites!
 
 ### Django (Python)
 

@@ -1,5 +1,5 @@
 ---
-title: ":any-link"
+title: :any-link
 slug: Web/CSS/:any-link
 ---
 
@@ -13,6 +13,8 @@ slug: Web/CSS/:any-link
   color: green;
 }
 ```
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-any-link.html", "tabbed-shorter")}}
 
 ## 構文
 

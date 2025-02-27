@@ -7,9 +7,23 @@ l10n:
 
 {{JSRef}}
 
-**`at()`** メソッドは整数値を受け取り、その位置にある項目を返します。正の整数値と負の整数値が使用できます。負の整数は、配列の最後の項目から前へ数えます。
+**`at()`** は {{jsxref("Array")}} インスタンスのメソッドで、整数値を受け取り、その位置にある項目を返します。正の整数値と負の整数値が使用できます。負の整数は、配列の最後の項目から前へ数えます。
 
-{{EmbedInteractiveExample("pages/js/array-at.html")}}
+{{InteractiveExample("JavaScript Demo: Array.at()")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+let index = 2;
+
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of 2 returns 8"
+
+index = -2;
+
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of -2 returns 130"
+```
 
 ## 構文
 
@@ -24,13 +38,15 @@ at(index)
 
 ### 返値
 
-配列の中で指定された位置に一致する要素です。`index < -array.length` または `index >= array.length` の場合は、対応するプロパティにアクセスしようとせず、常に {{jsxref('undefined')}} を返します。
+配列の中で指定された位置に一致する要素です。`index < -array.length` または `index >= array.length` の場合は、対応するプロパティにアクセスしようとせず、常に {{jsxref("undefined")}} を返します。
 
 ## 解説
 
 `at()` メソッドは、`index` が負でない場合、ブラケット記法と等価です。例えば、`array[0]` と `array.at(0)` は、どちらも最初の項目を返します。しかし、配列の末尾から要素を数える場合、PythonやRのように `array[-1]` を使用することはできません。角括弧内の値はすべて文字列プロパティとしてリテラルに扱われるため、結局、配列のインデックスではなく通常の文字列プロパティである `array["-1"]` を読むことになります。
 
 通常、{{jsxref("Array/length", "length")}} にアクセスし、そこからインデックスを計算します。例えば、 `array[array.length - 1]` のようになります。 `at()` メソッドでは相対インデックスが可能なので、これを短縮して `array.at(-1)` とすることができます。
+
+`at()` と {{jsxref("Array/with", "with()")}} を組み合わせることで、負のインデックスを用いた配列の読み取りと書き込みが（それぞれ）できます。
 
 `at()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)です。`this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
 
@@ -61,7 +77,7 @@ console.log(item2); // 'みかん'
 
 ### メソッドの比較
 
-この例では、 {{jsxref('Array')}} の最後から 1 つ目の項目を選択するさまざまな方法を比較しています。以下に示すどの方法も有効ですが、`at()` メソッドの簡潔さと読みやすさが際立っています。
+この例では、 {{jsxref("Array")}} の最後から 1 つ目の項目を選択するさまざまな方法を比較しています。以下に示すどの方法も有効ですが、`at()` メソッドの簡潔さと読みやすさが際立っています。
 
 ```js
 // 項目付きの配列
@@ -89,8 +105,10 @@ const arrayLike = {
   length: 2,
   0: "a",
   1: "b",
+  2: "c", // length が 2 なので at() からは無視される
 };
-console.log(Array.prototype.at.call(arrayLike, -1)); // "b"
+console.log(Array.prototype.at.call(arrayLike, 0)); // "a"
+console.log(Array.prototype.at.call(arrayLike, 2)); // undefined
 ```
 
 ## 仕様書
@@ -104,8 +122,10 @@ console.log(Array.prototype.at.call(arrayLike, -1)); // "b"
 ## 関連情報
 
 - [`Array.prototype.at` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#relative-indexing-method)
-- [at() メソッドのポリフィル](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
-- {{jsxref("Array.prototype.find()")}} – 指定されたテストに基づく値を返します。
-- {{jsxref("Array.prototype.includes()")}} – 配列に値が存在するかどうかを判定します。
-- {{jsxref("Array.prototype.indexOf()")}} – 指定された要素の添字を返します。
-- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxref("Array.prototype.with()")}}
+- {{jsxref("TypedArray.prototype.at()")}}
+- {{jsxref("String.prototype.at()")}}

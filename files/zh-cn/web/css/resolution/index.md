@@ -1,63 +1,82 @@
 ---
 title: <resolution>
 slug: Web/CSS/resolution
+l10n:
+  sourceCommit: c45e2107d7d23c2155f59849a7240f2fa5f096c4
 ---
 
 {{CSSRef}}
 
-分辨率：用于描述[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)中的分辨率的 \<resolution> CSS [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示输出设备的像素密度。
+**`<resolution>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)用于描述[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)中的 [resolution](/zh-CN/docs/Web/CSS/@media/resolution)，表示输出设备的像素密度，即分辨率。
 
-在屏幕上，单位与 CSS 英寸，厘米或像素有关，而与物理值无关。
+在屏幕上，单位与 _CSS_ 英寸、厘米或像素有关，而与物理值无关。
 
 ## 语法
 
-\<resolution> 数据类型由严格为正 {{cssxref("&lt;number&gt;")}} 组成，后跟下面列出的单位之一。与所有 CSS 维度一样，单位字面值与数字之间没有空格。
+`<resolution>` 数据类型由一个严格意义上的正数 {{cssxref("&lt;number&gt;")}} 和下面列出的一个单位组成。与所有 CSS 尺寸一样，单位字面量和数字之间没有空格。
 
 ### 单位
 
 - `dpi`
-  - : 表示[每英寸的点数](https://en.wikipedia.org/wiki/Dots_per_inch)。屏幕通常每英寸包含 72 或 96 个点，但打印文档的 dpi 通常要大得多。1 英寸是 2.54 厘米，1dpi≈0.39dpcm。
+  - : 表示[每英寸点数](https://zh.wikipedia.org/wiki/每英寸点数)。屏幕通常每英寸包含 72 或 96 个点，但打印文档的 dpi 通常要大得多。1 英寸是 2.54 厘米，`1dpi≈0.39dpcm`。
 - `dpcm`
-  - : [每厘米上的点数](https://en.wikipedia.org/wiki/Dots_per_inch)。1 英寸是 2.54 厘米，`1dpcm ≈ 2.54dpi`.
+  - : 表示[每厘米上点数](https://zh.wikipedia.org/wiki/每英寸点数)。1 英寸是 2.54 厘米，`1dpcm ≈ 2.54dpi`。
 - `dppx`
-  - : 表示每个[`px`](/zh-CN/docs/Web/CSS/length#px)的点数。由于 CSS px 的固定比率为 1:96，因此 1dppx 相当于 96dpi。which corresponds to the default resolution of images displayed in CSS as defined by {{cssxref("image-resolution")}}.
+  - : 表示每个 [`px`](/zh-CN/docs/Web/CSS/length#px) 的点数。由于 CSS `in` 与 CSS `px` 的固定比例为 1:96，因此 `1dppx` 相当于 `96dpi`，这与 {{cssxref("image-resolution")}} 所定义的 CSS 中显示图像的默认分辨率一致。
 - `x`
-  - : `dppx` 的别名
+  - : `dppx` 的别名。
 
-> **备注：** Although the number `0` is always the same regardless of unit, the unit may not be omitted. In other words, `0` is invalid and does not represent `0dpi`, `0dpcm`, or `0dppx`.
+> [!NOTE]
+> 虽然数字 `0` 在任何单位下都是相同的，但单位不能省略。换句话说，`0` 无效，不能代表 `0dpi`、`0dpcm` 或 `0dppx`。
 
-## Examples
+## 示例
 
-### Use in a media query
+### 在媒体查询中使用
 
 ```css
-@media print and (min-resolution: 300dpi) { ... }
+@media print and (min-resolution: 300dpi) {
+  /* … */
+}
+
+@media (resolution: 120dpcm) {
+  /* … */
+}
+
+@media (min-resolution: 2dppx) {
+  /* … */
+}
+
+@media (resolution: 1x) {
+  /* … */
+}
 ```
 
-### Valid resolutions
+### 有效的 resolution 值
 
-```
+```plain example-good
 96dpi
 50.82dpcm
 3dppx
 ```
 
-### Invalid resolutions
+### 无效的 resolution 值
 
 ```plain example-bad
-72 dpi     Spaces are not allowed between the number and the unit.
-ten dpi    The number must use digits only.
-0          The unit is required.
+72 dpi     不允许在数字和单位之间使用空格。
+ten dpi    只能使用十进制数字。
+0          单位是必需的。
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [resolution](/zh-CN/docs/Web/CSS/@media/resolution) media feature
+- [resolution](/zh-CN/docs/Web/CSS/@media/resolution) 媒体特性
+- {{cssxref("image-resolution")}} 属性
+- [使用 @media 查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)

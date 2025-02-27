@@ -3,7 +3,7 @@ title: Date.prototype.getDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 ## Resumo
 
@@ -42,7 +42,7 @@ console.log(weekday); // 1
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.getDay")}}
+{{Compat}}
 
 ## Veja também
 

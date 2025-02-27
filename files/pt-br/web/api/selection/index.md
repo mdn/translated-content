@@ -101,7 +101,8 @@ A API de Seleção tem um comportamento comum (i.e. compartilhado entre navegado
 
 Os comportamentos são que um elemento editado recebe o foco se anteriormente a seleção estiver fora dele, então um método da API de seleção é executado e causa uma nova seleção que será feita em um único intervalo dentro do elemento sendo editado. O foco então é movido para o final do elemento.
 
-> **Nota:** Os métodos da API de seleção, move o foco apenas para o elemento sendo editado, não para outro elemento que pode receber o foco (e.g. {{HTMLElement("a")}}).
+> [!NOTE]
+> Os métodos da API de seleção, move o foco apenas para o elemento sendo editado, não para outro elemento que pode receber o foco (e.g. {{HTMLElement("a")}}).
 
 O comportamento acima é aplicado para as seleções feitas usando os seguintes métodos:
 
@@ -149,6 +150,6 @@ Outras palavras chaves usadas nesta seção.
 ## Veja também
 
 - {{DOMxRef("Window.getSelection")}}, {{DOMxRef("Document.getSelection")}}, {{DOMxRef("Range")}}
-- Selection-related events: {{Event("selectionchange")}} and {{Event("selectstart")}}
+- Selection-related events: [`selectionchange`](/pt-BR/docs/Web/API/HTMLInputElement/selectionchange_event) and [`selectstart`](/pt-BR/docs/Web/API/Node/selectstart_event)
 - HTML inputs provide simpler helper APIs for working with selection (see {{DOMxRef("HTMLInputElement.setSelectionRange()")}})
 - {{DOMxRef("Document.activeElement")}}, {{DOMxRef("HTMLElement.focus()")}}, and {{DOMxRef("HTMLElement.blur()")}}

@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number
 
 ## 描述
 
-数值通常以字面量形式表示。如 `255` 或 `3.14159`。[词法文法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#字面量)包含更详细的参考。
+数值通常以字面量形式表示。如 `255` 或 `3.14159`。[词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#字面量)包含更详细的参考。
 
 ```js
 255; // 二百五十五
@@ -71,7 +71,7 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
   - 不允许使用[数字分隔符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#数值分隔符)。
 - [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 抛出 {{jsxref("TypeError")}}，以防止意外的强制隐式转换导致精度损失。
 - [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 抛出 {{jsxref("TypeError")}}。
-- 对象首先通过按顺序调用它们的 [`[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（使用 `"number"` 提示）、`valueOf()` 和 `toString()` 方法将其[转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。然后将得到的原始值转换为数字。
+- 对象首先通过按顺序调用它们的 [`[Symbol.toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（使用 `"number"` 提示）、`valueOf()` 和 `toString()` 方法将其[转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。然后将得到的原始值转换为数字。
 
 有两种方法可以在 JavaScript 中实现几乎相同的效果。
 
@@ -114,7 +114,8 @@ new Uint8Array([257, -257]); // Uint8Array(2) [ 1, 255 ]
 
 当 `Number` 作为一个构造函数（用 `new`）被调用时，它会创建一个 {{jsxref("Number")}} 对象，该对象**不是**一个原始值。例如，`typeof new Number(42) === "object"`，并且 `new Number(42) !== 42`（尽管 `new Number(42) == 42`）。
 
-> **警告：** 你应该很少发现自己将 `Number` 作为构造函数使用。
+> [!WARNING]
+> 你应该很少发现自己将 `Number` 作为构造函数使用。
 
 ## 静态属性
 

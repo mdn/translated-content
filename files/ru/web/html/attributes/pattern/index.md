@@ -5,15 +5,16 @@ slug: Web/HTML/Attributes/pattern
 
 {{HTMLSidebar}}
 
-Атрибут **`pattern`** определяет [регулярное выражение](/ru/docs/Web/JavaScript/Guide/Regular_Expressions), которому должно соответствовать значение элемента формы. Если ненулевое значение не соответствует ограничениям, установленным в `pattern`, доступное только для чтения свойство {{domxref('ValidityState.patternMismatch','patternMismatch')}} объекта {{domxref('ValidityState')}} будет истинным.
+Атрибут **`pattern`** определяет [регулярное выражение](/ru/docs/Web/JavaScript/Guide/Regular_expressions), которому должно соответствовать значение элемента формы. Если ненулевое значение не соответствует ограничениям, установленным в `pattern`, доступное только для чтения свойство {{domxref('ValidityState.patternMismatch','patternMismatch')}} объекта {{domxref('ValidityState')}} будет истинным.
 
 Атрибут `pattern` является атрибутом для полей ввода с типом {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}}, и {{HTMLElement("input/search", "search")}}.
 
-The `pattern` attribute, when specified, is a regular expression which the input's [`value`](/ru/docs/Web/HTML/Global_attributes#value) must match in order for the value to pass [constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/ru/docs/Web/JavaScript/Guide/Regular_Expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
+The `pattern` attribute, when specified, is a regular expression which the input's [`value`](/ru/docs/Web/HTML/Global_attributes#value) must match in order for the value to pass [constraint validation](/ru/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/ru/docs/Web/JavaScript/Guide/Regular_expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
 
 If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored.
 
-> **Примечание:** Use the [`title`](/ru/docs/Web/HTML/Element/input#title) attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You **must not** rely on the tooltip alone for an explanation. See below for more information on usability.
+> [!NOTE]
+> Use the [`title`](/ru/docs/Web/HTML/Element/input#title) attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You **must not** rely on the tooltip alone for an explanation. See below for more information on usability.
 
 Some of the input types supporting the pattern attribute, notably the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/url", "url")}} input types, have expected value syntaxes that must be matched. If the pattern attribute isn't present, and the value doesn't match the expected syntax for that value type, the {{domxref('ValidityState')}} object's read-only {{domxref('ValidityState.typeMismatch','typeMismatch')}} property will be true.
 
@@ -75,7 +76,7 @@ Had we used [`minlength`](/ru/docs/Web/HTML/Attributes/minlength) and [`maxlengt
 
 ### Specifying a pattern
 
-You can use the [`pattern`](/ru/docs/Web/HTML/Element/input#pattern) attribute to specify a regular expression that the inputted value must match in order to be considered valid (see [Validating against a regular expression](/ru/docs/Learn/HTML/Forms/Form_validation#Validating_against_a_regular_expression) for a simple crash course on using regular expressions to validate inputs).
+You can use the [`pattern`](/ru/docs/Web/HTML/Element/input#pattern) attribute to specify a regular expression that the inputted value must match in order to be considered valid (see [Validating against a regular expression](/ru/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression) for a simple crash course on using regular expressions to validate inputs).
 
 The example below restricts the value to 4-8 characters and requires that it contain only lower-case letters.
 
@@ -138,16 +139,16 @@ When a control has a `pattern` attribute, the `title` attribute, if used, must d
 
 While `title`s are used by some browsers to populate error messaging, because browsers sometimes also show the title as text on hover, it therefore shows in non-error situations, so be careful not to word titles as if an error has occurred.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [Constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation)
-- [Forms: Data form validation](/ru/docs/Web/Guide/HTML/Forms/Data_form_validation)
-- [Regular Expressions](/ru/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Constraint validation](/ru/docs/Web/HTML/Constraint_validation)
+- [Forms: Data form validation](/ru/docs/Learn/Forms/Form_validation)
+- [Regular Expressions](/ru/docs/Web/JavaScript/Guide/Regular_expressions)

@@ -57,17 +57,17 @@ _无变化。_
 #### Service workers
 
 - The {{domxref("Response.redirect()")}} method now correctly throws a `TypeError` if a non-valid URL is specified as the first parameter ([Firefox bug 1503276](https://bugzil.la/1503276)).
-- The {{domxref("ServiceWorkerContainer.register()")}} and {{domxref("WorkerGlobalScope.importScripts()")}} (when used by a service worker) methods will now accept any files with a valid [JavaScript MIME type](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types) ([Firefox bug 1354577](https://bugzil.la/1354577)).
+- The {{domxref("ServiceWorkerContainer.register()")}} and {{domxref("WorkerGlobalScope.importScripts()")}} (when used by a service worker) methods will now accept any files with a valid [JavaScript MIME type](/zh-CN/docs/Web/HTTP/MIME_types#textjavascript) ([Firefox bug 1354577](https://bugzil.la/1354577)).
 
-#### Media, Web Audio, 和 WebRTC
+#### Media、Web Audio 和 WebRTC
 
-- 增加了对 [WebP](/zh-CN/docs/Glossary/webp) Google 压缩图像文件的支持 ([bug 1294490](https://bugzilla.mozilla.org/show_bug.cgi?id=1294490)) 。
+- 增加了对 [WebP](/zh-CN/docs/Glossary/WebP) Google 压缩图像文件的支持 ([bug 1294490](https://bugzilla.mozilla.org/show_bug.cgi?id=1294490)) 。
 
 #### Canvas 和 WebGL
 
 #### 移除
 
-- [Mutation events](/zh-CN/docs/Web/Guide/Events/Mutation_events) 在 shadow trees 上已经被禁用 ([Firefox bug 1489858](https://bugzil.la/1489858)).
+- [Mutation events](/zh-CN/docs/Web/API/MutationEvent) 在 shadow trees 上已经被禁用 ([Firefox bug 1489858](https://bugzil.la/1489858)).
 - The non-standard {{domxref("MediaStream")}} property `currentTime` has been removed ([Firefox bug 1502927](https://bugzil.la/1502927)).
 - The obsolete {{domxref("BasicCardRequest.supportedTypes")}} property is no longer supported by the Payment Request API; instead of requiring the web app or site to figure out what type of card is being used, it's now the server's job to deal with it ([Firefox bug 1504032](https://bugzil.la/1504032)).
 
@@ -101,4 +101,4 @@ _无变化。_
 
 ## 更早期的版本
 
-{{Firefox_for_developers(65)}}
+{{Firefox_for_developers}}

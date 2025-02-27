@@ -2,7 +2,7 @@
 title: NDEFRecord
 slug: Web/API/NDEFRecord
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: bb60fadaa7423d2195ae8727f197fa4361aa09df
 ---
 
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
@@ -22,7 +22,8 @@ l10n:
   - : このレコードの {{Glossary("MIME type", "MIME タイプ")}}です。この値は `recordType` が `"mime"` と等しくない場合は `null` になります。
 - {{DOMxRef("NDEFRecord.id")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : レコード識別子、レコードを識別するために使用される絶対または相対 URL を返します。
-    > **メモ:** 識別子の一意性は、レコードの生成者によってのみ強制されます。
+    > [!NOTE]
+    > 識別子の一意性は、レコードの生成者によってのみ強制されます。
 - {{DOMxRef("NDEFRecord.data")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : このレコードのペイロードの生のバイト列が入った {{jsxref("DataView")}} を返します。
 - {{DOMxRef("NDEFRecord.encoding")}} {{Experimental_Inline}} {{ReadOnlyInline}}

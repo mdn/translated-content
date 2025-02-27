@@ -3,15 +3,15 @@ title: 文档写作规范
 slug: MDN/Writing_guidelines/Writing_style_guide
 ---
 
-{{MDNSidebar}}
-
 本篇写作风格指南描述了 MDN Web 文档上的内容应该如何书写、组织、拼写和格式化。
 
 这些指南是为了确保整个网站的语言和风格的一致性。也就是说，我们对内容而不是格式更感兴趣，所以不必在为 MDN Web 文档贡献前学习整个写作风格指南。然而，如果其他贡献者后来编辑你的作品以符合该指南，请不要感到不安或惊讶。当你提交内容拉取请求时，审稿人也可能将你指向这个风格指南。
 
-> **备注：** 本指南的语言方面主要适用于英语文档。其他语言可能有（并且欢迎创建）他们自己的风格指南。这些应该作为各自的本地化团队页面的子页面发布。然而，在格式化和组织内容时，仍应参考本指南。
+> [!NOTE]
+> 本指南的语言方面主要适用于英语文档。其他语言可能有（并且欢迎创建）他们自己的风格指南。这些应该作为各自的本地化团队页面的子页面发布。然而，在格式化和组织内容时，仍应参考本指南。
 
-> **备注：** 简体中文翻译时的规范请参见《[简体中文翻译指南](https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md)》，当然“简体中文翻译指南”仅列出了常见的规范，这份文档较为详细一点，在翻译时，参考一些相关内容也是有益的。
+> [!NOTE]
+> 简体中文翻译时的规范请参见《[简体中文翻译指南](https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md)》，当然“简体中文翻译指南”仅列出了常见的规范，这份文档较为详细一点，在翻译时，参考一些相关内容也是有益的。
 
 在列出一般的写作准则后，本指南介绍了 MDN Web 文档的推荐写作风格，然后介绍了如何对页面上的不同组件进行格式化，如列表和标题。
 
@@ -80,7 +80,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide
   > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/zh-CN/docs/Web/API/Canvas_API), strokes (draws the outlines of) the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
   > The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
   >
-  > For more details and examples, see the [Text](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#text) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+  > For more details and examples, see the [Text](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics#文本) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 ### 使用包容性语言
 
@@ -103,7 +103,8 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 
 - **正确**：A confirmation dialog appears, asking the user if they allow the Web page to make use of their Web cam.
 
-> **备注：** MDN 允许在这里使用第三人称复数，也就是通常所说的“[单数形式的‘they’](https://zh.wikipedia.org/wiki/单数they)”。中性代名词包括：“they”、“them”、“their”和“theirs”。
+> [!NOTE]
+> MDN 允许在这里使用第三人称复数，也就是通常所说的“[单数形式的‘they’](https://zh.wikipedia.org/wiki/单数they)”。中性代名词包括：“they”、“them”、“their”和“theirs”。
 
 或者使用复数形式的“users”：
 
@@ -145,7 +146,8 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
   - **增加例子**：应该有涵盖所有参数或至少是初级到中级用户可能使用的参数（或属性）的例子，以及任何需要额外解释的高级参数。每个例子前面都应该有一个概述，说明这个例子将做什么，理解它可能需要哪些额外的知识，等等。在例子之后（或穿插在例子的各个部分）应该有解释代码如何工作的文字。不要吝啬例子中的细节和对错误的处理。请记住，用户会复制和粘贴你的例子在他们自己的项目中使用，而你的代码也会在生产网站上使用！请参阅我们的[代码范例指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)以获得更多有用的信息。
   - **解释用例**：如果所描述的功能有特别常见的用例，那就谈一谈吧！而不是假设用户会在使用过程中出现问题！与其假设用户会发现被记录的方法可以用来解决一个常见的开发问题，不如实际添加一个关于该用例的部分，并提供一个例子和解释该例子如何工作的文字。
   - **添加图片信息**：在所有的图像和图表上包括适当的 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文本。这个文本，以及表格和其他数字的标题，都是重要的，因为网络蜘蛛不能抓取图像，所以 `alt` 文本告诉搜索引擎爬虫嵌入式媒体包含哪些内容。
-    > **备注：** 不建议包含过多的关键词或与功能无关的关键词，以试图操纵搜索引擎的排名；这种类型的行为很容易被发现，而且往往会受到惩罚。同样，**不要**在实际页面内添加重复的、无益的材料或大量的关键词，以试图提高页面的大小和搜索排名。这对内容的可读性和我们的搜索结果来说都是弊大于利。
+    > [!NOTE]
+    > 不建议包含过多的关键词或与功能无关的关键词，以试图操纵搜索引擎的排名；这种类型的行为很容易被发现，而且往往会受到惩罚。同样，**不要**在实际页面内添加重复的、无益的材料或大量的关键词，以试图提高页面的大小和搜索排名。这对内容的可读性和我们的搜索结果来说都是弊大于利。
   - **专注于主题内容**：随着谷歌在 2013 年的 Hummingbird 更新，人们越来越关注使用自然语言来传达信息。这意味着，围绕页面的主题来写内容要比围绕特定的关键词好得多。对于一个给定的主题，你极有可能包括许多关键词；事实上，许多 SEO 编制了一个 5-100 个不同关键词的清单（在短、中、长尾关键词之间变化），以包括在他们的文章中，这取决于长度。这样做会使你的措辞多样化，从而减少重复。
 
 ## 写作风格
@@ -205,7 +207,8 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
   | N.B.     | _nota bene_      | note well               |
   | P.S.     | _post scriptum_  | postscript              |
 
-  > **备注：** 在使用前请仔细思考使用拉丁文缩写是否真的能带来好处。上面列出的某些缩写很少用到，很多读者可能不知道其意思，还有一些读者可能会分不清其中的某些缩写。
+  > [!NOTE]
+  > 在使用前请仔细思考使用拉丁文缩写是否真的能带来好处。上面列出的某些缩写很少用到，很多读者可能不知道其意思，还有一些读者可能会分不清其中的某些缩写。
   >
   > 另外，如果你决定使用缩写，那么请确保*你*的用法是正确的。比如，一个很多人经常会犯的错误是将“e.g.”和“i.e.”弄混。
 
@@ -224,7 +227,8 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 
 在文章内容中请使用标准英文大写规则，比如对于“World Wide Web”需大写每个单词的首字母。如果“web”和“internet”是单独使用或作为修饰词使用，那么将其全小写也可以。
 
-> **备注：** 这一指导原则是后来修改过的，所以在 MDN 中你也许会看到很多首字母大写的“Web”和“Internet”。当你编辑文章的时候遇到这种情况，可以随它去，也可以随手修改一下。但是仅仅只是为了修改一下大写的话就没必要专门去编辑一下了。
+> [!NOTE]
+> 这一指导原则是后来修改过的，所以在 MDN 中你也许会看到很多首字母大写的“Web”和“Internet”。当你编辑文章的时候遇到这种情况，可以随它去，也可以随手修改一下。但是仅仅只是为了修改一下大写的话就没必要专门去编辑一下了。
 
 对于键盘按键，应该使用普通的大写规则，而不是全大写。比如，是“<kbd>Enter</kbd>”而不是“<kbd>ENTER</kbd>”。不过你可以使用“<kbd>ESC</kbd>”作为“<kbd>EScape</kbd>”的缩写。
 
@@ -279,7 +283,8 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 - **正确**：Please don't use "curly quotes."
 - **错误**：Please don’t use “curly quotes.”
 
-> **备注：** 中文与英文的使用习惯是不同的，在翻译时，应该遵循[简体中文翻译指南 - 标点符号](https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md#标点符号)中的有关说明。
+> [!NOTE]
+> 中文与英文的使用习惯是不同的，在翻译时，应该遵循[简体中文翻译指南 - 标点符号](https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md#标点符号)中的有关说明。
 
 ### 逗号
 
@@ -316,7 +321,8 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
     - **正确**："My father is strict but loving."
     - **错误**："My father is strict, but loving."
 
-  > **备注：** 这种情况在翻译成简体中文时应将逗号翻译为顿号。“简体中文翻译指南”一文的[标点符号](https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md#标点符号)”一节中也提到了这个问题。
+  > [!NOTE]
+  > 这种情况在翻译成简体中文时应将逗号翻译为顿号。“简体中文翻译指南”一文的[标点符号](https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md#标点符号)”一节中也提到了这个问题。
 
 - **在“that”和“which”之前：** 限制性从句对句子的意义至关重要，不需要用逗号将其与其余句子隔开。限制性从句通常由“that”引入，**不应**在其前面加逗号。
 
@@ -414,7 +420,8 @@ MDN Web 文档上的一个页面可以包含一个以上的代码示例。以下
 - 试图利用 MDN Web 文档来传播垃圾信息
 - 混淆链接目的地的短链接
 
-> **备注：** 在添加外部链接之前，考虑在 MDN Web 文档内交叉引用内容。内部链接更容易维护，并使整个 MDN Web 文档对读者更有价值。
+> [!NOTE]
+> 在添加外部链接之前，考虑在 MDN Web 文档内交叉引用内容。内部链接更容易维护，并使整个 MDN Web 文档对读者更有价值。
 
 - **良好的外部链接**：好的外部链接能把读者带到相关的、持久的、被广泛信任的资源。你应该更倾向于添加链接到以下的外部内容：
 
@@ -433,7 +440,8 @@ MDN Web 文档上的一个页面可以包含一个以上的代码示例。以下
 
 - **自我宣传或垃圾链接**：虽然个人博客文章、会议演讲或 GitHub 资源库有价值，但链接到你自己的资源会造成利益冲突的表象。在链接到与你有商业或个人联系的资源之前，请三思而行。
 
-  > **备注：** 如果你与链接的目标有商业或个人关系，你必须在你的拉取请求中披露这种关系。如果不这样做，可能会危及你继续参与 MDN Web 文档的工作。
+  > [!NOTE]
+  > 如果你与链接的目标有商业或个人关系，你必须在你的拉取请求中披露这种关系。如果不这样做，可能会危及你继续参与 MDN Web 文档的工作。
 
   有时，这种链接是相关的和适当的。例如，如果你是一个规范的编辑，并且你正在贡献与该规范相关的文档，那么链接到该规范是可以预期和接受的。但你必须披露你和该链接之间的关系。
 
@@ -551,7 +559,7 @@ MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章
 - [JavaScript/指南](/zh-CN/docs/Web/JavaScript/Guide)——主目录页
 - [JavaScript/指南/JavaScript 概述](/zh-CN/docs/Web/JavaScript/Guide/Introduction)
 - [JavaScript/指南/函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)
-- [JavaScript/指南/对象模型的细节](/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+- [JavaScript/指南/对象模型的细节](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
 尽量避免把文章内容放置在层次结构的顶层，这会降低网站的访问速度，同时搜索和导航的效率也会下降。
 

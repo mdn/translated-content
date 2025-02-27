@@ -1,62 +1,135 @@
 ---
-title: <br>（斷行元素）
+title: <br>：換行元素
 slug: Web/HTML/Element/br
 ---
 
 {{HTMLSidebar}}
 
-**HTML `<br>` 元素**會產生文字的斷行（carriage-return、CR 或是確認鍵）。此元素主要用於斷行有所意義的時候，像是寫詩或寫住址。
+**`<br>`** [HTML](/zh-TW/docs/Web/HTML) 元素可在文字中插入換行（回車）。在寫詩或地址時，這很有用，因為行的分隔是重要的。
 
-{{EmbedInteractiveExample("pages/tabbed/br.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;br&gt;", "tabbed-standard")}}
 
-如上所示，`<br>` 元素會在需要斷行的時候出現。在 `<br>` 之後的文字會從文字區域的下一行出現。
+```html interactive-example
+<p>
+  O’er all the hilltops<br />
+  Is quiet now,<br />
+  In all the treetops<br />
+  Hearest thou<br />
+  Hardly a breath;<br />
+  The birds are asleep in the trees:<br />
+  Wait, soon like these<br />
+  Thou too shalt rest.
+</p>
+```
 
-> **備註：** 不要用 `<br>` 建立段落間距：這種情況下要用 {{htmlelement("p")}} 把它們包起來，並使用 [CSS](/zh-TW/docs/CSS) {{cssxref('margin')}} 屬性控制間距大小。
+```css interactive-example
+p {
+  font-size: 1rem;
+  font-family: sans-serif;
+  margin: 20px;
+}
+```
+
+如上例所示，每當我們希望文字換行時，都會包含一個 `<br>` 元素。 `<br>` 後的文本將重新開始於文本塊的下一行的開頭。
+
+> [!NOTE]
+> 不要使用 `<br>` 創建段落之間的邊距；將它們包裝在 {{htmlelement("p")}} 元素中，並使用 [CSS](/zh-TW/docs/Web/CSS) 的 {{cssxref('margin')}} 屬性來控制它們的大小。
 
 ## 屬性
 
-這個元件屬性含有[全域屬性](/zh-TW/docs/HTML/Global_attributes)。
+此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
-### 棄用屬性
+### 已棄用的屬性
 
-- `clear`
+- `clear` {{Deprecated_Inline}}
   - : 指示中斷後下一行的開始位置。
 
-## 使用 CSS 樣式化
+## 使用 CSS 設計
 
-`<br>` 元素有一個定義明確的用途：在文字區塊裡面建立斷行。因此它本身沒有尺寸或視覺輸出，基本上你做不了任何樣式化。
+`<br>` 元素具有單一且明確的目的——在文本塊中插入換行。因此，它本身沒有尺寸或視覺輸出，幾乎不能對其進行任何樣式設置。
 
-你可以給 `<br>` 元素設置 {{cssxref("margin")}} 以增加文字之間的斷行大小，但這並不是正確的作法：你應該用 {{cssxref("line-height")}} 屬性做這件事情。
+你可以在 `<br>` 元素本身上設置 {{cssxref("margin")}} 以增加文本塊中行之間的間距，但這是一種不良做法——你應該使用專門設計用於此目的的 {{cssxref("line-height")}} 屬性。
 
-## 示例
+## 範例
+
+### 簡單的 `<br>` 範例
+
+在以下示例中，我們使用 `<br>` 元素在不同行的郵寄地址之間創建換行：
 
 ```html
-Mozilla Foundation<br />
-1981 Landings Drive<br />
-Building K<br />
-Mountain View, CA 94043-0801<br />
-USA
+Mozilla<br />
+331 E. Evelyn Avenue<br />
+Mountain View, CA<br />
+94041<br />
+USA<br />
 ```
 
-以上 HTML 將顯示
+#### 結果
 
-{{ EmbedLiveSample('示例', '100%', '90') }}
+{{ EmbedLiveSample('簡單的 br 範例', 640, 120) }}
 
 ## 無障礙議題
 
-使用 `<br>` 元素*分段*不只作法不佳，對於使用輔具的人來說，也會是有問題的。螢幕閱讀器會念出該元素，但 `<br>` 裡面的內容是念不出來的。對於使用螢幕閱讀器的人來說，這可能是困惑與沮喪的體驗。
+使用 `<br>` 創建單獨的文本段落不僅是不良做法，而且對於使用屏幕閱讀技術導航的人來說也是有問題的。屏幕閱讀器可能會宣佈元素的存在，但不會宣佈 `<br>` 內部的任何內容。對於使用屏幕閱讀器的人來說，這可能是一種令人困惑和沮喪的體驗。
 
-請使用 `<p>` 元素搭配 CSS 屬性如 {{cssxref("margin")}} 來控制間距大小。
+使用 `<p>` 元素，並使用 CSS 屬性如 {{cssxref("margin")}} 來控制它們的間距。
 
 ## 技術摘要
 
-| [內容類型](/zh-TW/docs/HTML/Content_categories) | [流型內容](/zh-TW/docs/HTML/Content_categories#Flow_content)、[段落型內容](/zh-TW/docs/HTML/Content_categories#Phrasing_content)。 |
-| ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| 允許內容                                        | 無，這是個{{Glossary("空元素")}}.                                                                                                  |
-| 標籤省略                                        | 絕對要有開啟標籤，也絕不能關閉標籤。在 XHTML 文件內，要把這個元素寫成 `<br />`.                                                    |
-| 允許父元素                                      | 任何接受[段落型內容](/zh-TW/docs/HTML/Content_categories#Phrasing_content)的元素                                                   |
-| 允許的 ARIA roles                               | 所有                                                                                                                               |
-| DOM 介面                                        | {{domxref("HTMLBRElement")}}                                                                                                       |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+          >內容類型</a
+        >
+      </th>
+      <td>
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+          >流內容</a
+        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+          >段落型內容</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允許的內容</th>
+      <td>無，這是一個 {{Glossary("void element")}}。</td>
+    </tr>
+    <tr>
+      <th scope="row">標籤省略</th>
+      <td>
+        必須有開始標籤，不得有結束標籤。在 XHTML 文件中，將此元素寫為 <code>&#x3C;br /></code>。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允許的父元素</th>
+      <td>
+        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+          >段落型內容</a
+        >的元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隱含的 ARIA 角色</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >沒有相對應的角色</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允許的 ARIA 角色</th>
+      <td>
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 介面</th>
+      <td>{{domxref("HTMLBRElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 規範
 

@@ -1,36 +1,42 @@
 ---
 title: <ratio>
 slug: Web/CSS/ratio
+l10n:
+  sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
 {{CSSRef}}
 
-\<ratio> CSS 数据类型，用于描述媒体查询中的宽高比，表示两个无单位值之间的比例。
+**`<ratio>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)用于在[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)中描述[纵横比](/zh-CN/docs/Web/CSS/@media/aspect-ratio)，表示两个无单位值之间的比例关系。
 
-## 句法
+## 语法
 
-在 Media Queries Level 3 中，\<ratio>数据类型包括一个正数的[\<integer>](/zh-CN/docs/Web/CSS/integer)值，后跟一个正斜杠（'/'，Unicode U + 002F SOLIDUS）和第二个正数的[\<integer>](/zh-CN/docs/Web/CSS/integer)值。斜杠前后的空格是可选的。第一个数字代表宽度，第二个数字代表高度。
+在媒体查询第 3 版中，`<ratio>` 数据类型由一个严格正整数 {{cssxref("&lt;integer&gt;")}} 后跟一个斜杠（“/”，Unicode `U+002F SOLIDUS`）以及第二个严格正整数 {{cssxref("&lt;integer&gt;")}} 组成。斜线前后的空格是可选的。第一个数字代表宽度，而第二个数字代表高度。
 
-在 Media Queries Level 4 中，\<ratio>数据类型包括一个正数的[\<number>](/zh-CN/docs/Web/CSS/number)值，后跟一个正斜杠（'/'，Unicode U + 002F SOLIDUS）和第二个正数的[\<number>](/zh-CN/docs/Web/CSS/number)值。此外，允许使用单个[\<number>](/zh-CN/docs/Web/CSS/number)作为值。
+在媒体查询第 4 版中，`<ratio>` 数据类型已更新，现在由一个严格正整数 {{cssxref("&lt;number&gt;")}} 开头，后跟一个斜杠（“/”，Unicode `U+002F SOLIDUS`）和第二个严格正整数 {{cssxref("&lt;number&gt;")}}。此外，也允许使用单一的 {{cssxref("&lt;number&gt;")}} 值。
 
-## 例子
+## 形式语法
+
+{{csssyntax}}
+
+## 示例
 
 ### 在媒体查询中使用
 
 ```css
-@media screen and (min-aspect-ratio: 16/9) { ... }
+@media screen and (min-aspect-ratio: 16/9) {
+  /* … */
+}
 ```
 
-### 常见的宽高比
+### 常见的纵横比
 
-( (
-
-|                                     | 比                                            | 用法                                     |
-| ----------------------------------- | --------------------------------------------- | ---------------------------------------- |
-| ![Ratio4_3.png](ratio4_3.png)       | `4/3`                                         | 在 20 传统电视制式格式。                 |
-| ![Ratio16_9.png](ratio16_9.png)     | `16/9`                                        | 现代"宽屏”电视格式。                     |
-| ![Ratio1_1.85.png](ratio1_1.85.png) | `185/100`= `91/50` _(不允许非整数除数和除数)_ | 自 20 世纪 60 年代以来最常见的电影格式。 |
-| ![Ratio1_2.39.png](ratio1_2.39.png) | `239/100` _(不允许使用非整数红利和除数)_      | "宽屏”,变形电影格式。                    |
+|                                                               | Ratio               | 说明                               |
+| ------------------------------------------------------------- | ------------------- | ---------------------------------- |
+| ![一个高为 3 个单位，宽为 4 个单位的矩形](ratio4_3.png)       | `4/3`               | 二十世纪的传统电视格式。           |
+| ![一个高为 9 个单位，宽为 16 个单位的矩形](ratio16_9.png)     | `16/9`              | 现代“宽屏”电视格式。               |
+| ![一个高为 1 个单位，宽为 1.85 个单位的矩形](ratio1_1.85.png) | `185/100` = `91/50` | 自 1960 年代以来最普遍的电影格式。 |
+| ![一个高为 1 个单位，宽为 2.39 个单位的矩形](ratio1_2.39.png) | `239/100`           | “宽屏”，失真电影格式。             |
 
 ## 规范
 
@@ -42,4 +48,4 @@ slug: Web/CSS/ratio
 
 ## 参见
 
-- [`aspect-ratio`](/zh-CN/docs/Web/CSS/@media/aspect-ratio) 媒体功能
+- [`aspect-ratio`](/zh-CN/docs/Web/CSS/@media/aspect-ratio) 媒体特性

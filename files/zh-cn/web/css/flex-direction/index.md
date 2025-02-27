@@ -3,26 +3,28 @@ title: flex-direction
 slug: Web/CSS/flex-direction
 ---
 
-{{CSSRef("CSS Flexible Boxes")}}
+{{CSSRef}}
 
-[CSS](/zh-CN/docs/CSS) **`flex-direction`** 属性指定了内部元素是如何在 flex 容器中布局的，定义了主轴的方向 (正方向或反方向)。
+[CSS](/zh-CN/docs/Web/CSS) **`flex-direction`** 属性指定了内部元素是如何在弹性容器中布局的，定义了主轴的方向（正方向或反方向）。
 
-```
-/* The direction text is laid out in a line */
+```css
+/* 文本排成行的方向 */
 flex-direction: row;
 
-/* Like <row>, but reversed */
+/* 类似于 <row>，但方向相反 */
 flex-direction: row-reverse;
 
-/* The direction in which lines of text are stacked */
+/* 文本行堆叠的方向 */
 flex-direction: column;
 
-/* Like <column>, but reversed */
+/* 类似于 <column>，但方向相反 */
 flex-direction: column-reverse;
 
-/* Global values */
+/* 全局值 */
 flex-direction: inherit;
 flex-direction: initial;
+flex-direction: revert;
+flex-direction: revert-layer;
 flex-direction: unset;
 ```
 
@@ -30,7 +32,7 @@ flex-direction: unset;
 
 {{cssinfo}}
 
-查看 [使用 CSS 弹性盒子](/zh-CN/docs/Web/Guide/CSS/Flexible_boxes) 以了解更多的属性和信息。
+查看[使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)以了解更多的属性和信息。
 
 ## 语法
 
@@ -116,6 +118,6 @@ flex-direction: unset;
 
 {{Compat}}
 
-## 参考
+## 参见
 
-- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Using_CSS_flexible_boxes)
+- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)

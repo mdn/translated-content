@@ -2,12 +2,12 @@
 title: oklab()
 slug: Web/CSS/color_value/oklab
 l10n:
-  sourceCommit: fbccdfab6a362590389e3ecf9812395e47e451db
+  sourceCommit: f0737728c3b26504f1d2d759b8daf88a2ed496af
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-**`oklab()`** 関数記法は、指定された色を、人間の目による色の知覚方法を模倣しようとするOKlab色空間で表現する。この `oklab()` は OKlab 色空間上のデカルト座標系、 a 軸と b 軸で動作します。極座標系、彩度、色相が必要な場合は、 {{cssxref("color_value/oklch", "oklch()")}} を使用してください。
+**`oklab()`** 関数記法は、指定された色を、人間の目による色の知覚方法を模倣しようとする Oklab 色空間で表現する。この `oklab()` は Oklab 色空間上の同次座標系、 a 軸と b 軸で動作します。極座標系、彩度、色相が必要な場合は、 {{cssxref("color_value/oklch", "oklch()")}} を使用してください。
 
 Oklab は知覚的色空間で、次のような場合に使用されます。
 
@@ -20,53 +20,134 @@ Oklab は知覚的色空間で、次のような場合に使用されます。
 ## 構文
 
 ```css
-/* oklab(lightness a-axis b-axis) */
 oklab(40.1% 0.1143 0.045);
 oklab(59.69% 0.1007 0.1191);
-
-/* oklab(lightness a-axis b-axis / Alpha) */
 oklab(59.69% 0.1007 0.1191 / 0.5);
 ```
 
-> **メモ:** oklab() 関数は、他の色関数のように値を区切るためのカンマに対応しておらず、オプションのアルファ値を指定する場合は、その前にスラッシュ (`/`) を付ける必要があります。
-
 ### 値
 
-- lightness
-  - : 黒を表す `0%` と白を表す `100%` の間の {{cssxref("&lt;percentage&gt;")}} で、知覚される明度を指定します。
-- a-axis
-  - : Oklab 色空間の `a` 軸に沿った距離、つまり、色の緑/赤の度合いを表します。
-- b-axis
-  - : Oklab 色空間の `b` 軸に沿った距離、つまり、色の青/黄の度合いを表します。
-- alpha
-  - : {{cssxref("&lt;number&gt;")}} で `0` から `1` の間、または {{cssxref("&lt;percentage&gt;")}} で `1` から `100%` （完全に不透明）の間で、この色の透明度（またはアルファチャネル）を表します。
+関数記法: `oklab(L a b[ / A])`
+
+- `L`
+  - : {{CSSXref("&lt;number&gt;")}} で `0` ～ `1` の範囲、 {{CSSXref("&lt;percentage&gt;")}} で `0%` ～ `100%` の範囲、またはキーワード `none` であり、 CIE の明るさを指定します。ここで数値 `0` は `0%` （黒）に、数値 `100` は `100%` （白）に対応します。
+- `a`
+  - : {{CSSXref("&lt;number&gt;")}} で `-0.4` ～ `0.4` の範囲、 {{CSSXref("&lt;percentage&gt;")}} で `-100%` ～ `100%` の範囲、またはキーワード `none` であり、 Oklab 色空間における `a` 軸上の距離（緑と赤の色合い）を指定します。
+- `b`
+  - : {{CSSXref("&lt;number&gt;")}} で `-0.4` ～ `0.4` の範囲、 {{CSSXref("&lt;percentage&gt;")}} で `-100%` ～ `100%` の範囲、またはキーワード `none` であり、 Oklab 色空間における `b` 軸上の距離（青と黄の色合い）を指定します。
+- `A` {{optional_inline}}
+  - : {{CSSXref("&lt;alpha-value&gt;")}} またはキーワード `none` です。 `1` は `100%` （完全に不透明）に対応します。
+
+> **メモ:** `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落)を参照してください。
+
+### 形式文法
+
+{{csssyntax}}
 
 ## 例
 
-### oklab() での緑色
+### 明るさと色の軸を oklab() で調整
 
-```css
-div {
-  padding: 1em;
-  margin: 1em;
-  border: solid 1px black;
-}
+次の例は、 `oklab()` 関数の明度、 a 軸、 b 軸の値を変化させたときの効果を示しています。
 
-.ref {
-  background-color: green;
-}
-
-.oklab {
-  background-color: oklab(51.975% -0.1403 0.10768);
-}
-```
+#### HTML
 
 ```html
-<div class="ref">RGB</div>
-<div class="oklab">OKLAB</div>
+<div data-color="blue"></div>
+<div data-color="blue-light"></div>
+
+<div data-color="red"></div>
+<div data-color="red-a"></div>
+
+<div data-color="green"></div>
+<div data-color="green-b"></div>
 ```
 
-{{EmbedLiveSample("Green_with_oklab", "100%", 155)}}
+#### CSS
+
+```css hidden
+div {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  margin: 5px;
+  display: inline-block;
+  border: 1px solid black;
+}
+```
+
+```css
+[data-color="blue"] {
+  background-color: oklab(0.5 -0.3 -0.4);
+}
+[data-color="blue-light"] {
+  background-color: oklab(0.7 -0.3 -0.4);
+}
+
+[data-color="red"] {
+  background-color: oklab(100% 0.4 0.4);
+}
+[data-color="red-a"] {
+  background-color: oklab(100% 0.2 0.4);
+}
+
+[data-color="green"] {
+  background-color: oklab(100% -100% 0.4);
+}
+[data-color="green-b"] {
+  background-color: oklab(100% -100% 0.6);
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample("Adjusting_the_lightness_and_axes", "100%", 155)}}
+
+### 透明度を oklab() で調整
+
+次の例は `oklab()` 関数記法の `A`（アルファ）値を変化させたときの効果を示しています。
+`red` と `red-alpha` 要素は `#background-div` 要素に重なり、透明度の効果を示しています。
+`A` に `0.4` の値を与えると、色は 40% の不透明度になります。
+
+#### HTML
+
+```html
+<div id="background-div">
+  <div data-color="red"></div>
+  <div data-color="red-alpha"></div>
+</div>
+```
+
+#### CSS
+
+```css hidden
+div {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  margin: 5px;
+  display: inline-block;
+  border: 1px solid black;
+}
+#background-div {
+  background-color: lightblue;
+  width: 150px;
+  height: 40px;
+}
+```
+
+```css
+[data-color="red"] {
+  background-color: oklab(0.628 0.225 0.126);
+}
+[data-color="red-alpha"] {
+  background-color: oklab(0.628 0.225 0.126 / 0.4);
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample("Adjusting_opacity_with_oklab", "100%", 155)}}
 
 ## 仕様書
 
@@ -78,5 +159,7 @@ div {
 
 ## 関連情報
 
+- [`<color>` データ型](/ja/docs/Web/CSS/color_value): すべての色記法の一覧
+- {{cssxref("color_value/oklch",'oklch()')}} は `oklab()` と同じ色空間を使用しますが、極座標系を使用します
 - [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/)
-- {{cssxref("color_value/oklch",'oklch()')}} は `oklab()` と同じ色空間を使用しますが、極座標系を使用します。
+- [OKLAB color wheel](https://observablehq.com/@shan/oklab-color-wheel) (observablehq.com)

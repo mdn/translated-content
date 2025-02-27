@@ -7,11 +7,7 @@ slug: Web/HTML/Element/input/range
 
 {{HTMLElement("input")}} elementos do tipo **`"range"`** deixam o usuário especificar um valor numérico que não deve ser inferior a um determinado valor, e não mais do que um valor máximo especificado. O valor preciso, no entanto, não é considerado importante. Este geralmente é representado por um controle deslizante ou o mesmo tipo de controle de "number" input. Como este tipo de elemento é impreciso, não deve ser usado a menos que o valor exato do controle não seja importante.
 
-```html
-<input type="range" />
-```
-
-{{EmbedLiveSample("summary_sample1", 600, 40)}}
+{{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}
 
 Se o navegador do usuário não suportar o tipo `"range"`, este será tratado como um input do tipo [`"text"`](/pt-BR/docs/Web/HTML/Element/input/text).
 
@@ -30,7 +26,7 @@ Se o navegador do usuário não suportar o tipo `"range"`, este será tratado co
     </tr>
     <tr>
       <td><strong>Events</strong></td>
-      <td>{{event("change")}} e {{event("input")}}</td>
+      <td>[`change`](/pt-BR/docs/Web/Events/change) e [`input`](/pt-BR/docs/Web/API/Element/input_event)</td>
     </tr>
     <tr>
       <td><strong>Supported Common Attributes</strong></td>
@@ -94,17 +90,21 @@ Por exemplo, para pedir ao usuário um valor entre -10 e 10, você pode usar:
 <input type="range" min="-10" max="10" />
 ```
 
-{{EmbedLiveSample("Specifying_the_minimum_and_maximum", 600, 40)}}
+{{EmbedLiveSample("Especificando o mínimo e o máximo", 600, 40)}}
 
 ### Definindo a escala entre valores
 
 Por padrão, a escala entre o mínimo e o máximo é 1, significando que este sempre é um valor inteiro. você pode alterar o atributo [`step`](/pt-BR/docs/Web/HTML/Global_attributes#step) para controlar esta escala. Por exemplo, se você precisa de um valor de duas casas decimais entre os valores 5 e 10, voce deve definir o valor de `step` para 0.01:
 
+### Configurando o atributo step
+
 ```html
 <input type="range" min="5" max="10" step="0.01" />
 ```
 
-{{EmbedLiveSample("Granularity_sample1", 600, 40)}}
+{{EmbedLiveSample("Configurando o atributo step", 600, 40)}}
+
+### Configurando step como `any`
 
 Se você deseja aceitar um valor independente das casas decimais, voce pode especificar o valor `"any"` para o atributo [`step`](/pt-BR/docs/Web/HTML/Element/input#step):
 
@@ -112,7 +112,7 @@ Se você deseja aceitar um valor independente das casas decimais, voce pode espe
 <input type="range" min="0" max="3.14" step="any" />
 ```
 
-{{EmbedLiveSample("Granularity_sample2", 600, 40)}}
+{{EmbedLiveSample("Configurando step como any", 600, 40)}}
 
 Este exemplo permite ao usuário selecionar qualquer valor entre 0 e π sem qualquer restrição na parte fracionada do valor selecionado.
 
@@ -233,9 +233,12 @@ Você pode adicionar rótulos para seu controle usando o atributo [`label`](/pt-
   </tbody>
 </table>
 
-> **Nota:** Atualmente nenhum navegador suporta estes recursos totalmente. Firefox não suporta pontos e rótulos, por exemplo, enquanto o Chrome suporta as marcações de pontos, porém não suporta as etiquetas.
+> [!NOTE]
+> Atualmente nenhum navegador suporta estes recursos totalmente. Firefox não suporta pontos e rótulos, por exemplo, enquanto o Chrome suporta as marcações de pontos, porém não suporta as etiquetas.
 
-### Change the orientation
+### Criando controles de intervalo vertical
+
+#### Controle de range horizontal
 
 Considerando este controle:
 
@@ -243,34 +246,35 @@ Considerando este controle:
 <input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
-{{EmbedLiveSample("Orientation_sample1", 200, 200, "orientation_sample1.png")}}
+{{EmbedLiveSample("Controle de range horizontal", 200, 200)}}
 
-Esse controle é horizontal (pelo menos na maioria, senão em todos os principais navegadores, outros podem variar). Fazê-lo vertical é tão simples como adicionar CSS para alterar as dimensões do controle para que ele seja mais alto que o largo, como este:
+Esse controle é horizontal (pelo menos na maioria, senão em todos os principais navegadores, outros podem variar).
 
-#### CSS
+#### Usando a propriedade appearance
+
+A propriedade {{cssxref('appearance')}} tem um valor não padrão de `slider-vertical` que, bem, torna os controles deslizantes verticais.
+
+Usamos o mesmo HTML dos exemplos anteriores:
+
+```html
+<input type="range" min="0" max="11" value="7" step="1" />
+```
+
+Visamos apenas as entradas com um tipo de range:
 
 ```css
-#volume {
-  height: 150px;
-  width: 50px;
+input[type="range"] {
+  appearance: slider-vertical;
 }
 ```
 
-#### HTML
+{{EmbedLiveSample("Usando a propriedade appearance", 200, 200)}}
 
-```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1" />
-```
-
-#### Resultado
-
-{{EmbedLiveSample("Orientation_sample2", 200, 200, "orientation_sample2.png")}}
-
-**Atualmente, nenhum dos principais navegadores suporta a criação de entradas de alcance vertical usando o CSS desta maneira, mesmo que seja a maneira como a especificação recomenda que eles o façam.**
+#### Controle de range vertical
 
 As especificações HTML recomenda que os navegadores mudem automaticamente para um controle vertical quando a largura for menor que à altura. Infortuniamente nenhum dos principais navegadores atualmente oferece tal suporte. No entanto você pode cria-lo pelo seu lado. A maneira mais fácil para isto é usar o CSS: aplicando um: {{cssxref("transform")}} para rotacionar o elemento tornando-o vertical. Vamos dar uma olhada:
 
-#### HTML
+##### HTML
 
 No HTML o elemento {{HTMLElement("input")}} precisa ser envolto em uma {{HTMLElement("div")}} para nos permitir corrigir o layout após a transformação ser executada, (uma vez que as transformações não afetam automaticamente o layout da página):
 
@@ -280,7 +284,7 @@ No HTML o elemento {{HTMLElement("input")}} precisa ser envolto em uma {{HTMLEle
 </div>
 ```
 
-#### CSS
+##### CSS
 
 Agora precisamos de algum CSS. Primeiro é o CSS para o próprio wrapper; isso especifica o modo de exibição e o tamanho que queremos para que a página seja definida corretamente; em essência, está reservando uma área da página para que o controle deslizante gire e se encaixe no espaço reservado sem bagunçar outros elementos.
 
@@ -309,7 +313,7 @@ O tamanho do controle está configurado para ter 150 pixels de comprimento por 2
 
 #### Result
 
-{{EmbedLiveSample("Orientation_sample3", 200, 200, "orientation_sample3.png")}}
+{{EmbedLiveSample("Controle de range vertical", 200, 200)}}
 
 ## Validação
 
@@ -328,17 +332,14 @@ Além dos exemplos variados acima, você encontrará as entradas de alcance demo
 
 ## Specifications
 
-| Specification                                                                                    | Status                   | Comment            |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG', 'forms.html#range-state-(type=range)', '&lt;input type="range"&gt;')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
-| {{SpecName('HTML5.1', 'sec-forms.html#range-state-typerange', '&lt;input type="range"&gt;')}}    | {{Spec2('HTML5.1')}}     | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.input.type_range")}}
+{{Compat}}
 
 ## See also
 
-- [HTML Forms](/pt-BR/docs/Learn/HTML/Forms)
+- [HTML Forms](/pt-BR/docs/Learn/Forms)
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
 - [`<input type="number">`](/pt-BR/docs/Web/HTML/Element/input/number)

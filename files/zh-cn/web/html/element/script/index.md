@@ -23,7 +23,7 @@ slug: Web/HTML/Element/script
     </tr>
     <tr>
      <th scope="row">标签省略</th>
-     <td>{{no_tag_omission}}</td>
+     <td>不允许，开始标签和结束标签都不能省略。</td>
     </tr>
     <tr>
       <th scope="row">允许的父元素</th>
@@ -68,7 +68,8 @@ slug: Web/HTML/Element/script
 
     包含 `defer` 属性的脚本将阻塞 `DOMContentLoaded` 事件触发，直到脚本完成加载并执行。
 
-    > **警告：** 本属性不应在缺少 `src` 属性的情况下使用（也就是内联脚本的情况下），这种情况下将不会生效。
+    > [!WARNING]
+    > 本属性不应在缺少 `src` 属性的情况下使用（也就是内联脚本的情况下），这种情况下将不会生效。
     >
     > `defer` 属性对[模块脚本](/zh-CN/docs/Web/JavaScript/Guide/Modules)也不会生效——它们默认是 defer 的。
 
@@ -99,13 +100,14 @@ slug: Web/HTML/Element/script
 
     - `no-referrer`：不会发送 {{HTTPHeader("Referer")}} 标头。
     - `no-referrer-when-downgrade`（默认）：如果没有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）协议，{{HTTPHeader("Referer")}} 标头将不会被发送到{{Glossary("origin","源")}}上。
-    - `origin`：发送的 referrer 将被限制在 referrer 页面的源：其[协议](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host","主机")}}和{{Glossary("port","端口")}}。
+    - `origin`：发送的 referrer 将被限制在 referrer 页面的源：其[协议](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host","主机")}}和{{Glossary("port","端口")}}。
     - `origin-when-cross-origin`：将会限制发送至其他源的 referrer 的协议、主机和端口号。在同源的导航上仍然包括路径。
     - `same-origin`：在{{Glossary("Same-origin policy", "同源")}}内将发送 referrer，但是跨源请求不包含 referrer 信息。
     - `strict-origin`：只在协议安全等级相同时（如 HTTPS→HTTPS）发送文档的源作为 referrer，目标安全性降低（如 HTTPS→HTTP）时不发送。
     - `strict-origin-when-cross-origin`：在执行同源请求时，发送完整的 URL，但只在协议安全级别保持不变（如 HTTPS→HTTPS）时发送源，而在目标安全性降低（如 HTTPS→HTTP）时不发送标头。
     - `unsafe-url`：referrer 将包含源*和*路径（但不包含[片段](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)、[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)和[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**这个值是不安全的**，因为它将 TLS 保护的资源的源和路径泄露给不安全的源。
-      > **备注：** 空字符串（`""`）既是默认值，也是在不支持 `referrerpolicy` 的情况下的一个回退值。如果没有在 `<script>` 元素上明确指定 `referrerpolicy`，它将采用更高级别的 referrer 策略，即对整个文档或域设置的策略。如果没有更高级别的策略，空字符串将被视为等同于 `no-referrer-when-downgrade`。
+      > [!NOTE]
+      > 空字符串（`""`）既是默认值，也是在不支持 `referrerpolicy` 的情况下的一个回退值。如果没有在 `<script>` 元素上明确指定 `referrerpolicy`，它将采用更高级别的 referrer 策略，即对整个文档或域设置的策略。如果没有更高级别的策略，空字符串将被视为等同于 `no-referrer-when-downgrade`。
 
 - `src`
   - : 这个属性定义引用外部脚本的 URI，这可以用来代替直接在文档中嵌入脚本。
@@ -113,7 +115,7 @@ slug: Web/HTML/Element/script
 
   - : 该属性表示所代表的脚本类型。该属性的值可能为以下类型：
     - **属性未设置（默认），一个空字符串，或一个 JavaScript MIME 类型**
-      - : 代表脚本为包含 JavaScript 代码的“传统的脚本”。如果脚本指的是 JavaScript 代码，我们鼓励作者省略这个属性，而不是指定一个 MIME 类型。所有的 JavaScript MIME 类型都列在 [IANA 的媒体类型规范](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript)中。
+      - : 代表脚本为包含 JavaScript 代码的“传统的脚本”。如果脚本指的是 JavaScript 代码，我们鼓励作者省略这个属性，而不是指定一个 MIME 类型。所有的 JavaScript MIME 类型都列在 [IANA 的媒体类型规范](/zh-CN/docs/Web/HTTP/MIME_types#textjavascript)中。
     - `module`
       - : 此值导致代码被视为 JavaScript 模块。其中的代码内容会延后处理。`charset` 和 `defer` 属性不会生效。对于使用 `module` 的更多信息，请参见 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)指南。与传统代码不同的是，模块代码需要使用 CORS 协议来跨源获取。
     - [`importmap`](/zh-CN/docs/Web/HTML/Element/script/type/importmap)
@@ -155,6 +157,48 @@ slug: Web/HTML/Element/script
   alert("Hello World!");
 </script>
 ```
+
+#### async 和 defer
+
+使用了 `async` 属性加载的脚本不会在下载时阻塞页面。这意味着在脚本执行完成之前，将无法为用户处理和渲染网页上的其余内容。无法保证脚本的运行次序。当页面的脚本之间彼此独立，且不依赖于本页面的其他任何脚本时，`async` 是最理想的选择。
+
+使用 `defer` 属性加载的脚本将按照它们在页面上出现的顺序加载。在页面内容全部加载完毕之前，脚本不会运行，如果脚本依赖于 DOM 的存在（例如，脚本修改了页面上的一个或多个元素），这一点非常有用。
+
+以下是不同脚本加载方法的可视化表示，以及这对页面意味着什么：
+
+![三种脚本加载方法的工作原理：默认情况下，在获取和执行 JavaScript 时，解析过程被阻塞。使用 async 时，解析暂停，仅执行。使用 defer 时，解析不会暂停，但在解析完所有其他内容后才开始执行](async-defer.jpg)
+
+_该图片来自 [HTML 规范](https://html.spec.whatwg.org/images/asyncdefer.svg)，经过了复制和裁剪，以 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 获得授权。_
+
+比如，如果你的页面要加载以下三个脚本：
+
+```html
+<script async src="js/vendor/jquery.js"></script>
+<script async src="js/script2.js"></script>
+<script async src="js/script3.js"></script>
+```
+
+你不能依赖脚本的加载顺序。`jquery.js` 可能在 `script2` 和 `script3` 之前或之后调用，如果这样，后两个脚本中依赖 `jquery` 的函数将产生错误，因为脚本运行时 `jquery` 尚未加载。
+
+`async` 应该在有大量后台脚本需要加载，并且只想尽快加载到位的情况下使用。例如，你可能需要加载一些游戏数据文件，这在游戏真正开始时是需要的，但现在你只想显示游戏介绍、标题和大厅，而不想被脚本加载阻塞。
+
+解决这一问题可使用 `defer` 属性，在脚本和内容下载后，脚本将按照在页面中出现的顺序加载和运行：
+
+```html
+<script defer src="js/vendor/jquery.js"></script>
+<script defer src="js/script2.js"></script>
+<script defer src="js/script3.js"></script>
+```
+
+在第二个示例中，我们可以确保 `jquery.js` 必定在 `script2.js` 和 `script3.js` 之前加载，同时 `script2.js` 必定在 `script3.js` 之前加载。在页面内容全部加载完成之前，它们不会运行，如果你的脚本依赖于 DOM（例如，它们修改了页面上的一个或多个元素），这将非常有用。
+
+小结：
+
+- `async` 和 `defer` 都指示浏览器在页面的其他部分（DOM 等）正在下载时，在一个单独的线程中下载脚本，因此在获取过程中页面加载不会被阻塞。
+- 带有 `async` 属性的脚本将在下载完成后立即执行。这将阻塞页面，并不保证任何特定的执行顺序。
+- 带有 `defer` 属性的脚本将按照它们的顺序加载，并且只有在所有脚本加载完毕后才会执行。
+- 如果脚本应该立刻运行且没有任何依赖，那么应使用 `async`。
+- 如果脚本需要等待页面解析，且依赖于其他脚本或 DOM，请使用 `defer` 加载脚本，并将关联的脚本按你想要浏览器加载它们的顺序置于相应 `<script>` 元素中。
 
 ### 模块回落
 

@@ -13,15 +13,15 @@ O **elemento HTML** **`<header>`** representa um grupo de suporte introdutório 
 >
 > - O elemento `<header>` não é separador de conteúdo (sectioning content), portanto, não introduz uma nova seção no [outline](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document).
 
-- _[Categoria de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), conteúdo palpável.
-- _Conteúdo permitido_[Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), mas não com descendentes de {{HTMLElement("header")}} ou {{HTMLElement("footer")}}
+- _[Categoria de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), conteúdo palpável.
+- _Conteúdo permitido_[Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), mas não com descendentes de {{HTMLElement("header")}} ou {{HTMLElement("footer")}}
 - _Omissão da tag_ Nenhuma, as tags de abertura e fechamento são obrigatórias.
-- _Elementos-pai permitidos_ Qualquer elemento que aceite [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content). Note que o elemento {{HTMLElement("header")}} não deve ser descendente de {{HTMLElement("address")}}, {{HTMLElement("footer")}} ou outro elemento {{HTMLElement("header")}} .
+- _Elementos-pai permitidos_ Qualquer elemento que aceite [flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content). Note que o elemento {{HTMLElement("header")}} não deve ser descendente de {{HTMLElement("address")}}, {{HTMLElement("footer")}} ou outro elemento {{HTMLElement("header")}} .
 - _Interface DOM_ {{domxref("HTMLElement")}}
 
 ## Atributos
 
-Este elemento não possui outros atributos além dos [atributos globais](/pt-BR/docs/HTML/Global_attributes), comuns a todos os elementos.
+Este elemento não possui outros atributos além dos [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes), comuns a todos os elementos.
 
 ## Exemplos
 
@@ -38,11 +38,11 @@ Este elemento não possui outros atributos além dos [atributos globais](/pt-BR/
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.header")}}
+{{Compat}}
 
 ## Veja também
 
-- Uma descrição mais detalhada: [O elemento header | HTML5 Doctor](http://html5doctor.com/the-header-element/)
+- Uma descrição mais detalhada: [O elemento header | HTML5 Doctor](https://html5doctor.com/the-header-element/)
 - Outros elementos relacionados a seção: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}};
 - [Seções e outlines de um documento HTML5](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document).
 

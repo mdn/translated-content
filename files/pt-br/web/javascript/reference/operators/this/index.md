@@ -59,7 +59,8 @@ f2() === undefined; // true
 
 Portanto, em modo estrito, se `this` não for definido durante o contexto da execução, ele permanecerá indefinido (`undefined`).
 
-> **Nota:** No segundo exemplo, `this` deveria ser [`undefined`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/undefined), porque `f2` foi chamada diretamente e não como um método ou popriedade de um objeto (ou seja, `window.f2()`). Esta característica não foi implementada em alguns navegadores quando começaram a dar suporte ao [strict mode](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode) (modo estrito). Como resultado, eles incorretamente retornavam o objeto `window`.
+> [!NOTE]
+> No segundo exemplo, `this` deveria ser [`undefined`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/undefined), porque `f2` foi chamada diretamente e não como um método ou popriedade de um objeto (ou seja, `window.f2()`). Esta característica não foi implementada em alguns navegadores quando começaram a dar suporte ao [strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode) (modo estrito). Como resultado, eles incorretamente retornavam o objeto `window`.
 
 ### Funções Arrow (seta)
 
@@ -335,19 +336,13 @@ Neste caso, o this da função interior não está definido, portanto ele retorn
 
 ## Especificações
 
-| Especificação                                                    | Estado               | Comentário                                         |
-| ---------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-this-keyword', 'The this keyword')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-this-keyword', 'The this keyword')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ES5.1', '#sec-11.1.1', 'The this keyword')}}         | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES3', '#sec-11.1.1', 'The this keyword')}}           | {{Spec2('ES3')}}     |                                                    |
-| {{SpecName('ES1', '#sec-11.1.1', 'The this keyword')}}           | {{Spec2('ES1')}}     | Initial definition. Implemented in JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.this")}}
+{{Compat}}
 
 ## Veja também
 
-- [Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
+- [Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)
 - [All this](http://bjorn.tipling.com/all-this), um artigo sobre this em diferentes contextos

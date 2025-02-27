@@ -1,27 +1,27 @@
 ---
-title: Coordinates.heading
+title: GeolocationCoordinates：heading 屬性
 slug: Web/API/GeolocationCoordinates/heading
+l10n:
+  sourceCommit: 68c5b12ed1e9a55b86cd32e242216f1b88a8ccc7
 ---
 
-{{APIRef("Geolocation API")}}
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-**`Coordinates.heading`** 是個唯讀的正複數用來代表裝置前進的方向。這個數值代表你偏離北方多少度，0 度代表你向著正北方，照著順時針的方向遞增(90 度代表正東方，270 度代表正西方)。如果{{domxref("Coordinates.speed")}} 為 0 度，則此值為 [`NaN`](/zh-TW/docs/JavaScript/Reference/Global_Objects/NaN)。如果這個裝置無法提供這個值則回傳 null。
+{{domxref("GeolocationCoordinates")}} 介面的 **`heading`** 唯讀屬性是一個 `double` 值，表示裝置正在行進的方向。此值以度數表示，指示裝置偏離正北方向的程度。`0` 度表示正北，方向是順時針決定的（這意味著東是 `90` 度，西是 `270` 度）。如果 {{domxref("GeolocationCoordinates.speed")}} 為 `0`，或裝置無法提供方向資訊，`heading` 為 `null`。
 
-## 語法
+## 值
 
-```plain
-heading = coordinates.heading
-```
+一個 `double`，表示裝置正在行進的方向。
 
-## 規格
+## 規範
 
 {{Specifications}}
 
-## 瀏覽器的相容性
+## 瀏覽器相容性
 
 {{Compat}}
 
-## 請參考
+## 參見
 
-- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
-- 屬於 {{domxref("Coordinates")}} 介面。
+- [使用地理定位 API](/zh-TW/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- {{domxref("GeolocationCoordinates")}}

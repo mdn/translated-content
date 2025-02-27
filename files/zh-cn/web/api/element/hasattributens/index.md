@@ -1,42 +1,53 @@
 ---
-title: Element.hasAttributeNS()
+title: Element：hasAttributeNS() 方法
 slug: Web/API/Element/hasAttributeNS
+l10n:
+  sourceCommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}
 
-## 概述
+{{domxref("Element")}} 接口的 **`hasAttributeNS()`** 方法返回一个表示当前元素是否具有指定命名空间的指定属性的布尔值。
 
-`hasAttributeNS` 返回一个布尔值，指示该元素是否包含有指定的属性（attribute）。
+如果你正在处理 HTML 文档，并且你不需要指定属性是否属于特定命名空间，请改用 {{domxref("Element.hasAttribute()", "hasAttribute()")}} 方法。
 
 ## 语法
 
-```plain
-result =element.hasAttributeNS(namespace,localName)
+```js-nolint
+hasAttributeNS(namespace,localName)
 ```
 
-- `result` 为返回的布尔值：`true` 或 `false`。
-- `namespace` 是一个字符串，表示属性的命名空间。
-- `localName` 是一个字符串，表示属性的名称。
+### 参数
 
-## 例子
+- `namespace`：一个指定属性的命名空间的字符串。
+- `localName`：属性的名称。
 
-```plain
-// 在为属性设置值之前检测该属性是否存在
-var d = document.getElementById("div1");
-if (d.hasAttributeNS(
-        "http://www.mozilla.org/ns/specialspace/",
-        "special-align")) {
-   d.setAttribute("align", "center");
+### 返回值
+
+一个布尔值。
+
+## 示例
+
+```js
+// 在为属性设置值之前检测其是否存在
+const d = document.getElementById("div1");
+if (
+  d.hasAttributeNS("http://www.mozilla.org/ns/specialspace/", "special-align")
+) {
+  d.setAttribute("align", "center");
 }
 ```
 
-## 备注
-
-该方法与[`hasAttribute`](/zh-CN/docs/Web/API/element/hasAttribute)类似，只是要检查的属性由命名空间和名称指定。只有使用命名空间的 XML 文档才使用方法
-
-{{ DOMAttributeMethods() }}
-
 ## 规范
 
-[DOM Level 2 Core: hasAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttrNS)
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{domxref("Element.getAttributeNS()")}}
+- {{domxref("Element.setAttributeNS()")}}
+- {{domxref("Element.removeAttributeNS()")}}

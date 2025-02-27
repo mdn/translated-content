@@ -1,33 +1,56 @@
 ---
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
+l10n:
+  sourceCommit: a71b8929628a2187794754c202ad399fe357141b
 ---
 
 {{jsSidebar("Statements")}}
 
-**`for...of`语句**在[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/iterable)（包括 {{jsxref("Array")}}，{{jsxref("Map")}}，{{jsxref("Set")}}，{{jsxref("String")}}，{{jsxref("TypedArray")}}，[arguments](/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) 对象等等）上创建一个迭代循环，调用自定义迭代钩子，并为每个不同属性的值执行语句
+**`for...of`** 语句执行一个循环，该循环处理来自[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)的值序列。可迭代对象包括内置对象的实例，例如 {{jsxref("Array")}}、{{jsxref("String")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{domxref("NodeList")}}（以及其他 DOM 集合），还包括 {{jsxref("Functions/arguments", "arguments")}} 对象、由[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)生成的[生成器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator)，以及用户定义的可迭代对象。
 
-{{EmbedInteractiveExample("pages/js/statement-forof.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For...Of")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+for (const element of array1) {
+  console.log(element);
+}
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## 语法
 
-```plain
-for (variable of iterable) {
-    //statements
-}
+```js-nolint
+for (variable of iterable)
+  statement
 ```
 
 - `variable`
-  - : 在每次迭代中，将不同属性的值分配给变量。
+  - : 每次迭代时从序列接收一个值。可以是用 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 或 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 声明的变量，也可以是[赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)目标（例如之前声明的变量、对象属性或[解构赋值模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)）。使用 `var` 声明的变量不会局限于循环内部，即它们与 `for...of` 循环所在的作用域相同。
 - `iterable`
-  - : 被迭代枚举其属性的对象。
+  - : 可迭代对象。循环操作的序列值的来源。
+- `statement`
+  - : 每次迭代后执行的语句。可以引用 `variable`。可以使用[块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)来执行多个语句。
 
-## 示例
+## 描述
 
-### 迭代{{jsxref("Array")}}
+`for...of` 循环按顺序逐个处理从可迭代对象获取的值。循环对值的每次操作被称为一次*迭代*，而循环本身被称为*迭代可迭代对象*。每次迭代都会执行可能引用当前序列值的语句。
+
+当 `for...of` 循环迭代一个可迭代对象时，它首先调用可迭代对象的 [`Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) 方法，该方法返回一个[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议)，然后重复调用生成器的 [`next()`](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议) 方法，以生成要分配给 `variable` 的值的序列。
+
+`for...of` 循环在迭代器完成时退出（即迭代器的 `next()` 方法返回一个包含 `done: true` 的对象）。你也可以使用控制流语句来改变正常的控制流程。[`break`](/zh-CN/docs/Web/JavaScript/Reference/Statements/break) 语句退出循环并跳转到循环体后的第一条语句，而 [`continue`](/zh-CN/docs/Web/JavaScript/Reference/Statements/continue) 语句跳过当前迭代的剩余语句，继续进行下一次迭代。
+
+如果 `for...of` 循环提前退出（例如遇到 `break` 语句或抛出错误），则会调用迭代器的 [`return()`](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议) 方法来执行任何清理任务。
+
+`for...of` 的 `variable` 部分可以接受任何在 `=` 运算符之前的内容。只要在循环体内部不重新赋值（可以在迭代之间更改，因为它们是两个独立的变量），你可以使用 {{jsxref("Statements/const", "const")}} 来声明变量。否则，你可以使用 {{jsxref("Statements/let", "let")}}。
 
 ```js
-let iterable = [10, 20, 30];
+const iterable = [10, 20, 30];
 
 for (let value of iterable) {
   value += 1;
@@ -38,10 +61,26 @@ for (let value of iterable) {
 // 31
 ```
 
-如果你不想修改语句块中的变量 , 也可以使用[`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)代替[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)。
+> [!NOTE]
+> 每次迭代都会创建一个新的变量。在循环体内部重新赋值变量不会影响可迭代对象（在本例中，是一个数组）的原始值。
+
+你可以使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)来分配多个局部变量，或者使用属性访问器（如 `for (x.y of iterable)`）来给对象属性赋值。
+
+然而，有一条特别的规则禁止使用 `async` 作为变量名。这是无效语法：
+
+```js-nolint example-bad
+let async;
+for (async of [1, 2, 3]); // SyntaxError: The left-hand side of a for-of loop may not be 'async'.
+```
+
+这是为了避免与有效代码 `for (async of => {};;)` 出现语法歧义，该代码是一个 [`for`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for) 循环。
+
+## 示例
+
+### 迭代数组
 
 ```js
-let iterable = [10, 20, 30];
+const iterable = [10, 20, 30];
 
 for (const value of iterable) {
   console.log(value);
@@ -51,12 +90,14 @@ for (const value of iterable) {
 // 30
 ```
 
-### 迭代{{jsxref("String")}}
+### 迭代字符串
+
+字符串将会按 [Unicode 码位](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)迭代。
 
 ```js
-let iterable = "boo";
+const iterable = "boo";
 
-for (let value of iterable) {
+for (const value of iterable) {
   console.log(value);
 }
 // "b"
@@ -64,35 +105,35 @@ for (let value of iterable) {
 // "o"
 ```
 
-### 迭代 {{jsxref("TypedArray")}}
+### 迭代类型化数组
 
 ```js
-let iterable = new Uint8Array([0x00, 0xff]);
+const iterable = new Uint8Array([0x00, 0xff]);
 
-for (let value of iterable) {
+for (const value of iterable) {
   console.log(value);
 }
 // 0
 // 255
 ```
 
-### 迭代{{jsxref("Map")}}
+### 迭代 Map
 
 ```js
-let iterable = new Map([
+const iterable = new Map([
   ["a", 1],
   ["b", 2],
   ["c", 3],
 ]);
 
-for (let entry of iterable) {
+for (const entry of iterable) {
   console.log(entry);
 }
-// ["a", 1]
-// ["b", 2]
-// ["c", 3]
+// ['a', 1]
+// ['b', 2]
+// ['c', 3]
 
-for (let [key, value] of iterable) {
+for (const [key, value] of iterable) {
   console.log(value);
 }
 // 1
@@ -100,12 +141,12 @@ for (let [key, value] of iterable) {
 // 3
 ```
 
-### 迭代 {{jsxref("Set")}}
+### 迭代 Set
 
 ```js
-let iterable = new Set([1, 1, 2, 2, 3, 3]);
+const iterable = new Set([1, 1, 2, 2, 3, 3]);
 
-for (let value of iterable) {
+for (const value of iterable) {
   console.log(value);
 }
 // 1
@@ -113,105 +154,46 @@ for (let value of iterable) {
 // 3
 ```
 
-### 迭代 {{jsxref("arguments")}} 对象
+### 迭代参数对象
+
+你可以迭代 {{jsxref("Functions/arguments", "arguments")}} 对象来检查传递给函数的所有参数。
 
 ```js
-(function () {
-  for (let argument of arguments) {
-    console.log(argument);
+function foo() {
+  for (const value of arguments) {
+    console.log(value);
   }
-})(1, 2, 3);
+}
 
+foo(1, 2, 3);
 // 1
 // 2
 // 3
 ```
 
-### 迭代 DOM 集合
+### 迭代 NodeList
 
-迭代 DOM 元素集合，比如一个{{domxref("NodeList")}}对象：下面的例子演示给每一个 article 标签内的 p 标签添加一个 "`read`" 类。
+下面的示例通过迭代一个 [`NodeList`](/zh-CN/docs/Web/API/NodeList) DOM 集合，为直接位于 [`<article>`](/zh-CN/docs/Web/HTML/Element/article) 元素下的段落添加一个 `read` 类。
 
 ```js
-//注意：这只能在实现了 NodeList.prototype[Symbol.iterator] 的平台上运行
-let articleParagraphs = document.querySelectorAll("article > p");
-
-for (let paragraph of articleParagraphs) {
+const articleParagraphs = document.querySelectorAll("article > p");
+for (const paragraph of articleParagraphs) {
   paragraph.classList.add("read");
 }
 ```
 
-### 关闭迭代器
+### 迭代用户定义的可迭代对象
 
-对于`for...of`的循环，可以由 `break`, `throw` 或 `return` 终止。在这些情况下，迭代器关闭。
-
-```js
-function* foo() {
-  yield 1;
-  yield 2;
-  yield 3;
-}
-
-for (let o of foo()) {
-  console.log(o);
-  break; // closes iterator, triggers return
-}
-```
-
-### 迭代生成器
-
-你还可以迭代一个[生成器](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)：
+迭代带有返回自定义迭代器的 `[Symbol.iterator]()` 方法的对象：
 
 ```js
-function* fibonacci() {
-  // 一个生成器函数
-  let [prev, curr] = [0, 1];
-  for (;;) {
-    // while (true) {
-    [prev, curr] = [curr, prev + curr];
-    yield curr;
-  }
-}
-
-for (let n of fibonacci()) {
-  console.log(n);
-  // 当 n 大于 1000 时跳出循环
-  if (n >= 1000) break;
-}
-```
-
-#### 不要重用生成器
-
-生成器不应该重用，即使`for...of`循环的提前终止，例如通过{{jsxref("Statements/break", "break")}}关键字。在退出循环后，生成器关闭，并尝试再次迭代，不会产生任何进一步的结果。
-
-```js
-var gen = (function* () {
-  yield 1;
-  yield 2;
-  yield 3;
-})();
-for (let o of gen) {
-  console.log(o);
-  break; //关闭生成器
-}
-
-//生成器不应该重用，以下没有意义！
-for (let o of gen) {
-  console.log(o);
-}
-```
-
-### 迭代其他可迭代对象
-
-你还可以迭代显式实现[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#iterable)协议的对象：
-
-```js
-var iterable = {
+const iterable = {
   [Symbol.iterator]() {
+    let i = 1;
     return {
-      i: 0,
       next() {
-        if (this.i < 3) {
-          return { value: this.i++, done: false };
+        if (i <= 3) {
+          return { value: i++, done: false };
         }
         return { value: undefined, done: true };
       },
@@ -219,81 +201,176 @@ var iterable = {
   },
 };
 
-for (var value of iterable) {
+for (const value of iterable) {
   console.log(value);
 }
-// 0
 // 1
 // 2
+// 3
 ```
 
-### `for...of`与`for...in`的区别
+迭代带有 `[Symbol.iterator]()` 生成器方法的对象：
 
-无论是`for...in`还是`for...of`语句都是迭代一些东西。它们之间的主要区别在于它们的迭代方式。
+```js
+const iterable = {
+  *[Symbol.iterator]() {
+    yield 1;
+    yield 2;
+    yield 3;
+  },
+};
 
-{{jsxref("Statements/for...in", "for...in")}} 语句以任意顺序迭代对象的[可枚举属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
+for (const value of iterable) {
+  console.log(value);
+}
+// 1
+// 2
+// 3
+```
 
-`for...of` 语句遍历[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators#可迭代对象)定义要迭代的数据。
+_可迭代迭代器_（带有返回 `this` 的 `[Symbol.iterator]()` 方法的迭代器）是一种相当常见的技术，用来使迭代器在期望可迭代对象的语法中使用，例如 `for...of`。
 
-以下示例显示了与{{jsxref("Array")}}一起使用时，`for...of`循环和`for...in`循环之间的区别。
+```js
+let i = 1;
+
+const iterator = {
+  next() {
+    if (i <= 3) {
+      return { value: i++, done: false };
+    }
+    return { value: undefined, done: true };
+  },
+  [Symbol.iterator]() {
+    return this;
+  },
+};
+
+for (const value of iterator) {
+  console.log(value);
+}
+// 1
+// 2
+// 3
+```
+
+### 迭代生成器
+
+```js
+function* source() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+const generator = source();
+
+for (const value of generator) {
+  console.log(value);
+}
+// 1
+// 2
+// 3
+```
+
+### 提前退出
+
+在第一个循环中执行 `break` 语句会导致循环提前退出。迭代器尚未完成，因此第二个循环将从第一个循环停止的地方继续执行。
+
+```js
+const source = [1, 2, 3];
+
+const iterator = source[Symbol.iterator]();
+
+for (const value of iterator) {
+  console.log(value);
+  if (value === 1) {
+    break;
+  }
+  console.log("这个字符串不会被输出。");
+}
+// 1
+
+// 另一个使用相同迭代器的循环从上一个循环中断的地方继续。
+for (const value of iterator) {
+  console.log(value);
+}
+// 2
+// 3
+
+// 迭代器已用完。该循环不会执行任何迭代。
+for (const value of iterator) {
+  console.log(value);
+}
+// [没有输出]
+```
+
+生成器实现了 [`return()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator/return) 方法，当循环退出时，该方法会使生成器函数提前返回。这使得生成器在循环之间不可重复使用。
+
+```js example-bad
+function* source() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+const generator = source();
+
+for (const value of generator) {
+  console.log(value);
+  if (value === 1) {
+    break;
+  }
+  console.log("这个字符串不会被输出。");
+}
+// 1
+
+// 生成器已用完。该循环不会执行任何迭代。
+for (const value of generator) {
+  console.log(value);
+}
+// [没有输出]
+```
+
+### `for...of` 与 `for...in` 之间的区别
+
+`for...in` 和 `for...of` 语句都用于迭代某个内容，它们之间的主要区别在于迭代的对象。
+
+{{jsxref("Statements/for...in", "for...in")}} 语句用于迭代对象的[可枚举字符串属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)，而 `for...of` 语句用于迭代[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)定义的要进行迭代的值。
+
+下面的示例展示了在迭代 {{jsxref("Array")}} 时，`for...of` 循环和 `for...in` 循环之间的区别。
 
 ```js
 Object.prototype.objCustom = function () {};
 Array.prototype.arrCustom = function () {};
 
-let iterable = [3, 5, 7];
+const iterable = [3, 5, 7];
 iterable.foo = "hello";
 
-for (let i in iterable) {
-  console.log(i); // logs 0, 1, 2, "foo", "arrCustom", "objCustom"
+for (const i in iterable) {
+  console.log(i);
 }
+// "0"、"1"、"2"、"foo"、"arrCustom"、"objCustom"
 
-for (let i in iterable) {
-  if (iterable.hasOwnProperty(i)) {
-    console.log(i); // logs 0, 1, 2, "foo"
+for (const i in iterable) {
+  if (Object.hasOwn(iterable, i)) {
+    console.log(i);
   }
 }
+// "0" "1" "2" "foo"
 
-for (let i of iterable) {
-  console.log(i); // logs 3, 5, 7
+for (const i of iterable) {
+  console.log(i);
 }
+// 3 5 7
 ```
 
-```js
-Object.prototype.objCustom = function () {};
-Array.prototype.arrCustom = function () {};
+`iterable` 对象继承了 `objCustom` 和 `arrCustom` 属性，因为其[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)中同时包含了 `Object.prototype` 和 `Array.prototype`。
 
-let iterable = [3, 5, 7];
-iterable.foo = "hello";
-```
+`for...in` 循环仅打印了 `iterable` 对象的[可枚举属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。它不会打印数组中的*元素* `3`、`5`、`7` 或 `"hello"`，因为它们不是*属性*，而是*值*。它打印了数组的*索引*以及 `arrCustom` 和 `objCustom`，它们是实际的属性。如果你对为什么迭代这些属性感到困惑，可以查看关于[数组迭代和 `for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in#数组迭代和_for...in) 工作原理的更详细解释。
 
-每个对象将继承`objCustom`属性，并且作为{{jsxref("Array")}}的每个对象将继承`arrCustom`属性，因为将这些属性添加到{{jsxref("Object.prototype")}}和{{jsxref("Array.prototype")}}。由于[继承和原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)，对象`iterable`继承属性`objCustom`和`arrCustom`。
+第二个循环与第一个循环类似，但它使用 {{jsxref("Object.hasOwn()")}} 来检查找到的可枚举属性是否为对象的自有属性，即非继承属性。如果是，则打印该属性。属性 `0`、`1`、`2` 和 `foo` 被打印，因为它们是自有属性。属性 `arrCustom` 和 `objCustom` 没有被打印，因为它们是继承属性。
 
-```js
-for (let i in iterable) {
-  console.log(i); // logs 0, 1, 2, "foo", "arrCustom", "objCustom"
-}
-```
-
-此循环仅以原始插入顺序记录`iterable` 对象的[可枚举属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。它不记录数组**元素** `3`, `5`, `7` 或`hello`，因为这些**不是**枚举属性。但是它记录了数组**索引**以及`arrCustom`和`objCustom`。如果你不知道为什么这些属性被迭代，{{jsxref("Statements/for...in", "array iteration and for...in", "#Array_iteration_and_for...in")}}中有更多解释。
-
-```js
-for (let i in iterable) {
-  if (iterable.hasOwnProperty(i)) {
-    console.log(i); // logs 0, 1, 2, "foo"
-  }
-}
-```
-
-这个循环类似于第一个，但是它使用{{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}} 来检查，如果找到的枚举属性是对象自己的（不是继承的）。如果是，该属性被记录。记录的属性是`0`, `1`, `2`和`foo`，因为它们是自身的属性（**不是继承的**）。属性`arrCustom`和`objCustom`不会被记录，因为它们**是继承的**。
-
-```js
-for (let i of iterable) {
-  console.log(i); // logs 3, 5, 7
-}
-```
-
-该循环迭代并记录`iterable`作为[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators#可迭代对象)定义的迭代值，这些是数组元素 `3`, `5`, `7`，而不是任何对象的**属性**。
+`for...of` 循环迭代并打印 `iterable` 按照数组（数组是[可迭代的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)）定义要进行迭代的*值*。对象的*元素* `3`、`5`、`7` 被打印，但对象的*属性*没有被打印。
 
 ## 规范
 
@@ -303,7 +380,8 @@ for (let i of iterable) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Map.prototype.forEach()")}}
+- {{jsxref("Object.entries()")}}

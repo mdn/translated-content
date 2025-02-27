@@ -1,15 +1,14 @@
 ---
-title: IDBKeyRange.includes()
+title: "IDBKeyRange: includes() メソッド"
+short-title: includes()
 slug: Web/API/IDBKeyRange/includes
 l10n:
-  sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
-{{domxref("IDBKeyRange")}} インターフェイスの `includes()` メソッドは、指定のキーがこのキーの範囲に含まれるかを表す {{jsxref("boolean")}} 値を返します。
-
-{{AvailableInWorkers}}
+`includes()` は {{domxref("IDBKeyRange")}} インターフェイスのメソッドで、指定のキーがこのキーの範囲に含まれるかを表す論理値を返します。
 
 ## 構文
 
@@ -24,7 +23,7 @@ includes(key)
 
 ### 返値
 
-{{jsxref("boolean")}} 値です。
+論理値です。
 
 ### 例外
 

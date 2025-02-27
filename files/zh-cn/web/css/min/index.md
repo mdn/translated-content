@@ -16,7 +16,7 @@ width: min(1vw, 4em, 80px);
 
 ## 语法
 
-`min()` 方法拥有一个或多个逗号分隔符表达式作为参数，表达式的值中最小的值作为参数值。表达式可以是数学函数 (查看 {{CSSxRef("calc", "calc()")}} 了解更多), 字面量，或者其他表达式，比如 {{CSSxRef("attr", "attr()")}}, 可以求得有效值的的类型 (比如 {{CSSxRef("&lt;length&gt;")}})。如果你愿意，你甚至可以在表达式中给每个值一个不同的单位。并且在需要的地方只用圆括号改变计算优先级。
+`min()` 方法拥有一个或多个逗号分隔符表达式作为参数，表达式的值中最小的值作为参数值。表达式可以是数学函数（查看 {{CSSxRef("calc", "calc()")}} 了解更多）、字面量，或者其他表达式，比如 {{CSSxRef("attr", "attr()")}}，可以求得有效值的类型（比如 {{CSSxRef("&lt;length&gt;")}}）。如果你愿意，你甚至可以在表达式中给每个值一个不同的单位。并且在需要的地方只用圆括号改变计算优先级。
 
 ### 注意
 
@@ -91,7 +91,7 @@ Think of the `min()` function as finding the maximum value allowed for a propert
 
 ## 无障碍问题
 
-当`min()` 用于控制文本大小时，要保证文本足够大以便于阅读。建议把 min() 方法嵌入到 {{CSSxRef("max", "max()")}} 中， [relative length unit](/zh-CN/docs/Web/CSS/length#Relative_length_units) 这样就可以便于阅读，比如：
+当`min()` 用于控制文本大小时，要保证文本足够大以便于阅读。建议把 min() 方法嵌入到 {{CSSxRef("max", "max()")}} 中， [relative length unit](/zh-CN/docs/Web/CSS/length#relative_length_units) 这样就可以便于阅读，比如：
 
 ```css
 small {
@@ -117,4 +117,4 @@ small {
 - {{CSSxRef("calc", "calc()")}}
 - {{CSSxRef("clamp", "clamp()")}}
 - {{CSSxRef("max", "max()")}}
-- [CSS Values](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [CSS Values](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

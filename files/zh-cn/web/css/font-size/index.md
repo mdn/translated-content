@@ -5,7 +5,7 @@ slug: Web/CSS/font-size
 
 {{CSSRef}}
 
-**`font-size`** [CSS](/zh-CN/Web/docs/CSS) 属性设置字体大小。更改字体大小还会更新字体大小相关的 {{cssxref("&lt;length&gt;")}} 单位，例如 `em`、`ex` 等。
+**`font-size`** [CSS](/zh-CN/docs/Web/docs/CSS) 属性设置字体大小。更改字体大小还会更新字体大小相关的 {{cssxref("&lt;length&gt;")}} 单位，例如 `em`、`ex` 等。
 
 {{EmbedInteractiveExample("pages/css/font-size.html")}}
 
@@ -64,7 +64,8 @@ font-size: unset;
 - {{cssxref("&lt;percentage&gt;")}}
   - : 一个正的 {{cssxref("&lt;percentage&gt;")}} 值，相对于父元素的字体大小。
 
-> **备注：** 为了最大化无障碍性，通常最好使用相对于用户默认字体大小的值。
+> [!NOTE]
+> 为了最大化无障碍性，通常最好使用相对于用户默认字体大小的值。
 
 - `math` {{Experimental_Inline}}
   使用特殊的[数学缩放规则](https://w3c.github.io/mathml-core/#the-math-script-level-property)来确定 `font-size` 属性的计算值。
@@ -83,7 +84,8 @@ font-size: unset;
 
 字体大小设置也可以组合使用。例如，如果父元素设置为 `16px`，其子元素设置为 `larger`，则子元素在页面上显示比父元素更大。
 
-> **备注：** 使用 `px` 定义字体大小会[破坏无障碍](https://zh.wikipedia.org/wiki/網頁親和力)，因为用户在某些浏览器中无法更改字体大小。例如，视力有限的用户可能希望将字体大小设置得比网页设计师选择的大小大得多。如果你希望创建包容性设计，请避免使用它们来定义字体大小。
+> [!NOTE]
+> 使用 `px` 定义字体大小会[破坏无障碍](https://zh.wikipedia.org/wiki/網頁親和力)，因为用户在某些浏览器中无法更改字体大小。例如，视力有限的用户可能希望将字体大小设置得比网页设计师选择的大小大得多。如果你希望创建包容性设计，请避免使用它们来定义字体大小。
 
 ### Em
 
@@ -218,4 +220,4 @@ span {
 - {{cssxref("font-weight")}}
 - {{cssxref("math-depth")}}
 - {{cssxref("math-style")}}
-- [基本文本和字体样式](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)
+- [基本文本和字体样式](/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals)

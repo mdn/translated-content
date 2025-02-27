@@ -54,4 +54,4 @@ function stopStreamedVideo(videoElem) {
 
 - 메서드가 속한 {{domxref("MediaStreamTrack")}} 인터페이스
 - {{domxref("MediaStreamTrack.readyState")}}
-- {{event("ended")}}
+- {{domxref("MediaStreamTrack/ended_event", "ended")}}

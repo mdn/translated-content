@@ -1,6 +1,9 @@
 ---
-title: AudioBuffer.copyFromChannel()
+title: "AudioBuffer: copyFromChannel() メソッド"
+short-title: copyFromChannel()
 slug: Web/API/AudioBuffer/copyFromChannel
+l10n:
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
 {{APIRef("Web Audio API")}}
@@ -9,8 +12,8 @@ slug: Web/API/AudioBuffer/copyFromChannel
 
 ## 構文
 
-```js
-copyFromChannel(destination, channelNumber, startInChannel);
+```js-nolint
+copyFromChannel(destination, channelNumber, startInChannel)
 ```
 
 ### 引数
@@ -24,7 +27,7 @@ copyFromChannel(destination, channelNumber, startInChannel);
 
 ### 返値
 
-`undefined` です。
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
@@ -40,8 +43,8 @@ copyFromChannel(destination, channelNumber, startInChannel);
 この例では新しい音声バッファーを生成し、他のチャンネルからサンプルをコピーします。
 
 ```js
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-var anotherArray = new Float32Array(length);
+const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+const anotherArray = new Float32Array(length);
 myArrayBuffer.copyFromChannel(anotherArray, 1, 0);
 ```
 

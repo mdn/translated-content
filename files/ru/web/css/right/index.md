@@ -21,15 +21,15 @@ slug: Web/CSS/right
 ## Синтаксис
 
 ```css
+/* Ключевые слова */
+right: auto;
+
 /* Значения величин */
 right: 3px;
 right: 2.4em;
 
 /* Процентные значения от высоты родительского блока */
 right: 10%;
-
-/* Ключевое слово */
-right: auto;
 
 /* Глобальные значения */
 right: inherit;
@@ -91,10 +91,10 @@ right: unset;
 
 {{cssinfo}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{cssxref("position")}}, {{cssxref("left")}}, {{cssxref("top")}}, {{cssxref("bottom")}}

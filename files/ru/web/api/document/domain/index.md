@@ -3,9 +3,9 @@ title: Document.domain
 slug: Web/API/Document/domain
 ---
 
-{{ApiRef}}
+{{APIRef}} {{Deprecated_Header}}
 
-Свойство `domain` у {{domxref("Document")}} интерфейса получает/устанавливает доменную часть источника происхождения (origin) текущего документа, используется в [политике ограничения домена (same origin policy)](/ru/docs/Same_origin_policy_for_JavaScript).
+Свойство `domain` у {{domxref("Document")}} интерфейса получает/устанавливает доменную часть источника происхождения (origin) текущего документа, используется в [политике ограничения домена (same origin policy)](/ru/docs/Web/Security/Same-origin_policy).
 
 ## Синтаксис
 
@@ -53,16 +53,6 @@ if (document.domain == badDomain) {
 }
 ```
 
-## Замечания
-
-Свойство возвращает `null` если домен документа не может быть идентифицирован, хотя теперь это изменилось с Firefox 62 - смотри обсуждение в {{bug(819475)}}.
-
-Mozilla позволит вам установить его в супердомен текущего значения, ограниченный его [базовым доменом](/ru/docs/XPCOM_Interface_Reference/nsIEffectiveTLDService#getBaseDomain.28.29). Например, на developer.mozilla.org возможно установить его как "mozilla.org" но не как "mozilla.com" или "org".
-
-Если это свойство успешно установлено, портовая часть источника так же устанавливается на нуль.
-
-Mozilla отличает свойство `document.domain`, которое никогда не было установлено от явно установленного такого же домена как в URL документа, хотя свойство возвращает одинаковое значение в обоих случаях. Один документ разрешает доступ к другому, если они оба установили `document.domain` в одинаковое значение, указывая тем самым на их намерение сотрудничать или ни один из них не установил `document.domain`, а домены в URL-адресах одинаковые ([реализация](https://mxr.mozilla.org/mozilla-central/source/caps/nsPrincipal.cpp?rev=ecb7068b07a1&mark=199-215#199)). Если бы не эта специальная политика, то каждый сайт будет подвержен XSS от своих поддоменов (для примера <https://bugzilla.mozilla.org> может быть атакован с помощью заведения багов (bug attachments) на <https://bug*.bugzilla.mozilla.org>).
-
 ## Спецификации
 
 {{Specifications}}
@@ -73,4 +63,7 @@ Mozilla отличает свойство `document.domain`, которое ни
 
 ## Смотрите также
 
-- [Политика ограничения домена для JavaScriptHTML](/ru/docs/Same_origin_policy_for_JavaScript)
+- [Политика одинакового источника](/ru/docs/Web/Security/Same-origin_policy)
+- {{domxref("Location.hostname")}}
+- {{domxref("Location.host")}}
+- {{domxref("Window.origin")}}

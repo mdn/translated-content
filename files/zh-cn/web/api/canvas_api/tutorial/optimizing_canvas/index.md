@@ -77,9 +77,9 @@ ctx.drawImage(myImage, 0.3, 0.5);
 
 如果像大多数游戏那样，你有一张静态的背景图，用一个静态的{{HTMLElement("div")}}元素，结合{{cssxref("background")}} 特性，以及将它置于画布元素之后。这么做可以避免在每一帧在画布上绘制大图。
 
-### 用 CSS transforms 特性缩放画布
+### 用 CSS 变换特性缩放画布
 
-[CSS transforms](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transforms) 使用 GPU，因此速度更快。最好的情况是不直接缩放画布，或者具有较小的画布并按比例放大，而不是较大的画布并按比例缩小。
+[CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)使用 GPU，因此速度更快。最好的情况是不直接缩放画布，或者具有较小的画布并按比例放大，而不是较大的画布并按比例缩小。
 
 ```js
 var scaleX = window.innerWidth / canvas.width;
@@ -108,12 +108,12 @@ var ctx = canvas.getContext("2d", { alpha: false });
 - 尽可能避免 {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}特性
 - 尽可能避免[text rendering](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
 - 尝试不同的方法来清除画布 ({{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} vs. {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} vs. 调整 canvas 大小)
-- 有动画，请使用{{domxref("window.requestAnimationFrame()")}} 而非{{domxref("window.setInterval()")}}
+- 有动画，请使用 {{domxref("Window.requestAnimationFrame()")}} 而非 {{domxref("Window.setInterval", "setInterval()")}}
 - 请谨慎使用大型物理库
 
 ## 参见
 
-- [Improving HTML5 Canvas Performance – HTML5 Rocks](http://www.html5rocks.com/en/tutorials/canvas/performance/#toc-ref)
+- [Improving HTML5 Canvas Performance – HTML5 Rocks](https://www.html5rocks.com/en/tutorials/canvas/performance/#toc-ref)
 - [Optimizing your JavaScript game for Firefox OS – Mozilla Hacks](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}

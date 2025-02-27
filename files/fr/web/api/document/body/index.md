@@ -35,4 +35,4 @@ Même si body est modifiable, lui affecter une nouvelle valeur retire tous les �
 
 ## Spécification
 
-- [DOM Level 2 HTML: HTMLDocument.body](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-56360201)
+- [DOM Level 2 HTML: HTMLDocument.body](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-56360201)

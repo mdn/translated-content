@@ -7,7 +7,8 @@ slug: WebAssembly/Understanding_the_text_format
 
 Para permitir que o WebAssembly seja lido e editado por humanos, existe uma representação textual do formato binário Wasm. Este é um formulário intermediário projetado para ser exposto em editores de texto, ferramentas de desenvolvedor de navegador etc. Este artigo explica como esse formato de texto funciona, em termos de sintaxe bruta, e como ele está relacionado ao bytecode subjacente que ele representa — e os objetos wrapper que representam Wasm em JavaScript.
 
-> **Nota:** Isso pode ser um exagero se você for um desenvolvedor da Web que deseja apenas carregar um módulo Wasm em uma página e usá-lo em seu código (consulte [Usando a API JavaScript WebAssembly](/pt-BR/docs/WebAssembly/Using_the_JavaScript_API)), mas é mais útil se, por exemplo, você deseja escrever módulos Wasm para otimizar o desempenho de sua biblioteca JavaScript ou criar seu próprio compilador WebAssembly.
+> [!NOTE]
+> Isso pode ser um exagero se você for um desenvolvedor da Web que deseja apenas carregar um módulo Wasm em uma página e usá-lo em seu código (consulte [Usando a API JavaScript WebAssembly](/pt-BR/docs/WebAssembly/Using_the_JavaScript_API)), mas é mais útil se, por exemplo, você deseja escrever módulos Wasm para otimizar o desempenho de sua biblioteca JavaScript ou criar seu próprio compilador WebAssembly.
 
 ## S-expressions
 
@@ -178,7 +179,8 @@ WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
 });
 ```
 
-> **Nota:** Você pode encontrar este exemplo no GitHub como [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). Consulte também [`WebAssembly.instantiateStreaming()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiateStreaming) para obter mais detalhes sobre a função instanciar.
+> [!NOTE]
+> Você pode encontrar este exemplo no GitHub como [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). Consulte também [`WebAssembly.instantiateStreaming()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) para obter mais detalhes sobre a função instanciar.
 
 ## Explorando fundamentos
 
@@ -232,7 +234,7 @@ WebAssembly tem um namespace de dois níveis, então a declaração de importaç
 
 As funções importadas são como funções normais: elas têm uma assinatura que a validação do WebAssembly verifica estaticamente e recebem um índice e podem ser nomeadas e chamadas.
 
-As funções JavaScript não têm noção de assinatura, portanto qualquer função JavaScript pode ser passada, independentemente da assinatura declarada na importação. Depois que um módulo declara uma importação, o chamador de [`WebAssembly.instantiate()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiate) deve passar um objeto de importação que tenha as propriedades correspondentes.
+As funções JavaScript não têm noção de assinatura, portanto qualquer função JavaScript pode ser passada, independentemente da assinatura declarada na importação. Depois que um módulo declara uma importação, o chamador de [`WebAssembly.instantiate()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiate_static) deve passar um objeto de importação que tenha as propriedades correspondentes.
 
 Para o exposto acima, precisamos de um objeto (vamos chamá-lo de `importObject`) de modo que `importObject.console.log` seja uma função JavaScript.
 
@@ -254,7 +256,8 @@ WebAssembly.instantiateStreaming(fetch("logger.wasm"), importObject).then(
 );
 ```
 
-> **Nota:** Você pode encontrar este exemplo no GitHub como [logger.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html)).
+> [!NOTE]
+> Você pode encontrar este exemplo no GitHub como [logger.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html)).
 
 ### Declarando globais no WebAssembly
 
@@ -334,7 +337,8 @@ Nosso módulo Wasm final se parece com isso:
     call $log))
 ```
 
-> **Nota:** Acima, observe a sintaxe de ponto e vírgula dupla (`;;`) para permitir comentários em arquivos WebAssembly.
+> [!NOTE]
+> Acima, observe a sintaxe de ponto e vírgula dupla (`;;`) para permitir comentários em arquivos WebAssembly.
 
 Agora, a partir do JavaScript, podemos criar uma memória com 1 página e passá-la. Isso resulta em "Hi" sendo impresso no console:
 
@@ -353,7 +357,8 @@ WebAssembly.instantiateStreaming(fetch("logger2.wasm"), importObject).then(
 );
 ```
 
-> **Nota:** Você pode encontrar a fonte completa no GitHub como [logger2.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html) ([também veja ao vivo](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)).
+> [!NOTE]
+> Você pode encontrar a fonte completa no GitHub como [logger2.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html) ([também veja ao vivo](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)).
 
 ### Tabelas WebAssembly
 
@@ -392,7 +397,8 @@ Então, como colocamos as funções Wasm em nossa tabela? Assim como as seções
 - A seção `elem` pode listar qualquer subconjunto das funções em um módulo, em qualquer ordem, permitindo duplicatas. Esta é uma lista das funções que devem ser referenciadas pela tabela, na ordem em que devem ser referenciadas.
 - O valor `(i32.const 0)` dentro da seção `elem` é um deslocamento — isso precisa ser declarado no início da seção e especifica em qual índice na tabela as referências de função começam a ser preenchidas. Aqui especificamos 0 e um tamanho de 2 (veja acima), para que possamos preencher duas referências nos índices 0 e 1. Se quiséssemos começar a escrever nossas referências no deslocamento 1, teríamos que escrever `(i32.const 1)`, e o tamanho da tabela teria que ser 3.
 
-> **Nota:** Os elementos não inicializados recebem um valor padrão de ativação.
+> [!NOTE]
+> Os elementos não inicializados recebem um valor padrão de ativação.
 
 Em JavaScript, as chamadas equivalentes para criar tal instância de tabela seriam mais ou menos assim:
 
@@ -470,9 +476,11 @@ WebAssembly.instantiateStreaming(fetch("wasm-table.wasm")).then((obj) => {
 });
 ```
 
-> **Nota:** Você pode encontrar este exemplo no GitHub como [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)).
+> [!NOTE]
+> Você pode encontrar este exemplo no GitHub como [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)).
 
-> **Nota:** Assim como a memória, as tabelas também podem ser criadas a partir de JavaScript (consulte [`WebAssembly.Table()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Table)) bem como importadas de/para outro módulo Wasm.
+> [!NOTE]
+> Assim como a memória, as tabelas também podem ser criadas a partir de JavaScript (consulte [`WebAssembly.Table()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Table)) bem como importadas de/para outro módulo Wasm.
 
 ### Tabelas mutantes e links dinâmicos
 
@@ -480,7 +488,7 @@ Como o JavaScript tem acesso total às referências de função, o objeto Tabela
 
 Como as tabelas são mutáveis, elas podem ser usadas para implementar [esquemas de vinculação dinâmica] sofisticados de tempo de carregamento e tempo de execução (https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking.md). Quando um programa é vinculado dinamicamente, várias instâncias compartilham a mesma memória e tabela. Isso é simétrico para um aplicativo nativo onde vários `.dll`s compilados compartilham o espaço de endereço de um único processo.
 
-Para ver isso em ação, criaremos um único objeto de importação contendo um objeto de memória e um objeto de tabela e passaremos esse mesmo objeto de importação para várias chamadas [`instantiate()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiate).
+Para ver isso em ação, criaremos um único objeto de importação contendo um objeto de memória e um objeto de tabela e passaremos esse mesmo objeto de importação para várias chamadas [`instantiate()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiate_static).
 
 Nossos exemplos de `.wat` são assim:
 
@@ -521,7 +529,8 @@ Estes funcionam da seguinte forma:
 4. Na última parte da função, criamos uma constante com valor `0`, então chamamos a função neste índice 0 da tabela, que é `shared0func`, armazenado lá anteriormente pelo bloco `elem` em `shared0.wat`.
 5. Quando chamado, `shared0func` carrega o `42` que armazenamos na memória usando o comando `i32.store` em `shared1.wat`.
 
-> **Nota:** As expressões acima novamente extraem valores da pilha implicitamente, mas você pode declará-los explicitamente dentro das chamadas de comando, por exemplo:
+> [!NOTE]
+> As expressões acima novamente extraem valores da pilha implicitamente, mas você pode declará-los explicitamente dentro das chamadas de comando, por exemplo:
 >
 > ```wasm
 > (i32.store (i32.const 0) (i32.const 42))
@@ -548,7 +557,8 @@ Promise.all([
 
 Cada um dos módulos que está sendo compilado pode importar a mesma memória e objetos de tabela e, assim, compartilhar a mesma memória linear e "espaço de endereçamento" de tabela.
 
-> **Nota:** Você pode encontrar este exemplo no GitHub como [shared-address-space.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/shared-address-space.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/understanding-text-format/shared-address-space.html)).
+> [!NOTE]
+> Você pode encontrar este exemplo no GitHub como [shared-address-space.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/shared-address-space.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/understanding-text-format/shared-address-space.html)).
 
 ## Operações de memória em massa
 
@@ -564,7 +574,8 @@ As novas operações são:
 - `table.copy`: Copia de uma região de uma tabela para outra.
 - `table.init`: Copia uma região de um segmento de elemento.
 
-> **Nota:** você pode encontrar mais informações na proposta [Operações de memória em massa e inicialização de segmento condicional](https://github.com/WebAssembly/bulk-memory-operations/blob/master/proposals/bulk-memory-operations/Overview.md).
+> [!NOTE]
+> Você pode encontrar mais informações na proposta [Operações de memória em massa e inicialização de segmento condicional](https://github.com/WebAssembly/bulk-memory-operations/blob/master/proposals/bulk-memory-operations/Overview.md).
 
 ## Tipos
 
@@ -588,7 +599,8 @@ A [proposta de tipos de referência](https://github.com/WebAssembly/reference-ty
 - Um novo tipo, `externref`, que pode conter _qualquer_ valor JavaScript, por exemplo, strings, referências DOM, objetos, etc. `externref` é opaco do ponto de vista do WebAssembly — um módulo Wasm não pode acessar e manipular esses valores e, em vez disso, pode apenas recebê-los e passá-los de volta. Mas isso é muito útil para permitir que os módulos Wasm chamem funções JavaScript, APIs DOM, etc., e geralmente para preparar o caminho para uma interoperabilidade mais fácil com o ambiente host. `externref` pode ser usado para tipos de valor e elementos de tabela.
 - Uma série de novas instruções que permitem aos módulos Wasm manipular diretamente [tabelas WebAssembly](#webassembly_tables), em vez de ter que fazer isso por meio da API JavaScript.
 
-> **Nota:** A documentação [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/) contém algumas informações úteis sobre como aproveitar `externref` do Rust.
+> [!NOTE]
+> A documentação [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/) contém algumas informações úteis sobre como aproveitar `externref` do Rust.
 
 ## WebAssembly de vários valores
 
@@ -645,13 +657,15 @@ No formato de texto, você pode criar uma memória compartilhada usando a palavr
 
 Ao contrário das memórias não compartilhadas, as memórias compartilhadas devem especificar um tamanho "máximo", tanto no construtor da API JavaScript quanto no formato de texto Wasm.
 
-> **Nota:** Você pode encontrar muito mais detalhes na [Proposta de encadeamento para WebAssembly](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md).
+> [!NOTE]
+> Você pode encontrar muito mais detalhes na [Proposta de encadeamento para WebAssembly](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md).
 
 ### Acessos à memória atômica
 
 Várias novas instruções Wasm foram adicionadas e podem ser usadas para implementar recursos de nível superior, como mutexes, variáveis de condição etc. Estas instruções são permitidas em memórias não compartilhadas a partir do Firefox 80.
 
-> **Nota:** A [página de suporte do Emscripten Pthreads](https://emscripten.org/docs/porting/pthreads.html) mostra como aproveitar essa nova funcionalidade do Emscripten.
+> [!NOTE]
+> A [página de suporte do Emscripten Pthreads](https://emscripten.org/docs/porting/pthreads.html) mostra como aproveitar essa nova funcionalidade do Emscripten.
 
 ## Resumo
 

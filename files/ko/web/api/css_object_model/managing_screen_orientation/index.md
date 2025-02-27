@@ -3,13 +3,13 @@ title: Managing screen orientation
 slug: Web/API/CSS_Object_Model/Managing_screen_orientation
 ---
 
-{{SeeCompatTable}}
+{{DefaultAPISidebar("Screen Orientation API")}}{{SeeCompatTable}}
 
 ## Summary
 
-Screen orientation 은 [device orientation](/ko/docs/WebAPI/Detecting_device_orientation) 과는 조금 다르다. 비록 장치가 방향을 감지 못하더라도 화면은 언제나 방향을 가지고 있다. 그리고 만약 장치가 방향을 알 수 있더라도 웹 어플리케이션의 인터페이스를 유지하거나 적응하기 위해 화면의 방향을 조정하는 능력을 갖는게 좋다.
+Screen orientation 은 [device orientation](/ko/docs/Web/API/Device_orientation_events/Detecting_device_orientation) 과는 조금 다르다. 비록 장치가 방향을 감지 못하더라도 화면은 언제나 방향을 가지고 있다. 그리고 만약 장치가 방향을 알 수 있더라도 웹 어플리케이션의 인터페이스를 유지하거나 적응하기 위해 화면의 방향을 조정하는 능력을 갖는게 좋다.
 
-화면의 방향을 다루기 위한 여러 방법이 있는데, CSS 와 JavaScript 이다. 첫 번째는 [orientation media query](/ko/docs/CSS/Media_queries#orientation) 이다. 이것은 내용이 CSS를 사용해서 레이아웃을 조정하게 하는데, 브라우저 창이 가로 모드 (너비가 높이보다 큼) 또는 세로모드 (높이가 너비보다 큼) 여부에 달려 있다.
+화면의 방향을 다루기 위한 여러 방법이 있는데, CSS 와 JavaScript 이다. 첫 번째는 [orientation media query](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation) 이다. 이것은 내용이 CSS를 사용해서 레이아웃을 조정하게 하는데, 브라우저 창이 가로 모드 (너비가 높이보다 큼) 또는 세로모드 (높이가 너비보다 큼) 여부에 달려 있다.
 
 두번째 방법은 JavaScript Screen orientation API 인데 이것은 화면의 현재 방향을 구하고 잠그는데 사용할 수 있다.
 
@@ -115,11 +115,13 @@ Once we have some common styles we can start defining a special case for the ori
 | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | {{ EmbedLiveSample('Adjusting_layout_based_on_the_orientation', 180, 350) }} | {{ EmbedLiveSample('Adjusting_layout_based_on_the_orientation', 350, 180) }} |
 
-> **참고:** orientation media query 는 실제로 브라우저 창 (또는 iframe) 의 방향에 따라 적용한다. 장치의 방향이 아니다.
+> [!NOTE]
+> orientation media query 는 실제로 브라우저 창 (또는 iframe) 의 방향에 따라 적용한다. 장치의 방향이 아니다.
 
 ## Locking the screen orientation
 
-> **경고:** 이 API 는 실험적이며 현재 [Firefox OS](/ko/docs/Mozilla/Firefox_OS) 와 [Firefox for Android](/ko/docs/Mozilla/Firefox_for_Android) 에서 `moz` 접두사를 이용하여 사용할 수 있다.
+> [!WARNING]
+> 이 API 는 실험적이며 현재 [Firefox OS](/ko/docs/Mozilla/Firefox_OS) 와 [Firefox for Android](/ko/docs/Mozilla/Firefox_for_Android) 에서 `moz` 접두사를 이용하여 사용할 수 있다.
 
 몇몇 장치들은 (주로 모바일 장치) 사용자가 언제나 화면을 읽을 수 있게 장치의 방향에 따라 동적으로 화면의 방향을 변화시킬 수 있다. 만약 이러한 행위가 텍스트 컨텐츠에 적합하다면, 이러한 변화 때문에 고통 받을 수 있는 켄텐츠도 있다. 예를 들어, 장치의 방향에 따른 게임들은 이러한 방향전환 때문에 혼란스러울 수 있다.
 
@@ -145,7 +147,8 @@ screen.addEventListener("orientationchange", function () {
 screen.lockOrientation("landscape");
 ```
 
-> **참고:** 화면 잠금은 웹 어플리케이션에 따라 다르다. 어플레케이션 A이 가로모드로 잠겨 있고 어플레케이션 B가 세로모드로 잠겨 있을 때, 어플리케이션을 A 에서 B 로 또는 B 에서 A 로 전환하면 {{domxref("Window.orientationchange_event", "orientationchange")}} 를 호출하지 않는다. 왜냐하면 각 어플리케이션은 각자의 방향을 유지 하기 때문이다.그러나, 만약 잠금요구를 만족하기 위해 방향이 바뀌어야한다면 화면잠금은 {{domxref("Window.orientationchange_event", "orientationchange")}} 이벤트를 호출 할 수 있다.
+> [!NOTE]
+> 화면 잠금은 웹 어플리케이션에 따라 다르다. 어플레케이션 A이 가로모드로 잠겨 있고 어플레케이션 B가 세로모드로 잠겨 있을 때, 어플리케이션을 A 에서 B 로 또는 B 에서 A 로 전환하면 {{domxref("Window.orientationchange_event", "orientationchange")}} 를 호출하지 않는다. 왜냐하면 각 어플리케이션은 각자의 방향을 유지 하기 때문이다.그러나, 만약 잠금요구를 만족하기 위해 방향이 바뀌어야한다면 화면잠금은 {{domxref("Window.orientationchange_event", "orientationchange")}} 이벤트를 호출 할 수 있다.
 
 ## 같이 보기
 
@@ -153,5 +156,5 @@ screen.lockOrientation("landscape");
 - {{domxref("window.screen.lockOrientation()","screen.lockOrientation()")}}
 - {{domxref("window.screen.unlockOrientation()","screen.unlockOrientation()")}}
 - {{domxref("window.screen.onorientationchange","screen.onorientationchange")}}
-- [The orientation media query](/ko/docs/CSS/Media_queries#orientation)
-- [A short introduction to media queries in Firefox 3.5](http://hacks.mozilla.org/2009/06/media-queries/)
+- [The orientation media query](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation)
+- [A short introduction to media queries in Firefox 3.5](https://hacks.mozilla.org/2009/06/media-queries/)

@@ -76,7 +76,7 @@ Um aspecto negativo deste modelo é que se uma mensagem levar muito tempo para s
 
 Nos navegadores, as mensagens são adicionadas a qualquer momento que um evento é acionado se este possuir um _listener_ (ouvinte). Caso não haja, o evento será ignorado. Assim, um clique em um elemento com um manipulador de eventos de clique adicionará uma mensagem, como qualquer outro evento.
 
-A função [`setTimeout`](/pt-BR/docs/Web/API/WindowTimers.setTimeout) é chamada com 2 argumentos: uma mensagem para adicionar à fila (queue) e um valor em tempo (opcional, o padrão é `0`). O valor de tempo (_time value_) representa o intervalo (mínimo) com que a mensagem será realmente enviada à fila. Se não houver outra mensagem na fila, a mensagem será processada logo após o intervalo. No entanto, caso haja mensagens, a mensagem `setTimeout` terá que esperar até que outras mensagens sejam processadas. Por esse motivo, o segundo argumento indica um tempo _mínimo_ e não um tempo _garantido_.
+A função [`setTimeout`](/pt-BR/docs/Web/API/Window/setTimeout) é chamada com 2 argumentos: uma mensagem para adicionar à fila (queue) e um valor em tempo (opcional, o padrão é `0`). O valor de tempo (_time value_) representa o intervalo (mínimo) com que a mensagem será realmente enviada à fila. Se não houver outra mensagem na fila, a mensagem será processada logo após o intervalo. No entanto, caso haja mensagens, a mensagem `setTimeout` terá que esperar até que outras mensagens sejam processadas. Por esse motivo, o segundo argumento indica um tempo _mínimo_ e não um tempo _garantido_.
 
 Aqui está um exemplo que demonstra esse conceito (`setTimeout` não é executado imediatamente após o temporizador expirar):
 
@@ -98,7 +98,7 @@ while (true) {
 
 ### Intervalos de zero segundos
 
-O intervalo zero não significa, necessariamente, que o _callback_ será disparado após zero milissegundos. Chamar [`setTimeout`](/pt-BR/docs/Web/API/setTimeout) com um intervalo de `0` (zero) milissegundos não executa a função do _callback_ após intervalo dado.
+O intervalo zero não significa, necessariamente, que o _callback_ será disparado após zero milissegundos. Chamar [`setTimeout`](/pt-BR/docs/Web/API/Window/setTimeout) com um intervalo de `0` (zero) milissegundos não executa a função do _callback_ após intervalo dado.
 
 A execução depende do número de mensagens em espera na fila. No exemplo abaixo, a mensagem `''this is just a message''` será escrita no console antes que a mensagem do _callback_ seja processada, porque, como informado previamente, o intervalo definido na função indica o tempo _mínimo_ necessário para que a aplicação processe a requisição e não o tempo _exato_ de processamento.
 

@@ -15,7 +15,14 @@ Una **expresión de función flecha** es una alternativa compacta a una {{JSxRef
 - No se puede utilizar como {{Glossary("constructor", "constructor")}}.
 - No se puede utilizar {{JSxRef("Operadores/yield", "yield")}} dentro de su cuerpo.
 
-{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
+{{InteractiveExample("JavaScript Demo: Functions =>")}}
+
+```js interactive-example
+const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+
+console.log(materials.map((material) => material.length));
+// Expected output: Array [8, 6, 7, 9]
+```
 
 ### Comparación de funciones tradicionales con funciones flecha
 
@@ -42,7 +49,8 @@ function (a){
 a => a + 100;
 ```
 
-> **Nota:** Como se muestra arriba, los { corchetes }, ( paréntesis ) y "return" son opcionales, pero pueden ser obligatorios.
+> [!NOTE]
+> Como se muestra arriba, los { corchetes }, ( paréntesis ) y "return" son opcionales, pero pueden ser obligatorios.
 
 Por ejemplo, si tienes **varios argumentos** o **ningún argumento**, deberás volver a introducir paréntesis alrededor de los argumentos:
 
@@ -166,7 +174,8 @@ Consulta también ["ES6 en profundidad: funciones flecha" en hacks.mozilla.org](
 
 Una de las razones por las que se introdujeron las funciones flecha fue para eliminar complejidades del ámbito ({{JSxRef("Operadores/this", "this")}}) y hacer que la ejecución de funciones sea mucho más intuitiva.
 
-> **Nota:** Si `this` es un misterio para ti, consulta {{JSxRef("Operadores/this", "este documento")}} para obtener más información sobre cómo funciona `this`. Para resumir, `this` se refiere a la instancia. Las instancias se crean cuando se invoca la palabra clave `new`. De lo contrario, `this` se establecerá —de forma predeterminada— en el {{Glossary("Scope", "ámbito o alcance")}} de window.
+> [!NOTE]
+> Si `this` es un misterio para ti, consulta {{JSxRef("Operadores/this", "este documento")}} para obtener más información sobre cómo funciona `this`. Para resumir, `this` se refiere a la instancia. Las instancias se crean cuando se invoca la palabra clave `new`. De lo contrario, `this` se establecerá —de forma predeterminada— en el {{Glossary("Scope", "ámbito o alcance")}} de window.
 
 En las **funciones tradicionales** de manera predeterminada `this` está en el ámbito de `window`:
 
@@ -200,7 +209,7 @@ var p = new Person();
 
 En el ejemplo anterior, la función flecha no tiene su propio `this`. Se utiliza el valor `this` del {{Glossary("Scope", "ámbito")}} léxico adjunto; las funciones flecha siguen las reglas normales de búsqueda de variables. Entonces, mientras busca `this` que no está presente en el {{Glossary("Scope", "ámbito")}} actual, una función flecha termina encontrando el `this` de su {{Glossary("Scope", "ámbito")}} adjunto.
 
-**Relación con el modo estricto**
+### Relación con el modo estricto
 
 Dado que `this` proviene del contexto léxico circundante, en el {{JSxRef("Modo_estricto", "modo estricto")}} se ignoran las reglas con respecto a `this`.
 
@@ -215,7 +224,8 @@ f() === window; // o el objeto global
 
 Todas las demás reglas del {{JSxRef("Modo_estricto", "modo estricto")}} se aplican normalmente.
 
-> **Advertencia:** Comprueba las notas sobre el {{JSxRef("Modo_estricto", "modo estricto")}}.
+> [!WARNING]
+> Comprueba las notas sobre el {{JSxRef("Modo_estricto", "modo estricto")}}.
 
 ### Funciones flecha utilizadas como métodos
 

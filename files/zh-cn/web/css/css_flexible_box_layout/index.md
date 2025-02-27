@@ -52,7 +52,7 @@ slug: Web/CSS/CSS_flexible_box_layout
 
 - [弹性盒子基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
   - : 概述 flexbox 的功能
-- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Using_CSS_flexible_boxes)
+- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
   - : 循序渐进的讲解如何用此特性来建立布局。
 - [Flexbox 与其他布局方法的关系](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
   - : Flexbox 如何与其他布局方法和其他 CSS 规范相关
@@ -66,10 +66,8 @@ slug: Web/CSS/CSS_flexible_box_layout
   - : 如何使用多行创建 Flex 容器并控制这些行中项目的显示。
 - [Flexbox 的典型用例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
   - : 常见的设计模式是典型的 flexbox 用例。
-- [用弹性盒子进行 Web 应用布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Using_flexbox_to_lay_out_web_applications)
+- [用弹性盒子进行 Web 应用布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
   - : 讲解在 Web 应用的特定环境下如何应用弹性盒子。
-- [Flexbox 的向后兼容性](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox)
-  - : Flexbox 的浏览器状况，互操作性问题以及支持的旧浏览器和规范版本
 
 ## 规范
 

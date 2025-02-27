@@ -1,5 +1,5 @@
 ---
-title: ":dir()"
+title: :dir()
 slug: Web/CSS/:dir
 ---
 
@@ -18,7 +18,8 @@ slug: Web/CSS/:dir
 
 > **メモ:** `:dir()` 擬似クラスは `[dir=…]` [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)と等価ではないことに注意してください。後者は HTML の [`dir`](/ja/docs/Web/HTML/Global_attributes#dir) 属性を選択しますが、これがない要素は、書字方向が親から継承されていても無視します。（同様に、 `[dir=rtl]` と `[dir=ltr]` は `auto` の値に一致しません。）それに対して、 `:dir()` は継承された場合も含め、{{glossary("user agent", "ユーザーエージェント")}}が計算した値で選択します。
 
-> **メモ:** HTML では、書字方向は [`dir`](/ja/docs/Web/HTML/Global_attributes#dir) 属性で指定されます。他の文書型では異なる方法があるかもしれません。
+> [!NOTE]
+> HTML では、書字方向は [`dir`](/ja/docs/Web/HTML/Global_attributes#dir) 属性で指定されます。他の文書型では異なる方法があるかもしれません。
 
 ## 構文
 

@@ -1,63 +1,83 @@
 ---
-title: 給開發者的網頁技術文件
+title: 給開發者的 Web 技術文件
 slug: Web
+l10n:
+  sourceCommit: c640274a19227cd5790912ea76841732baa6731f
 ---
 
-全球資訊網的開放性提供了開發人員非常棒的機會。要充分發揮網路潛能，你需要知道如何使用它們。你可以從以下連結找到各種 網頁技術說明。
+<section id="Quick_links">
+  {{ListSubpages("", 1, 0, 1)}}
+</section>
 
-## 網頁技術
+全球資訊網的開放性提供了開發人員非常棒的機會。要充分發揮 Web 潛能，你需要知道如何使用它們。你可以從以下連結找到各種 Web 技術說明。
 
-### 基礎
+## Web 開發者說明文件
 
+- [Web 開發者指南](/zh-TW/docs/MDN/Guides)
+  - : 提供實用教學，幫助你實際使用 Web 技術來做你想做或需要做的事情。
+- [Web 開發者入門](/zh-TW/docs/MDN/Tutorials)
+  - : 帶你逐步學習 HTML、CSS、JavaScript 和 Web API。
+- [無障礙](/zh-TW/docs/Web/Accessibility)
+  - : 盡可能地使所有人皆能使用你的網站，不論他們是否具有能力障礙。
+- [效能](/zh-TW/docs/Web/Performance)
+  - : 使內容完全發揮可用性和互動性，並且越快越好。
+- [隱私](/zh-TW/docs/Web/Privacy)
+  - : 保護使用者的個人資料。
+- [安全性](/zh-TW/docs/Web/Security)
+  - : 保護使用者免受資料外洩和盜取、旁路攻擊，以及跨網站指令碼、內容注入和點擊劫持等攻擊。
+- [術語表](/zh-TW/docs/Glossary)
+  - : Web 相關術語的定義。
+
+## Web 技術參考
+
+- [Web API](/zh-TW/docs/Web/API)
+  - : 用於開發 Web 應用程式的 JavaScript API。
 - [HTML](/zh-TW/docs/Web/HTML)
-  - : **超文字標記語言**（HyperText Markup Language）是一種用來結構化描述及定義網頁內容的語言。
+  - : HTML 提供用於構建 Web 文件和應用程式的基本結構。
 - [CSS](/zh-TW/docs/Web/CSS)
-  - : **階層樣式表**（Cascading Style Sheets）可用來描述網頁內容的外觀。
-- [HTTP](/zh-TW/docs/Web/HTTP)
-  - : **超文字傳輸協議**（Hypertext Transfer Protocol）用於傳送網路的 HTML 及其他網頁中會使用到的 hypermedia 文件。
-
-### 腳本語言
-
+  - : 階層式樣式表用於描述　Web 文件和應用程式的外觀。
 - [JavaScript](/zh-TW/docs/Web/JavaScript)
-  - : JavaScript 是在瀏覽器中執行的程式語言，你可以用它來增進網站或網路程式的互動性、及其他動態功能。
-- [Web APIs](/zh-TW/docs/Web/API)
-  - : 提供了能擴展網路腳本化能力的每個 API 的參考資訊，包含了 [DOM](/zh-TW/docs/Web/API/Document_Object_Model) 及所有相關的 API 及介面，能用於製作網站內容與應用程式。[Web API 介面參考](/zh-TW/docs/Web/API)——以字母順序排序的所有介面資訊
-    - [WebAPI](/zh-TW/docs/Web/API) 列出裝置 API 及其他益於開發應用程式時的 API
-    - [事件參考](/zh-TW/docs/Web/Events) 列出可以用來追蹤和回應在網頁或網路程式中所發生的有趣事情的所有事件。
-
-### 圖像
-
-- [SVG](/zh-TW/docs/Web/SVG)
-  - : 可縮放向量圖形（Scalable Vector Graphics）使你能夠使用一組向量（線條）與形狀來描述圖片，在顯示時可提供無關大小的零失真的平滑縮放。
-- [WebGL](/zh-TW/docs/Web/WebGL)
-  - : WebGL 導入一系列近似 OpenGL ES 2.0 標準的 API，可用於 HTML {{HTMLElement("canvas")}} 元件中，將 3D 圖像帶進網路。
-
-### 音訊、影片、多媒體
-
-- [網路媒體科技](/zh-TW/docs/Web/Media)
-  - : 跟多媒體相關的 API 及文件連結清單。
-- [網路媒體科技概觀](/zh-TW/docs/Web/Media/Overview)
-  - : 網路科技及提供影音撥放、操作與錄製的 APIs 概觀。如果你不知道該使用哪一個 API，可以從這裡開始。
-- [影像擷取及串流 API](/zh-TW/docs/Web/API/Media_Capture_and_Streams_API)
-  - : 提供本地或是網路上媒體串流，錄製及操作的 API 參考資料。包含使用本地相機及麥克風擷取影片，音檔和靜態影像。
-
-### 其他
-
-- [MathML](/zh-TW/docs/Web/MathML)
-  - : 數學標記語言（Mathematical Markup Language）使網頁得以展示複雜的數學運算式及語法。
-
-## 學習區
-
-- [學習網路開發](/zh-TW/docs/Learn)
-  - : 這些文章給初學者任何他們開發一個簡單的網頁所需要的東西。
-
-## 其他主題
-
-- [開發網頁應用程式](/zh-TW/docs/Web/Apps)
-  - : 網頁應用程式開發者的文件。Web App 真的只需要單次撰寫，即可佈署到手機、桌面與 Firefox OS 平台。
-- [網頁親和力](/zh-TW/docs/Web/Accessibility)
-  - : 網頁親和力（Accessibility）意指讓最大多數人都得以使用網站，包含某些身心能力受限者。這裡我們提供製作具親和力的網頁內容的相關資訊。
-- [安全](/zh-TW/docs/Web/Security)
-  - : 不要讓你的網站或應用程式洩漏隱私資料給壞人。使用此系列文章確保你的專案安全。
+  - : JavaScript 是 Web 的原生程式語言。
 - [WebAssembly](/zh-TW/docs/WebAssembly)
-  - : WebAssembly 是一種可以在現代瀏覽器執行和編譯的新型態的程式語言。這個語言是一種擁有高效率的二進位格式類似組合語言的低階語言。他提供接近原生的效率，並且提供像是 C/C++這些語言作為編譯標的，能夠讓他們在網頁上執行。
+  - : WebAssembly 能夠讓以 C、C++、Rust、Swift、C#、Go 等語言開發的程式在 Web 上執行。
+- [事件](/zh-TW/docs/Web/Events)
+  - : 你的 Web 應用程式能夠對事件做出反應；例如當 Web 完成載入，或使用者選擇某些內容、按下按鍵、調整視窗大小、提交表單、暫停影片等。
+- [HTTP](/zh-TW/docs/Web/HTTP)
+  - : **超文字傳輸協定**（Hypertext Transfer Protocol）是基本的網際網路協定，用於從網路上取得檔案、樣式表、程式碼、圖片、影片、字型，以及其他資源——以及將資料傳回伺服器。
+- [媒體](/zh-TW/docs/Web/Media)
+  - : 用於在 Web 檔案和應用程式中嵌入和串流視訊、音訊和圖片內容的格式、轉碼器、協定、API 和技術。
+- [SVG](/zh-TW/docs/Web/SVG)
+  - : 可縮放向量圖形（Scalable Vector Graphic）使你能夠建立任何大小皆能平滑縮放的圖片。
+- [MathML](/zh-TW/docs/Web/MathML)
+  - : 數學標記語言（Mathematical Markup Language）使 Web 得以展示複雜的數學運算式及語法。
+- [URI](/zh-TW/docs/Web/URI)
+  - : 統一資源識別碼（URI）被各種技術使用，包括瀏覽器本身透過地址欄來以各種方式識別資源。
+- [WebDriver](/zh-TW/docs/Web/WebDriver)
+  - : WebDriver 是一種透過模擬真人使用瀏覽器的操作來遠端控制瀏覽器的自動化機制。被廣泛用於 Web 應用程式的跨瀏覽器測試。
+- [Web 擴充功能](/zh-TW/docs/Mozilla/Add-ons/WebExtensions)
+  - : Web 擴充功能是一種讓你在瀏覽器中為使用者提供增強功能的方式，例如阻擋廣告和其他內容、自訂頁面外觀等。
+- [Web 應用程式資訊清單](/zh-TW/docs/Web/Progressive_web_apps/Manifest)
+  - : Web 應用程式資訊清單（Web App Manifest）讓使用者能夠將 Web 應用程式安裝到他們的裝置主畫面上，並預先設定畫面方向（直向或橫向）和顯示模式（如全螢幕）等。
+- [漸進式 Web 應用程式](/zh-TW/docs/Web/Progressive_web_apps)
+  - : 漸進式 Web 應用程式（Progressive Web App）提供使用者近似原生行動應用程式的體驗。
+- [OpenSearch](/zh-TW/docs/Web/OpenSearch)
+  - : OpenSearch 允許網站為自身描述一個搜尋引擎，以便瀏覽器或其他用戶端應用程式可以使用該搜尋引擎。
+- [XML](/zh-TW/docs/Web/XML)
+  - : 可擴展標記語言是一種嚴格的[文件物件模型](/zh-TW/docs/Web/API/Document_Object_Model)序列化格式。
+- [XSLT](/zh-TW/docs/Web/XSLT)
+  - : 可延伸樣式表轉換語言是一種基於 [XML](/zh-TW/docs/Web/XML/XML_introduction) 的語言，與專門的處理軟體結合使用，用於轉換 XML 文件。
+- [XPath](/zh-TW/docs/Web/XPath)
+  - : XPath 使用非 XML 語法提供一種靈活的方式來定位（指向）[XML](/zh-TW/docs/Web/XML/XML_introduction) 文件的不同部分。它還可以用於測試文件中的定位節點是否符合某個模式。
+- [EXSLT](/zh-TW/docs/Web/EXSLT)
+  - : EXSLT 是 [XSLT](/zh-TW/docs/Web/XSLT) 的一組擴展。
+
+## 開發者工具說明文件
+
+- [Firefox 開發者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+  - : Firefox 內建的 Web 開發者工具的說明文件。
+- [Chrome 開發者工具](https://developer.chrome.com/docs/devtools/)
+  - : Chrome 內建的 Web 開發者工具的說明文件。
+- [Safari Web 檢閱器](https://webkit.org/web-inspector/)
+  - : Safari 內建的 Web 開發者工具的說明文件。
+- [Edge 開發者工具](https://learn.microsoft.com/zh-TW/microsoft-edge/devtools-guide-chromium/landing/)
+  - : Edge 內建的 Web 開發者工具的說明文件。

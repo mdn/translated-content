@@ -13,6 +13,26 @@ slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 Object.getPrototypeOf(function* () {}).constructor;
 ```
 
+{{InteractiveExample("JavaScript Demo: GeneratorFunction()", "taller")}}
+
+```js interactive-example
+const GeneratorFunction = function* () {}.constructor;
+
+const foo = new GeneratorFunction(`
+  yield 'a';
+  yield 'b';
+  yield 'c';
+`);
+
+let str = "";
+for (const val of foo()) {
+  str = str + val;
+}
+
+console.log(str);
+// Expected output: "abc"
+```
+
 ## 構文
 
 ```
@@ -57,7 +77,7 @@ console.log(iterator.next().value); // 20
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.GeneratorFunction")}}
+{{Compat}}
 
 ## 関連情報
 

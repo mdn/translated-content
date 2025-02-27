@@ -80,7 +80,8 @@ Por exemplo, se você definir `color` e `font-family` em um elemento, todos os e
 
 Algumas propriedades não herdam — por exemplo, se você definir um {{cssxref("width")}} de 50% em um elemento, todos os seus descendentes não obterão uma largura de 50% da largura de seu pai. Se fosse esse o caso, seria muito frustrante usar CSS!
 
-> **Nota:** Nas páginas de referência de propriedade MDN CSS, você pode encontrar uma caixa de informações técnicas chamada "Definição formal", que lista vários pontos de dados sobre essa propriedade, incluindo se ela é herdada ou não. Consulte a [seção de definição formal da propriedade de cores](/pt-BR/docs/Web/CSS/color#formal_definition) como exemplo.
+> [!NOTE]
+> Nas páginas de referência de propriedade MDN CSS, você pode encontrar uma caixa de informações técnicas chamada "Definição formal", que lista vários pontos de dados sobre essa propriedade, incluindo se ela é herdada ou não. Consulte a [seção de definição formal da propriedade de cores](/pt-BR/docs/Web/CSS/color#formal_definition) como exemplo.
 
 ## Compreender como os conceitos funcionam juntos
 
@@ -117,7 +118,8 @@ O {{glossary("CSS")}} fornece cinco valores de propriedades universais especiais
 - {{cssxref("unset")}}
   - : Redefine a propriedade para seu valor natural, o que significa que, se a propriedade for herdada naturalmente, ela agirá como `herdar`, caso contrário, agirá como `inicial`.
 
-> **Nota:** Consulte [Tipos de origem](/pt-BR/docs/Web/CSS/Cascade#origin_types) para obter mais informações sobre cada um deles e como eles funcionam.
+> [!NOTE]
+> Consulte [Tipos de origem](/pt-BR/docs/Web/CSS/Cascade#origin_types) para obter mais informações sobre cada um deles e como eles funcionam.
 
 Podemos olhar para uma lista de links e explorar como funcionam os valores universais. O exemplo ao vivo abaixo permite que você jogue com o CSS e veja o que acontece quando você faz alterações. Brincar com código é realmente a melhor maneira de entender melhor HTML e CSS.
 
@@ -178,11 +180,12 @@ A quantidade de especificidade que um seletor tem é medida usando três valores
 - **Classes**: pontue um nesta coluna para cada seletor de classe, seletor de atributo ou pseudoclasse contido no seletor geral.
 - **Elementos**: Pontue um nesta coluna para cada seletor de elemento ou pseudoelemento contido no seletor geral.
 
-> **Nota:** O seletor universal ([`*`](/pt-BR/docs/Web/CSS/Universal_selectors)), [combinators](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators) (`+`, `>`, `~`, ' ') e seletor de ajuste de especificidade ([`:where()`](/pt-BR/docs/Web/CSS/:where)) juntamente com seus parâmetros, não têm efeito na especificidade.
+> [!NOTE]
+> O seletor universal ([`*`](/pt-BR/docs/Web/CSS/Universal_selectors)), [combinators](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators) (`+`, `>`, `~`, ' ') e seletor de ajuste de especificidade ([`:where()`](/pt-BR/docs/Web/CSS/:where)) juntamente com seus parâmetros, não têm efeito na especificidade.
 
 A negação ([`:not()`](/pt-BR/docs/Web/CSS/:not)), seletor relacional ([`:has()`](/pt-BR/docs/Web/CSS /:has)), e as pseudoclasses matches-any ([`:is()`](/pt-BR/docs/Web/CSS/:is)) não têm efeito na especificidade, mas suas parâmetros fazem. A especificidade que cada um contribui para o algoritmo de especificidade é a especificidade do seletor no parâmetro que tem maior peso.
 
-A tabela a seguir mostra alguns exemplos isolados para você entrar no clima. Tente passar por eles e certifique-se de entender por que eles têm a especificidade que lhes demos. Ainda não abordamos os seletores em detalhes, mas você pode encontrar detalhes de cada seletor no MDN [referência de seletores](/pt-BR/docs/Web/CSS/CSS_Selectors).
+A tabela a seguir mostra alguns exemplos isolados para você entrar no clima. Tente passar por eles e certifique-se de entender por que eles têm a especificidade que lhes demos. Ainda não abordamos os seletores em detalhes, mas você pode encontrar detalhes de cada seletor no MDN [referência de seletores](/pt-BR/docs/Web/CSS/CSS_selectors).
 
 | Seletor                                   | Identificadores | Classes | Elementos | Especificidade total |
 | ----------------------------------------- | --------------- | ------- | --------- | -------------------- |
@@ -202,7 +205,8 @@ Então, o que está acontecendo aqui? Em primeiro lugar, estamos interessados ap
 - Os seletores 3 e 4 estão competindo pelo estilo da cor do texto do link. O segundo ganha e torna o texto branco porque, embora tenha um seletor de elemento a menos, o seletor ausente é trocado por um seletor de classe, que tem mais peso do que os seletores de elemento infinito. A especificidade vencedora é 1-1-3 vs. 1-0-4.
 - Os seletores de 5 a 7 estão competindo pelo estilo da borda do link ao passar o mouse. O seletor 6 claramente perde para o seletor 5 com uma especificidade de 0-2-3 vs. 0-2-4; ele tem um seletor de elemento a menos na cadeia. O seletor 7, no entanto, supera os seletores 5 e 6 porque tem o mesmo número de subseletores na cadeia que o seletor 5, mas um elemento foi trocado por um seletor de classe. Assim, a especificidade vencedora é 0-3-3 vs. 0-2-3 e 0-2-4.
 
-> **Nota:** Cada tipo de seletor tem seu próprio nível de especificidade que não pode ser substituído por seletores com um nível de especificidade inferior. Por exemplo, um seletor _million_ **class** combinado não seria capaz de sobrescrever a especificidade do seletor _one_ **id**.
+> [!NOTE]
+> Cada tipo de seletor tem seu próprio nível de especificidade que não pode ser substituído por seletores com um nível de especificidade inferior. Por exemplo, um seletor _million_ **class** combinado não seria capaz de sobrescrever a especificidade do seletor _one_ **id**.
 >
 > A melhor forma de avaliar a especificidade é pontuar os níveis de especificidade individualmente começando do mais alto e passando para o mais baixo quando necessário. Somente quando há um empate entre as pontuações do seletor dentro de uma coluna de especificidade, você precisa avaliar a próxima coluna abaixo; caso contrário, você pode desconsiderar os seletores de especificidade mais baixa, pois eles nunca podem sobrescrever os seletores de especificidade mais alta.
 
@@ -214,7 +218,8 @@ Os estilos embutidos, ou seja, a declaração de estilo dentro de um atributo [`
 
 Há um pedaço especial de CSS que você pode usar para anular todos os cálculos acima, até mesmo estilos embutidos - o sinalizador `!important`. No entanto, você deve ter muito cuidado ao usá-lo. Este sinalizador é usado para tornar uma propriedade individual e um par de valores a regra mais específica, substituindo assim as regras normais da cascata, incluindo estilos embutidos normais.
 
-> **Nota:** É útil saber que o sinalizador `!important` existe para que você saiba o que é quando o encontrar no código de outras pessoas. **Entretanto, nós recomendamos fortemente que você nunca o use, a menos que seja absolutamente necessário.** O sinalizador `!important` muda a maneira como a cascata normalmente funciona, então pode tornar os problemas de depuração de CSS muito difíceis de resolver, especialmente em um grande folha de estilo.
+> [!NOTE]
+> É útil saber que o sinalizador `!important` existe para que você saiba o que é quando o encontrar no código de outras pessoas. **Entretanto, nós recomendamos fortemente que você nunca o use, a menos que seja absolutamente necessário.** O sinalizador `!important` muda a maneira como a cascata normalmente funciona, então pode tornar os problemas de depuração de CSS muito difíceis de resolver, especialmente em um grande folha de estilo.
 
 Dê uma olhada neste exemplo onde temos dois parágrafos, um dos quais tem um ID.
 
@@ -227,7 +232,8 @@ Vamos examinar isso para ver o que está acontecendo - tente remover algumas das
 3. Ambos os elementos têm um [`class`](/pt-BR/docs/Web/HTML/Global_attributes#class) de `better`, mas o segundo tem um [`id`](/pt-BR/docs /Web/HTML/Global*attributes#id) de `vencedor` também. Como os IDs têm uma especificidade \_ainda maior* do que as classes (você só pode ter um elemento com cada ID exclusivo em uma página, mas muitos elementos com a mesma classe — os seletores de ID são _muito específicos_ no que visam), a cor de fundo vermelha e o 1px a borda preta deve ser aplicada ao 2º elemento, com o primeiro elemento obtendo a cor de fundo cinza e sem borda, conforme especificado pela classe.
 4. O segundo elemento _fica_ com a cor de fundo vermelha, mas sem borda. Por que? Por causa do sinalizador `!important` na segunda regra. Adicionar o sinalizador `!important` depois de `border: none` significa que esta declaração prevalecerá sobre o valor `border` na regra anterior, mesmo que o seletor de ID tenha maior especificidade.
 
-> **Nota:** A única maneira de substituir uma declaração importante é incluir outra declaração importante com a _mesma especificidade_ posteriormente na ordem de origem, ou uma com maior especificidade, ou incluir uma declaração importante em uma camada em cascata anterior (nós ainda não cobrimos as camadas em cascata).
+> [!NOTE]
+> A única maneira de substituir uma declaração importante é incluir outra declaração importante com a _mesma especificidade_ posteriormente na ordem de origem, ou uma com maior especificidade, ou incluir uma declaração importante em uma camada em cascata anterior (nós ainda não cobrimos as camadas em cascata).
 
 Uma situação em que você pode ter que usar o sinalizador `!important` é quando você está trabalhando em um CMS onde você não pode editar os módulos CSS principais, e você realmente quer sobrescrever um estilo embutido ou uma declaração importante que não pode ser substituído de qualquer outra forma. Mas realmente, não use se puder evitá-lo.
 
@@ -250,7 +256,8 @@ Declarações conflitantes serão aplicadas na seguinte ordem, com as posteriore
 5. Declarações importantes nas folhas de estilo do usuário.
 6. Declarações importantes nas folhas de estilo do agente do usuário.
 
-> **Nota:** A ordem de precedência é invertida para estilos sinalizados com `!important`. Faz sentido que as folhas de estilo dos desenvolvedores da Web substituam as folhas de estilo do usuário, para que o design possa ser mantido como pretendido; no entanto, às vezes os usuários têm boas razões para substituir os estilos de desenvolvedor da Web, como mencionado acima, e isso pode ser feito usando `!important` em suas regras.
+> [!NOTE]
+> A ordem de precedência é invertida para estilos sinalizados com `!important`. Faz sentido que as folhas de estilo dos desenvolvedores da Web substituam as folhas de estilo do usuário, para que o design possa ser mantido como pretendido; no entanto, às vezes os usuários têm boas razões para substituir os estilos de desenvolvedor da Web, como mencionado acima, e isso pode ser feito usando `!important` em suas regras.
 
 ### Ordem das camadas em cascata
 

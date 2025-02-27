@@ -114,7 +114,8 @@ Existem vários argumentos contra o uso de conteúdo de vídeo para documentaç�
 - O vídeo tem problemas de acessibilidade: geralmente é mais caro produzir do que texto, mas especialmente para localizar ou tornar utilizável por usuários de leitores de tela.
 - Seguindo do último ponto, o vídeo é muito mais difícil de editar/atualizar/manter do que o conteúdo de texto.
 
-> **Nota:** Vale a pena ter esses problemas em mente mesmo quando estiver fazendo vídeos, para tentar amenizar alguns deles.
+> [!NOTE]
+> Vale a pena ter esses problemas em mente mesmo quando estiver fazendo vídeos, para tentar amenizar alguns deles.
 
 Existem muitos sites de vídeo populares que fornecem muitos tutoriais em vídeo.
 O MDN Web Docs não é um site baseado em vídeo, mas o vídeo tem um lugar no MDN Web Docs em determinados contextos.
@@ -214,7 +215,8 @@ Planeje cuidadosamente o que você realmente vai gravar e pratique as etapas alg
   Nem todos poderão visualizar seu vídeo em alta definição.
   Você poderá ampliar partes específicas na pós-produção, mas é uma boa ideia ampliar o aplicativo antes também.
 
-> **Nota:** não amplie tanto que as IUs que você está mostrando comecem a parecer estranhas ou feias.
+> [!NOTE]
+> não amplie tanto que as IUs que você está mostrando comecem a parecer estranhas ou feias.
 
 ### Gravação
 
@@ -224,7 +226,8 @@ Certifique-se de que o ponteiro do mouse não oculte nenhum ícone ou texto que 
 
 Lembre-se de fazer uma pausa de um ou dois segundos no final para mostrar o resultado do fluxo.
 
-> **Nota:** Se você estiver usando uma ferramenta realmente simples como o QuickTime e a pós-produção não for uma opção por algum motivo, você deve configurar suas janelas no tamanho certo para mostrar a área que deseja mostrar. No Firefox DevTools, você pode usar a [Rulers Tool](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html) para garantir que a viewport esteja na proporção correta para a gravação.
+> [!NOTE]
+> Se você estiver usando uma ferramenta realmente simples como o QuickTime e a pós-produção não for uma opção por algum motivo, você deve configurar suas janelas no tamanho certo para mostrar a área que deseja mostrar. No Firefox DevTools, você pode usar a [Rulers Tool](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html) para garantir que a viewport esteja na proporção correta para a gravação.
 
 ### Pós-processamento
 
@@ -247,7 +250,8 @@ Corte o vídeo na proporção desejada, se necessário.
 Atualmente, os vídeos precisam ser carregados no YouTube para serem exibidos no MDN Web Docs, por exemplo, no canal [mozhacks](https://www.youtube.com/user/mozhacks/videos).
 Peça a um membro da equipe MDN Web Docs para enviar o vídeo se você não tiver um local apropriado para colocá-lo.
 
-> **Nota:** marque o vídeo como "não listado" se não fizer sentido fora do contexto da página (se for um vídeo curto, provavelmente não fará).
+> [!NOTE]
+> marque o vídeo como "não listado" se não fizer sentido fora do contexto da página (se for um vídeo curto, provavelmente não fará).
 
 ### Incorporação
 

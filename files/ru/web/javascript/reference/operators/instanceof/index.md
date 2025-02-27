@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/instanceof
 
 Оператор **`instanceof`** проверяет, принадлежит ли объект к определённому классу. Другими словами, `object instanceof constructor` проверяет, присутствует ли объект `constructor.prototype` в цепочке прототипов `object`.
 
-{{EmbedInteractiveExample("pages/js/expressions-instanceof.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - instanceof")}}
+
+```js interactive-example
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+const auto = new Car("Honda", "Accord", 1998);
+
+console.log(auto instanceof Car);
+// Expected output: true
+
+console.log(auto instanceof Object);
+// Expected output: true
+```
 
 ## Синтаксис
 
@@ -69,7 +84,8 @@ o3 instanceof C; // true, так как C.prototype теперь присутс�
 
 Например, для проверки того, что [Node](/ru/docs/Web/API/Node) является [SVGElement](/ru/docs/Web/API/SVGElement) в разных контекстах можно использовать `myNode instanceof myNode.ownerDocument.defaultView.SVGElement`.
 
-> **Примечание:** Использование XPCOM `instanceof` в коде имеет специальный эффект: `obj instanceof xpcomInterface` (например `Components.interfaces.nsIFile`) вызывает `obj.QueryInterface(xpcomInterface)` и возвращает `true` если проверка на QueryInterface прошла успешно. Побочным эффектом этого вызова является то, что можно использовать свойства _`xpcomInterface`_ на `obj` после успешной проверки с помощью `instanceof`. В отличии от стандартных глобальных JavaScript типов, проверка `obj instanceof xpcomInterface` работает как ожидается, даже если `obj` относится к другому контексту.
+> [!NOTE]
+> Использование XPCOM `instanceof` в коде имеет специальный эффект: `obj instanceof xpcomInterface` (например `Components.interfaces.nsIFile`) вызывает `obj.QueryInterface(xpcomInterface)` и возвращает `true` если проверка на QueryInterface прошла успешно. Побочным эффектом этого вызова является то, что можно использовать свойства _`xpcomInterface`_ на `obj` после успешной проверки с помощью `instanceof`. В отличии от стандартных глобальных JavaScript типов, проверка `obj instanceof xpcomInterface` работает как ожидается, даже если `obj` относится к другому контексту.
 
 ## Примеры
 
@@ -120,7 +136,7 @@ var b = mycar instanceof Object; // возвращает true
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

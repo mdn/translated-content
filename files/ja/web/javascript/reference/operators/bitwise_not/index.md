@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
 
 ビット否定演算子 (`~`) は、オペランドの各ビットを反転します。他のビット演算子と同様、オペランドを 32 ビット符号付き整数に変換します。
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-not.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise NOT")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = -3; // 11111111111111111111111111111101
+
+console.log(~a); // 11111111111111111111111111111010
+// Expected output: -6
+
+console.log(~b); // 00000000000000000000000000000010
+// Expected output: 2
+```
 
 ## 構文
 
@@ -65,4 +76,4 @@ slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
 
 ## 関連情報
 
-- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#ビット演算子)
+- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#ビット演算子)

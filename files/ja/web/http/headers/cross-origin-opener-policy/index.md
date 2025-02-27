@@ -9,7 +9,7 @@ HTTP の **`Cross-Origin-Opener-Policy`** (COOP) はレスポンスヘッダー�
 
 COOP は文書のプロセスを分離し、潜在的な攻撃者がポップアップで文書を開いていたとしても、グローバルオブジェクトにアクセスできないようにし、 [XS-Leaks](https://github.com/xsleaks/xsleaks) と呼ばれる一連のオリジン間アタックを防止します。
 
-COOP を持つクロスオリジン文書が新しいウィンドウで開かれた場合、開いている文書はその参照を持たず、新しいウィンドウの [`window.opener`](/ja/docs/Web/API/Window/opener) プロパティは `null` になります。これは、発信するナビゲーションにのみ影響する [`rel=noopener`](/ja/docs/Web/HTML/Link_types/noopener) よりもウィンドウへの参照をより制御することができるようになります。
+COOP を持つクロスオリジン文書が新しいウィンドウで開かれた場合、開いている文書はその参照を持たず、新しいウィンドウの [`window.opener`](/ja/docs/Web/API/Window/opener) プロパティは `null` になります。これは、発信するナビゲーションにのみ影響する [`rel=noopener`](/ja/docs/Web/HTML/Attributes/rel/noopener) よりもウィンドウへの参照をより制御することができるようになります。
 
 <table class="properties">
   <tbody>
@@ -54,7 +54,7 @@ Cross-Origin-Embedder-Policy: require-corp
 
 また、同様に設定する必要がある {{HTTPHeader("Cross-Origin-Embedder-Policy")}} ヘッダーも参照してください。
 
-クロスオリジン分離が成功したかどうかを確認するには、ウィンドウとワーカーのコンテキストで利用可能な [`crossOriginIsolated`](/ja/docs/Web/API/crossOriginIsolated) プロパティを確認してください。
+クロスオリジン分離が成功したかどうかを確認するには、ウィンドウとワーカーのコンテキストで利用可能な [`crossOriginIsolated`](/ja/docs/Web/API/Window/crossOriginIsolated) プロパティを確認してください。
 
 ```js
 if (crossOriginIsolated) {

@@ -3,7 +3,7 @@ title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 ---
 
-{{JSRef("Global_Objects", "JSON")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -80,5 +80,5 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', function (k, v) {
 
 ## Смотрите также
 
-- [Использование родного объекта `JSON`](/ru/docs/Web/JavaScript/Guide/Using_native_JSON)
+- [Использование родного объекта `JSON`](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - {{jsxref("JSON.stringify()")}}

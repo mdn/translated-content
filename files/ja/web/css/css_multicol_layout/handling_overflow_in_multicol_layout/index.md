@@ -41,4 +41,4 @@ slug: Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout
 
 {{EmbedGHLiveSample("css-examples/multicol/overflow/min-height.html", '100%', 800)}}
 
-このシリーズの最後のガイドでは、[段組みが断片化仕様でどのように動作するか](/ja/docs/Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol)を見て、段をまたいで内容が分割される方法を制御します。
+このシリーズの最後のガイドでは、[段組みが断片化仕様でどのように動作するか](/ja/docs/Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout)を見て、段をまたいで内容が分割される方法を制御します。

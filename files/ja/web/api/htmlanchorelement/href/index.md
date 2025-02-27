@@ -1,5 +1,6 @@
 ---
 title: "HTMLAnchorElement: href プロパティ"
+short-title: href
 slug: Web/API/HTMLAnchorElement/href
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
@@ -16,9 +17,9 @@ l10n:
 ## 例
 
 ```js
-// <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLAnchorElement"> 要素が文書にあったとします
+// <a id="myAnchor" href="https://developer.mozilla.org/ja/HTMLAnchorElement"> 要素が文書にあったとします
 const anchor = document.getElementById("myAnchor");
-anchor.href; // returns 'https://developer.mozilla.org/en-US/HTMLAnchorElement'
+anchor.href; // returns 'https://developer.mozilla.org/ja/HTMLAnchorElement'
 ```
 
 ## 仕様書

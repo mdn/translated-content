@@ -26,7 +26,8 @@ var mediaRecorder = new MediaRecorder(stream[, options]);
     - `videoBitsPerSecond`: Скорость записи медиа данных видео.
     - `bitsPerSecond`: Скорость записи медиаданных аудио и видео. Может определяться вместо верхних двух. Если определяется вместе с одним из свойств выше, имеет меньший приоритет, и используется вместо отсутствующей настройки выше..
 
-    > **Примечание:** Если значения битов в секунду не указаны для видео и / или аудио, для видео по умолчанию принимается значение 2,5 Мбит / с, а для аудио по умолчанию используется адаптивный режим, в зависимости от частоты дискретизации и количества каналов.
+    > [!NOTE]
+    > Если значения битов в секунду не указаны для видео и / или аудио, для видео по умолчанию принимается значение 2,5 Мбит / с, а для аудио по умолчанию используется адаптивный режим, в зависимости от частоты дискретизации и количества каналов.
 
 ### Исключения
 
@@ -66,7 +67,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
 ## Смотрите также
 
-- [Использование MediaRecorder API](/ru/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API)
-- [Веб диктофон](http://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
-- [simpl.info MediaStream Recording demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+- [Использование MediaRecorder API](/ru/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Веб диктофон](https://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
+- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("Navigator.mediaDevices.getUserMedia()")}}

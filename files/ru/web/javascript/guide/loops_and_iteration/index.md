@@ -326,11 +326,9 @@ for (key in obj) {
 
 Хотя, очень заманчиво использовать **for...in** как способ пройтись по всем элементам {{jsxref("Array")}}, этот оператор возвращает имя свойств определённых пользователем помимо числовых индексов. Таким образом лучше использовать стандартный [`for`](/ru/docs/Web/JavaScript/Reference/Statements/for) для числовых индексов при взаимодействии с массивами, поскольку оператор **for...in** проходит по определённым пользователем свойствам в дополнение к элементам массива, если вы изменяете массив, например, добавляете свойства и методы.
 
-### Пример
-
-```
-let arr = ['AUDI A8', '2019', 'brown'];
-arr.cost = '$100.000';
+```js
+let arr = ["AUDI A8", "2019", "brown"];
+arr.cost = "$100.000";
 
 for (key in arr) {
   console.log(`${key} = ${arr[key]}`);
@@ -344,7 +342,7 @@ for (key in arr) {
 
 ## `for...of`
 
-Оператор [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of) создаёт цикл, проходящий по [перечислимым объектам](/ru/docs/Web/JavaScript/Guide/iterable) (включая {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, объект [arguments](/ru/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) и так далее), вызывая на каждой итерации функцию с выражениями, которые надо выполнить для получения значения каждого отдельного свойства.
+Оператор [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of) создаёт цикл, проходящий по [перечислимым объектам](/ru/docs/Web/JavaScript/Reference/Iteration_protocols) (включая {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, объект [arguments](/ru/docs/Web/JavaScript/Reference/Functions/arguments) и так далее), вызывая на каждой итерации функцию с выражениями, которые надо выполнить для получения значения каждого отдельного свойства.
 
 ```
 for (variable of object) {

@@ -1,5 +1,5 @@
 ---
-title: ":enabled"
+title: :enabled
 slug: Web/CSS/:enabled
 ---
 
@@ -13,6 +13,8 @@ input:enabled {
   color: blue;
 }
 ```
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-enabled.html", "tabbed-standard")}}
 
 ## 構文
 

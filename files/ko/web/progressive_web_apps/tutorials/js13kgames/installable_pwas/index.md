@@ -3,7 +3,7 @@ title: PWA를 설치가능하게 만드는 방법
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 ---
 
-{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
+{{PWASidebar}}{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
 
 이전 문서에서는 [service worker](/ko/docs/Web/API/Service_Worker_API)의 도움으로 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 을 오프라인에서 동작하는 방법에 대해 알아보았습니다. 그런데 우리는 더 나아가 모바일 브라우저를 지원하는 웹 앱을 네이티브 앱처럼 설치할 수 있게 할수도 있습니다. 이 문서에서는 웹 manifest를 사용해 홈 화면에 추가라고 불리는 기능을 구현하는 방법에 대해 설명합니다.
 
@@ -13,7 +13,7 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 
 웹 사이트를 설치가능하게 하려면 다음과 같은 것들이 필요합니다.
 
-- [올바른 값들로 채워진](/ko/Apps/Progressive/Add_to_home_screen#Manifest) 웹 manifest
+- [올바른 값들로 채워진](/ko/docs/Apps/Progressive/Add_to_home_screen#manifest) 웹 manifest
 - 보안 (HTTPS) 도메인에서 제공되는 웹 사이트
 - 기기에서 앱을 나타낼 아이콘
 - 앱을 오프라인에서 동작하게 하기 위한 service worker 등록(현재 Android용 Chrome에서만 요구됩니다)
@@ -30,7 +30,8 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 <link rel="manifest" href="js13kpwa.webmanifest" />
 ```
 
-> **참고:** 과거에 manifest로 사용되던 몇 가지 흔한 확장자들이 있습니다: `manifest.webapp` 은 Firefox OS 웹 manifest로 유명하며, 많은 사람들이 JSON 구조로 내용이 구성된 `manifest.json`을 사용합니다. 하지만, `.webmanifest` 확장자는 [W3C manifest 명세](https://w3c.github.io/manifest/)에 명시적으로 언급되고 있으므로 이를 그대로 사용하도록 하겠습니다.
+> [!NOTE]
+> 과거에 manifest로 사용되던 몇 가지 흔한 확장자들이 있습니다: `manifest.webapp` 은 Firefox OS 웹 manifest로 유명하며, 많은 사람들이 JSON 구조로 내용이 구성된 `manifest.json`을 사용합니다. 하지만, `.webmanifest` 확장자는 [W3C manifest 명세](https://w3c.github.io/manifest/)에 명시적으로 언급되고 있으므로 이를 그대로 사용하도록 하겠습니다.
 
 파일의 내용은 다음과 같습니다.
 
@@ -106,7 +107,7 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 
 이 문서에서는 웹 manifest와 홈 화면에 추가를 사용해 PWA를 설치가능하게 하는 방법에 대해 배웠습니다.
 
-홈 화면에 추가에 대한 자세한 내용은 [홈 화면에 추가 가이드](/ko/docs/Web/Apps/Progressive/Add_to_home_screen)를 읽어보시기 바랍니다. 브라우저 지원은 현재 Android 용 Firefox 58+, 모바일 Chrome 및 Android 웹 뷰 31+, Android 32+ 용 Opera로 제한되어 있지만 가까운 장래에 개선 될 것입니다.
+홈 화면에 추가에 대한 자세한 내용은 [홈 화면에 추가 가이드](/ko/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)를 읽어보시기 바랍니다. 브라우저 지원은 현재 Android 용 Firefox 58+, 모바일 Chrome 및 Android 웹 뷰 31+, Android 32+ 용 Opera로 제한되어 있지만 가까운 장래에 개선 될 것입니다.
 
 이제 PWA 퍼즐의 마지막 조각(푸시 알림을 통한 재참여)으로 이동해봅시다.
 

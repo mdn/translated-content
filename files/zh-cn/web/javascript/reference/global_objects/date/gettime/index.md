@@ -9,7 +9,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 
 你可以使用这个方法把一个日期时间赋值给另一个{{jsxref("Date")}} 对象。这个方法的功能和 {{jsxref("Date.valueof", "valueOf()")}} 方法一样。
 
-{{EmbedInteractiveExample("pages/js/date-gettime.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getTime()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 20:17:40 GMT+00:00");
+
+// Milliseconds since Jan 1, 1970, 00:00:00.000 GMT
+console.log(moonLanding.getTime());
+// Expected output: -14182940000
+```
 
 ## 语法
 
@@ -61,7 +69,7 @@ console.log("Operation took " + (end.getTime() - start.getTime()) + " msec");
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.setTime()")}}
 - {{jsxref("Date.prototype.valueOf()")}}

@@ -9,7 +9,17 @@ l10n:
 
 **`Number.EPSILON`** プロパティは、1 と 1 より大きな最小の浮動小数点数の差を表します。
 
-{{EmbedInteractiveExample("pages/js/number-epsilon.html")}}
+{{InteractiveExample("JavaScript Demo: Number.EPSILON")}}
+
+```js interactive-example
+const result = Math.abs(0.2 - 0.3 + 0.1);
+
+console.log(result);
+// Expected output: 2.7755575615628914e-17
+
+console.log(result < Number.EPSILON);
+// Expected output: true
+```
 
 ## 値
 
@@ -78,7 +88,8 @@ console.log(equal(x + y, z, 2000 * Number.EPSILON)); // true
 
 大きさだけでなく、入力の*精度*も考慮することが重要です。例えば、数値がフォーム入力から収集され、入力値が `0.1` のステップでしか調整できない場合（すなわち [`<input type="number" step="0.1">`](/ja/docs/Web/HTML/Attributes/step)）、データは `0.1` の精度しかないので通常は `0.01` など、はるかに大きな許容差を認めることを意味します。
 
-> **メモ:** 有益な教訓：等値検査の閾値として、単純に `Number.EPSILON` を使用しないでくださ い。比較する数値の大きさや精度に適した閾値を使用してください。
+> [!NOTE]
+> 有益な教訓：等値検査の閾値として、単純に `Number.EPSILON` を使用しないでくださ い。比較する数値の大きさや精度に適した閾値を使用してください。
 
 ## 仕様書
 

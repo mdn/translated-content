@@ -1,5 +1,5 @@
 ---
-title: "-webkit-box-reflect"
+title: -webkit-box-reflect
 slug: Web/CSS/-webkit-box-reflect
 ---
 
@@ -26,7 +26,8 @@ La propriété **`-webkit-box-reflect`** peut être utilisée afin de créer un 
 -webkit-box-reflect: unset;
 ```
 
-> **Attention :** Cette fonctionnalité ne doit pas être utilisée sur le Web. Pour créer des effets de reflet sur le Web, on pourra utiliser la fonction CSS standard {{cssxref("element()", "element()")}}.
+> [!WARNING]
+> Cette fonctionnalité ne doit pas être utilisée sur le Web. Pour créer des effets de reflet sur le Web, on pourra utiliser la fonction CSS standard {{cssxref("element()", "element()")}}.
 
 ## Syntaxe
 

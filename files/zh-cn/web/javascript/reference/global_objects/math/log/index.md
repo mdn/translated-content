@@ -3,7 +3,7 @@ title: Math.log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## 概述
 
@@ -61,8 +61,10 @@ function getBaseLog(x, y) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.
 - {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log1p()")}}
+- {{jsxref("Math.log10()")}}
+- {{jsxref("Math.log2()")}}
 - {{jsxref("Math.pow()")}}

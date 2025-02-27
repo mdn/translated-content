@@ -1,48 +1,58 @@
 ---
 title: menus.ContextType
 slug: Mozilla/Add-ons/WebExtensions/API/menus/ContextType
+l10n:
+  sourceCommit: 2c5465eab20015868a1eeca59c5623d37b105f7c
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-메뉴 항목이 나타나게 하는 콘텍스트들.
+메뉴 항목이 표시될 수 있는 컨텍스트들입니다.
 
-## 자료형
+## 타입
 
-이 자료형의 값은 문자열이다. 항목은 주어진 콘텍스트일 때 표시된다. 가능한 값은:
+이 타입의 값은 문자열입니다. 지정된 컨텍스트가 적용될 때 항목이 나타납니다. `menus.ContextType`에서 사용 가능한 값은 다음과 같습니다.
 
 - all
-  - : 'all'은 'bookmark', 'tab' 그리고 'tools_menu'를 뺀 나머지 모든 콘텍스트를 다 나열한 것과 같다.
+  - : 'all'을 지정하면 'bookmark', 'tab', 'tools_menu'를 제외한 모든 컨텍스트의 조합과 동일하게 동작합니다.
+- action
+  - : 사용자가 Manifest V3 확장의 브라우저 액션을 컨텍스트 클릭할 때 적용됩니다. 최상위 브라우저 액션 컨텍스트 메뉴에 추가할 수 있는 최대 항목수는 {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}이지만, 서브 메뉴에는 얼마든지 추가할 수 있습니다.
 - audio
-  - : [audio](/ko/docs/Web/HTML/Element/audio) 요소를 콘텍스트-클릭할 때 적용된다. (역주: 콘텍스트-클릭은 보통 마우스 오른쪽 버튼을 클릭하는 것이다)
+  - : 사용자가 [audio](/ko/docs/Web/HTML/Element/audio) 요소를 컨텍스트 클릭할 때 적용됩니다.
 - bookmark
-  - : 툴바나 메뉴에서 북마크 항목을 콘텍스트-클릭할 때 적용된다. 현재 북마크 사이드바나 라이브러리 윈도우 항목에서는 동작하지 않는다. manifest에 "bookmarks" [API 권한](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)이 있어야 한다.
-- browser_action
-  - : 브라우저 액션에서 콘텍스트-클릭을 할 때 적용된다. 최대로 추가할 수 있는 최상위 브라우저 액션 콘텍스트 매뉴 항목의 수는 {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}지만 서버메뉴에는 얼마든지 추가할 수 있다.
-- editable
-  - : 편집 가능한 요소, 가령은 [textarea](/ko/docs/Web/HTML/Element/textarea)를 콘텍스트-클릭할 때 적용된다.
-- frame
-  - : 내포된 [iframe](/ko/docs/Web/HTML/Element/iframe)을 콘텍스트-클릭할 때 적용된다.
-- image
-  - : 이미지를 콘텍스트-클릭할 때 적용된다.
-- link
-  - : 링크를 콘텍스트-클릭할 때 적용된다.
-- page
-  - : 페이지를 콘텍스트-클릭할 때 적용된다. 단, 페이지의 다른 콘텍스트가 적용되지 않을 때만이다(예를 들면, 클릭이 이미지나 내포된 iframe 또는 링크가 아니여야 한다).
-- page_action
-  - : 페이지 액션을 콘텍스트-클릭할 때 적용된다. 최대로 추가할 수 있는 최상위 페이지 액션 콘텍스트 메뉴 항목의 수는 {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}지만 서버메뉴에는 얼마든지 추가할 수 있다.
-- password
-  - : [password 입력 요소](/ko/docs/Web/HTML/Element/input/password)를 콘텍스트-클릭할 때 적용된다.
-- selection
-  - : 페이지 일부가 선택되었을 때 적용된다.
-- tab
-  - : 탭을 콘텍스트-클릭할 때 적용된다(specifically, this refers to the tab-strip or other user interface element enabling the user to switch from one browser tab to another, not to the page itself).파이어폭스 63부터, 탭에서 메뉴 항목을 클릭하면 그것이 설사 현재탭이 아니더라도 클릭한 탭에 대해 [activeTab](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) 권한이 승인된다.
-- tools_menu
-  - : 항목은 브라우저 툴바의 메뉴로 추가된다. 주의해야 할 것은 `menus` 이름공간을 통해 `ContextType`에 접근해야지 `contextMenus` 이름공간으로 하면 안된다.
-- video
-  - : [video](/ko/docs/Web/HTML/Element/video) 요소에 콘텍스트-클릭을 할 때 적용된다.
 
-"launcher"는 지원되지 않는다.
+  - : 사용자가 북마크 툴바나 북마크 메뉴, 북마크 사이드바(<kbd>Ctrl</kbd>+<kbd>B</kbd>)나 라이브러리 윈도우(<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>)에서 북마크 항목을 컨텍스트 클릭할 때 적용됩니다. 북마크 사이드바와 라이브러리 윈도우에서의 적용은 Firefox 66부터 지원됩니다. 매니페스트에 "bookmarks" [API 권한](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)이 요구됩니다.
+
+- browser_action
+  - : 사용자가 Manifest V2 확장의 브라우저 액션을 컨텍스트 클릭할 때 적용됩니다. 최상위 브라우저 액션 컨텍스트 메뉴에 추가할 수 있는 최대 항목수는 {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}이지만, 서브 메뉴에는 얼마든지 추가할 수 있습니다.
+- editable
+  - : [textarea](/ko/docs/Web/HTML/Element/textarea)처럼 편집 가능한 요소를 컨텍스트 클릭할 때 적용됩니다.
+- frame
+  - : 중첩된 [iframe](/ko/docs/Web/HTML/Element/iframe)을 컨텍스트 클릭할 때 적용됩니다.
+- image
+  - : 사용자가 이미지를 컨텍스트 클릭할 때 적용됩니다.
+- link
+  - : 사용자가 링크를 컨텍스트 클릭할 때 적용됩니다.
+- page
+  - : 사용자가 페이지를 컨텍스트 클릭했지만 다른 페이지 컨텍스트가 적용되지 않는 경우에 적용됩니다(예: 클릭이 이미지나 중첩된 iframe, 혹은 링크에서 발생하지 않은 경우).
+- page_action
+  - : 사용자가 페이지 액션을 컨텍스트 클릭할 때 적용됩니다. 최상위 페이지 액션 컨텍스트 메뉴에 추가할 수 있는 최대 항목수는 {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}이지만, 서브 메뉴에는 얼마든지 추가할 수 있습니다.
+- password
+  - : 사용자가 [password 입력 요소](/ko/docs/Web/HTML/Element/input/password)를 컨텍스트 클릭할 때 적용됩니다.
+- selection
+  - : 페이지 일부가 선택되어 있을 때 적용됩니다.
+- tab
+
+  - : 사용자가 탭을 컨텍스트 클릭할 때 적용됩니다. 구체적으로 페이지 자체가 아니라, 사용자가 한 브라우저 탭에서 다른 탭으로 전환할 수 있도록 하는 탭 스트립 또는 기타 사용자 인터페이스 요소를 의미합니다.
+
+    Firefox 63부터는 탭의 메뉴 항목을 클릭하면 현재 활성 탭이 아닌 경우에도 클릭한 탭에 대해 [activeTab](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) 권한이 부여됩니다.
+
+- tools_menu
+  - : 항목이 브라우저의 도구 메뉴에 추가됩니다. 이 기능은 `menus` 네임스페이스를 통해 `ContextType`에 접근하는 경우에만 사용할 수 있다는 것을 참고하십시오. `contextMenus` 네임스페이스를 통해 접근하는 경우에는 사용할 수 없습니다.
+- video
+  - : [video](/ko/docs/Web/HTML/Element/video) 요소에 컨텍스트 클릭을 할 때 적용됩니다.
+
+참고: "launcher"는 지원되지 않습니다.
 
 ## 브라우저 호환성
 
@@ -50,9 +60,10 @@ slug: Mozilla/Add-ons/WebExtensions/API/menus/ContextType
 
 {{WebExtExamples}}
 
-> **참고:** **Acknowledgements**This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus#type-ContextType) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> [!NOTE]
+> 이 API는 Chromium의 [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus#type-ContextType) API를 기반으로 합니다. 이 문서는 Chromium 코드의 [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json)에서 파생되었습니다.
 
-```
+<!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -80,4 +91,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/menus/ContextType
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-```
+-->

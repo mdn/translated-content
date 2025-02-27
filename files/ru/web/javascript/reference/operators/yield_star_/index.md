@@ -133,18 +133,15 @@ console.log(result); // "foo"
 
 ## Спецификации
 
-| Specification                         | Status               | Comment             |
-| ------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#', 'Yield')}}     | {{Spec2('ES6')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#', 'Yield')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Специфичные для Firefox примечания
 
-- Начиная с Gecko 33, разбор выражений yield было приведено к соответствию с последними спецификациями ES6 ({{bug(981599)}}):
+- Начиная с Gecko 33, разбор выражений yield было приведено к соответствию с последними спецификациями ES6 ([Firefox bug 981599](https://bugzil.la/981599)):
 
   - Реализована корректная обработка разрыва строки. Разрыва строки между "yield" и "\*" быть не может. Такой код вызовет {{jsxref("SyntaxError")}}:
 
@@ -155,9 +152,9 @@ console.log(result); // "foo"
     }
     ```
 
-## See also
+## Смотрите также
 
-- [The Iterator protocol](/ru/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/ru/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield", "yield")}}

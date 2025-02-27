@@ -1,5 +1,5 @@
 ---
-title: ":-moz-window-inactive"
+title: :-moz-window-inactive
 slug: Web/CSS/:-moz-window-inactive
 ---
 
@@ -9,7 +9,8 @@ slug: Web/CSS/:-moz-window-inactive
 
 `:-moz-window-inactive` 也适用于 HTML 文档中的内容。
 
-> **备注：** 在引入这个伪类之前，为背景窗口提供不同的样式是通过在顶层 XUL chrome 窗口上设置属性（`active="true"`）来实现的。这个属性现在已不再使用。
+> [!NOTE]
+> 在引入这个伪类之前，为背景窗口提供不同的样式是通过在顶层 XUL chrome 窗口上设置属性（`active="true"`）来实现的。这个属性现在已不再使用。
 
 ## 语法
 

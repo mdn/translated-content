@@ -5,11 +5,26 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 {{JSRef}}
 
-**`apply()`** 메서드는 주어진 `this` 값과 배열 (또는 [유사 배열 객체](/ko/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Working_with_Array-like_objects)) 로 제공되는 `arguments` 로 함수를 호출합니다.
+**`apply()`** 메서드는 주어진 `this` 값과 배열 (또는 [유사 배열 객체](/ko/docs/Web/JavaScript/Guide#working_with_array-like_objects)) 로 제공되는 `arguments` 로 함수를 호출합니다.
 
-> **참고:** 이 함수의 구문은 거의 {{jsxref("Function.call", "call()")}} 구문과 유사합니다. 근본적인 차이점은 `call()` 은 함수에 전달될 **인수 리스트**를 받는데 비해, `apply()` 는 **인수들의 단일 배열**을 받는다는 점입니다.
+> [!NOTE]
+> 이 함수의 구문은 거의 {{jsxref("Function.call", "call()")}} 구문과 유사합니다. 근본적인 차이점은 `call()` 은 함수에 전달될 **인수 리스트**를 받는데 비해, `apply()` 는 **인수들의 단일 배열**을 받는다는 점입니다.
 
-{{EmbedInteractiveExample("pages/js/function-apply.html")}}
+{{InteractiveExample("JavaScript Demo: Function.apply()")}}
+
+```js interactive-example
+const numbers = [5, 6, 2, 3, 7];
+
+const max = Math.max.apply(null, numbers);
+
+console.log(max);
+// Expected output: 7
+
+const min = Math.min.apply(null, numbers);
+
+console.log(min);
+// Expected output: 2
+```
 
 ## 구문
 
@@ -38,7 +53,8 @@ func.apply(thisArg, [argsArray]);
 
 ECMAScript 5번 째 판의 시작으로, 모든 유사 배열 객체 타입을 사용할 수 있으며, 실제로 이는 프로퍼티 `length` 와 범위 `(0..length-1)` 내의 정수 프로퍼티를 갖는 다는 것을 의미합니다. 예를 들면, 이제 {{domxref("NodeList")}} 또는 `{ 'length': 2, '0': 'eat', '1': 'bananas' }` 와 같은 커스텀 객체를 사용할 수 있습니다.
 
-> **참고:** Chrome 14와 Internet Explorer 9를 포함한 대부분의 브라우저는 아직 유사배열객체를 apply에 사용할 수 없으며 오류가 출력됩니다.
+> [!NOTE]
+> Chrome 14와 Internet Explorer 9를 포함한 대부분의 브라우저는 아직 유사배열객체를 apply에 사용할 수 없으며 오류가 출력됩니다.
 
 ## 예제
 
@@ -128,7 +144,7 @@ Function.prototype.construct = function (aArgs) {
 };
 ```
 
-[클로져](/ko/docs/Web/JavaScript/Guide/Closures) 사용:
+[클로져](/ko/docs/Web/JavaScript/Closures) 사용:
 
 ```JS
 Function.prototype.construct = function(aArgs) {

@@ -9,7 +9,8 @@ Le code de statut de réponse HTTP **`410 Gone`** est une erreur côté client q
 
 Si vous ne savez pas si cette absence est temporaire ou permanente, il est préférable de renvoyer un code de statut [`404`](/fr/docs/Web/HTTP/Status/404).
 
-> **Note :** Par défaut, une réponse 410 peut être mise en cache.
+> [!NOTE]
+> Par défaut, une réponse 410 peut être mise en cache.
 
 ## Statut
 

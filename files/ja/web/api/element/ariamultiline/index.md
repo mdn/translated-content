@@ -10,7 +10,8 @@ l10n:
 
 **`ariaMultiLine`** は {{domxref("Element")}} インターフェイスのプロパティで、テキストボックスが複数行の入力を受け入れるか単一の行だけを受け入れるかを示す [`aria-multiline`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-multiline) 属性の値を反映します。
 
-> **メモ:** 可能であれば、HTMLの {{htmlelement("input")}} 要素で `type="text"` を使用するか、{{htmlelement("textarea")}} を使用してください。これらは意味づけが組み込まれており、ARIA 属性を必要としないからです。
+> [!NOTE]
+> 可能であれば、HTMLの {{htmlelement("input")}} 要素で `type="text"` を使用するか、{{htmlelement("textarea")}} を使用してください。これらは意味づけが組み込まれており、ARIA 属性を必要としないからです。
 
 ## 値
 

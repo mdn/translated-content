@@ -9,8 +9,9 @@ slug: Web/API/MediaRecorder/MediaRecorder
 
 ## 语法
 
-```
-var mediaRecorder = new MediaRecorder(stream[, options]);
+```js-nolint
+new MediaRecorder(stream)
+new MediaRecorder(stream, options)
 ```
 
 ### 参数
@@ -26,7 +27,8 @@ var mediaRecorder = new MediaRecorder(stream[, options]);
     - `videoBitsPerSecond`: 指定视频的比特率。
     - `bitsPerSecond`: 指定音频和视频的比特率。此属性可以用来指定上面两个属性。如果上面两个属性只有其中之一和此属性被指定，则此属性可以用于设定另外一个属性。
 
-    > **备注：** 如果视频和/或音频的比特率没有指定，视频默认采用的比特率是 2.5Mbps，但音频的默认比特率并不固定，音频的默认比特率根据采样率和轨道数自适应。
+    > [!NOTE]
+    > 如果视频和/或音频的比特率没有指定，视频默认采用的比特率是 2.5Mbps，但音频的默认比特率并不固定，音频的默认比特率根据采样率和轨道数自适应。
 
 ## 例子
 
@@ -62,7 +64,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
 ## 更多信息
 
-- [Using the MediaRecorder API](/zh-CN/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API)
-- [Web Dictaphone](http://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
-- [simpl.info MediaStream Recording demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+- [Using the MediaRecorder API](/zh-CN/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
+- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("Navigator.mediaDevices.getUserMedia()")}}

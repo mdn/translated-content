@@ -1,5 +1,5 @@
 ---
-title: ":-moz-last-node"
+title: :-moz-last-node
 slug: Web/CSS/:-moz-last-node
 ---
 
@@ -9,7 +9,8 @@ slug: Web/CSS/:-moz-last-node
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-last-node` selecciona un elemento si es el último nodo hijo de algún otro elemento. Se diferencia de {{cssxref(":last-child")}} en que no selecciona el último elemento hijo si tiene texto (sin contar espacios en blanco) después de él.
 
-> **Nota:** Cualquier espacio en blanco al final de un elemento se ignora al usar `:-moz-last-node`.
+> [!NOTE]
+> Cualquier espacio en blanco al final de un elemento se ignora al usar `:-moz-last-node`.
 
 ## Síntaxis
 

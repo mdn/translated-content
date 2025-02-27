@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 
 El método **`includes()`** determina si una matriz incluye un determinado elemento, devuelve `true` o `false` según corresponda.
 
-{{EmbedInteractiveExample("pages/js/array-includes.html")}}
+{{InteractiveExample("JavaScript Demo: Array.includes()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// Expected output: true
+
+const pets = ["cat", "dog", "bat"];
+
+console.log(pets.includes("cat"));
+// Expected output: true
+
+console.log(pets.includes("at"));
+// Expected output: false
+```
 
 ## Sintaxis
 
@@ -19,7 +34,8 @@ arr.includes(searchElement[, fromIndex])
 
 - `valueToFind`
   - : El valor a buscar.
-    > **Nota:** Al comparar cadenas de texto y caracteres, `includes()` **distingue mayúsculas y minúsculas**.
+    > [!NOTE]
+    > Al comparar cadenas de texto y caracteres, `includes()` **distingue mayúsculas y minúsculas**.
 - `fromIndex` {{optional_inline}}
   - : Posición en la matriz en la cuál se debe comenzar a buscar `valueToFind`; el primer caracter a buscar se encuentra en `fromIndex`. Un valor negativo inicia la búsqueda desde array.length + fromIndex en adelante. El valor por defecto es 0.
 
@@ -27,7 +43,8 @@ arr.includes(searchElement[, fromIndex])
 
 Un {{jsxref ("Boolean")}} que es `true` si el valor `valueToFind` se encuentra dentro de la matriz (o la parte de la matriz indicada por el índice `fromIndex`, si se especifica). Todos los valores de cero se consideran iguales independientemente del signo (es decir, -0 se considera igual a 0 y +0), pero `false` no se considera igual a 0.
 
-> **Nota:** Técnicamente hablando, `include()` usa el algoritmo [`sameValueZero`](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) para determinar si se encuentra el elemento dado
+> [!NOTE]
+> Técnicamente hablando, `include()` usa el algoritmo [`sameValueZero`](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) para determinar si se encuentra el elemento dado
 
 ## Ejemplos
 

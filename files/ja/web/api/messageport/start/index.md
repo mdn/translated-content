@@ -1,31 +1,32 @@
 ---
-title: MessagePort.start()
+title: "MessagePort: start() メソッド"
+short-title: start()
 slug: Web/API/MessagePort/start
+l10n:
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
 
-{{domxref("MessagePort")}} インターフェイスの **`start()`** メソッドは、ポート上のキューに置かれたメッセージの送信を開始します。このメソッドは、{{domxref("EventTarget.addEventListener")}} を使用する場合のみ必要になります。{{domxref("MessagePort.onmessage")}} を使用する場合は暗黙に実行されます。
-
-{{AvailableInWorkers}}
+**`start()`** は {{domxref("MessagePort")}} インターフェイスのメソッドで、ポート上のキューに置かれたメッセージの送信を開始します。このメソッドは、{{domxref("EventTarget.addEventListener")}} を使用する場合のみ必要になります。{{domxref("MessagePort.message_event")}} を使用する場合は暗黙に実行されます。
 
 ## 構文
 
+```js-nolint
+start()
 ```
-port.start()
-```
 
-### 戻り値
-
-無効。
-
-### 引数
+### 返値
 
 なし。
 
+### 引数
+
+なし ({{jsxref("undefined")}})。
+
 ## 例
 
-次のコードブロックには、`handleMessage` ハンドラ関数があり、`onmessage` を使用して、メッセージがこのドキュメントに送り返された時に実行されます:
+次のコードブロックには、`handleMessage` ハンドラー関数があり、`onmessage` を使用して、メッセージがこのドキュメントに送り返された時に実行されます:
 
 ```js
 channel.port1.onmessage = handleMessage;
@@ -46,14 +47,14 @@ function handleMessage(e) {
 channel.port1.start();
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザの実装状況
+## ブラウザーの互換性
 
-{{Compat("api.MessagePort.start")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Using channel messaging](/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [チャンネルメッセージングの使用](/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

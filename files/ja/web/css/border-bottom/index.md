@@ -1,6 +1,8 @@
 ---
 title: border-bottom
 slug: Web/CSS/border-bottom
+l10n:
+  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
 {{CSSRef}}
@@ -9,21 +11,21 @@ slug: Web/CSS/border-bottom
 
 {{EmbedInteractiveExample("pages/css/border-bottom.html")}}
 
-他の一括指定プロパティと同様に、 `border-bottom` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。つまり・・・
+他の一括指定プロパティと同様に、 `border-bottom` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。次のコードを考えてください。
 
 ```css
 border-bottom-style: dotted;
 border-bottom: thick green;
 ```
 
-・・・は、実際には以下と同じです・・・
+これは、実際には以下と同じです。
 
 ```css
 border-bottom-style: dotted;
 border-bottom: none thick green;
 ```
 
-・・・そして、 `border-bottom` の前で設定された {{cssxref("border-bottom-style")}} の値は無視されます。 {{cssxref("border-bottom-style")}} の既定値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
+`border-bottom` の前で設定された {{cssxref("border-bottom-style")}} の値は無視されます。 {{cssxref("border-bottom-style")}} の既定値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
 
 ## 構成要素のプロパティ
 
@@ -44,6 +46,7 @@ border-bottom: medium dashed blue;
 border-bottom: inherit;
 border-bottom: initial;
 border-bottom: revert;
+border-bottom: revert-layer;
 border-bottom: unset;
 ```
 
@@ -68,17 +71,17 @@ border-bottom: unset;
 
 ## 例
 
-<h3 id="Applying_a_bottom_border">下の境界の適用</h3>
+### 下の境界の適用
 
 #### HTML
 
-```html
+```html live-sample___applying_a_bottom_border
 <div>このボックスには下側に境界線があります。</div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___applying_a_bottom_border
 div {
   border-bottom: 4px dashed blue;
   background-color: gold;

@@ -1,27 +1,27 @@
 ---
-title: Coordinates.accuracy
+title: GeolocationCoordinates：accuracy 屬性
 slug: Web/API/GeolocationCoordinates/accuracy
+l10n:
+  sourceCommit: 066d55a090927fa19ba19c2a4b2417470e1a979f
 ---
 
-{{APIRef("Geolocation API")}}
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-**`Coordinates.accuracy`** 是個唯讀的正複數用來代表 {{domxref("Coordinates.latitude")}} 和 {{domxref("Coordinates.longitude")}} 的準確度，單位為公尺，並有 95% 可靠度。
+{{domxref("GeolocationCoordinates")}} 介面的 **`accuracy`** 唯讀屬性是一個正 `double` 值，表示以公尺表示的 {{domxref("GeolocationCoordinates.latitude")}} 和 {{domxref("GeolocationCoordinates.longitude")}} 屬性的準確度，並具有 95% 的可信度。
 
-## 語法
+## 值
 
-```plain
-acc = coordinates.accuracy
-```
+一個正的 `double`，表示以公尺表示的 {{domxref("GeolocationCoordinates.latitude")}} 和 {{domxref("GeolocationCoordinates.longitude")}} 屬性的準確度，並具有 95% 的可信度。
 
-## 規格
+## 規範
 
 {{Specifications}}
 
-## 瀏覽器的相容性
+## 瀏覽器相容性
 
 {{Compat}}
 
-## 請參考
+## 參見
 
-- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
-- 屬於 {{domxref("Coordinates")}} 介面。
+- [使用地理位置 API](/zh-TW/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- {{domxref("GeolocationCoordinates")}}

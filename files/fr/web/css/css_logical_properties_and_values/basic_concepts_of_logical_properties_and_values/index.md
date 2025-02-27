@@ -47,11 +47,12 @@ Le diagramme suivant illustre l'axe en ligne et l'axe de bloc pour un mode d'éc
 
 ## Prise en charge des navigateurs
 
-Les propriétés et valeurs logiques peuvent être catégorisées selon différents groupes, notamment pour la compatibilité des navigateurs. Certaines des propriétés logiques sont essentiellement des correspondances de propriétés physiques équivalentes ({{CSSxRef("inline-size")}} sera la propriété logique pouvant correspondre à la propriété physique {{CSSxRef("width")}} et {{CSSxRef("margin-inline-start")}} la propriété physique correspondant à {{CSSxRef("margin-left")}}). La prise en charge de ces propriétés logiques correspondant à des propriétés physiques est plutôt correcte pour les navigateurs récents, vous pouvez consulter les pages [de référence pour ces propriétés sur MDN](/fr/docs/Web/CSS/CSS_Logical_Properties#reference), seul Edge ne prend pas en charge ces propriétés à date (décembre 2018).
+Les propriétés et valeurs logiques peuvent être catégorisées selon différents groupes, notamment pour la compatibilité des navigateurs. Certaines des propriétés logiques sont essentiellement des correspondances de propriétés physiques équivalentes ({{CSSxRef("inline-size")}} sera la propriété logique pouvant correspondre à la propriété physique {{CSSxRef("width")}} et {{CSSxRef("margin-inline-start")}} la propriété physique correspondant à {{CSSxRef("margin-left")}}). La prise en charge de ces propriétés logiques correspondant à des propriétés physiques est plutôt correcte pour les navigateurs récents, vous pouvez consulter les pages [de référence pour ces propriétés sur MDN](/fr/docs/Web/CSS/CSS_logical_properties_and_values#reference), seul Edge ne prend pas en charge ces propriétés à date (décembre 2018).
 
 On a également un groupe de propriétés qui ne possèdent pas de correspondances directes avec les propriétés physiques. Ces propriétés sont des propriétés raccourcies qui font référence aux deux extrêmités d'un axe. Ainsi {{CSSxRef("margin-block")}} sera une propriété raccourcie pour {{CSSxRef("margin-block-start")}} et {{CSSxRef("margin-block-end")}}. Ce deuxième groupe n'est actuellement pas pris en charge par les navigateurs.
 
-> **Note :** Le groupe de travail CSS est actuellement en réflexion pour les propriétés raccourcies avec quatre valeurs pour les propriétés logiques. Autrement dit, comment définir les marges logiques de la façon dont on utilise la propriété {{CSSxRef("margin")}}. Il faudrait en effet une sorte de modificateur si on continue d'utiliser le nom `margin` pour les propriétés relatives au flux. Pour en savoir plus sur les suggestions et commentaires, vous pouvez consulter l'_issue_ GitHub [n°1282](https://github.com/w3c/csswg-drafts/issues/1282).
+> [!NOTE]
+> Le groupe de travail CSS est actuellement en réflexion pour les propriétés raccourcies avec quatre valeurs pour les propriétés logiques. Autrement dit, comment définir les marges logiques de la façon dont on utilise la propriété {{CSSxRef("margin")}}. Il faudrait en effet une sorte de modificateur si on continue d'utiliser le nom `margin` pour les propriétés relatives au flux. Pour en savoir plus sur les suggestions et commentaires, vous pouvez consulter l'_issue_ GitHub [n°1282](https://github.com/w3c/csswg-drafts/issues/1282).
 
 ### Tester la compatibilité des navigateurs
 
@@ -61,7 +62,7 @@ Il est possible de tester la prise en charge des propriétés et valeurs logique
 
 ## Voir aussi
 
-- [L'alignement des boîtes pour une disposition en grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-- [L'alignement des boîtes pour une disposition flexible](/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
+- [L'alignement des boîtes pour une disposition en grille](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [L'alignement des boîtes pour une disposition flexible](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
 - [Comprendre les propriétés et les valeurs logiques](https://www.smashingmagazine.com/2018/03/understanding-logical-properties-values/)
-- [Les modes d'écriture](/fr/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)
+- [Les modes d'écriture](/fr/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)

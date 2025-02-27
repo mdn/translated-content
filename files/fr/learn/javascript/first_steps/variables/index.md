@@ -27,7 +27,7 @@ Après lecture des deux articles précédents, vous savez maintenant ce qu'est J
 
 ## Outils nécessaires
 
-Tout au long de cet article, on vous demandera de saisir des lignes de code pour tester votre compréhension. Si vous vous servez du navigateur avec un ordinateur de bureau, l'endroit le plus approprié pour saisir les exemples de code est la console JavaScript du navigateur (voyez [Les outils de développement du navigateur](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) pour plus d'informations sur la manière d'accéder à ces outils).
+Tout au long de cet article, on vous demandera de saisir des lignes de code pour tester votre compréhension. Si vous vous servez du navigateur avec un ordinateur de bureau, l'endroit le plus approprié pour saisir les exemples de code est la console JavaScript du navigateur (voyez [Les outils de développement du navigateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) pour plus d'informations sur la manière d'accéder à ces outils).
 
 Toutefois, nous avons aussi incorporé une console JavaScript dans cette page pour vous permettre d'y écrire le code au cas où vous n'utiliseriez pas un navigateur avec une console JavaScript facilement accessible, ou si vous estimez qu'une console incorporée est plus confortable.
 
@@ -78,7 +78,8 @@ Les variables sont essentielles et à mesure que vous en apprendrez plus sur Jav
 
 Une autre particularité des variables&nbsp;: elle peuvent contenir pratiquement de tout — pas uniquement des chaînes ou des nombres. Elles peuvent aussi contenir des données complexes et même des fonctions, ce qui permet de réaliser des choses étonnantes. Vous en apprendrez plus à ce propos au long de ce parcours.
 
-> **Note :** Nous disons que les variables contiennent des valeurs. C'est un distingo important. Les variables ne sont pas les valeurs elles‑mêmes : ce sont des conteneurs pour ces valeurs. Vous pouvez vous les représenter comme une boîte en carton dans laquelle il est possible de ranger des choses.
+> [!NOTE]
+> Nous disons que les variables contiennent des valeurs. C'est un distingo important. Les variables ne sont pas les valeurs elles‑mêmes : ce sont des conteneurs pour ces valeurs. Vous pouvez vous les représenter comme une boîte en carton dans laquelle il est possible de ranger des choses.
 
 ![](boxes.png)
 
@@ -91,7 +92,7 @@ let myName;
 let myAge;
 ```
 
-Dans ces lignes, nous venons de créer deux variables nommées respectivement `myName` et `myAge`. Saisissez les maintenant dans la console de votre navigateur, ou dans la console au bas de la page (Vous [ouvrez cette console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) soit dans un onglet séparé, soit dans une fenêtre selon votre préférence). Après cela, essayez de créer une variable (ou deux) en choisissant vous même le nom.
+Dans ces lignes, nous venons de créer deux variables nommées respectivement `myName` et `myAge`. Saisissez les maintenant dans la console de votre navigateur, ou dans la console au bas de la page (ou utilisez la [console de développement du navigateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) soit dans un onglet séparé). Après cela, essayez de créer une variable (ou deux) en choisissant vous même le nom.
 
 ```html hidden
 <!doctype html>
@@ -198,7 +199,8 @@ Dans ces lignes, nous venons de créer deux variables nommées respectivement `m
 
 {{ EmbedLiveSample('Déclarer_une_variable', '100%', 300) }}
 
-> **Note :** En JavaScript, le code de toute instruction doit se terminer par un point‑virgule (`;`) — il peut fonctionner correctement sans ce point‑virgule pour des lignes isolées, mais ce ne sera probablement pas le cas si vous écrivez plusieurs lignes de code ensemble. Prenez l'habitude de mettre ce point‑virgule.
+> [!NOTE]
+> En JavaScript, le code de toute instruction doit se terminer par un point‑virgule (`;`) — il peut fonctionner correctement sans ce point‑virgule pour des lignes isolées, mais ce ne sera probablement pas le cas si vous écrivez plusieurs lignes de code ensemble. Prenez l'habitude de mettre ce point‑virgule.
 
 Vous pouvez maintenant tester si ces valeurs existent dans l'environnement d'exécution en saisissant simplement le nom de ces variables, par exemple
 
@@ -213,7 +215,8 @@ Actuellement elles ne contiennent aucune valeur&nbsp;; ce sont des conteneurs vi
 scoobyDoo;
 ```
 
-> **Note :** Ne confondez pas une variable qui existe mais sans valeur définie avec une variable qui n'existe pas du tout — ce sont deux choses tout à fait différentes. Dans l'analogie des boîtes, _ne pas exister_ correspond à l'absence de boîte ; _valeur indéfinie_ correspond à une boîte vide.
+> [!NOTE]
+> Ne confondez pas une variable qui existe mais sans valeur définie avec une variable qui n'existe pas du tout — ce sont deux choses tout à fait différentes. Dans l'analogie des boîtes, _ne pas exister_ correspond à l'absence de boîte ; _valeur indéfinie_ correspond à une boîte vide.
 
 ## Initialisation d'une variable
 
@@ -261,7 +264,8 @@ logName();
 var myName;
 ```
 
-> **Note :** l'exemple ci-dessus ne fonctionnera pas si on tape des lignes une à une dans la console, mais seulement quand on exécute un script JavaScript multi-lignes dans un document web.
+> [!NOTE]
+> L'exemple ci-dessus ne fonctionnera pas si on tape des lignes une à une dans la console, mais seulement quand on exécute un script JavaScript multi-lignes dans un document web.
 
 Ce processus se nomme **«** **hoisting&nbsp;»** (en français, "hissage") — lisez [var hoisting](/fr/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) pour plus de précisions sur ce sujet.
 
@@ -314,7 +318,8 @@ Vous pouvez nommer une variable comme vous l'entendez, mais il y a des restricti
 - Les variables sont sensibles à la casse — donc `myage` et `myAge` correspondent à deux variables différentes.
 - Enfin les _mots réservés_ du langage JavaScript ne peuvent pas être choisis comme nom pour une variable — les mots réservés sont les mots qui font effectivement partie de la syntaxe du JavaScript. Donc, vous ne pouvez pas utiliser des mots comme `var`, `function`, `let` ou `for` comme noms de variable. Les navigateurs les reconnaîtront en tant qu'éléments de code, et cela déclenchera des erreurs.
 
-> **Note :** Une liste exhaustive des mots réservés est proposée dans la page [Lexical grammar — keywords](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#keywords).
+> [!NOTE]
+> Une liste exhaustive des mots réservés est proposée dans la page [Lexical grammar — keywords](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#keywords).
 
 Exemples de noms corrects&nbsp;:
 

@@ -80,7 +80,8 @@ AES 是一种分组加密算法，这意味着它将消息分成多个模块，�
 
 本质上：nonce 应该确保计数器模块不会在不同的消息间重复使用，而计数器应能确保计数器模块不会在单条消息中重复使用。
 
-> **备注：** 参见 [NIST SP800-38A 标准的附录 B](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf#%5B%7B%22num%22%3A70%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22Fit%22%7D%5D) 以了解详情。
+> [!NOTE]
+> 参见 [NIST SP800-38A 标准的附录 B](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf#%5B%7B%22num%22%3A70%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22Fit%22%7D%5D) 以了解详情。
 
 ### AES-CBC
 
@@ -94,7 +95,8 @@ AES 是一种分组加密算法，这意味着它将消息分成多个模块，�
 
 ## 示例
 
-> **备注：** 你可以在 GitHub 上[尝试这个可用的示例](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html)。
+> [!NOTE]
+> 你可以在 GitHub 上[尝试这个可用的示例](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html)。
 
 ### RSA-OAEP
 
@@ -155,7 +157,7 @@ let data = new Uint8Array(12345);
 // 加密函数使用 promise 包裹，因此我们必须使用 await，
 // 并确保包含此代码的函数是一个异步函数
 // 加密函数需要一个 cryptokey 对象
-const key_encoded = await crypto.subtle.importKey(
+const key_encoded = await window.crypto.subtle.importKey(
   "raw",
   key.buffer,
   "AES-CTR",

@@ -5,7 +5,8 @@ slug: Web/API/Window/find
 
 {{ApiRef}}{{Non-standard_Header}}
 
-> **Note :** La prise en charge de `Window.find()` pourrait changer dans les futures versions de Gecko. Voir [bug Firefox 672395](https://bugzil.la/672395).
+> [!NOTE]
+> La prise en charge de `Window.find()` pourrait changer dans les futures versions de Gecko. Voir [bug Firefox 672395](https://bugzil.la/672395).
 
 La méthode **`Window.find()`** trouve une chaîne dans une fenêtre.
 
@@ -31,7 +32,7 @@ window.find(
   - : {{jsxref("Boolean")}}. Si `true`, spécifie une recherche vers l'arrière.
 - `aWrapAround`
   - : {{jsxref("Boolean")}}. Si `true`, spécifie une recherche enveloppante.
-- `aWholeWord` {{Unimplemented_Inline}}
+- `aWholeWord`
   - : {{jsxref("Boolean")}}. Si `true`, spécifie une recherche de mot entier. Ceci n'est pas implémenté; voir [bug Firefox 481513](https://bugzil.la/481513).
 - `aSearchInFrames`
   - : {{jsxref("Boolean")}}. Si `true`, spécifie une recherche dans les cadres.

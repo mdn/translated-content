@@ -5,7 +5,7 @@ slug: Web/CSS/width
 
 {{CSSRef}}
 
-Свойство CSS **`width`** устанавливает ширину элемента. По умолчанию она равняется ширине [внутренней области](/ru/docs/Web/CSS/box_model#content), но если {{cssxref("box-sizing")}} имеет значение `border-box`, то она будет равняться ширине [области рамки](/ru/docs/Web/CSS/box_model#border).
+Свойство CSS **`width`** устанавливает ширину элемента. По умолчанию она равняется ширине [внутренней области](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content), но если {{cssxref("box-sizing")}} имеет значение `border-box`, то она будет равняться ширине [области рамки](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border).
 
 {{EmbedInteractiveExample("pages/css/width.html")}}
 
@@ -14,14 +14,7 @@ slug: Web/CSS/width
 ## Синтаксис
 
 ```css
-/* <length> значения */
-width: 300px;
-width: 25em;
-
-/* <percentage> значения */
-width: 75%;
-
-/* Значения-ключевые слова */
+/* Ключевые слова */
 width: 25em border-box;
 width: 75% content-box;
 width: max-content;
@@ -29,6 +22,13 @@ width: min-content;
 width: available;
 width: fit-content;
 width: auto;
+
+/* <length> значения */
+width: 300px;
+width: 25em;
+
+/* <percentage> значения */
+width: 75%;
 
 /* Глобальные значения */
 width: inherit;
@@ -160,7 +160,7 @@ p.minblue {
 
 {{EmbedLiveSample('min-content_2', '500px', '155px')}}
 
-## Проблемы доступности
+## Доступность
 
 Убедитесь, что элементы с `width` не обрезаются и / или не затеняют другое содержимое, когда страница масштабируется для увеличения размера текста.
 
@@ -171,10 +171,10 @@ p.minblue {
 
 {{Specifications}}{{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Блочная модель](/ru/docs/Web/CSS/box_model), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}
+- [Блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}

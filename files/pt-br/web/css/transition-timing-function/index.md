@@ -588,15 +588,13 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## Specifications
 
-| Specification                                                                                            | Status                          | Comment            |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------- | ------------------ |
-| {{ SpecName('CSS3 Transitions', '#transition-timing-function-property', 'transition-timing-function') }} | {{ Spec2('CSS3 Transitions') }} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.transition-timing-function")}}
+{{Compat}}
 
 ## See also
 
-- [Using CSS transitions](/pt-BR/docs/CSS/Using_CSS_transitions)
+- [Using CSS transitions](/pt-BR/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{ domxref("TransitionEvent") }}

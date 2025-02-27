@@ -3,7 +3,7 @@ title: transition-duration
 slug: Web/CSS/transition-duration
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 **`transition-duration`** 属性以秒或毫秒为单位指定过渡动画所需的时间。默认值为 `0s`，表示不出现过渡动画。
 
@@ -116,5 +116,5 @@ changeButton.addEventListener("click", change);
 
 ## 参见
 
-- [Using CSS transitions](/zh-CN/docs/CSS/Using_CSS_transitions)
+- [Using CSS transitions](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{ domxref("TransitionEvent") }}

@@ -17,7 +17,7 @@ Você não precisa criar um objeto {{jsxref("Number")}} para acessar esta propri
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.NaN")}}
+{{Compat}}
 
 ## Veja também
 

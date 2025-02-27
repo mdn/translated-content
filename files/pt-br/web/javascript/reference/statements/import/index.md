@@ -161,7 +161,7 @@ export function getUsefulContents(url, callback) {
 }
 ```
 
-**O programa principal: main.js**
+#### O programa principal: main.js
 
 ```js
 import { getUsefulContents } from "/modules/file.js";
@@ -194,24 +194,17 @@ for (const link of document.querySelectorAll("nav > a")) {
 
 ## Especificações
 
-| Especificação                                                                                          | Estado               | Comentário         |
-| ------------------------------------------------------------------------------------------------------ | -------------------- | ------------------ |
-| ["function-like" dynamic `import()` proposal](https://github.com/tc39/proposal-dynamic-import/#import) | Stage 3              |                    |
-| {{SpecName("ESDraft", "#sec-imports", "Imports")}}                                                     | {{Spec2("ESDraft")}} |                    |
-| {{SpecName("ES2018", "#sec-imports", "Imports")}}                                                      | {{Spec2("ES2018")}}  |                    |
-| {{SpecName("ES2017", "#sec-imports", "Imports")}}                                                      | {{Spec2("ES2017")}}  |                    |
-| {{SpecName("ES2016", "#sec-imports", "Imports")}}                                                      | {{Spec2("ES2016")}}  |                    |
-| {{SpecName("ES2015", "#sec-imports", "Imports")}}                                                      | {{Spec2("ES2015")}}  | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.import")}}
+{{Compat}}
 
 ## Veja também
 
 - {{JSxRef("Statements/export", "export")}}
-- [`import.meta`](/pt-BR/docs/Web/JavaScript/Reference/Statements/import.meta)
+- [`import.meta`](/pt-BR/docs/Web/JavaScript/Reference/Operators/import.meta)
 - [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
 - [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
-- [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+- [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)

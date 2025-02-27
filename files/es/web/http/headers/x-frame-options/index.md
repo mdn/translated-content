@@ -9,7 +9,8 @@ El encabezado de respuesta [HTTP](/es/docs/Web/HTTP) **`X-Frame-Options`** puede
 
 La seguridad añadida sólo es proporcionada si el usuario que está accediendo al documento está utilizando un navegador que soporte `X-Frame-Options`.
 
-> **Nota:** El encabezado HTTP {{HTTPHeader("Content-Security-Policy")}} tiene una directiva {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} que deja [obsoleto](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options) este encabezado para los navegadores compatibles.
+> [!NOTE]
+> El encabezado HTTP {{HTTPHeader("Content-Security-Policy")}} tiene una directiva {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} que deja [obsoleto](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options) este encabezado para los navegadores compatibles.
 
 <table class="properties">
   <tbody>
@@ -46,7 +47,8 @@ Si especifica `DENY`, fallarán no sólo los intentos de cargar la página en un
 
 ## Ejemplos
 
-> **Nota:** ¡Configurar X-Frame-Options en el tag {{HTMLElement("meta")}} es inútil! Por ejemplo, `<meta http-equiv="X-Frame-Options" content="deny">` no tiene efecto. ¡No lo use! `X-Frame-Options` sólo funcionará configurandolo a tráves del encabezado HTTP, como en los ejemplos a continuación.
+> [!NOTE]
+> ¡Configurar X-Frame-Options en el tag {{HTMLElement("meta")}} es inútil! Por ejemplo, `<meta http-equiv="X-Frame-Options" content="deny">` no tiene efecto. ¡No lo use! `X-Frame-Options` sólo funcionará configurandolo a tráves del encabezado HTTP, como en los ejemplos a continuación.
 
 ### Configurando Apache
 

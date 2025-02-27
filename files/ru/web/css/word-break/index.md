@@ -12,15 +12,17 @@ slug: Web/CSS/word-break
 ## Синтаксис
 
 ```css
-/* Значения ключевых слов */
+/* Ключевые слова */
 word-break: normal;
 word-break: break-all;
 word-break: keep-all;
-word-break: break-word; /* не включено в стандарт */
+word-break: break-word; /* Устаревшее значение */
 
 /* Глобальные значения */
 word-break: inherit;
 word-break: initial;
+word-break: revert;
+word-break: revert-layer;
 word-break: unset;
 ```
 
@@ -37,7 +39,8 @@ word-break: unset;
 - `break-word` {{Non-standard_Inline}}
   - : При превышении границ блока, обычно остающиеся целыми слова, могут быть разбиты в произвольном месте, если не будет найдено более подходящее для переноса строки место.
 
-> **Примечание:** В отличие от `word-break: break-word` и `overflow-wrap: break-word` (смотри {{cssxref("overflow-wrap")}}), `word-break: break-all` вставит перевод строки в том месте, где текст будет превышать занимаемый им блок (даже в том случае, когда текст можно перенести по словам).
+> [!NOTE]
+> В отличие от `word-break: break-word` и `overflow-wrap: break-word` (смотри {{cssxref("overflow-wrap")}}), `word-break: break-all` вставит перевод строки в том месте, где текст будет превышать занимаемый им блок (даже в том случае, когда текст можно перенести по словам).
 
 ### Формальный синтаксис
 
@@ -112,10 +115,10 @@ word-break: unset;
 
 {{cssinfo}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{cssxref("overflow-wrap")}}

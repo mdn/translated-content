@@ -2,85 +2,69 @@
 title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
 l10n:
-  sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
+  sourceCommit: 28232983aa91026e50ec4300ddcb1b1d894a93b9
 ---
 
 {{JSRef}}
 
-**`some()`** メソッドは、指定された関数で実装されているテストに、配列の中の少なくとも 1 つの要素が 合格するかどうかを判定します。配列の中で指定された関数が true を返す要素を見つけた場合は true を返し、そうでない場合は false を返します。それ以外の場合は false を返します。配列は変更しません。
+**`some()`** は {{jsxref("Array")}} インスタンスのメソッドで、指定された関数で実装されているテストに、配列の中の少なくとも 1 つの要素が合格するかどうかを判定します。配列の中で指定された関数が true を返す要素を見つけた場合は true を返し、そうでない場合は false を返します。配列は変更しません。
 
-{{EmbedInteractiveExample("pages/js/array-some.html")}}
+{{InteractiveExample("JavaScript Demo: Array.some()")}}
+
+```js interactive-example
+const array = [1, 2, 3, 4, 5];
+
+// Checks whether an element is even
+const even = (element) => element % 2 === 0;
+
+console.log(array.some(even));
+// Expected output: true
+```
 
 ## 構文
 
-```js
-// アロー関数
-some((element) => {
-  /* … */
-});
-some((element, index) => {
-  /* … */
-});
-some((element, index, array) => {
-  /* … */
-});
-
-// コールバック関数
-some(callbackFn);
-some(callbackFn, thisArg);
-
-// インラインコールバック関数
-some(function (element) {
-  /* … */
-});
-some(function (element, index) {
-  /* … */
-});
-some(function (element, index, array) {
-  /* … */
-});
-some(function (element, index, array) {
-  /* … */
-}, thisArg);
+```js-nolint
+some(callbackFn)
+some(callbackFn, thisArg)
 ```
 
 ### 引数
 
 - `callbackFn`
 
-  - : 各要素に対してテストを実行する関数です。
-
-    この関数は以下の引数と共に呼び出されます。
-
+  - : 配列のそれぞれの要素に対して実行する関数です。この関数は、要素がテストに合格したことを示すには[真値](/ja/docs/Glossary/Truthy)を、そうでない場合は[偽値](/ja/docs/Glossary/Falsy)を返します。この関数は以下の引数で呼び出されます。
     - `element`
-      - : 配列内で現在処理されている要素です。
+      - : 配列内で処理中の現在の要素です。
     - `index`
-      - : 現在処理されている要素の添字です。
+      - : 配列内で処理中の現在の要素のインデックスです。
     - `array`
       - : `some()` が呼び出された配列です。
 
 - `thisArg` {{optional_inline}}
-  - : `callbackFn` を実行するときに `this` として使用するオブジェクトです。
+  - : `callbackFn` を実行する際に `this` として使用される値。[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)を参照してください。
 
 ### 返値
 
-配列内の少なくとも 1 つの要素でコールバック関数が{{Glossary("truthy", "真値")}}を返した場合は **`true`** です。それ以外は **`false`** です。
+配列の要素のいずれかで `callbackFn` が{{Glossary("truthy", "真値")}}を返した場合は、直ちに `true` を返します。それ以外の場合は `false` です。
 
 ## 解説
 
-`some()` は、与えられた `callbackFn` 関数を、配列に含まれる各要素に対して一度ずつ、`callbackFn` が「真値」（論理型に変換した際に真となる値）を返す要素が見つかるまで呼び出します。そのような要素が見つかると、 `some()` はただちに `true` を返します。見つからなかった場合、`some()` は `false` を返します。`callbackFn` は値が代入されている配列の要素に対してのみ呼び出されます。つまり、すでに削除された要素や、まだ値が代入されていない要素に対しては呼び出されません。
+`some()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。指定された `callbackFn` 関数を配列の各要素に対して一度ずつ、 `callbackFn` が[真値](/ja/docs/Glossary/Truthy)を返すまで呼び出します。該当する要素が見つかった場合は、 `some()` は直ちに `true` を返し、配列の反復処理を中止します。一方、 `callbackFn` がすべての要素に対して[偽値](/ja/docs/Glossary/Falsy)を返した場合、 `some()` は `false` を返します。
 
-`callbackFn` は、要素の値、要素のインデックス、走査されている Array オブジェクトという 3 つの引数を伴って呼び出されます。
+`some()` は数学の量化子 "there exists" のような働きをします。特に、空配列の場合、どのような条件でも `false` を返します。
 
-`thisArg` 引数が `some()` に与えられた場合は、それがコールバックのの `this` として使用されます。そうでない場合は 、{{jsxref("undefined")}} 値が `this` として使用されます。 `callbackFn` から最終的に見られる `this` の値は、[関数から見た `this` の決定に関する一般的なルール](/ja/docs/Web/JavaScript/Reference/Operators/this)によって決定されます。
+`callbackFn` は値が割り当てられている配列インデックスに対してのみ呼び出されます。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)の空のスロットに対しては呼び出されません。
 
-`some()` は呼び出された配列を変化させません。
+`some()` は呼び出し元の配列を変更しませんが、 `callbackFn` として指定された関数は配列を変更することができます。ただし、配列の長さは `callbackFn` を最初に呼び出す前に保存されることに注意してください。したがって、
 
-`some()` によって処理される要素の範囲は、 `callbackFn` が最初に呼び出される前に設定されます。`some()` の呼び出しが開始された後に追加された要素に対しては、`callbackFn` は呼び出されません。既存の配列要素が変更されたり、削除されたりした場合、`callbackFn` に渡される値は `some()` がそれらを訪れた時点での値になり、削除された要素に対して呼び出されることはありません。
+- `callbackFn` は、 `some()` の呼び出しを始めたときの配列の長さを超えて追加された要素にはアクセスしません。
+- 既に処理したインデックスを変更しても、 `callbackFn` が再度呼び出されることはありません。
+- まだ処理していない既存の配列要素が `callbackFn` によって変更された場合、`callbackFn` に渡される値はその要素が取得された時点での値になります。[削除](/ja/docs/Web/JavaScript/Reference/Operators/delete)された要素は処理されません。
 
-> **警告:** 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
+> [!WARNING]
+> 上記のように進行中の配列に対して変更を行うと、理解しにくいコードになることが多いので、（特別な場合を除いて）避けるのが一般的です。
 
-> **メモ:** このメソッドは空の配列ではあらゆる条件式に対して `false` を返します。
+`some()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
 
 ## 例
 
@@ -121,19 +105,6 @@ checkAvailability(fruits, "kela"); // false
 checkAvailability(fruits, "banana"); // true
 ```
 
-### アロー関数を使ったある値が存在するかどうかのチェック
-
-```js
-const fruits = ["apple", "banana", "mango", "guava"];
-
-function checkAvailability(arr, val) {
-  return arr.some((arrVal) => val === arrVal);
-}
-
-checkAvailability(fruits, "kela"); // false
-checkAvailability(fruits, "banana"); // true
-```
-
 ### 任意の値の論理値への変換
 
 ```js
@@ -153,6 +124,32 @@ getBoolean(1); // true
 getBoolean("true"); // true
 ```
 
+### 疎配列に対する some() の使用
+
+`some()` は空のスロットでは処理を実行しません。
+
+```js
+console.log([1, , 3].some((x) => x === undefined)); // false
+console.log([1, , 1].some((x) => x !== 1)); // false
+console.log([1, undefined, 1].some((x) => x !== 1)); // true
+```
+
+### 配列以外のオブジェクトに対する some() の呼び出し
+
+`some()` メソッドは `this` の `length` プロパティを読み込み、キーが `length` より小さい非負の整数である各プロパティに、すべてアクセスするか `callbackFn` が `true` を返すまでアクセスします。
+
+```js
+const arrayLike = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+  3: 3, // length が 3 .なので some() 空は無視される
+};
+console.log(Array.prototype.some.call(arrayLike, (x) => typeof x === "number"));
+// false
+```
+
 ## 仕様書
 
 {{Specifications}}
@@ -164,7 +161,10 @@ getBoolean("true"); // true
 ## 関連情報
 
 - [`Array.prototype.some` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.every()")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.includes()")}}
 - {{jsxref("TypedArray.prototype.some()")}}

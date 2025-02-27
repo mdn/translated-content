@@ -46,14 +46,14 @@ pc.setRemoteDescription(new RTCSessionDescription(offer), function () {
 });
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)

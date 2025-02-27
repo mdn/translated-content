@@ -1,19 +1,32 @@
 ---
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
+l10n:
+  sourceCommit: c3951963f6d3397d21624cfc94a72203acad6412
 ---
 
 {{JSRef}}
 
-**`JSON.parse()`** メソッドは文字列を JSON として解析し、文字列によって記述されている JavaScript の値やオブジェクトを構築します。任意の **reviver** 関数で、生成されたオブジェクトが返される前に変換を実行することができます。
+**`JSON.parse()`** 静的メソッドは、文字列を JSON として解析し、文字列によって記述されている JavaScript の値やオブジェクトを構築します。オプションの**リバイバー**関数で、生成されたオブジェクトが返される前に変換を実行することができます。
 
-{{EmbedInteractiveExample("pages/js/json-parse.html")}}
+{{InteractiveExample("JavaScript Demo: JSON.parse()")}}
+
+```js interactive-example
+const json = '{"result":true, "count":42}';
+const obj = JSON.parse(json);
+
+console.log(obj.count);
+// Expected output: 42
+
+console.log(obj.result);
+// Expected output: true
+```
 
 ## 構文
 
-```js
-JSON.parse(text);
-JSON.parse(text, reviver);
+```js-nolint
+JSON.parse(text)
+JSON.parse(text, reviver)
 ```
 
 ### 引数
@@ -21,111 +34,62 @@ JSON.parse(text, reviver);
 - `text`
   - : JSON として解析する文字列。JSON の構文の説明は {{jsxref("JSON")}} オブジェクトを参照してください。
 - `reviver` {{optional_inline}}
-  - : もし関数である場合、解析により作り出された元の値を、オブジェクトを返す前に変換する方法を指示します。
+  - : もし関数である場合、解析により作り出された元の値を、オブジェクトを返す前に変換する方法を指示します。この関数は以下の引数で呼び出されます。
+    - `key`
+      - : この値に関連付けられたキー。
+    - `value`
+      - : 解釈で生成された値。
+    - `context` {{optional_inline}}
+      - : 現在の式に関連する状態を保持するコンテキストオブジェクト。リバイバー関数を呼び出すたびに新しいオブジェクトが生成されます。このオブジェクトはプリミティブ値を復活させる場合のみ渡され、 `value` がオブジェクトや配列の場合は渡されません。以下のプロパティがあります。
+        - `source`
+          - : この値を表す元の JSON 文字列。
 
 ### 返値
 
-{{jsxref("Object")}}, {{jsxref("Array")}}, 文字列, 数値, 論理値, null 値のいずれかで、指定された JSON の `text` に対応する値です。
+{{jsxref("Object")}}, {{jsxref("Array")}}, 文字列, 数値, 論理値, `null` 値のいずれかで、指定された JSON の `text` に対応する値です。
 
 ### 例外
 
-解析する文字列が有効な JSON でない場合、{{jsxref("SyntaxError")}} 例外が発生します。
+- {{jsxref("SyntaxError")}}
+  - : 解析する文字列が有効な JSON でない場合に発生します。
 
-## ポリフィル
+## 解説
+
+`JSON.parse()` は、 [JSON の文法](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON#full_json_grammar)に従って JSON 文字列を構文解析し、 JavaScript 式であるかのように文字列を評価します。 JSON テキストの一部が、同じ JavaScript 式と異なる値を表す唯一の例は、 `"__proto__"` キーを扱う場合です。[オブジェクトリテラル構文 vs. JSON](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#オブジェクトリテラル表記法_vs_json) を参照してください。
+
+### reviver 引数
+
+`reviver` を指定すると、構文解析で計算された値を変換してから返します。具体的には、計算された値とそのすべてのプロパティ（最も奥になったプロパティから、元の値自身へと[深さ優先](https://en.wikipedia.org/wiki/Depth-first_search)で）が個別にリバイバーに実行されます。
+
+`reviver` は、処理対象のプロパティを含むオブジェクトを `this` として（アロー関数として `reviver` を定義しない限り、別個の `this` バインディングはありません）、 `key` と `value` の 2 つの引数を指定して呼び出されます。これらはそれぞれ、文字列としてのプロパティ名（配列の場合も同様）とプロパティ値を表します。プリミティブ値の場合は、さらに `context` 引数が渡され、この引数にはこの値のソーステキストが格納されます。 `reviver` 関数が {{jsxref("undefined")}} を返した場合（または返値がない場合、例えば、関数の終わりで実行が止まってしまった場合など）、プロパティはオブジェクトから削除されます。それ以外の場合、プロパティは返値を返すように再定義されます。もし `reviver` がある値だけを変換し、他の値を変換しない場合は、変換されない値をすべてそのまま返すようにしてください。
+
+{{jsxref("JSON.stringify()")}} の `replacer` 引数と同様に、配列やオブジェクトの場合、 `reviver` は空文字列を `key` とし、ルートオブジェクトを `value` として、ルート値に対して最後に呼び出されます。他にも有効な JSON 値がある場合、 `reviver` は同様に動作し、空文字列を `key` とし、値そのものを `value` として一度だけ呼び出されます。
+
+`reviver` から別の値を返すと、元々解釈できた値はその値によって完全に置き換えます。これはルート値にも適用されます。例えば、このようになります。
 
 ```js
-// From https://github.com/douglascrockford/JSON-js/blob/master/json2.js
-if (typeof JSON.parse !== "function") {
-  var rx_one = /^[\],:{}\s]*$/;
-  var rx_two = /\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g;
-  var rx_three =
-    /"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g;
-  var rx_four = /(?:^|:|,)(?:\s*\[)+/g;
-  var rx_dangerous =
-    /[\u0000\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g;
-  JSON.parse = function (text, reviver) {
-    // The parse method takes a text and an optional reviver function, and returns
-    // a JavaScript value if the text is a valid JSON text.
+const transformedObj1 = JSON.parse('[1,5,{"s":1}]', (key, value) => {
+  return typeof value === "object" ? undefined : value;
+});
 
-    var j;
+console.log(transformedObj1); // undefined
+```
 
-    function walk(holder, key) {
-      // The walk method is used to recursively walk the resulting structure so
-      // that modifications can be made.
+一般的にこれを回避する方法はありません。JSON オブジェクトには空文字列のキーも格納することができるため、キーが空文字列の場合を特別に処理することはできません。リバイバーを実装する際には、それぞれのキーに対してどのような変換が必要かをとても正確に知る必要があります。
 
-      var k;
-      var v;
-      var value = holder[key];
-      if (value && typeof value === "object") {
-        for (k in value) {
-          if (Object.prototype.hasOwnProperty.call(value, k)) {
-            v = walk(value, k);
-            if (v !== undefined) {
-              value[k] = v;
-            } else {
-              delete value[k];
-            }
-          }
-        }
-      }
-      return reviver.call(holder, key, value);
-    }
+`reviver` は値が解釈された後に実行されることに注意してください。そのため、例えば JSON テキストでの数値は既に JavaScript の数値に変換されており、その過程で精度を失うことがあります。精度を失うことなく大きな数値を変換する 1 つの方法は、文字列としてシリアライズし、[長整数型](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)や、他にも適切な任意の精度形式に復活させることです。
 
-    // Parsing happens in four stages. In the first stage, we replace certain
-    // Unicode characters with escape sequences. JavaScript handles many characters
-    // incorrectly, either silently deleting them, or treating them as line endings.
+下記の通り、 `context.source` プロパティを使用して、値を表す元の JSON ソーステキストにアクセスすることもできます。
 
-    text = String(text);
-    rx_dangerous.lastIndex = 0;
-    if (rx_dangerous.test(text)) {
-      text = text.replace(rx_dangerous, function (a) {
-        return "\\u" + ("0000" + a.charCodeAt(0).toString(16)).slice(-4);
-      });
-    }
-
-    // In the second stage, we run the text against regular expressions that look
-    // for non-JSON patterns. We are especially concerned with "()" and "new"
-    // because they can cause invocation, and "=" because it can cause mutation.
-    // But just to be safe, we want to reject all unexpected forms.
-
-    // We split the second stage into 4 regexp operations in order to work around
-    // crippling inefficiencies in IE's and Safari's regexp engines. First we
-    // replace the JSON backslash pairs with "@" (a non-JSON character). Second, we
-    // replace all simple value tokens with "]" characters. Third, we delete all
-    // open brackets that follow a colon or comma or that begin the text. Finally,
-    // we look to see that the remaining characters are only whitespace or "]" or
-    // "," or ":" or "{" or "}". If that is so, then the text is safe for eval.
-
-    if (
-      rx_one.test(
-        text.replace(rx_two, "@").replace(rx_three, "]").replace(rx_four, ""),
-      )
-    ) {
-      // In the third stage we use the eval function to compile the text into a
-      // JavaScript structure. The "{" operator is subject to a syntactic ambiguity
-      // in JavaScript: it can begin a block or an object literal. We wrap the text
-      // in parens to eliminate the ambiguity.
-
-      j = eval("(" + text + ")");
-
-      // In the optional fourth stage, we recursively walk the new structure, passing
-      // each name/value pair to a reviver function for possible transformation.
-
-      return typeof reviver === "function"
-        ? walk(
-            {
-              "": j,
-            },
-            "",
-          )
-        : j;
-    }
-
-    // If the text is not JSON parsable, then a SyntaxError is thrown.
-
-    throw new SyntaxError("JSON.parse");
-  };
-}
+```js
+const bigJSON = '{"gross_gdp": 12345678901234567890}';
+const bigObj = JSON.parse(bigJSON, (key, value, context) => {
+  if (key === "gross_gdp") {
+    // 値がすでに精度を失っているため無視。
+    return BigInt(context.source);
+  }
+  return value;
+});
 ```
 
 ## 例
@@ -142,26 +106,20 @@ JSON.parse("null"); // null
 
 ### reviver 引数の使用
 
-`reviver` が指定された場合、解析によって計算された値は、返却される前に*変換*されます。具体的には、計算された値とそのすべてのプロパティ (最も深いプロパティから始まり、元の値自身に至るまで) は、個別に `reviver` を通して変換されます。そして、処理されるプロパティを含むオブジェクトを `this` とし、プロパティ名を文字列、プロパティ値を引数にして、これが呼び出されます。もし `reviver` 関数が {{jsxref("undefined")}} を返した場合 (または、値を返さなかった場合、例えば関数の途中で実行が中断された場合など)、そのプロパティはオブジェクトから削除されます。そうでなければそのプロパティは返値として再定義されます。
-
-もし `reviver` が一部の値だけを変換して他を変換しないのであれば、必ずすべての変換されない値をそのまま返すようにしてください。そうしなければ、結果として得られるオブジェクトから削除されてしまいます。
-
 ```js
 JSON.parse(
   '{"p": 5}',
   (key, value) =>
     typeof value === "number"
-      ? value * 2 // 数値ならば値の2倍を返す
+      ? value * 2 // 数値ならば値の 2 倍を返す
       : value, // それ以外ならば変更しない
 );
-
 // { p: 10 }
 
 JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
-  console.log(key); // 現在のプロパティ名を出力する。最後は ""。
-  return value; // 変更されていないプロパティの値を返す。
+  console.log(key);
+  return value;
 });
-
 // 1
 // 2
 // 4
@@ -171,19 +129,69 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
 // ""
 ```
 
-### JSON.parse() は末尾のカンマを許容しない
+### JSON.stringify() のリプレイサーと対になるリバイバーの使用
 
-```js example-bad
-// 両方とも SyntaxError が発生
-JSON.parse("[1, 2, 3, 4, ]");
-JSON.parse('{"foo" : 1, }');
+値を正しく丸める（つまり、同じ元のオブジェクトへシリアライズ解除する）ためには、シリアライズ処理で型情報を保持する必要があります。例えば、このために {{jsxref("JSON.stringify()")}} の `replacer` 引数を使用することができます。
+
+```js
+// 通常は、 Map はプロパティを持たないオブジェクトとしてシリアライズされます。
+// リプレイサーを使用して、シリアライズする項目を指定することができます。
+const map = new Map([
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
+]);
+
+const jsonText = JSON.stringify(map, (key, value) =>
+  value instanceof Map ? Array.from(value.entries()) : value,
+);
+
+console.log(jsonText);
+// [[1,"one"],[2,"two"],[3,"three"]]
+
+const map2 = JSON.parse(jsonText, (key, value) =>
+  Array.isArray(value) ? new Map(value) : value,
+);
+
+console.log(map2);
+// Map { 1 => "one", 2 => "two", 3 => "three" }
 ```
 
-### JSON.parse() は単一引用符を許容しない
+JSON には型メタデータを記すための構文空間がないため、プレーンなオブジェクトではない値を復活させるには、以下のいずれかを考慮する必要があります：
 
-```js example-bad example-bad
-// SyntaxError が発生
+- オブジェクト全体を文字列にシリアライズし、接頭辞に型タグを付ける方法。
+- データの構造に基づいて「推測」する（例えば、 2 つのメンバーからなる配列）。
+- 本体の形が定型である場合、プロパティ名から推測する（例えば、`registry` と呼ばれるプロパティはすべて `Map` オブジェクトを保持しているなど）。
+
+### 不正な JSON
+
+`JSON.parse` が JSON の文法に適合しない文字列を受け取った場合、 `SyntaxError` が発生します。
+
+JSON において、配列とオブジェクトには[末尾のカンマ](/ja/docs/Web/JavaScript/Reference/Trailing_commas)を置くことができません。
+
+```js example-bad
+JSON.parse("[1, 2, 3, 4, ]");
+// SyntaxError: Unexpected token ] in JSON at position 13
+
+JSON.parse('{"foo": 1, }');
+// SyntaxError: Unexpected token } in JSON at position 12
+```
+
+JSON の文字列は（単一引用符でなく）二重引用符で区切らなければなりません。
+
+```js example-bad
 JSON.parse("{'foo': 1}");
+// SyntaxError: Unexpected token ' in JSON at position 1
+
+JSON.parse("'string'");
+// SyntaxError: Unexpected token ' in JSON at position 0
+```
+
+JavaScript の文字列リテラル内で JSON を書く場合は、 JavaScript の文字列リテラルを区切るのに単一引用符を使用するか、 JSON 文字列を区切る二重引用符をエスケープする必要があります。
+
+```js-nolint example-good
+JSON.parse('{"foo": 1}'); // OK
+JSON.parse("{\"foo\": 1}"); // OK
 ```
 
 ## 仕様書
@@ -196,4 +204,5 @@ JSON.parse("{'foo': 1}");
 
 ## 関連情報
 
+- [現行の `JSON.parse` の動作（reviver の `context` 引数）のポリフィル (`core-js`)](https://github.com/zloirock/core-js#jsonparse-source-text-access)
 - {{jsxref("JSON.stringify()")}}

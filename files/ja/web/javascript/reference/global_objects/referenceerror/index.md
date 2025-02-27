@@ -1,35 +1,41 @@
 ---
 title: ReferenceError
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
+l10n:
+  sourceCommit: 6558de67a347fee30c303da8a0b262a9270a6885
 ---
 
 {{JSRef}}
 
-**`ReferenceError`** オブジェクトは存在しない変数が参照された場合のエラーを表します。
+**`ReferenceError`** オブジェクトは、現在のスコープに存在しない（あるいはまだ初期化されていない）変数が参照されたときのエラーを表します。
+
+`ReferenceError` は{{Glossary("serializable object", "シリアライズ可能オブジェクト")}}なので、 {{domxref("structuredClone()")}} で複製したり、[ワーカー](/ja/docs/Web/API/Worker)間で {{domxref("Worker/postMessage()", "postMessage()")}} を使用してコピーしたりすることができます。
+
+`ReferenceError` は {{jsxref("Error")}} のサブクラスです。
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/ReferenceError/ReferenceError", "ReferenceError()")}}
+- {{jsxref("ReferenceError/ReferenceError", "ReferenceError()")}}
   - : 新しい `ReferenceError` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{jsxref("Error.prototype.message", "ReferenceError.prototype.message")}}
-  - : エラーメッセージです。 ECMA-262 において {{jsxref("ReferenceError")}} は自身の `message` プロパティを提供するべきとされていますが、 [SpiderMonkey](/ja/docs/Mozilla/Projects/SpiderMonkey) では {{jsxref("Error.prototype.message")}} を継承しています。
-- {{jsxref("Error.prototype.name", "ReferenceError.prototype.name")}}
-  - : エラー名です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.fileName", "ReferenceError.prototype.fileName")}}
-  - : このエラーが発生したファイルのパスです。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.lineNumber", "ReferenceError.prototype.lineNumber")}}
-  - : このエラーが発生したファイル内の行番号です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.columnNumber", "ReferenceError.prototype.columnNumber")}}
-  - : このエラーが発生した行内の桁番号です。 {{jsxref("Error")}} から継承しています。
-- {{jsxref("Error.prototype.stack", "ReferenceError.prototype.stack")}}
-  - : スタックトレースです。 {{jsxref("Error")}} から継承しています。
+_親である {{jsxref("Error")}} から継承したプロパティもあります。_
+
+これらのプロパティは `ReferenceError.prototype` で定義されており、すべての `ReferenceError` インスタンスで共有されます。
+
+- {{jsxref("Object/constructor", "ReferenceError.prototype.constructor")}}
+  - : このインスタンスオブジェクトを作成したコンストラクター関数。 `ReferenceError` インスタンスの場合、初期値は {{jsxref("ReferenceError/ReferenceError", "ReferenceError")}} コンストラクタです。
+- {{jsxref("Error/name", "ReferenceError.prototype.name")}}
+  - : エラー型の名前を表します。 `ReferenceError.prototype.name` の初期値は `"ReferenceError"` です。
+
+## インスタンスメソッド
+
+_親である {{jsxref("Error")}} から継承したメソッドもあります。_
 
 ## 例
 
-### ReferenceError のキャッチ
+### ReferenceError の捕捉
 
 ```js
 try {
@@ -38,10 +44,7 @@ try {
   console.log(e instanceof ReferenceError); // true
   console.log(e.message); // "undefinedVariable is not defined"
   console.log(e.name); // "ReferenceError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 6
-  console.log(e.stack); // "@Scratchpad/2:2:7\n"
+  console.log(e.stack); // このエラーのスタック
 }
 ```
 
@@ -49,15 +52,12 @@ try {
 
 ```js
 try {
-  throw new ReferenceError("Hello", "someFile.js", 10);
+  throw new ReferenceError("Hello");
 } catch (e) {
   console.log(e instanceof ReferenceError); // true
   console.log(e.message); // "Hello"
   console.log(e.name); // "ReferenceError"
-  console.log(e.fileName); // "someFile.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  console.log(e.stack); // このエラーのスタック
 }
 ```
 
@@ -67,7 +67,7 @@ try {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.ReferenceError")}}
+{{Compat}}
 
 ## 関連情報
 

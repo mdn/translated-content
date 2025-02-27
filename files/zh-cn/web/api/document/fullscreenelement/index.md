@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("Fullscreen API")}}
 
-只读属性 **`Document.fullscreenElement`** 返回当前页面中以全屏模式呈现的 {{domxref("Element")}}，如果当前页面未使用全屏模式，则返回 `null`。
+**`Document.fullscreenElement`** 只读属性返回当前页面中以全屏模式呈现的 {{domxref("Element")}}，如果当前页面未使用全屏模式，则返回 `null`。
 
 尽管这个属性是只读的，但如果修改它，即使在严格模式下也不会抛出错误；它的 `setter` 方法是空操作将被忽略。
 

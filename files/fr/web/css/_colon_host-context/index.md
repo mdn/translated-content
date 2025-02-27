@@ -1,5 +1,5 @@
 ---
-title: ":host-context()"
+title: :host-context()
 slug: Web/CSS/:host-context
 l10n:
   sourceCommit: 257486f64b2472dda4996a4ea7b6b5305e46f863
@@ -7,13 +7,14 @@ l10n:
 
 {{CSSRef}}
 
-La fonction [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:host-context()`** sélectionne l'hôte sombre (<i lang="en">shadow host</i>) du [DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/Web_Components/Using_shadow_DOM) contenant le CSS dans lequel il est utilisé (afin de pouvoir sélectionner un élément personnalisé depuis l'intérieur de son DOM sombre), uniquement si le sélecteur fourni comme paramètre de la fonction correspond à un ancêtre de l'hôte sombre à l'emplacement qu'il occupe dans la hiérarchie du DOM.
+La fonction [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:host-context()`** sélectionne l'hôte sombre (<i lang="en">shadow host</i>) du [DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS dans lequel il est utilisé (afin de pouvoir sélectionner un élément personnalisé depuis l'intérieur de son DOM sombre), uniquement si le sélecteur fourni comme paramètre de la fonction correspond à un ancêtre de l'hôte sombre à l'emplacement qu'il occupe dans la hiérarchie du DOM.
 
 Autrement dit, cela permet à un élément personnalisé, ou à n'importe quoi au sein du DOM sombre de cet élément personnalisé, d'appliquer différents styles selon sa position au sein du DOM extérieur ou des classes ou attributs appliqués aux éléments ancêtres.
 
 Une utilisation classique consiste à utiliser une expression avec un sélecteur de descendants, par exemple `h1`, afin de cibler uniquement les instances de l'élément personnalisé situées dans un élément `<h1>`. Un autre usage pourrait consister à permettre aux éléments internes de réagir aux classes ou attributs des éléments parmi les ancêtres (par exemple, appliquer une couleur de texte différente lorsqu'une classe `.dark-theme` est appliquée à `<body>`).
 
-> **Note :** Cette pseudo-classe n'a aucun effet si elle est utilisée en dehors d'un DOM sombre.
+> [!NOTE]
+> Cette pseudo-classe n'a aucun effet si elle est utilisée en dehors d'un DOM sombre.
 
 ```css
 /* Cible l'hôte d'une racine sombre, uniquement si elle
@@ -92,6 +93,6 @@ Les règles `:host-context(h1) { font-style: italic; }` et `:host-context(h1):af
 
 ## Voir aussi
 
-- [Les composants web](/fr/docs/Web/Web_Components)
+- [Les composants web](/fr/docs/Web/API/Web_components)
 - [`:host`](/fr/docs/Web/CSS/:host)
 - [`:host()`](/fr/docs/Web/CSS/:host_function)

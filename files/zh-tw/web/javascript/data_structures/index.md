@@ -64,7 +64,7 @@ Infinity
 -Infinity
 ```
 
-Although a number often represents only its value, JavaScript provides [some binary operators](/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators). These can be used to represent several Boolean values within a single number using [bit masking](http://en.wikipedia.org/wiki/Mask_%28computing%29). However, this is usually considered a bad practice, since JavaScript offers other means to represent a set of Booleans (like an array of Booleans or an object with Boolean values assigned to named properties). Bit masking also tends to make code more difficult to read, understand, and maintain. It may be necessary to use such techniques in very constrained environments, like when trying to cope with the storage limitation of local storage or in extreme cases when each bit over the network counts. This technique should only be considered when it is the last measure that can be taken to optimize size.
+Although a number often represents only its value, JavaScript provides [some binary operators](/zh-TW/docs/Web/JavaScript/Reference/Operators). These can be used to represent several Boolean values within a single number using [bit masking](<https://en.wikipedia.org/wiki/Mask_(computing)>). However, this is usually considered a bad practice, since JavaScript offers other means to represent a set of Booleans (like an array of Booleans or an object with Boolean values assigned to named properties). Bit masking also tends to make code more difficult to read, understand, and maintain. It may be necessary to use such techniques in very constrained environments, like when trying to cope with the storage limitation of local storage or in extreme cases when each bit over the network counts. This technique should only be considered when it is the last measure that can be taken to optimize size.
 
 ### 字串型別
 
@@ -97,7 +97,7 @@ Symbols are new to JavaScript in ECMAScript Edition 6. A Symbol is a **unique** 
 
 ### Properties
 
-In JavaScript, objects can be seen as a collection of properties. With the [object literal syntax](/zh-TW/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Object_literals), a limited set of properties are initialized; then properties can be added and removed. Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using key values. A key value is either a String or a Symbol value.
+In JavaScript, objects can be seen as a collection of properties. With the [object literal syntax](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals), a limited set of properties are initialized; then properties can be added and removed. Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using key values. A key value is either a String or a Symbol value.
 
 There are two types of object properties which have certain attributes: The data property and the accessor property.
 
@@ -124,16 +124,17 @@ Associates a key with one or two accessor functions (get and set) to retrieve or
 
 | Attribute        | Type                         | Description                                                                                                                                                                                                              | Default value |
 | ---------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
-| [[Get]]          | Function object or undefined | The function is called with an empty argument list and retrieves the property value whenever a get access to the value is performed. See also [`get`](/zh-TW/docs/Web/JavaScript/Reference/Operators/get).               | undefined     |
-| [[Set]]          | Function object or undefined | The function is called with an argument that contains the assigned value and is executed whenever a specified property is attempted to be changed. See also [`set`](/zh-TW/docs/Web/JavaScript/Reference/Operators/set). | undefined     |
+| [[Get]]          | Function object or undefined | The function is called with an empty argument list and retrieves the property value whenever a get access to the value is performed. See also [`get`](/zh-TW/docs/Web/JavaScript/Reference/Functions/get).               | undefined     |
+| [[Set]]          | Function object or undefined | The function is called with an argument that contains the assigned value and is executed whenever a specified property is attempted to be changed. See also [`set`](/zh-TW/docs/Web/JavaScript/Reference/Functions/set). | undefined     |
 | [[Enumerable]]   | Boolean                      | If `true`, the property will be enumerated in [for...in](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in) loops.                                                                                                | false         |
 | [[Configurable]] | Boolean                      | If `false`, the property can't be deleted and can't be changed to a data property.                                                                                                                                       | false         |
 
-> **備註：** Attribute is usually used by JavaScript engine, so you can't directly access it(see more about [Object.defineProperty()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)).That's why the attribute is put in double square brackets instead of single.
+> [!NOTE]
+> Attribute is usually used by JavaScript engine, so you can't directly access it(see more about [Object.defineProperty()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)).That's why the attribute is put in double square brackets instead of single.
 
 ### "Normal" objects, and functions
 
-A JavaScript object is a mapping between keys and values. Keys are strings (or {{jsxref("Symbol")}}s) and values can be anything. This makes objects a natural fit for [hashmaps](http://en.wikipedia.org/wiki/Hash_table).
+A JavaScript object is a mapping between keys and values. Keys are strings (or {{jsxref("Symbol")}}s) and values can be anything. This makes objects a natural fit for [hashmaps](https://en.wikipedia.org/wiki/Hash_table).
 
 Functions are regular objects with the additional capability of being callable.
 
@@ -171,5 +172,5 @@ JavaScript has a standard library of built-in objects. Please have a look at the
 
 ## See also
 
-- [Nicholas Zakas collection of common data structure and common algorithms in JavaScript.](https://github.com/nzakas/computer-science-in-javascript/)
-- [Search Tre(i)es implemented in JavaScript](https://github.com/monmohan/DataStructures_In_Javascript)
+- [Nicholas Zakas collection of common data structure and common algorithms in JavaScript.](https://github.com/humanwhocodes/computer-science-in-javascript)
+- [Search Tre(i)es implemented in JavaScript](https://github.com/monmohan/dsjslib)

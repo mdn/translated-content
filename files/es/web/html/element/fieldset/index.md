@@ -3,17 +3,19 @@ title: fieldset
 slug: Web/HTML/Element/fieldset
 ---
 
+{{HTMLSidebar}}
+
 ### Definición
 
-- El elemento [fieldset](/es/HTML/Elemento/fieldset) (grupo de campos) permite organizar en grupos los campos de un formulario.
+- El elemento [fieldset](/es/docs/Web/HTML/Element/fieldset) (grupo de campos) permite organizar en grupos los campos de un formulario.
 
   - : **Sus etiquetas son**: \<fieldset> y \</fieldset> (ambas obligatorias).
 
-    **Crea una caja**: [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **Crea una caja**: [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
-    **Está definido como**: [Elemento en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **Está definido como**: [Elemento en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
-    **Puede contener**: un elemento [legend](/es/HTML/Elemento/legend) (opcional), y despues cero o más elementos [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque) o [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **Puede contener**: un elemento [legend](/es/docs/Web/HTML/Element/legend) (opcional), y despues cero o más elementos [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque) o [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 #### Atributos
 

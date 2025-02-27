@@ -54,11 +54,11 @@ Pragma: no-cache
 | -------------------------------- | ----------------------------------------------- |
 | {{RFC("7234", "Pragma", "5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 
-## Смотреть также
+## Смотрите также
 
 - {{HTTPHeader("Cache-Control")}}
 - {{HTTPHeader("Expires")}}

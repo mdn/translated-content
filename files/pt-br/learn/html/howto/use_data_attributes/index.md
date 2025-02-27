@@ -3,7 +3,7 @@ title: Utilizando data attributes
 slug: Learn/HTML/Howto/Use_data_attributes
 ---
 
-O [HTML5](/pt-BR/docs/Web/Guide/HTML/HTML5) foi criado pensando na extensibilidade dos dados que precisam ser associados a um determinado elemento mas não necessariamente tem um significado definido. [Atributos data-\*](/pt-BR/docs/Web/HTML/Global_attributes#dataset) nos permite armazenar informações extras em elementos HTML padrões e semânticos, sem a necessidades de hacks como [classList](/pt-BR/docs/Web/API/Element.classList), atributos fora do padrão, propriedades extras no DOM ou o método depreciado [setUserData](/pt-BR/docs/Web/API/Node.setUserData).
+O [HTML5](/pt-BR/docs/Glossary/HTML5) foi criado pensando na extensibilidade dos dados que precisam ser associados a um determinado elemento mas não necessariamente tem um significado definido. [Atributos data-\*](/pt-BR/docs/Web/HTML/Global_attributes#dataset) nos permite armazenar informações extras em elementos HTML padrões e semânticos, sem a necessidades de hacks como [classList](/pt-BR/docs/Web/API/Element/classList), atributos fora do padrão, propriedades extras no DOM ou o método depreciado [setUserData](/pt-BR/docs/Web/API/Node.setUserData).
 
 ## Sintaxe HTML
 
@@ -56,9 +56,9 @@ article[data-columns="4"] {
 }
 ```
 
-Pode-se tudo isso em funcionamento neste [exemplo JSBin](http://jsbin.com/ujiday/2/edit).
+Pode-se tudo isso em funcionamento neste [exemplo JSBin](https://jsbin.com/ujiday/2/edit).
 
-Atributos data também podem ser utilizados para conter informações que mudam constantemente, como a pontuação em um jogo. Usando seletores CSS e acesso com JavaScript permite que se construa efeitos excelentes sem ter que escrever suas próprias rotinas de display. Veja [esta tela](http://www.youtube.com/watch?v=On_WyUB1gOk) para um exemplo utilizando conteúdo gerado e transições CSS ([exemplo JSBin](http://jsbin.com/atawaz/3/edit)).
+Atributos data também podem ser utilizados para conter informações que mudam constantemente, como a pontuação em um jogo. Usando seletores CSS e acesso com JavaScript permite que se construa efeitos excelentes sem ter que escrever suas próprias rotinas de display. Veja [esta tela](https://www.youtube.com/watch?v=On_WyUB1gOk) para um exemplo utilizando conteúdo gerado e transições CSS ([exemplo JSBin](https://jsbin.com/atawaz/3/edit)).
 
 Uma vez que valores data são strings, todos os valores devem estar entre aspas ou então a estilização não fará efeito.
 
@@ -75,4 +75,4 @@ No Firefox 49.0.2 (e talvez em versões anteriores/posteriores), os atributos da
 ## Veja também
 
 - Este artigo é uma adaptação de [Usando atributos data em JavaScript e CSS no hacks.mozilla.org](https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/).
-- [Como usar atributos data em HTML5](http://www.sitepoint.com/use-html5-data-attributes/) (Sitepoint)
+- [Como usar atributos data em HTML5](https://www.sitepoint.com/use-html5-data-attributes/) (Sitepoint)

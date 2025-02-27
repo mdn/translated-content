@@ -57,8 +57,6 @@ slug: Web/HTML/Element/html
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- `manifest` {{deprecated_inline}}
-  - : 지역적으로 캐시되어야하는 리소스를 가리키는 매니페스트 리소스의 URI를 나타냅니다. 자세한 내용은 [애플리케이션 캐시 사용하기](/ko/docs/HTML/Using_the_application_cache)를 보세요.
 - `version` {{deprecated_inline}}
   - : 현재 문서를 제어하는 HTML 문서 타입 정의의 버전을 나타냅니다. 하지만 이미 문서 타입 선언이 버전을 나타내고 있기 떄문에 이 속성은 필요하지 않습니다.
 - `xmlns`

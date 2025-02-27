@@ -11,11 +11,11 @@ slug: Web/HTML/Date_and_time_formats
 
 对于 `<input>` 元素来说，能够返回包含代表日期或日期和时间的字符串 [`value`](/zh-CN/docs/Web/HTML/Global_attributes#value) 的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 的值为：
 
-- [`date`](/zh-CN/docs/Web/HTML/Element/Input/date)
-- [`datetime-local`](/zh-CN/docs/Web/HTML/Element/Input/datetime-local)
-- [`month`](/zh-CN/docs/Web/HTML/Element/Input/month)
-- [`time`](/zh-CN/docs/Web/HTML/Element/Input/time)
-- [`week`](/zh-CN/docs/Web/HTML/Element/Input/week)
+- [`date`](/zh-CN/docs/Web/HTML/Element/input/date)
+- [`datetime-local`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)
+- [`month`](/zh-CN/docs/Web/HTML/Element/input/month)
+- [`time`](/zh-CN/docs/Web/HTML/Element/input/time)
+- [`week`](/zh-CN/docs/Web/HTML/Element/input/week)
 
 ## 示例
 
@@ -285,7 +285,7 @@ HTML 中的日期和时间总会使用 [ASCII](https://zh.wikipedia.org/zh-cn/IS
 
 ## 本地日期时间字符串
 
-一个有效的 [`datetime-local`](/zh-CN/docs/Web/HTML/Element/Input/datetime-local) 字符串由一个 `date` 字符串和一个 `time` 字符串连接起来，中间用字母“`T`”或空格分开。字符串中不包含时区的信息；日期和时间被认为是用户的本地时区。
+一个有效的 [`datetime-local`](/zh-CN/docs/Web/HTML/Element/input/datetime-local) 字符串由一个 `date` 字符串和一个 `time` 字符串连接起来，中间用字母“`T`”或空格分开。字符串中不包含时区的信息；日期和时间被认为是用户的本地时区。
 
 当你设置 `datetime-local` 输入的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 时，该字符串被**规范化**为标准形式。标准化的 `datetime` 字符串总是使用字母“`T`”来分隔日期和时间，并且字符串的时间部分尽可能地短。如果秒的值是 `:00`，则不使用秒的成分。
 
@@ -390,6 +390,6 @@ HTML 中的日期和时间总会使用 [ASCII](https://zh.wikipedia.org/zh-cn/IS
 - {{HTMLElement("input")}}
 - {{HTMLElement("ins")}} 和 {{HTMLElement("del")}}：请查阅 `datetime` 属性，它指定了插入或删除内容的日期或本地日期和时间
 - [ISO 8601 定义](https://www.iso.org/iso-8601-date-and-time-format.html)
-- [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[数字和日期](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates)
+- [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[数字和字符串](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_strings)
 - JavaScript {{jsxref("Date")}} 对象
 - 以给定区域选项格式化日期和时间的 [`Intl.DateTimeFormat`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) 对象

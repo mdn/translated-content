@@ -3,9 +3,11 @@ title: Contrôles DHTML personnalisés navigables au clavier
 slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 ---
 
+{{AccessibilitySidebar}}
+
 ### Le problème&nbsp;: les pages DHTML actuelles ne sont pas accessibles au clavier
 
-Un nombre croissant d'applications Web utilise [JavaScript](/fr/JavaScript) pour imiter des contrôles (
+Un nombre croissant d'applications Web utilise [JavaScript](/fr/docs/Web/JavaScript) pour imiter des contrôles (
 _widgets_
 ) applicatifs comme des menus, des vues arborescentes, des champs de texte enrichis et des panneaux à onglets. Les développeurs Web innovent constamment et les applications futures contiendront des éléments complexes et interactifs comme des feuilles de calcul, des calendriers, des graphes organisationnels et plus encore. Jusqu'à présent, les développeurs désirant rendre leurs contrôles basés sur des `<div>` et autres `<span>` stylés ne disposaient pas des techniques nécessaires. Pourtant, l'accessibilité au clavier fait partie des nécessités dont tout développeur Web devrait tenir compte.
 
@@ -28,9 +30,9 @@ Le tableau qui suit décrit le nouveau comportement de `tabindex`&nbsp;:
 
 ### Utilisation du nouveau système
 
-Pour rendre un contrôle simple navigable avec tabulation, la solution est d'utiliser `tabindex="0"` sur l'élément `<div>>` ou `<span>` le représentant. Vous pouvez consulter un exemple d'une [case à cocher basée sur un `<span>`](http://www.mozilla.org/access/dhtml/class/checkbox) accessible au clavier tant dans Firefox 1.5 que dans IE (bien que la règle `:before` pour l'image de la case à cocher ne fonctionne pas dans IE).
+Pour rendre un contrôle simple navigable avec tabulation, la solution est d'utiliser `tabindex="0"` sur l'élément `<div>>` ou `<span>` le représentant. Vous pouvez consulter un exemple d'une [case à cocher basée sur un `<span>`](https://www.mozilla.org/access/dhtml/class/checkbox) accessible au clavier tant dans Firefox 1.5 que dans IE (bien que la règle `:before` pour l'image de la case à cocher ne fonctionne pas dans IE).
 
-Pour les contrôles de groupe (comme les menus, les panneaux à onglets, grilles ou vues arborescentes) l'élément parent doit avoir `tabindex="0"`, et chaque choix descendant (onglet/cellule/ligne) doit avoir `tabindex="-1"`. Un évènement `keydown` surveillant les flèches directionnelles peut ensuite utiliser `element.focus()` pour donner le focus au contrôle descendant approprié et lui donner un style lui donnant un aspect particulier montrant qu'il a le focus. Vous pouvez consulter un exemple d'une [vue arborescente DHTML](http://www.mozilla.org/access/dhtml/class/tree) accessible au clavier et aux lecteurs d'écran dans Firefox (
+Pour les contrôles de groupe (comme les menus, les panneaux à onglets, grilles ou vues arborescentes) l'élément parent doit avoir `tabindex="0"`, et chaque choix descendant (onglet/cellule/ligne) doit avoir `tabindex="-1"`. Un évènement `keydown` surveillant les flèches directionnelles peut ensuite utiliser `element.focus()` pour donner le focus au contrôle descendant approprié et lui donner un style lui donnant un aspect particulier montrant qu'il a le focus. Vous pouvez consulter un exemple d'une [vue arborescente DHTML](https://www.mozilla.org/access/dhtml/class/tree) accessible au clavier et aux lecteurs d'écran dans Firefox (
 _nightlies_
 ). Le travail pour le faire fonctionner dans IE est encore en cours.
 
@@ -40,7 +42,7 @@ N'oubliez pas que ceci ne fait pas encore partie d'un standard W3C ou autre orga
 
 #### Utilisation d'`onfocus` pour suivre le focus
 
-Les attributs de gestion d'évènements `onfocus` et `onblur` peuvent à présent être utilisés sur tous les éléments. Il n'y a pas d'interface [DOM](/fr/DOM) standard pour obtenir l'élément ayant actuellement le focus dans le document, par conséquent il est nécessaire d'utiliser une variable [JavaScript](/fr/JavaScript) pour le suivre.
+Les attributs de gestion d'évènements `onfocus` et `onblur` peuvent à présent être utilisés sur tous les éléments. Il n'y a pas d'interface [DOM](/fr/docs/Web/API/Document_Object_Model) standard pour obtenir l'élément ayant actuellement le focus dans le document, par conséquent il est nécessaire d'utiliser une variable [JavaScript](/fr/docs/Web/JavaScript) pour le suivre.
 
 Ne supposez pas que tous les changements de focus viendront des évènements clavier ou souris, car les technologies d'assistance, comme les lecteurs d'écran, peuvent donner le focus à n'importe quel élément pouvant en disposer et cela doit être traité élégamment par le contrôle JavaScript.
 

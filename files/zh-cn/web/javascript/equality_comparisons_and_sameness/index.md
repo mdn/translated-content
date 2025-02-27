@@ -1,6 +1,8 @@
 ---
-title: JavaScript 中的相等性判断
+title: 相等比较和相同
 slug: Web/JavaScript/Equality_comparisons_and_sameness
+l10n:
+  sourceCommit: 8e1184924387f88e2ee63a3c786b007aaf573105
 ---
 
 {{jsSidebar("Intermediate")}}
@@ -11,7 +13,7 @@ JavaScript 提供三种不同的值比较运算：
 - [`==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)——宽松相等（两个等号）
 - [`Object.is()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is)
 
-选择哪个运算取决于你需要什么样的比较。简单来说：
+选择哪种运算取决于你需要什么样的比较。简单来说：
 
 - 在比较两个操作数时，双等号（`==`）将执行类型转换，并且会按照 IEEE 754 标准对 `NaN`、`-0` 和 `+0` 进行特殊处理（故 `NaN != NaN`，且 `-0 == +0`）；
 - 三等号（`===`）做的比较与双等号相同（包括对 `NaN`、`-0` 和 `+0` 的特殊处理）但不进行类型转换；如果类型不同，则返回 `false`；
@@ -19,16 +21,16 @@ JavaScript 提供三种不同的值比较运算：
 
 上述三个操作分别与 JavaScript 四个相等算法中的三个相对应：
 
-- [IsLooselyEqual](https://tc39.es/ecma262/#sec-islooselyequal)：`==`
-- [IsStrictlyEqual](https://tc39.es/ecma262/#sec-isstrictlyequal)：`===`
-- [SameValue](https://tc39.es/ecma262/#sec-samevalue)：`Object.is()`
-- [SameValueZero](https://tc39.es/ecma262/#sec-samevaluezero)：被许多内置运算使用
+- [IsLooselyEqual](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-islooselyequal)：`==`
+- [IsStrictlyEqual](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-isstrictlyequal)：`===`
+- [SameValue](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-samevalue)：`Object.is()`
+- [SameValueZero](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-samevaluezero)：被许多内置运算使用
 
-请注意，这些算法的区别都与它们对原始类型值的处理有关；它们都不会比较参数是否具有理论上相似的结构。对于任何具有相同的结构，但不是同一对象本身的非原始类型对象 `x` 和 `y` ，上述所有形式都将计算为 `false`。
+请注意，这些算法的区别都与它们对原始值的处理有关；它们都不会比较参数是否具有概念上相似的结构。对于任何具有相同的结构、但不是同一对象的非原始类型对象 `x` 和 `y` ，上述所有形式都将计算为 `false`。
 
 ## 使用 === 进行严格相等比较
 
-严格相等比较两个值是否相等。两个被比较的值在比较前都不进行隐式转换。如果两个被比较的值具有不同的类型，这两个值是不相等的。否则，如果两个被比较的值类型相同，值也相同，并且都不是 number 类型时，两个值相等。最后，如果两个值都是 number 类型，当两个都不是 `NaN`，并且数值相同，或是两个值分别为 `+0` 和 `-0` 时，两个值被认为是相等的。
+严格相等比较两个值是否相等。两个被比较的值在比较前都不进行隐式转换。如果两个被比较的值具有不同的类型，则认为这两个值不相等。如果两个被比较的值类型相同，值也相同，并且都不是 number 类型时，则认为这两个值相等。最后，如果两个值都是 number 类型，当两个都不是 `NaN`，并且数值相同，或是两个值分别为 `+0` 和 `-0` 时，两个值被认为是相等的。
 
 ```js
 const num = 0;
@@ -47,7 +49,7 @@ console.log(obj === null); // false
 console.log(obj === undefined); // false
 ```
 
-在日常中使用严格相等几乎总是正确的选择。对于除了数值之外的值，严格相等使用明确的语义进行比较：一个值只与自身严格相等。对于数值，严格相等使用略加修改的语义来处理两个特殊情况：第一个情况是，浮点数 0 是不分正负的。区分 `+0` 和 `-0` 在解决一些特定的数学问题时是必要的，但是大部分情况下我们并不用关心。严格相等认为这两个值是全等的。第二个情况是，浮点数包含了 `NaN` 值，用来表示某些定义不明确的数学问题的解，例如：正无穷加负无穷。严格相等认为 `NaN` 与其他任何值都不全等，包括它自己。（等式 `(x !== x)` 成立的唯一情况是 `x` 的值为 `NaN`）
+使用严格相等几乎总是正确的选择。对于除了数字之外的值，严格相等有着明确的语义：值仅与它自身相等。对于数字，严格相等使用稍微不同的语义处理两个特殊情况：第一个情况是，浮点数 0 是不分正负的。区分 `+0` 和 `-0` 在解决一些特定的数学问题时区分正负是必要的，但是大部分情况下我们并不用关心。严格相等认为这两个值是全等的。第二个情况是，浮点数包含了 `NaN` 值，用来表示某些定义不明确的数学问题的解，例如：正无穷加负无穷。严格相等认为 `NaN` 与其他任何值都不全等，包括它自己。（等式 `(x !== x)` 成立的唯一情况是 `x` 的值为 `NaN`）
 
 除了 `===` 之外，数组索引查找方法也使用严格相等，包括 [`Array.prototype.indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)、[`Array.prototype.lastIndexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf)、[`TypedArray.prototype.index()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf)、[`TypedArray.prototype.lastIndexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf) 和 [`case`](/zh-CN/docs/Web/JavaScript/Reference/Statements/switch) 匹配。这意味着你不能使用 `indexOf(NaN)` 查找数组中 `NaN` 值的索引，也不能将 `NaN` 用作 `case` 值在 `switch` 语句中匹配任何内容。
 
@@ -61,26 +63,26 @@ switch (NaN) {
 
 ## 使用 == 进行宽松相等比较
 
-宽松相等是*对称的*：对于任何 `A` 和 `B` 的值，`A == B` 总是与 `B == A` 具有相同的语义（除了转换应用的顺序）。使用 `==` 执行宽松相等的行为如下：
+宽松相等是*对称的*：对于任何 `A` 和 `B` 的值，`A == B` 总是与 `B == A` 具有相同的语义（除了转换的应用顺序）。使用 `==` 执行宽松相等的行为如下：
 
-1. 如果操作数具有相同的类型，则按以下方式进行比较：
-   - Object：仅当两个操作数引用相同的对象时，才返回 `true`。
-   - String：仅当两个操作数具有相同的字符并且顺序相同，才返回 `true`。
-   - Number：仅当两个操作数具有相同的值时，才返回 `true`。`+0` 和 `-0` 被视为相同的值。如果任一操作数为 `NaN`，则返回 `false`；因此 `NaN` 永远不等于 `NaN`。
-   - Boolean：仅当操作数都是 `true` 或 `false` 时，才返回 `true`。
-   - BigInt：仅当两个操作数具有相同的值时，才返回 `true`。
-   - Symbol：仅当两个操作数引用相同的 symbol 时，才返回 `true`。
-2. 如果操作数之一为 `null` 或 `undefined`，则另一个操作数必须为 `null` 或 `undefined` 才返回 `true`。否则返回 `false`。
-3. 如果操作数之一是对象，而另一个是原始值，[则将对象转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。
-4. 在这一步骤中，两个操作数都被转换为原始值（String、Number、Boolean、Symbol 和 BigInt 之一）。剩余的转换将分情况完成。
-   - 如果它们是相同类型的，则使用步骤 1 进行比较。
-   - 如果操作数中有一个是 Symbol，但另一个不是，则返回 `false`。
-   - 如果操作数之一是 Boolean，而另一个不是，[则将 Boolean 转换为 Number](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)：`true` 转换为 1，`false` 转换为 0。然后再次对两个操作数进行宽松比较。
-   - Number 转 String：[将 String 转换为 Number](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)。转换失败会得到 `NaN`，这将确保相等性为 `false`。
-   - Number 转 BigInt：按照其数值进行比较。如果 Number 是 `±Infinity` 或 `NaN`，返回 `false`。
-   - String 转 BigInt: 使用与 [`BigInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) 构造函数相同的算法将字符串转换为 BigInt。如果转换失败，则返回 `false`。
+1. 如果操作数具有相同的类型，则按如下方式进行比较：
+   - 对象（Object）：仅当两个操作数引用同一个对象时返回 `true`。
+   - 字符串（String）：仅当两个操作数具有相同的字符且顺序相同时返回 `true`。
+   - 数字（Number）：如果两个操作数的值相同，则返回 `true`。`+0` 和 `-0` 被视为相同的值。如果任何一个操作数是 `NaN`，返回 `false`；所以，`NaN` 永远不等于 `NaN`。
+   - 布尔值（Boolean）：仅当操作数都为 `true` 或都为 `false` 时返回 `true`。
+   - 大整型（BigInt）：仅当两个操作数的值相同时返回 `true`。
+   - 符号（Symbol）：仅当两个操作数引用相同的符号时返回 `true`。
+2. 如果其中一个操作数为 `null` 或 `undefined`，另一个操作数也必须为 `null` 或 `undefined` 以返回 `true`。否则返回 `false`。
+3. 如果其中一个操作数是对象，另一个是原始值，则[将对象转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#原始值强制转换)。
+4. 在这一步，两个操作数都被转换为原始值（字符串、数字、布尔值、符号和大整型中的一个）。剩余的转换将分情况完成。
+   - 如果是相同的类型，使用步骤 1 进行比较。
+   - 如果其中一个操作数是符号而另一个不是，返回 `false`。
+   - 如果其中一个操作数是布尔值而另一个不是，则[将布尔值转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)：`true` 转换为 1，`false` 转换为 0。然后再次对两个操作数进行宽松比较。
+   - 数字与字符串：[将字符串转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)。转换失败的结果为 `NaN`，这将保证相等比较为 `false`。
+   - 数字与大整型：按数字的值进行比较。如果数字为 ±Infinity 或 `NaN`，返回 `false`。
+   - 字符串与大整型：使用与 [`BigInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) 构造函数相同的算法将字符串转换为大整型数。如果转换失败，返回 `false`。
 
-一般而言，根据 ECMAScript 规范，所有原始类型和对象都不与 `undefined` 和 `null` 宽松相等。但是大部分浏览器允许非常有限的一类对象（即，所有页面中的 `document.all` 对象）在某些情况下表现出*模拟* `undefined` 值特性。宽松相等就是这些情况之一：当且仅当 A 是一个*模拟* `undefined` 的对象时，`null == A` 和 `undefined == A` 将会计算得到 `true`。在其他所有情况下，一个对象都不会与 `undefined` 或 `null` 宽松相等。
+一直以来，根据 ECMAScript 规范，所有原始值和对象都不与 `undefined` 和 `null` 宽松相等。但是大部分浏览器允许非常有限的一类对象（即，所有页面中的 `document.all` 对象）在某些情况下表现出*模拟* `undefined` 值特性。宽松相等就是这些情况之一：当且仅当 A 是一个*模拟* `undefined` 的对象时，`null == A` 和 `undefined == A` 将会计算得到 `true`。在其他所有情况下，一个对象都不会与 `undefined` 或 `null` 宽松相等。
 
 在大多数情况下，不建议使用宽松相等。使用严格相等进行比较的结果更容易预测，并且由于缺少类型强制转换可以更快地执行。
 
@@ -141,13 +143,13 @@ function sameValueZero(x, y) {
 }
 ```
 
-零值相等与严格相等的区别在于其将 `NaN` 视作是相等的，与同值相等的区别在于其将 `-0` 和 `0` 视作相等的。这使得它在搜索期间通常具有最实用的行为，特别是在与 `NaN` 一起使用时。它被用于 [`Array.prototype.includes()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)、[`TypedArray.prototype.includes()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes) 及 [`Map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 和 [`Set`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set) 方法用来比较键的相等性。
+零值相等与严格相等的区别在于其将 `NaN` 视作是相等的，与同值相等的区别在于其将 `-0` 和 `0` 视作相等的。这使得它在搜索期间通常具有最实用的行为，特别是在处理 `NaN` 时。它被用于 [`Array.prototype.includes()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)、[`TypedArray.prototype.includes()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes)，以及 [`Map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 和 [`Set`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set) 的需要比较键的相等性的方法。
 
 ## 相等性方法比较
 
 在比较双等号和三等号时，人们通常说一个是另一个的“增强”版本。例如，双等号可以被称为三等号的扩展版本，因为前者可以执行后者的所有操作，但是会对其操作数进行类型转换——例如 `6 == "6"`。或者，也可以说双等号是基础，而三等号是增强版本，因为它要求两个操作数是相同的类型，因此增加了额外的约束。
 
-然而，这种思维方式意味着相等比较形成了一个一维的“光谱”，其中“完全严格”位于一端，“完全宽松”位于另一端。这个模型在 {{jsxref("Object.is")}} 方面存在缺陷，因为它既不比双等号“宽松”，也不比三等号“严格”，也不处于两者之间（可以说既比双等号严格，又比三等号宽松）。从下面的相同比较表中，我们可以看出这是由于 {{jsxref("Object.is")}} 处理 {{jsxref("NaN")}} 的方式。请注意，如果 `Object.is(NaN, NaN)` 求值得到 `false`，我们*可以*说它适合宽松/严格光谱，作为三等号的更严格形式，可以区分 `-0` 和 `+0` 。然而，{{jsxref("NaN")}} 的处理意味着这是不正确的。不幸的是，{{jsxref("Object.is")}} 必须根据其特定特征来考虑，而不是根据其相等运算符的宽松度或严格度来考虑。
+然而，这种思维方式意味着相等比较形成了一个一维的“光谱”，其中“完全严格”位于一端，“完全宽松”位于另一端。这个模型对 {{jsxref("Object.is")}} 而言存在缺陷，因为它既不比双等号“宽松”，也不比三等号“严格”，也不处于两者之间（可以说既比双等号严格，又比三等号宽松）。从下面的相同比较表中，我们可以看出这是由于 {{jsxref("Object.is")}} 处理 {{jsxref("NaN")}} 的方式。请注意，如果 `Object.is(NaN, NaN)` 求值得到 `false`，我们*可以*说它适合宽松/严格光谱，作为三等号的更严格形式，可以区分 `-0` 和 `+0` 。然而，{{jsxref("NaN")}} 的处理意味着这是不正确的。不幸的是，{{jsxref("Object.is")}} 必须根据其特定特征来考虑，而不是根据其相等运算符的宽松度或严格度来考虑。
 
 | x                   | y                   | `==`       | `===`      | `Object.is` | `SameValueZero` |
 | ------------------- | ------------------- | ---------- | ---------- | ----------- | --------------- |
@@ -186,7 +188,7 @@ function sameValueZero(x, y) {
 
 - [`-`（一元减）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)
 
-  - : 考虑以下例子：
+  - : 注意下面的示例：
 
     ```js
     const stoppingForce = obj.mass * -obj.velocity;
@@ -210,7 +212,7 @@ function sameValueZero(x, y) {
 
 ### 注意：Object.is() 和 NaN
 
-{{jsxref("Object.is")}} 规范将所有 {{jsxref("NaN")}} 的实例视为同一对象。然而，由于可以使用[类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)，我们可以拥有 `NaN` 的不同浮点表示，这些表示在所有上下文中的行为不完全相同。例如：
+{{jsxref("Object.is")}} 规范将所有 {{jsxref("NaN")}} 的实例视为同一对象。然而，由于可以使用[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)，我们可以拥有 `NaN` 的不同浮点表示，这些表示在所有上下文中的行为不完全相同。例如：
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);

@@ -9,7 +9,22 @@ l10n:
 
 **`toFixed()`** メソッドは、数を固定小数点表記を用いて整形します。
 
-{{EmbedInteractiveExample("pages/js/number-tofixed.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toFixed()")}}
+
+```js interactive-example
+function financial(x) {
+  return Number.parseFloat(x).toFixed(2);
+}
+
+console.log(financial(123.456));
+// Expected output: "123.46"
+
+console.log(financial(0.004));
+// Expected output: "0.00"
+
+console.log(financial("1.23e+5"));
+// Expected output: "123000.00"
+```
 
 ## 構文
 
@@ -79,7 +94,7 @@ numObj.toFixed(6); // '12345.678900'を返す。0 を追加
 
 ### toFixed() を負の数に使用
 
-メンバーアクセスは単項マイナスよりも[優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)が高いので、文字列を取得するためには。負の数の式全体をグループ化する必要があります。
+メンバーアクセスは単項マイナスよりも[優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)が高いので、文字列を取得するためには負の数の式全体をグループ化する必要があります。
 
 ```js-nolint
 -2.34.toFixed(1); // -2.3, a number

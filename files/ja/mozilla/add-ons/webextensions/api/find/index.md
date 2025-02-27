@@ -20,4 +20,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/find
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.find", 1, 1)}} {{WebExtExamples("h2")}}
+{{Compat}} {{WebExtExamples("h2")}}

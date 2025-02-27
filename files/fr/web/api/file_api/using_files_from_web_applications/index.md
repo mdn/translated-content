@@ -261,7 +261,7 @@ Ensuite, on construit un objet [`FileReader`](/fr/docs/Web/API/FileReader) afin 
 
 ## Utiliser des URL d'objets
 
-Les méthodes [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL) et [`URL.revokeObjectURL()`](/fr/docs/Web/API/URL/revokeObjectURL) permet de créer des chaînes de caractères étant des URL référençant toute donnée à laquelle on accède via un objet [`File`](/fr/docs/Web/API/File) du DOM, y compris les fichiers locaux sur l'ordinateur de l'utilisatrice ou de l'utilisateur.
+Les méthodes [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL_static) et [`URL.revokeObjectURL()`](/fr/docs/Web/API/URL/revokeObjectURL_static) permet de créer des chaînes de caractères étant des URL référençant toute donnée à laquelle on accède via un objet [`File`](/fr/docs/Web/API/File) du DOM, y compris les fichiers locaux sur l'ordinateur de l'utilisatrice ou de l'utilisateur.
 
 Lorsqu'on dispose d'un objet [`File`](/fr/docs/Web/API/File) qu'on veut manipuler sous la forme d'une URL, on pourra créer une URL d'objet ainsi&nbsp;:
 
@@ -269,7 +269,7 @@ Lorsqu'on dispose d'un objet [`File`](/fr/docs/Web/API/File) qu'on veut manipule
 const objectURL = window.URL.createObjectURL(fileObj);
 ```
 
-Une URL d'objet est une chaîne de caractères identifiant l'objet [`File`](/fr/docs/Web/API/File). À chaque appel de [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL), c'est une URL d'objet unique qui est créée, mais si une URL d'objet avait déjà été créée pour un même objet. Chacune de ces URL doit être libérée. Cette libération a lieu automatiquement lorsque le document est déchargé. Si votre page utilise les URL d'objet dynamiquement, les URL doivent être libérées explicitement en appelant [`URL.revokeObjectURL()`](/fr/docs/Web/API/URL/revokeObjectURL)&nbsp;:
+Une URL d'objet est une chaîne de caractères identifiant l'objet [`File`](/fr/docs/Web/API/File). À chaque appel de [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL_static), c'est une URL d'objet unique qui est créée, mais si une URL d'objet avait déjà été créée pour un même objet. Chacune de ces URL doit être libérée. Cette libération a lieu automatiquement lorsque le document est déchargé. Si votre page utilise les URL d'objet dynamiquement, les URL doivent être libérées explicitement en appelant [`URL.revokeObjectURL()`](/fr/docs/Web/API/URL/revokeObjectURL_static)&nbsp;:
 
 ```js
 URL.revokeObjectURL(objectURL);
@@ -352,9 +352,9 @@ Si l'objet [`FileList`](/fr/docs/Web/API/FileList) passé à `handleFiles()` vau
 
    1. On crée un nouvel élément [`<li>`](/fr/docs/Web/HTML/Element/li) qu'on insère dans la liste.
    2. On crée un nouvel élément [`<img>`](/fr/docs/Web/HTML/Element/img).
-   3. On définit la source de l'image afin d'utiliser la nouvelle URL d'objet représentant le fichier grâce à [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL).
+   3. On définit la source de l'image afin d'utiliser la nouvelle URL d'objet représentant le fichier grâce à [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL_static).
    4. On définit la hauteur de l'image à 60.
-   5. On fait le nécessaire pour que le gestionnaire d'évènement pour `load` libère l'URL d'objet qui ne sera plus nécessaire puisque l'image aura été chargée. Pour cela, on appelle la méthode [`URL.revokeObjectURL()`](/fr/docs/Web/API/URL/revokeObjectURL) à laquelle on passe la chaîne de caractères qu'est l'URL d'objet que contient `img.src`.
+   5. On fait le nécessaire pour que le gestionnaire d'évènement pour `load` libère l'URL d'objet qui ne sera plus nécessaire puisque l'image aura été chargée. Pour cela, on appelle la méthode [`URL.revokeObjectURL()`](/fr/docs/Web/API/URL/revokeObjectURL_static) à laquelle on passe la chaîne de caractères qu'est l'URL d'objet que contient `img.src`.
    6. On ajoute le nouvel élément de la liste dans la liste.
 
 Voici le résultat de cet exemple&nbsp;:
@@ -415,7 +415,7 @@ function FileUpload(img, file) {
   );
   xhr.open(
     "POST",
-    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
+    "https://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
   );
   xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
   reader.onload = (evt) => {
@@ -541,4 +541,4 @@ URL.revokeObjectURL(obj_url);
 - [`URL`](/fr/docs/Web/API/URL)
 - [Utiliser l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API/Using_Fetch)
 - [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)
-- [Utiliser `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Utiliser `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

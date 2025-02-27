@@ -3,6 +3,8 @@ title: World Wide Web
 slug: Glossary/World_Wide_Web
 ---
 
+{{GlossarySidebar}}
+
 La _World Wide Web_ —comúnmente conocida como **WWW**, **W3**, o **la Web**— es un sistema interconectado de páginas web públicas accesibles a través de {{Glossary("Internet")}}. La Web no es lo mismo que el Internet: la Web es una de las muchas aplicaciones construidas sobre Internet.
 
 Tim Berners-Lee propuso la arquitectura de lo que es conocido como la World Wide Web. Él creó el primer servidor web ({{Glossary("Server","server")}}), el primer navegador de internet ({{Glossary("Browser","browser")}}), y la primera página web, en su computadora del laboratorio de investigación de física del CERN en 1990. En 1991, anunció su creación en el grupo de noticias alt.hypertext, marcando con esto el momento en que la Web se hizo pública.
@@ -21,10 +23,10 @@ Tan pronto como inventó la Web, Tim Berners-Lee fundó el Consorcio de la World
 
 ### Más información en
 
-- [Entendiendo la Web](/es/Learn)
+- [Entendiendo la Web](/es/docs/Learn)
 - [Mapa para la enseñanza Web (Web literacy map)](https://learning.mozilla.org/web-literacy) (sitio en inglés, en el cual se muestra un inventario de las habilidades necesarias para el desarrollo Web y actividades de aprendizaje)
 
 ### Conocimiento general
 
 - [World Wide Web](https://es.wikipedia.org/wiki/World_Wide_Web) en Wikipedia
-- [El sitio web de la W3C](http://w3.org)
+- [El sitio web de la W3C](https://w3.org)

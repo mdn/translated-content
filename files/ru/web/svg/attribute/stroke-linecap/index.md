@@ -7,9 +7,12 @@ slug: Web/SVG/Attribute/stroke-linecap
 
 Атрибут **`stroke-linecap`** - это атрибут представления, определяющий форму, которая будет использоваться в конце открытых подпутей при штриховании.
 
-> **Примечание:** В качестве атрибута представления можно использовать `stroke-linecap` в качестве свойства CSS.
+> [!NOTE]
+> В качестве атрибута представления можно использовать `stroke-linecap` в качестве свойства CSS.
 
 В качестве атрибута представления он может применяться к любому элементу, но он влияет только на следующие семь элементов: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polyline')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
+
+## Пример
 
 ```css hidden
 html,
@@ -38,7 +41,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('topExample', '100%', 200)}}
+{{EmbedLiveSample("Пример", '100%', 200)}}
 
 ## Нотации
 
@@ -152,10 +155,10 @@ svg {
 
 {{EmbedLiveSample('square', '100%', 200)}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}

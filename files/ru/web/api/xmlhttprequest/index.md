@@ -3,7 +3,9 @@ title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers("window_and_worker_except_service")}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 `XMLHttpRequest` это API, который предоставляет клиенту функциональность для обмена данными между клиентом и сервером. Данный API предоставляет простой способ получения данных по ссылке без перезагрузки страницы. Это позволяет обновлять только часть веб-страницы не прерывая пользователя. `XMLHttpRequest используется в AJAX запросах и особенно в single-page приложениях.`
 
@@ -15,7 +17,7 @@ XMLHttpRequest изначально был разработан Microsoft и п�
 var myRequest = new XMLHttpRequest();
 ```
 
-более детальное описание создание объекта, можно увидеть в разделе [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest).
+более детальное описание создание объекта, можно увидеть в разделе [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).
 
 ## Список методов объекта
 
@@ -478,7 +480,7 @@ var myRequest = new XMLHttpRequest();
 
 Конструктор создаёт объект XMLHttpRequest. Он должен быть вызван перед обращением к любому методу класса.
 
-Gecko/Firefox 16 добавляет нестандартные параметры в конструктор, для лучшего взаимодействия с режимом инкогнито, (смотри [Bug 692677](https://bugzilla.mozilla.org/show_bug.cgi?id=692677)). Установка флага `mozAnon` в значение `true` создаёт сущность [`AnonXMLHttpRequest()`](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest) описанную в XMLHttpRequest спецификации, но не реализованную не в одном из браузеров (информация сентября 2012).
+Gecko/Firefox 16 добавляет нестандартные параметры в конструктор, для лучшего взаимодействия с режимом инкогнито, (смотри [Bug 692677](https://bugzilla.mozilla.org/show_bug.cgi?id=692677)). Установка флага `mozAnon` в значение `true` создаёт сущность [`AnonXMLHttpRequest()`](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest) описанную в XMLHttpRequest спецификации, но не реализованную не в одном из браузеров (информация сентября 2012).
 
 ```
 XMLHttpRequest (
@@ -493,7 +495,7 @@ XMLHttpRequest (
   - : Вы можете использовать два флага:
 
     - `mozAnon`
-      - : Boolean: Использование этого флага уберёт из запроса заголовки origin, и [user credentials](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials). Кроме этого, куки не будут отправлены в запросе, если только они не будут добавлены к запросу специально, через метод setRequestHeader.
+      - : Boolean: Использование этого флага уберёт из запроса заголовки origin, и [user credentials](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials). Кроме этого, куки не будут отправлены в запросе, если только они не будут добавлены к запросу специально, через метод setRequestHeader.
     - `mozSystem`
       - : Boolean: Если выставить этот флаг в значение `true` то это позволит делать cross-доменные запросы без необходимости получения специальных заголовков со стороны сервера (CORS). Для использования этого флага необходимо использовать дополнительный флаг* `mozAnon: true`, поскольку для отправки запроса на другой домен, нельзя использовать куки и креды пользователя. Этот флаг [работает только с привилегированными (одобренными) приложениями](https://bugzilla.mozilla.org/show_bug.cgi?id=692677#c68); он не сработает с произвольно загруженными страницами.*
 
@@ -525,7 +527,8 @@ DOMString? getResponseHeader(DOMString header);
 
 Инициализирует запрос. Этот метод может (и должен) быть вызван из JavaScript-кода; если необходимо вызвать запрос из нативного кода, то нужно использовать метод [`openRequest()`](</en/nsIXMLHttpRequest#openRequest()> "/en/XMLHttpRequest#openRequest()").
 
-> **Примечание:** Вызов этого метода из активного запроса (если метод `open() или` `openRequest() уже были вызваны`) эквивалентно вызову метода `abort()`.
+> [!NOTE]
+> Вызов этого метода из активного запроса (если метод `open() или` `openRequest() уже были вызваны`) эквивалентно вызову метода `abort()`.
 
 ```
 void open(
@@ -547,7 +550,8 @@ void open(
 
   - : Необязательный boolean параметр, по умолчанию равный `true`. Определяет, будет ли запрос отправлен асинхронно. Если значение равно `false`, метод `send()` вернёт ответ в общем потоке работы приложения (иначе говоря, приложение зависнет на некоторое время), в противном случае, ответ может быть получен только при помощи определённых обработчиков событий. В случае, если используется отправка `multipart` запроса, то этот атрибут **должен** быть `true`, или будет выброшено исключение.
 
-    > **Примечание:** Начиная с Gecko 30.0, синхронные запросы объявлены как deprecated, в силу того что все пользователи недовольны тем, что приложение "зависает".
+    > [!NOTE]
+    > Начиная с Gecko 30.0, синхронные запросы объявлены как deprecated, в силу того что все пользователи недовольны тем, что приложение "зависает".
 
 - `user`
   - : Необязательный параметр, используется для аутентификации пользователя. По умолчанию, пустая строка.
@@ -566,13 +570,16 @@ void overrideMimeType(DOMString mimetype);
 
 Отправляет запрос. Если запрос асинхронный (а по умолчанию это так), этот метод вернёт значение сразу после того как метод вызван.
 
-> **Примечание:** в этом случае, в ответе не будет содержаться информации, которая пришла с сервера, поскольку она ещё не пришла. Для того чтобы получить эту информацию, нужно слушать события загрузки, или использовать promise.
+> [!NOTE]
+> В этом случае, в ответе не будет содержаться информации, которая пришла с сервера, поскольку она ещё не пришла. Для того чтобы получить эту информацию, нужно слушать события загрузки, или использовать promise.
 
 Если запрос синхронный, то метод вернёт значение только после того, как придёт запрос от сервера.
 
-> **Примечание:** все необходимые обработчики событий должны быть установлены перед вызовом `send()`.
+> [!NOTE]
+> Все необходимые обработчики событий должны быть установлены перед вызовом `send()`.
 
-> **Примечание:** Лучше не использовать параметр ArrayBuffer. Сейчас он не входит в спецификацию `XMLHttpRequest`. Вместо него можно использовать ArrayBufferView (смотри таблицу совместимости для различных версий).
+> [!NOTE]
+> Лучше не использовать параметр ArrayBuffer. Сейчас он не входит в спецификацию `XMLHttpRequest`. Вместо него можно использовать ArrayBufferView (смотри таблицу совместимости для различных версий).
 
 ```
 void send();
@@ -586,11 +593,11 @@ void send(FormData data);
 
 ###### Примечания
 
-Если тип _data_ - `Document`, то он будет сериализован перед отправкой. Firefox до версии 3 всегда отправляет такой запрос в кодировке UTF-8; [Firefox 3](/en/Firefox_3) отправляет данные в той кодировке, которая указаны в `body.xmlEncoding`, или UTF-8 если такой информации нет.
+Если тип _data_ - `Document`, то он будет сериализован перед отправкой. Firefox до версии 3 всегда отправляет такой запрос в кодировке UTF-8; [Firefox 3](/en-US/Firefox_3) отправляет данные в той кодировке, которая указаны в `body.xmlEncoding`, или UTF-8 если такой информации нет.
 
 If it's an `nsIInputStream`, it must be compatible with `nsIUploadChannel`'s `setUploadStream()` method. In that case, a Content-Length header is added to the request, with its value obtained using `nsIInputStream`'s `available()` method. Any headers included at the top of the stream are treated as part of the message body. The stream's MIMEtype should be specified by setting the Content-Type header using the [`setRequestHeader()`](<#setRequestHeader()> "/en/XMLHttpRequest#setRequestHeader()") method prior to calling `send()`.
 
-The best way to send binary content (like in files upload) is using an [ArrayBufferView](/ru/docs/JavaScript/Typed_arrays/ArrayBufferView) or [Blobs](/ru/docs/DOM/Blob) in conjuncton with the `send()` method. However, if you want to send a [stringifiable](/ru/docs/JavaScript/Reference/Global_Objects/JSON/stringify) raw data, use the [`sendAsBinary()`](</ru/docs/DOM/XMLHttpRequest#sendAsBinary()>) method instead, or the [`StringView`](/ru/docs/Web/JavaScript/Typed_arrays/StringView) Non native typed arrays superclass.
+The best way to send binary content (like in files upload) is using an [ArrayBufferView](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or [Blobs](/ru/docs/Web/API/Blob) in conjuncton with the `send()` method. However, if you want to send a [stringifiable](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) raw data, use the [`sendAsBinary()`](</ru/docs/DOM/XMLHttpRequest#sendAsBinary()>) method instead, or the [`StringView`](/ru/docs/Web/JavaScript/Typed_arrays/StringView) Non native typed arrays superclass.
 
 ### setRequestHeader()
 
@@ -643,7 +650,8 @@ void setRequestHeader(
 
 Вариант метода `send()` который посылает бинарные данные.
 
-> **Примечание:** Этот нестандартный метод считается устарелым по состоянию на Gecko 31, и со временем будет удалён. Взамен может использоваться стандарт метода `send(Blob data).`
+> [!NOTE]
+> Этот нестандартный метод считается устарелым по состоянию на Gecko 31, и со временем будет удалён. Взамен может использоваться стандарт метода `send(Blob data).`
 
 ```
 void sendAsBinary(
@@ -651,7 +659,7 @@ void sendAsBinary(
 );
 ```
 
-Данный метод используется в сочетании с методом `readAsBinaryString,` который присутствует в [`FileReader`](/ru/docs/DOM/FileReader) API, и позволяет [прочитать и **загрузить** файл любого типа](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files) и превратить необработанные данные в [JSON-строку](/ru/docs/JavaScript/Reference/Global_Objects/JSON/stringify).
+Данный метод используется в сочетании с методом `readAsBinaryString,` который присутствует в [`FileReader`](/ru/docs/Web/API/FileReader) API, и позволяет [прочитать и **загрузить** файл любого типа](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#submitting_forms_and_uploading_files) и превратить необработанные данные в [JSON-строку](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
 
 ##### Параметры
 
@@ -660,7 +668,7 @@ void sendAsBinary(
 
 ##### `sendAsBinary()` polyfill
 
-Since `sendAsBinary()` is an experimental feature, here is **a polyfill** for browsers that _don't_ support the `sendAsBinary()` method but support [typed arrays](/ru/docs/JavaScript/Typed_arrays).
+Since `sendAsBinary()` is an experimental feature, here is **a polyfill** for browsers that _don't_ support the `sendAsBinary()` method but support [typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays).
 
 ```js
 /*\
@@ -685,7 +693,8 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 }
 ```
 
-> **Примечание:** It's possible to build this polyfill putting two types of data as argument for `send()`: an [`ArrayBuffer`](/ru/docs/JavaScript/Typed_arrays/ArrayBuffer) (`ui8Data.buffer` – the commented code) or an [`ArrayBufferView`](/ru/docs/JavaScript/Typed_arrays/ArrayBufferView) (`ui8Data`, which is a [typed array of 8-bit unsigned integers](/ru/docs/JavaScript/Typed_arrays/Uint8Array) – uncommented code). However, on Google Chrome, when you try to send an `ArrayBuffer`, the following warning message will appear: `ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead.` Another possible approach to send binary data is the [`StringView`](/ru/docs/Web/JavaScript/Typed_arrays/StringView) Non native typed arrays superclass in conjunction with the [`send()`](<#send()>) method.
+> [!NOTE]
+> It's possible to build this polyfill putting two types of data as argument for `send()`: an [`ArrayBuffer`](/ru/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) (`ui8Data.buffer` – the commented code) or an [`ArrayBufferView`](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) (`ui8Data`, which is a [typed array of 8-bit unsigned integers](/ru/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) – uncommented code). However, on Google Chrome, when you try to send an `ArrayBuffer`, the following warning message will appear: `ArrayBuffer is deprecated in XMLHttpRequest.send(). Use ArrayBufferView instead.` Another possible approach to send binary data is the [`StringView`](/ru/docs/Web/JavaScript/Typed_arrays/StringView) Non native typed arrays superclass in conjunction with the [`send()`](<#send()>) method.
 
 ## Notes
 
@@ -698,9 +707,9 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 
 `onreadystatechange` as a property of the `XMLHttpRequest` instance is supported in all browsers.
 
-Since then, a number of additional event handlers were implemented in various browsers (`onload`, `onerror`, `onprogress`, etc.). These are supported in Firefox. In particular, see `nsIXMLHttpRequestEventTarget` and [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest).
+Since then, a number of additional event handlers were implemented in various browsers (`onload`, `onerror`, `onprogress`, etc.). These are supported in Firefox. In particular, see `nsIXMLHttpRequestEventTarget` and [Using XMLHttpRequest](/en-US/DOM/XMLHttpRequest/Using_XMLHttpRequest).
 
-More recent browsers, including Firefox, also support listening to the `XMLHttpRequest` events via standard [`addEventListener`](/en/DOM/element.addEventListener) APIs in addition to setting `on*` properties to a handler function.
+More recent browsers, including Firefox, also support listening to the `XMLHttpRequest` events via standard [`addEventListener`](/en-US/DOM/element.addEventListener) APIs in addition to setting `on*` properties to a handler function.
 
 ## Permissions
 
@@ -716,25 +725,25 @@ When using System XHR via the `mozSystem` property, for example for Firefox OS a
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - MDN articles about XMLHttpRequest:
 
-  - [AJAX - Getting Started](/en/AJAX/Getting_Started)
-  - [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-  - [HTML in XMLHttpRequest](/en/HTML_in_XMLHttpRequest)
-  - [`FormData`](/en/DOM/XMLHttpRequest/FormData)
+  - [AJAX - Getting Started](/en-US/AJAX/Getting_Started)
+  - [Using XMLHttpRequest](/en-US/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+  - [HTML in XMLHttpRequest](/en-US/HTML_in_XMLHttpRequest)
+  - [`FormData`](/en-US/DOM/XMLHttpRequest/FormData)
 
 - XMLHttpRequest references from W3C and browser vendors:
 
-  - [W3C: XMLHttpRequest](http://www.w3.org/TR/XMLHttpRequest1/) (base features)
-  - [W3C: XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) (latest editor's draft with extensions to the base functionality, formerly XMLHttpRequest Level 2
+  - [W3C: XMLHttpRequest](https://www.w3.org/TR/XMLHttpRequest1/) (base features)
+  - [W3C: XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) (latest editor's draft with extensions to the base functionality, formerly XMLHttpRequest Level 2
   - [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
   - [Apple developers' reference](https://developer.apple.com/library/safari/#documentation/AppleApplications/Conceptual/SafariJSProgTopics/Articles/XHR.html)
 
-- ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
-- [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
-- [HTML5 Rocks - New Tricks in XMLHttpRequest2](http://www.html5rocks.com/en/tutorials/file/xhr2/)
+- ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
+- [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
+- [HTML5 Rocks - New Tricks in XMLHttpRequest2](https://www.html5rocks.com/en/tutorials/file/xhr2/)
 - [Thread on the naming convention of `XMLHttpRequest`](http://programmers.stackexchange.com/questions/157375/why-does-xmlhttprequest-not-seem-to-follow-a-naming-convention)
 - `Chrome scope availability` - how to access from JSM modules etc which do not have access to DOM
 

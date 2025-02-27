@@ -1,42 +1,29 @@
 ---
-title: document.compatMode
+title: Document：compatMode 属性
 slug: Web/API/Document/compatMode
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{ ApiRef("DOM") }}
 
-表明当前文档的渲染模式是[怪异模式/混杂模式](/zh-CN/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)还是标准模式。
+**`Document.compatMode`** 只读属性表示文档是以[怪异模式](/zh-CN/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)或标准模式渲染。
 
-## 术语
+## 值
 
-| 英文                                      | 中文              |
-| ----------------------------------------- | ----------------- |
-| Quirks mode                               | 怪异模式 混杂模式 |
-| Standards mode                            | 标准模式          |
-| almost standards mode limited-quirks mode | 准标准模式        |
+可以是一个枚举值：
 
-## 语法
+- 如果文档处于怪异模式，则为“`BackCompat`”。
+- 如果文档处于无怪异模式（也称为“标准模式”）或有限怪异模式（也称为“接近标准模式”）下，则为“`CSS1Compat`”。
 
-```plain
-mode = document.compatMode;
-```
+> [!NOTE]
+> 所有这些模式现在都已经标准化，因此较旧的“标准模式”和“接近标准模式”名称已经不合逻辑，也不再在标准中使用。
 
-### 值
-
-- `mode`
-
-  - : 是一个枚举值（enumerated value），可能的值有：
-
-    - `"BackCompat"`：文档为怪异模式。
-    - `"CSS1Compat"`：文档不是怪异模式，意味着文档处于标准模式或者准标准模式。
-
-> **备注：** 现在，这些模式都已经被标准化了，准标准模式已和标准模式相同，而标准模式成为了默认表现。标准模式和准标准模式这两个名字已经失去了意义，不再在规范文档中出现。
-
-## 例子
+## 示例
 
 ```js
-if (document.compatMode == "BackCompat") {
-  // 渲染模式为混杂模式
+if (document.compatMode === "BackCompat") {
+  // 怪异模式中
 }
 ```
 

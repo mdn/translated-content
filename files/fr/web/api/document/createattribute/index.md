@@ -7,7 +7,8 @@ slug: Web/API/Document/createAttribute
 
 La méthode **`Document.createAttribute()`** crée un nouveau nœud d'attribut et le renvoie. L'objet a créé un noeud implémentant l'interface {{domxref("Attr")}}. Le DOM n'impose pas le type d'attribut à ajouter à un élément particulier de cette manière.
 
-> **Note :** La chaîne de caractères donnée dans le paramètre est convertie en minuscules.
+> [!NOTE]
+> La chaîne de caractères donnée dans le paramètre est convertie en minuscules.
 
 ## Syntaxe
 

@@ -9,7 +9,7 @@ slug: Web/HTTP/Methods/POST
 
 {{httpmethod("PUT")}}과 `POST`의 차이는 {{glossary("idempotent", "멱등성")}}으로, `PUT`은 멱등성을 가집니다. `PUT`은 한 번을 보내도, 여러 번을 연속으로 보내도 같은 효과를 보입니다. 즉, 부수 효과(side effect)가 없습니다.
 
-`POST` 요청은 보통 [HTML 양식](/ko/docs/Learn/HTML/Forms)을 통해 서버에 전송하며, 서버에 변경사항을 만듭니다. 이 경우의 콘텐츠 유형(`Content-Type`)은 _{{HTMLElement("form")}} 요소의 [`enctype`](/ko/docs/Web/HTML/Element/form#enctype) 특성이나 {{HTMLElement("input") }}, {{HTMLElement("button")}}_ 요소의 _[`formenctype`](/ko/docs/Web/HTML/Element/input#formenctype) 특성 안에 적당한 문자열을 넣어 결정합니다._
+`POST` 요청은 보통 [HTML 양식](/ko/docs/Learn/Forms)을 통해 서버에 전송하며, 서버에 변경사항을 만듭니다. 이 경우의 콘텐츠 유형(`Content-Type`)은 _{{HTMLElement("form")}} 요소의 [`enctype`](/ko/docs/Web/HTML/Element/form#enctype) 특성이나 {{HTMLElement("input") }}, {{HTMLElement("button")}}_ 요소의 _[`formenctype`](/ko/docs/Web/HTML/Element/input#formenctype) 특성 안에 적당한 문자열을 넣어 결정합니다._
 
 - `application/x-www-form-urlencoded`: &으로 분리되고, "=" 기호로 값과 키를 연결하는 key-value tuple로 인코딩되는 값입니다. 영어 알파벳이 아닌 문자들은 {{glossary("percent encoded")}} 으로 인코딩됩니다. 따라서, 이 content type은 바이너리 데이터에 사용하기에는 적절치 않습니다. (바이너리 데이터에는 use `multipart/form-data` 를 사용해 주세요.)\_
 - _`multipart/form-data`_

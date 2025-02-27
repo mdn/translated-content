@@ -156,18 +156,13 @@ This will log a message containing 'hello world!'.
 
 ## Especificações
 
-| Especificação                                                        | Status               | Comentário                                         |
-| -------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                  | {{Spec2('ES3')}}     | Initial definition. Implemented in JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.10.6.21', 'RegExp.exec')}}              | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-regexp.prototype.exec', 'RegExp.exec')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.exec', 'RegExp.exec')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.RegExp.exec")}}
+{{Compat}}
 
 ## Veja também
 
-- O capítulo de [Expressões Regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) no [Guia de Javascript](/pt-BR/docs/Web/JavaScript/Guide).
+- O capítulo de [Expressões Regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions) no [Guia de Javascript](/pt-BR/docs/Web/JavaScript/Guide).
 - {{jsxref("RegExp")}}

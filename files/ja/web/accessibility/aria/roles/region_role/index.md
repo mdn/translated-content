@@ -15,7 +15,7 @@ slug: Web/Accessibility/ARIA/Roles/region_role
 
 リージョン (`region`) ロールは、ARIA の[ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)です。 ランドマークロールは、ウェブページの構成と構造を識別する方法を提供します。 ページのセクションを分類およびラベル付けすることにより、レイアウトを通じて視覚的に伝達される構造情報がプログラム的に表されます。 スクリーンリーダーは、ランドマークロールを使用して、ページの重要なセクションにキーボードナビゲーションを提供します。
 
-リージョン (`region`) ロールは、ユーザーがそのセクションに簡単にナビゲートし、ページの要約にリストされることを望むほど重要なコンテンツのセクションのために予約するべきです。 リージョン (`region`) ロールはより汎用の用語であり、識別が必要なセクションが、[`banner`](/ja/docs/Web/Accessibility/ARIA/Roles/Banner_role)、[`main`](/ja/docs/Web/Accessibility/ARIA/Roles/Main_role)、[`contentinfo`](/ja/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role)、[`complementary`](/ja/docs/Web/Accessibility/ARIA/Roles/Complementary_role)、[`navigation`](/ja/docs/Web/Accessibility/ARIA/Roles/Navigation_Role) などの他のランドマークロールのいずれかによって正確に説明できない場合にのみ使用するべきです。
+リージョン (`region`) ロールは、ユーザーがそのセクションに簡単にナビゲートし、ページの要約にリストされることを望むほど重要なコンテンツのセクションのために予約するべきです。 リージョン (`region`) ロールはより汎用の用語であり、識別が必要なセクションが、[`banner`](/ja/docs/Web/Accessibility/ARIA/Roles/banner_role)、[`main`](/ja/docs/Web/Accessibility/ARIA/Roles/main_role)、[`contentinfo`](/ja/docs/Web/Accessibility/ARIA/Roles/contentinfo_role)、[`complementary`](/ja/docs/Web/Accessibility/ARIA/Roles/complementary_role)、[`navigation`](/ja/docs/Web/Accessibility/ARIA/Roles/navigation_role) などの他のランドマークロールのいずれかによって正確に説明できない場合にのみ使用するべきです。
 
 リージョン (`region`) ロールを持つすべての要素には、リージョン内のコンテンツの目的を説明するラベルを含めるべきで、目に見えるヘッダーを参照する `aria-labelledby` を伴うのが好ましいです。 目に見える適切なヘッダーがない場合は、`aria-label` を使用するべきです。
 
@@ -97,7 +97,7 @@ slug: Web/Accessibility/ARIA/Roles/region_role
 
 - [ランドマークブラウザー拡張](https://matatk.agrip.org.uk/landmarks/)（英語）
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
@@ -109,10 +109,10 @@ TBD
 
 - {{htmlelement("section")}}: 汎用セクション要素
 - [region (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#region)
-- [HTML のセクションとアウトラインの使用](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)
+- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Element/Heading_Elements)
 - [ランドマークロール: ARIA を使用する: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
-- [The section element | HTML5 Doctor](http://html5doctor.com/the-section-element/)
+- [The section element | HTML5 Doctor](https://html5doctor.com/the-section-element/)
 
 1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

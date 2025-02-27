@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 
 {{jsxref("String")}} 的 **`toLocaleUpperCase()`** 方法会根据特定区域设置的大小写映射规则，将字符串转换为大写形式并返回。
 
-{{EmbedInteractiveExample("pages/js/string-tolocaleuppercase.html")}}
+{{InteractiveExample("JavaScript Demo: String.toLocaleUpperCase()")}}
+
+```js interactive-example
+const city = "istanbul";
+
+console.log(city.toLocaleUpperCase("en-US"));
+// Expected output: "ISTANBUL"
+
+console.log(city.toLocaleUpperCase("TR"));
+// Expected output: "İSTANBUL"
+```
 
 ## 语法
 
@@ -30,7 +40,7 @@ toLocaleUpperCase(locales)
 
 ## 描述
 
-`toLocaleUpperCase()` 方法返回根据特定区域设置的大小写映射规则将字符串转换为小写形式的值。`toLocaleUpperCase()` 不会影响字符串本身的值。在大多数情况下，这将产生与 {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}} 相同的结果，但对于某些区域设置（例如土耳其语），它们的大小写映射与 Unicode 的默认映射不同，可能会得到不同的结果。
+`toLocaleUpperCase()` 方法返回根据特定区域设置的大小写映射规则将字符串转换为大写形式的值。`toLocaleUpperCase()` 不会影响字符串本身的值。在大多数情况下，这将产生与 {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}} 相同的结果，但对于某些区域设置（例如土耳其语），它们的大小写映射与 Unicode 的默认映射不同，可能会得到不同的结果。
 
 还要注意，转换不一定是一对一的字符映射，因为某些字符在转换为小写形式时可能会产生两个（甚至更多）字符。因此，结果字符串的长度可能与输入长度不同。这也意味着转换是不稳定的，因此下面的例子可能返回 `false`：
 `x.toLocaleLowerCase() === x.toLocaleUpperCase().toLocaleLowerCase()`

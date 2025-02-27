@@ -49,7 +49,7 @@ window.addEventListener("vrdisplaypresentchange", function () {
 });
 ```
 
-Ou utilisez la propriété de gestionnaire d'événements [`onvrdisplaypresentchange`](/fr/docs/Web/API/Window/onvrdisplaypresentchange) :
+Ou utilisez la propriété de gestionnaire d'événements [`onvrdisplaypresentchange`](/fr/docs/Web/API/Window/vrdisplaypresentchange_event) :
 
 ```js
 window.onvrdisplaypresentchange = function () {
@@ -72,5 +72,4 @@ window.onvrdisplaypresentchange = function () {
 
 ## Voir aussi
 
-- [WebVR API homepage](/fr/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — démos, téléchargements et autres ressources de l'équipe Mozilla VR.
+- [WebVR API](/fr/docs/Web/API/WebVR_API)

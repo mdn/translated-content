@@ -46,7 +46,7 @@ O elemento **`<table>`** [HTML](/pt-BR/docs/Web/HTML) representa dados tabulares
     </tr>
     <tr>
       <th scope="row">Omissão de tag</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Nenhuma, tanto a tag inicial quanto a final são obrigatórias.</td>
     </tr>
     <tr>
       <th scope="row">Elementos pais permitidos</th>
@@ -75,7 +75,7 @@ O elemento **`<table>`** [HTML](/pt-BR/docs/Web/HTML) representa dados tabulares
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 ### Atributos depreciados
 
@@ -315,7 +315,8 @@ document
 
 O exemplo a seguir adiciona um manipulador de eventos a cada elemento `<th>` de cada `<table>` no `document`; ele ordena todas as linhas do `<tbody>`, baseando a ordenação nas células `td` contidas nas linhas.
 
-> **Nota:** Esta solução assume que os elementos `<td>` são preenchidos por texto bruto sem elementos descendentes.
+> [!NOTE]
+> Esta solução assume que os elementos `<td>` são preenchidos por texto bruto sem elementos descendentes.
 
 ##### HTML
 

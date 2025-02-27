@@ -1,70 +1,37 @@
 ---
 title: <p>：段落元素
 slug: Web/HTML/Element/p
+l10n:
+  sourceCommit: 736fa0e485243ef1f07395811a9bf397c6509316
 ---
 
 {{HTMLSidebar}}
 
-[HTML](/zh-CN/docs/Web/HTML) **`<p>`** 元素表示文本的一个段落。在视觉媒体中，段落通常表现为用空行和/或首行缩进与相邻段落分隔的文本块，但 HTML 段落可以是相关内容的任何结构分组，如图像或表格字段。
+**`<p>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示文本的一个段落。在视觉媒体中，段落通常表现为用空行和/或首行缩进与相邻段落分隔的文本块，但 HTML 段落可以是相关内容的任何结构分组，如图像或表格字段。
 
 段落是[块级元素](/zh-CN/docs/Glossary/Block-level_content)，如果在关闭的 `</p>` 标签之前解析了另一个块级元素，则该标签将自动关闭。请参阅下面的“标签省略”。
 
-{{EmbedInteractiveExample("pages/tabbed/p.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;p&gt;", "tabbed-standard")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
-          >内容分类</a
-        >
-      </th>
-      <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
-          >流式内容</a
-        >、可感知内容。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的内容类型</th>
-      <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
-          >短语内容</a
-        >。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">标签省略</th>
-      <td>
-        开始标签是必要的。如果 {{HTMLElement("p")}} 元素后面紧跟 {{HTMLElement("address")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("blockquote")}}、{{HTMLElement("div")}}、{{HTMLElement("dl")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("footer")}}、{{HTMLElement("form")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("header")}}、{{HTMLElement("hr")}}、{{HTMLElement("menu")}}、{{HTMLElement("nav")}}、{{HTMLElement("ol")}}、{{HTMLElement("pre")}}、{{HTMLElement("section")}}、{{HTMLElement("table")}}、{{HTMLElement("ul")}} 或其他 {{HTMLElement("p")}} 元素，或者父元素中已没有内容，且父元素不是 {{HTMLElement("a")}} 元素，则可以省略结束标签。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的父元素</th>
-      <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
-          >流式内容</a
-        >的元素。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">隐式 ARIA 角色</th>
-      <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles"
-          >paragraph</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的 ARIA 角色</th>
-      <td>任意</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 接口</th>
-      <td>{{domxref("HTMLParagraphElement")}}</td>
-    </tr>
-  </tbody>
-</table>
+```html interactive-example
+<p>
+  Geckos are a group of usually small, usually nocturnal lizards. They are found
+  on every continent except Antarctica.
+</p>
+
+<p>
+  Some species live in houses where they hunt insects attracted by artificial
+  light.
+</p>
+```
+
+```css interactive-example
+p {
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid #999;
+}
+```
 
 ## 属性
 
@@ -81,7 +48,7 @@ slug: Web/HTML/Element/p
 <p>这是第二个段落。这是第二个段落。这是第二个段落。这是第二个段落。</p>
 ```
 
-### 运行结果
+### 结果
 
 {{EmbedLiveSample('示例')}}
 
@@ -142,7 +109,7 @@ document.querySelector("button").addEventListener("click", (event) => {
 });
 ```
 
-### 运行结果
+### 结果
 
 {{EmbedLiveSample('为段落添加样式')}}
 
@@ -159,6 +126,63 @@ p {
   margin-bottom: 2em; /* 增加段落之后的空白 */
 }
 ```
+
+## 技术概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+          >内容分类</a
+        >
+      </th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >、可感知内容。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>
+        开始标签是必要的。如果 {{HTMLElement("p")}} 元素后面紧跟 {{HTMLElement("address")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("blockquote")}}、{{HTMLElement("div")}}、{{HTMLElement("dl")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("footer")}}、{{HTMLElement("form")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("header")}}、{{HTMLElement("hr")}}、{{HTMLElement("menu")}}、{{HTMLElement("nav")}}、{{HTMLElement("ol")}}、{{HTMLElement("pre")}}、{{HTMLElement("section")}}、{{HTMLElement("table")}}、{{HTMLElement("ul")}} 或其他 {{HTMLElement("p")}} 元素；或者父元素中已没有内容，且父元素不是 {{HTMLElement("a")}}、{{HTMLElement("audio")}}、{{HTMLElement("del")}}、{{HTMLElement("ins")}}、{{HTMLElement("map")}}、{{HTMLElement("noscript")}} 或 {{HTMLElement("video")}} 元素，也不是独立自定义元素；则可以省略结束标签。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>
+        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >的元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐含的 ARIA 角色</th>
+      <td>
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles"
+          >paragraph</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>任意</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLParagraphElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 规范
 

@@ -13,7 +13,7 @@ slug: Web/HTML/Reference
   - : HTML の要素は属性を持ちます。ユーザーが望む基準を満たすために、さまざまな方法で要素を構成したり、動作を調整したりする追加の値です。
 - [グローバル属性](/ja/docs/Web/HTML/Global_attributes)
   - : グローバル属性は、すべての HTML 要素で共通の属性です。すべての要素で使用できますが、要素によっては効果がないこともあります。
-- [リンク種別](/ja/docs/Web/HTML/Link_types)
+- [リンク種別](/ja/docs/Web/HTML/Attributes/rel)
   - : HTML では、以下のようなリンク種別で {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}} 要素を使用して他へリンクするときに二つの文書間の関係を示します。
 - [コンテンツカテゴリ](/ja/docs/Web/HTML/Content_categories)
   - : すべての HTML 要素は一つ以上のコンテンツカテゴリのメンバです。 — これらのカテゴリは共通の特徴を持つ要素をグループ化します。

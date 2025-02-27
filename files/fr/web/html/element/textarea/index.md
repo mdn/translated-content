@@ -14,7 +14,7 @@ Dans les exemples ci-avant, on peut voir plusieurs fonctionnalités de `<textare
 Le deuxième exemple détaille des fonctionnalités plus complexes :
 
 - Les attributs `rows` et `cols` permettent de définir la taille exacte qui doit être occupée par l'élément `<textarea>`. Les navigateurs pouvant être différents, c'est une bonne idée que d'utiliser ces attributs pour garantir une certaine homogénéité.
-- `maxlength` définit le nombre maximal de caractères qui peuvent être saisis dans l'élément `<textarea>`. Il est également possible de définir une taile minimale avec l'attribut `minlength` et d'utiliser l'attribut `required` afin de bloquer l'envoi du formulaire si aucune valeur n'est saisie. Cela permet une validation basique (on ne peut pas utiliser ici d'expressions rationnelles comme le permet l'attribut `pattern` sur les éléments {{HTMLElement("input")}}).
+- `maxlength` définit le nombre maximal de caractères qui peuvent être saisis dans l'élément `<textarea>`. Il est également possible de définir une taille minimale avec l'attribut `minlength` et d'utiliser l'attribut `required` afin de bloquer l'envoi du formulaire si aucune valeur n'est saisie. Cela permet une validation basique (on ne peut pas utiliser ici d'expressions rationnelles comme le permet l'attribut `pattern` sur les éléments {{HTMLElement("input")}}).
 - `wrap` indique la gestion des retours à la ligne et la façon d'afficher le texte saisi lorsque celui-ci atteint le bord de la zone du `<textarea>`
 - Pour prévoir un contenu par défaut, il faut inscrire le texte entre les balises de l'élément. `<textarea>` ne prend pas en charge l'attribut `value`.
 
@@ -22,11 +22,11 @@ L'élément `<textarea>` gère plusieurs attributs utilisés par les éléments 
 
 ## Attributs
 
-À l'instar des autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+À l'instar des autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `autocapitalize` {{non-standard_inline}}
 
-  - : Cet attribut est non standard, pris en charge par WebKit sur iOS, et contrôle la façon dont le texte saisi doit automatiquement être mis en majuscules. Les valeurs disponibles spour iOS 5 et les versions supérieures sont :
+  - : Cet attribut est non standard, pris en charge par WebKit sur iOS, et contrôle la façon dont le texte saisi doit automatiquement être mis en majuscules. Les valeurs disponibles pour iOS 5 et les versions supérieures sont :
 
     - `none` : la mise en majuscules est complètement désactivée
     - `sentences` : la première lettre des phrases est automatiquement mise en majuscule
@@ -78,9 +78,9 @@ L'élément `<textarea>` gère plusieurs attributs utilisés par les éléments 
 
 ## Interaction avec CSS
 
-Pour CSS, un élément `<textarea>` est [un élément remplacé](/fr/docs/Web/CSS/Élément_remplacé) qui possède des dimensions intrinsèques (comme une image matricielle). La valeur initiale de la propriété {{cssxref("display")}} pour cet élément est `block`.
+Pour CSS, un élément `<textarea>` est [un élément remplacé](/fr/docs/Web/CSS/Replaced_element) qui possède des dimensions intrinsèques (comme une image matricielle). La valeur initiale de la propriété {{cssxref("display")}} pour cet élément est `block`.
 
-[Le guide sur la mise en forme des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML) fournit différentes indications pour mettre en forme les éléments `<textarea>`.
+[Le guide sur la mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Styling_web_forms) fournit différentes indications pour mettre en forme les éléments `<textarea>`.
 
 ### Incohérences quant à la ligne de base
 
@@ -156,7 +156,8 @@ Dans cet exemple, on utilise l'attribut `placeholder` afin d'afficher une indica
 
 {{EmbedLiveSample('','600','80')}}
 
-> **Note :** Les indications ne remplacent pas les éléments {{HTMLElement("label")}}.
+> [!NOTE]
+> Les indications ne remplacent pas les éléments {{HTMLElement("label")}}.
 
 ### Lecture seule et contrôle désactivé
 
@@ -208,7 +209,7 @@ Je suis en lecture seule</textarea
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
@@ -240,4 +241,4 @@ Je suis en lecture seule</textarea
 
 ## Voir aussi
 
-- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("input")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.
+- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("input")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.

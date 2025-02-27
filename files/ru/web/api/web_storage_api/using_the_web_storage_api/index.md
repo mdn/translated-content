@@ -3,6 +3,8 @@ title: Использование Web Storage API
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
 
+{{DefaultAPISidebar("Web Storage API")}}
+
 Web Storage API предоставляет механизм, при помощи которого браузер может безопасно хранить пары ключей/значений в намного более интуитивной форме, чем используя cookies. Эта статья предоставляет пошаговое руководство о том, как использовать эту простую технологию.
 
 ## Основные концепции
@@ -70,7 +72,8 @@ if (storageAvailable("localStorage")) {
 
 ![](event-output.png)
 
-> **Примечание:** Помимо просмотра примеров выше, используя приведённые ссылки выше , вы можете также [просмотреть исходный код](https://github.com/mdn/dom-examples/tree/master/web-storage).
+> [!NOTE]
+> Помимо просмотра примеров выше, используя приведённые ссылки выше , вы можете также [просмотреть исходный код](https://github.com/mdn/dom-examples/tree/master/web-storage).
 
 ## Проверка на заполненность хранилища
 
@@ -107,11 +110,11 @@ function setStyles() {
 }
 ```
 
-Первые три строки извлекают значения элементов локального хранилища. Next, we set the values displayed in the form elements to those values, so that they keep in sync when you reload the page. Finally, we update the styles/decorative image on the page, so your customization options come up again on reload.
+Первые три строки извлекают значения элементов локального хранилища. Затем мы записываем значения элементов формы, чтобы они сохранились после перезагрузки страницы. Наконец, мы обновляем стили и изображения на странице, чтобы они вступили в силу.
 
-## Setting values in storage
+## Сохранение значений в хранилище
 
-{{domxref("Storage.setItem()")}} is used both to create new data items, and (if the data item already exists) update existing values. This takes two arguments — the key of the data item to create/modify, and the value to store in it.
+Метод {{domxref("Storage.setItem()")}} используется как для создания новых, так и для изменения существующих элементов. Он принимает два аргумента — ключ элемента и значение для хранения.
 
 ```js
 function populateStorage() {
@@ -133,7 +136,7 @@ fontForm.onchange = populateStorage;
 imageForm.onchange = populateStorage;
 ```
 
-## Responding to storage changes with the StorageEvent
+## Отслеживание изменений в хранилище с помощью StorageEvent
 
 The {{domxref("StorageEvent")}} is fired whenever a change is made to the {{domxref("Storage")}} object. This won't work on the same page that is making the changes — it is really a way for other pages on the domain using the storage to sync any changes that are made. Pages on other domains can't access the same storage objects.
 
@@ -158,14 +161,14 @@ Web Storage также предоставляет несколько прост�
 - {{domxref("Storage.removeItem()")}} принимает единственный аргумент - ключ элемента данных, который вы хотите удалить - и удаляет его из объекта хранения для этого домена.
 - {{domxref("Storage.clear()")}} не принимает аргументов, полностью очищает объекта storage для данного домена.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Web Storage API landing page](/ru/docs/Web/API/Web_Storage_API)

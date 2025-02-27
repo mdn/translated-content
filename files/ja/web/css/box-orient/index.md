@@ -5,7 +5,8 @@ slug: Web/CSS/box-orient
 
 {{CSSRef}}{{Non-standard_header}}
 
-> **警告:** これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)を参照してください。
+> [!WARNING]
+> これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)を参照してください。
 
 **`box-orient`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がその中身をレイアウトする方向が、水平か垂直かを指定します。
 

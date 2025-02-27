@@ -9,7 +9,33 @@ l10n:
 
 El elemento [HTML](/es/docs/Web/HTML) **`<menu>`** se describe en la especificación HTML como una alternativa semántica a {{HTMLElement("ul")}}, pero los navegadores lo tratan (y lo exponen a través del árbol de accesibilidad) como no diferente de {{HTMLElement("ul")}}. Representa una lista desordenada de elementos (que están representados por elementos {{HTMLElement("li")}}).
 
-{{EmbedInteractiveExample("pages/tabbed/menu.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;menu&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<div class="news">
+  <a href="#">NASA’s Webb Delivers Deepest Infrared Image of Universe Yet</a>
+  <menu>
+    <li><button id="save">Save for later</button></li>
+    <li><button id="share">Share this news</button></li>
+  </menu>
+</div>
+```
+
+```css interactive-example
+.news {
+  background-color: bisque;
+  padding: 1em;
+  border: solid thin black;
+}
+
+menu {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin-bottom: 0;
+  gap: 1em;
+}
+```
 
 ## Atributos
 
@@ -19,7 +45,8 @@ Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_att
 
 Los elementos `<menu>` y {{HTMLElement("ul")}} representan una lista desordenada de elementos. La diferencia clave es que {{HTMLElement("ul")}} contiene principalmente elementos para mostrar, mientras que `<menu>` estaba destinado a elementos interactivos. El elemento {{HTMLElement("menuitem")}} relacionado ha quedado obsoleto.
 
-> **Nota:** En las primeras versiones de la especificación HTML, el elemento `<menu>` tenía un caso de uso adicional como menú contextual. Esta funcionalidad se considera obsoleta y no está en la especificación.
+> [!NOTE]
+> En las primeras versiones de la especificación HTML, el elemento `<menu>` tenía un caso de uso adicional como menú contextual. Esta funcionalidad se considera obsoleta y no está en la especificación.
 
 ## Ejemplo
 
@@ -106,7 +133,7 @@ button {
     </tr>
     <tr>
       <th scope="row">Omisión de etiqueta</th>
-      <td>{{No_Tag_Omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th scope="row">Padres permitidos</th>

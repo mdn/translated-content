@@ -1,13 +1,21 @@
 ---
 title: cy
 slug: Web/SVG/Attribute/cy
+l10n:
+  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
 ---
 
 {{SVGRef}}
 
 **`cy`** 属性は中心の y-座標を定義します。
 
-3 つの要素がこの属性を用います: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("radialGradient")}}
+この属性は次の SVG 要素で使用できます。
+
+- {{SVGElement("circle")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("radialGradient")}}
+
+## 例
 
 ```css hidden
 html,
@@ -30,40 +38,78 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('topExample', '100%', 300)}}
+{{EmbedLiveSample("Example", '100%', 300)}}
 
 ## circle
 
 {{SVGElement('circle')}}に対して、`cy`は、図形の y-軸の中心を定義します。
 
-| 値                 | **[\<length>](/ja/docs/Web/SVG/Content_type#Length)** \| **[\<percentage>](/ja/docs/Web/SVG/Content_type#Percentage)** |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| 既定値             | `0`                                                                                                                    |
-| アニメーション可否 | はい                                                                                                                   |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>{{cssxref("length-percentage")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-> **メモ:** SVG2 として開始する場合には、`cy`は*ジオメトリプロパティ*です。これは本属性が円への CSS プロパティとしても利用可能であることを意味します。
+> [!NOTE]
+> SVG2 として開始する場合には、`cy`は*ジオメトリプロパティ*です。これは本属性が円への CSS プロパティとしても利用可能であることを意味します。
 
 ## ellipse
 
 {{SVGElement('ellipse')}}に対して、`cy`は図形中心の y-座標を定義します。
 
-| 値                 | **[\<length>](/ja/docs/Web/SVG/Content_type#Length)** \| **[\<percentage>](/ja/docs/Web/SVG/Content_type#Percentage)** |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| 既定値             | `0`                                                                                                                    |
-| アニメーション可否 | はい                                                                                                                   |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>{{cssxref("length-percentage")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-> **メモ:** SVG2 として開始する場合には、`cy`は*ジオメトリプロパティ*です。これは本属性が円への CSS プロパティとしても利用可能であることを意味します。
+> [!NOTE]
+> SVG2 として開始する場合には、`cy`は*ジオメトリプロパティ*です。これは本属性が円への CSS プロパティとしても利用可能であることを意味します。
 
 ## radialGradient
 
 {{SVGElement('radialGradient')}}に対して、`cy`は、放射状勾配の終端円の y-座標を定義します。
 
-| 値                 | **[\<length>](/ja/docs/Web/SVG/Content_type#Length)** |
-| ------------------ | ----------------------------------------------------- |
-| 既定値             | `50%`                                                 |
-| アニメーション可否 | はい                                                  |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">値</th>
+      <td>{{cssxref("length-percentage")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">既定値</th>
+      <td><code>50%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">アニメーション</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
-#### 例
+### 例
 
 ```css hidden
 html,
@@ -121,6 +167,11 @@ svg {
 
 {{EmbedLiveSample('radialGradient', 150, '100%')}}
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
+
+## 関連情報
+
+- {{SVGAttr("cx")}}
+- {{SVGAttr("r")}}

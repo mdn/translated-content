@@ -41,22 +41,22 @@ slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 
 和网站相比，插件可以访问特权 API，因此一旦它们被恶意代码破坏，风险就更大。因此：
 
-- 插件默认运行在一个相当严格的安全策略下。参考 [default content security policy](/zh-CN/Add-ons/WebExtensions/Content_Security_Policy#Default_content_security_policy).
+- 插件默认运行在一个相当严格的安全策略下。参考 [default content security policy](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#default_content_security_policy).
 - 插件的作者可以通过使用 manifest.json 中的 `content_security_policy` 关键词改变这种默认策略，但是允许的策略仍然有一定的限制。参考 [`content_security_policy`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy).
 
 ## 默认内容安全策略
 
 对插件的默认内容安全策略如下：
 
-```
+```plain
 "script-src 'self'; object-src 'self';"
 ```
 
 这会被应用在任何没有明确在 manifest.json 中的[`content_security_policy`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) 项设置自己的内容安全策略的插件中。它有以下几种效果：
 
-- [你只能将本地的 \<script> 和 \<object> 资源加载到插件中。](/zh-CN/Add-ons/WebExtensions/Content_Security_Policy#Location_of_script_and_object_resources)
-- [插件无法将字符串转换为 JavaScript 执行。](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval_和_friends)
-- [内联 JavaScript 不会被执行。](/zh-CN/Add-ons/WebExtensions/Content_Security_Policy#Inline_JavaScript)
+- [你只能将本地的 \<script> 和 \<object> 资源加载到插件中。](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#location_of_script_and_object_resources)
+- [插件无法将字符串转换为 JavaScript 执行。](#eval_和_friends)
+- [内联 JavaScript 不会被执行。](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#inline_javascript)
 
 ### script 和 object 资源的位置
 
@@ -101,4 +101,4 @@ var f = new Function("console.log('foo');");
 <div onclick="console.log('click')">Click me!</div>
 ```
 
-如果你正在使用类似 `<body onload="main()">` 的代码在页面加载时运行你的脚本，请使用监听器监听[DOMContentLoaded](/zh-CN/docs/Web/Events/DOMContentLoaded) 或者 [load](/zh-CN/docs/Web/Events/load) 代替。
+如果你正在使用类似 `<body onload="main()">` 的代码在页面加载时运行你的脚本，请使用监听器监听[DOMContentLoaded](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event) 或者 [load](/zh-CN/docs/Web/API/Window/load_event) 代替。

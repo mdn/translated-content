@@ -9,7 +9,8 @@ l10n:
 
 Canvas 2D API の **`CanvasRenderingContext2D.shadowOffsetY`** は、影を縦方向にずらす距離を設定します。
 
-> **メモ:** 影はプロパティ {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} が透明でない値に設定されているときのみ描画されます。さらに、プロパティ {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}、{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}、`shadowOffsetY` のいずれかがゼロでない値に設定されていなければいけません。
+> [!NOTE]
+> 影はプロパティ {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} が透明でない値に設定されているときのみ描画されます。さらに、プロパティ {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}、{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}、`shadowOffsetY` のいずれかがゼロでない値に設定されていなければいけません。
 
 ## 値
 

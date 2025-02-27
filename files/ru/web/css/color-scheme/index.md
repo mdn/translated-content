@@ -60,13 +60,13 @@ color-scheme: unset;
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Применение цвета к HTML-элементам с помощью CSS](/ru/docs/Web/HTML/Applying_color)
+- [Применение цвета к HTML-элементам с помощью CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color)
 - Другие свойства, относящиеся к цвету: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}
 - {{cssxref("print-color-adjust")}}

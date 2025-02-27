@@ -51,9 +51,11 @@ The {{jsxref("WebAssembly.instantiate()")}} function has two overload forms — 
 }
 ```
 
-> **Note :** En règle générale, on ne s'intéresse qu'à l'instance, mais il peut être utile de préserver le module afin de le mettre ultérieurement en cache, de le partager avec un autre worker ou window via [`postMessage()`](/fr/docs/Web/API/MessagePort/postMessage), ou tout simplement pour créer d'autres instances.
+> [!NOTE]
+> En règle générale, on ne s'intéresse qu'à l'instance, mais il peut être utile de préserver le module afin de le mettre ultérieurement en cache, de le partager avec un autre worker ou window via [`postMessage()`](/fr/docs/Web/API/MessagePort/postMessage), ou tout simplement pour créer d'autres instances.
 
-> **Note :** Un chargement supplémentaire du module nécessite un object de type {{jsxref("WebAssembly.Module")}} comme argument, et retourne une promesse contenant directement un objet de type instance comme résultat. Voir [Second overload example](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example).
+> [!NOTE]
+> Un chargement supplémentaire du module nécessite un object de type {{jsxref("WebAssembly.Module")}} comme argument, et retourne une promesse contenant directement un objet de type instance comme résultat. Voir [Second overload example](/fr/docs/WebAssembly/JavaScript_interface/instantiate_static#second_overload_example).
 
 ### Mise en marche du code webassembly
 
@@ -75,7 +77,8 @@ WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
 );
 ```
 
-> **Note :** Pour plus d'informations sur la façon dont fonctionne l'exportation au sein d'un module webassembly, lisez [Using the WebAssembly JavaScript API](/fr/docs/WebAssembly/Using_the_JavaScript_API), et [Understanding WebAssembly text format](/fr/docs/WebAssembly/Understanding_the_text_format).
+> [!NOTE]
+> Pour plus d'informations sur la façon dont fonctionne l'exportation au sein d'un module webassembly, lisez [Using the WebAssembly JavaScript API](/fr/docs/WebAssembly/Using_the_JavaScript_API), et [Understanding WebAssembly text format](/fr/docs/WebAssembly/Understanding_the_text_format).
 
 ## En utilisant XMLHttpRequest
 
@@ -102,4 +105,5 @@ request.onload = function () {
 };
 ```
 
-> **Note :** Vous pouvez retrouver un autre exemple sur [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html).
+> [!NOTE]
+> Vous pouvez retrouver un autre exemple sur [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html).

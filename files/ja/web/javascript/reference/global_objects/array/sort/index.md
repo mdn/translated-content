@@ -7,13 +7,25 @@ l10n:
 
 {{JSRef}}
 
-**`sort()`** は {{jsxref("Array")}} のメソッドで、配列の要素を[その場](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0)でソートし、ソートされた同じ配列の参照を返します。既定のソート順は昇順で、要素を文字列に変換してから、 UTF-16 コード単位の値の並びとして比較します。
+**`sort()`** は {{jsxref("Array")}} のメソッドで、配列の要素を[その場 (in-place)](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0) でソートし、ソートされた同じ配列の参照を返します。既定のソート順は昇順で、要素を文字列に変換してから、 UTF-16 コード単位の値の並びとして比較します。
 
 ソートの時間的・空間的予測値は実装に依存するため、保証はできません。
 
 元の配列を変更せずに配列内の要素をソートするには、 {{jsxref("Array/toSorted", "toSorted()")}} を使用してください。
 
-{{EmbedInteractiveExample("pages/js/array-sort.html")}}
+{{InteractiveExample("JavaScript Demo: Array.sort()")}}
+
+```js interactive-example
+const months = ["March", "Jan", "Feb", "Dec"];
+months.sort();
+console.log(months);
+// Expected output: Array ["Dec", "Feb", "Jan", "March"]
+
+const array1 = [1, 30, 4, 21, 100000];
+array1.sort();
+console.log(array1);
+// Expected output: Array [1, 100000, 21, 30, 4]
+```
 
 ## 構文
 
@@ -45,7 +57,8 @@ sort(compareFn)
 
 `sort()` メソッドは空のスロットを保持します。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)の場合、空のスロットは配列の末尾に移動され、常にすべての `undefined` の後に置かれます。
 
-> **メモ:** UTF-16 では、`\uFFFF` を超える Unicode 文字は 2 つのサロゲートコード単位にエンコードされ、`\uD800` - `\uDFFF` の範囲になります。それぞれのコード単位の値は比較では別々に扱われます。したがって、`\uD855\uDE51` というサロゲートペアで形成される文字は、`\uFF3A` の文字よりも前に並べられます。
+> [!NOTE]
+> UTF-16 では、`\uFFFF` を超える Unicode 文字は 2 つのサロゲートコード単位にエンコードされ、`\uD800` - `\uDFFF` の範囲になります。それぞれのコード単位の値は比較では別々に扱われます。したがって、`\uD855\uDE51` というサロゲートペアで形成される文字は、`\uFF3A` の文字よりも前に並べられます。
 
 `compareFn` が与えられた場合、`undefined` 以外のすべての配列要素は比較関数の返値に基づきソートされます（`undefined` の要素はすべて、`compareFn` を呼び出すことなく配列の末尾へ並べられます）。
 
@@ -89,7 +102,7 @@ function compareNumbers(a, b) {
 }
 ```
 
-`sort()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods)です。このメソッドは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。文字列も配列風ですが、文字列は不変なので、このメソッドを適用するのには適していません。
+`sort()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。このメソッドは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。文字列も配列風ですが、文字列は不変なので、このメソッドを適用するのには適していません。
 
 ## 例
 

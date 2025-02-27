@@ -25,7 +25,7 @@ A única diferença entre `307` e {{HTTPStatus("302")}} é que o `307` garante q
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.307")}}
+{{Compat}}
 
 ## Veja também
 

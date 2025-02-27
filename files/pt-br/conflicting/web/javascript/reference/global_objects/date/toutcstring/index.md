@@ -38,7 +38,7 @@ console.log(str);               // Mon, 18 Dec 1995 17:28:35 GMT
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.toGMTString")}}
+{{Compat}}
 
 ## Veja também
 

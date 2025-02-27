@@ -1,5 +1,5 @@
 ---
-title: ":required"
+title: :required
 slug: Web/CSS/:required
 ---
 
@@ -16,7 +16,8 @@ input:required {
 
 Esta pseudo-clase es útil para resaltar campos que deben tener datos válidos antes de que se pueda enviar un formulario.
 
-> **Nota:** La pseudoclase {{cssxref(":optional")}} selecciona campos de formulario _opcionales_.
+> [!NOTE]
+> La pseudoclase {{cssxref(":optional")}} selecciona campos de formulario _opcionales_.
 
 ## Sintaxis
 
@@ -46,4 +47,4 @@ Si el formulario también contiene entradas opcionales, las entradas requeridas 
 ## Ver también
 
 - Otras pseudo-clases relacionadas con la validación: {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}
-- [Validación de datos de formulario](/es/docs/Learn/HTML/Forms/Form_validation)
+- [Validación de datos de formulario](/es/docs/Learn/Forms/Form_validation)

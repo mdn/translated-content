@@ -5,9 +5,9 @@ slug: Web/CSS/border-style
 
 ## 概述
 
-{{CSSRef("CSS Borders")}}
+{{CSSRef}}
 
-`border-style` 是一个 [CSS](/zh-CN/docs/CSS) 简写属性，用来设定元素所有边框的样式。
+`border-style` 是一个 [CSS](/zh-CN/docs/Web/CSS) 简写属性，用来设定元素所有边框的样式。
 
 > **备注：** `border-style` 默认值是 `none`，这意味着如果你只修改 {{ Cssxref("border-width") }} 和 {{ Cssxref("border-color") }} 是不会出现边框的。
 

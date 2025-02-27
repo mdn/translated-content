@@ -55,17 +55,13 @@ function testinput(re, str) {
 }
 ```
 
-## Specificações
+## Especificações
 
-| Specificações                                                    | Status             | Comentário                                         |
-| ---------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                              | {{Spec2('ES3')}}   | Definição inicial. Implementado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.10.6.3', 'RegExp.test')}}           | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-regexp.prototype.test', 'RegExp.test')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.RegExp.test")}}
+{{Compat}}
 
 ## Gecko-specific notes
 
@@ -73,5 +69,5 @@ A priori no Grecko 8.0, `test()` foi implementado incorretamente; quando chamado
 
 ## See also
 
-- [Regular Expressions](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the [JavaScript Guide](/pt-BR/docs/Web/JavaScript/Guide)
+- [Regular Expressions](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions) chapter in the [JavaScript Guide](/pt-BR/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}

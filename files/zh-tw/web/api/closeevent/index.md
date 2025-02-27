@@ -3,6 +3,8 @@ title: CloseEvent
 slug: Web/API/CloseEvent
 ---
 
+{{APIRef("Websockets API")}}
+
 當 WebSocket 連線關閉時，客戶端會收到一個 `CloseEvent`，由 `WebSocket` 物件 `onclose` 屬性表示的監聽器接收。
 
 ## 屬性
@@ -34,7 +36,7 @@ slug: Web/API/CloseEvent
 
 ## 參見
 
-- [`WebSocket`](/zh_tw/WebSockets/WebSockets_reference/WebSocket)
+- [`WebSocket`](/zh-TW/WebSockets/WebSockets_reference/WebSocket)
 
 ## 瀏覽器兼容
 

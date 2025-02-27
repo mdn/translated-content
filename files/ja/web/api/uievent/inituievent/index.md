@@ -1,8 +1,9 @@
 ---
-title: UIEvent.initUIEvent()
+title: "UIEvent: initUIEvent() メソッド"
+short-title: initUIEvent()
 slug: Web/API/UIEvent/initUIEvent
 l10n:
-  sourceCommit: 3ca86db64959ed9dc6c8021dc3eb89e82a6628c7
+  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
 {{APIRef("UI Events")}} {{deprecated_header}}
@@ -11,7 +12,8 @@ l10n:
 
 この方法で初期化されるイベントは {{ domxref("Document.createEvent()") }} で作成されている必要があります。このメソッドでイベントを設定するには、 {{ domxref("EventTarget.dispatchEvent()") }} を使用してイベントを発行する前に行う必要があります。発行された後は、何もしません。
 
-> **警告:** このメソッドは非推奨なので、もう使用しないでください。
+> [!WARNING]
+> このメソッドは非推奨なので、もう使用しないでください。
 >
 > 代わりに、 {{domxref("UIEvent.UIEvent", "UIEvent()")}} などの具体的なイベントのコンストラクターを使用してください。[イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)のページで、これらの使用方法について詳しく説明しています。
 
@@ -42,9 +44,9 @@ initUIEvent(type, canBubble, cancelable, view, detail)
 
 ```js
 const e = document.createEvent("UIEvent");
-// creates a click event that bubbles, can be cancelled,
-// and with its view and detail property initialized to window and 1,
-// respectively
+// バブリングし、キャンセル可能で、 view と detail プロパティが
+// それぞれウィンドウと 1 に初期化されたクリックイベントを
+// 作成
 e.initUIEvent("click", true, true, window, 1);
 ```
 

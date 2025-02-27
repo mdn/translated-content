@@ -45,7 +45,7 @@ MathML の `<mtable>` 要素は表や行列を作るのに使えます。`<mtabl
 - `width` {{Non-standard_Inline}}
   - : 表全体の幅を示す [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) を指定します。
 
-> **メモ:** `width` 属性については、ブラウザーによっては[古い MathML の長さ](/ja/docs/Web/MathML/Attribute/Values#古い_mathml_における長さ)も受け入れられるかもしれません。
+> **メモ:** `width` 属性については、ブラウザーによっては[古い MathML の長さ](/ja/docs/Web/MathML/Values#古い_mathml_における長さ)も受け入れられるかもしれません。
 
 ## 例
 

@@ -65,7 +65,8 @@ The [`content`](/pt-BR/docs/Web/HTML/Global_attributes#content) attribute starts
 
 Obviously, this method only works with HTML pages (or similar) and cannot be used for images or any other type of content.
 
-> **Nota:** Note that these redirections break the back button in a browser: you can go back to a page with this header but it instantaneously moves forward again.
+> [!NOTE]
+> Note that these redirections break the back button in a browser: you can go back to a page with this header but it instantaneously moves forward again.
 
 ### JavaScript redirections
 
@@ -105,7 +106,8 @@ Domain aliasing can be done for several reasons:
 
 When you restructure Web sites, URLs of resources change. Even if you can update the internal links of your Web site to match the new naming scheme, you have no control over the URLs used by external resources. You don't want to break these links, as they bring you valuable users (and help your SEO), so you set up redirects from the old URLs to the new ones.
 
-> **Nota:** Even if this technique also works for internal links, you should try to avoid having internal redirects. A redirect has a significant performance cost (as an extra HTTP request is done) and if you can avoid it by correcting internal links, you should fix these links.
+> [!NOTE]
+> Even if this technique also works for internal links, you should try to avoid having internal redirects. A redirect has a significant performance cost (as an extra HTTP request is done) and if you can avoid it by correcting internal links, you should fix these links.
 
 ### Temporary responses to unsafe requests
 
@@ -149,7 +151,7 @@ Redirect permanent / http://www.example.com
 Redirect 301 / http://www.example.com
 ```
 
-The [mod_rewrite](http://httpd.apache.org/docs/current/mod/mod_rewrite.html) module can also be used to create redirects. It is more flexible, but a bit more complex to use.
+The [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) module can also be used to create redirects. It is more flexible, but a bit more complex to use.
 
 ### Nginx
 

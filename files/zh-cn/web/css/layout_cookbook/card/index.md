@@ -21,7 +21,7 @@ slug: Web/CSS/Layout_cookbook/Card
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/card.html", '100%', 1720)}}
 
-> **标注：**
+> [!CALLOUT]
 >
 > [下载这个示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/card--download.html)
 
@@ -40,7 +40,8 @@ slug: Web/CSS/Layout_cookbook/Card
 
 如果该轨道确实有页脚，它将自动调整大小，因为在隐式网格中创建的行是默认自动调整大小的，这样可以让添加到其中的内容适合网格大小。
 
-> **备注：** 由于每张卡片都是独立的网格，所以独立卡片中的各种元素并不互相对齐。所提出的 Grid Level 2 的子网格功能将给这个问题一个解决方案。
+> [!NOTE]
+> 由于每张卡片都是独立的网格，所以独立卡片中的各种元素并不互相对齐。所提出的 Grid Level 2 的子网格功能将给这个问题一个解决方案。
 
 ## 有用的后备措施或替代方法
 
@@ -53,10 +54,6 @@ slug: Web/CSS/Layout_cookbook/Card
 ## 无障碍考虑
 
 根据卡片的内容，你可以或应该做一些事情来加强无障碍性。请参阅 Heydon Pickering 撰写的 [Inclusive Components: Card](https://inclusive-components.design/cards/)，那篇文章对这些问题进行了非常详细的解释。
-
-## 浏览器兼容性
-
-{{Compat}}
 
 ## 参见
 

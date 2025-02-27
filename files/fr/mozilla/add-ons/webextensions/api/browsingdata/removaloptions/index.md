@@ -3,7 +3,7 @@ title: browsingData.RemovalOptions
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/RemovalOptions
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type **`browsingData.RemovalOptions`** contient des options permettant de contrôler certains aspects de la suppression des données de navigation.
 
@@ -37,9 +37,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData).
+> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

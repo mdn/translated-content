@@ -33,7 +33,8 @@ if (5 < 30 && 55 > 20 && 5 < 20 && 55 > 10) {
 }
 ```
 
-> **Note :** vous pouvez tester un [exemple interactif de cet algorithme](http://jsfiddle.net/knam8/) sur jsFiddle, pour mieux comprendre le fonctionnement de ce code.
+> [!NOTE]
+> Vous pouvez tester un [exemple interactif de cet algorithme](https://jsfiddle.net/knam8/) sur jsFiddle, pour mieux comprendre le fonctionnement de ce code.
 
 ## Collision de cercles
 
@@ -52,7 +53,8 @@ if (distance < circle1.radius + circle2.radius) {
 }
 ```
 
-> **Note :** vous pouvez tester un [exemple interactif de cet algorithme](http://jsfiddle.net/gQ3hD/2/) sur jsFiddle, pour mieux comprendre le fonctionnement de ce code.
+> [!NOTE]
+> Vous pouvez tester un [exemple interactif de cet algorithme](https://jsfiddle.net/gQ3hD/2/) sur jsFiddle, pour mieux comprendre le fonctionnement de ce code.
 
 ## Théorème des axes séparateurs
 
@@ -60,10 +62,10 @@ Cet algorithme permet de détecter une collision entre deux polygones _convexes_
 
 L'implémentation de cet algorithme est hors de propos sur cette page, nous vous conseillons les articles suivants&nbsp;:
 
-1. [Separating Axis Theorem (SAT) explanation](http://www.sevenson.com.au/actionscript/sat/)&nbsp;;
-2. [(Anglais) Collision detection and response (en)](http://www.metanetsoftware.com/technique/tutorialA.html)&nbsp;;
-3. [Collision detection Using the Separating Axis Theorem (en)](http://gamedevelopment.tutsplus.com/tutorials/collision-detection-using-the-separating-axis-theorem--gamedev-169)&nbsp;;
-4. [SAT (Separating Axis Theorem) (en)](http://www.codezealot.org/archives/55)&nbsp;;
+1. [Separating Axis Theorem (SAT) explanation](https://www.sevenson.com.au/programming/sat/)&nbsp;;
+2. [Collision detection and response (en)](https://www.metanetsoftware.com/technique/tutorialA.html)&nbsp;;
+3. [Collision detection Using the Separating Axis Theorem (en)](https://code.tutsplus.com/collision-detection-using-the-separating-axis-theorem--gamedev-169t)&nbsp;;
+4. [SAT (Separating Axis Theorem) (en)](https://www.codezealot.org/archives/55/)&nbsp;;
 5. [Separation of Axis Theorem (SAT) for Collision Detection (en)](http://rocketmandevelopment.com/blog/separation-of-axis-theorem-for-collision-detection/).
 
 ## Performances

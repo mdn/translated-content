@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/map
 
 La méthode **`map()`** crée un nouveau tableau avec les résultats de l'appel d'une fonction fournie sur chaque élément du tableau appelant.
 
-{{EmbedInteractiveExample("pages/js/array-map.html")}}
+{{InteractiveExample("JavaScript Demo: Array.map()")}}
+
+```js interactive-example
+const array1 = [1, 4, 9, 16];
+
+// Pass a function to map
+const map1 = array1.map((x) => x * 2);
+
+console.log(map1);
+// Expected output: Array [2, 8, 18, 32]
+```
 
 ## Syntaxe
 
@@ -41,9 +51,9 @@ Lorsqu'on utilise `map`, la fonction `callback` fournie en argument est exécut�
 
 `callback` est appelée avec trois arguments : la valeur de l'élément du tableau, l'index de cet élément et l'objet {{jsxref("Array")}} qui est parcouru.
 
-> **Attention :** `map()` construit un nouveau tableau. Si on utilise cette méthode sans utiliser le résultat, mieux vaudra utiliser [`forEach`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/forEach) ou [`for...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of). Pour mieux décider si `map()` est adéquat, regardez si vous utilisez la valeur de retour et/ou si vous renvoyez une valeur avec la fonction `callback` : si ce n'est pas le cas, il ne faut pas utiliser `map()`.
+> **Attention :** `map()` construit un nouveau tableau. Si on utilise cette méthode sans utiliser le résultat, mieux vaudra utiliser [`forEach`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) ou [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of). Pour mieux décider si `map()` est adéquat, regardez si vous utilisez la valeur de retour et/ou si vous renvoyez une valeur avec la fonction `callback` : si ce n'est pas le cas, il ne faut pas utiliser `map()`.
 
-Si le paramètre `thisArg` est utilisé, il sera utilisé en tant que `this` par la fonction `callback` lorsqu'elle sera appelée. S'il n'est pas utilisé, ce sera la valeur {{jsxref("undefined")}} qui sera utilisée pour définir `this`. La valeur `this` finalement prise en compte par la fonction `callback` est définie [selon les règles usuelles qui déterminent la valeur `this` observée par une fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this).
+Si le paramètre `thisArg` est utilisé, il sera utilisé en tant que `this` par la fonction `callback` lorsqu'elle sera appelée. S'il n'est pas utilisé, ce sera la valeur {{jsxref("undefined")}} qui sera utilisée pour définir `this`. La valeur `this` finalement prise en compte par la fonction `callback` est définie [selon les règles usuelles qui déterminent la valeur `this` observée par une fonction](/fr/docs/Web/JavaScript/Reference/Operators/this).
 
 `map` ne modifie pas le tableau sur lequel elle est appelée (bien que la fonction `callback`, si elle est appelée, puisse modifier le tableau).
 

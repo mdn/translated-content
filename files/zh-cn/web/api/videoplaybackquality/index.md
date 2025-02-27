@@ -16,7 +16,7 @@ _`VideoPlaybackQuality` 对象不继承任何属性。_
 - {{domxref("VideoPlaybackQuality.creationTime")}} {{readonlyInline}}
   - : 一个用毫秒表示从开始页面浏览到对象创建的 {{domxref("DOMHighResTimeStamp")}} 对象。
 - {{domxref("VideoPlaybackQuality.totalVideoFrames")}} {{readonlyInline}}
-  - : 一个表示相关联的 {{domxref("HTMLVideoElement")}} 自从创建起的已创建和丢弃帧数数量总和的 unsigned long 值。.
+  - : 一个表示相关联的 {{domxref("HTMLVideoElement")}} 自从创建起的已创建和丢弃帧数数量总和的 unsigned long 值。
 - {{domxref("VideoPlaybackQuality.droppedVideoFrames")}} {{readonlyInline}}
   - : 一个表示相关联的 {{domxref("HTMLVideoElement")}} 自从创建起的已丢弃帧数数量的 `unsigned long` 值。
 - {{domxref("VideoPlaybackQuality.corruptedVideoFrames")}} {{readonlyInline}}
@@ -36,7 +36,7 @@ _`VideoPlaybackQuality` 对象没有实现任何特定方法，也没有继承�
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - The {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method for constructing and returning this interface.
 - {{domxref("MediaSource")}}

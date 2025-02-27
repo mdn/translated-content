@@ -90,7 +90,7 @@ Object.getOwnPropertyDescriptor(p, "a"); // TypeError is thrown
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Proxy")}}
 - {{jsxref("Proxy.handler", "handler")}}

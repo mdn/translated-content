@@ -1,17 +1,30 @@
 ---
 title: Object.getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
+l10n:
+  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
 {{JSRef}}
 
-**`Object.getOwnPropertyNames()`** メソッドは、与えられたオブジェクトで発見されたすべての直接のプロパティを含む配列を (シンボルを使用したものを除き、列挙不可能なプロパティを含んで) 返します。
+**`Object.getOwnPropertyNames()`** 静的メソッドは、与えられたオブジェクトで発見されたすべての直接のプロパティを含む配列を（シンボルを使用したものを除き、列挙不可能なプロパティを含んで）返します。
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertynames.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyNames()")}}
+
+```js interactive-example
+const object1 = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+
+console.log(Object.getOwnPropertyNames(object1));
+// Expected output: Array ["a", "b", "c"]
+```
 
 ## 構文
 
-```
+```js-nolint
 Object.getOwnPropertyNames(obj)
 ```
 
@@ -43,43 +56,40 @@ Object.getOwnPropertyNames("foo");
 ### Object.getOwnPropertyNames() の使用
 
 ```js
-var arr = ["a", "b", "c"];
-console.log(Object.getOwnPropertyNames(arr).sort()); // .sort() は配列のメソッド
-// ["0", "1", "2", "length"] と出力される
+const arr = ["a", "b", "c"];
+console.log(Object.getOwnPropertyNames(arr).sort());
+// ["0", "1", "2", "length"]
 
 // 配列風オブジェクト
-var obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.getOwnPropertyNames(obj).sort()); // .sort() は配列のメソッド
-// ["0", "1", "2"] と出力される
+const obj = { 0: "a", 1: "b", 2: "c" };
+console.log(Object.getOwnPropertyNames(obj).sort());
+// ["0", "1", "2"]
 
-// Array.forEach を使ったプロパティと値の出力
-Object.getOwnPropertyNames(obj).forEach(function (val, idx, array) {
-  console.log(val + " -> " + obj[val]);
+Object.getOwnPropertyNames(obj).forEach((val, idx, array) => {
+  console.log(`${val} -> ${obj[val]}`);
 });
-// 出力結果
 // 0 -> a
 // 1 -> b
 // 2 -> c
 
 // 列挙不可能なプロパティ
-var my_obj = Object.create(
+const myObj = Object.create(
   {},
   {
     getFoo: {
-      value: function () {
+      value() {
         return this.foo;
       },
       enumerable: false,
     },
   },
 );
-my_obj.foo = 1;
+myObj.foo = 1;
 
-console.log(Object.getOwnPropertyNames(my_obj).sort());
-// ["foo", "getFoo"] と出力されます
+console.log(Object.getOwnPropertyNames(myObj).sort()); // ["foo", "getFoo"]
 ```
 
-列挙可能なプロパティのみ取得したい場合は {{jsxref("Object.keys()")}} を参照するか、 {{jsxref("Statements/for...in", "for...in")}} ループを用いるかしてください。 (なお、 for...in ループでは {{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}} でフィルタリングされない限りは、そのオブジェクト上で直接見つかるプロパティだけでなく、プロトタイプチェーン上の列挙可能なプロパティも返されることに注意してください。)
+列挙可能なプロパティのみ取得したい場合は {{jsxref("Object.keys()")}} を参照するか、 {{jsxref("Statements/for...in", "for...in")}} ループを用いるかしてください（なお、この場合は {{jsxref("Object.hasOwn()")}} でフィルタリングされない限り、プロトタイプチェーン上の列挙可能なプロパティも返されることに注意してください）。
 
 プロトタイプチェーン上のプロパティは配列に含まれません。
 
@@ -94,34 +104,21 @@ function ChildClass() {
 ChildClass.prototype = new ParentClass();
 ChildClass.prototype.prototypeMethod = function () {};
 
-console.log(
-  Object.getOwnPropertyNames(
-    new ChildClass(), // ["prop", "method"]
-  ),
-);
+console.log(Object.getOwnPropertyNames(new ChildClass()));
+// ["prop", "method"]
 ```
 
 ### 列挙不可能なプロパティのみを取得する
 
-ここでは {{jsxref("Array.prototype.filter()")}} 関数を使用して、 ({{jsxref("Object.keys()")}} で取得した) 列挙可能なキーを (`Object.getOwnPropertyNames()` で取得した) すべてのキーからフィルタリングし、出力として列挙不可能なキーのみを取得します。
+ここでは {{jsxref("Array.prototype.filter()")}} 関数を使用して、 ({{jsxref("Object.keys()")}} で取得した) 列挙可能なキーを（`Object.getOwnPropertyNames()` で取得した）すべてのキーからフィルタリングし、出力として列挙不可能なキーのみを取得します。
 
 ```js
-var target = myObject;
-var enum_and_nonenum = Object.getOwnPropertyNames(target);
-var enum_only = Object.keys(target);
-var nonenum_only = enum_and_nonenum.filter(function (key) {
-  var indexInEnum = enum_only.indexOf(key);
-  if (indexInEnum == -1) {
-    // このキーが enum_only の中になければ、
-    // そのキーは列挙不可能であることを意味するので、
-    // true を返してフィルターの中に残します。
-    return true;
-  } else {
-    return false;
-  }
-});
+const target = myObject;
+const enumAndNonenum = Object.getOwnPropertyNames(target);
+const enumOnly = new Set(Object.keys(target));
+const nonenumOnly = enumAndNonenum.filter((key) => !enumOnly.has(key));
 
-console.log(nonenum_only);
+console.log(nonenumOnly);
 ```
 
 ## 仕様書
@@ -130,13 +127,14 @@ console.log(nonenum_only);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.getOwnPropertyNames")}}
+{{Compat}}
 
 ## 関連情報
 
-- [プロパティの列挙可能性と所有権](/ja/docs/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.prototype.hasOwnProperty()")}}
+- [`Object.getOwnPropertyNames` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
+- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}
 - {{jsxref("Object.keys()")}}
-- {{jsxref("Array.forEach()")}}
+- {{jsxref("Array.prototype.forEach()")}}

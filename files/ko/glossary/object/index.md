@@ -11,7 +11,8 @@ JavaScript에서, 객체는 속성의 모음으로 볼 수 있습니다. [객체
 
 객체 속성에는 [_data_ 속성](/ko/docs/Web/JavaScript/Data_structures#data_property) 및 [_accessor_ 속성](/ko/docs/Web/JavaScript/Data_structures#accessor_property) 두 가지 유형이 있습니다.
 
-> **참고:** 접근자 "메서드"가 아닌 접근자 "프로퍼티"를 인식하는 것이 중요합니다. 함수를 값으로 사용하여 JavaScript 객체 클래스와 유사한 접근자를 제공할 수 있지만, 그렇다고 해서 객체가 클래스가 되는 것은 아닙니다.
+> [!NOTE]
+> 접근자 "메서드"가 아닌 접근자 "프로퍼티"를 인식하는 것이 중요합니다. 함수를 값으로 사용하여 JavaScript 객체 클래스와 유사한 접근자를 제공할 수 있지만, 그렇다고 해서 객체가 클래스가 되는 것은 아닙니다.
 
 ## 같이 보기
 

@@ -159,7 +159,7 @@ function simulateClick() {
 
 <section id="Quick_links">
   <ol>
-    <li><a href="/zh-CN/docs/Learn/JavaScript/Building_blocks/Events">事件介绍</a></li>
+    <li><a href="/zh-CN/docs/Learn_web_development/Core/Scripting/Events">事件介绍</a></li>
     <li><a href="/zh-CN/docs/Web/Events/Event_handlers">事件处理器（概述）</a></li>
     <li><a href="/zh-CN/docs/Web/Events">事件参考</a></li>
   </ol>

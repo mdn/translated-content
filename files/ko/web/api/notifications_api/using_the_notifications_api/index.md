@@ -23,9 +23,9 @@ slug: Web/API/Notifications_API/Using_the_Notifications_API
 
 앱이 알림을 보내려면 먼저 사용자가 애플리케이션에 해당 권한을 허용해줘야 합니다. 이는 API가 웹페이지 외부와 상호작용할 때 통상적인 요구 사항입니다. 최소 한번은 사용자가 해당 애플리케이션이 알림을 표시할 수 있는 권한을 허용해줄 필요가 있으며 이로써 사용자는 어떤 앱/사이트가 알림을 보일 수 있는지 제어할 수 있습니다.
 
-과거에 푸시 알림에 대한 악용 때문에 웹 브라우저와 개발자는 그런 문제를 완화할 수 있는 전략을 구현하게 되었습니다. 알림을 발생시키려면 사용자 제스처(예: 단추 클릭)에 대한 응답으로만 가능합니다. 이것은 모범적인 방식일 뿐 아니라 — 사용자에게 미동의 알림으로 스팸을 보내면 안됩니다 — 실제로도 전향적인 브라우저는 사용자 제스처에 대한 응답으로 촉발되지 않은 알림은 명시적으로 불허합니다. 파이어폭스는 이미 72 버전부터 이렇게 하고 있으며 사파리도 하고 있습니다.
+과거에 푸시 알림에 대한 악용 때문에 웹 브라우저와 개발자는 그런 문제를 완화할 수 있는 전략을 구현하게 되었습니다. 알림을 발생시키려면 사용자 제스처(예: 단추 클릭)에 대한 응답으로만 가능합니다. 이것은 모범적인 방식일 뿐 아니라 — 사용자에게 미동의 알림으로 스팸을 보내면 안됩니다 — 실제로도 전향적인 브라우저는 사용자 제스처에 대한 응답으로 촉발되지 않은 알림은 명시적으로 불허합니다. Firefox는 이미 72 버전부터 이렇게 하고 있으며 Safari도 하고 있습니다.
 
-또한 크롬과 파이어폭스에서는 사이트가 보안 콘텍스트(즉, HTTPS)가 아니면 알림을 아예 요청할 수 없으며 크로스 오리진 {{htmlelement("iframe")}}으로부터의 알림 권한은 요청할 수 없게 되었습니다.
+또한 크롬과 Firefox에서는 사이트가 보안 콘텍스트(즉, HTTPS)가 아니면 알림을 아예 요청할 수 없으며 크로스 오리진 {{htmlelement("iframe")}}으로부터의 알림 권한은 요청할 수 없게 되었습니다.
 
 ### 현재 권한 상태 확인하기
 
@@ -103,7 +103,7 @@ function askNotificationPermission() {
 }
 ```
 
-두 번째 메인 블록을 먼저 보면 알림이 지원되는지 확인하는 것을 알 수 있습니다. 지원하는 경우 그에 따라 `Notification.requestPermission()`의 프로미스 기반 버전이 지원되는지 보는 확인을 실행합니다. 맞다면 프로미스 기반 버전을 실행하고(사파리 외에는 전부 지원됨) 아니라면 과거의 콜백 기반 버전을 실행합니다(사파리에서 지원).
+두 번째 메인 블록을 먼저 보면 알림이 지원되는지 확인하는 것을 알 수 있습니다. 지원하는 경우 그에 따라 `Notification.requestPermission()`의 프로미스 기반 버전이 지원되는지 보는 확인을 실행합니다. 맞다면 프로미스 기반 버전을 실행하고(Safari 외에는 전부 지원됨) 아니라면 과거의 콜백 기반 버전을 실행합니다(Safari에서 지원).
 
 코드 중복을 피하기 위해 뒷 처리 수행 코드를 `handlePermission()` 함수에 넣었는데 이 함수가 코드에서 첫 번째 메인 블록입니다. 그 안에서는 `Notification.permission` 값을 명시적으로 설정하고(크롬의 일부 과거 버전에서는 이게 자동으로 안됩니다) 사용자가 권한 대화창에서 선택한 결과에 따라 단추를 보이거나 숨깁니다. 권한이 이미 허용됐는지 보여주려는 것은 아니고 사용자가 권한을 거부한 경우 나중에 다시 선택할 수 있도록 해주는 것입니다.
 
@@ -141,13 +141,14 @@ var notification = new Notification("할 일 목록", { body: text, icon: img })
 
 ## 알림 닫기
 
-파이어폭스와 사파리는 알림을 자동으로 금방(약 4초) 닫습니다. 이것은 운영 체계 수준에서도 발생합니다. 그런데 크롬 같은 다른 브라우저는 그렇지 않습니다. 모든 브라우저에서 알림이 닫히게 하려면 {{domxref("WindowTimers.setTimeout","setTimeout()")}} 함수에서 {{domxref("Notification.close")}} 함수를 호출하여 알림을 4초 후에 닫으면 됩니다. [`bind()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)를 사용하여 `close()` 호출이 알림에 연동되게 하는 것도 해줘야 합니다.
+Firefox와 Safari는 알림을 자동으로 금방(약 4초) 닫습니다. 이것은 운영 체계 수준에서도 발생합니다. 그런데 크롬 같은 다른 브라우저는 그렇지 않습니다. 모든 브라우저에서 알림이 닫히게 하려면 {{domxref("WindowTimers.setTimeout","setTimeout()")}} 함수에서 {{domxref("Notification.close")}} 함수를 호출하여 알림을 4초 후에 닫으면 됩니다. [`bind()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)를 사용하여 `close()` 호출이 알림에 연동되게 하는 것도 해줘야 합니다.
 
 ```js
 setTimeout(notification.close.bind(notification), 4000);
 ```
 
-> **참고:** "close" 이벤트를 받았을 때 알림을 닫은 것이 사용자인지는 보장할 수 없습니다. 이것은 규격과도 일치합니다. 규격에서는 "알림이 닫힐 때 그것이 기반 알림 플랫폼에 의한 것이든지 사용자에 의한 것이든지 닫기 절차가 실행돼야 한다."고 기술하고 있습니다.
+> [!NOTE]
+> "close" 이벤트를 받았을 때 알림을 닫은 것이 사용자인지는 보장할 수 없습니다. 이것은 규격과도 일치합니다. 규격에서는 "알림이 닫힐 때 그것이 기반 알림 플랫폼에 의한 것이든지 사용자에 의한 것이든지 닫기 절차가 실행돼야 한다."고 기술하고 있습니다.
 
 ## 알림 이벤트
 
@@ -199,7 +200,7 @@ window.addEventListener("load", function () {
     // 알림 10개를 보내본다
     if (Notification && Notification.permission === "granted") {
       var i = 0;
-      // 어떤 브라우저(파이어폭스 등)는 일정 시간 동안 알림이 너무 많은 경우 차단하기 때문에 인터벌 사용.
+      // 어떤 브라우저(Firefox 등)는 일정 시간 동안 알림이 너무 많은 경우 차단하기 때문에 인터벌 사용.
       var interval = window.setInterval(function () {
         // 태그 덕분에 "안녕! 9" 알림만 보여야 함
         var n = new Notification("안녕! " + i, { tag: "알림너무많음" });
@@ -217,7 +218,7 @@ window.addEventListener("load", function () {
         // 사용자가 ok한 경우
         if (status === "granted") {
           var i = 0;
-          // 어떤 브라우저(파이어폭스 등)는 일정 시간 동안 알림이 너무 많은 경우 차단하기 때문에 인터벌 사용.
+          // 어떤 브라우저(Firefox 등)는 일정 시간 동안 알림이 너무 많은 경우 차단하기 때문에 인터벌 사용.
           var interval = window.setInterval(function () {
             // 태그 덕분에 "안녕! 9" 알림만 보여야 함
             var n = new Notification("안녕! " + i, { tag: "알림너무많음" });
@@ -257,5 +258,5 @@ window.addEventListener("load", function () {
 
 ## 참고
 
-- [사용자 알림 편람](/ko/Apps/Build/User_notifications)
+- [사용자 알림 편람](/ko/docs/Apps/Build/User_notifications)
 - {{ domxref("Notification") }}

@@ -40,7 +40,7 @@ self.addEventListener("message", (e) => {
 });
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

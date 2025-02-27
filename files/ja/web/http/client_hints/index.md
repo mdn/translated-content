@@ -28,7 +28,8 @@ Accept-CH: Width, Downlink, Sec-CH-UA
 
 リクエストされなかった場合、クライアントイベントによって送信される可能性のある、[低エントロピーのクライアントヒントヘッダー](#低エントロピーヒント)も少しあります。
 
-> **メモ:** クライアントヒントは、 HTML で {{HTMLElement("meta")}} 要素に [`http-equiv`](/ja/docs/Web/HTML/Element/meta#attr-http-equiv) 属性を使用して指定することも可能です。
+> [!NOTE]
+> クライアントヒントは、 HTML で {{HTMLElement("meta")}} 要素に [`http-equiv`](/ja/docs/Web/HTML/Element/meta#attr-http-equiv) 属性を使用して指定することも可能です。
 >
 > ```html
 > <meta http-equiv="Accept-CH" content="Width, Downlink, Sec-CH-UA" />
@@ -107,7 +108,8 @@ Sec-CH-Prefers-Reduced-Motion: "reduce"
 
 クライアントヒントは、ウェブページの JavaScript で[ユーザーエージェントクライアントヒント API](/ja/docs/Web/API/User-Agent_Client_Hints_API) によって使用することができます。
 
-> **メモ:** サーバーは現在、 {{HTTPHeader("User-Agent")}} ヘッダーを解釈することによって、同じ情報のほとんどを取得することができます。
+> [!NOTE]
+> サーバーは現在、 {{HTTPHeader("User-Agent")}} ヘッダーを解釈することによって、同じ情報のほとんどを取得することができます。
 > 歴史的な理由から、このヘッダーはほとんど無関係な情報、および特定のユーザーを使用されるかもしれない情報を多く格納しています。
 > UA クライアントヒントは、望ましい情報を取得するための、より効率的でプライバシーを維持した方法を提供します。
 > 最終的にこの古い手法を置き換えることが期待されています。

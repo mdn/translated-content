@@ -30,7 +30,7 @@ Dans cet exercice, vous devrez utiliser le jeu des balles rebondissantes de l'ar
 
 Pour commencer, faite une copie locale de [index-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html), [style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), et [main-finished.js](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) de l'article précédent, dans un nouveau dossier.
 
-> **Note :** Vous pouvez utiliser un site comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/). Vous pouvez copier vos codes HTML, CSS et JavaScript dans l'un d'entre eux. Si celui que vous utilisez ne possède pas de fenêtres séparées pour les différents langages, ajoutez les dans des balises `<script>`/`<style>` dans votre code HTML.
+Vous pouvez utiliser un site comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/). Vous pouvez copier vos codes HTML, CSS et JavaScript dans l'un d'entre eux. Si celui que vous utilisez ne possède pas de fenêtres séparées pour les différents langages, ajoutez les dans des balises `<script>`/`<style>` dans votre code HTML.
 
 ## Le projet en bref
 
@@ -40,7 +40,7 @@ Ce screenshot vous donne une idée du résultat final :
 
 ![](bouncing-evil-circle.png)
 
-Si vous voulez en savoir plus, regardez [l'exemple fini](http://mdn.github.io/learning-area/javascript/oojs/assessment/) (n'en profitez pas pour récupérer le code source !).
+Si vous voulez en savoir plus, regardez [l'exemple fini](https://mdn.github.io/learning-area/javascript/oojs/assessment/) (n'en profitez pas pour récupérer le code source !).
 
 ## Vos objectifs
 

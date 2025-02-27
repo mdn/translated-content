@@ -5,112 +5,68 @@ slug: Web/MathML/Element/math
 
 {{MathMLRef()}}
 
-Элементом верхнего уровня в MathML является тэг `<math>`. Каждый допустимый экземпляр MathML должен быть внутри этого контейнера. Он не допускает вложений, но внутри может быть произвольное число других дочерних элементов.
+Элементом верхнего уровня в [MathML](/ru/docs/Web/MathML) является тэг `<math>`, используемый для представления одной математической формулы. Он может находится в HTML-контенте, где разрешено [потоковое содержимое](/ru/docs/Web/HTML/Content_categories#фразовый_контент).
+
+> [!NOTE]
+> Посмотрите страницу [«Разработка MathML»](/ru/docs/Web/MathML/Authoring#using_mathml) с советами по правильной интеграции MathML-формул на ваши веб-страницы и [примеры использования MathML](/ru/docs/Web/MathML/Examples).
 
 ## Атрибуты
 
-В дополнение к следующим атрибутам, тэг `<math>` воспринимает любые атрибуты из [`<mstyle>`](/ru/docs/Web/MathML/Element/mstyle) .
+Атрибуты этого элемента включают [глобальные атрибуты MathML](/ru/docs/Web/MathML/Global_attributes), а также следующий атрибут:
 
-- class, id, style
-  - : При условии использования вместе с [таблицами стилей](/ru/docs/CSS) .
-- dir
-  - : Указывает направление формулы: `ltr` - слева направо или `rtl` - справа налево.
-- ref
-  - : Используется для установки гиперссылки на указанный URI.
-- mathbackground
-  - : Цвет фона. Вы можете использовать `#rgb`, `#rrggbb` и [названия цветов HTML](/ru/docs/CSS/color_value#Color_Keywords).
-- mathcolor
-  - : Цвет текста. Вы можете использовать `#rgb`, `#rrggbb` и [названия цветов HTML](/ru/docs/CSS/color_value#Color_Keywords).
-- display
+- `display`
 
-  - : Этот атрибут определяет способ вывода. Возможные значения:
+  - : Этот [перечислимый](/ru/docs/Glossary/Enumerated) атрибут определяет, как должна отображаться разметка MathML. Он может иметь одно из следующих значений:
 
-    - `block` - означает, что этот элемент будет отображаться за пределами текущего диапазона текста, как блока, который может быть расположен в любом месте без изменения смысла текста;
-    - `inline` -означает, что этот элемент будет отображаться внутри текущего диапазона текста, и не могут быть перемещены из неё без изменения значения этого текста.
+    - `block` означает, что элемент будет отображаться в собственном блоке за пределами текущего диапазона текста и со значением [`math-style`](/ru/docs/Web/CSS/math-style) установленным в `normal`.
+    - `inline` означает, что элемент будет отображаться внутри текущего фрагмента текста и со значением [`math-style`](/ru/docs/Web/CSS/math-style) установленным в `compact`.
 
-    Значение по умолчанию `inline`.
-
-- mode {{ deprecated_inline() }}
-  - : Устаревшие значение [display attribute](/ru/docs/MathML/Element/math#attr-display).
-    Возможные значения: `display` (который имеет тот же эффект, как `display="block"` ) и `inline` .
-- overflow
-  - : Определяет, как выражение ведёт себя, если текст слишком длинный и не помещается в указанном диапазоне ширины.
-    Возможные значения: `linebreak` (по умолчанию), `scroll` , `elide` , `truncate` , `scale` .
+    Если атрибут отсутствует, то значением по умолчанию является `inline`.
 
 ## Примеры
 
-![Теорема Пифагора](/files/3157/math.jpg)
-
-### Обозначения HTML5
+Этот пример содержит две MathML-формулы. Первый отображается в отдельном центрированном блоке, занимающем столько места, сколько необходимо. Второй отображается внутри абзаца текста с уменьшенным размером и межстрочным интервалом, чтобы минимизировать его высоту.
 
 ```html
-<!doctype html>
-<html>
-  <head>
-    <title>MathML in HTML5</title>
-  </head>
-  <body>
-    <math>
-      <mrow>
-        <mrow>
-          <msup>
-            <mi>a</mi>
-            <mn>2</mn>
-          </msup>
-          <mo>+</mo>
-          <msup>
-            <mi>b</mi>
-            <mn>2</mn>
-          </msup>
-        </mrow>
-        <mo>=</mo>
-        <msup>
-          <mi>c</mi>
-          <mn>2</mn>
-        </msup>
-      </mrow>
-    </math>
-  </body>
-</html>
-```
-
-### Обозначения XHTML
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
- <title>MathML in XHTML</title>
-</head>
-<body>
-
-  <math xmlns="http://www.w3.org/1998/Math/MathML">
+<p>
+  Бесконечная сумма
+  <math display="block">
     <mrow>
-      <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>n</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mrow>
+          <mo>+</mo>
+          <mn>∞</mn>
+        </mrow>
+      </munderover>
+      <mfrac>
+        <mn>1</mn>
         <msup>
-          <mi>a</mi>
+          <mi>n</mi>
           <mn>2</mn>
         </msup>
-        <mo>+</mo>
-        <msup>
-          <mi>b</mi>
-          <mn>2</mn>
-        </msup>
-      </mrow>
-      <mo>=</mo>
-      <msup>
-        <mi>c</mi>
-        <mn>2</mn>
-      </msup>
+      </mfrac>
     </mrow>
   </math>
-
-</body>
-</html>
+  равна действительному числу
+  <math display="inline">
+    <mfrac>
+      <msup>
+        <mi>π</mi>
+        <mn>2</mn>
+      </msup>
+      <mn>6</mn>
+    </mfrac></math
+  >.
+</p>
 ```
 
-**Примечания:** XHTML документы с MathML должны быть поданы как `application/xhtml+xml`. Вы можете легко добиться этого, добавив `.xhtml` расширение для локальных файлов. Для серверов Apache вы можете [настроить `.htaccess` файл](http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype) для этого расширения на правильный тип MIME. Поскольку мы сохранили наш MathML в виде XML-документа, необходимо быть уверенным в правильно оформленном XML-документе.
+{{ EmbedLiveSample('math_example', 700, 200, "", "") }}
 
 ## Спецификации
 
@@ -122,6 +78,5 @@ slug: Web/MathML/Element/math
 
 ## Смотрите также
 
-- HTML-элемент верхнего уровня: [`<html>`](/ru/docs/Web/HTML/Element/html)
-- SVG элемент верхнего уровня: [`<svg>`](/ru/docs/Web/SVG/Element/svg)
-- Тест-браузер MathML: Для [XHTML](https://www.eyeasme.com/Joe/MathML/MathML_browser_test) и [HTML5](https://eyeasme.com/Joe/MathML/HTML5_MathML_browser_test)
+- HTML-элемент верхнего уровня: {{ HTMLElement("html") }}
+- SVG-элемент верхнего уровня: {{ SVGElement("svg") }}

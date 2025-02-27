@@ -3,7 +3,7 @@ title: Градиенты
 slug: Web/SVG/Tutorial/Gradients
 ---
 
-{{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}
 
 Возможность создания и использования градиентов, также как заливки и обводки, более интересна, чем просто заливка или обводка.
 
@@ -66,7 +66,8 @@ slug: Web/SVG/Tutorial/Gradients
  <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
 ```
 
-> **Примечание:** Вы также можете использовать атрибут `xlink:href` для градиентов. Когда он использован, атрибуты и стопы из одного градиента могут быть включены в другой. В примере выше можно было бы не пересоздавать все точки остановки в Gradient2.
+> [!NOTE]
+> Вы также можете использовать атрибут `xlink:href` для градиентов. Когда он использован, атрибуты и стопы из одного градиента могут быть включены в другой. В примере выше можно было бы не пересоздавать все точки остановки в Gradient2.
 >
 > ```
 >  <linearGradient id="Gradient1">
@@ -78,7 +79,7 @@ slug: Web/SVG/Tutorial/Gradients
 >     xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Gradient1"/>
 > ```
 >
-> Я включил пространство имён xlink прямо в ноду, хотя обычно вы хотели бы определить его в верхней части вашего документа. Подробнее об этом мы [поговорим в разделе изображений](/en-US/Web/SVG/Tutorial/Other_content_in_SVG).
+> Я включил пространство имён xlink прямо в ноду, хотя обычно вы хотели бы определить его в верхней части вашего документа. Подробнее об этом мы [поговорим в разделе изображений](/ru/docs/Web/SVG/Tutorial/Other_content_in_SVG).
 
 ## Радиальные градиенты
 
@@ -260,7 +261,7 @@ slug: Web/SVG/Tutorial/Gradients
  <radialGradient id="Gradient" cx="60" cy="60" r="50" fx="35" fy="35" gradientUnits="userSpaceOnUse">
 ```
 
-Вы также можете применить иную трансформацию к градиенту, используя атрибут **`gradientTransform`**, но мы пока что [его не изучали](/en-US/Web/SVG/Tutorial/Basic_Transformations), я оставлю это на потом.
+Вы также можете применить иную трансформацию к градиенту, используя атрибут **`gradientTransform`**, но мы пока что [его не изучали](/ru/docs/Web/SVG/Tutorial/Basic_Transformations), я оставлю это на потом.
 
 Существуют и другие предостережения для работы с
 `gradientUnits="objectBoundingBox"`, когда поле ограничения объекта не является квадратным, но они довольно сложны и им придётся ждать, пока кто-то другой не соизволит объяснить их.

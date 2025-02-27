@@ -15,7 +15,7 @@ Un élément `<rp>` devrait encadrer chaque parenthèse ouvrante et fermante eng
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Exemples
 

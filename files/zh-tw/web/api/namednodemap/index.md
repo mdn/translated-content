@@ -9,7 +9,8 @@ slug: Web/API/NamedNodeMap
 
 `NamedNodeMap` 物件具有*即時性（live）*，如果其內部成員（屬性節點物件）發生改變，`NamedNodeMap` 物件會自動更新至最新的狀態。
 
-> **備註：** 僅管被稱作 `NamedNodeMap`，但本介面並不是直接用來處理節點物件（{{domxref("Node")}}），而是專門負責屬性節點物件（{{domxref("Attr")}}）。屬性節點是一種特殊的節點，在部分瀏覽器實作中依然存在。
+> [!NOTE]
+> 僅管被稱作 `NamedNodeMap`，但本介面並不是直接用來處理節點物件（{{domxref("Node")}}），而是專門負責屬性節點物件（{{domxref("Attr")}}）。屬性節點是一種特殊的節點，在部分瀏覽器實作中依然存在。
 
 ## 屬性
 

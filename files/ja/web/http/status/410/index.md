@@ -1,34 +1,57 @@
 ---
 title: 410 Gone
 slug: Web/HTTP/Status/410
+l10n:
+  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
 ---
 
 {{HTTPSidebar}}
 
-HyperText Transfer Protocol (HTTP) の **`410 Gone`** クライエントエラーレスポンスコードは、元のサーバーで利用できなくなっている対象リソースにアクセスしていることを示します。この状態は永久的です。
+HTTP の **`410 Gone`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)のステータスコードで、元のサーバーで利用できなくなっている対象リソースにアクセスしていることを示します。この状態は永久的です。
+410 レスポンスは既定でキャッシュ可能です。
 
+クライアントは、 410 レスポンスを返すリソースへのリクエストを繰り返すべきではなく、ウェブサイト所有者は、このコードを返すリンクを除去または置き換えるべきです。
 この状態が一時的なものか永久なのか分からない場合は、代わりに {{HTTPStatus(404)}} ステータスコードを使用してください。
-
-> **メモ:** 410 レスポンスは既定でキャッシュ可能です。
 
 ## ステータス
 
-```
+```http
 410 Gone
+```
+
+## 例
+
+### 古いリソースへのリクエスト
+
+次の `GET` リクエストは、宣伝コンテンツを掲載したページに対するものですが、そのページはすでに無効になっています。
+
+```http
+GET /promotions/summer-2023 HTTP/1.1
+Host: example.com
+```
+
+```http
+HTTP/1.1 410 Gone
+Content-Type: text/html
+Content-Length: 212
+
+<html>
+  <head>
+    <title>Promotion expired</title>
+  </head>
+  <body>
+    <h1>Promotion expired</h1>
+    <p>Promotion no longer active! See <a href="/offers">current offers</a>.</p>
+  </body>
+</html>
 ```
 
 ## 仕様書
 
-| 仕様書                                | 題名                                                          |
-| ------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "410 Gone" , "6.5.9")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
-
-## ブラウザーの互換性
-
-以下に示す情報は、 MDN の GitHub から取得したものです。 (<https://github.com/mdn/browser-compat-data>).
-
-{{Compat("http.status.410")}}
+{{Specifications}}
 
 ## 関連情報
 
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
 - {{HTTPStatus(404)}}
+- [410 gone](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#410)

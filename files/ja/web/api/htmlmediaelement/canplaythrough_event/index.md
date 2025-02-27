@@ -1,8 +1,9 @@
 ---
 title: "HTMLMediaElement: canplaythrough イベント"
+short-title: canplaythrough
 slug: Web/API/HTMLMediaElement/canplaythrough_event
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
 {{APIRef("HTMLMediaElement")}}
@@ -32,22 +33,24 @@ oncanplaythrough = (event) => {};
 `addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('canplaythrough', (event) =&gt; {
-  console.log('バッファリングを止めることなく、' +
-      '動画全体を再生できると思います。');
+video.addEventListener("canplaythrough", (event) => {
+  console.log(
+    "バッファリングを止めることなく、動画全体を再生できると思います。",
+  );
 });
 ```
 
 `oncanplaythrough` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.oncanplaythrough = (event) =&gt; {
-  console.log('バッファリングを止めることなく、' +
-      '動画全体を再生できると思います。');
+video.oncanplaythrough = (event) => {
+  console.log(
+    "バッファリングを止めることなく、動画全体を再生できると思います。",
+  );
 };
 ```
 

@@ -9,7 +9,7 @@ L'élément **`<title>`** définit le titre du document (qui est affiché dans l
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -48,8 +48,6 @@ Les personnes utilisant des outils d'assistance peuvent utiliser le titre de la 
 ```
 
 Mettre à jour la valeur de `title` afin de refléter un changement d'état important (un problème de validation d'un formulaire par exemple) peut également s'avérer utile :
-
-#### Exemple
 
 ```html
 <title>

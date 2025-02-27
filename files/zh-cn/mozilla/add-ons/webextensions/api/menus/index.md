@@ -24,7 +24,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/menus
 
 ## 图标
 
-如果你使用 ["icons" manifest key](/zh-CN/Add-ons/WebExtensions/manifest.json/icons) 为你的扩展指定一个图标，你的菜单项的旁边就会显示一个指定的图标。浏览器会尝试在普通分辨率下使用 16 x 16 像素的图标，在高分辨率下使用 32 x 32 像素的图标：
+如果你使用 ["icons" manifest key](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) 为你的扩展指定一个图标，你的菜单项的旁边就会显示一个指定的图标。浏览器会尝试在普通分辨率下使用 16 x 16 像素的图标，在高分辨率下使用 32 x 32 像素的图标：
 
 ![](menus-2.png) 你可以通过调用 {{WebExtAPIRef("menus.create()")}} 时指定 icons 选项来给子菜单项设置图标。
 
@@ -146,7 +146,8 @@ browser.menus.create(
 
 {{WebExtExamples("h2")}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) API. 此文档来自于 Chromium 代码中的[`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json)。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.contextMenus`](https://developer.chrome.google.cn/docs/extensions/reference/api/contextMenus) API。此文档来自于 Chromium 代码中的 [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

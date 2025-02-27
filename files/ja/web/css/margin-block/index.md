@@ -1,11 +1,24 @@
 ---
 title: margin-block
 slug: Web/CSS/margin-block
+l10n:
+  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
 {{CSSRef}}
 
 The **`margin-block`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、論理的なブロックの先頭と末尾のマージンを設定します。これは要素の書字方向やテキストの向きに応じて物理的なマージンに変換されます。
+
+{{EmbedInteractiveExample("pages/css/margin-block.html")}}
+
+## 構成要素のプロパティ
+
+このプロパティは以下の CSS プロパティの一括指定です。
+
+- {{cssxref("margin-block-start")}}
+- {{cssxref("margin-block-end")}}
+
+## 構文
 
 ```css
 /* <length> 値 */
@@ -21,23 +34,20 @@ margin-block: auto;
 margin-block: inherit;
 margin-block: initial;
 margin-block: revert;
+margin-block: revert-layer;
 margin-block: unset;
 ```
 
 このプロパティは、 {{CSSxRef("margin-top")}} と {{CSSxRef("margin-bottom")}}、または {{CSSxRef("margin-right")}} と {{CSSxRef("margin-left")}} プロパティに、 {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}} で定義された値にしたがって対応します。
 
-## 構成要素のプロパティ
+`margin-block` プロパティは、 1 つまたは 2 つの値を使用して指定します。
 
-このプロパティは以下の CSS プロパティの一括指定です。
-
-- [`margin-block-end`](/ja/docs/Web/CSS/margin-block-end)
-- [`margin-block-start`](/ja/docs/Web/CSS/margin-block-start)
-
-## 構文
+- **1 つ**の値が指定された場合は、**先頭と末尾の両方**に同じマージンを適用します。
+- **2 つ**の値が指定された場合は、 1 つ目のマージンが**先頭**に、 2 つ目のマージンが**末尾**に指定されます。
 
 ### 値
 
-`margin-block` プロパティは、 {{CSSxRef("margin-left")}} プロパティと同じ値を取ります。
+`margin-block` プロパティは、 {{CSSxRef("margin", "", "#値")}} プロパティと同じ値を取ります。
 
 ## 公式定義
 
@@ -45,15 +55,15 @@ margin-block: unset;
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
-<h3 id="Setting_block_start_and_end_margins">ブロック方向の先頭と末尾のマージンを設定</h3>
+### ブロック方向の先頭と末尾のマージンを設定
 
 #### CSS
 
-```css
+```css live-sample___setting_block_start_and_end_margins
 div {
   background-color: yellow;
   width: 120px;
@@ -74,12 +84,12 @@ p {
 
 #### HTML
 
-```html
+```html live-sample___setting_block_start_and_end_margins
 <div>
-  <p>Example text</p>
+  <p>テキストの例</p>
 </div>
 <div class="verticalExample">
-  <p>Example text</p>
+  <p>テキストの例</p>
 </div>
 ```
 
@@ -97,5 +107,6 @@ p {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - 対応する物理的プロパティ: {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}}, {{CSSxRef("margin-left")}}
 - {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

@@ -3,13 +3,16 @@ title: FormData
 slug: Web/API/FormData
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 XMLHttpRequest 2 добавляет поддержку для нового интерфейса FormData. Объекты FormData позволяют вам легко конструировать наборы пар ключ-значение, представляющие поля формы и их значения, которые в дальнейшем можно отправить с помощью метода [`send()`](</ru/docs/DOM/XMLHttpRequest#send()> "XMLHttpRequest#send()").
 
 FormData использует такой же формат на выходе, как если бы мы отправляли обыкновенную форму с encoding установленным в "multipart/form-data".
 
-> **Примечание:** О деталях использования FormData можно прочитать в статье [Использование объекта FormData](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects).
+> [!NOTE]
+> О деталях использования FormData можно прочитать в статье [Использование объекта FormData](/ru/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects).
 
 ## Конструктор
 
@@ -37,19 +40,20 @@ FormData использует такой же формат на выходе, к
 - {{domxref("FormData.values()")}}
   - : Возвращает {{jsxref("Iteration_protocols", "iterator")}} , который позволяет пройтись по всем значениям , содержащимся в объекте `FormData`
 
-> **Примечание:** Разница между {{domxref("FormData.set()")}} и {{domxref("FormData.append()")}} заключается в том, что если указанный ключ найден в объекте, {{domxref("FormData.set()")}} перезапишет его новым значением, тогда как {{domxref("FormData.append()")}} добавит новое значение в конец существующего. Смотрите дополнительные материалы с примерами.
+> [!NOTE]
+> Разница между {{domxref("FormData.set()")}} и {{domxref("FormData.append()")}} заключается в том, что если указанный ключ найден в объекте, {{domxref("FormData.set()")}} перезапишет его новым значением, тогда как {{domxref("FormData.append()")}} добавит новое значение в конец существующего. Смотрите дополнительные материалы с примерами.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Использование объектов FormData](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Использование объектов FormData](/ru/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

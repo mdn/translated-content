@@ -3,6 +3,8 @@ title: Aperçu sur le développement des applications Web et des Widgets accessi
 slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 ---
 
+{{AccessibilitySidebar}}
+
 Le Web est en perpétuelle évolution. En effet, les sites à contenu statique sont de plus en plus remplacés par des sites dynamiques à l'utilisation assez proche des applications de bureaux. Les sites Web dynamiques utilisent abondamment JavaScript et AJAX. Les designers créent des widgets et des éléments d'interface grâce aux langages du Web notamment HTML, CSS et Javascript. Ce tournant dans l'histoire du Web permet d'améliorer grandement l'expérience utilisateur et l'utilisation sur mobile (responsive). Mais certains utilisateurs peuvent être exclus par manque d'accessibilité. En effet, JavaScript avait la réputation d'être inaccessible aux technologies d'assistance tel que les interpréteurs d'écran. Or, il existe maintenant des techniques pour rendre le Web accessible à une large palette d'utilisateurs.
 
 ## Problématique
@@ -39,7 +41,8 @@ _Example 2: Telles qu'elles sont représentées ci-dessous, les tabulations peuv
 
 [WAI-ARIAI](https://www.w3.org/WAI/standards-guidelines/aria/), les spécifications concernant les applications **internet "riches" et accessibles** sont publiées par l'iniative du [W3C sur l'accessibilité](https://www.w3.org/WAI/), et fournissent la sémantique essentielle au bon fonctionnement des lecteurs d'écran. ARIA permet aux développeurs de décrire en quelque sorte leurs widgets plus finement en ajoutant des attributs spéciaux à leurs balises. Ces spécifications comblent le vide qui existait entre les spécifications du standard HTML et des widgets. ARIA spécifie des rôles et des états permettant de décrire en quelque sorte le fonctionnement des widgets d'interfaces utilisateurs les plus connus.
 
-> **Attention :** Beaucoup d'entre eux ont été ajouté plus tard dans HTML5, et **les développeurs devraient toujours préférer utiliser la balise HTML correspondante plutôt qu'utiliser ARIA**.
+> [!WARNING]
+> Beaucoup d'entre eux ont été ajouté plus tard dans HTML5, et **les développeurs devraient toujours préférer utiliser la balise HTML correspondante plutôt qu'utiliser ARIA**.
 
 Les spécifications ARIA distinguent 3 types d'attributs : rôles, états et propriétés. Les rôles sont utilisés pour les widgets ne faisant pas partie des spécifications HTML 4 comme des sliders, menus, barres, boites de dialogue... Les propriétés sont utilisées pour représenter les caractéristiques de ces widgets, elles décrivent les caractéristiques de ces widgets comme s'il sont déplaçables avec la souris, requièrent un élément ou ont un popup associés à eux. Les états, comme leur nom l'indique, servent à representer l'état actuel de ces éléments en informant les technologies d'assistance s'il est occupé, désactivé, sélectionné ou masqué.
 
@@ -195,12 +198,12 @@ Voici un résumé de la façon dont la navigation au clavier devrait fonctionner
 
 Ainsi, pour l'exemple de widget `Tabs` ci-dessus, l'utilisatrice ou l'utilisateur devrait être capable de naviguer dans le conteneur du widget (l'élément [`<ol>`](/fr/docs/Web/HTML/Element/ol) dans notre balisage) en utilisant les touches <kbd>Tab</kbd> et <kbd>Maj</kbd>+<kbd>Tab</kbd>. Une fois que le focus du clavier est à l'intérieur du conteneur, les touches fléchées devraient permettre à l'utilisatrice ou l'utilisateur de naviguer entre chaque onglet (les éléments [`<li>`](/fr/docs/Web/HTML/Element/li)). De là, les conventions varient d'une plateforme à l'autre. Sous Windows, l'onglet suivant doit être automatiquement activé lorsque l'utilisatrice ou l'utilisateur appuie sur les touches fléchées. Sous Mac OS X, on peut appuyer sur <kbd>Entrée</kbd> ou sur <kbd>Espace</kbd> pour activer l'onglet suivant. Un tutoriel en profondeur pour créer des [widgets navigables grâce à des contrôles JavaScript](/fr/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets) comme décrit ici montre comment avoir ce comportement en JS.
 
-Pour plus de détails à propos de ces conventions de navigation au clavier, un aperçu ici [DHTML style guide](http://dev.aol.com/dhtml_style_guide) est disponible. Il délivre un aperçu de la façon dont la navigation au clavier devrait fonctionner pour chaque type de widget pris en charge par ARIA. Le W3C offre également un document utile [ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html) qui inclut la navigation au clavier et les raccourcis pour une variété de widgets.
+Pour plus de détails à propos de ces conventions de navigation au clavier, un aperçu ici [DHTML style guide](http://dev.aol.com/dhtml_style_guide) est disponible. Il délivre un aperçu de la façon dont la navigation au clavier devrait fonctionner pour chaque type de widget pris en charge par ARIA. Le W3C offre également un document utile [ARIA Best Practices](https://www.w3.org/WAI/PF/aria-practices/Overview.html) qui inclut la navigation au clavier et les raccourcis pour une variété de widgets.
 
 ## Voir aussi
 
-- [ARIA](/fr/docs/Accessibilité/ARIA)
-- [Des applications WEB et la FAQ ARIA](/fr/docs/Accessibilité/ARIA/FAQ_Applications_Web_et_ARIA)
-- [WAI-ARIA Spécification](http://www.w3.org/TR/wai-aria/)
-- [WAI-ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html)
+- [ARIA](/fr/docs/Web/Accessibility/ARIA)
+- [Des applications WEB et la FAQ ARIA](/fr/docs/Web/Accessibility/ARIA)
+- [WAI-ARIA Spécification](https://www.w3.org/TR/wai-aria/)
+- [WAI-ARIA Best Practices](https://www.w3.org/WAI/PF/aria-practices/Overview.html)
 - [DHTML Style Guide](http://dev.aol.com/dhtml_style_guide)

@@ -41,7 +41,8 @@ No início a Web era somente texto, e era tedioso. Felizmente, não demorou muit
 
 Para colocar uma única imagem em uma página da web, usamos o elemento {{htmlelement("img")}}. Isso é um elemento vazio (quer dizer que não possui conteúdo de texto ou tag de fechamento) que requer no mínimo um atributo para ser útil — `src` (às vezes pronunciado como seu título completo, _source_). O atributo src contém um caminho apontando para a imagem que você deseja incorporar na página, que pode ser uma URL relativa ou absoluta, da mesma maneira que o valores de atributo `href` no elemento {{htmlelement("a")}}.
 
-> **Nota:** Antes de continuar, você deveria ler [Um guia rápido sobre URLs e caminhos](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths) para refrescar sua memória sobre URL relativo e absoluto.
+> [!NOTE]
+> Antes de continuar, você deveria ler [Um guia rápido sobre URLs e caminhos](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#a_quick_primer_on_urls_and_paths) para refrescar sua memória sobre URL relativo e absoluto.
 
 Por exemplo, se sua imagem for chamada `dinossauro.jpg`, e está no mesmo diretório de sua página HTML, você poderia inserir a imagem assim:
 
@@ -57,7 +58,8 @@ Se a imagem estivesse em um subdiretório de `images`, que estivesse dentro do m
 
 E assim por diante.
 
-> **Nota:** Os mecanismos de pesquisa também leem os nomes dos arquivos de imagem e os contam para o SEO. Portanto, dê à sua imagem um nome de arquivo descritivo; `dinosaur.jpg` é melhor que `img835.png`.
+> [!NOTE]
+> Os mecanismos de pesquisa também leem os nomes dos arquivos de imagem e os contam para o SEO. Portanto, dê à sua imagem um nome de arquivo descritivo; `dinosaur.jpg` é melhor que `img835.png`.
 
 Você pode incorporar a imagem usando seu URL absoluto, por exemplo:
 
@@ -67,7 +69,8 @@ Você pode incorporar a imagem usando seu URL absoluto, por exemplo:
 
 Mas isso é inútil, pois apenas faz o navegador trabalhar mais, pesquisando o endereço IP do servidor DNS novamente, etc. Você quase sempre manterá as imagens do seu site no mesmo servidor que o HTML.
 
-> **Aviso:** A maioria das imagens tem direitos autorais. Não exiba uma imagem em sua página da web, a menos que:
+> [!WARNING]
+> A maioria das imagens tem direitos autorais. Não exiba uma imagem em sua página da web, a menos que:
 >
 > 1\) você é o dono da imagem
 > 2\) você recebeu permissão explícita e por escrito do proprietário da imagem, ou
@@ -79,9 +82,11 @@ Nosso código acima nos daria o seguinte resultado:
 
 ![A basic image of a dinosaur, embedded in a browser, with Images in HTML written above it](basic-image.png)
 
-> **Nota:** Elementos como {{htmlelement("img")}} e {{htmlelement("video")}} às vezes são chamados de elementos substituídos. Isso ocorre porque o conteúdo e o tamanho do elemento são definidos por um recurso externo (como uma imagem ou arquivo de vídeo), não pelo conteúdo do próprio elemento.
+> [!NOTE]
+> Elementos como {{htmlelement("img")}} e {{htmlelement("video")}} às vezes são chamados de elementos substituídos. Isso ocorre porque o conteúdo e o tamanho do elemento são definidos por um recurso externo (como uma imagem ou arquivo de vídeo), não pelo conteúdo do próprio elemento.
 
-> **Nota:** Você pode encontrar o exemplo final desta seção [running on Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) (Veja o [source code](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html) também.)
+> [!NOTE]
+> Você pode encontrar o exemplo final desta seção [running on Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) (Veja o [source code](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html) também.)
 
 ### Texto alternativo
 
@@ -115,7 +120,8 @@ O que exatamente você deve escrever dentro do seu atributo `alt`? Depende do _p
 
 Essencialmente, a chave é oferecer uma experiência utilizável, mesmo quando as imagens não podem ser vistas. Isso garante que todos os usuários não estejam perdendo nenhum conteúdo. Tente desativar as imagens no seu navegador e veja como as coisas ficam. Você logo perceberá como o texto alternativo é útil se a imagem não puder ser vista.
 
-> **Nota:** Para mais informações, consulte o nosso guia para [Textos alternativos](/pt-BR/docs/Learn/Accessibility/HTML#Alternativas_em_textos).
+> [!NOTE]
+> Para mais informações, consulte o nosso guia para [Textos alternativos](/pt-BR/docs/Learn/Accessibility/HTML#alternativas_em_textos).
 
 ### Largura e altura
 
@@ -138,11 +144,12 @@ Isso não resulta em muita diferença para a tela, em circunstâncias normais. M
 
 No entanto, você não deve alterar o tamanho das suas imagens usando atributos HTML. Se você definir o tamanho da imagem muito grande, terá imagens granuladas, confusas ou muito pequenas e desperdiçando largura de banda ao fazer o download de uma imagem que não atenda às necessidades do usuário. A imagem também pode ficar distorcida, se você não mantiver a [proporção de tela](<Proporção de tela>). Você deve usar um editor de imagens para colocar sua imagem no tamanho correto antes de colocá-la em sua página da web.
 
-> **Nota:** Se você precisar alterar o tamanho de uma imagem, use [CSS](/pt-BR/docs/Aprender/CSS) então.
+> [!NOTE]
+> Se você precisar alterar o tamanho de uma imagem, use [CSS](/pt-BR/docs/Learn/CSS) então.
 
 ### Títulos de imagem
 
-Como [nos links](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Criando_hyperlinks), você também pode adicionar o atributo `title` nas images, para fornecer mais informações de suporte, se necessário. No nosso exemplo, poderíamos fazer isso:
+Como [nos links](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), você também pode adicionar o atributo `title` nas images, para fornecer mais informações de suporte, se necessário. No nosso exemplo, poderíamos fazer isso:
 
 ```html
 <img
@@ -271,7 +278,8 @@ Uma solução melhor, é usar os elementos do HTML5 {{htmlelement("figure")}} e 
 
 O elemento {{htmlelement("figcaption")}} informa aos navegadores e à tecnologia de assistência que a legenda descreve o outro conteúdo do elemento {{htmlelement("figure")}}.
 
-> **Nota:** Do ponto de vista da acessibilidade, legendas e [`alt`](/pt-BR/docs/Web/HTML/Element/img#alt) texto têm papéis distintos. As legendas beneficiam até as pessoas que podem ver a imagem, enquanto [`alt`](/pt-BR/docs/Web/HTML/Element/img#alt) texto fornece a mesma funcionalidade que uma imagem ausente. Portanto, legendas e `alt` texto não deve apenas dizer a mesma coisa, porque ambos aparecem quando a imagem desaparece. Tente desativar as imagens no seu navegador e veja como fica.
+> [!NOTE]
+> Do ponto de vista da acessibilidade, legendas e [`alt`](/pt-BR/docs/Web/HTML/Element/img#alt) texto têm papéis distintos. As legendas beneficiam até as pessoas que podem ver a imagem, enquanto [`alt`](/pt-BR/docs/Web/HTML/Element/img#alt) texto fornece a mesma funcionalidade que uma imagem ausente. Portanto, legendas e `alt` texto não deve apenas dizer a mesma coisa, porque ambos aparecem quando a imagem desaparece. Tente desativar as imagens no seu navegador e veja como fica.
 
 Uma figura não precisa ser uma imagem. É uma unidade de conteúdo independente que:
 
@@ -362,7 +370,8 @@ A imagem incorporada resultante é sem dúvida mais fácil de posicionar e contr
 
 Resumindo: se uma imagem tiver significado, em termos de seu conteúdo, você deverá usar uma imagem HTML. Se uma imagem é puramente decorativa, você deve usar imagens de plano de fundo CSS.
 
-> **Nota:** Você aprenderá muito mais sobre [CSS background images](/pt-BR/docs/Learn/CSS/Styling_boxes/Backgrounds) no nosso tópico de [CSS](/pt-BR/docs/Aprender/CSS).
+> [!NOTE]
+> Você aprenderá muito mais sobre [CSS background images](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) no nosso tópico de [CSS](/pt-BR/docs/Learn/CSS).
 
 É tudo por agora. Cobrimos imagens e legendas em detalhes. No próximo artigo, avançaremos, analisando como usar HTML para incorporar vídeo e áudio em páginas da web.
 

@@ -19,7 +19,7 @@ for (step = 0; step < 5; step++) {
 
 반복문은 매우 다양한 종류가 있습니다. 하지만 반복문이 기본적으로 하는일은 모두 같습니다. 반복문은 한 동작을 여러 번 반복합니다. (사실 0회 반복하는 것도 가능합니다.) 다양한 반복문 메커니즘은 다양한 방법으로 반복문의 시작점과 끝나는 점을 정할 수 있습니다.
 
-자바스크립트가 지원하는 반복문은 다음과 같습니다:
+JavaScript가 지원하는 반복문은 다음과 같습니다:
 
 - [for 문](#for_문)
 - [do...while 문](#do...while_문)
@@ -32,7 +32,7 @@ for (step = 0; step < 5; step++) {
 
 ## `for` 문
 
-for 반복문은 어떤 특정한 조건이 거짓으로 판별될 때까지 반복합니다. 자바스크립트의 반복문은 C의 반복문과 비슷합니다. for 반복문은 다음과 같습니다.
+for 반복문은 어떤 특정한 조건이 거짓으로 판별될 때까지 반복합니다. JavaScript의 반복문은 C의 반복문과 비슷합니다. for 반복문은 다음과 같습니다.
 
 ```
     for ([초기문]; [조건문]; [증감문])
@@ -48,7 +48,7 @@ for문이 실행될 때, 다음과 같이 실행됩니다.:
 
 ### **예시**
 
-다음 함수는 스크롤링 목록(다중 선택을 허용하는 요소 {{HTMLElement("select")}}). 에서 선택된 옵션들을 세는 for문 입니다. 이 for문은 변수 i 를 선언하고 0으로 초기화 시킵니다. 이것은 i 가 \<select> 요소 안의 옵션 수가 i 보다 작은지 확인 합니다. 다음의 if문을 수행하고 각 루프를 빠져나간 뒤 i 를 1 증가시킵니다.
+다음 함수는 스크롤링 목록(다중 선택을 허용하는 요소 {{HTMLElement("select")}}) 에서 선택된 옵션들을 세는 for문 입니다. 이 for문은 변수 i 를 선언하고 0으로 초기화 시킵니다. 이것은 i 가 \<select> 요소 안의 옵션 수가 i 보다 작은지 확인 합니다. 다음의 if문을 수행하고 각 루프를 빠져나간 뒤 i 를 1 증가시킵니다.
 
 ```html
 <form name="selectForm">
@@ -313,11 +313,11 @@ car.model = Mustang;
 
 ### **배열**
 
-{{jsxref("배열")}} 요소를 반복하는 방법으로 이를 사용하도록 유도될 수 있지만, **for...in** 문은 숫자 인덱스에 추가하여 사용자 정의 속성의 이름을 반환합니다. 따라서 만약 여러분이 사용자 정의 속성 또는 메서드를 추가하는 등 Array 객체를 수정한다면, 배열 요소 이외에도 사용자 정의 속성을 통해 **for...in** 문을 반복하기 때문에, 배열을 통해 반복할 때 숫자 인덱스와 전통적인 [`for`](/ko/docs/Web/JavaScript/Reference/Statements/for) 루프를 사용하는 것이 좋습니다.
+{{jsxref("배열")}} 요소를 반복하는 방법으로 이를 사용하도록 유도될 수 있지만, **for...in** 문은 숫자 인덱스에 추가하여 사용자 정의 속성의 이름을 반환합니다. 따라서 만약 여러분이 사용자 정의 속성 또는 메서드를 추가하는 등 Array 객체를 수정한다면, 배열 요소 이외에도 사용자 정의 속성을 통해 **for...in** 문을 반복하기 때문에, 배열을 통해 반복할 때 숫자 인덱스와 통상적인 [`for`](/ko/docs/Web/JavaScript/Reference/Statements/for) 루프를 사용하는 것이 좋습니다.
 
 ## `for...of` 문
 
-[`for...of`](/ko/docs/Web/JavaScript/Reference/Statements/for...of) 문은 각각의 고유한 특성의 값을 실행할 명령과 함께 사용자 지정 반복 후크를 호출하여, [반복 가능한 객체](/ko/docs/Web/JavaScript/Guide/iterable)({{jsxref("배열")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, [인수](/ko/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) 객체 등을 포함)를 통해 반복하는 루프를 만듭니다.
+[`for...of`](/ko/docs/Web/JavaScript/Reference/Statements/for...of) 문은 각각의 고유한 특성의 값을 실행할 명령과 함께 사용자 지정 반복 후크를 호출하여, [반복 가능한 객체](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)({{jsxref("배열")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, [인수](/ko/docs/Web/JavaScript/Reference/Functions/arguments) 객체 등을 포함)를 통해 반복하는 루프를 만듭니다.
 
 ```
     for (variable of object) {

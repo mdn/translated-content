@@ -36,7 +36,7 @@ new TextDecoderStream(label, options)
 
 ## 例
 
-次の例は、{{domxref("fetch()")}} の呼び出しから取得したバイナリーデータをデコードする方法を示しています。
+次の例は、{{domxref("Window/fetch", "fetch()")}} の呼び出しから取得したバイナリーデータをデコードする方法を示しています。
 このデータには `label` が渡されていないので、UTF-8 として解釈されます。
 
 ```js

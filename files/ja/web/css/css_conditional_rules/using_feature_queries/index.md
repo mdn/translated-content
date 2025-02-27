@@ -79,7 +79,7 @@ CSS の機能クエリーは [CSS 条件付きルールモジュール](https://
 
 それでは、上記のような方法で機能クエリーを使用する、とても簡単な例を見ていきましょう。
 
-例えば、 3 つのボックスが並んだレイアウトを作りたい場合、理想的には[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)を使いたいところです。しかし、古いブラウザーのためのレイアウトでは、浮動要素を使ったレイアウトにしたいとします。まずはその浮動レイアウトを以下のコードで作成しすると、 3 列にすることができます。
+例えば、 3 つのボックスが並んだレイアウトを作りたい場合、理想的には[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)を使いたいところです。しかし、古いブラウザーのためのレイアウトでは、浮動要素を使ったレイアウトにしたいとします。まずはその浮動レイアウトを以下のコードで作成しすると、 3 列にすることができます。
 
 {{EmbedGHLiveSample("css-examples/feature-queries/step1.html", '100%', 900)}}
 
@@ -109,5 +109,5 @@ CSS の機能クエリーは [CSS 条件付きルールモジュール](https://
 
 - [@supports](/ja/docs/Web/CSS/@supports) ルール
 - レイアウトの学習: [古いブラウザーの対応](/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [CSS での機能クエリーの使用](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)

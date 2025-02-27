@@ -5,7 +5,7 @@ slug: Web/CSS/min-height
 
 {{CSSRef}}
 
-CSS 属性 **`min-height`** 能够设置元素的最小高度。这样能够防止 `{{cssxref("height")}}` 属性的[应用值](/zh-CN/docs/Web/CSS/used_value)小于 `min-height` 的值。
+CSS 属性 **`min-height`** 能够设置元素的最小高度。这样能够防止 `{{cssxref("height")}}` 属性的[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)小于 `min-height` 的值。
 
 {{EmbedInteractiveExample("pages/css/min-height.html")}}
 
@@ -39,8 +39,6 @@ min-height: unset;
   - : 定义 `min-height` 为一个相对于父容器高度的百分数。
 - `auto`
   - : 浏览器将通过计算为指定元素选择一个 `min-height` 值。
-- `none`
-  - : 不限制盒容器的尺寸。
 - `max-content`
   - : The intrinsic preferred `min-height`.
 - `min-content`

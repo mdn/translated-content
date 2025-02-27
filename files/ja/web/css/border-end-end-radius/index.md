@@ -5,7 +5,7 @@ slug: Web/CSS/border-end-end-radius
 
 {{CSSRef}}
 
-**`border-end-end-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的な境界の半径を定義します。これは要素の {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に応じて、物理的な境界の半径に対応づけられます。これは[テキストの方向](/ja/docs/Web/CSS/text-orientation)や[書字方向](/ja/docs/Web/CSS/CSS_Writing_Modes)に依存せずにスタイルを構築する際に便利です。
+**`border-end-end-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的な境界の半径を定義します。これは要素の {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に応じて、物理的な境界の半径に対応づけられます。これは[テキストの方向](/ja/docs/Web/CSS/text-orientation)や[書字方向](/ja/docs/Web/CSS/CSS_writing_modes)に依存せずにスタイルを構築する際に便利です。
 
 ```css
 /* <length> 値 */
@@ -22,6 +22,8 @@ border-end-end-radius: initial;
 border-end-end-radius: revert;
 border-end-end-radius: unset;
 ```
+
+{{EmbedInteractiveExample("pages/css/border-end-end-radius.html")}}
 
 このプロパティは、要素の block-end と inline-end の間の角に影響します。すなわち、書字方向が `horizontal-tb` で `ltr` の方向であれば、 {{CSSxRef("border-bottom-right-radius")}} プロパティに対応します。
 

@@ -82,7 +82,7 @@ window.addEventListener("unhandledrejection", function (event) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.unhandledrejection_event")}}
+{{Compat}}
 
 ## 関連情報
 

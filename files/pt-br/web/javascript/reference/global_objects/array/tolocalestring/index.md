@@ -52,7 +52,7 @@ Para mais exemplos, veja as páginas {{jsxref("Intl")}}, {{jsxref("NumberFormat"
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.toLocaleString")}}
+{{Compat}}
 
 ## Veja também
 

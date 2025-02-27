@@ -86,7 +86,7 @@ Cache-Control: stale-if-error=<秒數>
 - `min-fresh=<秒數>`
   - : 表示客戶端想要有效時間*至少*在指定秒數以上的回應。
 - `stale-while-revalidate=<秒數>` {{Experimental_Inline}}
-  - : 表示客戶端可以接受過期回應，但同時在背景檢查最新版本。*秒數*用來控制客戶端最多能接受過期多久。何時過期取決於 `max-age` 的值。想了解更多細節請到 "[Keeping things fresh with `stale-while-revalidate`](https://web.dev/stale-while-revalidate)" 。
+  - : 表示客戶端可以接受過期回應，但同時在背景檢查最新版本。*秒數*用來控制客戶端最多能接受過期多久。何時過期取決於 `max-age` 的值。想了解更多細節請到[Google 如何透過過時的重新驗證方式改善廣告成效](https://web.dev/case-studies/ads-case-study-stale-while-revalidate)。
 - `stale-if-error=<秒數>` {{Experimental_Inline}}
   - : 表示客戶端會執行驗證，若驗證錯誤了就直接使用過期回應。*秒數*用來控制客戶端最多能接受過期多久。
 
@@ -97,7 +97,7 @@ Cache-Control: stale-if-error=<秒數>
 - `proxy-revalidate`
   - : 跟 `must-revalidate` 類似，不過只對共用快取軟體生效（比如 nginx）。私有快取會無視這個指令。
 - `immutable`
-  - : 表示回應內容**不會改變** 。這個資源*不會過期*，因此即使使用者手動重新整理頁面，客戶端也不會用驗證標頭 （比如 `If-None-Match` 或 `If-Modified-Since`）。 Clients that aren't aware of this extension must ignore them as per the HTTP specification. 在 Firefox 中， `immutable` 只有在使用 `https://` 時會生效。想知道更多資訊，可以閱讀[這篇文章](https://bitsup.blogspot.de/2016/05/cache-control-immutable.html)。
+  - : 表示回應內容**不會改變** 。這個資源*不會過期*，因此即使使用者手動重新整理頁面，客戶端也不會用驗證標頭 （比如 `If-None-Match` 或 `If-Modified-Since`）。 Clients that aren't aware of this extension must ignore them as per the HTTP specification. 在 Firefox 中， `immutable` 只有在使用 `https://` 時會生效。想知道更多資訊，可以閱讀[這篇文章](https://bitsup.blogspot.com/2016/05/cache-control-immutable.html)。
 
 ### 其他
 
@@ -158,7 +158,7 @@ Cache-Control: max-age=0, must-revalidate
 
 - [HTTP Caching FAQ](/zh-TW/docs/Web/HTTP/Caching)
 - [Caching Tutorial for Web Authors and Webmasters](https://www.mnot.net/cache_docs/)
-- Guide: _[`Cache-Control` for civilians](https://csswizardry.com/2019/03/cache-control-for-civilians)_
+- Guide: _[`Cache-Control` for civilians](https://csswizardry.com/2019/03/cache-control-for-civilians/)_
 - {{HTTPHeader("Age")}}
 - {{HTTPHeader("Expires")}}
 - {{HTTPHeader("Pragma")}}

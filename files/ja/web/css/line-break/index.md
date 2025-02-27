@@ -1,11 +1,17 @@
 ---
 title: line-break
 slug: Web/CSS/line-break
+l10n:
+  sourceCommit: 42d7bb6c3ed8e7e51cd71aa17165c28b58f5c4e7
 ---
 
 {{CSSRef}}
 
-**`line-break`** は CSS のプロパティで、中国語、日本語、韓国語 (CJK) のテキストにおいて、句読点や記号を用いた場合の改行規則 (禁則処理) を設定します。
+**`line-break`** は [CSS](/ja/docs/Web/CSS) のプロパティで、中国語、日本語、韓国語 (CJK) のテキストにおいて、句読点や記号を用いた場合の改行規則（禁則）を設定します。
+
+{{EmbedInteractiveExample("pages/css/line-break.html")}}
+
+## 構文
 
 ```css
 /* キーワード値 */
@@ -19,10 +25,9 @@ line-break: anywhere;
 line-break: inherit;
 line-break: initial;
 line-break: revert;
+line-break: revert-layer;
 line-break: unset;
 ```
-
-## 構文
 
 ### 値
 
@@ -47,27 +52,27 @@ line-break: unset;
 
 ## 例
 
-<h3 id="Setting_text_wrapping">テキストの折り返しの設定</h3>
+### テキストの折り返しの設定
 
-"々", "ぁ", "。" の前で折り返しが行われるかどうかを確認してください。
+"々"、"ぁ"、"。" の前で折り返しが行われるかどうかを確認してください。
 
 #### HTML
 
-```html
+```html live-sample___setting_text_wrapping
 <div lang="ja">
-  <p class="wrapbox auto">
+  <p class="wrap-box auto">
     auto:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
   </p>
-  <p class="wrapbox loose">
+  <p class="wrap-box loose">
     loose:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
   </p>
-  <p class="wrapbox normal">
+  <p class="wrap-box normal">
     normal:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
   </p>
-  <p class="wrapbox strict">
+  <p class="wrap-box strict">
     strict:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
   </p>
-  <p class="wrapbox anywhere">
+  <p class="wrap-box anywhere">
     anywhere:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
   </p>
 </div>
@@ -75,8 +80,8 @@ line-break: unset;
 
 #### CSS
 
-```css
-.wrapbox {
+```css live-sample___setting_text_wrapping
+.wrap-box {
   width: 10em;
   margin: 0.5em;
   white-space: normal;
@@ -112,4 +117,6 @@ line-break: unset;
 
 {{Compat}}
 
-- [CSS and International text](https://www.w3.org/International/articles/css3-text/)
+## 関連情報
+
+- [CSS and international text](https://www.w3.org/International/articles/css3-text/) (W3C)

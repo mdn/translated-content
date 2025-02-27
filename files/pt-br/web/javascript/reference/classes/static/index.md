@@ -100,7 +100,7 @@ console.log(tp.tripple()); //Logs 'tp.tripple is not a function'.
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.classes.static")}}
+{{Compat}}
 
 ## Veja também
 

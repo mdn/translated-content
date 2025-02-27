@@ -1,77 +1,97 @@
 ---
 title: isolation
 slug: Web/CSS/isolation
+l10n:
+  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
 {{CSSRef}}
 
-## 概述
+**`isolation`** [CSS](/zh-CN/docs/Web/CSS) 属性决定了元素是否必须创建一个新的{{glossary("stacking context", "层叠上下文")}}。
 
-`isolation` CSS 属性定义该元素是否必须创建一个新的层叠上下文（{{glossary("stacking context")}}）。
+{{EmbedInteractiveExample("pages/css/isolation.html")}}
 
-该属性的主要作用是当和{{cssxref("background-blend-mode")}}属性一起使用时，可以只混合一个指定元素栈的背景：它允许使一组元素从它们后面的背景中独立出来，只混合这组元素的背景。
-
-{{cssinfo}}
+该属性与 {{cssxref("mix-blend-mode")}} 和 {{cssxref("z-index")}} 结合使用时尤其有用。
 
 ## 语法
 
-```
-Formal syntax:  {{csssyntax("isolation")}}
-```
-
-```
+```css
+/* 关键字值 */
 isolation: auto;
 isolation: isolate;
 
-isolation: initial;
+/* 全局值 */
 isolation: inherit;
+isolation: initial;
+isolation: revert;
+isolation: revert-layer;
 isolation: unset;
 ```
+
+`isolation` 属性指定为下列关键字值之一。
 
 ### 值
 
 - `auto`
-  - : 该关键字定义只有在该元素的属性需要的时候才会创建一个新的元素栈环境。
+  - : 只有当应用于元素的某个属性需要时，才会创建一个新的层叠上下文。
 - `isolate`
-  - : 该关键字定义一个新的元素栈环境会被创建。
+  - : 必须创建新的层叠上下文。
+
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
+
+{{csssyntax}}
 
 ## 示例
 
+### 强制为元素创建新的层叠上下文
+
+#### HTML
+
 ```html
-<div id="b" class="a">
-  <div id="d">
-    <div class="a c">auto</div>
+<div class="big-square ">
+  <div class="isolation-auto">
+    <div class="small-square">auto</div>
   </div>
-  <div id="e">
-    <div class="a c">isolate</div>
+  <div class="isolation-isolate">
+    <div class="small-square">isolate</div>
   </div>
 </div>
 ```
 
+#### CSS
+
 ```css
-.a {
-  background-color: rgb(0, 255, 0);
+.isolation-auto {
+  isolation: auto;
 }
-#b {
+
+.isolation-isolate {
+  isolation: isolate;
+}
+
+.big-square {
+  background-color: rgb(0, 255, 0);
   width: 200px;
   height: 210px;
 }
-.c {
+
+.small-square {
+  background-color: rgb(0, 255, 0);
   width: 100px;
   height: 100px;
   border: 1px solid black;
   padding: 2px;
   mix-blend-mode: difference;
 }
-#d {
-  isolation: auto;
-}
-#e {
-  isolation: isolate;
-}
 ```
 
-{{ EmbedLiveSample('示例', "230", "230") }}
+#### 结果
+
+{{ EmbedLiveSample('强制为元素创建新的层叠上下文', 230, 230) }}
 
 ## 规范
 
@@ -84,4 +104,4 @@ isolation: unset;
 ## 参见
 
 - {{cssxref("&lt;blend-mode&gt;")}}
-- {{cssxref("mix-blend-mode")}}, {{cssxref("background-blend-mode")}}
+- {{cssxref("mix-blend-mode")}}、{{cssxref("background-blend-mode")}}

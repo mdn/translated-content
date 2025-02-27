@@ -46,7 +46,8 @@ line {
 
 ## altGlyph
 
-> **Attention :** Depuis {{SVGElement('altGlyph')}} est déprécié et ne devrait pas être utilisé.
+> [!WARNING]
+> Depuis {{SVGElement('altGlyph')}} est déprécié et ne devrait pas être utilisé.
 
 Pour {{SVGElement('altGlyph')}}, s'il ne contient qu'une seule valeur, `dy` définit un décalge sur l'axe y pour tous les glyphes.
 
@@ -126,7 +127,8 @@ Pour {{SVGElement('feOffset')}}, `dy` définit le décalage x de l'élément sou
 
 ## glyphRef
 
-> **Attention :** Depuis SVG2 {{SVGElement('glyphRef')}} est déprécié et ne devrait pas être utilisé.
+> [!WARNING]
+> Depuis SVG2 {{SVGElement('glyphRef')}} est déprécié et ne devrait pas être utilisé.
 
 Pour {{SVGElement('glyphRef')}}, `dy` définit le décalage x du glyphe, dans le système métrique de la police.
 
@@ -221,7 +223,8 @@ line {
 
 ## tref
 
-> **Attention :** Depuis SVG2 {{SVGElement('tref')}} est déprécié et ne devrait pas être utilisé.
+> [!WARNING]
+> Depuis SVG2 {{SVGElement('tref')}} est déprécié et ne devrait pas être utilisé.
 
 Pour {{SVGElement('tref')}}, s'il ne contient qu'une seule valeur, `dx` définit un décalage sur l'axe x pour tous les glyphes.
 

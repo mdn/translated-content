@@ -3,25 +3,26 @@ title: "Document: startViewTransition() メソッド"
 short-title: startViewTransition()
 slug: Web/API/Document/startViewTransition
 l10n:
-  sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
+  sourceCommit: 4558d208395a5b1df4db44b0c8ef4e9a0f8adbbf
 ---
 
-{{APIRef("Document")}}{{SeeCompatTable}}
+{{APIRef("View Transitions API")}}
 
-**`startViewTransition()`** は{{domxref("View Transitions API", "ビュートランジション API", "", "nocode")}} のメソッドで、新しいビュートランジションを始め、それを表す {{domxref("ViewTransition")}} オブジェクトを返します。
+**`startViewTransition()`** は {{domxref("Document")}} インターフェイスのメソッドで、新しいビュー遷移を始め、それを表す {{domxref("ViewTransition")}} オブジェクトを返します。
 
-`startViewTransition()`を呼び出すと、[ビュートランジションのプロセス](/ja/docs/Web/API/View_Transitions_API#ビュートランジションのプロセス)で説明されている一連の手順が続きます。
+`startViewTransition()` を呼び出すと、[ビュー遷移のプロセス](/ja/docs/Web/API/View_Transition_API/Using#ビュー遷移のプロセス)で説明されている一連の手順が続きます。
 
 ## 構文
 
 ```js-nolint
-startViewTransition(callback)
+startViewTransition()
+startViewTransition(updateCallback)
 ```
 
 ### 引数
 
-- `callback`
-  - : 通常、ビュートランジションプロセス中に DOM を更新するために呼び出されるコールバック関数で、プロミス ({{jsxref("Promise")}}) を返します。コールバックは、 API が現在のページのスクリーンショットを導いたら呼び出されます。コールバックが返すプロミスが履行されると、次のフレームでビュートランジションが始まります。コールバックが返すプロミスが拒否された場合、トランジションは放棄されます。
+- `updateCallback` {{optional_inline}}
+  - : 通常、ビュー遷移プロセス中に DOM を更新するために呼び出されるオプションのコールバック関数で、プロミス ({{jsxref("Promise")}}) を返します。コールバックは、 API が現在のページのスクリーンショットを導いたら呼び出されます。コールバックが返すプロミスが履行されると、次のフレームでビュー遷移が始まります。コールバックが返すプロミスが拒否された場合、トランジションは放棄されます。
 
 ### 返値
 
@@ -31,7 +32,7 @@ startViewTransition(callback)
 
 ### 基本的な使用方法
 
-[基本的なビュートランジションのデモ](https://mdn.github.io/dom-examples/view-transitions/)では、 `updateView()` 関数はビュートランジション API に対応しているブラウザーと対応していないブラウザーの両方に対応しています。対応しているブラウザーで、返値を気にせずにビュートランジションのプロセスを設定するには `startViewTransition()` を呼び出します。
+[基本的なビュー遷移のデモ](https://mdn.github.io/dom-examples/view-transitions/)では、 `updateView()` 関数はビュー遷移 API に対応しているブラウザーと対応していないブラウザーの両方に対応しています。対応しているブラウザーで、返値を気にせずにビュー遷移のプロセスを設定するには `startViewTransition()` を呼び出します。
 
 ```js
 function updateView(event) {

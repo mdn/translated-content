@@ -52,11 +52,6 @@ slug: Web/CSS/Layout_cookbook/Media_objects
 ## MDN 上相关的资源
 
 - [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout)
-- [Progressive Enhancement and Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [Using Grid Template Areas](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
 - [fit-content](/zh-CN/docs/Web/CSS/fit-content)
 - [Grid-template-areas](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-
-## 浏览器兼容性
-
-{{Compat}}

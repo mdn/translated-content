@@ -1,11 +1,11 @@
 ---
-title: ":placeholder-shown"
+title: :placeholder-shown
 slug: Web/CSS/:placeholder-shown
 ---
 
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:placeholder-shown`** permet de représenter n'importe quel élément {{htmlElement("input")}} ou {{htmlElement("textarea")}} affichant [un texte de substitution](/fr/docs/Web/Guide/HTML/Forms_in_HTML#The_placeholder_attribute).
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:placeholder-shown`** permet de représenter n'importe quel élément {{htmlElement("input")}} ou {{htmlElement("textarea")}} affichant [un texte de substitution](/fr/docs/Web/HTML/Element/input#placeholder).
 
 ```css
 /* Cible tout élément <input> ou <textarea> avec un */
@@ -54,7 +54,7 @@ input {
 
 #### Résultat
 
-{{EmbedLiveSample("Exemples", 200, 60)}}
+{{EmbedLiveSample("Exemple_simple", 200, 60)}}
 
 ### Dépassement du texte
 
@@ -194,7 +194,6 @@ input.studentid:placeholder-shown {
 ## Voir aussi
 
 - {{cssxref("::placeholder")}}
-- {{cssxref("::-moz-placeholder")}}
 - {{HTMLElement("input")}}
 - {{HTMLElement("textarea")}}
-- [Les formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires)
+- [Les formulaires HTML](/fr/docs/Learn/Forms)

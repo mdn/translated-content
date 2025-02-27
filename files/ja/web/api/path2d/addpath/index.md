@@ -1,73 +1,90 @@
 ---
-title: Path2D.addPath()
+title: "Path2D: addPath() メソッド"
+short-title: addPath()
 slug: Web/API/Path2D/addPath
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("Canvas API")}}
 
-Canvas 2D API の **`Path2D.addPath()`** メソッドは、パスに対して引数でパスを追加します。
+**`Path2D.addPath()`** は Canvas 2D API のメソッドで、ある {{domxref("Path2D")}} オブジェクトを他の `Path2D` オブジェクトに追加します。
 
 ## 構文
 
-```
-void path.addPath(path [, transform]);
+```js-nolint
+addPath(path)
+addPath(path, transform)
 ```
 
-### パラメーター
+### 引数
 
 - `path`
-  - : 追加する{{domxref("Path2D")}}パス
+  - : 追加する {{domxref("Path2D")}} パスです。
 - `transform` {{optional_inline}}
-  - : パスに追加する変換マトリックスとして使われる{{domxref("SVGMatrix")}}.
+  - : {{domxref("DOMMatrix")}} オブジェクトで、追加されるパスの座標変換行列として使用されます。（技術的には `DOMMatrixInit` オブジェクトです。）
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
-### `addPathメソッドを使用する`
+### パスを既存のパスに追加
 
-これは`addPathメソッドを使用する簡単なコードスニペットです。`
+この例は、あるパスを他のパスに追加します。
+
+#### HTML
+
+```html
+<canvas id="canvas"></canvas>
+```
+
+#### JavaScript
+
+まず、2 つの別々の {{domxref("Path2D")}} オブジェクトを作成し、それぞれに {{domxref("CanvasRenderingContext2D.rect()", "rect()")}} メソッドを使用して作成した長方形を含めます。次に、 {{Domxref("DOMMatrix.DOMMatrix", "DOMMatrix()")}} を使って行列を作成します。そして、 `addPath()` を使用して 2 番目のパスを 1 番目のパスに追加し、行列を適用して 2 番目のパスを右に移動します。
+最後に、 {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} を使用して、 1 番目のパスを描画します。
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-// rectで新しいパスを作成する
-var p1 = new Path2D();
-p1.rect(0, 0, 100, 100);
+// rect で新しいパスを作成する
+let p1 = new Path2D();
+p1.rect(0, 0, 100, 150);
 
-// rectで別のパスを作成する
-var p2 = new Path2D();
-p2.rect(0, 0, 100, 100);
+// rect で別のパスを作成する
+let p2 = new Path2D();
+p2.rect(0, 0, 100, 75);
 
-// 右に縦300ポイント移動する変換マトリックスを作成する
-var m = document
-  .createElementNS("http://www.w3.org/2000/svg", "svg")
-  .createSVGMatrix();
+// 右に縦 300 ポイント移動する変換行列を作成する
+let m = new DOMMatrix();
 m.a = 1;
 m.b = 0;
 m.c = 0;
 m.d = 1;
-m.e = 300;
+m.e = 200;
 m.f = 0;
 
-// 2番目のパスを最初のパスに追加する
+// 2 番目のパスを最初のパスに追加する
 p1.addPath(p2, m);
 
-// 最後に、1番目のパスをキャンバスに描画する
+// 最後に、 1 番目のパスをキャンバスに描画する
 ctx.fill(p1);
 ```
 
-以下のコードを編集して、その変更が canvas に反映されることを確かめてください(現在のブラウザーが実際にこのメソッドをサポートしているか、以下のブラウザー互換テーブルをチェックしてください)
+#### 結果
 
-{{ EmbedLiveSample('Playable_code', 700, 500) }}
+{{ EmbedLiveSample('Adding_a_path_to_an_existing_path', 700, 180) }}
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー互換性
+## ブラウザーの互換性
 
-{{Compat("api.Path2D.addPath")}}
+{{Compat}}
 
 ## 関連情報
 
-- このインターフェイスは{{domxref("Path2D")}}に定義されています。
+- このメソッドを定義しているインターフェイス: {{domxref("Path2D")}}

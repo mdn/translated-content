@@ -8,7 +8,30 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
 **`Intl.DateTimeFormat()`** コンストラクターは、言語に応じた日付と時刻の書式化を可能にする
 {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} オブジェクトを生成します。
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat", "taller")}}
+
+```js interactive-example
+const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
+// Results below assume UTC timezone - your results may vary
+
+// Specify default date formatting for language (locale)
+console.log(new Intl.DateTimeFormat("en-US").format(date));
+// Expected output: "12/20/2020"
+
+// Specify default date formatting for language with a fallback language (in this case Indonesian)
+console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
+// Expected output: "20/12/2020"
+
+// Specify date and time format using "style" options (i.e. full, long, medium, short)
+console.log(
+  new Intl.DateTimeFormat("en-GB", {
+    dateStyle: "full",
+    timeStyle: "long",
+    timeZone: "Australia/Sydney",
+  }).format(date),
+);
+// Expected output: "Sunday, 20 December 2020 at 14:23:16 GMT+11"
+```
 
 ## 構文
 
@@ -63,7 +86,7 @@ new Intl.DateTimeFormat(locales, options);
 
       - : 日単位の期間の表現の仕方です。有効な値は、 "`narrow`", "`short`", " `long`" です。
 
-        > **メモ:**
+        > [!NOTE]
         >
         > - このオプションは12時間制を使用したときのみ効果があります。
         > - 多くのロケールでは幅の指定を無視して同じ文字列を使用します。
@@ -144,7 +167,7 @@ new Intl.DateTimeFormat(locales, options);
         - `0` (小数点以下は切り捨て)
         - `1` (小数点以下は1桁で表される。例えば、 736 は `7` と書式化される。)
         - `2` (小数点以下は2桁で表される。例えば、 736 は `73` と書式化される。)
-        - `3` (小数点以下は2桁で表される。例えば、 736 は `736` と書式化される。)
+        - `3` (小数点以下は3桁で表される。例えば、 736 は `736` と書式化される。)
 
     - `timeZoneName`
 
@@ -157,7 +180,8 @@ new Intl.DateTimeFormat(locales, options);
         - "`shortGeneric`" 一般的な場所を指定しない短い形式 (例 `PT`, `Los Angeles Zeit`).
         - "`longGeneric`" 一般的な場所を指定しない長い形式 (例 `Pacific Time`, `Nordamerikanische Westküstenzeit`)
 
-        > **メモ:** タイムゾーンの表示は、必要な文字列が利用できない場合、別の形式にフォールバックすることがあります。例えば、場所を指定しない形式では、 "Pacific Time" のように特定の国や都市の場所を指定せずにタイムゾーンを表示する必要がありますが、 "Los Angeles Time" のようなタイムゾーンにフォールバックする場合があります。
+        > [!NOTE]
+        > タイムゾーンの表示は、必要な文字列が利用できない場合、別の形式にフォールバックすることがあります。例えば、場所を指定しない形式では、 "Pacific Time" のように特定の国や都市の場所を指定せずにタイムゾーンを表示する必要がありますが、 "Los Angeles Time" のようなタイムゾーンにフォールバックする場合があります。
 
     それぞれの日付や時刻の部分のプロパティの既定値は {{jsxref("undefined")}} ですが、すべての部分のプロパティが {{jsxref("undefined")}} であった場合、 `year`, `month`, `day` は "`numeric`" であると想定されます。
 

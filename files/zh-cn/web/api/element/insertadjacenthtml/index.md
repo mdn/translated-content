@@ -9,8 +9,8 @@ slug: Web/API/Element/insertAdjacentHTML
 
 ## 语法
 
-```
-element.insertAdjacentHTML(position, text);
+```js-nolint
+insertAdjacentHTML(position, text)
 ```
 
 - `position`
@@ -37,7 +37,8 @@ element.insertAdjacentHTML(position, text);
 <!-- afterend -->
 ```
 
-> **备注：** beforebegin 和 afterend 位置，仅在节点在树中且节点具有一个 parent 元素时工作。
+> [!NOTE]
+> beforebegin 和 afterend 位置，仅在节点在树中且节点具有一个 parent 元素时工作。
 
 ## 示例
 
@@ -66,8 +67,8 @@ d1.insertAdjacentHTML("afterend", '<div id="two">two</div>');
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- 包括 Henri Sivonen 在内的某些 [hacks.mozilla.org 客座文章](http://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) 显示，`insertAdjacentHTML` 在某些情况下可以更快。
+- 包括 Henri Sivonen 在内的某些 [hacks.mozilla.org 客座文章](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) 显示，`insertAdjacentHTML` 在某些情况下可以更快。
 - {{domxref("Element.insertAdjacentElement()")}}
 - {{domxref("Element.insertAdjacentText()")}}

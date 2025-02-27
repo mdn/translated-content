@@ -22,29 +22,9 @@ _这个接口也从 {{domxref("Event")}} 中继承属性。_
 
 ## 方法
 
-_这个接口没有自己的方法，但从 {{domxref("Event")}} 中继承方法_
+_这个接口没有自己的方法，但从 {{domxref("Event")}} 中继承方法。_
 
 ## 示例
-
-### 井号内容变化的语法选择
-
-你可以选择使用下述的任一方法监听 [`hashchange`](/zh-CN/docs/Web/API/Window/hashchange_event) 事件。
-
-```js
-window.onhashchange = funcRef;
-```
-
-**或**
-
-```html
-<body onhashchange="funcRef();"></body>
-```
-
-**或**
-
-```js
-window.addEventListener("hashchange", funcRef, false);
-```
 
 ### 基本示例
 

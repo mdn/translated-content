@@ -3,7 +3,7 @@ title: Array.prototype.reverse()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Resumo
 
@@ -42,7 +42,7 @@ console.log(myArray); // ['three', 'two', 'one']
 
 ## Compatibilidade com navegador
 
-{{Compat("javascript.builtins.Array.reverse")}}
+{{Compat}}
 
 ## Veja também
 

@@ -5,7 +5,7 @@ slug: Web/API/PerformancePaintTiming
 
 {{APIRef("Performance Timeline API")}}
 
-L'interface **`PerformancePaintTiming`** de l'API [Paint Timing API](/fr/docs/Web/API/Paint_Timing_API) fournit des informations de temps sur les opérations de « peinture » (également appelées « render ») pendant la construction de la page Web. « Paint » fait référence à la conversion de l'arbre de rendu en pixels à l'écran.
+L'interface **`PerformancePaintTiming`** de l'API [Paint Timing API](/fr/docs/Web/API/PerformancePaintTiming) fournit des informations de temps sur les opérations de « peinture » (également appelées « render ») pendant la construction de la page Web. « Paint » fait référence à la conversion de l'arbre de rendu en pixels à l'écran.
 
 Une application peut enregistrer un [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) pour le [type d'entrée de performance](/fr/docs/Web/API/PerformanceEntry) « `paint` » et l'observateur peut récupérer les heures auxquelles les événements de peinture se produisent. Utilisez ces informations pour aider à identifier les zones qui prennent trop de temps pour offrir une bonne expérience utilisateur.
 

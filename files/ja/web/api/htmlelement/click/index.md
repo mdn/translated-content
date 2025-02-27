@@ -1,15 +1,14 @@
 ---
 title: "HTMLElement: click() メソッド"
+short-title: click()
 slug: Web/API/HTMLElement/click
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: bf0b6c9ae5845fdfca1398541ed26d9946db2495
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLElement.click()`** メソッドは、要素のマウスクリックをシミュレートします。
-
-`click()` を対応している要素（{{HTMLElement("input")}} など）で使用すると、要素の click イベントが発行されます。 このイベントは、文書ツリー（またはイベントチェーン）の上位の要素にバブルアップし、click イベントを発生させます。
+**`HTMLElement.click()`** メソッドは、要素のマウスクリックをシミュレートします。要素上で呼び出されると、その要素の {{domxref("Element/click_event", "click")}} イベントが発生します（[`disabled`](/ja/docs/Web/HTML/Attributes/disabled) 属性が設定されている場合を除く）。
 
 ## 構文
 

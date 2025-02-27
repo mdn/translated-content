@@ -3,6 +3,8 @@ title: maction
 slug: Web/MathML/Element/maction
 ---
 
+{{MathMLRef}}
+
 L'élément MathML `<maction>` permet de lier des actions à des (sous-)expressions.
 L'action est définie par l'attribut `actiontype` qui peut prendre plusieurs valeurs. Pour définir quels éléments fils sont affectés par l'action, il est possible d'utiliser l'attribut `selection`.
 
@@ -19,13 +21,13 @@ L'action est définie par l'attribut `actiontype` qui peut prendre plusieurs val
       La syntaxe est la suivante : `<maction actiontype="tooltip"> expression message </maction>.`
 
 - class, id, style
-  - : Afin d'être utilisés avec les [feuilles de styles](/fr/docs/CSS).
+  - : Afin d'être utilisés avec les [feuilles de styles](/fr/docs/Web/CSS).
 - href
   - : Un hyperlien pointant vers un URI donné.
 - mathbackground
-  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/CSS/valeur_de_couleur#Mots-cl.C3.A9s).
+  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
 - mathcolor
-  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/CSS/valeur_de_couleur#Mots-cl.C3.A9s).
+  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
 - selection
   - : L'élément fils auquel s'applique l'action. La valeur par défaut est `1`, ce qui correspond au premier élément fils.
 

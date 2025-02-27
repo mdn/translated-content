@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/Less_than
 
 **小于**（`<`）运算符在左操作数比右操作数小时返回 `true`，否则返回 `false`。
 
-{{EmbedInteractiveExample("pages/js/expressions-less-than.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Less than operator")}}
+
+```js interactive-example
+console.log(5 < 3);
+// Expected output: false
+
+console.log(3 < 3);
+// Expected output: false
+
+// Compare bigint to number
+console.log(3n < 5);
+// Expected output: true
+
+console.log("aa" < "ab");
+// Expected output: true
+```
 
 ## 语法
 
@@ -19,7 +34,7 @@ x < y
 
 操作数经过多轮强制比较，可以总结为以下几点：
 
-首先，通过依次调用其 [`[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（以 `"number"` 作为提示）、[`valueOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) 和 [`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 方法，将对象[转换为原始类型](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。左边的操作数总是在右边的操作数之前被强制转换。请注意，尽管 `[@@toPrimitive]()` 被调用时带有 `"number"` 的提示（意味着有一点倾向于将对象变成数字），但返回值并没有[转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)，因为字符串仍然被特别处理。
+首先，通过依次调用其 [`[Symbol.toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（以 `"number"` 作为提示）、[`valueOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) 和 [`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 方法，将对象[转换为原始类型](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。左边的操作数总是在右边的操作数之前被强制转换。请注意，尽管 `[Symbol.toPrimitive]()` 被调用时带有 `"number"` 的提示（意味着有一点倾向于将对象变成数字），但返回值并没有[转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)，因为字符串仍然被特别处理。
 
 - 如果两个值都是字符串，则根据它们所包含的 Unicode 码位的值，将它们作为字符串进行比较。
 - 否则，JavaScript 会尝试将非数值类型转化为数值类型：
@@ -123,7 +138,8 @@ console.log(l < r && r < l);
 // true
 ```
 
-> **警告：** 这可能是混乱的根源。如果你的对象提供了自定义的原始值转换逻辑，请确保它是*幂等的*：多次强制转化应该返回相同的值。
+> [!WARNING]
+> 这可能是混乱的根源。如果你的对象提供了自定义的原始值转换逻辑，请确保它是*幂等的*：多次强制转化应该返回相同的值。
 
 ## 规范
 

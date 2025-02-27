@@ -15,15 +15,16 @@ El tipo de datos [CSS](/es/docs/Web/CSS) **`<color>`** denota un color en el [sR
 
 Hay que destacar que la lista de valores de color aceptados ha ido creciendo conforme la especificación evolucionaba, para acabar con la lista de colores de CSS3.
 
-Asociado con el color en el espacio sRGB, un valor `<color>` también consiste en una coordenada [alpha-channel](http://en.wikipedia.org/wiki/Alpha_compositing) o valor de transparencia, indicando cómo se debe [composite](http://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) o mezclar el color con su color de fondo.
+Asociado con el color en el espacio sRGB, un valor `<color>` también consiste en una coordenada [alpha-channel](http://en.wikipedia.org/wiki/Alpha_compositing) o valor de transparencia, indicando cómo se debe [composite](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) o mezclar el color con su color de fondo.
 
 Aunque los valores de colores en CSS son definidos de manera precisa existe la posibilidad de que parezcan distintos en dispositivos diferentes. La mayoría de ellos no están calibrados y algunos navegadores no soportan los [color profile](http://en.wikipedia.org/wiki/ICC_profile) de algunos dispositivos de salidas. En esta situación el color puede variar bastante.
 
-> **Nota:** La recomendación [WCAG 2.0](http://www.w3.org/TR/WCAG/#visual-audio-contrast) de la W3C aconseja a los autores web de manera clara que no usen _color_ como el único medido para especificar una información, acción o resultado concreto. Algunos usuarios tienen problemas para diferenciar colores y existe la posibilidad de que la información transmitida no sea captada. Por supuesto esto no impide que se use el color, sólo su uso como único medio para describir alguna información.
+> [!NOTE]
+> La recomendación [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) de la W3C aconseja a los autores web de manera clara que no usen _color_ como el único medido para especificar una información, acción o resultado concreto. Algunos usuarios tienen problemas para diferenciar colores y existe la posibilidad de que la información transmitida no sea captada. Por supuesto esto no impide que se use el color, sólo su uso como único medio para describir alguna información.
 
 ## Interpolación
 
-Los valores del tipo de datos CSS `<color>` pueden ser interpolados para lograr animaciones o para crear valores `<gradient>`. En este caso son interpolados en cada uno de sus componentes rojo, verde y azul, conteniendo, cada uno de ellos, un número decimal con coma flotante. Debe tenerse en cuenta que la interpolación del color sucede en el [alpha-premultiplied sRGBA color space](http://www.gimp.org/docs/plug-in/appendix-alpha.html) para evitar que aparezcan grises inesperados. En las animaciones, la velocidad de la interpolación viene determinada por la [timing function](/es/docs/Web/CSS/timing-function) asociada con la animación.
+Los valores del tipo de datos CSS `<color>` pueden ser interpolados para lograr animaciones o para crear valores `<gradient>`. En este caso son interpolados en cada uno de sus componentes rojo, verde y azul, conteniendo, cada uno de ellos, un número decimal con coma flotante. Debe tenerse en cuenta que la interpolación del color sucede en el [alpha-premultiplied sRGBA color space](http://www.gimp.org/docs/plug-in/appendix-alpha.html) para evitar que aparezcan grises inesperados. En las animaciones, la velocidad de la interpolación viene determinada por la [timing function](/es/docs/Web/CSS/easing-function) asociada con la animación.
 
 ## Valores
 
@@ -948,13 +949,13 @@ Hay algunas advertencias a tener en cuenta al usar las palabras clave relativas 
   </tbody>
 </table>
 
-El color `rebeccapurple` es equivalente al color `#639`, y se puede encontrar información adicional sobre por qué fue introducidoa en el blog Codepen blog en un post realizado por Trezy "[Honoring a Great Man](http://codepen.io/trezy/blog/honoring-a-great-man)."
+El color `rebeccapurple` es equivalente al color `#639`, y se puede encontrar información adicional sobre por qué fue introducidoa en el blog Codepen blog en un post realizado por Trezy "[Honoring a Great Man](https://codepen.io/trezy/blog/honoring-a-great-man)."
 
 ### `Palabra clave transparent`
 
 La palaba `transparent` representa un color totalmente transparente, es decir, el color que veremos será el colore de fondo. Técnicamente es un color negro con un valor mínimo en el canal alfa y la manera de representarlo es `rgba(0,0,0,0)`.
 
-> **Nota:**
+> [!NOTE]
 > La palabra clave `transparent` no fue un color en CSS hasta CSS Nivel 2 (Revisión 1). Podía ser usada en lugar de un valor \<color> regular en dos propiedades CSS: {{Cssxref("background")}} y {{Cssxref("border")}}. En esencia fue añadida para permitir sobreescribir valores sólidos heredados.
 >
 > Con el soporte de la opacidad que nos proporcionan los [alpha channels](http://en.wikipedia.org/wiki/Alpha_compositing), `transparent` fue redefinido como un color verdadero más en CSS Nivel 3 permitiendo su use en cualquier sitio donde de requiera un valor `<color>` , como la propiedad {{Cssxref("color")}}.

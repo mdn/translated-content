@@ -9,7 +9,18 @@ l10n:
 
 **`for`** 文は、括弧で囲みセミコロンで区切った 3 つの引数と、続いてループ内で実行される文（ふつうは[ブロック文](/ja/docs/Web/JavaScript/Reference/Statements/block)）から成るループを構成します。
 
-{{EmbedInteractiveExample("pages/js/statement-for.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For")}}
+
+```js interactive-example
+let str = "";
+
+for (let i = 0; i < 9; i++) {
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "012345678"
+```
 
 ## 構文
 
@@ -139,7 +150,7 @@ for (; i < 3; i++) {
 }
 ```
 
-`3`、`3`、`3` とログ出力します。なぜかと言うと、それぞれの `setTimeout` が `i` 変数を閉じる新しいクロージャを作成しますが、`i` がループ本体のスコープでない場合、すべてのクロージャは最終的に呼び出されたときに同じ変数を参照します。そして [`setTimeout`](/ja/docs/Web/API/setTimeout) の非同期であるため、すでにループが終了した後に実行され、すべてのキューのコールバック本体の `i` は `3` という値になります。
+`3`、`3`、`3` とログ出力します。なぜかと言うと、それぞれの `setTimeout` が `i` 変数を閉じる新しいクロージャを作成しますが、`i` がループ本体のスコープでない場合、すべてのクロージャは最終的に呼び出されたときに同じ変数を参照します。そして [`setTimeout`](/ja/docs/Web/API/Window/setTimeout) の非同期であるため、すでにループが終了した後に実行され、すべてのキューのコールバック本体の `i` は `3` という値になります。
 
 これは、初期化に `var` 文を使用した場合にも起こります。`var` で宣言された変数は関数スコープのみで、レキシカルスコープにならない（つまり、ループ本体のスコープにすることはできない）からです。
 

@@ -37,7 +37,7 @@ map(callbackFn, thisArg)
 
 `callback` 以三个参数调用：元素的值，元素下标，和被遍历的类型化数组。
 
-如果将`thisArg`参数提供给`map`，它会在调用时传递给`callback`，作为它的 `this`值。否则，会传递`undefined` 作为它的`this` 值。 `callback`最终观测到的`this`值由 [用于决定函数可见的`this`值的一般规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)来决定。
+如果将 `thisArg` 参数提供给 `map`，它会在调用时传递给 `callback`，作为它的 `this` 值。否则，会传递 `undefined` 作为它的 `this` 值。`callback` 最终观测到的 `this` 值由[用于决定函数可见的 `this` 值的一般规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)来决定。
 
 `map` 不改变在其上调用的类型化数组（虽然如果调用了`callback`可能会这样做）。
 
@@ -77,7 +77,7 @@ var doubles = numbers.map(function (num) {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("TypedArray.prototype.filter()")}}
 - {{jsxref("Array.prototype.map()")}}

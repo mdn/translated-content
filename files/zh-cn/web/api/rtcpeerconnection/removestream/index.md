@@ -43,4 +43,4 @@ document.getElementById("closeButton").addEventListener("click", function(event)
 
 ## 参见
 
-- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)

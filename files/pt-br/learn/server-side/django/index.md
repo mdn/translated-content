@@ -13,7 +13,8 @@ Antes de iniciar este módulo você não precisa ter nenhum conhecimento de Djan
 
 Um conhecimento geral de conceitos de programação e Python é recomendado, mas não essenciais para entendimento dos conceitos principais.
 
-> **Nota:** O Python é uma das linguagens de programação mais fáceis para os iniciantes lerem e entenderem. Dito isto, se você quiser entender melhor este módulo, então existem inúmeros livros e tutoriais gratuitos disponíveis pela Internet (programadores iniciantes podem querer ver a página [Python for não programadores](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) no wiki do python.org)
+> [!NOTE]
+> O Python é uma das linguagens de programação mais fáceis para os iniciantes lerem e entenderem. Dito isto, se você quiser entender melhor este módulo, então existem inúmeros livros e tutoriais gratuitos disponíveis pela Internet (programadores iniciantes podem querer ver a página [Python for não programadores](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) no wiki do python.org)
 
 ## Como começar?
 
@@ -38,7 +39,7 @@ Um conhecimento geral de conceitos de programação e Python é recomendado, mas
 - [Django Tutorial Part 8: Autenticação de Usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/Authentication)
   - : Neste tutorial, mostraremos como permitir que os usuários façam login em seu site com suas próprias contas e como controlar o que podem fazer e ver com base no fato de estarem ou não logados e de suas permissões. Como parte dessa demonstração, ampliaremos o site da LocalLibrary, adicionando páginas de login e logout e páginas específicas de usuários e funcionários para a visualização de livros que foram emprestados.
 - [Tutorial Django Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms)
-  - : Neste tutorial iremos mostrar como trabalhar com [HTML Forms](/pt-BR/docs/Web/Guide/HTML/Forms) no Django, e em particular a maneira mais fácil para escrever formulários para criar, atualizar e excluir instâncias do modelo. Como parte desta demonstração ampliaremos o website _BibliotecaLocal_ para que bibliotecários possam renovar livros, e criar, atualizar e excluir autores usando usindo nossos próprios formulários (em vez de usar o aplicativo administrativo).
+  - : Neste tutorial iremos mostrar como trabalhar com [HTML Forms](/pt-BR/docs/Learn/Forms) no Django, e em particular a maneira mais fácil para escrever formulários para criar, atualizar e excluir instâncias do modelo. Como parte desta demonstração ampliaremos o website _BibliotecaLocal_ para que bibliotecários possam renovar livros, e criar, atualizar e excluir autores usando usindo nossos próprios formulários (em vez de usar o aplicativo administrativo).
 - [Tutorial Django Parte 10: Testando uma aplicação web Django](/pt-BR/docs/Learn/Server-side/Django/Testing)
   - : Conforme os sites crescem, tornam-se mais difíceis de testar manualmente - não apenas há mais para testar, mas à medida que as interações entre os componentes se tornam mais complexas, uma pequena alteração em uma área pode exigir muitos testes adicionais para verificar seu impacto em outras áreas. Uma forma de mitigar esses problemas é escrever testes automatizados, que podem ser executados de maneira fácil e confiável sempre que você fizer uma alteração. Este tutorial mostra como automatizar _o teste de unidade_ do seu site usando a estrutura de teste do Django.
 - [Tutorial Django Parte 11: Implantando Django em produção](/pt-BR/docs/Learn/Server-side/Django/Deployment)

@@ -25,14 +25,14 @@ range.setEnd(endNode, endOffset);
 isCollapsed = range.collapsed;
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- [The DOM interfaces index](/ru/docs/DOM/DOM_Reference)
+- [The DOM interfaces index](/ru/docs/Web/API/Document_Object_Model)

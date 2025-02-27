@@ -7,9 +7,35 @@ slug: Web/HTML/Element/input/date
 
 **`type="date"`** 类型的 {{htmlelement("input")}} 元素会创建一个让用户输入一个日期的输入区域，可以使用自动验证内容的文本框，也可以使用特殊的日期选择器界面。结果值包括年份，月份和日期，但*不*包括时间。{{HTMLElement("input/time", "time")}} 和 {{HTMLElement("input/datetime-local", "datetime-local")}} 类型支持时间和日期时间输入。
 
-{{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;date&quot;&gt;", "tabbed-shorter")}}
 
-通常来说控件的 UI 界面因浏览器的不同而有变化，到目前为止此控件还不被所有浏览器支持，具体细节请参阅[浏览器兼容性](#浏览器兼容性)。在不支持的浏览器当中，控件因此会被优雅的降级为普通的 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/Input/text) 输入框。
+```html interactive-example
+<label for="start">Start date:</label>
+
+<input
+  type="date"
+  id="start"
+  name="trip-start"
+  value="2018-07-22"
+  min="2018-01-01"
+  max="2018-12-31" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
+
+通常来说控件的 UI 界面因浏览器的不同而有变化，到目前为止此控件还不被所有浏览器支持，具体细节请参阅[浏览器兼容性](#浏览器兼容性)。在不支持的浏览器当中，控件因此会被优雅的降级为普通的 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text) 输入框。
 
 <table class="properties">
  <tbody>
@@ -19,7 +45,7 @@ slug: Web/HTML/Element/input/date
   </tr>
   <tr>
    <td><strong>事件</strong></td>
-   <td>{{domxref("HTMLElement/change_event", "change")}} 事件和 {{domxref("HTMLElement/input_event", "input")}} 事件</td>
+   <td>{{domxref("HTMLElement/change_event", "change")}} 事件和 {{domxref("Element/input_event", "input")}} 事件</td>
   </tr>
   <tr>
    <td><strong>支持的常用属性</strong></td>
@@ -52,7 +78,8 @@ slug: Web/HTML/Element/input/date
 
 {{ EmbedLiveSample('值', 600, 40) }}
 
-> **备注：** 有一点需要注意的是，在格式方面显示的日期与实际的 `value` 不一样——显示的日期格式*取决于用户浏览器的区域设定*，而经解析的 `value` 的格式始终为 `yyyy-mm-dd`。
+> [!NOTE]
+> 有一点需要注意的是，在格式方面显示的日期与实际的 `value` 不一样——显示的日期格式*取决于用户浏览器的区域设定*，而经解析的 `value` 的格式始终为 `yyyy-mm-dd`。
 
 当然你也可以通过 JavaScript 代码获取和设置 {{domxref("HTMLInputElement")}} 的 `value` 和 `valueAsNumber` 属性，例如：
 
@@ -71,13 +98,13 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 ### max
 
-所接受最新的日期。如果输入到该元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 发生在此之后，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `max` 属性的值不是格式为 `yyyy-mm-dd` 的有效日期星期字符串，则该元素没有最大日期值。
+所接受最新的日期。如果输入到该元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 发生在此之后，则元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `max` 属性的值不是格式为 `yyyy-mm-dd` 的有效日期星期字符串，则该元素没有最大日期值。
 
 如果同时设置了 `max` 和 `min` 值，此值必须**晚于或等于** `min` 属性指定的日期值。
 
 ### min
 
-所接受最早的日期。如果输入到该元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 发生在此之前，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 属性的值不是格式为 `yyyy-mm-dd` 的有效日期星期字符串，则该元素没有最小日期值。
+所接受最早的日期。如果输入到该元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 发生在此之前，则元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `min` 属性的值不是格式为 `yyyy-mm-dd` 的有效日期星期字符串，则该元素没有最小日期值。
 
 如果同时设置了 `max` 和 `min` 值，此值必须**早于或等于** `max` 属性指定的日期值。
 
@@ -87,11 +114,13 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 字符串值 `any` 意味着不使用步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#max) 之外）。
 
-> **备注：** 当用户输入的数据不符合步进配置时，{{Glossary("user agent", "用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
+> [!NOTE]
+> 当用户输入的数据不符合步进配置时，{{Glossary("user agent", "用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
 
 对于 `date` 输入，`step` 的值以天为单位，并被视为等于 86,400,000 乘以 `step` 值的毫秒数（基础数值是毫秒）。`step` 的默认值为 1，表示 1 天。
 
-> **备注：** 将 `date` 输入的 `step` 值指定为 `any` 与指定为 `1` 的效果相同。
+> [!NOTE]
+> 将 `date` 输入的 `step` 值指定为 `any` 与指定为 `1` 的效果相同。
 
 ## 使用日期输入控件
 
@@ -135,7 +164,8 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 在结果中我们可以看到，只有 2017 年 4 月份的日期可选——输入框中可以编辑的部分只有“日”这部分，并且超出 4 月份以外的日期不能通过日期控件的选择组件选择。
 
-> **备注：** 你*应该*可以使用 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) 属性来改变每次最佳日期时步进（增加值）的天数（例如：或许你只希望使周六可以选）。但是，在撰写这篇文章的时候，还没有可靠的实现。
+> [!NOTE]
+> 你*应该*可以使用 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) 属性来改变每次最佳日期时步进（增加值）的天数（例如：或许你只希望使周六可以选）。但是，在撰写这篇文章的时候，还没有可靠的实现。
 
 ### 控制输入框大小
 
@@ -195,7 +225,8 @@ input:valid + span::after {
 }
 ```
 
-> **警告：** 客户端表单验证*不能替代*服务端验证。对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了，甚至也可以完全绕开 HTML 并将数据直接提交到服务器。如果服务器端代码无法验证其接收到的数据，则在提交格式不正确的（或太大，类型错误……）的数据时，灾难可能会发生。
+> [!WARNING]
+> 客户端表单验证*不能替代*服务端验证。对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了，甚至也可以完全绕开 HTML 并将数据直接提交到服务器。如果服务器端代码无法验证其接收到的数据，则在提交格式不正确的（或太大，类型错误……）的数据时，灾难可能会发生。
 
 ## 处理浏览器支持问题
 
@@ -448,7 +479,8 @@ daySelect.onchange = () => {
 };
 ```
 
-> **备注：** 请记住有些年份有 53 周（见[**每年的周数**](https://zh.wikipedia.org/wiki/ISO週日曆#每年的星期)）！当你在开发产品应用时应当考虑这个问题。
+> [!NOTE]
+> 请记住有些年份有 53 周（见[**每年的周数**](https://zh.wikipedia.org/wiki/ISO週日曆#每年的星期)）！当你在开发产品应用时应当考虑这个问题。
 
 ## 规范
 
@@ -461,6 +493,6 @@ daySelect.onchange = () => {
 ## 参见
 
 - 通用的 {{HTMLElement("input")}} 元素和用于操作该元素的接口 {{domxref("HTMLInputElement")}}
-- [日期时间选择器教程](/zh-CN/docs/Learn/Forms/HTML5_input_types#日期和时间选择器)
+- [日期时间选择器教程](/zh-CN/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#日期和时间选择器)
 - [HTML 中使用的日期和时间格式](/zh-CN/docs/Web/HTML/Date_and_time_formats)
-- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

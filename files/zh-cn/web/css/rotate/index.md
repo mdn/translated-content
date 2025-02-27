@@ -3,7 +3,7 @@ title: rotate
 slug: Web/CSS/rotate
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{CSSRef}}
 
 **`rotate`** 属性允许你单独设置 **`transform`** 的旋转属性。这种映射方式可以让我们更方便的设置我们想要的效果，并且避免了简写形式需要记忆属性顺序的不方便之处。
 

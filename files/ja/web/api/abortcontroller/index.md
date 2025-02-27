@@ -2,39 +2,42 @@
 title: AbortController
 slug: Web/API/AbortController
 l10n:
-  sourceCommit: bca8d1ab2bc4f5a1ef6b39c454b0229539178e98
+  sourceCommit: c0e43030605b6f12bc4d550c0d5b8bf8a633eff3
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 **`AbortController`** インターフェイスは 1 つ以上のウェブリクエストをいつでも中断することを可能にするコントローラーオブジェクトを表します。
 
-新しい `AbortController` オブジェクトを新しく生成するには、 {{domxref("AbortController.AbortController()", "AbortController()")}} コンストラクターを使うことができます。 DOM リクエストとの送信は、 {{domxref("AbortSignal")}} オブジェクトを使って行われます。
+新しい `AbortController` オブジェクトは、 {{domxref("AbortController.AbortController()", "AbortController()")}} コンストラクターを使って新しく生成することができます。非同期操作の通信は、{{domxref("AbortSignal")}} オブジェクトを使って行われます。
 
 ## コンストラクター
 
-- {{domxref("AbortController()")}}
+- {{domxref("AbortController.AbortController()", "AbortController()")}}
   - : 新しい `AbortController` オブジェクトインスタンスを生成します。
 
-## プロパティ
+## インスタンスプロパティ
 
 - {{domxref("AbortController.signal")}} {{ReadOnlyInline}}
-  - : {{domxref("AbortSignal")}} オブジェクトのインスタンスを返します。 このオブジェクトは、 DOM リクエストの送信や中断に使用します。
+  - : {{domxref("AbortSignal")}} オブジェクトのインスタンスを返します。 このオブジェクトは、非同期操作の通信や中断に使用します。
 
-## メソッド
+## インスタンスメソッド
 
 - {{domxref("AbortController.abort()")}}
-  - : DOM リクエストが完了する前に中断します。これは、[フェッチリクエスト](/ja/docs/Web/API/fetch)、あらゆるレスポンス本体やストリームを中断することができます。
+  - : 非同期操作が完了する前に中断します。これは、[フェッチリクエスト](/ja/docs/Web/API/Window/fetch)や、あらゆるレスポンス本体やストリームを中断することができます。
 
 ## 例
 
-> **メモ:** 他の例が {{domxref("AbortSignal")}} のリファレンスにあります。
+> [!NOTE]
+> 他の例が {{domxref("AbortSignal")}} のリファレンスにあります。
 
 この後の短いコードで、[フェッチ API](/ja/docs/Web/API/Fetch_API) を使用して動画をダウンロードします。
 
 まず {{domxref("AbortController.AbortController","AbortController()")}} コンストラクターを使ってコントローラーを生成し、 {{domxref("AbortController.signal")}} プロパティを使用して関連する {{domxref("AbortSignal")}} オブジェクトへの参照を取得します。
 
-[フェッチリクエスト](/ja/docs/Web/API/fetch)が行われると、リクエストのオプションオブジェクト（下記 `{signal}` を参照）の内部のオプションとして `AbortSignal` を渡します。これによりシグナルと読み込みリクエストのコントローラーは関連付き、 {{domxref("AbortController.abort()")}} を呼び出すことで下記の 2 つ目のイベントリスナーに見られるように中断が許可されます。
+[フェッチリクエスト](/ja/docs/Web/API/Window/fetch)が行われると、リクエストのオプションオブジェクト（下記 `{signal}` を参照）の内部のオプションとして `AbortSignal` を渡します。これによりシグナルと読み込みリクエストのコントローラーは関連付き、 {{domxref("AbortController.abort()")}} を呼び出すことで下記の 2 つ目のイベントリスナーに見られるように中断が許可されます。
+
+`abort()` が呼び出されると、`fetch()` のプロミスは `AbortError` という名前の `DOMException` で拒否されます。
 
 ```js
 let controller;
@@ -52,20 +55,36 @@ abortBtn.addEventListener("click", () => {
   }
 });
 
-function fetchVideo() {
+async function fetchVideo() {
   controller = new AbortController();
   const signal = controller.signal;
-  fetch(url, { signal })
-    .then((response) => {
-      console.log("Download complete", response);
-    })
-    .catch((err) => {
-      console.error(`Download error: ${err.message}`);
-    });
+
+  try {
+    const response = await fetch(url, { signal });
+    console.log("Download complete", response);
+    // process response further
+  } catch (err) {
+    console.error(`Download error: ${err.message}`);
+  }
 }
 ```
 
-> **メモ:** `abort()` が呼ばれると、`fetch()` のプロミスは `AbortError` と呼ばれる `DOMException` で失敗します。
+`fetch()` が履行された後で、レスポンス本体を読み込む前にリクエストが中止された場合、レスポンス本体を読み込もうとすると `AbortError` 例外が発生して拒否されます。
+
+```js
+async function get() {
+  const controller = new AbortController();
+  const request = new Request("https://example.org/get", {
+    signal: controller.signal,
+  });
+
+  const response = await fetch(request);
+  controller.abort();
+  // 次の行で `AbortError` が発生する
+  const text = await response.text();
+  console.log(text);
+}
+```
 
 [GitHub に完全に動作する例](https://github.com/mdn/dom-examples/tree/main/abort-api)があります。また、[ライブでの実行](https://mdn.github.io/dom-examples/abort-api/)も確認してください。
 

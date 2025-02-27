@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/SourceMap
 
 {{HTTPSidebar}}
 
-**`SourceMap`** [HTTP](/ja/docs/Web/HTTP) レスポンスヘッダーは、生成されたコードを[ソースマップ](/ja/docs/Tools/Debugger/How_to/Use_a_source_map)にリンクし、ブラウザーが元のソースを再構成し、再構成されたオリジナルをデバッガに提示できるようにします。
+**`SourceMap`** [HTTP](/ja/docs/Web/HTTP) レスポンスヘッダーは、生成されたコードを[ソースマップ](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)にリンクし、ブラウザーが元のソースを再構成し、再構成されたオリジナルをデバッガに提示できるようにします。
 
 <table class="properties">
   <tbody>
@@ -38,7 +38,7 @@ X-SourceMap: <url> (deprecated)
 SourceMap: /path/to/file.js.map
 ```
 
-## 仕様
+## 仕様書
 
 | 仕様書                                                                                            | タイトル                       |
 | ------------------------------------------------------------------------------------------------- | ------------------------------ |
@@ -46,8 +46,8 @@ SourceMap: /path/to/file.js.map
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.SourceMap")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Firefox Developer Tools: using a source map](/ja/docs/Tools/Debugger/How_to/Use_a_source_map)
+- [Firefox Developer Tools: using a source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)

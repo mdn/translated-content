@@ -27,7 +27,7 @@ Se você não sabe se a ausência do recurso é temporária ou permanente, o có
 
 A informação mostrada abaixo está sendo servida do MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.410")}}
+{{Compat}}
 
 ## Veja também
 

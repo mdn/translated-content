@@ -27,7 +27,7 @@ Observando este erro, os navegadores geralmente, ou abortam a operação (por ex
 
 A informação abaixo foi buscada do GitHub da MDN (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.416")}}
+{{Compat}}
 
 ## Veja também
 

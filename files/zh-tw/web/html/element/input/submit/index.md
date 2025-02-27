@@ -62,7 +62,7 @@ slug: Web/HTML/Element/input/submit
 
 試著在文字區塊內輸入些文字，接著提交表單。
 
-提交時，送到伺服器的成對 name/value 資料會 be along the lines of `text=mytext`，視你在文字區塊內輸入了什麼。資料在哪裡並如何被送出，取決於 `<form>` 屬性和其他細節的設定：請參見[傳送表單資料](/zh-TW/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)。
+提交時，送到伺服器的成對 name/value 資料會 be along the lines of `text=mytext`，視你在文字區塊內輸入了什麼。資料在哪裡並如何被送出，取決於 `<form>` 屬性和其他細節的設定：請參見[傳送表單資料](/zh-TW/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)。
 
 ### 增加提交的快捷鍵
 
@@ -84,7 +84,8 @@ slug: Web/HTML/Element/input/submit
 
 {{EmbedLiveSample("增加提交的快捷鍵", 650, 100)}}
 
-> **備註：** 上例的問題很明顯，就是用戶不知道要按什麼快捷鍵！在實際網站中，你要提供不干擾網站整體設計的快捷鍵資訊：像是提供易於訪問的連結，告訴用戶說網站的快捷鍵是什麼。
+> [!NOTE]
+> 上例的問題很明顯，就是用戶不知道要按什麼快捷鍵！在實際網站中，你要提供不干擾網站整體設計的快捷鍵資訊：像是提供易於訪問的連結，告訴用戶說網站的快捷鍵是什麼。
 
 ### 禁用與啟用提交按鈕
 
@@ -96,9 +97,11 @@ slug: Web/HTML/Element/input/submit
 
 你可以在 run time 時藉由設定 `disabled` 的 `true` or `false` 來禁用或啟用提交按鈕。在 JavaScript 就看起來像 `btn.disabled = true`。
 
-> **備註：** 請參見 [`<input type="button">`](/zh-TW/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button) 頁面以取得關於禁用/啟用提交按鈕的詳細資訊。
+> [!NOTE]
+> 請參見 [`<input type="button">`](/zh-TW/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button) 頁面以取得關於禁用/啟用提交按鈕的詳細資訊。
 
-> **備註：** Firefox 不若其他瀏覽器，它預設上會在 {{HTMLElement("button")}} 跨網頁加載時[保持動態禁用狀態](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。請用 [`autocomplete`](/zh-TW/docs/Web/HTML/Element/button#autocomplete) 屬性控制這個功能。
+> [!NOTE]
+> Firefox 不若其他瀏覽器，它預設上會在 {{HTMLElement("button")}} 跨網頁加載時[保持動態禁用狀態](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。請用 [`autocomplete`](/zh-TW/docs/Web/HTML/Element/button#autocomplete) 屬性控制這個功能。
 
 ## 驗證
 

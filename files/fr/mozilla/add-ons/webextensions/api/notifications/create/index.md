@@ -3,7 +3,7 @@ title: notifications.create()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Crée et affiche une notification.
 
@@ -11,9 +11,10 @@ Passez un {{WebExtAPIRef("notifications.NotificationOptions")}} pour définir le
 
 Vous pouvez éventuellement fournir un ID pour la notification. Si vous omettez l'ID, un ID sera généré. Vous pouvez utiliser l'ID pour {{WebExtAPIRef("notifications.update()", "update")}} ou {{WebExtAPIRef("notifications.clear()", "clear")}} la notification.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-> **Attention :** Si vous appelez `notifications.create()` plus d'une fois de suite, Firefox peut ne pas afficher de notification pour tout.
+> [!WARNING]
+> Si vous appelez `notifications.create()` plus d'une fois de suite, Firefox peut ne pas afficher de notification pour tout.
 
 ## Syntaxe
 
@@ -33,7 +34,7 @@ var creating = browser.notifications.create(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie lorsque la notification est créée et que le processus d'affichage a été démarré, avant que la notification ne s'affiche réellement à l'utilisateur. Il est rempli avec une chaîne représentant l'identifiant de la notification.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie lorsque la notification est créée et que le processus d'affichage a été démarré, avant que la notification ne s'affiche réellement à l'utilisateur. Il est rempli avec une chaîne représentant l'identifiant de la notification.
 
 ## Compatibilité des navigateurs
 
@@ -43,7 +44,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 Créez et affichez périodiquement une notification de base à l'aide d'un {{WebExtAPIRef("alarms", "alarm")}}. En cliquant sur l'action du navigateur, la notification est rejetée.
 
-Notez que vous aurez besoin de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "alarms" pour créer des alarmes (ainsi que de la permission "notifications" pour créer des notifications).
+Notez que vous aurez besoin de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "alarms" pour créer des alarmes (ainsi que de la permission "notifications" pour créer des notifications).
 
 ```js
 var cakeNotification = "cake-notification";
@@ -130,8 +131,8 @@ browser.notifications.onButtonClicked.addListener((id, index) => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
+> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.

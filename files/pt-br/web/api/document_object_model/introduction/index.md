@@ -22,9 +22,9 @@ var paragraphs = document.getElementsByTagName("p");
 alert(paragraphs[0].nodeName);
 ```
 
-Todas as propriedades, métodos e eventos disponíveis para manipular e criar páginas da Web são organizados em objetos (por exemplo, o objeto de `document` que representa o próprio documento, o objeto de `table` que implementa a Interface especial DOM {{domxref ("HTMLTableElement")}}}} para acessar tabelas HTML e assim por diante). Esta documentação fornece uma referência objeto a objeto ao DOM.
+Todas as propriedades, métodos e eventos disponíveis para manipular e criar páginas da Web são organizados em objetos (por exemplo, o objeto de `document` que representa o próprio documento, o objeto de `table` que implementa a Interface especial DOM {{domxref ("HTMLTableElement")}} para acessar tabelas HTML e assim por diante). Esta documentação fornece uma referência objeto a objeto ao DOM.
 
-O DOM moderno é construído usando várias APIs que trabalham juntas. O [DOM](/pt-BR/docs/Web/API/Document_Object_Model) principal define os objetos que descrevem fundamentalmente um documento e os objetos dentro dele. Isso é expandido conforme necessário por outras APIs que adicionam novos recursos e capacidades ao DOM. Por exemplo, a [HTML DOM API](/pt-BR/docs/Web/API/HTML_DOM) adiciona suporte para representar documentos HTML no DOM principal.
+O DOM moderno é construído usando várias APIs que trabalham juntas. O [DOM](/pt-BR/docs/Web/API/Document_Object_Model) principal define os objetos que descrevem fundamentalmente um documento e os objetos dentro dele. Isso é expandido conforme necessário por outras APIs que adicionam novos recursos e capacidades ao DOM. Por exemplo, a [HTML DOM API](/pt-BR/docs/Web/API/HTML_DOM_API) adiciona suporte para representar documentos HTML no DOM principal.
 
 ## DOM e JavaScript
 
@@ -82,7 +82,8 @@ Outro exemplo. Esta função cria um novo elemento H1, adiciona texto a esse ele
 
 Esta referência tenta descrever os vários objetos e tipos em termos simples. Mas há vários tipos de dados diferentes sendo transmitidos pela API que você deve conhecer.
 
-> **Nota:** Como a grande maioria do código que usa o DOM gira em torno da manipulação de documentos HTML, é comum sempre se referir aos nós no DOM como **elementos**, pois em um documento HTML, cada nó é um elemento. Apesar de não ser estritamente precisa, a documentação que você encontrará no MDN frequentemente fará a mesma coisa, por causa de quão comum é essa suposição.
+> [!NOTE]
+> Como a grande maioria do código que usa o DOM gira em torno da manipulação de documentos HTML, é comum sempre se referir aos nós no DOM como **elementos**, pois em um documento HTML, cada nó é um elemento. Apesar de não ser estritamente precisa, a documentação que você encontrará no MDN frequentemente fará a mesma coisa, por causa de quão comum é essa suposição.
 
 A tabela a seguir descreve brevemente esses tipos de dados.
 
@@ -294,7 +295,7 @@ Para testar várias interfaces numa única página - por exemplo, um conjunto de
 
 Figura 0.1 Página de Teste DOM
 
-![Image:DOM_Ref_Introduction_to_the_DOM.gif](/@api/deki/files/173/=DOM_Ref_Introduction_to_the_DOM.gif)
+![Image:DOM_Ref_Introduction_to_the_DOM.gif](dom_ref_introduction_to_the_dom.gif)
 
 Nesse exemplo, os menus drop-down atualizam dinamicamente os aspectos acessáveis pelo DOM na página web como o fundo (`bgColor`), a cor dos hiperlinks (`aLink`), e a cor do texto (`text`). Porém, ao desenhar suas páginas de teste, testar as interfaces conforme for lendo sobre elas é uma parte importante para aprender a usar o DOM de forma efetiva.
 
@@ -302,7 +303,7 @@ Nesse exemplo, os menus drop-down atualizam dinamicamente os aspectos acessávei
 
 - [DOM Reference](/pt-BR/docs/Web/API/Document_Object_Model)
 - [Introduction to the DOM](/pt-BR/docs/Web/API/Document_Object_Model/Introduction)
-- [Events and the DOM](/pt-BR/docs/Web/API/Document_Object_Model/Events)
+- [Events and the DOM](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
 - [Examples](/pt-BR/docs/Web/API/Document_Object_Model/Examples)
 
 {{DefaultAPISidebar("DOM")}}

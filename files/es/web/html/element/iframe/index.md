@@ -5,13 +5,31 @@ slug: Web/HTML/Element/iframe
 
 {{HTMLSidebar}}
 
-El **elemento HTML `<iframe>`** (de inline frame) representa un {{Glossary("contexto de navegación")}} anidado, el cual permite incrustrar otra página HTML en la página actual.
+El **elemento HTML `<iframe>`** (de inline frame) representa un {{Glossary("browsing context", "contexto de navegación")}} anidado, el cual permite incrustrar otra página HTML en la página actual.
 
-{{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;iframe&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<iframe
+  id="inlineFrameExample"
+  title="Inline Frame Example"
+  width="300"
+  height="200"
+  src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik">
+</iframe>
+```
+
+```css interactive-example
+iframe {
+  border: 1px solid black;
+  width: 100%; /* takes precedence over the width set with the HTML width attribute */
+}
+```
 
 Cada elemento `<iframe>` tiene su propio [historial de sesión](/es/docs/Web/API/History) y su propio objeto [Documento](/es/docs/Web/API/Document). El contexto de navegación que incluye el contenido implícito se llama _contexto de navegación principal_. El contexto de navegación de nivel superior (que no tiene padre) es típicamente la ventana del navegador, representado por el objeto {{domxref("Window")}}.
 
-> **Advertencia:** Debido a que cada contexto de navegación es un entorno de documento completo, cada `<iframe>` en una página requiere más memoria y otros recursos informáticos. Aunque teóricamente puede utilizar tantos `<iframe>` como desee, compruebe si hay problemas de rendimiento.
+> [!WARNING]
+> Debido a que cada contexto de navegación es un entorno de documento completo, cada `<iframe>` en una página requiere más memoria y otros recursos informáticos. Aunque teóricamente puede utilizar tantos `<iframe>` como desee, compruebe si hay problemas de rendimiento.
 
 <table class="properties">
   <tbody>
@@ -46,7 +64,7 @@ Cada elemento `<iframe>` tiene su propio [historial de sesión](/es/docs/Web/API
     </tr>
     <tr>
       <th scope="row">Omisión de etiqueta</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th scope="row">Elementos padres permitidos</th>
@@ -68,27 +86,29 @@ Cada elemento `<iframe>` tiene su propio [historial de sesión](/es/docs/Web/API
 
 ## Atributos
 
-Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
+Este elemento admite [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
-- En el atributo `target` de los elementos {{HTMLElement("a")}}, {{HTMLElement("from")}} y {{HTMLElement("base")}}.
+- En el atributo `target` de los elementos {{HTMLElement("a")}}, {{HTMLElement("form")}} y {{HTMLElement("base")}}.
 - En el atributo `formtarget` de los elementos {{HTMLElement("input")}} y {{HTMLElement("button")}}
 - En el parámetro `windowName` en el método {{domxref("Window.open()","window.open()")}}.
 
 <!---->
 
 - `allow`
-  - : Especifíca una [política de características](/es/docs/Web/HTTP/Feature_Policy) para el `<iframe>`. Vea el articulo [Privacy, permissions, and information security](/es/docs/Web/Privacy) para detalles en temas de seguridad y como `<iframe>` funciona con las Politicas de Herramientas para mantener los sistemas seguros.
+  - : Especifíca una [política de características](/es/docs/Web/HTTP/Permissions_Policy) para el `<iframe>`. Vea el articulo [Privacy, permissions, and information security](/es/docs/Web/Privacy) para detalles en temas de seguridad y como `<iframe>` funciona con las Politicas de Herramientas para mantener los sistemas seguros.
 - `allowfullscreen`
 
   - : Definido como `true` si el `<iframe>` puede activar el modo a pantalla completa llamando al método {{domxref("Element.requestFullscreen", "requestFullscreen()")}}.
 
-    > **Nota:** Se considera un atributo heredado y se redefine como `allow="fullscreen"`.
+    > [!NOTE]
+    > Se considera un atributo heredado y se redefine como `allow="fullscreen"`.
 
 - `allowpaymentrequest`
 
   - : Definido como `true` si se debe permitir que un `<iframe>` de origen cruzado pueda invocar el [API de solicitud de pago](/es/docs/Web/API/Payment_Request_API). <
 
-    > **Nota:** Se considera un atributo heredado y se redefine como `allow="payment"`.
+    > [!NOTE]
+    > Se considera un atributo heredado y se redefine como `allow="payment"`.
 
 - `csp` {{experimental_inline}}
   - : Una [Politica de Seguridad del Contenido](/es/docs/Web/HTTP/CSP) aplicada para el recurso incrustado. Vea {{domxref("HTMLIFrameElement.csp")}} para detalles.
@@ -106,7 +126,7 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 
   - : Nombre objetivo para el contexto de navegación incrustado. Se puede utilizar:
 
-    - En el atributo target de los elementos {{HTMLElement("a")}}, {{HTMLElement("from")}} y {{HTMLElement("base")}}.
+    - En el atributo target de los elementos {{HTMLElement("a")}}, {{HTMLElement("form")}} y {{HTMLElement("base")}}.
     - En el atributo formtarget de los elementos {{HTMLElement("input")}} y {{HTMLElement("button")}}
     - En el parámetro windowName en el método {{domxref("Window.open()","window.open()")}}.
 
@@ -121,7 +141,7 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
     - `same-origin`: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.
     - `strict-origin`: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).
     - `strict-origin-when-cross-origin`: Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
-    - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/es/docs/Web/API/HTMLHyperlinkElementUtils/hash), [password](/es/docs/Web/API/HTMLHyperlinkElementUtils/password), or [username](/es/docs/Web/API/HTMLHyperlinkElementUtils/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
+    - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/es/docs/Web/API/HTMLAnchorElement/hash), [password](/es/docs/Web/API/HTMLAnchorElement/password), or [username](/es/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
 
 - `sandbox`
 
@@ -130,7 +150,7 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
     - `allow-forms`: Allows the resource to submit forms. If this keyword is not used, form submission is blocked.
     - `allow-modals`: Lets the resource [open modal windows](https://html.spec.whatwg.org/multipage/origin.html#sandboxed-modals-flag).
     - `allow-orientation-lock`: Lets the resource [lock the screen orientation](/es/docs/Web/API/Screen/lockOrientation).
-    - `allow-pointer-lock`: Lets the resource use the [Pointer Lock API](/es/docs/WebAPI/Pointer_Lock).
+    - `allow-pointer-lock`: Lets the resource use the [Pointer Lock API](/es/docs/Web/API/Pointer_Lock_API).
     - `allow-popups`: Allows popups (such as `window.open()`, `target="_blank"`, or `showModalDialog()`). If this keyword is not used, the popup will silently fail to open.
     - `allow-popups-to-escape-sandbox`: Lets the sandboxed document open new windows without those windows inheriting the sandboxing. For example, this can safely sandbox an advertisement without forcing the same restrictions upon the page the ad links to.
     - `allow-presentation`: Lets the resource start a [presentation session](/es/docs/Web/API/PresentationRequest).
@@ -140,7 +160,7 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
     - `allow-top-navigation`: Lets the resource navigate the top-level browsing context (the one named `_top`).
     - `allow-top-navigation-by-user-activation`: Lets the resource navigate the top-level browsing context, but only if initiated by a user gesture.
 
-    > **Nota:**
+    > [!NOTE]
     >
     > - When the embedded document has the same origin as the embedding page, it is **strongly discouraged** to use both `allow-scripts` and `allow-same-origin`, as that lets the embedded document remove the `sandbox` attribute — making it no more secure than not using the `sandbox` attribute at all.
     > - Sandboxing is useless if the attacker can display content outside a sandboxed `iframe` — such as if the viewer opens the frame in a new tab. Such content should be also served from a _separate origin_ to limit potential damage.
@@ -183,7 +203,8 @@ Estos atributos están obsoletos y es posible que ya no sean compatibles con tod
 
   - : &#x20;
 
-    > **Nota:** See [Error 1318532 en Firefox](https://bugzil.la/1318532) for exposing this to WebExtensions in Firefox.
+    > [!NOTE]
+    > See [Error 1318532 en Firefox](https://bugzil.la/1318532) for exposing this to WebExtensions in Firefox.
 
     Makes the `<iframe>` act like a top-level browser window. See [Browser API](/es/docs/Mozilla/Gecko/Chrome/API/Browser_API) for details.
     **Available only to [WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions).**
@@ -193,7 +214,7 @@ Estos atributos están obsoletos y es posible que ya no sean compatibles con tod
 - `webkitallowfullscreen` {{ non-standard_inline() }}
   - : In Chrome 17 or later (and maybe earlier), this attribute can be set to `true` if the frame is allowed to be placed into full screen mode by calling its {{ domxref("element.webkitRequestFullScreen()") }} method. If this isn't set, the element can't be placed into full screen mode.
 - `mozapp` {{ non-standard_inline() }}
-  - : For frames hosting an [open web app](/en/Apps), this specifies the URL of the [app manifest](/en/Apps/Manifest). This ensures that the app is loaded with the right permissions. See [Using the Browser API](/en/DOM/Using_the_Browser_API) for details. Available in Gecko 13.0 and later.
+  - : For frames hosting an [open web app](/es/docs/Web/Progressive_web_apps), this specifies the URL of the [app manifest](/es/docs/Web/Apps/Manifest). This ensures that the app is loaded with the right permissions. See [Using the Browser API](/es/docs/DOM/Using_the_Browser_API) for details. Available in Gecko 13.0 and later.
 - `remote` {{ non-standard_inline() }}
   - : Load the frame's page in a separate content process.
 

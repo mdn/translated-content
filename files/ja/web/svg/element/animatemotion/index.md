@@ -7,7 +7,8 @@ slug: Web/SVG/Element/animateMotion
 
 SVG の **`<animateMotion>`** 要素は、ある要素がモーションパスに沿って移動する方法を定義します。
 
-> **メモ:** 既存のパスを再利用するには、 `<animateMotion>` 要素内の {{SVGElement("mpath")}} 要素を {{SVGAttr("path")}} 属性の代わりに使用する必要があります。
+> [!NOTE]
+> 既存のパスを再利用するには、 `<animateMotion>` 要素内の {{SVGElement("mpath")}} 要素を {{SVGAttr("path")}} 属性の代わりに使用する必要があります。
 
 ```css hidden
 html,
@@ -46,35 +47,35 @@ svg {
 
 - {{SVGAttr("keyPoints")}}
   - : この属性は \[0,1] の範囲で、それぞれの {{SVGAttr("keyTimes")}} に関連付けられた値に対して、パスに沿ってオブジェクトがどのくらいの距離にあるかを示します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#Number)\*; _Default value_: none; _Animatable_: **no**
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#number)\*; _Default value_: none; _Animatable_: **no**
 - {{SVGAttr("path")}}
   - : この属性は、 {{SVGAttr('d')}} 属性と同じ構文を使用して、モーションパスを定義します。
     _値の型_: **\<string>**; _Default value_: none; _Animatable_: **no**
 - {{SVGAttr("rotate")}}
   - : この属性は、パスに沿ってアニメーションされた要素に適用される回転を定義します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#Number)|`auto`|`auto-reverse`; _Default value_: `0`; _Animatable_: **no**
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#number)|`auto`|`auto-reverse`; _Default value_: `0`; _Animatable_: **no**
 
 > **メモ:** `<animateMotion>` においては、 {{SVGAttr("calcMode")}} 属性の既定値は `paced` です。
 
 ### アニメーション属性
 
-- [アニメーションタイミング属性](/ja/docs/Web/SVG/Attribute#Animation_Timing_Attributes)
+- [アニメーションタイミング属性](/ja/docs/Web/SVG/Attribute#animation_timing_attributes)
   - : {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
-- [アニメーション値属性](/ja/docs/Web/SVG/Attribute#Animation_Value_Attributes)
+- [アニメーション値属性](/ja/docs/Web/SVG/Attribute#animation_value_attributes)
   - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}
-- [他のアニメーション属性](/ja/docs/Web/SVG/Attribute#Animation_Attributes)
+- [他のアニメーション属性](/ja/docs/Web/SVG/Attribute#animation_attributes)
   - : 特に重要なもの: {{SVGAttr("attributeName")}}, {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
-- [アニメーションイベント属性](/ja/docs/Web/SVG/Attribute/Events#Animation_Event_Attributes)
+- [アニメーションイベント属性](/ja/docs/Web/SVG/Attribute#アニメーションイベント属性)
   - : 特に重要なもの: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}
 
 ### グローバル属性
 
-- [コア属性](/ja/docs/Web/SVG/Attribute/Core)
+- [コア属性](/ja/docs/Web/SVG/Attribute)
   - : 特に重要なもの: {{SVGAttr('id')}}
-- [スタイル付け属性](/ja/docs/Web/SVG/Attribute/Styling)
+- [スタイル付け属性](/ja/docs/Web/SVG/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
 - イベント属性
-  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [文書要素イベント属性](/ja/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes)
+  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute#グローバルイベント属性), [文書要素イベント属性](/ja/docs/Web/SVG/Attribute#文書要素イベント属性)
 
 ## 使用上の注意
 
@@ -86,7 +87,7 @@ svg {
 
 ## ブラウザーの互換性
 
-{{Compat("svg.elements.animateMotion")}}
+{{Compat}}
 
 ## 関連情報
 

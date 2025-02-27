@@ -7,9 +7,24 @@ slug: Web/JavaScript/Reference/Statements/label
 
 **標記陳述式**可以和 {{jsxref("Statements/break", "break")}} 或 {{jsxref("Statements/continue", "continue")}} 語句一起使用。標記就是在一條陳述式前面加個可以引用的識別符號。
 
-{{EmbedInteractiveExample("pages/js/statement-label.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Label")}}
 
-> **備註：** 標記的迴圈或程式碼區塊非常罕見。通常可以使用函式呼叫而不是使用迴圈跳轉。
+```js interactive-example
+let str = "";
+
+loop1: for (let i = 0; i < 5; i++) {
+  if (i === 1) {
+    continue loop1;
+  }
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "0234"
+```
+
+> [!NOTE]
+> 標記的迴圈或程式碼區塊非常罕見。通常可以使用函式呼叫而不是使用迴圈跳轉。
 
 ## 語法
 
@@ -139,7 +154,7 @@ console.log("swap");
 
 ### 標記的函式宣告式
 
-從 ECMAScript 2015 開始，標準的函式宣告式現在對規範的 [Web 相容性附件](http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations)中的非嚴格程式碼進行了標準化。
+從 ECMAScript 2015 開始，標準的函式宣告式現在對規範的 [Web 相容性附件](https://262.ecma-international.org/6.0/#sec-labelled-function-declarations)中的非嚴格程式碼進行了標準化。
 
 ```js
 L: function F() {}

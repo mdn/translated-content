@@ -3,6 +3,8 @@ title: HTML
 slug: Glossary/HTML
 ---
 
+{{GlossarySidebar}}
+
 {{QuickLinksWithSubpages("/fr/docs/Glossaire")}}
 
 **HTML** (HyperText Markup Language) est un langage descriptif qui définit la structure d'une page web.
@@ -31,10 +33,10 @@ Un fichier HTML est généralement enregistré avec une extension `.htm` ou `.ht
 
 ### Apprendre le HTML
 
-- [Notre tutoriel HTML](/fr/docs/Apprendre/HTML)
-- [Les cours web sur codecademy.com](http://www.codecademy.com/en/tracks/web)
+- [Notre tutoriel HTML](/fr/docs/Learn/HTML)
+- [Les cours web sur codecademy.com](https://www.codecademy.com/en/tracks/web)
 
 ### Référence technique
 
 - [La documentation HTML sur MDN](/fr/docs/Web/HTML)
-- [La spécification HTML](http://www.w3.org/TR/html5/)
+- [La spécification HTML](https://www.w3.org/TR/html5/)

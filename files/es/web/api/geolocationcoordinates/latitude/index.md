@@ -23,5 +23,5 @@ lat = coordinates.latitude;
 
 ## Mirar también
 
-- [Uso de geolocalización](/es/docs/WebAPI/Using_geolocation)
+- [Uso de geolocalización](/es/docs/Web/API/Geolocation_API)
 - La interfaz {{domxref("Coordinates")}} a la que pertenece.

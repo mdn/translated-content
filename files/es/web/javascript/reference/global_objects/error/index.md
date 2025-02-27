@@ -99,13 +99,15 @@ try {
 
 Posiblemente desees definir tus propios tipos de error derivados de `Error` para poder lanzarlo con `throw new MyError()` y usar `instanceof MyError` para verificar el tipo de error en el controlador de excepciones. Esto da como resultado un código de manejo de errores más limpio y consistente.
 
-Consulta ["¿Cuál es una buena manera de extender `Error` en JavaScript?"](http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) en StackOverflow para una discusión en profundidad.
+Consulta ["¿Cuál es una buena manera de extender `Error` en JavaScript?"](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) en StackOverflow para una discusión en profundidad.
 
 #### Clase `Error` personalizado en ES6
 
-> **Advertencia:** Las versiones de Babel anteriores a la 7 pueden manejar métodos de clase `CustomError`, pero solo cuando se declaran con {{JSxRef("Objetos_globales/Object/defineProperty", "Object.defineProperty()")}}. De lo contrario, las versiones antiguas de Babel y otros transpiladores no manejarán correctamente el siguiente código sin [configuración adicional](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
+> [!WARNING]
+> Las versiones de Babel anteriores a la 7 pueden manejar métodos de clase `CustomError`, pero solo cuando se declaran con {{JSxRef("Objetos_globales/Object/defineProperty", "Object.defineProperty()")}}. De lo contrario, las versiones antiguas de Babel y otros transpiladores no manejarán correctamente el siguiente código sin [configuración adicional](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
 
-> **Nota:** Algunos navegadores incluyen el constructor `CustomError` en el seguimiento de la pila cuando se utilizan clases de ES2015.
+> [!NOTE]
+> Algunos navegadores incluyen el constructor `CustomError` en el seguimiento de la pila cuando se utilizan clases de ES2015.
 
 ```js
 class CustomError extends Error {

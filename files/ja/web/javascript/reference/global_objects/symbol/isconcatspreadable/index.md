@@ -1,58 +1,79 @@
 ---
 title: Symbol.isConcatSpreadable
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
+l10n:
+  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
 {{JSRef}}
 
-**`Symbol.isConcatSpreadable`** は、{{jsxref("Array.prototype.concat()")}} メソッドを使用してオブジェクトを配列の要素に平坦化する場合の設定として使用されます。
+**`Symbol.isConcatSpreadable`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.isConcatSpreadable` を表します。{{jsxref("Array.prototype.concat()")}} メソッドは、連結される各オブジェクトに対してこのシンボルを探し、配列風オブジェクトとして扱って配列要素を平坦化すべきかどうかを判断します。
 
-{{EmbedInteractiveExample("pages/js/symbol-isconcatspreadable.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.isConcatSpreadable")}}
 
-## 説明
+```js interactive-example
+const alpha = ["a", "b", "c"];
+const numeric = [1, 2, 3];
+let alphaNumeric = alpha.concat(numeric);
 
-`@@isConcatSpreadable` シンボル（`Symbol.isConcatSpreadable`）は直接、または継承されたプロパティとして定義でき、その値は boolean です。これは、配列や配列状のオブジェクトの振る舞いを制御します：
+console.log(alphaNumeric);
+// Expected output: Array ["a", "b", "c", 1, 2, 3]
 
-- 配列オブジェクトにとって、既定の動作は要素の展開（平坦化）です。`Symbol.isConcatSpreadable` はこれらの場合に平坦化を避けます。
-- 配列状のオブジェクトにとって、既定の動作は展開や平坦化を行いません。`Symbol.isConcatSpreadable` はこれらの場合に平坦化を強制します。
+numeric[Symbol.isConcatSpreadable] = false;
+alphaNumeric = alpha.concat(numeric);
 
-{{js_property_attributes(0,0,0)}}
+console.log(alphaNumeric);
+// Expected output: Array ["a", "b", "c", Array [1, 2, 3]]
+```
+
+## 値
+
+ウェルノウンシンボル `Symbol.isConcatSpreadable` です。
+
+{{js_property_attributes(0, 0, 0)}}
+
+## 解説
+
+`[Symbol.isConcatSpreadable]` プロパティは、直接または継承されたプロパティとして定義でき、その値は論理値です。これが配列や配列風オブジェクトの挙動を制御できます。
+
+- 配列オブジェクトでは、既定の動作は要素の展開（平坦化）です。`Symbol.isConcatSpreadable` により、これらの場合に平坦化を避けることができます。
+- 配列風オブジェクトでは、既定の動作は展開や平坦化を行いません。`Symbol.isConcatSpreadable` により、これらの場合に平坦化を強制することができます。
 
 ## 例
 
 ### 配列
 
-既定で、{{jsxref("Array.prototype.concat()")}} は配列を次の結果のように展開（平坦化）します：
+既定で、{{jsxref("Array.prototype.concat()")}} は配列を次の結果のように展開（平坦化）します。
 
 ```js
-let alpha = ['a', 'b', 'c'],
-let numeric = [1, 2, 3]
+const alpha = ["a", "b", "c"];
+const numeric = [1, 2, 3];
 
-let alphaNumeric = alpha.concat(numeric)
+const alphaNumeric = alpha.concat(numeric);
 
-console.log(alphaNumeric)  // Result: ['a', 'b', 'c', 1, 2, 3]
+console.log(alphaNumeric); // 結果: ['a', 'b', 'c', 1, 2, 3]
 ```
 
-`Symbol.isConcatSpreadable` を `false` に設定した場合、既定の動作を使用できなくなります：
+`Symbol.isConcatSpreadable` を `false` に設定すると、既定の動作を無効にすることができます。
 
 ```js
-let alpha = ['a', 'b', 'c'],
-let numeric = [1, 2, 3]
+const alpha = ["a", "b", "c"];
+const numeric = [1, 2, 3];
 
-numeric[Symbol.isConcatSpreadable] = false
-let alphaNumeric = alpha.concat(numeric)
+numeric[Symbol.isConcatSpreadable] = false;
+const alphaNumeric = alpha.concat(numeric);
 
-console.log(alphaNumeric)  // Result: ['a', 'b', 'c', [1, 2, 3] ]
+console.log(alphaNumeric); // 結果: ['a', 'b', 'c', [1, 2, 3] ]
 ```
 
-### 配列状のオブジェクト
+### 配列風オブジェクト
 
-配列状のオブジェクトは、既定で展開しません。`Symbol.isConcatSpreadable` 平坦化した配列を取得するには、`true` に設定する必要があります：
+配列風オブジェクトは、既定で展開されません。平坦化された配列を取得するには、`Symbol.isConcatSpreadable` を `true` に設定する必要があります。
 
 ```js
-let x = [1, 2, 3];
+const x = [1, 2, 3];
 
-let fakeArray = {
+const fakeArray = {
   [Symbol.isConcatSpreadable]: true,
   length: 2,
   0: "hello",
@@ -64,14 +85,15 @@ x.concat(fakeArray); // [1, 2, 3, "hello", "world"]
 
 > **メモ:** `length` プロパティは、追加するオブジェクトプロパティの数を制御するために使用されます。上記の例では、`length:2` は 2 つのプロパティを追加する必要があることを示しています。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Symbol.isConcatSpreadable")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`Symbol.isConcatSpreadable` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Array.prototype.concat()")}}

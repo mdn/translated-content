@@ -30,7 +30,7 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.403")}}
+{{Compat}}
 
 ## Veja também
 

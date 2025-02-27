@@ -3,6 +3,8 @@ title: Truthy
 slug: Glossary/Truthy
 ---
 
+{{GlossarySidebar}}
+
 En {{Glossary("JavaScript")}}, un **valor verdadero** es un valor que se considera `true/verdadero` cuando es evaluado en un contexto {{Glossary("Booleano")}}. Todos los valores son verdaderos a menos que se definan como {{Glossary("Falso", "falso")}} (es decir, excepto `false`, `0`, `""`, `null`, `undefined`, y `NaN`).
 
 {{Glossary("JavaScript")}} usa {{Glossary("Type_Conversion", "coerción")}} en los contextos Booleanos.
@@ -28,5 +30,3 @@ if (-Infinity)
 - {{Glossary("Falsy")}}
 - {{Glossary("Type_Conversion", "Coercion")}}
 - {{Glossary("Boolean")}}
-
-{{QuickLinksWithSubpages("/es/docs/Glossary")}}

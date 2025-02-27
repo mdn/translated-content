@@ -52,6 +52,6 @@ _Нет специфичных методов; наследует методы �
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - The HTML element implementing this interface: {{ HTMLElement("track") }}.

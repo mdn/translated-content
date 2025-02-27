@@ -14,7 +14,7 @@ Promise.all(iterable);
 ```
 
 - iterable
-  - : Un objeto iterable, por ejemplo un {{jsxref("Array")}}. Vea [iterable](/es/docs/Web/JavaScript/Guide/iterable).
+  - : Un objeto iterable, por ejemplo un {{jsxref("Array")}}. Vea [iterable](/es/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 ### Valor devuelto
 

@@ -1,8 +1,9 @@
 ---
 title: "HTMLInputElement: showPicker() メソッド"
+short-title: showPicker()
 slug: Web/API/HTMLInputElement/showPicker
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: e312e1548dda157699cff0fe339532a617477652
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -169,5 +170,6 @@ button.addEventListener("click", () => {
 
 - {{ HTMLElement("input") }}
 - {{ domxref("HTMLInputElement") }}
+- {{ domxref("HTMLSelectElement.showPicker()") }}
 - {{htmlelement("datalist")}}
 - [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete)

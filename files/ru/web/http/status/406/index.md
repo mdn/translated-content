@@ -10,7 +10,6 @@ HyperText Transfer Protocol (HTTP) код ошибки клиента **`406 Not
 Заголовки упреждающего согласования контента включают:
 
 - {{HTTPHeader("Accept")}}
-- {{HTTPHeader("Accept-Charset")}}
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Accept-Language")}}
 
@@ -30,14 +29,13 @@ HyperText Transfer Protocol (HTTP) код ошибки клиента **`406 Not
 | ----------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "406 Not Acceptable" , "6.5.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
 - {{HTTPHeader("Accept")}}
-- {{HTTPHeader("Accept-Charset")}}
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Accept-Language")}}
 - HTTP [content negotiation](/ru/docs/Web/HTTP/Content_negotiation)

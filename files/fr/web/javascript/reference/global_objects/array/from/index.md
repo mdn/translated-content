@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/from
 
 La méthode **`Array.from()`** permet de créer une nouvelle instance d'`Array` (une copie superficielle) à partir d'un objet itérable ou semblable à un tableau.
 
-{{EmbedInteractiveExample("pages/js/array-from.html")}}
+{{InteractiveExample("JavaScript Demo: Array.from()")}}
+
+```js interactive-example
+console.log(Array.from("foo"));
+// Expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], (x) => x + x));
+// Expected output: Array [2, 4, 6]
+```
 
 ## Syntaxe
 
@@ -33,9 +41,9 @@ Une nouvelle instance de {{jsxref("Array")}}.
 `Array.from()` permet de créer des instances d'`Array` à partir :
 
 - d'objets semblables à des tableaux (qui disposent d'une propriété `length` et d'éléments indexés) ou
-- [d'objets itérables](/fr/docs/Web/JavaScript/Guide/iterable) (des objets dont on peut avoir les éléments comme {{jsxref("Map")}} et {{jsxref("Set")}}).
+- [d'objets itérables](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) (des objets dont on peut avoir les éléments comme {{jsxref("Map")}} et {{jsxref("Set")}}).
 
-`Array.from()` possède un paramètre optionnel `fonctionMap`, qui permet d'exécuter une fonction {{jsxref("Array.prototype.map", "map")}} sur chacun des éléments du tableau (ou de l'instance de la classe fille) qui est créé. Autrement dit `Array.from(obj, mapFn, thisArg)` correspond exactement à `Array.from(obj).map(mapFn, thisArg)`, sauf qu'il n'y a pas de tableau intermédiaire de créé. Cet aspect est notamment important pour certaines classes filles, comme les [tableaux typés](/fr/docs/JavaScript/Tableaux_typés) (en effet, un tableau intermédiaire aurait eu ses valeurs tronquées pour qu'elles soient du type approprié).
+`Array.from()` possède un paramètre optionnel `fonctionMap`, qui permet d'exécuter une fonction {{jsxref("Array.prototype.map", "map")}} sur chacun des éléments du tableau (ou de l'instance de la classe fille) qui est créé. Autrement dit `Array.from(obj, mapFn, thisArg)` correspond exactement à `Array.from(obj).map(mapFn, thisArg)`, sauf qu'il n'y a pas de tableau intermédiaire de créé. Cet aspect est notamment important pour certaines classes filles, comme les [tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays) (en effet, un tableau intermédiaire aurait eu ses valeurs tronquées pour qu'elles soient du type approprié).
 
 La propriété `length` de la méthode `from()` est 1.
 

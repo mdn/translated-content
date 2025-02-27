@@ -1,24 +1,50 @@
 ---
 title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
+l10n:
+  sourceCommit: 5bdcf72ed6ffc7d4fa878060a548869ed6ae149b
 ---
 
 {{JSRef}}
 
-**`test()`** メソッドは、正規表現と指定された文字列の一致を調べるための検索を実行します。 `true` または `false` を返します。
+**`test()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、正規表現と指定された文字列を照合するための検索を実行します。一致があった場合は `true` を、それ以外の場合は `false` を返します。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-test.html", "taller")}}
+JavaScript の {{jsxref("RegExp")}} オブジェクトは {{jsxref("RegExp/global", "global")}} または {{jsxref("RegExp/sticky", "sticky")}} フラグ（`/foo/g` や `/foo/y` など）を設定すると**ステートフル**になります。これらは前回一致したときの {{jsxref("RegExp/lastIndex", "lastIndex")}} を格納します。これを内部的に使用することで、 `test()` を使用して文字列の複数の照合を反復処理することができます（キャプチャグループを使用）。
+
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.test", "taller")}}
+
+```js interactive-example
+const str = "table football";
+
+const regex = new RegExp("foo*");
+const globalRegex = new RegExp("foo*", "g");
+
+console.log(regex.test(str));
+// Expected output: true
+
+console.log(globalRegex.lastIndex);
+// Expected output: 0
+
+console.log(globalRegex.test(str));
+// Expected output: true
+
+console.log(globalRegex.lastIndex);
+// Expected output: 9
+
+console.log(globalRegex.test(str));
+// Expected output: false
+```
 
 ## 構文
 
-```
-regexObj.test(str)
+```js-nolint
+test(str)
 ```
 
 ### 引数
 
 - `str`
-  - : 正規表現にマッチさせる文字列。
+  - : 正規表現と照合する文字列。すべての値は[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)ので、これを省略したり `undefined` を渡したりすると `test()` は文字列 `"undefined"` を検索するようになります。
 
 ### 返値
 
@@ -28,7 +54,7 @@ regexObj.test(str)
 
 あるパターンがある文字列内で見つかるかどうか調べたいときは、 `test()` を使用してください。 `test()` は論理値を返します。これは (一致した場所のインデックス番号、または見つからない場合は `-1` を返す) {{jsxref("String.prototype.search()")}} メソッドとは異なります。
 
-より多くの情報を得るためには (実行が遅くなりますが)、 {{jsxref("RegExp.prototype.exec()", "exec()")}} メソッドを使用してください ({{jsxref("String.prototype.match()")}} メソッドと同様)。
+より多くの情報を得るためには (実行が遅くなりますが)、 {{jsxref("RegExp/exec", "exec()")}} メソッドを使用してください ({{jsxref("String.prototype.match()")}} メソッドと同様)。
 
 `exec()` と同様に (またはその組み合わせで)、 `test()` は同じグローバル正規表現インスタンスで複数回呼び出されると、前回の一致の先に進むことになります。
 
@@ -36,7 +62,7 @@ regexObj.test(str)
 
 ### test() の使用
 
-"`hello`" が文字列の先頭近くに含まれているかを真偽値で確認する簡単な例です。
+`"hello"` が文字列の先頭近くに含まれているかを論理値で確認する簡単な例です。
 
 ```js
 const str = "hello world!";
@@ -49,19 +75,14 @@ console.log(result); // true
 
 ```js
 function testInput(re, str) {
-  let midstring;
-  if (re.test(str)) {
-    midstring = "contains";
-  } else {
-    midstring = "does not contain";
-  }
-  console.log(`${str} ${midstring} ${re.source}`);
+  const midString = re.test(str) ? "contains" : "does not contain";
+  console.log(`${str} ${midString} ${re.source}`);
 }
 ```
 
 ### グローバルフラグを持つ正規表現の test() の使用
 
-正規表現に[グローバルフラグ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags_2)が設定されている場合、 `test()` は正規表現が所有する {{jsxref("RegExp.lastIndex", "lastIndex")}} の値を加算します。 ({{jsxref("RegExp.prototype.exec()", "exec()")}} も同様に `lastIndex` プロパティの値を加算します。)
+正規表現に[グローバルフラグ](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global)が設定されている場合、 `test()` は正規表現が所有する {{jsxref("RegExp.lastIndex", "lastIndex")}} の値を加算します。（{{jsxref("RegExp.prototype.exec()")}} も同様に `lastIndex` プロパティの値を加算します。）
 
 その後にさらに `test(str)` を呼び出すと、 `str` を `lastIndex` から検索します。 `lastIndex` プロパティは `test()` が `true` を返すたびに増え続けます。
 
@@ -87,6 +108,15 @@ regex.test("barfoo"); // true
 regex.test("foobar"); //false
 
 // regex.lastIndex は 0 です。
+regex.test("foobarfoo"); // true
+
+// regex.lastIndex は 3 です。
+regex.test("foobarfoo"); // true
+
+// regex.lastIndex は 9 です。
+regex.test("foobarfoo"); // false
+
+// regex.lastIndex は 0 です。
 // (...以下略)
 ```
 
@@ -96,10 +126,9 @@ regex.test("foobar"); //false
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.RegExp.test")}}
+{{Compat}}
 
 ## 関連情報
 
-- [JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)の[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)ガイド
 - {{jsxref("RegExp")}}
-- {{jsxref("RegExp.prototype")}}

@@ -104,7 +104,7 @@ font-family: "Gill Sans Extrabold", sans-serif;
     - `ui-rounded`
       - : 默认用户界面的圆体。
     - `math`
-      - : 针对显示数学相关字符的特殊样式问题而设计的字体：支持上标和下标、跨行括号、嵌套表达式和具有不同含义的 double struck glyphs。
+      - : 针对显示数学相关字符的特殊样式问题而设计的字体：支持上标和下标、跨行括号、嵌套表达式和具有不同含义的双线体字形。
     - `emoji`
       - : 专门用于呈现 Emoji 表情符号的字体。
     - `fangsong`

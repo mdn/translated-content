@@ -9,8 +9,8 @@ slug: Web/API/MediaDevices/getSupportedConstraints
 
 ## 语法
 
-```
-var supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
+```js-nolint
+getSupportedConstraints()
 ```
 
 ### 参数

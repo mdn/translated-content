@@ -9,7 +9,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 只有 [ISO 8601 格式](https://tc39.es/ecma262/#sec-date-time-string-format)（ `YYYY-MM-DDTHH:mm:ss.sssZ`）為明確指定支援的格式。其餘格式因實作方式而異，不一定跨瀏覽器通用。若需要涵蓋多種格式，可以引入函式庫協助。
 
-{{EmbedInteractiveExample("pages/js/date-parse.html")}}
+{{InteractiveExample("JavaScript Demo: Date.parse()")}}
+
+```js interactive-example
+const unixTimeZero = Date.parse("01 Jan 1970 00:00:00 GMT");
+const javaScriptRelease = Date.parse("04 Dec 1995 00:12:00 GMT");
+
+console.log(unixTimeZero);
+// Expected output: 0
+
+console.log(javaScriptRelease);
+// Expected output: 818035920000
+```
 
 ## 語法
 
@@ -45,7 +56,8 @@ Date.parse(dateString)
 
 ### 退回至實作定義的日期格式
 
-> **備註：** 此段落包含因實作而異的行為，不同實作間可能不一致。
+> [!NOTE]
+> 此段落包含因實作而異的行為，不同實作間可能不一致。
 
 ECMAScript 規範表明：如果字串不符合標準格式，函式可能會退回至實作定義的啟發式或解析演算法。無法辨識的字串或包含無效值的 ISO 格式字串將使 `Date.parse()` 回傳 {{jsxref("NaN")}}。
 
@@ -86,7 +98,8 @@ Date.parse("foo-bar 2014");
 
 ### 假定時區上的差異
 
-> **備註：** 此段落包含因實作而異的行為，不同實作間可能不一致。
+> [!NOTE]
+> 此段落包含因實作而異的行為，不同實作間可能不一致。
 
 給定一非標準的字串 `"March 7, 2014"`，`parse()` 會假定為本地時區；但如果是簡化版的 ISO 8601 日曆日期延伸格式的字串，如 `"2014-03-07"`，則會假定為 UTC 時區。故，除非系統為 UTC 時區，否則依支援的 ECMAScript 版本，由該字串產生的 {{jsxref("Date")}} 物件可能呈現不同時間。亦即兩個看似相等的日期字串，依傳入的格式而可能產生不同解析結果。
 
@@ -110,7 +123,8 @@ Date.parse("2019-01-01T00:00:00");
 
 ### 非標準的日期字串
 
-> **備註：** 此段落包含因實作而異的行為，不同實作間可能不一致。
+> [!NOTE]
+> 此段落包含因實作而異的行為，不同實作間可能不一致。
 
 若 `ipoDate` 為既有的 {{jsxref("Date")}} 物件，可將其設定為本地時間的 1995-08-09，如下：
 

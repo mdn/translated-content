@@ -1,10 +1,9 @@
 ---
 title: Селектор следующего элемента
 slug: Web/CSS/Subsequent-sibling_combinator
-original_slug: Web/CSS/General_sibling_combinator
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 ## Описание
 
@@ -37,10 +36,10 @@ p ~ span {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Смежные селекторы](/ru/docs/Web/CSS/Adjacent_sibling_selectors)
+- [Смежные селекторы](/ru/docs/Web/CSS/Next-sibling_combinator)

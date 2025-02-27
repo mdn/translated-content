@@ -9,7 +9,8 @@ Les éléments {{HTMLElement("input")}} de type **`"reset"`** sont affichés sou
 
 {{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}
 
-> **Note :** Il est généralement peu recommandé d'inclure des boutons de réinitialisation dans les formulaires. En effet, ils sont rarement utiles et peuvent être source de frustration lorsqu'on appuie dessus involontairement.
+> [!NOTE]
+> Il est généralement peu recommandé d'inclure des boutons de réinitialisation dans les formulaires. En effet, ils sont rarement utiles et peuvent être source de frustration lorsqu'on appuie dessus involontairement.
 
 ## Valeur
 
@@ -79,7 +80,8 @@ Dans cet exemple, on utilise la touche <kbd>r</kbd> (il faudra donc appuyer sur 
 
 {{EmbedLiveSample("Ajouter_un_raccourci_au_bouton", 650, 100)}}
 
-> **Note :** Le problème d'un tel raccourci est que l'utilisateur ne saura pas quelle touche clavier correspond au raccourci. Dans une situation réaliste, il est nécessaire de fournir l'information via un autre biais (sans interférer avec le _design_ du site), par exemple grâce à un lien qui pointe vers la liste des différents raccourcis utilisés sur le site.
+> [!NOTE]
+> Le problème d'un tel raccourci est que l'utilisateur ne saura pas quelle touche clavier correspond au raccourci. Dans une situation réaliste, il est nécessaire de fournir l'information via un autre biais (sans interférer avec le _design_ du site), par exemple grâce à un lien qui pointe vers la liste des différents raccourcis utilisés sur le site.
 
 ### Désactiver/Activer un bouton
 
@@ -91,9 +93,11 @@ Pour désactiver un bouton de réinitialisation, il suffit d'appliquer l'attribu
 
 On peut activer/désactiver le bouton lors de la navigation sur la page avec JavaScript en modifiant la valeur de l'attribut `disabled` pour la passer de `true` à `false` et _vice versa_ (par exemple avec une instruction telle que `btn.disabled = true`).
 
-> **Note :** Pour plus d'exemples concernant l'activation/la désactivation de bouton, vous pouvez consulter la page [`<input type="button">`](/fr/docs/Web/HTML/Element/Input/button#Désactiver_et_activer_un_bouton).
+> [!NOTE]
+> Pour plus d'exemples concernant l'activation/la désactivation de bouton, vous pouvez consulter la page [`<input type="button">`](/fr/docs/Web/HTML/Element/input/button#d%c3%a9sactiver_et_activer_un_bouton).
 
-> **Note :** À la différence des autres navigateurs, [Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). L'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/button#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
+> [!NOTE]
+> À la différence des autres navigateurs, [Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). L'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/button#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
 
 ## Validation
 
@@ -143,5 +147,5 @@ Aucune fonctionnalité de vérification native côté client n'est implémentée
 - L'élément {{HTMLElement("input")}} et l'interface {{domxref("HTMLInputElement")}}.
 - L'élément {{HTMLElement("button")}}
 - [Apprendre les formulaires et les boutons](/fr/docs/Learn/HTML/Forms_and_buttons)
-- [L'accessibilité et les formulaires](/fr/docs/Web/Accessibility/ARIA/forms)
-- [Les formulaires HTML](/fr/docs/Learn/HTML/Forms)
+- [L'accessibilité et les formulaires](/fr/docs/Web/Accessibility/ARIA)
+- [Les formulaires HTML](/fr/docs/Learn/Forms)

@@ -3,7 +3,7 @@ title: substring-before
 slug: Web/XPath/Functions/substring-before
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `substring-before()` retourne retourne la partie d'une chaîne donnée précédant une sous-chaîne donnée.
 
@@ -39,7 +39,7 @@ Une chaîne.
 
 ### Définition
 
-[XPath 1.0, section 4.2](http://www.w3.org/TR/xpath#function-substring-before).
+[XPath 1.0, section 4.2](https://www.w3.org/TR/xpath#function-substring-before).
 
 ### Support Gecko
 

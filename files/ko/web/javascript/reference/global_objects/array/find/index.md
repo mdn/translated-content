@@ -2,7 +2,7 @@
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
 l10n:
-  sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
+  sourceCommit: 6589a6a25a5d2e9a359c3f02f37c670fb7c74259
 ---
 
 {{JSRef}}
@@ -14,8 +14,18 @@ l10n:
 - 배열에 값이 **존재**하는지 찾아야 하는 경우, {{jsxref("Array/includes", "includes()")}}를 사용하세요.
   이 역시 테스트 함수를 사용하는 것 대신 각 요소가 값과 동일한지 확인합니다.
 - 제공된 테스트 함수를 만족하는 요소가 있는지 찾아야 하는 경우, {{jsxref("Array/some", "some()")}}을 사용하세요.
+- 만약 주어진 테스트 함수를 만족하는 모든 요소를 찾고 싶으면 {{jsxref("Array/filter", "filter()")}}을 사용하세요.
 
-{{EmbedInteractiveExample("pages/js/array-find.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.find()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find((element) => element > 10);
+
+console.log(found);
+// Expected output: 12
+```
 
 ## 구문
 
@@ -43,17 +53,9 @@ find(callbackFn, thisArg)
 
 ## 설명
 
-`find()` 메서드는 [순회 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#순회_메서드)입니다. 이 메서드는 `callbackFn`이 [참](/ko/docs/Glossary/Truthy) 값을 반환할 때까지, 오름차순 인덱스로 순서로 배열의 각 요소에 대해 제공된 `callbackFn` 함수를 한 번씩 호출합니다. 그런 다음 `find()`는 해당 요소를 반환하고 배열 순회를 중지합니다. `callbackFn`이 [참](/ko/docs/Glossary/Truthy) 값을 반환하지 않으면, `find()`는 {{jsxref("undefined")}}를 반환합니다.
+`find()` 메서드는 [순회 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#순회_메서드)입니다. 이 메서드는 `callbackFn`이 [참 같은](/ko/docs/Glossary/Truthy) 값을 반환할 때까지, 오름차순 인덱스로 순서로 배열의 각 요소에 대해 제공된 `callbackFn` 함수를 한 번씩 호출합니다. 그런 다음 `find()`는 해당 요소를 반환하고 배열 순회를 중지합니다. `callbackFn`이 [참 같은](/ko/docs/Glossary/Truthy) 값을 반환하지 않으면, `find()`는 {{jsxref("undefined")}}를 반환합니다. 더 자세한 정보는 [순회 메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#순회_메서드) 섹션을 보시기 바랍니다. 이 섹션에는 이러한 메서드가 일반적으로 어떻게 동작하는지 설명하고 있습니다.
 
 `callbackFn`은 값이 할당된 인덱스뿐만 아니라 배열의 모든 인덱스에 대해 호출됩니다. [희소 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections#희소_배열)의 빈 슬롯은 `undefined`와 동일하게 동작합니다.
-
-`find()`는 호출되는 배열을 변경하지 않지만, `callbackFn`으로 제공된 함수는 변경할 수 있습니다. 그러나 배열의 length는 `callbackFn`을 처음 호출하기 전에 저장된다는 점에 유의하세요. 따라서,
-
-- `callbackFn`은 `find()` 호출이 시작되었을 때 배열의 초기 length 값을 초과하여 추가된 요소는 방문하지 않습니다.
-- 이미 방문한 인덱스를 변경해도 `callbackFn`이 해당 인덱스에 대해 다시 호출되지 않습니다.
-- 배열의 아직 방문하지 않은 기존 요소가 `callbackFn`에 의해 변경되는 경우, `callbackFn`에 전달된 값은 해당 요소가 방문될 당시의 값이 됩니다. [삭제된](/ko/docs/Web/JavaScript/Reference/Operators/delete) 요소는 `undefined`가 있는것 처럼 방문됩니다.
-
-> **경고:** 위에서 설명한 종류의 동시 수정은 이해하기 어려운 코드를 만드는 경우가 많으므로 일반적으로 지양해야 합니다(특별한 경우 제외).
 
 `find()` 메서드는 [범용](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#범용_배열_메서드)입니다. `this` 값에는 `length` 속성과 정수 키 속성만 있을 것으로 예상합니다.
 
@@ -107,6 +109,24 @@ function isPrime(element, index, array) {
 
 console.log([4, 6, 8, 12].find(isPrime)); // undefined, 소수 없음
 console.log([4, 5, 8, 12].find(isPrime)); // 5
+```
+
+### callbackFn의 세 번째 인수 사용하기
+
+`array` 인수는 배열의 다른 요소에 접근하려는 경우, 특히 배열을 참조하는 기존 변수가 없는 경우에 유용합니다. 다음 예제에서는 먼저 `filter()`를 사용하여 양수 값을 추출한 다음 `find()`를 사용하여 이웃 요소보다 작은 첫 번째 요소를 찾습니다.
+
+```js
+const numbers = [3, -1, 1, 4, 1, 5, 9, 2, 6];
+const firstTrough = numbers
+  .filter((num) => num > 0)
+  .find((num, idx, arr) => {
+    // arr 인수가 없으면 변수에 저장하지 않고는
+    // 중간 배열에 쉽게 접근할 수 없습니다.
+    if (idx > 0 && num >= arr[idx - 1]) return false;
+    if (idx < arr.length - 1 && num >= arr[idx + 1]) return false;
+    return true;
+  });
+console.log(firstTrough); // 1
 ```
 
 ### 희소 배열에서 find() 사용하기
@@ -176,7 +196,7 @@ console.log(Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)));
 ## 같이 보기
 
 - [`core-js`의 `Array.prototype.find` 폴리필](https://github.com/zloirock/core-js#ecmascript-array)
-- [인덱스 기반 컬렉션](/ko/docs/Web/JavaScript/Guide/Indexed_collections)
+- [인덱스 기반 컬렉션](/ko/docs/Web/JavaScript/Guide/Indexed_collections) 안내서
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.findLast()")}}

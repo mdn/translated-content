@@ -5,7 +5,7 @@ slug: Web/API/Window/resize_event
 
 {{ ApiRef() }}
 
-La propiedad **GlobalEventHandlers.onresize** contiene un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) desencadenado cuando un evento [`resize`](/es/docs/Web/Reference/Events/resize) es recibido.
+La propiedad **GlobalEventHandlers.onresize** contiene un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) desencadenado cuando un evento [`resize`](/es/docs/Web/API/Window/resize_event) es recibido.
 
 ## Sintaxis
 

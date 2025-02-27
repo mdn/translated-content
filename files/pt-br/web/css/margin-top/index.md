@@ -66,4 +66,4 @@ margin-top: unset;
 
 ## Compatibilidade de navegadores
 
-{{Compat("css.properties.margin-top")}}
+{{Compat}}

@@ -7,7 +7,31 @@ slug: Web/JavaScript/Reference/Operators/void
 
 **`void` 运算符**对给定的表达式进行求值，然后返回 {{jsxref("undefined")}}。
 
-{{EmbedInteractiveExample("pages/js/expressions-voidoperator.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - void operator", "taller")}}
+
+```js interactive-example
+const output = void 1;
+console.log(output);
+// Expected output: undefined
+
+void console.log("expression evaluated");
+// Expected output: "expression evaluated"
+
+void (function iife() {
+  console.log("iife is executed");
+})();
+// Expected output: "iife is executed"
+
+void function test() {
+  console.log("test function executed");
+};
+try {
+  test();
+} catch (e) {
+  console.log("test function is not defined");
+  // Expected output: "test function is not defined"
+}
+```
 
 ## 语法
 
@@ -76,7 +100,8 @@ void (function () {
 </a>
 ```
 
-> **备注：** 利用 `javascript:` 伪协议来执行 JavaScript 代码是不推荐的，推荐的做法是为链接元素绑定事件。
+> [!NOTE]
+> 利用 `javascript:` 伪协议来执行 JavaScript 代码是不推荐的，推荐的做法是为链接元素绑定事件。
 
 ### 在箭头函数中避免泄漏
 

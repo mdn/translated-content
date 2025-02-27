@@ -2,7 +2,7 @@
 title: Object.hasOwn()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
 l10n:
-  sourceCommit: ae586f9996f622b40379283f727febe94258b8c0
+  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
 {{JSRef}}
@@ -11,20 +11,35 @@ l10n:
 
 > **メモ:** `Object.hasOwn()` 静的メソッドは {{jsxref("Object.hasOwnProperty()")}} インスタンスメソッドに代わるものとして意図されています。
 
-{{EmbedInteractiveExample("pages/js/object-hasown.html")}}
+{{InteractiveExample("JavaScript Demo: Object.hasOwn()")}}
+
+```js interactive-example
+const object1 = {
+  prop: "exists",
+};
+
+console.log(Object.hasOwn(object1, "prop"));
+// Expected output: true
+
+console.log(Object.hasOwn(object1, "toString"));
+// Expected output: false
+
+console.log(Object.hasOwn(object1, "undeclaredPropertyValue"));
+// Expected output: false
+```
 
 ## 構文
 
-```js
-hasOwn(instance, prop);
+```js-nolint
+Object.hasOwn(obj, prop)
 ```
 
 ### 引数
 
-- `instance`
+- `obj`
   - : テストする JavaScript オブジェクトのインスタンス。
 - `prop`
-  - : テストするプロパティの名前の {{jsxref("String")}} または [Symbol](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。
+  - : テストするプロパティの名前の文字列または[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。
 
 ### 返値
 
@@ -34,7 +49,7 @@ hasOwn(instance, prop);
 
 **`Object.hasOwn()`** メソッドは、指定されたプロパティがオブジェクトの直接のプロパティである場合、そのプロパティ値が `null` または `undefined` であっても、`true` を返します。プロパティが継承されているか、またはまったく宣言されていない場合、このメソッドは `false` を返します。{{jsxref("Operators/in", "in")}} 演算子とは異なり、このメソッドは、オブジェクトのプロトタイプチェーンで指定されたプロパティをチェックしません。
 
-{{jsxref("Object.hasOwnProperty()")}} よりも推奨される理由は、`Object.create(null)` を使って作成したオブジェクトや、継承した `hasOwnProperty()` メソッドをオーバーライドしたオブジェクトに対して動作することです。これらの問題は、外部オブジェクトの `Object.prototype.hasOwnProperty()` を呼び出すことで回避できますが、`Object.hasOwn()` の方がより直感的に理解しやすいでしょう。
+{{jsxref("Object.prototype.hasOwnProperty()")}} よりも推奨される理由は、 [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)や、継承した `hasOwnProperty()` メソッドをオーバーライドしたオブジェクトに対して動作することです。これらの問題は、外部オブジェクトの `Object.prototype.hasOwnProperty()` を呼び出すことで回避できますが、`Object.hasOwn()` の方がより直感的に理解しやすいでしょう。
 
 ## 例
 
@@ -120,11 +135,11 @@ const foo = {
 };
 
 if (Object.hasOwn(foo, "bar")) {
-  console.log(foo.bar); //true - hasOwnProperty() が再実装されていても結果に影響しない
+  console.log(foo.bar); // true - hasOwnProperty() が再実装されていても結果に影響しない
 }
 ```
 
-また、{{jsxref("Object.create()","Object.create(null)")}} を使って作成されたオブジェクトのテストにも使用することができます。これらは `Object.prototype` を継承していないため、`hasOwnProperty()` はアクセスできません。
+また、 [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)でも使用することができます。これらは `Object.prototype` を継承していないため、`hasOwnProperty()` はアクセスできません。
 
 ```js
 const foo = Object.create(null);
@@ -144,10 +159,10 @@ if (Object.hasOwn(foo, "prop")) {
 
 ## 関連情報
 
-- [Polyfill of `Object.hasOwn` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [`Object.hasOwn` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.hasOwnProperty()")}}
 - [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
-- {{jsxref("Operators/in", "in")}} 演算子
+- {{jsxref("Operators/in", "in")}}
 - [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

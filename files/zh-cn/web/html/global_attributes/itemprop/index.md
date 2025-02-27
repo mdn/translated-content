@@ -194,7 +194,8 @@ ID 不是人性化的，所以产品的名字是用的人所能看懂的文字�
 </div>
 ```
 
-> **备注：** 微数据和被标记微数据的文档的内容之间是没有关系的。
+> [!NOTE]
+> 微数据和被标记微数据的文档的内容之间是没有关系的。
 
 ### Same structured data marked up in two different ways
 
@@ -298,7 +299,7 @@ The property value of a name-value pair is as given for the first matching case 
 
 - If the element is an **audio**, **embed**, **iframe**, **img**, **source**, **track**, or **video** element
 
-  - The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the [Microdata DOM API](/zh-CN/docs/Web/API/Microdata_DOM_API)) of the element at the time the attribute is set
+  - The value is the resulting URL string that results from parsing the value of the element's src attribute relative to the node document (part of the [Microdata DOM API](/zh-CN/docs/Web/HTML/Microdata)) of the element at the time the attribute is set
 
 - If the element is an **a**, **area**, or **link** element
 

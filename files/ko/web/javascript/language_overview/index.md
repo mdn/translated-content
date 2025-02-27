@@ -185,7 +185,7 @@ console.log(obj); // { a: 1 }
 
 값을 할당하지 않고 변수를 선언하면, 그 값은 `undefined`입니다. 어차피 나중에 변경할 수 없기 때문에, 초기화해주는 것없이 `const` 변수를 선언할 수 없습니다.
 
-`let` 및 `const` 선언 변수는 여전히 정의된 전체 범위를 차지하며, 실제 선언 줄 이전의 [시간상 사각지대(temporal dead zone)](/ko/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)으로 알려진 영역에 있습니다. 여기에는 다른 언어에서는 발생하지 않는 변수 섀도잉과 흥미로운 상호 작용이 있습니다.
+`let` 및 `const` 선언 변수는 여전히 정의된 전체 범위를 차지하며, 실제 선언 줄 이전의 [일시적 사각지대(temporal dead zone)](/ko/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)으로 알려진 영역에 있습니다. 여기에는 다른 언어에서는 발생하지 않는 변수 섀도잉과 흥미로운 상호 작용이 있습니다.
 
 ```js
 function foo(x, condition) {
@@ -745,7 +745,7 @@ JavaScript는 본질적으로 단일 스레드입니다. [병렬화](https://en.
 
 JavaScript에서 비동기 코드를 작성하는 세 가지의 관용적인 방법이 있습니다.
 
-- 콜백 기반 방법(예: [`setTimeout()`](/ko/docs/Web/API/setTimeout))
+- 콜백 기반 방법(예: [`setTimeout()`](/ko/docs/Web/API/Window/setTimeout))
 - [`Promise`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise) 기반 방법
 - Promise의 문법적인 설탕(syntactic sugar)인 [`async`](/ko/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/ko/docs/Web/JavaScript/Reference/Operators/await) 방법
 
@@ -813,7 +813,7 @@ Haskell, Python, Java 등과 달리 JavaScript 모듈 해석은 전적으로 호
 
 이 페이지 전체에 걸쳐, 특정 기능은 "언어 수준"이고 다른 기능은 "런타임 수준"이라고 지속적으로 언급이 되었습니다.
 
-JavaScript는 범용 스크립팅 언어입니다. [핵심 언어 명세](/ko/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_the_core_language_ecmascript)은 순수한 계산 논리에 중점을 두고 있습니다. 입출력을 처리하지 않습니다. 사실, 추가 런타임 수준의 API(특히 [`console.log()`](/ko/docs/Web/API/console/log)) 없이, JavaScript 프로그램의 동작은 완전히 관찰할 수 없습니다.
+JavaScript는 범용 스크립팅 언어입니다. [핵심 언어 명세](/ko/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_the_core_language_ecmascript)은 순수한 계산 논리에 중점을 두고 있습니다. 입출력을 처리하지 않습니다. 사실, 추가 런타임 수준의 API(특히 [`console.log()`](/ko/docs/Web/API/console/log_static)) 없이, JavaScript 프로그램의 동작은 완전히 관찰할 수 없습니다.
 
 런타임 또는 호스트는 JavaScript 엔진(인터프리터)에 데이터를 공급하고 추가 전역 속성을 제공하며, 엔진이 외부 세계와 상호 작용할 수 있도록 훅을 제공합니다. 모듈 확인, 데이터 읽기, 메시지 인쇄, 네트워크 요청 보내기 등은 모두 런타임 수준 작업입니다. JavaScript는 처음부터 브라우저([DOM](/ko/docs/Web/API/Document_Object_Model)과 같은 API를 제공합니다), Node.js([파일 시스템 접근](https://nodejs.org/api/fs.html)과 같은 API를 제공합니다)와 같은 다양한 환경에서 채택되었습니다. JavaScript는 (가장 주요 목적인) 웹, 모바일 앱, 데스크탑 앱, 서버 측 앱, 서버리스, 임베디드 시스템 등에 성공적으로 통합되었습니다. JavaScript 핵심 기능에 대해 배우는 동안, 지식을 사용하기 위해 호스트에서 제공하는 기능을 이해하는 것도 중요합니다. 예를 들어, 브라우저 및 경우에 따라 비브라우저에 의해 구현되는 모든 [웹 플랫폼 API](/ko/docs/Web/API)에 대해 읽어볼 수 있습니다.
 

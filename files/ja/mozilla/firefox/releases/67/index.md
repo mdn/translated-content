@@ -13,12 +13,12 @@ Firefox 67 は、米国時間 2019 年 5 月 21 日 にリリースされまし�
 
 - デバッガーの更新:
 
-  - [カラムブレークポイント](/ja/docs/Tools/Debugger/How_to/Set_a_breakpoint) で、デバッガーに一時停止させたい行の特定の箇所 (またはカラム) を選択できます ([Firefox バグ 1528417](https://bugzil.la/1528417))。
-  - [ログポイント](/ja/docs/Tools/Debugger/Set_a_log_point) で、コードの実行を一時停止したりコードを変更することなく、実行中に特定の情報をコンソールに記録できます。
-  - [マップスコープ機能](/ja/docs/Tools/Debugger/Using_the_Debugger_map_scopes_feature) で、元のソースの編集を表示できます。
-  - デバッガーで、[worker](/ja/docs/Tools/Debugger/Debug_worker_threads) のスレッドを直接デバッグできます。
+  - [カラムブレークポイント](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_a_breakpoint/index.html) で、デバッガーに一時停止させたい行の特定の箇所 (またはカラム) を選択できます ([Firefox バグ 1528417](https://bugzil.la/1528417))。
+  - [ログポイント](https://firefox-source-docs.mozilla.org/devtools-user/debugger/set_a_logpoint/index.html) で、コードの実行を一時停止したりコードを変更することなく、実行中に特定の情報をコンソールに記録できます。
+  - [マップスコープ機能](https://firefox-source-docs.mozilla.org/devtools-user/debugger/using_the_debugger_map_scopes_feature/index.html) で、元のソースの編集を表示できます。
+  - デバッガーで、[worker](/ja/docs/Web/API/Web_Workers_API/Using_web_workers#Debugging_worker_threads) のスレッドを直接デバッグできます。
 
-- [ウェブコンソール](/ja/docs/Tools/Web_Console) の更新:
+- [ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) の更新:
 
   - キーボードを使用して、コンソールの詳細情報を移動できます ([Firefox バグ 1424159](https://bugzil.la/1424159))。
   - macOS では Cmd + K で、コンソールの内容を消去するようになりました ([Firefox バグ 1532939](https://bugzil.la/1532939))。
@@ -29,21 +29,21 @@ Firefox 67 は、米国時間 2019 年 5 月 21 日 にリリースされまし�
   - コンソールでコードファイルへのリンクをクリックすると、デバッガーが把握しているファイルであればデバッガーに移動するようになりました ([Firefox バグ 1447244](https://bugzil.la/1447244))。
   - ユーザーがコンソールの内容をフィルタリングしたとき、フィルターをクリアするアイコンをテキストボックスに表示するようになりました ([Firefox バグ 1525821](https://bugzil.la/1525821))。
 
-- [ネットワークモニター](/ja/docs/Tools/Network_Monitor) の改良:
+- [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) の改良:
 
-  - ネットワークモニターの [ヘッダー](/ja/docs/Tools/Network_Monitor/request_details#Headers) パネルで、既知のトラッカーに関するリソースの通知を表示するようになりました ([Firefox バグ 1485416](https://bugzil.la/1485416))。
-  - ネットワークモニターの [要求の列](/ja/docs/Tools/Network_Monitor/request_list#Network_request_columns) で、表示する列や列の並べ替えを制御できます。このコンテキストメニューに、リストの並べ替えをリセットするコマンドを追加しました ([Firefox バグ 1454962](https://bugzil.la/1454962))。
-  - ネットワークモニターで、作業しやすいように [列の幅を変更する](/ja/docs/Tools/Network_Monitor/request_list#Network_request_columns) ことが可能になりました ([Firefox バグ 1358414](https://bugzil.la/1358414))。
+  - ネットワークモニターの [ヘッダー](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#headers) パネルで、既知のトラッカーに関するリソースの通知を表示するようになりました ([Firefox バグ 1485416](https://bugzil.la/1485416))。
+  - ネットワークモニターの [要求の列](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#network-request-columns) で、表示する列や列の並べ替えを制御できます。このコンテキストメニューに、リストの並べ替えをリセットするコマンドを追加しました ([Firefox バグ 1454962](https://bugzil.la/1454962))。
+  - ネットワークモニターで、作業しやすいように [列の幅を変更する](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#network-request-columns) ことが可能になりました ([Firefox バグ 1358414](https://bugzil.la/1358414))。
 
 #### 廃止
 
-- 以下の開発ツールのパネルを削除しました (詳しくは [Deprecated tools](/ja/docs/Tools/Deprecated_tools) をご覧ください):
+- 以下の開発ツールのパネルを削除しました (詳しくは [Deprecated tools](https://firefox-source-docs.mozilla.org/devtools-user/deprecated_tools/index.html) をご覧ください):
 
   - Canvas デバッガー ([Firefox バグ 1403938](https://bugzil.la/1403938))
   - シェーダーエディター ([Firefox バグ 1342237](https://bugzil.la/1342237))
   - WebAudio エディター([Firefox バグ 1403944](https://bugzil.la/1403944))
 
-- 以下の開発ツールのパネルを非推奨にしました (詳しくは [Deprecated tools](/ja/docs/Tools/Deprecated_tools) をご覧ください):
+- 以下の開発ツールのパネルを非推奨にしました (詳しくは [Deprecated tools](https://firefox-source-docs.mozilla.org/devtools-user/deprecated_tools/index.html) をご覧ください):
 
   - WebIDE ([Firefox バグ 1539462](https://bugzil.la/1539462))
   - Connect... ページ ([Firefox バグ 1539462](https://bugzil.la/1539462))
@@ -71,7 +71,7 @@ _変更なし。_
 
 - {{jsxref("String.prototype.matchAll")}} を実装して、デフォルトで有効にしました ([Firefox バグ 1435829](https://bugzil.la/1435829)、[Firefox バグ 1531830](https://bugzil.la/1531830))。
 - 動的なモジュールの {{jsxref("Statements/import", "import()", "#Dynamic_Imports")}} の提案のサポートを、デフォルトで有効にしました ([Firefox バグ 1517546](https://bugzil.la/1517546))。
-- [シバン構文](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#Hashbang_comments) の提案を実装しました ([Firefox バグ 1519097](https://bugzil.la/1519097))。
+- [シバン構文](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#hashbang_comments) の提案を実装しました ([Firefox バグ 1519097](https://bugzil.la/1519097))。
 
 ### API
 
@@ -92,7 +92,7 @@ _変更なし。_
 
 #### メディア、Web Audio、WebRTC
 
-- The [AV1 動画コーデック](/ja/docs/Web/Media/Formats/Video_codecs#AV1) を Linux でサポートしました。
+- The [AV1 動画コーデック](/ja/docs/Web/Media/Formats/Video_codecs#av1) を Linux でサポートしました。
 - [dav1d](https://code.videolan.org/videolan/dav1d) が [AV1](https://aomediacodec.github.io/av1-spec/av1-spec.pdf) の既定のメディアデコーダーになりました ([Firefox バグ 1533742](https://bugzil.la/1533742) および [Firefox バグ 1535038](https://bugzil.la/1535038) をご覧ください)。
 - 新しいトラックを追加するためストリームを指定せずに {{domxref("RTCPeerConnection.addTrack()")}} を呼び出したとき、予期するとおりに動作するようになりました。ストリームがないトラックをコネクションに追加します。それぞれのピアは、トラックとストリームの関係を管理する責任を持ちます ([Firefox バグ 1231414](https://bugzil.la/1231414))。
 - {{domxref("MediaDeviceInfo.groupId")}} プロパティを実装しました ([Firefox バグ 1213453](https://bugzil.la/1213453))。これは Firefox 39 から存在していましたが、実際は関連するデバイスを同じグループ ID に集めていませんでした。

@@ -1,11 +1,12 @@
 ---
-title: Request.arrayBuffer()
+title: "Request: arrayBuffer() メソッド"
+short-title: arrayBuffer()
 slug: Web/API/Request/arrayBuffer
 l10n:
-  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
+  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`arrayBuffer()`** は {{domxref("Request")}} インターフェイスのメソッドで、リクエスト本体を読み込み、それを {{jsxref("ArrayBuffer")}} で解決するプロミスとして返します。
 
@@ -34,7 +35,7 @@ const request = new Request("/myEndpoint", {
 });
 
 request.arrayBuffer().then((buffer) => {
-  // do something with the buffer sent in the request
+  // リクエストで送信されたバッファーに対して何らかの処理を行う
 });
 ```
 

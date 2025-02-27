@@ -17,7 +17,7 @@ async function [name]([param1[, param2[, ..., paramN]]]) {
 }
 ```
 
-Согласно спецификации [ES2015](/ru/docs/), вы также можете использовать [стрелочные функции](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+Согласно спецификации [ES2015](/ru/docs/Web), вы также можете использовать [стрелочные функции](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Параметры
 
@@ -68,11 +68,9 @@ add(10).then((v) => {
 
 ## Спецификации
 
-| Specification                                                                | Status               | Comment                       |
-| ---------------------------------------------------------------------------- | -------------------- | ----------------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ESDraft')}} | Initial definition in ES2017. |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

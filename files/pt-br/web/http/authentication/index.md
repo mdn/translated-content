@@ -62,7 +62,7 @@ O esquema mais comum de autenticação é o "Basic", que é introduzido com mais
 - **Digest** (veja {{rfc(7616)}}, apenas hash md5 é suportado no Firefox, veja [Erro do Firefox 472823](https://bugzil.la/472823) para o suporte de encriptação SHA),
 - **HOBA** (veja {{rfc(7486)}} (esboço), **H**TTP **O**rigin-**B**ound **A**uthentication (Autenticação Vinculada à Origem HTTP), baseado em assinatura digital),
 - **Mutual** (veja [draft-ietf-httpauth-mutual](https://tools.ietf.org/html/draft-ietf-httpauth-mutual-11)),
-- **AWS4-HMAC-SHA256** (veja [Documentação AWS](http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)).
+- **AWS4-HMAC-SHA256** (veja [Documentação AWS](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)).
 
 ## Esquema Basic de autenticação
 

@@ -1,11 +1,13 @@
 ---
 title: text-shadow
 slug: Web/CSS/text-shadow
+l10n:
+  sourceCommit: 919d97a4bda8004f63f655d3f9576c27a82c8a2a
 ---
 
 {{CSSRef}}
 
-**`text-shadow`** は CSS のプロパティで、テキストに影を追加します。文字列およびその装飾 ([`decoration`](/ja/docs/Web/CSS/text-decoration)) に適用される影のリストをカンマで区切ったリストで受け付けます。それぞれの影は、要素からの X および Y オフセット、影の明るさ、影の色のうちいくつかの組み合わせで記述します。
+**`text-shadow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストに影を追加します。文字列およびその装飾 ([`decoration`](/ja/docs/Web/CSS/text-decoration)) に適用される影のリストをカンマで区切ったリストで受け付けます。それぞれの影は、要素からの X および Y オフセット、影の明るさ、影の色のうちいくつかの組み合わせで記述します。
 
 {{EmbedInteractiveExample("pages/css/text-shadow.html")}}
 
@@ -32,6 +34,7 @@ text-shadow: 5px 10px;
 text-shadow: inherit;
 text-shadow: initial;
 text-shadow: revert;
+text-shadow: revert-layer;
 text-shadow: unset;
 ```
 
@@ -60,9 +63,9 @@ text-shadow: unset;
 
 {{csssyntax}}
 
-## Examples
+## 例
 
-<h3 id="Simple_shadow">単純な影</h3>
+### 基本的な影
 
 ```css
 .red-text-shadow {
@@ -77,9 +80,9 @@ text-shadow: unset;
 </p>
 ```
 
-{{EmbedLiveSample('Simple_shadow', '660px', '90px')}}
+{{EmbedLiveSample('Basic_shadow', '660px', '90px')}}
 
-<h3 id="Multiple_shadows">複数の影</h3>
+### 複数の影
 
 ```css
 .white-text-with-blue-shadow {
@@ -111,12 +114,8 @@ text-shadow: unset;
 
 {{Compat}}
 
-### Quantum CSS のメモ
-
-- Gecko には {{cssxref("transition")}} にバグがあり、色が指定された `text-shadow` から色が指定されていない `text-shadow` へのトランジションが動作しません ([Firefox バグ 726550](https://bugzil.la/726550))。これは Firefox の新しいパラレル CSS エンジン ([Quantum CSS](https://wiki.mozilla.org/Quantum) または [Stylo](https://wiki.mozilla.org/Quantum/Stylo) とも呼ばれ、 Firefox 57 でリリースされる予定です) で修正されています。
-
 ## 関連情報
 
+- {{cssxref("&lt;color&gt;")}} データ型（影の色を指定するため）
 - {{cssxref("box-shadow")}}
-- {{cssxref("&lt;color&gt;")}} データ型 (影の色を指定するため)
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/HTML/Applying_color)
+- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}

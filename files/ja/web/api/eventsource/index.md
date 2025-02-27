@@ -71,7 +71,8 @@ evtSource.onmessage = (e) => {
 
 受信されたそれぞれのイベントは、 `EventSource` オブジェクトの `onmessage` イベントハンドラーを実行させます。ここでは、新しい {{HTMLElement("li")}} 要素を生成してその中にメッセージのデータを書き込み、この要素を文書の中にある既存のリスト要素に追加します。
 
-> **メモ:** この例の全容が GitHub にあります。[Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events) をご覧ください。
+> [!NOTE]
+> この例の全容が GitHub にあります。[Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events) をご覧ください。
 
 名前付きのイベントを待ち受けするには、送信されるイベントの種類ごとにリスナーが必要になります。
 

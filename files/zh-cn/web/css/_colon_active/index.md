@@ -1,11 +1,11 @@
 ---
-title: ":active"
+title: :active
 slug: Web/CSS/:active
 ---
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`:active`** [伪类](/zh-CN/docs/CSS/Pseudo-classes)匹配被用户激活的元素。它让页面能在浏览器监测到激活时给出反馈。当用鼠标交互时，它代表的是用户按下按键和松开按键之间的时间。
+[CSS](/zh-CN/docs/Web/CSS) **`:active`** [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)匹配被用户激活的元素。它让页面能在浏览器监测到激活时给出反馈。当用鼠标交互时，它代表的是用户按下按键和松开按键之间的时间。
 
 ```css
 /* Selects any <a> that is being activated */
@@ -18,12 +18,15 @@ a:active {
 
 这个样式可能会被后声明的其他链接相关的伪类覆盖，这些伪类包括 {{cssxref(":link")}}，{{cssxref(":hover")}} 和 {{cssxref(":visited")}}。为保证样式生效，需要把 `:active` 的样式放在所有链接相关的样式之后。这种链接伪类先后顺序被称为 _LVHA 顺序_：`:link` — `:visited` — `:hover` — `:active`。
 
-> **备注：** 在有多键鼠标的系统中，CSS 3 规定 `:active` 伪类必须只匹配主按键；对于右手操作鼠标来说，就是左键。
+> [!NOTE]
+> 在有多键鼠标的系统中，CSS 3 规定 `:active` 伪类必须只匹配主按键；对于右手操作鼠标来说，就是左键。
 
 ## 语法
 
-```
-:active
+```css
+:active {
+  /* ... */
+}
 ```
 
 ## 示例

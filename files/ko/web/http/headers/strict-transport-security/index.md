@@ -9,7 +9,8 @@ l10n:
 
 HTTP **`Strict-Transport-Security`** 응답 헤더(종종 {{Glossary("HSTS")}}로 축약됨)는 사이트가 HTTPS를 통해서만 접근되어야 하며 향후 HTTP를 사용하여 사이트에 접근하려는 모든 시도는 자동으로 HTTPS로 변환되어야 함을 브라우저에 알립니다.
 
-> **참고:** 처음 HTTP 연결이 여전히 중간자 공격에 취약한 서버에서 단순히 HTTP를 HTTPS(301) 리디렉션으로 구성하는 것보다 더 안전합니다.
+> [!NOTE]
+> 처음 HTTP 연결이 여전히 중간자 공격에 취약한 서버에서 단순히 HTTP를 HTTPS(301) 리디렉션으로 구성하는 것보다 더 안전합니다.
 
 <table class="properties">
   <tbody>
@@ -39,7 +40,7 @@ Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 - `includeSubDomains` {{optional_inline}}
   - : 이 선택적 매개변수가 지정된 경우, 이 규칙은 사이트의 모든 하위 도메인에도 적용됩니다.
 - `preload` {{optional_inline}} {{non-standard_inline}}
-  - : 자세한 내용은 [Strict Transport Security 프리로딩](#Strict_Transport_Security_프리로딩)를 참조하십시오. `preload`를 사용하는 경우 `max-age` 지시어는 `31536000`(1년) 이상이어야 하며 `includeSubDomains` 지시문이 있어야 합니다. 사양의 일부가 아닙니다.
+  - : 자세한 내용은 [Strict Transport Security 프리로딩](#strict_transport_security_프리로딩)를 참조하십시오. `preload`를 사용하는 경우 `max-age` 지시어는 `31536000`(1년) 이상이어야 하며 `includeSubDomains` 지시문이 있어야 합니다. 사양의 일부가 아닙니다.
 
 ## 설명
 
@@ -75,7 +76,7 @@ Google은 [HSTS 프리로딩 서비스](https://hstspreload.org/)를 관리하�
 그러나 HSTS 사양의 일부가 아니므로 공식적인 것으로 취급해서는 안 됩니다.
 
 - Chrome의 HSTS 사전 로드 목록 관련 정보: <https://www.chromium.org/hsts>
-- Firefox HSTS 사전 로드 목록 참조: [nsSTSPreloadList.inc](https://hg.mozilla.org/mozilla-central/raw-file/tip/security/manager/ssl/nsSTSPreloadList.inc)
+- Firefox HSTS 사전 로드 목록 참조: [nsSTSPreloadList.inc](https://searchfox.org/mozilla-central/source/security/manager/ssl/nsSTSPreloadList.inc)
 
 ## 예제
 

@@ -49,7 +49,7 @@ HTML ドラッグ & ドロップのインターフェイスは {{domxref("DragEv
 
 {{domxref("DataTransferItemList")}} オブジェクトは {{domxref("DataTransferItem")}} オブジェクトのリストです。このリストオブジェクトはリストにドラッグ項目を追加したり、リストからドラッグ項目を削除したり、ドラッグ項目のリストをクリアするメソッドを持ちます。
 
-{{domxref("DataTransfer")}} と{{domxref("DataTransferItem")}} インターフェイスの主な違いは、前者が同期の {{domxref("DataTransfer.getData","getData()")}} メソッドを使ってドラッグ項目のデータにアクセスするのに対し、後者は代わりに非同期の{{domxref("DataTransferItem.getAsString","getAsString()")}} メソッドを使うことです。.
+{{domxref("DataTransfer")}} と{{domxref("DataTransferItem")}} インターフェイスの主な違いは、前者が同期の {{domxref("DataTransfer.getData","getData()")}} メソッドを使ってドラッグ項目のデータにアクセスするのに対し、後者は代わりに非同期の{{domxref("DataTransferItem.getAsString","getAsString()")}} メソッドを使うことです。
 
 > **メモ:** {{domxref("DragEvent")}} と {{domxref("DataTransfer")}} はデスクトップブラウザーでは広く対応していますが、 {{domxref("DataTransferItem")}} と {{domxref("DataTransferItemList")}} インターフェイスのブラウザーの対応は限られています。相互運用性について、より詳しくは[相互運用性](#相互運用性)を見てください。
 
@@ -242,7 +242,7 @@ function dragstart_handler(ev) {
 
 - [Copying and moving elements with the `DataTransfer` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html)
 - [Copying and moving elements with the `DataTransferListItem` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
-- ファイルのドラッグ & ドロップ (Firefox のみ): <http://jsfiddle.net/9C2EF/>
+- ファイルのドラッグ & ドロップ (Firefox のみ): <https://jsfiddle.net/9C2EF/>
 - ファイルのドラッグ & ドロップ (全ブラウザー): [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
 - Drag and Drop API を使った駐車場プロジェクト: <https://park.glitch.me/> ([ここで](https://glitch.com/edit/#!/park)編集できます)
 

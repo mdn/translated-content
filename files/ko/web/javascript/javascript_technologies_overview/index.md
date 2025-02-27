@@ -15,7 +15,7 @@ l10n:
 
 ## 핵심 언어, JavaScript(ECMAScript)
 
-JavaScript의 핵심 언어는 ECMA TC39 위원회가 [ECMAScript](/ko/docs/Web/JavaScript/Language_Resources)라는 언어로 표준화했습니다. "ECMAScript"는 언어 표준을 나타내는 용어이지만, "ECMAScript"와 "JavaScript"는 같은 의미로 사용할 수 있습니다.
+JavaScript의 핵심 언어는 ECMA TC39 위원회가 [ECMAScript](/ko/docs/Web/JavaScript/JavaScript_technologies_overview)라는 언어로 표준화했습니다. "ECMAScript"는 언어 표준을 나타내는 용어이지만, "ECMAScript"와 "JavaScript"는 같은 의미로 사용할 수 있습니다.
 
 핵심 언어는 [Node.js](https://nodejs.org) 등 비브라우저 환경에서도 사용됩니다.
 
@@ -72,7 +72,7 @@ DOM(Document Object Model)은 HTML, XHTML, XML 문서의 객체를 나타내고 
 
 - 문서 구조, 트리 모델, [DOM core](https://dom.spec.whatwg.org/)의 DOM Event Architecture: [`Node`](/ko/docs/Web/API/Node), [`Element`](/ko/docs/Web/API/Element), [`DocumentFragment`](/ko/docs/Web/API/DocumentFragment), [`Document`](/ko/docs/Web/API/Document), [`DOMImplementation`](/ko/docs/Web/API/DOMImplementation), [`Event`](/ko/docs/Web/API/Event), [`EventTarget`](/ko/docs/Web/API/EventTarget), …
 - 덜 엄격한 DOM Event Architecture 정의, [DOM events](https://w3c.github.io/uievents/)에 속하는 특정 이벤트.
-- [DOM Traversal](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html), [DOM Range](https://dom.spec.whatwg.org/#ranges) 등
+- [DOM Traversal](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html), [DOM Range](https://dom.spec.whatwg.org/#ranges) 등
 
 ECMAScript의 관점에서, DOM 명세에 정의된 객체는 "호스트 객체"라고 부릅니다.
 
@@ -86,7 +86,7 @@ HTML 명세는 문서의 제약도 정의합니다. 예를 들어, 순서가 없
 
 ## 알아둘만한 다른 API
 
-- [`setTimeout`](/ko/docs/Web/API/setTimeout) 과 [`setInterval`](/ko/docs/Web/API/setInterval) 함수는 HTML 표준의 [`Window`](/ko/docs/Web/API/Window) 인터페이스에 처음으로 정의되었습니다.
+- [`setTimeout`](/ko/docs/Web/API/Window/setTimeout) 과 [`setInterval`](/ko/docs/Web/API/Window/setInterval) 함수는 HTML 표준의 [`Window`](/ko/docs/Web/API/Window) 인터페이스에 처음으로 정의되었습니다.
 - [XMLHttpRequest](https://xhr.spec.whatwg.org/)는 비동기적 HTTP 요청을 보낼 수 있게 해주는 API입니다.
 - [Fetch API](https://fetch.spec.whatwg.org/)는 네트워크 요청에 대해 보다 인체공학적인 추상화를 제공합니다.
 - [CSS Object Model](https://drafts.csswg.org/cssom/)는 CSS 규칙을 객체처럼 다룰 수 있도록 추상화합니다.
@@ -95,7 +95,7 @@ HTML 명세는 문서의 제약도 정의합니다. 예를 들어, 순서가 없
 - [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext)는 [`<canvas>`](/ko/docs/Web/HTML/Element/canvas) 요소에 그릴 수 있게 해주는 API입니다.
 - [WebAssembly 인터페이스](https://webassembly.github.io/spec/js-api)는 JavaScript 코드와 [WebAssembly](/ko/docs/WebAssembly) 모듈 간의 통신을 위한 기능을 제공합니다.
 
-비 브라우저 환경(예: Node.js)에는 DOM API가 없는 경우가 많은데, 문서와 상호 작용하지 않기 때문입니다. [`fetch()`](/ko/docs/Web/API/fetch) 및 [`setTimeout()`](/ko/docs/Web/API/setTimeout)과 같은 많은 웹 API를 구현합니다.
+비 브라우저 환경(예: Node.js)에는 DOM API가 없는 경우가 많은데, 문서와 상호 작용하지 않기 때문입니다. [`fetch()`](/ko/docs/Web/API/Window/fetch) 및 [`setTimeout()`](/ko/docs/Web/API/Window/setTimeout)과 같은 많은 웹 API를 구현합니다.
 
 ## JavaScript 구현체
 
@@ -114,7 +114,7 @@ HTML 명세는 문서의 제약도 정의합니다. 예를 들어, 순서가 없
 
 비 브라우저용으로 특별히 제작된 일부 엔진이 있습니다.
 
-- [Engine262](https://engine262.js.org/), 자바스크립트로 작성된 자바스크립트 엔진입니다. JavaScript 개발자가 새로운 언어 기능을 탐색하고 명세에서 버그를 찾을 수 있도록 만들어졌습니다.
+- [Engine262](https://engine262.js.org/), JavaScript로 작성된 JavaScript 엔진입니다. JavaScript 개발자가 새로운 언어 기능을 탐색하고 명세에서 버그를 찾을 수 있도록 만들어졌습니다.
 - IoT와 같은 임베디드 시스템에서 사용되는 [Moddable XS](https://www.moddable.com/).
 - [QuickJS](https://bellard.org/quickjs/), 작고 삽입 가능한 JavaScript 엔진입니다.
 - Meta의 [Hermes](https://hermesengine.dev/) 엔진은 [React Native](https://reactnative.dev/docs/hermes)에 최적화된 엔진입니다.
@@ -135,7 +135,7 @@ JavaScript 쉘을 사용하면 웹 페이지를 다시 로드하지 않고도 Ja
 - [Node.js](https://nodejs.org/) - Node.js는 빠르고 확장 가능한 네트워크 애플리케이션을 쉽게 구축할 수 있는 플랫폼입니다.
 - [ShellJS](https://github.com/shelljs/shelljs) - Node.js용 휴대용 Unix 셸 명령입니다.
 
-### 브라우저 기반 자바스크립트 쉘
+### 브라우저 기반 JavaScript 쉘
 
 다음 JavaScript 쉘은 브라우저의 JavaScript 엔진을 통해 코드를 실행합니다.
 
@@ -148,8 +148,8 @@ JavaScript 쉘을 사용하면 웹 페이지를 다시 로드하지 않고도 Ja
 JavaScript 코드 작성 및 디버깅에 유용한 도구입니다.
 
 - [Firefox 개발자 도구](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
-  - : [웹 콘솔](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html), [자바스크립트 프로파일러](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html), [디버거](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) 등.
-- [자바스크립트 배우기](https://learnjavascript.online/)
+  - : [웹 콘솔](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html), [JavaScript 프로파일러](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html), [디버거](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) 등.
+- [JavaScript 배우기](https://learnjavascript.online/)
   - : 웹 개발자 지망생을 위한 탁월한 리소스 — 자동화된 평가 안내에 따라 짧은 강의와 대화형 테스트를 통해 대화형 환경에서 JavaScript를 학습합니다. 처음 40개 레슨은 무료이며 소액의 일회성 결제로 전체 과정을 수강할 수 있습니다.
 - [TogetherJS](https://togetherjs.com/)
   - : 협업이 쉬워집니다. 사이트에 TogetherJS를 추가하면 사용자가 웹사이트에서 실시간으로 서로 도울 수 있습니다!

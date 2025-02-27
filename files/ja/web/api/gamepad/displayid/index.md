@@ -12,7 +12,8 @@ l10n:
 
 ゲームパッドは、ディスプレイのポーズと同じ空間にあるポーズを報告すると、 {{domxref("VRDisplay")}} と関連していると見なされます。{{domxref("VRDisplay.getPose")}} を参照してください。
 
-> **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#gamepad-getvrdisplays-attribute) に含まれていました。 [WebXR Gamepads Module](https://immersive-web.github.io/webxr-gamepads-module/) に取って代わられました。
+> [!NOTE]
+> このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#gamepad-getvrdisplays-attribute) に含まれていました。 [WebXR Gamepads Module](https://immersive-web.github.io/webxr-gamepads-module/) に取って代わられました。
 >
 > このプロパティを直接置き換えるものはありません。 {{domxref("XRInputSource")}} に関連付けられた {{domxref("Gamepad")}} オブジェクトは、 {{domxref("XRInputSource.gamepad")}} プロパティを使用して取得することができます。
 
@@ -46,5 +47,4 @@ window.addEventListener("gamepadconnected", (e) => {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームのデモ，ダウンロード，その他のリソース．
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

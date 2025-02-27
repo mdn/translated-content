@@ -5,7 +5,22 @@ slug: Web/JavaScript/Reference/Operators/instanceof
 
 {{jsSidebar("Operators")}}O operador **`instanceof`** testa se um objeto tem, em seu prototype, a função construtora.
 
-{{EmbedInteractiveExample("pages/js/expressions-instanceof.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - instanceof")}}
+
+```js interactive-example
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+const auto = new Car("Honda", "Accord", 1998);
+
+console.log(auto instanceof Car);
+// Expected output: true
+
+console.log(auto instanceof Object);
+// Expected output: true
+```
 
 ## Sintaxe
 
@@ -110,15 +125,11 @@ var b = mycar instanceof Object; // retorna true
 
 ## Especificações
 
-| Especificação                                                            | Status             | Comentário                                        |
-| ------------------------------------------------------------------------ | ------------------ | ------------------------------------------------- |
-| ECMAScript 1st Edition.                                                  | Standard           | Definição inicial. Implementada no JavaScript 1.4 |
-| {{SpecName('ES5.1', '#sec-11.8.6', 'The instanceof operator')}}          | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-relational-operators', 'Relational Operators')}} | {{Spec2('ES6')}}   |                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.instanceof")}}
+{{Compat}}
 
 ## Veja também
 

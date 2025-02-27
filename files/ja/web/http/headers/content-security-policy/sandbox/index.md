@@ -65,7 +65,7 @@ Content-Security-Policy: sandbox <value>;
 - `allow-top-navigation-by-user-activation`
   - : ユーザーの指示で開始された場合に限り、リソースが最上位の閲覧コンテキストを移動させます。
 - `allow-top-navigation-to-custom-protocols`
-  - : ブラウザーに組み込まれている、または[ウェブサイトによって登録された](/ja/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers) `http` 以外のプロトコルへのナビゲーションを可能にします。この機能は `allow-popups` または `allow-top-navigation` キーワードでも有効になる。
+  - : ブラウザーに組み込まれている、または[ウェブサイトによって登録された](/ja/docs/Web/API/Navigator/registerProtocolHandler) `http` 以外のプロトコルへのナビゲーションを可能にします。この機能は `allow-popups` または `allow-top-navigation` キーワードでも有効になる。
 
 ## 例
 

@@ -127,7 +127,8 @@ collisionDetection();
 
 {{JSFiddleEmbed("https://jsfiddle.net/yumetodo/kaed3hbu/","","395")}}
 
-> **メモ:** ボールの色をブロックに当たったときに変えましょう。
+> [!NOTE]
+> ボールの色をブロックに当たったときに変えましょう。
 
 ## 次のステップ
 

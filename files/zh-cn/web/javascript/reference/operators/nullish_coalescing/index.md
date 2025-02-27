@@ -1,20 +1,49 @@
 ---
 title: 空值合并运算符（??）
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
+l10n:
+  sourceCommit: 59a92ab5609f0a021602f11843f3b00b16e67e6d
 ---
 
-{{JSSidebar("Operators")}}
+{{jsSidebar("Operators")}}
 
-**空值合并运算符**（**`??`**）是一个逻辑运算符，当左侧的操作数为 {{jsxref("null")}} 或者 {{jsxref("undefined")}} 时，返回其右侧操作数，否则返回左侧操作数。
+**空值合并运算符**（**`??`**）是一个逻辑运算符，当左侧的操作数为 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 或者 {{jsxref("undefined")}} 时，返回其右侧操作数，否则返回左侧操作数。
 
-与[逻辑或运算符（`||`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR)不同，逻辑或运算符会在左侧操作数为{{Glossary("Falsy", "假值")}}时返回右侧操作数。也就是说，如果使用 `||` 来为某些变量设置默认值，可能会遇到意料之外的行为。比如为假值（例如，`''` 或 `0`）时。见下面的例子。
+{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing operator")}}
 
-{{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}
+```js interactive-example
+const foo = null ?? "default string";
+console.log(foo);
+// Expected output: "default string"
+
+const baz = 0 ?? 42;
+console.log(baz);
+// Expected output: 0
+```
 
 ## 语法
 
 ```js-nolint
 leftExpr ?? rightExpr
+```
+
+## 描述
+
+空值合并运算符可以视为[逻辑或运算符（`||`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR)的特例。后者在左侧操作数为*任何*{{Glossary("Falsy", "假值")}}时返回右侧操作数，而不仅仅是 `null` 或 `undefined`。换句话说，如果你使用 `||` 为另一个变量 `foo` 提供某些默认值，而你将某些假值视为可用值（例如 `''` 或 `0`），则可能会遇到意外的行为。更多示例参见[下方](#为变量赋默认值)。
+
+空值合并运算符的[运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)是第五低的，直接低于 `||` 且直接高于[条件（三元）运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_operator)。
+
+将 `??` 直接与逻辑与（`&&`）和逻辑或（`||`）运算符组合使用是不可取的。这种情况下会抛出[语法错误](/zh-CN/docs/Web/JavaScript/Reference/Errors/Cant_use_nullish_coalescing_unparenthesized)。
+
+```js-nolint example-bad
+null || undefined ?? "foo"; // 抛出 SyntaxError
+true && undefined ?? "foo"; // 抛出 SyntaxError
+```
+
+相反，请提供括号以明确表示优先级：
+
+```js example-good
+(null || undefined) ?? "foo"; // 返回“foo”
 ```
 
 ## 示例
@@ -25,7 +54,7 @@ leftExpr ?? rightExpr
 
 ```js
 const nullValue = null;
-const emptyText = ""; // 空字符串，是一个假值，Boolean("") === false
+const emptyText = ""; // 假值
 const someNumber = 42;
 
 const valA = nullValue ?? "valA 的默认值";
@@ -44,32 +73,32 @@ console.log(valC); // 42
 ```js
 let foo;
 
-//  foo is never assigned any value so it is still undefined
+// foo 从未被赋予任何值，因此它仍然是未定义的
 let someDummyText = foo || "Hello!";
 ```
 
-然而，由于 `||` 是一个布尔逻辑运算符，左侧的操作数会被强制转换成布尔值用于求值。任何假值（`0`， `''`， `NaN`， `null`， `undefined`）都不会被返回。这导致如果你使用`0`，`''`或`NaN`作为有效值，就会出现不可预料的后果。
+然而，由于 `||` 是一个布尔逻辑运算符，左侧的操作数会被强制转换成布尔值用于求值。任何*假值*（`0`、`''`、`NaN`、`false`等等）都不会被返回。如果你使用 `0`、`''` 或 `NaN` 作为有效值，就会出现不可预料的后果。
 
 ```js
-let count = 0;
-let text = "";
+const count = 0;
+const text = "";
 
-let qty = count || 42;
-let message = text || "hi!";
+const qty = count || 42;
+const message = text || "hi!";
 console.log(qty); // 42，而不是 0
 console.log(message); // "hi!"，而不是 ""
 ```
 
-空值合并运算符可以避免这种陷阱，其只在第一个操作数为`null` 或 `undefined` 时（而不是其他假值）返回第二个操作数：
+空值合并运算符可以避免这种陷阱，其只在第一个操作数为 `null` 或 `undefined` 时（而不是其他假值）返回第二个操作数：
 
 ```js
-let myText = ""; // An empty string (which is also a falsy value)
+const myText = ""; // 空字符串（其也是假值）
 
-let notFalsyText = myText || "Hello world";
+const notFalsyText = myText || "Hello world";
 console.log(notFalsyText); // Hello world
 
-let preservingFalsy = myText ?? "Hi neighborhood";
-console.log(preservingFalsy); // '' (as myText is neither undefined nor null)
+const preservingFalsy = myText ?? "Hi neighborhood";
+console.log(preservingFalsy); // ''（myText 既不是 undefined 也不是 null）
 ```
 
 ### 短路
@@ -100,30 +129,15 @@ console.log(B() ?? C());
 // 所以右侧表达式没有被执行
 ```
 
-### 不能与 AND 或 OR 运算符共用
+### 与可选链运算符（`?.`）的关系
 
-将 `??` 直接与 AND（`&&`）和 OR（`||`）运算符组合使用是不可取的。（译者注：应当是因为空值合并运算符和其他逻辑运算符之间的运算优先级/运算顺序是未定义的）这种情况下会抛出 [`SyntaxError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) 。
-
-```js example-bad
-null || undefined ?? "foo"; // 抛出 SyntaxError
-true || undefined ?? "foo"; // 抛出 SyntaxError
-```
-
-但是，如果使用括号来显式表明运算优先级，是没有问题的：
-
-```js example-good
-(null || undefined) ?? "foo"; // 返回 "foo"
-```
-
-### 与可选链式运算符（`?.`）的关系
-
-空值合并运算符针对 `undefined` 与 `null` 这两个值，[可选链式运算符（`?.`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining) 也是如此。在这访问属性可能为 `undefined` 与 `null` 的对象时，可选链式运算符非常有用。
+空值合并运算符将 `undefined` 与 `null` 视为特殊值，[可选链运算符（`?.`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)也是如此。该运算符在访问可能为 `null` 或 `undefined` 的对象属性时非常有用。将这两者结合，可以安全地访问可能为空值的对象属性，并在其为空值时提供默认值。
 
 ```js
-let foo = { someFooProp: "hi" };
+const foo = { someFooProp: "hi" };
 
-console.log(foo.someFooProp?.toUpperCase()); // "HI"
-console.log(foo.someBarProp?.toUpperCase()); // undefined
+console.log(foo.someFooProp?.toUpperCase() ?? "not available"); // "HI"
+console.log(foo.someBarProp?.toUpperCase() ?? "not available"); // "not available"
 ```
 
 ## 规范
@@ -136,7 +150,7 @@ console.log(foo.someBarProp?.toUpperCase()); // undefined
 
 ## 参见
 
-- [逻辑空赋值运算符（`??=`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment)
+- [逻辑空赋值运算符（`??=`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
 - [可选链运算符（`?.`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - [逻辑或运算符（`||`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [函数中的默认参数值](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- [默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)

@@ -18,13 +18,13 @@ TypeError: 'x' is not a function or its return value is not iterable (Chrome)
 
 ## Quel est le problème ?
 
-La valeur passée comme opérande droit de [`for…of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of) ou comme argument d'une fonction telle que {{jsxref("Promise.all")}} ou {{jsxref("TypedArray.from")}} n'est pas [un objet itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration). Un objet itérable peut être un objet itérable natif tel qu'un objet {{jsxref("Array")}}, {{jsxref("String")}} ou {{jsxref("Map")}} ou le résultat d'un générateur ou un objet qui implémente [le protocole itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérable_»).
+La valeur passée comme opérande droit de [`for…of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) ou comme argument d'une fonction telle que {{jsxref("Promise.all")}} ou {{jsxref("TypedArray.from")}} n'est pas [un objet itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols). Un objet itérable peut être un objet itérable natif tel qu'un objet {{jsxref("Array")}}, {{jsxref("String")}} ou {{jsxref("Map")}} ou le résultat d'un générateur ou un objet qui implémente [le protocole itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»).
 
 ## Exemples
 
 ### Parcourir les propriétés d'un objet
 
-En JavaScript, les objets ne sont pas itérables car ils n'implémentent pas le [protocole itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérable_»). On ne peut donc pas utiliser `for...of` afin d'en parcourir les propriétés.
+En JavaScript, les objets ne sont pas itérables car ils n'implémentent pas le [protocole itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»). On ne peut donc pas utiliser `for...of` afin d'en parcourir les propriétés.
 
 ```js example-bad
 var obj = { France: "Paris", England: "London" };
@@ -67,7 +67,7 @@ for (const [country, capital] of map.entries()) console.log(country, capital);
 
 ### Itérer grâce à un générateur
 
-[Les générateurs](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs) sont des fonctions qui, lorsqu'elles sont appelées, produisent des objets itérables.
+[Les générateurs](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators) sont des fonctions qui, lorsqu'elles sont appelées, produisent des objets itérables.
 
 ```js example-bad
 function* generate(a, b) {
@@ -119,9 +119,9 @@ Array.from(monIterableVide); // []
 
 ## Voir aussi
 
-- [Le protocole itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérable_»)
+- [Le protocole itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»)
 - {{jsxref("Object.keys")}}
 - {{jsxref("Object.entries")}}
 - {{jsxref("Map")}}
-- [Les générateurs](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs#Générateurs)
-- [`for…of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of)
+- [Les générateurs](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators#générateurs)
+- [`for…of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of)

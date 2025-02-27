@@ -3,11 +3,18 @@ title: Date.prototype.toUTCString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`toUTCString()`** 方法把一个日期转换为一个字符串，使用 UTC 时区。
 
-{{EmbedInteractiveExample("pages/js/date-toutcstring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toUTCString()")}}
+
+```js interactive-example
+const event = new Date("14 Jun 2017 00:00:00 PDT");
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 14 Jun 2017 07:00:00 GMT"
+```
 
 ## 语法
 
@@ -41,7 +48,7 @@ var UTCstring = today.toUTCString();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toDateString()")}}

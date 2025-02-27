@@ -5,11 +5,11 @@ slug: Web/CSS/CSS_containment
 
 {{CSSRef}}
 
-El objetivo de la espicificación CSS Containment es mejorar el rendimiento de las páginas web permitiendo a los desarrolladores aislar un subárbol del resto de la página. Si el navegador sabe si una parte de la página es independiente, se puede optimizar la renderización y el rendimiento mejora. La especificación define una única propiedad CSS {{cssxref("contain")}}. Este documento relata los objetivos básicos de la especificación.
+El objetivo de la especificación CSS Containment es mejorar el rendimiento de las páginas web, permitiendo a los desarrolladores aislar un subárbol del resto de la página. Si el navegador sabe si una parte de la página es independiente, se puede optimizar la renderización y el rendimiento mejora. La especificación define una única propiedad CSS {{cssxref("contain")}}. Este documento relata los objetivos básicos de la especificación.
 
 ## Ejemplo básico
 
-Muchas páginas web contienen un número de secciones que don independientes entre sí. Por ejemplo una lista de encabezados de artículo y un contenido, como en el siguiente marcado.
+Muchas páginas web contienen un número de secciones que son independientes entre sí. Por ejemplo una lista de encabezados de artículo y un contenido, como en el siguiente marcado.
 
 ```html
 <h1>Mi blog</h1>
@@ -33,7 +33,7 @@ article {
 
 Cada artículo es independiente de los demás artículos en la página, y en consecuencia se les ha aplicado `contain: content` para indicar al navegador que ese es el caso. El navegador puede entonces usar esa información para tomar decisiones sobre cómo renderizar el contenido. Por ejemplo, puede no renderizar artículos que estén fuera del área visible.
 
-Si aplicamos a cada `<article>` la propiedad `contain` con el valor `content`, cuando se inserten nuevos elementos el navegador entiende que no necesita hacer _relayout_ o _repaint_ de ningun área que esté fuera del subárbol que contenga el elemento, aunque si aplicamos estilos al `<article>` (por ejemplo `height: auto`), el navegador puede necesitar hacerse cargo de ese cambio de tamaño.
+Si aplicamos a cada `<article>` la propiedad `contain` con el valor `content`, cuando se inserten nuevos elementos el navegador entiende que no necesita hacer _relayout_ o _repaint_ de ningún área que esté fuera del subárbol que contenga el elemento, aunque si aplicamos estilos al `<article>` (por ejemplo `height: auto`), el navegador puede necesitar hacerse cargo de ese cambio de tamaño.
 
 Se nos ha dicho por medio de la propiedad `contain` que cada artículo es independiente de los demás.
 
@@ -94,7 +94,7 @@ article {
 }
 ```
 
-Despite the name, style containment does not provide scoped styles such as you would get with the [Shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM). The main use case is to prevent situations where a [CSS Counter](/es/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters) could be changed in an element, which could then affect the rest of the tree.
+Despite the name, style containment does not provide scoped styles such as you would get with the [Shadow DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM). The main use case is to prevent situations where a [CSS Counter](/es/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) could be changed in an element, which could then affect the rest of the tree.
 
 Using `contain: style` would ensure that the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties created new counters scoped to that subtree only.
 

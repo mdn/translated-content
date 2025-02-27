@@ -5,7 +5,7 @@ slug: Web/CSS/background-attachment
 
 {{CSSRef}}
 
-[CSS](/ko/docs/CSS) **`background-attachment`** 속성은 배경 이미지를 {{glossary("viewport", "뷰포트")}} 내에서 고정할지, 아니면 자신의 컨테이닝 블록과 함께 스크롤할지 지정합니다.
+[CSS](/ko/docs/Web/CSS) **`background-attachment`** 속성은 배경 이미지를 {{glossary("viewport", "뷰포트")}} 내에서 고정할지, 아니면 자신의 컨테이닝 블록과 함께 스크롤할지 지정합니다.
 
 {{EmbedInteractiveExample("pages/css/background-attachment.html")}}
 
@@ -60,7 +60,7 @@ background-attachment: unset;
 
 ```css
 p {
-  background-image: url("starsolid.gif");
+  background-image: url("star-solid.gif");
   background-attachment: fixed;
 }
 ```
@@ -95,7 +95,7 @@ p {
 
 ```css
 p {
-  background-image: url("starsolid.gif"), url("startransparent.gif");
+  background-image: url("star-solid.gif"), url("star-transparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }
@@ -115,4 +115,4 @@ p {
 
 ## 같이 보기
 
-- [한 번에 여러 배경 사용하기](/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [한 번에 여러 배경 사용하기](/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

@@ -3,7 +3,7 @@ title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Resumo
 
@@ -47,7 +47,7 @@ console.log(meuPeixePop); // 'esturjao'
 
 ## Compatibilidade nos Navegadores
 
-{{Compat("javascript.builtins.Array.pop")}}
+{{Compat}}
 
 ## Veja também
 

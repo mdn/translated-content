@@ -3,12 +3,14 @@ title: loadend
 slug: Web/API/XMLHttpRequest/loadend_event
 ---
 
+{{APIRef("XMLHttpRequest API")}}
+
 loadend 事件总是在一个资源的加载进度停止之后被触发 (例如，在已经触发“error”，“abort”或“load”事件之后)。这适用于 {{domxref("XMLHttpRequest")}} 调用，以及 {{htmlelement("img")}} 或 {{htmlelement("video")}} 之类元素的内容。
 
 ## General info
 
 - 规范
-  - : [Progress](http://www.w3.org/TR/progress-events/)
+  - : [Progress](https://www.w3.org/TR/progress-events/)
 - 接口
   - : ProgressEvent
 - 可冒泡
@@ -36,15 +38,7 @@ loadend 事件总是在一个资源的加载进度停止之后被触发 (例如�
 
 {{Specifications}}
 
-## Related Events
+## 参见
 
-- [`loadstart`](/zh-CN/docs/Web/API/XMLHttpRequest/loadstart_event)
-- [`progress`](/zh-CN/docs/Web/API/XMLHttpRequest/progress_event)
-- [`error`](/zh-CN/docs/Web/API/Element/error_event)
-- [`abort`](/zh-CN/docs/Web/API/HTMLMediaElement/abort_event)
-- [`load`](/zh-CN/docs/Web/API/Window/load_event)
-- [`loadend`](/zh-CN/docs/Web/API/XMLHttpRequest/loadend_event)
-
-## See also
-
-- [Monitoring progress](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
+- 相关事件：{{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}、{{domxref("XMLHttpRequest/load_event", "load")}}、{{domxref("XMLHttpRequest/progress_event", "progress")}}、{{domxref("XMLHttpRequest/error_event", "error")}}、{{domxref("XMLHttpRequest/abort_event", "abort")}}
+- [监测进度](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#监测进度)

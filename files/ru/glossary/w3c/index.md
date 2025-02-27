@@ -3,6 +3,8 @@ title: W3C
 slug: Glossary/W3C
 ---
 
+{{GlossarySidebar}}
+
 The _World Wide Web Consortium_ (W3C) is an international body that maintains {{Glossary("World Wide Web", "Web-related")}} rules and frameworks.
 
 W3C объединяет более 350 организаций-участников, присоединившихся для разработки стандартов Веба, run outreach programs, and maintain an open forum for talking about the Web. W3C координирует компании в индустрии, чтобы быть уверенными в едином понимании W3C стандартов.
@@ -13,4 +15,4 @@ W3C объединяет более 350 организаций-участник�
 
 ### Основная информация
 
-- [W3C веб-сайт](http://www.w3.org/)
+- [W3C веб-сайт](https://www.w3.org/)

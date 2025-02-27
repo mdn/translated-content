@@ -1,35 +1,34 @@
 ---
-title: IDBDatabase.objectStoreNames
+title: "IDBDatabase: objectStoreNames プロパティ"
+short-title: objectStoreNames
 slug: Web/API/IDBDatabase/objectStoreNames
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{ APIRef("IDBDatabase") }}
+{{ APIRef("IndexedDB") }}
 
-{{domxref("IDBDatabase")}} インターフェイスの **`objectStoreNames`** プロパティは、現在接続しているデータベースの[オブジェクトストア](/ja/docs/IndexedDB#gloss_object_store)名のリストを含む {{ domxref("DOMStringList") }} です。
+**`objectStoreNames`** は {{domxref("IDBDatabase")}} インターフェイスのプロパティで、現在接続しているデータベースの[オブジェクトストア](/ja/docs/Web/API/IndexedDB_API#gloss_object_store)名のリストを含む {{ domxref("DOMStringList") }} です。
 
-## 構文
-
-```js
-db.objectStoreNames;
-```
+{{AvailableInWorkers}}
 
 ### 値
 
-現在接続しているデータベースの[オブジェクトストア](/ja/docs/IndexedDB#gloss_object_store)名のリストを含む {{ domxref("DOMStringList") }}。
+現在接続しているデータベースの[オブジェクトストア](/ja/docs/Web/API/IndexedDB_API#gloss_object_store)名のリストを含む {{ domxref("DOMStringList") }}。
 
 ## 例
 
 ```js
-// 我々のデータベースを開きます｡
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+// データベースを開く
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // これら 2 個のイベントハンドラーは､データベースが正常に開かれたか､失敗した時に動作します｡
-DBOpenRequest.onerror = function (event) {
-  note.innerHTML += "<li>Error loading database.</li>";
+DBOpenRequest.onerror = (event) => {
+  note.innerHTML += "<li>データベースの読み込みに失敗しました｡</li>";
 };
 
-DBOpenRequest.onsuccess = function (event) {
-  note.innerHTML += "<li>Database initialised.</li>";
+DBOpenRequest.onsuccess = (event) => {
+  note.innerHTML += "<li>データベースを初期化しました｡</li>";
 
   // データベースを開いた結果を変数 db に保存します｡これは後でたくさん使います｡
   db = DBOpenRequest.result;
@@ -46,7 +45,7 @@ DBOpenRequest.onsuccess = function (event) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.IDBDatabase.objectStoreNames")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -14,7 +14,7 @@ slug: Web/API/Window/resize_event
 ## Основная информация
 
 - Спецификации
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-resize), [CSSOM View](http://www.w3.org/TR/cssom-view/#resizing-viewports)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-resize), [CSSOM View](https://www.w3.org/TR/cssom-view/#resizing-viewports)
 - Интерфейс
   - : UIEvent
 - Bubbles
@@ -26,14 +26,14 @@ slug: Web/API/Window/resize_event
 - Действие по умолчанию
   - : Нет
 
-| Property                        | Type                                          | Description                                                                                |
-| ------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `target` {{readonlyInline}}     | [`EventTarget`](/ru/docs/Web/API/EventTarget) | The event target (the topmost target in the DOM tree).                                     |
-| `type` {{readonlyInline}}       | [`DOMString`](/ru/docs/Web/API/DOMString)     | The type of event.                                                                         |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/ru/docs/Web/API/Boolean)         | Whether the event normally bubbles or not.                                                 |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/ru/docs/Web/API/Boolean)         | Whether the event is cancellable or not.                                                   |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/ru/docs/Web/API/WindowProxy) | [`document.defaultView`](/ru/docs/Web/API/Document/defaultView) (`window` of the document) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                              | 0.                                                                                         |
+| Property                        | Type                                                                  | Description                                                                                |
+| ------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `target` {{readonlyInline}}     | [`EventTarget`](/ru/docs/Web/API/EventTarget)                         | The event target (the topmost target in the DOM tree).                                     |
+| `type` {{readonlyInline}}       | [`DOMString`](/ru/docs/Web/API/DOMString)                             | The type of event.                                                                         |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Whether the event normally bubbles or not.                                                 |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Whether the event is cancellable or not.                                                   |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/ru/docs/Web/API/WindowProxy)                         | [`document.defaultView`](/ru/docs/Web/API/Document/defaultView) (`window` of the document) |
+| `detail` {{readonlyInline}}     | `long` (`float`)                                                      | 0.                                                                                         |
 
 ## Примеры
 

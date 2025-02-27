@@ -20,8 +20,12 @@ The `measure's` {{domxref("PerformanceEntry","performance entry")}} will have th
 
 ## 语法
 
-```
-performance.measure(name, startMark, endMark);
+```js-nolint
+measure(measureName)
+measure(measureName, startMark)
+measure(measureName, startMark, endMark)
+measure(measureName, measureOptions)
+measure(measureName, measureOptions, endMark)
 ```
 
 ### 参数

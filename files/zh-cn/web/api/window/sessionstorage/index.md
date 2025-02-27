@@ -12,10 +12,11 @@ slug: Web/API/Window/sessionStorage
 - 打开多个相同的 URL 的 Tabs 页面，会创建各自的 `sessionStorage`。
 - 关闭对应浏览器标签或窗口，会清除对应的 `sessionStorage`。
 
-> **备注：** 应该注意，存储在 sessionStorage 或 localStorage 中的数据**特定于页面的协议**。也就
+> [!NOTE]
+> 应该注意，存储在 sessionStorage 或 localStorage 中的数据**特定于页面的协议**。也就
 > 是说 `http://example.com` 与 `https://example.com` 的 sessionStorage 相互隔离。
 >
-> 被存储的键值对总是以 UTF-16 [DOMString](/zh-CN/docs/Web/API/DOMString) 的格式所存储，其使用两个字节来表示一个字符。对于对象、整数 key 值会自动转换成字符串形式。
+> 被存储的键值对总是以 UTF-16 [DOMString](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String) 的格式所存储，其使用两个字节来表示一个字符。对于对象、整数 key 值会自动转换成字符串形式。
 
 ## 语法
 
@@ -65,7 +66,8 @@ field.addEventListener("change", function () {
 });
 ```
 
-> **备注：** 完整的使用示例可以查看[使用 Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 一文。
+> [!NOTE]
+> 完整的使用示例可以查看[使用 Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 一文。
 
 ## 规范
 
@@ -76,7 +78,8 @@ field.addEventListener("change", function () {
 {{Compat}}
 各浏览器支持的 localStorage 和 sessionStorage 容量上限不同。测试页面 [detailed rundown of all the storage capacities for various browsers](http://dev-test.nemikor.com/web-storage/support-test/)。
 
-> **备注：** 从 iOS 5.1 之后，移动端的 Safari 将 localStorage 数据存储在 cache 文件中，在操作系统的要求下，会偶尔进行清除，特别是空间不足时。
+> [!NOTE]
+> 从 iOS 5.1 之后，移动端的 Safari 将 localStorage 数据存储在 cache 文件中，在操作系统的要求下，会偶尔进行清除，特别是空间不足时。
 
 ## 相关链接
 

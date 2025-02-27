@@ -1,5 +1,5 @@
 ---
-title: ":only-child"
+title: :only-child
 slug: Web/CSS/:only-child
 ---
 
@@ -15,7 +15,8 @@ p:only-child {
 }
 ```
 
-> **Note :** En CSS3, pour cibler l'élément, il fallait que celui-ci ait un élément parent. Cette restriction a été levée avec CSS4.
+> [!NOTE]
+> En CSS3, pour cibler l'élément, il fallait que celui-ci ait un élément parent. Cette restriction a été levée avec CSS4.
 
 ## Syntaxe
 

@@ -9,7 +9,27 @@ slug: Web/JavaScript/Reference/Operators/async_function*
 
 你也可以使用 [`async function*` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)定义一个异步生成器函数。
 
-{{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Async Function Asterisk", "taller")}}
+
+```js interactive-example
+async function* foo() {
+  yield await Promise.resolve("a");
+  yield await Promise.resolve("b");
+  yield await Promise.resolve("c");
+}
+
+let str = "";
+
+async function generate() {
+  for await (const val of foo()) {
+    str = str + val;
+  }
+  console.log(str);
+}
+
+generate();
+// Expected output: "abc"
+```
 
 ## 语法
 
@@ -35,7 +55,8 @@ async function* name(param0, param1, /* … ,*/ paramN) {
 }
 ```
 
-> **备注：** 为了避免 [`async function*` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)所带来的歧义，[表达式语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/Expression_statement)不能以关键字 `async function` 开头。`async function` 关键字仅在上下文中无法接受语句时，才会被视为表达式的开头。
+> [!NOTE]
+> 为了避免 [`async function*` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)所带来的歧义，[表达式语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/Expression_statement)不能以关键字 `async function` 开头。`async function` 关键字仅在上下文中无法接受语句时，才会被视为表达式的开头。
 
 ### 参数
 

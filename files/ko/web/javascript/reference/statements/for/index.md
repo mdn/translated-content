@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Statements/for
 
 **`for` 문**은 괄호로 감싸고 세미콜론으로 구분한 세 개의 선택식과, 반복을 수행할 문(주로 {{jsxref("Statements/block", "블럭문", "", 0)}})으로 이루어져 있습니다.
 
-{{EmbedInteractiveExample("pages/js/statement-for.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For")}}
+
+```js interactive-example
+let str = "";
+
+for (let i = 0; i < 9; i++) {
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "012345678"
+```
 
 ## 구문
 
@@ -116,7 +127,8 @@ showOffsetPos("content");
 // top: 153px;"
 ```
 
-> **참고:** 여기서 쓰인 세미콜론은, JavaScript가 **필수로 요구하는 몇 안되는 세미콜론**입니다. 물론 세미콜론 없이는 반복 사이클 선언의 바로 다음 줄을 반복 본문으로 인식합니다.
+> [!NOTE]
+> 여기서 쓰인 세미콜론은, JavaScript가 **필수로 요구하는 몇 안되는 세미콜론**입니다. 물론 세미콜론 없이는 반복 사이클 선언의 바로 다음 줄을 반복 본문으로 인식합니다.
 
 ## 명세서
 

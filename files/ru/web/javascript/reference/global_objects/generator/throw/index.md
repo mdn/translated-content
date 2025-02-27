@@ -58,7 +58,7 @@ g.throw(new Error("Something went wrong"));
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

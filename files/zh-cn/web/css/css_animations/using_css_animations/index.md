@@ -3,7 +3,7 @@ title: 使用 CSS 动画
 slug: Web/CSS/CSS_animations/Using_CSS_animations
 ---
 
-{{SeeCompatTable}}{{CSSRef}}
+{{CSSRef}}
 
 **CSS animations** 使得可以将从一个 CSS 样式配置转换到另一个 CSS 样式配置。动画包括两个部分：描述动画的样式规则和用于指定动画开始、结束以及中间点样式的关键帧。
 
@@ -46,7 +46,8 @@ slug: Web/CSS/CSS_animations/Using_CSS_animations
 
 ## 示例
 
-> **备注：** 这里的示例没有在 CSS 动画属性上使用任何前缀，Webkit 内核浏览器或者早期版本浏览器可能需要前缀，下面的实例包含了`-webkit-`前缀。
+> [!NOTE]
+> 这里的示例没有在 CSS 动画属性上使用任何前缀，Webkit 内核浏览器或者早期版本浏览器可能需要前缀，下面的实例包含了`-webkit-`前缀。
 
 ### 文本滑过浏览器窗口
 
@@ -275,7 +276,7 @@ e.addEventListener("animationiteration", listener, false);
 e.className = "slidein";
 ```
 
-以上是非常标准的代码写法，setup() 最后设置动画元素的 `class` 为 slidein，启动动画。为什么这样做？因为`animationstart`事件在动画一开始时就被触发，在我们的示例中，该事件在我们的代码执行前就被触发，所以我们自己通过设置元素的的`class`来启动动画。
+以上是非常标准的代码写法，setup() 最后设置动画元素的 `class` 为 slidein，启动动画。为什么这样做？因为 `animationstart` 事件在动画一开始时就被触发，在我们的示例中，该事件在我们的代码执行前就被触发，所以我们自己通过设置元素的 `class` 来启动动画。
 
 #### 接收事件
 
@@ -331,8 +332,8 @@ function listener(e) {
 
 {{EmbedLiveSample('使用动画事件', '600', '300')}}
 
-## See also
+## 参见
 
-- {{ domxref("AnimationEvent", "AnimationEvent") }}
-- [Detecting CSS animation support](/zh-CN/docs/CSS/CSS_animations/Detecting_CSS_animation_support)
-- [Using CSS transitions](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions)
+- {{domxref("AnimationEvent", "AnimationEvent")}}
+- [CSS 动画的技巧](/zh-CN/docs/Web/API/Web_Animations_API/Tips)
+- [使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)

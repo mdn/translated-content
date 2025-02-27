@@ -1,11 +1,11 @@
 ---
-title: GlobalEventHandlers.onclose
+title: "HTMLDialogElement: событие close"
 slug: Web/API/HTMLDialogElement/close_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{APIRef}}
 
-Обработчик события для событий закрытия, отправляется в окно. (Не доступен в Firefox 2 или Safari)
+Обработчик события для событий закрытия, отправляется в окно.
 
 ## Синтаксис
 
@@ -23,7 +23,7 @@ window.onclose = funcRef;
 window.onclose = resetThatServerThing;
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

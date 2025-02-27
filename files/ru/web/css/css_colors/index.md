@@ -26,20 +26,10 @@ _Нет._
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
-### `color` property
-
-{{Compat("css.properties.color")}}
-
-### `color-adjust` property
-
-{{Compat("css.properties.color-adjust")}}
-
-### `opacity` property
-
-{{Compat("css.properties.opacity")}}
+{{Compat}}
 
 ## Смотрите также
 
-- В CSS градиенты не цвета, а [изображения](/ru/docs/Web/CSS/CSS_Images).
+- В CSS градиенты не цвета, а [изображения](/ru/docs/Web/CSS/CSS_images).

@@ -1,13 +1,14 @@
 ---
 title: HTML 属性リファレンス
+short-title: 属性
 slug: Web/HTML/Attributes
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 56cbe48e4426172461d9297523b68716922690e5
 ---
 
 {{HTMLSidebar("Attributes")}}
 
-HTML の要素は**属性**を持ちます。ユーザーが望む条件を満たすために、さまざまな方法で要素を構成したり、動作を調整したりする追加の値です。
+HTML 要素には**属性**が存在します。これは、ユーザーが求める基準を満たすために、要素を構成したり、さまざまな方法で動作を調整したりするための追加の値です。
 
 ## 属性一覧
 
@@ -31,10 +32,10 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/form#attr-accept-charset">accept-charset</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/form#accept-charset">accept-charset</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
-      <td>対応している文字集合のリストです。</td>
+      <td>文字集合であり、指定した場合は <code>"UTF-8"</code> でなければなりません。</td>
     </tr>
     <tr>
       <td>
@@ -47,7 +48,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/action">action</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/form#action">action</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -56,10 +57,9 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/align">align</a></code>
+        <code>align</code> {{deprecated_inline}}
       </td>
       <td>
-        {{ HTMLElement("applet") }},
         {{ HTMLElement("caption") }}, {{ HTMLElement("col") }},
         {{ HTMLElement("colgroup") }},
         {{ HTMLElement("hr") }}, {{ HTMLElement("iframe") }},
@@ -82,14 +82,23 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         <code><a href="/ja/docs/Web/HTML/Attributes/alt">alt</a></code>
       </td>
       <td>
-        {{ HTMLElement("applet") }}, {{ HTMLElement("area") }},
+        {{ HTMLElement("area") }},
         {{ HTMLElement("img") }}, {{ HTMLElement("input") }}
       </td>
       <td>画像が表示できない場合の代替テキストです。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/script#attr-async">async</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/link#as">as</a></code>
+      </td>
+      <td>
+        {{ HTMLElement("link") }}
+      </td>
+      <td>リンクで読み込むコンテンツの種類を指定します。</td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/ja/docs/Web/HTML/Element/script#async">async</a></code>
       </td>
       <td>{{ HTMLElement("script") }}</td>
       <td>スクリプトを非同期で実行します。</td>
@@ -120,21 +129,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/autofocus">autofocus</a></code>
-      </td>
-      <td>
-        {{ HTMLElement("button") }},
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
-        {{ HTMLElement("select") }},
-        {{ HTMLElement("textarea") }}
-      </td>
-      <td>
-        ページ読込後に、対象要素に自動的にフォーカスを当てるようにします。
-      </td>
-    </tr>
-    <tr>
-      <td>
         <code><a href="/ja/docs/Web/HTML/Attributes/autoplay">autoplay</a></code>
       </td>
       <td>
@@ -151,7 +145,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
       </td>
       <td>
         画像ファイルの URL を指定します。
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>メモ:</strong> ブラウザーや電子メールクライアントはまだこの属性に対応していますが、廃止済みです。代わりに CSS の {{ Cssxref("background-image") }} を使用してください。
           </p>
@@ -171,7 +165,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
       </td>
       <td>
         <p>要素の背景色です。</p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>メモ:</strong> これは古い属性です。代わりに CSS の {{ Cssxref("background-color") }} プロパティを使用してください。
           </p>
@@ -186,22 +180,12 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
       </td>
       <td>
         <p>境界線の幅です。</p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>メモ:</strong> これは古い属性です。代わりに CSS の {{ Cssxref("border") }} プロパティを使用してください。
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/buffered">buffered</a></code>
-      </td>
-      <td>
-        {{ HTMLElement("audio") }},
-        {{ HTMLElement("video") }}
-      </td>
-      <td>すでにバッファリングされたメディアの時間の範囲を示します。</td>
     </tr>
     <tr>
       <td>
@@ -214,17 +198,10 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/keygen#attr-challenge">challenge</a></code>
-      </td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>公開鍵とともに送信するチャレンジ文字列</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/charset">charset</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/meta#charset">charset</a></code>
       </td>
       <td>
-        {{ HTMLElement("meta") }}, {{ HTMLElement("script") }}
+        {{ HTMLElement("meta") }}
       </td>
       <td>ページまたはスクリプトの文字エンコーディングを宣言します。</td>
     </tr>
@@ -258,20 +235,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
       <td>よく使われるプロパティで要素にスタイルを適用するために CSS と共によく用いられます。</td>
     </tr>
     <tr>
-      <td><code><a href="/ja/docs/Web/HTML/Element/applet#attr-code">code</a></code></td>
-      <td>{{ HTMLElement("applet") }}</td>
-      <td>読み込んで実行するアプレットのクラスファイルの URL を指定します。</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/ja/docs/Web/HTML/Element/applet#attr-codebase">codebase</a></code>
-      </td>
-      <td>{{ HTMLElement("applet") }}</td>
-      <td>
-        code 属性で参照するアプレットの .class ファイルを配置しているディレクトリの絶対 URL または相対 URL を指定します。
-      </td>
-    </tr>
-    <tr>
       <td><code>color</code></td>
       <td>
         {{ HTMLElement("font") }}, {{ HTMLElement("hr") }}
@@ -280,7 +243,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         <p>
           この属性は色名または16進数の #RRGGBB 形式を用いて文字色を設定します。
         </p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>メモ:</strong> これは古い属性です。代わりに CSS の {{ Cssxref("color") }} プロパティを使用して下さい。
           </p>
@@ -289,7 +252,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/textarea#attr-cols">cols</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/textarea#cols">cols</a></code>
       </td>
       <td>{{ HTMLElement("textarea") }}</td>
       <td>テキストエリアの桁数 (水平方向の文字数) を定義します。</td>
@@ -307,7 +270,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/meta#attr-content">content</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/meta#content">content</a></code>
       </td>
       <td>{{ HTMLElement("meta") }}</td>
       <td>
@@ -325,17 +288,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/contextmenu">contextmenu</a></code>
-      </td>
-      <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
-      </td>
-      <td>
-        要素のコンテキストメニューとして機能する {{ HTMLElement("menu") }} 要素の ID を定義します。
-      </td>
-    </tr>
-    <tr>
-      <td>
         <code><a href="/ja/docs/Web/HTML/Attributes/controls">controls</a></code>
       </td>
       <td>
@@ -348,7 +300,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/area#attr-coords">coords</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/area#coords">coords</a></code>
       </td>
       <td>{{ HTMLElement("area") }}</td>
       <td>
@@ -378,7 +330,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/object#attr-data">data</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/object#data">data</a></code>
       </td>
       <td>{{ HTMLElement("object") }}</td>
       <td>リソースの URL を指定します。</td>
@@ -411,7 +363,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/track#attr-default">default</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/track#default">default</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
       <td>
@@ -420,7 +372,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/script#attr-defer">defer</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/script#defer">defer</a></code>
       </td>
       <td>{{ HTMLElement("script") }}</td>
       <td>
@@ -456,7 +408,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         {{ HTMLElement("button") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("optgroup") }},
         {{ HTMLElement("option") }},
         {{ HTMLElement("select") }},
@@ -484,7 +435,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/form#attr-enctype">enctype</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/form#enctype">enctype</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -493,15 +444,14 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/enterkeyhint">enterkeyhint</a></code>
-        {{experimental_inline}}
+        <code><a href="/ja/docs/Web/HTML/Global_attributes/enterkeyhint">enterkeyhint</a></code>
       </td>
       <td>
         {{ HTMLElement("textarea") }},
         <a href="/ja/docs/Web/HTML/Global_attributes/contenteditable"><code>contenteditable</code></a>
       </td>
       <td>
-        <a href="https://html.spec.whatwg.org/dev/interaction.html#input-modalities:-the-enterkeyhint-attribute"><code>enterkeyhint</code></a> は、仮想キーボードの Enter キーにあるアクションラベル (またはアイコン) が何であるかを指定します。この属性はフォームコントロール (<code>textarea</code> 要素の値など) と共に、または編集対象となっている要素 (例えば <code>contenteditable</code> 属性の使用など) の中で使用することができます。
+        <a href="https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute"><code>enterkeyhint</code></a> は、仮想キーボードの Enter キーにあるアクションラベル (またはアイコン) が何であるかを指定します。この属性はフォームコントロール (<code>textarea</code> 要素の値など) と共に、または編集対象となっている要素 (例えば <code>contenteditable</code> 属性の使用など) の中で使用することができます。
       </td>
     </tr>
     <tr>
@@ -522,7 +472,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         {{ HTMLElement("button") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("label") }},
         {{ HTMLElement("meter") }},
         {{ HTMLElement("object") }},
@@ -554,7 +503,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         {{ HTMLElement("input") }}
       </td>
       <td>
-        button や input が送信ボタンである場合 (<code>type="submit"</code>)、この属性はフォーム送信で使用するエンコーディング型を設定します。この属性が指定された場合、ボタンを所有する<a href="/ja/docs/Web/HTML/Element/form">フォーム</a>の <code>enctype</code> 属性より優先されます。
+        button や input が{{Glossary("submit button", "送信ボタン")}}である場合 (<code>type="submit"</code>)、この属性はフォーム送信で使用するエンコーディング型を設定します。この属性が指定された場合、ボタンを所有する<a href="/ja/docs/Web/HTML/Element/form">フォーム</a>の <code>enctype</code> 属性より優先されます。
       </td>
     </tr>
     <tr>
@@ -566,7 +515,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         {{ HTMLElement("input") }}
       </td>
       <td>
-        button や input が送信ボタンである場合 (<code>type="submit"</code>)、この属性はフォーム送信で使用する送信メソッド (<code>GET</code>, <code>POST</code>, など) を設定します。この属性が指定された場合、ボタンを所有する<a href="/ja/docs/Web/HTML/Element/form">フォーム</a>の <code>method</code> 属性より優先されます。
+        button や input が{{Glossary("submit button", "送信ボタン")}}である場合 (<code>type="submit"</code>)、この属性はフォーム送信で使用する送信メソッド (<code>GET</code>, <code>POST</code>, など) を設定します。この属性が指定された場合、ボタンを所有する<a href="/ja/docs/Web/HTML/Element/form">フォーム</a>の <code>method</code> 属性より優先されます。
       </td>
     </tr>
     <tr>
@@ -578,7 +527,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         {{ HTMLElement("input") }}
       </td>
       <td>
-        button や input が送信ボタンである場合 (<code>type="submit"</code>)、この論理属性はフォームが送信時に検証されないことを指定します。この属性が指定された場合、ボタンを所有する<a href="/ja/docs/Web/HTML/Element/form">フォーム</a>の <code>novalidate</code> 属性より優先されます。
+        button や input が{{Glossary("submit button", "送信ボタン")}}である場合 (<code>type="submit"</code>)、この論理属性はフォームが送信時に検証されないことを指定します。この属性が指定された場合、ボタンを所有する<a href="/ja/docs/Web/HTML/Element/form">フォーム</a>の <code>novalidate</code> 属性より優先されます。
       </td>
     </tr>
     <tr>
@@ -590,7 +539,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         {{ HTMLElement("input") }}
       </td>
       <td>
-        button や input が送信ボタンである場合 (<code>type="submit"</code>)、この属性はフォームを送信した後で受け取るレスポンスを表示する閲覧コンテキスト (例えば、タブ、ウィンドウ、インラインフレーム) を指定します。この属性が指定された場合、ボタンを所有する<a href="/ja/docs/Web/HTML/Element/form">フォーム</a>の <code>target</code> 属性より優先されます。
+        button や input が{{Glossary("submit button", "送信ボタン")}}である場合 (<code>type="submit"</code>)、この属性はフォームを送信した後で受け取るレスポンスを表示する閲覧コンテキスト (例えば、タブ、ウィンドウ、インラインフレーム) を指定します。この属性が指定された場合、ボタンを所有する<a href="/ja/docs/Web/HTML/Element/form">フォーム</a>の <code>target</code> 属性より優先されます。
       </td>
     </tr>
     <tr>
@@ -618,7 +567,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         <p>
           ここに挙げた要素の高さを指定します。他の要素では、 {{cssxref("height")}} プロパティを使用してください。
         </p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>メモ:</strong> {{ HTMLElement("div") }} など一部の要素では、これは古い属性であり、代わりに CSS の {{ Cssxref("height") }} プロパティを使用してください。
           </p>
@@ -638,7 +587,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/meter#attr-high">high</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/meter#high">high</a></code>
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>最大値の下限を示します。</td>
@@ -658,14 +607,13 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         <code><a href="/ja/docs/Web/HTML/Attributes/hreflang">hreflang</a></code>
       </td>
       <td>
-        {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
-        {{ HTMLElement("link") }}
+        {{ HTMLElement("a") }}, {{ HTMLElement("link") }}
       </td>
       <td>リンクされたリソースの言語を指定します。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/meta#attr-http-equiv">http-equiv</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/meta#http-equiv">http-equiv</a></code>
       </td>
       <td>{{ HTMLElement("meta") }}</td>
       <td>プラグマディレクティブを定義します。</td>
@@ -734,14 +682,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/keygen#attr-keytype">keytype</a></code>
-      </td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>生成する鍵の種類を指定します。</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/ja/docs/Web/HTML/Element/track#attr-kind">kind</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/track#kind">kind</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
       <td>テキストトラックの種類を指定します。</td>
@@ -768,14 +709,14 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/script#attr-language">language</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/script#language">language</a></code>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("script") }}</td>
       <td>要素で使用しているスクリプト言語を定義します。</td>
     </tr>
     <tr>
-      <td><code>loading</code> {{experimental_inline}}</td>
+      <td><code>loading</code></td>
       <td>
         {{ HTMLElement("img") }}, {{ HTMLElement("iframe") }}
       </td>
@@ -788,7 +729,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         <code><a href="/ja/docs/Web/HTML/Element/input#list">list</a></code>
       </td>
       <td>{{ HTMLElement("input") }}</td>
-      <td>ユーザに提案するため、事前に定義した選択肢のリストを示す。</td>
+      <td>ユーザーに提案するため、事前に定義した選択肢のリストを示す。</td>
     </tr>
     <tr>
       <td>
@@ -796,7 +737,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
       </td>
       <td>
         {{ HTMLElement("audio") }},
-        {{ HTMLElement("bgsound") }},
         {{ HTMLElement("marquee") }},
         {{ HTMLElement("video") }}
       </td>
@@ -806,25 +746,10 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/meter#attr-low">low</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/meter#low">low</a></code>
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>最小値の上限を示します。</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/ja/docs/Web/HTML/Element/html#attr-manifest">manifest</a></code>
-        {{deprecated_inline}}
-      </td>
-      <td>{{ HTMLElement("html") }}</td>
-      <td>
-        この文書のキャッシュマニフェストの URL を指定します。
-        <div class="note">
-          <p>
-            <strong>メモ:</strong> この属性は廃止されており、代わりに <a href="/ja/docs/Web/Manifest"><code>&#x3C;link rel="manifest"></code></a> を使用してください。
-          </p>
-        </div>
-      </td>
     </tr>
     <tr>
       <td>
@@ -872,7 +797,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/form#attr-method">method</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/form#method">method</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -922,7 +847,6 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("iframe") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("object") }},
         {{ HTMLElement("output") }},
         {{ HTMLElement("select") }},
@@ -936,7 +860,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/form#attr-novalidate">novalidate</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/form#novalidate">novalidate</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -957,7 +881,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/meter#attr-optimum">optimum</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/meter#optimum">optimum</a></code>
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>最適な値を示します。</td>
@@ -973,7 +897,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/a#attr-ping">ping</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/a#ping">ping</a></code>
       </td>
       <td>{{ HTMLElement("a") }}, {{ HTMLElement("area") }}</td>
       <td>
@@ -992,7 +916,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/video#attr-playsinline">playsinline</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/video#playsinline">playsinline</a></code>
       </td>
       <td>
         {{ HTMLElement("video") }}
@@ -1001,11 +925,11 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/video#attr-poster">poster</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/video#poster">poster</a></code>
       </td>
       <td>{{ HTMLElement("video") }}</td>
       <td>
-        ユーザが再生やシークを行うまでの間に表示するポスターフレームの URL です。
+        ユーザーが再生やシークを行うまでの間に表示するポスターフレームの URL です。
       </td>
     </tr>
     <tr>
@@ -1017,7 +941,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         {{ HTMLElement("video") }}
       </td>
       <td>
-        リソースの全体または一部の先読みを行う、あるいは先読みを行わないことを示す。
+        リソースの全体または一部の事前読み込みを行う、あるいは事前読み込みを行わないことを示す。
       </td>
     </tr>
     <tr>
@@ -1066,7 +990,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/ol#attr-reversed">reversed</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/ol#reversed">reversed</a></code>
       </td>
       <td>{{ HTMLElement("ol") }}</td>
       <td>
@@ -1082,7 +1006,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/textarea#attr-rows">rows</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/textarea#rows">rows</a></code>
       </td>
       <td>{{ HTMLElement("textarea") }}</td>
       <td>テキストエリアの行数を定義します。</td>
@@ -1107,7 +1031,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/th#attr-scope">scope</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/th#scope">scope</a></code>
       </td>
       <td>{{ HTMLElement("th") }}</td>
       <td>
@@ -1116,7 +1040,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/style#attr-scoped">scoped</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/style#scoped">scoped</a></code>
         {{non-standard_inline}} {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("style") }}</td>
@@ -1124,7 +1048,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/option#attr-selected">selected</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/option#selected">selected</a></code>
       </td>
       <td>{{ HTMLElement("option") }}</td>
       <td>ページ読込時に、対象要素を選択状態にします。</td>
@@ -1211,7 +1135,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/track#attr-srclang">srclang</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/track#srclang">srclang</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
       <td></td>
@@ -1227,10 +1151,10 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/ol#attr-start">start</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/ol#start">start</a></code>
       </td>
       <td>{{ HTMLElement("ol") }}</td>
-      <td>1以外から始まる場合の最初の値を定義します。</td>
+      <td>1 以外から始まる場合の最初の値を定義します。</td>
     </tr>
     <tr>
       <td>
@@ -1246,11 +1170,11 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
       <td>
         <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
       </td>
-      <td>外部スタイルシートや style 要素内に記述されたものより優先度の高いスタイル情報を記述します。</td>
+      <td>これまで設定されたスタイルを上書きする CSS スタイルを定義します。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/table#attr-summary">summary</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/table#summary">summary</a></code>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("table") }}</td>
@@ -1358,7 +1282,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         <p>
           ここに挙げられた要素に対して、要素の幅を指定します。
         </p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>メモ:</strong> {{ HTMLElement("div") }} をはじめとする他の要素については、これは古い属性であり、代わりに CSS の {{ Cssxref("width") }} プロパティを使用してください。
           </p>
@@ -1367,7 +1291,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/textarea#attr-wrap">wrap</a></code>
+        <code><a href="/ja/docs/Web/HTML/Element/textarea#wrap">wrap</a></code>
       </td>
       <td>{{ HTMLElement("textarea") }}</td>
       <td>テキストを折り返すかどうかを示します。</td>
@@ -1377,48 +1301,48 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
 
 ## コンテンツ属性と IDL 属性
 
-HTML では、ほとんどの属性に **コンテンツ属性** と **IDL (Interface Definition Language) 属性** の 2 つの側面があります。
+HTML では、ほとんどの属性に**コンテンツ属性**と **IDL (Interface Definition Language) 属性**の 2 つの側面があります。
 
-コンテンツ属性はコンテンツ (HTML コード) から設定する属性であり、 {{domxref("element.setAttribute()")}} や {{domxref("element.getAttribute()")}} を使用して設定または取得できます。 コンテンツ属性は値として数値を想定するものであっても、常に文字列です。例えば コンテンツ属性を使用して {{HTMLElement("input")}} 要素の `maxlength` 属性に 42 を設定するには、その要素で `setAttribute("maxlength", "42")` を呼び出さなければなりません。
+コンテンツ属性はコンテンツ（HTML コード）から設定する属性であり、 {{domxref("element.setAttribute()")}} や {{domxref("element.getAttribute()")}} を使用して設定または取得できます。 コンテンツ属性は値として数値を想定するものであっても、常に文字列です。例えば コンテンツ属性を使用して {{HTMLElement("input")}} 要素の `maxlength` 属性に 42 を設定するには、その要素で `setAttribute("maxlength", "42")` を呼び出さなければなりません。
 
-IDL 属性は JavaScript プロパティとしても知られています。これらは JavaScript プロパティを使用して、 `element.foo` のように読み書きします。IDL 属性は読み取り時に値を返すため基になるコンテンツ属性を使用したり（ただし、）、書き込み時に コンテンツ属性へ何らかの値を保存したりします。言い換えると、IDL 属性は コンテンツ属性を映し出します。
+IDL 属性は JavaScript プロパティとしても知られています。これらは、 JavaScript のプロパティを使って、 `element.foo` のように読み込んだり設定したりすることができます。 IDL 属性は常に、取得する際に値を返すために基盤となっているコンテンツ属性を使用し（変換することもあります）、設定するにはコンテンツ属性に何かを保存します。言い換えれば、 IDL 属性は要するにコンテンツ属性を反映します。
 
-ほとんどの場合、IDL 属性は実際に使用する値として自身の値を返します。例えば {{HTMLElement("input")}} 要素の `type` 属性のデフォルト値は "text" であるので、`input.type="foobar"` を設定すると `<input>` 要素は (外見と動作が) text タイプになりますが、"type" コンテンツ属性の値は "foobar" になります。しかし、`type` IDL 属性は文字列 "text" を返します。
+ほとんどの場合、IDL 属性は実際に使用する値として自身の値を返します。例えば {{HTMLElement("input")}} 要素の `type` 属性の既定値は "text" であるので、`input.type="foobar"` を設定すると `<input>` 要素は (外見と動作が) text 型になりますが、 "type" コンテンツ属性の値は "foobar" になります。しかし、 `type` の IDL 属性は文字列 "text" を返します。
 
-IDL 属性は常に文字列とは限りません。例えば `input.maxlength` は数値 (符号付き long) です。IDL 属性を使用するときは望ましい型の値を読み書きするので、`input.maxlength` は常に数値を返し、また `input.maxlength` を設定するときは数値を要求します。他の型で渡すと、標準的な JavaScript の型変換規則に従って自動的に数値へ変換されます。
+IDL 属性は常に文字列とは限りません。例えば `input.maxlength` は数値（符号付き long）です。 IDL 属性を使用するときは望ましい型の値を読み書きするので、`input.maxlength` は常に数値を返し、また `input.maxlength` を設定するときは数値を要求します。他の型で渡すと、標準的な JavaScript の型変換規則に従って自動的に数値へ変換されます。
 
-IDL 属性は符号なし long、URL、論理値など[他の型を反映する](https://html.spec.whatwg.org/multipage/urls-and-fetching.html)ことが可能です。残念ながら、 IDL 属性がコンテンツ属性と
-属性に応じて IDL 属性が対応するコンテンツ属性と一体化して動作するための明確な規則や方法はありません。ほとんどの場合は[仕様書にあるレイアウトルール](https://html.spec.whatwg.org/multipage/urls-and-fetching.html)に従いますが、そうでない場合もあります。 HTML 仕様では可能な限り開発者にやさしいものにしようとしていますが、さまざまな理由 (たいていは歴史的な理由) により奇妙な動作になる属性 (例えば `select.size`) があり、実際どのように動作するかを理解するために仕様書を読むようにしましょう。
+IDL 属性は、[他の型を反映する](https://html.spec.whatwg.org/multipage/urls-and-fetching.html)ことができます。符号なし long、URL、論理値などです。残念ながら、明確な規則はなく、 IDL 属性が対応するコンテンツ属性と結びついてどのように振る舞うかは、属性によって異なります。ほとんどの場合は[仕様書にあるレイアウトルール](https://html.spec.whatwg.org/multipage/urls-and-fetching.html)に従いますが、そうでない場合もあります。 HTML 仕様では可能な限り開発者にやさしいものにしようとしていますが、さまざまな理由 (たいていは歴史的な理由) により奇妙な動作になる属性（例えば `select.size`）があり、実際どのように動作するかを理解するために仕様書を読むようにしましょう。
 
 ## 論理属性
 
-一部のコンテンツ属性 (例えば `required`, `readonly`, `disabled`) は[論理属性](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#boolean-attributes) (boolean attributes) と呼ばれています。論理属性は存在すれば、その値が **true** となり、存在しなければ、その値が **false** となります。
+一部のコンテンツ属性（例えば `required`, `readonly`, `disabled`）は「論理属性」 ([boolean attributes](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#boolean-attributes)) と呼ばれています。論理属性は存在すれば、その値が**真**となり、存在しなければ、その値が**偽**となります。
 
-HTML では、論理属性に許されている値の制約を定義しています。属性が存在する場合は、値は空文字列 (属性の値が割り当てられないことがあります) または属性の正式名に ASCII で大文字・小文字まで一致する値のどちらかで、前後にホワイトスペースを含んではいけません。以下の例は論理属性をマークアップする正しい方法です。
+HTML では、論理属性に許されている値の制約を定義しています。属性が存在する場合は、値は空文字列（属性の値が割り当てられないことがあります）または属性の正式名に ASCII で大文字・小文字まで一致する値のどちらかで、前後にホワイトスペースを含んではいけません。以下の例は論理属性をマークアップする正しい方法です。
 
 ```html-nolint
-<div itemscope>This is valid HTML but invalid XML.</div>
-<div itemscope=itemscope>This is also valid HTML but invalid XML.</div>
-<div itemscope="">This is valid HTML and also valid XML.</div>
+<div itemscope>これは HTML では有効ですが XML では無効です。</div>
+<div itemscope=itemscope>これも HTML では有効ですが XML では無効です。</div>
+<div itemscope="">これは HTML でも XML でも有効です。</div>
 <div itemscope="itemscope">
-  This is also valid HTML and XML, but perhaps a bit verbose.
+  これは HTML でも XML でも有効ですが、おそらく少し冗長です。
 </div>
 ```
 
-明確にするために、 "`true`" および "`false`" という値は論理属性では許可されていません。偽の値を表すには、属性ごと省略する必要があります。この制約により、いくつかのよくある誤解が明確になります。例えば `checked="false"` は、属性が存在するため、その要素の `checked` 属性が **true** であると解釈されます。
+明確にするために、 `"true"` および `"false"` という値は論理属性では許可されていません。偽の値を表すには、属性ごと省略する必要があります。この制約により、いくつかのよくある誤解が明確になります。例えば `checked="false"` は、属性が存在するため、その要素の `checked` 属性が**真**であると解釈されます。
 
 ## イベントハンドラー属性
 
-> **警告:** イベントハンドラーコンテンツ属性を使用することは推奨されません。HTML と JavaScript が混在すると保守性の低いコードになることが多く、またイベントハンドラー属性の実行はコンテンツセキュリティポリシーによってブロックされることがあります。
+> [!WARNING]
+> イベントハンドラーコンテンツ属性を使用することは推奨されません。HTML と JavaScript が混在すると保守性の低いコードになることが多く、またイベントハンドラー属性の実行はコンテンツセキュリティポリシーによってブロックされることがあります。
 
-上の表に掲載されている属性の他に、グローバル[イベントハンドラー](/ja/docs/Web/Events/Event_handlers#using_onevent_properties)（[`onclick`](/ja/docs/Web/API/Element/click_event) など）も、すべての要素の[コンテンツ属性](##コンテンツ属性と_idl_属性)として指定することができます。
+上の表に掲載されている属性の他に、グローバル[イベントハンドラー](/ja/docs/Web/Events/Event_handlers#onevent_プロパティの使用)（[`onclick`](/ja/docs/Web/API/Element/click_event) など）も、すべての要素の[コンテンツ属性](#コンテンツ属性と_idl_属性)として指定することができます。
 
-すべてのイベントハンドラー属性は文字列を受け入れます。この文字列は、[JavaScript関数](/ja/docs/Web/JavaScript/Reference/Functions)、たとえば `function name(/*args*/) {body}` などを生成するために使用され、`name` は属性の名前、`body` は属性の値となります。ハンドラーは、対応する JavaScript イベントハンドラーと同じ引数を受け取ります。ほとんどのハンドラーは `event` 引数 1 つだけを受け取りますが、`onerror` は5つの引数 (`event`, `source`, `lineno`, `colno`, `error`) を受け取ります。これは、一般的に、属性内で変数 `event` を使用することができることを意味しています。
+すべてのイベントハンドラー属性は文字列を受け入れます。この文字列は、 [JavaScript 関数](/ja/docs/Web/JavaScript/Reference/Functions)、たとえば `function name(/*args*/) {body}` などを生成するために使用され、`name` は属性の名前、`body` は属性の値となります。ハンドラーは、対応する JavaScript イベントハンドラーと同じ引数を受け取ります。ほとんどのハンドラーは `event` 引数 1 つだけを受け取りますが、`onerror` は5つの引数 (`event`, `source`, `lineno`, `colno`, `error`) を受け取ります。これは、一般的に、属性内で変数 `event` を使用することができることを意味しています。
 
 ```html
-<div onclick="console.log(event)">Click me!</div>
-<!-- The synthesized handler has a name; you can reference itself -->
-<div onclick="console.log(onclick)">Click me!</div>
+<div onclick="console.log(event)">ここをクリック</div>
+<!-- 生成されたハンドラーには名前があります。自分自身で参照できます。 -->
+<div onclick="console.log(onclick)">ここをクリック</div>
 ```
 
 ## 関連情報

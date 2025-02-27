@@ -21,11 +21,7 @@ HTTP **`416 Range Not Satisfiable`** 错误状态码意味着服务器无法处�
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
-## 更多内容
+## 参见
 
 - {{HTTPStatus(206)}} `Partial Content`
 - {{HTTPHeader("Content-Range")}}

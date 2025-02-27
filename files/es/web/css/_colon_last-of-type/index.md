@@ -1,5 +1,5 @@
 ---
-title: ":last-of-type"
+title: :last-of-type
 slug: Web/CSS/:last-of-type
 ---
 
@@ -15,7 +15,8 @@ p:last-of-type {
 }
 ```
 
-> **Nota:** Como se definió originalmente, el elemento seleccionado tenía que tener un padre. Comenzando con el Nivel 4 de Selectores, esto ya no es necesario.
+> [!NOTE]
+> Como se definió originalmente, el elemento seleccionado tenía que tener un padre. Comenzando con el Nivel 4 de Selectores, esto ya no es necesario.
 
 ## Sintaxis
 

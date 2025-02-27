@@ -14,7 +14,8 @@ l10n:
 
 `clientHeight` がルート要素（`<html>` 要素）（または文書が後方互換モードである場合は `<body>`）に使用された場合、（スクロールバーを除いた）ビューポートの高さが返されます。[これは `clientHeight` の特例です](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-clientheight)。
 
-> **メモ:** このプロパティは値を整数値に丸めます。小数値が必要であれば、 {{ domxref("element.getBoundingClientRect()") }} を使用してください。
+> [!NOTE]
+> このプロパティは値を整数値に丸めます。小数値が必要であれば、 {{ domxref("element.getBoundingClientRect()") }} を使用してください。
 
 ## 値
 

@@ -9,7 +9,8 @@ slug: Web/CSS/overflow-wrap
 
 {{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}
 
-> **Примечание:** В отличие от {{cssxref("word-break")}}, `overflow-wrap` создаёт перенос только, если целое слово не может быть размещено на своей линии без переполнения
+> [!NOTE]
+> В отличие от {{cssxref("word-break")}}, `overflow-wrap` создаёт перенос только, если целое слово не может быть размещено на своей линии без переполнения
 
 Изначально свойство `word-wrap` не было стандартом, хотя и было реализовано большинством браузеров. Впоследствии оно было переименовано в `overflow-wrap` c алиасом `word-wrap`.
 
@@ -123,17 +124,15 @@ p {
 
 {{ EmbedLiveSample('Сравнение_overflow-wrap_word-break_и_hyphens', '100%', 260) }}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-{{cssinfo}}
-
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{cssxref("word-break")}}
 - {{cssxref("hyphens")}}

@@ -25,7 +25,8 @@ var event = new CloseEvent(typeArg, closeEventInit);
     - `"code"`, opcional e inicialmente de valor `0`, do tipo `unsigned short`, este é o código de encerramento da conexão enviado pelo servidor.
     - `"reason"`, opcional e inicialmente de valor `''`, do tipo {{domxref("DOMString")}}, esta é uma razão humanamente compreensível do porque o servidor encerrou a conexão.
 
-    > **Nota:** A coleção `CloseEventInit` também aceita campos vindos da coleção {{domxref("Event.Event", "EventInit")}}.
+    > [!NOTE]
+    > A coleção `CloseEventInit` também aceita campos vindos da coleção {{domxref("Event.Event", "EventInit")}}.
 
 ## Especificações
 

@@ -69,7 +69,7 @@ head の中の 2 番目のブロックからの `editable` クラスの CSS も�
 
 ### 5. ページを作成する
 
-例がマージされたら、ページを作成することができます。 そのためには[ページ作成権限](/ja/docs/MDN/Contribute/Howto/Create_and_edit_pages#getting_page-creation_permissions)付き MDN アカウントが必要です。その後、そのページを CSS 料理帳のページのサブページとして作成できます。[ここに料理帳のページ用のテンプレートがあります](/ja/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template)。
+例がマージされたら、ページを作成することができます。 そのためには[ページ作成権限](/ja/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#getting_page-creation_permissions)付き MDN アカウントが必要です。その後、そのページを CSS 料理帳のページのサブページとして作成できます。[ここに料理帳のページ用のテンプレートがあります](/ja/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template)。
 
 テンプレートは各セクションの一部になるべきものを説明し、より多くの助けを得るために他の料理帳の例を参照することができます。 これらのページのいずれかの編集ボタンをクリックすると、互換性データを埋め込むために使用されるマクロやライブサンプルなどが表示されます。
 

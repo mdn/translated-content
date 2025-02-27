@@ -14,7 +14,8 @@ l10n:
 
 文字列で、このコントロールに関連する要素の ID 文字列が入ります。
 
-> **メモ:** このプロパティに値がある場合 {{domxref("HTMLLabelElement.control")}} プロパティも同じコントロールになります。
+> [!NOTE]
+> このプロパティに値がある場合 {{domxref("HTMLLabelElement.control")}} プロパティも同じコントロールになります。
 
 ## 仕様書
 

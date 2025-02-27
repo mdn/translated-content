@@ -1,5 +1,5 @@
 ---
-title: "::-moz-progress-bar"
+title: ::-moz-progress-bar
 slug: Web/CSS/::-moz-progress-bar
 ---
 
@@ -36,10 +36,6 @@ slug: Web/CSS/::-moz-progress-bar
 ### Результат
 
 {{EmbedLiveSample('Примеры')}}
-
-Первый бар сверху должен выглядеть так:
-
-![Custom styled progress bar](/@api/deki/files/5387/=redbar.png)
 
 ## Смотрите также
 

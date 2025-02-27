@@ -9,7 +9,7 @@ WAI-ARIA, que quer dizer [Accessible Rich Internet Applications](https://www.w3.
 
 O conjunto ARIA fornece semânticas adicionais para descrever a função (role), estado (state) e funcionalidade de muitos controles familiares da interface de utilização, tais como menus, deslizantes, árvores e diálogos. E, também, provê informação estrutural adicional, o que auxilia os autores a identificar as áreas de referência (_landmarks_), regiões e malhas nas suas páginas. O conjunto ARIA habilita aplicações dinâmicas e _widgets_ gerenciados pela JavaScript a interoperar com uma gama de tecnologias assistivas baseadas em ambiente.
 
-Para mais informações sobre como criar _widgets_ acessíveis com ARIA, veja a [Visão geral da acessibilidade em aplicações _web_ e _widgets_ - Overview of accessible web applications and widgets](/en/Accessibility/An_overview_of_accessible_web_applications_and_widgets).
+Para mais informações sobre como criar _widgets_ acessíveis com ARIA, veja a [Visão geral da acessibilidade em aplicações _web_ e _widgets_ - Overview of accessible web applications and widgets](/en-US/Accessibility/An_overview_of_accessible_web_applications_and_widgets).
 
 ## ARIA - onde tem suporte?
 
@@ -24,7 +24,7 @@ O conjunto ARIA encontra suporte nos seguintes navegadores:
 | Firefox                                                                                          | 3.0+          | Funciona com NVDA, JAWS 10+ e Orca                                                                                          |
 | [Chrome](http://dev.chromium.org/developers/design-documents/accessibility#TOC-WAI-ARIA-Support) | Mais recentes | O suporte a leitores de tela ainda é experimental a partir do Chrome 15                                                     |
 | Safari                                                                                           | 4+            | No Safari 5 o suporte está muito melhorado. Para regiões dinâmicas é preciso o Safari 5 com VoiceOver no iOS5, ou OS X Lion |
-| [Opera](http://www.opera.com/docs/specs/presto28/wai-aria/roleattributes/)                       | 9.5+          | Necessita o VoiceOver no OS X. TBD: como está funcionando atualmente?                                                       |
+| [Opera](https://www.opera.com/docs/specs/presto28/wai-aria/roleattributes/)                       | 9.5+          | Necessita o VoiceOver no OS X. TBD: como está funcionando atualmente?                                                       |
 | [Internet Explorer](http://msdn.microsoft.com/en-us/library/cc891505%28v=vs.85%29.aspx)          | 8+            | Funciona com JAWS 10+ e NVDA. Não existe suporte para regiões dinâmicas no NVDA. O suporte em IE9 está muito aperfeiçoado.  |
 
 Em certos casos, as versões anteriores podem suportar, apenas, algumas características do conjunto ARIA. Tabelas mais detalhadas da compatibilidade de navegadores estão disponíveis a partir de múltiplas fontes:
@@ -192,14 +192,14 @@ Existem várias ferramentas de inspeção e depuração para ajudar você no seu
 - Inspetor de Acessibilidade em OS X
 - AccProbe em Linux
 - Inspetor Firebug's DOM
-- O [Accessibility Inspector for Firebug](http://code.google.com/p/ainspector/)
+- O [Accessibility Inspector for Firebug](https://code.google.com/p/ainspector/)
 - [Ferramentas para Desenvolvedores de Acessibilidade (Accessibility Developer Tools)](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb), para Chrome
 
 Há vários leitores de tela gratuitos, ou de código aberto, que podem ser utilizados, para você colocar a mão na massa nos seus testes com ARIA. Estes incluem:
 
 - [Orca](http://live.gnome.org/Orca) para Linux
 - [NVDA](http://www.nvda-project.org/) para Windows
-- [VoiceOver](http://www.apple.com/accessibility/voiceover/) é construído dentro do OS X
+- [VoiceOver](https://www.apple.com/accessibility/voiceover/) é construído dentro do OS X
 
 Quando você estiver testando um leitor de tela, mantenha dois pontos-chave em mente:
 
@@ -213,14 +213,14 @@ Outras ferramentas de teste úteis e técnicas para aplicativos e _widgets_ com 
 
 ## Onde acontecem as discussões sobre ARIA?
 
-- [Wai-xtech mailing list](http://lists.w3.org/Archives/Public/wai-xtech/) -- holds discussions on ARIA specs. (mantém discussões sobre as especificações ARIA)
-- [Free-ARIA google group](http://groups.google.com/group/free-aria) -- para desenvolvedores e utilizadores dos recursos e ferramentas gratuitas.
+- [Wai-xtech mailing list](https://lists.w3.org/Archives/Public/wai-xtech/) -- holds discussions on ARIA specs. (mantém discussões sobre as especificações ARIA)
+- [Free-ARIA google group](https://groups.google.com/group/free-aria) -- para desenvolvedores e utilizadores dos recursos e ferramentas gratuitas.
 
 ## Onde posso aprender mais sobre ARIA?
 
 - [Visão geral sobre a acessibilidade nas aplicações e _widgets_ _web_](/en/Accessibility/An_overview_of_accessible_web_applications_and_widgets "en/Accessibility/An overview of accessible web applications and widgets")
 - [Formulários acessíveis](/en/Accessibility/Accessible_forms "en/Accessibility/Accessible forms")
 - The W3C's [WAI-ARIA Frequently Asked Questions](https://www.w3.org/WAI/aria/faq)
-- WebAIM's [Accessibility of Rich Internet Applications](http://webaim.org/techniques/aria/)
+- WebAIM's [Accessibility of Rich Internet Applications](https://webaim.org/techniques/aria/)
 
 a autoria do artigo é de: morenoh149, kscarfone, akhabibullina, xfq, Fredchat, mpiotrowicz, Sheppy, BrendanMcKeon, anastasia, jswisher, Aaronlev, colinbdclark.

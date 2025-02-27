@@ -13,7 +13,8 @@ HTML5 представляет большое количество необхо�
 
 Когда новый геймпад подключается, на странице срабатывают события {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }}. Если геймпад уже был подключён к моменту загрузки страницы, события {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} сработают, когда пользователь нажмёт на любую кнопку или передвинет стики.
 
-> **Примечание:** В Firefox геймпад определяется только тогда, когда пользователь взаимодействует с ним, и при этом страница видна и в фокусе. Это помогает предотвратить использование геймпадов для идентификации пользователя. После взаимодействия с одним геймпадом другие подключённые геймпады будут автоматически видны.
+> [!NOTE]
+> В Firefox геймпад определяется только тогда, когда пользователь взаимодействует с ним, и при этом страница видна и в фокусе. Это помогает предотвратить использование геймпадов для идентификации пользователя. После взаимодействия с одним геймпадом другие подключённые геймпады будут автоматически видны.
 
 Вы можете использовать {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} как в примере:
 
@@ -33,7 +34,7 @@ window.addEventListener("gamepadconnected", function (e) {
 
 ## Отключение геймпада
 
-When a gamepad is disconnected, and if a page has previously received data for that gamepad (e.g. {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }}), a second event is dispatched to the focused window, {{ event("gamepaddisconnected") }}:
+When a gamepad is disconnected, and if a page has previously received data for that gamepad (e.g. {{domxref("Window/gamepadconnected_event", "gamepadconnected")}}), a second event is dispatched to the focused window, {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}:
 
 ```js
 window.addEventListener("gamepaddisconnected", function (e) {
@@ -45,7 +46,7 @@ window.addEventListener("gamepaddisconnected", function (e) {
 });
 ```
 
-The gamepad's {{domxref("Gamepad.index", "index")}} property will be unique per-device connected to the system, even if multiple controllers of the same type are used. The `index` property also functions as the index into the {{jsxref("Array")}} returned by {{ domxref("Navigator.getGamepads()") }}.
+The gamepad's {{domxref("Gamepad.index", "index")}} property will be unique per-device connected to the system, even if multiple controllers of the same type are used. The `index` property also functions as the index into the {{jsxref("Array")}} returned by {{domxref("Navigator.getGamepads()")}}.
 
 ```js
 var gamepads = {};
@@ -115,7 +116,8 @@ The {{ domxref("Gamepad") }} object's properties are as follows:
 - `axes`: An array representing the controls with axes present on the device (e.g. analog thumb sticks). Each entry in the array is a floating point value in the range -1.0 - 1.0, representing the axis position from the lowest value (-1.0) to the highest value (1.0).
 - `timestamp`: This returns a {{ domxref("DOMHighResTimeStamp") }} representing the last time the data for this gamepad was updated, allowing developers to determine if the `axes` and `button` data have been updated from the hardware. The value must be relative to the `navigationStart` attribute of the {{ domxref("PerformanceTiming") }} interface. Values are monotonically increasing, meaning that they can be compared to determine the ordering of updates, as newer values will always be greater than or equal to older values. Note that this property is not currently supported in Firefox.
 
-> **Примечание:** The Gamepad object is available on the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event rather than the {{ domxref("Window") }} object itself, for security reasons. Once we have a reference to it, we can query its properties for information about the current state of the gamepad. Behind the scenes, this object will be updated every time the gamepad's state changes.
+> [!NOTE]
+> The Gamepad object is available on the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event rather than the {{ domxref("Window") }} object itself, for security reasons. Once we have a reference to it, we can query its properties for information about the current state of the gamepad. Behind the scenes, this object will be updated every time the gamepad's state changes.
 
 ### Using button information
 
@@ -175,8 +177,8 @@ function pollGamepads() {
   var gamepads = navigator.getGamepads
     ? navigator.getGamepads()
     : navigator.webkitGetGamepads
-    ? navigator.webkitGetGamepads
-    : [];
+      ? navigator.webkitGetGamepads
+      : [];
   for (var i = 0; i < gamepads.length; i++) {
     var gp = gamepads[i];
     if (gp) {
@@ -213,8 +215,8 @@ function gameLoop() {
   var gamepads = navigator.getGamepads
     ? navigator.getGamepads()
     : navigator.webkitGetGamepads
-    ? navigator.webkitGetGamepads
-    : [];
+      ? navigator.webkitGetGamepads
+      : [];
   if (!gamepads) {
     return;
   }
@@ -354,8 +356,8 @@ function scangamepads() {
   var gamepads = navigator.getGamepads
     ? navigator.getGamepads()
     : navigator.webkitGetGamepads
-    ? navigator.webkitGetGamepads()
-    : [];
+      ? navigator.webkitGetGamepads()
+      : [];
   for (var i = 0; i < gamepads.length; i++) {
     if (gamepads[i]) {
       if (gamepads[i].index in controllers) {
@@ -375,10 +377,10 @@ if (!haveEvents) {
 }
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

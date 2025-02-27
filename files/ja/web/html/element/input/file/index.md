@@ -2,12 +2,12 @@
 title: <input type="file">
 slug: Web/HTML/Element/input/file
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 27bceead8e9b1fe9c92df0fa5e418f81bd5b9fdf
 ---
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} 要素の **`type="file"`** 型は、ユーザーが一つまたは複数のファイルを端末のストレージから選択することができるようにします。選択されると、ファイルは[フォーム投稿](/ja/docs/Learn/Forms)を使用してサーバーにアップロードしたり、JavaScript コードと[ファイル API](/ja/docs/Web/API/File_API/Using_files_from_web_applications) を使用して操作したりすることができます。
+{{HTMLElement("input")}} 要素の **`type="file"`** 型は、ユーザーが一つまたは複数のファイルを端末のストレージから選択することができるようにします。選択されると、ファイルは[フォーム投稿](/ja/docs/Learn_web_development/Extensions/Forms)を使用してサーバーにアップロードしたり、JavaScript コードと[ファイル API](/ja/docs/Web/API/File_API/Using_files_from_web_applications) を使用して操作したりすることができます。
 
 {{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
 
@@ -15,7 +15,8 @@ l10n:
 
 ファイル入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性には、選択されたファイルへのパスを表す文字列が入ります。ファイルが選択されていない場合は、値は空文字列 (`""`) になります。ユーザーが複数のファイルを選択すると、`value` は選択されたファイルのリストのうち最初のファイルを表します。その他のファイルは [input 要素の `HTMLInputElement.files` プロパティ](/ja/docs/Web/API/File_API/Using_files_from_web_applications#選択されたファイルについての情報の取得)を使って得ることができます。
 
-> **メモ:** 文字列には[常に `C:\fakepath\` の接頭辞が付き](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly)、ファイルの実際のパスにはなりません。疑わしいソフトウェアがユーザーのファイル構造を推測することを防止するためです。
+> [!NOTE]
+> 文字列には[常に `C:\fakepath\` の接頭辞が付き](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly)、ファイルの実際のパスにはなりません。疑わしいソフトウェアがユーザーのファイル構造を推測することを防止するためです。
 
 ## 追加の属性
 
@@ -36,7 +37,7 @@ l10n:
 
 ### capture
 
-[`capture`](/ja/docs/Web/HTML/Attributes/capture) 属性は文字列で、 [`accept`](/ja/docs/Web/HTML/Attributes/accept) 属性で入力が画像または映像データであると示した場合、これらのデータを取り込むためにどのカメラを使用するかを指定します。 `user` の値では、ユーザーの方を向いているカメラやマイクを使用します。 `environment` は外側を向いたカメラやマイクを使用します。この属性がない場合、{{Glossary("user agent", "ユーザーエージェント")}}は何をするかを自分で自由に決めます。要求された方向が有効ではない場合、ユーザーエージェントは推奨される既定のモードで代用します。
+[`capture`](/ja/docs/Web/HTML/Attributes/capture) 属性は文字列で、 [`accept`](/ja/docs/Web/HTML/Attributes/accept) 属性で入力が画像または映像データであると示した場合、これらのデータを取り込むためにどのカメラを使用するかを指定します。 `user` の値では、ユーザーの方を向いているカメラやマイクを使用します。 `environment` は外側を向いたカメラやマイクを使用します。この属性がない場合、{{Glossary("User agent", "ユーザーエージェント")}}は何をするかを自分で自由に決めます。要求された方向が有効ではない場合、ユーザーエージェントは推奨される既定のモードで代用します。
 
 > **メモ:** `capture` は以前は論理値であり、存在した場合、ファイル入力を要求する代わりに、カメラやマイクなどその端末のメディア取り込み機器を使用するように要求していました。
 
@@ -50,9 +51,9 @@ l10n:
 
 ### `webkitdirectory`
 
-論理型の `webkitdirectory` 属性は、もし存在する場合は、ファイル選択インターフェイスでユーザーがディレクトリのみを選択することができることを示します。詳しい解説と例については {{domxref("HTMLInputElement.webkitdirectory")}} を参照してください。
+論理型の `webkitdirectory` 属性は、もし存在する場合は、ファイル選択インターフェイスでユーザーがディレクトリーのみを選択することができることを示します。詳しい解説と例については {{domxref("HTMLInputElement.webkitdirectory")}} を参照してください。
 
-> **メモ:** `webkitdirectory` はもともと WebKit ベースのブラウザー向けのみに実装されたものですが、 Microsoft Edge や Firefox 50 以降でも使用できます。しかし、比較的広く対応されていますが、まだ標準になっておらず、代替手段がない限りは使用するべきではありません。
+> **メモ:** `webkitdirectory` はもともと WebKit ベースのブラウザー向けのみに実装されたものですが、 Firefox でも使用できます。しかし、比較的広く対応されていますが、まだ標準になっておらず、代替手段がない限りは使用するべきではありません。
 
 ## 固有ファイル型指定子
 
@@ -96,7 +97,8 @@ div {
 
 {{EmbedLiveSample('A_basic_example', 650, 90)}}
 
-> **メモ:** この例は GitHub にもあります。 — [ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)を確認してください。
+> [!NOTE]
+> この例は GitHub にもあります。 — [ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)を確認してください。
 
 ユーザーの端末やオペレーティングシステムに関わらず、ファイル入力欄にはユーザーがファイルを選択することができるファイル選択ダイアログを開くボタンがあります。
 
@@ -117,11 +119,9 @@ div {
 - `size`
   - : バイト数によるファイルサイズです。
 - `type`
-  - : ファイルの [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)です。
+  - : ファイルの [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)です。
 - `webkitRelativePath` {{non-standard_inline}}
-  - : ディレクトリ選択ダイアログ (つまり、 [`webkitdirectory`](#webkitdirectory) 属性が設定されている `file` ダイアログ) で選択されたベースディレクトリからのファイルの相対パスを表す文字列です。_これは標準外なので使用するには注意してください。_
-
-> **メモ:** 最近のブラウザーはすべて、 `HTMLInputElement.files` の値を取得だけではなく設定もできるようになっています。これが最も後に追加されたのは Firefox で、バージョン 57 で追加されました (see [Firefox バグ 1384030](https://bugzil.la/1384030))。
+  - : ディレクトリー選択ダイアログ (つまり、 [`webkitdirectory`](#webkitdirectory) 属性が設定されている `file` ダイアログ) で選択されたベースディレクトリーからのファイルの相対パスを表す文字列です。_これは標準外なので使用するには注意してください。_
 
 ### 受け付けるファイル型の制限
 
@@ -162,13 +162,34 @@ div {
 
 {{EmbedLiveSample('Limiting_accepted_file_types', 650, 90)}}
 
-> **メモ:** この例は GitHub にもあります。 — [ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-with-accept.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html)を確認してください。
+> [!NOTE]
+> この例は GitHub にもあります。 — [ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-with-accept.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html)を確認してください。
 
 同じように見えるかもしれませんが、この入力欄でファイルを選択しようとすると、このファイル選択ダイアログでは `accept` の値で指定されたファイル形式しか選択できません。 (細かい動きはブラウザーやオペレーティングシステムによって異なります)。
 
 `accept` 属性は選択されたファイルの形式を検証しません。単にブラウザーにユーザーが正しいファイル形式を選択するためのガイドするためのヒントを出すだけです。 (多くの場合) ユーザーがファイル選択ダイアログオプションを切り替えることで、ファイル選択ダイアログがこの設定を上書きして任意のファイルを選択することができるので、不正なファイル形式を選択する可能性があります。
 
 このため、 `accept` 属性は適切なサーバー側の検証でバックアップする必要があることを意識しておいてください。
+
+### キャンセルの検出
+
+`cancel` イベントは、ユーザーが選択を変更せず、前回選択したファイルを再選択した場合に発行されます。 `cancel`イベントはファイルピッカーダイアログが "cancel" ボタンや <kbd>escape</kbd> キーによって閉じられたり、取り消されたりした場合にも発行されます。
+
+例えば、次の例はユーザーがファイルを選択せずにポップアップを閉じた場合にコンソールにログ出力します。
+
+```js
+const elem = document.createElement("input");
+elem.type = "file";
+elem.addEventListener("cancel", () => {
+  console.log("Cancelled.");
+});
+elem.addEventListener("change", () => {
+  if (elem.files.length == 1) {
+    console.log("File selected: ", elem.files[0]);
+  }
+});
+elem.click();
+```
 
 ### 注
 
@@ -185,7 +206,8 @@ div {
 
 この例では、この例では、 `HTMLInputElement.files` プロパティで利用できるファイル情報を利用する、さらに高度なファイル選択ダイアログを示し、またいくつか巧妙なテクニックを示します。
 
-> **メモ:** この例の完全なソースコードは GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-example.html) ([ライブ版もあります](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)) で見ることができます。 CSS については説明しません。 JavaScript が中心です。
+> [!NOTE]
+> この例の完全なソースコードは GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-example.html) ([ライブ版もあります](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)) で見ることができます。 CSS については説明しません。 JavaScript が中心です。
 
 最初に、 HTML を見てみましょう。
 
@@ -217,7 +239,6 @@ html {
 }
 
 form {
-  width: 580px;
   background: #ccc;
   margin: 0 auto;
   padding: 20px;
@@ -284,7 +305,8 @@ const preview = document.querySelector(".preview");
 input.style.opacity = 0;
 ```
 
-> **メモ:** ファイル入力欄を非表示にするために {{cssxref("opacity")}} を使用し、 {{cssxref("visibility", "visibility: hidden")}} や {{cssxref("display", "display: none")}} を使用しないのは、支援技術が後二者のファイル入力欄が対話可能ではないと解釈するからです。
+> [!NOTE]
+> ファイル入力欄を非表示にするために {{cssxref("opacity")}} を使用し、 {{cssxref("visibility", "visibility: hidden")}} や {{cssxref("display", "display: none")}} を使用しないのは、支援技術が後二者のファイル入力欄が対話可能ではないと解釈するからです。
 
 次に、[イベントリスナー](/ja/docs/Web/API/EventTarget/addEventListener)を入力欄に追加して、選択された値の変化 (この場合、ファイルが選択されたこと) を監視します。イベントリスナーは独自の `updateImageDisplay()` 関数を呼び出します。
 
@@ -302,11 +324,11 @@ input.addEventListener("change", updateImageDisplay);
 - そうであるなら、次のことを行います。
 
   - ファイルの名前とファイルサイズを、前述の `<div>` (`file.name` および `file.size` で取得) 内のリストアイテムに出力します。独自の `returnFileSize()` 関数はファイルサイズを バイト/KB/MB のうち適切な形式で返します (既定でブラウザーは長さを絶対的なバイトで返します)。
-  - {{domxref("URL.createObjectURL_static", "URL.createObjectURL(curFiles[i])")}} を呼び出して、画像のプレビューのサムネイルを生成します。次に、新しい {{htmlelement("img")}} を生成し、その [`src`](/ja/docs/Web/HTML/Element/img#src) をサムネイルに設定することで、リスト項目にも画像を挿入します。
+  - {{domxref("URL/createObjectURL_static", "URL.createObjectURL(file)")}} を呼び出して、画像のプレビューのサムネイルを生成します。次に、新しい {{htmlelement("img")}} を生成し、その [`src`](/ja/docs/Web/HTML/Element/img#src) をサムネイルに設定することで、リスト項目にも画像を挿入します。
 
 - ファイル形式が無効である場合、リストのアイテム内にメッセージを表示して、ユーザーに別なファイル形式を選択する必要があることを伝えます。
 
-```js
+```js-nolint
 function updateImageDisplay() {
   while (preview.firstChild) {
     preview.removeChild(preview.firstChild);
@@ -325,11 +347,12 @@ function updateImageDisplay() {
       const listItem = document.createElement("li");
       const para = document.createElement("p");
       if (validFileType(file)) {
-        para.textContent = `ファイル名: ${
-          file.name
-        }, ファイルサイズ: ${returnFileSize(file.size)}.`;
+        para.textContent = `ファイル名: ${file.name}, ファイルサイズ: ${returnFileSize(
+          file.size,
+        )}.`;
         const image = document.createElement("img");
         image.src = URL.createObjectURL(file);
+        image.alt = image.title = file.name;
 
         listItem.appendChild(image);
         listItem.appendChild(para);
@@ -347,7 +370,7 @@ function updateImageDisplay() {
 独自の `validFileType()` 関数は {{domxref("File")}} オブジェクトを引数として取り、それから {{jsxref("Array.prototype.includes()")}} を使用して、 `fileTypes` の中の値にファイルの `type` プロパティに一致するものがあるかどうかをチェックします。一致するものが見つかった場合は、関数は `true` を返します。一致するものが見つからなければ、 `false` を返します。
 
 ```js
-// https://developer.mozilla.org/ja/docs/Web/Media/Formats/Image_types
+// https://developer.mozilla.org/ja/docs/Web/Media/Guides/Formats/Image_types
 const fileTypes = [
   "image/apng",
   "image/bmp",
@@ -370,14 +393,27 @@ function validFileType(file) {
 
 ```js
 function returnFileSize(number) {
-  if (number < 1024) {
+  if (number < 1e3) {
     return `${number} バイト`;
-  } else if (number >= 1024 && number < 1048576) {
-    return `${(number / 1024).toFixed(1)} KB`;
-  } else if (number >= 1048576) {
-    return `${(number / 1048576).toFixed(1)} MB`;
+  } else if (number >= 1e3 && number < 1e6) {
+    return `${(number / 1e3).toFixed(1)} KB`;
+  } else {
+    return `${(number / 1e6).toFixed(1)} MB`;
   }
 }
+```
+
+> [!NOTE]
+> ここで使用されている "KB" および "MB" の単位は、1KB = 1000B という [SI 接頭辞](https://ja.wikipedia.org/wiki/2進接頭辞)の慣例に従っており、macOS と同様です。システムが異なると、ファイルサイズの表し方も異なります。例えば、Ubuntu では 1KiB = 1024B という IEC 接頭辞を使用していますが、RAM の仕様では 2 のべき乗を表す SI 接頭辞 (1KB = 1024B) がよく使われます。このため、ここでは `1e3` (`1000`) や `1e6` (`100000`) を `1024` や `1048576` の代わりに使用しました。 アプリケーションでは、正確なサイズが重要である場合は、ユーザーに単位系を明確に伝える必要があります。
+
+```js hidden
+const button = document.querySelector("form button");
+button.addEventListener("click", (e) => {
+  e.preventDefault();
+  const para = document.createElement("p");
+  para.append("画像がアップロードされました。");
+  preview.replaceChildren(para);
+});
 ```
 
 この例は次のようにできます。使ってみましょう。
@@ -397,8 +433,9 @@ function returnFileSize(number) {
     <tr>
       <td><strong>イベント</strong></td>
       <td>
-        {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("HTMLElement/change_event", "change")}},
+        {{domxref("Element/input_event", "input")}},
+        {{domxref("HTMLInputElement/cancel_event", "cancel")}}
       </td>
     </tr>
     <tr>
@@ -429,7 +466,7 @@ function returnFileSize(number) {
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
     </tr>
   </tbody>
 </table>
@@ -445,4 +482,3 @@ function returnFileSize(number) {
 ## 関連情報
 
 - [ウェブアプリケーションからのファイルの利用](/ja/docs/Web/API/File_API/Using_files_from_web_applications) — `<input type="file">` および[ファイル API](/ja/docs/Web/API/File) に関するたくさんの有用な例も含まれています。
-- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

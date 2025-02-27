@@ -3,11 +3,14 @@ title: Применение эффектов SVG к содержимому HTML
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
 
-Современные браузеры поддерживают [SVG](/ru/docs/SVG) в стилях [CSS](/ru/docs/Web/CSS) для применения графических эффектов к HTML-контенту.
+{{SVGRef}}
+
+Современные браузеры поддерживают [SVG](/ru/docs/Web/SVG) в стилях [CSS](/ru/docs/Web/CSS) для применения графических эффектов к HTML-контенту.
 
 Вы можете указать SVG в стилях как внутри одного документа, так и из внешней таблицы стилей. Есть 3 свойства, которые вы можете использовать: [`mask`](/ru/docs/Web/CSS/mask), [`clip-path`](/ru/docs/Web/CSS/clip-path), и [`filter`](/ru/docs/Web/CSS/filter).
 
-> **Примечание:** Ссылки на SVG во внешних файлах должны быть в том же самом источнике [same origin](/ru/docs/Web/Security/Same-origin_policy) , что и ссылочный документ.
+> [!NOTE]
+> Ссылки на SVG во внешних файлах должны быть в том же самом источнике [same origin](/ru/docs/Web/Security/Same-origin_policy) , что и ссылочный документ.
 
 ## Использование встроенного SVG
 
@@ -282,6 +285,6 @@ For example, if your CSS is in a file namedit can look like this:
 
 ## Смотрите также
 
-- [SVG](/ru/docs/SVG)
-- [Эффекты SVG для HTML-контента](http://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (запись в блоге)
-- [Web Tech Blog »Архив блога» Ссылки на внешние документы SVG](http://web.archive.org/web/20120512132948/https://developer.mozilla.org/web-tech/2008/10/10/svg-external-document-references/))
+- [SVG](/ru/docs/Web/SVG)
+- [Эффекты SVG для HTML-контента](https://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (запись в блоге)
+- [Web Tech Blog »Архив блога» Ссылки на внешние документы SVG](https://web.archive.org/web/20120512132948/https://developer.mozilla.org/web-tech/2008/10/10/svg-external-document-references/))

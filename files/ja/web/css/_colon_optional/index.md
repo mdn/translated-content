@@ -1,5 +1,5 @@
 ---
-title: ":optional"
+title: :optional
 slug: Web/CSS/:optional
 ---
 
@@ -13,6 +13,8 @@ input:optional {
   border: 1px dashed black;
 }
 ```
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-optional.html", "tabbed-standard")}}
 
 この擬似クラスは。フォームを送信するにあたって必須ではない入力欄にスタイルを適用するのに便利です。
 

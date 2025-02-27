@@ -3,14 +3,16 @@ title: keypress
 slug: Web/API/Element/keypress_event
 ---
 
+{{APIRef}}
+
 Событие `keypress` происходит когда нажимается символьная клавиша, то есть клавиша которая создаёт символ. Пример таких клавиш это буквы, цифры, знаки пунктуации и т.д. Примеры клавиш которые не создают символы, это клавиши модификаторы, такие как: <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>Meta</kbd>.
 
 ## Общая информация
 
 - Спецификация
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-keypress) {{deprecated_inline()}}
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-keypress) {{deprecated_inline()}}
 - Интерфейс
-  - : [KeyboardEvent](/ru/docs/DOM/KeyboardEvent)
+  - : [KeyboardEvent](/ru/docs/Web/API/KeyboardEvent)
 - Bubbles
   - : Yes
 - Cancelable
@@ -232,10 +234,10 @@ Chrome не запускает событие `keypress` для известны
 
 ## Связанные события
 
-- {{event("keydown")}}
-- {{event("keyup")}}
-- {{event("keypress")}}
-- {{event("input")}}
+- [`keydown`](/ru/docs/Web/API/Element/keydown_event)
+- [`keyup`](/ru/docs/Web/API/Element/keyup_event)
+- [`keypress`](/ru/docs/Web/API/Element/keypress_event)
+- [`input`](/ru/docs/Web/API/Element/input_event)
 
 ## Пример
 

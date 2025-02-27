@@ -7,7 +7,7 @@ slug: WebAssembly/JavaScript_interface/Memory
 
 **`WebAssembly.Memory()`** 생성자는 WebAssembly `Instance`가 액세스하는 메모리의 원시 바이트를 가진 [ArrayBuffer](/ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)(크기조정이 가능)인 새 `Memory` 객체를 만듭니다.
 
-메모리는 자바스크립트 혹은 WebAssembly 코드 안에서 만들어지며 자바스크립트 그리고 WebAssembly에서 접근하거나 변경이 가능합니다.
+메모리는 JavaScript 혹은 WebAssembly 코드 안에서 만들어지며 JavaScript 그리고 WebAssembly에서 접근하거나 변경이 가능합니다.
 
 ## Syntax
 
@@ -23,7 +23,8 @@ var myMemory = new WebAssembly.Memory(memoryDescriptor);
     - _maximum {{optional_inline}}_
       - : WebAssembly 메모리의 최대 크기는 WebAssembly 페이지 단위로 증가 할 수 있습니다. 이 매개 변수가 있으면 `maximum` 매개 변수는 엔진에 대해 메모리를 전면에 예약하도록 합니다. 그러나 엔진은 이 예약 요청을 무시하거나 클램핑 할 수 있습니다. 일반적으로 대부분의 WebAssembly 모듈은 `maximum` 값을 설정할 필요가 없습니다.
 
-> **참고:** WebAssembly 페이지의 크기는 65,536 바이트로 64KiB로 고정되어 있습니다.
+> [!NOTE]
+> WebAssembly 페이지의 크기는 65,536 바이트로 64KiB로 고정되어 있습니다.
 
 ### Exceptions
 
@@ -32,7 +33,7 @@ var myMemory = new WebAssembly.Memory(memoryDescriptor);
 
 ## `Memory` instances
 
-모든 `Memory` 인스턴스는 `Memory()`생성자의 [prototype object](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/prototype)를 상속합니다.이 인스턴스는 모든 `Memory` 인스턴스에 적용되도록 수정할 수 있습니다.
+모든 `Memory` 인스턴스는 `Memory()`생성자의 [prototype object](/ko/docs/WebAssembly/JavaScript_interface/Memory)를 상속합니다.이 인스턴스는 모든 `Memory` 인스턴스에 적용되도록 수정할 수 있습니다.
 
 ### Instance properties
 

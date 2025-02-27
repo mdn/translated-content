@@ -34,7 +34,7 @@ slug: Web/HTML/Element/form
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -101,8 +101,8 @@ slug: Web/HTML/Element/form
 
   - : 양식을 제출할 때 사용할 [HTTP](/ko/docs/Web/HTTP) 메서드.
 
-    - `post`: [POST 메서드](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5). 양식 데이터를 [요청 본문](/ko/docs/Web/API/Body)으로 전송합니다.
-    - `get`: [GET 메서드](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3). 양식 데이터를 `action` URL과 `?` 구분자 뒤에 이어 붙여서 전송합니다.
+    - `post`: [POST 메서드](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5). 양식 데이터를 [요청 본문](/ko/docs/Web/API/Body)으로 전송합니다.
+    - `get`: [GET 메서드](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3). 양식 데이터를 `action` URL과 `?` 구분자 뒤에 이어 붙여서 전송합니다.
     - dialog: 양식이 {{htmlelement("dialog")}} 안에 위치한 경우, 제출과 함께 대화 상자를 닫습니다.
 
     {{HTMLElement("button")}}, [`<input type="submit">`](/ko/docs/Web/HTML/Element/input/submit), [`<input type="image">`](/ko/docs/Web/HTML/Element/input/image) 요소의 [`formmethod`](/ko/docs/Web/HTML/Element/button#formmethod) 특성으로 재정의할 수 있습니다.
@@ -113,7 +113,7 @@ slug: Web/HTML/Element/form
   - : 지정한 경우 양식의 유효성 검증을 건너뜁니다. `novalidate` 특성을 지정하지 않은(양식의 검증을 수행하는) 경우에도 {{HTMLElement("button")}}, [`<input type="submit">`](/ko/docs/Web/HTML/Element/input/submit), [`<input type="image">`](/ko/docs/Web/HTML/Element/input/image) 요소의 [`formnovalidate`](/ko/docs/Web/HTML/Element/button#formnovalidate) 특성으로 재정의할 수 있습니다.
 - `target`
 
-  - : 양식 제출의 결과를 표시할 위치를 나타내는 표준 키워드 혹은 사용자 지정 이름. 가능한 값은 {{glossary("browsing context", "브라우징 맥락")}}(탭, 창, {{htmlelement("iframe")}})의 이름 또는 키워드입니다. 지정한 경우, 버튼의 양식 소유자가 가진 [`target`](/ko/docs/Web/HTML/Element/form#target) 특성보다 우선합니다. 다음 키워드는 특별한 뜻을 가지고 있습니다.
+  - : 양식 제출의 결과를 표시할 위치를 나타내는 표준 키워드 혹은 사용자 지정 이름. 가능한 값은 {{glossary("browsing context", "브라우징 맥락")}}(탭, 창, {{htmlelement("iframe")}})의 이름 또는 키워드입니다. 지정한 경우, 버튼의 양식 소유자가 가진 [`target`](#target) 특성보다 우선합니다. 다음 키워드는 특별한 뜻을 가지고 있습니다.
 
     - `_self`: 응답을 현재 브라우징 맥락에 표시합니다. 기본값.
     - `_blank`: 응답을 새로운 브라우징 맥락에 표시합니다. 보통 새 탭이지만, 사용자가 브라우저 설정을 통해 새 창으로 바꿀 수 있습니다.
@@ -164,4 +164,4 @@ slug: Web/HTML/Element/form
 
 ## 같이 보기
 
-- [HTML 양식 안내서](/ko/docs/Web/Guide/HTML/Forms)
+- [HTML 양식 안내서](/ko/docs/Learn/Forms)

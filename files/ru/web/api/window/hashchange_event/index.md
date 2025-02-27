@@ -1,40 +1,78 @@
 ---
-title: hashchange
+title: "Window: событие hashchange"
 slug: Web/API/Window/hashchange_event
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-Событие `hashchange` генерируется когда изменяется идентификатор фрагмента URL (т.е. часть URL следующая за символом #, включая сам символ #).
+{{APIRef}}
 
-## Общая информация
+Событие **`hashchange`** возникает, когда изменяется «якорь» URL (часть URL, которая начинается с символа `#`).
 
-- Спецификация
-  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-hashchange)
-- Интерфейс
-  - : HashChangeEvent
-- Bubbles
-  - : Yes
-- Cancelable
-  - : No
-- Target
-  - : defaultView
-- Действие по умолчанию
-  - : None
+## Синтаксис
 
-## Свойства
+Используйте имя события в таких методах, как {{domxref("EventTarget.addEventListener", "addEventListener()")}}, или устанавливайте свойство обработчика события.
 
-| Property                        | Type                       | Description                                           |
-| ------------------------------- | -------------------------- | ----------------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The browsing context (`window`).                      |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                    |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.            |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.              |
-| `oldURL` {{readonlyInline}}     | {{jsxref("String")}}       | The previous URL from which the window was navigated. |
-| newURL {{readonlyInline}}       | {{jsxref("String")}}       |                                                       |
+```js
+addEventListener("hashchange", (event) => {});
+onhashchange = (event) => {};
+```
+
+## Тип события
+
+{{domxref("HashChangeEvent")}}. Наследуется от {{domxref("Event")}}.
+
+{{InheritanceDiagram("HashChangeEvent")}}
+
+## Свойства события
+
+- {{domxref("HashChangeEvent.newURL")}} {{ReadOnlyInline}}
+  - : Строка, содержащая новый URL, на который происходит перенаправление.
+- {{domxref("HashChangeEvent.oldURL")}} {{ReadOnlyInline}}
+  - : Строка, содержащая старый URL, с которого происходит перенаправление.
+
+## Псевдонимы обработчика события
+
+В дополнение к интерфейсу `Window`, свойство обработчика события `onhashchange` также доступно на следующих объектах:
+
+- {{domxref("HTMLBodyElement")}}
+- {{domxref("HTMLFrameSetElement")}}
+- {{domxref("SVGSVGElement")}}
+
+## Примеры
+
+Можно использовать событие `hashchange` с методом {{domxref("EventTarget/addEventListener", "addEventListener")}}:
+
+```js
+window.addEventListener(
+  "hashchange",
+  () => {
+    console.log("Якорь был изменён!");
+  },
+  false,
+);
+```
+
+Или использовать свойство обработчика события `onhashchange`:
+
+```js
+function locationHashChanged() {
+  if (location.hash === "#cool-page-part") {
+    console.log("Вы перешли к замечательной части страницы!");
+  }
+}
+
+window.onhashchange = locationHashChanged;
+```
+
+## Спецификации
+
+{{Specifications}}
 
 ## Совместимость с браузерами
 
 {{Compat}}
 
-## Похожие события
+## Смотрите также
 
-- [`popstate`](/ru/docs/Mozilla_event_reference/popstate)
+- Событие {{domxref("Window/popstate_event", "popstate")}}

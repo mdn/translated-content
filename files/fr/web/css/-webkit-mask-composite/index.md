@@ -1,5 +1,5 @@
 ---
-title: "-webkit-mask-composite"
+title: -webkit-mask-composite
 slug: Web/CSS/-webkit-mask-composite
 ---
 
@@ -27,7 +27,8 @@ La propriété **`-webkit-mask-composite`** définit la façon dont plusieurs im
 -webkit-mask-composite: unset;
 ```
 
-> **Note :** La propriété {{cssxref("mask-composite")}} couvre certains aspects de cette propriété non-standard avec des mots-clés différents.
+> [!NOTE]
+> La propriété {{cssxref("mask-composite")}} couvre certains aspects de cette propriété non-standard avec des mots-clés différents.
 
 ## Syntaxe
 

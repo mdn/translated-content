@@ -14,7 +14,7 @@ Même si le client et le serveur supportent deux algorithmes de compressions com
 
 Dès lors que l'usage d'`identity`, signifiant l'absence de compression, n'est pas explicitement interdite, que ce soit par `identity;q=0` ou `*;q=0` (sans l'usage d'une autre valeur pour `identity`), le serveur ne doit jamais renvoyer une erreur [`406`](/fr/docs/Web/HTTP/Status/406) `Not Acceptable.`
 
-> **Note :**
+> [!NOTE]
 >
 > - Un dépôt IANA garde à jour [une liste complète des encodages de contenu](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1).
 > - Deux autres encodages, `bzip` et `bzip2`, sont parfois utilisés, bien que non-standards. Ils implémentent l'algorithme utilisé par les deux programmes UNIX respectifs. À noter que le premier n'est plus maintenu suite à des problèmes de licence.
@@ -89,4 +89,4 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 
 - [Négociation de contenu](/fr/docs/Web/HTTP/Content_negotiation) HTTP
 - En-tête résultant de la négociation de contenu : [`Content-Encoding`](/fr/docs/Web/HTTP/Headers/Content-Encoding)
-- Autres en-têtes en rapport : [`TE`](/fr/docs/Web/HTTP/Headers/TE), [`Accept`](/fr/docs/Web/HTTP/Headers/Accept), [`Accept-Charset`](/fr/docs/Web/HTTP/Headers/Accept-Charset), [`Accept-Language`](/fr/docs/Web/HTTP/Headers/Accept-Language)
+- Autres en-têtes en rapport : [`TE`](/fr/docs/Web/HTTP/Headers/TE), [`Accept`](/fr/docs/Web/HTTP/Headers/Accept), [`Accept-Charset`](/fr/docs/conflicting/Web/HTTP/Headers), [`Accept-Language`](/fr/docs/Web/HTTP/Headers/Accept-Language)

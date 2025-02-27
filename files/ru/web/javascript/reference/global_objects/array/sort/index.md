@@ -3,7 +3,7 @@ title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -18,7 +18,7 @@ arr.sort([compareFunction])
 ### Параметры
 
 - `compareFunction`
-  - : Необязательный параметр. Указывает функцию, определяющую порядок сортировки. Если опущен, массив сортируется в соответствии со значениями кодовых точек каждого символа [Unicode](/ru/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode), полученных путём преобразования каждого элемента в строку.
+  - : Необязательный параметр. Указывает функцию, определяющую порядок сортировки. Если опущен, массив сортируется в соответствии со значениями кодовых точек каждого символа [Unicode](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#unicode), полученных путём преобразования каждого элемента в строку.
 
 ### Возвращаемое значение
 
@@ -71,7 +71,7 @@ function compareNumbers(a, b) {
 }
 ```
 
-Метод `sort` можно удобно использовать с {{jsxref("Operators/function", "функциональными выражениями", "", 1)}} (и [замыканиями](/ru/docs/Web/JavaScript/Guide/Closures)):
+Метод `sort` можно удобно использовать с {{jsxref("Operators/function", "функциональными выражениями", "", 1)}} (и [замыканиями](/ru/docs/Web/JavaScript/Closures)):
 
 ```js
 var numbers = [4, 2, 5, 1, 3];

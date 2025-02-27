@@ -12,7 +12,8 @@ slug: Web/CSS/grid
 
 {{EmbedInteractiveExample("pages/css/grid.html")}}
 
-> **备注：** 你仅可在一个 `grid` 属性中声明显式或隐式网格。与其他简写属性同样，若有次级属性未被声明，其将使用初始值。另外，尽管此简写声明无法设置网格的槽（gutter），槽会被该声明重置。
+> [!NOTE]
+> 你仅可在一个 `grid` 属性中声明显式或隐式网格。与其他简写属性同样，若有次级属性未被声明，其将使用初始值。另外，尽管此简写声明无法设置网格的槽（gutter），槽会被该声明重置。
 
 ## 语法
 
@@ -109,4 +110,4 @@ grid: unset;
 
 - 相关 CSS 属性：{{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
 - _网格布局指南：[Line-based placement with CSS Grid](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
-- _网格布局指南：[Grid template areas - Grid definition shorthands](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#Grid_definition_shorthands)_
+- _网格布局指南：[Grid template areas - Grid definition shorthands](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#grid_definition_shorthands)_

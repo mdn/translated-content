@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 
 Одним из наиболее распространённых вариантов использования расширений является внесение изменение в веб-страницу. К примеру, расширение может изменить стиль, применённый к странице, скрыть существующие или вставить на страницу дополнительные DOM-узлы.
 
-Существует два способа сделать это используя WebExtensions API:
+Существует два способа сделать это используя WebExtension API:
 
 - **Декларативно**: объявить шаблон, которому соответствует набор URL-адресов, и загрузить набор скриптов на страницы, которые попадают в под этот шаблон.
 - **Программно**: используя JavaScript API, загрузить скрипт на страницу, из определённой вкладки.
@@ -41,9 +41,11 @@ slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 
 Ключ [`content_scripts`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) - это как мы загружаем скрипты на страницы, соответствующие URL-шаблону. В нашем случае, `content_scripts` говорит браузеру загрузить скрипт "page-eater.js" на все страницы, начинающиеся с <https://developer.mozilla.org/>.
 
-> **Примечание:** Поскольку свойство `"js"` ключа `content_scripts` это массив, вы можете использовать его, для внедрения более одного скрипта. Если вы сделаете это, страницы получат набор, как если бы эти скрипты были загружены самой страницей, они будут загружены в той же очерёдности, в которой они расположены в массиве.
+> [!NOTE]
+> Поскольку свойство `"js"` ключа `content_scripts` это массив, вы можете использовать его, для внедрения более одного скрипта. Если вы сделаете это, страницы получат набор, как если бы эти скрипты были загружены самой страницей, они будут загружены в той же очерёдности, в которой они расположены в массиве.
 
-> **Примечание:** Ключ `content_scripts` также имеет свойство `"css"`, которое вы можете использовать для вставки CSS-таблиц.
+> [!NOTE]
+> Ключ `content_scripts` также имеет свойство `"css"`, которое вы можете использовать для вставки CSS-таблиц.
 
 Далее, создадим файл "page-eater.js", внутри директории "modify-page":
 
@@ -55,11 +57,9 @@ header.textContent = "Эта страница была съедена";
 document.body.appendChild(header);
 ```
 
-Теперь [установим расширение](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), и перейдём на страницу <https://developer.mozilla.org/>:
+Теперь [установим расширение](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox) и перейдём на страницу [https://developer.mozilla.org/](/):
 
-{{EmbedYouTube("lxf2Tkg6U1M")}}
-
-> **Примечание:** Обратите внимание, несмотря на то, что в указанном видео, на странице [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) всё работает нормально, на текущий момент, для этого сайта, контентные скрипты заблокированы.
+![страница developer.mozilla.org "съедена" скриптом](eaten_page.png)
 
 ## Программная модификация страницы
 
@@ -83,8 +83,8 @@ document.body.appendChild(header);
 
 Мы удалили ключ `content_scripts` и добавили два новых:
 
-- [`permissions (разрешения)`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): для внедрения скрипта, нам нужны разрешения для страниц, которые мы модифицируем. [Разрешение `activeTab`](/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) это способ получить доступ к текущей вкладки. Нам также нужно разрешение `contextMenus`, чтобы добавлять в контекстное меню новые элементы.
-- [`background (фоновый)`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background): мы используем этот ключ, для загрузки постоянного ["фонового скрипта"](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts), с именем "background.js", в котором мы настроим контекстное меню и внедрим контентный скрипт.
+- [`permissions (разрешения)`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): для внедрения скрипта, нам нужны разрешения для страниц, которые мы модифицируем. [Разрешение `activeTab`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) это способ получить доступ к текущей вкладки. Нам также нужно разрешение `contextMenus`, чтобы добавлять в контекстное меню новые элементы.
+- [`background (фоновый)`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background): мы используем этот ключ, для загрузки постоянного ["фонового скрипта"](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts), с именем "background.js", в котором мы настроим контекстное меню и внедрим контентный скрипт.
 
 Давайте создадим этот файл. Создадим новый файл "background.js" в директории "modify-page" и поместим в него следующий код:
 
@@ -103,7 +103,7 @@ browser.contextMenus.onClicked.addListener(function (info, tab) {
 });
 ```
 
-В этом скрипте мы создаём [элемент контекстного меню](/en-US/Add-ons/WebExtensions/API/ContextMenus/create), передавая ему определённый идентификатор и заголовок (текст будет отображаться в элементе контекстного меню). Затем мы настраиваем обработчик событий таким образом, чтобы когда пользователь выбирает пункт контекстного меню, осуществлялась проверка, наш ли это элемент `eat-page`. Если это так - внедряем скрипт "page-eater.js" в текущую вкладку, используя [`tabs.executeScript()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API. Это API опционально принимает идентификатор вкладки, в качестве аргумента. Мы опустили его, это означает, что скрипт будет внедряться в текущую активную вкладку.
+В этом скрипте мы создаём [элемент контекстного меню](/ru/docs/Mozilla/Add-ons/WebExtensions/API/menus/create), передавая ему определённый идентификатор и заголовок (текст будет отображаться в элементе контекстного меню). Затем мы настраиваем обработчик событий таким образом, чтобы когда пользователь выбирает пункт контекстного меню, осуществлялась проверка, наш ли это элемент `eat-page`. Если это так - внедряем скрипт "page-eater.js" в текущую вкладку, используя [`tabs.executeScript()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API. Это API опционально принимает идентификатор вкладки, в качестве аргумента. Мы опустили его, это означает, что скрипт будет внедряться в текущую активную вкладку.
 
 На данном этапе расширение должно иметь следующий вид:
 
@@ -114,20 +114,18 @@ modify-page/
     page-eater.js
 ```
 
-Теперь [перезагрузим расширение](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on), откроем страницу (на этот раз любую) активируем контекстное меню и выберем "Съесть эту страницу":
+Теперь [перезагрузим расширение](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on) откроем страницу (на этот раз любую), активируем контекстное меню и выберем "Съесть эту страницу":
 
-{{EmbedYouTube("zX4Bcv8VctA")}}
-
-> **Примечание:** Обратите внимание, несмотря на то, что в указанном видео, на странице [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) всё работает нормально, на текущий момент, для этого сайта, контентные скрипты заблокированы.
+![Пункт "Съесть страницу" в контекстном меню](eat_from_menu.png)
 
 ## Обмен сообщениями
 
 Контентные и фоновые скрипты не могут на прямую взаимодействовать друг с другом. Не смотря на это они могут взаимодействовать с помощью обмена сообщениями. Для этого один конец создаёт обработчик сообщений, а другой - может посылать сообщения. В следующей таблице представлены API-интерфейсы, задействованные с каждой стороны:
 
-|                     | В контентном скрипте                                                                        | В фоновом скрипте                                                                 |
-| ------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| Отправка сообщения  | [`browser.runtime.sendMessage()`](</en-US/Add-ons/WebExtensions/API/runtime#sendMessage()>) | [`browser.tabs.sendMessage()`](/en-US/Add-ons/WebExtensions/API/Tabs/sendMessage) |
-| Получение сообщения | [`browser.runtime.onMessage`](/en-US/Add-ons/WebExtensions/API/runtime/onMessage)           | [`browser.runtime.onMessage`](/en-US/Add-ons/WebExtensions/API/runtime#onMessage) |
+|                     | В контентном скрипте                                                                        | В фоновом скрипте                                                                           |
+| ------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Отправка сообщения  | [`browser.runtime.sendMessage()`](</en-US/Add-ons/WebExtensions/API/runtime#sendMessage()>) | [`browser.tabs.sendMessage()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/sendMessage) |
+| Получение сообщения | [`browser.runtime.onMessage`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) | [`browser.runtime.onMessage`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onmessage) |
 
 Давайте обновим наш пример, чтобы посмотреть, как послать сообщение из фонового скрипта.
 
@@ -180,7 +178,8 @@ browser.runtime.onMessage.addListener(eatPage);
 
 Если мы хотим отправить сообщение наоборот, из контентного скрипта в фоновый, настройка будет обратной данному примеру, за исключением того, что мы будем использовать [`runtime.sendMessage()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) в контентном скрипте.
 
-> **Примечание:** Все эти примеры внедряют JavaScript; вы можете программно внедрять стилевые таблицы CSS используя функцию [`tabs.insertCSS()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS).
+> [!NOTE]
+> Все эти примеры внедряют JavaScript; вы можете программно внедрять стилевые таблицы CSS используя функцию [`tabs.insertCSS()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS).
 
 ## Узнать больше
 

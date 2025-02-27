@@ -13,7 +13,7 @@ A coisa mais importante para se entender antes de começarmos é que, mesmo que 
 
 ### Inicializando os shaders
 
-Shaders são especificados ao usar a [Linguagem de Shading OpenGL ES](http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf). Com o intuito de tornar mais fácil para manter e atualizar nosso conteúdo, nós podemos escrever nosso código que carrega os shaders para buscá-los no documento HTML, ao invés de termos de criar tudo em JavaScript. Vamos dar uma olhada na nossa rotina `initShaders()`, que cuida dessa tarefa:
+Shaders são especificados ao usar a [Linguagem de Shading OpenGL ES](https://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf). Com o intuito de tornar mais fácil para manter e atualizar nosso conteúdo, nós podemos escrever nosso código que carrega os shaders para buscá-los no documento HTML, ao invés de termos de criar tudo em JavaScript. Vamos dar uma olhada na nossa rotina `initShaders()`, que cuida dessa tarefa:
 
 ```js
 function initShaders() {
@@ -164,7 +164,7 @@ This routine is pretty simplistic given the basic nature of the scene in this ex
 
 Once that's done, we create a JavaScript array containing the coordinates for each vertex of the square. This is then converted into an array of WebGL floats and passed into the `gl` object's `bufferData()` method to establish the vertices for the object.
 
-## Desenhando a cena
+## Renderizando a cena
 
 Once the shaders are established and the object constructed, we can actually render the scene. Since we're not animating anything in this example, our `drawScene()` function is very simple. It uses a few utility routines we'll cover shortly.
 
@@ -188,9 +188,9 @@ The first step is to clear the context to our background color; then we establis
 
 Then we establish the position of the square by loading the identity position and translating away from the camera by 6 units. After that, we bind the square's vertex buffer to the context, configure it, and draw the object by calling the `drawArrays()` method.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
-[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2) | [Open this demo on a new page](http://mdn.github.io/webgl-examples/tutorial/sample2/)
+[View the complete code](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2) | [Open this demo on a new page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)
 
 ## Operações úteis da Matrix
 
@@ -228,7 +228,7 @@ function setMatrixUniforms() {
 
 ## Ver Também
 
-- [Matrices](http://mathworld.wolfram.com/Matrix.html) on Wolfram MathWorld
+- [Matrices](https://mathworld.wolfram.com/Matrix.html) on Wolfram MathWorld
 - [Matriz](<http://en.wikipedia.org/wiki/Matrix_(mathematics)>) na Wikipedia
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

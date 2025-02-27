@@ -11,7 +11,8 @@ Nós vimos muito sobre texto até aqui nesse curso, mas a internet seria muito c
 
 Antes de iniciar esse módulo, você deve ter um conhecimento razoável de HTML, como previamente abrangido em [introdução a HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML). Se você não estudou esse módulo (ou algo similar), estude-o primeiro e depois retorne!
 
-> **Nota:** Se você está trabalhando em um computador/tablet/outro dispositivo onde você não tem a habilidade de criar seus próprios arquivos, você pode testar (maior parte) dos exemplos de códigos em um programa online para codar tais como [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
+> [!NOTE]
+> Se você está trabalhando em um computador/tablet/outro dispositivo onde você não tem a habilidade de criar seus próprios arquivos, você pode testar (maior parte) dos exemplos de códigos em um programa online para codar tais como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guias
 

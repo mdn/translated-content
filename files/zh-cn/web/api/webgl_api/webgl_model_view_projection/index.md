@@ -7,7 +7,8 @@ slug: Web/API/WebGL_API/WebGL_model_view_projection
 
 本文探讨如何在 WebGL 项目中获取数据，并将其投影到适当的空间以在屏幕上显示。它假定了你具备用于平移，缩放和旋转的基本矩阵数学知识。它解释了组成 3D 场景时通常使用的三个核心矩阵：模型，视图和投影矩阵。
 
-> **备注：** 本文还可作为 [MDN 内容套件](https://github.com/TatumCreative/mdn-model-view-projection) 提供。它还使用 `MDN`全局对象下可用的 [实用函数](https://github.com/TatumCreative/mdn-webgl) 集合。
+> [!NOTE]
+> 本文还可作为 [MDN 内容套件](https://github.com/TatumCreative/mdn-model-view-projection) 提供。它还使用 `MDN`全局对象下可用的 [实用函数](https://github.com/TatumCreative/mdn-webgl) 集合。
 
 ## 模型、视图、投影矩阵
 
@@ -31,7 +32,8 @@ WebGL 空间中的点和多边形的个体转化由基本的转换矩阵（例�
 
 本示例将创建一个自定义 WebGL 对象，该对象将在屏幕上绘制一个 2D 框。
 
-> **备注：** 每一个 WebGL 示例代码在此 [github repo](https://github.com/TatumCreative/mdn-model-view-projection/tree/master/lessons) 中可找到，并按章节组织。此外，每个章节底部都有一个 JSFiddle 链接。
+> [!NOTE]
+> 每一个 WebGL 示例代码在此 [github repo](https://github.com/TatumCreative/mdn-model-view-projection/tree/master/lessons) 中可找到，并按章节组织。此外，每个章节底部都有一个 JSFiddle 链接。
 
 #### WebGLBox Constructor
 
@@ -218,7 +220,7 @@ gl_Position = vec4(position, 1.0);
 
 显而易见的问题是：“为什么要增加维度？”。事实证明，这种增加允许使用许多不错的技术来处理 3D 数据。这个增加的维度将透视的概念引入坐标系中。将其放置在适当的位置后，我们可以将 3D 坐标映射到 2D 空间中，从而允许两条平行线当它们延伸到远方时相交。 `w` 的值被用作该坐标的其他分量放除数，因此 `x`, `y` 和 `z` 的真实值被计算为 `x/w` , `y/w` 和 `z/w`（然后 `w` 也 `w/w` , 变成 1）。
 
-三维点定义在典型的笛卡尔坐标系中。增加的第四维将这一点变为 [齐次坐标](https://zh.wikipedia.org/wiki/homogeneous_coordinates) 。它仍然代表 3D 空间中的一个点，并且可以通过一对简单的函数轻松地演示如何构造这种类型的坐标。
+三维点定义在典型的笛卡尔坐标系中。增加的第四维将这一点变为[齐次坐标](https://zh.wikipedia.org/wiki/齐次坐标)。它仍然代表 3D 空间中的一个点，并且可以通过一对简单的函数轻松地演示如何构造这种类型的坐标。
 
 ```js
 function cartesianToHomogeneous(point) {
@@ -412,7 +414,8 @@ gl.uniformMatrix4fv(
 gl_Position = model * vec4(position, 1.0);
 ```
 
-> **备注：** 在 JavaScript 中，矩阵乘法需要自定义函数，而在着色器中，它使用了内置在语言中的简单的 \* 运算。
+> [!NOTE]
+> 在 JavaScript 中，矩阵乘法需要自定义函数，而在着色器中，它使用了内置在语言中的简单的 \* 运算。
 
 ### 结果
 
@@ -486,14 +489,26 @@ MDN.multiplyPoint(copyZ, [2, 3, 4, 1]);
 
 但是，在最后一个示例中，我们执行了 `(z + 1) * scaleFactor`:
 
-```
+```js
 var scaleFactor = 0.5;
 
 var simpleProjection = [
-  1, 0, 0, 0,
-  0, 1, 0, 0,
-  0, 0, 1, scaleFactor,
-  0, 0, 0, scaleFactor,
+  1,
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
+  0,
+  0,
+  0,
+  1,
+  scaleFactor,
+  0,
+  0,
+  0,
+  scaleFactor,
 ];
 
 MDN.multiplyPoint(simpleProjection, [2, 3, 4, 1]);
@@ -567,9 +582,9 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 透视矩阵是一种可以满足这些要求的投影矩阵。也开始涉及数学更多的内容，这些示例中将不做充分解释。简而言之，它结合了除以 w（与前面的例子相同）和基于 [相似三角形](https://en.wikipedia.org/wiki/Similarity_%28geometry%29) 相似三角形的一些巧妙操作。如果你想阅读有关其背后数学的完整说明，请查看以下一些链接：
 
-- [OpenGL 投影矩阵](http://www.songho.ca/opengl/gl_projectionmatrix.html)
+- [OpenGL 投影矩阵](https://www.songho.ca/opengl/gl_projectionmatrix.html)
 - [透视投影](http://ogldev.atspace.co.uk/www/tutorial12/tutorial12.html)
-- [尝试了解 WebGL 中透视矩阵背后的数学](http://stackoverflow.com/questions/28286057/trying-to-understand-the-math-behind-the-perspective-matrix-in-webgl/28301213#28301213)
+- [尝试了解 WebGL 中透视矩阵背后的数学](https://stackoverflow.com/questions/28286057/trying-to-understand-the-math-behind-the-perspective-matrix-in-webgl/28301213#28301213)
 
 关于下面使用的透视矩阵，需要注意的一件重要的事是它会翻转 z 轴。在裁剪空间中，z+ 原理观察者，而使用此矩阵，它朝向观察者。
 
@@ -669,8 +684,6 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 我们没有向后和向左移动相机，而是对盒子应用了逆变换：我们将盒子向后移动 1 米，然后向右移动 10 厘米。从两个物体的角度来看，结果是一样的。
 
-**<<< insert image(s) here >>>**
-
 最后一步是创建**视图矩阵**，该矩阵将转换场景中的对象，以便对它们进行定位以模拟相机当前位置与方向。目前的代码可以在世界空间中移动立方体并投影所有内容以获得透视图，但我们仍然无法移动相机。
 
 想象一下使用物理摄像机拍摄电影。你可以自由地将相机放到任何你想放置的位置，并对准任何你选择的方向。为了在 3D 图形中对此进行仿真，我们使用视图矩阵来模拟物理相机的位置和旋转。
@@ -733,7 +746,7 @@ gl_Position = projection * view * model * vec4(position, 1.0);
 - 向视图矩阵中添加一些旋转矩阵以四处看看。
 - 最后，跟踪鼠标的位置。使用 2 个旋转矩阵可以根据用户鼠标在屏幕上的位置上下移动相机。
 
-**参见**
+## 参见
 
 - [WebGL](/zh-CN/docs/Web/API/WebGL_API)
-- [3D projection](https://zh.wikipedia.org/wiki/3D_projection)
+- [三维投影](https://zh.wikipedia.org/wiki/三维投影)

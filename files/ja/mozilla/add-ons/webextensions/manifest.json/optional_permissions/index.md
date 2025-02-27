@@ -37,7 +37,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
 
 ## ホストパーミッション
 
-これは [`permissions`](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) キーで指定できるホストパーミッションと同じです。
+これは [`permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) キーで指定できるホストパーミッションと同じです。
 
 ## API パーミッション
 
@@ -67,7 +67,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
 - `webRequest`
 - `webRequestBlocking`
 
-これは [`permissions`](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) で許可される API パーミッションのサブセットです。
+これは [`permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) で許可される API パーミッションのサブセットです。
 
 このセットでは、下記のパーミッションが、ユーザープロンプトなしで暗黙的に許可されます: activeTab, cookies, idle, webRequest, webRequestBlocking
 
@@ -93,4 +93,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.optional_permissions")}}
+{{Compat}}

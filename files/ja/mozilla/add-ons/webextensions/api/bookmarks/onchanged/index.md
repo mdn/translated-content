@@ -3,12 +3,12 @@ title: bookmarks.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 以下の変更に対して発火します。
 
 - ブックマークのタイトルまたは URL
-- フォルダの名前
+- フォルダーの名前
 
 ## 構文
 
@@ -53,11 +53,11 @@ browser.bookmarks.onChanged.hasListener(listener)
 - `title`
   - : 変更された要素のタイトルを表す {{jsxref("string")}}
 - `url`{{optional_inline}}
-  - : 変更された要素の URL を表す {{jsxref("string")}}。要素がフォルダだった場合に値は入りません。
+  - : 変更された要素の URL を表す {{jsxref("string")}}。要素がフォルダーだった場合に値は入りません。
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.onChanged")}}
+{{Compat}}
 
 ## 使用例
 
@@ -77,7 +77,8 @@ chrome.browserAction.onClicked.addListener(handleClick);
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> [!NOTE]
+> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

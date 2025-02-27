@@ -73,7 +73,8 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
     Si cet attribut n'est pas renseigné, la valeur `left` est prise par défaut.
 
-    > **Attention :** Cet attribut est devenu obsolète dans le dernier standard.
+    > [!WARNING]
+    > Cet attribut est devenu obsolète dans le dernier standard.
     >
     > - Pour réaliser le même effet qu'avec les valeurs `left`, `center`, `right` ou `justify`, utilisez la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align) sur cet élément.
     > - Pour réaliser le même effet qu'avec `char`, vous pouvez utiliser la valeur de `char` comme valeur pour la propriété [`text-align`](/fr/docs/Web/CSS/text-align).
@@ -88,13 +89,15 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
   - : Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut `align` ne vaut pas `char`, l'attribut est ignoré.
 
-    > **Note :** Cet attribut est obsolète et il est donc fortement déconseillé de l'utiliser. De fait, il n'est pas supporté par le dernier standard. Pour réaliser le même effet qu'avec `char`, on peut utiliser la même valeur sur la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align).
+    > [!NOTE]
+    > Cet attribut est obsolète et il est donc fortement déconseillé de l'utiliser. De fait, il n'est pas supporté par le dernier standard. Pour réaliser le même effet qu'avec `char`, on peut utiliser la même valeur sur la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align).
 
 - `charoff` {{Deprecated_inline}}
 
   - : Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère définit par l'attribut `char` à appliquer au contenu des cellules.
 
-    > **Note :** Cet attribut ne doit plus être utilisé, car il est maintenant obsolète et n'est plus supporté dans le dernier standard.
+    > [!NOTE]
+    > Cet attribut ne doit plus être utilisé, car il est maintenant obsolète et n'est plus supporté dans le dernier standard.
 
 - `valign` {{Deprecated_inline}}
 
@@ -109,7 +112,8 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
     - `top`
       - : Place le texte au plus haut de la cellule.
 
-    > **Note :** Cet attribut étant maintenant obsolète (et n'étant plus supporté), il est fortement déconseillé de l'utiliser. La propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align) doit être utilisée à la place.
+    > [!NOTE]
+    > Cet attribut étant maintenant obsolète (et n'étant plus supporté), il est fortement déconseillé de l'utiliser. La propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align) doit être utilisée à la place.
 
 ## Exemples
 

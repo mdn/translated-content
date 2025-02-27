@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 **`apply()`** メソッドは、 `this` 値を指定して関数を呼び出し、 `arguments` は配列 (または[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトの扱い)) として提供します。
 
-{{EmbedInteractiveExample("pages/js/function-apply.html")}}
+{{InteractiveExample("JavaScript Demo: Function.apply()")}}
+
+```js interactive-example
+const numbers = [5, 6, 2, 3, 7];
+
+const max = Math.max.apply(null, numbers);
+
+console.log(max);
+// Expected output: 7
+
+const min = Math.min.apply(null, numbers);
+
+console.log(min);
+// Expected output: 2
+```
 
 ## 構文
 
@@ -21,11 +35,11 @@ func.apply(thisArg, [ argsArray])
 
   - : `this` の値で、 `func` の呼び出しで提供されます。
 
-    このメソッドで指定した `this` が必ず呼び出したメソッドで参照されるわけではないことに注意してください。もし呼び出したメソッドが{{jsxref("Strict_mode", "厳格モードではない", "", 1)}}コード内の関数であれば、ここで渡した値が {{jsxref("null")}} もしくは {{jsxref("undefined")}} であった場合はグローバルオブジェクトに置き換えられ、プリミティブ型の変数はボックス化されます。この引数は必須です。
+    このメソッドで指定した `this` が必ず呼び出したメソッドで参照されるわけではないことに注意してください。もし呼び出したメソッドが{{jsxref("Strict_mode", "厳格モードではない", "", 1)}}コード内の関数であれば、ここで渡した値が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) もしくは {{jsxref("undefined")}} であった場合はグローバルオブジェクトに置き換えられ、プリミティブ型の変数はボックス化されます。この引数は必須です。
 
 - `argsArray` {{optional_inline}}
 
-  - : 1 つの配列風のオブジェクトであり、 `func` 関数が呼ぶことになる引数を列挙したものです。関数に引数が渡されない場合は {{jsxref("null")}} または {{jsxref("undefined")}} となります。
+  - : 1 つの配列風のオブジェクトであり、 `func` 関数が呼ぶことになる引数を列挙したものです。関数に引数が渡されない場合は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または {{jsxref("undefined")}} となります。
 
     ECMAScript 5 以降ではこれらの値は配列ではなく配列風のオブジェクトを用いる事になりました。後述の[ブラウザーの互換性](#browser_compatibility)を参照してください。
 
@@ -35,9 +49,11 @@ func.apply(thisArg, [ argsArray])
 
 ## 解説
 
-> **メモ:** 関数の構文は {{jsxref("Function.call", "call()")}} メソッドとほぼ同じですが、根本的な違いは `call()` メソッドは**連続した引数のリスト**を受け取るのに対して、 `apply()` メソッドが**引数の配列を 1 つだけ**受け取るという点です。
+> [!NOTE]
+> 関数の構文は {{jsxref("Function.call", "call()")}} メソッドとほぼ同じですが、根本的な違いは `call()` メソッドは**連続した引数のリスト**を受け取るのに対して、 `apply()` メソッドが**引数の配列を 1 つだけ**受け取るという点です。
 
-> **メモ:** 最初の引数が undefined または null の場合、配列の[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使用して同様の結果を得ることができます。
+> [!NOTE]
+> 最初の引数が undefined または null の場合、配列の[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使用して同様の結果を得ることができます。
 
 存在する関数を呼び出す時は通常と異なる `this` オブジェクトを渡すことができます。`this` はカレントオブジェクト、呼び出したオブジェクトを参照します。`apply` を用いることで、新たなオブジェクトのためにそのメソッドを書き直すことなく継承させることができます。
 
@@ -47,7 +63,8 @@ func.apply(thisArg, [ argsArray])
 
 ECMAScript 第 5 版以降では、配列風のオブジェクトも使えます。具体的には、`length` プロパティとその範囲 (0 から length-1 まで) の整数の名称のプロパティを持った、あらゆる種類のオブジェクトの利用を認めています。例えば、{{domxref("NodeList")}} や `{ 'length': 2, '0': 'eat', '1': 'bananas' }` のような独自のオブジェクトを利用できます。
 
-> **メモ:** Chrome 14 や Internet Explorer 9 などのブラウザーでは、配列風オブジェクトを扱えずに例外が発生します。
+> [!NOTE]
+> Chrome 14 や Internet Explorer 9 などのブラウザーでは、配列風オブジェクトを扱えずに例外が発生します。
 
 ## 例
 
@@ -136,7 +153,8 @@ Function.prototype.construct = function (aArgs) {
 };
 ```
 
-> **メモ:** 上記で使用している `Object.create()` メソッドは比較的新しいです。代わりの方法として、以下の例を検討してください。
+> [!NOTE]
+> 上記で使用している `Object.create()` メソッドは比較的新しいです。代わりの方法として、以下の例を検討してください。
 >
 > [`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) を利用:
 >
@@ -191,7 +209,8 @@ console.log(myInstance instanceof MyConstructor); // logs 'true'
 console.log(myInstance.constructor); // logs 'MyConstructor'
 ```
 
-> **メモ:** この非ネイティブな `Function.construct` メソッドはいくつかのネイティブ実装されたコンストラクタ (例えば {{jsxref("Date")}} のような物) と併用できません。このようなケースにおいては {{jsxref("Function.bind")}} メソッドを利用する必要があります。
+> [!NOTE]
+> この非ネイティブな `Function.construct` メソッドはいくつかのネイティブ実装されたコンストラクタ (例えば {{jsxref("Date")}} のような物) と併用できません。このようなケースにおいては {{jsxref("Function.bind")}} メソッドを利用する必要があります。
 >
 > 例えば `[2012, 11, 4]` のような配列を {{jsxref("Global_Objects/Date", "Date")}} コンストラクターに利用する事を考えてみてください。この場合では `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` のように書く必要があります。
 >
@@ -203,7 +222,7 @@ console.log(myInstance.constructor); // logs 'MyConstructor'
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Function.apply")}}
+{{Compat}}
 
 ## 関連情報
 

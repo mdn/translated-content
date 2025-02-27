@@ -7,15 +7,10 @@ slug: Web/API/Response/redirected
 
 {{domxref("Response")}} 接口中只读的 **`redirected`** 属性表明该响应是否为一个重定向的请求的结果。
 
-> **备注：** 依赖 **`redirected`** 过滤重定向很容易导致虚假的重定向阻止你的内容像预期一样生效。因此，当调用 {{domxref("GlobalFetch.fetch", "fetch()")}} 时你应该进行过滤操作。详见下面 [禁用重定向](#禁用重定向) 的例子。
+> [!NOTE]
+> 依赖 **`redirected`** 过滤重定向很容易导致虚假的重定向阻止你的内容像预期一样生效。因此，当调用 {{domxref("GlobalFetch.fetch", "fetch()")}} 时你应该进行过滤操作。详见下面 [禁用重定向](#禁用重定向) 的例子。
 
-## 语法
-
-```
-var isRedirected = Response.redirected;
-```
-
-### 返回值
+## 值
 
 一个布尔值 ({{domxref("Boolean")}}), 如果响应来自重定向的请求，那么将返回 `true`.
 
@@ -65,9 +60,9 @@ fetch("awesome-picture.jpg", { redirect: "error" })
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

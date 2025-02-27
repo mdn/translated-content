@@ -3,21 +3,23 @@ title: "<kbd>: Элемент ввода с клавиатуры"
 slug: Web/HTML/Element/kbd
 ---
 
-**HTML-элемент ввода с клавиатуры** (**`<kbd>`**) указывает на то, что текст внутри элемента описывает пользовательский ввод с клавиатуры, голосовой ввод или ввод с использованием любого другого типа устройств ввода текста. По общему соглашению, {{Glossary("user agent")}} использует моноширинный шрифт для отображения содержимого элемента `<kbd>` по умолчанию, хотя это и не указывается HTML стандартом явно.
+{{HTMLSidebar}}
+
+HTML-элемент **`<kbd>`** указывает на то, что текст внутри элемента описывает пользовательский ввод с клавиатуры, голосовой ввод или ввод с использованием любого другого типа устройств ввода текста. По общему соглашению, {{Glossary("user agent")}} использует моноширинный шрифт для отображения содержимого элемента `<kbd>` по умолчанию, хотя это и не указывается HTML стандартом явно.
 
 `<kbd>` можно использовать в различных комбинациях с {{HTMLElement("samp")}} (Sample Output) элементом для отображения различных форм ввода с клавиатуры или ввода, базирующегося на визуальных сигналах.
 
-| [Content categories](/ru/docs/HTML/Content_categories) | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), palpable content. |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Permitted content                                      | [Phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                  |
-| Tag omission                                           | {{no_tag_omission}}                                                                                                                                     |
-| Permitted parents                                      | Any element that accepts [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).                                                         |
-| Permitted ARIA roles                                   | Any                                                                                                                                                     |
-| DOM interface                                          | {{domxref("HTMLElement")}}                                                                                                                              |
+| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content), palpable content. |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Permitted content                                          | [Phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                                                      |
+| Tag omission                                               | Нет, открывающий и закрывающий теги обязательны.                                                                                                                |
+| Permitted parents                                          | Any element that accepts [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                             |
+| Permitted ARIA roles                                       | Any                                                                                                                                                             |
+| DOM interface                                              | {{domxref("HTMLElement")}}                                                                                                                                      |
 
 ## Атрибуты
 
-Этот элемент использует только [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
+Этот элемент использует только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 ## Usage notes
 
@@ -27,7 +29,8 @@ Other elements can be used in tandem with `<kbd>` to represent more specific sce
 - Nesting a `<kbd>` element inside a {{HTMLElement("samp")}} element represents input that has been echoed back to the user by the system. See [Echoed input](#echoed_input), below, for an example.
 - Nesting a `<samp>` element inside a `<kbd>` element, on the other hand, represents input which is based on text presented by the system, such as the names of menus and menu items, or the names of buttons displayed on the screen. See the example under [Representing onscreen input options](#representing_onscreen_input_options) below.
 
-> **Примечание:** You can define a custom style to override the browser's default font selection for the `<kbd>` element, although the user's preferences may potentially override your CSS.
+> [!NOTE]
+> You can define a custom style to override the browser's default font selection for the `<kbd>` element, although the user's preferences may potentially override your CSS.
 
 ## Examples
 
@@ -155,16 +158,14 @@ The output from this HTML looks like this:
 
 {{EmbedLiveSample("Representing_onscreen_input_options", 650, 120)}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{htmlelement("code")}}
-
-{{HTMLSidebar}}

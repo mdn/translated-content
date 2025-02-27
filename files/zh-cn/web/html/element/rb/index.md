@@ -38,9 +38,9 @@ slug: Web/HTML/Element/rb
 
 ## 属性
 
-这个元素仅仅支持 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
+这个元素仅仅支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-## 用法注解
+## 使用说明
 
 - Ruby 注解用于展示东亚文字的发音，例如使用日语罗马音和汉语拼音的文字。 `<rb>` 元素用于分隔出 ruby 基本文本的每个片段。
 - 虽然 `<rb>` 不是一个空元素，但是在源码中通常只包括每个元素的开始标签。因此 ruby 标记就不那么复杂，也更容易阅读。在渲染版本中，浏览器也可以填充完整的元素。
@@ -92,7 +92,8 @@ body {
 
 {{EmbedLiveSample("不支持 ruby", "100%", 60)}}
 
-> **备注：** 有关更多示例，请参阅有关{{HTMLElement("ruby")}}元素的文章。
+> [!NOTE]
+> 有关更多示例，请参阅有关{{HTMLElement("ruby")}}元素的文章。
 
 ## 规范
 
@@ -102,7 +103,7 @@ body {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{HTMLElement("ruby")}}
 - {{HTMLElement("rt")}}

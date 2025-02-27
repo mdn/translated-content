@@ -3,6 +3,8 @@ title: WebVTT
 slug: Web/API/WebVTT_API
 ---
 
+{{DefaultAPISidebar("WebVTT")}}
+
 WebVTT 是一種 UTF-8 編碼的文字檔案格式，可藉由 {{ HTMLElement("track") }} 元素顯示加註時間資訊之文字軌，其主要設計目的是為 {{ HTMLElement("video") }} 顯示字幕。
 
 WebVTT 當中可以採用空白或分隔字元（tab）。
@@ -431,7 +433,7 @@ The first line demonstrates no settings. The second line might be used to overla
 
 The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.
 
-文字內容中不能包含「`-->」字串、「`&」符號或「<」符號。如欲使用後兩者，可採跳脫字串「\&amp;」或「\&lt;」。此外雖規格上允許使用「>」字元，仍然建議跳脫為「\&gt;」以避免混淆。若您使用 WebVTT 檔作為後設資料，則可不管這些限制。
+文字內容中不能包含「`-->」字串、「`&」符號或「<」符號。如欲使用後兩者，可採跳脫字串「\&amp;」或「\&lt;」。此外雖規格上允許使用「>」字元，仍然建議跳脫為「\&gt;」以避免混淆。若你使用 WebVTT 檔作為後設資料，則可不管這些限制。
 
 除了上述的三個跳脫字串外，還有其他四種跳脫字串，分列如下
 
@@ -542,7 +544,7 @@ That's <00:00:21.000>amore
 ```
 
 - **Ruby tag** (`<ruby></ruby>`)
-  - : Used with ruby text tags to display [ruby characters](http://en.wikipedia.org/wiki/Ruby_character) (i.e. small annotative characters above other characters).
+  - : Used with ruby text tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e. small annotative characters above other characters).
 
 ##### Example 18 - Ruby tag
 
@@ -551,7 +553,7 @@ That's <00:00:21.000>amore
 ```
 
 - **Ruby text tag** (`<rt></rt>`)
-  - : Used with ruby tags to display [ruby characters](http://en.wikipedia.org/wiki/Ruby_character) (i.e. small annotative characters above other characters).
+  - : Used with ruby tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e. small annotative characters above other characters).
 
 ##### Example 19 - Ruby text tag
 

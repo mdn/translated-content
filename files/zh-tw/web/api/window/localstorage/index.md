@@ -5,7 +5,7 @@ slug: Web/API/Window/localStorage
 
 {{APIRef("Web Storage API")}}
 
-**`localStorage`** 為一唯讀屬性, 此屬性允許您存取目前文件({{DOMxRef("Document")}})隸屬網域來源的 {{DOMxRef("Storage")}} 物件; 與 sessionStorage 不同的是其儲存資料的可存取範圍為跨瀏覽頁狀態(Browser Sessions). `localStorage` 的應用與 {{DOMxRef("Window.sessionStorage", "sessionStorage")}} 相似, 除了 `localStorage` 的儲存資料並無到期的限制, 而 `sessionStorage` 的儲存資料於目前瀏覽頁狀態結束的同時將一併被清除 — 也就是目前瀏覽器頁面被關閉的同時.
+**`localStorage`** 為一唯讀屬性, 此屬性允許你存取目前文件({{DOMxRef("Document")}})隸屬網域來源的 {{DOMxRef("Storage")}} 物件; 與 sessionStorage 不同的是其儲存資料的可存取範圍為跨瀏覽頁狀態(Browser Sessions). `localStorage` 的應用與 {{DOMxRef("Window.sessionStorage", "sessionStorage")}} 相似, 除了 `localStorage` 的儲存資料並無到期的限制, 而 `sessionStorage` 的儲存資料於目前瀏覽頁狀態結束的同時將一併被清除 — 也就是目前瀏覽器頁面被關閉的同時.
 
 值得注意的是不論 `localStorage` 或者 `sessionStorage` **皆為專屬於目前瀏覽器頁面的通訊協定(Protocol)**.
 
@@ -24,7 +24,7 @@ myStorage = window.localStorage;
 ### Exceptions
 
 - `SecurityError`
-  - : The request violates a policy decision, or the origin is not [a valid scheme/host/port tuple](/zh-TW/docs/Web/Security/Same-origin_policy#Definition_of_an_origin) (this can happen if the origin uses the `file:` or `data:` scheme, for example). 舉例來說，使用者 may have their browser configured to deny permission to persist data for the specified origin.
+  - : The request violates a policy decision, or the origin is not [a valid scheme/host/port tuple](/zh-TW/docs/Web/Security/Same-origin_policy#definition_of_an_origin) (this can happen if the origin uses the `file:` or `data:` scheme, for example). 舉例來說，使用者 may have their browser configured to deny permission to persist data for the specified origin.
 
 ## Example
 
@@ -53,7 +53,8 @@ localStorage.removeItem("myCat");
 localStorage.clear();
 ```
 
-> **備註：** Please refer to the [Using the Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) article for a full example.
+> [!NOTE]
+> Please refer to the [Using the Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) article for a full example.
 
 ## Specifications
 
@@ -66,5 +67,5 @@ localStorage.clear();
 ## See also
 
 - [Using the Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- [Local storage with Window.localStorage](/zh-TW/docs/Web/API/Web_Storage_API/Local_storage)
+- [Local storage with Window.localStorage](/zh-TW/docs/Web/API/Window/localStorage)
 - {{DOMxRef("Window.sessionStorage")}}

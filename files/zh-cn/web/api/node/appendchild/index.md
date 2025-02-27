@@ -15,8 +15,8 @@ slug: Web/API/Node/appendChild
 
 ## 语法
 
-```
-element.appendChild(aChild)
+```js-nolint
+appendChild(aChild)
 ```
 
 ### 参数

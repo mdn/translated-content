@@ -1,73 +1,69 @@
 ---
-title: "::before (:before)"
+title: ::before
 slug: Web/CSS/::before
+l10n:
+  sourceCommit: 9479d8f616977486f1cbe972266ad56904b714e9
 ---
 
 {{CSSRef}}
 
-CSS 中，**`::before`** 创建一个[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)，其将成为匹配选中的元素的第一个子元素。常通过 {{ cssxref("content") }} 属性来为一个元素添加修饰性的内容。此元素默认为行内元素。
+CSS 中，**`::before`** 创建一个[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)，其将成为匹配选中的元素的第一个子元素。常通过 {{ cssxref("content") }} 属性来为一个元素添加修饰性的内容。此元素默认是行级的。
 
-```
-/* Add a heart before links */
-a::before {
-  content: "♥";
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-before.html", "tabbed-standard")}}
 
-> **备注：** 由 `::before` 和`::after` 生成的伪元素[包含在元素格式框内](https://www.w3.org/TR/CSS2/generate.html#before-after-content)，因此不能应用在[_替换元素上_](/zh-CN/docs/Web/CSS/Replaced_element)，比如 {{htmlelement("img")}} 或 {{htmlelement("br")}} 元素。
+> [!NOTE]
+> 由 `::before` 和 `::after` 伪元素生成的盒子，就好像它们是应用它们的元素或“原始元素（originating element）”的直接子元素一样，因此不能应用在[_替换元素上_](/zh-CN/docs/Web/CSS/Replaced_element)，比如 {{htmlelement("img")}} 元素，其内容不在 CSS 格式化模型的范围内。
 
 ## 语法
 
-```
-/* CSS3 语法 */
-element::before { 样式 }
-
-/*（单冒号）CSS2 过时语法 (仅用来支持 IE8) */
-element:before  { 样式 }
-
-/* 在每一个 p 元素前插入内容 */
-p::before { content: "Hello world!"; }
+```css-nolint
+::before {
+  content: /* 值 */;
+  /* 属性 */
+}
 ```
 
-CSS3 引入 `::before` 是为了将[伪类](/zh-CN/docs/CSS/Pseudo-classes)和[伪元素](/zh-CN/docs/CSS/Pseudo-elements)区别开来。浏览器也接受由 CSS 2 引入的 `:before` 写法。
+如果 [`content`](/zh-CN/docs/Web/CSS/content) 属性没有明确指定，或者有一个无效值，或者其值为 `normal` 或 `none`，则 `::before` 伪元素不会被渲染。它的行为就好像设置了 `display: none` 一样。
+
+> **备注：** [Selectors 第 3 版](https://drafts.csswg.org/selectors-3/#gen-content)引入了双冒号标记法 `::before`，以将[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)和[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)区别开。浏览器也接受由 CSS2 引入的 `:before` 写法。
 
 ## 示例
 
-### 加入引用标记
+### 加入引号标记
 
 使用 `::before` 伪元素的一个简单示例就是用于加入引号。此处同时使用了 `::before` 和 `{{Cssxref("::after")}}`来插入引用性文本。
 
 #### HTML
 
 ```html
-<q>一些引用</q>, 他说，<q>比没有好。</q>.
+<q>有引号，</q>他说，<q>总比没有好。</q>
 ```
 
 #### CSS
 
 ```css
 q::before {
-  content: "«";
+  content: "“";
   color: blue;
 }
 q::after {
-  content: "»";
+  content: "”";
   color: red;
 }
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('加入引用标记', '500', '50', '') }}
+{{EmbedLiveSample('加入引号标记', '500', '50')}}
 
-### 修饰实例
+### 修饰示例
 
 我们可以用几乎任何方法定义 {{ cssxref("content") }} 中的文字和图片样式。
 
 #### HTML
 
 ```html
-<span class="ribbon">Notice where the orange box is.</span>
+<span class="ribbon">注意橙色方框的位置。</span>
 ```
 
 #### CSS
@@ -78,7 +74,7 @@ q::after {
 }
 
 .ribbon::before {
-  content: "Look at this orange box.";
+  content: "看橙色的盒子。";
   background-color: #ffba10;
   border-color: black;
   border-style: dotted;
@@ -87,7 +83,7 @@ q::after {
 
 #### 结果
 
-{{ EmbedLiveSample('修饰实例', 450, 60) }}
+{{EmbedLiveSample('修饰示例', 450, 60)}}
 
 ### 待办列表
 
@@ -97,12 +93,12 @@ q::after {
 
 ```html
 <ul>
-  <li>Buy milk</li>
-  <li>Take the dog for a walk</li>
-  <li>Exercise</li>
-  <li>Write code</li>
-  <li>Play music</li>
-  <li>Relax</li>
+  <li>买牛奶</li>
+  <li>带着狗散步</li>
+  <li>锻炼</li>
+  <li>写代码</li>
+  <li>播放音乐</li>
+  <li>放松</li>
 </ul>
 ```
 
@@ -140,10 +136,10 @@ li.done::before {
 #### JavaScript
 
 ```js
-var list = document.querySelector("ul");
+const list = document.querySelector("ul");
 list.addEventListener(
   "click",
-  function (ev) {
+  (ev) => {
     if (ev.target.tagName === "LI") {
       ev.target.classList.toggle("done");
     }
@@ -152,60 +148,55 @@ list.addEventListener(
 );
 ```
 
-下面展示的是最终得到的结果。请注意我们没有使用任何图标，对勾标识实际上是使用 CSS 定义了样式的`::before`伪元素。接下来建立几个待办事项来完成它们吧。
+下面展示的是最终得到的结果。请注意我们没有使用任何图标，对勾标识实际上是使用 CSS 定义了样式的 `::before` 伪元素。接下来建立几个待办事项来完成它们吧。
 
 #### 结果
 
 {{ EmbedLiveSample('待办列表', 400, 300) }}
 
-## 注释
+### 特殊字符
 
-在 Firefox3.5 中，fixed 绝对定位的布局不被允许在元素前生成一个独立的元素（按照 CSS 规范，:after :before 伪类元素与其他盒模型元素是可以相互影响的，就像他们是真正的元素一样，不过是被插入到相关元素中罢了），他们可以被用来对非表格布局进行改善（例：实现元素在中心位置），只要置于中心的内容包含在元素中，那么内容的前后列不能够被添加前置或后置的兄弟元素。（i.e., it is perhaps more semantically correct to add an additional span as below, than it would to add an empty \<div/> before and after）（记住，一定要给 float 元素添加 width 属性，否则它将不会浮动）
+由于这是 CSS；不是 HTML，你**不**可以在内容值中使用标记实体。如果你需要使用特殊字符，并且无法将其直接输入到 CSS 内容字符串中，那么请使用 unicode 转义序列，该序列由一个反斜杠和十六进制 unicode 值组成。
 
 #### HTML
 
 ```html
-<div class="example">
-  <span id="floatme"
-    >"Floated Before" should be generated on the left of the viewport and not
-    allow overflow in this line to flow under it. Likewise should "Floated
-    After" appear on the right of the viewport and not allow this line to flow
-    under it.</span
-  >
-</div>
+<ol>
+  <li>把鸡蛋打入碗中</li>
+  <li>加牛奶</li>
+  <li>加面粉</li>
+  <li aria-current="step">混合成光滑的面糊</li>
+  <li>将一勺面糊倒在热的、抹了油的平底锅上</li>
+  <li>煎至煎饼顶部失去光泽</li>
+  <li>把它翻过来再煎几分钟</li>
+  <li>配上你喜欢的佐料</li>
+</ol>
 ```
 
 #### CSS
 
 ```css
-#floatme {
-  float: left;
-  width: 50%;
+li {
+  padding: 0.5em;
 }
 
-/* To get an empty column, just indicate a hex code for a non-breaking space: \a0 as the content (use \0000a0 when following such a space with other characters) */
-.example::before {
-  content: "Floated Before";
-  float: left;
-  width: 25%;
-}
-.example::after {
-  content: "Floated After";
-  float: right;
-  width: 25%;
+li[aria-current="step"] {
+  font-weight: bold;
 }
 
-/* For styling */
-.example::before,
-.example::after {
-  background: yellow;
-  color: red;
+li[aria-current="step"]::after {
+  content: " \21E6"; /* 向左白色箭头的十六进制 */
+  display: inline;
 }
 ```
 
-#### 输出
+#### 结果
 
-{{EmbedLiveSample("注释")}}
+{{EmbedLiveSample('特殊字符', 400, 200)}}
+
+## 无障碍考虑
+
+不鼓励使用 `::before` 伪元素添加内容，因为屏幕阅读器无法可靠地访问它。
 
 ## 规范
 
@@ -217,4 +208,5 @@ list.addEventListener(
 
 ## 参见
 
-- {{ Cssxref("::after") }}, {{ cssxref("content") }}
+- {{Cssxref("::after")}}
+- {{Cssxref("content")}}

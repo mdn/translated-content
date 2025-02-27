@@ -3,18 +3,20 @@ title: Firefox 35 pour les développeurs
 slug: Mozilla/Firefox/Releases/35
 ---
 
+{{FirefoxSidebar}}
+
 1. Notes de versions pour développeurs
 
    1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
 
 2. Modules complémentaires
 
-   1. [WebExtensions](/fr/Add-ons/WebExtensions)
-   2. [Thèmes](/fr/Add-ons/Themes)
+   1. [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
+   2. [Thèmes](/fr/docs/Mozilla/Add-ons/Themes)
 
 3. Fonctionnement interne de Firefox
 
-   1. [Le projet Mozilla](/fr/docs/Mozilla/)
+   1. [Le projet Mozilla](/fr/docs/Mozilla)
    2. [Gecko](/fr/docs/Mozilla/Gecko)
    3. [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
    4. [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
@@ -30,7 +32,7 @@ slug: Mozilla/Firefox/Releases/35
 4. Développer et contribuer
 
    1. [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
-   2. [Configuration des options de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options)
+   2. [Configuration des options de compilation](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html)
    3. [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
    4. [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
    5. [Localisation](/fr/docs/Mozilla/Localization)
@@ -44,9 +46,9 @@ slug: Mozilla/Firefox/Releases/35
 
 Liens:
 
-- [See ::before and ::after pseudo elements in the Page Inspector](/fr/docs/Tools/Page_Inspector#.3A.3Abefore_and_.3A.3Aafter)
-- [CSS source maps are now enabled by default](/fr/docs/Tools/Style_Editor#Source_map_support)
-- ["Show DOM Properties" from the Page Inspector](/fr/docs/Tools/Page_Inspector#Element_popup_menu_2)
+- [See ::before and ::after pseudo elements in the Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#.3a.3abefore_and_.3a.3aafter)
+- [CSS source maps are now enabled by default](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html#source_map_support)
+- ["Show DOM Properties" from the Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#element_popup_menu_2)
 
 [Tous les bugs des outils de développement résolus entre Firefox 34 et Firefox 35](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-10-13&chfield=resolution&query_format=advanced&chfieldfrom=2014-09-02&chfieldvalue=FIXED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&component=Simulator&product=Firefox&product=Firefox%20OS&list_id=11184176).
 
@@ -63,33 +65,33 @@ Liens:
 ### HTML
 
 - Les obsolètes `et non conformes bottommargin`, `leftmargin`, `rightmargin` and `topmargin` attributs de l'élement `<body>` ont été activés en mode non-quirks ([bug 95530](https://bugzilla.mozilla.org/show_bug.cgi?id=95530)).
-- Les [imports HTML](/fr/docs/Web/Web_Components/HTML_Imports) sont maintenant supportés ([bug 877072](https://bugzilla.mozilla.org/show_bug.cgi?id=877072)).
+- Les [imports HTML](/fr/docs/Web/API/Web_components) sont maintenant supportés ([bug 877072](https://bugzilla.mozilla.org/show_bug.cgi?id=877072)).
 
 ### JavaScript
 
-- La "[temporal dead zone](/fr/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)" pour les déclarations [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) a été implementée. En conformité avec les sémantiques `let` ES6, les situations suivantes renvoyent des erreurs. Voir aussi cet [annoncement de newsgroup](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds) et [bug 1001090](https://bugzilla.mozilla.org/show_bug.cgi?id=1001090).
+- La "[temporal dead zone](/fr/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)" pour les déclarations [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) a été implementée. En conformité avec les sémantiques `let` ES6, les situations suivantes renvoyent des erreurs. Voir aussi cet [annoncement de newsgroup](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds) et [bug 1001090](https://bugzilla.mozilla.org/show_bug.cgi?id=1001090).
 
   - Redéclarer des variables existantes ou arguments utilisant `let` sans la même portée dans le corps de fonctions est maintenant une erreur de syntaxe.
   - Utiliser une variable déclarée en utilisant `let` dans le corps de fonctions avant la déclaration de cette variable est maintenant une erreur d'exécution.
 
-- ES6 [`Symbols`](/fr/docs/Web/JavaScript/Reference/Symbols) (disponible uniquement dans Nightly) a été mis à jour pour être conforme avec les récents changements de spécification :
+- ES6 [`Symbols`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (disponible uniquement dans Nightly) a été mis à jour pour être conforme avec les récents changements de spécification :
 
-  - `String(Symbol("1"))` ne renvoie maintenant une [`TypeError`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypeError); au lieu d'un string (`"Symbol(1)"`) ([bug 1058396](https://bugzilla.mozilla.org/show_bug.cgi?id=1058396)).
-  - Les divers [constructeurs _TypedArray_](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) ont maintenant comme `[[Prototype]]` une simple fonction, notée `%TypedArray%` en ES6 (mais pas directement exposé). Chaque prototype de tableau typé hérite maintenant de `%TypedArray%.prototype`. (`%TypedArray%` et `%TypedArray%.prototype` hérite eux-mêmes de [`Function.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) et [`Object.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype), respectivement, ainsi ce constructeur et ces instances de tableau typé ont aussi les propriétés de ces objets.) Les propriétés des fonctions de tableau typés se trouvent maintenant sur `%TypedArray%.prototype` et fonctionnent sur tous les tableaux typés. Voir [_TypedArray_](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Description) et [bug 896116](https://bugzilla.mozilla.org/show_bug.cgi?id=896116) pour plus d'information.
+  - `String(Symbol("1"))` ne renvoie maintenant une [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError); au lieu d'un string (`"Symbol(1)"`) ([bug 1058396](https://bugzilla.mozilla.org/show_bug.cgi?id=1058396)).
+  - Les divers [constructeurs _TypedArray_](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) ont maintenant comme `[[Prototype]]` une simple fonction, notée `%TypedArray%` en ES6 (mais pas directement exposé). Chaque prototype de tableau typé hérite maintenant de `%TypedArray%.prototype`. (`%TypedArray%` et `%TypedArray%.prototype` hérite eux-mêmes de [`Function.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) et [`Object.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object), respectivement, ainsi ce constructeur et ces instances de tableau typé ont aussi les propriétés de ces objets.) Les propriétés des fonctions de tableau typés se trouvent maintenant sur `%TypedArray%.prototype` et fonctionnent sur tous les tableaux typés. Voir [_TypedArray_](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#description) et [bug 896116](https://bugzilla.mozilla.org/show_bug.cgi?id=896116) pour plus d'information.
 
-- Les semantiques ES6 pour les [mutations de prototype utilisant les _initialisateurs d'objet_](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer#Prototype_mutation) ont été implémentées ([bug 1061853](https://bugzilla.mozilla.org/show_bug.cgi?id=1061853)).
+- Les semantiques ES6 pour les [mutations de prototype utilisant les _initialisateurs d'objet_](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_mutation) ont été implémentées ([bug 1061853](https://bugzilla.mozilla.org/show_bug.cgi?id=1061853)).
 
   - Maintenant un seul membre noté `__proto__:value` peut changer `le [[Prototype]]` dans la syntaxe de l'initialisateur d'objet.
   - Les membres de méthode comme `__proto__() {}` ne réecrivent pas le `[[Prototype]]`.
 
 ### Interfaces/APIs/DOM
 
-- L'interface [`NavigatorLanguage`](/fr/docs/Web/API/NavigatorLanguage) est maintenant disponible aux développeurs sur [`WorkerNavigator`](/fr/docs/Web/API/WorkerNavigator) ([bug 925849](https://bugzilla.mozilla.org/show_bug.cgi?id=925849)).
+- L'interface [`NavigatorLanguage`](/fr/docs/Web/API/Navigator) est maintenant disponible aux développeurs sur [`WorkerNavigator`](/fr/docs/Web/API/WorkerNavigator) ([bug 925849](https://bugzilla.mozilla.org/show_bug.cgi?id=925849)).
 - La méthode [`Element.closest`](/fr/docs/Web/API/Element/closest) retourne l'ancêtre le plus proche de l'élément utilisé ([bug 1055533](https://bugzilla.mozilla.org/show_bug.cgi?id=1055533)).
 - Appui expérimental pour la propriété [`CanvasRenderingContext2D.filter`](/fr/docs/Web/API/CanvasRenderingContext2D/filter) a été ajouté sous le nom `canvas.filters.enabled` ([bug 927892](https://bugzilla.mozilla.org/show_bug.cgi?id=927892)).
 - Our experimental implementation of Web Animations progresses with the landing of the [`Animation.target`](/fr/docs/Web/API/Animation/target) property. This always is behind the dom.animations-api.core.enabled pref, off by default ([bug 1067701](https://bugzilla.mozilla.org/show_bug.cgi?id=1067701)).
 - The [`hasAttributes()`](/fr/docs/Web/API/Element/hasAttributes) method has been moved from [`Node`](/fr/docs/Web/API/Node) to [`Element`](/fr/docs/Web/API/Element) as required by the spec ([`1055773`](/fr/docs/Web/API/1055773)).
-- [Websockets](/fr/docs/WebSockets) can now be used in [Workers](/fr/docs/Web/Guide/Performance/Using_web_workers) ([bug 504553](https://bugzilla.mozilla.org/show_bug.cgi?id=504553)).
+- [Websockets](/fr/docs/Web/API/WebSockets_API) can now be used in [Workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers) ([bug 504553](https://bugzilla.mozilla.org/show_bug.cgi?id=504553)).
 - The `crossOrigin` reflected attribute of [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement), [`HTMLLinkElement`](/fr/docs/Web/API/HTMLLinkElement), [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement), [`HTMLScriptElement`](/fr/docs/Web/API/HTMLScriptElement), and [`SVGScriptElement`](/fr/docs/Web/API/SVGScriptElement) only accepts valid values, and `""` isn't, `null` has to be used instead ([bug 880997](https://bugzilla.mozilla.org/show_bug.cgi?id=880997)).
 - The Resource Timing API has been activated by default ([bug 1002855](https://bugzilla.mozilla.org/show_bug.cgi?id=1002855)).
 - To match the spec, the first argument of [`Selection.containsNode()`](/fr/docs/Web/API/Selection/containsNode) cannot be `null` anymore ([bug 1068058](https://bugzilla.mozilla.org/show_bug.cgi?id=1068058)).
@@ -98,7 +100,7 @@ Liens:
 - The internal, non-standard, [`File.mozFullPath`](/fr/docs/Web/API/File/mozFullPath) property is no more visible from content ([bug 1048293](https://bugzilla.mozilla.org/show_bug.cgi?id=1048293)).
 - The constructor of [`File`](/fr/docs/Web/API/File) has been extended to match the specification ([bug 10457483](https://bugzilla.mozilla.org/show_bug.cgi?id=10457483)).
 - An experimental implementation of [`AbortablePromise`](/fr/docs/Web/API/AbortablePromise), a promise that can be aborted by a different entity that the one who created it, has been added. It is prefixed with `Moz` and controlled by the `dom.abortablepromise.enabled` property, defaulting to `false` ([bug 1035060](https://bugzilla.mozilla.org/show_bug.cgi?id=1035060)).
-- La propriété non standardisée [`Navigator.mozIsLocallyAvailable`](/fr/docs/Web/API/Navigator/mozIsLocallyAvailable) a été supprimée ([bug 1066826](https://bugzilla.mozilla.org/show_bug.cgi?id=1066826)).
+- La propriété non standardisée [`Navigator.mozIsLocallyAvailable`](/fr/docs/Web/API/Navigator) a été supprimée ([bug 1066826](https://bugzilla.mozilla.org/show_bug.cgi?id=1066826)).
 
 ### MathML
 
@@ -115,7 +117,7 @@ _Aucun changement._
 ## Réseau & Sécurité
 
 - L'entête HTTP/2 `alt-svc` est maintenant supportée ([bug 1003448](https://bugzilla.mozilla.org/show_bug.cgi?id=1003448)).
-- L'extension [Public Key Pinning](/fr/docs/Web/Security/Public_Key_Pinning) pour HTTP (HPKP) a été implementée ([bug 787133](https://bugzilla.mozilla.org/show_bug.cgi?id=787133)).
+- L'extension [Public Key Pinning](/fr/docs/Web/Security/Certificate_Transparency) pour HTTP (HPKP) a été implementée ([bug 787133](https://bugzilla.mozilla.org/show_bug.cgi?id=787133)).
 
 ## Changements pour les modules et les développeurs Mozilla
 
@@ -128,8 +130,8 @@ _Aucun changement._
 
 #### Titres
 
-- Ajout de [clés d'accès pour le menu contextuel](/fr/Add-ons/SDK/Tutorials/Add_a_Context_Menu_Item#Adding_an_access_key).
-- Suppression de `isPrivateBrowsing` de [`BrowserWindow`](/fr/Add-ons/SDK/High-Level_APIs/windows#BrowserWindow).
+- Ajout de [clés d'accès pour le menu contextuel](/fr/docs/Mozilla/Add-ons/SDK/Tutorials/Add_a_Context_Menu_Item#adding_an_access_key).
+- Suppression de `isPrivateBrowsing` de [`BrowserWindow`](/fr/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#browserwindow).
 
 #### Détails
 
@@ -153,29 +155,29 @@ _Aucun changement._
 - [Firefox 27 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/27)
 - [Firefox 26 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/26)
 - [Firefox 25 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/25)
-- [Firefox 24 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/24)
-- [Firefox 23 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/23)
-- [Firefox 22 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/22)
-- [Firefox 21 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/21)
-- [Firefox 20 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/20)
-- [Firefox 19 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/19)
-- [Firefox 18 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/18)
-- [Firefox 17 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/17)
-- [Firefox 16 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/16)
-- [Firefox 15 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/15)
+- [Firefox 24 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/24)
+- [Firefox 23 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/23)
+- [Firefox 22 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/22)
+- [Firefox 21 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/21)
+- [Firefox 20 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/20)
+- [Firefox 19 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/19)
+- [Firefox 18 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/18)
+- [Firefox 17 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/17)
+- [Firefox 16 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/16)
+- [Firefox 15 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/15)
 - [Firefox 14 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/14)
-- [Firefox 13 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/13)
-- [Firefox 12 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/12)
-- [Firefox 11 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/11)
+- [Firefox 13 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/13)
+- [Firefox 12 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/12)
+- [Firefox 11 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/11)
 - [Firefox 10 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/10)
-- [Firefox 9 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/9)
-- [Firefox 8 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/8)
-- [Firefox 7 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/7)
-- [Firefox 6 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/6)
-- [Firefox 5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/5)
-- [Firefox 4 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/4)
-- [Firefox 3.6 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3.6)
-- [Firefox 3.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3.5)
-- [Firefox 3 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3)
-- [Firefox 2 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/2)
-- [Firefox 1.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/1.5)
+- [Firefox 9 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/9)
+- [Firefox 8 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/8)
+- [Firefox 7 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/7)
+- [Firefox 6 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/6)
+- [Firefox 5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/5)
+- [Firefox 4 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/4)
+- [Firefox 3.6 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3.6)
+- [Firefox 3.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3.5)
+- [Firefox 3 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3)
+- [Firefox 2 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/2)
+- [Firefox 1.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/1.5)

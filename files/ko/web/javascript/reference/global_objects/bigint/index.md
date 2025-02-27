@@ -48,7 +48,7 @@ typeof Object(1n) === "object"; // true
 
 ### 연산자
 
-`+`, `*`, `-`, `**`, `%` 연산자를 `BigInt`나 객체로 감싼 `BigInt`에서 사용할 수 있습니다. [비트 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)도 사용할 수 있으나, 모든 `BigInt`는 부호를 가져야 하므로 `>>>` (부호 버림 오른쪽 시프트)는 사용할 수 없습니다. [asm.js에서 문제를 일으키지 않도록](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs), 단항 `+` 연산자도 지원하지 않습니다.
+`+`, `*`, `-`, `**`, `%` 연산자를 `BigInt`나 객체로 감싼 `BigInt`에서 사용할 수 있습니다. [비트 연산자](/ko/docs/Web/JavaScript/Reference/Operators)도 사용할 수 있으나, 모든 `BigInt`는 부호를 가져야 하므로 `>>>` (부호 버림 오른쪽 시프트)는 사용할 수 없습니다. [asm.js에서 문제를 일으키지 않도록](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs), 단항 `+` 연산자도 지원하지 않습니다.
 
 ```js
 const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
@@ -78,7 +78,8 @@ bigN * -1n
 
 `/` 연산자도 정수 연산에서 예상할 수 있는 결과를 동일하게 도출합니다. 그러나 `BigInt`는 `BigDecimal`이 아니므로, 연산의 결과는 언제나 소수점 이하를 버립니다. 즉, 정수가 아닌 결과는 나오지 않습니다.
 
-> **경고:** 소수점 결과를 포함하는 연산을 `BigInt`와 사용하면 소수점 이하는 사라집니다.
+> [!WARNING]
+> 소수점 결과를 포함하는 연산을 `BigInt`와 사용하면 소수점 이하는 사라집니다.
 
 ```js
 const expected = 4n / 2n;

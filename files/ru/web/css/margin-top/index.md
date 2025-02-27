@@ -5,24 +5,24 @@ slug: Web/CSS/margin-top
 
 {{CSSRef}}
 
-Свойство **`margin-top`** [CSS](/ru/CSS) определяет [внешний отступ](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) в верхней части элемента. Положительное значение поместит элемент дальше от соседних элементов, чем обычно, а отрицательное значение поместит его ближе.
+Свойство **`margin-top`** [CSS](/ru/docs/Web/CSS) определяет [внешний отступ](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) в верхней части элемента. Положительное значение поместит элемент дальше от соседних элементов, чем обычно, а отрицательное значение поместит его ближе.
 
 {{EmbedInteractiveExample("pages/css/margin-top.html")}}
 
-Это свойство не имеет эффекта на _незамещаемых (non-[replaced](/ru/docs/Web/CSS/Замещаемый_элемент))_ строковых (inline) элементах, таких как {{HTMLElement("span")}} или {{HTMLElement("code")}}.
+Это свойство не имеет эффекта на _незамещаемых (non-[replaced](/ru/docs/Web/CSS/Replaced_element))_ строковых (inline) элементах, таких как {{HTMLElement("span")}} или {{HTMLElement("code")}}.
 
 ## Синтаксис
 
 ```css
-/* значения <length> */
+/* Ключевые слова */ 
+margin-top: auto;
+
+/* Значения длины */
 margin-top: 10px; /* абсолютное значение */
 margin-top: 1em; /* относительно размера текста */
 margin-top: 5%; /* относительно ширины ближайшего контейнера */
 
-/* ключевые слова */
-margin-top: auto;
-
-/* глобальные значения */
+/* Глобальные значения */
 margin-top: inherit;
 margin-top: initial;
 margin-top: unset;

@@ -1,6 +1,8 @@
 ---
 title: list-style-type
 slug: Web/CSS/list-style-type
+l10n:
+  sourceCommit: 3b080cf77c3f906b5b965961412b6c51b5871e08
 ---
 
 {{CSSRef}}
@@ -9,9 +11,9 @@ slug: Web/CSS/list-style-type
 
 {{EmbedInteractiveExample("pages/css/list-style-type.html")}}
 
-マーカーの[色](/ja/docs/Web/CSS/color_value)は、適用先の要素における色の計算値と同じになります。
+マーカーは [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_キーワード)となり、適用先の要素の[色](/ja/docs/Web/CSS/color_value)の計算値と同じになります。
 
-わずかな要素 ({{HTMLElement("li")}} と {{HTMLElement("summary")}}) だけが既定で `display: list-item` の値を持っています。しかし、 `list-style-type` プロパティは {{cssxref("display")}} の値が `list-item` に設定されているあらゆる要素に適用することができます。さらに、このプロパティは継承されるので、親要素 (普通は {{HTMLElement("ol")}} または {{HTMLElement("ul")}}) に設定することですべてのリスト項目に適用することができます。
+わずかな要素 ({{HTMLElement("li")}} と {{HTMLElement("summary")}}) だけが既定で `display: list-item` の値を持っています。しかし、 `list-style-type` プロパティは {{cssxref("display")}} の値が `list-item` に設定されているあらゆる要素に適用することができます。さらに、このプロパティは継承されるので、親要素（普通は {{HTMLElement("ol")}} または {{HTMLElement("ul")}}）に設定することですべてのリスト項目に適用することができます。
 
 ## 構文
 
@@ -38,6 +40,7 @@ list-style-type: none;
 list-style-type: inherit;
 list-style-type: initial;
 list-style-type: revert;
+list-style-type: revert-layer;
 list-style-type: unset;
 ```
 
@@ -57,7 +60,7 @@ list-style-type: unset;
 
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
   - : {{cssxref("@counter-style")}} の値、または以下の定義済みスタイルのうちの一つに一致する識別子です。
-- {{cssxref("symbols()")}}
+- {{cssxref("symbols", "symbols()")}}
   - : 無名のリストスタイルを定義します。
 - {{cssxref("&lt;string&gt;")}}
   - : 特定の文字列を、リストのマーカーとして使用します。
@@ -71,7 +74,7 @@ list-style-type: unset;
   - : 塗りつぶされた四角形です。
 - `decimal`
   - : 数値です。 1 から始まります。
-- `cjk-decimal` {{experimental_inline}}
+- `cjk-decimal`
   - : 漢数字です。
 - `decimal-leading-zero`
   - : 数値で、先頭がゼロ埋めされます。
@@ -82,7 +85,7 @@ list-style-type: unset;
 - `lower-greek`
   - : 小文字の古代ギリシャ文字です。
 - `lower-alpha`, `lower-latin`
-  - : 小文字の ASCII 文字です。
+  - : 小文字の {{Glossary("ASCII")}} 文字です。
 - `upper-alpha`, `upper-latin`
   - : 大文字の ASCII 文字です。
 - `arabic-indic`, `-moz-arabic-indic`
@@ -97,11 +100,11 @@ list-style-type: unset;
   - : 漢字の「十二支」順です。
 - `cjk-heavenly-stem`, `-moz-cjk-heavenly-stem`
   - : 漢字の「十干」順です。
-- `cjk-ideographic`{{experimental_inline}}
+- `cjk-ideographic`
   - : `trad-chinese-informal` と同じです。
 - `devanagari`, `-moz-devanagari`
   - : デーヴァナーガリーの数値表記です。
-- `ethiopic-numeric` {{experimental_inline}}
+- `ethiopic-numeric`
   - : エチオピア語の数値表記です。
 - `georgian`
   - : 伝統的なジョージア語の数値表記です。
@@ -109,94 +112,85 @@ list-style-type: unset;
   - : グジャラート語の数値表記です。
 - `gurmukhi`, `-moz-gurmukhi`
   - : グルムキー語の数値表記です。
-- `hebrew` {{experimental_inline}}
+- `hebrew`
   - : 伝統的なヘブライ語の数値表記です。
-- `hiragana` {{experimental_inline}}
+- `hiragana`
   - : ひらがなの辞書順の文字です。
-- `hiragana-iroha` {{experimental_inline}}
+- `hiragana-iroha`
   - : ひらがなの[いろは順](https://ja.wikipedia.org/wiki/いろは歌)の文字です。
-- `japanese-formal` {{experimental_inline}}
+- `japanese-formal`
   - : 法律や金融関係の書類に使用される日本の公的な数値表記です。漢字は、他の正しい文字に似せて修正することができないように設計されています。
-- `japanese-informal` {{experimental_inline}}
+- `japanese-informal`
   - : 日本語の日常的な数値表記です。
 - `kannada`, `-moz-kannada`
   - : カンナダ語の数値表記です。
-- `katakana` {{experimental_inline}}
+- `katakana`
   - : カタカナの辞書順の文字です。
-- `katakana-iroha` {{experimental_inline}}
+- `katakana-iroha`
   - : カタカナの[いろは順](https://ja.wikipedia.org/wiki/いろは歌)の文字です。
-- `korean-hangul-formal` {{experimental_inline}}
+- `korean-hangul-formal`
   - : 韓国語のハングルの数値表記です。
-- `korean-hanja-formal` {{experimental_inline}}
+- `korean-hanja-formal`
   - : 韓国語の公的な漢数字です。
-- `korean-hanja-informal` {{experimental_inline}}
+- `korean-hanja-informal`
   - : 韓国語の漢数字です。
 - `lao`, `-moz-lao`
   - : ラオス語の数値表記です。
-- `lower-armenian` {{experimental_inline}}\*
+- `lower-armenian`
   - : アルメニア語の小文字の数値表記です。
 - `malayalam`, `-moz-malayalam`
   - : マラヤーラム語の数値表記です。
-- `mongolian` {{experimental_inline}}
+- `mongolian`
   - : モンゴル語の数値表記です。
 - `myanmar`, `-moz-myanmar`
   - : ミャンマー語 (ビルマ語) の数値表記です。
 - `oriya`, `-moz-oriya`
   - : オリヤー語の数値表記です。
-- `persian` {{experimental_inline}}, `-moz-persian`
+- `persian`, `-moz-persian`
   - : ペルシャ語の数値表記です。
-- `simp-chinese-formal` {{experimental_inline}}
+- `simp-chinese-formal`
   - : 公的な簡体字中国語の数値表記です。
-- `simp-chinese-informal` {{experimental_inline}}
+- `simp-chinese-informal`
   - : 日常的な簡体字中国語の数値表記です。
-- `tamil` {{experimental_inline}}, `-moz-tamil`
+- `tamil`, `-moz-tamil`
   - : タミル語の数値表記です。
 - `telugu`, `-moz-telugu`
   - : テルグ語の数値表記です。
 - `thai`, `-moz-thai`
   - : タイ語の数値表記です。
-- `tibetan` {{experimental_inline}}\*
+- `tibetan`
   - : チベット語の数値表記です。
-- `trad-chinese-formal` {{experimental_inline}}
+- `trad-chinese-formal`
   - : 公的な繁体字中国語の数値表記です。
-- `trad-chinese-informal` {{experimental_inline}}
+- `trad-chinese-informal`
   - : 日常的な繁体字中国語の数値表記です。
-- `upper-armenian` {{experimental_inline}}\*
+- `upper-armenian`
   - : 伝統的なアルメニア語の大文字の数値表記です。
-- `disclosure-open` {{experimental_inline}}
+- `disclosure-open`
   - : {{HTMLElement("details")}} などの展開ウィジェットを開いていることを示す記号
-- `disclosure-closed` {{experimental_inline}}
+- `disclosure-closed`
   - : {{HTMLElement("details")}} などの展開ウィジェットを閉じていることを示す記号
+
+[リストスタイルのすべての種類](#リストスタイルのすべての種類)の例を参照して、上記で設定した値がどのように表示されるかを確認してください。 世界中のさまざまな文化圏で使用できる、利用できるカウンタースタイルの詳細は、 [Ready-made Counter Styles](https://www.w3.org/TR/predefined-counter-styles/) で探すことができます。
 
 ### 標準外の拡張
 
-Mozilla (Firefox)、Blink (Chrome、Opera)、WebKit (Safari) では、他の言語のリストの種類に対応するために、さらにいくつかの定義済みの種類が提供されています。どのブラウザーがどの拡張に対応しているかを確認するには、互換性一覧表を参照してください。
+Mozilla (Firefox) は、いくつかの定義済みの型に `-moz-` 接頭辞付きで対応しています。
 
-- `-moz-ethiopic-halehame`
-- `-moz-ethiopic-halehame-am`
-- `ethiopic-halehame-ti-er`, `-moz-ethiopic-halehame-ti-er`
-- `ethiopic-halehame-ti-et`, `-moz-ethiopic-halehame-ti-et`
-- `hangul`, `-moz-hangul`
-- `hangul-consonant`, `-moz-hangul-consonant`
-- `urdu`, `-moz-urdu`
+- `ethiopic-halehame`: `-moz-ethiopic-halehame`
+- `ethiopic-halehame-am`: `-moz-ethiopic-halehame-am`
+- `ethiopic-halehame-ti-er`: `-moz-ethiopic-halehame-ti-er`
+- `ethiopic-halehame-ti-et`: `-moz-ethiopic-halehame-ti-et`
+- `ethiopic-numeric`: `-moz-ethiopic-numeric`
+- `hangul`: `-moz-hangul`
+- `hangul-consonant`: `-moz-hangul-consonant`
+- `urdu`: `-moz-urdu`
 
-## アクセシビリティの考慮
+[ブラウザーの互換性](#ブラウザーの互換性)で、どのブラウザーがどの拡張機能に対応しているかを確認してください。
 
-スクリーンリーダーの [VoiceOver](https://help.apple.com/voiceover/info/guide/) には、 `list-style-type` の値に `none` が適用された順序なしリストをリストとして読み上げないという問題があります。リストが正しく読み上げられるようにするには、それぞれのリスト項目の前に[幅ゼロの空白](https://en.wikipedia.org/wiki/Zero-width_space)を[擬似コンテンツ](/ja/docs/Web/CSS/content)として追加する必要があります。これはデザインがバグ修正に影響されないことを保証し、リスト項目の表記が正しくなくなるわけではありません。
+## アクセシビリティ
 
-```css
-ul {
-  list-style: none;
-}
-
-ul li::before {
-  content: "\200B";
-}
-```
-
-- [VoiceOver and list-style-type: none – Unfettered Thoughts](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/)
-- [MDN WCAG の理解、ガイドライン 1.3 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
-- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+Safari は、 `list-style-type` の値が `none` である場合、順序付きまたは順序なしのリストをアクセシビリティツリー内のリストとして認識しません。この問題は、リストの開始タグに `role="list"` を追加することで解決できます。この問題と潜在的な回避策についての詳細は、 [`list-style`](/ja/docs/Web/CSS/list-style#アクセシビリティ)を参照してください。
 
 ## 公式定義
 
@@ -208,19 +202,19 @@ ul li::before {
 
 ## 例
 
-<h3 id="Setting_list_item_markers">リスト項目マーカーの設定</h3>
+### リスト項目マーカーの設定
 
 #### HTML
 
-```html
-List 1
+```html live-sample___setting_list_item_markers
+リスト 1
 <ol class="normal">
   <li>Hello</li>
   <li>World</li>
   <li>What's up?</li>
 </ol>
 
-List 2
+リスト 2
 <ol class="shortcut">
   <li>Looks</li>
   <li>Like</li>
@@ -231,12 +225,12 @@ List 2
 
 #### CSS
 
-```css
+```css live-sample___setting_list_item_markers
 ol.normal {
   list-style-type: upper-alpha;
 }
 
-/* or use the shortcut "list-style": */
+/* または一括指定の "list-style" を使用して */
 ol.shortcut {
   list-style: upper-alpha;
 }
@@ -246,11 +240,11 @@ ol.shortcut {
 
 {{EmbedLiveSample("Setting_list_item_markers","200","300")}}
 
-<h3 id="All_list_style_types">リストスタイルのすべての種類</h3>
+### リストスタイルのすべての種類
 
 #### HTML
 
-```html
+```html live-sample___all_list_style_types
 <ol>
   <li>Apollo</li>
   <li>Hubble</li>
@@ -259,7 +253,7 @@ ol.shortcut {
   <li>Spitzer</li>
 </ol>
 
-<h2>Choose a list style type:</h2>
+<h2>リストスタイルの種類を選んでください</h2>
 
 <div class="container">
   <label for="disc">
@@ -534,8 +528,8 @@ ol.shortcut {
     <input type="radio" id="tamil" name="type" value="tamil" />tamil
   </label>
 
-  <label for="telegu">
-    <input type="radio" id="telegu" name="type" value="telegu" />telegu
+  <label for="telugu">
+    <input type="radio" id="telugu" name="type" value="telugu" />telugu
   </label>
 
   <label for="thai">
@@ -674,7 +668,7 @@ ol.shortcut {
 
 #### CSS
 
-```css
+```css live-sample___all_list_style_types
 ol {
   font-size: 1.2rem;
 }
@@ -694,10 +688,11 @@ input {
 
 #### JavaScript
 
-```js
+```js live-sample___all_list_style_types
 const container = document.querySelector(".container");
+const list = document.querySelector("ol");
+
 container.addEventListener("change", (event) => {
-  const list = document.querySelector("ol");
   list.setAttribute("style", `list-style-type: ${event.target.value}`);
 });
 ```
@@ -705,6 +700,8 @@ container.addEventListener("change", (event) => {
 #### 結果
 
 {{EmbedLiveSample("All_list_style_types", "600", "800")}}
+
+このページや仕様書で定義されたリストスタイル型に限定されません。 {{cssxref("@counter-style")}} アットルールにより、[任意の文字を使用したカウンター](https://r12a.github.io/app-counters/)を作成することができます。
 
 ## 仕様書
 
@@ -716,4 +713,9 @@ container.addEventListener("change", (event) => {
 
 ## 関連情報
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- {{Cssxref("list-style")}} 一括指定プロパティ
+- {{Cssxref("list-style-image")}} プロパティ
+- {{Cssxref("list-style-position")}} プロパティ
+- {{cssxref("::marker")}} 擬似要素
+- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール

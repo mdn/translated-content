@@ -9,7 +9,7 @@ slug: Web/CSS/color
 
 {{EmbedInteractiveExample("pages/css/color.html")}}
 
-HTML에서 색을 사용하는 법은 [CSS로 HTML 요소에 색입히기](/ko/docs/Web/HTML/Applying_color) 문서에서 정리한 내용으로 읽을 수 있습니다.
+HTML에서 색을 사용하는 법은 [CSS로 HTML 요소에 색입히기](/ko/docs/Web/CSS/CSS_colors/Applying_color) 문서에서 정리한 내용으로 읽을 수 있습니다.
 
 ## 구문
 
@@ -119,4 +119,4 @@ p {
 
 - {{cssxref("&lt;color&gt;")}} 자료형
 - 다른 색상 관련 속성: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("color-adjust")}}
-- [CSS로 HTML 요소에 색입히기](/ko/docs/Web/HTML/Applying_color)
+- [CSS로 HTML 요소에 색입히기](/ko/docs/Web/CSS/CSS_colors/Applying_color)

@@ -67,7 +67,7 @@ var int32 = new Int32Array(iterable);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Int32Array.Int32Array")}}
+{{Compat}}
 
 ### 互換性メモ
 
@@ -85,6 +85,6 @@ var dv = new Int32Array([1, 2, 3]);
 
 ## 関連情報
 
-- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

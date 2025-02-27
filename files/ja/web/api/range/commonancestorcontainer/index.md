@@ -1,6 +1,9 @@
 ---
-title: Range.commonAncestorContainer
+title: "Range: commonAncestorContainer プロパティ"
+short-title: commonAncestorContainer
 slug: Web/API/Range/commonAncestorContainer
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
 {{ApiRef("DOM")}}
@@ -17,7 +20,7 @@ slug: Web/API/Range/commonAncestorContainer
 
 ## 例
 
-この例では、リスト上の {{domxref("Document/pointerup_event", "pointerup")}} イベントを取り扱うためイベントリスナーを作ります。このリスナーは選択したテキストの共通の祖先を取得して、それらを強調するアニメーションを起動します。
+この例では、リスト上の {{domxref("Element/pointerup_event", "pointerup")}} イベントを取り扱うためイベントリスナーを作ります。このリスナーは選択したテキストの共通の祖先を取得して、それらを強調するアニメーションを起動します。
 
 ### HTML
 

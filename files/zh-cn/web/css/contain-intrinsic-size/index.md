@@ -178,6 +178,6 @@ contentVisibilitySelector.addEventListener("change", () => {
 
 ## 参见
 
-- [content-visibility：提高渲染性能的新 CSS 属性](https://web.dev/content-visibility/)（web.dev）
+- [content-visibility：提高渲染性能的新 CSS 属性](https://web.developers.google.cn/articles/content-visibility)（web.developers.google.cn）
 - {{CSSXref("contain-intrinsic-block-size")}}
 - {{CSSXref("contain-intrinsic-inline-size")}}

@@ -40,7 +40,7 @@ Os navegadores modernos oferecem suporte a várias maneiras de os sites armazena
 
 ## Armazenamento do lado do cliente?
 
-Em outro lugar na área de aprendizagem MDN, falamos sobre a diferença entre [sites estáticos](/pt-BR/docs/Learn/Server-side/First_steps/Client-Server_overview#Static_sites) e [sites dinâmicos](/pt-BR/docs/Learn/Server-side/First_steps/Client-Server_overview#Dynamic_sites) . A maioria dos principais sites modernos são dinâmicos - eles armazenam dados no servidor usando algum tipo de banco de dados (armazenamento do lado do servidor) e, em seguida, executam o código do [lado do servidor](/pt-BR/docs/Learn/Server-side) para recuperar os dados necessários, inserem-nos em modelos de página estática e fornecem o HTML resultante para o cliente a ser exibido pelo navegador do usuário.er.
+Em outro lugar na área de aprendizagem MDN, falamos sobre a diferença entre [sites estáticos](/pt-BR/docs/Learn/Server-side/First_steps/Client-Server_overview#static_sites) e [sites dinâmicos](/pt-BR/docs/Learn/Server-side/First_steps/Client-Server_overview#dynamic_sites) . A maioria dos principais sites modernos são dinâmicos - eles armazenam dados no servidor usando algum tipo de banco de dados (armazenamento do lado do servidor) e, em seguida, executam o código do [lado do servidor](/pt-BR/docs/Learn/Server-side) para recuperar os dados necessários, inserem-nos em modelos de página estática e fornecem o HTML resultante para o cliente a ser exibido pelo navegador do usuário.er.
 
 O armazenamento do lado do cliente funciona em princípios semelhantes, mas tem usos diferentes. Consiste em APIs JavaScript que permitem armazenar dados no cliente (ou seja, na máquina do usuário) e recuperá-los quando necessário. Isso tem muitos usos distintos, como:
 
@@ -51,7 +51,8 @@ O armazenamento do lado do cliente funciona em princípios semelhantes, mas tem 
 
 Freqüentemente, o armazenamento do lado do cliente e do lado do servidor são usados juntos. Por exemplo, você pode baixar um lote de arquivos de música (talvez usados por um jogo da web ou aplicativo de reprodutor de música), armazená-los em um banco de dados do cliente e reproduzi-los conforme necessário. O usuário só teria que baixar os arquivos de música uma vez - em visitas subsequentes, eles seriam recuperados do banco de dados.
 
-> **Nota:** : Existem limites para a quantidade de dados que você pode armazenar usando APIs de armazenamento do lado do cliente (possivelmente por API individual e cumulativamente); o limite exato varia dependendo do navegador e, possivelmente, com base nas configurações do usuário. Consulte [Limites de armazenamento do navegador e critérios de despejo](/pt-BR/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) para obter mais informações..
+> [!NOTE]
+> : Existem limites para a quantidade de dados que você pode armazenar usando APIs de armazenamento do lado do cliente (possivelmente por API individual e cumulativamente); o limite exato varia dependendo do navegador e, possivelmente, com base nas configurações do usuário. Consulte [Limites de armazenamento do navegador e critérios de despejo](/pt-BR/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria) para obter mais informações..
 
 ### Old school: Cookies
 
@@ -241,9 +242,11 @@ Let's build up the example, so you can understand how it works.
 
 Your example is finished — well done! All that remains now is to save your code and test your HTML page in a browser. You can see our [finished version running live here](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html).
 
-> **Nota:** There is another, slightly more complex example to explore at [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API).
+> [!NOTE]
+> There is another, slightly more complex example to explore at [Using the Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API).
 
-> **Nota:** In the line `<script src="index.js" defer></script>` of the source for our finished version, the `defer` attribute specifies that the contents of the {{htmlelement("script")}} element will not execute until the page has finished loading.
+> [!NOTE]
+> In the line `<script src="index.js" defer></script>` of the source for our finished version, the `defer` attribute specifies that the contents of the {{htmlelement("script")}} element will not execute until the page has finished loading.
 
 ## Storing complex data — IndexedDB
 
@@ -286,7 +289,7 @@ Now let's look at what we have to do in the first place, to actually set up a da
    window.onload = function () {};
    ```
 
-   We will write all of our subsequent code inside this `window.onload` event handler function, called when the window's {{event("load")}} event fires, to make sure we don't try to use IndexedDB functionality before the app has completely finished loading (it could fail if we don't).
+   We will write all of our subsequent code inside this `window.onload` event handler function, called when the window's [`load`](/pt-BR/docs/Web/API/Window/load_event) event fires, to make sure we don't try to use IndexedDB functionality before the app has completely finished loading (it could fail if we don't).
 
 3. Inside the `window.onload` handler, add the following:
 
@@ -300,7 +303,8 @@ Now let's look at what we have to do in the first place, to actually set up a da
 
    To handle this in IndexedDB, you create a request object (which can be called anything you like — we called it `request` so it is obvious what it is for). You then use event handlers to run code when the request completes, fails, etc., which you'll see in use below.
 
-   > **Nota:** The version number is important. If you want to upgrade your database (for example, by changing the table structure), you have to run your code again with an increased version number, different schema specified inside the `onupgradeneeded` handler (see below), etc. We won't cover upgrading databases in this simple tutorial.
+   > [!NOTE]
+   > The version number is important. If you want to upgrade your database (for example, by changing the table structure), you have to run your code again with an increased version number, different schema specified inside the `onupgradeneeded` handler (see below), etc. We won't cover upgrading databases in this simple tutorial.
 
 4. Now add the following event handlers just below your previous addition — again inside the `window.onload` handler:
 
@@ -669,11 +673,12 @@ This is where [Service workers](/pt-BR/docs/Web/API/Service_Worker_API) and the 
 
 A service worker is a JavaScript file that, simply put, is registered against a particular origin (web site, or part of a web site at a certain domain) when it is accessed by a browser. When registered, it can control pages available at that origin. It does this by sitting between a loaded page and the network and intercepting network requests aimed at that origin.
 
-When it intercepts a request, it can do anything you wish to it (see [use case ideas](/pt-BR/docs/Web/API/Service_Worker_API#Other_use_case_ideas)), but the classic example is saving the network responses offline and then providing those in response to a request instead of the responses from the network. In effect, it allows you to make a web site work completely offline.
+When it intercepts a request, it can do anything you wish to it (see [use case ideas](/pt-BR/docs/Web/API/Service_Worker_API#other_use_case_ideas)), but the classic example is saving the network responses offline and then providing those in response to a request instead of the responses from the network. In effect, it allows you to make a web site work completely offline.
 
 The Cache API is a another client-side storage mechanism, with a bit of a difference — it is designed to save HTTP responses, and so works very well with service workers.
 
-> **Nota:** Service workers and Cache are supported in most modern browsers now. At the time of writing, Safari was still busy implementing it, but it should be there soon.
+> [!NOTE]
+> Service workers and Cache are supported in most modern browsers now. At the time of writing, Safari was still busy implementing it, but it should be there soon.
 
 ### A service worker example
 
@@ -699,7 +704,8 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-> **Nota:** The given path to the `sw.js` file is relative to the site origin, not the JavaScript file that contains the code. The service worker is at `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`. The origin is `https://mdn.github.io`, and therefore the given path has to be `/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`. If you wanted to host this example on your own server, you'd have to change this accordingly. This is rather confusing, but it has to work this way for security reasons.
+> [!NOTE]
+> The given path to the `sw.js` file is relative to the site origin, not the JavaScript file that contains the code. The service worker is at `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`. The origin is `https://mdn.github.io`, and therefore the given path has to be `/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`. If you wanted to host this example on your own server, you'd have to change this accordingly. This is rather confusing, but it has to work this way for security reasons.
 
 #### Installing the service worker
 
@@ -738,7 +744,7 @@ Inside the handler we first log the URL of the requested asset. We then provide 
 
 Inside this block we use {{domxref("CacheStorage.match()")}} to check whether a matching request (i.e. matches the URL) can be found in any cache. This promise fulfills with the matching response if a match is found, or `undefined` if it isn't.
 
-If a match is found, we simply return it as the custom response. If not, we [fetch()](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch) the response from the network and return that instead.
+If a match is found, we simply return it as the custom response. If not, we [fetch()](/pt-BR/docs/Web/API/Window/fetch) the response from the network and return that instead.
 
 ```js
 self.addEventListener("fetch", function (e) {

@@ -58,7 +58,7 @@ _Esta interface também herda as propriedades de seu objeto pai,_ _{{domxref("Ev
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CloseEvent")}}
+{{Compat}}
 
 ## Veja também
 

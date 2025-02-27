@@ -3,11 +3,12 @@ title: Document.querySelectorAll()
 slug: Web/API/Document/querySelectorAll
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
 Метод **`querySelectorAll()`** {{domxref("Document")}} возвращает статический (не динамический) {{domxref("NodeList")}}, содержащий все найденные элементы документа, которые соответствуют указанному селектору.
 
-> **Примечание:** Данный метод реализован на основе миксина {{domxref("ParentNode")}} {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} метода.
+> [!NOTE]
+> Данный метод реализован на основе миксина {{domxref("ParentNode")}} {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} метода.
 
 ## Синтаксис
 
@@ -18,15 +19,17 @@ elementList = document.querySelectorAll(selectors);
 ### Параметры
 
 - **`selectors`**
-  - : Строка {{domxref("DOMString")}}, содержащая один или более [CSS селектор](/ru/docs/Web/Guide/CSS/Getting_Started/Selectors). Эта строка должна быть валидным [CSS селектором](/ru/docs/Web/CSS/CSS_Selectors). Если это не так, то генерируется `SyntaxError`. Смотрите [Поиск элементов DOM с использованием селекторов](/ru/docs/DOM/DOM_Reference/Locating_DOM_elements_using_selectors) для получения информации о том, распознавать элементы. Несколько селекторов нужно разделить запятыми.
+  - : Строка {{domxref("DOMString")}}, содержащая один или более [CSS селектор](/ru/docs/Learn/CSS/Building_blocks/Selectors). Эта строка должна быть валидным [CSS селектором](/ru/docs/Web/CSS/CSS_selectors). Если это не так, то генерируется `SyntaxError`. Смотрите [Поиск элементов DOM с использованием селекторов](/ru/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors) для получения информации о том, распознавать элементы. Несколько селекторов нужно разделить запятыми.
 
-> **Примечание:** Символы, которые не являются частью стандартного синтаксиса CSS, должны быть экранированы с помощью символа обратной косой черты (`\`). Поскольку в JavaScript также используется экранирование обратной косой черты, при написании строковых литералов с использованием этих символов следует соблюдать особую осторожность. Для более подробной информации смотри [Escaping special characters](#escaping_special_characters).
+> [!NOTE]
+> Символы, которые не являются частью стандартного синтаксиса CSS, должны быть экранированы с помощью символа обратной косой черты (`\`). Поскольку в JavaScript также используется экранирование обратной косой черты, при написании строковых литералов с использованием этих символов следует соблюдать особую осторожность. Для более подробной информации смотри [Escaping special characters](#escaping_special_characters).
 
 ### Возвращаемое значение
 
 Статический (non-live) {{domxref("NodeList")}}, содержащий все элементы в пределах документа, которые соответствуют как минимум одному из указанных селекторов, или пустой {{domxref("NodeList")}} в случае отсутствия совпадений.
 
-> **Примечание:** Если в строке `selectors` содержатся [CSS псевдоэлементы](/ru/docs/Web/CSS/Pseudo-elements), то возвращаемый список будет всегда пуст.
+> [!NOTE]
+> Если в строке `selectors` содержатся [CSS псевдоэлементы](/ru/docs/Web/CSS/Pseudo-elements), то возвращаемый список будет всегда пуст.
 
 ### Исключения
 

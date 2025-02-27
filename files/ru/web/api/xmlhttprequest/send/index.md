@@ -24,7 +24,7 @@ XMLHttpRequest.send(body)
     - {{domxref("Document")}}, и в этом случае данные будут сериализованы перед отправкой.
     - `BodyInit`, которые, согласно спецификации [Fetch](https://fetch.spec.whatwg.org/#bodyinit) могут быть: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}}, или объектом {{domxref("USVString")}}.
 
-Лучший способ передать двоичные данные (например при загрузке файлов) - это использование [ArrayBufferView](/ru/docs/Web/API/ArrayBufferView) или [Blobs](/ru/docs/Web/API/Blob) в сочетании с методом`send()`.
+Лучший способ передать двоичные данные (например при загрузке файлов) - это использование [ArrayBufferView](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) или [Blobs](/ru/docs/Web/API/Blob) в сочетании с методом`send()`.
 
 Если никакого значения не определено в качестве _body_, то будет использовано значение по умолчанию: `null`.
 
@@ -83,11 +83,11 @@ xhr.send("foo=bar&lorem=ipsum");
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML in XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [HTML in XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)

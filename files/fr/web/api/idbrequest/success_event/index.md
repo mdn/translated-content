@@ -5,9 +5,9 @@ slug: Web/API/IDBRequest/success_event
 
 {{ APIRef("IndexedDB") }}
 
-Le gestionnaire d'événement **`onsuccess`** de l'interface {{domxref("IDBRequest")}} capte l'événement [`success`](/fr/docs/Web/Events/success), déclenché quand la requête réussie.
+Le gestionnaire d'événement **`onsuccess`** de l'interface {{domxref("IDBRequest")}} capte l'événement [`success`](/fr/docs/Web/API/IDBRequest/success_event), déclenché quand la requête réussie.
 
-Le gestionnaire d'événement un événement [success](/fr/docs/Web/Events/success) avec le type="success" en paramètre.
+Le gestionnaire d'événement un événement [success](/fr/docs/Web/API/IDBRequest/success_event) avec le type="success" en paramètre.
 
 {{AvailableInWorkers}}
 
@@ -68,7 +68,7 @@ objectStoreTitleRequest.onerror = function () {
 ## Voir aussi
 
 - [Using IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- [Success Event](/fr/docs/Web/Events/success)
+- [Success Event](/fr/docs/Web/API/IDBRequest/success_event)
 - Starting transactions: {{domxref("IDBDatabase")}}
 - Using transactions: {{domxref("IDBTransaction")}}
 - Setting a range of keys: {{domxref("IDBKeyRange")}}

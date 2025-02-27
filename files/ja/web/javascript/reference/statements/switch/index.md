@@ -2,25 +2,41 @@
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
 l10n:
-  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
+  sourceCommit: 46a2eda1ce316d5c2c789104c28bc4fdaee5ab8b
 ---
 
 {{jsSidebar("Statements")}}
 
 **`switch`** 文は[式](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators)を評価して、一連の `case` 節に対してその式の値を照合し、最初に値が一致した `case` 節の後の[文](/ja/docs/Web/JavaScript/Reference/Statements)を、`break` 文に出会うまで実行します。一致した `case` の後にある文も同様に実行します。`switch` 文の `default` 節には、 `case` が式の値と一致しない場合にジャンプします。
 
-{{EmbedInteractiveExample("pages/js/statement-switch.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Statement - Switch", "taller")}}
+
+```js interactive-example
+const expr = "Papayas";
+switch (expr) {
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
+    break;
+  case "Mangoes":
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
+    // Expected output: "Mangoes and papayas are $2.79 a pound."
+    break;
+  default:
+    console.log(`Sorry, we are out of ${expr}.`);
+}
+```
 
 ## 構文
 
 ```js-nolint
 switch (expression) {
-  case value1:
+  case caseExpression1:
     文
-  case value2:
+  case caseExpression2:
     文
   // …
-  case valueN:
+  case caseExpressionN:
     文
   default:
     文
@@ -29,8 +45,8 @@ switch (expression) {
 
 - `expression`
   - : 結果が各 `case` 節と一致するか調べる式。
-- `case valueN` {{optional_inline}}
-  - : `expression` との照合に使用される `case` 節です。`expression` が指定された `valueN` （任意の式）と一致した場合、 `case` 節の直後の文から、 `switch` 文の終わりか、最初に遭遇する `break` のいずれかに達するまで実行されます。
+- `caseExpressionN` {{optional_inline}}
+  - : `expression` との照合に使用される `case` 節です。`expression` の値が指定された `caseExpressionN`（任意の式）の値と一致した場合、 `case` 節の直後の文から、 `switch` 文の終わりか、最初に遭遇する `break` のいずれかに達するまで実行されます。
 - `default` {{optional_inline}}
   - : `default` 節。 `expression` の値がいずれの `case` 節とも一致しない場合、この節が実行されます。 `switch` 文に存在できる `default` 節は 1 つだけです。
 
@@ -38,7 +54,7 @@ switch (expression) {
 
 `switch` 文はまず始めに式を評価します。次に、式が入力式の結果と評価される値が等しい最初の `case` 節を（[厳密等価演算子](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)を使用して）探し、その節の後の文をすべて実行します。
 
-節の値は必要なときにしか評価されません。一致する `case` 節がすでに見つかっている場合、以降の `case` 節の値は評価されません。これは、[落下](#break_を置かないとどうなるか)が発生した場合にも同様です。
+節の式は必要なときにしか評価されません。一致する `case` 節がすでに見つかっている場合、以降の `case` 節の式は評価されません。これは、[落下](#break_を置かないとどうなるか)が発生した場合にも同様です。
 
 ```js
 switch (undefined) {
@@ -54,7 +70,7 @@ switch (undefined) {
 
 `switch` 文の本体の中で [`break`](/ja/docs/Web/JavaScript/Reference/Statements/break) 文を使用すると、2 つの `case` 節の間のすべての文が実行されたとき、早期に抜け出すことができます。実行は `switch` に続く最初の文で継続されます。
 
-もし `break` が省略された場合は、次の `case` 節に進みます。たとえ `default` 節であっても、その値が一致するかどうかに関係なく、実行は続行されます。この動作は「落下」 (fall-through) と呼ばれます。
+もし `break` が省略された場合は、その式に一致するかどうかに関係なく次の `case` 節、または `default` 節に、実行が続行されます。この動作は「落下」 (fall-through) と呼ばれます。
 
 ```js
 const foo = 0;
@@ -77,13 +93,13 @@ switch (foo) {
 // 0 と 1 が出力される
 ```
 
-適切なコンテキストにおいて、その他の制御フロー文は `switch` 文から抜け出す効果があります。例えば、`switch`文が関数の中に含まれている場合、[`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文は関数本体の実行を終了し、したがって `switch` 文の実行を終了させます。もし `switch` 文がループに含まれている場合、[`continue`](/ja/docs/Web/JavaScript/Reference/Statements/break) 文は `switch` 文を中断し、ループの次の反復処理にジャンプさせます。
+適切なコンテキストにおいて、その他の制御フロー文は `switch` 文から抜け出す効果があります。例えば、`switch`文が関数の中に含まれている場合、[`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文は関数本体の実行を終了し、したがって `switch` 文の実行を終了させます。もし `switch` 文がループに含まれている場合、[`continue`](/ja/docs/Web/JavaScript/Reference/Statements/continue) 文は `switch` 文を中断し、ループの次の反復処理にジャンプさせます。
 
 ### 字句スコープ
 
 `case` と `default` 句は[ラベル](/ja/docs/Web/JavaScript/Reference/Statements/label)のようなものです。これらは、制御フローがジャンプする可能性のある場所があることを示します。しかし、これらは字句の[スコープ](/ja/docs/Glossary/Scope)そのものを作成するわけではありません（自動的に脱出することもありません。上で示したとおりです）。例えば次のようになります。
 
-```js example-bad
+```js-nolint example-bad
 const action = "say_hello";
 switch (action) {
   case "say_hello":

@@ -2,7 +2,7 @@
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
 l10n:
-  sourceCommit: b5c766f4eecb4fcf9d8ba175caddb94f7c3e9d20
+  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
 {{JSRef}}
@@ -46,34 +46,38 @@ JavaScript の数値 (`Number`) 型は [IEEE 754 の倍精度 64ビットバイ�
 
 仮数部（_significand_ とも呼ばれる）は、実際の値を表す部分（有効数字）です。指数は、仮数を乗じるべき 2 のべき乗です。科学的記数法として考えると、次のようになります。
 
-<math display="block"><semantics><mrow><mtext>Number</mtext><mo>=</mo><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><msup><mo stretchy="false">)</mo><mtext>sign</mtext></msup><mo>⋅</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mtext>mantissa</mtext><mo stretchy="false">)</mo><mo>⋅</mo><msup><mn>2</mn><mtext>exponent</mtext></msup></mrow><annotation encoding="TeX">\text{Number} = ({-1})^{\text{sign}} \cdot (1 + \text{mantissa}) \cdot 2^{\text{exponent}}</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mtext>Number</mtext><mo>=</mo><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><msup><mo stretchy="false">)</mo><mtext>sign</mtext></msup><mo>⋅</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mtext>mantissa</mtext><mo stretchy="false">)</mo><mo>⋅</mo><msup><mn>2</mn><mtext>exponent</mtext></msup></mrow><annotation encoding="TeX">\text{Number} = ({-1})^{\text{sign}} \cdot (1 + \text{mantissa}) \cdot 2^{\text{exponent}}</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
 仮数部は 52 ビットで格納され、2 進数の小数でいうところの `1.…` 以降の桁と解釈されます。したがって，仮数部の精度は 2<sup>-52</sup>（{{jsxref("Number.EPSILON")}} で取得可能）、すなわち小数点以下 15 ～ 17 桁程度となります。演算は[丸め誤差](https://ja.wikipedia.org/wiki/浮動小数点数#エラー（誤差）)の影響を受けます。
 
-数値が保持できる最大の値は 2<sup>1024</sup> - 1（底が 2 で指数が 1023、仮数が 0.1111...）であり、これは {{jsxref("Number.MAX_VALUE")}} で取得可能です。それ以上の値は、特殊な数値定数 {{jsxref("Infinity")}} で置き換えられます。
+数値が保持できる最大の値は 2<sup>1023</sup> × (2 - 2<sup>-52</sup>)（2 進数で指数が 1023、仮数が 0.1111...）であり、これは {{jsxref("Number.MAX_VALUE")}} で取得可能です。それ以上の値は、特殊な数値定数 {{jsxref("Infinity")}} で置き換えられます。
 
 整数は、仮数が 53 ビット（先頭の 1 も含む）しか保持できないため、精度を落とさずに表せるのは -2<sup>53</sup> + 1 から 2<sup>53</sup> - 1 の範囲（{{jsxref("Number.MIN_SAFE_INTEGER")}} と {{jsxref("Number.MAX_SAFE_INTEGER")}} で取得できる）だけです。
 
-これについては、[ECMAScript 標準](https://tc39.es/ecma262/#sec-ecmascript-language-types-number-type)に記述されています。
+これについては、[ECMAScript 標準](https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-ecmascript-language-types-number-type)に記述されています。
 
 ### 数値への変換
 
-数字を期待する多くの組み込み演算は、最初に引数を数字に変換します（`Number`オブジェクトが数字プリミティブと似たような動作をするのは、このためです）。[この操作](https://tc39.es/ecma262/#sec-tonumber) は以下のように要約されます。
+数字を期待する多くの組み込み演算は、最初に引数を数字に変換します（`Number`オブジェクトが数字プリミティブと似たような動作をするのは、このためです）。[この操作](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tonumber) は以下のように要約されます。
 
 - 数値はそのまま返されます。
 - [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) は [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) になります。
 - [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) は `0` になります。
 - `true` は `1` に、`false` は `0` になります。
-- 文字列は、[数値リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#数値リテラル)が入っている可能用に解釈して変換されます。解釈に失敗した場合は `NaN` が返されます。実際の数値リテラルと比較すると、いくつかの異なる点があります。
+- 文字列は、[数値リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#数値リテラル)が入っているかのように解釈して変換されます。解釈に失敗した場合は `NaN` が返されます。実際の数値リテラルと比較すると、いくつかの異なる点があります。
   - 先頭および末尾のホワイトスペース/改行文字は無視されます。
   - 先頭が数字 `0` である場合、数値が 8 進数のリテラルとなる（または厳格モードで拒否される）ことはありません。
   - 文字列の始めには、符号を示すために `+` と `-` を置くことができます。（実際のコードでは、これらはリテラルの一部に「見える」のですが、実際には別個の単項演算子です。）ただし、符号は一度しか現れず、空白が続いてはいけません。
   - `Infinity` と `-Infinity` はリテラルとして認識されます。実際のコードでは、これらはグローバル変数です。
   - 空文字列またはホワイトスペースのみの文字列は `0` に変換されます。
-  - [数値の区切り文字](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators)は許可されません。
+  - [数値の区切り文字](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#数値の区切り文字)は許可されません。
 - [長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)は、意図しない精度の低下を防ぐために {{jsxref("TypeError")}} 例外が発生します。
 - [シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)は {{jsxref("TypeError")}} 例外が発生します。
-- オブジェクトはまず[プリミティブに変換されます](/ja/docs/Web/JavaScript/Data_structures#primitive_coercion)（[`[@@toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)を `"number"` のヒント付きで、`valueOf()`、`toString()` メソッドをこの順で呼び出すことで）。結果のプリミティブは数値へ変換されます。
+- オブジェクトはまず[プリミティブに変換されます](/ja/docs/Web/JavaScript/Data_structures#primitive_coercion)（[`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)を `"number"` のヒント付きで、`valueOf()`、`toString()` メソッドをこの順で呼び出すことで）。結果のプリミティブは数値へ変換されます。
 
 JavaScript でほぼ同じ効果を得るには、2 つの方法があります。
 
@@ -112,11 +116,7 @@ new Uint8Array([257, -257]); // Uint8Array(2) [ 1, 255 ]
 ## コンストラクター
 
 - {{jsxref("Number/Number", "Number()")}}
-  - : 新しい `Number` 値を生成します。
-
-`Number` をコンストラクターとして（`new` を付けて）呼び出すと、{{jsxref("Number")}} オブジェクトを作成しますが、これはプリミティブでは**ありません**。例えば、`typeof new Number(42) === "object"` であり、`new Number(42) !== 42` となります（`new Number(42) == 42` ではあるが）。
-
-> **警告:** コンストラクターとして `Number` を使用することはほとんどないはずです。
+  - : `Number` オブジェクトを生成します。関数として呼び出された場合は、数値型のプリミティブ値を返します。
 
 ## 静的プロパティ
 
@@ -148,9 +148,9 @@ new Uint8Array([257, -257]); // Uint8Array(2) [ 1, 255 ]
 - {{jsxref("Number.isSafeInteger()")}}
   - : 渡された値が確実な範囲の整数（-(2<sup>53</sup> - 1) から 2<sup>53</sup> - 1 の間）であるかどうかを判断します。
 - {{jsxref("Number.parseFloat()")}}
-  - : これはグローバルの {{jsxref("parseFloat", "parseFloat()")}} 関数と同じです。
+  - : これはグローバルの {{jsxref("parseFloat()")}} 関数と同じです。
 - {{jsxref("Number.parseInt()")}}
-  - : これはグローバルの {{jsxref("parseInt", "parseInt()")}} 関数と同じです。
+  - : これはグローバルの {{jsxref("parseInt()")}} 関数と同じです。
 
 ## インスタンスプロパティ
 

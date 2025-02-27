@@ -3,7 +3,7 @@ title: key
 slug: Web/XPath/Functions/key
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}{{ XsltRef() }}
 
 La fonction `key` retourne un ensemble de nœuds ayant la valeur donnée pour la clef donnée.
 
@@ -35,7 +35,7 @@ Cette fonction est un ajout à XPath spécifique à XSLT. Elle ne fait pas parti
 
 ### Définition
 
-[XSLT 1.0, section 12.2](http://www.w3.org/TR/xslt#function-key).
+[XSLT 1.0, section 12.2](https://www.w3.org/TR/xslt#function-key).
 
 ### Support Gecko
 

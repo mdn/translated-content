@@ -40,7 +40,7 @@ alert(x); // resultado 2
 
 Este obtiene el resultado 2 ya que la sentencia `var x` dentro del grupo block tiene el mismo alcance que la sentencia `var x` antes del mismo. En C o Java, el código equivalente tendría como resultado 1.
 
-#### Con `let` y [const](/es/docs/Web/JavaScript/Referencia/Sentencias/const)
+#### Con `let` y [const](/es/docs/Web/JavaScript/Reference/Statements/const)
 
 Por el contrario, las variables declaradas con `let` y `const` tienen alcance de bloque.
 

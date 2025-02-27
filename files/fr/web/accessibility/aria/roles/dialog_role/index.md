@@ -3,9 +3,11 @@ title: Utilisation du rôle dialog
 slug: Web/Accessibility/ARIA/Roles/dialog_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Description
 
-Cette technique présente l'utilisation du rôle [`dialog (en)`](http://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog).
+Cette technique présente l'utilisation du rôle [`dialog (en)`](https://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog).
 
 Le rôle `dialog` est utilisé pour marquer une fenêtre ou une boîte de dialogue d'application web qui sépare le contenu ou l'UI du reste de l'application web ou de la page. Visuellement, les boîtes de dialogues sont généralement placées par dessus le contenu de la page, à l'aide d'un calque (ou « Overlay »). Les boîtes de dialogue peuvent être non-modales (ce qui signifie qu'il est toujours possible d'interagir avec le contenu situé hors de la boîte de dialogue) ou modales (ce qui signifie qu'on ne peut interagir qu'avec le contenu de la boîte de dialogue).
 
@@ -40,7 +42,8 @@ Si une boîte de dialogue a une barre de titre visible, le texte de cette barre 
 </div>
 ```
 
-> **Note :** Gardez en tête que le titre d'une boîte de dialogue et sa description ne doivent pas être focalisables afin de toujours être perçus par les lecteurs d'écran opérant en mode non-virtuel. La combinaison du rôle ARIA `dialog` et des techniques de labélisation devrait permettre aux lecteurs d'écran d'annoncer les informations de la boîte de dialogue lorsque le focus arrive sur cette dernière.
+> [!NOTE]
+> Gardez en tête que le titre d'une boîte de dialogue et sa description ne doivent pas être focalisables afin de toujours être perçus par les lecteurs d'écran opérant en mode non-virtuel. La combinaison du rôle ARIA `dialog` et des techniques de labélisation devrait permettre aux lecteurs d'écran d'annoncer les informations de la boîte de dialogue lorsque le focus arrive sur cette dernière.
 
 #### Gestion du focus
 
@@ -60,7 +63,8 @@ Lorsque le rôle `dialog` est utilisé, l'agent utilisateur doit faire la chose 
 
 Lorsque la boîte de dialogue est correctement labélisée et que le focus est déplacé vers un contrôle à l'intérieur de la boîte, les lecteurs d'écran devraient annoncer le rôle accessible du dialogue, son nom et éventuellement sa description avant d'annoncer l'élément qui a reçu le focus.
 
-> **Note :** plusieurs points de vue existent sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!NOTE]
+> Plusieurs points de vue existent sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
 
 ### Exemples
 
@@ -134,13 +138,14 @@ Pour prendre en charge les navigateurs ou les produits de technologies d'assista
 
 ### Notes
 
-> **Note :** bien qu'il soit possible d'empêcher les utilisateurs de clavier de bouger le focus vers des éléments en dehors des boîtes de dialogues, les utilisateurs de lecteurs d'écran ont toujours la possibilité de parcourir ce contenu pratiquement en utilisant le curseur virtuel du lecteur d'écran. À cause de cela, les boîtes de dialogue sont considérées comme des cas spéciaux du rôle `application`&nbsp;: on s'attend à ce qu'elles soient parcourues avec le mode de navigation non-virtuel par les utilisateurs de lecteur d'écran.
+> [!NOTE]
+> Bien qu'il soit possible d'empêcher les utilisateurs de clavier de bouger le focus vers des éléments en dehors des boîtes de dialogues, les utilisateurs de lecteurs d'écran ont toujours la possibilité de parcourir ce contenu pratiquement en utilisant le curseur virtuel du lecteur d'écran. À cause de cela, les boîtes de dialogue sont considérées comme des cas spéciaux du rôle `application`&nbsp;: on s'attend à ce qu'elles soient parcourues avec le mode de navigation non-virtuel par les utilisateurs de lecteur d'écran.
 
 ### Attributs ARIA utilisés
 
-- [dialog (en)](http://www.w3.org/TR/wai-aria/roles#dialog)
-- [aria-labelledby (en)](http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby)
-- [aria-describedby (en)](http://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby)
+- [dialog (en)](https://www.w3.org/TR/wai-aria/roles#dialog)
+- [aria-labelledby (en)](https://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby)
+- [aria-describedby (en)](https://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby)
 
 ### Techniques ARIA connexes
 

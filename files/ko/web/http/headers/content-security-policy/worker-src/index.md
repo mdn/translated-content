@@ -41,9 +41,9 @@ Content-Security-Policy: worker-src <source> <source>;
 
 ### 소스
 
-`<source>`는 [CSP Source Values](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#소스)에 나열된 값 중 하나입니다.
+`<source>`는 [CSP Source Values](/ko/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#%ec%86%8c%ec%8a%a4)에 나열된 값 중 하나입니다.
 
-이 값은 모든 {{Glossary("fetch directive", "fetch 지시문")}} 및 [기타 여러 지시문](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#관련_지시문)에서 사용할 수 있습니다.
+이 값은 모든 {{Glossary("fetch directive", "fetch 지시문")}} 및 [기타 여러 지시문](/ko/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#%ea%b4%80%eb%a0%a8_%ec%a7%80%ec%8b%9c%eb%ac%b8)에서 사용할 수 있습니다.
 
 ## 예제
 

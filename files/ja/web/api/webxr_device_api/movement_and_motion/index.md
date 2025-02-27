@@ -20,7 +20,7 @@ slug: Web/API/WebXR_Device_API/Movement_and_motion
 
 ## 依存関係
 
-この例では、[`three.js`](https://threejs.org/) などの 3D グラフィックフレームワークに依存しませんが、行列演算には過去に他の例で使用している [`glMatrix`](http://glmatrix.net/) ライブラリーを使用します。 この例では、WebXR API の仕様を担当するチームである Immersive Web Working Group によって管理されている [WebXR ポリフィル](https://github.com/immersive-web/webxr-polyfill/)もインポートします。 このポリフィルをインポートすることで、WebXR がまだ実装されていない多くのブラウザーでこの例を機能させることができ、WebXR 仕様のまだ実験的な日々の間に発生する仕様からの一時的な逸脱を滑らかにします。
+この例では、[`three.js`](https://threejs.org/) などの 3D グラフィックフレームワークに依存しませんが、行列演算には過去に他の例で使用している [`glMatrix`](https://glmatrix.net/) ライブラリーを使用します。 この例では、WebXR API の仕様を担当するチームである Immersive Web Working Group によって管理されている [WebXR ポリフィル](https://github.com/immersive-web/webxr-polyfill/)もインポートします。 このポリフィルをインポートすることで、WebXR がまだ実装されていない多くのブラウザーでこの例を機能させることができ、WebXR 仕様のまだ実験的な日々の間に発生する仕様からの一時的な逸脱を滑らかにします。
 
 ## オプション
 
@@ -60,7 +60,8 @@ const MOUSE_SPEED = 0.003;
 - `MOVE_DISTANCE`
   - : シーン内でビューアーを移動するために使用するキーのいずれかに応答して移動する距離。
 
-> **メモ:** この例では、`immersive-vr` モードを使用している場合でも、常に画面にレンダリングされる内容が表示されます。 これにより、2 つのモード間のレンダリングの違いを比較でき、ヘッドセットがない場合でも没入型モードからの出力を確認できます。
+> [!NOTE]
+> この例では、`immersive-vr` モードを使用している場合でも、常に画面にレンダリングされる内容が表示されます。 これにより、2 つのモード間のレンダリングの違いを比較でき、ヘッドセットがない場合でも没入型モードからの出力を確認できます。
 
 ## セットアップおよびユーティリティ関数
 
@@ -118,7 +119,7 @@ function LogGLError(where) {
 
 ### 頂点シェーダーとフラグメントシェーダー
 
-頂点シェーダーとフラグメントシェーダーはどちらも、[WebGL でのライティング](/ja/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL)の記事の例で使用されているものとまったく同じです。 ここで使用されている基本的なシェーダーの [GLSL](/ja/docs/Web/API/WebGL_API/By_example/Hello_GLSL) ソースコードに興味がある場合は、[それを参照](/ja/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL#Update_the_shaders)してください。
+頂点シェーダーとフラグメントシェーダーはどちらも、[WebGL でのライティング](/ja/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL)の記事の例で使用されているものとまったく同じです。 ここで使用されている基本的なシェーダーの [GLSL](/ja/docs/Web/API/WebGL_API/By_example/Hello_GLSL) ソースコードに興味がある場合は、[それを参照](/ja/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL#update_the_shaders)してください。
 
 頂点シェーダーは、各頂点の初期位置と、ビューアーの現在の位置と方向をシミュレートするためにそれらを変換するために適用する必要のある変換を指定して、各頂点の位置を計算するとだけ言っておきましょう。 フラグメントシェーダーは、テクスチャーで見つかった値から必要に応じて補間し、照明効果を適用して各頂点の色を返します。
 
@@ -471,7 +472,8 @@ function drawFrame(time, frame) {
 
 `drawFrame()` 関数は、{{domxref("XRViewerPose")}} で見つかったすべてのビューを反復処理し、ビューのビューポートを設定し、`renderScene()` を呼び出してフレームをレンダリングすることで終了します。 各ビューのビューポートを設定することにより、各目のビューがそれぞれ WebGL フレームの半分にレンダリングされる典型的なシナリオを処理します。 次に、XR ハードウェアは、各目がその目向けの画像の部分のみを表示するように処理します。
 
-> **メモ:** この例では、XR デバイスと画面の両方にフレームを視覚的に表示しています。 画面上のキャンバスがこれを実行できる適切なサイズであることを確認するために、その幅を個々の {{domxref("XRView")}} の幅にビューの数を掛けたものに等しくなるように設定します。 キャンバスの高さは常にビューポートの高さと同じです。 キャンバスサイズを調整する 2 行のコードは、通常の WebXR レンダリングループでは必要ありません。
+> [!NOTE]
+> この例では、XR デバイスと画面の両方にフレームを視覚的に表示しています。 画面上のキャンバスがこれを実行できる適切なサイズであることを確認するために、その幅を個々の {{domxref("XRView")}} の幅にビューの数を掛けたものに等しくなるように設定します。 キャンバスの高さは常にビューポートの高さと同じです。 キャンバスサイズを調整する 2 行のコードは、通常の WebXR レンダリングループでは必要ありません。
 
 ### ユーザー入力の適用
 
@@ -518,7 +520,7 @@ function applyViewerControls(refSpace) {
 
 `renderScene()` 関数は、ユーザーがその瞬間に見える世界の部分を実際にレンダリングするために呼び出されます。 XR ギアに必要な 3D 効果を確立するために、それぞれの目でわずかに異なる位置を使用し、それぞれの目に対して 1 回ずつ呼び出されます。
 
-このコードのほとんどは、[WebGL でのライティング](/ja/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL)の記事の `drawScene()` 関数から直接取得した典型的な WebGL レンダリングコードであり、この例の WebGL レンダリング部分の詳細についてはそこを参照してください（[GitHub でコードを見る](https://github.com/mdn/webgl-examples/blob/gh-pages/tutorial/sample7/webgl-demo.js)）。 しかし、ここでは、この例に固有のコードから始まっているので、その部分について詳しく見ていきます。
+このコードのほとんどは、[WebGL でのライティング](/ja/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL)の記事の `drawScene()` 関数から直接取得した典型的な WebGL レンダリングコードであり、この例の WebGL レンダリング部分の詳細についてはそこを参照してください（[GitHub でコードを見る](https://github.com/mdn/dom-examples/tree/main/webgl-examples/blob/gh-pages/tutorial/sample7/webgl-demo.js)）。 しかし、ここでは、この例に固有のコードから始まっているので、その部分について詳しく見ていきます。
 
 ```js
 const normalMatrix = mat4.create();

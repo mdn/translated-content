@@ -36,7 +36,7 @@ No mundo moderno do desenvolvimento web, aprender sobre desenvolvimento do lado 
 
 ## O que é programação de site do lado do servidor ?
 
-Navegadores comunicam-se com [web servers](/pt-BR/docs/Learn/Common_questions/What_is_a_web_server) utilizando o **H**yper**T**ext **T**ransfer **P**rotocol ({{glossary("HTTP")}}). Quando você clica em um link em uma página da web, envia um formulário ou faz uma pesquisa, uma **HTTP request(solicitação HTTP)** é enviada do seu navegador para o servidor de destino.
+Navegadores comunicam-se com [web servers](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) utilizando o **H**yper**T**ext **T**ransfer **P**rotocol ({{glossary("HTTP")}}). Quando você clica em um link em uma página da web, envia um formulário ou faz uma pesquisa, uma **HTTP request(solicitação HTTP)** é enviada do seu navegador para o servidor de destino.
 
 A solicitação inclui uma URL que identifica o recurso afetado, um método que define a ação necessária (por exemplo, para obter, excluir ou postar o recurso) e pode incluir informações adicionais codificadas em parâmetros de URL(Os pares field-value(campo-valor) são enviados por meio de uma [query string](https://en.wikipedia.org/wiki/Query_string)), como dados POST (dados enviados pelo método [HTTP POST](/pt-BR/docs/Web/HTTP/Methods/POST)), ou em associado {{glossary("Cookie", "cookies")}} .
 
@@ -48,7 +48,7 @@ O corpo de uma resposta bem-sucedida a uma solicitação conteria o recurso soli
 
 O diagrama abaixo mostra uma arquitetura básica de servidor da web para um site estático (um site estático é aquele que retorna o mesmo conteúdo embutido em código do servidor sempre que um determinado recurso é solicitado). Quando um usuário deseja navegar para uma página, o navegador envia uma solicitação HTTP "GET" especificando seu URL.
 
-O servidor recupera o documento solicitado de seu sistema de arquivos e retorna uma resposta HTTP contendo o documento e um [success status](/pt-BR/docs/Web/HTTP/Status#Successful_responses) (geralmente, 200 OK). Se o arquivo não puder ser recuperado por algum motivo, um status de erro será retornado(Veja [client error responses](/pt-BR/docs/Web/HTTP/Status#Client_error_responses) e [server error responses](/pt-BR/docs/Web/HTTP/Status#Server_error_responses)).
+O servidor recupera o documento solicitado de seu sistema de arquivos e retorna uma resposta HTTP contendo o documento e um [success status](/pt-BR/docs/Web/HTTP/Status#successful_responses) (geralmente, 200 OK). Se o arquivo não puder ser recuperado por algum motivo, um status de erro será retornado(Veja [client error responses](/pt-BR/docs/Web/HTTP/Status#client_error_responses) e [server error responses](/pt-BR/docs/Web/HTTP/Status#server_error_responses)).
 
 ![A simplified diagram of a static web server.](basic_static_app_server.png)
 
@@ -88,7 +88,8 @@ Desenvolvedores geralmente escrevem seus códigos utilizando **web frameworks**.
 
 Novamente, embora o código do lado do cliente e do servidor usem frameworks, os domínios são muito diferentes e, portanto, os frameworks também são. Os frameworks web do lado do cliente simplificam as tarefas de layout e apresentação, enquanto os frameworks web do lado do servidor fornecem muitas funcionalidades de servidor da web "comuns" que você mesmo poderia ter que implementar (por exemplo, suporte para sessões, suporte para usuários e autenticação, fácil acesso ao banco de dados, bibliotecas de modelos, etc.).
 
-> **Nota:** Os frameworks do lado do cliente costumam ser usados para ajudar a acelerar o desenvolvimento do código do lado do cliente, mas você também pode escolher escrever todo o código manualmente; na verdade, escrever seu código manualmente pode ser mais rápido e eficiente se você precisar apenas de uma IU de site da Web pequena e simples.
+> [!NOTE]
+> Os frameworks do lado do cliente costumam ser usados para ajudar a acelerar o desenvolvimento do código do lado do cliente, mas você também pode escolher escrever todo o código manualmente; na verdade, escrever seu código manualmente pode ser mais rápido e eficiente se você precisar apenas de uma IU de site da Web pequena e simples.
 >
 > Em contraste, você quase nunca pensaria em escrever o componente do lado do servidor de um web application sem um framework - implementar um recurso vital como um servidor HTTP é realmente difícil de fazer do zero em, digamos, Python, mas frameworks web em Python como Django fornecem essa ferramenta , junto com outras ferramentas muito úteis.
 
@@ -112,7 +113,8 @@ O servidor não se limita a enviar informações de bancos de dados e pode, alte
 
 Como as informações estão em um banco de dados, elas também podem ser mais facilmente compartilhadas e atualizadas com outros sistemas de negócios (por exemplo, quando os produtos são vendidos online ou em uma loja, a loja pode atualizar seu banco de dados de estoque).
 
-> **Nota:** Sua imaginação não precisa trabalhar muito para ver os benefícios do código do lado do servidor para armazenamento e entrega eficientes de informações:
+> [!NOTE]
+> Sua imaginação não precisa trabalhar muito para ver os benefícios do código do lado do servidor para armazenamento e entrega eficientes de informações:
 >
 > 1. Vá em [Amazon](https://www.amazon.com) ou em outro site comercial.
 > 2. Pesquise várias palavras-chave e observe como a estrutura da página não muda, embora os resultados mudem.
@@ -145,7 +147,8 @@ Exemplos do mundo real, incluem :
 - Redes sociais como o Facebook permitem que os usuários controlem totalmente seus próprios dados, mas apenas permitem que seus amigos os visualizem ou comentem. O usuário determina quem pode ver seus dados e, por extensão, quais dados aparecem em seu feed - a autorização é uma parte central da experiência do usuário!
 - O site em que você está agora controla o acesso ao conteúdo: os artigos são visíveis para todos, mas apenas os usuários que efetuaram login podem editá-los. Para tentar fazer isso, clique no botão Editar no topo desta página - se você estiver conectado, será exibida a visualização de edição; se você não estiver logado, será direcionado para a página de inscrição.
 
-> **Nota:** Considere outros exemplos reais em que o acesso ao conteúdo é controlado. Por exemplo, o que você pode ver se acessar o site online do seu banco? Faça login em sua conta - quais informações adicionais você pode ver e modificar? Quais informações você pode ver que somente o banco pode alterar?
+> [!NOTE]
+> Considere outros exemplos reais em que o acesso ao conteúdo é controlado. Por exemplo, o que você pode ver se acessar o site online do seu banco? Faça login em sua conta - quais informações adicionais você pode ver e modificar? Quais informações você pode ver que somente o banco pode alterar?
 
 ### Sessão de armazenamento / informações de estado
 
@@ -153,7 +156,8 @@ A programação do lado do servidor permite que os desenvolvedores façam uso de
 
 Isso permite, por exemplo, que um site saiba que um usuário fez login anteriormente e exiba links para seus e-mails ou histórico de pedidos, ou talvez salve o estado de um jogo simples para que o usuário possa ir a um site novamente e continuar onde eles deixaram.
 
-> **Nota:** :Visite um site de jornal que tem um modelo de assinatura e abra várias guias (por exemplo, The Age). Continue a visitar o site por algumas horas / dias. Eventualmente, você começará a ser redirecionado para páginas que explicam como se inscrever e não conseguirá acessar os artigos. Essas informações são um exemplo de informações de sessão armazenadas em cookies.
+> [!NOTE]
+> :Visite um site de jornal que tem um modelo de assinatura e abra várias guias (por exemplo, The Age). Continue a visitar o site por algumas horas / dias. Eventualmente, você começará a ser redirecionado para páginas que explicam como se inscrever e não conseguirá acessar os artigos. Essas informações são um exemplo de informações de sessão armazenadas em cookies.
 
 ### Notificações e comunicação
 
@@ -165,7 +169,8 @@ Alguns exemplos, incluem :
 - A Amazon envia regularmente e-mails de produtos que sugerem produtos semelhantes aos já comprados ou vistos nos quais você possa estar interessado.
 - Um servidor da web pode enviar mensagens de aviso aos administradores do site alertando-os sobre a memória insuficiente no servidor ou atividade suspeita do usuário.
 
-> **Nota:** O tipo mais comum de notificação é uma "confirmação de registro". Escolha quase todos os grandes sites de seu interesse (Google, Amazon, Instagram, etc.) e crie uma nova conta usando seu endereço de e-mail. Em breve, você receberá um e-mail confirmando seu registro ou solicitando confirmação para ativar sua conta.
+> [!NOTE]
+> O tipo mais comum de notificação é uma "confirmação de registro". Escolha quase todos os grandes sites de seu interesse (Google, Amazon, Instagram, etc.) e crie uma nova conta usando seu endereço de e-mail. Em breve, você receberá um e-mail confirmando seu registro ou solicitando confirmação para ativar sua conta.
 
 ### Análise de dados
 
@@ -173,7 +178,8 @@ Um site pode coletar muitos dados sobre os usuários: o que procuram, o que comp
 
 Por exemplo, Amazon e Google anunciam produtos com base em pesquisas anteriores (e compras).
 
-> **Nota:** :Se você é um usuário do Facebook, vá para o seu feed principal e veja o fluxo de postagens. Observe como algumas das postagens estão fora da ordem numérica - em particular, as postagens com mais "curtidas" geralmente estão no topo da lista do que as postagens mais recentes.
+> [!NOTE]
+> :Se você é um usuário do Facebook, vá para o seu feed principal e veja o fluxo de postagens. Observe como algumas das postagens estão fora da ordem numérica - em particular, as postagens com mais "curtidas" geralmente estão no topo da lista do que as postagens mais recentes.
 >
 > Observe também que tipo de anúncio está sendo mostrado - você pode ver anúncios de coisas que já viu em outros sites. O algoritmo do Facebook para destacar conteúdo e publicidade pode ser um pouco misterioso, mas é claro que depende de seus gostos e hábitos de visualização!
 
@@ -185,7 +191,7 @@ Agora você aprendeu que o código do lado do servidor é executado em um servid
 
 Você também deve entender que é útil porque nos permite criar sites que fornecem informações sob medida para usuários individuais de forma eficiente e têm uma boa ideia de algumas das coisas que você pode fazer quando for um programador do lado do servidor.
 
-Por último, você deve entender que o código do lado do servidor pode ser escrito em várias linguagens de programação e que você deve usar um framewoek web para tornar todo o processo mais fácil.
+Por último, você deve entender que o código do lado do servidor pode ser escrito em várias linguagens de programação e que você deve usar um framework web para tornar todo o processo mais fácil.
 
 Em um artigo futuro, ajudaremos você a escolher o melhor framework web para seu primeiro site. Aqui, vamos levá-lo pelas principais interações cliente-servidor com um pouco mais de detalhes.
 

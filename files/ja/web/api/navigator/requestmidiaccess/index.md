@@ -51,7 +51,7 @@ requestMIDIAccess(MIDIOptions)
 - アクセスは [`midi`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/ja/docs/Web/HTTP/Permissions_Policy) で制限される可能性があります。
 - ユーザーがユーザーエージェント固有のメカニズムによりこの API を使用する許可を明示的に与えるか、以前に許可を与えている必要があります。なお、Permission Policy でアクセスが拒否された場合は、ユーザーがアクセスを許可することはできません。
 
-許可の状態は、[Permissions API](/ja/docs/Web/API/Permissions_API) の [`navigator.permissions.query()`](/ja/docs/Web/API/Permissions/query) メソッドに権限 `midi` および (省略可能な) `sysex` プロパティを設定した権限ディスクリプターを渡すことで取得できます。
+許可の状態は、[権限 API](/ja/docs/Web/API/Permissions_API) の [`navigator.permissions.query()`](/ja/docs/Web/API/Permissions/query) メソッドに権限 `midi` および (省略可能な) `sysex` プロパティを設定した権限ディスクリプターを渡すことで取得できます。
 
 ```js
 navigator.permissions.query({ name: "midi", sysex: true }).then((result) => {

@@ -1,55 +1,60 @@
 ---
 title: "SyntaxError: return not in function"
 slug: Web/JavaScript/Reference/Errors/Bad_return
+l10n:
+  sourceCommit: e3faa375b0179de77a5eff00074e3d168a0a904c
 ---
 
 {{jsSidebar("Errors")}}
 
+当 [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 语句在[函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)外部被调用时，JavaScript 会抛出“return not in function”异常。
+
 ## 错误信息
 
 ```plain
-SyntaxError: return not in function
-SyntaxError: yield not in function
+SyntaxError: Illegal return statement (V8-based)
+SyntaxError: return not in function (Firefox)
+SyntaxError: Return statements are only valid inside functions. (Safari)
 ```
 
 ## 错误类型
 
-{{jsxref("SyntaxError")}}.
+{{jsxref("SyntaxError")}}。
 
 ## 什么地方出错了？
 
-[`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 返回的或者 [`yield`](/zh-CN/docs/Web/JavaScript/Reference/Operators/yield) 语句在函数 [function](/zh-CN/docs/Web/JavaScript/Guide/Functions) 外被调用。或许是少了一个花括号， `return` 返回的和 `yield` 语句必须是在一个函数里，因为它们会停止（暂停或恢复）函数的继续执行，然后返回。
+[`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 语句在[函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)外部被调用了。可能是某处缺失了花括号？`return` 语句必须位于函数内部，因为它会终止函数执行并指定一个值返回给函数调用者。
 
-## 范例
+## 示例
 
-```js example-bad
-var cheer = function(score) {
+### 缺少大括号
+
+```js-nolint example-bad
+function cheer(score) {
   if (score === 147)
-    return "Maximum!";
-  };
+    return "最大！";
+  }
   if (score > 100) {
-    return "Century!";
+    return "世纪！";
   }
 }
 
 // SyntaxError: return not in function
-// 语法错误：不是在函数里返回
 ```
 
-初次看好像没什么错误，但是上面这段代码在第一个 if 后面少了一个“ { ”。正确的应该如下：
+花括号乍一看之下似乎是正确的，但这段代码在第一个 `if` 语句后缺少了一个 `{`。正确的写法应该是：
 
 ```js example-good
-var cheer = function (score) {
+function cheer(score) {
   if (score === 147) {
-    return "Maximum!";
+    return "最大！";
   }
   if (score > 100) {
-    return "Century!";
+    return "世纪！";
   }
-};
+}
 ```
 
-## 相关信息
+## 参见
 
 - [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return)
-- [`yield`](/zh-CN/docs/Web/JavaScript/Reference/Operators/yield)

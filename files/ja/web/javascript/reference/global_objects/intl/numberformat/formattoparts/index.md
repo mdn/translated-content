@@ -7,6 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts
 
 **`Intl.Numberformat.prototype.formatToParts()`** メソッドは `NumberFormat` フォーマッターによって生成された文字列のロケールに応じた書式設定を可能にします。
 
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.formatToParts")}}
+
+```js interactive-example
+const amount = 654321.987;
+const options = { style: "currency", currency: "USD" };
+const numberFormat = new Intl.NumberFormat("en-US", options);
+
+const parts = numberFormat.formatToParts(amount);
+const partValues = parts.map((p) => p.value);
+
+console.log(partValues);
+// Expected output: "["$", "654", ",", "321", ".", "99"]"
+```
+
 ## 構文
 
 ```
@@ -128,7 +142,7 @@ console.log(numberString);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Intl.NumberFormat.formatToParts")}}
+{{Compat}}
 
 ## 関連情報
 

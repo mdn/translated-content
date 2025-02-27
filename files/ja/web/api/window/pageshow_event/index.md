@@ -12,7 +12,8 @@ slug: Web/API/Window/pageshow_event
 - モバイル OS で凍結されたページを復元したとき
 - ブラウザーの進む、戻るボタンを利用してこのページに戻ったとき
 
-> **メモ:** 最初にページを読み込んでいる間、 `pageshow` イベントは {{domxref("Window/load_event", "load")}} イベントの*後で*発生します。
+> [!NOTE]
+> 最初にページを読み込んでいる間、 `pageshow` イベントは {{domxref("Window/load_event", "load")}} イベントの*後で*発生します。
 
 <table class="properties">
   <tbody>
@@ -80,7 +81,7 @@ events.forEach((eventName) => window.addEventListener(eventName, eventLogger));
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.pageshow_event")}}
+{{Compat}}
 
 ## 関連情報
 

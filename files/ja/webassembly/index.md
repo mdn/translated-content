@@ -21,21 +21,21 @@ WebAssembly は JavaScript を補完、並行して動作するように設計�
 
 - [WebAssembly の概要](/ja/docs/WebAssembly/Concepts)
   - : まずは WebAssembly の大まかな概念 — WebAssembly とはなにか、有用性、ウェブプラットフォーム (またはそれ以上) にどのように適合するか、どのように使用するか — の理解から始めてください。
-- [C/C++ から WebAssembly へのコンパイル](/ja/docs/WebAssembly/C_to_wasm)
+- [C/C++ から WebAssembly へのコンパイル](/ja/docs/WebAssembly/C_to_Wasm)
   - : C/C++ で書いたコードを [Emscripten](https://emscripten.org/) のようなツールを使って .wasm にコンパイルできます。どのように動作するか確認してみましょう。
-- [既存の C モジュールから WebAssembly へのコンパイル](/ja/docs/WebAssembly/existing_C_to_wasm)
+- [既存の C モジュールから WebAssembly へのコンパイル](/ja/docs/WebAssembly/existing_C_to_Wasm)
   - : WebAssembly のコアユースケースは、既存の C ライブラリーのエコシステムを利用し、開発者がウェブ上でそれらを使用できるようにすることです。
-- [Rust から WebAssembly へのコンパイル](/ja/docs/WebAssembly/Rust_to_wasm)
+- [Rust から WebAssembly へのコンパイル](/ja/docs/WebAssembly/Rust_to_Wasm)
   - : Rust コードを書いていれば、WebAssembly にコンパイルすることができます。このチュートリアルでは、Rust プロジェクトをコンパイルして既存のウェブアプリケーションで使用するために知っておく必要があるすべてのことを説明します。
 - [WebAssembly コードの読み込みと実行](/ja/docs/WebAssembly/Loading_and_running)
-  - : .wasm を手に入れたら、この記事ではそれを読み取り、コンパイルし、インスタンス化する方法を説明します。 [WebAssembly JavaScript](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) API と [Fetch](/ja/docs/Web/API/Fetch_API) または [XHR](/ja/docs/Web/API/XMLHttpRequest) API とを組み合わせます。
+  - : .wasm を手に入れたら、この記事ではそれを読み取り、コンパイルし、インスタンス化する方法を説明します。 [WebAssembly JavaScript](/ja/docs/WebAssembly/JavaScript_interface) API と [Fetch](/ja/docs/Web/API/Fetch_API) または [XHR](/ja/docs/Web/API/XMLHttpRequest) API とを組み合わせます。
 - [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
   - : .wasm モジュールを読み込んだら、それを使いたくなるでしょう。この記事では、 WebAssembly JavaScript API を用いて WebAssembly を使用する方法を説明します。
 - [エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Exported_functions)
   - : エクスポートされた WebAssembly 関数は、WebAssembly 関数の JavaScript リフレクションであり、 JavaScript から WebAssembly コードを呼び出すことができます。 この記事では、それらが何なのか説明します。
 - [WebAssembly テキスト形式を理解する](/ja/docs/WebAssembly/Understanding_the_text_format)
   - : この記事では wasm テキスト形式について説明します。これは .wasm モジュールの低レベルなテキスト表現で、デバッグ時にブラウザーの開発者ツールに表示されます。
-- [WebAssembly テキスト形式から wasm に変換する](/ja/docs/WebAssembly/Text_format_to_wasm)
+- [WebAssembly テキスト形式から wasm に変換する](/ja/docs/WebAssembly/Text_format_to_Wasm)
   - : この記事では、テキスト形式で書かれた WebAssembly モジュールを .wasm バイナリーに変換する方法について説明します。
 
 ## API リファレンス
@@ -71,10 +71,6 @@ WebAssembly は JavaScript を補完、並行して動作するように設計�
 ## 仕様書
 
 {{Specifications}}
-
-## ブラウザーの互換性
-
-{{Compat}}
 
 ## 関連情報
 

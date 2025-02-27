@@ -25,9 +25,9 @@ if (window.parent != window.top) {
 }
 ```
 
-## Спецификация
+## Спецификации
 
-- [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#dom-parent)
+- [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#dom-parent)
 
 ## Смотрите также
 

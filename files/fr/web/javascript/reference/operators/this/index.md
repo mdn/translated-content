@@ -7,9 +7,21 @@ slug: Web/JavaScript/Reference/Operators/this
 
 En JavaScript, **le mot-clé `this`** se comporte légèrement différemment des autres langages de programmation. Son comportement variera également légèrement selon qu'on utilise le [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) ou le mode non-strict.
 
-Dans la plupart des cas, la valeur de `this` sera déterminée à partir de la façon dont une fonction est appelée. Il n'est pas possible de lui affecter une valeur lors de l'exécution et sa valeur peut être différente à chaque fois que la fonction est appelée. La méthode {{jsxref("Function.prototype.bind()","bind()")}} a été introduite avec ECMAScript 5 pour [définir la valeur de `this` pour une fonction, indépendamment de la façon dont elle est appelée](#bind). ECMAScript 2015 (ES6) a ajouté [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) dans lesquelles `this` correspond à la valeur du contexte englobant.
+Dans la plupart des cas, la valeur de `this` sera déterminée à partir de la façon dont une fonction est appelée. Il n'est pas possible de lui affecter une valeur lors de l'exécution et sa valeur peut être différente à chaque fois que la fonction est appelée. La méthode {{jsxref("Function.prototype.bind()","bind()")}} a été introduite avec ECMAScript 5 pour [définir la valeur de `this` pour une fonction, indépendamment de la façon dont elle est appelée](#bind). ECMAScript 2015 (ES6) a ajouté [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) dans lesquelles `this` correspond à la valeur du contexte englobant.
 
-{{EmbedInteractiveExample("pages/js/expressions-this.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - this")}}
+
+```js interactive-example
+const test = {
+  prop: 42,
+  func: function () {
+    return this.prop;
+  },
+};
+
+console.log(test.func());
+// Expected output: 42
+```
 
 ## Syntaxe
 
@@ -38,7 +50,8 @@ console.log(window.b); // "MDN"
 console.log(b); // "MDN"
 ```
 
-> **Note :** Il est également possible d'accéder au contexte global avec la propriété {{jsxref("globalThis")}} quel que soit le contexte utilisé pour l'exécution.
+> [!NOTE]
+> Il est également possible d'accéder au contexte global avec la propriété {{jsxref("globalThis")}} quel que soit le contexte utilisé pour l'exécution.
 
 ## Dans le contexte d'une fonction
 
@@ -71,7 +84,8 @@ f2() === undefined; // true
 
 En mode strict, la valeur de `this` est conservée (il reste le même) entre le moment de sa définition et l'entrée dans le contexte d'exécution. S'il n'est pas défini, il reste `undefined`. Il pourrait être défini avec n'importe quelle autre valeur, telle que `null` ou `42` ou `"Je ne suis pas this"`.
 
-> **Note :** Dans ce deuxième exemple, `this` vaut {{jsxref("undefined")}} car `f2` a été appelé sans « base » (ex. : `window.f2()`). Cette fonctionnalité ne fut pas correctement implémentée dans certains navigateurs aux débuts du mode strict, en effet, certains renvoyaient alors l'objet `window`.
+> [!NOTE]
+> Dans ce deuxième exemple, `this` vaut {{jsxref("undefined")}} car `f2` a été appelé sans « base » (ex. : `window.f2()`). Cette fonctionnalité ne fut pas correctement implémentée dans certains navigateurs aux débuts du mode strict, en effet, certains renvoyaient alors l'objet `window`.
 
 ### `call` et `apply`
 
@@ -148,7 +162,7 @@ console.log(o.a, o.f(), o.g(), o.h()); // 37, 37, azerty, azerty
 
 ### Avec les fonctions fléchées
 
-En utilisant [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées), `this` correspond à la valeur de `this` utilisé dans le contexte englobant. Lorsqu'on utilise une fonction fléchée dans du code global, `this` sera l'objet global :
+En utilisant [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions), `this` correspond à la valeur de `this` utilisé dans le contexte englobant. Lorsqu'on utilise une fonction fléchée dans du code global, `this` sera l'objet global :
 
 ```js
 var objetGlobal = this;
@@ -297,7 +311,8 @@ console.log(o.phase, o.moduleRéel); // logs -0.78 1.4142
 
 Lorsqu'une fonction est utilisée comme constructeur (c'est-à-dire qu'elle est invoquée avec le mot-clé {{jsxref("Opérateurs/L_opérateur_new","new")}}), le `this` correspondant sera lié au nouvel objet en train d'être construit.
 
-> **Note :** Par défaut, un constructeur renverra l'objet auquel `this` fait référence. Cependant si la valeur de retour du constructeur est définie et est un objet, ce sera elle qui sera renvoyée (sinon ce sera la valeur de `this`).
+> [!NOTE]
+> Par défaut, un constructeur renverra l'objet auquel `this` fait référence. Cependant si la valeur de retour du constructeur est définie et est un objet, ce sera elle qui sera renvoyée (sinon ce sera la valeur de `this`).
 
 ```js
 /*

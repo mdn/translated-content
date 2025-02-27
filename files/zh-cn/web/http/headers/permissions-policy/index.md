@@ -7,7 +7,7 @@ slug: Web/HTTP/Headers/Permissions-Policy
 
 **`Permissions-Policy`** 响应标头提供了一种可以在本页面或包含的 iframe 上启用或禁止浏览器特性的机制。
 
-更多的信息，请查看[Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy)
+更多的信息，请查看[Feature Policy](/zh-CN/docs/Web/HTTP/Permissions_Policy)
 
 | Header type                           | {{Glossary("Response header")}} |
 | ------------------------------------- | ------------------------------- |
@@ -19,20 +19,16 @@ slug: Web/HTTP/Headers/Permissions-Policy
 Permissions-Policy: <directive> <allowlist>
 ```
 
-**\<allowlist>**
+- `<allowlist>`
 
-- `*`: 允许在当前文档和所有包含的内容（比如 iframes）中使用本特性。
-- `'self'`: 允许在当前文档中使用本特性，但在包含的内容（比如 iframes）仍使用原值。
-- `'src'`: (只在 iframe 中允许) 只要在{{HTMLElement('iframe','src','#Attributes')}} 中的 URL 和加载 iframe 用的 URL 相同，则本特性在 iframe 中允许，
-- `'none'`: 从最上层到包含的内容都禁止本特性。 \<origin(s)>: 在特定的源中允许，源 URL 以空格分割。
+  - : 一个来源列表，在括号中包含的以下一个或多个值，并用空格分隔：
 
-<!---->
+    - `*`: 允许在当前文档和所有包含的内容（比如 iframes）中使用本特性。
+    - `'self'`: 允许在当前文档中使用本特性，但在包含的内容（比如 iframes）仍使用原值。
+    - `'src'`: (只在 iframe 中允许) 只要在{{HTMLElement('iframe','src','#Attributes')}} 中的 URL 和加载 iframe 用的 URL 相同，则本特性在 iframe 中允许，
+    - `'none'`: 从最上层到包含的内容都禁止本特性。 \<origin(s)>: 在特定的源中允许，源 URL 以空格分割。
 
-- `*`: 本特性默认在最上层和包含的内容中（iframes）允许。
-- `'self'`: 本特性默认在最上层允许，而包含的内容中（iframes）使用源地址相同设定。也就是说本特性在 iframe 中不允许跨域访问。
-- `'none'`: 本特性默认在最上层和包含的内容中（iframes）都禁止。
-
-`*`(在所有源地址启用)`或'none'`(在所有源地址禁用) 只允许单独使用，而`'self'`和`'src'`可以与多个源地址一起使用。
+`*` 或 `none` 值只允许单独使用，而 `self` 和 `src` 值可以与多个源一起使用。
 
 所有的特性都有一个如下的默认的 allowlist
 
@@ -83,7 +79,7 @@ Permissions-Policy: vibrate 'none'; geolocation 'none'
 
 ## 参见
 
-- [Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy)
+- [Feature Policy](/zh-CN/docs/Web/HTTP/Permissions_Policy)
 - [Using Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
 - [Permissions-Policy Tester (Chrome Developer Tools extension)](https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop)
 - {{HTTPHeader("Content-Security-Policy")}}

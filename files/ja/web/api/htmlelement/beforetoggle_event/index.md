@@ -5,7 +5,7 @@ l10n:
   sourceCommit: bb6092c4230b69c2eceae6910af68c73955cae1c
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("Popover API")}}
 
 **`beforetoggle`** は {{domxref("HTMLElement")}} インターフェイスのイベントで、{{domxref("Popover_API", "ポップオーバー", "", "nocode")}}要素（すなわち有効な [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) 属性がある要素）において、表示または非表示になる直前に発行されます。
 
@@ -72,5 +72,6 @@ popover.hidePopover();
 
 ## 関連情報
 
+- HTML の [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) グローバル属性
 - [ポップオーバー API](/ja/docs/Web/API/Popover_API)
 - 関連イベント: [`toggle`](/ja/docs/Web/API/HTMLElement/toggle_event)

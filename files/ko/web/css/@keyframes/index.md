@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`@keyframes`** [@규칙](/ko/docs/Web/CSS/At-rule)은 개발자가 애니메이션 중간중간의 특정 지점들을 거칠 수 있는 키프레임들을 설정함으로써 CSS 애니메이션 과정의 중간 절차를 제어할 수 있게 합니다. 이를 통해 브라우저가 [transitions](/ko/docs/Web/CSS/CSS_Transitions)으로 애니메이션을 처리하는 것 보다 더 세밀하게 중간 동작들을 제어할 수 있습니다.
+**`@keyframes`** [@규칙](/ko/docs/Web/CSS/At-rule)은 개발자가 애니메이션 중간중간의 특정 지점들을 거칠 수 있는 키프레임들을 설정함으로써 CSS 애니메이션 과정의 중간 절차를 제어할 수 있게 합니다. 이를 통해 브라우저가 [transitions](/ko/docs/Web/CSS/CSS_transitions)으로 애니메이션을 처리하는 것 보다 더 세밀하게 중간 동작들을 제어할 수 있습니다.
 
 ## 구문
 
@@ -42,7 +42,7 @@ l10n:
 
 키프레임의 %를 꼭 순서대로 나열하지 않더라도, %의 순서대로 처리됩니다.
 
-자바스크립트는 `@keyframes` @규칙을 CSS 오브젝트 모델 인터페이스인 {{domxref("CSSKeyframesRule")}}를 통해서 접근할 수 있습니다.
+JavaScript는 `@keyframes` @규칙을 CSS 오브젝트 모델 인터페이스인 {{domxref("CSSKeyframesRule")}}를 통해서 접근할 수 있습니다.
 
 ### 유효한 키프레임 리스트
 
@@ -106,7 +106,7 @@ l10n:
 
 이 예제를 보면 `50%` 키프레임에서는 `top: 10px`과 `left: 20px` 만 적용됩니다.
 
-{{ non-standard_inline }} 키 프레임 효과 연속은 파이어폭스 14부터 지원됩니다. 이 의미는 위 예제의 경우 50% 키 프레임에서 왼쪽 : 20px 값이 고려된다는 의미입니다. 이러한 기능이 스펙에는 아직 정의가 되어있진 않지만, 현재 도입에 대한 토론이 진행 중입니다.
+{{ non-standard_inline }} 키 프레임 효과 연속은 Firefox 14부터 지원됩니다. 이 의미는 위 예제의 경우 50% 키 프레임에서 왼쪽 : 20px 값이 고려된다는 의미입니다. 이러한 기능이 스펙에는 아직 정의가 되어있진 않지만, 현재 도입에 대한 토론이 진행 중입니다.
 
 ### 키프레임에서의 `!important`
 
@@ -143,11 +143,11 @@ l10n:
 
 ## 예제
 
-[CSS 애니메이션](/en/CSS/CSS_animations)에서 예제를 참고하세요.
+[CSS 애니메이션](/en-US/CSS/CSS_animations)에서 예제를 참고하세요.
 
 ### CSS 애니메이션 예제
 
-예제는 [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)와 [스크롤 기반 애니메이션으로 스크롤의 요소들 애니메이션 하기](https://developer.chrome.com/articles/scroll-driven-animations/)를 참고하세요.
+예제는 [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)와 [스크롤 기반 애니메이션으로 스크롤의 요소들 애니메이션 하기](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)를 참고하세요.
 
 ## 명세서
 
@@ -161,6 +161,6 @@ l10n:
 
 - {{cssxref("animation-range")}}
 - [CSS 스크롤 기반 애니메이션](/ko/docs/Web/CSS/CSS_scroll-driven_animations)
-- [CSS 애니메이션 사용하기](/ko/docs/CSS/Tutorials/Using_CSS_animations)
-- [스크롤 기반 애니메이션으로 스크롤의 요소들 애니메이션 하기](https://developer.chrome.com/articles/scroll-driven-animations/)
+- [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [스크롤 기반 애니메이션으로 스크롤의 요소들 애니메이션 하기](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)
 - {{domxref("AnimationEvent")}}

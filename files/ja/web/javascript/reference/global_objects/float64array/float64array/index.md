@@ -67,7 +67,7 @@ var float64 = new Float64Array(iterable);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Float64Array.Float64Array")}}
+{{Compat}}
 
 ### 互換性ノート
 
@@ -85,6 +85,6 @@ var dv = new Float64Array([1, 2, 3]);
 
 ## 関連情報
 
-- [JavaScript typed arrays](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

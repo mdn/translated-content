@@ -1,11 +1,12 @@
 ---
-title: Request.cache
+title: "Request: cache プロパティ"
+short-title: cache
 slug: Web/API/Request/cache
 l10n:
-  sourceCommit: f5054555f990996051ea47e4282b905dffb95206
+  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`cache`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、リクエストのキャッシュモードを保持します。リクエストがブラウザーの [HTTP キャッシュ](/ja/docs/Web/HTTP/Caching) とどのように作用するかを制御します。
 
@@ -31,7 +32,7 @@ l10n:
   - 一致するものが*新しいか古いかに関わらず*、キャッシュから返されます。
   - 一致するものがない場合、ブラウザーは通常のリクエストを行い、ダウンロードしたリソースでキャッシュを更新します。
 
-- `only-if-cached` — ブラウザーは、 HTTP キャッシュで一致するリクエストを探します。
+- `only-if-cached` — ブラウザーは、 HTTP キャッシュで一致するリクエストを探します。 {{experimental_inline}}
 
   - 一致するものが*新しいか古いかに関わらず*、キャッシュから返されます。
   - 一致するものがない場合、ブラウザーは [504 Gateway timeout](/ja/docs/Web/HTTP/Status/504) ステータスで応答します。
@@ -41,38 +42,37 @@ l10n:
 ## 例
 
 ```js
-// Download a resource with cache busting, to bypass the cache
-// completely.
+// キャッシュを完全にバイパスするために、キャッシュ無効で
+// リソースをダウンロードします。
 fetch("some.json", { cache: "no-store" }).then((response) => {
-  /* consume the response */
+  /* レスポンスを消費 */
 });
 
-// Download a resource with cache busting, but update the HTTP
-// cache with the downloaded resource.
+// キャッシュ無効でリソースをダウンロードしますが、
+// ダウンロードしたリソースで HTTP キャッシュを更新します。
 fetch("some.json", { cache: "reload" }).then((response) => {
-  /* consume the response */
+  /* レスポンスを消費 */
 });
 
-// Download a resource with cache busting when dealing with a
-// properly configured server that will send the correct ETag
-// and Date headers and properly handle If-Modified-Since and
-// If-None-Match request headers, therefore we can rely on the
-// validation to guarantee a fresh response.
+// 正しい ETag および Date ヘッダーを送信し、If-Modified-Since と
+// If-None-Match リクエストヘッダーを適切に処理するよう適切に
+// 構成されたサーバーを扱う際には、キャッシュ無効でリソースを
+// ダウンロードします。これにより、新鮮なレスポンスを保証する
+// 検証をシンラインすることができます。
 fetch("some.json", { cache: "no-cache" }).then((response) => {
-  /* consume the response */
+  /* レスポンスを消費 */
 });
 
-// Download a resource with economics in mind! Prefer a cached
-// albeit stale response to conserve as much bandwidth as possible.
+// 経済性を考慮してリソースをダウンロードします。できるだけ多くの
+// 帯域幅を確保するために、キャッシュされた古いレスポンスを優先します。
 fetch("some.json", { cache: "force-cache" }).then((response) => {
-  /* consume the response */
+  /* レスポンスを消費 */
 });
 
-// Naive stale-while-revalidate client-level implementation.
-// Prefer a cached albeit stale response; but update if it's too old.
-// AbortController and signal to allow better memory cleaning.
-// In reality; this would be a function that takes a path and a
-// reference to the controller since it would need to change the value
+// 単純な期限切れを再検証するクライアントレベルの実装。
+// キャッシュされた古いレスポンスを優先しますが、あまりにも古い場合は更新します。
+// AbortController および signal により、よりよくメモリーの掃除ができます。
+// 実際には、値を変更する必要があるため、パスとコントローラーの参照を取る関数となります。
 let controller = new AbortController();
 fetch("some.json", {
   cache: "only-if-cached",
@@ -81,7 +81,7 @@ fetch("some.json", {
 })
   .catch((e) =>
     e instanceof TypeError && e.message === "Failed to fetch"
-      ? { status: 504 } // Workaround for chrome; which fails with a TypeError
+      ? { status: 504 } // Chrome の回避策。TypeError で失敗する
       : Promise.reject(e),
   )
   .then((res) => {
@@ -97,7 +97,7 @@ fetch("some.json", {
     const date = res.headers.get("date"),
       dt = date ? new Date(date).getTime() : 0;
     if (dt < Date.now() - 86_400_000) {
-      // if older than 24 hours
+      // 24 時間以上古ければ
       controller.abort();
       controller = new AbortController();
       return fetch("some.json", {
@@ -107,17 +107,17 @@ fetch("some.json", {
       });
     }
 
-    // Other possible conditions
+    // その他の条件
     if (dt < Date.now() - 300_000)
-      // If it's older than 5 minutes
+      // 5 分以上古ければ
       fetch("some.json", { cache: "no-cache", mode: "same-origin" }); // no cancellation or return value.
     return res;
   })
   .then((response) => {
-    /* consume the (possibly stale) response */
+    /* （おそらく古い）レスポンスを消費する */
   })
   .catch((error) => {
-    /* Can be an AbortError/DOMError or a TypeError */
+    /* AbortError/DOMException または TypeError となる */
   });
 ```
 

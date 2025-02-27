@@ -23,4 +23,4 @@ var taskAttributeTiming = PerformanceLongTaskTiming.attribution;
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceLongTaskTiming.attribution")}}
+{{Compat}}

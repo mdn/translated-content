@@ -7,17 +7,50 @@ slug: Web/HTML/Attributes/disabled
 
 当布尔属性 **`disabled`** 存在时，元素将不可变、不能聚焦或与表单一同提交。用户将不能在表单控件本身或其子控件进行编辑或聚焦操作。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-disabled.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: disabled", "tabbed-standard")}}
+
+```html interactive-example
+<form>
+  <label for="name">Name:</label>
+  <input id="name" name="name" type="text" />
+
+  <label for="emp">Employed:</label>
+  <select id="emp" name="emp" disabled>
+    <option>No</option>
+    <option>Yes</option>
+  </select>
+
+  <label for="empDate">Employment Date:</label>
+  <input id="empDate" name="empDate" type="date" disabled />
+
+  <label for="resume">Resume:</label>
+  <input id="resume" name="resume" type="file" />
+</form>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+*:disabled {
+  background-color: dimgrey;
+  color: linen;
+  opacity: 1;
+}
+```
 
 ## 总览
 
 如果在表单控件上指定了 `disabled` 属性，则该元素及其子控件不参与约束验证。通常浏览器会将它们打灰处理，它不会收到任何浏览事件，如鼠标点击或与焦点相关的事件。
 
-这些元素支持 `disabled` 属性：{{ HTMLElement("button") }}、{{ HTMLElement("command") }}、{{ HTMLElement("fieldset") }}、{{ HTMLElement("optgroup") }}、{{ HTMLElement("option") }}、{{ HTMLElement("select") }}、{{ HTMLElement("textarea") }} 和 {{ HTMLElement("input")}}。
+这些元素支持 `disabled` 属性：{{ HTMLElement("button") }}、{{ HTMLElement("fieldset") }}、{{ HTMLElement("optgroup") }}、{{ HTMLElement("option") }}、{{ HTMLElement("select") }}、{{ HTMLElement("textarea") }} 和 {{ HTMLElement("input")}}。
 
 这个布尔型 disabled 属性表示用户不能与该控件或其后代控件进行交互。如果没有指定这个属性，控件会从包含元素中继承其设置，例如 `fieldset`；如果没有设置 `disabled` 属性的包含元素，并且控件本身没有这个属性，那么该控件是启用的。如果在 {{ HTMLElement("optgroup") }} 上声明，选择仍然是交互式的（除非另行禁用），但选项组中的项目都不能选择。
 
-> **备注：** 如果 {{ HTMLElement("fieldset") }} 被禁用，那么除了 {{ HTMLElement("legend") }} 内的表单控件外，其下级表单控件都被禁用。
+> [!NOTE]
+> 如果 {{ HTMLElement("fieldset") }} 被禁用，那么除了 {{ HTMLElement("legend") }} 内的表单控件外，其下级表单控件都被禁用。
 
 当一个支持的元素应用了 `disabled` 属性，{{cssxref(":disabled")}} 伪类也适用于它。反之，支持 `disabled` 属性但没有设置该属性的元素与 {{cssxref(":enabled")}} 伪类匹配。
 

@@ -40,7 +40,7 @@ l10n:
   - {{cssxref("page-break-inside")}} は {{cssxref("break-inside")}} の別名になりました。
 
 - {{cssxref("overflow-wrap")}} プロパティの値 `anywhere` を実装しました ([Firefox バグ 1505786](https://bugzil.la/1505786))。
-- 新しいステップ位置のキーワードである `jump-start`、`jump-end`、`jump-none`、`jump-both` ([`steps()` タイミング関数](</ja/docs/Web/CSS/easing-function#the_steps()_class_of_timing_functions>) 内で使用可能) を実装しました ([Firefox バグ 1496619](https://bugzil.la/1496619))。これは `frames()` タイミング関数の削除と同時に行いました。この関数は過去に同様の機能を実装していたものであり、非推奨になりました。
+- 新しいステップ位置のキーワードである `jump-start`、`jump-end`、`jump-none`、`jump-both` ([`steps()` イージング関数](</ja/docs/Web/CSS/easing-function#the_steps()_class_of_timing_functions>) 内で使用可能) を実装しました ([Firefox バグ 1496619](https://bugzil.la/1496619))。これは `frames()` イージング関数の削除と同時に行いました。この関数は過去に同様の機能を実装していたものであり、非推奨になりました。
 - ほかのブラウザーとの互換性のために、{{cssxref("appearance", "-webkit-appearance")}} で新しい値をいくつか追加しました。特に、以下の値です。
 
   - `meter`。これはユーザーエージェントのスタイルシートで、{{htmlelement("meter")}} 要素のデフォルトの値として使用されます。既存の値 `meterbar` は、`meter` の別名になりました ([Firefox バグ 1501483](https://bugzil.la/1501483))。
@@ -70,16 +70,16 @@ l10n:
 
 - 設定項目 `layout.css.shape-outside.enabled` を削除しました。`about:config` で {{cssxref("shape-outside")}}、{{cssxref("shape-margin")}}、{{cssxref("shape-image-threshold")}} を無効化できなくなりました ([Firefox バグ 1504387](https://bugzil.la/1504387))。
 - {{cssxref("user-select")}} プロパティの、Firefox 限定の値である `-moz-all`、`-moz-text`、`tri-state`、`element`、`elements`、`toggle` を削除しました。[Firefox バグ 1492958](https://bugzil.la/1492958) および [Firefox バグ 1506547](https://bugzil.la/1506547) をご覧ください。
-- 前述のとおり、`frames()` タイミング関数を削除しました ([Firefox バグ 1496619](https://bugzil.la/1496619))。
+- 前述のとおり、`frames()` イージング関数を削除しました ([Firefox バグ 1496619](https://bugzil.la/1496619))。
 
 ### SVG
 
-_変更なし_
+_変更なし。_
 
 ### JavaScript
 
 - {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}} をサポートしました ([Firefox バグ 1504334](https://bugzil.la/1504334))。
-- 文字列の {{jsxref("String/length","length","","1")}} の最大値を `2**28 - 1` (\~256MB) から `2**30 - 2` (\~1GB) に変更しました ([Firefox バグ 1509542](https://bugzil.la/1509542))。
+- 文字列の {{jsxref("String/length","length","",1)}} の最大値を `2**28 - 1` (\~256MB) から `2**30 - 2` (\~1GB) に変更しました ([Firefox バグ 1509542](https://bugzil.la/1509542))。
 - 常にトップレベルのグローバルオブジェクトを参照する {{jsxref("globalThis")}} プロパティを実装しました ([Firefox バグ 1317422](https://bugzil.la/1317422))。
 
 ### API
@@ -108,7 +108,7 @@ _変更なし_
 #### フェッチとサービスワーカー
 
 - {{domxref("Response.redirect()")}} メソッドが、最初の引数で有効な URL が指定されていない場合に、正しく `TypeError` を発生させるようになりました ([Firefox バグ 1503276](https://bugzil.la/1503276))。
-- {{domxref("ServiceWorkerContainer.register()")}} および {{domxref("WorkerGlobalScope.importScripts()")}} (Service worker で使用している場合) メソッドが、有効な [JavaScript MIME type](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript) のファイルを受け入れるようになりました ([Firefox バグ 1354577](https://bugzil.la/1354577))。
+- {{domxref("ServiceWorkerContainer.register()")}} および {{domxref("WorkerGlobalScope.importScripts()")}} (Service worker で使用している場合) メソッドが、有効な [JavaScript MIME type](/ja/docs/Web/HTTP/MIME_types#textjavascript) のファイルを受け入れるようになりました ([Firefox バグ 1354577](https://bugzil.la/1354577))。
 - {{domxref("FetchEvent.replacesClientId")}} および {{domxref("FetchEvent.resultingClientId")}} プロパティをサポートしました ([Firefox バグ 1264177](https://bugzil.la/1264177))。
 - {{domxref("ServiceWorkerGlobalScope.onmessageerror")}} および {{domxref("ServiceWorkerContainer.onmessageerror")}} ハンドラープロパティを実装しました ([Firefox バグ 1399446](https://bugzil.la/1399446))。
 - {{HTTPMethod("HEAD")}} または {{HTTPMethod("GET")}} メソッドの Fetch リクエストで、{{httpheader("Origin")}} ヘッダーを設定しないようにしました ([Firefox バグ 1508661](https://bugzil.la/1508661))。
@@ -140,7 +140,7 @@ _変更なし。_
 
 ### プラグイン
 
-_変更なし_
+_変更なし。_
 
 ### WebDriver conformance (Marionette)
 
@@ -159,9 +159,9 @@ _変更なし_
 
 ### その他
 
-- [WebP](/ja/docs/Glossary/webp) 画像をサポートしました ([Firefox バグ 1294490](https://bugzil.la/1294490))。
+- [WebP](/ja/docs/Glossary/WebP) 画像をサポートしました ([Firefox バグ 1294490](https://bugzil.la/1294490))。
 
-  - また、特定の状況でブラウザ間の互換性を向上するために、WebP の MIMEType (`image/webp`) を HTML ファイルの {{httpheader("Accept")}} 標準 HTTP 要求ヘッダーに追加しました ([Firefox バグ 1507691](https://bugzil.la/1507691))。
+  - また、特定の状況でブラウザー間の互換性を向上するために、WebP の MIMEType (`image/webp`) を HTML ファイルの {{httpheader("Accept")}} 標準 HTTP 要求ヘッダーに追加しました ([Firefox バグ 1507691](https://bugzil.la/1507691))。
 
 - Windows で、AV1 コーデックをデフォルトでサポートしました ([Firefox バグ 1452146](https://bugzil.la/1452146))。
 

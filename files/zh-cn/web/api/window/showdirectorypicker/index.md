@@ -1,9 +1,11 @@
 ---
 title: Window：showDirectoryPicker() 方法
 slug: Web/API/Window/showDirectoryPicker
+l10n:
+  sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}{{SeeCompatTable}}
+{{APIRef("File System API")}}{{Securecontext_Header}}{{SeeCompatTable}}
 
 {{domxref("Window")}} 接口的 **`showDirectoryPicker()`** 方法用于显示一个目录选择器，以允许用户选择一个目录。
 
@@ -19,12 +21,12 @@ showDirectoryPicker()
 
   - : 选项对象，包含以下属性：
 
-    - `id`
-      - : 通过指定 ID，浏览器能够记住不同 ID 所对应的目录。当使用相同的 ID 打开另一个目录选择器时，选择器会打开相同的目录。
-    - `mode`
-      - : 字符串，默认为 `"read"`，可对目录进行只读访问。设为 `"readwrite"` 可对目录进行读写访问。
-    - `startIn`
-      - : 一个 `FileSystemHandle` 对象或者代表某个众所周知的目录的字符串（如：`"desktop"`、`"documents"`、`"downloads"`、`"music"`、`"pictures"`、`"videos"`）。用于指定选择器的起始目录。
+    - `id` {{optional_inline}}
+      - : 通过指定 ID，浏览器可以为不同的 ID 记住不同的目录。如果相同的 ID 用于另一个选择器，则该选择器将在同一目录中打开。
+    - `mode` {{optional_inline}}
+      - : 字符串，默认为 `"read"`，用于只读访问，或 `"readwrite"` 用于读写访问。
+    - `startIn` {{optional_inline}}
+      - : 一个 `FileSystemHandle` 对象或者代表某个众所周知的目录的字符串（如：`"desktop"`、`"documents"`、`"downloads"`、`"music"`、`"pictures"`、`"videos"`），用于指定选择器的起始目录。
 
 ### 返回值
 
@@ -32,12 +34,14 @@ showDirectoryPicker()
 
 ### 异常
 
-- `AbortError`
-  - : 当用户直接关闭了目录选择器或选择的目录是敏感目录时将会抛出 AbortError。
+- `AbortError` {{domxref("DOMException")}}
+  - : 当用户未经选择直接关闭了目录选择器，或用户代理认为选择的目录过于敏感或者危险，或指定 `mode` 中选择的目录的 {{domxref('PermissionStatus.state')}} 不是 `"granted"`，则抛出此异常。
+- `SecurityError` {{domxref("DOMException")}}
+  - : 如果调用被[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)阻止，或者不是通过用户交互（例如按下按钮）调用，则抛出该异常。
 
 ## 安全性
 
-要求发生[临时性用户活动](/zh-CN/docs/Web/Security/User_activation)。用户必须与页面或 UI 元素进行交互才能使该特性正常运行。
+[瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)是必需的。用户必须与页面或 UI 元素进行交互才能使该特性正常运行。
 
 ## 示例
 
@@ -62,4 +66,4 @@ async function getDir() {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化对本地文件的访问](https://web.dev/file-system-access/)
+- [文件系统访问 API：简化对本地文件的访问](https://developer.chrome.google.cn/docs/capabilities/web-apis/file-system-access)

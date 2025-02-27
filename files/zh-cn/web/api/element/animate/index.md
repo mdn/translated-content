@@ -7,7 +7,8 @@ slug: Web/API/Element/animate
 
 {{domxref("Element")}} 接口的 **`animate()`** 方法是创建一个新的 {{domxref("Animation")}} 的便捷方法，将它应用于元素，然后运行动画。它将返回一个新建的 {{domxref("Animation")}} 对象实例
 
-> **备注：** 一个元素上可以应用多个动画效果。你可以通过调用 {{domxref("Element.getAnimations()")}} 函数获得这些动画效果的一个列表。
+> [!NOTE]
+> 一个元素上可以应用多个动画效果。你可以通过调用 {{domxref("Element.getAnimations()")}} 函数获得这些动画效果的一个列表。
 
 ## 语法
 

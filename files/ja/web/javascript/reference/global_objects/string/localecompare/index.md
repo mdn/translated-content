@@ -11,7 +11,17 @@ l10n:
 
 大量の文字列を比較する場合、例えば巨大な配列を並べ替えしている時は、{{jsxref("Intl.Collator")}} オブジェクトを生成してそれが提供する {{jsxref("Intl/Collator/compare", "compare()")}} メソッドを使用したほうがいいでしょう。
 
-{{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
+{{InteractiveExample("JavaScript Demo: String.localeCompare()")}}
+
+```js interactive-example
+const a = "réservé"; // With accents, lowercase
+const b = "RESERVE"; // No accents, uppercase
+
+console.log(a.localeCompare(b));
+// Expected output: 1
+console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
+// Expected output: 0
+```
 
 ## 構文
 
@@ -57,7 +67,8 @@ localeCompare(compareString, locales, options)
 - `referenceStr` が `compareString` より後に出現するものである場合は正の数
 - 等しい場合は `0`
 
-> **警告:** 返値が正確な `-1` または `1` であると思わないでください。
+> [!WARNING]
+> 返値が正確な `-1` または `1` であると思わないでください。
 >
 > 結果の負の整数と正の整数は、ブラウザー間（およびブラウザーのバージョン間）で異なります。これは W3C の仕様が負の値か正の値かとだけ指定しているためです。ブラウザーによっては `-2` や `2` を、あるいは他の負の値、正の値を返却するかもしれません。
 

@@ -64,12 +64,10 @@ Async function 版本，目前主要為了 top level await 而使用：
 })();
 ```
 
-## 更多資訊
+## 參見
 
-### 學習它
+- [IIFE](https://zh.wikipedia.org/wiki/立即调用函数表达式)（維基百科）
+- [術語表](/zh-TW/docs/Glossary)
 
-- [Quick example](/zh-TW/docs/Web/JavaScript/Language_overview#函式) (在 "Functions" 部分的最後面, "Custom objects" 的正前面)
-
-### 基本知識
-
-- [IIFE](https://zh.wikipedia.org/wiki/Immediately-invoked_function_expression) 維基百科
+  - {{Glossary("Function", "函式")}}
+  - {{Glossary("Self-Executing Anonymous Function", "自執行匿名函式")}}

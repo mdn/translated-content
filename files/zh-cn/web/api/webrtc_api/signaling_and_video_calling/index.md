@@ -11,19 +11,20 @@ slug: Web/API/WebRTC_API/Signaling_and_video_calling
 
 在本文中，我们将进一步扩充 [WebSocket chat](https://webrtc-from-chat.glitch.me/) 作为我们的 WebSocket 文档的一部分（本文链接即将发布;它实际上还没有在线），以支持在用户之间的双向视频通话。你可以在[Glitch](https://webrtc-from-chat.glitch.me/)上查看这个例子，你也尝试[修改](https://glitch.com/edit/#!/remix/webrtc-from-chat)这个例子。你还可以在[GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)上查看完整的项目代码。
 
-> **备注：** 如果你尝试在 Glitch 的例子，请注意任何代码的改动将立即重置所有连接。并且这个例子有短暂的延迟；Glitch 的例子仅仅作为简单的实验和测试用途。
+> [!NOTE]
+> 如果你尝试在 Glitch 的例子，请注意任何代码的改动将立即重置所有连接。并且这个例子有短暂的延迟；Glitch 的例子仅仅作为简单的实验和测试用途。
 
 ## 信令服务器
 
 两个设备之间建立 WebRTC 连接需要一个**信令服务器**来实现双方通过网络进行连接。信令服务器的作用是作为一个中间人帮助双方在尽可能少的暴露隐私的情况下建立连接。那我们如何实现这个服务器并且它是如何工作的呢？
 
-WebRTC 并没有提供信令传递机制，你可以使用任何你喜欢的方式如[WebSocket](/zh-CN/docs/Web/API/WebSocket_API) 或者{{domxref("XMLHttpRequest")}} 等等，来交换彼此的令牌信息。
+WebRTC 并没有提供信令传递机制，你可以使用任何你喜欢的方式如[WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 或者{{domxref("XMLHttpRequest")}} 等等，来交换彼此的令牌信息。
 
 重要的是信令服务器并不需要理解和解释信令数据内容。虽然它基于 {{Glossary("SDP")}}但这并不重要：通过信令服务器的消息的内容实际上是一个黑盒。重要的是，当{{Glossary("ICE")}}子系统指示你将信令数据发送给另一个对等方时，你就这样做，而另一个对等方知道如何接收此信息并将其传递给自己的 ICE 子系统。你所要做的就是来回传递信息。内容对信令服务器一点都不重要。
 
 ### 开始准备聊天服务器来处理信令
 
-我们的[聊天服务器和客户端](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)使用 [WebSocket API](/zh-CN/docs/Web/API/WebSocket_API) {{Glossary("JSON")}} 格式的字符串来传递数据。服务器支持多种消息格式来处理不同的任务，比如注册新用户、设置用户名、发送公共信息等等。
+我们的[聊天服务器和客户端](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)使用 [WebSocket API](/zh-CN/docs/Web/API/WebSockets_API) {{Glossary("JSON")}} 格式的字符串来传递数据。服务器支持多种消息格式来处理不同的任务，比如注册新用户、设置用户名、发送公共信息等等。
 
 为了让服务器支持信令和 ICE 协商，我们需要升级代码，我们需要直接发送聊天系统到指定的用户而不是发送给所有人，并且保证服务器在不需要理解数据内容的情况下传递未被认可的任何消息类型。这让我们可以使用一台服务器来传递信令和消息而不是多台。
 
@@ -114,7 +115,8 @@ if (sendToClients) {
 
 每个 ICE 消息都建议提供一个通信协议（TCP 或 UDP）、IP 地址、端口号、连接类型（例如，指定的 IP 是对等机本身还是中继服务器），以及将两台计算机连接在一起所需的其他信息。这包括 NAT 或其他网络问题。
 
-> **备注：** 最需要注意的是：你的代码在 ICE 协商期间唯一需要负责的是从 ICE 层接受外向候选并通过与另一端的信号连接发送他们，当你的 {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} 控制器已经执行后，同时从信令服务器接收 ICE 候选消息 (当接收到 `"new-ice-candidate"` 消息时) 然后通过调用{{domxref("RTCPeerConnection.addIceCandidate()")}}发送他们到你的 ICE 层。嗯，就是这样。
+> [!NOTE]
+> 最需要注意的是：你的代码在 ICE 协商期间唯一需要负责的是从 ICE 层接受外向候选并通过与另一端的信号连接发送他们，当你的 {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} 控制器已经执行后，同时从信令服务器接收 ICE 候选消息 (当接收到 `"new-ice-candidate"` 消息时) 然后通过调用{{domxref("RTCPeerConnection.addIceCandidate()")}}发送他们到你的 ICE 层。嗯，就是这样。
 >
 > SDP 的内容基本上在所有情况下都是与你不相关的。在你真正知道自己在做什么之前，不要试图让事情变得更复杂。否则情况会非常混乱。
 
@@ -133,7 +135,7 @@ if (sendToClients) {
 
 假设 Naomi 和 Priya 正在使用聊天软件进行讨论，Naomi 决定在两人之间打开一个视频通话。以下是预期的事件顺序：
 
-[![Diagram of the signaling process](webrtc_-_signaling_diagram.svg)](webrtc_-_signaling_diagram.svg)
+![信令流程图](webrtc_-_signaling_diagram.svg)
 
 在本文的整个过程中，我们将看到更详细的信息。
 
@@ -141,7 +143,7 @@ if (sendToClients) {
 
 当每端的 ICE 层开始发送候选时，它会在链中的各个点之间进行交换，如下所示：
 
-[![Diagram of ICE candidate exchange process](webrtc_-_ice_candidate_exchange.svg)](webrtc_-_ice_candidate_exchange.svg)
+![ICE 候选交换流程图](webrtc_-_ice_candidate_exchange.svg)
 
 每一端从本地的 ICE 层接收候选时，都会将其发送给另一方；不存在轮流或成批的候选。一旦两端就一个候选达成一致，双方就都可以用此候选来交换媒体数据，媒体数据就开始流动。即使在媒体数据已经开始流动之后，每一端都会继续向候选发送消息，直到他们没有选择的余地。这样做是为了找到比最初选择的更好的选择。
 
@@ -197,7 +199,7 @@ function sendToServer(msg) {
 
 处理 `"userlist"` 消息的代码会调用 `handleUserlistMsg()`。在这里，我们在聊天面板左侧显示的用户列表中为每个连接的用户设置处理程序。此方法接收一个消息对象，其 `users` 属性是一个字符串数组，指定每个连接用户的用户名。
 
-```
+```js
 function handleUserlistMsg(msg) {
   var i;
   var listElem = document.querySelector(".userlistbox");
@@ -206,7 +208,7 @@ function handleUserlistMsg(msg) {
     listElem.removeChild(listElem.firstChild);
   }
 
-  msg.users.forEach(function(username) {
+  msg.users.forEach(function (username) {
     var item = document.createElement("li");
     item.appendChild(document.createTextNode(username));
     item.addEventListener("click", invite, false);
@@ -218,7 +220,8 @@ function handleUserlistMsg(msg) {
 
 在获得对 {{HTMLElement("ul")}} 的引用（其中包含变量 `listElem`中的用户名列表）后，我们通过删除其每个子元素清空列表。
 
-> **备注：** 显然，通过添加和删除单个用户而不是每次更改时都重新构建整个列表来更新列表会更有效，但对于本例而言，这已经足够好了。
+> [!NOTE]
+> 显然，通过添加和删除单个用户而不是每次更改时都重新构建整个列表来更新列表会更有效，但对于本例而言，这已经足够好了。
 
 然后我们使用 {{jsxref("Array.forEach", "forEach()")}} 迭代用户名数组。对于每个名称，我们创建一个新的 {{HTMLElement("li")}} 元素，然后使用{{domxref("Document.createTextNode", "createTextNode()")}} 创建一个包含用户名的新文本节点。该文本节点被添加为 `<li>` 元素的子节点。接下来，我们为列表项上的 [`click`](/zh-CN/docs/Web/API/Element/click_event) 事件设置一个处理程序，单击用户名将调用 `invite()` 方法，我们将在下一节中查看该方法。
 
@@ -266,7 +269,8 @@ function invite(evt) {
 
 创建 `RTCPeerConnection` 后，我们通过调用 {{domxref("MediaDevices.getUserMedia()")}}，请求访问用户的相机和麦克风，该命令通过 {{domxref("Navigator.mediaDevices.getUserMedia")}} 属性向我们公开。当成功完成返回的 promise 时，将执行我们的 `then` 处理程序。它接收一个 {{domxref("MediaStream")}} 对象作为输入，该对象表示来自用户麦克风的音频和来自网络摄像机的视频流。
 
-> **备注：** 我们可以通过调用 **{{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}}** 获取设备列表，根据所需条件筛选结果列表，然后使用所选设备 **{{domxref("MediaTrackConstraints.deviceId", "deviceId")}}** 传入 **`getUserMedia()`** 的 **`mediaConstraints`** 对象的 **`deviceId`** 字段中的值。事实上，除非必须要不然很少这样用，因为大部分工作都是由 **`getUserMedia()`** 为你完成的。
+> [!NOTE]
+> 我们可以通过调用 **{{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}}** 获取设备列表，根据所需条件筛选结果列表，然后使用所选设备 **{{domxref("MediaTrackConstraints.deviceId", "deviceId")}}** 传入 **`getUserMedia()`** 的 **`mediaConstraints`** 对象的 **`deviceId`** 字段中的值。事实上，除非必须要不然很少这样用，因为大部分工作都是由 **`getUserMedia()`** 为你完成的。
 
 我们通过设置元素的 {{domxref("HTMLMediaElement.srcObject", "srcObject")}} 属性，将传入流附加到本地预览 {{HTMLElement("video")}} 元素。由于元素被配置为自动播放传入的视频，因此流开始在本地预览框中播放。
 
@@ -310,29 +314,33 @@ function handleGetUserMediaError(e) {
 
 调用方和被调用方都使用 `createPeerConnection()` 函数来构造它们的 {{domxref("RTCPeerConnection")}} 对象及其各自的 WebRTC 连接端。当调用者试图启动调用时，由 `invite()` 调用；当被调用者从调用者接收到要约消息时，由`handleVideoOfferMsg()` 调用。
 
-```
+```js
 function createPeerConnection() {
   myPeerConnection = new RTCPeerConnection({
-      iceServers: [     // Information about ICE servers - Use your own!
-        {
-          urls: "stun:stun.stunprotocol.org"
-        }
-      ]
+    iceServers: [
+      // Information about ICE servers - Use your own!
+      {
+        urls: "stun:stun.stunprotocol.org",
+      },
+    ],
   });
 
   myPeerConnection.onicecandidate = handleICECandidateEvent;
   myPeerConnection.ontrack = handleTrackEvent;
   myPeerConnection.onnegotiationneeded = handleNegotiationNeededEvent;
   myPeerConnection.onremovetrack = handleRemoveTrackEvent;
-  myPeerConnection.oniceconnectionstatechange = handleICEConnectionStateChangeEvent;
-  myPeerConnection.onicegatheringstatechange = handleICEGatheringStateChangeEvent;
+  myPeerConnection.oniceconnectionstatechange =
+    handleICEConnectionStateChangeEvent;
+  myPeerConnection.onicegatheringstatechange =
+    handleICEGatheringStateChangeEvent;
   myPeerConnection.onsignalingstatechange = handleSignalingStateChangeEvent;
 }
 ```
 
 当使用 {{domxref("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}} 构造函数时，我们将指定一个{{domxref("RTCConfiguration")}}-兼容对象，为连接提供配置参数。在这个例子中，我们只使用其中的一个： `iceServers`。这是描述 {{Glossary("ICE")}} 层的 STUN 和/或 TURN 服务器的对象数组，在尝试在呼叫者和被呼叫者之间建立路由时使用。这些服务器用于确定在对等端之间通信时要使用的最佳路由和协议，即使它们位于防火墙后面或使用 {{Glossary("NAT")}}。
 
-> **备注：** 你应该始终使用你拥有的或你有特定授权使用的**STUN/TURN**服务器。这个例子是使用一个已知的公共服务器，但是滥用这些是不好的。
+> [!NOTE]
+> 你应该始终使用你拥有的或你有特定授权使用的**STUN/TURN**服务器。这个例子是使用一个已知的公共服务器，但是滥用这些是不好的。
 
 `iceServers` 中的每个对象至少包含一个 `urls` 字段，该字段提供可以访问指定服务器的 URLs。它还可以提供 `username` 和 `credential`值，以便在需要时进行身份验证。
 
@@ -382,7 +390,8 @@ function handleNegotiationNeededEvent() {
 
 当 `createOffer()` 成功（执行 promise）时，我们将创建的请求信息传递到{{domxref("RTCPeerConnection.setLocalDescription", "myPeerConnection.setLocalDescription()")}} ，它为调用方的连接端配置连接和媒体配置状态。
 
-> **备注：** 从技术上讲， `createOffer()` 返回的字符串是{{RFC(3264)}} 请求。
+> [!NOTE]
+> 从技术上讲， `createOffer()` 返回的字符串是{{RFC(3264)}} 请求。
 
 我们知道描述是有效的，并且在满足`setLocalDescription()` 返回的 promise 时已经设置好了。也就是说我们创建了一个包含本地描述（现在与请求相同）的新 `"video-offer"` 消息，然后通过我们的信令服务器将请求发送给被叫方。请求有以下要素：
 
@@ -407,7 +416,7 @@ function handleNegotiationNeededEvent() {
 
 当请求到达时，调用被调用方的 `handleVideoOfferMsg()` 函数时会收到`"video-offer"` 消息。这个函数需要做两件事。首先，它需要创建自己的 {{domxref("RTCPeerConnection")}} 并添加包含麦克风和网络摄像头的音频和视频的磁道。其次，它需要对收到的请求进行处理，构建并返回应答。
 
-```
+```js
 function handleVideoOfferMsg(msg) {
   var localStream = null;
 
@@ -416,32 +425,36 @@ function handleVideoOfferMsg(msg) {
 
   var desc = new RTCSessionDescription(msg.sdp);
 
-  myPeerConnection.setRemoteDescription(desc).then(function () {
-    return navigator.mediaDevices.getUserMedia(mediaConstraints);
-  })
-  .then(function(stream) {
-    localStream = stream;
-    document.getElementById("local_video").srcObject = localStream;
+  myPeerConnection
+    .setRemoteDescription(desc)
+    .then(function () {
+      return navigator.mediaDevices.getUserMedia(mediaConstraints);
+    })
+    .then(function (stream) {
+      localStream = stream;
+      document.getElementById("local_video").srcObject = localStream;
 
-    localStream.getTracks().forEach(track => myPeerConnection.addTrack(track, localStream));
-  })
-  .then(function() {
-    return myPeerConnection.createAnswer();
-  })
-  .then(function(answer) {
-    return myPeerConnection.setLocalDescription(answer);
-  })
-  .then(function() {
-    var msg = {
-      name: myUsername,
-      target: targetUsername,
-      type: "video-answer",
-      sdp: myPeerConnection.localDescription
-    };
+      localStream
+        .getTracks()
+        .forEach((track) => myPeerConnection.addTrack(track, localStream));
+    })
+    .then(function () {
+      return myPeerConnection.createAnswer();
+    })
+    .then(function (answer) {
+      return myPeerConnection.setLocalDescription(answer);
+    })
+    .then(function () {
+      var msg = {
+        name: myUsername,
+        target: targetUsername,
+        type: "video-answer",
+        sdp: myPeerConnection.localDescription,
+      };
 
-    sendToServer(msg);
-  })
-  .catch(handleGetUserMediaError);
+      sendToServer(msg);
+    })
+    .catch(handleGetUserMediaError);
 }
 ```
 
@@ -453,7 +466,8 @@ function handleVideoOfferMsg(msg) {
 
 捕捉到的任何错误都会被传递给 `handleGetUserMediaError()`，详见 [处理 getUserMedia() 错误](#处理_getusermedia_错误) 。
 
-> **备注：** 与调用者的情况一样，一旦 `setLocalDescription()`实现处理程序运行完毕，浏览器将开始触发被调用者必须处理的 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 事件，每个需要传输到远程对等方的候选事件对应一个事件。
+> [!NOTE]
+> 与调用者的情况一样，一旦 `setLocalDescription()`实现处理程序运行完毕，浏览器将开始触发被调用者必须处理的 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 事件，每个需要传输到远程对等方的候选事件对应一个事件。
 
 ##### 发送 ICE 候选
 
@@ -484,7 +498,8 @@ function handleICECandidateEvent(event) {
 
 此消息的格式（与处理信号时所做的所有操作一样）完全取决于你的需要；你可以根据需要提供其他信息。
 
-> **备注：** 重要的是要记住，{{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 事件**不会**在 ICE 候选从呼叫的另一端到达时发送。相反，它们是由你自己的呼叫端发送的，这样你就可以承担通过你选择的任何通道传输数据的任务。当你刚接触 WebRTC 时，这会让人困惑。
+> [!NOTE]
+> 重要的是要记住，{{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 事件**不会**在 ICE 候选从呼叫的另一端到达时发送。相反，它们是由你自己的呼叫端发送的，这样你就可以承担通过你选择的任何通道传输数据的任务。当你刚接触 WebRTC 时，这会让人困惑。
 
 ##### 接收 ICE 候选
 
@@ -527,7 +542,7 @@ function handleAddStreamEvent(event) {
 
 当远程对等方通过调用{{domxref("RTCPeerConnection.removeTrack()")}}.从连接中删除磁道时，你的代码将接收事件 {{domxref("MediaStream/removetrack_event", "removetrack")}} 事件。`"removetrack"` 的处理程序是：
 
-```
+```js
 function handleRemoveTrackEvent(event) {
   var stream = document.getElementById("received_video").srcObject;
   var trackList = stream.getTracks();

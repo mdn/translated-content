@@ -3,7 +3,7 @@ title: sessions.Session
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 该`Session`对象表示用户在当前浏览会话中已关闭的选项卡或窗口。
 
@@ -33,9 +33,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
 
 {{Compat}}
 
-> **备注：** 该 API 基于 Chromium 的[`chrome.sessions`](https://developer.chrome.com/extensions/sessions)API。
->
-> Microsoft Edge 兼容性数据由 Microsoft Corporation 提供，并在此处包含在 Creative Commons Attribution 3.0 美国许可证下。
+> [!NOTE]
+> 该 API 基于 Chromium 的 [`chrome.sessions`](https://developer.chrome.google.cn/docs/extensions/reference/api/sessions) API。
 
 <!--
 //版权所有 2015 The Chromium Authors。版权所有。

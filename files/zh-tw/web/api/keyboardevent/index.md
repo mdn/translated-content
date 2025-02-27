@@ -3,20 +3,20 @@ title: KeyboardEvent
 slug: Web/API/KeyboardEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`KeyboardEvent`** objects 用來詳述使用者和網頁之間，經由鍵盤產生的互動。每個事件（`event`）都記錄著一次鍵盤動作。事件類型（`keydown` 、 `keypress` 和 `keyup`）用來表示鍵盤執行哪種動作。
 
-> **備註：** `KeyboardEvent` 僅顯示在鍵盤上發生的事。當你需要進行文字輸入的操作，請使用 HTML5 [`input`](/zh-TW/docs/DOM/DOM_event_reference/input) event 代替 `KeyboardEvent` 。舉例來說，當使用者在手寫系統，例如平板電腦，輸入文字時，並不會啟動 key events 。
+> **備註：** `KeyboardEvent` 僅顯示在鍵盤上發生的事。當你需要進行文字輸入的操作，請使用 HTML5 [`input`](/zh-TW/docs/Web/API/Element/input_event) event 代替 `KeyboardEvent` 。舉例來說，當使用者在手寫系統，例如平板電腦，輸入文字時，並不會啟動 key events 。
 
-## Constructor
+## 建構子
 
 - {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}
-  - : 建立一 `KeyboardEvent` object。
+  - : 建立一 `KeyboardEvent` 物件。
 
-## Methods
+## 方法
 
-_本介面（ interface）亦繼承其父， {{domxref("UIEvent")}} 和 {{domxref("Event")}} ，的 methods_
+_本介面（interface）亦繼承其父 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的方法。_
 
 - {{domxref("KeyboardEvent.getModifierState()")}}
   - : 回傳一 {{jsxref("Boolean")}}。用來表示當事件建立時，修飾鍵（例如 <kbd>Alt</kbd>、 <kbd>Shift</kbd>、 <kbd>Ctrl</kbd>、或是 <kbd>Meta</kbd>） 是否是按下的。
@@ -35,15 +35,18 @@ _本介面（ interface）亦繼承其父，{{domxref("UIEvent")}} 和 {{domxref
 
   - : 一個 {{domxref("DOMString")}} ，返回鍵盤對應的字符。若是該鍵對應一個實際的字符，則其值為對應該字符的一個非空的 Unicode 字串；若沒對應的話，則返回一個空字串。
 
-    > **備註：** If the key is used as a macro that inserts multiple characters, this attribute's value is the entire string, not just the first character.
+    > [!NOTE]
+    > If the key is used as a macro that inserts multiple characters, this attribute's value is the entire string, not just the first character.
 
-    > **警告：** 在 DOM Level 3 Events ，該 propertie 已被移除。現在只有 IE9+ 支持它。
+    > [!WARNING]
+    > 在 DOM Level 3 Events ，該 propertie 已被移除。現在只有 IE9+ 支持它。
 
 - {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}}{{Readonlyinline}}
 
   - : Returns a {{jsxref("Number")}} representing the Unicode reference number of the key; this attribute is used only by the `keypress` event. For keys whose `char` attribute contains multiple characters, this is the Unicode value of the first character in that attribute. In Firefox 26 this returns codes for printable characters.
 
-    > **警告：** 此 attribute 已被淘汰。如果可以，建議使用 {{domxref("KeyboardEvent.key")}}。
+    > [!WARNING]
+    > 此 attribute 已被淘汰。如果可以，建議使用 {{domxref("KeyboardEvent.key")}}。
 
 - {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
   - : 一個 {{domxref("DOMString")}} 。返回事件對應的按鍵的代碼。
@@ -57,13 +60,15 @@ _本介面（ interface）亦繼承其父，{{domxref("UIEvent")}} 和 {{domxref
 
   - : Returns a {{jsxref("Number")}} representing a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
 
-    > **警告：** 此 attribute 已被淘汰。如果可以，建議使用{{domxref("KeyboardEvent.key")}}。
+    > [!WARNING]
+    > 此 attribute 已被淘汰。如果可以，建議使用{{domxref("KeyboardEvent.key")}}。
 
 - {{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}
 
   - : Returns a {{domxref("DOMString")}} representing a locale string indicating the locale the keyboard is configured for. This may be the empty string if the browser or device doesn't know the keyboard's locale.
 
-    > **備註：** This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.
+    > [!NOTE]
+    > This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.
 
 - {{domxref("KeyboardEvent.location")}} {{Readonlyinline}}
   - : Returns a {{jsxref("Number")}} representing the location of the key on the keyboard or other input device.
@@ -77,7 +82,8 @@ _本介面（ interface）亦繼承其父，{{domxref("UIEvent")}} 和 {{domxref
 
   - : Returns a {{jsxref("Number")}} representing a system and implementation dependent numeric code identifying the unmodified value of the pressed key; this is usually the same as `keyCode`.
 
-    > **警告：** 此 attribute 已被淘汰。如果可以，建議使用 {{domxref("KeyboardEvent.key")}}。
+    > [!WARNING]
+    > 此 attribute 已被淘汰。如果可以，建議使用 {{domxref("KeyboardEvent.key")}}。
 
 ## 注意
 

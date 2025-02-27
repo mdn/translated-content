@@ -9,7 +9,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/clipboard
 
 この WebExtension API は主に標準の web クリップボード API が[クリップボードに画像を書き込めない](https://w3c.github.io/clipboard-apis/#writing-to-clipboard)ために存在しています。標準 web API にこの力が備わった時には、この API は非推奨になるはずです。
 
-クリップボードの読み込みはこの API でサポートしません。なぜならクリップボードはすでに標準 web プラットホーム API を用いて読むことができるからです。[クリップボードとやりとりする](/ja/Add-ons/WebExtensions/Interact_with_the_clipboard#Reading_from_the_clipboard)を見てください。
+クリップボードの読み込みはこの API でサポートしません。なぜならクリップボードはすでに標準 web プラットホーム API を用いて読むことができるからです。[クリップボードとやりとりする](/ja/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard#reading_from_the_clipboard)を見てください。
 
 この API は Chrome の [`clipboard`](https://developer.chrome.com/apps/clipboard) API に基づきますが、その API は Chrome アプリだけで利用できて、拡張機能ではできません。
 
@@ -20,8 +20,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/clipboard
 - {{WebExtAPIRef("clipboard.setImageData()")}}
   - : 画像をクリップボードにコピーする
 
-## ブラウザー互換性
+## ブラウザーの互換性
 
-{{Compat("webextensions.api.clipboard", 1, 1)}} {{WebExtExamples("h2")}}
+{{Compat}} {{WebExtExamples("h2")}}
 
-> **メモ:** この API は Chromium の [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API に基づきます。
+> [!NOTE]
+> この API は Chromium の [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API に基づきます。

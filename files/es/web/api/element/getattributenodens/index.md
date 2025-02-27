@@ -23,8 +23,6 @@ attributeNode = element.getAttributeNodeNS(namespace, nodeName);
 
 `getAttributeNodeNS` es más específica [getAttributeNode](en/DOM/element.getAttributeNode) en el sentido de que puedes especificar atributos de un namespace en particular. Su método setter es [setAttributeNodeNS](en/DOM/element.setAttributeNodeNS).
 
-{{ DOMAttributeMethods() }}
-
 ## Especificaciones
 
 {{Specifications}}

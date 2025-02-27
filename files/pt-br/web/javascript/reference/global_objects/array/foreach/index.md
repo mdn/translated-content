@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 O método `forEach()` executa uma dada função em cada elemento de um array.
 
-{{EmbedInteractiveExample("pages/js/array-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Array.forEach()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+array1.forEach((element) => console.log(element));
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## Sintaxe
 
@@ -51,7 +61,8 @@ O intervalo dos elementos processados por `forEach()` é determinado antes da pr
 
 `forEach()` executa a a função `callback` uma vez para cada elemento do array – diferentemente de {{jsxref("Array.prototype.map()", "map()")}} ou {{jsxref("Array.prototype.reduce()", "reduce()")}}, ele sempre retorna o valor {{jsxref("undefined")}} e não é encadeável. O caso de uso típico é alterar o array no final do loop.
 
-> **Nota:** A única maneira de parar ou interromper um loop `forEach()` é disparando uma exceção. Se você precisa desse recurso, o método `forEach()` é a ferramenta errada. Você estará mais bem servido com um loop simples nesse caso. Se estiver testando o array de elementos para um predicado e precisar de um valor de retorno Boleano, você pode usar {{jsxref("Array.prototype.every()", "every()")}} ou {{jsxref("Array.prototype.some()", "some()")}}. Se estiverem disponíveis, os novos métodos {{jsxref("Array.prototype.find()", "find()")}} e {{jsxref("Array.prototype.findIndex()", "findIndex()")}} também podem ser usados para terminação antecipada em predicados verdadeiros.
+> [!NOTE]
+> A única maneira de parar ou interromper um loop `forEach()` é disparando uma exceção. Se você precisa desse recurso, o método `forEach()` é a ferramenta errada. Você estará mais bem servido com um loop simples nesse caso. Se estiver testando o array de elementos para um predicado e precisar de um valor de retorno Boleano, você pode usar {{jsxref("Array.prototype.every()", "every()")}} ou {{jsxref("Array.prototype.some()", "some()")}}. Se estiverem disponíveis, os novos métodos {{jsxref("Array.prototype.find()", "find()")}} e {{jsxref("Array.prototype.findIndex()", "findIndex()")}} também podem ser usados para terminação antecipada em predicados verdadeiros.
 
 ## Exemplos
 
@@ -107,7 +118,7 @@ if (!Array.prototype.forEach) {
 
 Um algorítimo 100% verdadeiro para a 5ª Edição do ECMA-262, pode ser visto abaixo:
 
-O algoritmo é exatamente o especificado na 5ª Edição da ECMA-262, assumindo `Object` e `TypeError` possuem seus valores originais e avalia `callback.call` para o valor original de [`Function.prototype.call`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/call).
+O algoritmo é exatamente o especificado na 5ª Edição da ECMA-262, assumindo `Object` e `TypeError` possuem seus valores originais e avalia `callback.call` para o valor original de [`Function.prototype.call`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/call).
 
 ```js
 // Production steps of ECMA-262, Edition 5, 15.4.4.18
@@ -168,15 +179,11 @@ if (!Array.prototype.forEach) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.forEach")}}
+{{Compat}}
 
-## Specifications
+## Especificações
 
-| Especificação                                                                      | Status               | Comentário                                         |
-| ---------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.18', 'Array.prototype.forEach')}}                 | {{Spec2('ES5.1')}}   | Definição inicial. Implementado no JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.foreach', 'Array.prototype.forEach')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-array.prototype.foreach', 'Array.prototype.forEach')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Veja também
 

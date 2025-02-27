@@ -5,7 +5,7 @@ slug: WebAssembly/JavaScript_interface/Memory/buffer
 
 {{WebAssemblySidebar}}
 
-La propriété **`buffer`**, rattachée au prototype de l'objet [`Memory`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/WebAssembly/Memory), renvoie le tampon (_buffer_) contenu dans l'espace mémoire.
+La propriété **`buffer`**, rattachée au prototype de l'objet [`Memory`](/fr/docs/WebAssembly/JavaScript_interface/Memory), renvoie le tampon (_buffer_) contenu dans l'espace mémoire.
 
 ## Syntaxe
 

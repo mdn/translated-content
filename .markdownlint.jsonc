@@ -4,33 +4,31 @@
 {
   "default": true,
   // Disabled, as some callouts include headings.
-  "header-increment": false,
+  "heading-increment": false,
   "ul-style": {
-    "style": "dash"
+    "style": "dash",
   },
   "ul-indent": {
-    "indent": 2
+    "indent": 2,
   },
   "no-hard-tabs": {
-    "spaces_per_tab": 2
+    "spaces_per_tab": 2,
   },
   "line-length": false,
-  "no-duplicate-header": false,
-  // XXX Replace with the following when ready:
-  // "no-duplicate-header": {
-  //   "allow_different_nesting": true
-  // },
+  "no-duplicate-heading": {
+    "siblings_only": true,
+  },
   "single-title": {
-    "front_matter_title": "^\\s*title\\s*[:=]"
+    "front_matter_title": "^\\s*title\\s*[:=]",
   },
   "no-trailing-punctuation": {
-    "punctuation": ".,;:"
+    "punctuation": ".,;:",
   },
   // Consecutive Notes/Callouts currently don't conform with this rule
   "no-blanks-blockquote": false,
   // Force ordered numbering to catch accidental list ending from indenting
   "ol-prefix": {
-    "style": "ordered"
+    "style": "ordered",
   },
   "no-inline-html": {
     "allowed_elements": [
@@ -108,8 +106,8 @@
       "i", // French translations use this for English literal text
       "h2", // XXX Not always converted currently because of live samples using English IDs
       "h3", // XXX Not always converted currently because of live samples using English IDs
-      "h6" // XXX Not always converted currently because of live samples using English IDs
-    ]
+      "h6", // XXX Not always converted currently because of live samples using English IDs
+    ],
   },
   "no-bare-urls": false,
   // XXX Fixed upstream, remove next line when fixed here
@@ -122,7 +120,7 @@
   // XXX Fixed upstream, remove next line when fixed here
   "no-alt-text": false,
   "code-block-style": {
-    "style": "fenced"
+    "style": "fenced",
   },
   "no-space-in-code": false,
   "emphasis-style": false,
@@ -131,7 +129,7 @@
   //   "style": "underscore"
   // },
   "strong-style": {
-    "style": "asterisk"
+    "style": "asterisk",
   },
   // Disabled, as yari generates link fragments by replacing spaces with underscores, not dashes.
   "link-fragments": false,
@@ -147,7 +145,7 @@
         "message": "Don't use curly double quotes",
         "searchPattern": "/“|”/g",
         "replace": "\"",
-        "searchScope": "text"
+        "searchScope": "text",
       },
       {
         // Does not apply to zh-cn
@@ -155,14 +153,14 @@
         "message": "Don't use curly single quotes",
         "searchPattern": "/‘|’/g",
         "replace": "'",
-        "searchScope": "text"
+        "searchScope": "text",
       },
       {
         "name": "nbsp",
         "message": "Don't use no-break spaces",
         "searchPattern": "/ /g",
         "replace": " ",
-        "searchScope": "all"
+        "searchScope": "all",
       },
       {
         // zh-cn/zh-tw prefers double em-dash instead
@@ -170,57 +168,56 @@
         "message": "Don't use '--'. Use em-dash (—) instead",
         "search": " -- ",
         "replace": " — ",
-        "searchScope": "text"
+        "searchScope": "text",
       },
       {
         "name": "relative-link",
         "message": "Internal links should start with '/'",
         "searchPattern": "/([\\(\"])([\\w\\-]+)\\/docs/g",
         "replace": "$1/$2/docs",
-        "searchScope": "text"
+        "searchScope": "text",
       },
       {
         "name": "relative-link-path",
         "message": "Don't use relative paths",
         "search": "](..",
-        "searchScope": "text"
+        "searchScope": "text",
       },
       {
         "name": "trailing-spaces",
         "message": "Avoid trailing spaces",
         "searchPattern": "/  +$/gm",
         "replace": "",
-        "searchScope": "all"
+        "searchScope": "all",
       },
       {
         "name": "double-spaces",
         "message": "Avoid double spaces",
         "searchPattern": "/([^\\s>])  ([^\\s|])/g",
         "replace": "$1 $2",
-        "searchScope": "text"
+        "searchScope": "text",
       },
       {
         "name": "stuck-definition",
         "message": "Character is stuck to definition description marker",
         "searchPattern": "/- :(\\w)/g",
         "replace": "- : $1",
-        "searchScope": "text"
+        "searchScope": "text",
       },
       {
         "name": "fqdn-moz-links",
         "message": "Don't use developer.mozilla.org for links, except for blog posts",
         "searchPattern": "/\\]\\(https:\\/\\/developer.mozilla.org\\/(?!en-US\\/blog\\/)/g",
         "replace": "](/",
-        "searchScope": "text"
-      }
-      // XXX Many instances still found in translated content
-      // {
-      //   "name": "localhost-links",
-      //   "message": "Don't use localhost for links",
-      //   "searchPattern": "/\\]\\(https?:\\/\\/localhost:\\d+\\//g",
-      //   "replace": "](/",
-      //   "searchScope": "text"
-      // }
-    ]
-  }
+        "searchScope": "text",
+      },
+      {
+        "name": "localhost-links",
+        "message": "Don't use localhost for links",
+        "searchPattern": "/\\]\\(https?:\\/\\/localhost:\\d+\\//g",
+        "replace": "](/",
+        "searchScope": "text",
+      },
+    ],
+  },
 }

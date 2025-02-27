@@ -17,7 +17,7 @@ new Int32Array(object);
 new Int32Array(buffer [, byteOffset [, length]]);
 ```
 
-Для получения дополнительной информации о синтаксисе конструктора и параметрах _[TypedArray](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+Для получения дополнительной информации о синтаксисе конструктора и параметрах _[TypedArray](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntax)_.
 
 ## Свойства
 
@@ -84,8 +84,6 @@ All `Int32Array` objects inherit from {{jsxref("TypedArray.prototype", "%TypedAr
   - : Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found. See also {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Int32Array.prototype.map()")}}
   - : Creates a new array with the results of calling a provided function on every element in this array. See also {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Int32Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
-  - : Former non-standard version of {{jsxref("TypedArray.copyWithin", "Int32Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Int32Array.prototype.reduce()")}}
   - : Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value. See also {{jsxref("Array.prototype.reduce()")}}.
 - {{jsxref("TypedArray.reduceRight", "Int32Array.prototype.reduceRight()")}}
@@ -144,11 +142,11 @@ var int32 = new Int32Array(iterable);
 // Int32Array[1, 2, 3]
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -166,8 +164,8 @@ var dv = Int32Array([1, 2, 3]);
 var dv = new Int32Array([1, 2, 3]);
 ```
 
-## See also
+## Смотрите также
 
-- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

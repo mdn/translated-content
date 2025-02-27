@@ -1,6 +1,8 @@
 ---
 title: grayscale()
 slug: Web/CSS/filter-function/grayscale
+l10n:
+  sourceCommit: 2d5005825db30faf5826e7681ec7ee526f5458b0
 ---
 
 {{CSSRef}}
@@ -18,7 +20,7 @@ grayscale(amount)
 ### 引数
 
 - `amount`
-  - : 変換の度合いで、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。 `100%` の値では完全にグレースケールになり、 `0%` の値では入力が変更されないままになります。 `0%` と `100%` の間の値は、効果の割合です。省略時の既定値は `1` です。補間時の欠損値は `0` です。
+  - : 入力画像がグレースケールに変換される度合いです。 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。 `100%` の値では完全にグレースケールになり、 `0%` の値では入力が変更されないままになります。 `0%` と `100%` の間の値は、その効果に対する線形の倍数です。省略時の既定値は `1` です。{{Glossary("interpolation","補間")}}の初期値は `0` です。
 
 ## 例
 
@@ -40,13 +42,14 @@ grayscale(100%)  /* 完全なグレースケール */
 
 ## 関連情報
 
-- {{cssxref("&lt;filter-function&gt;")}}
-- {{cssxref("filter-function/blur()", "blur()")}}
-- {{cssxref("filter-function/brightness()", "brightness()")}}
-- {{cssxref("filter-function/contrast()", "contrast()")}}
-- {{cssxref("filter-function/drop-shadow()", "drop-shadow()")}}
-- {{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}
-- {{cssxref("filter-function/invert()", "invert()")}}
-- {{cssxref("filter-function/opacity()", "opacity()")}}
-- {{cssxref("filter-function/saturate()", "saturate()")}}
-- {{cssxref("filter-function/sepia()", "sepia()")}}
+その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("&lt;filter-function&gt;")}} 関数には、次のものがあります。
+
+- {{cssxref("filter-function/blur", "blur()")}}
+- {{cssxref("filter-function/brightness", "brightness()")}}
+- {{cssxref("filter-function/contrast", "contrast()")}}
+- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+- {{cssxref("filter-function/invert", "invert()")}}
+- {{cssxref("filter-function/opacity", "opacity()")}}
+- {{cssxref("filter-function/saturate", "saturate()")}}
+- {{cssxref("filter-function/sepia", "sepia()")}}

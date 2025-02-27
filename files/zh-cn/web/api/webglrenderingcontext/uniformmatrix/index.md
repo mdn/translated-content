@@ -44,7 +44,7 @@ gl.uniformMatrix2fv(loc, false, [2, 1, 2, 2]);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.uniform()")}}
 - {{domxref("WebGL2RenderingContext.uniformMatrix()")}} – WebGL 2 versions of these methods.

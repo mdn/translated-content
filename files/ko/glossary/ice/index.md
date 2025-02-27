@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**대화형 연결 구축 (Interactive Connectivity Establishment, ICE)**은 네트워크 토폴로지에 관계없이(일반적으로 오디오 및 비디오 채탱용) 두 피어를 연결하기 위해 (다른 기술 중에서) {{glossary("WebRTC")}}에서 사용하는 프레임워크입니다. 이 프로토콜을 사용하면 두 피어가 모두 네트워크 주소 변환 (Network Address Translator, {{glossary("NAT")}})를 사용하여 해당 로컬 네트워크의 다른 장치와 글로벌 IP 주소를 공유하는 경우에도 서로 연결을 찾고 설정할 수 있습니다.
+**대화형 연결 구축 (Interactive Connectivity Establishment, ICE)** 은 네트워크 토폴로지에 관계없이(일반적으로 오디오 및 비디오 채탱용) 두 피어를 연결하기 위해 (다른 기술 중에서) {{glossary("WebRTC")}}에서 사용하는 프레임워크입니다. 이 프로토콜을 사용하면 두 피어가 모두 네트워크 주소 변환 (Network Address Translator, {{glossary("NAT")}})를 사용하여 해당 로컬 네트워크의 다른 장치와 글로벌 IP 주소를 공유하는 경우에도 서로 연결을 찾고 설정할 수 있습니다.
 
 ICE 프레임워크 알고리즘은 두 피어를 연결하기 위해 지연 시간이 가장 짧은 경로를 찾고, 아래 옵션을 순서대로 시도합니다.
 

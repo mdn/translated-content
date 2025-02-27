@@ -1,22 +1,26 @@
 ---
 title: HTMLHeadElement
 slug: Web/API/HTMLHeadElement
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLHeadElement`** 接口包含一个文档的描述信息（或者称作元信息）这类对象继承了{{domxref("HTMLElement")}}接口的全部属性和方法。
+**`HTMLHeadElement`** 接口包含文档的描述信息或元数据。该对象继承了 {{domxref("HTMLElement")}} 接口中描述的所有属性和方法。
 
-## 属性
+{{InheritanceDiagram}}
 
-_继承了父对象{{domxref("HTMLElement")}}的属性。_
+## 实例属性
 
-- {{domxref("HTMLHeadElement.profile")}} {{Deprecated_Inline}}
-  - : 空格隔开的一个或多个用于表示元信息 URI 的{{domxref("DOMString")}}。
+_继承父类 {{domxref("HTMLElement")}} 的属性。_
 
-## 方法
+- {{domxref("HTMLHeadElement.profile")}} {{deprecated_inline}}
+  - : 表示一个或多个元数据配置文件的 URI 的字符串（以空格分隔）。
 
-_没有特殊的方法；继承了父对象 {{domxref("HTMLElement")}} 的方法。_
+## 实例方法
+
+_无特定方法；继承其父级 {{domxref("HTMLElement")}} 的方法。_
 
 ## 规范
 
@@ -26,6 +30,6 @@ _没有特殊的方法；继承了父对象 {{domxref("HTMLElement")}} 的方法
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- 对应的 HTML 元素是根据 {{HTMLElement("head")}}实现。
+- 实现该接口的 HTML 元素：{{HTMLElement("head")}}

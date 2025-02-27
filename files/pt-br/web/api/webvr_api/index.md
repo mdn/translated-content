@@ -43,11 +43,11 @@ Retorna uma matriz contendo todos os objetos {{domxref("VRDisplay")}} que está 
 {{domxref("Navigator.getVRDisplays()")}}
 Retorna uma promessa que resolve uma matriz de objetos {{domxref("VRDisplay")}} que representa qualquer dispositivo VR disponível conectado ao computador.
 {{domxref("Window.onvrdisplayconnected")}}
-Representa um manipulador de eventos que será executado quando um dispositivo VR compatível tiver sido conectado ao computador (quando o evento {{event("vrdisplayconnected")}} for acionado).
+Representa um manipulador de eventos que será executado quando um dispositivo VR compatível tiver sido conectado ao computador (quando o evento [`vrdisplayconnected`](/pt-BR/docs/Web/API/Window/vrdisplayconnect_event) for acionado).
 {{domxref("Window.onvrdisplaydisconnected")}}
-Representa um manipulador de eventos que será executado quando um dispositivo VR compatível tiver sido desconectado do computador (quando o evento {{event("vrdisplaydisconnected")}} for acionado).
+Representa um manipulador de eventos que será executado quando um dispositivo VR compatível tiver sido desconectado do computador (quando o evento [`vrdisplaydisconnected`](/pt-BR/docs/Web/API/Window/vrdisplaydisconnect_event) for acionado).
 {{domxref("Window.onvrdisplaypresentchange")}}
-Representa um manipulador de eventos que será executado quando o estado de apresentação de um dispositivo VR mudar - isto é, vai de apresentar a não apresentar, ou vice-versa (quando o evento {{event("onvrdisplaypresentchange")}} é acionado).
+Representa um manipulador de eventos que será executado quando o estado de apresentação de um dispositivo VR mudar - isto é, vai de apresentar a não apresentar, ou vice-versa (quando o evento [`onvrdisplaypresentchange`](/pt-BR/docs/Web/Events/onvrdisplaypresentchange) é acionado).
 
 ## Exemplos
 
@@ -69,7 +69,6 @@ Você pode encontrar uma série de exemplos nesses repositórios Github:
 
 - [webvr.info](https://webvr.info)- Informações atualizadas sobre WebVR, configuração do navegador e comunidade.
 - [webvr.rocks](https://iswebvrready.com)- Informações atualizadas sobre o suporte ao navegador WebVR (incluindo compilações experimentais).
-- [MozVr.com](http://mozvr.com/)- Demos, downloads, outros recursos da equipe de VR da Mozilla.
 - [A-Frame](https://aframe.io)- A web framework para a construção de experiências VR (com HTML), a partir da equipe Mozilla VR.
 - [Console Game on Web](http://dsmu.me/ConsoleGameOnWeb/)- Uma coleção de demonstrações interessantes conceito de jogo, alguns dos quais incluem WebVR.
 - [threejs-vr-boilerplate](https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate)- Um modelo de iniciador muito útil para escrever aplicações WebVR.

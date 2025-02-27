@@ -1,16 +1,20 @@
 ---
 title: tab-size
 slug: Web/CSS/tab-size
+l10n:
+  sourceCommit: 82877d5cf5a35e0a4d02b7c54aea0ce7d771d5cb
 ---
 
 {{CSSRef}}
 
 CSS の **`tab-size`** プロパティは、タブ文字 (U+0009) の表示幅の指定に用います。
 
+{{EmbedInteractiveExample("pages/css/tab-size.html")}}
+
 ## 構文
 
 ```css
-/* <integer> 値 */
+/* <number> 値 */
 tab-size: 4;
 tab-size: 0;
 
@@ -22,13 +26,14 @@ tab-size: 2em;
 tab-size: inherit;
 tab-size: initial;
 tab-size: revert;
+tab-size: revert-layer;
 tab-size: unset;
 ```
 
 ### 値
 
-- {{CSSxRef("&lt;integer&gt;")}}
-  - : タブの幅として使用される空白文字（U+0020）の幅の倍数です。正の数でなければなりません。
+- {{CSSxRef("&lt;number&gt;")}}
+  - : タブの幅として使用する空白文字 (U+0020) のアドバンス幅の倍数です。負の値であってはなりません。アドバンス幅とは、次の文字が出力される前に、カーソルまたは印字ヘッドが移動する距離ということになります。
 - {{CSSxRef("&lt;length&gt;")}}
   - : タブの幅です。正の数でなければなりません。
 
@@ -58,35 +63,46 @@ pre {
 }
 ```
 
-<h3 id="Comparing_to_the_default_size">既定の大きさの比較</h3>
+### 既定のタブサイズとカスタムサイズ
 
 この例では、既定のタブの大きさとカスタムのタブの大きさを比較しています。タブがつぶれないように、 {{cssxref("white-space")}} を `pre` に設定していることに注意してください。
 
 #### HTML
 
 ```html
-<p>no tab</p>
-<p>&#0009;default tab size of 8 characters wide</p>
-<p class="custom">&#0009;custom tab size of 3 characters wide</p>
-<p>&nbsp;&nbsp;&nbsp;3 spaces, equivalent to the custom tab size</p>
+<p>タブなし</p>
+<p>&#0009;既定の 8 文字幅のタブサイズ</p>
+<p class="custom-number">&#0009;3 文字幅のカスタムタブサイズ</p>
+<p>&nbsp;&nbsp;&nbsp;カスタムタブサイズと同じ 3 文字の空白</p>
+<p class="custom-length">&#0009;50px 幅のカスタムタブサイズ</p>
 ```
 
 #### CSS
+
+```css hidden
+body {
+  border: 1px solid red;
+  margin: 1rem;
+}
+```
 
 ```css
 p {
   white-space: pre;
 }
 
-.custom {
+.custom-number {
   tab-size: 3;
-  -moz-tab-size: 3;
+}
+
+.custom-length {
+  tab-size: 50px;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Comparing_to_the_default_size')}}
+{{EmbedLiveSample("Comparing_to_the_default_size", "100%", "250")}}
 
 ## 仕様書
 
@@ -98,4 +114,4 @@ p {
 
 ## 関連情報
 
-- [Controlling size of a tab character (U+0009)](https://lists.w3.org/Archives/Public/www-style/2008Dec/0009.html) - Anne van Kesteren 氏 (Opera) からの CSSWG へのメール
+- {{cssxref('white-space')}}

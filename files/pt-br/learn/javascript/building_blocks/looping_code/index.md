@@ -236,9 +236,11 @@ Aqui mostra um loop sendo usado para iterar os itens em uma matriz e fazer algo 
 
 4. Quando `i` torna-se igual a `cats.length`, o loop é interrompido e o navegador passará para o próximo trecho de código abaixo do loop.
 
-> **Nota:** :Nós fizemos a condição de saída `i < cats.length`, e não `i <= cats.length`, porque os computadores contam a partir de 0, não 1 - estamos começando `i` em `0`, e indo até `i = 4` (o index do último item do array). `cats.length` retorna 5, pois há 5 itens no array, mas não queremos chegar até `i = 5`, pois isso retornaria `undefined` para o último item (não há nenhum item no índice 5 do array). Então, portanto, queremos ir até 1 a menos de `cats.length` (`i <`), não é o mesmo que `cats.length` (`i <=`).
+> [!NOTE]
+> :Nós fizemos a condição de saída `i < cats.length`, e não `i <= cats.length`, porque os computadores contam a partir de 0, não 1 - estamos começando `i` em `0`, e indo até `i = 4` (o index do último item do array). `cats.length` retorna 5, pois há 5 itens no array, mas não queremos chegar até `i = 5`, pois isso retornaria `undefined` para o último item (não há nenhum item no índice 5 do array). Então, portanto, queremos ir até 1 a menos de `cats.length` (`i <`), não é o mesmo que `cats.length` (`i <=`).
 
-> **Nota:** Um erro comum nas condições de saída é usá-las "igual a" (`===`) em vez de dizer "menor ou igual a" (`<=`). Se quiséssemos executar nosso loop até `i = 5`, a condição de saída precisaria ser `i <= cats.length`. Se nós setarmos para `i === cats.length`, o loop não seria executado em todos, porque `i` não é igual a `5` na primeira iteração do loop, a execução pararia imediatamente.
+> [!NOTE]
+> Um erro comum nas condições de saída é usá-las "igual a" (`===`) em vez de dizer "menor ou igual a" (`<=`). Se quiséssemos executar nosso loop até `i = 5`, a condição de saída precisaria ser `i <= cats.length`. Se nós setarmos para `i === cats.length`, o loop não seria executado em todos, porque `i` não é igual a `5` na primeira iteração do loop, a execução pararia imediatamente.
 
 Um pequeno problema que nos resta é que a sentença de saída final não é muito bem formada:
 
@@ -366,7 +368,8 @@ btn.addEventListener("click", function () {
 
 5. Após `(contacts.length-1)` iterações, se o nome do contato não corresponder à pesquisa inserida, o texto do parágrafo será definido como "Contato não encontrado" e o loop continuará a iterar.
 
-> **Nota:** Você pode encontrar este [código de exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) (também [veja em execução](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html) ).
+> [!NOTE]
+> Você pode encontrar este [código de exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) (também [veja em execução](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html) ).
 
 ## Ignorando iterações com continue
 
@@ -435,7 +438,8 @@ Aqui está a saída:
 3. Se a raiz quadrada e a raiz quadrada arredondada não forem iguais (`! ==`), isso significa que a raiz quadrada não é um número inteiro, portanto, não estamos interessados nela. Nesse caso, usamos a instrução `continue` para pular para a próxima iteração de loop sem registrar o número em nenhum lugar.
 4. Se a raiz quadrada é um inteiro, nós pulamos o bloco if inteiramente para que a instrução `continue` não seja executada; em vez disso, concatenamos o valor `i` atual mais um espaço até o final do conteúdo do parágrafo.
 
-> **Nota:** Você pode encontrar este [código de exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) (também [veja em execução](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html) ).
+> [!NOTE]
+> Você pode encontrar este [código de exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) (também [veja em execução](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html) ).
 
 ## while e o do ... while
 
@@ -472,7 +476,7 @@ while (i < cats.length) {
 }
 ```
 
-> **Nota:**Isso ainda funciona da mesma forma esperada — dê uma olhada no [código em execução](http://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (também veja o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html)).
+> **Nota:**Isso ainda funciona da mesma forma esperada — dê uma olhada no [código em execução](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (também veja o [código fonte completo](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html)).
 
 O [do...while](/pt-BR/docs/Web/JavaScript/Reference/Statements/do...while) loop é muito semelhante, mas fornece uma variação na estrutura while:
 
@@ -859,13 +863,14 @@ do {
 
 Nós recomendamos o uso do `for`, pelo menos no começo, já que ele é provavelmente a forma mais fácil de lembrar de tudo — o inicializador, a condição de saída, e a expressão final final tudo fica ordenadamente dentro dos parênteses, então é fácil de ver onde eles estão e para verifcar se você não os esqueceu.
 
-> **Nota:** There are other loop types/features too, which are useful in advanced/specialized situations and beyond the scope of this article. If you want to go further with your loop learning, read our advanced [Loops and iteration guide](/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration).
+> [!NOTE]
+> There are other loop types/features too, which are useful in advanced/specialized situations and beyond the scope of this article. If you want to go further with your loop learning, read our advanced [Loops and iteration guide](/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration).
 
 ## Conclusion
 
 This article has revealed to you the basic concepts behind, and different options available when, looping code in JavaScript. You should now be clear on why loops are a good mechanism for dealing with repetitive code, and be raring to use them in your own examples!
 
-If there is anything you didn't understand, feel free to read through the article again, or [contact us](/en-US/Learn#Contact_us) to ask for help.
+If there is anything you didn't understand, feel free to read through the article again, or [contact us](/pt-BR/docs/Learn#contact_us) to ask for help.
 
 ## See also
 

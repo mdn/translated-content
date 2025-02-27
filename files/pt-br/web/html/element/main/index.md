@@ -11,10 +11,10 @@ O elemento **`<main>`** define o conteúdo principal dentro do {{HTMLElement("bo
 >
 > Autores **não devem** incluir mais de um elemento main no mesmo documento**.**
 
-- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_[Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content), conteúdo palpável.
-- _Conteúdo permitido_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content).
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_[Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), conteúdo palpável.
+- _Conteúdo permitido_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content).
 - _Omissão de tag_ Nenhuma; ambas as tags de início e fim são obrigatórios.
-- _Elementos pais permitidos_ Qualquer elemento que aceite [conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content), mas não pode ser filho dos elementos {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, ou {{HTMLElement("nav")}}.
+- _Elementos pais permitidos_ Qualquer elemento que aceite [conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), mas não pode ser filho dos elementos {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, ou {{HTMLElement("nav")}}.
 - _DOM interface_ {{domxref("HTMLElement")}}
 
 ## Atributos
@@ -65,7 +65,7 @@ O elemento \<main> é amplamente suportado (exceto pelo Internet Explorer). Suge
 <main role="main">...</main>
 ```
 
-{{Compat("html.elements.main")}}
+{{Compat}}
 
 ## Veja também
 

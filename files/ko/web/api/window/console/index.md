@@ -23,10 +23,11 @@ console.log("An error occurred while loading the content");
 console.dir(someObject);
 ```
 
-{{domxref("Console")}} 문서의 [예제](/ko/docs/Web/API/Console#예제) 항목에서 더 자세한 예제를 살펴보세요.
+{{domxref("Console")}} 문서의 [예제](/ko/docs/Web/API/console#%ec%98%88%ec%a0%9c) 항목에서 더 자세한 예제를 살펴보세요.
 
 ## 명세
 
 {{Specifications}}
 
-> **참고:** 현재 브라우저간 구현에 많은 차이가 있지만, 하나로 통합하여 서로 보다 일관적으로 만드는 작업이 진행 중입니다.
+> [!NOTE]
+> 현재 브라우저간 구현에 많은 차이가 있지만, 하나로 통합하여 서로 보다 일관적으로 만드는 작업이 진행 중입니다.

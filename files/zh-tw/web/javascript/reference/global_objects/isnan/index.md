@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/isNaN
 
 **`isNaN()`** 函式會判斷某個數值是不是 {{jsxref("NaN")}}。注意：在 `isNaN` 函式裡面，有個[有趣的](#描述)強制性規則。你可能會想改用在 ECMAScript 2015 導入的 {{jsxref("Number.isNaN()")}}。
 
-{{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - isNaN()")}}
+
+```js interactive-example
+function milliseconds(x) {
+  if (isNaN(x)) {
+    return "Not a Number!";
+  }
+  return x * 1000;
+}
+
+console.log(milliseconds("100F"));
+// Expected output: "Not a Number!"
+
+console.log(milliseconds("0.0314E+2"));
+// Expected output: 3140
+```
 
 ## 語法
 
@@ -82,8 +97,6 @@ isNaN("blabla"); // true: "blabla" 被轉換為數字，將其解析為數字失
 當然，你能以更用途導向的方法去思考 `isNaN()`：如果 `isNaN()` 回傳 `false`，那麼把 `x` 用在任何算術表達式都不會回傳 `NaN`。相反地，如果回傳 `true`，那麼把 `x` 用在任何算術表達式都會是 `NaN`。這在 JavaScript 的意義是 `isNaN(x) == true` 等於 `x - 0` 回傳 `NaN`（儘管在 JavaScript 裡面 `x - 0 == NaN` 永遠回傳 false，你因而無法測試）── 事實上，`isNaN(x)`、`isNaN(x - 0)`、`isNaN(Number(x))`、`Number.isNaN(x - 0)`、`Number.isNaN(Number(x))` 在 JavaScript 裡面，都會回傳一樣的東西。而 `isNaN(x)` 是所有表達式裡面最短的一種。
 
 比方說，你可以用這個式子，去測試函式的參數能不能透過算術處理（也就是能「像」數字一樣被利用）、否則就提供預設值之類的。你可以透過上下文的根據以隱式數值轉換（implicitly converting value），以使用 JavaScript 提供的全部功能。
-
-## 範例
 
 ```js
 function increment(x) {

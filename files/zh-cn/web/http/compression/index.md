@@ -1,6 +1,8 @@
 ---
 title: HTTP 协议中的数据压缩
 slug: Web/HTTP/Compression
+l10n:
+  sourceCommit: f2f16cd329788046c2ee97097377d7529983c742
 ---
 
 {{HTTPSidebar}}
@@ -24,33 +26,34 @@ slug: Web/HTTP/Compression
 
 有损压缩通常会比无损压缩效率更高一些。
 
-> **备注：** 由于数据压缩技术在一些特定类型的文件上效果很好，再次进行压缩通常没有什么效果。事实上，这种做法常常会适得其反，因为间接开销（该类型算法通常需要使用字典，而字典的大小是会计入初始大小的）会比在压缩过程中获取的额外收益要高，从而会使文件的体积增加。不要对压缩格式的文件应用如下两种压缩技术。
+> [!NOTE]
+> 由于数据压缩技术在一些特定类型的文件上效果很好，再次进行压缩通常没有什么效果。事实上，这种做法常常会适得其反，因为间接开销（该类型算法通常需要使用字典，而字典的大小是会计入初始大小的）会比在压缩过程中获取的额外收益要高，从而会使文件的体积增加。不要对压缩格式的文件应用如下两种压缩技术。
 
 ## 端到端压缩技术
 
 对于各种压缩手段来说，端到端压缩技术是 Web 站点性能提升最大的地方。端到端压缩技术指的是消息主体的压缩是在服务器端完成的，并且在传输过程中保持不变，直到抵达客户端。不管途中遇到什么样的中间节点，它们都会使消息主体保持原样。
 
-![服务器通过网络节点向客户端发送一个压缩的 HTTP 主体。该主体直到到达客户端之前，不会在网络中的任何一跳之间进行解压缩。](httpenco1.png)
+![服务器通过网络节点向客户端发送一个压缩的 HTTP 主体。该主体直到到达客户端之前，不会在网络中的任何一跳之间进行解压缩。](httpenco1.svg)
 
 所有的现代浏览器及服务器都支持该技术，唯一需要协商的是所采用的压缩算法。这些压缩算法是为文本内容进行过优化的。在上世纪 90 年代，压缩技术快速发展，为数众多的算法相继出现，扩大了可选的范围。如今只有两种算法有着举足轻重的地位：`gzip` 应用最广泛，`br` 则是新的挑战者。
 
 为了选择要采用的压缩算法，浏览器和服务器之间会使用[主动协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation)。浏览器发送 {{HTTPHeader("Accept-Encoding")}} 标头，其中包含有它所支持的压缩算法，以及各自的优先级，服务器则从中选择一种，使用该算法对响应的消息主体进行压缩，并且发送 {{HTTPHeader("Content-Encoding")}} 标头来告知浏览器它选择了哪一种算法。由于该内容协商过程是基于编码类型来选择资源的展现形式的，在响应时，服务器至少发送一个包含 {{HTTPHeader("Accept-Encoding")}} 的 {{HTTPHeader("Vary")}} 标头以及该标头；这样的话，缓存服务器就可以对资源的不同展现形式进行缓存。
 
-![客户端使用“Accept-Encoding:br, gzip”标头请求内容。服务器使用 Brotli 算法压缩的主体以及所需的“Content-Encoding”和“Vary”标头进行响应。](httpcompression1.png)
+![客户端使用“Accept-Encoding:br, gzip”标头请求内容。服务器使用 Brotli 算法压缩的主体以及所需的“Content-Encoding”和“Vary”标头进行响应。](httpcompression1.svg)
 
 由于压缩技术可以带来很大的性能提升，建议对除了已经经过压缩的文件如图片、音频和视频文件之外的其他类型的文件均进行压缩。
 
-Apache 服务器支持数据压缩，有 [mod_deflate](http://httpd.apache.org/docs/current/mod/mod_deflate.html)可供使用；nginx 中有[ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html) 模块；在 IIS 中则可以使用 [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression) 元素。
+Apache 服务器支持数据压缩，有 [mod_deflate](https://httpd.apache.org/docs/current/mod/mod_deflate.html)可供使用；nginx 中有[ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html) 模块；在 IIS 中则可以使用 [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression) 元素。
 
 ## 逐跳压缩技术
 
 逐跳压缩技术尽管与端到端压缩技术有些类似，但是它们在一点上有着本质的区别：即这里的压缩指的不是对源头服务器上的资源的压缩，以此来创建一份特定的展现形式然后进行传输，而是对客户端与服务器端之间的任意两个节点之间传递的消息的主体的压缩。在两个相邻的中间节点之间的连接上，可能会应用*不同*的压缩方式。
 
-![服务器通过网络节点向客户端发送一个未经压缩的 HTTP 主体。该主体在到达客户端之前，由网络上的节点根据“Transfer-Encoding”标头进行压缩和解压缩。](httpte1.png)
+![服务器通过网络节点向客户端发送一个未经压缩的 HTTP 主体。该主体在到达客户端之前，由网络上的节点根据“Transfer-Encoding”标头进行压缩和解压缩。](httpte1.svg)
 
 为了实现这个目的，HTTP 协议中采用了与端到端压缩技术所使用的内容协商机制相类似的机制：节点发送请求，使用 {{HTTPHeader("TE")}} 标头来宣告它的意愿，另外一个节点则从中选择合适的方法，进行应用，然后在 {{HTTPHeader("Transfer-Encoding")}} 标头中指出它所选择的方法。
 
-![客户端从没有压缩相关标头的服务器请求内容。服务器会使用未经压缩的主体进行响应。该主体在到达客户端之前，由网络上的节点进行压缩和解压缩。](httpcomp2.png)
+![客户端从没有压缩相关标头的服务器请求内容。服务器会使用未经压缩的主体进行响应。该主体在到达客户端之前，由网络上的节点进行压缩和解压缩。](httpcomp2.svg)
 
 在实际应用中，逐跳压缩对于服务器和客户端来说是不可见的，并且很少使用。{{HTTPHeader("TE")}} 标头和 {{HTTPHeader("Transfer-Encoding")}} 标头最常用来发送分块响应，允许在获得资源的确切长度之前就可以开始传输。
 

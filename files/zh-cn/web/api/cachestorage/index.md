@@ -9,9 +9,10 @@ slug: Web/API/CacheStorage
 
 `CacheStorage` 同样暴露了 {{domxref("CacheStorage.open()")}} 和 {{domxref("CacheStorage.match()")}}方法。使用 {{domxref("CacheStorage.open()")}} 获取 {{domxref("Cache")}} 实例。使用 {{domxref("CacheStorage.match()")}} 检查给定的 {{domxref("Request")}} 是否是 `CacheStorage` 对象跟踪的任何 {{domxref("Cache")}} 对象中的键。
 
-你可以通过 {{domxref("WorkerGlobalScope.caches", "caches")}} 属性访问 `CacheStorage` .
+你可以通过窗口的 {{domxref("Window.caches")}} 属性或 worker 的 {{domxref("WorkerGlobalScope.caches")}} 属性访问 `CacheStorage`。
 
-> **备注：** CacheStorage 总是对不受信任的源（即那些不使用 HTTPS，尽管此定义将来很可能变得更加复杂。）使用 `SecurityError` reject. 测试时，你可以在 Firefox Devtools 选项/齿轮菜单中通过选中"通过 HTTP 启用 Service Workers (当工具箱打开时)" 选项来绕开这个限制。
+> [!NOTE]
+> CacheStorage 总是对不受信任的源（即那些不使用 HTTPS，尽管此定义将来很可能变得更加复杂。）使用 `SecurityError` reject. 测试时，你可以在 Firefox Devtools 选项/齿轮菜单中通过选中"通过 HTTP 启用 Service Workers (当工具箱打开时)" 选项来绕开这个限制。
 
 > **备注：** {{domxref("CacheStorage.match()")}} 是一个便捷方法。匹配 cache 条目的同等功能可以通过执行 {{domxref("CacheStorage.open()")}} 打开 cache，使用 {{domxref("CacheStorage.keys()")}} 返回它包含的条目，并将你所需的条目与 {{domxref("CacheStorage.match()")}} 匹配。
 
@@ -91,6 +92,7 @@ this.addEventListener("fetch", function (event) {
 
 ## 参见
 
-- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("WorkerGlobalScope.caches")}}
+- {{domxref("Window.caches")}} 和 {{domxref("WorkerGlobalScope.caches")}}
+- [隐私浏览/隐身模式](/zh-CN/docs/Web/API/Web_Storage_API#隐私浏览隐身模式)

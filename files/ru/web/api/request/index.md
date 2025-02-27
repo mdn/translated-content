@@ -66,7 +66,8 @@ slug: Web/API/Request
 - {{domxref("Body.text()")}}
   - : Returns a promise that resolves with an {{domxref("USVString")}} (text) representation of the request body.
 
-> **Примечание:** The {{domxref("Body")}} functions can be run only once; subsequent calls will resolve with empty strings/ArrayBuffers.
+> [!NOTE]
+> The {{domxref("Body")}} functions can be run only once; subsequent calls will resolve with empty strings/ArrayBuffers.
 
 ## Examples
 
@@ -80,7 +81,7 @@ const method = request.method;
 const credentials = request.credentials;
 ```
 
-You could then fetch this request by passing the `Request` object in as a parameter to a {{domxref("WindowOrWorkerGlobalScope.fetch()")}} call, for example:
+You could then fetch this request by passing the `Request` object in as a parameter to a {{domxref("fetch()")}} call, for example:
 
 ```js
 fetch(request)
@@ -104,9 +105,10 @@ const credentials = request.credentials;
 const bodyUsed = request.bodyUsed;
 ```
 
-> **Примечание:** Типом тела может быть только {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} или {{domxref("ReadableStream")}} поэтому, для добавления объекта JSON в полезную нагрузку вам необходимо структурировать этот объект.
+> [!NOTE]
+> Типом тела может быть только {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} или {{domxref("ReadableStream")}} поэтому, для добавления объекта JSON в полезную нагрузку вам необходимо структурировать этот объект.
 
-Вы можете получить этот запрос API, передав объект Request в качестве параметра для вызова {{domxref("WindowOrWorkerGlobalScope.fetch()")}}, например, и получить ответ:
+Вы можете получить этот запрос API, передав объект Request в качестве параметра для вызова {{domxref("fetch()")}}, например, и получить ответ:
 
 ```js
 fetch(request)
@@ -126,16 +128,16 @@ fetch(request)
   });
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Читай также
 
-- [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/ru/docs/Web/HTTP/CORS)
 - [HTTP](/ru/docs/Web/HTTP)

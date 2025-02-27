@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/push
 
 **`push()`** 方法将指定的元素添加到数组的末尾，并返回新的数组长度。
 
-{{EmbedInteractiveExample("pages/js/array-push.html")}}
+{{InteractiveExample("JavaScript Demo: Array.push()")}}
+
+```js interactive-example
+const animals = ["pigs", "goats", "sheep"];
+
+const count = animals.push("cows");
+console.log(count);
+// Expected output: 4
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+animals.push("chickens", "cats", "dogs");
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+```
 
 ## 语法
 
@@ -53,7 +67,7 @@ console.log(total); // 4
 
 ### 合并两个数组
 
-这个示例使用{{jsxref("Operators/Spread_syntax", "展开语法", "", "1")}}来将第二个数组的所有元素添加到第一个数组中。
+这个示例使用{{jsxref("Operators/Spread_syntax", "展开语法", "", 1)}}来将第二个数组的所有元素添加到第一个数组中。
 
 ```js
 const vegetables = ["parsnip", "potato"];
@@ -123,7 +137,7 @@ console.log(obj.length); // 2
 ## 参见
 
 - [`core-js` 中 `Array.prototype.push` 的 Polyfill，并对此方法进行了修复](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.pop()")}}
 - {{jsxref("Array.prototype.shift()")}}

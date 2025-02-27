@@ -39,11 +39,11 @@ O `ReferenceError` não contém métodos próprios, porém, ele herda alguns mé
 
 ### Propriedades
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Properties')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Properties') -->
 
 ### Métodos
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Methods')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Methods') -->
 
 ## Exemplos
 
@@ -81,16 +81,11 @@ try {
 
 ## Especificações
 
-| Especificação                                                                                             | Estado               | Comentário         |
-| --------------------------------------------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES3')}}                                                                                       | {{Spec2('ES3')}}     | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-15.11.6.3', 'ReferenceError')}}                                                 | {{Spec2('ES5.1')}}   |                    |
-| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-referenceerror', 'ReferenceError')}}     | {{Spec2('ES6')}}     |                    |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-referenceerror', 'ReferenceError')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.ReferenceError")}}
+{{Compat}}
 
 ## Veja também
 

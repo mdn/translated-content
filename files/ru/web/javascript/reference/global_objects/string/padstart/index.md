@@ -39,7 +39,6 @@ str.padStart(targetLength [, padString])
 Запуск данного кода перед любым другим кодом будет создавать `String.prototype.padStart()`, если он нативно не поддерживается.
 
 ```js
-// https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
 // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
 if (!String.prototype.padStart) {
   String.prototype.padStart = function padStart(targetLength, padString) {
@@ -62,7 +61,7 @@ if (!String.prototype.padStart) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

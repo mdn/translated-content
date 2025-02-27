@@ -15,23 +15,23 @@ Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new too
 
 #### コンソール
 
-- レスポンスコードが 400-499 および 500-599 の範囲にあるネットワークメッセージを、エラーとみなすようになりました。また、[要求や XHR のフィルターが無効であっても](/ja/docs/Tools/Web_Console/Console_messages#Filtering_by_category) 表示するようになりました ([Firefox バグ 1635460](https://bugzil.la/1635460))。
-- (ブラウザーや拡張機能によって) ブロックされた要求のネットワークメッセージが、[コンソール](/ja/docs/Tools/Web_Console/Console_messages) で "禁止" アイコンがつくようになりました ([Firefox バグ 1629875](https://bugzil.la/1629875))。
+- レスポンスコードが 400-499 および 500-599 の範囲にあるネットワークメッセージを、エラーとみなすようになりました。また、[要求や XHR のフィルターが無効であっても](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#filtering_by_category) 表示するようになりました ([Firefox バグ 1635460](https://bugzil.la/1635460))。
+- (ブラウザーや拡張機能によって) ブロックされた要求のネットワークメッセージが、[コンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html) で "禁止" アイコンがつくようになりました ([Firefox バグ 1629875](https://bugzil.la/1629875))。
 
 #### デバッガー
 
-- [ソースファイルを "ブラックボックス化"](/ja/docs/Tools/Debugger/How_to/Black_box_a_source) を、ソースファイルを "無視" と呼ぶようになりました ([Firefox バグ 1642811](https://bugzil.la/1642811))。
-- [例外](/ja/docs/Tools/Debugger/How_to/Breaking_on_exceptions) でインラインプレビューが可能になりました ([Firefox バグ 1581708](https://bugzil.la/1581708))。
+- [ソースファイルを "ブラックボックス化"](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/ignore_a_source/index.html) を、ソースファイルを "無視" と呼ぶようになりました ([Firefox バグ 1642811](https://bugzil.la/1642811))。
+- [例外](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/breaking_on_exceptions/index.html) でインラインプレビューが可能になりました ([Firefox バグ 1581708](https://bugzil.la/1581708))。
 - 監視式やスコープのセクションにある項目にマウスポインターを載せると、それらの値を表示するツールチップが現れるようになりました ([Firefox バグ 1631545](https://bugzil.la/1631545))。
-- [コールスタックセクション](/ja/docs/Tools/Debugger/UI_Tour#Call_stack) のコンテキストメニューの項目に、現在のスタックフレームをはじめから実行する **フレームを再実行** を追加しました ([Firefox バグ 1594467](https://bugzil.la/1594467))。
+- [コールスタックセクション](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#call_stack) のコンテキストメニューの項目に、現在のスタックフレームをはじめから実行する **フレームを再実行** を追加しました ([Firefox バグ 1594467](https://bugzil.la/1594467))。
 
 #### その他のツール
 
-- 新たに [アプリケーションパネル](/ja/docs/Tools/Application) が使用可能になりました。まずは [service worker](/ja/docs/Web/API/Service_Worker_API) および [ウェブアプリマニフェスト](/ja/docs/Web/Manifest) の調査やデバッグの機能を提供します。
-- ネットワークモニターのメッセージタブを、[応答タブ](/ja/docs/Tools/Network_Monitor/request_details#Response_tab) に統合しました ([Firefox バグ 1636421](https://bugzil.la/1636421))。
+- 新たに [アプリケーションパネル](https://firefox-source-docs.mozilla.org/devtools-user/application/index.html) が使用可能になりました。まずは [service worker](/ja/docs/Web/API/Service_Worker_API) および [ウェブアプリマニフェスト](/ja/docs/Web/Manifest) の調査やデバッグの機能を提供します。
+- ネットワークモニターのメッセージタブを、[応答タブ](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response_tab) に統合しました ([Firefox バグ 1636421](https://bugzil.la/1636421))。
 - アクセシビリティインスペクターが、タブにアクセスすると自動的に有効化します。明示的に有効化することが不要になりました ([Firefox バグ 1602075](https://bugzil.la/1602075))。
-- [レスポンシブデザインモード](/ja/docs/Tools/Responsive_Design_Mode#Controlling_Responsive_Design_Mode) でタッチシミュレーションを有効にしたとき、マウスドラッグのイベントをタッチ & ドラッグまたはスワイプのイベントとして解釈するようになりました ([Firefox バグ 1621781](https://bugzil.la/1621781))。
-- [リモートデバッグ](/ja/docs/Tools/about:debugging#Connecting_to_a_remote_device) で、リモートブラウザーのナビゲーションを支援するための **戻る** および **進む** ボタンを URL バーに追加しました ([Firefox バグ 1639425](https://bugzil.la/1639425))。
+- [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#controlling_responsive_design_mode) でタッチシミュレーションを有効にしたとき、マウスドラッグのイベントをタッチ & ドラッグまたはスワイプのイベントとして解釈するようになりました ([Firefox バグ 1621781](https://bugzil.la/1621781))。
+- [リモートデバッグ](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting_to_a_remote_device) で、リモートブラウザーのナビゲーションを支援するための **戻る** および **進む** ボタンを URL バーに追加しました ([Firefox バグ 1639425](https://bugzil.la/1639425))。
 
 ### HTML
 
@@ -72,7 +72,7 @@ Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new too
 - {{jsxref("WeakRef")}} オブジェクトを実装しました ([Firefox バグ 1639246](https://bugzil.la/1639246))。
 - [Logical assignment operators](https://github.com/tc39/proposal-logical-assignment) をサポートしました ([Firefox バグ 1639591](https://bugzil.la/1639591))。
 
-  - [Logical nullish assignment (`??=`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment)
+  - [Logical nullish assignment (`??=`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
   - [Logical AND assignment (`&&=`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
   - [Logical OR assignment (`||=`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
 
@@ -89,7 +89,7 @@ Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new too
 #### DOM
 
 - [`FileReader`](/ja/docs/Web/API/FileReader) インターフェイスの [`loadstart` イベント](/ja/docs/Web/API/FileReader/loadstart_event) が、仕様書に従って非同期に発生するようになりました ([Firefox バグ 1502403](https://bugzil.la/1502403))。
-- {{domxref("CanvasPattern.setTransform()")}} が、入力パラメーターとして {{domxref("SVGMatrix")}} オブジェクトと同様に {{domxref("DOMMatrix")}} オブジェクトもサポートしました ([Firefox バグ 1565997](https://bugzil.la/1565997))。
+- {{domxref("CanvasPattern.setTransform()")}} が、入力引数として {{domxref("SVGMatrix")}} オブジェクトと同様に {{domxref("DOMMatrix")}} オブジェクトもサポートしました ([Firefox バグ 1565997](https://bugzil.la/1565997))。
 
 #### Media、WebRTC、Web Audio
 
@@ -108,7 +108,7 @@ Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new too
 ## アドオン開発者向けの変更点
 
 - 新しい API: [`tabs.warmup()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/warmup) ([Firefox バグ 1402256](https://bugzil.la/1402256))
-- [ストレージのクォータが、`sync` ストレージ領域に適用されるようになりました](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync#Storage_quotas_for_sync_data) ([Firefox バグ 1634615](https://bugzil.la/1634615)) ([addons.mozilla.org ブログの記事](https://blog.mozilla.org/addons/2020/07/09/changes-to-storage-sync-in-firefox-79/))
+- [ストレージのクォータが、`sync` ストレージ領域に適用されるようになりました](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync#storage_quotas_for_sync_data) ([Firefox バグ 1634615](https://bugzil.la/1634615)) ([addons.mozilla.org ブログの記事](https://blog.mozilla.org/addons/2020/07/09/changes-to-storage-sync-in-firefox-79/))
 
 ## 過去のバージョン
 

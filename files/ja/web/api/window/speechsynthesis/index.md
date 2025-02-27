@@ -67,13 +67,13 @@ inputForm.onsubmit = function (event) {
 };
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの実装状況
 
-{{Compat("api.Window.speechSynthesis")}}
+{{Compat}}
 
 ## 関連項目
 

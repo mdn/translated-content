@@ -60,7 +60,7 @@ Location: /index.html
 
 ## ブラウザーの対応
 
-{{Compat("http.headers.Location")}}
+{{Compat}}
 
 ## 関連情報
 

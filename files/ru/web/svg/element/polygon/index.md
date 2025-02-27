@@ -7,6 +7,8 @@ slug: Web/SVG/Element/polygon
 
 Элемент **`<polygon>`** описывает замкнутую фигуру, состоящую из набора последовательно соединённых между собой прямых линий. Для создания незамкнутых фигур используется элемент {{SVGElement("polyline")}}.
 
+## Пример
+
 ```css hidden
 html,
 body,
@@ -25,7 +27,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 100, 100)}}
+{{EmbedLiveSample("Пример", 100, 100)}}
 
 ## Атрибуты
 
@@ -38,7 +40,7 @@ svg {
 
 ### Global attributes
 
-- [Основные атрибуты](/docs/Web/SVG/Attribute/Core)
+- [Основные атрибуты](/ru/docs/Web/SVG/Attribute)
   - : Самые важные: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
 - [Атрибуты стилизации](/docs/Web/SVG/Attribute/Styling)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}

@@ -29,7 +29,7 @@ Arrays são geralmente descritas como "lista de objetos"; elas são basicamente 
 
 Se nós não tivessemos arrays, teríamos que armazenar cada item em uma variável separada, então chamar o código para mostrar e adicionar separadamente cada item. Isto seria muito mais longo de escrever, menos eficiente e mais suscetível a erros. Se nós temos 10 itens para adicionar na fatura, isto é ruim o bastante, mas e se fosse 100 itens ou 1000? Nós vamos retornar a este exemplo mais tarde neste artigo.
 
-Como no artigo anterior, vamos aprender o básico de arrays introduzindo com alguns exemplos dentro de um console JavaScript. Nós fornecemos um abaixo (você também pode [abrir este console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) em uma aba separada ou janela, ou usar o [console de desenvolvedor do navegador](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) se preferir).
+Como no artigo anterior, vamos aprender o básico de arrays introduzindo com alguns exemplos dentro de um console JavaScript. Nós fornecemos um abaixo (ou use o [console de desenvolvedor do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) se preferir).
 
 ```html hidden
 <!doctype html>
@@ -158,7 +158,7 @@ Arrays são contruídas de colchetes, os quais contém uma lista de itens separa
 
 ### Acessando e modificando itens de uma array
 
-Você pode acessar itens individuais em uma array usando a notação de colchetes, da mesma forma que você [acessa as letras em uma string](/en-US/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character).
+Você pode acessar itens individuais em uma array usando a notação de colchetes, da mesma forma que você [acessa as letras em uma string](/pt-BR/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character).
 
 1. Digite o seguinte no seu console:
 
@@ -175,7 +175,8 @@ Você pode acessar itens individuais em uma array usando a notação de colchete
    // shopping vai retornar agora [ "tahini", "milk", "cheese", "hummus", "noodles" ]
    ```
 
-   > **Nota:** Nós dissemos isto antes, mas como lembrete — computadores começam a contar do 0!
+   > [!NOTE]
+   > Nós dissemos isto antes, mas como lembrete — computadores começam a contar do 0!
 
 3. Note que uma array dentro de uma array é chamada de array multidimensional. Você pode acessar um item dentro de uma array que está localizada dentro de outra array, colocando dois conjuntos de colchetes juntos. Por exemplo, para acessar um dos itens dentro de uma array, que é o terceiro item dentro da array `random` (veja a seção anterior), nós podemos fazer algo tipo isto:
 
@@ -207,7 +208,7 @@ Você irá aprender sobre laços propriamente em um artigo futuro, mas, brevemen
 
 1. Comece o laço no item número 0 na array.
 2. Pare o laço no item de número igual ao comprimento da array. Isto funcionará para uma array de qualquer tamanho, mas neste caso vai parar o laço no item 7 (isto é bom, como o último item — que nós queremos que o laço cubra — é 6.
-3. Para cada item, imprima no console do navegador com [`console.log()`](/pt-BR/docs/Web/API/Console/log).
+3. Para cada item, imprima no console do navegador com [`console.log()`](/pt-BR/docs/Web/API/console/log_static).
 
 ## Alguns métodos úteis em array
 
@@ -217,7 +218,8 @@ Nesta seção vamos ver alguns métodos relacionados a array úteis que nos perm
 
 Frequentemente você vai se deparar com alguns dados contidos em uma grande e longa string, e você pode querer separar os itens em uma forma mais útil e então manipular eles, como mostrar em uma tabela. Para fazer isto, nós podemos usar o método {{jsxref("String.prototype.split()","split()")}}. Nesta forma mais simples, ela pega um parâmetro solitário, o caracter que você deseja separar da string e retorna o restante antes e depois do item separado na array.
 
-> **Nota:** Ok, isto é tecnicamente um método de string, não um método de array, mas nós podemos colocar em arrays já que cai bem.
+> [!NOTE]
+> Ok, isto é tecnicamente um método de string, não um método de array, mas nós podemos colocar em arrays já que cai bem.
 
 1. Vamos brincar com isto para ver como funciona. Primeiro, crie uma string no seu console:
 
@@ -325,10 +327,10 @@ Antes de tudo, para adicionar ou remover um item no final de uma array, nós pod
 Vamos retornar ao exemplo que descrevemos antes — imprimindo nomes de produtos e preços em uma fatura, então totalizando os preços e imprindindo eles ao final. No exemplo editável abaixo há comentários contendo números — cada um deles marcam um lugar onde você tem que acidionar algo ao código. Eles são como segue:
 
 1. Abaixo do comentário `// number 1` está um número de strings, cada uma contendo um nome de produto e preço separado por uma vírgula. Nós gostaríamos que você colocasse eles dentro de uma array e armazenasse eles na array chamada `products`.
-2. Na mesma linha o comentário `// number 2` está no começo de um laço for. Nesta linha nós temos `i<=0`, o qual é um teste condicional que faz o [laço for](/en-US/Learn/JavaScript/First_steps/A_first_splash#Loops) parar imediatamente, porque está dizendo "pare quando `i` for menor ou igual a 0", e `i` começa em 0. Nós gostaríamos de substituir isto com um teste condicional que termina o laço quando o `i`for menor que o tamanho da array `products`.
+2. Na mesma linha o comentário `// number 2` está no começo de um laço for. Nesta linha nós temos `i<=0`, o qual é um teste condicional que faz o [laço for](/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash#loops) parar imediatamente, porque está dizendo "pare quando `i` for menor ou igual a 0", e `i` começa em 0. Nós gostaríamos de substituir isto com um teste condicional que termina o laço quando o `i`for menor que o tamanho da array `products`.
 3. Logo abaixo do comentário `// number 3` nós queremos que você escreva uma linha de código que divide o item da array (`name:price`) em dois itens separados, um contendo somente o nome e outro só com o preço. Se você não tem certeza de como fazer isto, consulte o artigo [Métodos úteis em string](/pt-BR/docs/Learn/JavaScript/First_steps/Useful_string_methods)para alguma ajuda, ou ainda melhor, veja a seção [Converting between strings and arrays](#converting_between_strings_and_arrays) neste artigo.
-4. Como parte da linha de código acima, você também quer converter o preço de string para número. Se você não se lembra como fazer isto, veja o [artigo primeiras strings](/en-US/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings).
-5. Há uma variável chamada `total` que é criada e atribuída o valor 0 no começo do código. Dentro do loop (abaixo `// number 4`) nós queremos que você escreva uma linha que adicione o preço atual ao total em cada iteração do laço, então ao final do código o preço total é impresso na fatura. Você pode precisar de um [operador aritiméticos](/en-US/Learn/JavaScript/First_steps/Math#Assignment_operators) para isto.
+4. Como parte da linha de código acima, você também quer converter o preço de string para número. Se você não se lembra como fazer isto, veja o [artigo primeiras strings](/pt-BR/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings).
+5. Há uma variável chamada `total` que é criada e atribuída o valor 0 no começo do código. Dentro do loop (abaixo `// number 4`) nós queremos que você escreva uma linha que adicione o preço atual ao total em cada iteração do laço, então ao final do código o preço total é impresso na fatura. Você pode precisar de um [operador aritiméticos](/pt-BR/docs/Learn/JavaScript/First_steps/Math#assignment_operators) para isto.
 6. Nós queremos que você mude a linha logo abaixo de `// number 5` para que a variável `itemText` seja igual a "nome do item atual - $preço do item atual", por exemplo "Shoes - $23.99" em cada caso, então a informação correta para cada item é impressa na fatura. Esta é uma simples concatenação de string, a qual deveria ser familiar para você.
 
 ```html hidden
@@ -494,7 +496,8 @@ Um bom uso para os métodos de array como {{jsxref("Array.prototype.push()","pus
 
 Neste exemplo nós vamos mostrar um uso bem mais simples — aqui nós estamos dando a você um falso site de busca, com uma caixa de busca. A idéia é que quando termos são digitados na caixa de busca, os 5 principais termos de busca anterior sejam mostrados na lista. Quando o número de termos passar de 5, o último termo começa sendo deletado. A cada vez um novo termo é adicionado ao topo, então os 5 termos anteriores são sempre mostrados.
 
-> **Nota:** Em um aplicativo de busca real, você seria, provavelmente, habilitado a clicar nos termos anteriores para retornar às pesquisas, e isto iria mostrar o reusltado atual! Nós estamos só mantendo simples, por agora.
+> [!NOTE]
+> Em um aplicativo de busca real, você seria, provavelmente, habilitado a clicar nos termos anteriores para retornar às pesquisas, e isto iria mostrar o reusltado atual! Nós estamos só mantendo simples, por agora.
 
 Para completar o aplicativo, nós precisamos que você:
 

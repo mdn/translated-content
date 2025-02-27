@@ -11,11 +11,12 @@ slug: Web/HTML/Element/br
 
 위 예제에서 확인할 수 있듯, `<br>` 요소는 텍스트를 끊고 싶은 지점에 삽입해야 합니다. `<br>` 이후의 텍스트는 텍스트 블록의 다음 줄에서 다시 시작합니다.
 
-> **참고:** 문단 사이에 여백을 두기 위한 용도로 `<br>`을 사용하지 마세요. 대신 {{htmlelement("p")}} 요소로 감싼 후 [CSS](/ko/docs/Web/CSS)의 {{cssxref("margin")}} 속성으로 여백의 크기를 조절하세요.
+> [!NOTE]
+> 문단 사이에 여백을 두기 위한 용도로 `<br>`을 사용하지 마세요. 대신 {{htmlelement("p")}} 요소로 감싼 후 [CSS](/ko/docs/Web/CSS)의 {{cssxref("margin")}} 속성으로 여백의 크기를 조절하세요.
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
 ## CSS 스타일링
 

@@ -9,7 +9,8 @@ slug: Web/API/Element/clientWidth
 
 在根元素（`<html>` 元素）或怪异模式下的 `<body>` 元素上使用 `clientWidth` 时，该属性将返回视口宽度（不包含任何滚动条）。[这是一个 `clientWidth` 的特例](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-clientwidth)。
 
-> **备注：** 该属性值会被四舍五入为一个整数。如果你需要一个小数值，可使用 {{ domxref("element.getBoundingClientRect()") }}。
+> [!NOTE]
+> 该属性值会被四舍五入为一个整数。如果你需要一个小数值，可使用 {{ domxref("element.getBoundingClientRect()") }}。
 
 ## 值
 

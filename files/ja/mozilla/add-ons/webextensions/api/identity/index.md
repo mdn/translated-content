@@ -34,7 +34,8 @@ identity API は {{WebExtAPIRef("identity.launchWebAuthFlow()")}} 関数を提�
 
 しかし、ループバックアドレスはドメイン検証を必要としない受け入れ可能な代替手段です（[RFC 8252, section 7.3](https://datatracker.ietf.org/doc/html/rfc8252#section-7.3) に基づいています）。Firefox 86 からは、`http://127.0.0.1/mozoauth2/[identity.getRedirectURL()]` が返す URL のサブドメイン] という形式のループバックアドレスをリダイレクト URL の値として許可しています。
 
-> **メモ:** Firefox 75 からは {{WebExtAPIRef("identity.getRedirectURL()")}} が返すリダイレクト URL を使用する必要があります。それ以前のバージョンでは、任意のリダイレクト URL を指定することができました。
+> [!NOTE]
+> Firefox 75 からは {{WebExtAPIRef("identity.getRedirectURL()")}} が返すリダイレクト URL を使用する必要があります。それ以前のバージョンでは、任意のリダイレクト URL を指定することができました。
 >
 > Firefox 86 以降は、記述されている特殊なループバックアドレスも使用することができます。
 
@@ -62,7 +63,8 @@ identity API は {{WebExtAPIRef("identity.launchWebAuthFlow()")}} 関数を提�
 
 {{WebExtExamples("h2")}}
 
-> **メモ:** この API は Chromium の [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/identity/) API に基づいています。
+> [!NOTE]
+> この API は Chromium の [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/api/identity) API に基づいています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

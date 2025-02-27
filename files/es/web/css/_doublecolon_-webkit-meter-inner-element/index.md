@@ -1,5 +1,5 @@
 ---
-title: "::-webkit-meter-inner-element"
+title: ::-webkit-meter-inner-element
 slug: Web/CSS/::-webkit-meter-inner-element
 ---
 
@@ -32,7 +32,8 @@ meter::-webkit-meter-inner-element {
 
 {{ EmbedLiveSample('Ejemplos', '100%', 50) }}
 
-> **Nota:** Sólo funcionará en navegadores basasdo en Webkit/Blink.
+> [!NOTE]
+> Sólo funcionará en navegadores basasdo en Webkit/Blink.
 
 ## Especificaciones
 

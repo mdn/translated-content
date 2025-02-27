@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Storage")}}
 
-{{domxref("StorageManager")}} インターフェイスの **`getDirectory()`** メソッドは、[オリジンプライベートファイルシステム](/ja/docs/Web/API/File_System_Access_API#origin_private_file_system) (OPFS) に保存されたディレクトリーとその中身へのアクセスを可能にする {{domxref("FileSystemDirectoryHandle")}} オブジェクトへの参照を取得するために使用されます。
+{{domxref("StorageManager")}} インターフェイスの **`getDirectory()`** メソッドは、[オリジンプライベートファイルシステム](/ja/docs/Web/API/File_System_API#origin_private_file_system) (OPFS) に保存されたディレクトリーとその中身へのアクセスを可能にする {{domxref("FileSystemDirectoryHandle")}} オブジェクトへの参照を取得するために使用されます。
 
 ## 構文
 
@@ -69,7 +69,8 @@ onmessage = async (e) => {
 };
 ```
 
-> **メモ:** 仕様の以前のバージョンでは、{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}・{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}・{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}・{{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} は誤って非同期メソッドとされていました。これは現在では[変更されています](https://github.com/whatwg/fs/issues/7)が、まだ非同期バージョンをサポートしているブラウザーもあります。
+> [!NOTE]
+> 仕様の以前のバージョンでは、{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}・{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}・{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}・{{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} は誤って非同期メソッドとされていました。これは現在では[変更されています](https://github.com/whatwg/fs/issues/7)が、まだ非同期バージョンをサポートしているブラウザーもあります。
 
 ## 仕様書
 

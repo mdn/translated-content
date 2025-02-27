@@ -85,7 +85,8 @@ function displayDataByIndex() {
 }
 ```
 
-> **Note :** pour un exemple fonctionnel complet, voir notre [exemple sur GitHub](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbindex) ([la démonstration associée](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
+> [!NOTE]
+> Pour un exemple fonctionnel complet, voir notre [exemple sur GitHub](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbindex) ([la démonstration associée](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
 
 ## Spécifications
 
@@ -97,7 +98,7 @@ function displayDataByIndex() {
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Initier une connexion : {{domxref("IDBDatabase")}}
 - Utiliser les transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
