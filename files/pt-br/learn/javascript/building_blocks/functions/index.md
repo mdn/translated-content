@@ -10,18 +10,22 @@ Outro conceito essencial em código é função, que permitem que você armazene
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prerequisitos:</th>
-      <td>
-        Infrmática básica, um entendimento básico de HTML e CSS,
-        <a href="/pt-BR/docs/Learn/JavaScript/First_steps"
-          >Primeiros passos em JavaScript</a
-        >.
-      </td>
+      <th scope="row">Pré-requisitos:</th>
+      <td>Compreensão de <a href="https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Core/Structuring_content">HTML</a> e dos <a href="https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Core/Styling_basics">fundamentos de CSS</a>, além de familiaridade com os conceitos básicos de JavaScript abordados em lições anteriores.</td>
     </tr>
     <tr>
-      <th scope="row">Objetivo:</th>
+      <th scope="row">Objetivos:</th>
       <td>
-        Entender conceitos fundamentais por trás das funções em JavaScript.
+        <ul>
+          <li>O propósito das funções — permitir a criação de blocos reutilizáveis de código que podem ser chamados sempre que necessário.</li>
+          <li>As funções são usadas em toda parte no JavaScript, algumas são integradas ao navegador e outras são definidas pelo usuário.</li>
+          <li>A diferença entre funções e métodos.</li>
+          <li>Invocação de funções.</li>
+          <li>Funções anônimas e funções de seta (arrow functions).</li>
+          <li>Definição de parâmetros de função e passagem de argumentos para chamadas de função.</li>
+          <li>Escopo global e escopo de função/bloco.</li>
+          <li>Compreensão do que são funções de callback.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
