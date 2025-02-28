@@ -1,11 +1,14 @@
 ---
-title: 使用 userScript
+title: 使用 userScript（旧版）
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/Working_with_userScripts
 l10n:
-  sourceCommit: 0b956178ef19e8fc3981ed97dc6659d5a63f59a6
+  sourceCommit: 6b26a56826b43f539b79033378683bb3be5bbba9
 ---
 
 {{AddonSidebar}}
+
+> [!WARNING]
+> 本文档针对旧版 `userScripts` API 编写，适用于 Firefox Manifest V2 版本。如希望在 Manifest V3 中使用用户脚本功能，可参见新的 {{WebExtAPIRef("userScripts")}} API。
 
 通过实现 userScript，扩展开发者可以修改网站的外观和/或功能，以更好地满足用户需求。
 
