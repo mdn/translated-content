@@ -11,7 +11,7 @@ slug: Web/HTTP/Status/302
 搜索引擎收到此响应后，不会将原始 URL 的链接归属于新资源，这意味着不会将任何 {{Glossary("SEO")}} 值传递给新 URL。
 
 > [!NOTE]
-> 在[Fetch 标准](https://fetch.spec.whatwg.org/#http-redirect-fetch)中，当用户代理收到对 {{HTTPMethod("POST")}} 请求的 `302` 响应时，它会在随后的重定向请求中使用 {{HTTPMethod("GET")}} 方法，这是根据 HTTP [规范](#specifications)允许的。
+> 在 [Fetch 标准](https://fetch.spec.whatwg.org/#http-redirect-fetch)中，当用户代理收到对 {{HTTPMethod("POST")}} 请求的 `302` 响应时，它会在随后的重定向请求中使用 {{HTTPMethod("GET")}} 方法，这是根据 HTTP [规范](#specifications)允许的。
 > 为了避免用户代理修改请求，请改用 {{HTTPStatus("307", "307 Temporary Redirect")}}，因为在 `307` 响应后方法变换是明确禁止的。
 >
 > 在确实需要将重定向请求的方法转换为 {{HTTPMethod("GET")}} 的场景下，可以使用 {{HTTPStatus("303", "303 See Other")}}。
