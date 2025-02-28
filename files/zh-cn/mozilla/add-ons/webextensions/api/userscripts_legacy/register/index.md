@@ -2,7 +2,7 @@
 title: userScripts.register()（旧版）
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/register
 l10n:
-  sourceCommit: d681d0262045649aefa02efb937ff5f22b6e3b2a
+  sourceCommit: 6b26a56826b43f539b79033378683bb3be5bbba9
 ---
 
 {{AddonSidebar}}
