@@ -24,7 +24,7 @@ l10n:
 要使用该 API，请调用 {{WebExtAPIRef("userScripts.register","register()")}} 方法，传入一个定义要注册的脚本的对象。该方法将返回一个 Promise，其将以 {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} 对象的形式兑现。
 
 > [!NOTE]
-> 用户脚本在相关的扩展页面（从中注册了用户脚本）被卸载时会被注销。因此，因此，你应当在一个存活时间至少与你的用户脚本相当的扩展页面中注册该脚本。
+> 用户脚本在相关的扩展页面（从中注册了用户脚本）被卸载时会被注销。因此，你应当在一个存活时间至少与你的用户脚本相当的扩展页面中注册该脚本。
 
 ## 类型
 
