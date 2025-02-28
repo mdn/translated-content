@@ -549,7 +549,7 @@
 /ja/docs/CSS_Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
 /ja/docs/CSS_Reference:Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
 /ja/docs/CSS_User_Interface	/ja/docs/Web/CSS/CSS_basic_user_interface
-/ja/docs/CSS_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/conflicting/Web/CSS/cursor
+/ja/docs/CSS_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/Web/CSS/cursor
 /ja/docs/Canvas	/ja/docs/Web/API/Canvas_API
 /ja/docs/Canvas/Text	/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /ja/docs/Canvas:Text	/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text
@@ -2870,7 +2870,7 @@
 /ja/docs/Using_HTML5_audio_and_video	/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 /ja/docs/Using_HTML5_audio_and_video-redirect-1	/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 /ja/docs/Using_HTML5_audio_and_video_in_Firefox	/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
-/ja/docs/Using_URL_values_for_the_cursor_property	/ja/docs/conflicting/Web/CSS/cursor
+/ja/docs/Using_URL_values_for_the_cursor_property	/ja/docs/Web/CSS/cursor
 /ja/docs/Using_XMLHttpRequest	/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /ja/docs/Using_XPath	/ja/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript
 /ja/docs/Using_audio_and_video_in_Firefox	/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
@@ -3944,7 +3944,7 @@
 /ja/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
 /ja/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 /ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
-/ja/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/conflicting/Web/CSS/cursor
+/ja/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/CSS_Color	/ja/docs/Web/CSS/CSS_colors
 /ja/docs/Web/CSS/CSS_Columns	/ja/docs/Web/CSS/CSS_multicol_layout
 /ja/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol	/ja/docs/Web/CSS/CSS_multicol_layout/Basic_concepts
@@ -4003,7 +4003,7 @@
 /ja/docs/Web/CSS/CSS_Text/Wrapping_Text	/ja/docs/Web/CSS/CSS_text/Wrapping_breaking_text
 /ja/docs/Web/CSS/CSS_Types	/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types
 /ja/docs/Web/CSS/CSS_User_Interface	/ja/docs/Web/CSS/CSS_basic_user_interface
-/ja/docs/Web/CSS/CSS_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/conflicting/Web/CSS/cursor
+/ja/docs/Web/CSS/CSS_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/CSS_Variables	/ja/docs/Web/CSS/CSS_cascading_variables
 /ja/docs/Web/CSS/CSS_animations/Tips	/ja/docs/Web/API/Web_Animations_API/Tips
 /ja/docs/Web/CSS/CSS_charsets	/ja/docs/Web/CSS/CSS_syntax
