@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-{{DOMXref("Location")}} 接口的 **reload()`** 方法重载当前 URL，就像刷新按钮一样。
+{{DOMXref("Location")}} 接口的 **`reload()`** 方法重载当前 URL，就像刷新按钮一样。
 
 ## 语法
 
