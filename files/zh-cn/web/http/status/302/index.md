@@ -44,6 +44,6 @@ Content-Length: 0
 
 - [HTTP 的重定向](/zh-CN/docs/Web/HTTP/Redirections)
 - [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Status)
-- {{HTTPStatus("307", "307 Temporary Redirect")}}, equivalent to `302` but the request method is not modified
-- {{HTTPStatus("303", "303 See Other")}}, a temporary redirect that changes the method to {{HTTPMethod("GET")}}
-- {{HTTPStatus("301", "301 Moved Permanently")}}, a permanent redirect.
+- {{HTTPStatus("307", "307 Temporary Redirect")}}，相当于 `302`，但请求方法未作修改。
+- {{HTTPStatus("303", "303 See Other")}}，临时重定向，并将方法更改为 {{HTTPMethod("GET")}}
+- {{HTTPStatus("301", "301 Moved Permanently")}}，永久重定向。
