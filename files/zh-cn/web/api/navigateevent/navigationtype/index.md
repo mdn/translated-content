@@ -28,7 +28,7 @@ l10n:
 
 ```js
 navigation.addEventListener("navigate", (event) => {
-  // 有些导航，例如跨域导航，我们无法拦截。让浏览器正常处理这些导航。
+  // 有些导航，例如跨源导航，我们无法拦截。让浏览器正常处理这些导航。
   if (!event.canIntercept) {
     return;
   }
