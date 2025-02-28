@@ -1,11 +1,14 @@
 ---
-title: userScripts.register()
-slug: Mozilla/Add-ons/WebExtensions/API/userScripts/register
+title: userScripts.register()（旧版）
+slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/register
 l10n:
   sourceCommit: d681d0262045649aefa02efb937ff5f22b6e3b2a
 ---
 
 {{AddonSidebar}}
+
+> [!WARNING]
+> 本文档针对旧版 `userScripts` API 编写，适用于 Firefox Manifest V2 版本。如希望在 Manifest V3 中使用用户脚本功能，可参见新的 {{WebExtAPIRef("userScripts")}} API。
 
 该方法允许从扩展的页面（例如后台页面）注册用户脚本。
 
@@ -59,7 +62,7 @@ await registeredUserScript.unregister();
 {{JSxRef("Promise")}}，会兑现为一个用于注销用户脚本的 {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} 对象。
 
 > [!NOTE]
-> 用户脚本在相关的扩展页面（从中注册了用户脚本）卸载时会被自动注销，因此你应该从一个至少持续到你希望用户脚本保持注册的扩展页面中注册用户脚本。
+> 当与用户脚本相关联的扩展页面（注册了用户脚本的页面）被卸载时，用户脚本将被自动注销。因此，你应当从一个生命周期足够长的扩展页面注册用户脚本 —— 这一页面的存续时间应至少需要覆盖你期望用户脚本保持注册状态的整个周期。
 
 ## 浏览器兼容性
 
