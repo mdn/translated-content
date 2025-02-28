@@ -2,10 +2,8 @@
 title: 仕様書一覧表
 slug: MDN/Writing_guidelines/Page_structures/Specification_tables
 l10n:
-  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
+  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
 ---
-
-{{MDNSidebar}}
 
 MDN 上のすべてのリファレンスページでは、 API または技術が定義されている仕様書に関する情報を提供するようにしてください。この記事ではこれらの表の外見を示し、構築方法を説明します。
 
