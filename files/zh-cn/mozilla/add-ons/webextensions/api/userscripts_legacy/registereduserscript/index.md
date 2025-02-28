@@ -2,7 +2,7 @@
 title: userScripts.RegisteredUserScript（旧版）
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/RegisteredUserScript
 l10n:
-  sourceCommit: 668b38a4f6cd96609b9a969fe4653b46aec4e712
+  sourceCommit: 6b26a56826b43f539b79033378683bb3be5bbba9
 ---
 
 {{AddonSidebar}}
