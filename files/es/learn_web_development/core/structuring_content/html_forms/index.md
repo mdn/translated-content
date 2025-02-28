@@ -293,7 +293,6 @@ Si no utiliza los elementos semánticos correctos para implementar sus formulari
 Hay muchos otros tipos de controles que puede utilizar para recopilar datos en un formulario. Veamos un ejemplo un poco más complejo y luego lo exploraremos y explicaremos.
 
 > [!NOTE]
->
 > En este ejemplo, asumimos que el usuario ya está registrado e iniciado la sesión, por lo que no es necesario recopilar datos como el nombre y el correo electrónico.
 
 ```html live-sample___form-other-controls
