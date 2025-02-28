@@ -7,7 +7,7 @@ slug: Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 
 {{NextMenu("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills")}}
 
-作为一名 web 开发人员，需要掌握的知识很多，而且需要不断学习。但如何才能最有效地找到自己需要的知识呢？本文将为您提供研究和学习方面的实用技巧。
+作为一名 web 开发人员，需要掌握的知识很多，而且需要不断学习。但如何才能最有效地找到自己需要的知识呢？本文将为你提供研究和学习方面的实用技巧。
 
 <table>
   <tbody>
