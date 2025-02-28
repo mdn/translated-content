@@ -9,7 +9,7 @@ l10n:
 
 **`EvalError`** オブジェクトは、グローバルの {{jsxref("Global_Objects/eval", "eval()")}} 関数に関するエラーを示します。この例外はもう JavaScript からは発生しなくなっていますが、互換性のために `EvalError` オブジェクトが残っています。
 
-`EvalError` は {{Glossary("serializable object")}} ですので、{{DOMxRef("Window.structuredClone", "structuredClone()")}} でクローンされるか、 or {{domxref("Worker/postMessage()", "postMessage()")}} を使い [Workers](/ja/docs/Web/API/Worker) の間でコピーされます。
+`EvalError` は {{Glossary("serializable object","シリアライズ可能オブジェクト")}} ですので、{{DOMxRef("Window.structuredClone", "structuredClone()")}} でクローンされるか、{{domxref("Worker/postMessage()", "postMessage()")}} を使い [ワーカー](/ja/docs/Web/API/Worker) の間でコピーされます。
 
 `EvalError` は {{jsxref("Error")}} のサブクラスです。
 
