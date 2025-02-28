@@ -1,5 +1,6 @@
 ---
 title: Combinadores
+slug: Learn_web_development/Core/Styling_basics/Combinators
 l10n:
   sourceCommit: a92e10b293358bc796c43d5872a8981fd988a005
 ---
