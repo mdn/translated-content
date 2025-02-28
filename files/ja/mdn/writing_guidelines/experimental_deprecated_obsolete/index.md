@@ -2,10 +2,8 @@
 title: 実験的、非推奨、廃止
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
 l10n:
-  sourceCommit: ce83b64f1132a29a19471e46bfffced755f775eb
+  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
 ---
-
-{{MDNSidebar}}
 
 これらの用語は、技術や仕様と一般的に関連しており、 MDN Web Docs で技術の状態をラベル付けするために使用されます。これらの用語の定義については、 MDN Web Docs は [Browser Compatibility Data (BCD)](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information) リポジトリーと連携しています。
 これらの用語は、 MDN Web Docs で使用するという文脈で下記に記述します。
