@@ -1,7 +1,7 @@
 ---
 title: Aprender y obtener ayuda
-slug: Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help
-original_slug: Learn/Learning_and_getting_help
+slug: Learn_web_development/Getting_started/Soft_skills/Research_and_learning
+original_slug: Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help
 ---
 
 {{learnsidebar}}
