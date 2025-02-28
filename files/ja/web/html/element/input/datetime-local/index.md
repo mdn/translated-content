@@ -9,7 +9,33 @@ l10n:
 
 {{htmlelement("input")}} 要素の **`datetime-local`** 型は、ユーザーが簡単に日付と時刻、つまり年、月、日と時、分を入力することができる入力コントロールを生成します。ユーザーのローカルタイムゾーンが使用されます。
 
-{{EmbedInteractiveExample("pages/tabbed/input-datetime-local.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;datetime-local&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="meeting-time">Choose a time for your appointment:</label>
+
+<input
+  type="datetime-local"
+  id="meeting-time"
+  name="meeting-time"
+  value="2018-06-12T19:30"
+  min="2018-06-07T00:00"
+  max="2018-06-14T00:00" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 このコントロールの UI は一般的にブラウザーによって異なります。このコントロールは、ローカルの日付と時刻を意図通りに表示しますが、必ずしもユーザーの地域の日付と時刻を表示するわけではありません。言い換えれば、この入力フィールドは、ユーザーの地域のタイムゾーンでは不正な組み合わせ（夏時間の切り替え移行期間の 1 時間など）であっても、年、月、日、時、分を任意に組み合わせることができます。
 

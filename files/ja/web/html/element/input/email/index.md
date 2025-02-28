@@ -9,7 +9,27 @@ l10n:
 
 {{HTMLElement("input")}} 要素の **`email`** 型は、ユーザーに一つのメールアドレス、または、 [`multiple`](/ja/docs/Web/HTML/Attributes/multiple) 属性が設定されていた場合は、メールアドレスのリストを入力および編集させるために使用します。
 
-{{EmbedInteractiveExample("pages/tabbed/input-email.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="email">Enter your example.com email:</label>
+
+<input type="email" id="email" pattern=".+@example\.com" size="30" required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 入力値はフォームの送信前に自動的に検証され、空欄または正しい形式のメールアドレス (またはメールアドレスのリスト) のどちらかであることが確認されます。 CSS の {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラスが自動的に適用され、フィールド上の現在の値が妥当なメールアドレスであるかどうかを視覚的に示します。
 
