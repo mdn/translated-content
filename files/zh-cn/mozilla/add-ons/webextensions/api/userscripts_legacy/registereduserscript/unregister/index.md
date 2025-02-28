@@ -1,11 +1,14 @@
 ---
-title: RegisteredUserScript.unregister()
-slug: Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister
+title: RegisteredUserScript.unregister()（旧版）
+slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/RegisteredUserScript/unregister
 l10n:
   sourceCommit: 668b38a4f6cd96609b9a969fe4653b46aec4e712
 ---
 
 {{AddonSidebar}}
+
+> [!WARNING]
+> 本文档针对旧版 `userScripts` API 编写，适用于 Firefox Manifest V2 版本。如希望在 Manifest V3 中使用用户脚本功能，可参见新的 {{WebExtAPIRef("userScripts")}} API。
 
 {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} 对象的 `unregister()` 方法注销由该对象表示的用户脚本（用户脚本是使用 {{WebExtAPIRef("userScripts.register","userScripts.register()")}} 注册的）。
 
