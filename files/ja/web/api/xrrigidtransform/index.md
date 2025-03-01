@@ -52,7 +52,7 @@ xrSession.requestReferenceSpace(refSpaceType)
   animationFrameRequestID = xrSession.requestAnimationFrame(drawFrame);
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

@@ -11,10 +11,10 @@ CSS **`position`** 属性用于指定一个元素在文档中的定位方式。{
 
 ### 定位类型
 
-- **定位元素**（positioned element）是其[计算后](/zh-CN/docs/Web/CSS/computed_value)位置属性为 `relative`, `absolute`, `fixed` 或 `sticky` 的一个元素（换句话说，除`static`以外的任何东西）。
-- **相对定位元素**（relatively positioned element）是[计算后](/zh-CN/docs/Web/CSS/computed_value)位置属性为 `relative`的元素。
-- **绝对定位元素**（absolutely positioned element）是[计算后](/zh-CN/docs/Web/CSS/computed_value)位置属性为 `absolute` 或 `fixed` 的元素。
-- **粘性定位元素**（stickily positioned element）是[计算后](/zh-CN/docs/Web/CSS/computed_value)位置属性为 `sticky` 的元素。
+- **定位元素**（positioned element）是其[计算后](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)位置属性为 `relative`, `absolute`, `fixed` 或 `sticky` 的一个元素（换句话说，除`static`以外的任何东西）。
+- **相对定位元素**（relatively positioned element）是[计算后](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)位置属性为 `relative`的元素。
+- **绝对定位元素**（absolutely positioned element）是[计算后](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)位置属性为 `absolute` 或 `fixed` 的元素。
+- **粘性定位元素**（stickily positioned element）是[计算后](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)位置属性为 `sticky` 的元素。
 
 大多数情况下，{{Cssxref("height")}}和{{Cssxref("width")}} 被设定为 auto 的绝对定位元素，按其内容大小调整尺寸。但是，被绝对定位的元素可以通过指定{{Cssxref("top")}}和{{Cssxref("bottom")}} ，保留{{Cssxref("height")}}未指定（即`auto`），来填充可用的垂直空间。它们同样可以通过指定{{Cssxref("left")}} 和 {{Cssxref("right")}}并将{{Cssxref("width")}} 指定为`auto`来填充可用的水平空间。
 

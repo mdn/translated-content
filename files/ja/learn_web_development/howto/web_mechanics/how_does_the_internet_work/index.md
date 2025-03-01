@@ -1,7 +1,6 @@
 ---
 title: インターネットの仕組み
 slug: Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
-original_slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
 l10n:
   sourceCommit: 8dfa0ecf5bda526ccd6244ca5c7720767e3f013f
 ---
@@ -15,7 +14,7 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        ありませんが、最初に<a href="/ja/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding"
+        ありませんが、最初に<a href="/ja/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding"
           >プロジェクトの目標を設定することの記事</a
         >を先に読むことをおすすめします。
       </td>
@@ -109,5 +108,5 @@ l10n:
 ## 次のステップ
 
 - [ウェブのしくみ](/ja/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
-- [ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンの違いは？](/ja/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines)
-- [ドメイン名とは？](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンの違いは？](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web)
+- [ドメイン名とは？](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)

@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 
 La propriéte **`Number.POSITIVE_INFINITY`** représente l'infini (positif).
 
-{{EmbedInteractiveExample("pages/js/number-positive-infinity.html")}}
+{{InteractiveExample("JavaScript Demo: Number.POSITIVE_INFINITY")}}
+
+```js interactive-example
+function checkNumber(bigNumber) {
+  if (bigNumber === Number.POSITIVE_INFINITY) {
+    return "Process number as Infinity";
+  }
+  return bigNumber;
+}
+
+console.log(checkNumber(Number.MAX_VALUE));
+// Expected output: 1.7976931348623157e+308
+
+console.log(checkNumber(Number.MAX_VALUE * 2));
+// Expected output: "Process number as Infinity"
+```
 
 {{js_property_attributes(0,0,0)}}
 

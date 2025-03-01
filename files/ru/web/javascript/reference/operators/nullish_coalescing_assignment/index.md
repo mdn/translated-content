@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
 
 Оператор логического нулевого присваивания (`x ??= y`) присваивает значение переменной `x`, если она содержит {{Glossary("nullish", "похожее на null значение")}} (`null` или `undefined`).
 
-{{EmbedInteractiveExample("pages/js/expressions-nullish-coalescing-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing assignment")}}
+
+```js interactive-example
+const a = { duration: 50 };
+
+a.speed ??= 25;
+console.log(a.speed);
+// Expected output: 25
+
+a.duration ??= 10;
+console.log(a.duration);
+// Expected output: 50
+```
 
 ## Синтаксис
 

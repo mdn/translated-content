@@ -73,7 +73,7 @@ navigator.storage.estimate().then((estimate) => {
 });
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

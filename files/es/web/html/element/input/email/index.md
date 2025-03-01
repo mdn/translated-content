@@ -7,7 +7,27 @@ slug: Web/HTML/Element/input/email
 
 Los elementos {{HTMLElement("input")}} de tipo **`email`** se utilizan para permitir que el usuario ingrese y edite una dirección de correo electrónico o, si se especifica el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple), una lista de direcciones de correo.
 
-{{EmbedInteractiveExample("pages/tabbed/input-email.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="email">Enter your example.com email:</label>
+
+<input type="email" id="email" pattern=".+@example\.com" size="30" required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 El valor de la entrada es automáticamente validado para asegurarse que no está vacía o que el correo (o la lista de correos) introducidos están con el formato correcto antes de que el formulario puede ser enviado. Las pseudoclases {{cssxref(":valid")}} e {{cssxref(":invalid")}} son automáticamente aplicadas como corresponde para denotar visualmente si el valor actual del campo es una dirección válida de correo o no.
 
