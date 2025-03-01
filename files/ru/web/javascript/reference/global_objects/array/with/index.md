@@ -81,7 +81,7 @@ const arrayLike = {
   unrelated: "foo",
   0: 5,
   2: 4,
-  3: 3, // игнорируется, так как длина равна трём
+  3: 3, // игнорируется, так как длина равна 3
 };
 console.log(Array.prototype.with.call(arrayLike, 0, 1));
 // [ 1, undefined, 4 ]
