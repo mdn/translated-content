@@ -16,7 +16,39 @@ l10n:
 
 `minlength` は [`required`](/ja/docs/Web/HTML/Attributes/required) の意味を含みません。入力欄が `minlength` 制約に違反するのは、ユーザーが値を入力した場合のみです。入力欄に `required` が設定されていない場合、 `minlength` を設定していても、空文字列を送信することができます。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-minlength.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: minlength", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="name">Product name:</label>
+<input
+  id="name"
+  name="name"
+  type="text"
+  value="Shampoo"
+  minlength="3"
+  maxlength="20"
+  required />
+
+<label for="description">Product description:</label>
+<textarea
+  id="description"
+  name="description"
+  minlength="10"
+  maxlength="40"
+  required></textarea>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:valid,
+textarea:valid {
+  background-color: palegreen;
+}
+```
 
 ## 例
 

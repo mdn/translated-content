@@ -72,13 +72,13 @@ getUserMedia(constraints)
 - `SecurityError` {{domxref("DOMException")}}
   - : `getUserMedia()`が呼び出された {{domxref("Document")}} において、ユーザーメディアの対応が無効な場合に発生します。ユーザーメディアの対応が有効になったり無効になったりする仕組みは、個々のユーザーエージェントに任されています。
 - {{jsxref("TypeError")}}
-  - : 指定された制約のリストが空であるか、すべての制約が `false` に設定されている場合に発生します。これは、安全でないコンテキストで `getUserMedia()` を呼び出そうとした場合にも発生します。これは、{{domxref("navigator.mediaDevices")}} は安全でないコンテキストでは `undefined` であるからです。
+  - : 指定された制約のリストが空であるか、すべての制約が `false` に設定されている場合に発生します。これは、保護されていないコンテキストで `getUserMedia()` を呼び出そうとした場合にも発生します。これは、{{domxref("navigator.mediaDevices")}} は保護されていないコンテキストでは `undefined` であるからです。
 
 ## プライバシーとセキュリティ
 
 プライバシーに関わる重要な API として、 `getUserMedia()` の仕様は、ブラウザーが満たすべきプライバシーとセキュリティに関する広範な要件を規定しています。
 
-`getUserMedia()` は強力な機能ですが、[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ使用できます。安全でないコンテキストでは `navigator.mediaDevices` は `undefined` で、 `getUserMedia()` にアクセスすることができなくなります。安全なコンテキストとは、簡単に言うと、 HTTPS や `file:///` URL スキームを使って読み込まれたページ、あるいは `localhost` から読み込まれたページのことです。
+`getUserMedia()` は強力な機能ですが、[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ使用できます。保護されていないコンテキストでは `navigator.mediaDevices` は `undefined` で、 `getUserMedia()` にアクセスすることができなくなります。保護されたコンテキストとは、簡単に言うと、 HTTPS や `file:///` URL スキームを使って読み込まれたページ、あるいは `localhost` から読み込まれたページのことです。
 
 さらに、ユーザーの音声と動画の入力にアクセスするためには、常にユーザーの許可が必要です。有効なオリジンにおけるウィンドウの最上位の文書コンテキストのみが、 `getUserMedia()` を用いて権限をリクエストすることができます。ただし、最上位のコンテキストが該当する {{HTMLElement("iframe")}} に[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)を用いてその権限を明示的に許可した場合は例外です。そうでなければ、ユーザーは入力機器を使用する許可を求められることすらありません。
 
@@ -121,13 +121,13 @@ Permissions-Policy: microphone=(self "https://developer.mozilla.org")
 
 #### 暗号化ベースのセキュリティ
 
-`getUserMedia()` メソッドは[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)においてのみ利用可能です。安全なコンテキストとは、ブラウザーが HTTPS/TLS を使って安全に読み込まれた文書を含んでいると合理的に確信できるもので、安全でないコンテキストにさらされることは限定されています。文書が安全なコンテキストで読み込まれなかった場合、 {{domxref("navigator.mediaDevices")}} プロパティは `undefined` となり、 `getUserMedia()` へのアクセスが不可能になります。
+`getUserMedia()` メソッドは[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)においてのみ利用可能です。保護されたコンテキストとは、ブラウザーが HTTPS/TLS を使って安全に読み込まれた文書を含んでいると合理的に確信できるもので、保護されていないコンテキストにさらされることは限定されています。文書が保護されたコンテキストで読み込まれなかった場合、 {{domxref("navigator.mediaDevices")}} プロパティは `undefined` となり、 `getUserMedia()` へのアクセスが不可能になります。
 
 この状態で `getUserMedia()` にアクセスしようとすると {{jsxref("TypeError")}} が発生します。
 
 #### 文書ソースセキュリティ
 
-`getUserMedia()` は、予期せず使用された場合やセキュリティが慎重に管理されていない場合には、明らかにセキュリティ上の問題があるため、安全なコンテキストでのみ使用することができます。次に `getUserMedia()` を呼び出そうとするような、安全でない方法で文書を読み込む方法はいくつもあります。以下は `getUserMedia()` を呼び出すことが許されない状況の例です。
+`getUserMedia()` は、予期せず使用された場合やセキュリティが慎重に管理されていない場合には、明らかにセキュリティ上の問題があるため、保護されたコンテキストでのみ使用することができます。次に `getUserMedia()` を呼び出そうとするような、安全でない方法で文書を読み込む方法はいくつもあります。以下は `getUserMedia()` を呼び出すことが許されない状況の例です。
 
 - サンドボックス化された {{HTMLElement("iframe")}} 要素に読み込まれた文書は、 `<iframe>` の [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) 属性が `allow-same-origin` に設定されていなければ `getUserMedia()` を呼び出すことができません。
 - オリジンを持たない `data://` や `blob://` の URL を使って読み込まれた文書（例えば、これらの URL のいずれかがユーザーによってアドレスバー入力された場合）は、 `getUserMedia()` を呼び出すことができません。 JavaScript のコードから読み込まれたこれらの種類の URL は、スクリプトの権限を継承します。

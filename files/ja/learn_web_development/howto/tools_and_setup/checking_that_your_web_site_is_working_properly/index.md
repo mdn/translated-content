@@ -1,7 +1,6 @@
 ---
 title: ウェブサイトが正しく動作することを確認するには
 slug: Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
-original_slug: Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
@@ -16,7 +15,7 @@ l10n:
       <th scope="row">前提条件:</th>
       <td>
         <a
-          href="/ja/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server"
+          href="/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server"
           >ウェブサーバーにファイルをアップロードする</a
         >方法を知っている必要があります。
       </td>
@@ -89,7 +88,7 @@ Firefox のネットワークツール (**ツール ➤ ウェブ開発者 ➤ �
 
 !['s' を削除します。](code-correct.png)
 
-保存して[サーバーにプッシュし](/ja/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)、ブラウザーでページを再読み込みします。
+保存して[サーバーにプッシュし](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)、ブラウザーでページを再読み込みします。
 
 ![画像はブラウザーで正しく読み込まれます。](image-corrected.png)
 
@@ -124,7 +123,7 @@ Firefox のネットワークツール (**ツール ➤ ウェブ開発者 ➤ �
 
 ![JavaScript エラーがコンソールに表示されます。](js-error.png)
 
-この例では、エラーが何かを（非常に明確に）知り、修正することができます（[別の一連](/ja/docs/Learn/JavaScript)の記事で JavaScript について説明します）。
+この例では、エラーが何かを（非常に明確に）知り、修正することができます（[別の一連](/ja/docs/Learn_web_development/Core/Scripting)の記事で JavaScript について説明します）。
 
 ### その他の事項を確認する
 
@@ -167,5 +166,5 @@ round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
 
 おめでとうございます、ウェブサイトは誰もが訪れることができるようになっています。それは大きな成果です。これで、さまざまなテーマに深く掘り下げていくことができます。
 
-- 人々は世界中からあなたのウェブサイトに来ることができるので、あなたはそれを[誰にでもアクセス可能](/ja/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility)にすることを考慮すべきです。
-- ウェブサイトのデザインは少し荒すぎますか？ [CSS についてもっと学ぶ](/ja/docs/Learn/CSS/First_steps/How_CSS_works)時が来ました。
+- 人々は世界中からあなたのウェブサイトに来ることができるので、あなたはそれを[誰にでもアクセス可能](/ja/docs/Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility)にすることを考慮すべきです。
+- ウェブサイトのデザインは少し荒すぎますか？ [CSS についてもっと学ぶ](/ja/docs/Learn_web_development/Core/Styling_basics/First_steps/How_CSS_works)時が来ました。

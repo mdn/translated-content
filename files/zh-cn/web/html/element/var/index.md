@@ -9,7 +9,21 @@ l10n:
 
 [HTML](/zh-CN/docs/Web/HTML) **`<var>`** 元素表示数学表达式或编程上下文中的变量名称。它通常使用当前字体的斜体版本来显示，不过这种行为取决于浏览器。
 
-{{EmbedInteractiveExample("pages/tabbed/var.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;var&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where
+  <var>l</var> represents the length, <var>w</var> the width and
+  <var>h</var> the height of the box.
+</p>
+```
+
+```css interactive-example
+var {
+  font-weight: bold;
+}
+```
 
 ## 属性
 

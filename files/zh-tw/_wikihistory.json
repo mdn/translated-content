@@ -5899,15 +5899,6 @@
       "xsfishxs"
     ]
   },
-  "Web/Manifest": {
-    "modified": "2020-11-18T03:32:37.890Z",
-    "contributors": [
-      "SphinxKnight",
-      "wifr1126q",
-      "t7yang",
-      "BwayCer"
-    ]
-  },
   "Web/MathML": {
     "modified": "2019-03-23T23:22:17.865Z",
     "contributors": [
@@ -5932,6 +5923,15 @@
     "contributors": [
       "chrisdavidmills",
       "iigmir"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest": {
+    "modified": "2020-11-18T03:32:37.890Z",
+    "contributors": [
+      "SphinxKnight",
+      "wifr1126q",
+      "t7yang",
+      "BwayCer"
     ]
   },
   "Web/SVG": {

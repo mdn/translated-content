@@ -20,7 +20,7 @@ _{{domxref("XRReferenceSpace")}} のプロパティに加えて、`XRBoundedRefe
 
 _`XRBoundedReferenceSpace` は、その親インターフェイスである {{domxref("XRReferenceSpace")}} のメソッドを継承します。 それ以上のメソッドはありません。_
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

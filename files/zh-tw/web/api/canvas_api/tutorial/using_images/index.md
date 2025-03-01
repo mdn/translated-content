@@ -78,7 +78,7 @@ img.src = "myImage.png"; // Set source path
 
 ### 以 data:URL 嵌入影像
 
-另一個載入影像的方法是利用[data: url](/zh-TW/docs/Web/URI/Schemes/data)，透過 data URL 可以直接將影像定義成 Base64 編碼的字串，然後嵌入程式碼之中.
+另一個載入影像的方法是利用 [data: url](/zh-TW/docs/Web/URI/Reference/Schemes/data)，透過 data URL 可以直接將影像定義成 Base64 編碼的字串，然後嵌入程式碼之中.
 
 ```js
 var img_src =

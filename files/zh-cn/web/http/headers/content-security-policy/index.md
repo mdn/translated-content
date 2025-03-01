@@ -2,7 +2,7 @@
 title: Content-Security-Policy (CSP)
 slug: Web/HTTP/Headers/Content-Security-Policy
 l10n:
-  sourceCommit: df9d06402163f77fc3e2d327ab63f9dd4af15b38
+  sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
 ---
 
 {{HTTPSidebar}}
@@ -240,7 +240,7 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 
 ### \<scheme-source>
 
-表示一种[协议](/zh-CN/docs/Web/URI/Schemes)，例如 `https:`。必须包含冒号。
+表示一种[方案](/zh-CN/docs/Web/URI/Reference/Schemes)，例如 `https:`。必须包含冒号。
 
 允许安全升级，因此：
 

@@ -75,7 +75,7 @@ _媒体特性_（media feature）描述了{{glossary("user agent", "用户代理
 - {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}
   - : 输出设备渲染表面的宽度。于媒体查询第 4 版中被弃用。
 - {{cssxref("@media/display-mode", "display-mode")}}
-  - : 应用程序的显示模式，显示模式由 web 应用的清单（manifest）中的 [`display`](/zh-CN/docs/Web/Manifest#display) 成员所指定。定义于 [Web App Manifest 规范](https://w3c.github.io/manifest/#the-display-mode-media-feature)。
+  - : 应用程序的显示模式，显示模式由 web 应用的清单（manifest）中的 [`display`](/zh-CN/docs/Web/Progressive_web_apps/Manifest#display) 成员所指定。定义于 [Web App Manifest 规范](https://w3c.github.io/manifest/#the-display-mode-media-feature)。
 - {{cssxref("@media/dynamic-range", "dynamic-range")}}
   - : 用户代理和输出设备支持的亮度、对比度和色彩深度的组合。于媒体查询第 5 版中被添加。
 - {{cssxref("@media/forced-colors", "forced-colors")}}

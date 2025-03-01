@@ -7,7 +7,15 @@ slug: Web/HTML/Element/embed
 
 **`<embed>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於在文件中指定的位置嵌入外部內容。這個內容是由外部應用程序或其他互動內容來源（如瀏覽器插件）提供的。
 
-{{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;embed&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<embed
+  type="video/mp4"
+  src="/shared-assets/videos/flower.mp4"
+  width="250"
+  height="200" />
+```
 
 > [!NOTE]
 > 本主題僅記錄了作為 [HTML Living Standard](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element) 一部分所定義的元素。它不涉及元素的早期、非標準化實現。

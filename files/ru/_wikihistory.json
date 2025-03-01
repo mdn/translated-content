@@ -931,7 +931,7 @@
       "b.zvyagintsev"
     ]
   },
-  "Glossary/Forbidden_header_name": {
+  "Glossary/Forbidden_request_header": {
     "modified": "2020-11-27T14:27:47.971Z",
     "contributors": [
       "robert491",
@@ -6885,18 +6885,18 @@
       "Lambrusco.pro"
     ]
   },
+  "Web/API/File_System_API": {
+    "modified": "2019-03-23T22:06:14.603Z",
+    "contributors": [
+      "egorshulga"
+    ]
+  },
   "Web/API/File_and_Directory_Entries_API": {
     "modified": "2020-10-15T21:56:47.477Z",
     "contributors": [
       "SphinxKnight",
       "svetley1",
       "tocretpa"
-    ]
-  },
-  "Web/API/File_and_Directory_Entries_API/Introduction": {
-    "modified": "2019-03-23T22:06:14.603Z",
-    "contributors": [
-      "egorshulga"
     ]
   },
   "Web/API/FontFace": {
@@ -20742,121 +20742,6 @@
       "ekirpichyov"
     ]
   },
-  "Web/Manifest": {
-    "modified": "2020-10-15T21:52:44.707Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills",
-      "bershanskiy",
-      "ZolotoArtem",
-      "Encamy",
-      "SergeyMirvoda",
-      "Eugeno",
-      "Katarzina",
-      "Kidsman",
-      "suncitygirl",
-      "curdwithraisins"
-    ]
-  },
-  "Web/Manifest/Reference/background_color": {
-    "modified": "2020-10-15T22:28:08.267Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/Manifest/Reference/categories": {
-    "modified": "2020-10-15T22:28:07.809Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/Manifest/Reference/description": {
-    "modified": "2020-10-15T22:28:07.733Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/Manifest/Reference/display": {
-    "modified": "2020-10-15T22:28:07.850Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/Manifest/Reference/icons": {
-    "modified": "2020-10-15T22:28:09.358Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/Manifest/Reference/name": {
-    "modified": "2020-10-15T22:28:09.359Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/Manifest/Reference/orientation": {
-    "modified": "2020-10-15T22:28:08.826Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/Manifest/Reference/prefer_related_applications": {
-    "modified": "2020-10-15T22:28:08.735Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/Manifest/Reference/related_applications": {
-    "modified": "2020-10-15T22:28:09.294Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/Manifest/Reference/scope": {
-    "modified": "2020-10-15T22:28:09.050Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/Manifest/Reference/screenshots": {
-    "modified": "2020-10-15T22:28:09.543Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/Manifest/Reference/short_name": {
-    "modified": "2020-10-15T22:21:30.619Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills",
-      "bershanskiy"
-    ]
-  },
-  "Web/Manifest/Reference/start_url": {
-    "modified": "2020-10-15T22:28:10.438Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/Manifest/Reference/theme_color": {
-    "modified": "2020-10-15T22:28:10.250Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills"
-    ]
-  },
   "Web/MathML": {
     "modified": "2019-10-06T11:07:41.869Z",
     "contributors": [
@@ -21000,31 +20885,31 @@
       "chrisdavidmills"
     ]
   },
-  "Web/Performance/Animation_performance_and_frame_rate": {
+  "Web/Performance/Guides/Animation_performance_and_frame_rate": {
     "modified": "2020-04-02T11:48:28.669Z",
     "contributors": [
       "D.Lesnik"
     ]
   },
-  "Web/Performance/CSS_JavaScript_animation_performance": {
+  "Web/Performance/Guides/CSS_JavaScript_animation_performance": {
     "modified": "2020-04-02T11:47:32.867Z",
     "contributors": [
       "D.Lesnik"
     ]
   },
-  "Web/Performance/Critical_rendering_path": {
+  "Web/Performance/Guides/Critical_rendering_path": {
     "modified": "2020-03-30T19:35:11.484Z",
     "contributors": [
       "D.Lesnik"
     ]
   },
-  "Web/Performance/Fundamentals": {
+  "Web/Performance/Guides/Fundamentals": {
     "modified": "2020-04-15T18:48:38.137Z",
     "contributors": [
       "D.Lesnik"
     ]
   },
-  "Web/Performance/How_browsers_work": {
+  "Web/Performance/Guides/How_browsers_work": {
     "modified": "2020-12-07T17:11:39.900Z",
     "contributors": [
       "SamTLT",
@@ -21032,50 +20917,50 @@
       "D.Lesnik"
     ]
   },
-  "Web/Performance/How_long_is_too_long": {
+  "Web/Performance/Guides/How_long_is_too_long": {
     "modified": "2020-05-15T10:59:03.931Z",
     "contributors": [
       "D.Lesnik"
     ]
   },
-  "Web/Performance/Lazy_loading": {
+  "Web/Performance/Guides/Lazy_loading": {
     "modified": "2020-05-23T10:12:03.445Z",
     "contributors": [
       "mfranzke",
       "D.Lesnik"
     ]
   },
-  "Web/Performance/Navigation_and_resource_timings": {
+  "Web/Performance/Guides/Navigation_and_resource_timings": {
     "modified": "2020-04-02T11:43:41.543Z",
     "contributors": [
       "D.Lesnik"
     ]
   },
-  "Web/Performance/Optimizing_startup_performance": {
+  "Web/Performance/Guides/Optimizing_startup_performance": {
     "modified": "2020-04-03T10:03:42.671Z",
     "contributors": [
       "D.Lesnik"
     ]
   },
-  "Web/Performance/Performance_budgets": {
+  "Web/Performance/Guides/Performance_budgets": {
     "modified": "2020-04-06T12:41:24.362Z",
     "contributors": [
       "D.Lesnik"
     ]
   },
-  "Web/Performance/Rum-vs-Synthetic": {
+  "Web/Performance/Guides/Rum-vs-Synthetic": {
     "modified": "2020-04-17T19:39:30.304Z",
     "contributors": [
       "D.Lesnik"
     ]
   },
-  "Web/Performance/Understanding_latency": {
+  "Web/Performance/Guides/Understanding_latency": {
     "modified": "2020-05-28T07:49:08.019Z",
     "contributors": [
       "D.Lesnik"
     ]
   },
-  "Web/Performance/dns-prefetch": {
+  "Web/Performance/Guides/dns-prefetch": {
     "modified": "2020-12-13T17:12:00.849Z",
     "contributors": [
       "iozee",
@@ -21089,6 +20974,121 @@
       "webmaxru",
       "chrisdavidmills",
       "ruslan_g02"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest": {
+    "modified": "2020-10-15T21:52:44.707Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills",
+      "bershanskiy",
+      "ZolotoArtem",
+      "Encamy",
+      "SergeyMirvoda",
+      "Eugeno",
+      "Katarzina",
+      "Kidsman",
+      "suncitygirl",
+      "curdwithraisins"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/background_color": {
+    "modified": "2020-10-15T22:28:08.267Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/categories": {
+    "modified": "2020-10-15T22:28:07.809Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/description": {
+    "modified": "2020-10-15T22:28:07.733Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/display": {
+    "modified": "2020-10-15T22:28:07.850Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/icons": {
+    "modified": "2020-10-15T22:28:09.358Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/name": {
+    "modified": "2020-10-15T22:28:09.359Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/orientation": {
+    "modified": "2020-10-15T22:28:08.826Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/prefer_related_applications": {
+    "modified": "2020-10-15T22:28:08.735Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/related_applications": {
+    "modified": "2020-10-15T22:28:09.294Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/scope": {
+    "modified": "2020-10-15T22:28:09.050Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/screenshots": {
+    "modified": "2020-10-15T22:28:09.543Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/short_name": {
+    "modified": "2020-10-15T22:21:30.619Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills",
+      "bershanskiy"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/start_url": {
+    "modified": "2020-10-15T22:28:10.438Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/theme_color": {
+    "modified": "2020-10-15T22:28:10.250Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills"
     ]
   },
   "Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs": {
@@ -21796,7 +21796,7 @@
       "ZVanoZ"
     ]
   },
-  "Web/URI/Schemes/data": {
+  "Web/URI/Reference/Schemes/data": {
     "modified": "2020-10-15T22:23:29.676Z",
     "contributors": [
       "alex3d",
@@ -22030,15 +22030,6 @@
       "redishko",
       "PavelG94",
       "Prographer"
-    ]
-  },
-  "orphaned/MDN/At_ten": {
-    "modified": "2019-03-23T22:49:58.338Z",
-    "contributors": [
-      "dimakozakov",
-      "acidicMercury8",
-      "Myshov",
-      "anmo"
     ]
   }
 }
