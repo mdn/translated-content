@@ -1,33 +1,34 @@
 ---
 title: aria-braillelabel
 slug: Web/Accessibility/ARIA/Attributes/aria-braillelabel
-page-type: aria-attribute
-spec-urls: https://w3c.github.io/aria/#aria-braillelabel
+l10n:
+  sourceCommit: 134f9a1ab341bf9ad30358e5f3a59bd9204078df
 ---
 
 {{AccessibilitySidebar}}
 
-The global `aria-braillelabel` property defines a string value that labels the current element, which is intended to be converted into Braille.
+グローバルな `aria-braillelabel` 属性は、点字に変換することを目的とした、現在の要素にラベル付けする文字列の値を定義します。
 
-## Description
+## 解説
 
-The global `aria-braillelabel` attribute is similar to the global [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) in that it defines a string value that labels the current element. While `aria-label` is read by the screen reader, the contents of the `aria-braillelabel` attribute are converted into Braille; providing the user with a recognizable name of the object in braille.
+グローバルな`aria-braillelabel`属性は、現在の要素にラベル付けする文字列の値を定義するという点で、 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) に似ています。`aria-label` はスクリーンリーダーによって読み取られる一方で、`aria-braillelabel` 属性の内容は点字に変換され、ユーザーには点字で認識可能なオブジェクトの名前が提供されます。
 
-The purpose of the `aria-braillelabel` property is to override how assistive technologies localize and express the accessible name of an element in Braille. It should only be used when, without this attribute, the accessible name would not be the desired user experience when converted to braille.
+`aria-braillelabel` 属性の目的は、支援技術が要素のアクセシブル名を点字でローカライズして表現する方法を上書きすることです。この属性がなければアクセシブル名が点字に変換されたときに望ましいユーザーエクスペリエンスにならない場合にのみ、使用してください。
 
-When using `aria-braillelabel`, ensure that:
+`aria-braillelabel` を使用する場合は、次の点を確認してください:
 
-- The element to which `aria-braillelabel` is applied has a valid accessible name.
-- The value of `aria-braillelabel` has actual content and is not empty or only whitespace in unicode or unicode braille.
-- The value is NOT the same as the accessible name.
-- The `aria-braillelabel` values are localized to align with the document language.
-- Communicate to the user that this attribute is available, especially if the content contains unicode braille patterns, so the user knows to set the settings to apply user specific braille translations
+- `aria-braillelabel` が適用される要素には有効なアクセシブル名な名前があります。
+- `aria-braillelabel` の値には実際のコンテンツが含まれており、空ではなく、Unicode または Unicode 点字の空白のみではありません。
+- 値はアクセシブル名と同じではありません。
+- `aria-braillelabel` の値はドキュメントの言語に合わせてローカライズされます。
+- 特にコンテンツに Unicode 点字パターンが含まれている場合は、この属性が利用可能であることをユーザーに伝え、ユーザー固有の点字翻訳を適用するための設定をユーザーが設定できるようにしてください。
 
 > [!NOTE]
-> Assistive technologies with braille support can convert the accessible names to braille.
-> Therefore, only use `aria-braillelabel` when the accessible name is not the user experience you want.
+> 点字をサポートする支援技術は、アクセシブル名を点字に変換できます。
+> したがって、アクセシブル名が望ましいユーザーエクスペリエンスではない場合にのみ `aria-braillelabel` を使用してください。
 
-Using only the accessible name, e.g., from content or via `aria-label` is almost always the better user experience, so don't use aria-braillelabel to replicate aria-label. Only use `aria-braillelabel` if the accessible name cannot provide an adequate braille representation.
+
+アクセシブル名（例：コンテンツから付与されたり、`aria-label` を用いて付与するもの）のみを使用することで、ほとんどの場合ユーザーエクスペリエンスが向上します。そのため、aria-label をそのまま `aria-braillelabel` に付与しないでください。アクセシブル名で適切な点字表現を提供できない場合にのみ `aria-braillelabel` を使用してください。
 
 ```html
 <button aria-braillelabel="***">
@@ -35,23 +36,23 @@ Using only the accessible name, e.g., from content or via `aria-label` is almost
 </button>
 ```
 
-A braille display may display "btn \*\*\*" in Braille rather than the more verbose "btn gra 3 out of 5 stars".
+点字ディスプレイでは、冗長な「btn gra 3 out of 5 stars」ではなく、「btn ***」と点字で表示される場合があります。
 
-## Values
+## 値
 
 - `<string>`
-  - : The value is a string, an unconstrained value type, that is intended to be converted into braille.
+  - : 値は、点字に変換することを目的とした、制約のない文字列です。
 
-## Associated roles
+## 関連付けられたロール
 
-Used in **ALL** roles.
+**すべて**のロールで使用されます。
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## See also
+## 関連情報
 
 - {{domxref("Element.ariaBrailleLabel")}}
-- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-- [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription)
+- [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+- [`aria-brailleroledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription)
