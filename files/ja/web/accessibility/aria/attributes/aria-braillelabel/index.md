@@ -11,13 +11,13 @@ l10n:
 
 ## 解説
 
-グローバルな`aria-braillelabel`属性は、現在の要素にラベル付けする文字列の値を定義するという点で、 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) に似ています。`aria-label` はスクリーンリーダーによって読み取られる一方で、`aria-braillelabel` 属性の内容は点字に変換され、ユーザーには点字で認識可能なオブジェクトの名前が提供されます。
+グローバルな `aria-braillelabel` 属性は、現在の要素にラベル付けする文字列の値を定義するという点で、 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) に似ています。`aria-label` はスクリーンリーダーによって読み取られる一方で、`aria-braillelabel` 属性の内容は点字に変換され、ユーザーには点字で認識可能なオブジェクトの名前が提供されます。
 
 `aria-braillelabel` 属性の目的は、支援技術が要素のアクセシブル名を点字でローカライズして表現する方法を上書きすることです。この属性がなければアクセシブル名が点字に変換されたときに望ましいユーザーエクスペリエンスにならない場合にのみ、使用してください。
 
 `aria-braillelabel` を使用する場合は、次の点を確認してください:
 
-- `aria-braillelabel` が適用される要素には有効なアクセシブル名な名前があります。
+- `aria-braillelabel` が適用される要素には有効なアクセシブル名があります。
 - `aria-braillelabel` の値には実際のコンテンツが含まれており、空ではなく、Unicode または Unicode 点字の空白のみではありません。
 - 値はアクセシブル名と同じではありません。
 - `aria-braillelabel` の値はドキュメントの言語に合わせてローカライズされます。
