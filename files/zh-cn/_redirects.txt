@@ -519,6 +519,7 @@
 /zh-CN/docs/Glossary/DOS_attack	/zh-CN/docs/Glossary/Denial_of_Service
 /zh-CN/docs/Glossary/Descriptor_(CSS)	/zh-CN/docs/Glossary/CSS_Descriptor
 /zh-CN/docs/Glossary/Empty_element	/zh-CN/docs/Glossary/Void_element
+/zh-CN/docs/Glossary/Forbidden_header_name	/zh-CN/docs/Glossary/Forbidden_request_header
 /zh-CN/docs/Glossary/Grid_Rows	/zh-CN/docs/Glossary/Grid_Row
 /zh-CN/docs/Glossary/Guard	/zh-CN/docs/Web/API/Fetch_API/Using_Fetch
 /zh-CN/docs/Glossary/Header	/zh-CN/docs/Glossary/HTTP_header
@@ -557,7 +558,7 @@
 /zh-CN/docs/Glossary/浏览器	/zh-CN/docs/Glossary/Browser
 /zh-CN/docs/Glossary/渐进增强	/zh-CN/docs/Glossary/Progressive_Enhancement
 /zh-CN/docs/Glossary/源	/zh-CN/docs/Glossary/Origin
-/zh-CN/docs/Glossary/禁止修改的消息首部	/zh-CN/docs/Glossary/Forbidden_header_name
+/zh-CN/docs/Glossary/禁止修改的消息首部	/zh-CN/docs/Glossary/Forbidden_request_header
 /zh-CN/docs/Glossary/空元素	/zh-CN/docs/Glossary/Void_element
 /zh-CN/docs/Glossary/立即执行函数表达式	/zh-CN/docs/Glossary/IIFE
 /zh-CN/docs/Glossary/第一字节时间	/zh-CN/docs/Glossary/Time_to_first_byte
@@ -1308,7 +1309,7 @@
 /zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript
 /zh-CN/docs/Learn/JavaScript/Objects/向“弹跳球”演示程序添加新功能	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features
 /zh-CN/docs/Learn/JavaScript/Objects/测试你的技能:面向对象的Javascript	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript
-/zh-CN/docs/Learn/Learning_and_getting_help	/zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help
+/zh-CN/docs/Learn/Learning_and_getting_help	/zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 /zh-CN/docs/Learn/MathML	/zh-CN/docs/Web/MathML
 /zh-CN/docs/Learn/MathML/First_steps	/zh-CN/docs/Web/MathML/Guides
 /zh-CN/docs/Learn/MathML/First_steps/Fractions_and_roots	/zh-CN/docs/Web/MathML/Guides/Fractions_and_roots
@@ -1429,6 +1430,7 @@
 /zh-CN/docs/Learn/Tools_and_testing/跨服务器测试/Automated_testing	/zh-CN/docs/Learn_web_development/Extensions/Testing/Automated_testing
 /zh-CN/docs/Learn/Tools_and_testing/跨服务器测试/HTML_and_CSS	/zh-CN/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS
 /zh-CN/docs/Learn/Tools_and_testing/跨服务器测试/Your_own_automation_environment	/zh-CN/docs/Learn_web_development/Extensions/Testing/Your_own_automation_environment
+/zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help	/zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 /zh-CN/docs/Localization	/zh-CN/docs/Glossary/Localization
 /zh-CN/docs/MDN/About	/zh-CN/docs/MDN/Writing_guidelines
 /zh-CN/docs/MDN/CSS	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties
@@ -2371,7 +2373,7 @@
 /zh-CN/docs/Web/Accessibility/ARIA/forms/alerts	/zh-CN/docs/Web/Accessibility/ARIA
 /zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/WebAudio_playbackRate_explained	/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/WebAudio_playbackRate_explained
 /zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/buffering_seeking_time_ranges	/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges
-/zh-CN/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance	/zh-CN/docs/Web/Performance/Optimizing_startup_performance
+/zh-CN/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance	/zh-CN/docs/Web/Performance/Guides/Optimizing_startup_performance
 /zh-CN/docs/Web/Apps/Progressive	/zh-CN/docs/Web/Progressive_web_apps
 /zh-CN/docs/Web/Apps/Progressive/App_structure	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 /zh-CN/docs/Web/Apps/Progressive/Introduction	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames
@@ -3101,7 +3103,15 @@
 /zh-CN/docs/Web/Media/Formats/视频编解码器	/zh-CN/docs/Web/Media/Guides/Formats/Video_codecs
 /zh-CN/docs/Web/Media/images	/zh-CN/docs/Web/Media/Guides/Images
 /zh-CN/docs/Web/OpenSearch	/zh-CN/docs/Web/XML/Guides/OpenSearch
-/zh-CN/docs/Web/Performance/浏览器渲染页面的工作原理	/zh-CN/docs/Web/Performance/How_browsers_work
+/zh-CN/docs/Web/Performance/CSS_JavaScript_animation_performance	/zh-CN/docs/Web/Performance/Guides/CSS_JavaScript_animation_performance
+/zh-CN/docs/Web/Performance/Critical_rendering_path	/zh-CN/docs/Web/Performance/Guides/Critical_rendering_path
+/zh-CN/docs/Web/Performance/How_browsers_work	/zh-CN/docs/Web/Performance/Guides/How_browsers_work
+/zh-CN/docs/Web/Performance/How_long_is_too_long	/zh-CN/docs/Web/Performance/Guides/How_long_is_too_long
+/zh-CN/docs/Web/Performance/Lazy_loading	/zh-CN/docs/Web/Performance/Guides/Lazy_loading
+/zh-CN/docs/Web/Performance/Optimizing_startup_performance	/zh-CN/docs/Web/Performance/Guides/Optimizing_startup_performance
+/zh-CN/docs/Web/Performance/Speculative_loading	/zh-CN/docs/Web/Performance/Guides/Speculative_loading
+/zh-CN/docs/Web/Performance/dns-prefetch	/zh-CN/docs/Web/Performance/Guides/dns-prefetch
+/zh-CN/docs/Web/Performance/浏览器渲染页面的工作原理	/zh-CN/docs/Web/Performance/Guides/How_browsers_work
 /zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies	/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies
 /zh-CN/docs/Web/Progressive_web_apps/Add_to_home_screen	/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /zh-CN/docs/Web/Progressive_web_apps/App_structure	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
@@ -3223,7 +3233,7 @@
 /zh-CN/docs/learn/JavaScript/异步/简介	/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Introducing
 /zh-CN/docs/learn/JavaScript/异步/超时和间隔	/zh-CN/docs/Learn_web_development/Extensions/Async_JS
 /zh-CN/docs/learn/Performance/CSS_performance	/zh-CN/docs/Learn_web_development/Extensions/Performance/CSS
-/zh-CN/docs/learn/Performance/dns-prefetch	/zh-CN/docs/Web/Performance/dns-prefetch
+/zh-CN/docs/learn/Performance/dns-prefetch	/zh-CN/docs/Web/Performance/Guides/dns-prefetch
 /zh-CN/docs/learn/Performance/感知性能	/zh-CN/docs/Learn_web_development/Extensions/Performance/Perceived_performance
 /zh-CN/docs/learn/Server-side/Django/主页构建	/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Home_page
 /zh-CN/docs/learn/Server-side/Django/开发环境	/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/development_environment

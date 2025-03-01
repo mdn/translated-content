@@ -1,14 +1,14 @@
 ---
-title: リソース URL
+title: "resource: URL"
+short-title: "resource:"
 slug: Web/URI/Reference/Schemes/resource
-original_slug: Web/URI/Schemes/resource
 l10n:
-  sourceCommit: 6b730e3cfdf0f51940b44efa71bd59c84ce76e71
+  sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/URI")}}{{non-standard_header}}
+{{non-standard_header}}
 
-`resource:` というスキームのプレフィックスが付いたリソース URL は、Firefox と Firefox のブラウザー拡張機能によってリソースを内部的に読み込むために使用されますが、情報の一部はブラウザーが接続するサイトでも利用できます。
+`resource:` というスキームの接頭辞が付いたリソース URL は、Firefox と Firefox のブラウザー拡張機能によってリソースを内部的に読み込むために使用されますが、情報の一部はブラウザーが接続するサイトでも利用できます。
 
 ## 構文
 
@@ -18,7 +18,7 @@ l10n:
 resource://<path>
 ```
 
-例
+例えば次のようになります。
 
 ```url
 resource://gre/res/svg.css
@@ -56,7 +56,11 @@ http://searchfox.org/mozilla-central/rev/48ea452803907f2575d81021e8678634e8067fc
 
 過去には、ウェブコンテンツは、 Firefox の内部リソースだけでなく、拡張機能の資産も含め、URI が必要とするあらゆるリソースにアクセスすることができました。 現在、この動作はデフォルトでは禁止されています。
 
-しかし、特定の状況下で Firefox がウェブコンテンツにリソースを読み込む必要があります。 たとえば、ビュー・ソース・ページ (ビュー・ソースまたはビュー選択ソース) を開くと、 `resource:` URI を介して `viewsource.css` が必要です。ウェブコンテンツに公開する必要があるリソースは、 `resource://content-accessible/`という名前の新しい場所に移動されました。これは隔離されており、重要ではないリソースのみが含まれています。 このようにして、重要なリソースを公開し、ほとんどの脅威を排除できます。
+しかし、特定の状況下で Firefox がウェブコンテンツにリソースを読み込む必要があります。
+たとえば、ソース表示ページ（「ページのソースを表示」または「選択した部分のソースを表示」）を開くと、このページが `viewsource.css` を `resource:` URL を介してが要求していることが分かります。
+ウェブコンテンツに公開する必要があるリソースは、 `resource://content-accessible/`という名前の新しい場所に移動されました。
+これは隔離されており、重要ではないリソースのみが含まれています。
+このようにして、重要なリソースを公開し、ほとんどの脅威を排除できます。
 
 > [!NOTE]
 > ウェブと拡張機能の開発者がリソース URL をもう使用しようとしないことをお勧めします。彼らの使い方はうまくいきませんでした。そしてほとんどの使用法はこれ以上動作しません。
@@ -65,12 +69,12 @@ http://searchfox.org/mozilla-central/rev/48ea452803907f2575d81021e8678634e8067fc
 
 resource: はどの仕様書にも定義されていません。
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-resource: は Firefox のみ対応
+resource: は Firefox のみ対応しています。
 
 ## 関連情報
 
-- [ウェブ上のリソースの識別](/ja/docs/Web/URI)
+- [URI](/ja/docs/Web/URI)
 - [URL とは何か](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
-- [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) (`resource:` is [covered here](https://www.iana.org/assignments/uri-schemes/prov/resource))
+- [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) （`resource:` は[ここで扱っています](https://www.iana.org/assignments/uri-schemes/prov/resource)）

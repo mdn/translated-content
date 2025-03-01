@@ -1396,7 +1396,7 @@
       "reppets"
     ]
   },
-  "Glossary/Forbidden_header_name": {
+  "Glossary/Forbidden_request_header": {
     "modified": "2020-03-23T16:05:37.818Z",
     "contributors": [
       "mfuji09",
@@ -41686,7 +41686,7 @@
       "silverskyvicto"
     ]
   },
-  "Web/Performance/How_browsers_work": {
+  "Web/Performance/Guides/How_browsers_work": {
     "modified": "2020-05-23T02:59:41.163Z",
     "contributors": [
       "Uemmra3",

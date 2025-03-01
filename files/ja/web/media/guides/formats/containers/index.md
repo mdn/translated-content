@@ -1103,7 +1103,19 @@ MP3 の幅広い互換性と、使用する際に支払うべきロイヤリテ�
 
 ここに示す例では、動画が 2 つの形式でブラウザーに提供されています。 WebM と MP4 です。
 
-{{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video controls width="250" height="200" muted>
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+```
 
 動画は最初に WebM 形式で提供されます（[`type`](/ja/docs/Web/HTML/Element/video#type) 属性に `video/webm` を設定した場合）。
 もし {{Glossary("user agent")}} がそれを再生できなければ、`type` が `video/mp4` に指定された次のオプションに移動します。

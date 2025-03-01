@@ -1,18 +1,15 @@
 ---
 title: テキストフラグメント
 slug: Web/URI/Reference/Fragment/Text_fragments
-original_slug: Web/URI/Fragment/Text_fragments
 l10n:
-  sourceCommit: 6b730e3cfdf0f51940b44efa71bd59c84ce76e71
+  sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/URI")}}
 
 **テキストフラグメント**は、URL フラグメントの特定の構文を使用することにより、作成者が ID で注釈を付けなくても、ウェブ文書内のテキストの特定の部分に直接リンクできるようにするものです。対応しているブラウザーは、リンクされたテキストに注意を引く方法を自由に選べます。例えば、色の強調表示やページ上のコンテンツへのスクロールなどです。これは、ウェブコンテンツの作成者が、使用可能な ID が存在しなくても、制御下にない他のコンテンツに深くリンクすることができるため有益なものです。さらに、ユーザーが互いに交換するための、より効果的なコンテンツ共有リンクを生成するために使用することもできます。
 
 ## 概念と使用方法
 
-従来、ウェブの重要な機能の 1 つが、常に異なる文書の間にリンクを張る能力でした。
+歴史的には、ウェブの主要な機能の1つは常に、異なる文書間のリンクを指定して提供する能力でした。これがウェブをウェブたらしめているのです。
 
 - 次のように、文書の URL にリンクすることで、その文書の先頭にリンクすることができます。
   - [https://developer.mozilla.org/ja/docs/Web/HTML/Element/a](/ja/docs/Web/HTML/Element/a)
@@ -58,13 +55,13 @@ https://example.com#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
 
 ### 使用上の注意
 
-- `textStart`、`textEnd`、`prefix-`、`-suffix` の値は[パーセントエンコード](/ja/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)する必要があります。
+- `textStart`、`textEnd`、`prefix-`、`-suffix` の値は[パーセントエンコード](/ja/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)する必要があります。さらに、[この標準](https://wicg.github.io/scroll-to-text-fragment/#syntax)では、 URL で使用される安全なダッシュ文字 `'-'` についても同様にパーセントエンコード方式でエンコードすることが要求されます。
 - 照合時は、大文字小文字を区別しません。
 - 個々の `textStart`、`textEnd`、`prefix-`、`-suffix` の文字列は、完全に同じ[ブロックレベル要素](/ja/docs/Glossary/Block-level_content)内に存在する必要がありますが、照合処理全体では複数の要素境界をまたぐことができます。
-- セキュリティ上の理由から、この機能ではリンクを noopener コンテキストで開く必要があります。この機能を使用する場合、`rel="noopener"` を {{htmlelement("a")}} 要素に追加する必要があり、{{domxref("window.open()")}} 呼び出し時には `noopener` を追加する必要があります。
+- セキュリティ上の理由から、この機能ではリンクを noopener コンテキストで開く必要があります。この機能を使用する場合、`rel="noopener"` を {{htmlelement("a")}} 要素に追加する必要があり、 {{domxref("Window.open()")}} 呼び出し時には `noopener` を追加する必要があります。
 - テキストフラグメントは、完全な（同じページでない）、ユーザー主導のナビゲーションの場合にのみ呼び出されます。
-- テキストフラグメントはメインフレームにのみ適用されます。{{htmlelement("iframe")}} の内部ではテキストは検索されませんし、`iframe` ナビゲーションではテキストフラグメントは呼び出されません。
-- オプトアウトを希望するサイトのために、Chromium ベースのブラウザーは、ユーザーエージェントがテキストフラグメントを処理しないように送信できる[文書ポリシー](https://wicg.github.io/document-policy/)ヘッダーの値に対応しています。
+- テキストフラグメントはメインフレームにのみ適用されます。 {{htmlelement("iframe")}} の内部ではテキストは検索されませんし、 `iframe` ナビゲーションではテキストフラグメントは呼び出されません。
+- オプトアウトを希望するサイトのために、 Chromium ベースのブラウザーは、ユーザーエージェントがテキストフラグメントを処理しないように送信できる[文書ポリシー](https://wicg.github.io/document-policy/)ヘッダーの値に対応しています。
 
   ```http
   Document-Policy: force-load-at-top

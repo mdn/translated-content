@@ -63,5 +63,5 @@ frameDiv.appendChild(iframe);
 
 - {{HTMLElement("iframe")}} 元素
 - MDN 学习区的 [Web 性能](/zh-CN/docs/Learn_web_development/Extensions/Performance)
-- MDN 网络性能指南中的[懒加载](/zh-CN/docs/Web/Performance/Lazy_loading)
+- MDN 网络性能指南中的[懒加载](/zh-CN/docs/Web/Performance/Guides/Lazy_loading)
 - web.developers.google.cn 上的[是时候懒加载屏幕外的 iframe 了！](https://web.developers.google.cn/articles/iframe-lazy-loading)

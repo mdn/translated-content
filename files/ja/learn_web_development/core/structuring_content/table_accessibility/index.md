@@ -255,7 +255,7 @@ l10n:
 
 ### id 属性と headers 属性
 
-`scope` 属性を使用する代わりに、[`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性と [`headers`](/ja/docs/Web/HTML/Element/td#headers) 属性を使用して、見出しとセル間の関連付けを作成することもできます。
+`scope` 属性を使用する代わりに、[`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性と [`headers`](/ja/docs/Web/HTML/Element/td#headers) 属性を使用して、見出しとセル間の関連付けを作成することもできます。
 
 `headers` 属性は空白区切りの{{Glossary("string", "文字列")}}の順不同リストを取ります。それぞれが、データセル（`<td>` 要素）または別の見出しセル（`<th>` 要素）の見出しを提供する `<th>` 要素の一意の `id` に対応します。
 
