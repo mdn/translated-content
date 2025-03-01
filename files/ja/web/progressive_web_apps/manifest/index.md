@@ -1,70 +1,51 @@
 ---
 title: ウェブアプリマニフェスト
+short-title: マニフェスト
 slug: Web/Progressive_web_apps/Manifest
-original_slug: Web/Manifest
+l10n:
+  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
+{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
-**ウェブアプリマニフェスト**は、[プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps) (PWA) と呼ばれる一連のウェブ技術の一部であり、アプリストアを通さずに端末のホーム画面にインストールすることができるものです。単純なホーム画面リンクやブックマークを持つ通常のウェブアプリとは異なり、 PWA は事前にダウンロードしてオフラインでも動作するだけでなく、通常の [Web API](/ja/docs/Web/API) を使用することもできます。
+**ウェブアプリマニフェスト**は、 [Web Application Manifest](https://w3c.github.io/manifest/) 仕様書で定義されており、ウェブアプリケーションについての情報を提供する {{Glossary("JSON")}} テキストファイルです。
 
-ウェブアプリマニフェストは、ウェブアプリケーションについて、ウェブアプリをダウンロードしたり、ユーザーにネイティブアプリと同じように見せる（例えば、端末のホーム画面にインストールされ、ユーザーに素早いアクセスと豊かな操作性を提供するなどの）ために必要な情報を {{Glossary("JSON")}} テキストファイルで提供します。 PWA のマニフェストには、その名前、作者、アイコン、バージョン、説明、および (他のものの中で特に) 必要なすべてのリソースのリストが含まれています。
+ウェブアプリマニフェストの最も一般的な用途は、ブラウザーが[プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps) (PWA) を端末にインストールする際に必要な情報（アプリ名やアイコンなど）を提供することです。
+
+ウェブアプリケーションマニフェストには、単一の JSON オブジェクトが含まれており、最も上位のキーは「メンバー」と呼ばれています。
 
 ## メンバー
 
-ウェブマニフェストには、以下のキーを設定することができます。それぞれのリンクをクリックすると詳細情報を見ることができます。
+この節では、マニフェストに記載される可能性のあるメンバーを紹介します。
 
-{{ListSubpages("/ja/docs/Web/Manifest")}}
+すべてのメンバーは仕様上は任意ですが、用途によっては一部のメンバーの存在が必要になる場合があります。例えば、 [PWA では特定のマニフェストメンバーを提供する必要があります](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#required_manifest_members)。
+
+{{ListSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
+
+> **メモ:** `dir`、`lang`、`iarc_rating_id` の各メンバーは実装されていません。
 
 ## マニフェストの例
 
 ```json
 {
-  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "HackerWeb",
-  "short_name": "HackerWeb",
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#fff",
-  "description": "読みやすいハッカーニュースアプリです。",
+  "short_name": "MDN",
+  "name": "MDN Web Docs",
   "icons": [
     {
-      "src": "images/touch/homescreen48.png",
-      "sizes": "48x48",
-      "type": "image/png"
-    },
-    {
-      "src": "images/touch/homescreen72.png",
-      "sizes": "72x72",
-      "type": "image/png"
-    },
-    {
-      "src": "images/touch/homescreen96.png",
-      "sizes": "96x96",
-      "type": "image/png"
-    },
-    {
-      "src": "images/touch/homescreen144.png",
-      "sizes": "144x144",
-      "type": "image/png"
-    },
-    {
-      "src": "images/touch/homescreen168.png",
-      "sizes": "168x168",
-      "type": "image/png"
-    },
-    {
-      "src": "images/touch/homescreen192.png",
+      "src": "/favicon-192x192.png",
       "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "related_applications": [
-    {
-      "platform": "play",
-      "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
-    }
-  ]
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
 ```
 
@@ -86,17 +67,11 @@ original_slug: Web/Manifest
 
 ## スプラッシュ画面
 
-一部のブラウザー（例えば Chrome 47 以降）では、ホーム画面からサイトが起動されるとスプラッシュ画面が表示されます。スプラッシュ画面はウェブアプリマニフェストのプロパティから、具体的には以下のように自動生成されます。
+ブラウザーやオペレーティングシステムによっては、インストール済みの PWA を起動するとスプラッシュ画面が表示される場合があります。このスプラッシュ画面は自動的に生成され、その外観はウェブアプリマニフェストのメンバー、具体的には下記のものによって定義されます。
 
-- [`name`](/ja/docs/Web/Manifest/name)
-- [`background_color`](/ja/docs/Web/Manifest/background_color)
-- [`icons`](/ja/docs/Web/Manifest/icons) の配列中のアイコンで、端末の 128dpi に最も近いもの。
-
-## 仕様書
-
-| 仕様書                                             |
-| -------------------------------------------------- |
-| [Web App Manifest](https://w3c.github.io/manifest) |
+- [`name`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/name)
+- [`background_color`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/background_color)
+- [`icons`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/icons)
 
 ## ブラウザーの互換性
 
