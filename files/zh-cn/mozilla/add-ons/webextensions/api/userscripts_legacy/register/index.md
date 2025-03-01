@@ -62,7 +62,7 @@ await registeredUserScript.unregister();
 {{JSxRef("Promise")}}，会兑现为一个用于注销用户脚本的 {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} 对象。
 
 > [!NOTE]
-> 当与用户脚本相关联的扩展页面（注册了用户脚本的页面）被卸载时，用户脚本将被自动注销。因此，你应当在一个存活时间至少与你的用户脚本相当的扩展页面中注册该脚本。
+> 当与用户脚本相关联的扩展页面（注册了这一用户脚本的页面）被卸载时，用户脚本将被自动注销。因此，你应该在一个页面存在时间至少与你希望用户脚本保持注册的时间一样长的扩展页面中注册该用户脚本。
 
 ## 浏览器兼容性
 
