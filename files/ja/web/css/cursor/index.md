@@ -2,7 +2,7 @@
 title: cursor
 slug: Web/CSS/cursor
 l10n:
-  sourceCommit: 5bd9fe2b25c6eee2a14d0406ce7116998fa48c13
+  sourceCommit: 64d85b74ce1cce6a24ae8979da4f3f4a01a47229
 ---
 
 {{CSSRef}}
@@ -340,7 +340,7 @@ cursor: unset;
 
 ### アイコンの大きさの制限
 
-仕様書では `cursor` の画像サイズは制限されていませんが、{{Glossary("user agent", "ユーザーエージェント")}}は一般的に誤用を防ぐために制限をしています。
+仕様書では `cursor` の画像サイズは制限されていませんが、{{Glossary("User agent", "ユーザーエージェント")}}は一般的に誤用を防ぐために制限をしています。
 例えば、Firefox と Chromium ではカーソル画像は既定では 128x128 ピクセルに制限されていますが、カーソル画像のサイズは 32x32 ピクセルに制限することを推奨します。ユーザーエージェントが対応している最大サイズよりも大きな画像を使用してカーソルを変更しても、通常は無視されます。
 
 ### 対応している画像ファイル形式
@@ -390,3 +390,4 @@ iPadOS はトラックパッドやマウスなどのポインター機器に対�
 
 - {{cssxref("pointer-events")}}
 - {{cssxref("url_value", "&lt;url&gt;")}} 型
+- SVG の {{SVGAttr("cursor")}} 属性

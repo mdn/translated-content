@@ -2,14 +2,34 @@
 title: <input type="email">
 slug: Web/HTML/Element/input/email
 l10n:
-  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`email`** 型は、ユーザーに一つのメールアドレス、または、 [`multiple`](/ja/docs/Web/HTML/Attributes/multiple) 属性が設定されていた場合は、メールアドレスのリストを入力および編集させるために使用します。
 
-{{EmbedInteractiveExample("pages/tabbed/input-email.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="email">Enter your example.com email:</label>
+
+<input type="email" id="email" pattern=".+@example\.com" size="30" required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 入力値はフォームの送信前に自動的に検証され、空欄または正しい形式のメールアドレス (またはメールアドレスのリスト) のどちらかであることが確認されます。 CSS の {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラスが自動的に適用され、フィールド上の現在の値が妥当なメールアドレスであるかどうかを視覚的に示します。
 
@@ -18,14 +38,17 @@ l10n:
 {{HTMLElement("input")}} 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性には文字列が入り、メールアドレスの構文に合うかどうかが自動的に検証されます。具体的には、検証に通ることができる値の書式には 3 種類があります。
 
 1. 空文字列 ("")。ユーザーが値を入力しないか、または値が削除されたことを表します。
-2. 単一の正しい形式のメールアドレス。メールアドレスが実在する必要はありませんが、少なくとも正しい書式です。簡単に言えば、 `username@domain` または `username@domain.tld` の形です。もちろんそれ以上のものもあります。[検証](#検証)の節で、メールアドレスの検証アルゴリズムで一致する{{Glossary("regular expression", "正規表現")}}について参照してください。
+2. 単一の正しい形式のメールアドレス。メールアドレスが実在する必要はありませんが、少なくとも正しい書式です。簡単に言えば、 `username@domain` または `username@domain.tld` の形です。もちろんそれ以上のものもあります。[検証](#検証)の節で、メールアドレスの検証アルゴリズムで一致する{{Glossary("Regular expression", "正規表現")}}について参照してください。
 3. [`multiple`](/ja/docs/Web/HTML/Element/input#multiple) 属性が指定されたとき（のみ）、値はカンマ区切りで複数の正しい形式のメールアドレスを入れることができます。それぞれのメールアドレスの前後にある空白は除去されます。
 
 [検証](#検証)の節で、どのようなメールアドレスが正しい形式であると検証されるかの詳細を参照してください。
 
 ## 追加の属性
 
-型に関係なくすべての {{HTMLElement("input")}} 要素を操作する属性に加え、 `email` 型の入力欄は次の属性にも対応しています。
+[グローバル属性](/ja/docs/Web/HTML/Global_attributes)および、型に関係なくすべての {{HTMLElement("input")}} 要素を操作する属性に加え、 `email` 型の入力欄は次の属性にも対応しています。
+
+> [!NOTE]
+> グローバル属性の [`autocorrect`](/ja/docs/Web/HTML/Global_attributes/autocorrect) をメール入力に追加することはできますが、格納される状態は常に `off` になります。
 
 ### list
 
@@ -69,14 +92,14 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 > [!NOTE]
 > 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のラベル](/ja/docs/Web/HTML/Element/input#ラベル)を参照してください。
 
-### readonly
+### `readonly`
 
 論理属性で、存在すれば、ユーザーが編集することができないことを表します。しかし、 `value` は、 JavaScript コードから直接 {{domxref("HTMLInputElement")}} の `value` プロパティを設定することで変更することができます。
 
 > [!NOTE]
 > 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
 
-### size
+### `size`
 
 `size` 属性は数値であり、入力欄の幅を何文字分とするかを示します。値はゼロより大きな数値である必要があり、既定値は 20 です。文字の幅は様々であるため、これは正確ではない可能性もあり、依存することはできません。結果の入力欄は文字数やフォント（使用中の {{cssxref("font")}} 設定）によって、指定された文字数より狭くなったり広くなったりすることがあります。
 
@@ -91,7 +114,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 > [!NOTE]
 > ユーザーが HTML をその場面の裏でいじることができることを意識しておくことは極めて重要です。ですから、安全を目的として、サイトでクライアント側の値検証機能のみを使用しては*いけません*。何らかのセキュリティ上の問題を含む可能性がある値が提供されるトランザクションの場合は、いずれもサーバー側で値検証を行う*必要があります*。
 
-### 単純な email 型の入力欄
+### 基本的な email 型の入力欄
 
 現在、この要素を実装しているすべてのブラウザーが、これを基本的な検証機能がついた標準のテキスト入力欄として実装しています。しかし、仕様書ではブラウザーに自由度を許容しています。例えば、この要素はユーザーの端末に内蔵されたアドレス帳と統合され、メールアドレスをリストから選ぶことができるようにすることも可能です。多くの基本的なフォームでは、 `email` 入力欄は次のように実装されています。
 
@@ -99,7 +122,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 <input id="emailAddress" type="email" />
 ```
 
-{{ EmbedLiveSample('A_simple_email_input', 600, 40) }}
+{{ EmbedLiveSample('A_basic_email_input', 600, 40) }}
 
 なお、妥当と判断されるのは空欄の場合と、単一の妥当な書式のメールアドレスが入力されている場合で、それ以外は妥当であるとは判断されません。 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を追加することで、妥当な書式のメールアドレスのみが許容されるようになり、空欄の場合は妥当であるとは判断されなくなります。
 
@@ -217,14 +240,14 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 ```
 
-フォーム検証の仕組みと、 {{cssxref(":valid")}} や {{cssxref(":invalid")}} 擬似クラスを使用して、現在の値が有効かどうかに基づいて入力欄のスタイルを設定する方法については、[フォームデータの検証](/ja/docs/Learn/Forms/Form_validation)を参照してください。
+フォーム検証の仕組みと、 {{cssxref(":valid")}} や {{cssxref(":invalid")}} 擬似クラスを使用して、現在の値が有効かどうかに基づいて入力欄のスタイルを設定する方法については、[フォームデータの検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)を参照してください。
 
 > [!NOTE]
 > 国際ドメイン名と HTML でのメールアドレスの検証については、仕様上の問題があることが知られています。詳しくは [W3C bug 15489](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489) を参照してください。
 
 ### パターンによる検証
 
-入力されたメールアドレスを「メールアドレスのように見える任意の文字列」以上に制限する必要がある場合、 [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を使って、値が一致しなければ有効としない{{Glossary("regular expression", "正規表現")}}を指定することが可能です。 [`multiple`](/ja/docs/Web/HTML/Element/input#multiple) 属性が指定されていた場合、カンマで区切られた値のリストの個々の項目がその{{Glossary("regular expression", "正規表現")}}に一致しなければなりません。
+入力されたメールアドレスを「メールアドレスのように見える任意の文字列」以上に制限する必要がある場合、 [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を使って、値が一致しなければ有効としない{{Glossary("Regular expression", "正規表現")}}を指定することが可能です。 [`multiple`](/ja/docs/Web/HTML/Element/input#multiple) 属性が指定されていた場合、カンマで区切られた値のリストの個々の項目がその{{Glossary("Regular expression", "正規表現")}}に一致しなければなりません。
 
 例えば、 Best Startup Ever 社の従業員が IT 部門に問い合わせるためのページを作るとします。簡単なフォームで、ユーザーが自分のメールアドレスと、助けを必要とする問題を説明するメッセージを入力する必要があります。ユーザーの入力したメールアドレスが有効なものであるばかりでなく、セキュリティ上の理由から、そのアドレスが会社の内部メールアドレスであることを確認する必要があります。
 
@@ -290,11 +313,11 @@ label::after {
 
 ![メールアドレスが無効で、入力から「メールアドレスを入力してください」というポップアップが表示されるエラー状態になっているところ。](enter-valid-email-address.png)
 
-このままでは、少なくとも正当な電子メールアドレスを検証していることになります。しかし、もう一歩踏み込んで、メールアドレスが実際に "_username_@beststartupever.com" という形式であることを確認したいのです。そこで [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) を使用することにします。ここでは、 `pattern` を `.+@beststartupever.com` に設定しました。この正規表現は単純ですが、少なくとも 1 つの任意の文字、そして "@" の後にドメイン名 "beststartupever.com" が続く文字列を要求します。
+このままでは、少なくとも正当な電子メールアドレスを検証していることになります。しかし、もう一歩踏み込んで、メールアドレスが実際に `[ユーザー名]@beststartupever.com` という形式であることを確認したいのです。そこで [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) を使用することにします。ここでは、 `pattern` を `.+@beststartupever.com` に設定しました。この正規表現は、少なくとも 1 つの任意の文字、そして "@" の後にドメイン名 "beststartupever.com" が続く文字列を要求します。
 
 これは、有効な電子メールアドレスの適切なフィルタリングにはほど遠いことに注意してください。" @beststartupever.com"（先頭のスペースに注意）や "@@beststartupever.com" のような有効ではない表現も許可してしまいます。しかし、ブラウザーは指定されたテキストに対して、標準のメールアドレスフィルターとカスタムパターンの両方を実行します。その結果、「これが有効な電子メールアドレスに似ていることを確認し、もしそうなら、それが beststartupever.com のアドレスであることも確認する」という検証を行うことになります。
 
-[`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性を `pattern` と併用することをお勧めします。その場合、 `title` でパターンを説明する必要があります。つまり、他の情報ではなく、データがどのような形式を取るべきかを説明してください。これは、 `title` が検証エラーメッセージの一部として表示されたり、読み上げられたりする可能性があるからです。例えば、ブラウザーが「入力された値がフィールドに指定された書式と異なります。」というメッセージの後に、あなたが指定した `title` を表示するかもしれません。もし `title` が "メールアドレス" のようなものであれば、結果は「入力された値がフィールドに指定された書式と異なります。メールアドレス」というメッセージになり、あまり良いものではなくなります。
+[`title`](/ja/docs/Web/HTML/Global_attributes/title) 属性を `pattern` と併用することをお勧めします。その場合、 `title` でパターンを説明する必要があります。つまり、他の情報ではなく、データがどのような形式を取るべきかを説明してください。これは、 `title` が検証エラーメッセージの一部として表示されたり、読み上げられたりする可能性があるからです。例えば、ブラウザーが「入力された値がフィールドに指定された書式と異なります。」というメッセージの後に、あなたが指定した `title` を表示するかもしれません。もし `title` が "メールアドレス" のようなものであれば、結果は「入力された値がフィールドに指定された書式と異なります。メールアドレス」というメッセージになり、あまり良いものではなくなります。
 
 そのため、「Best Startup Ever 社のメールアドレスのみを入力してください」という文字列を指定しています。こうすることで、エラーメッセージ全体が「入力された値がフィールドに指定された書式と異なります。Best Startup Ever 社のメールアドレスのみを入力してください。」のようになります。
 
@@ -401,12 +424,11 @@ label::after {
 
 ## 関連情報
 
-- [HTML フォームガイド](/ja/docs/Learn/Forms)
+- [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/ja/docs/Web/HTML/Element/input/tel)
 - [`<input type="url">`](/ja/docs/Web/HTML/Element/input/url)
 - 属性:
-
   - [`list`](/ja/docs/Web/HTML/Element/input#list)
   - [`minlength`](/ja/docs/Web/HTML/Attributes/minlength)
   - [`maxlength`](/ja/docs/Web/HTML/Attributes/maxlength)
@@ -415,5 +437,3 @@ label::after {
   - [`placeholder`](/ja/docs/Web/HTML/Element/input#placeholder)
   - [`readonly`](/ja/docs/Web/HTML/Attributes/readonly)
   - [`size`](/ja/docs/Web/HTML/Attributes/size)
-
-- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

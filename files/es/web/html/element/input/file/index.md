@@ -9,7 +9,27 @@ l10n:
 
 Los elementos {{HTMLElement("input")}} con **`type="file"`** permiten al usuario elegir uno o más archivos desde el almacenamiento de su dispositivo. Una vez seleccionados, los archivos pueden ser subidos a un servidor usando el [envío de formularios](/es/docs/Learn/Forms), o manipulados utilizando código JavaScript y la [API de archivos (File API)](/es/docs/Web/API/File_API/Using_files_from_web_applications).
 
-{{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="avatar">Choose a profile picture:</label>
+
+<input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## Valor
 

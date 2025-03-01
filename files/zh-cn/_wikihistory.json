@@ -5137,7 +5137,7 @@
       "troywith77"
     ]
   },
-  "Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help": {
+  "Learn_web_development/Getting_started/Soft_skills/Research_and_learning": {
     "modified": "2020-12-06T05:06:52.891Z",
     "contributors": [
       "3143875691"
@@ -41135,7 +41135,7 @@
       "iceytea"
     ]
   },
-  "Web/Performance/CSS_JavaScript_animation_performance": {
+  "Web/Performance/Guides/CSS_JavaScript_animation_performance": {
     "modified": "2020-07-29T00:36:34.087Z",
     "contributors": [
       "deping_chen",
@@ -41143,7 +41143,7 @@
       "liangbus"
     ]
   },
-  "Web/Performance/Critical_rendering_path": {
+  "Web/Performance/Guides/Critical_rendering_path": {
     "modified": "2020-10-13T09:41:03.369Z",
     "contributors": [
       "xgqfrms",
@@ -41152,26 +41152,26 @@
       "chafel"
     ]
   },
-  "Web/Performance/How_browsers_work": {
+  "Web/Performance/Guides/How_browsers_work": {
     "modified": "2020-04-02T13:24:16.615Z",
     "contributors": [
       "Galaxy"
     ]
   },
-  "Web/Performance/Lazy_loading": {
+  "Web/Performance/Guides/Lazy_loading": {
     "modified": "2020-10-13T09:10:51.078Z",
     "contributors": [
       "xgqfrms"
     ]
   },
-  "Web/Performance/Optimizing_startup_performance": {
+  "Web/Performance/Guides/Optimizing_startup_performance": {
     "modified": "2019-03-23T22:00:17.334Z",
     "contributors": [
       "chrisdavidmills",
       "codeofjackie"
     ]
   },
-  "Web/Performance/dns-prefetch": {
+  "Web/Performance/Guides/dns-prefetch": {
     "modified": "2020-10-13T10:51:56.349Z",
     "contributors": [
       "xgqfrms",

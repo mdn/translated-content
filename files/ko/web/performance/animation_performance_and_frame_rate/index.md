@@ -2,7 +2,7 @@
 title: 애니메이션 성능과 프레임 속도
 slug: Web/Performance/Animation_performance_and_frame_rate
 l10n:
-  sourceCommit: 0b6ad3b44e815f7fc940ce3dcfdbde3f0051618f
+  sourceCommit: 5f76b99045f87349ed030bbd6a3c2e43badb3c22
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

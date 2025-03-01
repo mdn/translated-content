@@ -2,14 +2,50 @@
 title: <input type="radio">
 slug: Web/HTML/Element/input/radio
 l10n:
-  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
 
-{{htmlelement("input")}} 要素の **`radio`** 型は、一般に**ラジオグループ**、すなわち関連するオプションの組み合わせを示すラジオボタンの集まりです。グループ内でラジオボタンは一つしか同時に選択することができません。ラジオボタンはふつう、小さな円で描かれ、選択されたら塗りつぶされたりや強調表示されたりします。
+{{htmlelement("input")}} 要素の **`radio`** 型は、一般に**ラジオグループ**、すなわち関連するオプションの組み合わせを示すラジオボタンの集まりです。
 
-{{EmbedInteractiveExample("pages/tabbed/input-radio.html", "tabbed-standard")}}
+グループ内でラジオボタンは一つしか同時に選択することができません。ラジオボタンはふつう、小さな円で描かれ、選択されたら塗りつぶされたりや強調表示されたりします。
+
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;radio&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<fieldset>
+  <legend>Select a maintenance drone:</legend>
+
+  <div>
+    <input type="radio" id="huey" name="drone" value="huey" checked />
+    <label for="huey">Huey</label>
+  </div>
+
+  <div>
+    <input type="radio" id="dewey" name="drone" value="dewey" />
+    <label for="dewey">Dewey</label>
+  </div>
+
+  <div>
+    <input type="radio" id="louie" name="drone" value="louie" />
+    <label for="louie">Louie</label>
+  </div>
+</fieldset>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 ラジオボタンと呼ばれるのは、以下のように外見や操作方法が古い型のラジオのプッシュボタンに似ているからです。
 
@@ -19,7 +55,7 @@ l10n:
 
 ## 値
 
-`value` 属性はラジオボタンの値を持つ文字列です。値は{{Glossary("user agent", "ユーザーエージェント")}}がユーザーに表示することはありません。代わりに、グループ内のどのラジオボタンが選択されているかを識別するために使用されます。
+`value` 属性はラジオボタンの値を持つ文字列です。値は{{Glossary("User agent", "ユーザーエージェント")}}がユーザーに表示することはありません。代わりに、グループ内のどのラジオボタンが選択されているかを識別するために使用されます。
 
 ### ラジオグループの定義
 
@@ -130,7 +166,7 @@ form.addEventListener(
 
 `value` はすべての {{HTMLElement("input")}} で共通のものの一つです。しかし、`radio` 型の入力欄では特別な目的になります。フォームが送信されるとき、現在チェックされているラジオボタンのみがサーバーに送信され、報告される値は `value` 属性の値になります。 `value` が指定されていない場合は、既定で `on` という文字列になります。これは以前に[値](#value)の節で説明した通りです。
 
-- `required`
+- [`required`](/ja/docs/Web/HTML/Attributes/required)
   - : `required` 属性は、ほとんどの {{HTMLElement("input")}} に共通する属性です。同じ名前のラジオボタンのグループのいずれかに `required` 属性がある場合、そのグループのラジオボタンのいずれかをチェックする必要がありますが、その属性が適用されているラジオボタンをチェックする必要があるわけではありません。
 
 ## ラジオボタンの使用
@@ -182,11 +218,11 @@ form.addEventListener(
 
 ## 検証
 
-ラジオボタンは制約の検証に参加しません。制約されるべき実際の値を持ちません。
+[`required`](/ja/docs/Web/HTML/Attributes/required) 属性が設定されたラジオボタンの場合、または同じ名前のラジオボタンのグループで、そのうちの 1 つ以上に `required` が設定されている場合、このコントロールが有効とみなされるにはラジオボタンが選択されている必要があります。どのラジオボタンもチェックされていない場合、バリデーション中に {{domxref("ValidityState")}} オブジェクトの [`valueMissing`](/ja/docs/Web/API/ValidityState/valueMissing) プロパティが `true` を返し、ブラウザーがユーザーにオプションの選択を要求します。
 
-## ラジオボタンの整形
+## ラジオボタンのスタイル設定
 
-以下の例は、この記事を通して見てきた例を少し徹底させたもので、スタイルを追加し、特殊な要素を使用することでより良い意味づけを確立しています。 HTML はこのようになっています。
+次の例は、この記事全体で見てきた例を少し詳しくしたもので、いくつかの追加のスタイル設定と、専門要素を使用することでより適切な意味づけがなされています。 HTML はこのようになっています。
 
 ```html
 <form>
@@ -341,4 +377,3 @@ button:active {
 
 - {{HTMLElement("input")}} およびそれが実装している {{domxref("HTMLInputElement")}} インターフェイス
 - {{domxref("RadioNodeList")}}: ラジオボタンのリストを表現するインターフェイス
-- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

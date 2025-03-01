@@ -9,7 +9,40 @@ l10n:
 
 **`<figcaption>`** は [HTML](/ja/docs/Web/HTML) の要素で、親の {{HTMLElement("figure")}} 要素内にあるその他のコンテンツを説明するキャプションや凡例を表します。
 
-{{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;figcaption&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<figure>
+  <img
+    src="/shared-assets/images/examples/elephant.jpg"
+    alt="Elephant at sunset" />
+  <figcaption>An elephant at sunset</figcaption>
+</figure>
+```
+
+```css interactive-example
+figure {
+  border: thin #c0c0c0 solid;
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  max-width: 220px;
+  margin: auto;
+}
+
+img {
+  max-width: 220px;
+  max-height: 150px;
+}
+
+figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+}
+```
 
 ## 属性
 
