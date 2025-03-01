@@ -109,7 +109,7 @@ Markdown と HTML での構文は以下の通りです。
 ```
 
 純粋に装飾的な画像は空の `alt` を設定すべきですが、 MDN ドキュメント内の画像には何らかの目的があるはずなので、空ではない文字列の記述が必要です。
- 代替テキストに関するヒントについては、 [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) を参照して、さまざまな状況で画像に alt 属性を使用する方法を学んでください。
+代替テキストに関するヒントについては、 [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) を参照して、さまざまな状況で画像に alt 属性を使用する方法を学んでください。
 
 ## 画像の圧縮
 
