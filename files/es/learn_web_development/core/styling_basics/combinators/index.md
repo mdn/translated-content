@@ -108,7 +108,7 @@ Si inserta algún otro elemento como un `<h2>` entre el `<h1>` y el `<p>`, verá
 
 ```html live-sample___adjacent
 <article>
-  <h1>A heading</h1>
+  <h1>Un encabezado</h1>
   <p>
     Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
     daikon amaranth tatsoi tomatillo melon azuki bean garlic.
@@ -139,7 +139,7 @@ h1 + p {
 
 ## Combinador de hermanos generales
 
-Si desea seleccionar hermanos de un elemento, incluso si no son directamente adyacentes, puede usar el **combinador de hermanos generales ** (`~`). Para seleccionar todos los elementos `<img>` que vienen _en cualquier lugar_ después de los elementos `<p>`, haríamos esto:
+Si desea seleccionar hermanos de un elemento, incluso si no son directamente adyacentes, puede usar el **combinador de hermanos generales** (`~`). Para seleccionar todos los elementos `<img>` que vienen _en cualquier lugar_ después de los elementos `<p>`, haríamos esto:
 
 ```css
 p ~ img
@@ -149,10 +149,10 @@ En el siguiente ejemplo, estamos seleccionando todos los elementos `<p>` que vie
 
 ```html live-sample___general
 <article>
-  <h1>A heading</h1>
-  <p>I am a paragraph.</p>
-  <div>I am a div</div>
-  <p>I am another paragraph.</p>
+  <h1>Un encabezado</h1>
+  <p>Yo soy un párrafo.</p>
+  <div>Yo soy un div</div>
+  <p>Yo soy otro párrafo.</p>
 </article>
 ```
 
@@ -185,7 +185,7 @@ p ~ img {
 }
 ```
 
-El [`&` selector de anidamiento](/es/docs/Web/CSS/Nesting_selector) también se puede utilizar para crear selectores complejos:
+El [selector de anidamiento `&`](/es/docs/Web/CSS/Nesting_selector) también se puede utilizar para crear selectores complejos:
 
 ```css
 p {
@@ -201,10 +201,10 @@ Aquí hay un ejemplo que demuestra selectores complejos:
 
 ```html live-sample___nesting
 <article>
-  <h1>A heading</h1>
-  <p>I am a paragraph.</p>
-  <div>I am a div</div>
-  <p>I am another paragraph.</p>
+  <h1>Un encabezado</h1>
+  <p>Yo soy un párrafo.</p>
+  <div>Yo soy un div</div>
+  <p>Yo soy otro párrafo.</p>
 </article>
 ```
 
@@ -226,7 +226,7 @@ h1 {
 
 {{EmbedLiveSample("nesting", "", "220px")}}
 
-> [!Nota]
+> [!NOTE]
 > En el ejemplo anterior, no se requiere el selector de anidamiento `&`, pero agregarlo ayuda a mostrar explícitamente que se está utilizando el anidamiento CSS.
 
 ## Combinación de combinadores con selectores
