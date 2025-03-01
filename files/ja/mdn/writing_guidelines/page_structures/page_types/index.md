@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6a489877196f27cadd5b51545b68b9e31884a86f
 ---
 
-{{MDNSidebar}}
-
 MDN には繰り返し使用されるいくつかの種類のページがあります。
 この記事では、これらのページの種類とその目的、および新しいページを作成するときに使用するそれぞれのテンプレートの例と使用方法について説明します。
 
@@ -67,6 +65,7 @@ MDN ページの種類を明確に識別するために、フロントマター�
 - [HTTP ヘッダー](#http_ヘッダーリファレンスページ)
 - [ランディングページ](#ランディングページ)
 - [SVG 要素](#svg_要素リファレンスページ)
+- [ウェブ開発の学習ページ](#ウェブ開発の学習ページ)
 
 それぞれの節には、そのページ種類のライブサンプルページへのリンクが記載されています。
 
@@ -91,7 +90,8 @@ MDN ページの種類を明確に識別するために、フロントマター�
 
 ### API リファレンスページ
 
-> **メモ:** *インターフェイスランディングページ*とも呼ばれます。
+> [!NOTE]
+> 「インターフェイスランディングページ」とも呼ばれます。
 
 **API リファレンスページ**は、特定のインターフェイスやクラスのメンバーであるすべてのメソッド、プロパティ、イベントなどを列挙します。
 クラスまたはインターフェイスが何を行うか、または何のために使用されるかの概要を提供し、これらの各メンバーのドキュメントへのリンクを提供します。
@@ -174,9 +174,9 @@ MDN ページの種類を明確に識別するために、フロントマター�
 
 #### 例
 
-- [background-color プロパティ](/ja/docs/Web/CSS/background-color)
-- [:hover 擬似クラス](/ja/docs/Web/CSS/:hover)
-- [@media アットルール](/ja/docs/Web/CSS/@media)
+- [`background-color` プロパティ](/ja/docs/Web/CSS/background-color)
+- [`:hover` 擬似クラス](/ja/docs/Web/CSS/:hover)
+- [`@media` アットルール](/ja/docs/Web/CSS/@media)
 
 #### テンプレート
 
@@ -201,13 +201,13 @@ MDN ページの種類を明確に識別するために、フロントマター�
 
 **概念ページ**は、何かを説明したり教えたりする*ガイド*ページです。
 一般に、あるページが主に散文で書かれており、他のページ種別に分類されない場合、それはおそらく概念ページです。
-あるトピックに関する幅広い議論は、複数の概念ページにまたがり、 [Next](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs) と [Previous](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs) マクロを使用してリンクされるかもしれません。
+あるトピックに関する幅広い議論は、複数の概念ページにまたがり、 [Next](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) と [Previous](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) マクロを使用してリンクされるかもしれません。
 
 #### 例
 
 - [WebVR API の使用](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)
 - [ウェブオーディオ API の視覚化](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [CSS のカスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 
 ### 用語集ページ
 
@@ -232,8 +232,20 @@ MDN ページの種類を明確に識別するために、フロントマター�
 ランディングページのレイアウトは、通常、特定のトピックに関するページのツリーのルートページに使用されます。
 トピックの簡単な要約で始まり、サブページへのリンクの構造化されたリストが表示され、オプションとして読者に役立つ追加資料が表示されます。
 
-サブページのリストは、テンプレート [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs), [`LandingPageListSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/LandingPageListSubpages.ejs) を使用して自動的に生成することができます。
-しかし、より複雑なケースでは、リストを手作業で作成する必要があるかもしれません（そして、メンテナンスも必要です）。
+サブページのリストは、 [`SubpagesWithSummaries`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/subpages_with_summaries.rs) テンプレートを使用して自動的に生成することができます。しかし、より複雑なケースでは、リストを手作業で作成する必要があるかもしれません（そして、メンテナンスも必要です）。
+
+### ウェブ開発の学習ページ
+
+MDNの「[ウェブ開発の学習](/ja/docs/Learn_web_development)」の章は、ウェブ開発の基礎を学んでいる人々を対象としており、仕様上、 MDN の他のコンテンツとは異なる手法が要求されます。 ガイドラインの詳細については、「[ウェブ開発の学習の執筆ガイドライン](/ja/docs/MDN/Writing_guidelines/Learning_content)」をご覧ください。
+
+「ウェブ開発の学習」にあるページの種類はいくつかしかありません。
+
+- **モジュールグループのランディングページ**、例えば[コア学習モジュール](/ja/docs/Learn_web_development/Core)
+  - : これらは、導入の段落、モジュールグループを開始する前に必要となる前提条件を詳細に説明する節、モジュール一覧、そしてオプションの「関連情報」リンクの一覧から構成されています。
+- **モジュールのランディングページ**、例えば[HTML によるコンテンツの構造化](/ja/docs/Learn_web_development/Core/Structuring_content)
+  - : これらは、導入の段落、モジュールを開始する前に必要となる前提条件を説明するセクション、含まれているチュートリアルのリスト、続いてオプションの「追加のチュートリアル」リスト（関連はあるが、主要な学習経路の一部ではない）、オプションの「関連情報」リンクリストで構成されています。
+- **チュートリアルページ**、例えば[基本的な HTML の構文](/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
+  - : 学習チュートリアルの構造は厳密に定められていませんが、使い勝手の良い学習体験を提供する必要があります（[ウェブ開発の学習の執筆ガイドライン > アプローチ](/ja/docs/MDN/Writing_guidelines/Learning_content#アプローチ)を参照）。また、コンテンツの冒頭に「前提条件」と「学習成果」を設定し、コンテンツが指定された学習成果を教えるようにする必要があります。
 
 ### 例
 
@@ -241,8 +253,8 @@ MDN ページの種類を明確に識別するために、フロントマター�
 - [CSS](/ja/docs/Web/CSS)
 - [Web API](/ja/docs/Web/API)
 - [JavaScript](/ja/docs/Web/JavaScript)
-- [学習領域](/ja/docs/Learn)
-- [MDN への協力](/ja/docs/MDN/Community/Contributing)
+- [学習領域](/ja/docs/Learn_web_development)
+- [MDN への協力](/ja/docs/MDN/Community)
 
 ## 関連情報
 
