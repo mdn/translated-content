@@ -1,16 +1,52 @@
 ---
-title: 学习和获得帮助
-slug: Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help
-original_slug: Learn/Learning_and_getting_help
+title: 研究与学习
+slug: Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 ---
 
-{{learnsidebar}}
+{{LearnSidebar}}
 
-你花一些时间学习一套新技能是很好的，但采用一些更好的做法可以让你的学习更加高效。有时，你也会陷入困境并感到沮丧，即使是专业的 Web 开发人员也会经常这样，因此，了解最有效的方法，尝试获得帮助，以便你能够继续工作，是值得付出的。本文在这两个方面提供了一些提示和提示，可帮助你从学习 Web 开发中获得更多内容，并进一步阅读，以便你能够找到有关每个子主题的详细信息。
+{{NextMenu("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills")}}
+
+作为一名 web 开发人员，需要掌握的知识很多，而且需要不断学习。但如何才能最有效地找到自己需要的知识呢？本文将为你提供研究和学习方面的实用技巧。
+
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提：</th>
+      <td>
+        不适用
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">学习成果：</th>
+      <td>
+        <ul>
+          <li>学习高效的研究方法。</li>
+          <li>制定学习计划。</li>
+          <li>保持动力。</li>
+          <li>小黄鸭调试法（Rubber ducking）。</li>
+          <li>高效地解决问题。</li>
+          <li>树立不断学习的心态。</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## 有效学习
 
 让我们直接思考一下有效的学习。
+
+### 选择高质量资源
+
+应该确保选择的研究资源质量高、声誉好。要了解哪些资源声誉卓著，可以询问老师或更有经验的同事他们会推荐什么，也可以进行一些网络搜索，了解网络上其他人推荐了哪些资源。当然，MDN 是值得推荐的；其他好的例子包括：
+
+- [Stack Overflow](https://stackoverflow.com/)
+- [Scrimba](https://scrimba.com/?via=mdn) <sup>课程伙伴</sup>
+- [YouTube](https://www.youtube.com/)
+- [freeCodeCamp](https://www.freecodecamp.org/)
+- [Codecademy](https://www.codecademy.com)
+- [Dev.to](https://dev.to/)
 
 ### 不同的学习方法
 
@@ -164,22 +200,24 @@ MDN Web 文档对这两种类型都非常好 - 你当前位于的区域非常适
 
 这些问题中的每一个似乎都不像你开始遇到的一个大问题那么难解决。现在你只需要逐步想出方案并解决所有问题！
 
-#### 学习并认知模式
+#### 学习识别模式
 
-正如我们之前所说，web 设计/编程主要是关于问题解决和模式。一旦你写下了你需要做什么来解决一个特定的问题，你就可以开始弄清楚用什么技术特性来解决它了。例如，专业的 web 开发人员已经创建了很多水平导航菜单，所以他们会立即开始考虑这样的解决方案：
+Web 开发主要是关于问题解决和模式。
 
-创建一个水平导航栏菜单经常利用到列表，比如：
+一旦你写下了你需要做什么来解决一个特定的问题，你就可以开始弄清楚用什么技术特性来解决它了。例如，专业的 web 开发人员已经创建了很多水平导航菜单，所以他们会立即开始考虑这样的解决方案：
+
+创建一个水平导航栏菜单经常利用到链接列表，比如：
 
 ```html
 <ul>
-  <li>First menu item</li>
-  <li>Second menu item</li>
-  <li>Third menu item</li>
-  <li>etc.</li>
+  <li><a href="">第一个菜单项</a></li>
+  <li><a href="">第二个菜单项</a></li>
+  <li><a href="">第三个菜单项</a></li>
+  <li><a href="">等</a></li>
 </ul>
 ```
 
-要使所有内容水平放置在一条线上，最简单的现代方法是使用 flexbox：
+要使所有内容水平放置在一条线上，最简单的现代方法是使用弹性盒子：
 
 ```css
 ul {
@@ -187,7 +225,7 @@ ul {
 }
 ```
 
-接着删除不必要的间距和要点，我们可以这样做：
+接着删除不必要的间距和项目符号，我们可以这样做：
 
 ```css
 ul {
@@ -198,17 +236,9 @@ ul {
 
 等等。
 
-如果你是一个完全的网络开发初学者，你将不得不做一些研究和网络搜索和查找解决方案来解决这些问题。如果你是一名专业的 web 开发人员，你可能还记得上次解决类似问题的时候，只需要查找一些你后面遗忘的语法。
+需要做多少研究才能找到解决方案，这取决于经验有多丰富，以及以前是否实现过类似的功能。你可能会从以前的项目中识别出这种模式，只需查找一些忘记的语法即可。
 
-当你找到这些问题的解决方案时，写下你所做的事情，并在某个文件目录中保留一些少量的代码示例，这样你就可以回顾以前的工作了。
-
-另外，网络上有 [开发者工具](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)，它使你可以查看用在 web 上构建任何网站的代码。如果你手头没有解决方案，一个好的研究方法是在网络某处地方找到具有类似功能的网站，并找出它们是如何做到的。
-
-> [!NOTE]
-> 请注意，上面我们讨论了我们首先要解决的问题，然后是用来解决这个问题的技术。这几乎总是最好的方法--不要从一个你看起来很酷但陌生的新技术开始，然后试着把它塞进用例中。
-
-> [!NOTE]
-> 最简单的解决方案往往是最好的。
+当你找到这些问题的解决方案时，值得写下你所做的事情，并在某个文件目录中保留一些少量的代码示例，这样你就可以回顾以前的工作了。
 
 ### 做练习
 
@@ -277,8 +307,4 @@ ul {
 
 你也可以尝试参加正式的网络会议。虽然这些费用可能很高，但你可以尝试在那里做志愿者，许多会议都提供优惠票，例如学生票或多样性票。
 
-## 参见
-
-- [Coursera: Learning to learn](https://www.coursera.org/learn/learning-how-to-learn)
-- [Freecodecamp](https://www.freecodecamp.org/)
-- [Codecademy](https://www.codecademy.com/)
+{{NextMenu("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills")}}

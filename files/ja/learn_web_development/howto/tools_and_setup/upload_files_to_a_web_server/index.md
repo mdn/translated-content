@@ -1,7 +1,6 @@
 ---
 title: ウェブサーバーにファイルをアップロードするには
 slug: Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
-original_slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
 l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
@@ -15,11 +14,11 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server"
+        <a href="/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server"
           >ウェブサーバーとは何か</a
-        >と<a href="/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name"
+        >と<a href="/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name"
           >ドメイン名の仕組み</a
-        >を知っている必要があります。<a href="/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server"
+        >を知っている必要があります。<a href="/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server"
           >基本的な環境設定方法</a
           >と<a href="/ja/docs/Learn/Getting_started_with_the_web"
           >簡単なウェブページの作成方法</a
@@ -43,7 +42,7 @@ l10n:
 SFTP クライアントには、いくつもの選択肢があります。ここのデモは [FileZilla](https://filezilla-project.org/) を使うことにします。 Windows、macOS、Linux で使え、無料だからです。 FileZilla をインストールするには、 [FileZilla ダウンロードページ](https://filezilla-project.org/download.php?type=client)に移動し、大きなダウンロードボタンをクリックしてから、通常の方法でインストーラーファイルからインストールします。
 
 > [!NOTE]
-> もちろん他にもたくさんの選択肢があります。詳しくは[公開ツール](/ja/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#公開ツール)を参照してください。
+> もちろん他にもたくさんの選択肢があります。詳しくは[公開ツール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#公開ツール)を参照してください。
 
 FileZilla アプリケーションを開きます。次のようなものが表示されます。
 

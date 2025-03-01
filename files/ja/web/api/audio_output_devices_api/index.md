@@ -46,7 +46,7 @@ Audio Output Devices API は以下の API を拡張し、以下の機能を追�
 
 この API へのアクセスは、以下の制限を受けます。
 
-- 全てのメソッドやプロパティは[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ呼びだせます。
+- 全てのメソッドやプロパティは[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ呼びだせます。
 
 - [`MediaDevices.selectAudioOutput()`](/ja/docs/Web/API/MediaDevices/selectAudioOutput) はユーザーから選択されたデバイスを音声の出力先として使用する許可を得ます。
 
@@ -74,7 +74,7 @@ Audio Output Devices API は以下の API を拡張し、以下の機能を追�
 document.querySelector("#myButton").addEventListener("click", async () => {
   if (!navigator.mediaDevices.selectAudioOutput) {
     console.log(
-      "selectAudioOutput() に未対応か、安全なコンテキストではありません。",
+      "selectAudioOutput() に未対応か、保護されたコンテキストではありません。",
     );
     return;
   }

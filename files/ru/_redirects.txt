@@ -488,7 +488,7 @@
 /ru/docs/Learn/Фронтенд_разработчик	https://developer.mozilla.org/en-US/curriculum/
 /ru/docs/Learn/Что_такое_веб_сервер	/ru/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
 /ru/docs/MDN/About	/ru/docs/MDN/Writing_guidelines
-/ru/docs/MDN/At_ten	/ru/docs/orphaned/MDN/At_ten
+/ru/docs/MDN/At_ten	https://developer.mozilla.org/ru/about#our_journey
 /ru/docs/MDN/Community/Contributing/Getting_started	/ru/docs/MDN/Community/Getting_started
 /ru/docs/MDN/Community/Contributing/Translated_content	/ru/docs/MDN/Community/Translated_content
 /ru/docs/MDN/Contribute/Creating_and_editing_pages	/ru/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
@@ -503,7 +503,7 @@
 /ru/docs/MDN/Feedback	/ru/docs/MDN/Community
 /ru/docs/MDN/Getting_started	/ru/docs/MDN/Community/Getting_started
 /ru/docs/MDN/Structures	/ru/docs/MDN/Writing_guidelines/Page_structures
-/ru/docs/MDN_at_ten	/ru/docs/orphaned/MDN/At_ten
+/ru/docs/MDN_at_ten	https://developer.mozilla.org/ru/about#our_journey
 /ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action	/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /ru/docs/Mozilla/Add-ons/WebExtensions/Интернационализация	/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization
 /ru/docs/Mozilla/Add-ons/WebExtensions/модификация_веб_страницы	/ru/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page
