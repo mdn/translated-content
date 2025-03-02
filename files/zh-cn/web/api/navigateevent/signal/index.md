@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-{{domxref("NavigateEvent")}} 接口的 **`signal`** 只读属性返回一个 {{domxref("AbortSignal")}}，如果导航被取消（例如，用户按下浏览器的“停止”按钮，或者另一个导航启动并因此取消正在进行的导航），该属性将被中止。
+{{domxref("NavigateEvent")}} 接口的 **`signal`** 只读属性返回一个 {{domxref("AbortSignal")}}，如果导航被取消（例如，用户按下浏览器的“停止”按钮，或者另一个导航启动并因此取消正在进行的导航），该信号将被中止。
 
 ## 值
 
