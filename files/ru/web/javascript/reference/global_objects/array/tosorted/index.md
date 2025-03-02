@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/toSorted
 
 {{JSRef}}
 
-Метод **`toSorted()`** возвращает новый массив с отсортированными в порядке возрастания элементами. Является [копирующей](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) версией метода {{jsxref("Array/sort", "sort()")}}.
+Метод **`toSorted()`** возвращает новый массив с отсортированными в порядке возрастания элементами. Является **копирующей** версией метода {{jsxref("Array/sort", "sort()")}}.
 
 ## Синтаксис
 
@@ -27,9 +27,9 @@ toSorted(compareFn)
 
 Смотрите {{jsxref("Array/sort", "sort()")}} для получения дополнительной информации о параметре `compareFn`.
 
-Когда мы используем метод `toSorted()` на массиве с [пропущенными элементами](/ru/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), метод `toSorted()` проитерирует пустые элементы так, как если бы они имели значение `undefined`.
+Когда мы используем метод `toSorted()` на массиве с пропущенными элементами, метод `toSorted()` проитерирует пустые элементы так, как если бы они имели значение `undefined`.
 
-Метод `toSorted()` - это [generic](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). Он ожидает, что значение `this` будет иметь свойство `length` и свойства с целочисленными ключами.
+Метод `toSorted()` ожидает, что значение `this` будет иметь свойство `length` и свойства с целочисленными ключами.
 
 ## Примеры
 
