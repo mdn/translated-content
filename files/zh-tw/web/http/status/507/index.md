@@ -43,12 +43,12 @@ Content-Length: 230
 
 <html>
 <head>
-<title>507 儲存空間不足</title>
+  <title>507 Insufficient Storage</title>
 </head>
 <body>
-<h1>儲存空間不足</h1>
-<p>伺服器無法儲存所包含的資源以完成該請求。</p>
-<p>請稍後再試。</p>
+  <h1>507 Insufficient Storage</h1>
+  <p>伺服器無法儲存所包含的資源以完成該請求。</p>
+  <p>請稍後再試。</p>
 </body>
 </html>
 ```
