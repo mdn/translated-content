@@ -31,7 +31,7 @@ original_slug: Learn_web_development/Core/Accessibility
   - : 承接上一篇文章，有時候製作包含非語義化 HTML 和動態 JavaScript 更新內容的複雜 UI 控制項可能會很困難。WAI-ARIA 是一種可以透過加入瀏覽器和輔助技術，能夠識別並使用的額外語義的技術，它可以幫助解決這類問題，讓使用者了解正在發生的事情。在這裡我們將展示如何在基礎層面上使用它來改善無障礙性。
 - [無障礙多媒體](/zh-TW/docs/Learn_web_development/Core/Accessibility/Multimedia)
   - : 另一類可能造成無障礙問題的內容是多媒體——影片、音訊和圖像內容需要提供適當的文字替代方案，以便輔助技術及其使用者能夠理解。這篇文章將展示如何做到這一點。
-- [手機無障礙](/zh-TW/docs/Learn_web_development/Core/Accessibility/Mobile)
+- [行動無障礙](/zh-TW/docs/Learn_web_development/Core/Accessibility/Mobile)
   - : 由於行動裝置上的網路存取如此普及，且像 iOS 和 Android 這樣的主流平台擁有完善的無障礙工具，考慮你的網路內容在這些平台上的無障礙性是很重要的。這篇文章探討了行動裝置特有的無障礙考量。
 - [無障礙技術排除](/zh-TW/docs/Learn_web_development/Core/Accessibility/Accessibility_troubleshooting) <sup>挑戰</sup>
   - : 在這個挑戰中，我們向你展示一個有幾個無障礙問題的簡單網站，你需要診斷並修復這些問題。
@@ -39,14 +39,14 @@ original_slug: Learn_web_development/Core/Accessibility
 ## 其他文章請參考
 
 - [Start Building Accessible Web Applications Today](https://egghead.io/courses/start-building-accessible-web-applications-today)
-  - : An excellent series of video tutorials by Marcy Sutton.
+  - : Marcy Sutton 的一系列優秀影片教學
 - [Deque University resources](https://dequeuniversity.com/resources/)
-  - : Includes code examples, screen reader references, and other useful resources.
+  - : 包含程式碼範例、螢幕閱讀器參考資料和其他有用資源。
 - [WebAIM resources](https://webaim.org/resources/)
-  - : Includes guides, checklists, tools, and more.
+  - : 包含指南、檢查清單、工具等等。
 - [Web Accessibility Evaluation Tools List](https://www.w3.org/WAI/ER/tools/)
-  - : Includes a list of web accessibility evaluation tools.
-- [Learn Accessible Web Design](https://v2.scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>_MDN learning partner_</sup>
-  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn Accessible Web Design_ course teaches you how to write accessible HTML by solving interactive coding challenges and fixing a real-world website.
+  - : 包含網頁無障礙評估工具列表。
+- [Learn Accessible Web Design](https://v2.scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>_MDN 學習夥伴_</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn Accessible Web Design_ 此課程教你如何透過解決互動式挑戰和修復真實世界的網站來撰寫無障礙 HTML。
 
 {{NextMenu("Learn_web_development/Core/Accessibility/What_is_accessibility", "Learn_web_development/Core")}}
