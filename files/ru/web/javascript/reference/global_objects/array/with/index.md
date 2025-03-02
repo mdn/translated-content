@@ -31,7 +31,7 @@ arrayInstance.with(index, value)
 ### Выбрасываемые исключения
 
 - {{jsxref("RangeError")}}
-  - : Если `index >= array.length` или `index < -array.length`.
+  - : Возникает, если `index >= array.length` или `index < -array.length`.
 
 ## Описание
 
