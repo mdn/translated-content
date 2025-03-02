@@ -85,7 +85,7 @@ console.log(Array.prototype.toSorted.call(arrayLike));
 ## Смотрите также
 
 - [Полифил `Array.prototype.toSorted` в `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
-- Руководство по [упорядоченным наборам данных](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- Руководство по [упорядоченным наборам данных](/ru/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array.prototype.sort()")}}
 - {{jsxref("Array.prototype.toReversed()")}}
 - {{jsxref("Array.prototype.toSpliced()")}}
