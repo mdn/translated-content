@@ -1,7 +1,6 @@
 ---
 title: HTML 성능 최적화
 slug: Learn_web_development/Extensions/Performance/HTML
-page-type: learn-module-chapter
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
