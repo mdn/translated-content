@@ -43,15 +43,15 @@ Content-Type: text/html;
 Content-Length: 123
 
 <!doctype html>
-<html lang="zh-TW">
+<html lang="zh">
 <head>
-<title>503 服務無法使用</title>
+  <title>503 Service Unavailable</title>
 </head>
 <body>
-<h1>503 服務無法使用</h1>
-<p>伺服器無法完成你的請求，請稍後再試。</p>
-<p>如果此問題持續發生，請<a href="https://example.com/support">聯絡支援</a>。</p>
-<p>伺服器日誌包含此錯誤的詳細資訊，請求 ID：ABC-123。</p>
+  <h1>503 Service Unavailable</h1>
+  <p>伺服器無法完成你的請求，請稍後再試。</p>
+  <p>如果此問題持續發生，請<a href="https://example.com/support">聯絡支援</a>。</p>
+  <p>伺服器日誌包含此錯誤的詳細資訊，請求 ID：ABC-123。</p>
 </body>
 </html>
 ```
