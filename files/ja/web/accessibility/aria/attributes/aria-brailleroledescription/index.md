@@ -35,7 +35,7 @@ l10n:
 
 [`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) が与えられている場合にのみ `aria-brailleroledescription` を使用してください。ただし、`aria-roledescription`の値が点字で機能する場合は、その属性の点字バージョンは必要ありません。一般に `aria-brailleroledescription` は、点字では `aria-roledescription` が冗長すぎるという、まれな場合にのみ使用してください。
 
-覚えておくべきいくつかのルール: 
+覚えておくべきいくつかのルール:
 
 - `aria-brailleroledescription` は、有効な ARIA ロールを持つ要素、または暗黙的なロールセマンティクスを持つ要素にのみ適用してください。
 - `aria-brailleroledescription` が存在する場合、`aria-roledescription` の値とは異なる、空でなく、null ではない値を持つ必要があります。また、ARIA の明示的またはロール、あるいは暗黙的なセマンティックロールとは異なります。
@@ -45,15 +45,13 @@ l10n:
 > [!WARNING]
 > コンテンツが Unicode 点字パターンのみの場合、値はユーザーの優先翻訳テーブルに従って翻訳されません。
 
-> [!NOTE]
-> `aria-roledescription` をそのまま `aria-brailleroledescription` に使用しないでください。`aria-roledescription` が適切な点字表現を提供しない場合にのみ、この属性を含めてください。
+> [!NOTE] > `aria-roledescription` をそのまま `aria-brailleroledescription` に使用しないでください。`aria-roledescription` が適切な点字表現を提供しない場合にのみ、この属性を含めてください。
 
 次の場合、`aria-brailleroledescription` の値は点字ユーザーに公開されません:
 
 - 値が空であるか、空白文字または空の点字パターン（dots-0 (U+2800)）のみが含まれている場合。
 - この属性が適用される要素に、`generic` ロールを含む、`aria-brailleroledescription` が禁止されている明示的または暗黙的な WAI-ARIA ロールが付与されている場合。
 - この属性が適用されている要素に、有効な `aria-roledescription` がない場合。
-
 
 > [!NOTE]
 > 点字リーダーなどの支援技術を日常的に使用するユーザーを対象にサイトやアプリケーションをテストし、コンテンツが点字で意味を成すことを確認してください。
