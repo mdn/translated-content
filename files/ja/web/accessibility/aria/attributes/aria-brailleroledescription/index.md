@@ -38,7 +38,7 @@ l10n:
 覚えておくべきいくつかのルール: 
 
 - `aria-brailleroledescription` は、有効な ARIA ロールを持つ要素、または暗黙的なロールセマンティクスを持つ要素にのみ適用してください。
-- `aria-brailleroledescription` が存在する場合、`aria-roledescription`の値とは異なる、空でなく、null ではない値を持つ必要があります。また、ARIA の明示的またはロール、あるいは暗黙的なセマンティックロールとは異なります。
+- `aria-brailleroledescription` が存在する場合、`aria-roledescription` の値とは異なる、空でなく、null ではない値を持つ必要があります。また、ARIA の明示的またはロール、あるいは暗黙的なセマンティックロールとは異なります。
 - Unicode 点字パターンの使用は避けてください。使用する必要がある場合は、`aria-brailleroledescription` の値に Unicode 点字パターン、空白、点字パターンの dots-0 以外のコンテンツが含まれていることを確認してください。
 - 値が常にドキュメントの言語にローカライズされていることを確認してください。
 
