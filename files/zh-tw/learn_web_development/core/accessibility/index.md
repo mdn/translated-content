@@ -1,7 +1,7 @@
 ---
 title: 無障礙設計
 slug: Learn_web_development/Core/Accessibility
-page-type: learn-module
+original_slug: Learn_web_development/Core/Accessibility
 ---
 
 {{LearnSidebar}}
