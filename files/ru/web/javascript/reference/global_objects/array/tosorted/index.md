@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/toSorted
 
 {{JSRef}}
 
-Метод **`toSorted()`** возвращает новый массив с отсортированными в порядке возрастания элементами. Является [копирующей](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) версией метода {{jsxref("Array/sort", "sort()")}}.
+Метод **`toSorted()`** возвращает новый массив с отсортированными в порядке возрастания элементами. Является [копирующей](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) версией метода {{jsxref("Array/sort", "sort()")}}.
 
 ## Синтаксис
 
