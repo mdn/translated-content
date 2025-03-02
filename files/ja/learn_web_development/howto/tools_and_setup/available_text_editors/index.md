@@ -1,7 +1,6 @@
 ---
 title: どんなテキストエディターが利用できるか
 slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
-original_slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
 l10n:
   sourceCommit: 8906ca75f60f205a6dd18fe3c824bbee228802b2
 ---
@@ -15,7 +14,7 @@ l10n:
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        <a href="/ja/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need"
+        <a href="/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need"
         >ウェブサイトを構築するために必要な各種ソフトウェア</a
         >について理解していること。
       </td>
@@ -468,4 +467,4 @@ l10n:
 
 ## 次のステップ
 
-良いテキストエディターが見つかったら、[基本的な作業環境](/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)（テストサーバー）の構築に着手しましょう。あるいは、[最初のウェブページ](/ja/docs/Learn/Getting_started_with_the_web)を書いてみるのもいいでしょう。
+良いテキストエディターが見つかったら、[基本的な作業環境](/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)（テストサーバー）の構築に着手しましょう。あるいは、[最初のウェブページ](/ja/docs/Learn/Getting_started_with_the_web)を書いてみるのもいいでしょう。

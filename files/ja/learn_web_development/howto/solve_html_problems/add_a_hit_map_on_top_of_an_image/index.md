@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8d766d1d1c60a2d6d2c95bd2aa9d0b297d9c70ac
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Learn/HTML/Howto")}}
+{{QuickLinksWithSubpages("/ja/docs/Learn_web_development/Howto/Solve_HTML_problems")}}
 
 ここでは、イメージマップを設定する方法と、最初に検討すべきいくつかの欠点を説明します。
 
@@ -19,7 +19,7 @@ l10n:
         <a href="/ja/docs/Learn/Getting_started_with_the_web"
           >基本的な HTML 文書の作成方法</a
         >および<a
-          href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#ウェブページに画像を置くにはどうするのか"
+          href="/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images#ウェブページに画像を置くにはどうするのか"
           >アクセス可能な画像をウェブページに追加する方法</a
         >について、理解している必要があります。
       </td>
@@ -42,7 +42,7 @@ l10n:
 
 以前は、イメージマップは一般的なナビゲーションデバイスでしたが、そのパフォーマンスとアクセシビリティの影響を徹底的に検討することが重要です。
 
-いくつかの理由から[テキストリンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)（CSS でスタイル付けされたもの）がイメージマップよりも好ましい。 テキストリンクは軽量でメンテナンス可能で、多くの場合 SEO に優しく、アクセシビリティのニーズをサポートしています（スクリーンリーダー、テキストのみのブラウザー、翻訳サービスなど）。
+いくつかの理由から[テキストリンク](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)（CSS でスタイル付けされたもの）がイメージマップよりも好ましい。 テキストリンクは軽量でメンテナンス可能で、多くの場合 SEO に優しく、アクセシビリティのニーズをサポートしています（スクリーンリーダー、テキストのみのブラウザー、翻訳サービスなど）。
 
 ## イメージマップを正しく挿入する方法
 
@@ -54,7 +54,7 @@ l10n:
 - 画像には、ホットスポットの始まりと終わりを明示する必要があります。
 - ホットスポットは、どのビューポートサイズでも快適にタップするのに十分な大きさでなければなりません。 どれくらいの大きさか？ [72 × 72 CSS ピクセルは良好な最小値](https://uxmovement.com/mobile/finger-friendly-design-ideal-mobile-touch-target-sizes/)（英語）で、タッチターゲット間の間隔に余裕もあります。 [50languages.com](https://www.goethe-verlag.com/book2/) の世界地図（執筆時点）は、問題を完全に示しています。 アルバニアやエストニアよりもロシアや北米をタップする方がはるかに簡単です。
 
-[常に同じ方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#ウェブページに画像を置くにはどうするのか)で画像を挿入します（{{htmlelement("img")}} 要素と [`img`](/ja/docs/Web/HTML/Element/img#alt) テキストを使用します）。 画像がナビゲーションデバイスとしてのみ存在する場合、後で {{htmlelement('area')}} 要素に適切な [`area`](/ja/docs/Web/HTML/Element/area#alt) テキストを指定すると `alt=""` と書くことができます。
+[常に同じ方法](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images#ウェブページに画像を置くにはどうするのか)で画像を挿入します（{{htmlelement("img")}} 要素と [`img`](/ja/docs/Web/HTML/Element/img#alt) テキストを使用します）。 画像がナビゲーションデバイスとしてのみ存在する場合、後で {{htmlelement('area')}} 要素に適切な [`area`](/ja/docs/Web/HTML/Element/area#alt) テキストを指定すると `alt=""` と書くことができます。
 
 特殊な [`usemap`](/ja/docs/Web/HTML/Element/img#usemap) 属性が必要です。 イメージマップには、スペースを含まない一意の名前を考えてください。 次に、`usemap` 属性の値としてその名前（# が先行する）を割り当てます。
 
@@ -92,7 +92,7 @@ l10n:
   - : リンク先のリソースの URL。 現在の領域をどこにもリンクさせたくない場合は、この属性を空白のままにしておくことができます（空白の円を描いている場合など）。
 - [`alt`](/ja/docs/Web/HTML/Element/area#alt)
 
-  - : リンクがどこにあるのか、それが何をするのかを人に伝える必須の属性。 `alt` テキストは、画像が利用できない場合にのみ表示されます。 [アクセス可能なリンクテキストを書くためのガイドライン](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#明確なリンク語を使う)を参照してください。
+  - : リンクがどこにあるのか、それが何をするのかを人に伝える必須の属性。 `alt` テキストは、画像が利用できない場合にのみ表示されます。 [アクセス可能なリンクテキストを書くためのガイドライン](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#明確なリンク語を使う)を参照してください。
 
     `href` 属性が空白で、画像全体に既に `alt` 属性がある場合、`alt=""` と書くことができます。
 

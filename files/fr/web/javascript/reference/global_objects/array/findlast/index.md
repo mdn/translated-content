@@ -9,7 +9,16 @@ l10n:
 
 La méthode **`findLast()`** parcourt un tableau dans le sens inverse et renvoie le premier élément rencontré qui correspond au critère fourni par la fonction passée en argument. Si aucun élément ne correspond au critère de la fonction de test, ce sera, [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) qui sera renvoyé.
 
-{{EmbedInteractiveExample("pages/js/array-findlast.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.findLast()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 50, 130, 44];
+
+const found = array1.findLast((element) => element > 45);
+
+console.log(found);
+// Expected output: 130
+```
 
 Si vous souhaitez trouver&nbsp;:
 

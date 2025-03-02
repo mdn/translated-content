@@ -7,10 +7,10 @@ slug: Web/API/console
 
 **`console`** 对象提供了浏览器控制台调试的接口（如：Firefox 的 [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)）。在不同浏览器上它的工作方式可能不一样，但通常都会提供一套共性的功能。
 
-`console` 对象可以从任何全局对象中访问到，如 浏览器作用域上的 {{domxref("Window")}}，以及通过属性控制台作为 worker 中的特定变体的 {{domxref("WorkerGlobalScope")}}。可以通过 {{domxref("Window.console")}} 引用，也可以简单的通过 `console` 引用。例：
+`console` 对象可以从任何全局作用域中访问。例如：
 
 ```js
-console.log("Failed to open the specified link");
+console.log("无法打开指定链接");
 ```
 
 ## 实例方法
@@ -105,12 +105,12 @@ console.info("我的第一辆车是", car, "。该对象为：", someObject);
 
 可以在传递给 console 的方法的时候使用下面的字符以期进行参数的替换。
 
-| Substitution string | Description                                                                                              |
-| ------------------- | -------------------------------------------------------------------------------------------------------- |
-| `%o` or `%O`        | 打印 JavaScript 对象。在审阅器点击对象名字可展开更多对象的信息。                                         |
-| `%d` or `%i`        | 打印整数。支持数字格式化。例如，`console.log("Foo %.2d", 1.1)` 会输出有先导 0 的两位有效数字：`Foo 01`。 |
-| `%s`                | 打印字符串。                                                                                             |
-| `%f`                | 打印浮点数。支持格式化，比如 `console.log("Foo %.2f", 1.1)` 会输出两位小数：`Foo 1.10`                   |
+| 替换字符串   | 描述                                                                                                     |
+| ------------ | -------------------------------------------------------------------------------------------------------- |
+| `%o` or `%O` | 打印 JavaScript 对象。在审阅器点击对象名字可展开更多对象的信息。                                         |
+| `%d` or `%i` | 打印整数。支持数字格式化。例如，`console.log("Foo %.2d", 1.1)` 会输出有先导 0 的两位有效数字：`Foo 01`。 |
+| `%s`         | 打印字符串。                                                                                             |
+| `%f`         | 打印浮点数。支持格式化，比如 `console.log("Foo %.2f", 1.1)` 会输出两位小数：`Foo 1.10`                   |
 
 > [!NOTE]
 > Chrome 不支持精确格式化。

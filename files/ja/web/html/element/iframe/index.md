@@ -9,7 +9,24 @@ l10n:
 
 **`<iframe>`** は [HTML](/ja/docs/Web/HTML) の要素で、入れ子になった{{Glossary("browsing context", "閲覧コンテキスト")}}を表現し、現在の HTML ページに他のページを埋め込むことができます。
 
-{{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;iframe&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<iframe
+  id="inlineFrameExample"
+  title="Inline Frame Example"
+  width="300"
+  height="200"
+  src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik">
+</iframe>
+```
+
+```css interactive-example
+iframe {
+  border: 1px solid black;
+  width: 100%; /* takes precedence over the width set with the HTML width attribute */
+}
+```
 
 それぞれの閲覧コンテキストにはそれぞれの[文書](/ja/docs/Web/API/Document)があり、URL ナビゲーションができます。それぞれの埋め込み閲覧コンテキストのナビゲーションは、最上位の閲覧コンテキストの[セッション履歴](/ja/docs/Web/API/History)で直線化されます。他の閲覧コンテキストを埋め込んでいる閲覧コンテキストは、_親閲覧コンテキスト_ と呼ばれます。_最上位_ の閲覧コンテキスト（親を持たないもの）は、通常はブラウザーのウィンドウで、 {{domxref("Window")}} オブジェクトで表されます。
 
@@ -194,7 +211,7 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
 
 ## `error` および `load` イベントの動作
 
-`<iframe>` で発生する `error` イベントと `load` イベントを使用すると、ローカルネットワークの HTTP サーバの URL 空間を推測することができる可能性があります。そのため、セキュリティ対策として、ユーザーエージェントは `<iframe>` に対して [error](/ja/docs/Web/API/HTMLElement/error_event) イベントを発生させず、`<iframe>` のコンテンツの読み込みに失敗しても、常に [load](/ja/docs/Web/API/HTMLElement/load_event) イベントが発生します。
+`<iframe>` で発生する `error` イベントと `load` イベントを使用すると、ローカルネットワークの HTTP サーバーの URL 空間を推測することができる可能性があります。そのため、セキュリティ対策として、ユーザーエージェントは `<iframe>` に対して [error](/ja/docs/Web/API/HTMLElement/error_event) イベントを発生させず、`<iframe>` のコンテンツの読み込みに失敗しても、常に [load](/ja/docs/Web/API/HTMLElement/load_event) イベントが発生します。
 
 ## アクセシビリティ
 

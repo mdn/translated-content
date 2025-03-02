@@ -10,7 +10,7 @@ slug: Web/API/WebSockets_API
 ## 인터페이스
 
 - [`WebSocket`](/ko/docs/Web/API/WebSocket)
-  - : 웹 소켓 서버로 연결하고 연결을 통해 데이터를 보내고 받는 기본 인터페이스<
+  - : 웹 소켓 서버로 연결하고 연결을 통해 데이터를 보내고 받는 기본 인터페이스
 - [`CloseEvent`](/ko/docs/Web/API/CloseEvent)
   - : 연결이 종료 되었을 때 웹 소켓 객체에 의해 전달된 이벤트
 - [`MessageEvent`](/ko/docs/Web/API/MessageEvent)
@@ -26,13 +26,13 @@ slug: Web/API/WebSockets_API
 
 - [AJAX](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data), [JavaScript](/ko/docs/Web/JavaScript)
 
-## `같이 보기`
+## 같이 보기
 
 - [RFC 6455 - 웹 소켓 프로토콜](https://tools.ietf.org/html/rfc6455)
 - [웹 소켓 API 규격](https://www.w3.org/TR/websockets/)
 - [서버로부터의 이벤트](/ko/docs/Web/API/Server-sent_events)
 - [WebSocket.us](http://websocket.us/) - 웹 소켓에 대한 비영리 커뮤니티
 
-## `브라우저 호환성`
+## 브라우저 호환성
 
 {{Compat}}

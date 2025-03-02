@@ -2,7 +2,7 @@
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
 l10n:
-  sourceCommit: a71b8929628a2187794754c202ad399fe357141b
+  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
 ---
 
 {{jsSidebar("Statements")}}
@@ -43,7 +43,10 @@ for (variable of iterable)
 
 當 `for...of` 迴圈在可迭代物件上進行迭代時，它首先調用可迭代物件的 [`[Symbol.iterator]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) 方法，該方法回傳一個[迭代器](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器協議)，然後重複調用得到的迭代器的 [`next()`](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器協議) 方法，以生成要賦予 `variable` 的值序列。
 
-`for...of` 迴圈在迭代器完成時退出（即迭代器的 `next()` 方法回傳一個包含 `done: true` 的物件）。你也可以使用流程控制語句來改變正常的控制流程。[`break`](/zh-TW/docs/Web/JavaScript/Reference/Statements/break) 會退出迴圈並轉到迴圈區塊後的第一個語句，而 [`continue`](/zh-TW/docs/Web/JavaScript/Reference/Statements/continue) 會跳過當前迭代的其餘語句並進行下一次迭代。
+當迭代器完成時（`next()` 的回傳結果是一個具有 `done: true` 的物件），`for...of` 迴圈便會退出。與其他迴圈語句一樣，你可以在 `statement` 中使用[流程控制語句](/zh-TW/docs/Web/JavaScript/Reference/Statements#流程控制)：
+
+- {{jsxref("Statements/break", "break")}} 會停止 `statement` 的執行，並跳到迴圈之後的第一個語句。
+- {{jsxref("Statements/continue", "continue")}} 會停止 `statement` 的執行，並跳到迴圈的下一次迭代。
 
 如果 `for...of` 迴圈提前退出（例如遇到 `break` 語句或拋出錯誤），則會調用迭代器的 [`return()`](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器協議) 方法來執行任何清理動作。
 

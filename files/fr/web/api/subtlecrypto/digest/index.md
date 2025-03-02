@@ -39,7 +39,7 @@ Les algorithmes de condensé, aussi connue sous le nom de [fonctions de hachage 
 Cet algorithme est spécifié dans [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), section 6.1, et produit un résultat de 160 bits de long.
 
 > [!WARNING]
-> Cet algorithme est maintenant considérer comme vulnérable et ne doit pas être utilisé pour des applications cryptographiques.
+> Cet algorithme est maintenant considéré comme vulnérable et ne doit pas être utilisé pour des applications cryptographiques.
 
 ### SHA-256
 

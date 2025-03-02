@@ -15,7 +15,21 @@ l10n:
 
 `reduce()` で一番わかりやすいのは、配列のすべての要素の和を返す場合でしょう。
 
-{{EmbedInteractiveExample("pages/js/array-reduce.html")}}
+{{InteractiveExample("JavaScript Demo: Array.reduce()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+console.log(sumWithInitial);
+// Expected output: 10
+```
 
 縮小関数は配列を要素ごとに走査し、それぞれの段階で、前の段階の結果に現在の配列の値を加えていきます (この結果は、それ以前のすべての段階を合算したものです)。
 

@@ -7,7 +7,19 @@ slug: Web/HTML/Element/rp
 
 **`<rp>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於為不支援使用 {{HTMLElement("ruby")}} 元素顯示 ruby 注釋的瀏覽器提供回退括號。每個 `<rp>` 元素應該包裹著包含注釋文字的 {{HTMLElement("rt")}} 元素的開始和結束括號。
 
-{{EmbedInteractiveExample("pages/tabbed/rp.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;rp&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<ruby>
+  漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
+
+```css interactive-example
+ruby {
+  font-size: 2em;
+}
+```
 
 ## 屬性
 
