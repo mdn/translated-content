@@ -74,11 +74,11 @@ column-width: unset;
 
 {{EmbedLiveSample('Setting_column_width_in_pixels', 'auto', 160)}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
