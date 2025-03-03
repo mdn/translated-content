@@ -2,7 +2,7 @@
 title: MediaStream：getTracks() 方法
 slug: Web/API/MediaStream/getTracks
 l10n:
-  sourceCommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
+  sourceCommit: d8a660f63ae6e2e8a1dba567c1398f72a09f9658
 ---
 
 {{APIRef("Media Capture and Streams")}}
