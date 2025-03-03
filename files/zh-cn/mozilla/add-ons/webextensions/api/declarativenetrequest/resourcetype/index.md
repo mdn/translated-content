@@ -52,7 +52,7 @@ l10n:
 - `sub_frame`
   - : 加载到 {{HTMLElement("iframe")}} 或 {{HTMLElement("frame")}} 元素中的文档。
 - `web_manifest`
-  - : 为可以安装到主屏幕的网站加载的 [Web 应用清单](/zh-CN/docs/Web/Manifest)。
+  - : 为可以安装到主屏幕的网站加载的 [Web 应用清单](/zh-CN/docs/Web/Progressive_web_apps/Manifest)。
 - `webbundle`
   - : 发起与服务器的连接的请求，通过 Web Bundle 或[打包的网站](https://github.com/WICG/webpackage)。
 - `websocket`

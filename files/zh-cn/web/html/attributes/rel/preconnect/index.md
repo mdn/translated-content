@@ -35,4 +35,4 @@ Link: <https://example.com>; rel="preconnect"
 
 ## 参见
 
-- [推测性加载](/zh-CN/docs/Web/Performance/Speculative_loading)，以比较 `<link rel="preconnect">` 和其他类似的性能改进特性。
+- [推测性加载](/zh-CN/docs/Web/Performance/Guides/Speculative_loading)，以比较 `<link rel="preconnect">` 和其他类似的性能改进特性。

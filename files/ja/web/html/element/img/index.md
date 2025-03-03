@@ -9,7 +9,20 @@ l10n:
 
 **`<img>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書に画像を埋め込みます。
 
-{{EmbedInteractiveExample("pages/tabbed/img.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;img&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<img
+  class="fit-picture"
+  src="/shared-assets/images/examples/grapefruit-slice.jpg"
+  alt="Grapefruit slice atop a pile of other slices" />
+```
+
+```css interactive-example
+.fit-picture {
+  width: 250px;
+}
+```
 
 上記の例では、 `<img>` 要素の使い方を示しています。
 
@@ -83,7 +96,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
     ブラウザーが画像ファイルを含むレスポンスを受信すると、対応するソースまたはトリガーイベントがオフになります。
 
     > [!NOTE]
-    > 詳しくは[帰属報告 API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
+    > 詳しくは[帰属レポート API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
 
     この属性には、設定できるバージョンが 2 つあります。
 

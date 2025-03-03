@@ -7,7 +7,20 @@ slug: Web/HTML/Element/img
 
 **`<img>`** [HTML](/zh-CN/docs/Web/HTML) 元素将一张图像嵌入文档。
 
-{{EmbedInteractiveExample("pages/tabbed/img.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;img&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<img
+  class="fit-picture"
+  src="/shared-assets/images/examples/grapefruit-slice.jpg"
+  alt="Grapefruit slice atop a pile of other slices" />
+```
+
+```css interactive-example
+.fit-picture {
+  width: 250px;
+}
+```
 
 上面的例子展示了 `<img>` 元素的用法：
 

@@ -7,7 +7,20 @@ slug: Web/HTML/Element/img
 
 **HTML-элемент `<img>`** встраивает изображение в документ. Это [замещаемый элемент](/ru/docs/Web/CSS/Replaced_element).
 
-{{EmbedInteractiveExample("pages/tabbed/img.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;img&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<img
+  class="fit-picture"
+  src="/shared-assets/images/examples/grapefruit-slice.jpg"
+  alt="Grapefruit slice atop a pile of other slices" />
+```
+
+```css interactive-example
+.fit-picture {
+  width: 250px;
+}
+```
 
 Приведённый выше пример показывает очень простое использование элемента `<img>`. Атрибут `src` обязателен и содержит путь к изображению, которое вы хотите встроить в документ. Атрибут `alt` содержит текстовое описание изображения, которое не обязательно, но невероятно полезно для доступности — программы чтения с экрана читают это описание своим пользователям, так они знают какое изображение показано, и так же оно отображается на странице, если изображение не может быть загружено по какой-либо причине.
 

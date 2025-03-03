@@ -36,7 +36,7 @@ delete(options)
     - `path` {{Optional_Inline}}
       - : 记录 cookie 路径的字符串。默认为 `/`。
     - `partitioned` {{Optional_Inline}}
-      - : 一个布尔值，默认为 `false`。将其设置为 `true` 指定要删除的 cookie 将是分区 cookie。更多信息请参阅[具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)。
+      - : 一个布尔值，默认为 `false`。将其设置为 `true` 指定要删除的 cookie 将是分区 cookie。更多信息请参阅[具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)。
 
 ### 返回值
 

@@ -7,7 +7,36 @@ slug: Web/HTML/Element/fieldset
 
 **HTML-элемент `<fieldset>`** используется для группировки нескольких элементов управления в веб-форме.
 
-{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;fieldset&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<form>
+  <fieldset>
+    <legend>Choose your favorite monster</legend>
+
+    <input type="radio" id="kraken" name="monster" value="K" />
+    <label for="kraken">Kraken</label><br />
+
+    <input type="radio" id="sasquatch" name="monster" value="S" />
+    <label for="sasquatch">Sasquatch</label><br />
+
+    <input type="radio" id="mothman" name="monster" value="M" />
+    <label for="mothman">Mothman</label>
+  </fieldset>
+</form>
+```
+
+```css interactive-example
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 Пример выше показывает, как элемент `<fieldset>` группирует части HTML-формы, а вложенный элемент {{htmlelement("legend")}} даёт заголовок для `<fieldset>`. Он может иметь несколько атрибутов, самый используемый из них `form`, который содержит `id` формы {{htmlelement("form")}} на этой же странице. Этот атрибут позволяет сделать `<fieldset>` частью формы `<form>` даже если он не находится внутри неё. Также вы можете отключить `<fieldset>` и всё его содержимое с помощью атрибута `disabled`.
 

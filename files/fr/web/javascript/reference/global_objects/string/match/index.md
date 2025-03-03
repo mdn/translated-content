@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/String/match
 
 La méthode **`match()`** permet d'obtenir le tableau des correspondances entre la chaîne courante et une expression rationnelle.
 
-{{EmbedInteractiveExample("pages/js/string-match.html")}}
+{{InteractiveExample("JavaScript Demo: String.match()")}}
+
+```js interactive-example
+const paragraph = "The quick brown fox jumps over the lazy dog. It barked.";
+const regex = /[A-Z]/g;
+const found = paragraph.match(regex);
+
+console.log(found);
+// Expected output: Array ["T", "I"]
+```
 
 ## Syntaxe
 

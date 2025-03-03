@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 
 La méthode **`delete()`** retire un élément donné de l'objet {{jsxref("WeakMap")}}.
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-delete.html")}}
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.delete()")}}
+
+```js interactive-example
+const weakmap1 = new WeakMap();
+const object1 = {};
+
+weakmap1.set(object1, 42);
+
+console.log(weakmap1.delete(object1));
+// Expected output: true
+
+console.log(weakmap1.has(object1));
+// Expected output: false
+```
 
 ## Syntaxe
 

@@ -9,7 +9,23 @@ l10n:
 
 アサーションには、 行や単語の先頭・末尾を示す境界や、（先読み、後読み、条件式を含む）何らかの方法で照合が可能なことを示す、その他のパターンが含まれます。
 
-{{EmbedInteractiveExample("pages/js/regexp-assertions.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp Assertions", "taller")}}
+
+```js interactive-example
+const text = "A quick fox";
+
+const regexpLastWord = /\w+$/;
+console.log(text.match(regexpLastWord));
+// Expected output: Array ["fox"]
+
+const regexpWords = /\b\w+\b/g;
+console.log(text.match(regexpWords));
+// Expected output: Array ["A", "quick", "fox"]
+
+const regexpFoxQuality = /\w+(?= fox)/;
+console.log(text.match(regexpFoxQuality));
+// Expected output: Array ["quick"]
+```
 
 ## 種類
 
