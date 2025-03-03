@@ -72,11 +72,11 @@ l10n:
 “用户名”元素设置了 `autocorrect="off"`，因为自动更正名字会比较讨厌！“简介”没有指定 `autocorrect` 值，意味着启用了自动更正（我们可以设置任何除了 `off` 以外的其他值）。
 
 ```html
-<button id="reset">重置</button>
-<label for="username">名字：</label>
-<input id="username" name="username" type="text" autocorrect="off" />
-<label for="bio">简介：</label>
-<textarea id="bio" name="bio"></textarea>
+<button id="reset">重置</button><label for="username">名字：</label
+><input id="username" name="username" type="text" autocorrect="off" /><label
+  for="bio"
+  >简介：</label
+><textarea id="bio" name="bio"></textarea>
 ```
 
 ```html hidden
