@@ -13,7 +13,7 @@ l10n:
 
 自动更正与以下可编辑文本元素相关：
 
-- 除了 [`password`](/zh-CN/docs/Web/HTML/Element/input/password)、[`email`](/zh-CN/docs/Web/HTML/Element/input/email) 和 [`url`](/zh-CN/docs/Web/HTML/Element/input/url) 类型的 {{htmlelement("input")}} 元素以外，其他类型的 {{htmlelement("input")}} 元素。
+- {{htmlelement("input")}} 元素，除了 [`password`](/zh-CN/docs/Web/HTML/Element/input/password)、[`email`](/zh-CN/docs/Web/HTML/Element/input/email) 和 [`url`](/zh-CN/docs/Web/HTML/Element/input/url) 类型以外（这些类型不支持自动更正）。
 - {{htmlelement("textarea")}} 元素。
 - 任何具有 [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable) 属性的元素。
 
@@ -67,7 +67,7 @@ l10n:
 
 #### HTML
 
-以下 HTML 标记定义了一个 {{htmlelement("button")}}，一个 [`type="text"`](/zh-CN/docs/Web/HTML/Element/input/text) 类型的“名字” {{htmlelement("input")}} 元素，一个“简介” {{htmlelement("textarea")}} 元素和两个 {{htmlelement("label")} 元素。
+以下 HTML 标记定义了一个 {{htmlelement("button")}}，一个 [`type="text"`](/zh-CN/docs/Web/HTML/Element/input/text) 类型的“名字” {{htmlelement("input")}} 元素，一个“简介” {{htmlelement("textarea")}} 元素和两个 {{htmlelement("label")}} 元素。
 
 “用户名”元素设置了 `autocorrect="off"`，因为自动更正名字会比较讨厌！“简介”没有指定 `autocorrect` 值，意味着启用了自动更正（我们可以设置任何除了 `off` 以外的其他值）。
 
@@ -110,7 +110,7 @@ function log(text) {
 
 代码通过检查原型上是否存在 `autocorrect` 来检查是否支持该特性。如果不存在，则记录这一事实。如果存在，则记录每个文本输入元素的 `autocorrect` 属性值。
 
-为按钮添加了一个点击处理程序，允许重置输入的文本和日志。
+为按钮添加了一个点击处理器，允许重置输入的文本和日志。
 
 ```js
 const resetButton = document.querySelector("#reset");
