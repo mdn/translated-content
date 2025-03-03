@@ -2,7 +2,7 @@
 title: NavigatorUAData：getHighEntropyValues() 方法
 slug: Web/API/NavigatorUAData/getHighEntropyValues
 l10n:
-  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
+  sourceCommit: 217e25f9d2c39d2031ecf50f891c27e7f5b96e06
 ---
 
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
@@ -48,7 +48,7 @@ getHighEntropyValues(hints)
 - `bitness`
   - : 一个包含平台架构位数的字符串。例如，`"32"` 或 `"64"`。请注意，如果服务器在 {{HTTPHeader("Accept-CH")}} 标头中明确请求该信息，则可以在 {{HTTPHeader("Sec-CH-UA-Bitness")}} 标头中将该信息发送到服务器。
 - `formFactor`
-  - : 一个包含设备外形规格的字符串。例如，`"Tablet"` 或 `"VR"`。请注意，如果服务器在 {{HTTPHeader("Accept-CH")}} 中明确请求该信息，则可以在 {{HTTPHeader("Sec-CH-UA-Form-Factor")}} 标头中将该信息发送到服务器。
+  - : 一个包含设备外形规格的字符串。例如，`"Tablet"` 或 `"VR"`。请注意，如果服务器在 {{HTTPHeader("Accept-CH")}} 中明确请求该信息，则可以在 {{HTTPHeader("Sec-CH-UA-Form-Factors")}} 标头中将该信息发送到服务器。
 - `fullVersionList`
   - : 一个具有 `"brand"` 和 `"version"` 属性的对象数组，分别表示浏览器名称和完整版本。例如，`{"brand": "Google Chrome", "version": "103.0.5060.134"}, {"brand": "Chromium", "version": "103.0.5060.134"}`。请注意，一个对象可能故意包含无效信息，以防止网站依赖固定的浏览器列表。请注意，如果服务器在 {{HTTPHeader("Accept-CH")}} 中明确请求该信息，则可以在 {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} 标头中将该信息发送到服务器。
 - `model`
