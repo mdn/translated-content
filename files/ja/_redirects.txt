@@ -4428,6 +4428,7 @@
 /ja/docs/Web/HTML/Element/Input1/time	/ja/docs/Web/HTML/Element/input/time
 /ja/docs/Web/HTML/Element/Input1/url	/ja/docs/Web/HTML/Element/input/url
 /ja/docs/Web/HTML/Element/Input1/week	/ja/docs/Web/HTML/Element/input/week
+/ja/docs/Web/HTML/Element/Script1	/ja/docs/Web/HTML/Element/script
 /ja/docs/Web/HTML/Element/Video/canplay_event	/ja/docs/Web/API/HTMLMediaElement/canplay_event
 /ja/docs/Web/HTML/Element/basefont	/ja/docs/Web/CSS/CSS_fonts
 /ja/docs/Web/HTML/Element/bgsound	/ja/docs/Web/HTML/Element/audio
@@ -4441,7 +4442,6 @@
 /ja/docs/Web/HTML/Element/image	/ja/docs/Web/HTML/Element/img
 /ja/docs/Web/HTML/Element/input/datetime	/ja/docs/Web/HTML/Element/input/datetime-local
 /ja/docs/Web/HTML/Element/menuitem	/ja/docs/Web/HTML/Element
-/ja/docs/Web/HTML/Element/script1	/ja/docs/Web/HTML/Element/script
 /ja/docs/Web/HTML/Element/video/waiting_event	/ja/docs/Web/API/HTMLMediaElement/waiting_event
 /ja/docs/Web/HTML/Focus_management_in_HTML	/ja/docs/Web/API/Document/hasFocus
 /ja/docs/Web/HTML/Forms	/ja/docs/Learn_web_development/Extensions/Forms
@@ -4690,7 +4690,6 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species	/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBufferView	/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBufferView_temp	/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer_temp	/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction
@@ -4881,6 +4880,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Properties/Infinity	/ja/docs/Web/JavaScript/Reference/Global_Objects/Infinity
 /ja/docs/Web/JavaScript/Reference/Global_Properties/NaN	/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN
 /ja/docs/Web/JavaScript/Reference/Global_Properties/undefined	/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined
+/ja/docs/Web/JavaScript/Reference/Global_objects/ArrayBufferView	/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /ja/docs/Web/JavaScript/Reference/Methods_Index	/ja/docs/Web/JavaScript/Reference
 /ja/docs/Web/JavaScript/Reference/Objects	/ja/docs/Web/JavaScript/Reference/Global_Objects
 /ja/docs/Web/JavaScript/Reference/Objects/Array	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
