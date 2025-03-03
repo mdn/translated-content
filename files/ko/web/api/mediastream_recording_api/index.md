@@ -4,6 +4,8 @@ slug: Web/API/MediaStream_Recording_API
 page-type: web-api-overview
 browser-compat: api.MediaRecorder
 spec-urls: https://w3c.github.io/mediacapture-record/
+l10n:
+  sourceCommit: bff3a6a2e6b3c13dd8bb0c80a1eb9da08cce5dc6
 ---
 
 {{DefaultAPISidebar("MediaStream Recording")}}
@@ -108,7 +110,7 @@ navigator.mediaDevices.enumerateDevices().then((devices) => {
 
 ### 더 알아보기
 
-MediaStream Recording API의 사용법에 대해 더 알아보려면, 오디오 클립 녹화를 위한 API 활용 방법을 보여주는 [Using the MediaStream Recording API](/ko/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)를 참고하세요. 두 번째 글인 [Recording a media element](/ko/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)에서는 {{HTMLElement("audio")}} 또는 {{HTMLElement("video")}} 요소에서 재생 중인 미디어의 데이터를 실시간으로 추출해, 이를 녹화하거나 로컬 디스크에 저장하는 방법을 설명합니다.
+MediaStream Recording API의 사용법에 대해 더 알아보려면, 오디오 클립 녹화를 위한 API 활용 방법을 보여주는 [MediaStream Recording API 사용하기](/ko/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)를 참고하세요. 두 번째 문서인 [미디어 요소 녹화하기](/ko/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)에서는 {{HTMLElement("audio")}} 또는 {{HTMLElement("video")}} 요소에서 재생 중인 미디어의 데이터를 실시간으로 추출해, 이를 녹화하거나 로컬 디스크에 저장하는 방법을 설명합니다.
 
 ## 인터페이스
 

@@ -1,7 +1,9 @@
 ---
-title: Recording a media element
+title: 미디어 요소 녹화하기
 slug: Web/API/MediaStream_Recording_API/Recording_a_media_element
 page-type: guide
+l10n:
+  sourceCommit: ed19ad8c789e0d621841033aecd535c5474d1ea5
 ---
 
 {{DefaultAPISidebar("MediaStream Recording")}}
@@ -264,7 +266,7 @@ stopButton.addEventListener(
 
 This calls the [`stop()`](#stopping_the_input_stream) function we covered earlier.
 
-### Result
+### 결과
 
 When put all together with the rest of the HTML and the CSS not shown above, it looks and works like this:
 
@@ -272,7 +274,7 @@ When put all together with the rest of the HTML and the CSS not shown above, it 
 
 You can {{LiveSampleLink("Example_of_recording_a_media_element", "view the full demo here")}}, and use your browsers developer tools to inspect the page and look at all the code, including the parts hidden above because they aren't critical to the explanation of how the APIs are being used.
 
-## See also
+## 같이 보기
 
 - [Media Capture and Streams API](/ko/docs/Web/API/Media_Capture_and_Streams_API) landing page
 - {{domxref("MediaDevices.getUserMedia()")}}

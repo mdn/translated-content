@@ -1,8 +1,10 @@
 ---
-title: Using the MediaStream Recording API
+title: MediaStream Recording API 사용하기
 slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 page-type: guide
 browser-compat: api.MediaRecorder
+l10n:
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
 {{DefaultAPISidebar("MediaStream Recording")}}
@@ -255,15 +257,15 @@ After that, we create a combined {{domxref("Blob")}} out of the recorded audio c
 
 Finally, we set an `onclick` handler on the delete button to be a function that deletes the whole clip HTML structure.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - [Media Capture and Streams API](/ko/docs/Web/API/Media_Capture_and_Streams_API) landing page
 - {{domxref("MediaDevices.getUserMedia()")}}
