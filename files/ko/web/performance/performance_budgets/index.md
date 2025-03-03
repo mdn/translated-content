@@ -34,7 +34,7 @@ l10n:
 
 오류 단계는 상한선 역할을 하며, 변경이 부정적이고 눈에 띄는 영향을 미칠 수 있습니다.
 
-성능 예산을 세우려면 여러 [도구](/ko/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics)를 사용하여 사용자가 어디서 오는지 기기와 연결 속도를 먼저 측정해야 합니다. 사용자는 3G 연결을 사용하는 200달러인 Android 기기를 사용하고 있을 수 있습니다. 이러한 시간 기반 지표는 파일 크기 예산으로 변환됩니다.
+시작하려면 여러 [도구](/ko/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics)를 사용하여 사용자가 어디서 오는지 기기와 연결 속도를 먼저 측정해야 합니다. 사용자는 3G 연결을 사용하는 200달러인 Android 기기를 사용하고 있을 수 있습니다. 이러한 시간 기반 지표는 파일 크기 예산으로 변환됩니다.
 
 이탈률을 줄이기 위한 기본적인 기준은 [3G/4G에서 Time to Interactive를 5초 이하로 유지하고, 추가적인 로드는 2초 이하](https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/)로 맞추는 것입니다. 하지만 사이트의 구체적인 목표나 콘텐츠에 따라 다른 성능 지표에 집중할 수도 있습니다.
 
