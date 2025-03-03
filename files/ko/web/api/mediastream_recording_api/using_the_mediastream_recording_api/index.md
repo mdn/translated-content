@@ -1,8 +1,6 @@
 ---
 title: MediaStream Recording API 사용하기
 slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
-page-type: guide
-browser-compat: api.MediaRecorder
 l10n:
   sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
