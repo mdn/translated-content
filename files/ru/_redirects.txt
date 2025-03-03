@@ -489,10 +489,8 @@
 /ru/docs/Learn/Что_такое_веб_сервер	/ru/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
 /ru/docs/MDN/About	/ru/docs/MDN/Writing_guidelines
 /ru/docs/MDN/At_ten	https://developer.mozilla.org/ru/about#our_journey
-/ru/docs/MDN/Community/Contributing	/ru/docs/conflicting/MDN/Community
 /ru/docs/MDN/Community/Contributing/Getting_started	/ru/docs/MDN/Community/Getting_started
 /ru/docs/MDN/Community/Contributing/Translated_content	/ru/docs/MDN/Community/Translated_content
-/ru/docs/MDN/Contribute	/ru/docs/conflicting/MDN/Community
 /ru/docs/MDN/Contribute/Creating_and_editing_pages	/ru/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /ru/docs/MDN/Contribute/Feedback	/ru/docs/MDN/Community
 /ru/docs/MDN/Contribute/Getting_started	/ru/docs/MDN/Community/Getting_started
