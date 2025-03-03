@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`431 Request Header Fields Too Large`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示伺服器拒絕處理請求，因為請求的 [HTTP 標頭](/zh-TW/docs/Web/HTTP/Headers)過長。在減小請求標頭的大小後，可能可以重新提交請求。
+HTTP **`431 Request Header Fields Too Large`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示伺服器拒絕處理請求，因為請求的 [HTTP 標頭](/zh-TW/docs/Web/HTTP/Headers)過長。可以在減小請求標頭的大小後重新提交請求。
 
 431 可以在請求標頭的總大小過大時使用，或者單個標頭字段過大時使用。為了幫助遇到此錯誤的用戶，請在回應主體中指示是哪一種問題——最好說出哪些標頭過大。這讓用戶可以嘗試解決問題，例如清除 cookie。
 
@@ -46,7 +46,7 @@ Content-Type: text/html
 </head>
 <body>
   <h1>Request Header Fields Too Large</h1>
-  <p>"Cookie" 標頭過大。</p>
+  <p>「Cookie」標頭過大。</p>
 </body>
 </html>
 ```
