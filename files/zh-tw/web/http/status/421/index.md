@@ -2,15 +2,14 @@
 title: 421 Misdirected Request
 slug: Web/HTTP/Status/421
 l10n:
-  sourceCommit: 50a5ce565b2fa0b988b3f5ff90ea4b24b13e4b9d
+  sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
 ---
 
 {{HTTPSidebar}}
 
-The HTTP **`421 Misdirected Request`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that the request was directed to a server that is not able to produce a response.
-This can be sent by a server that is not configured to produce responses for the combination of [scheme](/en-US/docs/Web/URI/Reference/Schemes) and [authority](/en-US/docs/Web/URI/Reference/Authority) that are included in the request URI.
+HTTP **`421 Misdirected Request`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示該請求被導向到一個無法產生回應的伺服器。這可能是因為伺服器未設定為針對請求 URI 中包含的 [方案](/zh-TW/docs/Web/URI/Reference/Schemes)與[權限](/zh-TW/docs/Web/URI/Reference/Authority)組合產生回應而發送的。
 
-Clients may retry the request over a different connection.
+用戶端可以嘗試使用不同的連線重新發送請求。
 
 ## 狀態
 
@@ -18,18 +17,18 @@ Clients may retry the request over a different connection.
 421 Misdirected Request
 ```
 
-## Examples
+## 範例
 
-### Apache SNI error
+### Apache SNI 錯誤
 
-Given the following request:
+給定以下請求：
 
 ```http
 GET / HTTP/1.1
 Host: abc.example.com
 ```
 
-In cases such as a wildcard certificate (`*.example.com`) and a connection is reused for multiple domains (`abc.example.com`, `def.example.com`), the server may respond with a 421:
+在例如萬用證書（`*.example.com`）的情況下，且一個連線被重複使用於多個網域（例如 `abc.example.com`、`def.example.com`），伺服器可能會回應 421：
 
 ```http
 HTTP/1.1 421 Misdirected Request
@@ -41,11 +40,11 @@ Server: Apache/2.4.1 (Unix)
 
 {{Specifications}}
 
-## See also
+## 參見
 
-- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
-- [Multiple hosts and misdirected requests](https://httpd.apache.org/docs/2.4/mod/mod_http2.html#misdirected) Apache Server documentation
-- [TLS 1.3](/en-US/docs/Web/Security/Transport_Layer_Security#tls_1.3)
-- [Server Name Indication (SNI)](https://en.wikipedia.org/wiki/Server_Name_Indication)
-- [Transport Layer Security (TLS) configuration](/en-US/docs/Web/Security/Practical_implementation_guides/TLS)
-- Apache [error code `AH02032`](https://svn.apache.org/viewvc?view=revision&revision=1705672) implementation
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
+- [多個主機與錯誤導向請求](https://httpd.apache.org/docs/2.4/mod/mod_http2.html#misdirected) Apache 伺服器文件
+- [TLS 1.3](/zh-TW/docs/Web/Security/Transport_Layer_Security#tls_1.3)
+- [伺服器名稱指示 (SNI)](https://en.wikipedia.org/wiki/Server_Name_Indication)
+- [傳輸層安全性 (TLS) 配置](/zh-TW/docs/Web/Security/Practical_implementation_guides/TLS)
+- Apache [錯誤代碼 `AH02032`](https://svn.apache.org/viewvc?view=revision&revision=1705672) 實作
