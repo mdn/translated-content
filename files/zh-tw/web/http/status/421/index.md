@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`421 Misdirected Request`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示該請求被導向到一個無法產生回應的伺服器。這可能是因為伺服器未設定為針對請求 URI 中包含的 [方案](/zh-TW/docs/Web/URI/Reference/Schemes)與[權限](/zh-TW/docs/Web/URI/Reference/Authority)組合產生回應而發送的。
+HTTP **`421 Misdirected Request`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示該請求被導向到一個無法產生回應的伺服器。這可能是因為伺服器未設定為針對請求 URI 中包含的[方案](/zh-TW/docs/Web/URI/Reference/Schemes)與[權限](/zh-TW/docs/Web/URI/Reference/Authority)組合產生回應而發送的。
 
 用戶端可以嘗試使用不同的連線重新發送請求。
 
