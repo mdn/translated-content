@@ -1,7 +1,6 @@
 ---
 title: 미디어 요소 녹화하기
 slug: Web/API/MediaStream_Recording_API/Recording_a_media_element
-page-type: guide
 l10n:
   sourceCommit: ed19ad8c789e0d621841033aecd535c5474d1ea5
 ---
