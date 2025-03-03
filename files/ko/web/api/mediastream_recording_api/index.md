@@ -14,7 +14,7 @@ l10n:
 
 ## 개념 및 사용 방법
 
-MediaStream Recording API는 단일 주요 인터페이스인 {{domxref("MediaRecorder")}}로 구성되어 있으며, 이 인터페이스가 {{domxref("MediaStream")}}의 데이터를 받아 처리할 수 있도록 전달하는 모든 작업을 수행합니다. 데이터는 `MediaRecorder` 생성 시 설정한 포멧으로 미리 변환되어, {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} 이벤트를 통해 전달됩니다. 이후 필요에 따라 데이터를 추가로 처리하거나 파일로 저장할 수 있습니다.
+MediaStream Recording API는 단일 주요 인터페이스인 {{domxref("MediaRecorder")}}로 구성되어 있으며, 이 인터페이스가 {{domxref("MediaStream")}}의 데이터를 받아 처리할 수 있도록 전달하는 모든 작업을 수행합니다. 데이터는 `MediaRecorder` 생성 시 설정한 포맷으로 미리 변환되어, {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} 이벤트를 통해 전달됩니다. 이후 필요에 따라 데이터를 추가로 처리하거나 파일로 저장할 수 있습니다.
 
 ### 녹화 과정 개요
 
@@ -86,11 +86,11 @@ setTimeout((event) => {
 
 특정 MIME 타입의 지원 여부를 확인하려면 {{domxref("MediaRecorder.isTypeSupported_static", "MediaRecorder.isTypeSupported()")}}를 호출하면 됩니다.
 
-### 사용 가능한 입력 장치 살펴보기
+### 사용할 수 있는 입력 장치 살펴보기
 
-카메라 및/또는 마이크 입력을 녹화하려는 경우, `MediaRecorder` 객체를 생성하기 전에 사용 가능한 입력 장치를 먼저 확인하는 것이 좋습니다. 이를 위해 {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}}를 호출하여 사용 가능한 미디어 장치 목록을 가져올 수 있습니다. 이 목록을 검토하여 잠재적인 입력 소스를 식별하거나 원하는 기준에 따라 필터링할 수 있습니다.
+카메라 및/또는 마이크 입력을 녹화하려는 경우, `MediaRecorder` 객체를 생성하기 전에 사용할 수 있는 입력 장치를 먼저 확인하는 것이 좋습니다. 이를 위해 {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}}를 호출하여 사용할 수 있는 미디어 장치 목록을 가져올 수 있습니다. 이 목록을 검토하여 잠재적인 입력 소스를 식별하거나 원하는 기준에 따라 필터링할 수 있습니다.
 
-이 코드 스니펫에서는 `enumerateDevices()`를 사용하여 사용 가능한 입력 장치를 확인하고, 오디오 입력 장치를 찾은 다음, 해당 장치들을 {{HTMLElement("option")}} 요소로 만들어 입력 소스 선택기를 나타내는 {{HTMLElement("select")}} 요소에 추가합니다.
+이 코드 스니펫에서는 `enumerateDevices()`를 사용하여 사용할 수 있는 입력 장치를 확인하고, 오디오 입력 장치를 찾은 다음, 해당 장치들을 {{HTMLElement("option")}} 요소로 만들어 입력 소스 선택기를 나타내는 {{HTMLElement("select")}} 요소에 추가합니다.
 
 ```js
 navigator.mediaDevices.enumerateDevices().then((devices) => {

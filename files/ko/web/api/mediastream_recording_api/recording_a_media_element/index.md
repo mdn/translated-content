@@ -143,7 +143,7 @@ function wait(delayInMS) {
 }
 ```
 
-`wait()` 함수는 지정된 밀리초가 경과하면 해결되는 새로운 {{jsxref("Promise")}}를 반환합니다. 이 함수는 [화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)를 사용해 {{domxref("Window.setTimeout", "setTimeout()")}}을 호출하고, 프로미스가 성공적으로 완료될 때 호출되는 이행 콜백 함수를 타임아웃 핸들러로 지정합니다. 이를 통해 타임아웃을 사용할 때도 프로미스 문법을 활용할 수 있어, 이후 프로미스 체이닝을 할 때 매우 유용합니다.
+`wait()` 함수는 지정한 밀리초가 경과한 후 이행되는 새 {{jsxref("Promise")}}를 반환합니다. 이 함수는 [화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)를 사용해 {{domxref("Window.setTimeout", "setTimeout()")}}을 호출하고, 프로미스가 성공적으로 완료될 때 호출되는 이행 콜백 함수를 타임아웃 핸들러로 지정합니다. 이를 통해 타임아웃을 사용할 때도 프로미스 문법을 활용할 수 있어, 이후 프로미스 체이닝을 할 때 매우 유용합니다.
 
 ### 미디어 녹화 시작
 
@@ -243,7 +243,7 @@ startButton.addEventListener(
 - {{domxref("MediaDevices.getUserMedia")}}를 호출하여 비디오와 오디오 트랙이 모두 포함된 새로운 {{domxref("MediaStream")}}을 요청합니다. 이것이 우리가 녹화할 스트림입니다.
 - `getUserMedia()`가 반환한 프로미스가 이행되면 {{HTMLElement("video")}} 요소의 {{domxref("HTMLMediaElement.srcObject","srcObject")}} 속성이 입력 스트림으로 설정되어, 사용자의 카메라에서 캡처되는 영상이 미리보기 상자에 표시됩니다. `<video>` 요소가 음소거되어 있으므로 오디오는 재생되지 않습니다. 이후 "Download" 버튼의 링크도 해당 스트림을 참조하도록 설정됩니다. 그리고 Firefox에서는 {{domxref("HTMLMediaElement.captureStream()")}} 메서드에 접두어가 붙어 있기 때문에, `preview.captureStream()`이 `preview.mozCaptureStream()`을 호출하도록 조정합니다. 마지막으로, 미리보기 오디오가 재생되기 시작하면 이행되는 새로운 {{jsxref("Promise")}}가 생성되어 반환됩니다.
 - 미리보기 비디오가 재생되기 시작하면, 녹화할 미디어가 준비되었음을 알 수 있으므로, 앞서 생성한 [`startRecording()`](#미디어_녹화_시작) 함수를 호출합니다. 이때 미리보기 비디오 스트림(녹화할 소스 미디어)과 녹화할 시간(밀리초 단위)을 나타내는 `recordingTimeMS`를 인자로 전달합니다. 앞서 언급한 대로, `startRecording()` 함수는 녹화가 완료되면 녹화된 미디어 데이터 청크를 담은 {{domxref("Blob")}} 객체 배열을 인자로 받아 이행 핸들러를 실행하는 {{jsxref("Promise")}}를 반환합니다.
-- 녹화 과정의 이행 핸들러는 `recordedChunks`라는 변수에 담긴 미디어 데이터 `Blob` 배열을 입력값으로 받습니다. 먼저, {{domxref("Blob.Blob", "Blob()")}} 생성자가 객체 배열을 하나의 객체로 이어붙인다는 점을 활용하여, 이 청크들을 MIME 타입이 `"video/webm"`인 {{domxref("Blob")}}으로 병합합니다. 그 다음, {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}을 사용해 blob을 참조하는 URL을 생성하고, 이 URL을 녹화된 비디오 재생 요소의 [`src`](/ko/docs/Web/HTML/Element/video#src) 속성과 다운로드 버튼의 링크 대상으로 지정합니다.
+- 녹화 과정의 이행 핸들러는 `recordedChunks`라는 변수에 담긴 미디어 데이터 `Blob` 배열을 입력값으로 받습니다. 먼저, {{domxref("Blob.Blob", "Blob()")}} 생성자가 객체 배열을 하나의 객체로 이어 붙인다는 점을 활용하여, 이 청크들을 MIME 타입이 `"video/webm"`인 {{domxref("Blob")}}으로 병합합니다. 그다음, {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}을 사용해 blob을 참조하는 URL을 생성하고, 이 URL을 녹화된 비디오 재생 요소의 [`src`](/ko/docs/Web/HTML/Element/video#src) 속성과 다운로드 버튼의 링크 대상으로 지정합니다.
 
   그런 다음 다운로드 버튼의 [`download`](/ko/docs/Web/HTML/Element/a#download) 속성이 설정됩니다. `download` 속성은 불리언 값도 될 수 있지만, 문자열로 설정하여 다운로드되는 파일의 이름으로 사용할 수도 있습니다. 따라서 다운로드 링크의 `download` 속성을 "RecordedVideo.webm"으로 지정하면, 버튼을 클릭했을 때 그 내용이 녹화된 비디오인 `"RecordedVideo.webm"` 파일이 다운로드되도록 브라우저에 지시하는 것입니다.
 
