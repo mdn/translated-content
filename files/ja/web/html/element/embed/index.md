@@ -9,7 +9,15 @@ l10n:
 
 **`<embed>`** は [HTML](/ja/docs/Web/HTML) の要素で、外部のコンテンツを文書中の指定された場所に埋め込みます。コンテンツは外部アプリケーションや、対話型コンテンツの他の出所（ブラウザーのプラグインなど）によって提供されます。
 
-{{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;embed&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<embed
+  type="video/mp4"
+  src="/shared-assets/videos/flower.mp4"
+  width="250"
+  height="200" />
+```
 
 > [!NOTE]
 > 本文書は、[HTML Living Standard](https://html.spec.whatwg.org/#the-embed-element) の一部として定義された要素についてのみ記載します。以前の標準化されていない要素の実装については扱いません。

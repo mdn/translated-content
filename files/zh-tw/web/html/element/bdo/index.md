@@ -7,7 +7,33 @@ slug: Web/HTML/Element/bdo
 
 **`<bdo>`** [HTML](/zh-TW/docs/Web/HTML) 元素覆蓋了文本的當前方向性，使其中的文本以不同的方向呈現。
 
-{{EmbedInteractiveExample("pages/tabbed/bdo.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;bdo&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Famous seaside songs</h1>
+
+<p>The English song "Oh I do like to be beside the seaside"</p>
+
+<p>
+  Looks like this in Hebrew:
+  <span dir="rtl">אה, אני אוהב להיות ליד חוף הים</span>
+</p>
+
+<p>
+  In the computer's memory, this is stored as
+  <bdo dir="ltr">אה, אני אוהב להיות ליד חוף הים</bdo>
+</p>
+```
+
+```css interactive-example
+html {
+  font-family: sans-serif;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+bdo {
+}
+```
 
 文本的字符從給定方向的起點繪製；個別字符的方向不受影響（例如，字符不會倒置繪製）。
 

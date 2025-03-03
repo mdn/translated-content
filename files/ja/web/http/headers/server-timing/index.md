@@ -55,7 +55,7 @@ Server-Timing: total;dur=123.4
 
 ## PerformanceServerTiming インターフェイス
 
-`Server-Timing` ヘッダーのメトリックがブラウザーの開発者ツールに現れるのに加えて、 {{domxref("PerformanceServerTiming")}} インターフェイスでツールが JavaScript から自動的にメトリックを収集し処理することができます。このインターフェイスは同じオリジンに制約されていますが、 {{HTTPHeader("Timing-Allow-Origin")}} ヘッダーを使用することで、サーバーメトリックにアクセスすることができるドメインを指定することができます。このインターフェイスはブラウザーによっては、安全なコンテキスト (HTTPS) のみでしか利用できません。
+`Server-Timing` ヘッダーのメトリックがブラウザーの開発者ツールに現れるのに加えて、 {{domxref("PerformanceServerTiming")}} インターフェイスでツールが JavaScript から自動的にメトリックを収集し処理することができます。このインターフェイスは同じオリジンに制約されていますが、 {{HTTPHeader("Timing-Allow-Origin")}} ヘッダーを使用することで、サーバーメトリックにアクセスすることができるドメインを指定することができます。このインターフェイスはブラウザーによっては、保護されたコンテキスト (HTTPS) のみでしか利用できません。
 
 ## 仕様書
 

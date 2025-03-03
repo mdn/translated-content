@@ -9,7 +9,13 @@ l10n:
 
 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) **`enterkeyhint`** 是一个[枚举属性](/zh-CN/docs/Glossary/Enumerated)，定义虚拟键盘上回车键的操作标签（或图标）。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-enterkeyhint.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: enterkeyhint", "tabbed-shorter")}}
+
+```html interactive-example
+<input enterkeyhint="go" />
+
+<p contenteditable enterkeyhint="go">https://example.org</p>
+```
 
 ## 描述
 

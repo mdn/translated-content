@@ -9,7 +9,25 @@ l10n:
 
 **`<wbr>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示一个单词换行机会——文本中的一个位置，浏览器可以选择在此处换行，即使其换行规则不会在此处换行。
 
-{{EmbedInteractiveExample("pages/tabbed/wbr.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;wbr&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<div id="example-paragraphs">
+  <p>Fernstraßenbauprivatfinanzierungsgesetz</p>
+  <p>Fernstraßen<wbr />bau<wbr />privat<wbr />finanzierungs<wbr />gesetz</p>
+  <p>Fernstraßen&shy;bau&shy;privat&shy;finanzierungs&shy;gesetz</p>
+</div>
+```
+
+```css interactive-example
+#example-paragraphs {
+  background-color: white;
+  overflow: hidden;
+  resize: horizontal;
+  width: 9rem;
+  border: 2px dashed #999;
+}
+```
 
 ## 属性
 

@@ -1,7 +1,6 @@
 ---
 title: GitHub Pages の使い方
 slug: Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages
-original_slug: Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
 l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
@@ -101,4 +100,4 @@ git push
 
 _another commit_ をより適切なメッセージに置き換えることで、今何を変更したかを記述することができます。
 
-私たちは、Git の表面に触れたにすぎません。詳細については、 [Git と GitHub](/ja/docs/Learn/Tools_and_testing/GitHub) を参照してください。
+私たちは、Git の表面に触れたにすぎません。詳細については、 [Git と GitHub](/ja/docs/Learn_web_development/Core/Version_control) を参照してください。

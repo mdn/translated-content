@@ -9,7 +9,33 @@ l10n:
 
 [HTML](/zh-CN/docs/Web/HTML) 的 **`<style>`** 元素包含文档的样式信息或文档的部分内容。其中的 CSS 会应用于包含 `<style>` 元素的文档内容。
 
-{{EmbedInteractiveExample("pages/tabbed/style.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;style&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<style>
+  p {
+    color: #26b72b;
+  }
+  code {
+    font-weight: bold;
+  }
+</style>
+
+<p>
+  This text will be green. Inline styles take precedence over CSS included
+  externally.
+</p>
+
+<p style="color: blue">
+  The <code>style</code> attribute can override it, though.
+</p>
+```
+
+```css interactive-example
+p {
+  color: #f00;
+}
+```
 
 `<style>` 元素必须包含在文档的 {{htmlelement("head")}} 内。一般来说，最好将样式放在外部样式表中，然后使用 {{htmlelement("link")}} 元素应用它们。
 
