@@ -28,7 +28,7 @@ arrayInstance.with(index, value)
 
 Новый массив, в котором значение элемента с индексом `index` изменено на новое значение `value`.
 
-### Выбрасываемые исключения
+### Исключительные ситуации
 
 - {{jsxref("RangeError")}}
   - : Возникает, если `index >= array.length` или `index < -array.length`.
