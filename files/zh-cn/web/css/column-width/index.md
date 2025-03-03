@@ -7,11 +7,11 @@ l10n:
 
 {{CSSRef}}
 
-在多列布局中，**`column-width`** [CSS](/zh-CN/docs/Web/CSS) 属性可以设置合适的列宽。容器会被尽可能多的列填充，其中，列的宽度不小于 `column-width` 值。如果容器的宽度比指定的值小，那么单列的宽度比会声明的 `column-width` 值小。
+**`column-width`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置多列布局中的理想列宽。容器会被尽可能多的列填充，其中，列的宽度不小于 `column-width` 值。如果容器的宽度比指定的值小，那么单列的宽度比会声明的列宽小。
 
 {{EmbedInteractiveExample("pages/css/column-width.html")}}
 
-此属性可以创建响应式设计，帮助你适配不同的屏幕尺寸，特别是在存在 {{cssxref("column-count")}} 属性（具有优先级）的情况下，为了得到精确的列宽，你必须指定所有相关的长度，在水平文本中，需要指定 {{cssxref('width')}}、`column-width`、{{cssxref('column-gap')}} 和 {{cssxref('column-rule-width')}}。
+此属性可以创建响应式设计，帮助你适配不同的屏幕尺寸。特别是在存在 {{cssxref("column-count")}} 属性（具有高优先级）的情况下，为了得到精确的列宽，你必须指定所有相关的长度。在水平文本中，需要指定 {{cssxref('width')}}、`column-width`、{{cssxref('column-gap')}} 和 {{cssxref('column-rule-width')}}。
 
 ## 语法
 
@@ -19,7 +19,7 @@ l10n:
 /* 关键字值 */
 column-width: auto;
 
-/* 长度值 */
+/* <length> 值 */
 column-width: 60px;
 column-width: 15.5em;
 column-width: 3.3vw;
@@ -34,12 +34,12 @@ column-width: unset;
 
 `column-width` 属性可以指定为下面列出的值。
 
-### 取值
+### 值
 
 - {{cssxref("&lt;length&gt;")}}
-  - ：表示最合适的列宽。实际的列宽可能与指定值存在很大差别：必要时，它可能会更宽，以填充可用空间，当可用空间太小时，列宽则会变窄。该值必须严格为正，否则声明无效。百分比值也无效。
+  - : 表示最合适的列宽。实际的列宽可能与指定值存在很大差别：它可能会更宽以填充可用空间，当可用空间太小时则会变窄。该值必须严格为正，否则声明无效。百分比值也无效。
 - `auto`
-  - ：列的宽度由其它 CSS 属性决定，例如 {{cssxref("column-count")}}。
+  - : 列的宽度由其它 CSS 属性（例如 {{cssxref("column-count")}}）决定。
 
 ## 形式定义
 
@@ -74,7 +74,7 @@ column-width: unset;
 
 #### 结果
 
-{{EmbedLiveSample('Setting_column_width_in_pixels', 'auto', 160)}}
+{{EmbedLiveSample('使用像素设置列宽', 'auto', 160)}}
 
 ## 规范
 
