@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`422 Unprocessable Content`** [用戶端錯誤回應](/zh-tw/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示伺服器理解請求內容的內容類型，且請求內容的語法正確，但無法處理其中包含的指示。
+HTTP **`422 Unprocessable Content`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示伺服器理解請求內容的內容類型，且請求內容的語法正確，但無法處理其中包含的指示。
 
 收到 `422` 回應的用戶端應預期在不修改請求的情況下重試請求將會遇到相同的錯誤。
 
