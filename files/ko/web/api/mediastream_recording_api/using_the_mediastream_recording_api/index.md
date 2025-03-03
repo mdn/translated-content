@@ -9,27 +9,27 @@ l10n:
 
 {{DefaultAPISidebar("MediaStream Recording")}}
 
-The [MediaStream Recording API](/ko/docs/Web/API/MediaStream_Recording_API) makes it easy to record audio and/or video streams. When used with {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}}, it provides an easy way to record from the user's input devices and instantly use the result in web apps.
+[MediaStream Recording API](/ko/docs/Web/API/MediaStream_Recording_API)는 오디오 및/또는 비디오 스트림을 손쉽게 녹화할 수 있도록 해줍니다. {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}}와 함께 사용하면 사용자의 입력 장치에서 바로 녹화하여, 그 결과물을 웹 애플리케이션에서 즉시 활용할 수 있습니다.
 
-Both audio and video may be recorded, separately or together. This article aims to provide a basic guide on how to use the MediaRecorder interface, which provides this API.
+오디오와 비디오는 개별적으로 또는 함께 녹화할 수 있습니다. 이 글은 해당 API를 제공하는 MediaRecorder 인터페이스의 사용법에 대한 기본 가이드를 제공하는 것을 목적으로 합니다.
 
-## A sample application: Web Dictaphone
+## 예제 애플리케이션: 웹 딕터폰
 
-![An image of the Web dictaphone sample app - a sine wave sound visualization, then record and stop buttons, then an audio jukebox of recorded tracks that can be played back.](web-dictaphone.png)
+![웹 딕터폰 샘플 앱의 이미지: 사인파 소리 시각화, 녹음 및 정지 버튼, 그리고 녹음된 트랙을 재생할 수 있는 오디오 주크박스](web-dictaphone.png)
 
-To demonstrate basic usage of the MediaStream Recording API, we have built a web-based dictaphone. It allows you to record snippets of audio and then play them back. It even gives you a visualization of your device's sound input, using the Web Audio API. We'll concentrate on the recording and playback functionality for this article.
+MediaStream Recording API의 기본 사용법을 시연하기 위해, 웹 기반의 딕터폰(녹음기)을 제작했습니다. 이 도구는 오디오의 일부를 녹음한 후 재생할 수 있으며, Web Audio API를 사용해 기기의 사운드 입력을 시각화합니다. 이번 글에서는 녹음 및 재생 기능에 초점을 맞출 예정입니다.
 
-You can see this [demo running live](https://mdn.github.io/dom-examples/media/web-dictaphone/), or [grab the source code](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone) on GitHub.
+이 [데모를 실시간으로 확인](https://mdn.github.io/dom-examples/media/web-dictaphone/)하거나 GitHub에서 [소스 코드를 받아볼](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone) 수 있습니다.
 
-## CSS goodies
+## CSS 유용한 기능
 
-The HTML is pretty simple in this app, so we won't go through it here; there are a couple of slightly more interesting bits of CSS worth mentioning, however, so we'll discuss them below. If you are not interested in CSS and want to get straight to the JavaScript, skip to the [Basic app setup](#basic_app_setup) section.
+이 앱의 HTML은 매우 단순해서 여기서 자세히 다루지 않겠습니다. 하지만 언급할 만한 흥미로운 CSS 요소가 몇 가지 있으므로 아래에서 다룰 예정입니다. CSS에 관심이 없고 바로 JavaScript로 넘어가고 싶다면 [기본 앱 설정](#기본_앱_설정) 섹션으로 건너뛰세요.
 
-### Keeping the interface constrained to the viewport, regardless of device height, with calc()
+### calc()를 사용하여 기기 높이에 상관없이 인터페이스를 뷰포트에 맞게 유지하기
 
-The {{cssxref("calc", "calc()")}} function is one of those useful little utility features that's cropped up in CSS that doesn't look like much initially, but soon starts to make you think "Wow, why didn't we have this before? Why was CSS2 layout so awkward?" It allows you do a calculation to determine the computed value of a CSS unit, mixing different units in the process.
+{{cssxref("calc", "calc()")}} 함수는 처음에는 별다를 것 없어 보이지만, "와, 이 기능이 왜 지금까지 없었을까? CSS2 레이아웃이 왜 이렇게 불편했을까?"라는 생각을 하게 만드는 유용한 도구 중 하나입니다. 이 함수는 서로 다른 단위를 혼합하여 CSS 단위의 계산된 값을 산출할 수 있도록 도와줍니다.
 
-For example, in Web Dictaphone we have three main UI areas, stacked vertically. We wanted to give the first two (the header and the controls) fixed heights:
+예를 들어, 웹 딕터폰에서는 세 개의 주요 UI 영역이 수직으로 배치되어 있습니다. 우리는 처음 두 영역(헤더와 컨트롤)에 고정된 높이를 부여하고자 했습니다.
 
 ```css
 header {
@@ -42,7 +42,7 @@ header {
 }
 ```
 
-However, we wanted to make the third area (which contains the recorded samples you can play back) take up whatever space is left, regardless of the device height. Flexbox could be the answer here, but it's a bit overkill for such a simple layout. Instead, the problem was solved by making the third container's height equal to 100% of the parent height, minus the heights and padding of the other two:
+하지만 기기 높이에 상관없이 남은 공간을 모두 차지하도록, 녹음 샘플 재생 영역인 세 번째 부분을 구성하고 싶었습니다. 이 경우 Flexbox를 사용할 수도 있겠지만, 이렇게 간단한 레이아웃에는 다소 과한 방법일 수 있습니다. 대신, 세 번째 컨테이너의 높이를 상위 요소의 전체 높이에서 다른 두 영역의 높이와 패딩 값을 뺀 값으로 설정하여 문제를 해결했습니다.
 
 ```css
 .sound-clips {
@@ -53,9 +53,9 @@ However, we wanted to make the third area (which contains the recorded samples y
 }
 ```
 
-### Checkbox hack for showing/hiding
+### 체크박스 해킹을 이용한 표시/숨기기
 
-This is fairly well documented already, but we thought we'd give a mention to the checkbox hack, which abuses the fact that you can click on the {{htmlelement("label")}} of a checkbox to toggle it checked/unchecked. In Web Dictaphone this powers the Information screen, which is shown/hidden by clicking the question mark icon in the top right-hand corner. First of all, we style the `<label>` how we want it, making sure that it has enough z-index to always sit above the other elements and therefore be focusable/clickable:
+이 기법은 이미 꽤 잘 문서화되어 있지만, 체크박스의 {{htmlelement("label")}}을 클릭하면 체크/언체크 상태가 전환된다는 점을 활용한 체크박스 해킹을 언급해보고자 합니다. 웹 딕터폰에서는 우측 상단의 물음표 아이콘을 클릭하면 정보 화면이 표시되거나 숨겨지는데, 이때 이 기법이 사용됩니다. 우선, `<label>`에 원하는 스타일을 적용하여 다른 요소들보다 항상 위에 표시되도록 z-index를 충분히 높게 설정해, 포커스 및 클릭이 가능하도록 합니다.
 
 ```css
 label {
@@ -69,7 +69,7 @@ label {
 }
 ```
 
-Then we hide the actual checkbox, because we don't want it cluttering up our UI:
+그런 다음 실제 체크박스는 UI를 어수선하게 만들지 않기 위해 숨깁니다.
 
 ```css
 input[type="checkbox"] {
@@ -78,7 +78,7 @@ input[type="checkbox"] {
 }
 ```
 
-Next, we style the Information screen (wrapped in an {{htmlelement("aside")}} element) how we want it, give it fixed position so that it doesn't appear in the layout flow and affect the main UI, transform it to the position we want it to sit in by default, and give it a transition for smooth showing/hiding:
+다음으로, {{htmlelement("aside")}} 요소로 감싼 정보 화면을 원하는 스타일로 꾸미고, 메인 UI에 영향을 주지 않도록 레이아웃 흐름에서 벗어나도록 고정 위치를 부여합니다. 기본 위치로 이동시키기 위해 변환(transform)을 적용하고, 부드럽게 표시/숨김 효과를 주기 위해 전환(transition)을 설정합니다.
 
 ```css
 aside {
@@ -99,7 +99,7 @@ aside {
 }
 ```
 
-Last, we write a rule to say that when the checkbox is checked (when we click/focus the label), the adjacent `<aside>` element will have its horizontal translation value changed and transition smoothly into view:
+마지막으로, 체크박스가 선택되었을 때 (label을 클릭하거나 포커스했을 때), 인접한 `<aside>` 요소의 수평 이동 값이 변경되어 부드럽게 화면에 나타나도록 하는 규칙을 작성합니다.
 
 ```css
 input[type="checkbox"]:checked ~ aside {
@@ -107,11 +107,11 @@ input[type="checkbox"]:checked ~ aside {
 }
 ```
 
-## Basic app setup
+## 기본 앱 설정
 
-To grab the media stream we want to capture, we use `getUserMedia()`. We then use the MediaStream Recording API to record the stream, and output each recorded snippet into the source of a generated {{htmlelement("audio")}} element so it can be played back.
+캡처할 미디어 스트림을 얻기 위해 `getUserMedia()`를 사용합니다. 이후 MediaStream Recording API를 활용하여 스트림을 녹화하고, 녹화된 각 스니펫을 생성된 {{htmlelement("audio")}} 요소의 소스로 출력해 재생할 수 있도록 합니다.
 
-We'll declare some variables for the record and stop buttons, and the {{htmlelement("article")}} that will contain the generated audio players:
+녹음 및 중지 버튼과, 생성된 오디오 플레이어들을 담을 {{htmlelement("article")}} 요소를 위한 변수를 선언합니다.
 
 ```js
 const record = document.querySelector(".record");
@@ -119,23 +119,23 @@ const stop = document.querySelector(".stop");
 const soundClips = document.querySelector(".sound-clips");
 ```
 
-Finally for this section, we set up the basic `getUserMedia` structure:
+마지막으로, 이 섹션의 기본 `getUserMedia` 구조를 설정합니다.
 
 ```js
 if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
   console.log("getUserMedia supported.");
   navigator.mediaDevices
     .getUserMedia(
-      // constraints - only audio needed for this app
+      // 제약 조건 - 이 앱은 오디오만 필요함
       {
         audio: true,
       },
     )
 
-    // Success callback
+    // 성공 콜백
     .then((stream) => {})
 
-    // Error callback
+    // 오류 콜백
     .catch((err) => {
       console.error(`The following getUserMedia error occurred: ${err}`);
     });
@@ -144,24 +144,24 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 }
 ```
 
-The whole thing is wrapped in a test that checks whether `getUserMedia` is supported before running anything else. Next, we call `getUserMedia()` and inside it define:
+전체 코드는 다른 작업을 실행하기 전 `getUserMedia` 지원 여부를 확인하는 테스트로 감싸져 있습니다. 다음으로 `getUserMedia()`를 호출하고 그 내부를 정의합니다.
 
-- **The constraints**: Only audio is to be captured for our dictaphone.
-- **The success callback**: This code is run once the `getUserMedia` call has been completed successfully.
-- **The error/failure callback**: The code is run if the `getUserMedia` call fails for whatever reason.
+- **제약 조건**: 딕터폰에서는 오직 오디오만 캡처합니다.
+- **성공 콜백**: `getUserMedia` 호출이 성공적으로 완료되면 실행되는 코드입니다.
+- **오류/실패 콜백**: `getUserMedia` 호출이 어떤 이유로 실패할 경우 실행되는 코드입니다.
 
 > [!NOTE]
-> All of the code below is placed inside the `getUserMedia` success callback.
+> 아래의 모든 코드는 `getUserMedia` 성공 콜백 내부에 위치합니다.
 
-## Capturing the media stream
+## 미디어 스트림 캡처
 
-Once `getUserMedia` has created a media stream successfully, you create a new Media Recorder instance with the `MediaRecorder()` constructor and pass it the stream directly. This is your entry point into using the MediaStream Recording API — the stream is now ready to be captured into a {{domxref("Blob")}}, in the default encoding format of your browser.
+`getUserMedia`가 미디어 스트림을 성공적으로 생성하면, `MediaRecorder()` 생성자를 사용해 새 MediaRecorder 인스턴스를 만들고 스트림을 직접 전달합니다. 이것이 MediaStream Recording API를 사용하는 진입점이 되며, 스트림은 이제 브라우저의 기본 인코딩 형식으로 {{domxref("Blob")}}에 캡처될 준비가 된 것입니다.
 
 ```js
 const mediaRecorder = new MediaRecorder(stream);
 ```
 
-There are a series of methods available in the {{domxref("MediaRecorder")}} interface that allow you to control recording of the media stream; in Web Dictaphone we just make use of two, and listen to some events. First of all, {{domxref("MediaRecorder.start()")}} is used to start recording the stream once the record button is pressed:
+{{domxref("MediaRecorder")}} 인터페이스에는 미디어 스트림 녹화를 제어할 수 있는 다양한 메서드들이 있으며, 웹 딕터폰에서는 이 중 두 가지 메서드와 몇 가지 이벤트만을 사용합니다. 우선, 녹음 버튼을 누르면 {{domxref("MediaRecorder.start()")}}를 호출하여 스트림의 녹화를 시작합니다.
 
 ```js
 record.onclick = () => {
@@ -173,9 +173,9 @@ record.onclick = () => {
 };
 ```
 
-When the `MediaRecorder` is recording, the {{domxref("MediaRecorder.state")}} property will return a value of "recording".
+`MediaRecorder`가 녹화 중일 때, {{domxref("MediaRecorder.state")}} 속성은 "recording" 값을 반환합니다.
 
-As recording progresses, we need to collect the audio data. We register an event handler to do this using {{domxref("mediaRecorder.dataavailable_event", "ondataavailable")}}:
+녹화가 진행됨에 따라 오디오 데이터를 수집해야 하므로, 이를 위해 {{domxref("mediaRecorder.dataavailable_event", "ondataavailable")}} 이벤트 핸들러를 등록합니다.
 
 ```js
 let chunks = [];
@@ -186,9 +186,9 @@ mediaRecorder.ondataavailable = (e) => {
 ```
 
 > [!NOTE]
-> The browser will fire `dataavailable` events as needed, but if you want to intervene you can also include a timeslice when invoking the `start()` method — for example `start(10000)` — to control this interval, or call {{domxref("MediaRecorder.requestData()")}} to trigger an event when you need it.
+> 브라우저는 필요에 따라 `dataavailable` 이벤트를 발생시키지만, 필요하다면 `start()` 메서드를 호출할 때 시간 간격(timeslice) 값을 포함시켜(예: `start(10000)`) 이 간격을 제어할 수 있으며, 원하는 시점에 {{domxref("MediaRecorder.requestData()")}}를 호출해 이벤트를 발생시킬 수도 있습니다.
 
-Lastly, we use the {{domxref("MediaRecorder.stop()")}} method to stop the recording when the stop button is pressed, and finalize the {{domxref("Blob")}} ready for use somewhere else in our application.
+마지막으로, 정지 버튼을 누르면 {{domxref("MediaRecorder.stop()")}} 메서드를 사용하여 녹화를 종료하고, 애플리케이션의 다른 부분에서 사용할 준비가 된 {{domxref("Blob")}}을 완성합니다.
 
 ```js
 stop.onclick = () => {
@@ -200,11 +200,11 @@ stop.onclick = () => {
 };
 ```
 
-Note that the recording may also stop naturally if the media stream ends (e.g. if you were grabbing a song track and the track ended, or the user stopped sharing their microphone).
+미디어 스트림이 종료될 경우 녹화가 자연스럽게 중단될 수도 있습니다. (예: 노래 트랙을 녹음 중에 트랙이 끝나거나, 사용자가 마이크 공유를 중단하는 경우 등)
 
-## Grabbing and using the blob
+## Blob 가져오기 및 활용
 
-When recording has stopped, the `state` property returns a value of "inactive", and a stop event is fired. We register an event handler for this using {{domxref("mediaRecorder.stop_event", "onstop")}}, and finalize our blob there from all the chunks we have received:
+녹화가 중지되면 `state` 속성은 "inactive" 값을 반환하며, stop 이벤트가 발생합니다. 이때, {{domxref("mediaRecorder.stop_event", "onstop")}} 이벤트 핸들러를 등록하여 지금까지 수신한 모든 청크로부터 최종적인 blob을 완성합니다.
 
 ```js
 mediaRecorder.onstop = (e) => {
@@ -239,11 +239,11 @@ mediaRecorder.onstop = (e) => {
 };
 ```
 
-Let's go through the above code and look at what's happening.
+위의 코드를 살펴보며 어떤 동작이 일어나는지 확인해 봅시다.
 
-First, we display a prompt asking the user to name their clip.
+먼저, 사용자에게 클립의 이름을 묻는 프롬프트를 표시합니다.
 
-Next, we create an HTML structure like the following, inserting it into our clip container, which is an {{htmlelement("article")}} element.
+다음으로, {{htmlelement("article")}} 요소인 클립 컨테이너에 아래와 같은 HTML 구조를 생성하여 삽입합니다.
 
 ```html
 <article class="clip">
@@ -253,9 +253,9 @@ Next, we create an HTML structure like the following, inserting it into our clip
 </article>
 ```
 
-After that, we create a combined {{domxref("Blob")}} out of the recorded audio chunks, and create an object URL pointing to it, using `window.URL.createObjectURL(blob)`. We then set the value of the {{HTMLElement("audio")}} element's [`src`](/ko/docs/Web/HTML/Element/audio#src) attribute to the object URL, so that when the play button is pressed on the audio player, it will play the `Blob`.
+그 후, 녹음된 오디오 청크들을 결합해 하나의 {{domxref("Blob")}}을 만들고, `window.URL.createObjectURL(blob)`를 사용해 이를 가리키는 오브젝트 URL을 생성합니다. 그 다음, {{HTMLElement("audio")}} 요소의 [`src`](/ko/docs/Web/HTML/Element/audio#src) 속성에 이 오브젝트 URL을 할당하여, 오디오 플레이어의 재생 버튼을 누르면 해당 `Blob`이 재생되도록 합니다.
 
-Finally, we set an `onclick` handler on the delete button to be a function that deletes the whole clip HTML structure.
+마지막으로, 삭제 버튼에 `onclick` 핸들러를 설정하여 전체 클립 HTML 구조를 삭제하는 함수를 실행합니다.
 
 ## 명세서
 
