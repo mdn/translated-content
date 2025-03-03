@@ -58,4 +58,4 @@ Content-Length: 187
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-tw/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
