@@ -48,11 +48,11 @@ l10n:
 我们包含了两个 `autocorrect` 属性不同的 `<input>` 元素：
 
 ```html
-<label for="vegetable">一种蔬菜：</label>
-<input id="vegetable" name="vegetable" type="text" autocorrect="on" />
+<label for="vegetable">一种蔬菜：</label
+><input id="vegetable" name="vegetable" type="text" autocorrect="on" />
 
-<label for="fruit">一种水果：</label>
-<input id="fruit" name="fruit" type="text" autocorrect="off" />
+<label for="fruit">一种水果：</label
+><input id="fruit" name="fruit" type="text" autocorrect="off" />
 ```
 
 #### 结果
