@@ -5,7 +5,6 @@ l10n:
   sourceCommit: a92e10b293358bc796c43d5872a8981fd988a005
 ---
 
-
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content")}}
@@ -611,7 +610,6 @@ textarea.onkeyup = () => {
 ## 描述列表
 
 描述列表的目的是标记一组项目及其相关描述，如术语和定义或问题和答案。让我们来看一组术语和定义的示例：
-
 
 ```plain
 内心独白
