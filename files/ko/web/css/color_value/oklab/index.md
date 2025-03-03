@@ -33,7 +33,7 @@ oklab(from hsl(180 100% 50%) calc(l - 0.1) a b)
 
 ### 값
 
-아래는 절대 색과 [상대 색](/ko/docs/Web/CSS/CSS_colors/Relative_colors)에 허용되는 값에 대한 설명입니다.
+아래는 절대 색상과 [상대 색상](/ko/docs/Web/CSS/CSS_colors/Relative_colors)에 허용되는 값에 대한 설명입니다.
 
 #### 절댓값 구문
 
