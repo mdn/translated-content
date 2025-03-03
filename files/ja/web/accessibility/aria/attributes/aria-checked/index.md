@@ -19,7 +19,6 @@ l10n:
 
 `mixed` の値は、[`radio`](/ja/docs/Web/Accessibility/ARIA/Roles/radio_role) や [`menuitemradio`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)、 [`switch`](/ja/docs/Web/Accessibility/ARIA/Roles/switch_role) などのロール、およびこれらを継承する要素ではサポートされていません。サポートされていないときに `mixed` が設定されている場合、値は `false` になります。
 
-
 ```html
 <span
   role="checkbox"
@@ -51,7 +50,7 @@ l10n:
   - : [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role) および [`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role) の場合のみ、`indeterminate` と同等であり、チェックもチェック解除もされていない混合モードの値を示します。
 - undefined (デフォルト)
   - : 要素はチェックに対応していません。
- 
+
 ## 関連ロール
 
 以下のロールで使用されます:
