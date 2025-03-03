@@ -6,6 +6,8 @@ browser-compat: css.types.color.oklab
 spec-urls:
   - https://drafts.csswg.org/css-color-5/#relative-Oklab
   - https://drafts.csswg.org/css-color/#ok-lab
+l10n:
+  sourceCommit: 802978f38824a4132b4f9b3d3c23fb6970beba74
 ---
 
 {{CSSRef}}
