@@ -10,7 +10,7 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content")}}
 
-现在，让我们把目光转向清单。列表在生活中无处不在——从你的购物清单，到你每天回家时下意识遵循的方向列表，再到你在这些教程中遵循的说明列表！HTML 有一套方便的元素，可以让我们定义不同类型的列表，这一点你可能不会感到惊讶。在网络上，我们有三种类型的列表：无序列表、有序列表和描述列表。本课将向你展示如何使用不同类型的列表。
+现在，让我们把目光转向列表。列表在生活中无处不在——从你的购物清单，到你每天回家时下意识遵循的方向列表，再到你在这些教程中遵循的说明列表！HTML 有一套方便的元素，可以让我们定义不同类型的列表，这一点你可能不会感到惊讶。在网络上，我们有三种类型的列表：无序列表、有序列表和描述列表。本课将向你展示如何使用不同类型的列表。
 
 <table>
   <tbody>
