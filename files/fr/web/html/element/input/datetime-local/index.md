@@ -7,7 +7,33 @@ slug: Web/HTML/Element/input/datetime-local
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut **`"datetime-local"`** permettent de créer des champs destinés à saisir simplement une date (définie par une année, un mois, et un jour) et une heure (définie par une heure et une minute). Il n'y a pas de secondes dans ce contrôle.
 
-{{EmbedInteractiveExample("pages/tabbed/input-datetime-local.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;datetime-local&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="meeting-time">Choose a time for your appointment:</label>
+
+<input
+  type="datetime-local"
+  id="meeting-time"
+  name="meeting-time"
+  value="2018-06-12T19:30"
+  min="2018-06-07T00:00"
+  max="2018-06-14T00:00" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 L'interface utilisateur du contrôle varie selon les navigateurs. La prise en charge de cette fonctionnalité est hétérogène&nbsp;: Chrome/Opera et Edge l'implémentent pour les navigateurs de bureau et la plupart des navigateurs mobiles l'implémentent. Pour les navigateurs qui n'implémentent pas cette fonctionnalité, le contrôle utilisé est celui de [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text).
 

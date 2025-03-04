@@ -320,7 +320,7 @@
 /zh-CN/docs/DOM/document.contentType	/zh-CN/docs/Web/API/Document/contentType
 /zh-CN/docs/DOM/document.createAttribute	/zh-CN/docs/Web/API/Document/createAttribute
 /zh-CN/docs/DOM/document.createComment	/zh-CN/docs/Web/API/Document/createComment
-/zh-CN/docs/DOM/document.createElement	/zh-CN/docs/Web/API/document/createElement
+/zh-CN/docs/DOM/document.createElement	/zh-CN/docs/Web/API/Document/createElement
 /zh-CN/docs/DOM/document.createExpression	/zh-CN/docs/Web/API/Document/createExpression
 /zh-CN/docs/DOM/document.createTextNode	/zh-CN/docs/Web/API/Document/createTextNode
 /zh-CN/docs/DOM/document.currentScript	/zh-CN/docs/Web/API/Document/currentScript
@@ -349,7 +349,7 @@
 /zh-CN/docs/DOM/document.referrer	/zh-CN/docs/Web/API/Document/referrer
 /zh-CN/docs/DOM/document.releaseCapture	/zh-CN/docs/Web/API/Document/releaseCapture
 /zh-CN/docs/DOM/document.width	/zh-CN/docs/Web/API/Element/clientWidth
-/zh-CN/docs/DOM/element	/zh-CN/docs/Web/API/element
+/zh-CN/docs/DOM/element	/zh-CN/docs/Web/API/Element
 /zh-CN/docs/DOM/element.addEventListener	/zh-CN/docs/Web/API/EventTarget/addEventListener
 /zh-CN/docs/DOM/element.attributes	/zh-CN/docs/Web/API/Element/attributes
 /zh-CN/docs/DOM/element.childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
@@ -412,7 +412,7 @@
 /zh-CN/docs/DOM/form.reset	/zh-CN/docs/Web/API/HTMLFormElement/reset
 /zh-CN/docs/DOM/form.submit	/zh-CN/docs/Web/API/HTMLFormElement/submit
 /zh-CN/docs/DOM/navigator.doNotTrack	/zh-CN/docs/Web/API/Navigator/doNotTrack
-/zh-CN/docs/DOM/range	/zh-CN/docs/Web/API/range
+/zh-CN/docs/DOM/range	/zh-CN/docs/Web/API/Range
 /zh-CN/docs/DOM/stylesheet.insertRule	/zh-CN/docs/Web/API/CSSStyleSheet/insertRule
 /zh-CN/docs/DOM/table.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
 /zh-CN/docs/DOM/window	/zh-CN/docs/Web/API/Window
@@ -467,11 +467,11 @@
 /zh-CN/docs/DOM:HTMLDocument	/zh-CN/docs/Web/API/HTMLDocument
 /zh-CN/docs/DOM:XMLDocument	/zh-CN/docs/Web/API/XMLDocument
 /zh-CN/docs/DOM:document	/zh-CN/docs/Web/API/Document
-/zh-CN/docs/DOM:document.createElement	/zh-CN/docs/Web/API/document/createElement
+/zh-CN/docs/DOM:document.createElement	/zh-CN/docs/Web/API/Document/createElement
 /zh-CN/docs/DOM:document.designMode	/zh-CN/docs/Web/API/Document/designMode
 /zh-CN/docs/DOM:document.evaluate	/zh-CN/docs/Web/API/Document/evaluate
 /zh-CN/docs/DOM:document.getElementById	/zh-CN/docs/Web/API/Document/getElementById
-/zh-CN/docs/DOM:element	/zh-CN/docs/Web/API/element
+/zh-CN/docs/DOM:element	/zh-CN/docs/Web/API/Element
 /zh-CN/docs/DOM:element.attributes	/zh-CN/docs/Web/API/Element/attributes
 /zh-CN/docs/DOM:element.childNodes	/zh-CN/docs/Web/API/Node/childNodes
 /zh-CN/docs/DOM:element.className	/zh-CN/docs/Web/API/Element/className
@@ -489,7 +489,7 @@
 /zh-CN/docs/DOM:element.onblur	/zh-CN/docs/Web/API/Window/blur_event
 /zh-CN/docs/DOM:element.removeAttribute	/zh-CN/docs/Web/API/Element/removeAttribute
 /zh-CN/docs/DOM:event	/zh-CN/docs/Web/API/Event
-/zh-CN/docs/DOM:range	/zh-CN/docs/Web/API/range
+/zh-CN/docs/DOM:range	/zh-CN/docs/Web/API/Range
 /zh-CN/docs/DOM:window	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/DOM:window.onresize	/zh-CN/docs/Web/API/Window/resize_event
 /zh-CN/docs/DOM:window.open	/zh-CN/docs/Web/API/Window/open
@@ -765,8 +765,8 @@
 /zh-CN/docs/JS-ref/String/toLowerCase	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 /zh-CN/docs/JS-ref/String/toUpperCase	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 /zh-CN/docs/JS-ref/WeakMap	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
-/zh-CN/docs/JS-ref/arrow_functions	/zh-CN/docs/Web/JavaScript/Reference/Functions/arrow_functions
-/zh-CN/docs/JS-ref/default_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/default_parameters
+/zh-CN/docs/JS-ref/arrow_functions	/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+/zh-CN/docs/JS-ref/default_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters
 /zh-CN/docs/JS-ref/rest_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters
 /zh-CN/docs/JavaScript	/zh-CN/docs/Web/JavaScript
 /zh-CN/docs/JavaScript-840092-dup	/zh-CN/docs/Web/JavaScript
@@ -1008,9 +1008,9 @@
 /zh-CN/docs/JavaScript/Reference/String/toLowerCase	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 /zh-CN/docs/JavaScript/Reference/String/toUpperCase	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 /zh-CN/docs/JavaScript/Reference/WeakMap	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
-/zh-CN/docs/JavaScript/Reference/arrow_functions	/zh-CN/docs/Web/JavaScript/Reference/Functions/arrow_functions
-/zh-CN/docs/JavaScript/Reference/default_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/default_parameters
-/zh-CN/docs/JavaScript/Reference/default_parameters-redirect-1	/zh-CN/docs/Web/JavaScript/Reference/Functions/default_parameters
+/zh-CN/docs/JavaScript/Reference/arrow_functions	/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+/zh-CN/docs/JavaScript/Reference/default_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters
+/zh-CN/docs/JavaScript/Reference/default_parameters-redirect-1	/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters
 /zh-CN/docs/JavaScript/Reference/rest_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters
 /zh-CN/docs/JavaScript/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Same-origin_policy
 /zh-CN/docs/JavaScript/Strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
@@ -1309,7 +1309,7 @@
 /zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript
 /zh-CN/docs/Learn/JavaScript/Objects/向“弹跳球”演示程序添加新功能	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features
 /zh-CN/docs/Learn/JavaScript/Objects/测试你的技能:面向对象的Javascript	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript
-/zh-CN/docs/Learn/Learning_and_getting_help	/zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help
+/zh-CN/docs/Learn/Learning_and_getting_help	/zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 /zh-CN/docs/Learn/MathML	/zh-CN/docs/Web/MathML
 /zh-CN/docs/Learn/MathML/First_steps	/zh-CN/docs/Web/MathML/Guides
 /zh-CN/docs/Learn/MathML/First_steps/Fractions_and_roots	/zh-CN/docs/Web/MathML/Guides/Fractions_and_roots
@@ -1430,6 +1430,7 @@
 /zh-CN/docs/Learn/Tools_and_testing/跨服务器测试/Automated_testing	/zh-CN/docs/Learn_web_development/Extensions/Testing/Automated_testing
 /zh-CN/docs/Learn/Tools_and_testing/跨服务器测试/HTML_and_CSS	/zh-CN/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS
 /zh-CN/docs/Learn/Tools_and_testing/跨服务器测试/Your_own_automation_environment	/zh-CN/docs/Learn_web_development/Extensions/Testing/Your_own_automation_environment
+/zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help	/zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 /zh-CN/docs/Localization	/zh-CN/docs/Glossary/Localization
 /zh-CN/docs/MDN/About	/zh-CN/docs/MDN/Writing_guidelines
 /zh-CN/docs/MDN/CSS	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties
@@ -2372,7 +2373,7 @@
 /zh-CN/docs/Web/Accessibility/ARIA/forms/alerts	/zh-CN/docs/Web/Accessibility/ARIA
 /zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/WebAudio_playbackRate_explained	/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/WebAudio_playbackRate_explained
 /zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/buffering_seeking_time_ranges	/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges
-/zh-CN/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance	/zh-CN/docs/Web/Performance/Optimizing_startup_performance
+/zh-CN/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance	/zh-CN/docs/Web/Performance/Guides/Optimizing_startup_performance
 /zh-CN/docs/Web/Apps/Progressive	/zh-CN/docs/Web/Progressive_web_apps
 /zh-CN/docs/Web/Apps/Progressive/App_structure	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 /zh-CN/docs/Web/Apps/Progressive/Introduction	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames
@@ -3070,8 +3071,8 @@
 /zh-CN/docs/Web/JavaScript/Reference/String/toUpperCase	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 /zh-CN/docs/Web/JavaScript/Reference/WeakMap	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
 /zh-CN/docs/Web/JavaScript/Reference/WeakMap/delete	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/delete
-/zh-CN/docs/Web/JavaScript/Reference/arrow_functions	/zh-CN/docs/Web/JavaScript/Reference/Functions/arrow_functions
-/zh-CN/docs/Web/JavaScript/Reference/default_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/default_parameters
+/zh-CN/docs/Web/JavaScript/Reference/arrow_functions	/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+/zh-CN/docs/Web/JavaScript/Reference/default_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters
 /zh-CN/docs/Web/JavaScript/Reference/eval	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval
 /zh-CN/docs/Web/JavaScript/Reference/rest_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters
 /zh-CN/docs/Web/JavaScript/Reference/template_strings	/zh-CN/docs/Web/JavaScript/Reference/Template_literals
@@ -3102,7 +3103,15 @@
 /zh-CN/docs/Web/Media/Formats/视频编解码器	/zh-CN/docs/Web/Media/Guides/Formats/Video_codecs
 /zh-CN/docs/Web/Media/images	/zh-CN/docs/Web/Media/Guides/Images
 /zh-CN/docs/Web/OpenSearch	/zh-CN/docs/Web/XML/Guides/OpenSearch
-/zh-CN/docs/Web/Performance/浏览器渲染页面的工作原理	/zh-CN/docs/Web/Performance/How_browsers_work
+/zh-CN/docs/Web/Performance/CSS_JavaScript_animation_performance	/zh-CN/docs/Web/Performance/Guides/CSS_JavaScript_animation_performance
+/zh-CN/docs/Web/Performance/Critical_rendering_path	/zh-CN/docs/Web/Performance/Guides/Critical_rendering_path
+/zh-CN/docs/Web/Performance/How_browsers_work	/zh-CN/docs/Web/Performance/Guides/How_browsers_work
+/zh-CN/docs/Web/Performance/How_long_is_too_long	/zh-CN/docs/Web/Performance/Guides/How_long_is_too_long
+/zh-CN/docs/Web/Performance/Lazy_loading	/zh-CN/docs/Web/Performance/Guides/Lazy_loading
+/zh-CN/docs/Web/Performance/Optimizing_startup_performance	/zh-CN/docs/Web/Performance/Guides/Optimizing_startup_performance
+/zh-CN/docs/Web/Performance/Speculative_loading	/zh-CN/docs/Web/Performance/Guides/Speculative_loading
+/zh-CN/docs/Web/Performance/dns-prefetch	/zh-CN/docs/Web/Performance/Guides/dns-prefetch
+/zh-CN/docs/Web/Performance/浏览器渲染页面的工作原理	/zh-CN/docs/Web/Performance/Guides/How_browsers_work
 /zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies	/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies
 /zh-CN/docs/Web/Progressive_web_apps/Add_to_home_screen	/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /zh-CN/docs/Web/Progressive_web_apps/App_structure	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
@@ -3224,7 +3233,7 @@
 /zh-CN/docs/learn/JavaScript/异步/简介	/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Introducing
 /zh-CN/docs/learn/JavaScript/异步/超时和间隔	/zh-CN/docs/Learn_web_development/Extensions/Async_JS
 /zh-CN/docs/learn/Performance/CSS_performance	/zh-CN/docs/Learn_web_development/Extensions/Performance/CSS
-/zh-CN/docs/learn/Performance/dns-prefetch	/zh-CN/docs/Web/Performance/dns-prefetch
+/zh-CN/docs/learn/Performance/dns-prefetch	/zh-CN/docs/Web/Performance/Guides/dns-prefetch
 /zh-CN/docs/learn/Performance/感知性能	/zh-CN/docs/Learn_web_development/Extensions/Performance/Perceived_performance
 /zh-CN/docs/learn/Server-side/Django/主页构建	/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Home_page
 /zh-CN/docs/learn/Server-side/Django/开发环境	/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/development_environment

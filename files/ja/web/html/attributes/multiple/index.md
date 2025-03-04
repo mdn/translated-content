@@ -10,7 +10,41 @@ l10n:
 
 論理属性の **`multiple`** 属性は、設定されている場合、フォームコントロールが 1 つ以上の値を受け入れることを意味します。この属性は {{HTMLElement("input/email", "email")}} と {{HTMLElement("input/file", "file")}} の入力型と {{HTMLElement("select")}} に対して有効です。ユーザーが複数の値を選択する方法は、フォームコントロールに依存します。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-multiple.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: multiple", "tabbed-standard")}}
+
+```html interactive-example
+<label for="recipients">Where should we send the receipt?</label>
+<input id="recipients" name="recipients" type="email" multiple />
+
+<label for="shakes">Which shakes would you like to order?</label>
+<select id="shakes" name="shakes" multiple>
+  <option>Vanilla Shake</option>
+  <option>Strawberry Shake</option>
+  <option>Chocolate Shake</option>
+</select>
+
+<label for="payment">How would you like to pay?</label>
+<select id="payment" name="payment">
+  <option>Credit card</option>
+  <option>Bank Transfer</option>
+</select>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input,
+select {
+  width: 100%;
+}
+
+input:invalid {
+  background-color: lightpink;
+}
+```
 
 ## 概要
 
