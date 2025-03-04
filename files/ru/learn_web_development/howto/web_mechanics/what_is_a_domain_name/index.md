@@ -19,7 +19,7 @@ slug: Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name
 
 ## Активно изучаем
 
-_В данный момент нет обучающего курса . Но вы можете [помочь составить его](/ru/docs/MDN/Community/Contributing/Getting_started)._
+_В данный момент нет обучающего курса . Но вы можете [помочь составить его](/ru/docs/MDN/Community/Getting_started)._
 
 ## Глубокое погружение
 
