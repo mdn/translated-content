@@ -7,7 +7,22 @@ slug: Web/HTML/Element/meter
 
 **HTML `<meter>` 요소**는 특정 범위 내에서의 스칼라 값, 또는 백분율 값을 나타냅니다.
 
-{{EmbedInteractiveExample("pages/tabbed/meter.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;meter&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="fuel">Fuel level:</label>
+
+<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
+  at 50/100
+</meter>
+```
+
+```css interactive-example
+label {
+  padding-right: 10px;
+  font-size: 1rem;
+}
+```
 
 <table class="properties">
   <tbody>

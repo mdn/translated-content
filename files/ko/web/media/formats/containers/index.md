@@ -1044,7 +1044,19 @@ WebM은 2010년 처음 소개되었습니다..
 
 아래 예제에서는 두 포맷 타입의 비디오를 제공합니다: WebM and MP4.
 
-{{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video controls width="250" height="200" muted>
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+```
 
 첫번째 비디오는 WebM 포맷입니다([`type`](/ko/docs/Web/HTML/Element/video#type) 어트리뷰트가 `video/webm`). {{Glossary("user agent")}}는 재생이 불가능 한 경우 `type` 이 `video/mp4` 인 다음 옵션으로넘어갑니다. 둘 다 재생이 불가능 할 경우 "This browser does not support the HTML5 video element." 문구가 표시됩니다.
 

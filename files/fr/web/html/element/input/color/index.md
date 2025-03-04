@@ -9,7 +9,34 @@ Les éléments {{HTMLElement("input")}} de type **`"color"`** permettent de sél
 
 L'apparence du contrôle de sélection des couleurs peut grandement varier d'un navigateur à un autre et d'un système d'exploitation à un autre. Pour certains navigateurs, seul un champ textuel sera affiché afin de saisir le code de la couleur (avec des mécanismes de validation vérifiant le format), pour d'autres, ce sera le sélecteur de couleur du système d'exploitation qui sera utilisé et pour d'autres encore, ce sera un sélecteur de couleur spécifique.
 
-{{EmbedInteractiveExample("pages/tabbed/input-color.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;color&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Choose your monster's colors:</p>
+
+<div>
+  <input type="color" id="head" name="head" value="#e66465" />
+  <label for="head">Head</label>
+</div>
+
+<div>
+  <input type="color" id="body" name="body" value="#f6b73c" />
+  <label for="body">Body</label>
+</div>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 ## Valeur
 
