@@ -26,7 +26,29 @@ attr(data-width px, inherit);
 attr(data-something, "default");
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/function-attr.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: attr()", "tabbed-shorter")}}
+
+```css interactive-example
+blockquote {
+  margin: 1em 0;
+}
+
+blockquote::after {
+  display: block;
+  content: " (source: " attr(cite) ") ";
+  color: hotpink;
+}
+```
+
+```html interactive-example
+<blockquote cite="https://mozilla.org/en-US/about/">
+  Mozilla makes browsers, apps, code and tools that put people before profit.
+</blockquote>
+
+<blockquote cite="https://web.dev/about/">
+  Google believes in an open, accessible, private, and secure web.
+</blockquote>
+```
 
 ## 構文
 
