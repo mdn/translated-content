@@ -19,7 +19,7 @@ slug: Learn_web_development/Howto/Web_mechanics/What_is_a_URL
 
 ## Активное обучение
 
-_Активного обучения пока не существует. [Пожалуйста подумайте, возможно вы сможете внести свой вклад](/ru/docs/MDN/Community/Contributing/Getting_started)._
+_Активного обучения пока не существует. [Пожалуйста подумайте, возможно вы сможете внести свой вклад](/ru/docs/MDN/Community/Getting_started)._
 
 ## Подробная информация
 
