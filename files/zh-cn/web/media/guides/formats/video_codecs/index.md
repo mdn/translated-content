@@ -818,11 +818,11 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
   <tbody>
     <tr>
       <th scope="row">支持的比特率</th>
-      <td>Up to 800,000 Kbps</td>
+      <td>最高 800,000 Kbps</td>
     </tr>
     <tr>
       <th scope="row">支持的帧率</th>
-      <td>Varies by level; up to 300 FPS is possible</td>
+      <td>因级别而异；最高可达 300 FPS</td>
     </tr>
     <tr>
       <th scope="row">压缩</th>
@@ -922,7 +922,7 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
               <th scope="row">HEVC / H.265 support</th>
               <td>107</td>
               <td>18</td>
-              <td>不支持</td>
+              <td>120</td>
               <td>11</td>
               <td>94</td>
               <td>11</td>
@@ -932,7 +932,14 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
         <p>Chrome 在具有硬件解码器的 Windows 8+、Linux、ChromeOS 设备上支持 HEVC，在所有 macOS Big Sur+ 和 Android 5.0+ 的设备上支持 HEVC。</p>
         <p>Edge（Chromium）在具有硬件解码器的 Windows 10 1709+ 设备上支持 HEVC（需要安装 <a href="https://apps.microsoft.com/store/detail/hevc-video-extension/9NMZLZ57R3T7">HEVC 视频扩展</a>插件），在其他操作系统上的支持情况和 Chrome 一致。Edge（旧版）仅支持 HEVC 硬解码。
         </p>
-        <p>由于 HEVC 受到专利保护，Mozilla 不会支持 HEVC。</p>
+        <p>FireFox 在以下平台支持 HEVC：
+          <ul>
+            <li>Windows 从 134 版本开始同时支持硬件（在支持的设备上，支持范围与 Edge 一致）或软件解码（用户必须付费安装插件）。</li>
+            <li>macOS 从 136 版本开始同时支持软件和硬件解码。</li>
+            <li>Linux 从 137 版本开始同时支持软件和硬件解码（通过系统 ffmpeg）。</li>
+            <li>Android 从 137 版本开始仅支持硬件解码。</li>
+          </ul>
+        </p>
         <p>Internet Explorer 在具有硬件解码器的设备上支持 HEVC。</p>
         <p>Opera 和其他基于 Chromium 内核的浏览器，支持情况和 Chrome 一致。</p>
         <p>Safari 在所有 macOS High Sierra+ 设备上支持 HEVC。</p>
