@@ -56,6 +56,5 @@ Delta-Base: abcd123
 ## 参见
 
 - {{HTTPStatus("200")}}
-- [HTTP request methods](/zh-CN/docs/Web/HTTP/Methods)
-- [HTTP response status codes](/zh-CN/docs/Web/HTTP/Status)
-- [Syndication feed deltas help reduce subscription bandwidth costs](https://www.ctrl.blog/entry/feed-delta-updates.html) (2017)
+- [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Methods)
+- [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Status)
