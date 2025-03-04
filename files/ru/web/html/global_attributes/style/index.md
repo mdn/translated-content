@@ -9,7 +9,16 @@ l10n:
 
 [Глобальный атрибут](/ru/docs/Web/HTML/Global_attributes) **`style`** содержит объявления CSS-стилей, которые будут применены к элементу. Однако рекомендуется определять стили в отдельном файле или файлах. Этот атрибут и элемент {{HTMLElement ("style")}} в основном предназначены для быстрого добавления стилей, например, для целей тестирования.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-style.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: style", "tabbed-shorter")}}
+
+```html interactive-example
+<div style="background: #ffe7e8; border: 2px solid #e66465">
+  <p style="margin: 15px; line-height: 1.5; text-align: center">
+    Well, I am the slime from your video<br />
+    Oozin' along on your livin' room floor.
+  </p>
+</div>
+```
 
 > [!NOTE]
 > Этот атрибут не должен использоваться для передачи семантической информации. Даже если все стили будут удалены, страница должна оставаться семантически корректной. Как правило, не следует использовать этот атрибут для скрытия несущественной информации, это лучше делать с помощью атрибута [`hidden`](/ru/docs/Web/HTML/Global_attributes/hidden).

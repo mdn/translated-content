@@ -7,7 +7,15 @@ slug: Web/HTML/Element/object
 
 **HTML `<object>` 元素**（或者称作 _HTML 嵌入对象元素_）表示引入一个外部资源，这个资源可能是一张图片，一个嵌入的浏览上下文，亦或是一个插件所使用的资源。
 
-{{EmbedInteractiveExample("pages/tabbed/object.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;object&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<object
+  type="video/mp4"
+  data="/shared-assets/videos/flower.mp4"
+  width="250"
+  height="200"></object>
+```
 
 - _[内容分类](/zh-CN/docs/Web/HTML/Content_categories)_ [Flow content](/zh-CN/docs/Web/HTML/Content_categories#flow_content); [phrasing content](/zh-CN/docs/Web/HTML/Content_categories#phrasing_content); [embedded content](/zh-CN/docs/Web/HTML/Content_categories#embedded_content), palpable content; if the element has a **usemap** attribute, [interactive content](/zh-CN/docs/Web/HTML/Content_categories#interactive_content); [listed](/zh-CN/docs/Web/HTML/Content_categories#form_listed), [submittable](/zh-CN/docs/Web/HTML/Content_categories#form_submittable) [form-associated](/zh-CN/docs/Web/HTML/Content_categories#form-associated_content) element.
 - _允许内容_ zero or more {{HTMLElement("param")}} elements, then [Transparent content](/zh-CN/docs/Web/HTML/Content_categories#transparent_content_models).

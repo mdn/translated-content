@@ -7,7 +7,15 @@ slug: Web/HTML/Element/embed
 
 L'élément HTML **`<embed>`** permet d'intégrer du contenu externe à cet endroit dans le document. Le contenu peut être fourni par une application externe ou une autre source telle qu'un _plugin_ du navigateur.
 
-{{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;embed&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<embed
+  type="video/mp4"
+  src="/shared-assets/videos/flower.mp4"
+  width="250"
+  height="200" />
+```
 
 > [!NOTE]
 > Cet article ne traite que de l'élément faisant partie du HTML5. Il ne concerne pas la version précédente et non normalisée de cet élément.
