@@ -1755,6 +1755,7 @@
 /zh-CN/docs/Web/API/Element.oncopy	/zh-CN/docs/Web/API/HTMLElement/copy_event
 /zh-CN/docs/Web/API/Element.oncut	/zh-CN/docs/Web/API/HTMLElement/cut_event
 /zh-CN/docs/Web/API/Element.onpaste	/zh-CN/docs/Web/API/HTMLElement/paste_event
+/zh-CN/docs/Web/API/Element.outerHTML	/zh-CN/docs/Web/API/Element/outerHTML
 /zh-CN/docs/Web/API/Element.querySelector	/zh-CN/docs/Web/API/Element/querySelector
 /zh-CN/docs/Web/API/Element.querySelectorAll	/zh-CN/docs/Web/API/Element/querySelectorAll
 /zh-CN/docs/Web/API/Element.removeAttribute	/zh-CN/docs/Web/API/Element/removeAttribute
@@ -2323,7 +2324,6 @@
 /zh-CN/docs/Web/API/document.width	/zh-CN/docs/Web/API/Element/clientWidth
 /zh-CN/docs/Web/API/document.write	/zh-CN/docs/Web/API/Document/write
 /zh-CN/docs/Web/API/document.writeln	/zh-CN/docs/Web/API/Document/writeln
-/zh-CN/docs/Web/API/Element.outerHTML	/zh-CN/docs/Web/API/Element/outerHTML
 /zh-CN/docs/Web/API/event.bubbles	/zh-CN/docs/Web/API/Event/bubbles
 /zh-CN/docs/Web/API/event.cancelable	/zh-CN/docs/Web/API/Event/cancelable
 /zh-CN/docs/Web/API/event.currentTarget	/zh-CN/docs/Web/API/Event/currentTarget
