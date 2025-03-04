@@ -4086,7 +4086,7 @@
 /ja/docs/Web/CSS/Using_multi-column_layouts	/ja/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /ja/docs/Web/CSS/Using_multiple_backgrounds	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 /ja/docs/Web/CSS/Value_definition_syntax	/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
-/ja/docs/Web/CSS/Viewport_concepts	/ja/docs/Web/CSS/CSSOM_View/Viewport_Concepts
+/ja/docs/Web/CSS/Viewport_concepts	/ja/docs/Web/CSS/CSSOM_view/Viewport_concepts
 /ja/docs/Web/CSS/actual_value	/ja/docs/Web/CSS/CSS_cascade/actual_value
 /ja/docs/Web/CSS/align-tracks	/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /ja/docs/Web/CSS/attr()	/ja/docs/Web/CSS/attr
