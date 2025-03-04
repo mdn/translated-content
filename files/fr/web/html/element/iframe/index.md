@@ -7,7 +7,24 @@ slug: Web/HTML/Element/iframe
 
 L'élément HTML **`<iframe>`** représente un [contexte de navigation](/fr/docs/Glossary/Browsing_context) imbriqué qui permet en fait d'obtenir une page HTML intégrée dans la page courante.
 
-{{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;iframe&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<iframe
+  id="inlineFrameExample"
+  title="Inline Frame Example"
+  width="300"
+  height="200"
+  src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik">
+</iframe>
+```
+
+```css interactive-example
+iframe {
+  border: 1px solid black;
+  width: 100%; /* takes precedence over the width set with the HTML width attribute */
+}
+```
 
 Chaque contexte de navigation possède son propre [historique](/fr/docs/Web/API/History) et son propre [document actif](/fr/docs/Web/API/Document). Le contexte de navigation qui contient le contenu intégré est appelé « contexte de navigation parent ». Le contexte de navigation le plus élevé (qui n'a pas de contexte parent) correspond généralement à la fenêtre du navigateur (cf. [`Window`](/fr/docs/Web/API/Window)).
 

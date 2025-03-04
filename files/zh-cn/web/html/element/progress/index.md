@@ -9,7 +9,20 @@ slug: Web/HTML/Element/progress
 
 **HTML**中的 **`<progress>`** 元素用来显示一项任务的完成进度。虽然规范中没有规定该元素具体如何显示，浏览器开发商可以自己决定，但通常情况下，该元素都显示为一个进度条形式。
 
-{{EmbedInteractiveExample("pages/tabbed/progress.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;progress&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="file">File progress:</label>
+
+<progress id="file" max="100" value="70">70%</progress>
+```
+
+```css interactive-example
+label {
+  padding-right: 10px;
+  font-size: 1rem;
+}
+```
 
 ## 使用上下文
 

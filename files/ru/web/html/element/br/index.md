@@ -7,7 +7,28 @@ slug: Web/HTML/Element/br
 
 **HTML-элемент `<br>`** устанавливает перевод строки в тексте (возврат каретки). Он полезен при написании поэмы или адреса, где важно деление на строки.
 
-{{EmbedInteractiveExample("pages/tabbed/br.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;br&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>
+  O’er all the hilltops<br />
+  Is quiet now,<br />
+  In all the treetops<br />
+  Hearest thou<br />
+  Hardly a breath;<br />
+  The birds are asleep in the trees:<br />
+  Wait, soon like these<br />
+  Thou too shalt rest.
+</p>
+```
+
+```css interactive-example
+p {
+  font-size: 1rem;
+  font-family: sans-serif;
+  margin: 20px;
+}
+```
 
 Как мы видим из примера выше, элемент `<br>` поставлен в том месте, где мы хотим перенести строку. Текст после `<br>` начинается со следующей строки текстового блока.
 

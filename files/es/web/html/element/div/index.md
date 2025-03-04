@@ -9,7 +9,35 @@ l10n:
 
 El elemento de [HTML](/es/docs/Web/HTML) **`<div>`** es el contenedor genérico para el contenido. No tiene efecto en el contenido o en el diseño hasta que se le aplica un estilo de alguna manera usando {{glossary("CSS")}} (p. ej. se le aplica un estilo directamente o se aplica algún tipo de modelo de diseño como [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout) a su elemento principal).
 
-{{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<div class="warning">
+  <img
+    src="/shared-assets/images/examples/leopard.jpg"
+    alt="An intimidating leopard." />
+  <p>Beware of the leopard</p>
+</div>
+```
+
+```css interactive-example
+.warning {
+  border: 10px ridge #f00;
+  background-color: #ff0;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.warning img {
+  width: 100%;
+}
+
+.warning p {
+  font: small-caps bold 1.2rem sans-serif;
+  text-align: center;
+}
+```
 
 Como contenedor "puro", el elemento `<div>` no representa nada inherentemente. En cambio, se usa para agrupar contenido de modo que se pueda diseñar fácilmente usando los atributos [`class`](/es/docs/Web/HTML/Global_attributes#class) o [`id`](/es/docs/Web/HTML/Global_attributes#id), marcando una sección de un documento como escrita en un idioma diferente (usando el atributo [`lang`](/es/docs/Web/HTML/Global_attributes#lang)), y así sucesivamente.
 

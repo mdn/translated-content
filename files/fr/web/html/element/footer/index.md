@@ -7,7 +7,37 @@ slug: Web/HTML/Element/footer
 
 L'élément HTML **`<footer>`** représente le pied de page de la [section](/fr/docs/Web/HTML/Content_categories#sectioning_content) ou de la [racine de sectionnement](/fr/docs/Web/HTML/Element/Heading_Elements#sectioning_root) la plus proche. Un élément `<footer>` contient habituellement des informations sur l'autrice ou l'auteur de la section, les données relatives au droit d'auteur (_copyright_) ou les liens vers d'autres documents en relation.
 
-{{EmbedInteractiveExample("pages/tabbed/footer.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;footer&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<article>
+  <h1>How to be a wizard</h1>
+  <ol>
+    <li>Grow a long, majestic beard.</li>
+    <li>Wear a tall, pointed hat.</li>
+    <li>Have I mentioned the beard?</li>
+  </ol>
+  <footer>
+    <p>© 2018 Gandalf</p>
+  </footer>
+</article>
+```
+
+```css interactive-example
+article {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #45a1ff;
+  color: #fff;
+}
+```
 
 <table class="properties">
   <tbody>

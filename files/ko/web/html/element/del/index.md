@@ -7,7 +7,33 @@ slug: Web/HTML/Element/del
 
 **HTML `<del>` 요소**는 문서에서 제거된 텍스트의 범위를 나타냅니다. 문서나 소스 코드의 변경점 추적 등에 사용할 수 있습니다. {{htmlelement("ins")}} 요소를 추가된 텍스트의 범위를 나타낼 수 있습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/del.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;del&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<blockquote>
+  There is <del>nothing</del> <ins>no code</ins> either good or bad, but
+  <del>thinking</del> <ins>running it</ins> makes it so.
+</blockquote>
+```
+
+```css interactive-example
+del {
+  text-decoration: line-through;
+  background-color: #fbb;
+  color: #555;
+}
+
+ins {
+  text-decoration: none;
+  background-color: #d4fcbc;
+}
+
+blockquote {
+  padding-left: 15px;
+  border-left: 3px solid #d7d7db;
+  font-size: 1rem;
+}
+```
 
 <table class="properties">
   <tbody>

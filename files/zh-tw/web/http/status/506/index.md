@@ -57,7 +57,7 @@ Alternates: {"index.html.en" 1 {type text/html} {language en} {length 48}}, {"an
   <title>506 Variant Also Negotiates</title>
 </head>
 <body>
-  <h1>變體亦進行協商</h1>
+  <h1>Variant Also Negotiates</h1>
   <p>所請求資源的變體本身就是一個可協商的資源，這表示組態錯誤。</p>
 </body>
 </html>
