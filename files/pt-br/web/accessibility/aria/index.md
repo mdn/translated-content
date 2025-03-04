@@ -3,6 +3,8 @@ title: ARIA
 slug: Web/Accessibility/ARIA
 ---
 
+{{AccessibilitySidebar}}
+
 Aplicações para a Internet Ricas em Acessibilidade - Accessible Rich Internet Applications (ARIA) definem as formas de tornar o conteúdo e as aplicações da Rede Mundial - _Web_ - (especialmente aqueles desenvolvidos com Ajax e JavaScript) mais acessíveis às pessoas com deficiência.
 
 Por exemplo, a ARIA permite a marcação de regiões importantes na página (como uma caixa de busca, um cabeçalho, chamadas "pontos de referência") para facilitar a navegação (agilizam a utilização de leitores de tela, por exemplo), JavaScript para _widgets_, sugestões de preenchimento de formulário e mensagens de erro, atualizações de conteúdo em tempo real e muito mais.
