@@ -965,7 +965,7 @@
 /fr/docs/DOM/element.setAttributeNode	/fr/docs/Web/API/Element/setAttributeNode
 /fr/docs/DOM/element.setAttributeNodeNS	/fr/docs/Web/API/Element/setAttributeNodeNS
 /fr/docs/DOM/element.style	/fr/docs/Web/API/HTMLElement/style
-/fr/docs/DOM/element.tabIndex	/fr/docs/Web/API/HTMLElement/tabindex
+/fr/docs/DOM/element.tabIndex	/fr/docs/Web/API/HTMLElement/tabIndex
 /fr/docs/DOM/element.tagName	/fr/docs/Web/API/Element/tagName
 /fr/docs/DOM/element.textContent	/fr/docs/Web/API/Node/textContent
 /fr/docs/DOM/event	/fr/docs/Web/API/Event
@@ -1122,7 +1122,7 @@
 /fr/docs/DOM:element.setAttributeNode	/fr/docs/Web/API/Element/setAttributeNode
 /fr/docs/DOM:element.setAttributeNodeNS	/fr/docs/Web/API/Element/setAttributeNodeNS
 /fr/docs/DOM:element.style	/fr/docs/Web/API/HTMLElement/style
-/fr/docs/DOM:element.tabIndex	/fr/docs/Web/API/HTMLElement/tabindex
+/fr/docs/DOM:element.tabIndex	/fr/docs/Web/API/HTMLElement/tabIndex
 /fr/docs/DOM:element.tagName	/fr/docs/Web/API/Element/tagName
 /fr/docs/DOM:element.textContent	/fr/docs/Web/API/Node/textContent
 /fr/docs/DOM:event	/fr/docs/Web/API/Event
@@ -3898,7 +3898,7 @@
 /fr/docs/Web/API/HTMLOrForeignElement/blur	/fr/docs/Web/API/HTMLElement/blur
 /fr/docs/Web/API/HTMLOrForeignElement/dataset	/fr/docs/Web/API/HTMLElement/dataset
 /fr/docs/Web/API/HTMLOrForeignElement/focus	/fr/docs/Web/API/HTMLElement/focus
-/fr/docs/Web/API/HTMLOrForeignElement/tabIndex	/fr/docs/Web/API/HTMLElement/tabindex
+/fr/docs/Web/API/HTMLOrForeignElement/tabIndex	/fr/docs/Web/API/HTMLElement/tabIndex
 /fr/docs/Web/API/HTMLTableElement.caption	/fr/docs/Web/API/HTMLTableElement/caption
 /fr/docs/Web/API/HTMLTableElement.insertRow	/fr/docs/Web/API/HTMLTableElement/insertRow
 /fr/docs/Web/API/History_API/Example	/fr/docs/Web/API/History_API/Working_with_the_History_API
@@ -6871,7 +6871,7 @@
 /fr/docs/orphaned/Web/API/HTMLOrForeignElement/blur	/fr/docs/Web/API/HTMLElement/blur
 /fr/docs/orphaned/Web/API/HTMLOrForeignElement/dataset	/fr/docs/Web/API/HTMLElement/dataset
 /fr/docs/orphaned/Web/API/HTMLOrForeignElement/focus	/fr/docs/Web/API/HTMLElement/focus
-/fr/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex	/fr/docs/Web/API/HTMLElement/tabindex
+/fr/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex	/fr/docs/Web/API/HTMLElement/tabIndex
 /fr/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/fr/docs/Web/API/IndexedDB_API/Basic_Terminology
 /fr/docs/orphaned/Web/API/NavigatorLanguage	/fr/docs/Web/API/Navigator
 /fr/docs/orphaned/Web/API/NavigatorLanguage/language	/fr/docs/Web/API/Navigator/language
