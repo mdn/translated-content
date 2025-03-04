@@ -9,7 +9,32 @@ l10n:
 
 [CSS](/ru/docs/Web/CSS) [@-правило](/ru/docs/Web/CSS/At-rule) **`@layer`** используется для объявления каскадного слоя, а также позволяет задать приоритеты при наличии нескольких каскадных слоёв.
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-layer.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
+
+```css interactive-example
+@layer module, state;
+
+@layer state {
+  .alert {
+    background-color: brown;
+  }
+  p {
+    border: medium solid limegreen;
+  }
+}
+
+@layer module {
+  .alert {
+    border: medium solid violet;
+    background-color: yellow;
+    color: white;
+  }
+}
+```
+
+```html interactive-example
+<p class="alert">Beware of the zombies</p>
+```
 
 ## Синтаксис
 
