@@ -7,7 +7,29 @@ slug: Web/HTML/Element/input/time
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut **`time`** permettent de créer des contrôles où l'utilisatrice ou l'utilisateur peut saisir une heure (avec des minutes et éventuellement des secondes).
 
-{{EmbedInteractiveExample("pages/tabbed/input-time.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;time&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="appt">Choose a time for your meeting:</label>
+
+<input type="time" id="appt" name="appt" min="09:00" max="18:00" required />
+
+<small>Office hours are 9am to 6pm</small>
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 L'interface utilisateur affichée pour le contrôle peut varier d'un navigateur à l'autre. À l'heure où nous écrivons ces lignes, seul Safari ne prend pas en charge ce type de contrôle. Pour ce dernier, l'élément sera transformé en simple [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text).
 
