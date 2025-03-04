@@ -32,7 +32,7 @@ worker.postMessage(sab);
 
 共有メモリーと高解像度タイマーは、[Spectre](https://ja.wikipedia.org/wiki/Spectre) の対策として 2018 年の初めに事実上[無効化されました](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/)。 2020 年には、共有メモリーを再び有効にするために、新しい安全なアプローチが標準化されました。
 
-基本的な要件として、文書が[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)にある必要があります。
+基本的な要件として、文書が[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)にある必要があります。
 
 最上位の文書では、サイトにオリジン間の分離性を持たせるため、次の 2 つのヘッダーを設定する必要があります。
 

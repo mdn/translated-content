@@ -38,7 +38,7 @@ Content-Type: text/html;
 Content-Length: 123
 
 <!doctype html>
-<html lang="zh-TW">
+<html lang="zh">
 <head>
   <title>502 Bad Gateway</title>
 </head>

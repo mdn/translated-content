@@ -75,7 +75,7 @@ _変更なし。_
 
 - {{domxref("DOMPointReadOnly")}} インターフェイスで {{domxref("DOMPointReadOnly.fromPoint()")}} 静的関数をサポートしました。これは {{domxref("DOMPointInit")}} と互換性があるディクショナリーから新しい座標オブジェクトを作成するものであり、{{domxref("DOMPoint")}} オブジェクトを含みます。この関数は {{domxref("DOMPoint")}} でも使用できます ([Firefox バグ 1186265](https://bugzil.la/1186265))。
 - 互換性の理由で、{{domxref("Event.srcElement")}} プロパティをサポートしました。これは {{domxref("Event.target")}} の別名です ([Firefox バグ 453968](https://bugzil.la/453968))。
-- {{domxref("Navigator.registerProtocolHandler()")}} が、安全なコンテキストに限り呼び出し可能になりました ([Firefox バグ 1460506](https://bugzil.la/1460506))。
+- {{domxref("Navigator.registerProtocolHandler()")}} が、保護されたコンテキストに限り呼び出し可能になりました ([Firefox バグ 1460506](https://bugzil.la/1460506))。
 - しばらく前から廃止扱いであった {{domxref("Navigator.registerContentHandler()")}} メソッドが、完全に削除するための準備としてデフォルトで無効になりました ([Firefox バグ 1460481](https://bugzil.la/1460481))。
 - {{domxref("DataTransfer.DataTransfer", "DataTransfer()")}} コンストラクターを実装しました ([Firefox バグ 1351193](https://bugzil.la/1351193))。
 - {{domxref("Document.domain")}} が `null` を返さないようになりました ([Firefox バグ 819475](https://bugzil.la/819475))。ドメインを識別できないとき、`domain` は `null` ではなく空文字列を返します。
