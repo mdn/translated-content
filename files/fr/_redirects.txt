@@ -1836,7 +1836,7 @@
 /fr/docs/HTML/Element-redirection-1	/fr/docs/Web/HTML/Element
 /fr/docs/HTML/Element-redirection-2	/fr/docs/Web/HTML/Element
 /fr/docs/HTML/Element/Button	/fr/docs/Web/HTML/Element/button
-/fr/docs/HTML/Element/Datalist	/fr/docs/Web/HTML/Element/Datalist
+/fr/docs/HTML/Element/Datalist	/fr/docs/Web/HTML/Element/datalist
 /fr/docs/HTML/Element/Fieldset	/fr/docs/Web/HTML/Element/fieldset
 /fr/docs/HTML/Element/Form	/fr/docs/Web/HTML/Element/form
 /fr/docs/HTML/Element/Heading_Elements	/fr/docs/Web/HTML/Element/Heading_Elements
