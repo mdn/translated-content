@@ -21,7 +21,7 @@ l10n:
 
 - `url` {{experimental_inline}}
   - : 必須で、アプリケーションの [`scope`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/scope) 内でそのプロトコルを処理する HTTPS URL です。
-  `%s` トークンは、プロトコルハンドラーのスキームで始まる URL に置き換えられます。 `url` が相対 URL の場合、ベース URL はマニフェストの URL になります。
+    `%s` トークンは、プロトコルハンドラーのスキームで始まる URL に置き換えられます。 `url` が相対 URL の場合、ベース URL はマニフェストの URL になります。
 
 ## 例
 
