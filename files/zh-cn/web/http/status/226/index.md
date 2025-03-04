@@ -5,7 +5,7 @@ slug: Web/HTTP/Status/226
 
 {{HTTPSidebar}}
 
-HTTP **`226 IM Used`** [成功响应](/zh-CN/docs/Web/HTTP/Status#successful_responses)状态代码表示服务器在响应 {HTTPMethod("GET")}} 请求时返回了一个 {{Glossary("delta")}}。该状态码用于 HTTP delta 编码的上下文中。
+HTTP **`226 IM Used`** [成功响应](/zh-CN/docs/Web/HTTP/Status#successful_responses)状态代码表示服务器在响应 {{HTTPMethod("GET")}} 请求时返回了一个 {{Glossary("delta")}}。该状态码用于 HTTP delta 编码的上下文中。
 
 `IM` 是 _instance manipulation_ 的缩写，指的是生成一个 _delta_ 算法。在 delta 编码中，客户端发送一个 {{HTTPMethod("GET")}} 请求，并携带了两个头部信息，`A-IM:` 表示偏好使用的差异算法，{{HTTPHeader("If-None-Match")}} 指定了客户端已有的资源版本。
 服务器会返回相对于给定基础文档的增量，而不是完整的文档。
