@@ -1852,7 +1852,7 @@
 /fr/docs/HTML/Element/Select	/fr/docs/Web/HTML/Element/select
 /fr/docs/HTML/Element/Source	/fr/docs/Web/HTML/Element/source
 /fr/docs/HTML/Element/Textarea	/fr/docs/Web/HTML/Element/textarea
-/fr/docs/HTML/Element/Video	/fr/docs/Web/HTML/Element/Video
+/fr/docs/HTML/Element/Video	/fr/docs/Web/HTML/Element/video
 /fr/docs/HTML/Element/a	/fr/docs/Web/HTML/Element/a
 /fr/docs/HTML/Element/a-redirection-1	/fr/docs/Web/HTML/Element/a
 /fr/docs/HTML/Element/abbr	/fr/docs/Web/HTML/Element/abbr
@@ -4894,9 +4894,9 @@
 /fr/docs/Web/HTML/Contenu_editable	/fr/docs/Web/HTML/Global_attributes/contenteditable
 /fr/docs/Web/HTML/Controler_la_verification_de_orthographe_dans_les_formulaires_HTML	/fr/docs/Web/HTML/Global_attributes/spellcheck
 /fr/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/fr/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
-/fr/docs/Web/HTML/Element/Video/canplay_event	/fr/docs/Web/API/HTMLMediaElement/canplay_event
-/fr/docs/Web/HTML/Element/Video/emptied_event	/fr/docs/Web/API/HTMLMediaElement/emptied_event
-/fr/docs/Web/HTML/Element/Video/ended_event	/fr/docs/Web/API/HTMLMediaElement/ended_event
+/fr/docs/Web/HTML/Element/video/canplay_event	/fr/docs/Web/API/HTMLMediaElement/canplay_event
+/fr/docs/Web/HTML/Element/video/emptied_event	/fr/docs/Web/API/HTMLMediaElement/emptied_event
+/fr/docs/Web/HTML/Element/video/ended_event	/fr/docs/Web/API/HTMLMediaElement/ended_event
 /fr/docs/Web/HTML/Element/basefont	/fr/docs/Web/CSS/CSS_fonts
 /fr/docs/Web/HTML/Element/bgsound	/fr/docs/Web/HTML/Element/audio
 /fr/docs/Web/HTML/Element/content	/fr/docs/Web/HTML/Element/slot
