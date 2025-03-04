@@ -268,6 +268,6 @@ some-element::after {
 
 ## Véase también
 
-- {{CSSxRef(":where", ":where()")}} - Como `:is()`, pero con 0 [especificidad](/es/docs/Web/CSS/Specificity).
+- {{CSSxRef(":where", ":where()")}} - Como `:is()`, pero con 0 [especificidad](/es/docs/Web/CSS/CSS_cascade/Specificity).
 - [Lista de selección](/es/docs/Web/CSS/Selector_list)
 - [Componentes web](/es/docs/Web/API/Web_components)
