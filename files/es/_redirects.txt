@@ -3315,8 +3315,8 @@
 /es/docs/conflicting/web/api/blob	/es/docs/Web/API/Blob
 /es/docs/conflicting/web/api/element/clientheight	/es/docs/Web/API/Element/clientHeight
 /es/docs/conflicting/web/api/file/name	/es/docs/Web/API/File/name
-/es/docs/conflicting/web/javascript/reference/deprecated_and_obsolete_features	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
-/es/docs/conflicting/web/javascript/reference/deprecated_and_obsolete_features_a91664716c4f7753074ac042780999e0	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/es/docs/conflicting/web/javascript/reference/Deprecated_and_obsolete_features	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/es/docs/conflicting/web/javascript/reference/Deprecated_and_obsolete_features_a91664716c4f7753074ac042780999e0	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /es/docs/controladores_protocolos_web	/es/docs/conflicting/Web/API/Navigator/registerProtocolHandler
 /es/docs/en	/en-US/
 /es/docs/firefox_Web_Developer_(externo)	https://addons.mozilla.org/firefox/60/

@@ -24445,8 +24445,14 @@
       "sii"
     ]
   },
-  "Web/CSS/CSSOM_view": {
+  "Web/CSS/CSSOM_View": {
     "modified": "2020-10-15T22:00:40.104Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/CSSOM_View/Viewport_Concepts": {
+    "modified": "2020-09-22T04:57:28.828Z",
     "contributors": [
       "mfuji09"
     ]
@@ -25686,12 +25692,6 @@
       "mpcjazz",
       "ethertank",
       "sii"
-    ]
-  },
-  "Web/CSS/Viewport_concepts": {
-    "modified": "2020-09-22T04:57:28.828Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "Web/CSS/Visual_formatting_model": {
