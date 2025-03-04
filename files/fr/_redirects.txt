@@ -1841,7 +1841,7 @@
 /fr/docs/HTML/Element/Form	/fr/docs/Web/HTML/Element/form
 /fr/docs/HTML/Element/Heading_Elements	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/HTML/Element/Img	/fr/docs/Web/HTML/Element/img
-/fr/docs/HTML/Element/Input	/fr/docs/Web/HTML/Element/Input
+/fr/docs/HTML/Element/Input	/fr/docs/Web/HTML/Element/input
 /fr/docs/HTML/Element/Label	/fr/docs/Web/HTML/Element/label
 /fr/docs/HTML/Element/Legend	/fr/docs/Web/HTML/Element/legend
 /fr/docs/HTML/Element/Meter	/fr/docs/Web/HTML/Element/meter
@@ -4894,8 +4894,8 @@
 /fr/docs/Web/HTML/Contenu_editable	/fr/docs/Web/HTML/Global_attributes/contenteditable
 /fr/docs/Web/HTML/Controler_la_verification_de_orthographe_dans_les_formulaires_HTML	/fr/docs/Web/HTML/Global_attributes/spellcheck
 /fr/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/fr/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
-/fr/docs/Web/HTML/Element/Input/datetime	/fr/docs/Web/HTML/Element/input/datetime-local
-/fr/docs/Web/HTML/Element/Input/mois	/fr/docs/Web/HTML/Element/Input/month
+/fr/docs/Web/HTML/Element/input/datetime	/fr/docs/Web/HTML/Element/input/datetime-local
+/fr/docs/Web/HTML/Element/input/mois	/fr/docs/Web/HTML/Element/input/month
 /fr/docs/Web/HTML/Element/Video/canplay_event	/fr/docs/Web/API/HTMLMediaElement/canplay_event
 /fr/docs/Web/HTML/Element/Video/emptied_event	/fr/docs/Web/API/HTMLMediaElement/emptied_event
 /fr/docs/Web/HTML/Element/Video/ended_event	/fr/docs/Web/API/HTMLMediaElement/ended_event
