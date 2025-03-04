@@ -11,7 +11,38 @@ l10n:
 
 随后的 {{HTMLElement("dd")}}（**描述详情**）元素提供与使用 `<dt>` 指定的术语相关的定义或其他相关文本。
 
-{{EmbedInteractiveExample("pages/tabbed/dt.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;dt&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Please use the following paint colors for the new house:</p>
+
+<dl>
+  <dt>Denim (semigloss finish)</dt>
+  <dd>Ceiling</dd>
+
+  <dt>Denim (eggshell finish)</dt>
+  <dt>Evening Sky (eggshell finish)</dt>
+  <dd>Layered on the walls</dd>
+</dl>
+```
+
+```css interactive-example
+p,
+dl {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+dl > dt {
+  font-weight: normal;
+  font-style: oblique;
+}
+
+dd {
+  margin-bottom: 1rem;
+}
+```
 
 ## 属性
 

@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 
 **`Set`** 物件可讓你儲存任何類型的唯一值（unique），不論是{{Glossary("Primitive", "基本型別（primitive）值")}}或物件參考（references）。
 
-{{EmbedInteractiveExample("pages/js/set-prototype-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype Constructor")}}
+
+```js interactive-example
+const set1 = new Set([1, 2, 3, 4, 5]);
+
+console.log(set1.has(1));
+// Expected output: true
+
+console.log(set1.has(5));
+// Expected output: true
+
+console.log(set1.has(6));
+// Expected output: false
+```
 
 ## 語法
 

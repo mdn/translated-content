@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt32
 
 La méthode **`setInt32()`** permet d'enregister un entier signé sur 32 bits (type _long_ par analogie avec C) à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.
 
-{{EmbedInteractiveExample("pages/js/dataview-setint32.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.setInt32()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setInt32(1, 2147483647); // Max signed 32-bit integer
+
+console.log(view.getInt32(1));
+// Expected output: 2147483647
+```
 
 ## Syntaxe
 

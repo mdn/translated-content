@@ -2,7 +2,7 @@
 title: 属性
 slug: Web/MathML/Attribute
 l10n:
-  sourceCommit: 07f0cf4375aaa02e1071d8bd0e8518db7609b7a9
+  sourceCommit: 34c43aca36f776c824e698dfd07e3ece34cc6f00
 ---
 
 {{MathMLRef}}
@@ -27,7 +27,7 @@ l10n:
         {{ MathMLElement("mo") }}
       </td>
       <td>
-         <a href="/ja/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> で、演算子を下付き文字または上付き文字として使用する際にアクセントとして扱うかどうかを示します。
+         <a href="/ja/docs/Web/MathML/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、演算子を下付き文字または上付き文字として使用する際にアクセントとして扱うかどうかを示します。
       </td>
     </tr>
     <tr>
@@ -37,7 +37,7 @@ l10n:
         {{ MathMLElement("munderover") }}
       </td>
       <td>
-        <a href="/ja/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> で、演算子がアクセントとして扱われるべきか否かを指定します。
+        <a href="/ja/docs/Web/MathML/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、演算子がアクセントとして扱われるべきか否かを指定します。
       </td>
     </tr>
     <tr>
@@ -47,7 +47,7 @@ l10n:
         {{ MathMLElement("munderover") }}
       </td>
       <td>
-        <a href="/ja/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> で、上付き文字がアクセントとして扱われるべきか否かを指定します。
+        <a href="/ja/docs/Web/MathML/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、上付き文字がアクセントとして扱われるべきか否かを指定します。
       </td>
     </tr>
     <tr>
@@ -118,8 +118,7 @@ l10n:
       <td><code>depth</code></td>
       <td>{{ MathMLElement("mpadded") }}</td>
       <td>
-        深さを設定または増加します。
-        <a href="/ja/docs/Web/MathML/Attribute/Values">length</a> を参照してください。
+        {{cssxref("length-percentage")}} で、必要な深さ（ベースラインの下）を示します。
       </td>
     </tr>
     <tr>
@@ -143,7 +142,7 @@ l10n:
       <td><a href="/ja/docs/Web/MathML/Global_attributes">すべての MathML 要素</a></td>
       <td>
         <p>
-        <a href="/ja/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> で、 <a href="/ja/docs/Web/CSS/math-style">math-style</a> を <code>normal</code> （true の場合）と <code>compact</code> （それ以外の場合）のどちらに設定するかを指定します。
+        <a href="/ja/docs/Web/MathML/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、 <a href="/ja/docs/Web/CSS/math-style">math-style</a> を <code>normal</code> （true の場合）と <code>compact</code> （それ以外の場合）のどちらに設定するかを指定します。
         </p>
       </td>
     </tr>
@@ -151,7 +150,7 @@ l10n:
       <td><code>fence</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        <a href="/ja/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> で、演算子がフェンス（括弧など）であるかどうかを指定します。この属性には視覚的効果はありません。
+        <a href="/ja/docs/Web/MathML/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、演算子がフェンス（括弧など）であるかどうかを指定します。この属性には視覚的効果はありません。
       </td>
     </tr>
     <tr>
@@ -203,7 +202,7 @@ l10n:
         {{ MathMLElement("mspace") }}
       </td>
       <td>
-        <a href="/ja/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> で、希望する（ベースライン上の）高さを指定します。
+        {{cssxref("length-percentage")}} で、希望する（ベースライン上の）高さを指定します。
       </td>
     </tr>
     <tr>
@@ -219,7 +218,7 @@ l10n:
     <tr>
       <td><code>linethickness</code></td>
       <td>{{ MathMLElement("mfrac") }}</td>
-      <td><a href="/ja/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> で、水平方向の分数線の太さです。</td>
+      <td>{{cssxref("length-percentage")}} で、水平方向の分数線の太さです。</td>
     </tr>
     <tr>
       <td><code>lspace</code></td>
@@ -227,7 +226,7 @@ l10n:
         {{ MathMLElement("mo") }}
       </td>
       <td>
-        <a href="/ja/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> で、演算子の前の空間の量を示します。
+        {{cssxref("length-percentage")}} で、演算子の前の空間の量を示します。
       </td>
     </tr>
     <tr>
@@ -236,7 +235,7 @@ l10n:
         {{ MathMLElement("mpadded") }}
       </td>
       <td>
-        <a href="/ja/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> で、要素の位置決め点に対する子コンテンツの位置決め点の水平方向の位置を示します。
+        {{cssxref("length-percentage")}} で、要素の位置決め点に対する子コンテンツの位置決め点の水平方向の位置を示します。
       </td>
     </tr>
     <tr>
@@ -264,7 +263,7 @@ l10n:
       <td><code>mathsize</code></td>
       <td><a href="/ja/docs/Web/MathML/Global_attributes">すべての MathML 要素</a></td>
       <td>
-        <a href="/ja/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> で、この要素の <a href="/ja/docs/Web/CSS/font-size"><code>font-size</code></a> として使用されます。
+        {{cssxref("length-percentage")}} で、この要素の <a href="/ja/docs/Web/CSS/font-size"><code>font-size</code></a> として使用されます。
       </td>
     </tr>
     <tr>
@@ -275,18 +274,18 @@ l10n:
     <tr>
       <td><code>maxsize</code></td>
       <td>{{ MathMLElement("mo") }}</td>
-      <td><a href="/ja/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> で、演算子が伸張したときの最大サイズを示します。</td>
+      <td>{{cssxref("length-percentage")}} で、演算子が伸張したときの最大サイズを示します。</td>
     </tr>
     <tr>
       <td><code>minsize</code></td>
       <td>{{ MathMLElement("mo") }}</td>
-      <td><a href="/ja/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> で、演算子が伸張したときの最小サイズを示します。</td>
+      <td>{{cssxref("length-percentage")}} で、演算子が伸張したときの最小サイズを示します。</td>
     </tr>
     <tr>
       <td><code>movablelimits</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        <a href="/ja/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> で、 <a href="/ja/docs/Web/CSS/math-style">math-style</a> が <code>compact</code> に設定されていた場合に上側・下側の文字が上付き・下付き文字に移動するかどうかを示します。
+        <a href="/ja/docs/Web/MathML/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、 <a href="/ja/docs/Web/CSS/math-style">math-style</a> が <code>compact</code> に設定されていた場合に上側・下側の文字が上付き・下付き文字に移動するかどうかを示します。
       </td>
     </tr>
     <tr>
@@ -335,7 +334,7 @@ l10n:
     <tr>
       <td><code>rspace</code></td>
       <td>{{ MathMLElement("mo") }}</td>
-      <td><a href="/ja/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> で、演算子の後の空間の大きさを示します。</td>
+      <td>{{cssxref("length-percentage")}} で、演算子の後の空間の大きさを示します。</td>
     </tr>
     <tr>
       <td><code>rquote</code> {{deprecated_inline}}</td>
@@ -374,7 +373,7 @@ l10n:
       <td><code>separator</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-      <a href="/ja/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> で、この属性には視覚的な効果はありませんが、演算子が区切り文字（カンマなど）であるかどうかを指定するものです。
+      <a href="/ja/docs/Web/MathML/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、この属性には視覚的な効果はありませんが、演算子が区切り文字（カンマなど）であるかどうかを指定するものです。
       </td>
     </tr>
     <tr>
@@ -388,7 +387,7 @@ l10n:
       <td><code>stretchy</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        <a href="/ja/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> で、演算子を隣接する要素のサイズに引き伸ばすかどうかを指定します。
+        <a href="/ja/docs/Web/MathML/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、演算子を隣接する要素のサイズに引き伸ばすかどうかを指定します。
       </td>
     </tr>
     <tr>
@@ -399,7 +398,7 @@ l10n:
         {{ MathMLElement("mmultiscripts") }}
       </td>
       <td>
-        <a href="/ja/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> で、式のベースラインより下に添字を移動させる最小の空間。
+        {{cssxref("length-percentage")}} で、式のベースラインより下に添字を移動させる最小の空間。
       </td>
     </tr>
     <tr>
@@ -410,20 +409,20 @@ l10n:
         {{ MathMLElement("mmultiscripts") }}
       </td>
       <td>
-        <a href="/ja/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> で、式のベースライン上に上付き文字を移動させる最小限の空間です。
+        {{cssxref("length-percentage")}} で、式のベースライン上に上付き文字を移動させる最小限の空間です。
       </td>
     </tr>
     <tr>
       <td><code>symmetric</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        <a href="/ja/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> で、演算子が伸張された場合、演算子が虚数軸（中央の分数線）の周りに上下対称であるべきかを指定します。
+        <a href="/ja/docs/Web/MathML/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、演算子が伸張された場合、演算子が虚数軸（中央の分数線）の周りに上下対称であるべきかを指定します。
       </td>
     </tr>
     <tr>
       <td><code>voffset</code></td>
       <td>{{ MathMLElement("mpadded") }}</td>
-      <td><a href="/ja/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> で、要素の位置決め点に対する子コンテンツの位置決め点の垂直方向の位置を示します。
+      <td>{{cssxref("length-percentage")}} で、要素の位置決め点に対する子コンテンツの位置決め点の垂直方向の位置を示します。
 </td>
     </tr>
     <tr>
@@ -434,7 +433,7 @@ l10n:
         {{ MathMLElement("mtable") }}
       </td>
       <td>
-        <a href="/ja/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> で、希望する幅を指定します。
+        {{cssxref("length-percentage")}} で、希望する幅を指定します。
       </td>
     </tr>
     <tr>

@@ -21,7 +21,7 @@ l10n:
 > [!WARNING]
 > 即使未指定 API 脚本，此 API 仍需要在 manifest.json 中包含“user_scripts”键。例如：`user_scripts: {}`。
 
-要使用该 API，请调用 `{{WebExtAPIRef("userScripts.register","register()")}}` 方法，传入一个定义要注册的脚本的对象。该方法将返回一个 Promise，其将以 `{{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}` 对象的形式兑现。
+要使用该 API，请调用 {{WebExtAPIRef("userScripts.register","register()")}} 方法，传入一个定义要注册的脚本的对象。该方法将返回一个 Promise，其将以 {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} 对象的形式兑现。
 
 > [!NOTE]
 > 用户脚本在相关的扩展页面（从中注册了用户脚本）被卸载时会被注销，因此应该从至少与用户脚本的有效期相当的扩展页面注册用户脚本。
@@ -47,5 +47,5 @@ l10n:
 
 ## 参见
 
-- [使用 `userScripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts)
+- [使用 `userScripts`（旧版）](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/Working_with_userScripts)
 - {{WebExtAPIRef("contentScripts","browser.contentScripts")}}

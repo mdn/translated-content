@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`circle()`** CSS [函数](/zh-CN/docs/Web/CSS/CSS_Functions)定义了一个圆形，使用半径和位置来描述。它是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型之一。
+**`circle()`** CSS [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)定义了一个圆形，使用半径和位置来描述。它是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型之一。
 
 {{EmbedInteractiveExample("pages/css/function-circle.html")}}
 

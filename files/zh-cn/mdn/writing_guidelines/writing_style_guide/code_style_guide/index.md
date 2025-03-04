@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 2ef5f5de8982fb9df0a0b8385d7b7a16b5497a6a
 ---
 
-{{MDNSidebar}}
-
 本文中描述的指南适用于代码示例的样式美化以及格式化，与语言无关。有关编写代码示例时要包含的内容的指南，请参阅[写作风格指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide#代码示例)。
 
 对于特定技术的指南，请参阅以下文章：

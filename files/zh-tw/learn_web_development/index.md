@@ -1,98 +1,56 @@
 ---
-title: 學習該如何開發 Web
+title: 學習 Web 開發
 slug: Learn_web_development
-original_slug: Learn
+l10n:
+  sourceCommit: 07d0f18e4b2ad43185bcc98ce99b7080c6411b2a
 ---
 
 {{LearnSidebar}}
 
-歡迎來到 MDN 的「學習專區（Learning Area）」。本系列文章將提供撰寫程式碼的必要網站，讓剛接觸的新手也能開發 Web。
+## 成為前端開發者必備技能
 
-MDN 學習專區不是要讓「初學者」變成「專家」；而是想讓「初學者」能夠更怡然自得。你在這裡可完全安排自己的進度，逐步探索 [MDN 的其他部分](/zh-TW/)，再接觸進階資源來堆砌之前所習得的知識。
+歡迎來到 MDN **學習 Web 開發**（亦稱為**學習專區**）。這個資源提供一系列結構化的教學，教導成為成功前端開發者所必備的技能與實踐，同時附有挑戰與進一步推薦的資源。
 
-如果你是完全的新手，那 Web 開發過程可能頗有難度。我們希望能帶領你輕鬆學習，另提供相關細節以培養你的正確觀念。不論你是要學習 Web 開發（自學或參與課程）的學生、尋找教材的老師、純粹興趣使然的業餘工程師，甚至只是想進一步了解 Web 技術的人，都希望你在這裡就像在家裡一樣自在。
+## 關於學習 Web 開發
 
-> [!WARNING]
-> 此學習專區將定期新增更多資訊。如果你希望能納入其他自己感興趣的主題，或覺得某個地方尚有缺漏，請到下方的[聯絡我們](#聯絡我們)尋找相關資訊並取得聯繫。
-
-## 入門
-
-- 完全新手：如果你正打算接觸 Web 開發，我們建議先從提供了實用 Web 開發介紹的[入門 Web](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website)模組。
-- 特殊問題：如果你對 Web 開發有著特殊問題，[常見問題](/zh-TW/docs/Learn_web_development/Howto)可能有你所需要的資訊。
-- 基礎以外：如果你已經具備基本知識，則下一步就是了解 {{glossary("HTML")}} 與 {{glossary("CSS")}} 的細節。可從[HTML 介紹](/zh-TW/docs/Learn_web_development/Core/Structuring_content)模組著手，再進到[CSS 介紹](/zh-TW/docs/Learn_web_development/Core/Styling_basics)。
-- 寫些腳本：如果你嫻熟 HTML 與 CSS 或想動手寫程式碼，要不要去 {{glossary("JavaScript")}} 或伺服器端語言那邊看看呢 ── 就從我們的 [JavaScript 起步走](/zh-TW/docs/Learn_web_development/Core/Scripting)與[伺服器端程式設計起步走](/zh-TW/docs/Learn_web_development/Extensions/Server-side/First_steps)開始吧。
+- 定義每位前端開發者為了事業成功及產業相關性所需具備的技能與知識。
+- 由 MDN 社群創建，並結合來自學生、教育工作者及更廣泛社群網路中開發者的見解進行完善。
+- 旨在帶領你從「初學者」邁向「得心應手」（而非從「初學者」到「專家」），使你具備足夠知識以使用更進階的資源（例如 [MDN 的其他內容](/zh-TW/)）。
 
 > [!NOTE]
-> 我們的[字彙庫](/zh-TW/docs/Glossary)另提供專有名詞的定義。
+> 最後更新：2024 年 12 月（[查看更新記錄](/zh-TW/docs/Learn_web_development/Changelog)）。
 
-## 涵蓋主題
+## 不知道從哪裡開始？
 
-以下是 MDN 學習專區內涵蓋的主題清單。
+- 從未撰寫過程式碼？
+  - : 我們的[入門模組](/zh-TW/docs/Learn_web_development/Getting_started)提供設定教學以及針對初學者的基本概念和背景資訊。若你完全沒有基礎（例如尚未安裝程式碼編輯器或撰寫過任何程式碼），應從此開始。
+- 想要掌握基本功？
+  - : 我們的[核心模組](/zh-TW/docs/Learn_web_development/Core)提供一系列結構化的教學，教導成為成功前端開發者所必備的技能與實踐。
+- 超越基本？
+  - : 我們的[延伸模組](/zh-TW/docs/Learn_web_development/Extensions)涵蓋在擴展知識與發展專長時值得學習的額外實用技能。在完成核心模組後，再進一步學習這些內容。
+- 在學校工作？
+  - : 使用我們的模組作為教學指引，並瀏覽我們的[教育工作者專頁](/zh-TW/docs/Learn_web_development/Educators)獲取更多點子，或將你的學生註冊 Scrimba 的[前端開發者職涯路徑](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn)<sup>_MDN 學習夥伴_</sup>。
 
-- [Web 入門](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website)
-  - : 針對完全新手提供實際介紹。
-- [HTML：構建 Web](/zh-TW/docs/Learn_web_development/Core/Structuring_content)
-  - : HTML 是構建不同區域的內容、還有定義這些區域意義和用途的語言。這個主題詳述了 HTML。
-- [CSS：裝飾 Web](/zh-TW/docs/Learn_web_development/Core/Styling_basics)
-  - : CSS 是用來妝點和編排 web 內容、添加動畫行為之類的語言。這個主題總括 CSS 的一切。
-- [JavaScript：動態用戶端腳本](/zh-TW/docs/Learn_web_development/Core/Scripting)
-  - : JavaScript 是給網頁添加動態功能的語言。這個主題會教你要自在理解並撰寫 JavaScript 所需的一切。
-- [無障礙網頁：讓大家都能用上 Web](/zh-TW/docs/Learn_web_development/Core/Accessibility)
-  - : 無障礙網頁是給盡可能給任何人提供 Web 內容的做法，無論那個人是否受障礙、設備、地點、或其他原因影響。這個主題提供你需要知道的一切。
-- [工具與測試](/zh-TW/docs/Learn_web_development/Extensions/Testing)
-  - : 這個主題介紹開發者用來改善工作的工具，如跨瀏覽器測試工具。
-- [伺服端網站程式設計](/zh-TW/docs/Learn_web_development/Extensions/Server-side)
-  - : 就算對用戶端 Web 開發熟悉了，理解伺服器和伺服器端程式如何做動是很有用的。這個主題提供了伺服器端做動原理的總體介紹，並藉著兩大熱門框架 ──Django（Python）與 Express（node.js）── 詳細說明如何建立伺服器端 app。
+## 取得我們的程式碼範例
 
-## 取得我們的範例程式碼
+在學習區中你會遇到的所有程式碼範例均[可在 GitHub 上取得](https://github.com/mdn/learning-area/)：
 
-在學習專區看到的所有程式碼都[放在 GitHub 上了](https://github.com/mdn/learning-area/)。如果想把它們複製到自己的電腦，最簡單的方法是：
-
-1. 在電腦上[安裝 Git](http://git-scm.com/downloads)。這個版本控制系統，是 GitHub 運作的基礎。
-2. [在 GitHub 註冊一個帳號](https://github.com/join)。很簡單的。
-3. 註冊好後用自己的帳密登入 [github.com](https://github.com)。
-4. 開啟你的[命令提示字元](https://www.lifewire.com/how-to-open-command-prompt-2618089)（Windows）（譯註：如果使用 Windows 7 以後，建議使用 [Powershell](https://msdn.microsoft.com/en-us/powershell)）或是終端機（[Linux](https://help.ubuntu.com/community/UsingTheTerminal)、[MacOSX](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)）
-5. 要把學習專區的 repo 透過命令提示字元/終端機複製到目錄裡面，稱作 learning-area 的資料夾，只要鍵入以下指令：
-
-   ```bash
-   git clone https://github.com/mdn/learning-area
-   ```
-
-6. 現在你能透過檔案管理員或 [cd 指令](<https://zh.wikipedia.org/wiki/Cd_(%E5%91%BD%E4%BB%A4)>)進入目錄，找到想要的檔案了。
-
-你可以在 GitHub 的 `learning-area` repository 做任何更新，只要這麼做：
-
-1. 在命令提示字元/終端機裡面，用 `cd` 進到 `learning-area` 目錄，例如說你要是在上一層目錄的話：
-
-   ```bash
-   cd learning-area
-   ```
-
-2. 用這個指令更新 repository：
-
-   ```bash
-   git pull
-   ```
+- 最簡單的取得方式是[下載最新主要程式碼分支的 ZIP 檔](https://codeload.github.com/mdn/learning-area/zip/main)。
+- 如果你熟悉 Git 與 GitHub，你也可以選擇將該儲存庫複製下來。
 
 ## 聯絡我們
 
-如果你想向我們詢問任何事情，最快的方式就是透過[學習專區討論串](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)或 [IRC 頻道](/zh-TW/docs/MDN/Community/Conversations#Chat_in_IRC)留下訊息。不論你覺得網站有哪個地方做錯或缺漏，想看到新的學習主題、對自己不了解的地方尋求協助，或其他疑難雜症，都歡迎你提供意見給我們。
+如果你想就任何事與我們聯繫，請使用[溝通渠道](/zh-TW/docs/MDN/Community/Communication_channels)。無論你認為網站上有任何錯誤或遺漏、新教學主題的請求、對不理解項目的求助，或其他任何問題或疑慮，我們都樂於傾聽你的意見。
 
-如果你想幫我們添增＼改善內容，則請先了解[該如何協助](/zh-TW/docs/MDN/Community/Contributing)並聯絡我們！不論你是學生、教師、Web 開發老手，或是想幫我們改善學習經驗，都歡迎和我們聯絡。
+如果你有興趣協助開發／改善內容，請瀏覽[該如何協助](/zh-TW/docs/MDN/Community)並聯絡我們！無論你是學習者、教師、資深 Web 開發者，或是對改善學習體驗感興趣的其他人士，我們都非常樂於與你交流。
 
-## 另可參閱
+## 參見
 
-- [Mozilla Developer Newsletter](https://www.mozilla.org/zh-TW/newsletter/developer/)
-  - : 我們針對網頁開發者發行的電子報，對於所有程度的開發者都是很好的學習資源。
-- [EXLskills](https://exlskills.com/learn-en/courses)
-  - : 免費和開放的課程，學習技術技能，指導和基於項目的學習
 - [Codecademy](https://www.codecademy.com/)
-  - : 絕妙的互動式網站，可從頭開始學習程式設計語言。
-- [Code.org](https://code.org/)
-  - : 基本的編碼理論與實作，主要為孩童與初學者所設計。
-- [freeCodeCamp.com](https://www.freecodecamp.com/)
-  - : 富含教學與專案實做的互動式網路開發學習網站。
-- [Web Literacy Map](https://teach.mozilla.org/web-literacy/)
-  - : Web 素養與 21 世紀常見技術的入門，亦已分門別類提供教學活動。
-- [Teaching activities](https://teach.mozilla.org/activities)
-  - : 由 Mozilla 基金會所設計的一系列教學 (與學習) 活動，涵蓋 JavaScript 的基本 Web 素養與隱私概念，並可嘗試開發 Minecraft。
+  - : 一個極佳的從零開始學習程式語互動網站。
+- [freeCodeCamp.org](https://www.freecodecamp.org/)
+  - : 一個透過教學與專案互動學習網頁開發的網站。
+- [學習 JavaScript](https://learnjavascript.online/)
+  - : 一個極佳的資源給有志成為網頁開發者的人——在互動環境中學習 JavaScript，透過短小課程與互動測驗並結合自動評量進行引導。前 40 課為免費提供，而完整課程則需一次性支付少量費用。
+- [前端開發者職涯路徑](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN 學習夥伴_</sup>
+  - : [Scrimba 的](https://scrimba.com?via=mdn)*前端開發者職涯路徑*透過有趣的互動課程與挑戰，知識淵博的教師以及充滿支援的社群，教導成為一位稱職前端 Web 開發者所需了解的一切知識。從零開始，直至獲得第一份前端工作！許多課程元件皆有獨立的免費版本。

@@ -1,14 +1,13 @@
 ---
 title: ビュー遷移 API の使用
 slug: Web/API/View_Transition_API/Using
-original_slug: Web/API/View_Transitions_API/Using
 l10n:
-  sourceCommit: 4dec42ed700040565e8af0e14ff104054ebc20f5
+  sourceCommit: daa0f08c15e7626dd089a011b310a94db99dbfc1
 ---
 
-{{DefaultAPISidebar("View Transitions API")}}
+{{DefaultAPISidebar("View Transition API")}}
 
-この記事では、[ビュー遷移 API](/ja/docs/Web/API/View_Transitions_API) がどのように動作するのか、ビュー遷移を作成し、遷移アニメーションをカスタマイズする方法、アクティブなビュー遷移を操作する方法についての理論を説明します。単一ページアプリケーション (SPA) における DOM 状態の更新と、複数ページアプリケーション (MPA) における文書間の移動の両方におけるビュー遷移をカバーしています。
+この記事では、[ビュー遷移 API](/ja/docs/Web/API/View_Transition_API) がどのように動作するのか、ビュー遷移を作成し、遷移アニメーションをカスタマイズする方法、アクティブなビュー遷移を操作する方法についての理論を説明します。単一ページアプリケーション (SPA) における DOM 状態の更新と、複数ページアプリケーション (MPA) における文書間の移動の両方におけるビュー遷移をカバーしています。
 
 ### ビュー遷移のプロセス
 
@@ -124,7 +123,7 @@ function updateView(event) {
 
 ## アニメーションのカスタマイズ
 
-ビュー遷移の擬似要素は、既定で [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)が設定されています。（詳細は[リファレンスページ](/ja/docs/Web/API/View_Transitions_API#擬似要素)を参照）。
+ビュー遷移の擬似要素は、既定で [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)が設定されています。（詳細は[リファレンスページ](/ja/docs/Web/API/View_Transition_API#擬似要素)を参照）。
 
 ほとんどの外観の遷移には、前述のとおり、既定でスムーズなクロスフェードのアニメーションが指定されています。ただし、例外もあります。
 

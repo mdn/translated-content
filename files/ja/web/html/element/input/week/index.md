@@ -2,18 +2,44 @@
 title: <input type="week">
 slug: Web/HTML/Element/input/week
 l10n:
-  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`week`** 型は、年と、その年の [ISO 8601 週番号](https://ja.wikipedia.org/wiki/ISO_8601#%E5%B9%B4%E3%81%A8%E9%80%B1%E3%81%A8%E6%9B%9C%E6%97%A5) (つまり、第 1 週から第 [52 または 53](https://ja.wikipedia.org/wiki/ISO_8601#%E5%B9%B4%E3%81%A8%E9%80%B1%E3%81%A8%E6%9B%9C%E6%97%A5) 週) を簡単に入力することができる入力欄を生成します。
 
-{{EmbedInteractiveExample("pages/tabbed/input-week.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;week&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="camp-week">Choose a week in May or June:</label>
+
+<input
+  type="week"
+  name="week"
+  id="camp-week"
+  min="2018-W18"
+  max="2018-W26"
+  required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 コントロールのユーザーインターフェイスは、ブラウザーによって様々です。現時点ではブラウザー間の対応は限定的で、 Chrome/Opera と Microsoft Edge のみが対応しています。対応していないブラウザーでは、このコントロールは単純な [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text) に格下げされます。
 
-![「2017年第01週」と書かれた入力欄。 2017 の背景は、フォーカスリングと同じ青色です。入力欄には、×やクリア、上下の小さな矢印がついたスピナー、大きな下矢印の 3 つのアイコンがあります。 2017 年 1 月に設定された入力の下には、カレンダーがポップアップで表示されている。カレンダーの最初の列は週番号が 1、2、3、4、5、6 と並んでいる。その右側に一か月分のカレンダーがある。第 1 週と 1 月 2 日～ 8 日がある行はハイライトされています。月と同じ行に、次の月と前の月を右と左に移動するボタンがあります。](week-control-chrome.png)
+![「2017 年第 01 週」と書かれた入力欄。 2017 の背景は、フォーカスリングと同じ青色です。入力欄には、×やクリア、上下の小さな矢印がついたスピナー、大きな下矢印の 3 つのアイコンがあります。 2017 年 1 月に設定された入力の下には、カレンダーがポップアップで表示されている。カレンダーの最初の列は週番号が 1、2、3、4、5、6 と並んでいる。その右側に一か月分のカレンダーがある。第 1 週と 1 月 2 日～ 8 日がある行はハイライトされています。月と同じ行に、次の月と前の月を右と左に移動するボタンがあります。](week-control-chrome.png)
 
 ## 値
 
@@ -67,7 +93,7 @@ weekControl.value = "2017-W45";
 文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
 > [!NOTE]
-> ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
+> ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("User agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
 
 `week` 入力欄では、 `step` の値は週数で指定され、 604,800,000 が乗じられます（ミリ秒単位の数値であるため)。 `step` の既定値は 1 であり、 1 週を表します。既定の刻みの既定値は -259,200,000 で、これは 1970 年の最初の週 (`1970-W01`) です。
 
@@ -81,7 +107,7 @@ week 入力欄は一見すると便利に見えます。簡単に週を選択す
 
 ### week の基本的な使用
 
-もっとも単純な `<input type="week">` の使用方法は、次のように基本的な `<input>` と {{htmlelement("label")}} 要素の組み合わせです。
+もっとも基本的な `<input type="week">` の使用方法は、次のように基本的な `<input>` と {{htmlelement("label")}} 要素の組み合わせです。
 
 ```html
 <form>
@@ -350,8 +376,10 @@ function populateWeeks() {
     <tr>
       <td><strong>IDL 属性</strong></td>
       <td>
-        <code>value</code>, <code>valueAsDate</code>,
-        <code>valueAsNumber</code>, <code>list</code>
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>,
+        <code>valueAsDate</code>,
+        <code>valueAsNumber</code>
       </td>
     </tr>
     <tr>
@@ -368,7 +396,7 @@ function populateWeeks() {
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>対応するロールなし</code></a></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
     </tr>
   </tbody>
 </table>
@@ -386,4 +414,3 @@ function populateWeeks() {
 - 全般的な {{HTMLElement("input")}} およびその操作に使用する {{domxref("HTMLInputElement")}} インターフェイス
 - [HTML で使用される日付と時刻の書式](/ja/docs/Web/HTML/Date_and_time_formats)
 - [`<input type="datetime-local">`](/ja/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/ja/docs/Web/HTML/Element/input/date), [`<input type="time">`](/ja/docs/Web/HTML/Element/input/time), [`<input type="month">`](/ja/docs/Web/HTML/Element/input/month)
-- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

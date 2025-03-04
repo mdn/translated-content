@@ -382,8 +382,8 @@ if (document.prerendering) {
 - 不允许跨站点导航：任何导航到不同站点的预渲染文档将在发送对这类其他站点的请求之前立即被丢弃。
 - 受限的 URL：预渲染文档不能托管非 HTTP（S）顶级 URL。包含以下 URL 类型将导致预渲染立即被丢弃：
 
-  - [`javascript:` URL](/zh-CN/docs/Web/URI/Schemes/javascript)
-  - [`data:` URL](/zh-CN/docs/Web/URI/Schemes/data)
+  - [`javascript:` URL](/zh-CN/docs/Web/URI/Reference/Schemes/javascript)
+  - [`data:` URL](/zh-CN/docs/Web/URI/Reference/Schemes/data)
   - `blob:` URL
   - `about:` URL，包括 `about:blank` 和 `about:srcdoc`
 
@@ -442,4 +442,4 @@ if (document.prerendering) {
 ## 参见
 
 - developer.chrome.google.cn 上的[在 Chrome 中预渲染页面以实现即时网页导航](https://developer.chrome.google.cn/docs/web-platform/prerender-pages)（2023）
-- [推测性加载](/zh-CN/docs/Web/Performance/Speculative_loading)用于比较推测规则和其他类似的性能改进特性。
+- [推测性加载](/zh-CN/docs/Web/Performance/Guides/Speculative_loading)用于比较推测规则和其他类似的性能改进特性。

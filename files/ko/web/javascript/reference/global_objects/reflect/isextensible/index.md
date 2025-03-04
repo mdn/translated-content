@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 
 **`Reflect.isExtensible()`** 정적 메서드는 객체의 확장 가능 여부, 즉 속성을 추가할 수 있는지 판별합니다. {{jsxref("Object.isExtensible()")}}과 유사하지만 [차이점](#object.isextensible_과의_차이)도 있습니다.
 
-{{EmbedInteractiveExample("pages/js/reflect-isextensible.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Reflect.isExtensible()", "taller")}}
+
+```js interactive-example
+const object1 = {};
+
+console.log(Reflect.isExtensible(object1));
+// Expected output: true
+
+Reflect.preventExtensions(object1);
+
+console.log(Reflect.isExtensible(object1));
+// Expected output: false
+
+const object2 = Object.seal({});
+
+console.log(Reflect.isExtensible(object2));
+// Expected output: false
+```
 
 ## 구문
 

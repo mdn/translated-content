@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.toDataURL()`** 方法會返回包含影像表示的[數據 URL](/zh-TW/docs/Web/URI/Schemes/data)，格式由參數 `type` 指定。
+**`HTMLCanvasElement.toDataURL()`** 方法會返回包含影像表示的[數據 URL](/zh-TW/docs/Web/URI/Reference/Schemes/data)，格式由參數 `type` 指定。
 
 可以指定所需的檔案格式和影像品質。如果未指定檔案格式，或者指定的格式不受支援，則數據會以 `image/png` 格式匯出。換句話說，如果對於任何其他類型（type）的請求地返回值是以 `data:image/png` 開頭，則表示該格式不受支援。
 
@@ -34,7 +34,7 @@ toDataURL(type, quality)
 
 ### 返回值
 
-包含請求的[數據 URL](/zh-TW/docs/Web/URI/Schemes/data) 的字串。
+包含請求的[數據 URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 的字串。
 
 如果畫布的高度或寬度為 `0`，或超過[畫布的最大尺寸](/zh-TW/docs/Web/HTML/Element/canvas#最大畫布尺寸)，將返回字串 `"data:,"`。
 
@@ -137,4 +137,4 @@ function removeColors() {
 
 ## 參見
 
-- [HTTP](/zh-TW/docs/Web/HTTP) 參考中的[數據 URL](/zh-TW/docs/Web/URI/Schemes/data)。
+- [HTTP](/zh-TW/docs/Web/HTTP) 參考中的[數據 URL](/zh-TW/docs/Web/URI/Reference/Schemes/data)。

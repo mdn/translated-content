@@ -9,7 +9,21 @@ l10n:
 
 {{jsxref("Intl.RelativeTimeFormat")}} 인스턴스의 **`formatToParts()`** 메서드는 사용자 지정 로케일 인식 형식에 사용할 수 있는 부분의 상대 시간 형식을 나타내는 객체의 {{jsxref("Array")}}를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-formattoparts.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.prototype.formatToParts")}}
+
+```js interactive-example
+const rtf1 = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+const parts = rtf1.formatToParts(10, "seconds");
+
+console.log(parts[0].value);
+// Expected output: "in "
+
+console.log(parts[1].value);
+// Expected output: "10"
+
+console.log(parts[2].value);
+// Expected output: " seconds"
+```
 
 ## 구문
 

@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 
 静的な **`Reflect.defineProperty()`** メソッドは、{{jsxref("Object.defineProperty()")}} と似ていますが、 {{jsxref("Boolean")}} を返します。
 
-{{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.defineProperty()")}}
+
+```js interactive-example
+const object1 = {};
+
+if (Reflect.defineProperty(object1, "property1", { value: 42 })) {
+  console.log("property1 created!");
+  // Expected output: "property1 created!"
+} else {
+  console.log("problem creating property1");
+}
+
+console.log(object1.property1);
+// Expected output: 42
+```
 
 ## 構文
 

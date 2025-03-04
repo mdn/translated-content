@@ -1,5 +1,5 @@
 ---
-title: ":hover"
+title: :hover
 slug: Web/CSS/:hover
 l10n:
   sourceCommit: c6dbc4ff96451887b908b46c8e70bcfec1c2c48c

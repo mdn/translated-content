@@ -12,7 +12,7 @@ Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされま�
 ### HTML
 
 - [`<li>`](/ja/docs/Web/HTML/Element/li) 要素の `value` 属性が負の値を取れるようになりました。これは HTML5 仕様に基づくもので、HTML5 以前は 0 に変換されていました。
-- [`<audio>`](/ja/docs/Web/HTML/Element/audio) と [`<video>`](/ja/docs/Web/HTML/Element/video) 要素を用いるときのメディアの URI において、[メディアの開始時間と終了時間を指定](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#specifying_playback_range) できるようになりました。
+- [`<audio>`](/ja/docs/Web/HTML/Element/audio) と [`<video>`](/ja/docs/Web/HTML/Element/video) 要素を用いるときのメディアの URI において、[メディアの開始時間と終了時間を指定](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio#specifying_playback_range) できるようになりました。
 - [`<input>`](/ja/docs/Web/HTML/Element/input) 要素と [`<textarea>`](/ja/docs/Web/HTML/Element/textarea) 要素が、スペルチェッカーの実行において [`lang` 属性の値を加味](/ja/docs/Web/HTML/Global_attributes/spellcheck#controlling_the_spellchecker_language)するようになりました。
 - Android 版 Firefox において、 `type="file"` と `accept="image/*" を指定している`[`<input>`](/ja/docs/Web/HTML/Element/input) 要素`のときに`、ユーザーがブラウザーからアプリを切り替えることなく電話のカメラを用いて写真を撮れるようになりました。
 - Windows Vista スタイル PNG ICO イメージがサポートされるようになりました。

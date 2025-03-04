@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
 
 **减法赋值**（**`-=`**）运算符从变量中减去右操作数的值，并将结果赋值给该变量。
 
-{{EmbedInteractiveExample("pages/js/expressions-subtraction-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Subtraction assignment operator")}}
+
+```js interactive-example
+let a = 2;
+
+console.log((a -= 3));
+// Expected output: -1
+
+console.log((a -= "Hello"));
+// Expected output: NaN
+```
 
 ## 语法
 

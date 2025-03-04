@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 
 La méthode statique **`BigInt.asUintN()`** permet d'écréter un `BigInt` pour ramener sa valeur sur un entier non-signé entre 0 et 2^(largeur)-1.
 
-{{EmbedInteractiveExample("pages/js/bigint-asuintn.html")}}
+{{InteractiveExample("JavaScript Demo: BigInt.asUintN()")}}
+
+```js interactive-example
+const U64_CEIL = 2n ** 64n;
+
+console.log(BigInt.asUintN(64, U64_CEIL - 1n));
+// 18446744073709551615n (2n ** 64n - 1n, the maximum non-wrapping value)
+console.log(BigInt.asUintN(64, U64_CEIL));
+// 0n (wraps to zero)
+console.log(BigInt.asUintN(64, U64_CEIL + 1n));
+// 1n
+console.log(BigInt.asUintN(64, U64_CEIL * 2n));
+// 0n (wraps on multiples)
+console.log(BigInt.asUintN(64, U64_CEIL * -42n));
+// 0n (also wraps on negative multiples)
+```
 
 ## Syntaxe
 

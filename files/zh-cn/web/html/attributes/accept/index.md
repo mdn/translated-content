@@ -9,7 +9,28 @@ l10n:
 
 **`accept`** 属性的值是一个以逗号分隔的列表，其中包含一个或多个文件类型/[唯一文件类型标识符](#唯一文件类型标识符)（描述了允许的文件类型）。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-accept.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: accept", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="movie">Choose a movie to upload:</label>
+
+<input type="file" id="movie" name="movie" accept="video/*" />
+
+<label for="poster">Choose a poster:</label>
+
+<input type="file" id="poster" name="poster" accept="image/png, image/jpeg" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+input {
+  margin-bottom: 1rem;
+}
+```
 
 ## 概述
 

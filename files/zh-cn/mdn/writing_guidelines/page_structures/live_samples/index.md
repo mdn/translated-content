@@ -3,8 +3,6 @@ title: 运行实例
 slug: MDN/Writing_guidelines/Page_structures/Live_samples
 ---
 
-{{MDNSidebar}}
-
 MDN 支持将文章中的示例代码转化为读者可以实际查看的在线演示。这被称为*运行实例*，使得用户可以查看代码的实际输出。这使得文档变得更具动态性和指导性。
 
 运行实例可以包括 HTML、CSS 和 JavaScript 的任意组合。注意，“运行”实例是*非交互性*的。但是，它们确保了示例展现的输出与示例代码相匹配，因为它仅仅由代码实例生成。

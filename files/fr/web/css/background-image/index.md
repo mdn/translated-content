@@ -25,15 +25,12 @@ Si une image donnée ne peut pas être chargée (par exemple lorsqu'il est impos
 background-image: url("https://example.com/bck.png");
 
 /* Plusieurs valeurs */
-background-image: url("https://example.com/top.png"),
-  url("https://example.com/bottom.png");
+background-image:
+  url("https://example.com/top.png"), url("https://example.com/bottom.png");
 
-background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 0, 0.5),
-    rgba(0, 0, 255, 0.5)
-  ),
-  url("catfront.png");
+background-image:
+  linear-gradient(to bottom, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)),
+  url("cat-front.png");
 
 /* Valeur avec un mot-clé */
 background-image: none;
@@ -103,7 +100,7 @@ div {
 }
 
 .catsandstars {
-  background-image: url("startransparent.gif"), url("catfront.png");
+  background-image: url("star-transparent.gif"), url("cat-front.png");
   background-color: transparent;
 }
 ```

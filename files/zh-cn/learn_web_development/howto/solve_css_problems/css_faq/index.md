@@ -94,7 +94,7 @@ h1 {
 
 ## 我如何才可以从一个样式中衍生出另一种样式？
 
-CSS 并不完全允许用一种样式来定义另一种样式。但是，将多个类分配给单个元素，可以提供相同的效果。[CSS 变量](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)也提供了一种方法来定义在多处复用的样式信息。
+CSS 并不完全允许用一种样式来定义另一种样式。但是，将多个类分配给单个元素，可以提供相同的效果。[CSS 变量](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)也提供了一种方法来定义在多处复用的样式信息。
 
 ## 我该如何给一个元素分配多个类？
 
@@ -248,9 +248,9 @@ div {
 <div id="orange" class="green" style="color: red;">我是红的</div>
 ```
 
-当选择器具有多个部分时，规则会更加复杂。有关优先级计算的更多信息，请参阅 [CSS 优先级文档](/zh-CN/docs/Web/CSS/Specificity)。
+当选择器具有多个部分时，规则会更加复杂。有关优先级计算的更多信息，请参阅 [CSS 优先级文档](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)。
 
-## -moz-\*， -ms-\*， -webkit-\*， -o-\* 以及 -khtml-\* 属性有什么用？
+## -moz-\*、-ms-\*、-webkit-\*、-o-\* 以及 -khtml-\* 属性有什么用？
 
 这些被称为*前缀属性*的属性是 CSS 标准的扩展。这些是出于测试目的的使用，不至于污染标准命名空间，防止标准扩展时产生兼容性问题。
 

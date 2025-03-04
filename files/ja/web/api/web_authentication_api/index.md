@@ -20,7 +20,7 @@ slug: Web/API/Web_Authentication_API
 - {{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} - publicKey オプションと併用すると、新しいアカウントの登録または既存のアカウントへの新しい非対称鍵ペアの関連付けを行うために新しい認証情報を作成します。
 - {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} - publicKey オプションと併用すると、サービスに対する認証のために、ログインまたは二要素認証として既存の認証情報セットを使用します。
 
-> **メモ:** `create()` と `get()` は両方とも[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts) （すなわち、サーバーに https で接続している、サーバーがローカルホストの場合）であることを必要とし、ブラウザーが安全なコンテキストで動作していない場合は利用できません。
+> **メモ:** `create()` と `get()` は両方とも[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts) （すなわち、サーバーに https で接続している、サーバーがローカルホストの場合）であることを必要とし、ブラウザーが保護されたコンテキストで動作していない場合は利用できません。
 
 最も基本的な形式としては、`create()` と `get()` の両方が「チャレンジ」と呼ばれる非常に大きな乱数をサーバーから受け取り、秘密鍵によって署名されたチャレンジをサーバーに返します。これにより、ネットワーク上で秘密を明かすことなく、ユーザーが認証に必要な秘密鍵を持っていることをサーバー－に証明することができます。
 

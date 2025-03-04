@@ -41,7 +41,7 @@ BFC 使得让浮动内容和周围的内容等高。
 
 为了更好的理解 BFC，我们先看看下面这些内容。
 
-在下面的例子中，我们让 `<div>` 元素浮动，并给它应用 `border` 效果。`<div>` 里的内容现在已经在浮动元素周围浮动起来了。由于浮动的元素比它旁边的元素高，所以 `<div>` 的边框穿出了浮动。正如我们在[流内与流外](/zh-CN/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)指南中解释的，浮动脱离了文档流，所以 `<div>` 的 `background` 和 `border` 仅仅包含了内容，不包含浮动。
+在下面的例子中，我们让 `<div>` 元素浮动，并给它应用 `border` 效果。`<div>` 里的内容现在已经在浮动元素周围浮动起来了。由于浮动的元素比它旁边的元素高，所以 `<div>` 的边框穿出了浮动。正如我们在[应用或脱离流式布局](/zh-CN/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)指南中解释的，浮动脱离了文档流，所以 `<div>` 的 `background` 和 `border` 仅仅包含了内容，不包含浮动。
 
 **使用 `overflow: auto`**
 
@@ -232,20 +232,20 @@ section {
 
 - {{ cssxref("float") }}、{{ cssxref("clear") }}
 - CSS 重要概念：
-  - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
-  - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
-  - [注释](/zh-CN/docs/Web/CSS/Comments)
-  - [优先级](/zh-CN/docs/Web/CSS/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/Inheritance)
+  - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
+  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
+  - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
+  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
+  - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
   - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
-    - [初始值](/zh-CN/docs/Web/CSS/initial_value)
-    - [计算值](/zh-CN/docs/Web/CSS/computed_value)
-    - [应用值](/zh-CN/docs/Web/CSS/used_value)
-    - [实际值](/zh-CN/docs/Web/CSS/actual_value)
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
+    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)
+    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)
+    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
+    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
   - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)

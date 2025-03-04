@@ -7,7 +7,34 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 
 **`Intl.NumberFormat`** オブジェクトは、言語に依存した数値書式を可能にするオブジェクトのコンストラクターです。
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat")}}
+
+```js interactive-example
+const number = 123456.789;
+
+console.log(
+  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
+    number,
+  ),
+);
+// Expected output: "123.456,79 €"
+
+// The Japanese yen doesn't use a minor unit
+console.log(
+  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
+    number,
+  ),
+);
+// Expected output: "￥123,457"
+
+// Limit to three significant digits
+console.log(
+  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
+    number,
+  ),
+);
+// Expected output: "1,23,000"
+```
 
 ## コンストラクター
 
@@ -22,17 +49,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 ## インスタンスメソッド
 
 - {{jsxref("NumberFormat.format", "Intl.NumberFormat.prototype.format")}}
-  - : ゲッター関数で、ローケルに応じて、この {{jsxref("NumberFormat")}} オブジェクトのオプションを持つ数値を書式化する関数を返します。
+  - : ゲッター関数で、ロケールに応じて、この {{jsxref("NumberFormat")}} オブジェクトのオプションを持つ数値を書式化する関数を返します。
 - {{jsxref("NumberFormat.formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
   - : オブジェクトの {{jsxref("Array")}} を返し、これは専用のロケールを意識した書式で使用することができる部品内の数値文字列を表します。
 - {{jsxref("NumberFormat.resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
-  - : ローケルを反映しているプロパティとオブジェクトの初期化中に計算された照合オプションをもった新しいオブジェクトを返します。
+  - : ロケールを反映しているプロパティとオブジェクトの初期化中に計算された照合オプションをもった新しいオブジェクトを返します。
 
 ## 例
 
 ### 基本的な使用
 
-ローケルを指定しない基本的な使い方では、既定のローケルとオプションで書式化された文字列が返されます。
+ロケールを指定しない基本的な使い方では、既定のロケールとオプションで書式化された文字列が返されます。
 
 ```js
 var number = 3500;

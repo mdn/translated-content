@@ -3,10 +3,10 @@ title: "WebSocket: error イベント"
 short-title: error
 slug: Web/API/WebSocket/error_event
 l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
-{{APIRef}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
 `error` イベントは、 `WebSocket` の接続がエラーによって閉じられた（例えば一部のデータを送信できなかった）ときに発生します。
 

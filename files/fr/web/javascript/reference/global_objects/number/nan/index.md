@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
 
 La propriété **`Number.NaN`** représente une valeur qui n'est pas un nombre (en anglais «&nbsp;_Not-A-Number_&nbsp;» qui donne NaN). Elle est équivalente à {{jsxref("NaN")}}.
 
-{{EmbedInteractiveExample("pages/js/number-nan.html")}}
+{{InteractiveExample("JavaScript Demo: Number.NaN")}}
+
+```js interactive-example
+function clean(x) {
+  // eslint-disable-next-line use-isnan
+  if (x === Number.NaN) {
+    // Can never be true
+    return null;
+  }
+  if (isNaN(x)) {
+    return 0;
+  }
+}
+
+console.log(clean(Number.NaN));
+// Expected output: 0
+```
 
 Il n'est pas nécessaire de créer un objet {{jsxref("Number")}} pour accéder à cette propriété statique. Il suffit d'utiliser directement `Number.NaN`.
 

@@ -7,7 +7,33 @@ slug: Web/HTML/Element/style
 
 L'élément HTML **`<style>`** contient des informations de mise en forme pour un document ou une partie d'un document. Par défaut, les instructions de mise en forme écrites dans cet élément sont écrites en [CSS](/fr/docs/Web/CSS).
 
-{{EmbedInteractiveExample("pages/tabbed/style.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;style&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<style>
+  p {
+    color: #26b72b;
+  }
+  code {
+    font-weight: bold;
+  }
+</style>
+
+<p>
+  This text will be green. Inline styles take precedence over CSS included
+  externally.
+</p>
+
+<p style="color: blue">
+  The <code>style</code> attribute can override it, though.
+</p>
+```
+
+```css interactive-example
+p {
+  color: #f00;
+}
+```
 
 L'élément `<style>` peut être inclus dans l'élément {{htmlelement("head")}} ou dans l'élément {{htmlelement("body")}} du document et les styles seront appliqués. Toutefois, il est recommandé de placer les styles dans l'élément `<head>` afin de clairement séparer la présentation du contenu autant que possible. La méthode idéale en ce sens consiste à utiliser des feuilles de style dans des fichiers externes et de les appliquer au document grâce à des éléments {{htmlelement("link")}}.
 
