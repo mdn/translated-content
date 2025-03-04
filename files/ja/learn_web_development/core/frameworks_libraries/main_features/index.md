@@ -1,12 +1,13 @@
 ---
 title: フレームワークの主な機能
 slug: Learn_web_development/Core/Frameworks_libraries/Main_features
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features
 l10n:
-  sourceCommit: 03f247507ae02105bcfe822b8e97ae8e0006bc19
+  sourceCommit: c86c36ca478c7da904c22531e91fdcc2d2a6c690
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}
 
 主要な JavaScript フレームワークはそれぞれ、 DOM の更新、ブラウザーイベントの処理、楽しい開発者エクスペリエンスの提供に関して、異なるアプローチが採用されています。この記事では、「ビッグ 4」フレームワークの主な特徴を探り、フレームワークがどのように機能する傾向があるかを高いレベルから見ていき、それらの違いを見ていきます。
 
@@ -15,14 +16,14 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn/HTML">HTML</a>、
-        <a href="/ja/docs/Learn/CSS">CSS</a>、
-        <a href="/ja/docs/Learn/JavaScript">JavaScript</a> に精通していること。
+        コアの <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、
+        <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a>、
+        <a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript</a> 言語が分かっていること。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
-      <td>フレームワークの主なコード機能を理解すること。</td>
+      <th scope="row">学習成果:</th>
+      <td>JavaScript フレームワークで提供される主要な機能を理解すること。</td>
     </tr>
   </tbody>
 </table>
@@ -31,13 +32,13 @@ l10n:
 
 このモジュールで説明するすべてのフレームワークは JavaScript を利用しており、アプリケーションを構築するためにドメイン固有言語 (DSL) を使用できます。特に、 React はコンポーネントの作成に **JSX** の使用を普及させ、一方、 Ember は **Handlebars** を利用します。 HTML とは異なり、これらの言語はデータ変数の読み取り方法を知っており、このデータを使用して UI を作成するプロセスを合理化できます。
 
-Angular アプリでは、**TypeScript** が頻繁に使用されます。 TypeScript はユーザーインターフェイスの記述には関与しませんが、ドメイン固有の言語であり、通常の JavaScript とは大きな違いがあります。
+Angular アプリでは、 **TypeScript** が頻繁に使用されます。 TypeScript はユーザーインターフェイスの記述には関与しませんが、ドメイン固有の言語であり、通常の JavaScript とは大きな違いがあります。
 
-DSL はブラウザーで直接読み取ることはできません。最初に JavaScript または HTML に変換する必要があります。[開発プロセスにおいて、変換という追加のステップ](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview#変換)が必要になります。しかし、フレームワークツールには通常、このステップを処理するために必要なツールが含まれているか、このステップを含めるように調整することができます。これらのドメイン固有言語を使用せずにフレームワークアプリを構築することも可能ですが、これらの言語を採用すると、開発プロセスが合理化され、それらのフレームワークに関するコミュニティからのヘルプを見つけやすくなります。
+DSL はブラウザーで直接読み取ることはできません。最初に JavaScript または HTML に変換する必要があります。フレームワークツールには通常、このステップを処理するために必要なツールが含まれているか、このステップを含めるように調整することができます。これらのドメイン固有言語を使用せずにフレームワークアプリを構築することも可能ですが、これらの言語を採用すると、開発プロセスが合理化され、それらのフレームワークに関するコミュニティからのヘルプを見つけやすくなります。
 
 ### JSX
 
-[JSX](https://react.dev/learn/writing-markup-with-jsx) は、JavaScript と XML の略で、JavaScript 環境に HTML のような構文をもたらす JavaScript の拡張機能です。これは React アプリケーションで使用するために React チームによって発明されましたが、 Vue アプリなどの他のアプリケーションの開発にも使用できます。
+[JSX](https://ja.react.dev/learn/writing-markup-with-jsx) は、 JavaScript と XML の略で、JavaScript 環境に HTML のような構文をもたらす JavaScript の拡張機能です。これは React アプリケーションで使用するために React チームによって発明されましたが、 Vue アプリなどの他のアプリケーションの開発にも使用できます。
 
 以下に簡単な JSX の例を示します。
 
@@ -50,7 +51,7 @@ const header = (
 );
 ```
 
-この式は、 [`<h1>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素を持つ HTML [`<header>`](/ja/docs/Web/HTML/Element/header) 要素の内部を表します。 `{subject}` を囲む中括弧は、アプリケーションに `subject` 定数の値を読み取り、それを `<h1>` に挿入するように指示します。
+この式は、 HTML の [`<header>`](/ja/docs/Web/HTML/Element/header) 要素の内部に [`<h1>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素があることを表します。 `{subject}` を囲む中括弧は、アプリケーションに `subject` 定数の値を読み取り、それを `<h1>` に挿入するように指示します。
 
 React で使用すると、前のスニペットの JSX は次のようにコンパイルされます。
 
@@ -73,11 +74,11 @@ const header = React.createElement(
 
 ### Handlebars
 
-[Handlebars](https://handlebarsjs.com/) テンプレート言語は Ember アプリケーションに固有のものではありませんが、 Ember アプリケーションで頻繁に利用されています。 Handlebars コードは HTML に似ていますが、他の場所からデータを取り込むオプションがあります。このデータは、アプリケーションが最終的に構築する HTML に影響を与えるために使用できます。
+[Handlebars](https://handlebarsjs.com/) はテンプレート言語で、 Ember アプリケーションに固有のものではありませんが、 Ember アプリケーションで頻繁に利用されています。 Handlebars コードは HTML に似ていますが、他の場所からデータを取り込むオプションがあります。このデータは、アプリケーションが最終的に構築する HTML に影響を与えるために使用できます。
 
 JSX と同様に、 Handlebars は中括弧を使用して変数の値を挿入します。ハンドルバーは、単一ペアではなく、二重ペアの中括弧を使用します。
 
-このハンドルバー テンプレートを考慮すると、次のようになります。
+このハンドルバーテンプレートを考慮すると、次のようになります。
 
 ```html
 <header>
@@ -127,13 +128,13 @@ function add(a: number, b: number) {
 
 前の章で述べたように、ほとんどのフレームワークには何らかのコンポーネントモデルがあります。 React コンポーネントは JSX で、 Ember コンポーネントは Handlebars で、 Angular コンポーネントと Vue コンポーネントは HTML を軽く拡張したテンプレート構文で作成できます。
 
-コンポーネントをどのように記述するべきかについての意見に関係なく、各フレームワークのコンポーネントは、必要となる可能性のある外部プロパティ、コンポーネントが管理する必要がある内部状態、およびユーザーがコンポーネントのマークアップでトリガーできるイベントを記述する方法を提供します。
+コンポーネントをどのように記述するべきかについての意見が何であろうと、各フレームワークのコンポーネントは、必要となる可能性のある外部プロパティ、コンポーネントが管理する必要がある内部状態、およびユーザーがコンポーネントのマークアップでトリガーできるイベントを記述する方法を提供します。
 
 この節の残りのコードスニペットは例として React を使用し、 JSX で書かれています。
 
-### プロパティ (Properties)
+### プロパティ
 
-Properties 、または **props** は、コンポーネントがレンダリングするために必要な外部データです。オンラインマガジンのウェブサイトを構築していて、各寄稿者が自分の作品に対してクレジットを取得できるようにする必要があるとします。各記事に付随する `AuthorCredit` コンポーネントを作成することもできます。このコンポーネントは、著者の肖像と著者に関する短い署名文を表示する必要があります。どの画像をレンダリングするか、どの署名欄を印刷するかを知るために、 `AuthorCredit` はいくつかの props を受け入れる必要があります。
+プロパティ (Properties、または **props**) は、コンポーネントがレンダリングするために必要な外部データです。オンラインマガジンのウェブサイトを構築していて、それぞれの寄稿者が自分の作品に対してクレジットを取得できるようにする必要があるとします。各記事に付随する `AuthorCredit` コンポーネントを作成することもできます。このコンポーネントは、著者の肖像と著者に関する短い署名文を表示する必要があります。どの画像をレンダリングするか、どの署名欄を印刷するかを知るために、 `AuthorCredit` はいくつかのプロパティを受け入れる必要があります。
 
 この `AuthorCredit` コンポーネントの React 表現は次のようになります。
 
@@ -158,7 +159,7 @@ function AuthorCredit(props) {
 />
 ```
 
-これにより、最終的に次の [`<figure>`](/ja/docs/Web/HTML/Element/figure) 要素がブラウザーにレンダリングされます。その構造は `AuthorCredit` コンポーネントで定義されているとおりであり、そのコンテンツは次のようになります。 `AuthorCredit` コンポーネント呼び出しに含まれる props で定義されます。
+これにより、最終的に次の [`<figure>`](/ja/docs/Web/HTML/Element/figure) 要素がブラウザーにレンダリングされます。その構造は `AuthorCredit` コンポーネントで定義されているとおりであり、そのコンテンツは次のようになります。 `AuthorCredit` コンポーネント呼び出しに含まれるプロパティで定義されます。
 
 ```html
 <figure>
@@ -167,11 +168,11 @@ function AuthorCredit(props) {
 </figure>
 ```
 
-### 状態 (State)
+### 状態
 
-前の章で **state** の概念について説明しました。効果的なフレームワークの鍵となるのは堅牢な状態処理メカニズムであり、各コンポーネントには状態の制御が必要なデータが含まれる場合があります。この state は、コンポーネントが使用されている限り、何らかの形で持続します。 props と同様に、 state を使用してコンポーネントのレンダリング方法に影響を与えることができます。
+前の章で状態 (**state**) の概念について説明しました。効果的なフレームワークの鍵となるのは堅牢な状態処理メカニズムであり、各コンポーネントには状態の制御が必要なデータが含まれる場合があります。この状態は、コンポーネントが使用されている限り、何らかの形で持続します。プロパティと同様に、状態を使用してコンポーネントのレンダリング方法に影響を与えることができます。
 
-例として、クリックされた回数をカウントするボタンについて考えてみましょう。このコンポーネントは、自身の _count_ 状態を追跡する必要があり、次のように記述できます。
+例として、クリックされた回数を数えるボタンについて考えてみましょう。このコンポーネントは、自身の _count_ 状態を追跡する必要があり、次のように記述できます。
 
 ```jsx
 function CounterButton() {
@@ -180,7 +181,7 @@ function CounterButton() {
 }
 ```
 
-[`useState()`](https://react.dev/reference/react/useState) は **[React フック](https://react.dev/reference/react)**です。データ値は、更新されるたびにその値を追跡します。コードは最初、ブラウザーで次のように表示されます。
+[`useState()`](https://ja.react.dev/reference/react/useState) は **[React フック](https://ja.react.dev/reference/react)**です。データ値は、更新されるたびにその値を追跡します。コードは最初、ブラウザーで次のように表示されます。
 
 ```html
 <button>Clicked 0 times</button>
@@ -190,9 +191,9 @@ function CounterButton() {
 
 ### イベント
 
-インタラクティブであるためには、アプリケーションがユーザーに応答できるように、コンポーネントがブラウザーイベントに応答する方法が必要です。フレームワークはそれぞれ、ブラウザーイベントをリッスンするための独自の構文を提供し、同等のネイティブブラウザーイベントの名前を参照します。
+操作できるようにするためには、アプリケーションがユーザーに応答できるように、コンポーネントがブラウザーイベントに応答する方法が必要です。フレームワークはそれぞれ、ブラウザーイベントを待ち受けするための独自の構文を提供し、同等のネイティブブラウザーイベントの名前を参照します。
 
-React では、[`click`](/ja/docs/Web/API/Element/click_event) イベントをリッスンするには、特別なプロパティ `onClick` が必要です。上記の `CounterButton` コードを更新して、クリック数をカウントできるようにしましょう。
+React では、[`click`](/ja/docs/Web/API/Element/click_event) イベントを待ち受けするには、特別なプロパティ `onClick` が必要です。上記の `CounterButton` コードを更新して、クリック数をカウントできるようにしましょう。
 
 ```jsx
 function CounterButton() {
@@ -253,13 +254,13 @@ import AuthorCredit from "./components/AuthorCredit";
 
 プロップドリルを回避するために、フレームワークは依存関係注入として知られる機能を提供します。これは、特定のデータを、介在するレベルを介さずに、必要なコンポーネントに直接取得する方法です。各フレームワークは、異なる名前で異なる方法で依存性注入を実装しますが、結果は最終的には同じです。
 
-Angular では、このプロセスを[依存関係の注入](https://angular.io/guide/dependency-injection)と呼びます。 Vue には [`provide()` および `inject()` コンポーネントメソッド](https://v2.vuejs.org/v2/api/#provide-inject)があります。 React には[Context API](https://react.dev/learn/passing-data-deeply-with-context) があります。 Ember は [サービス](https://guides.emberjs.com/release/services/)を通じて状態を共有します。
+Angular では、このプロセスを[依存関係の注入](https://angular.dev/guide/di/dependency-injection)と呼びます。 Vue には [`provide()` および `inject()` コンポーネントメソッド](https://v2.vuejs.org/v2/api/#provide-inject)があります。 React には[Context API](https://ja.react.dev/learn/passing-data-deeply-with-context) があります。 Ember は [サービス](https://guides.emberjs.com/release/services/)を通じて状態を共有します。
 
 ### ライフサイクル
 
-フレームワークのコンテキストでは、コンポーネントの **ライフサイクル** は、コンポーネントが DOM に追加されてブラウザーによってレンダリングされる時点 DOM の追加(_mounting_ と呼ばれることが多い)から削除される時点まで、コンポーネントが通過するフェーズの集合です。 DOM の削除 (_unmounting_ と呼ばれることが多い)。各フレームワークはこれらのライフサイクルフェーズに異なる名前を付けており、すべてのフレームワークで開発者が同じフェーズにアクセスできるわけではありません。すべてのフレームワークは同じ一般的なモデルに従います。開発者は、コンポーネントの _DOM の追加(mounting)_ , _DOM の描画(renders)_, _DOM の削除(unmounts)_ およびそれらの間の多くのフェーズで特定のアクションを実行できます。
+フレームワークのコンテキストでは、コンポーネントの **ライフサイクル** は、コンポーネントが DOM に追加されてブラウザーによってレンダリングされる時点 DOM の追加（マウントと呼ばれることが多い）から削除される時点まで、コンポーネントが通過するフェーズの集合です。 DOM の削除（アンマウントと呼ばれることが多い）。各フレームワークはこれらのライフサイクルフェーズに異なる名前を付けており、すべてのフレームワークで開発者が同じフェーズにアクセスできるわけではありません。すべてのフレームワークは同じ一般的なモデルに従います。開発者は、コンポーネントの _DOM の追加（マウント）_ , _DOM の描画 (レンダリング)_, _DOM の削除（アンマウント）_ およびそれらの間の多くのフェーズで特定のアクションを実行できます。
 
-_render_ フェーズは、ユーザーがアプリケーションを操作するときに最も頻繁に繰り返されるため、理解することが最も重要です。これは、ブラウザーが何か新しい情報を表示する必要があるたびに実行されます。その新しい情報がブラウザー内の情報への追加、削除、または編集であるかどうかに関係ありません。
+レンダリングフェーズは、ユーザーがアプリケーションを操作するときに最も頻繁に繰り返されるため、理解することが最も重要です。これは、ブラウザーが何か新しい情報を表示する必要があるたびに実行されます。その新しい情報がブラウザー内の情報への追加、削除、または編集であるかどうかに関係ありません。
 
 この [React コンポーネントのライフサイクルの図](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)は、概念の概要を示しています。
 
@@ -269,7 +270,7 @@ _render_ フェーズは、ユーザーがアプリケーションを操作す�
 
 **仮想 DOM** は、ブラウザーの DOM に関する情報を JavaScript メモリーに保存するアプローチです。アプリケーションは、 DOM のこのコピーを更新し、それを「実際の」 DOM (ユーザーに対して実際にレンダリングされる DOM) と比較して、何をレンダリングするかを決定します。アプリケーションは、更新された仮想 DOM と現在レンダリングされている DOM の違いを比較する「差分」を構築し、その差分を使用して実際の DOM に更新を適用します。 React と Vue はどちらも仮想 DOM モデルを利用しますが、差分分析やレンダリング時にまったく同じロジックを適用するわけではありません。
 
-[仮想 DOM の詳細については、React ドキュメントをご覧ください](https://reactjs.org/docs/faq-internals.html#what-is-the-virtual-dom)。
+[仮想 DOM の詳細については、React のドキュメントをご覧ください](https://reactjs.org/docs/faq-internals.html#what-is-the-virtual-dom)。
 
 **増分 DOM** は、何をレンダリングするかを決定するために DOM diff を構築するという点で仮想 DOM に似ていますが、 JavaScript メモリー内に DOM の完全なコピーを作成しないという点で異なります。変更する必要のない DOM の部分は無視されます。 Angular は、このモジュールでこれまで説明した、増分 DOM を使用する唯一のフレームワークです。
 
@@ -279,7 +280,7 @@ _render_ フェーズは、ユーザーがアプリケーションを操作す�
 
 ## ルーティング
 
-[前の章で述べたように、ルーティング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction#routing)はウェブエクスペリエンスの重要な部分です。多数のビューを備えた非常に複雑なアプリでの操作性の低下を避けるために、このモジュールで説明する各フレームワークは、開発者がアプリケーションにクライアント側ルーティングを実装するのに役立つライブラリー(または複数のライブラリー)を提供します。
+[前の章で述べたように、ルーティング](/ja/docs/Learn_web_development/Core/Frameworks_libraries/Introduction#routing)はウェブエクスペリエンスの重要な部分です。多数のビューを備えた非常に複雑なアプリでの操作性の低下を避けるために、このモジュールで説明する各フレームワークは、開発者がアプリケーションにクライアント側ルーティングを実装するのに役立つライブラリー(または複数のライブラリー)を提供します。
 
 ## テスト
 
@@ -287,7 +288,7 @@ _render_ フェーズは、ユーザーがアプリケーションを操作す�
 
 各フレームワークには、そのエコシステム内に単体テストと統合テストの機能を備えた広範なツールがあります。
 
-[Testing Library](https://testing-library.com/) は、 React 、 Vue 、 Angular などの多くの JavaScript 環境用のツールを備えたテストユーティリティのスイートです。 Ember ドキュメントでは、[Ember アプリのテスト](https://guides.emberjs.com/release/testing/)について説明しています。
+[Testing Library](https://testing-library.com/) は、React、Vue、Angular などの多くの JavaScript 環境用のツールを備えたテストユーティリティのスイートです。 Ember ドキュメントでは、[Ember アプリのテスト](https://guides.emberjs.com/release/testing/)について説明しています。
 
 これは、 React テストライブラリーの助けを借りて書かれた `CounterButton` の簡単なテストです。ボタンの存在や、ボタンが 0 、1 、 2 回クリックされた後に正しいテキストが表示されているかどうかなど、さまざまなことをテストします。
 
@@ -320,10 +321,4 @@ it("Increments the count when clicked", () => {
 
 この時点で、フレームワークを使用してアプリケーションを作成するときに使用する実際の言語、機能、ツールについてさらに理解できるはずです。あなたはきっと、実際にコーディングをしてみたいと熱意を持って取り組んでいると思います。それが次に行うことです。この時点で、最初に学習を開始するフレームワークを選択できます。
 
-- [React](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-- [Ember](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-- [Vue](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-- [Svelte](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-- [Angular](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}

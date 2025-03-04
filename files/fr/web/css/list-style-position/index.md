@@ -92,13 +92,13 @@ La propriété `list-style-position` est définie avec l'un des mots-clés suiva
 
 .trois {
   list-style-position: inside;
-  list-style-image: url("starsolid.gif");
+  list-style-image: url("star-solid.gif");
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample('', 200, 420)}}
+{{EmbedLiveSample("Définition_de_la_position_des_éléments_d'une_liste", 200, 420)}}
 
 ## Spécifications
 

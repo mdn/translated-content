@@ -1,12 +1,13 @@
 ---
 title: オブジェクト構築の練習
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice
-original_slug: Learn/JavaScript/Objects/Object_building_practice
 l10n:
-  sourceCommit: 4def230f85756724b59660e3cd9de363db724ef8
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 ここまでの記事で JavaScript オブジェクトの根幹部に関する理論と文法の詳細についてすべてを見てきて、始めていくのに十分な基礎固めをしました。この記事では実練習を行ない、独自の JavaScript オブジェクトを作っていくための実践をしていきましょう — 楽しくてカラフルなものを。
 
@@ -15,10 +16,12 @@ l10n:
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        基礎的なコンピューターの知識、HTML と CSS への基本的な理解、基礎的な JavaScript の理解（<a href="/ja/docs/Learn/JavaScript/First_steps">JavaScript の第一歩</a>と <a href="/ja/docs/Learn/JavaScript/Building_blocks">JavaScript の構成要素</a>を参照）とオブジェクト指向 JavaScript の基本（<a href="/ja/docs/Learn/JavaScript/Objects/Basics">JavaScript オブジェクトの基本</a>を参照）。</td>
+        JavaScript の基本
+        （特に<a href="/ja/docs/Learn_web_development/Core/Scripting/Object_basics">オブジェクトの基本</a>を参照）、およびこのモジュールのこれまでのレッスンで扱ってきたオブジェクト指向 JavaScript の概念。
+      </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">学習成果:</th>
       <td>
         オブジェクトの使い方とオブジェクト指向のテクニックを実世界のコンテストで練習する。
       </td>
@@ -30,9 +33,9 @@ l10n:
 
 この記事では伝統的な「弾むボール」のデモを作ってみて、JavaScript でどれほどオブジェクトが役に立つかお見せしましょう。小さなボールは画面じゅうを跳ねまわり、それぞれがぶつかると色が変わります。完成したものはこんな風に見えることでしょう:
 
-![Screenshot of a webpage titled "Bouncing balls". 23 balls of various pastel colors and sizes are visible across a black screen with long trails behind them indicating motion.](bouncing-balls.png)
+!["Bouncing balls" というタイトルのウェブページの画面ショット。黒い画面の内側へ向かって、さまざまなパステルカラーとサイズの23個のボールが動いている様子が、長い軌跡を描きながら見えます。](bouncing-balls.png)
 
-この例では画面にボールを描くのに [キャンバス API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) を使い、画面をアニメーションさせるのに [requestAnimationFrame](/ja/docs/Web/API/Window/requestAnimationFrame) を使います — これらの API について事前の知識は不要です。この記事を読み終わる頃にはこれら API についてもっと知りたくなっているだろうと期待してますが。道中では、イカしたオブジェクトを活用して、ボールを壁で弾ませる、それぞれがぶつかった事を判定する(**衝突判定**という呼び名で知られています)といった上手いテクニックをいくつかお見せしていきます。
+この例では画面にボールを描くのに [キャンバス API](/ja/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics) を使い、画面をアニメーションさせるのに [`requestAnimationFrame`](/ja/docs/Web/API/Window/requestAnimationFrame) を使います。これらの API について事前の知識は不要です。この記事を読み終わる頃にはこれら API についてもっと知りたくなっているだろうと期待してますが。道中では、イカしたオブジェクトを活用して、ボールを壁で弾ませる、それぞれがぶつかった事を判定する（**衝突判定**という呼び名で知られています）といった上手いテクニックをいくつかお見せしていきます。
 
 ## 始めに
 
@@ -66,7 +69,7 @@ function random(min, max) {
 }
 
 function randomRGB() {
-  return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
+  return `rgb(${random(0, 255)} ${random(0, 255)} ${random(0, 255)})`;
 }
 ```
 
@@ -119,7 +122,7 @@ draw() {
 
   - 円弧の中心座標、`x` と `y` — ボールの `x`、`y` プロパティを指定します。
   - 円弧の半径 — ここではボールの `size` プロパティです。
-  - 最後の二つの引数は円弧の開始点から終了点までの角度を円の中心角で指定します。ここでは 0 度から `2 * PI`、これはラジアンで表わした 360 度に相当します(ややこしいですがラジアンで指定しなければなりません)。これで一周した円を描けます。もし `1 * PI` までしか指定しなければ、半円(180 度)になるでしょう。
+  - 最後の二つの引数は円弧の開始点から終了点までの角度を円の中心角で指定します。ここでは 0 度から `2 * PI`、これはラジアンで表わした 360 度に相当します(ややこしいですがラジアンで指定しなければなりません)。これで一周した円を描けます。もし `1 * PI` までしか指定しなければ、半円（180 度）になるでしょう。
 
 - 最後の最後に、[`fill()`](/ja/docs/Web/API/CanvasRenderingContext2D/fill) メソッドを使って、これはおおよそ、「`beginPath()` から描き始めた線描を終了し、描いた領域を前に `fillStyle` で指定していた色で塗り潰せ」という指示になります。
 
@@ -218,7 +221,7 @@ while (balls.length < 25) {
 
 ```js
 function loop() {
-  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillStyle = "rgb(0 0 0 / 25%)";
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
@@ -232,7 +235,7 @@ function loop() {
 
 ものをアニメーションさせるすべてのプログラムには、大概アニメーションループがあり、プログラム内の情報を更新して、アニメーションの各フレームでその結果を表示します。これは大半のゲームや類似するプログラムの基本になります。コード中の `loop()` 関数は以下の事を行ないます:
 
-- キャンバスの塗り潰し色を半透明の黒にし、その色でキャンバスの幅と高さいっぱいの長方形を `fillRect()` で描きます(これの 4 つの引数は始点の座標と、描画する長方形の幅と高さになります)。これで次のフレームを描く前に、前のフレームで描いた内容を見えなくします。これをしないと、ボールじゃなくて長い蛇がキャンバスの中を這い回る様を見る事になります! 塗り潰す色は半透明の `rgba(0,0,0,0.25)` なので、以前の何フレーム分かがかすかに残り、ボールが移動した後の軌跡を表現します。もし 0.25 を 1 に変更すると、軌跡は全く見えなくなります。この値を変えて、どんな効果になるか見てみてください。
+- キャンバスの塗り潰し色を半透明の黒にし、その色でキャンバスの幅と高さいっぱいの長方形を `fillRect()` で描きます(これの 4 つの引数は始点の座標と、描画する長方形の幅と高さになります)。これで次のフレームを描く前に、前のフレームで描いた内容を見えなくします。これをしないと、ボールじゃなくて長い蛇がキャンバスの中を這い回る様を見る事になります! 塗り潰す色は半透明の `rgb(0 0 0 / 25%)` なので、以前の何フレーム分かがかすかに残り、ボールが移動した後の軌跡を表現します。もし 0.25 を 1 に変更すると、軌跡は全く見えなくなります。この値を変えて、どんな効果になるか見てみてください。
 - ループで `balls`配列のボール全部をなめてそれぞれのボールの `draw()` と `update()` 関数を実行し、それぞれを画面に描画してから、次のフレームに備えて必要な位置と速度の更新を行います。
 - この関数を `requestAnimationFrame()` メソッドを使って再実行します — このメソッドが繰り返し実行され同じ関数名を与えられると、その関数がスムースなアニメーションを行なうために毎秒設定された回数実行されます。これはたいてい再帰的に行われます — つまり関数は毎回その関数自身を呼び出すので、何度も何度も繰り返し実行されます。
 
@@ -277,7 +280,7 @@ collisionDetect() {
 
 ```js
 function loop() {
-  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillStyle = "rgb(0 0 0 / 25%)";
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
@@ -299,15 +302,15 @@ function loop() {
 
 自分版の実世界で跳ね回るランダムボール例作り、この全単元で出てきた様々なオブジェクトやオブジェクト指向テクニックを使ったものをあなたに楽しんでいただけていれば、と思います。オブジェクトの実践的な使い方の練習や、実世界のコンテキストについて得られるものがあったはずです。
 
-オブジェクトに関する記事は以上です — 残るのは、あなが自分のスキルをオブジェクトの評価問題で試してみる事だけです。
+オブジェクトに関する記事は以上です。残るのは、あなが自分のスキルをオブジェクトの評価問題で試してみる事だけです。
 
 ## 関連情報
 
 - [キャンバスのチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial) — 2D キャンバスの初心者向けガイド。
 - [requestAnimationFrame()](/ja/docs/Web/API/Window/requestAnimationFrame)
-- [二次元の衝突検出](/ja/docs/Games/Techniques/2D_collision_detection)
-- [三次元の衝突検出](/ja/docs/Games/Techniques/3D_collision_detection)
+- [2D の衝突検出](/ja/docs/Games/Techniques/2D_collision_detection)
+- [3D の衝突検出](/ja/docs/Games/Techniques/3D_collision_detection)
 - [純粋な JavaScript を使用した 2D ブロック崩しゲーム](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — 2D ゲームの作り方に関する、素晴しい初心者向けチュートリアル。
 - [Phaser を使用した 2D ブロック崩しゲーム](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser) — JavaScript ゲームライブラリーを使って 2D ゲームを作るための基本を解説しています。
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

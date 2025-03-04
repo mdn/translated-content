@@ -1,12 +1,13 @@
 ---
 title: 関数 — 再利用可能なコードブロック
 slug: Learn_web_development/Core/Scripting/Functions
-original_slug: Learn/JavaScript/Building_blocks/Functions
 l10n:
-  sourceCommit: d36a0f08f71bc7e17a013da81ed63144a96f7699
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}
 
 コーディングにおいて、不可欠な概念が**関数**です。関数を使用することで、特定のタスクをこなすコードを定義し、保持しておいて、いつでも簡単なコマンドで呼び出すことを可能にしてくれます。同じコードを何度も打たなければならないよりとっても簡単です。この記事では関数の書き方や、関数を実行する方法、定義の仕方、スコープ、引数といった関数に関する基礎を学びます。
 
@@ -14,17 +15,22 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">前提知識:</th>
-      <td>
-        HTML と CSS への基本的な理解、
-        <a href="/ja/docs/Learn/JavaScript/First_steps"
-          >JavaScript の第一歩</a
-        >
+      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>および<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS の基礎</a>を理解し、これまでのレッスンで説明した JavaScript を把握していること。
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        JavaScript の関数についての基礎を理解すること。
+        <ul>
+          <li>関数の目的。再利用可能なコードブロックを作成し、必要に応じてどこからでも呼び出せるようにすることです。</li>
+          <li>JavaScript で関数は至る所で使用されており、一部はブラウザーに組み込まれており、一部はユーザーが定義したものであること。</li>
+          <li>関数とメソッドの違い。</li>
+          <li>関数の呼び出し。</li>
+          <li>無名関数とアロー関数。</li>
+          <li>関数の引数を定義し、引数を渡して関数を呼び出すこと。</li>
+          <li>グローバルスコープと関数/ブロックスコープ。</li>
+          <li>コールバック関数とは何かを理解すること。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -34,7 +40,7 @@ l10n:
 
 JavaScript の中で、関数はあらゆるところに見つかるでしょう。実際、これまでのところすべての場面で関数を使用してきました。これについてはあまり触れてきませんでした。しかし、今こそ明確に関数について話し始め、本当に構文を探索する時期です。
 
-括弧のペアを特徴とする JavaScript の構造を使用するほとんどの場合、そして [for ループ](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#標準的な_for_ループ)、[while と do...while ループ](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#while_と_do...while)、または [if...else 文](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#if...else_文)のような一般的な組み込みの言語構造を使用**していない**場合、関数を使用していることになります。
+括弧のペアを特徴とする JavaScript の構造を使用するほとんどの場合、そして [for ループ](/ja/docs/Learn_web_development/Core/Scripting/Loops#標準的な_for_ループ)、[while と do...while ループ](/ja/docs/Learn_web_development/Core/Scripting/Loops#while_と_do...while)、または [if...else 文](/ja/docs/Learn_web_development/Core/Scripting/Conditionals#if...else_文)のような一般的な組み込みの言語構造を使用**していない**場合、関数を使用していることになります。
 
 ## ブラウザー組み込み関数
 
@@ -75,17 +81,17 @@ const myNumber = Math.random();
 > [!NOTE]
 > これらの機能に慣れるために、必要なときにはこういった行をあなたのブラウザーの JavaScript コンソールにいつでも入力してみてください。
 
-JavaScript 言語にはたくさんの組込み関数があるので、いろいろあるあなたのやりたい事を、全部をあなた自身で書かなくてもすみます。実は、あなたが呼び出して起動（走らせたり実行する事の別の言い方）するコードのいくつかは、JavaScript では書けない、ブラウザー組込み関数です — こういった関数の多くは、背後のブラウザーのコードを呼び出していて、これらは JavaScript のようなウェブ言語ではなく、大半が C++のような低レベルのシステム言語で書かれています。
+JavaScript 言語にはたくさんの組込み関数があるので、いろいろあるあなたのやりたい事を、全部をあなた自身で書かなくてもすみます。実は、あなたが呼び出して起動（走らせたり実行する事の別の言い方）するコードのいくつかは、JavaScript では書けない、ブラウザー組込み関数です — こういった関数の多くは、背後のブラウザーのコードを呼び出していて、これらは JavaScript のようなウェブ言語ではなく、大半が C++ のような低レベルのシステム言語で書かれています。
 
-ブラウザー関数のいくつかは JavaScript 言語のコアに含まれないことを心に留めておいてください。いくつかはブラウザー API の一部として定義されていて、もっと多くの機能を提供すべくデフォルトの言語の上で構築されています（詳しくは[私たちのコースのこの以前の節](/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript#実際に何ができるのか)を見てください）。ブラウザー API のもっと詳しい使い方については、後の方のモジュールで見ていく事になるでしょう。
+ブラウザー関数のいくつかは JavaScript 言語のコアに含まれないことを心に留めておいてください。いくつかはブラウザー API の一部として定義されていて、もっと多くの機能を提供すべく既定の言語の上で構築されています（詳しくは[私たちのコースのこの以前の節](/ja/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#実際に何ができるのか)を見てください）。ブラウザー API のもっと詳しい使い方については、後の方のモジュールで見ていく事になるでしょう。
 
 ## 関数とメソッド
 
-**関数**のうち、オブジェクトの一部であるものは**メソッド**と呼ばれます。構成された JavaScript オブジェクト内部の働きについては、まだ知る必要はありません。この後のモジュールで、オブジェクト内部の働きや自分でオブジェクトを作る方法について教える段階になってから覚えれば大丈夫です。今のところは、ウェブのあちこちにある関連したリソースを見ていると、メソッドと関数が混在している事があるとわかってもらいたいだけです。
+**関数**のうち、オブジェクトの一部であるものは**メソッド**と呼ばれます。オブジェクトについては、このモジュールの後半で学びます。 ここでは、メソッドと関数について可能な限り混乱を解消したいと思います。ウェブ上で利用できる関連のリソースを見ていくと、どちらの用語にも出会う可能性が高いでしょう。
 
 これまで利用してきた組込み関数は両方です: 関数でありメソッドでもあります。組み込みオブジェクトとそのメソッドと同様に、組み込み関数の一覧を[こちらで](/ja/docs/Web/JavaScript/Reference/Global_Objects)確認できます。
 
-このコースのここまででもたくさんのカスタム関数を見てきました。ブラウザーの内部でではなくあなたのコードの中で定義された関数です。独自の名前の直後にカッコがついてるものを見かけたら、それはカスタム関数を使っているということです。[ループの記事](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code)で出てきた [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) の例（[ソースコード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)はこちら）には、独自に作った `draw()` 関数が含まれていました。次のようなものです。
+このコースのここまででもたくさんのカスタム関数を見てきました。ブラウザーの内部でではなくあなたのコードの中で定義された関数です。独自の名前の直後にカッコがついてるものを見かけたら、それはカスタム関数を使っているということです。[ループの記事](/ja/docs/Learn_web_development/Core/Scripting/Loops)で出てきた [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) の例（[ソースコード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)はこちら）には、独自に作った `draw()` 関数が含まれていました。次のようなものです。
 
 ```js
 function draw() {
@@ -99,7 +105,7 @@ function draw() {
 }
 ```
 
-この関数は、{{htmlelement("canvas")}} 要素の内にランダムな円を 100 描きます。同じことをやりたい時には、いつでも次のように関数を起動するだけです。
+この関数は、{{htmlelement("canvas")}} 要素の中に 100 個のランダムな円を描きます。同じことをやりたい時には、いつでも次のように関数を起動するだけです。
 
 ```js
 draw();
@@ -113,7 +119,7 @@ function random(number) {
 }
 ```
 
-ブラウザー組み込みの [Math.random()](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/random) は 0 から 1 までの間の 10 進数の乱数を作成するだけなので、私たちにはこの関数が必要でした。私たちは 0 から指定した数にわたる乱数が欲しかったのです。
+ブラウザー組み込みの [`Math.random()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/random) は 0 から 1 までの間の 10 進数の乱数を作成するだけなので、私たちにはこの関数が必要でした。私たちは 0 から指定した数にわたる乱数が欲しかったのです。
 
 ## 関数の呼び出し
 
@@ -138,13 +144,13 @@ myFunction();
 > [!NOTE]
 > 引数はパラメーター、プロパティ、属性などと呼ばれることもあります。
 
-例えば、ブラウザー内蔵の [Math.random()](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/random) 関数は引数を要求しません。呼び出されると、常に 0 から 1 の間の乱数を返します。
+例えば、ブラウザー内蔵の [`Math.random()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/random) 関数は引数を要求しません。呼び出されると、常に 0 から 1 までの間の乱数を返します。
 
 ```js
 const myNumber = Math.random();
 ```
 
-しかし、ブラウザー内蔵の文字列の [replace()](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 関数は、主たる文字列で探す部分文字列と、その文字列を置き換える部分文字列の 2 つの引数を必要とします。
+しかし、ブラウザー内蔵の文字列の [`replace()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 関数は、主たる文字列で探す部分文字列と、その文字列を置き換える部分文字列の 2 つの引数を必要とします。
 
 ```js
 const myText = "I am a string";
@@ -156,7 +162,7 @@ const newString = myText.replace("string", "sausage");
 
 ### オプション引数
 
-引数によっては、省略可能で指定する必要がないこともあります。指定しない場合、関数は通常何らかの既定の動作をします。例えば、配列の [join()](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 関数の引数はオプションです。
+引数によっては、省略可能で指定する必要がないこともあります。指定しない場合、関数は通常何らかの既定の動作をします。例えば、配列の [`join()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 関数の引数はオプションです。
 
 ```js
 const myArray = ["I", "love", "chocolate", "frogs"];
@@ -361,7 +367,7 @@ function greeting() {
 
 これは動物園に似ています。ライオン、シマウマ、トラ、ペンギンはそれぞれの檻の中にいて、それぞれの檻の中のものにしか触れられません。関数のスコープと同じことです。もし彼らが他の檻の中に侵入できたら問題が起きることでしょう。良くて、知らない住人に囲まれて気まずい思いをします。寒くて水だらけのペンギンの檻に入ったライオンやトラは酷い気分になるでしょう。最悪の場合、ライオンやトラはペンギンを食べてみようとするかもしれません。
 
-![動物園でそれぞれの生息地に囲まれた 4 匹の動物](MDN-mozilla-zoo.png)
+![動物園でそれぞれの生息地に囲まれた 4 匹の動物](mdn-mozilla-zoo.png)
 
 動物園の飼育係はグローバルスコープのようなものです。彼らはすべての檻にアクセスする鍵を持っており、餌を補充したり、病気の動物の世話をしたりします。
 
@@ -464,7 +470,7 @@ function greeting() {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 関数](/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions)を見てください。このテストは次の 2 つの記事でカバーしているスキルを求めていますので、テストの前にそちらを読むほうが良いかもしれません。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 関数](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions)を見てください。このテストは次の 2 つの記事でカバーしているスキルを求めていますので、テストの前にそちらを読むほうが良いかもしれません。
 
 ## まとめ
 
@@ -474,6 +480,7 @@ function greeting() {
 
 - [関数の詳細ガイド](/ja/docs/Web/JavaScript/Guide/Functions) — ここに含まれていないいくつかの高度な機能について説明します。
 - [関数](/ja/docs/Web/JavaScript/Reference/Functions)
-- [デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters), [アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — 高度な概念リファレンス
+- [Using functions to write less code](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~04g?via=mdn), Scrimba <sup>_MDN カリキュラムパートナー_</sup>
+  - : An interactive lesson providing a useful functions introduction.
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}

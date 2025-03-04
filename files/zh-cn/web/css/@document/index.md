@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{deprecated_header}}{{Non-standard_header}}
 
-**`@document`** [CSS](/zh-CN/docs/Web/CSS) [At 规则](/zh-CN/docs/Web/CSS/At-rule)根据文档的 URL 限制其中包含的样式规则的作用范围。它主要是为用户定义的样式表而设计的，但也可以在开发者定义的样式表上使用。
+**`@document`** [CSS](/zh-CN/docs/Web/CSS) [At 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)根据文档的 URL 限制其中包含的样式规则的作用范围。它主要是为用户定义的样式表而设计的，但也可以在开发者定义的样式表上使用。
 
 ```css
 @document url("https://www.example.com/")

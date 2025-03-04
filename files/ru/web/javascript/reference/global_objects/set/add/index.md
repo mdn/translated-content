@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/add
 
 Метод **`add()`** добавляет новый элемент с заданным значением в конец объекта `Set`.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.add()")}}
+
+```js interactive-example
+const set1 = new Set();
+
+set1.add(42);
+set1.add(42);
+set1.add(13);
+
+for (const item of set1) {
+  console.log(item);
+  // Expected output: 42
+  // Expected output: 13
+}
+```
 
 ## Синтаксис
 

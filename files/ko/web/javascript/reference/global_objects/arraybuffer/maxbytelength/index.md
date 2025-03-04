@@ -9,7 +9,17 @@ l10n:
 
 {{jsxref("ArrayBuffer")}} 인스턴스의 **`maxByteLength`** 접근자 속성은 배열 버퍼의 크기 조절이 가능한 바이트 단위의 최대 길이를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-maxbytelength.html")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer.maxByteLength")}}
+
+```js interactive-example
+const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+
+console.log(buffer.byteLength);
+// Expected output: 8
+
+console.log(buffer.maxByteLength);
+// Expected output: 16
+```
 
 ## 설명
 

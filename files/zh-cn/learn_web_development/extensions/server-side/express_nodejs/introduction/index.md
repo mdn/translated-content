@@ -468,7 +468,7 @@ MongoClient.connect("mongodb://localhost:27017/animals", (err, client) => {
 });
 ```
 
-还有一种通过“对象关系映射（Object Relational Mapper，简称 ORM）”间接访问数据库的方法。可以把数据定义为“对象”或“模型”，然后由 ORM 根据给定的数据库格式搞定所有映射关系。这种方法对于开发者有一个好处：可以用 JavaScript 对象的思维而无需直接使用数据库语法，同时传进的数据也有现成的检查工具。稍后详细讨论数据库问题。.
+还有一种通过“对象关系映射（Object Relational Mapper，简称 ORM）”间接访问数据库的方法。可以把数据定义为“对象”或“模型”，然后由 ORM 根据给定的数据库格式搞定所有映射关系。这种方法对于开发者有一个好处：可以用 JavaScript 对象的思维而无需直接使用数据库语法，同时传进的数据也有现成的检查工具。稍后详细讨论数据库问题。
 
 更多信息请参阅 Express 文档 [数据库集成](https://www.expressjs.com.cn/guide/database-integration.html)。
 

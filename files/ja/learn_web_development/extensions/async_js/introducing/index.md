@@ -1,12 +1,13 @@
 ---
 title: 非同期 JavaScript 入門
 slug: Learn_web_development/Extensions/Async_JS/Introducing
-original_slug: Learn/JavaScript/Asynchronous/Introducing
 l10n:
-  sourceCommit: 05d8b0eb3591009b6b7fee274bb7ed1bc5638f18
+  sourceCommit: a92e10b293358bc796c43d5872a8981fd988a005
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}
+
+{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}
 
 この記事では、非同期プログラミングとは何か、なぜそれが必要なのかを説明し、歴史的に JavaScript で非同期関数が実装されてきたいくつかの方法について簡単に説明します。
 
@@ -15,13 +16,18 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピューターリテラシー、関数やイベントハンドラーなど、 JavaScript の基本をそれなりに理解していること。
+        <a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript の基本</a>をしっかりと理解していること。
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        非同期 JavaScript とは何か、同期 JavaScript とどう異なるのか、なぜ必要なのかを知ること。
+        <ul>
+          <li>非同期 JavaScript とは何か、同期 JavaScript とどう違うのか、なぜそれが必要なのかを知ること。</li>
+          <li>同期プログラミングとは何か、そしてそれが時に問題となるのはなぜか。</li>
+          <li>非同期プログラミングはこれらの問題をどのように解決しようとしているのか。</li>
+          <li>イベントハンドラーとコールバック関数、そしてそれらが非同期プログラミングとどのように関係しているのか。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -31,8 +37,8 @@ l10n:
 
 ブラウザーが指定した多くの機能、特にほとんどの興味深い機能は、長い時間がかかる可能性があるため、非同期で実行されます。例えば、
 
-- HTTP リクエストを {{domxref("fetch", "fetch()")}} を使用して行う。
-- ユーザーのカメラやマイクに {{domxref("MediaDevices/getUserMedia", "getUserMedia()") }} を使用してアクセスする。
+- HTTP リクエストを {{domxref("Window/fetch", "fetch()")}} を使用して行う。
+- ユーザーのカメラやマイクに {{domxref("MediaDevices/getUserMedia", "getUserMedia()")}} を使用してアクセスする。
 - ユーザーに {{domxref("window/showOpenFilePicker", "showOpenFilePicker()")}} を使用してファイルを選択するよう依頼する。
 
 したがって、自分自身で非同期関数を _実装する_ ことはあまりなくても、正しく _使用すること_ が必要になる可能性は非常に高いのです。
@@ -45,9 +51,9 @@ l10n:
 
 ```js
 const name = "Miriam";
-const greeting = `Hello, my name is ${name}!`;
+const greeting = `こんにちは。私は ${name} です。`;
 console.log(greeting);
-// "Hello, my name is Miriam!"
+// "こんにちは。私は Miriam です。"
 ```
 
 このコードは、
@@ -62,18 +68,18 @@ console.log(greeting);
 
 ```js
 function makeGreeting(name) {
-  return `Hello, my name is ${name}!`;
+  return `こんにちは。私は ${name} です。`;
 }
 
 const name = "Miriam";
 const greeting = makeGreeting(name);
 console.log(greeting);
-// "Hello, my name is Miriam!"
+// "こんにちは。私は Miriam です。"
 ```
 
-ここでは、`makeGreeting()` は**同期関数**です。なぜなら、呼び出し側は、この関数が動作を完了して値を返すまで待たないと、処理を続行できないからです。
+ここでは、 `makeGreeting()` は**同期関数**です。なぜなら、呼び出し側は、この関数が動作を完了して値を返すまで待たないと、処理を続行できないからです。
 
-### 長時間動作する同期関数
+## 長時間動作する同期関数
 
 同期関数の処理が長時間かかるときはどうすればよいのでしょうか？
 
@@ -131,11 +137,11 @@ document.querySelector("#reload").addEventListener("click", () => {
 
 ［素数の生成］をクリックしてみてください。コンピューターの速度にもよりますが、プログラムが 「生成しました」のメッセージを表示するまでに、おそらく数秒はかかるでしょう。
 
-### 長時間実行される同期関数の問題点
+## 長時間実行される同期関数の問題点
 
 次の例は、入力するためのテキストボックスを追加した以外は、前回の例と同じです。今回は、［素数の生成］をクリックし、その直後にテキストボックスに入力してみてください。
 
-`generatePrimes()` 関数が実行されている間、このプログラムは完全に無反応であることが分かると思います。
+`generatePrimes()` 関数が実行されている間、このプログラムは完全に無反応であることが分かると思います。何も入力できず、どこもクリックできず、他の何をすることもできません。
 
 ```html hidden
 <label for="quota">素数の個数:</label>
@@ -198,11 +204,14 @@ document.querySelector("#reload").addEventListener("click", () => {
 
 {{EmbedLiveSample("The trouble with long-running synchronous functions", 600, 200)}}
 
-これが長時間実行される同期関数の基本的な問題です。次のことをプログラムする方法が必要になります。
+この理由は、この JavaScript プログラムが「シングルスレッド」だからです。スレッドとは、プログラムが追いかける一連の命令のことです。このプログラムはシングルスレッドで構成されているため、一度にできることはひとつだけです。そのため、実行時間の長い同期処理を呼び出してから復帰すると、その間は他のことができなくなります。
 
-1. 関数を呼んで長時間実行する処理を開始する。
-2. その関数が処理を開始してすぐに値を返すようにすることで、プログラムが他のイベントにも応答できるようにします。
-3. 最終的に処理が完了したら、その結果を通知する。
+次のことをプログラムする方法が必要になります。
+
+1. 関数を呼び出して実行時間の長い処理を開始する。
+2. その関数が処理を開始してからすぐに戻るようにすることで、プログラムは他のイベントにも対応できるようになる。
+3. メインスレッドをブロックしないように、例えば新しいスレッドを立ち上げるなどして、関数に処理を実行させる。
+4. 最終的に処理が完了したら、その結果を通知する。
 
 これこそまさに非同期関数ができることです。このモジュールの残りの部分では、それらが JavaScript でどのように実装されるかを説明します。
 
@@ -239,7 +248,7 @@ document.querySelector("#xhr").addEventListener("click", () => {
   const xhr = new XMLHttpRequest();
 
   xhr.addEventListener("loadend", () => {
-    log.textContent = `${log.textContent}ステータス ${xhr.status} で完了しました`;
+    log.textContent = `${log.textContent} ステータス ${xhr.status} で完了しました`;
   });
 
   xhr.open(
@@ -247,7 +256,7 @@ document.querySelector("#xhr").addEventListener("click", () => {
     "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
   );
   xhr.send();
-  log.textContent = `${log.textContent}XHR リクエストを開始しました\n`;
+  log.textContent = `${log.textContent} XHR リクエストを開始しました\n`;
 });
 
 document.querySelector("#reload").addEventListener("click", () => {
@@ -258,7 +267,7 @@ document.querySelector("#reload").addEventListener("click", () => {
 
 {{EmbedLiveSample("Event handlers", 600, 120)}}
 
-これは、以前のモジュールで出会った[イベントハンドラー](/ja/docs/Learn/JavaScript/Building_blocks/Events)と同じですが、イベントがユーザーの行動、例えば、ユーザーがボタンをクリックすることである代わりに、イベントが何らかのオブジェクトの状態変化であることが異なっています。
+これは、以前のモジュールで出会った[イベントハンドラー](/ja/docs/Learn_web_development/Core/Scripting/Events)と同じですが、イベントがユーザーの行動、例えば、ユーザーがボタンをクリックすることである代わりに、イベントが何らかのオブジェクトの状態変化であることが異なっています。
 
 ## コールバック
 
@@ -321,10 +330,10 @@ function doOperation() {
 doOperation();
 ```
 
-コールバックの中でコールバックを呼び出さなければならないので、`doOperation()`関数が深く入れ子になってしまい、読むのもデバッグするのも大変になってしまいます。これは「コールバック地獄」とか「運命のピラミッド」（インデントがピラミッドを横に並べたように見えるから）と呼ばれることもあります。
+コールバックの中でコールバックを呼び出さなければならないので、 `doOperation()` 関数が深く入れ子になってしまい、読むのもデバッグするのも大変になってしまいます。これは「コールバック地獄」とか「運命のピラミッド」（インデントがピラミッドを横に並べたように見えるから）と呼ばれることもあります。
 
 このようにコールバックを入れ子にすると、エラー処理もとても難しくなります。最上位のレベルで一度だけエラー処理をするのではなく、「ピラミッド」の各レベルでエラー処理をしなければならないことがよくあります。
 
 このような理由から、現代の非同期 API のほとんどはコールバックを使用しません。その代わり、 JavaScript で非同期プログラミングの基礎となるのはプロミス ({{jsxref("Promise")}}) であり、これが次の記事の主題となります。
 
-{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}

@@ -1,14 +1,13 @@
 ---
 title: クライアント側ストレージ
 slug: Learn_web_development/Extensions/Client-side_APIs/Client-side_storage
-original_slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 l10n:
-  sourceCommit: bc0d0d1ef796435e969f6d65c7e5d3c08f4023aa
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
 
-{{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 現代のブラウザーは、ウェブサイトがユーザーの許可を得た上で、ユーザーのコンピューターにデータを格納し、必要なときにそれを取得するためのさまざまな方法に対応しています。これにより、データを長期保存したり、サイトや文書をオフラインで使用するために保存したり、サイトのユーザー固有の設定を保持したりと、さまざまなことが可能になります。この記事では、これらがどのように動作するのか、ごく基本的なことを説明します。
 
@@ -17,21 +16,19 @@ l10n:
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        JavaScript の基本
-        （<a href="/ja/docs/Learn/JavaScript/First_steps">第一歩</a>、
-        <a href="/ja/docs/Learn/JavaScript/Building_blocks"
-          >構成要素</a
-        >,
-        <a href="/ja/docs/Learn/JavaScript/Objects">JavaScript のオブジェクト</a>）、
-        <a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
-          >クライアントサイド API の基本</a
-        >
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a>、<a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript</a> に親しんでおくこと、特に <a href="/ja/docs/Learn_web_development/Core/Scripting/Object_basics">JavaScript オブジェクトの基本</a>と <a href="/ja/docs/Learn_web_development/Core/Scripting/DOM_scripting">DOM スクリプティング</a>や<a href="/ja/docs/Learn_web_development/Core/Scripting/Network_requests">ネットワークリスクエスト</a>などのコア API を扱っているものを理解しておくこと。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        アプリケーションデータを格納するために、クライアント側ストレージ API を使用する方法について学ぶこと。
+        <ul>
+          <li>クライアント側ストレージの概念と、それを実現する主要な技術であるウェブストレージ API、Cookie、キャッシュ API、IndexedDB API について説明します。</li>
+          <li>主な用途 — 再読み込み時の状態維持、ログインおよびユーザー個人設定データの維持、ローカル／オフラインでの作業。</li>
+          <li>ウェブストレージを使用して、単純なキーと値のペアのストレージを JavaScript で制御すること。</li>
+          <li>IndexedDB を使用して、より複雑な構造化データを格納すること。</li>
+          <li>キャッシュ API とサービスワーカーをオフライン用途で使用すること。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -39,7 +36,7 @@ l10n:
 
 ## クライアント側ストレージとは
 
-MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-side/First_steps/Client-Server_overview#静的サイト)と[動的サイト](/ja/docs/Learn/Server-side/First_steps/Client-Server_overview#動的サイト)の違いについて説明しました。現代の主要なウェブサイトのほとんどは動的です。何らかのデータベース（サーバー側ストレージ）を使用してサーバーにデータを格納し、[サーバー側](/ja/docs/Learn/Server-side)コードを動作させて必要なデータを取得し、静的なページテンプレートに挿入し、結果の HTML をクライアントに提供してユーザーのブラウザーで表示させています。
+MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview#静的サイト)と[動的サイト](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview#動的サイト)の違いについて説明しました。現代の主要なウェブサイトのほとんどは動的です。何らかのデータベース（サーバー側ストレージ）を使用してサーバーにデータを格納し、[サーバー側](/ja/docs/Learn_web_development/Extensions/Server-side)コードを動作させて必要なデータを取得し、静的なページテンプレートに挿入し、結果の HTML をクライアントに提供してユーザーのブラウザーで表示させています。
 
 クライアント側ストレージは、同様の原理で動作しますが、用途は異なります。これは、クライアント（つまりユーザーのマシン）上にデータを格納し、必要なときにそれを取得することを可能にする JavaScript API で構成されています。これには、以下のような多くの明確な用途があります。
 
@@ -86,7 +83,7 @@ MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-sid
 2. ブラウザーの開発者ツールの JavaScript コンソールを開いてください。
 3. ウェブストレージのデータはすべて、ブラウザーの中にある 2 つのオブジェクト風の構造、 {{domxref("Window.sessionStorage", "sessionStorage")}} と {{domxref("Window.localStorage", "localStorage")}} の中に入っています。前者は、ブラウザーを開いている間だけデータを維持し（ブラウザーを閉じるとデータは失われる）、後者はブラウザーを閉じてから再び開いた後でもデータを維持するものです。一般的には後者の方が有用なので、この記事では後者を使用することにします。
 
-   {{domxref("Storage.setItem()")}} メソッドによって、ストレージ内にデータ項目を保存できます。このメソッドは 2 つの引数をとります。すなわち、その項目の名前と、その値です。JavaScript コンソールに以下のように打ち込んでみてください（もし良ければ、値は自分の名前に変更してください）。
+   {{domxref("Storage.setItem()")}} メソッドによって、ストレージ内にデータ項目を保存できます。このメソッドは 2 つの引数をとります。すなわち、その項目の名前と、その値です。 JavaScript コンソールに以下のように打ち込んでみてください（もし良ければ、値は自分の名前に変更してください）。
 
    ```js
    localStorage.setItem("name", "Chris");
@@ -236,7 +233,8 @@ MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-sid
 
 例が完成しました。よくできましたね! 現時点で残っているのは、コードを保存して HTML ページをブラウザーでテストすることだけです。[ライブ実行される完成版をここで](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html)見られます。
 
-> **メモ:** [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)のところには、探究するにはほんの少しだけ更に複雑な別の例もあります。
+> [!NOTE]
+> もう一つ、探求すべき少し複雑な例が[ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)にあります。
 
 > [!NOTE]
 > 完成版のソースのうち `<script src="index.js" defer></script>` という行では、`defer` 属性により、ページを読み込み終わるまでは {{htmlelement("script")}} 要素の中身を実行しないように指定しています。
@@ -249,11 +247,11 @@ IndexedDB API では、データベースを作成し、そのデータベース
 オブジェクトストアはリレーショナルデータベースのテーブルのようなもので、各オブジェクトストアはいくつものオブジェクトを格納することができます。
 IndexedDB API の詳細については、[IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB) を参照してください。
 
-しかし、これには代償があります。IndexedDB はウェブストレージ API よりも使うのがはるかに複雑です。この節では、実際にそれが可能なことの表面に触れるだけですが、 始めるには十分な情報を提供します。
+しかし、これには代償があります。 IndexedDB はウェブストレージ API よりも使うのがはるかに複雑です。この節では、実際にそれが可能なことの表面に触れるだけですが、 始めるには十分な情報を提供します。
 
 ### メモのストレージの例での作業
 
-ここでは、ブラウザーの中にメモを格納し、好きな時に閲覧・削除できるようにする例を実行し ましょう。自分で構築してもらい、IDB の最も基本的な部分を説明しながら、進めていきます。
+ここでは、ブラウザーの中にメモを格納し、好きな時に閲覧・削除できるようにする例を実行し ましょう。自分で構築してもらい、 IDB の最も基本的な部分を説明しながら、進めていきます。
 
 アプリは、次のような外見です。
 
@@ -342,7 +340,7 @@ IndexedDB API の詳細については、[IndexedDB の使用](/ja/docs/Web/API/
    });
    ```
 
-   ここでは、データベースのスキーマ（構造）、つまり、データベースに含まれるカラム（またはフィールド）の集合を定義します。ここでは、まず既存のデータベースへの参照を、イベントのターゲット (`e.target.result`) の `result` プロパティ (`request` オブジェクト) から取得します。これは `success` イベントハンドラーの `db = openRequest.result;` という行と同じですが、ここでは別個に行う必要があります。それは、`upgradeneeded` イベントハンドラーが（必要なら） `success` イベントハンドラーの前に実行されるためです。つまり、この処理を行わない場合は `db` の値を利用することはできないのです。
+   ここでは、データベースのスキーマ（構造）、つまり、データベースに含まれるカラム（またはフィールド）の集合を定義します。ここでは、まず既存のデータベースへの参照を、イベントのターゲットの `result` プロパティ (`e.target.result`) から取得し、これは `request` オブジェクトです。これは `success` イベントハンドラーの `db = openRequest.result;` という行と同じですが、ここでは別個に行う必要があります。 `upgradeneeded` イベントハンドラーが（必要なら） `success` イベントハンドラーの前に実行されるためです。つまり、この処理を行わない場合は `db` の値を利用することはできません。
 
    次に {{domxref("IDBDatabase.createObjectStore()")}} を使用して、呼び出されたデータベースの中に `notes_os` という名前の新しいオブジェクトストアを作成します。これは、従来のデータベースシステムにおける単一の表に相当します。これに notes という名前をつけて、 `id` という `autoIncrement` キーフィールドも指定しました。新しいレコードが作成されるたびに、このフィールドに自動的に値が増加するので、開発者は明示的にこのフィールドを設定する必要はありません。キーである `id` フィールドは、レコードを削除するときや表示するときなど、レコードを一意に識別するために使用されます。
 
@@ -556,7 +554,7 @@ function deleteItem(e) {
    ];
    ```
 
-2. 始めるには、データベースを正常に開くために、`init()`関数を実行します。これは、さまざまな動画の名前をループして、 `videos` データベースからそれぞれの名前で指定されたレコードを読み込もうとするものです。
+2. 始めに、データベースを正常に開くために、`init()`関数を実行します。これは、さまざまな動画の名前をループして、 `videos` データベースからそれぞれの名前で指定されたレコードを読み込もうとするものです。
 
    それぞれの動画がデータベースで見つかった場合（`request.result` の評価値が `true` かどうかで確認します。記録が存在しない場合は `undefined` となります）、その動画ファイル（blob として格納されています）と動画名が `displayVideo()` 関数に直接渡され、UI に配置されます。存在しない場合、動画名は `fetchVideoFromNetwork()` 関数に渡され、ご想像のとおり、ネットワークから動画を取得します。
 
@@ -665,7 +663,7 @@ function deleteItem(e) {
 
 上記の例では、大きな資産を IndexedDB データベースに格納し、複数回ダウンロードする必要を避けるアプリを作成する方法を既に示しました。これはすでにユーザー体験の大きな改善ですが、まだ一つ足りないことがあります。メインの HTML、CSS、JavaScript ファイルは、サイトにアクセスするたびにダウンロードする必要があり、ネットワーク接続がないときには動作しないことを意味します。
 
-![Firefoxのオフライン画面の内側へ、右手に2ピンプラグ、左手に2ピンソケットを持った漫画のキャラクターのイラストが描かれています。右側の辺には、オフラインモードのメッセージと「再試行」と書かれたボタンがあります。](ff-offline.png)
+![Firefox のオフライン画面の中、右手に 2 ピンプラグ、左手に 2 ピンソケットを持った漫画のキャラクターのイラストが描かれています。右側の辺には、オフラインモードのメッセージと `Try again`と書かれたボタンがあります。](ff-offline.png)
 
 ここは、 [サービスワーカー](/ja/docs/Web/API/Service_Worker_API)およびそれと緊密に関連した [キャッシュ API](/ja/docs/Web/API/Cache) の出番です。
 
@@ -673,11 +671,11 @@ function deleteItem(e) {
 
 リクエストに介入した場合、望むことは何でもできますが（[用途のアイディア](/ja/docs/Web/API/Service_Worker_API#その他の使用例)を参照）、よくある例は、ネットワークのレスポンスをオフラインで保存して、ネットワークからのレスポンスの代わりにリクエストに応答するものを提供することです。事実上、これはウェブサイトを完全にオフラインで動作させることを可能にします。
 
-Cache API もクライアント側のストレージ機構ですが、少し異なる点があります。 HTTP レスポンスを保存するように設計されているため、サービスワーカーと一緒に非常にうまく動作します。
+キャッシュ API もクライアント側のストレージ機構ですが、少し異なる点があります。 HTTP レスポンスを保存するように設計されているため、サービスワーカーと一緒に非常にうまく動作します。
 
 ### サービスワーカーの例
 
-例を見て、これがどのように見えるかを少し考えてみましょう。前の章で見たビデオストアの例の別バージョンを作成しました。この例は、HTML、CSS、JavaScript をサービスワーカー経由で Cache API に保存し、例をオフラインで実行できるようにした以外は、まったく同じように機能します。
+例を見て、これがどのように見えるかを少し考えてみましょう。前の章で見たビデオストアの例の別バージョンを作成しました。この例は、HTML、CSS、JavaScript をサービスワーカー経由でキャッシュ API に保存し、例をオフラインで実行できるようにした以外は、まったく同じように機能します。
 
 [サービスワーカーを用いた IndexedDB ビデオストアがライブで実行中のところ](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/) をご覧ください。また、[ソースコードも参照してください](https://github.com/mdn/learning-area/tree/main/javascript/apis/client-side-storage/cache-sw/video-store-offline)。
 
@@ -701,13 +699,13 @@ if ("serviceWorker" in navigator) {
 
 #### サービスワーカーのインストール
 
-次にサービスワーカーが制御するページがアクセスされたとき（例：リロードされたとき）、サービスワーカーはそのページに対してインストールされます。つまり、そのページを制御し始めることになります。このとき、サービスワーカーに対して `install` イベントが発行されます。サービスワーカー自身の内部で、インストールに応答するコードを書くことができます。
+次にサービスワーカーが制御するページがアクセスされたとき（例：この例が再読み込みされたとき）、サービスワーカーはそのページに対してインストールされます。つまり、そのページを制御し始めることになります。このとき、サービスワーカーに対して `install` イベントが発行されます。サービスワーカー自身の内部で、インストールに応答するコードを書くことができます。
 
-例として、[sw.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js) ファイル（サービスワーカー）の中を見てみましょう。インストールを待ち受けするために、`self`というキーワードが登録されているのがわかります。この `self` キーワードは、サービスワーカーファイルの内部から、サービスワーカーのグローバルスコープを参照するためのものです。
+例として、 [sw.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js) ファイル（サービスワーカー）の中を見てみましょう。インストールを待ち受けするために、 `self` というキーワードが登録されているのがわかります。この `self` キーワードは、サービスワーカーファイルの内部から、サービスワーカーのグローバルスコープを参照するためのものです。
 
 `install` ハンドラーの内部では、イベントオブジェクトで利用できる {{domxref("ExtendableEvent.waitUntil()")}} メソッドを使用して、ブラウザーはサービスワーカーのインストールを、イベント内のプロミスが正常に履行されるまで完了すべきでないことを通知しています。
 
-ここで、キャッシュ API の動作を確認します。Domxref("CacheStorage.open()")}} メソッドを使用して、レスポンスを格納できる新しいキャッシュオブジェクトを開いています（IndexedDB オブジェクトストアのようなものです）。このプロミスは `video-store` キャッシュを表す {{domxref("Cache")}} オブジェクトで履行されます。次に {{domxref("Cache.addAll()")}} メソッドを使用して、一連のアセットをフェッチし、そのレスポンスをキャッシュに追加しています。
+ここで、キャッシュ API の動作を確認します。 {{domxref("CacheStorage.open()")}} メソッドを使用して、レスポンスを格納できる新しいキャッシュオブジェクトを開いています（IndexedDB オブジェクトストアのようなものです）。このプロミスは `video-store` キャッシュを表す {{domxref("Cache")}} オブジェクトで履行されます。次に {{domxref("Cache.addAll()")}} メソッドを使用して、一連の資産をフェッチし、そのレスポンスをキャッシュに追加しています。
 
 ```js
 self.addEventListener("install", (e) => {
@@ -728,9 +726,9 @@ self.addEventListener("install", (e) => {
 
 さて、これで終わりです。インストールが済みました。
 
-#### さらなるリクエストへの応答
+#### 以降のリクエストへの応答
 
-サービスワーカーが登録され、 HTML ページに対してインストールされ、関連するアセットがすべてキャッシュに追加されたので、ほぼ準備が整いました。やるべきことはもう一つあります。さらなるネットワークリクエストに応答するためのコードを書くことです。
+サービスワーカーが登録され、 HTML ページに対してインストールされ、関連する資産がすべてキャッシュに追加されたので、ほぼ準備が整いました。やるべきことはもう一つあります。以降のネットワークリクエストに応答するためのコードを書くことです。
 
 これが `sw.js` の 2 つ目のコードの役割です。サービスワーカーのグローバルスコープに別のリスナーを追加して、`fetch` イベントが発生したときにハンドラー関数を実行するようにします。これは、ブラウザーが、サービスワーカーが登録されているディレクトリーにある資産に対してリクエストを行うたびに発生します。
 
@@ -757,7 +755,7 @@ self.addEventListener("fetch", (e) => {
 
 [サービスワーカーの例](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/)を試すには、それが確実にインストールされるように、2、3 度読み込む必要があるでしょう。それが済んだら、以下のことができます。
 
-- ネットワーク接続ケーブルを抜いてみましょう。あるいは、Wi-Fi を切ってみましょう。
+- ネットワーク接続ケーブルを抜いてみましょう。あるいは、 Wi-Fi を切ってみましょう。
 - Firefox を使っているなら、\[ファイル] > \[オフライン作業] を選択してください。
 - Chrome を使っているなら、\[デベロッパーツール] へ進み、 \[_Application] > \[Service Workers]_ を選び、それから、\[_Offline]_ のチェックボックスをチェックしてください。
 
@@ -774,4 +772,4 @@ self.addEventListener("fetch", (e) => {
 - [クッキー](/ja/docs/Web/HTTP/Cookies)
 - [ウェブワーカー API](/ja/docs/Web/API/Service_Worker_API)
 
-{{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}

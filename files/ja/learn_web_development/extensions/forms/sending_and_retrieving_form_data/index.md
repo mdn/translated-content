@@ -1,12 +1,11 @@
 ---
 title: フォームデータの送信
 slug: Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
-original_slug: Learn/Forms/Sending_and_retrieving_form_data
 l10n:
-  sourceCommit: 9087a17d60546adb8806da3b7c575b6adb8aebd1
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
 
 フォームがクライアント側での検証が終わったら、次はフォームの送信です。前の記事では検証を扱ったので、送信する準備はできています。この記事では、ユーザーがフォームを送信したときに何が起こるか、つまりデータがどこへ行くのか、そこに来たときにどう扱うのかを見ます。また、フォームデータの送信に関連するセキュリティの考慮事項のいくつかも見てみます。
 
@@ -15,11 +14,11 @@ l10n:
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content"
           >HTML の理解</a
         >、基本的な
-        <a href="/ja/docs/Web/HTTP/Basics_of_HTTP">HTTP</a> および
-        <a href="/ja/docs/Learn/Server-side/First_steps"
+        <a href="/ja/docs/Web/HTTP">HTTP</a> および
+        <a href="/ja/docs/Learn_web_development/Extensions/Server-side/First_steps"
           >サーバーサイドプログラミング</a
         >の知識。
       </td>
@@ -44,7 +43,7 @@ l10n:
 クライアント側において、HTML フォームはサーバーへデータを送信する HTTP リクエストを組み立てるのための、便利でユーザーに使いやすい手段でしかありません。フォームによって、ユーザーが HTTP リクエストで渡す情報を提供することができるようになります。
 
 > [!NOTE]
-> どのようにクライアント/サーバー構成が動作するかについてもっと知りたい場合は、[サーバーサイドウェブサイトプログラミング入門](/ja/docs/Learn/Server-side/First_steps)モジュールをお読みください。
+> どのようにクライアント/サーバー構成が動作するかについてもっと知りたい場合は、[サーバーサイドウェブサイトプログラミング入門](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps)モジュールをお読みください。
 
 ## クライアント側: データ送信方法の定義
 
@@ -52,7 +51,7 @@ l10n:
 
 ### action 属性
 
-[`action`](/ja/docs/Web/HTML/Element/form#action) 属性は、どこにデータを送信するかを定義します。値は妥当な相対/絶対 [URL](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URLL) でなければなりません。この属性が与えられなかった場合は、フォームが含まれているページの URL にデータが送信されます。
+[`action`](/ja/docs/Web/HTML/Element/form#action) 属性は、どこにデータを送信するかを定義します。値は妥当な相対/絶対 [URL](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL) でなければなりません。この属性が与えられなかった場合は、フォームが含まれているページの URL にデータが送信されます。
 
 この例では、データを絶対 URL の `http://example.com` に送信します。
 
@@ -242,19 +241,19 @@ if __name__ == "__main__":
 - [greeting.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/greeting.html): このテンプレートは、表示時に渡された 2 つの小さいデータを表示する行だけを含みます。`/hello` の URL が呼び出されるときに実行される、前述の `hello()` 関数によって行われます。
 
 > [!NOTE]
-> 繰り返しますが、このコードはブラウザーに直接読み込もうとしても動作しません。Python は PHP とは若干異なる動作をします。— ローカルでこのコードを実行するには、[Python/PIP をインストール](/ja/docs/Learn/Server-side/Django/development_environment#python_3_のインストール)する必要があり、それから `pip3 install flask` を使用して Flask をインストールしてください。この時点で `python3 python-example.py` を実行し、ブラウザーで `localhost:5042` に移動することで実行することができるでしょう。
+> 繰り返しますが、このコードはブラウザーに直接読み込もうとしても動作しません。Python は PHP とは若干異なる動作をします。— ローカルでこのコードを実行するには、[Python/PIP をインストール](/ja/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#python_3_のインストール)する必要があり、それから `pip3 install flask` を使用して Flask をインストールしてください。この時点で `python3 python-example.py` を実行し、ブラウザーで `localhost:5042` に移動することで実行することができるでしょう。
 
 ### その他の言語やフレームワーク
 
 フォームの操作に使用できるサーバー側の技術は、Perl、Java、.Net、Ruby などたくさんあります。もっとも好きなものを選びましょう。しかしそれらの技術を直接使用することは、扱いにくいため一般的ではないことが特筆に値します。以下のような、フォームをより簡単に扱えるようにする多くの高品質フレームワークのひとつを使用する方がより一般的です。
 
 - Python
-  - [Django](/ja/docs/Learn/Server-side/Django)
+  - [Django](/ja/docs/Learn_web_development/Extensions/Server-side/Django)
   - [Flask](https://flask.palletsprojects.com/)
   - [web2py](https://github.com/web2py/web2py) （始めるのに最も簡単）
   - [py4web](https://py4web.com/) （web2py と同じ開発者によって書かれ、より Django に近いセットアップがあります）
 - Node.js
-  - [Express](/ja/docs/Learn/Server-side/Express_Nodejs)
+  - [Express](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs)
   - [Next.js](https://nextjs.org/) （React アプリ向け）
   - [Nuxt](https://nuxt.com/) （Vue アプリ向け）
   - [Remix](https://remix.run/)
@@ -307,7 +306,7 @@ if __name__ == "__main__":
 
 サーバーにデータを送信するたびに、セキュリティについて考える必要があります。HTML フォームはサーバーに対するもっともよくある攻撃の入口 (攻撃が行われる場所) になります。問題が HTML フォーム自身から発生することはありません — サーバーがどのようにデータを扱うかによります。
 
-[ウェブサイトセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security) の記事が[サーバーサイド](/ja/docs/Learn/Server-side)の学習トピックにあり、いくつかの一般的な攻撃とその防御を詳細に扱っています。そちらへ行って記事を確認し、何が起こり得るかを理解してください。
+[ウェブサイトセキュリティ](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security) の記事が[サーバーサイド](/ja/docs/Learn_web_development/Extensions/Server-side)の学習トピックにあり、いくつかの一般的な攻撃とその防御を詳細に扱っています。そちらへ行って記事を確認し、何が起こり得るかを理解してください。
 
 ### 疑い深くあれ: ユーザーを信用してはいけません
 
@@ -315,7 +314,7 @@ if __name__ == "__main__":
 
 サーバーに来るすべてのデータを確認およびサニタイズしなければなりません。いつでもです。例外はありません。
 
-- **潜在的に危険な文字をエスケープします。** 注意すべき具体的な文字は、データが使用される状況や使用するサーバー基盤に大きく依存しますが、どのサーバー側言語もそのための機能を持っています。注意しておくべきことは、 ([JavaScript](/ja/docs/Learn/JavaScript) や [SQL](https://en.wikipedia.org/wiki/SQL) コマンドといった)実行可能なコードのようなキャラクターシーケンスです。
+- **潜在的に危険な文字をエスケープします。** 注意すべき具体的な文字は、データが使用される状況や使用するサーバー基盤に大きく依存しますが、どのサーバー側言語もそのための機能を持っています。注意しておくべきことは、 ([JavaScript](/ja/docs/Learn_web_development/Core/Scripting) や [SQL](https://en.wikipedia.org/wiki/SQL) コマンドといった)実行可能なコードのようなキャラクターシーケンスです。
 - **入力データの量を、必要なサイズまでしか受け入れないように制限します。**
 - **アップロードされたファイルをサンドボックス化します。** ファイルを別のサーバーに保管して、別のサブドメインまたはよりよい方法としてまったく別のドメインを通してのみアクセスを許可します。
 
@@ -323,7 +322,7 @@ if __name__ == "__main__":
 
 ## まとめ
 
-ご覧いただいたように、フォームデータの送信は簡単ですが、アプリケーションを安全にするのは容易ではありません。フロントエンドの開発者はデータのセキュリティモデルを定義すべき者ではないことを忘れないようにしてください。今後見ていくように[クライアント側でのデータ検証](/ja/docs/Learn/Forms/Form_validation)も可能ですが、クライアント側で実際に何が起きているかを知ることはできませんので、サーバー側でその検証内容を信用することはできません。
+ご覧いただいたように、フォームデータの送信は簡単ですが、アプリケーションを安全にするのは容易ではありません。フロントエンドの開発者はデータのセキュリティモデルを定義すべき者ではないことを忘れないようにしてください。今後見ていくように[クライアント側でのデータ検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)も可能ですが、クライアント側で実際に何が起きているかを知ることはできませんので、サーバー側でその検証内容を信用することはできません。
 
 このチュートリアルを順番に終えた場合、フォームのマークアップとスタイル設定の方法、クライアント側での検証の方法、フォーム送信の理解ができているでしょう。
 
@@ -331,14 +330,13 @@ if __name__ == "__main__":
 
 ウェブアプリケーションのセキュア化についてさらに学びたいのでしたら、次のリソースをよく読んでください。
 
-- [サーバーサイドウェブサイトプログラミング入門](/ja/docs/Learn/Server-side/First_steps)
+- [サーバーサイドウェブサイトプログラミング入門](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps)
 - [The Open Web Application Security Project (OWASP)](https://owasp.org/)
 - [Web Security by Mozilla](https://infosec.mozilla.org/guidelines/web_security)
 
-{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
+{{PreviousMenu("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
 
 ### 高度なトピック
 
-- [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [フォームコントロール向けの CSS プロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [カスタムフォームコントロールの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [JavaScript によるフォームの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)

@@ -11,7 +11,16 @@ l10n:
 
 [`function` 関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)や[アロー構文](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を用いて関数を定義することもできます。
 
-{{EmbedInteractiveExample("pages/js/expressions-functionexpression.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - function expression", "shorter")}}
+
+```js interactive-example
+const getRectArea = function (width, height) {
+  return width * height;
+};
+
+console.log(getRectArea(3, 4));
+// Expected output: 12
+```
 
 ## 構文
 

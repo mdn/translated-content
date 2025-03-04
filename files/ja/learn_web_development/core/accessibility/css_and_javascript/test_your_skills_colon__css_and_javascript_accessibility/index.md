@@ -1,17 +1,16 @@
 ---
 title: "スキルテスト: CSS と JavaScript のアクセシビリティ"
 slug: Learn_web_development/Core/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility
-original_slug: Learn/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{learnsidebar}}
 
-このスキルテストの目的は、あなたが [CSS と JavaScript のアクセシビリティのベストプラクティス](/ja/docs/Learn/Accessibility/CSS_and_JavaScript)の記事を理解したかどうかを評価することです。
+このスキルテストの目的は、あなたが [CSS と JavaScript のアクセシビリティのベストプラクティス](/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript)の記事を理解したかどうかを評価することです。
 
 > [!NOTE]
-> 以下の対話型エディターで取り組むことができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業したほうが便利な場合もあります。
+> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
 >
 > 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 

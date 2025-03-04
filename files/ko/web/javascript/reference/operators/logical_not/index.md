@@ -9,7 +9,15 @@ l10n:
 
 **논리적 NOT (`!`)** (논리적 보수, 부정) 연산자는 참을 거짓으로 만들고, 반대로 거짓을 참으로 만듭니다. 일반적으로 불리언 (논리적) 값과 함께 사용됩니다. 불리언이 아닌 값들과 함께 사용된다면, 단일 피연산자가 `true`로 변환될 수 있으면 `false`를 반환하고, 그렇지 않으면 `true`를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-not.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical NOT", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(!(a > 0 || b > 0));
+// Expected output: false
+```
 
 ## 구문
 

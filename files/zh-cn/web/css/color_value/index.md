@@ -1,14 +1,16 @@
 ---
 title: <color>
 slug: Web/CSS/color_value
+l10n:
+  sourceCommit: 31e158bf22cece84ba7de3de3551f2807fe587d0
 ---
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) **`<color>`** 表示一个颜色。颜色可以包括一个 [alpha 通道](https://zh.wikipedia.org/wiki/Alpha合成)_透明度值_，来表明颜色如何与背景色[混合（composite）](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending)。
+**`<color>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示一个颜色。`<color>` 可以包括一个 [alpha 通道](https://zh.wikipedia.org/wiki/Alpha合成)_透明度值_，来表明颜色如何与背景色[混合（composite）](https://www.w3.org/TR/compositing-1/#simplealphacompositing)。
 
 > [!NOTE]
-> 尽管 CSS 颜色值（`<color>`）被精确定义，但在不同的输出设备上仍然有可能表现不一致（甚至区别很大）。这是因为大多数设备不是经校准的，而且有些浏览器不支持输出设备的[色彩配置（color profile）](https://zh.wikipedia.org/wiki/ICC色彩特性文件)。
+> 尽管 `<color>` 被精确定义，但在不同的输出设备上仍然有可能表现不一致（有时甚至区别很大）。这是因为大多数设备不是经校准的，而且有些浏览器不支持输出设备的[色彩配置（color profile）](https://zh.wikipedia.org/wiki/ICC色彩特性文件)。
 
 ## 语法
 
@@ -25,11 +27,11 @@ aliceblue
 rgb(255 0 153)
 rgb(255 0 153 / 80%)
 
-/* HSL（色相、饱和度、明度） */
+/* HSL（色相、饱和度、亮度） */
 hsl(150 30% 60%)
-hsl(150 30% 60% / 0.8)
+hsl(150 30% 60% / 80%)
 
-/* HWB（色相、白度、黑度）*/
+/* HWB（色相、白度、黑度） */
 hwb(12 50% 0%)
 hwb(194 0% 0% / 0.5)
 
@@ -48,24 +50,38 @@ oklab(59% 0.1 0.1 / 0.5)
 /* Oklch（亮度、色度、色相） */
 oklch(60% 0.15 50)
 oklch(60% 0.15 50 / 0.5)
+
+/* 相对 CSS 颜色 */
+/* HSL 色相变化 */
+hsl(from red 240deg s l)
+/* HWB alpha 通道变化 */
+hwb(from green h w b / 0.5)
+/* LCH 亮度变化 */
+lch(from blue calc(l + 20) c h)
+
+/* light-dark */
+light-dark(white, black)
+light-dark(rgb(255 255 255), rgb(0 0 0))
 ```
 
-一个 `<color>` 值可以以如下方式定义：
+`<color>` 值可以使用如下方式定义：
 
-- 通过关键字：{{CSSXref("&lt;named-color&gt;")}}（例如 `blue` 和 `pink`）、{{CSSXref("&lt;system-color&gt;")}} 和 [`currentcolor`](#currentcolor_关键字).
+- 通过关键字：{{CSSXref("&lt;named-color&gt;")}}（例如 `blue` 或 `pink`）、{{CSSXref("&lt;system-color&gt;")}} 和 [`currentcolor`](#currentcolor_关键字)。
 - 通过十六进制标记：{{CSSXref("&lt;hex-color&gt;")}}（例如 `#ff0000`）。
-- 通过使用函数标记的颜色空间的参数：
-  - [sRGB](https://zh.wikipedia.org/wiki/SRGB色彩空间) 颜色空间：{{CSSXref("color_value/hsl", "hsl()")}}、{{CSSXref("color_value/hwb", "hwb()")}}、{{CSSXref("color_value/rgb", "rgb()")}}；
-  - [CIELAB](https://zh.wikipedia.org/wiki/CIELAB色彩空间) 颜色空间：{{CSSXref("color_value/lab", "lab()")}}、{{CSSXref("color_value/lch", "lch()")}}；
-  - [Oklab](https://bottosson.github.io/posts/oklab/) 颜色空间：{{CSSXref("color_value/oklab", "oklab()")}}、{{CSSXref("color_value/oklch", "oklch()")}}；
-  - 其他颜色空间：{{CSSXref("color_value/color", "color()")}}。
+- 通过 `<color-function>`，在{{glossary("color space", "色彩空间")}}中使用带参数的函数标记：
+  - [sRGB](https://zh.wikipedia.org/wiki/SRGB色彩空间) 色彩空间：{{CSSXref("color_value/hsl", "hsl()")}}、{{CSSXref("color_value/hwb", "hwb()")}} 和 {{CSSXref("color_value/rgb", "rgb()")}}。
+  - [CIELAB](https://zh.wikipedia.org/wiki/CIELAB色彩空间) 色彩空间：{{CSSXref("color_value/lab", "lab()")}} 和 {{CSSXref("color_value/lch", "lch()")}}。
+  - [Oklab](https://bottosson.github.io/posts/oklab/) 色彩空间：{{CSSXref("color_value/oklab", "oklab()")}} 和 {{CSSXref("color_value/oklch", "oklch()")}}。
+  - 其他色彩空间：{{CSSXref("color_value/color", "color()")}}。
+- 通过使用[相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors)语法基于现有颜色输出一个新的颜色。上述任何颜色函数都可以接受由 `from` 关键字引导并后跟新**输出颜色**的通道值定义的**原始颜色**。
 - 通过混合两个颜色：{{CSSXref("color_value/color-mix", "color-mix()")}}。
+- 通过指定两个颜色，第一个用于浅色模式，第二个用于深色模式：{{CSSXref("color_value/light-dark", "light-dark()")}}。
 
-### currentcolor 关键字
+### `currentcolor` 关键字
 
-`currentcolor` 关键字表示元素的 {{Cssxref("color")}} 属性的值。这可以在默认情况下不接收 `color` 值的属性上使用 `color` 值。
+`currentcolor` 关键字表示元素的 {{Cssxref("color")}} 属性的值。这允许你在默认情况下不接收 `color` 值的属性上使用 `color` 值。
 
-如果 `currentcolor` 用于 `color` 属性的值，那么会给元素继承 `color` 属性的值。
+如果 `currentcolor` 用于 `color` 属性的值，则它将从 `color` 属性的继承值中获取其值。
 
 ```html
 <div style="color: blue; border: 1px dashed currentcolor;">
@@ -77,11 +93,11 @@ oklch(60% 0.15 50 / 0.5)
 
 {{EmbedLiveSample("currentcolor_关键字", "100%", 80)}}
 
-### 缺失颜色成分
+### 缺失颜色分量
 
-每个 CSS 颜色函数的成分，除了使用旧版的逗号分隔语法的，都可以指定关键字 `none` 表示一个缺失的成分。
+每个 CSS 颜色函数的分量，除了使用旧版的逗号分隔语法的，都可以指定关键字 `none` 表示一个缺失的分量。
 
-清晰地指定缺失的成分可用于[颜色插值](#带有缺失成分时的插值)，可用于需要插值一些颜色成分但不插值其他颜色成分时。对于所有其他的目的，缺失的成分会相当于相应单位的零值：`0`、`0%` 或 `0deg`。例如，下面的颜色在不插值时是等价的：
+明确指定[颜色插值中缺失的分量](#带有缺失分量时的插值)在你想要对部分颜色分量进行{{glossary("interpolation", "插值")}}而不对其他分量进行插值的情况下非常有用。对于所有其他用途，缺失的分量在适当的单位下将有效地具有零值：`0`、`0%` 或 `0deg`。例如，下面的颜色在不插值时是等价的：
 
 ```css
 /* 这两个是等价的 */
@@ -97,13 +113,13 @@ background-color: hsl(0deg 100% 50%);
 
 颜色插值会发生在[渐变](/zh-CN/docs/Web/CSS/gradient)、[过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)和[动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)中。
 
-当对 `<color>` 值进行插值时，它们首先会转换成指定的颜色空间，然后颜色成分的[计算值](/zh-CN/docs/Web/CSS/computed_value)会进行线性插值，插值速度由过渡和动画中的[缓动函数](/zh-CN/docs/Web/CSS/easing-function)决定。插值颜色空间默认为 Oklab，但是可以在一些与颜色相关的函数标记中通过 {{CSSXref("&lt;color-interpolation-method&gt;")}} 覆盖。
+当对 `<color>` 值进行插值时，它们首先会转换成指定的色彩空间，然后颜色分量的[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)会进行线性插值，插值速度由过渡和动画中的[缓动函数](/zh-CN/docs/Web/CSS/easing-function)决定。插值色彩空间默认为 Oklab，但是可以在一些与颜色相关的函数标记中通过 {{CSSXref("&lt;color-interpolation-method&gt;")}} 覆盖。
 
-### 带有缺失成分时的插值
+### 带有缺失分量时的插值
 
 #### 在同一空间内插值颜色
 
-对完全在插值颜色空间中的颜色进行插值时，一个颜色中缺失的成分将替换为另一种颜色中同一成分的现有值。例如，以下两个表达式是等效的：
+对完全在插值色彩空间中的颜色进行插值时，一个颜色中缺失的分量将替换为另一种颜色中同一分量的现有值。例如，以下两个表达式是等效的：
 
 ```css
 color-mix(in oklch, oklch(none 0.2 10), oklch(60% none 30))
@@ -111,19 +127,19 @@ color-mix(in oklch, oklch(60% 0.2 10), oklch(60% 0.2 30))
 ```
 
 > [!NOTE]
-> 如果两个颜色都缺失这个成分，那么这个成分在插值后也是缺失的。
+> 如果两个颜色都缺失这个分量，那么这个分量在插值后也是缺失的。
 
-#### 在不同空间内插值：相似成分
+#### 在不同空间内插值：相似分量
 
-如果任何要插值的颜色不在插值颜色空间中，则其缺失的成分将根据同一类的**相似成分**转换为转换后的颜色，如下表所述：
+如果任何要插值的颜色不在插值色彩空间中，则其缺失的分量将根据同一类的**相似分量**转换为转换后的颜色，如下表所述：
 
-| 类别 | 相似成分 |
+| 类别 | 相似分量 |
 | ---- | -------- |
-| 红色 | `R`, `X` |
-| 绿色 | `G`, `Y` |
-| 蓝色 | `B`, `Z` |
+| 红色 | `R`、`X` |
+| 绿色 | `G`、`Y` |
+| 蓝色 | `B`、`Z` |
 | 明度 | `L`      |
-| 色度 | `C`, `S` |
+| 色度 | `C`、`S` |
 | 色相 | `H`      |
 | a    | `a`      |
 | b    | `b`      |
@@ -133,7 +149,7 @@ color-mix(in oklch, oklch(60% 0.2 10), oklch(60% 0.2 30))
 - `color(xyz 0.2 0.1 0.6)` 中的 `X`（`0.2`）相似于 `rgb(50% 70% 30%)` 中的 `R`（`50%`）。
 - `hsl(0deg 100% 80%)` 中的 `H`（`0deg`）相似于 `oklch(80% 0.1 140)` 中的 `H`（`140`）。
 
-使用 Oklch 作为插值颜色空间并以下面两种颜色为例：
+使用 Oklch 作为插值色彩空间并以下面两种颜色为例：
 
 ```css
 lch(80% 30 none)
@@ -142,28 +158,28 @@ color(display-p3 0.7 0.5 none)
 
 预处理过程为：
 
-1. 将两种颜色中缺失的成分替换为零值：
+1. 将两种颜色中缺失的分量替换为零值：
 
    ```css
    lch(80% 30 0)
    color(display-p3 0.7 0.5 0)
    ```
 
-2. 将两种颜色转换为插值颜色空间：
+2. 将两种颜色转换为插值色彩空间：
 
    ```css
    oklch(83.915% 0.0902 0.28)
    oklch(63.612% 0.1522 78.748)
    ```
 
-3. 如果转换后颜色的任何成分与相应原始颜色中的缺失成分相似，则将其重置为缺失的成分：
+3. 如果转换后颜色的任何分量与相应原始颜色中的缺失分量相似，则将其重置为缺失的分量：
 
    ```css
    oklch(83.915% 0.0902 none)
    oklch(63.612% 0.1522 78.748)
    ```
 
-4. 将任何缺失的成分替换为另一转换后颜色中的相同成分：
+4. 将任何缺失的分量替换为另一转换后颜色中的相同分量：
 
    ```css
    oklch(83.915% 0.0902 78.748)
@@ -180,9 +196,9 @@ color(display-p3 0.7 0.5 none)
 
 ## 示例
 
-### 颜色值检测器
+### 探索颜色值
 
-在这个例子中，我们提供了一个 `<div>` 和一个文本输入框。往文本框内输入有效的颜色会使 `<div>` 接受这个颜色，从而可能测试我们的颜色值。
+在这个例子中，我们提供了一个 `<div>` 和一个文本输入框。往文本框内输入有效的颜色会使 `<div>` 采用这个颜色，从而允许你测试我们的颜色值。
 
 #### HTML
 
@@ -227,11 +243,11 @@ inputElem.addEventListener("input", () => {
 
 #### 结果
 
-{{EmbedLiveSample("颜色值检测器", "100%", 300)}}
+{{EmbedLiveSample("探索颜色值", "100%", 300)}}
 
-### 完全饱和的 sRGB 颜色
+### 生成完全饱和的 sRGB 颜色
 
-此示例显示 sRGB 颜色空间中完全饱和的 sRGB 颜色。
+此示例显示 sRGB 色彩空间中完全饱和的 sRGB 颜色。
 
 #### HTML
 
@@ -305,11 +321,11 @@ div:nth-child(12) {
 
 #### 结果
 
-{{EmbedLiveSample("完全饱和的 srgb 颜色", "100%", 200)}}
+{{EmbedLiveSample("生成完全饱和的 srgb 颜色", "100%", 200)}}
 
-### 不同深浅的红色
+### 创建不同深浅的红色
 
-此示例显示 sRGB 颜色空间中不同深浅的红色。
+此示例显示 sRGB 色彩空间中不同深浅的红色。
 
 #### HTML
 
@@ -361,11 +377,11 @@ div:nth-child(6) {
 
 #### 结果
 
-{{EmbedLiveSample("不同深浅的红色", "100%", 150)}}
+{{EmbedLiveSample("创建不同深浅的红色", "100%", 150)}}
 
-### 不同饱和度的红色
+### 创建不同饱和度的红色
 
-此示例显示 sRGB 颜色空间中不同饱和度的红色。
+此示例显示 sRGB 色彩空间中不同饱和度的红色。
 
 #### HTML
 
@@ -415,7 +431,7 @@ div:nth-child(6) {
 
 #### 结果
 
-{{EmbedLiveSample("不同饱和度的红色", "100%", 150)}}
+{{EmbedLiveSample("创建不同饱和度的红色", "100%", 150)}}
 
 ## 规范
 
@@ -430,5 +446,6 @@ div:nth-child(6) {
 - {{CSSXref("opacity")}}：在元素级别上设备透明度的属性
 - {{CSSXref("&lt;hue&gt;")}}：表示一个颜色的色相角度的数据类型
 - {{CSSXref("color")}}、{{CSSXref("background-color")}}、{{CSSXref("border-color")}}、{{CSSXref("box-shadow")}}、{{CSSXref("outline-color")}}、{{CSSXref("text-shadow")}}：使用 `<color>` 的常见属性
-- [使用 CSS 给元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
-- MDN 博客中的文章 [CSS 颜色中的新功能、渐变和色调（级别 4）](/en-US/blog/css-color-module-level-4/)（2023 年）
+- [使用 CSS 给 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
+- [使用相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors)
+- MDN 博客中的文章 [CSS 颜色（第 4 版）中的新功能、渐变和色调](/zh-CN/blog/css-color-module-level-4/)（2023 年）

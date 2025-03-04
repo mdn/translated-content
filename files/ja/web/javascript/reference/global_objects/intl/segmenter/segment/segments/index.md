@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments
 
 **`Intl.Segments`** のインスタンスは、テキスト文字列のセグメントを反復可能なコレクションとして保持します。[`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトの [`segment()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment) メソッドをコールすると、このインスタンスが返されます。
 
-{{EmbedInteractiveExample("pages/js/segments-prototype-containing.html")}}
+{{InteractiveExample("JavaScript Demo: Segments.prototype.containing")}}
+
+```js interactive-example
+const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
+const string1 = "Que ma joie demeure";
+
+const segments = segmenterFr.segment(string1);
+
+console.log(segments.containing(5));
+// Expected output:
+// Object {segment: 'ma', index: 4, input: 'Que ma joie demeure', isWordLike: true}
+```
 
 ## インスタンスメソッド
 

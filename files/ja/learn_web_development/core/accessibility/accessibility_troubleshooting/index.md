@@ -1,34 +1,17 @@
 ---
 title: "評価: アクセシビリティのトラブルシューティング"
 slug: Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
-original_slug: Learn/Accessibility/Accessibility_troubleshooting
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Mobile","Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core/Accessibility")}}
 
 このモジュールの評価では、あなたが診断、修正するべきいくつかのアクセシビリティの問題を持った簡単なサイトを表示します。
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提知識:</th>
-      <td>
-        HTML、CSS、JavaScript に対する基本的な理解、
-        <a href="/ja/docs/Learn/Accessibility"
-          >このコースの前回までの記事</a
-        >に対する理解。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">目的:</th>
-      <td>アクセシビリティの基礎に対する基本的な知識をテストすること。</td>
-    </tr>
-  </tbody>
-</table>
-
-## 開始地点
+## 出発点
 
 評価を始めるために、[例を含むファイルの ZIP](https://raw.githubusercontent.com/mdn/learning-area/main/accessibility/assessment-start/assessment-files.zip) を取得してください。コンピューターのいずれかのディレクトリーにそのコンテンツを展開してください。
 
@@ -86,4 +69,4 @@ l10n:
 
 このウェブサイトをよりアクセシブルにする 2 つ以上の改善アイデアを挙げることができますか？
 
-{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Mobile","Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core/Accessibility")}}

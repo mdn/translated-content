@@ -86,7 +86,7 @@ nullProtoObj.constructor; // "undefined" と表示
 `toString` メソッドを null プロトタイプオブジェクトに割り当てることで追加することができます。
 
 ```js
-nullProtoObj.toString = Object.prototype.toString; // 新しいオブジェクトに toString が書けているため、元の汎用的なものを追加しなおす
+nullProtoObj.toString = Object.prototype.toString; // 新しいオブジェクトに toString が欠けているため、元の汎用的なものを追加しなおす
 
 console.log(nullProtoObj.toString()); // "[object Object]" と表示
 console.log(`nullProtoObj is: ${nullProtoObj}`); // "nullProtoObj is: [object Object]" と表示

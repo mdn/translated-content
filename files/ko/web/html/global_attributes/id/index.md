@@ -7,7 +7,28 @@ slug: Web/HTML/Global_attributes/id
 
 **`id`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 문서 전체에서 유일한 고유식별자(ID)를 정의합니다. 고유식별자의 목적은 [프래그먼트 식별자](/ko/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#프래그먼트)를 사용해 요소를 가리킬 때와 스크립트 및 스타일 적용 시 특정 요소를 식별하기 위함입니다.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-id.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: id", "tabbed-shorter")}}
+
+```html interactive-example
+<p>A normal, boring paragraph. Try not to fall asleep.</p>
+
+<p id="exciting">The most exciting paragraph on the page. One of a kind!</p>
+```
+
+```css interactive-example
+#exciting {
+  background: linear-gradient(to bottom, #ffe8d4, #f69d3c);
+  border: 1px solid #696969;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px black;
+}
+
+#exciting:before {
+  content: "ℹ️";
+  margin-right: 5px;
+}
+```
 
 > **경고:** `id` 특성의 값은 불투명 문자열(opaque string)입니다. 그 말은, 웹 작성자가 `id` 특성을 통해 사람이 읽을 수 있는 정보를 나타내서는 안된다는 것입니다. (코드 가독성 차원에서는 유용할 수 있습니다. `ticket-18569`와 `r45tgfe-freds&$@`을 비교해보세요.)
 

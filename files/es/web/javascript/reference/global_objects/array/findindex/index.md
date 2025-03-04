@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 El método **`findIndex()`** devuelve el **índice** del **primer elemento** de un array que cumpla con la función de prueba proporcionada. En caso contrario devuelve -1.
 
-{{EmbedInteractiveExample("pages/js/array-findindex.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.findIndex()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const isLargeNumber = (element) => element > 13;
+
+console.log(array1.findIndex(isLargeNumber));
+// Expected output: 3
+```
 
 Vea también el método {{jsxref("Array.find", "find()")}}, que devuelve el **valor** de un elemento encontrado en el array en lugar de su índice.
 

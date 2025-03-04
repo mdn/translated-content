@@ -2,7 +2,7 @@
 title: Asynchronous （非同期）
 slug: Glossary/Asynchronous
 l10n:
-  sourceCommit: 0c79cdfe93f2af272fb058db30c5d6f0a37c3263
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{GlossarySidebar}}
@@ -27,5 +27,6 @@ l10n:
 
 ## 関連情報
 
-- [サーバーからのデータの取得](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) （学習領域）
-- {{glossary("Synchronous", "同期")}}
+- [サーバーからのデータの取得](/ja/docs/Learn_web_development/Core/Scripting/Network_requests) （学習領域）
+- 関連用語:
+  - {{glossary("Synchronous", "同期")}}

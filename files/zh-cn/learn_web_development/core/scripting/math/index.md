@@ -51,8 +51,6 @@ original_slug: Learn/JavaScript/First_steps/Math
 
 让我们快点玩一些数字，以重新定义我们所需要的基本语法。在你的[开发工具 JavaScript 控制台](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)中输入下面列出的命令。
 
-**[在新窗口中打开](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/)**
-
 1. 首先，我们先声明一对变量，并分别用一个整数和一个浮点数来初始化它们，然后再输入变量名来检查是否正确：
 
    ```js
@@ -349,8 +347,5 @@ function updateBtn() {
 在本文中，我们已经介绍了现在需要了解 JavaScript 中数字的基本信息。你会发现，在你学习 JavaScript 过程中，num 类型的数据一直都在被使用，所以熟练的掌握它是一个不错的选择。如果你是那些不喜欢数学的人之一，你应该庆幸这一章内容很简短。
 
 在下一篇文章中，我们将探讨文本，以及 JavaScript 如何让我们操纵它。
-
-> [!NOTE]
-> 如果你喜欢数学，并希望阅读更多关于它如何在 JavaScript 中实现的，那么你可以在 MDN's main JavaScript 部分读到更多关于它的内容。对于学习[数字与日期](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates)和[表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#运算符优先级)来说，那是一个不错的地方。
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}

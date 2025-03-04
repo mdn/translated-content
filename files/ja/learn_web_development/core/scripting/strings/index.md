@@ -1,27 +1,34 @@
 ---
 title: テキストの扱い — JavaScript での文字列
 slug: Learn_web_development/Core/Scripting/Strings
-original_slug: Learn/JavaScript/First_steps/Strings
 l10n:
-  sourceCommit: 379d5d503c40f8c5e6d3869ff6a12c05d99f4520
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}
 
 次に、文字列に注目しましょう。プログラミングでは、テキストの断片をこう呼びます。この記事では、文字列の作成、文字列内の引用符のエスケープ、文字列の結合など、JavaScript を学ぶ上で実に知っておくべき文字列に関する共通事項をすべて見ていきます。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件:</th>
-      <td>
-        HTML と CSS の基本的な理解、
-        JavaScript とは何かということを理解していること。
+      <th scope="row">前提知識:</th>
+      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>および<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS の基礎</a>を理解していること。
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
-      <td>JavaScript での文字列の基本的な扱いに慣れること。</td>
+      <th scope="row">学習成果:</th>
+      <td>
+        <ul>
+          <li>文字列リテラルの作成。</li>
+          <li>引用符の一致の要件。</li>
+          <li>文字列変換。</li>
+          <li>文字列内での文字のエスケープ。</li>
+          <li>テンプレートリテラル。テンプレートリテラルにおける変数や複数行の使用。</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -34,7 +41,7 @@ l10n:
 
 ## 文字列の宣言
 
-文字列は最初の見た目では数値と同じように扱われますが、深く掘り下げるといくつかの顕著な違いが見えてきます。基本的な行を[ブラウザーの開発者コンソール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)に入力して慣れることから始めましょう。
+文字列は最初の見た目では数値と同じように扱われますが、深く掘り下げるといくつかの顕著な違いが見えてきます。基本的な行を[ブラウザーの開発者コンソール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)に入力して慣れることから始めましょう。
 
 始めに、次の行を入力していましょう。
 
@@ -66,7 +73,7 @@ console.log(badString);
 
 ### 単一引用符、二重引用符、逆引用符
 
-1. JavaScript では、文字列を囲む引用符として、単一引用符と二重引用符を使用することができます。以下のどちらの例も正しく動きます。
+JavaScript では、文字列を囲む引用符として、単一引用符と二重引用符を使用することができます。以下のどちらの例も正しく動きます。
 
 ```js-nolint
 const single = '単一引用符';
@@ -254,10 +261,10 @@ console.log(name + number); // "フロント 242"
   // string
   ```
 
-この生成方法は状況によってはとても便利です。例えば、ユーザーがフォームのテキストフィールドに数字を入力した場合、入力された値は文字列です。しかし、その数字を使って計算したい場合、数値にしなければなりません。そんな時は `Number()` に任せましょう。これは実際に[数字当てゲームの 59 行目](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L59)で使用した方法です。
+この生成方法は状況によってはとても便利です。例えば、ユーザーがフォームのテキストフィールドに数字を入力した場合、入力された値は文字列です。しかし、その数字を使って計算したい場合、数値にしなければなりません。そんな時は `Number()` に任せましょう。これは実際に[数字当てゲーム](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)で使用した方法です。
 
 ## まとめ
 
 以上、JavaScript で文字列のごく基本的なことを説明しました。次の記事では、JavaScript で文字列に利用できる組み込みメソッドと、それらを使用して文字列を思い通りの形に操作することができる方法を見ていきます。
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}

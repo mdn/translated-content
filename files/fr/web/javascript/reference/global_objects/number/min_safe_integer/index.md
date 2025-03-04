@@ -10,7 +10,23 @@ La constante **`Number.MIN_SAFE_INTEGER`** représente le plus petit entier repr
 > [!NOTE]
 > Pour représenter des entiers inférieurs à cette valeur, on pourra utiliser le type {{jsxref("BigInt")}}.
 
-{{EmbedInteractiveExample("pages/js/number-min-safe-integer.html")}}{{js_property_attributes(0,0,0)}}
+{{InteractiveExample("JavaScript Demo: Number.MIN_SAFE_INTEGER")}}
+
+```js interactive-example
+const x = Number.MIN_SAFE_INTEGER - 1;
+const y = Number.MIN_SAFE_INTEGER - 2;
+
+console.log(Number.MIN_SAFE_INTEGER);
+// Expected output: -9007199254740991
+
+console.log(x);
+// Expected output: -9007199254740992
+
+console.log(x === y);
+// Expected output: true
+```
+
+{{js_property_attributes(0,0,0)}}
 
 ## Description
 

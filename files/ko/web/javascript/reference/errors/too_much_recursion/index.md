@@ -35,7 +35,7 @@ function loop(x) {
 loop(0);
 ```
 
-이 조건에 대하여 너무 높은 값을 설정 하면 작동하지 않게 됩니다.
+이 조건에 대하여 너무 높은 값을 설정하면 작동하지 않게 됩니다.
 
 ```js example-bad
 function loop(x) {

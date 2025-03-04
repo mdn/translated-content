@@ -1,12 +1,11 @@
 ---
 title: その他のフォームコントロール
 slug: Learn_web_development/Extensions/Forms/Other_form_controls
-original_slug: Learn/Forms/Other_form_controls
 l10n:
-  sourceCommit: 0798c75c919a1a87b73bf5be46e2eb35c8ebb910
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML5_input_types","Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms")}}
 
 ここでは、`<input>` 以外のフォーム要素の機能を、ドロップダウンリストや複数行のテキストフィールドなどの他の操作型から、 {{htmlelement('output')}} 要素（前回の記事で実際に使用しました）やプログレスバーなどの他の便利なフォーム機能まで、詳しく見ていきましょう。
 
@@ -16,7 +15,7 @@ l10n:
       <th scope="row">前提条件:</th>
       <td>
         基本的な
-        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content"
           >HTML の理解</a
         >。
       </td>
@@ -50,23 +49,18 @@ l10n:
 
 視覚的には、入力されたテキストは折り返され、フォームコントロールは既定でサイズ変更可能です。最近のブラウザーではドラッグハンドルを提供しており、これをドラッグすることでテキストエリアのサイズを大きくしたり小さくしたりすることができます。
 
-下記のスクリーンショットは macOS での Firefox 71 と Safari 13 、Windows10 での Edge 18, Yandex 14, Firefox 71, Chrome 79 における、それぞれ既定、フォーカス中、無効状態の `<textarea>` 要素を示しています。
-
-![Mac OSX の Firefox 71 と Safari 13、 Windows 10 の Edge 18、Yandex 14、Firefox、Chrome で、既定、フォーカス中、無効状態の 'textarea' 要素を示しています。](textarea_basic.png)
-
-> [!NOTE]
-> 多少面白いテキストエリアの使用例は、このシリーズの最初の記事の[例](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html) が見つかります ([ソースコードも見てください](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html))。
+例えば、この最初の記事で用意した[例](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)でテキストエリアの使用方法が見つかります。
 
 ### 複数行レンダリングの制御
 
-{{htmlelement("textarea")}} では、複数行にまたがってレンダリングするのを制御する 3 つの属性を受け付けます:
+{{htmlelement("textarea")}} では、複数行にまたがってレンダリングするのを制御する 3 つの属性を受け付けます。
 
 - [`cols`](/ja/docs/Web/HTML/Element/textarea#cols)
   - : このテキストコントロールの幅（桁数）を、平均的な文字幅で指定します。これは `<textarea>` をリサイズすることで変更でき、また CSS で上書きもできるため、有効な開始時の幅です。何も指定されていない場合、既定値は 20 です。
 - [`rows`](/ja/docs/Web/HTML/Element/textarea#rows)
   - : このコントロールの行数を指定します。これは `<textarea>`をリサイズすることで変更でき、また CSS で上書きもできるため、有効な開始時の高さです。何も指定されていない場合、既定値は 2 です。
 - [`wrap`](/ja/docs/Web/HTML/Element/textarea#wrap)
-  - : コントロールがどのようにテキストを折り返すかを指定します。値は `soft` （既定値）、この値では送信されるテキストは改行されないが、ブラウザーで表示されるテキストは折り返される、 `hard` （この値を使うには `cols` 属性を指定する必要がある）、この値では送信テキストとレンダリングされるテキストの両方が折り返される、`off`、この値では折り返しを行わない、を取ります。
+  - : コントロールがどのようにテキストを折り返すかを指定します。値は `soft` （既定値）、この値では送信されるテキストは改行されないが、ブラウザーで表示されるテキストは折り返される、 `hard` （この値を使うには `cols` 属性を指定する必要がある）、この値では送信テキストとレンダリングされるテキストの両方が折り返される、`off`、この値では折り返しを行わない、のいずれかを取ります。
 
 ### テキストエリアのリサイズの制御
 
@@ -76,13 +70,13 @@ l10n:
 - `horizontal`: 水平のみリサイズ許可
 - `vertical`: 垂直のみリサイズ許可
 - `none`: リサイズ許可しない
-- `block` と `inline`: `block` や `inline` 方向のみにリサイズできる実験的な値（これはテキストの方向性によって変わります。詳しくは [Handling different text directions](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions) を見てください）。
+- `block` と `inline`: `block` や `inline` 方向のみにリサイズできる実験的な値（これはテキストの方向性によって変わります。詳しくは[テキストの様々な方向の扱い](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)を見てください）。
 
 これがどのように動作するのかのデモは、{{cssxref("resize")}} リファレンスページの最初にあるインタラクティブな例で遊んでみてください。
 
 ## ドロップダウンコントロール
 
-ドロップダウンコントロールは、ユーザーがさまざまな選択肢から選択できるようにすることを、ユーザーインターフェイスのスペースをあまり取らずに実現するシンプルな方法です。HTML には、**選択ボックス**と**自動補完ボックス**という 2 種類のドロップダウンコントロールがあります。どちらの場合も相互作用は同じです。コントロールを有効にすると、ブラウザーにはユーザーが選択できる値のリストが表示されます。
+ドロップダウンコントロールは、ユーザーがさまざまな選択肢から選択できるようにすることを、ユーザーインターフェイスのスペースをあまり取らずに実現するシンプルな方法です。 HTML には、**選択ボックス**と**自動補完ボックス**という 2 種類のドロップダウンコントロールがあります。どちらの場合も相互作用は同じです。コントロールを有効にすると、ブラウザーにはユーザーが選択できる値のリストが表示されます。
 
 > [!NOTE]
 > すべてのドロップダウンボックスの例は、GitHub の [drop-down-content.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/drop-down-content.html)にあります ([ライブでもご覧ください](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html))。
@@ -131,7 +125,7 @@ l10n:
 
 #### value 属性の使用
 
-{{HTMLElement("option")}} 要素に明示的な value 属性が設定されている場合、その選択肢が選択された状態でフォームが送信された時にその値が送信されます。上の例のように value 属性を省略した場合は、 {{HTMLElement("option")}} 要素の内容が値として使われます。そのため、 value 属性は必要ありませんが、選択ボックスに視覚的に表示されている値とは異なる値を短くしたり、サーバーに送信したい理由があるかもしれません。
+{{HTMLElement("option")}} 要素に明示的な value 属性が設定されている場合、その選択肢が選択された状態でフォームが送信された時にその値が送信されます。上の例のように value 属性を省略した場合は、 {{HTMLElement("option")}} 要素の内容が値として使われます。そのため、 `value` 属性は必要ありませんが、選択ボックスに視覚的に表示されている値とは異なる値を短くしたり、サーバーに送信したい理由があるかもしれません。
 
 例えば、
 
@@ -147,7 +141,7 @@ l10n:
 
 ### 複数選択の選択ボックス
 
-既定では、選択ボックスは、ユーザーに単一の値を選択させるだけです。 {{HTMLElement("select")}} 要素に [`multiple`](/ja/docs/Web/HTML/Element/select#multiple) 属性を追加することで、オペレーティングシステムが提供する既定のメカニズム（例えば、デスクトップでは、 <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> を押しながら複数の値をクリックするなど）を使用して、ユーザーが複数の値を選択できるようにすることができます。
+既定では、選択ボックスは、ユーザーに単一の値を選択させるだけです。 [`multiple`](/ja/docs/Web/HTML/Element/select#multiple) 属性を {{HTMLElement("select")}} 要素に追加することで、オペレーティングシステムが提供する既定のメカニズム（例えば、デスクトップでは、 <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> を押しながら複数の値をクリックするなど）を使用して、ユーザーが複数の値を選択できるようにすることができます。
 
 ```html
 <select id="multi" name="multi" multiple size="2">
@@ -167,7 +161,7 @@ l10n:
 {{EmbedLiveSample("Multiple_choice_select_box", 120, 120)}}
 
 > [!NOTE]
-> 複数選択可能な選択ボックスの場合、選択ボックスはドロップダウンコンテンツとして値を表示しないことに気づくでしょう - 代わりに、すべての値がリストに一度に表示され、選択肢の [`size`](/ja/docs/Web/HTML/Attributes/size)属性はウィジェットの高さを決定します。
+> 複数選択可能な選択ボックスの場合、選択ボックスはドロップダウンコンテンツとして値を表示しないことに気づくでしょう。代わりに、すべての値がリストに一度に表示され、選択肢の [`size`](/ja/docs/Web/HTML/Attributes/size)属性はウィジェットの高さを決定します。
 
 > **メモ:** {{HTMLElement("select")}} 要素に対応しているすべてのブラウザーは、 [`multiple`](/ja/docs/Web/HTML/Element/select#multiple) 属性にも対応しています。
 
@@ -199,39 +193,6 @@ l10n:
 ```
 
 {{EmbedLiveSample("Basic_example_2", 120, 120)}}
-
-#### datalist の対応状況と代替手段
-
-ほぼすべてのブラウザーが datalist に対応していますが、IEバージョン10以下のような古いブラウザーにも対応をする場合は、代替手段を提供するという仕掛けがあります。
-
-```html
-<label for="myFruit">好きな果物は何ですか？（代替手段付き）</label>
-<input type="text" id="myFruit" name="fruit" list="fruitList" />
-
-<datalist id="fruitList">
-  <label for="suggestion">または果物を選択</label>
-  <select id="suggestion" name="altFruit">
-    <option>リンゴ</option>
-    <option>バナナ</option>
-    <option>ブラックベリー</option>
-    <option>ブルーベリー</option>
-    <option>レモン</option>
-    <option>ライチ</option>
-    <option>桃</option>
-    <option>梨</option>
-  </select>
-</datalist>
-```
-
-{{EmbedLiveSample("Datalist_support_and_fallbacks", 120, 120)}}
-
-{{HTMLElement("datalist")}} 要素に対応したブラウザーは、 {{HTMLElement("option")}} 要素以外を無視し、 datalist はこれはうまく対応していくでしょう。 {{HTMLElement("datalist")}} 要素に対応していない古いブラウザーでは、ラベルと選択ボックスが表示されます。
-
-以下の画面ショットは、Safari 6 でレンダリングされた datalist の代替手段を示しています。
-
-![Mac OS の Safari で datalist 要素を代替させた画面](datalist-safari.png)
-
-この代替手段を使用する場合は、`<input>` と `<select>` の両方のデータがサーバーサイドで収集されていることを確認してください。
 
 #### より目立たない datalist の使用方法
 
@@ -302,18 +263,17 @@ l10n:
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: その他のコントロール](/ja/docs/Learn/Forms/Test_your_skills:_Other_controls) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: その他のコントロール](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls) を見てください。
 
 ## まとめ
 
 最も後のいくつかの記事で見てきたように、利用できるフォーム要素にはいろいろな種類がたくさんあります。一見してすべてを詳しく覚えておく必要はなく、詳細について調べたいだけ、記事に戻ることができます。
 
-いろいろなフォームコントロールの背後にある HTML をざっと理解したので、[それらのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)について見ていきましょう。
+いろいろなフォームコントロールの背後にある HTML をざっと理解したので、[それらのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)について見ていきましょう。
 
-{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML5_input_types","Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms")}}
 
 ### 高度なトピック
 
-- [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [フォームウィジェット向けのプロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [カスタムフォームコントロールの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [JavaScript によるフォームの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)

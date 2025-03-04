@@ -47,7 +47,7 @@ slug: Web/Progressive_web_apps
 
 ### Web 应用清单
 
-- [Web 应用清单成员](/zh-CN/docs/Web/Manifest)
+- [Web 应用清单成员](/zh-CN/docs/Web/Progressive_web_apps/Manifest)
   - : 开发人员可以使用 web 应用清单成员来描述 PWA，定制其外观，并更深入地将其整合到操作系统中。
 
 ### Service Worker API

@@ -1,29 +1,33 @@
 ---
 title: ループするコード
 slug: Learn_web_development/Core/Scripting/Loops
-original_slug: Learn/JavaScript/Building_blocks/Looping_code
 l10n:
-  sourceCommit: b072a7e62002e4765626c52dfdac5159071938e0
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
 
 プログラミング言語は、繰り返し実行するタスクを素早く終わらせるのがとても得意です。基本的な計算処理から、同じような作業がたくさんあるのならどんな状況でもこなします。今度は JavaScript でそういった目的を果たすために使用するループ構造を見てみましょう。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件:</th>
-      <td>
-        HTML と CSS への理解、
-        <a href="/ja/docs/Learn/JavaScript/First_steps"
-          >JavaScript の第一歩</a
-        >
+      <th scope="row">前提知識:</th>
+      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>および<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS の基礎</a>を理解し、これまでのレッスンで説明した JavaScript を把握していること。
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
-      <td>JavaScript でのループの使い方を理解する。</td>
+      <th scope="row">学習成果:</th>
+      <td>
+        <ul>
+          <li>ループの目的を理解すること。反復処理するごとに同じコードを繰り返すことなく、よく似た処理を何度も実行できるコード構造です。</li>
+          <li><code>for</code> や <code>while</code> などの一般的なループ型。</li>
+          <li><code>for...of</code> や <code>map()</code> のような構文を使用して、集合をループ処理すること。</li>
+          <li>ループを抜け出したり続けたりすること。</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -36,7 +40,7 @@ l10n:
 
 例えば、{{htmlelement("canvas")}} 要素に 100 個のランダムな円を描画したいとします（\[更新] ボタンを押すと、例を何度も実行して異なるランダムコレクションを見ることができます）。
 
-```html hidden
+```html hidden live-sample___looping_code_example
 <button>更新</button> <canvas></canvas>
 ```
 
@@ -62,11 +66,11 @@ button {
 }
 ```
 
-{{ EmbedLiveSample('ループするコードの例', '100%', 400) }}
+{{ EmbedLiveSample('Looping_code_example', '100%', 400) }}
 
 こちらはこの例を実装している JavaScript コードです。
 
-```js
+```js live-sample___looping_code_example
 const btn = document.querySelector("button");
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
@@ -118,10 +122,8 @@ for (let i = 0; i < 100; i++) {
 }
 ```
 
-- `random(x)` は、コードの手前で定義されており、 `0` と `x-1` の間の実数を返します。
-
-基本的なことが分かると思います。ループを使用してこのコードを 100 回反復処理し、それぞれがページ上のランダムな位置に円を描画します。
-必要なコードの量は、100 個の円を描画する場合でも、1000 個の円を描画する場合でも、1 万個の円を描画する場合でも同じです。
+基本的な考え方は理解できるでしょう。ループを使用してこのコードを 100 回反復処理し、それぞれがページ上のランダムな位置に円を描画します。コードの冒頭で定義した `random(x)` は、`0` から `x-1` の間の整数を返します。
+100 個、1000 個、10,000 個の円を描画する場合でも、必要となるコードの量は同じです。
 変更しなければならないのは、たった一つの数字だけです。
 
 もしここでループを使用していなければ、描画したい円ごとに以下のコードを繰り返して書く必要があります。
@@ -139,13 +141,13 @@ ctx.arc(
 ctx.fill();
 ```
 
-これはとても退屈で、メンテナンスも大変でしょう。
+これはとても退屈で、保守も大変でしょう。
 
 ## コレクション内のループ処理
 
 ループを使用する場合のほとんどは、アイテムのコレクションがあって、すべてのアイテムに対して何かを行いたいときです。
 
-{{jsxref("Array")}} は、コレクションの一種です。このコースの[配列](/ja/docs/Learn/JavaScript/First_steps/Arrays)の章で紹介しました。
+{{jsxref("Array")}} は、コレクションの一種です。このコースの[配列](/ja/docs/Learn_web_development/Core/Scripting/Arrays)の章で紹介しました。
 しかし、JavaScript には他にも {{jsxref("Set")}} や {{jsxref("Map")}} などのコレクションがあります。
 
 ### for...of ループ
@@ -185,7 +187,7 @@ console.log(upperCats);
 // [ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
 ```
 
-ここでは、{{jsxref("Array.prototype.map()","cats.map()")}} に関数を渡すと、`map()` は配列内のそれぞれのアイテムにその関数を 1 回ずつ、そのアイテムを渡して呼び出します。そして、それぞれの関数呼び出しの返値を新しい配列に追加し、最後に新しい配列を返します。この場合、提供した関数はアイテムを大文字に変換するので、結果として得られる配列には、すべてのネコ科動物がが大文字で格納されます。
+ここでは、 {{jsxref("Array.prototype.map()","cats.map()")}} に関数を渡すと、`map()` は配列内のそれぞれのアイテムにその関数を 1 回ずつ、そのアイテムを渡して呼び出します。そして、それぞれの関数呼び出しの返値を新しい配列に追加し、最後に新しい配列を返します。この場合、提供した関数はアイテムを大文字に変換するので、結果として得られる配列には、すべてのネコ科動物がが大文字で格納されます。
 
 ```js-nolint
 [ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
@@ -206,14 +208,14 @@ console.log(filtered);
 // [ "Leopard", "Lion" ]
 ```
 
-これは `map()` とよく似ていますが、渡す関数が[論理値](/ja/docs/Learn/JavaScript/First_steps/Variables#論理型)を返す点が異なります。 もし `true` を返すなら、アイテムは新しい配列に含まれます。
-この関数では、アイテムが文字「L」で始まるかどうかをテストするので、結果は名前が「L」で始まる猫だけを含む配列になります。
+これは `map()` とよく似ていますが、渡す関数が[論理値](/ja/docs/Learn_web_development/Core/Scripting/Variables#論理型)を返す点が異なります。 もし `true` を返すなら、アイテムは新しい配列に含まれます。
+この関数では、アイテムが文字 "L" で始まるかどうかをテストするので、結果は名前が "L" で始まる猫だけを含む配列になります。
 
 ```js-nolint
 [ "Leopard", "Lion" ]
 ```
 
-なお、`map()` と `filter()` は、どちらもよく関数式と一緒に使われます。これは[関数](/ja/docs/Learn/JavaScript/Building_blocks/Functions)モジュールで学びます。
+なお、`map()` と `filter()` は、どちらもよく関数式と一緒に使われます。これは[関数](/ja/docs/Learn_web_development/Core/Scripting/Functions)モジュールで学びます。
 関数式を使用すると、上の例をもっとコンパクトに書き直すことができます。
 
 ```js
@@ -381,7 +383,7 @@ console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 ## break でループを終了
 
 すべての反復処理が終了する前にループを終了したいときは、[break](/ja/docs/Web/JavaScript/Reference/Statements/break) 文を使用して終了させることができます。
-前回の記事の [switch 文](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#switch_文)で、入力した値が switch 文の case に一致したとき、switch 文を抜け、それ以降のコードを実行するために `break` 文を使用しました。
+前回の記事の [switch 文](/ja/docs/Learn_web_development/Core/Scripting/Conditionals#switch_文)で、入力した値が switch 文の case に一致したとき、switch 文を抜け、それ以降のコードを実行するために `break` 文を使用しました。
 
 これはループでも同様で、`break` 文を使用することで即時にループを抜けて、ブラウザーに続きのコードを実行させることができます。
 
@@ -418,7 +420,7 @@ btn.addEventListener("click", () => {
   for (const contact of contacts) {
     const splitContact = contact.split(":");
     if (splitContact[0].toLowerCase() === searchName) {
-      para.textContent = `${splitContact[0]}の電話番号は${splitContact[1]}です。`;
+      para.textContent = `${splitContact[0]}の電話番号は ${splitContact[1]} です。`;
       break;
     }
   }
@@ -495,7 +497,7 @@ btn.addEventListener("click", () => {
 
 `for` は JavaScript で利用可能な唯一のループの種類ではありません。実際には多くのものがありますが、これらのすべてを理解する必要はありませんが、仕事の同じ機能をわずかに異なる方法で認識できるように、他のものの構造を見ておく価値があります。
 
-まず、[while](/ja/docs/Web/JavaScript/Reference/Statements/while) ループを見てみましょう。このループの構文は次のようになります。
+まず、[`while`](/ja/docs/Web/JavaScript/Reference/Statements/while) ループを見てみましょう。このループの構文は次のようになります。
 
 ```js-nolint
 初期化処理
@@ -579,7 +581,7 @@ console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 > こちらも、これは期待どおりに動作します。[GitHub でライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html)してみてください（[完全なソースコード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)を見ることもできます）。
 
 > [!WARNING]
-> while と do...while では、すべてのループと同様に、カウンター変数を増加、もしくは場合により減少させて、最終的に条件が false となるようにする必要があります。
+> どの種類のループでも、初期化子が増加するか、場合によっては減少するようにして、最終的に条件が偽になるようにしなければなりません。
 > そうしなければループは永遠に進み、ブラウザーはそれ強制的に停止させるか、クラッシュします。これは**無限ループ**と呼ばれます。
 
 ## アクティブラーニング: 発射のカウントダウン
@@ -618,8 +620,8 @@ console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
   はタブ文字を挿入します）。
 </p>
 <textarea id="code" class="playable-code" style="height: 300px;width: 95%">
-let output = document.querySelector('.output');
-output.innerHTML = '';
+const output = document.querySelector('.output');
+output.textContent = "";
 
 // let i = 10;
 
@@ -687,7 +689,7 @@ solution.addEventListener("click", function () {
 });
 
 let jsSolution = `const output = document.querySelector('.output');
-output.innerHTML = '';
+output.textContent = "";
 
 let i = 10;
 
@@ -715,12 +717,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -778,7 +780,7 @@ textarea.onkeyup = () => {
 
 特別ボーナス問題 — 上のタスクを正常に完了すると、カンマで区切られた 2 つの名前リストが残されますが、それらは整頓されません。それぞれの末尾にカンマがあります。
 それぞれの場合に最後のカンマを切り取り、末尾にピリオドを追加した行をどのように書くかという問題を解決出来ますか？
-ヘルプのため[便利な文字列メソッド](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods)の記事を見てみてください。
+ヘルプのため[便利な文字列メソッド](/ja/docs/Learn_web_development/Core/Scripting/Useful_string_methods)の記事を見てみてください。
 
 間違えた場合は、「リセット」ボタンを使用してこの例をいつでもリセットできます。あなたが本当に立ち往生したら、"ソリューションを表示"を押して解決策を見てください。
 
@@ -895,12 +897,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -992,14 +994,14 @@ do {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: ループ](/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Loops)を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: ループ](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Loops)を見てください。
 
 ## まとめ
 
 この記事では、背後にある基本的な概念と、JavaScript でコードをループする際に使用できるさまざまなオプションについて説明しました。
 ループが繰り返しの多いコードを処理するのに適したメカニズムであることを理解し、自分の例でループを使う気になったはずです。
 
-理解できなかったことがあれば、記事をもう一度読んだり、ヘルプを求めて[私たちに連絡](/ja/docs/Learn#連絡方法)してください。
+次に、関数を見ていきます。
 
 ## 関連情報
 
@@ -1009,4 +1011,4 @@ do {
 - [while](/ja/docs/Web/JavaScript/Reference/Statements/while) と [do...while](/ja/docs/Web/JavaScript/Reference/Statements/do...while) リファレンス
 - [break](/ja/docs/Web/JavaScript/Reference/Statements/break) と [continue](/ja/docs/Web/JavaScript/Reference/Statements/continue) リファレンス
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}

@@ -11,6 +11,9 @@ on:
     # * is a special character in YAML so you have to quote this string
     - cron: "0 1 * * *"
 
+permissions:
+  contents: read
+
 jobs:
   build:
     if: github.repository == 'mdn/translated-content'
@@ -90,14 +93,14 @@ jobs:
           } >> "$GITHUB_ENV"
 
       - name: Create PR with sync for ${{ matrix.lang }}
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
         with:
           commit-message: "${{ matrix.lang }}: sync translated content"
           branch: content-sync-${{ matrix.lang }}
           title: "[${{ matrix.lang }}] sync translated content"
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
           committer: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
-          body: "Yari generated sync. Related upstream commits:\n\n${{ env.COMMIT_URLS }}"
+          body: "Rari generated sync. Related upstream commits:\n\n${{ env.COMMIT_URLS }}"
           labels: |
             automated pr
           token: ${{ secrets.AUTOMERGE_TOKEN }}

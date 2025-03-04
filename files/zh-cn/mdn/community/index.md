@@ -3,8 +3,6 @@ title: 社区准则
 slug: MDN/Community
 ---
 
-{{MDNSidebar}}
-
 👋 欢迎来到 MDN Web 文档，这是一个记录了包括 [HTML](/zh-CN/docs/Web/HTML)、[CSS](/zh-CN/docs/Web/CSS)、[JavaScript](/zh-CN/docs/Web/JavaScript) 和 [Web API](/zh-CN/docs/Web/API) 等 web 平台技术的开源协作项目。我们还为初级开发者和学生提供了大量的[学习资源](/zh-CN/docs/Learn)。
 
 要参与并为我们的项目作出贡献、参与相关讨论，你需要阅读并遵守 [Mozilla 社区参与准则](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md)。
@@ -28,7 +26,7 @@ slug: MDN/Community
   - : 本节说明了你如何开始贡献，以及我们接受的贡献的类型。本节涵盖以下主题：
 
     - [入门](/zh-CN/docs/MDN/Community/Contributing/Getting_started)
-    - [我们的仓库](/zh-CN/docs/MDN/Community/Contributing/Our_repositories)
+    - [我们的仓库](/zh-CN/docs/MDN/Community/Our_repositories)
     - [翻译内容](/zh-CN/docs/MDN/Community/Contributing/Translated_content)
     - [安全漏洞响应步骤](/zh-CN/docs/MDN/Community/Contributing/Security_vulnerability_response)
 
