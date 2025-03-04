@@ -7,7 +7,47 @@ slug: Web/HTML/Element/nav
 
 **HTML `<nav>` 요소**는 문서의 부분 중 현재 페이지 내, 또는 다른 페이지로의 링크를 보여주는 구획을 나타냅니다. 자주 쓰이는 예제는 메뉴, 목차, 색인입니다.
 
-{{EmbedInteractiveExample("pages/tabbed/nav.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;nav&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<nav class="crumbs">
+  <ol>
+    <li class="crumb"><a href="#">Bikes</a></li>
+    <li class="crumb"><a href="#">BMX</a></li>
+    <li class="crumb">Jump Bike 3000</li>
+  </ol>
+</nav>
+
+<h1>Jump Bike 3000</h1>
+<p>
+  This BMX bike is a solid step into the pro world. It looks as legit as it
+  rides and is built to polish your skills.
+</p>
+```
+
+```css interactive-example
+nav {
+  border-bottom: 1px solid black;
+}
+
+.crumbs ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.crumb {
+  display: inline-block;
+}
+
+.crumb a::after {
+  display: inline-block;
+  color: #000;
+  content: ">";
+  font-size: 80%;
+  font-weight: bold;
+  padding: 0 3px;
+}
+```
 
 <table class="properties">
   <tbody>
