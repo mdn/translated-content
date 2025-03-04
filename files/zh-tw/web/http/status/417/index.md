@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`417 Expectation Failed`** [用戶端錯誤回應](/en-US/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示無法滿足請求的 {{HTTPHeader("Expect")}} 標頭中給定的期望。After receiving a 417 response, a client should repeat the request without an `Expect` request header, including the file in the request body without waiting for a {{HTTPStatus("100")}} response.詳細資訊請參見 {{HTTPHeader("Expect")}} 標頭的文件。
+HTTP **`417 Expectation Failed`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示無法滿足請求的 {{HTTPHeader("Expect")}} 標頭中給定的期望。在收到 417 回應後，用戶端應該移除 `Expect` 標頭並重新發送請求，直接在請求主體中包含檔案，而不必等待 {{HTTPStatus("100")}} 回應。詳細資訊請參見 {{HTTPHeader("Expect")}} 標頭的文件。
 
 ## 狀態
 
@@ -15,12 +15,11 @@ HTTP **`417 Expectation Failed`** [用戶端錯誤回應](/en-US/docs/Web/HTTP/S
 417 Expectation Failed
 ```
 
-## Examples
+## 範例
 
-### Expectations unsupported
+### 期望不支援
 
-The following PUT request sends information about an intended file upload to a server.
-The client uses an `Expect: 100-continue` header and no request body to avoid sending data over the network that may result in an error such as {{HTTPStatus("405")}}, {{HTTPStatus("401")}}, or {{HTTPStatus("403")}} response:
+以下的 PUT 請求會傳送有關預計上傳檔案的資訊至伺服器。用戶端使用 `Expect: 100-continue` 標頭，並且不包含請求主體，以避免在網路上傳輸可能導致錯誤（例如 {{HTTPStatus("405")}}、{{HTTPStatus("401")}} 或 {{HTTPStatus("403")}}）的資料：
 
 ```http
 PUT /videos HTTP/1.1
@@ -30,14 +29,14 @@ Content-Length: 1234567890987
 Expect: 100-continue
 ```
 
-In this example server implementation, expectations are not supported and the presence of an `Expect` header with any value results in 417 responses:
+在此範例中，伺服器不支援期望，因此當偵測到 `Expect` 標頭時，會直接回應 417 錯誤：
 
 ```http
 HTTP/1.1 417 Expectation Failed
 Date: Fri, 28 Jun 2024 11:40:58 GMT
 ```
 
-The client responds by making a request without expectations and with the {{Glossary("HTTP Content", "content")}} in the request body:
+收到此回應後，用戶端應該移除 `Expect` 標頭，並直接將{{Glossary("HTTP Content", "內容")}}包含在請求主體中重新發送請求：
 
 ```http
 PUT /videos HTTP/1.1
@@ -54,6 +53,6 @@ Content-Length: 1234567890987
 
 ## 參見
 
-- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
 - {{HTTPStatus("100", "100 Continue")}}
 - {{HTTPHeader("Expect")}}
