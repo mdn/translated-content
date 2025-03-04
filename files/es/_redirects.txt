@@ -1793,7 +1793,7 @@
 /es/docs/Web/API/BatteryManager/onchargingchange	/es/docs/Web/API/BatteryManager/chargingchange_event
 /es/docs/Web/API/BatteryManager/onlevelchange	/es/docs/Web/API/BatteryManager/levelchange_event
 /es/docs/Web/API/Blob.Blob	/es/docs/Web/API/Blob/Blob
-/es/docs/Web/API/BlobBuilder	/es/docs/web/api/blob
+/es/docs/Web/API/BlobBuilder	/es/docs/Web/API/Blob
 /es/docs/Web/API/CSSStyleSheet.insertRule	/es/docs/Web/API/CSSStyleSheet/insertRule
 /es/docs/Web/API/CanvasImageSource	/es/docs/web/api/canvasrenderingcontext2d
 /es/docs/Web/API/Canvas_API/Tutorial/Compositing/Ejemplo	/es/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
@@ -3312,7 +3312,7 @@
 /es/docs/conflicting/Web/CSS/outline	/es/docs/Web/CSS/outline
 /es/docs/conflicting/Web/HTML/Element/audio	/es/docs/Web/HTML/Element/audio
 /es/docs/conflicting/Web/HTML/Element/slot	/es/docs/Web/HTML/element/slot
-/es/docs/conflicting/web/api/blob	/es/docs/web/api/blob
+/es/docs/conflicting/web/api/blob	/es/docs/Web/API/Blob
 /es/docs/conflicting/web/api/element/clientheight	/es/docs/web/api/element/clientheight
 /es/docs/conflicting/web/api/file/name	/es/docs/web/api/file/name
 /es/docs/conflicting/web/javascript/reference/deprecated_and_obsolete_features	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
