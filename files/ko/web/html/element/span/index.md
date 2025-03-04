@@ -7,7 +7,26 @@ slug: Web/HTML/Element/span
 
 **HTML `<span>` 요소**는 구문 콘텐츠를 위한 통용 인라인 컨테이너로, 본질적으로는 아무것도 나타내지 않습니다. 스타일을 적용하기 위해서, 또는 [`lang`](/ko/docs/Web/HTML/Global_attributes#lang) 등 어떤 특성의 값을 서로 공유하는 요소를 묶을 때 사용할 수 있습니다. 적절한 의미를 가진 다른 요소가 없을 때에만 사용해야 합니다. `<span>`은 {{htmlelement("div")}}와 매우 유사하지만, {{htmlelement("div")}}는 [블록 레벨 요소](/ko/docs/Glossary/Block-level_content)인 반면 `<span>`은 [인라인 요소](/ko/docs/Glossary/Inline-level_content)입니다.
 
-{{EmbedInteractiveExample("pages/tabbed/span.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;span&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>
+  Add the <span class="ingredient">basil</span>,
+  <span class="ingredient">pine nuts</span> and
+  <span class="ingredient">garlic</span> to a blender and blend into a paste.
+</p>
+
+<p>
+  Gradually add the <span class="ingredient">olive oil</span> while running the
+  blender slowly.
+</p>
+```
+
+```css interactive-example
+span.ingredient {
+  color: #f00;
+}
+```
 
 <table class="properties">
   <tbody>
