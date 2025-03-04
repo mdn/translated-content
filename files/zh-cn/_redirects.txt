@@ -349,7 +349,7 @@
 /zh-CN/docs/DOM/document.referrer	/zh-CN/docs/Web/API/Document/referrer
 /zh-CN/docs/DOM/document.releaseCapture	/zh-CN/docs/Web/API/Document/releaseCapture
 /zh-CN/docs/DOM/document.width	/zh-CN/docs/Web/API/Element/clientWidth
-/zh-CN/docs/DOM/element	/zh-CN/docs/Web/API/element
+/zh-CN/docs/DOM/element	/zh-CN/docs/Web/API/Element
 /zh-CN/docs/DOM/element.addEventListener	/zh-CN/docs/Web/API/EventTarget/addEventListener
 /zh-CN/docs/DOM/element.attributes	/zh-CN/docs/Web/API/Element/attributes
 /zh-CN/docs/DOM/element.childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
@@ -471,7 +471,7 @@
 /zh-CN/docs/DOM:document.designMode	/zh-CN/docs/Web/API/Document/designMode
 /zh-CN/docs/DOM:document.evaluate	/zh-CN/docs/Web/API/Document/evaluate
 /zh-CN/docs/DOM:document.getElementById	/zh-CN/docs/Web/API/Document/getElementById
-/zh-CN/docs/DOM:element	/zh-CN/docs/Web/API/element
+/zh-CN/docs/DOM:element	/zh-CN/docs/Web/API/Element
 /zh-CN/docs/DOM:element.attributes	/zh-CN/docs/Web/API/Element/attributes
 /zh-CN/docs/DOM:element.childNodes	/zh-CN/docs/Web/API/Node/childNodes
 /zh-CN/docs/DOM:element.className	/zh-CN/docs/Web/API/Element/className
@@ -2323,7 +2323,7 @@
 /zh-CN/docs/Web/API/document.width	/zh-CN/docs/Web/API/Element/clientWidth
 /zh-CN/docs/Web/API/document.write	/zh-CN/docs/Web/API/Document/write
 /zh-CN/docs/Web/API/document.writeln	/zh-CN/docs/Web/API/Document/writeln
-/zh-CN/docs/Web/API/element.outerHTML	/zh-CN/docs/Web/API/Element/outerHTML
+/zh-CN/docs/Web/API/Element.outerHTML	/zh-CN/docs/Web/API/Element/outerHTML
 /zh-CN/docs/Web/API/event.bubbles	/zh-CN/docs/Web/API/Event/bubbles
 /zh-CN/docs/Web/API/event.cancelable	/zh-CN/docs/Web/API/Event/cancelable
 /zh-CN/docs/Web/API/event.currentTarget	/zh-CN/docs/Web/API/Event/currentTarget
