@@ -1849,7 +1849,7 @@
 /fr/docs/HTML/Element/Option	/fr/docs/Web/HTML/Element/option
 /fr/docs/HTML/Element/Output	/fr/docs/Web/HTML/Element/output
 /fr/docs/HTML/Element/Progress	/fr/docs/Web/HTML/Element/progress
-/fr/docs/HTML/Element/Select	/fr/docs/Web/HTML/Element/Select
+/fr/docs/HTML/Element/Select	/fr/docs/Web/HTML/Element/select
 /fr/docs/HTML/Element/Source	/fr/docs/Web/HTML/Element/source
 /fr/docs/HTML/Element/Textarea	/fr/docs/Web/HTML/Element/textarea
 /fr/docs/HTML/Element/Video	/fr/docs/Web/HTML/Element/Video
