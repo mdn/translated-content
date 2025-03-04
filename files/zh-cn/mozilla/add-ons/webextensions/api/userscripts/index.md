@@ -1,8 +1,6 @@
 ---
 title: userScripts（旧版）
-slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy
-l10n:
-  sourceCommit: 6b26a56826b43f539b79033378683bb3be5bbba9
+slug: Mozilla/Add-ons/WebExtensions/API/userScripts
 ---
 
 {{AddonSidebar}}
@@ -24,7 +22,7 @@ l10n:
 要使用该 API，请调用 {{WebExtAPIRef("userScripts_legacy.register","register()")}} 方法，传入一个定义要注册的脚本的对象。该方法将返回一个 Promise，其将以 {{WebExtAPIRef("userScripts_legacy.RegisteredUserScript","RegisteredUserScript")}} 对象的形式兑现。
 
 > [!NOTE]
-> 当与用户脚本相关联的扩展页面（注册了这一用户脚本的页面）被卸载时，用户脚本将被自动注销。因此，你应该在一个页面存在时间至少与你希望用户脚本保持注册的时间一样长的扩展页面中注册该用户脚本。
+> 用户脚本在相关的扩展页面（从中注册了用户脚本）被卸载时会被注销。因此，你应当在一个存活时间至少与你的用户脚本相当的扩展页面中注册该脚本。
 
 ## 类型
 

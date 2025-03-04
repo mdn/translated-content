@@ -93,7 +93,7 @@ async function registerScript() {
 }
 ```
 
-上述的代码首先初始化 `params` 对象，以便将值传递给 [userScripts.register](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/register) 方法。
+上述的代码首先初始化 `params` 对象，以便将值传递给 [userScripts.register](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/register) 方法。
 
 ## 实现 userScript 函数
 
