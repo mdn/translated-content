@@ -7,7 +7,38 @@ slug: Web/HTML/Element/dt
 
 L'élément HTML **`<dt>`** identifie un terme dans une liste de définitions ou de descriptions. Cet élément n'apparaît qu'en tant qu'élément enfant d'un élément [`<dl>`](/fr/docs/Web/HTML/Element/dl) et est généralement suivi d'un élément [`<dd>`](/fr/docs/Web/HTML/Element/dd). Plusieurs éléments `<dt>` qui se suivent indiqueront qu'ils partagent la définition/description fournie par le prochain élément [`<dd>`](/fr/docs/Web/HTML/Element/dd).
 
-{{EmbedInteractiveExample("pages/tabbed/dt.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;dt&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Please use the following paint colors for the new house:</p>
+
+<dl>
+  <dt>Denim (semigloss finish)</dt>
+  <dd>Ceiling</dd>
+
+  <dt>Denim (eggshell finish)</dt>
+  <dt>Evening Sky (eggshell finish)</dt>
+  <dd>Layered on the walls</dd>
+</dl>
+```
+
+```css interactive-example
+p,
+dl {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+dl > dt {
+  font-weight: normal;
+  font-style: oblique;
+}
+
+dd {
+  margin-bottom: 1rem;
+}
+```
 
 <table class="properties">
   <tbody>

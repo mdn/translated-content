@@ -853,7 +853,7 @@
       "ericksonespejo"
     ]
   },
-  "Glossary/Forbidden_header_name": {
+  "Glossary/Forbidden_request_header": {
     "modified": "2019-03-23T22:02:11.147Z",
     "contributors": [
       "Luiggy",
@@ -3129,7 +3129,7 @@
       "darbalma"
     ]
   },
-  "Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help": {
+  "Learn_web_development/Getting_started/Soft_skills/Research_and_learning": {
     "modified": "2020-09-02T21:15:54.167Z",
     "contributors": [
       "Nachec"
@@ -18243,13 +18243,13 @@
       "chrisdavidmills"
     ]
   },
-  "Web/Performance/Fundamentals": {
+  "Web/Performance/Guides/Fundamentals": {
     "modified": "2019-05-05T06:54:02.458Z",
     "contributors": [
       "c-torres"
     ]
   },
-  "Web/Performance/Optimizing_startup_performance": {
+  "Web/Performance/Guides/Optimizing_startup_performance": {
     "modified": "2019-04-04T17:42:18.542Z",
     "contributors": [
       "c-torres"

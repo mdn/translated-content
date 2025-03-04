@@ -9,7 +9,37 @@ slug: Web/HTML/Element/details
 
 折りたたみウィジェットはふつう、回転して開閉状態を示す小さな三角形を使用し、その隣のラベルと共に画面上に表現されます。 `<summary>` 要素の内容が折りたたみウィジェットのラベルとして使用されます。
 
-{{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;details&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<details>
+  <summary>Details</summary>
+  Something small enough to escape casual notice.
+</details>
+```
+
+```css interactive-example
+details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+```
 
 `<details>` ウィジェットは 2 つの状態のうち 1 つを取ります。既定の*閉じた*状態は `<summary>` を使用して指定されたラベル文字列（または `<summary>` がない場合は{{Glossary("user agent", "ユーザーエージェント")}}が定義した既定の文字列）とウィジェット自身による三角形だけを表示します。
 

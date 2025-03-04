@@ -1,7 +1,6 @@
 ---
 title: URL とは何か
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_URL
-original_slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
 l10n:
   sourceCommit: 7505786a447886f6940cef629208457e21f8f2a1
 ---
@@ -15,7 +14,7 @@ l10n:
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        <a href="/ja/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work">インターネットはどのように動くのか</a>、<a href="/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server">ウェブサーバーとは</a>、<a href="/ja/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks">ウェブ上のリンクの背後にある概念</a>を知っておく必要があります。
+        <a href="/ja/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work">インターネットはどのように動くのか</a>、<a href="/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server">ウェブサーバーとは</a>、<a href="/ja/docs/Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks">ウェブ上のリンクの背後にある概念</a>を知っておく必要があります。
       </td>
     </tr>
     <tr>
@@ -65,7 +64,7 @@ URL の最初の部分は**スキーム**で、ブラウザーがリソースを
 
 次に**オーソリティ**が続きます。これはスキームから `://` の文字パターンで区切られます。オーソリティがある場合は、**ドメイン**（例えば `www.example.com`）と**ポート番号** (`80`) がコロン区切りで含まれます。
 
-- ドメインは、どのウェブサーバーを要求しているのかを示します。通常は[ドメイン名](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)ですが、 {{Glossary("IP address", "IP アドレス")}}を使うこともあります（ただし、これは利便性に欠けるので稀です）。
+- ドメインは、どのウェブサーバーを要求しているのかを示します。通常は[ドメイン名](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)ですが、 {{Glossary("IP address", "IP アドレス")}}を使うこともあります（ただし、これは利便性に欠けるので稀です）。
 - ポートは、ウェブサーバー上のリソースにアクセスするために使用される技術的な「門」 を示します。ウェブサーバーが HTTP プロトコルの標準ポート（HTTP は 80、 HTTPS は 443）を使用してリソースへのアクセスを許可している場合は、通常、この項目は省略されます。それ以外の場合は必須です。
 
 > [!NOTE]
@@ -95,7 +94,7 @@ URL の最初の部分は**スキーム**で、ブラウザーがリソースを
 
 ブラウザーのアドレスバーの中に正しく URL を入力すれば、それに対応するリソースを得ることができます。しかし、これは氷山の一角にすぎません。
 
-{{Glossary("HTML")}} 言語では — [後述しますが](/ja/docs/Learn/HTML/Introduction_to_HTML) — URL を幅広く使用しています。
+{{Glossary("HTML")}} 言語では — [後述しますが](/ja/docs/Learn_web_development/Core/Structuring_content) — URL を幅広く使用しています。
 
 - {{HTMLElement("a")}} 要素により、他の文書へのリンクを生成する
 - {{HTMLElement("link")}} や {{HTMLElement("script")}} のような様々な要素を介して、文書を関連するリソースと結びつける
@@ -103,7 +102,7 @@ URL の最初の部分は**スキーム**で、ブラウザーがリソースを
 - {{HTMLElement("iframe")}} 要素により、他の HTML 文書を表示する
 
 > [!NOTE]
-> URL を指定してページの一部としてリソースを読み込む際（`<script>`, `<audio>`, `<img>`, `<video>` を使用する場合など）は、 HTTP と HTTPS の URL のみを使用してください。いくつかの例外はあります（注目すべきは `data:` です。[データ URL](/ja/docs/Web/URI/Schemes/data) を参照してください）。たとえば FTP を使用しても、安全になることはなく、多くのブラウザーでは対応していません。
+> URL を指定してページの一部としてリソースを読み込む際（`<script>`, `<audio>`, `<img>`, `<video>` を使用する場合など）は、 HTTP と HTTPS の URL のみを使用してください。いくつかの例外はあります（注目すべきは `data:` です。[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) を参照してください）。たとえば FTP を使用しても、安全になることはなく、多くのブラウザーでは対応していません。
 
 {{Glossary("CSS")}} や {{Glossary("JavaScript")}} などの他の技術は、URL を広範囲に使用し、真にウェブの中核です。
 
@@ -195,4 +194,4 @@ URL はとても技術的な香りがするにもかかわらず、人間が読�
 
 ## 関連情報
 
-[データ URL](/ja/docs/Web/URI/Schemes/data) — データ URL とは、 URL の前に`data:`スキームを付けたもので、コンテンツ制作者が小さなファイルを文書内にインラインで埋め込むことを可能にします。
+[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) — データ URL とは、 URL の前に`data:`スキームを付けたもので、コンテンツ制作者が小さなファイルを文書内にインラインで埋め込むことを可能にします。

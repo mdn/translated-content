@@ -42,7 +42,7 @@ Date: Wed, 15 May 2013 02:38:57 GMT
 Content-Length: 72
 
 {
-"Message": "Please check the resources for cyclic references and try again."
+"Message": "請檢查資源是否有循環引用，然後再試一次。"
 }
 ```
 

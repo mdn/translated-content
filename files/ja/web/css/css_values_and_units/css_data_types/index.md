@@ -1,16 +1,15 @@
 ---
 title: CSS データ型
 slug: Web/CSS/CSS_Values_and_Units/CSS_data_types
-original_slug: Web/CSS/CSS_Types
 l10n:
-  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
+  sourceCommit: 891bc513a3349040a16c4896197d6a3a910ca42b
 ---
 
 {{CSSRef}}
 
 **CSS データ型**は、 CSS のプロパティや関数で使用される具体的な値 (キーワードや単位を含む) を定義しています。これは[コンポーネント値型](https://www.w3.org/TR/css3-values/#component-types)の特殊な種類です。
 
-よく使われるデータ型は、 [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)仕様書で定義されています。この仕様書は[関数表記](/ja/docs/Web/CSS/CSS_Functions)も定義しており、これはより複雑な型や処理を指定することができます。その他の型は、該当する型で仕様書で定義されています。
+よく使われるデータ型は、 [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)仕様書で定義されています。この仕様書は[関数記法](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)も定義しており、これはより複雑な型や処理を指定することができます。その他の型は、該当する型で仕様書で定義されています。
 
 以下に、最もよく目にする型のリファレンスを掲載していますが、すべての CSS 仕様書で定義されている型を網羅しているわけではありません。
 
@@ -24,7 +23,7 @@ selector {
 
 CSS の形式文法では、データ型は "`<`" と "`>`" の不等号で囲まれたキーワードで表記されます。
 
-## テキストのデータ型
+## テキストデータ型
 
 これらの型には、キーワード、識別子、文字列、URL などがあります。
 
@@ -43,10 +42,10 @@ CSS の形式文法では、データ型は "`<`" と "`>`" の不等号で囲�
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : ユーザー定義の識別子です。例えば、{{cssxref("grid-area")}} プロパティを使って割り当てる名前などです。
 - {{cssxref("&lt;dashed-ident&gt;")}}
-  - : `<custom-ident>` に 2 つのダッシュで始めなければならないという制限を追加したものです。例えば、[CSS カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties)などです。
+  - : `<custom-ident>` に 2 つのダッシュで始めなければならないという制限を追加したものです。例えば、[CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)などです。
 - {{cssxref("&lt;string&gt;")}}
   - : 引用符で囲まれた文字列で、{{cssxref("content")}} プロパティの値など使用されます。
-- {{cssxref("&lt;url&gt;", "url()")}}
+- {{cssxref("url_value", "url()")}}
   - : リソースへのポインターで、例えば {{cssxref("background-image")}} プロパティの値などです。
 
 ## 数値データ型
@@ -96,14 +95,14 @@ CSS プロパティの中には、大きさとパーセント値のどちらか�
 
 ## 色
 
-[The CSS Color Specification](https://www.w3.org/TR/css-color-3/)は、CSS における {{cssxref("&lt;color&gt;")}} データ型と、色に関するその他の型を定義しています。
+[The CSS Color Specification](https://www.w3.org/TR/css-color-4/)は、CSS における {{cssxref("&lt;color&gt;")}} データ型と、色に関するその他の型を定義しています。
 
 - {{cssxref("&lt;color&gt;")}}
   - : キーワードまたは色の数値で指定します。
 - {{cssxref("&lt;alpha-value&gt;")}}
   - : 色の透明度を指定します。 `<number>` の場合は 0 が完全な透明、1 が完全な不透明となり、`<percentage>` の場合は 0% が完全な透明、100% が完全な不透明となります。
 - {{cssxref("&lt;hue&gt;")}}
-  - : 成分である `<absolute-color-functions>` に固有の {{glossary("color wheel", "色相環")}} の `<angle>` を `deg`、`grad`、`rad`、`turn` の単位識別子、または `deg` と解釈される無単位の `<number>` で指定します。
+  - : 成分である `<absolute-color-functions>` に固有の{{glossary("Color wheel", "色相環")}}の `<angle>` を `deg`、`grad`、`rad`、`turn` の単位識別子、または `deg` と解釈される無単位の `<number>` で指定します。
 
 ## 画像
 
@@ -131,15 +130,15 @@ CSS プロパティの中には、大きさとパーセント値のどちらか�
 
 ## 計算データ型
 
-これらのデータ型は [CSS 数学関数](/ja/docs/Web/CSS/CSS_Functions#数学関数)の計算で使用さます。
+これらのデータ型は [CSS 数学関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#%e6%95%b0%e5%ad%a6%e9%96%a2%e6%95%b0)の計算で使用さます。
 
 - {{cssxref("&lt;calc-sum&gt;")}}
   - : 加算 (`+`) と減算 (`-`) 演算子を挟む一連の計算値。このデータ型は両方の値に単位があることを要求されます。
 - {{cssxref("&lt;calc-product&gt;")}}
   - : 乗算 (`*`) や除算 (`/`) を運営する演算子を挟んだ一連の計算値。乗算の場合、一方の値は無単位でなければなりません。除算の場合、 2 つ目の値は無単位でなければなりません。
 - {{cssxref("&lt;calc-value&gt;")}}
-  - : 計算を受け入れる値を定義します。 {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;calc-constant&gt;")}} または入れ子になった {{cssxref("&lt;calc-sum&gt;")}} 計算のような値です。
-- {{cssxref("&lt;calc-constant&gt;")}}
+  - : 計算を受け入れる値を定義します。 {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("calc-keyword")}} または入れ子になった {{cssxref("&lt;calc-sum&gt;")}} 計算のような値です。
+- {{cssxref("calc-keyword")}}
   - : `e` や `π` のような、 CSS の数学関数で使用することができる数値定数を表す CSS キーワードを定義します。
 
 ## 仕様書
@@ -149,5 +148,5 @@ CSS プロパティの中には、大きさとパーセント値のどちらか�
 ## 関連情報
 
 - [CSS 単位と値](/ja/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS 入門: 値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [CSS 関数記法](/ja/docs/Web/CSS/CSS_Functions)
+- [CSS 入門: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+- [CSS 関数記法](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)

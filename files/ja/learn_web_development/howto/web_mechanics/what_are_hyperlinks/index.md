@@ -1,7 +1,6 @@
 ---
 title: ハイパーリンクとは
 slug: Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks
-original_slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
@@ -15,7 +14,7 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        まず<a href="/ja/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work">インターネットはどのように動くのか</a>を理解し、<a href="/ja/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines">ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンの違い</a>についてよく理解している必要があります。
+        まず<a href="/ja/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work">インターネットはどのように動くのか</a>を理解し、<a href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web">ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンの違い</a>についてよく理解している必要があります。
       </td>
     </tr>
     <tr>
@@ -83,5 +82,5 @@ l10n:
 
 それでは、いくつかウェブページにリンクを設定しましょう。
 
-- すべてのリンクが URL を指しているので、より理論的な背景を得るには、[URL とその構造](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)について学びます。
-- もう少し実用的なものが欲しいですか？ [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)モジュールの記事「[ハイパーリンクの作成](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)」で、リンクの実装方法について詳しく説明しています。
+- すべてのリンクが URL を指しているので、より理論的な背景を得るには、[URL とその構造](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)について学びます。
+- もう少し実用的なものが欲しいですか？ [HTML 入門](/ja/docs/Learn_web_development/Core/Structuring_content)モジュールの記事「[ハイパーリンクの作成](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)」で、リンクの実装方法について詳しく説明しています。

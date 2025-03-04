@@ -1,7 +1,6 @@
 ---
 title: ブラウザーの開発者ツールとは
 slug: Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
-original_slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 l10n:
   sourceCommit: 6635942cfb4f8949f7b707a24cf428c57750a96d
 ---
@@ -214,5 +213,5 @@ document.querySelector("h1").appendChild(loginImage);
 
 ## 関連情報
 
-- [HTML のデバッグ](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+- [HTML のデバッグ](/ja/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)
+- [CSS のデバッグ](/ja/docs/Learn_web_development/Core/Styling_basics/Building_blocks/Debugging_CSS)

@@ -7,7 +7,35 @@ slug: Web/HTML/Element/pre
 
 HTML-элемент **`<pre>`** представляет собой предварительно отформатированный текст, который должен быть представлен точно так, как написано в HTML-файле. Текст обычно отображается с использованием непропорционального ("[monospace](/ru/docs/XUL/Style/monospace)") шрифта. Пробелы внутри этого элемента отображаются как записанные.
 
-{{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;pre&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<pre>
+  L          TE
+    A       A
+      C    V
+       R A
+       DOU
+       LOU
+      REUSE
+      QUE TU
+      PORTES
+    ET QUI T'
+    ORNE O CI
+     VILISÉ
+    OTE-  TU VEUX
+     LA    BIEN
+    SI      RESPI
+            RER       - Apollinaire
+</pre>
+```
+
+```css interactive-example
+pre {
+  font-size: 0.7rem;
+  margin: 0;
+}
+```
 
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D1%82%D0%BE%D0%BA), [Явный контент](/ru/docs/Web/Guide/HTML/Content_categories#%D0%AF%D0%B2%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82) |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
