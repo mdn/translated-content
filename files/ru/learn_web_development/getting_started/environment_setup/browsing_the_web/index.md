@@ -28,7 +28,7 @@ slug: Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 
 ## Активное изучение
 
-_Пока что активное изучение не доступно. Если вы можете предоставить полезную информацию, то, [пожалуйста, окажите нам содействие](/ru/docs/MDN/Community/Contributing/Getting_started)._
+_Пока что активное изучение не доступно. Если вы можете предоставить полезную информацию, то, [пожалуйста, окажите нам содействие](/ru/docs/MDN/Community/Getting_started)._
 
 ## Погружаемся глубже
 
