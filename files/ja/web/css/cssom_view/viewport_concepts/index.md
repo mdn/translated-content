@@ -1,6 +1,7 @@
 ---
 title: ビューポートの概念
-slug: Web/CSS/Viewport_concepts
+slug: Web/CSS/CSSOM_View/Viewport_Concepts
+original_slug: Web/CSS/Viewport_concepts
 ---
 
 {{CSSRef}}
