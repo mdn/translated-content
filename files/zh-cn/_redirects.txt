@@ -320,7 +320,7 @@
 /zh-CN/docs/DOM/document.contentType	/zh-CN/docs/Web/API/Document/contentType
 /zh-CN/docs/DOM/document.createAttribute	/zh-CN/docs/Web/API/Document/createAttribute
 /zh-CN/docs/DOM/document.createComment	/zh-CN/docs/Web/API/Document/createComment
-/zh-CN/docs/DOM/document.createElement	/zh-CN/docs/Web/API/document/createElement
+/zh-CN/docs/DOM/document.createElement	/zh-CN/docs/Web/API/Document/createElement
 /zh-CN/docs/DOM/document.createExpression	/zh-CN/docs/Web/API/Document/createExpression
 /zh-CN/docs/DOM/document.createTextNode	/zh-CN/docs/Web/API/Document/createTextNode
 /zh-CN/docs/DOM/document.currentScript	/zh-CN/docs/Web/API/Document/currentScript
@@ -467,7 +467,7 @@
 /zh-CN/docs/DOM:HTMLDocument	/zh-CN/docs/Web/API/HTMLDocument
 /zh-CN/docs/DOM:XMLDocument	/zh-CN/docs/Web/API/XMLDocument
 /zh-CN/docs/DOM:document	/zh-CN/docs/Web/API/Document
-/zh-CN/docs/DOM:document.createElement	/zh-CN/docs/Web/API/document/createElement
+/zh-CN/docs/DOM:document.createElement	/zh-CN/docs/Web/API/Document/createElement
 /zh-CN/docs/DOM:document.designMode	/zh-CN/docs/Web/API/Document/designMode
 /zh-CN/docs/DOM:document.evaluate	/zh-CN/docs/Web/API/Document/evaluate
 /zh-CN/docs/DOM:document.getElementById	/zh-CN/docs/Web/API/Document/getElementById
