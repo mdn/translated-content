@@ -24639,6 +24639,15 @@
       "Marsf"
     ]
   },
+  "Web/CSS/CSS_cascade/Shorthand_properties": {
+    "modified": "2020-08-14T11:56:14.205Z",
+    "contributors": [
+      "mfuji09",
+      "fscholz",
+      "ethertank",
+      "sosleepy"
+    ]
+  },
   "Web/CSS/CSS_cascade/Specificity": {
     "modified": "2020-04-20T23:20:01.731Z",
     "contributors": [
@@ -25652,15 +25661,6 @@
     "contributors": [
       "mfuji09",
       "cmplstofB"
-    ]
-  },
-  "Web/CSS/Shorthand_properties": {
-    "modified": "2020-08-14T11:56:14.205Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "ethertank",
-      "sosleepy"
     ]
   },
   "Web/CSS/Subsequent-sibling_combinator": {
