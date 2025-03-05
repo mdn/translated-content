@@ -1,6 +1,6 @@
 ---
 title: CSS 的简写属性
-slug: Web/CSS/Shorthand_properties
+slug: Web/CSS/CSS_cascade/Shorthand_properties
 ---
 
 {{CSSRef}}

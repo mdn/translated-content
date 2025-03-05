@@ -5,7 +5,7 @@ slug: Web/CSS/scroll-padding
 
 {{CSSRef}}
 
-[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) **`scroll-padding`** 同时设置元素的所有滚动内边距，其赋值方式较为类似 {{CSSXref("padding")}} 属性为元素内边距赋值的方式。
+[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`scroll-padding`** 同时设置元素的所有滚动内边距，其赋值方式较为类似 {{CSSXref("padding")}} 属性为元素内边距赋值的方式。
 
 {{EmbedInteractiveExample("pages/css/scroll-padding.html")}}
 

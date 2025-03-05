@@ -5,7 +5,7 @@ slug: Web/CSS/outline
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 的 `outline` 属性是在一条声明中设置多个轮廓属性的[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) ，例如 {{cssxref("outline-style")}}, {{cssxref("outline-width")}} 和 {{cssxref("outline-color")}}。
+[CSS](/zh-CN/docs/Web/CSS) 的 `outline` 属性是在一条声明中设置多个轮廓属性的[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) ，例如 {{cssxref("outline-style")}}, {{cssxref("outline-width")}} 和 {{cssxref("outline-color")}}。
 
 {{EmbedInteractiveExample("pages/css/outline.html")}}
 

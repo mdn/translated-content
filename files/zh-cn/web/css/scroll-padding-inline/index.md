@@ -5,7 +5,7 @@ slug: Web/CSS/scroll-padding-inline
 
 {{CSSRef}}
 
-[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) **`scroll-padding-inline`** 设置了元素的行向滚动内边距。
+[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`scroll-padding-inline`** 设置了元素的行向滚动内边距。
 
 {{EmbedInteractiveExample("pages/css/scroll-padding-inline.html")}}
 

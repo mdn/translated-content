@@ -5,7 +5,7 @@ slug: Web/CSS/all
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`all`** [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) 将除了 {{cssxref("unicode-bidi")}} 与 {{cssxref("direction")}} 之外的所有属性重设至其初始值，或继承值。
+[CSS](/zh-CN/docs/Web/CSS) **`all`** [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) 将除了 {{cssxref("unicode-bidi")}} 与 {{cssxref("direction")}} 之外的所有属性重设至其初始值或继承值。
 
 {{EmbedInteractiveExample("pages/css/all.html")}}
 

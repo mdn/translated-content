@@ -5,7 +5,7 @@ slug: Web/CSS/margin
 
 {{CSSRef}}
 
-**`margin`** 属性为给定元素设置所有四个（上右下左）方向的外边距属性。也就是 {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}} 和 {{cssxref("margin-left")}} 四个外边距属性设置的[简写](/zh-CN/docs/Web/CSS/Shorthand_properties)。
+**`margin`** 属性为给定元素设置所有四个（上右下左）方向的外边距属性。也就是 {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}} 和 {{cssxref("margin-left")}} 四个外边距属性设置的[简写](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)。
 
 {{EmbedInteractiveExample("pages/css/margin.html")}}
 

@@ -2483,6 +2483,7 @@
 /zh-CN/docs/Web/CSS/Reference/Webkit_Extensions	/zh-CN/docs/Web/CSS/WebKit_Extensions
 /zh-CN/docs/Web/CSS/Reference/background-blend-mode	/zh-CN/docs/Web/CSS/background-blend-mode
 /zh-CN/docs/Web/CSS/Reference/mix-blend-mode	/zh-CN/docs/Web/CSS/mix-blend-mode
+/zh-CN/docs/Web/CSS/Shorthand_properties	/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties
 /zh-CN/docs/Web/CSS/Specificity	/zh-CN/docs/Web/CSS/CSS_cascade/Specificity
 /zh-CN/docs/Web/CSS/Syntax	/zh-CN/docs/Web/CSS/CSS_syntax/Syntax
 /zh-CN/docs/Web/CSS/Tools	/zh-CN/docs/Web/CSS
@@ -2495,6 +2496,7 @@
 /zh-CN/docs/Web/CSS/Using_CSS_custom_properties	/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 /zh-CN/docs/Web/CSS/Using_CSS_variables	/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 /zh-CN/docs/Web/CSS/Value_definition_syntax	/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+/zh-CN/docs/Web/CSS/Viewport_concepts	/zh-CN/docs/Web/CSS/CSSOM_view/Viewport_concepts
 /zh-CN/docs/Web/CSS/actual_value	/zh-CN/docs/Web/CSS/CSS_cascade/actual_value
 /zh-CN/docs/Web/CSS/attr()	/zh-CN/docs/Web/CSS/attr
 /zh-CN/docs/Web/CSS/box_model	/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
