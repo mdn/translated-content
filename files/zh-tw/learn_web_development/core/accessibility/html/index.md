@@ -140,11 +140,7 @@ the last one.
 
 ### 頁面佈局
 
-In the bad old days, people used to create page layouts using HTML tables — using different table cells to contain the header, footer, sidebar, main content column, etc. This is not a good idea because a screen reader will likely give out confusing readouts, especially if the layout is complex and has many nested tables.
-
-Try our example [table-layout.html](https://mdn.github.io/learning-area/accessibility/html/table-layout.html) example, which looks something like this:
-
-在過去的時期，人們曾經使用 HTML 表格來建立頁面佈局——使用不同的表格儲存格來包含頁首、頁尾、側邊欄、主要內容欄等。這不是一個好主意，因為螢幕閱讀器讀出令人困惑的內容，特別是當佈局複雜且有許多嵌套表格時。
+過去，人們曾經使用 HTML 表格來建立頁面佈局——使用不同的表格儲存格來包含頁首、頁尾、側邊欄、主要內容欄等。這不是一個好主意，因為螢幕閱讀器讀出令人困惑的內容，特別是當佈局複雜且有許多嵌套表格時。
 試試以下的範例 [table-layout.html](https://mdn.github.io/learning-area/accessibility/html/table-layout.html)：
 
 ```html
@@ -213,10 +209,6 @@ Try our example [table-layout.html](https://mdn.github.io/learning-area/accessib
 </table>
 ```
 
-If you try to navigate this using a screen reader, it will probably tell you that there's a table to be looked at (although some screen readers can guess the difference between table layouts and data tables). You'll then likely (depending on which screen reader you're using) have to go down into the table as an object and look at its features separately, then get out of the table again to carry on navigating the content.
-
-Table layouts are a relic of the past — they made sense back when CSS support was not widespread in browsers, but now they just create confusion for screen reader users. Additionally, their source code requires more markup, which makes them less flexible and more difficult to maintain. You can verify these claims by comparing your previous experience with a [more modern website structure example](https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/), which could look something like this:
-
 如果你嘗試使用螢幕閱讀器來導航，它可能會告訴你有一個表格需要查看（儘管有些螢幕閱讀器可以猜測表格佈局和資料表格之間的差異）。你可能也需要（取決於你使用的螢幕閱讀器）進入表格作為一個物件，單獨查看其特性，然後再從表格中退出才能繼續導航內容。
 表格佈局是過去的遺物——在瀏覽器的 CSS 支援不普及時是有意義的，但現在它們會對螢幕閱讀器使用者帶來困擾。此外，因為需要更多標籤，將會變得不靈活且更難維護。你可以透過比較先前的體驗與更現代的網站結構範例來驗證這些說法，它看起來可能像這樣：
 
@@ -257,22 +249,22 @@ Table layouts are a relic of the past — they made sense back when CSS support 
 在建立佈局時，另一個考量是使用如上例所示的 HTML 語意元素 (請見 [此內容](/zh-TW/docs/Web/HTML/Element#content_sectioning)) — 你僅能使用嵌套的 {{htmlelement("div")}} 元素來建立佈局，但更好的是使用正確的區塊元素來包裹主要的導航 ({{htmlelement("nav")}})、`footer` ({{htmlelement("footer")}})、重複的內容單元 ({{htmlelement("article")}}) 等。這些為螢幕閱讀器（和其他工具）提供額外的語意，給使用者有關當下瀏覽的內容的額外線索（請見[螢幕閱讀器對新 HTML5 區段元素](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/)的支援，了解螢幕閱讀器支援的情況）。
 
 > [!NOTE]
-> In addition to having good semantics and an attractive layout, your content should make logical sense in its source order — you can always place it where you want using CSS later on, but you should get the source order right to start with, so what screen reader users get read out to them will make sense.
+> 除了擁有良好的語意和吸引人的佈局外，內容在原始碼順序中應該具有邏輯性——你之後可以用 CSS 擺在想要的位置，但前提是要先確保原始碼順序正確，這樣螢幕閱讀器使用者聽到的內容才有意義。
 
-### UI controls
+### UI 控制
 
-By UI controls, we mean the main parts of web documents that users interact with — most commonly buttons, links, and form controls. In this section, we'll look at the basic accessibility concerns to be aware of when creating such controls. Later articles on WAI-ARIA and multimedia will look at other aspects of UI accessibility.
+所謂的 UI 控制，我們指的是使用者與其互動的網頁文件主要部分——最常見的是按鈕、連結和表單控件。在本節中，我們將探討建立這類控制項時需要注意的基本無障礙性問題。後續關於 WAI-ARIA 和多媒體的文章將探討 UI 無障礙性的其他方面。
 
-One key aspect of the accessibility of UI controls is that by default, browsers allow them to be manipulated by the keyboard. You can try this out using our [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) example (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)). Open this in a new tab, and try pressing the tab key; after a few presses, you should see the tab focus start to move through the different focusable elements. The focused elements are given a highlighted default style in every browser (it differs slightly between different browsers) so that you can tell what element is focused.
+UI 控制無障礙性的一個關鍵方面是，默認情況下，瀏覽器允許使用鍵盤操作它們。你可以使用我們的 [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) 範例來嘗試（查看[原始碼](ttps://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)）。在新分頁中打開它，並嘗試按 Tab 鍵；按幾下後，你應該會看到 Tab 焦點開始在不同的可聚焦元素間移動。每個瀏覽器中，被聚焦的元素都會有一個默認的強調樣式（在不同瀏覽器之間略有不同），這樣就能知道哪個元素被聚焦了。
 
-![Three buttons with the text "Click me!", "Click me too!", and "And me!" inside them respectively. The third button has a blue outline around it to indicate current tab focus.](button-focused-unfocused.png)
+![三個按鈕，分別顯示文字「Click me!」、「Click me too!」和「And me!」。第三個按鈕周圍有藍色輪廓，表示目前的 Tab 鍵焦點在此按鈕上。](button-focused-unfocused.png)
 
 > [!NOTE]
-> You can enable an overlay that shows the page tabbing order in your developer tools. For more information see: [Accessibility Inspector > Show web page tabbing order](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order).
+> 你可以在開發者工具中啟用一個顯示頁面 Tab 鍵順序的覆蓋層。更多資訊請參見： [無障礙檢測器 > 顯示網頁 Tab 鍵順序](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order).
 
-You can then press Enter/Return to follow a focused link or press a button (we've included some JavaScript to make the buttons alert a message), or start typing to enter text in a text input. Other form elements have different controls; for example, the {{htmlelement("select")}} element can have its options displayed and cycled between using the up and down arrow keys.
+然後你可以按 Enter/Return 鍵來跟隨已聚焦的連結或按下按鈕（我們已經加入一些 JavaScript 讓按鈕顯示提示訊息），或開始輸入來在文字輸入框中輸入文字。其他表單元素有不同的控制方式；例如，可以使用上下箭頭鍵來顯示 {{htmlelement("select")}} 元素的選項並在它們之間循環選擇。
 
-You essentially get this behavior for free, just by using the appropriate elements, e.g.
+基本上你可以透過使用這些合適的標籤來免費獲得這些功能，例如：
 
 ```html example-good
 <h1>Links</h1>
@@ -315,9 +307,8 @@ You essentially get this behavior for free, just by using the appropriate elemen
 </form>
 ```
 
-This means using links, buttons, form elements, and labels appropriately (including the {{htmlelement("label")}} element for form controls).
-
-However, it is again the case that people sometimes do strange things with HTML. For example, you sometimes see buttons marked up using {{htmlelement("div")}}s, for example:
+這意味著適當地使用連結、按鈕、表單元素和標籤（包括為表單控制使用 {{htmlelement("label")}} 元素）。
+然而，人們有時會對 HTML 做一些奇怪的事情。像是有時會看到使用 {{htmlelement("div")}} 元素來標記按鈕，例如：
 
 ```html example-bad
 <div data-message="This is from the first button">Click me!</div>
@@ -325,11 +316,11 @@ However, it is again the case that people sometimes do strange things with HTML.
 <div data-message="This is from the third button">And me!</div>
 ```
 
-But using such code is not advised — you immediately lose the native keyboard accessibility you would have had if you'd just used {{htmlelement("button")}} elements, plus you don't get any of the default CSS styling that buttons get. In the rare to non-existent case when you need to use a non-button element for a button, use the [`button` role](/zh-TW/docs/Web/Accessibility/ARIA/Roles/button_role) and implement all the default button behaviors, including keyboard and mouse button support.
+但不建議使用這樣的程式碼——這樣會立即失去使用 {{htmlelement("button")}} 元素的原生鍵盤無障礙功能，也不會獲得按鈕的任何默認 CSS 樣式。在極少數到幾乎不存在的情況下，若你需要使用非按鈕元素作為按鈕時，請使用 [`button role`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/button_role) 並實現所有默認按鈕行為，包括鍵盤和滑鼠按鈕支援。
 
-#### Building keyboard accessibility back in
+#### 重建鍵盤無障礙性
 
-Adding such advantages back in takes a bit of work (you can see an example in our [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) example — also see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Here we've given our fake `<div>` buttons the ability to be focused (including via tab) by giving each one the attribute `tabindex="0"`. We also include `role="button"` so screen reader users know they can focus on and interact with the element:
+重新加入這些默認優勢需要一些額外的工作（你可以 [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 查看範例——也可以查看[原始碼](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)）。在這裡，我們為假的 `<div>` 按鈕提供了可以被聚焦的能力（包括通過 tab 鍵），方法是給每個按鈕新增屬性 `tabindex="0"`。我們還包含了 `role="button"`，這樣螢幕閱讀器使用者就知道他們可以聚焦並與該元素互動：
 
 ```html
 <div data-message="This is from the first button" tabindex="0" role="button">
@@ -343,12 +334,12 @@ Adding such advantages back in takes a bit of work (you can see an example in ou
 </div>
 ```
 
-Basically, the [`tabindex`](/zh-TW/docs/Web/HTML/Global_attributes/tabindex) attribute is primarily intended to allow tabbable elements to have a custom tab order (specified in positive numerical order), instead of just being tabbed through in their default source order. This is nearly always a bad idea, as it can cause major confusion. Use it only if you really need to, for example, if the layout shows things in a very different visual order to the source code, and you want to make things work more logically. There are two other options for `tabindex`:
+基本上，[`tabindex`](/zh-TW/docs/Web/HTML/Global_attributes/tabindex) 屬性主要是允許可標籤元素擁有自定義的標籤順序（以正數數字順序指定），而不僅僅是按照在原始碼中的默認順序進行標籤。由於它可能會導致重大混淆，因此建議只有在真正需要時才使用它，例如，如果佈局顯示的內容在視覺順序上與原始碼相差很大，而你希望它運作得更符合邏輯。`tabindex` 還有兩個其他選項：
 
-- `tabindex="0"` — as indicated above, this value allows elements that are not normally tabbable to become tabbable. This is the most useful value of `tabindex`.
-- `tabindex="-1"` — this allows not normally tabbable elements to receive focus programmatically, e.g., via JavaScript, or as the target of links.
+- `tabindex="0"` — 如上所述，此值允許通常不可標籤的元素變得可標籤。這是 `tabindex` 最有用的值。
+- `tabindex="-1"` — 這允許通常不可標籤的元素通過程式接收焦點，例如，通過 JavaScript，或作為連結的目標。
 
-While the above addition allows us to tab to the buttons, it does not allow us to activate them via the <kbd>Enter</kbd>/<kbd>Return</kbd> key. To do that, we had to add the following bit of JavaScript trickery:
+雖然上述允許我們使用 tab 鍵導航到按鈕，但它不允許我們通過 <kbd>Enter</kbd>/<kbd>Return</kbd> 鍵啟用它們。為此，我們必須新增以下 JavaScript：
 
 ```js
 document.onkeydown = (e) => {
@@ -361,17 +352,19 @@ document.onkeydown = (e) => {
 
 Here we add a listener to the `document` object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's [`key`](/zh-TW/docs/Web/API/KeyboardEvent/key) property; if the key pressed is <kbd>Enter</kbd>/<kbd>Return</kbd>, we run the function stored in the button's `onclick` handler using `document.activeElement.click()`. [`activeElement`](/zh-TW/docs/Web/API/Document/activeElement) which gives us the element that is currently focused on the page.
 
-This is a lot of extra hassle to build the functionality back in. And there's bound to be other problems with it. **Better to just use the right element for the right job in the first place.**
+在這裡，我們向 `document` 物件新增一個監聽器，來檢測何時在鍵盤上按下了按鈕。我們通過事件物件的 [`key`](/zh-TW/docs/Web/API/KeyboardEvent/key) 屬性檢查按下了什麼按鈕；如果按下的是 <kbd>Enter</kbd>/<kbd>Return</kbd> 鍵，我們使用 `document.activeElement.click()` 執行儲存在按鈕 `onclick` 處理程式中的函式。[`activeElement`](/zh-TW/docs/Web/API/Document/activeElement) 為我們提供了頁面上當前聚焦的元素。
 
-#### Meaningful text labels
+重建這些功能會帶來許多額外的麻煩。而且肯定還有其他問題。**因此從一開始就使用正確的元素做正確的工作是最佳解**。
 
-UI control text labels are very useful to all users, but getting them right is particularly important to users with disabilities.
+#### 有意義的文字標籤
 
-You should make sure that your button and link text labels are understandable and distinctive. Don't just use "Click here" for your labels, as screen reader users sometimes get up a list of buttons and form controls. The following screenshot shows our controls being listed by VoiceOver on Mac.
+UI 控制文字標籤對所有使用者都非常有用，但對身心障礙使用者來說，正確設置這些標籤極為重要。
 
-![List of form input labels being listed by VoiceOver software on Mac. This list contains meaningless labels like 'happy menu button` given to various form controls like button, textfield and link](voiceover-formcontrols.png)
+你應確保你的按鈕和連結文字標籤易於理解且具有獨特性。不要只使用「點擊這裡」作為標籤，因為螢幕閱讀器使用者有時會調出按鈕和表單控件的列表。下面的截圖顯示了我們的控制項在 Mac 上被 VoiceOver 列出的情況。
 
-Make sure your labels make sense out of context, read on their own, as well as in the context of the paragraph they are in. For example, the following shows an example of good link text:
+![Mac 上 VoiceOver 軟體列出的表單輸入標籤列表。這個列表包含了給予各種表單控制項（如按鈕、文字欄位和連結）的無意義標籤，例如「happy menu button」](voiceover-formcontrols.png)
+
+確保你的標籤在脫離上下文時、單獨閱讀時以及所在段落的上下文中都是有意義的。例如，下列展示了一個好的連結文字範例：
 
 ```html example-good
 <p>
@@ -380,7 +373,7 @@ Make sure your labels make sense out of context, read on their own, as well as i
 </p>
 ```
 
-but this is bad link text:
+這是一個不好的示範：
 
 ```html example-bad
 <p>
@@ -390,17 +383,17 @@ but this is bad link text:
 ```
 
 > [!NOTE]
-> You can find a lot more about link implementation and best practices in our [Creating links](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Creating_links) article. You can also see some good and bad examples at [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) and [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
+> 你可以在這篇[建立連結](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Creating_links)的文章中找到更多關於連結實作和最佳實踐的資訊。也可以在[good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html)和[bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html)查看好的和不好的範例。
 
-Form labels are also important for giving you a clue about what you need to enter into each form input. The following seems like a reasonable enough example:
+表單標籤對於提示需要在每個表單輸入什麼內容也很重要。以下看起來是一個相當合理的例子：
 
 ```html example-bad
 Fill in your name: <input type="text" id="name" name="name" />
 ```
 
-However, this is not so useful for disabled users. There is nothing in the above example to associate the label unambiguously with the form input and make it clear how to fill it in if you cannot see it. If you access this with some screen readers, you may only be given a description along the lines of "edit text."
+然而，這對身心障礙使用者來說並不是那麼有用。上述例子中沒有任何東西能明確地將標籤與表單輸入框關聯起來，並且如果看不到它，也不清楚如何填寫。如果使用某些螢幕閱讀器訪問它，可能只會得到類似「edit text」這樣的描述。
 
-The following is a much better example:
+以下是一個更好的例子：
 
 ```html example-good
 <div>
@@ -409,22 +402,22 @@ The following is a much better example:
 </div>
 ```
 
-With code like this, the label will be clearly associated with the input; the description will be more like "Fill in your name: edit text."
+使用這樣的程式碼，標籤將與輸入框明確關聯；描述會更像是「填寫你的姓名：編輯文字。」
 
-![A good form label that reads 'Fill in your name' is given to a text input form control. ](voiceover-good-form-label.png)
+![一個寫著「填寫你的姓名」的良好表單標籤被賦予給一個文字輸入表單控件。](voiceover-good-form-label.png)
 
-As an added bonus, in most browsers associating a label with a form input means that you can click the label to select or activate the form element. This gives the input a bigger hit area, making it easier to select.
+額外的好處是，大多數瀏覽器中，將標籤與表單輸入框關聯意味著可以點擊標籤來選擇或啟動表單元素。這為輸入框提供了更大的點擊區域，使其更容易選擇。
 
 > [!NOTE]
-> You can see some good and bad form examples in [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html) and [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html).
+> 你可以在[good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html)和[bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html)中查看一些良好的和不良的表單範例。
 
-You can find a nice explanation of the importance of proper text labels, and how to investigate text label issues using the [Firefox Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html), in the following video:
+你可以在以下影片中找到關於適當文字標籤重要性的詳細解釋，以及如何使用[Firefox無障礙檢查器](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html)調查文字標籤問題：
 
 {{EmbedYouTube("YhlAVlfH0rQ")}}
 
-## Accessible data tables
+## 無障礙資料表格
 
-A basic data table can be written with very simple markup, for example:
+基本資料表格可以使用非常簡單的標記語言來撰寫，舉例如下：
 
 ```html
 <table>
@@ -451,28 +444,28 @@ A basic data table can be written with very simple markup, for example:
 </table>
 ```
 
-But this has problems — there is no way for a screen reader user to associate rows or columns together as groupings of data. To do this, you need to know what the header rows are and if they are heading up rows, columns, etc. This can only be done visually for the above table (see [bad-table.html](https://mdn.github.io/learning-area/accessibility/html/bad-table.html) and try the example out yourself).
+但這段內容有個問題 — 對於螢幕閱讀器使用者來說，無法將列或欄關聯成資料群組。要做到這一點，需要知道標題列是什麼，以及它們是標示列或欄位等。在前面提到的表格中，這些只能透過視覺方式辨別（請參閱 [bad-table.html](https://mdn.github.io/learning-area/accessibility/html/bad-table.html) 並親自嘗試這個範例）。
 
-Now have a look at our [punk bands table example](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-complete.html) — you can see a few accessibility aids at work here:
+現在來看看我們的[龐克樂團表格](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-complete.html)範例 — 你可以看到一些無障礙輔助功能在其中運作：
 
-- Table headers are defined using {{htmlelement("th")}} elements — you can also specify if they are headers for rows or columns using the `scope` attribute. This gives you complete groups of data that can be consumed by screen readers as single units.
-- The {{htmlelement("caption")}} element and the `<table>` element's `summary` attribute both do similar jobs — they act as alt text for a table, giving a screen reader user a useful quick summary of the table's contents. The `<caption>` element is generally preferred as it makes it's content accessible to sighted users too, who might also find it useful. You don't really need both.
+- 表格標題是使用 {{htmlelement("th")}} 元素定義 — 你也可以透過 `scope` 屬性指定它們是列或欄位的標題。這提供了完整的資料群組，螢幕閱讀器可以將其視為單一單元。
+- {{htmlelement("caption")}} 元素和 `<table>` 元素的 `summary` 屬性功能相似 — 它們充當表格的替代文字，為螢幕閱讀器使用者提供表格內容的快速摘要。一般而言，較推薦使用 `<caption>` 元素，因為它的內容對於有視力的使用者也同樣有幫助。兩者通常不需要同時使用。
 
 > [!NOTE]
-> See our [HTML table accessibility](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Table_accessibility) article for more details about accessible data tables.
+> 查看我們的 [HTML 表格無障礙](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Table_accessibility) 文章來了解更多關於無障礙資料表格的相關細節。
 
-## Text alternatives
+## 替代文字
 
-Whereas textual content is inherently accessible, the same cannot necessarily be said for multimedia content — image and video content cannot be seen by visually-impaired people, and audio content cannot be heard by hearing-impaired people. We cover video and audio content in detail in the [Accessible multimedia](/zh-TW/docs/Learn_web_development/Core/Accessibility/Multimedia), but for this article we'll look at accessibility for the humble {{htmlelement("img")}} element.
+相較於文字內容本身就具有無障礙性，多媒體內容卻不盡然 — 影像和影片內容對於視障人士來說是看不見的，音訊內容對於聽障人士來說是聽不到的。我們在[無障礙多媒體](/zh-TW/docs/Learn_web_development/Core/Accessibility/Multimedia)單元中會詳細討論影片和音訊內容，但在本文中，我們將聚焦於簡單的 {{htmlelement("img")}} 元素的無障礙性。
 
-We have a simple example written up, [accessible-image.html](https://mdn.github.io/learning-area/accessibility/html/accessible-image.html), which features four copies of the same image:
+我們已經準備了一個簡單的範例，[accessible-image.html](https://mdn.github.io/learning-area/accessibility/html/accessible-image.html)，內含四份相同的影像：
 
 ```html
 <img src="dinosaur.png" />
 
 <img
   src="dinosaur.png"
-  alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+  alt="一隻紅色暴龍：一隻像人一樣直立站立的雙腳恐龍，有小小的手臂，以及一個佈滿尖銳牙齒的大頭" />
 
 <img
   src="dinosaur.png"
@@ -487,26 +480,27 @@ We have a simple example written up, [accessible-image.html](https://mdn.github.
 </p>
 ```
 
-The first image, when viewed by a screen reader, doesn't really offer the user much help — VoiceOver for example reads out "/dinosaur.png, image". It reads out the filename to try to provide some help. In this example the user will at least know it is a dinosaur of some kind, but often files may be uploaded with machine-generated file names (e.g. from a digital camera) and these file names would likely provide no context to the image's content.
+當透過螢幕閱讀器檢視第一張影像時，實際上並未為使用者提供太多協助 — 舉例來說，VoiceOver 只會念出「/dinosaur.png, 影像」。它試圖透過唸出檔案名稱來提供一些資訊。在這個範例中，使用者至少會知道這是某種恐龍，但通常檔案可能是透過數位相機上傳，這些機器產生的檔案名稱很可能無法提供影像內容的任何上下文。
 
 > [!NOTE]
-> This is why you should never include text content inside an image — screen readers can't access it. There are other disadvantages too — you can't select it and copy/paste it. Just don't do it!
+> 絕對不要在影像中包含文字內容 — 螢幕閱讀器無法存取它。另外還有其他缺點 — 你無法選取及複製貼上文字。千萬不要這麼做！
 
-When a screen reader encounters the second image, it reads out the full alt attribute — "A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.".
+當螢幕閱讀器遇到第二張影像時，會唸出完整的替代文字（alt attribute）— 「一隻紅色暴龍：一隻像人一樣直立站立的雙腳恐龍，有小小的手臂，以及一個佈滿尖銳牙齒的大頭」。
 
-This highlights the importance of not only using meaningful file names in case so-called **alt text** is not available, but also making sure that alt text is provided in `alt` attributes wherever possible.
+這突顯了兩個重要性：不僅要使用有意義的檔案名稱（以防無法使用替代文字），還要確保在可能的情況下，在 alt 屬性中提供**替代文字**。
 
-Note that the contents of the `alt` attribute should always provide a direct representation of the image and what it conveys visually. The alt should be brief and concise and include all the information conveyed in the image that is not duplicated in the surrounding text.
+`alt` 屬性的內容應該直接呈現影像及其視覺傳達的內容。替代文字應該簡潔扼要，包含影像中未在周圍文字重複的所有資訊。
 
-The content of the `alt` attribute for a single image differs based on the context. For example, if the photo of Fluffy is an avatar next to a review for Yuckymeat dog food, `alt="Fluffy"` is appropriate. If the photo is part of Fluffy's adoption page for the animal rescue society, information conveyed in the image that is relevant for a prospective dog parent that is not duplicated in the surrounding text should be included. A longer description, such as `alt="Fluffy, a tri-color terrier with very short hair, with a tennis ball in her mouth."` is appropriate. As the surrounding text likely has Fluffy's size and breed, that is not included in the `alt`. However, as the dog's biography likely doesn't include hair length, colors, or toy preferences, which the potential parent needs to know, it is included. Is the image outdoors, or does Fluffy have a red collar with a blue leash? Not important in terms of adopting the pet and therefore not included. All information image conveys that a sighted user can access and is relevant to the context is what needs to be conveyed; nothing more. Keep it short, precise, and useful.
+對於單一影像的 `alt` 屬性內容，其撰寫方式會因脈絡而異。舉例來說： 如果一張 Fluffy 影像是一篇難吃的狗食評論旁邊的頭像，那麼替代文字為 `alt="Fluffy"` 是適當的。如果照片是在動物救援協會的 Fluffy 認養頁面，則應該包含對於可能的養狗人士來說重要且周圍文字未提及的資訊。例如 `alt="Fluffy，一隻三色短毛犬，嘴裡咬著網球" 就很合適`。 周圍文字可能已經提到 Fluffy 的體型和品種，所以不需要再重覆。然而，由於狗狗的生平介紹可能未提及毛髮長度、顏色或玩具喜好，這些對潛在領養人很重要，因此值得包含在`alt`內。影像是否在戶外，或 Fluffy 是否戴紅色項圈搭配藍色牽繩？這些對於認養寵物來說並不重要，所以不需要納入。關鍵是傳達影像中對有視力的使用者可見且與脈絡相關的所有資訊 — 既不多也不少。保持簡短、精確且有用。
 
-Any personal knowledge or extra description shouldn't be included here, as it is not useful for people who have not seen the image before. If the ball is Fluffy's favorite toy or if a sighted user can't know that from the image, then don't include it.
+不應該加入任何個人知識或額外描述，因為這對於未曾見過影像的人無法提供有用的資訊。如果網球是 Fluffy 最喜歡的玩具，但這一點無法從影像中直接判斷，那麼就不應該將其納入描述中。
+替代文字的目的是準確且客觀地描述影像的視覺內容，僅包含有視力的使用者能夠直接從影像中觀察到的資訊。任何無法從影像本身推斷的額外資訊都不應被納入。這確保了替代文字對所有使用者都具有一致且實用的資訊價值。
 
-One thing to consider is whether your images have meaning inside your content, or whether they are purely for visual decoration, and thus have no meaning. If they are decorative, it is better to write an empty text as a value for `alt` attribute (see [Empty alt attributes](#empty_alt_attributes)) or to just include them in the page as CSS background images.
+需要考慮你的影像是否在內容中具有意義，還是純粹作為視覺裝飾，因此沒有實質意涵。如果是裝飾性影像，較好的做法是將 `alt` 屬性的值設為空字串（參見[空 alt 屬性](#empty_alt_attributes)）或僅將其包含在頁面中作為 CSS 背景影像。
 
 > [!NOTE]
-> Read [HTML images](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_images) and [Responsive images](/zh-TW/docs/Web/HTML/Responsive_images) for a lot more information about image implementation and best practices.
-> You can also check [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to learn how to use an alt attribute for images in various situations.
+> 閱讀 [HTML 影像](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_images) and [Responsive images](/zh-TW/docs/Web/HTML/Responsive_images) 獲取更多關於影像的最佳實踐。
+> 你也可以查看 [替代文字決策樹](https://www.w3.org/WAI/tutorials/images/decision-tree/) 來學習如何在不同的情境下為影像撰寫替代文字。
 
 If you do want to provide extra contextual information, you should put it in the text surrounding the image, or inside a `title` attribute, as shown above. In this case, most screen readers will read out the alt text, the title attribute, and the filename. In addition, browsers display title text as tooltips when moused over.
 
