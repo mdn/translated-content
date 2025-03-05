@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 442db82028668b17b888ee439468ae2ac9d589a5
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 {{domxref("XMLHttpRequest")}} 的 **`setRequestHeader()`** 方法用來設定 HTTP 的請求標頭。當使用 `setRequestHeader()` 的時候，必須在 {{domxref("XMLHttpRequest.open", "open()")}} 之後呼叫，同時也必須在 {{domxref("XMLHttpRequest.send", "send()")}} 之前呼叫。如果這個方法被呼叫了許多次，且設定的標頭是一樣的，那所有設定的值會被合併成一個單一的請求標頭。
 
