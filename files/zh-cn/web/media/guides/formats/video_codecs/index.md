@@ -865,32 +865,32 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
             <tr>
               <td>Main 4:2:2 10</td>
               <td>8 to 10</td>
-              <td>4:0:0, 4:2:0, 和 4:2:2</td>
+              <td>4:0:0、4:2:0 和 4:2:2</td>
             </tr>
             <tr>
               <td>Main 4:2:2 12</td>
               <td>8 to 12</td>
-              <td>4:0:0, 4:2:0, 和 4:2:2</td>
+              <td>4:0:0、4:2:0 和 4:2:2</td>
             </tr>
             <tr>
               <td>Main 4:4:4</td>
               <td>8</td>
-              <td>4:0:0, 4:2:0, 4:2:2, 和 4:4:4</td>
+              <td>4:0:0、4:2:0、4:2:2 和 4:4:4</td>
             </tr>
             <tr>
               <td>Main 4:4:4 10</td>
               <td>8 to 10</td>
-              <td>4:0:0, 4:2:0, 4:2:2, 和 4:4:4</td>
+              <td>4:0:0、4:2:0、4:2:2 和 4:4:4</td>
             </tr>
             <tr>
               <td>Main 4:4:4 12</td>
               <td>8 to 12</td>
-              <td>4:0:0, 4:2:0, 4:2:2, 和 4:4:4</td>
+              <td>4:0:0、4:2:0、4:2:2 和 4:4:4</td>
             </tr>
             <tr>
               <td>Main 4:4:4 16 Intra</td>
               <td>8 to 16</td>
-              <td>4:0:0, 4:2:0, 4:2:2, 和 4:4:4</td>
+              <td>4:0:0、4:2:0、4:2:2 和 4:4:4</td>
             </tr>
           </tbody>
         </table>
@@ -914,16 +914,14 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
             <tr>
-              <th scope="row">HEVC / H.265 support</th>
+              <th scope="row">HEVC / H.265 支持</th>
               <td>107</td>
               <td>18</td>
               <td>120</td>
-              <td>11</td>
               <td>94</td>
               <td>11</td>
             </tr>
@@ -940,7 +938,6 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
             <li>Android 从 137 版本开始仅支持硬件解码。</li>
           </ul>
         </p>
-        <p>Internet Explorer 在具有硬件解码器的设备上支持 HEVC。</p>
         <p>Opera 和其他基于 Chromium 内核的浏览器，支持情况和 Chrome 一致。</p>
         <p>Safari 在所有 macOS High Sierra+ 设备上支持 HEVC。</p>
       </td>
@@ -978,7 +975,7 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
     <tr>
       <th scope="row">许可</th>
       <td>
-        专利限制;确认你遵守<a href="https://www.mpegla.com/programs/hevc/">许可要求</a>。请注意，可能适用多个专利池。
+        专利限制；确认你遵守<a href="https://www.mpegla.com/programs/hevc/">许可要求</a>。请注意，可能适用多个专利池。
       </td>
     </tr>
   </tbody>
