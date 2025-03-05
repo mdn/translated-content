@@ -56,6 +56,6 @@ l10n:
 
 ## 参见
 
-- [推测加载](/zh-CN/docs/Web/Performance/Speculative_loading)
+- [推测性加载](/zh-CN/docs/Web/Performance/Guides/Speculative_loading)
 - {{Glossary("prerender", "预渲染")}}
 - [推测规则 API](/zh-CN/docs/Web/API/Speculation_Rules_API)

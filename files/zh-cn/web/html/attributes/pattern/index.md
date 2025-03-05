@@ -7,7 +7,36 @@ slug: Web/HTML/Attributes/pattern
 
 **`pattern`** 属性规定了一个表单控件的值应该匹配的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。如果一个非 `null` 值不满足 `pattern` 值设置的约束，{{domxref('ValidityState')}} 对象的只读属性 {{domxref('ValidityState.patternMismatch','patternMismatch')}} 将为 true。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-pattern.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: pattern", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="username">Username: (3-16 characters)</label>
+<input
+  id="username"
+  name="username"
+  type="text"
+  value="Sasha"
+  pattern="\w{3,16}"
+  required />
+
+<label for="pin">PIN: (4 digits)</label>
+<input id="pin" name="pin" type="password" pattern="\d{4,4}" required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:valid {
+  background-color: palegreen;
+}
+
+input:invalid {
+  background-color: lightpink;
+}
+```
 
 ## 概述
 

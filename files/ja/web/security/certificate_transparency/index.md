@@ -7,7 +7,7 @@ slug: Web/Security/Certificate_Transparency
 
 **Certificate Transparency** は、証明書の誤発行を防止し、監視するために設計されたオープンなフレームワークです。新しく発行された証明書は、公開されている、多くの場合独立した CT ログに「記録」され、発行された TLS 証明書の追加のみの暗号的に保証された記録を維持します。
 
-このようにして、認証局 (CA) は、はるかに大きな監視と監督を受けることができます。CA/B フォーラムの*ベースライン要件*に違反するような、潜在的に悪意のある証明書は、より迅速に検出され、失効される可能性があります。また、ブラウザベンダーやルートストアのメンテナは、不信に繋がるかもしれない問題がある CA について、より多くの情報に基づいた決定を下すことができるようになります。
+このようにして、認証局 (CA) は、はるかに大きな監視と監督を受けることができます。CA/B フォーラムの*ベースライン要件*に違反するような、潜在的に悪意のある証明書は、より迅速に検出され、失効される可能性があります。また、ブラウザーベンダーやルートストアのメンテナは、不信に繋がるかもしれない問題がある CA について、より多くの情報に基づいた決定を下すことができるようになります。
 
 ## 背景
 
@@ -31,18 +31,22 @@ X.509 証明書の拡張では、含まれる SCT は発行 CA が決定しま�
 
 後者の方法では、必要なデータを送信するためにサーバーを更新する必要があります。利点は、サーバーオペレータが TLS 拡張/stapled OCSP レスポンスを介して送信される SCT を提供する CT ログソースをカスタマイズできることです。
 
-## ブラウザの要件
+## ブラウザーの要件
 
-Google Chrome では、2018 年 4 月 30 日以降の notBefore 日付を持つすべての証明書の問題に対して、CT ログのインクルードを要求しています。これにより、ユーザーは非準拠の TLS 証明書を使用したサイトを訪問できなくなります。これまで Chrome では、_Extended Validation_ (EV) や Symantec が発行した証明書に対して CT のインクルードが義務付けられていました。
+Google Chrome バージョン 107 以降では、2018 年 4 月 30 日以降の notBefore 日付を持つすべての証明書の問題に対して、CT ログのインクルードを要求しています。これにより、ユーザーは非準拠の TLS 証明書を使用したサイトを訪問できなくなります。
+これまで Chrome では、_Extended Validation_ (EV) や Symantec が発行した証明書に対して CT のインクルードが義務付けられていました。
 
 Apple は、Safari や他のサーバーがサーバー証明書を信頼するために、さまざまな数の SCT を[必要としています](https://support.apple.com/ja-jp/HT205280)。
 
-Firefox は現在、ユーザーが訪問したサイトの CT ログを確認したり、使用を義務付けたり[していません](https://bugzilla.mozilla.org/show_bug.cgi?id=1281469)。
-
-[Expect-CT ヘッダ](/ja/docs/Web/HTTP/Headers/Expect-CT)を使用して、ブラウザが証明書の透過性の要件を常に実施するように要求することができます (Chrome などでは、証明書の発行日が 4 月以前の notBefore であっても)。
+Firefox デスクトップ版バージョン 135 以降では、Mozilla's Root CA Program に収録されているすべての認証局によって発行された証明書に対して CT ログのインクルードが要求されます。
+現時点で、Android 版では CT ログのインクルードが要求されていません。
 
 ## 仕様書
 
-| 仕様書                                                          | ステータス | コメント |
-| --------------------------------------------------------------- | ---------- | -------- |
-| [Certificate Transparency](https://tools.ietf.org/html/rfc6962) | IETF RFC   |          |
+2025 年 1 月時点で、ブラウザー実装は古い仕様である {{rfc("6962","Certificate Transparency")}} に基づいています。
+現在の仕様は {{rfc("9162","Certificate Transparency Version 2.0")}} です。
+
+## 関連情報
+
+- [Apple の Certificate Transparency ログプログラム](https://support.apple.com/ja-jp/103703)
+- [Chrome's Certificate Transparency Log Policy](https://googlechrome.github.io/CertificateTransparency/log_policy.html)

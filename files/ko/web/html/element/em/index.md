@@ -7,7 +7,21 @@ slug: Web/HTML/Element/em
 
 **HTML `<em>` 요소**는 텍스트의 강세를 나타냅니다. `<em>` 요소를 중첩하면 더 큰 강세를 뜻하게 됩니다.
 
-{{EmbedInteractiveExample("pages/tabbed/em.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;em&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>Get out of bed <em>now</em>!</p>
+
+<p>We <em>had</em> to do something about it.</p>
+
+<p>This is <em>not</em> a drill!</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+em {
+}
+```
 
 <table class="properties">
   <tbody>

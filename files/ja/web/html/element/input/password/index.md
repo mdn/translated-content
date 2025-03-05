@@ -2,16 +2,41 @@
 title: <input type="password">
 slug: Web/HTML/Element/input/password
 l10n:
-  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
 
 `<input>` 要素の **`password`** 型は、パスワードを安全に入力する方法を提供します。
 この要素はプレーンテキストの 1 行編集コントロールとして表示され、そのテキストは読み取られることがないように、1 つ 1 つの文字がアスタリスク ("\*") やドット ("•") のような記号に置き換えられ、隠されます。
-この文字は{{Glossary("user agent", "ユーザーエージェント")}}やオペレーティングシステムによって変わります。
+この文字は{{Glossary("User agent", "ユーザーエージェント")}}やオペレーティングシステムによって変わります。
 
-{{EmbedInteractiveExample("pages/tabbed/input-password.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;password&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<div>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" />
+</div>
+
+<div>
+  <label for="pass">Password (8 characters minimum):</label>
+  <input type="password" id="pass" name="password" minlength="8" required />
+</div>
+
+<input type="submit" value="Sign in" />
+```
+
+```css interactive-example
+label {
+  display: block;
+}
+
+input[type="submit"],
+label {
+  margin-top: 1rem;
+}
+```
 
 入力時の正確な動作は、ブラウザーによって異なる場合があります。
 ブラウザーによっては、入力された文字を一瞬だけ表示して見えなくするものや、ユーザーがプレーンテキストの表示のオン・オフを切り替えられるものがあります。
@@ -32,19 +57,22 @@ l10n:
 
 ## 追加の属性
 
-型に関係なくすべての {{HTMLElement("input")}} 要素を操作する属性に加え、 `password` 型の入力欄は次の属性にも対応しています。
+[グローバル属性](/ja/docs/Web/HTML/Global_attributes)および、型に関係なくすべての {{HTMLElement("input")}} 要素を操作する属性に加え、 `password` 型の入力欄は次の属性にも対応しています。
+
+> [!NOTE]
+> グローバル属性の [`autocorrect`](/ja/docs/Web/HTML/Global_attributes/autocorrect) をパスワード入力に追加することは可能ですが、格納される状態は常に `off` になります。
 
 ### maxlength
 
 ユーザーがパスワード入力欄に入力することができる（UTF-16 コード単位での）最大文字列長です。 0 以上の整数値である必要があります。`maxlength` が指定されていないか、無効な値が指定されていると、パスワード入力欄には最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
 
-フィールドに入力されたテキストの長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
+フィールドに入力されたテキストの長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
 ### minlength
 
 ユーザーがパスワード入力欄に入力することができる (UTF-16 コード単位での) 最小文字列長です。これは非負の整数値で、`maxlength` で指定された値以下である必要があります。`minlength` が指定されていないか、無効な値が指定されていると、パスワード入力欄には最小文字数が設定されません。
 
-入力欄のテキストの長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
+入力欄のテキストの長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
 ### pattern
 
@@ -82,7 +110,7 @@ l10n:
 
 パスワード入力ボックスは通常、他のテキスト入力ボックスのように動作します。主な違いは、ユーザーの近くにいる人がパスワードを読み取ることを防ぐために、その内容を隠すことです。
 
-### シンプルなパスワード入力欄
+### 基本的なパスワード入力欄
 
 以下は最も基本的なパスワード入力欄で、{{HTMLElement("label")}} 要素を使ったラベルとともに設置されています。
 
@@ -91,9 +119,9 @@ l10n:
 <input id="userPassword" type="password" />
 ```
 
-{{EmbedLiveSample("A_simple_password_input", 600, 40)}}
+{{EmbedLiveSample("A_basic_password_input", 600, 40)}}
 
-### オートコンプリートの許可
+### 自動補完の許可
 
 パスワードを自動的に入力するため、ユーザーのパスワードマネージャを許可するには、[`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) 属性を指定します。パスワードの場合、通常は次のいずれかの値をとります。
 
@@ -227,7 +255,7 @@ document.getElementById("selectAll").onclick = () => {
 
 #### JavaScript
 
-これは実にシンプルなコードで、入力された SSN を見られるように、画面に表示するためのものです。これは明らかに、パスワード欄の目的を損ねるものですが、`pattern` を試すには役立ちます。
+JavaScript で入力した SSN が画面上に表示されるので、確認することができます。 これではパスワード入力欄の意味がありませんが、`pattern` の使い勝手を試すのに役立ちます。
 
 ```js
 const ssn = document.getElementById("ssn");
@@ -294,7 +322,7 @@ ssn.oninput = (event) => {
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>対応するロールなし</code></a></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
     </tr>
   </tbody>
 </table>
@@ -306,7 +334,3 @@ ssn.oninput = (event) => {
 ## ブラウザーの互換性
 
 {{Compat}}
-
-## 関連情報
-
-- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

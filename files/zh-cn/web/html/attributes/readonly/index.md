@@ -9,7 +9,30 @@ l10n:
 
 当 **`readonly`** 布尔属性存在时，元素是不可变的，意味着用户无法编辑控件。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-readonly.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: readonly", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="firstName">First Name:</label>
+<input id="firstName" name="firstName" type="text" value="Adam" />
+
+<label for="age">Age:</label>
+<input id="age" name="age" type="number" value="42" readonly />
+
+<label for="hobbies">Hobbies:</label>
+<textarea id="hobbies" name="hobbies" readonly>Baseball</textarea>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:read-only,
+textarea:read-only {
+  background-color: silver;
+}
+```
 
 ## 概述
 

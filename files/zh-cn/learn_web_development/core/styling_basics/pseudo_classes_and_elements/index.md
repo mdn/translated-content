@@ -170,7 +170,7 @@ article p:first-child::first-line {
 
 ## 生成带有::before 和::after 的内容
 
-有一组特别的伪元素，它们和[`content`](/zh-CN/docs/Web/CSS/content)属性一同使用，使用 CSS 将内容插入到你的文档中中。
+有一组特别的伪元素，它们和[`content`](/zh-CN/docs/Web/CSS/content)属性一同使用，使用 CSS 将内容插入到你的文档中。
 
 你能用这些插入一个文本字符串，和在下面的实时示例里那样。试着改变{{cssxref("content")}}属性的文本值，看看输出是怎么改变的。你也能改变`::before`伪元素为`::after`，看到这段文本插入到了元素的末尾而不是开头。
 

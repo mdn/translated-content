@@ -442,4 +442,4 @@ if (document.prerendering) {
 ## 参见
 
 - developer.chrome.google.cn 上的[在 Chrome 中预渲染页面以实现即时网页导航](https://developer.chrome.google.cn/docs/web-platform/prerender-pages)（2023）
-- [推测性加载](/zh-CN/docs/Web/Performance/Speculative_loading)用于比较推测规则和其他类似的性能改进特性。
+- [推测性加载](/zh-CN/docs/Web/Performance/Guides/Speculative_loading)用于比较推测规则和其他类似的性能改进特性。

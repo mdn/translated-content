@@ -1396,7 +1396,7 @@
       "reppets"
     ]
   },
-  "Glossary/Forbidden_header_name": {
+  "Glossary/Forbidden_request_header": {
     "modified": "2020-03-23T16:05:37.818Z",
     "contributors": [
       "mfuji09",
@@ -24445,8 +24445,14 @@
       "sii"
     ]
   },
-  "Web/CSS/CSSOM_view": {
+  "Web/CSS/CSSOM_View": {
     "modified": "2020-10-15T22:00:40.104Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/CSSOM_View/Viewport_Concepts": {
+    "modified": "2020-09-22T04:57:28.828Z",
     "contributors": [
       "mfuji09"
     ]
@@ -24631,6 +24637,15 @@
       "inkusu",
       "ethertank",
       "Marsf"
+    ]
+  },
+  "Web/CSS/CSS_cascade/Shorthand_properties": {
+    "modified": "2020-08-14T11:56:14.205Z",
+    "contributors": [
+      "mfuji09",
+      "fscholz",
+      "ethertank",
+      "sosleepy"
     ]
   },
   "Web/CSS/CSS_cascade/Specificity": {
@@ -25648,15 +25663,6 @@
       "cmplstofB"
     ]
   },
-  "Web/CSS/Shorthand_properties": {
-    "modified": "2020-08-14T11:56:14.205Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "ethertank",
-      "sosleepy"
-    ]
-  },
   "Web/CSS/Subsequent-sibling_combinator": {
     "modified": "2020-10-15T21:22:37.143Z",
     "contributors": [
@@ -25686,12 +25692,6 @@
       "mpcjazz",
       "ethertank",
       "sii"
-    ]
-  },
-  "Web/CSS/Viewport_concepts": {
-    "modified": "2020-09-22T04:57:28.828Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "Web/CSS/Visual_formatting_model": {
@@ -41686,7 +41686,7 @@
       "silverskyvicto"
     ]
   },
-  "Web/Performance/How_browsers_work": {
+  "Web/Performance/Guides/How_browsers_work": {
     "modified": "2020-05-23T02:59:41.163Z",
     "contributors": [
       "Uemmra3",

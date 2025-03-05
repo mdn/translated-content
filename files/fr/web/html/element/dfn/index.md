@@ -7,7 +7,20 @@ slug: Web/HTML/Element/dfn
 
 L'élément HTML **`<dfn>`** (aussi nommé « définition ») est utilisé pour indiquer le terme défini dans le contexte d'une expression ou d'une phrase de définition. L'élément [`<p>`](/fr/docs/Web/HTML/Element/p), le couple [`<dt>`](/fr/docs/Web/HTML/Element/dt)/[`<dd>`](/fr/docs/Web/HTML/Element/dd) ou l'élément [`<section>`](/fr/docs/Web/HTML/Element/section) qui est le plus proche ancêtre de `<dfn>` est considéré comme la définition du terme.
 
-{{EmbedInteractiveExample("pages/tabbed/dfn.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;dfn&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  A <dfn id="def-validator">validator</dfn> is a program that checks for syntax
+  errors in code or documents.
+</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+dfn {
+}
+```
 
 <table class="properties">
   <tbody>
