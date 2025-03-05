@@ -7,7 +7,39 @@ slug: Web/CSS/:visited
 
 **`:visited`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)会在用户访问链接后生效，出于隐私保护的原因，使用该选择器可以修改的样式非常有限。`:visited` 伪类仅适用于带有 `href` 属性的 {{htmlelement("a")}} 和 {{htmlelement("area")}} 元素。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-visited.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :visited", "tabbed-shorter")}}
+
+```css interactive-example
+p {
+  font-weight: bold;
+}
+
+a:visited {
+  color: forestgreen;
+  text-decoration-color: hotpink;
+}
+```
+
+```html interactive-example
+<p>Pages that you might have visited:</p>
+<ul>
+  <li>
+    <a href="https://developer.mozilla.org">MDN Web Docs</a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/">YouTube</a>
+  </li>
+</ul>
+<p>Pages unlikely to be in your history:</p>
+<ul>
+  <li>
+    <a href="https://developer.mozilla.org/missing-1">Random MDN page</a>
+  </li>
+  <li>
+    <a href="https://example.com/missing-1">Random Example page</a>
+  </li>
+</ul>
+```
 
 由 `:visited` 和未访问的 [`:link`](/zh-CN/docs/Web/CSS/:link) 伪类定义的样式可以被任何后续的用户动作伪类（{{cssxref(":hover")}} 或 {{cssxref(":active")}}）覆盖，只要它们的特殊性至少相等。为了适当地样式化链接，将 `:visited` 规则放置在 `:link` 规则之后但在 `:hover` 和 `:active` 规则之前，按照 _LVHA 顺序定义_：`link` — `:visited` — `:hover` — `:active`。`:visited` 伪类和 `:link` 伪类是互斥的。
 
