@@ -1,6 +1,7 @@
 ---
 title: 视口概念
-slug: Web/CSS/Viewport_concepts
+slug: Web/CSS/CSSOM_view/Viewport_concepts
+original_slug: Web/CSS/Viewport_concepts
 ---
 
 {{CSSRef}}
