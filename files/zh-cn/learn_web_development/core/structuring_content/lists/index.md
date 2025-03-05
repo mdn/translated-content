@@ -9,7 +9,7 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content")}}
 
-现在，让我们把目光转向列表。列表在生活中无处不在——从你的购物清单，到你每天回家时下意识遵循的方向列表，再到你在这些教程中遵循的说明列表！HTML 有一套方便的元素，可以让我们定义不同类型的列表，这一点你可能不会感到惊讶。在网络上，我们有三种类型的列表：无序列表、有序列表和描述列表。本课将向你展示如何使用不同类型的列表。
+现在，让我们把目光转向列表。列表在生活中无处不在——从你的购物清单，到你每天回家时下意识遵循的方向列表，再到你在这些教程中遵循的说明列表！HTML 有一套方便的元素，可以让我们定义不同类型的列表，这一点你可能不会感到惊讶。在 Web 中，我们有三种类型的列表：无序列表、有序列表和描述列表。本课将向你展示如何使用不同类型的列表。
 
 <table>
   <tbody>
@@ -56,7 +56,7 @@ l10n:
 </ul>
 ```
 
-然后就是用 {{htmlelement("li")}} 元素把每个列出的项目单独包裹起来：
+然后就是用 {{htmlelement("li")}}（list item，列表项）元素把每个列出的项目单独包裹起来：
 
 ```html
 <ul>
@@ -69,7 +69,7 @@ l10n:
 
 ### 主动学习：标记无序列表
 
-尝试编辑下面的示例来创建一个 HTML 无序列表。
+尝试编辑下面的运行实例来创建一个 HTML 无序列表。
 
 ```html hidden
 <h2>实时输出</h2>
@@ -367,7 +367,7 @@ textarea.onkeyup = () => {
 
 ## 主动学习：标记我们的食谱
 
-到了这里，你拥有了所有你需要的信息来标记我们的食谱样例。你可以选择从 [text-start.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/html-text-formatting/text-start.html) 复制一份文件并保存在本地，打开它进行编辑，或者在下面的例子中进行编辑。在本地做可能会更好，因为这样你就可以保存你正在做的工作，而如果你把它填到可编辑的例子中，在你下次打开页面时，它就会丢失。各有利弊吧。
+到了这里，你拥有了所有你需要的信息来标记我们的食谱样例。你可以选择创建一份 [text-start.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/html-text-formatting/text-start.html) 起始文件的本地拷贝并在本地完成它，或者在下面的可编辑示例中进行。在本地做可能会更好，因为这样你就可以保存你正在做的工作，而如果你把它填到可编辑的例子中，在你下次打开页面时，它就会丢失。各有利弊吧。
 
 ```html hidden
 <h2>实时输出</h2>
