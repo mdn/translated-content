@@ -55,7 +55,7 @@ l10n:
     默认取值为 `false`。
 
 - `thirdPartyCookiesAllowed`
-  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若为 `false`，则浏览器会阻止[第三方 cookie](/zh-CN/docs/Web/Privacy/Third-party_cookies)。
+  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若为 `false`，则浏览器会阻止[第三方 cookie](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies)。
 - `trackingProtectionMode`
 
   - : 浏览器的“跟踪保护”特性会阻止向已知会跨站点跟踪用户的域名发出的请求。最常见跟踪用户的站点通常是第三方广告和分析站点。该设置是一个 {{WebExtAPIRef("types.BrowserSetting")}} 对象，用于确定浏览器是否应启用跟踪保护。其底层值是一个字符串，可以取如下的三个值之一：

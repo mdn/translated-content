@@ -853,7 +853,7 @@
       "ericksonespejo"
     ]
   },
-  "Glossary/Forbidden_header_name": {
+  "Glossary/Forbidden_request_header": {
     "modified": "2019-03-23T22:02:11.147Z",
     "contributors": [
       "Luiggy",
@@ -3129,7 +3129,7 @@
       "darbalma"
     ]
   },
-  "Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help": {
+  "Learn_web_development/Getting_started/Soft_skills/Research_and_learning": {
     "modified": "2020-09-02T21:15:54.167Z",
     "contributors": [
       "Nachec"
@@ -9346,6 +9346,15 @@
       "lajaso"
     ]
   },
+  "Web/CSS/CSS_Values_and_Units/Value_definition_syntax": {
+    "modified": "2019-03-23T22:38:52.899Z",
+    "contributors": [
+      "apazacoder",
+      "Sebastianz",
+      "Guillaume-Heras",
+      "VictorAbdon"
+    ]
+  },
   "Web/CSS/CSS_animations/Using_CSS_animations": {
     "modified": "2020-07-06T16:16:21.887Z",
     "contributors": [
@@ -9411,6 +9420,15 @@
       "Mgjbot",
       "Nathymig",
       "HenryGR"
+    ]
+  },
+  "Web/CSS/CSS_cascade/Shorthand_properties": {
+    "modified": "2019-08-11T12:52:52.844Z",
+    "contributors": [
+      "blanchart",
+      "EstebanRK",
+      "IsraelFloresDGA",
+      "huichops"
     ]
   },
   "Web/CSS/CSS_cascade/Specificity": {
@@ -9921,15 +9939,6 @@
       "jdbazagaruiz"
     ]
   },
-  "Web/CSS/Shorthand_properties": {
-    "modified": "2019-08-11T12:52:52.844Z",
-    "contributors": [
-      "blanchart",
-      "EstebanRK",
-      "IsraelFloresDGA",
-      "huichops"
-    ]
-  },
   "Web/CSS/Subsequent-sibling_combinator": {
     "modified": "2019-03-23T22:39:33.429Z",
     "contributors": [
@@ -9954,15 +9963,6 @@
     "contributors": [
       "lajaso",
       "israel-munoz"
-    ]
-  },
-  "Web/CSS/Value_definition_syntax": {
-    "modified": "2019-03-23T22:38:52.899Z",
-    "contributors": [
-      "apazacoder",
-      "Sebastianz",
-      "Guillaume-Heras",
-      "VictorAbdon"
     ]
   },
   "Web/CSS/align-content": {
@@ -18193,18 +18193,6 @@
       "orasio"
     ]
   },
-  "Web/Manifest": {
-    "modified": "2020-07-18T01:40:57.131Z",
-    "contributors": [
-      "angelmlucero",
-      "ardillan",
-      "Zellius",
-      "Pablo_Bangueses",
-      "luisabarca",
-      "malonson",
-      "AlePerez92"
-    ]
-  },
   "Web/MathML": {
     "modified": "2020-10-15T21:24:26.572Z",
     "contributors": [
@@ -18255,13 +18243,13 @@
       "chrisdavidmills"
     ]
   },
-  "Web/Performance/Fundamentals": {
+  "Web/Performance/Guides/Fundamentals": {
     "modified": "2019-05-05T06:54:02.458Z",
     "contributors": [
       "c-torres"
     ]
   },
-  "Web/Performance/Optimizing_startup_performance": {
+  "Web/Performance/Guides/Optimizing_startup_performance": {
     "modified": "2019-04-04T17:42:18.542Z",
     "contributors": [
       "c-torres"
@@ -18287,6 +18275,18 @@
     "modified": "2020-09-20T03:25:41.762Z",
     "contributors": [
       "Nachec"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest": {
+    "modified": "2020-07-18T01:40:57.131Z",
+    "contributors": [
+      "angelmlucero",
+      "ardillan",
+      "Zellius",
+      "Pablo_Bangueses",
+      "luisabarca",
+      "malonson",
+      "AlePerez92"
     ]
   },
   "Web/Progressive_web_apps/Tutorials/js13kGames": {
@@ -18520,14 +18520,14 @@
       "Abelhg"
     ]
   },
-  "Web/URI/Authority/Choosing_between_www_and_non-www_URLs": {
+  "Web/URI/Guides/Choosing_between_www_and_non-www_URLs": {
     "modified": "2019-03-18T21:22:07.450Z",
     "contributors": [
       "Adorta4",
       "carlosgocereceda"
     ]
   },
-  "Web/URI/Schemes/data": {
+  "Web/URI/Reference/Schemes/data": {
     "modified": "2019-03-23T22:24:54.977Z",
     "contributors": [
       "Sergio_Gonzalez_Collado",

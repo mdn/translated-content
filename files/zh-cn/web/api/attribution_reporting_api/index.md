@@ -91,7 +91,7 @@ l10n:
 
 ## 注册和本地测试
 
-要在你的网站上使用归因报告 API，你必须在[隐私沙盒注册过程](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Enrollment)中指定它。如果不这样做，API 流程将在响应时被阻止，即响应标头将被忽略，来源和触发器将不会被注册。
+要在你的网站上使用归因报告 API，你必须在[隐私沙盒注册过程](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment)中指定它。如果不这样做，API 流程将在响应时被阻止，即响应标头将被忽略，来源和触发器将不会被注册。
 
 你仍然可以在没有注册的情况下本地测试你的归因报告 API 代码。要允许本地测试，请启用以下 Chrome 开发者标志：
 

@@ -3766,6 +3766,14 @@
       "alk03073135"
     ]
   },
+  "Web/CSS/CSS_cascade/Shorthand_properties": {
+    "modified": "2019-03-23T23:05:17.353Z",
+    "contributors": [
+      "fscholz",
+      "irvinfly",
+      "wildsky"
+    ]
+  },
   "Web/CSS/CSS_colors/Color_picker_tool": {
     "modified": "2019-03-23T22:44:42.147Z",
     "contributors": [
@@ -3872,14 +3880,6 @@
     "modified": "2019-03-23T22:59:51.482Z",
     "contributors": [
       "MashKao"
-    ]
-  },
-  "Web/CSS/Shorthand_properties": {
-    "modified": "2019-03-23T23:05:17.353Z",
-    "contributors": [
-      "fscholz",
-      "irvinfly",
-      "wildsky"
     ]
   },
   "Web/CSS/Type_selectors": {
@@ -5899,15 +5899,6 @@
       "xsfishxs"
     ]
   },
-  "Web/Manifest": {
-    "modified": "2020-11-18T03:32:37.890Z",
-    "contributors": [
-      "SphinxKnight",
-      "wifr1126q",
-      "t7yang",
-      "BwayCer"
-    ]
-  },
   "Web/MathML": {
     "modified": "2019-03-23T23:22:17.865Z",
     "contributors": [
@@ -5932,6 +5923,15 @@
     "contributors": [
       "chrisdavidmills",
       "iigmir"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest": {
+    "modified": "2020-11-18T03:32:37.890Z",
+    "contributors": [
+      "SphinxKnight",
+      "wifr1126q",
+      "t7yang",
+      "BwayCer"
     ]
   },
   "Web/SVG": {

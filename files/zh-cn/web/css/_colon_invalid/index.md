@@ -7,7 +7,39 @@ slug: Web/CSS/:invalid
 
 **`:invalid`** 是 [CSS](/zh-CN/docs/Web/CSS) [伪类选择器](/zh-CN/docs/Web/CSS/Pseudo-classes)，用来选择任何未通过[验证](/zh-CN/docs/Web/HTML/Constraint_validation)的 {{HTMLElement("form")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("input")}} 或其他{{HTMLElement("form", "表单")}}元素。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-invalid.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :invalid", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:invalid {
+  background-color: ivory;
+  border: none;
+  outline: 2px solid red;
+  border-radius: 5px;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="email">Email Address:</label>
+  <input id="email" name="email" type="email" value="na@me@example.com" />
+
+  <label for="secret">Secret Code: (lower case letters)</label>
+  <input id="secret" name="secret" type="text" value="test" pattern="[a-z]+" />
+
+  <label for="age">Your age: (18+)</label>
+  <input id="age" name="age" type="number" value="5" min="18" />
+
+  <label
+    ><input name="tos" type="checkbox" required checked /> - Do you agree to
+    ToS?</label
+  >
+</form>
+```
 
 该伪类选择器可用于突出显示用户的字段错误。
 

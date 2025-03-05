@@ -553,6 +553,7 @@
 /zh-TW/docs/Web/CSS/Common_CSS_Questions	/zh-TW/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 /zh-TW/docs/Web/CSS/Descendant_selectors	/zh-TW/docs/Web/CSS/Descendant_combinator
 /zh-TW/docs/Web/CSS/Inheritance	/zh-TW/docs/Web/CSS/CSS_cascade/Inheritance
+/zh-TW/docs/Web/CSS/Shorthand_properties	/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties
 /zh-TW/docs/Web/CSS/Syntax	/zh-TW/docs/Web/CSS/CSS_syntax/Syntax
 /zh-TW/docs/Web/CSS/border-image/border-image	/zh-TW/docs/Web/CSS/border-image
 /zh-TW/docs/Web/CSS/彈頭	/zh-TW/docs/Web/CSS/box-sizing
@@ -606,8 +607,8 @@
 /zh-TW/docs/Web/HTML/Introduction	/zh-CN/docs/Learn_web_development/Core/Structuring_content
 /zh-TW/docs/Web/HTML/區塊級元素	/zh-TW/docs/Glossary/Block-level_content
 /zh-TW/docs/Web/HTTP/Access_control_CORS	/zh-TW/docs/Web/HTTP/CORS
-/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs	/zh-TW/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
-/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs	/zh-TW/docs/Web/URI/Schemes/data
+/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs	/zh-TW/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
+/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs	/zh-TW/docs/Web/URI/Reference/Schemes/data
 /zh-TW/docs/Web/HTTP/Link_prefetching_FAQ	/zh-TW/docs/Glossary/Prefetch
 /zh-TW/docs/Web/HTTP/Response_codes	/zh-TW/docs/Web/HTTP/Status
 /zh-TW/docs/Web/HTTP/Server-Side_Access_Control	/zh-TW/docs/Web/HTTP/CORS
@@ -701,6 +702,7 @@
 /zh-TW/docs/Web/JavaScript/Typed_arrays	/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays
 /zh-TW/docs/Web/JavaScript/資料結構	/zh-TW/docs/Web/JavaScript/Data_structures
 /zh-TW/docs/Web/JavaScript/重新介紹_JavaScript	/zh-TW/docs/Web/JavaScript/Language_overview
+/zh-TW/docs/Web/Manifest	/zh-TW/docs/Web/Progressive_web_apps/Manifest
 /zh-TW/docs/Web/Media/Formats/Containers	/zh-TW/docs/Web/Media/Guides/Formats/Containers
 /zh-TW/docs/Web/OpenSearch	/zh-TW/docs/Web/XML/Guides/OpenSearch
 /zh-TW/docs/Web/Reference	/zh-TW/docs/Web
@@ -713,6 +715,8 @@
 /zh-TW/docs/Web/SVG/Tutorial/渐变	/zh-TW/docs/Web/SVG/Tutorial/Gradients
 /zh-TW/docs/Web/SVG/教學	/zh-TW/docs/Web/SVG/Tutorial
 /zh-TW/docs/Web/Tutorials	/zh-TW/docs/MDN/Tutorials
+/zh-TW/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs	/zh-TW/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
+/zh-TW/docs/Web/URI/Schemes/data	/zh-TW/docs/Web/URI/Reference/Schemes/data
 /zh-TW/docs/Web/性能	/zh-TW/docs/Web/Performance
 /zh-TW/docs/WebAPI	/zh-TW/docs/Web/API
 /zh-TW/docs/WebAPI/Battery_Status	/zh-TW/docs/Web/API/Battery_Status_API

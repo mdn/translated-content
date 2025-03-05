@@ -20,7 +20,7 @@ browser.alarms.create(
 
 - `name`{{optional_inline}}
   - : `string`. アラームの名前を指定します。デフォルト値は空の文字列です。
-    この値は {{WebExtAPIRef('alarms.get()')}} や {{WebExtAPIRef('alarms.clear()')}} で特定のアラームを参照する際に用います。また、{{WebExtAPIRef('alarms.onAlarm')}} のリスナ関数に渡すオブジェクト {{WebExtAPIRef('alarms.Alarm')}} のプロパティ `name` からも参照されます。
+    この値は {{WebExtAPIRef('alarms.get()')}} や {{WebExtAPIRef('alarms.clear()')}} で特定のアラームを参照する際に用います。また、{{WebExtAPIRef('alarms.onAlarm')}} のリスナー関数に渡すオブジェクト {{WebExtAPIRef('alarms.Alarm')}} のプロパティ `name` からも参照されます。
     アラームの名前は常に固有です（スコープはアドオンごとに区切られます）。以前そのアドオンが作成したアラーム名に一致する文字列を `name` に与えた場合、既存のアラームは削除されて発火しなくなります。
 - `alarmInfo`{{optional_inline}}
 

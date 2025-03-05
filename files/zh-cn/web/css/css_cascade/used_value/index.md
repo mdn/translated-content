@@ -53,8 +53,8 @@ CSS 2.0 只定义了[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)�
     - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/specified_value)
     - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
 
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
-  - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
 
 - [window.getComputedStyle](/zh-CN/docs/Web/API/Window/getComputedStyle)

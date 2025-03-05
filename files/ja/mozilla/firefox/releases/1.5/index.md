@@ -51,7 +51,7 @@ Firefox 1.5 での新機能のいくつかを紹介します。
 ### ネットワーク関係の変更
 
 - 証明書のプロンプトは、チャネルごとに上書き可能になりました。これは、[nsIChannel](/ja/docs/NsIChannel) の notificationCallbacks へインターフェイスリクエスタとして設定し、[nsIBadCertListener](/ja/docs/NsIBadCertListener) へインターフェイスを設定することで動作します。
-- nsIWebBrowserPersist のリスナは、[nsIInterfaceRequestor](/ja/docs/NsIInterfaceRequestor)::GetInterface を実装し、[nsIProgressEventSink](/ja/docs/NsIProgressEventSink) ([nsIWebProgressListener](/ja/docs/NsIWebProgressListener) と重複し、そう使い勝手がいいわけではありません) を含む問い合わせがくる可能性のあるチャネルのすべてのインターフェイスを提供する機会をもちました。これには、[nsIChannelEventSink](/ja/docs/NsIChannelEventSink) と [nsIBadCertListener](/ja/docs/NsIBadCertListener) も含みます。
+- nsIWebBrowserPersist のリスナーは、[nsIInterfaceRequestor](/ja/docs/NsIInterfaceRequestor)::GetInterface を実装し、[nsIProgressEventSink](/ja/docs/NsIProgressEventSink) ([nsIWebProgressListener](/ja/docs/NsIWebProgressListener) と重複し、そう使い勝手がいいわけではありません) を含む問い合わせがくる可能性のあるチャネルのすべてのインターフェイスを提供する機会をもちました。これには、[nsIChannelEventSink](/ja/docs/NsIChannelEventSink) と [nsIBadCertListener](/ja/docs/NsIBadCertListener) も含みます。
 - XMLHttpRequest を含む、拡張機能や他の necko 利用側は、cookie ヘッダーを明示的に設定でき、necko はそれを置き換えません。保存された cookie は、明示的に設定されたヘッダーと組み合わされ、保存された cookie を上書きします。
 
 ## 新しいエンドユーザー向け機能

@@ -12,7 +12,7 @@ slug: Web/API/Window/event
 > [!NOTE]
 > このプロパティは、返された `Event` が期待する値ではない状況になる場合があり、壊れやすい可能性があります。加えて `Window.event` は、{{Glossary("shadow tree", "shadow trees")}} で発生したイベントに対して不適格です。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

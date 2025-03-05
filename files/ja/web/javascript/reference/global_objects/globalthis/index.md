@@ -70,7 +70,7 @@ if (typeof globalThis.setTimeout !== "function") {
 }
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

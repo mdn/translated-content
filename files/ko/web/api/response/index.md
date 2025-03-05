@@ -46,17 +46,17 @@ l10n:
 
 ## 인스턴스 메서드
 
-- {{domxref("Request.arrayBuffer()")}}
+- {{domxref("Response.arrayBuffer()")}}
   - : 응답 본문의 {{jsxref("ArrayBuffer")}} 표현으로 이행하는 프로미스를 반환합니다.
-- {{domxref("Request.blob()")}}
+- {{domxref("Response.blob()")}}
   - : 응답 본문의 {{domxref("Blob")}} 표현으로 이행하는 프로미스를 반환합니다.
-- {{domxref("Request.clone()")}}
+- {{domxref("Response.clone()")}}
   - : `Response` 객체의 복사본을 생성합니다.
-- {{domxref("Request.formData()")}}
+- {{domxref("Response.formData()")}}
   - : 응답 본문의 {{domxref("FormData")}} 표현으로 이행하는 프로미스를 반환합니다.
-- {{domxref("Request.json()")}}
+- {{domxref("Response.json()")}}
   - : 응답 본문을 {{jsxref("JSON")}}으로 파싱한 결과로 이행하는 프로미스를 반환합니다.
-- {{domxref("Request.text()")}}
+- {{domxref("Response.text()")}}
   - : 응답 본문의 text 표현으로 이행하는 프로미스를 반환합니다.
 
 ## 예제

@@ -9,7 +9,40 @@ l10n:
 
 **`<map>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("area")}} 要素とともにイメージマップ（クリック可能なリンク領域）を定義するために使用します。
 
-{{EmbedInteractiveExample("pages/tabbed/map.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;map&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<map name="infographic">
+  <area
+    shape="poly"
+    coords="130,147,200,107,254,219,130,228"
+    href="https://developer.mozilla.org/docs/Web/HTML"
+    alt="HTML" />
+  <area
+    shape="poly"
+    coords="130,147,130,228,6,219,59,107"
+    href="https://developer.mozilla.org/docs/Web/CSS"
+    alt="CSS" />
+  <area
+    shape="poly"
+    coords="130,147,200,107,130,4,59,107"
+    href="https://developer.mozilla.org/docs/Web/JavaScript"
+    alt="JavaScript" />
+</map>
+<img
+  usemap="#infographic"
+  src="/shared-assets/images/examples/mdn-info2.png"
+  alt="MDN infographic" />
+```
+
+```css interactive-example
+img {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 232px;
+}
+```
 
 ## 属性
 

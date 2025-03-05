@@ -7,7 +7,43 @@ slug: Web/CSS/:default
 
 **`:default`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、関連する要素のグループ内で既定となっているフォーム上の要素を選択します。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-default.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :default", "tabbed-shorter")}}
+
+```css interactive-example
+label,
+input[type="submit"] {
+  display: block;
+  margin-top: 1em;
+}
+
+input:default {
+  border: none;
+  outline: 2px solid deeppink;
+}
+```
+
+```html interactive-example
+<form>
+  <p>How did you find out about us?</p>
+  <label
+    ><input name="origin" type="radio" value="google" checked /> Google</label
+  >
+  <label><input name="origin" type="radio" value="facebook" /> Facebook</label>
+  <p>Please agree to our terms:</p>
+
+  <label
+    ><input name="newsletter" type="checkbox" checked /> I want to subscribe to
+    a personalized newsletter.</label
+  >
+
+  <label
+    ><input name="privacy" type="checkbox" /> I have read and I agree to the
+    Privacy Policy.</label
+  >
+
+  <input type="submit" value="Submit form" />
+</form>
+```
 
 このセレクターが何に一致するかについては、 [HTML Standard §4.16.3 Pseudo-classes](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-default) で定義されています。 — {{htmlelement("button")}}、[`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox)、[`<input type="radio">`](/ja/docs/Web/HTML/Element/input/radio)、{{htmlelement("option")}} 要素に一致させることができます。
 

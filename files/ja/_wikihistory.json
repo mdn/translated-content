@@ -1396,7 +1396,7 @@
       "reppets"
     ]
   },
-  "Glossary/Forbidden_header_name": {
+  "Glossary/Forbidden_request_header": {
     "modified": "2020-03-23T16:05:37.818Z",
     "contributors": [
       "mfuji09",
@@ -13025,13 +13025,6 @@
       "fscholz"
     ]
   },
-  "Web/API/File_and_Directory_Entries_API/Introduction": {
-    "modified": "2020-10-15T22:11:44.225Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto"
-    ]
-  },
   "Web/API/FocusEvent": {
     "modified": "2020-10-15T21:48:28.510Z",
     "contributors": [
@@ -24441,16 +24434,6 @@
       "yyss"
     ]
   },
-  "Web/CSS/Alternative_style_sheets": {
-    "modified": "2020-10-15T21:15:43.078Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto",
-      "ethertank",
-      "Mgjbot",
-      "Kohei"
-    ]
-  },
   "Web/CSS/Attribute_selectors": {
     "modified": "2020-10-15T21:20:41.486Z",
     "contributors": [
@@ -24462,14 +24445,14 @@
       "sii"
     ]
   },
-  "Web/CSS/CSSOM_view": {
+  "Web/CSS/CSSOM_View": {
     "modified": "2020-10-15T22:00:40.104Z",
     "contributors": [
       "mfuji09"
     ]
   },
-  "Web/CSS/CSS_Functions": {
-    "modified": "2020-11-10T07:17:38.541Z",
+  "Web/CSS/CSSOM_View/Viewport_Concepts": {
+    "modified": "2020-09-22T04:57:28.828Z",
     "contributors": [
       "mfuji09"
     ]
@@ -24482,10 +24465,30 @@
       "awazo"
     ]
   },
+  "Web/CSS/CSS_Values_and_Units/CSS_Value_Functions": {
+    "modified": "2020-11-10T07:17:38.541Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
   "Web/CSS/CSS_Values_and_Units/CSS_data_types": {
     "modified": "2020-11-10T07:25:34.702Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_Values_and_Units/Value_definition_syntax": {
+    "modified": "2020-09-27T00:52:29.488Z",
+    "contributors": [
+      "mfuji09",
+      "Hakaato",
+      "SphinxKnight",
+      "Sebastianz",
+      "Prinz_Rana",
+      "Guillaume-Heras",
+      "prayash",
+      "ethertank",
+      "sosleepy"
     ]
   },
   "Web/CSS/CSS_animated_properties": {
@@ -24634,6 +24637,15 @@
       "inkusu",
       "ethertank",
       "Marsf"
+    ]
+  },
+  "Web/CSS/CSS_cascade/Shorthand_properties": {
+    "modified": "2020-08-14T11:56:14.205Z",
+    "contributors": [
+      "mfuji09",
+      "fscholz",
+      "ethertank",
+      "sosleepy"
     ]
   },
   "Web/CSS/CSS_cascade/Specificity": {
@@ -25651,15 +25663,6 @@
       "cmplstofB"
     ]
   },
-  "Web/CSS/Shorthand_properties": {
-    "modified": "2020-08-14T11:56:14.205Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "ethertank",
-      "sosleepy"
-    ]
-  },
   "Web/CSS/Subsequent-sibling_combinator": {
     "modified": "2020-10-15T21:22:37.143Z",
     "contributors": [
@@ -25689,26 +25692,6 @@
       "mpcjazz",
       "ethertank",
       "sii"
-    ]
-  },
-  "Web/CSS/Value_definition_syntax": {
-    "modified": "2020-09-27T00:52:29.488Z",
-    "contributors": [
-      "mfuji09",
-      "Hakaato",
-      "SphinxKnight",
-      "Sebastianz",
-      "Prinz_Rana",
-      "Guillaume-Heras",
-      "prayash",
-      "ethertank",
-      "sosleepy"
-    ]
-  },
-  "Web/CSS/Viewport_concepts": {
-    "modified": "2020-09-22T04:57:28.828Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "Web/CSS/Visual_formatting_model": {
@@ -29964,6 +29947,16 @@
     "modified": "2020-11-08T15:06:32.777Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "Web/HTML/Attributes/rel/alternate_stylesheet": {
+    "modified": "2020-10-15T21:15:43.078Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto",
+      "ethertank",
+      "Mgjbot",
+      "Kohei"
     ]
   },
   "Web/HTML/Attributes/rel/preload": {
@@ -41400,102 +41393,6 @@
       "YuichiNukiyama"
     ]
   },
-  "Web/Manifest": {
-    "modified": "2020-10-15T21:48:19.083Z",
-    "contributors": [
-      "mfuji09",
-      "JohnTitor",
-      "mottox2",
-      "east-pmo",
-      "sujiniku",
-      "YuichiNukiyama"
-    ]
-  },
-  "Web/Manifest/Reference/background_color": {
-    "modified": "2020-10-15T22:29:06.754Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/categories": {
-    "modified": "2020-10-15T22:29:07.021Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/description": {
-    "modified": "2020-10-15T22:29:05.707Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/display": {
-    "modified": "2020-10-15T22:29:06.946Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/icons": {
-    "modified": "2020-10-15T22:29:07.009Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/name": {
-    "modified": "2020-10-15T22:29:06.830Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/orientation": {
-    "modified": "2020-10-15T22:29:07.784Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/prefer_related_applications": {
-    "modified": "2020-10-15T22:29:07.739Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/related_applications": {
-    "modified": "2020-10-15T22:29:10.435Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/scope": {
-    "modified": "2020-10-15T22:29:08.903Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/screenshots": {
-    "modified": "2020-10-15T22:29:10.927Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/short_name": {
-    "modified": "2020-10-15T22:29:09.571Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/start_url": {
-    "modified": "2020-10-15T22:29:11.077Z",
-    "contributors": [
-      "sunya9",
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/theme_color": {
-    "modified": "2020-10-15T22:29:08.873Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/MathML": {
     "modified": "2020-10-15T21:27:32.187Z",
     "contributors": [
@@ -41789,7 +41686,7 @@
       "silverskyvicto"
     ]
   },
-  "Web/Performance/How_browsers_work": {
+  "Web/Performance/Guides/How_browsers_work": {
     "modified": "2020-05-23T02:59:41.163Z",
     "contributors": [
       "Uemmra3",
@@ -41815,6 +41712,102 @@
       "YUUKIToriyama",
       "chrisdavidmills",
       "k-kuwahara"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest": {
+    "modified": "2020-10-15T21:48:19.083Z",
+    "contributors": [
+      "mfuji09",
+      "JohnTitor",
+      "mottox2",
+      "east-pmo",
+      "sujiniku",
+      "YuichiNukiyama"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/background_color": {
+    "modified": "2020-10-15T22:29:06.754Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/categories": {
+    "modified": "2020-10-15T22:29:07.021Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/description": {
+    "modified": "2020-10-15T22:29:05.707Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/display": {
+    "modified": "2020-10-15T22:29:06.946Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/icons": {
+    "modified": "2020-10-15T22:29:07.009Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/name": {
+    "modified": "2020-10-15T22:29:06.830Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/orientation": {
+    "modified": "2020-10-15T22:29:07.784Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/prefer_related_applications": {
+    "modified": "2020-10-15T22:29:07.739Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/related_applications": {
+    "modified": "2020-10-15T22:29:10.435Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/scope": {
+    "modified": "2020-10-15T22:29:08.903Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/screenshots": {
+    "modified": "2020-10-15T22:29:10.927Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/short_name": {
+    "modified": "2020-10-15T22:29:09.571Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/start_url": {
+    "modified": "2020-10-15T22:29:11.077Z",
+    "contributors": [
+      "sunya9",
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/theme_color": {
+    "modified": "2020-10-15T22:29:08.873Z",
+    "contributors": [
+      "mfuji09"
     ]
   },
   "Web/Progressive_web_apps/Tutorials/js13kGames": {
@@ -42739,7 +42732,7 @@
       "hashedhyphen"
     ]
   },
-  "Web/URI/Authority/Choosing_between_www_and_non-www_URLs": {
+  "Web/URI/Guides/Choosing_between_www_and_non-www_URLs": {
     "modified": "2020-12-06T15:11:17.468Z",
     "contributors": [
       "mfuji09",
@@ -42748,7 +42741,7 @@
       "yyss"
     ]
   },
-  "Web/URI/Schemes/data": {
+  "Web/URI/Reference/Schemes/data": {
     "modified": "2020-12-04T15:28:57.902Z",
     "contributors": [
       "mfuji09",
@@ -42758,7 +42751,7 @@
       "sosleepy"
     ]
   },
-  "Web/URI/Schemes/resource": {
+  "Web/URI/Reference/Schemes/resource": {
     "modified": "2019-03-18T21:26:41.834Z",
     "contributors": [
       "mfuji09",
@@ -44135,6 +44128,13 @@
     "contributors": [
       "tyankatsu",
       "Marsf"
+    ]
+  },
+  "conflicting/Web/API/File_System_API": {
+    "modified": "2020-10-15T22:11:44.225Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto"
     ]
   },
   "conflicting/Web/API/FormData": {

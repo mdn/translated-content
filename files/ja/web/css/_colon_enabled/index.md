@@ -14,7 +14,37 @@ input:enabled {
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-enabled.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: :enabled", "tabbed-standard")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+*:enabled {
+  background-color: gold;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="name">Name:</label>
+  <input id="name" name="name" type="text" />
+
+  <label for="emp">Employed:</label>
+  <select id="emp" name="emp" disabled>
+    <option>No</option>
+    <option>Yes</option>
+  </select>
+
+  <label for="empDate">Employment Date:</label>
+  <input id="empDate" name="empDate" type="date" disabled />
+
+  <label for="resume">Resume:</label>
+  <input id="resume" name="resume" type="file" />
+</form>
+```
 
 ## 構文
 

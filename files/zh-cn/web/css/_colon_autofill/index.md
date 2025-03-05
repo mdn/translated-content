@@ -7,7 +7,33 @@ slug: Web/CSS/:autofill
 
 **`:autofill`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)将在浏览器自动填充表单中的 {{HTMLElement("input")}} 元素的值时匹配该 input 元素。如果用户编辑了该字段，则该类将不再匹配。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-autofill.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :autofill", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:is(:-webkit-autofill, :autofill) {
+  border: 3px solid darkorange;
+}
+```
+
+```html interactive-example
+<form>
+  <p>Click on the text box and choose any option suggested by your browser.</p>
+
+  <label for="name">Name</label>
+  <input id="name" name="name" type="text" autocomplete="name" />
+
+  <label for="email">Email Address</label>
+  <input id="email" name="email" type="email" autocomplete="email" />
+
+  <label for="country">Country</label>
+  <input id="country" name="country" type="text" autocomplete="country-name" />
+</form>
+```
 
 > [!NOTE]
 > 许多浏览器的用户代理样式表在其 `:-webkit-autofill` 样式声明中使用 `!important`，使它们无法被网页覆盖，除非通过 JavaScript 的方式。例如，Chrome 在其内部样式表中有以下内容：

@@ -79,7 +79,7 @@ decodeQueryParam("search+query%20%28correct%29");
 // 'search query (correct)'
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

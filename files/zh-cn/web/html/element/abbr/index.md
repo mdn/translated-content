@@ -13,7 +13,23 @@ l10n:
 
 可选的 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性可以在没有完整扩展情况下为缩写或首字母缩略词提供扩展。这为用户代理提供了如何宣告/显示内容的提示，并告知所有用户该缩写的含义。如果存在 `title` 属性则必须包含此完整描述且无其他内容。
 
-{{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;abbr&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  You can use <abbr>CSS</abbr> (Cascading Style Sheets) to style your
+  <abbr>HTML</abbr> (HyperText Markup Language). Using style sheets, you can
+  keep your <abbr>CSS</abbr> presentation layer and <abbr>HTML</abbr> content
+  layer separate. This is called "separation of concerns."
+</p>
+```
+
+```css interactive-example
+abbr {
+  font-style: italic;
+  color: chocolate;
+}
+```
 
 ## 属性
 

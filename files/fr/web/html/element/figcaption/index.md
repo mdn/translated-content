@@ -7,7 +7,40 @@ slug: Web/HTML/Element/figcaption
 
 L'élément HTML **`<figcaption>`** représente une légende décrivant le reste du contenu de son élément parent [`<figure>`](/fr/docs/Web/HTML/Element/figure).
 
-{{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;figcaption&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<figure>
+  <img
+    src="/shared-assets/images/examples/elephant.jpg"
+    alt="Elephant at sunset" />
+  <figcaption>An elephant at sunset</figcaption>
+</figure>
+```
+
+```css interactive-example
+figure {
+  border: thin #c0c0c0 solid;
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  max-width: 220px;
+  margin: auto;
+}
+
+img {
+  max-width: 220px;
+  max-height: 150px;
+}
+
+figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+}
+```
 
 <table class="properties">
   <tbody>
