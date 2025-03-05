@@ -157,14 +157,14 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn_web_development/Extensions/Perfor
   - {{glossary('CSSOM')}}
   - {{glossary('Domain sharding', '域名分片')}}
   - {{glossary('Effective connection type', '有效连接类型')}}
-  - {{glossary('First Contentful Paint', '首次内容绘制')}}
+  - {{glossary('First contentful paint', '首次内容绘制')}}
   - {{glossary('First CPU idle', '首次 CPU 空闲')}}
   - {{glossary('First Paint', '首次绘制')}}
   - {{glossary('HTTP')}}
   - {{glossary('HTTP_2', 'HTTP/2')}}
-  - {{glossary('Interaction to Next Paint', '交互到下次绘制')}}
+  - {{glossary('Interaction to next paint', '交互到下次绘制')}}
   - {{glossary('Jank', '卡顿')}}
-  - {{glossary('Largest Contentful Paint', '最大内容绘制')}}
+  - {{glossary('Largest contentful paint', '最大内容绘制')}}
   - {{glossary('Latency', '延迟')}}
   - {{glossary('Lazy load', '懒加载')}}
   - {{glossary('Long task', '长任务')}}
@@ -184,7 +184,7 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn_web_development/Extensions/Perfor
   - {{glossary('RAIL')}}
   - {{glossary('Real User Monitoring', '真实用户监控')}}
   - {{glossary('Resource Timing', '资源计时')}}
-  - {{glossary('Round Trip Time (RTT)', '来回通讯延迟（RTT）')}}
+  - {{glossary('Round Trip Time', '来回通讯延迟（RTT）')}}
   - {{glossary('Server Timing', '服务器计时')}}
   - {{glossary('Speculative parsing', '预解析')}}
   - {{glossary('Speed index', '速度指标')}}（和感知速度指标）
