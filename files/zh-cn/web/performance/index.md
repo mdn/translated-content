@@ -76,7 +76,7 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn_web_development/Extensions/Perfor
 - [导航计时](/zh-CN/docs/Web/API/Performance_API/Navigation_timing)
   - : 导航计时通过 [PerformanceNavigationTiming](/zh-CN/docs/Web/API/PerformanceNavigationTiming) API 提供与从一个页面导航到另一个页面相关的指标。例如，可以确定加载或卸载文档所需的时间，或记录直到 {{Glossary("DOM")}} 构建完成并可与 DOM 进行交互所需的时间。
 - [性能数据](/zh-CN/docs/Web/API/Performance_API/Performance_data)
-  - : 性能 API 不提供性能数据分析或可视化。不过，性能 API 与开发人员工具集成得很好，其数据经常被发送到分析端点和库，以记录性能指标，从而帮助您评估数据，找到影响用户的性能瓶颈。本页概述了性能 API 数据的种类、收集方式以及访问方式。
+  - : 性能 API 不提供性能数据分析或可视化。不过，性能 API 与开发人员工具集成得很好，其数据经常被发送到分析端点和库，以记录性能指标，从而帮助你评估数据，找到影响用户的性能瓶颈。本页概述了性能 API 数据的种类、收集方式以及访问方式。
 - [资源计时 API](/zh-CN/docs/Web/API/Performance_API/Resource_timing)
   - : 资源定时可以检索和分析应用程序资源加载的详细网络定时数据。例如，应用程序可以使用定时指标来确定加载特定资源（如图片或脚本）所需的时间长度，可以作为页面加载的一部分进行隐式加载，也可以通过 JavaScript 进行显式加载，例如使用 {{domxref("Window/fetch", "fetch()")}} API。
 - [服务器计时](/zh-CN/docs/Web/API/Performance_API/Server_timing)
@@ -99,7 +99,7 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn_web_development/Extensions/Perfor
 - [媒体能力 API](/zh-CN/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API)
   - : 暴露客户端设备的解码和编码能力，如是否支持媒体、播放是否流畅和省电，并提供有关播放的实时反馈，以更好地实现自适应流媒体，以及访问显示属性信息。
 - [网络信息 API](/zh-CN/docs/Web/API/Network_Information_API)
-  - : 以通用连接类型（如 “wifi”、“cellular”等）表示的系统连接信息。这可用于根据用户的连接情况选择高清内容或低清晰度内容。
+  - : 以通用连接类型（如“wifi”、“cellular”等）表示的系统连接信息。这可用于根据用户的连接情况选择高清内容或低清晰度内容。
 - [电源状态 API](/zh-CN/docs/Web/API/Battery_Status_API)
   - : **电源状态 API** 提供了系统电池电量信息，当电池电量或充电状态发生变化时，可以收到事件通知。当电池电量不足时，这可以用来调整应用程序的资源使用情况以减少电池消耗，或在电池耗尽前保存更改以防止数据丢失。
 - [Navigator.deviceMemory](/zh-CN/docs/Web/API/Navigator/deviceMemory)
