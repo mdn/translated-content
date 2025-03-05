@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-{{domxref("NavigateEvent")}} 接口的 **`scroll()`** 方法在你希望在导航处理完成之前发生该行为时可用于手动触发因响应导航而发生的浏览器驱动的滚动行为。
+{{domxref("NavigateEvent")}} 接口的 **`scroll()`** 方法可用于手动触发浏览器在导航过程中执行的滚动行为，如果希望该行为在导航处理完成之前发生，则可以调用此方法。
 
 ## 语法
 
