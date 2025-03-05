@@ -9422,6 +9422,15 @@
       "HenryGR"
     ]
   },
+  "Web/CSS/CSS_cascade/Shorthand_properties": {
+    "modified": "2019-08-11T12:52:52.844Z",
+    "contributors": [
+      "blanchart",
+      "EstebanRK",
+      "IsraelFloresDGA",
+      "huichops"
+    ]
+  },
   "Web/CSS/CSS_cascade/Specificity": {
     "modified": "2020-11-14T17:11:45.294Z",
     "contributors": [
@@ -9928,15 +9937,6 @@
     "modified": "2019-03-23T23:08:30.961Z",
     "contributors": [
       "jdbazagaruiz"
-    ]
-  },
-  "Web/CSS/Shorthand_properties": {
-    "modified": "2019-08-11T12:52:52.844Z",
-    "contributors": [
-      "blanchart",
-      "EstebanRK",
-      "IsraelFloresDGA",
-      "huichops"
     ]
   },
   "Web/CSS/Subsequent-sibling_combinator": {
