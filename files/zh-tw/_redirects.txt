@@ -553,6 +553,7 @@
 /zh-TW/docs/Web/CSS/Common_CSS_Questions	/zh-TW/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 /zh-TW/docs/Web/CSS/Descendant_selectors	/zh-TW/docs/Web/CSS/Descendant_combinator
 /zh-TW/docs/Web/CSS/Inheritance	/zh-TW/docs/Web/CSS/CSS_cascade/Inheritance
+/zh-TW/docs/Web/CSS/Shorthand_properties	/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties
 /zh-TW/docs/Web/CSS/Syntax	/zh-TW/docs/Web/CSS/CSS_syntax/Syntax
 /zh-TW/docs/Web/CSS/border-image/border-image	/zh-TW/docs/Web/CSS/border-image
 /zh-TW/docs/Web/CSS/彈頭	/zh-TW/docs/Web/CSS/box-sizing

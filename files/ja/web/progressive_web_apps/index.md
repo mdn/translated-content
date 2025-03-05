@@ -2,7 +2,7 @@
 title: プログレッシブウェブアプリ (PWA)
 slug: Web/Progressive_web_apps
 l10n:
-  sourceCommit: 835d6632d59993861a0458510402787f8a2c3cb3
+  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
 {{PWASidebar}}
@@ -64,7 +64,7 @@ PWA を構築する際に使用するウェブ技術に関するリファレン�
 
 ### ウェブアプリマニフェスト
 
-- [ウェブアプリマニフェストのメンバー](/ja/docs/Web/Manifest)
+- [ウェブアプリマニフェストのメンバー](/ja/docs/Web/Progressive_web_apps/Manifest)
   - : 開発者はウェブアプリマニフェストメンバーを使用して PWA を記述し、その外観をカスタマイズし、さらに深く OS に統合することができます。
 
 ### サービスワーカー API

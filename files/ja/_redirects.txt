@@ -277,7 +277,7 @@
 /ja/docs/CSS/Pseudo-elements-redirect-1	/ja/docs/Web/CSS/Pseudo-elements
 /ja/docs/CSS/Replaced_element	/ja/docs/Web/CSS/Replaced_element
 /ja/docs/CSS/Scaling_background_images	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
-/ja/docs/CSS/Shorthand_properties	/ja/docs/Web/CSS/Shorthand_properties
+/ja/docs/CSS/Shorthand_properties	/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties
 /ja/docs/CSS/Specificity	/ja/docs/Web/CSS/CSS_cascade/Specificity
 /ja/docs/CSS/Syntax	/ja/docs/Web/CSS/CSS_syntax/Syntax
 /ja/docs/CSS/Tutorial/Using_CSS_transforms	/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
@@ -4065,6 +4065,7 @@
 /ja/docs/Web/CSS/Reference/@viewport/zoom	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
 /ja/docs/Web/CSS/Scaling_background_images	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
+/ja/docs/Web/CSS/Shorthand_properties	/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties
 /ja/docs/Web/CSS/Specificity	/ja/docs/Web/CSS/CSS_cascade/Specificity
 /ja/docs/Web/CSS/Syntax	/ja/docs/Web/CSS/CSS_syntax/Syntax
 /ja/docs/Web/CSS/Tools	/ja/docs/conflicting/Web/CSS

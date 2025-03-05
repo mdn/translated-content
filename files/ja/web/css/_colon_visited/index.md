@@ -9,7 +9,39 @@ l10n:
 
 **`:visited`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーが訪問したことがあるリンクに適用されます。プライバシー上の理由から、このセレクターを使用して変更できるスタイルはとても限定されています。 `:visited` 擬似クラスは `href` 属性を持つ {{htmlelement("a")}} と {{htmlelement("area")}} 要素にのみ適用されます。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-visited.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :visited", "tabbed-shorter")}}
+
+```css interactive-example
+p {
+  font-weight: bold;
+}
+
+a:visited {
+  color: forestgreen;
+  text-decoration-color: hotpink;
+}
+```
+
+```html interactive-example
+<p>Pages that you might have visited:</p>
+<ul>
+  <li>
+    <a href="https://developer.mozilla.org">MDN Web Docs</a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/">YouTube</a>
+  </li>
+</ul>
+<p>Pages unlikely to be in your history:</p>
+<ul>
+  <li>
+    <a href="https://developer.mozilla.org/missing-1">Random MDN page</a>
+  </li>
+  <li>
+    <a href="https://example.com/missing-1">Random Example page</a>
+  </li>
+</ul>
+```
 
 `:visited` および、未訪問を表す [`:link`](/ja/docs/Web/CSS/:link) 擬似クラスで定義されたスタイルは、少なくとも同等の仕様を持つユーザー操作に関する擬似クラスで（{{cssxref(":hover")}} や {{cssxref(":active")}}）によって上書きされます。適切にリンクにスタイルを適用するには、 `:visited` ルールを `:link` ルールの後、 `:hover` および `:active` ルールの前に置いてください。 _LVHA 順_、 `:link` — `:visited` — `:hover` — `:active` と定義されています。 `:visited` 擬似クラスと `:link` 擬似クラスは互いに排他的です。
 

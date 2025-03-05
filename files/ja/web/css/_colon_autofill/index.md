@@ -7,7 +7,33 @@ slug: Web/CSS/:autofill
 
 **`:autofill`** は CSS の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{HTMLElement("input")}} 要素の値がブラウザーによって自動補完された時に一致します。このクラスはユーザーがフィールドを編集すると一致しなくなります。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-autofill.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :autofill", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:is(:-webkit-autofill, :autofill) {
+  border: 3px solid darkorange;
+}
+```
+
+```html interactive-example
+<form>
+  <p>Click on the text box and choose any option suggested by your browser.</p>
+
+  <label for="name">Name</label>
+  <input id="name" name="name" type="text" autocomplete="name" />
+
+  <label for="email">Email Address</label>
+  <input id="email" name="email" type="email" autocomplete="email" />
+
+  <label for="country">Country</label>
+  <input id="country" name="country" type="text" autocomplete="country-name" />
+</form>
+```
 
 > [!NOTE]
 > 多くのブラウザーのユーザーエージェントスタイルシートでは、 `:-webkit-autofill` スタイル定義に `!important` を使用しており、 JavaScript によるハックで解決しない限り、ウェブページから上書きすることができません。例えば、 Chrome では内部スタイルシートで次のようになっています。

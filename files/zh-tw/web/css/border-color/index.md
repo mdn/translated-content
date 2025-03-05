@@ -5,7 +5,7 @@ slug: Web/CSS/border-color
 
 {{CSSRef}}
 
-**`border-color`** 是一種[CSS](/zh-TW/docs/Web/CSS) [簡寫屬性](/zh-TW/docs/Web/CSS/Shorthand_properties)，用來綜合設定元件四邊框線的顏色。
+**`border-color`** 是一種[CSS](/zh-TW/docs/Web/CSS) [簡寫屬性](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)，用來綜合設定元件四邊框線的顏色。
 
 {{EmbedInteractiveExample("pages/css/border-color.html")}}
 
