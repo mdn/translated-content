@@ -17,8 +17,8 @@ l10n:
 しかしながら、"ウェブがどのように動作するか" を理解する必要があります。まず以下のトピックスを読むことをお勧めします:
 
 - [ウェブサーバーとは](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
-- [ウェブサイトを作るのにどんなソフトウェアが必要か](/ja/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
-- [ウェブサーバーにファイルをアップロードするには](/ja/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
+- [ウェブサイトを作るのにどんなソフトウェアが必要か](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
+- [ウェブサーバーにファイルをアップロードするには](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
 
 この準備で得た基本的な理解によって、この章の各モジュールを読み進めていく作業ができるようになります。
 
