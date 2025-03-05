@@ -7,7 +7,51 @@ slug: Web/HTML/Element/article
 
 **`<article>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表文件、頁面、應用程式或站點中的一個獨立組成部分，該部分旨在獨立分發或重複使用（例如，在聯合編輯中）。例如：論壇帖子、雜誌或報紙文章、部落格文章、產品卡片、用戶提交的評論、互動小工具或小裝置，或任何其他獨立的內容項目。
 
-{{EmbedInteractiveExample("pages/tabbed/article.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;article&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<article class="forecast">
+  <h1>Weather forecast for Seattle</h1>
+  <article class="day-forecast">
+    <h2>03 March 2018</h2>
+    <p>Rain.</p>
+  </article>
+  <article class="day-forecast">
+    <h2>04 March 2018</h2>
+    <p>Periods of rain.</p>
+  </article>
+  <article class="day-forecast">
+    <h2>05 March 2018</h2>
+    <p>Heavy rain.</p>
+  </article>
+</article>
+```
+
+```css interactive-example
+.forecast {
+  margin: 0;
+  padding: 0.3rem;
+  background-color: #eee;
+}
+
+.forecast > h1,
+.day-forecast {
+  margin: 0.5rem;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.day-forecast {
+  background: right/contain content-box border-box no-repeat
+    url("/shared-assets/images/examples/rain.svg") white;
+}
+
+.day-forecast > h2,
+.day-forecast > p {
+  margin: 0.2rem;
+  font-size: 1rem;
+}
+```
 
 一個文件可以包含多個文章；例如，在一個按讀者滾動顯示每篇文章文本的部落格上，每篇文章都可以包含在 `<article>` 元素中，可能包含一個或多個 `<section>`。
 

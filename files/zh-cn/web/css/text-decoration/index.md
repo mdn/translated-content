@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`text-decoration`** [CSS](/zh-CN/docs/Web/CSS) [简写](/zh-CN/docs/Web/CSS/Shorthand_properties)属性设置文本上的装饰性线条的外观。它是 {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} 和较新的 {{cssxref("text-decoration-thickness")}} 属性的缩写。
+**`text-decoration`** [CSS](/zh-CN/docs/Web/CSS) [简写](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)属性设置文本上的装饰性线条的外观。它是 {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} 和较新的 {{cssxref("text-decoration-thickness")}} 属性的缩写。
 
 {{EmbedInteractiveExample("pages/css/text-decoration.html")}}
 

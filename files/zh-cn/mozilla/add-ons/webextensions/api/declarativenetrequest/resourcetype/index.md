@@ -52,7 +52,7 @@ l10n:
 - `sub_frame`
   - : 加载到 {{HTMLElement("iframe")}} 或 {{HTMLElement("frame")}} 元素中的文档。
 - `web_manifest`
-  - : 为可以安装到主屏幕的网站加载的 [Web 应用清单](/zh-CN/docs/Web/Manifest)。
+  - : 为可以安装到主屏幕的网站加载的 [Web 应用清单](/zh-CN/docs/Web/Progressive_web_apps/Manifest)。
 - `webbundle`
   - : 发起与服务器的连接的请求，通过 Web Bundle 或[打包的网站](https://github.com/WICG/webpackage)。
 - `websocket`
@@ -64,7 +64,7 @@ l10n:
 - `xmlhttprequest`
   - : 由 {{domxref("XMLHttpRequest")}} 对象发送的请求，或通过 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 发送的请求。
 - `xslt`
-  - : 用于转换 XML 文档的 [XSLT](/zh-CN/docs/Web/XSLT) 样式表。
+  - : 用于转换 XML 文档的 [XSLT](/zh-CN/docs/Web/XML/XSLT) 样式表。
 - `other`
   - : 没被任何其他可用类型涵盖的资源。
 

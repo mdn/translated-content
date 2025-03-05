@@ -9,7 +9,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator
 
 该属性的初始值与 {{jsxref("Map.prototype.entries")}} 属性的初始值是同一个函数对象。
 
-{{EmbedInteractiveExample("pages/js/map-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype[Symbol.iterator]()")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("0", "foo");
+map1.set(1, "bar");
+
+const iterator1 = map1[Symbol.iterator]();
+
+for (const item of iterator1) {
+  console.log(item);
+}
+// Expected output: Array ["0", "foo"]
+// Expected output: Array [1, "bar"]
+```
 
 ## 语法
 

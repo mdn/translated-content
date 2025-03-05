@@ -2,7 +2,7 @@
 title: Navigator：share() 方法
 slug: Web/API/Navigator/share
 l10n:
-  sourceCommit: 91907f1383139ec2bd1d309d02ffac30b4eee757
+  sourceCommit: d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
 ---
 
 {{APIRef("Web Share API")}}{{securecontext_header}}
@@ -16,7 +16,7 @@ l10n:
 ## 语法
 
 ```js-nolint
-navigator.share(data)
+share(data)
 ```
 
 ### 参数

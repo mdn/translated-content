@@ -1,12 +1,11 @@
 ---
 title: フォームの構築方法
 slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
-original_slug: Learn/Forms/How_to_structure_a_web_form
 l10n:
-  sourceCommit: ccec5393a2b1bbddfdfc1c1d71b076c6ddd3942f
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 基本を押さえた上で、フォームの各パーツに構造と意味を提供している要素について、より詳しく見ていきましょう。
 
@@ -15,9 +14,7 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML の基本的な理解</a
-        >.
+        基本的な <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML の理解</a>。
       </td>
     </tr>
     <tr>
@@ -29,7 +26,7 @@ l10n:
   </tbody>
 </table>
 
-フォームは柔軟性があるため、[HTML](/ja/docs/Learn/HTML) で最も複雑な構造の 1 つとなっています。専用のフォーム要素と属性を使用して、あらゆる種類の基本フォームを作成できます。 HTML フォームを構築するときに正しい構造を使用すると、フォームの使用性や[アクセシビリティ](/ja/docs/Learn/Accessibility)を保証するのに役立ちます。
+フォームは柔軟性があるため、[HTML](/ja/docs/Learn_web_development/Core/Structuring_content) で最も複雑な構造の 1 つとなっています。専用のフォーム要素と属性を使用して、あらゆる種類の基本フォームを作成できます。 HTML フォームを構築するときに正しい構造を使用すると、フォームの使用性や[アクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility)を保証するのに役立ちます。
 
 ## \<form> 要素
 
@@ -79,11 +76,11 @@ l10n:
 
 この例での用途は、最も重要なものの 1 つです。一連のラジオボタンを有するたびに、それらを {{HTMLElement("fieldset")}} 要素の内部に入れ子にする必要があります。他にも用途があり、一般的に {{HTMLElement("fieldset")}} 要素はフォームを分割するために使用することもできます。長いフォームは複数のページにまたがるのが理想的ですが、フォームが長くなって単一のページに収めなければならない場合、異なるフィールドセット内に異なる関連するセクションを置くことでユーザビリティを向上させることができます。
 
-支援技術に対する影響力が大きいため、 {{HTMLElement("fieldset")}} 要素はアクセシブルなフォームを構築するための重要な要素の 1 つです。しかし、それを乱用しないことはあなたの責任です。可能であれば、フォームを作成するたびに、[スクリーンリーダーがどのように解釈するかを聞いてみる](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#スクリーンリーダー)ようにしてください。変だと感じたら、フォームの構造を改善するようにしましょう。
+支援技術に対する影響力が大きいため、 {{HTMLElement("fieldset")}} 要素はアクセシブルなフォームを構築するための重要な要素の 1 つです。しかし、それを乱用しないことはあなたの責任です。可能であれば、フォームを作成するたびに、[スクリーンリーダーがどのように解釈するかを聞いてみる](/ja/docs/Learn_web_development/Core/Accessibility/Tooling#スクリーンリーダー)ようにしてください。変だと感じたら、フォームの構造を改善するようにしましょう。
 
 ## \<label> 要素
 
-これまでの記事で見てきたように、{{HTMLElement("label")}} 要素は、HTML フォームウィジェットのラベルを定義する正式な方法です。これは、アクセシブルなフォームを作成したい場合にもっとも重要な要素です — 適切に実装された時は、スクリーンリーダーはフォーム要素のラベルと関連する指示を一緒に読み上げます。前の記事で見てきたこの例を見てみます:
+これまでの記事で見てきたように、{{HTMLElement("label")}} 要素は、HTML フォームウィジェットのラベルを定義する正式な方法です。これは、アクセシブルなフォームを作成したい場合にもっとも重要な要素です — 適切に実装された時は、スクリーンリーダーはフォーム要素のラベルと関連する指示を一緒に読み上げます。前の記事で見てきたこの例を見てみます。
 
 ```html
 <label for="name">Name:</label> <input type="text" id="name" name="user_name" />
@@ -107,7 +104,7 @@ l10n:
 
 ラベルをセットアップするもう 1 つの利点は、ユーザーがラベルをクリックするとウィジェットをアクティブにすることが、あらゆるブラウザーで可能になります。これは例えば、テキスト入力で、入力と同様にラベルをクリックしてフォーカスさせることができますし、ラジオボタンやチェックボックスで特に有用です — このコントロールのヒットエリアはとても小さく、できるだけ大きくしておくのは便利です。
 
-例えば、次の例で "I like cherry" の テキストをクリックすると選択された _taste_cherry_ チェックボックスの状態が切り替わります:
+例えば、次の例で "I like cherry" の テキストをクリックすると選択された _taste_cherry_ チェックボックスの状態が切り替わります。
 
 ```html
 <form>
@@ -179,23 +176,23 @@ l10n:
 
 サンプルでわかるように、ラベルとそのウィジェットを {{HTMLElement("ul")}} や {{HTMLElement("ol")}} リストの中の {{HTMLElement("li")}} 要素で包み込むのが一般的な慣習です。HTML リストにあるように、{{HTMLElement("p")}} 要素と {{HTMLElement("div")}} 要素も良く使われます。リストは複数のチェックボックスやラジオボタンを構造化するのに最もよく使われます。
 
-{{HTMLElement("fieldset")}} 要素に加えて、複雑なフォームの構築に HTML の見出し (例{{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}) やセクション (例 {{htmlelement("section")}}) を使うことも一般的です。
+{{HTMLElement("fieldset")}} 要素に加えて、複雑なフォームの構築に HTML の見出し (例えば {{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}) やセクション (例 {{htmlelement("section")}}) を使うことも一般的です。
 
 とりわけ、コーディングスタイルがどうあるのが心地よく、どれがアクセシブルで使いやすいフォームとなるのかを見つけるのはあなた次第です。別の機能セクションは別の {{htmlelement("section")}} 要素と、ラジオボタンを含む {{htmlelement("fieldset")}} にそれぞれ分けておくべきです。
 
 ### アクティブラーニング: フォーム構造を構築する
 
-これらのアイデアを実践し、もう少し複雑なフォーム構造、つまり支払いフォームを作成しましょう。このフォームはあなたがまだ理解していないかもしれないウィジェットタイプをいくつも含みますが、今はそのことを心配しないでください。次の記事 ([基本的なネイティブフォームコントロール](/ja/docs/Learn/Forms/Basic_native_form_controls)) でそれらがどのように機能するのかがわかります。今のところ、以下の説明に沿って説明を注意深く読み、フォームを構成するためにどのラッパー要素を使用しているか、そしてその理由を理解することから始めてください。
+これらのアイデアを実践し、もう少し複雑なフォーム構造、つまり支払いフォームを作成しましょう。このフォームはあなたがまだ理解していないかもしれないウィジェットタイプをいくつも含みますが、今はそのことを心配しないでください。次の記事 ([基本的なネイティブフォームコントロール](/ja/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)) でそれらがどのように機能するのかがわかります。今のところ、以下の説明に沿って説明を注意深く読み、フォームを構成するためにどのラッパー要素を使用しているか、そしてその理由を理解することから始めてください。
 
 1. あらかじめ、[空のテンプレートファイル](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)のローカルコピーをコンピューターの新しいディレクトリーに作成します。
 
-2. 次に、外側の {{htmlelement("form")}} 要素を追加してフォームを作成します:
+2. 次に、外側の {{htmlelement("form")}} 要素を追加してフォームを作成します。
 
    ```html-nolint
    <form>
    ```
 
-3. `<form>` タグ内に、必須フィールドにマークを付ける方法をユーザーに通知するための見出しと段落を追加します:
+3. `<form>` タグ内に、必須フィールドにマークを付ける方法をユーザーに通知するための見出しと段落を追加します。
 
    ```html-nolint
    <h1>Payment form</h1>
@@ -205,7 +202,7 @@ l10n:
    </p>
    ```
 
-4. 次に、前のエントリーの下に、より大きなコードセクションをフォームに追加します。ここでは、連絡先情報フィールドを個別の {{htmlelement("section")}} 要素内にラップしていることがわかります。さらに、2 つのラジオボタンのセットがあり、それぞれ独自のリスト ({{htmlelement("li")}}) 要素の中に入れています。最後に、2 つの標準テキスト {{htmlelement("input")}} とそれに関連する {{htmlelement("label")}} 要素があり、それぞれ {{htmlelement("p")}} の内側に含まれていて、パスワードを入力するためのパスワード入力があります。フォームにこのコードを追加してください:
+4. 次に、前のエントリーの下に、より大きなコードセクションをフォームに追加します。ここでは、連絡先情報フィールドを個別の {{htmlelement("section")}} 要素内にラップしていることがわかります。さらに、2 つのラジオボタンのセットがあり、それぞれ独自のリスト ({{htmlelement("li")}}) 要素の中に入れています。最後に、2 つの標準テキスト {{htmlelement("input")}} とそれに関連する {{htmlelement("label")}} 要素があり、それぞれ {{htmlelement("p")}} の内側に含まれていて、パスワードを入力するためのパスワード入力があります。フォームにこのコードを追加してください。
 
    ```html
    <section>
@@ -245,7 +242,7 @@ l10n:
          <span>Email: </span>
          <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="email" id="mail" name="usermail" required />
+       <input type="email" id="mail" name="user-mail" required />
      </p>
      <p>
        <label for="pwd">
@@ -262,7 +259,7 @@ l10n:
    1 つ目は、クレジットカードの種類を選択するためのドロップダウンメニュー ({{htmlelement("select")}}) です。
    2 番目は、クレジットカード番号を入力するための `tel` 型の `<input>` 要素です。`number` 型を使うこともできますが、そのスピナー UI は望ましくありません。
    最後のものは、カードの有効期限を入力するための `date` 型の `<input>` 要素です。これは、サポートしているブラウザーでは日付選択ウィジェットが表示され、サポートしていないブラウザーでは通常のテキスト入力に戻ります。
-   新しい入力型は [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)で再度紹介します。
+   新しい入力型は [HTML5 の入力型](/ja/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)で再度紹介します。
 
    前のセクションの下に次のように入力してください。
 
@@ -273,7 +270,7 @@ l10n:
        <label for="card">
          <span>Card type:</span>
        </label>
-       <select id="card" name="usercard">
+       <select id="card" name="user-card">
          <option value="visa">Visa</option>
          <option value="mc">Mastercard</option>
          <option value="amex">American Express</option>
@@ -284,7 +281,7 @@ l10n:
          <span>Card number:</span>
          <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="tel" id="number" name="cardnumber" required />
+       <input type="tel" id="number" name="card-number" required />
      </p>
      <p>
        <label for="expiration">
@@ -382,28 +379,21 @@ l10n:
    }
 
    label {
-     position: relative;
      display: inline-block;
    }
 
    p label {
      width: 100%;
    }
-
-   label em {
-     position: absolute;
-     right: 5px;
-     top: 20px;
-   }
    ```
 
-下記では完了したフォームに追加 CSS を適用しました。フォームの外観を変更したい場合は、[例](/ja/docs/Learn/Forms/How_to_structure_a_web_form/Example)からスタイルをコピーするか、[ウェブフォームのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)を参照してください。
+下記では完了したフォームに追加 CSS を適用しました。フォームの外観を変更したい場合は、[例](/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form/Example)からスタイルをコピーするか、[ウェブフォームのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)を参照してください。
 
 {{EmbedLiveSample("active_learning_building_a_form_structure","100%",620)}}
 
-## スキルをテスト
+## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: フォームの構築](/ja/docs/Learn/Forms/Test_your_skills:_Form_structure)を参照してください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: フォームの構築](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Form_structure)を参照してください。
 
 ## まとめ
 
@@ -413,10 +403,9 @@ l10n:
 
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://alistapart.com/article/sensibleforms/)
 
-{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 ### 高度なトピック
 
-- [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [フォームウィジェット向けのプロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [カスタムフォームコントロールの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [JavaScript によるフォームの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)

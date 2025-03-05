@@ -9,7 +9,55 @@ l10n:
 
 **`<ins>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書に追加されたテキストの範囲を表します。同様に、 {{HTMLElement("del")}} 要素を使用して文書から削除されたテキストの範囲を表すことができます。
 
-{{EmbedInteractiveExample("pages/tabbed/ins.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;ins&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>&ldquo;You're late!&rdquo;</p>
+<del>
+  <p>&ldquo;I apologize for the delay.&rdquo;</p>
+</del>
+<ins cite="../howtobeawizard.html" datetime="2018-05">
+  <p>&ldquo;A wizard is never late &hellip;&rdquo;</p>
+</ins>
+```
+
+```css interactive-example
+del,
+ins {
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+
+del {
+  background-color: #fbb;
+}
+
+ins {
+  background-color: #d4fcbc;
+}
+
+del::before,
+ins::before {
+  position: absolute;
+  left: 0.5rem;
+  font-family: monospace;
+}
+
+del::before {
+  content: "−";
+}
+
+ins::before {
+  content: "+";
+}
+
+p {
+  margin: 0 1.8rem 0;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+}
+```
 
 <table class="properties">
   <tbody>

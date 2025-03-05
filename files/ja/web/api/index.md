@@ -58,7 +58,7 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 - [バックグラウンドフェッチ API](/ja/docs/Web/API/Background_Fetch_API)
 - [バッジ API](/ja/docs/Web/API/Badging_API)
 - [パフォーマンス API](/ja/docs/Web/API/Performance_API)
-- [ビュー遷移 API](/ja/docs/Web/API/View_Transitions_API)
+- [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)
 - [フェッチ API](/ja/docs/Web/API/Fetch_API)
 - [プッシュ通知 API](/ja/docs/Web/API/Push_API)
 - [プレゼンテーション API](/ja/docs/Web/API/Presentation_API)

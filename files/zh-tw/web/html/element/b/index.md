@@ -7,7 +7,22 @@ slug: Web/HTML/Element/b
 
 **`<b>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於引起讀者對其內容的注意，但該內容並非特別重要。這曾被稱為粗體元素，而大多數瀏覽器仍會以粗體顯示其文字。然而，你不應該使用 `<b>` 來設置文字樣式或賦予重要性。如果你希望使文字變成粗體，應該使用 CSS {{cssxref("font-weight")}} 屬性。如果你希望表示某個元素具有特殊重要性，應該使用 {{HTMLElement("strong")}} 元素。
 
-{{EmbedInteractiveExample("pages/tabbed/b.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;b&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The two most popular science courses offered by the school are
+  <b class="term">chemistry</b> (the study of chemicals and the composition of
+  substances) and <b class="term">physics</b> (the study of the nature and
+  properties of matter and energy).
+</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+b {
+}
+```
 
 ## 屬性
 

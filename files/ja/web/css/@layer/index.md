@@ -9,7 +9,32 @@ l10n:
 
 **`@layer`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、カスケードレイヤーを宣言するために使用し、また複数のカスケードレイヤーがある場合に、優先順位を定義するためにも使用することができます。
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-layer.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
+
+```css interactive-example
+@layer module, state;
+
+@layer state {
+  .alert {
+    background-color: brown;
+  }
+  p {
+    border: medium solid limegreen;
+  }
+}
+
+@layer module {
+  .alert {
+    border: medium solid violet;
+    background-color: yellow;
+    color: white;
+  }
+}
+```
+
+```html interactive-example
+<p class="alert">Beware of the zombies</p>
+```
 
 ## 構文
 

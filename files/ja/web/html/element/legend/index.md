@@ -9,7 +9,34 @@ l10n:
 
 **`<legend>`** は [HTML](/ja/docs/Web/HTML) の要素で、その親要素である {{HTMLElement("fieldset")}} の内容のキャプションを表します。
 
-{{EmbedInteractiveExample("pages/tabbed/legend.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;legend&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<fieldset>
+  <legend>Choose your favorite monster</legend>
+
+  <input type="radio" id="kraken" name="monster" value="K" />
+  <label for="kraken">Kraken</label><br />
+
+  <input type="radio" id="sasquatch" name="monster" value="S" />
+  <label for="sasquatch">Sasquatch</label><br />
+
+  <input type="radio" id="mothman" name="monster" value="M" />
+  <label for="mothman">Mothman</label>
+</fieldset>
+```
+
+```css interactive-example
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 ## 属性
 

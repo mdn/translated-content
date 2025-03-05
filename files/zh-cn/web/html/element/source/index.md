@@ -7,9 +7,21 @@ l10n:
 
 {{HTMLSidebar}}
 
-[HTML](/zh-CN/docs/Web/HTML) **`<source>`** 元素为 {{HTMLElement("picture")}}、{{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素指定一个或多个媒体资源。它是一个{{glossary("void element", "空元素")}}，这意味着它没有内容，也不需要关闭标签。鉴于浏览器对[图像文件格式](/zh-CN/docs/Web/Media/Formats/Image_types)和[媒体文件格式](/zh-CN/docs/Web/Media/Formats)的支持不同，该元素通常用于以多种文件格式提供相同的媒体内容，以便与多种浏览器兼容。
+[HTML](/zh-CN/docs/Web/HTML) **`<source>`** 元素为 {{HTMLElement("picture")}}、{{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素指定一个或多个媒体资源。它是一个{{glossary("void element", "空元素")}}，这意味着它没有内容，也不需要关闭标签。鉴于浏览器对[图像文件格式](/zh-CN/docs/Web/Media/Guides/Formats/Image_types)和[媒体文件格式](/zh-CN/docs/Web/Media/Guides/Formats)的支持不同，该元素通常用于以多种文件格式提供相同的媒体内容，以便与多种浏览器兼容。
 
-{{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video controls width="250" height="200" muted>
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+```
 
 <table class="properties">
   <tbody>
@@ -68,7 +80,7 @@ l10n:
 
 - `type`
 
-  - : 指定[图像的 MIME 媒体类型](/zh-CN/docs/Web/Media/Formats/Image_types)或[其他媒体类型](/zh-CN/docs/Web/Media/Formats/Containers)，可选择包含 [`codecs` 参数](/zh-CN/docs/Web/Media/Formats/codecs_parameter)。
+  - : 指定[图像的 MIME 媒体类型](/zh-CN/docs/Web/Media/Guides/Formats/Image_types)或[其他媒体类型](/zh-CN/docs/Web/Media/Guides/Formats/Containers)，可选择包含 [`codecs` 参数](/zh-CN/docs/Web/Media/Guides/Formats/codecs_parameter)。
 
 - `src`
 
@@ -122,13 +134,13 @@ l10n:
 - 如果是 `<picture>` 元素，浏览器将退回到使用 `<picture>` 元素的 {{HTMLElement("img")}} 子元素中指定的图片。
 - 如果是 `<audio>` 或 `<video>` 元素，浏览器将恢复显示该元素的开头和结尾标记之间的内容。
 
-有关网页浏览器支持的图像格式以及如何选择合适格式的信息，请参阅[图像文件类型和格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)。有关可使用的视频和音频媒体类型的详细信息，请参阅[媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)。
+有关网页浏览器支持的图像格式以及如何选择合适格式的信息，请参阅[图像文件类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats/Image_types)。有关可使用的视频和音频媒体类型的详细信息，请参阅[媒体类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats)。
 
 ## 示例
 
 ### 将 `type` 属性与 `<video>` 搭配使用
 
-本例演示了如何提供不同格式的视频：WebM 适用于支持 WebM 的浏览器，Ogg 适用于支持 Ogg 的浏览器，QuickTime 适用于支持 QuickTime 的浏览器。如果浏览器不支持 `<audio>` 或 `<video>` 元素，则会显示通知。如果浏览器支持该元素，但不支持任何指定格式，则会引发 `error` 事件，默认媒体控件（如果启用）将显示错误。有关使用哪些媒体文件格式及其浏览器支持的更多详情，请参阅我们的[媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)。
+本例演示了如何提供不同格式的视频：WebM 适用于支持 WebM 的浏览器，Ogg 适用于支持 Ogg 的浏览器，QuickTime 适用于支持 QuickTime 的浏览器。如果浏览器不支持 `<audio>` 或 `<video>` 元素，则会显示通知。如果浏览器支持该元素，但不支持任何指定格式，则会引发 `error` 事件，默认媒体控件（如果启用）将显示错误。有关使用哪些媒体文件格式及其浏览器支持的更多详情，请参阅我们的[媒体类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats)。
 
 ```html
 <video controls>
@@ -195,6 +207,6 @@ l10n:
 - {{HTMLElement("audio")}} 元素
 - {{HTMLElement("picture")}} 元素
 - {{HTMLElement("video")}} 元素
-- [图像文件类型与格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)
-- [媒体类型与格式指南](/zh-CN/docs/Web/Media/Formats)
+- [图像文件类型与格式指南](/zh-CN/docs/Web/Media/Guides/Formats/Image_types)
+- [媒体类型与格式指南](/zh-CN/docs/Web/Media/Guides/Formats)
 - [Web 性能](/zh-CN/docs/Learn_web_development/Extensions/Performance)

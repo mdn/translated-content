@@ -24,10 +24,10 @@ slug: Web/Security
   - : HTTPS のページの中に通常の平文の HTTP で送られてくるコンテンツが含まれている場合、**混在コンテンツ**と呼ばれます。このようなページは部分的にしか暗号化されておらず、盗聴者や中間者攻撃者が暗号化されていないコンテンツにアクセスできてしまいます。
 - [混在コンテンツでブロックされるウェブサイトを修正するには](/ja/docs/Web/Security/Mixed_content#developer_console)
   - : ウェブサイトを HTTPS で配信している場合、ページ上にある [能動的な混在コンテンツ](/ja/docs/Web/Security/Mixed_content#mixed_active_content)はすべて既定でブロックされます。結果として、ユーザーからはそのウェブサイトが壊れているように見えるかもしれません (iframe やプラグインが読み込まれないなど)。一方、[受動的な混在コンテンツ](/ja/docs/Web/Security/Mixed_content#mixed_passivedisplay_content)は既定で表示されますが、このようなコンテンツをブロックするようにユーザーが設定することも可能です。このページでは、ウェブ開発者として知っておくべきことを説明します。
-- [安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
-  - : **安全なコンテキスト (Secure Context)** とは、(HTTPS/TLS を介して) コンテンツが安全に配信され、安全**ではない**コンテキストとの通信の可能性が限られているという合理的な確信がある `Window`、または `Worker` のことです。多くの Web API が安全なコンテキストでのみ利用可能です。安全なコンテキストの主目的は、[中間者攻撃者](https://ja.wikipedia.org/wiki/中間者攻撃)が被害者に更なる危険にさらす可能性がある強力な API にアクセスするのを防ぐことにあります。
-- [安全なコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
-  - : このリファレンスは、安全なコンテキストでのみ使用できるウェブプラットフォーム機能の一覧です。
+- [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
+  - : **保護されたコンテキスト (Secure Context)** とは、(HTTPS/TLS を介して) コンテンツが安全に配信され、安全**ではない**コンテキストとの通信の可能性が限られているという合理的な確信がある `Window`、または `Worker` のことです。多くの Web API が保護されたコンテキストでのみ利用可能です。保護されたコンテキストの主目的は、[中間者攻撃者](https://ja.wikipedia.org/wiki/中間者攻撃)が被害者に更なる危険にさらす可能性がある強力な API にアクセスするのを防ぐことにあります。
+- [保護されたコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
+  - : このリファレンスは、保護されたコンテキストでのみ使用できるウェブプラットフォーム機能の一覧です。
 - [脆弱な署名アルゴリズム](/ja/docs/Web/Security/Weak_Signature_Algorithm)
   - : {{Glossary("Digital certificate", "デジタル証明書")}}の{{Glossary("Signature/Security", "電子署名")}}に用いられるハッシュアルゴリズムの強度は、証明書のセキュリティにおいて核心的な要素です。この記事では、脆弱になったため、可能であれば避けるものと知られている署名アルゴリズムについて、いくらかの情報を提供します。
 - 301 および 302 レスポンスコードによるリダイレクト

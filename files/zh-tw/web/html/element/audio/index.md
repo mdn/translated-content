@@ -7,7 +7,21 @@ slug: Web/HTML/Element/audio
 
 **`<audio>`** [HTML](/zh-TW/docs/Web/HTML) 元素是用來在文件中嵌入音訊內容。它可以包含一個或多個音訊來源，使用 `src` 屬性或 {{HTMLElement("source")}} 元素來表示：瀏覽器將選擇最適合的音訊來源。它還可以是串流媒體的目的地，使用 {{domxref("MediaStream")}}。
 
-{{EmbedInteractiveExample("pages/tabbed/audio.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;audio&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<figure>
+  <figcaption>Listen to the T-Rex:</figcaption>
+  <audio controls src="/shared-assets/audio/t-rex-roar.mp3"></audio>
+  <a href="/shared-assets/audio/t-rex-roar.mp3"> Download audio </a>
+</figure>
+```
+
+```css interactive-example
+figure {
+  margin: 0;
+}
+```
 
 上面的範例展示了 `<audio>` 元素的簡單用法。與 {{htmlelement("img")}} 元素類似，我們在 `src` 屬性中包含要嵌入的媒體的路徑；我們可以包含其他屬性來指定信息，例如我們是否要自動播放和循環播放，是否要顯示瀏覽器的默認音訊控制項等。
 
@@ -22,7 +36,7 @@ slug: Web/HTML/Element/audio
   - : 一個布林屬性：如果指定，音訊將會在能夠開始播放時自動開始播放，而不需要等待整個音訊文件下載完成。
 
     > [!NOTE]
-    > 自動播放音訊（或帶有音訊軌道的影片）的網站對用戶來說可能是一種不愉快的體驗，因此應盡可能避免。如果必須提供自動播放功能，你應該使其成為選擇加入的（需要用戶明確啟用）。然而，在創建源將在稍後由用戶控制的媒體元素時，這可能很有用。有關如何正確使用自動播放的其他信息，請參見我們的[自動播放指南](/zh-TW/docs/Web/Media/Autoplay_guide)。
+    > 自動播放音訊（或帶有音訊軌道的影片）的網站對用戶來說可能是一種不愉快的體驗，因此應盡可能避免。如果必須提供自動播放功能，你應該使其成為選擇加入的（需要用戶明確啟用）。然而，在創建源將在稍後由用戶控制的媒體元素時，這可能很有用。有關如何正確使用自動播放的其他信息，請參見我們的[自動播放指南](/zh-TW/docs/Web/Media/Guides/Autoplay)。
 
 - `controls`
 
@@ -224,7 +238,7 @@ slug: Web/HTML/Element/audio
 
 ## 使用注意事項
 
-不同的瀏覽器不支援相同的[檔案類型](/zh-TW/docs/Web/Media/Formats/Containers)和[音訊編解碼器](/zh-TW/docs/Web/Media/Formats/Audio_codecs)，你可以在嵌套的 {{htmlelement("source")}} 元素中提供多個來源，然後瀏覽器將使用它了解的第一個：
+不同的瀏覽器不支援相同的[檔案類型](/zh-TW/docs/Web/Media/Guides/Formats/Containers)和[音訊編解碼器](/zh-TW/docs/Web/Media/Guides/Formats/Audio_codecs)，你可以在嵌套的 {{htmlelement("source")}} 元素中提供多個來源，然後瀏覽器將使用它了解的第一個：
 
 ```html
 <audio controls>
@@ -237,7 +251,7 @@ slug: Web/HTML/Element/audio
 </audio>
 ```
 
-我們提供了一個全面詳盡的[媒體檔案類型指南](/zh-TW/docs/Web/Media/Formats)和可以在其中使用的[音訊編解碼器](/zh-TW/docs/Web/Media/Formats/Audio_codecs)。還提供了一個關於支援的影片編解碼器的指南。
+我們提供了一個全面詳盡的[媒體檔案類型指南](/zh-TW/docs/Web/Media/Guides/Formats)和可以在其中使用的[音訊編解碼器](/zh-TW/docs/Web/Media/Guides/Formats/Audio_codecs)。還提供了一個關於支援的影片編解碼器的指南。
 
 其他使用注意事項：
 
@@ -259,7 +273,7 @@ slug: Web/HTML/Element/audio
 
 為了在各種瀏覽器中獲得一致的外觀和感覺，你需要創建自定義控制項；這些可以以你想要的方式標記和設置樣式，然後可以使用 JavaScript 和 {{domxref("HTMLMediaElement")}} API 來連接其功能。
 
-[影片播放器樣式基礎知識](/zh-TW/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics)提供了一些有用的樣式技巧——雖然它是在 `<video>` 的上下文中撰寫的，但其中的許多內容同樣適用於 `<audio>`。
+[影片播放器樣式基礎知識](/zh-TW/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics)提供了一些有用的樣式技巧——雖然它是在 `<video>` 的上下文中撰寫的，但其中的許多內容同樣適用於 `<audio>`。
 
 ### 檢測音軌的添加和移除
 
@@ -306,7 +320,7 @@ elem.audioTrackList.onremovetrack = (event) => {
 </audio>
 ```
 
-有關何時可以使用自動播放、如何取得使用自動播放的權限，以及使用自動播放的適當時機，請參見我們的[自動播放指南](/zh-TW/docs/Web/Media/Autoplay_guide)。
+有關何時可以使用自動播放、如何取得使用自動播放的權限，以及使用自動播放的適當時機，請參見我們的[自動播放指南](/zh-TW/docs/Web/Media/Guides/Autoplay)。
 
 ### \<audio> 元素與 \<source> 元素
 
@@ -437,12 +451,12 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
 
 - [Web 媒體技術](/zh-TW/docs/Web/Media)
 
-  - [媒體容器格式（檔案類型）](/zh-TW/docs/Web/Media/Formats/Containers)
-  - [網頁上使用的音訊編解碼器指南](/zh-TW/docs/Web/Media/Formats/Audio_codecs)
+  - [媒體容器格式（檔案類型）](/zh-TW/docs/Web/Media/Guides/Formats/Containers)
+  - [網頁上使用的音訊編解碼器指南](/zh-TW/docs/Web/Media/Guides/Formats/Audio_codecs)
 
 - [Web Audio API](/zh-TW/docs/Web/API/Web_Audio_API)
 - {{domxref("HTMLAudioElement")}}
 - {{htmlelement("source")}}
 - {{htmlelement("video")}}
 - [學習區域：視訊和音訊內容](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
-- [跨瀏覽器音訊基礎知識](/zh-TW/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)
+- [跨瀏覽器音訊基礎知識](/zh-TW/docs/Web/Media/Guides/Audio_and_video_delivery/Cross-browser_audio_basics)

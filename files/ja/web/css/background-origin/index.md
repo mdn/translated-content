@@ -74,7 +74,8 @@ background-origin: unset;
 
 ```css
 div {
-  background-image: url("logo.jpg"), url("mainback.png"); /* 背景に 2 つの画像を適用 */
+  background-image:
+    url("logo.jpg"), url("mainback.png"); /* 背景に 2 つの画像を適用 */
   background-position:
     top right,
     0px 0px;
@@ -90,7 +91,8 @@ div {
 .box {
   margin: 10px 0;
   color: #fff;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       90deg,
       rgb(131 58 180 / 100%) 0%,
       rgb(253 29 29 / 60%) 60%,

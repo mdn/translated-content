@@ -9,7 +9,21 @@ l10n:
 
 El **`Symbol.toPrimitive`** es un símbolo que especifica una propiedad con valor de función que se llama para convertir un objeto en un valor primitivo correspondiente.
 
-{{EmbedInteractiveExample("pages/js/symbol-toprimitive.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.toPrimitive")}}
+
+```js interactive-example
+const object1 = {
+  [Symbol.toPrimitive](hint) {
+    if (hint === "number") {
+      return 42;
+    }
+    return null;
+  },
+};
+
+console.log(+object1);
+// Expected output: 42
+```
 
 ## Descripción
 

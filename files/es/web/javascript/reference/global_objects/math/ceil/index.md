@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
 
 La función **`Math.ceil()`** devuelve el entero mayor o igual más próximo a un número dado.
 
-{{EmbedInteractiveExample("pages/js/math-ceil.html")}}
+{{InteractiveExample("JavaScript Demo: Math.ceil()")}}
+
+```js interactive-example
+console.log(Math.ceil(0.95));
+// Expected output: 1
+
+console.log(Math.ceil(4));
+// Expected output: 4
+
+console.log(Math.ceil(7.004));
+// Expected output: 8
+
+console.log(Math.ceil(-7.004));
+// Expected output: -7
+```
 
 ## Sintaxis
 

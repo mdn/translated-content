@@ -32,7 +32,7 @@ Django 使用 Python 語言編寫，是一個廣受歡迎、且功能完整的�
 - [Django 教學 4: Django 管理員頁面](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site)
   - : 現在我們已經為本地圖書館網站，創建了模型，我們將使用 Django 管理員頁面添加一些『真實的』的圖書數據。首先，我們將向你介紹，如何使用管理員頁面註冊模型，然後我們介紹如何登錄和創建一些數據。最後我們展示一些，進一步改進管理員頁面呈現的方法。
 - [Django 教學 5: 創建我們的首頁](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Home_page)
-  - : 我們現在可以添加代碼，來展示我們的第一個完整頁面—本地圖書館主頁，來顯示我們對每個模型類型有多少條記錄，並提供我們其他頁面的側邊欄導航鏈接。一路上，我們將獲得編寫基本 URL 地圖和視圖、從數據庫獲取記錄、以及使用模版的實踐經驗。.
+  - : 我們現在可以添加代碼，來展示我們的第一個完整頁面—本地圖書館主頁，來顯示我們對每個模型類型有多少條記錄，並提供我們其他頁面的側邊欄導航鏈接。一路上，我們將獲得編寫基本 URL 地圖和視圖、從數據庫獲取記錄、以及使用模版的實踐經驗。
 - [Django 教學 6: 通用列表與詳細視圖](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Generic_views)
   - : 本教學課程擴展了我們的本地圖書館網站，添加書籍和作者和詳細頁面。在這裡，我們將了解基於類別的通用視圖，並展示如何減少常用代碼用例的代碼量。我們還將更詳細地深入理解 URL 處理，展示如何執行基本模式匹配。
 - [Django 教學 7: 會話框架](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Sessions)

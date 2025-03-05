@@ -15,7 +15,7 @@ var enumeratorPromise = navigator.mediaDevices.enumerateDevices();
 
 ### 返回值
 
-返回一个 {{ domxref("Promise") }} 。当完成时，它接收一个 {{domxref("MediaDeviceInfo")}} 对象的数组。每个对象描述一个可用的媒体输入输出设备。.
+返回一个 {{ domxref("Promise") }}。当完成时，它接收一个 {{domxref("MediaDeviceInfo")}} 对象的数组。每个对象描述一个可用的媒体输入输出设备。
 
 如果枚举失败，promise 也会被拒绝（rejected）。
 

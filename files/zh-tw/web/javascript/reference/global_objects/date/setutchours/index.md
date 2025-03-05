@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
 
 **`setUTCHours()`** 方法根據世界時設置指定日期的小時，並回傳自 1970 年 1 月 1 日 00:00:00 UTC 至更新的 {{jsxref("Date")}} 實例所表示的時間為止，經過的毫秒數。
 
-{{EmbedInteractiveExample("pages/js/date-setutchours.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCHours()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30 GMT-3:00");
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 20 Aug 1975 02:15:30 GMT"
+
+console.log(event.getUTCHours());
+// Expected output: 2
+
+event.setUTCHours(23);
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 20 Aug 1975 23:15:30 GMT"
+```
 
 ## 語法
 

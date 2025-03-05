@@ -203,7 +203,7 @@ YYYY-MM-DDTHH:mm:ss.sssZ
   - : 地方時に基づき、指定された日時の「日」 (`1` ～ `31`) を返します。
 - {{jsxref("Date.prototype.getDay()")}}
   - : 地方時に基づき、指定された日時の「曜日」 (`0` ～ `6`) を返します。
-- {{jsxref("Date/getFullYear")}}
+- {{jsxref("Date.prototype.getFullYear()")}}
   - : 地方時に基づき、指定された日時の「年」 (4 桁の年であれば 4 桁) を返します。
 - {{jsxref("Date.prototype.getHours()")}}
   - : 地方時に基づき、指定された日時の「時」 (`0` ～ `23`) を返します。
@@ -239,7 +239,7 @@ YYYY-MM-DDTHH:mm:ss.sssZ
   - : 地方時に基づき、指定された日時の「年」 (ふつうは 2 ～ 3 桁) を返します。代わりに {{jsxref("Date/getFullYear", "getFullYear()")}} を使用してください。
 - {{jsxref("Date.prototype.setDate()")}}
   - : 地方時に基づき、指定された日時の「日」を設定します。
-- {{jsxref("Date/setFullYear")}}
+- {{jsxref("Date.prototype.setFullYear()")}}
   - : 地方時に基づき、指定された日時の「年」を完全な形 (例えば、 4 桁の年であれば 4 桁) で設定します。
 - {{jsxref("Date.prototype.setHours()")}}
   - : 地方時に基づき、指定された日時の「時」を設定します。
