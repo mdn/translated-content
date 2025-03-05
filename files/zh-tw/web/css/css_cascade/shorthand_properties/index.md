@@ -1,13 +1,13 @@
 ---
-title: 特性簡寫
-slug: Web/CSS/Shorthand_properties
+title: 簡寫屬性
+slug: Web/CSS/CSS_cascade/Shorthand_properties
 ---
 
 {{CSSRef}}
 
-**_特性簡寫_**是一種可以同時設定許多其他 CSS 屬性值的 CSS 屬性。使用特性簡寫，網頁開發者可以寫出更簡潔、且通常更具可讀性的樣式表，省時又省力。
+**_簡寫屬性_**是一種可以同時設定許多其他 CSS 屬性值的 CSS 屬性。使用簡寫屬性，Web 開發者可以寫出更簡潔、且通常更具可讀性的樣式表，省時又省力。
 
-CSS 規範中定義，特性簡寫用來組合作用於相同主題的常見性質。舉例來說，CSS {{cssxref("background")}} 這個性質是個特性簡寫，可同時定義 {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-repeat")}}, 和 {{cssxref("background-position")}} 等屬性。同樣的，最常用的字體相關屬性，可以使用 {{cssxref("font")}} 來定義；圍繞在方塊周圍的邊界，則可簡單地以 {{cssxref("margin")}} 簡寫來定義。
+CSS 規範中定義，特性簡寫用來組合作用於相同主題的常見性質。舉例來說，CSS {{cssxref("background")}} 這個性質是個特性簡寫，可同時定義 {{cssxref("background-color")}}、{{cssxref("background-image")}}、{{cssxref("background-repeat")}} 和 {{cssxref("background-position")}} 等屬性。同樣的，最常用的字體相關屬性，可以使用 {{cssxref("font")}} 來定義；圍繞在方塊周圍的邊界，則可簡單地以 {{cssxref("margin")}} 簡寫來定義。
 
 ## 需謹慎之處
 
@@ -138,13 +138,85 @@ margin-bottom: 10px;
 margin-left: 5px;
 ```
 
-等同於下面的宣告（注意值的排序是順時鐘的順序：上，右，下，左 (TRBL，可以「trouble」這個單字的諧音來記憶）
+等同於下面的宣告（注意值的排序是順時鐘的順序：上、右、下、左（TRBL，可以「trouble」這個單字的諧音來記憶）
 
 ```css
 margin: 10px 5px 10px 5px;
 ```
 
-## 相關連結
+## 簡寫屬性
 
-- [CSS Reference](/zh-TW/docs/Web/CSS/Reference)
-- Shorthand properties: {{cssxref("background")}}, {{cssxref("font")}}, {{cssxref("margin")}}, {{cssxref("border")}}, {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}}, {{cssxref("border-width")}}, {{cssxref("border-color")}}, {{cssxref("border-style")}}, {{cssxref("transition")}}, {{cssxref("transform")}}, {{cssxref("padding")}}, {{cssxref("list-style")}}, {{cssxref("border-radius")}}.
+- {{cssxref("all")}}
+- {{cssxref("animation")}}
+- {{cssxref("animation-range")}}
+- {{cssxref("background")}}
+- {{cssxref("border")}}
+- {{cssxref("border-block")}}
+- {{cssxref("border-block-end")}}
+- {{cssxref("border-block-start")}}
+- {{cssxref("border-bottom")}}
+- {{cssxref("border-color")}}
+- {{cssxref("border-image")}}
+- {{cssxref("border-inline")}}
+- {{cssxref("border-inline-end")}}
+- {{cssxref("border-inline-start")}}
+- {{cssxref("border-left")}}
+- {{cssxref("border-radius")}}
+- {{cssxref("border-right")}}
+- {{cssxref("border-style")}}
+- {{cssxref("border-top")}}
+- {{cssxref("border-width")}}
+- {{cssxref("column-rule")}}
+- {{cssxref("columns")}}
+- {{cssxref("contain-intrinsic-size")}}
+- {{cssxref("container")}}
+- {{cssxref("flex")}}
+- {{cssxref("flex-flow")}}
+- {{cssxref("font")}}
+- {{cssxref("font-synthesis")}}
+- {{cssxref("font-variant")}}
+- {{cssxref("gap")}}
+- {{cssxref("grid")}}
+- {{cssxref("grid-area")}}
+- {{cssxref("grid-column")}}
+- {{cssxref("grid-row")}}
+- {{cssxref("grid-template")}}
+- {{cssxref("inset")}}
+- {{cssxref("inset-block")}}
+- {{cssxref("inset-inline")}}
+- {{cssxref("list-style")}}
+- {{cssxref("margin")}}
+- {{cssxref("margin-block")}}
+- {{cssxref("margin-inline")}}
+- {{cssxref("mask")}}
+- {{cssxref("mask-border")}}
+- {{cssxref("offset")}}
+- {{cssxref("outline")}}
+- {{cssxref("overflow")}}
+- {{cssxref("overscroll-behavior")}}
+- {{cssxref("padding")}}
+- {{cssxref("padding-block")}}
+- {{cssxref("padding-inline")}}
+- {{cssxref("place-content")}}
+- {{cssxref("place-items")}}
+- {{cssxref("place-self")}}
+- {{cssxref("position-try")}}
+- {{cssxref("scroll-margin")}}
+- {{cssxref("scroll-margin-block")}}
+- {{cssxref("scroll-margin-inline")}}
+- {{cssxref("scroll-padding")}}
+- {{cssxref("scroll-padding-block")}}
+- {{cssxref("scroll-padding-inline")}}
+- {{cssxref("scroll-timeline")}}
+- {{cssxref("text-decoration")}}
+- {{cssxref("text-emphasis")}}
+- {{cssxref("text-wrap")}}
+- {{cssxref("transition")}}
+- {{cssxref("view-timeline")}}
+- {{cssxref("-webkit-text-stroke")}}
+- {{cssxref("-webkit-border-before")}}
+- {{cssxref("-webkit-mask-box-image")}}
+
+## 參見
+
+- [CSS 語法](/zh-TW/docs/Web/CSS/CSS_syntax/Syntax)
