@@ -2,7 +2,7 @@
 title: CSS 颜色
 slug: Web/CSS/CSS_colors
 l10n:
-  sourceCommit: 31e158bf22cece84ba7de3de3551f2807fe587d0
+  sourceCommit: 30a5a8d5c29feab27ec268c272a945702282994e
 ---
 
 {{CSSRef}}
@@ -30,10 +30,8 @@ l10n:
 
 ### At 规则和描述符
 
-- {{cssxref("@color-profile")}}
-  - [`components`](/zh-CN/docs/Web/CSS/@color-profile#描述符) 描述符
-  - [`rendering-intent`](/zh-CN/docs/Web/CSS/@color-profile#描述符) 描述符
-  - [`src`](/zh-CN/docs/Web/CSS/@color-profile#描述符) 描述符
+> [!NOTE]
+> CSS 颜色模块引入了 {{cssxref("@color-profile")}} at 规则及其 `components`、`rendering-intent` 和 `src` 描述符。这些特性尚未被任何浏览器实现。
 
 ### 函数
 
@@ -47,8 +45,10 @@ l10n:
   - [`oklch()`](/zh-CN/docs/Web/CSS/color_value/oklch)
   - [`color()`](/zh-CN/docs/Web/CSS/color_value/color)
 - [`color-mix()`](/zh-CN/docs/Web/CSS/color_value/color-mix)
-- [`device-cmyk()`](/zh-CN/docs/Web/CSS/color_value/device-cmyk)
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
+
+> [!NOTE]
+> CSS 颜色模块引入了 {{CSSXref("color_value/device-cmyk", "device-cmyk()")}} 和 `contrast-color()` 函数，它们尚未被任何浏览器实现。
 
 ### 数据类型
 
@@ -71,7 +71,8 @@ l10n:
 
 ### 接口
 
-- `CSSColorProfileRule`
+> [!NOTE]
+> CSS 颜色模块引入了 `CSSColorProfileRule`，其尚未被任何浏览器实现。
 
 ## 指南
 
