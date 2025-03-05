@@ -5,7 +5,7 @@ slug: Web/CSS/transition
 
 {{CSSRef}}
 
-**`transition`** [CSS](/zh-CN/docs/Web/CSS) 属性是 {{ cssxref("transition-property") }}、{{ cssxref("transition-duration") }}、{{ cssxref("transition-timing-function") }} 和 {{ cssxref("transition-delay") }} 的一个[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)。
+**`transition`** [CSS](/zh-CN/docs/Web/CSS) 属性是 {{ cssxref("transition-property") }}、{{ cssxref("transition-duration") }}、{{ cssxref("transition-timing-function") }} 和 {{ cssxref("transition-delay") }} 的一个[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)。
 
 {{EmbedInteractiveExample("pages/css/transition.html")}}
 

@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`text-emphasis`** 将强调标记应用到除去空格和控制字符的文本。这个值是 {{cssxref("text-emphasis-style")}} 和 {{cssxref("text-emphasis-color")}} 的[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`text-emphasis`** 将强调标记应用到除去空格和控制字符的文本。这个值是 {{cssxref("text-emphasis-style")}} 和 {{cssxref("text-emphasis-color")}} 的[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)。
 
 {{EmbedInteractiveExample("pages/css/text-emphasis.html")}}
 

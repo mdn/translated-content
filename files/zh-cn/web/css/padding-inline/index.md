@@ -5,7 +5,7 @@ slug: Web/CSS/padding-inline
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) **`padding-inline`** 定义了元素的逻辑行首和行末内边距，并根据元素的书写模式、行内方向和文本朝向对应至实体内边距。
+[CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`padding-inline`** 定义了元素的逻辑行首和行末内边距，并根据元素的书写模式、行内方向和文本朝向对应至实体内边距。
 
 {{EmbedInteractiveExample("pages/css/padding-inline.html")}}
 
