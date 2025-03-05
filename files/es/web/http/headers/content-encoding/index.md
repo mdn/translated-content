@@ -31,7 +31,7 @@ Content-Encoding: br
   - : Un formato que usa el algoritmo [Lempel-Ziv-Welch](http://en.wikipedia.org/wiki/LZW) (LZW). El nombre viene del programa _compress de_ UNIX , que implementó este algoritmo.
     Al igual que el programa compress, el cual ha desaparecido de la mayoría de distribuciones UNIX, esta codificación apenas es utilizada por los navegadores de hoy día, en parte debido a un problema de patente (la cual expiró en 2003).
 - `deflate`
-  - : Usa la estructura [zlib](http://en.wikipedia.org/wiki/Zlib) (definida en [RFC 1950](http://tools.ietf.org/html/rfc1950)), con el algoritmo de compresión [_deflate_](http://en.wikipedia.org/wiki/DEFLATE) (definido en [RFC 1951](http://tools.ietf.org/html/rfc1952)).
+  - : Usa la estructura [zlib](http://en.wikipedia.org/wiki/Zlib) (definida en [RFC 1950](https://tools.ietf.org/html/rfc1950)), con el algoritmo de compresión [_deflate_](http://en.wikipedia.org/wiki/DEFLATE) (definido en [RFC 1951](https://tools.ietf.org/html/rfc1952)).
 - `identity`
   - : Indica la función de identidad (es decir, sin compresión ni modificación). Este símbolo, excepto si se especifica explícitamente, siempre se considera aceptable.
 - `br`

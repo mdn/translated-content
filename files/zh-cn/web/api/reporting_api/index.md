@@ -29,7 +29,8 @@ Reporting API 的目的是提供一致的报告机制，该机制可用于以 Ja
 
 端点将会被分组。端点组可以协同工作以均衡负载（每个端点将接收指定比例的报告流量）和故障保护（可以指定备用端点，以便在主端点失败时使用）。
 
-> **备注：** 不保证绝对有交付报告——如果发生严重错误，报告仍然可能无法被收集。
+> [!NOTE]
+> 不保证绝对有交付报告——如果发生严重错误，报告仍然可能无法被收集。
 
 发送到端点的报告可以独立于与之相关的网站的运行进行检索，这很有用——例如，崩溃可能会导致网站崩溃并停止任何运行，但仍然可以获得报告，以便为开发人员提供有关发生原因的一些线索。
 
@@ -96,7 +97,8 @@ if (navigator.mozGetUserMedia) {
 
 ![一个快乐的大胡子男人的形象，下面显示了关于一个被弃用的功能的各种统计数据](reporting_api_example.png)
 
-> **备注：** 如果你查看[完整的源代码](https://github.com/mdn/dom-examples/blob/main/reporting-api/deprecation_report.html)，你将注意到我们调用了两次 `getUserMedia()` 方法。在我们第一次调用 {{domxref("ReportingObserver.takeRecords()")}} 之后，它返回第一个生成的报告并清空队列。因此，当按下该按钮时，只会列出第二个报告。
+> [!NOTE]
+> 如果你查看[完整的源代码](https://github.com/mdn/dom-examples/blob/main/reporting-api/deprecation_report.html)，你将注意到我们调用了两次 `getUserMedia()` 方法。在我们第一次调用 {{domxref("ReportingObserver.takeRecords()")}} 之后，它返回第一个生成的报告并清空队列。因此，当按下该按钮时，只会列出第二个报告。
 
 ## 规范
 
@@ -109,7 +111,7 @@ if (navigator.mozGetUserMedia) {
 - JavaScript API: `dom.reporting.enabled`（仅在 Nightly 版本中可用）
 - HTTP 标头：`dom.reporting.header.enabled`
 
-Chrome 浏览器也在逐步实现该特性：[有关 Chrome 实现的信息](https://developer.chrome.com/docs/capabilities/web-apis/reporting-api)。
+Chrome 浏览器也在逐步实现该特性：[有关 Chrome 实现的信息](https://developer.chrome.google.cn/docs/capabilities/web-apis/reporting-api)。
 
 ## 参见
 

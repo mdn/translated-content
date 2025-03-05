@@ -49,4 +49,4 @@ input:invalid:focus {
 - [maxlength](/es/docs/Web/HTML/Attributes/maxlength)
 - [size](/es/docs/Web/HTML/Attributes/size)
 - [pattern](/es/docs/Web/HTML/Attributes/pattern)
-- [Restricción de validación](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Restricción de validación](/es/docs/Web/HTML/Constraint_validation)

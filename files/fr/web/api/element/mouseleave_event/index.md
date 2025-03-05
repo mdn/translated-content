@@ -30,7 +30,7 @@ L'évènement **`mouseleave`** est déclenché à partir d'un {{domxref("Element
   </tbody>
 </table>
 
-`mouseleave` et [`mouseout`](/fr/docs/Web/API/Element/mouseout_event) se ressemblent mais `mouseleave` ne remonte pas dans le DOM tandis que `mouseout` remonte. `mouseleave` est donc déclenché lorsque le pointeur a quitté l'élément et tout ses descendants tandis que `mouseout` est déclenché lorsque le pointeur quitte l'élément ou l'un des descendants (quand bien même il serait toujours sur le parent).
+`mouseleave` et [`mouseout`](/fr/docs/Web/API/Element/mouseout_event) se ressemblent mais `mouseleave` ne remonte pas dans le DOM tandis que `mouseout` remonte. `mouseleave` est donc déclenché lorsque le pointeur a quitté l'élément et tous ses descendants tandis que `mouseout` est déclenché lorsque le pointeur quitte l'élément ou l'un des descendants (quand bien même il serait toujours sur le parent).
 
 ![](mouseleave.png)
 
@@ -121,7 +121,7 @@ function addListItem(text) {
 
 ## Voir aussi
 
-- [Une introduction aux évènements](/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements)
+- [Une introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
 - D'autres évènements connexes
 
   - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)

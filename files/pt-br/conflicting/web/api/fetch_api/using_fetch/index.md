@@ -8,13 +8,14 @@ original_slug: Web/API/Fetch_API/Basic_concepts
 
 A [Fetch API](/pt-BR/docs/Web/API/Fetch_API) fornece uma interface para buscar recursos (inclusive pela rede). Parecerá familiar para alguém que já tenha usado {{domxref("XMLHttpRequest")}}, mas ela fornece um conjunto de recursos mais poderoso e flexível . Este artigo expõe alguns conceitos básicos da API Fetch.
 
-> **Nota:** Este artigo será incrementado ao longo do tempo. Se você achar um conceito em Fetch que parece precisar de uma explicação melhor, informe alguém em [fórum de discussãMDN](https://discourse.mozilla-community.org/c/mdn), or [Mozilla IRC](https://wiki.mozilla.org/IRC) (#mdn room.)
+> [!NOTE]
+> Este artigo será incrementado ao longo do tempo. Se você achar um conceito em Fetch que parece precisar de uma explicação melhor, informe alguém em [fórum de discussãMDN](https://discourse.mozilla-community.org/c/mdn), or [Mozilla IRC](https://wiki.mozilla.org/IRC) (#mdn room.)
 
 ## Em poucas palavras
 
 O coração do Fetch são as abstrações da Interface do HTTP {{domxref("Request")}}, {{domxref("Response")}}, {{domxref("Headers")}}, e {{domxref("Body")}} payloads, juntamente com {{domxref("GlobalFetch.fetch","global fetch")}} método para iniciar requisições de recursos assíncronos. Como os componentes principais do HTTP são abstraidos como objetos de JavaScript, torna-se fácil APIs fazer uso das funcionalidades.
 
-[Service Workers](/pt-BR/docs/Web/API/ServiceWorker_API) é um exemplo de uma API que faz um grande uso de Fecth.
+[Service Workers](/pt-BR/docs/Web/API/Service_Worker_API) é um exemplo de uma API que faz um grande uso de Fecth.
 
 Fetch leva a assincronicidade um passo além. A API é completamente baseada em {{jsxref("Promise")}}.
 

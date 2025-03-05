@@ -7,7 +7,40 @@ slug: Web/HTML/Element/summary
 
 [HTML](/zh-CN/docs/Web/HTML) **`<summary>` 元素** 指定了 {{HTMLElement("details")}} 元素展开盒子的内容的摘要，标题或图例。点击 `<summary>` 元素可以切换父元素 `<details>` 开启和关闭的状态。
 
-{{EmbedInteractiveExample("pages/tabbed/summary.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;summary&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<details>
+  <summary>
+    I have keys but no doors. I have space but no room. You can enter but can’t
+    leave. What am I?
+  </summary>
+  A keyboard.
+</details>
+```
+
+```css interactive-example
+details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+```
 
 ## 属性
 
@@ -17,7 +50,7 @@ slug: Web/HTML/Element/summary
 
 `<summary>` 元素的内容可以是任意标题内容、纯文本，或是可以在段落内使用的 HTML 代码。
 
-`<summary>` 元素*仅*可作为 `<details>` 元素的第一个子节点。当用户在 `<summary>` 元素上点击时，父元素 `<details>` 会切换开启和关闭的状态，并会向 `<details>` 元素发送 {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} 事件，令用户得知这样的状态改变何时发生。
+`<summary>` 元素*仅*可作为 `<details>` 元素的第一个子节点。当用户在 `<summary>` 元素上点击时，父元素 `<details>` 会切换开启和关闭的状态，并会向 `<details>` 元素发送 {{domxref("HTMLElement/toggle_event", "toggle")}} 事件，令用户得知这样的状态改变何时发生。
 
 ### 默认标签文字
 
@@ -77,7 +110,8 @@ slug: Web/HTML/Element/summary
 
 目前这有一些间距问题，可以用 CSS 解决。
 
-> **警告：** 因为 `<summary>` 元素的默认角色是 [button](/zh-CN/docs/Web/Accessibility/ARIA/Roles/button_role)（它将所有角色从子元素中剥离），这个例子对于使用辅助技术的用户来说是不可行的，例如屏幕阅读器。`<h4>` 的角色将被删除，因此对这些用户来说，不会被视为标题。
+> [!WARNING]
+> 因为 `<summary>` 元素的默认角色是 [button](/zh-CN/docs/Web/Accessibility/ARIA/Roles/button_role)（它将所有角色从子元素中剥离），这个例子对于使用辅助技术的用户来说是不可行的，例如屏幕阅读器。`<h4>` 的角色将被删除，因此对这些用户来说，不会被视为标题。
 
 ### summary 元素中的 HTML
 

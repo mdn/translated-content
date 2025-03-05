@@ -9,7 +9,8 @@ l10n:
 
 **User-Agent** {{Glossary("request header", "请求标头")}}是一个特征字符串，使得服务器和对等网络能够识别发出请求的{{Glossary("user agent", "用户代理")}}的应用程序、操作系统、供应商或版本信息。
 
-> **警告：** 请阅读[使用用户代理字段进行浏览器检测](/zh-CN/docs/Web/HTTP/Browser_detection_using_the_user_agent)来了解为什么为不同的浏览器提供不同的页面或者服务通常不是一个好主意。
+> [!WARNING]
+> 请阅读[使用用户代理字段进行浏览器检测](/zh-CN/docs/Web/HTTP/Browser_detection_using_the_user_agent)来了解为什么为不同的浏览器提供不同的页面或者服务通常不是一个好主意。
 
 <table class="properties">
   <tbody>

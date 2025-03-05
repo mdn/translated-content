@@ -5,7 +5,7 @@ slug: Web/CSS/padding-right
 
 {{CSSRef}}
 
-**`padding-right`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 오른쪽에 [안쪽 여백 영역](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding-area)을 설정합니다.
+**`padding-right`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 오른쪽에 [안쪽 여백 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding-area)을 설정합니다.
 
 {{EmbedInteractiveExample("pages/css/padding-right.html")}}
 
@@ -37,7 +37,7 @@ padding-right: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 여백의 크기로 고정값 사용.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : 여백의 크기로 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 너비의 백분율 사용.
+  - : 여백의 크기로 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 너비의 백분율 사용.
 
 ### 형식 구문
 
@@ -66,5 +66,5 @@ padding-right: unset;
 
 ## 같이 보기
 
-- [CSS 기본 박스 모델 입문](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [CSS 기본 박스 모델 입문](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{cssxref("padding")}}

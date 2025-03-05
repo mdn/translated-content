@@ -30,7 +30,8 @@ slug: Web/HTTP/Headers/Sec-CH-UA-Full-Version-List
 
 标头可能包含任何位置和任何名称的“假冒”品牌。此功能旨在防止服务器直接拒绝未知用户代理，迫使用户代理在其品牌标识上撒谎。
 
-> **备注：** 这类似于 {{HTTPHeader("Sec-CH-UA")}}，但包含完整的版本号，而不是每个品牌的重要版本号。
+> [!NOTE]
+> 这类似于 {{HTTPHeader("Sec-CH-UA")}}，但包含完整的版本号，而不是每个品牌的重要版本号。
 
 ## 语法
 
@@ -81,6 +82,6 @@ Sec-CH-UA-Platform: "Linux"
 
 - [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)
 - [用户代理客户端提示 API](/zh-CN/docs/Web/API/User-Agent_Client_Hints_API)
-- [通过用户代理客户端提示改善用户隐私和开发人员体验](https://developer.chrome.com/articles/user-agent-client-hints/)（web.dev）
+- [通过用户代理客户端提示改善用户隐私和开发人员体验](https://developer.chrome.google.cn/docs/privacy-security/user-agent-client-hints)（developer.chrome.google.cn）
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP 缓存 > Vary 响应](/zh-CN/docs/Web/HTTP/Caching#vary_响应)和 {{HTTPHeader("Vary")}}

@@ -1,5 +1,5 @@
 ---
-title: "::-webkit-meter-even-less-good-value"
+title: ::-webkit-meter-even-less-good-value
 slug: Web/CSS/::-webkit-meter-even-less-good-value
 ---
 
@@ -29,7 +29,8 @@ meter::-webkit-meter-even-less-good-value {
 
 {{EmbedLiveSample('Exemples', '100%', 50)}}
 
-> **Note :** Cela fonctionnera uniquement pour les navigateurs Webkit/Blink.
+> [!NOTE]
+> Cela fonctionnera uniquement pour les navigateurs Webkit/Blink.
 
 ## Spécifications
 

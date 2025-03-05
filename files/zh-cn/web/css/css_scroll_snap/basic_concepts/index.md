@@ -33,7 +33,8 @@ slug: Web/CSS/CSS_scroll_snap/Basic_concepts
 
 使用 `mandatory` 可以创造非常一致的滚动效果——你知道浏览器总会吸附到每个指定的点。这意味着有把握相信在滚动结束时，你希望出现在屏幕顶部的东西就会出现在那里。然而，如果内容比预想的大，那么会产生问题——用户可能会沮丧地发现他们永远无法滚动并查看内容中特定的某处。因此，使用 `mandatory` 应当仔细考虑，而且只用于你知道屏幕上或滚动式区域在任何时刻有多少内容的情形。
 
-> **备注：** 如果某个子元素的内容会溢出父容器，那么请务必不要使用 `mandatory`，这是因为用户会无法把溢出内容滚入视野。
+> [!NOTE]
+> 如果某个子元素的内容会溢出父容器，那么请务必不要使用 `mandatory`，这是因为用户会无法把溢出内容滚入视野。
 
 `proximity` 值只在子元素靠近某个位置时把它吸附到这个位置，具体的距离由浏览器决定。
 
@@ -80,7 +81,7 @@ slug: Web/CSS/CSS_scroll_snap/Basic_concepts
 ## 参见
 
 - [CSS 滚动吸附](/zh-CN/docs/Web/CSS/CSS_scroll_snap)模块
-- [用 CSS 滚动吸附明确控制滚动](https://web.dev/articles/css-scroll-snap)（载于 web.dev，2021 年）
+- [用 CSS 滚动吸附明确控制滚动](https://web.developers.google.cn/articles/css-scroll-snap)（载于 web.dev，2021 年）
 - [实用 CSS 滚动吸附](https://css-tricks.com/practical-css-scroll-snapping/)（载于 CSS-Tricks，2020 年）
 - [CSS 滚动吸附](https://12daysofweb.dev/2022/css-scroll-snap/)（载于 12 Days of Web，2019 年）
 - [滚动吸附示例](https://codepen.io/collection/KpqBGW)（载于 Codepen）

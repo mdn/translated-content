@@ -90,11 +90,11 @@ Todos os objetos em JavaScript são descendentes do `Object`; todos os objetos h
 
 ### Propriedades (enUS)
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Properties')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Properties') -->
 
 ### Métodos (enUS)
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Methods')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Methods') -->
 
 ## Excluindo uma propriedade de um objeto
 

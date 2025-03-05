@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-**`content-visibility`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がその内容物をレンダリングするかどうかを制御するとともに、強力な封じ込めのセットを強制することで、必要になるまでユーザーエージェントが大量のレイアウトとレンダリングの作業を省略できるようにします。基本的に、ユーザーエージェントは、レイアウトやペイントなどの要素のレンダリング作業を必要になるまでスキップできるため、最初のページの読み込みがはるかに高速になります。
+**`content-visibility`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がその内容物をレンダリングするかどうかを制御するとともに、強力な拘束のセットを強制することで、必要になるまでユーザーエージェントが大量のレイアウトとレンダリングの作業を省略できるようにします。基本的に、ユーザーエージェントは、レイアウトやペイントなどの要素のレンダリング作業を必要になるまでスキップできるため、最初のページの読み込みがはるかに高速になります。
 
 > **メモ:** {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} イベントは、 `content-visibility: auto` が設定されている要素で、そのレンダリング作業が始まるか、またはスキップされなくなったときに発行されます。これは、アプリのコードがレンダリング処理（例えば {{htmlelement("canvas")}} に描画する）を不要なときに開始または停止する便利な方法を提供し、処理能力を節約します。
 
@@ -36,7 +36,7 @@ content-visibility: unset;
 - `hidden`
   - : 要素は[その内容物を読み飛ばします](/ja/docs/Web/CSS/CSS_containment#skips_its_contents)。読み飛ばされた内容物は、ページ内検索やタブ順序ナビゲーションなどのユーザーエージェント機能でアクセス可能になることはなく、また選択可能やフォーカス可能にもなりません。これは、内容物に `display: none` を設定することに似ています。
 - `auto`
-  - : この要素の、レイアウトの封じ込め、スタイルの封じ込め、描画の封じ込めをオンにします。要素が[ユーザーに関連](/ja/docs/Web/CSS/CSS_containment#relevant_to_the_user)していない場合、その内容の読み飛ばしも行われます。 hidden の場合とは異なり、読み飛ばされた内容物は、ページ内検索やタブ順序ナビゲーションなどのユーザーエージェント機能で通常通り利用可能となり、通常通りフォーカスや選択が可能になります。
+  - : この要素の、レイアウト拘束、スタイル拘束、描画拘束をオンにします。要素が[ユーザーに関連](/ja/docs/Web/CSS/CSS_containment#relevant_to_the_user)していない場合、その内容の読み飛ばしも行われます。 hidden の場合とは異なり、読み飛ばされた内容物は、ページ内検索やタブ順序ナビゲーションなどのユーザーエージェント機能で通常通り利用可能となり、通常通りフォーカスや選択が可能になります。
 
 ## 解説
 
@@ -53,7 +53,8 @@ content-visibility: unset;
 
 `content-visibility` を [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)でアニメーションさせる場合、 `content-visibility` に [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) を設定する必要があります。これにより、 `content-visibility` のトランジションが有効になります。
 
-> **メモ:** 要素の `content-visibility` 値をトランジションさせるとき、 [`display`](/ja/docs/Web/CSS/display#display_のアニメーション) をトランジションさせるときのように、 [`@starting-style`](/ja/docs/Web/CSS/@starting-style) ブロックを使用して、トランジションするプロパティの開始値の集合を提供する必要はありません。これは `content-visibility` が `display` のように要素を DOM から隠すのではなく、要素のコンテンツのレンダリングをスキップするだけだからです。
+> [!NOTE]
+> 要素の `content-visibility` 値をトランジションさせるとき、 [`display`](/ja/docs/Web/CSS/display#display_のアニメーション) をトランジションさせるときのように、 [`@starting-style`](/ja/docs/Web/CSS/@starting-style) ブロックを使用して、トランジションするプロパティの開始値の集合を提供する必要はありません。これは `content-visibility` が `display` のように要素を DOM から隠すのではなく、要素のコンテンツのレンダリングをスキップするだけだからです。
 
 ## 公式定義
 
@@ -276,7 +277,7 @@ function showHide() {
 
 ## 関連情報
 
-- [CSS 封じ込め](/ja/docs/Web/CSS/CSS_containment)
+- [CSS 拘束](/ja/docs/Web/CSS/CSS_containment)
 - [`contain-intrinsic-size`](/ja/docs/Web/CSS/contain-intrinsic-size)
 - {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
 - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) (web.dev)

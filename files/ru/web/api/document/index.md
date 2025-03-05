@@ -5,16 +5,16 @@ slug: Web/API/Document
 
 {{APIRef("DOM")}}
 
-Каждая веб-страница, которая загружается в браузер, имеет свой собственный объект **document**. Интерфейс документа служит точкой входа для получения содержимого веб-страницы (всего [DOM](/ru/docs/Using_the_W3C_DOM_Level_1_Core) - дерева, включая такие элементы как {{HTMLElement("body")}} и {{HTMLElement("table")}}), а также обеспечивает функциональность, которая является глобальной для документа, например, для получения URL-адреса страницы или создания новых элементов в документе).
+Каждая веб-страница, которая загружается в браузер, имеет свой собственный объект **document**. Интерфейс документа служит точкой входа для получения содержимого веб-страницы (всего [DOM](/ru/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model) - дерева, включая такие элементы как {{HTMLElement("body")}} и {{HTMLElement("table")}}), а также обеспечивает функциональность, которая является глобальной для документа, например, для получения URL-адреса страницы или создания новых элементов в документе).
 
 Объект **document** может быть получен из разных API:
 
-- Чаще всего используется прямой доступ к объекту **document** из сценариев [scripts](/ru/docs/HTML/Element/Script) которые подгружаются документом. (Этот же объект доступен как {{domxref("window.document")}}.)
+- Чаще всего используется прямой доступ к объекту **document** из сценариев [scripts](/ru/docs/Web/HTML/Element/script) которые подгружаются документом. (Этот же объект доступен как {{domxref("window.document")}}.)
 - Через свойство [`contentDocument`](/ru/docs/Web/API/HTMLIFrameElement#Properties) объекта iframe.
 - Как ответ [`responseXML`](/ru/docs/Web/API/XMLHttpRequest#responsexml) объекта [`XMLHttpRequest.`](/ru/docs/Web/API/XMLHttpRequest)
 - Доступ к документу может быть получен из элемента или узла через свойство {{domxref("Node.ownerDocument","ownerDocument")}}.
 
-В зависимости от вида документа (т.е. [HTML](/ru/docs/Web/HTML) или [XML](/ru/docs/XML)) у объекта **document** могут быть доступны разные API.
+В зависимости от вида документа (т.е. [HTML](/ru/docs/Web/HTML) или [XML](/ru/docs/Web/XML)) у объекта **document** могут быть доступны разные API.
 
 - Все объекты документов реализуют интерфейс [`Document`](https://dom.spec.whatwg.org/#interface-document) (и следовательно {{domxref("Node")}} и {{domxref("EventTarget")}} интерфейсы). Таким образом основные свойства и методы, описанные на этой странице, доступны для всех видов документов.
 - В современных браузерах некоторые документы (т.е. те, которые содержат контент `text/html`) также реализуют {{domxref("HTMLDocument")}} интерфейс.
@@ -24,7 +24,8 @@ slug: Web/API/Document
 
 ## Свойства
 
-> **Примечание:** Интерфейс `Document` наследует также интерфейсы {{domxref("Node")}} и {{domxref("EventTarget")}}.
+> [!NOTE]
+> Интерфейс `Document` наследует также интерфейсы {{domxref("Node")}} и {{domxref("EventTarget")}}.
 
 - {{domxref("Document.all")}} {{Deprecated_inline}} {{non-standard_inline}}
   - : Обеспечивает доступ ко всем элементам с идентификаторами (id). Это нестандартный интерфейс, вместо него рекомендуется использовать метод {{domxref("Document.getElementById()")}}.
@@ -143,15 +144,16 @@ The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocu
 ### Event handlers
 
 - {{domxref("Document.onpointerlockchange")}} {{experimental_inline}}
-  - : Returns the event handling code for the {{event("pointerlockchange")}} event.
+  - : Returns the event handling code for the [`pointerlockchange`](/ru/docs/Web/API/Document/pointerlockchange_event) event.
 - {{domxref("Document.onpointerlockerror")}} {{experimental_inline}}
-  - : Returns the event handling code for the {{event("pointerlockerror")}} event.
+  - : Returns the event handling code for the [`pointerlockerror`](/ru/docs/Web/API/Document/pointerlockerror_event) event.
 - {{domxref("Document.onreadystatechange")}}
   - : Returns the event handling code for the `readystatechange` event.
 
 ## Methods
 
-> **Примечание:** The `Document` interface also inherits from the {{domxref("Node")}} and {{domxref("EventTarget")}} interfaces.
+> [!NOTE]
+> The `Document` interface also inherits from the {{domxref("Node")}} and {{domxref("EventTarget")}} interfaces.
 
 - {{domxref("Document.adoptNode","Document.adoptNode(Node node)")}}
   - : Adopt node from an external document.
@@ -224,7 +226,7 @@ The `Document` interface is extended with the {{domxref("ParentNode")}} interfac
 The `Document` interface is extended with the {{domxref("XPathEvaluator")}} interface:
 
 - {{domxref("Document.createExpression","Document.createExpression(String expression, XPathNSResolver resolver)")}}
-  - : Compiles an [`XPathExpression`](/ru/docs/XPathExpression) which can then be used for (repeated) evaluations.
+  - : Compiles an [`XPathExpression`](/ru/docs/Web/API/XPathExpression) which can then be used for (repeated) evaluations.
 - {{domxref("Document.createNSResolver","Document.createNSResolver(Node resolver)")}}
   - : Creates an {{domxref("XPathNSResolver")}} object.
 - {{domxref("Document.evaluate","Document.evaluate(String expression, Node contextNode, XPathNSResolver resolver, Number type, Object result)")}}

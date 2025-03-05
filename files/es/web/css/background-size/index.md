@@ -9,7 +9,8 @@ slug: Web/CSS/background-size
 
 La propiedad CSS **`background-size`** especifica el tamaño de las imágenes de fondo.
 
-> **Nota:** Si el valor de esta propiedad no se encuentra en una propiedad abreviada {{ cssxref("background") }} esta es aplicada para los elementos después de la propiedad CSS `background-size`, el valor de esta propiedad se restablece a su valor inicial de la propiedad abreviada.
+> [!NOTE]
+> Si el valor de esta propiedad no se encuentra en una propiedad abreviada {{ cssxref("background") }} esta es aplicada para los elementos después de la propiedad CSS `background-size`, el valor de esta propiedad se restablece a su valor inicial de la propiedad abreviada.
 
 {{cssinfo}}
 
@@ -42,7 +43,8 @@ Este comportamiento ha cambiado en Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / Se
 
 Las imágenes de fondo generados a partir de elementos con {{ cssxref("-moz-element") }} (que en realidad coincide con un elemento) se tratan actualmente como las imágenes con las dimensiones del elemento, o de la zona de posicionamiento de fondo si el elemento es SVG, con la proporción propia correspondiente.
 
-> **Nota:** El comportamiento de los `<degradados>` cambió en Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5). Anteriormente se trataban como imágenes sin dimensiones intrínsecas, pero con proporciones intrínsecas idénticas a las del área de posicionamiento del fondo.
+> [!NOTE]
+> El comportamiento de los `<degradados>` cambió en Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5). Anteriormente se trataban como imágenes sin dimensiones intrínsecas, pero con proporciones intrínsecas idénticas a las del área de posicionamiento del fondo.
 
 El tamaño representado de la imagen de fondo se calcula como sigue:
 
@@ -95,6 +97,6 @@ Tenga en cuenta que particularmente no es recomendado usar una dimensión de pí
 
 ## Ver también
 
-- [CSS Reference](/es/docs/CSS/CSS_Reference)
-- [Multiple backgrounds](/es/docs/CSS/Multiple_backgrounds)
-- [Scaling background images](/es/docs/CSS/Scaling_background_images)
+- [CSS Reference](/es/docs/Web/CSS/Reference)
+- [Multiple backgrounds](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Scaling background images](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)

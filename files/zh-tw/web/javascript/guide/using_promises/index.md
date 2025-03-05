@@ -42,7 +42,7 @@ doSomething().then(successCallback, failureCallback);
 
 不如舊做法，一個 Promise 有這些保證：
 
-- Callback 不會在[當次的迴圈運行結束](/zh-TW/docs/Web/JavaScript/Event_Loop#執行到完成（run-to-completion）)前呼叫。
+- Callback 不會在[當次的迴圈運行結束](/zh-TW/docs/Web/JavaScript/Event_loop#%e5%9f%b7%e8%a1%8c%e5%88%b0%e5%ae%8c%e6%88%90%ef%bc%88run-to-completion%ef%bc%89)前呼叫。
 - Callback 用 .then 添加，在非同步運算結束*後*呼叫，像前面那樣。
 - 複 Callback 可以透過重複呼叫 .then 達成。
 
@@ -192,7 +192,7 @@ async function foo() {
 }
 ```
 
-這基於 Promise，例如 `doSomething()` 和之前一樣。你可以閱讀在[這裡](https://developers.google.com/web/fundamentals/getting-started/primers/async-functions)閱讀更多。
+這基於 Promise，例如 `doSomething()` 和之前一樣。你可以閱讀在[這裡](/zh-TW/docs/Web/JavaScript/Reference/Statements/async_function)閱讀更多。
 
 Promise 藉由捕捉所有錯誤，包含例外和程式錯誤，解決了 Callback 地獄的缺點。這是非同步運算的基本特性。
 
@@ -283,8 +283,8 @@ console.log(1); // 1, 2, 3, 4
 ## 看更多
 
 - {{jsxref("Promise.then()")}}
-- [Promises/A+ 特色](http://promisesaplus.com/)
+- [Promises/A+ 特色](https://promisesaplus.com/)
 - [Venkatraman.R - JS Promise (Part 1, Basics)](https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53)
 - [Venkatraman.R - JS Promise (Part 2 - Using Q.js, When.js and RSVP.js)](https://medium.com/@ramsunvtech/js-promise-part-2-q-js-when-js-and-rsvp-js-af596232525c#.dzlqh6ski)
 - [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)
-- [Nolan Lawson: We have a problem with promises — Common mistakes with promises](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
+- [Nolan Lawson: We have a problem with promises — Common mistakes with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)

@@ -48,8 +48,8 @@ document.addEventListener("fullscreenchange", function (event) {
 
 ## Evénements liés
 
-- [`fullscreenerror`](/fr/docs/Mozilla_event_reference/fullscreenerror)
+- [`fullscreenerror`](/fr/docs/Web/API/Document/fullscreenerror_event)
 
 ## Voir aussi
 
-- [Utilisation du mode plein écran](/fr/docs/DOM/Using_full-screen_mode)
+- [Utilisation du mode plein écran](/fr/docs/Web/API/Fullscreen_API)

@@ -2,7 +2,7 @@
 title: DOMMatrix (WebKitCSSMatrix)
 slug: Web/API/DOMMatrix
 l10n:
-  sourceCommit: 6441e1a4ab820e07b4a8b42a63329ae335f7f142
+  sourceCommit: 6197320c2f25a975ee4f7df4b8d5b48bf8d01562
 ---
 
 {{APIRef("Geometry Interfaces")}}
@@ -17,7 +17,7 @@ l10n:
 
 ## コンストラクター
 
-- {{domxref("DOMMatrix.DOMMatrix", "DOMMatrix()")}}
+- {{domxref("DOMMatrix.DOMMatrix","DOMMatrix()")}}
   - : 新しい `DOMMatrix` オブジェクトを作成します。
 
 ## インスタンスプロパティ
@@ -48,7 +48,7 @@ _このインターフェイスは {{domxref("DOMMatrixReadOnly")}} からプロ
 _このインターフェイスには以下のメソッドがあり、また {{domxref("DOMMatrixReadOnly")}} から継承したメソッドがあります。_
 
 - {{domxref("DOMMatrix.invertSelf()")}}
-  - : この行列を逆行列に変更します。逆行列にできない場合、その成分はすべて `NaN` に設定され、 {{domxref("DOMMatrix.is2D", "is2D")}} は `false` を返します。
+  - : この行列を逆行列に変更します。逆行列にできない場合、その成分はすべて `NaN` に設定され、[`is2D`](/ja/docs/Web/API/DOMMatrixReadOnly#is2d) は `false` を返します。
 - {{domxref("DOMMatrix.multiplySelf()")}}
   - : 指定した `DOMMatrix` と後乗算することで、行列を変更します。これは点積 `A⋅B` と等価であり、行列 `A` は入力行列、 `B` はメソッドへの入力として指定された行列です。自分自身を返します。
 - {{domxref("DOMMatrix.preMultiplySelf()")}}
@@ -83,7 +83,7 @@ _このインターフェイスは {{domxref("DOMMatrixReadOnly")}} からメソ
 - {{domxref("DOMMatrix.fromFloat64Array", "fromFloat64Array()")}}
   - : 倍精度（64 ビット）浮動小数点値の配列が指定された場合、変更可能な新しい `DOMMatrix` オブジェクトを作成します。配列に 6 つの値がある場合、結果は 2D 行列になり、配列に 16 個の値がある場合、結果は 3D 行列になります。そうでない場合、 {{jsxref("TypeError")}} 例外が発生します。
 - {{domxref("DOMMatrix.fromMatrix", "fromMatrix()")}}
-  - : 既存の行列、あるいはそのプロパティの値を提供する {{domxref("DOMMatrixInit")}} 辞書が指定された場合、新しい変更可能な `DOMMatrix` オブジェクトを作成します。
+  - : 既存の行列、あるいはそのプロパティの値を提供するオブジェクトが指定された場合、新しい変更可能な `DOMMatrix` オブジェクトを作成します。
 
 ## 使用上の注意
 
@@ -91,7 +91,11 @@ _このインターフェイスは {{domxref("DOMMatrixReadOnly")}} からメソ
 
 4×4 の抽象行列を構成する 16 個の要素（m_11 から m_44）の位置を示します。
 
-<math display="block"><semantics><mrow><mo>[</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>m</mi><mn>11</mn></msub></mtd><mtd><msub><mi>m</mi><mn>21</mn></msub></mtd><mtd><msub><mi>m</mi><mn>31</mn></msub></mtd><mtd><msub><mi>m</mi><mn>41</mn></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mn>12</mn></msub></mtd><mtd><msub><mi>m</mi><mn>22</mn></msub></mtd><mtd><msub><mi>m</mi><mn>32</mn></msub></mtd><mtd><msub><mi>m</mi><mn>42</mn></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mn>13</mn></msub></mtd><mtd><msub><mi>m</mi><mn>23</mn></msub></mtd><mtd><msub><mi>m</mi><mn>33</mn></msub></mtd><mtd><msub><mi>m</mi><mn>43</mn></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mn>14</mn></msub></mtd><mtd><msub><mi>m</mi><mn>24</mn></msub></mtd><mtd><msub><mi>m</mi><mn>34</mn></msub></mtd><mtd><msub><mi>m</mi><mn>44</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left [ \begin{matrix} m_{11} &#x26; m_{21} &#x26; m_{31} &#x26; m_{41} \\ m_{12} &#x26; m_{22} &#x26; m_{32} &#x26; m_{42} \\ m_{13} &#x26; m_{23} &#x26; m_{33} &#x26; m_{43} \\ m_{14} &#x26; m_{24} &#x26; m_{34} &#x26; m_{44} \end{matrix} \right ]</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mo>[</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>m</mi><mn>11</mn></msub></mtd><mtd><msub><mi>m</mi><mn>21</mn></msub></mtd><mtd><msub><mi>m</mi><mn>31</mn></msub></mtd><mtd><msub><mi>m</mi><mn>41</mn></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mn>12</mn></msub></mtd><mtd><msub><mi>m</mi><mn>22</mn></msub></mtd><mtd><msub><mi>m</mi><mn>32</mn></msub></mtd><mtd><msub><mi>m</mi><mn>42</mn></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mn>13</mn></msub></mtd><mtd><msub><mi>m</mi><mn>23</mn></msub></mtd><mtd><msub><mi>m</mi><mn>33</mn></msub></mtd><mtd><msub><mi>m</mi><mn>43</mn></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mn>14</mn></msub></mtd><mtd><msub><mi>m</mi><mn>24</mn></msub></mtd><mtd><msub><mi>m</mi><mn>34</mn></msub></mtd><mtd><msub><mi>m</mi><mn>44</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left [ \begin{matrix} m_{11} & m_{21} & m_{31} & m_{41} \\ m_{12} & m_{22} & m_{32} & m_{42} \\ m_{13} & m_{23} & m_{33} & m_{43} \\ m_{14} & m_{24} & m_{34} & m_{44} \end{matrix} \right ]</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
 `DOMMatrix` インターフェイスは、マークアップ内のすべての行列に使用することを意図して設計されています。
 
@@ -99,12 +103,10 @@ _このインターフェイスは {{domxref("DOMMatrixReadOnly")}} からメソ
 
 {{Specifications}}
 
-## ブラウザー互換性
+## ブラウザーの互換性
 
 {{Compat}}
 
 ## 関連情報
 
-- [`MSCSSMatrix` documentation on MSDN](<https://msdn.microsoft.com/ja/library/ie/hh772390(v=vs.85).aspx>)
-- [`WebKitCSSMatrix` documentation at Safari Developer Library](https://developer.apple.com/library/safari/documentation/AudioVideo/Reference/WebKitCSSMatrixClassReference/index.html)
-- [Mozilla bug 717722: implement `(WebKit)CSSMatrix()`](https://bugzilla.mozilla.org/show_bug.cgi?id=717722)
+- 変更不可能な相当品である {{domxref("DOMMatrixReadOnly")}}

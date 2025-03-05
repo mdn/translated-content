@@ -11,9 +11,9 @@ slug: Web/Progressive_web_apps/Guides/Best_practices
 
 ## 适配所有浏览器
 
-你的 PWA 基于 Web 技术。这意味着除了可以安装在设备上之外，PWA 也可以在 Web 浏览器中运行。为了确保兼容性，非常重要的是在各种浏览器和操作系统上[测试你的应用](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)。
+你的 PWA 基于 Web 技术。这意味着除了可以安装在设备上之外，PWA 也可以在 Web 浏览器中运行。为了确保兼容性，非常重要的是在各种浏览器和操作系统上[测试你的应用](/zh-CN/docs/Learn_web_development/Extensions/Testing)。
 
-考虑到用户可能使用的各种浏览器，满足广泛的潜在用户需求。使用[特性检测](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)可以让你为最广泛的受众提供可用的体验。
+考虑到用户可能使用的各种浏览器，满足广泛的潜在用户需求。使用[特性检测](/zh-CN/docs/Learn_web_development/Extensions/Testing/Feature_detection)可以让你为最广泛的受众提供可用的体验。
 
 功能检测还有助于实现{{Glossary("Progressive Enhancement", "渐进增强")}}，这是一种设计理念，可以让尽可能多的用户获得出色的体验。
 
@@ -25,7 +25,7 @@ slug: Web/Progressive_web_apps/Guides/Best_practices
 
 类似于在各种浏览器上测试你的应用程序的重要性，跨设备测试也能确保你的应用能覆盖到更广泛的用户群体。
 
-对于 PWA 来说，[响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)对于确保任何屏幕大小的设备都能访问内容至关重要。用户都应能不受其设备屏幕大小的限制而访问所有的功能和内容。通过对不同视口大小重新排列内容，你可以优先显示重要的数据和操作。
+对于 PWA 来说，[响应式设计](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)对于确保任何屏幕大小的设备都能访问内容至关重要。用户都应能不受其设备屏幕大小的限制而访问所有的功能和内容。通过对不同视口大小重新排列内容，你可以优先显示重要的数据和操作。
 
 确保用户可以通过任何访问你的内容的方式与你的应用程序进行交互。支持键盘和鼠标，以及触摸或触控笔输入方法。确保所有应用程序功能都可以通过任何输入方式访问。
 
@@ -78,11 +78,11 @@ slug: Web/Progressive_web_apps/Guides/Best_practices
 用户期望安装的 PWA 与任何安装的特定平台应用程序一样运行。为了提供用户期望的类似应用的体验，你可以以以下方式将你的应用程序与操作系统集成：
 
 - 使用[通知 API](/zh-CN/docs/Web/API/Notifications_API) 向用户设备发送通知。
-- 使用 [`file_handlers`](/zh-CN/docs/Web/Manifest/file_handlers) Web 应用清单成员处理文件。
+- 使用 [`file_handlers`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/file_handlers) Web 应用清单成员处理文件。
 - 在应用图标上[显示标记（badge）](/zh-CN/docs/Web/Progressive_web_apps/How_to/Display_badge_on_app_icon)。
 - 启用[应用程序之间的数据共享](/zh-CN/docs/Web/Progressive_web_apps/How_to/Share_data_between_apps)。
 
-许多 [Web 应用程序清单成员](/zh-CN/docs/Web/Manifest#成员)可用于自定义应用程序在用户设备上的显示方式，并在操作系统中更深入地集成。
+许多 [Web 应用程序清单成员](/zh-CN/docs/Web/Progressive_web_apps/Manifest#成员)可用于自定义应用程序在用户设备上的显示方式，并在操作系统中更深入地集成。
 
 #### 应用的外观和感觉
 
@@ -99,5 +99,5 @@ slug: Web/Progressive_web_apps/Guides/Best_practices
 
 ## 参见
 
-- [如何创建一个良好的渐进式 Web 应用](https://web.dev/articles/pwa-checklist)，来自 web.dev（2022）。
+- [如何创建一个良好的渐进式 Web 应用](https://web.developers.google.cn/articles/pwa-checklist)，来自 web.developers.google.cn（2022）。
 - [渐进式 Web 应用的最佳实践](https://learn.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/best-practices)，来自 learn.microsoft.com（2023）。

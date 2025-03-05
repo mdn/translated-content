@@ -5,7 +5,7 @@ slug: Web/CSS/@media/width
 
 {{CSSRef}}
 
-**`width`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}の幅 (または[ページ付きメディア](/ja/docs/Web/CSS/Paged_media)のページボックスの幅) をテストするために使用することができます。
+**`width`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}の幅 (または[ページ付きメディア](/ja/docs/Web/CSS/CSS_paged_media)のページボックスの幅) をテストするために使用することができます。
 
 ## 構文
 
@@ -58,5 +58,5 @@ slug: Web/CSS/@media/width
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/ja/docs/Web/CSS/@media)

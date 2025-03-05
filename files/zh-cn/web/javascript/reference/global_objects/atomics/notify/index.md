@@ -9,7 +9,8 @@ l10n:
 
 **`Atomics.notify()`** 静态方法唤醒一些在等待队列中休眠的代理。
 
-> **备注：** 此操作仅适用于基于 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}} 视图。对于非共享的 `ArrayBuffer` 对象，其将返回 `0`。
+> [!NOTE]
+> 此操作仅适用于基于 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}} 视图。对于非共享的 `ArrayBuffer` 对象，其将返回 `0`。
 
 ## 语法
 

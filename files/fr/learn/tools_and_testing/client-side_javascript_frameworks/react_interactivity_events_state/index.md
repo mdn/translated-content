@@ -48,7 +48,8 @@ Avec React, nous écrivons des gestionnaires d'évènements directement sur les 
 </button>
 ```
 
-> **Note :** Cela peut sembler contre-intuitif au regard des bonnes pratiques qui déconseillent l'utilisation de gestionnaires d'évènements en ligne sur le HTML, mais n'oubliez pas que JSX fait partie du code JavaScript.
+> [!NOTE]
+> Cela peut sembler contre-intuitif au regard des bonnes pratiques qui déconseillent l'utilisation de gestionnaires d'évènements en ligne sur le HTML, mais n'oubliez pas que JSX fait partie du code JavaScript.
 
 Dans l'exemple ci-dessus, nous ajoutons un attribut `onClick` à l'élément `<bouton>`. La valeur de cet attribut est une fonction qui déclenche une simple alerte.
 
@@ -70,7 +71,7 @@ function handleSubmit(e) {
 }
 ```
 
-Pour que cette fonction soit utilisée, ajoutez un attribut `onSubmit` à l'élément [`<form>`](/fr/docs/Web/HTML/Element/Form) en utilisant `handleSubmit` comme valeur&nbsp;:
+Pour que cette fonction soit utilisée, ajoutez un attribut `onSubmit` à l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) en utilisant `handleSubmit` comme valeur&nbsp;:
 
 ```jsx
 <form onSubmit={handleSubmit}>
@@ -111,7 +112,8 @@ function handleSubmit(e) {
 
 Cliquer sur le bouton «&nbsp;Ajouter&nbsp;» dans votre navigateur prouvera que la fonction de rappel `addTask()` fonctionne, mais ce serait bien si nous pouvions faire en sorte que l'alerte nous montre ce que nous tapons dans notre champ de saisie&nbsp;! C'est ce que nous allons faire maintenant.
 
-> **Note :** Nous avons décidé d'utiliser `addTask` comme nom pour notre <i lang="en">prop callback</i> afin de comprendre son rôle rapidement. Une autre convention commune que vous pouvez rencontrer dans le code React consiste à préfixer les noms des <i lang="en">prop</i> qui sont des fonctions avec `on`, suivi du nom de l'évènement qui les déclenchera. Par exemple, nous aurions pu donner à notre formulaire une <i lang="en">prop</i> `onSubmit` avec la valeur de `addTask`.
+> [!NOTE]
+> Nous avons décidé d'utiliser `addTask` comme nom pour notre <i lang="en">prop callback</i> afin de comprendre son rôle rapidement. Une autre convention commune que vous pouvez rencontrer dans le code React consiste à préfixer les noms des <i lang="en">prop</i> qui sont des fonctions avec `on`, suivi du nom de l'évènement qui les déclenchera. Par exemple, nous aurions pu donner à notre formulaire une <i lang="en">prop</i> `onSubmit` avec la valeur de `addTask`.
 
 ## L'état et le <i lang="en">hook</i> `useState'
 
@@ -267,7 +269,8 @@ function Form(props) {
 export default Form;
 ```
 
-> **Note :** Vous remarquerez que vous pouvez soumettre des tâches vides en appuyant simplement sur le bouton Ajouter sans saisir de nom de tâche. Pouvez-vous penser à un moyen d'empêcher l'ajout de tâches vides&nbsp;? En guise d'indice, vous devez probablement ajouter une sorte de vérification dans la fonction `handleSubmit()`.
+> [!NOTE]
+> Vous remarquerez que vous pouvez soumettre des tâches vides en appuyant simplement sur le bouton Ajouter sans saisir de nom de tâche. Pouvez-vous penser à un moyen d'empêcher l'ajout de tâches vides&nbsp;? En guise d'indice, vous devez probablement ajouter une sorte de vérification dans la fonction `handleSubmit()`.
 
 ## Assembler le tout&nbsp;: ajouter une tâche
 

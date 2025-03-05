@@ -10,7 +10,7 @@ slug: Web/API/HTMLMediaElement/seeking_event
 ## General info
 
 - Specification
-  - : [HTML5 media](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-seeking)
+  - : [HTML5 media](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-seeking)
 - Interface
   - : Event
 - Bubbles
@@ -33,21 +33,21 @@ slug: Web/API/HTMLMediaElement/seeking_event
 
 ## Related Events
 
-- {{event("playing")}}
-- {{event("waiting")}}
-- {{event("seeking")}}
-- {{event("seeked")}}
-- {{event("ended")}}
-- {{event("loadedmetadata")}}
-- {{event("loadeddata")}}
-- {{event("canplay")}}
-- {{event("canplaythrough")}}
-- {{event("durationchange")}}
-- {{event("timeupdate")}}
-- {{event("play")}}
-- {{event("pause")}}
-- {{event("ratechange")}}
-- {{event("volumechange")}}
-- {{event("suspend")}}
-- {{event("emptied")}}
-- {{event("stalled")}}
+- [`playing`](/ru/docs/Web/API/HTMLMediaElement/playing_event)
+- [`waiting`](/ru/docs/Web/API/HTMLMediaElement/waiting_event)
+- [`seeking`](/ru/docs/Web/API/HTMLMediaElement/seeking_event)
+- [`seeked`](/ru/docs/Web/API/HTMLMediaElement/seeked_event)
+- [`ended`](/ru/docs/Web/API/HTMLMediaElement/ended_event)
+- [`loadedmetadata`](/ru/docs/Web/API/HTMLMediaElement/loadedmetadata_event)
+- [`loadeddata`](/ru/docs/Web/API/HTMLMediaElement/loadeddata_event)
+- [`canplay`](/ru/docs/Web/API/HTMLMediaElement/canplay_event)
+- [`canplaythrough`](/ru/docs/Web/API/HTMLMediaElement/canplaythrough_event)
+- [`durationchange`](/ru/docs/Web/API/HTMLMediaElement/durationchange_event)
+- [`timeupdate`](/ru/docs/Web/API/HTMLMediaElement/timeupdate_event)
+- [`play`](/ru/docs/Web/API/HTMLMediaElement/play_event)
+- [`pause`](/ru/docs/Web/API/HTMLMediaElement/pause_event)
+- [`ratechange`](/ru/docs/Web/API/HTMLMediaElement/ratechange_event)
+- [`volumechange`](/ru/docs/Web/API/HTMLMediaElement/volumechange_event)
+- [`suspend`](/ru/docs/Web/API/HTMLMediaElement/suspend_event)
+- [`emptied`](/ru/docs/Web/API/HTMLMediaElement/emptied_event)
+- [`stalled`](/ru/docs/Web/API/HTMLMediaElement/stalled_event)

@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<resolution>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)用于描述[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)中的 [resolution](/zh-CN/docs/Web/CSS/@media/resolution)，表示输出设备的像素密度，即分辨率。
+**`<resolution>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)用于描述[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)中的 [resolution](/zh-CN/docs/Web/CSS/@media/resolution)，表示输出设备的像素密度，即分辨率。
 
 在屏幕上，单位与 _CSS_ 英寸、厘米或像素有关，而与物理值无关。
 
@@ -26,7 +26,8 @@ l10n:
 - `x`
   - : `dppx` 的别名。
 
-> **备注：** 虽然数字 `0` 在任何单位下都是相同的，但单位不能省略。换句话说，`0` 无效，不能代表 `0dpi`、`0dpcm` 或 `0dppx`。
+> [!NOTE]
+> 虽然数字 `0` 在任何单位下都是相同的，但单位不能省略。换句话说，`0` 无效，不能代表 `0dpi`、`0dpcm` 或 `0dppx`。
 
 ## 示例
 

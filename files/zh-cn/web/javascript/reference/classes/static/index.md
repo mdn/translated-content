@@ -11,9 +11,27 @@ l10n:
 
 静态方法通常是实用函数，如创建或克隆对象的函数，而静态属性则适用于缓存、固定配置或其他不需要跨实例复制的数据。
 
-> **备注：** 在类的上下文中，MDN Web 文档内容交替使用属性和[字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)这两个术语。
+> [!NOTE]
+> 在类的上下文中，MDN Web 文档内容交替使用属性和[字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)这两个术语。
 
-{{EmbedInteractiveExample("pages/js/classes-static.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Classes Static", "taller")}}
+
+```js interactive-example
+class ClassWithStaticMethod {
+  static staticProperty = "someValue";
+  static staticMethod() {
+    return "static method has been called.";
+  }
+  static {
+    console.log("Class static initialization block called");
+  }
+}
+
+console.log(ClassWithStaticMethod.staticProperty);
+// Expected output: "someValue"
+console.log(ClassWithStaticMethod.staticMethod());
+// Expected output: "static method has been called."
+```
 
 ## 语法
 
@@ -84,11 +102,12 @@ console.log(ClassWithStaticField.anotherBaseStaticField); // "基类静态字段
 console.log(SubClassWithStaticField.subStaticField); // "基类静态方法输出"
 ```
 
-表达式是同步求值的。不能在初始化表达式中使用 {{jsxref("Operators/await", "await")}} 或 {{jsxref("Operators/yield", "yield")}}}。（将初始化表达式视为隐式封装在函数中。）
+表达式是同步求值的。不能在初始化表达式中使用 {{jsxref("Operators/await", "await")}} 或 {{jsxref("Operators/yield", "yield")}}。（将初始化表达式视为隐式封装在函数中。）
 
 静态字段初始化器和[静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)是逐个求值的。字段初始化器可以引用其上的字段值，但不能引用其下的字段值。所有静态方法都会事先添加并可被访问，但如果它们引用的字段在被初始化的字段的下方，则调用它们时可能会出现与预期不符的情况。
 
-> **备注：** 对于[私有静态字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)而言，这一点更为重要，因为访问未初始化的私有字段会抛出 {{jsxref("TypeError")}}，即使该私有字段已在下面声明。（如果未声明私有字段，则会提前抛出 {{jsxref("SyntaxError")}}。）
+> [!NOTE]
+> 对于[私有静态字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)而言，这一点更为重要，因为访问未初始化的私有字段会抛出 {{jsxref("TypeError")}}，即使该私有字段已在下面声明。（如果未声明私有字段，则会提前抛出 {{jsxref("SyntaxError")}}。）
 
 ## 示例
 
@@ -123,7 +142,7 @@ console.log(Triple.calculate(6)); // 18
 
 let tp = new Triple();
 
-console.log(SquaredTriple.tripple(3)); // 81（不会受父类实例化的影响）
+console.log(SquaredTriple.calculate(3)); // 81（不会受父类实例化的影响）
 console.log(SquaredTriple.description); // '我可以让你提供的任何数变为其三倍的平方'
 console.log(SquaredTriple.longDescription); // undefined
 console.log(SquaredTriple.customName); // '三倍器'

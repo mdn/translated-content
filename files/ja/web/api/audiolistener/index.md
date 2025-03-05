@@ -15,7 +15,8 @@ l10n:
 
 ## インスタンスプロパティ
 
-> **メモ:** position、forward、up の値の設定と取得は異なる構文で行われます。取得は例えば `AudioListener.positionX` にアクセスすることで行われ、同じプロパティを設定するには `AudioListener.positionX.value` を使用することで行われます。仕様書の IDL でこれらの値が読み取り専用とマークされていないのはこのためです。
+> [!NOTE]
+> position、forward、up の値の設定と取得は異なる構文で行われます。取得は例えば `AudioListener.positionX` にアクセスすることで行われ、同じプロパティを設定するには `AudioListener.positionX.value` を使用することで行われます。仕様書の IDL でこれらの値が読み取り専用とマークされていないのはこのためです。
 
 - {{domxref("AudioListener.positionX")}}
   - : 右直交座標系における聞き手の水平位置を表します。既定値は 0 です。
@@ -43,7 +44,8 @@ l10n:
 - {{domxref("AudioListener.setPosition()")}} {{deprecated_inline}}
   - : 聞き手の位置を設定します。
 
-> **メモ:** これらのメソッドは非推奨ですが、現在、 Firefox で方向と位置を設定するための唯一の方法となっています。
+> [!NOTE]
+> これらのメソッドは非推奨ですが、現在、 Firefox で方向と位置を設定するための唯一の方法となっています。
 
 ## 非推奨の機能
 

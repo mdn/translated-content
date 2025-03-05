@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toString
 
 {{jsxref("Number")}} 值的 **`toString()`** 方法返回表示该数字值的字符串。
 
-{{EmbedInteractiveExample("pages/js/number-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toString()")}}
+
+```js interactive-example
+function hexColour(c) {
+  if (c < 256) {
+    return Math.abs(c).toString(16);
+  }
+  return 0;
+}
+
+console.log(hexColour(233));
+// Expected output: "e9"
+
+console.log(hexColour("11"));
+// Expected output: "b"
+```
 
 ## 语法
 
@@ -49,7 +64,7 @@ console.log((10 ** 21.5).toString(8)); // "526665530627250154000000"
 
 `toString` 方法要求 `this` 值是 `Number` 原始值或包装对象。对于其他 `this` 值，不会尝试将它们转换为数字值，而是抛出 {{jsxref("TypeError")}}。
 
-因为 `Number` 没有 [`[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 方法，当一个 `Number` *对象*在一个期望字符串的上下文中使用时（比如在[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)中），JavaScript 会自动调用 `toString()` 方法。然而，`Number` *原始值*不会使用 `toString()` 方法来进行[字符串强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)——相反，它们会直接使用与 `toString()` 初始实现的相同算法进行转换。
+因为 `Number` 没有 [`[Symbol.toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 方法，当一个 `Number` *对象*在一个期望字符串的上下文中使用时（比如在[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)中），JavaScript 会自动调用 `toString()` 方法。然而，`Number` *原始值*不会使用 `toString()` 方法来进行[字符串强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)——相反，它们会直接使用与 `toString()` 初始实现的相同算法进行转换。
 
 ```js
 Number.prototype.toString = () => "重写了";

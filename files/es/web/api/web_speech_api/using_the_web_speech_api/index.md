@@ -13,7 +13,8 @@ El reconocimiento de voz implica recibir voz a través del micrófono de un disp
 
 La API Web Speech tiene una interfaz principal de control para el - {{domxref ("SpeechRecognition")}} -, además de una serie de interfaces estrechamente relacionadas para representar la gramática, los resultados, etc. Normalmente, el sistema de reconocimiento de voz predeterminado que dispone el dispositivo se utilizará para el reconocimiento de voz: la mayoría de los sistemas operativos modernos tienen un sistema de reconocimiento de voz para emitir comandos de voz. Piense en Dictado en macOS, Siri en iOS, Cortana en Windows 10, Android Speech, etc.
 
-> **Nota:** En algunos navegadores como Chrome, el uso del reconocimiento de voz implica el uso de un motor de reconocimiento basado en un servidor. Tu audio se envía a un servicio de reconocimiento web para ser procesado, por lo que no funcionará offline.
+> [!NOTE]
+> En algunos navegadores como Chrome, el uso del reconocimiento de voz implica el uso de un motor de reconocimiento basado en un servidor. Tu audio se envía a un servicio de reconocimiento web para ser procesado, por lo que no funcionará offline.
 
 ### Demo
 
@@ -65,7 +66,7 @@ var colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', '
 var grammar = '#JSGF V1.0; grammar colors; public <color> = ' + colors.join(' | ') + ' ;'
 ```
 
-El formato usado para 'grammar' es [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/) (**JSGF**) — Se puede encontrar más sobre las especificaciones de este formato en el anterior enlace. Sin embargo y por ahora vamos a echarle un vistazo rápidamente:
+El formato usado para 'grammar' es [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**) — Se puede encontrar más sobre las especificaciones de este formato en el anterior enlace. Sin embargo y por ahora vamos a echarle un vistazo rápidamente:
 
 - Las líneas se separan con punto y coma como en JavaScript.
 - La primera línea — `#JSGF V1.0;` — establece el formato y versión utilizados. Esto siempre se debe incluir primero.
@@ -279,7 +280,7 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 
 #### Reproduciendo el texto introducido
 
-A continuación, creamos un manejador de eventos para comenzar a reproducir el texto introducido en el campo de texto. Usamos un manejador [onsubmit](/es/docs/Web/API/GlobalEventHandlers/onsubmit) en el formulario para que la acción ocurra cuando se presione <kbd>Enter</kbd>/<kbd>Return</kbd>. Primero creamos una nueva instancia de {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "SpeechSynthesisUtterance()")}} usando su constructor — a este se le pasa el valor de la entrada de texto como parámetro.
+A continuación, creamos un manejador de eventos para comenzar a reproducir el texto introducido en el campo de texto. Usamos un manejador [onsubmit](/es/docs/Web/API/HTMLFormElement/submit_event) en el formulario para que la acción ocurra cuando se presione <kbd>Enter</kbd>/<kbd>Return</kbd>. Primero creamos una nueva instancia de {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "SpeechSynthesisUtterance()")}} usando su constructor — a este se le pasa el valor de la entrada de texto como parámetro.
 
 A continuación, debemos obtener la voz que queremos utilizar. Usamos la propiedad {{domxref("HTMLSelectElement")}} `selectedOptions` para devolver el elemento seleccionado {{htmlelement("option")}}. Entonces usamos el atributo de este elemento `data-name`, encontrando el objeto {{domxref("SpeechSynthesisVoice")}} cuyo nombre coincida con el valor del atributo. Y configuramos la propiedad de {{domxref("SpeechSynthesisUtterance.voice")}} con el valor que coincida con la opción seleccionada.
 

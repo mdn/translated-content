@@ -36,7 +36,8 @@ l10n:
 - `symmetric`
   - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml_特定类型)，表示拉伸运算符是否应该与虚拟的数学轴（中心分数线）垂直对称。
 
-> **备注：** 对于 `lspace`、`maxsize`、`minsize` 和 `rspace` 属性，一些浏览器可能还接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
+> [!NOTE]
+> 对于 `lspace`、`maxsize`、`minsize` 和 `rspace` 属性，一些浏览器可能还接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
 
 ## 示例
 

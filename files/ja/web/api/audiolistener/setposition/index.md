@@ -14,7 +14,8 @@ l10n:
 
 位置ベクトルの既定値は `(0, 0, 0)` です。
 
-> **メモ:** このメソッドは非推奨ですので、代わりに {{domxref("AudioListener.positionX", "positionX")}}, {{domxref("AudioListener.positionY", "positionY")}}, {{domxref("AudioListener.positionZ", "positionZ")}} の各プロパティを使用してください。
+> [!NOTE]
+> このメソッドは非推奨ですので、代わりに {{domxref("AudioListener.positionX", "positionX")}}, {{domxref("AudioListener.positionY", "positionY")}}, {{domxref("AudioListener.positionZ", "positionZ")}} の各プロパティを使用してください。
 
 ## 構文
 

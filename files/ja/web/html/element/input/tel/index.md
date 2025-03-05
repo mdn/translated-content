@@ -2,14 +2,42 @@
 title: <input type="tel">
 slug: Web/HTML/Element/input/tel
 l10n:
-  sourceCommit: 0f4b28bdc51e89cd25d132b9db12e3e903a9c5aa
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`tel`** 型は、ユーザーに電話番号を入力または編集させるために使用します。 [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email) や [`<input type="url">`](/ja/docs/Web/HTML/Element/input/url) とは異なり、送信前に値が特定の書式であると自動的には検証されません。電話番号の書式は世界中で様々だからです。
 
-{{EmbedInteractiveExample("pages/tabbed/input-tel.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;tel&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="phone">
+  Enter your phone number:<br />
+  <small>Format: 123-456-7890</small>
+</label>
+
+<input
+  type="tel"
+  id="phone"
+  name="phone"
+  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+  required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 `tel` の入力欄は機能的に標準の `text` 入力欄と同じであるという事実にもかかわらず、便利な用途を提供します。もっとも手っ取り早く表れるのは、モバイルブラウザー — 特に携帯電話のもの — では、電話番号の入力に最適化された専用のキーパッドを表示することがあります。電話番号の専用の入力型を使用すると、カスタム検証を追加して電話番号の扱いをもっと便利にすることができます。
 
@@ -21,7 +49,7 @@ l10n:
 
 ## 追加の属性
 
-型に関係なくすべての {{HTMLElement("input")}} 要素を操作する属性に加え、電話番号型の入力欄は次の属性にも対応しています。
+[グローバル属性](/ja/docs/Web/HTML/Global_attributes)および、型に関係なくすべての {{HTMLElement("input")}} 要素を操作する属性に加え、電話番号型の入力欄は次の属性にも対応しています。
 
 ### list
 
@@ -31,13 +59,13 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ユーザーが電話番号欄に入力することができる（UTF-16 コード単位での）最大文字列長です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、電話番号欄には最大長が設定されません。この値は `minlength` の値以上である必要もあります。
 
-フィールドに入力された長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
+フィールドに入力された長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。
 
 ### minlength
 
 ユーザーが電話番号欄に入力することができる（UTF-16 コード単位での）最小文字列長です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、電話番号欄には最小長が設定されません。
 
-入力欄のテキストの長さが UTF-16 コード単位で `minlength` の長さよりも短いと、電話番号欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
+入力欄のテキストの長さが UTF-16 コード単位で `minlength` の長さよりも短いと、電話番号欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。
 
 ### pattern
 
@@ -55,38 +83,21 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 コントロールの内容がある書字方向 ({{Glossary("LTR")}} または {{Glossary("RTL")}}) であるものの、プレイスホルダーを逆の方向に表示する必要がある場合、 Unicode 双方向アルゴリズム書式文字を使用してプレイスホルダーの中で書字方向を上書きすることができます。詳しくは、[双方向テキストでの Unicode コードの使い方（英語）](https://www.w3.org/International/questions/qa-bidi-unicode-controls)を参照してください。
 
-> **メモ:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のラベル](/ja/docs/Web/HTML/Element/input#labels)を参照してください。
+> [!NOTE]
+> 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のラベル](/ja/docs/Web/HTML/Element/input#labels)を参照してください。
 
 ### readonly
 
 論理属性で、存在すれば、ユーザーが編集することができないことを表します。しかし、 `value` は、 JavaScript コードから直接 {{domxref("HTMLInputElement")}} の `value` プロパティを設定することで変更することができます。
 
-> **メモ:** 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
+> [!NOTE]
+> 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
 
 ### size
 
 `size` 属性は数値であり、入力欄の幅を何文字分とするかを示します。値はゼロより大きな数値である必要があり、既定値は 20 です。文字の幅は様々であるため、これは正確ではない可能性もあり、依存することはできません。結果の入力欄は文字数やフォント（使用中の {{cssxref("font")}} 設定）によって、指定された文字数より狭くなったり広くなったりすることがあります。
 
 これはユーザーがフィールドに入力することができる文字数の制限を設定するものではありません。これは一度に見える文字数をおよそ指定するだけです。入力データの長さの上限を設定するには、 [`maxlength`](#maxlength) 属性を使用してください。
-
-## 標準外の属性
-
-ブラウザーによっては、以下の標準外の属性が利用できます。一般的な規則として、できれば使用することを避けてください。
-
-### autocorrect
-
-Safari 拡張である `autocorrect` 属性は文字列で、ユーザーがこの欄を編集している間に自動修正を有効にするかどうかを示します。次の値が許されています。
-
-- `on`
-  - : 構成されていれば、打ち間違いの自動修正や、テキストの置き換え処理を有効にします。
-- `off`
-  - : 自動修正やテキストの置き換えを無効にします。
-
-### mozactionhint {{deprecated_inline}}
-
-Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押した場合に行われるアクションの種類のヒントを提供します。
-
-**非推奨: 代わりに [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes#enterkeyhint) を使用してください。**
 
 ## tel 入力欄の使用
 
@@ -102,7 +113,7 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 | -------------------------------------------------------------- | --------------------------------------------------------------------- |
 | ![Android 版 Firefox のスクリーンショット](fx-android-tel.png) | ![iOS 版 Firefox のスクリーンショット](iphone-tel-keyboard-50pct.png) |
 
-### 単純な tel 入力欄
+### 基本的な tel 入力欄
 
 最も基本的なフォームにおいて、 tel 入力欄は次のように実装することができます。
 
@@ -111,7 +122,7 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 <input id="telNo" name="telNo" type="tel" />
 ```
 
-{{ EmbedLiveSample('A_simple_tel_input', 600, 40) }}
+{{ EmbedLiveSample('A_basic_tel_input', 600, 40) }}
 
 ここでは何も不思議なことは起こりません。サーバーに送信されると、上記の入力のデータは、例えば `telNo=+12125553151` のように表現されます。
 
@@ -159,7 +170,8 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 {{EmbedLiveSample("Element_value_length", 600, 40) }}
 
-> **メモ:** 上記の属性は[検証](#検証)に影響します。 - 上記の例では、値の長さが 9 文字未満、または 14 文字以上の場合、入力は無効とみなされます。ほとんどのブラウザーでは、最大長を超える値を入力することさえできません。
+> [!NOTE]
+> 上記の属性は[検証](#検証)に影響します。 - 上記の例では、値の長さが 9 文字未満、または 14 文字以上の場合、入力は無効とみなされます。ほとんどのブラウザーでは、最大長を超える値を入力することさえできません。
 
 ### 既定のオプションの提供
 
@@ -201,7 +213,8 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 以前にも触れましたが、電話番号で万能のクライアント側検証方法を提供することは非常に困難です。では、どうすればいいのでしょうか。いくつかの選択肢を考えてみましょう。
 
-> **警告:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用には*なりません*>。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ（または大きすぎるデータ、間違った種類のデータなど）が送信された場合に災害が発生するおそれがあります。
+> [!WARNING]
+> HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用には*なりません*>。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ（または大きすぎるデータ、間違った種類のデータなど）が送信された場合に災害が発生するおそれがあります。
 
 ### 電話番号を必須にする
 
@@ -257,7 +270,7 @@ input:valid + span::after {
 
 ### パターンによる値検証
 
-入力された数値をさらに制限し、特定のパターンに適合させたい場合は、[`pattern`](/ja/docs/Web/HTML/Element/input#pattern)属性を使用してください。この属性は、入力された値が一致すべき{{Glossary("regular expression", "正規表現")}}を値として取ります。
+入力された数値をさらに制限し、特定のパターンに適合させたい場合は、[`pattern`](/ja/docs/Web/HTML/Element/input#pattern)属性を使用してください。この属性は、入力された値が一致すべき{{Glossary("Regular expression", "正規表現")}}を値として取ります。
 
 この例では、前と同じ CSS を使用しますが、 HTML は次のように変更します。
 
@@ -316,7 +329,7 @@ input:valid + span::after {
 
 ## 例
 
-この例では、ユーザーにどの国にいるかを選択させる {{htmlelement("select")}} 要素と、電話番号の各部分を入力させる一連の `<input type="tel">` 要素でシンプルなインターフェイスを表します。複数の `tel` 入力欄を使ってはいけないという理由はありません。
+この例では、ユーザーにどの国にいるかを選択させる {{htmlelement("select")}} 要素と、電話番号の各部分を入力させる一連の `<input type="tel">` 要素を表示します。複数の `tel` 入力欄を使ってはいけないという理由はありません。
 
 それぞれの入力欄には [`placeholder`](/ja/docs/Web/HTML/Element/input#placeholder) 属性があり、目の見えるユーザーが何を入力すればよいかのヒントを表示します。また [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) で、求められる部分で指定された文字数を強制します。さらに [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性があり、スクリーンリーダーのユーザーに何を入力すればよいかのヒントを読み上げることができるようになっています。
 
@@ -372,7 +385,7 @@ input:valid + span::after {
 </form>
 ```
 
-この JavaScript は比較的単純で、 {{domxref("HTMLElement.change_event", "onchange")}} イベントハンドラーを含んでおり、 `<select>` の値が変更されると `<input>` 要素の `pattern`, `placeholder`, `aria-label` をその国/地域の電話番号の形式に合わせて更新するようになっています。
+この JavaScript には {{domxref("HTMLElement.change_event", "onchange")}} イベントハンドラーがあり、 `<select>` の値が変更されると `<input>` 要素の `pattern`, `placeholder`, `aria-label` をその国/地域の電話番号の形式に合わせて更新するようになっています。
 
 ```js
 const selectElem = document.querySelector("select");
@@ -528,8 +541,7 @@ input:valid + span::after {
 
 ## 関連情報
 
-- [HTML フォームガイド](/ja/docs/Learn/Forms)
+- [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
   - [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text)
   - [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email)
-- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

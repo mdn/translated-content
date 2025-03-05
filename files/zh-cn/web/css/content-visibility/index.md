@@ -7,7 +7,8 @@ slug: Web/CSS/content-visibility
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`content-visibility`** 控制元素是否渲染其内容，以及施加一组强局限，由此允许用户代理有机会在不需要时省略大片的布局和渲染工作。此属性使用户代理得以在不需要时跳过元素的渲染工作（包括布局和绘制）——由此使页面的初始加载明显变快。
 
-> **备注：** 对于设置了 `content-visibility: auto` 的任意元素，在其渲染工作开始或不再被跳过时将触发 {{DOMXref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} 事件。此事件为应用代码在不需要时开始或停止渲染过程（如在 {{HTMLElement("canvas")}} 上绘画）提供了便利，进而节约了处理能力。
+> [!NOTE]
+> 对于设置了 `content-visibility: auto` 的任意元素，在其渲染工作开始或不再被跳过时将触发 {{DOMXref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} 事件。此事件为应用代码在不需要时开始或停止渲染过程（如在 {{HTMLElement("canvas")}} 上绘画）提供了便利，进而节约了处理能力。
 
 ## 语法
 
@@ -151,4 +152,4 @@ document.querySelectorAll("button.toggle").forEach((button) => {
 - [CSS 局限](/zh-CN/docs/Web/CSS/CSS_containment)
 - {{CSSXref("contain-intrinsic-size")}}
 - {{DOMXref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
-- [content-visibility：提高渲染性能的新 CSS 属性](https://web.dev/articles/content-visibility)（web.dev）
+- [content-visibility：提高渲染性能的新 CSS 属性](https://web.developers.google.cn/articles/content-visibility)（web.developers.google.cn）

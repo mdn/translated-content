@@ -2,7 +2,7 @@
 title: SVG フォント
 slug: Web/SVG/Tutorial/SVG_fonts
 l10n:
-  sourceCommit: 960e5e038a304bb82d55247a0bb8b7314cb038d9
+  sourceCommit: 1952d89acf75a2a9448cab9d323aa320281cd746
 ---
 
 {{SVGRef}}
@@ -11,7 +11,8 @@ l10n:
 
 SVG が規定された時点では、ブラウザーでウェブフォントへの対応は普及していませんでした。しかし、テキストを正しく描画するためには、正しいフォントファイルへのアクセスが不可欠であるため、この機能を提供するためにフォント記述技術が SVG に追加されました。これは [PostScript](https://www.adobe.com/products/postscript.html) や [OTF](https://fonts.google.com/knowledge/glossary/open_type) などの他の形式との互換性を目的としたものではなく、レンダリング時に書体情報を SVG に埋め込む簡易な手段です。
 
-> **メモ:** SVG フォントは、現在 Safari と Android ブラウザーのみが対応しています。
+> [!NOTE]
+> SVG フォントは、現在 Safari と Android ブラウザーのみが対応しています。
 >
 > この機能は [Chrome 38 (および Opera 25) では削除されており](https://chromestatus.com/feature/5930075908210688)、 Firefox は [WOFF](/ja/docs/Web/CSS/CSS_fonts/WOFF) に集中するために[実装を無期限に延期しています](https://bugzil.la/119490)。しかし、Batik や Inkscape の一部など、他のツールは SVG フォントの埋め込みに対応しています。
 
@@ -56,7 +57,7 @@ SVG フォントを定義するためのベースは {{ SVGElement("font") }} �
 
 {{ SVGElement("font-face-src") }} の後に {{ SVGElement("missing-glyph") }} 要素があります。これはあるグリフがフォント内で見つからず、またフォールバックする仕組みもない場合に何を表示するべきかを定義します。またこの要素では、どのようにグリフを作成するかも示しています。単純にグラフィックの SVG コンテンツを内部に追加するのです。また、{{ SVGElement("filter") }}、{{ SVGElement("a") }}、あるいは {{ SVGElement("script") }} といった、他の SVG 要素もここで用いることができます。ただし単純なグリフを作るなら、標準の SVG パスと同様に `d` 属性を追加することもできます。
 
-実際のグリフは {{ SVGElement("glyph") }} 要素で定義します。ここで最も重要な属性は `unicode` です。この属性は Unicode のコードポイントを定義して、その文字が `glyph` 要素で示すグリフで表現されます。 [`lang`](/ja/docs/Web/HTML/Global_attributes#lang) 属性を指定した場合は、さらにグリフを特定の言語 (フォントを使用する側の `xml:lang` で示されます) のみに限定することができます。繰り返しになりますがグリフを定義するために任意の SVG を用いることができ、またユーザエージェントが対応するすばらしいエフェクトを用いることもできます。
+実際のグリフは {{ SVGElement("glyph") }} 要素で定義します。ここで最も重要な属性は `unicode` です。この属性は Unicode のコードポイントを定義して、その文字が `glyph` 要素で示すグリフで表現されます。 [`lang`](/ja/docs/Web/HTML/Global_attributes#lang) 属性を指定した場合は、さらにグリフを特定の言語 (フォントを使用する側の `xml:lang` で示されます) のみに限定することができます。繰り返しになりますがグリフを定義するために任意の SVG を用いることができ、またユーザーエージェントが対応するすばらしいエフェクトを用いることもできます。
 
 `font` の内部では、さらに {{ SVGElement("hkern") }} と {{ SVGElement("vkern") }} の 2 つの要素を定義することができます。それぞれ、少なくとも 2 つの文字 (`u1` および `u2` 属性) への参照と、それらの文字間の距離をどの程度縮めるかを決定する属性 `k` を持ちます。以下の例では、ユーザーエージェントに "A" と "V" の文字を標準的な文字間の距離よりも近づけるように指示しています。
 

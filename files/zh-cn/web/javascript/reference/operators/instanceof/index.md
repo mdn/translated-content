@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/instanceof
 
 **`instanceof`** **运算符**用于检测构造函数的 `prototype` 属性是否出现在某个实例对象的原型链上。
 
-{{EmbedInteractiveExample("pages/js/expressions-instanceof.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - instanceof")}}
+
+```js interactive-example
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+const auto = new Car("Honda", "Accord", 1998);
+
+console.log(auto instanceof Car);
+// Expected output: true
+
+console.log(auto instanceof Object);
+// Expected output: true
+```
 
 ## 语法
 
@@ -63,7 +78,8 @@ o3 instanceof C; // true 因为 C.prototype 现在在 o3 的原型链上
 
 比如检测一个 `Nodes` 在另一个窗口中是不是 `SVGElement`，你可以使用`myNode instanceof myNode.ownerDocument.defaultView.SVGElement`
 
-> **备注：** 在代码中使用 XPCOM `instanceof` 有特殊影响：如果查询接口成功执行后，`obj instanceof` _`xpcomInterface`_ (e.g. `Components.interfaces.nsIFile`) 调用`obj.QueryInterface(xpcomInterface)` 并且返回 `true` 。这种调用的副作用是在一次成功的 `instanceof` 测试后，你可以在 `obj` 上使用`xpcomInterface` 的属性。这与标准的 `JavaScript` 全局变量不同，即使 `obj` 来自不同的作用域，`obj instanceof xpcomInterface` 也可以按预期产生作用。
+> [!NOTE]
+> 在代码中使用 XPCOM `instanceof` 有特殊影响：如果查询接口成功执行后，`obj instanceof` _`xpcomInterface`_ (e.g. `Components.interfaces.nsIFile`) 调用`obj.QueryInterface(xpcomInterface)` 并且返回 `true` 。这种调用的副作用是在一次成功的 `instanceof` 测试后，你可以在 `obj` 上使用`xpcomInterface` 的属性。这与标准的 `JavaScript` 全局变量不同，即使 `obj` 来自不同的作用域，`obj instanceof xpcomInterface` 也可以按预期产生作用。
 
 ## 示例
 
@@ -140,6 +156,6 @@ if (!mycar instanceof Car)
 
 ## 参见
 
-- [typeof](/zh-CN/docs/JavaScript/Reference/Operators/typeof)
+- [typeof](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)
 - {{jsxref("Symbol.hasInstance")}}
 - {{jsxref("Object.prototype.isPrototypeOf")}}

@@ -5,7 +5,7 @@ slug: Learn/Forms/HTML_forms_in_legacy_browsers
 
 {{LearnSidebar}}
 
-Tout développeur apprend très rapidement (parfois difficilement) que le Web est un endroit assez inconfortable. Le pire des fléaux est le «&nbsp;navigateur historique&nbsp;». Oui, admettons‑le, si on dit «&nbsp;navigateur historique&nbsp;», nous pensons tous aux anciennes versions d'Internet Explorer ... mais elles sont loin d'être les seules. Les premières versions de Firefox, comme la [version ESR,](http://www.mozilla.org/en-US/firefox/organizations/) sont aussi des «&nbsp;navigateurs historiques&nbsp;». Et dans le monde du mobile ? Quand ni le navigateur ni l'OS ne peut être mis à jour? Oui, il y a beaucoup de vieux smartphones Android ou des iPhones dont le navigateur par défaut n'est pas à jour. Ceux-ci sont aussi des «&nbsp;navigateurs historiques&nbsp;».
+Tout développeur apprend très rapidement (parfois difficilement) que le Web est un endroit assez inconfortable. Le pire des fléaux est le «&nbsp;navigateur historique&nbsp;». Oui, admettons‑le, si on dit «&nbsp;navigateur historique&nbsp;», nous pensons tous aux anciennes versions d'Internet Explorer ... mais elles sont loin d'être les seules. Les premières versions de Firefox, comme la [version ESR,](https://www.mozilla.org/en-US/firefox/organizations/) sont aussi des «&nbsp;navigateurs historiques&nbsp;». Et dans le monde du mobile ? Quand ni le navigateur ni l'OS ne peut être mis à jour? Oui, il y a beaucoup de vieux smartphones Android ou des iPhones dont le navigateur par défaut n'est pas à jour. Ceux-ci sont aussi des «&nbsp;navigateurs historiques&nbsp;».
 
 Malheureusement, parcourir cette jungle est une facette du métier. Mais opportunément, il existe quelques astuces pour nous aider à résoudre 80 % des problèmes causés par ces vieilles versions de navigateur.
 
@@ -26,7 +26,7 @@ En fait, lire la documentation sur ces navigateurs est la chose la plus importan
 ### Documentation indépendante
 
 - [Can I Use](http://caniuse.com) a des informations sur la prise en charge des techniques avancées.
-- [Quirks Mode](http://www.quirksmode.org) est une surprenante ressource sur la compatibilité des divers navigateurs. [La partie sur les mobiles](http://www.quirksmode.org/mobile/) est la meilleure actuellement disponible.
+- [Quirks Mode](https://www.quirksmode.org) est une surprenante ressource sur la compatibilité des divers navigateurs. [La partie sur les mobiles](https://www.quirksmode.org/mobile/) est la meilleure actuellement disponible.
 - [Position Is Everything](http://positioniseverything.net/) est la meilleure ressource disponible sur les bogues de rendu dans les navigateurs historiques et leur solution de contournement (le cas échéant).
 - [Mobile HTML5](http://mobilehtml5.org) dispose d'informations de compatibilité pour une large gamme de navigateurs pour mobiles, et pas seulement pour le «&nbsp;top 5&nbsp;» (y compris Nokia, Amazon et Blackberry).
 
@@ -36,7 +36,7 @@ Comme les [formulaires HTML](/fr/docs/Learn/Forms) impliquent des interactions c
 
 ### La simplification élégante est la meilleure amie du développeur Web
 
-[Une simplification élégante et des améliorations progressives](http://www.sitepoint.com/progressive-enhancement-graceful-degradation-choice/) sont des modèles de développement qui permettent de construire des grands projets prenant en charge une large gamme de navigateurs simultanément. Quand vous créez quelque chose pour un navigateur moderne, et que vous voudriez être sûrs que, l'un l'autre, il fonctionne sur des navigateurs historiques, vous faites de la simplification élégante.
+[Une simplification élégante et des améliorations progressives](https://www.sitepoint.com/progressive-enhancement-graceful-degradation-choice/) sont des modèles de développement qui permettent de construire des grands projets prenant en charge une large gamme de navigateurs simultanément. Quand vous créez quelque chose pour un navigateur moderne, et que vous voudriez être sûrs que, l'un l'autre, il fonctionne sur des navigateurs historiques, vous faites de la simplification élégante.
 
 Voyons quelques exemples relatifs aux formulaires en HTML.
 
@@ -78,7 +78,7 @@ Les nouveaux types d'entrées amenés par HTML5 sont très sympas car la façon 
 
 #### Sélecteurs d'attributs CSS
 
-Les [sélecteurs d'attributs CSS](/fr/docs/Web/CSS/Sélecteurs_d_attribut) sont très utiles avec les [formulaires HTML](/fr/docs/Learn/Forms), mais certains navigateurs historiques ne les prennent pas en charge. Dans ce cas, il est courant de doubler le type avec une classe équivalente&nbsp;:
+Les [sélecteurs d'attributs CSS](/fr/docs/Web/CSS/Attribute_selectors) sont très utiles avec les [formulaires HTML](/fr/docs/Learn/Forms), mais certains navigateurs historiques ne les prennent pas en charge. Dans ce cas, il est courant de doubler le type avec une classe équivalente&nbsp;:
 
 ```html
 <input type="number" class="number" />
@@ -108,7 +108,7 @@ input.number {
 
 Il y a deux manières de définir un bouton dans un formulaire HTML&nbsp;:
 
-- un élément {{HTMLElement("input")}} avec un attribut [`type`](/fr/docs/HTML/Element/input#type) défini avec une des valeurs `button`, `submit`, `reset` ou `image`
+- un élément {{HTMLElement("input")}} avec un attribut [`type`](/fr/docs/Web/HTML/Element/Input#type) défini avec une des valeurs `button`, `submit`, `reset` ou `image`
 - un élément {{HTMLElement("button")}}
 
 L'élément {{HTMLElement("input")}} peut rendre les choses compliquées si vous voulez appliquer des CSS avec un sélecteur d'élément&nbsp;:
@@ -151,7 +151,7 @@ Le choix de l'une ou l'autre solution vous appartient, selon les contraintes du 
 
 ### Laissez tomber les CSS
 
-Le plus gros problème avec les formulaires HTML et les navigateurs historiques est la prise en charge des CSS. Comme vous pouvez le constater, vu la complexité de la [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_widgets), c'est très difficile. Même s'il est toujours possible de faire quelques ajustements sur les éléments de texte (comme la taille ou la couleur de police), il y a toujours des effets secondaires. La meilleure approche reste de ne faire aucune composition des widgets de formulaire HTML. Mais vous pouvez toujours appliquer des styles à tous les éléments environnants. Si vous êtes un professionnel et que votre client le réclame, dans ce cas, vous pouvez étudier certaines techniques difficiles telles que la [construction de widgets avec JavaScript](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés). Mais dans ce cas, n'hésitez pas à facturer votre client pour ce caprice.
+Le plus gros problème avec les formulaires HTML et les navigateurs historiques est la prise en charge des CSS. Comme vous pouvez le constater, vu la complexité de la [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls), c'est très difficile. Même s'il est toujours possible de faire quelques ajustements sur les éléments de texte (comme la taille ou la couleur de police), il y a toujours des effets secondaires. La meilleure approche reste de ne faire aucune composition des widgets de formulaire HTML. Mais vous pouvez toujours appliquer des styles à tous les éléments environnants. Si vous êtes un professionnel et que votre client le réclame, dans ce cas, vous pouvez étudier certaines techniques difficiles telles que la [construction de widgets avec JavaScript](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés). Mais dans ce cas, n'hésitez pas à facturer votre client pour ce caprice.
 
 ## Détection de fonctionnalité et prothèses d'émulation (_polyfills_)
 
@@ -170,7 +170,7 @@ Un des plus gros problèmes est la disponibilité des API. Pour cette raison, il
 
 Dans de nombreux cas, une bonne prothèse d'émulation («&nbsp;polyfill&nbsp;») peut aider en fournissant une API manquante. Un «&nbsp;[polyfill »](http://remysharp.com/2010/10/08/what-is-a-polyfill/) est un petit morceau de JavaScript qui «&nbsp;remplit un trou&nbsp;» dans les fonctionnalités des navigateurs historiques. Bien qu'ils puissent être utilisés pour améliorer la prise en charge de n'importe quelle fonctionnalité, leur utilisation dans le JavaScript est moins risquée que dans les CSS ou le HTML ; il existe de nombreux cas où JavaScript peut casser (problèmes de réseau, conflits de script, etc.). Mais avec le JavaScript, à condition de travailler avec un JavaScript non obstructif, si les polyfills manquent, ce ne sera pas grave.
 
-La meilleure façon de remplir un trou d'API manquante consiste à utiliser la bibliothèque [Modernizr](http://modernizr.com) et son projet dérivé&nbsp;: [YepNope](http://yepnopejs.com). Modernizr est une bibliothèque qui vous permet de tester la disponibilité d'une fonctionnalité pour une action en accord. YepNope est une bibliothèqe de chargements conditionnels.
+La meilleure façon de remplir un trou d'API manquante consiste à utiliser la bibliothèque [Modernizr](https://modernizr.com) et son projet dérivé&nbsp;: [YepNope](http://yepnopejs.com). Modernizr est une bibliothèque qui vous permet de tester la disponibilité d'une fonctionnalité pour une action en accord. YepNope est une bibliothèqe de chargements conditionnels.
 
 Voici un exemple&nbsp;:
 
@@ -197,7 +197,8 @@ Modernizr.load({
 
 L'équipe de Modernizr fait une maintenance opportune de grande liste de «&nbsp;[polyfills »](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills). Prenez celui dont vous avez besoin.
 
-> **Note :** Modernizr a d'autres fonctionnalités remarquables pour faciliter le traitement du JavaScript non obstructif et les tecniques de simplifications élégantes. Prenez connaissance de [la documentation de Modernizr](http://modernizr.com/docs/).
+> [!NOTE]
+> Modernizr a d'autres fonctionnalités remarquables pour faciliter le traitement du JavaScript non obstructif et les tecniques de simplifications élégantes. Prenez connaissance de [la documentation de Modernizr](https://modernizr.com/docs/).
 
 ### Faites attention aux performances
 
@@ -207,4 +208,4 @@ Même si des scripts comme Modernizr sont très attentifs aux performances, le c
 
 Comme vous pouvez le constater, opérer avec des navigateurs historiques n'est pas qu'une question de formulaires. C'est tout un ensemble de techniques&nbsp;; mais les maîtriser toutes dépasserait le cadre de cet article.
 
-Si vous avez lu tous les articles de ce [guide à propos des formulaires en HTML](/fr/docs/Learn/Forms), vous devriez maintenant être à l'aise avec leur utilisation. Si vous trouvez de nouvelles techniques ou de nouvelles astuces, aidez‑nous à [améliorer ce guide](/fr/docs/MDN/Débuter_sur_MDN).
+Si vous avez lu tous les articles de ce [guide à propos des formulaires en HTML](/fr/docs/Learn/Forms), vous devriez maintenant être à l'aise avec leur utilisation. Si vous trouvez de nouvelles techniques ou de nouvelles astuces, aidez‑nous à [améliorer ce guide](/fr/docs/MDN/Community/Contributing/Getting_started).

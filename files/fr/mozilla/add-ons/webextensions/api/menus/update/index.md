@@ -9,7 +9,7 @@ Met à jour un élément de menu précédemment créé.
 
 Pour la compatibilité avec d'autres navigateurs, Firefox rend cette méthode disponible via l'espace de noms `contextMenus` ainsi que l'espace de noms des `menus`.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -70,7 +70,8 @@ var updating = browser.menus.update(
             }
         ```
 
-        > **Note :** The top-level menu item uses the [icons](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.
+        > [!NOTE]
+        > The top-level menu item uses the [icons](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.
 
     - `id` {{optional_inline}}
       - : `string`. L'ID unique à affecter à cet article. Obligatoire pour les pages d'événements. Ne peut pas être le même qu'un autre ID pour cette extension.
@@ -103,7 +104,7 @@ var updating = browser.menus.update(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera satisfaite sans argument si la mise à jour a réussi, ou rejetée avec un message d'erreur si la mise à jour a échoué.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera satisfaite sans argument si la mise à jour a réussi, ou rejetée avec un message d'erreur si la mise à jour a échoué.
 
 ## Exemples
 
@@ -140,9 +141,9 @@ browser.menus.onClicked.addListener(function (info, tab) {
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
+> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

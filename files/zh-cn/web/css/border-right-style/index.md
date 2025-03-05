@@ -5,11 +5,12 @@ slug: Web/CSS/border-right-style
 
 {{CSSRef}}
 
-**`border-right-style`** 是 border 中的一个 [CSS](/zh-CN/docs/CSS) 子属性，描述的是右边框的样式 {{cssxref("border")}}.
+**`border-right-style`** 是 border 中的一个 [CSS](/zh-CN/docs/Web/CSS) 子属性，描述的是右边框的样式 {{cssxref("border")}}.
 
 {{EmbedInteractiveExample("pages/css/border-right-style.html")}}
 
-> **备注：** 这个 css 没有定义不同样式的边界之间如何拼接。
+> [!NOTE]
+> 这个 css 没有定义不同样式的边界之间如何拼接。
 
 ## Syntax
 

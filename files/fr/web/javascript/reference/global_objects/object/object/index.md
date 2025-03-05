@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/Object
 
 Le **constructeur `Object`** crée une enveloppe objet pour la valeur passée en argument.
 
-- Si la valeur est [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), il crée et renvoie un nouvel objet vide.
+- Si la valeur est [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), il crée et renvoie un nouvel objet vide.
 - Sinon, il renvoie un objet du type correspondant à la valeur passée en argument.
 - Si la valeur est déjà un objet, il renvoie la valeur.
 

@@ -5,7 +5,7 @@ slug: Web/API/Element/transitioncancel_event
 
 {{ APIRef }}{{SeeCompatTable}}
 
-El evento `transitioncancel` es lanzado cuando una [transición CSS](/es/docs/CSS/Using_CSS_transitions) es cancelada.
+El evento `transitioncancel` es lanzado cuando una [transición CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) es cancelada.
 
 Véase {{domxref("GlobalEventHandlers.ontransitioncancel")}} para mas información y ejemplos.
 
@@ -46,5 +46,5 @@ Véase {{domxref("GlobalEventHandlers.ontransitioncancel")}} para mas informaci�
 
 - El manejador {{domxref("GlobalEventHandlers.ontransitioncancel")}}
 - La interfaz {{domxref("TransitionEvent")}}
-- [`transitionstart`](/es/docs/Web/Reference/Events/transitionstart), [`transitionend`](/es/docs/Web/Reference/Events/transitionend)
+- [`transitionstart`](/es/docs/Web/Reference/Events/transitionstart), [`transitionend`](/es/docs/Web/API/Element/transitionend_event)
 - Propiedades CSS: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}.

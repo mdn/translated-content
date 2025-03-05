@@ -7,7 +7,8 @@ l10n:
 
 {{AddonSidebar}}
 
-> **警告：** 此方法已被弃用。请使用 {{WebExtAPIRef("tabs.query", "tabs.query({active: true})")}} 替代。
+> [!WARNING]
+> 此方法已被弃用。请使用 {{WebExtAPIRef("tabs.query", "tabs.query({active: true})")}} 替代。
 
 获取指定窗口中当前选中的标签页。
 
@@ -36,7 +37,8 @@ let gettingSelected = browser.tabs.getSelected(
 
 {{WebExtExamples}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-getSelected) API。本文档来自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-getSelected) API。本文档来自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

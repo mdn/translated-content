@@ -3,13 +3,11 @@ title: ServiceWorkerRegistration
 slug: Web/API/ServiceWorkerRegistration
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 Интерфейс `ServiceWorkerRegistration` ссылается на регистрацию Service Worker. Вы можете зарегистрировать Service Worker, чтобы контролировать одну или несколько страниц на одном домене.
 
 The lifetime of a service worker registration is beyond that of the `ServiceWorkerRegistration` objects that represent them within the lifetime of their corresponding service worker clients. The browser maintains a persistent list of active `ServiceWorkerRegistration` objects.
-
-> **Примечание:** Эта функция доступна в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
 ## Свойства
 
@@ -35,7 +33,7 @@ _Also implements properties from its parent interface,_ {{domxref("EventTarget")
 ### Event handlers
 
 - {{domxref("ServiceWorkerRegistration.onupdatefound")}} {{readonlyinline}}
-  - : An [`EventListener`](/ru/docs/Web/API/EventListener) property called whenever an event of type `updatefound` is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
+  - : An [`EventListener`](/ru/docs/Web/API/EventTarget/addEventListener) property called whenever an event of type `updatefound` is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
 
 ## Методы
 
@@ -90,8 +88,8 @@ if ("serviceWorker" in navigator) {
 
 ## Смотрите также
 
-- [Использование Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Использование Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web workers](/ru/docs/Web/Guide/Performance/Using_web_workers)
+- [Using web workers](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)

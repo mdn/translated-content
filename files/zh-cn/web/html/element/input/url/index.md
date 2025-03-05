@@ -7,7 +7,35 @@ slug: Web/HTML/Element/input/url
 
 **`url`** 类型的 {{HTMLElement("input")}} 元素用来让用户输入和编辑 URL。
 
-{{EmbedInteractiveExample("pages/tabbed/input-url.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;url&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<form>
+  <label for="url">Enter an https:// URL:</label>
+  <input
+    type="url"
+    name="url"
+    id="url"
+    placeholder="https://example.com"
+    pattern="https://.*"
+    size="30"
+    required />
+</form>
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 所输入的值在表单提交前会自动经过验证，以确认它为空，或为一个合法的 URL 格式。{{cssxref(":valid")}} 和 {{cssxref(":invalid")}} CSS 伪类会适当地自动应用，以在视觉上表示当前值是否为一个合法的 URL 值。
 
@@ -65,21 +93,22 @@ slug: Web/HTML/Element/input/url
 
 用户可以输入到 `url` 输入框中的最大字符数（以 UTF-16 代码单元为单位）。必须为大于等于 0 的整数。如果未指定 `maxlength` 或指定了无效的值，则 `url` 输入框将没有最大值。这个值也必须大于等于 `minlength` 的值。
 
-如果文本框中的字符数大于 `maxlength` UTF-16 编码单元长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
+如果文本框中的字符数大于 `maxlength` UTF-16 编码单元长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
 
 ### minlength
 
 用户可以输入到 `url` 输入框中的最小字符数（以 UTF-16 代码单元为单位）。该值必须是小于等于 `maxlength` 指定的值的非负整数值。如果未指定 `minlength` 或指定了无效的值，则 `url` 输入将没有最小值。
 
-如果输入到字段中的文本的长度小于 `minlength` UTF-16 代码单元的长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
+如果输入到字段中的文本的长度小于 `minlength` UTF-16 代码单元的长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
 
 ### pattern
 
-如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
+如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
 
 如果模式未指定或无效，则不应用任何正则表达式，并且将完全忽略此属性。
 
-> **备注：** 使用 [`title`](/zh-CN/docs/Web/HTML/Element/input#title) 属性指定大多数浏览器将显示为文本的工具提示，以说明与模式匹配的要求。你还应该在附近添加其他说明性文字。
+> [!NOTE]
+> 使用 [`title`](/zh-CN/docs/Web/HTML/Element/input#title) 属性指定大多数浏览器将显示为文本的工具提示，以说明与模式匹配的要求。你还应该在附近添加其他说明性文字。
 
 参见[模式验证](#模式验证)小节以获取细节和例子。
 
@@ -89,13 +118,15 @@ slug: Web/HTML/Element/input/url
 
 如果控件的内容具有方向（{{Glossary("LTR")}} 或 {{Glossary("RTL")}}），但需要以相反的方向显示占位符，则可以使用 Unicode 双向算法来格式化字符，从而覆盖原有占位符的方向；请参见[如何针对双向文本使用 Unicode 控制符](https://www.w3.org/International/questions/qa-bidi-unicode-controls)获取更多信息。
 
-> **备注：** 尽可能避免使用 `placeholder` 属性。它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。请参见 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#标签)以获取更多信息。
+> [!NOTE]
+> 尽可能避免使用 `placeholder` 属性。它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。请参见 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#标签)以获取更多信息。
 
 ### readonly
 
 一个布尔属性，如果存在，则表示该字段不能由用户编辑。但是，仍可以通过 JavaScript 代码直接设置 {{domxref("HTMLInputElement")}} 的 `value` 属性来更改。
 
-> **备注：** 因为只读字段不能有值，所以 `required` 对指定了 `readonly` 属性的输入没有任何影响。
+> [!NOTE]
+> 因为只读字段不能有值，所以 `required` 对指定了 `readonly` 属性的输入没有任何影响。
 
 ### size
 
@@ -143,7 +174,8 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 
 然而，重要的是，这并不足以确保指定的文本是一个实际存在与网站的用户相对应的 URL，或在任何其他方面可以接受。它只是确保该字段的值被正确格式化为一个 URL。
 
-> **备注：** 用户可以在背后改动你的 HTML 代码，所以你的站点*不能*依赖此验证提供安全性。*必须*在服务端验证用户所输入的 URL，以确认用户提供的文本不会产生任何额外的安全隐患。
+> [!NOTE]
+> 用户可以在背后改动你的 HTML 代码，所以你的站点*不能*依赖此验证提供安全性。*必须*在服务端验证用户所输入的 URL，以确认用户提供的文本不会产生任何额外的安全隐患。
 
 ### 简单的 URL 输入框
 
@@ -207,7 +239,8 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 
 {{EmbedLiveSample("元素值长度", 600, 40) }}
 
-> **备注：** 这些属性也影响验证；小于或大于指定的最小值或最大值的长度将会判定为不合法；而且大部分浏览器也会拒绝让用户输入长度大于指定限制的值。
+> [!NOTE]
+> 这些属性也影响验证；小于或大于指定的最小值或最大值的长度将会判定为不合法；而且大部分浏览器也会拒绝让用户输入长度大于指定限制的值。
 
 ### 提供默认值
 
@@ -263,13 +296,14 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 
 针对 `url` 输入，有两种等级的校验方式。首先，针对每一个 {{HTMLElement("input")}} 元素，有一种标准级别的校验方式，以验证其中的内容是一个合法的 URL。其次，你也可以额外添加一些过滤器，来满足自己的需求。
 
-> **警告：** HTML 表单验证*不能*替代服务端代码，以确保输入的数据格式正确。对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了。有人也可以完全绕开你的 HTML 并将数据直接提交到你的服务器。如果服务器端代码无法验证接收到的数据，则当将格式不正确的数据（或太大、类型错误的数据等等）输入数据库时，灾难可能会发生。
+> [!WARNING]
+> HTML 表单验证*不能*替代服务端代码，以确保输入的数据格式正确。对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了。有人也可以完全绕开你的 HTML 并将数据直接提交到你的服务器。如果服务器端代码无法验证接收到的数据，则当将格式不正确的数据（或太大、类型错误的数据等等）输入数据库时，灾难可能会发生。
 
 ### 基本验证
 
 支持 `url` 输入类型的浏览器会自动提供验证，以确保只有符合标准格式的 URL 文本被输入到输入框。
 
-URL 的语法是相当复杂的。它由 WHATWG 的 [URL 动态标准](https://url.spec.whatwg.org/)定义，并在我们的文章[什么是 URL？](/zh-CN/docs/Learn/Common_questions/What_is_a_URL)中为初学者做了描述。
+URL 的语法是相当复杂的。它由 WHATWG 的 [URL 动态标准](https://url.spec.whatwg.org/)定义，并在我们的文章[什么是 URL？](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)中为初学者做了描述。
 
 ### 使 URL 必填
 
@@ -357,7 +391,8 @@ input:valid + span::after {
 
 这就是为什么我们要指定字符串“URL 必须属于 myco 域”的原因。通过这样做，产生的完整错误信息可能是这样的：“请与请求的格式匹配。URL 必须属于 myco 域”。
 
-> **备注：** 如果你在编写验证正则表达式时遇到麻烦，它们不能正常工作，请检查你的浏览器控制台；那里可能有有用的错误信息来帮助你解决问题。
+> [!NOTE]
+> 如果你在编写验证正则表达式时遇到麻烦，它们不能正常工作，请检查你的浏览器控制台；那里可能有有用的错误信息来帮助你解决问题。
 
 ## 示例
 
@@ -375,8 +410,8 @@ input:valid + span::after {
 
 ## 参见
 
-- [HTML 表单指南](/zh-CN/docs/Learn/Forms)
+- [HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
-- [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/Input/tel)
-- [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/Input/email)
-- [CSS 属性兼容性表格](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/input/tel)
+- [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email)
+- [CSS 属性兼容性表格](/zh-CN/docs/Learn_web_development/Extensions/Forms)

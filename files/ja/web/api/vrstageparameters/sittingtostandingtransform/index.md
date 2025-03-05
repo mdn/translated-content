@@ -9,7 +9,8 @@ l10n:
 
 **`sittingToStandingTransform`** は {{domxref("VRStageParameters")}} インターフェイスの読み取り専用プロパティで、 {{domxref("VRFrameData")}} の座位空間ビュー行列を立位空間に変換する行列です。
 
-> **メモ:** このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 基本的には、レンダリングされたビューを座っている状態から立っている状態に変換するために、WebGL コードにこの値を渡すことができます。
 

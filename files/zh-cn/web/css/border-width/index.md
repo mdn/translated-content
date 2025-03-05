@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`border-width`** [CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)用于设置元素边框的宽度。
+**`border-width`** [CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)用于设置元素边框的宽度。
 
 {{EmbedInteractiveExample("pages/css/border-width.html")}}
 
@@ -66,7 +66,8 @@ border-width: unset;
     - `medium`
     - `thick`
 
-> **备注：** 由于规范中没有明确定义每个关键字所表示的确切厚度，因此使用其中一个关键字的确切结果取决于具体实现。尽管如此，它们始终遵循 `thin ≤ medium ≤ thick` 这一模式，并且这些值在同一文档中是恒定的。
+> [!NOTE]
+> 由于规范中没有明确定义每个关键字所表示的确切厚度，因此使用其中一个关键字的确切结果取决于具体实现。尽管如此，它们始终遵循 `thin ≤ medium ≤ thick` 这一模式，并且这些值在同一文档中是恒定的。
 
 ## 形式定义
 

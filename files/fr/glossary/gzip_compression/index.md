@@ -1,6 +1,6 @@
 ---
 title: Compression GZip
-slug: Glossary/GZip_compression
+slug: Glossary/gzip_compression
 ---
 
 {{GlossarySidebar}}

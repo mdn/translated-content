@@ -1,19 +1,15 @@
 ---
 title: list-style-position
 slug: Web/CSS/list-style-position
+l10n:
+  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
 {{CSSRef}}
 
-**`list-style-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リスト項目に対する {{cssxref("::marker")}} の位置を指定します。
+**`list-style-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リストアイテムに対する {{cssxref("::marker")}} の位置を指定します。
 
 {{EmbedInteractiveExample("pages/css/list-style-position.html")}}
-
-多くの場合、一括指定の {{cssxref("list-style")}} を使ったほうが便利です。
-
-> **メモ:** このプロパティはリスト項目に対して適用されます。つまり、 `{{cssxref("display")}}: list-item;` が指定された要素です。[既定では](https://www.w3.org/TR/html5/rendering.html#lists)、 {{HTMLElement("li")}} 要素が該当します。このプロパティは継承されるので、親要素 (通常は {{HTMLElement("ol")}} や {{HTMLElement("ul")}}) に設定することで、すべてのリスト項目に適用することができます。
-
-なお、 `list-style-position: inside` を指定したリスト要素の中で最初にブロック要素が配置された場合、その動作はブラウザーによって異なります。 Chrome と Safari では、この要素はマーカーボックスと同じ行に配置されますが、 Firefox、 Internet Explorer、 Opera では次の行に配置されます。 詳細については [Firefox バグ 36854](https://bugzil.la/36854) をご覧ください。
 
 ## 構文
 
@@ -26,6 +22,7 @@ list-style-position: outside;
 list-style-position: inherit;
 list-style-position: initial;
 list-style-position: revert;
+list-style-position: revert-layer;
 list-style-position: unset;
 ```
 
@@ -34,9 +31,17 @@ list-style-position: unset;
 ### 値
 
 - `inside`
-  - : {{cssxref("::marker")}} はリスト項目の最初の要素として配置されます。
+  - : {{cssxref("::marker")}} はリストアイテムの最初の要素として配置されます。
 - `outside`
-  - : {{cssxref("::marker")}} は主要ブロックボックスの外に配置されます。
+  - : {{cssxref("::marker")}} は主要ブロックボックスの外に配置されます。これは {{cssxref("list-style")}} の既定値です。
+
+## 解説
+
+このプロパティはリストアイテムに対して適用されます。つまり、 `{{cssxref("display")}}: list-item;` が指定された要素です。[既定では](https://html.spec.whatwg.org/multipage/rendering.html#lists)、 {{HTMLElement("li")}} 要素が該当します。このプロパティは継承されるので、親要素 (通常は {{HTMLElement("ol")}} や {{HTMLElement("ul")}}) に設定することで、すべてのリストアイテムに適用することができます。
+
+ブロック要素が `list-style-position: inside` の宣言されたリスト要素の最初の子である場合、そのブロック要素はマーカーボックスの次の行に配置されます。
+
+多くの場合、一括指定の {{cssxref("list-style")}} を使ったほうが便利です。
 
 ## 公式定義
 
@@ -48,37 +53,37 @@ list-style-position: unset;
 
 ## 例
 
-<h3 id="Setting_list_item_position">リスト項目の位置の設定</h3>
+### リストアイテムの位置の設定
 
 #### HTML
 
-```html
+```html live-sample___setting_list_item_position
 <ul class="inside">
-  List 1
-  <li>List Item 1-1</li>
-  <li>List Item 1-2</li>
-  <li>List Item 1-3</li>
-  <li>List Item 1-4</li>
+  リスト 1
+  <li>リストアイテム 1-1</li>
+  <li>リストアイテム 1-2</li>
+  <li>リストアイテム 1-3</li>
+  <li>リストアイテム 1-4</li>
 </ul>
 <ul class="outside">
-  List 2
-  <li>List Item 2-1</li>
-  <li>List Item 2-2</li>
-  <li>List Item 2-3</li>
-  <li>List Item 2-4</li>
+  リスト 2
+  <li>リストアイテム 2-1</li>
+  <li>リストアイテム 2-2</li>
+  <li>リストアイテム 2-3</li>
+  <li>リストアイテム 2-4</li>
 </ul>
 <ul class="inside-img">
-  List 3
-  <li>List Item 3-1</li>
-  <li>List Item 3-2</li>
-  <li>List Item 3-3</li>
-  <li>List Item 3-4</li>
+  リスト 3
+  <li>リストアイテム 3-1</li>
+  <li>リストアイテム 3-2</li>
+  <li>リストアイテム 3-3</li>
+  <li>リストアイテム 3-4</li>
 </ul>
 ```
 
 #### CSS
 
-```css
+```css live-sample___setting_list_item_position
 .inside {
   list-style-position: inside;
   list-style-type: square;
@@ -91,7 +96,7 @@ list-style-position: unset;
 
 .inside-img {
   list-style-position: inside;
-  list-style-image: url("starsolid.gif");
+  list-style-image: url("star-solid.gif");
 }
 ```
 
@@ -109,4 +114,9 @@ list-style-position: unset;
 
 ## 関連情報
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-type")}}, {{Cssxref("list-style-image")}}
+- {{Cssxref("list-style")}} 一括指定プロパティ
+- {{Cssxref("list-style-type")}} プロパティ
+- {{Cssxref("list-style-image")}} プロパティ
+- {{cssxref("::marker")}} 擬似要素
+- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)モジュール

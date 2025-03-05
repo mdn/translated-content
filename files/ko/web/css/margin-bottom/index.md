@@ -5,7 +5,7 @@ slug: Web/CSS/margin-bottom
 
 {{CSSRef}}
 
-**`margin-bottom`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 아래쪽에 [바깥 여백 영역](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)margin area을 설정합니다. 양수 값은 인접 요소와 거리를 넓히고, 음수 값은 더 좁힙니다.
+**`margin-bottom`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 아래쪽에 [바깥 여백 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)margin area을 설정합니다. 양수 값은 인접 요소와 거리를 넓히고, 음수 값은 더 좁힙니다.
 
 {{EmbedInteractiveExample("pages/css/margin-bottom.html")}}
 

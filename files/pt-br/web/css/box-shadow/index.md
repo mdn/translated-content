@@ -65,9 +65,9 @@ box-shadow:
   0 0 1em red;
 ```
 
-A propriedade box-shadow permite que você adicione uma sombra em quase qualquer elemento. Se um {{cssxref ("border-radius")}} for especificado no elemento com uma box-shadow, a sombra assume os mesmos cantos arredondados. O comando z-ordering de múltiplas box-shadows é o mesmo que múltiplas [text shadows](/pt-BR/CSS/text-shadow) (a primeira sombra especificada está na parte superior).
+A propriedade box-shadow permite que você adicione uma sombra em quase qualquer elemento. Se um {{cssxref ("border-radius")}} for especificado no elemento com uma box-shadow, a sombra assume os mesmos cantos arredondados. O comando z-ordering de múltiplas box-shadows é o mesmo que múltiplas [text shadows](/pt-BR/docs/CSS/text-shadow) (a primeira sombra especificada está na parte superior).
 
-[Box-shadow generator](/pt-BR/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator) é uma ferrament interativa qu permite a criação de `box-shadow`.
+[Box-shadow generator](/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator) é uma ferrament interativa qu permite a criação de `box-shadow`.
 
 {{cssinfo}}
 
@@ -139,4 +139,4 @@ Each shadow in the list (treating `none` as a 0-length list) is interpolated via
 
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/pt-BR/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/pt-BR/docs/Web/CSS/CSS_colors/Applying_color)

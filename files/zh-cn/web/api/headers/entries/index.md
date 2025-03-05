@@ -7,7 +7,8 @@ slug: Web/API/Headers/entries
 
 **`Headers.entries()`** 以{{jsxref("Iteration_protocols","迭代器")}}的形式返回 Headers 对象中所有的键值对。每一对中的键和值都是 {{jsxref("String")}} 对象。
 
-> **备注：** 这个方法在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中是可用的。
+> [!NOTE]
+> 这个方法在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中是可用的。
 
 ## 语法
 

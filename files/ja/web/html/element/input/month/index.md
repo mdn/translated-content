@@ -2,18 +2,38 @@
 title: <input type="month">
 slug: Web/HTML/Element/input/month
 l10n:
-  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`month`** 型は、ユーザーが年と月を入力できるようにする入力フィールドを作成し、年と月を簡単に入力できるようにします。
-値は "`YYYY-MM`" の形式の文字列で、`YYYY` は 4 桁の年、 `MM` は月の番号です。
+値は `YYYY-MM` の形式の文字列で、`YYYY` は 4 桁の年、 `MM` は月の番号です。
 
-{{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;month&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="start">Start month:</label>
+
+<input type="month" id="start" name="start" min="2018-03" value="2018-05" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 コントロールのユーザーインターフェイスは、一般にブラウザーによって異なります。現時点では対応が不安定であり、デスクトップ版の Chrome/Opera と Edge — および最新のバージョンのモバイルブラウザー — のみに利用可能な実装があります。
-`month` 入力欄に対応していないブラウザーでは、コントロールは単純な [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text) に格下げされますが、入力されたテキストが期待されている形式であることを保証するための自動検証が行われることもあります。
+`month` 入力欄に対応していないブラウザーでは、コントロールは [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text) に格下げされますが、入力されたテキストが期待されている形式であることを保証するための自動検証が行われることもあります。
 
 `month` に対応していないブラウザーを使用している場合のために、このスクリーンショットで Chrome と Opera でどのように見えるかを示します。
 右端にある下向き矢印をクリックすると、年と月を選択できる日付選択が表示されます。
@@ -26,7 +46,7 @@ Microsoft Edge では、 `month` コントロールはこのように表示さ�
 
 ## 値
 
-文字列で、入力欄に入力された年と月の値を YYYY-MM（4 桁以上の年に続いてハイフン ("`-`")、続いて 2 桁の月）の形式で表します。
+文字列で、入力欄に入力された年と月の値を YYYY-MM（4 桁以上の年に続いてハイフン (`-`)、続いて 2 桁の月）の形式で表します。
 この入力型で使用される時刻の値の形式について詳しくは、[月文字列](/ja/docs/Web/HTML/Date_and_time_formats#月文字列)をご覧ください。
 
 ### 既定値の設定
@@ -40,7 +60,7 @@ Microsoft Edge では、 `month` コントロールはこのように表示さ�
 
 {{EmbedLiveSample('Setting_a_default_value', 600, 60)}}
 
-一点気を付けなければならないことは、表示される日付の書式は実際の `value` とは異なるということです。多くの{{Glossary("user agent", "ユーザーエージェント")}}は、年と月をユーザーのオペレーティングシステムに設定されたロケールに適した形式で表示しますが、日付の `value` は常に `yyyy-MM` の書式です。
+一点気を付けなければならないことは、表示される日付の書式は実際の `value` とは異なるということです。多くの{{Glossary("User agent", "ユーザーエージェント")}}は、年と月をユーザーのオペレーティングシステムに設定されたロケールに適した形式で表示しますが、日付の `value` は常に `yyyy-MM` の書式です。
 
 上記の値がサーバーへ送信された場合は、例えば、 `bday-month=1978-06` のようになります。
 
@@ -75,7 +95,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 最新の年月で、上記の[値](#値)で説明した文字列の書式です。
 要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこの日付よりも後の場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
-`max` 属性の値が "`yyyy-MM`" の書式に従う妥当な文字列でない場合、要素は最大値を持ちません。
+`max` 属性の値が `yyyy-MM` の書式に従う妥当な文字列でない場合、要素は最大値を持ちません。
 
 この値は `min` 属性で指定されたものより後か、同じ年月を指定する必要があります。
 
@@ -92,7 +112,8 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 論理属性で、存在すれば、ユーザーが編集することができないことを表します。
 しかし、 `value` は、 JavaScript コードから直接 {{domxref("HTMLInputElement.value")}} プロパティを設定することで変更することができます。
 
-> **メモ:** 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
+> [!NOTE]
+> 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
 
 ### step
 
@@ -101,7 +122,8 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
-> **メモ:** ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
+> [!NOTE]
+> ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("User agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
 
 `month` 入力欄では、 `step` の値は月数で指定され、倍率は 1 です (数値も月単位であるため)。
 `step` の既定値は 1 ヶ月です。
@@ -115,7 +137,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### 月入力の基本的な使用
 
-もっとも単純な `<input type="month">` の使用方法は、次のように基本的な {{HTMLElement("input")}} と {{htmlelement("label")}} 要素の組み合わせです。
+もっとも基本的な `<input type="month">` の使用方法は、次のように基本的な {{HTMLElement("input")}} と {{htmlelement("label")}} 要素の組み合わせです。
 
 ```html
 <form>
@@ -226,7 +248,8 @@ input:valid + span::after {
 }
 ```
 
-> **警告:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用にはなりません。
+> [!WARNING]
+> HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用にはなりません。
 > HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。
 > HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。
 > サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ (または大きすぎるデータ、誤った種類のデータなど) が送信された場合に障害が発生するおそれがあります。
@@ -254,10 +277,12 @@ input:valid + span::after {
 `month` 入力欄はこれを使用しないので、 `text` 入力欄などとして扱うようフォールバックされたときに、このパターンを使用します。
 例えば、次の例を `month` 入力欄に未対応のブラウザーで見てみてください。
 
-```html
+```html-nolint
 <form>
   <div>
-    <label for="month">何月にいらっしゃいますか？ (6 ～ 9 月)</label>
+    <label for="month">
+      何月にいらっしゃいますか？ (6 ～ 9 月)
+    </label>
     <input
       id="month"
       type="month"
@@ -316,7 +341,7 @@ input:valid + span::after {
 この例では、ユーザーが年と月を選択できるよう設計されたユーザーインターフェイスの要素を 2 組作成します。
 1 つ目はネイティブの `month` 入力欄であり、もう 1 つは年と月を個別に選択することができる一対の {{HTMLElement("select")}} 要素で、まだ `<input type="month">` に対応していないブラウザーのためのものです。
 
-{{EmbedLiveSample('例', 600, 140)}}
+{{EmbedLiveSample('Examples', 600, 140)}}
 
 ### HTML
 
@@ -448,7 +473,8 @@ function populateYears() {
 }
 ```
 
-> **メモ:** 53 週ある年もあることを忘れないでください（[年あたりの週数](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)を参照）。商品のアプリを開発するときはこれを念頭に置いておく必要があります。
+> [!NOTE]
+> 53 週ある年もあることを忘れないでください（[年あたりの週数](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)を参照）。商品のアプリを開発するときはこれを念頭に置いておく必要があります。
 
 ## 技術的概要
 
@@ -478,7 +504,12 @@ function populateYears() {
     </tr>
     <tr>
       <td><strong>IDL 属性</strong></td>
-      <td><code>value</code></td>
+      <td>
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>,
+        <code>valueAsDate</code>,
+        <code>valueAsNumber</code>
+      </td>
     </tr>
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
@@ -494,7 +525,7 @@ function populateYears() {
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>対応するロールなし</code></a></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
     </tr>
   </tbody>
 </table>
@@ -511,6 +542,5 @@ function populateYears() {
 
 - 全般的な {{HTMLElement("input")}} およびその操作に使用する{{domxref("HTMLInputElement")}} インターフェイス
 - [HTML で使用される日付と時刻の書式](/ja/docs/Web/HTML/Date_and_time_formats)
-- [日付と時刻の選択のチュートリアル](/ja/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
+- [日付と時刻の選択のチュートリアル](/ja/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#日付と時刻ピッカー)
 - [`<input type="datetime-local">`](/ja/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/ja/docs/Web/HTML/Element/input/date), [`<input type="time">`](/ja/docs/Web/HTML/Element/input/time), [`<input type="week">`](/ja/docs/Web/HTML/Element/input/week)
-- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

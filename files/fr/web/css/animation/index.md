@@ -5,7 +5,7 @@ slug: Web/CSS/animation
 
 {{CSSRef}}
 
-La propriété **`animation`** est [une propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet d'appliquer une animation entre des styles.
+La propriété **`animation`** est [une propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet d'appliquer une animation entre des styles.
 
 C'est une propriété qui synthétise les propriétés suivantes :
 
@@ -241,7 +241,7 @@ window.addEventListener("load", function () {
 
 {{EmbedLiveSample("Exemple_danimation", "100%", 260, "", "", "example-outcome-frame")}}
 
-[Une liste des propriétés qui peuvent être animées](/fr/docs/Web/CSS/Liste_propriétés_CSS_animées) est disponible. On notera que cette liste est également valable pour [les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS).
+[Une liste des propriétés qui peuvent être animées](/fr/docs/Web/CSS/CSS_animated_properties) est disponible. On notera que cette liste est également valable pour [les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
 
 ## Syntaxe
 
@@ -285,7 +285,8 @@ L'ordre des valeurs est également important pour chaque définition d'animation
 
 ## Exemples
 
-> **Note :** D'autres exemples sont disponibles sur la page [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations).
+> [!NOTE]
+> D'autres exemples sont disponibles sur la page [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 
 ### Vue laser
 
@@ -374,5 +375,5 @@ Veillez à fournir un mécanisme qui permette d'interrompre ou de désactiver l'
 
 ## Voir aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Utiliser_les_animations_CSS)
+- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

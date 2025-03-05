@@ -3,6 +3,7 @@
   "no-trailing-punctuation": {
     "punctuation": ".,;:。，",
   },
+  "fenced-code-language": true,
   "search-replace": {
     "rules": [
       {
@@ -99,6 +100,26 @@
         "name": "force-pronoun",
         "message": "Consider using '你' instead of '您'",
         "searchPattern": "/您/g",
+        "searchScope": "text",
+      },
+      {
+        "name": "text-code-fence",
+        "message": "Use 'plain' tag",
+        "searchPattern": "/(^ *`{3,})(text|none|unix)/gm",
+        "replace": "$1plain",
+        "searchScope": "text",
+      },
+      {
+        "name": "gfm-alert",
+        "message": "Use the GFM syntax: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#notes_warnings_and_callouts",
+        "searchPattern": "/^ *> \\*\\*(備註|警告|標註)：\\*\\*(?! ?[[{`_*])/gm",
+        "searchScope": "text",
+      },
+      {
+        "name": "bad-gfm-alert",
+        "message": "Use the correct GFM syntax: `> [!NOTE]`",
+        // TODO this should use the modifier syntax; until it has better Node support
+        "searchPattern": "/^ *> !?\\[!?((?!NOTE)[Nn][Oo][Tt][Ee]|(?!WARNING)[Ww][Aa][Rr][Nn][Ii][Nn][Gg]|(?!CALLOUT)[Cc][Aa][Ll][Ll][Oo][Uu][Tt])\\]\\n|^ *> (?!\\[!)!?\\[!?(NOTE|WARNING|CALLOUT)\\]\\n/gm",
         "searchScope": "text",
       },
     ],

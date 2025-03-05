@@ -9,7 +9,19 @@ La méthode **`sort()`** trie les éléments d'un tableau, dans ce même tableau
 
 La complexité en espace mémoire et en temps utilisée pour le tri ne peut pas être garantie car elle dépend de l'implémentation.
 
-{{EmbedInteractiveExample("pages/js/array-sort.html")}}
+{{InteractiveExample("JavaScript Demo: Array.sort()")}}
+
+```js interactive-example
+const months = ["March", "Jan", "Feb", "Dec"];
+months.sort();
+console.log(months);
+// Expected output: Array ["Dec", "Feb", "Jan", "March"]
+
+const array1 = [1, 30, 4, 21, 100000];
+array1.sort();
+console.log(array1);
+// Expected output: Array [1, 100000, 21, 30, 4]
+```
 
 ## Syntaxe
 
@@ -21,7 +33,7 @@ arr.sort(fonctionComparaison);
 ### Paramètres
 
 - `fonctionComparaison` {{optional_inline}}
-  - : Ce paramètre optionnel permet de spécifier une fonction définissant l'ordre de tri. Si absente, le tableau est trié selon la valeur de point de code [Unicode](/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux#Unicode) de chaque caractère, d'après la conversion en chaine de caractères de chaque élément. Cette fonction prendra deux arguments : le premier élément à comparer et le deuxième élément à comparer.
+  - : Ce paramètre optionnel permet de spécifier une fonction définissant l'ordre de tri. Si absente, le tableau est trié selon la valeur de point de code [Unicode](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#unicode) de chaque caractère, d'après la conversion en chaine de caractères de chaque élément. Cette fonction prendra deux arguments : le premier élément à comparer et le deuxième élément à comparer.
 
 ### Valeur de retour
 
@@ -31,7 +43,8 @@ Le tableau trié (le tri est effectué sur le tableau courant qui est modifié, 
 
 Si le paramètre `fonctionComparaison` n'est pas fourni, les éléments qui ne valent pas `undefined` sont triés en les convertissant en chaines de caractères et en comparant ces chaines selon l'ordre des points de code Unicode. Par exemple, "banane" sera trié avant "cerise", mais "Cerise" arrivera avant "banane" à cause de la majuscule (les majuscules arrivent avant dans la liste). Dans un tri numérique, 9 sera trié avant 80, mais comme ces nombres sont convertis en chaînes de caractères, "80" arrive avant "9" selon l'ordre des unités de code UTF-16. Les éléments valant `undefined` sont placés à la fin du tableau.
 
-> **Note :** En UTF-16, les caractères Unicode situés après `\uFFFF` sont encodés avec deux unités de code _surrogates_ sur l'intervalle `\uD800` - `\uDFFF`. Pour comparer les chaînes de caractères entre elles, ce sont les unités de code séparées qui sont prises en compte. Ainsi, le caractère formé par la paire _surrogate_ `\uD655 \uDE55` sera trié avant le caractère `\uFF3A`.
+> [!NOTE]
+> En UTF-16, les caractères Unicode situés après `\uFFFF` sont encodés avec deux unités de code _surrogates_ sur l'intervalle `\uD800` - `\uDFFF`. Pour comparer les chaînes de caractères entre elles, ce sont les unités de code séparées qui sont prises en compte. Ainsi, le caractère formé par la paire _surrogate_ `\uD655 \uDE55` sera trié avant le caractère `\uFF3A`.
 
 Si le paramètre `fonctionComparaison` est fourni, les éléments du tableau (qui ne valent pas `undefined`) sont triés selon la valeur de retour de la fonction de comparaison. Si `a` et `b` sont deux éléments à comparer, alors&nbsp;:
 
@@ -72,7 +85,7 @@ console.log(nombres);
 // [1, 2, 3, 4, 5]
 ```
 
-ECMAScript 2015 permet d'utiliser [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) et ainsi d'obtenir une syntaxe plus concise :
+ECMAScript 2015 permet d'utiliser [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) et ainsi d'obtenir une syntaxe plus concise :
 
 ```js
 let nombres = [4, 2, 5, 1, 3];
@@ -259,7 +272,8 @@ var result = mapped.map(function (e) {
 });
 ```
 
-> **Note :** Une bibliothèque _open source_ utilise cette approche : [`mapsort`](https://null.house/open-source/mapsort).
+> [!NOTE]
+> Une bibliothèque _open source_ utilise cette approche : [`mapsort`](https://null.house/open-source/mapsort).
 
 ## Spécifications
 

@@ -75,7 +75,7 @@ draw();
 
 만약 CSS를 다뤄보신적이 있다면 이러한 프로퍼티들은 익숙하실겁니다.
 
-다음에 나오는 [WHATWG](http://www.whatwg.org/) 예제 다이어그램은 `textBaseline`를 이용하여 다양한 베이스라인 설정을 보여줍니다.![The top of the em square is
+다음에 나오는 [WHATWG](https://www.whatwg.org/) 예제 다이어그램은 `textBaseline`를 이용하여 다양한 베이스라인 설정을 보여줍니다.![The top of the em square is
 roughly at the top of the glyphs in a font, the hanging baseline is
 where some glyphs like आ are anchored, the middle is half-way
 between the top of the em square and the bottom of the em square,

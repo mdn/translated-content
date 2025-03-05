@@ -60,9 +60,10 @@ var monImageData = ctx.getImageData(gauche, haut, largeur, hauteur);
 
 Cette méthode retourne un objet `ImageData` représentant les données pixel pour la zone du canevas dont les coins sont représentés par les points (`left`, `top`) _`(gauche,haut)`_, (`left+width`, `top`) _(gauche+largeur, haut)_, (`left`, `top+height`) _(gauche, haut+hauteur)_ et (`left+width`, `top+height`) _(gauche+largeur, haut+hauteur)_. Les coordonnées sont spécifiées en unités d'espace de coordonnées du canevas.
 
-> **Note :** Tous les pixels en dehors du canevas seront retournés comme noirs transparents dans l'objet `ImageData` résultant.
+> [!NOTE]
+> Tous les pixels en dehors du canevas seront retournés comme noirs transparents dans l'objet `ImageData` résultant.
 
-Cette méthode est aussi présentée dans l'article [Manipulation vidéo utilisant canvas](/fr/docs/HTML/Manipulating_video_using_canvas).
+Cette méthode est aussi présentée dans l'article [Manipulation vidéo utilisant canvas](/fr/docs/Web/API/Canvas_API/Manipulating_video_using_canvas).
 
 ### Une pipette à couleur
 
@@ -259,7 +260,7 @@ function draw(img) {
 
 ## Sauvegarde des images
 
-L' {{domxref ("HTMLCanvasElement")}} fournit une méthode `toDataURL ()`, utile lors de l'enregistrement d'images. Il retourne un [URI de données](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) contenant une représentation de l'image dans le format spécifié par le paramètre de `type` (par défaut en [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) ). L'image renvoyée est dans une résolution de 96 dpi.
+L' {{domxref ("HTMLCanvasElement")}} fournit une méthode `toDataURL ()`, utile lors de l'enregistrement d'images. Il retourne un [URI de données](/fr/docs/Web/URI/Schemes/data) contenant une représentation de l'image dans le format spécifié par le paramètre de `type` (par défaut en [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) ). L'image renvoyée est dans une résolution de 96 dpi.
 
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
   - : Par défaut. Crée un image PNG.
@@ -276,7 +277,7 @@ Vous pouvez également créer un {{domxref ("Blob")}} à partir du canevas.
 ## Voir aussi
 
 - {{domxref("ImageData")}}
-- [Manipulating video using canvas](/fr/docs/HTML/Manipulating_video_using_canvas)
+- [Manipulating video using canvas](/fr/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
 - [Canevas, images et pixels – par Christian Heilmann (en)](https://codepo8.github.io/canvas-images-and-pixels/)
 
 {{PreviousNext("Tutoriel_canvas/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}

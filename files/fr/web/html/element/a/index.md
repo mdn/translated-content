@@ -7,7 +7,23 @@ slug: Web/HTML/Element/a
 
 L'élément HTML **`<a>`** (pour ancre ou _anchor_ en anglais), avec [son attribut `href`](#href), crée un lien hypertexte vers des pages web, des fichiers, des adresses e-mail, des emplacements se trouvant dans la même page, ou tout ce qu'une URL peut adresser. Le contenu de chaque élément `<a>` **doit** indiquer la destination du lien. Si [l'attribut `href`](#href) est présent, appuyer sur la touche entrée en se concentrant sur l'élément `<a>` l'activera.
 
-{{EmbedInteractiveExample("pages/tabbed/a.html")}}
+{{InteractiveExample("HTML Demo: &lt;a&gt;")}}
+
+```html interactive-example
+<p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul>
+```
+
+```css interactive-example
+li {
+  margin-bottom: 0.5rem;
+}
+```
 
 ## Attributs
 
@@ -19,11 +35,11 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
     - L'en-tête HTTP [`Content-Disposition`](/fr/docs/Web/HTTP/Headers/Content-Disposition)
     - Le segment final dans l'URL : [path](/fr/docs/Web/API/URL/pathname)
-    - Le [Type MIME](/fr/docs/Glossary/MIME_type) (de l'en-tête [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type), le début d'une URL [`data:`](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs), ou [`Blob.type`](/fr/docs/Web/API/Blob/type) pour une URL [`blob:`](/fr/docs/Web/API/URL/createObjectURL)).
+    - Le [Type MIME](/fr/docs/Glossary/MIME_type) (de l'en-tête [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type), le début d'une URL [`data:`](/fr/docs/Web/URI/Schemes/data), ou [`Blob.type`](/fr/docs/Web/API/Blob/type) pour une URL [`blob:`](/fr/docs/Web/API/URL/createObjectURL_static)).
 
     La définition d'une valeur la suggère comme nom de fichier. Les caractères `/` et `\` sont convertis en caractères de soulignement (`_`). Les systèmes de fichiers peuvent interdire d'autres caractères dans les noms de fichiers, les navigateurs ajusteront donc le nom suggéré si nécessaire.
 
-    > **Note :**
+    > [!NOTE]
     >
     > - `download` ne fonctionne que pour [les URLs de même origine](/fr/docs/Web/Security/Same-origin_policy), ou les schémas `blob:` et `data:`.
     > - Si l'en-tête `Content-Disposition` comporte des informations différentes de celles de l'attribut `download`, le comportement résultant peut différer :
@@ -48,7 +64,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 - **`referrerpolicy`** {{experimental_inline}}
   - : La portion du [referrer](/fr/docs/Web/HTTP/Headers/Referer) envoyer lors du suivi du lien. Voir [`Referrer-Policy`](/fr/docs/Web/HTTP/Headers/Referrer-Policy) pour les valeurs possibles et leurs effets.
 - **`rel`**
-  - : Cet attribut indique la relation entre la cible du lien et l'objet faisant le lien. La valeur est une liste de [types de liens](/fr/docs/Web/HTML/Link_types) séparés par des espaces.
+  - : Cet attribut indique la relation entre la cible du lien et l'objet faisant le lien. La valeur est une liste de [types de liens](/fr/docs/Web/HTML/Attributes/rel) séparés par des espaces.
 - **`target`**
 
   - : Où afficher l'URL liée, comme nom d'un _contexte de navigation_ (un onglet, une fenêtre ou un [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)). Les mots-clés suivants ont des significations spéciales pour l'endroit où charger l'URL :
@@ -58,7 +74,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
     - `_parent` : le contexte de navigation parent de celui en cours. S'il n'y a pas de parent, il se comporte comme `_self`.
     - `_top` : le contexte de navigation le plus haut (le contexte "le plus haut" qui est un ancêtre du contexte actuel). S'il n'a aucun ancêtre, il se comporte comme `_self`.
 
-    > **Note :** Définir `target="_blank"` sur les éléments `<a>` fournit implicitement le même comportement `rel` que définir [`rel="noopener"`](/fr/docs/Web/HTML/Link_types/noopener) qui ne définit pas `window.opener`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour le support.
+    > [!NOTE]
+    > Définir `target="_blank"` sur les éléments `<a>` fournit implicitement le même comportement `rel` que définir [`rel="noopener"`](/fr/docs/Web/HTML/Attributes/rel/noopener) qui ne définit pas `window.opener`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour le support.
 
 - **`type`**
   - : Donne des indications sur le format de l'URL liée avec un [Type MIME](/fr/docs/Glossary/MIME_type). Aucune fonctionnalité intégrée.
@@ -67,9 +84,10 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
 - **`charset`** {{Deprecated_Inline}}
 
-  - : Fait allusion aux [encodages des caractères](/fr/docs/Glossary/character_encoding) de l'URL liée.
+  - : Fait allusion aux [encodages des caractères](/fr/docs/Glossary/Character_encoding) de l'URL liée.
 
-    > **Note :** Cet attribut est déprécié et **ne doit pas être utilisé par les auteurs**. Utilisez l'en-tête HTTP [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) sur l'URL liée.
+    > [!NOTE]
+    > Cet attribut est déprécié et **ne doit pas être utilisé par les auteurs**. Utilisez l'en-tête HTTP [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) sur l'URL liée.
 
 - **`coords`** {{Deprecated_Inline}}
   - : Utilisé avec [l'attribut `shape`](#shape). Une liste de coordonnées séparées par des virgules.
@@ -77,7 +95,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
   - : Était nécessaire pour définir un emplacement cible possible dans une page. En HTML 4.01, `id` et `name` pouvaient tous deux être utilisés sur `<a>`, pour autant qu'ils aient des valeurs identiques.
 
-    > **Note :** Utilisez l'attribut universel [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) à la place.
+    > [!NOTE]
+    > Utilisez l'attribut universel [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) à la place.
 
 - **`rev`** {{Deprecated_Inline}}
   - : Spécifiait un lien inverse ; l'opposé de [l'attribut `rel`](#rel). Déprécié pour avoir été très confus.
@@ -85,7 +104,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
   - : La forme de la région de l'hyperlien dans une carte d'image.
 
-    > **Note :** Utilisez plutôt l'élément [`<area>`](/fr/docs/Web/HTML/Element/area) pour les cartes d'images.
+    > [!NOTE]
+    > Utilisez plutôt l'élément [`<area>`](/fr/docs/Web/HTML/Element/area) pour les cartes d'images.
 
 ## Propriétés
 
@@ -247,7 +267,8 @@ a {
 
 {{EmbedLiveSample('')}}
 
-> **Note :** Vous pouvez utiliser `href="#top"` ou le fragment vide (`href="#"`) pour créer un lien vers le haut de la page actuelle, [comme défini dans la spécification HTML](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
+> [!NOTE]
+> Vous pouvez utiliser `href="#top"` ou le fragment vide (`href="#"`) pour créer un lien vers le haut de la page actuelle, [comme défini dans la spécification HTML](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
 
 ### Créer un lien avec une adresse électronique
 
@@ -356,7 +377,7 @@ document
 
 Les éléments `<a>` peuvent avoir des conséquences sur la sécurité et la vie privée des utilisateurs. Voir [`Referer` header : privacy and security concerns](/fr/docs/Web/Security/Referer_header:_privacy_and_security_concerns) pour plus d'informations.
 
-L'utilisation de `target="_blank"` sans [`rel="noreferrer"`](/fr/docs/Web/HTML/Link_types/noreferrer) et [`rel="noopener"`](/fr/docs/Web/HTML/Link_types/noopener) rend le site web vulnérable aux attaques d'exploitation de l'API [`window.opener`](/fr/docs/Web/API/Window/opener) ([description de la vulnérabilité](https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/)), bien qu'il faille noter que, dans les versions plus récentes du navigateur, la définition de `target="_blank"` fournit implicitement la même protection que la définition de `rel="noopener"`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour plus de détails.
+L'utilisation de `target="_blank"` sans [`rel="noreferrer"`](/fr/docs/Web/HTML/Attributes/rel/noreferrer) et [`rel="noopener"`](/fr/docs/Web/HTML/Attributes/rel/noopener) rend le site web vulnérable aux attaques d'exploitation de l'API [`window.opener`](/fr/docs/Web/API/Window/opener) ([description de la vulnérabilité](https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/)), bien qu'il faille noter que, dans les versions plus récentes du navigateur, la définition de `target="_blank"` fournit implicitement la même protection que la définition de `rel="noopener"`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour plus de détails.
 
 ## Accessibilité
 
@@ -396,7 +417,7 @@ Les ancres sont souvent détournées avec l'évènement `onclick` afin de créer
 
 Ces valeurs produisent des résultats inadéquats lorsqu'on copie/déplace des liens, qu'on ouvre des liens dans de nouveaux onglets ou fenêtres, qu'on ajoute des marque-pages ou lorsque le JavaScript est encore en train d'être téléchargé. De plus, la sémantique exposée par le document, utilisée par les outils d'assistance, est incorrecte.
 
-Dans ces cas, on privilégiera plutôt l'utilisation d'un bouton [`<button>`](/fr/docs/Web/HTML/Element/Button). De façon générale, une ancre ne doit être utilisée que pour naviguer vers une URL correcte.
+Dans ces cas, on privilégiera plutôt l'utilisation d'un bouton [`<button>`](/fr/docs/Web/HTML/Element/button). De façon générale, une ancre ne doit être utilisée que pour naviguer vers une URL correcte.
 
 ### Liens externes, liens vers des ressources non-HTML
 
@@ -420,7 +441,7 @@ Les personnes qui utilisent des outils d'assistance à la navigation comme des l
 </a>
 ```
 
-Si une icône est utilisée en lieu et place du texte pour indiquer ce comportement, on s'assurera qu'elle contient bien [une description alternative](/fr/docs/Web/HTML/Element/Img#attr-alt).
+Si une icône est utilisée en lieu et place du texte pour indiquer ce comportement, on s'assurera qu'elle contient bien [une description alternative](/fr/docs/Web/HTML/Element/img#attr-alt).
 
 ```html
 <a target="_blank" href="https://www.wikipedia.org">

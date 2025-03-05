@@ -11,7 +11,8 @@ l10n:
 
 このインターフェイスを持つ `audioprocess` イベントは、音声処理が必要なときに {{domxref("ScriptProcessorNode")}} で発生します。音声処理中、入力バッファーが読み込まれ、処理されて出力音声データが生成され、出力バッファーに書き込まれます。
 
-> **警告:** この機能は非推奨となったので、[`AudioWorklet`](/ja/docs/Web/API/AudioWorklet) で置き換えてください。
+> [!WARNING]
+> この機能は非推奨となったので、[`AudioWorklet`](/ja/docs/Web/API/AudioWorklet) で置き換えてください。
 
 {{InheritanceDiagram}}
 
@@ -39,7 +40,8 @@ _親プロパティである {{domxref("Event")}} から継承されたプロパ
 
 次の例は、`ScriptProcessorNode` を使用して、{{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} で読み込んだ音声を{{domxref("AudioDestinationNode")}} で処理し、入力トラック（バッファー）の各音声サンプルにホワイトノイズを追加し、{{domxref("AudioDestinationNode")}} を通して再生する方法を示しています。 各チャンネルと各サンプルフレームに対して、`scriptNode.onaudioprocess` 関数は関連する `audioProcessingEvent` を受け取り、それを用いて入力バッファー内の各チャンネルと各チャンネル内の各サンプルをループし、少量のホワイトノイズを追加してから、その結果をそれぞれのケースで出力サンプルに設定します。
 
-> **メモ:** 完全な動作する例は、GitHub の [script-processor-node](https://mdn.github.io/webaudio-examples/script-processor-node/) リポジトリーを参照してください（[ソースコード](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html)にもアクセスできます）。
+> [!NOTE]
+> 完全な動作する例は、GitHub の [script-processor-node](https://mdn.github.io/webaudio-examples/script-processor-node/) リポジトリーを参照してください（[ソースコード](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html)にもアクセスできます）。
 
 ```js
 const myScript = document.querySelector("script");

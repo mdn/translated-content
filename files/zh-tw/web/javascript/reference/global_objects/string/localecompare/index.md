@@ -9,7 +9,17 @@ slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 
 如果環境中有支援[`Intl.Collator` API](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)，這個方法實際上是調用 `Intl.Collator` API。
 
-{{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
+{{InteractiveExample("JavaScript Demo: String.localeCompare()")}}
+
+```js interactive-example
+const a = "réservé"; // With accents, lowercase
+const b = "RESERVE"; // No accents, uppercase
+
+console.log(a.localeCompare(b));
+// Expected output: 1
+console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
+// Expected output: 0
+```
 
 ## 語法
 
@@ -56,7 +66,8 @@ localeCompare(compareString, locales, options)
 - 若為正數，表示 `referenceStr`在`compareString`以後
 - 若回傳`0`，表示兩者相等
 
-> **警告：** 不要依靠特定的回傳值，例如 `-1` 或是 `1`！
+> [!WARNING]
+> 不要依靠特定的回傳值，例如 `-1` 或是 `1`！
 >
 > 正數或是負數的回傳值在不同的瀏覽器(也包誇同一瀏覽器但不同版本）之間有可能會有所不同。因為 W3C 規範僅要求值得正負而已。
 > 也因此，某些瀏覽器可能會回傳 `-2` 、 `2` 甚至其他值。

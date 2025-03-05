@@ -26,7 +26,7 @@ slug: Web/XSLT/Element/processing-instruction
 
 ### 정의
 
-[XSLT section 7.3, Creating Processing Instructions](http://www.w3.org/TR/xslt#section-Creating-Processing-Instructions)
+[XSLT section 7.3, Creating Processing Instructions](https://www.w3.org/TR/xslt#section-Creating-Processing-Instructions)
 
 ### Gecko 지원
 

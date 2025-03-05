@@ -9,7 +9,8 @@ slug: Web/API/MediaStreamTrack/unmute_event
 
 これは {{domxref("MediaStreamTrack/mute_event", "mute")}} で始まった {{domxref("MediaStreamTrack.muted", "muted")}} の状態を終了します。
 
-> **メモ:** 多くの人が「ミュート」と考える状態（すなわち、トラックを無音にすることをユーザーが制御できる方法）は実際には {{domxref("MediaStreamTrack.enabled")}} プロパティを使用して管理され、こちらではイベントが発生しません。
+> [!NOTE]
+> 多くの人が「ミュート」と考える状態（すなわち、トラックを無音にすることをユーザーが制御できる方法）は実際には {{domxref("MediaStreamTrack.enabled")}} プロパティを使用して管理され、こちらではイベントが発生しません。
 
 このイベントはキャンセル不可で、バブリングしません。
 

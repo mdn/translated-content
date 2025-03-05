@@ -11,7 +11,8 @@ l10n:
 
 无效的日期（比如 0）代表过去的日期，即该资源已经过期。
 
-> **备注：** 如果响应中有指令为 `max-age` 或 `s-maxage` 的 {{HTTPHeader("Cache-Control")}} 标头，则 `Expires` 标头会被忽略。
+> [!NOTE]
+> 如果响应中有指令为 `max-age` 或 `s-maxage` 的 {{HTTPHeader("Cache-Control")}} 标头，则 `Expires` 标头会被忽略。
 
 <table class="properties">
   <tbody>

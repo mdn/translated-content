@@ -44,8 +44,8 @@ WeakMap 的键必须是可被垃圾回收的。大多数{{Glossary("Primitive", 
 
 - {{jsxref("Object/constructor", "WeakMap.prototype.constructor")}}
   - : 创建了该实例对象的构造函数。对于 `WeakMap` 实例，初始值是 {{jsxref("WeakMap/WeakMap", "WeakMap")}} 构造函数。
-- `WeakMap.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"WeakMap"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
+- `WeakMap.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"WeakMap"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
 
 ## 实例方法
 
@@ -268,7 +268,7 @@ function handleObjectValues(obj) {
 
 - [`core-js` 中 `WeakMap` 的 polyfill](https://github.com/zloirock/core-js#weakmap)
 - [带键的集合](/zh-CN/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_对象)
-- [使用 ECMAScript 6 WeakMap 隐藏实现细节](https://fitzgeraldnick.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html)，作者：尼克·菲茨杰拉德（2014）
+- [使用 ECMAScript 6 WeakMap 隐藏实现细节](https://fitzgen.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html)，作者：尼克·菲茨杰拉德（2014）
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}

@@ -32,7 +32,7 @@ L'évènement **`mouseover`** est déclenché à partir d'un {{domxref("Element"
 
 ## Exemples
 
-L'exemple suivant illustre la différence entre les évènements `mouseover` et [`mouseenter`](/fr/docs/Web/Events/mouseenter).
+L'exemple suivant illustre la différence entre les évènements `mouseover` et [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event).
 
 ### HTML
 
@@ -96,7 +96,7 @@ test.addEventListener(
 
 ## Voir aussi
 
-- [Une introduction aux évènements](/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements)
+- [Une introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
 - D'autres évènements connexes
 
   - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)

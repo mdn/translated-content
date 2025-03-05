@@ -16,4 +16,4 @@ La communication entre les contextes de navigation est sévèrement restreinte. 
 ### Référence technique
 
 - [Context de navigation sur WHATWG](https://html.spec.whatwg.org/multipage/browsers.html#windows)
-- [Contexte de navigation sur W3C](http://dev.w3.org/html5/spec/browsers.html)
+- [Contexte de navigation sur W3C](https://dev.w3.org/html5/spec/browsers.html)

@@ -14,4 +14,4 @@ CSP (콘텐츠 보안 정책[Content Security Policy](/ko/docs/Web/HTTP/CSP))는
 ## 같이 보기
 
 - [위키피디아의 콘텐츠 보안 정책](https://en.wikipedia.org/wiki/Content_Security_Policy)
-- [MDN의 콘텐츠 보안 정책 문서](/ko/docs/Web/Security/CSP)
+- [MDN의 콘텐츠 보안 정책 문서](/ko/docs/Web/HTTP/CSP)

@@ -135,7 +135,8 @@ slug: Web/API/Document_Object_Model/Whitespace
 
 这就是为什么人们在访问网页时，会看到“Hello World!”这句话很好地写在页面的顶部，而不是一个奇怪的缩进的“Hello”，但在下面一行有一个更奇怪的缩进的“World!”。
 
-> **备注：** 从版本 52 开始，[Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)支持高亮文本节点，使得观察包含节点中包含的空白字符变得更加容易。纯的空白符节点会有一个“whitespace”标记。
+> [!NOTE]
+> 从版本 52 开始，[Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)支持高亮文本节点，使得观察包含节点中包含的空白字符变得更加容易。纯的空白符节点会有一个“whitespace”标记。
 
 ### 在区块格式化上下文的空白符
 
@@ -277,7 +278,7 @@ Firefox 开发者工具 HTML 检查器将突出显示文本节点，并准确显
 
 有一些方法来解决这个问题：
 
-使用[弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)来创建项目的水平列表，而不是尝试 `inline-block` 解决方案。这可以为你处理一切，而且绝对是首选的解决方案：
+使用[弹性盒子](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)来创建项目的水平列表，而不是尝试 `inline-block` 解决方案。这可以为你处理一切，而且绝对是首选的解决方案：
 
 ```css
 ul {

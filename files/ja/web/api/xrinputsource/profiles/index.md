@@ -10,7 +10,8 @@ l10n:
 
 {{domxref("XRInputSource")}} の **`profiles`** は読み取り専用プロパティで、文字列の配列を返します。 各文字列は、入力ソースの構成プロファイルを記述します。 プロファイル文字列は、具体性の高い順にリストされ、最も具体的なプロファイルが最初にリストされます。
 
-> **メモ:** WebXR セッションがインラインモードの場合、`profiles` リストは常に空です。
+> [!NOTE]
+> WebXR セッションがインラインモードの場合、`profiles` リストは常に空です。
 
 ## 値
 
@@ -57,7 +58,7 @@ inputSource.profiles;
 // ['oculus-touch', 'generic-trigger-squeeze-thumbstick']
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

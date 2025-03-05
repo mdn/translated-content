@@ -44,7 +44,7 @@ Content-Type: multipart/form-data; boundary=something
 ## 指令
 
 - `media-type`
-  - : 資源或數據的 [MIME 類型](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types)。
+  - : 資源或數據的 [MIME 類型](/zh-TW/docs/Web/HTTP/MIME_types)。
 - charset
   - : 字符編碼標準。大小寫不敏感，推薦使用小寫。
 - boundary

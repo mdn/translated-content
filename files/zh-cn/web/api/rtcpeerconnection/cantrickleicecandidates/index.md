@@ -15,7 +15,8 @@ slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
 
 {{jsxref("Boolean")}} 如果远程对等方可以接受涓流 ICE 候选，则为 true；如果不能，则为 false。如果尚未建立远程对等方，则此值为 null。
 
-> **备注：** 一旦本地对等方调用 {{domxref("RTCPeerConnection.setRemoteDescription()")}}，就确定该属性的值；ICE 代理使用所提供的描述来确定远程对等方是否支持涓流 ICE 候选。
+> [!NOTE]
+> 一旦本地对等方调用 {{domxref("RTCPeerConnection.setRemoteDescription()")}}，就确定该属性的值；ICE 代理使用所提供的描述来确定远程对等方是否支持涓流 ICE 候选。
 
 ## 示例
 

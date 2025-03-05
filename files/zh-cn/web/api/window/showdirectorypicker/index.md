@@ -66,4 +66,4 @@ async function getDir() {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化对本地文件的访问](https://developer.chrome.com/articles/file-system-access/)
+- [文件系统访问 API：简化对本地文件的访问](https://developer.chrome.google.cn/docs/capabilities/web-apis/file-system-access)

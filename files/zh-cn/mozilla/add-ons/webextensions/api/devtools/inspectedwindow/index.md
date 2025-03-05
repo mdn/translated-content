@@ -7,7 +7,8 @@ l10n:
 
 {{AddonSidebar}}
 
-> **备注：** 本页面描述的是在 Firefox 54 中存在的 WebExtensions devtools API。尽管这些 API 基于 [Chrome devtools API](https://developer.chrome.com/docs/extensions/mv3/devtools/)，但 Firefox 中仍有许多特性尚未实现，因此在这里未被记录。要查看目前缺失哪些特性，请参见 [devtools API 的局限性](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#devtools_api_的局限性)。
+> [!NOTE]
+> 本页面描述的是在 Firefox 54 中存在的 WebExtensions devtools API。尽管这些 API 基于 [Chrome devtools API](https://developer.chrome.google.cn/docs/extensions/how-to/devtools/extend-devtools)，但 Firefox 中仍有许多特性尚未实现，因此在这里未被记录。要查看目前缺失哪些特性，请参见 [devtools API 的局限性](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#devtools_api_的局限性)。
 
 `devtools.inspectedWindow` API 允许开发者工具扩展与附加到开发者工具的窗口进行交互。
 
@@ -31,7 +32,8 @@ l10n:
 
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的[`chrome.devtools.inspectedWindow`](https://developer.chrome.com/docs/extensions/reference/devtools_inspectedWindow/) API。
+> [!NOTE]
+> 此 API 基于 Chromium 的[`chrome.devtools.inspectedWindow`](https://developer.chrome.google.cn/docs/extensions/reference/api/devtools/inspectedWindow) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

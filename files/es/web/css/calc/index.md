@@ -37,9 +37,11 @@ La expresión puede ser una combinación de los siguientes operadores:
 
 Los operandos en la expresión pueden ser valores tanto positivos como negativos. Puedes usar diferentes unidades para cada valor si lo deseas. Es recomendable el uso de paréntesis para añadir legibilidad a la expresión o para forzar precedencia en las operaciones en caso necesario.
 
-> **Nota:** La división por cero dará lugar a un error generado por el analizador de HTML del navegador.
+> [!NOTE]
+> La división por cero dará lugar a un error generado por el analizador de HTML del navegador.
 
-> **Nota:** las operaciones + y - siempre deben estar separadas de sus operandos mediante espacios en blanco. La expresión `calc(50% -8px)` será tomada como un operando de porcentaje seguido de otro operando de signo negativo (una expresión inválida, dado que no hay operador en medio), mientras que la expresión `calc(50% - 8px)` es un porcentaje seguido de una operación de resta.
+> [!NOTE]
+> Las operaciones + y - siempre deben estar separadas de sus operandos mediante espacios en blanco. La expresión `calc(50% -8px)` será tomada como un operando de porcentaje seguido de otro operando de signo negativo (una expresión inválida, dado que no hay operador en medio), mientras que la expresión `calc(50% - 8px)` es un porcentaje seguido de una operación de resta.
 > Los operadores `* y` `/` no requieren espacio en blanco, pero es recomendable añadirlo por consistencia.
 
 ## Ejemplos

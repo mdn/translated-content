@@ -42,7 +42,8 @@ border-bottom-width: unset;
     - `medium`
     - `thick`
 
-> **メモ:** 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、いずれかを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
+> [!NOTE]
+> 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、いずれかを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
 
 ## 公式定義
 
@@ -58,14 +59,14 @@ border-bottom-width: unset;
 
 #### HTML
 
-```html
+```html live-sample___comparing_bottom_border_widths
 <div>Element 1</div>
 <div>Element 2</div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___comparing_bottom_border_widths
 div {
   border: 1px solid red;
   margin: 1em 0;
@@ -81,7 +82,7 @@ div:nth-child(2) {
 
 #### 結果
 
-{{EmbedLiveSample('下境界の太さの比較', '100%')}}
+{{EmbedLiveSample('Comparing_bottom_border_widths', '100%')}}
 
 ## 仕様書
 

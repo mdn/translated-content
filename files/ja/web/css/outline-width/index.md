@@ -2,7 +2,7 @@
 title: outline-width
 slug: Web/CSS/outline-width
 l10n:
-  sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
+  sourceCommit: aa714bb37625b21b0f40db1f1ea557e773456fa2
 ---
 
 {{CSSRef}}
@@ -60,7 +60,7 @@ outline-width: unset;
 
 #### HTML
 
-```html
+```html live-sample___setting_an_elements_outline_width
 <span id="thin">thin</span>
 <span id="medium">medium</span>
 <span id="thick">thick</span>
@@ -71,7 +71,7 @@ outline-width: unset;
 
 #### CSS
 
-```css
+```css live-sample___setting_an_elements_outline_width
 span {
   outline-style: solid;
   display: inline-block;
@@ -118,5 +118,5 @@ span {
 ## 関連情報
 
 - {{cssxref("outline")}}
-- {{cssxref("outline-color")}}
 - {{cssxref("outline-style")}}
+- {{cssxref("outline-color")}}

@@ -24,7 +24,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/name
 
 附加组件的名称。用于在用户界面和 addons.mozilla.org 网站上显示标识名称。
 
-关于本地化，可查看 [localizable property](/zh-CN/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
+关于本地化，可查看 [localizable property](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
 ## 示例
 

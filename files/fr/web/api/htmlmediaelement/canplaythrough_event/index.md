@@ -10,7 +10,7 @@ L'événement **`canplaythrough`** est déclenché lorsque le user agent peut jo
 ## Informations générales
 
 - Spécification
-  - : [HTML5 media](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-canplaythrough)
+  - : [HTML5 media](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-canplaythrough)
 - Interface
   - : Event
 - Propagation

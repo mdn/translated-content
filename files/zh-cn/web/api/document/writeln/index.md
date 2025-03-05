@@ -7,7 +7,8 @@ l10n:
 
 {{ ApiRef("DOM") }}
 
-> **警告：** 强烈不建议使用 `document.writeln()` 方法。
+> [!WARNING]
+> 强烈不建议使用 `document.writeln()` 方法。
 >
 > 正如 [HTML 规范本身所警告的](<https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#document.write()>)：
 >

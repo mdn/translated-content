@@ -7,7 +7,27 @@ slug: Web/HTML/Element/input/email
 
 **`"email"`** 类型的 {{HTMLElement("input")}} 元素能够让用户输入或编辑一个电子邮箱地址，如果指定了 [`multiple`](/zh-CN/docs/Web/HTML/Attributes/multiple) 属性，则可以输入多个电子邮箱地址。
 
-{{EmbedInteractiveExample("pages/tabbed/input-email.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="email">Enter your example.com email:</label>
+
+<input type="email" id="email" pattern=".+@example\.com" size="30" required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 在表单提交前，输入框会自动验证输入值是否是一个或多个合法的电子邮箱地址（非空值且符合电子邮箱地址格式）。CSS 伪标签 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}} 能够在校验后自动应用，代表被校验的邮箱地址是否合法。
 
@@ -45,7 +65,8 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 一个布尔属性，如果存在，代表用户可以输入多个由逗号和可选空白字符分开的电子邮件地址。参见示例[允许多个邮件地址](#允许多个邮件地址)，或 [HTML 属性：multiple](/zh-CN/docs/Web/HTML/Attributes/multiple) 一文以获取更多信息。
 
-> **备注：** 一般地，如果你指定了 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性，那么用户将必须输入一个合法的邮件地址。然而，如果你添加了 `multiple` 属性，一系列零地址（一个空字符串，或完全为空白字符的字符串）也是合法的。也就是说，当指定了 `multiple` 时，用户甚至不需要输入一个邮件地址，无论是否指定了 `required`。
+> [!NOTE]
+> 一般地，如果你指定了 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性，那么用户将必须输入一个合法的邮件地址。然而，如果你添加了 `multiple` 属性，一系列零地址（一个空字符串，或完全为空白字符的字符串）也是合法的。也就是说，当指定了 `multiple` 时，用户甚至不需要输入一个邮件地址，无论是否指定了 `required`。
 
 ### pattern
 
@@ -53,7 +74,8 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 如果没有指定模式，或指定了无效的模式，则不会应用任何正则表达式，且该属性将被完全忽略。
 
-> **备注：** 使用 [`title`](/zh-CN/docs/Web/HTML/Element/input#title) 属性来指定大多数浏览器将作为工具提示的文本，以解释匹配该模式的要求是什么。还应该在附近包括其他解释性的文本。
+> [!NOTE]
+> 使用 [`title`](/zh-CN/docs/Web/HTML/Element/input#title) 属性来指定大多数浏览器将作为工具提示的文本，以解释匹配该模式的要求是什么。还应该在附近包括其他解释性的文本。
 
 参阅[模式验证](#模式验证)一节以获取详细说明和示例。
 
@@ -63,13 +85,15 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 如果控件的内容具有方向（{{Glossary("LTR")}} 或 {{Glossary("RTL")}}），但需要以相反的方向显示占位符，则可以使用 Unicode 双向算法来格式化字符，从而覆盖原有占位符的方向；请参见[如何针对双向文本使用 Unicode 控制符](https://www.w3.org/International/questions/qa-bidi-unicode-controls)获取更多信息。
 
-> **备注：** 尽可能避免使用 `placeholder` 属性。它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。请参见 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#标签)以获取更多信息。
+> [!NOTE]
+> 尽可能避免使用 `placeholder` 属性。它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。请参见 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#标签)以获取更多信息。
 
 ### readonly
 
 一个布尔属性，如果存在，则表示该字段不能由用户编辑。但是，仍可以通过 JavaScript 代码直接设置 {{domxref("HTMLInputElement")}} 的 `value` 属性来更改。
 
-> **备注：** 因为只读字段不能有值，所以 `required` 对指定了 `readonly` 属性的输入没有任何影响。
+> [!NOTE]
+> 因为只读字段不能有值，所以 `required` 对指定了 `readonly` 属性的输入没有任何影响。
 
 ### size
 
@@ -83,7 +107,8 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 然而，重要的是要注意，这不足以确保指定的文本是实际存在的电子邮件地址，对应于站点的用户，或者以任何其他方式可接受。它只是确保将字段的值正确格式化为电子邮件地址。
 
-> **备注：** 记住用户可以在幕后修改 HTML 也很重要，因此你的站点*不得*出于任何安全目的使用此验证。在任何事务中，如果所提供的文本可能有任何形式的安全影响，你必须在服务器端验证该电子邮件地址。
+> [!NOTE]
+> 记住用户可以在幕后修改 HTML 也很重要，因此你的站点*不得*出于任何安全目的使用此验证。在任何事务中，如果所提供的文本可能有任何形式的安全影响，你必须在服务器端验证该电子邮件地址。
 
 ### 一个简单的 email 输入
 
@@ -109,7 +134,8 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 现在，当输入一个电子邮件地址时，或当任何数量的电子邮件地址由逗号分隔，并可选地含有空白字符时，输入被认为是有效的。
 
-> **备注：** 当使用了 `multiple` 属性时，值*允许*为空。
+> [!NOTE]
+> 当使用了 `multiple` 属性时，值*允许*为空。
 
 当指定了 `multiple` 属性时，一些有效字符串示例如下：
 
@@ -200,7 +226,8 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 `email` 输入有两个级别的内容验证。首先，所有 {{HTMLElement("input")}} 都有标准的验证级别，它自动确保内容符合有效电子邮件地址的要求。但也可以选择添加额外的过滤功能，以确保满足你自己的特殊需求。
 
-> **警告：** HTML 表单验证*不能*替代确保输入的数据格式正确的脚本。对于某些人来说，调整 HTML 非常容易，因为它允许他们绕过验证，或者完全删除它。某人也可以完全绕过 HTML 并将数据直接提交给你的服务器。如果服务器端代码无法验证它收到的数据，则当数据格式不正确（或数据太大，类型错误等等）输入数据库时，灾难可能会发生。
+> [!WARNING]
+> HTML 表单验证*不能*替代确保输入的数据格式正确的脚本。对于某些人来说，调整 HTML 非常容易，因为它允许他们绕过验证，或者完全删除它。某人也可以完全绕过 HTML 并将数据直接提交给你的服务器。如果服务器端代码无法验证它收到的数据，则当数据格式不正确（或数据太大，类型错误等等）输入数据库时，灾难可能会发生。
 
 ### 基本验证
 
@@ -210,9 +237,10 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 ```
 
-要了解更多关于表单验证的工作原理，以及如何利用 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}} 这两个 CSS 属性，根据当前值是否有效来设计输入的样式，请参阅[表单数据验证](/zh-CN/docs/Learn/HTML/Forms/Form_validation)一文。
+要了解更多关于表单验证的工作原理，以及如何利用 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}} 这两个 CSS 属性，根据当前值是否有效来设计输入的样式，请参阅[表单数据验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)一文。
 
-> **备注：** 有一些已知的规范问题与国际域名和 HTML 中电子邮件地址的验证有关。参阅 [W3C bug 15489](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489) 以了解详细内容。
+> [!NOTE]
+> 有一些已知的规范问题与国际域名和 HTML 中电子邮件地址的验证有关。参阅 [W3C bug 15489](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489) 以了解详细内容。
 
 ### 模式验证
 
@@ -252,7 +280,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 {{EmbedLiveSample("模式验证", 700, 275)}}
 
-我们的 {{HTMLElement("form")}} 表单包含一个 `email` 类型的 {{HTMLElement("input")}}，用于用户电子邮件地址，一个 {{HTMLElement("textarea")}}，用来输入他们的 IT 信息，以及一个 `<input>` 类型为 [`"submit"`](/zh-CN/docs/Web/HTML/Element/Input/submit) 的按钮，用来创建一个提交表单。每个文本输入框都有一个 {{HTMLElement("label")}} 与之相关，让用户知道对他们的期望。
+我们的 {{HTMLElement("form")}} 表单包含一个 `email` 类型的 {{HTMLElement("input")}}，用于用户电子邮件地址，一个 {{HTMLElement("textarea")}}，用来输入他们的 IT 信息，以及一个 `<input>` 类型为 [`"submit"`](/zh-CN/docs/Web/HTML/Element/input/submit) 的按钮，用来创建一个提交表单。每个文本输入框都有一个 {{HTMLElement("label")}} 与之相关，让用户知道对他们的期望。
 
 让我们仔细看看电子邮件地址输入框。它的 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 和 [`maxlength`](/zh-CN/docs/Web/HTML/Element/input#maxlength) 属性都被设置为 64，以便为 64 个字符的电子邮件地址提供空间，并将实际输入的字符数限制在最大 64 个。这里还指定了 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性，使得用户必须提供一个有效的电子邮件地址。
 
@@ -270,7 +298,8 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ![A valid email address, but the input is in error state with a popout from the input reading 'The entered text doesn't match the required pattern. Please provide only a Best Startup Ever corporate email address.'](email-pattern-match-bad.png)
 
-> **备注：** 如果你在编写验证正则表达式时遇到麻烦，它们不能正常工作，请检查你的浏览器控制台；那里可能有有用的错误信息来帮助你解决问题。
+> [!NOTE]
+> 如果你在编写验证正则表达式时遇到麻烦，它们不能正常工作，请检查你的浏览器控制台；那里可能有有用的错误信息来帮助你解决问题。
 
 ## 示例
 
@@ -350,10 +379,10 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ## 参见
 
-- [HTML 表单指南](/zh-CN/docs/Learn/Forms)
+- [HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
-- [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/Input/tel)
-- [`<input type="url">`](/zh-CN/docs/Web/HTML/Element/Input/url)
+- [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/input/tel)
+- [`<input type="url">`](/zh-CN/docs/Web/HTML/Element/input/url)
 - 属性：
 
   - [`list`](/zh-CN/docs/Web/HTML/Attributes/list)
@@ -365,4 +394,4 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
   - [`readonly`](/zh-CN/docs/Web/HTML/Attributes/readonly)
   - [`size`](/zh-CN/docs/Web/HTML/Attributes/size)
 
-- [CSS 属性兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

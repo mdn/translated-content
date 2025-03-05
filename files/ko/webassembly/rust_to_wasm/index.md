@@ -26,7 +26,8 @@ Rust와 WebAssembly를 위한 두가지 주요 사용 사례가 있습니다.
 
 [Install Rust](https://www.rust-lang.org/install.html)와 다음 설명에 따라 Rust를 설치합니다. "rustup"이라는 툴을 설치할건데 다양한 버전의 Rust를 관리할 수 있게 해줍니다. 기본적으로 최신 배포버전의 Rust가 설치됩니다. Rustup은 Rust 컴파일러인 `rustc` Rust의 표준 라이브러리 인 `rust-std`, Rust의 패키지 메니저 `cargo`및 `rust-docs` 등 유용한 문서를 설치합니다.
 
-> **참고:** 설치를 완료한 뒤 cargo의 `bin` 디렉토리가 시스템의 `PATH`에 등록되어 있어야 함에 주의하십시오. 보통은 자동으로 등록되지만, 터미널을 재시작해야 할 수도 있습니다.
+> [!NOTE]
+> 설치를 완료한 뒤 cargo의 `bin` 디렉토리가 시스템의 `PATH`에 등록되어 있어야 함에 주의하십시오. 보통은 자동으로 등록되지만, 터미널을 재시작해야 할 수도 있습니다.
 
 ### wasm-pack
 
@@ -321,4 +322,4 @@ npm run serve
 
 이것이 튜토리얼의 끝입니다. 우리는 당신이 이것이 쓸모있다는 것을 알게 되었길 기대합니다.
 
-여기에 많은 흥미로운 작업이 진행되고 있습니다. 이것을 좀 더 낫게 만들고 싶다면, [the Rust Webassembly Working Group](http://fitzgeraldnick.com/2018/02/27/wasm-domain-working-group.html)을 확인해보세요.
+여기에 많은 흥미로운 작업이 진행되고 있습니다. 이것을 좀 더 낫게 만들고 싶다면, [the Rust Webassembly Working Group](https://fitzgeraldnick.com/2018/02/27/wasm-domain-working-group.html)을 확인해보세요.

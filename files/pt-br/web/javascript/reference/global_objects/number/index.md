@@ -71,7 +71,7 @@ Toda instância `Number` herdam de {{jsxref("Number.prototype")}}. O objeto 'pro
 
 ### Métodos
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype', 'Methods')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype', 'Methods') -->
 
 ## Exemplos
 

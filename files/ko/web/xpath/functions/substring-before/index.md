@@ -44,7 +44,7 @@ XSL 예:
 
 ### 정의
 
-[XPath 1.0 4.2](http://www.w3.org/TR/xpath#function-substring-before)
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-substring-before)
 
 ### Gecko 지원
 

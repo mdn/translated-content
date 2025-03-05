@@ -50,7 +50,8 @@ _Cette interface hérite des proprétés de {{domxref("MouseEvent")}} et {{domxr
 
 L'interface `PointerEvent` a plusieurs types d'évènements. Pour déterminer quel évènement s'est produit, regardez la propriété {{ domxref("Event.type", "type") }} de l'évènement.
 
-> **Note :** Il est important de remarquer que dans beaucoup de cas, à la fois les évènements du pointeur et de la souris sont envoyés (afin de laisser la logique interagir avec l'utilisateur même lorsqu'elle n'est pas spécifique à un type de pointeur) . Si vous utilisez les évènements de pointeur, vous devez exécuter {{ domxref("event.preventDefault()") }} afin d'empêcher l'évènement de la souris d'être également envoyée.
+> [!NOTE]
+> Il est important de remarquer que dans beaucoup de cas, à la fois les évènements du pointeur et de la souris sont envoyés (afin de laisser la logique interagir avec l'utilisateur même lorsqu'elle n'est pas spécifique à un type de pointeur) . Si vous utilisez les évènements de pointeur, vous devez exécuter {{ domxref("event.preventDefault()") }} afin d'empêcher l'évènement de la souris d'être également envoyée.
 
 - [`pointerover`](/fr/docs/Web/API/Element/pointerover_event)
   - : Cet évènement est déclenché lorsqu'un appareil de pointage est déplacé vers la zone du test de ciblage d'un élément.

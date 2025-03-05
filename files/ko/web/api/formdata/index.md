@@ -13,7 +13,8 @@ slug: Web/API/FormData
 
 `FormData` 를 구현하는 객체는 {{domxref('FormData.entries()', 'entries()')}} 대신 {{jsxref("Statements/for...of", "for...of")}} 구조를 직접 사용할 수 있습니다. `for (var p of myFormData)` 는 `for (var p of myFormData.entries())` 와 같습니다.
 
-> **참고:** 이 기능은 [Web Worker](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 있습니다.
+> [!NOTE]
+> 이 기능은 [Web Worker](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 있습니다.
 
 ## 생성자
 
@@ -52,6 +53,6 @@ slug: Web/API/FormData
 ## See also
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/ko/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Using FormData objects](/ko/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

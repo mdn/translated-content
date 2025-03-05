@@ -6,7 +6,7 @@ slug: Web/HTML/Element/input
 O **elemento HTML `<input>`** é usado para criar controles interativos para formulários baseados na web para receber dados do usuário. A semântica de um `<input>` varia consideravelmente dependendo do valor de seu atributo `type`.
 
 - _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#conteúdo_de_fluxo), listado, enviável, resetável, elemento associado a formulário, [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#conteúdo_fraseado).
-  Se o atributo [`type`](/pt-BR/docs/Web/HTML/Element/input#type) não tiver o valor `hidden`, elemento rotulável, conteúdo palpável.
+  Se o atributo [`type`](#type) não tiver o valor `hidden`, elemento rotulável, conteúdo palpável.
 - _Conteúdo permitido_ Nenhum, este é um {{Glossary("elemento vazio")}}.
 - _Omissão de tags_ Deve ter uma tag de abertura e não deve ter uma tag de fechamento.
 - _Elementos pais permitidos_ Qualquer elemento que aceite [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#conteúdo_fraseado).
@@ -82,7 +82,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
 
     Se o atributo **autocomplete** não está especificado num elemento `<input>`, o navegador usa o valor do atributo **autocomplete** do formulário dono do `<input>`. O formulário dono deste `<input>` é o elemento `<form>` que contém este `<input>` ou o elemento `<form>` cujo **id** é referenciado pelo atributo **form** do elemento `<input>`. Para mais informações, veja o atributo [`autocomplete`](/pt-BR/docs/Web/HTML/Element/form#autocomplete) no elemento {{HTMLElement("form")}}.
 
-    O atributo **autocomplete** também controla se o Firefox vai, ao contrário de outros navegadores, [persistir o estado dinâmico de desabilitado e marcado (se aplicável)](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("input")}} entre carregamentos de página. A funcionalidade de persistir é habilitada por padrão. Definir o valor do atributo **autocomplete** para `off` desabilita esta funcionalidade; isto funciona mesmo quando o atributo **autocomplete** não se aplica ao {{HTMLElement("input")}} por causa de seu **type**. Veja [Erro do Firefox 654072](https://bugzil.la/654072).
+    O atributo **autocomplete** também controla se o Firefox vai, ao contrário de outros navegadores, [persistir o estado dinâmico de desabilitado e marcado (se aplicável)](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("input")}} entre carregamentos de página. A funcionalidade de persistir é habilitada por padrão. Definir o valor do atributo **autocomplete** para `off` desabilita esta funcionalidade; isto funciona mesmo quando o atributo **autocomplete** não se aplica ao {{HTMLElement("input")}} por causa de seu **type**. Veja [Erro do Firefox 654072](https://bugzil.la/654072).
 
 - `autocorrect` {{non-standard_inline}}
 
@@ -99,13 +99,13 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
 
   - : Quando o valor do atributo **type** é `radio` ou `checkbox`, a presença deste atributo booleano indica que o controle é selecionado por padrão; caso contrário, este atributo é ignorado.
 
-    O Firefox vai, por padrão, ao contrário de outros navegadores, [persistir o estado dinâmico de marcado](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("input")}} entre carregamentos de página. Use o atributo [`autocomplete`](/pt-BR/docs/Web/HTML/Element/input#autocomplete) para controlar esta funcionalidade.
+    O Firefox vai, por padrão, ao contrário de outros navegadores, [persistir o estado dinâmico de marcado](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("input")}} entre carregamentos de página. Use o atributo [`autocomplete`](#autocomplete) para controlar esta funcionalidade.
 
 - `disabled`
 
   - : Este atributo booleano indica que o controle de formulário não está disponível para interação. Em particular o evento `click` [não será disparado](https://html.spec.whatwg.org/multipage/forms.html#enabling-and-disabling-form-controls:-the-disabled-attribute) em controles desabilitados. Além disso, o valor de um controle desabilitado não é enviado com o formulário.
 
-    O Firefox vai, por padrão, ao contrário de outros navegadores, [persistir o estado dinâmico de desabilitado](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("input")}} entre carregamentos de página. Use o atributo [`autocomplete`](/pt-BR/docs/Web/HTML/Element/input#autocomplete) para controlar esta funcionalidade.
+    O Firefox vai, por padrão, ao contrário de outros navegadores, [persistir o estado dinâmico de desabilitado](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("input")}} entre carregamentos de página. Use o atributo [`autocomplete`](#autocomplete) para controlar esta funcionalidade.
 
 - `form`
   - : O elemento `<form>` ao qual o elemento `<input>` está associado (seu _formulário dono_). O valor do atributo deve ser um **id** de um elemento {{HTMLElement("form")}}. Este atributo permite que você coloque elementos `<input>` em qualquer lugar num documento, não apenas como descendentes de seus elementos `<form>`. Um `<input>` só pode estar associado a um único formulário.
@@ -116,7 +116,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
   - : Se o elemento for um botão ou uma imagem de envio de formulário, este atributo especifica o tipo de conteúdo que deve ser usado para enviar o formulário para o servidor. Os valores possíveis são:
 
     - `application/x-www-form-urlencoded`: O valor padrão se o atributo não for especificado.
-    - `multipart/form-data`: Use este valor se você estiver usando um elemento {{HTMLElement("input")}} com o atributo [`type`](/pt-BR/docs/Web/HTML/Element/input#type) definido como `file`.
+    - `multipart/form-data`: Use este valor se você estiver usando um elemento {{HTMLElement("input")}} com o atributo [`type`](#type) definido como `file`.
     - `text/plain`
 
     Se este atributo for especificado, ele sobrescreve o atributo [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) do formulário dono do elemento.
@@ -144,7 +144,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
 - `height`
   - : Se o valor do atributo **type** for `image`, este atributo define a altura da imagem mostrada para o botão.
 - `incremental` {{non-standard_inline}}
-  - : Este é um atributo não padronizado suportado pelo Safari que é aplicado somente quando o **type** é `search`. Se o atributo estiver presente, independentemente do valor que ele tiver, o {{HTMLElement("input")}} dispara eventos [`search`](/pt-BR/docs/Web/Events/search) conforme o usuário edita o texto do campo. Este evento somente é disparado um tempo após a última tecla ter sido pressionada; este tempo é definido pela implementação e novas digitações zeram o contador de tempo. Em outras palavras, o disparo do evento é filtrado (_debounced_). Se o atributo não estiver presente, o evento [`search`](/pt-BR/docs/Web/Events/search) só é disparado quando o usuário iniciar explicitamente uma busca (por exemplo, pressionando a tecla Enter enquanto estiver no campo).
+  - : Este é um atributo não padronizado suportado pelo Safari que é aplicado somente quando o **type** é `search`. Se o atributo estiver presente, independentemente do valor que ele tiver, o {{HTMLElement("input")}} dispara eventos [`search`](/pt-BR/docs/Web/API/HTMLInputElement/search_event) conforme o usuário edita o texto do campo. Este evento somente é disparado um tempo após a última tecla ter sido pressionada; este tempo é definido pela implementação e novas digitações zeram o contador de tempo. Em outras palavras, o disparo do evento é filtrado (_debounced_). Se o atributo não estiver presente, o evento [`search`](/pt-BR/docs/Web/API/HTMLInputElement/search_event) só é disparado quando o usuário iniciar explicitamente uma busca (por exemplo, pressionando a tecla Enter enquanto estiver no campo).
 - `inputmode`
 
   - : Uma dica para o navegador de qual teclado deve ser mostrado. Este atributo se aplica quando o valor do atributo **type** é `text`, `password`, `email` ou `url`. Os valores possíveis são:
@@ -181,7 +181,8 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
 
   - : Uma dica para o usuário do que ele pode inserir no controle. O texto do atributo não deve conter quebras de linha. Este atributo é aplicado quando o valor do atributo **type** é `text`, `search`, `tel`, `url` ou `email`; caso contrário, ele é ignorado.
 
-    > **Nota:** Não use o atributo `placeholder` no lugar de um elemento {{HTMLElement("label")}}. Os propósitos de cada um são diferentes: o atributo {{HTMLElement("label")}} descreve o papel o elemento do formulário, isto é, ele indica que tipo de informação é esperada. Já o atributo `placeholder` é uma dica sobre o formato que o conteúdo deveria ter. Há casos em que o atributo `placeholder` nunca é exibido para o usuário, portanto o formulário deve ser inteligível sem ele.
+    > [!NOTE]
+    > Não use o atributo `placeholder` no lugar de um elemento {{HTMLElement("label")}}. Os propósitos de cada um são diferentes: o atributo {{HTMLElement("label")}} descreve o papel o elemento do formulário, isto é, ele indica que tipo de informação é esperada. Já o atributo `placeholder` é uma dica sobre o formato que o conteúdo deveria ter. Há casos em que o atributo `placeholder` nunca é exibido para o usuário, portanto o formulário deve ser inteligível sem ele.
 
 - `readonly`
 
@@ -215,7 +216,8 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
 
 ### Entradas de arquivo
 
-> **Nota:** a partir do Gecko 2.0, chamar o método `click()` num elemento {{HTMLElement("input")}} do tipo `file` abre o seletor de arquivos e permite que o usuário selecione arquivos. Veja [Usando arquivos a partir de aplicações web](/pt-BR/docs/Usando_arquivos_a_partir_de_aplicações_web) para um exemplo e mais detalhes.
+> [!NOTE]
+> a partir do Gecko 2.0, chamar o método `click()` num elemento {{HTMLElement("input")}} do tipo `file` abre o seletor de arquivos e permite que o usuário selecione arquivos. Veja [Usando arquivos a partir de aplicações web](/pt-BR/docs/Usando_arquivos_a_partir_de_aplicações_web) para um exemplo e mais detalhes.
 
 Você não pode definir o valor de um seletor de arquivos a partir de um script; fazer algo como o seguinte não tem efeito:
 
@@ -259,7 +261,7 @@ Note, no entanto, que isso não é padronizado e não terá efeito em outros nav
 
 ### Usando o mozactionhint no Firefox mobile
 
-Você pode usar o atributo [`mozactionhint`](/pt-BR/docs/Web/HTML/Element/input#mozactionhint) para especificar o texto para o rótulo da tecla Enter no teclado virtual quando seu formulário é exibido no Firefox mobile. Por exemplo, para ter um rótulo "Próximo", você pode fazer o seguinte:
+Você pode usar o atributo [`mozactionhint`](#mozactionhint) para especificar o texto para o rótulo da tecla Enter no teclado virtual quando seu formulário é exibido no Firefox mobile. Por exemplo, para ter um rótulo "Próximo", você pode fazer o seguinte:
 
 ```html
 <input type="text" mozactionhint="next" name="sometext" />

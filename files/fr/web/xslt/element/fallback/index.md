@@ -29,7 +29,7 @@ Instruction, apparaît dans un modèle.
 
 ### Définition
 
-[XSLT 1.0, section 15](http://www.w3.org/TR/xslt#fallback).
+[XSLT 1.0, section 15](https://www.w3.org/TR/xslt#fallback).
 
 ### Gecko support
 

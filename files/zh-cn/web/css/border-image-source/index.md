@@ -2,7 +2,7 @@
 title: border-image-source
 slug: Web/CSS/border-image-source
 l10n:
-  sourceCommit: fb3ef3857ca1d77cc720deba0c12d7a3313b85b4
+  sourceCommit: 5178e1e7c9edf0c9c652275ae62f090042ce2422
 ---
 
 {{CSSRef}}
@@ -70,5 +70,5 @@ border-image-source: unset;
 - {{cssxref("outline")}}
 - {{cssxref("box-shadow")}}
 - {{cssxref("background-image")}}
-- {{cssxref("url", "url()")}} 函数
+- {{cssxref("url_value", "&lt;url&gt;")}} 类型
 - MDN 博客：[CSS 中的边框图像：Interop 2023 的重点关注领域](/en-US/blog/border-images-interop-2023/)（2023）

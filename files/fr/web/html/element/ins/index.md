@@ -7,18 +7,67 @@ slug: Web/HTML/Element/ins
 
 L'élément HTML **`<ins>`** représente un fragment de texte qui a été ajouté dans un document.
 
-> **Note :** À l'inverse, on pourra utiliser l'élément {{HTMLElement("del")}} afin de représenter un fragment de texte supprimé.
+> [!NOTE]
+> À l'inverse, on pourra utiliser l'élément {{HTMLElement("del")}} afin de représenter un fragment de texte supprimé.
 
-{{EmbedInteractiveExample("pages/tabbed/ins.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;ins&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>&ldquo;You're late!&rdquo;</p>
+<del>
+  <p>&ldquo;I apologize for the delay.&rdquo;</p>
+</del>
+<ins cite="../howtobeawizard.html" datetime="2018-05">
+  <p>&ldquo;A wizard is never late &hellip;&rdquo;</p>
+</ins>
+```
+
+```css interactive-example
+del,
+ins {
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+
+del {
+  background-color: #fbb;
+}
+
+ins {
+  background-color: #d4fcbc;
+}
+
+del::before,
+ins::before {
+  position: absolute;
+  left: 0.5rem;
+  font-family: monospace;
+}
+
+del::before {
+  content: "−";
+}
+
+ins::before {
+  content: "+";
+}
+
+p {
+  margin: 0 1.8rem 0;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+}
+```
 
 ## Attributs
 
-On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attributs_universels) pour cet élément.
+On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes) pour cet élément.
 
 - `cite`
   - : Cet attribut définit l'URI d'une ressource qui explique la modification (par exemple, un compte-rendu de réunion ou un lien vers un rapport).
 - `datetime`
-  - : Cet attribut indique la date et l'heure de la modification. La valeur de cet attribut doit être [une date valide avec une chaîne de caractères optionnelle pour l'heure](https://www.w3.org/TR/2011/WD-html5-20110525/common-microsyntaxes.html#valid-date-string-with-optional-time). Si la valeur ne peut pas être analysée comme une date, l'indication temporelle sera absente de l'élément. Voir [l'article sur les formats](/fr/docs/Web/HTML/Formats_date_heure_HTML) pour la représentation d'[une date seule](/fr/docs/Web/HTML/Formats_date_heure_HTML#Représentation_des_dates) ou d'[une date avec une heure](/fr/docs/Web/HTML/Formats_date_heure_HTML#Représentation_des_dates_et_heures_locales).
+  - : Cet attribut indique la date et l'heure de la modification. La valeur de cet attribut doit être [une date valide avec une chaîne de caractères optionnelle pour l'heure](https://www.w3.org/TR/2011/WD-html5-20110525/common-microsyntaxes.html#valid-date-string-with-optional-time). Si la valeur ne peut pas être analysée comme une date, l'indication temporelle sera absente de l'élément. Voir [l'article sur les formats](/fr/docs/Web/HTML/Date_and_time_formats) pour la représentation d'[une date seule](/fr/docs/Web/HTML/Date_and_time_formats#représentation_des_dates) ou d'[une date avec une heure](/fr/docs/Web/HTML/Date_and_time_formats#représentation_des_dates_et_heures_locales).
 
 ## Exemples
 
@@ -60,7 +109,7 @@ ins::after {
 Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment ces annonces pour éviter une verbosité trop importante. Il est donc important de ne pas abuser de cette technique et de ne l'appliquer qu'à des situations où il est nécessaire de comprendre que du contenu a été inséré.
 
 - [_Short note on making your mark (more accessible) | The Paciello Group_ (en anglais)](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
-- [_Tweaking Text Level Styles | Adrian Roselli_ (en anglais)](http://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [_Tweaking Text Level Styles | Adrian Roselli_ (en anglais)](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## Résumé technique
 

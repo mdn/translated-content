@@ -3,16 +3,17 @@ title: "HTMLElement: load イベント"
 short-title: load
 slug: Web/API/HTMLElement/load_event
 l10n:
-  sourceCommit: c781603ee230aee6ab7293e2a42df78fc5768c51
+  sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
 ---
 
 {{APIRef}}
 
 **`load`** イベントは、リソースを含む要素において、そのリソースが完全に読み込まれたときに発行されます。今のところ、対応している HTML 要素は、{{HTMLElement("body")}}、{{HTMLElement("embed")}}、{{HTMLElement("iframe")}}、{{HTMLElement("img")}}、{{HTMLElement("link")}}、{{HTMLElement("object")}}、{{HTMLElement("script")}}、{{HTMLElement("style")}}、{{HTMLElement("track")}} です。
 
-> **メモ:** 実際には `load` イベントは、{{domxref("HTMLBodyElement#event_handlers", "HTMLBodyElement")}} においては、 {{domxref("Window/load_event", "window.onload")}} イベントの別名です。従って、`load` イベントは `<body>` 要素においては、その文書のすべてのリソースが読み込まれたかエラーになったときに、一度だけ発生します。しかし、わかりやすくするために、イベントハンドラーは `HTMLBodyElement` ではなく、`window` オブジェクトに直接取り付けることが推奨されます。
+> [!NOTE]
+> 実際には `load` イベントは、{{domxref("HTMLBodyElement#event_handlers", "HTMLBodyElement")}} においては、 {{domxref("Window/load_event", "window.onload")}} イベントの別名です。従って、`load` イベントは `<body>` 要素においては、その文書のすべてのリソースが読み込まれたかエラーになったときに、一度だけ発生します。しかし、わかりやすくするために、イベントハンドラーは `HTMLBodyElement` ではなく、`window` オブジェクトに直接取り付けることが推奨されます。
 
-このイベtのはキャンセル不可で、バブリングしません。
+このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
@@ -44,7 +45,8 @@ elt.onload = (event) => { ... };
 ```js
 const image = document.getElementById("image");
 image.onload = () => {
-  document.body.innerHTML += "<div>loaded!</div>";
+  document.body.appendChild(document.createElement("div")).textContent =
+    "loaded!";
 };
 
 function reload() {

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("DOM")}}
 
 **`HTMLSelectElement.labels`** は読み取り専用のプロパティで、この {{HTMLElement("select")}} 要素に関連付けられた {{HTMLElement("label")}} 要素の {{domxref("NodeList")}} を返します。
 
@@ -33,7 +33,7 @@ l10n:
 window.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("test");
   for (const label of select.labels) {
-    console.log(label.textContent); // "Label 1" and "Label 2"
+    console.log(label.textContent); // "ラベル 1" と "ラベル 2"
   }
 });
 ```

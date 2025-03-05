@@ -5,7 +5,7 @@ slug: Web/API/CSSStyleRule/style
 
 {{ ApiRef() }}
 
-返回 一个 {{ domxref("CSSStyleDeclaration") }}接口对象，它代表了{{ DOMXref("CSSRule") }}的 [declaration block](http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block)。
+返回 一个 {{ domxref("CSSStyleDeclaration") }}接口对象，它代表了{{ DOMXref("CSSRule") }}的 [declaration block](https://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block)。
 
 ## 语法
 

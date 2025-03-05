@@ -47,13 +47,13 @@ onpagehide = (event) => {};
 2. 用户随后切换到另一个应用程序。
 3. 后来，用户从应用管理器中关闭了浏览器。
 
-然而，与 `unload` 和 `beforeunload` 事件不同，此事件与[回退或前进缓存](https://web.dev/articles/bfcache)（bfcache）兼容，因此向此事件添加监听器不会阻止页面被纳入 bfcache 中。
+然而，与 `unload` 和 `beforeunload` 事件不同，此事件与[回退或前进缓存](https://web.developers.google.cn/articles/bfcache)（bfcache）兼容，因此向此事件添加监听器不会阻止页面被纳入 bfcache 中。
 
 表示用户会话结束的最佳事件是 [`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event) 事件。在不支持 `visibilitychange` 的浏览器中，`pagehide` 事件是次佳的替代方案。
 
 如果你特别想要检测页面卸载事件，`pagehide` 事件是最佳选项。
 
-有关此事件如何与页面生命周期中其他事件相关的更多信息，请参阅[页面生命周期 API](https://developer.chrome.com/blog/page-lifecycle-api/) 指南。
+有关此事件如何与页面生命周期中其他事件相关的更多信息，请参阅[页面生命周期 API](https://developer.chrome.google.cn/docs/web-platform/page-lifecycle-api) 指南。
 
 ## 示例
 
@@ -92,6 +92,6 @@ window.onpagehide = (event) => {
 ## 参见
 
 - {{domxref("Window.pageshow_event", "pageshow")}} 事件。
-- [页面生命周期 API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) 提供了在 web 应用程序中处理页面生命周期行为的最佳实践指南。
+- [页面生命周期 API](https://developer.chrome.google.cn/docs/web-platform/page-lifecycle-api#developer-recommendations-for-each-state) 提供了在 web 应用程序中处理页面生命周期行为的最佳实践指南。
 - [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle)：是一个 JavaScript 库，用于处理跨浏览器的页面生命周期行为不一致问题。
-- [回退或前进缓存](https://web.dev/articles/bfcache)解释了什么是回退或前进缓存，以及它对各种页面生命周期事件的影响。
+- [回退或前进缓存](https://web.developers.google.cn/articles/bfcache)解释了什么是回退或前进缓存，以及它对各种页面生命周期事件的影响。

@@ -14,7 +14,7 @@ slug: Web/API/Canvas_API/Tutorial/Compositing
 - `globalCompositeOperation = type`
   - : 새로운 도형을 그릴 때, 도형 합성 방법을 설정합니다. type은 다음 26종류의 합성 방법 중에서 선택할 수 있습니다.
 
-다음 예제의 코드를 확인하려면 [도형 합성 예제](/ko/docs/Web/HTML/Canvas/Tutorial/Compositing/Example)를 확인해 주세요.
+다음 예제의 코드를 확인하려면 [도형 합성 예제](/ko/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation)를 확인해 주세요.
 
 {{ EmbedLiveSample('도형_합성_예제', 750, 6750, '', 'Web/HTML/Canvas/Tutorial/Compositing/Example') }}
 
@@ -24,7 +24,7 @@ slug: Web/API/Canvas_API/Tutorial/Compositing
 
 잘라내기 경로와 위에서 살펴본 `globalCompositeOperation` 속성을 비교해 보면, `source-in`과 `source-atop`에서 비슷한 효과가 보입니다. 이들과 잘라내기 경로와의 가장 중요한 차이점은, 잘라내기 경로 자체는 캔버스에 전혀 그려지지 않는다는 것입니다. 잘라내기 경로는 제한된 영역 안에서 여러 가지 도형을 그리는 데에 적합합니다.
 
-[캔버스에 도형 그리기](/ko/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes#Drawing_paths)에서는 `stroke()`과 `fill()` 메소드만을 설명했었는데, `clip()`이라는 세 번째 메소드도 있습니다.
+[캔버스에 도형 그리기](/ko/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#drawing_paths)에서는 `stroke()`과 `fill()` 메소드만을 설명했었는데, `clip()`이라는 세 번째 메소드도 있습니다.
 
 - `clip()`
   - : 현재 그려지는 경로를 현재 잘라내기 경로로 만듭니다.

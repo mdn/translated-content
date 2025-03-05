@@ -105,19 +105,22 @@ processor.doLoad();
 
 {{EmbedLiveSample("Vidéo_et_Canvas", '100%', 550)}}
 
-> **Note :** En raison de problèmes de sécurité potentiels, si votre vidéo se trouve sur un domaine différent de votre page, vous devez activer [CORS (Cross Origin Resource Sharing)](/fr/docs/Web/HTTP/CORS) sur le serveur qui héberge la vidéo et utiliser l'attribut `crossorigin` sur la balise vidéo.
+> [!NOTE]
+> En raison de problèmes de sécurité potentiels, si votre vidéo se trouve sur un domaine différent de votre page, vous devez activer [CORS (Cross Origin Resource Sharing)](/fr/docs/Web/HTTP/CORS) sur le serveur qui héberge la vidéo et utiliser l'attribut `crossorigin` sur la balise vidéo.
 
-> **Note :** L'exemple présenté est un exemple minimal de manipulation vidéo avec canvas; pour plus d'efficacité, vous pouvez envisager d'utiliser requestAnimationFrame à la place de setTimeout pour les navigateurs qui le prennent en charge.
+> [!NOTE]
+> L'exemple présenté est un exemple minimal de manipulation vidéo avec canvas; pour plus d'efficacité, vous pouvez envisager d'utiliser requestAnimationFrame à la place de setTimeout pour les navigateurs qui le prennent en charge.
 
 ### Vidéo e WebGL
 
-[WebGL](/fr/docs/Web/WebGL) est une API puissante qui utilise canvas pour (typiquement) afficher des scènes en trois dimensions. On peut combiner WebGL et l'élément {{htmlelement("video")}} pour créer des textures vidéo, ce qui veut dire que vous pouvez placer une vidéo dans des scènes 3D.
+[WebGL](/fr/docs/Web/API/WebGL_API) est une API puissante qui utilise canvas pour (typiquement) afficher des scènes en trois dimensions. On peut combiner WebGL et l'élément {{htmlelement("video")}} pour créer des textures vidéo, ce qui veut dire que vous pouvez placer une vidéo dans des scènes 3D.
 
 Exemple:
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-> **Note :** Vous pouvez trouver le [code source de cette démo sur GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) ([la voir en direct](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/) aussi).
+> [!NOTE]
+> Vous pouvez trouver le [code source de cette démo sur GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) ([la voir en direct](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/) aussi).
 
 ### Vitesse de lecture
 
@@ -185,7 +188,8 @@ window.addEventListener("load", setPlaybackRate);
 
 {{ EmbedLiveSample('Code jouable', 700, 425) }}
 
-> **Note :** Essayez l' [exemple playbackRate](https://jsbin.com/qomuvefu/2/edit) en direct.
+> [!NOTE]
+> Essayez l' [exemple playbackRate](https://jsbin.com/qomuvefu/2/edit) en direct.
 
 > **Note :** `playbackRate` marche avec les éléments `<audio>` et `<video>`; cependant, dans les deux cas, la vitesse change mais pas la hauteur du son. Pour manipuler la hauteur du son, vous devez utliliser l'API Web Audio — voir la propriété {{domxref("AudioBufferSourceNode.playbackRate")}}.
 
@@ -195,7 +199,7 @@ Laissons `playbackRate` de côté. Pour manipuler l'audio, on utilise typiquemen
 
 ### Sélectionner une source audio
 
-On peut utiliser la piste audio d'un élément {{htmlelement("audio")}} ou {{htmlelement("video")}} comme source pour alimenter l'API Web Audio, ou un simple buffer audio, une onde sinusoïdale/oscillateur, un flux (comme [getUserMedia](/fr/docs/NavigatorUserMedia.getUserMedia) de [WebRTC](/fr/docs/Web/API/WebRTC_API))... Découvrez exactement comment les utiliser en lisant les pages suivantes:
+On peut utiliser la piste audio d'un élément {{htmlelement("audio")}} ou {{htmlelement("video")}} comme source pour alimenter l'API Web Audio, ou un simple buffer audio, une onde sinusoïdale/oscillateur, un flux (comme [getUserMedia](/fr/docs/Web/API/Navigator/getUserMedia) de [WebRTC](/fr/docs/Web/API/WebRTC_API))... Découvrez exactement comment les utiliser en lisant les pages suivantes:
 
 - {{domxref("MediaElementAudioSourceNode")}}
 - {{domxref("AudioBufferSourceNode")}}
@@ -289,7 +293,8 @@ window.addEventListener("load", setFilter);
 
 {{ EmbedLiveSample('Code_jouable_2', 700, 425) }}
 
-> **Note :** À moins que [CORS](/fr/docs/Web/HTTP/Access_control_CORS) ne soit activé, vous devrez pour éviter les problèmes de sécurité placer la vidéo sur le même domaine que votre code.
+> [!NOTE]
+> À moins que [CORS](/fr/docs/Web/HTTP/CORS) ne soit activé, vous devrez pour éviter les problèmes de sécurité placer la vidéo sur le même domaine que votre code.
 
 Les filtres pouvant être appliqués sont:
 
@@ -302,7 +307,8 @@ Les filtres pouvant être appliqués sont:
 - Notch: Les fréquences à l'intérieur d'une gamme donnée sont atténuées.
 - Allpass: Laisse touts les fréquences inchangées mais modifie le rapport de phrase entre les différentes fréquences.
 
-> **Note :** Voir {{domxref("BiquadFilterNode")}} pour plus d'informations.
+> [!NOTE]
+> Voir {{domxref("BiquadFilterNode")}} pour plus d'informations.
 
 ### Convolutions et Impulsions
 
@@ -318,9 +324,11 @@ source.connect(convolver);
 convolver.connect(context.destination);
 ```
 
-> **Note :** Voir ce [Codepen](https://codepen.io/DonKarlssonSan/pen/doVKRE) pour un exemple appliqué.
+> [!NOTE]
+> Voir ce [Codepen](https://codepen.io/DonKarlssonSan/pen/doVKRE) pour un exemple appliqué.
 
-> **Note :** Voir {{domxref("ConvolverNode")}} pour plus d'informations.
+> [!NOTE]
+> Voir {{domxref("ConvolverNode")}} pour plus d'informations.
 
 ### Audio dans l'espace
 
@@ -342,9 +350,11 @@ source.start(0);
 context.listener.setPosition(0, 0, 0);
 ```
 
-> **Note :** Vous pouvez trouver un [exemple sur notre repo GitHub](https://github.com/mdn/webaudio-examples/tree/master/panner-node) (le [voir en direct](https://mdn.github.io/webaudio-examples/panner-node/) aussi).
+> [!NOTE]
+> Vous pouvez trouver un [exemple sur notre repo GitHub](https://github.com/mdn/webaudio-examples/tree/master/panner-node) (le [voir en direct](https://mdn.github.io/webaudio-examples/panner-node/) aussi).
 
-> **Note :** Voir {{domxref("PannerNode")}} pour plus d'informations.
+> [!NOTE]
+> Voir {{domxref("PannerNode")}} pour plus d'informations.
 
 ## Codecs JavaScript
 
@@ -359,17 +369,18 @@ Des bibliothèques existent actuellement pour les formats suivants:
 - Opus: [Opus.js](https://github.com/audiocogs/opus.js)
 - Vorbis: [vorbis.js](https://github.com/audiocogs/vorbis.js)
 
-> **Note :** Sur AudioCogs, vous pouvez [essayer quelques démos](http://audiocogs.org/codecs/); Audiocogs fournit également un Framework, [Aurora.js](http://audiocogs.org/codecs/), qui est destiné à vous aider à créer vos propres codecs en JavaScript.
+> [!NOTE]
+> Sur AudioCogs, vous pouvez [essayer quelques démos](http://audiocogs.org/codecs/); Audiocogs fournit également un Framework, [Aurora.js](http://audiocogs.org/codecs/), qui est destiné à vous aider à créer vos propres codecs en JavaScript.
 
 ## Tutoriels
 
-- [Manipulation vidéo avec la balise Canvas](/fr/docs/HTML/Manipulating_video_using_canvas)
-- [HTML5 playbackRate expliqué](/fr/Apps/Build/Manipulating_media/HTML5_playbackRate_explained)
+- [Manipulation vidéo avec la balise Canvas](/fr/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
+- [HTML5 playbackRate expliqué](/fr/docs/Web/Apps/Build/Manipulating_media/HTML5_playbackRate_explained)
 - [Utiliser l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Les bases de la spatialisation audio Web](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
-- [Utilisation des images vidéo comme texture WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Animation_de_textures_en_WebGL#Utilisation_des_images_vidéo_comme_texture) (Vous pouvez également utiliser la bilbiothèque WebGL [THREE.js](http://threejs.org) (ou autres) pour [obtenir cet effet](http://stemkoski.github.io/Three.js/Video.html))
-- [Animation de Textures en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Animation_de_textures_en_WebGL)
-- [Developing Game Audio with the Web Audio API (Room effects and filters)](http://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room)
+- [Utilisation des images vidéo comme texture WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#utilisation_des_images_vidéo_comme_texture) (Vous pouvez également utiliser la bilbiothèque WebGL [THREE.js](https://threejs.org) (ou autres) pour [obtenir cet effet](http://stemkoski.github.io/Three.js/Video.html))
+- [Animation de Textures en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)
+- [Developing Game Audio with the Web Audio API (Room effects and filters)](https://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room)
 
 ## Référence
 
@@ -378,4 +389,4 @@ Des bibliothèques existent actuellement pour les formats suivants:
 - L'élément {{htmlelement("canvas")}}
 - [Web Audio API](/fr/docs/Web/API/Web_Audio_API)
 - [AudioContext](/fr/docs/Web/API/AudioContext)
-- Plus d'infos sur [PannerNode](/fr/docs/Web/API/AudioContext.createPanner)
+- Plus d'infos sur [PannerNode](/fr/docs/Web/API/BaseAudioContext/createPanner)

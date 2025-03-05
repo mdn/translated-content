@@ -26,4 +26,4 @@ SVG étant un [format d'image vectorielle](http://fr.wikipedia.org/wiki/Image_ve
 ### Informations techniques
 
 - [Documentation SVG sur MDN](/fr/docs/Web/SVG)
-- [Dernière spécification SVG](http://www.w3.org/TR/SVG/)
+- [Dernière spécification SVG](https://www.w3.org/TR/SVG/)

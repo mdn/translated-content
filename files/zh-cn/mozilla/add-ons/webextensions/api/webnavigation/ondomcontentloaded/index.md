@@ -83,7 +83,8 @@ browser.webNavigation.onDOMContentLoaded.addListener(
 
 {{WebExtExamples}}
 
-> **备注：** 本 API 基于 Chromium 的 [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-onBeforeNavigate) API。本文档源自 Chromium 代码中的 [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json)。
+> [!NOTE]
+> 本 API 基于 Chromium 的 [`chrome.webNavigation`](https://developer.chrome.google.cn/docs/extensions/reference/api/webNavigation#event-onBeforeNavigate) API。本文档源自 Chromium 代码中的 [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -35,7 +35,7 @@ if (navigator.storage && navigator.storage.persist)
   });
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

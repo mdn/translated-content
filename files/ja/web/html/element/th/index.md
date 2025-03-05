@@ -9,7 +9,73 @@ l10n:
 
 **`<th>`** は [HTML](/ja/docs/Web/HTML) の要素で、表のセルのグループ用の見出しであるセルを定義します。このグループの正確な性質は、[`scope`](#scope) 属性と [`headers`](#headers) 属性で定義します。
 
-{{EmbedInteractiveExample("pages/tabbed/th.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;th&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Alien football stars
+  </caption>
+  <tr>
+    <th scope="col">Player</th>
+    <th scope="col">Gloobles</th>
+    <th scope="col">Za'taak</th>
+  </tr>
+  <tr>
+    <th scope="row">TR-7</th>
+    <td>7</td>
+    <td>4,569</td>
+  </tr>
+  <tr>
+    <th scope="row">Khiresh Odo</th>
+    <td>7</td>
+    <td>7,223</td>
+  </tr>
+  <tr>
+    <th scope="row">Mia Oolong</th>
+    <td>9</td>
+    <td>6,219</td>
+  </tr>
+</table>
+```
+
+```css interactive-example
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+th[scope="col"] {
+  background-color: #505050;
+  color: #fff;
+}
+
+th[scope="row"] {
+  background-color: #d6ecd4;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-of-type(even) {
+  background-color: #eee;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+```
 
 ## 属性
 
@@ -48,7 +114,8 @@ l10n:
 
     この属性を設定しない場合は、値が `left` であるとみなされます。
 
-    > **メモ:** この属性は最新の標準仕様で廃止されたため、使用しないでください。
+    > [!NOTE]
+    > この属性は最新の標準仕様で廃止されたため、使用しないでください。
     >
     > - `left`, `center`, `right`, `justify` の値と同様の効果を得るには、 CSS の {{cssxref("text-align")}} プロパティを使用してください。
     > - `char` の値と同様の効果を得るには、 {{cssxref("text-align")}} プロパティに [`char`](#char) で使用する値と同じものを指定してください。
@@ -57,7 +124,8 @@ l10n:
 
   - : この属性は、空白文字で区切られた文字列のリストを持ちます。各文字列は、このヘッダーを適用するセルグループの `id` です。
 
-    > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。代わりに [`scope`](#scope) 属性を使用してください。
+    > [!NOTE]
+    > この属性は最新の標準で廃止されているため、使用しないでください。代わりに [`scope`](#scope) 属性を使用してください。
 
 - `bgcolor` {{Deprecated_Inline}}
 
@@ -67,19 +135,22 @@ l10n:
 
   - : この属性は、列内のセルで揃える文字を設定します。典型的な値に、数値や金額を揃えようとするときのピリオド (.) があります。 [`align`](#align) 属性を `char` に設定していない場合は、この属性を無視します。
 
-    > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。 CSS3 で同じ効果を得るには、 {{cssxref("text-align")}} プロパティの最初の値としてその文字を設定することができます。
+    > [!NOTE]
+    > この属性は最新の標準で廃止されているため、使用しないでください。 CSS3 で同じ効果を得るには、 {{cssxref("text-align")}} プロパティの最初の値としてその文字を設定することができます。
 
 - `charoff` {{deprecated_inline}}
 
   - : この属性は、 **char** 属性で指定した揃え文字から列のデータをオフセットする文字数を示します。この値は、このシフトの長さを指定します。
 
-    > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。
+    > [!NOTE]
+    > この属性は最新の標準で廃止されているため、使用しないでください。
 
 - `height` {{deprecated_inline}}
 
   - : この属性はセルの高さの推奨値を定義するために使用されます。
 
-    > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。代わりに CSS の {{cssxref("height")}} プロパティを使用してください。
+    > [!NOTE]
+    > この属性は最新の標準で廃止されているため、使用しないでください。代わりに CSS の {{cssxref("height")}} プロパティを使用してください。
 
 - `valign` {{deprecated_inline}}
 
@@ -90,13 +161,15 @@ l10n:
     - `middle`: テキストをセル内の中央に置きます。
     - `top`: テキストを可能な限りセルの上端に近づけて配置します。
 
-    > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。代わりに CSS の {{cssxref("vertical-align")}} プロパティを使用してください。
+    > [!NOTE]
+    > この属性は最新の標準で廃止されているため、使用しないでください。代わりに CSS の {{cssxref("vertical-align")}} プロパティを使用してください。
 
 - `width` {{deprecated_inline}}
 
   - : この属性は、セルの推奨する幅を定義します。 {{domxref("HTMLTableElement.cellSpacing", "cellspacing")}} および {{domxref("HTMLTableElement.cellPadding", "cellpadding")}} プロパティで追加のスペースを追加し、また {{HTMLElement("col")}} の幅も影響を与えます。通常、列の幅が特定のセルを正常に表示できないほど狭く、またそのようなセルが存在する場合は、表示する際に幅を広げるでしょう。
 
-    > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。代わりに CSS の {{cssxref("width")}} プロパティを使用してください。
+    > [!NOTE]
+    > この属性は最新の標準で廃止されているため、使用しないでください。代わりに CSS の {{cssxref("width")}} プロパティを使用してください。
 
 ## 例
 

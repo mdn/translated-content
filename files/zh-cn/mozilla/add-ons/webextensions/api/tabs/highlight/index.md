@@ -31,7 +31,8 @@ let highlighting = browser.tabs.highlight(
 
       - : `boolean`。默认为 `true`。如果设置为 `false`，则 {{WebExtAPIRef('windows.Window')}} 对象不会包含 `tabs` 属性，该属性包含表示窗口中打开的标签页的 {{WebExtAPIRef('tabs.Tab')}} 对象列表。
 
-        > **备注：** 在标签页很多的情况下，对窗口进行填充（默认行为）可能会消耗大量资源。为了更好的性能，如果不需要标签页详情，建议手动将 `populate` 设置为 `false`。
+        > [!NOTE]
+        > 在标签页很多的情况下，对窗口进行填充（默认行为）可能会消耗大量资源。为了更好的性能，如果不需要标签页详情，建议手动将 `populate` 设置为 `false`。
 
     - `tabs`
       - : `integer` 数组，指定要突出显示的一个或多个标签页索引。之前突出显示的但未包含在 `tabs` 中的标签页将停止被突出显示。`tabs` 中的第一个标签页将成为活动标签页。
@@ -46,7 +47,8 @@ let highlighting = browser.tabs.highlight(
 
 {{WebExtExamples}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-highlight) API。此文档源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-highlight) API。此文档源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -53,7 +53,7 @@ _Cette interface hérite aussi des méthodes de son parent {{domxref("HTMLElemen
 
 ### Obtention d'un objet élément de formulaire
 
-Pour obtenir un objet `HTMLFormElement`, vous pouvez utiliser un [sélecteur CSS](/fr/docs/Web/CSS/Sélecteurs_CSS) avec {{domxref("ParentNode.querySelector", "querySelector()")}} ou vous pouvez obtenir une liste de tous les formulaires du document utilisant sa propriété {{domxref("Document.forms", "forms")}}.
+Pour obtenir un objet `HTMLFormElement`, vous pouvez utiliser un [sélecteur CSS](/fr/docs/Web/CSS/CSS_selectors) avec {{domxref("ParentNode.querySelector", "querySelector()")}} ou vous pouvez obtenir une liste de tous les formulaires du document utilisant sa propriété {{domxref("Document.forms", "forms")}}.
 
 {{domxref("Document.forms")}} renvoie un tableau des objets `HTMLFormElement` listant chacun des formulaires de la page. Vous pouvez utiliser alors l'une des syntaxes suivantes pour obtenir un formulaire individuel :
 
@@ -201,7 +201,7 @@ Envoi d'un formulaire dans une nouvelle fenêtre :
 
 ### Envoi de formulaires et téléchargement de fichiers en utilisant `XMLHttpRequest`
 
-Vous pouvez consulter [ce paragraphe](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest#Submitting_forms_and_uploading_files) si vous souhaitez en savoir plus pour sérialiser et envoyer un formulaire grâce à l'API {{domxref("XMLHttpRequest")}}.
+Vous pouvez consulter [ce paragraphe](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#submitting_forms_and_uploading_files) si vous souhaitez en savoir plus pour sérialiser et envoyer un formulaire grâce à l'API {{domxref("XMLHttpRequest")}}.
 
 ## Spécifications
 

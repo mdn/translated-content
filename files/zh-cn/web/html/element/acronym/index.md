@@ -9,7 +9,8 @@ l10n:
 
 [HTML](/zh-CN/docs/Web/HTML) **`<acronym>`** 元素允许作者明确声明一个构成单词首字母缩略字或缩写的字符序列。
 
-> **警告：** 请不要使用该元素，而应使用 {{HTMLElement("abbr")}} 元素代替。
+> [!WARNING]
+> 请不要使用该元素，而应使用 {{HTMLElement("abbr")}} 元素代替。
 
 ## 属性
 

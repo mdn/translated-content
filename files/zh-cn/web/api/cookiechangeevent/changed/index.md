@@ -2,12 +2,14 @@
 title: CookieChangeEvent：changed 属性
 slug: Web/API/CookieChangeEvent/changed
 l10n:
-  sourceCommit: a86c551ce8f5c6936b14640357eaa4da71a857d7
+  sourceCommit: de4bd74771b88bb6352c1136b608811edf24ffda
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}
 
 {{domxref("CookieChangeEvent")}} 接口的 **`changed`** 只读属性返回包含已被修改的 cookie 的数组。
+
+请注意，这将排除那些创建的、过期时间在过去的 cookie，因为这些 cookie 会被立即删除。
 
 ## 值
 
@@ -24,7 +26,7 @@ l10n:
 - `expires`
   - : {{glossary("Unix time", "Unix 时间戳")}}（以毫秒为单位表示），记录 cookie 的到期日期。
 - `secure`
-  - : 一个{{jsxref("boolean", "布尔值", "", 1)}}，指示 cookie 是否来自具有安全上下文（HTTPS 而不是 HTTP）的站点。
+  - : 一个{{jsxref("boolean", "布尔值", "", 1)}}，表示 cookie 是否仅在安全上下文中使用（HTTPS 而不是 HTTP）。
 - `sameSite`
 
   - : 以下 [`SameSite`](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 的值之一：
@@ -37,7 +39,7 @@ l10n:
       - : Cookie 将被发送至所有上下文。
 
 - `partitioned`
-  - : 一个布尔值，表示 cookie 是否是分区 cookie（`true`）或（`false`）。更多信息请参阅[具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)。
+  - : 一个布尔值，表示 cookie 是否是分区 cookie（`true`）或（`false`）。更多信息请参阅[具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)。
 
 ## 示例
 

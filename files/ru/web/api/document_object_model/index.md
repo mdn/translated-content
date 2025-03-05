@@ -9,7 +9,7 @@ slug: Web/API/Document_Object_Model
 
 DOM чаще всего используется в JavaScript, но не является его частью, поэтому иногда с DOM работают в других языках.
 
-[Введение](/ru/docs/DOM/DOM_Reference/Введение) в DOM доступно.
+[Введение](/ru/docs/Web/API/Document_Object_Model/Introduction) в DOM доступно.
 
 ## DOM интерфейсы
 
@@ -264,7 +264,8 @@ DOM чаще всего используется в JavaScript, но не явл
 
 DOM API для типов данных, используемых в определениях SVG свойств и атрибутов.
 
-> **Примечание:** Начиная с Gecko 5.0, следующие относящиеся к SVG DOM интерфейсы, представляя списки объектов, индексируются и к ним можно иметь доступ как к массивам; к тому же, у них есть свойство длины, обозначающее количество элементов в списках: {{domxref("SVGLengthList")}}, {{domxref("SVGNumberList")}}, {{domxref("SVGPathSegList")}} и {{domxref("SVGPointList")}}.
+> [!NOTE]
+> Начиная с Gecko 5.0, следующие относящиеся к SVG DOM интерфейсы, представляя списки объектов, индексируются и к ним можно иметь доступ как к массивам; к тому же, у них есть свойство длины, обозначающее количество элементов в списках: {{domxref("SVGLengthList")}}, {{domxref("SVGNumberList")}}, {{domxref("SVGPathSegList")}} и {{domxref("SVGPointList")}}.
 
 #### Статический тип
 
@@ -330,4 +331,4 @@ DOM API для типов данных, используемых в опреде
 
 ## Смотрите также
 
-- [Примеры DOM](/ru/docs/DOM/DOM_Reference/Examples)
+- [Примеры DOM](/ru/docs/Web/API/Document_Object_Model/Examples)

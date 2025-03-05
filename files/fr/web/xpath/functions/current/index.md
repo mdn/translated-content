@@ -33,7 +33,7 @@ Le nœud courant est toujours identique au nœud de contexte. Les deux exemples 
 
 ### Définition
 
-[XSLT 1.0, section 12.4](http://www.w3.org/TR/xslt#function-current).
+[XSLT 1.0, section 12.4](https://www.w3.org/TR/xslt#function-current).
 
 ### Support Gecko
 

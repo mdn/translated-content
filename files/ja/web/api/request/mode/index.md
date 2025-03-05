@@ -1,30 +1,38 @@
 ---
-title: Request.mode
+title: "Request: mode プロパティ"
+short-title: mode
 slug: Web/API/Request/mode
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: 0129176c2bb0e16af7577067191f0889326fad73
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-**`mode`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、リクエストのモード（たとえば、`cors`、`no-cors`、`same-origin`、`navigate`、`websocket`）を保持します。これは、オリジン間リクエストに対して有効なレスポンスができるか、またレスポンスのプロパティが読み取り可能かどうかを判定するために使用されます。
+**`mode`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、リクエストのモード（`cors`、`no-cors`、`same-origin`、`navigate` など）を保持します。これは、オリジン間リクエストに対して有効なレスポンスができるか、またレスポンスのプロパティが読み取り可能かどうかを判定するために使用されます。
+
+特定のモードでのリクエストを構築するには、必要な値を {{domxref("RequestInit", "", "mode")}} オプションにとして {{domxref("Request.Request()")}} コンストラクターに渡します。
+
+特定のモード、特に `no-cors` を設定すると、使用できるリクエストメソッドやヘッダーに制限がかかり、 JavaScript がレスポンスヘッダーや本体にアクセスできなくなることに注意してください。詳細は {{domxref("RequestInit", "", "mode")}} のドキュメントを参照してください。
 
 ## 値
 
-- `RequestMode` の値です。
+以下の値のいずれかです。
 
-  - : _mode_ に関連する値には、次のものが使用できます。
+- `same-origin`
 
-    - `same-origin`
-      - : このモードを設定してほかのオリジンにリクエストをした場合、結果はエラーになります。リクエストが常に同一オリジンに行われることを保証するために使用できます。
-    - `no-cors`
-      - : メソッドが `HEAD`、`GET`、`POST` 以外にならないようにし、ヘッダーが[単純ヘッダー](https://fetch.spec.whatwg.org/#simple-header)以外のものにならないようにします。サービスワーカーがこれらのリクエストに介入した場合、[単純ヘッダー](https://fetch.spec.whatwg.org/#simple-header)以外のヘッダーを追加したり上書きしたりすることはできません。さらに、 JavaScript で結果の {{domxref("Response")}} のプロパティにアクセスすることはできません。これは、サービスワーカーがウェブの意味づけに影響を与えないようにし、ドメイン間でデータが漏れることによって生じるセキュリティとプライバシーの問題を防ぐためです。
-    - `cors`
-      - : オリジン間リクエストを許可します。たとえば、サードパーティベンダーが提供する様々な API にアクセスできます。これらは、[CORS プロトコル](/ja/docs/Web/HTTP/CORS)に則ることが期待されています。[制限された](https://fetch.spec.whatwg.org/#concept-filtered-response-cors)ヘッダーしか {{domxref("Response")}} からは見えないようになりますが、本体は読み取り可能です。
-    - `navigate`
-      - : ナビゲーションに対応しているモードです。 `navigate` 値は HTML ナビゲーションでのみ使用されることを意図しています。 navigate リクエストは文書内のナビゲーションをするときだけ作成されます。
-    - `websocket`
-      - : [WebSocket](/ja/docs/Web/API/WebSockets_API) 接続を確立するときだけ使用される特殊なモードです。
+  - : このモードを設定してほかのオリジンにリクエストをした場合、結果はエラーになります。リクエストが常に同一オリジンに行われることを保証するために使用できます。
+
+- `no-cors`
+
+  - : オリジン間リクエストの CORS を無効にします。レスポンスは不透明となり、ヘッダーと本体は JavaScript では利用できません。
+
+- `cors`
+
+  - : このリクエストがオリジン間リクエストであれば、[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS) の仕組みを使用します。
+
+- `navigate`
+
+  - : ナビゲーションに対応しているモードです。 `navigate` 値は HTML ナビゲーションでのみ使用されることを意図しています。 navigate リクエストは文書内のナビゲーションをするときだけ作成されます。
 
 #### 既定のモード
 
@@ -40,7 +48,7 @@ l10n:
 
 ```js
 const myRequest = new Request("flowers.jpg");
-const myMode = myRequest.mode; // returns "cors" by default
+const myMode = myRequest.mode; // 既定では "cors" を返す
 ```
 
 ## 仕様書

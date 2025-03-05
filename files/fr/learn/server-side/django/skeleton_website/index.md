@@ -40,7 +40,8 @@ La création est aisée:
 1. Utilisez la commande `django-admin` pour créer le dossier du projet ainsi que les sous-dossiers et fichiers de base ainsi que le script de gestion du projet (**manage.py**).
 2. Utilisez **manage.py** pour créer une ou plusieurs _applications_ du projet.
 
-   > **Note :** Un site web consiste en une ou plusieurs sections, par exemple un site principal, un blog, un wiki,... La bonne pratique avec Django est de réaliser chacun des composants comme des applications séparées qui pourront éventuellement être réutilisées dans d'autres projets.
+   > [!NOTE]
+   > Un site web consiste en une ou plusieurs sections, par exemple un site principal, un blog, un wiki,... La bonne pratique avec Django est de réaliser chacun des composants comme des applications séparées qui pourront éventuellement être réutilisées dans d'autres projets.
 
 3. Enregistrez la nouvelle application dans le projet.
 4. Liez les urls et chemins pour chaque application.
@@ -54,13 +55,14 @@ locallibrary/         # Website folder
     catalog/          # Application folder (created using manage.py)
 ```
 
-> **Note :** Afin de respecter la cohérence du code et pouvoir utiliser les développements sur GitHub, les noms du site et des applications, _en anglais_, n'ont pas été modifiés.
+> [!NOTE]
+> Afin de respecter la cohérence du code et pouvoir utiliser les développements sur GitHub, les noms du site et des applications, _en anglais_, n'ont pas été modifiés.
 
 La suite de ce chapitre est consacrée pas à pas aux étapes de création d'un projet et d'une application. La fin du chapitre sera consacré à quelques éléments de configuration du site qui peuvent être réalisés à ce stade.
 
 ## Créer le projet _locallibrary_
 
-Tout d'abord, il est nécessaire d'ouvrir une fenêtre pour exécuter des commandes en ligne (un terminal sous Linux/MacOS ou une fenêtre command sous Windows). Assurez-vous d'être dans un [environnement virtuel python](/fr/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment), déplacez-vous dans votre arborescence de dossiers pour être dans votre zone de développement des applications Django. Créez-y un sous-dossier pour les projets Django `django_projects` et déplacez-vous dans ce dernier :
+Tout d'abord, il est nécessaire d'ouvrir une fenêtre pour exécuter des commandes en ligne (un terminal sous Linux/MacOS ou une fenêtre command sous Windows). Assurez-vous d'être dans un [environnement virtuel python](/fr/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment), déplacez-vous dans votre arborescence de dossiers pour être dans votre zone de développement des applications Django. Créez-y un sous-dossier pour les projets Django `django_projects` et déplacez-vous dans ce dernier :
 
 ```bash
 mkdir django_projects
@@ -109,7 +111,8 @@ La commande ci-dessous va créer l'application _catalog_. Vous devez être dans 
 python3 manage.py startapp catalog
 ```
 
-> **Note :** La commande ci-dessus est exécutée dans un environnement Linux/macOS X. Sous Windows, il se peut que la commande soit : `py -3 manage.py startapp catalog`
+> [!NOTE]
+> La commande ci-dessus est exécutée dans un environnement Linux/macOS X. Sous Windows, il se peut que la commande soit : `py -3 manage.py startapp catalog`
 >
 > Si vous travaillez dans un environnement Windows, l'ensemble de la série didactique est écrite pour un environnement Linux/MacOS. Pensez, alors, à remplacer les commandes `python3` par `py -3`.
 >
@@ -138,7 +141,8 @@ A ceci s'ajoute :
 - Un dossier _migrations_, qui sera utilisé par django pour gérer les migrations et les modifications progressives apportées à la base de données quand des modifications seront faîtes dans les fichiers _models.py._
 - **\_\_init\_\_.py** — est un fichier vide qui indique au langage Python de considérer ce dossier comme un module Python.
 
-> **Note :** Vous pouvez constater que dans le dossier de l'application, il n'y a pas de fichier pour gérer les urls, les gabarits ou les fichiers statiques. Nouys verrons ce point un peu plus loin, ils ne sont pas systématiquement nécessaires.
+> [!NOTE]
+> Vous pouvez constater que dans le dossier de l'application, il n'y a pas de fichier pour gérer les urls, les gabarits ou les fichiers statiques. Nouys verrons ce point un peu plus loin, ils ne sont pas systématiquement nécessaires.
 
 ## Enregistrer l'application _catalog_
 
@@ -160,7 +164,8 @@ INSTALLED_APPS = [
 
 Le nouvel enregistrement défini l'objet pour cette nouvelle application avec le nom (`CatalogConfig`) qui a été généré dans le fichier **/locallibrary/catalog/apps.py** quand l'application a été créée.
 
-> **Note :** Nous verrons plus loin les autres paramètres de ce fichier(comme `MIDDLEWARE`). Cela permet la prise en charge par [Django administration site](/fr/docs/Learn/Server-side/Django/Admin_site) et donne accès à de nombreuses fonctionnalités (gestion des sessions, de l'authentication, etc).
+> [!NOTE]
+> Nous verrons plus loin les autres paramètres de ce fichier(comme `MIDDLEWARE`). Cela permet la prise en charge par [Django administration site](/fr/docs/Learn/Server-side/Django/Admin_site) et donne accès à de nombreuses fonctionnalités (gestion des sessions, de l'authentication, etc).
 
 ## Définir la base de données
 
@@ -222,7 +227,8 @@ urlpatterns = [
 
 Le routage des URLs est géré à l'aide de la variable `urlpatterns`. Elle consititue une liste Python de fonctions `path()`. Chaque instance `path()` peut associer des motifs d'URL à une vue particulière, qui sera appelée si l'URL appellée correspond au motif décrit, ou vers une autre liste d'URL (dans ce cas, le motif est à considérer comme le motif de base pour le module dans lequel il est décrit). La variable `urlpatterns` contient au démarrage une seule fonction qui permet de gérer l'URL d'administration du site et utilisant le module par défaut de Django `admin.site.urls`.
 
-> **Note :** Dans la fonction `path()`, une route est une chaîne de caractères définissant une URL ou un motif d'URL. Cette chaîne peut inclure des variables nommées (entre < et >, par exemple `'catalog/<id>/'`). Ce motif correspondra à une URL du type **/catalog/_des_caractères_/**. La chaîne _des_caractères_ sera transmis à la vue comme une chaîne de caractère associée à une variable nommée `id`. Ce point sera vu en détails plus loin dans la série didactique.
+> [!NOTE]
+> Dans la fonction `path()`, une route est une chaîne de caractères définissant une URL ou un motif d'URL. Cette chaîne peut inclure des variables nommées (entre < et >, par exemple `'catalog/<id>/'`). Ce motif correspondra à une URL du type **/catalog/_des_caractères_/**. La chaîne _des_caractères_ sera transmis à la vue comme une chaîne de caractère associée à une variable nommée `id`. Ce point sera vu en détails plus loin dans la série didactique.
 
 Ajoutez les lignes ci-dessous à la fin du fichier de manière à ajouter dans la variable `urlpatterns` une nouvelle entrée à la liste des routes. Cette nouvelle entrée permet une nouvelle route pour `catalog/` dont la gestion est déléguée au fichier **urls.py** du module **catalog** (c'est-à-dire le fichier **catalog/urls.py**).
 
@@ -271,7 +277,8 @@ from django.conf.urls.static import static
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 ```
 
-> **Note :** Il y a plusieurs manière pour ajouter des routes à la variable `urlpatterns` (dans les étapes décrites ci-dessus nous avons ajouté petit à patir en utilisant l'opérateur `+=` pour bien séparer les étapes). Il est en réalité tout à fait possible de tout regrouper dans une seule étape :
+> [!NOTE]
+> Il y a plusieurs manière pour ajouter des routes à la variable `urlpatterns` (dans les étapes décrites ci-dessus nous avons ajouté petit à patir en utilisant l'opérateur `+=` pour bien séparer les étapes). Il est en réalité tout à fait possible de tout regrouper dans une seule étape :
 >
 > ```python
 > urlpatterns = [
@@ -311,19 +318,22 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 ```
 
-> **Attention :** Chaque fois que vous ferez évoluer le modèle de données, vous devrez exécuter le commandes ci-dessus (elles seront traduites en structure dans la base de données que cela conduise à l'ajout ou au retrait d'objets ou d'attributs).
+> [!WARNING]
+> Chaque fois que vous ferez évoluer le modèle de données, vous devrez exécuter le commandes ci-dessus (elles seront traduites en structure dans la base de données que cela conduise à l'ajout ou au retrait d'objets ou d'attributs).
 
 L'option `makemigrations` réalise (sans les appliquer) les migrations nécessaires à toutes les applications du projet. Vous pouvez cependant préciser le nom de l'application pour laquelle vous souhaitez réaliser la migration. Ceci permet de vérifier le code et la cohérence du modèle de donner avant de l'appliquer réellement. Quand vous aurez un niveau expert, vous pourrez choisir de les modifier à la marge.
 
 L'option `migrate` applique les modifications sur la base de données (Django trace les modifications réalisées dans la base de données).
 
-> **Note :** Vous pouvez consulter la documentation [Migrations](https://docs.djangoproject.com/fr/2.2/topics/migrations/) (sur le site Django) pour plus d'informations.
+> [!NOTE]
+> Vous pouvez consulter la documentation [Migrations](https://docs.djangoproject.com/fr/2.2/topics/migrations/) (sur le site Django) pour plus d'informations.
 
 ### Démarrer le site web
 
 Pendant la phase de développement, vous pouvez tester votre serveur sur un mode local et le consulter avec votre navigateur.
 
-> **Note :** Le serveur local n'est ni robuste ni performant, il n'est donc pas fait pour être utilisé en production, mais il permet d'être autonome pour les travaux de développement. La configuration par défaut de ce serveur est telle que votre site est accessible à l'URL `http://127.0.0.1:8000/`. Cependant, vous pouvez modifier ces paramètres et pour plus d'information vous pouvez consulter la documentation sur le site Django des commandes [django-admin and manage.py: runserver](https://docs.djangoproject.com/fr/2.2/ref/django-admin/#runserver).
+> [!NOTE]
+> Le serveur local n'est ni robuste ni performant, il n'est donc pas fait pour être utilisé en production, mais il permet d'être autonome pour les travaux de développement. La configuration par défaut de ce serveur est telle que votre site est accessible à l'URL `http://127.0.0.1:8000/`. Cependant, vous pouvez modifier ces paramètres et pour plus d'information vous pouvez consulter la documentation sur le site Django des commandes [django-admin and manage.py: runserver](https://docs.djangoproject.com/fr/2.2/ref/django-admin/#runserver).
 
 Pour démarrer le serveur local, il suffit d'exécuter la commande ci-dessous dans le répertoire du projet (dossier où se trouver **manage.py**) :
 
@@ -345,11 +355,13 @@ Dès que le serveur est actif, vous pouvez utiliser votre navigateur est accéde
 
 Ne vous inquitez ! Cette erreur était attendue ; elle est due à l'absence de défintion de routes dans le fichier catalog/urls.py ou dans le module `catalog.urls` module (que nous avons déclaré dans le fichier urls.py du projet).
 
-> **Note :** La page web ci-dessus met en exergue une fonctionnalité utile de Django ; le mode des traces de debogag. Au lieu d'une simple erreur renvoyée par le serveur, celui-ci affiche un écran d'erreur avec des informations utiles pour corriger le développement conduisant à cette erreur d'affichage. Dans le cas présent, l'erreur est due au motif de l'URL qui ne correspond pas à ce qui a été configuré.
+> [!NOTE]
+> La page web ci-dessus met en exergue une fonctionnalité utile de Django ; le mode des traces de debogag. Au lieu d'une simple erreur renvoyée par le serveur, celui-ci affiche un écran d'erreur avec des informations utiles pour corriger le développement conduisant à cette erreur d'affichage. Dans le cas présent, l'erreur est due au motif de l'URL qui ne correspond pas à ce qui a été configuré.
 
 À ce stade, nous pouvons considérer que le serveur fonctionne !
 
-> **Note :** Chaque fois que vous apportez des modifications significatives, il est important d'exécuter à nouveau un migration et un test du serveur. Cela est assez rapide, pour ne pas s'en priver !
+> [!NOTE]
+> Chaque fois que vous apportez des modifications significatives, il est important d'exécuter à nouveau un migration et un test du serveur. Cela est assez rapide, pour ne pas s'en priver !
 
 ## Relevez le défi
 

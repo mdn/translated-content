@@ -7,25 +7,40 @@ slug: Web/HTML/Element/abbr
 
 **Элемент HTML «аббревиатура» (`<abbr>`)** представляет собой аббревиатуру и, опционально, может показывать её расшифровку. Расшифровка записывается в атрибут [`title`](/ru/docs/Web/HTML/Global_attributes#title). Иные значения `title`, кроме расшифровки аббревиатуры не допускаются.
 
-{{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;abbr&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  You can use <abbr>CSS</abbr> (Cascading Style Sheets) to style your <abbr>HTML</abbr> (HyperText Markup Language).
+  Using style sheets, you can keep your <abbr>CSS</abbr> presentation layer and <abbr>HTML</abbr> content layer
+  separate. This is called "separation of concerns."
+</p>
+```
+
+```css interactive-example
+abbr {
+  font-style: italic;
+  color: chocolate;
+}
+```
 
 Статья _[Как помечать аббревиатуры и сделать их потянутыми](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Advanced_text_formatting#%D0%90%D0%B1%D0%B1%D1%80%D0%B5%D0%B2%D0%B8%D0%B0%D1%82%D1%83%D1%80%D1%8B)_ поможет понять как использовать `<abbr>` и связанные элементы.
 
-| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [текстовый контент](/ru/docs/Web/Guide/HTML/Content_categories/#Фразовый_контент), явный контент |
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток), [текстовый контент](/ru/docs/Web/Guide/HTML/Content_categories/#Фразовый_контент), явный контент |
 | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимое содержимое                                            | [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories/#Фразовый_контент)                                                                                              |
-| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                           |
+| Пропуск тегов                                                    | Нет, открывающий и закрывающий теги обязательны.                                                                                                                              |
 | Допустимые родители                                              | Любые, поддерживающие [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories/#Фразовый_контент).                                                                       |
 | Допустимые ARIA-роли                                             | Любые                                                                                                                                                                         |
 | DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                    |
 
 ## Атрибуты
 
-Этот элемент поддерживает только [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты). Атрибут [`title`](/ru/docs/Web/HTML/Global_attributes#title) имеет специальное семантическое значение, когда используется вместе с элементом `<abbr>`. Он _должен_ содержать полную расшифровку или описание аббревиатуры.
+Этот элемент поддерживает только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes). Атрибут [`title`](/ru/docs/Web/HTML/Global_attributes#title) имеет специальное семантическое значение, когда используется вместе с элементом `<abbr>`. Он _должен_ содержать полную расшифровку или описание аббревиатуры.
 
 Каждый элемент `<abbr>` независим от других. Указание `title` на одном элементе не применяет это же описание к другим элементам с одинаковым содержанием.
 
-## Примечания к использованию
+## Примечания по использованию
 
 ### Обычное использование
 
@@ -139,6 +154,6 @@ abbr {
 
 ## Смотрите также
 
-- [Использование элемента \<abbr>](/ru/Learn/HTML/Element/abbr)
+- [Использование элемента \<abbr>](/ru/docs/Learn/HTML/Element/abbr)
 - Другие [элементы, являющиеся семантически текстовыми](/ru/docs/HTML/Text_level_semantics_conveying_elements): {{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
 - Устаревший элемент {{HTMLElement("acronym")}}, который был заменён элементом `<abbr>`.

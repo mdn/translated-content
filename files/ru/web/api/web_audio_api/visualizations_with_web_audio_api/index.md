@@ -7,7 +7,8 @@ slug: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 
 Одна из самых интересных фич Web Audio API — возможность извлекать частоту, форму волны и другие данные из звукового источника, которые могут быть использованы для создания визуализаций. Эта статья объясняет, как это можно сделать, и приводит несколько базовых примеров использования.
 
-> **Примечание:** вы можете найти рабочие примеры всех фрагментов кода в нашей демонстрации [автоизменения голоса](https://mdn.github.io/voice-change-o-matic/).
+> [!NOTE]
+> Вы можете найти рабочие примеры всех фрагментов кода в нашей демонстрации [автоизменения голоса](https://mdn.github.io/voice-change-o-matic/).
 
 ## Основные концепции
 
@@ -27,11 +28,13 @@ analyser.connect(distortion);
 distortion.connect(audioCtx.destination);
 ```
 
-> **Примечание:** вам не нужно подключать вывод анализатора к другому узлу для его работы, пока его ввод подключён к источнику, либо напрямую, либо через другой узел.
+> [!NOTE]
+> Вам не нужно подключать вывод анализатора к другому узлу для его работы, пока его ввод подключён к источнику, либо напрямую, либо через другой узел.
 
 Затем анализатор захватит аудиоданные, используя быстрое преобразование Фурье (БПФ) в определённой частотной области, в зависимости от того, что вы укажете как значение свойства {{ domxref("AnalyserNode.fftSize") }} (если свойство не задано, то значение по умолчанию равно 2048).
 
-> **Примечание:** вы так же можете указать значения минимума и максимума для диапазона масштабирования данных БПФ, используя {{ domxref("AnalyserNode.minDecibels") }} и {{ domxref("AnalyserNode.maxDecibels") }}, и разные константы усреднения данных с помощью {{ domxref("AnalyserNode.smoothingTimeConstant") }}. Прочтите эти страницы, чтобы получить больше информации о том как их использовать.
+> [!NOTE]
+> Вы так же можете указать значения минимума и максимума для диапазона масштабирования данных БПФ, используя {{ domxref("AnalyserNode.minDecibels") }} и {{ domxref("AnalyserNode.maxDecibels") }}, и разные константы усреднения данных с помощью {{ domxref("AnalyserNode.smoothingTimeConstant") }}. Прочтите эти страницы, чтобы получить больше информации о том как их использовать.
 
 Чтобы получить данные, вам нужно использовать методы {{ domxref("AnalyserNode.getFloatFrequencyData()") }} и {{ domxref("AnalyserNode.getByteFrequencyData()") }}, чтобы получить данные о частоте, и {{ domxref("AnalyserNode.getByteTimeDomainData()") }} и {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} чтобы получить данные о форме волны.
 
@@ -57,7 +60,7 @@ analyser.getByteTimeDomainData(dataArray);
 
 ## Создание формы волны/осциллографа
 
-Чтобы визуализировать осциллограф (спасибо [Soledad Penadés](http://soledadpenades.com/) за код в [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), мы сначала следуем шаблону, описанному в предыдущей секции, для создания буфера:
+Чтобы визуализировать осциллограф (спасибо [Soledad Penadés](https://soledadpenades.com/) за код в [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), мы сначала следуем шаблону, описанному в предыдущей секции, для создания буфера:
 
 ```js
 analyser.fftSize = 2048;
@@ -210,4 +213,5 @@ draw();
 
 ![a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal](bar-graph.png)
 
-> **Примечание:** Примеры, используемые в данной статье, используют {{ domxref("AnalyserNode.getByteFrequencyData()") }} и {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. Примеры работы с {{ domxref("AnalyserNode.getFloatFrequencyData()") }} и {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} можно найти в демо [Voice-change-O-matic-float-data](http://mdn.github.io/voice-change-o-matic-float-data/) (Вы также можете посмотреть [исходный код](https://github.com/mdn/voice-change-o-matic-float-data)) — это то же самое, что и [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/), но здесь используются данные типа float, а не unsigned vyte.
+> [!NOTE]
+> Примеры, используемые в данной статье, используют {{ domxref("AnalyserNode.getByteFrequencyData()") }} и {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. Примеры работы с {{ domxref("AnalyserNode.getFloatFrequencyData()") }} и {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} можно найти в демо [Voice-change-O-matic-float-data](https://mdn.github.io/voice-change-o-matic-float-data/) (Вы также можете посмотреть [исходный код](https://github.com/mdn/voice-change-o-matic-float-data)) — это то же самое, что и [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/), но здесь используются данные типа float, а не unsigned vyte.

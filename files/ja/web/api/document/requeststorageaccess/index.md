@@ -12,7 +12,8 @@ l10n:
 
 サードパーティクッキーにアクセスする権限が既に与えられているかどうかを調べるには、{{domxref("Permissions.query()")}} を呼び出して、特性名 `"storage-access"`を指定してください。
 
-> **メモ:** この機能の使用は、サーバーに設定する {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によってブロックされる場合があります。さらに、文書は、許可リスト、ブロックリスト、端末上の分類、ユーザー設定、[クリックジャッキング](/ja/docs/Glossary/Clickjacking)防止の経験則、またはユーザーに明示的な許可を求めるプロンプトのような、ブラウザー固有の追加のチェックに合格する必要があります。
+> [!NOTE]
+> この機能の使用は、サーバーに設定する {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によってブロックされる場合があります。さらに、文書は、許可リスト、ブロックリスト、端末上の分類、ユーザー設定、[クリックジャッキング](/ja/docs/Glossary/Clickjacking)防止の経験則、またはユーザーに明示的な許可を求めるプロンプトのような、ブラウザー固有の追加のチェックに合格する必要があります。
 
 ## 構文
 
@@ -71,7 +72,7 @@ requestStorageAccess(types)
     - `types` 引数が与えられており、すべてのプロパティが `false` である場合。
 - `NotAllowedError` {{domxref("DOMException")}}
   - : 次のような場合に発生します。
-    - 文書のウィンドウが[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)ではない場合。
+    - 文書のウィンドウが[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)ではない場合。
     - {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によって、使用がブロックされた場合。
     - この文書または最上位の文書のオリジンが `null` である場合。
     - 埋め込まれた {{htmlelement("iframe")}} がサンドボックス化されており、`allow-storage-access-by-user-activation` トークンが設定されていない場合。
@@ -100,7 +101,8 @@ document.requestStorageAccess({ localStorage: true }).then(
 );
 ```
 
-> **メモ:** より完全な例については、[ストレージアクセス API の使用](/ja/docs/Web/API/Storage_Access_API/Using)を参照してください。
+> [!NOTE]
+> より完全な例については、[ストレージアクセス API の使用](/ja/docs/Web/API/Storage_Access_API/Using)を参照してください。
 
 ## 仕様書
 

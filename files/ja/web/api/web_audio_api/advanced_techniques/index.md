@@ -9,7 +9,8 @@ l10n:
 
 このチュートリアルでは、音の作成と変更、時間とスケジューリングについて述べます。サンプルの読み込み、エンベロープ、フィルター、ウェーブテーブル、周波数変調を紹介します。これらの用語に慣れていて、ウェブオーディオAPIによるアプリケーションの入門を探しているなら、あなたは正しい場所に来ました。
 
-> **メモ:** 下記デモのソースコードは GitHub の MDN [webaudio-examples](https://github.com/mdn/webaudio-examples) リポジトリーの [step-sequencer](https://github.com/mdn/webaudio-examples/tree/master/step-sequencer) サブディレクトリーにあります。[ライブデモ](https://mdn.github.io/webaudio-examples/step-sequencer/)を見ることもできます。
+> [!NOTE]
+> 下記デモのソースコードは GitHub の MDN [webaudio-examples](https://github.com/mdn/webaudio-examples) リポジトリーの [step-sequencer](https://github.com/mdn/webaudio-examples/tree/master/step-sequencer) サブディレクトリーにあります。[ライブデモ](https://mdn.github.io/webaudio-examples/step-sequencer/)を見ることもできます。
 
 ## デモ
 
@@ -67,7 +68,8 @@ l10n:
   </tbody>
 </table>
 
-> **メモ:** 私たちがこのインストゥルメントを作成したのは、音を良くするためではなく、デモコードを提供するためです。このデモは、そのようなインストの非常に単純化されたバージョンを表します。音はダイアルアップモデムに基づいています。このような機器がどのような音で鳴るのかご存じない方は、[こちらで試聴できます](https://soundcloud.com/john-pemberton/modem-dialup)。
+> [!NOTE]
+> 私たちがこのインストゥルメントを作成したのは、音を良くするためではなく、デモコードを提供するためです。このデモは、そのようなインストの非常に単純化されたバージョンを表します。音はダイアルアップモデムに基づいています。このような機器がどのような音で鳴るのかご存じない方は、[こちらで試聴できます](https://soundcloud.com/john-pemberton/modem-dialup)。
 
 ## 音声コンテキストの作成
 
@@ -94,7 +96,8 @@ const wave = new PeriodicWave(audioCtx, {
 });
 ```
 
-> **メモ:** この例では、波動テーブルは非常に多くの値があるため、別個の JavaScript ファイル (`wavetable.js`) で保持されています。 [Google Chrome Labs のウェブオーディオ API の例](https://github.com/GoogleChromeLabs/web-audio-samples/)で得られる[波形テーブルのリポジトリー](https://github.com/GoogleChromeLabs/web-audio-samples/tree/main/src/demos/wavetable-synth/wave-tables)から取りました。
+> [!NOTE]
+> この例では、波動テーブルは非常に多くの値があるため、別個の JavaScript ファイル (`wavetable.js`) で保持されています。 [Google Chrome Labs のウェブオーディオ API の例](https://github.com/GoogleChromeLabs/web-audio-samples/)で得られる[波形テーブルのリポジトリー](https://github.com/GoogleChromeLabs/web-audio-samples/tree/main/src/demos/wavetable-synth/wave-tables)から取りました。
 
 ### 発振器
 
@@ -242,7 +245,8 @@ osc.start(time);
 osc.stop(time + pulseTime);
 ```
 
-> **メモ:** また、作成するどちらの発振器にも既定値の波形テーブルを使用する必要はありません。前と同じように波形テーブルと周期波メソッドを使用できます。最小のノードで、多くの可能性があります。
+> [!NOTE]
+> また、作成するどちらの発振器にも既定値の波形テーブルを使用する必要はありません。前と同じように波形テーブルと周期波メソッドを使用できます。最小のノードで、多くの可能性があります。
 
 ### パルスのユーザーコントロール
 
@@ -344,7 +348,8 @@ for (let i = 0; i < bufferSize; i++) {
 }
 ```
 
-> **メモ:** なぜ -1～1 なのでしょうか？ファイルやスピーカーに音を出力する場合、 0dB が上限のスケール（メディアや DAC の固定的な数値の限界）を表す数値が必要です。浮動小数点の音声では、 1 は信号の数学的処理をするために「上限」に割り当てられる便利な数字です。そのため、発振器、ノイズジェネレーター、そして他の音源は、通常 -1 から 1 の範囲の双極信号を出力します。ブラウザーはこの範囲外の値をクランプします。
+> [!NOTE]
+> なぜ -1～1 なのでしょうか？ファイルやスピーカーに音を出力する場合、 0dB が上限のスケール（メディアや DAC の固定的な数値の限界）を表す数値が必要です。浮動小数点の音声では、 1 は信号の数学的処理をするために「上限」に割り当てられる便利な数字です。そのため、発振器、ノイズジェネレーター、そして他の音源は、通常 -1 から 1 の範囲の双極信号を出力します。ブラウザーはこの範囲外の値をクランプします。
 
 ### バッファーソースの作成
 
@@ -370,7 +375,8 @@ noise.start();
 
 ピンクまたはブラウンノイズの範囲にあるものが必要です。高い周波数と単発の低い周波数をカットしたいのです。バンドパスバイクワッドフィルターを選びましょう。
 
-> **メモ:** ウェブオーディオ API には、 {{domxref("BiquadFilterNode")}} と {{domxref("IIRFilterNode")}} の 2 つの種類のフィルタノードがあります。ほとんどの場合、バイクワッドフィルタで十分です - ローパス、ハイパス、バンドパスなどの様々な種類があります。しかし、もっと特注のものを探しているのであれば、 IIR フィルターが良い選択肢かもしれません。詳しくは [IIR フィルターの使用](/ja/docs/Web/API/Web_Audio_API/Using_IIR_filters)を参照してください。
+> [!NOTE]
+> ウェブオーディオ API には、 {{domxref("BiquadFilterNode")}} と {{domxref("IIRFilterNode")}} の 2 つの種類のフィルタノードがあります。ほとんどの場合、バイクワッドフィルタで十分です - ローパス、ハイパス、バンドパスなどの様々な種類があります。しかし、もっと特注のものを探しているのであれば、 IIR フィルターが良い選択肢かもしれません。詳しくは [IIR フィルターの使用](/ja/docs/Web/API/Web_Audio_API/Using_IIR_filters)を参照してください。
 
 この配線は、前に見たのと同じです。 {{domxref("BiquadFilterNode")}} を作成し、必要なプロパティを設定し、グラフを通して接続します。例えば、バンドパス型で周波数を設定するには、中間周波数を調整します。しかし、ローパスでは、一番上の周波数を設定します。
 
@@ -499,7 +505,8 @@ async function setupSample() {
 }
 ```
 
-> **メモ:** 上記の関数を簡単に変更し、ファイルの配列を引き継いでループさせ、複数のサンプルを読み込むことができます。このテクニックは、より複雑なインストゥルメントやゲームに便利でしょう。
+> [!NOTE]
+> 上記の関数を簡単に変更し、ファイルの配列を引き継いでループさせ、複数のサンプルを読み込むことができます。このテクニックは、より複雑なインストゥルメントやゲームに便利でしょう。
 
 We can now use `setupSample()` like so:
 
@@ -574,7 +581,8 @@ function playSample(audioContext, audioBuffer, time) {
 }
 ```
 
-> **メモ:** この音声ファイルは [soundbible.com から引用](https://soundbible.com/1573-DTMF-Tones.html)しました。
+> [!NOTE]
+> この音声ファイルは [soundbible.com から引用](https://soundbible.com/1573-DTMF-Tones.html)しました。
 
 ## 時刻に合わせた音声の再生
 
@@ -582,7 +590,8 @@ function playSample(audioContext, audioBuffer, time) {
 
 `for` ループの中で再生するように音色をスケジュールすることもできますが、この場合の最大の問題は再生中に更新することで、そのための UI コントロールはすでに実装しています。また、楽器全体の BPM コントロールを検討するのも実にいいでしょう。音符がいつ演奏されるかを先に見て、それをキューに入れるのです。 `currentTime` プロパティで正確な時刻に始めることができ、変更も考えることができます。
 
-> **メモ:** この記事は、 [Chris Wilson's A Tale Of Two Clocks (2013)](https://web.dev/audio-scheduling/) の記事を大幅に縮小したもので、このメソッドについてもっと詳しく書かれています。ここですべてを繰り返す意味はありませんが、この記事を読んでこのメソッドを使用することを強くお勧めします。ここでのコードの多くは彼の[メトロノームの例](https://github.com/cwilso/metronome/blob/master/js/metronome.js)から引用しています。彼はこの記事の中で参照しています。
+> [!NOTE]
+> この記事は、 [Chris Wilson's A Tale Of Two Clocks (2013)](https://web.dev/audio-scheduling/) の記事を大幅に縮小したもので、このメソッドについてもっと詳しく書かれています。ここですべてを繰り返す意味はありませんが、この記事を読んでこのメソッドを使用することを強くお勧めします。ここでのコードの多くは彼の[メトロノームの例](https://github.com/cwilso/metronome/blob/master/js/metronome.js)から引用しています。彼はこの記事の中で参照しています。
 
 既定の BPM (beats per minute) を設定することから始めましょう。この BPM はユーザーも制御することができます。
 

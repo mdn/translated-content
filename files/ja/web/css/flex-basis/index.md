@@ -2,24 +2,22 @@
 title: flex-basis
 slug: Web/CSS/flex-basis
 l10n:
-  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
+  sourceCommit: c63daf697d8f22ba17d4633f018ad7dfa65e4770
 ---
 
 {{CSSRef}}
 
-**`flex-basis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムの主要部分の初期の寸法を設定します。 {{Cssxref("box-sizing")}} で設定していない限り、このプロパティはコンテンツボックスの寸法を定義します。
+**`flex-basis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{glossary("flex item","フレックスアイテム")}}の主要部分の初期の寸法を設定します。 {{Cssxref("box-sizing")}} で設定していない限り、このプロパティはコンテンツボックスの寸法を定義します。
+
+> **メモ:** {{cssxref("flex")}} 一括指定を使用する方が、個別に `flex-grow`、`flex-shrink`、`flex-basis` の宣言を使用するよりも推奨されます。この文書では、一括指定成分の一つである `flex-basis` プロパティについて説明していますので、ここではこれらを別個のものとしています。
 
 {{EmbedInteractiveExample("pages/css/flex-basis.html")}}
 
 この例では、3 つすべてのアイテムの {{cssxref("flex-grow")}} と {{cssxref("flex-shrink")}} プロパティがともに `1` に設定されており、フレックスアイテムが初期の `flex-basis` から伸長したり縮小したりできることを示しています。
 
-このデモでは、最初のアイテムの `flex-basis` を変更します。そして、その `flex-basis` を基準にして伸長したり縮小したりします。つまり、例えば最初のアイテムの `flex-basis` が `200px` の場合、最初は 200px で表示されますが、他のアイテムが最低でも `min-content` の大きさであることを考慮して、利用可能な空間に合わせて縮小されます。
+このデモでは最初のフレックスアイテムに設定する `flex-basis` 値を変更し、利用できる空間いっぱいに伸長させたり縮小させたりします。他のフレックスアイテムもサイズが変更され、少なくとも `min-content` のサイズになります。例えば、最初のアイテムの `flex-basis` を `200px` に設定すると、始めは `200px` ですが、利用できる空間に合うように縮小されます。
 
-下記の図は、 Firefox の [Flexbox インスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html)がアイテムがどのような寸法になるのかを理解するのに役立つことを示しています。
-
-![Firefox の Flexbox インスペクターでは、アイテムが縮小された後のサイズが表示されます。](firefox-flex-basis.png)
-
-> **メモ:** (`auto` 以外の) `flex-basis` と `width` (または `flex-direction: column` の場合は `height`) の両方が要素に設定されていた場合、 `flex-basis` が優先されます。
+もし `flex-basis` が `auto` 以外の値に設定されていて、同じフレックスアイテムに `width` （`flex-direction: column` の場合は `height`）が設定されている場合は、`flex-basis` の値が優先されます。
 
 ## 構文
 
@@ -54,21 +52,15 @@ flex-basis: unset;
 
   - : 以下の単位のいずれかです。
     - {{cssxref("&lt;length&gt;")}} は絶対的な値を設定します。
-    - {{cssxref("&lt;percentage&gt;")}} は包含ブロックのコンテンツ領域の幅または高さに対する割合を設定します。
-    - `auto` は横書きモードでは [width](https://drafts.csswg.org/css2/#the-width-property) の値、縦書きモードでは [height](https://drafts.csswg.org/css2/#the-height-property) の値を使用します。対応する値も `auto` であった場合、代わりに `content` の値が使用されます。
-    - `max-content` は幅の内在的な推奨値を設定します。
-    - `min-content` は幅の内在的な最小値を設定します。
-    - `fit-content` は、現在の要素のコンテンツに基づいて計算された、 `min-content` と `max-content` の値で囲まれた、包含ブロックのコンテンツ領域の使用可能な最大サイズを設定します。
+    - {{cssxref("&lt;percentage&gt;")}} は包含ブロックのコンテンツ領域の幅または高さに対する割合を設定します。 `flex-basis` のパーセント値はフレックスコンテナーに対して解決されます。フレックスコンテナーのサイズが不定の場合、 `flex-basis` の使用する値は `content` となります。
+    - `auto` は横書きモードでは {{cssxref("width")}} の値、縦書きモードでは {{cssxref("height")}} の値を使用します。対応する値も `auto` であった場合、代わりに `content` の値が使用されます。
+    - {{cssxref("max-content")}} は幅の内在的な推奨値を設定します。
+    - {{cssxref("min-content")}} は幅の内在的な最小値を設定します。
+    - {{cssxref("fit-content")}} は、現在の要素のコンテンツに基づいて計算された、 `min-content` と `max-content` の値で囲まれた、包含ブロックのコンテンツ領域の使用可能な最大サイズを設定します。
 
 - `content`
 
   - : フレックスアイテムの内容物に基づいて、自動的に大きさを決めます。
-
-    > **メモ:** この値はフレックスボックスレイアウトの初期リリースでは定義されていませんでしたので、古い実装では対応していない場合があります。主軸方向の寸法 ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) または [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) を `auto` にするのと合わせて `auto` を使用することで、同等の効果を得られます。
-    >
-    > - もともと、`flex-basis:auto` は「自身の `width` または `height` プロパティを参照する」という意味でした。
-    > - その後 `flex-basis:auto` の意味が自動拡大縮小設定に変わり、また「自身の `width` または `height` プロパティを参照する」キーワードとして "main-size" を導入しました。これは [Firefox バグ 1032922](https://bugzil.la/1032922) で実装しました。
-    > - さらに、この変更が [Firefox バグ 1093316](https://bugzil.la/1093316) で戻されて `auto` が再び「自身の `width` または `height` プロパティを参照する」になり、自動拡大縮小設定を行うための `content` キーワードを新たに導入しました (content キーワードの追加は [Firefox バグ 1105111](https://bugzil.la/1105111) で扱っています)。
 
 ## 公式定義
 
@@ -82,11 +74,9 @@ flex-basis: unset;
 
 ### フレックスアイテムの初期の寸法の設定
 
-`flex-basis` の様々な値を設定した例です。
-
 #### HTML
 
-```html
+```html live-sample___setting_flex_item_initial_sizes
 <ul class="container">
   <li class="flex flex1">1: flex-basis test</li>
   <li class="flex flex2">2: flex-basis test</li>
@@ -102,7 +92,7 @@ flex-basis: unset;
 
 #### CSS
 
-```css
+```css live-sample___setting_flex_item_initial_sizes
 .container {
   font-family: arial, sans-serif;
   margin: 0;
@@ -179,6 +169,71 @@ flex-basis: unset;
 
 {{EmbedLiveSample('Setting_flex_item_initial_sizes', '', '360')}}
 
+### flex-basis の `0` と `0%` の違い
+
+この例は `flex-basis` が `0` の場合と `flex-basis` が `0%` の場合との違いを示します。 `flex-direction` が `column` に設定されており、フレックスコンテナーとフレックスアイテムに高さが設定されていない場合です。 `0` は絶対的な長さですが、パーセント値の flex-basis の値は [`content`](#content) の値に解決します。
+
+#### HTML
+
+同じ構造のフレックスコンテナーを 2 つ設置しています。これらのコンテナーは、 `flex-basis` の値以外は同じようにスタイル設定されています。コンテナーはそれぞれ見出しの `<div>` と `<section>` の 2 つの子要素を持っています。 `<section>` 要素はコンテンツとして `<div>` を持っていますが、これはフレックスアイテムとしては設定されませんが、高さは指定されます。
+
+```html-nolint live-sample___flex_basis_0_vs_0
+<div class="container basis-0">
+  <div>見出し</div>
+  <section>
+    flex-basis: 0;
+    <div class="content"></div>
+  </section>
+</div>
+<div class="container basis-0-percent">
+  <div>見出し</div>
+  <section>
+    flex-basis: 0%;
+    <div class="content"></div>
+  </section>
+</div>
+```
+
+#### CSS
+
+コンテナーを横に並んでいるインラインフレックスコンテナーとしてスタイル設定し、比較しやすくします。 `flex-direction` を `column` に設定します。最初のコンテナーのフレックスアイテムの `flex-basis` 値は `0`、 2 つ目のコンテナーのフレックスアイテムの `flex-basis` 値は `0%` です。どちらのフレックスコンテナーもそのフレックスアイテムも高さは明示的に設定されていませんが、 `section` 要素の高さは `200px` を超えることができず、子要素の高さは `300px` になります。
+
+```css live-sample___flex_basis_0_vs_0
+.container {
+  width: 40vw;
+  padding: 1rem;
+  border: 1px dashed blue;
+
+  display: inline-flex;
+  flex-direction: column;
+}
+
+section {
+  border: 1px solid red;
+
+  overflow: auto;
+  min-height: 200px;
+}
+
+.content {
+  background: wheat;
+  height: 300px;
+}
+
+.container.basis-0 > * {
+  flex-basis: 0;
+}
+.container.basis-0-percent > * {
+  flex-basis: 0%;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('flex_basis_0_vs_0', '100%', '400')}}
+
+最初のコンテナーの中には `flex-basis: 0` が設定されており、 `<section>` 要素の初期主要サイズはゼロで、高さ制限の `200px` まで伸長します。 2 つ目のコンテナーの中では、 `flex-basis: 0%`では、 `<section>` 要素は `300px` の初期主要サイズになります。なぜなら、フレックスコンテナーは高さを設定していないので、パーセント値の flex-basis の値が [`content`](#content) 値に解決されるからです。
+
 ## 仕様書
 
 {{Specifications}}
@@ -189,6 +244,8 @@ flex-basis: unset;
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS フレックスボックスガイド: _[主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
-- {{cssxref("width")}}
+- {{cssxref("flex")}} 一括指定
+- {{cssxref("inline-size")}}
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール

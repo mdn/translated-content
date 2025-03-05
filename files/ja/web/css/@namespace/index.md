@@ -8,7 +8,35 @@ slug: Web/CSS/@namespace
 **`@namespace`** は[アットルール](/ja/docs/Web/CSS/At-rule)で、
 [CSS](/ja/docs/Glossary/CSS) [スタイルシート](/ja/docs/Web/API/StyleSheet) で使用する [XML 名前空間](/ja/docs/Namespaces)を定義します。
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-namespace.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: @namespace", "tabbed-shorter")}}
+
+```css interactive-example
+@namespace svg url("http://www.w3.org/2000/svg");
+
+a {
+  color: orangered;
+  text-decoration: underline dashed;
+  font-weight: bold;
+}
+
+svg|a {
+  fill: blueviolet;
+  text-decoration: underline solid;
+  text-transform: uppercase;
+}
+```
+
+```html interactive-example
+<p>
+  <a href="#">This is an ordinary HTML link</a>
+</p>
+
+<svg width="250px" viewBox="0 0 250 20" xmlns="http://www.w3.org/2000/svg">
+  <a href="#">
+    <text x="0" y="15">This is a link created in SVG</text>
+  </a>
+</svg>
+```
 
 ## 構文
 
@@ -34,7 +62,8 @@ slug: Web/CSS/@namespace
 
 [HTML5](/ja/docs/Glossary/HTML5) では、既知の[外来要素](https://html.spec.whatwg.org/#foreign-elements)へ自動的に名前空間が割り当てられます。すなわち、 HTML 要素は文書内に `xmlns` 属性が存在しなくても XHTML 名前空間 (`http://www.w3.org/1999/xhtml`) に含まれているかのように動作します。また [\<svg>](/ja/docs/Web/SVG/Element/svg) および [\<math>](/ja/docs/Web/MathML/Element/math) 要素は、適切な名前空間（`http://www.w3.org/2000/svg` および `http://www.w3.org/1998/Math/MathML`）が割り当てられます。
 
-> **メモ:** XML では、属性に直接接頭辞を定義しない限り（_例_: `xlink:href`）、属性は名前空間を持ちません。言い換えると、属性は所属する要素から名前空間を継承しません。この動作に合わせるため、 CSS の既定の名前空間は属性セレクターに適用しません。
+> [!NOTE]
+> XML では、属性に直接接頭辞を定義しない限り（_例_: `xlink:href`）、属性は名前空間を持ちません。言い換えると、属性は所属する要素から名前空間を継承しません。この動作に合わせるため、 CSS の既定の名前空間は属性セレクターに適用しません。
 
 ## 形式文法
 

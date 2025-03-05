@@ -7,7 +7,73 @@ slug: Web/HTML/Element/th
 
 L'élément HTML **`<th>`** définit une cellule d'un tableau comme une cellule d'en-tête pour un groupe de cellules. La nature de ce groupe est définie grâce aux attributs [`scope`](#scope) et [`headers`](#headers).
 
-{{EmbedInteractiveExample("pages/tabbed/th.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;th&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Alien football stars
+  </caption>
+  <tr>
+    <th scope="col">Player</th>
+    <th scope="col">Gloobles</th>
+    <th scope="col">Za'taak</th>
+  </tr>
+  <tr>
+    <th scope="row">TR-7</th>
+    <td>7</td>
+    <td>4,569</td>
+  </tr>
+  <tr>
+    <th scope="row">Khiresh Odo</th>
+    <td>7</td>
+    <td>7,223</td>
+  </tr>
+  <tr>
+    <th scope="row">Mia Oolong</th>
+    <td>9</td>
+    <td>6,219</td>
+  </tr>
+</table>
+```
+
+```css interactive-example
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+th[scope="col"] {
+  background-color: #505050;
+  color: #fff;
+}
+
+th[scope="row"] {
+  background-color: #d6ecd4;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-of-type(even) {
+  background-color: #eee;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -104,7 +170,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 
     Si cet attribut n'est pas renseigné, la valeur `left` est prise par défaut.
 
-    > **Note :** Cet attribut est devenu obsolète dans le dernier standard et ne doit donc plus être utilisé.
+    > [!NOTE]
+    > Cet attribut est devenu obsolète dans le dernier standard et ne doit donc plus être utilisé.
     >
     > - Pour réaliser les mêmes effets que les valeurs `left`, `center`, `right` ou `justify`, il faut utiliser la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align) sur l'élément
     > - Pour réaliser le même effet qu'avec la valeur `char`. Il est possible d'utiliser la valeur de l'attribut `char` comme valeur de la propriété [`text-align`](/fr/docs/Web/CSS/text-align).
@@ -113,7 +180,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 
   - : Cet attribut contient une liste de chaînes de caractères (séparées par des espaces). Chaque chaîne de caractère est l'identifiant d'un groupe de cellule auquel cet en-tête s'applique.
 
-    > **Note :** Cet attribut est obsolète dans le dernier standard et ne doit donc plus être utilisé. L'attribut `scope` doit être utilisé pour le remplacer.
+    > [!NOTE]
+    > Cet attribut est obsolète dans le dernier standard et ne doit donc plus être utilisé. L'attribut `scope` doit être utilisé pour le remplacer.
 
 - `bgcolor` {{Non-standard_inline}}
 
@@ -125,19 +193,22 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 
   - : Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut `align` ne vaut pas `char`, l'attribut est ignoré.
 
-    > **Note :** Cet attribut est obsolète et il est donc fortement déconseillé de l'utiliser. De fait, il n'est pas supporté par le dernier standard. Pour réaliser le même effet qu'avec `char`, on peut utiliser la même valeur sur la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align).
+    > [!NOTE]
+    > Cet attribut est obsolète et il est donc fortement déconseillé de l'utiliser. De fait, il n'est pas supporté par le dernier standard. Pour réaliser le même effet qu'avec `char`, on peut utiliser la même valeur sur la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align).
 
 - `charoff` {{deprecated_inline}}
 
   - : Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère défini par l'attribut `char` à appliquer au contenu des cellules.
 
-    > **Note :** Cet attribut ne doit plus être utilisé, car il est maintenant obsolète.
+    > [!NOTE]
+    > Cet attribut ne doit plus être utilisé, car il est maintenant obsolète.
 
 - `height` {{deprecated_inline}}
 
   - : Cet attribut est utilisé afin de définir une hauteur recommandée pour la cellule.
 
-    > **Note :** Cet attribut est désormais obsolète. On utilisera plutôt la propriété CSS [`height`](/fr/docs/Web/CSS/height) à la place.
+    > [!NOTE]
+    > Cet attribut est désormais obsolète. On utilisera plutôt la propriété CSS [`height`](/fr/docs/Web/CSS/height) à la place.
 
 - `valign` {{Deprecated_inline}}
 
@@ -152,13 +223,15 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
     - `top`
       - : Place le texte au plus haut de la cellule.
 
-    > **Note :** Cet attribut est obsolète dans le dernier standard, la propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align) doit être utilisée à la place.
+    > [!NOTE]
+    > Cet attribut est obsolète dans le dernier standard, la propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align) doit être utilisée à la place.
 
 - `width` {{deprecated_inline}}
 
   - : Cet attribut est utilisé afin de définir une largeur de cellule recommandée. Un espace supplémentaire peut être ajouté via les propriétés [`cellspacing`](/fr/docs/Web/API/HTMLTableElement/cellSpacing) et [`cellpadding`](/fr/docs/Web/API/HTMLTableElement/cellPadding) et en modifiant la largeur de l'élément [`<col>`](/fr/docs/Web/HTML/Element/col). Si la largeur de la colonne est trop étroite pour afficher une cellule donnée correctement, elle sera élargie lors de l'affichage.
 
-    > **Note :** Cet attribut est désormais obsolète et il faut donc éviter de l'utiliser. On utilisera plutôt la propriété CSS [`width`](/fr/docs/Web/CSS/width) à la place.
+    > [!NOTE]
+    > Cet attribut est désormais obsolète et il faut donc éviter de l'utiliser. On utilisera plutôt la propriété CSS [`width`](/fr/docs/Web/CSS/width) à la place.
 
 ## Exemples
 

@@ -15,7 +15,7 @@ slug: Web/API/Canvas_API/Tutorial/Finale
   - : 前端开发人员操练场和浏览器内的代码编辑器。
 - [Canvasdemos.com](http://www.canvasdemos.com/)(域名已失效)
   - : 关于 HTML5 canvas 元素的应用程序，游戏，工具和教程。
-- [HTML5CanvasTutorials](http://www.html5canvastutorials.com/)
+- [HTML5CanvasTutorials](https://www.html5canvastutorials.com/)
   - : 包括大多数 canvas API 的示例。
 - [31 days of Canvas tutorials](http://creativejs.com/2011/08/31-days-of-canvas-tutorials/)
   - : JavaScript 可视化编程入门的不错选择。
@@ -26,7 +26,7 @@ slug: Web/API/Canvas_API/Tutorial/Finale
 
 当和 canvas 和图形进一步打交道时，这些 API 可能会排上用场。
 
-- [WebGL](/zh-CN/docs/Web/WebGL)
+- [WebGL](/zh-CN/docs/Web/API/WebGL_API)
   - : 用于渲染交互式 3D 图形的 API.
 - [SVG](/zh-CN/docs/Web/SVG)
   - : 可缩放矢量图形（简称 SVG）允许你使用矢量线，矢量图形，确保无论图片大小都可以比例平滑地显示。
@@ -35,7 +35,7 @@ slug: Web/API/Canvas_API/Tutorial/Finale
 
 ## 解惑
 
-- [Stackoverflow](http://stackoverflow.com/questions/tagged/canvas)
+- [Stackoverflow](https://stackoverflow.com/questions/tagged/canvas)
   - : 到"canvas"标签来提问
 - [Comments about this tutorial – the MDN documentation community](/zh-CN/docs/MDN)
   - : 如果你对本教程有任何意见，或是想感谢我们，在此畅所欲言吧！

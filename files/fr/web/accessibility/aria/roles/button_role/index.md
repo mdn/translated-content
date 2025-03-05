@@ -11,13 +11,14 @@ Le rôle **[button](https://www.w3.org/WAI/PF/aria/roles#button)** devrait être
 </div>
 ```
 
-L'exemple précédent crée un bouton simple qui sera le premier à obtenir le focus. Toutefois, on devrait plutôt utiliser les éléments [`<button>`](/fr/docs/Web/HTML/Element/Button) ou [`<input>`](/fr/docs/Web/HTML/Element/Input) avec `type="button"` pour représenter des boutons :
+L'exemple précédent crée un bouton simple qui sera le premier à obtenir le focus. Toutefois, on devrait plutôt utiliser les éléments [`<button>`](/fr/docs/Web/HTML/Element/button) ou [`<input>`](/fr/docs/Web/HTML/Element/input) avec `type="button"` pour représenter des boutons :
 
 ```html
 <button id="saveChanges">Enregistrer</button>
 ```
 
-> **Note :** Si on utilise `role="button"` plutôt que les éléments sémantiques `<button>` ou `<input type="button">`, il faudra : permettre à l'élément de recevoir le focus, définir des gestionnaires d'évènements pour [`click`](/fr/docs/Web/API/Element/click_event) et [`keydown`](/fr/docs/Web/API/Document/keydown_event), y compris la gestion des touches <kbd>Entrée</kbd> et <kbd>Espace</kbd>, afin de traiter la saisie de l'utilisateur. Voir [l'exemple de code officiel de WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html).
+> [!NOTE]
+> Si on utilise `role="button"` plutôt que les éléments sémantiques `<button>` ou `<input type="button">`, il faudra : permettre à l'élément de recevoir le focus, définir des gestionnaires d'évènements pour [`click`](/fr/docs/Web/API/Element/click_event) et [`keydown`](/fr/docs/Web/API/Element/keydown_event), y compris la gestion des touches <kbd>Entrée</kbd> et <kbd>Espace</kbd>, afin de traiter la saisie de l'utilisateur. Voir [l'exemple de code officiel de WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html).
 
 ## Description
 
@@ -76,7 +77,7 @@ Les boutons peuvent être manipulés avec une souris, le toucher et le clavier. 
 
     <kbd>Entrée</kbd>
 
-    du clavier (attention, il ne s'agit pas de l'évènement déprécié [`onKeyPress`](/fr/docs/Web/API/Document/keypress_event)).
+    du clavier (attention, il ne s'agit pas de l'évènement déprécié [`onKeyPress`](/fr/docs/Web/API/Element/keypress_event)).
 
 #### Modifier les valeurs des attributs
 
@@ -258,7 +259,8 @@ function toggleButton(element) {
 
 Les boutons sont des contrôles interactifs et, à ce titre, peuvent recevoir le focus. Si le rôle `button` est ajouté à un élément qui ne peut recevoir le focus nativement (comme `<span>`, `<div>` ou `<p>`), l'attribut `tabindex` devra être utilisé afin de permettre le focus sur le bouton.
 
-> **Attention :** Lorsqu'on utilise des liens avec le rôle `button`, il faut rajouter un gestionnaire d'évènement pour la touche <kbd>Espace</kbd>. En effet, les boutons s'activent avec <kbd>Espace</kbd> ou <kbd>Entrée</kbd> tandis que, nativement, les liens ne se déclenchent qu'avec <kbd>Entrée</kbd>.
+> [!WARNING]
+> Lorsqu'on utilise des liens avec le rôle `button`, il faut rajouter un gestionnaire d'évènement pour la touche <kbd>Espace</kbd>. En effet, les boutons s'activent avec <kbd>Espace</kbd> ou <kbd>Entrée</kbd> tandis que, nativement, les liens ne se déclenchent qu'avec <kbd>Entrée</kbd>.
 
 Lorsqu'on utilise le rôle `button`, les lecteurs d'écran annonce l'élément comme un bouton, généralement en énonçant « clic » suivi du nom accessible du bouton. Le nom accessible correspond au contenu de l'élément ou à la valeur de `aria-label` ou à l'élément référencé avec l'attribut `aria-labelledby`, ou à une description si elle existe.
 

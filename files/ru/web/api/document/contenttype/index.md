@@ -21,4 +21,4 @@ contentType = document.contentType;
 
 ## Спецификации
 
-Не является стандартом, поддерживается только [Gecko](/ru/docs/Gecko/Embedding_Mozilla/FAQ/Embedding_Gecko). Для использования только в отладчике chrome ([Extensions](/en/Extensions) и XUL Mozilla Firefox).
+Не является стандартом, поддерживается только [Gecko](/ru/docs/Gecko/Embedding_Mozilla/FAQ/Embedding_Gecko). Для использования только в отладчике chrome ([Extensions](/en-US/Extensions) и XUL Mozilla Firefox).

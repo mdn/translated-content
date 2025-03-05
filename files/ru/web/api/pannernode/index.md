@@ -104,5 +104,5 @@ slug: Web/API/PannerNode
 
 ## Смотрите также
 
-- [Using the Web Audio API](/ru/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Основы панорамирования. Расположение звуков в виртуальном пространстве.](http://musiconnect.ru/publ/mixmaster/osnovy-panoramirovaniya-raspolozhenie-zvukov-v-virtualnom-prostranstve-ch-1/)

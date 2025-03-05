@@ -9,7 +9,7 @@ slug: Web/CSS/animation
 
 {{EmbedInteractiveExample("pages/css/animation.html")}}
 
-[Описание того, какие свойства являются анимируемые](/ru/docs/Web/Guide/CSS/Using_CSS_transitions#Which_CSS_properties_are_animatable) доступно; стоит отметить, что это описание также подходит для [CSS переходов](/ru/docs/Web/Guide/CSS/Using_CSS_transitions).
+[Описание того, какие свойства являются анимируемые](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#which_css_properties_are_animatable) доступно; стоит отметить, что это описание также подходит для [CSS переходов](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
 
 {{cssinfo}}
 
@@ -37,7 +37,7 @@ Note that order is also important within each animation definition for distingui
 
 ## Примеры
 
-Посмотрите примеры [CSS-анимаций.](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+Посмотрите примеры [CSS-анимаций.](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 
 ### Cylon Eye
 
@@ -146,5 +146,5 @@ Note that order is also important within each animation definition for distingui
 
 ## Смотрите также
 
-- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API

@@ -15,7 +15,7 @@ slug: Web/CSS/CSSOM_view
 
 ## ガイド
 
-- [座標系](/ja/docs/Web/CSS/CSSOM_View/Coordinate_systems)
+- [座標系](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems)
   - : モニター上のウィンドウ、モバイル機器のビューポート、印刷時の紙上の位置などのディスプレイコンテキストにおける位置を特定するために使われる座標系についてのガイドです。
 
 ## 仕様書

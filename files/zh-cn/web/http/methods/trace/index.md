@@ -17,7 +17,7 @@ slug: Web/HTTP/Methods/TRACE
     </tr>
     <tr>
       <th scope="row">成功的响应是否有主体</th>
-      <td>否</td>
+      <td>是</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Safe/HTTP", "安全")}}</th>
@@ -33,7 +33,7 @@ slug: Web/HTTP/Methods/TRACE
     </tr>
     <tr>
       <th scope="row">
-        允许在 <a href="/zh-CN/docs/Learn/Forms">HTML 表单</a>中使用
+        允许在 <a href="/zh-CN/docs/Learn_web_development/Extensions/Forms">HTML 表单</a>中使用
       </th>
       <td>不允许</td>
     </tr>

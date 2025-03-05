@@ -17,7 +17,8 @@ l10n:
 
 컨트롤과 연결된 요소의 ID 문자열을 포함하는 문자열입니다.
 
-> **참고:** 이 속성에 값이 있다면, {{domxref("HTMLLabelElement.control")}} 속성 또한
+> [!NOTE]
+> 이 속성에 값이 있다면, {{domxref("HTMLLabelElement.control")}} 속성 또한
 > 동일한 컨트롤을 참조해야 합니다.
 
 ## 명세서

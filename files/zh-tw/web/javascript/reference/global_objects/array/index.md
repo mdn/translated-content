@@ -26,7 +26,7 @@ new Array(arrayLength)
 
 Array（「陣列」）是類似列表（list）的物件（Object），它們的原型（Prototype）擁有方法（methods）來執行遍歷和變異操作。JavaScript 陣列的長度（元素數量），以及其元素的類型都不是固定的。取決於工程師如何選擇使用陣列，可以隨時更改陣列的長度，也可不連續儲存資料， 所以並不保證這些資料是集中的。一般情況下，這些特性很方便使用；但若這些功能都不符合你的用途，你可能會想使用型別陣列（typed arrays）。
 
-有些人認為即便會發生警告，仍然[不應該使用關聯陣列](http://www.andrewdupont.net/2006/05/18/javascript-associative-arrays-considered-harmful/)，而應該使用 {{jsxref("Global_Objects/Object", "objects")}}。你可參考[輕量級 JavaScript 字典](http://www.less-broken.com/blog/2010/12/lightweight-javascript-dictionaries.html)當中的範例。
+有些人認為即便會發生警告，仍然[不應該使用關聯陣列](https://andrewdupont.net/2006/05/18/javascript-associative-arrays-considered-harmful/)，而應該使用 {{jsxref("Global_Objects/Object", "objects")}}。你可參考[輕量級 JavaScript 字典](http://www.less-broken.com/blog/2010/12/lightweight-javascript-dictionaries.html)當中的範例。
 
 ### 存取陣列元素
 
@@ -141,7 +141,7 @@ var myArray = myRe.exec("cdbBdbsbz");
 
 - Array.length
   - : `Array` 建構子的長度為 1。
-- {{jsxref("Array.@@species", "get Array[@@species]")}}
+- [`Array[Symbol.species]`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
   - : 用來建立衍生物件的建構函數。
 - {{jsxref("Array.prototype")}}
   - : 可加入屬性至所有陣列物件。
@@ -163,7 +163,7 @@ var myArray = myRe.exec("cdbBdbsbz");
 
 - {{jsxref("Array.prototype.length")}}
   - : Reflects the number of elements in an array.
-- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+- [`Array.prototype[Symbol.unscopables]`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables)
   - : Contains property names that were not included in the ECMAScript standard prior to the ES2015 version and that are ignored for [`with`](/zh-TW/docs/Web/JavaScript/Reference/Statements/with) statement-binding purposes.
 
 ### 方法
@@ -240,7 +240,7 @@ var myArray = myRe.exec("cdbBdbsbz");
   - : Adds one or more elements to the front of an array, and returns the new `length` of the array.
 - {{jsxref("Array.prototype.values()")}}
   - : Returns a new [_array iterator_](/zh-TW/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that contains the values for each index in the array.
-- [`Array.prototype[@@iterator]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[Symbol.iterator]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
   - : An alias for the [`values()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/values) method by default.
 
 ## 範例
@@ -437,7 +437,7 @@ console.table(values);
 ## 參見
 
 - [JavaScript Guide: 「Indexing object properties」](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Indexing_object_properties)
-- [JavaScript Guide: 「Predefined Core Objects: `Array` Object」](/zh-TW/docs/Web/JavaScript/Guide/Predefined_Core_Objects#Array_Object)
-- [Array comprehensions](/zh-TW/docs/Web/JavaScript/Reference/Operators/Array_comprehensions)
+- [JavaScript Guide: 「Predefined Core Objects: `Array` Object」](/zh-TW/docs/Web/JavaScript/Guide#array_object)
+- [Array comprehensions](/zh-TW/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
 - [Polyfill for JavaScript 1.8.5 Array Generics and ECMAScript 5 Array Extras](https://github.com/plusdude/array-generics)
-- [Typed Arrays](/zh-TW/docs/JavaScript_typed_arrays)
+- [Typed Arrays](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)

@@ -35,7 +35,7 @@ l10n:
 - [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループ内で {{jsxref("Statements/const", "const")}} を使用すると {{jsxref("SyntaxError")}} が発生せず、イテレーションのたびに新たなバインディングを行うようになりました ([Firefox バグ 1101653](https://bugzil.la/1101653))。
 - 非推奨の [for each...in](/ja/docs/Web/JavaScript/Reference/Statements/for_each...in) ループは、[コンソールで警告が発生する](/ja/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated) ようになりました ([Firefox バグ 1293205](https://bugzil.la/1293205))。標準化された [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループを使用するように、コードを移行してください。
 - [ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*) は [label](/ja/docs/Web/JavaScript/Reference/Statements/label) を持つことができなくなりました。また、ラベル名として "`let`" が許可されなくなりました ([Firefox バグ 1288459](https://bugzil.la/1288459))。
-- 非推奨の [古いジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function) を [メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions) 内で使用すると、エラーが発生するようになりました ([Firefox バグ 1199296](https://bugzil.la/1199296))。
+- 非推奨の [古いジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) を [メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions) 内で使用すると、エラーが発生するようになりました ([Firefox バグ 1199296](https://bugzil.la/1199296))。
 - [イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル) の `next()` メソッドは、返値がオブジェクトではない場合に {{jsxref("TypeError")}} が発生するようになりました ([Firefox バグ 1016936](https://bugzil.la/1016936))。
 
 ### 開発者ツール
@@ -154,7 +154,7 @@ l10n:
 - [レガシーアドオンに WebExtension を埋め込む](/ja/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions) ことが可能になりました ([Firefox バグ 1252215](https://bugzil.la/1252215))。
 - [クリップボードへのアクセス](/ja/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard) をサポートしました ([Firefox バグ 1197451](https://bugzil.la/1197451))。
 - {{WebExtAPIRef("tabs.executeScript()")}} のコールバックに渡す引数を修正しました ([Firefox バグ 1290157](https://bugzil.la/1290157))。
-- WebExtension をアンインストールするとき、[localStorage](/ja/docs/Web/API/Storage/LocalStorage) を消去するようになりました ([Firefox バグ 1213990](https://bugzil.la/1213990))。
+- WebExtension をアンインストールするとき、[localStorage](/ja/docs/Web/API/Window/localStorage) を消去するようになりました ([Firefox バグ 1213990](https://bugzil.la/1213990))。
 - Web Extensions で変更された {{HTTPHeader("Content-Type")}} ヘッダーを考慮するようになりました ([Firefox バグ 1304331](https://bugzil.la/1304331))。
 
 ### その他

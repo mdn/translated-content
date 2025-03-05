@@ -7,9 +7,9 @@ l10n:
 
 {{ApiRef("HTML DOM")}}
 
-**`HTMLAnchorElement.password`** 属性是一个字符串，包含域名前面指定的密码。
+**`HTMLAnchorElement.password`** 属性是一个字符串，包含域名之前指定的密码。
 
-如果在没有首先设置 [`username`](/zh-CN/docs/Web/API/HTMLAnchorElement/username) 属性的情况下设置，则会静默失败。
+如果未先设置 [`username`](/zh-CN/docs/Web/API/HTMLAnchorElement/username) 属性就尝试设置此属性，则会静默失败。
 
 ## 值
 
@@ -18,9 +18,9 @@ l10n:
 ## 示例
 
 ```js
-// 假设文档中有一个这样的元素：<a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/zh-CN/docs/HTMLAnchorElement">
+// 文档中有一个 <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/zh-CN/docs/HTMLAnchorElement"> 元素
 const anchor = document.getElementByID("myAnchor");
-anchor.password; // 返回 'flabada'
+anchor.password; // 返回“flabada”
 ```
 
 ## 规范

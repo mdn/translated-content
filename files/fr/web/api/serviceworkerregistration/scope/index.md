@@ -7,7 +7,8 @@ slug: Web/API/ServiceWorkerRegistration/scope
 
 La propriété en lecture seule **`scope`** de l'interface {{domxref ("ServiceWorkerRegistration")}} renvoie un identifiant unique pour un enregistrement de service worker. Le service worker doit être sur la même origine que le document qui enregistre le {{domxref ("ServiceWorker")}}.
 
-> **Note :** Cette fonctionnalité est disponible dans [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Cette fonctionnalité est disponible dans [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
 ## Syntaxe
 

@@ -1,5 +1,5 @@
 ---
-title: "::before (:before)"
+title: ::before (:before)
 slug: Web/CSS/::before
 ---
 
@@ -14,13 +14,15 @@ a::before {
 }
 ```
 
-> **Nota:** Los pseudoelementos generados por `::before` y `::after` son [contenidos por la caja de formato del elemento](https://www.w3.org/TR/CSS2/generate.html#before-after-content), y por lo tanto, no aplica a _[elementos de reemplazo](/es/docs/Web/CSS/Replaced_element)_ como los elementos {{htmlelement("img")}}, o {{htmlelement("br")}}.
+> [!NOTE]
+> Los pseudoelementos generados por `::before` y `::after` son [contenidos por la caja de formato del elemento](https://www.w3.org/TR/CSS2/generate.html#before-after-content), y por lo tanto, no aplica a _[elementos de reemplazo](/es/docs/Web/CSS/Replaced_element)_ como los elementos {{htmlelement("img")}}, o {{htmlelement("br")}}.
 
 ## Sintaxis
 
 {{csssyntax}}
 
-> **Nota:** CSS3 introdujo la notación `::before` (con doble dos puntos) para diferenciar [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) con [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores aceptan `:before`, añadido en CSS2.
+> [!NOTE]
+> CSS3 introdujo la notación `::before` (con doble dos puntos) para diferenciar [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) con [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores aceptan `:before`, añadido en CSS2.
 
 ## Ejemplos
 

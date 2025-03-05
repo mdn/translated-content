@@ -75,7 +75,8 @@ browser.browsingData.removeHistory({}).then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **Nota:** Esta API é baseada na API do Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/).
+> [!NOTE]
+> Esta API é baseada na API do Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

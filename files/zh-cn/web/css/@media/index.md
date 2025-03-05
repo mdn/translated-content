@@ -5,15 +5,43 @@ slug: Web/CSS/@media
 
 {{CSSRef}}
 
-**`@media`** [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/At-rule)可用于基于一个或多个[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)的结果来应用样式表的一部分。使用它，你可以指定一个媒体查询和一个 CSS 块，当且仅当该媒体查询与正在使用其内容的设备匹配时，该 CSS 块才能应用于该文档。
+**`@media`** [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)可用于基于一个或多个[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)的结果来应用样式表的一部分。使用它，你可以指定一个媒体查询和一个 CSS 块，当且仅当该媒体查询与正在使用其内容的设备匹配时，该 CSS 块才能应用于该文档。
 
-> **备注：** 在 JavaScript 中，可以使用 {{domxref("CSSMediaRule")}} CSS 对象模型接口访问使用 `@media` 创建的规则。
+> [!NOTE]
+> 在 JavaScript 中，可以使用 {{domxref("CSSMediaRule")}} CSS 对象模型接口访问使用 `@media` 创建的规则。
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-media.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: @media", "tabbed-standard")}}
+
+```css interactive-example
+abbr {
+  color: chocolate;
+}
+
+@media (hover: hover) {
+  abbr:hover {
+    color: limegreen;
+    transition-duration: 1s;
+  }
+}
+
+@media not all and (hover: hover) {
+  abbr::after {
+    content: " (" attr(title) ")";
+  }
+}
+```
+
+```html interactive-example
+<p>
+  <abbr title="National Aeronautics and Space Administration">NASA</abbr> is a
+  U.S. government agency that is responsible for science and technology related
+  to air and space.
+</p>
+```
 
 ## 语法
 
-`@media` at 规则可置于你代码的顶层或嵌套至其他任何的 [at 条件规则组](/zh-CN/docs/Web/CSS/At-rule#条件规则组)中。
+`@media` at 规则可置于你代码的顶层或嵌套至其他任何的 [at 条件规则组](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule#条件规则组)中。
 
 ```css
 /* 在你的代码的顶层 */
@@ -48,7 +76,8 @@ _媒体类型_（media type）描述设备的一般类别。除非使用 `not` �
 - `screen`
   - : 主要用于屏幕。
 
-> **备注：** CSS2.1 和[媒体查询第 3 版](https://drafts.csswg.org/mediaqueries-3/#background)定义了一些额外的媒体类型（`tty`、`tv`、`projection`、`handheld`、`braille`、`embossed` 以及 `aural`），但是它们在[媒体查询第 4 版](https://drafts.csswg.org/mediaqueries/#media-types)中已被弃用，不应继续使用。
+> [!NOTE]
+> CSS2.1 和[媒体查询第 3 版](https://drafts.csswg.org/mediaqueries-3/#background)定义了一些额外的媒体类型（`tty`、`tv`、`projection`、`handheld`、`braille`、`embossed` 以及 `aural`），但是它们在[媒体查询第 4 版](https://drafts.csswg.org/mediaqueries/#media-types)中已被弃用，不应继续使用。
 
 ## 媒体特性
 
@@ -73,7 +102,7 @@ _媒体特性_（media feature）描述了{{glossary("user agent", "用户代理
 - {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}
   - : 输出设备渲染表面的宽度。于媒体查询第 4 版中被弃用。
 - {{cssxref("@media/display-mode", "display-mode")}}
-  - : 应用程序的显示模式，显示模式由 web 应用的清单（manifest）中的 [`display`](/zh-CN/docs/Web/Manifest#display) 成员所指定。定义于 [Web App Manifest 规范](https://w3c.github.io/manifest/#the-display-mode-media-feature)。
+  - : 应用程序的显示模式，显示模式由 web 应用的清单（manifest）中的 [`display`](/zh-CN/docs/Web/Progressive_web_apps/Manifest#display) 成员所指定。定义于 [Web App Manifest 规范](https://w3c.github.io/manifest/#the-display-mode-media-feature)。
 - {{cssxref("@media/dynamic-range", "dynamic-range")}}
   - : 用户代理和输出设备支持的亮度、对比度和色彩深度的组合。于媒体查询第 5 版中被添加。
 - {{cssxref("@media/forced-colors", "forced-colors")}}
@@ -123,7 +152,8 @@ _逻辑运算符_（logical operator）`not`、`and`、`only` 和 `or` 可用于
 
   - : 用于否定媒体查询，如果不满足这个条件则返回 `true`，否则返回 `false`。如果出现在以逗号分隔的查询列表中，它将仅否定应用了该查询的特定查询。如果使用 `not` 运算符，则*还必须*指定媒体类型。
 
-    > **备注：** 在第 3 版中，`not` 关键字不能用于否定单个媒体特性表达式，而只能用于否定整个媒体查询。
+    > [!NOTE]
+    > 在第 3 版中，`not` 关键字不能用于否定单个媒体特性表达式，而只能用于否定整个媒体查询。
 
 - `only`
   - : 仅在整个查询匹配时才应用样式。这对于防止较老的浏览器应用所选样式很有用。当不使用 `only` 时，较老的浏览器会将 `screen and (max-width: 500px)` 简单地解释为 `screen`，忽略查询的其余部分，并将其样式应用于所有屏幕。如果使用 `only` 运算符，则*还必须*指定媒体类型。
@@ -138,9 +168,9 @@ _逻辑运算符_（logical operator）`not`、`and`、`only` 和 `or` 可用于
 
 ## 无障碍考虑
 
-为了最好地适应调整了网站文本大小的用户，当你需要在[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)中使用 {{cssxref("&lt;length&gt;")}} 时，请使用 [`em`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#长度) 单位。
+为了最好地适应调整了网站文本大小的用户，当你需要在[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)中使用 {{cssxref("&lt;length&gt;")}} 时，请使用 [`em`](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#长度) 单位。
 
-[`em`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#长度) 和 [`px`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#长度) 都是有效单位，但如果用户更改浏览器文本大小，[`em`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#长度) 的效果会更好。
+[`em`](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#长度) 和 [`px`](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#长度) 都是有效单位，但如果用户更改浏览器文本大小，[`em`](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#长度) 的效果会更好。
 
 考虑使用媒体查询第 4 版来改善用户体验。例如，使用 `prefers-reduced-motion` 以[检测用户是否已请求系统最小化其使用的动画](/zh-CN/docs/Web/CSS/@media/prefers-reduced-motion)或动作。
 

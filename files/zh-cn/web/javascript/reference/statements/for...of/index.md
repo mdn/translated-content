@@ -9,7 +9,19 @@ l10n:
 
 **`for...of`** 语句执行一个循环，该循环处理来自[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)的值序列。可迭代对象包括内置对象的实例，例如 {{jsxref("Array")}}、{{jsxref("String")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{domxref("NodeList")}}（以及其他 DOM 集合），还包括 {{jsxref("Functions/arguments", "arguments")}} 对象、由[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)生成的[生成器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator)，以及用户定义的可迭代对象。
 
-{{EmbedInteractiveExample("pages/js/statement-forof.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For...Of")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+for (const element of array1) {
+  console.log(element);
+}
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## 语法
 
@@ -29,7 +41,7 @@ for (variable of iterable)
 
 `for...of` 循环按顺序逐个处理从可迭代对象获取的值。循环对值的每次操作被称为一次*迭代*，而循环本身被称为*迭代可迭代对象*。每次迭代都会执行可能引用当前序列值的语句。
 
-当 `for...of` 循环迭代一个可迭代对象时，它首先调用可迭代对象的 [`[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) 方法，该方法返回一个[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议)，然后重复调用生成器的 [`next()`](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议) 方法，以生成要分配给 `variable` 的值的序列。
+当 `for...of` 循环迭代一个可迭代对象时，它首先调用可迭代对象的 [`Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) 方法，该方法返回一个[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议)，然后重复调用生成器的 [`next()`](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议) 方法，以生成要分配给 `variable` 的值的序列。
 
 `for...of` 循环在迭代器完成时退出（即迭代器的 `next()` 方法返回一个包含 `done: true` 的对象）。你也可以使用控制流语句来改变正常的控制流程。[`break`](/zh-CN/docs/Web/JavaScript/Reference/Statements/break) 语句退出循环并跳转到循环体后的第一条语句，而 [`continue`](/zh-CN/docs/Web/JavaScript/Reference/Statements/continue) 语句跳过当前迭代的剩余语句，继续进行下一次迭代。
 
@@ -49,7 +61,8 @@ for (let value of iterable) {
 // 31
 ```
 
-> **备注：** 每次迭代都会创建一个新的变量。在循环体内部重新赋值变量不会影响可迭代对象（在本例中，是一个数组）的原始值。
+> [!NOTE]
+> 每次迭代都会创建一个新的变量。在循环体内部重新赋值变量不会影响可迭代对象（在本例中，是一个数组）的原始值。
 
 你可以使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)来分配多个局部变量，或者使用属性访问器（如 `for (x.y of iterable)`）来给对象属性赋值。
 
@@ -79,7 +92,7 @@ for (const value of iterable) {
 
 ### 迭代字符串
 
-字符串将会按 [Unicode 码位](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)迭代。
+字符串将会按 [Unicode 码位](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)迭代。
 
 ```js
 const iterable = "boo";
@@ -171,7 +184,7 @@ for (const paragraph of articleParagraphs) {
 
 ### 迭代用户定义的可迭代对象
 
-迭代带有返回自定义迭代器的 `@@iterator` 方法的对象：
+迭代带有返回自定义迭代器的 `[Symbol.iterator]()` 方法的对象：
 
 ```js
 const iterable = {
@@ -196,7 +209,7 @@ for (const value of iterable) {
 // 3
 ```
 
-迭代带有 `@@iterator` 生成器方法的对象：
+迭代带有 `[Symbol.iterator]()` 生成器方法的对象：
 
 ```js
 const iterable = {
@@ -215,7 +228,7 @@ for (const value of iterable) {
 // 3
 ```
 
-_可迭代迭代器_（带有返回 `this` 的 `[@@iterator]()` 方法的迭代器）是一种相当常见的技术，用来使迭代器在期望可迭代对象的语法中使用，例如 `for...of`。
+_可迭代迭代器_（带有返回 `this` 的 `[Symbol.iterator]()` 方法的迭代器）是一种相当常见的技术，用来使迭代器在期望可迭代对象的语法中使用，例如 `for...of`。
 
 ```js
 let i = 1;
@@ -357,7 +370,7 @@ for (const i of iterable) {
 
 第二个循环与第一个循环类似，但它使用 {{jsxref("Object.hasOwn()")}} 来检查找到的可枚举属性是否为对象的自有属性，即非继承属性。如果是，则打印该属性。属性 `0`、`1`、`2` 和 `foo` 被打印，因为它们是自有属性。属性 `arrCustom` 和 `objCustom` 没有被打印，因为它们是继承属性。
 
-`for...of` 循环迭代并打印 `iterable` 按照数组（数组是[可迭代的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)）定义要进行迭代的*值*。对象的*元素* `3`、`5`、`7` 被打印，但对象的*属性*没有被打印。
+`for...of` 循环迭代并打印 `iterable` 按照数组（数组是[可迭代的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)）定义要进行迭代的*值*。对象的*元素* `3`、`5`、`7` 被打印，但对象的*属性*没有被打印。
 
 ## 规范
 

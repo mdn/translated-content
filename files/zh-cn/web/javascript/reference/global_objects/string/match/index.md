@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/String/match
 
 **`match()`** 方法检索字符串与[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)进行匹配的结果。
 
-{{EmbedInteractiveExample("pages/js/string-match.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.match()", "shorter")}}
+
+```js interactive-example
+const paragraph = "The quick brown fox jumps over the lazy dog. It barked.";
+const regex = /[A-Z]/g;
+const found = paragraph.match(regex);
+
+console.log(found);
+// Expected output: Array ["T", "I"]
+```
 
 ## 语法
 
@@ -34,13 +43,13 @@ match(regexp)
 
 ## 描述
 
-`String.prototype.match` 方法本身的实现非常简单，它只是使用字符串作为第一个参数调用了参数的 `Symbol.match` 方法。实际的实现来自于 [`RegExp.prototype[@@match]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)。
+`String.prototype.match` 方法本身的实现非常简单，它只是使用字符串作为第一个参数调用了参数的 `Symbol.match` 方法。实际的实现来自于 [`RegExp.prototype[Symbol.match]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)。
 
 - 如果你需要知道一个字符串是否与一个正则表达式 {{jsxref("RegExp")}} 匹配，请使用 {{jsxref("RegExp.prototype.test()")}}。
 - 如果你只想获取第一个匹配项，你可能需要使用 {{jsxref("RegExp.prototype.exec()")}}。
 - 如果你想要获取捕获组，并且全局标志已设置，你需要使用 {{jsxref("RegExp.prototype.exec()")}} 或 {{jsxref("String.prototype.matchAll()")}}。
 
-有关传入正则表达式时 `match()` 方法的语义更多信息，请参阅 [`RegExp.prototype[@@match]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)。
+有关传入正则表达式时 `match()` 方法的语义更多信息，请参阅 [`RegExp.prototype[Symbol.match]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)。
 
 ## 示例
 
@@ -79,7 +88,8 @@ console.log(matches);
 // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
 ```
 
-> **备注：** 参见 {{jsxref("String.prototype.matchAll()")}} 和[通过标志进行高级搜索](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions#通过标志进行高级搜索)。
+> [!NOTE]
+> 参见 {{jsxref("String.prototype.matchAll()")}} 和[通过标志进行高级搜索](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions#通过标志进行高级搜索)。
 
 ### 使用命名捕获组
 
@@ -101,7 +111,7 @@ const str = "空即是空";
 str.match(); // 返回 [""]
 ```
 
-### 使用实现了 @@match 的非 RegExp 对象调用 match()
+### 使用实现了 `[Symbol.match]()` 的非 RegExp 对象调用 match()
 
 如果一个对象有一个名为 `Symbol.match` 的方法，那么它可以被用作自定义匹配器。`Symbol.match` 的返回值将成为 `match()` 方法的返回值。
 

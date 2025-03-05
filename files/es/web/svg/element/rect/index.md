@@ -64,10 +64,10 @@ svg {
 
 ### Atributos globales
 
-- [Conditional processing attributes](/en/SVG/Attribute#ConditionalProccessing) »
-- [Core attributes](/en/SVG/Attribute#Core) »
-- [Graphical event attributes](/en/SVG/Attribute#GraphicalEvent) »
-- [Presentation attributes](/en/SVG/Attribute#Presentation) »
+- [Conditional processing attributes](/es/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [Core attributes](/es/docs/Web/SVG/Attribute#core) »
+- [Graphical event attributes](/es/docs/Web/SVG/Attribute#graphicalevent) »
+- [Presentation attributes](/es/docs/Web/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -84,7 +84,7 @@ svg {
 
 ## Interfaz DOM
 
-Este elemento implementa la interfaz [`SVGRectElement`](/en/DOM/SVGRectElement).
+Este elemento implementa la interfaz [`SVGRectElement`](/es/docs/Web/API/SVGRectElement).
 
 ## Especificaciones
 

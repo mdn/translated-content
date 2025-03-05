@@ -16,7 +16,7 @@ l10n:
 
 ## 例
 
-この例は編集可能な {{htmlElement("div")}} の[入力イベント](/ja/docs/Web/API/HTMLElement/input_event) の `inputType` をログ出力します。
+この例は編集可能な {{htmlElement("div")}} の[入力イベント](/ja/docs/Web/API/Element/input_event) の `inputType` をログ出力します。
 
 ### HTML
 
@@ -56,7 +56,8 @@ function logInputType(event) {
 
 {{EmbedLiveSample("Examples", '100%', 500)}}
 
-> **メモ:** もっと詳細な例として [Masayuki Nakano's InputEvent test suite](https://d-toybox.com/studio/lib/input_event_viewer.html) も参照してください。
+> [!NOTE]
+> もっと詳細な例として [Masayuki Nakano's InputEvent test suite](https://d-toybox.com/studio/lib/input_event_viewer.html) も参照してください。
 
 ## 仕様書
 

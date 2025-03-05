@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 
 ### Производительность
 
-Метод [`has`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Set/has) проверяет наличие значения в `Set` используя алгоритм, который в среднем работает быстрее поэлементного перебора добавленных ранее элементов. В частности этот алгоритм работает быстрее чем метод [`Array.prototype.includes`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/includes на массиве, который хранит столько же элементов сколько сравниваемый объект `Set`.
+Метод [`has`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Set/has) проверяет наличие значения в коллекции, используя алгоритм, который в среднем работает быстрее перебора добавленных ранее элементов. В частности он в среднем быстрее, чем метод [`Array.prototype.includes`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) для массива, у которого столько же элементов, сколько в коллекции.
 
 ## Конструктор
 

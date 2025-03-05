@@ -49,7 +49,8 @@ slug: Web/HTML/Attributes/crossorigin
   </tbody>
 </table>
 
-> **备注：** 在 Firefox 83 版本之前，`rel="icon"` 元素不支持 `crossorigin` 属性。也有一个 [Chrome 的未解决的议题](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)。
+> [!NOTE]
+> 在 Firefox 83 版本之前，`rel="icon"` 元素不支持 `crossorigin` 属性。也有一个 [Chrome 的未解决的议题](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)。
 
 ### 示例：使用 `crossorigin` 的 `<script>` 元素
 
@@ -63,7 +64,7 @@ slug: Web/HTML/Attributes/crossorigin
 
 ### 示例：带有用户凭据的 Web 清单
 
-在获取需要用户凭据的[清单](/zh-CN/docs/Web/Manifest)时，即使是同源的情况，属性值也必须设置为 `use-credentials`。
+在获取需要用户凭据的[清单](/zh-CN/docs/Web/Progressive_web_apps/Manifest)时，即使是同源的情况，属性值也必须设置为 `use-credentials`。
 
 ```html
 <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />

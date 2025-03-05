@@ -5,7 +5,7 @@ slug: Web/CSS/@media/height
 
 {{CSSRef}}
 
-**`height`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}の高さ (または[ページ付きメディア](/ja/docs/Web/CSS/Paged_Media)のページボックスの高さ) に基づいてスタイルを適用するために使用することができます。
+**`height`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}の高さ (または[ページ付きメディア](/ja/docs/Web/CSS/CSS_paged_media)のページボックスの高さ) に基づいてスタイルを適用するために使用することができます。
 
 ## 構文
 
@@ -58,5 +58,5 @@ slug: Web/CSS/@media/height
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/ja/docs/Web/CSS/@media)

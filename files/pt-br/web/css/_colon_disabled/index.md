@@ -1,5 +1,5 @@
 ---
-title: ":disabled"
+title: :disabled
 slug: Web/CSS/:disabled
 ---
 
@@ -20,7 +20,7 @@ input:disabled {
 
 ## Exemplo
 
-Este exemplo mostra um formulário básico de envio. Ele usa o evento [JavaScript](/pt-BR/docs/Web/JavaScript) [`change`](/pt-BR/docs/Web/Events/change) para permitir que o usuário ative / desative os campos de faturamento.
+Este exemplo mostra um formulário básico de envio. Ele usa o evento [JavaScript](/pt-BR/docs/Web/JavaScript) [`change`](/pt-BR/docs/Web/API/HTMLElement/change_event) para permitir que o usuário ative / desative os campos de faturamento.
 
 ### HTML
 

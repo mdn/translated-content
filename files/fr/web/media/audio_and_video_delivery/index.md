@@ -11,7 +11,7 @@ On peut distribuer de l'audio et de la vidéo sur le web de plusieurs manières,
 
 Que l'on traite des fichiers audio pré-enregistrés ou des flux en directs, le mécanisme pour les rendre disponibles à travers un navigateur reste à peu près le même — via les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio) et [`<video>`](/fr/docs/Web/HTML/Element/video). Actuellement, pour prendre en charge tous les navigateurs, il est nécessaire de définir deux formats — bien qu'avec l'adoption des formats MP3 et MP4 dans Firefox et Opera, cela change rapidement. Vous pouvez trouver les informations de compatibilité des navigateurs aux endroits suivants&nbsp;:
 
-- [Tableau de compatibilité des codecs audio](/fr/docs/Web/Apps/Build/Manipulating_media/Cross-browser_audio_basics#audio_codec_support)
+- [Tableau de compatibilité des codecs audio](/fr/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics#audio_codec_support)
 - [Guide sur les codecs pour les vidéos](/fr/docs/Web/Media/Formats/Video_codecs)
 
 Pour distribuer du contenu audio et vidéo, le processus général se déroule comme suit&nbsp;:
@@ -37,9 +37,10 @@ Pour distribuer du contenu audio et vidéo, le processus général se déroule c
 
 Le code ci-dessus va créer un lecteur audio qui tente de précharger autant d'audio que possible pour une lecture fluide.
 
-> **Note :** l'attribut `preload` peut être ignoré par certains navigateurs mobiles.
+> [!NOTE]
+> L'attribut `preload` peut être ignoré par certains navigateurs mobiles.
 
-Pour plus d'informations voir [Les bases de l'audio multi-navigateur (Audio HTML5 en détails)](/fr/docs/Web/Apps/Build/Manipulating_media/Cross-browser_audio_basics#html5_audio_in_detail)
+Pour plus d'informations voir [Les bases de l'audio multi-navigateur (Audio HTML5 en détails)](/fr/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics#html5_audio_in_detail)
 
 ### Vidéo HTML
 
@@ -71,9 +72,10 @@ Pour plus d'informations voir [Les bases de l'audio multi-navigateur (Audio HTML
 
 Le code ci-dessus crée un lecteur vidéo de dimensions 640x480 pixels, affichant une vignette jusqu'à ce que la vidéo soit lue. On demande à la vidéo de passer en `autoplay` (jouer automatiquement) mais d'être `muted` (en sourdine) par défaut.
 
-> **Note :** l'attribut `autoplay` peut être ignoré par certains navigateurs mobiles et est sujet à controverse lorsqu'il est utilisé à mauvais escient. Il est recommandé de lire [le guide à ce sujet](/fr/docs/Web/Media/Autoplay_guide) pour savoir comment l'utiliser pertinemment.
+> [!NOTE]
+> L'attribut `autoplay` peut être ignoré par certains navigateurs mobiles et est sujet à controverse lorsqu'il est utilisé à mauvais escient. Il est recommandé de lire [le guide à ce sujet](/fr/docs/Web/Media/Autoplay_guide) pour savoir comment l'utiliser pertinemment.
 
-Pour plus d'informations voir [l'article de référence sur l'élément `<video>`](/fr/docs/Web/HTML/Element/video) et [la page sur la création d'un lecteur vidéo multi-navigateur](/fr/docs/Web/Apps/Build/Manipulating_media/cross_browser_video_player).
+Pour plus d'informations voir [l'article de référence sur l'élément `<video>`](/fr/docs/Web/HTML/Element/video) et [la page sur la création d'un lecteur vidéo multi-navigateur](/fr/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player).
 
 ### Audio JavaScript
 
@@ -220,7 +222,7 @@ navigator.mediaDevices
   });
 ```
 
-Voir [l'API MediaRecorder](/fr/docs/Web/API/MediaRecorder_API) pour plus de détails.
+Voir [l'API MediaRecorder](/fr/docs/Web/API/MediaStream_Recording_API) pour plus de détails.
 
 ## Media Source Extensions (MSE)
 
@@ -236,13 +238,14 @@ L'API prend en charge divers cas d'utilisation, allant du simple déchiffrement 
 
 De nouveaux formats et protocoles ont été (et sont encore) deployés pour faciliter la diffusion adaptative. Une diffusion adaptative est un flux en direct qui s'adapte à la bande passante disponible de la personne utilisant le site. Typiquement, la qualité du stream peut changer en temps réel pour utiliser plus ou moins de bande passante. La diffusion adaptative est souvent utilisée en conjonction avec le <i lang="en">live streaming</i>, où une diffusion fluide de l'audio et vidéo est primordiale.
 
-Les principaux encodages utilisés pour le streaming adaptatif sont [HLS](/fr/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video#hls) et [MPEG-DASH](/fr/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video#mpeg-dash). MSE a été conçu avec DASH en tête, il définit les flux d'octets selon [ISOBMFF](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html) et [M2TS](https://en.wikipedia.org/wiki/M2ts) (deux formats pris en charge par DASH, le dernier étant également pris en charge par HLS). DASH est probablement la meilleure option en termes de compatibilité, standard et flexibilité.
+Les principaux encodages utilisés pour le streaming adaptatif sont [HLS](/fr/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video#hls) et [MPEG-DASH](/fr/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video#mpeg-dash). MSE a été conçu avec DASH en tête, il définit les flux d'octets selon [ISOBMFF](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html) et [M2TS](https://en.wikipedia.org/wiki/M2ts) (deux formats pris en charge par DASH, le dernier étant également pris en charge par HLS). DASH est probablement la meilleure option en termes de compatibilité, standard et flexibilité.
 
-> **Note :** actuellement, Safari ne prend pas en charge DASH, cependant dash.js marche sur les nouvelles versions de Safari prévues pour être publiées avec OSX Yosemite.
+> [!NOTE]
+> Actuellement, Safari ne prend pas en charge DASH, cependant dash.js marche sur les nouvelles versions de Safari prévues pour être publiées avec OSX Yosemite.
 
 DASH fournit également un certain nombre de profils, y compris des profils _à la demande_ simples, sans pré-traitement ni séparation des fichiers multimédia. Il existe un certain nombre de services en ligne qui vous permettront de convertir vos média en HLS ou DASH.
 
-Pour plus d'informations, voir [Live streaming web Audio et Vidéo](/fr/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video).
+Pour plus d'informations, voir [Live streaming web Audio et Vidéo](/fr/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video).
 
 ## Personnaliser votre lecteur média
 
@@ -297,7 +300,7 @@ window.onload = function () {
 };
 ```
 
-Vous pouvez [essayer cet exemple ici](https://jsbin.com/jujeladu/2/edit). Pour plus d'informations, voir [Créer votre propre lecteur audio](/fr/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#creating_your_own_custom_audio_player).
+Vous pouvez [essayer cet exemple ici](https://jsbin.com/jujeladu/2/edit). Pour plus d'informations, voir [Créer votre propre lecteur audio](/fr/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics#creating_your_own_custom_audio_player).
 
 ## Autres conseils pour l'audio/video
 
@@ -462,22 +465,22 @@ Un certain nombre de bibliothèques JavaScript audio et vidéo existent. Les plu
 
 ## Tutoriels pour apprendre les bases
 
-- [Créer un lecteur vidéo fonctionnant sur tous les navigateurs (en anglais)](/fr/docs/Web/Apps/Build/Manipulating_media/cross_browser_video_player)
+- [Créer un lecteur vidéo fonctionnant sur tous les navigateurs (en anglais)](/fr/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)
   - : Guide pour créer un lecteur vidéo simple et fonctionnant sur tous les navigateurs en utilisant l'élément [`<video>`](/fr/docs/Web/HTML/Element/video)
-- [Bases concernant la mise en forme des lecteurs vidéo (en anglais)](/fr/docs/Web/Apps/Build/Manipulating_media/Video_player_styling_basics)
+- [Bases concernant la mise en forme des lecteurs vidéo (en anglais)](/fr/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics)
   - : À l'aide du lecteur vidéo mis en place sur l'article précédent, cet article montre comment fournir une mise en forme basique et responsive (en anglais)
-- [Les bases pour créer un lecteur audio fonctionnant sur tous les navigateurs (en anglais)](/fr/docs/Web/Apps/Build/Manipulating_media/Cross-browser_audio_basics)
+- [Les bases pour créer un lecteur audio fonctionnant sur tous les navigateurs (en anglais)](/fr/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)
   - : Cet article propose un guide de base pour créer un lecteur audio HTML5 qui fonctionne sur tous les navigateurs, avec une explication pour tous les attributs, propriétés et évènements associés, ainsi qu'un guide introduisant rapidement les contrôles personnalisés créés avec l'API Media (en anglais)
-- [Mise en tampon des fichiers médias, recherche et gestion des intervales de temps](/fr/docs/Web/Apps/Build/Manipulating_media/buffering_seeking_time_ranges)
+- [Mise en tampon des fichiers médias, recherche et gestion des intervales de temps](/fr/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges)
   - : Parfois, il est utile de savoir le temps de téléchargment et de lecture des éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`](/fr/docs/Web/HTML/Element/video) sans attendre — un bon exemple d'application est la barre de progression mise en mémoire tampon d'un fichier audio ou vidéo. Cet article présente la construction d'une barre de recherche et mise en mémoire tampon en utilisant l'API [TimeRanges](/fr/docs/Web/API/TimeRanges) ainsi que d'autres fonctionnalités de l'API `Media`.
-- [Explications concernant la propriété `playbackRate` proposée par HTML5](/fr/docs/Web/Apps/Build/Manipulating_media/HTML5_playbackRate_explained)
+- [Explications concernant la propriété `playbackRate` proposée par HTML5](/fr/docs/Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained)
   - : La propriété `playbackRate` permet de modifier la vitesse ou la fréquence à laquelle un morceau de fichier audio ou vidéo est joué. Cet article l'explique en détails.
 - [Utilisation de l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
   - : Explique les bases de l'API Web Audio, afin de pouvoir atteindre, manipuler et jouer une ressource audio.
 
 ## Tutoriels concernant la diffusion en direct (streaming)
 
-- [Diffusion en direct de fichiers audio et vidéo sur le web](/fr/docs/Web/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video)
+- [Diffusion en direct de fichiers audio et vidéo sur le web](/fr/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video)
 
   - : Les technologies de diffusion en direct sont souvent employées pour diffuser en direct des évènements sportifs, des concerts et plus généralement des programmes télévisuels ou radiophoniques qui se déroulent en direct. Le terme est souvent raccourci en parlant de «&nbsp;direct&nbsp;» ou en anglais de
 
@@ -489,7 +492,7 @@ Un certain nombre de bibliothèques JavaScript audio et vidéo existent. Les plu
 
     . Il s'agit du processus de transmission en direct d'une source média. Cela est plutôt complexe et sujet à de nombreux paramètres. Cet article fait une présentation générale du sujet et indique comment débuter.
 
-- [Mettre en place une ressource média diffusée en direct adaptative](/fr/docs/Web/Apps/Build/Manipulating_media/Setting_up_adaptive_streaming_media_sources)
+- [Mettre en place une ressource média diffusée en direct adaptative](/fr/docs/Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources)
 
   - : Si vous avez besoin de mettre en place une ressource média diffusée en direct et adaptative sur un serveur, et que cette ressource doit être consommée au sein d'un élément média HTML5, cet article explique comment faire. Il détaille les deux principaux formats, MPEG-DASH et HLS (
 
@@ -502,9 +505,9 @@ Un certain nombre de bibliothèques JavaScript audio et vidéo existent. Les plu
 
 ## Tutoriels avancés
 
-- [Ajout de légendes et de sous-titres aux vidéos HTML5](/fr/docs/Web/Apps/Build/Manipulating_media/Adding_captions_and_subtitles_to_HTML5_video)
+- [Ajout de légendes et de sous-titres aux vidéos HTML5](/fr/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
   - : Cet article explique comment ajouter des légendes et des sous-titres à l'élément HTML5 [`<video>`](/fr/docs/Web/HTML/Element/video), en utilisant le format [VTT (<i lang="en">Video Text Tracks</i>)](/fr/docs/Web/API/WebVTT_API) et l'élément [`<track>`](/fr/docs/Web/HTML/Element/track).
-- [Utiliser l'API Audio de façon compatible](/fr/docs/Web/Apps/Developing/Manipulating_media/Web_Audio_API_cross_browser)
+- [Utiliser l'API Audio de façon compatible](/fr/docs/Web/API/Web_Audio_API)
   - : Un guide pour utiliser l'API Audio de façon compatible sur tous les navigateurs.
 - [Capture audio simplifiée avec l'API MediaRecorder](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
   - : Cet article montre les bases de l'utilisation de l'API MediaRecorder, utilisée afin d'enregistrer un flux média.

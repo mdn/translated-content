@@ -2,15 +2,25 @@
 title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
 {{JSRef}}
 
-**`Object.keys()`** 메서드는 주어진 객체의 속성 이름들을 일반적인 반복문과
-동일한 순서로 순회되는 열거할 수 있는 배열로 반환합니다.
+**`Object.keys()`** 정적 메서드는 주어진 객체 자체의 열거 가능한 문자열 키를 가진 속성들의 이름을 배열로 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/object-keys.html")}}
+{{InteractiveExample("JavaScript Demo: Object.keys()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+  c: false,
+};
+
+console.log(Object.keys(object1));
+// Expected output: Array ["a", "b", "c"]
+```
 
 ## 구문
 
@@ -21,11 +31,11 @@ Object.keys(obj)
 ### 매개변수
 
 - `obj`
-  - : 객체
+  - : 객체.
 
 ### 반환 값
 
-주어진 객체 자체의 열거 가능한 문자열로된 속성 키를 나타내는 문자열 배열.
+주어진 객체 자체의 열거 가능한 문자열로 된 속성 키들을 나타내는 문자열 배열.
 
 ## 설명
 
@@ -45,15 +55,15 @@ Object.keys(obj)
 ```js
 // 단순 배열
 const arr = ["a", "b", "c"];
-console.log(Object.keys(arr)); // console: ['0', '1', '2']
+console.log(Object.keys(arr)); // ['0', '1', '2']
 
-// 배열형 객체
+// 유사 배열 객체
 const obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.keys(obj)); // console: ['0', '1', '2']
+console.log(Object.keys(obj)); // ['0', '1', '2']
 
 // 키와 순서가 무작위인 유사 배열 객체
 const anObj = { 100: "a", 2: "b", 7: "c" };
-console.log(Object.keys(anObj)); // console: ['2', '7', '100']
+console.log(Object.keys(anObj)); // ['2', '7', '100']
 
 // getFoo 는 열거할 수 없는 속성입니다.
 const myObj = Object.create(
@@ -73,20 +83,22 @@ console.log(Object.keys(myObj)); // ['foo']
 만약 열거할 수 없는 속성도 포함한 문자열이 키인 객체 자체 속성을 원한다면,
 {{jsxref("Object.getOwnPropertyNames()")}}을 참고하시기 바랍니다.
 
-### 원시형애서 Object.keys() 사용하기
+### 원시형에서 Object.keys() 사용하기
 
 객체가 아닌 인수는 [강제로 객체로 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion)됩니다.
+[`undefined`](/ko/docs/Web/JavaScript/Reference/Global_Objects/undefined)와 [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null)은 객체로 강제 변환될 수 없으며 즉시 {{jsxref("TypeError")}}를 발생시킵니다.
 문자열만 자체 열거 가능한 속성을 가질 수 있으며, 다른 모든 원시형은 빈 배열을 반환합니다.
 
 ```js
 // 문자열은 열거가능한 자체 속성처럼 인덱스를 가지고 있습니다.
 console.log(Object.keys("foo")); // ['0', '1', '2']
 
-// 다른 원시형은 자체 속성이 없숩니다.
+// undefined와 null을 제외한 다른 원시형은 자체 속성이 없습니다.
 console.log(Object.keys(100)); // []
 ```
 
-> **참고:** ES5에서는 비객체를 `Object.keys()`에 전달하면 {{jsxref("TypeError")}}가 발생합니다.
+> [!NOTE]
+> ES5에서는 비객체를 `Object.keys()`에 전달하면 {{jsxref("TypeError")}}가 발생합니다.
 
 ## 명세서
 

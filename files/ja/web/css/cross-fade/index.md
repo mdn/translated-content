@@ -12,7 +12,8 @@ l10n:
 
 ## 構文
 
-> **警告:** 仕様書と現在の実装とで構文が異なっています。
+> [!WARNING]
+> 仕様書と現在の実装とで構文が異なっています。
 > 仕様書の構文を先に説明します。
 
 ### 仕様書上の構文
@@ -142,5 +143,5 @@ cross-fade(url(white.png), url(black.png), 100%); /* 完全に白 */
 - {{cssxref("image/image", "image()")}}
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("element")}}
-- [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - グラデーション関数: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}

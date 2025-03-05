@@ -13,7 +13,8 @@ slug: Web/HTML/Content_categories
 - 폼 관련 콘텐츠 카테고리는 입력 폼 관련 요소가 공통으로 가지는 규칙을 설명합니다.
 - 특정 콘텐츠 카테고리는 소수의 요소만 공유하는 카테고리를 설명하며, 특정 문맥에서만 유효하기도 합니다.
 
-> **참고:** 콘텐츠 카테고리의 상세 내용과 서로간의 비교는 이 글의 범위를 벗어납니다. 궁금하시다면 [HTML 명세의 관련 항목](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content)을 읽어보세요.
+> [!NOTE]
+> 콘텐츠 카테고리의 상세 내용과 서로간의 비교는 이 글의 범위를 벗어납니다. 궁금하시다면 [HTML 명세의 관련 항목](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content)을 읽어보세요.
 
 [![다양한 내용 범주가 상호 작용하는 방식을 보여주는 벤다이어그램입니다. 다음 절에서는 이러한 관계를 텍스트로 설명합니다.](content_categories_venn.png)](/ko/docs/Web/Guide/HTML/Content_categories/content_categories_venn.png)
 
@@ -34,8 +35,8 @@ slug: Web/HTML/Content_categories
 특정 조건을 만족하는 경우 플로우 콘텐츠에 속하는 요소도 있습니다.
 
 - {{HTMLElement("area")}}는 {{HTMLElement("map")}} 요소의 자손인 경우.
-- {{HTMLElement("link")}}가 [`itemprop`](/ko/docs/HTML/Global_attributes#itemprop) 특성을 가지고 있는 경우..
-- {{HTMLElement("meta")}}가 [`itemprop`](/ko/docs/HTML/Global_attributes#itemprop) 특성을 가지고 있는 경우.
+- {{HTMLElement("link")}}가 [`itemprop`](/ko/docs/Web/HTML/Global_attributes#itemprop) 특성을 가지고 있는 경우..
+- {{HTMLElement("meta")}}가 [`itemprop`](/ko/docs/Web/HTML/Global_attributes#itemprop) 특성을 가지고 있는 경우.
 - {{HTMLElement("style")}}이 [`scoped`](/ko/docs/Web/HTML/Element/style#scoped) 특성을 가지고 있는 경우.
 
 ### 구획 콘텐츠
@@ -44,7 +45,8 @@ slug: Web/HTML/Content_categories
 
 {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}}, {{HTMLElement("section")}}
 
-> **참고:** 자신의 내용을 일반 개요와 구별하는 [구획 루트](/ko/docs/Web/HTML/HTML5_문서의_섹션과_윤곽) 카테고리와 혼동하지 마세요.
+> [!NOTE]
+> 자신의 내용을 일반 개요와 구별하는 [구획 루트](/ko/docs/Web/HTML/HTML5_문서의_섹션과_윤곽) 카테고리와 혼동하지 마세요.
 
 ### 제목 콘텐츠
 

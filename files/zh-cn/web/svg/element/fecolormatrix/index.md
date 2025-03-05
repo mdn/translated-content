@@ -7,7 +7,7 @@ slug: Web/SVG/Element/feColorMatrix
 
 该滤镜基于转换矩阵对颜色进行变换。每一像素的颜色值 (一个表示为 \[红，绿，蓝，透明度] 的矢量) 都经过[矩阵乘法 (matrix multiplated](http://en.wikipedia.org/wiki/Matrix_multiplication)) 计算出的新颜色。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
@@ -92,9 +92,9 @@ slug: Web/SVG/Element/feColorMatrix
 
 ### 全局属性
 
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
-- [滤镜属性](/zh-CN/SVG/Attribute#Filter) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
+- [滤镜属性](/zh-CN/docs/SVG/Attribute#filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -106,7 +106,7 @@ slug: Web/SVG/Element/feColorMatrix
 
 ## DOM 接口
 
-该元素实现 [`SVGFEColorMatrixElement`](/zh-CN/DOM/SVGFEColorMatrixElement) 接口。
+该元素实现 [`SVGFEColorMatrixElement`](/zh-CN/docs/DOM/SVGFEColorMatrixElement) 接口。
 
 ## 参见
 
@@ -128,4 +128,4 @@ slug: Web/SVG/Element/feColorMatrix
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/SVG/Tutorial/Filter_effects)

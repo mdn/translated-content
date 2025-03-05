@@ -54,4 +54,4 @@ figcaption {
 ## 参见
 
 - [视图过渡 API](/zh-CN/docs/Web/API/View_Transitions_API)
-- [使用视图过渡 API 实现简单的平滑过渡效果](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [使用视图过渡 API 实现简单的平滑过渡效果](https://developer.chrome.google.cn/docs/web-platform/view-transitions)

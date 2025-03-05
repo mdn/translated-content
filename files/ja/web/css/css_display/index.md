@@ -1,19 +1,21 @@
 ---
 title: CSS 表示方法
 slug: Web/CSS/CSS_display
+l10n:
+  sourceCommit: 611b4528a321b0ab346166ec9afdaaaebeb018ab
 ---
 
 {{CSSRef}}
 
-**CSS 表示方法** (CSS Display) は CSS のモジュールの一つで、 CSS の整形ボックスツリーがどのように文書の要素ツリーから生成されるかを定義し、制御するプロパティを定義します。
+**CSS 表示方法** (display) モジュールは、 CSS の整形ボックスツリーがどのように文書の要素ツリーから生成されるかを定義し、制御するプロパティを定義します。
 
 ## リファレンス
 
-### CSS プロパティ
+### プロパティ
 
 - {{CSSxRef("display")}}
 
-### CSS データ型
+### データ型
 
 - {{CSSxRef("&lt;display-outside&gt;")}}
 - {{CSSxRef("&lt;display-inside&gt;")}}
@@ -24,17 +26,18 @@ slug: Web/CSS/CSS_display
 
 ## ガイド
 
-- [display の新しい 2 値構文への対応](/ja/docs/Web/CSS/display/two-value_syntax_of_display)
+- [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/display/multi-keyword_syntax_of_display)
+  - : 複数キーワード構文を説明し、この構文と古い単一キーワード値とを比較します。
 
-### CSS フローレイアウト (`display: block`, `display: inline`)
+### フローレイアウト (display: block, display: inline)
 
-- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [フローレイアウトとオーバーフロー](/ja/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow)
-- [フローレイアウトと書字方向](/ja/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)
-- [整形コンテキストの紹介](/ja/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
-- [フロー内とフローの外](/ja/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)
+- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
+- [フローレイアウトとオーバーフロー](/ja/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_overflow)
+- [フローレイアウトと書字方向](/ja/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
+- [整形コンテキストの紹介](/ja/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
+- [フロー内とフローの外](/ja/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)
 
-### `display: flex`
+### フレックスボックスレイアウト
 
 - [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
@@ -42,10 +45,9 @@ slug: Web/CSS/CSS_display
 - [フレックスアイテムの折り返しをマスターする](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
 - [フレックスアイテムの順序](/ja/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
 - [フレックスボックスと他のレイアウト方法の関係](/ja/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
-- [フレックスボックスの後方互換性](/ja/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox)
 - [フレックスボックスの典型的な用途](/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
 
-### `display: grid`
+### グリッドレイアウト
 
 - [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - [グリッドレイアウトと他のレイアウト方法との関係](/ja/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
@@ -66,3 +68,8 @@ slug: Web/CSS/CSS_display
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)モジュール

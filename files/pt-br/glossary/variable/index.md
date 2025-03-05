@@ -15,5 +15,5 @@ Uma **variável (variable)** é um local nomeado para armazenar um {{Glossary("V
 
 ### Referências técnicas
 
-- [Declarando Variáveis no JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations)
+- [Declarando Variáveis no JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)
 - [**`var`** **statement** no JavaScript](/pt-BR/docs/Web/JavaScript/Reference/Statements/var)

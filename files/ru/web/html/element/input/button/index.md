@@ -5,15 +5,53 @@ slug: Web/HTML/Element/input/button
 
 {{HTMLSidebar}}
 
-Элемент {{HTMLElement("input")}} с типом **`button`** отображаются как простые кнопки, которые можно запрограммировать для управления пользовательскими функциями в любом месте веб-страницы, например, назначить функцию обработки события (обычно для события {{event("click")}}).
+Элемент {{HTMLElement("input")}} с типом **`button`** отображаются как простые кнопки, которые можно запрограммировать для управления пользовательскими функциями в любом месте веб-страницы, например, назначить функцию обработки события (обычно для события [`click`](/ru/docs/Web/API/Element/click_event)).
 
-{{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
 
-> **Примечание:** Хотя элементы `<input>` с типом `button` по-прежнему являются абсолютно корректными в HTML, новый элемент {{HTMLElement("button")}} теперь является предпочтительным способом создания кнопок. Учитывая, что текст элемента {{HTMLElement("button")}} вставлен между открывающим и закрывающим тегами, вы можете включить в тег HTML, даже изображения.
+```html interactive-example
+<input class="styled" type="button" value="Add to favorites" />
+```
+
+```css interactive-example
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgb(220 0 0 / 100%);
+  background-image: linear-gradient(
+    to top left,
+    rgb(0 0 0 / 20%),
+    rgb(0 0 0 / 20%) 30%,
+    rgb(0 0 0 / 0%)
+  );
+  box-shadow:
+    inset 2px 2px 3px rgb(255 255 255 / 60%),
+    inset -2px -2px 3px rgb(0 0 0 / 60%);
+}
+
+.styled:hover {
+  background-color: rgb(255 0 0 / 100%);
+}
+
+.styled:active {
+  box-shadow:
+    inset -2px -2px 3px rgb(255 255 255 / 60%),
+    inset 2px 2px 3px rgb(0 0 0 / 60%);
+}
+```
+
+> [!NOTE]
+> Хотя элементы `<input>` с типом `button` по-прежнему являются абсолютно корректными в HTML, новый элемент {{HTMLElement("button")}} теперь является предпочтительным способом создания кнопок. Учитывая, что текст элемента {{HTMLElement("button")}} вставлен между открывающим и закрывающим тегами, вы можете включить в тег HTML, даже изображения.
 
 | **[Значение](#значение)**         | {{domxref("DOMString")}} используется в качестве метки кнопки                                     |
 | --------------------------------- | ------------------------------------------------------------------------------------------------- |
-| **Событие**                       | {{event("click")}}                                                                                |
+| **Событие**                       | [`click`](/ru/docs/Web/API/Element/click_event)                                                   |
 | **Поддерживаемые общие атрибуты** | [`type`](/ru/docs/Web/HTML/Element/input#type) и [`value`](/ru/docs/Web/HTML/Element/input#value) |
 | **Атрибуты IDL**                  | `value`                                                                                           |
 | **Методы**                        | None                                                                                              |
@@ -42,7 +80,7 @@ slug: Web/HTML/Element/input/button
 
 ### Простая кнопка
 
-Мы начнём с создания простой кнопки с обработчиком события {{event("click")}} , который запускает наш компьютер (ну, он переключает `value` кнопки и текстовое содержимое следующего абзаца):
+Мы начнём с создания простой кнопки с обработчиком события [`click`](/ru/docs/Web/API/Element/click_event) , который запускает наш компьютер (ну, он переключает `value` кнопки и текстовое содержимое следующего абзаца):
 
 ```html
 <form>
@@ -68,7 +106,7 @@ function updateButton() {
 }
 ```
 
-Сценарий получает ссылку на объект {{domxref("HTMLInputElement")}}, представляющий `<input>` в DOM, сохраняя этот параметр в переменной `button`. Затем {{domxref("EventTarget.addEventListener", "addEventListener()")}} используется для установки функции, которая будет запускаться, когда на кнопке происходят события {{event("click")}}.
+Сценарий получает ссылку на объект {{domxref("HTMLInputElement")}}, представляющий `<input>` в DOM, сохраняя этот параметр в переменной `button`. Затем {{domxref("EventTarget.addEventListener", "addEventListener()")}} используется для установки функции, которая будет запускаться, когда на кнопке происходят события [`click`](/ru/docs/Web/API/Element/click_event).
 
 {{EmbedLiveSample("Простая_кнопка", 650, 100)}}
 
@@ -104,7 +142,8 @@ function updateButton() {
 
 {{EmbedLiveSample("Добавление_сочетаний_клавиш_на_кнопки", 650, 100)}}
 
-> **Примечание:** Проблема с приведенным выше примером, конечно, заключается в том, что пользователь не будет знать, что такое ключ доступа! На реальном сайте вам пришлось бы предоставлять эту информацию таким образом, чтобы это не противоречило дизайну сайта (например, путем предоставления легкодоступной ссылки, которая указывает на информацию о том, что такое ключи доступа к сайту).
+> [!NOTE]
+> Проблема с приведенным выше примером, конечно, заключается в том, что пользователь не будет знать, что такое ключ доступа! На реальном сайте вам пришлось бы предоставлять эту информацию таким образом, чтобы это не противоречило дизайну сайта (например, путем предоставления легкодоступной ссылки, которая указывает на информацию о том, что такое ключи доступа к сайту).
 
 ### Выключенные / Включённые кнопки
 
@@ -166,7 +205,8 @@ function disableButton() {
 
 {{EmbedLiveSample("Hidden_code_2", 650, 60)}}
 
-> **Примечание:** Firefox, в отличие от других браузеров, по умолчанию [сохраняет динамическое отключенние состояния](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) из одного {{HTMLElement("button")}} при загрузке разных страниц. Используйте атрибут [`autocomplete`](/ru/docs/Web/HTML/Element/button#autocomplete) для управления этой функцией.
+> [!NOTE]
+> Firefox, в отличие от других браузеров, по умолчанию [сохраняет динамическое отключенние состояния](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) из одного {{HTMLElement("button")}} при загрузке разных страниц. Используйте атрибут [`autocomplete`](/ru/docs/Web/HTML/Element/button#autocomplete) для управления этой функцией.
 
 ## Валидация
 
@@ -318,4 +358,4 @@ draw();
 
 - {{HTMLElement("input")}} и {{domxref("HTMLInputElement")}} интерфейс, который его реализует.
 - Более современный элемент {{HTMLElement("button")}}.
-- [Совместимость свойств CSS](/ru/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [Совместимость свойств CSS](/ru/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

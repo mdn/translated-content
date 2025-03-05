@@ -127,9 +127,11 @@ try {
 
 #### ES6 사용자 정의 오류 클래스
 
-> **경고:** Babel 버전 7 미만으로 사용자 정의 오류 클래스를 처리하려면 {{jsxref("Object.defineProperty()")}} 메서드를 사용해 정의해야만 합니다. 그렇지 않으면 오래된 Babel 및 다른 트랜스파일러가 [추가 설정](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend) 없이 코드를 처리할 수 없습니다.
+> [!WARNING]
+> Babel 버전 7 미만으로 사용자 정의 오류 클래스를 처리하려면 {{jsxref("Object.defineProperty()")}} 메서드를 사용해 정의해야만 합니다. 그렇지 않으면 오래된 Babel 및 다른 트랜스파일러가 [추가 설정](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend) 없이 코드를 처리할 수 없습니다.
 
-> **참고:** ES2015 클래스를 사용할 때, 일부 브라우저는 <code>CustomError</code> 생성자를 스택 트레이스에 포함합니다.
+> [!NOTE]
+> ES2015 클래스를 사용할 때, 일부 브라우저는 <code>CustomError</code> 생성자를 스택 트레이스에 포함합니다.
 
 ```js
 class CustomError extends Error {

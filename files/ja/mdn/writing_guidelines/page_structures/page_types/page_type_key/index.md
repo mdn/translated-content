@@ -2,12 +2,12 @@
 title: フロントマターの page-type キー
 slug: MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key
 l10n:
-  sourceCommit: 4b913532d9ec0c30da355b46b1330f50bca1f1ea
+  sourceCommit: f35cce90b6bfd96bcbe195530ccfba8458e455dd
 ---
 
 {{MDNSidebar}}
 
-> **注目:** **訳注:** 翻訳記事には `page-type` キーを設定しないでください。英語版記事の設定されたキーが使用されます。以下の記事は、 MDN Web Docs の構造を理解しやすくするために翻訳しておきます。
+> **注目:** **訳注:** 翻訳記事には `page-type` キーを設定しないでください。英語版記事に設定されたキーが使用されます。以下の記事は、MDN Web Docs の構造を理解しやすくするために翻訳しておきます。
 
 フロントマターの `page-type` キーは MDN ページ型を記述します。
 これにより、 MDN コンテンツツールはコンテンツチェックやサイドバーの整理を自動化することができます。
@@ -29,8 +29,8 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 以下のページ型は MDN の特定の技術分野に依存するものではありません。
 
-- `guide`: 特有の構造を持たない一般的なガイドページです。[概要ページ](#概要ページ)を参照してください。
-- `landing-page`: 他のページへのリンクが掲載されている、主にナビゲーションの補助として機能するページ。[ランディングページ](#ランディングページ)を参照してください。
+- `guide`: 特有の構造を持たない一般的なガイドページです。
+- `landing-page`: 他のページへのリンクが掲載されている、主にナビゲーションの補助として機能するページ。
 - `how-to`: 主に目的志向の手引き記事として機能するページ。
 - `tutorial`: 学習指向の記事の概要ページです。
 - `tutorial-chapter`: 複数部構成のチュートリアルの一部であるページ。
@@ -60,7 +60,7 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 この節では、[Web/CSS](/ja/docs/Web/CSS)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `css-at-rule`: [アットルール](/ja/docs/Web/CSS/At-rule)。例えば {{cssxref("@charset")}} など。
+- `css-at-rule`: [アットルール](/ja/docs/Web/CSS/At-rule)。例えば {{cssxref("@media")}} など。
 - `css-at-rule-descriptor`: アットルール記述子。例えば [`@counter-style/prefix`](/ja/docs/Web/CSS/@counter-style/prefix) など。
 - `css-combinator`: 結合子。例えば[子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)など。
 - `css-function`: [関数](/ja/docs/Web/CSS/CSS_Functions)。例えば {{cssxref("max")}} など。
@@ -139,15 +139,15 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 この節では、[Web/API](/ja/docs/Web/API)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
 - `web-api-overview`: ある Web API の概要。例えば[フェッチ API](/ja/docs/Web/API/Fetch_API) など。
-- `web-api-global-function`: グローバル関数。例えば [`fetch()`](/ja/docs/Web/API/fetch) など。
-- `web-api-global-property`: グローバルプロパティ。例えば [`origin`](/ja/docs/Web/API/origin) など。
+- `web-api-global-function`: グローバル関数。例えば [`fetch()`](/ja/docs/Web/API/Window/fetch) など。
+- `web-api-global-property`: グローバルプロパティ。
 - `web-api-interface`: Web API インターフェイス。例えば [`Request`](/ja/docs/Web/API/Request) など。
 - `web-api-constructor`: コンストラクター。例えば [`Request()`](/ja/docs/Web/API/Request/Request) など。
 - `web-api-instance-method`: インスタンスメソッド。例えば [`cache.add()`](/ja/docs/Web/API/Cache/add) など。
 - `web-api-instance-property`: インスタンスプロパティ。例えば [`request.headers`](/ja/docs/Web/API/Request/headers) など。
 - `web-api-static-method`: 静的メソッド。例えば [`Response.error()`](/ja/docs/Web/API/Response/error_static) など。
 - `web-api-static-property`: 静的プロパティ。例えば [`Notification.permission`](/ja/docs/Web/API/Notification/permission_static) など。
-- `web-api-event`: イベント。例えば [`Notification.click`](/ja/docs/Web/API/Notification/click_event) など。[API リファレンスサブページ](#api_リファレンスサブページ)を参照してください。
+- `web-api-event`: イベント。例えば [`Notification.click`](/ja/docs/Web/API/Notification/click_event) など。
 - `webgl-extension`: WebGL 拡張機能。例えば [`WEBGL_draw_buffers`](/ja/docs/Web/API/WEBGL_draw_buffers) など。
 - `webgl-extension-method`: WebGL 拡張機能メソッド。例えば [`OES_vertex_array_object.bindVertexArrayOES()`](/ja/docs/Web/API/OES_vertex_array_object/bindVertexArrayOES) など。
 
@@ -155,13 +155,13 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 この節では [WebAssembly/](/ja/docs/WebAssembly) の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記に掲載されている値のいずれかでなければなりません。
 
-- `webassembly-function`: グローバル関数のうち、 `WebAssembly` オブジェクト直下のメソッドで、名前空間として動作するもの。例えば [`WebAssembly.instantiate()`](WebAssembly/JavaScript_interface/instantiate) など。
-- `webassembly-constructor`: コンストラクター。例えば [`WebAssembly.Exception()`](WebAssembly/JavaScript_interface/Exception/Exception) など。
-- `webassembly-interface`: WebAssembly インターフェイス。例えば [`WebAssembly.LinkError`](WebAssembly/JavaScript_interface/LinkError) など。
-- `webassembly-instance-property`: インスタンスプロパティ。例えば [`WebAssembly.Instance.exports`](WebAssembly/JavaScript_interface/Instance/exports) など。
-- `webassembly-instance-method`: インスタンスメソッド。例えば [`WebAssembly.Exception.getArg()`](WebAssembly/JavaScript_interface/Exception/getArg) など。
-- `webassembly-static-method`: 静的メソッド。例えば [`WebAssembly.Module.exports()`](WebAssembly/JavaScript_interface/Module/exports_static) など。
-- `webassembly-instruction`: 命令または命令の集合。例えば [`Wrap`](WebAssembly/Reference/Numeric/Wrap) など。
+- `webassembly-function`: グローバル関数のうち、 `WebAssembly` オブジェクト直下のメソッドで、名前空間として動作するもの。例えば [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/JavaScript_interface/instantiate_static) など。
+- `webassembly-constructor`: コンストラクター。例えば [`WebAssembly.Exception()`](/ja/docs/WebAssembly/JavaScript_interface/Exception/Exception) など。
+- `webassembly-interface`: WebAssembly インターフェイス。例えば [`WebAssembly.LinkError`](/ja/docs/WebAssembly/JavaScript_interface/LinkError) など。
+- `webassembly-instance-property`: インスタンスプロパティ。例えば [`WebAssembly.Instance.exports`](/ja/docs/WebAssembly/JavaScript_interface/Instance/exports) など。
+- `webassembly-instance-method`: インスタンスメソッド。例えば [`WebAssembly.Exception.getArg()`](/ja/docs/WebAssembly/JavaScript_interface/Exception/getArg) など。
+- `webassembly-static-method`: 静的メソッド。例えば [`WebAssembly.Module.exports()`](/ja/docs/WebAssembly/JavaScript_interface/Module/exports_static) など。
+- `webassembly-instruction`: 命令または命令の集合。例えば [`Wrap`](/ja/docs/WebAssembly/Reference/Numeric/Wrap) など。
 
 ### WebDriver のページ型
 
@@ -199,7 +199,7 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 この節では、[Web/XSLT](/ja/docs/Web/XSLT)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
 - `xslt-element`: XSLT の要素。例えば [`<xsl:message>`](/ja/docs/Web/XSLT/Element/message) など。
-- `xslt-axis`: XSLT の軸。例えば [`ancestor`](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/ancestor) など。
+- `xslt-axis`: XSLT の軸。例えば [`ancestor`](/ja/docs/Web/XPath/Axes) など。
 
 ### EXSLT のページ型
 

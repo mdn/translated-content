@@ -9,7 +9,39 @@ l10n:
 
 **`disabled`** は論理属性で、存在する場合、その要素は変更不可、フォーカス不可、フォームへの送信不可となります。ユーザーはそのコントロールやフォームコントロールの子孫を編集したり、フォーカスしたりすることができません。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-disabled.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: disabled", "tabbed-standard")}}
+
+```html interactive-example
+<form>
+  <label for="name">Name:</label>
+  <input id="name" name="name" type="text" />
+
+  <label for="emp">Employed:</label>
+  <select id="emp" name="emp" disabled>
+    <option>No</option>
+    <option>Yes</option>
+  </select>
+
+  <label for="empDate">Employment Date:</label>
+  <input id="empDate" name="empDate" type="date" disabled />
+
+  <label for="resume">Resume:</label>
+  <input id="resume" name="resume" type="file" />
+</form>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+*:disabled {
+  background-color: dimgrey;
+  color: linen;
+  opacity: 1;
+}
+```
 
 ## 概要
 
@@ -47,7 +79,7 @@ Firefox は他のブラウザーとは異なり、ページを再読み込みし
 
 ## 例
 
-フォームコントロールが無効になったとき、多くのブラウザーは既定で、より薄いグレーアウトした色で表示します。ここでは、無効になったチェックボックス、ラジオボタン、 {{ HTMLElement("option") }} と {{ HTMLElement("optgroup") }} の例と、祖先の {{HTMLElement("fieldset")}} 要素に設定された disabled 属性によって無効にされているいくつかのフォーム制御の例を示します。 {{ HTMLElement("option") }} は無効になっていますが、 {{ HTMLElement("select") }} 自体は無効になっていません。 {{ HTMLElement("select") }} 是t内を無効にするには、子孫ではなく、その要素にこの属性を追加します。
+フォームコントロールが無効になったとき、多くのブラウザーは既定で、より薄いグレーアウトした色で表示します。ここでは、無効になったチェックボックス、ラジオボタン、 {{ HTMLElement("option") }} と {{ HTMLElement("optgroup") }} の例と、祖先の {{HTMLElement("fieldset")}} 要素に設定された disabled 属性によって無効にされているいくつかのフォーム制御の例を示します。 {{ HTMLElement("option") }} は無効になっていますが、 {{ HTMLElement("select") }} 自体は無効になっていません。 {{ HTMLElement("select") }} 自体を無効にするには、子孫ではなく、その要素にこの属性を追加します。
 
 ```html-nolint
 <fieldset>

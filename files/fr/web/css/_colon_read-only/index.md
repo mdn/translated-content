@@ -1,5 +1,5 @@
 ---
-title: ":read-only"
+title: :read-only
 slug: Web/CSS/:read-only
 ---
 
@@ -22,7 +22,8 @@ input:read-only {
 }
 ```
 
-> **Note :** Ce sélecteur ne permet pas de cibler que les éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} avec [`readonly`](/fr/docs/Web/HTML/Element/input#readonly). Il permet de sélectionner n'importe quel élément qui ne peut pas être édité par l'utilisateur.
+> [!NOTE]
+> Ce sélecteur ne permet pas de cibler que les éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} avec [`readonly`](/fr/docs/Web/HTML/Element/input#readonly). Il permet de sélectionner n'importe quel élément qui ne peut pas être édité par l'utilisateur.
 
 ## Syntaxe
 

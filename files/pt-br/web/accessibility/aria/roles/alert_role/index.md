@@ -27,7 +27,8 @@ Os produtos de tecnologias assistivas devem atender tal evento e notificar seus 
 - Leitores de tela podem interromper a produção corrente (quer sejam a fala, ou o braille) e, imediatamente, anunciar, ou exibir, a mensagem de alerta.
 - Ampliadores de tela podem, visualmente, indicar que houve um alerta e qual era o seu texto.
 
-> **Nota:** As opiniões podem divergir sobre como uma tecnologia assistiva deve gerenciar esta técnica. A informação oferecida acima é uma dessas opiniões e, portanto, não é normativa.
+> [!NOTE]
+> As opiniões podem divergir sobre como uma tecnologia assistiva deve gerenciar esta técnica. A informação oferecida acima é uma dessas opiniões e, portanto, não é normativa.
 
 ### Exemplos
 

@@ -10,7 +10,8 @@ l10n:
 
 **`unregister()`** メソッドは、システムに特定の端点の登録を脱退して削除するよう依頼するために使用していました。
 
-> **メモ:** 更新された API では、サブスクリプションは {{domxref("PushSubscription.unsubscribe()")}} メソッドで脱退することができます。
+> [!NOTE]
+> 更新された API では、サブスクリプションは {{domxref("PushSubscription.unsubscribe()")}} メソッドで脱退することができます。
 
 ## 構文
 

@@ -31,7 +31,7 @@ generate-id( [node-set] )
 
 ### 정의
 
-[XSLT 1.0 12.4](http://www.w3.org/TR/xslt#function-generate-id)
+[XSLT 1.0 12.4](https://www.w3.org/TR/xslt#function-generate-id)
 
 ### Gecko 지원
 

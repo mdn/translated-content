@@ -5,9 +5,9 @@ slug: Web/API/IDBCursor
 
 {{APIRef("IndexedDB")}}
 
-[IndexedDB API](/zh-CN/docs/IndexedDB) 中的 `IDBCursor` 接口表示一个游标，用于遍历或迭代数据库中的多条记录。
+[IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 中的 `IDBCursor` 接口表示一个游标，用于遍历或迭代数据库中的多条记录。
 
-游标有一个源，指示需要遍历哪一个索引或者对象存储区。它在所属区间范围内有一个位置，根据记录健（存储字段）的顺序递增或递减方向移动。游标使应用程序能够异步处理在游标范围内的所有记录。
+游标有一个源，指示需要遍历哪一个索引或者对象存储区。它在所属区间范围内有一个位置，根据记录键（存储字段）的顺序递增或递减方向移动。游标使应用程序能够异步处理在游标范围内的所有记录。
 
 你可以在同一时间拥有无数个游标。你总会获得表示给定游标的同样的 `IDBCursor` 对象。在基础索引或对象存储上执行操作。
 
@@ -16,7 +16,7 @@ slug: Web/API/IDBCursor
 - {{domxref("IDBCursor.advance")}}
   - : 设置光标向前移动位置的次数。
 - {{domxref("IDBCursor.continue")}}
-  - : 将游标按它的方向移动到下一个位置，到其健与可选健参数匹配的项。
+  - : 将游标按它的方向移动到下一个位置，到其键与可选键参数匹配的项。
 - {{domxref("IDBCursor.delete")}}
   - : 返回一个 {{domxref("IDBRequest")}} 对象，并且在一个单独的线程中，删除游标位置记录，而不改变游标的位置。这个可以用作删除一些特定的记录。
 - {{domxref("IDBCursor.update")}}
@@ -37,7 +37,8 @@ slug: Web/API/IDBCursor
 
 {{deprecated_header}}
 
-> **警告：** 这些常量不再被支持。你应该使用字符串常量。([Firefox bug 891944](https://bugzil.la/891944))
+> [!WARNING]
+> 这些常量不再被支持。你应该使用字符串常量。([Firefox bug 891944](https://bugzil.la/891944))
 
 - `NEXT`: `"next"` :游标展示所有记录，包括重复的记录。它从主键区间下届开始逐步上升（按键的顺序单调递增）。
 - `NEXTUNIQUE` : `"nextunique"` : 游标展示所有记录，不包括重复的记录。如果同一个主键存在重复的记录，只有第一条迭代记录被取出。它从主键区间的下界开始逐步上升

@@ -9,9 +9,20 @@ l10n:
 
 **`spellcheck`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)是一个[枚举](/zh-CN/docs/Glossary/Enumerated)属性，定义是否可以检查元素的拼写错误。
 
-> **备注：** 此属性仅仅是浏览器的一个提示：浏览器并不会强制去检查拼写错误。通常不检查不可编辑元素的拼写错误，即使 `spellcheck` 属性设置为 `true`，并且浏览器支持拼写检查。
+> [!NOTE]
+> 此属性仅仅是浏览器的一个提示：浏览器并不会强制去检查拼写错误。通常不检查不可编辑元素的拼写错误，即使 `spellcheck` 属性设置为 `true`，并且浏览器支持拼写检查。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-spellcheck.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: spellcheck", "tabbed-shorter")}}
+
+```html interactive-example
+<textarea spellcheck="true">
+This exampull will be checkd fur spellung when you try to edit it.</textarea
+>
+
+<textarea spellcheck="false">
+This exampull will nut be checkd fur spellung when you try to edit it.</textarea
+>
+```
 
 它可以具有以下值：
 

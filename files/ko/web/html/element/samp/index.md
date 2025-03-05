@@ -7,7 +7,21 @@ slug: Web/HTML/Element/samp
 
 **HTML `<samp>` 요소**는 컴퓨터 프로그램 출력의 예시(혹은 인용문)를 나타냅니다. 보통 브라우저의 기본 고정폭 글씨체(보통 Courier, Lucida Console)를 사용해 렌더링합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/samp.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;samp&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>I was trying to boot my computer, but I got this hilarious message:</p>
+
+<p>
+  <samp>Keyboard not found <br />Press F1 to continue</samp>
+</p>
+```
+
+```css interactive-example
+samp {
+  font-weight: bold;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -37,7 +51,7 @@ slug: Web/HTML/Element/samp
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -74,7 +88,8 @@ samp {
 }
 ```
 
-> **참고:** 웹사이트나 앱의 JavaScript 코드 출력을 담을 컨테이너 요소가 필요하다면 {{HTMLElement("output")}} 요소를 사용해야 합니다.
+> [!NOTE]
+> 웹사이트나 앱의 JavaScript 코드 출력을 담을 컨테이너 요소가 필요하다면 {{HTMLElement("output")}} 요소를 사용해야 합니다.
 
 ## 예제
 

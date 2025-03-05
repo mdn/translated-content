@@ -46,7 +46,8 @@ Referrer-Policy: unsafe-url
 
   - : 无论是同源请求还是非同源请求，都发送完整的 URL（移除参数信息之后）作为引用地址。
 
-    > **备注：** 这项设置会将受 TLS 安全协议保护的资源的源和路径信息泄露给非安全的源服务器。进行此项设置的时候要慎重考虑。
+    > [!NOTE]
+    > 这项设置会将受 TLS 安全协议保护的资源的源和路径信息泄露给非安全的源服务器。进行此项设置的时候要慎重考虑。
 
 ## 集成到 HTML
 
@@ -115,7 +116,8 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 
 {{Compat}}
 
-> **备注：** 从版本 53 起，Gecko 在 about:config 中提供了一项偏好设置，使得用户可以自行设定默认的 Referrer-Policy 值——network.http.referer.userControlPolicy。可选的值包括：
+> [!NOTE]
+> 从版本 53 起，Gecko 在 about:config 中提供了一项偏好设置，使得用户可以自行设定默认的 Referrer-Policy 值——network.http.referer.userControlPolicy。可选的值包括：
 
 - 0 — `no-referrer`
 - 1 — `same-origin`

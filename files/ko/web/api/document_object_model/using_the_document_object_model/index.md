@@ -9,7 +9,7 @@ The W3C's DOM Level 1 Core 는 documents의 콘텐츠 트리를 변경하기 위
 
 ## What is a content tree?
 
-많은 HTML 웹 페이지 저자(이하 개발자)는 HTML를 - 태그와 글자로 버무려진 - 평평한 무언가라고 생각할 수 있습니다. 하지만 HTML은, 그 이상의 의미를 가지고 있습니다. 모든 HTML 문서 (SGML document or XML document 또한) 트리 구조를 가지고 있습니다. 예를 들면 아래의 문서와 도면의 구조는 굉장히 유사합니다. (완전히 같지는 않습니다! [whitespace in the DOM](/ko/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM) 문서를 참조하세요.)
+많은 HTML 웹 페이지 저자(이하 개발자)는 HTML를 - 태그와 글자로 버무려진 - 평평한 무언가라고 생각할 수 있습니다. 하지만 HTML은, 그 이상의 의미를 가지고 있습니다. 모든 HTML 문서 (SGML document or XML document 또한) 트리 구조를 가지고 있습니다. 예를 들면 아래의 문서와 도면의 구조는 굉장히 유사합니다. (완전히 같지는 않습니다! [whitespace in the DOM](/ko/docs/Web/API/Document_Object_Model/Whitespace) 문서를 참조하세요.)
 
 ```html
 <html>
@@ -80,6 +80,6 @@ function change() {
 
 ## How can I learn more?
 
-이제 DOM의 기본적인 개념에 대한 설명이 끝났습니다. [DOM Level 1 fundamental methods](/ko/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces) 에 대해서 궁금하시다면, 더 자세히 공부하실 수 있습니다.
+이제 DOM의 기본적인 개념에 대한 설명이 끝났습니다. [DOM Level 1 fundamental methods](/ko/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces) 에 대해서 궁금하시다면, 더 자세히 공부하실 수 있습니다.
 
 더욱 정확하고 엄밀한 설명은 W3C [DOM Level 1 Core specification](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) 에서 확인하실 수 있습니다. 개발자에게 정보는 DOM 객체에 대한 설명과, 객체의 특성과 메소드에 대한 설명이 특히 유용합니다. [MDN의 다른 DOM 관련 문서](/ko/docs/Web/API/Document_Object_Model)도 참고 부탁 드립니다.

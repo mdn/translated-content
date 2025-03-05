@@ -5,13 +5,14 @@ slug: Web/SVG/Attribute/stroke-dashoffset
 
 > **Примечание:** **Прежняя редакция:** « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 > Этот атрибут определяет смещение обводки относительно начального положения.
-> При использовании [\<percentage>](/ru/docs/SVG/Content_type#percentage), значение будет вычисляться от текущего viewport.
+> При использовании [\<percentage>](/ru/docs/Web/SVG#percentage), значение будет вычисляться от текущего viewport.
 > Значение может быть отрицательным.
 
 {{SVGRef}}
 Атрибут **`stroke-dashoffset`** определяет сдвиг массива **dash array** относительно начального положения.
 
-> **Примечание:** Атрибут `stroke-dashoffset` может использоваться как свойство CSS.
+> [!NOTE]
+> Атрибут `stroke-dashoffset` может использоваться как свойство CSS.
 
 Как атрибут представления, он может применяться к любому элементу, но влияет только на следующие одиннадцать элементов: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
 
@@ -92,5 +93,5 @@ svg {
 
 Следующие элементы могут использовать атрибут `stroke-dashoffset`
 
-- [Элементы форм](/ru/docs/SVG/Element#shape)
-- [Текстовые элементы](/ru/docs/SVG/Element#textcontent)
+- [Элементы форм](/ru/docs/Web/SVG/Element#shape)
+- [Текстовые элементы](/ru/docs/Web/SVG/Element#textcontent)

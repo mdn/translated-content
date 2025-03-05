@@ -2,7 +2,7 @@
 title: text-wrap
 slug: Web/CSS/text-wrap
 l10n:
-  sourceCommit: 8d4fb1e2934111a13989d2796152dc601468e7b5
+  sourceCommit: 4809e8217288dc7e1372d5c74140ca6661673206
 ---
 
 {{CSSRef}}
@@ -11,8 +11,6 @@ l10n:
 
 - 組版の改善、例えば見出しの行の長さのバランスの改善。
 - テキストの折り返しを完全にオフにする方法。
-
-> **メモ:** {{CSSxRef("white-space-collapse")}} と `text-wrap` プロパティは {{CSSxRef("white-space")}} 一括指定プロパティを用いて一緒に宣言することができます。
 
 {{EmbedInteractiveExample("pages/css/text-wrap.html")}}
 
@@ -82,7 +80,7 @@ text-wrap: unset;
 
 #### HTML
 
-```html
+```html live-sample___examples
 <h2 class="wrap" contenteditable="true">
   既定の動作。この見出しのテキストは「通常通り」に折り返します。
 </h2>
@@ -98,7 +96,7 @@ text-wrap: unset;
 
 #### CSS
 
-```css
+```css live-sample___examples
 .wrap {
   text-wrap: wrap;
 }
@@ -121,7 +119,7 @@ h2 {
 
 この例のテキストは編集可能です。テキストを変更し、長い単語を追加して、行や単語の長さの違いが折り返しにどのように影響するかを見てみましょう。
 
-{{EmbedLiveSample("基本的なテキスト折り返し値の比較", "100%", 350)}}
+{{EmbedLiveSample("Examples", "100%", 350)}}
 
 ## 仕様書
 
@@ -136,5 +134,5 @@ h2 {
 - {{CSSxRef("white-space")}}
 - {{CSSxRef("white-space-collapse")}}
 - [CSS テキストモジュール](/ja/docs/Web/CSS/CSS_text)
-- [CSS `text-wrap: balance`](https://developer.chrome.com/blog/css-text-wrap-balance/) (developer.chrome.com)
+- [CSS `text-wrap: balance`](https://developer.chrome.com/docs/css-ui/css-text-wrap-balance) (developer.chrome.com)
 - [CSS `text-wrap: pretty`](https://developer.chrome.com/blog/css-text-wrap-pretty/) (developer.chrome.com)

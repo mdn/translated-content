@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4ca4fa3d9d1de5601b406b13dc75aff30709c66f
 ---
 
-[事件](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)的触发用于通知“对变化感兴趣”的代码以影响代码的执行。这些事件可能来自用户的交互（例如：使用鼠标或调整窗口大小）、底层环境状态的改变（例如：电池电量不足或操作系统的媒体事件）和其他的情况。
+[事件](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)的触发用于通知“对变化感兴趣”的代码以影响代码的执行。这些事件可能来自用户的交互（例如：使用鼠标或调整窗口大小）、底层环境状态的改变（例如：电池电量不足或操作系统的媒体事件）和其他的情况。
 
 每个事件都使用继承自 {{domxref("Event")}} 接口的对象来表示，可以包括额外的自定义成员属性及函数，以获取事件发生时相关的更多信息。本文为每个事件都提供了一个表格（靠近顶部的区域），其中包含了指向相关事件接口的链接和其他相关的信息。[事件 > 基于 `Event` 的接口](/zh-CN/docs/Web/API/Event#基于_event_的接口)中完整地列出了不同的事件类型。
 
@@ -34,11 +34,11 @@ l10n:
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/Document#animation_events"
+        <a href="/zh-CN/docs/Web/API/Document#动画事件"
           ><code>Document</code></a
-        >、<a href="/zh-CN/docs/Web/API/Window#animation_events"
+        >、<a href="/zh-CN/docs/Web/API/Window#动画事件"
           ><code>Window</code></a
-        >、<a href="/zh-CN/docs/Web/API/HTMLElement#animation_events"
+        >、<a href="/zh-CN/docs/Web/API/HTMLElement#动画事件"
           ><code>HTMLElement</code></a
         > 上触发的事件。
       </td>
@@ -48,11 +48,11 @@ l10n:
       <td><p>与数据获取相关的事件。</p></td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/AbortSignal#事件处理"
+        <a href="/zh-CN/docs/Web/API/AbortSignal#事件"
           ><code>AbortSignal</code></a
         >、<a href="/zh-CN/docs/Web/API/XMLHttpRequest#事件"
           ><code>XMLHttpRequest</code></a
-        >、<a href="/zh-CN/docs/Web/API/FileReader#事件处理"
+        >、<a href="/zh-CN/docs/Web/API/FileReader#事件"
           ><code>FileReader</code></a
         > 上触发的事件。
       </td>
@@ -68,17 +68,17 @@ l10n:
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/Document#animation_events"
+        <a href="/zh-CN/docs/Web/API/Document#剪切板事件"
           ><code>Document</code></a
-        >、<a href="/zh-CN/docs/Web/API/Window#animation_events"
+        >、<a href="/zh-CN/docs/Web/API/Element#剪切板事件"
+          ><code>Element</code></a
+        >、<a href="/zh-CN/docs/Web/API/Window#剪切板事件"
           ><code>Window</code></a
-        >、<a href="/zh-CN/docs/Web/API/HTMLElement#animation_events"
-          ><code>HTMLElement</code></a
         > 上触发的事件。
       </td>
     </tr>
     <tr>
-      <td>文本输入（Composition）</td>
+      <td>合成（Composition）</td>
       <td>
         <p>
           与文本输入相关的事件；“间接”输入文本（而不是直接使用常规的键盘输入）。
@@ -89,30 +89,30 @@ l10n:
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/Element#composition_events"
+        <a href="/zh-CN/docs/Web/API/Element#合成事件"
           ><code>Element</code></a
         > 上触发的事件。
       </td>
     </tr>
     <tr>
-      <td>CSS 变换</td>
+      <td>CSS 过渡</td>
       <td>
         <p>
           与
-          <a href="/zh-CN/docs/Web/CSS/CSS_transitions">CSS 变换</a>相关的事件。
+          <a href="/zh-CN/docs/Web/CSS/CSS_transitions">CSS 过渡</a>相关的事件。
         </p>
         <p>
-          当 CSS 变换开始、停止或取消等事件发生时发出通知。
+          当 CSS 过渡开始、停止或取消等事件发生时发出通知。
         </p>
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/Document#animation_events"
+        <a href="/zh-CN/docs/Web/API/Document#过渡事件"
           ><code>Document</code></a
-        >、<a href="/zh-CN/docs/Web/API/Window#animation_events"
-          ><code>Window</code></a
-        >、<a href="/zh-CN/docs/Web/API/HTMLElement#animation_events"
+        >、<a href="/zh-CN/docs/Web/API/HTMLElement#过渡事件"
           ><code>HTMLElement</code></a
+        >、<a href="/zh-CN/docs/Web/API/Window#过渡事件"
+          ><code>Window</code></a
         > 上触发的事件。
       </td>
     </tr>
@@ -125,13 +125,13 @@ l10n:
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/IDBDatabase#event_handlers"
+        <a href="/zh-CN/docs/Web/API/IDBDatabase#事件"
           ><code>IDBDatabase</code></a
-        >、<a href="/zh-CN/docs/Web/API/IDBOpenDBRequest#events"
+        >、<a href="/zh-CN/docs/Web/API/IDBOpenDBRequest#事件"
           ><code>IDBOpenDBRequest</code></a
-        >、<a href="/zh-CN/docs/Web/API/IDBRequest#event_handlers"
+        >、<a href="/zh-CN/docs/Web/API/IDBRequest#事件"
           ><code>IDBRequest</code></a
-        >、<a href="/zh-CN/docs/Web/API/IDBTransaction#event_handlers"
+        >、<a href="/zh-CN/docs/Web/API/IDBTransaction#事件"
           ><code>IDBTransaction</code></a
         > 上触发的事件。
       </td>
@@ -147,7 +147,7 @@ l10n:
         <div class="notecard warning">
           <p>
             <strong>警告：</strong>
-            <a href="/zh-CN/docs/Web/API/MutationEvent">突变事件</a>已被废弃。请使用 <a href="/zh-CN/docs/Web/API/MutationObserver"
+            <a href="/zh-CN/docs/Web/API/MutationEvent">突变事件</a>已被弃用。请使用 <a href="/zh-CN/docs/Web/API/MutationObserver"
               >MutationObserver</a
             > 代替。
           </p>
@@ -170,7 +170,7 @@ l10n:
       <td>
         <p>
           拖放事件在
-          <a href="/zh-CN/docs/Web/API/Document#drag_drop_events"
+          <a href="/zh-CN/docs/Web/API/Document#拖放事件"
             ><code>Document</code></a
           > 上触发。
         </p>
@@ -187,9 +187,9 @@ l10n:
       <td><p>与元素获得和失去焦点相关的事件。</p></td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/Element#focus_events"
+        <a href="/zh-CN/docs/Web/API/Element#聚焦事件"
           ><code>Element</code></a
-        >、<a href="/zh-CN/docs/Web/API/Window#focus_events"><code>Window</code></a
+        >、<a href="/zh-CN/docs/Web/API/Window#聚焦事件"><code>Window</code></a
         > 上触发的事件。
       </td>
     </tr>
@@ -200,7 +200,7 @@ l10n:
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/HTMLFormElement#events"
+        <a href="/zh-CN/docs/Web/API/HTMLFormElement#事件"
           ><code>HTMLFormElement</code></a
         > 上触发。
       </td>
@@ -235,7 +235,7 @@ l10n:
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/Window#gamepad_events"
+        <a href="/zh-CN/docs/Web/API/Window#gamepad_事件"
           ><code>Window</code></a
         > 上触发的事件。
       </td>
@@ -251,16 +251,16 @@ l10n:
       <td>
         <p>
           在
-          <a href="/zh-CN/docs/Web/API/Document#touch_events"
+          <a href="/zh-CN/docs/Web/API/Document#触摸事件"
             ><code>Document</code></a
-          >、<a href="/zh-CN/docs/Web/API/Element#touch_events"
+          >、<a href="/zh-CN/docs/Web/API/Element#触摸事件"
             ><code>Element</code></a
           > 上触发的事件。
         </p>
         <p>此外还有一些非标准的手势事件：</p>
         <ul>
           <li>
-            WebKit 非标准的、在 <a href="/zh-CN/docs/Web/API/Element#touch_events"
+            WebKit 非标准的、在 <a href="/zh-CN/docs/Web/API/Element#触摸事件"
               ><code>Element</code></a
             > 上的事件：
             <a href="/zh-CN/docs/Web/API/Element/gesturestart_event"
@@ -285,7 +285,7 @@ l10n:
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/Window#history_events"
+        <a href="/zh-CN/docs/Web/API/Window#历史记录事件"
           ><code>Window</code></a
         > 上触发的事件。
       </td>
@@ -299,11 +299,11 @@ l10n:
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/HTMLDetailsElement#events"
+        <a href="/zh-CN/docs/Web/API/HTMLDetailsElement#事件"
           ><code>HTMLDetailsElement</code></a
-        >、<a href="/zh-CN/docs/Web/API/HTMLDialogElement#events"
+        >、<a href="/zh-CN/docs/Web/API/HTMLDialogElement#事件"
           ><code>HTMLDialogElement</code></a
-        >、<a href="/zh-CN/docs/Web/API/HTMLSlotElement#events"
+        >、<a href="/zh-CN/docs/Web/API/HTMLSlotElement#事件"
           ><code>HTMLSlotElement</code></a
         > 上触发的事件。
       </td>
@@ -317,9 +317,9 @@ l10n:
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/HTMLElement#input_events"
+        <a href="/zh-CN/docs/Web/API/HTMLElement#输入事件"
           ><code>HTMLElement</code></a
-        >、<a href="/zh-CN/docs/Web/API/HTMLInputElement#events"
+        >、<a href="/zh-CN/docs/Web/API/HTMLInputElement#事件"
           ><code>HTMLInputElement</code></a
         > 上触发的事件。
       </td>
@@ -334,9 +334,9 @@ l10n:
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/Document#keyboard_events"
+        <a href="/zh-CN/docs/Web/API/Document#键盘事件"
           ><code>Document</code></a
-        >、<a href="/zh-CN/docs/Web/API/Element#keyboard_events"
+        >、<a href="/zh-CN/docs/Web/API/Element#键盘事件"
           ><code>Element</code></a
         > 上触发的事件。
       </td>
@@ -347,10 +347,10 @@ l10n:
       <td>
         <p>
           在
-          <a href="/zh-CN/docs/Web/API/Document#load_unload_events"
+          <a href="/zh-CN/docs/Web/API/Document#加载和卸载事件"
             ><code>Document</code></a
           > 和
-          <a href="/zh-CN/docs/Web/API/Window#load_unload_events"
+          <a href="/zh-CN/docs/Web/API/Window#加载和卸载事件"
             ><code>Window</code></a
           > 上触发的事件。
         </p>
@@ -360,12 +360,12 @@ l10n:
       <td>清单</td>
       <td>
         <p>
-          与安装<a href="/zh-CN/docs/Web/Manifest">渐进式 web 应用清单</a>相关的事件。
+          与安装<a href="/zh-CN/docs/Web/Progressive_web_apps/Manifest">渐进式 web 应用清单</a>相关的事件。
         </p>
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/Window#manifest_events"
+        <a href="/zh-CN/docs/Web/API/Window#清单事件"
           ><code>Window</code></a
         > 上触发的事件
       </td>
@@ -377,35 +377,35 @@ l10n:
           与媒体使用（包括<a
             href="/zh-CN/docs/Web/API/Media_Capture_and_Streams_API#事件"
             >媒体捕捉与媒体流 API</a
-          >、<a href="/zh-CN/docs/Web/API/Web_Audio_API#events">Web Audio API</a>、<a href="/zh-CN/docs/Web/API/Picture-in-Picture_API#事件"
+          >、<a href="/zh-CN/docs/Web/API/Web_Audio_API#事件">Web Audio API</a>、<a href="/zh-CN/docs/Web/API/Picture-in-Picture_API#事件"
             >画中画 API</a
           >，等等）相关的事件。
         </p>
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/ScriptProcessorNode#events"
+        <a href="/zh-CN/docs/Web/API/ScriptProcessorNode#事件"
           ><code>ScriptProcessorNode</code></a
-        >、<a href="/zh-CN/docs/Web/API/HTMLMediaElement#events"
+        >、<a href="/zh-CN/docs/Web/API/HTMLMediaElement#事件"
           ><code>HTMLMediaElement</code></a
-        >、<a href="/zh-CN/docs/Web/API/AudioTrackList#events"
+        >、<a href="/zh-CN/docs/Web/API/AudioTrackList#事件"
           ><code>AudioTrackList</code></a
-        >、<a href="/zh-CN/docs/Web/API/AudioScheduledSourceNode#events"
+        >、<a href="/zh-CN/docs/Web/API/AudioScheduledSourceNode#事件"
           ><code>AudioScheduledSourceNode</code></a
-        >、<a href="/zh-CN/docs/Web/API/MediaRecorder#events"
+        >、<a href="/zh-CN/docs/Web/API/MediaRecorder#事件"
           ><code>MediaRecorder</code></a
-        >、<a href="/zh-CN/docs/Web/API/MediaStream#events"
+        >、<a href="/zh-CN/docs/Web/API/MediaStream#事件"
           ><code>MediaStream</code></a
         >、<a href="/zh-CN/docs/Web/API/MediaStreamTrack"
           ><code>MediaStreamTrack</code></a
-        >、<a href="/zh-CN/docs/Web/API/VideoTrackList#events"
+        >、<a href="/zh-CN/docs/Web/API/VideoTrackList#事件"
           ><code>VideoTrackList</code></a
-        >、<a href="/zh-CN/docs/Web/API/HTMLTrackElement#events"
+        >、<a href="/zh-CN/docs/Web/API/HTMLTrackElement#事件"
           ><code>HTMLTrackElement</code></a
         >、<a href="/zh-CN/docs/Web/API/OfflineAudioContext#事件"
           ><code>OfflineAudioContext</code></a
-        >、<a href="/zh-CN/docs/Web/API/TextTrack#events"><code>TextTrack</code></a
-        >、<a href="/zh-CN/docs/Web/API/TextTrackList#events"
+        >、<a href="/zh-CN/docs/Web/API/TextTrack#事件"><code>TextTrack</code></a
+        >、<a href="/zh-CN/docs/Web/API/TextTrackList#事件"
           ><code>TextTrackList</code></a
         >、<a href="/zh-CN/docs/Web/HTML/Element/audio#事件">Element/audio</a>,
         <a href="/zh-CN/docs/Web/HTML/Element/video#事件">Element/video</a> 上触发的事件。
@@ -420,7 +420,7 @@ l10n:
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/Window#messaging_events"
+        <a href="/zh-CN/docs/Web/API/Window#消息事件"
           ><code>Window</code></a
         > 上触发的事件。
       </td>
@@ -440,7 +440,7 @@ l10n:
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/Element#mouse_events"
+        <a href="/zh-CN/docs/Web/API/Element#鼠标事件"
           ><code>Element</code></a
         > 上触发的事件。
       </td>
@@ -451,13 +451,13 @@ l10n:
       <td>
         <p>
           在
-          <a href="/zh-CN/docs/Web/API/Window#connection_events"
+          <a href="/zh-CN/docs/Web/API/Window#连接事件"
             ><code>Window</code></a
           > 上触发的事件。
         </p>
         <p>
           在
-          <a href="/zh-CN/docs/Web/API/NetworkInformation#event_handlers"
+          <a href="/zh-CN/docs/Web/API/NetworkInformation#事件处理器"
             ><code>NetworkInformation</code></a
           >（<a href="/zh-CN/docs/Web/API/Network_Information_API"
             >网络状况 API</a
@@ -477,9 +477,9 @@ l10n:
       <td>
         <p>
           在
-          <a href="/zh-CN/docs/Web/API/PaymentRequest#events"
+          <a href="/zh-CN/docs/Web/API/PaymentRequest#事件"
             ><code>PaymentRequest</code></a
-          >、<a href="/zh-CN/docs/Web/API/PaymentResponse#events"
+          >、<a href="/zh-CN/docs/Web/API/PaymentResponse#事件"
             ><code>PaymentResponse</code></a
           > 上触发的事件。
         </p>
@@ -498,7 +498,7 @@ l10n:
       <td>
         <p>
           在
-          <a href="/zh-CN/docs/Web/API/Performance#事件处理程序"
+          <a href="/zh-CN/docs/Web/API/Performance#事件处理器"
             ><code>Performance</code></a
           > 上触发的事件。
         </p>
@@ -516,9 +516,9 @@ l10n:
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/Document#pointer_events"
+        <a href="/zh-CN/docs/Web/API/Document#指针事件"
           ><code>Document</code></a
-        >、<a href="/zh-CN/docs/Web/API/HTMLElement#pointer_events"
+        >、<a href="/zh-CN/docs/Web/API/HTMLElement#指针事件"
           ><code>HTMLElement</code></a
         > 上触发的事件。
       </td>
@@ -528,7 +528,7 @@ l10n:
       <td><p>与打印相关的事件。</p></td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/Window#print_events"><code>Window</code></a
+        <a href="/zh-CN/docs/Web/API/Window#打印事件"><code>Window</code></a
         > 上触发的事件。
       </td>
     </tr>
@@ -541,7 +541,7 @@ l10n:
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/Window#promise_rejection_events"
+        <a href="/zh-CN/docs/Web/API/Window#promise_拒绝事件"
           ><code>Window</code></a
         > 上触发的事件。
       </td>
@@ -566,11 +566,11 @@ l10n:
       <td>
         <p>
           在
-          <a href="/zh-CN/docs/Web/API/SVGElement#events"
+          <a href="/zh-CN/docs/Web/API/SVGElement#事件"
             ><code>SVGElement</code></a
-          >、<a href="/zh-CN/docs/Web/API/SVGAnimationElement#events"
+          >、<a href="/zh-CN/docs/Web/API/SVGAnimationElement#事件"
             ><code>SVGAnimationElement</code></a
-          >、<a href="/zh-CN/docs/Web/API/SVGGraphicsElement#events"
+          >、<a href="/zh-CN/docs/Web/API/SVGGraphicsElement#事件"
             ><code>SVGGraphicsElement</code></a
           > 上触发的事件。
         </p>
@@ -599,16 +599,16 @@ l10n:
         </p>
         <p>
           在与触控屏交互（例如：用手指或触控笔）时发出通知。与
-          <a href="/zh-CN/docs/Web/API/Force_Touch_events#events"
+          <a href="/zh-CN/docs/Web/API/Force_Touch_events#事件"
             >Force Touch API</a
           > 无关。
         </p>
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/Document#touch_events"
+        <a href="/zh-CN/docs/Web/API/Document#触摸事件"
           ><code>Document</code></a
-        >、<a href="/zh-CN/docs/Web/API/Element#touch_events"
+        >、<a href="/zh-CN/docs/Web/API/Element#触摸事件"
           ><code>Element</code></a
         > 上触发的事件。
       </td>
@@ -624,17 +624,17 @@ l10n:
           <p>
             <strong>警告：</strong>
             <a href="/zh-CN/docs/Web/API/WebVR_API">WebVR API</a>（和关联的
-            <a href="/zh-CN/docs/Web/API/Window#webvr_events"
+            <a href="/zh-CN/docs/Web/API/Window#webvr_事件"
               ><code>Window</code> 事件</a
-            >）已被废弃。
+            >）已被弃用。
           </p>
         </div>
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/XRSystem#events"><code>XRSystem</code></a
-        >、<a href="/zh-CN/docs/Web/API/XRSession#events"><code>XRSession</code></a
-        >、<a href="/zh-CN/docs/Web/API/XRReferenceSpace#events"
+        <a href="/zh-CN/docs/Web/API/XRSystem#事件"><code>XRSystem</code></a
+        >、<a href="/zh-CN/docs/Web/API/XRSession#事件"><code>XRSession</code></a
+        >、<a href="/zh-CN/docs/Web/API/XRReferenceSpace#事件"
           ><code>XRReferenceSpace</code></a
         > 上触发的事件。
       </td>
@@ -649,13 +649,13 @@ l10n:
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/RTCDataChannel#events"
+        <a href="/zh-CN/docs/Web/API/RTCDataChannel#事件"
           ><code>RTCDataChannel</code></a
-        >、<a href="/zh-CN/docs/Web/API/RTCDTMFSender#events"
+        >、<a href="/zh-CN/docs/Web/API/RTCDTMFSender#事件"
           ><code>RTCDTMFSender</code></a
-        >、<a href="/zh-CN/docs/Web/API/RTCIceTransport#events"
+        >、<a href="/zh-CN/docs/Web/API/RTCIceTransport#事件"
           ><code>RTCIceTransport</code></a
-        >、<a href="/zh-CN/docs/Web/API/RTCPeerConnection#events"
+        >、<a href="/zh-CN/docs/Web/API/RTCPeerConnection#事件"
           ><code>RTCPeerConnection</code></a
         > 上触发的事件。
       </td>
@@ -687,7 +687,7 @@ l10n:
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/SpeechSynthesisUtterance#events"
+        <a href="/zh-CN/docs/Web/API/SpeechSynthesisUtterance#事件"
           ><code>SpeechSynthesisUtterance</code></a
         > 上触发的事件。
       </td>
@@ -712,15 +712,15 @@ l10n:
       </td>
       <td>
         在
-        <a href="/zh-CN/docs/Web/API/ServiceWorkerGlobalScope#events"
+        <a href="/zh-CN/docs/Web/API/ServiceWorkerGlobalScope#事件"
           ><code>ServiceWorkerGlobalScope</code></a
         >、<a href="/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope#事件"
           ><code>DedicatedWorkerGlobalScope</code></a
-        >、<a href="/zh-CN/docs/Web/API/SharedWorkerGlobalScope#events"
+        >、<a href="/zh-CN/docs/Web/API/SharedWorkerGlobalScope#事件"
           ><code>SharedWorkerGlobalScope</code></a
-        >、<a href="/zh-CN/docs/Web/API/WorkerGlobalScope#events"
+        >、<a href="/zh-CN/docs/Web/API/WorkerGlobalScope#事件"
           ><code>WorkerGlobalScope</code></a
-        >、<a href="/zh-CN/docs/Web/API/Worker#events"><code>Worker</code></a
+        >、<a href="/zh-CN/docs/Web/API/Worker#事件"><code>Worker</code></a
         >、<a href="/zh-CN/docs/Web/API/BroadcastChannel#事件"
           ><code>BroadcastChannel</code></a
         >、<a href="/zh-CN/docs/Web/API/MessagePort#事件"
@@ -737,6 +737,6 @@ l10n:
 
 <section id="Quick_links">
   <ol>
-    <li><a href="/zh-CN/docs/Learn/JavaScript/Building_blocks/Events">事件介绍</a></li>
+    <li><a href="/zh-CN/docs/Learn_web_development/Core/Scripting/Events">事件介绍</a></li>
   </ol>{{ListSubpages}}
 </section>

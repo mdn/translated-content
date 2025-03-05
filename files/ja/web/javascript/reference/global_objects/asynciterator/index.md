@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`AsyncIterator`** オブジェクトは [非同期イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル) に準拠したオブジェクトで、 `next()` メソッドを提供することでイテレーターの結果オブジェクトに履行されるプロミスを返します。 `AsyncIterator.prototype` オブジェクトは、すべての組み込み非同期イテレーターが継承する非表示のグローバルオブジェクトです。これは、非同期イテレーターオブジェクト自身を返す [`@@asyncIterator`](/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/@@asyncIterator) メソッドを提供し、非同期イテレーターを[非同期反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)にもします。
+**`AsyncIterator`** オブジェクトは [非同期イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル) に準拠したオブジェクトで、 `next()` メソッドを提供することでイテレーターの結果オブジェクトに履行されるプロミスを返します。 `AsyncIterator.prototype` オブジェクトは、すべての組み込み非同期イテレーターが継承する非表示のグローバルオブジェクトです。これは、非同期イテレーターオブジェクト自身を返す [`@@asyncIterator`](/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/Symbol.asyncIterator) メソッドを提供し、非同期イテレーターを[非同期反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)にもします。
 
 なお、`AsyncIterator` はグローバルオブジェクトではありませんが、将来的には [async iterator helpers proposal](https://github.com/tc39/proposal-async-iterator-helpers) でグローバルオブジェクトになる予定です。すべての組み込み非同期イテレーターで共有される `AsyncIterator.prototype` オブジェクトは以下のコードで取得できます。
 

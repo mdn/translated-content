@@ -2,14 +2,15 @@
 title: 知覚可能
 slug: Web/Accessibility/Understanding_WCAG/Perceivable
 l10n:
-  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
+  sourceCommit: 3a004b55441ee5ac51bd34be5f3b7c6ce693ed6d
 ---
 
 {{AccessibilitySidebar}}
 
 この記事では、ウェブコンテンツアクセシビリティガイドライン (WCAG) 2.0 および 2.1 の**知覚可能**原則に概説されている達成基準に準拠するようにウェブコンテンツを作成する方法についての実用的なアドバイスを提供します。 知覚可能とは、ユーザーが自分の感覚の 1 つ以上を使用して何らかの方法でそれを知覚できなければならないということです。
 
-> **メモ:** 知覚可能の W3C 定義とそのガイドラインおよび達成基準を読むには、[原則 1: 知覚可能 — 情報とユーザーインターフェイス・コンポーネントが、ユーザーが認識できる方法で提示可能である必要があります](https://www.w3.org/TR/WCAG21/#perceivable)（英語）を参照してください。
+> [!NOTE]
+> 知覚可能の W3C 定義とそのガイドラインおよび達成基準を読むには、[原則 1: 知覚可能 — 情報とユーザーインターフェイス・コンポーネントが、ユーザーが認識できる方法で提示可能である必要があります](https://www.w3.org/TR/WCAG21/#perceivable)（英語）を参照してください。
 
 ## ガイドライン 1.1 — 非テキストコンテンツのための代替テキストの提供
 
@@ -37,19 +38,14 @@ l10n:
     </tr>
     <tr>
       <td>
-        複雑な画像や図表には、同じページ上またはリンク先のいずれかにアクセス可能な代替手段を用意するべきです。
-        <a href="/ja/docs/Web/HTML/Element/img#longdesc"><code>longdesc</code></a>
-        属性ではなく通常のリンクを使用してください。
+        複雑な画像や図表には、同じページ上またはリンク先のいずれかにアクセス可能な代替手段を用意するべきです。 <code>longdesc</code> 属性ではなく通常のリンクを使用してください。
       </td>
       <td>
         <p>
           テキストの説明や、アクセス可能なデータ表がうまくいくかもしれません（<a
             href="/ja/docs/Learn/HTML/Tables/Advanced"
             >HTML 表の高度な機能とアクセシビリティ</a
-          >を参照）。 <code>longdesc</code> 反対論については、<a
-            href="/ja/docs/Learn/Accessibility/HTML#other_text_alternative_mechanisms"
-            >その他の代替テキストの仕組み</a
-          >も参照してください。
+          >を参照）。 <code>longdesc</code> 反対論については、 W3C の<a href="https://www.w3.org/TR/html-longdesc/">Image Description Extension (longdesc)</a>も参照してください。
         </p>
       </td>
     </tr>
@@ -68,9 +64,6 @@ l10n:
           >、
           <a href="/ja/docs/Learn/Accessibility/Multimedia#映像のテキストトラック"
             >映像のテキストトラック</a
-          >、<a
-            href="/ja/docs/Learn/Accessibility/Multimedia#other_multimedia_content"
-            >その他のマルチメディアコンテンツ</a
           >を参照してください。
         </p>
       </td>
@@ -137,7 +130,7 @@ l10n:
     <tr>
        <td>1.2.2 ウェブベースの動画にキャプションを付ける (A)</td>
        <td>ウェブ上に表示される動画（例えば、HTML 動画）には、キャプションを付けるべきです。 これは、動画の音声部分が聞こえない人々のためのものです。</td>
-       <td>HTML 動画のキャプションについては<a href="/ja/docs/Learn/Accessibility/Multimedia#映像のテキストトラック">映像のテキストトラックs</a>を、その他のテクノロジーについては<a href="/ja/docs/Learn/Accessibility/Multimedia#その他のマルチメディアコンテンツ">その他のマルチメディアコンテンツ</a>を参照してください。 <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a>（YouTube、英語）も参照してください。</td>
+       <td>HTML 動画のキャプションについては<a href="/ja/docs/Learn/Accessibility/Multimedia#映像のテキストトラック">映像のテキストトラックs</a>を参照してください。 <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a>（YouTube、英語）も参照してください。</td>
     <tr>
        <td>1.2.3 ウェブベースの動画にテキストトランスクリプトまたは音声解説を提供する (A)</td>
        <td>ウェブ上に提示される動画（例えば、HTML 動画）のためのテキストトランスクリプトまたは音声解説を提供するべきです。 これは、動画の視覚的な部分を見ることができず、音声だけではコンテンツ全体を把握できない人々のためのものです。</td>
@@ -205,8 +198,7 @@ l10n:
           <li>
             画像の代替テキスト。
             コンテンツ画像には、その画像の内容を明確に説明するテキストが含まれているべきです。
-            これは、プログラム的に関連付けることができます（例えば、<a href="/ja/docs/Web/HTML/Element/img#alt"><code>alt</code></a>
-            テキスト）。
+            これは、プログラム的に関連付けることができます（例えば、alt　テキスト）。
             そうでない場合は、関連付けるのは簡単です（例えば、それを説明し、そのすぐ隣に置きます）。
             これは、たとえあなたが画像を見ることができなくても、完全な意味がまだ推測できることを意味するはずです。
           </li>
@@ -268,7 +260,7 @@ l10n:
             キーボードショートカットや、キーボードなどの手段でアクティブにできるボタンなどの代替手段を提供する必要があります。
           </li>
         </ul>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>メモ:</strong>
             色だけで指示を伝えることは関連していますが、異なるガイドラインでカバーされています — 1.4.1。
@@ -340,7 +332,7 @@ l10n:
 
 ## ガイドライン 1.4: 前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする
 
-このガイドラインは、コアコンテンツが背景や他の装飾から識別しやすいことを確認することに関するものです。 典型的な例は、色で（色のコントラストと指示を伝えるための色の使い方の両方が）、他の状況でも適用されます。
+このガイドラインは、コアコンテンツが背景や他の装飾から識別しやすいことを確認することに関するものです。 典型的な例は、色（[色のコントラスト](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)と指示を伝えるための[色の使い方](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color)の両方が）ですが、他の状況でも適用されます。
 
 <table class="standard-table">
   <thead>
@@ -358,10 +350,14 @@ l10n:
         </p>
       </td>
       <td>
+        <a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color"
+          >色の使用</a
+        >、
         <a
           href="/ja/docs/Learn/Accessibility/CSS_and_JavaScript#色とそのコントラスト"
           >色とそのコントラスト</a
-        >および<a
+        >、
+        <a
           href="/ja/docs/Learn/Forms/How_to_structure_a_web_form#複数のラベル"
           >複数のラベル</a
         >を参照してください。
@@ -377,7 +373,7 @@ l10n:
           href="/ja/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics"
           >動画プレーヤーのスタイル設定の基本</a
         >に示すように、ネイティブの
-        <code>&#x3C;button></code>
+        <code>&lt;button&gt;</code>
         を使用してアクセス可能なキーボードコントロールを提供します。
       </td>
     </tr>
@@ -397,7 +393,9 @@ l10n:
         </ul>
       </td>
       <td>
-        <a
+        <a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast"
+          >色のコントラスト</a
+        >と<a
           href="/ja/docs/Learn/Accessibility/CSS_and_JavaScript#色とそのコントラスト"
           >色とそのコントラスト</a
         >を参照してください。
@@ -461,7 +459,7 @@ l10n:
             >）。
           </li>
           <li>
-            行の高さは、段落内ではテキストサイズの 1.5 倍以上（例えば、 `line-height: 1.5;`）、段落間ではテキストサイズの 2.25 倍以上（例えば、 `padding: 2.25rem;`）にするするべきです。
+            行の高さは、段落内ではテキストサイズの 1.5 倍以上（例えば、 <code>line-height: 1.5;</code>）、段落間ではテキストサイズの 2.25 倍以上（例えば、 <code>padding: 2.25rem;</code>）にするするべきです。
           </li>
           <li>
             テキストサイズが2倍になったときに、コンテンツのスクロールが必要になるべきではありません。
@@ -563,7 +561,7 @@ l10n:
           この達成基準では、満たす必要がある次の 3 つの条件を指定します。
         </p>
         <ul>
-          <li>却下可能（閉じたり取り除くことが可能）。</li>
+          <li>却下可能（閉じたり取り除いたりすることが可能）。</li>
           <li>
             ホバーリング可能（追加のコンテンツは、ポインターが上にあるときは消えません）。
           </li>

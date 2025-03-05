@@ -2,12 +2,12 @@
 title: PWA をインストール可能にする
 slug: Web/Progressive_web_apps/Guides/Making_PWAs_installable
 l10n:
-  sourceCommit: b3db832139d8ea77e1354b888c326f6db9ed3ef7
+  sourceCommit: 857c6f9e7f1a847e7d3466b0d047159f7b345991
 ---
 
 {{PWASidebar}}
 
-PWA を定義する側面の1つは、端末へのインストールをブラウザーから促進できることです。一度インストールされると、 PWA はプラットフォーム固有のアプリとしてユーザーに現れ、他のアプリのように OS から直接起動できる端末の永続的な機能となります。
+PWA を定義する側面の 1 つは、端末へのインストールをブラウザーから促進できることです。一度インストールされると、 PWA はプラットフォーム固有のアプリとしてユーザーに現れ、他のアプリのように OS から直接起動できる端末の永続的な機能となります。
 
 これをまとめると次のようになります。
 
@@ -21,6 +21,10 @@ PWA を定義する側面の1つは、端末へのインストールをブラウ
 ## インストール可能性
 
 ウェブアプリケーションが対応するブラウザーによってインストールを促進されるようにするには、いくつかの技術的要件を満たす必要があります。これらはウェブアプリケーションが PWA であるための最小要件と考えることができます。
+
+> [!NOTE]
+> PWA がインストール可能であることは必須条件ではありませんが、多くの PWA はオフライン操作を提供するために[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)を使用しています。
+> 詳しくは、[CycleTracker: サービスワーカー](/ja/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers)のチュートリアルをご覧ください。
 
 ## ウェブアプリマニフェスト
 
@@ -60,20 +64,19 @@ PWA に複数のページがある場合、すべてのページでこの方法�
 
 Chromium ベースのブラウザー（Google Chrome、Samsung Internet、Microsoft Edge など）では、マニフェストに以下のメンバーが含まれていることが要求されます。
 
-- [`name`](/ja/docs/Web/Manifest/name)
-- [`icons`](/ja/docs/Web/Manifest/icons)
+- [`name`](/ja/docs/Web/Manifest/name) または [`short_name`](/ja/docs/Web/Manifest/short_name)
+- [`icons`](/ja/docs/Web/Manifest/icons) には 192px および 512px のアイコンが必要です。
 - [`start_url`](/ja/docs/Web/Manifest/start_url)
 - [`display`](/ja/docs/Web/Manifest/display) や [`display_override`](/ja/docs/Web/Manifest/display_override)
+- [`prefer-related-application`](/ja/docs/Web/Manifest/prefer_related_applications) は `false` または存在してはいけない
 
 それぞれのメンバーの完全な説明は、[ウェブアプリマニフェストのリファレンスドキュメント](/ja/docs/Web/Manifest)を参照してください。
 
-### 安全なコンテキスト
+### HTTPS、localhost、loopback のいずれかが必須
 
-ウェブアプリケーションをインストールできるようにするには、[安全なコンテキスト](/ja/docs/Web/Progressive_web_apps)で提供する必要があります。これは通常、 HTTPS で提供されなければならないことを意味しています。 localhost や `127.0.0.1`、`file://` などのローカルリソースも安全とみなされます。
+PWA がインストール可能であるためには、`https` プロトコルを使用しているか、`localhost` または `127.0.0.1` を使用して、ローカル開発環境から提供しなければなりません。
 
-### サービスワーカー
-
-ウェブアプリケーションをインストール可能にするには、 [`fetch` イベントハンドラー](/ja/docs/Web/API/ServiceWorkerGlobalScope/fetch_event)を持つ[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)を記述し、基本的なオフライン体験を提供する必要があります。
+これは `file://` URL から読み込まれたリソースを安全であるとみなす[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)よりも厳しい要求です。
 
 ## アプリストアからのインストール
 
@@ -97,7 +100,7 @@ Chromium ベースのブラウザー（Google Chrome、Samsung Internet、Micros
 
 ウェブから PWA をインストールするためのUIは、ブラウザーやプラットフォームによって異なります。例えば、ブラウザーはユーザーがページに移動したときに URL バーに「インストール」アイコンを表示することができます。
 
-![ChromeのURLバーにPWAインストールアイコンを表示しているところ](pwa-install.png)
+![Chrome の URL バーに PWA インストールアイコンを表示しているところ](pwa-install.png)
 
 ユーザーがアイコンを選択すると、ブラウザーに PWA をインストールするかどうか依頼するプロンプトが表示され、受け入れると PWA がインストールされます。
 
@@ -109,8 +112,8 @@ Chromium ベースのブラウザー（Google Chrome、Samsung Internet、Micros
 
 デスクトップの場合は次の通りです。
 
-- Firefox と Safari は、デスクトップ OS への PWA のインストールに対応していません。下記[アプリとしてのサイトのインストール](#installing_sites_as_apps)を参照してください。
-- Chrome と Edge は、Linux、Windows、macOS、Chromebook への PWA インストールに対応しています。
+- Chromium ブラウザーは、対応しているすべてのデスクトップオペレーティングシステムで、マニフェストファイルのある PWA のインストールに対応しています。
+- Firefox と Safari は、マニフェストファイルを使用した PWA のインストールに対応していません。
 
 モバイルの場合は次の通りです。
 
@@ -120,7 +123,8 @@ Chromium ベースのブラウザー（Google Chrome、Samsung Internet、Micros
 
 ### サイトをアプリとしてインストール
 
-デスクトップとモバイルの Safari、およびデスクトップの Edge も、任意のウェブサイトをアプリとしてインストールすることに対応しています。ただし、これは PWA 固有の仕様ではなく、サイトがこのガイドで記述されているインストール可能な基準を満たしている必要はなく、ブラウザーが積極的にサイトのインストールを促進するわけではないからです。
+デスクトップ版および Android 版の Chrome、デスクトップ版 Safari、およびデスクトップ版 Edge も、マニフェストファイルを持つ持たないに関わらず、またマニフェストファイルのインストール可能基準に見なされることなく、ユーザーが任意のウェブサイトをアプリとしてインストールすることに対応しています。
+マニフェストファイルを使用することの利点は、ブラウザーがサイトを訪問したときにインストールを積極的に促進し、開発者がインストール動作をカスタマイズできることです。
 
 ### インストールプロンプトを起動
 
@@ -130,7 +134,7 @@ PWA は、既定ではブラウザーが提供するUIに頼っていますが�
 
 - 自分自身で「インストール」ボタンを追加することができます。
 - `beforeinstallprompt` イベントを待ち受けすることができます。
-- イベtのの既定の動作を [`preventDefault()`](/ja/docs/Web/API/Event/preventDefault) を呼び出すことでキャンセルします。
+- イベントの既定の動作を [`preventDefault()`](/ja/docs/Web/API/Event/preventDefault) を呼び出すことでキャンセルします。
 - 自分自身で「インストール」ボタンのイベントハンドラーで、 [`prompt()`](/ja/docs/Web/API/BeforeInstallPromptEvent/prompt) を呼び出します。
 
 これは iOS では対応していません。

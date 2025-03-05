@@ -89,4 +89,4 @@ Une telle ressemblance entre `subgrid` et les grilles imbriquées peut faciliter
 
 ## Voir aussi
 
-- [Les concepts de bases des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#sous-grille)
+- [Les concepts de bases des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#sous-grille)

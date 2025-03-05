@@ -9,7 +9,8 @@ l10n:
 
 **`reason`** は {{domxref("VRDisplayEvent")}} インターフェイスの読み取り専用プロパティで、イベントが発生した理由を人間可読な形で返します。
 
-> **メモ:** このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 ## 値
 

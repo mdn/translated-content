@@ -14,11 +14,13 @@ l10n:
 
 ![星形のクリッピング領域](canvas_clipping_path.png)
 
-> **メモ:** クリッピング領域は、パスに追加した図形からのみ構築されることに注意してください。
+> [!NOTE]
+> クリッピング領域は、パスに追加した図形からのみ構築されることに注意してください。
 > {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}} のようにキャンバスに直接描画する図形プリミティブでは動作しません。
 > 代わりに、 {{domxref("CanvasRenderingContext2D.rect()","rect()")}} を使用してパスに矩形図形を追加してから `clip()` を呼び出す必要があります。
 
-> **メモ:** クリップパスは直接元に戻すことはできません。 `clip()` を呼び出す前に {{domxref("CanvasRenderingContext2D/save", "save()")}} を使ってキャンバスの状態を保存し、クリップした領域で描画が完了したら {{domxref("CanvasRenderingContext2D/restore", "restore()")}} を使って復元する必要があります。
+> [!NOTE]
+> クリップパスは直接元に戻すことはできません。 `clip()` を呼び出す前に {{domxref("CanvasRenderingContext2D/save", "save()")}} を使ってキャンバスの状態を保存し、クリップした領域で描画が完了したら {{domxref("CanvasRenderingContext2D/restore", "restore()")}} を使って復元する必要があります。
 
 ## 構文
 

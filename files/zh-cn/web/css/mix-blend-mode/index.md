@@ -11,14 +11,15 @@ slug: Web/CSS/mix-blend-mode
 
 ## 语法
 
-```
+```css
+/* 关键字值 */
 mix-blend-mode: normal;
 mix-blend-mode: multiply;
 mix-blend-mode: screen;
 mix-blend-mode: overlay;
 mix-blend-mode: darken;
 mix-blend-mode: lighten;
-mix-blend-mode: color-dodge
+mix-blend-mode: color-dodge;
 mix-blend-mode: color-burn;
 mix-blend-mode: hard-light;
 mix-blend-mode: soft-light;
@@ -28,9 +29,14 @@ mix-blend-mode: hue;
 mix-blend-mode: saturation;
 mix-blend-mode: color;
 mix-blend-mode: luminosity;
+mix-blend-mode: plus-darker;
+mix-blend-mode: plus-lighter;
 
-mix-blend-mode: initial;
+/* 全局值 */
 mix-blend-mode: inherit;
+mix-blend-mode: initial;
+mix-blend-mode: revert;
+mix-blend-mode: revert-layer;
 mix-blend-mode: unset;
 ```
 
@@ -549,7 +555,8 @@ body {
 
 .container {
   position: relative;
-  background: linear-gradient(to right, #000 0%, transparent 50%, #fff 100%),
+  background:
+    linear-gradient(to right, #000 0%, transparent 50%, #fff 100%),
     linear-gradient(to bottom, #ff0 0%, #f0f 50%, #0ff 100%);
   width: 150px;
   height: 150px;

@@ -5,7 +5,7 @@ slug: Web/CSS/@supports
 
 {{CSSRef}}
 
-**`@supports`** [CSS](/zh-CN/docs/Web/CSS) [at-rule](/zh-CN/docs/Web/CSS/At-rule) 你可以指定依赖于浏览器中的一个或多个特定的 CSS 功能的支持声明。这被称为*特性查询*。该规则可以放在代码的顶层，也可以嵌套在任何其他[条件组规则中](/zh-CN/docs/Web/CSS/At-rule#Conditional_group_rules)。
+**`@supports`** [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)可以指定依赖于浏览器中的一个或多个特定的 CSS 功能的支持声明。这被称为*特性查询*。该规则可以放在代码的顶层，也可以嵌套在任何其他[条件组规则中](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule#conditional_group_rules)。
 
 ```css
 @supports (display: grid) {
@@ -69,7 +69,8 @@ slug: Web/CSS/@supports
 }
 ```
 
-> **备注：** 如果 `not` 操作符位于表达式的最外层，则没有必要使用圆括号将它括起来。但如果要将该表达式与其他表达式连接起来使用，比如 `and` 和 `or`，则需要外面的圆括号。
+> [!NOTE]
+> 如果 `not` 操作符位于表达式的最外层，则没有必要使用圆括号将它括起来。但如果要将该表达式与其他表达式连接起来使用，比如 `and` 和 `or`，则需要外面的圆括号。
 
 ### `and` 操作符
 
@@ -116,7 +117,8 @@ slug: Web/CSS/@supports
 }
 ```
 
-> **备注：** 在使用 `and` 和 `or` 操作符时，如果是为了定义多个表达式的执行顺序，则必须使用圆括号。如果不这样做的话，该条件就是无效的，会导致整个 at-rule 失效。
+> [!NOTE]
+> 在使用 `and` 和 `or` 操作符时，如果是为了定义多个表达式的执行顺序，则必须使用圆括号。如果不这样做的话，该条件就是无效的，会导致整个 at-rule 失效。
 
 ### 形式化语法
 

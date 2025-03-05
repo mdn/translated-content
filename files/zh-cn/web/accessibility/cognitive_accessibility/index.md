@@ -273,10 +273,10 @@ WCAG [准则 3.2](https://www.w3.org/WAI/WCAG21/Understanding/predictable) 表�
 ## 参见
 
 - [无障碍指南](https://extensionworkshop.com/documentation/develop/build-an-accessible-extension/)
-- [什么是无障碍](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
+- [什么是无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
 - [癫痫症的无障碍](/zh-CN/docs/Web/Accessibility/Seizure_disorders)
 - [理解 WCAG 指南](/zh-CN/docs/Web/Accessibility/Understanding_WCAG)
-- [无障碍概述](/zh-CN/docs/Learn/Accessibility)
+- [无障碍概述](/zh-CN/docs/Learn_web_development/Core/Accessibility)
 - [Web 内容无障碍指南](https://www.w3.org/WAI/standards-guidelines/wcag/)，包括[认知无障碍指南](#wcag_指南)
 - [W3C 认知和学习障碍无障碍特别任务组](https://www.w3.org/WAI/GL/task-forces/coga/)
 - [WebAIM 认知信息](https://webaim.org/articles/cognitive/)

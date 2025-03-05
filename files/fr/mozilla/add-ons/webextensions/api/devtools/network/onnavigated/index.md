@@ -51,7 +51,7 @@ browser.devtools.network.onNavigated.addListener(handleNavigated);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) de Chromium.
 >

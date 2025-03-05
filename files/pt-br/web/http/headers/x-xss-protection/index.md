@@ -7,8 +7,9 @@ slug: Web/HTTP/Headers/X-XSS-Protection
 
 O cabeçalho de resposta HTTP **`X-XSS-Protection`** é uma funcionalidade do Internet Explorer, Chrome e Safari que impede páginas de carregarem quando eles detectam ataques de scripting entre sites ({{Glossary("XSS")}}) refletidos. Apesar destas proteções serem majoritariamente desnecessárias em navegadores modernos em sites utilizando uma forte {{HTTPHeader("Content-Security-Policy")}} que desabilita o uso de JavaScript _inline_ (`'unsafe-inline'`), eles ainda podem oferecer proteções para usuários de navegadores mais antigos que ainda não suportam {{Glossary("CSP")}}.
 
-> **Nota:** - Chrome [removeu o XSS Auditor deles](https://www.chromestatus.com/feature/5021976655560704)
+> [!NOTE]
 >
+> - Chrome [removeu o XSS Auditor deles](https://www.chromestatus.com/feature/5021976655560704)
 > - Firefox não tem, e [não irá implementar `X-XSS-Protection`](https://bugzilla.mozilla.org/show_bug.cgi?id=528661)
 > - Edge [aposentou o filtro XSS deles](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)Isso significa que se você não precisa dar suporte para navegadores legado, é recomendado que você use [`Content-Security-Policy`](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy) sem permitir scripts `unsafe-inline` ao invés disso.
 

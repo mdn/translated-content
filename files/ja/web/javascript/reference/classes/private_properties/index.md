@@ -2,12 +2,12 @@
 title: プライベートプロパティ
 slug: Web/JavaScript/Reference/Classes/Private_properties
 l10n:
-  sourceCommit: 3ae834dd1eaba420c78d36c903bf178cdd5fbb7a
+  sourceCommit: 8b6cec0ceff01e7a9d6865cf5306788e15cce4b8
 ---
 
 {{jsSidebar("Classes")}}
 
-**プライベートプロパティ**は、パブリックである通常のクラスプロパティ、例えば[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)やクラスメソッドなどに対するものです。プライベートプロパティはハッシュ `#` 接頭辞を使用して作成され、クラスの外部から合法的に参照することはできません。これらのクラスプロパティのプライバシーカプセル化は JavaScript 自身によって強制されます。
+**プライベートプロパティ**は、パブリックである通常のクラスプロパティ、例えば[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)やクラスメソッドなどに対するものです。プライベートプロパティはハッシュ `#` 接頭辞を使用して作成され、クラスの外部から合法的に参照することはできません。これらのクラスプロパティのプライバシーカプセル化は JavaScript 自身によって強制されます。プライベートプロパティにアクセスするには、[ドット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ドット記法)を使用するしかなく、また、そのアクセスはプライベートプロパティを定義するクラス内でのみ可能です。
 
 プライベートのプロパティは、この構文が存在する以前はネイティブではありませんでした。プロトタイプ継承では、 [`WeakMap`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#emulating_private_members) オブジェクトや[クロージャ](/ja/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures)でその振る舞いをエミュレートすることができますが、使いやすさの面からは `#` 構文にはかないません。
 
@@ -59,7 +59,7 @@ class ClassWithPrivate {
 class ClassWithPrivateField {
   #privateField;
 
-  constructor() {;
+  constructor() {
     delete this.#privateField; // Syntax error
     this.#undeclaredField = 42; // Syntax error
   }
@@ -71,7 +71,8 @@ instance.#privateField; // Syntax error
 
 JavaScript は動的言語ですが、ハッシュ識別子の構文が特殊であり、構文レベルで通常のプロパティとは異なるため、このコンパイル時チェックを行うことができます。
 
-> **メモ:** Chrome コンソールで実行するコードは、クラス外からプライベートプロパティにアクセスすることができます。これは JavaScript の構文制限を開発者ツール限定で緩和したものです。
+> [!NOTE]
+> Chrome コンソールで実行するコードは、クラス外からプライベートプロパティにアクセスすることができます。これは JavaScript の構文制限を開発者ツール限定で緩和したものです。
 
 プロパティを持っていないオブジェクトからプライベートプロパティにアクセスすると、通常のプロパティのように `undefined` を返すのではなく、{{jsxref("TypeError")}} が発生します。
 
@@ -112,7 +113,7 @@ console.log(C.getX({})); // "obj must be an instance of C"
 
 オブジェクトが現在のクラスのプライベートプロパティを 1 つでも持っていることが見つかった場合（`try...catch`または`in`チェックのいずれか）、他にもプライベートプロパティをすべて持っている必要があります。あるクラスのプライベートプロパティを持つオブジェクトは、一般的にそのクラスによって構築されたことを意味しています（[常にではありません](#オーバーライドしたオブジェクトの返却)）。
 
-プライベートプロパティは、現在のクラス本体内でのみアクセスすることができ、サブクラスには継承されないため、[プロトタイプ継承モデル](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)にはありません。クラスが異なると、プライベートプロパティは同じ名前でも全く異なるものであり、相互運用はできません。クラスごとに管理される、インスタンスに付加された外部メタデータとして考えてください。このため、 {{jsxref("Object.freeze()")}} や {{jsxref("Object.seal()")}} は、プライベートプロパティには影響しません。
+プライベートプロパティは、現在のクラス本体内でのみアクセスすることができ、サブクラスには継承されないため、[プロトタイプ継承モデル](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)にはありません。クラスが異なると、プライベートプロパティは同じ名前でも全く異なるものであり、相互運用はできません。クラスごとに管理される、インスタンスに付加された外部メタデータとして考えてください。このため、 {{DOMxRef("Window.structuredClone", "structuredClone()")}} はプライベートプロパティを複製せず、 {{jsxref("Object.freeze()")}} や {{jsxref("Object.seal()")}} は、プライベートプロパティには影響しません。
 
 プライベートフィールドがいつ、どのように初期化されるかについての詳細は、[プライベートクラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)を参照してください。
 
@@ -150,7 +151,8 @@ class Subclass extends ClassWithPrivateField {
 new Subclass(); // 開発者ツールでは Subclass {#privateField: 42, #subPrivateField: 23} と表示
 ```
 
-> **メモ:** 基底クラス `ClassWithPrivateField` の `#privateField` は `ClassWithPrivateField` のプライベートメンバーであり、派生クラス `Subclass` からはアクセスできません。
+> [!NOTE]
+> 基底クラス `ClassWithPrivateField` の `#privateField` は `ClassWithPrivateField` のプライベートメンバーであり、派生クラス `Subclass` からはアクセスできません。
 
 #### オーバーライドしたオブジェクトの返却
 
@@ -184,7 +186,8 @@ console.log(obj instanceof Stamper); // false
 new Stamper(obj); // Error: Initializing an object twice is an error with private fields
 ```
 
-> **警告:** これはとても混乱を招きかねないことです。一般的に、コンストラクターから任意のものを返すのは避けるようにしましょう。特に `this` に関係のないものを返すのは避けるようにしましょう。
+> [!WARNING]
+> これはとても混乱を招きかねないことです。一般的に、コンストラクターから任意のものを返すのは避けるようにしましょう。特に `this` に関係のないものを返すのは避けるようにしましょう。
 
 ### プライベート静的フィールド
 

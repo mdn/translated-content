@@ -48,4 +48,4 @@ scroll-margin-block-end: unset;
 ## 参见
 
 - [CSS 滚动吸附](/zh-CN/docs/Web/CSS/CSS_scroll_snap)
-- [用 CSS 滚动吸附明确控制滚动](https://web.dev/articles/css-scroll-snap)
+- [用 CSS 滚动吸附明确控制滚动](https://web.developers.google.cn/articles/css-scroll-snap)

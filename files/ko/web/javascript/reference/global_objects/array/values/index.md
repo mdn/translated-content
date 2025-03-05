@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/values
 
 **`values()`** 메서드는 배열에서 각 인덱스에 대한 값을 순회하는 _array [iterator](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol)_ 객체를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/array-values.html")}}
+{{InteractiveExample("JavaScript Demo: Array.values()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const iterator = array1.values();
+
+for (const value of iterator) {
+  console.log(value);
+}
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## 구문
 
@@ -62,7 +75,8 @@ console.log(iterator.next().value); // undefined
 
 ### 반복자 재사용하기
 
-> **Warning:** 배열 반복자 객체는 일회용 객체입니다. 재사용하지 마세요.
+> [!WARNING]
+> 배열 반복자 객체는 일회용 객체입니다. 재사용하지 마세요.
 
 `values()`에서 반환되는 반복자는 재사용할 수 없습니다. `next().done = true` 또는 `currentIndex > length`, [the `for...of` loop ends](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#interactions_between_the_language_and_iteration_protocols) 그리고 추가적인 순회는 아무 효과가 없습니다.
 

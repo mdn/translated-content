@@ -15,7 +15,8 @@ l10n:
 - {{htmlelement("style")}}, {{htmlelement("link")}}, {{htmlelement("source")}}, 기타 다른 [HTML](/ko/docs/Web/HTML) 요소에 `media` 특성을 사용해 특정 매체만 가리키게 할 때.
 - {{domxref("Window.matchMedia()")}}와 {{domxref("MediaQueryList.addListener()")}} [JavaScript](/ko/docs/Web/JavaScript) 메서드를 사용해 [미디어 상태를 판별하고 관측](/ko/docs/Web/CSS/CSS_media_queries/Testing_media_queries)할 때.
 
-> **참고:** 이 페이지의 CSS는 시연용으로 `@media`를 사용했지만, 기본적인 구문은 모든 미디어 쿼리가 동일합니다.
+> [!NOTE]
+> 이 페이지의 CSS는 시연용으로 `@media`를 사용했지만, 기본적인 구문은 모든 미디어 쿼리가 동일합니다.
 
 ## 구문
 
@@ -165,7 +166,8 @@ l10n:
 
 앞서 예와 같이, `and` 연산자를 사용하여 미디어 유형과 미디어기능을 그룹지을 수 있습니다. 또한 `and` 를 사용하여 복수의 미디어 기능을 하나의 미디어 쿼리로 결합해낼수도 있습니다. 하지만 `not` 연산자는 미디어쿼리 자체를 부정시키는데, 근본적으로 원래의 의미를 반전시킵니다. `only` 연산자는 구형 브라우저가 스타일을 적용시키지 못하게 합니다.
 
-> **참고:** 대부분의 경우, `all` 미디어 유형은 다른 유형이 특정되지 않았을 때 디폴트로 적용됩니다.
+> [!NOTE]
+> 대부분의 경우, `all` 미디어 유형은 다른 유형이 특정되지 않았을 때 디폴트로 적용됩니다.
 > 하지만, 사용자가 `not` 이나 `only` 연산자를 사용하면, 사용자는 반드시 미디어 유형을 특정해야 합니다.
 
 ### 다수의 유형과 기능 조합하기

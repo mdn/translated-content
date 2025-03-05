@@ -2,14 +2,25 @@
 title: String.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 l10n:
-  sourceCommit: be500eeadf5eba4722689ce9b150c506e8a9c7fa
+  sourceCommit: c607c483fe079c61de5e32fba1a6cce61896e97d
 ---
 
 {{JSRef}}
 
 **`lastIndexOf()`** は {{jsxref("String")}} 値のメソッドで、この文字列を検索し、指定した部分文字列が最後に出現するインデックスを返します。オプションで開始位置を取り、指定した数値以下のインデックスにおいて、指定した部分文字列が最後にに出現するインデックスを返します。
 
-{{EmbedInteractiveExample("pages/js/string-lastindexof.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.lastIndexOf()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+const searchTerm = "dog";
+
+console.log(
+  `Index of the last ${searchTerm} is ${paragraph.lastIndexOf(searchTerm)}`,
+);
+// Expected output: "Index of the last "dog" is 38"
+```
 
 ## 構文
 
@@ -65,7 +76,7 @@ lastIndexOf(searchString, position)
 
 ### indexOf() と lastIndexOf() の使用
 
-以下の例は、 {{jsxref("String.prototype.indexOf()", "indexOf()")}} と `lastIndexOf()` を使用して文字列 `"Brave, Brave New World"` の中の値の位置を示します。
+以下の例は、 {{jsxref("String/indexOf", "indexOf()")}} と `lastIndexOf()` を使用して文字列 `"Brave, Brave New World"` の中の値の位置を示します。
 
 ```js
 const anyString = "Brave, Brave New World";

@@ -9,7 +9,8 @@ l10n:
 
 **`bookmarks.update()`** 方法更新书签的标题和 URL，或者更新书签文件夹的名称。
 
-> **警告：** 如果你的扩展尝试更新书签树根节点中的书签，则调用将引发错误，并显示消息：“The bookmark root cannot be modified”，并且书签将不会被更新。
+> [!WARNING]
+> 如果你的扩展尝试更新书签树根节点中的书签，则调用将引发错误，并显示消息：“The bookmark root cannot be modified”，并且书签将不会被更新。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -76,7 +77,8 @@ browser.bookmarks.search({ title: "MDN" }).then(updateFolders, onRejected);
 
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-update) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.google.cn/docs/extensions/reference/api/bookmarks#method-update) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

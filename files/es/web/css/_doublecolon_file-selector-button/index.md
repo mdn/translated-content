@@ -1,5 +1,5 @@
 ---
-title: "::file-selector-button"
+title: ::file-selector-button
 slug: Web/CSS/::file-selector-button
 ---
 
@@ -7,9 +7,30 @@ slug: Web/CSS/::file-selector-button
 
 El [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::file-selector-button`** representa el botón de un {{HTMLElement("input") }} con el atributo [`type="file"`](/es/docs/Web/HTML/Element/input/file).
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-file-selector-button.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::file-selector-button", "tabbed-shorter")}}
 
-> **Nota:** Las versiones anteriores de navegadores compatibles con WebKit/Blink como Chrome, Opera y Safari (indicados por el prefijo `-webkit`) admitían un pseudoelemento no estándar `::-webkit-file-upload-button`.
+```css interactive-example
+input {
+  margin-top: 1rem;
+}
+
+input::file-selector-button {
+  font-weight: bold;
+  color: dodgerblue;
+  padding: 0.5em;
+  border: thin solid grey;
+  border-radius: 3px;
+}
+```
+
+```html interactive-example
+<label for="avatar">Choose a profile picture:</label><br />
+
+<input id="avatar" type="file" name="avatar" accept="image/png, image/jpeg" />
+```
+
+> [!NOTE]
+> Las versiones anteriores de navegadores compatibles con WebKit/Blink como Chrome, Opera y Safari (indicados por el prefijo `-webkit`) admitían un pseudoelemento no estándar `::-webkit-file-upload-button`.
 >
 > Legacy Edge y las versiones posteriores de IE admitían un pseudoelemento no estándar `::-ms-browse`.
 >

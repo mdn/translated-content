@@ -47,7 +47,7 @@ Invocar o construtor `AsyncFunction` como uma função (sem usar o operador `new
 
 ### Propriedades
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype', 'Propriedades')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype', 'Propriedades') -->
 
 ## `AsyncFunction` instances
 

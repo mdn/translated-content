@@ -14,4 +14,4 @@ l10n:
 - 위키백과 [XMLHttpRequest](https://ko.wikipedia.org/wiki/XMLHttpRequest)
 - [동기식 vs. 비동기식 통신](http://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)
 - {{domxref("XMLHttpRequest")}} 객체.
-- [XMLHttpRequest를 사용하는 방법에 관한 MDN 문서](/ko/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest).
+- [XMLHttpRequest를 사용하는 방법에 관한 MDN 문서](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).

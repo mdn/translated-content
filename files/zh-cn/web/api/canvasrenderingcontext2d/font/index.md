@@ -1,28 +1,23 @@
 ---
-title: CanvasRenderingContext2D.font
+title: CanvasRenderingContext2D：font 属性
 slug: Web/API/CanvasRenderingContext2D/font
+l10n:
+  sourceCommit: 1306c224f386c6a8038a3bd115ce5637d5bd6084
 ---
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.font`** 是 Canvas 2D API 描述绘制文字时，当前字体样式的属性。使用和 [CSS font](/zh-CN/docs/Web/CSS/font) 规范相同的字符串值。
+Canvas 2D API 的 **`CanvasRenderingContext2D.font`** 属性指定绘制文字所使用的当前字体样式。使用和 [CSS 字体](/zh-CN/docs/Web/CSS/font)描述符相同的字符串值。
 
-## 语法
+## 值
 
-```
-ctx.font = value;
-```
-
-### 选项
-
-- `value`
-  - : 符合 CSS {{cssxref("font")}} 语法的{{domxref("DOMString")}} 字符串。默认字体是 10px sans-serif。
+一个被解析为 CSS {{cssxref("font")}} 值的字符串。默认字体为 10 像素的无衬线体（sans-serif）。
 
 ## 示例
 
 ### 使用自定义字体
 
-这个例子使用 `font` 属性设置了不同的字体大小和字体种类。
+这个示例使用 `font` 属性设置了自定义的字体粗细、大小和字体家族。
 
 #### HTML
 
@@ -46,13 +41,13 @@ ctx.strokeText("Hello world", 50, 100);
 
 ### 使用 CSS 字体加载 API 加载字体
 
-借助{{domxref("FontFace")}} API 的帮助，你可以在画布中使用字体之前显式加载字体。
+借助 {{domxref("FontFace")}} API 的帮助，你可以在画布中使用字体之前显式加载字体。
 
-```
-let f = new FontFace('test', 'url(x)');
+```js
+let f = new FontFace("test", "url(x)");
 
-f.load().then(function() {
-  // Ready to use the font in a canvas context
+f.load().then(() => {
+  // 准备在画布上下文中使用字体
 });
 ```
 
@@ -64,11 +59,6 @@ f.load().then(function() {
 
 {{Compat}}
 
-### Gecko-specific 注解
-
-- 基于 Gecko 的浏览器，例如 Firefox，实现了一个非标准的并且不赞成使用的属性 `ctx.mozTextStyle` 。不要使用此属性。
-- 在 Gecko 中，当将系统字体设置为 canvas 2D 上下文的{{domxref("CanvasRenderingContext2D.font", "font")}}（例如菜单）的值时，获取用于无法返回期望字体的字体值（不返回任何内容）。这已在 Firefox 57（[Firefox bug 1374885](https://bugzil.la/1374885)）中发布的 Firefox 的[Quantum/Stylo](https://wiki.mozilla.org/Quantum/Stylo)并行 CSS 引擎中修复。
-
 ## 参见
 
-- 接口定义，{{domxref("CanvasRenderingContext2D")}}
+- 定义此属性的接口：{{domxref("CanvasRenderingContext2D")}}

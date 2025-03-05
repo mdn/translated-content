@@ -2,7 +2,7 @@
 title: 文件系统 API
 slug: Web/API/File_System_API
 l10n:
-  sourceCommit: 2b6bddfe281c0179fbde9c870f9de7c0dc3829e8
+  sourceCommit: 0c3f18aca2c8a93d3982183f64bf7762c2c310b0
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{AvailableInWorkers}}
@@ -20,13 +20,15 @@ l10n:
 你还可以从以下途径获得句柄：
 
 - {{domxref('HTML Drag and Drop API', 'HTML 拖放 API', '', 'nocode')}} 的 {{domxref('DataTransferItem.getAsFileSystemHandle()')}} 方法。
-- [文件处理 API](https://developer.chrome.com/en/articles/file-handling/)。
+- [文件处理 API](https://developer.chrome.google.cn/docs/capabilities/web-apis/file-handling)。
 
 每种句柄都提供了其独有的功能，取决于你使用的种类，会有些许差异（详见[接口](#接口)部分）。在获得句柄后，你便可以访问文件的数据或是被选中的目录的信息（包含子目录）。此 API 开辟了 web 此前一直缺乏的潜在功能。但不论如何，安全性是设计 API 时的首要考量，除非用户明确授权，否则就不允许访问文件和目录的数据（注意：[源私有文件系统](#源私有文件系统)并非如此，因为其对用户不可见）。
 
-> **备注：** 使用此 API 的特性时可能会抛出的各种异常已在规范定义的相关页面中列出。然而，API 与底层操作系统的交互使得实际情况更加复杂。这里提供一篇关于[在规范中列出错误对应表](https://github.com/whatwg/fs/issues/57)的提议，其中包含了一些有用的信息。
+> [!NOTE]
+> 使用此 API 的特性时可能会抛出的各种异常已在规范定义的相关页面中列出。然而，API 与底层操作系统的交互使得实际情况更加复杂。这里提供一篇关于[在规范中列出错误对应表](https://github.com/whatwg/fs/issues/57)的提议，其中包含了一些有用的信息。
 
-> **备注：** 基于 {{domxref("FileSystemHandle")}} 的对象能够被序列化存储至 {{domxref("IndexedDB API", "IndexedDB", "", "nocode")}} 数据库实例中，也可以通过 {{domxref("window.postMessage", "postMessage()")}} 移交。
+> [!NOTE]
+> 基于 {{domxref("FileSystemHandle")}} 的对象能够被序列化存储至 {{domxref("IndexedDB API", "IndexedDB", "", "nocode")}} 数据库实例中，也可以通过 {{domxref("window.postMessage", "postMessage()")}} 移交。
 
 ### 源私有文件系统
 
@@ -223,7 +225,8 @@ onmessage = async (e) => {
 };
 ```
 
-> **备注：** 在规范早期版本中，{{domxref("FileSystemSyncAccessHandle")}} 的 {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} 被不合逻辑地指定为异步方法。此问题现已被[修正](https://github.com/whatwg/fs/issues/7)，但某些浏览器依然支持异步版本。
+> [!NOTE]
+> 在规范早期版本中，{{domxref("FileSystemSyncAccessHandle")}} 的 {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} 被不合逻辑地指定为异步方法。此问题现已被[修正](https://github.com/whatwg/fs/issues/7)，但某些浏览器依然支持异步版本。
 
 ## 规范
 
@@ -235,5 +238,5 @@ onmessage = async (e) => {
 
 ## 参见
 
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)
-- [源私有文件系统](https://web.dev/articles/origin-private-file-system)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.google.cn/docs/capabilities/web-apis/file-system-access)
+- [源私有文件系统](https://web.developers.google.cn/articles/origin-private-file-system)

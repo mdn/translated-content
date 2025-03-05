@@ -13,7 +13,8 @@ La [propiedad abreviada](/es/docs/Web/CSS/Shorthand_properties) de [CSS](/es/doc
 
 El área de relleno de un elemento es el espacio entre su contenido y su borde.
 
-> **Nota:** El relleno crea espacio adicional dentro de un elemento. Por el contrario, {{cssxref("margin")}} crea espacio extra _alrededor_ de un elemento.
+> [!NOTE]
+> El relleno crea espacio adicional dentro de un elemento. Por el contrario, {{cssxref("margin")}} crea espacio extra _alrededor_ de un elemento.
 
 ## Propiedades constituyentes
 
@@ -128,6 +129,6 @@ padding: 1em 3px 30px 5px; /* arriba:      1em  de relleno  */
 
 ## Véase también
 
-- [Introducción al modelo de caja básica CSS](/es/docs/Web/CSS/CSS_Box_Model/introduction_to_the_CSS_box_model)
+- [Introducción al modelo de caja básica CSS](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, y {{cssxref("padding-left")}}.
 - Las propiedades lógicas asignadas: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, y {{cssxref("padding-inline-end")}} y las abreviaciones {{cssxref("padding-block")}} y {{cssxref("padding-inline")}}

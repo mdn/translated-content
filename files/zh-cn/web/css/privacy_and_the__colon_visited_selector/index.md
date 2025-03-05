@@ -27,7 +27,7 @@ slug: Web/CSS/Privacy_and_the_:visited_selector
 - {{ cssxref("outline-color") }}
 - `fill` 和 `stroke` 属性的颜色部分
 
-此外，即便是上述样式，你也不能给访问过和未访问过设置不同的透明度。你不能使用[`rgba()`](/zh-CN/docs/Web/CSS/color_value/rgba)、[`hsla()`](/zh-CN/docs/Web/CSS/color_value/hsla)或是 [`transparent`](/zh-CN/docs/Web/CSS/color_value#transparent_关键字) 关键词。
+此外，即便是上述样式，你也不能给访问过和未访问过设置不同的透明度。你不能使用[`rgba()`](/zh-CN/docs/Web/CSS/color_value/rgb)、[`hsla()`](/zh-CN/docs/Web/CSS/color_value/hsl)或是 [`transparent`](/zh-CN/docs/Web/CSS/color_value#transparent_关键字) 关键词。
 
 这是一个使用被限样式的例子：
 
@@ -55,6 +55,6 @@ slug: Web/CSS/Privacy_and_the_:visited_selector
 
 ## 更多
 
-- [privacy-related changes coming to CSS :visited](http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) on Mozilla Hacks
-- [Plugging the CSS History Leak](http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/) on the Mozilla Security Blog
-- [Preventing attacks on a user's history through CSS :visited selectors](http://dbaron.org/mozilla/visited-privacy)
+- [privacy-related changes coming to CSS :visited](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) on Mozilla Hacks
+- [Plugging the CSS History Leak](https://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/) on the Mozilla Security Blog
+- [Preventing attacks on a user's history through CSS :visited selectors](https://dbaron.org/mozilla/visited-privacy)

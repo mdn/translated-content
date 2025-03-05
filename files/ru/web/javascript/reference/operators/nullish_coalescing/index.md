@@ -10,9 +10,19 @@ slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
 Этот оператор можно рассматривать как частный случай [логического оператора ИЛИ
 (`||`)](/ru/docs/Web/JavaScript/Reference/Operators/Logical_OR), который возвращает правый операнд, если в левом операнде хранится _любое_ {{Glossary("falsy", "ложноподобное")}} значение, а не только `null` или `undefined`. Другими словами, если вы используете оператор `||` для присваивания значения по умолчанию другой переменной `foo`, вы можете столкнуться с неожиданным поведением, если считаете некоторые ложноподобные значения пригодными для использования (например, `''` или `0`). Ниже вы увидите примеры.
 
-Оператор нулевого слияния вместе с `||` находится на [четвёртом по приоритетности месте](/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence), непосредственно перед ним следует [условный (тернарный) оператор](/ru/docs/Web/JavaScript/Reference/Operators/Conditional_Operator).
+Оператор нулевого слияния вместе с `||` находится на [четвёртом по приоритетности месте](/ru/docs/Web/JavaScript/Reference/Operators/Operator_precedence), непосредственно перед ним следует [условный (тернарный) оператор](/ru/docs/Web/JavaScript/Reference/Operators/Conditional_operator).
 
-{{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing operator")}}
+
+```js interactive-example
+const foo = null ?? "default string";
+console.log(foo);
+// Expected output: "default string"
+
+const baz = 0 ?? 42;
+console.log(baz);
+// Expected output: 0
+```
 
 ## Синтаксис
 

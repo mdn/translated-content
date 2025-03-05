@@ -14,7 +14,8 @@ l10n:
 
 **`unescape()`** 関数は 16 進数エスケープシーケンスを、それが表す文字列に置換します。エスケープシーケンスは {{jsxref("escape")}} などの関数によって生成されます。通常は {{jsxref("decodeURI")}} または {{jsxref("decodeURIComponent")}} が `unescape` よりも推奨されます。
 
-> **メモ:** URI のデコードに `unescape` を使用しないでください。代わりに `decodeURI` を使用してください。
+> [!NOTE]
+> URI のデコードに `unescape` を使用しないでください。代わりに `decodeURI` を使用してください。
 
 ## 構文
 

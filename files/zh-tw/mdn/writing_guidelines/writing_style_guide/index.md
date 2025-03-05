@@ -3,8 +3,6 @@ title: 寫作風格指南
 slug: MDN/Writing_guidelines/Writing_style_guide
 ---
 
-{{MDNSidebar}}
-
 為了讓文件更加組織化、標準化而易於閱讀，MDN 風格指南描述了文件的組織方式、拼寫、格式等問題。這些規則只是指導方針而非強制規定。與格式相比，我們對內容更感興趣，因此不用覺得在開始貢獻之前有被迫要學習這些指南的壓力。若之後有其他支援者修改了你的內容以便讓它符合這些指南，你也不需要因此而感到沮喪或驚訝。
 
 在語言方面，本指南主要適用於英語文件，其它語言可擁有（且歡迎建立）自己的風格指南。它們會以當地語系團隊頁面的子頁面發佈。
@@ -49,7 +47,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 
 任何文件的篇幅都應該適可而止。如果你侃侃而談或提供過多的細節，文章會變得乏味且鮮少被閱讀。文章內容涵蓋恰當的篇幅有許多好處，其中就包含：讓讀者找到他們真正想要的資訊、提供搜尋引擎足夠好的素材以便用於分析及評價文章的內容。
 
-本文只針對前者（提供讀者需要的資訊）進行說明。對於如何確保文章恰當的被搜尋引擎分類及評價，請移步到 [MDN 如何針對 SEO 進行寫作](/zh-TW/docs/MDN/Contribute/Howto/Write_for_SEO)。
+本文只針對前者（提供讀者需要的資訊）進行說明。對於如何確保文章恰當的被搜尋引擎分類及評價，請移步到 [MDN 如何針對 SEO 進行寫作](/zh-TW/docs/MDN/Writing_guidelines/Writing_style_guide)。
 
 寫作的目標是要讓讀者取得所有必要資訊的同時又不會陷入太多的細節中。以下是這個主題的相關建議。
 
@@ -93,7 +91,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 
 > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/zh-TW/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates. The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
 >
-> For more details and further examples, see the [Text](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#text) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/zh-TW/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+> For more details and further examples, see the [Text](/zh-TW/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics#text) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/zh-TW/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 #### 涵蓋所有相關的範例
 
@@ -112,7 +110,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 - 如果程式碼相對簡單且並直接使用到任何已經建檔的 API ，那簡略的對其說明它是什麼以及為何在此即可。
 - 如果程式碼過於艱深、使用到已經建檔的 API 、有技術上的創新，則需要提供更細緻的說明。
 
-當加入[實際範例](/zh-TW/docs/MDN/Structures/Live_samples)時，所有位於範例區域內的 {{HTMLElement("pre")}} 區塊會在執行範例前串聯起來，這便於讓你把 HTML 、 CSS 、 JavaScript 分開來處理，並讓它們擁有自己的描述、標題等。這使得程式碼的建檔變得更強大且更彈性。
+當加入[實際範例](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Live_samples)時，所有位於範例區域內的 {{HTMLElement("pre")}} 區塊會在執行範例前串聯起來，這便於讓你把 HTML 、 CSS 、 JavaScript 分開來處理，並讓它們擁有自己的描述、標題等。這使得程式碼的建檔變得更強大且更彈性。
 
 #### 過於簡短的文章很難被找到
 
@@ -169,15 +167,18 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 
 使用「**格式化樣式**」的下拉清單來對選取內容套用預定義的樣式。
 
-> **備註：** 「**備註區塊**」樣式是用於標示重要的備註，就好比這樣。
+> [!NOTE]
+> 「**備註區塊**」樣式是用於標示重要的備註，就好比這樣。
 
-> **警告：** 類似地，「**警告區塊**」樣式用於建立警告區塊，就好比這樣。
+> [!WARNING]
+> 類似地，「**警告區塊**」樣式用於建立警告區塊，就好比這樣。
 
 除非有特別地指示，否則*不要*使用 HTML `style` 屬性來手動套用樣式。如果碰到無法使用預定義地 class ，請在 [MDN 討論論壇](https://discourse.mozilla.org/c/mdn)尋求協助。
 
 ### 程式碼範例的樣式與格式
 
-> **備註：** 此章節說明透過樣式／格式來影響程式碼如何在 MDN 文章中顯示。如果你需要撰寫程式碼例子的實際指導方針，請參閱[程式碼範例指導方針](/zh-TW/docs/MDN/Guidelines/Code_guidelines)
+> [!NOTE]
+> 此章節說明透過樣式／格式來影響程式碼如何在 MDN 文章中顯示。如果你需要撰寫程式碼例子的實際指導方針，請參閱[程式碼範例指導方針](/zh-TW/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)
 
 #### Tabs 以及換行
 
@@ -211,7 +212,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 #### 語法上色
 
-一行或多行的程式碼應使用[語法上色](/zh-TW/docs/MDN/Guidelines/CSS_style_guide#code_syntax_highlighting)的方式格式化而不是用 {{HTMLElement("code")}} 元素。
+一行或多行的程式碼應使用[語法上色](/zh-TW/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#code_syntax_highlighting)的方式格式化而不是用 {{HTMLElement("code")}} 元素。
 
 #### 對提及的 HTML 元素使用不同的樣式
 
@@ -259,7 +260,8 @@ HTML 元素在撰寫時有它們特殊的規則。這些規則可以對元素及
 | N.B.   | _nota bene_      | note well               | 注意、留心（用於提醒讀者留意重要資訊） |
 | P.S.   | _post scriptum_  | postscript              | 附言、補充說明                         |
 
-> **備註：** 總是想清楚使用拉丁文縮寫是否真的有效益。某些縮寫甚少使用，讀者根本不明白其意義，而某些甚至會跟其他縮寫產生混淆。
+> [!NOTE]
+> 總是想清楚使用拉丁文縮寫是否真的有效益。某些縮寫甚少使用，讀者根本不明白其意義，而某些甚至會跟其他縮寫產生混淆。
 >
 > 若你選擇使用這些縮寫，請確保*你*能夠正確地使用它們。例如，常見的錯誤是把「 e.g. 」和「 i.e. 」搞混。
 
@@ -300,7 +302,8 @@ HTML 元素在撰寫時有它們特殊的規則。這些規則可以對元素及
 
 在主體文字中使用標準的英文大寫規則以及大寫化「 World Wide Web 」。用小寫的「 web 」（單獨使用或作為修飾）以及「 internet 」是可以接受的。
 
-> **備註：** 這項指導方針跟之前的版本有所不同，所以你可能會發現在 MDN 中有多處出現「 Web ］跟「 Internet 」。
+> [!NOTE]
+> 這項指導方針跟之前的版本有所不同，所以你可能會發現在 MDN 中有多處出現「 Web ］跟「 Internet 」。
 >
 > 當你在編輯其他變更的時候你可以順手把它也改了，但不需要特別為了改變這些大寫而編輯文章。
 
@@ -344,7 +347,8 @@ _A confirmation dialog appears, asking the user if she allows the Web page to ma
 
 _A confirmation dialog appears, asking the user if they allow the Web page to make use of their Web cam._
 
-> **備註：** MDN 允許使用這種非常常見的語法（在使用正當性上存在爭議）來彌補英文中缺乏性別中性的詞彙。
+> [!NOTE]
+> MDN 允許使用這種非常常見的語法（在使用正當性上存在爭議）來彌補英文中缺乏性別中性的詞彙。
 >
 > 使用複數第三人稱做為性別中立的代名詞是被接受的慣例，常被當作「[單數的『他們』](https://en.wikipedia.org/wiki/Singular_they)」。
 

@@ -7,9 +7,26 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise
 
 **`Promise`** 物件代表一個即將完成、或失敗的非同步操作，以及它所產生的值。
 
-> **備註：** 此條目為介紹 Promise 建構式。要瞭解 Promise 相關使用方式，請先參考[使用 Promise](/zh-TW/docs/Web/JavaScript/Guide/Using_promises)。Promise 建構式主要用於包裹尚未支援 Promise 的函式。
+> [!NOTE]
+> 此條目為介紹 Promise 建構式。要瞭解 Promise 相關使用方式，請先參考[使用 Promise](/zh-TW/docs/Web/JavaScript/Guide/Using_promises)。Promise 建構式主要用於包裹尚未支援 Promise 的函式。
 
-{{EmbedInteractiveExample("pages/js/promise-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Promise Constructor")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("foo");
+  }, 300);
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: "foo"
+});
+
+console.log(promise1);
+// Expected output: [object Promise]
+```
 
 ## 語法
 
@@ -39,9 +56,11 @@ new Promise( /* executor */ function(resolve, reject) { ... } );
 
 ![](https://cdn.rawgit.com/Vectaio/a76330b025baf9bcdf07cb46e5a9ef9e/raw/26c4213a93dee1c39611dcd0ec12625811b20a26/js-promise.svg)
 
-> **備註：** 許多其他語言擁有機制用來惰性求值（lazy evaluation）及延遲（deferring）運算，它們也被稱作「promises」 — e.g. Scheme. 然而在 JavaScript 中 Promises 代表那些（已經）發生中（happening）的程序，它們可以繫結回呼函式。若你要找的是惰性求值表示式，考慮不帶參數的 [arrow function](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)：`f = () => expression` 來建立惰性求值表示式，並透過 `f()` 進行求值.
+> [!NOTE]
+> 許多其他語言擁有機制用來惰性求值（lazy evaluation）及延遲（deferring）運算，它們也被稱作「promises」 — e.g. Scheme. 然而在 JavaScript 中 Promises 代表那些（已經）發生中（happening）的程序，它們可以繫結回呼函式。若你要找的是惰性求值表示式，考慮不帶參數的 [arrow function](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)：`f = () => expression` 來建立惰性求值表示式，並透過 `f()` 進行求值.
 
-> **備註：** 一個被實現或拒絕，但不處於 pending 的 promise 被稱作被解決（settled）。你也會見到使用解決（resolved）一詞來描述 promises — 這代表 promises 被實現（fulfilled）了。[States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) 這篇文章包含了更多 promises 的專有名詞。
+> [!NOTE]
+> 一個被實現或拒絕，但不處於 pending 的 promise 被稱作被解決（settled）。你也會見到使用解決（resolved）一詞來描述 promises — 這代表 promises 被實現（fulfilled）了。[States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) 這篇文章包含了更多 promises 的專有名詞。
 
 ## 屬性
 
@@ -65,8 +84,8 @@ new Promise( /* executor */ function(resolve, reject) { ... } );
 
 ### 屬性
 
-- `Promise.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Promise"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Promise.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`Symbol.toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Promise"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ### 方法
 
@@ -217,7 +236,7 @@ if ("Promise" in window) {
 
 ## 使用 XHR 載入圖片
 
-另一個使用 `Promise` and [`XMLHttpRequest`](/zh-TW/docs/Web/API/XMLHttpRequest) 來載入圖片的簡單例子可以在 MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/master/promises-test) 儲存庫找到。 你也可以[see it in action](https://mdn.github.io/js-examples/promises-test/)。每個步驟都附以註解，讓你能逐步遵隨 Promise 與 XHR 架構。
+另一個使用 `Promise` and [`XMLHttpRequest`](/zh-TW/docs/Web/API/XMLHttpRequest) 來載入圖片的簡單例子可以在 MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/main/promises-test) 儲存庫找到。 你也可以[see it in action](https://mdn.github.io/js-examples/promises-test/)。每個步驟都附以註解，讓你能逐步遵隨 Promise 與 XHR 架構。
 
 ## 規範
 
@@ -229,15 +248,8 @@ if ("Promise" in window) {
 
 ## 參見
 
-- [Using promises](/zh-TW/docs/Web/JavaScript/Guide/Using_promises)
-- [Promises/A+ specification](http://promisesaplus.com/)
-- [Venkatraman.R - JS Promise (Part 1, Basics)](https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53)
-- [Venkatraman.R - JS Promise (Part 2 - Using Q.js, When.js and RSVP.js)](https://medium.com/@ramsunvtech/js-promise-part-2-q-js-when-js-and-rsvp-js-af596232525c#.dzlqh6ski)
-- [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)
-- [Jake Archibald: JavaScript Promises: There and Back Again](http://www.html5rocks.com/en/tutorials/es6/promises/)
-- [Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Patterns in JavaScript](http://de.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)
-- [Matt Greer: JavaScript Promises ... In Wicked Detail](http://www.mattgreer.org/articles/promises-in-wicked-detail/)
-- [Forbes Lindesay: promisejs.org](https://www.promisejs.org/)
-- [Nolan Lawson: We have a problem with promises — Common mistakes with promises](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
-- [Promise polyfill](https://github.com/jakearchibald/es6-promise/)
-- [Udacity: JavaScript Promises](https://www.udacity.com/course/javascript-promises--ud898)
+- [`core-js` 中 `Promise` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-promise)
+- [使用 Promise](/zh-TW/docs/Web/JavaScript/Guide/Using_promises) 指南
+- [Promises/A+ 規範](https://promisesaplus.com/)
+- [JavaScript Promise：簡介](https://web.dev/articles/promises)，web.dev（2013）
+- [回呼、Promise 和協程：JavaScript 中的非同步程式設計模式](https://www.slideshare.net/slideshow/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript/9953720)，來自 Domenic Denicola 的幻燈片（2011）

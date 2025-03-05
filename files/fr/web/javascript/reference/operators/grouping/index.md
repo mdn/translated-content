@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Grouping
 
 L'opérateur de groupement `( )` contrôle la précédence de l'évaluation dans les expressions.
 
-{{EmbedInteractiveExample("pages/js/expressions-groupingoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Grouping operator")}}
+
+```js interactive-example
+console.log(1 + 2 * 3); // 1 + 6
+// Expected output: 7
+
+console.log(1 + 2 * 3); // 1 + 6
+// Expected output: 7
+
+console.log((1 + 2) * 3); // 3 * 3
+// Expected output: 9
+
+console.log(1 * 3 + 2 * 3); // 3 + 6
+// Expected output: 9
+```
 
 ## Syntaxe
 
@@ -17,7 +31,7 @@ L'opérateur de groupement `( )` contrôle la précédence de l'évaluation dans
 
 ## Description
 
-L'opérateur de groupement consiste en une paire de parenthèses encadrant une expression et permettant de surcharger la [précédence normale des opérateurs](/fr/docs/JavaScript/Reference/Operateurs/Précédence_des_opérateurs) afin que les expressions dont la précédence est plus basse soient évaluées avant.
+L'opérateur de groupement consiste en une paire de parenthèses encadrant une expression et permettant de surcharger la [précédence normale des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence) afin que les expressions dont la précédence est plus basse soient évaluées avant.
 
 ## Exemples
 
@@ -51,6 +65,6 @@ a * c + b * c; // 9
 
 ## Voir aussi
 
-- [Précédence des opérators](/fr/docs/JavaScript/Reference/Operateurs/Précédence_des_opérateurs)
+- [Précédence des opérators](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Operators/typeof", "typeof")}}

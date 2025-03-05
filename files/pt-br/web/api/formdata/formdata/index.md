@@ -9,7 +9,8 @@ slug: Web/API/FormData/FormData
 
 O **`FormData()`** construtor cria um novo objeto {{domxref("FormData")}}.
 
-> **Nota:** Este recurso está disponível em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Este recurso está disponível em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
 ## Sintaxe
 
@@ -56,7 +57,8 @@ Ou você pode especificicar o opcional `form` argument ao criar o objeto `FormDa
 </form>
 ```
 
-> **Nota:** Todos os elementos de entrada têm um atributo 'name'. Para que possa acessar seus valores mais tarde.
+> [!NOTE]
+> Todos os elementos de entrada têm um atributo 'name'. Para que possa acessar seus valores mais tarde.
 
 ```js
 var myForm = document.getElementById("myForm");
@@ -74,6 +76,6 @@ formData = new FormData(myForm);
 ## Veja também
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Using FormData objects](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

@@ -116,7 +116,8 @@ Cada ejemplo debe tener un encabezado H3 (`###`) que nombre el ejemplo. El encab
 
 Consulta nuestra guía sobre cómo agregar [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para obtener más información.
 
-> **Nota:** A veces querrás vincular a ejemplos dados en otra página.
+> [!NOTE]
+> A veces querrás vincular a ejemplos dados en otra página.
 >
 > **Escenario 1:** Si tienes algunos ejemplos en esta página y algunos más en otra página:
 >

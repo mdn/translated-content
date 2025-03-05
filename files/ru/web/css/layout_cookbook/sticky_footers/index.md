@@ -20,9 +20,10 @@ slug: Web/CSS/Layout_cookbook/Sticky_footers
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer.html", '100%', 720)}}
 
-> **Примечание:** [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/sticky-footer--download.html)
+> [!CALLOUT] > [Загрузить этот пример](https://github.com/mdn/css-examples/blob/master/css-cookbook/sticky-footer--download.html)
 
-> **Примечание:** In this example and the following one we are using a wrapper set to `min-height: 100%` in order that our live example works. You could also achieve this for a full page by setting a {{cssxref("min-height")}} of `100vh` on the {{htmlelement("body")}} and then using it as your grid container.
+> [!NOTE]
+> In this example and the following one we are using a wrapper set to `min-height: 100%` in order that our live example works. You could also achieve this for a full page by setting a {{cssxref("min-height")}} of `100vh` on the {{htmlelement("body")}} and then using it as your grid container.
 
 ## Выбор сделан
 
@@ -40,4 +41,4 @@ The flexbox example starts out in the same way, but we use `display:flex` rather
 
 ## Resources on MDN
 
-- [Basic concepts of Grid Layout](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [Basic concepts of Grid Layout](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)

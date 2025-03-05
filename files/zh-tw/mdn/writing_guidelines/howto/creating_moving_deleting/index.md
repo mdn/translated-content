@@ -3,8 +3,6 @@ title: 編輯以及新增頁面
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
 ---
 
-{{MDNSidebar}}
-
 幾乎每位 MDN 的貢獻者在 MDN 中都會做的兩件基本工作，即為編輯一個已存在的頁面或者是新增一個頁面。這篇文章將介紹如何編輯文件的基本技能。
 
 ## 編輯一個已存在的頁面
@@ -31,7 +29,7 @@ slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
 
 ## Tags
 
-你可以於文章編輯區塊下增加或移除用以描述文章內容以及用途的 tags。請詳見 [How to properly tag pages](/zh-TW/docs/MDN/Contribute/Tagging) 以了解 tags 如何來提供資訊。
+你可以於文章編輯區塊下增加或移除用以描述文章內容以及用途的 tags。請詳見 [How to properly tag pages](/zh-TW/docs/MDN/Writing_guidelines/Howto) 以了解 tags 如何來提供資訊。
 
 ## 審核是必要的嗎?
 
@@ -77,7 +75,7 @@ slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
 https://developer.mozilla.org/zh-TW/docs/FooBar
 ```
 
-MDN 會心建立一個標題為「FooBar」而且會於開啟編輯器讓你能夠編輯此新頁面。請參考 [Editing an existing page](#Editing_an_existing_page) section of this article for how to use the editor mode.
+MDN 會心建立一個標題為「FooBar」而且會於開啟編輯器讓你能夠編輯此新頁面。請參考 [Editing an existing page](#editing_an_existing_page) section of this article for how to use the editor mode.
 
 ## 從現有的頁面新增子頁面
 
@@ -87,7 +85,7 @@ MDN 會心建立一個標題為「FooBar」而且會於開啟編輯器讓你能�
 2. 於 **Title** 欄位輸入文章標題。
 3. 若有必要，改變 **Slug** 欄位 ( 舉例來說，若文章標題非常長而你又希望有個較短的 URL）。此欄位會由編輯器自動地來填入， by substituting underscores for spaces in the title. 在此種狀況下，你只能改變 URL 的最後一部分。
 4. 在**TOC**欄位，選擇你想要自動生成顯示在目錄的標題層級，或者這一頁不需要目錄也可以選擇「不需要目錄」選項。
-5. 於編輯器中增添內容並且儲存，請參考 [Editing an existing page](#Editing_an_existing_page) 文章來了解如何運用編輯模式。
+5. 於編輯器中增添內容並且儲存，請參考 [Editing an existing page](#editing_an_existing_page) 文章來了解如何運用編輯模式。
 
 ## 複製現有的頁面
 
@@ -97,7 +95,7 @@ MDN 會心建立一個標題為「FooBar」而且會於開啟編輯器讓你能�
 2. 你可根據你文章的內容適當地訂下**標題**。**Slug** 會根據你文章**標題**如何訂定而自動變換。
 3. 如有必要，可以改變 **Slug** 的部分內容以呈現出新文件於原始架構下的不同。（在大多數的狀況下，此舉是多餘的。因為複製後的頁面對於原始頁面具有相似的內容，因此就必須放在相似的架構之下。）
 4. 在**TOC**欄位，選擇你想要自動生成顯示在目錄的標題層級，或者這一頁不需要目錄也可以選擇「不需要目錄」選項。
-5. 在頁面編輯欄位編寫內容，並且儲存你的變更。請參考 [Editing an existing page](#Editing_an_existing_page) 文章來了解如何運用編輯模式。
+5. 在頁面編輯欄位編寫內容，並且儲存你的變更。請參考 [Editing an existing page](#editing_an_existing_page) 文章來了解如何運用編輯模式。
 
 ## 從現有頁面連結
 
@@ -110,7 +108,7 @@ MDN 會心建立一個標題為「FooBar」而且會於開啟編輯器讓你能�
 
 當連結呈現紅色時，代表著該頁面尚未存在。當連結呈現藍色時，代表著該頁面已經存在。若你想要建立一個新頁面但他的編題已經存在時，首先去檢查並改善現存的頁面，否則為你的新頁面想個不同的標題名稱並以此產生連結。請參考 [page naming guide](/Project:en/Page_Naming_Guide) 以幫助你命名。
 
-你可點擊你新建立的紅色連結（在你儲存以及關閉編輯器之後），來為你的新頁面增添內容。新頁面將在編輯模式下開啟，此時你就可以編寫內容了。請參考 [Editing an existing page](#Editing_an_existing_page) 文章來了解如何運用編輯模式。
+你可點擊你新建立的紅色連結（在你儲存以及關閉編輯器之後），來為你的新頁面增添內容。新頁面將在編輯模式下開啟，此時你就可以編寫內容了。請參考 [Editing an existing page](#editing_an_existing_page) 文章來了解如何運用編輯模式。
 
 ## 重新整理頁面內容
 
@@ -122,4 +120,4 @@ MDN 支援 KumaScript 巨集和嵌入其他頁面內容插入頁面，有時候�
 ## 參見
 
 - [MDN 編輯器指南](/zh-TW/docs/MDN/Contribute/Editor)
-- [MDN 風格指南](/zh-TW/docs/MDN/Contribute/Content/Style_guide)
+- [MDN 風格指南](/zh-TW/docs/MDN/Writing_guidelines/Writing_style_guide)

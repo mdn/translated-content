@@ -47,6 +47,6 @@ transform-style: unset;
 
 ## Veja também
 
-- [Using CSS transforms](/pt-BR/docs/CSS/Using_CSS_transforms)
+- [Using CSS transforms](/pt-BR/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 
 {{CSSRef}}

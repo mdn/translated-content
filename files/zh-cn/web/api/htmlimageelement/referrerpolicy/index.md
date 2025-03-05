@@ -7,14 +7,7 @@ slug: Web/API/HTMLImageElement/referrerPolicy
 
 **`HTMLImageElement.referrerPolicy`** 反映了 {{HTMLElement("img")}} 元素的 HTML 属性 [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/img#referrerpolicy) 的定义，这个属性定义了{{HTMLElement("img")}} 元素在获取资源时的引用方式。
 
-## 语法
-
-```
-refStr = imgElt.referrerPolicy;
-imgElt.referrerPolicy = refStr;
-```
-
-### 值
+## 值
 
 - `"no-referrer"` 表示 HTTP 头部信息将不会发送 `referrer` 。
 - `"origin"` 表示 referrer 只包含策略、主机名、端口等页面源的信息。

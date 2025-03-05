@@ -29,7 +29,8 @@ createElement(tagName, options)
 
 O novo {{domxref("Element")}}.
 
-> **Nota:** Um novo {{domxref("HTMLElement", "HTMLElement", "", "1")}} se o documento é um {{domxref("HTMLDocument", "HTMLDocument", "", "1")}}, que é na maioria dos casos. Caso contrário, um novo {{domxref("Element","Element","","1")}} é retornado.
+> [!NOTE]
+> Um novo {{domxref("HTMLElement", "HTMLElement", "", "1")}} se o documento é um {{domxref("HTMLDocument", "HTMLDocument", "", "1")}}, que é na maioria dos casos. Caso contrário, um novo {{domxref("Element","Element","","1")}} é retornado.
 
 ## Exemplos
 
@@ -105,7 +106,8 @@ let expandingList = document.createElement("ul", { is: "expanding-list" });
 
 O novo elemento receberá um atributo [`is`](/pt-BR/docs/Web/HTML/Global_attributes/is) cujo valor é o nome da tag do elemento customizado.
 
-> **Nota:** Para efeitos de compatibilidade com versões anteriores dos [Custom Elements](https://www.w3.org/TR/custom-elements/), alguns navegadores irão permitir você passar uma string aqui em vez de um objeto, onde o valor da string é o nome da tag do elemento customizado.
+> [!NOTE]
+> Para efeitos de compatibilidade com versões anteriores dos [Custom Elements](https://www.w3.org/TR/custom-elements/), alguns navegadores irão permitir você passar uma string aqui em vez de um objeto, onde o valor da string é o nome da tag do elemento customizado.
 
 ## Especificações
 

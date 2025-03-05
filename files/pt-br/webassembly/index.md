@@ -19,10 +19,10 @@ E o que é ainda melhor é que ele está sendo desenvolvido como um padrão web 
 
 - [Conceitos WebAssembly](/pt-BR/docs/WebAssembly/Concepts)
   - : Comece lendo os conceitos de alto nível por trás do WebAssembly - o que é, por que é tão útil, como ele se encaixa na plataforma web e como usá-lo.
-- [Compilando C/C++ para WebAssembly](/pt-BR/docs/WebAssembly/C_to_wasm)
+- [Compilando C/C++ para WebAssembly](/pt-BR/docs/WebAssembly/C_to_Wasm)
   - : Quando você escreve o código em C/C++, você pode então compilá-lo em .wasm usando uma ferramenta como [Emscripten](/pt-BR/docs/Mozilla/Projects/Emscripten/). Veja como isso funciona.
 - [Carregando e executando código WebAssembly](/pt-BR/docs/WebAssembly/Loading_and_running)
-  - : Depois de ter um .wasm, este artigo aborda como buscá-lo, compilá-lo e instanciá-lo, combinando a API [JavaScript WebAssembly](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly)como [Obter](/pt-BR/docs/Web/API/Fetch_API) ou APIs [XHR.](/pt-BR/docs/Web/API/XMLHttpRequest)
+  - : Depois de ter um .wasm, este artigo aborda como buscá-lo, compilá-lo e instanciá-lo, combinando a API [JavaScript WebAssembly](/pt-BR/docs/WebAssembly/JavaScript_interface)como [Obter](/pt-BR/docs/Web/API/Fetch_API) ou APIs [XHR.](/pt-BR/docs/Web/API/XMLHttpRequest)
 - [Compilando módulos de WebAssembly no cache](/pt-BR/docs/WebAssembly/Caching_modules)
   - : O cache de grandes módulos WebAssembly no cliente é útil para melhorar o desempenho da inicialização do aplicativo. Este artigo explica como usar isso usando [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API).
 - [Usando a API JavaScript do WebAssembly](/pt-BR/docs/WebAssembly/Using_the_JavaScript_API)
@@ -69,4 +69,4 @@ E o que é ainda melhor é que ele está sendo desenvolvido como um padrão web 
 - [webassembly.org](http://webassembly.org/)
 - [WebAssembly articles on Mozilla Hacks blog](https://hacks.mozilla.org/category/webassembly/)
 - [W3C WebAssembly Community Group](https://www.w3.org/community/webassembly/)
-- [Large-Allocation HTTP header](/pt-BR/docs/Web/HTTP/Headers/Large-Allocation)
+- [Large-Allocation HTTP header](/pt-BR/docs/orphaned/Web/HTTP/Headers/Large-Allocation)

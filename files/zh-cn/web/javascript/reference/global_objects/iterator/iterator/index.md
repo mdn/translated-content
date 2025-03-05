@@ -40,7 +40,7 @@ new Iterator()
 
 ### 继承 Iterator
 
-以下示例定义了一个允许迭代的自定义数据结构——`Range`。使一个对象可迭代最简单的方法是提供一个生成器函数的形式的 [`[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) 方法：
+以下示例定义了一个允许迭代的自定义数据结构——`Range`。使一个对象可迭代最简单的方法是提供一个生成器函数的形式的 [`[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) 方法：
 
 ```js
 class Range {
@@ -72,7 +72,7 @@ for (const num of range) {
 - 返回的迭代器继承自 {{jsxref("Generator")}}，这意味着对 `Generator.prototype` 的修改将会影响返回的迭代器，这是一种抽象泄漏。
 - 返回的迭代器没有继承自自定义原型，这使得为迭代器添加额外的方法变得更加困难。
 
-我们可以通过继承 `Iterator` 来模仿内置迭代器，例如 [map 迭代器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator)的实现。这使得我们可以定义额外的属性，例如 [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag)，同时使得迭代器辅助方法对返回的迭代器可用。
+我们可以通过继承 `Iterator` 来模仿内置迭代器，例如 [map 迭代器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)的实现。这使得我们可以定义额外的属性，例如 [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag)，同时使得迭代器辅助方法对返回的迭代器可用。
 
 ```js
 class Range {

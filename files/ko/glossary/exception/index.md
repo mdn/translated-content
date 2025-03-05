@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**예외(exception)**는 정상적인 코드 실행을 중단하는 조건입니다. JavaScript {{glossary("syntax error", "문법 에러")}}는 매우 일반적인 예외가 있는 코드입니다.
+**예외(exception)** 는 정상적인 코드 실행을 중단하는 조건입니다. JavaScript {{glossary("syntax error", "문법 에러")}}는 매우 일반적인 예외가 있는 코드입니다.
 
 ## 같이 보기
 

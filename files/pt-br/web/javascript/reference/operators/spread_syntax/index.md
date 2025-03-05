@@ -197,7 +197,7 @@ Quando usar a sintaxe de espalhamento para chamada de funções, esteja ciente d
 
 ## Sintaxe Rest (parâmetros)
 
-A _sintaxe rest_ se parece exatamente como a _sintaxe de espalhamento_, mas esta é usada para desestruturar arrays e objetos. De certa forma, a _sintaxe rest_ é o oposto da _sintaxe de espalhamento_: A _sintaxe de espalhamento (spread)_ 'expande' um array em vários elementos, enquanto a _sintaxe rest_ coleta multiplos elementos e 'condensa' eles em um único elemento. Veja [parâmetros rest.](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters)
+A _sintaxe rest_ se parece exatamente como a _sintaxe de espalhamento_, mas esta é usada para desestruturar arrays e objetos. De certa forma, a _sintaxe rest_ é o oposto da _sintaxe de espalhamento_: A _sintaxe de espalhamento (spread)_ 'expande' um array em vários elementos, enquanto a _sintaxe rest_ coleta multiplos elementos e 'condensa' eles em um único elemento. Veja [parâmetros rest.](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 
 ## Especificações
 
@@ -209,4 +209,4 @@ A _sintaxe rest_ se parece exatamente como a _sintaxe de espalhamento_, mas esta
 
 ## Veja também
 
-- [Parâmetros Rest](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters) (also '`...`')
+- [Parâmetros Rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters) (also '`...`')

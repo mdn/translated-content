@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 24b4448c9dbaf3cb9084ad69a85c72e6aa2f72f9
 ---
 
-{{MDNSidebar}}
-
 在编写有关 API 的文档时，信息来源很多：规范描述了应该实现的内容以及模型，实现描述了实际放在浏览器中的内容。WebIDL 文件是一种非常简洁的方式，可以提供很多（但不是全部）有关 API 的信息。本文档提供了有助于理解 WebIDL 语法的参考。
 
 IDL 代表**_接口定义语言_**，它用于描述 API。在更广泛的计算领域，IDL 有不同的种类。在浏览器领域，我们使用的 IDL 被称为 _WebIDL_。有两种 WebIDL 可用：一种是在 WebIDL 规范中给出的，一种是在浏览器中实现的。规范是标准参考，而浏览器的 WebIDL 描述了在特定浏览器中实际实现的内容，并包含其他内容，例如注释、有关非标准元素的信息，以及对 IDL 规范的特定于浏览器的扩展。
@@ -30,7 +28,8 @@ WebIDL 在[其规范](https://webidl.spec.whatwg.org/)中定义。但它被设�
 - 对于 Chromium，Google 也创建了一个[文档](https://www.chromium.org/blink/webidl/)来描述其扩展。
 - 对于 WebCore，Apple 同样为其特有扩展提供了一个[页面](https://trac.webkit.org/wiki/WebKitIDL)。
 
-> **备注：** 我们在这里只描述了编写文档时最有用的 WebIDL 子集。有许多其他的注释对于实现者来说很有用；请参阅上面链接的四个文档，以有一个完整的概念。
+> [!NOTE]
+> 我们在这里只描述了编写文档时最有用的 WebIDL 子集。有许多其他的注释对于实现者来说很有用；请参阅上面链接的四个文档，以有一个完整的概念。
 
 ## 接口
 
@@ -167,7 +166,8 @@ interface DedicatedWorkerGlobalScope : WorkerGlobalScope {…}
 
 ### 首选项
 
-> **备注：** 此信息特定于 Gecko，应仅在浏览器兼容性部分中使用。
+> [!NOTE]
+> 此信息特定于 Gecko，应仅在浏览器兼容性部分中使用。
 
 在 Gecko 中，部分接口的可用性（包括其构造函数、属性和方法）可能受到首选项（通常称为“pref”）的控制。这也被标记在 WebIDL 中。
 
@@ -182,7 +182,8 @@ interface SpeechSynthesis {
 
 这里，`media.webspeech.synth.enabled` 控制 `SpeechSynthesis` 接口及其属性（完整列表有超过 3 个）。
 
-> **备注：** 首选项的默认值不能直接在 WebIDL 中使用（它可能因使用 Gecko 的产品而不同）。
+> [!NOTE]
+> 首选项的默认值不能直接在 WebIDL 中使用（它可能因使用 Gecko 的产品而不同）。
 
 ### 仅在系统代码中可用
 
@@ -227,7 +228,8 @@ readonly attribute MediaError? error;
 - 在自己页面的第一句话中，用以下文字开始描述：_**`HTMLMediaElement.error`** 只读属性…_
 - 在接口页面中对其进行描述时，以“_返回…_”开头。
 
-> **备注：** 只有只读属性可以被描述为“返回”一个值。非只读属性也可以用于设置值。
+> [!NOTE]
+> 只有只读属性可以被描述为“返回”一个值。非只读属性也可以用于设置值。
 
 ### 抛出异常
 
@@ -276,7 +278,8 @@ _尽管此属性是只读的，但如果修改它（即使在严格模式下）�
 
 对于接口对象，默认情况下返回对内部对象的*引用*。这必须在接口页面中的简短描述和特定子页面中的描述中提到。
 
-> **备注：** 与返回对象的属性一起使用的 `readonly` 关键字适用于引用（无法更改内部对象）。返回对象的属性可以更改，即使它们在相关接口中被标记为只读。
+> [!NOTE]
+> 与返回对象的属性一起使用的 `readonly` 关键字适用于引用（无法更改内部对象）。返回对象的属性可以更改，即使它们在相关接口中被标记为只读。
 
 某些情况下，API 必须返回一个*新*对象，或者是内部对象的*副本*。这种情况在 WebIDL 中使用 `[NewObject]` 注释来表示。
 
@@ -309,7 +312,8 @@ _**`HTMLMediaElement.buffered`** 只读属性返回一个新的 \\{{domxref("Tim
 
 ### 首选项
 
-> **备注：** 此信息特定于 Gecko，应仅在浏览器兼容性部分中使用。
+> [!NOTE]
+> 此信息特定于 Gecko，应仅在浏览器兼容性部分中使用。
 
 在 Gecko 中，某些属性的可用性可能受到首选项的控制。这也被标记在 WebIDL 中。
 
@@ -320,7 +324,8 @@ _**`HTMLMediaElement.buffered`** 只读属性返回一个新的 \\{{domxref("Tim
 
 这里，`media.webvtt.enabled` 控制 `textTracks` 属性。
 
-> **备注：** 首选项的默认值不会直接记录在 WebIDL 中（它可能因使用 Gecko 的产品而不同）。
+> [!NOTE]
+> 首选项的默认值不会直接记录在 WebIDL 中（它可能因使用 Gecko 的产品而不同）。
 
 ## 方法
 
@@ -375,7 +380,8 @@ DOMString canPlayType(DOMString type);
 
 ### 首选项
 
-> **备注：** 此信息特定于 Gecko，应仅在浏览器兼容性部分中使用。
+> [!NOTE]
+> 此信息特定于 Gecko，应仅在浏览器兼容性部分中使用。
 
 在 Gecko 中，某些方法的可用性可能受到首选项的控制。这也被标记在 WebIDL 中。
 
@@ -388,7 +394,8 @@ DOMString canPlayType(DOMString type);
 
 这里，`media.webvtt.enabled` 控制 `addTextTrack()` 方法。
 
-> **备注：** 首选项的默认值不会直接记录在 WebIDL 中（它可能因使用 Gecko 的产品而不同）。
+> [!NOTE]
+> 首选项的默认值不会直接记录在 WebIDL 中（它可能因使用 Gecko 的产品而不同）。
 
 ## 特殊方法
 
@@ -413,7 +420,8 @@ serializer; // 标准版本
 
 `toJSON()` 方法就像其他方法一样被列在接口中，并且有自己的子页面（例如 {{domxref("Performance.toJSON()")}}）。
 
-> **备注：** WebIDL 规范使用 `serializer` 而不是 `jsonifier`。这没有在 Gecko 中使用——mozilla-central 中只能找到非标准的早期提案 `jsonifier`。
+> [!NOTE]
+> WebIDL 规范使用 `serializer` 而不是 `jsonifier`。这没有在 Gecko 中使用——mozilla-central 中只能找到非标准的早期提案 `jsonifier`。
 
 ### 类迭代器方法
 

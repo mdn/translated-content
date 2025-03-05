@@ -136,7 +136,7 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 - [`k4`](/fr/docs/Web/SVG/Attribute/k4)
 - [`kernelMatrix`](/fr/docs/Web/SVG/Attribute/kernelMatrix)
 - [`kernelUnitLength`](/fr/docs/Web/SVG/Attribute/kernelUnitLength)
-- [`kerning`](/fr/docs/Web/SVG/Attribute/kerning)
+- [`kerning`](/fr/docs/Web/CSS/font-kerning)
 - [`keyPoints`](/fr/docs/Web/SVG/Attribute/keyPoints)
 - [`keySplines`](/fr/docs/Web/SVG/Attribute/keySplines)
 - [`keyTimes`](/fr/docs/Web/SVG/Attribute/keyTimes)
@@ -368,7 +368,8 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 
 ### Attributs de présentation
 
-> **Note :** Tous les attributs de présentation SVG peuvent être utilisés comme propriétés CSS.
+> [!NOTE]
+> Tous les attributs de présentation SVG peuvent être utilisés comme propriétés CSS.
 
 - [`alignment-baseline`](/fr/docs/Web/SVG/Attribute/alignment-baseline)
 - [`baseline-shift`](/fr/docs/Web/SVG/Attribute/baseline-shift)
@@ -402,7 +403,7 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 - [`glyph-orientation-horizontal`](/fr/docs/Web/SVG/Attribute/glyph-orientation-horizontal)
 - [`glyph-orientation-vertical`](/fr/docs/Web/SVG/Attribute/glyph-orientation-vertical)
 - [`image-rendering`](/fr/docs/Web/SVG/Attribute/image-rendering)
-- [`kerning`](/fr/docs/Web/SVG/Attribute/kerning)
+- [`kerning`](/fr/docs/Web/CSS/font-kerning)
 - [`letter-spacing`](/fr/docs/Web/SVG/Attribute/letter-spacing)
 - [`lighting-color`](/fr/docs/Web/SVG/Attribute/lighting-color)
 - [`marker-end`](/fr/docs/Web/SVG/Attribute/marker-end)

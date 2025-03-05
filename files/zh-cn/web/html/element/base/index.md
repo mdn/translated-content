@@ -40,7 +40,7 @@ slug: Web/HTML/Element/base
 
 ## 属性
 
-该标签包含[全局属性](/zh-CN/docs/HTML/Global_attributes)。
+该标签包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 如果指定了以下任一属性，这个元素**必须**在其他任何属性是 URL 的元素之前。例如：{{HTMLElement("link")}} 的 `href` 属性。
 

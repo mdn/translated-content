@@ -37,6 +37,6 @@ const obj = {
 ## 参见
 
 - 维基百科上的[属性（计算机科学）](<https://en.wikipedia.org/wiki/Property_(programming)>)词条
-- [JavaScript 面向对象编程介绍](/zh-CN/docs/Learn/JavaScript/Objects)
+- [JavaScript 面向对象编程介绍](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
 - [对象属性](/zh-CN/docs/Web/JavaScript/Data_structures#属性)
 - [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)

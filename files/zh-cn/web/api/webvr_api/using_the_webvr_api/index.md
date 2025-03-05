@@ -8,7 +8,8 @@ slug: Web/API/WebVR_API/Using_the_WebVR_API
 The [WebVR API](/zh-CN/docs/Web/API/WebVR_API) is a fantastic addition to the web developer's toolkit, allowing access to virtual reality hardware such as the [Oculus Rift](https://developer.oculus.com/), and converting outputted movement and orientation data into view rendering updates on a web app. But how do you get started in developing VR apps for the Web? This article will guide you through the basics.
 [WebVR API](/zh-CN/docs/Web/API/WebVR_API) 对于 web 开发者来说，是一个令人心动的功能包，允许你连接到类似于[Oculus Rift](https://developer.oculus.com/) 这样的虚拟现实硬件，并且能够在你的 web app 中，将从硬件获取到的位置移动数据和姿态角数据，实时更新你的渲染显示输出。具体要如何在 Web 上开始开发你的 VR app 呢？这篇文章将会提供基础的引导信息。
 
-> **备注：** Currently WebVR is at an experimental stage (you can find the [latest spec here](http://mozvr.github.io/webvr-spec/webvr.html)); it currently works best in Firefox Nightly/Developer Edition, with some aspects of it also working in Google Chrome. Read [Bringing VR to Chrome](http://blog.tojicode.com/2014/07/bringing-vr-to-chrome.html) by Brandon Jones for more details on that.
+> [!NOTE]
+> Currently WebVR is at an experimental stage (you can find the [latest spec here](http://mozvr.github.io/webvr-spec/webvr.html)); it currently works best in Firefox Nightly/Developer Edition, with some aspects of it also working in Google Chrome. Read [Bringing VR to Chrome](http://blog.tojicode.com/2014/07/bringing-vr-to-chrome.html) by Brandon Jones for more details on that.
 > 注意：当前 WebVR 还是体验实验阶段（你可以从[这里](http://mozvr.github.io/webvr-spec/webvr.html)找到最新规格说明）；它已经在 Firefox Nightly/Developer Edition 的版本上工作的很好了，部分功能也在 Google Chrome 上可以正常工作了。详细请访问由 Brandon Jones 在 [Bringing VR to Chrome](http://blog.tojicode.com/2014/07/bringing-vr-to-chrome.html)提供的更多内容。
 
 ## 起步
@@ -16,16 +17,18 @@ The [WebVR API](/zh-CN/docs/Web/API/WebVR_API) is a fantastic addition to the we
 To get started, you need to have your VR hardware set up as recommended in the owner's manual, and your computer set up as indicated in [WebVR environment setup](/zh-CN/docs/Web/API/WebVR_API/WebVR_environment_setup). A dedicated GPU is recommended for smoother performance.
 你需要先准备好一个已经配置好 VR 硬件，并且还需要完成 [WebVR 环境的安装](/zh-CN/docs/Web/API/WebVR_API/WebVR_environment_setup)。当然，若想要保证很平滑的体验，你需要配置一个足够好的 GPU 显卡。
 
-> **备注：** For more in depth information, be sure to check out [WebVR environment setup](/zh-CN/docs/Web/API/WebVR_API/WebVR_environment_setup).
+> [!NOTE]
+> For more in depth information, be sure to check out [WebVR environment setup](/zh-CN/docs/Web/API/WebVR_API/WebVR_environment_setup).
 > 注意：更深层次的信息，请 check out [WebVR environment setup](/zh-CN/docs/Web/API/WebVR_API/WebVR_environment_setup) 以获取更详细的内容。
 
-> **备注：** There are also cheaper options available such as using a mobile device for the head mounted display (in this case you won't have a position sensor available, so you might have to fake the orientation data using the [deviceorientation API](/zh-CN/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) instead perhaps.)
-> 注意：你也可以使用更便宜的方式，比如使用一个手机设备来实现头部显示功能（只是这种情况下，你将没有空间位置追踪传感器相关的功能，将只能使用姿态角数据相关的 API [deviceorientation API](/zh-CN/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) 。）
+> [!NOTE]
+> There are also cheaper options available such as using a mobile device for the head mounted display (in this case you won't have a position sensor available, so you might have to fake the orientation data using the [deviceorientation API](/zh-CN/docs/Web/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) instead perhaps.)
+> 注意：你也可以使用更便宜的方式，比如使用一个手机设备来实现头部显示功能（只是这种情况下，你将没有空间位置追踪传感器相关的功能，将只能使用姿态角数据相关的 API [deviceorientation API](/zh-CN/docs/Web/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) 。）
 
 ## Introducing a simple demo<br>简单示例介绍
 
-There are a number of WebVR demos available at the [MozVR team repo](https://github.com/MozVR/), and the [MDN webvr-tests repo](https://github.com/mdn/webvr-tests), but the main one we will be focusing on in this article is our [positionsensorvrdevice](https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice) demo ([view it live](http://mdn.github.io/webvr-tests/positionsensorvrdevice/)):
-在[MozVR team repo](https://github.com/MozVR/)和[MDN webvr-tests repo](https://github.com/mdn/webvr-tests)提供了一定数量的 WebVR 示例，在这篇文章里，我们将着重关注我们的 [positionsensorvrdevice](https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice) 提供的示例 (点此访问 live [view it live](http://mdn.github.io/webvr-tests/positionsensorvrdevice/))
+There are a number of WebVR demos available at the [MozVR team repo](https://github.com/MozVR/), and the [MDN webvr-tests repo](https://github.com/mdn/webvr-tests), but the main one we will be focusing on in this article is our [positionsensorvrdevice](https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice) demo ([view it live](https://mdn.github.io/webvr-tests/positionsensorvrdevice/)):
+在[MozVR team repo](https://github.com/MozVR/)和[MDN webvr-tests repo](https://github.com/mdn/webvr-tests)提供了一定数量的 WebVR 示例，在这篇文章里，我们将着重关注我们的 [positionsensorvrdevice](https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice) 提供的示例 (点此访问 live [view it live](https://mdn.github.io/webvr-tests/positionsensorvrdevice/))
 
 ![](vrpositionsensor-demo.png)
 
@@ -99,7 +102,7 @@ var body = document.querySelector("body");
 body.appendChild(myCanvas);
 ```
 
-Next, we create a new [image](/zh-CN/docs/Web/API/HTMLImageElement) and use a [`load`](/zh-CN/docs/Web/API/Window/load_event) event to check that the image is loaded before running `draw()`, the [main loop](/zh-CN/docs/Games/Anatomy#Building_a_main_loop_in_JavaScript) for our app:
+Next, we create a new [image](/zh-CN/docs/Web/API/HTMLImageElement) and use a [`load`](/zh-CN/docs/Web/API/Window/load_event) event to check that the image is loaded before running `draw()`, the [main loop](/zh-CN/docs/Games/Anatomy#building_a_main_loop_in_javascript) for our app:
 然后，我们在主渲染循环控制中，先创建一个图片对象，并且在 draw() 方法运行前，监听 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件回调，以检查图片是否已经被正常装载成功。
 
 ```js
@@ -147,7 +150,7 @@ Next in the loop we run three functions:
 
 You'll learn more about these later on.
 
-Finally for the loop, we run [requestAnimationFrame(draw)](/zh-CN/docs/Web/API/window/requestAnimationFrame) so that the `draw()` loop is continually run.
+Finally for the loop, we run [requestAnimationFrame(draw)](/zh-CN/docs/Web/API/Window/requestAnimationFrame) so that the `draw()` loop is continually run.
 
 ### Retrieving position and orientation information 提取位置与姿态
 
@@ -202,7 +205,7 @@ if (posState.hasOrientation) {
 
 Next, we use a similar process to update the scene according to the HMD's orientation — check that valid orientation data is available using {{domxref("VRPositionState.hasOrientation")}}, display orientation data in the UI for informational purposes, and then set the `xOrient`, `yOrient`, and `zOrient` values relative to the orientation information stored in {{domxref("VRPositionState.orientation")}}.
 
-```
+```js
   timePara.textContent = 'Timestamp: ' + Math.floor(posState.timeStamp);
 }
 ```
@@ -234,8 +237,8 @@ We then {{domxref("CanvasRenderingContext2D.beginPath","begin a path")}}, {{domx
 
 Note that the `rect()` has to be drawn starting from minus a quarter of the width and minus half the height, because of the translation applied earlier.
 
-```
-  ctx.clip();
+```js
+ctx.clip();
 ```
 
 Now we {{domxref("CanvasRenderingContext2D.clip","clip()")}} the canvas. Because we called this just after the `rect()` was drawn, anything else that we do on the canvas will be constrained inside the `rect()`, with any overflow hidden until a `restore()` call is made (see later on.) This ensures that the whole left eye view will remain separate from the right eye view.
@@ -282,9 +285,11 @@ Finally, we {{domxref("CanvasRenderingContext2D.restore","restore()")}} the canv
 }
 ```
 
-> **备注：** We are kind of cheating here, using a 2D canvas to approximate a 3D scene. But it keeps things simple for learning purposes. You can use the position and orientation data discussed above to modify the view rendering on any app written with web technologies. For example, our [3Dpositionorientation](https://github.com/mdn/webvr-tests/tree/gh-pages/3Dpositionorientation) demo uses very similar code to that shown above to control the view of a WebGL scene created using [Three.js](http://threejs.org/).
+> [!NOTE]
+> We are kind of cheating here, using a 2D canvas to approximate a 3D scene. But it keeps things simple for learning purposes. You can use the position and orientation data discussed above to modify the view rendering on any app written with web technologies. For example, our [3Dpositionorientation](https://github.com/mdn/webvr-tests/tree/gh-pages/3Dpositionorientation) demo uses very similar code to that shown above to control the view of a WebGL scene created using [Three.js](https://threejs.org/).
 
-> **备注：** The [code for `drawCrosshairs()`](https://github.com/mdn/webvr-tests/blob/gh-pages/positionsensorvrdevice/index.html#L106-L119) is very simple in comparison to `drawImages()`, so we'll leave you to study that for yourself if you're interested!
+> [!NOTE]
+> The [code for `drawCrosshairs()`](https://github.com/mdn/webvr-tests/blob/gh-pages/positionsensorvrdevice/index.html#L106-L119) is very simple in comparison to `drawImages()`, so we'll leave you to study that for yourself if you're interested!
 
 ### Fullscreen 全屏控制
 

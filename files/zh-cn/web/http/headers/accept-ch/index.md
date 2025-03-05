@@ -28,7 +28,8 @@ l10n:
   </tbody>
 </table>
 
-> **备注：** 客户端提示只能在安全源（通过 TLS）上访问。所有安全的请求都应该持久化 `Accept-CH` 标头，以确保客户端提示可靠地发送。
+> [!NOTE]
+> 客户端提示只能在安全源（通过 TLS）上访问。所有安全的请求都应该持久化 `Accept-CH` 标头，以确保客户端提示可靠地发送。
 
 ## 语法
 
@@ -43,7 +44,8 @@ Accept-CH: Viewport-Width, Width
 Vary: Viewport-Width, Width
 ```
 
-> **备注：** 请牢记要根据所接受的客户端提示[更改响应](/zh-CN/docs/Web/HTTP/Client_hints#缓存和客户端提示)。
+> [!NOTE]
+> 请牢记要根据所接受的客户端提示[更改响应](/zh-CN/docs/Web/HTTP/Client_hints#缓存和客户端提示)。
 
 ## 规范
 

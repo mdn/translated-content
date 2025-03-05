@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment
 
 La méthode **`Intl.Segmenter.prototype.segment()`** segmente une chaîne de caractères selon une locale et une granularité fournies par l'objet [`Intl.Segmenter`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) courant.
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter-prototype-segment.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Segmenter.prototype.segment")}}
+
+```js interactive-example
+const string1 = "Que ma joie demeure";
+
+const segmenterFrGrapheme = new Intl.Segmenter("fr", {
+  granularity: "grapheme",
+});
+const graphemeSegments = segmenterFrGrapheme.segment(string1);
+
+console.log(Array.from(graphemeSegments)[0]);
+// Expected output:
+// Object {segment: 'Q', index: 0, input: 'Que ma joie demeure'}
+```
 
 ## Syntaxe
 
@@ -22,7 +35,7 @@ segment(input);
 
 ### Valeur de retour
 
-Un nouvel objet itérable [`Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) qui contient les segments de la chaîne fournie en entrée et dont le découpage suit la locale et la granularité fournies par le segmenteur.
+Un nouvel objet itérable [`Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) qui contient les segments de la chaîne fournie en entrée et dont le découpage suit la locale et la granularité fournies par le segmenteur.
 
 ## Exemples
 

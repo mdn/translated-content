@@ -15,7 +15,7 @@ limited-quirks 및 no-quirks 모드는 이전에 각각 "almost-standards" 모�
 
 ## 브라우저는 어떤 모드를 사용할지 어떻게 결정할까?
 
-[HTML](/ko/docs/HTML)문서의 경우 브라우저는 문서 시작 부분에 DOCTYPE을 사용하여 문서를 quirks 모드에서 처리할지 표준 모드에서 처리할지 결정합니다. 페이지가 전체 표준 모드를 사용하도록 하려면 페이지에 아래 예시와 같은 DOCTYPE이 있는지 확인하세요.
+[HTML](/ko/docs/Web/HTML)문서의 경우 브라우저는 문서 시작 부분에 DOCTYPE을 사용하여 문서를 quirks 모드에서 처리할지 표준 모드에서 처리할지 결정합니다. 페이지가 전체 표준 모드를 사용하도록 하려면 페이지에 아래 예시와 같은 DOCTYPE이 있는지 확인하세요.
 
 ```html
 <!doctype html>
@@ -34,11 +34,11 @@ HTML문서의 시작 부분에 DOCTYPE을 넣어야 합니다. 주석이나 XML 
 
 <!DOCTYPE html>의 유일한 목적은 no-quirks 모드를 활성화하는 것입니다. 이전 버전의 HTML 표준 DOCTYPE은 추가적인 의미를 제공했지만, 어떤 브라우저도 렌더링 모드 전환 이외의 다른 용도로 DOCTYPE을 사용한 적이 없습니다.
 
-[브라우저가 다양한 모드를 선택하는 시기](http://hsivonen.iki.fi/doctype/)에 대한 자세한 설명도 참조하세요.
+[브라우저가 다양한 모드를 선택하는 시기](https://hsivonen.iki.fi/doctype/)에 대한 자세한 설명도 참조하세요.
 
 ### XHTML
 
-`Content-Type` HTTP 헤더에 `application/xhtml+xml` MIME 타입으로 설정함으로써 [XHTML](/ko/docs/XHTML)로 제공 하는 경우 해당 문서는 항상 no-quirks 모드로 렌더링되기 때문에 DOCTYPE이 필요하지 않습니다. 단 인터넷 익스플로러는 9부터 XHTML을 지원하기 때문에 인터넷 익스플로러 8의 경우 `application/xhtml+xml`로 기술된 페이지를 표시하지 않고 알 수 없는 형식으로 판단해 다운로드 대화상자가 표시될 수 있다는 점에 유의하세요.
+`Content-Type` HTTP 헤더에 `application/xhtml+xml` MIME 타입으로 설정함으로써 [XHTML](/ko/docs/Glossary/XHTML)로 제공 하는 경우 해당 문서는 항상 no-quirks 모드로 렌더링되기 때문에 DOCTYPE이 필요하지 않습니다. 단 인터넷 익스플로러는 9부터 XHTML을 지원하기 때문에 인터넷 익스플로러 8의 경우 `application/xhtml+xml`로 기술된 페이지를 표시하지 않고 알 수 없는 형식으로 판단해 다운로드 대화상자가 표시될 수 있다는 점에 유의하세요.
 
 XHTML 같은(XHTML-like) 콘텐트를 `text/html` MIME 타입으로 제공한다면 웹 브라우저는 이를 HTML로 인식하므로, 표준 모드로 렌더링하려면 DOCTYPE을 기술해야 한다.
 

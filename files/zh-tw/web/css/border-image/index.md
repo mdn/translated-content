@@ -7,15 +7,32 @@ slug: Web/CSS/border-image
 
 CSS 屬性 `border-image` 可以讓你在元素的邊框上擺上圖片。這讓呈現看似很複雜的一個網頁的小單元簡單很多，它可以省最多九個元素。
 
-> **警告：** 官方的 CSS3 規範描述的 border-image 屬性在這個功能被凍結並出現在 Gecko 1.9.1 的釋出版之後改變很多。因此，這項功能的語法跟呈現方法很可能在未來 Gecko 的釋出版改變。特別是選擇性的 `border-width` 參數，它覆蓋既有 `border-width` 取值的這項特性已經從規範移除了，因此勢必也會在未來的 Gecko 被拿掉。
+> [!WARNING]
+> 官方的 CSS3 規範描述的 border-image 屬性在這個功能被凍結並出現在 Gecko 1.9.1 的釋出版之後改變很多。因此，這項功能的語法跟呈現方法很可能在未來 Gecko 的釋出版改變。特別是選擇性的 `border-width` 參數，它覆蓋既有 `border-width` 取值的這項特性已經從規範移除了，因此勢必也會在未來的 Gecko 被拿掉。
 
 瀏覽器會顯示 `border-image` 指定的圖片而不是 {{ cssxref("border-style") }} 給的邊框樣式，但是若它的取值是 `none` 或是因某些理由無法顯示該圖片，瀏覽器就會顯示邊框樣式。`border-image` 會畫一個額外的背景圖片在原來 {{ cssxref("background-image") }} 指定的背景圖片之上。
 
 ## 語法
 
-```
-none |
-  [ <圖片> [ <數字> | <百分比> ]{1,4} [/ <邊框寬度>{1,4}]? ] && [ stretch | repeat | round ]{0,2}
+```css
+/* source | slice */
+border-image: linear-gradient(red, blue) 27;
+
+/* source | slice | repeat */
+border-image: url("/images/border.png") 27 space;
+
+/* source | slice | width */
+border-image: linear-gradient(red, blue) 27 / 35px;
+
+/* source | slice | width | outset | repeat */
+border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
+
+/* 全域值 */
+border-image: inherit;
+border-image: initial;
+border-image: revert;
+border-image: revert-layer;
+border-image: unset;
 ```
 
 ## 取值
@@ -63,18 +80,26 @@ none |
 
 \[這裡還需要一些活範例]
 
-```
-#header  { -moz-border-image: url(border.png) 27 27 27 27 round round; }
+```css
+#header {
+  -moz-border-image: url(border.png) 27 27 27 27 round round;
+}
 
-.button  { -moz-border-image: url(button.png) 0 5 0 5; }
+.button {
+  -moz-border-image: url(button.png) 0 5 0 5;
+}
 
-.example { -moz-border-image: url(example.jpg) 3 4 6 8 / 10px 12px 14px 22px; }
+.example {
+  -moz-border-image: url(example.jpg) 3 4 6 8 / 10px 12px 14px 22px;
+}
 ```
 
-```
+```css
 /* 鮮見例，在 Firefox 3.5 下看起來像是完全伸展的 background-image */
 
- div     { -moz-border-image: url(bgimage.png) 0; }
+div {
+  -moz-border-image: url(bgimage.png) 0;
+}
 ```
 
 ## 規範

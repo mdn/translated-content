@@ -136,11 +136,11 @@ CSS 字型模組還支持可變字型。與常規字型不同的是，每種樣�
 
 ## 指南
 
-- [文字和字型樣式基礎](/zh-TW/docs/Learn/CSS/Styling_text/Fundamentals)
+- [文字和字型樣式基礎](/zh-TW/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 
   - : 在這篇給初學者的文章中，我們詳細說明了文字和字型樣式的基礎知識，包括瞭解如何使用 {{cssxref("font")}} 簡寫來設定字型粗細、字族和樣式，以及如何對齊文字以及管理行和字母間距。
 
-- [Web 字型](/zh-TW/docs/Learn/CSS/Styling_text/Web_fonts)
+- [Web 字型](/zh-TW/docs/Learn_web_development/Core/Text_styling/Web_fonts)
 
   - : 在這篇給初學者的文章中，我們詳細介紹如何在網頁上使用自訂字型以實現更多樣化的自訂文字樣式。
 
@@ -152,7 +152,7 @@ CSS 字型模組還支持可變字型。與常規字型不同的是，每種樣�
 
   - : 本文將協助你開始使用可變字型。
 
-- [提升字型效能](/zh-TW/docs/Learn/Performance/CSS#improving_font_performance)
+- [提升字型效能](/zh-TW/docs/Learn_web_development/Extensions/Performance/CSS#improving_font_performance)
 
   - : 本文是 CSS 效能指南的一部分，討論字型載入、僅載入所需的字形以及使用 `font-display` 定義字型顯示行為。
 

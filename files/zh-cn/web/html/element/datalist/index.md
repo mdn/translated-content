@@ -7,12 +7,32 @@ slug: Web/HTML/Element/datalist
 
 [HTML](/zh-CN/docs/Web/HTML) **`<datalist>`** 元素包含了一组 {{HTMLElement("option")}} 元素，这些元素表示其他表单控件可选值。
 
-{{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;datalist&gt;", "tabbed-standard")}}
 
-- _[内容范畴](/zh-CN/docs/HTML/Content_categories)_[流内容](/zh-CN/docs/HTML/Content_categories#Flow_content)，[段落内容](/zh-CN/docs/HTML/Content_categories#Phrasing_content)。
-- *允许内容*要么 [段落内容](/zh-CN/docs/HTML/Content_categories#Phrasing_content) 要么 0 个或多个 {{HTMLElement("option")}}元素。
+```html interactive-example
+<label for="ice-cream-choice">Choose a flavor:</label>
+<input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+
+<datalist id="ice-cream-flavors">
+  <option value="Chocolate"></option>
+  <option value="Coconut"></option>
+  <option value="Mint"></option>
+  <option value="Strawberry"></option>
+  <option value="Vanilla"></option>
+</datalist>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+```
+
+- _[内容范畴](/zh-CN/docs/Web/HTML/Content_categories)_[流内容](/zh-CN/docs/Web/HTML/Content_categories#flow_content)，[段落内容](/zh-CN/docs/Web/HTML/Content_categories#phrasing_content)。
+- *允许内容*要么 [段落内容](/zh-CN/docs/Web/HTML/Content_categories#phrasing_content) 要么 0 个或多个 {{HTMLElement("option")}}元素。
 - _标签省略_：不允许，开始标签和结束标签都不能省略。
-- *允许父级元素*任何接受[段落内容](/zh-CN/docs/HTML/Content_categories#Phrasing_content)的元素。
+- *允许父级元素*任何接受[段落内容](/zh-CN/docs/Web/HTML/Content_categories#phrasing_content)的元素。
 - \_Permitted ARIA roles_None
 - _DOM 接口_{{domxref("HTMLDataListElement")}}
 

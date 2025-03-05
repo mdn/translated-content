@@ -2,7 +2,7 @@
 title: <fencedframe>：圍欄頁框元素
 slug: Web/HTML/Element/fencedframe
 l10n:
-  sourceCommit: 5618052b7314a29552ff9e4331dd3da13dc19f5e
+  sourceCommit: 8964db8251cf2825fa81270309a45a475184aab1
 ---
 
 {{HTMLSidebar}}{{SeeCompatTable}}
@@ -37,7 +37,7 @@ l10n:
 
 可以通過策略在圍欄頁框內啟用的唯一功能是專為在圍欄頁框內使用而設計的特定功能：
 
-- [受保護的受眾 API](https://developer.chrome.com/docs/privacy-sandbox/fledge/)
+- [受保護的受眾 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience)
   - `attribution-reporting`
   - `private-aggregation`
   - `shared-storage`
@@ -52,19 +52,34 @@ l10n:
 
 ## 跨越圍欄頁框邊界進行對焦
 
-將文檔的活動焦點從圍欄頁框邊界（即從框框外的元素到內部元素，或反之）移動的能力受到限制。用戶啟動的操作，如單擊或切換，可以這樣做，因為那裡沒有指紋識別風險。
+將文件的活動焦點從圍欄頁框邊界（即從框框外的元素到內部元素，或反之）移動的能力受到限制。用戶啟動的操作，如單擊或切換，可以這樣做，因為那裡沒有指紋識別風險。
 
 然而，試圖通過 API 調用（例如 {{domxref("HTMLElement.focus()")}}）是被禁止的——惡意腳本可以使用一系列這樣的調用來跨越邊界洩露推斷的信息。
 
 ## 定位和縮放
 
-作為[替換元素](/zh-TW/docs/Web/CSS/Replaced_element)，可以使用 {{cssxref("object-position")}} 和 {{cssxref("object-fit")}} 屬性來調整 `<iframe>` 元素框中嵌入文檔的位置、對齊和縮放。
+作為[替換元素](/zh-TW/docs/Web/CSS/Replaced_element)，`<fencedframe>` 允許使用 {{cssxref("object-position")}} 屬性調整嵌入文件在其框內的位置。
 
-嵌入內容的大小可以由 `<fencedframe>` 的 {{domxref("HTMLFencedFrameElement.config", "config")}} 對象的內部 `contentWidth` 和 `contentHeight` 屬性設置。在這種情況下，改變 `<fencedframe>` 的 `width` 或 `height` 將改變頁面上嵌入容器的大小，但容器內部的文檔將被視覺縮放以適應。嵌入文檔的報告寬度和高度（即 {{domxref("Window.innerWidth")}} 和 {{domxref("Window.innerHeight")}}）將保持不變。
+> **備註：** {{cssxref("object-fit")}} 屬性對 `<fencedframe>` 元素沒有影響。
+
+嵌入內容的大小可以由 `<fencedframe>` 的 {{domxref("HTMLFencedFrameElement.config", "config")}} 物件的內部 `contentWidth` 和 `contentHeight` 屬性設置。在這種情況下，改變 `<fencedframe>` 的 `width` 或 `height` 將改變頁面上嵌入容器的大小，但容器內部的文件將被視覺縮放以適應。嵌入文件的報告寬度和高度（即 {{domxref("Window.innerWidth")}} 和 {{domxref("Window.innerHeight")}}）將保持不變。
+
+## 無障礙
+
+使用輔助技術，如螢幕閱讀器的人，可以使用 `<fencedframe>` 的 [`title` 屬性](/zh-TW/docs/Web/HTML/Global_attributes/title)來標記其內容。標題的值應該簡要描述嵌入的內容：
+
+```html
+<fencedframe
+  title="Advertisement for new Log. From Blammo!"
+  width="640"
+  height="320"></fencedframe>
+```
+
+如果沒有此標題，他們必須進入 `<fencedframe>` 才能確定其嵌入的內容。這種上下文轉換可能會令人困惑和耗時，特別是對於包含多個 `<fencedframe>` 的頁面和／或嵌入包含互動內容（如視訊或音訊）的情況。
 
 ## 範例
 
-要設置 `<fencedframe>` 中顯示的內容，需要使用 API（例如[受保護的受眾](https://developer.chrome.com/docs/privacy-sandbox/fledge/)或[共享存儲](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/)）生成一個 {{domxref("FencedFrameConfig")}} 對象，然後將其設置為 `<fencedframe>` 的 `config` 屬性的值。
+要設置 `<fencedframe>` 中顯示的內容，需要使用 API（例如[受保護的受眾](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience)或[共享存儲](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)）生成一個 {{domxref("FencedFrameConfig")}} 物件，然後將其設置為 `<fencedframe>` 的 `config` 屬性的值。
 
 以下範例從受保護的受眾 API 的廣告拍賣中獲取了一個 `FencedFrameConfig`，然後將其用於在 `<fencedframe>` 中顯示獲勝的廣告：
 
@@ -82,20 +97,8 @@ const frame = document.querySelector("fencedframe");
 frame.config = frameConfig;
 ```
 
-> **備註：** 必須在 `runAdAuction()` 調用中傳遞 `resolveToConfig: true`，以獲取一個 `FencedFrameConfig` 對象。如果未設置，則生成的 {{jsxref("Promise")}} 將解析為一個只能在 {{htmlelement("iframe")}} 中使用的 URN。
-
-## 無障礙議題
-
-使用輔助技術，如屏幕閱讀器的人，可以使用 `<fencedframe>` 上的 [`title` 屬性](/zh-TW/docs/Web/HTML/Global_attributes/title) 來標記其內容。標題的值應該簡要描述嵌入的內容：
-
-```html
-<fencedframe
-  title="Advertisement for new Log. From Blammo!"
-  width="640"
-  height="320"></fencedframe>
-```
-
-如果沒有此標題，他們必須進入 `<iframe>` 才能確定其嵌入的內容。這種上下文轉換可能會令人困惑和耗時，特別是對於包含多個 `<iframe>` 的頁面和/或嵌入包含互動內容（如影片或音頻）的情況。
+> [!NOTE]
+> 必須在 `runAdAuction()` 調用中傳遞 `resolveToConfig: true`，以獲取一個 `FencedFrameConfig` 物件。如果未設置，則生成的 {{jsxref("Promise")}} 將解析為一個只能在 {{htmlelement("iframe")}} 中使用的 URN。
 
 ## 技術摘要
 
@@ -153,7 +156,6 @@ frame.config = frameConfig;
       <th scope="row">DOM 介面</th>
       <td>{{domxref("HTMLFencedFrameElement")}}</td>
     </tr>
-  </```html
   </tbody>
 </table>
 
@@ -168,5 +170,5 @@ frame.config = frameConfig;
 ## 參見
 
 - [圍欄頁框 API](/zh-TW/docs/Web/API/Fenced_frame_API)
-- [在 developer.chrome.com 上的圍欄頁框](https://developer.chrome.com/docs/privacy-sandbox/fenced-frame/)
-- [隱私沙箱](https://developer.chrome.com/docs/privacy-sandbox/) 在 developer.chrome.com 上
+- [在 developers.google.com 上的圍欄頁框](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame)
+- 在 developers.google.com 上的[隱私沙箱](https://developers.google.com/privacy-sandbox)

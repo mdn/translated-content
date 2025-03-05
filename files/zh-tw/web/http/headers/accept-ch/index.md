@@ -2,12 +2,12 @@
 title: Accept-CH
 slug: Web/HTTP/Headers/Accept-CH
 l10n:
-  sourceCommit: 3350169912a6150f2af78d6ecf5e22fd7cfc4335
+  sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
 ---
 
 {{HTTPSidebar}}{{securecontext_header}}
 
-**`Accept-CH`** 標頭可以由伺服器設置，以指定用戶端應該在後續請求中包含哪些[用戶端提示](/zh-TW/docs/Web/HTTP/Client_hints)標頭。
+HTTP **`Accept-CH`** {{Glossary("response header", "回應標頭")}}可以由伺服器設定，以指定用戶在後續請求中應包含哪些[用戶端提示](/zh-TW/docs/Web/HTTP/Client_hints)標頭。為了確保用戶端提示能夠可靠地傳送，應該對所有安全請求持久化 `Accept-CH` 標頭。
 
 <table class="properties">
   <tbody>
@@ -28,22 +28,25 @@ l10n:
   </tbody>
 </table>
 
-> **備註：** 用戶端提示僅在安全來源（通過 TLS）上可訪問。應該對所有安全請求持久化 `Accept-CH` 標頭，以確保可靠地發送用戶端提示。
-
 ## 語法
 
 ```http
-Accept-CH: <comma separated list of client hint headers>
+Accept-CH: <client-hints-headers>
+
+// 用戶端提示標頭，以逗號分隔的列表
+Accept-CH: <ch-header-one>, <ch-header-two>
 ```
 
 ## 範例
+
+### 用戶端提示回應標頭
+
+以下回應標頭表示伺服器在後續請求中接受 `Viewport-Width` 和 `Width` [裝置用戶端提示](/zh-TW/docs/Web/HTTP/Client_hints#裝置用戶端提示)。{{HTTPHeader("Vary")}} 標頭表示根據接受的用戶端提示來[變更回應](/zh-TW/docs/Web/HTTP/Client_hints#快取與用戶端提示)的值。
 
 ```http
 Accept-CH: Viewport-Width, Width
 Vary: Viewport-Width, Width
 ```
-
-> **備註：** 請根據接受的用戶端提示來[改變回應](/zh-TW/docs/Web/HTTP/Client_hints#快取和用戶端提示)。
 
 ## 規範
 

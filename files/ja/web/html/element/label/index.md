@@ -2,14 +2,35 @@
 title: "<label>: ラベル要素"
 slug: Web/HTML/Element/label
 l10n:
-  sourceCommit: 37163d27e0625a83a3f8633fe58b9041867adeaa
+  sourceCommit: 816cc4d4a5a318a23222946b6981bb92b499aebb
 ---
 
 {{HTMLSidebar}}
 
 **`<label>`** は [HTML](/ja/docs/Web/HTML) の要素で、ユーザーインターフェイスの項目のキャプションを表します。
 
-{{EmbedInteractiveExample("pages/tabbed/label.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;label&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<div class="preference">
+  <label for="cheese">Do you like cheese?</label>
+  <input type="checkbox" name="cheese" id="cheese" />
+</div>
+
+<div class="preference">
+  <label for="peas">Do you like peas?</label>
+  <input type="checkbox" name="peas" id="peas" />
+</div>
+```
+
+```css interactive-example
+.preference {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0.5rem;
+}
+```
 
 `<label>` を {{htmlelement("input")}} や {{htmlelement("textarea")}} などのフォーム要素と関連付けると、いくらかの利点が発生します。
 
@@ -41,11 +62,12 @@ l10n:
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- `for`
+- [`for`](/ja/docs/Web/HTML/Attributes/for)
 
-  - : `for` 属性の値は単一の [`id`](/ja/docs/Web/HTML/Global_attributes#id) でなければならず、これは `<label>` 要素と同一の文書内にある[ラベル付け可能](/ja/docs/Web/HTML/Content_categories#ラベル付け可能)なフォーム関連要素のものです。従って、この `label` 要素が関連付けられるのはフォームコントロール 1 つだけです。
+  - : `for` 属性の値は単一の [`id`](/ja/docs/Web/HTML/Global_attributes/id) でなければならず、これは `<label>` 要素と同一の文書内にある[ラベル付け可能](/ja/docs/Web/HTML/Content_categories#ラベル付け可能)なフォーム関連要素のものです。従って、この `label` 要素が関連付けられるのはフォームコントロール 1 つだけです。
 
-    > **メモ:** プログラムから `for` 属性を設定する場合は、 [`htmlFor`](/ja/docs/Web/API/HTMLLabelElement/htmlFor) を使用してください。
+    > [!NOTE]
+    > プログラムから `for` 属性を設定する場合は、 [`htmlFor`](/ja/docs/Web/API/HTMLLabelElement/htmlFor) を使用してください。
 
     文書内で `for` 属性の値に一致する `id` 属性を持つ最初の要素が、この `label` 要素の _ラベル対象コントロール_ になります（その `id` を持つ要素が実際に [ラベル付け可能要素](https://html.spec.whatwg.org/multipage/forms.html#category-label) である場合）。このラベル付け可能な要素でない場合は、 `for` 属性は何も効果がありません。もし、文書の後半に `id` の値に一致する他の要素があったとしても、それらは考慮されません。
 
@@ -57,26 +79,7 @@ l10n:
 
 `<label>` には特殊なスタイル上の考慮事項はありません。構造的に単純なインライン要素であり、ほとんどは {{htmlelement("span")}} や {{htmlelement("a")}} 要素と同じ方法でスタイルを適用します。テキストが読みにくくならない限り、あらゆる方法でスタイルを適用することができます。
 
-## 例
-
-### 暗黙のラベルの定義
-
-```html
-<label>Click me <input type="text" /></label>
-```
-
-{{EmbedLiveSample('Simple_label_example', '200', '50')}}
-
-### "for" 属性をつけた明示的なラベルの定義
-
-```html
-<label for="username">Click me to focus on the input field</label>
-<input type="text" id="username" />
-```
-
-{{EmbedLiveSample('Using_the_for_attribute', '200', '50')}}
-
-## アクセシビリティの考慮
+## アクセシビリティ
 
 ### 対話型コンテンツ
 
@@ -131,6 +134,25 @@ l10n:
 
 {{HTMLElement("input")}} 要素に `type="button"` がついた宣言に妥当な `value` 属性があれば、関連付けるラベルは必要ありません。ラベルを付けると、支援技術がボタン入力をどう解釈するかをじゃまする可能性があります。 {{HTMLElement("button")}} 要素でも同じことが言えます。
 
+## 例
+
+### 暗黙のラベルの定義
+
+```html
+<label>Click me <input type="text" /></label>
+```
+
+{{EmbedLiveSample('Simple_label_example', '200', '50')}}
+
+### "for" 属性をつけた明示的なラベルの定義
+
+```html
+<label for="username">Click me to focus on the input field</label>
+<input type="text" id="username" />
+```
+
+{{EmbedLiveSample('Using_the_for_attribute', '200', '50')}}
+
 ## 技術的概要
 
 <table class="properties">
@@ -169,7 +191,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>

@@ -3,7 +3,7 @@ title: "Document: requestStorageAccessFor() メソッド"
 short-title: requestStorageAccessFor()
 slug: Web/API/Document/requestStorageAccessFor
 l10n:
-  sourceCommit: b97c61b40d8b71532d54fe5af1eab4ca014605ec
+  sourceCommit: 0ebc78fd61acddbe9505330f006b706ac786456d
 ---
 
 {{APIRef("Storage Access API")}}{{SeeCompatTable}}
@@ -36,7 +36,7 @@ requestStorageAccessFor(requestedOrigin)
   - : 現在の {{domxref("Document")}} がまだアクティブ化されたいない場合に発生します。
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if:
-    - 文書のウィンドウが[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)ではない場合。
+    - 文書のウィンドウが[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)ではない場合。
     - この文書が最上位の文書でない場合。
     - この文書のオリジンが `null` であった場合。
     - 指定された `requestedOrigin` が[不透明](https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-opaque)であった場合。
@@ -64,7 +64,8 @@ navigator.permissions.query({
 });
 ```
 
-> **メモ:** この機能の使用は、サーバーに設定する {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)（ストレージアクセス API の残りの部分をコントロールするものと同じ）によってブロックされる可能性があります。さらに、許可リスト、ブロックリスト、端末上の分類、ユーザー設定、アンチ[クリックジャッキング](/ja/docs/Glossary/Clickjacking)の経験則など、 ブラウザー独自のチェックも通過しなければなりません。
+> [!NOTE]
+> この機能の使用は、サーバーに設定する {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)（ストレージアクセス API の残りの部分をコントロールするものと同じ）によってブロックされる可能性があります。さらに、許可リスト、ブロックリスト、端末上の分類、ユーザー設定、アンチ[クリックジャッキング](/ja/docs/Glossary/Clickjacking)の経験則など、 ブラウザー独自のチェックも通過しなければなりません。
 
 ## 例
 
@@ -84,7 +85,7 @@ function rSAFor() {
 }
 ```
 
-`requestStorageAccessFor()` の呼び出しが成功した後、[CORS](/ja/docs/Web/HTTP/CORS) / [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) を含む場合、クロスサイトリクエストはクッキーを入れることができます。このようなリクエストは [`credentials: "include"`](/ja/docs/Web/API/fetch#credentials) オプションを用い、リソースは `crossorigin="use-credentials"` 属性を記載しなければなりません。
+`requestStorageAccessFor()` の呼び出しが成功した後、[CORS](/ja/docs/Web/HTTP/CORS) / [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) を含む場合、クロスサイトリクエストはクッキーを入れることができます。このようなリクエストは [`credentials: "include"`](/ja/docs/Web/API/RequestInit#credentials) オプションを用い、リソースは `crossorigin="use-credentials"` 属性を記載しなければなりません。
 
 例えば、次のようにします。
 
@@ -101,7 +102,8 @@ function checkCookie() {
 }
 ```
 
-> **メモ:** より完全な例については、[ストレージアクセス API の使用](/ja/docs/Web/API/Storage_Access_API/Using)を参照してください。
+> [!NOTE]
+> より完全な例については、[ストレージアクセス API の使用](/ja/docs/Web/API/Storage_Access_API/Using)を参照してください。
 
 ## 仕様書
 

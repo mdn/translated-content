@@ -9,7 +9,8 @@ l10n:
 
 {{domxref("Event")}} 接口的 **`bubbles`** 只读属性表明事件是否会沿 DOM 树向上冒泡。
 
-> **备注：** 有关冒泡的更多信息，请参阅[事件冒泡](/zh-CN/docs/Learn/JavaScript/Building_blocks/Event_bubbling)。
+> [!NOTE]
+> 有关冒泡的更多信息，请参阅[事件冒泡](/zh-CN/docs/Learn_web_development/Core/Scripting/Event_bubbling)。
 
 ## 值
 

@@ -7,24 +7,57 @@ slug: Web/HTML/Element/figure
 
 **HTML-элемент `<figure>` (Иллюстрация с необязательной подписью)** представляет самостоятельный контент, часто с подписью (заголовком), которая указывается с помощью элемента ({{HTMLElement("figcaption")}}). Диаграмма и её подпись представляет собой единое целое.
 
-{{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;figure&gt;", "tabbed-shorter")}}
 
-| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [секционный корень](/ru/docs/Web/Guide/HTML/Content_categories#Прочие_модели_контента), явный контент                                                         |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Допустимое содержимое                                            | Элемент {{HTMLElement("figcaption")}} за которым следует [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток); или поточный контент за которым следует элемент {{HTMLElement("figcaption")}}; или поточный контент. |
-| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                                                                        |
-| Допустимые родители                                              | Любые элементы принимающие [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток).                                                                                                                                    |
-| Допустимые ARIA-роли                                             | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>                                                         |
-| DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                                 |
+```html interactive-example
+<figure>
+  <img
+    src="/shared-assets/images/examples/elephant.jpg"
+    alt="Elephant at sunset" />
+  <figcaption>An elephant at sunset</figcaption>
+</figure>
+```
+
+```css interactive-example
+figure {
+  border: thin #c0c0c0 solid;
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  max-width: 220px;
+  margin: auto;
+}
+
+img {
+  max-width: 220px;
+  max-height: 150px;
+}
+
+figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+}
+```
+
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток), [секционный корень](/ru/docs/Web/HTML/Content_categories#прочие_модели_контента), явный контент                                                               |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Допустимое содержимое                                      | Элемент {{HTMLElement("figcaption")}} за которым следует [основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток); или поточный контент за которым следует элемент {{HTMLElement("figcaption")}}; или поточный контент. |
+| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                                     |
+| Допустимые родители                                        | Любые элементы принимающие [основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток).                                                                                                                                    |
+| Допустимые ARIA-роли                                       | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>                                                   |
+| DOM-интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                                                                                                           |
 
 ## Атрибуты
 
-Этот элемент поддерживает только [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
+Этот элемент поддерживает только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 ## Примечания по использованию
 
 - Обычно `<figure>` это рисунок, иллюстрация, диаграмма, фрагмент кода, и т.д., на который ссылаются в основном потоке документа, но может быть перенесён в другую часть документа или в приложение не нарушив основной поток.
-- Являясь [секционным корнем](/ru/docs/Web/Guide/HTML/Content_categories#Прочие_модели_контента), структура содержимого элемента `<figure>` исключается из основной структуры документа.
+- Являясь [секционным корнем](/ru/docs/Web/HTML/Content_categories#прочие_модели_контента), структура содержимого элемента `<figure>` исключается из основной структуры документа.
 - Подпись может быть связана с элементом `<figure>` с помощью вставки {{HTMLElement("figcaption")}} внутри него (как первый или последний потомок). Первый элемент `<figcaption>` в иллюстрации предоставляет её подпись (заголовок).
 
 ## Примеры

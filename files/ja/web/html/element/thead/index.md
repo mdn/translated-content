@@ -9,7 +9,72 @@ l10n:
 
 **`<thead>`** は [HTML](/ja/docs/Web/HTML) の要素で、表の列の見出しを定義する行のセットを定義します。
 
-{{EmbedInteractiveExample("pages/tabbed/thead.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;thead&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Council budget (in £) 2018
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Items</th>
+      <th scope="col">Expenditure</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Donuts</th>
+      <td>3,000</td>
+    </tr>
+    <tr>
+      <th scope="row">Stationery</th>
+      <td>18,000</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row">Totals</th>
+      <td>21,000</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+```css interactive-example
+thead,
+tfoot {
+  background-color: #2c5e77;
+  color: #fff;
+}
+
+tbody {
+  background-color: #e4f0f5;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td {
+  text-align: center;
+}
+```
 
 ## 属性
 
@@ -29,7 +94,8 @@ l10n:
 
     この属性を設定しない場合は、値が `left` であるとみなされます。
 
-    > **警告:** この属性は最新の標準仕様で廃止された（対応していない）ため、使用しないでください。
+    > [!WARNING]
+    > この属性は最新の標準仕様で廃止された（対応していない）ため、使用しないでください。
     >
     > - 値の配置を指定するには、CSS の {{cssxref("text-align")}} プロパティを使用してください。
 
@@ -37,19 +103,22 @@ l10n:
 
   - : この属性は、列の各セルの背景色を定義します。6 桁の 16 進による色または名前付きの色を受け付けます。アルファ透過には対応していません。
 
-    > **メモ:** この属性は標準外であるため、使用しないでください。`thead` 要素は[CSS](/ja/docs/Web/CSS) の {{cssxref("background-color")}} プロパティを、適用可能な要素、たとえば `thead`, {{HTMLElement("tr")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}} のいずれかの要素で使用してください。
+    > [!NOTE]
+    > この属性は標準外であるため、使用しないでください。`thead` 要素は[CSS](/ja/docs/Web/CSS) の {{cssxref("background-color")}} プロパティを、適用可能な要素、たとえば `thead`, {{HTMLElement("tr")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}} のいずれかの要素で使用してください。
 
 - `char` {{deprecated_inline}}
 
   - : この属性は、列内のセルで揃える文字を設定します。典型的な値に、数値や金額を揃えようとするときのピリオド (.) があります。[`align`](#align) 属性を `char` に設定していない場合は、この属性を無視します。
 
-    > **メモ:** この属性は最新の標準仕様で廃止された（そして対応していない）ため、使用しないでください。
+    > [!NOTE]
+    > この属性は最新の標準仕様で廃止された（そして対応していない）ため、使用しないでください。
 
 - `charoff` {{deprecated_inline}}
 
   - : この属性は、**char**属性で指定した揃え文字から列のデータをオフセットする文字数を示すために使用します。
 
-    > **メモ:** この属性は最新の標準仕様で廃止された（対応していない）ため、使用しないでください。
+    > [!NOTE]
+    > この属性は最新の標準仕様で廃止された（対応していない）ため、使用しないでください。
 
 - `valign` {{deprecated_inline}}
 
@@ -60,7 +129,8 @@ l10n:
     - `middle`: テキストをセル内の中央に置きます。
     - `top`: テキストを可能な限りセルの上端に近づけて配置します。
 
-    > **メモ:** この属性は最新の標準仕様で廃止された（そして対応していない）ため、使用しないでください。代わりに CSS の {{cssxref("vertical-align")}} プロパティを使用してください。
+    > [!NOTE]
+    > この属性は最新の標準仕様で廃止された（そして対応していない）ため、使用しないでください。代わりに CSS の {{cssxref("vertical-align")}} プロパティを使用してください。
 
 ## 例
 

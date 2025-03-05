@@ -9,7 +9,19 @@ slug: Web/JavaScript/Reference/Operators/this
 
 在绝大多数情况下，函数的调用方式决定了 `this` 的值（运行时绑定）。`this` 不能在执行期间被赋值，并且在每次函数被调用时 `this` 的值也可能会不同。ES5 引入了 [bind](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 方法来设置函数的 `this` 值，而不用考虑函数如何被调用的。ES2015 引入了[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)，箭头函数不提供自身的 this 绑定（`this` 的值将保持为闭合词法上下文的值）。
 
-{{EmbedInteractiveExample("pages/js/expressions-this.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - this")}}
+
+```js interactive-example
+const test = {
+  prop: 42,
+  func: function () {
+    return this.prop;
+  },
+};
+
+console.log(test.func());
+// Expected output: 42
+```
 
 ## 语法
 
@@ -217,7 +229,8 @@ console.log(C.staticField === C); // true
 this = new Base();
 ```
 
-> **警告：** 在调用 `super()` 之前引用 `this` 将抛出错误。
+> [!WARNING]
+> 在调用 `super()` 之前引用 `this` 将抛出错误。
 
 派生类在调用 `super()` 之前不能有返回，除非构造函数返回一个对象（这样 `this` 值就会被覆盖）或者类根本没有构造函数。
 
@@ -385,7 +398,7 @@ const fn2 = obj.getThisGetter;
 console.log(fn2()() === globalThis); // 在非严格模式下为 true
 ```
 
-这种行为在定义回调时非常有用。通常，每个函数表达式都创建自己的 `this` 绑定，这会遮蔽上层作用域的 `this` 值。现在，如果你不关心 `this` 值，你可以将函数定义为箭头函数，并且只在你需要的地方创建 `this` 绑定（例如，在类方法中）。参见 [`setTimeout()` 的示例](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions#using_call_bind_and_apply)。
+这种行为在定义回调时非常有用。通常，每个函数表达式都创建自己的 `this` 绑定，这会遮蔽上层作用域的 `this` 值。现在，如果你不关心 `this` 值，你可以将函数定义为箭头函数，并且只在你需要的地方创建 `this` 绑定（例如，在类方法中）。参见 [`setTimeout()` 的示例](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions#使用_call、bind_和_apply)。
 
 ### getter 或 setter 中的 this
 
@@ -493,7 +506,8 @@ bird.sayBye = car.sayBye;
 bird.sayBye(); // Bye from Ferrari
 ```
 
-> **备注：** 类总是在严格模式下。如果一个方法试图访问 `this` 上的属性，使用未定义的 `this` 值调用该方法将会抛出错误。
+> [!NOTE]
+> 类总是在严格模式下。如果一个方法试图访问 `this` 上的属性，使用未定义的 `this` 值调用该方法将会抛出错误。
 >
 > ```js example-bad
 > const carSayHi = car.sayHi;

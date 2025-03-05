@@ -9,7 +9,8 @@ l10n:
 
 Доступное только для чтения свойство **`sittingToStandingTransform`** интерфейса {{domxref("VRStageParameters")}} содержит матрицу преобразования {{domxref("VRFrameData")}} из горизонтального вида в вертикальный.
 
-> **Примечание:** Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 Обычно это используется для передачи в WebGL-код для преобразования отображения из горизонтального вида в вертикальный.
 

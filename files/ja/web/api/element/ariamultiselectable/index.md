@@ -10,7 +10,8 @@ l10n:
 
 **`ariaMultiSelectable`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-multiselectable`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) 属性の値を反映し、ユーザーが現在の選択可能な子孫から複数の項目を選択できることを示します。
 
-> **メモ:** 可能であれば、HTML の {{htmlelement("select")}} 要素を使用してください。これは意味づけが組み込まれており、ARIA 属性を必要としないからです。
+> [!NOTE]
+> 可能であれば、HTML の {{htmlelement("select")}} 要素を使用してください。これは意味づけが組み込まれており、ARIA 属性を必要としないからです。
 
 ## 値
 

@@ -9,7 +9,8 @@ slug: Web/API/Cache/keys
 
 请求将以它们被插入的顺序返回。
 
-> **备注：** 具有相同 URL 但不同请求头的请求，如果它们的响应头中有 VARY 头部，则他们可以被返回。
+> [!NOTE]
+> 具有相同 URL 但不同请求头的请求，如果它们的响应头中有 VARY 头部，则他们可以被返回。
 
 ## 语法
 
@@ -58,6 +59,6 @@ caches.open("v1").then(function (cache) {
 
 ## 参见
 
-- [使用 Service Worker](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("Window.caches")}} 和 {{domxref("WorkerGlobalScope.caches")}}

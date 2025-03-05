@@ -9,7 +9,35 @@ l10n:
 
 **`<div>`** [HTML](/zh-CN/docs/Web/HTML) 元素是流式内容的通用容器。它对内容或布局没有影响。除非以某种方式使用 {{glossary("CSS")}} 对其进行样式设置（例如，直接应用样式，或者对其父元素应用某种布局模型，如[弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)），否则它对内容或布局没有影响。
 
-{{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<div class="warning">
+  <img
+    src="/shared-assets/images/examples/leopard.jpg"
+    alt="An intimidating leopard." />
+  <p>Beware of the leopard</p>
+</div>
+```
+
+```css interactive-example
+.warning {
+  border: 10px ridge #f00;
+  background-color: #ff0;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.warning img {
+  width: 100%;
+}
+
+.warning p {
+  font: small-caps bold 1.2rem sans-serif;
+  text-align: center;
+}
+```
 
 作为一个“纯粹的”容器，`<div>` 元素本身并不表示任何内容。相反，它用于组织内容，以便通过使用 [`class`](/zh-CN/docs/Web/HTML/Global_attributes#class) 或 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性轻松应用样式，标记文档中以不同语言编写的部分（使用 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性）等等。
 
@@ -17,7 +45,8 @@ l10n:
 
 这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-> **备注：** 请勿再使用已过时的 `align` 属性；相反，你应该使用 CSS 属性或技术，例如 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)或 [CSS 弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)来对齐和定位页面上的 `<div>` 元素。
+> [!NOTE]
+> 请勿再使用已过时的 `align` 属性；相反，你应该使用 CSS 属性或技术，例如 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)或 [CSS 弹性盒子](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)来对齐和定位页面上的 `<div>` 元素。
 
 ## 使用说明
 

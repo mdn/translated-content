@@ -5,9 +5,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/management/install
 
 {{AddonSidebar}}Installe et active une extension de thème à partir de l'URL donnée.
 
-Cette API nécessite la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management" et ne fonctionnera qu'avec des thèmes signés.
+Cette API nécessite la [permission de l'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management" et ne fonctionnera qu'avec des thèmes signés.
 
-C'est une fonction asynchrone qui renvoie une [Promise](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [Promise](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -22,7 +22,7 @@ let { id } = await browser.management.install({ url });
 
 ### Valeur retournée
 
-Une [Promise](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet, contenant l'`ExtensionID` défini pour le thème dans manifest.json.
+Une [Promise](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet, contenant l'`ExtensionID` défini pour le thème dans manifest.json.
 
 ## Compatibilité des navigateurs
 

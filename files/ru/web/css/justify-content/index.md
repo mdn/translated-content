@@ -11,7 +11,7 @@ slug: Web/CSS/justify-content
 
 {{EmbedInteractiveExample("pages/css/justify-content.html")}}
 
-Выравнивание выполняется после того, как применяются длины и автоматические поля, что означает, что если во [Flexbox разметке](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout) есть хотя бы один flex-элемент, с {{cssxref("flex-grow")}} отличным от `0`, эффект не будет применён, потому что не останется свободного места.
+Выравнивание выполняется после того, как применяются длины и автоматические поля, что означает, что если во [Flexbox разметке](/ru/docs/Web/CSS/CSS_flexible_box_layout) есть хотя бы один flex-элемент, с {{cssxref("flex-grow")}} отличным от `0`, эффект не будет применён, потому что не останется свободного места.
 
 ## Синтаксис
 
@@ -160,7 +160,7 @@ justifyContent.addEventListener("change", function (evt) {
 
 ## Смотрите также
 
-- Гид по CSS Flexbox: _[Основные понятия Flexbox](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Выравнивание элементов во Flex контейнере](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элементов_в_Flex_контейнере)_
-- CSS Grid Guide: _[Выравнивание ячейки в CSS Grid layout](/ru/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [Выравнивание полей CSS](/ru/docs/Web/CSS/CSS_Box_Alignment)
+- Гид по CSS Flexbox: _[Основные понятия Flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Выравнивание элементов во Flex контейнере](/ru/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS Grid Guide: _[Выравнивание ячейки в CSS Grid layout](/ru/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- [Выравнивание полей CSS](/ru/docs/Web/CSS/CSS_box_alignment)

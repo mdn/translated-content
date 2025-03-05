@@ -9,7 +9,8 @@ l10n:
 
 Web Bluetooth API 提供了与低功耗蓝牙设备进行连接和交互的能力。
 
-> **备注：** 此 API 在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中*不可用*（未通过 {{domxref("WorkerNavigator")}} 暴露）。
+> [!NOTE]
+> 此 API 在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中*不可用*（未通过 {{domxref("WorkerNavigator")}} 暴露）。
 
 ## 接口
 

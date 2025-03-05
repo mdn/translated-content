@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**`undefined`** 是一个{{Glossary("primitive", "原始值")}}，自动赋给刚刚声明的{{glossary("variable", "变量")}}，或者给那些没有实际的{{Glossary("Argument", "参数")}}的形式参数。
+**`undefined`** 是一个{{Glossary("primitive", "原始值")}}，自动赋给刚刚声明的{{glossary("variable", "变量")}}，或那些没有提供实际{{Glossary("Argument", "参数")}}的形参。
 
 ## 示例
 

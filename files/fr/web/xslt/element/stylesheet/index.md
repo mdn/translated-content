@@ -50,7 +50,7 @@ Un pseudo-attribut est nécessaire pour identifier le document comme étant une 
 
 ### Définition
 
-[XSLT 1.0, section 2.2](http://www.w3.org/TR/xslt#stylesheet-element).
+[XSLT 1.0, section 2.2](https://www.w3.org/TR/xslt#stylesheet-element).
 
 ### Support Gecko
 

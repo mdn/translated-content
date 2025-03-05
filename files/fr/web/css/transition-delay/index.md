@@ -5,7 +5,7 @@ slug: Web/CSS/transition-delay
 
 {{CSSRef}}
 
-La propriété CSS **`transition-delay`** indique la durée à attendre avant de débuter [la transition](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) qui s'applique pour un changement de propriété.
+La propriété CSS **`transition-delay`** indique la durée à attendre avant de débuter [la transition](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) qui s'applique pour un changement de propriété.
 
 {{EmbedInteractiveExample("pages/css/transition-delay.html")}}
 
@@ -125,5 +125,5 @@ changeButton.addEventListener("click", change);
 
 ## Voir aussi
 
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - L'API [`TransitionEvent`](/fr/docs/Web/API/TransitionEvent)

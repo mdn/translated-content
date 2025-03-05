@@ -5,7 +5,7 @@ slug: Web/CSS/Containing_block
 
 {{cssref}}
 
-요소의 크기와 위치는 **컨테이닝 블록**(containing block)의 영향을 받곤 합니다. 대부분의 경우, 어떤 요소의 컨테이닝 블록은 가장 가까운 [블록 레벨](/ko/docs/Web/HTML/Block-level_elements) 조상의 [콘텐츠 영역](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area)이나, 항상 그런 것은 아닙니다. 이 글에서는 요소의 컨테이닝 블록을 결정하는 요인을 살펴보겠습니다.
+요소의 크기와 위치는 **컨테이닝 블록**(containing block)의 영향을 받곤 합니다. 대부분의 경우, 어떤 요소의 컨테이닝 블록은 가장 가까운 [블록 레벨](/ko/docs/Glossary/Block-level_content) 조상의 [콘텐츠 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area)이나, 항상 그런 것은 아닙니다. 이 글에서는 요소의 컨테이닝 블록을 결정하는 요인을 살펴보겠습니다.
 
 사용자 에이전트(브라우저 등)는 문서를 그릴 때 모든 요소에 대해 상자(박스)를 생성합니다. 각각의 상자는 아래의 네 가지 영역으로 나눠집니다.
 
@@ -38,7 +38,8 @@ slug: Web/CSS/Containing_block
    3. {{cssxref("filter")}} 속성이 `none`임. (Firefox에선 `will-change`가 `filter`일 때도 적용)
    4. {{cssxref("contain")}} 속성이 `paint`임.
 
-> **참고:** 루트 요소({{HTMLElement("html")}})의 컨테이닝 블록은 **초기 컨테이닝 블록**이라고 불리는 사각형입니다. 초기 컨테이닝 블록은 뷰포트 또는 (페이지로 나뉘는 매체에선) 페이지 영역의 크기와 같습니다.
+> [!NOTE]
+> 루트 요소({{HTMLElement("html")}})의 컨테이닝 블록은 **초기 컨테이닝 블록**이라고 불리는 사각형입니다. 초기 컨테이닝 블록은 뷰포트 또는 (페이지로 나뉘는 매체에선) 페이지 영역의 크기와 같습니다.
 
 ## 컨테이닝 블록으로부터 백분율 값 계산하기
 
@@ -249,11 +250,11 @@ p {
   - [@규칙](/ko/docs/Web/CSS/At-rule)
   - [주석](/ko/docs/Web/CSS/Comments)
   - [명시도](/ko/docs/Web/CSS/Specificity)
-  - [상속](/ko/docs/Web/CSS/inheritance)
-  - [박스 모델](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [상속](/ko/docs/Web/CSS/Inheritance)
+  - [박스 모델](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [레이아웃 모드](/ko/docs/Web/CSS/Layout_mode)
   - [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
-  - [마진 중첩](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [마진 중첩](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 값
 
     - [초깃값](/ko/docs/Web/CSS/initial_value)

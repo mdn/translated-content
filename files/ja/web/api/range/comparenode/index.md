@@ -21,7 +21,8 @@ l10n:
 - `NODE_INSIDE` (`3`)
   - : Node はこの Range より後に始まり、前に終わる。すなわち、ノードは完全にこの Range に選択されている。
 
-> **警告:** このメソッドは [Gecko 1.9](/ja/docs/Mozilla/Firefox/Releases/3) から[削除され](/ja/docs/Mozilla/Firefox/Releases/3/Site_compatibility)、唯一実装していた Firefox の将来のバージョンでは存在しません。使用可能な限り早く {{DOMxRef("Range.compareBoundaryPoints()")}} に切り替えるべきです。
+> [!WARNING]
+> このメソッドは [Gecko 1.9](/ja/docs/Mozilla/Firefox/Releases/3) から[削除され](/ja/docs/Mozilla/Firefox/Releases/3/Site_compatibility)、唯一実装していた Firefox の将来のバージョンでは存在しません。使用可能な限り早く {{DOMxRef("Range.compareBoundaryPoints()")}} に切り替えるべきです。
 
 以下の関数が置き換えの関数として使用できます。
 

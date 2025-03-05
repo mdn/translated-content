@@ -18,7 +18,8 @@ HTTP 쿠키(웹 쿠키, 브라우저 쿠키)는 서버가 사용자의 웹 브�
 
 과거엔 클라이언트 측에 정보를 저장할 때 쿠키를 주로 사용하곤 했습니다. 쿠키를 사용하는 게 데이터를 클라이언트 측에 저장할 수 있는 유일한 방법이었을 때는 이 방법이 타당했지만, 지금은modern storage APIs를 사용해 정보를 저장하는 걸 권장합니다. 모든 요청마다 쿠키가 함께 전송되기 때문에, (특히 mobile data connections에서) 성능이 떨어지는 원인이 될 수 있습니다. 정보를 클라이언트 측에 저장하려면 Modern APIs의 종류인 [웹 스토리지 API](/ko/docs/Web/API/Web_Storage_API) (`localStorage`와 `sessionStorage`) 와 [IndexedDB](/ko/docs/Web/API/IndexedDB_API) 를 사용하면 됩니다.
 
-> **참고:** 저장된 쿠키(그리고 웹 페이지가 사용할 수 있는 다른 스토리지)를 보려면, 개발자 도구에서 [Storage Inspector(스토리지 검사기)](/ko/docs/Tools/Storage_Inspector)를 활성화하고 스토리지 트리에서 쿠키 스토리지를 선택하면 됩니다.
+> [!NOTE]
+> 저장된 쿠키(그리고 웹 페이지가 사용할 수 있는 다른 스토리지)를 보려면, 개발자 도구에서 [Storage Inspector(스토리지 검사기)](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)를 활성화하고 스토리지 트리에서 쿠키 스토리지를 선택하면 됩니다.
 
 ## 쿠키 만들기
 
@@ -51,7 +52,8 @@ Host: www.example.org
 Cookie: yummy_cookie=choco; tasty_cookie=strawberry
 ```
 
-> **참고:** Here's how to use the `Set-Cookie` header in various server-side applications:
+> [!NOTE]
+> Here's how to use the `Set-Cookie` header in various server-side applications:
 >
 > - [PHP](https://secure.php.net/manual/en/function.setcookie.php)
 > - [Node.JS](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value)
@@ -71,7 +73,8 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry
 Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 ```
 
-> **참고:** 쿠키 만료 시점을 설정할 때, 만료 시점의 시간과 날짜는 서버의 시간이 아니라 쿠키가 저장되는 클라이언트의 시간을 기준으로 합니다.
+> [!NOTE]
+> 쿠키 만료 시점을 설정할 때, 만료 시점의 시간과 날짜는 서버의 시간이 아니라 쿠키가 저장되는 클라이언트의 시간을 기준으로 합니다.
 
 ### `Secure`과 `HttpOnly` 쿠키
 
@@ -114,11 +117,12 @@ console.log(document.cookie);
 // logs "yummy_cookie=choco; tasty_cookie=strawberry"
 ```
 
-아래 [보안](/ko/docs/Web/HTTP/Cookies#Security) 섹션에서 다루고 있는데로 보안 관련 내용들을 잘 알아두시기 바랍니다. JavaScript에서 이용 가능한 쿠키들은 XSS를 통해 감청될 수 있습니다.
+아래 [보안](#Security) 섹션에서 다루고 있는데로 보안 관련 내용들을 잘 알아두시기 바랍니다. JavaScript에서 이용 가능한 쿠키들은 XSS를 통해 감청될 수 있습니다.
 
 ## 보안
 
-> **참고:** 기밀 혹은 민감한 정보는 전체 메커니즘이 본질적으로 위험하기 때문에 HTTP 쿠키 내에 저장되거나 전송되어서는 안됩니다.
+> [!NOTE]
+> 기밀 혹은 민감한 정보는 전체 메커니즘이 본질적으로 위험하기 때문에 HTTP 쿠키 내에 저장되거나 전송되어서는 안됩니다.
 
 ### 세션 하이재킹과 XSS
 
@@ -180,7 +184,7 @@ EU 전역의 쿠키에 대한 요구사항은 유럽 의회의 [Directive 2009/1
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - {{domxref("Navigator.cookieEnabled")}}
-- [스토리지 검사기를 사용하여 쿠키 검사하기](/ko/docs/Tools/Storage_Inspector)
+- [스토리지 검사기를 사용하여 쿠키 검사하기](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
 - [쿠키 명세: RFC 6265](https://tools.ietf.org/html/rfc6265)
 - [쿠키에 대한 Nicholas Zakas의 글](https://www.nczonline.net/blog/2009/05/05/http-cookies-explained/)
 - [쿠키와 보안에 대한 Nicholas Zakas의 글](https://www.nczonline.net/blog/2009/05/12/cookies-and-security/)

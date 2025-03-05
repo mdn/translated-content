@@ -51,7 +51,7 @@ Los **selectores** definen sobre qué elementos se aplicará un conjunto de regl
 
 ## Combinadores
 
-- [Combinador de hermanos adyacentes](/es/docs/Web/CSS/Selectores_hermanos_adyacentes)
+- [Combinador de hermanos adyacentes](/es/docs/Web/CSS/Next-sibling_combinator)
 
   - : El combinador `+` selecciona hermanos adyacentes. Esto quiere decir que el segundo elemento sigue directamente al primero y ambos comparten el mismo elemento padre.
 
@@ -59,7 +59,7 @@ Los **selectores** definen sobre qué elementos se aplicará un conjunto de regl
 
     **Ejemplo:** La regla `h2 + p` se aplicará a todos los elementos {{HTMLElement('p')}} que siguen directamente a un elemento {{HTMLElement('h2')}}.
 
-- [Combinador general de hermanos](/es/docs/Web/CSS/Selectores_hermanos_generales)
+- [Combinador general de hermanos](/es/docs/Web/CSS/Subsequent-sibling_combinator)
 
   - : El combinador `~` selecciona hermanos. Esto quiere decir que el segundo elemento sigue al primero (no necesariamente de forma inmediata) y ambos comparten el mismo elemento padre.
 
@@ -67,7 +67,7 @@ Los **selectores** definen sobre qué elementos se aplicará un conjunto de regl
 
     **Ejemplo:** La regla `p ~ span` se aplicará a todos los elementos {{HTMLElement('span')}} que siguen un elemento {{HTMLElement('p')}}.
 
-- [Combinador de hijo](/es/docs/Web/CSS/Child_selectors)
+- [Combinador de hijo](/es/docs/Web/CSS/Child_combinator)
 
   - : El combinador `>` selecciona los elementos que son hijos directos del primer elemento.
 
@@ -75,7 +75,7 @@ Los **selectores** definen sobre qué elementos se aplicará un conjunto de regl
 
     **Ejemplo:** La regla `ul > li` se aplicará a todos los elementos {{HTMLElement('li')}} que son hijos directos de un elemento {{HTMLElement('ul')}}.
 
-- [Combinador de descendientes](/es/docs/Web/CSS/Descendant_selectors)
+- [Combinador de descendientes](/es/docs/Web/CSS/Descendant_combinator)
 
   - : El combinador `(espacio)` selecciona los elementos que son descendientes del primer elemento.
 
@@ -98,7 +98,7 @@ Los **selectores** definen sobre qué elementos se aplicará un conjunto de regl
 
 ## Pseudoelementos
 
-- Los [pseudoelementos](/es/docs/Web/CSS/Pseudoelementos) son abstracciones del árbol que representan entidades más allá de los elementos HTML. Por ejemplo, HTML no tiene un elemento que describa la primera letra de un párrafo ni los marcadores de una lista. Los pseudoelementos representan estas entidades y nos permiten asignarles reglas CSS. De este modo podemos diseñar estas entidades de forma independiente.
+- Los [pseudoelementos](/es/docs/Web/CSS/Pseudo-elements) son abstracciones del árbol que representan entidades más allá de los elementos HTML. Por ejemplo, HTML no tiene un elemento que describa la primera letra de un párrafo ni los marcadores de una lista. Los pseudoelementos representan estas entidades y nos permiten asignarles reglas CSS. De este modo podemos diseñar estas entidades de forma independiente.
   - : **Ejemplo:** La regla `p::first-line` se aplicará a la primera línea de texto de todos los elementos {{HTMLElement('p')}}.
 
 ## Especificaciones

@@ -9,7 +9,36 @@ l10n:
 
 공문서에서 볼 법한 **`checkbox`** 유형의 {{htmlelement("input")}} 요소는 기본적으로 활성화될 시에 체크되는 박스로 렌더링 됩니다. 박스의 정확한 외형은 브라우저가 실행 중인 운영체제의 시스템 구성에 따라 달라질 수 있습니다. 일반적으로는 사각형의 모습이지만, 둥근 모서리를 가질 수도 있습니다. **`checkbox`** 는 폼 안에서 선택된 단일 값들을 제출할 수 있는 기능을 제공합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/input-checkbox.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;checkbox&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<fieldset>
+  <legend>Choose your monster's features:</legend>
+
+  <div>
+    <input type="checkbox" id="scales" name="scales" checked />
+    <label for="scales">Scales</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="horns" name="horns" />
+    <label for="horns">Horns</label>
+  </div>
+</fieldset>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 > **참고:** [라디오 버튼](/ko/docs/Web/HTML/Element/input/radio) 은 체크박스와 비슷하지만 중요한 차이점이 하나 있습니다. 여러 라디오 버튼은 하나의 집합으로 그룹화되어 그 안에서 단 하나만 선택될 수 있지만, 체크박스의 경우는 각각의 값을 켜고 끌 수 있다는 점입니다. 다수의 컨트롤이 존재할 때 라디오 버튼은 전체에서 하나의 요소에 대한 선택만을 허용하고, 체크박스는 여러 개의 요소가 선택되는 것을 허용합니다.
 
@@ -37,7 +66,8 @@ l10n:
 
 만약 `value` 특성이 생략되면, 해당 체크박스의 기본 값은 `on`입니다. 따라서 이 경우 제출된 데이터는 `subscribe=on`이 됩니다.
 
-> **참고:** 폼이 제출될 때 체크박스가 체크되어 있지 않으면, 체크되지 않은 상태를 표현하는 (이를테면 `value=unchecked`과 같은) 데이터가 서버에 전달되지는 않습니다. 값 자체가 서버에 전달되지 않습니다. 만약 체크박스가 체크되지 않은 경우 기본 값을 제출하고 싶다면, 폼 안에 {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}}를 Javascript 등에 의해 생성된 동일한 `name` 그리고 `value`과 함께 포함시킬 수 있습니다.
+> [!NOTE]
+> 폼이 제출될 때 체크박스가 체크되어 있지 않으면, 체크되지 않은 상태를 표현하는 (이를테면 `value=unchecked`과 같은) 데이터가 서버에 전달되지는 않습니다. 값 자체가 서버에 전달되지 않습니다. 만약 체크박스가 체크되지 않은 경우 기본 값을 제출하고 싶다면, 폼 안에 {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}}를 Javascript 등에 의해 생성된 동일한 `name` 그리고 `value`과 함께 포함시킬 수 있습니다.
 
 ## 추가 특성들
 
@@ -46,12 +76,13 @@ l10n:
 - `checked`
 
   - : (페이지가 로드될 때) 체크박스가 기본적으로 체크된 상태로 보여질 것인지를 지칭하는 불리언 특성입니다. 이 특성은 체크박스가 "현재 체크된 상태"인지를 나타내지 않습니다. 만약 체크박스의 상태가 변경되면, 이 특성은 그 변경을 반영하지 않습니다 (단지 {{domxref("HTMLInputElement")}} 의 `checked` IDL 특성이 변경됩니다.)
-    > **참고:** 다른 Input 컨트롤들과는 다르게, 체크박스의 값은 현재 체크박스의 상태가 `checked`일 때에만 제출되는 데이터에 포함됩니다. 이 경우, 체크박스의 `value` 특성에 지정된 값이 Input의 `value`으로서 전달됩니다.
+    > [!NOTE]
+    > 다른 Input 컨트롤들과는 다르게, 체크박스의 값은 현재 체크박스의 상태가 `checked`일 때에만 제출되는 데이터에 포함됩니다. 이 경우, 체크박스의 `value` 특성에 지정된 값이 Input의 `value`으로서 전달됩니다.
     > 다른 브라우저들과는 다르게, Firefox의 경우 기본적으로 페이지 로드에 걸쳐서 `<input>`의 [`checked` 상태를 동적으로 유지합니다.](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) 이 기능을 제어하기 위해서는 [`autocomplete`](/ko/docs/Web/HTML/Element/input#autocomplete) 특성을 사용해야 합니다.
 
 - `value`
 
-  - : The `value` 특성은 {{HTMLElement("input")}} 요소가 공유하는 특성입니다. 하지만, `checkbox` 유형의 `input`에서는 특별한 용도로 사용됩니다. 폼이 제출될 때, 현재 활성화되어 있는 체크박스만이 서버 측에 전달됩니다. 그리고 `value` 특성에 지정된 값이 바로 전달되는 값이 됩니다. 만약 `value` 특성의 값이 지정되어 있지 않다면, 서버 측에는 기본 값으로 `on`이 전달됩니다. 이는 위의 [Value](#Value) 구획에서도 설명하고 있습니다.
+  - : The `value` 특성은 {{HTMLElement("input")}} 요소가 공유하는 특성입니다. 하지만, `checkbox` 유형의 `input`에서는 특별한 용도로 사용됩니다. 폼이 제출될 때, 현재 활성화되어 있는 체크박스만이 서버 측에 전달됩니다. 그리고 `value` 특성에 지정된 값이 바로 전달되는 값이 됩니다. 만약 `value` 특성의 값이 지정되어 있지 않다면, 서버 측에는 기본 값으로 `on`이 전달됩니다. 이는 위의 [Value](#value) 구획에서도 설명하고 있습니다.
 
 ## 체크박스 Input 사용하기
 
@@ -163,11 +194,12 @@ function updateDisplay() {
 
 {{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}
 
-> **참고:** 만약 `indeterminate` 상태의 체크박스와 함께 폼을 제출하게 되면 활성화되지 않은 체크박스를 제출하는 것과 같은 일이 발생합니다. 즉, 체크박스를 표현하는 데이터는 전달되지 않습니다.
+> [!NOTE]
+> 만약 `indeterminate` 상태의 체크박스와 함께 폼을 제출하게 되면 활성화되지 않은 체크박스를 제출하는 것과 같은 일이 발생합니다. 즉, 체크박스를 표현하는 데이터는 전달되지 않습니다.
 
 ## 유효성 검증하기
 
-체크박스는 모든 {{HTMLElement("input")}} 요소들에 제공되는 [유효성 검증](/ko/docs/Web/Guide/HTML/Constraint_validation) 을 지원합니다. 하지만 대부분의 {{domxref("ValidityState")}} 값은 `false`입니다. 만약 체크박스가 [`required`](/ko/docs/Web/HTML/Element/input#required) 특성을 가졌지만 활성화되지 않은 경우에, {{domxref("ValidityState.valueMissing")}} 값은 `true`가 됩니다.
+체크박스는 모든 {{HTMLElement("input")}} 요소들에 제공되는 [유효성 검증](/ko/docs/Web/HTML/Constraint_validation) 을 지원합니다. 하지만 대부분의 {{domxref("ValidityState")}} 값은 `false`입니다. 만약 체크박스가 [`required`](/ko/docs/Web/HTML/Element/input#required) 특성을 가졌지만 활성화되지 않은 경우에, {{domxref("ValidityState.valueMissing")}} 값은 `true`가 됩니다.
 
 ## 예제
 

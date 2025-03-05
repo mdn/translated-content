@@ -7,9 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/every
 
 La méthode **`every()`** permet de tester si tous les éléments d'un tableau vérifient une condition donnée par une fonction en argument. Cette méthode renvoie un booléen pour le résultat du test.
 
-> **Note :** Cette méthode renvoie `true` pour n'importe quelle condition utilisée sur un tableau vide.
+> [!NOTE]
+> Cette méthode renvoie `true` pour n'importe quelle condition utilisée sur un tableau vide.
 
-{{EmbedInteractiveExample("pages/js/array-every.html")}}
+{{InteractiveExample("JavaScript Demo: Array.every()")}}
+
+```js interactive-example
+const isBelowThreshold = (currentValue) => currentValue < 40;
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold));
+// Expected output: true
+```
 
 ## Syntaxe
 
@@ -43,7 +53,7 @@ La méthode `every` exécute la fonction `callback` fournie sur chacun des élé
 
 `callback` est appelée avec trois arguments : la valeur de l'élément en cours de traitement, l'indice de l'élément dans le tableau et le tableau qui est parcouru.
 
-Si un paramètre `thisArg` est fourni à la méthode `every`, ce sera la valeur `this` de la fonction `callback`. Si ce paramètre n'est pas fourni, la valeur `undefined` sera utilisée comme valeur pour `this`. La valeur `this` « définitivement » utilisée par la fonction `callback` est déterminée selon [les règles usuelles de détermination de `this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this).
+Si un paramètre `thisArg` est fourni à la méthode `every`, ce sera la valeur `this` de la fonction `callback`. Si ce paramètre n'est pas fourni, la valeur `undefined` sera utilisée comme valeur pour `this`. La valeur `this` « définitivement » utilisée par la fonction `callback` est déterminée selon [les règles usuelles de détermination de `this`](/fr/docs/Web/JavaScript/Reference/Operators/this).
 
 `every` ne modifie pas le tableau sur lequel elle a été appelée.
 

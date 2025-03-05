@@ -13,7 +13,7 @@ São geralmente recuperados a partir de um objeto {{domxref("FileList")}} que é
 
 Um objeto File é um tipo específico de {{domxref("Blob")}}, e podem ser utilizados em qualquer contexto que um Blob pode. Em particular, {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, e {{domxref("XMLHttpRequest", "", "send()")}} aceitam ambos, Blobs e Files.
 
-Veja [Using files from web applications](/pt-BR/docs/Using_files_from_web_applications) (usando arquivos através de uma aplicação web) para mais informações e exemplos.
+Veja [Using files from web applications](/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications) (usando arquivos através de uma aplicação web) para mais informações e exemplos.
 
 A referência ao arquivo pode ser salva quando o formulário é submetido enquanto o usuário está offline, de forma que os dados possam ser recuperados e enviados quando a conexão com a internet for reestabelecida,
 
@@ -30,7 +30,7 @@ A referência ao arquivo pode ser salva quando o formulário é submetido enquan
 
 A interface `File` herda as propriedades da interface {{domxref("Blob")}}.
 
-{{page("/pt-BR/docs/Web/API/Blob","Properties")}}
+<!-- TODO: page macro not supported: page("/pt-BR/docs/Web/API/Blob","Properties") -->
 
 ## Métodos
 
@@ -51,6 +51,6 @@ A interface `File` herda as propriedades da interface {{domxref("Blob")}}.
 
 ## Veja também
 
-- [Using files from web applications](/pt-BR/docs/Using_files_from_web_applications)
+- [Using files from web applications](/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications)
 - [Using the DOM File API in chrome code](/pt-BR/docs/Extensions/Using_the_DOM_File_API_in_chrome_code)
 - {{domxref("FileReader")}}

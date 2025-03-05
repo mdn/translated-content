@@ -11,7 +11,8 @@ O tipo de dado CSS **`<time>`** representa um valor de tempo expresso em segundo
 
 O tipo dado `<time>` consiste de um elemento {{cssxref("&lt;number&gt;")}} seguido por uma das unidades listadas abaixo. Opcionalmente, pode ser precedido por um sinal de `+` ou `-`. Como em todas as dimensões, não há espaço entre uma unidade literal e o número.
 
-> **Nota:** Embora o número `0` seja sempre o mesmo, independente da unidade, essa última não pode ser omitida. Em outras palavras, `0` é invalido e não representa `0s` ou `0ms`.
+> [!NOTE]
+> Embora o número `0` seja sempre o mesmo, independente da unidade, essa última não pode ser omitida. Em outras palavras, `0` é invalido e não representa `0s` ou `0ms`.
 
 ### Unidades
 
@@ -20,7 +21,8 @@ O tipo dado `<time>` consiste de um elemento {{cssxref("&lt;number&gt;")}} segui
 - **`ms`**
   - : Representa um tempo em milissegundos. Exemplos: `0ms`, `150.25ms`, `-60000ms`.
 
-> **Nota:** A conversão entre `s` e `ms` segue a proporção `1s = 1000ms`.
+> [!NOTE]
+> A conversão entre `s` e `ms` segue a proporção `1s = 1000ms`.
 
 ## Exemplos
 

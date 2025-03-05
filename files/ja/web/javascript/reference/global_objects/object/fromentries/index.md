@@ -2,14 +2,26 @@
 title: Object.fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
 {{JSRef}}
 
 **`Object.fromEntries()`** 静的メソッドは、キーと値の組み合わせのリストをオブジェクトに変換します。
 
-{{EmbedInteractiveExample("pages/js/object-fromentries.html")}}
+{{InteractiveExample("JavaScript Demo: Object.fromEntries()")}}
+
+```js interactive-example
+const entries = new Map([
+  ["foo", "bar"],
+  ["baz", 42],
+]);
+
+const obj = Object.fromEntries(entries);
+
+console.log(obj);
+// Expected output: Object { foo: "bar", baz: 42 }
+```
 
 ## 構文
 
@@ -36,7 +48,7 @@ Object.fromEntries(iterable)
 
 ## 説明
 
-`Object.fromEntries()` メソッドは、キーと値のリストを取り、これらの項目から作成されたプロパティを持つ新しいオブジェクトを返します。 `iterable` 引数は `@@iterator` メソッドを実装しているオブジェクトであることが求められます。このメソッドは 2 つの要素を持った配列風オブジェクトを生成するイテレーターを返します。最初の要素はプロパティキーとして使われる値であり、次の要素はプロパティのキーに関連付けられる値です。
+`Object.fromEntries()` メソッドは、キーと値のリストを取り、これらの項目から作成されたプロパティを持つ新しいオブジェクトを返します。 `iterable` 引数は `[Symbol.iterator]()` メソッドを実装しているオブジェクトであることが求められます。このメソッドは 2 つの要素を持った配列風オブジェクトを生成するイテレーターを返します。最初の要素はプロパティキーとして使われる値であり、次の要素はプロパティのキーに関連付けられる値です。
 
 `Object.fromEntries()` は {{jsxref("Object.entries()")}} の逆の動作をしますが、 `Object.entries()` は文字列キーのプロパティしか返さないのに対し、 `Object.fromEntries()` はシンボルキーのプロパティも作成することができます。
 

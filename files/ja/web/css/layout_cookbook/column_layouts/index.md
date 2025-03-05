@@ -29,7 +29,7 @@ slug: Web/CSS/Layout_cookbook/Column_layouts
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-multicol.html", '100%', 720)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-multicol--download.html)
 
@@ -47,7 +47,7 @@ slug: Web/CSS/Layout_cookbook/Column_layouts
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox.html", '100%', 720)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-flexbox--download.html)
 
@@ -55,7 +55,7 @@ slug: Web/CSS/Layout_cookbook/Column_layouts
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox-wrapping.html", '100%', 720)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-flexbox-wrapping--download.html)
 
@@ -71,7 +71,7 @@ slug: Web/CSS/Layout_cookbook/Column_layouts
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-grid.html", '100%', 720)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-grid--download.html)
 
@@ -107,6 +107,6 @@ slug: Web/CSS/Layout_cookbook/Column_layouts
 
 ## MDN の関連資料
 
-- [段組みレイアウトのガイド](/ja/docs/Web/CSS/CSS_Columns)
-- [フレックスボックスのガイド](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [段組みレイアウトのガイド](/ja/docs/Web/CSS/CSS_multicol_layout)
+- [フレックスボックスのガイド](/ja/docs/Web/CSS/CSS_flexible_box_layout)
 - [CSS グリッドレイアウトのガイド](/ja/docs/Web/CSS/CSS_grid_layout)

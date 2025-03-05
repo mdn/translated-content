@@ -29,7 +29,8 @@ background: border-box red;
 background: no-repeat center/80% url( "../img/image.png");
 ```
 
-> **Nota:** O {{cssxref ( "background-color")}} só pode ser definido no último fundo, como há apenas uma cor de fundo para todo o elemento.
+> [!NOTE]
+> O {{cssxref ( "background-color")}} só pode ser definido no último fundo, como há apenas uma cor de fundo para todo o elemento.
 
 ### Valores
 
@@ -78,7 +79,7 @@ Um ou mais dos seguintes, por qualquer ordem:
 }
 
 .Topbanner {
-  background: url("starsolid.gif") #00d repeat-y fixed;
+  background: url("star-solid.gif") #00d repeat-y fixed;
 }
 ```
 
@@ -97,5 +98,5 @@ Um ou mais dos seguintes, por qualquer ordem:
 ## Veja também
 
 - {{Cssxref ( "- moz-fundo-inline-política")}}
-- [Usando gradientes](/pt-BR/docs/CSS/Using_CSS_gradients)
-- [Vários fundos](/pt-BR/docs/CSS/Multiple_backgrounds)
+- [Usando gradientes](/pt-BR/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Vários fundos](/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

@@ -2,14 +2,26 @@
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
 l10n:
-  sourceCommit: a71b8929628a2187794754c202ad399fe357141b
+  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
 ---
 
 {{jsSidebar("Statements")}}
 
 **`for...of`** 語法執行一個迴圈，該迴圈操作來自[可迭代物件](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代協議)的值序列。可迭代物件包括內置物件實例，例如 {{jsxref("Array")}}、{{jsxref("String")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{domxref("NodeList")}}（以及其他 DOM 集合），還包括 {{jsxref("Functions/arguments", "arguments")}} 物件、由[生成器函數](/zh-TW/docs/Web/JavaScript/Reference/Statements/function*)生成的[生成器](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Generator)，以及用戶定義的可迭代物件。
 
-{{EmbedInteractiveExample("pages/js/statement-forof.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For...Of")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+for (const element of array1) {
+  console.log(element);
+}
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## 語法
 
@@ -29,9 +41,12 @@ for (variable of iterable)
 
 `for...of` 迴圈依序逐個操作來自可迭代物件的值。迴圈對值的每次操作稱為一次*迭代*，而迴圈本身則稱為*迭代可迭代物件*，每次迭代執行可能參考當前序列值的語句。
 
-當 `for...of` 迴圈在可迭代物件上進行迭代時，它首先調用可迭代物件的 [`[@@iterator]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) 方法，該方法回傳一個[迭代器](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器協議)，然後重複調用得到的迭代器的 [`next()`](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器協議) 方法，以生成要賦予 `variable` 的值序列。
+當 `for...of` 迴圈在可迭代物件上進行迭代時，它首先調用可迭代物件的 [`[Symbol.iterator]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) 方法，該方法回傳一個[迭代器](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器協議)，然後重複調用得到的迭代器的 [`next()`](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器協議) 方法，以生成要賦予 `variable` 的值序列。
 
-`for...of` 迴圈在迭代器完成時退出（即迭代器的 `next()` 方法回傳一個包含 `done: true` 的物件）。你也可以使用流程控制語句來改變正常的控制流程。[`break`](/zh-TW/docs/Web/JavaScript/Reference/Statements/break) 會退出迴圈並轉到迴圈區塊後的第一個語句，而 [`continue`](/zh-TW/docs/Web/JavaScript/Reference/Statements/continue) 會跳過當前迭代的其餘語句並進行下一次迭代。
+當迭代器完成時（`next()` 的回傳結果是一個具有 `done: true` 的物件），`for...of` 迴圈便會退出。與其他迴圈語句一樣，你可以在 `statement` 中使用[流程控制語句](/zh-TW/docs/Web/JavaScript/Reference/Statements#流程控制)：
+
+- {{jsxref("Statements/break", "break")}} 會停止 `statement` 的執行，並跳到迴圈之後的第一個語句。
+- {{jsxref("Statements/continue", "continue")}} 會停止 `statement` 的執行，並跳到迴圈的下一次迭代。
 
 如果 `for...of` 迴圈提前退出（例如遇到 `break` 語句或拋出錯誤），則會調用迭代器的 [`return()`](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器協議) 方法來執行任何清理動作。
 
@@ -49,7 +64,8 @@ for (let value of iterable) {
 // 31
 ```
 
-> **備註：** 每次迭代都會創建一個新的變數。在迴圈主體內重新賦值不會影響可迭代物件（在本例中是一個陣列）中的原始值。
+> [!NOTE]
+> 每次迭代都會創建一個新的變數。在迴圈主體內重新賦值不會影響可迭代物件（在本例中是一個陣列）中的原始值。
 
 你可以使用[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)指派多個局部變數，或者使用屬性訪問子（如 `for (x.y of iterable)`）賦值給物件屬性。
 
@@ -79,7 +95,7 @@ for (const value of iterable) {
 
 ### 迭代字串
 
-字串將依 [Unicode 編碼位置](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)迭代。
+字串將依 [Unicode 編碼位置](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)迭代。
 
 ```js
 const iterable = "boo";
@@ -171,7 +187,7 @@ for (const paragraph of articleParagraphs) {
 
 ### 迭代用戶定義的可迭代物件
 
-迭代帶有回傳自訂迭代器的 `@@iterator` 方法的物件：
+迭代帶有回傳自訂迭代器的 `[Symbol.iterator]()` 方法的物件：
 
 ```js
 const iterable = {
@@ -196,7 +212,7 @@ for (const value of iterable) {
 // 3
 ```
 
-迭代帶有 `@@iterator` 生成器方法的物件：
+迭代帶有 `[Symbol.iterator]()` 生成器方法的物件：
 
 ```js
 const iterable = {
@@ -215,7 +231,7 @@ for (const value of iterable) {
 // 3
 ```
 
-_可迭代迭代器_（帶有回傳 `this` 的 `[@@iterator]()` 方法的迭代器）是一種相當常見的技術，用來使迭代器在期望可迭代物件的語法中使用，例如 `for...of`。
+_可迭代迭代器_（帶有回傳 `this` 的 `[Symbol.iterator]()` 方法的迭代器）是一種相當常見的技術，用來使迭代器在期望可迭代物件的語法中使用，例如 `for...of`。
 
 ```js
 let i = 1;
@@ -357,7 +373,7 @@ for (const i of iterable) {
 
 第二個迴圈與第一個迴圈類似，但它使用 {{jsxref("Object.hasOwn()")}} 來檢查找到的可枚舉屬性是否為物件的自有屬性，即非繼承屬性。如果是，則輸出該屬性。屬性 `0`、`1`、`2` 和 `foo` 皆被輸出，因為它們是自有屬性。屬性 `arrCustom` 和 `objCustom` 都沒有被輸出，因為它們是繼承屬性。
 
-`for...of` 迴圈迭代並輸出 `iterable` 按照[可迭代](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)陣列定義要進行迭代的*值*。物件的*元素* `3`、`5`、`7` 被輸出，但物件的*屬性*沒有被輸出。
+`for...of` 迴圈迭代並輸出 `iterable` 按照[可迭代](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)陣列定義要進行迭代的*值*。物件的*元素* `3`、`5`、`7` 被輸出，但物件的*屬性*沒有被輸出。
 
 ## 規範
 

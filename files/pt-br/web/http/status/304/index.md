@@ -9,7 +9,8 @@ O código de resposta HTTP de redirecionamento do cliente **`304`** **`Not Modif
 
 A resposta equivalente {{HTTPStatus("200")}} `OK` teria incluso os cabeçalhos {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}}, {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}}, e {{HTTPHeader("Vary")}}.
 
-> **Nota:** Vários [painéis de rede de ferramentas de desenvolvedor](/pt-BR/docs/Tools/Network_Monitor) dos navegadores criam requisições irrelevantes direcionando para respostas `304`, logo este acesso ao cache local é visível aos desenvolvedores.
+> [!NOTE]
+> Vários [painéis de rede de ferramentas de desenvolvedor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) dos navegadores criam requisições irrelevantes direcionando para respostas `304`, logo este acesso ao cache local é visível aos desenvolvedores.
 
 ## Status
 

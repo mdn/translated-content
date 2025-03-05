@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 {{jsxref("Function")}} 实例的 **`apply()`** 方法会以给定的 `this` 值和作为数组（或[类数组对象](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#使用类数组对象)）提供的 `arguments` 调用该函数。
 
-{{EmbedInteractiveExample("pages/js/function-apply.html")}}
+{{InteractiveExample("JavaScript Demo: Function.apply()")}}
+
+```js interactive-example
+const numbers = [5, 6, 2, 3, 7];
+
+const max = Math.max.apply(null, numbers);
+
+console.log(max);
+// Expected output: 7
+
+const min = Math.min.apply(null, numbers);
+
+console.log(min);
+// Expected output: 2
+```
 
 ## 语法
 
@@ -29,7 +43,8 @@ apply(thisArg, argsArray)
 
 ## 描述
 
-> **备注：** 这个函数与 {{jsxref("Function/call", "call()")}} 几乎完全相同，只是函数参数在 `call()` 中逐个作为列表传递，而在 `apply()` 中它们会组合在一个对象中，通常是一个数组——例如，`func.call(this, "eat", "bananas")` 与 `func.apply(this, ["eat", "bananas"])`。
+> [!NOTE]
+> 这个函数与 {{jsxref("Function/call", "call()")}} 几乎完全相同，只是函数参数在 `call()` 中逐个作为列表传递，而在 `apply()` 中它们会组合在一个对象中，通常是一个数组——例如，`func.call(this, "eat", "bananas")` 与 `func.apply(this, ["eat", "bananas"])`。
 
 通常情况下，在调用函数时，函数内部的 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的值是访问该函数的对象。使用 `apply()`，你可以在调用现有函数时将任意值分配给 `this`，而无需先将函数作为属性附加到对象上。这使得你可以将一个对象的方法用作通用的实用函数。
 
@@ -51,7 +66,8 @@ function wrapper(...args) {
 
 一般而言，`fn.apply(null, args)` 等同于使用参数展开语法的 `fn(...args)`，只是在前者的情况下，`args` 期望是类数组对象，而在后者的情况下，`args` 期望是[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)。
 
-> **警告：** 不要使用 `apply()` 进行构造函数链式调用（例如，实现继承）。这会将构造函数作为普通函数调用，这意味着 [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target) 是 `undefined`，从而类会抛出错误，因为它们不能在没有 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 的情况下调用。请改用 {{jsxref("Reflect.construct()")}} 或 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends)。
+> [!WARNING]
+> 不要使用 `apply()` 进行构造函数链式调用（例如，实现继承）。这会将构造函数作为普通函数调用，这意味着 [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target) 是 `undefined`，从而类会抛出错误，因为它们不能在没有 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 的情况下调用。请改用 {{jsxref("Reflect.construct()")}} 或 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends)。
 
 ## 示例
 

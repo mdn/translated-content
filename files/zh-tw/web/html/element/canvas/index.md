@@ -38,7 +38,8 @@ slug: Web/HTML/Element/canvas
 
 `<canvas>` 元素的確切最大尺寸取決於瀏覽器和環境。雖然在大多數情況下，最大尺寸超過 10,000 x 10,000 像素，但特別是 iOS 設備將畫布尺寸限制為僅 4,096 x 4,096 像素。請參見[不同瀏覽器和設備中的畫布大小限制](https://jhildenbiddle.github.io/canvas-size/#/?id=test-results)。
 
-> **備註：** 超出最大尺寸或面積會使畫布無法使用——繪製命令將無法運作。
+> [!NOTE]
+> 超出最大尺寸或面積會使畫布無法使用——繪製命令將無法運作。
 
 ### 使用離屏畫布
 
@@ -169,4 +170,4 @@ ctx.fillRect(10, 10, 100, 100);
 - [WebGL](/zh-TW/docs/Web/API/WebGL_API) API
 - {{HTMLElement("img")}}
 - [SVG](/zh-TW/docs/Web/SVG)
-- [使用 HTML 音頻和影片](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [使用 HTML 音頻和影片](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)

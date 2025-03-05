@@ -45,7 +45,8 @@ user-select: unset;
 - `element`{{non-standard_inline}} (IE-specific alias)
   - : Аналогичен `contain`. Поддерживается только в Internet Explorer.
 
-> **Примечание:** CSS UI 4 [renames user-select: element to contain](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05).
+> [!NOTE]
+> CSS UI 4 [renames user-select: element to contain](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05).
 
 ## Формальное определение
 
@@ -99,4 +100,4 @@ user-select: unset;
 
 - {{Cssxref("::selection")}}
 - Объект JavaScript {{domxref("Selection")}}.
-- [user-select](http://www.w3.org/TR/css-ui-4/#propdef-user-select) in [CSS Basic User Interface Module Level 4](http://www.w3.org/TR/css-ui-4/).
+- [user-select](https://www.w3.org/TR/css-ui-4/#propdef-user-select) in [CSS Basic User Interface Module Level 4](https://www.w3.org/TR/css-ui-4/).

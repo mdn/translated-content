@@ -17,8 +17,8 @@ Les navigateurs courants fournissent des outils de développement intégrés, qu
 
 ### Références techniques
 
-- [Outils de développement Firefox](/fr/docs/Outils) sur MDN
+- [Outils de développement Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html) sur MDN
 - [Firebug](https://getfirebug.com/) (ancien outil de développement pour Firefox)
-- [Outils de développement Chrome](https://developer.chrome.com/devtools) sur chrome.com
+- [Outils de développement Chrome](https://developer.chrome.com/docs/devtools/) sur chrome.com
 - [Inspecteur web Safari](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007874-CH1-SW1) sur apple.com
 - [Outils de développement Edge](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide) sur microsoft.com

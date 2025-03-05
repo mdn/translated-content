@@ -5,7 +5,8 @@ slug: Web/JavaScript/Reference/Statements/with
 
 {{jsSidebar("Statements")}}
 
-> **Attention :** Il n'est pas recommandé d'utiliser l'instruction `with`. En effet, elle est parfois source de problèmes de compatibilité ou de bogues. Se référer au paragraphe « Inconvénient : l'ambiguïté » de la section « Description » pour plus de détails.
+> [!WARNING]
+> Il n'est pas recommandé d'utiliser l'instruction `with`. En effet, elle est parfois source de problèmes de compatibilité ou de bogues. Se référer au paragraphe « Inconvénient : l'ambiguïté » de la section « Description » pour plus de détails.
 
 L'instruction **`with`** permet d'étendre la portée chaînée d'une instruction.
 
@@ -26,7 +27,8 @@ with (expression) {
 
 Dès qu'un nom non-qualifié est utilisé, JavaScript cherche dans la chaîne des portées associée à l'exécution une fonction ou un script qui contiendrait ce nom. L'instruction `with` ajoute l'objet donné à la tête de la chaîne des portées lors de l'évaluation des instructions qu'elle contient. Si un nom non-qualifié est utilisé parmi ces instructions correspond à une propriété de la chaîne des portées, le nom sera alors lié à la propriété et à l'objet contenant cette propriété, sinon une erreur `ReferenceError` est renvoyée.
 
-> **Note :** L'utilisation de l'instruction `with` n'est pas recommandée et est interdite dans le [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) d'ECMAScript 5. L'alternative recommandée est d'assigner l'objet utilisant les propriétés désirées à une variable temporaire.
+> [!NOTE]
+> L'utilisation de l'instruction `with` n'est pas recommandée et est interdite dans le [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) d'ECMAScript 5. L'alternative recommandée est d'assigner l'objet utilisant les propriétés désirées à une variable temporaire.
 
 ### Avantages et inconvénients : les performances
 

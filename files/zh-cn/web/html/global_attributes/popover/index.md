@@ -29,7 +29,8 @@ l10n:
 
 {{EmbedLiveSample('示例', 600, 200)}}
 
-> **备注：** 请参阅我们的[弹出框 API 示例页面](https://mdn.github.io/dom-examples/popover-api/)以访问所有的 MDN 弹出框示例。
+> [!NOTE]
+> 请参阅我们的[弹出框 API 示例页面](https://mdn.github.io/dom-examples/popover-api/)以访问所有的 MDN 弹出框示例。
 
 ## 规范
 

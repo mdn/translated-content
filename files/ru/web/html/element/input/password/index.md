@@ -7,15 +7,41 @@ slug: Web/HTML/Element/input/password
 
 {{HTMLElement("input")}} элементы типа **`"password"`** предоставляют пользователю возможность безопасного ввода пароль. Элемент представлен как однострочный текстовый редактор, в котором текст затенён, чтобы его нельзя было прочитать, как правило, путём замены каждого символа другим символом, таким как звёздочка ("\*") или точка ("•"). Этот символ будет меняться в зависимости от {{Glossary("user agent")}} и {{Glossary("OS")}}.
 
-{{EmbedInteractiveExample("pages/tabbed/input-password.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;password&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<div>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" />
+</div>
+
+<div>
+  <label for="pass">Password (8 characters minimum):</label>
+  <input type="password" id="pass" name="password" minlength="8" required />
+</div>
+
+<input type="submit" value="Sign in" />
+```
+
+```css interactive-example
+label {
+  display: block;
+}
+
+input[type="submit"],
+label {
+  margin-top: 1rem;
+}
+```
 
 Особенности работы процесса ввода могут отличаться от браузера к браузеру; мобильные устройства, например, часто отображают вводимый символ на мгновение, прежде чем закрывать его, чтобы позволить пользователю быть уверенным, что они нажали клавишу, которую они хотели нажать; это полезно, учитывая небольшой размер клавиш и лёгкость, с которой может быть нажата неправильная, особенно на виртуальных клавиатурах.
 
-> **Примечание:** Любые формы, содержащие конфиденциальную информацию, такую как пароли (например, формы входа), должны обслуживаться через HTTPS; В Firefox теперь реализованы несколько механизмов для предупреждения от небезопасных форм входа в систему - см. [Небезопасные пароли](/ru/docs/Web/Security/Insecure_passwords). Другие браузеры также реализуют аналогичные механизмы.
+> [!NOTE]
+> Любые формы, содержащие конфиденциальную информацию, такую как пароли (например, формы входа), должны обслуживаться через HTTPS; В Firefox теперь реализованы несколько механизмов для предупреждения от небезопасных форм входа в систему - см. [Небезопасные пароли](/ru/docs/Web/Security/Insecure_passwords). Другие браузеры также реализуют аналогичные механизмы.
 
 | **[Value](#value)**               | {{domxref("DOMString")}} представляет пароль или пустую строку                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **События**                       | {{event("change")}} и {{event("input")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **События**                       | [`change`](/ru/docs/Web/API/HTMLElement/change_event) и [`input`](/ru/docs/Web/API/Element/input_event)                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | **Общие поддерживаемые атрибуты** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`inputmode`](/ru/docs/Web/HTML/Element/input#inputmode), [`maxlength`](/ru/docs/Web/HTML/Element/input#maxlength), [`minlength`](/ru/docs/Web/HTML/Element/input#minlength), [`pattern`](/ru/docs/Web/HTML/Element/input#pattern), [`placeholder`](/ru/docs/Web/HTML/Element/input#placeholder), [`readonly`](/ru/docs/Web/HTML/Element/input#readonly), [`required`](/ru/docs/Web/HTML/Element/input#required), and [`size`](/ru/docs/Web/HTML/Element/input#size) |
 | **IDL атрибуты**                  | `selectionStart`, `selectionEnd`, `selectionDirection`, и `value`                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | **Методы**                        | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}, и {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}                                                                                                                                                                                                                                                                                                                                       |
@@ -26,7 +52,8 @@ slug: Web/HTML/Element/input/password
 
 Если указан атрибут [`pattern`](/ru/docs/Web/HTML/Element/input#pattern), содержимое элемента управления `"password"` считается действительным только в том случае, если значение проходит проверку; см. [Validation](#validation) для получения дополнительной информации.
 
-> **Примечание:** Символы строки (U+000A) и возврата каретки(U+000D) недопустимы в значении поля `"password"`. При вставке пароля, возвращаемые символы удаляются из значения.
+> [!NOTE]
+> Символы строки (U+000A) и возврата каретки(U+000D) недопустимы в значении поля `"password"`. При вставке пароля, возвращаемые символы удаляются из значения.
 
 ## Использование полей ввода пароля
 

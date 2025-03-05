@@ -15,19 +15,19 @@ O _Elemento_ _HTML_ _de Navegação_ (`<nav>`) representa uma seção de uma pá
 
 ## Contexto de uso
 
-| Conteúdo permitido       | [Conteúdo de fluxo](/pt-BR/HTML/Content_categories#flow_content)                                                                                 |
+| Conteúdo permitido       | [Conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#flow_content)                                                                            |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Omissão de tag           | Nenhuma, tanto a tag de início quanto a de fim são obrigatórias                                                                                  |
 | Elementos-pai permitidos | Quaisquer elementos que permitam conteúdo de fluxo. Note que um elemento `<nav>` não deve descender de um elemento {{ HTMLElement("address") }}. |
-| Documento normativo      | [HTML5, seção 4.4.3](http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-nav-element)                                  |
+| Documento normativo      | [HTML5, seção 4.4.3](https://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-nav-element)                                 |
 
 ## Atributos
 
-Este elemento não possui outros atributos além dos [atributos globais](/pt-BR/HTML/Global_attributes), comuns a todos os elementos.
+Este elemento não possui outros atributos além dos [atributos globais](/pt-BR/docs/HTML/Global_attributes), comuns a todos os elementos.
 
 ## Interface DOM
 
-Este elemento implementa a interface [`HTMLElement`](/pt-BR/DOM/element).
+Este elemento implementa a interface [`HTMLElement`](/pt-BR/docs/DOM/element).
 
 ## Exemplos
 

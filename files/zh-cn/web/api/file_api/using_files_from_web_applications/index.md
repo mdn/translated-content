@@ -2,7 +2,7 @@
 title: 在 web 应用程序中使用文件
 slug: Web/API/File_API/Using_files_from_web_applications
 l10n:
-  sourceCommit: 94ef07a7b073c2663cbace0667bdb717a40bfa28
+  sourceCommit: 88467d31d2ad7bdfade8b38ec69f6702fee080d1
 ---
 
 {{DefaultAPISidebar("File API")}}{{AvailableInWorkers}}
@@ -335,16 +335,17 @@ fileSelect.addEventListener(
 fileElem.addEventListener("change", handleFiles, false);
 
 function handleFiles() {
+  fileList.textContent = "";
   if (!this.files.length) {
-    fileList.innerHTML = "<p>没有选择任何文件！</p>";
+    const p = document.createElement("p");
+    p.textContent = "没有选择任何文件！";
+    fileList.appendChild(p);
   } else {
-    fileList.innerHTML = "";
     const list = document.createElement("ul");
     fileList.appendChild(list);
     for (let i = 0; i < this.files.length; i++) {
       const li = document.createElement("li");
       list.appendChild(li);
-
       const img = document.createElement("img");
       img.src = URL.createObjectURL(this.files[i]);
       img.height = 60;
@@ -353,7 +354,7 @@ function handleFiles() {
       };
       li.appendChild(img);
       const info = document.createElement("span");
-      info.innerHTML = `${this.files[i].name}: ${this.files[i].size} bytes`;
+      info.textContent = `${this.files[i].name}：${this.files[i].size} 字节`;
       li.appendChild(info);
     }
   }
@@ -383,7 +384,8 @@ function handleFiles() {
 
 此示例展示了如何让用户将文件（例如使用上一个示例选择的图像）上传到服务器。
 
-> **备注：** 通常最好使用 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 而不是 {{domxref("XMLHttpRequest")}} 发起 HTTP 请求。但是，在这种情况下，我们想向用户显示上传进度，而 Fetch API 仍然不支持此特性，因此示例使用 `XMLHttpRequest`。使用 Fetch API 跟踪进度通知标准化的工作位于 <https://github.com/whatwg/fetch/issues/607>。
+> [!NOTE]
+> 通常最好使用 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 而不是 {{domxref("XMLHttpRequest")}} 发起 HTTP 请求。但是，在这种情况下，我们想向用户显示上传进度，而 Fetch API 仍然不支持此特性，因此示例使用 `XMLHttpRequest`。使用 Fetch API 跟踪进度通知标准化的工作位于 <https://github.com/whatwg/fetch/issues/607>。
 
 ### 创建上传任务
 
@@ -399,7 +401,7 @@ function sendFiles() {
 }
 ```
 
-第 2 行获取了文档中所有 CSS 类为 `obj` 的元素的 {{DOMxRef("NodeList")}}，命名为 `imgs`。在我们的例子中，这些是包含所有图像缩略图的列表。有了这个列表，遍历并为每一项创建一个新的 `FileUpload` 实例就很简单了。每个实例都可以处理相应文件的上传。
+`document.querySelectorAll` 获取了文档中所有 CSS 类为 `obj` 的元素的 {{DOMxRef("NodeList")}}，命名为 `imgs`。在我们的例子中，这些是包含所有图像缩略图的列表。有了这个列表，遍历并为每一项创建一个新的 `FileUpload` 实例就很简单了。每个实例都可以处理相应文件的上传。
 
 ### 处理文件的上传过程
 
@@ -485,14 +487,14 @@ function createThrobber(img) {
 
 这个例子演示了如何异步上传文件，在服务器端使用了 PHP，在客户端使用了 JavaScript。
 
-```js
+```php
 <?php
 if (isset($_FILES['myFile'])) {
-    // Example:
+    // 示例：
     move_uploaded_file($_FILES['myFile']['tmp_name'], "uploads/" . $_FILES['myFile']['name']);
     exit;
 }
-?><!DOCTYPE html>
+?><!doctype html>
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
@@ -543,7 +545,7 @@ if (isset($_FILES['myFile'])) {
 
 对象 URL 可以用于图像之外的其他东西！它可以用于显示嵌入的 PDF 文件或任何其他浏览器能显示的资源。
 
-在 Firefox 中，要让 PDF 嵌入式地显示在 iframe 中（而不是作为下载的文件弹出），必须将 `pdfjs.disabled` 设为 `false` {{non-standard_inline()}}.
+在 Firefox 中，要让 PDF 嵌入式地显示在 iframe 中（而不是作为下载的文件弹出），必须将 `pdfjs.disabled` 设为 `false`。
 
 ```html
 <iframe id="viewer"></iframe>

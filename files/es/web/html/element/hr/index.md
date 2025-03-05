@@ -11,9 +11,9 @@ slug: Web/HTML/Element/hr
 
   - : **Sus etiquetas son**: `<hr/>` (solo tiene una).
 
-    **Crea una caja**: [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **Crea una caja**: [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
-    **Está definido como**: [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **Está definido como**: [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
     **Puede contener**: Nada, es un "elemento vacío" del un Glosario.
 
@@ -141,6 +141,7 @@ Este es el segundo parrafo, separado del primero por una linea horizontal
 
 secciones futuras: == Soporte de los navegadores == == Valores por defecto y visualización en Firefox ==
 
-> **Nota:** Este documento está siendo editado, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!NOTE]
+> Este documento está siendo editado, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
 >
 > ¿Quieres participar en la elaboración de este documento? Para saber como hacerlo consulta MDC:Como ayudar.

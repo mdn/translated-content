@@ -88,7 +88,8 @@ unwrapKey(format, wrappedKey, unwrappingKey, unwrapAlgo, unwrappedKeyAlgo, extra
 
 ## 例
 
-> **メモ:** GitHub 上で[動作例を試す](https://mdn.github.io/dom-examples/web-crypto/unwrap-key/index.html)ことができます。
+> [!NOTE]
+> GitHub 上で[動作例を試す](https://mdn.github.io/dom-examples/web-crypto/unwrap-key/index.html)ことができます。
 
 ### "raw" キーのラップ解除
 

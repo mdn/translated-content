@@ -9,7 +9,73 @@ l10n:
 
 **`<td>`** は [HTML](/ja/docs/Web/HTML) の要素で、表でデータを包含するセルを定義します。これは*モデル*に関与します。
 
-{{EmbedInteractiveExample("pages/tabbed/td.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;td&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Alien football stars
+  </caption>
+  <tr>
+    <th scope="col">Player</th>
+    <th scope="col">Gloobles</th>
+    <th scope="col">Za'taak</th>
+  </tr>
+  <tr>
+    <th scope="row">TR-7</th>
+    <td>7</td>
+    <td>4,569</td>
+  </tr>
+  <tr>
+    <th scope="row">Khiresh Odo</th>
+    <td>7</td>
+    <td>7,223</td>
+  </tr>
+  <tr>
+    <th scope="row">Mia Oolong</th>
+    <td>9</td>
+    <td>6,219</td>
+  </tr>
+</table>
+```
+
+```css interactive-example
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+th[scope="col"] {
+  background-color: #505050;
+  color: #fff;
+}
+
+th[scope="row"] {
+  background-color: #d6ecd4;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-of-type(even) {
+  background-color: #eee;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+```
 
 ## 属性
 
@@ -28,7 +94,8 @@ l10n:
 
   - : この属性は、セルの内容の簡潔な説明を持ちます。読み上げソフトなど一部のユーザーエージェントは、内容自体の前にこの説明を提供することがあります。
 
-    > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。あるいは、省略した説明をセル内に置き、長い内容を **title** 属性に置くこともできます。
+    > [!NOTE]
+    > この属性は最新の標準で廃止されているため、使用しないでください。あるいは、省略した説明をセル内に置き、長い内容を **title** 属性に置くこともできます。
 
 - `align` {{deprecated_inline}}
 
@@ -42,7 +109,7 @@ l10n:
 
     この属性を設定しない場合は、値が `left` であるとみなされます。
 
-    > **メモ:**
+    > [!NOTE]
     >
     > - `left`, `center`, `right`, `justify` の値と同様の効果を得るには、 CSS の {{cssxref("text-align")}} プロパティを使用してください。
     > - 同様の効果を得るには、 {{cssxref("text-align")}} プロパティの値 [`char`](#char) を使用できます。

@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
 
 O operador bitwise XOR (`^`) retorna o numero 1 em cada posição de bit para a qual os bits correspondentes de ambos, mas não de ambos os operandos, são `1`s.
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-xor.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise XOR")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = 3; // 00000000000000000000000000000011
+
+console.log(a ^ b); // 00000000000000000000000000000110
+// Expected output: 6
+```
 
 ## Sintaxe
 
@@ -68,5 +76,5 @@ Bitwise XORing any number `x` with `0` yields `x`.
 
 ## Leia também
 
-- [Bitwise operators in the JS guide](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
+- [Bitwise operators in the JS guide](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise)
 - [Bitwise XOR assignment operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)

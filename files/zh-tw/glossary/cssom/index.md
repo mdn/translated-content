@@ -15,4 +15,4 @@ CSSOM 與 DOM 一起建構渲染樹，瀏覽器依序使用它來排版與繪製
 
 ## 也可以看看
 
-- [Populating the page: how browsers work](/zh-TW/docs/Web/Performance/Populating_the_page:_how_browsers_work)
+- [Populating the page: how browsers work](/zh-TW/docs/Web/Performance/How_browsers_work)

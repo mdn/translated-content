@@ -7,7 +7,8 @@ slug: Web/API/NodeList
 
 Объект **NodeList** — это коллекция узлов, возвращаемая такими методами, как {{domxref("Node.childNodes")}} и {{domxref("document.querySelectorAll")}}.
 
-> **Примечание:** Несмотря на то, что `NodeList` не является массивом ( `Array` ), его вполне возможно перебрать при помощи метода forEach(). NodeList также можно конвертировать в `Array` при помощи {{jsxref("Array.from()")}}
+> [!NOTE]
+> Несмотря на то, что `NodeList` не является массивом ( `Array` ), его вполне возможно перебрать при помощи метода forEach(). NodeList также можно конвертировать в `Array` при помощи {{jsxref("Array.from()")}}
 >
 > Однако некоторые старые браузеры на данный момент все ещё не поддерживают `NodeList.forEach()` или `Array.from()`. Данные ограничения можно обойти, используя {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} ( больше информации на этой странице ).
 
@@ -73,9 +74,9 @@ for (let i = 0; i < myNodeList.length; i++) {
 }
 ```
 
-Не следует использовать конструкции [`for...in`](/ru/docs/JavaScript/Reference/Statements/for...in) для перечисления элементов списка. Эти способы также перечислят и свойства `length` и `item`, что приведёт к логическим ошибкам в случае, если скрипт ожидает только объекты {{domxref("node")}}. Также `for..in` может перечислять свойства в любом порядке.
+Не следует использовать конструкции [`for...in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in) для перечисления элементов списка. Эти способы также перечислят и свойства `length` и `item`, что приведёт к логическим ошибкам в случае, если скрипт ожидает только объекты {{domxref("node")}}. Также `for..in` может перечислять свойства в любом порядке.
 
-Циклы [`for...of`](/ru/docs/JavaScript/Reference/Statements/for...of) корректно перечисляют все объекты внутри `NodeList` :
+Циклы [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of) корректно перечисляют все объекты внутри `NodeList` :
 
 ```js
 const list = document.querySelectorAll("input[type=checkbox]");

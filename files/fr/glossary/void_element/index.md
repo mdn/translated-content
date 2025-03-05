@@ -23,18 +23,19 @@ Voici la liste des éléments vides en HTML&nbsp;:
 - [`<col>`](/fr/docs/Web/HTML/Element/col)
 - [`<embed>`](/fr/docs/Web/HTML/Element/embed)
 - [`<hr>`](/fr/docs/Web/HTML/Element/hr)
-- [`<img>`](/fr/docs/Web/HTML/Element/Img)
+- [`<img>`](/fr/docs/Web/HTML/Element/img)
 - [`<input>`](/fr/docs/Web/HTML/Element/input)
 - [`<link>`](/fr/docs/Web/HTML/Element/link)
 - [`<meta>`](/fr/docs/Web/HTML/Element/meta)
 - [`<param>`](/fr/docs/Web/HTML/Element/param)
-- [`<source>`](/fr/docs/Web/HTML/Element/Source)
+- [`<source>`](/fr/docs/Web/HTML/Element/source)
 - [`<track>`](/fr/docs/Web/HTML/Element/track)
 - [`<wbr>`](/fr/docs/Web/HTML/Element/wbr)
 
 ## Balises auto-fermantes
 
-> **Note :** Les balises auto-fermantes (`<tag />`) n'existent pas en HTML.
+> [!NOTE]
+> Les balises auto-fermantes (`<tag />`) n'existent pas en HTML.
 
 Si une barre oblique `/` de fin est présente dans la balise ouvrante d'un élément HTML, les analyseurs syntaxiques HTML ignoreront ce caractère. Il est important de se rappeler cette distinction pour les éléments (comme [`<script>`](/fr/docs/Web/HTML/Element/script) ou [`<ul>`](/fr/docs/Web/HTML/Element/ul)) qui doivent avoir une balise fermante. Pour ces éléments, ajouter une barre oblique à la fin de la balise ouvrante ne suffira pas à fermer l'élément.
 
@@ -44,7 +45,8 @@ Les balises auto-fermantes sont requises pour les éléments vides en [XML](/fr/
 
 Pour SVG et MathML, les éléments qui ne peuvent pas avoir de nœud enfant peuvent utiliser une balise auto-fermante. Dans ces cas, si l'élément utilise une balise auto-fermante, il ne doit pas avoir de balise fermante en plus.
 
-> **Note :** Si une barre oblique `/` est présente dans la balise ouvrante et directement précédée (sans espace) par une valeur d'attribut sans quotes, la barre oblique fera alors partie de la valeur de l'attribut plutôt que d'être ignorée par l'analyseur syntaxique. Ainsi, si on écrit `<img src=http://www.example.com/logo.svg/>`, cela signifiera que l'attribut `src` contiendra la valeur `http://www.example.com/logo.svg/` et l'URL ainsi construite est invalide.
+> [!NOTE]
+> Si une barre oblique `/` est présente dans la balise ouvrante et directement précédée (sans espace) par une valeur d'attribut sans quotes, la barre oblique fera alors partie de la valeur de l'attribut plutôt que d'être ignorée par l'analyseur syntaxique. Ainsi, si on écrit `<img src=http://www.example.com/logo.svg/>`, cela signifiera que l'attribut `src` contiendra la valeur `http://www.example.com/logo.svg/` et l'URL ainsi construite est invalide.
 
 ## Voir aussi
 

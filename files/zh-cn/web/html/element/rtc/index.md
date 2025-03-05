@@ -38,7 +38,7 @@ slug: Web/HTML/Element/rtc
 
 ## 属性
 
-该元素仅仅包含 [全局属性](/zh-CN/docs/HTML/Global_attributes)
+该元素仅仅包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 
 ## 示例
 

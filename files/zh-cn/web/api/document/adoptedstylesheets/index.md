@@ -9,11 +9,12 @@ l10n:
 
 {{domxref("Document")}} 接口的 **`adoptedStyleSheets`** 属性用于设置文档使用的构造样式表数组。
 
-> **备注：** 构建样式表是指使用 [`CSSStyleSheet()` 构造函数](/zh-CN/docs/Web/API/CSSStyleSheet/CSSStyleSheet)以编程方式创建的样式表（与用户代理在从脚本导入样式表时、使用 {{HTMLElement('style')}} 和 {{CSSXref('@import')}} 进行导入，或通过 {{HTMLElement('link')}}）链接时创建的样式表相对比。
+> [!NOTE]
+> 构建样式表是指使用 [`CSSStyleSheet()` 构造函数](/zh-CN/docs/Web/API/CSSStyleSheet/CSSStyleSheet)以编程方式创建的样式表（与用户代理在从脚本导入样式表时、使用 {{HTMLElement('style')}} 和 {{CSSXref('@import')}} 进行导入，或通过 {{HTMLElement('link')}}）链接时创建的样式表相对比。
 
 相同的构造样式表也可以通过使用 [`ShadowRoot.adoptedStyleSheets`](/zh-CN/docs/Web/API/ShadowRoot/adoptedStyleSheets) 属性与一个或多个 {{domxref("ShadowRoot")}} 实例共享。更改已采用的样式表会影响采用该样式表的所有对象。
 
-该属性中的样式表将与文档的其他样式表一起根据 [CSS 层叠算法](/zh-CN/docs/Web/CSS/Cascade)进行求值。在规则解析考虑样式表的顺序时，`adoptedStyleSheets` 被假定排列在 [`Document.styleSheets`](/zh-CN/docs/Web/API/Document/styleSheets) 中那些样式表之后。
+该属性中的样式表将与文档的其他样式表一起根据 [CSS 层叠算法](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)进行求值。在规则解析考虑样式表的顺序时，`adoptedStyleSheets` 被假定排列在 [`Document.styleSheets`](/zh-CN/docs/Web/API/Document/styleSheets) 中那些样式表之后。
 
 只有在当前 {{domxref("Document")}} 上下文中使用 [`CSSStyleSheet()` 构造函数](/zh-CN/docs/Web/API/CSSStyleSheet/CSSStyleSheet)创建的样式表才可以被采用。
 
@@ -88,7 +89,7 @@ shadow.adoptedStyleSheets = [sheet];
 
 ## 参见
 
-- [可构建样式表](https://web.dev/articles/constructable-stylesheets)（web.dev）
+- [可构建样式表](https://web.developers.google.cn/articles/constructable-stylesheets)（web.developers.google.cn）
 - [使用影子 DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)
 - [`CSSStyleSheet()` 构造函数](/zh-CN/docs/Web/API/CSSStyleSheet/CSSStyleSheet)
 - {{domxref("CSSStyleSheet.replaceSync()")}}

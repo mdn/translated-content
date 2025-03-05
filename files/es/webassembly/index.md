@@ -26,7 +26,7 @@ Y lo mejor es que está siendo desarrollado como un estándar web a través del 
 - [Compilar de Rust a WebAssembly](/es/docs/WebAssembly/rust_to_wasm)
   - : Si has escrito algo en Rust, ¡puedes compilarlo a WebAssembly! Este tutorial te enseña todo lo que necesitas saber para compilar un proyecto de Rust a wasm y usarlo en una aplicación web existente.
 - [Cargar y ejecutar código WebAssembly](/es/docs/WebAssembly/Loading_and_running)
-  - : Una vez que tengas un .wasm, este artículo cubre cómo recuperarlo, compilarlo e instanciarlo, combinando la API de [WebAssembly de JavaScript](/es/docs/Web/JavaScript/Referencia/Objetos_globales/WebAssembly) con las APIs [Fetch](/es/docs/Web/API/Fetch_API) o [XHR](/es/docs/Web/API/XMLHttpRequest).
+  - : Una vez que tengas un .wasm, este artículo cubre cómo recuperarlo, compilarlo e instanciarlo, combinando la API de [WebAssembly de JavaScript](/es/docs/WebAssembly/JavaScript_interface) con las APIs [Fetch](/es/docs/Web/API/Fetch_API) o [XHR](/es/docs/Web/API/XMLHttpRequest).
 - [Usar la API WebAssembly de JavaScript](/es/docs/WebAssembly/Using_the_JavaScript_API)
   - : Una vez cargado el módulo .wasm, querrás usarlo. En este artículo te mostramos cómo usar WebAssembly mediante la API WebAssembly de JavaScript.
 - [Funciones exportadas de WebAssembly](/es/docs/WebAssembly/Exported_functions)

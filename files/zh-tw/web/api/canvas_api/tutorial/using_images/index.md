@@ -27,7 +27,7 @@ slug: Web/API/Canvas_API/Tutorial/Using_images
 - {{domxref("ImageBitmap")}}
   - : 可以被快速渲染的點陣圖(bitmap)，點陣圖能由上述所有來源產生.
 
-這些來源統一參照 [CanvasImageSource](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#image-sources-for-2d-rendering-contexts)型態.
+這些來源統一參照 [CanvasImageSource](https://html.spec.whatwg.org/multipage/canvas.html#image-sources-for-2d-rendering-contexts) 型態。
 
 有好幾種方法能夠取得影像用於畫布.
 
@@ -41,7 +41,7 @@ slug: Web/API/Canvas_API/Tutorial/Using_images
 
 ### 使用來自其他網域的影像
 
-Using the [`crossOrigin`](/zh-TW/docs/HTML/CORS_settings_attributes) attribute on an 透過{{HTMLElement("HTMLImageElement")}}的[`crossOrigin`](/zh-TW/docs/HTML/CORS_settings_attributes)屬性, 我們可以要求從另一個網域載入影像來使用，若是寄存網域(thehosting domain)准許跨網路存取該影像，那麼我們便可以使用它而不用污染(taint)我們的畫布，反之，使用該影像會污染畫布([taint the canvas](/zh-TW/docs/HTML/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F))。
+Using the [`crossOrigin`](/zh-TW/docs/Web/HTML/Attributes/crossorigin) attribute on an 透過{{HTMLElement("HTMLImageElement")}}的[`crossOrigin`](/zh-TW/docs/Web/HTML/Attributes/crossorigin)屬性, 我們可以要求從另一個網域載入影像來使用，若是寄存網域(thehosting domain)准許跨網路存取該影像，那麼我們便可以使用它而不用污染(taint)我們的畫布，反之，使用該影像會污染畫布([taint the canvas](/zh-TW/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f))。
 
 ### 使用其他畫布元素
 
@@ -74,11 +74,11 @@ img.addEventListener(
 img.src = "myImage.png"; // Set source path
 ```
 
-若是只要載入一份影像，可以用上面的方法，不過當需要載入、追蹤多個影像時，我們就需要更好的方法了，雖然管理多個影像載入已經超出本教學的範疇，然而如果有興趣的話，可以參考[JavaScript Image Preloader](http://www.webreference.com/programming/javascript/gr/column3/)這份文件.
+若是只要載入一份影像，可以用上面的方法，不過當需要載入、追蹤多個影像時，我們就需要更好的方法了，雖然管理多個影像載入已經超出本教學的範疇，然而如果有興趣的話，可以參考[JavaScript Image Preloader](https://webreference.com/javascript/)這份文件。
 
 ### 以 data:URL 嵌入影像
 
-另一個載入影像的方法是利用[data: url](/zh-TW/docs/data_URIs)，透過 data URL 可以直接將影像定義成 Base64 編碼的字串，然後嵌入程式碼之中.
+另一個載入影像的方法是利用 [data: url](/zh-TW/docs/Web/URI/Reference/Schemes/data)，透過 data URL 可以直接將影像定義成 Base64 編碼的字串，然後嵌入程式碼之中.
 
 ```js
 var img_src =
@@ -105,7 +105,7 @@ function getMyVideo() {
 ```
 
 上面的方法會回傳一個{{domxref("HTMLVideoElement")}}的影像物件，如前所述，這個物件可以被視為 CanvasImageSource 類別的物件來使用。
-關於如何利用\<video>元素於畫布上的進階說明，可以參考 html5Doctor 的「[video + canvas = magic](http://html5doctor.com/video-canvas-magic/)」一文.
+關於如何利用\<video>元素於畫布上的進階說明，可以參考 html5Doctor 的「[video + canvas = magic](https://html5doctor.com/video-canvas-magic/)」一文.
 
 ## 影像繪圖
 
@@ -162,7 +162,8 @@ drawImage()的第二個型態增加了兩個新參數，讓我們在畫布上放
 
 本例我們會取一張影像作為桌布，然後透過簡單的迴圈來重複縮放、貼上影像於畫布上。在程式碼中，第一個迴圈走一遍每一列，第二個迴圈走一遍每一行，影像則縮小成原始影像的三分之一，50 x 38 像素.
 
-> **備註：** 過度縮放影像可能會造成影像模糊或產生顆粒感，所以如果影像中有文字需要閱讀，最好不要縮放影像.
+> [!NOTE]
+> 過度縮放影像可能會造成影像模糊或產生顆粒感，所以如果影像中有文字需要閱讀，最好不要縮放影像.
 
 ```html hidden
 <html lang="zh">
@@ -183,11 +184,9 @@ function draw() {
       }
     }
   };
-  img.src = "rhino.jpg";
+  img.src = "https://mdn.github.io/shared-assets/images/examples/rhino.jpg";
 }
-```
 
-```js hidden
 draw();
 ```
 
@@ -211,19 +210,27 @@ drawImage()第三個型態接受 9 個參數，其中 8 個讓我們從原始影
 本例用和前一個範例一樣的犀牛圖，然後切出犀牛頭部影像部分再放入一個影像畫框，這個影像畫框是一個有陰影的 24 位元 PNG 圖檔，因為 24 位元 PNG 影像具備完整的 8 位元不透明色版(alpha channel)，所以不像 GIF 影像和 8 位元 PNG 影像，它能夠放任何背景之上而無須擔心產生消光色(matte color).
 
 ```html
-<html lang="zh">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-    <div style="display:none;">
-      <img id="source" src="rhino.jpg" width="300" height="227" />
-      <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
-    </div>
-  </body>
-</html>
+<canvas id="canvas" width="150" height="150"></canvas>
+<div style="display: none;">
+  <img
+    id="source"
+    src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg"
+    width="300"
+    height="227" />
+  <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+</div>
 ```
 
 ```js
-function draw() {
+async function draw() {
+  // 等待所有圖片載入完畢。
+  await Promise.all(
+    Array.from(document.images).map(
+      (image) =>
+        new Promise((resolve) => image.addEventListener("load", resolve)),
+    ),
+  );
+
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
 
@@ -243,6 +250,7 @@ function draw() {
   // 畫一個畫框
   ctx.drawImage(document.getElementById("frame"), 0, 0);
 }
+
 draw();
 ```
 

@@ -54,7 +54,7 @@ X-Cache-Info: cached
 
    1. [Lista de todos os cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers)
 
-3. [Glossário](/pt-BR/docs/Glossario)
+3. [Glossário](/pt-BR/docs/Glossary)
 
    1. {{Glossary("HTTP header")}}
    2. {{Glossary("General header")}}

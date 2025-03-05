@@ -266,12 +266,12 @@ function drawScene(gl, programInfo, buffers) {
 
 ## 矩陣運算
 
-矩陣的運算看起來很複雜，但其實[一步一步運算其實不會那麼困難](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html)。大部分使用者不會寫自己的運算函數，多半是使用現成的矩陣函數庫，這個例子中我們用的是 [glMatrix library](http://glmatrix.net/) 。
+矩陣的運算看起來很複雜，但其實[一步一步運算其實不會那麼困難](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html)。大部分使用者不會寫自己的運算函數，多半是使用現成的矩陣函數庫，這個例子中我們用的是 [glMatrix library](https://glmatrix.net/) 。
 
 可參考以下資料
 
 - [Matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) on WebGLFundamentals
-- [Matrices](http://mathworld.wolfram.com/Matrix.html) on Wolfram MathWorld
-- [Matrix](<http://en.wikipedia.org/wiki/Matrix_(mathematics)>) on Wikipedia
+- [Matrices](https://mathworld.wolfram.com/Matrix.html) on Wolfram MathWorld
+- [Matrix](https://zh.wikipedia.org/wiki/矩阵) on Wikipedia
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

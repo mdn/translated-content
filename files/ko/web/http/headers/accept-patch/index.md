@@ -13,7 +13,7 @@ l10n:
 
 지원되지 않는 미디어 유형이 포함된 패치 요청을 수신하는 서버는 {{HTTPStatus("415")}} `Unsupported Media Type`과 하나 이상의 지원되는 미디어 유형을 참조하는 Accept-Patch 헤더로 응답할 수 있습니다.
 
-> **참고:**
+> [!NOTE]
 >
 > - IANA 레지스트리는 [공식 콘텐츠 인코딩의 전체 목록](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)을 유지 관리합니다.
 > - 표준은 아니지만 다른 두 가지 콘텐츠 인코딩인 `bzip`과 `bzip2`가 사용되기도 합니다. 이들은 이 두 가지 UNIX 프로그램에서 사용하는 알고리즘을 구현합니다. 첫 번째는 특허 라이선스 문제로 인해 사용이 중단되었습니다.

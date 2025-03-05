@@ -7,7 +7,8 @@ slug: Web/API/IDBObjectStore/createIndex
 
 La méthode **`createIndex()`** de l'interface {{domxref("IDBObjectStore")}} met en place sur le magasin d'objet {{domxref("IDBObjectStore","relié")}} un nouvel index et en renvoie l'{{domxref("IDBIndex","accès")}}.
 
-> **Note :** Cette méthode ne peut être appelé que si la transaction de l'accès au magasin d'objet est en mode VersionChange.
+> [!NOTE]
+> Cette méthode ne peut être appelé que si la transaction de l'accès au magasin d'objet est en mode VersionChange.
 
 {{AvailableInWorkers}}
 
@@ -144,7 +145,8 @@ DBOpenRequest.onupgradeneeded = function (event) {
 };
 ```
 
-> **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!NOTE]
+> Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 

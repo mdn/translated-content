@@ -9,7 +9,33 @@ l10n:
 
 **`<del>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書から削除された文字列の範囲を表します。これは例えば、「変更の追跡」や、ソースコードの差分情報を描画するときに使用することができます。{{HTMLElement("ins")}} 要素は逆の目的に、文書に追加された文字列を示すために用いることができます。
 
-{{EmbedInteractiveExample("pages/tabbed/del.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;del&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<blockquote>
+  There is <del>nothing</del> <ins>no code</ins> either good or bad, but
+  <del>thinking</del> <ins>running it</ins> makes it so.
+</blockquote>
+```
+
+```css interactive-example
+del {
+  text-decoration: line-through;
+  background-color: #fbb;
+  color: #555;
+}
+
+ins {
+  text-decoration: none;
+  background-color: #d4fcbc;
+}
+
+blockquote {
+  padding-left: 15px;
+  border-left: 3px solid #d7d7db;
+  font-size: 1rem;
+}
+```
 
 一般的にこの要素は（必ずではありませんが）打ち消し線のスタイルを伴って描画されます。
 
@@ -39,7 +65,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>

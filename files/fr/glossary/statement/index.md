@@ -15,6 +15,6 @@ Dans un langage de programmation informatique, une **instruction** est une ligne
 
 ### Référence technique
 
-- [Instructions et déclarations JavaScript](/fr/docs/Web/JavaScript/Reference/Instructions)
+- [Instructions et déclarations JavaScript](/fr/docs/Web/JavaScript/Reference/Statements)
 
 <!---->

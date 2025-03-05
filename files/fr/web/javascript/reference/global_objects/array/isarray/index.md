@@ -33,7 +33,7 @@ Array.isArray(value);
 
 Si l'objet indiqué en paramètre est un {{jsxref("Array")}}, la méthode renvoie `true`, sinon, elle renvoie `false`.
 
-Voir aussi : « [Determining with absolute accuracy whether or not a JavaScript object is an array](http://web.mit.edu/jwalden/www/isArray.html) » (en anglais) pour avoir plus de détails. Si on passe un objet {{jsxref("TypedArray")}} en argument, ce sera toujours la valeur `false` qui sera renvoyée.
+Voir aussi : « [Determining with absolute accuracy whether or not a JavaScript object is an array](https://web.mit.edu/jwalden/www/isArray.html) » (en anglais) pour avoir plus de détails. Si on passe un objet {{jsxref("TypedArray")}} en argument, ce sera toujours la valeur `false` qui sera renvoyée.
 
 ## Exemples
 

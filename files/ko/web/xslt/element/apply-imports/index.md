@@ -27,7 +27,7 @@ slug: Web/XSLT/Element/apply-imports
 
 ### 정의
 
-[XSLT section 5.6, Overriding Template Rules](http://www.w3.org/TR/xslt#apply-imports)
+[XSLT section 5.6, Overriding Template Rules](https://www.w3.org/TR/xslt#apply-imports)
 
 ### Gecko 지원
 

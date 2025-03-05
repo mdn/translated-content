@@ -9,7 +9,33 @@ l10n:
 
 **`<menu>`** [HTML](/zh-CN/docs/Web/HTML) 元素在 HTML 规范中被描述为 {{HTMLElement("ul")}} 的语义替代，但浏览器将其视为与 {{HTMLElement("ul")}} 没有区别（并通过无障碍树暴露）。它表示一个无序列表（由 {{HTMLElement("li")}} 元素表示）。
 
-{{EmbedInteractiveExample("pages/tabbed/menu.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;menu&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<div class="news">
+  <a href="#">NASA’s Webb Delivers Deepest Infrared Image of Universe Yet</a>
+  <menu>
+    <li><button id="save">Save for later</button></li>
+    <li><button id="share">Share this news</button></li>
+  </menu>
+</div>
+```
+
+```css interactive-example
+.news {
+  background-color: bisque;
+  padding: 1em;
+  border: solid thin black;
+}
+
+menu {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin-bottom: 0;
+  gap: 1em;
+}
+```
 
 ## 属性
 
@@ -17,9 +43,10 @@ l10n:
 
 ## 使用说明
 
-`<menu>` 和 {{HTMLElement("ul")}} 元素都用于表示无序列表。它们的关键区别在于，{{HTMLElement("ul")}} 主要用于显示内容，而 `<menu>` 则用于交互式内容。相关的 {{HTMLElement("menuitem")}} 元素已被弃用。
+`<menu>` 和 {{HTMLElement("ul")}} 元素都用于表示无序列表。它们的关键区别在于，{{HTMLElement("ul")}} 主要用于显示内容，而 `<menu>` 则用于交互式内容。
 
-> **备注：** 在早期版本的 HTML 规范中，`<menu>` 元素还有一个额外的用例，即作为上下文菜单。此功能被认为已过时，并且不在规范中。
+> [!NOTE]
+> 在早期版本的 HTML 规范中，`<menu>` 元素还有一个额外的用例，即作为上下文菜单。此功能被认为已过时，并且不在规范中。
 
 ## 示例
 

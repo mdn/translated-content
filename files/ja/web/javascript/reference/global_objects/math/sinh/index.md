@@ -1,65 +1,65 @@
 ---
 title: Math.sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
+l10n:
+  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
 {{JSRef}}
 
-**`Math.sinh()`** 関数は、引数として与えた数の双曲線正弦 (ハイパーボリックサイン) を返します。これは{{jsxref("Math.E", "定数 e", "", 1)}} を使用して次のように表すことができます。
+**`Math.sinh()`** 静的メソッドは、数値の双曲線正弦 (ハイパーボリックサイン) を返します。
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.sinh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.sinh(x)}} = \frac{e^x - e^{-x}}{2}</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚜𝚒𝚗𝚑</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">sinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><msup><mi mathvariant="normal">e</mi><mi>x</mi></msup><mo>−</mo><msup><mi mathvariant="normal">e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.sinh}(x)} = \sinh(x) = \frac{\mathrm{e}^x - \mathrm{e}^{-x}}{2}</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-sinh.html")}}
+{{InteractiveExample("JavaScript Demo: Math.sinh()")}}
+
+```js interactive-example
+console.log(Math.sinh(0));
+// Expected output: 0
+
+console.log(Math.sinh(1));
+// Expected output: 1.1752011936438014
+
+console.log(Math.sinh(-1));
+// Expected output: -1.1752011936438014
+
+console.log(Math.sinh(2));
+// Expected output: 3.626860407847019
+```
 
 ## 構文
 
-```
+```js-nolint
 Math.sinh(x)
 ```
 
 ### 引数
 
 - `x`
-  - : 数値。
+  - : 数値です。
 
 ### 返値
 
-指定された数値の双曲線正弦 (ハイパーボリックサイン) です。
+`x` の双曲線正弦 (ハイパーボリックサイン) です。
 
 ## 解説
 
 `sinh()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.sinh()` として使用するようにしてください (`Math` はコンストラクターではありません)。
-
-## ポリフィル
-
-これは {{jsxref("Math.exp()")}} 関数を使用して次のようにエミュレートできます。
-
-```js
-Math.sinh =
-  Math.sinh ||
-  function (x) {
-    return (Math.exp(x) - Math.exp(-x)) / 2;
-  };
-```
-
-または {{jsxref("Math.exp()")}} 関数を一度だけ呼び出すようにすると、次のようになります。
-
-```js
-Math.sinh =
-  Math.sinh ||
-  function (x) {
-    var y = Math.exp(x);
-    return (y - 1 / y) / 2;
-  };
-```
 
 ## 例
 
 ### Using Math.sinh() の使用
 
 ```js
+Math.sinh(-Infinity); // -Infinity
+Math.sinh(-0); // -0
 Math.sinh(0); // 0
 Math.sinh(1); // 1.1752011936438014
+Math.sinh(Infinity); // Infinity
 ```
 
 ## 仕様書
@@ -72,6 +72,7 @@ Math.sinh(1); // 1.1752011936438014
 
 ## 関連情報
 
+- [`Math.sinh` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.atanh()")}}

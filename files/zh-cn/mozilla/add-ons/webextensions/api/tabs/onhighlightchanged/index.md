@@ -7,7 +7,8 @@ l10n:
 
 {{AddonSidebar}}
 
-> **警告：** 此事件已被弃用。请使用 {{WebExtAPIRef("tabs.onHighlighted")}} 代替。
+> [!WARNING]
+> 此事件已被弃用。请使用 {{WebExtAPIRef("tabs.onHighlighted")}} 代替。
 
 当窗口中高亮或选中的标签页更改时触发。
 
@@ -52,7 +53,8 @@ browser.tabs.onHighlightChanged.hasListener(listener)
 
 {{Compat}}
 
-> **备注：** 该 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onHighlightChanged) API。此文档来自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!NOTE]
+> 该 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#event-onHighlightChanged) API。此文档来自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

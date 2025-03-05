@@ -5,7 +5,7 @@ slug: Web/CSS/object-fit
 
 {{CSSRef}}
 
-La propiedad [CSS](/es/docs/Web/CSS) **`object-fit`** indica cómo el contenido de un [elemento reemplazado](/es/docs/Web/CSS/Elemento_reemplazo), por ejemplo un {{HTMLElement("img")}} o {{HTMLElement("video")}}, debería redimensionarse para ajustarse a su contenedor.
+La propiedad [CSS](/es/docs/Web/CSS) **`object-fit`** indica cómo el contenido de un [elemento reemplazado](/es/docs/Web/CSS/Replaced_element), por ejemplo un {{HTMLElement("img")}} o {{HTMLElement("video")}}, debería redimensionarse para ajustarse a su contenedor.
 
 Se puede alterar la alineación del contenido del elemento reemplazado utilizando la propiedad {{cssxref("object-position")}}.
 

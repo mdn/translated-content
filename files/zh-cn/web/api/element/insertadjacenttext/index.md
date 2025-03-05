@@ -7,10 +7,10 @@ slug: Web/API/Element/insertAdjacentText
 
 **`insertAdjacentText()`** 方法将一个给定的文本节点插入在相对于被调用的元素给定的位置。
 
-## 句法
+## 语法
 
-```
-element.insertAdjacentText(position, element);
+```js-nolint
+insertAdjacentText(where, data)
 ```
 
 ### 参数
@@ -49,7 +49,8 @@ Void.
 <!-- afterend -->
 ```
 
-> **备注：** 只有当节点位于树中并具有元素父元素时，beforebegin 和 afterend 位置才能工作。
+> [!NOTE]
+> 只有当节点位于树中并具有元素父元素时，beforebegin 和 afterend 位置才能工作。
 
 ## 范例
 

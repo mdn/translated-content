@@ -37,7 +37,7 @@ Batik は [Apache FOP](https://xmlgraphics.apache.org/fop/) と連携して、SV
 
 ### 他のレンダラー
 
-SVG からラスター画像を作成するためのプロジェクトがいくつかあります。[ImageMagick](http://ImageMagick.org) は、もっとも有名なコマンドライン画像処理ツールのひとつです。Gnome ライブラリ－の [rsvg](https://wiki.gnome.org/Projects/LibRsvg) は、 Wikipedia が SVG をラスター化するために用いています。また、 SlimerJS や PhantomJS などのヘッドレスブラウザーを使用すると、ブラウザー上での SVG の表示に近い画像が得られるため、人気があります。
+SVG からラスター画像を作成するためのプロジェクトがいくつかあります。[ImageMagick](http://ImageMagick.org) は、もっとも有名なコマンドライン画像処理ツールのひとつです。Gnome ライブラリーの [rsvg](https://wiki.gnome.org/Projects/LibRsvg) は、 Wikipedia が SVG をラスター化するために用いています。また、 SlimerJS や PhantomJS などのヘッドレスブラウザーを使用すると、ブラウザー上での SVG の表示に近い画像が得られるため、人気があります。
 
 ## Snap.svg
 

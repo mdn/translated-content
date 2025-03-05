@@ -5,13 +5,13 @@ slug: Web/CSS/hex-color
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) **`<hex-color>`** 为描述 [sRGB](/zh-CN/docs/Glossary/RGB) 颜色的*十六进制颜色语法*的记号，此记号将颜色的主分量（红、绿、蓝）及其透明度写为十六进制数。
+[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) **`<hex-color>`** 为描述 [sRGB](/zh-CN/docs/Glossary/RGB) 颜色的*十六进制颜色语法*的记号，此记号将颜色的主分量（红、绿、蓝）及其透明度写为十六进制数。
 
 在可使用 {{CSSXref("&lt;color&gt;")}} 的任意位置均可使用 `<hex-color>` 值。
 
 ## 语法
 
-```
+```plain
 #RGB        // 三值语法
 #RGBA       // 四值语法
 #RRGGBB     // 六值语法
@@ -36,7 +36,8 @@ slug: Web/CSS/hex-color
 
   - : 颜色的 _alpha_ 分量，标示其透明度，为介于 `0` 和 `ff`（255）之间不区分大小写的十六进制数。若仅有一数，则重复此数——`e` 意为 `ee`。`0`（即 `00`）表示完全透明的颜色，而 `f`（即 `ff`）表示完全不透明的颜色。
 
-> **备注：** 此语法不区分大小写——`#00ff00` 与 `#00FF00` 相同。
+> [!NOTE]
+> 此语法不区分大小写——`#00ff00` 与 `#00FF00` 相同。
 
 ## 示例
 

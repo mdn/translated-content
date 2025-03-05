@@ -2,19 +2,32 @@
 title: "<img>: 画像埋め込み要素"
 slug: Web/HTML/Element/img
 l10n:
-  sourceCommit: 585be2ddd6df151effd900af9fb0dea8d28a8623
+  sourceCommit: e3977ac28442db55a4e9b74d025ed776fb7c73af
 ---
 
 {{HTMLSidebar}}
 
 **`<img>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書に画像を埋め込みます。
 
-{{EmbedInteractiveExample("pages/tabbed/img.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;img&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<img
+  class="fit-picture"
+  src="/shared-assets/images/examples/grapefruit-slice.jpg"
+  alt="Grapefruit slice atop a pile of other slices" />
+```
+
+```css interactive-example
+.fit-picture {
+  width: 250px;
+}
+```
 
 上記の例では、 `<img>` 要素の使い方を示しています。
 
 - `src` 属性は**必須**で、埋め込みたい画像へのパスを入れます。
-- `alt` 属性は画像のテキストによる説明で、必須ではありませんがアクセシビリティのために**非常に有用**です。 — スクリーンリーダーがこの説明を読み上げることで、画像が何を表すかをユーザーが知ることができます。また、ネットワークエラーやコンテンツのブロック、リンク切れ等の理由で画像が読み込めなかった場合にも代替テキストが表示されます。
+- `alt` 属性は、この画像のテキストによる代替情報を保持します。これは必須であり、アクセシビリティに**非常に役立つ**ものです。スクリーンリーダーは、この属性値をユーザーに読み上げるので、画像の意味が分かります。また、ネットワークエラーやコンテンツのブロック、リンク切れ等の理由で画像が読み込めなかった場合にも代替テキストが表示されます。
 
 他にも、様々な目的で指定できる属性がたくさんあります。
 
@@ -39,7 +52,7 @@ HTML 標準では、対応する画像形式を指定していないので、{{g
 - [SVG (Scalable Vector Graphics)](/ja/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) — ベクター画像形式。異なるサイズでも正確に描画する必要がある画像に使用します。
 - [WebP (Web Picture format)](/ja/docs/Web/Media/Formats/Image_types#webp_image) — 画像とアニメーションの両方に優れた選択です。
 
-[WebP](/ja/docs/Web/Media/Formats/Image_types#webp_image) や [AVIF](/ja/docs/Web/Media/Formats/Image_types#avif_image) などは、PNG、JPEG、GIF よりはるかに性能が良く、静止画と動画の両方で使えるのでおすすめします。 WebP は広く対応されていますが、 AVIF は Edge での対応が不足しています。
+[WebP](/ja/docs/Web/Media/Formats/Image_types#webp_image) や [AVIF](/ja/docs/Web/Media/Formats/Image_types#avif_image) などは、PNG、JPEG、GIF よりはるかに性能が良く、静止画と動画の両方で使えるのでおすすめします。
 
 SVG は、異なるサイズでも正確に描画する必要がある画像に推奨される形式であることに変わりはありません。
 
@@ -57,11 +70,12 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- `alt`
+- [`alt`](/ja/docs/Web/API/HTMLImageElement/alt#usage_notes)
 
-  - : この属性は、画像を説明する代替文字列を定義します。
+  - : ページ内の画像を置き換えることができるテキストを定義します。
 
-    > **メモ:** ブラウザーは常に画像を表示するわけではありません。ブラウザーが画像を表示しない状況はいくつかがあります。
+    > [!NOTE]
+    > ブラウザーは常に画像を表示するわけではありません。ブラウザーが画像を表示しない状況はいくつかがあります。
     >
     > - 視覚ブラウザー以外のブラウザー（視覚障碍者向けのものを含む）で閲覧された場合
     > - ユーザーが画像を非表示に設定している場合（帯域の節約、プライバシー上の理由）
@@ -69,13 +83,42 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
     >
     > このような場合、ブラウザーは、画像をこの要素の `alt` 属性で定義された文字列に置き換えます。このような理由から、 `alt` には可能な限り役に立つ値を指定するべきです。
 
-    この属性に空文字列を設定すると (`alt=""`)、この画像がコンテンツにおいて重要な箇所*ではない*ことを示し、視覚ブラウザーではない場合は{{glossary("Rendering engine", "レンダリング")}}を省略することがあります。視覚ブラウザーでは、 `alt` 属性が空欄で、画像の表示に失敗した場合は、壊れた画像のアイコンの表示が省略される場合もあります。
+    この属性に空文字列を設定すると (`alt=""`)、この画像がコンテンツにおいて重要な箇所*ではない*ことを示し、視覚ブラウザーではない場合は{{glossary("Engine/Rendering", "レンダリング")}}を省略することがあります。視覚ブラウザーでは、 `alt` 属性が空欄で、画像の表示に失敗した場合は、壊れた画像のアイコンの表示が省略される場合もあります。
 
     この属性は画像をテキストにコピー＆ペーストした場合や、リンクされた画像をブックマークに保存したときにも使用されます。
 
-- `crossorigin`
+- `attributionsrc` {{experimental_inline}}
 
-  - : 関連する画像の取得の際に {{glossary("CORS")}} を使用しなければならないかどうかを示します。 CORS リクエストから返された[CORS が有効な画像](/ja/docs/Web/HTML/CORS_enabled_image)は、 {{HTMLElement("canvas")}} 要素で「[汚染](/ja/docs/Web/HTML/CORS_enabled_image#what_is_a_tainted_canvas)」されることなく再利用することができます。
+  - : ブラウザーに画像リクエストとともに {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信するように指定します。
+
+    サーバー側では、この機能を使用して、{{httpheader("Attribution-Reporting-Register-Source")}} または {{httpheader("Attribution-Reporting-Register-Trigger")}} ヘッダーをレスポンスで送信し、それぞれ画像ベースの[帰属ソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources)または[帰属トリガー](/ja/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers)を登録します。どのレスポンスヘッダーを送り返すべきかは、登録をトリガーした `Attribution-Reporting-Eligible` ヘッダーの値によって異なります。
+
+    ブラウザーが画像ファイルを含むレスポンスを受信すると、対応するソースまたはトリガーイベントがオフになります。
+
+    > [!NOTE]
+    > 詳しくは[帰属レポート API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
+
+    この属性には、設定できるバージョンが 2 つあります。
+
+    - 論理属性、すなわち `attributionsrc` 名のみ。これは、{{httpheader("Attribution-Reporting-Eligible")}} ヘッダーが `src` 属性が指し示すのと同じサーバーに送信されることを指定します。これは、帰属元やトリガー登録を同じサーバーで処理する場合に適しています。帰属トリガーを登録する場合、このプロパティは任意であり、省略した場合は論理値が使用されます。
+    - 1 つ以上の URL を含む値、例えば次のようなものです。
+
+    ```html
+    <img
+      src="image-file.png"
+      alt="My image file description"
+      attributionsrc="https://a.example/register-source
+                         https://b.example/register-source" />
+    ```
+
+    これは、リクエストされたリソースが管理下のサーバーにない場合や、別のサーバーでの帰属元の登録を処理したい場合に便利です。この場合、`attributionSrc` の値として1つまたは複数のURLを指定することができます。リソースへのリクエストが発生すると、 {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーが、リソースのオリジンに加えて、`attributionSrc` で指定された URL に送信されます。これらの URL は、登録を完了するために、{{httpheader("Attribution-Reporting-Register-Source")}} または {{httpheader("Attribution-Reporting-Register-Trigger")}} ヘッダーを適切に返すことができます。
+
+    > [!NOTE]
+    > 複数の URL を指定すると、同じ機能に複数の帰属元を登録することができます。例えば、成功を測定しようとしている異なるキャンペーンがあり、異なるデータについて異なるレポートを生成する必要がある場合などです。
+
+- [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin)
+
+  - : 画像を取得する際に {{glossary("CORS")}} を使用しなければならないかどうかを示します。 CORS リクエストから返された[CORS が有効な画像](/ja/docs/Web/HTML/CORS_enabled_image)は、 {{HTMLElement("canvas")}} 要素で「[汚染](/ja/docs/Web/HTML/CORS_enabled_image#セキュリティと汚染されたキャンバス)」されることなく再利用することができます。
 
     `crossorigin` 属性が指定されて*いない*場合は、 ({{httpheader("Origin")}} リクエストヘッダーがない) CORS 以外のリクエストが送信され、ブラウザーは画像が汚染されたものとしてマークし、その画像データへのアクセスを制限して、 {{HTMLElement("canvas")}} 要素での使用を防ぎます。
 
@@ -107,32 +150,37 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
     - `auto`
       - : デコードモードの優先順位はありません。ブラウザーがユーザーにとって最適なものを決定します。これは既定値です。
 
-- `elementtiming`
+- [`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming)
 
   - : {{domxref("PerformanceElementTiming")}} API による監視のために画像をマークします。指定された値は、監視される画像要素の識別子になります。[`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性のページも参照してください。
 
-- `fetchpriority` {{experimental_inline}}
+- `fetchpriority`
 
   - : 画像を取得する際に使用する相対的な優先順位のヒントを提供します。許可されている値は次の通りです。
 
     - `high`
-      - : 他の画像と比較して読み込みの優先度が高いことを示します。
+      - : 他の画像と比較して高い優先度で読み取ります。
     - `low`
-      - : 他の画像と比較して読み込みの優先度が低いことを示します。
+      - : 他の画像と比較して低い優先度で読み取ります。
     - `auto`
-      - : 既定値。他の画像との相対的な読み込みの優先順位を自動的に決定することを指示します。
+      - : フェッチ優先度に優先順位を設定しないでください。
+        これが既定値です。
+        値がない場合や無効な値が設定されている場合に使用されます。
+
+    詳しくは {{domxref("HTMLImageElement.fetchPriority")}} を参照してください。
 
 - `height`
 
   - : 画像固有の高さをピクセル値で指定します。単位のない整数でなければなりません。
 
-    > **メモ:** `height` と [`width`](#width) を記載することで、画像を読み込む前にブラウザーが画像の縦横比を計算することができるようになります。このアスペクト比は、画像を表示するために必要な空間を確保するために使用され、画像をダウンロードして画面に表示したときのレイアウトのずれを縮小したり、防止したりすることができます。レイアウトのずれを縮小することは、良い使い勝手とウェブパフォーマンスの主要な構成要素です。
+    > **メモ:** `height` と [`width`](#width) を記載することで、画像を読み込む前にブラウザーが画像の{{glossary("aspect ratio", "アスペクト比")}}を計算することができるようになります。このアスペクト比は、画像を表示するために必要な空間を確保するために使用され、画像をダウンロードして画面に表示したときのレイアウトのずれを縮小したり、防止したりすることができます。レイアウトのずれを縮小することは、良い使い勝手とウェブパフォーマンスの主要な構成要素です。
 
 - `ismap`
 
   - : 論理属性で、この画像が[サーバーサイドマップ](https://en.wikipedia.org/wiki/Image_map#Server-side)の一部であるかを示します。そうである場合は、クリック位置の正確な座標をサーバーに送信します。
 
-    > **メモ:** この属性は `<img>` 要素が、有効な [`href`](/ja/docs/Web/HTML/Element/a#href) 属性を持つ {{htmlelement("a")}} 要素の子孫である場合に限り許可されます。これにより、ポインティングデバイスを持たないユーザーのフォールバック先を提供します。
+    > [!NOTE]
+    > この属性は `<img>` 要素が、有効な [`href`](/ja/docs/Web/HTML/Element/a#href) 属性を持つ {{htmlelement("a")}} 要素の子孫である場合に限り許可されます。これにより、ポインティングデバイスを持たないユーザーのフォールバック先を提供します。
 
 - `loading`
 
@@ -144,7 +192,11 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
       - : 画像がブラウザーで定義されたビューポートからの距離に達するまで、画像の読み込みを遅延させます。これは、画像が必要とされるのが合理的に確実になるまで、処理に必要なネットワークやストレージの帯域幅を使用しないようにするためです。これは一般的に、ほとんどの典型的な使用法において、コンテンツの性能を向上させることができます。
 
-      > **メモ:** 読み込みが延期されるのは JavaScript が有効になっているときだけです。これはトラッキング対策であり、スクリプトが無効になっているときにユーザーエージェントが遅延読み込みに対応している場合でも、サーバーがいつ何枚の画像が要求されたかを追跡できるようにページのマークアップに画像を戦略的に配置することで、サイトがセッション全体を通してユーザーのおおよそのスクロール位置を追跡することが可能になるからです。
+    > [!NOTE]
+    > 読み込みが延期されるのは JavaScript が有効になっているときだけです。これはトラッキング対策であり、スクリプトが無効になっているときにユーザーエージェントが遅延読み込みに対応している場合でも、サーバーがいつ何枚の画像が要求されたかを追跡できるようにページのマークアップに画像を戦略的に配置することで、サイトがセッション全体を通してユーザーのおおよそのスクロール位置を追跡することが可能になるからです。
+
+    > [!NOTE]
+    > 画像の `loading` が `lazy` に設定されていると、たとえ読み込みによって表示が変更されるとしても、可視要素と交差しない場合は決して読み込まれません。未読み込みの画像は `width` および `height` が `0` であるためです。遅延読み込みの画像に `width` および `height` を設定すると、この問題が解決され、[仕様で推奨](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element)されているベストプラクティスとなります。また、レイアウトのずれを防ぐことにも役立ちます。
 
 - `referrerpolicy`
 
@@ -196,7 +248,8 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
   - : 要素に関連づけられた[イメージマップ](/ja/docs/Web/HTML/Element/map)の部分的な {{glossary("URL")}} ('`#`' で始まる) です。
 
-    > **メモ:** `<img>` 要素が {{htmlelement("a")}} または {{HTMLElement("button")}} 要素の子孫である場合は、この属性を使用することはできません。
+    > [!NOTE]
+    > この属性は、`<img>` 要素が {{htmlelement("a")}} または {{HTMLElement("button")}} 要素の子孫である場合に使用することはできません。
 
 ### 非推奨の属性
 
@@ -221,12 +274,13 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
   - : 画像の左右に挿入する空間の幅をピクセル単位で指定します。代わりに CSS の {{cssxref('margin')}} プロパティを使用してください。
 - `longdesc` {{deprecated_inline}}
 
-  - : 画像の詳細な説明へのリンクです。有効な値は、 {{glossary("URL")}} または要素の [`id`](/ja/docs/Web/HTML/Global_attributes#id) です。
+  - : 画像の詳細な説明へのリンクです。有効な値は、 {{glossary("URL")}} または要素の [`id`](/ja/docs/Web/HTML/Global_attributes/id) です。
 
-    > **メモ:** この属性は、最新の {{glossary("W3C")}} のバージョンである [HTML 5.2](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc) でも言及されていますが、 {{glossary("WHATWG")}} の [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) では完全に削除されています。将来が不確実なので、代わりに、[`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) または[`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details) のような {{glossary("WAI")}}-{{glossary("ARIA")}} の代替手段を使用してください。
+    > [!NOTE]
+    > この属性は、最新の {{glossary("W3C")}} のバージョンである [HTML 5.2](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc) でも言及されていますが、 {{glossary("WHATWG")}} の [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) では完全に削除されています。将来が不確実なので、代わりに、[`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) または[`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details) のような {{glossary("WAI")}}-{{glossary("ARIA")}} の代替手段を使用してください。
 
 - `name` {{deprecated_inline}}
-  - : 要素の名前です。代わりに [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性を使用してください。
+  - : 要素の名前です。代わりに [`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性を使用してください。
 - `vspace` {{deprecated_inline}}
   - : 画像の上下に挿入する空間の幅をピクセル単位で指定します。代わりに CSS の {{cssxref('margin')}} プロパティを使用してください。
 
@@ -234,11 +288,59 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
 `<img>` は[置換要素](/ja/docs/Web/CSS/Replaced_element)です。 {{cssxref("display")}} の値が既定で `inline` ですが、既定の寸法は埋め込まれた画像の内部的な値で定義されます。画像には {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}, {{cssxref("height")}}, などのプロパティを設定することができます。
 
-`<img>` にはベースラインがありません。つまり {{cssxref("vertical-align")}}`: baseline` を伴うインライン整形コンテキスト内で使用したときに、画像の下端はコンテナーのベースラインに揃えられます。
+`<img>` にはベースラインがありません。つまり {{cssxref("vertical-align", "vertical-align: baseline")}} を伴うインライン整形コンテキスト内で使用したときに、画像の下端はコンテナーのベースラインに揃えられます。
 
 {{cssxref("object-position")}} プロパティを使用して、要素ボックス内の画像の位置を指定したり、 {{cssxref("object-fit")}} プロパティを使用して、ボックス内の画像の寸法を調整したり（例えば、クリッピングが必要な時に画像をボックスに合わせるか埋めるか）することができます。
 
 画像の種類に応じて、固有の寸法を持つことができます。ただし、固有の寸法が必須ではない画像形式があります。例えば {{glossary("SVG")}} 画像は、固有の寸法を持ちません。つまり、 SVG 画像には {{SVGElement("svg")}} 要素に `width` または `height` が設定されていない限り、固有の寸法はありません。
+
+## アクセシビリティ
+
+### 意味のある代替説明を書く
+
+`alt` 属性の値は明確で簡潔に画像の内容を説明するものにしてください。画像そのもの存在を説明するものであったり、画像のファイル名であったりするべきではありません。画像が言葉で説明できるものではなく、 `alt` 属性を意図的に省略する場合は、画像が伝えようとしていることの内容を他の方法で表すように考慮してください。
+
+#### 悪い例
+
+```html example-bad
+<img alt="画像" src="penguin.jpg" />
+```
+
+#### 良い例
+
+```html example-good
+<img alt="海岸に立っているイワトビペンギン" src="penguin.jpg" />
+```
+
+簡単なアクセシビリティのテストとして、`alt` 属性の内容を、その前後のテキストコンテンツと併せて読み、画像と同じ意味が伝わるかどうかを確認してください。例えば、画像の前に「旅行中、小さくてかわいい動物を見つけました。」という文がある場合、「悪い例」ではスクリーンリーダーによって「旅行中、小さくてかわいい動物を見つけました。画像」と読み上げられますが、これは意味をなしません。一方、「よい例」ではスクリーンリーダーによって「旅行中、小さくてかわいい動物を見つけました。海岸に立っているイワトビペンギン」と読み上げられ、意味をなします。<!-- 原文の "preceding textual content" を、日本語と英語の文構造の違いを意識し、「その前後のテキストコンテンツ」と意訳しています。 -->
+
+例えば、アクションを起動するために使用される画像（{{htmlelement("a")}} や {{htmlelement("button")}} 要素内にネストされた画像）については、`alt` 属性値内に起動されるアクションを記述することを考えてください。例えば、`alt="右向き矢印"` の代わりに `alt="次のページ"` と記述できます。また、`title` 属性内に任意でさらに詳しい説明を追加することも検討できます。これは、ユーザーが要求した場合にスクリーンリーダーによって読み上げられる場合があります。
+
+画像に `alt` 属性が指定されていない場合、一部のスクリーンリーダーでは代わりに画像のファイル名が読み上げられることがあります。ファイル名が画像の内容を適切に表していない場合、混乱を招く可能性があります。
+
+- [An alt Decision Tree • Images • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/images/decision-tree/)
+- [Alt-texts: The Ultimate Guide — Axess Lab](https://axesslab.com/alt-texts/)
+- [How to Design Great Alt Text: An Introduction | Deque](https://www.deque.com/blog/great-alt-text-introduction/)
+- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
+
+### SVG を画像として識別
+
+[VoiceOver のバグ](https://webkit.org/b/216364)により、VoiceOver は SVG 画像を画像として正しくアナウンスしません。SVG のソースファイルを持つすべての `<img>` 要素に [`role="img"`](/ja/docs/Web/Accessibility/ARIA/Roles/img_role) を記載し、支援技術が SVG を画像コンテンツとして正しくアナウンスするようにしてください。
+
+```html
+<img src="mdn.svg" alt="MDN" role="img" />
+```
+
+### title 属性
+
+[`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性を `alt` 属性の代わりに利用することはできません。加えて、 `alt` 属性の値を同じ画像の `title` 属性に複製して宣言することは避けてください。このようにすると、読み上げソフトが説明を二回読み上げ、操作を混乱させる可能性があります。
+
+`title` 属性は、画像の `alt` の説明と組み合わせた補助的な説明として使用するべきでもありません。画像にキャプションが必要であれば、 [`figure`](/ja/docs/Web/HTML/Element/figure) および [`figcaption`](/ja/docs/Web/HTML/Element/figcaption) 要素と組み合わせて使用してください。
+
+`title` 属性の値は、よくツールチップとして、画像の上でカーソルを停止させた後で間もなく表示されます。これはユーザーに追加の情報を提供する*ことができます*が、ユーザーが必ず見ると仮定してはいけません。ユーザーはキーボードやタッチパネルしか持っていないかもしれません。ユーザーが見ることが特に重要または有益である情報があるのであれば、上記の `title` を使用するのではなく、何らかの方法で行内に表示するべきです。
+
+- [Using the HTML title attribute – updated | The Paciello Group](https://www.tpgi.com/using-the-html-title-attribute-updated/)
 
 ## 例
 
@@ -247,7 +349,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 以下の簡単な例では、ページに画像を埋め込み、アクセシビリティを向上させるために代替テキストを含めています。
 
 ```html
-<img src="favicon144.png" alt="MDN ロゴ" />
+<img src="favicon144.png" alt="MDN" />
 ```
 
 {{ EmbedLiveSample('Alternative_text', '100%', '160') }}
@@ -288,55 +390,12 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
 {{EmbedLiveSample("Using_the_srcset_and_sizes_attributes", "100%", 350)}}
 
-> **メモ:** その場で大きさを変更してみるには、{{LiveSampleLink('Using_the_srcset_and_sizes_attributes', 'この例を別なページで表示')}}させる必要があり、そうすればコンテンツ領域の大きさを実際に使用することができます。
+> [!NOTE]
+> その場で大きさを変更してみるには、{{LiveSampleLink('Using_the_srcset_and_sizes_attributes', 'この例を別なページで表示')}}させる必要があり、そうすればコンテンツ領域の大きさを実際に使用することができます。
 
 ## セキュリティとプライバシーの考慮事項
 
 `<img>` 要素の多くは無害な使用ですが、ユーザーのセキュリティとプライバシーに望ましくない結果をもたらす可能性もあります。詳細情報と緩和策については [Referer ヘッダー: プライバシーとセキュリティの考慮事項](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns)を参照してください。
-
-## アクセシビリティの考慮
-
-### 意味のある代替説明を書く
-
-`alt` 属性の値は明確で簡潔に画像の内容を説明するものにしてください。画像そのもの存在を説明するものであったり、画像のファイル名であったりするべきではありません。画像が言葉で説明できるものではなく、 `alt` 属性を意図的に省略する場合は、画像が伝えようとしていることの内容を他の方法で表すように考慮してください。
-
-#### 悪い例
-
-```html example-bad
-<img alt="image" src="penguin.jpg" />
-```
-
-#### 良い例
-
-```html example-good
-<img alt="海岸に立っているイワトビペンギン" src="penguin.jpg" />
-```
-
-`alt` 属性が画像にない場合、読み上げソフトによっては代わりに画像のファイル名を読み上げることがあります。ファイル名が画像の内容を表していない場合、これが操作を混乱させる可能性があります。
-
-- [An alt Decision Tree • Images • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/images/decision-tree/)
-- [Alt-texts: The Ultimate Guide — Axess Lab](https://axesslab.com/alt-texts/)
-- [How to Design Great Alt Text: An Introduction | Deque](https://www.deque.com/blog/great-alt-text-introduction/)
-- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
-
-### SVG を画像として識別
-
-[VoiceOver のバグ](https://webkit.org/b/216364)により、VoiceOver は SVG 画像を画像として正しくアナウンスしません。SVG のソースファイルを持つすべての `<img>` 要素に [`role="img"`](/ja/docs/Web/Accessibility/ARIA/Roles/img_role) を記載し、支援技術が SVG を画像コンテンツとして正しくアナウンスするようにしてください。
-
-```html
-<img src="mdn.svg" alt="MDN logo" role="img" />
-```
-
-### title 属性
-
-[`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性を `alt` 属性の代わりに利用することはできません。加えて、 `alt` 属性の値を同じ画像の `title` 属性に複製して宣言することは避けてください。このようにすると、読み上げソフトが説明を二回読み上げ、操作を混乱させる可能性があります。
-
-`title` 属性は、画像の `alt` の説明と組み合わせた補助的な説明として使用するべきでもありません。画像にキャプションが必要であれば、 [`figure`](/ja/docs/Web/HTML/Element/figure) および [`figcaption`](/ja/docs/Web/HTML/Element/figcaption) 要素と組み合わせて使用してください。
-
-`title` 属性の値は、よくツールチップとして、画像の上でカーソルを停止させた後で間もなく表示されます。これはユーザーに追加の情報を提供する*ことができます*が、ユーザーが必ず見ると仮定してはいけません。ユーザーが見ることが特に重要または有益である情報があるのであれば、上記の `title` を使用するのではなく、何らかの方法で行内に表示するべきです。
-
-- [Using the HTML title attribute – updated | The Paciello Group](https://www.tpgi.com/using-the-html-title-attribute-updated/)
 
 ## 技術的概要
 
@@ -421,14 +480,14 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
               <li>
                 <code
                   ><a
-                    href="/ja/docs/Web/Accessibility/ARIA/Roles/Switch_role"
+                    href="/ja/docs/Web/Accessibility/ARIA/Roles/switch_role"
                     >switch</a
                   ></code
                 >
               </li>
               <li>
                 <code
-                  ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Tab_Role"
+                  ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tab_role"
                     >tab</a
                   ></code
                 >
@@ -465,6 +524,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
 - {{HTMLElement("picture")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}} 要素
 - その他の画像に関する CSS プロパティ: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}
+- この要素の {{domxref("HTMLImageElement")}} インターフェイス
 - [HTML の画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 - [画像のファイル形式のガイド](/ja/docs/Web/Media/Formats/Image_types)
 - [レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)

@@ -7,7 +7,8 @@ slug: Web/API/WebGLRenderingContext/uniform
 
 **`WebGLRenderingContext.uniform[1234][fi][v]()`** метод [WebGL API](/ru/docs/Web/API/WebGL_API) устанавливает значение для постоянных переменных Uniform.
 
-> **Примечание:** Многие из описанных в этом разделе функцию имеют расширенные интерфейсы WebGL 2, которые можно найти {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}.
+> [!NOTE]
+> Многие из описанных в этом разделе функцию имеют расширенные интерфейсы WebGL 2, которые можно найти {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}.
 
 ## Синтаксис
 

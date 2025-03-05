@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Web Workers API")}}
 
-ウェブワーカーは、ウェブコンテンツがスクリプトをバックグラウンドのスレッドで実行するためのシンプルな手段です。ワーカースレッドは、ユーザーインターフェイスを妨げることなくタスクを実行できます。さらに、{{domxref("fetch()")}} や {{domxref("XMLHttpRequest")}} など API を用いて、ネットワークリクエストを行うことができます。ワーカーが生成されると、それを作成した JavaScript コードが指定するイベントハンドラーにメッセージを投稿することで、そのコードにメッセージを送ることができます（逆も同様）。
+ウェブワーカーは、ウェブコンテンツがスクリプトをバックグラウンドのスレッドで実行するためのシンプルな手段です。ワーカースレッドは、ユーザーインターフェイスを妨げることなくタスクを実行できます。さらに、{{domxref("Window/fetch", "fetch()")}} や {{domxref("XMLHttpRequest")}} など API を用いて、ネットワークリクエストを行うことができます。ワーカーが生成されると、それを作成した JavaScript コードが指定するイベントハンドラーにメッセージを投稿することで、そのコードにメッセージを送ることができます（逆も同様）。
 
 この記事では、ウェブワーカーを使用するための詳しい紹介をしています。
 
@@ -17,7 +17,8 @@ l10n:
 
 ワーカーのコンテキストは、専用ワーカー（単一のスクリプトで利用される標準的なワーカー）の場合は {{domxref("DedicatedWorkerGlobalScope")}} オブジェクトで表されます（共有ワーカーの場合は {{domxref("SharedWorkerGlobalScope")}} です）。専用ワーカーは、最初にワーカーを起動したスクリプトだけがアクセスできます。一方、共有ワーカーは複数のスクリプトからアクセスできます。
 
-> **メモ:** ワーカーのリファレンスドキュメントや追加のガイドについては、[ウェブワーカー API のトップページ](/ja/docs/Web/API/Web_Workers_API)をご覧ください。
+> [!NOTE]
+> ワーカーのリファレンスドキュメントや追加のガイドについては、[ウェブワーカー API のトップページ](/ja/docs/Web/API/Web_Workers_API)をご覧ください。
 
 ワーカースレッドでは、どのようなコードでも実行できますが、いくつかの制限があります。例えば、ワーカー内から直接 DOM を操作することはできません。また {{domxref("window")}} オブジェクトの既定のメソッドやプロパティで、使用できないものがあります。それでも、`window` 配下にある多数の項目、たとえば [WebSocket](/ja/docs/Web/API/WebSockets_API) や、 [IndexedDB](/ja/docs/Web/API/IndexedDB_API) のようなデータストレージ機構などを使用できます。詳しくは[ワーカーで使用できる関数やクラス](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)をご覧ください。
 
@@ -25,7 +26,7 @@ l10n:
 
 ワーカーは、親ページと同じ{{glossary("origin", "オリジン")}}内でホスティングされている限り、新しいワーカーを生み出すことができます。
 
-また、ワーカーは {{domxref("fetch()")}} や [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) などの API を用いて、ネットワークリクエストを行うことができます（ただし、`XMLHttpRequest` の {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性は常に `null` になることに注意してください）。
+また、ワーカーは {{domxref("Window/fetch", "fetch()")}} や [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) などの API を用いて、ネットワークリクエストを行うことができます（ただし、`XMLHttpRequest` の {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性は常に `null` になることに注意してください）。
 
 ## 専用ワーカー
 
@@ -93,9 +94,11 @@ myWorker.onmessage = (e) => {
 
 ここではメッセージイベントからデータを取り出して、結果の段落の `textContent` へ格納しています。それで、ユーザーは計算結果を見ることができます。
 
-> **メモ:** メインのスクリプトスレッドで `onmessage` および `postMessage()` を使用するときは `Worker` オブジェクトにぶら下げなければなりませんが、ワーカー内ではそのようにする必要はありません。これは、ワーカー内ではそれ自身が実質的なグローバルスコープになるためです。
+> [!NOTE]
+> メインのスクリプトスレッドで `onmessage` および `postMessage()` を使用するときは `Worker` オブジェクトにぶら下げなければなりませんが、ワーカー内ではそのようにする必要はありません。これは、ワーカー内ではそれ自身が実質的なグローバルスコープになるためです。
 
-> **メモ:** メッセージをメインスレッドとワーカーの間でやりとりするとき、共有されるのではなく、複製または「移譲」（移動）されます。詳しい解説は、[ワーカーとのデータ転送の詳細](#ワーカーとのデータ転送の詳細)をご覧ください。
+> [!NOTE]
+> メッセージをメインスレッドとワーカーの間でやりとりするとき、共有されるのではなく、複製または「移譲」（移動）されます。詳しい解説は、[ワーカーとのデータ転送の詳細](#ワーカーとのデータ転送の詳細)をご覧ください。
 
 ### ワーカーの終了
 
@@ -141,7 +144,8 @@ importScripts(
 
 ブラウザーはそれぞれのスクリプトを読み込み、実行します。ワーカーは各スクリプトのグローバルオブジェクトを使用できます。スクリプトを読み込むことができない場合は `NETWORK_ERROR` を発生させて、それ以降のコードを実行しません。それでも、すでに実行されたコード（{{domxref("setTimeout()")}} で繰り延べされているコードを含みます）は動作します。`importScripts()` メソッドより**後方**にある関数の宣言は、常にコードの残りの部分より先に評価されることから、同様に保持されます。
 
-> **メモ:** スクリプトは順不同にダウンロードされることがありますが、実行は `importScripts()` に渡したファイル名の順に行います。これは同期的に行われます。すべてのスクリプトの読み込みと実行が行われるまで `importScripts()` から戻りません。
+> [!NOTE]
+> スクリプトは順不同にダウンロードされることがありますが、実行は `importScripts()` に渡したファイル名の順に行います。これは同期的に行われます。すべてのスクリプトの読み込みと実行が行われるまで `importScripts()` から戻りません。
 
 ## 共有ワーカー
 
@@ -149,9 +153,11 @@ importScripts(
 
 ここでは、 専用ワーカーと共有ワーカーの違いについて注目します。この例では 2 つの HTML ページがあり、それぞれの JavaScript は同じ単一のワーカーファイルを使用するようになっています。
 
-> **メモ:** 共有ワーカーが複数の閲覧コンテキストからアクセスできる場合、すべての閲覧コンテキストはまったく同じオリジン (プロトコル、ホスト、ポート番号が同じ) になります。
+> [!NOTE]
+> 共有ワーカーが複数の閲覧コンテキストからアクセスできる場合、すべての閲覧コンテキストはまったく同じオリジン (プロトコル、ホスト、ポート番号が同じ) になります。
 
-> **メモ:** Firefox では、共有ワーカーはプライベートウィンドウとそれ以外に読み込まれた文書間で共有することができません ([Firefox バグ 1177621](https://bugzil.la/1177621))。
+> [!NOTE]
+> Firefox では、共有ワーカーはプライベートウィンドウとそれ以外に読み込まれた文書間で共有することができません ([Firefox バグ 1177621](https://bugzil.la/1177621))。
 
 ### 共有ワーカーの生成
 
@@ -165,7 +171,8 @@ const myWorker = new SharedWorker("worker.js");
 
 ポートへの接続は、メッセージを送信する前に `onmessage` イベントハンドラーを使用して暗黙的に行うか、あるいは `start()` メソッドを使用して明示的に開始するかしなければなりません。 `start()` の呼び出しは、`addEventListener()` メソッドで `message` イベントを拾い上げる場合にのみ必要です。
 
-> **メモ:** ポート接続を開始するために `start()` メソッドを使用するとき、双方向の通信が必要である場合は親スレッドとワーカーの両方で呼び出さなければなりません。
+> [!NOTE]
+> ポート接続を開始するために `start()` メソッドを使用するとき、双方向の通信が必要である場合は親スレッドとワーカーの両方で呼び出さなければなりません。
 
 ### 共有ワーカーとのメッセージのやりとり
 
@@ -801,7 +808,7 @@ function fibonacci(num) {
 
 ウェブワーカーをデバッグする方法については、各ブラウザーの JavaScript デバッガーのドキュメントを参照してください。
 
-- [Chrome のソースパネル](https://developer.chrome.com/docs/devtools/javascript/sources/)
+- [Chrome のソースパネル](https://developer.chrome.com/docs/devtools/sources)
 - [Firefox の JavaScript デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/)
 
 ## ワーカーで使用できる関数とインターフェイス
@@ -809,15 +816,17 @@ function fibonacci(num) {
 標準的な JavaScript 機能のほとんどがウェブワーカー内で使用できます。以下のものを含みます。
 
 - {{domxref("Navigator")}}
-- {{domxref("fetch()")}}
+- {{domxref("Window/fetch", "fetch()")}}
 - {{jsxref("Global_Objects/Array", "Array")}}、{{jsxref("Global_Objects/Date", "Date")}}、{{jsxref("Global_Objects/Math", "Math")}}、{{jsxref("Global_Objects/String", "String")}}
 - {{domxref("setTimeout()")}} および {{domxref("setInterval()")}}
 
 ワーカーでできないことは、主に親ページに直接影響を与えることです。例えば、DOM を操作したり、そのページのオブジェクトを使用したりすることなどです。このような操作は、{{domxref("DedicatedWorkerGlobalScope.postMessage")}} を介してメインスクリプトにメッセージを送信し、イベントハンドラーで変更を行うといった間接的な方法で行う必要があります。
 
-> **メモ:** あるメソッドがワーカーで利用できるかどうかは、サイト <https://worker-playground.glitch.me/> を使ってテストできます。例えば、Firefox 84 でサイトに [EventSource](/ja/docs/Web/API/EventSource) と入力すると、サービスワーカーではサポートされていないが、専用ワーカーや共有ワーカーではサポートされていることがわかります。
+> [!NOTE]
+> あるメソッドがワーカーで利用できるかどうかは、サイト <https://worker-playground.glitch.me/> を使ってテストできます。例えば、Firefox 84 でサイトに [EventSource](/ja/docs/Web/API/EventSource) と入力すると、サービスワーカーではサポートされていないが、専用ワーカーや共有ワーカーではサポートされていることがわかります。
 
-> **メモ:** ワーカーで使用できる関数の完全なリストは、[ワーカーで使用できる関数とインターフェイス](< /ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers>)でご覧ください。
+> [!NOTE]
+> ワーカーで使用できる関数の完全なリストは、[ワーカーで使用できる関数とインターフェイス](< /ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers>)でご覧ください。
 
 ## 仕様書
 

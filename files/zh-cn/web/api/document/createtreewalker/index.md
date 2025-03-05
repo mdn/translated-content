@@ -40,7 +40,8 @@ createTreeWalker(root, whatToShow, filter)
     | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                 | `0x40`       | 显示 {{DOMXref("ProcessingInstruction")}} 节点。 |
     | `NodeFilter.SHOW_TEXT`                                   | `0x4`        | 显示 {{DOMXref("Text")}} 节点。                  |
 
-    > **备注：** 由于任意 `Attr` 节点的父节点恒为 `null`，{{DOMXref("TreeWalker.nextNode()")}} 和 {{DOMXref("TreeWalker.previousNode()")}} 永远不会返回 `Attr` 节点。遍历 `Attr` 节点请使用 {{DOMXref("Element.attributes")}}。
+    > [!NOTE]
+    > 由于任意 `Attr` 节点的父节点恒为 `null`，{{DOMXref("TreeWalker.nextNode()")}} 和 {{DOMXref("TreeWalker.previousNode()")}} 永远不会返回 `Attr` 节点。遍历 `Attr` 节点请使用 {{DOMXref("Element.attributes")}}。
 
 - `filter` {{optional_inline}}
 

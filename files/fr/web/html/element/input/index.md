@@ -9,7 +9,34 @@ l10n:
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<input>`** est utilisé pour créer un contrôle interactif dans un formulaire web qui permet à l'utilisatrice ou l'utilisateur de saisir des données. Les saisies possibles et le comportement de l'élément `<input>` dépendent fortement de la valeur indiquée dans son attribut `type` et de ses autres attributs. Il existe différents contrôles pour la saisie, qui dépendent de l'appareil utilisé et de [l'agent utilisateur](/fr/docs/Glossary/User_agent).
 
-{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="name">Name (4 to 8 characters):</label>
+
+<input
+  type="text"
+  id="name"
+  name="name"
+  required
+  minlength="4"
+  maxlength="8"
+  size="10" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## Les différents types de champs `<input>`
 
@@ -283,7 +310,7 @@ Les éléments `<input>` peuvent utiliser les [attributs universels](/fr/docs/We
 | [`formmethod`](#formmethod)                   | `image`, `submit`                                                        | La méthode HTTP à utiliser pour envoyer le formulaire                                                                                 |
 | [`formnovalidate`](#formnovalidate)           | `image`, `submit`                                                        | Surcharge la validation du contrôle dictée par le formulaire pour l'envoi de ce dernier                                               |
 | [`formtarget`](#formtarget)                   | `image`, `submit`                                                        | Le contexte de navigation à utiliser pour l'envoi du formulaire                                                                       |
-| [`height`](#height)                           | `image`                                                                  | Analogue à l'attribut `height` de l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img), la hauteur de l'image                           |
+| [`height`](#height)                           | `image`                                                                  | Analogue à l'attribut `height` de l'élément [`<img>`](/fr/docs/Web/HTML/Element/img), la hauteur de l'image                           |
 | [`list`](#list)                               | tous sauf `hidden`, `password`, `checkbox`, `radio` et les boutons       | La valeur de l'attribut `id` de l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) fournissant les options d'autocomplétion |
 | [`max`](#max)                                 | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`     | La valeur maximale                                                                                                                    |
 | [`maxlength`](#maxlength)                     | `text`, `search`, `url`, `tel`, `email`, `password`                      | La longueur maximale (en nombre de caractères) de l'attribut `value`                                                                  |
@@ -298,18 +325,18 @@ Les éléments `<input>` peuvent utiliser les [attributs universels](/fr/docs/We
 | [`readonly`](#readonly)                       | tous sauf `hidden`, `range`, `color`, `checkbox`, `radio` et les boutons | Un booléen indiquant que la valeur n'est pas éditable                                                                                 |
 | [`required`](#required)                       | tous sauf `hidden`, `range`, `color` et les boutons                      | Un booléen indiquant que la valeur est requise ou que le contrôle doit être coché avant de pouvoir envoyer le formulaire              |
 | [`size`](#size)                               | `text`, `search`, `url`, `tel`, `email`, `password`                      | La taille du contrôle                                                                                                                 |
-| [`src`](#src)                                 | `image`                                                                  | Analogue à l'attribut `src` de l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img), indique l'emplacement de l'image                   |
+| [`src`](#src)                                 | `image`                                                                  | Analogue à l'attribut `src` de l'élément [`<img>`](/fr/docs/Web/HTML/Element/img), indique l'emplacement de l'image                   |
 | [`step`](#step)                               | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`     | Un incrément pour les valeurs valides                                                                                                 |
 | [`type`](#type)                               | tous                                                                     | Le type de contrôle de formulaire                                                                                                     |
 | [`value`](#value)                             | tous sauf `image`                                                        | La valeur initiale du contrôle                                                                                                        |
-| [`width`](#width)                             | `image`                                                                  | Analogue à l'attribut `width` de l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img), la largeur de l'image                            |
+| [`width`](#width)                             | `image`                                                                  | Analogue à l'attribut `width` de l'élément [`<img>`](/fr/docs/Web/HTML/Element/img), la largeur de l'image                            |
 
 Certains attributs non-standard supplémentaires sont listés après les descriptions des attributs standard.
 
 ### Attributs individuels
 
 - `accept`
-  - : Uniquement valide pour le type `file`, cet attribut définit les types de fichiers qui peuvent être sélectionnés. Voir la page détaillée sur [`<input type="file">`](/fr/docs/Web/HTML/Element/Input/file).
+  - : Uniquement valide pour le type `file`, cet attribut définit les types de fichiers qui peuvent être sélectionnés. Voir la page détaillée sur [`<input type="file">`](/fr/docs/Web/HTML/Element/input/file).
 - `alt`
   - : Uniquement valide pour le type `image`, cet attribut fournit un texte alternatif à l'image qui est affiché lorsque l'attribut [`src`](#src) de l'image est absent ou que le chargement de l'image a échoué. Voir la page détaillée sur [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image).
 - `autocapitalize`
@@ -320,23 +347,26 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 
   - : Un attribut booléen qui, s'il est présent, indique que le contrôle devrait automatiquement recevoir le focus lorsque le chargement de la page est terminé (ou lorsque l'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) qui contient ce contrôle a été affiché).
 
-    > **Note :** Un élément avec l'attribut `autofocus` pourra recevoir le focus avant le déclenchement de l'évènement [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event).
+    > [!NOTE]
+    > Un élément avec l'attribut `autofocus` pourra recevoir le focus avant le déclenchement de l'évènement [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event).
 
     Il ne peut pas y avoir plus d'un élément du document avec l'attribut `autofocus`. Si l'attribut est placé sur plus d'un élément, c'est le premier qui reçoit le focus.
 
     L'attribut `autofocus` ne peut pas être utilisé sur les champs de type `hidden`, car ces derniers sont masqués et ne peuvent pas recevoir le focus.
 
-    > **Attention :** Affecter le focus de façon automatique peut être source de confusion pour les personnes qui utilisent des lecteurs d'écran ou qui ont des difficultés cognitives. En effet, avec l'affectation d'`autofocus`, les lecteurs d'écran «&nbsp;téléportent&nbsp;» la personne jusqu'au contrôle, sans avertissement préalable.
+    > [!WARNING]
+    > Affecter le focus de façon automatique peut être source de confusion pour les personnes qui utilisent des lecteurs d'écran ou qui ont des difficultés cognitives. En effet, avec l'affectation d'`autofocus`, les lecteurs d'écran «&nbsp;téléportent&nbsp;» la personne jusqu'au contrôle, sans avertissement préalable.
 
     On fera particulièrement attention à l'accessibilité en appliquant l'attribut `autofocus`. Le focus automatique peut entraîner le défilement de la page au chargement et faire apparaître le clavier logiciel sur certains appareils tactiles. Bien qu'un lecteur d'écran puisse annoncer le libellé du contrôle qui reçoit le focus, il n'annoncera rien avant le libellé. De même, une personne sans déficience visuelle sur un petit écran manquera certainement le contexte créé par le contenu qui précède.
 
 - `capture`
-  - : Cet attribut, introduit avec la spécification HTML <i lang="en">Media Capture</i>, est uniquement valide pour le type `file`. Il définit quel appareil (micro, caméra, appareil photo) qui devrait être utilisé pour capturer un nouveau fichier à uploader. Voir la page détaillée sur [`<input type="file">`](/fr/docs/Web/HTML/Element/Input/file).
+  - : Cet attribut, introduit avec la spécification HTML <i lang="en">Media Capture</i>, est uniquement valide pour le type `file`. Il définit quel appareil (micro, caméra, appareil photo) qui devrait être utilisé pour capturer un nouveau fichier à uploader. Voir la page détaillée sur [`<input type="file">`](/fr/docs/Web/HTML/Element/input/file).
 - `checked`
 
   - : Cet attribut booléen est valide pour les types `radio` et `checkbox`. Lorsqu'il est présent sur un contrôle de type `radio`, il indique que ce bouton radio sera celui sélectionné parmi le groupe de boutons radio qui partagent le même nom. Lorsqu'il est présent sur un contrôle de type `checkbox`, il indique que la case est cochée par défaut au chargement de la page. Attention, il _n'indique pas_ que la case est actuellement cochée, si l'état de la case à cocher change, l'attribut ne reflète pas ce changement (seul l'attribut IDL [`HTMLInputElement.checked`](/fr/docs/Web/API/HTMLInputElement) est mis à jour).
 
-    > **Note :** À la différence des autres contrôles de saisie, la valeur d'une case à cocher ou d'un bouton radio est uniquement incluse dans les données envoyées s'ils sont sélectionnés. Si c'est le cas, le nom et la valeur des contrôles sélectionnés sont envoyés.
+    > [!NOTE]
+    > À la différence des autres contrôles de saisie, la valeur d'une case à cocher ou d'un bouton radio est uniquement incluse dans les données envoyées s'ils sont sélectionnés. Si c'est le cas, le nom et la valeur des contrôles sélectionnés sont envoyés.
     >
     > Ainsi, si une case à cocher dont l'attribut `name` vaut `fruit` et dont l'attribut `value` vaut `cerise`, si la case est cochée, les données envoyées avec le formulaire contiendront `fruit=cerise`. Si la case à cocher n'est pas active, elle ne fera pas partie des données envoyées. Pour les cases à cocher et les boutons radio, la valeur par défaut de l'attribut `value` est `on`.
 
@@ -363,30 +393,32 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 
     Plus précisément, les champs désactivés ne reçoivent pas les évènements [`click`](/fr/docs/Web/API/Element/click_event) et ne sont pas envoyés avec le formulaire.
 
-    > **Note :** Bien que cela ne soit pas nécessaire selon la spécification, par défaut, Firefox [fera persister l'état désactivé obtenu dynamiquement](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) pour un champ `<input>` même après des rechargements de la page. C'est l'attribut [`autocomplete`](#autocomplete) qui contrôle cette fonctionnalité.
+    > [!NOTE]
+    > Bien que cela ne soit pas nécessaire selon la spécification, par défaut, Firefox [fera persister l'état désactivé obtenu dynamiquement](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) pour un champ `<input>` même après des rechargements de la page. C'est l'attribut [`autocomplete`](#autocomplete) qui contrôle cette fonctionnalité.
 
 - `form`
 
-  - : Une chaîne de caractères qui indique l'élément [`<form>`](/fr/docs/Web/HTML/Element/Form) auquel le contrôle est associé (on parle de son **formulaire propriétaire**). La valeur de la chaîne de caractères, si elle est présente, doit correspondre à la valeur d'un identifiant (l'attribut [`id`](#id)) d'un élément `<form>` du même document. Si cet attribut n'est pas défini, l'élément `<input>` est associé au formulaire qui le contient le plus proche, s'il existe.
+  - : Une chaîne de caractères qui indique l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) auquel le contrôle est associé (on parle de son **formulaire propriétaire**). La valeur de la chaîne de caractères, si elle est présente, doit correspondre à la valeur d'un identifiant (l'attribut [`id`](#id)) d'un élément `<form>` du même document. Si cet attribut n'est pas défini, l'élément `<input>` est associé au formulaire qui le contient le plus proche, s'il existe.
 
     L'attribut `form` permet ainsi de placer un champ n'importe où dans le document tout en l'associant à un formulaire du document situé autre part.
 
-    > **Note :** Un champ peut uniquement être associé avec un seul formulaire.
+    > [!NOTE]
+    > Un champ peut uniquement être associé avec un seul formulaire.
 
 - `formaction`
-  - : Uniquement valide pour les types `image` et `submit`. Voir la page détaillée sur [`<input type="submit">`](/fr/docs/Web/HTML/Element/Input/submit).
+  - : Uniquement valide pour les types `image` et `submit`. Voir la page détaillée sur [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit).
 - `formenctype`
-  - : Uniquement valide pour les types `image` et `submit`. Voir la page détaillée sur [`<input type="submit">`](/fr/docs/Web/HTML/Element/Input/submit).
+  - : Uniquement valide pour les types `image` et `submit`. Voir la page détaillée sur [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit).
 - `formmethod`
-  - : Uniquement valide pour les types `image` et `submit`. Voir la page détaillée sur [`<input type="submit">`](/fr/docs/Web/HTML/Element/Input/submit).
+  - : Uniquement valide pour les types `image` et `submit`. Voir la page détaillée sur [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit).
 - `formnovalidate`
-  - : Uniquement valide pour les types `image` et `submit`. Voir la page détaillée sur [`<input type="submit">`](/fr/docs/Web/HTML/Element/Input/submit).
+  - : Uniquement valide pour les types `image` et `submit`. Voir la page détaillée sur [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit).
 - `formtarget`
-  - : Uniquement valide pour les types `image` et `submit`. Voir la page détaillée sur [`<input type="submit">`](/fr/docs/Web/HTML/Element/Input/submit).
+  - : Uniquement valide pour les types `image` et `submit`. Voir la page détaillée sur [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit).
 - `height`
   - : Uniquement valide pour le type `image`, cet attribut indique la hauteur de l'image à afficher sur un bouton d'envoi graphique. Voir la page détaillée sur [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image).
 - `id`
-  - : Un attribut universel, valide pour tous les éléments (y compris `<input>` quel que soit le type), qui définit un identifiant unique au sein du document Son but est de pouvoir cibler un élément précis (pour la mise en forme ou pour créer un lien vers cet élément par exemple). C'est la valeur de cet attribut qui sera utilisée comme valeur de l'attribut `for` d'un élément [`<label>`](/fr/docs/Web/HTML/Element/Label) pour relier le libellé au champ correspondant. Voir [`<label>`](/fr/docs/Web/HTML/Element/Label).
+  - : Un attribut universel, valide pour tous les éléments (y compris `<input>` quel que soit le type), qui définit un identifiant unique au sein du document Son but est de pouvoir cibler un élément précis (pour la mise en forme ou pour créer un lien vers cet élément par exemple). C'est la valeur de cet attribut qui sera utilisée comme valeur de l'attribut `for` d'un élément [`<label>`](/fr/docs/Web/HTML/Element/label) pour relier le libellé au champ correspondant. Voir [`<label>`](/fr/docs/Web/HTML/Element/label).
 - `inputmode`
   - : Un attribut universel, valide pour tous les éléments, qui fournit une indication au navigateur quant au type de clavier virtuel à utiliser pour l'édition de l'élément ou de son contenu. Les valeurs possibles sont `none`, `text`, `tel`, `url`, `email`, `numeric`, `decimal`, et `search`.
 - `list`
@@ -403,7 +435,7 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 
 - `max`
 
-  - : Cet attribut est valide pour les types `date`, `month`, `week`, `time`, `datetime-local`, `number`, et `range`, il définit la plus grande valeur possible de l'intervalle des valeurs autorisées. Si la valeur saisie dans l'élément dépasse la valeur de cet attribut, l'élément échouera à [la validation des contraintes](/fr/docs/Web/Guide/HTML/Constraint_validation). Si la valeur de l'attribut `max` n'est pas un nombre, l'élément n'a pas de valeur maximale.
+  - : Cet attribut est valide pour les types `date`, `month`, `week`, `time`, `datetime-local`, `number`, et `range`, il définit la plus grande valeur possible de l'intervalle des valeurs autorisées. Si la valeur saisie dans l'élément dépasse la valeur de cet attribut, l'élément échouera à [la validation des contraintes](/fr/docs/Web/HTML/Constraint_validation). Si la valeur de l'attribut `max` n'est pas un nombre, l'élément n'a pas de valeur maximale.
 
     Il existe un cas particulier pour les types de données périodiques (comme les dates ou les heures), où la valeur de `max` peut être inférieure à celle de `min`, pour avoir par exemple un intervalle de temps entre 10 heures du soir et 4 heures du matin.
 
@@ -411,11 +443,11 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 
   - : Cet attribut est valide pour les types `text`, `search`, `url`, `tel`, `email`, et `password`, il définit le nombre maximal de caractères (exprimé en nombre de codets UTF-16) qu'il est possible de saisir dans le champ. La valeur de cet attribut doit être un entier positif. Si aucune valeur de `maxlength` n'est indiquée ou qu'une valeur invalide est fournie, le champ n'a pas de longueur maximale. La valeur de cet attribut doit être supérieure ou égale à celle de `minlength`.
 
-    Le champ échouera à [la validation des contraintes](/fr/docs/Web/Guide/HTML/Constraint_validation) si longueur du texte saisi est supérieure à `maxlength` comme nombre de codets UTF-16. Par défaut, les navigateurs empêchent de saisir plus de caractères que ce qui est permis par l'attribut `maxlength`. Voir [la validation côté client](#validation_côté_client) pour plus d'information.
+    Le champ échouera à [la validation des contraintes](/fr/docs/Web/HTML/Constraint_validation) si longueur du texte saisi est supérieure à `maxlength` comme nombre de codets UTF-16. Par défaut, les navigateurs empêchent de saisir plus de caractères que ce qui est permis par l'attribut `maxlength`. Voir [la validation côté client](#validation_côté_client) pour plus d'information.
 
 - `min`
 
-  - : Cet attribut est valide pour les types `date`, `month`, `week`, `time`, `datetime-local`, `number`, et `range`, il définit la valeur la plus faible de l'intervalle des valeurs autorisées. Si la valeur saisie dans l'élément est inférieure à la valeur de cet attribut, l'élément échouera à [la validation des contraintes](/fr/docs/Web/Guide/HTML/Constraint_validation). Si la valeur de l'attribut `min` n'est pas un nombre, l'élément n'a pas de valeur minimale.
+  - : Cet attribut est valide pour les types `date`, `month`, `week`, `time`, `datetime-local`, `number`, et `range`, il définit la valeur la plus faible de l'intervalle des valeurs autorisées. Si la valeur saisie dans l'élément est inférieure à la valeur de cet attribut, l'élément échouera à [la validation des contraintes](/fr/docs/Web/HTML/Constraint_validation). Si la valeur de l'attribut `min` n'est pas un nombre, l'élément n'a pas de valeur minimale.
 
     Cette valeur doit être inférieure ou égale à la valeur fournie par l'attribut `max`. Si l'attribut `min` est présent mais sans valeur ou avec une valeur invalide, aucune contrainte de minimum n'est appliquée. Si l'attribut `min` est valide et que la valeur saisie dans le contrôle est inférieure à celle de cet attribut, la validation des contraintes empêchera l'envoi du formulaire. Voir [la validation côté client](#validation_côté_client) pour plus d'information.
 
@@ -425,10 +457,10 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 
   - : Cet attribut est valide pour les types `text`, `search`, `url`, `tel`, `email`, et `password`, il définit le nombre minimal de caractères (exprimé en nombre de codets UTF-16) qu'il est possible de saisir dans le champ. La valeur de cet attribut doit être un entier positif inférieur ou égal à celle de `maxlength`. Si cet attribut est absent ou qu'une valeur invalide est indiquée, le champ n'aura pas de longueur minimale.
 
-    Le champ échouera à [la validation des contraintes](/fr/docs/Web/Guide/HTML/Constraint_validation) si longueur du texte saisi est inférieure à `minlength` comme nombre de codets UTF-16. Voir [la validation côté client](#validation_côté_client) pour plus d'information.
+    Le champ échouera à [la validation des contraintes](/fr/docs/Web/HTML/Constraint_validation) si longueur du texte saisi est inférieure à `minlength` comme nombre de codets UTF-16. Voir [la validation côté client](#validation_côté_client) pour plus d'information.
 
 - `multiple`
-  - : Un attribut booléen qui, lorsqu'il est présent, permet de saisir plusieurs adresses électroniques séparées par des virgules ou de sélectionner plusieurs fichiers si le contrôle est de type `file`. Voir les page détaillées sur [`<input type="file">`](/fr/docs/Web/HTML/Element/Input/file) et [`<input type="email">`](/fr/docs/Web/HTML/Element/input/email).
+  - : Un attribut booléen qui, lorsqu'il est présent, permet de saisir plusieurs adresses électroniques séparées par des virgules ou de sélectionner plusieurs fichiers si le contrôle est de type `file`. Voir les page détaillées sur [`<input type="file">`](/fr/docs/Web/HTML/Element/input/file) et [`<input type="email">`](/fr/docs/Web/HTML/Element/input/email).
 - `name`
 
   - : Une chaîne de caractères qui fourni le nom associé au contrôle. Le nom est envoyé avec la valeur du contrôle lors de l'envoi du formulaire.
@@ -437,7 +469,7 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 
     Il existe deux cas spéciaux&nbsp;:
 
-    - `_charset_`&nbsp;: Si cette valeur est utilisée comme nom pour un élément `<input>` de type [`hidden`](/fr/docs/Web/HTML/Element/Input/hidden), la valeur du champ est automatiquement renseignée par [l'agent utilisateur](/fr/docs/Glossary/User_agent) et porte l'encodage de caractères utilisé pour l'envoi du formulaire.
+    - `_charset_`&nbsp;: Si cette valeur est utilisée comme nom pour un élément `<input>` de type [`hidden`](/fr/docs/Web/HTML/Element/input/hidden), la valeur du champ est automatiquement renseignée par [l'agent utilisateur](/fr/docs/Glossary/User_agent) et porte l'encodage de caractères utilisé pour l'envoi du formulaire.
     - `isindex`&nbsp;: Pour des raisons historiques, le nom [`isindex`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name) n'est pas autorisé.
 
     L'attribut `name` possède un comportement particulier pour les boutons radio.
@@ -459,15 +491,17 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 
     À l'exécution de ce code, `nomInvite` correspondra à l'objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) associé au champ `invite`, et de même l'objet `tailleChat` correspondra à l'objet du DOM associé au champ avec le nom `taille-chat`.
 
-    > **Attention :** On évitera de donner aux éléments de formulaire un nom qui correspond à une propriété native du DOM. Cela surchargerait la propriété ou la méthode native pour pointer vers le champ correspondant.
+    > [!WARNING]
+    > On évitera de donner aux éléments de formulaire un nom qui correspond à une propriété native du DOM. Cela surchargerait la propriété ou la méthode native pour pointer vers le champ correspondant.
 
 - `pattern`
 
-  - : Valie pour les champs de type `text`, `search`, `url`, `tel`, `email`, cet attribut est une expression rationnelle que la valeur du champ doit respecter afin de [valider les contraintes](/fr/docs/Web/Guide/HTML/Constraint_validation). Cette valeur doit être une expression rationnelle JavaScript valide (voir [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)) telle que documentée dans [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions). Le marqueur `'u'` est implicitement appliqué à la compilation de l'expression et le motif est donc traité comme une séquence de codets Unicode et non ASCII. Il ne faut pas encadrer le motif de barres obliques.
+  - : Valie pour les champs de type `text`, `search`, `url`, `tel`, `email`, cet attribut est une expression rationnelle que la valeur du champ doit respecter afin de [valider les contraintes](/fr/docs/Web/HTML/Constraint_validation). Cette valeur doit être une expression rationnelle JavaScript valide (voir [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)) telle que documentée dans [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions). Le marqueur `'u'` est implicitement appliqué à la compilation de l'expression et le motif est donc traité comme une séquence de codets Unicode et non ASCII. Il ne faut pas encadrer le motif de barres obliques.
 
-    Si l'attribut `pattern` est présent mais sans valeur ou que celle-ci est valide, aucune expression rationnelle n'est appliquée et l'attribut est ignoré. Si la valeur de `pattern` est valide et que la valeur du champ ne respecte pas le motif, le champ échouera à [la validation des contraintes](/fr/docs/Web/Guide/HTML/Constraint_validation) et empêchera l'envoi du formulaire.
+    Si l'attribut `pattern` est présent mais sans valeur ou que celle-ci est valide, aucune expression rationnelle n'est appliquée et l'attribut est ignoré. Si la valeur de `pattern` est valide et que la valeur du champ ne respecte pas le motif, le champ échouera à [la validation des contraintes](/fr/docs/Web/HTML/Constraint_validation) et empêchera l'envoi du formulaire.
 
-    > **Note :** En utilisant l'attribut `pattern`, il faut également informer l'utilisatrice ou l'utilisateur quant au format attendu, en ajoutant un texte explicatif à proximité. On peut aussi inclure un attribut [`title`](#title) pour expliquer les contraintes à respecter&nbsp;: la plupart des navigateurs afficheront le titre sous la forme d'une bulle d'information. Attention, une explication visible est nécessaire pour une accessibilité correcte, la bulle d'information fournie par `title` n'est qu'une amélioration secondaire.
+    > [!NOTE]
+    > En utilisant l'attribut `pattern`, il faut également informer l'utilisatrice ou l'utilisateur quant au format attendu, en ajoutant un texte explicatif à proximité. On peut aussi inclure un attribut [`title`](#title) pour expliquer les contraintes à respecter&nbsp;: la plupart des navigateurs afficheront le titre sous la forme d'une bulle d'information. Attention, une explication visible est nécessaire pour une accessibilité correcte, la bulle d'information fournie par `title` n'est qu'une amélioration secondaire.
 
     Voir [la validation côté client](#validation_côté_client) pour plus d'information.
 
@@ -475,7 +509,8 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 
   - : Valide pour les champs de type `text`, `search`, `url`, `tel`, `email`, `password`, et `number`, cet attribut est une chaîne de caractères qui fournit une brève indication quant au type d'information attendu dans le champ. Sa valeur devrait être un mot ou une courte phrase qui indique le type de données attendu plutôt qu'une explication ou une consigne. Le texte de cet attribut _ne doit pas_ inclure de retour chariot ou de saut de ligne. Ainsi, si un champ est destiné à la saisie d'un prénom et que le libellé est «&nbsp;Prénom&nbsp;», une valeur appropriée pour cet attribut pourra être `"ex. Mustafa"`.
 
-    > **Note :** Sur le plan sémantique, l'attribut `placeholder` n'est pas aussi utile que d'autres méthodes pour expliquer le formulaire. Il peut aussi causer certains problèmes inattendus avec le contenu. Voir [les libellés](#libellés) pour plus d'informations.
+    > [!NOTE]
+    > Sur le plan sémantique, l'attribut `placeholder` n'est pas aussi utile que d'autres méthodes pour expliquer le formulaire. Il peut aussi causer certains problèmes inattendus avec le contenu. Voir [les libellés](#libellés) pour plus d'informations.
 
 - `popovertarget`
 
@@ -523,14 +558,15 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 
     Ainsi, si on a `<input type="number" min="10" step="2">`, tout entier pair, supérieur ou égal à `10` sera valide. Si `step` est absent, par exemple avec `<input type="number">`, tous les nombres entiers seront valides mais les nombres décimaux (comme `4.2`) seront invalides, car la valeur par défaut de `step` vaut `1` pour le type `number`. Afin que `4.2` soit valide, on devra utiliser la valeur `any`, ou `0.1`, ou `0.2` pour l'attribut `step`, ou encore une valeur de `min` dont la partie fractionnaire vaut `.2`, par exemple `<input type="number" min="-5.2">`
 
-    > **Note :** Lorsque la donnée saisie ne respecte pas l'incrément, la valeur est considérée comme invalide pour la validation des contraintes et l'élément sera ciblé par la pseudo-classe `:invalid`.
+    > [!NOTE]
+    > Lorsque la donnée saisie ne respecte pas l'incrément, la valeur est considérée comme invalide pour la validation des contraintes et l'élément sera ciblé par la pseudo-classe `:invalid`.
 
     Voir [la validation côté client](#validation_côté_client) pour plus d'information.
 
 - `tabindex`
   - : Un attribut universel, valide pour tous les éléments, y compris tous les types de `<input>`. Sa valeur est un entier qui indique si l'élément peut prendre le focus et s'il devrait participer à la navigation séquentielle au clavier. Comme tous les types d'élément `<input>`, sauf ceux masqués, peuvent prendre le focus, cet attribut ne devrait pas être utilisé sur les contrôles de formulaire, car cela nécessiterait de gérer l'ordre du focus pour tous les éléments du document, au risque de dégradé l'utilisabilité et l'accessibilité si cela était fait de façon incorrecte.
 - `title`
-  - : Un attribut universel, valide pour tous les éléments, y compris tous les types de `<input>`. Sa valeur est un texte fournissant des informations à propos de l'élément auquel il appartient. Une telle information est généralement (mais pas nécessairement) affichée sous la forme d'une bulle d'information. `title` ne devrait pas être utilisé comme méthode principale pour expliquer le rôle d'un contrôle de formulaire. Il faut plutôt utiliser l'élément [`<label>`](/fr/docs/Web/HTML/Element/Label) avec un attribut `for` dont la valeur correspond à la valeur de l'attribut [`id`](#id) du champ de formulaire. Voir [la section sur les libellés](#libellés) ci-après.
+  - : Un attribut universel, valide pour tous les éléments, y compris tous les types de `<input>`. Sa valeur est un texte fournissant des informations à propos de l'élément auquel il appartient. Une telle information est généralement (mais pas nécessairement) affichée sous la forme d'une bulle d'information. `title` ne devrait pas être utilisé comme méthode principale pour expliquer le rôle d'un contrôle de formulaire. Il faut plutôt utiliser l'élément [`<label>`](/fr/docs/Web/HTML/Element/label) avec un attribut `for` dont la valeur correspond à la valeur de l'attribut [`id`](#id) du champ de formulaire. Voir [la section sur les libellés](#libellés) ci-après.
 - `type`
 
   - : Une chaîne de caractères qui indique le type de contrôle à afficher. On utilisera par exemple la valeur `checkbox` pour afficher une case à cocher. Si cet attribut est absent (ou qu'une valeur inconnue est utilisée), ce sera un champ de type `text` qui sera utilisé, permettant de saisir un texte dans le contrôle de formulaire.
@@ -601,7 +637,7 @@ Les attributs qui suivent ne sont pas standard et sont disponibles dans certains
     L'évènement `search` est soumis à des limites de fréquence propres à chaque implémentation.
 
 - `orient` {{non-standard_inline}}
-  - : Semblable à la propriété CSS non-standard `-moz-orient` pour les éléments [`<progress>`](/fr/docs/Web/HTML/Element/Progress) et [`<meter>`](/fr/docs/Web/HTML/Element/Meter), cet attribut définit l'orientation de la piste du curseur. Les valeurs possibles pour cet attribut sont `horizontal` (la piste est affichée horizontalement) et `vertical` (la piste est affichée verticalement).
+  - : Semblable à la propriété CSS non-standard `-moz-orient` pour les éléments [`<progress>`](/fr/docs/Web/HTML/Element/progress) et [`<meter>`](/fr/docs/Web/HTML/Element/meter), cet attribut définit l'orientation de la piste du curseur. Les valeurs possibles pour cet attribut sont `horizontal` (la piste est affichée horizontalement) et `vertical` (la piste est affichée verticalement).
 - `results` {{non-standard_inline}}
   - : Uniquement pris en charge par Safari, cet attribut est une valeur numérique qui permet de surcharger le nombre de résultats à afficher dans la liste des suggestions de l'élément `<input>` à partir des requêtes précédentes. Sa valeur doit être un nombre positif. Si aucune valeur n'est indiquée ou qu'une valeur invalide est fournie, c'est le nombre d'options maximum par défaut du navigateur qui est utilisé.
 - `webkitdirectory` {{non-standard_inline}}
@@ -715,7 +751,7 @@ Les champs de formulaire sont des éléments remplacés et disposent de quelques
 
 #### Exemple d'utilisation des pseudo-classes
 
-On peut mettre en forme le libellé d'une case à cocher selon que la case est cochée ou non. Dans cet exemple, on adapte les propriétés [`color`](/fr/docs/Web/CSS/color) et [`font-weight`](/fr/docs/Web/CSS/font-weight) de l'élément [`<label>`](/fr/docs/Web/HTML/Element/Label) situé immédiatement après une case cochée. On applique aucune mise en forme si l'élément `<input>` n'est pas coché.
+On peut mettre en forme le libellé d'une case à cocher selon que la case est cochée ou non. Dans cet exemple, on adapte les propriétés [`color`](/fr/docs/Web/CSS/color) et [`font-weight`](/fr/docs/Web/CSS/font-weight) de l'élément [`<label>`](/fr/docs/Web/HTML/Element/label) situé immédiatement après une case cochée. On applique aucune mise en forme si l'élément `<input>` n'est pas coché.
 
 ```html hidden
 <input id="checkboxInput" type="checkbox" />
@@ -804,7 +840,7 @@ Dans certains cas (le plus souvent pour les champs non-texte et les interfaces s
 
 Pour plus d'informations sur l'ajout de couleurs aux éléments HTML, voir&nbsp;:
 
-- [Appliquer des couleurs aux éléments HTML en utilisant CSS](/fr/docs/Web/CSS/CSS_Colors/Applying_color).
+- [Appliquer des couleurs aux éléments HTML en utilisant CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color).
 
 Voir également&nbsp;:
 
@@ -816,13 +852,13 @@ Voir également&nbsp;:
 
 ### Libellés
 
-Les libellés permettent d'associer les textes explicatifs aux éléments `<input>`. Utiliser un élément [`<label>`](/fr/docs/Web/HTML/Element/Label) pour fournir des informations explicatives quant à un champ de formulaire est _toujours_ une bonne chose (quel que soit le sujet de mise en forme qui vient après). Ce n'est jamais une mauvaise idée que d'utiliser un élément `<label>` pour expliquer ce qui doit être saisi dans un élément `<input>` ou [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea).
+Les libellés permettent d'associer les textes explicatifs aux éléments `<input>`. Utiliser un élément [`<label>`](/fr/docs/Web/HTML/Element/label) pour fournir des informations explicatives quant à un champ de formulaire est _toujours_ une bonne chose (quel que soit le sujet de mise en forme qui vient après). Ce n'est jamais une mauvaise idée que d'utiliser un élément `<label>` pour expliquer ce qui doit être saisi dans un élément `<input>` ou [`<textarea>`](/fr/docs/Web/HTML/Element/textarea).
 
 #### Rattachement des libellés
 
-Le rattachement sémantique entre les éléments `<input>` et `<label>` est utile aux outils d'assistance comme les lecteurs d'écran. En les associant grâce à l'attribut [`for`](/fr/docs/Web/HTML/Element/Label#for) des éléments `<label>`, on lie le libellé au contrôle de formulaire d'une façon qui permet aux lecteurs d'écran de décrire les champs du formulaire plus précisément.
+Le rattachement sémantique entre les éléments `<input>` et `<label>` est utile aux outils d'assistance comme les lecteurs d'écran. En les associant grâce à l'attribut [`for`](/fr/docs/Web/HTML/Element/label#for) des éléments `<label>`, on lie le libellé au contrôle de formulaire d'une façon qui permet aux lecteurs d'écran de décrire les champs du formulaire plus précisément.
 
-Il ne suffit pas d'avoir un texte normal à côté de l'élément `<input>`. Pour l'utilisabilité et l'accessibilité, on associera un libellé avec [`<label>`](/fr/docs/Web/HTML/Element/Label) de façon implicite ou explicite&nbsp;:
+Il ne suffit pas d'avoir un texte normal à côté de l'élément `<input>`. Pour l'utilisabilité et l'accessibilité, on associera un libellé avec [`<label>`](/fr/docs/Web/HTML/Element/label) de façon implicite ou explicite&nbsp;:
 
 ```html
 <!-- inaccessible -->
@@ -854,11 +890,13 @@ L'attribut [`placeholder`](#placeholder) permet d'indiquer un texte qui apparaî
 
 Le texte fourni par `placeholder` n'est pas accessible pour les lecteurs d'écran et dès que la personne saisit une valeur, ou si le contrôle a déjà une valeur, il disparaît. Les navigateurs qui ont une fonctionnalité de traduction automatique pourraient ignorer les attributs lors de la traduction, ce qui signifie que `placeholder` pourrait ne pas être traduit.
 
-> **Note :** Évitez d'utiliser [`placeholder`](#placeholder) si vous pouvez. Pour ajouter un libellé sur un élément `<input>`, on utilisera l'élément [`<label>`](/fr/docs/Web/HTML/Element/Label).
+> [!NOTE]
+> Évitez d'utiliser [`placeholder`](#placeholder) si vous pouvez. Pour ajouter un libellé sur un élément `<input>`, on utilisera l'élément [`<label>`](/fr/docs/Web/HTML/Element/label).
 
 ### Validation côté client
 
-> **Attention :** La validation côté client est utile mais _ne garantit pas_ que le serveur reçoit des données valides. Si les données doivent respecter un format donné, il faudra _toujours_ les vérifier côté serveur et renvoyer [une réponse HTTP `400`](/fr/docs/Web/HTTP/Status/400) si le format est invalide.
+> [!WARNING]
+> La validation côté client est utile mais _ne garantit pas_ que le serveur reçoit des données valides. Si les données doivent respecter un format donné, il faudra _toujours_ les vérifier côté serveur et renvoyer [une réponse HTTP `400`](/fr/docs/Web/HTTP/Status/400) si le format est invalide.
 
 En complément des pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) qui permettent de cibler les contrôles selon leur état de validité, le navigateur fournit une validation côté client pour chaque tentative d'envoi du formulaire. À l'envoi du formulaire, si un des contrôles échoue à respecter les contraintes, les navigateurs qui implémentent cette fonctionnalité afficheront un message d'erreur sur le premier contrôle du formulaire qui est invalide, le message pouvant être un message par défaut selon le type d'erreur ou un message choisi par le site.
 
@@ -968,7 +1006,7 @@ La dernière ligne, qui utilise la chaîne vide comme valeur pour le message d'e
 
 #### Exemple de message d'erreur de validation sur mesure
 
-Si vous souhaitez afficher un message d'erreur spécifique lorsqu'un champ est invalide, vous devrez utiliser [les fonctionnalités relatives à la validation des contraintes](/fr/docs/Web/API/Constraint_validation#constraint_validation_interfaces) disponible sur les éléments `<input>` (entre autres). Prenons le formulaire suivant&nbsp;:
+Si vous souhaitez afficher un message d'erreur spécifique lorsqu'un champ est invalide, vous devrez utiliser [les fonctionnalités relatives à la validation des contraintes](/fr/docs/Learn/Forms/Form_validation#constraint_validation_interfaces) disponible sur les éléments `<input>` (entre autres). Prenons le formulaire suivant&nbsp;:
 
 ```html
 <form>
@@ -1017,7 +1055,8 @@ En résumé&nbsp;:
 - Ainsi, si la valeur du champ est invalide lorsqu'on clique sur le bouton d'envoi, un des messages spécifiques est affiché.
 - Si la valeur est valide, le formulaire est envoyé sans problème. Pour cela, il faut annuler la vérification de validité spécifique en appelant `setCustomValidity()` avec une chaîne de caractères vide. C'est ce qu'on fait à chaque fois qu'un évènement `input` est déclenché. Sans ça, si une validité spécifique avait précédemment été définie, le champ serait toujours considéré comme invalide, même si la valeur courante était valide lors de l'envoi.
 
-> **Note :** On veillera à toujours valider les contraintes côté client et côté serveur. La validation des contraintes du navigateur ne se substitue pas à la vérification côté serveur. En effet, des valeurs invalides peuvent toujours être envoyées par des navigateurs obsolètes ou par des acteurs malveillants.
+> [!NOTE]
+> On veillera à toujours valider les contraintes côté client et côté serveur. La validation des contraintes du navigateur ne se substitue pas à la vérification côté serveur. En effet, des valeurs invalides peuvent toujours être envoyées par des navigateurs obsolètes ou par des acteurs malveillants.
 
 ### Localisation
 
@@ -1179,7 +1218,7 @@ Les éléments interactifs d'une page web, tels que les champs de formulaire, do
 
 ## Voir aussi
 
-- [Validation des contraintes dans un formulaire](/fr/docs/Web/Guide/HTML/Constraint_validation)
+- [Validation des contraintes dans un formulaire](/fr/docs/Web/HTML/Constraint_validation)
 - [Votre premier formulaire HTML](/fr/docs/Learn/Forms/Your_first_form)
 - [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/How_to_structure_a_web_form)
 - [Les contrôles de formulaire natifs](/fr/docs/Learn/Forms/Basic_native_form_controls)

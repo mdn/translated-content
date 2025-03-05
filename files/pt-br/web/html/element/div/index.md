@@ -7,9 +7,9 @@ slug: Web/HTML/Element/div
 
 O **elemento de divisão** **[HTML](/pt-BR/docs/Web/HTML) `<div>` **é um container genérico para conteúdo de fluxo, que de certa forma não representa nada. Ele pode ser utilizado para agrupar elementos para fins de estilos (usando **class** ou **id**), ou porque eles compartilham valores de atributos, como **lang**. Ele deve ser utilizado somente quando não tiver outro elemento de semântica (tal como {{HTMLElement("article")}} ou {{HTMLElement("nav")}}).
 
-- _[Categoria de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#Flow_content), palpable content.
-- _Conteúdo permitido_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#Flow_content).
-- _Omissão de tag_ Nenhuma, as tags de abertura e fechamento são obrigatórias. {{no_tag_omission}}
+- _[Categoria de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), palpable content.
+- _Conteúdo permitido_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content).
+- _Omissão de tag_ Nenhuma, as tags de abertura e fechamento são obrigatórias. Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
 - _Elementos pais permitidos_ Qualquer elemento que aceite conteúdo de fluxo.
 - _Interface DOM_ {{domxref("HTMLDivElement")}}
 

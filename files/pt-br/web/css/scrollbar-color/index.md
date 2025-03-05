@@ -43,7 +43,8 @@ scrollbar-color: unset;
     | `light`           | Mostra uma scrollbar mais clara, podendo ser um estilo padrão definido pelo navegador, ou personalizado com cores escuras.  |
     | `<color> <color>` | A primeira cor é aplicada à **thumb**, a segunda cor ao **track**                                                           |
 
-    > **Nota:** User Agents must apply any `scrollbar-color` value set on the root element to the viewport.
+    > [!NOTE]
+    > User Agents must apply any `scrollbar-color` value set on the root element to the viewport.
 
 ### Sintaxe formal
 

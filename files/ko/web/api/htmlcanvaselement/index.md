@@ -27,7 +27,7 @@ _부모객체인 {{domxref("HTMLElement")}} 로부터 메서드를 상속받음.
 - {{domxref("HTMLCanvasElement.captureStream()")}} {{experimental_inline}}
   - : \<canvas> 상의 화면을 실시간 비디오로 캡처할 수 있는 {{domxref("CanvasCaptureMediaStream")}} 을 반환합니다.
 - {{domxref("HTMLCanvasElement.getContext()")}}
-  - : \<canvas> 상의 드로잉 컨텍스트를 반환합니다. 만약 컨텍스트 ID가 지원되지 않는 경우 null값을 반환합니다. 드로잉 컨텍스트는 \<canvas> 상에 그림을 그릴 수 있게 해줍니다. getContext를 `"2d"` 를 매개 변수로 호출한다면 {{domxref("CanvasRenderingContext2D")}} 객체를 반환할 것이며, `"experimental-webgl"` (또는 `"webgl"`) 를 매개 변수로 호출한다면 {{domxref("WebGLRenderingContext")}} 객체를 반환할 것입니다. 후자의 컨텍스트의 경우 [WebGL](/ko/docs/Web/WebGL) 이 구현된 브라우저에서만 사용 가능합니다.
+  - : \<canvas> 상의 드로잉 컨텍스트를 반환합니다. 만약 컨텍스트 ID가 지원되지 않는 경우 null값을 반환합니다. 드로잉 컨텍스트는 \<canvas> 상에 그림을 그릴 수 있게 해줍니다. getContext를 `"2d"` 를 매개 변수로 호출한다면 {{domxref("CanvasRenderingContext2D")}} 객체를 반환할 것이며, `"experimental-webgl"` (또는 `"webgl"`) 를 매개 변수로 호출한다면 {{domxref("WebGLRenderingContext")}} 객체를 반환할 것입니다. 후자의 컨텍스트의 경우 [WebGL](/ko/docs/Web/API/WebGL_API) 이 구현된 브라우저에서만 사용 가능합니다.
 - {{domxref("HTMLCanvasElement.toDataURL()")}}
   - : `type` 파라미터에서 지정하고 있는 포맷(기본: png) 의 이미지를 나타내는 data-URL을 반환합니다. 반환된 이미지는 96dpi의 해상도를 갖습니다.
 - {{domxref("HTMLCanvasElement.toBlob()")}}

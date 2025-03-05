@@ -11,6 +11,6 @@ _Адаптивный веб-дизайн_ ( **RWD** ) - это концепци
 
 ### Общая информация
 
-- [Summary and resources](/ru/docs/Web_Development/Responsive_Web_design)
-- [Pros and cons of going responsive](/ru/docs/Web_Development/Mobile/Responsive_design)
+- [Summary and resources](/ru/docs/Web/Progressive_web_apps)
+- [Pros and cons of going responsive](/ru/docs/Web/Progressive_web_apps)
 - [Responsive Web Design](http://msdn.microsoft.com/en-us/magazine/hh653584.aspx)

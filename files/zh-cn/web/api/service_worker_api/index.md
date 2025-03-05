@@ -15,11 +15,14 @@ Service worker 运行在 worker 上下文：因此它无法访问 DOM，相对�
 
 出于安全考量，Service worker 只能由 HTTPS 承载，毕竟修改网络请求的能力暴露给{{Glossary("MitM", "中间人攻击")}}会非常危险，如果允许访问这些强大的 API，此类攻击将会变得很严重。在 Firefox 浏览器的[用户隐私模式](https://support.mozilla.org/zh-CN/kb/private-browsing-use-firefox-without-history)，Service Worker 不可用。
 
-> **备注：** 在 Firefox，为了进行测试，你可以通过 HTTP 运行 service worker（不安全）；只需选中 Firefox 开发者选项/齿轮菜单中的 **Enable Service Workers over HTTP (when toolbox is open)** 选项。
+> [!NOTE]
+> 在 Firefox，为了进行测试，你可以通过 HTTP 运行 service worker（不安全）；只需选中 Firefox 开发者选项/齿轮菜单中的 **Enable Service Workers over HTTP (when toolbox is open)** 选项。
 
-> **备注：** 与之前在该领域的尝试不同，如 [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag/)），service worker 并不确定你试图去做什么，但是当这些假设不完全正确时，它们会被中断。相对地，service worker 可以更细致地控制每一件事情。
+> [!NOTE]
+> 与之前在该领域的尝试不同，如 [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag/)），service worker 并不确定你试图去做什么，但是当这些假设不完全正确时，它们会被中断。相对地，service worker 可以更细致地控制每一件事情。
 
-> **备注：** Service worker 大量使用 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，因为通常它们会等待响应后继续，并根据响应返回一个成功或者失败的操作。Promise 非常适合这种场景。
+> [!NOTE]
+> Service worker 大量使用 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，因为通常它们会等待响应后继续，并根据响应返回一个成功或者失败的操作。Promise 非常适合这种场景。
 
 ### 注册
 
@@ -52,7 +55,8 @@ Service worker 运行在 worker 上下文：因此它无法访问 DOM，相对�
 
 Servcie worker 可以通过 {{domxref("FetchEvent")}} 事件去响应请求。通过使用 {{domxref("FetchEvent.respondWith") }} 方法，你可以任意修改对于这些请求的响应。
 
-> **备注：** 因为 `oninstall` 和 `onactivate` 完成前需要一些时间，service worker 标准提供一个 {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} 方法。一旦在带有 promise 的 `install` 或 `activate` 事件上调用它，那么 `fetch` 和 `push` 等功能事件将等待，直到 promise 成功兑现。
+> [!NOTE]
+> 因为 `oninstall` 和 `onactivate` 完成前需要一些时间，service worker 标准提供一个 {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} 方法。一旦在带有 promise 的 `install` 或 `activate` 事件上调用它，那么 `fetch` 和 `push` 等功能事件将等待，直到 promise 成功兑现。
 
 构建一个基本用例的完整教程，请阅读[使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)。
 
@@ -123,7 +127,7 @@ Service workers 也可以用来做这些事情：
 ## 参见
 
 - [ServiceWorker 烹饪书](https://github.com/mdn/serviceworker-cookbook/)
-- [使用 Service Worker](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service worker 基础代码示例](https://github.com/mdn/sw-test)
 - [是否支持 ServiceWorker](https://jakearchibald.github.io/isserviceworkerready/)
 - [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)

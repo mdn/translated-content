@@ -11,11 +11,11 @@ slug: Mozilla/Firefox/Releases/65
 
 ### Инструменты разработчика
 
-- Включён по умолчанию [инспектор Flexbox](/ru/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts).
-- [Отладчик JavaScript](/ru/docs/Tools/Debugger) получил поддержку точек останова XHR ([Firefox bug 821610](https://bugzil.la/821610)).
-- Щелчок правой кнопкой по элементу дерева доступности позволяет [вывести его в JSON-формате](/ru/docs/Tools/Accessibility_inspector#Вывод_дерева_доступности_в_JSON-формате).
-- Если фон текста является сложным (например, градиент или сложное изображение), инструмент [цветового контраста](/ru/docs/Tools/Инспектор_доступности#Цветовой_контраст) в инспекторе доступности покажет диапазон значений цветового контраста.
-- Во вкладку «Заголовки» [сетевого монитора](/ru/docs/Tools/Network_Monitor) добавлено отображение политики Referrer для выбранного запроса ([Firefox bug 1496742](https://bugzil.la/1496742)).
+- Включён по умолчанию [инспектор Flexbox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html).
+- [Отладчик JavaScript](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) получил поддержку точек останова XHR ([Firefox bug 821610](https://bugzil.la/821610)).
+- Щелчок правой кнопкой по элементу дерева доступности позволяет [вывести его в JSON-формате](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#вывод_дерева_доступности_в_json-формате).
+- Если фон текста является сложным (например, градиент или сложное изображение), инструмент [цветового контраста](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#цветовой_контраст) в инспекторе доступности покажет диапазон значений цветового контраста.
+- Во вкладку «Заголовки» [сетевого монитора](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) добавлено отображение политики Referrer для выбранного запроса ([Firefox bug 1496742](https://bugzil.la/1496742)).
 - При просмотре трассировки стека (например, в журналах консоли или отладчике JavaScript) вызовы методов фреймворка распознаются и по умолчанию сворачиваются, что облегчает размещение вашего кода.
 - Подобно традиционным терминалам теперь можно использовать обратный поиск в истории консоли JavaScript(
 
@@ -126,7 +126,7 @@ _Без изменений._
 #### События DOM
 
 - За одно событие разрешено не более одного вызова {{domxref("Window.open()")}} ([Firefox bug 675574](https://bugzil.la/675574)).
-- События [`keyup`](/ru/docs/Web/Events/keyup) и [`keydown`](/ru/docs/Web/Events/keydown) в целях улучшения кроссбраузерной совместимости для пользователей CJKT отныне срабатывают во время композиции IME ([Firefox bug 354358](https://bugzil.la/354358)).
+- События [`keyup`](/ru/docs/Web/API/Element/keyup_event) и [`keydown`](/ru/docs/Web/API/Element/keydown_event) в целях улучшения кроссбраузерной совместимости для пользователей CJKT отныне срабатывают во время композиции IME ([Firefox bug 354358](https://bugzil.la/354358)).
 
 #### Веб-воркеры
 
@@ -135,7 +135,7 @@ _Без изменений._
 #### Fetch и сервис-воркеры
 
 - Метод {{domxref("Response.redirect()")}} теперь корректно выбрасывает `TypeError`, если в качестве первого параметра указан невалидный URL ([Firefox bug 1503276](https://bugzil.la/1503276)).
-- Методы {{domxref("ServiceWorkerContainer.register()")}} и {{domxref("WorkerGlobalScope.importScripts()")}} (когда они используется сервис-воркером) отныне принимают любые файлы с валидными [MIME-типом JavaScript](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript) ([Firefox bug 1354577](https://bugzil.la/1354577)).
+- Методы {{domxref("ServiceWorkerContainer.register()")}} и {{domxref("WorkerGlobalScope.importScripts()")}} (когда они используется сервис-воркером) отныне принимают любые файлы с валидными [MIME-типом JavaScript](/ru/docs/Web/HTTP/MIME_types#textjavascript) ([Firefox bug 1354577](https://bugzil.la/1354577)).
 - Добавлена поддержка свойств {{domxref("FetchEvent.replacesClientId")}} и {{domxref("FetchEvent.resultingClientId")}} ([Firefox bug 1264177](https://bugzil.la/1264177)).
 - Реализована поддержка {{domxref("ServiceWorkerGlobalScope.onmessageerror")}} и {{domxref("ServiceWorkerContainer.onmessageerror")}} ([Firefox bug 1399446](https://bugzil.la/1399446)).
 - Заголовок {{httpheader("Origin")}} больше не устанавливается у запросов Fetch с методом {{HTTPMethod("HEAD")}} или {{HTTPMethod("GET")}} ([Firefox bug 1508661](https://bugzil.la/1508661)).
@@ -151,11 +151,11 @@ _Без изменений._
 
 #### Удалено
 
-- Отключена [мутация событий](/ru/docs/Web/Guide/Events/Mutation_events) в теневых деревьях ([Firefox bug 1489858](https://bugzil.la/1489858)).
+- Отключена [мутация событий](/ru/docs/Web/API/MutationEvent) в теневых деревьях ([Firefox bug 1489858](https://bugzil.la/1489858)).
 - Удалено нестандартное свойство `currentTime` {{domxref("MediaStream")}} ([Firefox bug 1502927](https://bugzil.la/1502927)).
 - Удалены настройки `dom.webcomponents.shadowdom.enabled` и `dom.webcomponents.customelements.enabled` — больше нельзя отключить поддержку Shadow DOM и Custom Elements через `about:config` ([Firefox bug 1503019](https://bugzil.la/1503019)).
 - Удалено нестандартное событие DOM `text`, срабатывавшее, чтобы уведомить пользовательский интерфейс редактора браузера о строках данных композиции IME и диапазоне выбора ([Firefox bug 1288640](https://bugzil.la/1288640)).
-- Событие {{event("keypress")}} больше не срабатывает для [непечатаемых клавиш](</ru/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)>) ([Firefox bug 968056](https://bugzil.la/968056)) за исключением клавиши&#x20;
+- Событие [`keypress`](/ru/docs/Web/API/Element/keypress_event) больше не срабатывает для [непечатаемых клавиш](</ru/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)>) ([Firefox bug 968056](https://bugzil.la/968056)) за исключением клавиши&#x20;
 
   <kbd>Enter</kbd>
 

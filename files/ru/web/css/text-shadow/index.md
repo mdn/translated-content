@@ -112,9 +112,9 @@ text-shadow: unset;
 
 - В движке Gecko есть программная ошибка в результате которой метод перехода ({{cssxref("transition")}}) не будет производить переход от элемента со свойством `text-shadow` с заданным цветом к элементу со свойством `text-shadow` без заданного цвета ([Firefox bug 726550](https://bugzil.la/726550)). Данная ошибка была исправлена в параллельной ветке движка CSS для Firefox (так же известном как [Quantum CSS](https://wiki.mozilla.org/Quantum) или [Stylo](https://wiki.mozilla.org/Quantum/Stylo), выпуск которого запланирован уже в версии Firefox 57).
 
-## Также смотрите
+## Смотрите также
 
 - [Text Shadow CSS Generator](https://cssgenerator.org/text-shadow-css-generator.html) - Интерактивный генератор теней CSS.
 - {{cssxref("box-shadow")}}
 - Тип данных {{cssxref("&lt;color&gt;")}} (для определения цвета теней)
-- [Определение цвета для элемента HTML посредством CSS](/ru/docs/Web/HTML/Applying_color)
+- [Определение цвета для элемента HTML посредством CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color)

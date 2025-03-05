@@ -2,7 +2,7 @@
 title: URL：revokeObjectURL() 静态方法
 slug: Web/API/URL/revokeObjectURL_static
 l10n:
-  sourceCommit: 367b982b93c07f7f99e7bb768a6bf326fa5198e6
+  sourceCommit: 216794e76611c18e53222bb8efa570e898e990de
 ---
 
 {{APIRef("File API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
@@ -11,7 +11,8 @@ l10n:
 
 当你完成对对象 URL 的使用后，请调用此方法，让浏览器知道无需再保持对文件的引用。
 
-> **备注：** 由于 {{domxref("Blob")}} 接口的生命周期问题及潜在的内存泄漏风险，此方法在 [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) 中*不*可用。
+> [!NOTE]
+> 由于 {{domxref("Blob")}} 接口的生命周期问题及潜在的内存泄漏风险，此方法在 [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) 中*不*可用。
 
 ## 语法
 

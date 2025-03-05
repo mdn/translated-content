@@ -2,7 +2,7 @@
 title: browserAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon
 l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+  sourceCommit: 53c832f09b5f55b2cbe040907bff8abfb7b57f72
 ---
 
 {{AddonSidebar}}
@@ -38,7 +38,7 @@ let settingIcon = browser.browserAction.setIcon(
         使用字典对象来指定不同尺寸的多个 `ImageData` 对象，这样图标就不需要根据设备的不同像素密度进行缩放。如果 `ImageData` 是一个字典，则每个属性的值是一个 `ImageData` 对象，属性名是其尺寸，如下所示：
 
         ```js
-        let settingIcon = browser.action.setIcon({
+        let settingIcon = browser.browserAction.setIcon({
           imageData: {
             16: image16,
             32: image32,
@@ -55,7 +55,7 @@ let settingIcon = browser.browserAction.setIcon(
         使用字典对象来指定不同尺寸的多个图标文件，这样图标就不需要根据设备的不同像素密度进行缩放。如果 `path` 是一个字典，则每个属性的值是一个相对路径，属性名是其尺寸，如下所示：
 
         ```js
-        let settingIcon = browser.action.setIcon({
+        let settingIcon = browser.browserAction.setIcon({
           path: {
             16: "path/to/image16.jpg",
             32: "path/to/image32.jpg",
@@ -157,7 +157,8 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 {{WebExtExamples}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/reference/browserAction/#method-setIcon) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.browserAction`](https://developer.chrome.google.cn/docs/extensions/mv2/reference/browserAction#method-setIcon) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

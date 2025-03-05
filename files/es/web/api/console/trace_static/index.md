@@ -5,11 +5,11 @@ slug: Web/API/console/trace_static
 
 {{APIRef("Console API")}}{{Non-standard_header}}
 
-Outputs a stack trace to the [Web Console](/es/docs/Tools/Web_Console).
+Outputs a stack trace to the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
 
 {{AvailableInWorkers}}
 
-Ver [Stack traces](/es/docs/Web/API/console#Stack_traces) en la documentación de {{domxref("console")}} para detalles y ejemplos.
+Ver [Stack traces](/es/docs/Web/API/console#stack_traces) en la documentación de {{domxref("console")}} para detalles y ejemplos.
 
 ## Sintaxis
 
@@ -48,4 +48,4 @@ foo
 
 ## Ver tambien
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)

@@ -7,7 +7,27 @@ slug: Web/HTML/Element/input/email
 
 Los elementos {{HTMLElement("input")}} de tipo **`email`** se utilizan para permitir que el usuario ingrese y edite una dirección de correo electrónico o, si se especifica el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple), una lista de direcciones de correo.
 
-{{EmbedInteractiveExample("pages/tabbed/input-email.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="email">Enter your example.com email:</label>
+
+<input type="email" id="email" pattern=".+@example\.com" size="30" required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 El valor de la entrada es automáticamente validado para asegurarse que no está vacía o que el correo (o la lista de correos) introducidos están con el formato correcto antes de que el formulario puede ser enviado. Las pseudoclases {{cssxref(":valid")}} e {{cssxref(":invalid")}} son automáticamente aplicadas como corresponde para denotar visualmente si el valor actual del campo es una dirección válida de correo o no.
 
@@ -84,27 +104,29 @@ El valor del atributo lista es el {{domxref("Element.id", "id")}} del elemento {
 
 El número máximo de caracteres (como unidades de código UTF-16) que el usuario puede ingresar en la entrada `email`. Debe ser un valor entero 0 o superior. Si no se especifica `maxlength`, o se especifica un valor no válido, la entrada `email` no tiene una longitud máxima. Este valor también debe ser mayor o igual que el valor de `minlength`.
 
-La entrada fallará la [restricción de validación](/es/docs/Web/Guide/HTML/Constraint_validation) si la longitud del valor de texto del campo es mayor que la longitud de `maxlength` en unidades de código UTF-16. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
+La entrada fallará la [restricción de validación](/es/docs/Web/HTML/Constraint_validation) si la longitud del valor de texto del campo es mayor que la longitud de `maxlength` en unidades de código UTF-16. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
 
 ### minlength
 
 El número mínimo de caracteres (como unidades de código UTF-16) que el usuario puede ingresar en la entrada `email`. Debe ser un valor entero no negativo menor o igual al valor especificado por `maxlength`. Si no se especifica `minlength` o se especifica un valor no válido, la entrada de `email` no tiene una longitud mínima.
 
-La entrada fallará la [restricción de validación](/es/docs/Web/Guide/HTML/Constraint_validation) si la longitud del texto ingresado en el campo es menor que la longitud de `minlength` en unidades de código UTF-16. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
+La entrada fallará la [restricción de validación](/es/docs/Web/HTML/Constraint_validation) si la longitud del texto ingresado en el campo es menor que la longitud de `minlength` en unidades de código UTF-16. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
 
 ### multiple
 
 Un atributo booleano que, si está presente, indica que el usuario puede ingresar una lista de múltiples direcciones de correo, separadas por coma y, opcionalmente, espacios en blanco. Consulta [Permitiendo múltiples dirreciones de correo](#permitiendo_multiples_dirrecciones_de_correo) para ver un ejemplo o [Atributo HTML: multiple](/es/docs/Web/HTML/Attributes/multiple) para más detalles.
 
-> **Nota:** Normalmente, si especificas el atributo [`required`](/es/docs/Web/HTML/Element/input#required), el usuario debe ingresar una dirección de correo válida para que el campo se considere válido. Sin embargo, si agregas el atributo `multiple`, una lista de cero direcciones de correo electrónico (una cadena vacía o una que sea completamente en blanco) es un valor válido. En otras palabras, el usuario no tiene que ingresar ni siquiera una dirección de correo electrónico cuando se especifica `multiple`, independientemente del valor de `required`.
+> [!NOTE]
+> Normalmente, si especificas el atributo [`required`](/es/docs/Web/HTML/Element/input#required), el usuario debe ingresar una dirección de correo válida para que el campo se considere válido. Sin embargo, si agregas el atributo `multiple`, una lista de cero direcciones de correo electrónico (una cadena vacía o una que sea completamente en blanco) es un valor válido. En otras palabras, el usuario no tiene que ingresar ni siquiera una dirección de correo electrónico cuando se especifica `multiple`, independientemente del valor de `required`.
 
 ## pattern
 
-El atributo `pattern`, cuando es especificado, es una expresión regular que el [`value`](/es/docs/Web/HTML/Global_attributes#value) del input debe seguir para que el valor pase la [restricción de validación](/es/docs/Web/Guide/HTML/Constraint_validation). Debe ser una expresión regular de JavaScript válida, como las usadas en el tipo {{jsxref("RegExp")}}, y como se explica en nuestra [guía sobre expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions); la bandera `'u'` es especificada cuando se compila la expresión regular, por lo tanto el patrón es tratado como una secuencia de puntos de código Unicode, y no como ASCII. No deben colocarse barras diagonales alrededor del patrón de texto.
+El atributo `pattern`, cuando es especificado, es una expresión regular que el [`value`](/es/docs/Web/HTML/Global_attributes#value) del input debe seguir para que el valor pase la [restricción de validación](/es/docs/Web/HTML/Constraint_validation). Debe ser una expresión regular de JavaScript válida, como las usadas en el tipo {{jsxref("RegExp")}}, y como se explica en nuestra [guía sobre expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions); la bandera `'u'` es especificada cuando se compila la expresión regular, por lo tanto el patrón es tratado como una secuencia de puntos de código Unicode, y no como ASCII. No deben colocarse barras diagonales alrededor del patrón de texto.
 
 Si el patrón no está especificado o es inválido, no se aplica la expresión regular y el atributo es completamente ignorado.
 
-> **Nota:** Usa el atributo [`title`](/es/docs/Web/HTML/Element/input#title) para especificar un texto que muchos navegadores mostrarán como una indicación para explicar qué requerimientos se deben seguir para que se cumpla el patrón. También debes incluir otro texto explicativo cerca.
+> [!NOTE]
+> Usa el atributo [`title`](/es/docs/Web/HTML/Element/input#title) para especificar un texto que muchos navegadores mostrarán como una indicación para explicar qué requerimientos se deben seguir para que se cumpla el patrón. También debes incluir otro texto explicativo cerca.
 
 Véase la sección [Validación de patrón](#validacion_de_patron) para más detalles y un ejemplo.
 
@@ -114,13 +136,15 @@ El atributo `placeholder` es una cadena de texto que proporciana una breve pista
 
 Si el contenido del control tiene una direccionalidad ({{Glossary("LTR")}} o {{Glossary("RTL")}}) pero necesita presentar el marcador de posición en la dirección opuesta, puedes usar el algotimo bidireccional Unicode para formatear caracteres para sobreescribir la direccionalidad dentro del marcador de posición; véase [Como usar los controles de Unicode para texto bidireccional](https://www.w3.org/International/questions/qa-bidi-unicode-controls).
 
-> **Nota:** Evita usar el atributo `placeholder` si puedes. No es semánticamente útil como otras formas de explicar el formulario y puede causar errores técnicos inesperados con tu contenido. Véase [Labels and placeholders](/es/docs/Web/HTML/Element/input#labels_and_placeholders) for more information.
+> [!NOTE]
+> Evita usar el atributo `placeholder` si puedes. No es semánticamente útil como otras formas de explicar el formulario y puede causar errores técnicos inesperados con tu contenido. Véase [Labels and placeholders](/es/docs/Web/HTML/Element/input#labels_and_placeholders) for more information.
 
 ### `readonly`
 
 Un atributo Booleano que, si está presente, significa que el campo no puede ser editado por el usuario. Su `value` puede, aun así, ser cambiado directamente con código JavaScript configurando la propiedad [HTMLInputElement](/es/docs/Web/API/HTMLInputElement) `value`.
 
-> **Nota:** Porque un campo solo de lectura no puede tener un valor, `required` no tiene ningún efecto sobre las entradas de texto que también tienen el atributo `readonly` especificado.
+> [!NOTE]
+> Porque un campo solo de lectura no puede tener un valor, `required` no tiene ningún efecto sobre las entradas de texto que también tienen el atributo `readonly` especificado.
 
 ### `size`
 
@@ -134,7 +158,8 @@ Las direcciones de correo se encuentran entre los formularios de datos textuales
 
 Sin embargo, es importante tener en cuenta que esto no es suficiente para garantizar que el texto especificado sea una dirección de correo que realmente exista, que corresponda al usuario del sitio o que sea aceptable de cualquier otra manera. Simplemente garantiza que el valor del campo tenga el formato adecuado para ser una dirección de correo.
 
-> **Nota:** También es crucial recordar que un usuario puede jugar con tu HTML detrás de la escena, por lo que tu sitio _no debe_ utilizar esta validación por motivos de seguridad. _Debes_ verificar la dirección de correo en el lado del servidor de cualquier transacción en la que el texto proporcionado pueda tener implicaciones de seguridad de cualquier tipo.
+> [!NOTE]
+> También es crucial recordar que un usuario puede jugar con tu HTML detrás de la escena, por lo que tu sitio _no debe_ utilizar esta validación por motivos de seguridad. _Debes_ verificar la dirección de correo en el lado del servidor de cualquier transacción en la que el texto proporcionado pueda tener implicaciones de seguridad de cualquier tipo.
 
 ### Una sencilla entrada de correo
 
@@ -160,7 +185,8 @@ Al agregar el atributo booleano [multiple](/es/docs/Web/HTML/Attributes/multiple
 
 La entrada ahora se considera válida cuando se ingresa una sola dirección de correo, o cuando cualquier número de direcciones de correo electrónico separadas por coma y opcionalmente, algún número de espacios en blanco están presentes
 
-> **Nota:** Cuando se utiliza `multiple`, el valor _puede_ estar vacío.
+> [!NOTE]
+> Cuando se utiliza `multiple`, el valor _puede_ estar vacío.
 
 Algunos ejemplos de cadenas válidas cuando se especifica `multiple`:
 
@@ -253,7 +279,8 @@ Con el elemento {{HTMLElement("datalist")}} y sus {{HTMLElement("option")}} en s
 
 Hay dos niveles de validación de contenido disponibles para las entradas de `email`. Primero, está el nivel de validación estándar que se ofrece a todos los {{HTMLElement("input")}}, que automáticamente asegura que el contenido cumple con los requisitos para ser una dirección de correo válida. Pero también existe la opción de agregar filtros adicionales para garantizar que se satisfagan tus propias necesidades especializadas, si las tienes.
 
-> **Advertencia:** La validación del formulario HTML _no_ sustituye a los scripts que garantizan que los datos ingresados tengan el formato adecuado. Es demasiado fácil para alguien realizar ajustes en el HTML que le permitan omitir la validación o eliminarla por completo. También es posible que alguien simplemente omita tu HTML por completo y envíe los datos directamente a tu servidor. Si tu código del lado del servidor no valida los datos que recibe, podría ocurrir un desastre cuando se ingresen en tu base de datos, datos con formato incorrecto (o datos que son demasiado grandes, son del tipo incorrecto, etc.).
+> [!WARNING]
+> La validación del formulario HTML _no_ sustituye a los scripts que garantizan que los datos ingresados tengan el formato adecuado. Es demasiado fácil para alguien realizar ajustes en el HTML que le permitan omitir la validación o eliminarla por completo. También es posible que alguien simplemente omita tu HTML por completo y envíe los datos directamente a tu servidor. Si tu código del lado del servidor no valida los datos que recibe, podría ocurrir un desastre cuando se ingresen en tu base de datos, datos con formato incorrecto (o datos que son demasiado grandes, son del tipo incorrecto, etc.).
 
 </div>
 
@@ -268,7 +295,8 @@ Los navegadores que admiten el tipo de entrada `email` automáticamente proporci
 
 Para obtener más información sobre cómo funciona la validación de formularios y cómo aprovechar las propiedades de CSS {{CSSxRef(":valid")}} e {{CSSxRef(":invalid")}} para estilizar la entrada en función de si el el valor actual es válido, consulta [validación de datos de formulario](/es/docs/Learn/Forms/Form_validation).
 
-> **Nota:** Existen problemas de especificación conocidos relacionados con los nombres de dominio internacionales y la validación de direcciones de correo electrónico en HTML. Consulta el [W3C bug 15489](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489).
+> [!NOTE]
+> Existen problemas de especificación conocidos relacionados con los nombres de dominio internacionales y la validación de direcciones de correo electrónico en HTML. Consulta el [W3C bug 15489](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489).
 
 ### Patrón de validación
 
@@ -348,7 +376,8 @@ Es por eso que, en cambio, especificamos la cadena "Por favor, proporciona solo 
 
 ![](email-pattern-match-bad.png)
 
-> **Nota:** Si tienes problemas al escribir tus expresiones regulares de validación y no funcionan correctamente, consulta la consola de tu navegador; posiblemente haya útiles mensajes de error que te ayudarán a resolver el problema.
+> [!NOTE]
+> Si tienes problemas al escribir tus expresiones regulares de validación y no funcionan correctamente, consulta la consola de tu navegador; posiblemente haya útiles mensajes de error que te ayudarán a resolver el problema.
 
 ## Ejemplos
 

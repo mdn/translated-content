@@ -1,11 +1,12 @@
 ---
-title: NavigatorUAData.platform
+title: "NavigatorUAData: platform プロパティ"
+short-title: platform
 slug: Web/API/NavigatorUAData/platform
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: ea68d8f5b27af9c11247dc7d8115c0cfa6bffd1b
 ---
 
-{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
+{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 **`platform`** は {{domxref("NavigatorUAData")}} インターフェイスの読み取り専用プロパティで、プラットフォームのブランド情報を返します。
 

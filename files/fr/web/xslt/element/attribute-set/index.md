@@ -18,7 +18,7 @@ L'élément `<xsl:attribute-set>` crée un ensemble nommé d'attributs, qui peut
 ### Attributs obligatoires
 
 - `name`
-  - : Définit le nom de l'ensemble d'attributs. Le nom doit être un [QName](http://www.w3.org/TR/REC-xml-names/#ns-qualnames) valide.
+  - : Définit le nom de l'ensemble d'attributs. Le nom doit être un [QName](https://www.w3.org/TR/REC-xml-names/#ns-qualnames) valide.
 
 ### Attributs optionnels
 
@@ -31,7 +31,7 @@ Haut niveau, doit être l'enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`.
 
 ### Défini
 
-[XSLT 1.0, section 7.1.4](http://www.w3.org/TR/xslt#attribute-sets).
+[XSLT 1.0, section 7.1.4](https://www.w3.org/TR/xslt#attribute-sets).
 
 ### Support Gecko
 

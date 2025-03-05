@@ -17,7 +17,8 @@ slug: Web/API/Channel_Messaging_API/Using_channel_messaging
 
 一方、メッセージチャンネルは、異なる閲覧コンテキスト間でデータを受け渡すことを可能にする安全なチャンネルを提供することができます。
 
-> **メモ:** 詳細情報とアイデアについては、仕様の[ウェブ上のオブジェクト機能モデルの基礎としてのポート](https://html.spec.whatwg.org/multipage/comms.html#ports-as-the-basis-of-an-object-capability-model-on-the-web)（英語）のセクションが役に立つでしょう。
+> [!NOTE]
+> 詳細情報とアイデアについては、仕様の[ウェブ上のオブジェクト機能モデルの基礎としてのポート](https://html.spec.whatwg.org/multipage/comms.html#ports-as-the-basis-of-an-object-capability-model-on-the-web)（英語）のセクションが役に立つでしょう。
 
 ## 簡単な例
 

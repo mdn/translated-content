@@ -1,6 +1,8 @@
 ---
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
+l10n:
+  sourceCommit: 9575097ee96531811fb8af7dd5f5e103cacf653d
 ---
 
 {{JSRef}}
@@ -15,11 +17,111 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 
 ### 值的相等
 
-值的相等是基于[零值相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#零值相等)算法的。（曾使用会将 `0` 和 `-0` 视为不同值的[同值算法](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#使用_object.is_进行同值相等比较)。参见[浏览器兼容性](#浏览器兼容性)。）这意味着 {{jsxref("NaN")}} 和 {{jsxref("undefined")}} 会被视为是相同的值（即使 `NaN !== NaN`），而所有其他的值则基于 `===` 运算符的语义进行相等比较。
+值的相等是基于[零值相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#零值相等)算法的。（曾使用会将 `0` 和 `-0` 视为不同值的[同值算法](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#使用_object.is_进行同值相等比较)。参见[浏览器兼容性](#浏览器兼容性)。）这意味着 {{jsxref("NaN")}} 和 `NaN` 会被视为是相同的值（即使 `NaN !== NaN`），而所有其他的值则基于 `===` 运算符的语义进行相等比较。
 
 ### 性能
 
 [`has`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/has) 方法检查某个值是否在集合中，其采用的方式的平均时间比逐个测试先前添加到集合中的元素更快。特别是当一个数组的长度（`length`）等于集合的大小（`size`）时，这比 [`Array.prototype.includes`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) 方法的平均速度更快。
+
+### 集合运算
+
+`Set` 对象提供了一些方法，允许你像进行数学运算一样组合集合。这些方法包括：
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">方法</th>
+      <th scope="col">返回类型</th>
+      <th scope="col">数学上等价于</th>
+      <th scope="col">维恩图</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{jsxref("Set/difference", "A.difference(B)")}}</td>
+      <td><code>Set</code></td>
+      <td>
+        <math><semantics><mrow><mi>A</mi><mo>∖</mo><mi>B</mi></mrow><annotation encoding="TeX">A\setminus B</annotation></semantics></math>
+      </td>
+      <td style="margin:0;padding:0"><img src="difference/diagram.svg" alt="具有两个相互重叠的圆的维恩图。A 和 B 的差集（difference）是 A 中不与 B 重叠的部分。" style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/intersection", "A.intersection(B)")}}</td>
+      <td><code>Set</code></td>
+      <td>
+        <math><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cap B</annotation></semantics></math>
+      </td>
+      <td style="margin:0;padding:0"><img src="intersection/diagram.svg" alt="具有两个相互重叠的圆的维恩图。A 和 B 的交集（intersection）是它们重叠的部分。" style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/symmetricDifference", "A.symmetricDifference(B)")}}</td>
+      <td><code>Set</code></td>
+      <td>
+        <math><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>∖</mo><mi>B</mi><mo stretchy="false">)</mo><mo>∪</mo><mo stretchy="false">(</mo><mi>B</mi><mo>∖</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">(A\setminus B)\cup(B\setminus A)</annotation></semantics></math>
+      </td>
+      <td style="margin:0;padding:0"><img src="symmetricDifference/diagram.svg" alt="具有两个相互重叠的圆的维恩图。A 和 B 的对称差集（symmetric）是包含在任一圆但不包含在两个圆的区域。" style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/union", "A.union(B)")}}</td>
+      <td><code>Set</code></td>
+      <td>
+        <math><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cup B</annotation></semantics></math>
+      </td>
+      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="具有两个相互重叠的圆的维恩图。A 和 B 的并集（union）是包含在任一圆或两个圆的区域。" style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/isDisjointFrom", "A.isDisjointFrom(B)")}}</td>
+      <td><code>Boolean</code></td>
+      <td>
+        <math><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi><mo>=</mo><mi>∅</mi></mrow><annotation encoding="TeX">A\cap B = \empty</annotation></semantics></math>
+      </td>
+      <td style="margin:0;padding:0"><img src="isDisjointFrom/diagram.svg" alt="具有两个相互重叠的圆的维恩图。A 和 B 是互不相交的（disjoint），因为圆没有重叠区域。" style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/isSubsetOf", "A.isSubsetOf(B)")}}</td>
+      <td><code>Boolean</code></td>
+      <td>
+        <math><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow><annotation encoding="TeX">A\subseteq B</annotation></semantics></math>
+      </td>
+      <td style="margin:0;padding:0"><img src="isSubsetOf/diagram.svg" alt="具有两个相互重叠的圆的维恩图。A 是 B 的子集（subset），因为 A 完全包含在 B 中。" style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/isSupersetOf", "A.isSupersetOf(B)")}}</td>
+      <td><code>Boolean</code></td>
+      <td>
+        <math><semantics><mrow><mi>A</mi><mo>⊇</mo><mi>B</mi></mrow><annotation encoding="TeX">A\supseteq B</annotation></semantics></math>
+      </td>
+      <td style="margin:0;padding:0"><img src="isSupersetOf/diagram.svg" alt="具有两个相互重叠的圆的维恩图。A 是 B 的超集（superset），因为 B 完全包含在 A 中。" style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+  </tbody>
+</table>
+
+为了使这些方法更具通用性，它们不仅接受 `Set` 对象，还可以接受任何[类集合对象](#类集合对象)。
+
+### 类集合对象
+
+所有[集合运算方法](#集合运算)要求 {{jsxref("Operators/this", "this")}} 是一个实际的 `Set` 实例，但它们的参数只需要是类集合对象。*类集合对象*是提供以下内容的对象：
+
+- 一个 {{jsxref("Set/size", "size")}} 属性，包含一个数字。
+- 一个 {{jsxref("Set/has", "has()")}} 方法，接受一个元素并返回一个布尔值。
+- 一个 {{jsxref("Set/keys", "keys()")}} 方法，返回一个集合中的元素的[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
+
+例如，{{jsxref("Map")}} 对象是类集合对象，因为它们也具有 {{jsxref("Map/size", "size")}}、{{jsxref("Map/has", "has()")}} 和 {{jsxref("Map/keys", "keys()")}}，因此在集合方法中使用时，它们表现得就像键的集合：
+
+```js
+const a = new Set([1, 2, 3]);
+const b = new Map([
+  [1, "一"],
+  [2, "二"],
+  [4, "四"],
+]);
+console.log(a.union(b)); // Set(4) {1, 2, 3, 4}
+```
+
+> [!NOTE]
+> 类集合协议调用 `keys()` 方法而不是 [`[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator) 来生成元素。这是为了使 Map 成为有效的类集合对象，因为对于 Map，迭代器生成*条目*，而 `has()` 方法接受*键*。
+
+[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)不是类集合对象，因为它们没有 `has()` 方法或 `size` 属性，并且它们的 `keys()` 方法生成索引而不是元素。{{jsxref("WeakSet")}} 对象也不是类集合对象，因为它们没有 `keys()` 方法。
 
 ### 类 Set 浏览器 API
 
@@ -37,7 +139,7 @@ interface GPUSupportedFeatures {
 
 类 `Set` 对象是只读或可读写的（参见上面的 IDL 中的 `readonly` 关键字）。
 
-- 只读的类 `Set` 对象具有 [`size`](#set.prototype.size) 属性及以下方法：[`entries()`](#set.prototype.entries)、[`forEach()`](#set.prototype.foreach)、[`has()`](#set.prototype.has)、[`keys()`](#set.prototype.keys)、[`values()`](#set.prototype.values) 和 [`@@iterator`](#set.prototypeiterator)。
+- 只读的类 `Set` 对象具有 [`size`](#set.prototype.size) 属性及以下方法：[`entries()`](#set.prototype.entries)、[`forEach()`](#set.prototype.foreach)、[`has()`](#set.prototype.has)、[`keys()`](#set.prototype.keys)、[`values()`](#set.prototype.values) 和 [`[Symbol.iterator]()`](#set.prototypesymbol.iterator)。
 - 可写的类 `Set` 对象此外还具有以下方法：[`clear()`](#set.prototype.clear)、[`delete()`](#set.prototype.delete) 和 [`add()`](#set.prototype.add)。
 
 除了对条目类型的限制外，方法和属性的行为与 `Set` 中的等效成员相同。
@@ -60,7 +162,7 @@ interface GPUSupportedFeatures {
 
 ## 静态属性
 
-- {{jsxref("Set/@@species", "Set[@@species]")}}
+- [`Set[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species)
   - : 用于创建派生对象的构造函数。
 
 ## 实例属性
@@ -71,8 +173,8 @@ interface GPUSupportedFeatures {
   - : 创建示例对象的构造函数。对于 `Set` 实例，其初始值为 {{jsxref("Set/Set", "Set")}} 构造函数。
 - {{jsxref("Set.prototype.size")}}
   - : 返回 `Set` 对象中值的数量。
-- `Set.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值为字符串 `"Set"`。该属性用于 {{jsxref("Object.prototype.toString()")}}。
+- `Set.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值为字符串 `"Set"`。该属性用于 {{jsxref("Object.prototype.toString()")}}。
 
 ## 实例方法
 
@@ -82,17 +184,31 @@ interface GPUSupportedFeatures {
   - : 从 `Set` 对象中移除所有元素。
 - {{jsxref("Set.prototype.delete()")}}
   - : 移除与 `value` 关联的元素，并返回一个布尔值来表示是否移除成功。`Set.prototype.has(value)` 会在此之后返回 `false`。
+- {{jsxref("Set.prototype.difference()")}}
+  - : 接受一个集合并返回一个新集合，该集合包含此集合中但不在给定集合中的元素。
 - {{jsxref("Set.prototype.entries()")}}
   - : 返回一个新的迭代器对象，该对象包含 `Set` 对象中的代表每个元素的 **`[value, value]` 数组**。这与 {{jsxref("Map")}} 对象类似，因此 `Set` 的每个条目的 _key_ 和 _value_ 都相同。
 - {{jsxref("Set.prototype.forEach()")}}
   - : 按照值插入的顺序为 `Set` 对象中的每个值调用一次 `callbackFn`。如果提供了 `thisArg` 参数，它将被用作每次调用 `callbackFn` 时的 `this` 值。
 - {{jsxref("Set.prototype.has()")}}
   - : 返回一个布尔值，表示给定值在 `Set` 对象中是否存在。
+- {{jsxref("Set.prototype.intersection()")}}
+  - : 接受一个集合并返回一个新集合，该集合包含同时在此集合和给定集合中的元素。
+- {{jsxref("Set.prototype.isDisjointFrom()")}}
+  - : 接受一个集合并返回一个布尔值，指示此集合是否与给定集合没有共同元素。
+- {{jsxref("Set.prototype.isSubsetOf()")}}
+  - : 接受一个集合并返回一个布尔值，指示此集合的所有元素是否都在给定集合中。
+- {{jsxref("Set.prototype.isSupersetOf()")}}
+  - : 接受一个集合并返回一个布尔值，指示给定集合的所有元素是否都在此集合中。
 - {{jsxref("Set.prototype.keys()")}}
   - : {{jsxref("Set.prototype.values()")}} 的别名。
+- {{jsxref("Set.prototype.symmetricDifference()")}}
+  - : 接受一个集合并返回一个新集合，该集合包含在此集合或给定集合中但不在另一者中的元素。
+- {{jsxref("Set.prototype.union()")}}
+  - : 接受一个集合并返回一个新集合，该集合包含在此集合或给定集合中的元素。
 - {{jsxref("Set.prototype.values()")}}
   - : 返回一个新的迭代器对象，该对象按插入顺序生成 `Set` 对象中每个元素的**值**。
-- [`Set.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator)
+- [`Set.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
   - : 返回一个新的迭代器对象，该对象按插入顺序生成 `Set` 对象中每个元素的**值**。
 
 ## 示例
@@ -264,25 +380,19 @@ console.log([...mySet]); // 将显示与 myArray 完全相同的数组
 
 ```js
 // 用于从数组中删除重复元素
+const numbers = [2, 13, 4, 4, 2, 13, 13, 4, 4, 5, 5, 6, 6, 7, 5, 32, 13, 4, 5];
 
-const numbers = [2, 3, 4, 4, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 5, 32, 3, 4, 5];
-
-console.log([...new Set(numbers)]);
-
-// [2, 3, 4, 5, 6, 7, 32]
+console.log([...new Set(numbers)]); // [2, 13, 4, 5, 6, 7, 32]
 ```
 
 ### 与字符串的关系
 
 ```js
-const text = "India";
+// 大小写敏感（包含 "F" 和 "f"）
+new Set("Firefox"); // Set(7) [ "F", "i", "r", "e", "f", "o", "x" ]
 
-const mySet = new Set(text); // Set(5) {'I', 'n', 'd', 'i', 'a'}
-mySet.size; // 5
-
-// 大小写敏感，且忽略重复项
-new Set("Firefox"); // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
-new Set("firefox"); // Set(6) { "f", "i", "r", "e", "o", "x" }
+// 忽略重复项（"f" 出现了两次，但是只包含一个）
+new Set("firefox"); // Set(6) [ "f", "i", "r", "e", "o", "x" ]
 ```
 
 ### 使用集合来确保一列值的唯一性

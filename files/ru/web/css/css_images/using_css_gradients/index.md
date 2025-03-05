@@ -326,8 +326,8 @@ div {
 
 ```css
 .layered-image {
-  background: linear-gradient(to right, transparent, mistyrose),
-    url("critters.png");
+  background:
+    linear-gradient(to right, transparent, mistyrose), url("critters.png");
 }
 ```
 
@@ -350,11 +350,8 @@ div {
 
 ```css
 .stacked-linear {
-  background: linear-gradient(
-      217deg,
-      rgba(255, 0, 0, 0.8),
-      rgba(255, 0, 0, 0) 70.71%
-    ),
+  background:
+    linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
     linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
     linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
 }
@@ -705,7 +702,8 @@ div {
 
 ```css
 .multi-repeating-linear {
-  background: repeating-linear-gradient(
+  background:
+    repeating-linear-gradient(
       190deg,
       rgba(255, 0, 0, 0.5) 40px,
       rgba(255, 153, 0, 0.5) 80px,
@@ -760,7 +758,8 @@ div {
 
 ```css
 .plaid-gradient {
-  background: repeating-linear-gradient(
+  background:
+    repeating-linear-gradient(
       90deg,
       transparent,
       transparent 50px,
@@ -805,7 +804,8 @@ div {
       rgba(143, 77, 63, 0.25) 10px
     );
 
-  background: repeating-linear-gradient(
+  background:
+    repeating-linear-gradient(
       90deg,
       transparent 0 50px,
       rgba(255, 127, 0, 0.25) 50px 56px,
@@ -911,6 +911,6 @@ div {
 - Градиентные функции: {{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("conic-gradient")}}, {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}}, {{cssxref("repeating-conic-gradient")}}
 - Типы данных CSS, связанные с градиентами: {{cssxref("&lt;gradient&gt;")}}, {{cssxref("&lt;image&gt;")}}
 - Свойства CSS, связанные с градиентами: {{cssxref("background")}}, {{cssxref("background-image")}}
-- [Галерея шаблонов градиентов CSS, от Lea Verou](http://lea.verou.me/css3patterns/)
+- [Галерея шаблонов градиентов CSS, от Lea Verou](https://lea.verou.me/css3patterns/)
 - [Библиотека градиентов CSS3, от Estelle Weyl](http://standardista.com/cssgradients)
 - [Генератор градиентов CSS](https://cssgenerator.org/gradient-css-generator.html)

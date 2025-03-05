@@ -41,4 +41,4 @@ recurse(10)
 ### 一般知識
 
 - Wikipedia の [再帰](https://ja.wikipedia.org/wiki/再帰)
-- [JavaScript での再帰についての詳細](/ja/docs/Web/JavaScript/Guide/Functions#Recursion)
+- [JavaScript での再帰についての詳細](/ja/docs/Web/JavaScript/Guide/Functions#recursion)

@@ -142,7 +142,8 @@ console.log(instance.d); // 3
 console.log(instance.b); // undefined
 ```
 
-> **备注：** 这对[私有字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)更为重要，因为访问未初始化的私有字段会抛出 {{jsxref("TypeError")}}，即使该私有字段已在下面声明。（如果未声明私有字段，则会提前抛出 {{jsxref("SyntaxError")}}。）
+> [!NOTE]
+> 这对[私有字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)更为重要，因为访问未初始化的私有字段会抛出 {{jsxref("TypeError")}}，即使该私有字段已在下面声明。（如果未声明私有字段，则会提前抛出 {{jsxref("SyntaxError")}}。）
 
 由于类字段是使用 [`[[DefineOwnProperty]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) 语义（本质上是 {{jsxref("Object.defineProperty()")}}）添加的，因此派生类中的字段声明不会调用基类中的 setter。这种行为不同于在构造函数中使用 `this.field = …`。
 
@@ -169,7 +170,8 @@ class DerivedWithConstructor extends Base {
 const instance2 = new DerivedWithConstructor(); // 打印 1
 ```
 
-> **备注：** 在类字段规范最终确定为`[[DefineOwnProperty]]`语义之前，包括 [Babel](https://babeljs.io/) 和 [tsc](https://www.typescriptlang.org/)在内的大多数转译器都将类字段转换为 `DerivedWithConstructor` 形式，这在类字段规范化之后造成了一些微妙的错误。
+> [!NOTE]
+> 在类字段规范最终确定为`[[DefineOwnProperty]]`语义之前，包括 [Babel](https://babeljs.io/) 和 [tsc](https://www.typescriptlang.org/)在内的大多数转译器都将类字段转换为 `DerivedWithConstructor` 形式，这在类字段规范化之后造成了一些微妙的错误。
 
 ## 示例
 

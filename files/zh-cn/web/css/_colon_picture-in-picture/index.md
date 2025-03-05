@@ -1,6 +1,8 @@
 ---
-title: ":picture-in-picture"
+title: :picture-in-picture
 slug: Web/CSS/:picture-in-picture
+l10n:
+  sourceCommit: 04ebe57066db2cff350018649bdb15b2a10c67ba
 ---
 
 {{CSSRef}}
@@ -15,7 +17,7 @@ slug: Web/CSS/:picture-in-picture
 }
 ```
 
-## 用法说明
+## 使用说明
 
 `:picture-in-picture` 伪类允许你配置样式表，以便视频在画中画或者传统播放模式来回切换时自动调整内容的大小、样式或布局。
 
@@ -28,11 +30,11 @@ slug: Web/CSS/:picture-in-picture
 页面的 HTML 如下所示：
 
 ```html
-<h1>MDN Web Docs Demo: :picture-in-picture pseudo-class</h1>
+<h1>MDN Web Docs 演示：:picture-in-picture 伪类</h1>
 
 <p>
-  This demo uses the <code>:picture-in-picture</code> pseudo-class to
-  automatically change the style of a video entirely using CSS.
+  此演示使用 CSS <code>:picture-in-picture</code>
+  伪类自动改变视频的完整样式。
 </p>
 
 <video id="pip-video"></video>

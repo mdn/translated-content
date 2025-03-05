@@ -7,13 +7,32 @@ l10n:
 
 {{JSRef}}
 
-> **참고:** 일부 브라우저의 일부 버전에서는 이 메서드는 `Array.prototype.groupToMap()`으로 구현되었습니다. 웹 호환성 문제때문에 현재는 정적 메서드로 구현되었습니다. 상세 내역은 [브라우저 호환성 표](#브라우저_호환성)를 확인하시기 바랍니다.
+> [!NOTE]
+> 일부 브라우저의 일부 버전에서는 이 메서드는 `Array.prototype.groupToMap()`으로 구현되었습니다. 웹 호환성 문제때문에 현재는 정적 메서드로 구현되었습니다. 상세 내역은 [브라우저 호환성 표](#브라우저_호환성)를 확인하시기 바랍니다.
 
 **`Map.groupBy()`** 정적 메서드는 제공된 콜백 함수가 반환한 값을 사용하여 주어진 순회 가능한 요소를 그룹화합니다. 최종적으로 반환되는 {{jsxref("Map")}}는 테스트 함수의 고유 값을 키로 사용하여 각 그룹의 요소 배열을 가져오는 데 사용할 수 있습니다.
 
 이 메서드는 주로 객체와 연관된 요소를 그룹화할 때, 특히 객체가 시간이 지남에 따라 변경될 수 있는 경우에 유용합니다. 객체가 불변인 경우 대신 문자열을 사용하여 객체를 표현하고 {{jsxref("Object.groupBy()")}}로 요소를 그룹화할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/map-groupby.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Map.groupBy()", "taller")}}
+
+```js interactive-example
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+const restock = { restock: true };
+const sufficient = { restock: false };
+const result = Map.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? restock : sufficient,
+);
+console.log(result.get(restock));
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
+```
 
 ## 구문
 
@@ -44,7 +63,8 @@ Map.groupBy(items, callbackFn)
 
 이 방법은 시간이 지남에 따라 변경될 수 있는 특정 객체와 관련된 정보를 그룹화해야 할 때 유용합니다. 객체가 수정되더라도 반환된 `Map`의 키로 계속 작동하기 때문입니다. 대신 객체에 대한 문자열 표현을 생성하고 이를 {{jsxref("Object.groupBy()")}}의 그룹화 키로 사용하는 경우 객체가 변경되어도 원본 객체와 해당 표현 간의 매핑을 유지해야 합니다.
 
-> **참고:** 반환된 `Map`의 그룹에 접근하려면 원래 `Map`에서 키로 사용되었던 것과 동일한 개체를 사용해야 합니다(속성을 수정할 수는 있지만 말이죠). 이름과 속성이 같은 다른 객체를 사용할 수 없습니다.
+> [!NOTE]
+> 반환된 `Map`의 그룹에 접근하려면 원래 `Map`에서 키로 사용되었던 것과 동일한 개체를 사용해야 합니다(속성을 수정할 수는 있지만 말이죠). 이름과 속성이 같은 다른 객체를 사용할 수 없습니다.
 
 `Map.groupBy`는 `this`의 값을 읽지 않습니다. 이 함수는 모든 객체에서 호출할 수 있으며 새로운 {{jsxref("Map")}} 인스턴스가 반환됩니다.
 

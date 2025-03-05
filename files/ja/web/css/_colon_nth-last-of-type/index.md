@@ -1,5 +1,5 @@
 ---
-title: ":nth-last-of-type()"
+title: :nth-last-of-type()
 slug: Web/CSS/:nth-last-of-type
 ---
 
@@ -15,9 +15,38 @@ p:nth-last-of-type(4n) {
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-last-of-type.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :nth-last-of-type", "tabbed-shorter")}}
 
-> **メモ:** この擬似クラスは、最初から後に向けてではなく*最後*から前に向けて数えるという点を除けば、本質的に {{Cssxref(":nth-of-type")}} と同じです。
+```css interactive-example
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 3px;
+}
+
+dd:nth-last-of-type(3n) {
+  border: 2px solid orange;
+}
+```
+
+```html interactive-example
+<dl>
+  <dt>Vegetables:</dt>
+  <dd>1. Tomatoes</dd>
+  <dd>2. Cucumbers</dd>
+  <dd>3. Mushrooms</dd>
+  <dt>Fruits:</dt>
+  <dd>4. Apples</dd>
+  <dd>5. Mangos</dd>
+  <dd>6. Pears</dd>
+  <dd>7. Oranges</dd>
+</dl>
+```
+
+> [!NOTE]
+> この擬似クラスは、最初から後に向けてではなく*最後*から前に向けて数えるという点を除けば、本質的に {{Cssxref(":nth-of-type")}} と同じです。
 
 ## 構文
 

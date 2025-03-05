@@ -2,92 +2,21 @@
 title: viewBox
 slug: Web/SVG/Attribute/viewBox
 l10n:
-  sourceCommit: de098c5e3faf569b461cd8d91a68c7080e42fe9f
+  sourceCommit: bea339d321513fc6d66d95c8f0305b9387fa57bb
 ---
 
 {{SVGRef}}
 
-**`viewBox`** 属性は、 SVG ビューポートのユーザースペースの位置と大きさを定義します。
+**`viewBox`** 属性は、 SVG ビューポートのユーザー空間の位置と大きさを定義します。
 
-`viewBox` 属性の値は、`min-x`、`min-y`、`width`、`height` の 4 つの数値のリストです。`min-x` と `min-y` はビューポートの左上の座標を表します。 `width` と `height` の数字は寸法を表します。これらの数値は空白やカンマで区切られ、関連する SVG 要素に設定されたビューポートの境界に割り当てられたユーザー空間の矩形を指定します（[ブラウザービューポート](/ja/docs/Glossary/Viewport)ではありません）。
+`viewBox` 属性の値は、`min-x`、`min-y`、`width`、`height` の 4 つの数値がホワイトスペースまたはカンマで区切られたリストです。 `min-x` と `min-y` は `viewBox` が持つ可能性がある最も小さい X および Y 座標（`viewBox` の原点の座標）で、 `width` と `height` は `viewBox` の寸法を表します。結果的に `viewBox` は、ユーザー空間において SVG 要素のビューポートの境界に対応付けられた四角形になります（[ブラウザービューポート](/ja/docs/Glossary/Viewport)ではありません）。
+SVG に `viewBox` 属性（[`preserveAspectRatio`](/ja/docs/Web/SVG/Attribute/preserveAspectRatio) 属性との組み合わせが多い）がある場合、座標変換により、具体的なコンテナー要素に合うように SVG ビューポートが引き伸ばされたり、サイズが変更されたりします。
 
-この属性は以下の SVG 要素で使用することができます。
+## 要素
 
-- {{SVGElement("marker")}}
-- {{SVGElement("pattern")}}
-- {{SVGElement("svg")}}
-- {{SVGElement("symbol")}}
-- {{SVGElement("view")}}
+この属性は以下の節にある SVG 要素で使用することができます。
 
-## 例
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-  vertical-align: top;
-}
-svg:not(:root) {
-  display: inline-block;
-}
-```
-
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <!--
-  with relative unit such as percentage, the visual size
-  of the square looks unchanged regardless of the viewBox
-  -->
-  <rect x="0" y="0" width="100%" height="100%" />
-
-  <!--
-  with a large viewBox the circle looks small
-  as it is using user units for the r attribute:
-  4 resolved against 100 as set in the viewBox
-  -->
-  <circle cx="50%" cy="50%" r="4" fill="white" />
-</svg>
-
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <!--
-  with relative unit such as percentage, the visual size
-  of the square looks unchanged regardless of the viewBox
-  -->
-  <rect x="0" y="0" width="100%" height="100%" />
-
-  <!--
-  with a small viewBox the circle looks large
-  as it is using user units for the r attribute:
-  4 resolved against 10 as set in the viewBox
-  -->
-  <circle cx="50%" cy="50%" r="4" fill="white" />
-</svg>
-
-<svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg">
-  <!--
-  The point of coordinate 0,0 is now in the center of the viewport,
-  and 100% is still resolve to a width or height of 10 user units so
-  the rectangle looks shifted to the bottom/right corner of the viewport
-  -->
-  <rect x="0" y="0" width="100%" height="100%" />
-
-  <!--
-  With the point of coordinate 0,0 in the center of the viewport the
-  value 50% is resolve to 5 which means the center of the circle is
-  in the bottom/right corner of the viewport.
-  -->
-  <circle cx="50%" cy="50%" r="4" fill="white" />
-</svg>
-```
-
-{{EmbedLiveSample("Example", '100%', 200)}}
-
-この属性の正確な効果は {{ SVGAttr("preserveAspectRatio") }} 属性に影響されます。
-
-> **メモ:** `width` または `height` に `0` 以下の値を指定すると、要素の描画が無効になります。
-
-## marker
+### `<marker>`
 
 {{SVGElement('marker')}} の場合、 `viewBox` は `<marker>` 要素のコンテンツの位置と寸法を定義します。
 
@@ -129,7 +58,7 @@ svg:not(:root) {
   </tbody>
 </table>
 
-## pattern
+### `<pattern>`
 
 {{SVGElement('pattern')}} の場合、 `viewBox` はパターンタイルのコンテンツの位置と寸法を定義します。
 
@@ -171,7 +100,7 @@ svg:not(:root) {
   </tbody>
 </table>
 
-## svg
+### `<svg>`
 
 {{SVGElement('svg')}} の場合、 `viewBox` は `<svg>` 要素のコンテンツの位置と寸法を定義します。
 
@@ -213,7 +142,7 @@ svg:not(:root) {
   </tbody>
 </table>
 
-## symbol
+### `<symbol>`
 
 {{SVGElement('symbol')}} の場合、 `viewBox` は `<symbol>` 要素のコンテンツの位置と寸法を定義します。
 
@@ -255,7 +184,7 @@ svg:not(:root) {
   </tbody>
 </table>
 
-## view
+### `<view>`
 
 {{SVGElement('view')}} の場合、 `viewBox` は `<view>` 要素のコンテンツの位置と寸法を定義します。
 
@@ -296,6 +225,45 @@ svg:not(:root) {
     </tr>
   </tbody>
 </table>
+
+## 例
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+  vertical-align: top;
+}
+svg:not(:root) {
+  display: inline-block;
+}
+```
+
+下記のコードスニペットには、 3 つの {{SVGElement("svg")}} がありますが、それぞれ `viewBox` 属性の値が異なっており、子要素である {{SVGElement("rect")}} と {{SVGElement("circle")}} は同一ですが、まったく異なる結果を生成します。 `<rect>` のサイズは相対単位を使用して定義されているため、 `viewBox` の値に関わらず、生成される四角形の見た目のサイズは変わりません。 `<circle>` の半径の長さである {{SVGAttr("r")}} 属性は、いずれの場合も同じですが、このユーザー単位の値は、 `viewBox` で定義されたサイズに対して解決されるため、それぞれ異なる結果が生成されます。
+
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="100%" height="100%" />
+  <circle cx="50%" cy="50%" r="4" fill="white" />
+</svg>
+
+<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="100%" height="100%" />
+  <circle cx="50%" cy="50%" r="4" fill="white" />
+</svg>
+
+<svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="100%" height="100%" />
+  <circle cx="50%" cy="50%" r="4" fill="white" />
+</svg>
+```
+
+{{EmbedLiveSample("Examples", '100%', 200)}}
+
+`r="4"` のユーザー単位は `viewBox` の大きさに対して解決されるため、著しく異なる大きさの円を生成します。 `viewBox` 属性の正確な効果は {{ SVGAttr("preserveAspectRatio") }} 属性に影響されます。
+
+> **メモ:** `width` または `height` に `0` 以下の値を指定すると、要素の描画が無効になります。
 
 ## 仕様書
 

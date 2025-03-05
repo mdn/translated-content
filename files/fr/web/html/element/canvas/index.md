@@ -108,7 +108,7 @@ Il est fortement recommandé de fournir un contenu alternatif au contenu du bloc
 
 ### Balise `</canvas>` obligatoire
 
-À la différence de [`<img>`](/fr/docs/Web/HTML/Element/Img), l'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) **doit** être fermé avec la balise fermante `</canvas>`.
+À la différence de [`<img>`](/fr/docs/Web/HTML/Element/img), l'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) **doit** être fermé avec la balise fermante `</canvas>`.
 
 ### Dimensionnement du canevas : CSS ou HTML
 
@@ -127,7 +127,8 @@ La taille maximale d'un élément `<canvas>` dépend du navigateur utilisé. Voi
 | Safari     | 32 767 pixels    | 32 767 pixels    | 268 435 456 pixels (soit 16 384 x 16 384) |
 | IE         | 8 192 pixels     | 8 192 pixels     | ?                                         |
 
-> **Note :** Si on dépasse les dimensions ou l'aire maximale, le canevas deviendra inutilisable et les commandes de dessin ne fonctionneront pas.
+> [!NOTE]
+> Si on dépasse les dimensions ou l'aire maximale, le canevas deviendra inutilisable et les commandes de dessin ne fonctionneront pas.
 
 ## Exemples
 
@@ -181,5 +182,5 @@ Seul, l'élément `<canvas>` est une image matricielle et ne fournit pas d'infor
 - [Le portail MDN sur l'élément `<canvas>`](/fr/docs/Web/API/Canvas_API)
 - [Tutoriel `<canvas>`](/fr/docs/Web/API/Canvas_API/Tutorial)
 - [Anti-sèche `<canvas>`](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
-- [Démonstrations liées à `<canvas>`](/fr/docs/Web/Demos_of_open_web_technologies)
+- [Démonstrations liées à `<canvas>`](/fr/docs/orphaned/Web/Demos)
 - [Introduction à `<canvas>` par Apple](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html) (en anglais)

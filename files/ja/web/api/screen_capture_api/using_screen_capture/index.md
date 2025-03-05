@@ -2,14 +2,15 @@
 title: 画面キャプチャ API の使用
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
 l10n:
-  sourceCommit: 0f445d840bbe4361685121828e67413901705d21
+  sourceCommit: 4f35a8237ee0842beb9cfef3354e05464ad7ce1a
 ---
 
 {{DefaultAPISidebar("Screen Capture API")}}
 
 この記事では、画面キャプチャ API とその {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} メソッドを使用して、 [WebRTC](/ja/docs/Web/API/WebRTC_API) 会議セッション中に画面の一部または全部をストリーミング、録音、共有用に取得する方法を検証していきます。
 
-> **メモ:** 最近のバージョンの [WebRTC adapter.js shim](https://github.com/webrtcHacks/adapter) には `getDisplayMedia()` の実装が含まれており、画面共有をサポートしているが現在の標準 API を実装していないブラウザーで画面共有を可能にすることができるので便利かもしれません。これは、少なくとも Chrome、Edge、Firefox で動作します。
+> [!NOTE]
+> 最近のバージョンの [WebRTC adapter.js shim](https://github.com/webrtcHacks/adapter) には `getDisplayMedia()` の実装が含まれており、画面共有をサポートしているが現在の標準 API を実装していないブラウザーで画面共有を可能にすることができるので便利かもしれません。これは、少なくとも Chrome、Edge、Firefox で動作します。
 
 ## 画面の内容のキャプチャ
 
@@ -62,13 +63,13 @@ function startCapture(displayMediaOptions) {
 }
 ```
 
-いずれにせよ、{{Glossary("user agent", "ユーザーエージェント")}}は、共有する画面領域を選択するようユーザーに促すユーザーインタフェースを提示して応答します。これらの `startCapture()` の実装はどちらも、キャプチャされた表示画像を含む {{domxref("MediaStream")}} を返します。
+いずれにせよ、{{Glossary("user agent", "ユーザーエージェント")}}は、共有する画面領域を選択するようユーザーに促すユーザーインターフェイスを提示して応答します。これらの `startCapture()` の実装はどちらも、キャプチャされた表示画像を含む {{domxref("MediaStream")}} を返します。
 
 必要な画面の種類を指定する方法と、結果として得られるストリームを調整する他の方法については、以下の[オプションと制約](#オプションと制約)を参照してください。
 
 ### キャプチャする表示面を選択するウィンドウの例
 
-[![Chrome のソース面を選ぶウィンドウの画面ショット](chrome-screen-capture-window.png)](Chrome-Screen-Capture-Window.png)
+![Chrome のソース面を選ぶウィンドウの画面ショット](chrome-screen-capture-window.png)
 
 そして、キャプチャしたストリーム `captureStream` を、ストリームを入力として受け付けるあらゆるものに使用することができます。以下の[例](#例)は、ストリームを利用するためのいくつかの方法を示しています。
 
@@ -90,11 +91,13 @@ options オブジェクトに渡す `video` と `audio` オブジェクトには
 
 キャプチャするコンテンツが選択されるまで、どのような制約も適用されません。制約は、結果のストリームに表示される内容を変更します。たとえば、動画に {{domxref("MediaTrackConstraints.width", "width")}} 制約を指定すると、ユーザーが共有する領域を選択した後に動画を拡大縮小することによって適用されます。ソース自体のサイズに制約を設けるものではありません。
 
-> **メモ:** 制約によって、画面共有 API でキャプチャ可能なソースのリストが変更されることは決してありません。このため、ウェブアプリケーションでは、1 つの項目が残るまでソースリストを制限することによって、ユーザーに特定のコンテンツを共有するように強制することはできません。
+> [!NOTE]
+> 制約によって、画面共有 API でキャプチャ可能なソースのリストが変更されることは決してありません。このため、ウェブアプリケーションでは、1 つの項目が残るまでソースリストを制限することによって、ユーザーに特定のコンテンツを共有するように強制することはできません。
 
 表示のキャプチャが行われている間、画面共有を行っているマシンは、共有が行われていることをユーザーに認識させるために、何らかのインジケーターを表示します。
 
-> **メモ:** プライバシーとセキュリティ上の理由から、画面共有のソースは {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} を使って列挙することができないようになっています。これに関連して、`getDisplayMedia()` で利用できるソースに変更があった場合も、 {{domxref("MediaDevices/devicechange_event", "devicechange")}} イベントは送信されません。
+> [!NOTE]
+> プライバシーとセキュリティ上の理由から、画面共有のソースは {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} を使って列挙することができないようになっています。これに関連して、`getDisplayMedia()` で利用できるソースに変更があった場合も、 {{domxref("MediaDevices/devicechange_event", "devicechange")}} イベントは送信されません。
 
 ### 共有音声のキャプチャ
 
@@ -217,7 +220,7 @@ console.error = (msg) =>
   (logElem.textContent = `${logElem.textContent}\nError: ${msg}`);
 ```
 
-これにより、おなじみの {{domxref("console/log_static", "console/log()")}} や {{domxref("console.error_static", "console.error()")}} などを使って、ドキュメント内のログボックスに情報を記録することができるようになります。
+これにより、おなじみの {{domxref("console/log_static", "console.log()")}} や {{domxref("console.error_static", "console.error()")}} などを使って、ドキュメント内のログボックスに情報を記録することができるようになります。
 
 ##### 画面キャプチャの開始
 
@@ -225,7 +228,7 @@ console.error = (msg) =>
 
 ```js
 async function startCapture() {
-  logElem.innerHTML = "";
+  logElem.textContent = "";
 
   try {
     videoElem.srcObject =
@@ -281,13 +284,13 @@ HTML は簡単な紹介文から始まり、本題に入ります。
 
 ```html
 <p>
-  This example shows you the contents of the selected part of your display.
-  Click the Start Capture button to begin.
+  この例では、ディスプレイの選択した部分の内容を表示します。
+  キャプチャ開始ボタンをクリックすると開始します。
 </p>
 
 <p>
-  <button id="start">Start Capture</button>&nbsp;<button id="stop">
-    Stop Capture
+  <button id="start">キャプチャ開始</button>&nbsp;<button id="stop">
+    キャプチャ停止
   </button>
 </p>
 
@@ -330,7 +333,7 @@ HTML の主要な部分は以下の通りです。
 
 最終的にはこのようになります。ブラウザーが画面キャプチャ API に対応している場合、"Start Capture" をクリックすると、共有する画面、ウィンドウ、タブを選択するための{{Glossary("user agent", "ユーザーエージェント")}}のインターフェイスが表示されます。
 
-{{EmbedLiveSample("単純な画面キャプチャ", 640, 800, "", "", "", "display-capture")}}
+{{EmbedLiveSample("Streaming screen capture", 640, 800, "", "", "", "display-capture")}}
 
 ## セキュリティ
 

@@ -1,5 +1,5 @@
 ---
-title: ":checked"
+title: :checked
 slug: Web/CSS/:checked
 ---
 
@@ -15,11 +15,48 @@ slug: Web/CSS/:checked
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-checked.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :checked", "tabbed-shorter")}}
+
+```css interactive-example
+label,
+input[type="submit"] {
+  display: block;
+  margin-top: 1em;
+}
+
+input:checked {
+  border: none;
+  outline: 2px solid deeppink;
+}
+```
+
+```html interactive-example
+<form>
+  <p>How did you find out about us?</p>
+  <label
+    ><input name="origin" type="radio" value="google" checked /> Google</label
+  >
+  <label><input name="origin" type="radio" value="facebook" /> Facebook</label>
+  <p>Please agree to our terms:</p>
+
+  <label
+    ><input name="newsletter" type="checkbox" checked /> I want to subscribe to
+    a personalized newsletter.</label
+  >
+
+  <label
+    ><input name="privacy" type="checkbox" /> I have read and I agree to the
+    Privacy Policy.</label
+  >
+
+  <input type="submit" value="Submit form" />
+</form>
+```
 
 ユーザーは要素をチェック/選択することでこの状態にすることができ、要素のチェックや選択を外すとこの状態から外れます。
 
-> **メモ:** ブラウザーは `<option>` を[置換要素](/ja/docs/Web/CSS/Replaced_element)として扱うことが多いので、 `:checked` 擬似クラスでスタイルが適用される部分の大きさはブラウザーによって異なります。
+> [!NOTE]
+> ブラウザーは `<option>` を[置換要素](/ja/docs/Web/CSS/Replaced_element)として扱うことが多いので、 `:checked` 擬似クラスでスタイルが適用される部分の大きさはブラウザーによって異なります。
 
 ## 構文
 

@@ -7,7 +7,7 @@ slug: Web/CSS/quotes
 
 ## Sumario
 
-La propiedad [CSS](/es/docs/CSS) `quotes` indica cómo debe renderizar las citas el navegador.
+La propiedad [CSS](/es/docs/Web/CSS) `quotes` indica cómo debe renderizar las citas el navegador.
 
 {{cssinfo}}
 

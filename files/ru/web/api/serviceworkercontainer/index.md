@@ -5,7 +5,7 @@ slug: Web/API/ServiceWorkerContainer
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-[ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API) предоставляет интерфейс `ServiceWorkerContainer`, являющийся объектом (объект представляет собой сервис воркер, как единое целое в сетевой экосистеме) включающим следующие средства:
+[ServiceWorker API](/ru/docs/Web/API/Service_Worker_API) предоставляет интерфейс `ServiceWorkerContainer`, являющийся объектом (объект представляет собой сервис воркер, как единое целое в сетевой экосистеме) включающим следующие средства:
 Регистрация;
 Отмена регистрации;
 Обновление сервис воркеров;
@@ -27,11 +27,11 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "S
 ### Event handlers
 
 - {{domxref("ServiceWorkerContainer.oncontrollerchange")}}
-  - : An event handler fired whenever a {{Event("controllerchange")}} event occurs — when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.
+  - : An event handler fired whenever a [`controllerchange`](/ru/docs/Web/Events/controllerchange) event occurs — when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.
 - {{domxref("ServiceWorkerContainer.onerror")}}
-  - : An event handler fired whenever an {{Event("error")}} event occurs in the associated service workers.
+  - : An event handler fired whenever an [`error`](/ru/docs/Web/API/HTMLElement/error_event) event occurs in the associated service workers.
 - {{domxref("ServiceWorkerContainer.onmessage")}}
-  - : An event handler fired whenever a {{Event("message")}} event occurs — when incoming messages are received to the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call.)
+  - : An event handler fired whenever a [`message`](/ru/docs/Web/API/BroadcastChannel/message_event) event occurs — when incoming messages are received to the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call.)
 
 ## Methods
 
@@ -82,8 +82,8 @@ if ("serviceWorker" in navigator) {
 
 ## Смотрите также
 
-- [Using Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web workers](/ru/docs/Web/Guide/Performance/Using_web_workers)
+- [Using web workers](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)

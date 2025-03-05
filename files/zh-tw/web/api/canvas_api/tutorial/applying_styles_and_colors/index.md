@@ -20,7 +20,8 @@ U 截至目前為止我們只有看到繪圖環境的方法(methods)，如果我
 
 預設上勾勒和填滿色是黑色(CSS 顏色值為#000000).
 
-> **備註：** 一旦改變了 strokeStyle 的顏色值，那麼之後圖形勾勒顏色都會變成新顏色，同樣狀況一樣適用於 fillStyle.
+> [!NOTE]
+> 一旦改變了 strokeStyle 的顏色值，那麼之後圖形勾勒顏色都會變成新顏色，同樣狀況一樣適用於 fillStyle.
 
 合格的顏色值請參照 CSS3{{cssxref("&lt;color&gt;")}}規範，下面範例所標示的顏色都指向同一個顏色.
 
@@ -33,7 +34,8 @@ ctx.fillStyle = "rgb(255,165,0)";
 ctx.fillStyle = "rgba(255,165,0,1)";
 ```
 
-> **備註：** 目前 Gecko 引擎並不支援 CSS3 全部的顏色值，例如 hsl(100%,25%,0)和 rgb(0,100%,0)就不被支援.
+> [!NOTE]
+> 目前 Gecko 引擎並不支援 CSS3 全部的顏色值，例如 hsl(100%,25%,0)和 rgb(0,100%,0)就不被支援.
 
 ### `fillStyle` 範例
 
@@ -255,7 +257,8 @@ draw();
 
 為了避免劃出邊緣模糊直線，我們必須精準設定繪圖路徑位置，就本範例而言，如果我們的直線繪圖路徑是從座標(3.5, 1)到(3.5, 5)的話(如第三張圖)，那麼 1.0 單位寬的直線將剛好填滿像素格，所以我們將可以畫出清晰的直線。
 
-> **備註：** 請注意本範例的 Y 軸座標都是整數點，若非如此，一樣會導致線條端點的像素格無法剛好被填滿的現象，而且同時最後產生的結果也會被 lineCap 給影響；倘若 lineCap 值為預設 butt 時，我們會需要為奇數寬度直線計算一下非整數的座標點，倘若 lineCap 樣式為 square，那麼線段端點的像素格將自動被完整填滿。還有一點需要注意，只要繪圖路徑被 closePath()函數閉合起來，這樣便沒有了線條端點，所有的線條端點都會依據 lineJoin 樣式全部前後互相連接起來，這會自動延伸端點邊緣到線段接合處，如果此時接合端點是水平或垂直的話，位於中央的像素格將會被完整填滿。後面的說明會介紹 lineCap 和 lineJoin 樣式。
+> [!NOTE]
+> 請注意本範例的 Y 軸座標都是整數點，若非如此，一樣會導致線條端點的像素格無法剛好被填滿的現象，而且同時最後產生的結果也會被 lineCap 給影響；倘若 lineCap 值為預設 butt 時，我們會需要為奇數寬度直線計算一下非整數的座標點，倘若 lineCap 樣式為 square，那麼線段端點的像素格將自動被完整填滿。還有一點需要注意，只要繪圖路徑被 closePath()函數閉合起來，這樣便沒有了線條端點，所有的線條端點都會依據 lineJoin 樣式全部前後互相連接起來，這會自動延伸端點邊緣到線段接合處，如果此時接合端點是水平或垂直的話，位於中央的像素格將會被完整填滿。後面的說明會介紹 lineCap 和 lineJoin 樣式。
 
 至於本例中偶數寬度的直線，為了避免模糊，繪圖路徑最好是落在整數座標點上。
 
@@ -570,7 +573,7 @@ draw();
 
 - `createPattern(image, type)`
   - : 呼叫 createPattern()會產一個畫布樣式物件，然後回傳出來。
-    其中 image 是[CanvasImageSource](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#image-sources-for-2d-rendering-contexts)類別物件(像是{{domxref("HTMLImageElement")}},、\<canvas>元素、{{HTMLElement("video")}} 元素等)
+    其中 image 是[CanvasImageSource](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#image-sources-for-2d-rendering-contexts)類別物件(像是{{domxref("HTMLImageElement")}},、\<canvas>元素、{{HTMLElement("video")}} 元素等)
 
 Type 是一串字串，定義了如何產生樣式，允許的值有:
 
@@ -583,9 +586,11 @@ Type 是一串字串，定義了如何產生樣式，允許的值有:
 - `no-repeat`
   - : 不重複排列影像，只使用一次
 
-> **備註：** Firefox 現在只支援 repeat，所以其他值都是無效的
+> [!NOTE]
+> Firefox 現在只支援 repeat，所以其他值都是無效的
 
-> **備註：** 傳入尺寸為 0x0 像素的畫布會引起錯誤
+> [!NOTE]
+> 傳入尺寸為 0x0 像素的畫布會引起錯誤
 
 利用 createPattern()的方法和前面利用漸層的方法十分類似，我們呼叫 createPattern()產生{{domxref("CanvasPattern")}}物件，然後將{CanvasPattern}物件設成 fillStyle 或 strokeStyle 的屬性值，例如:
 
@@ -595,7 +600,8 @@ img.src = "someimage.png";
 var ptrn = ctx.createPattern(img, "repeat");
 ```
 
-> **備註：** 不像 drawImage()方法，呼叫 createPattern()方法前影像必須要先載入完成，否則可能圖像的程生會有問題。
+> [!NOTE]
+> 不像 drawImage()方法，呼叫 createPattern()方法前影像必須要先載入完成，否則可能圖像的程生會有問題。
 
 ### `createPattern` 範例
 
@@ -644,7 +650,8 @@ draw();
 
 `shadowOffsetX和shadowOffsetY會決定陰影延伸大小，若是為正值，則陰影會往右(沿X軸)和往下(沿Y軸)延伸，若是為負值，則會往正值相反方向延伸。`
 
-> **備註：** 基於 HTML5 提議規格變更，從 開始，陰影只會在 source-over 的[構圖排列](/zh-TW/docs/Web/Guide/HTML/Canvas_tutorial/Compositing)下產生
+> [!NOTE]
+> 基於 HTML5 提議規格變更，從 開始，陰影只會在 source-over 的[構圖排列](/zh-TW/docs/Web/API/Canvas_API/Tutorial/Compositing)下產生
 
 ### 文字陰影範例
 

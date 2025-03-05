@@ -33,4 +33,4 @@ HTML принято сохранять с расширением `.htm` или `
 ### Техническая справка
 
 - [Документация HTML на MDN](/ru/docs/Web/HTML)
-- [Спецификация HTML](http://www.w3.org/TR/html5/)
+- [Спецификация HTML](https://www.w3.org/TR/html5/)

@@ -12,7 +12,8 @@ l10n:
 
 このメソッドは、キャンバスの変換行列の影響を受けません。指定された矩形がキャンパスの境界の外にはみ出る場合は、返される `ImageData` オブジェクトのキャンバスの外側の部分は透明な黒になります。
 
-> **メモ:** 画像データは、{{domxref("CanvasRenderingContext2D.putImageData()", "putImageData()")}} メソッドでキャンバスに描画できます。
+> [!NOTE]
+> 画像データは、{{domxref("CanvasRenderingContext2D.putImageData()", "putImageData()")}} メソッドでキャンバスに描画できます。
 
 [キャンバスとピクセル操作](/ja/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)に、`getImageData()` およびキャンバスの内容の一般的な操作に関するさらなる情報があります。
 

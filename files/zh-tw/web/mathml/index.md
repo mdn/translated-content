@@ -5,7 +5,7 @@ slug: Web/MathML
 
 {{MathMLRef}}
 
-**Mathematical Markup Language (MathML)** 是一種基於 [XML](/zh-TW/docs/XML) 的延伸，可以用來描述數學符號以及保留數學式結構和內容。在這裡你可以找到參考文件, 範例以及工具。你可以從 [slides for the innovation fairs at Mozilla Summit 2013](http://fred-wang.github.io/MozSummitMathML/index.html) 做個快速的大致瀏覽。
+**Mathematical Markup Language (MathML)** 是一種基於 [XML](/zh-TW/docs/Web/XML) 的延伸，可以用來描述數學符號以及保留數學式結構和內容。在這裡你可以找到參考文件, 範例以及工具。你可以從 [slides for the innovation fairs at Mozilla Summit 2013](http://fred-wang.github.io/MozSummitMathML/index.html) 做個快速的大致瀏覽。
 
 ## MathML references
 
@@ -27,10 +27,10 @@ slug: Web/MathML
 
 ## Tools
 
-- [W3C Validator](http://validator.w3.org)
+- [W3C Validator](https://validator.w3.org/)
 - [FireMath Firefox add-on](https://addons.mozilla.org/de/firefox/addon/8969/)
-- [Mathzilla Firefox add-on collection](https://addons.mozilla.org/firefox/collections/fred_wang/mathzilla/)
-- [LaTeXML](https://dlmf.nist.gov/LaTeXML/) - 將 LaTeX 文件編譯為 HTML+MathML 網頁
+- [Mathzilla Firefox add-on collection](https://addons.mozilla.org/zh-TW/firefox/collections/5509895/mathzilla/)
+- [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) - 將 LaTeX 文件編譯為 HTML+MathML 網頁
 - [Web Equation](http://webdemo.visionobjects.com/home.html#equation) - 將手寫的數學式轉換成 MathML 或 LaTeX
 - [MathJax](https://www.mathjax.org/) - 使數學式的展現能跨瀏覽器的 JavaScript display engine
 

@@ -2,12 +2,12 @@
 title: Notification
 slug: Web/API/Notification
 l10n:
-  sourceCommit: 571287e7fe2a51f8790c1dc717e5fb55ca60339d
+  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
-`Notification` は[通知 API](/ja/docs/Web/API/Notifications_API) のインターフェイスで、ユーザーへのデスクトップ通知の設定と表示に使われます。
+`Notification` は{{domxref("Notifications API", "通知 API", "", "nocode")}} のインターフェイスで、ユーザーへのデスクトップ通知の設定と表示に使われます。
 
 これらの通知の表示方法や機能はプラットフォームによって異なりますが、一般にユーザーに対して非同期に情報を提供する方法を提供します。
 
@@ -20,9 +20,9 @@ l10n:
 
 ## 静的プロパティ
 
-これらのプロパティは `Notification` オブジェクト自身のみで利用することができます。
+_親インターフェイスである {{domxref("EventTarget")}} から継承したプロパティもあります。_
 
-- {{domxref("Notification.permission")}} {{ReadOnlyInline}}
+- {{domxref("Notification.permission_static", "Notification.permission")}} {{ReadOnlyInline}}
 
   - : 文字列で、通知の表示についての現在の権限を表します。取りうる値は次の通りです。
 
@@ -30,37 +30,37 @@ l10n:
     - `granted` —通知が表示されることをユーザーが受け入れた。
     - `default` — ユーザーの選択が不明であるため、ブラウザーは値が denied であるかのように動作します。
 
-- {{domxref("Notification.maxActions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Notification.maxActions_static", "Notification.maxActions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 端末とユーザーエージェントが対応しているアクションの最大数。
 
 ## インスタンスプロパティ
 
-これらのプロパティは `Notification` オブジェクトのインスタンスでのみ使用可能です。
+_親インターフェイスである {{domxref("EventTarget")}} から継承したプロパティもあります。_
 
 - {{domxref("Notification.actions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : コンストラクターの `options` 引数で指定された、通知のアクションの配列です。
-- {{domxref("Notification.badge")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 通知自体を表示する空間が充分にない場合に通知を表す画像の URL です。
+- {{domxref("Notification.badge")}} {{ReadOnlyInline}}
+  - : Android の通知バーなど、通知そのものを表示する空間が十分でない場合に通知を表す画像の URL を含む文字列。Android 端末では、バッジは最大4xの解像度、約 96 × 96 ピクセルの端末に対応する必要があり、画像は自動的にマスクされます。
 - {{domxref("Notification.body")}} {{ReadOnlyInline}}
   - : コンストラクターの `options` 引数で指定された、通知の本文の文字列です。
 - {{domxref("Notification.data")}} {{ReadOnlyInline}}
   - : 通知のデータの構造化されたクローンを返します。
 - {{domxref("Notification.dir")}} {{ReadOnlyInline}}
   - : コンストラクターの `options` 引数で指定された、通知の書字方向です。
-- {{domxref("Notification.lang")}} {{ReadOnlyInline}}
-  - : コンストラクターの `options` 引数で指定された、通知の言語コードです。
-- {{domxref("Notification.tag")}} {{ReadOnlyInline}}
-  - : コンストラクターの `options` 引数で指定された、通知の ID です。
 - {{domxref("Notification.icon")}} {{ReadOnlyInline}}
   - : コンストラクターの `options` 引数で指定された、通知のアイコンの画像 URL です。
 - {{domxref("Notification.image")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : コンストラクターの `options` 引数で指定された、通知の一部として表示される画像の URL です。
+- {{domxref("Notification.lang")}} {{ReadOnlyInline}}
+  - : コンストラクターの `options` 引数で指定された、通知の言語コードです。
 - {{domxref("Notification.renotify")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 古い通知が新しい通知に置き換えられた後、ユーザーに通知するかどうかを指定します。
-- {{domxref("Notification.requireInteraction")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Notification.requireInteraction")}} {{ReadOnlyInline}}
   - : 論理値で、ユーザーがクリックするか閉じるかするまで、通知が自動的に閉じずに残るべきであることを示します。
-- {{domxref("Notification.silent")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Notification.silent")}} {{ReadOnlyInline}}
   - : 静かに通知をするかどうかを明示します。つまり、端末の設定に関係なく、通知の際に無音やバイブレーションさせない状態を設定できます。
+- {{domxref("Notification.tag")}} {{ReadOnlyInline}}
+  - : コンストラクターの `options` 引数で指定された、通知の ID です。
 - {{domxref("Notification.timestamp")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 通知が生成されたとき、または適用されるとき (過去、現在、未来) の時刻を示します。
 - {{domxref("Notification.title")}} {{ReadOnlyInline}}
@@ -70,19 +70,21 @@ l10n:
 
 ## 静的メソッド
 
-これらのメソッドは `Notification` オブジェクト自体に対してのみ使用できます。
+_親インターフェイスである {{domxref("EventTarget")}} から継承したメソッドもあります。_
 
-- {{domxref("Notification.requestPermission()")}}
+- {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}}
   - : ユーザーに通知を表示する許可をリクエストします。
 
 ## インスタンスメソッド
 
-これらのメソッドは `Notification` オブジェクトのインスタンス、または [`prototype`](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) からのみ使用できます。 `Notification` オブジェクトは {{domxref("EventTarget")}} インターフェイスも継承しています。
+_親インターフェイスである {{domxref("EventTarget")}} から継承したメソッドもあります。_
 
 - {{domxref("Notification.close()")}}
-  - : プログラムで通知を閉じます。
+  - : プログラムで通知インスタンスを閉じます。
 
 ## イベント
+
+_親インターフェイスである {{domxref("EventTarget")}} から継承したイベントもあります。_
 
 - {{domxref("Notification.click_event", "click")}}
   - : ユーザーが通知をクリックするたびに発生します。
@@ -131,7 +133,8 @@ function notifyMe() {
 
 このページでライブ例を公開するのはやめました。 Chrome や Firefox が別オリジンの {{htmlelement("iframe")}} から要求された通知の許可をしないようになり、その他のブラウザーも従っているからです。動作する例を見る場合は、 [To-do リストの例](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)（また、[ライブで動作するアプリ](https://mdn.github.io/dom-examples/to-do-notifications/)）を参照してください。
 
-> **メモ:** 上記の例では、通知をユーザーの操作（ボタンのクリック）から起動しました。ユーザーが同意していない通知でユーザーに迷惑をかけるべきではないので、これはベストプラクティスであるだけでなく、今後ブラウザーはユーザーの操作によって起動されたものではない通知の許可の要求を明示的に拒否するようになるでしょう。例えば、 Firefox はバージョン72からすでにこれを行っています。
+> [!NOTE]
+> 上記の例では、通知をユーザーの操作（ボタンのクリック）から起動しました。ユーザーが同意していない通知でユーザーに迷惑をかけるべきではないので、これはベストプラクティスであるだけでなく、今後ブラウザーはユーザーの操作によって起動されたものではない通知の許可の要求を明示的に拒否するようになるでしょう。例えば、 Firefox はバージョン72からすでにこれを行っています。
 
 ## 仕様書
 

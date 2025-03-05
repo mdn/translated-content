@@ -15,7 +15,8 @@ l10n:
 
 在所有可用的 {{domxref("RTCIceTransport")}} 对象上标识唯一候选者的字符串。
 
-> **备注：** 如果候选者 `port`（端口）的值为 `null`，并且{{Glossary("user agent", "用户代理")}}支持 `port`，将这个候选者传递给 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 时将失败，并抛出 `OperationError` 异常。
+> [!NOTE]
+> 如果候选者 `port`（端口）的值为 `null`，并且{{Glossary("user agent", "用户代理")}}支持 `port`，将这个候选者传递给 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 时将失败，并抛出 `OperationError` 异常。
 
 ## 使用说明
 

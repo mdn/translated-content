@@ -2,7 +2,7 @@
 title: 典型的 HTTP 會話
 slug: Web/HTTP/Session
 l10n:
-  sourceCommit: 46a16cc28c5da14b45a6f65e478d032532764122
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTTPSidebar}}
@@ -19,9 +19,10 @@ l10n:
 
 在用戶端—伺服器協定中，是用戶端建立連接。在 HTTP 中打開連接意味著在底層傳輸層啟動一個連接，這通常是 TCP。
 
-對於 TCP，用於計算機上的 HTTP 伺服器的默認端口是 80。也可以使用其他端口，例如 8000 或 8080。要提取的頁面的 URL 包含域名和連接埠，如果連接埠是 80 則後者可以省略。有關更多詳細訊息，請參見[識別 Web 上的資源](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)。
+對於 TCP，用於計算機上的 HTTP 伺服器的默認端口是 80。也可以使用其他端口，例如 8000 或 8080。要提取的頁面的 URL 包含域名和連接埠，如果連接埠是 80 則後者可以省略。有關更多詳細訊息，請參見 [URL 參考](/zh-TW/docs/Web/URI)。
 
-> **備註：** 用戶端—伺服器模型不允許伺服器在沒有明確請求的情況下向用戶端發送數據。但是，各種 Web API 使這種用例成為可能，包括 [Push API](/zh-TW/docs/Web/API/Push_API)、[伺服器發送事件](/zh-TW/docs/Web/API/Server-sent_events)和 [WebSockets API](/zh-TW/docs/Web/API/WebSockets_API)。
+> [!NOTE]
+> 用戶端—伺服器模型不允許伺服器在沒有明確請求的情況下向用戶端發送數據。但是，各種 Web API 使這種用例成為可能，包括 [Push API](/zh-TW/docs/Web/API/Push_API)、[伺服器發送事件](/zh-TW/docs/Web/API/Server-sent_events)和 [WebSockets API](/zh-TW/docs/Web/API/WebSockets_API)。
 
 ## 發送用戶端請求
 
@@ -63,7 +64,7 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 HTTP 定義了一組[請求方法](/zh-TW/docs/Web/HTTP/Methods)，指示對資源執行的所需操作。雖然它們也可以是名詞，但這些請求方法有時被稱為 HTTP 動詞。最常見的請求是 `GET` 和 `POST`：
 
 - {{HTTPMethod("GET")}} 方法請求指定資源的數據表示。使用 `GET` 的請求應僅檢索數據。
-- {{HTTPMethod("POST")}} 方法將數據發送到伺服器，以便它可以更改其狀態。這是通常用於 [HTML 表單](/zh-TW/docs/Learn/Forms)的方法。
+- {{HTTPMethod("POST")}} 方法將數據發送到伺服器，以便它可以更改其狀態。這是通常用於 [HTML 表單](/zh-TW/docs/Learn_web_development/Extensions/Forms)的方法。
 
 ## 伺服器回應的結構
 
@@ -94,7 +95,7 @@ X-XSS-Protection: 1; mode=block
 Vary: Accept-Encoding,Cookie
 Age: 7
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -121,7 +122,7 @@ Via: Moz-Cache-zlb05
 Connection: Keep-Alive
 Content-Length: 325 (the content contains a default page to display if the user-agent is not able to follow the link)
 
-<!DOCTYPE html>… (contains a site-customized page helping the user to find the missing resource)
+<!doctype html>… (contains a site-customized page helping the user to find the missing resource)
 ```
 
 通知請求的資源不存在：
@@ -143,7 +144,7 @@ X-XSS-Protection: 1; mode=block
 Vary: Accept-Encoding,Cookie
 X-Cache: Error from cloudfront
 
-<!DOCTYPE html>… (contains a site-customized page helping the user to find the missing resource)
+<!doctype html>… (contains a site-customized page helping the user to find the missing resource)
 ```
 
 ### 回應狀態碼
@@ -156,7 +157,7 @@ X-Cache: Error from cloudfront
 
 ## 參見
 
-- [在 Web 上識別資源](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [URL](/zh-TW/docs/Web/URI)
 - [HTTP 標頭](/zh-TW/docs/Web/HTTP/Headers)
 - [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Methods)
 - [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)

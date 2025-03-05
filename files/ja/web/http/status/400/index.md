@@ -1,26 +1,60 @@
 ---
 title: 400 Bad Request
 slug: Web/HTTP/Status/400
+l10n:
+  sourceCommit: ae86913908651e6008079242691e06b5e01d1c78
 ---
 
 {{HTTPSidebar}}
 
-HyperText Transfer Protocol (HTTP) の **`400 Bad Request`** レスポンスステータスコードは、何らかのクライアント側のエラーであると分かったために、サーバーがそのリクエストを処理しない (できない) ことを表します (例えば、リクエストの構文が正しくない、リクエストメッセージのフレーミングが無効、リクエスト経路に偽りがあるなど)。
+HTTP の **`400 Bad Request`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)ステータスコードで、サーバーがクライアントエラーとみなした何らかの理由により、サーバーがリクエストを処理しなかったことを示します。
+`400` レスポンスの理由は、通常、リクエスト構文が不正であったり、リクエストメッセージのフレームが不正であったり、リクエストルーティングが不正であったりするものです。
 
-> **警告:** クライアントは変更なしにこのリクエストを繰り返すべきではありません。
+`400` のレスポンスを受け取ったクライアントは、リクエストを変更せずに繰り返しても、同じエラーで失敗することを想定しておくべきです。
 
 ## ステータス
 
-```
+```http
 400 Bad Request
+```
+
+## 例
+
+### リクエストの構文が不正な場合
+
+ある {{Glossary("REST")}} API があり、ユーザーを管理するエンドポイントが `http://example.com/users` であったとします。`POST` リクエストで以下の本体を送ってユーザーを作成しようとするものの、エスケープされていない改行がある不正な JSON を使っているとします。
+
+```http
+POST /users HTTP/1.1
+Host: example.com
+Content-Type: application/json
+Content-Length: 38
+
+{
+  "email": "b@example.com
+",
+  "username": "b.smith"
+}
+```
+
+{{Glossary("HTTP Content", "コンテンツ")}}が有効な形式であれば、{{HTTPStatus("201", "201 Created")}} レスポンスまたはその他の成功メッセージが返されると予想されますが、代わりにサーバーは `400` を返し、レスポンス本体には、クライアントが適切に書式化されたリクエストでアクションを再試行できるようにするためのコンテキストを含む `message` フィールドが含まれます。
+
+```http
+HTTP/1.1 400 Bad Request
+Content-Type: application/json
+Content-Length: 71
+
+{
+  "error": "Bad request",
+  "message": "Request body could not be read properly.",
+}
 ```
 
 ## 仕様書
 
-| 仕様書                                       | 題名                                                          |
-| -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "400 Bad Request" , "6.5.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## 関連情報
 
-- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.400)

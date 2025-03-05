@@ -99,10 +99,11 @@ Un sélecteur d'ID commence par un `#` plutôt que par un point, mais est essent
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/id.html", '100%', 750)}}
 
-> **Note :** Comme on l'a vu dans la leçon sur la spécificité, on attribue une haute spécificité aux ID, les sélecteurs d'ID l'emportent donc sur la plupart des autres. Cela peut rendre leur usage compliqué. La plupart du temps il est préférable de passer par des sélecteurs de classe plutôt que d'ID, cependant si l'utilisation d'une ID est la seule façon de cibler un élément — peut-être que vous n'avez pas accès au balisage, que vous ne pouvez pas l'éditer — cela fonctionnera.
+> [!NOTE]
+> Comme on l'a vu dans la leçon sur la spécificité, on attribue une haute spécificité aux ID, les sélecteurs d'ID l'emportent donc sur la plupart des autres. Cela peut rendre leur usage compliqué. La plupart du temps il est préférable de passer par des sélecteurs de classe plutôt que d'ID, cependant si l'utilisation d'une ID est la seule façon de cibler un élément — peut-être que vous n'avez pas accès au balisage, que vous ne pouvez pas l'éditer — cela fonctionnera.
 
 ## Prochain article
 
-Notre exploration des sélecteurs se poursuit par l'étude des [sélecteurs d'attributs](/fr/docs/Apprendre/CSS/Building_blocks/Selectors/Sélecteurs_d_atrribut).
+Notre exploration des sélecteurs se poursuit par l'étude des [sélecteurs d'attributs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}

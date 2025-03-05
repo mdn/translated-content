@@ -1,5 +1,5 @@
 ---
-title: ":defined"
+title: :defined
 slug: Web/CSS/:defined
 ---
 
@@ -96,4 +96,4 @@ Esto es útil si tiene un elemento personalizado complejo que demora un tiempo e
 
 ## Ver también
 
-- [Componentes web](/es/docs/Web/Web_Components)
+- [Componentes web](/es/docs/Web/API/Web_components)

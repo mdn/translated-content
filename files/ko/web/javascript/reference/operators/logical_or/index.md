@@ -9,7 +9,15 @@ l10n:
 
 **논리적 OR (`||`)** (논리적 분리) 연산자는 피연산자 중 하나 이상이 참인 경우에만 참입니다. 일반적으로 불리언(논리적) 값과 함께 사용되며, 이 경우에는 불리언 값을 반환합니다. 그러나 `||` 연산자는 실제로 지정된 피연산자 중 하나의 값을 반환하므로, 이 연산자를 불리언이 아닌 값과 함께 사용하면 불리언이 아닌 값이 반환됩니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-or.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical OR", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 || b > 0);
+// Expected output: true
+```
 
 ## 문법
 
@@ -84,7 +92,8 @@ false || ""; // f || f returns ""
 false || varObject; // f || object returns varObject
 ```
 
-> **참고:** 이 연산자를 사용하여 일부 변수에 기본값을 제공하는 경우, 거짓 같은 값(falsy)은 사용되지 않으므로 주의해야 합니다.
+> [!NOTE]
+> 이 연산자를 사용하여 일부 변수에 기본값을 제공하는 경우, 거짓 같은 값(falsy)은 사용되지 않으므로 주의해야 합니다.
 > [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null) 또는 {{jsxref("undefined")}}만 필터링해야 하는 경우, [널 병합 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)를 사용하는 것이 좋습니다.
 
 ### 불리언에 대한 변환 규칙

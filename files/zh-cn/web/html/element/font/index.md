@@ -9,11 +9,12 @@ slug: Web/HTML/Element/font
 
 _HTML Font 元素_（`<font>`）定义了该内容的字体大小、顏色与表现。
 
-> **备注：** 不要使用这个元素！请使用 CSS [字体](/zh-CN/docs/Web/CSS/CSS_fonts)属性来为文本添加样式。
+> [!NOTE]
+> 不要使用这个元素！请使用 CSS [字体](/zh-CN/docs/Web/CSS/CSS_fonts)属性来为文本添加样式。
 
 ## 属性
 
-如同其他 HTML 元素，这个元素支持[全局属性](/zh-CN/docs/HTML/Global_attributes)。
+如同其他 HTML 元素，这个元素支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `color` {{Deprecated_Inline}}
   - : 这个属性使用颜色名称或是十六进制的 #RRGGBB 格式，来设置文字的颜色。

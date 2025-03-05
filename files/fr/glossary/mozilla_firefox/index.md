@@ -17,4 +17,4 @@ Distribué pour la première fois en novembre 2004, Firefox est entièrement per
 
 ### Référence technique
 
-- [Documentation/infos développeur sur MDN](/fr/Firefox)
+- [Documentation/infos développeur sur MDN](/fr/docs/Mozilla/Firefox)

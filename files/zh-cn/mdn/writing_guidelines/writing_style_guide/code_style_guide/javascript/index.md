@@ -3,8 +3,6 @@ title: JavaScript 代码示例编写指南
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
 ---
 
-{{MDNSidebar}}
-
 以下指南涵盖了如何为 MDN Web Docs 编写 JavaScript 示例代码。本文列出了编写简洁示例的规则，以期这些示例将被尽可能多的人理解。
 
 ## JavaScript 代码示例常规指南
@@ -316,7 +314,7 @@ function doIt() {
 
 ### 循环初始化
 
-当需要[循环](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)时，从 [`for(;;)`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for)、[`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)、[`while`](/zh-CN/docs/Web/JavaScript/Reference/Statements/while) 等中选择合适的。
+当需要[循环](/zh-CN/docs/Learn_web_development/Core/Scripting/Loops)时，从 [`for(;;)`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for)、[`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)、[`while`](/zh-CN/docs/Web/JavaScript/Reference/Statements/while) 等中选择合适的。
 
 - 在遍历集合中的所有元素时，避免使用传统的 `for (;;)` 循环；优先使用 `for...of` 或 `forEach()`。请注意，如果你使用的是一个不是 `Array` 的集合，你必须检查 `for...of` 是否真的被支持（它需要变量是可迭代的），或者 `forEach()` 方法是否存在。
 
@@ -387,9 +385,11 @@ function doIt() {
   }
   ```
 
-> **警告：** 切勿使用 `for...in` 遍历数组和字符串。
+> [!WARNING]
+> 切勿使用 `for...in` 遍历数组和字符串。
 
-> **备注：** 考虑完全不使用 `for` 循环。如果你正在使用 [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)（或者在某些操作中使用 [`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)），请考虑使用更具语义的迭代方法，比如 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map)、[`every()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/every)、[`findIndex()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)、[`find()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/find)、[`includes()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) 等。
+> [!NOTE]
+> 考虑完全不使用 `for` 循环。如果你正在使用 [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)（或者在某些操作中使用 [`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)），请考虑使用更具语义的迭代方法，比如 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map)、[`every()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/every)、[`findIndex()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)、[`find()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/find)、[`includes()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) 等。
 
 ### 控制语句
 
@@ -512,7 +512,8 @@ switch 语句可能有点棘手。
   }
   ```
 
-> **备注：** 请记住，只有*可恢复*的错误才应该被捕获和处理。所有不可恢复的错误都应该被抛出，并在调用栈中逐级向上冒泡。
+> [!NOTE]
+> 请记住，只有*可恢复*的错误才应该被捕获和处理。所有不可恢复的错误都应该被抛出，并在调用栈中逐级向上冒泡。
 
 ## 对象
 
@@ -722,7 +723,8 @@ age != 25;
   const s = d / t;
   ```
 
-> **备注：** 唯一不允许使用可读性好的语义名称的地方是存在非常公认的惯例，例如将 `i` 和 `j` 用于循环迭代器。
+> [!NOTE]
+> 唯一不允许使用可读性好的语义名称的地方是存在非常公认的惯例，例如将 `i` 和 `j` 用于循环迭代器。
 
 ### 变量声明
 

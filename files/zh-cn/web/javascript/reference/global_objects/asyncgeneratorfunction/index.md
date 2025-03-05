@@ -17,7 +17,29 @@ const AsyncGeneratorFunction = async function* () {}.constructor;
 
 `AsyncGeneratorFunction` 是 {{jsxref("Function")}} 的一个子类。
 
-{{EmbedInteractiveExample("pages/js/async-functionasterisk-function.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: AsyncGeneratorFunction()", "taller")}}
+
+```js interactive-example
+const AsyncGeneratorFunction = async function* () {}.constructor;
+
+const foo = new AsyncGeneratorFunction(`
+  yield await Promise.resolve('a');
+  yield await Promise.resolve('b');
+  yield await Promise.resolve('c');
+`);
+
+let str = "";
+
+async function generate() {
+  for await (const val of foo()) {
+    str = str + val;
+  }
+  console.log(str);
+}
+
+generate();
+// Expected output: "abc"
+```
 
 ## 构造函数
 
@@ -34,8 +56,8 @@ _同时也从它的父类 {{jsxref("Function")}} 继承实例属性_。
   - : 用于创建实例对象的构造函数。对于 `AsyncGeneratorFunction` 实例，初始值是 {{jsxref("AsyncGeneratorFunction/AsyncGeneratorFunction", "AsyncGeneratorFunction")}} 构造函数。
 - `AsyncGeneratorFunction.prototype.prototype`
   - : 所有异步生成器函数共享相同的 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性，即 [`AsyncGenerator.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)。每个异步生成器函数实例也都有它自己的 `prototype` 属性。当调用异步生成器函数时，返回的异步生成器对象继承自异步生成器函数的 `prototype` 属性，而 property 属性也继承自 `AsyncGeneratorFunction.prototype.prototype`。
-- `AsyncGeneratorFunction.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"AsyncGeneratorFunction"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
+- `AsyncGeneratorFunction.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"AsyncGeneratorFunction"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
 
 ## 实例方法
 

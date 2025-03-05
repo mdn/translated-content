@@ -53,7 +53,7 @@ Sous-instruction, apparaît toujours comme un enfant de \<xsl:for-each>, où il 
 
 ### Définition
 
-- [XSLT 1.0, section 10 (en)](http://www.w3.org/TR/xslt#sorting).
+- [XSLT 1.0, section 10 (en)](https://www.w3.org/TR/xslt#sorting).
 - [XSLT 1.0, tri (fr)](http://xmlfr.org/w3c/TR/xslt/#sorting).
 
 ### Support Gecko

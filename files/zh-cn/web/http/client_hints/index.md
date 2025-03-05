@@ -1,5 +1,5 @@
 ---
-title: HTTP 客户端提示（Clinet Hint）
+title: HTTP 客户端提示（Client Hint）
 slug: Web/HTTP/Client_hints
 ---
 
@@ -23,7 +23,8 @@ Accept-CH: Width, Downlink, Sec-CH-UA
 
 有一小部分[低熵客户端提示标头](#低熵提示)，即便没有请求，也可以由客户端发送。
 
-> **备注：** 也可以在 HTML 中使用带有 [`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#attr-http-equiv) 属性的 {{HTMLElement("meta")}} 元素指定客户端提示。
+> [!NOTE]
+> 也可以在 HTML 中使用带有 [`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#attr-http-equiv) 属性的 {{HTMLElement("meta")}} 元素指定客户端提示。
 >
 > ```html
 > <meta http-equiv="Accept-CH" content="Width, Downlink, Sec-CH-UA" />
@@ -71,7 +72,8 @@ Vary: Sec-CH-Prefers-Reduced-Motion
 Critical-CH: Sec-CH-Prefers-Reduced-Motion
 ```
 
-> **备注：** 我们还在 {{httpheader("Vary")}} 标头中指定了 `Sec-CH-Prefers-Reduced-Motion`，以向浏览器表明，即使 URL 保持相同，只要基于此标头的值不同，提供的值也不同，所以浏览器不应该使用已存在的缓存响应，而是应该单独地缓存这个响应。在 `Accept-CH` 中列出的标头也应该出现在 `Accept-CH` 和 `Vary` 标头中。
+> [!NOTE]
+> 我们还在 {{httpheader("Vary")}} 标头中指定了 `Sec-CH-Prefers-Reduced-Motion`，以向浏览器表明，即使 URL 保持相同，只要基于此标头的值不同，提供的值也不同，所以浏览器不应该使用已存在的缓存响应，而是应该单独地缓存这个响应。在 `Accept-CH` 中列出的标头也应该出现在 `Accept-CH` 和 `Vary` 标头中。
 
 由于 `Sec-CH-Prefers-Reduced-Motion` 是源请求中的不存在的重要提示，因此客户端会自动地重试请求——这次通过 `Sec-CH-Prefers-Reduced-Motion` 告诉服务器它有一个用户首选项要减少动画。
 
@@ -89,7 +91,8 @@ Sec-CH-Prefers-Reduced-Motion: "reduce"
 
 [用户代理客户端提示 API](/zh-CN/docs/Web/API/User-Agent_Client_Hints_API) 可以在网页的 JavaScript 中使用客户端提示。
 
-> **备注：** 服务器当前通过解析 {{HTTPHeader("User-Agent")}} 标头获得大部分相同的信息。由于历史原因，该标头包含许多不相关的信息，以及用于识别*特定用户*的信息。UA 客户端提示提供更有效的和隐私保护的方式来获取所需要的信息。它们最终有望取代这种旧的方式。
+> [!NOTE]
+> 服务器当前通过解析 {{HTTPHeader("User-Agent")}} 标头获得大部分相同的信息。由于历史原因，该标头包含许多不相关的信息，以及用于识别*特定用户*的信息。UA 客户端提示提供更有效的和隐私保护的方式来获取所需要的信息。它们最终有望取代这种旧的方式。
 
 ### 用户首选项媒体特性客户端提示
 
@@ -109,4 +112,4 @@ Sec-CH-Prefers-Reduced-Motion: "reduce"
 - [`Vary` HTTP 标头](/zh-CN/docs/Web/HTTP/Headers/Vary)
 - [客户端提示的基础架构](https://wicg.github.io/client-hints-infrastructure/)
 - [用户代理客户端提示 API](/zh-CN/docs/Web/API/User-Agent_Client_Hints_API)
-- [使用用户代理客户端提示改善用户隐私和开发人员体验](https://developer.chrome.com/articles/user-agent-client-hints/)（web.dev）
+- [使用用户代理客户端提示改善用户隐私和开发人员体验](https://developer.chrome.google.cn/docs/privacy-security/user-agent-client-hints)（developer.chrome.google.cn）

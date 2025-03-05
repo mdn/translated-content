@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers
 
 {{HTTPSidebar}}Os cabeçalhos HTTP permitem que o cliente e o servidor passem informações adicionais com a solicitação ou a resposta HTTP. Um cabeçalho de solicitação é composto por seu nome _case-insensitive_ (não diferencia letras maiúsculas e minúsculas), seguido por dois pontos ':' e pelo seu valor (sem quebras de linha). Espaços em branco antes do valor serão ignorados.
 
-Cabeçalhos proprietários personalizados podem ser adicionados usando o prefixo 'X-', mas essa convenção foi descontinuada em Junho de 2012, devido aos inconvenientes que causou quando os campos não-padronizados tornaram-se padronizados na [RFC 6648](https://tools.ietf.org/html/rfc6648); outros estão listados em um [registro IANA](http://www.iana.org/assignments/message-headers/perm-headers.html), cujo o conteúdo original foi definido na [RFC 4229](http://tools.ietf.org/html/rfc4229). O IANA também mantém o [registro das propostas de novas mensagens de cabeçalhos HTTP](http://www.iana.org/assignments/message-headers/prov-headers.html).
+Cabeçalhos proprietários personalizados podem ser adicionados usando o prefixo 'X-', mas essa convenção foi descontinuada em Junho de 2012, devido aos inconvenientes que causou quando os campos não-padronizados tornaram-se padronizados na [RFC 6648](https://tools.ietf.org/html/rfc6648); outros estão listados em um [registro IANA](https://www.iana.org/assignments/message-headers/perm-headers.html), cujo o conteúdo original foi definido na [RFC 4229](https://tools.ietf.org/html/rfc4229). O IANA também mantém o [registro das propostas de novas mensagens de cabeçalhos HTTP](https://www.iana.org/assignments/message-headers/prov-headers.html).
 
 Cabeçalhos podem ser classificados de acordo com os seus contextos:
 
@@ -49,12 +49,12 @@ A lista a seguir resume os cabeçalhos HTTP pela categoria de uso. Para uma list
 
 ## Client hints
 
-O recurso HTTP [Client hints](/pt-BR/docs/Glossary/Client_hints) ainda está em desenvolvimento. A documentação está disponível no site do [HTTP working group.](https://httpwg.org/http-extensions/client-hints.html)
+O recurso HTTP [Client hints](/pt-BR/docs/Web/HTTP/Client_hints) ainda está em desenvolvimento. A documentação está disponível no site do [HTTP working group.](https://httpwg.org/http-extensions/client-hints.html)
 
 - {{HTTPHeader("Accept-CH")}} {{experimental_inline}}
-  - : Os servidores podem dar suporte para o [Client hints](/pt-BR/docs/Glossary/Client_hints) usando o campo de cabeçalho Accept-CH ou um elemento HTML \<meta> equivalente com atributo http-equiv (\[HTML5]).
+  - : Os servidores podem dar suporte para o [Client hints](/pt-BR/docs/Web/HTTP/Client_hints) usando o campo de cabeçalho Accept-CH ou um elemento HTML \<meta> equivalente com atributo http-equiv (\[HTML5]).
 - {{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}}
-  - : Os servidores podem solicitar ao cliente que lembre-se do conjunto de [Client hints](/pt-BR/docs/Glossary/Client_hints) que o servidor dá suporte por um período de tempo especificado, para permitir a entrega de [Client hints](/pt-BR/docs/Glossary/Client_hints) em solicitações seguidas ao servidor de origem(\[RFC6454]).
+  - : Os servidores podem solicitar ao cliente que lembre-se do conjunto de [Client hints](/pt-BR/docs/Web/HTTP/Client_hints) que o servidor dá suporte por um período de tempo especificado, para permitir a entrega de [Client hints](/pt-BR/docs/Web/HTTP/Client_hints) em solicitações seguidas ao servidor de origem(\[RFC6454]).
 - {{HTTPHeader("Content-DPR")}} {{experimental_inline}}
   - : Um número que indica a proporção entre pixels físicos sobre pixels CSS da resposta de imagem selecionada.
 - {{HTTPHeader("DPR")}} {{experimental_inline}}

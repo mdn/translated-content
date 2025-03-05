@@ -30,7 +30,7 @@ slug: Web/XSLT/Element/message
 
 ### 정의
 
-[XSLT section 13, Messages](http://www.w3.org/TR/xslt#message)
+[XSLT section 13, Messages](https://www.w3.org/TR/xslt#message)
 
 ### Gecko 지원
 

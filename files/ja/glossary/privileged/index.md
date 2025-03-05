@@ -15,4 +15,4 @@ slug: Glossary/Privileged
 
 ### これについて学ぶ
 
-- [Information Security Tutorial](/ja/Learn/tutorial/Information_Security_Basics)
+- [Information Security Tutorial](/ja/docs/Learn/tutorial/Information_Security_Basics)

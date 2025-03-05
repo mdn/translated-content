@@ -1,6 +1,8 @@
 ---
 title: opacity()
 slug: Web/CSS/filter-function/opacity
+l10n:
+  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
 {{CSSRef}}
@@ -9,7 +11,8 @@ slug: Web/CSS/filter-function/opacity
 
 {{EmbedInteractiveExample("pages/css/function-opacity.html")}}
 
-> **メモ:** この関数はもっと一般的な {{Cssxref("opacity")}} プロパティと似ています。違いはフィルターの場合、ブラウザーによってはハードウェアアクセラレーションにより性能が上がることです。
+> [!NOTE]
+> この関数はもっと一般的な {{Cssxref("opacity")}} プロパティと似ています。違いはフィルターの場合、ブラウザーによってはハードウェアアクセラレーションにより性能が上がることです。
 
 ## 構文
 
@@ -20,7 +23,7 @@ opacity(amount)
 ### 引数
 
 - `amount`
-  - : 変換の度合いで、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。 `0%` の値では完全に透明になり、 `100%` の値では入力が変更されないままになります。 `0%` と `100%` の間の値は、効果の割合です。補間時の欠損値は `1` です。
+  - : 変換の度合いで、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。 `0%` の値では完全に透明になり、 `100%` の値では入力が変更されないままになります。 `0%` と `100%` の間の値は、効果の割合です。{{Glossary("interpolation","補間")}}の初期値は `1` です。
 
 ## 例
 
@@ -42,14 +45,14 @@ opacity(1)    /* 効果なし */
 
 ## 関連情報
 
-- {{cssxref("&lt;filter-function&gt;")}}
+- その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("&lt;filter-function&gt;")}} 関数には、次のものがあります。
+  - {{cssxref("filter-function/blur", "blur()")}}
+  - {{cssxref("filter-function/brightness", "brightness()")}}
+  - {{cssxref("filter-function/contrast", "contrast()")}}
+  - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+  - {{cssxref("filter-function/grayscale", "grayscale()")}}
+  - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+  - {{cssxref("filter-function/invert", "invert()")}}
+  - {{cssxref("filter-function/saturate", "saturate()")}}
+  - {{cssxref("filter-function/sepia", "sepia()")}}
 - CSS の {{cssxref("opacity")}} プロパティ
-- {{cssxref("filter-function/blur()", "blur()")}}
-- {{cssxref("filter-function/brightness()", "brightness()")}}
-- {{cssxref("filter-function/contrast()", "contrast()")}}
-- {{cssxref("filter-function/drop-shadow()", "drop-shadow()")}}
-- {{cssxref("filter-function/grayscale()", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate()", "hue-rotate()")}}
-- {{cssxref("filter-function/invert()", "invert()")}}
-- {{cssxref("filter-function/saturate()", "saturate()")}}
-- {{cssxref("filter-function/sepia()", "sepia()")}}

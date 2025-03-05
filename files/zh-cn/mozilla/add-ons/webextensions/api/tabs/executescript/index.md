@@ -9,7 +9,8 @@ l10n:
 
 向页面注入 JavaScript 代码。
 
-> **备注：** 当使用 Manifest V3 或更高版本时，请使用 {{WebExtAPIRef("scripting.executeScript()")}} 来执行脚本。
+> [!NOTE]
+> 当使用 Manifest V3 或更高版本时，请使用 {{WebExtAPIRef("scripting.executeScript()")}} 来执行脚本。
 
 你可以将代码注入到其 URL 可以用[匹配模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)表示的页面中。为此，其协议必须是以下之一：`http`、`https` 或 `file`。
 
@@ -70,7 +71,8 @@ let executing = browser.tabs.executeScript(
 
       - : `string`。要注入的代码，作为文本字符串。
 
-        > **警告：** 不要使用此属性将不受信任的数据插入 JavaScript，因为这可能会导致安全问题。
+        > [!WARNING]
+        > 不要使用此属性将不受信任的数据插入 JavaScript，因为这可能会导致安全问题。
 
     - `file` {{optional_inline}}
 
@@ -114,7 +116,8 @@ foo;
 
 结果值必须是[可结构化克隆](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)的（请参见[数据克隆算法](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#数据克隆算法)）。
 
-> **备注：** 最后一个语句也可能是一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，但 [webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript) 库不支持此功能。
+> [!NOTE]
+> 最后一个语句也可能是一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，但 [webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript) 库不支持此功能。
 
 如果发生任何错误，则该 promise 将被拒绝并带有错误消息。
 
@@ -180,7 +183,8 @@ executing.then(onExecuted, onError);
 
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-executeScript) API。此文档源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-executeScript) API。此文档源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

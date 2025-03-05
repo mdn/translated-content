@@ -7,7 +7,8 @@ l10n:
 
 {{APIRef}}{{deprecated_header}}
 
-> **경고:** 개발자들은 이 이벤트의 사용을 피해야 합니다. 아래의 "사용 일람"을 참고하세요.
+> [!WARNING]
+> 개발자들은 이 이벤트의 사용을 피해야 합니다. 아래의 "사용 일람"을 참고하세요.
 
 **`unload`** 이벤트는 문서나 하위 리소스가 언로딩 중일 때 발생합니다.
 
@@ -62,7 +63,7 @@ onunload = (event) => {};
 
 페이지 언로드 이벤트를 감지하고자 한다면, `pagehide` 이벤트를 감지하는 것이 가장 적합합니다.
 
-`unload` 이벤트와 관련된 문제에 대한 자세한 내용은 [페이지 수명 주기 API](https://developer.chrome.com/blog/page-lifecycle-api/#the-unload-event) 안내서를 참조하세요.
+`unload` 이벤트와 관련된 문제에 대한 자세한 내용은 [페이지 수명 주기 API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api#the-unload-event) 안내서를 참조하세요.
 
 ## 예제
 
@@ -125,7 +126,7 @@ onunload = (event) => {};
 - [`visibilitychange`](/ko/docs/Web/API/Document/visibilitychange_event) 이벤트.
 - [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/)
   `beforeunload`/`unload` 대신 `visibilitychange` 를 사용해야 하는 이유에 대해 자세히 설명합니다.
-- [페이지 수명 주시 API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state)
+- [페이지 수명 주시 API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api#developer-recommendations-for-each-state)
   문서는 웹 애플리케이션에서 페이지 수명 주기 동작을 처리하는 모범 사례 지침을 제공합니다.
 - [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): 페이지 수명 주기 동작에서 브라우저 간의 불일치를 처리하는 JavaScript 라이브러리.
 - [뒤로/앞으로 캐시](https://web.dev/articles/bfcache) 가 무엇인지 설명하고, 이것이 다양한 페이지 수명 주기 이벤트에 미치는 영향을 설명합니다.

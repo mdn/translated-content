@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("CSS Properties and Values API")}}
 
-**CSS プロパティと値 API**（[CSS Houdini](/ja/docs/Web/API/Houdini) API の傘下）により、 {{cssxref('--*', 'CSS カスタムプロパティ')}}の登録において、開発者は明示的に、プロパティの型チェック、既定値、プロパティの値を継承の有無の登録を行うことができます。
+**CSS プロパティと値 API**（[CSS Houdini](/ja/docs/Web/API/Houdini_APIs) API の傘下）により、 {{cssxref('--*', 'CSS カスタムプロパティ')}}の登録において、開発者は明示的に、プロパティの型チェック、既定値、プロパティの値を継承の有無の登録を行うことができます。
 
 ## インターフェイス
 
@@ -52,4 +52,4 @@ window.CSS.registerProperty({
 - [CSS プロパティと値 API の使用](/ja/docs/Web/API/CSS_Properties_and_Values_API/guide)
 - [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
 - [CSS 型付きオブジェクトモデル](/ja/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/ja/docs/Web/API/Houdini)
+- [CSS Houdini](/ja/docs/Web/API/Houdini_APIs)

@@ -1,5 +1,5 @@
 ---
-title: <hgroup>
+title: "<hgroup>: 見出しグループ要素"
 slug: Web/HTML/Element/hgroup
 l10n:
   sourceCommit: ca65963b93e69591b9362bb2bfde56f93128e2cb
@@ -9,7 +9,37 @@ l10n:
 
 **`<hgroup>`** は [HTML](/ja/docs/Web/HTML) の要素で、見出しとそれに関連する内容を表します。これは 1 つの [`<h1>–<h6>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素と、1 つ以上の [`<p>`](/ja/docs/Web/HTML/Element/p) 要素をグループ化します。
 
-{{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<hgroup>
+  <h1>Frankenstein</h1>
+  <p>Or: The Modern Prometheus</p>
+</hgroup>
+<p>
+  Victor Frankenstein, a Swiss scientist, has a great ambition: to create
+  intelligent life. But when his creature first stirs, he realizes he has made a
+  monster. A monster which, abandoned by his master and shunned by everyone who
+  sees it, follows Dr Frankenstein to the very ends of the earth.
+</p>
+```
+
+```css interactive-example
+hgroup {
+  text-align: right;
+  padding-right: 16px;
+  border-right: 10px solid #00c8d7;
+}
+
+hgroup h1 {
+  margin-bottom: 0;
+}
+
+hgroup p {
+  margin: 0;
+  font-weight: bold;
+}
+```
 
 ## 属性
 
@@ -45,10 +75,6 @@ l10n:
 
 {{EmbedLiveSample('Examples')}}
 
-## アクセシビリティの考慮
-
-現在のところ、 `<hgroup>` 要素に強いアクセシビリティの意味はありません。要素内のコンテンツ（見出しと、任意の段落）は、ブラウザーのアクセシビリティ API によって公開されます。
-
 ## 技術的概要
 
 <table class="properties">
@@ -75,7 +101,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
@@ -88,8 +114,10 @@ l10n:
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"
+            >group</a
+          ></code
         >
       </td>
     </tr>

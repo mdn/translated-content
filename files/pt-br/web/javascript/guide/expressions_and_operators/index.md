@@ -11,16 +11,16 @@ Este artigo descreve expressões e operadores de JavaScript, incluindo operadore
 
 O JavaScript possui os tipos de operadores a seguir. Esta seção descreve os operadores e contém informações sobre precedência de operadores.
 
-- [Operadores de atribuição](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operador_atribuicao)
-- [Operadores de comparação](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operador_comparacao)
-- [Operadores aritméticos](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_aritmeticos)
-- [Operadores bit a bit](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_bit_a_bit)
-- [Operadores lógicos](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_logicos)
-- [Operadores de string](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_string)
-- [Operador condicional (ternário)](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operador_condicional_ternario)
-- [Operador vírgula](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operador_virgula)
-- [Operadores unário](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_unario)
-- [Operadores relacionais](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operador_virgula)
+- [Operadores de atribuição](#operador_atribuicao)
+- [Operadores de comparação](#operador_comparacao)
+- [Operadores aritméticos](#operadores_aritmeticos)
+- [Operadores bit a bit](#operadores_bit_a_bit)
+- [Operadores lógicos](#operadores_logicos)
+- [Operadores de string](#operadores_string)
+- [Operador condicional (ternário)](#operador_condicional_ternario)
+- [Operador vírgula](#operador_virgula)
+- [Operadores unário](#operadores_unario)
+- [Operadores relacionais](#operador_virgula)
 
 O JavaScript possui tanto operadores _binários_ quanto _unários_ e um operador ternário, o operador condicional. Um operador binário exige dois operandos, um antes do operador e outro depois:
 
@@ -75,22 +75,23 @@ var var1 = 3;
 var var2 = 4;
 ```
 
-| Operador                       | Descrição                                                                                                                                                                                                                   | Exemplos que retornam verdadeiro     |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| Igual (`==`)                   | Retorna verdadeiro caso os operandos sejam iguais.                                                                                                                                                                          | `3 == var1` `"3" == var1` `3 == '3'` |
-| Não igual (`!=`)               | Retorna verdadeiro caso os operandos não sejam iguais.                                                                                                                                                                      | `var1 != 4 var2 != "3"`              |
-| Estritamente igual (`===`)     | Retorna verdadeiro caso os operandos sejam iguais e do mesmo tipo. Veja também [`Object.is`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is) e [igualdade em JS](/pt-BR/docs/Web/JavaScript/Guide/Sameness). | `3 === var1`                         |
-| Estritamente não igual (`!==`) | Retorna verdadeiro caso os operandos não sejam iguais e/ou não sejam do mesmo tipo.                                                                                                                                         | `var1 !== "3" 3 !== '3'`             |
-| Maior que (`>`)                | Retorna verdadeiro caso o operando da esquerda seja maior que o da direita.                                                                                                                                                 | `var2 > var1 "12" > 2`               |
-| Maior que ou igual (`>=`)      | Retorna verdadeiro caso o operando da esquerda seja maior ou igual ao da direita.                                                                                                                                           | `var2 >= var1 var1 >= 3`             |
-| Menor que (`<`)                | Retorna verdadeiro caso o operando da esquerda seja menor que o da direita.                                                                                                                                                 | `var1 < var2 "12" < "2"`             |
-| Menor que ou igual (`<=`)      | Retorna verdadeiro caso o operando da esquerda seja menor ou igual ao da direita.                                                                                                                                           | `var1 <= var2 var2 <= 5`             |
+| Operador                       | Descrição                                                                                                                                                                                                                                      | Exemplos que retornam verdadeiro     |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| Igual (`==`)                   | Retorna verdadeiro caso os operandos sejam iguais.                                                                                                                                                                                             | `3 == var1` `"3" == var1` `3 == '3'` |
+| Não igual (`!=`)               | Retorna verdadeiro caso os operandos não sejam iguais.                                                                                                                                                                                         | `var1 != 4 var2 != "3"`              |
+| Estritamente igual (`===`)     | Retorna verdadeiro caso os operandos sejam iguais e do mesmo tipo. Veja também [`Object.is`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is) e [igualdade em JS](/pt-BR/docs/Web/JavaScript/Equality_comparisons_and_sameness). | `3 === var1`                         |
+| Estritamente não igual (`!==`) | Retorna verdadeiro caso os operandos não sejam iguais e/ou não sejam do mesmo tipo.                                                                                                                                                            | `var1 !== "3" 3 !== '3'`             |
+| Maior que (`>`)                | Retorna verdadeiro caso o operando da esquerda seja maior que o da direita.                                                                                                                                                                    | `var2 > var1 "12" > 2`               |
+| Maior que ou igual (`>=`)      | Retorna verdadeiro caso o operando da esquerda seja maior ou igual ao da direita.                                                                                                                                                              | `var2 >= var1 var1 >= 3`             |
+| Menor que (`<`)                | Retorna verdadeiro caso o operando da esquerda seja menor que o da direita.                                                                                                                                                                    | `var1 < var2 "12" < "2"`             |
+| Menor que ou igual (`<=`)      | Retorna verdadeiro caso o operando da esquerda seja menor ou igual ao da direita.                                                                                                                                                              | `var1 <= var2 var2 <= 5`             |
 
-> **Nota:** (**=>**) não é um operador, mas a notação para [função de seta](/pt-BR/docs/Web/JavaScript/Guide/Funções#Arrow_functions)
+> [!NOTE]
+> (**=>**) não é um operador, mas a notação para [função de seta](/pt-BR/docs/Web/JavaScript/Guide/Functions#arrow_functions)
 
 ### Operadores aritméticos
 
-Operadores aritméticos tomam valores numéricos (sejam literais ou variáveis) como seus operandos e retornam um único valor númerico. Os operadores aritméticos padrão são os de soma (`+`), subtração (`-`), multiplicação (`*`) e divisão (`/`). Estes operadores trabalham da mesma forma como na maioria das linguagens de programação quando utilizados com números de ponto flutuante (em particular, repare que divisão por zero produz um [`NaN`](/pt-BR/docs/JavaScript/Reference/Global_Objects/NaN)). Por exemplo:
+Operadores aritméticos tomam valores numéricos (sejam literais ou variáveis) como seus operandos e retornam um único valor númerico. Os operadores aritméticos padrão são os de soma (`+`), subtração (`-`), multiplicação (`*`) e divisão (`/`). Estes operadores trabalham da mesma forma como na maioria das linguagens de programação quando utilizados com números de ponto flutuante (em particular, repare que divisão por zero produz um [`NaN`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NaN)). Por exemplo:
 
 ```js
 console.log(1 / 2); /* imprime 0.5 */
@@ -148,7 +149,8 @@ Por exemplo, a representação binária de nove é 1001 e a representação bin�
 | `~15`     | `-16`     | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000` |
 | `~9`      | `-10`     | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110` |
 
-> **Nota:** No quadro acima perceba que todos os 32 bits são invertidos quando usa-se o operador bit a bit NOT, e que os bits mais significativos (extrema esquerda) são definidos com 1 que representam valores negativos (representação complemento de dois).
+> [!NOTE]
+> No quadro acima perceba que todos os 32 bits são invertidos quando usa-se o operador bit a bit NOT, e que os bits mais significativos (extrema esquerda) são definidos com 1 que representam valores negativos (representação complemento de dois).
 
 #### Operadores de deslocamento bit a bit
 
@@ -521,7 +523,7 @@ A tabela a seguir descreve a precedência de operadores, da mais alta para a mai
 | atribuição                                | `= += -= *= /= %= <<= >>= >>>= &= ^= \|=` |
 | vírgula                                   | `,`                                       |
 
-Uma versão mais detalhada desta tabela, com links adicionais para detalhes de cada operador, pode ser vista em [Referência do JavaScript](/pt-BR/docs/JavaScript/Reference/Operators/Operator_Precedence#Table).
+Uma versão mais detalhada desta tabela, com links adicionais para detalhes de cada operador, pode ser vista em [Referência do JavaScript](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table).
 
 ## Expressões
 
@@ -535,9 +537,9 @@ O código `3 + 4` é um exemplo do segundo tipo de expressão. Esta expressão u
 
 O JavaScript possui as seguintes categorias de expressão:
 
-- Aritmética: é avaliada como um número, por exemplo 3.14159. (Geralmente utiliza [operadores aritméticos](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_aritmeticos)).
-- String: é avaliada como uma string de caracteres, por exemplo, "Fred" ou "234". (Geralmente utiliza [operadores de string](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_string)).
-- Lógica: é avaliada como verdadeira ou falsa. (Costuma envolver[operadores lógicos](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores_logicos)).
+- Aritmética: é avaliada como um número, por exemplo 3.14159. (Geralmente utiliza [operadores aritméticos](#operadores_aritmeticos)).
+- String: é avaliada como uma string de caracteres, por exemplo, "Fred" ou "234". (Geralmente utiliza [operadores de string](#operadores_string)).
+- Lógica: é avaliada como verdadeira ou falsa. (Costuma envolver[operadores lógicos](#operadores_logicos)).
 - Expressões primárias: Palavras reservadas e expressões gerais do JavaScript.
 - Expressão lado esquerdo: atribuição à esquerda de valores.
 
@@ -598,7 +600,7 @@ Comprehensions são uma característica experimental de JavaScript, marcada para
 {{experimental_inline}}**[`[for (x of y) x]`](/pt-BR/docs/Web/JavaScript/Reference/Operators/Array_comprehensions)**
 Comprehensions de array.
 
-{{experimental_inline}}**[`(for (x of y) y)`](/pt-BR/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions)
+{{experimental_inline}}**[`(for (x of y) y)`](/pt-BR/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
 ** `gerador de` comprehensions
 
 Comprehensions existem em muitas linguagens de programação e permitem que você rapidamente monte um novo array com base em um existente, por exemplo:

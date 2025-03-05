@@ -47,9 +47,9 @@ l10n:
   - [browser.createUserContext](https://w3c.github.io/webdriver-bidi/#command-browser-createUserContext) は新しいユーザーコンテキストを作成して、ユーザーコンテキストの一意の ID を返します。([Firefox bug 1870848](https://bugzil.la/1870848))
   - [browser.removeUserContext](https://w3c.github.io/webdriver-bidi/#command-browser-removeUserContext) はデフォルトでないユーザーコンテキストを、一意の ID を指定することで削除できます。([Firefox bug 1870849](https://bugzil.la/1870849))
   - [browser.getUserContexts](https://w3c.github.io/webdriver-bidi/#command-browser-getUserContexts) は、デフォルトユーザーコンテキストを含むすべての使用可能なユーザーコンテキストの一覧を、クライアントが取得できます。([Firefox bug 1870847](https://bugzil.la/1870847))
-- [browsingContext.create](https://w3c.github.io/webdriver-bidi/#command-browsingContext-create) コマンドで引数 "userContext" をサポートしました。この引数は、新しいブラウジングコンテキスト (タブやウィンドウ) を特定のユーザーコンテキスト (Firefox のコンテナー) に割り当てできます。([Firefox bug 1874918](https://bugzil.la/1874918))
-- [browsingContext.Info](https://w3c.github.io/webdriver-bidi/#type-browsingContext-Info) 型を、"userContext" フィールドを含むように更新しました。このフィールドは、ブラウジングコンテキストのタブを所有するユーザーコンテキストの一意の ID です。([Firefox bug 1874920](https://bugzil.la/1874920))
-- [script.addPreloadScript](https://w3c.github.io/webdriver-bidi/#command-script-addPreloadScript) コマンドで引数 "contexts" をサポートしました。この引数は特定のブラウジングコンテキストツリー (タブ) のトップレベルのブラウジングコンテキストを指定することで、特定のブラウジングコンテキストツリーに限ってプリロードスクリプトをクライアントが追加することを可能にします。([Firefox bug 1858458](https://bugzil.la/1858458))
+- [browsingContext.create](https://w3c.github.io/webdriver-bidi/#command-browsingContext-create) コマンドで引数 "userContext" をサポートしました。この引数は、新しい閲覧コンテキスト (タブやウィンドウ) を特定のユーザーコンテキスト (Firefox のコンテナー) に割り当てできます。([Firefox bug 1874918](https://bugzil.la/1874918))
+- [browsingContext.Info](https://w3c.github.io/webdriver-bidi/#type-browsingContext-Info) 型を、"userContext" フィールドを含むように更新しました。このフィールドは、閲覧コンテキストのタブを所有するユーザーコンテキストの一意の ID です。([Firefox bug 1874920](https://bugzil.la/1874920))
+- [script.addPreloadScript](https://w3c.github.io/webdriver-bidi/#command-script-addPreloadScript) コマンドで引数 "contexts" をサポートしました。この引数は特定の閲覧コンテキストツリー (タブ) のトップレベルの閲覧コンテキストを指定することで、特定の閲覧コンテキストツリーに限ってプリロードスクリプトをクライアントが追加することを可能にします。([Firefox bug 1858458](https://bugzil.la/1858458))
 - [browsingContext.close](https://w3c.github.io/webdriver-bidi/#command-browsingContext-close) が、最後のタブやウィンドウをを閉じることができない不具合を修正しました。([Firefox bug 1873948](https://bugzil.la/1873948))
 
 #### Marionette

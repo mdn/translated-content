@@ -1,15 +1,50 @@
 ---
 title: "HTML 属性: multiple"
+short-title: multiple
 slug: Web/HTML/Attributes/multiple
 l10n:
-  sourceCommit: 85c7c66c835d8bf2f766e408e723db6364fbd0c6
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
 
-論理属性の **`multiple`** 属性は、設定されている場合、フォームコントロールが 1 つ以上の値を受け入れることを意味します。 {{HTMLElement("input/email", "email")}} と {{HTMLElement("input/file", "file")}} の入力型と {{HTMLElement("select")}} に対して有効で、ユーザーが複数の値を選択する方法はフォームコントロールに依存します。
+論理属性の **`multiple`** 属性は、設定されている場合、フォームコントロールが 1 つ以上の値を受け入れることを意味します。この属性は {{HTMLElement("input/email", "email")}} と {{HTMLElement("input/file", "file")}} の入力型と {{HTMLElement("select")}} に対して有効です。ユーザーが複数の値を選択する方法は、フォームコントロールに依存します。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-multiple.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: multiple", "tabbed-standard")}}
+
+```html interactive-example
+<label for="recipients">Where should we send the receipt?</label>
+<input id="recipients" name="recipients" type="email" multiple />
+
+<label for="shakes">Which shakes would you like to order?</label>
+<select id="shakes" name="shakes" multiple>
+  <option>Vanilla Shake</option>
+  <option>Strawberry Shake</option>
+  <option>Chocolate Shake</option>
+</select>
+
+<label for="payment">How would you like to pay?</label>
+<select id="payment" name="payment">
+  <option>Credit card</option>
+  <option>Bank Transfer</option>
+</select>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input,
+select {
+  width: 100%;
+}
+
+input:invalid {
+  background-color: lightpink;
+}
+```
 
 ## 概要
 
@@ -47,7 +82,7 @@ l10n:
 
 `multiple` を指定すると、ほとんどのブラウザーでは 1 行のドロップダウンではなく、スクロールするリストボックスが表示されます。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 ユーザーがフォームに記入する方法を理解し、個々のフォームコントロールを使用するための指示を提供してください。入力が必須であるか任意であるか、データの書式、その他の関連する情報です。 `multiple` 属性を使用する場合は、ユーザーに複数の値が許可されていることを知らせ、「複数のメールアドレスをカンマ区切りで入力してください」などのように、複数の値を入力する方法を指示してください。
 
@@ -122,7 +157,7 @@ input:invalid {
 
 `multiple` が設定された `file` 入力欄と、設定されていない入力欄との外見の違いに注意してください。
 
-フォームが送信されたとき、 [`method="get"`](/ja/docs/Web/HTML/Element/form) を使用していれば、選択された各ファイルの名前が URL 引数に `?uploads=img1.jpg&uploads=img2.svg` のように追加されていたはずです。しかし、マルチパートフォームデータを送信しているので、 post を使用する必要があります。詳しくは {{htmlelement('form')}} 要素と[フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data#method_属性)を参照してください。
+フォームが送信されたとき、 [`method="get"`](/ja/docs/Web/HTML/Element/form) を使用していれば、選択された各ファイルの名前が URL 引数に `?uploads=img1.jpg&uploads=img2.svg` のように追加されていたはずです。しかし、マルチパートフォームデータを送信しているので、 post を使用する必要があります。詳しくは {{htmlelement('form')}} 要素と[フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#method_属性)を参照してください。
 
 ### select
 
@@ -184,6 +219,10 @@ select[multiple]:active {
 ## 仕様書
 
 {{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
 
 ## 関連情報
 

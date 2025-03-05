@@ -13,7 +13,8 @@ Hay tres tipos de categorías de contenido:
 - Categorías de contenido relacionado con formularios — que describe reglas comunes a los elementos relacionados con formularios.
 - Categorías de contenido específico — que describe categorías raras compartidas solo por unos pocos elementos, a veces, solo en un contexto específico.
 
-> **Nota:** Una explicación comparativa más detallada de estas categorías de contenido y su funcionalidad está más allá del alcance de este artículo; para eso, posiblemente desees leer las [partes relevantes de la especificación HTML](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content).
+> [!NOTE]
+> Una explicación comparativa más detallada de estas categorías de contenido y su funcionalidad está más allá del alcance de este artículo; para eso, posiblemente desees leer las [partes relevantes de la especificación HTML](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content).
 
 [![Un diagrama de Venn que muestra cómo se interrelacionan las distintas categorías de contenido. Las siguientes secciones explican estas relaciones en texto.](content_categories_venn.png?size=webview)](content_categories_venn.png)
 
@@ -32,8 +33,8 @@ Los elementos que pertenecen a la categoría de flujo de contenido suelen conten
 Algunos otros elementos pertenecen a esta categoría, pero solo si se cumple una condición específica:
 
 - {{HTMLElement("area")}}, si es descendiente de un elemento {{HTMLElement("map")}}
-- {{HTMLElement("link")}}, si está presente el atributo [itemprop](/es/docs/HTML/Global_attributes#attr-itemprop)
-- {{HTMLElement("meta")}}, si está presente el atributo [itemprop](/es/docs/HTML/Global_attributes#attr-itemprop)
+- {{HTMLElement("link")}}, si está presente el atributo [itemprop](/es/docs/Web/HTML/Global_attributes#attr-itemprop)
+- {{HTMLElement("meta")}}, si está presente el atributo [itemprop](/es/docs/Web/HTML/Global_attributes#attr-itemprop)
 - {{HTMLElement("style")}}, si está presente el atributo {{deprecated_inline()}} [`scoped`](/es/docs/Web/HTML/Element/style#scoped)
 
 ### Contenido de sección
@@ -42,7 +43,8 @@ Los elementos que pertenecen al modelo de contenido de secciones crean una [secc
 
 Los elementos que pertenecen a esta categoría son {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} y {{HTMLElement("section")}}.
 
-> **Nota:** No confundas este modelo de contenido con la categoría de [seccionado raíz](/es/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Sectioning_roots), que aísla su contenido del esquema regular.
+> [!NOTE]
+> No confundas este modelo de contenido con la categoría de [seccionado raíz](/es/docs/Web/HTML/Element/Heading_Elements#sectioning_roots), que aísla su contenido del esquema regular.
 
 ### Contenido del encabezado
 
@@ -50,9 +52,11 @@ El contenido del encabezado define el título de una sección, ya sea que esté 
 
 Los elementos que pertenecen a esta categoría son {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}} y {{HTMLElement("hgroup")}}.
 
-> **Nota:** Aunque es probable que tenga contenido de encabezado, {{HTMLElement("header")}} no es contenido de encabezado en sí mismo.
+> [!NOTE]
+> Aunque es probable que tenga contenido de encabezado, {{HTMLElement("header")}} no es contenido de encabezado en sí mismo.
 
-> **Nota:** El elemento {{HTMLElement("hgroup")}} se eliminó de la especificación HTML del W3C antes de que se finalizara HTML 5, pero sigue siendo parte de la especificación WHATWG y la mayoría de los navegadores lo admiten por lo menos parcialmente.
+> [!NOTE]
+> El elemento {{HTMLElement("hgroup")}} se eliminó de la especificación HTML del W3C antes de que se finalizara HTML 5, pero sigue siendo parte de la especificación WHATWG y la mayoría de los navegadores lo admiten por lo menos parcialmente.
 
 ### Contenido de redacción
 
@@ -66,9 +70,9 @@ Algunos otros elementos pertenecen a esta categoría, pero solo si se cumple una
 - {{HTMLElement("area")}}, si es descendiente de un elemento {{HTMLElement("map")}}
 - {{HTMLElement("del")}}, si solo incluye contenido de redacción
 - {{HTMLElement("ins")}}, si solo incluye contenido de redacción
-- {{HTMLElement("link")}}, si está presente el atributo [itemprop](/es/docs/HTML/Global_attributes#itemprop)
+- {{HTMLElement("link")}}, si está presente el atributo [itemprop](/es/docs/Web/HTML/Global_attributes#itemprop)
 - {{HTMLElement("map")}}, si solo incluye contenido de redacción
-- {{HTMLElement("meta")}}, si está presente el atributo [itemprop](/es/docs/HTML/Global_attributes#itemprop)
+- {{HTMLElement("meta")}}, si está presente el atributo [itemprop](/es/docs/Web/HTML/Global_attributes#itemprop)
 
 ### Contenido incrustado
 

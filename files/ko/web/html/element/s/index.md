@@ -7,7 +7,19 @@ slug: Web/HTML/Element/s
 
 **HTML `<s>` 요소**는 글자에 취소선, 즉 글자를 가로지르는 선을 그립니다. `<s>` 요소를 사용해 이제 관계 없거나 더 이상 정확하지 않은 부분을 나타내세요. 그러나, `<s>`는 문서의 편집 기록을 나타내는 용도로는 적합하지 않습니다. 상황에 따라 {{HTMLElement("del")}}과 {{HTMLElement("ins")}} 요소를 대신 사용하세요.
 
-{{EmbedInteractiveExample("pages/tabbed/s.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;s&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p><s>There will be a few tickets available at the box office tonight.</s></p>
+
+<p>SOLD OUT!</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+s {
+}
+```
 
 <table class="properties">
   <tbody>
@@ -37,7 +49,7 @@ slug: Web/HTML/Element/s
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -98,7 +110,7 @@ s::after {
 스크린 리더 사용자 일부는 지나치게 자세한 안내를 유발할 수 있는 콘텐츠의 표현을 의도적으로 꺼놓습니다. 그러므로 이 방식을 남용해선 안되며, 콘텐츠의 이해에 취소선의 유무가 꼭 필요할 때만 사용해야 합니다.
 
 - [Short note on making your mark (more accessible) | The Paciello Group](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
-- [Tweaking Text Level Styles | Adrian Roselli](http://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## 명세
 

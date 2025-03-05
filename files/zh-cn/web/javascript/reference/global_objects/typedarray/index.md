@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 
 一个 **_TypedArray_** 对象描述了底层[二进制数据缓冲区](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)的类数组视图。没有称为 `TypedArray` 的全局属性，也没有直接可用的 `TypedArray` 构造函数。但是，有很多不同的全局属性，其值是指定元素类型的类型化数组构造函数，如下所列。在接下来的页面，你将找到可以与包含任意类型元素的任意类型化数组一起使用的常见属性和方法。
 
-{{EmbedInteractiveExample("pages/js/typedarray-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray Constructor")}}
+
+```js interactive-example
+// Create a TypedArray with a size in bytes
+const typedArray1 = new Int8Array(8);
+typedArray1[0] = 32;
+
+const typedArray2 = new Int8Array(typedArray1);
+typedArray2[1] = 42;
+
+console.log(typedArray1);
+// Expected output: Int8Array [32, 0, 0, 0, 0, 0, 0, 0]
+
+console.log(typedArray2);
+// Expected output: Int8Array [32, 42, 0, 0, 0, 0, 0, 0]
+```
 
 ## 描述
 
@@ -40,7 +55,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 - 浮点数组（`Float32Array` 和 `Float64Array`）使用 [IEEE 754](https://zh.wikipedia.org/zh-cn/IEEE_754)浮点格式存储数字。[`Number`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_编码) 参考文档中有关于确切格式的更多信息。JavaScript 数字默认使用双精度浮点格式，这与 `Float64Array` 相同。`Float32Array` 将 23（而不是 52）位用于尾数，以及 8（而不是 11）位用于指数。请注意，规范要求所有的 {{jsxref("NaN")}} 值使用相同的位编码，但确切的位模式取决于实现。
 - `Uint8ClampedArray` 是一种特殊情况。它像 `Uint8Array` 一样以二进制形式存储数字，但是当你存储超出范围的数字时，它会将数字*钳制*（clamp）到 0 到 255 的范围内，而不是截断最高有效位。
 
-除了 `Int8Array`、`Unit8Array` 和 `Uint8ClampedArray` 以外的其他类型数组都将每个元素存储为多个字节。这些字节可以按照从最高有效位到最低有效位（大端序）或从最低有效位到最高有效位（小端序）的顺序进行排序。请参阅[字节序](/zh-CN/docs/Glossary/Endianness)以了解更多。类型化数组始终使用平台的本机字节顺序。如果要在缓冲区中写入和读取时指定字节顺序，应该使用 {{jsxref("DataView")}}。
+除了 `Int8Array`、`Uint8Array` 和 `Uint8ClampedArray` 以外的其他类型数组都将每个元素存储为多个字节。这些字节可以按照从最高有效位到最低有效位（大端序）或从最低有效位到最高有效位（小端序）的顺序进行排序。请参阅[字节序](/zh-CN/docs/Glossary/Endianness)以了解更多。类型化数组始终使用平台的本机字节顺序。如果要在缓冲区中写入和读取时指定字节顺序，应该使用 {{jsxref("DataView")}}。
 
 当向这些类型化数组写入时，超出可表示范围的值将被标准化。
 
@@ -142,7 +157,8 @@ new TypedArray(buffer, byteOffset, length)
 
 其中，`TypedArray` 是一个具体的构造函数。
 
-> **备注：** 所有 `TypedArray` 子类的构造函数只能使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构造。试图在没有 `new` 的情况下调用，会抛出 {{jsxref("TypeError")}}。
+> [!NOTE]
+> 所有 `TypedArray` 子类的构造函数只能使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构造。试图在没有 `new` 的情况下调用，会抛出 {{jsxref("TypeError")}}。
 
 ### 参数
 
@@ -174,7 +190,7 @@ new TypedArray(buffer, byteOffset, length)
 
 这些属性定义在 `TypedArray` 构造函数中，因此由所有 `TypedArray` 子类型共享。
 
-- {{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}
+- [`TypedArray[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species)
   - : 用于创建派生对象的构造函数。
 
 所有 `TypedArray` 子类也有着以下静态属性：
@@ -269,7 +285,7 @@ new TypedArray(buffer, byteOffset, length)
   - : 返回一个表示调用数组及其元素的本地化字符串。参见 {{jsxref("Array.prototype.toLocaleString()")}}。
 - {{jsxref("TypedArray.prototype.toString()")}}
   - : 返回一个表示调用数组及其元素的字符串。参见 {{jsxref("Array.prototype.toString()")}}。
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- [`TypedArray.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
   - : 返回一个新的*数组迭代器*对象，该对象包含数组中每个索引的值。
 
 ## 示例

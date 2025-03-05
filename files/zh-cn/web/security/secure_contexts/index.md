@@ -25,7 +25,8 @@ slug: Web/Security/Secure_Contexts
 
 本地传递的资源，如那些带有 `http://127.0.0.1`、`http://localhost` 和 `http://*.localhost` 网址（如 `http://dev.whatever.localhost/`）和 `file://` 网址的资源也是认为经过安全传递的。
 
-> **备注：** Firefox 84 及更新的版本支持 `http://localhost` 和 `http://*.localhost` URL 作为信任的源，而早期版本不支持这样做，因为还没有保证 `localhost` 映射到本地或回环地址上。
+> [!NOTE]
+> Firefox 84 及更新的版本支持 `http://localhost` 和 `http://*.localhost` URL 作为信任的源，而早期版本不支持这样做，因为还没有保证 `localhost` 映射到本地或回环地址上。
 
 非本地资源要被认为是安全的，必须满足以下标准：
 

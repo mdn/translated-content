@@ -92,7 +92,8 @@ svg {
 
 > **备注：** `width` 对 `use` 元素没有影响，除非引用的元素具有 [viewBox](/zh-CN/docs/Web/SVG/Attribute/viewBox)。例如，该属性仅在 `use` 引用的元素是 `svg` 或 `symbol` 元素时才有意义。
 
-> **备注：** 从 SVG2 开始，`width` 变为*几何属性*，这意味着该元素也可以用作使用的元素的 CSS 属性。
+> [!NOTE]
+> 从 SVG2 开始，`width` 变为*几何属性*，这意味着该元素也可以用作使用的元素的 CSS 属性。
 
 ## 规范
 

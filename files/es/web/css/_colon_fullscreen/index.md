@@ -1,5 +1,5 @@
 ---
-title: ":fullscreen"
+title: :fullscreen
 slug: Web/CSS/:fullscreen
 ---
 
@@ -24,7 +24,8 @@ div:fullscreen {
 }
 ```
 
-> **Nota:** La especificación W3C usa la palabra única `:fullscreen`, sin guiones, pero las implementaciones experimentales de WebKit y Gecko usan una variante prefijada con dos palabras separadas por un guión: `:-webkit-full-screen` y `:-moz-full-screen`, respectivamente. Microsoft Edge e Internet Explorer utilizan la convención estándar: `:fullscreen` y `:-ms-fullscreen`, respectivamente.
+> [!NOTE]
+> La especificación W3C usa la palabra única `:fullscreen`, sin guiones, pero las implementaciones experimentales de WebKit y Gecko usan una variante prefijada con dos palabras separadas por un guión: `:-webkit-full-screen` y `:-moz-full-screen`, respectivamente. Microsoft Edge e Internet Explorer utilizan la convención estándar: `:fullscreen` y `:-ms-fullscreen`, respectivamente.
 
 ## Sintaxis
 

@@ -25,7 +25,7 @@ l10n:
 - [Cipher](https://en.wikipedia.org/wiki/Cipher) (Wikipedia, 英語)
 - [暗号](https://ja.wikipedia.org/wiki/暗号)（ウィキペディア）
 - [暗号化と復号](/ja/docs/Archive/Security/Encryption_and_Decryption)
-- [MDN Web Docs 用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("Block cipher mode of operation", "暗号利用モード")}}
   - {{Glossary("Ciphertext", "暗号文")}}

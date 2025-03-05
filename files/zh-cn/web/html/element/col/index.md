@@ -9,7 +9,67 @@ l10n:
 
 **`<col>`** [HTML](/zh-CN/docs/Web/HTML) 元素在其父 {{HTMLElement("colgroup")}} 元素所代表的列组中定义一列或多列。`<col>` 元素只有作为没有定义 [`span`](/zh-CN/docs/Web/HTML/Element/colgroup#span) 属性的 {{HTMLElement("colgroup")}} 元素的子元素才有效。
 
-{{EmbedInteractiveExample("pages/tabbed/col.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;col&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Superheros and sidekicks
+  </caption>
+  <colgroup>
+    <col />
+    <col span="2" class="batman" />
+    <col span="2" class="flash" />
+  </colgroup>
+  <tr>
+    <td></td>
+    <th scope="col">Batman</th>
+    <th scope="col">Robin</th>
+    <th scope="col">The Flash</th>
+    <th scope="col">Kid Flash</th>
+  </tr>
+  <tr>
+    <th scope="row">Skill</th>
+    <td>Smarts, strong</td>
+    <td>Dex, acrobat</td>
+    <td>Super speed</td>
+    <td>Super speed</td>
+  </tr>
+</table>
+```
+
+```css interactive-example
+.batman {
+  background-color: #d7d9f2;
+}
+
+.flash {
+  background-color: #ffe8d4;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 6px;
+}
+
+td {
+  text-align: center;
+}
+```
 
 ## 属性
 
@@ -26,7 +86,8 @@ l10n:
 
   - : 指定每列单元格的水平对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有 `left`、`center`、`right`、`justify` 和 `char`。如果支持，`char` 值将根据 [`char`](#char) 属性中定义的字符和 [`charoff`](#charoff) 属性定义的偏移量对文本内容进行对齐。请注意，该属性会覆盖其 {{HTMLElement("colgroup")}} 父元素指定的 [`align`](/zh-CN/docs/Web/HTML/Element/colgroup#align)。使用 {{cssxref("text-align")}} 和 {{htmlelement("th")}} 元素上的 CSS 属性，因为该属性已被弃用。
 
-    > **备注：** 在 `<col>` 元素上设置 `text-align` 没有任何作用，因为 `<col>` 没有后代，因此没有元素继承自它。
+    > [!NOTE]
+    > 在 `<col>` 元素上设置 `text-align` 没有任何作用，因为 `<col>` 没有后代，因此没有元素继承自它。
     >
     > 如果表格没有使用 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，请使用 `td:nth-of-type(an+b)` CSS 选择器。将 `a` 设置为零，将 `b` 设置为表格中列的位置，例如，使用 `td:nth-of-type(2) { text-align: right; }` 来右对齐第二列单元格。
     >
@@ -48,7 +109,8 @@ l10n:
 
   - : 指定每列单元格的垂直对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有 `baseline`、`bottom`、`middle` 和 `top`。请注意，该属性会覆盖其 {{HTMLElement("colgroup")}} 父元素指定的 [`valign`](/zh-CN/docs/Web/HTML/Element/colgroup#valign)。使用 {{cssxref("vertical-align")}} 和 {{htmlelement("th")}} 元素上的 CSS 属性，因为该属性已被弃用。
 
-    > **备注：** 在 `<col>` 元素上设置 `vertical-align` 没有任何作用，因为 `<col>` 没有后代，因此没有元素继承自它。
+    > [!NOTE]
+    > 在 `<col>` 元素上设置 `vertical-align` 没有任何作用，因为 `<col>` 没有后代，因此没有元素继承自它。
     >
     > 如果表格没有使用 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，请使用 `td:nth-of-type(an+b)` CSS 选择器。将 `a` 设置为零，将 `b` 设置为表格中列的位置，例如，使用 `td:nth-of-type(2) { vertical-align: middle; }` 将第二列单元格垂直居中。
     >
@@ -219,7 +281,7 @@ table {
 
 ## 参见
 
-- [学习区：HTML 表格](/zh-CN/docs/Learn/HTML/Tables)
+- [学习区：HTML 表格](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - {{HTMLElement("caption")}}、{{HTMLElement("colgroup")}}、{{HTMLElement("table")}}、{{HTMLElement("tbody")}}、{{HTMLElement("td")}}、{{HTMLElement("tfoot")}}、{{HTMLElement("th")}}、{{HTMLElement("thead")}}、{{HTMLElement("tr")}}：其他与表格相关的元素。
 - {{cssxref("background-color")}}：用于设置每列单元格背景颜色的 CSS 属性
 - {{cssxref("border")}}：用于控制列单元格边框的 CSS 属性

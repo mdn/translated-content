@@ -17,7 +17,7 @@ HTTP/1.1부터는 세번째 과정 이후 클라이언트가 해당 시점에 �
 
 클라이언트-서버 프로토콜에, 클라이언트는 연결을 수립합니다. HTTP에서 연결을 여는 것은 보통의 경우 TCP인 기본적인 전송 계층 내에서 연결을 수립하는 것을 뜻합니다.
 
-TCP를 이용할 경우, 컴퓨터 상의 HTTP 서버를 위한 기본 포트는 80인데 8000 혹은 8080처럼 다른 포트들도 자주 사용되곤 합니다. 요청을 위한 페이지 URL은 도메인 이름과 포트 번호 둘 다 포함하지만 포트 번호가 80일 경우 생략 가능합니다. 좀 더 자세한 내용은 [웹 리소스 식별](/ko/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)을 참고하시기 바랍니다.
+TCP를 이용할 경우, 컴퓨터 상의 HTTP 서버를 위한 기본 포트는 80인데 8000 혹은 8080처럼 다른 포트들도 자주 사용되곤 합니다. 요청을 위한 페이지 URL은 도메인 이름과 포트 번호 둘 다 포함하지만 포트 번호가 80일 경우 생략 가능합니다. 좀 더 자세한 내용은 [웹 리소스 식별](/ko/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)을 참고하시기 바랍니다.
 
 > **참고:** **기억하세요** 클라이언트-서버 모델은 서버로 하여금 명시적인 요청없이 클라이언트로 데이터를 전송하는 것을 허용하지 않습니다. 이런 문제에 대한 해결책으로, 웹 개발자들은 몇 가지 기술을 사용합니다: {{domxref("XMLHTTPRequest")}} 혹은 {{domxref("Fetch")}} API를 통해 주기적으로 서버에 핑하기, HTML [웹소켓 API](/ko/docs/Web/API/WebSockets_API), 혹은 그와 유사한 프로토콜 사용
 
@@ -58,10 +58,10 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 
 ### 요청 메서드
 
-HTTP는 주어진 자원에 대해 실행되길 바라는 동작을 가리키는 [요청 메서드](/ko/docs/Web/HTTP/Methods) 집합을 정의합니다. 그것들이 명사가 될 수 있으지라도, 이 요청 메서드들은 때때로 HTTP 동사로써 참조됩니다. 일반적으로 대부분의 요청은 `GET과` `POST입니다`.
+HTTP는 주어진 자원에 대해 실행되길 바라는 동작을 가리키는 [요청 메서드](/ko/docs/Web/HTTP/Methods) 집합을 정의합니다. 그것들이 명사가 될 수 있을지라도, 이 요청 메서드들은 때때로 HTTP 동사로써 참조됩니다. 일반적으로 대부분의 요청은 `GET`과 `POST`입니다.
 
 - {{HTTPMethod("GET")}} 메서드는 지정된 자원의 표시를 요청합니다. `GET`을 사용하는 요청은 데이터를 가져오는 것 외에는 할 수 없습니다.
-- {{HTTPMethod("POST")}} 메서드는 서버에 데이터를 전송하여 서버가 상태를 바꾸도록 만듭니다. 이것은 [HTML Forms](/ko/docs/Web/Guide/HTML/Forms)에서 자주 사용되는 메서드입니다.
+- {{HTTPMethod("POST")}} 메서드는 서버에 데이터를 전송하여 서버가 상태를 바꾸도록 만듭니다. 이것은 [HTML Forms](/ko/docs/Learn/Forms)에서 자주 사용되는 메서드입니다.
 
 ## 서버 응답의 구조
 
@@ -132,7 +132,7 @@ Content-Type: text/html
 
 ### 응답 상태 코드
 
-[HTTP 응답 상태 코드](/ko/docs/Web/HTTP/Status)는 특정 HTTP 요청이 성공적으로 끝났는지 아닌지를 가르킵니다. 응답은 다섯가지 계층 내로 그룹화됩니다: 정보를 제공하는 응답, 성공적인 응답, 리다이렉트, 클라이언트 오류, 그리고 서버 오류.
+[HTTP 응답 상태 코드](/ko/docs/Web/HTTP/Status)는 특정 HTTP 요청이 성공적으로 끝났는지 아닌지를 가리킵니다. 응답은 다섯가지 계층 내로 그룹화됩니다: 정보를 제공하는 응답, 성공적인 응답, 리다이렉트, 클라이언트 오류, 그리고 서버 오류.
 
 - {{HTTPStatus(200)}}: 성공. 요청이 성공했다는 것을 의미합니다.
 - {{HTTPStatus(301)}}: 영구적으로 옮겨짐. 이 응답 코드는 요청된 자원의 URI가 변경되었다는 것을 의미합니다.
@@ -140,7 +140,7 @@ Content-Type: text/html
 
 ## 함께 참고할 내용
 
-- [웹 리소스 식별](/ko/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [웹 리소스 식별](/ko/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
 - [HTTP 헤더](/ko/docs/Web/HTTP/Headers)
 - [HTTP 요청 메서드](/ko/docs/Web/HTTP/Methods)
 - [HTTP 응답 상태 코드](/ko/docs/Web/HTTP/Status)

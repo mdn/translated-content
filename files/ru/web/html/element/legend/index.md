@@ -7,19 +7,46 @@ slug: Web/HTML/Element/legend
 
 HTML-элемент **`<legend>`** представляет собой заголовок содержания родительского элемента {{HTMLElement("fieldset")}}.
 
-{{EmbedInteractiveExample("pages/tabbed/legend.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;legend&gt;", "tabbed-standard")}}
 
-| [Категории контента](/ru/docs/HTML/Content_categories) | Нет                                                                    |
-| ------------------------------------------------------ | ---------------------------------------------------------------------- |
-| Допустимый контент                                     | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content). |
-| Пропуск тегов                                          | {{no_tag_omission}}                                                    |
-| Допустимые родители                                    | Является дочерним элементом тега {{HTMLElement("fieldset")}}           |
-| Допустимые ARIA-роли                                   | Нет                                                                    |
-| DOM-интерфейс                                          | {{domxref("HTMLLegendElement")}}                                       |
+```html interactive-example
+<fieldset>
+  <legend>Choose your favorite monster</legend>
+
+  <input type="radio" id="kraken" name="monster" value="K" />
+  <label for="kraken">Kraken</label><br />
+
+  <input type="radio" id="sasquatch" name="monster" value="S" />
+  <label for="sasquatch">Sasquatch</label><br />
+
+  <input type="radio" id="mothman" name="monster" value="M" />
+  <label for="mothman">Mothman</label>
+</fieldset>
+```
+
+```css interactive-example
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
+
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | Нет                                                                        |
+| ---------------------------------------------------------- | -------------------------------------------------------------------------- |
+| Допустимый контент                                         | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content). |
+| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                           |
+| Допустимые родители                                        | Является дочерним элементом тега {{HTMLElement("fieldset")}}               |
+| Допустимые ARIA-роли                                       | Нет                                                                        |
+| DOM-интерфейс                                              | {{domxref("HTMLLegendElement")}}                                           |
 
 ## Атрибуты
 
-Этот элемент включает только [универсальные атрибуты](/ru/docs/HTML/Global_attributes).
+Этот элемент включает только [универсальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 ## Примеры
 

@@ -221,7 +221,8 @@ console.log(parsed);
 // { number: 1, big: 18014398509481982n }
 ```
 
-> **Nota:** Si bien es posible hacer el reemplazo de `JSON.stringify()` genérico y propiamente serializar los valores BigInt para todos los objetos, el reviver `JSON.parse()` tiene que ser específico para la forma de carga útil esperada, ya que la serialización tiene _pérdidas_: no es posible distinguir entre una cadena que representa un BigInt y una cadena normal.
+> [!NOTE]
+> Si bien es posible hacer el reemplazo de `JSON.stringify()` genérico y propiamente serializar los valores BigInt para todos los objetos, el reviver `JSON.parse()` tiene que ser específico para la forma de carga útil esperada, ya que la serialización tiene _pérdidas_: no es posible distinguir entre una cadena que representa un BigInt y una cadena normal.
 >
 > Además, el ejemplo de arriba crea un objeto entero en el replacing y reviving, lo que probablemente tenga implicaciónes de rendimiento y almacenamiento para objetos más grandes que contienen muchos BigInts. Si conoces la forma de carga útil esperada, puede ser mejor simplemente serializarlas como strings y revivirlas basadas en el nombre de la key.
 

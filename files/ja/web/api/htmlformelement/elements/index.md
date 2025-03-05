@@ -16,7 +16,8 @@ l10n:
 
 HTML 5 より前のバージョンでは、返されるオブジェクトは {{domxref("HTMLCollection")}} でした。 `HTMLFormControlsCollection` これに基づいています。
 
-> **メモ:** 同様に、指定された文書内のすべてのフォームの一覧を取得するには、その文書の {{domxref("Document.forms", "forms")}} プロパティを使用してください。
+> [!NOTE]
+> 同様に、指定された文書内のすべてのフォームの一覧を取得するには、その文書の {{domxref("Document.forms", "forms")}} プロパティを使用してください。
 
 ## 値
 

@@ -7,7 +7,8 @@ l10n:
 
 {{jsSidebar("More")}}
 
-> **メモ:** 既定の厳格でないモードを _[Sloppy モード](/ja/docs/Glossary/Sloppy_mode)_ と呼ぶのを目にすることがあるかもしれません。これは公式な用語ではありません、念のため注意してください。
+> [!NOTE]
+> 既定の厳格でないモードを _[Sloppy モード](/ja/docs/Glossary/Sloppy_mode)_ と呼ぶのを目にすることがあるかもしれません。これは公式な用語ではありません、念のため注意してください。
 
 JavaScript の厳格モード (Strict mode) は、 JavaScript の自由度を制限することに**オプトイン**することによって、暗黙のうちに [Sloppy モード](/ja/docs/Glossary/Sloppy_mode)からオプトアウトする方法です。厳格モードは単なるサブセットではなく、通常のコードとは**意図的に**異なる意味を持っています。厳格モードに対応していないブラウザーは、厳格モードに対応しているブラウザーとは異なる動作をする可能性がありますので、厳格モードに関する側面に対応しているかどうかの機能テストを行わずに厳格モードを頼らないでください。厳格モードのコードと非厳格モードのコードは共存できますので、スクリプトを順次厳格モードにオプトインすることができます。
 
@@ -19,7 +20,7 @@ JavaScript の厳格モード (Strict mode) は、 JavaScript の自由度を制
 
 ## 厳格モードの呼び出し
 
-厳格モードは**スクリプト全体**または**個別の関数**に適用できます。中括弧 `{}` で括られる[ブロック構文](/ja/docs/Web/JavaScript/Reference/Statements/block)には適用できません。そのような場所に適用しようとしても何も起きません。[`eval`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) のコード、 [`Function`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) のコード、[イベントハンドラー](/ja/docs/Web/HTML/Attributes#event_handler_attributes)属性、[`setTimeout()`](/ja/docs/Web/API/setTimeout) などの関数に渡す文字列は、関数の本体またはスクリプト全体であり、厳格モードを呼び出すと期待どおりに動作します。
+厳格モードは**スクリプト全体**または**個別の関数**に適用できます。中括弧 `{}` で括られる[ブロック構文](/ja/docs/Web/JavaScript/Reference/Statements/block)には適用できません。そのような場所に適用しようとしても何も起きません。[`eval`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) のコード、 [`Function`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) のコード、[イベントハンドラー](/ja/docs/Web/HTML/Attributes#event_handler_attributes)属性、[`setTimeout()`](/ja/docs/Web/API/Window/setTimeout) などの関数に渡す文字列は、関数の本体またはスクリプト全体であり、厳格モードを呼び出すと期待どおりに動作します。
 
 ### スクリプトでの厳格モード
 
@@ -196,7 +197,7 @@ function sum(a, a, c) {
 
 #### 古い 8 進数リテラル
 
-厳格モードでは、[`0` を先頭とした 8 進数表記や 8 進数エスケープシーケンスを禁止](/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal)します。厳格モード以外では、 `0644` のような `0` で始まる数値は、すべての桁が 8 より小さい場合、 8 進数 (`0644 === 420`) として解釈されます。初心者の開発者は、接頭辞に何の意味もないと信じて、配置用の器具として使用することがありますが、これは数字の意味を変えてしまいます。 8 進数の先頭ゼロの構文はほとんど有益なものではなく、間違って使用される可能性があるため、厳格モードでは構文エラーとなります。
+厳格モードでは、[`0` を先頭とした 8 進数表記や 8 進数エスケープシーケンスを禁止](/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal)します。厳格モード以外では、 `0644` のような `0` で始まる数値は、すべての桁が 8 より小さい場合、 8 進数 (`0644 === 420`) として解釈されます。初心者の開発者は、接頭辞に何の意味もないと信じて、配置用の器具として使用することがありますが、これは数字の意味を変えてしまいます。 8 進数の先頭ゼロの構文はほとんど有益なものではなく、間違って使用される可能性があるため、厳格モードでは構文エラーとなります。
 
 ```js-nolint example-bad
 "use strict";
@@ -236,7 +237,8 @@ false.true = ""; // TypeError
 const o = { p: 1, p: 2 }; // ECMAScript 2015 以前では構文エラー
 ```
 
-> **メモ:** これまでエラーとされていたコードをエラーでなくすこと、常に後方互換性があるものと見なされます。これは、言語がエラーを発生させることに厳格であることの良い部分であり、将来の意味づけの変更のための余地を残しています。
+> [!NOTE]
+> これまでエラーとされていたコードをエラーでなくすこと、常に後方互換性があるものと見なされます。これは、言語がエラーを発生させることに厳格であることの良い部分であり、将来の意味づけの変更のための余地を残しています。
 
 ### スコープ管理の単純化
 

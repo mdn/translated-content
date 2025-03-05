@@ -1,7 +1,6 @@
 ---
 title: "CSSImportRule: stylesheet プロパティ"
-short-title: stylesheet
-slug: Web/API/CSSImportRule/stylesheet
+slug: Web/API/CSSImportRule/styleSheet
 l10n:
   sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---

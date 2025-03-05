@@ -26,7 +26,8 @@ l10n:
 
 有损压缩通常会比无损压缩效率更高一些。
 
-> **备注：** 由于数据压缩技术在一些特定类型的文件上效果很好，再次进行压缩通常没有什么效果。事实上，这种做法常常会适得其反，因为间接开销（该类型算法通常需要使用字典，而字典的大小是会计入初始大小的）会比在压缩过程中获取的额外收益要高，从而会使文件的体积增加。不要对压缩格式的文件应用如下两种压缩技术。
+> [!NOTE]
+> 由于数据压缩技术在一些特定类型的文件上效果很好，再次进行压缩通常没有什么效果。事实上，这种做法常常会适得其反，因为间接开销（该类型算法通常需要使用字典，而字典的大小是会计入初始大小的）会比在压缩过程中获取的额外收益要高，从而会使文件的体积增加。不要对压缩格式的文件应用如下两种压缩技术。
 
 ## 端到端压缩技术
 
@@ -42,7 +43,7 @@ l10n:
 
 由于压缩技术可以带来很大的性能提升，建议对除了已经经过压缩的文件如图片、音频和视频文件之外的其他类型的文件均进行压缩。
 
-Apache 服务器支持数据压缩，有 [mod_deflate](http://httpd.apache.org/docs/current/mod/mod_deflate.html)可供使用；nginx 中有[ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html) 模块；在 IIS 中则可以使用 [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression) 元素。
+Apache 服务器支持数据压缩，有 [mod_deflate](https://httpd.apache.org/docs/current/mod/mod_deflate.html)可供使用；nginx 中有[ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html) 模块；在 IIS 中则可以使用 [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression) 元素。
 
 ## 逐跳压缩技术
 

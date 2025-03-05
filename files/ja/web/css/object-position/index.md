@@ -49,7 +49,8 @@ object-position: unset;
 - {{cssxref("&lt;position&gt;")}}
   - : 要素のボックスの端に対する 2D 上の位置を表す、1 個から 4 個の値です。相対値または絶対値のオフセットを指定できます。
 
-> **メモ:** 置換要素がボックス外にはみ出る位置も指定できます。
+> [!NOTE]
+> 置換要素がボックス外にはみ出る位置も指定できます。
 
 ## 公式定義
 
@@ -67,7 +68,7 @@ object-position: unset;
 
 それぞれ MDN のロゴを表示する 2 つの {{HTMLElement("img")}} 要素があります。
 
-```html
+```html live-sample___positioning_image_content
 <img id="object-position-1" src="mdn.svg" alt="MDN Logo" />
 <img id="object-position-2" src="mdn.svg" alt="MDN Logo" />
 ```
@@ -76,7 +77,7 @@ object-position: unset;
 
 この CSS には、`<img>` 要素自体の既定のスタイルと、2 つの画像それぞれに個別のスタイルが含まれています。
 
-```css
+```css live-sample___positioning_image_content
 img {
   width: 300px;
   height: 250px;

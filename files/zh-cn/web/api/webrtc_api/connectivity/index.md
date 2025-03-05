@@ -7,7 +7,8 @@ slug: Web/API/WebRTC_API/Connectivity
 
 现在我们已经单独介绍了协议，我们可以将它们放在一起。本文介绍了 WebRTC 各种相关协议如何相互交互，以便在对等体之间创建连接和传输数据和/或媒体。
 
-> **备注：** 这个页面需要对结构完整性和内容完整性进行大量重写。这里有很多信息，但是组织混乱，现在这里跟个垃圾场一样。
+> [!NOTE]
+> 这个页面需要对结构完整性和内容完整性进行大量重写。这里有很多信息，但是组织混乱，现在这里跟个垃圾场一样。
 
 ## 什么是提议/应答和信号通道？
 
@@ -53,7 +54,8 @@ WebRTC 连接上的端点配置称为**会话描述**。该描述包括关于要
 
 通过调用 setLocalDescription() 或 setRemoteDescription() 更改描述时，将指定的描述设置为待定描述，WebRTC 层开始评估是否可以接受。一旦建议的描述已经达成一致，currentLocalDescription 或 currentRemoteDescription 的值将更改为待处理描述，并且待处理的描述再次设置为 null，表示没有待处理的描述。
 
-> **备注：** pendingLocalDescription 不仅包含正在考虑的提议或答案，而且自从提议或应答以来已经收集到的任何本地 ICE 候选人都被创建。类似地，pendingRemoteDescription 包括通过调用 {{domxref("RTCPeerConnection.addIceCandidate()")}} 提供的任何远程 ICE 候选。
+> [!NOTE]
+> pendingLocalDescription 不仅包含正在考虑的提议或答案，而且自从提议或应答以来已经收集到的任何本地 ICE 候选人都被创建。类似地，pendingRemoteDescription 包括通过调用 {{domxref("RTCPeerConnection.addIceCandidate()")}} 提供的任何远程 ICE 候选。
 
 有关这些属性和方法的更多细节，请参阅各个文章。
 
@@ -61,8 +63,11 @@ WebRTC 连接上的端点配置称为**会话描述**。该描述包括关于要
 
 除了交换关于媒体的信息 (上面提到的 Offer / Answer 和 SDP ) 中，对等体必须交换关于网络连接的信息。这被称为 ICE 候选者，并详细说明了对等体能够直接或通过 TURN 服务器进行通信的可用方法。通常，每个对点将优先提出最佳的 ICE 候选，逐次尝试到不佳的候选中。理想情况下，候选地址是 UDP(因为速度更快，媒体流能够相对容易地从中断恢复 )，但 ICE 标准也允许 TCP 候选。
 
-> **备注：** 一般来说，使用 TCP 的 ICE 候选者只有当 UDP 不可用或被限制使其不适用于媒体流时才会被使用。不是所有的浏览器都支持 ICE over TCP。
+> [!NOTE]
+> 一般来说，使用 TCP 的 ICE 候选者只有当 UDP 不可用或被限制使其不适用于媒体流时才会被使用。不是所有的浏览器都支持 ICE over TCP。
 
-## The entire exchange in a complicated diagram
+## 整个交换的复杂图表
 
-[![A complete architectural diagram showing the whole WebRTC process.](webrtc-complete-diagram.png)](https://hacks.mozilla.org/wp-content/uploads/2013/07/webrtc-complete-diagram.png)
+![展示 WebRTC 完整流程的架构图。](webrtc-complete-diagram.png)
+
+[原始来源](https://hacks.mozilla.org/2013/07/webrtc-and-the-ocean-of-acronyms/)

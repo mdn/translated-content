@@ -5,11 +5,11 @@ slug: Web/JavaScript/Guide/Regular_expressions/Cheatsheet
 
 {{jsSidebar("JavaScript Guide")}}
 
-Cette page fournit une «&nbsp;antisèche&nbsp;» sur l'ensemble des fonctionnalités offertes par la syntaxe des objets `RegExp` en agrégeant le contenu des articles contenus dans le guide sur les expressions rationnelles. Si vous avez besoin de plus d'informations sur un sujet donné, vous pouvez suivre le lien donné en début de chaque section pour accéder à l'article correspondant. Vous pouvez également aller consulter [le guide en question](/fr/docs/Web/JavaScript/Guide/Regular_Expressions).
+Cette page fournit une «&nbsp;antisèche&nbsp;» sur l'ensemble des fonctionnalités offertes par la syntaxe des objets `RegExp` en agrégeant le contenu des articles contenus dans le guide sur les expressions rationnelles. Si vous avez besoin de plus d'informations sur un sujet donné, vous pouvez suivre le lien donné en début de chaque section pour accéder à l'article correspondant. Vous pouvez également aller consulter [le guide en question](/fr/docs/Web/JavaScript/Guide/Regular_expressions).
 
 ## Classes de caractères
 
-[Les classes de caractères](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) permettent de distinguer différents types de caractères comme, entre autres, les lettres ou les chiffres.
+[Les classes de caractères](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) permettent de distinguer différents types de caractères comme, entre autres, les lettres ou les chiffres.
 
 <table class="standard-table">
   <thead>
@@ -179,7 +179,7 @@ Cette page fournit une «&nbsp;antisèche&nbsp;» sur l'ensemble des fonctionnal
 
 ## Assertions
 
-[Les assertions](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) incluent les limites (décrivant les débuts et fins de ligne ou de mots) et d'autres motifs indiquant certains critères pour qu'une correspondance soit possible (recherche en avant, en arrière, expressions conditionnelles).
+[Les assertions](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) incluent les limites (décrivant les débuts et fins de ligne ou de mots) et d'autres motifs indiquant certains critères pour qu'une correspondance soit possible (recherche en avant, en arrière, expressions conditionnelles).
 
 ### Assertions de limites
 
@@ -250,7 +250,8 @@ Cette page fournit une «&nbsp;antisèche&nbsp;» sur l'ensemble des fonctionnal
 
 ### Autres assertions
 
-> **Note :** Le caractère `?` peut également être utilisé comme quantificateur.
+> [!NOTE]
+> Le caractère `?` peut également être utilisé comme quantificateur.
 
 <table class="standard-table">
   <thead>
@@ -297,7 +298,7 @@ Cette page fournit une «&nbsp;antisèche&nbsp;» sur l'ensemble des fonctionnal
 
 ## Groupes et intervalles
 
-[Les groupes et intervalles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) indiquent des groupes ou intervalles pour les caractères.
+[Les groupes et intervalles](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) indiquent des groupes ou intervalles pour les caractères.
 
 <table class="standard-table">
   <thead>
@@ -418,9 +419,10 @@ Cette page fournit une «&nbsp;antisèche&nbsp;» sur l'ensemble des fonctionnal
 
 ## Quantificateurs
 
-[Les quantificateurs](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers) indiquent le nombre de caractères ou d'expressions pour la correspondance.
+[Les quantificateurs](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers) indiquent le nombre de caractères ou d'expressions pour la correspondance.
 
-> **Note :** Dans ce qui suit, _élément_ fait référence à des caractères uniques ou à des [classes de caractères](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [des échappements Unicode](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [des groupes et des intervalles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges).
+> [!NOTE]
+> Dans ce qui suit, _élément_ fait référence à des caractères uniques ou à des [classes de caractères](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes), [des échappements Unicode](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape), [des groupes et des intervalles](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
 
 <table class="standard-table">
   <thead>
@@ -520,7 +522,7 @@ Cette page fournit une «&nbsp;antisèche&nbsp;» sur l'ensemble des fonctionnal
 
 ## Échappement de propriétés Unicode
 
-[Les séquences d'échappement de propriétés Unicode](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) permettent de cibler des caractères en fonction de leurs propriétés Unicode.
+[Les séquences d'échappement de propriétés Unicode](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) permettent de cibler des caractères en fonction de leurs propriétés Unicode.
 
 ```js
 // Valeurs non-binaires
@@ -550,4 +552,5 @@ Cette page fournit une «&nbsp;antisèche&nbsp;» sur l'ensemble des fonctionnal
 - ValeurPropriétéUnicode
   - : L'une des valeurs indiquées dans la section "Values". De nombreuses valeurs ont des alias ou des noms raccourcis (par exemple, la valeur `Decimal_Number`, de la propriété `General_Category`, peut être écrite `Nd`, `digit`, ou encore `Decimal_Number`). Pour la plupart des valeurs, la partie `NomPropriétéUnicode` et le signe égal peuvent être omis. Si `NomPropriétéUnicode` est indiqué, la valeur doit correspondre au type de propriété indiquée.
 
-> **Note :** Il existe de nombreuses propriétés et valeurs disponibles. Il serait laborieux de les lister ici de façon exhaustive.
+> [!NOTE]
+> Il existe de nombreuses propriétés et valeurs disponibles. Il serait laborieux de les lister ici de façon exhaustive.

@@ -30,7 +30,8 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_examp
   - DIV #2 (z-index 1)
   - DIV #4 (z-index 2)
 
-> **备注：** DIV #1 和 DIV #3 不是透明的。记住所有设置了 opacity 小于 1 的定位元素都会隐式地生成一个层叠上下文（和给元素增加一个 z-index 值的效果相同）。上述的例子是为了说明，当父元素没有生成一个层叠上下文环境的时候，各元素是怎么层叠的。
+> [!NOTE]
+> DIV #1 和 DIV #3 不是透明的。记住所有设置了 opacity 小于 1 的定位元素都会隐式地生成一个层叠上下文（和给元素增加一个 z-index 值的效果相同）。上述的例子是为了说明，当父元素没有生成一个层叠上下文环境的时候，各元素是怎么层叠的。
 
 ## 示例
 
@@ -110,15 +111,15 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_examp
 
 ### See also
 
-- [Stacking without z-index](/zh-CN/CSS/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
-- [Stacking and float](/zh-CN/CSS/Understanding_z-index/Stacking_floating_elements) : How floating elements are handled
-- [Adding z-index](/zh-CN/CSS/Understanding_z-index/Using_z-index) : Using z-index to change default stacking
-- [The stacking context](/zh-CN/CSS/Understanding_z-index/Stacking_context) : Notes on the stacking context
-- [Stacking context example 2](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
-- [Stacking context example 3](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
+- [Stacking without z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
+- [Stacking and float](/zh-CN/docs/CSS/Understanding_z-index/Stacking_floating_elements) : How floating elements are handled
+- [Adding z-index](/zh-CN/docs/CSS/Understanding_z-index/Using_z-index) : Using z-index to change default stacking
+- [The stacking context](/zh-CN/docs/CSS/Understanding_z-index/Stacking_context) : Notes on the stacking context
+- [Stacking context example 2](/zh-CN/docs/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
+- [Stacking context example 3](/zh-CN/docs/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
 
 ### Original Document Information
 
 - Author(s): Paolo Lombardi
-- This article is the english translation of an article I wrote in italian for [YappY](http://www.yappy.it). I grant the right to share all the content under [Creative Commons: Attribution-Sharealike license](http://creativecommons.org/licenses/by-sa/2.0/)
+- This article is the english translation of an article I wrote in italian for [YappY](http://www.yappy.it). I grant the right to share all the content under [Creative Commons: Attribution-Sharealike license](https://creativecommons.org/licenses/by-sa/2.0/)
 - Last Updated Date: July 9th, 2005

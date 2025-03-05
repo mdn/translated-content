@@ -9,8 +9,8 @@ slug: Web/API/FormData/get
 
 ## 语法
 
-```
-formData.get(name);
+```js-nolint
+get(name)
 ```
 
 ### 参数

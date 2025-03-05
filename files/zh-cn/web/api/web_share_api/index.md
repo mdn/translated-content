@@ -2,16 +2,18 @@
 title: Web 共享 API
 slug: Web/API/Web_Share_API
 l10n:
-  sourceCommit: 91907f1383139ec2bd1d309d02ffac30b4eee757
+  sourceCommit: ab4090ce439d9ea25229a8583a138b2f8fa8a74e
 ---
 
 {{DefaultAPISidebar("Web Share API")}}{{securecontext_header}}
 
 **Web 共享 API**（Web Share API）提供了一种将文本、链接、文件和其他内容共享到用户选择的任意*共享目标*的机制。
 
-> **备注：** 此 API 在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中*不可用*（未通过 {{domxref("WorkerNavigator")}} 公开）。
+> [!NOTE]
+> 此 API 在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中*不可用*（未通过 {{domxref("WorkerNavigator")}} 暴露）。
 
-> **备注：** 此 API 不应与 [Web 共享目标 API（Web Share Target API）](/zh-CN/docs/Web/Manifest/share_target)混淆，后者允许网站将自身指定为共享目标。
+> [!NOTE]
+> 此 API 不应与 [Web 共享目标 API（Web Share Target API）](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/share_target)混淆，后者允许网站将自身指定为共享目标。
 
 ## 概念和用法
 
@@ -69,4 +71,4 @@ btn.addEventListener("click", async () => {
 
 ## 参见
 
-- [Web 共享目标 API](/zh-CN/docs/Web/Manifest/share_target)
+- [Web 共享目标 API](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/share_target)

@@ -304,10 +304,10 @@ var SimplePropertyRetriever = {
 
 ## Veja também
 
-- [`in`](/pt-BR/docs/JavaScript/Reference/Operators/in)
-- [`for..in`](/pt-BR/docs/JavaScript/Reference/Statements/for...in)
-- [`hasOwnProperty`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
-- [`propertyIsEnumerable`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable)
-- [`getOwnPropertyNames`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
-- [`Object.keys`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/keys)
+- [`in`](/pt-BR/docs/Web/JavaScript/Reference/Operators/in)
+- [`for..in`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in)
+- [`hasOwnProperty`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
+- [`propertyIsEnumerable`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable)
+- [`getOwnPropertyNames`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
+- [`Object.keys`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
 - [`Object.getOwnPropertyDescriptors`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors)

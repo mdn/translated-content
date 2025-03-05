@@ -144,7 +144,7 @@ reportPerimeter(square1.length, reportList);
 
 - 로컬 테스트에서의 주의 사항 — HTML파일을 로컬(예를들어 `file://` URL)에서 로드하려고 하면, JavaScript 모듈 보안 요구 사항으로 인해 CORS오류가 발생합니다. 서버를 통해 테스트 해야 합니다.
 - 표준 스크립트와 달리 모듈 내부에서 정의된 스크립트 섹션과는 다르게 동작할 수 있습니다. 이는 모듈이 자동적으로 [strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode)를 사용하기 때문입니다.
-- 모듈 스크립트를 불러올 때 `defer` 속성([`<script>` attributes](/ko/docs/Web/HTML/Element/script#Attributes))를 사용할 필요가 없습니다. 모듈은 자동으로 defer됩니다.
+- 모듈 스크립트를 불러올 때 `defer` 속성([`<script>` attributes](/ko/docs/Web/HTML/Element/script#attributes))를 사용할 필요가 없습니다. 모듈은 자동으로 defer됩니다.
 - 마지막으로 모듈 기능을 단일 스크립트의 스코프로 가져왔음을 분명히 해야 합니다. — 전역 스코프에서는 사용할 수 없습니다. 따라서 import한 스크립트에서 가져온 기능에만 접근할 수 있습니다. 예를들어 JavaScript 콘솔에서 접근할 수 없습니다. DevTools에 구문 오류가 표시되지만, 사용하려고 하는 디버깅 기술 중 일부는 사용할 수 없습니다.
 
 ## Default exports versus named exports
@@ -474,6 +474,6 @@ Note that, promise fulfillment 가 모듈 객체를 반환하기 때문에 클�
 - [Using JavaScript modules on the web](https://developers.google.com/web/fundamentals/primers/modules#mjs), by Addy Osmani and Mathias Bynens
 - [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- Axel Rauschmayer's book [Exploring JS: Modules](http://exploringjs.com/es6/ch_modules.html)
+- Axel Rauschmayer's book [Exploring JS: Modules](https://exploringjs.com/es6/ch_modules.html)
 
 {{Previous("Web/JavaScript/Guide/Meta_programming")}}

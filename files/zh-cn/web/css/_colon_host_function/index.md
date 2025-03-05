@@ -1,5 +1,5 @@
 ---
-title: ":host()"
+title: :host()
 slug: Web/CSS/:host_function
 ---
 
@@ -9,7 +9,8 @@ slug: Web/CSS/:host_function
 
 最简单的用法是仅将类名放在某些自定义元素实例上，然后将相关的类选择器作为函数参数包含在内。不能将它与后代选择器表达式一起使用，以仅选择特定祖先内部的自定义元素的实例。这是 {{cssxref(":host-context()")}} 的作用。
 
-> **备注：** 在 shadow DOM 之外使用时，这没有任何效果。
+> [!NOTE]
+> 在 shadow DOM 之外使用时，这没有任何效果。
 
 ```css
 /* 选择阴影根元素，仅当它与选择器参数匹配 */
@@ -20,8 +21,10 @@ slug: Web/CSS/:host_function
 
 ## 语法
 
-```
-:host( <compound-selector> )
+```css-nolint
+:host(<compound-selector>) {
+  /* ... */
+}
 ```
 
 ## 示例

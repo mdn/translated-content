@@ -15,11 +15,11 @@ slug: Glossary/Canvas
 
 ### Canvas について詳しく学ぶ
 
-- [MDN 上の Canvas チュートリアル](/ja/docs/Web/Guide/HTML/Canvas_tutorial)
+- [MDN 上の Canvas チュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)
 
 ### 技術情報
 
 - MDN 上の HTML {{HTMLElement("canvas")}} 要素のページ
-- [MDN 上の Canvas の一般的なドキュメント](/ja/docs/HTML/Canvas)
+- [MDN 上の Canvas の一般的なドキュメント](/ja/docs/Web/API/Canvas_API)
 - {{domxref("CanvasRenderingContext2D")}}: canvas 2D の描画 API
-- w3c 上のページ: [The Canvas 2D API specification](http://www.w3.org/TR/2dcontext/)
+- w3c 上のページ: [The Canvas 2D API specification](https://www.w3.org/TR/2dcontext/)

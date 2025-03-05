@@ -12,7 +12,7 @@ En {{Glossary("HTML")}} una etiqueta es usada para crear un {{Glossary("elemento
 ### Conocimientos generales
 
 - [HTML element](https://es.wikipedia.org/wiki/HTML_element) en Wikipedia
-- [HTML Tags on W3](http://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
+- [HTML Tags on W3](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
 
 ### Referencia técnica
 

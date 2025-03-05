@@ -23,7 +23,7 @@ l10n:
 - `"blob"`
   - : `response` はバイナリーデータを含む {{domxref("Blob")}} オブジェクトです。
 - `"document"`
-  - : `response` は {{Glossary("HTML")}} の {{domxref("Document")}} または {{Glossary("XML")}} の {{domxref("XMLDocument")}} で、受信したデータの MIME タイプに基づいて適切な方になります。 [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)で、 XHR を使用して HTML コンテンツを読み取ることについて詳しく確認することができます。
+  - : `response` は {{Glossary("HTML")}} の {{domxref("Document")}} または {{Glossary("XML")}} の {{domxref("XMLDocument")}} で、受信したデータの MIME タイプに基づいて適切な方になります。 [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)で、 XHR を使用して HTML コンテンツを読み取ることについて詳しく確認することができます。
 - `"json"`
   - : `response` は {{Glossary("JSON")}} として受信したデータの内容を解釈して生成された JavaScript オブジェクトです。
 - `"text"`
@@ -59,5 +59,5 @@ XHR のリクエストは既定では非同期です。同期モードは、 `fa
 ## 関連情報
 
 - [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [XMLHttpRequest 内の HTML](/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [XMLHttpRequest 内の HTML](/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
 - レスポンスデータ: {{domxref("XMLHttpRequest.response", "response")}}, {{domxref("XMLHttpRequest.responseText", "responseText")}}, {{domxref("XMLHttpRequest.responseXML", "responseXML")}}

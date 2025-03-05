@@ -7,15 +7,15 @@ slug: Web/HTML/Element/legend
 
 O **Elemento HTML \<legend> **(ou _Elemento_ _HTML Campo "Legend"_) representa um rótulo para o conteúdo do seu ancestral {{HTMLElement("fieldset")}}.
 
-- _[Categorias de Conteúdo](/pt-BR/docs/HTML/Content_categories)_ Nenhuma.
-- _Conteúdo permitido_ [Conteúdo Textual](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
-- _Omissão de Tag_ {{no_tag_omission}}
+- _[Categorias de Conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ Nenhuma.
+- _Conteúdo permitido_ [Conteúdo Textual](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
+- _Omissão de Tag_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
 - _Elementos ancestrais permitidos_ Um {{HTMLElement("fieldset")}} cujo primeiro filho seja esse elemento \<legend>
 - _Interface DOM_ {{domxref("HTMLLegendElement")}}
 
 ## Atributos
 
-Esse elemento apenas inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Esse elemento apenas inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 ## Exemplos
 

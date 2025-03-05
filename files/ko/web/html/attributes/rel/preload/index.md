@@ -73,7 +73,8 @@ slug: Web/HTML/Attributes/rel/preload
 
 > **참고:** `video`를 프리로딩하는 것은 프리로드 스펙에 포함되어 있지만 현재 브라우저에는 구현되지 않았습니다.
 
-> **참고:** 브라우저에서 사용될 수 있는 이러한 값들과 웹의 기능에 대한 더 자세한 내용은 프리로드 스펙에 기재되어 있습니다. - [link 요소 확장](https://w3c.github.io/preload/#link-element-extensions)을 참고하세요. 또한, `as` 특성에 사용할 수 있는 값들의 전체 목록은 Fetch 스펙에 의해 관리되고 있음을 참고하세요 - [요청 대상](https://fetch.spec.whatwg.org/#concept-request-destination)을 참고하세요.
+> [!NOTE]
+> 브라우저에서 사용될 수 있는 이러한 값들과 웹의 기능에 대한 더 자세한 내용은 프리로드 스펙에 기재되어 있습니다. - [link 요소 확장](https://w3c.github.io/preload/#link-element-extensions)을 참고하세요. 또한, `as` 특성에 사용할 수 있는 값들의 전체 목록은 Fetch 스펙에 의해 관리되고 있음을 참고하세요 - [요청 대상](https://fetch.spec.whatwg.org/#concept-request-destination)을 참고하세요.
 
 ## MIME 타입 포함하기
 
@@ -110,7 +111,7 @@ slug: Web/HTML/Attributes/rel/preload
 
 ## CORS가 활성화된 fetch
 
-[CORS](/ko/docs/Web/HTTP/CORS)가 활성화한 채로 리소스를 프리로드할 때([`fetch()`](/ko/docs/Web/API/fetch), [`XMLHttpRequest`](/ko/docs/Web/API/XMLHttpRequest), [fonts](/ko/docs/Web/CSS/@font-face) 등), [`crossorigin`](/ko/docs/Web/HTML/Element/link#crossorigin) 특성을 [`<link>`](/ko/docs/Web/HTML/Element/link) 요소에 지정했는지 세심하게 살펴봐야 합니다. 이 특성은 교차 출처 요청이 아닌 경우에도 해당 리소스의 CORS와 credentials 모드를 일치시키기 위해 지정해야 하는 특성입니다.
+[CORS](/ko/docs/Web/HTTP/CORS)가 활성화한 채로 리소스를 프리로드할 때([`fetch()`](/ko/docs/Web/API/Window/fetch), [`XMLHttpRequest`](/ko/docs/Web/API/XMLHttpRequest), [fonts](/ko/docs/Web/CSS/@font-face) 등), [`crossorigin`](/ko/docs/Web/HTML/Element/link#crossorigin) 특성을 [`<link>`](/ko/docs/Web/HTML/Element/link) 요소에 지정했는지 세심하게 살펴봐야 합니다. 이 특성은 교차 출처 요청이 아닌 경우에도 해당 리소스의 CORS와 credentials 모드를 일치시키기 위해 지정해야 하는 특성입니다.
 
 위에서 언급된 것과 같이, 폰트 파일을 로딩하는 것이 이와 관련된 흥미로운 사례입니다. 여러 이유로 인해, 폰트 파일은 익명 모드 CORS를 통해 요청 되어야 합니다([폰트 요청 조건](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)를 참고하세요).
 
@@ -145,7 +146,7 @@ slug: Web/HTML/Attributes/rel/preload
 
 ## 미디어 포함하기
 
-`<link>` 요소의 한 가지 멋진 기능은 [`media`](/ko/docs/Web/HTML/Element/link#media) 특성을 포함할 수 있다는 것입니다. `<link>`는 [미디어 타입](/ko/docs/Web/CSS/@media#media_types) 혹은 완전한 [미디어 쿼리](/ko/docs/Web/CSS/Media_Queries/Using_media_queries)를 포함할 수 있기 때문에 반응형 프리로드를 할 수 있습니다.
+`<link>` 요소의 한 가지 멋진 기능은 [`media`](/ko/docs/Web/HTML/Element/link#media) 특성을 포함할 수 있다는 것입니다. `<link>`는 [미디어 타입](/ko/docs/Web/CSS/@media#media_types) 혹은 완전한 [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)를 포함할 수 있기 때문에 반응형 프리로드를 할 수 있습니다.
 
 예제를 살펴보겠습니다(GitHub에서 [소스 코드](https://github.com/mdn/html-examples/tree/master/link-rel-preload/media)와 [라이브 예제](https://mdn.github.io/html-examples/link-rel-preload/media/)를 참고하세요).
 
@@ -185,7 +186,7 @@ slug: Web/HTML/Attributes/rel/preload
 </body>
 ```
 
-위 예제에서는 사용자가 좁은 폭의 뷰포트를 가지고 있는 경우 작은 이미지를 프리로드하고, 넓은 폭의 뷰포트를 가지고 있는 경우 더 큰 이미지를 프리로드하기 위해 `<link>` 요소에 `media` 특성을 포함했습니다. 이를 위해 {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}}를 사용했습니다(더 상세한 내용은 [미디어 쿼리 테스트하기](/ko/docs/Web/CSS/Media_Queries/Testing_media_queries)를 참고하세요).
+위 예제에서는 사용자가 좁은 폭의 뷰포트를 가지고 있는 경우 작은 이미지를 프리로드하고, 넓은 폭의 뷰포트를 가지고 있는 경우 더 큰 이미지를 프리로드하기 위해 `<link>` 요소에 `media` 특성을 포함했습니다. 이를 위해 {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}}를 사용했습니다(더 상세한 내용은 [미디어 쿼리 테스트하기](/ko/docs/Web/CSS/CSS_media_queries/Testing_media_queries)를 참고하세요).
 
 위 방법은 폰트가 페이지가 렌더링될 때 사용 가능하도록 만들어 FOUT(스타일이 적용되지 않은 텍스트가 잠시 표출되는 현상)을 줄입니다.
 
@@ -217,7 +218,7 @@ document.body.appendChild(preloadedScript);
 
 다른 프리로딩 관련 기능이 존재하기는 하지만, `<link rel="preload">` 만큼 목적에 잘 부합하는 기능은 없습니다.
 
-- `<link rel="prefetch">`는 여러 브라우저들에서 오랫동안 지원되어 왔지만, 이는 **다음** 페이지 이동이나 페이지 로드에 사용될 리소스를 프리로딩하기 위한 목적이었습니다(예를 들어, 다음 페이지로 이동할 때). 이 역시 훌륭하지만, 현재 페이지에는 유용한 것은 아닙니다! 게다가, 브라우저는 `prefetch` 리소스에게 `preload` 리소스보다 더 낮은 우선순위를 부여할 것입니다. 현재 페이지가 다음 페이지보다 더 중요하기 때문이죠. 더 상세한 내용을 보려면 [링크 프리페칭 FAQ](/ko/docs/Web/HTTP/Link_prefetching_FAQ)를 참고하세요.
+- `<link rel="prefetch">`는 여러 브라우저들에서 오랫동안 지원되어 왔지만, 이는 **다음** 페이지 이동이나 페이지 로드에 사용될 리소스를 프리로딩하기 위한 목적이었습니다(예를 들어, 다음 페이지로 이동할 때). 이 역시 훌륭하지만, 현재 페이지에는 유용한 것은 아닙니다! 게다가, 브라우저는 `prefetch` 리소스에게 `preload` 리소스보다 더 낮은 우선순위를 부여할 것입니다. 현재 페이지가 다음 페이지보다 더 중요하기 때문이죠. 더 상세한 내용을 보려면 [링크 프리페칭 FAQ](/ko/docs/Glossary/Prefetch)를 참고하세요.
 - `<link rel="prerender">`는 특정한 웹 페이지를 백그라운드에서 렌더링해 사용자가 해당 페이지에 접근할 때의 로딩 속도를 높입니다. 이는 사용자의 대역폭을 낭비할 가능성이 있기 때문에, Chrome은 `prerender`를 [NoState prefetch](https://developer.chrome.com/blog/nostate-prefetch/)로 대신 간주합니다.
 - `<link rel="subresource">` {{non-standard_inline}}은 Chrome에서 예전에 `preload`와 같은 문제를 해결하기 위해 지원됐지만, 한 가지 문제가 있었습니다. 항목에 대한 우선순위를 지정할 방법이 없었습니다(당시는 `as`가 존재하지 않았습니다). 따라서 이를 사용한 리소스는 동일하게 낮은 우선순위로 불러와졌습니다.
 - 다양한 스크립트 기반의 리소스 로더들이 나와 있지만, 그 어떤 로더도 브라우저의 fetch 우선순위 큐보다 강력한 파워를 가지지는 못했을 뿐만 아니라, 성능 문제가 발생할 가능성이 높습니다.

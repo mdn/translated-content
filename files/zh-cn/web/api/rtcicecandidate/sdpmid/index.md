@@ -15,7 +15,8 @@ l10n:
 
 一个唯一标识候选者从中提取数据的源媒体组件的字符串，如果候选者不存在此类关联，则为 `null`。
 
-> **备注：** 使用 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 添加候选者的 `sdpMid` 和 `sdpMLineIndex` 都为 `null` 时，将抛出 {{jsxref("TypeError")}} 异常。
+> [!NOTE]
+> 使用 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 添加候选者的 `sdpMid` 和 `sdpMLineIndex` 都为 `null` 时，将抛出 {{jsxref("TypeError")}} 异常。
 
 ## 规范
 

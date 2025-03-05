@@ -9,7 +9,21 @@ l10n:
 
 **`<em>`** は [HTML](/ja/docs/Web/HTML) の要素で、強調されたテキストを示します。`<em>` 要素は入れ子にすることができ、入れ子の段階に応じてより強い程度の強調を表すことができます。
 
-{{EmbedInteractiveExample("pages/tabbed/em.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;em&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>Get out of bed <em>now</em>!</p>
+
+<p>We <em>had</em> to do something about it.</p>
+
+<p>This is <em>not</em> a drill!</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+em {
+}
+```
 
 ## 属性
 
@@ -21,7 +35,8 @@ l10n:
 
 通常、この要素はイタリック体で表示されます。しかしながら、単にイタリック体のスタイルを適用するために用いるべきではありません。そのような場合は CSS の {{cssxref("font-style")}} によるスタイル付けを使用してください。著作物（書籍、演劇、歌など）の題名を示すためには、 {{HTMLElement("cite")}} 要素を使用してください。学名や他の言語の単語のようによくイタリック体が使われるような、トーンやムードが異なるテキストをマークするには {{HTMLElement("i")}} 要素を使用してください。これらも通常、斜体のスタイルとなりますが、異なる意味を持っています。周辺のテキストよりも高い重要性を持つテキストを示すためには、{{HTMLElement("strong")}} 要素を使用してください。
 
-> **メモ:** （訳注）日本語フォントでは斜体を持たないフォントが多く、斜体で表示されないことがあります。
+> [!NOTE]
+> （訳注）日本語フォントでは斜体を持たないフォントが多く、斜体で表示されないことがあります。
 
 ### \<i> と \<em>
 
@@ -79,7 +94,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>

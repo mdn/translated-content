@@ -7,9 +7,17 @@ slug: Web/HTML/Element/embed
 
 **HTML `<embed>` 요소**는 외부 어플리케이션이나 대화형 컨텐츠와의 통합점을 나타냅니다.
 
-{{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;embed&gt;", "tabbed-standard")}}
 
-- **[컨텐츠 범주](/ko/docs/HTML/Content_categories)** [플로우 컨텐츠](/ko/docs/HTML/Content_categories#Flow_content), [구문 컨텐츠](/ko/docs/HTML/Content_categories#Phrasing_content), 포함된 컨텐츠, 대화형 컨텐츠, palpable 컨텐츠.
+```html interactive-example
+<embed
+  type="video/mp4"
+  src="/shared-assets/videos/flower.mp4"
+  width="250"
+  height="200" />
+```
+
+- **[컨텐츠 범주](/ko/docs/Web/HTML/Content_categories)** [플로우 컨텐츠](/ko/docs/Web/HTML/Content_categories#flow_content), [구문 컨텐츠](/ko/docs/Web/HTML/Content_categories#phrasing_content), 포함된 컨텐츠, 대화형 컨텐츠, palpable 컨텐츠.
 - **허용된 컨텐츠** 없음. 이것은 {{Glossary("empty element")}}.
 - **태그 생략** 시작 태그는 있어야 하며, 종료태그는 있어서는 안됩니다.
 - **허용된 부모 요소** 포함된 컨텐츠를 허용하는 모든 요소
@@ -17,7 +25,7 @@ slug: Web/HTML/Element/embed
 
 ## 속성
 
-이 요소는 [전역 속성](/ko/docs/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 속성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - `height`
   - : 리소스의 표시될 높이 길이를 CSS 픽셀로 지정

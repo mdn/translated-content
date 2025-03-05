@@ -18,7 +18,7 @@ format-number(number ,pattern [,decimal-format] )
 - `number`
   - : 형식을 지정할 수
 - `pattern`
-  - : JDK 1.1 [Decimal Format](http://java.sun.com/products/jdk/1.1/docs/api/java.text.DecimalFormat.html) 클래스 형식의 문자열.
+  - : JDK 1.1 [Decimal Format](https://java.sun.com/products/jdk/1.1/docs/api/java.text.DecimalFormat.html) 클래스 형식의 문자열.
 - `decimal-format`(선택사항)
   - : 쓸 수 형식을 정의하는 [`xsl:decimal-format`](/ko/XSLT/decimal-format) 요소의 이름. 빼면, 기본 decimal-format을 씁니다.
 
@@ -32,7 +32,7 @@ format-number(number ,pattern [,decimal-format] )
 
 ### 정의
 
-[XSLT 1.0 12.3](http://www.w3.org/TR/xslt#function-format-number)
+[XSLT 1.0 12.3](https://www.w3.org/TR/xslt#function-format-number)
 
 ### Gecko 지원
 

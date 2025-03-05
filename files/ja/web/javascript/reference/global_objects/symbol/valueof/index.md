@@ -1,19 +1,35 @@
 ---
 title: Symbol.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
+l10n:
+  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
 {{JSRef}}
 
-**`valueOf()`** メソッドは、 Symbol オブジェクトのプリミティブ値を返します。
+**`valueOf()`** は {{jsxref("Symbol")}} 値のメソッドで、このシンボル値を返します。
 
-{{EmbedInteractiveExample("pages/js/symbol-prototype-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.prototype.valueOf()")}}
+
+```js interactive-example
+const symbol1 = Symbol("foo");
+
+console.log(typeof Object(symbol1));
+// Expected output: "object"
+
+console.log(typeof Object(symbol1).valueOf());
+// Expected output: "symbol"
+```
 
 ## 構文
 
+```js-nolint
+valueOf()
 ```
-Symbol().valueOf()
-```
+
+### 引数
+
+なし。
 
 ### 返値
 
@@ -21,9 +37,9 @@ Symbol().valueOf()
 
 ## 解説
 
-{{jsxref("Symbol")}} オブジェクトの `valueOf()` メソッドは、 Symbol オブジェクトのプリミティブ値を Symbol データ型として返します。
+`valueOf()` は {{jsxref("Symbol")}} オブジェクトのメソッドで、 Symbol オブジェクトのプリミティブ値をシンボルデータ型として返します。
 
-JavaScript はオブジェクトをプリミティブ値に変換するために `valueOf()` メソッドを呼び出します。 `valueOf()` メソッドを自分で呼び出す必要はほとんどありません。 JavaScript は、プリミティブ値が期待されているオブジェクトに遭遇したときに、自動的にこれを呼び出します。
+JavaScript はオブジェクトをプリミティブ値に変換するために `valueOf()` メソッドを呼び出します。`valueOf()` メソッドを自分で呼び出す必要はほとんどありません。JavaScript は、プリミティブ値が期待されているオブジェクトに遭遇したときに、自動的にこれを呼び出します。
 
 ## 例
 

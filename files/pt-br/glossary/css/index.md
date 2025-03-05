@@ -28,7 +28,7 @@ p {
 
 ### Conhecimento geral
 
-- [Aprenda CSS](/pt-BR/docs/Aprender/CSS)
+- [Aprenda CSS](/pt-BR/docs/Learn/CSS)
 - [Cascading Style Sheets](https://pt.wikipedia.org/wiki/Cascading_Style_Sheets) na Wikipedia
 
 ### Referências técnicas

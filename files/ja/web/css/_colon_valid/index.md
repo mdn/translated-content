@@ -1,5 +1,5 @@
 ---
-title: ":valid"
+title: :valid
 slug: Web/CSS/:valid
 ---
 
@@ -14,7 +14,40 @@ input:valid {
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-valid.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :valid", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:valid {
+  background-color: ivory;
+  border: none;
+  outline: 2px solid deepskyblue;
+  border-radius: 5px;
+  accent-color: gold;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="email">Email Address:</label>
+  <input id="email" name="email" type="email" value="na@me@example.com" />
+
+  <label for="secret">Secret Code: (lower case letters)</label>
+  <input id="secret" name="secret" type="text" value="test" pattern="[a-z]+" />
+
+  <label for="age">Your age: (18+)</label>
+  <input id="age" name="age" type="number" value="5" min="18" />
+
+  <label
+    ><input name="tos" type="checkbox" required checked /> - Do you agree to
+    ToS?</label
+  >
+</form>
+```
 
 この擬似クラスは、入力値が正しい入力欄をユーザーに強調表示するのに便利です。
 
@@ -68,7 +101,8 @@ input:valid + span::before {
 
 生成されたコンテンツを相対的に配置できるように `<span>` を `position: relative` に設定します。そして、フォームのデータが有効か無効かに応じて、生成されるコンテンツを絶対位置指定で配置します。無効なデータには、さらに軽く緊急性を表すために、無効になったときに太い赤い枠線をつけています。
 
-> **メモ:** これらのラベルを追加するために `::before` を使ったのは、すでに `::after` を "required" ラベルに使っていたからです。
+> [!NOTE]
+> これらのラベルを追加するために `::before` を使ったのは、すでに `::after` を "required" ラベルに使っていたからです。
 
 以下で試してみることができます。
 

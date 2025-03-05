@@ -63,8 +63,8 @@ slug: Web/SVG/Attribute/stroke-linecap
 
 以下元素可以使用`stroke-linecap` 属性
 
-- [图形元素](/zh-CN/docs/Web/SVG/Element#Shape) »
-- [文本内容元素](/zh-CN/docs/Web/SVG/Element#TextContent) »
+- [图形元素](/zh-CN/docs/Web/SVG/Element#shape) »
+- [文本内容元素](/zh-CN/docs/Web/SVG/Element#textcontent) »
 
 ## 规范
 

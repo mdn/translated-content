@@ -75,7 +75,8 @@ On peut maintenant utiliser le modèle dans le document HTML:
 <my-paragraph></my-paragraph>
 ```
 
-> **Note :** Les modèles sont bien pris en charge par les navigateurs&nbsp;; l'API Shadow DOM est pris en charge par défaut dans Firefox (à partir de la version 63), Chrome, Opera, Safari et Edge (à partir de la version 70).
+> [!NOTE]
+> Les modèles sont bien pris en charge par les navigateurs&nbsp;; l'API Shadow DOM est pris en charge par défaut dans Firefox (à partir de la version 63), Chrome, Opera, Safari et Edge (à partir de la version 70).
 
 ## Plus de flexibilité avec les slots
 
@@ -110,7 +111,8 @@ ou
 </my-paragraph>
 ```
 
-> **Note :** Un élément [`<slot>`](/fr/docs/Web/HTML/Element/slot) sans nom sera rempli avec l'ensemble des nœuds-fils de plus haut niveau de l'élément personnalisé qui n'ont pas d'attribut [`slot`](/fr/docs/Web/HTML/Global_attributes#slot). Cela inclut les nœuds texte.
+> [!NOTE]
+> Un élément [`<slot>`](/fr/docs/Web/HTML/Element/slot) sans nom sera rempli avec l'ensemble des nœuds-fils de plus haut niveau de l'élément personnalisé qui n'ont pas d'attribut [`slot`](/fr/docs/Web/HTML/Global_attributes#slot). Cela inclut les nœuds texte.
 
 Et c'est tout pour ce premier exemple. Si vous souhaitez manipuler les emplacements, vous pouvez [voir la page sur GitHub](https://github.com/mdn/web-components-examples/tree/master/simple-template) (voir aussi [le résultat](https://mdn.github.io/web-components-examples/simple-template/)).
 
@@ -127,7 +129,8 @@ Il est techniquement possible d'utiliser un élément [`<slot>`](/fr/docs/Web/HT
 
 De plus, même si l'élément n'est pas déjà rendu, le rôle de conteneur porté par le modèle sera sémantiquement plus clair en utilisant [`<template>`](/fr/docs/Web/HTML/Element/template). De plus, [`<template>`](/fr/docs/Web/HTML/Element/template) peut avoir des éléments qui lui sont directement rattachés comme [`<td>`](/fr/docs/Web/HTML/Element/td). Ce même élément disparaîtrait s'il était ajouté à un élément [`<div>`](/fr/docs/Web/HTML/Element/div).
 
-> **Note :** Vous pourrez retrouver l'exemple complet sur [le dépôt GitHub pour element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (voir également [le résultat en action](https://mdn.github.io/web-components-examples/element-details/)).
+> [!NOTE]
+> Vous pourrez retrouver l'exemple complet sur [le dépôt GitHub pour element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (voir également [le résultat en action](https://mdn.github.io/web-components-examples/element-details/)).
 
 ### Créer un modèle avec des emplacements
 

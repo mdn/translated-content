@@ -117,7 +117,8 @@ showOffsetPos("content");
 // top: 153px;"
 ```
 
-> **Nota:** Nesse caso, quando você não usa a seção de declaração, **o** **ponto-e-vírgula é colocada imediatamente após a declaração do ciclo**.
+> [!NOTE]
+> Nesse caso, quando você não usa a seção de declaração, **o** **ponto-e-vírgula é colocada imediatamente após a declaração do ciclo**.
 
 ## Especificações
 

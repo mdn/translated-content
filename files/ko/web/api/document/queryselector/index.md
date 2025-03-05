@@ -7,7 +7,8 @@ slug: Web/API/Document/querySelector
 
 **`Document.querySelector()`** 는 제공한 선택자 또는 선택자 뭉치와 일치하는 문서 내 첫 번째 {{domxref("Element")}}를 반환합니다. 일치하는 요소가 없으면 `null`을 반환합니다.
 
-> **참고:** 탐색은 깊이우선depth-first 전위pre-order순회로, 문서의 첫 번째 요소부터 시작해 자식 노드의 수를 기준으로 순회합니다.
+> [!NOTE]
+> 탐색은 깊이우선depth-first 전위pre-order순회로, 문서의 첫 번째 요소부터 시작해 자식 노드의 수를 기준으로 순회합니다.
 
 ## 구문
 
@@ -18,9 +19,10 @@ document.querySelector(selectors);
 ### 매개변수
 
 - `selectors`
-  - : 하나 이상의 선택자를 포함한 {{domxref("DOMString")}}. 유효한 CSS 선택자여야만 하며 아닐 경우 `SYNTAX_ERR` 예외가 발생합니다. [선택자로 DOM 요소 선택하기](/ko/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) 문서를 참고해 선택자와 선택자 작성 방법을 더 알아보세요.
+  - : 하나 이상의 선택자를 포함한 {{domxref("DOMString")}}. 유효한 CSS 선택자여야만 하며 아닐 경우 `SYNTAX_ERR` 예외가 발생합니다. [선택자로 DOM 요소 선택하기](/ko/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors) 문서를 참고해 선택자와 선택자 작성 방법을 더 알아보세요.
 
-> **참고:** CSS 표준 구문이 포함하는 문자가 아닌 경우 역슬래시(`\`)로 이스케이프해야 합니다.
+> [!NOTE]
+> CSS 표준 구문이 포함하는 문자가 아닌 경우 역슬래시(`\`)로 이스케이프해야 합니다.
 >
 > JavaScript 또한 역슬래시로 이스케이프를 하기 때문에 특히 주의를 기울여야 합니다. 자세한 내용은 [특수 문자 이스케이프](#특수_문자_이스케이프) 항목을 참고하세요.
 
@@ -39,7 +41,7 @@ document.querySelector(selectors);
 
 만약 `selector`가 ID 선택자인데, 해당 ID를 잘못 사용하여 문서 내에 여러 번 사용했으면 첫 번째로 그 ID를 사용한 요소를 반환합니다.
 
-[CSS 의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 [선택자 API](http://www.w3.org/TR/selectors-api/#grammar)가 명시한 대로 어떠한 요소도 반환하지 않습니다.
+[CSS 의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 [선택자 API](https://www.w3.org/TR/selectors-api/#grammar)가 명시한 대로 어떠한 요소도 반환하지 않습니다.
 
 ### 특수 문자 이스케이프
 
@@ -90,7 +92,7 @@ var el = document.querySelector("div.user-panel.main input[name=login]");
 
 ## 더 보기
 
-- [선택자로 DOM 요소 선택하기](/ko/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [선택자로 DOM 요소 선택하기](/ko/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - {{domxref("element.querySelector()")}}
 - {{domxref("document.querySelectorAll()")}}
 - {{domxref("element.querySelectorAll()")}}

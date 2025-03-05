@@ -68,7 +68,7 @@ new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 
 このようなファイル固有の引数の受け渡しは、アプリケーション全体の `location.href`（HTML ファイルパスの後にクエリ文字列やハッシュを追加したもの \[Node.js では `process.argv` を介して]）で使用されているものを補完する場合があります。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

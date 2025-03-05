@@ -15,4 +15,4 @@ slug: Glossary/BiDi
 
 ### 技術文書
 
-- [Bidi アプリの開発](/ja/Apps/Build/Localization/Developing_Bidi_Apps)
+- [Bidi アプリの開発](/ja/docs/Web/Apps/Build/Localization/Developing_Bidi_Apps)

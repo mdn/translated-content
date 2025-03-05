@@ -9,7 +9,28 @@ l10n:
 
 **`accept`** 属性は、値としてカンマ区切りでファイル種別または[固有ファイル種別指定子](#unique_file_type_specifiers)を取り、どのファイル種別を受け入れるかを記述します。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-accept.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: accept", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="movie">Choose a movie to upload:</label>
+
+<input type="file" id="movie" name="movie" accept="video/*" />
+
+<label for="poster">Choose a poster:</label>
+
+<input type="file" id="poster" name="poster" accept="image/png, image/jpeg" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+input {
+  margin-bottom: 1rem;
+}
+```
 
 ## 概要
 
@@ -103,7 +124,8 @@ div {
 
 {{EmbedLiveSample('A_basic_example', 650, 60)}}
 
-> **メモ:** この例は GitHub でも見ることができます。 — [ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)を確認してください。
+> [!NOTE]
+> この例は GitHub でも見ることができます。 — [ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)を確認してください。
 
 ユーザーの端末やオペレーティングシステムが何であろうと、ファイル入力には、ユーザーがファイルを選択するためのファイルピッカーダイアログを開くボタンが用意されす。
 

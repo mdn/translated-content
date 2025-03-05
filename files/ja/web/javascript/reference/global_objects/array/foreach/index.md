@@ -2,14 +2,24 @@
 title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
 {{JSRef}}
 
 **`forEach()`** メソッドは、与えられた関数を、配列の各要素に対して一度ずつ実行します。
 
-{{EmbedInteractiveExample("pages/js/array-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Array.forEach()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+array1.forEach((element) => console.log(element));
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## 構文
 
@@ -37,17 +47,9 @@ forEach(callbackFn, thisArg)
 
 ## 解説
 
-`forEach()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。指定された関数 `callbackFn` を配列に含まれる各要素に対して一度ずつ、昇順で呼び出します。 {{jsxref("Array/map", "map()")}} と異なり、 `forEach()` は常に {{jsxref("undefined")}} を返し、連鎖させることはできません。典型的な使用する用途は、チェーンの終わりで副次効果を実行することです。
+`forEach()` メソッドは[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)です。指定された関数 `callbackFn` を配列に含まれる各要素に対して一度ずつ、昇順で呼び出します。 {{jsxref("Array/map", "map()")}} と異なり、 `forEach()` は常に {{jsxref("undefined")}} を返し、連鎖させることはできません。典型的な使用する用途は、チェーンの終わりで副次効果を実行することです。これらのメソッドが一般的にどのように動作するのかについての詳細は、[反復処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#反復処理メソッド)の節をご覧下さい。
 
 `callbackFn` は値が割り当てられている配列インデックスに対してのみ呼び出されます。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)で空のスロットに対しては呼び出されません。
-
-`forEach()` メソッドは呼び出し元の配列を変更しませんが、 `callbackFn` に指定された関数は変更することがあります。ただし、配列の長さは `callbackFn` を最初に呼び出す前に保存されることに注意してください。したがって、
-
-- `callbackFn` は `forEach()` の呼び出しを始めたときの配列の長さを超えて追加された要素にはアクセスしません。
-- 既に訪問した位置を変更しても、 `callbackFn` が再度呼び出されることはありません。
-- まだ訪問していない既存の配列要素が `callbackFn` によって変更された場合、 `callbackFn` に渡される値はその要素が取得される時点の値になります。[削除](/ja/docs/Web/JavaScript/Reference/Operators/delete)された要素は `undefined` であるかのように処理されます。
-
-> **警告:** 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
 
 `forEach()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
 
@@ -76,27 +78,6 @@ console.log(sum);
 
 ## 例
 
-### 不連続な配列に対する forEach() の使用
-
-```js-nolint
-const arraySparse = [1, 3, /* 空 */, 7];
-let numCallbackRuns = 0;
-
-arraySparse.forEach((element) => {
-  console.log({ element });
-  numCallbackRuns++;
-});
-
-console.log({ numCallbackRuns });
-
-// { element: 1 }
-// { element: 3 }
-// { element: 7 }
-// { numCallbackRuns: 3 }
-```
-
-3 と 7 の間の値がないところで、コールバック関数が呼び出されなかったことが分かります。
-
 ### for ループから forEach への変換
 
 ```js
@@ -116,7 +97,8 @@ items.forEach((item) => {
 
 ### 配列の内容の出力
 
-> **メモ:** 配列の内容をコンソールに表示するために、配列の整形済みのバージョンを表示する {{domxref("Console/table", "console.table()")}} を使用することができます。
+> [!NOTE]
+> 配列の内容をコンソールに表示するために、配列の整形済みのバージョンを表示する {{domxref("console/table_static", "console.table()")}} を使用することができます。
 >
 > 以下の例では同じことを `forEach()` を使用して行う他の方法を説明しています。
 
@@ -147,7 +129,7 @@ class Counter {
     this.count = 0;
   }
   add(array) {
-    // Only function expressions will have its own this binding
+    // Only function expressions have their own this bindings.
     array.forEach(function countEntry(entry) {
       this.sum += entry;
       ++this.count;
@@ -163,7 +145,8 @@ console.log(obj.sum); // 16
 
 `thisArg` 引数 (`this`) が `forEach()` に提供されているため、`callbackFn` の呼び出しのたびにこれが渡されます。コールバックはこれを `this` の値として使用します。
 
-> **メモ:** コールバック関数の受け渡しに[アロー関数式](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を使用した場合、`thisArg` 引数は、アロー関数が文法的に {{jsxref("Operators/this", "this")}} の値に結び付けられているため省略可能です。
+> [!NOTE]
+> コールバック関数の受け渡しに[アロー関数式](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を使用した場合、`thisArg` 引数は、アロー関数が文法的に {{jsxref("Operators/this", "this")}} の値に結び付けられているため省略可能です。
 
 ### オブジェクトをコピーする関数
 
@@ -187,31 +170,9 @@ const obj1 = { a: 1, b: 2 };
 const obj2 = copy(obj1); // obj2 looks like obj1 now
 ```
 
-### 反復処理中の配列の変更
-
-次の例では `one`, `two`, `four` をログ出力します。
-
-値 `two` を含む項目に到達すると、配列全体の最初の項目が取り出され、残りのすべての項目が 1 つずつ繰り上がります。
-要素 `four` は配列の前の方の位置にあるので、 `three` は飛ばされます。
-
-`forEach()` は反復処理の前に配列のコピーを生成しません。
-
-```js
-const words = ["one", "two", "three", "four"];
-words.forEach((word) => {
-  console.log(word);
-  if (word === "two") {
-    words.shift(); // 'one' が配列から削除される
-  }
-}); // one // two // four
-
-console.log(words); // ['two', 'three', 'four']
-```
-
 ### 配列の平坦化
 
-次の例は学習目的だけのものです。
-組み込みメソッドを使用して配列を平坦化したい場合は、{{jsxref("Array.prototype.flat()")}} を使用することができます。
+次の例は学習目的だけのものです。組み込みメソッドを使用して配列を平坦化したい場合は、{{jsxref("Array.prototype.flat()")}} を使用することができます。
 
 ```js
 const flatten = (arr) => {
@@ -230,6 +191,47 @@ const flatten = (arr) => {
 const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]];
 console.log(flatten(nested)); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
+
+### callbackFn の第 3 引数の使用
+
+`array` 引数は、配列の別の要素にアクセスしたい場合、特に配列を参照する既存の変数を保有していない場合に便利です。次の例では、最初の `filter()` を使用して正の値を抽出し、次に `forEach()` を使用してその付近をログに記録します。
+
+```js
+const numbers = [3, -1, 1, 4, 1, 5];
+numbers
+  .filter((num) => num > 0)
+  .forEach((num, idx, arr) => {
+    // arr 引数がない場合、変数に保存せずに中間配列に
+    // 簡単にアクセスする方法はない
+    console.log(arr[idx - 1], num, arr[idx + 1]);
+  });
+// undefined 3 1
+// 3 1 4
+// 1 4 1
+// 4 1 5
+// 1 5 undefined
+```
+
+### 疎配列に対する forEach() の使用
+
+```js-nolint
+const arraySparse = [1, 3, /* 空 */, 7];
+let numCallbackRuns = 0;
+
+arraySparse.forEach((element) => {
+  console.log({ element });
+  numCallbackRuns++;
+});
+
+console.log({ numCallbackRuns });
+
+// { element: 1 }
+// { element: 3 }
+// { element: 7 }
+// { numCallbackRuns: 3 }
+```
+
+3 と 7 の間の値がないところで、コールバック関数が呼び出されなかったことが分かります。
 
 ### 配列以外のオブジェクトに対する forEach() の呼び出し
 

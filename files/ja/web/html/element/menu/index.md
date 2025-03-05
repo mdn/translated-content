@@ -9,7 +9,33 @@ l10n:
 
 **`<menu>`** は [HTML](/ja/docs/Web/HTML) の要素で、HTML 仕様書では {{HTMLElement("ul")}} とは異なる意味づけとして記述されていますが、ブラウザーでは {{HTMLElement("ul")}} と違いのないものとして扱われます（そしてアクセシビリティツリーで公開されます）。これは（{{HTMLElement("li")}} 要素で表現される）項目の順序のないリストを表します。
 
-{{EmbedInteractiveExample("pages/tabbed/menu.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;menu&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<div class="news">
+  <a href="#">NASA’s Webb Delivers Deepest Infrared Image of Universe Yet</a>
+  <menu>
+    <li><button id="save">Save for later</button></li>
+    <li><button id="share">Share this news</button></li>
+  </menu>
+</div>
+```
+
+```css interactive-example
+.news {
+  background-color: bisque;
+  padding: 1em;
+  border: solid thin black;
+}
+
+menu {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin-bottom: 0;
+  gap: 1em;
+}
+```
 
 ## 属性
 
@@ -19,7 +45,8 @@ l10n:
 
 `<menu>` 要素と {{HTMLElement("ul")}} 要素はともに順序なしリストの項目を表すものです。主な違いは、{{HTMLElement("ul")}} は主に項目の表示を目的とするのに対し、 `<menu>` 要素は操作を行うための対話型の項目のためのものです。関連する {{HTMLElement("menuitem")}} 要素は非推奨になりました。
 
-> **メモ:** HTML 仕様書の初期の版では、`<menu>` 要素にはコンテキストメニューとしての追加の用途がありました。この機能は廃止されたと考えており、仕様書にはありません。
+> [!NOTE]
+> HTML 仕様書の初期の版では、`<menu>` 要素にはコンテキストメニューとしての追加の用途がありました。この機能は廃止されたと考えており、仕様書にはありません。
 
 ## 例
 
@@ -105,7 +132,7 @@ button {
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{No_Tag_Omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>

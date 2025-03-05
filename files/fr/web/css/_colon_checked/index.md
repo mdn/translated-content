@@ -1,11 +1,11 @@
 ---
-title: ":checked"
+title: :checked
 slug: Web/CSS/:checked
 ---
 
 {{CSSRef}}
 
-La pseudo-classe **`:checked`** représente n'importe quel **bouton radio** ([`<input type="radio">`](/fr/docs/Web/HTML/Element/Input/radio)), **case à cocher** ([`<input type="checkbox">`](/fr/docs/Web/HTML/Element/Input/checkbox)) ou **option** ({{HTMLElement("option")}} d'un élément {{HTMLElement("select")}}) qui est coché ou activé (`on`). L'utilisateur peut modifier cet état en cliquant sur l'élément ou en sélectionnant une valeur différente auquel cas la pseudo-classe `:checked` ne s'applique plus à l'élément en question.
+La pseudo-classe **`:checked`** représente n'importe quel **bouton radio** ([`<input type="radio">`](/fr/docs/Web/HTML/Element/input/radio)), **case à cocher** ([`<input type="checkbox">`](/fr/docs/Web/HTML/Element/input/checkbox)) ou **option** ({{HTMLElement("option")}} d'un élément {{HTMLElement("select")}}) qui est coché ou activé (`on`). L'utilisateur peut modifier cet état en cliquant sur l'élément ou en sélectionnant une valeur différente auquel cas la pseudo-classe `:checked` ne s'applique plus à l'élément en question.
 
 ```css
 /* cible n'importe quel bouton radio sélectionné, case
@@ -16,7 +16,8 @@ input:checked {
 }
 ```
 
-> **Note :** Les navigateurs considèrent souvent les éléments `<option>` comme [des éléments remplacés](/fr/docs/Web/CSS/Élément_remplacé)et la possibilité de mise en forme avec `:checked` varie d'un navigateur à l'autre.
+> [!NOTE]
+> Les navigateurs considèrent souvent les éléments `<option>` comme [des éléments remplacés](/fr/docs/Web/CSS/Replaced_element)et la possibilité de mise en forme avec `:checked` varie d'un navigateur à l'autre.
 
 ## Syntaxe
 

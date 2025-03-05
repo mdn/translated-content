@@ -9,7 +9,8 @@ l10n:
 
 **`Set-Cookie`** HTTP 响应标头用于将 cookie 由服务器发送到用户代理，以便用户代理在后续的请求中可以将其发送回服务器。要发送多个 cookie，则应在同一响应中发送多个 **`Set-Cookie`** 标头。
 
-> **警告：** 根据 Fetch 规范，`Set-Cookie` 是一个[禁止修改的响应标头](https://fetch.spec.whatwg.org/#forbidden-response-header-name)，对应的响应在被暴露给前端代码前，[必须滤除](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0)这一响应标头，即浏览器会阻止前端 JavaScript 代码访问该标头。
+> [!WARNING]
+> 根据 Fetch 规范，`Set-Cookie` 是一个[禁止修改的响应标头](https://fetch.spec.whatwg.org/#forbidden-response-header-name)，对应的响应在被暴露给前端代码前，[必须滤除](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0)这一响应标头，即浏览器会阻止前端 JavaScript 代码访问该标头。
 
 更多信息请查阅指南：[使用 HTTP cookie](/zh-CN/docs/Web/HTTP/Cookies)。
 
@@ -62,7 +63,8 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     **编码**：许多实现会对 cookie 值进行 [URL 编码](https://zh.wikipedia.org/wiki/百分号编码)。但是按照 RFC 规范，这不是必须的。不过 URL 编码有助于满足 `<cookie-value>` 对允许使用的字符的要求。
 
-    > **备注：** 一些 `<cookie-name>` 具有特殊的语义：
+    > [!NOTE]
+    > 一些 `<cookie-name>` 具有特殊的语义：
     >
     > **`__Secure-` 前缀**：以 `__Secure-` 为前缀的 cookie（连接符是前缀的一部分），必须与 `secure` 标志一同设置，同时必须应用于安全页面（HTTPS）。
     >
@@ -86,7 +88,8 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     如果没有指定，那么会是一个**会话期 cookie**。会话在客户端被关闭时结束，这意味着会话期 cookie 会在彼时被移除。
 
-    > **警告：** 然而，很多 Web 浏览器支持*会话恢复*特性，这可以使浏览器保留所有的标签，然后在重新打开浏览器的时候将其还原。与此同时，cookie 也会恢复，就跟从来没有关闭浏览器一样。
+    > [!WARNING]
+    > 然而，很多 Web 浏览器支持*会话恢复*特性，这可以使浏览器保留所有的标签，然后在重新打开浏览器的时候将其还原。与此同时，cookie 也会恢复，就跟从来没有关闭浏览器一样。
 
     如果设置了 `Expires` 日期，其截止时间与*客户端*相关，而非服务器的时间。
 
@@ -95,7 +98,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 - `Max-Age=<number>` {{optional_inline}}
   - : 在 cookie 过期之前需要经过的秒数。秒数为 0 或负值将会使 cookie 立刻过期。假如同时设置了 `Expires` 和 `Max-Age` 属性，那么 `Max-Age` 的优先级更高。
 - `Partitioned` {{optional_inline}}{{experimental_inline}}
-  - : 表示应使用分区存储来存储 cookie。有关更多详细信息，请参见[具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Partitioned_cookies)。
+  - : 表示应使用分区存储来存储 cookie。有关更多详细信息，请参见[具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)。
 - `Path=<path-value>` {{optional_inline}}
 
   - : 表示浏览器要发送该 `Cookie` 标头时，请求的 URL 中所*必须*存在的路径。
@@ -131,7 +134,8 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
   - : 表示仅当请求通过 `https:` 协议（localhost 不受此限制）发送时才会将该 cookie 发送到服务器，因此其更能够抵抗[中间人](/zh-CN/docs/Glossary/MitM)攻击。
 
-    > **备注：** 不要假设 `Secure` 会阻止所有的对 cookie 中敏感信息（会话密钥、登录信息，等等）的访问。携带这一属性的 cookie 在不设置 `HttpOnly` 属性的情况下仍能从客户端的硬盘或是从 JavaScript 中访问及更改。
+    > [!NOTE]
+    > 不要假设 `Secure` 会阻止所有的对 cookie 中敏感信息（会话密钥、登录信息，等等）的访问。携带这一属性的 cookie 在不设置 `HttpOnly` 属性的情况下仍能从客户端的硬盘或是从 JavaScript 中访问及更改。
     >
     > 非安全站点（`http:`）不能在 cookie 中设置 `Secure` 属性（从 Chrome 52 和 Firefox 52 开始）。当 `Secure` 属性由 localhost 设置时，`https:` 的要求会被忽略（从 Chrome 89 和 Firefox 75 开始）。
 
@@ -181,7 +185,8 @@ Set-Cookie: sessionId=e8bb43229de9; Domain=foo.example.com
 
 另外，假如 cookie 以 `__Host-` 为前缀，那么 path 属性的值必须为 `/`（表示主机的任何路径），且不能含有 `Domain` 属性。
 
-> **警告：** 对于不支持 cookie 前缀的客户端，无法保证这些附加的条件成立，所以带前缀的 cookie 将始终被接受。
+> [!WARNING]
+> 对于不支持 cookie 前缀的客户端，无法保证这些附加的条件成立，所以带前缀的 cookie 将始终被接受。
 
 ```http
 // 当响应来自安全来源（HTTPS）时，二者都会被接受
@@ -204,7 +209,8 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 ```
 
-> **备注：** 分区 cookie 必须设置 `Secure` 和 `Path=/`。此外，建议在设置分区 cookie 时使用 `__Host` 前缀，以使其绑定到主机名而不是可注册的域名。
+> [!NOTE]
+> 分区 cookie 必须设置 `Secure` 和 `Path=/`。此外，建议在设置分区 cookie 时使用 `__Host` 前缀，以使其绑定到主机名而不是可注册的域名。
 
 ## 规范
 
@@ -223,4 +229,4 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 - [HTTP cookie](/zh-CN/docs/Web/HTTP/Cookies)
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
-- [SameSite Cookie 说明](https://web.dev/articles/samesite-cookies-explained)（web.dev 博客）
+- [SameSite Cookie 说明](https://web.developers.google.cn/articles/samesite-cookies-explained)（web.developers.google.cn 博客）

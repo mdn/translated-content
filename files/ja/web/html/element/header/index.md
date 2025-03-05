@@ -9,11 +9,52 @@ l10n:
 
 **`<header>`** は [HTML](/ja/docs/Web/HTML) の要素で、導入的なコンテンツ、ふつうは導入部やナビゲーション補助のグループを表します。見出し要素だけでなく、ロゴ、検索フォーム、著者名、その他の要素を含むこともできます。
 
-{{EmbedInteractiveExample("pages/tabbed/header.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;header&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<header>
+  <a class="logo" href="#">Cute Puppies Express!</a>
+</header>
+
+<article>
+  <header>
+    <h1>Beagles</h1>
+    <time>08.12.2014</time>
+  </header>
+  <p>
+    I love beagles <em>so</em> much! Like, really, a lot. They’re adorable and
+    their ears are so, so snugly soft!
+  </p>
+</article>
+```
+
+```css interactive-example
+.logo {
+  background: left / cover
+    url("/shared-assets/images/examples/puppy-header.jpg");
+  display: flex;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  font:
+    bold calc(1em + 2 * (100vw - 120px) / 100) "Dancing Script",
+    fantasy;
+  color: #ff0083;
+  text-shadow: #000 2px 2px 0.2rem;
+}
+
+header > h1 {
+  margin-bottom: 0;
+}
+
+header > time {
+  font: italic 0.7rem sans-serif;
+}
+```
 
 ## 使用上の注意
 
-`<header>` 要素は、区分コンテンツの中に含まれていない限り、ウェブサイト全体の [`banner`](/ja/docs/Web/Accessibility/ARIA/Roles/banner_role) ランドマークロールと同じ意味を持ちます。その場合、`<header>` 要素はランドマークではありません。
+`<header>` 要素は、区分コンテンツの中に含まれていない限り、ウェブサイト全体の [`banner`](/ja/docs/Web/Accessibility/ARIA/Roles/banner_role) ランドマークロールと同じ意味を持ちます。区分コンテンツの中に含まれている場合、`<header>` 要素はランドマークではありません。
 
 `<header>` 要素はグローバルなサイトヘッダーを定義することができ、アクセシビリティツリーでは `banner` として記述されます。通常、ロゴ、会社名、検索機能、そして場合によってはグローバルナビゲーションやスローガンを含みます。一般的にはページの上部に配置されます。
 
@@ -96,7 +137,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>

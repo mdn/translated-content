@@ -1,65 +1,54 @@
 ---
-title: <meter>
+title: <meter>：HTML 标量元素
 slug: Web/HTML/Element/meter
+l10n:
+  sourceCommit: 9c09b183a5ce844a75c2f22e909d03f71ca329fc
 ---
 
 {{HTMLSidebar}}
 
-HTML **`<meter>`** 元素用来显示已知范围的标量值或者分数值。
+**`<meter>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示在已知范围内的标量值或分数值。
 
-{{EmbedInteractiveExample("pages/tabbed/meter.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;meter&gt;", "tabbed-shorter")}}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, labelable content, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">Phrasing content</a>, but there must be no <code>&lt;meter&gt;</code> element among its descendants.</td>
-  </tr>
-  <tr>
-   <th scope="row">标签省略</th>
-   <td>不允许，开始标签和结束标签都不能省略。</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLMeterElement")}}</td>
-  </tr>
- </tbody>
-</table>
+```html interactive-example
+<label for="fuel">Fuel level:</label>
+
+<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
+  at 50/100
+</meter>
+```
+
+```css interactive-example
+label {
+  padding-right: 10px;
+  font-size: 1rem;
+}
+```
 
 ## 属性
 
-该元素包含所有的[全局属性](/zh-CN/docs/HTML/Global_attributes).
+此元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `value`
 
-  - : 当前的数值。如果设置了最小值和最大值（分别由 min 属性和 max 属性定义），它必须介于最小值和最大值之间。如果没有指定或者格式有误，值即为 0。如果给定的值不在最小值和最大值之间，它的值就等于它最接近的一端的值。
+  - : 当前数值。如果指定了最小值和最大值（`min` 属性和 `max` 属性），则必须介于这两个值之间。如果未指定或格式错误，则值为 `0`。如果指定的值不在 `min` 属性和 `max` 属性给定的范围内，则该值等于范围的最近端。
 
-    > **备注：** 除非值域在 0 到 1（闭区间）, 否则最小值和最大值属性需要定义，以保证 value 属性在值域范围内。换言之，默认的 min 和 max 值分别为 0 和 1。
+    > [!NOTE]
+    > 除非 `value` 属性介于 `0` 和 `1` 之间（包括 0 和 1），否则 `min` 和 `max` 属性应定义范围，以便 `value` 属性的值在该范围内。
 
-- `min`
-  - : 值域的最小边界值。如果设置了，它必须比最大值要小。如果没设置，默认为 0。
-- `max`
-  - : 值域的上限边界值。如果设置了，它必须比最小值要大。如果没设置，默认为 1。
+- [`min`](/zh-CN/docs/Web/HTML/Attributes/min)
+  - : 测量范围的下限。如果指定，该值必须小于最大值（`max` 属性）。如果未指定，则最小值为 `0`。
+- [`max`](/zh-CN/docs/Web/HTML/Attributes/max)
+  - : 测量范围的上限。如果指定，该值必须大于最小值（`min` 属性）。如果未指定，则最大值为 `1`。
 - `low`
-  - : 定义了低值区间的上限值（译者注：如果 value 介于 min 和 low 之间，该元素就会表现出低值的视觉效果，value 落在 \[min,low]、\[high,max] 等不同的区间会使浏览器渲染该元素时出不同的视觉效果）。如果设置了，它必须比最小值属性大，并且不能超过 high 值和最大值。未设置或者比最小值还要小时，其值即为最小值。
+  - : 测量范围低档部分的数值上限。该值必须大于最小值（`min` 属性），如果指定了高档值和最大值（分别为 `high` 属性和 `max` 属性），也必须小于高档值和最大值。如果未指定或小于最小值，`low` 值等于最小值。
 - `high`
-  - : 定义了高值区间的下限值。如果设置了，它必须小于最大值，同时必须大于 low 值和最小值。如果没有设置，或者比最大值还大，其值即为最大值。
+  - : 测量范围高档部分的数值下限。该值必须小于最大值（`max` 属性），且必须大于低档值（`low` 属性）和最小值（`min` 属性），如果未指定或大于最大值，则 `high` 值等于最大值。
 - `optimum`
-  - : 这个属性用来指示最优/最佳取值。它必须在正确的值域内（由最小值属性和最大值属性定义）。当使用了 low 和 high 属性时，它指明哪一个取值范围是更好的。例如，假设它介于最小值和 low 之间，那么 lower 区间就被认为是更佳的取值范围。
+  - : 该属性表示最佳数值。必须在 `min` 属性和 `max` 属性定义的范围内。当与 `low` 属性和 `high` 属性一起使用时，它表示范围内哪个位置更合适。例如，如果值介于 `min` 属性和 `low` 属性之间，则认为首选低档范围的。浏览器可能会根据值是否小于或等于最佳值来为仪表条附着不同的颜色。
 - `form`
-  - : 该属性将本元素与对应的 form 元素关联。例如，一个计量器可能用来显示某个数值输入框（input 元素，number 类型）的范围。只有当计量器元素被用作表单关联的元素时，该属性才应当被使用；即便如此，如果它作为表单的后代元素出现，它仍然有可能被省略。
+  - : 此可选属性用于显式设置 `<meter>` 元素的 {{HTMLElement("form")}} 所有者。如果省略，则 `<meter>` 元素将与其 `<form>` 父元素关联，或者与另一个父元素（例如 {{HTMLElement("fieldset")}}）上的 `form` 属性所设置的表单相关联（如果有的话）。如果包含，则该值必须是同一文档树中的 `<form>` 元素的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id)。
 
 ## 示例
 
@@ -68,38 +57,88 @@ HTML **`<meter>`** 元素用来显示已知范围的标量值或者分数值。
 #### HTML
 
 ```html
-<p>
-  Heat the oven to <meter min="200" max="500" value="350">350 degrees</meter>.
-</p>
+<p>电池电量：<meter min="0" max="100" value="75">75%</meter></p>
 ```
 
 #### 结果
 
 {{EmbedLiveSample("简单示例", 300, 60)}}
 
-在 Google Chrome 浏览器上，计量器结果如下：
+### 高档和低档范围示例
 
-![current look of 'meter' in Google Chrome](screen_shot_2020-10-12_at_10.10.53_pm.png)
-
-### 高低值区间示例
-
-注意本例中 min 属性被省略，这是允许的，默认值为 0。
+请注意，在此示例中省略了 [`min`](#min) 属性。这是允许的，因为它的默认值为 `0`。
 
 #### HTML
 
 ```html
 <p>
-  He got a <meter low="69" high="80" max="100" value="84">B</meter> on the exam.
+  学生的考试成绩：<meter min="0" low="50" high="80" max="100" value="84">
+    84%
+  </meter>
 </p>
 ```
 
 #### 结果
 
-{{EmbedLiveSample("高低值区间示例", 300, 60)}}
+{{EmbedLiveSample("高档和低档范围示例", 300, 60)}}
 
-Google Chrome 浏览器中，计量器显示效果如下：
+## 技术概要
 
-![red meter in Google Chrome](screen_shot_2020-10-12_at_10.11.52_pm.png)
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+          >内容分类</a
+        >
+      </th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >、可标记内容、可感知内容。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >，但它的后代元素中不能有 <code>&#x3C;meter></code> 元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>
+        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >的元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐含的 ARIA 角色</th>
+      <td>
+        <code
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles#结构角色与_HTML_的对应关系">meter</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>没有允许的 <code>role</code></td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLMeterElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 规范
 
@@ -111,4 +150,6 @@ Google Chrome 浏览器中，计量器显示效果如下：
 
 ## 参见
 
+- [创建垂直表单控件](/zh-CN/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
 - {{HTMLElement("progress")}}
+- {{cssxref("::-webkit-meter-bar")}}、{{cssxref("::-webkit-meter-inner-element") }}、{{cssxref("::-webkit-meter-even-less-good-value")}}、{{cssxref("::-webkit-meter-optimum-value")}}、{{cssxref("::-webkit-meter-suboptimum-value")}}：非标准的伪元素

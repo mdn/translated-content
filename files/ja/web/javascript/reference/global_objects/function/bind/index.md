@@ -9,7 +9,24 @@ l10n:
 
 **`bind()`** メソッドは新しい関数を生成し、これは呼び出された際に `this` キーワードに指定された値が設定されます。この値は新しい関数が呼び出されたとき、一連の引数の前に置かれます。
 
-{{EmbedInteractiveExample("pages/js/function-bind.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Function.bind()", "taller")}}
+
+```js interactive-example
+const module = {
+  x: 42,
+  getX: function () {
+    return this.x;
+  },
+};
+
+const unboundGetX = module.getX;
+console.log(unboundGetX()); // The function gets invoked at the global scope
+// Expected output: undefined
+
+const boundGetX = unboundGetX.bind(module);
+console.log(boundGetX());
+// Expected output: 42
+```
 
 ## 構文
 
@@ -63,7 +80,7 @@ const BoundBase = Base.bind(null, 1, 2);
 new BoundBase(3, 4); // true, [1, 2, 3, 4]
 ```
 
-しかし、バインド済み関数は [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) プロパティを持たないので、 [`extends`](/ja/docs/Web/JavaScript/Reference/Classes/extends) の基底クラスとして使用することはできません。
+しかし、バインド済み関数は [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティを持たないので、 [`extends`](/ja/docs/Web/JavaScript/Reference/Classes/extends) の基底クラスとして使用することはできません。
 
 ```js example-bad
 class Derived extends class {}.bind(null) {}
@@ -118,7 +135,8 @@ const boundGetX = retrieveX.bind(module);
 console.log(boundGetX()); // 81
 ```
 
-> **メモ:** この例を[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)で呼び出すと（例えば ECMAScript モジュール内や `"use strict"` ディレクティブを通して）、グローバルな `this` 値は不定となり、 `retrieveX` 呼び出しに失敗する原因となります。
+> [!NOTE]
+> この例を[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)で呼び出すと（例えば ECMAScript モジュール内や `"use strict"` ディレクティブを通して）、グローバルな `this` 値は不定となり、 `retrieveX` 呼び出しに失敗する原因となります。
 >
 > これを Node CommonJS モジュール内で実行すると、厳格モードかどうかに関わらず、最上位スコープの `this` は `globalThis` ではなく `module.exports` を指すようになります。しかし、関数内では、バインドされていない `this` の参照は、それでも「厳格モードでなければ `globalThis` 、厳格モードならば `undefined`」というルールに従います。したがって、厳格モードでない場合（既定）は、 `retrieveX` は `undefined` を返します。これは、 `this.x = 9` が、 `getX` が読んでいるオブジェクト (`globalThis`) とは異なるオブジェクト (`module.exports`) に書き込んでいるためです。
 

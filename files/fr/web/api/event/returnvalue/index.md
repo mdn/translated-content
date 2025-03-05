@@ -9,7 +9,8 @@ slug: Web/API/Event/returnValue
 
 La propriété **`Event.returnValue`** indique si l'action par défaut pour cet évènement a été empêchée ou non. Elle est définie à `true` (_vrai_) par défaut, permettant à l'action par défaut de se produire. La définition de cette propriété à `false` (_faux_) empêche le déclenchement de l'action par défaut.
 
-> **Note :** Utilisez {{domxref("Event.preventDefault()")}} à la place de cette méthode non standard.
+> [!NOTE]
+> Utilisez {{domxref("Event.preventDefault()")}} à la place de cette méthode non standard.
 
 ## Syntaxe
 

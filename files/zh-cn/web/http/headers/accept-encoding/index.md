@@ -16,7 +16,7 @@ l10n:
 
 只要 `identity;q=0` 或 `*;q=0` 指令不明确禁止表示无编码的 `identity` 值，服务器就绝对不应返回 {{HTTPStatus("406")}} `Not Acceptable` 错误。
 
-> **备注：**
+> [!NOTE]
 >
 > - IANA 维护了[一个完整的官方支持的编码方式列表](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)。
 > - 另外两种内容编码 `bzip` 和 `bzip2` 有时也会被使用。这两种非标准编码实现了这两个 UNIX 程序所使用的算法。请注意，由于专利许可问题，`bzip` 已被弃用。

@@ -2,7 +2,7 @@
 title: Firefox 127 for developers
 slug: Mozilla/Firefox/Releases/127
 l10n:
-  sourceCommit: ce7695ab1bb99fccf8acfdd132293bd476760577
+  sourceCommit: 81b27da7107783b4a4d9ff245a99d93f6d3efc3a
 ---
 
 {{FirefoxSidebar}}
@@ -33,7 +33,7 @@ l10n:
 
 ### SVG
 
-- CSS では [Firefox 120](/ja/docs/Mozilla/Firefox/Releases/120#css) で初めにサポートされた行の高さの単位 [`lh` および `rlh`](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#line_height_units) を、SVG でもサポートしました。これらは CSS プロパティの値 `stroke-width: 0.5lh` や SVG 属性の値 `stroke-width="0.5lh"` のどちらでも使用できます ([Firefox bug 1892089](https://bugzil.la/1892089))。
+- CSS では [Firefox 120](/ja/docs/Mozilla/Firefox/Releases/120#css) で初めにサポートされた行の高さの単位 [`lh` および `rlh`](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#line_height_units) を、SVG でもサポートしました。これらは CSS プロパティの値 `stroke-width: 0.5lh` や SVG 属性の値 `stroke-width="0.5lh"` のどちらでも使用できます ([Firefox bug 1892089](https://bugzil.la/1892089))。
 
 ### セキュリティ
 
@@ -68,8 +68,12 @@ l10n:
 
 ## アドオン開発者向けの変更点一覧
 
+- manifest.json の [`"incognito"`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito) キーの値に `"split"` を指定した拡張機能を Firefox へインストールするようになりました。ただし Firefox はスプリットモードをサポートしておらず、プライベートブラウジングの整合性を保つため `"split"` は値 `"not_allowed"` の別名として扱われます ([Firefox bug 1876924](https://bugzil.la/1876924))。
 - アドオンがエンタープライズポリシーを使用してインストールされた場合に、{{WebExtAPIRef("management.ExtensionInfo")}} が `install_type` で `"admin"` を返すようになりました ([Firefox bug 1895341](https://bugzil.la/1895341))。
 - {{WebExtAPIRef("declarativeNetRequest.getDynamicRules")}} および {{WebExtAPIRef("declarativeNetRequest.getSessionRules")}} に引数 `filter` を追加しました。これは、返されるルールのリストを ID でフィルタリングできるようにします ([Firefox bug 1820870](https://bugzil.la/1820870))。
+- Manifest V3 拡張機能の [`host_permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) を、インストール中にユーザーへ表示するようになりました ([Firefox bug 1889402](https://bugzil.la/1889402))。ただし、更新した拡張機能が新たなホストパーミッションを要求してもユーザーに表示されません ([Firefox bug 1893232](https://bugzil.la/1893232))。
+- 拡張機能に関連付けられたコンテキストの情報を返す {{WebExtAPIRef("runtime.getContexts")}} 関数を追加しました ([Firefox bug 1875480](https://bugzil.la/1875480))。
+- Manifest V3 拡張機能向けに、`_execute_action` のユーザー定義ショートカットがない場合に、特殊な [`_execute_browser_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#特殊なショートカット) コマンドをユーザー定義ショートカットにフォールバックする機能を追加しました。これにより、Manifest V2 から V3 へ移行する拡張機能がブラウザーアクションのユーザー定義ショートカットを維持できます ([Firefox bug 1797811](https://bugzil.la/1797811))。
 
 ## 実験的なウェブ機能
 

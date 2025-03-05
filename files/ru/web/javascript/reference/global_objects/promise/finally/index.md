@@ -43,7 +43,8 @@ p.finally(() => {
 - В отличие от `Promise.resolve(2).then(() => {}, () => {})` (результатом которого будет resolved-промис, со значением `undefined`), результатом `Promise.resolve(2).finally(() => {})` будет resolved-промис со значением `2`.
 - Аналогично, в отличии от `Promise.reject(3).then(() => {}, () => {})` (результатом которого будет resolved-промис, со значением `undefined`), результатом `Promise.reject(3).finally(() => {})` будет rejected-промис со значением `3`.
 
-> **Примечание:** A `throw` (or returning a rejected promise) in the `finally` callback will reject the new promise with the rejection reason specified when calling `throw()`.
+> [!NOTE]
+> A `throw` (or returning a rejected promise) in the `finally` callback will reject the new promise with the rejection reason specified when calling `throw()`.
 
 ## Примеры
 

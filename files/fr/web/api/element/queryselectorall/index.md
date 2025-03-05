@@ -16,15 +16,17 @@ elementList = parentNode.querySelectorAll(selectors);
 ### Paramètres
 
 - `selectors`
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) contenant un ou plusieurs sélecteurs à comparer. Cette chaîne doit être valide pour les [sélecteurs CSS](/fr/docs/Web/CSS/CSS_Selectors)&nbsp;; si ce n'est pas le cas, une exception `SyntaxError` est levée. Voir [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) pour plus d'informations sur l'utilisation des sélecteurs pour identifier les éléments. Plusieurs sélecteurs peuvent être spécifiés en les séparant par une virgule.
+  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) contenant un ou plusieurs sélecteurs à comparer. Cette chaîne doit être valide pour les [sélecteurs CSS](/fr/docs/Web/CSS/CSS_selectors)&nbsp;; si ce n'est pas le cas, une exception `SyntaxError` est levée. Voir [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors) pour plus d'informations sur l'utilisation des sélecteurs pour identifier les éléments. Plusieurs sélecteurs peuvent être spécifiés en les séparant par une virgule.
 
-> **Note :** Les caractères qui ne font pas partie de la syntaxe CSS standard doivent être échappés à l'aide d'une barre oblique inverse. Puisque JavaScript utilise également l'échappement en retour arrière, un soin particulier doit être pris lors de l'écriture de littéraux de chaîne utilisant ces caractères. Voir [Échappement des caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#échappement_des_caractères) pour plus d'informations.
+> [!NOTE]
+> Les caractères qui ne font pas partie de la syntaxe CSS standard doivent être échappés à l'aide d'une barre oblique inverse. Puisque JavaScript utilise également l'échappement en retour arrière, un soin particulier doit être pris lors de l'écriture de littéraux de chaîne utilisant ces caractères. Voir [Échappement des caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#échappement_des_caractères) pour plus d'informations.
 
 ### Valeur de retour
 
 Une [`NodeList`](/fr/docs/Web/API/NodeList) statique contenant un objet [`Element`](/fr/docs/Web/API/Element) pour chaque nœud descendant qui correspond à au moins un des sélecteurs spécifiés au moment où la méthode est appelée.
 
-> **Note :** Si les sélecteurs spécifiés avec `selectors` incluent un [pseudo-élément CSS](/fr/docs/Web/CSS/Pseudo-elements), la liste renvoyée est toujours vide.
+> [!NOTE]
+> Si les sélecteurs spécifiés avec `selectors` incluent un [pseudo-élément CSS](/fr/docs/Web/CSS/Pseudo-elements), la liste renvoyée est toujours vide.
 
 ### Exception
 
@@ -81,7 +83,8 @@ highlightedItems.forEach(function (userItem) {
 });
 ```
 
-> **Note :** L'objet `NodeList` n'est pas vraiment un tableau (`Array`) — vous ne pouvez donc pas utiliser des méthodes de tableaux (telles que `slice`, `some`, `map`, etc.) avec `NodeList`. Essayez `Array.from(nodeList)` pour le convertir en tableau.
+> [!NOTE]
+> L'objet `NodeList` n'est pas vraiment un tableau (`Array`) — vous ne pouvez donc pas utiliser des méthodes de tableaux (telles que `slice`, `some`, `map`, etc.) avec `NodeList`. Essayez `Array.from(nodeList)` pour le convertir en tableau.
 
 ## Notes d'utilisation
 
@@ -127,7 +130,7 @@ inner.length; // 0
 
 ## Voir aussi
 
-- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - [Sélecteurs d'attribut](/fr/docs/Web/CSS/Attribute_selectors) dans le guide CSS
 - [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) dans la zone d'apprentissage de MDN
 - [`Element.querySelector()`](/fr/docs/Web/API/Element/querySelector)

@@ -16,7 +16,8 @@ slug: Web/CSS/display-outside
 - `inline`
   - : 元素生成至少一个行级元素盒，这些盒子不在自身前后生成断行。在正常流中，若有空格则下一元素将在同一行上。
 
-> **备注：** 支持二值语法的浏览器在仅找到外侧值时（如指定 `display: block` 或 `display: inline` 时）会将内侧值设置为 `flow`，由此产生预期行为。例如若将元素指定为 block，你会期望此元素的子元素会参与块向和行向的正常流布局。
+> [!NOTE]
+> 支持二值语法的浏览器在仅找到外侧值时（如指定 `display: block` 或 `display: inline` 时）会将内侧值设置为 `flow`，由此产生预期行为。例如若将元素指定为 block，你会期望此元素的子元素会参与块向和行向的正常流布局。
 
 ## 示例
 
@@ -59,5 +60,5 @@ span {
   - {{CSSxRef("&lt;display-box&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [正常流中的块向与行向布局](/zh-CN/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
-- [格式化上下文介绍](/zh-CN/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
+- [正常流中的块向与行向布局](/zh-CN/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
+- [格式化上下文介绍](/zh-CN/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)

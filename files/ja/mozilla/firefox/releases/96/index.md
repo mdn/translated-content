@@ -19,7 +19,7 @@ slug: Mozilla/Firefox/Releases/96
 
 - Firefox で {{CSSxRef("color-scheme")}} プロパティをサポートしました。これは、要素がどの配色で快適に表示できるかを示すことができます。一般的なオプションは "ライト" と "ダーク"、または "昼間モード" と "夜間モード" です ([Firefox バグ 1576289](https://bugzil.la/1576289))。
 
-- {{CSSxRef("counter-reset")}} プロパティで、_逆順の_ [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) を生成する `reversed()` 関数をサポートしました。これは、降順の番号つき要素を意図するものです。
+- {{CSSxRef("counter-reset")}} プロパティで、_逆順の_ [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) を生成する `reversed()` 関数をサポートしました。これは、降順の番号つき要素を意図するものです。
   これは `list-item` カウンターと合わせて、番号つきリストを自動的に、リスト内の要素の数から始まる逆順にするために使用します。
   (`list-item` は {{HTMLElement("ol")}} を使用して生成したリストのような番号つきリストへ自動的に適用されるカウンターです)。
   Firefox はこの機能を、`<ol>` の [`reversed` 属性](/ja/docs/Web/HTML/Element/ol#attr-reversed) をサポートするため内部的に使用しています
@@ -31,8 +31,8 @@ slug: Mozilla/Firefox/Releases/96
 
 ### HTTP
 
-- 同じドメインであるが異なるスキーム (例えば http と https) で送信された Cookie が、[SameSite](/ja/docs/Web/HTTP/Headers/Set-Cookie/SameSite) ディレクティブについて別のサイトから送信されたものとみなすようになりました。
-  加えて、`SameSite` 属性が指定されていない Cookie は暗黙的に `SameSite=Lax`が指定されたとみなすようになり (以前の既定値は `SameSite=None`)、また `SameSite=None` を指定した Cookie は安全なコンテキストが必要になりました ([Firefox バグ 1617609](https://bugzil.la/1617609))。
+- 同じドメインであるが異なるスキーム (例えば http と https) で送信された Cookie が、[SameSite](/ja/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) ディレクティブについて別のサイトから送信されたものとみなすようになりました。
+  加えて、`SameSite` 属性が指定されていない Cookie は暗黙的に `SameSite=Lax`が指定されたとみなすようになり (以前の既定値は `SameSite=None`)、また `SameSite=None` を指定した Cookie は保護されたコンテキストが必要になりました ([Firefox バグ 1617609](https://bugzil.la/1617609))。
 
 ### API
 

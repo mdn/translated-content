@@ -19,7 +19,7 @@ var x = instanceOfMouseEvent.screenX
 
 ## Пример
 
-Этом примере демонстрирует координаты вашей мыши в случае получения события {{Event("mousemove")}}.
+Этом примере демонстрирует координаты вашей мыши в случае получения события [`mousemove`](/ru/docs/Web/API/Element/mousemove_event).
 
 #### HTML
 

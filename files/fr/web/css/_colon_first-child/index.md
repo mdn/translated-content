@@ -1,5 +1,5 @@
 ---
-title: ":first-child"
+title: :first-child
 slug: Web/CSS/:first-child
 ---
 
@@ -16,7 +16,8 @@ p:first-child {
 }
 ```
 
-> **Note :** Tel que défini initialement, il était nécessaire que l'élément sélectionné ait un élément parent. À partir de la spécification de niveau 4 pour les sélecteurs, cela n'est plus obligatoire.
+> [!NOTE]
+> Tel que défini initialement, il était nécessaire que l'élément sélectionné ait un élément parent. À partir de la spécification de niveau 4 pour les sélecteurs, cela n'est plus obligatoire.
 
 ## Syntaxe
 

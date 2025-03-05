@@ -56,7 +56,7 @@ b.setAttribute("disabled", "");
 
 Esto demuestra dos cosas:
 
-- La primera llamada a `setAttribute()` muestra cómo se cambia el valor del atributo `name` a "helloButton". Puede ver esto utilizando el inspector de página de su navegador ([Chrome](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/?hl=es), [Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide), [Firefox](/es/docs/Tools/Page_Inspector), [Safari](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html)).
+- La primera llamada a `setAttribute()` muestra cómo se cambia el valor del atributo `name` a "helloButton". Puede ver esto utilizando el inspector de página de su navegador ([Chrome](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/?hl=es), [Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide), [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), [Safari](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html)).
 - Para establecer el valor de un atributo booleano, como `disabled`, se puede especificar cualquier valor. Una cadena de texto vacía o el nombre de un atributo son valores recomendados. Todo lo que importa es que si el atributo está presente, _independientemente de su valor actual_, su valor se considera como `true`. La ausencia del atributo significa que su valor es `false`. Estableciendo una cadena vacía (`""`) como el valor del atributo `disabled`, se estaría cambiando `disabled` a `true`, lo que provoca que el botón sea deshabilitado.
 
 {{ EmbedLiveSample('Example', '300', '50') }}

@@ -13,4 +13,4 @@ En tant que développeur d'applications, vous pouvez choisir quels seront les {{
 
 ### Apprendre sur ce sujet
 
-- [Héritage et chaîne de prototypes](/fr/docs/Web/JavaScript/Héritage_et_chaîne_de_prototypes)
+- [Héritage et chaîne de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

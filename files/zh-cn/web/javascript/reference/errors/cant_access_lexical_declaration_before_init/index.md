@@ -51,4 +51,4 @@ test();
 
 ## 相关内容
 
-- [let 的暂存死区及相关错误](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)
+- [let 的暂存死区及相关错误](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)

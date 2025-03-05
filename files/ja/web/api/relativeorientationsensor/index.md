@@ -9,7 +9,7 @@ l10n:
 
 [Sensor APIs](/ja/docs/Web/API/Sensor_APIs) の **`RelativeOrientationSensor`** インターフェイスは、地球の参照用座標系は考慮せず、デバイスの物理的な向きを表します。
 
-このセンサーを使用するには、ユーザーが [Permissions API](/ja/docs/Web/API/Permissions_API) により `'accelerometer'` および `'gyroscope'` デバイスセンサーを使用する許可を与える必要があります。さらに、この機能はサーバーで設定された [Permissions Policy](/ja/docs/Web/HTTP/Permissions_Policy) でブロックされる可能性があります。
+このセンサーを使用するには、ユーザーが [権限 API](/ja/docs/Web/API/Permissions_API) により `'accelerometer'` および `'gyroscope'` デバイスセンサーを使用する許可を与える必要があります。さらに、この機能はサーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy) でブロックされる可能性があります。
 
 {{InheritanceDiagram}}
 
@@ -36,7 +36,8 @@ _固有のイベントはありません。祖先の {{domxref('Sensor')}} か�
 
 以下の例は、だいたい [Intel の Orientation Phone demo](https://intel.github.io/generic-sensor-demos/orientation-phone/) をもとにしており、1 秒に 60 回の周期を設定して `RelativeOrientationSensor` のインスタンスを生成しています。
 
-> **メモ:** もとにした Intel のデモでは `AbsoluteOrientationSensor` を用いています。測定ごとに、{{domxref('OrientationSensor.quaternion')}} を用いて電話の視覚的なモデルを回転しています。
+> [!NOTE]
+> もとにした Intel のデモでは `AbsoluteOrientationSensor` を用いています。測定ごとに、{{domxref('OrientationSensor.quaternion')}} を用いて電話の視覚的なモデルを回転しています。
 
 ```js
 const options = { frequency: 60, referenceFrame: "device" };

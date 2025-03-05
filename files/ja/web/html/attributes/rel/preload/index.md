@@ -2,7 +2,7 @@
 title: rel=preload
 slug: Web/HTML/Attributes/rel/preload
 l10n:
-  sourceCommit: 8295b4bd0687986f57a401eaea7c08aec64c33b3
+  sourceCommit: aee2bd82de11cb7331134e48e8bd548bbedafcc5
 ---
 
 {{HTMLSidebar}}
@@ -67,7 +67,8 @@ l10n:
 
 > **メモ:** `font` および `fetch` の事前読み込みには、 `crossorigin` 属性を設定する必要があります。下記の [CORS を使用したフェッチ](#cors_を使用したフェッチ)を参照してください。
 
-> **メモ:** 使用されると予想されるこれらの値やウェブ機能について、もっと詳細のことは、 HTML の仕様書、 [Link type "preload"](https://html.spec.whatwg.org/#match-preload-type) を参照してください。また、フェッチの仕様書で管理されている `as` 属性の値の完全な一覧は、 [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination) を参照してください。
+> [!NOTE]
+> 使用されると予想されるこれらの値やウェブ機能について、もっと詳細のことは、 HTML の仕様書、 [Link type "preload"](https://html.spec.whatwg.org/#match-preload-type) を参照してください。また、フェッチの仕様書で管理されている `as` 属性の値の完全な一覧は、 [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination) を参照してください。
 
 ## MIME タイプを含める
 
@@ -95,11 +96,11 @@ l10n:
 
 したがって、同じリソースに対して複数の種類の事前読み込みを指定することは推奨されません。その代わりに、ユーザーの大半が実際に使用する可能性のある種類にのみ、事前読み込みを指定することが最善の手法です。上の例のコードで、`image/webp` の画像に事前読み込みさせることを指定していないのはそのためです。
 
-しかし、事前読み込みされないからといって、実際に `image/webp` 画像が必要な人に使用されないわけではありません。ブラウザーが `image/avif` に対応していないが、`image/webp` に対応しているユーザーのために、上記の例のコードは `image/avif` 画像を使用させますが、他の大多数のユーザーに不必要に事前読み込みさせることはありません。
+しかし、事前読み込みされないからといって、実際に `image/webp` 画像が必要な人に使用されないわけではありません。ブラウザーが `image/avif` に対応していないが、`image/webp` に対応しているユーザーのために、上記の例のコードは `image/webp` 画像を使用させますが、他の大多数のユーザーに不必要に事前読み込みさせることはありません。
 
 ## CORS を使用した取得
 
-[CORS](/ja/docs/Web/HTTP/CORS) を有効にして取得したリソースを事前読み込みする場合 ([`fetch()`](/ja/docs/Web/API/fetch)、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest)、[フォント](/ja/docs/Web/CSS/@font-face)など)、 [`<link>`](/ja/docs/Web/HTML/Element/link) 要素の [`crossorigin`](/ja/docs/Web/HTML/Element/link#crossorigin) 属性の設定に特別な注意を払う必要があります。この属性は、取得がオリジンを越えない場合でも、リソースの CORS や認証モードに合わせて設定する必要があります。
+[CORS](/ja/docs/Web/HTTP/CORS) を有効にして取得したリソースを事前読み込みする場合 ([`fetch()`](/ja/docs/Web/API/Window/fetch)、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest)、[フォント](/ja/docs/Web/CSS/@font-face)など)、 [`<link>`](/ja/docs/Web/HTML/Element/link) 要素の [`crossorigin`](/ja/docs/Web/HTML/Element/link#crossorigin) 属性の設定に特別な注意を払う必要があります。この属性は、取得がオリジンを越えない場合でも、リソースの CORS や認証モードに合わせて設定する必要があります。
 
 上記のように、これが当てはまる興味深いケースの 1 つが、フォントファイルです。さまざまな理由により、これらは匿名モードの CORS を使用してフェッチする必要があります（[Font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)参照）。
 

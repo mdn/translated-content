@@ -106,7 +106,7 @@ Des espaces blancs insignifiants peuvent être présents n'importe où sauf dans
 - Quelques outils permettant de manipuler des données en JSON
 
   - [JSON Compare](http://jsoncompare.org/) qui permet de comparer deux JSON
-  - [JSON Beautifier](http://jsonbeautifier.org/) qui permet de visualiser et d'éditer un fichier JSON
+  - [JSON Beautifier](https://jsonbeautifier.org/) qui permet de visualiser et d'éditer un fichier JSON
   - [JSON Parser](https://jsonparser.org/) qui permet de formatter une chaîne JSON
   - [JSON Formatter](https://extendsclass.com/json-validator.html) qui permet de formatter et échapper une chaîne JSON
   - [JSON Validator](https://tools.learningcontainer.com/json-validator/) qui permet de valider une chaîne JSON

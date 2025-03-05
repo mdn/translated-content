@@ -7,9 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/some
 
 La méthode **`some()`** teste si au moins un élément du tableau passe le test implémenté par la fonction fournie. Elle renvoie un booléen indiquant le résultat du test.
 
-> **Note :** Cette méthode renverra `false`, quelle que soit la condition, si elle est utilisée sur un tableau vide.
+> [!NOTE]
+> Cette méthode renverra `false`, quelle que soit la condition, si elle est utilisée sur un tableau vide.
 
-{{EmbedInteractiveExample("pages/js/array-some.html")}}
+{{InteractiveExample("JavaScript Demo: Array.some()")}}
+
+```js interactive-example
+const array = [1, 2, 3, 4, 5];
+
+// Checks whether an element is even
+const even = (element) => element % 2 === 0;
+
+console.log(array.some(even));
+// Expected output: true
+```
 
 ## Syntaxe
 
@@ -43,7 +54,7 @@ La méthode `some()` exécute la fonction `callback` une seule fois pour chaque 
 
 La fonction `callback` est invoquée avec trois paramètres&nbsp;: la valeur de l'élément, l'indice de l'élément et l'objet `Array` parcouru.
 
-Si un paramètre `objetThis` est fourni à `some()`, il sera utilisé comme valeur de `this` pour chaque invocation du `callback`. Sinon, la valeur {{jsxref("undefined")}} sera passée pour utilisation comme valeur `this`. La valeur `this` finalement utilisée par `callback` est déterminée en fonction [des règles habituelles pour déterminer `this` pour une fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this).
+Si un paramètre `objetThis` est fourni à `some()`, il sera utilisé comme valeur de `this` pour chaque invocation du `callback`. Sinon, la valeur {{jsxref("undefined")}} sera passée pour utilisation comme valeur `this`. La valeur `this` finalement utilisée par `callback` est déterminée en fonction [des règles habituelles pour déterminer `this` pour une fonction](/fr/docs/Web/JavaScript/Reference/Operators/this).
 
 La méthode `some()` ne modifie pas le tableau sur lequel elle est appelée.
 
@@ -67,14 +78,15 @@ passed = [12, 5, 8, 1, 4].some(estAssezGrand);
 
 ### Tester la valeur des éléments avec les fonctions fléchées
 
-[Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) permettent d'utiliser une syntaxe plus concise pour réaliser la même opération que l'exemple précédent.
+[Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) permettent d'utiliser une syntaxe plus concise pour réaliser la même opération que l'exemple précédent.
 
 ```js
 [2, 5, 8, 1, 4].some((elem) => elem > 10); // false
 [12, 5, 8, 1, 4].some((elem) => elem > 10); // true
 ```
 
-> **Note :** Si on veut vérifier qu'un élément est dans un tableau, on pourra utiliser la méthode {{jsxref("Array.prototype.includes()")}}.
+> [!NOTE]
+> Si on veut vérifier qu'un élément est dans un tableau, on pourra utiliser la méthode {{jsxref("Array.prototype.includes()")}}.
 
 ## Spécifications
 

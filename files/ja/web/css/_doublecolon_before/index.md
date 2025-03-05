@@ -1,5 +1,5 @@
 ---
-title: "::before (:before)"
+title: ::before (:before)
 slug: Web/CSS/::before
 ---
 
@@ -14,7 +14,36 @@ a::before {
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-before.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: ::before", "tabbed-standard")}}
+
+```css interactive-example
+a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+a::before {
+  content: "🔗";
+}
+
+.local-link::before {
+  content: url("/shared-assets/images/examples/firefox-logo.svg");
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+```
+
+```html interactive-example
+<p>
+  Learning resources for web developers can be found all over the internet. Try
+  out
+  <a href="https://web.dev/">web.dev</a>,
+  <a href="https://www.w3schools.com/">w3schools.com</a> or our
+  <a href="https://developer.mozilla.org/" class="local-link">MDN web docs</a>.
+</p>
+```
 
 > **メモ:** `::before` および `::after` によって作成される擬似要素は[要素の整形ボックスに含まれるため](https://www.w3.org/TR/CSS2/generate.html#before-after-content)、 {{htmlelement("img")}} や {{htmlelement("br")}} のような[置換要素](/ja/docs/Web/CSS/Replaced_element)には適用されません。
 
@@ -22,7 +51,8 @@ a::before {
 
 {{CSSSyntax}}
 
-> **メモ:** CSS3 では[疑似クラス](/ja/docs/Web/CSS/Pseudo-classes)と[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を見分けやすくするために、 `::before` の表記法（二重コロン付き）が導入されました。ブラウザーでは CSS2 で導入された `:before` も使用できます。
+> [!NOTE]
+> CSS3 では[疑似クラス](/ja/docs/Web/CSS/Pseudo-classes)と[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を見分けやすくするために、 `::before` の表記法（二重コロン付き）が導入されました。ブラウザーでは CSS2 で導入された `:before` も使用できます。
 
 ## 例
 

@@ -60,7 +60,8 @@ Notification.requestPermission((resultat) => {
 
 Cette version accepte en paramètre une fonction de rappel qui sera appelée une fois que l'utilisatrice ou l'utilisateur aura répondu à la demande de permission.
 
-> **Note :** Il n'est pas possible de tester avec certitude la prise en charge du la forme de `Notification.requestPermission()` avec les promesses. S'il vous faut prendre en charge les navigateurs plus anciens, utilisez la version basée sur les fonctions de rappel, même si elle est dépréciée, elle fonctionne dans les navigateurs récents. Voir [le tableau de compatibilité](/fr/docs/Web/API/Notification/requestPermission_static#compatibilité_des_navigateurs) pour plus d'informations.
+> [!NOTE]
+> Il n'est pas possible de tester avec certitude la prise en charge du la forme de `Notification.requestPermission()` avec les promesses. S'il vous faut prendre en charge les navigateurs plus anciens, utilisez la version basée sur les fonctions de rappel, même si elle est dépréciée, elle fonctionne dans les navigateurs récents. Voir [le tableau de compatibilité](/fr/docs/Web/API/Notification/requestPermission_static#compatibilité_des_navigateurs) pour plus d'informations.
 
 ### Exemple
 
@@ -107,7 +108,7 @@ const notification = new Notification("Liste de trucs à faire", {
 
 ## Fermer les notifications
 
-On utilisera la méthode [`close()`](/fr/docs/Web/API/Notification/close) afin de retirer une notification qui n'est plus pertinente (par exemple parce que la personne l'a déjà lue sur la page web s'il s'agit d'une messagerie ou, dans le cas d'un lecteur de musique, si la chanson en cours de lecture a déjà changé). La plupart des navigateurs effacent les notifications après un certain délai (généralement autour de 4 secondes), mais ça ne devrait pas être un souci particulier, car cette tâche est souvent gérée par la personne ou l'agent utilisateur. La fermeture peut également être gérée par le système d'exploitation et les utilisatrices et utilisateurs doivent avoir la main sur ce comportement. D'anciennes versions de Chrome ne retiraient pas les automatiquement les notifications et vous pouvez donc utiliser un [`setTimeout()`](/fr/docs/Web/API/setTimeout) uniquement pour ces versions historiques.
+On utilisera la méthode [`close()`](/fr/docs/Web/API/Notification/close) afin de retirer une notification qui n'est plus pertinente (par exemple parce que la personne l'a déjà lue sur la page web s'il s'agit d'une messagerie ou, dans le cas d'un lecteur de musique, si la chanson en cours de lecture a déjà changé). La plupart des navigateurs effacent les notifications après un certain délai (généralement autour de 4 secondes), mais ça ne devrait pas être un souci particulier, car cette tâche est souvent gérée par la personne ou l'agent utilisateur. La fermeture peut également être gérée par le système d'exploitation et les utilisatrices et utilisateurs doivent avoir la main sur ce comportement. D'anciennes versions de Chrome ne retiraient pas les automatiquement les notifications et vous pouvez donc utiliser un [`setTimeout()`](/fr/docs/Web/API/Window/setTimeout) uniquement pour ces versions historiques.
 
 ```js
 const n = new Notification("Une super chanson");
@@ -120,9 +121,11 @@ document.addEventListener("visibilitychange", () => {
 });
 ```
 
-> **Note :** Cette API ne devrait pas être utilisée pour retirer la notification de l'écran après un délai donné, car elle supprimera également la notification de la liste des notifications et empêchera toute interaction avec celle-ci après qu'elle a initialement été affichée.
+> [!NOTE]
+> Cette API ne devrait pas être utilisée pour retirer la notification de l'écran après un délai donné, car elle supprimera également la notification de la liste des notifications et empêchera toute interaction avec celle-ci après qu'elle a initialement été affichée.
 
-> **Note :** Lorsque vous recevez un évènement `close`, il n'y a aucune garantie que celui-ci provienne de l'utilisatrice ou de l'utilisateur. Cela correspond à la spécification qui indique&nbsp;: «&nbsp;lorsqu'une notification est fermée, que ce soit par la plateforme sous-jacente ou par l'utilisateur, l'étape de fermeture correspondante doit être exécutée.&nbsp;».
+> [!NOTE]
+> Lorsque vous recevez un évènement `close`, il n'y a aucune garantie que celui-ci provienne de l'utilisatrice ou de l'utilisateur. Cela correspond à la spécification qui indique&nbsp;: «&nbsp;lorsqu'une notification est fermée, que ce soit par la plateforme sous-jacente ou par l'utilisateur, l'étape de fermeture correspondante doit être exécutée.&nbsp;».
 
 ## Évènements relatifs aux notifications
 

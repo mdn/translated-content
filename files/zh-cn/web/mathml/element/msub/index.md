@@ -18,7 +18,8 @@ l10n:
 - `subscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
   - : {{cssxref("length-percentage")}} 值，表示下标基线向下移动的最小距离。
 
-> **备注：** 对于 `subscriptshift` 属性，一些浏览器可能也会接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
+> [!NOTE]
+> 对于 `subscriptshift` 属性，一些浏览器可能也会接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
 
 ## 示例
 

@@ -385,9 +385,9 @@ P
 </html>
 ```
 
-## 例 8: DOM のテーブルインタフェースの使用
+## 例 8: DOM のテーブルインターフェイスの使用
 
-DOM の {{domxref("HTMLTableElement")}} インタフェースで、テーブルを生成、操作するための便利なメソッドがいくつか提供されています。よく利用される 2 つのメソッドは {{domxref("HTMLTableElement.insertRow")}} と {{domxref("HTMLTableRowElement.insertCell")}} です。
+DOM の {{domxref("HTMLTableElement")}} インターフェイスで、テーブルを生成、操作するための便利なメソッドがいくつか提供されています。よく利用される 2 つのメソッドは {{domxref("HTMLTableElement.insertRow")}} と {{domxref("HTMLTableRowElement.insertCell")}} です。
 
 以下の例では、既存のテーブルに行といくつかのセルを追加しています。
 

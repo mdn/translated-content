@@ -9,7 +9,8 @@ l10n:
 
 获取一个包含当前脚本所在标签页信息的 {{WebExtAPIRef("tabs.Tab")}} 对象。
 
-> **备注：** 此函数只在浏览器标签页的上下文中有用，例如[选项页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#选项页面)。
+> [!NOTE]
+> 此函数只在浏览器标签页的上下文中有用，例如[选项页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#选项页面)。
 >
 > 如果在后台脚本或弹出窗口中调用该函数，它将返回 `undefined`。
 
@@ -52,7 +53,8 @@ gettingCurrent.then(onGot, onError);
 
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-getCurrent) API。本文档来自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-getCurrent) API。本文档来自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

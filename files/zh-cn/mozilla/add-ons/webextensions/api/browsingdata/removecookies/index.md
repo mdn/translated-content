@@ -59,7 +59,8 @@ browser.browsingData
 
 移除所有 cookie：
 
-> **警告：** 使用 API 清除所有 cookie 将同时清除所有本地存储对象（包括其他扩展程序的存储对象）。
+> [!WARNING]
+> 使用 API 清除所有 cookie 将同时清除所有本地存储对象（包括其他扩展程序的存储对象）。
 >
 > 如果要清除所有 cookie 而不影响本地存储设施，请使用 [browser.cookies](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies) 来循环并清除所有 cookie 存储的内容。
 
@@ -81,7 +82,8 @@ browser.browsingData.removeCookies({}).then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.browsingData`](https://developer.chrome.google.cn/docs/extensions/reference/api/browsingData) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

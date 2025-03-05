@@ -26,7 +26,7 @@ _固有のメソッドはありません。親である {{domxref("HTMLElement")
 
 このイベントは [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使用するか、このインターフェイスの `onイベント名` プロパティにイベントリスナーを代入することで待ち受けします。
 
-- [`toggle`](/ja/docs/Web/API/HTMLDetailsElement/toggle_event)
+- [`toggle`](/ja/docs/Web/API/HTMLElement/toggle_event)
   - : {{HtmlElement("details")}} 要素の `open`/`closed` 状態がトグル切り替えされたときに発生します。
 
 ## 仕様書

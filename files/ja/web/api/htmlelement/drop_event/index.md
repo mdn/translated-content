@@ -1,13 +1,16 @@
 ---
 title: "HTMLElement: drop イベント"
+short-title: drop
 slug: Web/API/HTMLElement/drop_event
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: ea4425b74ae0dc1ec17737b4e28d8df2b73f1eae
 ---
 
 {{APIRef}}
 
-**`drop`** イベントは、要素または選択されたテキストが、妥当なドロップターゲットにドロップされたときに発生します。
+**`drop`** イベントは、要素または選択されたテキストが、妥当なドロップターゲットにドロップされたときに発生します。`drop` イベントが確実に期待通りに発生するように、[`dragover`](/ja/docs/Web/API/Event/preventDefault) イベントを処理するコードの一部に [`preventDefault()`](/ja/docs/Web/API/HTMLElement/dragover_event) 呼び出しを常に記載してください。
+
+このイベントは取り消される可能性があり、{{domxref("Document")}} と {{domxref("Window")}} オブジェクトまでバブルアップする可能性があります。
 
 ## 構文
 
@@ -36,13 +39,13 @@ _以下に挙げたプロパティに加えて、親である {{domxref("Event")
 
 ### 最小限のドラッグ＆ドロップの例
 
-この例では、コンテナーの中にドラッグ可能な要素を置いています。要素を掴んで、他のコンテナーの上にドラッグし、そして放してみましょう。
+この例では、コンテナーの中にドラッグ可能な要素を置いています。要素を掴んで、他のコンテナーの上にドラッグし、放してみましょう。
 
 ここでは、 3 つのイベントハンドラーを使用しています。
 
 - `dragstart` イベント ハンドラーでは、ユーザーがドラッグした要素へのリファレンスを取得します。
 - ターゲットコンテナーの `dragover` イベントハンドラーでは、 `event.preventDefault()` を呼び出し、`drop` イベントを受信できるようにします。
-- ドロップゾーンの `drop` イベントハンドラーでは、ドラッグ可能な要素を元のコンテナからドロップゾーンに移動する処理を行います。
+- ドロップゾーンの `drop` イベントハンドラーでは、ドラッグ可能な要素を元のコンテナーからドロップゾーンに移動する処理を行います。
 
 ドラッグ＆ドロップのより完全な例については、[`drag`](/ja/docs/Web/API/HTMLElement/drag_event) イベントのページを参照してください。
 
@@ -127,9 +130,3 @@ target.addEventListener("drop", (event) => {
   - {{domxref("HTMLElement/dragover_event", "dragover")}}
   - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
   - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
-
-- 他を対象としたこのイベント:
-
-  - {{domxref("Window")}}: {{domxref("Window/drop_event", "drop")}} イベント
-  - {{domxref("Document")}}: {{domxref("Document/drop_event", "drop")}} イベント
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/drop_event", "drop")}} イベント

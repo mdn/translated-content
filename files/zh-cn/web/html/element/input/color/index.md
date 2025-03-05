@@ -11,7 +11,34 @@ slug: Web/HTML/Element/input/color
 
 此元素的外观会因浏览器不同而不同，它可能是一个简单的文本输入，自动验证以确保颜色信息以正确的格式输入，或一个平台标准的颜色选择器，或某种自定义的颜色选择器窗口。
 
-{{EmbedInteractiveExample("pages/tabbed/input-color.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;color&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Choose your monster's colors:</p>
+
+<div>
+  <input type="color" id="head" name="head" value="#e66465" />
+  <label for="head">Head</label>
+</div>
+
+<div>
+  <input type="color" id="body" name="body" value="#f6b73c" />
+  <label for="body">Body</label>
+</div>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 <table class="properties">
  <tbody>
@@ -56,7 +83,8 @@ slug: Web/HTML/Element/input/color
 
 `color` 类型的 {{HTMLElement("input")}} 元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 总是包含一个 7 个字符的字符串，它以 16 进制格式指定 RGB 颜色。虽然你可以用大写字母或小写字母输入颜色，但它将以小写字母形式存储。该值从不以任何其他形式出现，也从不为空。
 
-> **备注：** 将该值设置为任何不是有效的、完全不透明的、RGB 颜色的*十六进制表示*，都将导致该值被设置为 `#000000`。特别是，你不能使用 CSS 的标准化颜色名称或任何 CSS 函数语法来设置该值（记住，HTML 和 CSS 是独立的语言和规范）。此外，不支持带有透明通道的颜色；用 9 个字符的十六进制表示（例如 `#009900aa`）指定颜色，也会导致颜色被设置为 `#000000`。
+> [!NOTE]
+> 将该值设置为任何不是有效的、完全不透明的、RGB 颜色的*十六进制表示*，都将导致该值被设置为 `#000000`。特别是，你不能使用 CSS 的标准化颜色名称或任何 CSS 函数语法来设置该值（记住，HTML 和 CSS 是独立的语言和规范）。此外，不支持带有透明通道的颜色；用 9 个字符的十六进制表示（例如 `#009900aa`）指定颜色，也会导致颜色被设置为 `#000000`。
 
 ## 使用 color 输入
 
@@ -201,4 +229,4 @@ function updateAll(event) {
 
 ## 参见
 
-- [CSS 属性兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

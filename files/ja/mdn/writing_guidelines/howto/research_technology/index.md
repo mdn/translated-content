@@ -7,7 +7,8 @@ l10n:
 
 {{MDNSidebar}}
 
-> **注目:** 訳注:
+> [!CALLOUT]
+> 訳注:
 > MDN Web Docs では、日本語版の記事を最初から作成するのではなく、まず英語版の記事を作成してから日本語訳するようにしてください。
 
 この記事では、技術を文書化する手法についての便利な情報を提供します。
@@ -43,13 +44,14 @@ MDN Web Docs で文書化や更新を始めるには、実際に書き始める�
 - [How to read web specs part I – or: WebVR, how do you work?](https://surma.dev/things/reading-specs/) は WebVR 仕様書固有の読み方について書かれていますが、 Web API 仕様書を読むための素晴らしい入門書です。
 - [How to read web specs part IIa – or: ECMAScript Symbols](https://surma.dev/things/reading-specs-2/) 上記リンクの第 2 章には、 JavaScript 言語のアウトラインである ECMAScript 仕様を理解するための情報が含まれています。
 
-さらに、 [WebIDL ファイルに含まれる情報](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file)ガイドもあり、 Web API 仕様書を読む際に実に役立ちます。
+さらに、 [WebIDL ファイルに含まれる情報](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file)ガイドもあり、 Web API 仕様書を読む際に実に役立ちます。
 
 ## 機能を探索
 
 ある技術を文書化する過程で、何度もサンプルコードを書いたりデモを作ったりすることになるでしょうが、まずその技術がどのように動作するのかに親しむことから始めるのはとても有益です。これは実に有益な練習です。なぜなら、用途（開発者がこの技術を使う理由）をよく理解し、同時にサンプルコードを開発するのに役立つからです。
 
-> **メモ:** 仕様書が最近更新され、たとえば、ある手法が定義されなくなったが、古い手法がまださまざまなブラウザーで動作する、というような場合、古い手法と新しい手法をカバーするために、両方を同じ場所に文書に配置しなければならないことが多いでしょう。
+> [!NOTE]
+> 仕様書が最近更新され、たとえば、ある手法が定義されなくなったが、古い手法がまださまざまなブラウザーで動作する、というような場合、古い手法と新しい手法をカバーするために、両方を同じ場所に文書に配置しなければならないことが多いでしょう。
 > 助けが必要な場合は、入手したデモを参照するか、技術連絡先に依頼してください。
 
 ## 執筆または更新するページのリストを作成
@@ -58,7 +60,7 @@ MDN Web Docs で文書化や更新を始めるには、実際に書き始める�
 
 ### サイドバー
 
-書くページのサイドバーも定義したり更新したりする必要がある可能性があります。サイドバーが必要かどうか、またその方法を調べるには、[サイドバーガイド](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars)を調べてください。
+書くページのサイドバーも定義したり更新したりする必要がある可能性があります。サイドバーが必要かどうか、またその方法を調べるには、[サイドバーガイド](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)を調べてください。
 
 ### サンプルコード
 

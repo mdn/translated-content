@@ -11,7 +11,8 @@ l10n:
 
 {{jsxref("Atomics.wait()")}}와는 다르게, `waitAsync`는 논 블록킹이며 메인 스레드에서 사용할 수 있습니다.
 
-> **참고:** 이 작업은 오직 공유된 {{jsxref("Int32Array")}} 혹은 {{jsxref("BigInt64Array")}}에서만 동작합니다.
+> [!NOTE]
+> 이 작업은 오직 공유된 {{jsxref("Int32Array")}} 혹은 {{jsxref("BigInt64Array")}}에서만 동작합니다.
 
 ## 구문
 

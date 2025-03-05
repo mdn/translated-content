@@ -29,7 +29,8 @@ subscribe(options)
     - `applicationServerKey`
       - : Une chaîne encodée en Base64 ou un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) contenant une clé publique [ECDSA](https://fr.wikipedia.org/wiki/Elliptic_curve_digital_signature_algorithm) P-256 que le serveur push utilisera pour authentifier votre serveur d'application. Si vous le spécifiez, tous les messages provenant de votre serveur d'application doivent utiliser le schéma d'authentification [VAPID](https://datatracker.ietf.org/doc/html/rfc8292) et inclure un JWT signé avec la clé privée correspondante. Cette clé **_n'est pas_** la même clé ECDH que celle que vous utilisez pour chiffrer les données. Pour plus d'informations, voir «&nbsp;[Utiliser VAPID avec WebPush (en anglais)](https://blog.mozilla.org/services/2016/04/04/using-vapid-with-webpush/)&nbsp;».
 
-    > **Note :** Ce paramètre est nécessaire dans certains navigateurs comme Chrome et Edge.
+    > [!NOTE]
+    > Ce paramètre est nécessaire dans certains navigateurs comme Chrome et Edge.
 
 ### Valeur de retour
 

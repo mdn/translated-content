@@ -1,11 +1,11 @@
 ---
-title: "::placeholder"
+title: ::placeholder
 slug: Web/CSS/::placeholder
 ---
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) **`::placeholder`** представляет собой [текст placeholder](/ru/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute) в {{HTMLElement("input")}} или {{HTMLElement("textarea")}} элементах.
+[CSS](/ru/docs/Web/CSS) [псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) **`::placeholder`** представляет собой [текст placeholder](/ru/docs/Learn/Forms#the_placeholder_attribute) в {{HTMLElement("input")}} или {{HTMLElement("textarea")}} элементах.
 
 ```css
 ::placeholder {
@@ -16,7 +16,8 @@ slug: Web/CSS/::placeholder
 
 В `::placeholder` можно использовать только те CSS-свойства, которые разрешены в псевдоэлементе {{cssxref("::first-line")}}.
 
-> **Примечание:** В большинстве браузеров по умолчанию placeholder выглядит как полупрозрачный или светло-серый текст.
+> [!NOTE]
+> В большинстве браузеров по умолчанию placeholder выглядит как полупрозрачный или светло-серый текст.
 
 ## Синтаксис
 
@@ -66,7 +67,7 @@ input::placeholder {
 
 {{EmbedLiveSample("Зелёный_текст", 200, 60)}}
 
-## Проблемы доступности
+## Доступность
 
 ### Цветовой контраст
 
@@ -112,7 +113,7 @@ input::placeholder {
 
 Placeholder не является заменой элемента {{htmlelement("label")}}. Без метки, которая программно связывается с формой с помощью [`for`](/ru/docs/Web/HTML/Element/label#for) и [`id`](/ru/docs/Web/HTML/Global_attributes#id) атрибутов, такие программы, как скринридеры не смогут анализировать элементы {{htmlelement("input")}}.
 
-- [MDN Basic form hints](/ru/docs/Web/Accessibility/ARIA/forms/Basic_form_hints)
+- [MDN Basic form hints](/ru/docs/Web/Accessibility/ARIA)
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
 
 ## Спецификации

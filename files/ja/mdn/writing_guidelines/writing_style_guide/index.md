@@ -1,17 +1,17 @@
 ---
 title: 執筆スタイルガイド
+short-title: スタイルガイド
 slug: MDN/Writing_guidelines/Writing_style_guide
 l10n:
-  sourceCommit: e60194342c9666ad8a2e6e5e6c25705fe818bcde
+  sourceCommit: 07d0f18e4b2ad43185bcc98ce99b7080c6411b2a
 ---
-
-{{MDNSidebar}}
 
 この執筆スタイルガイドは、MDN Web Docs でコンテンツをどのように書き、整理し、綴り、形式を整えるべきかを記述したものです。
 
 これらのガイドラインは、ウェブサイト全体の言語とスタイルの一貫性を確保するためのものです。とはいえ、私たちは形式よりも内容に関心を持っていますので、投稿する前に執筆スタイルガイドをすべて学ぶ必要はないと思ってください。ただし、後で他の投稿者があなたの作業をこのガイドに適合するように編集した場合でも、怒ったり驚いたりしないでください。また、あなたがコンテンツのプルリクエストを提出する際に、レビュアーがこのスタイルガイドを指し示すかもしれません。
 
-> **メモ:** このガイドの言語的な側面は、主に英語の文書に適用されます。他の言語では、独自のスタイルガイドがあるかもしれません（作成することも歓迎されます）。これらは、それぞれのローカライズチームのページのサブページとして公開すべきです。しかし、このガイドは、コンテンツの形式や構成に関しても参照されるべきです。
+> [!NOTE]
+> このガイドの言語的な側面は、主に英語の文書に適用されます。他の言語では、独自のスタイルガイドがあるかもしれません（作成することも歓迎されます）。これらは、それぞれのローカライズチームのページのサブページとして公開すべきです。しかし、このガイドは、コンテンツの形式や構成に関しても参照されるべきです。
 >
 > **訳注:** 2017 年 12 月現在、日本語独自コンテンツとしてのスタイルガイドは未作成だが、下記の資料が参考になります。
 >
@@ -89,7 +89,7 @@ l10n:
   > {{domxref("CanvasRenderingContext2D")}} の **`strokeText()`** メソッドは、 [Canvas 2D API](/ja/docs/Web/API/Canvas_API) の一部で、指定された文字列の文字の輪郭を、指定された X 座標と Y 座標で示された位置に描画します。
   > テキストは、コンテキストの現在の {{domxref("CanvasRenderingContext2D.font", "font")}} を使用して描画され、 {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}} の各プロパティに従って揃えられます。
   >
-  > 詳細とさらなる例については、図形の描画ページの[テキスト](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#text)の節や、このテーマに関するメインの記事、[テキストの描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)を参照してください。
+  > 詳細とさらなる例については、図形の描画ページの[テキスト](/ja/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics#text)の節や、このテーマに関するメインの記事、[テキストの描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)を参照してください。
 
 ### 差別的でない言葉
 
@@ -115,7 +115,8 @@ MDN は幅広く、多様な読者を抱えています。
 
 - **正**: "A confirmation dialog asks the user if they want to allow the web page to make use of their webcam."
 
-> **メモ:** MDN Web Docs では、一般に「[単数形の 'they'](http://en.wikipedia.org/wiki/Singular_they)」として知られている、三人称複数型を中性名詞として使う（つまり、"they"、"them"、"their"、"theirs" を使う）ことを許容しています。
+> [!NOTE]
+> MDN Web Docs では、一般に「[単数形の 'they'](http://en.wikipedia.org/wiki/Singular_they)」として知られている、三人称複数型を中性名詞として使う（つまり、"they"、"them"、"their"、"theirs" を使う）ことを許容しています。
 
 ユーザーを複数とするとこうなります。
 
@@ -158,8 +159,11 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
   - **例を追加する**。すべての引数、あるいは少なくとも初級から中級レベルのユーザーが使用する可能性のある引数（またはプロパティや属性）と、追加の説明が必要な高度な引数を網羅した例を用意する必要があります。それぞれの例の前には、その例が何をするのか、それを理解するためにはどのような知識が必要なのかなどの概要を示す必要があります。例の後（または例の一部の間）には、コードがどのように動作するかを説明する文章が必要です。例の詳細やエラー処理についても手を抜いてはいけません。読者は例をコピー＆ペーストして自分のプロジェクトで使用するでしょうから、そのコードが本番サイトで使用されることになるでしょう。より有用な情報は、[サンプルコードのガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)を参照してください。
   - **使用例を説明する**。説明されている機能について、特に一般的な使用例がある場合は、それについて話してください。一般的な開発上の問題を解決するために文書化された方法を読者が理解すると仮定するのではなく、実際にその利用例についての節を追加し、例とその例がどのように機能するかを説明するテキストを追加してください。
   - **画像情報を追加する**。すべての画像や図に適切な [`alt`](/ja/docs/Web/HTML/Element/img#alt) テキストを入れてください。このテキストは、表などのキャプションと同様に重要です。スパイダーは画像をクロールすることができないため、 [`alt`](/ja/docs/Web/HTML/Element/img#alt) テキストによって、埋め込まれたメディアに含まれるコンテンツを検索エンジンのクローラーに伝えることができます。
-    > **メモ:** 検索エンジンのランキングを操作するために、キーワードを入れすぎたり、関係のないキーワードを使ったりすることは、良い慣習ではありません。このような行為は発見されやすく、罰せられる傾向にあります。
+
+    > [!NOTE]
+    > 検索エンジンのランキングを操作するために、キーワードを入れすぎたり、関係のないキーワードを使ったりすることは、良い慣習ではありません。このような行為は発見されやすく、罰せられる傾向にあります。
     > 同様に、ページのサイズや検索順位を上げるために、反復的で役に立たない内容や、キーワードの塊を実際のページ内に追加するようなことも**しないでください**。これは、コンテンツの読みやすさと検索結果の両方に悪影響を及ぼします。
+
   - **トピックの内容を重視する**。特定のキーワードではなく、記事のトピックに沿ってコンテンツを書く方がはるかに良いことです。実際、多くの SEO 担当者は、記事の長さに応じて 5 ～ 100 種類のキーワード（ショートテール、ミディアムテール、ロングテール）をリストアップし、記事に含めるようにしています。そうすることで、表現が多様化し、繰り返しが少なくなります。
 
 ## 執筆スタイル
@@ -219,7 +223,8 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
   | N.B.   | _nota bene_      | note well               |
   | P.S.   | _post scriptum_  | postscript              |
 
-  > **メモ:** ラテン語の略記表現が有用かどうか常に考えるようにしましょう。めったに使われないようなものは、多くの読者にとっては理解できず、他のものと勘違いしてしまうこともありえます。
+  > [!NOTE]
+  > ラテン語の略記表現が有用かどうか常に考えるようにしましょう。めったに使われないようなものは、多くの読者にとっては理解できず、他のものと勘違いしてしまうこともありえます。
   >
   > 使用するあなたが正しく使用することを肝に銘じてください。例えば、 "e.g." と "i.e." の取り違えはよくある間違いです。
 
@@ -238,7 +243,8 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
 
 本文では標準的な英語の大文字表記ルールを使用し、 "World Wide Web" は大文字で表記してください。 "web" （単独または修飾語としての使用）および "internet" は小文字を使用してもかまいません。
 
-> **メモ:** このガイドラインは以前のバージョンからの変更であり、 MDN では "Web" と "Internet" がたくさん使われているのを見かけるかもしれません。
+> [!NOTE]
+> このガイドラインは以前のバージョンからの変更であり、 MDN では "Web" と "Internet" がたくさん使われているのを見かけるかもしれません。
 > 他の変更を行う際にこれらを変更するのは自由ですが、大文字小文字を変更するためだけにこの記事を編集する必要はありません。
 
 キーボードのキーは、すべて大文字にするのではなく、文章形の大文字を使用してください。
@@ -364,10 +370,20 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
 アメリカ英語の綴りを使用してください。
 
 一般的には、 [Dictionary.com](https://www.dictionary.com/) の最初の項目を使用しますが、その項目が変種の綴りとして記載されていたり、主にアメリカ以外の英語の形で使用されている場合を除きます。
-例えば、 ["behavior" を検索](https://www.dictionary.com/browse/behaviour)すると、 "Chiefly British" という言葉の後に、アメリカの標準形である "[behavior](https://www.dictionary.com/browse/behavior)" へのリンクが表示されます。変形スペルは使わないようにしましょう。
+例えば、 ["behaviour" を検索](https://www.dictionary.com/browse/behaviour)すると、 "Chiefly British" という言葉の後に、アメリカの標準形である ["behavior"](https://www.dictionary.com/browse/behavior) へのリンクが表示されます。変形スペルは使わないようにしましょう。
+
+<!-- cSpell:ignore localise behaviour colour -->
 
 - **正**: localize, behavior, color
 - **誤**: localise, behaviour, colour
+
+スペルミスを検出するために [cSpell](https://cspell.org/) がインストールされています。これは毎週実行され、リポジトリー内の[スペルミスのレポート](https://github.com/mdn/content/issues?q=Weekly+spelling+check+is%3Aissue+in%3Atitle)を作成します。次のコマンドで、ローカルで実行することもできます。
+
+```bash
+npx cspell --no-progress --gitignore --config .vscode/cspell.json "**/*.md"
+```
+
+[`.vscode/dictionaries`](https://github.com/mdn/content/tree/main/.vscode/dictionaries) リポジトリーでは、既定の辞書には含まれない承認済みの単語をコンテナーに格納した複数の単語リストを管理しています。 これらのリストには、有効であるものの、スペルチェッカーによって報告された単語を追加できます。 [`.vscode/cspell.json`](https://github.com/mdn/content/blob/main/.vscode/cspell.json) を参照すると、各辞書に何が含まれているか、およびスペルチェック構成の詳細がわかります。
 
 ### 用語
 
@@ -381,7 +397,7 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
   MDN では、 HTML 要素を示すのに [`HTMLElement` マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references)を使うこともできます。これは、要素のスタイル設定、角括弧 "<>"、参照ページへのリンクを追加します。
 
   - **逆引用符の使用**: `<span>`
-  - **マクロの使用**: {{HTMLElement("span")}} （Markdown 内のソース: \\{{HTMLElement("span")\}}）
+  - **マクロの使用**: {{HTMLElement("span")}} （Markdown 内のソース: `\{{HTMLElement("span")}}`）
 
 - **parameter と argument**: MDN で推奨する用語は **parameter** です。一貫性のためにできるだけ "argument" の用語は使用しないでください。
 
@@ -438,7 +454,7 @@ MDN で他のページやページの節のタイトルで参照する場合、�
 
 リンク先の節が同じページにある場合は、「上記」 (above) や「下記」 (below) の言葉を用いて、その節の場所を示唆することができます。
 
-- **正**: この概念は下記の[アクセシビリティの考慮](/ja/docs/Web/CSS/gradient/repeating-conic-gradient#accessibility_concerns)の節で詳しく説明しています。
+- **正**: この概念は下記の[アクセシビリティ](/ja/docs/Web/CSS/gradient/repeating-conic-gradient#アクセシビリティ)の節で詳しく説明しています。
 
 文章の一部を記事や記事の節にリンクすることができます。リンクテキストとして説明的な語句を使用し、リンクされているページに十分なコンテキストを提供するように注意してください。
 
@@ -454,6 +470,8 @@ MDN で、リファレンスページにリンクするもう一つの方法は�
 
 MDN Web Docs では、特定の状況下において外部リンクを許可しています。MDN Web Docs で外部リンクを載せてよいかどうか判断するには、この節で記述されているガイドラインを使用してください。外部リンクを追加するためのプルリクエストは、ここで記述するガイドラインを満たしていない場合、拒否されます。
 
+MDN の[ウェブ開発の学習](/ja/docs/Learn_web_development)コンテンツに外部リンクを追加することを検討している場合は、[ウェブ開発の学習の執筆ガイドライン > 外部リンクと埋め込み](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)も併せてお読みください。
+
 一般的に、外部リンクを追加することを検討している場合、以下のようなリスクが最小限であることを確認する必要があります。
 
 - リンク切れまたは古くなったリンク
@@ -461,7 +479,8 @@ MDN Web Docs では、特定の状況下において外部リンクを許可し�
 - MDN Web Docs を使用してスパムを広めようとすること。
 - リンクの宛先を難読化するショートリンク
 
-> **メモ:** 外部リンクを追加する前に、MDN Web Docs 内のコンテンツを相互参照することを検討してください。内部リンクはメンテナンスが簡単で、MDN Web Docs の全体が読者にとってより価値のあるものになります。
+> [!NOTE]
+> 外部リンクを追加する前に、MDN Web Docs 内のコンテンツを相互参照することを検討してください。内部リンクはメンテナンスが簡単で、MDN Web Docs の全体が読者にとってより価値のあるものになります。
 
 - **良質な外部リンク**: 良い外部リンクは、関連性があり、持続性があり、広く信頼されているリソースに読者を連れて行きます。以下のような外部コンテンツへのリンクを設定することをお勧めします。
 
@@ -480,7 +499,8 @@ MDN Web Docs では、特定の状況下において外部リンクを許可し�
 
 - **自己宣伝やスパム行為に該当するリンク**: 個人的なブログ記事、カンファレンスでの講演、GitHub リポジトリーには価値がありますが、自身のリソースへのリンクは利益相反があるように見えてしまう可能性があります。ビジネスや個人的なつながりがあるリソースにリンクする前に、よく考えてください。
 
-  > **メモ:** リンク先とビジネスや個人的な関係がある場合は、プルリクエストでその関係を開示する必要があります。そうしないと、MDN Web Docs への継続的な参加が危ぶまれる可能性があります。
+  > [!NOTE]
+  > リンク先とビジネスや個人的な関係がある場合は、プルリクエストでその関係を開示する必要があります。そうしないと、MDN Web Docs への継続的な参加が危ぶまれる可能性があります。
 
 そのようなリンクが適切である場合もあります。例えば、あなたがある仕様書の編集者で、その仕様書に関連する文書化に貢献している場合、その仕様書へのリンクは期待されるものであり、許容されるものです。しかし、あなたはあなたとリンクの関係を明らかにしなければなりません。
 
@@ -512,7 +532,7 @@ markdown の見出しレベルをスキップすることなく、小さい順�
 
 ページ内に画像やその他のメディアを載せる場合は、以下のガイドラインに従ってください。
 
-- メディアのライセンスが使用することを許可していることを確認してください。 [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) のようなとても寛容なライセンスを有するメディア、または少なくとも私たちの一般的なコンテンツライセンス - [クリエイティブ・コモンズ - 表示・継承ライセンス](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA) と互換性のあるものを使用するようにしましょう。
+- メディアのライセンスが使用することを許可していることを確認してください。 [CC0](https://creativecommons.org/public-domain/cc0/) のようなとても寛容なライセンスを有するメディア、または少なくとも私たちの一般的なコンテンツライセンス - [クリエイティブ・コモンズ - 表示・継承ライセンス](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA) と互換性のあるものを使用するようにしましょう。
 - 画像の場合、<https://tinypng.com> または <https://imageoptim.com> を通すとページが軽量化されます。
 - `SVG` の場合は、 [SVGOMG](https://jakearchibald.github.io/svgomg/) を通してコードを実行し、 `SVG` ファイルの最後に空行があることを確認してください。
 - すべての画像に[説明的な `alt` テキストを入れる](/ja/docs/MDN/Writing_guidelines/Howto/Images_media#画像に代替テキストを追加)必要があります。
@@ -566,7 +586,7 @@ markdown の見出しレベルをスキップすることなく、小さい順�
 
 MDN Web Docs のほとんどのガイド、リファレンスページ、そして用語集ページには、記事の終わりに _関連情報_ 節があります。この節には MDN 内の関連トピックへの [相互参照](#相互参照（リンク）)があり、時には関連する外部記事へのリンクもあります。例えば、この例は `@layer` ページの[関連情報の節](/ja/docs/Web/CSS/@layer#関連情報)です。
 
-一般的に、関連情報の節のリンクは[箇条書きリスト](#リスト)形式で、リストの各アイテムを句として表示します。しかし、MDNの[ウェブ開発を学習する](/ja/docs/Learn)領域では、関連情報の節は[定義リスト](/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定義リスト)形式に続きます。
+一般的に、関連情報の節のリンクは[箇条書きリスト](#リスト)形式で、リストの各アイテムを句として表示します。しかし、 MDN の[ウェブ開発を学習する](/ja/docs/Learn_web_development)の章では、関連情報の節は[定義リスト](/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定義リスト)形式に従います。
 
 MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加または更新する際は、以下のガイドラインに注意してください。
 
@@ -621,8 +641,8 @@ MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加ま�
 ページの上部に表示されるページタイトルは、ページの URL の `<locale>/docs/` に続く部分であるページの「スラッグ」と異なるものにすることができます。スラッグを定義する際には、以下のガイドラインを念頭に置いてください。
 
 - スラッグは短くしましょう。新しいレベルの階層を作成する場合、スラッグの中の新しいレベルの成分は 1 語か 2 語だけにします。
-- スラッグでは、複数の単語からなる成分にはアンダースコアを使用します。例えば、`/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started` では `Getting_started` を使用します。
-- スラッグでも、それぞれの成分の大文字小文字を使い分けるにあたって、前述の例の `Getting_started` のように文スタイルの大文字化を使用してください。
+- スラッグでは、複数の単語からなる成分にはアンダースコアを使用してください。例えば、 `Basic_HTML_syntax` が`/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax` で使用されています。
+- スラッグでも、それぞれの成分の大文字小文字を使い分けるにあたって、前述の例の `Basic_HTML_syntax` のように文スタイルの大文字化を使用してください。
 
 ### タイトル
 
@@ -663,16 +683,15 @@ MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加ま�
 
 ### おすすめのスタイルガイド
 
-ここで取り扱われていない用法とスタイルについて疑問があれば、 [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/) を、それでもダメなら [Chicago Manual of Style](https://www.chicagomanualofstyle.org) を参照してください。
-[非公式の crib sheet for the Chicago Manual of Style](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf) がオンラインで利用できます。
+ここで取り扱われていない用法とスタイルについて疑問があれば、 [Microsoft Writing Style Guide](https://learn.microsoft.com/ja/style-guide/welcome/) を、それでもダメなら [Chicago Manual of Style](https://www.chicagomanualofstyle.org) を参照してください。
 
 ### 言語、文法、綴り
 
 記事の執筆と編集スキルを磨きたければ、以下のリソースが役立つことでしょう。（英語の情報）
 
 - [Common errors in English usage](https://brians.wsu.edu/common-errors-in-english-usage/) on brians.wsu.edu
-- [English grammar FAQ](https://www-personal.umich.edu/~jlawler/aue.html) on alt-usage-english.org
+- [English grammar FAQ](https://websites.umich.edu/~jlawler/aue.html) on alt-usage-english.org
 - [English language and usage](https://english.stackexchange.com/) on english.stackexchange.com: Question and answer site for English language usage
-- [Merriam-Webster's Concise Dictionary of English Usage](https://www.google.com/books/edition/Merriam_Webster_s_Dictionary_of_English/UDIjAQAAIAAJ) on google.com/books (published 2002): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage
+- [Merriam-Webster's Concise Dictionary of English Usage](https://books.google.com/books?id=UDIjAQAAIAAJ) on google.com/books (published 2002): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage
 - [On Writing Well](https://www.harpercollins.com/products/on-writing-well-william-zinsser) by William Zinsser on harpercollins.com (published 2016)
-- [Style: Lessons in Clarity and Grace](https://www.google.ca/books/edition/Style/QjskvgEACAAJ) by Joseph Williams and Gregory Colomb on google.com/books (published 2019)
+- [Style: Lessons in Clarity and Grace](https://books.google.com/books?id=QjskvgEACAAJ) by Joseph Williams and Gregory Colomb on google.com/books (published 2019)

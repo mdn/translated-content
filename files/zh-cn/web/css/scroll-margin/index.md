@@ -5,7 +5,7 @@ slug: Web/CSS/scroll-margin
 
 {{CSSRef}}
 
-[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) **`scroll-margin`** 同时设置元素的所有滚动外边距，其赋值方式较为类似 {{CSSXref("margin")}} 属性为元素外边距赋值的方式。
+[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`scroll-margin`** 同时设置元素的所有滚动外边距，其赋值方式较为类似 {{CSSXref("margin")}} 属性为元素外边距赋值的方式。
 
 {{EmbedInteractiveExample("pages/css/scroll-margin.html")}}
 
@@ -129,7 +129,8 @@ scroll-margin: unset;
 
 这意味着当滚动过中间的子元素后，滚动将吸附至第二个 `<div>` 左侧边的 `1rem` 外处，及第三个 `<div>` 左侧边的 `2rems` 外处。
 
-> **备注：** 此处虽然在所有侧均设置了 `scroll-margin`，但真正相关的仅有首侧边。此处若仅在此边上设置滚动外边距，例如 `scroll-margin-inline-start: 1rem` 或 `scroll-margin: 0 0 0 1rem`，则效果相同。
+> [!NOTE]
+> 此处虽然在所有侧均设置了 `scroll-margin`，但真正相关的仅有首侧边。此处若仅在此边上设置滚动外边距，例如 `scroll-margin-inline-start: 1rem` 或 `scroll-margin: 0 0 0 1rem`，则效果相同。
 
 #### 结果
 
@@ -148,4 +149,4 @@ scroll-margin: unset;
 ## 参见
 
 - [CSS 滚动吸附](/zh-CN/docs/Web/CSS/CSS_scroll_snap)
-- [用 CSS 滚动吸附明确控制滚动](https://web.dev/articles/css-scroll-snap)
+- [用 CSS 滚动吸附明确控制滚动](https://web.developers.google.cn/articles/css-scroll-snap)

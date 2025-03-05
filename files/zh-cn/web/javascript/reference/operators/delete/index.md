@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/delete
 
 **`delete`** 运算符用于删除对象的一个属性；如果该属性的值是一个对象，并且没有更多对该对象的引用，该属性所持有的对象最终会自动释放。
 
-{{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - delete operator")}}
+
+```js interactive-example
+const Employee = {
+  firstname: "Maria",
+  lastname: "Sanchez",
+};
+
+console.log(Employee.firstname);
+// Expected output: "Maria"
+
+delete Employee.firstname;
+
+console.log(Employee.firstname);
+// Expected output: undefined
+```
 
 ## 语法
 
@@ -16,7 +31,8 @@ delete object.property
 delete object[property]
 ```
 
-> **备注：** 该语法允许在 `delete` 运算符之后使用多种类型的表达式，但只有上述形式才能产生有意义的行为。
+> [!NOTE]
+> 该语法允许在 `delete` 运算符之后使用多种类型的表达式，但只有上述形式才能产生有意义的行为。
 
 ### 参数
 
@@ -69,7 +85,8 @@ delete console.log(1);
 
 ### 使用 delete
 
-> **备注：** 以下示例使用了仅非严格模式下的功能，如隐式创建全局变量和删除标识符，这在严格模式下是禁止的。
+> [!NOTE]
+> 以下示例使用了仅非严格模式下的功能，如隐式创建全局变量和删除标识符，这在严格模式下是禁止的。
 
 ```js
 // 在全局作用域创建 empCount 属性

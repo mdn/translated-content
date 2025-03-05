@@ -28,38 +28,19 @@ slug: Web/API/Canvas_API/Tutorial/Basic_animations
 
 ### 排程更新
 
-第一種作法是利用 {{domxref("window.setInterval()")}} 與 {{domxref("window.setTimeout()")}} 方法。
+第一種作法是利用 {{domxref("Window.setInterval")}}、{{domxref("Window.setTimeout()")}} 與 {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} 函數。
 
-> **備註：** 針對新版瀏覽器建議採用 {{domxref("window.requestAnimationFrame()")}} 方法。
-
-- `setInterval(function, delay)`
-  - : 每隔 delay 毫秒，執行輸入 function(函數)
-- `setTimeout(function, delay)`
-  - : 過 delay 毫秒後，執行輸入 function(函數)
-- requestAnimationFrame(callback)
+- {{domxref("Window.setInterval", "setInterval()")}}
+  - : 每隔 `delay` 毫秒，執行輸入 `function`。
+- {{domxref("setTimeout()")}}
+  - : 過 `delay` 毫秒後，執行輸入 `function`。
+- {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}
   - : 告訴瀏覽器你希望執行動畫的時候，要求瀏覽器在重繪下一張畫面之前，呼叫 callback 函數來更新動畫
 
-如果希望不要有任何的使用者互動影響，請使用 setInterval()，因為它會確實地每隔一段時間就執行程式碼。如果你想製作遊戲，我們能夠使用 keyboard 或是 mouse event 來控制動畫，並使用 setTimeout() 函數一起。藉由設定 EventListeners，我們能夠捕捉任何使用者的動作，並執行我們的動畫函數。
+如果希望不要有任何的使用者互動影響，請使用 `setInterval()`，因為它會確實地每隔一段時間就執行程式碼。如果你想製作遊戲，我們能夠使用 keyboard 或是 mouse event 來控制動畫，並使用 `setTimeout()` 函數一起。藉由設定 EventListeners，我們能夠捕捉任何使用者的動作，並執行我們的動畫函數。
 
-> **備註：** 在下面的範例,我們將使用 **`window.requestAnimationFrame()`** 方法來控制動畫，**`window.requestAnimationFrame()`** 方法為動畫提供更順暢更有效率的方式來執行,當系統準備好繪製畫面時，藉由呼叫動畫 andmation frame() 的 callback 函數。callback 通常每秒鐘執行 60 次，當執行 background tab 時，執行次數會更低，想知道更多關於動畫迴圈(animation loop)的資訊，尤其是遊戲的應用，請查看我們在 [Game development zone](/zh-TW/docs/Games) 的主題 [Anatomy of a video game](/zh-TW/docs/Games/Anatomy)。
-
-### 從使用者輸入操作控制動畫
-
-我們也可以從使用者輸入操作控制動畫，就像是電玩遊戲一般；像是在鍵盤上設置事件處理器 {{domxref("EventListener")}} 捕捉使用者輸入並執行對應動畫。
-
-你可以利用我們的[次要版](/zh-TW/docs/DOM/window.setInterval#A_little_framework)或[主要版動畫框架](/zh-TW/docs/JavaScript/Timers/Daemons)。
-
-```js
-var myAnimation = new MiniDaemon(null, animateShape, 500, Infinity);
-```
-
-或
-
-```js
-var myAnimation = new Daemon(null, animateShape, 500, Infinity);
-```
-
-在後面的範例我們主要將使用 window\.setInterval()方法控制動畫，然後於本頁底部是一些使用 widnow\.setTimeout()的範例連結。
+> [!NOTE]
+> 在下面的範例,我們將使用 **`window.requestAnimationFrame()`** 方法來控制動畫，**`window.requestAnimationFrame()`** 方法為動畫提供更順暢更有效率的方式來執行,當系統準備好繪製畫面時，藉由呼叫動畫 andmation frame() 的 callback 函數。callback 通常每秒鐘執行 60 次，當執行 background tab 時，執行次數會更低，想知道更多關於動畫迴圈(animation loop)的資訊，尤其是遊戲的應用，請查看我們在 [Game development zone](/zh-TW/docs/Games) 的主題 [Anatomy of a video game](/zh-TW/docs/Games/Anatomy)。
 
 ## 太陽系動畫
 
@@ -361,12 +342,5 @@ function draw() {
   - : 飛越星河
 - [iGrapher](http://igrapher.com/)
   - : 股票市場圖
-
-## See also
-
-- [JavaScript timers](/zh-TW/docs/JavaScript/Timers)
-- [`setInterval` – A little framework](/zh-TW/docs/DOM/window.setInterval#A_little_framework)
-- [JavaScript Daemons Management](/zh-TW/docs/JavaScript/Timers/Daemons)
-- [HTMLCanvasElement](/zh-TW/docs/DOM/HTMLCanvasElement)
 
 {{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Compositing", "Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas")}}

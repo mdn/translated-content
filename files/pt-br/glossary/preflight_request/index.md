@@ -9,7 +9,7 @@ Uma requisição _preflight_ de [CORS](/pt-BR/docs/Glossary/CORS) é uma requisi
 
 É uma requisição {{HTTPMethod("OPTIONS")}}, que usa três cabeçalhos de solicitação HTTP: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, e o cabeçalho {{HTTPHeader("Origin")}}.
 
-Uma requisição _preflight_ é emitida automaticamente por um navegador, quando necessário. Geralmente, os desenvolvedores front-end não precisam criar essas solicitações. Ela acontece quando a requisição é qualificada ["para ser preflighted"](/pt-BR/docs/Web/HTTP/CORS#Preflighted_requests) e omitida para [requisições simples](/pt-BR/docs/Web/HTTP/CORS#Simple_requests).
+Uma requisição _preflight_ é emitida automaticamente por um navegador, quando necessário. Geralmente, os desenvolvedores front-end não precisam criar essas solicitações. Ela acontece quando a requisição é qualificada ["para ser preflighted"](/pt-BR/docs/Web/HTTP/CORS#preflighted_requests) e omitida para [requisições simples](/pt-BR/docs/Web/HTTP/CORS#simple_requests).
 
 Por exemplo, o cliente pode perguntar ao servidor se este permitiria uma requisição {{HTTPMethod ("DELETE")}}, antes de enviá-la, usando uma requisição _preflight_:
 

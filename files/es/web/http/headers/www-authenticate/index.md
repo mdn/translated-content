@@ -22,7 +22,7 @@ WWW-Authenticate: <type> realm=<realm>
 ## Directives
 
 - \<type>
-  - : [Tipo de autentificación](/es/docs/Web/HTTP/Authentication#Authentication_schemes). Un tipo común es ["Basic"](/es/docs/Web/HTTP/Authentication#Basic_authentication_scheme). IANA mantiene una [lista de los esquemas de autentificación](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
+  - : [Tipo de autentificación](/es/docs/Web/HTTP/Authentication#authentication_schemes). Un tipo común es ["Basic"](/es/docs/Web/HTTP/Authentication#basic_authentication_scheme). IANA mantiene una [lista de los esquemas de autentificación](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
 - realm=\<realm>
   - : Una descripción del recurso protegido. Si el realm no es especificado, los clientes a menudo muestran el hostname.
 - charset=\<charset>

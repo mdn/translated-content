@@ -37,16 +37,14 @@ de forma asíncrona o sincrónica. El tipo de petición viene dictado por el arg
 no se especifica, la `XMLHttpRequest` se procesa de forma asíncrona, de lo contrario
 el proceso se realiza de forma síncrona. Una discusión detallada y demostraciones de estos
 de estos dos tipos de peticiones en la página [peticiones síncronas
-y asíncronas](/es/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests). No utilice solicitudes sincrónicas fuera de los Web
+y asíncronas](/es/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests). No utilice solicitudes sincrónicas fuera de los Web
 Workers.
 
-> **Nota:** A partir de Gecko 30.0 (Firefox 30.0 / Thunderbird 30.0 / SeaMonkey 2.27), las peticiones síncronas en el hilo principal han sido marcadas como obsoletas debido a
-> los efectos negativos en la experiencia del usuario.
+> [!NOTE]
+> A partir de Gecko 30.0 (Firefox 30.0 / Thunderbird 30.0 / SeaMonkey 2.27), las peticiones síncronas en el hilo principal han sido marcadas como obsoletas debido a los efectos negativos en la experiencia del usuario.
 
-> **Nota:** La función constructora
-> `XMLHttpRequest` no se limita a los documentos XML. Comienza con
-> **"XML "** porque cuando se creó el formato principal que se utilizaba originalmente
-> para el intercambio de datos asíncrono era XML.
+> [!NOTE]
+> La función constructora `XMLHttpRequest` no se limita a los documentos XML. Comienza con **"XML"** porque cuando se creó el formato principal que se utilizaba originalmente para el intercambio de datos asíncrono era XML.
 
 ## Manejando las respuestas
 
@@ -67,7 +65,7 @@ Principalmente hay cuatro formas de analizar este documento XML:
 1. Usando [XPath](/es/docs/Web/XPath) para dirigir (o apuntar a) partes
    del mismo.
 2. Manualmente [Analizar y
-   serializar el XML](/es/docs/Web/Guide/Parsing_and_serializing_XML) a cadenas u objetos.
+   serializar el XML](/es/docs/Web/XML/Parsing_and_serializing_XML) a cadenas u objetos.
 3. Usando {{domxref("XMLSerializer")}} para serializar **árboles DOM a cadenas o a
    archivos**.
 4. {{jsxref("RegExp")}} se puede utilizar si siempre se conoce el contenido del documento XML
@@ -78,7 +76,7 @@ Principalmente hay cuatro formas de analizar este documento XML:
 > **Nota:** `XMLHttpRequest` ahora puede interpretar HTML por ti
 > utilizando la propiedad {{domxref("XMLHttpRequest.responseXML", "responseXML")}}. Lea el
 > artículo sobre [HTML
-> en XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) para aprender como hacerlo.
+> en XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) para aprender como hacerlo.
 
 ### Procesamiento de una propiedad responseText que contiene un documento HTML
 
@@ -89,7 +87,7 @@ tres formas de analizar y parsear esta cadena de HTML en bruto:
 
 1. Utilizar la propiedad `XMLHttpRequest.responseXML` como se explica en el artículo
    [HTML en
-   XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
+   XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest).
 2. Inyectar el contenido en el cuerpo de un [fragmento de documento](/es/docs/Web/API/DocumentFragment) mediante
    `fragment.body.innerHTML` y recorrer el DOM del fragmento.
 3. {{jsxref("RegExp")}} puede utilizarse si siempre se conoce el contenido del HTML
@@ -135,7 +133,7 @@ oReq.send();
 ```
 
 Para ver más ejemplos, consulte la página [Envío y
-recepción de datos binarios](/es/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data)
+recepción de datos binarios](/es/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data)
 
 ## Seguimiento del progreso
 
@@ -143,12 +141,12 @@ recepción de datos binarios](/es/docs/Web/API/XMLHttpRequest/Sending_and_Receiv
 ocurrir mientras se procesa la solicitud. Esto incluye notificaciones periódicas
 del progreso, notificaciones de error, etc.
 
-La implementación para la monitorización de eventos DOM [`progress`](/es/docs/Web/Reference/Events/progress) de transferencias `XMLHttpRequest`
+La implementación para la monitorización de eventos DOM [`progress`](/es/docs/Web/API/XMLHttpRequest/progress_event) de transferencias `XMLHttpRequest`
 sigue la [especificación de eventos de progreso](https://xhr.spec.whatwg.org/#interface-progressevent): estos
 eventos implementan la interfaz {{domxref("ProgressEvent")}}. Los eventos reales que puedes monitorizar
 para determinar el estado de una transferencia en curso son:
 
-- [`progress`](/es/docs/Web/Reference/Events/progress)
+- [`progress`](/es/docs/Web/API/XMLHttpRequest/progress_event)
   - : La cantidad de datos que se han recibido ha cambiado.
 - {{domxref("XMLHttpRequest/load_event", "load")}}
   - : La transferencia se ha completado; todos los datos están ahora en el `response`.
@@ -191,9 +189,8 @@ function transferCanceled(evt) {
 Las líneas 3-6 añaden escuchadores de eventos para los distintos eventos que se envían al realizar una
 transferencia de datos utilizando `XMLHttpRequest`.
 
-> **Nota:** Tienes que añadir los escuchadores de eventos antes de
-> llamar a `open()` en la petición. De lo contrario, los eventos `progress
-> no se dispararán.
+> [!NOTE]
+> Tienes que añadir los escuchadores de eventos antes de llamar a `open()` en la petición. De lo contrario, los eventos `progress no se dispararán.
 
 El manejador de eventos de progreso, especificado por la función `updateProgress()` en
 este ejemplo, recibe el número total de bytes a transferir así como el número de
@@ -217,19 +214,14 @@ oReq.upload.addEventListener("abort", transferCanceled);
 oReq.open();
 ```
 
-> **Nota:** Los eventos de progreso no están disponibles para el
-> protocolo `file:`.
+> [!NOTE]
+> Los eventos de progreso no están disponibles para el protocolo `file:`.
 
-> **Nota:** A partir de Gecko 9.0, se puede confiar en que los eventos de progreso
-> lleguen para cada trozo de datos recibidos, incluyendo el último trozo en los casos
-> en los que se recibe el último paquete y se cierra la conexión antes de que se
-> dispare el evento de progreso. En este caso, el evento de progreso se dispara automáticamente
-> cuando se produce el evento de carga para ese paquete. Esto te permite ahora monitorizar
-> de forma fiable el progreso observando únicamente el evento "progress".
+> [!NOTE]
+> A partir de Gecko 9.0, se puede confiar en que los eventos de progreso lleguen para cada trozo de datos recibidos, incluyendo el último trozo en los casos en los que se recibe el último paquete y se cierra la conexión antes de que se dispare el evento de progreso. En este caso, el evento de progreso se dispara automáticamente cuando se produce el evento de carga para ese paquete. Esto te permite ahora monitorizar de forma fiable el progreso observando únicamente el evento "progress".
 
-> **Nota**: A partir de Gecko 12.0, si su evento de progreso es llamado con
-> un `responseType` de "moz-blob", el valor de la respuesta es un
-> {{domxref("Blob")}} que contiene los datos recibidos hasta el momento.
+> [!NOTE]
+> A partir de Gecko 12.0, si su evento de progreso es llamado con un `responseType` de "moz-blob", el valor de la respuesta es un {{domxref("Blob")}} que contiene los datos recibidos hasta el momento.
 
 También se pueden detectar las tres condiciones de finalización de la carga (`abort`,
 `load`, o `error`) utilizando el evento `loadend`:
@@ -305,7 +297,7 @@ dependiendo del tipo de codificación que esté utilizando:
   ```
 
 - Método: `POST`; Tipo de codificación:
-  [`multipart/form-data`](/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data):
+  [`multipart/form-data`](/es/docs/Web/HTTP/MIME_types#multipartform-data):
 
   ```plain
   Content-Type: multipart/form-data; boundary=---------------------------314911788813839
@@ -708,25 +700,14 @@ La sintaxis para activar este script es:
 AJAXSubmit(myForm);
 ```
 
-> **Nota:** Este framework utiliza la API {{domxref("FileReader")}}
-> para transmitir las cargas de archivos. Este es un API reciente y no está implementada en IE9 o
-> inferiores. Por esta razón, la carga sólo en AJAX se considera **una técnica experimental**.
-> Si no necesita subir archivos binarios, este framework funciona
-> bien en la mayoría de los navegadores.
+> [!NOTE]
+> Este framework utiliza la API {{domxref("FileReader")}} para transmitir las cargas de archivos. Este es un API reciente y no está implementada en IE9 o inferiores. Por esta razón, la carga sólo en AJAX se considera **una técnica experimental**. Si no necesita subir archivos binarios, este framework funciona bien en la mayoría de los navegadores.
 
-> **Nota:** La mejor manera de enviar contenido binario es a través de
-> {{jsxref("ArrayBuffer", "ArrayBuffers")}} o {{domxref("Blob", "Blobs")}} junto con
-> con el método {{domxref("XMLHttpRequest.send()", "send()")}} y posiblemente el
-> método {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} de la
-> API `FileReader`. Pero, como el objetivo de este script es trabajar con un [stringifiable](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
-> de datos en bruto, utilizamos el método {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}}
-> junto con el método {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} de la API `FileReader`. Por lo tanto, el script anterior
-> tiene sentido sólo cuando se trata de archivos pequeños. Si no tiene intención de
-> de cargar contenido binario, considere utilizar la API `FormData`.
+> [!NOTE]
+> La mejor manera de enviar contenido binario es a través de {{jsxref("ArrayBuffer", "ArrayBuffers")}} o {{domxref("Blob", "Blobs")}} junto con con el método {{domxref("XMLHttpRequest.send()", "send()")}} y posiblemente el método {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} de la API `FileReader`. Pero, como el objetivo de este script es trabajar con un [stringifiable](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) de datos en bruto, utilizamos el método {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}} junto con el método {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} de la API `FileReader`. Por lo tanto, el script anterior tiene sentido sólo cuando se trata de archivos pequeños. Si no tiene intención de de cargar contenido binario, considere utilizar la API `FormData`.
 
-> **Nota:** El método no estándar `sendAsBinary`
-> se considera obsoleto a partir de Gecko 31 (Firefox 31 / Thunderbird 31 / SeaMonkey 2.28) y se eliminará pronto.
-> En su lugar se puede utilizar el método estándar `send(Blob data)`.
+> [!NOTE]
+> El método no estándar `sendAsBinary` se considera obsoleto a partir de Gecko 31 (Firefox 31 / Thunderbird 31 / SeaMonkey 2.28) y se eliminará pronto. En su lugar se puede utilizar el método estándar `send(Blob data)`.
 
 ### Uso de los objetos FormData
 
@@ -737,7 +718,7 @@ datos clave del usuario. Los datos transmitidos tienen el mismo formato que el m
 del formulario para enviar los datos, si el tipo de codificación del formulario se establece como
 "multipart/form-data". Los objetos FormData pueden utilizarse de varias maneras con un método
 `XMLHttpRequest`. Para ver ejemplos y explicaciones de cómo se puede utilizar
-FormData con XMLHttpRequests, consulte la sección [Utilizando objetos FormData](/es/docs/Web/API/FormData/Using_FormData_Objects).
+FormData con XMLHttpRequests, consulte la sección [Utilizando objetos FormData](/es/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects).
 Para fines didácticos aquí hay **una _traducción_ del [ejemplo anterior](#un_pequeño_framework_vanilla) transformado para usar la
 API `FormData`**. Nótese la brevedad del código:
 
@@ -908,11 +889,8 @@ API `FormData`**. Nótese la brevedad del código:
 </html>
 ```
 
-> **Nota:** Como hemos dicho, los objetos **{{domxref("FormData")}}
-> no son objetos [stringifiable](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)**. Si quieres transformar en string los datos enviados, utiliza [el ejemplo anterior en _puro_-AJAX](#un_pequeño_framework_vanilla). Tenga
-> en cuenta también que, aunque en este ejemplo hay algunos campos `file` {{HTMLElement("input") }}, **cuando se envía un formulario a través de la API `FormData`
-> tampoco es necesario utilizar la API {{domxref("FileReader")}}**:
-> los archivos se cargan y suben automáticamente.
+> [!NOTE]
+> Como hemos dicho, los objetos **{{domxref("FormData")}} no son objetos [stringifiable](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)**. Si quieres transformar en string los datos enviados, utiliza [el ejemplo anterior en _puro_-AJAX](#un_pequeño_framework_vanilla). Tenga en cuenta también que, aunque en este ejemplo hay algunos campos `file` {{HTMLElement("input") }}, **cuando se envía un formulario a través de la API `FormData` tampoco es necesario utilizar la API {{domxref("FileReader")}}**: los archivos se cargan y suben automáticamente.
 
 ## Obtener la fecha de la última modificación
 
@@ -1028,7 +1006,7 @@ XMLHttpRequest se crea cuando la ventana a cerrar sigue ahí, y finalmente
 enviar la petición (en otras palabras, `open()`) cuando esta ventana ha perdido su foco
 y otra ventana toma el foco. La forma más eficaz de evitar este problema es
 es establecer una escucha en el evento [`activate`](/es/docs/Web/Reference/Events/activate) de la nueva ventana que se activa una vez que la
-ventana terminada tenga su evento [`unload`](/es/docs/Web/Reference/Events/unload) disparado.
+ventana terminada tenga su evento [`unload`](/es/docs/Web/API/Window/unload_event) disparado.
 
 ## Workers
 
@@ -1045,8 +1023,8 @@ Establecer `overrideMimeType` no funciona desde un {{domxref("Worker")}}. Ver
 
 ## Véase también
 
-1. [MDN introducción a AJAX](/es/docs/Web/Guide/AJAX/Getting_Started)
-2. [HTML en XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+1. [MDN introducción a AJAX](/es/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e)
+2. [HTML en XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
 3. [Control de acceso HTTP](/es/docs/Web/HTTP/CORS)
 4. [XMLHttpRequest - REST y la experiencia de usuario enriquecida](https://www.peej.co.uk/articles/rich-user-experience.html)
 5. [Documentación de Microsoft](https://msdn.microsoft.com/library/ms535874)

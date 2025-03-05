@@ -7,7 +7,8 @@ slug: Web/HTML/Element/frameset
 
 **`<frameset>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於包含 {{HTMLElement("frame")}} 元素。
 
-> **備註：** 由於現在不鼓勵使用頁框，而更推薦使用 {{HTMLElement("iframe")}}，因此現代網站通常不會使用此元素。
+> [!NOTE]
+> 由於現在不鼓勵使用頁框，而更推薦使用 {{HTMLElement("iframe")}}，因此現代網站通常不會使用此元素。
 
 ## 屬性
 

@@ -7,11 +7,97 @@ slug: Web/HTML/Element/table
 
 L'élément HTML **`<table>`** permet de représenter un tableau de données, c'est-à-dire des informations exprimées sur un tableau en deux dimensions.
 
-{{EmbedInteractiveExample("pages/tabbed/table.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;table&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Front-end web developer course 2021
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Person</th>
+      <th scope="col">Most interest in</th>
+      <th scope="col">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Chris</th>
+      <td>HTML tables</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th scope="row">Dennis</th>
+      <td>Web accessibility</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th scope="row">Sarah</th>
+      <td>JavaScript frameworks</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th scope="row">Karen</th>
+      <td>Web performance</td>
+      <td>36</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row" colspan="2">Average age</th>
+      <td>33</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+```css interactive-example
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+}
+
+thead,
+tfoot {
+  background-color: rgb(228 240 245);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+```
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels). Les attributs listés ci-après sont désormais tous dépréciés.
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes). Les attributs listés ci-après sont désormais tous dépréciés.
 
 ### Attributs dépréciés
 
@@ -23,34 +109,38 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
     - `center`, signifiant que la table doit être affichée centrée dans le document ;
     - `right`, signifiant que la table doit être affichée à droite du document.
 
-    > **Note :**
+    > [!NOTE]
     >
-    > - **Cet attribut ne doit pas être utilisé** car il a été déprécié : l'élément {{HTMLElement("table")}} devrait être stylisé en utilisant [CSS](/fr/docs/CSS). Pour obtenir un effet similaire à celui réalisé par l'attribut align, les propriétés [CSS](/fr/docs/CSS) {{cssxref("text-align")}} et {{cssxref("vertical-align")}} devraient être utilisées.
+    > - **Cet attribut ne doit pas être utilisé** car il a été déprécié : l'élément {{HTMLElement("table")}} devrait être stylisé en utilisant [CSS](/fr/docs/Web/CSS). Pour obtenir un effet similaire à celui réalisé par l'attribut align, les propriétés [CSS](/fr/docs/Web/CSS) {{cssxref("text-align")}} et {{cssxref("vertical-align")}} devraient être utilisées.
     > - Avant Firefox 4, Firefox supportait également, en mode quirks uniquement, les valeurs `middle`, `absmiddle`, et `abscenter` comme synonymes de `center`_._
 
 - `bgcolor` {{Deprecated_inline}}
 
   - : Cet attribut définit la couleur d'arrière-plan de toutes les cellules. C'est un code à 6 chiffres hexadécimaux comme défini par le [sRGB](https://www.w3.org/Graphics/Color/sRGB). Il est précédé d'un '#'. Un des [mots-clés préfédinis pour les couleurs](/fr/docs/Web/CSS/color_value#color_keywords) peut également être utilisé.
 
-    > **Note :** Il est fortement conseillé de ne pas utiliser cet attribut car celui-ci a été déprécié. La mise en forme d'un tableau doit se faire en utilisant CSS. Il est possible d'utiliser la propriété CSS {{cssxref("background-color")}} pour cet effet.
+    > [!NOTE]
+    > Il est fortement conseillé de ne pas utiliser cet attribut car celui-ci a été déprécié. La mise en forme d'un tableau doit se faire en utilisant CSS. Il est possible d'utiliser la propriété CSS {{cssxref("background-color")}} pour cet effet.
 
 - `border` {{Deprecated_inline}}
 
-  - : Cet attribut entier définit, en pixels, la taille de la bordure entourant le tableau. S'il vaut 0, cela implique que l'attribut [`frame`](/fr/docs/Web/HTML/Element/table#frame) est vide.
+  - : Cet attribut entier définit, en pixels, la taille de la bordure entourant le tableau. S'il vaut 0, cela implique que l'attribut [`frame`](#frame) est vide.
 
-    > **Note :** Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Les propriétés CSS {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} et {{cssxref("border-style")}} devraient être utilisées à la place.
+    > [!NOTE]
+    > Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Les propriétés CSS {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} et {{cssxref("border-style")}} devraient être utilisées à la place.
 
 - `cellpadding` {{Deprecated_inline}}
 
   - : Cet attribut définit la taille de l'espace entre le contenu d'une cellule et sa bordure, qu'lle soit affichée ou non. Si cet attribut est exprimé en pixels, le décalage sera appliqué sur les quatre côtés. S'il est exprimé en pourcents, le contenu sera centré verticalement et la somme des espaces en haut et en bas représentera le pourcentage, il en va de même pour l'espace horizontal (droite et gauche).
 
-    > **Note :** Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Pour réaliser un effet similaire, la propriété {{cssxref("border-collapse")}} avec la valeur collapse doit être utilisée sur l'élément {{HTMLElement("table")}} et la propriété {{cssxref("padding")}} sur l'élément {{HTMLElement("td")}}.
+    > [!NOTE]
+    > Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Pour réaliser un effet similaire, la propriété {{cssxref("border-collapse")}} avec la valeur collapse doit être utilisée sur l'élément {{HTMLElement("table")}} et la propriété {{cssxref("padding")}} sur l'élément {{HTMLElement("td")}}.
 
 - `cellspacing` {{Deprecated_inline}}
 
   - : Cet attribut définit la taille (en pourcents ou pixels) de l'espace (vertical et horizontal) entre deux cellules, entre la haut du tableau et les cellules de la première ligne, la gauche du tableau et les cellules de la première colonne, puis de la même manière pour le bas et le côté droit du tableau.
 
-    > **Note :** Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Pour réaliser un effet similaire, la propriété {{cssxref("border-collapse")}} avec la valeur collapse doit être utilisée sur l'élément {{HTMLElement("table")}} et la propriété {{cssxref("margin")}} sur l'élément {{HTMLElement("td")}}.
+    > [!NOTE]
+    > Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Pour réaliser un effet similaire, la propriété {{cssxref("border-collapse")}} avec la valeur collapse doit être utilisée sur l'élément {{HTMLElement("table")}} et la propriété {{cssxref("margin")}} sur l'élément {{HTMLElement("td")}}.
 
 <!---->
 
@@ -58,7 +148,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
   - : Cet attribut à valeurs multiples définit les côtés du tableau sur lesquels dessiner une bordure. Il peut prendre les valeurs suivantes : `above, hsides, lhs, border, void, below, vsides, rhs, box`.
 
-    > **Note :** Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Pour réaliser un effet similaire, les propriétés {{cssxref("border-style")}} et {{cssxref("border-width")}} doivent être utilisées.
+    > [!NOTE]
+    > Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Pour réaliser un effet similaire, les propriétés {{cssxref("border-style")}} et {{cssxref("border-width")}} doivent être utilisées.
 
 <!---->
 
@@ -72,7 +163,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
     - `columns`, les lignes seront affichées entre les colonnes du tableau
     - `all`, tous les traits seront affichés (entre les lignes et entre les colonnes).
 
-    > **Note :**
+    > [!NOTE]
     >
     > - L'apparence de ces traits dépend du navigateur utilisé et ne peut être modifiée.
     > - Cet attribut ayant été déprécié, il ne doit pas être utilisé. La propriété CSS {{cssxref("border")}} doit être appliquée sur les éléments {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}} ou {{HTMLElement("colgroup")}} adéquats.
@@ -83,7 +174,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
   - : Cet attribut définit un texte alternatif à utiliser afin de décrire le tableau. Un tel texte peut être utilisé par un agent utilisateur qui ne pourrait pas afficher le tableau. Il est généralement utilisé pour les personnes souffrant d'une déficience visuelle, comme par exemple les aveugles qui navigueront sur des pages web en utilisant un écran Braille. Si l'information contenue dans cet attribut serait également utile aux autres utilisateurs, il faudra plutôt utiliser l'élément {{HTMLElement("caption")}}. L'attribut **`summary`** n'est pas obligatoire et peut être omis lorsqu'un élément {{HTMLElement("caption")}} remplit ce rôle.
 
-    > **Note :** Cet attribut ayant été déprécié, il ne doit pas être utilisé. Les façons suivantes peuvent être envisagées pour cette expression :
+    > [!NOTE]
+    > Cet attribut ayant été déprécié, il ne doit pas être utilisé. Les façons suivantes peuvent être envisagées pour cette expression :
     >
     > - Grâce à un texte entourant le tableau, cette manière est la plus faible du point de vue de la sémantique
     > - Grâce à l'élément {{HTMLElement("caption")}}
@@ -98,11 +190,98 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
   - : Cet attribut définit la largeur du tableau. Elle peut être exprimée en pixels ou en pourcent (représentant alors la fraction du conteneur que le tableau peut occuper).
 
-    > **Note :** Cet attribut ayant été déprécié, il ne doit pas être utilisé. La propriété CSS {{cssxref("width")}} doit être utilisée à la place.
+    > [!NOTE]
+    > Cet attribut ayant été déprécié, il ne doit pas être utilisé. La propriété CSS {{cssxref("width")}} doit être utilisée à la place.
 
 ## Exemples
 
-{{EmbedInteractiveExample("pages/tabbed/table.html")}}
+{{InteractiveExample("HTML Demo: &lt;table&gt;")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Front-end web developer course 2021
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Person</th>
+      <th scope="col">Most interest in</th>
+      <th scope="col">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Chris</th>
+      <td>HTML tables</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th scope="row">Dennis</th>
+      <td>Web accessibility</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th scope="row">Sarah</th>
+      <td>JavaScript frameworks</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th scope="row">Karen</th>
+      <td>Web performance</td>
+      <td>36</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row" colspan="2">Average age</th>
+      <td>33</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+```css interactive-example
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+}
+
+thead,
+tfoot {
+  background-color: rgb(228 240 245);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+```
 
 ### Tableau simple
 
@@ -232,7 +411,7 @@ Fournir un élément {{HTMLElement("caption")}} pour légender le tableau avec u
 
 Une telle légende fournit une aide pour les personnes qui naviguent avec des outils d'assistance comme des lecteurs d'écran.
 
-- [Ajouter une légende à un tableau grâce à `<caption>`](/fr/Apprendre/HTML/Tableaux/Advanced)
+- [Ajouter une légende à un tableau grâce à `<caption>`](/fr/docs/Learn/HTML/Tables/Advanced)
 - [Légendes et résumés • Tableaux • Tutoriels d'accessibilité du W3C WAI (en anglais)](https://www.w3.org/WAI/tutorials/tables/caption-summary/)
 
 ### Portées des lignes et des colonnes
@@ -275,7 +454,7 @@ L'attribut [`scope`](/fr/docs/Web/HTML/Element/th#scope) peut être redondant da
 
 Ajouter `scope="col"` sur un élément {{HTMLElement("th")}} permettra d'aider à décrire le fait que la cellule est en haut de la colonne. Indiquer `scope="row"` sur un élément {{HTMLElement("td")}} permettra d'indiquer que la cellule est la première de la ligne.
 
-- [Utiliser les tableaux HTML pour les personnes souffrant de troubles de la vision](/fr/Apprendre/HTML/Tableaux/Advanced#Tableaux_pour_des_utisateurs_malvoyants)
+- [Utiliser les tableaux HTML pour les personnes souffrant de troubles de la vision](/fr/docs/Learn/HTML/Tables/Advanced#tableaux_pour_des_utisateurs_malvoyants)
 - [Les tableaux avec deux en-têtes • Tutoriels d'accessibilité web W3C WAI (en anglais)](https://www.w3.org/WAI/tutorials/tables/two-headers/)
 - [Les tableaux avec des en-têtes hétérogènes • Tutoriels d'accessibilité web W3C WAI (en anglais)](https://www.w3.org/WAI/tutorials/tables/irregular/)
 - [H63 : Utiliser l'attribut `scope` afin d'associer les cellules de l'en-tête et celles des données dans les tableaux de données | Techniques W3C pour WCAG 2.0 (en anglais)](https://www.w3.org/TR/WCAG20-TECHS/H63.html)
@@ -288,7 +467,7 @@ Si possible, on présentera le tableau différemment, en le divisant en plusieur
 
 Si le tableau ne peut pas être subdivisé, on pourra utiliser les attributs [`id`](/fr/docs/Web/HTML/Global_attributes#id) et [`headers`](/fr/docs/Web/HTML/Element/td#headers) afin d'associer « informatiquement » les cellules du tableaux avec les en-têtes correspondantes.
 
-- [Utiliser les tableaux HTML pour les personnes souffrant de troubles de la vision](/fr/Apprendre/HTML/Tableaux/Advanced#Tableaux_pour_des_utisateurs_malvoyants)
+- [Utiliser les tableaux HTML pour les personnes souffrant de troubles de la vision](/fr/docs/Learn/HTML/Tables/Advanced#tableaux_pour_des_utisateurs_malvoyants)
 - [Les tableaux avec des en-têtes sur plusieurs niveaux • Tutoriels d'accesibilité web W3C WAI (en anglais)](https://www.w3.org/WAI/tutorials/tables/multi-level/)
 - [H43 : Utiliser les attributs `id` et `headers` afin d'associer les cellules de données et les cellules d'en-tête dans les tableaux | Techniques W3C pour WCAG 2.0 (en anglais)](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
 
@@ -335,7 +514,7 @@ Si le tableau ne peut pas être subdivisé, on pourra utiliser les attributs [`i
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>

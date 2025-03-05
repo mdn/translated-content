@@ -2,7 +2,7 @@
 title: grid-column
 slug: Web/CSS/grid-column
 l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
 {{CSSRef}}
@@ -26,20 +26,20 @@ grid-column: auto;
 grid-column: auto / auto;
 
 /* <custom-ident> 値 */
-grid-column: somegridarea;
-grid-column: somegridarea / someothergridarea;
+grid-column: some-grid-area;
+grid-column: some-grid-area / some-other-grid-area;
 
 /* <integer> + <custom-ident> 値 */
-grid-column: somegridarea 4;
-grid-column: 4 somegridarea / 6;
+grid-column: some-grid-area 4;
+grid-column: 4 some-grid-area / 6;
 
 /* span + <integer> + <custom-ident> 値 */
 grid-column: span 3;
-grid-column: span somegridarea;
-grid-column: 5 somegridarea span;
+grid-column: span some-grid-area;
+grid-column: 5 some-grid-area span;
 grid-column: span 3 / 6;
-grid-column: span somegridarea / span someothergridarea;
-grid-column: 5 somegridarea span / 2 span;
+grid-column: span some-grid-area / span some-other-grid-area;
+grid-column: 5 some-grid-area span / 2 span;
 
 /* グローバル値 */
 grid-column: inherit;
@@ -70,7 +70,8 @@ grid-column: unset;
 
   - : `<custom-ident>-start`/`<custom-ident>-end` という名前の付いた線がある場合、これはそのような線の最初がグリッドのアイテムの配置に関わります。
 
-    > **メモ:** 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-column: foo;` と指定すると名前付きグリッド領域の先頭/末尾側の端を選択します (その前に `foo-start`/`foo-end` という名前の線が明示的に存在しない限り)。
+    > [!NOTE]
+    > 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-column: foo;` と指定すると名前付きグリッド領域の先頭/末尾側の端を選択します (その前に `foo-start`/`foo-end` という名前の線が明示的に存在しない限り)。
 
     そうでなければ、これは `<custom-ident>` に沿って整数の `1` が指定されたものとして扱われます。
 
@@ -104,7 +105,7 @@ grid-column: unset;
 
 #### HTML
 
-```html
+```html live-sample___setting_grid_column_size_and_location
 <div id="grid">
   <div id="item1"></div>
   <div id="item2"></div>
@@ -114,7 +115,7 @@ grid-column: unset;
 
 #### CSS
 
-```css
+```css live-sample___setting_grid_column_size_and_location
 #grid {
   display: grid;
   height: 100px;
@@ -139,7 +140,7 @@ grid-column: unset;
 
 #### 結果
 
-{{EmbedLiveSample("グリッド列の寸法と位置の設定", "100%", "100px")}}
+{{EmbedLiveSample("Setting_grid_column_size_and_location", "100%", "100px")}}
 
 ## 仕様書
 
@@ -151,6 +152,11 @@ grid-column: unset;
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}
-- グリッドレイアウトガイド: [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- {{cssxref("grid-row")}}
+- {{cssxref("grid-row-start")}}
+- {{cssxref("grid-row-end")}}
+- {{cssxref("grid-column-start")}}
+- {{cssxref("grid-column-end")}}
+
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
 - 動画チュートリアル: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_

@@ -9,7 +9,14 @@ l10n:
 
 **`getMonth()`** メソッドは、地方時に基づき、指定された日付の「月」を表す 0 を基点とした値（すなわち 0 が年の最初の月を示す）を返します。
 
-{{EmbedInteractiveExample("pages/js/date-getmonth.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.getMonth()", "shorter")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+
+console.log(moonLanding.getMonth()); // (January gives 0)
+// Expected output: 6
+```
 
 ## 構文
 
@@ -34,7 +41,8 @@ const month = xmas95.getMonth();
 console.log(month); // 11
 ```
 
-> **メモ:** 必要に応じて、月の完全な名前（例えば `January` ）は [`Intl.DateTimeFormat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat#options_の使用) に `options` 引数を付けることで取得することができます。このメソッドを使用すれば、国際化がより簡単になります。
+> [!NOTE]
+> 必要に応じて、月の完全な名前（例えば `January` ）は [`Intl.DateTimeFormat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat#options_の使用) に `options` 引数を付けることで取得することができます。このメソッドを使用すれば、国際化がより簡単になります。
 >
 > ```js
 > const options = { month: "long" };

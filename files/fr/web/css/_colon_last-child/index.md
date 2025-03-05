@@ -1,5 +1,5 @@
 ---
-title: ":last-child"
+title: :last-child
 slug: Web/CSS/:last-child
 ---
 
@@ -16,7 +16,8 @@ li:last-child {
 }
 ```
 
-> **Note :** En CSS3, l'élément ciblé devait avoir un élément parent, cette restriction a été levée en CSS4.
+> [!NOTE]
+> En CSS3, l'élément ciblé devait avoir un élément parent, cette restriction a été levée en CSS4.
 
 ## Syntaxe
 

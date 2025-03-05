@@ -32,7 +32,8 @@ _浮動要素_ (floating element) とは、`float` の計算値が `none` 以外
 | `inline-grid`        | `grid`     |
 | _その他_             | _変更なし_ |
 
-> **メモ:** JavaScript で {{domxref("HTMLElement.style")}} オブジェクトのメンバーとしてこのプロパティを参照する場合、最近のブラウザーは `float` に対応していますが、古いブラウザーは `cssFloat` という綴りになります。これは、ハイフン区切りの CSS 名は DOM メンバーとして{{Glossary("camel_case", "キャメルケース")}}で綴るというルールの例外でした（これは "float" が JavaScript の予約語であるためで、 "class" を "className" とする必要があったり、 \<label> の "for" を "htmlFor" とする必要があったりするのと同じです）。
+> [!NOTE]
+> JavaScript で {{domxref("HTMLElement.style")}} オブジェクトのメンバーとしてこのプロパティを参照する場合、最近のブラウザーは `float` に対応していますが、古いブラウザーは `cssFloat` という綴りになります。これは、ハイフン区切りの CSS 名は DOM メンバーとして{{Glossary("camel_case", "キャメルケース")}}で綴るというルールの例外でした（これは "float" が JavaScript の予約語であるためで、 "class" を "className" とする必要があったり、 \<label> の "for" を "htmlFor" とする必要があったりするのと同じです）。
 
 ## 構文
 
@@ -147,5 +148,5 @@ div {
 
 ## 関連情報
 
-- [ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)
+- [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
 - アイテムを浮動要素の下へ強制的に移動させるには {{cssxref("clear")}} を使用します。

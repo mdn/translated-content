@@ -59,7 +59,7 @@ l10n:
 
 #### WebDriver BiDi
 
-- ブラウジングコンテキストが破棄されたときに発生する [`browsingContext.contextDestroyed`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-contextDestroyed) イベントを追加しました ([Firefox bug 1694390](https://bugzil.la/1694390))。
+- 閲覧コンテキストが破棄されたときに発生する [`browsingContext.contextDestroyed`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-contextDestroyed) イベントを追加しました ([Firefox bug 1694390](https://bugzil.la/1694390))。
 - [`script.callFunction`](https://w3c.github.io/webdriver-bidi/#command-script-callFunction) および [`script.evaluate`](https://w3c.github.io/webdriver-bidi/#command-script-evaluate) コマンドの引数 `userActivation` をサポートしました。ユーザーアクションをエミュレートしている間に JavaScript を評価できます ([Firefox bug 1845488](https://bugzil.la/1845488))。
 - [`browsingContext.userPromptOpened`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-userPromptOpened) イベントの `defaultValue` フィールドをサポートしました。プロンプトの既定値をユーザーが取得できます ([Firefox bug 1851761](https://bugzil.la/1851761))。
 - [`browsingContext.captureScreenshot`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-captureScreenshot) コマンドの引数 `viewportOptions` を `boxOptions` に改名しました ([Firefox bug 1859258](https://bugzil.la/1859258))。

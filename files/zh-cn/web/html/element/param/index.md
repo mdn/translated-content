@@ -9,7 +9,8 @@ l10n:
 
 **`<param>`** [HTML](/zh-CN/docs/Web/HTML) 元素为 {{HTMLElement("object")}} 元素定义形式参数。
 
-> **备注：** 使用带有 [`data`](/zh-CN/docs/Web/HTML/Element/object#data) 属性的 {{HTMLElement("object")}} 元素来设置外部资源的 URL。
+> [!NOTE]
+> 使用带有 [`data`](/zh-CN/docs/Web/HTML/Element/object#data) 属性的 {{HTMLElement("object")}} 元素来设置外部资源的 URL。
 
 ## 属性
 

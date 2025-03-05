@@ -82,7 +82,7 @@ CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-
 
 {{EmbedGHLiveSample("css-examples/feature-queries/step1.html", '100%', 900)}}
 
-浏览器会忽略其无法识别的 CSS 属性或者值。所以我们可以开始使用 CSS Grid 来增强我们的布局。不支持 Grid 的浏览器将会忽略 `display` 属性的 `grid` 值。一旦一个浮动项成为网格项，浮动就会被移除——你可以阅读 [Supporting Older Browsers](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers) 来了解更多。因此浮动的版本就会被网格的版本替代。
+浏览器会忽略其无法识别的 CSS 属性或者值。所以我们可以开始使用 CSS Grid 来增强我们的布局。不支持 Grid 的浏览器将会忽略 `display` 属性的 `grid` 值。一旦一个浮动项成为网格项，浮动就会被移除——你可以阅读 [Supporting Older Browsers](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers) 来了解更多。因此浮动的版本就会被网格的版本替代。
 
 然而问题来了，起因于我们为了使浮动项目显示为三列而在上面设置的 `width` 属性，它现在被网格解释为列在网格中的宽度，而不是容器的宽度（相对于浮动布局）。
 
@@ -102,11 +102,11 @@ CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-
 
 ## 总结
 
-功能查询可以帮助你开始使用更新的功能，它可以增强旧浏览器使用的简单的站点的显示。由于可以针对其支持的浏览器而打包 CSS，因此不会有后退显示使用的样式漏出的风险（原文：you do not run the risk of styles used for the fallback display leaking through），就像上面的 Grid 示例那样。
+功能查询可以帮助你开始使用更新的功能，它可以增强旧浏览器使用的简单的站点的显示。由于可以针对其支持的浏览器而打包 CSS，因此不会有后退显示使用的样式漏出的风险，就像上面的 Grid 示例那样。
 
-### 参见
+## 参见
 
-- [@supports](/zh-CN/docs/Web/CSS/@supports) 规则
-- 学习布局：[Supporting Older Browsers](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [CSS Grid Layout and Progressive Enhancement](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-- [Using Feature Queries in CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
+- [CSS 条件规则](/zh-CN/docs/Web/CSS/CSS_conditional_rules)模块
+- [使用 CSS 媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [支持旧浏览器：特性查询](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers#特性查询)
+- [浏览器特性检测：CSS `@supports`](/zh-CN/docs/Learn_web_development/Extensions/Testing/Feature_detection#supports)

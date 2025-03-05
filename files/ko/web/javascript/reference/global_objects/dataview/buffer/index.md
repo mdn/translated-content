@@ -10,7 +10,18 @@ l10n:
 {{jsxref("DataView")}} 인스턴스의 **`buffer`** 접근자 속성은 생성 시 이 뷰가 참조한
 {{jsxref("ArrayBuffer")}} 또는 {{jsxref("SharedArrayBuffer")}}를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/dataview-buffer.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.buffer")}}
+
+```js interactive-example
+// Create an ArrayBuffer
+const buffer = new ArrayBuffer(123);
+
+// Create a view
+const view = new DataView(buffer);
+
+console.log(view.buffer.byteLength);
+// Expected output: 123
+```
 
 ## 설명
 

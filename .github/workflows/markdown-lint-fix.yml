@@ -5,6 +5,8 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
 
+permissions: {}
+
 jobs:
   fix:
     if: github.repository == 'mdn/translated-content'
@@ -61,7 +63,7 @@ jobs:
 
       - name: Create PR with only fixable issues
         if: success()
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
         with:
           commit-message: "${{ matrix.lang }}: auto-fix Markdownlint issues"
           branch: markdownlint-auto-cleanup-${{ matrix.lang }}
@@ -76,7 +78,7 @@ jobs:
 
       - name: Create PR with notice on unfixed issues
         if: failure()
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
         with:
           commit-message: "${{ matrix.lang }}: auto-fix Markdownlint issues"
           branch: markdownlint-auto-cleanup-${{ matrix.lang }}

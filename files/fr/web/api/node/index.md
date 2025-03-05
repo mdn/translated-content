@@ -69,12 +69,14 @@ _Hérite les propriétés de son parent {{domxref("EventTarget")}}_.
 - {{DOMxRef("Node.localName")}} {{deprecated_inline}}{{readonlyInline}}
   - : Retourne un {{domxref("DOMString")}} représentant la partie locale du nom d'un élément.
 
-> **Note :** Dans Firefox 3.5 et versions antérieures, la propriété saisit le nom local pour les éléments HTML (mais pas les éléments XHTML). Dans les versions ultérieures, cela ne se produit pas, donc la propriété est en minuscule pour HTML et XHTML.
+> [!NOTE]
+> Dans Firefox 3.5 et versions antérieures, la propriété saisit le nom local pour les éléments HTML (mais pas les éléments XHTML). Dans les versions ultérieures, cela ne se produit pas, donc la propriété est en minuscule pour HTML et XHTML.
 
 - {{DOMxRef("Node.namespaceURI")}} {{deprecated_inline}}{{readonlyInline}}
   - : L'URI du "Namespace" de ce nom, ou `null` s'il n'y en a pas.
 
-> **Note :** Dans Firefox 3.5 et versions antérieures, les éléments HTML ne contiennent aucun "namespace". Dans les versions ultérieures, les éléments HTML sont dans le "namespace" [`https://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/) pour HTML et XML.
+> [!NOTE]
+> Dans Firefox 3.5 et versions antérieures, les éléments HTML ne contiennent aucun "namespace". Dans les versions ultérieures, les éléments HTML sont dans le "namespace" [`https://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/) pour HTML et XML.
 
 - {{DOMxRef("Node.prefix")}} {{deprecated_inline}}{{readonlyInline}}
   - : Est une {{domxref("DOMString")}} représentant le préfixe de l'espace de nom du nœud ou `null` si aucun préfixe n'est spécifié.
@@ -157,7 +159,7 @@ DOMComb(parentNode, callbackFunction);
 
 #### Description
 
-Suit le cycle récursif de tous les nœuds enfants d'un `parentNode` et le `parentNode` lui-même, et exécute la fonction `callbackFunction` (_rappel_) sur eux comme un objet [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this).
+Suit le cycle récursif de tous les nœuds enfants d'un `parentNode` et le `parentNode` lui-même, et exécute la fonction `callbackFunction` (_rappel_) sur eux comme un objet [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this).
 
 #### Paramètres
 

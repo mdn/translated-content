@@ -2,7 +2,7 @@
 title: margin-bottom
 slug: Web/CSS/margin-bottom
 l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+  sourceCommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
 ---
 
 {{CSSRef}}
@@ -43,7 +43,7 @@ margin-bottom: unset;
 - {{cssxref("&lt;percentage&gt;")}}
   - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
 - `auto`
-  - : ブラウザ―が適切な値を選択して使用します。 {{cssxref("margin")}} を参照してください。
+  - : ブラウザー―が適切な値を選択して使用します。 {{cssxref("margin")}} を参照してください。
 
 ## 公式定義
 
@@ -59,11 +59,11 @@ margin-bottom: unset;
 
 #### HTML
 
-```html
+```html-nolint live-sample___setting_positive_and_negative_bottom_margins
 <div class="container">
-  <div class="box0">Box 0</div>
-  <div class="box1">Box 1</div>
-  <div class="box2">Box one's negative margin pulls me up</div>
+  <div class="box0">ボックス 0</div>
+  <div class="box1">ボックス 1</div>
+  <div class="box2">ボックス 1 の負のマージンがこのボックスを引き上げています</div>
 </div>
 ```
 
@@ -71,7 +71,7 @@ margin-bottom: unset;
 
 div に margin-bottom と height を設定する CSS です。
 
-```css
+```css live-sample___setting_positive_and_negative_bottom_margins
 .box0 {
   margin-bottom: 1em;
   height: 3em;
@@ -89,7 +89,7 @@ div に margin-bottom と height を設定する CSS です。
 
 包含要素と div の定義の一部です。これによってマージンの効果がより明確に見えます。
 
-```css
+```css live-sample___setting_positive_and_negative_bottom_margins
 .container {
   background-color: orange;
   width: 320px;
@@ -103,7 +103,7 @@ div {
 
 #### 結果
 
-{{ EmbedLiveSample('正および負の数の下側のマージンの設定',350,200) }}
+{{ EmbedLiveSample('Setting_positive_and_negative_bottom_margins',350,200) }}
 
 ## 仕様書
 
@@ -115,5 +115,8 @@ div {
 
 ## 関連情報
 
-- {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-left")}} と {{cssxref("margin")}} 一括指定
-- 対応する論理的プロパティ: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}} および一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}
+- {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-left")}}
+- 一括指定の {{cssxref("margin")}}
+- {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}
+- 一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}
+- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール

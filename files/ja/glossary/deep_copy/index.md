@@ -49,9 +49,9 @@ console.log(ingredientsList[1].list);
 
 しかしながら、上記のコードはシンプルで[シリアライズ](/ja/docs/Glossary/Serialization)可能ですが、多くの JavaScript のオブジェクトはシリアライズ可能とは全く言えません。例えば、[関数](/ja/docs/Web/JavaScript/Guide/Functions)（クロージャ）、[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)、[HTML DOM API](/ja/docs/Web/API/HTML_DOM_API) において HTML 要素を表すオブジェクト、再帰データ、その他の多くのケース。これらのケースにおいて `JSON.stringify()` を使用したオブジェクトのシリアライズは失敗します。つまり、それらのオブジェクトのディープコピーを作成する方法はありません。
 
-_シリアライズ可能_ なオブジェクトであれば、代わりに [`structuredClone()`](/ja/docs/Web/API/structuredClone) 関数を使用してディープコピーを作成することも可能です。`structuredClone()` の利点は、ただ複製するだけでなく、[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)を元のオブジェクトから新しいコピーに _転送_ できることです。ただし、`structuredClone()` は JavaScript そのものの言語機能ではなく、 Web API を実装しているブラウザーや他の JavaScript ホストの機能です。また、シリアライズ不可なオブジェクトに対して、複製するために `structuredClone()` を呼び出すと、 `JSON.stringify()` が失敗するのと同様に失敗します。
+_シリアライズ可能_ なオブジェクトであれば、代わりに [`structuredClone()`](/ja/docs/Web/API/Window/structuredClone) 関数を使用してディープコピーを作成することも可能です。`structuredClone()` の利点は、ただ複製するだけでなく、[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)を元のオブジェクトから新しいコピーに _転送_ できることです。ただし、`structuredClone()` は JavaScript そのものの言語機能ではなく、 Web API を実装しているブラウザーや他の JavaScript ホストの機能です。また、シリアライズ不可なオブジェクトに対して、複製するために `structuredClone()` を呼び出すと、 `JSON.stringify()` が失敗するのと同様に失敗します。
 
 ## 関連情報
 
 - [シャローコピー](/ja/docs/Glossary/Shallow_copy)
-- [`window.structuredClone()`](/ja/docs/Web/API/structuredClone)
+- [`window.structuredClone()`](/ja/docs/Web/API/Window/structuredClone)

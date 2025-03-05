@@ -103,4 +103,4 @@ const bObjProto = new Boolean({});
 
 - {{Glossary("Boolean")}}
 - [Примитивные значения булева типа](/ru/docs/Web/JavaScript/Data_structures#булевый_тип_данных)
-- [Логический тип данных](https://ru.wikipedia.org/wiki/Логический_тип) в Википедии
+- [Логический тип](https://ru.wikipedia.org/wiki/Логический_тип) в Википедии

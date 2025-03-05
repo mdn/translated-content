@@ -20,7 +20,7 @@ l10n:
 このコードスニペットは、[サービスワーカーのフェッチの例](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js)からのものです（[フェッチの例をライブで実行](https://googlechrome.github.io/samples/service-worker/prefetch/)）。 {{domxref("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} イベントハンドラーは、`fetch` イベントを待ち受けします。イベントが発生、{{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} に、制御されたページに戻すプロミスを渡します。
 このプロミスは、{{domxref("Cache")}} オブジェクトで最初に一致した URL リクエストに解決されます。 一致が見つからない場合、コードはネットワークからレスポンスをフェッチします。
 
-このコードは、{{domxref("fetch()")}} 操作で発生した例外も処理します。 HTTP のエラーレスポンス（404 など）でも例外は発生しないことに注意してください。然るべきエラーコードが設定された通常のレスポンスオブジェクトを返します。
+このコードは、{{domxref("Window/fetch", "fetch()")}} 操作で発生した例外も処理します。 HTTP のエラーレスポンス（404 など）でも例外は発生しないことに注意してください。然るべきエラーコードが設定された通常のレスポンスオブジェクトを返します。
 
 ```js
 self.addEventListener("fetch", (event) => {

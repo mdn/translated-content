@@ -9,7 +9,23 @@ slug: Web/JavaScript/Reference/Operators/Optional_chaining
 
 當有機會存在參照不存在的時候，可選串連可以提供更簡短的表述式來進行串連性的屬性存取。這有助於在無法保證物件屬性為必要存在的狀況下，進行物件內容的探索。
 
-{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Optional chaining operator", "taller")}}
+
+```js interactive-example
+const adventurer = {
+  name: "Alice",
+  cat: {
+    name: "Dinah",
+  },
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// Expected output: undefined
+
+console.log(adventurer.someNonExistentMethod?.());
+// Expected output: undefined
+```
 
 ## 語法
 
@@ -57,11 +73,12 @@ let nestedProp = temp === null || temp === undefined ? undefined : temp.second;
 let result = someInterface.customMethod?.();
 ```
 
-> **備註：** 假如物件有同樣的屬性名稱，而不是一個方法，使用 `?.` 將會抛出 {{JSxRef("TypeError")}} 錯誤（`x.y 不是一個函數`）。
+> [!NOTE]
+> 假如物件有同樣的屬性名稱，而不是一個方法，使用 `?.` 將會抛出 {{JSxRef("TypeError")}} 錯誤（`x.y 不是一個函數`）。
 
 #### 處理回呼函式或事件處理器
 
-如果你使用回呼函式，或是透過[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring)來擷取物件中的方法，你可能會因為這些方法沒有存在，而無法進行呼叫，除非你事先驗證其存在性。所以，你可以利用 `?.` 來避免這樣的測試：
+如果你使用回呼函式，或是透過[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring)來擷取物件中的方法，你可能會因為這些方法沒有存在，而無法進行呼叫，除非你事先驗證其存在性。所以，你可以利用 `?.` 來避免這樣的測試：
 
 ```js
 // 在 ES2019 下撰寫

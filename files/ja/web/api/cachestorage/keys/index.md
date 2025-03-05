@@ -3,15 +3,15 @@ title: "CacheStorage: keys() メソッド"
 short-title: keys()
 slug: Web/API/CacheStorage/keys
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 2e327846966abb10de0b1c9bedc584caab71ec97
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 **`keys()`** は {{domxref("CacheStorage")}} インターフェイスのメソッドで、{{domxref("CacheStorage")}} オブジェクトによって追跡されるすべての名前付き {{domxref("Cache")}} オブジェクトに対応する文字列をそれが作成された順番で含む配列で解決する {{jsxref("Promise")}} を返します。
 このメソッドを使用して、すべての {{domxref("Cache")}} オブジェクトのリストを反復処理します。
 
-`CacheStorage` には、グローバルな {{domxref("caches")}} プロパティを介してアクセスできます。
+`CacheStorage` には、ウィンドウの {{domxref("Window.caches")}} プロパティまたはワーカーの {{domxref("WorkerGlobalScope.caches")}} を介してアクセスできます。
 
 ## 構文
 
@@ -61,4 +61,4 @@ this.addEventListener("activate", (event) => {
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} および {{domxref("WorkerGlobalScope.caches")}}

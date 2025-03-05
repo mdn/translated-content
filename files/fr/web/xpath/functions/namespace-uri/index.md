@@ -32,7 +32,7 @@ Une chaîne représentant l'URI de l'espace de nommage dans lequel se trouve le 
 
 ### Définition
 
-[XPath 1.0, section 4.1](http://www.w3.org/TR/xpath#function-local-name).
+[XPath 1.0, section 4.1](https://www.w3.org/TR/xpath#function-local-name).
 
 ### Support Gecko
 

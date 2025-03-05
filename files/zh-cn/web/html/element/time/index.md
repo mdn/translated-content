@@ -2,7 +2,7 @@
 title: <time>：（日期）时间元素
 slug: Web/HTML/Element/time
 l10n:
-  sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
+  sourceCommit: 835c199410845eed61aaf8439cb2e9719e7e9f98
 ---
 
 {{HTMLSidebar}}
@@ -15,7 +15,25 @@ l10n:
 - [公历](https://zh.wikipedia.org/wiki/公历)中的精确日期（可选时间和时区信息）。
 - [有效时间长度](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-duration-string)。
 
-{{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;time&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The Cure will be celebrating their 40th anniversary on
+  <time datetime="2018-07-07">July 7</time> in London's Hyde Park.
+</p>
+
+<p>
+  The concert starts at <time datetime="20:00">20:00</time> and you'll be able
+  to enjoy the band for at least <time datetime="PT2H30M">2h 30m</time>.
+</p>
+```
+
+```css interactive-example
+time {
+  font-weight: bold;
+}
+```
 
 ## 属性
 
@@ -34,46 +52,128 @@ _日期时间值_（机器可读的日期时间值）是该元素的 `datetime` 
 
 ### 有效的日期时间值
 
-- 有效的年份字符串
-  - : `2011`
-- 有效的年月字符串
-  - : `2011-11`
-- 有效的日期字符串
-  - : `2011-11-18`
-- 有效的日期字符串（不包含年份）
-  - : `11-18`
-- 有效的周字符串
-  - : `2011-W47`
-- 有效的时间字符串
-
-  - : `14:54`
-
-    `14:54:39`
-
-    `14:54:39.929`
-
-- 有效的本地日期时间字符串
-
-  - : `2011-11-18T14:54:39.929`
-
-    `2011-11-18 14:54:39.929`
-
-- 有效的全球日期时间字符串
-
-  - : `2011-11-18T14:54:39.929Z`
-
-    `2011-11-18T14:54:39.929-0400`
-
-    `2011-11-18T14:54:39.929-04:00`
-
-    `2011-11-18 14:54:39.929Z`
-
-    `2011-11-18 14:54:39.929-0400`
-
-    `2011-11-18 14:54:39.929-04:00`
-
-- 有效的时长字符串
-  - : `PT4H18M3S`
+<table class="no-markdown">
+  <thead>
+    <tr>
+      <th scope="col">描述</th>
+      <th scope="col">微语法</th>
+      <th scope="col">示例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>有效月份字符串</td>
+      <td><code><em>YYYY</em>-<em>MM</em></code></td>
+      <td><code>2011-11</code>、<code>2013-05</code></td>
+    </tr>
+    <tr>
+      <td>有效日期字符串</td>
+      <td><code><em>YYYY</em>-<em>MM</em>-<em>DD</em></code></td>
+      <td><code>1887-12-01</code></td>
+    </tr>
+    <tr>
+      <td>有效的无年份日期字符串</td>
+      <td><code><em>MM</em>-<em>DD</em></code></td>
+      <td><code>11-12</code></td>
+    </tr>
+    <tr>
+      <td>有效时间字符串</td>
+      <td>
+        <code><em>HH</em>:<em>MM</em></code><br />
+        <code><em>HH</em>:<em>MM</em>:<em>SS</em></code><br />
+        <code><em>HH</em>:<em>MM</em>:<em>SS</em>.<em>mmm</em></code>
+      </td>
+      <td>
+        <code>23:59</code><br />
+        <code>12:15:47</code><br />
+        <code>12:15:52.998</code>
+      </td>
+    </tr>
+    <tr>
+      <td>有效的本地日期和时间字符串</td>
+      <td>
+        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em><em>HH</em>:<em>MM</em></code><br />
+        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em> <em>HH</em>:<em>MM</em>:<em>SS</em></code><br />
+        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em> <em>HH</em>:<em>MM</em>:<em>SS</em>.<em>mmm</em></code><br />
+        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em>T<em>HH</em>:<em>MM</em></code><br />
+        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em>T<em>HH</em>:<em>MM</em>:<em>SS</em></code><br />
+        <code><em>YYYY</em>-<em>MM</em>-<em>DD</em>T<em>HH</em>:<em>MM</em>:<em>SS</em>.<em>mmm</em></code>
+      </td>
+      <td>
+        <code>2013-12-25 11:12</code><br />
+        <code>1972-07-25 13:43:07</code><br />
+        <code>1941-03-15 07:06:23.678</code><br />
+        <code>2013-12-25T11:12</code><br />
+        <code>1972-07-25T13:43:07</code><br />
+        <code>1941-03-15T07:06:23.678</code>
+      </td>
+    </tr>
+    <tr>
+      <td>有效的时区偏差字符串</td>
+      <td>
+        <code>Z</code><br />
+        <code>+<em>HHMM</em></code><br />
+        <code>+<em>HH</em>:<em>MM</em></code><br />
+        <code>-<em>HHMM</em></code><br />
+        <code>-<em>HH</em>:<em>MM</em></code>
+      </td>
+      <td>
+        <code>Z</code><br />
+        <code>+0200</code><br />
+        <code>+04:30</code><br />
+        <code>-0300</code><br />
+        <code>-08:00</code>
+      </td>
+    </tr>
+    <tr>
+      <td>有效的全局日期和时间字符串</td>
+      <td style="max-width:12em">
+        有效的本地日期和时间字符串后跟着有效的时区偏差字符串的任意组合
+      </td>
+      <td>
+        <code>2013-12-25 11:12+0200</code><br />
+        <code>1972-07-25 13:43:07+04:30</code><br />
+        <code>1941-03-15 07:06:23.678Z</code><br />
+        <code>2013-12-25T11:12-08:00</code>
+      </td>
+    </tr>
+    <tr>
+      <td>有效周字符串</td>
+      <td><code><em>YYYY</em>-W<em>WW</em></code></td>
+      <td><code>2013-W46</code></td>
+    </tr>
+    <tr>
+      <td>四个或更多 ACSII 数字</td>
+      <td><code><em>YYYY</em></code></td>
+      <td><code>2013</code>、<code>0001</code></td>
+    </tr>
+    <tr>
+      <td>有效的持续时间字符串</td>
+      <td>
+        <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>S</code><br />
+        <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>.<em>X</em>S<br />
+        <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>.<em>XX</em>S</code><br />
+        <code>P<em>d</em>DT<em>h</em>H<em>m</em>M<em>s</em>.<em>XXX</em>S</code><br />
+        <code>PT<em>h</em>H<em>m</em>M<em>s</em>S</code><br />
+        <code>PT<em>h</em>H<em>m</em>M<em>s</em>.<em>X</em>S</code><br />
+        <code>PT<em>h</em>H<em>m</em>M<em>s</em>.<em>XX</em>S</code><br />
+        <code>PT<em>h</em>H<em>m</em>M<em>s</em>.<em>XXX</em>S</code><br />
+        <code><em>w</em>w <em>d</em>d <em>h</em>h <em>m</em>m <em>s</em>s</code>
+      </td>
+      <td>
+        <code>P12DT7H12M13S</code><br />
+        <code>P12DT7H12M13.3S</code><br />
+        <code>P12DT7H12M13.45S</code><br />
+        <code>P12DT7H12M13.455S</code><br />
+        <code>PT7H12M13S</code><br />
+        <code>PT7H12M13.2S</code><br />
+        <code>PT7H12M13.56S</code><br />
+        <code>PT7H12M13.999S</code><br />
+        <code>7d 5h 24m 13s</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## 示例
 

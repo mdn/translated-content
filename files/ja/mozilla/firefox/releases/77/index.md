@@ -67,7 +67,7 @@ slug: Mozilla/Firefox/Releases/77
 ### その他
 
 - `unlimitedStorage` パーミッションを使用することを、拡張機能のインストールや更新の際に表示しないようになりました。詳しくは [Requesting the right permissions](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/) をご覧ください ([Firefox バグ 1630413](https://bugzil.la/1630413))。
-- [SameSite cookie](/ja/docs/Web/HTTP/Headers/Set-Cookie/SameSite) に関する変更により、拡張機能のページのホスト向けのトラッキング防止機能をバイパスする [host パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) を設定するときに、フルドメインまたはワイルドカードをつけて指定しなければなりません。ただし Content スクリプトのトラッキング防止は、フルドメインで指定したホストに限りバイパスできます。
+- [SameSite cookie](/ja/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) に関する変更により、拡張機能のページのホスト向けのトラッキング防止機能をバイパスする [host パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) を設定するときに、フルドメインまたはワイルドカードをつけて指定しなければなりません。ただし Content スクリプトのトラッキング防止は、フルドメインで指定したホストに限りバイパスできます。
 
 ## 過去のバージョン
 

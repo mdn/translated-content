@@ -2,16 +2,16 @@
 title: File
 slug: Web/API/File
 l10n:
-  sourceCommit: 2a09bee9b36fd9a53c1bce641297021bfe274a33
+  sourceCommit: 0ebc78fd61acddbe9505330f006b706ac786456d
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 **`File`** インターフェイスは、ファイルについての情報を提供したり、ウェブページ内の JavaScript からその内容にアクセスできるようにしたりします。
 
 `File` オブジェクトは通常、{{HTMLElement("input")}} 要素を使用してファイルを選択した結果として返される {{DOMxRef("FileList")}} オブジェクト、またはドラッグ＆ドロップ操作の {{DOMxRef("DataTransfer")}} オブジェクトから取得します。
 
-`File` オブジェクトは特別な種類の {{DOMxRef("Blob")}} オブジェクトであり、 Blob が利用できる場面ではどこでも利用できます。特に、{{DOMxRef("FileReader")}}、{{DOMxRef("URL.createObjectURL_static")}}、{{DOMxRef("createImageBitmap()")}}、{{DOMxRef("XMLHttpRequest", "", "send()")}} は、`Blob` と `File` の両方を受け付けます。
+`File` オブジェクトは特別な種類の {{DOMxRef("Blob")}} オブジェクトであり、 Blob が利用できる場面ではどこでも利用できます。特に、{{DOMxRef("FileReader")}}、{{DOMxRef("URL.createObjectURL_static", "URL.createObjectURL()")}}、{{DOMxRef("createImageBitmap()")}}、{{domxref("Window.fetch", "fetch()")}} の [`body`](/ja/docs/Web/API/RequestInit#body) オプション、{{DOMxRef("XMLHttpRequest.send()")}} は、`Blob` と `File` の両方を受け付けます。
 
 詳しい情報や例は、[ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications) を参照してください。
 
@@ -24,34 +24,20 @@ l10n:
 
 ## インスタンスプロパティ
 
-- {{DOMxRef("File.prototype.lastModified")}} {{ReadOnlyInline}}
+_`File` インターフェイスには {{DOMxRef("Blob")}} インターフェイスから継承したプロパティもあります。_
+
+- {{DOMxRef("File.lastModified")}} {{ReadOnlyInline}}
   - : ファイルの最終更新時刻を、 UNIX 元期 (1970 年 1 月 1 日深夜) からの経過ミリ秒数で返します。
-- {{DOMxRef("File.prototype.lastModifiedDate")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{DOMxRef("File.lastModifiedDate")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : `File` オブジェクトが参照しているファイルの最終更新時刻の {{JSxRef("Date")}} を返します。
-- {{DOMxRef("File.prototype.name")}} {{ReadOnlyInline}}
+- {{DOMxRef("File.name")}} {{ReadOnlyInline}}
   - : `File` オブジェクトが参照しているファイルの名前を返します。
-- {{DOMxRef("File.prototype.webkitRelativePath")}} {{ReadOnlyInline}}
-  - : {{DOMxRef("File")}} の URL の相対パスを返します。
-
-`File` は {{DOMxRef("Blob")}} を実装しているので、以下のようなプロパティも利用できます。
-
-- {{DOMxRef("Blob.size")}} {{ReadOnlyInline}}
-  - : ファイルのサイズをバイト単位で返します。
-- {{DOMxRef("File.prototype.type")}} {{ReadOnlyInline}}
-  - : ファイルの [MIME](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types) タイプを返します。
+- {{DOMxRef("File.webkitRelativePath")}} {{ReadOnlyInline}}
+  - : `File` の URL の相対パスを返します。
 
 ## インスタンスメソッド
 
-_`File` インターフェイスはメソッドを定義せず、{{DOMxRef("Blob")}} インターフェイスからメソッドを継承しています。_
-
-- {{DOMxRef("Blob.prototype.slice()", "Blob.prototype.slice([start[, end[, contentType]]])")}}
-  - : ソース `Blob` の指定したバイト数の範囲のデータを含む新しい `Blob` オブジェクトを返します。
-- {{DOMxRef("Blob.prototype.stream()")}}
-  - : `File` を {{DOMxRef("ReadableStream")}} に変換し、`File` の内容を読み込めるようにします。
-- {{DOMxRef("Blob.prototype.text()")}}
-  - : `File` をストリームに変換し、最後まで読み込みます。これは、文字列（テキスト）で解決するプロミスを返します。
-- {{DOMxRef("Blob.prototype.arrayBuffer()")}}
-  - : `File` をストリームに変換し、最後まで読み込みます。 {{jsxref("ArrayBuffer")}} で解決するプロミスを返します。
+_`File` インターフェイスには {{DOMxRef("Blob")}} インターフェイスから継承したメソッドもあります。_
 
 ## 仕様書
 

@@ -5,7 +5,7 @@ slug: Web/API/Gyroscope
 
 {{APIRef("Gyroscope")}}
 
-**`Gyroscope`** интерфейс [Sensor API](/docs/Web/API/Sensor_APIs) даёт возможность считать позицию устройства по всем трём осям.
+**`Gyroscope`** интерфейс [Sensor API](/ru/docs/Web/API/Sensor_APIs) даёт возможность считать позицию устройства по всем трём осям.
 
 Для использования того сенсора пользователю нужно предоставить доступ устройства к `'gyroscope'` через {{domxref('Permissions')}} API.
 

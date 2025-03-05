@@ -35,7 +35,7 @@ Dans ce premier article sur les objets JavaScript, nous verrons la syntaxe des o
 
 Un objet est une collection de données apparentées et/ou de fonctionnalités (qui, souvent, se composent de plusieurs variables et fonctions, appelées propriétés et méthodes quand elles sont dans des objets). Prenons un exemple pour voir à quoi cela ressemble.
 
-Pour commencer, faites une copie locale de notre fichier [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html). Il contient peu de choses : un élément {{HTMLElement("script")}} pour écrire notre code à l'intérieur. Nous utiliserons ces éléments de base pour explorer les bases de la syntaxe objet. Durant cette exemple, vous devriez avoir [la console JavaScript des outils de développement](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs#La_console_JavaScript) ouverte et prête, pour y saisir des commandes.
+Pour commencer, faites une copie locale de notre fichier [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html). Il contient peu de choses : un élément {{HTMLElement("script")}} pour écrire notre code à l'intérieur. Nous utiliserons ces éléments de base pour explorer les bases de la syntaxe objet. Durant cette exemple, vous devriez avoir [la console JavaScript des outils de développement](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools#la_console_javascript) ouverte et prête, pour y saisir des commandes.
 
 Comme souvent dans JavaScript, pour créer un objet, on commence avec la définition et l'initialisation d'une variable. Essayez de mettre le code ci-dessous sous le code déjà écrit de votre fichier JavaScript, puis sauvegardez et rafraichissez la page :
 
@@ -43,7 +43,7 @@ Comme souvent dans JavaScript, pour créer un objet, on commence avec la défini
 var personne = {};
 ```
 
-Désormais ouvrez la [console JavaScript](/fr/docs/Outils/Console_JavaScript#Ouvrir_la_Console_du_navigateur) de votre navigateur, saisissez `personne` à l'intérieur, et appuyez sur <kbd>Entrée</kbd>. Vous devriez obtenir le résultat suivant :
+Désormais ouvrez la [console JavaScript](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html#ouvrir_la_console_du_navigateur) de votre navigateur, saisissez `personne` à l'intérieur, et appuyez sur <kbd>Entrée</kbd>. Vous devriez obtenir le résultat suivant :
 
 ```js
 [object Object]
@@ -77,7 +77,7 @@ var personne = {
 };
 ```
 
-Après avoir sauvegardé et rafraîchit la page, essayez d'entrer les lignes suivantes dans le champ de saisie `input` :
+Après avoir sauvegardé et rafraîchi la page, essayez d'entrer les lignes suivantes dans le champ de saisie `input` :
 
 ```js
 personne.nom;
@@ -90,7 +90,8 @@ personne.salutation();
 
 Vous avez désormais des données et des fonctionnalités dans votre objet, et vous pouvez y accéder avec une une syntaxe simple et claire !
 
-> **Note :** Si vous avez des difficultés pour le faire fonctionner, comparez votre code avec notre version — voir [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (ou [voir en action](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). Une erreur courante, quand on commence avec les objets, est de mettre une virgule après la dernière propriété — ce qui provoque une erreur.
+> [!NOTE]
+> Si vous avez des difficultés pour le faire fonctionner, comparez votre code avec notre version — voir [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (ou [voir en action](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). Une erreur courante, quand on commence avec les objets, est de mettre une virgule après la dernière propriété — ce qui provoque une erreur.
 
 Alors, comment ça fonctionne ? Un objet est fait de plusieurs membres, qui ont chacun un nom (par exemple `nom` et `age` ci-dessus) et une valeur (par exemple. `['Jean', 'Martin']` et `32`).
 
@@ -253,7 +254,7 @@ salutation: function() {
 }
 ```
 
-Vous vous demandez probablement ce que signifie « `this` ». Le mot-clé `this` se réfère à l'objet courant dans lequel le code est écrit — dans notre cas, `this` est l'équivalent de `personne`. Alors, pourquoi ne pas écrire `personne` à la place ? Comme vous le verrez dans l'article [la programmation JavaScript orientée objet pour les débutants](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS), `this` est très utile — il permet de s'assurer que les bonnes valeurs sont utilisées quand le contexte d'un membre change (on peut par exemple avoir deux personnes, sous la forme de deux objets, avec des noms différents).
+Vous vous demandez probablement ce que signifie « `this` ». Le mot-clé `this` se réfère à l'objet courant dans lequel le code est écrit — dans notre cas, `this` est l'équivalent de `personne`. Alors, pourquoi ne pas écrire `personne` à la place ? Comme vous le verrez dans l'article [la programmation JavaScript orientée objet pour les débutants](/fr/docs/Learn/JavaScript/Objects/Classes_in_JavaScript), `this` est très utile — il permet de s'assurer que les bonnes valeurs sont utilisées quand le contexte d'un membre change (on peut par exemple avoir deux personnes, sous la forme de deux objets, avec des noms différents).
 
 Essayons d'illustrer nos propos par une paire d'objet `personne` simplifiée :
 
@@ -306,7 +307,8 @@ var maNotification = new Notification("Bonjour !");
 
 Nous verrons les constructeurs dans un prochain article.
 
-> **Note :** On peut voir le mode de communication des objets comme un **envoi de message**. Quand un objet a besoin d'un autre pour faire une action, souvent il va envoyer un message à un autre objet via l'une de ses méthode et attendre une réponse, qui retournera une valeur.
+> [!NOTE]
+> On peut voir le mode de communication des objets comme un **envoi de message**. Quand un objet a besoin d'un autre pour faire une action, souvent il va envoyer un message à un autre objet via l'une de ses méthode et attendre une réponse, qui retournera une valeur.
 
 ## Résumé
 

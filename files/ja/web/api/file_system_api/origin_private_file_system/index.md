@@ -13,7 +13,7 @@ l10n:
 
 [ファイルシステムアクセス API](https://wicg.github.io/file-system-access/) は、[ファイルシステム API](/ja/docs/Web/API/File_System_API) を拡張したもので、は、ピッカーメソッドを使ったファイルへのアクセスを提供します。例えば、
 
-1. {{domxref("Window.showOpenFilePicker()")}} では、ユーザがアクセスするファイルを選択することができ、その結果、 {{domxref("FileSystemFileHandle")}} オブジェクトが返されます。
+1. {{domxref("Window.showOpenFilePicker()")}} では、ユーザーがアクセスするファイルを選択することができ、その結果、 {{domxref("FileSystemFileHandle")}} オブジェクトが返されます。
 2. {{domxref("FileSystemFileHandle.getFile()")}} を呼び出してファイルの内容にアクセスし、 {{domxref("FileSystemFileHandle.createWritable()")}} / {{domxref("FileSystemWritableFileStream.write()")}} を使用して内容を変更します。
 3. {{domxref("FileSystemHandle.requestPermission()", "FileSystemHandle.requestPermission({mode:'readwrite'})")}} は、変更を保存する許可をユーザーにリクエストするために使用されます。
 4. ユーザーが許可リクエストを受け入れると、変更は元のファイルに保存されます。
@@ -41,7 +41,8 @@ OPFS がユーザーから見えるファイルシステムと異なる点をま
 
 メインスレッドから OPFS にアクセスする場合は、非同期の {{jsxref("Promise")}} ベースの API を使用します。ファイル（{{domxref("FileSystemFileHandle")}}）とディレクトリー（{{domxref("FileSystemDirectoryHandle")}}）のハンドルにアクセスするには、 {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} と {{domxref("FileSystemDirectoryHandle.getDirectoryHandle()")}} をそれぞれ、 OPFS ルート（および作成された子ディレクトリー）を表す {{domxref("FileSystemDirectoryHandle")}} オブジェクト上で呼び出します。
 
-> **メモ:** 上記のメソッドに `{ create: true }` を渡すと、ファイルやフォルダー内が存在しない場合に作成されます。
+> [!NOTE]
+> 上記のメソッドに `{ create: true }` を渡すと、ファイルやフォルダー内が存在しない場合に作成されます。
 
 ```js
 // ファイルとフォルダー内の階層を作成
@@ -122,7 +123,8 @@ for await (let name of directoryHandle.keys()) {
 
 同期的にファイルにアクセスするには、 {{domxref("FileSystemFileHandle.createSyncAccessHandle()")}} を通常の {{domxref("FileSystemFileHandle")}} に対して呼び出します。
 
-> **メモ:** 名前に "Sync" とあるにもかかわらず、`createSyncAccessHandle()` メソッド自体は非同期です。
+> [!NOTE]
+> 名前に "Sync" とあるにもかかわらず、`createSyncAccessHandle()` メソッド自体は非同期です。
 
 ```js
 const opfsRoot = await navigator.storage.getDirectory();
@@ -189,10 +191,6 @@ console.log(textDecoder.decode(dataView));
 // ファイルを 4 バイトで切り捨てる。
 accessHandle.truncate(4);
 ```
-
-## ブラウザーの互換性
-
-{{Compat}}
 
 ## 関連情報
 

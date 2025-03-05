@@ -63,11 +63,11 @@ Una desventaja de este modelo es que, si un mensaje toma mucho tiempo en complet
 
 En los navegadores web, los mensajes son añadidos cada vez que un evento ocurre y hay un escuchador de eventos asociado a él. Si no hay un escuchador, el evento se pierde. De este modo, al hacer click en un elemento con un manejador de eventos tipo click, se añadirá un mensaje. Lo mismo sucede en otros tipos de eventos.
 
-Al llamar [`setTimeout`](/es/docs/Web/API/setTimeout) se añadirá un mensaje a la cola después de el tiempo especificado como segundo parámetro. Si no hay ningún otro mensaje en la cola, el mensaje es procesado en el momento; sin embargo, si hay mensajes en la cola, el mensaje de `setTimeout` tendrá que esperar a que los otros mensajes sean procesados. Por esta razón el segundo parámetro indica el tiempo mínimo tiempo esperado y no es una garantía.
+Al llamar [`setTimeout`](/es/docs/Web/API/Window/setTimeout) se añadirá un mensaje a la cola después de el tiempo especificado como segundo parámetro. Si no hay ningún otro mensaje en la cola, el mensaje es procesado en el momento; sin embargo, si hay mensajes en la cola, el mensaje de `setTimeout` tendrá que esperar a que los otros mensajes sean procesados. Por esta razón el segundo parámetro indica el tiempo mínimo tiempo esperado y no es una garantía.
 
 ### Cero retraso
 
-Cero retraso no significa que una llamada a una función (call back) se disparará después de cero milisegundos. Al llamar {{domxref("WindowTimers.setTimeout", "setTimeout")}} con un retraso de 0 (cero) milisegundos, no se ejecuta la llamada de la función después de el intervado dado. La ejecución depende del número de tareas en espera en la cola. En el ejemplo de abajo el mensaje "this is just a message" será escrito en la terminal antes de que el mensaje de la llamada a la función sea procesado, esto es por que el retraso es el tiempo mínimo requerido para que el programa procese la petición, pero no es un tiempo garantizado.
+Cero retraso no significa que una llamada a una función (call back) se disparará después de cero milisegundos. Al llamar {{domxref("WindowTimers.setTimeout", "setTimeout")}} con un retraso de 0 (cero) milisegundos, no se ejecuta la llamada de la función después de el intervalo dado. La ejecución depende del número de tareas en espera en la cola. En el ejemplo de abajo el mensaje "this is just a message" será escrito en la terminal antes de que el mensaje de la llamada a la función sea procesado, esto es por que el retraso es el tiempo mínimo requerido para que el programa procese la petición, pero no es un tiempo garantizado.
 
 ```js
 (function () {

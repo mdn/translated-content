@@ -9,7 +9,7 @@ slug: Glossary/XHTML
 
 ## HTML5 et HTML/XHTML
 
-La norme [HTML5](/fr/docs/Web/Guide/HTML/HTML5) définit ces deux syntaxes. Le type MIME (envoyé dans l'en-tête HTTP `Content-Type`) indique le choix de la syntaxe : pour XHTML, le type MIME sera `application/xhtml+xml`, sinon `text/html`.
+La norme [HTML5](/fr/docs/Glossary/HTML5) définit ces deux syntaxes. Le type MIME (envoyé dans l'en-tête HTTP `Content-Type`) indique le choix de la syntaxe : pour XHTML, le type MIME sera `application/xhtml+xml`, sinon `text/html`.
 
 Cet exemple montre un document HTML et un document XHTML inclus dans l'en-tête HTTP :
 
@@ -48,7 +48,7 @@ Content-Type: application/xhtml+xml
 
 ## Type MIME contre DOCTYPE
 
-Avant HTML5, les deux spécifications distinctes définissaient les deux syntaxes ( [HTML 4.01](http://www.w3.org/TR/html4/) et [XHTML 1.0](http://www.w3.org/TR/xhtml1/) ). Selon la norme XHTML1, vous pouvez utiliser XHTML en déclarant un DOCTYPE spécial. Cependant, aucun navigateur n'a jamais implémenté cela, et la norme HTML5 a inversé la décision. **Si votre page est envoyée en tant que `texte/html`, vous n'utilisez pas XHTML**.
+Avant HTML5, les deux spécifications distinctes définissaient les deux syntaxes ( [HTML 4.01](https://www.w3.org/TR/html4/) et [XHTML 1.0](https://www.w3.org/TR/xhtml1/) ). Selon la norme XHTML1, vous pouvez utiliser XHTML en déclarant un DOCTYPE spécial. Cependant, aucun navigateur n'a jamais implémenté cela, et la norme HTML5 a inversé la décision. **Si votre page est envoyée en tant que `texte/html`, vous n'utilisez pas XHTML**.
 
 Au lieu de cela, le type MIME correct doit être présent dans l'en-tête HTTP `Content-Type`. Si vous ne mettez que le type MIME dans une balise meta HTML comme = `<meta http-equiv...>`, il sera ignoré et traité comme du `texte/html`.
 
@@ -56,10 +56,10 @@ Si vous diffusez vos pages en tant que `texte/html` et que vous croyez que vous 
 
 - [No to XHTML](http://www.spartanicus.utvinternet.ie/no-xhtml.htm) un excellent article de Spartanicus
 - [Beware of XHTML](http://www.webdevout.net/articles/beware-of-xhtml) par David Hammond
-- [Sending XHTML as text/html Considered Harmful](http://www.hixie.ch/advocacy/xhtml) par Ian Hickson
-- [XHTML's Dirty Little Secret](http://www.xml.com/pub/a/2003/03/19/dive-into-xml.html) par Mark Pilgrim
-- [XHTML - What's the Point?](http://hsivonen.iki.fi/xhtml-the-point/) par Henri Sivonen
-- [XHTML is not for Beginners](http://lachy.id.au/log/2005/12/xhtml-beginners) par Lachlan Hunt
+- [Sending XHTML as text/html Considered Harmful](https://www.hixie.ch/advocacy/xhtml) par Ian Hickson
+- [XHTML's Dirty Little Secret](https://www.xml.com/pub/a/2003/03/19/dive-into-xml.html) par Mark Pilgrim
+- [XHTML - What's the Point?](https://hsivonen.iki.fi/xhtml-the-point/) par Henri Sivonen
+- [XHTML is not for Beginners](https://lachy.id.au/log/2005/12/xhtml-beginners) par Lachlan Hunt
 
 ## Prise en charge
 

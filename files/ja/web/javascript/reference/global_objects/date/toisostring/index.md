@@ -9,7 +9,17 @@ l10n:
 
 **`toISOString()`** メソッドは、*簡潔な*拡張表記の ISO 形式 ([ISO 8601](https://ja.wikipedia.org/wiki/ISO_8601)) の文字列を返します。これは、常に 24 文字または 27 文字の長さになります（それぞれ、`YYYY-MM-DDTHH:mm:ss.sssZ` または `±YYYYYY-MM-DDTHH:mm:ss.sssZ`）。タイムゾーンは常に 0 UTC オフセットになり、接尾辞 `Z` で表記されます。
 
-{{EmbedInteractiveExample("pages/js/date-toisostring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toISOString()")}}
+
+```js interactive-example
+const event = new Date("05 October 2011 14:48 UTC");
+console.log(event.toString());
+// Expected output: "Wed Oct 05 2011 16:48:00 GMT+0200 (CEST)"
+// Note: your timezone may vary
+
+console.log(event.toISOString());
+// Expected output: "2011-10-05T14:48:00.000Z"
+```
 
 ## 構文
 

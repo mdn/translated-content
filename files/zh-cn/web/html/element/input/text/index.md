@@ -7,7 +7,34 @@ slug: Web/HTML/Element/input/text
 
 **`text`** 类型的 {{HTMLElement("input")}} 元素创建了基础的单行文本字段。
 
-{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="name">Name (4 to 8 characters):</label>
+
+<input
+  type="text"
+  id="name"
+  name="name"
+  required
+  minlength="4"
+  maxlength="8"
+  size="10" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 <table class="properties">
  <tbody>
@@ -60,21 +87,22 @@ let theText = myTextInput.value;
 
 用户可以输入到 `text` 输入框中的最大字符数（以 UTF-16 码点为单位）。必须为大于等于 0 的整数。如果未指定 `maxlength` 或指定了无效的值，则 `text` 输入框将没有最大值。这个值也必须大于等于 `minlength` 的值。
 
-如果文本框中的字符数大于 `maxlength` UTF-16 编码单元长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
+如果文本框中的字符数大于 `maxlength` UTF-16 编码单元长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
 
 ### `minlength`
 
 用户可以输入到 `text` 输入框中的最小字符数（以 UTF-16 码点为单位）。该值必须是小于等于 `maxlength` 指定的值的非负整数值。如果未指定 `minlength` 或指定了无效的值，则 `text` 输入将没有最小值。
 
-如果输入到字段中的文本的长度小于 `minlength` UTF-16 代码单元的长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
+如果输入到字段中的文本的长度小于 `minlength` UTF-16 代码单元的长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
 
 ### `pattern`
 
-如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
+如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
 
 如果模式未指定或无效，则不应用任何正则表达式，并且将完全忽略此属性。
 
-> **备注：** 使用 [`title`](/zh-CN/docs/Web/HTML/Element/input#title) 属性指定大多数浏览器将显示为文本的工具提示，以说明与模式匹配的要求。你还应该在附近添加其他说明性文字。
+> [!NOTE]
+> 使用 [`title`](/zh-CN/docs/Web/HTML/Element/input#title) 属性指定大多数浏览器将显示为文本的工具提示，以说明与模式匹配的要求。你还应该在附近添加其他说明性文字。
 
 请参照[指定模式](#指定模式)更多内容和例子。
 
@@ -84,13 +112,15 @@ let theText = myTextInput.value;
 
 如果控件的内容具有方向（{{Glossary("LTR")}} 或 {{Glossary("RTL")}}），但需要以相反的方向显示占位符，则可以使用 Unicode 双向算法来格式化字符，从而覆盖原有占位符的方向；请参见[如何针对双向文本使用 Unicode 控制符](https://www.w3.org/International/questions/qa-bidi-unicode-controls)获取更多信息。
 
-> **备注：** 尽可能避免使用 `placeholder` 属性。它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。请参见 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#标签)以获取更多信息。
+> [!NOTE]
+> 尽可能避免使用 `placeholder` 属性。它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。请参见 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#标签)以获取更多信息。
 
 ### `readonly`
 
 一个布尔属性，如果存在，则表示该字段不能由用户编辑。但是，仍可以通过 JavaScript 代码直接设置 {{domxref("HTMLInputElement")}} 的 `value` 属性来更改。
 
-> **备注：** 因为只读字段不能有值，所以 `required` 对指定了 `readonly` 属性的输入没有任何影响。
+> [!NOTE]
+> 因为只读字段不能有值，所以 `required` 对指定了 `readonly` 属性的输入没有任何影响。
 
 ### `size`
 
@@ -205,7 +235,8 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 
 `text` 类型的 `<input>` 元素默认没有应用自动验证（因为基本文本输入需要能够接受任意字符串），但是有一些客户端验证选项可用，我们将在下面讨论。
 
-> **备注：** HTML 表单验证*不能*替代服务器脚本，以确保输入的数据格式正确。对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了。有人也可以完全绕开你的 HTML 并将数据直接提交到你的服务器。如果服务器端代码无法验证接收到的数据，则当将格式不正确的数据（或太大，类型错误的数据等等）输入数据库时，灾难可能会发生。
+> [!NOTE]
+> HTML 表单验证*不能*替代服务器脚本，以确保输入的数据格式正确。对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了。有人也可以完全绕开你的 HTML 并将数据直接提交到你的服务器。如果服务器端代码无法验证接收到的数据，则当将格式不正确的数据（或太大，类型错误的数据等等）输入数据库时，灾难可能会发生。
 
 ### 样式注意事项
 
@@ -332,11 +363,12 @@ input:valid + span::after {
 
 如果尝试提交少于 4 个字符的表单，则会收到一条相应的错误消息（不同的浏览器会有所不同）。如果尝试输入 8 个以上的字符，浏览器将不允许输入。
 
-> **备注：** 如果你指定了 `minlength` 但未指定 `required`，则输入被视为有效，因为不需要用户指定值。
+> [!NOTE]
+> 如果你指定了 `minlength` 但未指定 `required`，则输入被视为有效，因为不需要用户指定值。
 
 ### 指定模式
 
-可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性指定输入值必须匹配才能被认为是有效的正则表达式（请参照[以正则表达式验证](/zh-CN/docs/Learn/HTML/Forms/Form_validation#Validating_against_a_regular_expression)）。
+可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性指定输入值必须匹配才能被认为是有效的正则表达式（请参照[使用正则表达式校验](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation#使用正则表达式校验)）。
 
 下面的示例将值限制为 4-8 个字符，并要求该值仅包含小写字母。
 
@@ -394,7 +426,7 @@ input:valid + span::after {
 
 ## 示例
 
-可以在[你的第一个 HTML 表单](/zh-CN/docs/Learn/Forms/Your_first_form)和[如何结构化 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)文章中看到一些好的示例。
+可以在[你的第一个 HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Your_first_form)和[如何结构化 HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)文章中看到一些好的示例。
 
 ## 规范
 
@@ -406,8 +438,8 @@ input:valid + span::after {
 
 ## 参阅
 
-- [HTML 表单](/zh-CN/docs/Learn/Forms)
+- [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} 元素和其基于的接口 {{domxref("HTMLInputElement")}}
 - [`<input type="search">`](/zh-CN/docs/Web/HTML/Element/input/search)
 - {{HTMLElement("textarea")}}：多行文本输入元素
-- [CSS 属性兼容性表格](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性兼容性表格](/zh-CN/docs/Learn_web_development/Extensions/Forms)

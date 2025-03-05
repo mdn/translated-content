@@ -80,7 +80,7 @@ Todos estos son técnicamente opcionales, pero se recomienda encarecidamente que
    "Response" da como resultado un enlace a [https://developer.mozilla.org/es/docs/Web/API/Response](/es/docs/Web/API/Response).
 3. `"methods"`: el valor es un arreglo que debe contener cualquier método que la especificación agregue a las interfaces asociadas con otras API, como los métodos de instanciación creados en {{domxref ("Navigator")}} o {{domxref("Window")}}.
    Si hay una gran cantidad de métodos, es posible que desees considerar solo enumerar los más populares o ponerlos en primer lugar en la lista.
-   "fetch()" da como resultado un enlace a [https://developer.mozilla.org/es/docs/Web/API/fetch](/es/docs/Web/API/fetch).
+   "fetch()" da como resultado un enlace a [https://developer.mozilla.org/es/docs/Web/API/fetch](/es/docs/Web/API/Window/fetch).
    _No_ agregue métodos que son miembros de interfaces que son propiedad de la misma API.
 4. `"properties"` — el valor es un arreglo que debe contener todas las propiedades asociadas con la API.
    Esto puede incluir propiedades que son miembros de interfaces definidas en la especificación de la API y propiedades que la API define en otras interfaces.
@@ -105,11 +105,13 @@ Todos estos son técnicamente opcionales, pero se recomienda encarecidamente que
 7. `"diccionarios"`: una serie de cadenas que enumeran todos los diccionarios que forman parte de la API.
    En general, aquí solo se deben enumerar los diccionarios utilizados por más de una propiedad o método, a menos que tengan un significado especial o sea probable que requieran referencias de varias páginas.
    "CryptoKeyPair" da como resultado un enlace a [https://developer.mozilla.org/es/docs/Web/API/CryptoKeyPair](/es/docs/Web/API/CryptoKeyPair).
-   > **Nota:** MDN se está alejando de documentar diccionarios por separado.
+   > [!NOTE]
+   > MDN se está alejando de documentar diccionarios por separado.
    > Cuando es posible, ahora se describen como objetos en los lugares donde se usan.
 8. `"types"`: un arreglo de definiciones de tipo y tipos enumerados definidos por la API.
    Puede optar por enumerar solo aquellos que son de especial importancia o a los que se hace referencia desde varias páginas, con el fin de mantener la lista corta.
-   > **Nota:** MDN se está alejando de documentar por separado las definiciones de tipo.
+   > [!NOTE]
+   > MDN se está alejando de documentar por separado las definiciones de tipo.
    > Cuando es posible, ahora se describen como valores en los lugares donde se utilizan.
 9. `"callbacks"`: el valor es un arreglo que contiene una lista de todos los tipos de _callback_ definidos para la API.
    Puede que le resulte innecesario utilizar este grupo, incluso en las API que incluyen tipos de _callbacks_, ya que a menudo no son útiles para documentar por separado.

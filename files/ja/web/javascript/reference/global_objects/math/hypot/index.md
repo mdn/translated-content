@@ -1,44 +1,65 @@
 ---
 title: Math.hypot()
 slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
+l10n:
+  sourceCommit: bc7e82aa6db60568d7146ee285918550bbe4b8ce
 ---
 
 {{JSRef}}
 
-**`Math.hypot()`** 関数は、各引数の二乗の合計値の平方根を返します。
+**`Math.hypot()`** は静的メソッドで、各引数の二乗の合計値の平方根を返します。
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.hypot</mo><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>v</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msqrt><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>v</mi><mi>i</mi><mn>2</mn></msubsup></mrow></msqrt><mo>=</mo><msqrt><mrow><msubsup><mi>v</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mo>…</mo><mo>+</mo><msubsup><mi>v</mi><mi>n</mi><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.hypot}(v*1, v_2, \dots, v_n)} = \sqrt{\sum*{i=1}^n v_i^2} = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2}</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚑𝚢𝚙𝚘𝚝</mo><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>v</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mstyle><mo>=</mo><msqrt><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>v</mi><mi>i</mi><mn>2</mn></msubsup></mrow></msqrt><mo>=</mo><msqrt><mrow><msubsup><mi>v</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mo>…</mo><mo>+</mo><msubsup><mi>v</mi><mi>n</mi><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.hypot}(v_1, v_2, \dots, v_n)} = \sqrt{\sum_{i=1}^n v_i^2} = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2}</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-hypot.html")}}
+{{InteractiveExample("JavaScript Demo: Math.hypot()")}}
+
+```js interactive-example
+console.log(Math.hypot(3, 4));
+// Expected output: 5
+
+console.log(Math.hypot(5, 12));
+// Expected output: 13
+
+console.log(Math.hypot(3, 4, 5));
+// Expected output: 7.0710678118654755
+
+console.log(Math.hypot(-5));
+// Expected output: 5
+```
 
 ## 構文
 
-```
-Math.hypot([value1[, value2[, ...]]])
+```js-nolint
+Math.hypot()
+Math.hypot(value1)
+Math.hypot(value1, value2)
+Math.hypot(value1, value2, /* …, */ valueN)
 ```
 
 ### 引数
 
-- `value1, value2, ...`
+- `value1`, …, `valueN`
   - : 数値です。
 
 ### 返値
 
-与えられた各引数の二乗の合計値の平方根を返します。1 つ上の引数が数値に変換できなかった場合は、 {{jsxref("NaN")}} が返されます。
+与えられた引数の二乗和の平方根を返します。引数のいずれかが ±Infinity の場合、 {{jsxref("Infinity")}} を返します。 それ以外の場合、引数の少なくとも 1 つが {{jsxref("NaN")}} であるか、または {{jsxref("NaN")}} に変換された場合、{{jsxref("NaN")}} を返します。引数が指定されていない場合、またはすべての引数が ±0 の場合、`0` を返します。
 
 ## 解説
 
 直角三角形の斜辺や、複素数の大きさを計算するには `Math.sqrt(v1*v1 + v2*v2)` という公式を用い、ここで v1 と v2 は三角形の辺の長さであったり、複素数の実数と複素数部分であったりします。二次元またはそれ以上の次元における対応する距離は、 `Math.sqrt(v1*v1 + v2*v2 + v3*v3 + v4*v4)` のように平方根の下にさらに多くの平方を足すことで計算できます。
 
-この関数はこの計算をより簡単に、より高速に行います。 `Math.hypot(v1, v2)` または `Math.hypot(v1, v2, v3, v4, ...)` を呼び出すだけです。
+この関数はこの計算をより簡単に、より高速に行います。 `Math.hypot(v1, v2)` または `Math.hypot(v1, /* …, */, vN)` を呼び出すだけです。
 
-`Math.hypot` はまた、数値が非常に大きい場合のオーバーフロー/アンダーフローの問題を回避します。 JS で表現できる最大の数は `Number.MAX_VALUE` で、これは約 10308 です。数字の大きさが約 10154 よりも大きい場合、その 2 乗を取ると無限大になります。例えば、 `Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinity`. 代わりに `hypot()` を使うと、 `Math.hypot(1e200, 1e200) = 1.4142...e+200` となり、より良い答えが得られます。これは非常に小さな数の場合にも当てはまります。 `Math.sqrt(1e-200*1e-200 + 1e-200*1e-200) = 0` ですが、 `Math.hypot(1e-200, 1e-200) = 1.4142...e-200` となります。
+`Math.hypot` はまた、数値が非常に大きい場合のオーバーフロー/アンダーフローの問題を回避します。 JS で表現できる最大の数は [`Number.MAX_VALUE`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE) で、これは約 10<sup>308</sup> です。数字の大きさが約 10<sup>154</sup> よりも大きい場合、その 2 乗を取ると無限大になります。例えば、 `Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinity` です。代わりに `hypot()` を使うと、 `Math.hypot(1e200, 1e200) = 1.4142...e+200` となり、より良い答えが得られます。これは非常に小さな数の場合にも当てはまります。 `Math.sqrt(1e-200*1e-200 + 1e-200*1e-200) = 0` ですが、 `Math.hypot(1e-200, 1e-200) = 1.4142...e-200` となります。
+
+引数が 1 つの場合、 `Math.hypot()` は [`Math.abs()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/abs) と同等です。 [`Math.hypot.length`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/length) は 2 であり、これは少なくとも 2 つの引数で扱うことを示す弱いシグナルです。
 
 `hypot()` は `Math` の静的メソッドなので、常に `Math.hypot()` として使用し、自分で `Math` オブジェクトを生成してそのメソッドとして使用しないでください。 (`Math` にはコンストラクターがありません)。
-
-引数が与えられなかった場合、結果は +0 になります。引数のいずれかが ±Infinity であった場合、結果は Infinity になります。引数のいずれかが NaN であった場合は (他に ±Infinity の引数がない限り)、結果は NaN になります。数値に変換できない引数があった場合は、結果は {{jsxref("NaN")}} になります。
-
-引数が 1 つの場合、 `Math.hypot()` は `Math.abs()` と同等です。
 
 ## 例
 
@@ -50,53 +71,9 @@ Math.hypot(3, 4, 5); // 7.0710678118654755
 Math.hypot(); // 0
 Math.hypot(NaN); // NaN
 Math.hypot(NaN, Infinity); // Infinity
-Math.hypot(3, 4, "foo"); // NaN, since +'foo' => NaN
+Math.hypot(3, 4, "foo"); // NaN, +'foo' => NaN なので
 Math.hypot(3, 4, "5"); // 7.0710678118654755, +'5' => 5
-Math.hypot(-3); // 3, the same as Math.abs(-3)
-```
-
-## ポリフィル
-
-オーバーフロー/アンダーフローの問題を処理しないナイーブなアプローチです。
-
-```js
-if (!Math.hypot)
-  Math.hypot = function () {
-    var y = 0,
-      i = arguments.length,
-      containsInfinity = false;
-    while (i--) {
-      var arg = arguments[i];
-      if (arg === Infinity || arg === -Infinity) containsInfinity = true;
-      y += arg * arg;
-    }
-    return containsInfinity ? Infinity : Math.sqrt(y);
-  };
-```
-
-アンダーフローやオーバーフローを回避するポリフィルです。
-
-```js
-if (!Math.hypot)
-  Math.hypot = function () {
-    var max = 0;
-    var s = 0;
-    var containsInfinity = false;
-    for (var i = 0; i < arguments.length; ++i) {
-      var arg = Math.abs(Number(arguments[i]));
-      if (arg === Infinity) containsInfinity = true;
-      if (arg > max) {
-        s *= (max / arg) * (max / arg);
-        max = arg;
-      }
-      s += arg === 0 && max === 0 ? 0 : (arg / max) * (arg / max);
-    }
-    return containsInfinity
-      ? Infinity
-      : max === 1 / 0
-        ? 1 / 0
-        : max * Math.sqrt(s);
-  };
+Math.hypot(-3); // 3、Math.abs(-3) と同じ
 ```
 
 ## 仕様書
@@ -109,6 +86,7 @@ if (!Math.hypot)
 
 ## 関連情報
 
+- [`Math.hypot` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.abs()")}}
 - {{jsxref("Math.pow()")}}
 - {{jsxref("Math.sqrt()")}}

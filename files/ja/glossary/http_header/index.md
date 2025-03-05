@@ -48,7 +48,8 @@ X-Cache: Hit from cloudfront
 X-Cache-Info: cached
 ```
 
-> **メモ:** 仕様書の古いバージョンでは次のようになっていました。
+> [!NOTE]
+> 仕様書の古いバージョンでは次のようになっていました。
 >
 > - {{Glossary("General header", "一般ヘッダー")}}: リクエストとレスポンスの両方に適用されるヘッダーですが、最終的に本体で送信されるデータとは関係がありません。
 > - {{Glossary("Entity header", "エンティティヘッダー")}}: コンテンツの長さや MIME タイプなど、エンティティの本体に関する詳細情報を含むヘッダー（これは、これで表現メタデータヘッダーと呼ばれるもののスーパーセットです）。
@@ -57,7 +58,7 @@ X-Cache-Info: cached
 
 - [全ての HTTP ヘッダー一覧](/ja/docs/Web/HTTP/Headers)
 - [ヘッダー](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2) の構文（HTTP 仕様書、英語）
-- [用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("HTTP header", "HTTP ヘッダー")}}
   - {{Glossary("Request header", "リクエストヘッダー")}}

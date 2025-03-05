@@ -5,7 +5,7 @@ slug: Web/CSS/animation-play-state
 
 {{CSSRef}}
 
-**`animation-play-state`** [CSS](/zh-CN/docs/CSS) 属性设置动画是运行还是暂停。
+**`animation-play-state`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画是运行还是暂停。
 
 {{EmbedInteractiveExample("pages/css/animation-play-state.html")}}
 
@@ -36,7 +36,8 @@ animation-play-state: unset;
 - `paused`
   - : 当前**动画**已被**停止**。
 
-> **备注：** 当你在 `animation-*` 属性上指定多个逗号分隔的值时，它们将按照 {{cssxref("animation-name")}} 出现的顺序应用于动画。对于动画数量和 `animation-*` 属性值不匹配的情况，请参见[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)。
+> [!NOTE]
+> 当你在 `animation-*` 属性上指定多个逗号分隔的值时，它们将按照 {{cssxref("animation-name")}} 出现的顺序应用于动画。对于动画数量和 `animation-*` 属性值不匹配的情况，请参见[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)。
 
 ## 形式定义
 

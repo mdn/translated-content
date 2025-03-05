@@ -7,7 +7,26 @@ slug: Web/HTML/Element/ol
 
 **HTML `<ol>` 元素**表示有序列表，通常渲染为一个带编号的列表。
 
-{{EmbedInteractiveExample("pages/tabbed/ol.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;ol&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<ol>
+  <li>Mix flour, baking powder, sugar, and salt.</li>
+  <li>In another bowl, mix eggs, milk, and oil.</li>
+  <li>Stir both mixtures together.</li>
+  <li>Fill muffin tray 3/4 full.</li>
+  <li>Bake for 20 minutes.</li>
+</ol>
+```
+
+```css interactive-example
+li {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+  margin-bottom: 0.5rem;
+}
+```
 
 <table class="properties">
  <tbody>
@@ -44,7 +63,7 @@ slug: Web/HTML/Element/ol
 
 ## 属性
 
-此元素支持[全局属性](/zh-CN/docs/HTML/Global_attributes)。
+此元素支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `reversed`
   - : 此布尔值属性指定列表中的条目是否是倒序排列的，即编号是否应从高到低反向标注。
@@ -52,7 +71,8 @@ slug: Web/HTML/Element/ol
 
   - : 一个整数值属性，指定了列表编号的起始值。此属性的值应为阿拉伯数字，尽管列表条目的编号类型 `type` 属性可能指定为了罗马数字编号等其他类型的编号。比如说，想要让元素的编号从英文字母 "d" 或者罗马数字 "iv" 开始，都应当使用 `start="4"`。
 
-    > **备注：** 这个属性在 HTML4 中弃用，但是在 HTML5 中被重新引入。
+    > [!NOTE]
+    > 这个属性在 HTML4 中弃用，但是在 HTML5 中被重新引入。
 
 - `type`
 
@@ -64,7 +84,8 @@ slug: Web/HTML/Element/ol
     - `I` 表示大写罗马数字编号
     - `1` 表示数字编号（默认）编号类型适用于整个列表，除非在 `<ol>` 元素的 {{HTMLElement("li")}} 元素中使用不同的 [`type`](/zh-CN/docs/Web/HTML/Element/li#type) 属性。
 
-    > **备注：** 这个属性在 HTML4 中弃用，但是在 HTML5 中被重新引入。除非列表中序号很重要（比如，在法律或者技术文件中条目通常被需要所引用），否则请使用 CSS {{cssxref("list-style-type")}} 属性替代。
+    > [!NOTE]
+    > 这个属性在 HTML4 中弃用，但是在 HTML5 中被重新引入。除非列表中序号很重要（比如，在法律或者技术文件中条目通常被需要所引用），否则请使用 CSS {{cssxref("list-style-type")}} 属性替代。
 
 ## 使用说明
 
@@ -80,7 +101,8 @@ slug: Web/HTML/Element/ol
 
 至于如何确定该选择哪一个列表元素，可以尝试更改列表项的顺序，如果其含义会发生改变，那么就应当使用 {{HTMLElement("ol")}} 元素，否则使用 {{HTMLElement("ul")}} 更合适。
 
-> **备注：** “更改顺序”时，不应当算上一些固定位于列表最前或最后的项，比如未完成的列表最后的占位项。
+> [!NOTE]
+> “更改顺序”时，不应当算上一些固定位于列表最前或最后的项，比如未完成的列表最后的占位项。
 > 如果只有一个元素，以至于根本不存在什么顺序可言，可能最好先考虑是否应当使用列表元素，以及是否要在列表最后增加一些占位的空项。
 
 ## 示例
@@ -190,6 +212,6 @@ slug: Web/HTML/Element/ol
 - 对 `<ol>` 元素常用的 CSS 属性：
 
   - the {{cssxref("list-style")}} 属性，有用的选择序数的显示方式，
-  - [CSS 计数器](/zh-CN/docs/CSS_Counters), 用于处理复杂的嵌套列表，
-  - {{cssxref("line-height")}} 属性，可以模拟过时的 [`compact`](/zh-CN/docs/Web/HTML/Element/ol#compact) 属性；
+  - [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), 用于处理复杂的嵌套列表，
+  - {{cssxref("line-height")}} 属性，可以模拟过时的 [`compact`](#compact) 属性；
   - {{cssxref("margin")}} 属性，用来控制列表的缩进。

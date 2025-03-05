@@ -9,7 +9,8 @@ slug: Web/API/console/assert_static
 
 {{AvailableInWorkers}}
 
-> **備註：** 在 Node.js 內 `console.assert()` 方法的實做，與瀏覽器並不相同。瀏覽器內呼叫 falsy 的 `console.assert()` 斷言出現 `message`，但不會中斷程式碼的執行。然而在 Node.js 裡面，falsy 斷言會拋出 `AssertionError` 錯誤。
+> [!NOTE]
+> 在 Node.js 內 `console.assert()` 方法的實做，與瀏覽器並不相同。瀏覽器內呼叫 falsy 的 `console.assert()` 斷言出現 `message`，但不會中斷程式碼的執行。然而在 Node.js 裡面，falsy 斷言會拋出 `AssertionError` 錯誤。
 
 ## 語法
 
@@ -89,6 +90,6 @@ console.assert(false, "the word is %s", "foo");
 ## 參見
 
 - [WHATWG Console Standard: console.assert](https://console.spec.whatwg.org/#assert-condition-data)
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
-- [Chrome Developer Tools: Using the Console](https://developer.chrome.com/devtools/docs/console#assertions)
+- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
+- [MSDN: Using the F12 Tools Console to View Errors and Status](<https://learn.microsoft.com/zh-tw/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)
+- [Chrome Developer Tools: Using the Console](https://developer.chrome.com/docs/devtools#assertions)

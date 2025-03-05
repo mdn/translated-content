@@ -62,7 +62,8 @@ Cette image n'indique pas de hauteur ou de largeur mais un ratio intrinsèque de
 
 Appliquons maintenant différents redimensionnements sur ces images. Pour chacun des exemples qui suivent, les rectangles dessinés font 300 pixels de large et 200 pixels de haut. De plus, on utilise {{cssxref("background-repeat")}} avec `no-repeat` pour plus de clarté..
 
-> **Note :** Les images montrées ci-après illustrent le rendu **attendu**. Les navigateurs peuvent ne pas produire le bon résultat.
+> [!NOTE]
+> Les images montrées ci-après illustrent le rendu **attendu**. Les navigateurs peuvent ne pas produire le bon résultat.
 
 ### Indiquer des dimensions fixées sur les deux axes
 

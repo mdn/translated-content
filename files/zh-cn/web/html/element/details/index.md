@@ -9,7 +9,37 @@ slug: Web/HTML/Element/details
 
 展现组件通常在屏幕上使用一个小三角形，旋转（或扭转）以表示打开/关闭的状态，三角形旁边有一个标签。`<summary>` 元素的内容被用来作为展示小部件的标签。
 
-{{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;details&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<details>
+  <summary>Details</summary>
+  Something small enough to escape casual notice.
+</details>
+```
+
+```css interactive-example
+details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+```
 
 一个 `<details>` 小组件可以处于两种状态之一。默认的*关闭*状态只显示三角形和 `<summary>` 内的标签（如果没有 `<summary>` 则显示{{Glossary("user agent", "用户代理")}}定义的默认字符串）。
 
@@ -29,11 +59,12 @@ slug: Web/HTML/Element/details
 
   - : 这个布尔属性表示细节内容——也就是 `<details>` 元素的内容——目前是否可见。默认情况下为 `false`，意味着细节内容是不可见的。
 
-    > **备注：** 你必须完全删除这个属性来使细节内容隐藏。`open="false"` 使细节内容可见，因为这个属性是布尔值。
+    > [!NOTE]
+    > 你必须完全删除这个属性来使细节内容隐藏。`open="false"` 使细节内容可见，因为这个属性是布尔值。
 
 ## 事件
 
-除了 HTML 元素支持的常规事件外，`<details>` 元素还支持 {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} 事件，当 `<details>` 元素的状态在打开和关闭之间变化时，该事件会被派发到该元素。该事件是在状态发生变化*后*发送的，不过如果状态在浏览器派发该事件之前发生了多次变化，那么这些事件就会被合并，从而只发送一个。
+除了 HTML 元素支持的常规事件外，`<details>` 元素还支持 {{domxref("HTMLElement/toggle_event", "toggle")}} 事件，当 `<details>` 元素的状态在打开和关闭之间变化时，该事件会被派发到该元素。该事件是在状态发生变化*后*发送的，不过如果状态在浏览器派发该事件之前发生了多次变化，那么这些事件就会被合并，从而只发送一个。
 
 你可以为 `toggle` 事件使用一个事件监听器来检测小组件何时改变状态：
 

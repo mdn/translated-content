@@ -9,7 +9,7 @@ canvas 更有意思的一项特性就是图像操作能力。可以用于动态�
 
 引入图像到 canvas 里需要以下两步基本操作：
 
-1. 获得一个指向{{domxref("HTMLImageElement")}}的对象或者另一个 canvas 元素的引用作为源，也可以通过提供一个 URL 的方式来使用图片（参见[例子](http://www.html5canvastutorials.com/tutorials/html5-canvas-images/)）
+1. 获得一个指向{{domxref("HTMLImageElement")}}的对象或者另一个 canvas 元素的引用作为源，也可以通过提供一个 URL 的方式来使用图片（参见[例子](https://www.html5canvastutorials.com/tutorials/html5-canvas-images/)）
 2. 使用`drawImage()`函数将图片绘制到画布上
 
 我们来看看具体是怎么做的。
@@ -41,7 +41,7 @@ canvas 的 API 可以使用下面这些类型中的一种作为图片的源：
 
 ### 使用其他域名下的图片
 
-在 {{domxref("HTMLImageElement")}}上使用[crossOrigin](/zh-CN/docs/HTML/CORS_settings_attributes)属性，你可以请求加载其他域名上的图片。如果图片的服务器允许跨域访问这个图片，那么你可以使用这个图片而不污染 canvas，否则，使用这个图片将会[污染 canvas](/zh-CN/docs/CORS_Enabled_Image#.E4.BB.80.E4.B9.88.E6.98.AF.22.E8.A2.AB.E6.B1.A1.E6.9F.93.22.E7.9A.84canvas)。
+在 {{domxref("HTMLImageElement")}}上使用[crossOrigin](/zh-CN/docs/Web/HTML/Attributes/crossorigin)属性，你可以请求加载其他域名上的图片。如果图片的服务器允许跨域访问这个图片，那么你可以使用这个图片而不污染 canvas，否则，使用这个图片将会[污染 canvas](/zh-CN/docs/Web/HTML/CORS_enabled_image#.e4.bb.80.e4.b9.88.e6.98.af.22.e8.a2.ab.e6.b1.a1.e6.9f.93.22.e7.9a.84canvas)。
 
 ### 使用其他 canvas 元素
 
@@ -107,7 +107,8 @@ function getMyVideo() {
 - **`drawImage(image, x, y)`**
   - : 其中 `image` 是 `image` 或者 `canvas` 对象，`x` 和 `y` 是其在目标 `canvas` 里的起始坐标。
 
-> **备注：** SVG 图像必须在 \<svg> 根指定元素的宽度和高度。
+> [!NOTE]
+> SVG 图像必须在 \<svg> 根指定元素的宽度和高度。
 
 ### 示例：一个简单的线图
 
@@ -153,11 +154,12 @@ function draw() {
 
 在这个例子里，我会用一张图片像背景一样在 canvas 中以重复平铺开来。实现起来也很简单，只需要循环铺开经过缩放的图片即可。见下面的代码，第一层 `for` 循环是做行重复，第二层是做列重复的。图像大小被缩放至原来的三分之一，50x38 px。这种方法可以用来很好的达到背景图案的效果，在下面的教程中会看到。
 
-> **备注：** 图像可能会因为大幅度的缩放而变得起杂点或者模糊。如果你的图像里面有文字，那么最好还是不要进行缩放，因为那样处理之后很可能图像里的文字就会变得无法辨认了。
+> [!NOTE]
+> 图像可能会因为大幅度的缩放而变得起杂点或者模糊。如果你的图像里面有文字，那么最好还是不要进行缩放，因为那样处理之后很可能图像里的文字就会变得无法辨认了。
 
 ```html hidden
-<html>
-  <body onload="draw();">
+<html lang="zh">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
@@ -165,17 +167,19 @@ function draw() {
 
 ```js
 function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
-  var img = new Image();
-  img.onload = function () {
-    for (var i = 0; i < 4; i++) {
-      for (var j = 0; j < 3; j++) {
+  const ctx = document.getElementById("canvas").getContext("2d");
+  const img = new Image();
+  img.onload = () => {
+    for (let i = 0; i < 4; i++) {
+      for (let j = 0; j < 3; j++) {
         ctx.drawImage(img, j * 50, i * 38, 50, 38);
       }
     }
   };
-  img.src = "rhino.jpg";
+  img.src = "https://mdn.github.io/shared-assets/images/examples/rhino.jpg";
 }
+
+draw();
 ```
 
 结果看起来像这样：
@@ -200,23 +204,31 @@ function draw() {
 我用一个与上面用到的不同的方法来装载图像，直接将图像插入到 HTML 里面，然后通过 CSS 隐藏（`display:none`）它。两个图像我都赋了 `id` ，方便后面使用。看下面的脚本，相当简单，首先对犀牛头做好切片（第一次`drawImage`）放在 canvas 上，然后再上面套个相框（第二次`drawImage`）。
 
 ```html
-<html>
-  <body onload="draw();">
-    <canvas id="canvas" width="150" height="150"></canvas>
-    <div style="display:none;">
-      <img id="source" src="rhino.jpg" width="300" height="227" />
-      <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
-    </div>
-  </body>
-</html>
+<canvas id="canvas" width="150" height="150"></canvas>
+<div style="display: none;">
+  <img
+    id="source"
+    src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg"
+    width="300"
+    height="227" />
+  <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+</div>
 ```
 
 ```js
-function draw() {
-  var canvas = document.getElementById("canvas");
-  var ctx = canvas.getContext("2d");
+async function draw() {
+  // 等待所有图片的加载。
+  await Promise.all(
+    Array.from(document.images).map(
+      (image) =>
+        new Promise((resolve) => image.addEventListener("load", resolve)),
+    ),
+  );
 
-  // Draw slice
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
+
+  // 绘制切片
   ctx.drawImage(
     document.getElementById("source"),
     33,
@@ -229,9 +241,11 @@ function draw() {
     104,
   );
 
-  // Draw frame
+  // 绘制相框
   ctx.drawImage(document.getElementById("frame"), 0, 0);
 }
+
+draw();
 ```
 
 {{EmbedLiveSample("示例：相框", "", "160")}}

@@ -13,7 +13,7 @@ slug: Glossary/Type
 
 値の型が分からない場合は、 [`typeof`](/ja/docs/Web/JavaScript/Reference/Operators/typeof) 演算子で知ることができます。
 
-1. [用語集](/ja/docs/Glossary)
+1. 関連用語:
 
    1. {{Glossary("JavaScript")}}
    2. {{Glossary("string", "文字列")}}

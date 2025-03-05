@@ -2,14 +2,17 @@
 title: grid-auto-flow
 slug: Web/CSS/grid-auto-flow
 l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+  sourceCommit: 5ced6d0b9636a1b904474d1546674b305346daa0
 ---
 
 {{CSSRef}}
 
-**`grid-auto-flow`** は CSS のプロパティで、自動配置のアルゴリズムの動作を制御し、自動配置されたアイテムがどのようにグリッドに流れ込むかを正確に指定するものです。
+**`grid-auto-flow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、自動配置のアルゴリズムの動作を制御し、自動配置されたアイテムがどのようにグリッドに流れ込むかを正確に指定するものです。
 
 {{EmbedInteractiveExample("pages/css/grid-auto-flow.html")}}
+
+> **メモ:** `masonry-auto-flow` プロパティは、CSS の[メイソンリーレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout)にありましたが、 `grid-auto-flow` に取って代わられ、廃止されました。
+> 詳細は [csswg-drafts #10231](https://github.com/w3c/csswg-drafts/issues/10231) をご覧ください。
 
 ## 構文
 
@@ -60,7 +63,7 @@ grid-auto-flow: unset;
 
 #### HTML
 
-```html
+```html live-sample___setting_grid_auto-placement
 <div id="grid">
   <div id="item1"></div>
   <div id="item2"></div>
@@ -78,7 +81,7 @@ grid-auto-flow: unset;
 
 #### CSS
 
-```css
+```css live-sample___setting_grid_auto-placement
 #grid {
   height: 200px;
   width: 200px;
@@ -111,7 +114,7 @@ grid-auto-flow: unset;
 }
 ```
 
-```js hidden
+```js hidden live-sample___setting_grid_auto-placement
 function changeGridAutoFlow() {
   const grid = document.getElementById("grid");
   const direction = document.getElementById("direction");
@@ -133,7 +136,7 @@ inputElem.addEventListener("change", changeGridAutoFlow);
 
 #### 結果
 
-{{EmbedLiveSample("グリッドの自動配置を設定する", "200px", "230px")}}
+{{EmbedLiveSample("Setting_grid_auto-placement", "200px", "260px")}}
 
 ## 仕様書
 
@@ -145,6 +148,8 @@ inputElem.addEventListener("change", changeGridAutoFlow);
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}
-- グリッドレイアウトガイド: _[グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)_
-- 動画チュートリアル: _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid")}}
+- [グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+- 動画: [Introducing grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)

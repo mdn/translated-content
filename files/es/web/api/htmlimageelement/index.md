@@ -20,7 +20,7 @@ _Heredadas de su padre, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLImageElement.complete")}} {{readonlyInline}}
   - : Devuelve un {{domxref("Boolean")}} que es `true` si el navegador ha terminado de buscar la imagen, sea o no exitoso. También devuelve `true` si la imagen no tiene valor {{domxref("HTMLImageElement.src", "src")}}.
 - {{domxref("HTMLImageElement.crossOrigin")}}
-  - : Es un {{domxref("DOMString")}} representa la configuración CORS para el elemento imagen. Ver [Atributos de configuración CORS](/es/docs/Web/HTML/Atributos_de_configuracion_CORS) para más detalles.
+  - : Es un {{domxref("DOMString")}} representa la configuración CORS para el elemento imagen. Ver [Atributos de configuración CORS](/es/docs/Web/HTML/Attributes/crossorigin) para más detalles.
 - {{domxref("HTMLImageElement.currentSrc")}} {{readonlyInline}}{{experimental_inline}}
   - : Devuelve un {{domxref("DOMString")}}
 - {{domxref("HTMLImageElement.height")}}

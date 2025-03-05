@@ -7,7 +7,8 @@ l10n:
 
 {{GlossarySidebar}}
 
-> **警告：** 当前的 HTTP/1.1 规范中不再提及实体、实体标头和实体主体。这中的有些字段现在被称为{{glossary("Representation header", "表示标头")}}。
+> [!WARNING]
+> 当前的 HTTP/1.1 规范中不再提及实体、实体标头和实体主体。这中的有些字段现在被称为{{glossary("Representation header", "表示标头")}}。
 
 实体标头是描述了一个 HTTP 消息有效载荷（即关于消息主体的元数据）的 {{glossary("HTTP_header", "HTTP 标头")}}。实体标头包括 {{HTTPHeader("Content-Length")}}、{{HTTPHeader("Content-Language")}}、{{HTTPHeader("Content-Encoding")}}、{{HTTPHeader("Content-Type")}} 和 {{HTTPHeader("Expires")}} 等。实体标头可能同时存在于 HTTP 请求和响应信息中。
 

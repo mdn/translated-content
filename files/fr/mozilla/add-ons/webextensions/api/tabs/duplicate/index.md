@@ -35,7 +35,8 @@ let duplicating = browser.tabs.duplicate(
 
 Une [promesse (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) dont la valeur de résolution sera un objet [`tabs.Tab`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) contenant des détails sur l'onglet dupliqué. L'objet `Tab` contiendra les propriétés `url`, `title` et `favIconUrl` uniquement si l'extension dispose de la [permission `"tabs"`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) ou lorsque [l'hôte correspond à un hôte ciblé dans les permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-> **Note :** À partir de Firefox 68, la promesse renvoyée par `browser.tabs.duplicate()` se résout dès que l'onglet a été dupliqué. Auparavant, la promesse n'était résolue qu'une fois l'onglet entièrement chargé.
+> [!NOTE]
+> À partir de Firefox 68, la promesse renvoyée par `browser.tabs.duplicate()` se résout dès que l'onglet a été dupliqué. Auparavant, la promesse n'était résolue qu'une fois l'onglet entièrement chargé.
 
 ## Exemples
 
@@ -72,9 +73,9 @@ querying.then(duplicateFirstTab, onError);
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

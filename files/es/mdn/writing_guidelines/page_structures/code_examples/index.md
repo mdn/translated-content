@@ -9,7 +9,8 @@ l10n:
 
 En MDN, encontrarás numerosos ejemplos de código insertados en las páginas para demostrar el uso de las características de la plataforma web. Este artículo discute los diferentes mecanismos disponibles para agregar ejemplos de código a las páginas, junto con cuáles debes usar y cuándo.
 
-> **Nota:** Si buscas consejos sobre el estilo y el formato del código tal como aparece en un artículo de MDN, en lugar de las diferentes formas de incluir código, consulta nuestra [Guía de estilo de código](/es/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
+> [!NOTE]
+> Si buscas consejos sobre el estilo y el formato del código tal como aparece en un artículo de MDN, en lugar de las diferentes formas de incluir código, consulta nuestra [Guía de estilo de código](/es/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
 
 ## ¿Qué tipos de ejemplos de código están disponibles?
 

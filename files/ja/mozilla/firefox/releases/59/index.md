@@ -27,9 +27,9 @@ Firefox 59 は、米国時間 2018 年 3 月 13 日にリリースされまし�
 
 - {{cssxref("overscroll-behavior")}} プロパティと、このプロパティに関係するロングハンドプロパティである {{cssxref("overscroll-behavior-x")}} および {{cssxref("overscroll-behavior-y")}} を実装しました ([Firefox バグ 951793](https://bugzil.la/951793))。また、すべてのリリースで、デフォルトで有効化しました ([Firefox バグ 1428879](https://bugzil.la/1428879))。
 - "unusual elements" (置換要素のように、CSS のボックスの概念に従って描画されない要素) で {{cssxref("display")}} の値に `contents` を指定したときの動作を、仕様書に従って更新しました ([Firefox バグ 1427292](https://bugzil.la/1427292))。仕様で定められた正確な動作については、[Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) をご覧ください。
-- {{cssxref("position")}} の `sticky` を、適切な [HTML テーブル](/ja/docs/Learn/HTML/Tables) の部品 (例えば {{htmlelement("th")}} 要素) でサポートしました ([Firefox バグ 975644](https://bugzil.la/975644))。
+- {{cssxref("position")}} の `sticky` を、適切な [HTML テーブル](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) の部品 (例えば {{htmlelement("th")}} 要素) でサポートしました ([Firefox バグ 975644](https://bugzil.la/975644))。
 - {{cssxref("&lt;color&gt;")}} 値 (`rgb()`, `rgba()`, `hsl()`, `hsla()`) で {{cssxref("calc", "calc()")}} をサポートしました ([Firefox バグ 984021](https://bugzil.la/984021))。
-- [メディアクエリー](/ja/docs/Web/CSS/Media_Queries) の値で {{cssxref("calc", "calc()")}} をサポートしました ([Firefox バグ 1396057](https://bugzil.la/1396057))。
+- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries) の値で {{cssxref("calc", "calc()")}} をサポートしました ([Firefox バグ 1396057](https://bugzil.la/1396057))。
 - {{cssxref("@document")}} @-規則の使用を、ユーザースタイルシートと UA スタイルシートに限定しました ([Firefox バグ 1035091](https://bugzil.la/1035091))。
 - {{cssxref("font-optical-sizing")}} プロパティを実装しました ([Firefox バグ 1435692](https://bugzil.la/1435692))。
 
@@ -67,7 +67,8 @@ _変更なし。_
 
 - {{domxref("MediaStreamTrack")}} の {{domxref("MediaStreamTrack.muted")}} プロパティ、および {{domxref("MediaStreamTrack.mute_event", "mute")}} イベントと {{domxref("MediaStreamTrack.unmute_event", "unmute")}} イベント、さらにこれに対応するイベントハンドラーである {{domxref("MediaStreamTrack.mute_event", "onmute")}} と {{domxref("MediaStreamTrack.unmute_event", "onunmute")}} を実装しました。トラックの `muted` 状態は、トラックが今のところメディアデータを提供できないことを示します。
 
-  > **メモ:** トラックの `muted` 状態は、一般的に考えられているトラックのミュートやミュート解除として役に立つものではありません。代わりに {{domxref("MediaStreamTrack.enabled", "enabled")}} プロパティを使用します。`enabled` を `false` に設定すると、トラックは空のフレームだけを出力します。
+  > [!NOTE]
+  > トラックの `muted` 状態は、一般的に考えられているトラックのミュートやミュート解除として役に立つものではありません。代わりに {{domxref("MediaStreamTrack.enabled", "enabled")}} プロパティを使用します。`enabled` を `false` に設定すると、トラックは空のフレームだけを出力します。
 
 - Android 版 Firefox 59 で Apple の HTTPS Live Streaming (HLS) を、音声および映像の両方でサポートしました。この非標準プロトコルは、モバイル環境においてモバイルストリーミングのためにこのプロトコルを必要とするサイトの互換性を向上するためにサポートしました。現在、デスクトップ版 Firefox にこのプロトコルを実装する予定はありません。
 - それぞれの RTP ストリームのソースの情報を提供するため、{{domxref("RTCRtpReceiver")}} の {{domxref("RTCRtpReceiver.getContributingSources", "getContributingSources()")}} および {{domxref("RTCRtpReceiver.getSynchronizationSources", "getSynchronizationSources()")}} メソッドを実装しました。ただし、公開前に仕様書が変更されましたので、デフォルトで設定項目 `media.peerconnection.rtpsourcesapi.enable` によってこれらを無効化しました ([Firefox バグ 1363667](https://bugzil.la/1363667), [Firefox バグ 1430213](https://bugzil.la/1430213), [Firefox バグ 1433236](https://bugzil.la/1433236))。

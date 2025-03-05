@@ -58,7 +58,8 @@ Para garantizar el formato adecuado y el resaltado de sintaxis de los bloques de
 
 Si el bloque de código es pseudocódigo, la salida de un comando, o de alguna manera no es un lenguaje de programación, establece explícitamente el lenguaje como `plain`.
 
-> **Advertencia:** si el lenguaje deseado aún no es compatible con MDN, **no** establezcas el lenguaje de un bloque de código en un lenguaje similar, ya que hacerlo puede tener efectos secundarios no deseados con el formato de Prettier y el resaltado de sintaxis.
+> [!WARNING]
+> Si el lenguaje deseado aún no es compatible con MDN, **no** establezcas el lenguaje de un bloque de código en un lenguaje similar, ya que hacerlo puede tener efectos secundarios no deseados con el formato de Prettier y el resaltado de sintaxis.
 
 ### Longitud de línea de código
 

@@ -13,7 +13,7 @@ l10n:
 
 ### HTML
 
-- `<iframe>` 现已支持[懒加载](/zh-CN/docs/Web/Performance/Lazy_loading)，这允许开发者提示特定的 `<iframe>` 仅在可见时才进行加载。这可以减少页面加载时需要获取的资源（某些 `<iframe>` 可能根本不需要获取）以加快初始加载的时间。提示可以通过 `<iframe>` 元素上的 [`loading`](/zh-CN/docs/Web/HTML/Element/iframe#loading) 属性或 JavaScript 中的 {{domxref("HTMLIFrameElement.loading")}} 属性提供。（[Firefox bug 1622090](https://bugzil.la/1622090)）。
+- `<iframe>` 现已支持[懒加载](/zh-CN/docs/Web/Performance/Guides/Lazy_loading)，这允许开发者提示特定的 `<iframe>` 仅在可见时才进行加载。这可以减少页面加载时需要获取的资源（某些 `<iframe>` 可能根本不需要获取）以加快初始加载的时间。提示可以通过 `<iframe>` 元素上的 [`loading`](/zh-CN/docs/Web/HTML/Element/iframe#loading) 属性或 JavaScript 中的 {{domxref("HTMLIFrameElement.loading")}} 属性提供。（[Firefox bug 1622090](https://bugzil.la/1622090)）。
 
 ### CSS
 
@@ -81,7 +81,8 @@ l10n:
 
 - 修复了当 manifest.json 的 `background` 键包含 `service_worker` 和 `scripts` 声明时会导致后台页面无法启动的错误（[Firefox bug 1860304](https://bugzil.la/1860304)）。
 
-  > **备注：** 顺便说一下，Chrome 121 中的更改会导致在指定了 `service_worker` 属性时忽略 `scripts` 属性。以前，Chrome 拒绝加载同时包含这两个属性的扩展（[Chromium bug 1418934](https://crbug.com/1418934)）。有关更多信息，请参阅[清单 `background` 键的浏览器支持](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background#浏览器支持)。
+  > [!NOTE]
+  > 顺便说一下，Chrome 121 中的更改会导致在指定了 `service_worker` 属性时忽略 `scripts` 属性。以前，Chrome 拒绝加载同时包含这两个属性的扩展（[Chromium bug 1418934](https://crbug.com/1418934)）。有关更多信息，请参阅[清单 `background` 键的浏览器支持](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background#浏览器支持)。
 
 ## 更早期的版本
 

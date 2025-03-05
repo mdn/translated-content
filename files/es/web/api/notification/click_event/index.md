@@ -5,7 +5,7 @@ slug: Web/API/Notification/click_event
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-La propiedad `onclick` de la interfaz {{domxref("Notification")}} especifica un escuchador de eventos para recibir eventos [`click`](/es/docs/Web/Reference/Events/click). Estos eventos ocurren cuando el usuario hace click sobre el {{domxref("Notification")}} mostrado.
+La propiedad `onclick` de la interfaz {{domxref("Notification")}} especifica un escuchador de eventos para recibir eventos [`click`](/es/docs/Web/API/Element/click_event). Estos eventos ocurren cuando el usuario hace click sobre el {{domxref("Notification")}} mostrado.
 
 ## Sintaxis
 

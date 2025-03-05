@@ -7,7 +7,46 @@ slug: Web/HTML/Element/Heading_Elements
 
 **`<h1>`** 到 **`<h6>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表六個級別的章節標題。`<h1>` 是最高的章節級別，`<h6>` 是最低的。默認情況下，所有標題元素在佈局中創建一個[區塊級](/zh-TW/docs/Glossary/Block-level_content)區域，從新行開始並佔據其包含區塊中可用的全部寬度。
 
-{{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;h1-h6&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Beetles</h1>
+<h2>External morphology</h2>
+<h3>Head</h3>
+<h4>Mouthparts</h4>
+<h3>Thorax</h3>
+<h4>Prothorax</h4>
+<h4>Pterothorax</h4>
+```
+
+```css interactive-example
+h1,
+h2,
+h3,
+h4 {
+  margin: 0.1rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding-left: 20px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  padding-left: 40px;
+}
+
+h4 {
+  font-size: 1rem;
+  font-style: italic;
+  padding-left: 60px;
+}
+```
 
 ## 屬性
 
@@ -23,7 +62,8 @@ slug: Web/HTML/Element/Heading_Elements
 
 雖然 HTML 標準允許在一個頁面上使用多個 `<h1>` 元素（只要它們不是[嵌套](#嵌套)的），但這不被認為是最佳實踐。一個頁面通常應該只有一個 `<h1>` 元素，用於描述頁面的內容（類似於文件的 [`<title> 元素`](/zh-TW/docs/Web/HTML/Element/title)）。
 
-> **備註：** 在舊版 HTML 標準中允許將多個 `<h1>` 元素嵌套在嵌套的[章節元素](/zh-TW/docs/Web/HTML/Element#content_sectioning)中。然而，這從未被視為最佳實踐，現在已不符合規範。詳情請參見 [There Is No Document Outline Algorithm](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html)。
+> [!NOTE]
+> 在舊版 HTML 標準中允許將多個 `<h1>` 元素嵌套在嵌套的[章節元素](/zh-TW/docs/Web/HTML/Element#content_sectioning)中。然而，這從未被視為最佳實踐，現在已不符合規範。詳情請參見 [There Is No Document Outline Algorithm](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html)。
 
 請優先使用每頁僅有一個 `<h1>`，並且[嵌套標題](#嵌套)而不跳級。
 

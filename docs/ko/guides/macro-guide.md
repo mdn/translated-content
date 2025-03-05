@@ -29,5 +29,3 @@ EmbedLiveSample/MacroLiveSampleError 오류 찾는 [스크립트 링크 참고](
 ## 매크로 수정 및 번역
 
 MDN은 초창기에 [kuma](https://github.com/mdn/kuma) 플랫폼으로 MDN 웹 문서를 구동해왔습니다. 그 당시 사용한 많은 매크로들이 레거시로 남아 있습니다. 레거시로 남은 매크로를 [Kumascript](https://github.com/mdn/kumascript)라고 부릅니다. 현재는 [yari 저장소 내의 kumascript 폴더](https://github.com/mdn/yari/tree/main/kumascript)로 대체되어 사용되고 있습니다([참고](https://egas.tistory.com/168#%EB%AF%B8%EC%82%AC%EC%9A%A9-macro-%EC%A0%9C%EA%B1%B0)).
-
-만약 `{{DOMAttributeMethods}}` 매크로를 수정하자고 한다면 `kumascript/macros/DOMAttributeMethods.ejs`를 확인하면 됩니다([관련 PR](https://github.com/mdn/yari/pull/10502)).

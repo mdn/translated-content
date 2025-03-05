@@ -9,7 +9,21 @@ slug: Web/JavaScript/Reference/Global_Objects/undefined
 
 {{js_property_attributes(0,0,0)}}
 
-{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - undefined")}}
+
+```js interactive-example
+function test(t) {
+  if (t === undefined) {
+    return "Undefined value!";
+  }
+  return t;
+}
+
+let x;
+
+console.log(test(x));
+// Expected output: "Undefined value!"
+```
 
 ## 構文
 
@@ -25,7 +39,8 @@ undefined;
 
 まだ値が代入されていない変数は `undefined` 型となります。評価しようとしている変数に値が代入されていない場合、メソッドや文も `undefined` を返します。値を {{jsxref("Statements/return", "return")}} しない関数も `undefined` を返します。
 
-> **メモ:** グローバルスコープ以外のスコープでは `undefined` を{{Glossary("identifier", "識別子")}} (変数名) として使うことができますが (`undefined` は{{jsxref("Lexical_grammar", "予約語", "", 1)}}でないため)、コードの管理やデバッグが困難になるためおすすめできません。
+> [!NOTE]
+> グローバルスコープ以外のスコープでは `undefined` を{{Glossary("identifier", "識別子")}} (変数名) として使うことができますが (`undefined` は{{jsxref("Lexical_grammar", "予約語", "", 1)}}でないため)、コードの管理やデバッグが困難になるためおすすめできません。
 >
 > ```js example-bad
 > //こんなことはしないこと！
@@ -57,7 +72,8 @@ if (x === undefined) {
 }
 ```
 
-> **メモ:** ここでは、標準の等価演算子ではなく厳密等価演算子を使わないといけません。厳密等価演算子とは違い、 `x == undefined` は、 `x` が `null` であるかどうかもチェックするからです。 `null` は `undefined` と等しくありません。
+> [!NOTE]
+> ここでは、標準の等価演算子ではなく厳密等価演算子を使わないといけません。厳密等価演算子とは違い、 `x == undefined` は、 `x` が `null` であるかどうかもチェックするからです。 `null` は `undefined` と等しくありません。
 >
 > 詳しくは、{{jsxref("Operators", "比較演算子","",1)}}を参照してください。
 

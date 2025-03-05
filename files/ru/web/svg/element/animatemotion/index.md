@@ -7,75 +7,52 @@ slug: Web/SVG/Element/animateMotion
 
 Элемент **`<animateMotion>`** вызывает перемещение ссылочного элемента вдоль пути движения.
 
+## Пример
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+```
+
+```html
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <path
+    fill="none"
+    stroke="lightgrey"
+    d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+
+  <circle r="5" fill="red">
+    <animateMotion
+      dur="10s"
+      repeatCount="indefinite"
+      path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+  </circle>
+</svg>
+```
+
+{{EmbedLiveSample('Пример', 150, '100%')}}
+
 ## Контекст использования
 
 {{svginfo}}
 
 ## Атрибуты
 
-### Глобальные атрибуты
-
-- [Условные атрибуты обработки](/ru/docs/SVG/Attribute#Conditional_processing_attributes)
-- [Основные атрибуты](/ru/docs/SVG/Attribute#Core_attributes)
-- [Атрибуты события анимации](/ru/docs/SVG/Attribute#Animation_event_attributes)
-- [Атрибуты Xlink](/ru/docs/SVG/Attribute#XLink_attributes)
-- [Атрибуты времени анимации](/ru/docs/SVG/Attribute#Animation_timing_attributes)
-- [Величина атрибутов анимации](/ru/docs/SVG/Attribute#Animation_value_attributes)
-- [Атрибуты добавления анимации](/ru/docs/SVG/Attribute#Animation_addition_attributes)
-- {{SVGAttr("externalResourcesRequired")}}
-
-### Собственные атрибуты
-
-- {{SVGAttr("calcMode")}}
-- {{SVGAttr("path")}}
 - {{SVGAttr("keyPoints")}}
+- {{SVGAttr("path")}}
 - {{SVGAttr("rotate")}}
-- {{SVGAttr("origin")}}
 
 ## DOM интерфейс
 
 Этот элемент реализует интерфейс {{domxref("SVGAnimateMotionElement")}}.
 
-## Пример
-
-### SVG
-
-```html
-<?xml version="1.0"?>
-<svg
-  width="120"
-  height="120"
-  viewBox="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg"
-  version="1.1"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- Рисуем серый контур движения с двумя
-       маленькими кружками в ключевых точках -->
-  <path
-    id="theMotionPath"
-    stroke="lightgrey"
-    stroke-width="2"
-    fill="none"
-    d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110" />
-  <circle cx="10" cy="110" r="3" fill="lightgrey" />
-  <circle cx="110" cy="10" r="3" fill="lightgrey" />
-
-  <!-- Рисуем красный круг, который будет перемещаться
-       вдоль траектории движения. -->
-  <circle cx="" cy="" r="5" fill="red">
-    <!-- Определяем анимацию пути движения -->
-    <animateMotion dur="6s" repeatCount="indefinite">
-      <mpath xlink:href="#theMotionPath" />
-    </animateMotion>
-  </circle>
-</svg>
-```
-
-### Результат
-
-{{EmbedLiveSample("Пример", 120, 120)}}
-
-## Характеристики
+## Спецификации
 
 {{Specifications}}
 

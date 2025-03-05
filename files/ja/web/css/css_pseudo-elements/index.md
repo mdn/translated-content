@@ -2,7 +2,7 @@
 title: CSS 擬似要素
 slug: Web/CSS/CSS_pseudo-elements
 l10n:
-  sourceCommit: cebbd9095ac12557c55157355181672027fffc14
+  sourceCommit: 6b730e3cfdf0f51940b44efa71bd59c84ce76e71
 ---
 
 {{CSSRef}}
@@ -61,7 +61,6 @@ l10n:
 
   - {{cssxref("::cue")}}
   - {{cssxref("::cue", "::cue()")}}
-  - {{cssxref("::cue-region")}}
 
 - [CSS スコープ化](/ja/docs/Web/CSS/CSS_scoping)モジュール
 
@@ -73,6 +72,14 @@ l10n:
 - [CSS シャドウ部品](/ja/docs/Web/CSS/CSS_shadow_parts)モジュール
 
   - {{CSSXref("::part")}}
+
+- [CSS ビュー遷移](/ja/docs/Web/CSS/CSS_view_transitions)モジュール
+
+  - {{cssxref("::view-transition")}} {{Experimental_Inline}}
+  - {{cssxref("::view-transition-image-pair()")}} {{Experimental_Inline}}
+  - {{cssxref("::view-transition-group()")}} {{Experimental_Inline}}
+  - {{cssxref("::view-transition-new()")}} {{Experimental_Inline}}
+  - {{cssxref("::view-transition-old()")}} {{Experimental_Inline}}
 
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
 
@@ -92,7 +99,7 @@ l10n:
   - {{cssxref("content")}} プロパティ
   - {{cssxref("quotes")}} プロパティ
 
-- [テキストフラグメント](/ja/docs/Web/Text_fragments)
+- [テキストフラグメント](/ja/docs/Web/URI/Fragment/Text_fragments)
 
 - {{DOMXref("AnimationEvent.pseudoElement")}} プロパティ
 - {{DOMXref("KeyframeEffect.pseudoElement")}} プロパティ

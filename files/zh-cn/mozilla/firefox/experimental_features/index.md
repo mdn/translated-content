@@ -11,7 +11,8 @@ slug: Mozilla/Firefox/Experimental_features
 
 可以使用 [Firefox 配置编辑器](https://support.mozilla.org/zh-CN/kb/about-config-editor-firefox)（在 Firefox 地址栏中输入 `about:config`）通过修改下面列出的相关首选项来启用或禁用实验特性。
 
-> **备注：** 对编者的信息——当在这些表格添加特性时，请尝试使用 `[Firefox bug <number>](https://bugzil.la/<number>)` 包含指向相关 bug 的链接。
+> [!NOTE]
+> 对编者的信息——当在这些表格添加特性时，请尝试使用 `[Firefox bug <number>](https://bugzil.la/<number>)` 包含指向相关 bug 的链接。
 
 ## HTML
 
@@ -1298,7 +1299,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 
 #### AVIF 严格合规性
 
-`image.avif.compliance_strictness` 偏好设置可用于控制处理 [AVIF](/zh-CN/docs/Web/Media/Formats/Image_types#avif_图像) 图像时应用的*严格程度*。这允许 Firefox 用户显示在某些其他浏览器上呈现的图像，即使这些图像并不严格符合标准。
+`image.avif.compliance_strictness` 偏好设置可用于控制处理 [AVIF](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#avif_图像) 图像时应用的*严格程度*。这允许 Firefox 用户显示在某些其他浏览器上呈现的图像，即使这些图像并不严格符合标准。
 
 允许的值为：
 
@@ -1809,46 +1810,6 @@ CSS 更新包括：
   </tbody>
 </table>
 
-#### HTML 净化 API
-
-{{domxref('HTML Sanitizer API')}} 允许开发人员获取不受信任的 HTML 字符串，并对其进行净化，以便安全地插入到文档的 DOM 中。目前仍在考虑每个配置属性中的默认元素（需要进行净化的元素）。因此，配置参数尚未实现（请参阅{{domxref('Sanitizer.sanitizer()', '构造函数')}}获取更多信息）。详情请参见 [Firefox bug 1673309](https://bugzil.la/1673309)。
-
-<table>
-  <thead>
-    <tr>
-      <th>更新通道</th>
-      <th>添加的版本</th>
-      <th>默认启用？</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>84</td>
-      <td>否</td>
-    </tr>
-    <tr>
-      <th>开发者版</th>
-      <td>84</td>
-      <td>否</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>84</td>
-      <td>否</td>
-    </tr>
-    <tr>
-      <th>发行版</th>
-      <td>84</td>
-      <td>否</td>
-    </tr>
-    <tr>
-      <th>首选项名称</th>
-      <td colspan="2"><code>dom.security.sanitizer.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 #### GeometryUtils 方法：convertPointFromNode()、convertRectFromNode() 和 convertQuadFromNode()
 
 `GeometryUtils` 方法 `convertPointFromNode()`、`convertRectFromNode()` 和 `convertQuadFromNode()` 将给定的点、矩形或四边形从调用它们的 {{domxref("Node")}} 映射到另一个节点。（详见 [Firefox bug 918189](https://bugzil.la/918189)）。
@@ -2326,7 +2287,8 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
 
 [`Clear-Site-Data`](/zh-CN/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP 响应标头 `cache` 指令会清除请求网站的浏览器缓存。
 
-> **备注：** 这原本在默认情况下是启用的，但在版本 94（[Firefox bug 1729291](https://bugzil.la/1729291)）中被置于首选项之后。
+> [!NOTE]
+> 这原本在默认情况下是启用的，但在版本 94（[Firefox bug 1729291](https://bugzil.la/1729291)）中被置于首选项之后。
 
 <table>
   <thead>

@@ -7,7 +7,7 @@ slug: Web/API/Element/mouseleave_event
 
 Событие `mouseleave` срабатывает, когда курсор манипулятора (обычно мыши) перемещается за границы элемента.
 
-`mouseleave` и {{event('mouseout')}} схожи, но отличаются тем, что `mouseleave` не всплывает, а `mouseout` всплывает.
+`mouseleave` и [`mouseout`](/ru/docs/Web/API/Element/mouseout_event) схожи, но отличаются тем, что `mouseleave` не всплывает, а `mouseout` всплывает.
 Это значит, что `mouseleave` срабатывает, когда курсор выходит за границы элемента _и_ всех его дочерних элементов, в то время как `mouseout` срабатывает, когда курсор покидает границы элемента _или_ одного из его дочерних элементов (даже если курсор все ещё находится в пределах элемента).
 
 | ![Диаграмма поведения mouseleave](mouseleave.png)                                                                                                                                                                                                                                 | ![Диаграмма поведения mouseout](mouseout.png)                                                                                                                                                 |
@@ -55,7 +55,7 @@ slug: Web/API/Element/mouseleave_event
 
 ## Примеры
 
-The [`mouseout`](/ru/docs/Web/Events/mouseout#Example) documentation has an example illustrating the difference between `mouseout` and `mouseleave`.
+The [`mouseout`](/ru/docs/Web/API/Element/mouseout_event#example) documentation has an example illustrating the difference between `mouseout` and `mouseleave`.
 
 The following example illustrates how to use `mouseout`, to simulate the principle of event delegation for the mouseleave event.
 
@@ -139,13 +139,13 @@ The following example illustrates how to use `mouseout`, to simulate the princip
 
 ## Смотрите также
 
-- {{Event("mousedown")}}
-- {{Event("mouseup")}}
-- {{Event("mousemove")}}
-- {{Event("click")}}
-- {{Event("dblclick")}}
-- {{Event("mouseover")}}
-- {{Event("mouseout")}}
-- {{Event("mouseenter")}}
-- {{Event("mouseleave")}}
-- {{Event("contextmenu")}}
+- [`mousedown`](/ru/docs/Web/API/Element/mousedown_event)
+- [`mouseup`](/ru/docs/Web/API/Element/mouseup_event)
+- [`mousemove`](/ru/docs/Web/API/Element/mousemove_event)
+- [`click`](/ru/docs/Web/API/Element/click_event)
+- [`dblclick`](/ru/docs/Web/API/Element/dblclick_event)
+- [`mouseover`](/ru/docs/Web/API/Element/mouseover_event)
+- [`mouseout`](/ru/docs/Web/API/Element/mouseout_event)
+- [`mouseenter`](/ru/docs/Web/API/Element/mouseenter_event)
+- [`mouseleave`](/ru/docs/Web/API/Element/mouseleave_event)
+- [`contextmenu`](/ru/docs/Web/API/Element/contextmenu_event)

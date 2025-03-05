@@ -2,7 +2,7 @@
 title: グリッドレイアウトと他のレイアウト方法との関係
 slug: Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
 l10n:
-  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
+  sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
 ---
 
 {{CSSRef}}
@@ -391,7 +391,7 @@ CSS グリッドレイアウトと[CSS フレックスボックスレイアウ�
 
 絶対位置指定された子がグリッドコンテナーを親に持つが、そのコンテナーが新たな位置指定コンテキストを作成しない場合は、前述の例のようにフローから外されます。位置指定コンテキストは、他のレイアウト方式と共通するように、位置指定コンテキストを作成する要素であれば何でも構いません。今回の例では、上記のラッパーから `position: relative` を削除すると、この画像のように、ビューポートからの位置指定コンテキストになります。
 
-![グリッドコンテナを親とするイメージ](2_abspos_example.png)
+![グリッドコンテナーを親とするイメージ](2_abspos_example.png)
 
 この場合も、サイズ調整や他のアイテムが自動配置される際に、アイテムはグリッドレイアウトに参加しなくなります。
 
@@ -453,8 +453,8 @@ CSS グリッドレイアウトと[CSS フレックスボックスレイアウ�
   position: absolute;
   top: 40px;
   left: 40px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: rgb(255 255 255 / 50%);
+  border: 1px solid rgb(0 0 0 / 50%);
   color: #000;
   padding: 10px;
 }

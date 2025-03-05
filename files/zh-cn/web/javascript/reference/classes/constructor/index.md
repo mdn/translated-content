@@ -9,9 +9,23 @@ l10n:
 
 **`constructor`** 是一种用于创建和初始化 [`class`](/zh-CN/docs/Web/JavaScript/Reference/Statements/class) 对象实例的特殊方法。
 
-> **备注：** 本页介绍 `constructor` 语法。关于所有对象的 `constructor` 属性，请参见 {{jsxref("Object.prototype.constructor")}}。
+> [!NOTE]
+> 本页介绍 `constructor` 语法。关于所有对象的 `constructor` 属性，请参见 {{jsxref("Object.prototype.constructor")}}。
 
-{{EmbedInteractiveExample("pages/js/classes-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Classes Constructor")}}
+
+```js interactive-example
+class Polygon {
+  constructor() {
+    this.name = "Polygon";
+  }
+}
+
+const poly1 = new Polygon();
+
+console.log(poly1.name);
+// Expected output: "Polygon"
+```
 
 ## 语法
 
@@ -61,7 +75,8 @@ constructor(...args) {
 }
 ```
 
-> **备注：** 像上面这样的显式构造函数与默认构造函数的区别在于，后者实际上并不通过[参数展开](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)来调用[数组迭代器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)。
+> [!NOTE]
+> 像上面这样的显式构造函数与默认构造函数的区别在于，后者实际上并不通过[参数展开](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)来调用[数组迭代器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)。
 
 这样代码才能正常工作：
 

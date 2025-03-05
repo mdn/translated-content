@@ -44,7 +44,7 @@ Content-Security-Policy: sandbox <value>;
 - `allow-orientation-lock`
   - : 允许嵌入式浏览上下文禁用锁定屏幕方向的功能。
 - `allow-pointer-lock`
-  - : 允许嵌入式浏览上下文使用[Pointer Lock API](/zh-CN/docs/WebAPI/Pointer_Lock)。
+  - : 允许嵌入式浏览上下文使用[Pointer Lock API](/zh-CN/docs/Web/API/Pointer_Lock_API)。
 - `allow-popups`
   - : 允许弹出窗口（像`window.open`，`target="_blank"`，`showModalDialog`）。如果未使用此关键字，则该功能将无提示失败。
 - `allow-popups-to-escape-sandbox`

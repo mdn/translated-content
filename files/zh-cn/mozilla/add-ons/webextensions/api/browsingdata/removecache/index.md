@@ -52,7 +52,8 @@ browser.browsingData.removeCache({}).then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.browsingData`](https://developer.chrome.google.cn/docs/extensions/reference/api/browsingData) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -9,7 +9,73 @@ l10n:
 
 **`<tr>`** は [HTML](/ja/docs/Web/HTML) の要素で、表内でセルの行を定義します。行のセルには {{HTMLElement("td")}} （データセル）および {{HTMLElement("th")}} （見出しセル）要素をを混在させることができます。
 
-{{EmbedInteractiveExample("pages/tabbed/tr.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;tr&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Alien football stars
+  </caption>
+  <tr>
+    <th scope="col">Player</th>
+    <th scope="col">Gloobles</th>
+    <th scope="col">Za'taak</th>
+  </tr>
+  <tr>
+    <th scope="row">TR-7</th>
+    <td>7</td>
+    <td>4,569</td>
+  </tr>
+  <tr>
+    <th scope="row">Khiresh Odo</th>
+    <td>7</td>
+    <td>7,223</td>
+  </tr>
+  <tr>
+    <th scope="row">Mia Oolong</th>
+    <td>9</td>
+    <td>6,219</td>
+  </tr>
+</table>
+```
+
+```css interactive-example
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+th[scope="col"] {
+  background-color: #505050;
+  color: #fff;
+}
+
+th[scope="row"] {
+  background-color: #d6ecd4;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-of-type(even) {
+  background-color: #eee;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+```
 
 セルをどのように列に収める（または列にまたがる）かを制御できるようにするため、`<th>` および `<td>` で [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性をサポートします。これはセルの幅をいくつの列にするかを指定でき、既定値は 1 です。同様に、セルが複数の行にまたがることを示す [`rowspan`](/ja/docs/Web/HTML/Element/td#rowspan) 属性も使用できます。
 
@@ -40,7 +106,8 @@ l10n:
 
     `align` の値が明示的に設定されていない場合は、親ノードの値を継承します。
 
-    > **メモ:** 行内のセルで配置方法を指定するには、廃止された `align` 属性の代わりに CSS の {{CSSxRef("text-align")}} プロパティで `left`, `center`, `right`, `justify` を指定してください。文字ベースの配置方法を適用するには、 CSS の {{CSSxRef("text-align")}} プロパティに揃える文字 (`"."` や `","` など) を設定してください。
+    > [!NOTE]
+    > 行内のセルで配置方法を指定するには、廃止された `align` 属性の代わりに CSS の {{CSSxRef("text-align")}} プロパティで `left`, `center`, `right`, `justify` を指定してください。文字ベースの配置方法を適用するには、 CSS の {{CSSxRef("text-align")}} プロパティに揃える文字 (`"."` や `","` など) を設定してください。
 
 - `bgcolor` {{deprecated_inline}}
 
@@ -52,13 +119,15 @@ l10n:
 
   - : 文字列で、行のそれぞれの列のセルで揃える文字を設定します（同一の文字を使用して、それぞれの行の中心がほかの行と揃えられます）。典型的な値に、数値や金額を揃えようとするときのピリオド (`"."`) やカンマ (`","`) があります。 [`align`](#align) 属性が `char` ではない場合は、この属性は無視されます。
 
-    > **メモ:** この属性は廃止され、かつほとんど実装されていませんでした。 [`char`](#char) と同様の効果を得るには、 CSS の {{CSSxRef("text-align")}} プロパティの値として `char` の値を使用します（例えば `text-align: "."`）。
+    > [!NOTE]
+    > この属性は廃止され、かつほとんど実装されていませんでした。 [`char`](#char) と同様の効果を得るには、 CSS の {{CSSxRef("text-align")}} プロパティの値として `char` の値を使用します（例えば `text-align: "."`）。
 
 - `charoff` {{deprecated_inline}}
 
   - : 文字列で、 `char` 属性で指定した揃え文字から行のデータをオフセットする文字数を示します。例えば通貨単位の 100 分の 1 の値を使用する通貨 (例えばドルであり、100 セントに分割されます) の金額を表示するときは、一般的に値 2 を指定するでしょう。 `char` に `"."` を設定することと組み合わせると、列内の値が小数点できれいに揃い、セントの数値が小数点の右側へ適切に表示されます。
 
-    > **メモ:** この属性は廃止されただけでなく、ほとんど実装されていませんでした。
+    > [!NOTE]
+    > この属性は廃止されただけでなく、ほとんど実装されていませんでした。
 
 - `valign` {{deprecated_inline}}
 

@@ -42,7 +42,7 @@ l10n:
 - 使用可能な [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) データベースを列挙する [`IDBFactory.databases()`](/ja/docs/Web/API/IDBFactory/databases) をサポートしました ([Firefox bug 934640](https://bugzil.la/934640))。
 - トランザクションを作成した際に設定した、トランザクションの永続性のヒントを確認できる [`IDBTransaction.durability`](/ja/docs/Web/API/IDBTransaction/durability) が使用可能になりました ([Firefox bug 1878143](https://bugzil.la/1878143))。
 - [`URL.parse()`](/ja/docs/Web/API/URL/parse_static) 静的メソッドで [`URL`](/ja/docs/Web/API/URL) オブジェクトの生成をサポートしました。これは渡したパラメーターが有効な `URL` でない場合に `null` を返しますので、[`URL` コンストラクター](/ja/docs/Web/API/URL/URL) で `URL` オブジェクトを生成するための、例外を発生させない代替手段として使用できます ([Firefox bug 1823354](https://bugzil.la/1823354))。
-- [Screen Wake Lock API](/ja/docs/Web/API/Screen_Wake_Lock_API) をサポートしました。ウェブアプリケーションがアクティブな間は、スクリーンを暗くしたりロックしたりしないように要求できます。これはナビゲーションや読書のアプリケーション、および通常は起動したままにして使用中は通常のタッチ操作を受け取らない、その他のアプリケーションで特に役に立ちます。この API は安全なコンテキストで {{domxref("Navigator.wakeLock")}} を通して使用でき、{{domxref("WakeLock")}} を返します。wake lock の状態を監視したり手動で解放したりするために使用できる {{domxref("WakeLockSentinel")}} を要求できます ([Firefox bug 1589554](https://bugzil.la/1589554)、[Firefox bug 1874849](https://bugzil.la/1874849))。
+- [Screen Wake Lock API](/ja/docs/Web/API/Screen_Wake_Lock_API) をサポートしました。ウェブアプリケーションがアクティブな間は、スクリーンを暗くしたりロックしたりしないように要求できます。これはナビゲーションや読書のアプリケーション、および通常は起動したままにして使用中は通常のタッチ操作を受け取らない、その他のアプリケーションで特に役に立ちます。この API は保護されたコンテキストで {{domxref("Navigator.wakeLock")}} を通して使用でき、{{domxref("WakeLock")}} を返します。wake lock の状態を監視したり手動で解放したりするために使用できる {{domxref("WakeLockSentinel")}} を要求できます ([Firefox bug 1589554](https://bugzil.la/1589554)、[Firefox bug 1874849](https://bugzil.la/1874849))。
 - [`RTCIceCandidate`](/ja/docs/Web/API/RTCIceCandidate) で、未実装の `relayProtocol` および `url` プロパティを除くすべてのプロパティやメソッドをサポートして、仕様書に準拠するようになりました。`RTCIceCandidate` のプロパティで以下の変更があります:
 
   - 以下のプロパティは読み取り専用になりました: [`candidate`](/ja/docs/Web/API/RTCIceCandidate/candidate)、[`sdpMid`](/ja/docs/Web/API/RTCIceCandidate/sdpMid)、[`sdpMLineIndex`](/ja/docs/Web/API/RTCIceCandidate/sdpMLineIndex)、[`usernameFragment`](/ja/docs/Web/API/RTCIceCandidate/usernameFragment)。
@@ -68,7 +68,7 @@ l10n:
 
 #### WebDriver BiDi
 
-- ネットワーク要求の傍受を特定のトップレベルブラウジングコンテキストに限定するための `contexts` 引数を、`network.addIntercept` コマンドに追加しました ([Firefox bug 1882260](https://bugzil.la/1882260))。
+- ネットワーク要求の傍受を特定のトップレベル閲覧コンテキストに限定するための `contexts` 引数を、`network.addIntercept` コマンドに追加しました ([Firefox bug 1882260](https://bugzil.la/1882260))。
 - `session.subscribe` および `session.unsubscribe` コマンドで、`events` または `contexts` 引数の値が空の配列であるときに `invalid argument` エラーが発生するようになりました ([Firefox bug 1887871](https://bugzil.la/1887871))。
 - `storage.getCookies` コマンドの実装を、Gecko の既定の Cookie の動作に合わせて更新しました。これは CDP 実装だけが設定すると想定していた、設定項目 `network.cookie.cookieBehavior` のユーザー設定値を削除できます ([Firefox bug 1879503](https://bugzil.la/1879503))。
 - もはや必要ないため、`browsingContext.locateNodes` コマンドの `ownership` および `sandbox` 引数を削除しました ([Firefox bug 1884935](https://bugzil.la/1884935))。

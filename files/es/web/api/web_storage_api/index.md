@@ -16,7 +16,8 @@ Los dos mecanismos en el almacenamiento web son los siguientes:
 
 Estos mecanismos están disponibles mediante las propiedades [`Window.sessionStorage`](/es/docs/Web/API/Window/sessionStorage) y [`Window.localStorage`](/es/docs/Web/API/Window/localStorage) (dicho con más precisión, en navegadores con soporte, el objeto `Window` implementa los objetos `WindowLocalStorage` y `WindowSessionStorage`, en los cuales se basan las propiedades `localStorage` y `sessionStorage`). Al invocar uno de éstos, se creará una instancia del objeto [`Storage`](/es/docs/Web/API/Storage), a través del cual los datos pueden ser creados, recuperados y eliminados. sessionStorage y localStorage utilizan un objeto de almacenamiento diferente según su origen — funcionan y son controlados por separado.
 
-> **Nota:** Acceder al Almacenamiento web desde IFrames de terceros está prohibido si el usuario tiene [deshabilitadas las cookies de terceros](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (Firefox implementa este comportamiento a partir de la [versión 43](/es/docs/Mozilla/Firefox/Releases/43)).
+> [!NOTE]
+> Acceder al Almacenamiento web desde IFrames de terceros está prohibido si el usuario tiene [deshabilitadas las cookies de terceros](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (Firefox implementa este comportamiento a partir de la [versión 43](/es/docs/Mozilla/Firefox/Releases/43)).
 
 ## Interfaces de almacenamiento web
 

@@ -15,7 +15,8 @@ l10n:
 
 提供候选者来源的 IP 地址的字符串。
 
-> **备注：** 如果候选者的 `port`（端口）为 `null`, 并且{{Glossary("user agent", "用户代理")}}支持端口，将这个候选者传递给 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 将失败，并抛出 `OperationError` 异常。
+> [!NOTE]
+> 如果候选者的 `port`（端口）为 `null`, 并且{{Glossary("user agent", "用户代理")}}支持端口，将这个候选者传递给 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 将失败，并抛出 `OperationError` 异常。
 
 ## 安全注意事项
 

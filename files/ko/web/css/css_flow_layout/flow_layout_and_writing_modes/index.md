@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes
 
 어떻게 일반 대열이 동작하는지 자세히 설명하는 CSS 2.1 규격은 가로쓰기 모드라고 가정한다. [레이아웃](/ko/docs/Web/CSS/CSS_Flow_Layout/일반_대열_속_블록_및_인라인_레이아웃) 속성은 세로 쓰기 모드에서 동일한 방식으로 작동해야 한다. 이 안내서는 서로 다른 문서 작성 모드에서 사용될 때 대열 레이아웃이 어떻게 작동하는지 살펴 봅니다.
 
-이것은 CSS에 포함된 쓰기 모드 사용에 대한 종합적인 안내서가 아니다. 이 글의 목적은 대열 레이아웃이 쓰기 모드와 예상치 못한 방식으로 상호 작용하는 지점을 문서화하는 것이다. 이 문서의 [참조 항목](#See_Also)과 [외부 리소스](#External_Resources) 섹션은 쓰기 모드 관련 더 많은 링크를 제공하고 있다.
+이것은 CSS에 포함된 쓰기 모드 사용에 대한 종합적인 안내서가 아니다. 이 글의 목적은 대열 레이아웃이 쓰기 모드와 예상치 못한 방식으로 상호 작용하는 지점을 문서화하는 것이다. 이 문서의 [참조 항목](#see_also)과 [외부 리소스](#external_resources) 섹션은 쓰기 모드 관련 더 많은 링크를 제공하고 있다.
 
 ## 쓰기 모드 규격
 
@@ -63,7 +63,7 @@ CSS 쓰기 모드 수준 3 규격은 문서의 쓰기 모드가 대열 레이아
 
 {{EmbedGHLiveSample("css-examples/flow/writing-modes/inline-size.html", '100%', 720)}}
 
-[CSS 논리적 속성](/ko/docs/Web/CSS/CSS_Logical_Properties) 규격은 여백, 패딩 및 테두리를 제어하는 속성의 논리적 버전뿐만 아니라 일반적으로 물리적 방향 지정을 위해 대상 요소에 전형적으로 사용되는 다른 매핑을 포함하고 있다.
+[CSS 논리적 속성](/ko/docs/Web/CSS/CSS_logical_properties_and_values) 규격은 여백, 패딩 및 테두리를 제어하는 속성의 논리적 버전뿐만 아니라 일반적으로 물리적 방향 지정을 위해 대상 요소에 전형적으로 사용되는 다른 매핑을 포함하고 있다.
 
 ## 요약정리
 
@@ -71,7 +71,7 @@ CSS 쓰기 모드 수준 3 규격은 문서의 쓰기 모드가 대열 레이아
 
 ## 참조 항목
 
-- [쓰기 모드](/ko/docs/Web/CSS/CSS_Writing_Modes)
+- [쓰기 모드](/ko/docs/Web/CSS/CSS_writing_modes)
 
 ## 외부 리소스
 

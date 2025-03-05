@@ -224,4 +224,4 @@ V — Z
 
 - [Ссылка на атрибут SVG](/ru/docs/Web/SVG/Attribute)
 - [Учебник SVG](/ru/docs/Web/SVG/Tutorial)
-- [Ссылка на интерфейс SVG](/ru/docs/Web/API/Document_Object_Model#SVG_interfaces)
+- [Ссылка на интерфейс SVG](/ru/docs/Web/API/Document_Object_Model#svg_interfaces)

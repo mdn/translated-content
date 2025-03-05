@@ -30,7 +30,7 @@ slug: Web/XSLT/Element/call-template
 
 ### 정의
 
-[XSLT section 6, Named Templates](http://www.w3.org/TR/xslt#named-templates)
+[XSLT section 6, Named Templates](https://www.w3.org/TR/xslt#named-templates)
 
 ### Gecko 지원
 

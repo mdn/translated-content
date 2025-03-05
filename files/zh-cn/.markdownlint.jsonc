@@ -3,6 +3,7 @@
   "no-trailing-punctuation": {
     "punctuation": ".,;:。，",
   },
+  "fenced-code-language": true,
   "search-replace": {
     "rules": [
       {
@@ -61,6 +62,27 @@
         "searchScope": "text",
       },
       {
+        "name": "chrome-dev-mirror-links",
+        "message": "Use the CN mirror site for developer.chrome.com",
+        "searchPattern": "/\\]\\(https:\\/\\/developer.chrome.com\\//g",
+        "replace": "](https://developer.chrome.google.cn/",
+        "searchScope": "text",
+      },
+      {
+        "name": "google-dev-mirror-links",
+        "message": "Use the CN mirror site for developers.google.com",
+        "searchPattern": "/\\]\\(https:\\/\\/developers.google.com\\//g",
+        "replace": "](https://developers.google.cn/",
+        "searchScope": "text",
+      },
+      {
+        "name": "web-dev-mirror-links",
+        "message": "Use the CN mirror site for web.dev",
+        "searchPattern": "/\\]\\(https:\\/\\/web.dev\\//g",
+        "replace": "](https://web.developers.google.cn/",
+        "searchScope": "text",
+      },
+      {
         "name": "localhost-links",
         "message": "Don't use localhost for links",
         "searchPattern": "/\\]\\(https?:\\/\\/localhost:\\d+\\//g",
@@ -71,6 +93,26 @@
         "name": "force-pronoun",
         "message": "Consider using '你' instead of '您'",
         "searchPattern": "/您/g",
+        "searchScope": "text",
+      },
+      {
+        "name": "text-code-fence",
+        "message": "Use 'plain' tag",
+        "searchPattern": "/(^ *`{3,})(text|none|unix)/gm",
+        "replace": "$1plain",
+        "searchScope": "text",
+      },
+      {
+        "name": "gfm-alert",
+        "message": "Use the GFM syntax: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#备注、警告和标注",
+        "searchPattern": "/^ *> \\*\\*(备注|警告|标注)：\\*\\*(?! ?[[{`_*])/gm",
+        "searchScope": "text",
+      },
+      {
+        "name": "bad-gfm-alert",
+        "message": "Use the correct GFM syntax: `> [!NOTE]`",
+        // TODO this should use the modifier syntax; until it has better Node support
+        "searchPattern": "/^ *> !?\\[!?((?!NOTE)[Nn][Oo][Tt][Ee]|(?!WARNING)[Ww][Aa][Rr][Nn][Ii][Nn][Gg]|(?!CALLOUT)[Cc][Aa][Ll][Ll][Oo][Uu][Tt])\\]\\n|^ *> (?!\\[!)!?\\[!?(NOTE|WARNING|CALLOUT)\\]\\n/gm",
         "searchScope": "text",
       },
     ],

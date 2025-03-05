@@ -9,7 +9,18 @@ l10n:
 
 La méthode **`then()`**, disponible sur les instances [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise), prend jusqu'à deux arguments qui sont les fonctions de rappel respectivement utilisées pour la réussite ou l'échec de la promesse. Cette méthode renvoie immédiatement un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) équivalent, ce qui permet [d'enchaîner](/fr/docs/Web/JavaScript/Guide/Using_promises#chaînage_des_promesses) les appels aux autres méthodes des promesses.
 
-{{EmbedInteractiveExample("pages/js/promise-then.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.then()")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  resolve("Success!");
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: "Success!"
+});
+```
 
 ## Syntaxe
 
@@ -54,7 +65,7 @@ Pour plus d'informations à propos du gestionnaire d'échec `siRejetée()`, voir
 
 Les objets [dotés d'une méthode `then()` (<i lang="en">thenable</i>)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) créés le long d'une chaîne d'appels à `then()` sont toujours [résolus](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#fonction_de_résolution). Le gestionnaire `siTenue()` ne reçoit jamais d'objet doté d'une méthode `then()` et toute valeur avec une méthode `then()` renvoyée par l'un des gestionnaires est résolue avant d'être passée au gestionnaire suivant. En effet, lors de la construction d'une promesse, les fonctions de résolution et de rejet passées sont enregistrées et lorsque la promesse courante est terminée, la fonction correspondante est appelée avec la valeur de réussite ou la raison de l'échec. La logique de résolution est déterminée par la fonction passée au constructeur [`Promise()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise).
 
-`then()` prend en charge les sous-classes, ce qui signifie qu'elle peut être appelée depuis les instances des sous-classes de `Promise`, le résultat sera alors une promesse du type de la sous-classe. Vous pouvez personnaliser le type de la valeur de retour grâce à la propriété [`@@species`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/@@species).
+`then()` prend en charge les sous-classes, ce qui signifie qu'elle peut être appelée depuis les instances des sous-classes de `Promise`, le résultat sera alors une promesse du type de la sous-classe. Vous pouvez personnaliser le type de la valeur de retour grâce à la propriété [`@@species`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species).
 
 ## Exemples
 

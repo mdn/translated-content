@@ -9,7 +9,18 @@ slug: Web/HTML/Element/picture
 
 瀏覽器將會考慮每個 `<source>` 元素，並且在其中選出最適當的選項。如果沒有找到最適當的選項——或是瀏覽器不支援 `<picture>` 元素——則 `<img>` 屬性的 URL 會被選擇。被選擇的圖片將會在 `<img>` 元素存在的位置顯示。
 
-{{EmbedInteractiveExample("pages/tabbed/picture.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;picture&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<!--Change the browser window width to see the image change.-->
+
+<picture>
+  <source
+    srcset="/shared-assets/images/examples/surfer.jpg"
+    media="(orientation: portrait)" />
+  <img src="/shared-assets/images/examples/painted-hand.jpg" alt="" />
+</picture>
+```
 
 為了決定載入哪一個 URL，{{Glossary("user agent")}} 會檢視每一個 `<source>` 的 [`srcset`](/zh-TW/docs/Web/HTML/Element/source#srcset)、[`media`](/zh-TW/docs/Web/HTML/Element/source#media) 以及 [`type`](/zh-TW/docs/Web/HTML/Element/source#type) 屬性，以選出最適合當前版面以及顯示裝置支援度的圖片。
 
@@ -26,7 +37,7 @@ slug: Web/HTML/Element/picture
 
 如果是要為高 DPI （Retina）螢幕提供圖片的高解析度版本時，可改在使用 `<img>` 上使用 [`srcset`](/zh-TW/docs/Web/HTML/Element/img#srcset) 屬性。這會讓瀏覽器在 data-saving 模式選擇低解析度的版本，這樣你就不用特地指定 `media` 條件。
 
-| [Content categories](/zh-TW/docs/Web/HTML/Content_categories) | [Flow content](/zh-TW/docs/Web/HTML/Content_categories#Flow_content), phrasing content, embedded content                                                |
+| [Content categories](/zh-TW/docs/Web/HTML/Content_categories) | [Flow content](/zh-TW/docs/Web/HTML/Content_categories#flow_content), phrasing content, embedded content                                                |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Permitted content                                             | Zero or more {{HTMLElement("source")}} elements, followed by one {{HTMLElement("img")}} element, optionally intermixed with script-supporting elements. |
 | 標籤省略                                                      | 不允許，開始和結束標籤都是必須的。                                                                                                                      |
@@ -43,7 +54,8 @@ slug: Web/HTML/Element/picture
 
 你可以使用 {{cssxref("object-position")}} 屬性來在元素的 frame 內調整圖片位置，也可以用 {{cssxref("object-fit")}} 屬性控制圖片在 frame 內如何調整大小。
 
-> **備註：** 在子元素 `<img>` 上使用這些屬性，而不是 `<picture>` 元素.
+> [!NOTE]
+> 在子元素 `<img>` 上使用這些屬性，而不是 `<picture>` 元素.
 
 ## 範例
 
@@ -53,7 +65,7 @@ slug: Web/HTML/Element/picture
 
 `media` 屬性指定特定的媒體類型（跟 media query 很像），讓 user agent 可對每個 {{HTMLElement("source")}} 元素作出判斷。
 
-如果 {{HTMLElement("source")}} 的指定媒體類型被判斷為 `false` ，則瀏覽器會跳過它，並繼續判斷 `<picture>` 中的下個元素。
+如果 {{HTMLElement("source")}} 的指定媒體類型被判斷為 `false`，則瀏覽器會跳過它，並繼續判斷 `<picture>` 中的下個元素。
 
 ```html
 <picture>
@@ -82,7 +94,7 @@ slug: Web/HTML/Element/picture
 
 ### type 屬性
 
-`type` 屬性為 {{HTMLElement("source")}} 元素中 `srcset` 屬性的資源 URL 指定 [MIME type](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types) 。如果 user agent 不支援該 type 的話，此 {{HTMLElement("source")}} 元素會被略過。
+`type` 屬性為 {{HTMLElement("source")}} 元素中 `srcset` 屬性的資源 URL 指定 [MIME 類型](/zh-TW/docs/Web/HTTP/MIME_types)。如果 user agent 不支援該類型的話，此 {{HTMLElement("source")}} 元素會被略過。
 
 ```html
 <picture>
@@ -91,17 +103,17 @@ slug: Web/HTML/Element/picture
 </picture>
 ```
 
-## 規格
+## 規範
 
 {{Specifications}}
 
-## 瀏覽器支援度
+## 瀏覽器相容性
 
 {{Compat}}
 
-## 相關資源
+## 參見
 
 - {{HTMLElement("img")}} 元素
 - {{HTMLElement("source")}} 元素
-- 在圖片的 frame 中調整其大小與位置： {{cssxref("object-position")}} and {{cssxref("object-fit")}}
-- [圖片檔案類型與格式指南](/zh-TW/docs/Web/Media/Formats/Image_types)
+- 在圖片的 frame 中調整其大小與位置：{{cssxref("object-position")}} and {{cssxref("object-fit")}}
+- [圖片檔案類型與格式指南](/zh-TW/docs/Web/Media/Guides/Formats/Image_types)

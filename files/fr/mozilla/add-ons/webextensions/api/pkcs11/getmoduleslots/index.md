@@ -9,7 +9,7 @@ Enumérer les emplacements d'un module. Cette fonction renvoie un tableau conten
 
 Vous ne pouvez appeler cela que pour un module installé dans Firefox
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -22,11 +22,11 @@ var getting = browser.pkcs11.getModuleSlots(
 ### Paramètres
 
 - `name`
-  - : `string`. Nom du module. Cela doit correspondre à la propriété `name` dans le [manifest PKCS #11](/fr/Add-ons/WebExtensions/Native_manifests#PKCS_11_manifests) pour le module.
+  - : `string`. Nom du module. Cela doit correspondre à la propriété `name` dans le [manifest PKCS #11](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#pkcs_11_manifests) pour le module.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un tableau d'objets, un pour chaque emplacement auquel le module donne accès. Chaque objet a deux propriétés :
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un tableau d'objets, un pour chaque emplacement auquel le module donne accès. Chaque objet a deux propriétés :
 
 - `name`: le nom de l'emplacement
 - `token`: si un jeton est présent dans cet emplacement, un objet `Token`. Si aucun le jeton n'est présent dans l'emplacement, la propriété est `null`.

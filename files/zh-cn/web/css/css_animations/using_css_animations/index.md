@@ -46,7 +46,8 @@ slug: Web/CSS/CSS_animations/Using_CSS_animations
 
 ## 示例
 
-> **备注：** 这里的示例没有在 CSS 动画属性上使用任何前缀，Webkit 内核浏览器或者早期版本浏览器可能需要前缀，下面的实例包含了`-webkit-`前缀。
+> [!NOTE]
+> 这里的示例没有在 CSS 动画属性上使用任何前缀，Webkit 内核浏览器或者早期版本浏览器可能需要前缀，下面的实例包含了`-webkit-`前缀。
 
 ### 文本滑过浏览器窗口
 
@@ -334,5 +335,5 @@ function listener(e) {
 ## 参见
 
 - {{domxref("AnimationEvent", "AnimationEvent")}}
-- [CSS 动画的技巧](/zh-CN/docs/Web/CSS/CSS_animations/Tips)
+- [CSS 动画的技巧](/zh-CN/docs/Web/API/Web_Animations_API/Tips)
 - [使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)

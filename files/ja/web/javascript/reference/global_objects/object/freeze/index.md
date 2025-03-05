@@ -2,7 +2,7 @@
 title: Object.freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
 l10n:
-  sourceCommit: 0c2f10d728d1018f1b21c3e96267c5d586ff0ae3
+  sourceCommit: 588a149a835f8a6e24d6ff5ee9b86323296ada5c
 ---
 
 {{JSRef}}
@@ -11,7 +11,21 @@ l10n:
 
 オブジェクトの凍結は JavaScript が提供する最も高い完全性レベルです。
 
-{{EmbedInteractiveExample("pages/js/object-freeze.html")}}
+{{InteractiveExample("JavaScript Demo: Object.freeze()")}}
+
+```js interactive-example
+const obj = {
+  prop: 42,
+};
+
+Object.freeze(obj);
+
+obj.prop = 33;
+// Throws an error in strict mode
+
+console.log(obj.prop);
+// Expected output: 42
+```
 
 ## 構文
 
@@ -38,7 +52,7 @@ Object.freeze(obj)
 
 `freeze()` は関数に渡されたものと同じオブジェクトを返します。凍結されたコピーを生成する訳ではありません。
 
-要素を持つ {{jsxref("TypedArray")}} や {{jsxref("DataView")}} は {{jsxref("TypeError")}} になります。これらはメモリ上のビューであり、他にも可能な問題を確実に引き起こします。
+要素を持つ {{jsxref("TypedArray")}} や {{jsxref("DataView")}} は {{jsxref("TypeError")}} になります。これらはメモリー上のビューであり、他にも可能な問題を確実に引き起こします。
 
 ```js
 Object.freeze(new Uint8Array(0)); // 要素なし
@@ -148,7 +162,7 @@ obj1.internal.a; // 'aValue'
 
 定数オブジェクトになるには、参照のつながり全体（他のオブジェクトへの直接または間接的な参照）が不変で凍結されたオブジェクトのみを参照していなければなりません。凍結されるオブジェクトは、オブジェクト全体の中にあるオブジェクトの*状態*（値と他のオブジェクトへの参照）がすべて固定されているので、不変ということができます。なお、文字列、数値、真偽値はすべて不変となり、関数や配列はオブジェクト扱いです。
 
-#### 浅い凍結とは
+#### 深い凍結
 
 `Object.freeze(object)` を呼び出した結果は、`object` の直属のプロパティにのみ適用され、`object` 上*のみ*に対するその後のプロパティの追加、削除、値の再代入操作を禁止します。これらのプロパティの値がオブジェクトそのものであった場合、これらのオブジェクトは凍結されず、プロパティの追加、削除、値の再代入操作の対象になり得ます。
 
@@ -170,7 +184,9 @@ employee.address.city = "Noida"; // 子オブジェクトの属性は変更で�
 console.log(employee.address.city); // 出力: "Noida"
 ```
 
-オブジェクトを不変にするには、オブジェクト型のプロパティをそれぞれ再帰的に凍結させてください（深い凍結）。オブジェクトが参照グラフに[閉路](https://ja.wikipedia.org/wiki/閉路)を含まないことが分かっている場合は、デザインパターンに基づいてケースバイケースのパターンを使用してください。そうでないと、無限ループが発生します。 `deepFreeze()` をパス（例えば配列）引数を受け取る内部関数を持つよう拡張すると、オブジェクトを不変にするプロセスにいるときに、 `deepFreeze()` が再帰的に呼び出されることを防ぐことができます。凍結させてはいけない [`window`](/ja/docs/Web/API/Window) のようなオブジェクトを凍結させる危険性がなおあります。
+オブジェクトを不変にするには、オブジェクト型のプロパティをそれぞれ再帰的に凍結させてください（深い凍結）。オブジェクトが参照グラフに[閉路](https://ja.wikipedia.org/wiki/閉路)を含まないことが分かっている場合は、デザインパターンに基づいてケースバイケースのパターンを使用してください。そうでないと、無限ループが発生します。例えば、[`function`](/ja/docs/Web/JavaScript/Reference/Statements/function) 構文で作成された関数は、[`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティにその関数自身を指すコンストラクタープロパティがあるため、既定では循環参照が発生します。その他の関数（[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)など）は、それでも凍結することができます。
+
+`deepFreeze()` をパス（例えば配列）引数を受け取る内部関数を持つよう拡張すると、オブジェクトを不変にするプロセスにいるときに、 `deepFreeze()` が再帰的に呼び出されることを防ぐことができます。一例として、[`WeakSet` を使用して循環参照を検出](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakSet#使用例_循環参照の検出)する方法をご覧ください。凍結させてはいけない [`window`](/ja/docs/Web/API/Window) のようなオブジェクトを凍結させる危険性がなおあります。
 
 ```js
 function deepFreeze(object) {

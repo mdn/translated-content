@@ -65,7 +65,8 @@ svg {
   </tbody>
 </table>
 
-> **Note :** SVG2 introduit les valeurs en pourcentage pour `fill-opacity`. Cependant, ce n'est pas souvent pris en charge pour le moment (_Voir la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous_). Il est par conséquent recommandé d'utiliser les valeurs de l'intervalle `[0-1]`.
+> [!NOTE]
+> SVG2 introduit les valeurs en pourcentage pour `fill-opacity`. Cependant, ce n'est pas souvent pris en charge pour le moment (_Voir la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous_). Il est par conséquent recommandé d'utiliser les valeurs de l'intervalle `[0-1]`.
 
 ## Spécifications
 

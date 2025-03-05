@@ -15,7 +15,7 @@ Par défaut, la fonction renvoie juste le nombre de correspondances trouvées. E
 
 Cette fonction stocke les résultats en interne, donc la prochaine fois qu'une extension appelle {{WebExtAPIRef("find.highlightResults()")}}, alors les résultats de cet appel _find_ seront mis en surbrillance, jusqu'à ce que quelqu'un appelle `find()`.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -47,7 +47,7 @@ browser.find.find(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet contenant jusqu'à trois propriétés :
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet contenant jusqu'à trois propriétés :
 
 - `count`
   - : `integer`. Le nombre de résultat trouvés.
@@ -116,7 +116,7 @@ function found(results) {
 browser.find.find("banana").then(found);
 ```
 
-Rechercher "banana" dans tous les onglets (notez que cela nécessite la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "tabs", car il accède à `tab.url`):
+Rechercher "banana" dans tous les onglets (notez que cela nécessite la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "tabs", car il accède à `tab.url`):
 
 ```js
 async function findInAllTabs(allTabs) {

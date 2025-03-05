@@ -9,11 +9,36 @@ L'élément HTML **`<kbd>`** représente une plage de texte en ligne indiquant l
 
 `<kbd>` peut être imbriqué dans diverses combinaisons avec {{HTMLElement("samp")}} (Sample Output) pour représenter diverses formes d'entrée ou d'entrée basées sur des repères visuels.
 
-{{EmbedInteractiveExample("pages/tabbed/kbd.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;kbd&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an
+  MDN page.
+</p>
+```
+
+```css interactive-example
+kbd {
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.2),
+    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: #333;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+```
 
 ## Attributs
 
-Cet élément ne contient que [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément ne contient que [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -23,7 +48,8 @@ D'autres éléments peuvent être utilisés en association avec `<kbd>` afin de 
 - Imbriquer un élément `<kbd>` dans un élément {{HTMLElement("samp")}} permet d'indiquer que la saisie a été restituée (_echo_) à l'utilisateur. Cf. [Saisie restituée](#saisie_restituée), ci-après.
 - Imbriquer un élément `<samp>` dans un élément `<kbd>` permet de représenter des saisies basées sur le texte présenté par le système (cela peut être le nom de menus, d'éléments de menu ou le nom de bouttons affichés à l'écran). Cf. [Représenter les options de saisies à l'écran](#représenter_les_options_de_saisies_à_l'écran) ci-après.
 
-> **Note :** Il est possible de définir un style pour surcharger la mise en forme par défaut du navigateur pour l'élément `<kbd>`. À ce titre, on gardera à l'esprit que les préférences et feuilles de style de l'utilisateur peuvent surcharger la mise en forme du site.
+> [!NOTE]
+> Il est possible de définir un style pour surcharger la mise en forme par défaut du navigateur pour l'élément `<kbd>`. À ce titre, on gardera à l'esprit que les préférences et feuilles de style de l'utilisateur peuvent surcharger la mise en forme du site.
 
 ## Exemples
 
@@ -185,7 +211,7 @@ On voit ici différentes imbrications. La description de l'option du menu est in
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>

@@ -47,7 +47,7 @@ console.count();
 
 控制台输出看起来像这样：
 
-```
+```plain
 "default: 1"
 "default: 2"
 "default: 3"
@@ -76,7 +76,7 @@ console.count("alice");
 
 我们会看到如下的输出：
 
-```
+```plain
 "bob: 1"
 "alice: 1"
 "alice: 2"

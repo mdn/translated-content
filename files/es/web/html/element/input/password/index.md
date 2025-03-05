@@ -50,7 +50,7 @@ Los elementos `<input>` de tipo **`"password"`** proporcionan una forma para que
 
 ## Atributos
 
-Además de los atributos listados abajo, este elemento puede tener cualquier [global attributes](/es/docs/HTML/Global_attributes).
+Además de los atributos listados abajo, este elemento puede tener cualquier [global attributes](/es/docs/Web/HTML/Global_attributes).
 
 - `autocomplete`
   - : Establece el valor del atributo de autocompletado en el campo de una contraseña. En caso de ser cierto, automaticamente se rellena con el valor previamente almacenado.

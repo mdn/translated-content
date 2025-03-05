@@ -9,7 +9,22 @@ l10n:
 
 **`lastIndex`** は {{jsxref("RegExp")}} インスタンスのデータプロパティで、次の照合を開始する位置を指定します。
 
-{{EmbedInteractiveExample("pages/js/regexp-lastindex.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.lastIndex")}}
+
+```js interactive-example
+const regex1 = new RegExp("foo", "g");
+const str1 = "table football, foosball";
+
+regex1.test(str1);
+
+console.log(regex1.lastIndex);
+// Expected output: 9
+
+regex1.test(str1);
+
+console.log(regex1.lastIndex);
+// Expected output: 19
+```
 
 ## 値
 
@@ -108,7 +123,8 @@ console.log(
 
 `mdLinkPattern.lastIndex += resolvedLink.length - originalLink.length` の行を削除して、2 番目の例を実行してみてください。文字列が短縮された後、`lastIndex` が既にリンクのインデックスを過ぎているため、2 番目のリンクが正しく置換されないことがわかります。
 
-> **警告:** この例はデモ専用のためのものです。Markdown を扱うには、正規表現の代わりに構文解析ライブラリーを使用してください。
+> [!WARNING]
+> この例はデモ専用のためのものです。Markdown を扱うには、正規表現の代わりに構文解析ライブラリーを使用してください。
 
 ### 検索の最適化
 

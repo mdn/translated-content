@@ -1,21 +1,17 @@
 ---
 title: HTMLTableRowElement.rowIndex
 slug: Web/API/HTMLTableRowElement/rowIndex
+l10n:
+  sourceCommit: e5cb967d09849f77746f82d3526243fa956fbd8b
 ---
 
 {{APIRef("HTML DOM")}}
 
-只读属性 **`HTMLTableRowElement.rowIndex`** 用于表示元素所在行相对于整个 {{HtmlElement("table")}} 的逻辑位置。
+{{domxref("HTMLTableRowElement")}} 接口的 **`rowIndex`** 只读属性表示元素所在行相对于整个 {{HtmlElement("table")}} 的逻辑位置。
 
 即使 {{HtmlElement("thead")}}、{{HtmlElement("tbody")}} 和 {{HtmlElement("tfoot")}} 元素在 HTML 中乱序排列，浏览器也会以正确的顺序渲染表格。因此，行号的标记顺序为：从 `<thead>` 到 `<tbody>`，再到 `<tfoot>`。
 
-## 语法
-
-```js
-var index = HTMLTableRowElement.rowIndex;
-```
-
-### 返回值
+## 值
 
 返回该行的索引，如果该行不属于表的一部分，则返回 `-1`。
 
@@ -59,11 +55,11 @@ var index = HTMLTableRowElement.rowIndex;
 ### JavaScript
 
 ```js
-let rows = document.querySelectorAll("tr");
+const rows = document.querySelectorAll("tr");
 
 rows.forEach((row) => {
-  let z = document.createElement("td");
-  z.textContent = `(row #${row.rowIndex})`;
+  const z = document.createElement("td");
+  z.textContent = `(行 #${row.rowIndex})`;
   row.appendChild(z);
 });
 ```
@@ -72,6 +68,14 @@ rows.forEach((row) => {
 
 {{EmbedLiveSample("示例")}}
 
+## 规范
+
+{{Specifications}}
+
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("HTMLTableRowElement.sectionRowIndex")}}

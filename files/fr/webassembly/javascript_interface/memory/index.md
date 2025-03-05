@@ -26,7 +26,8 @@ var maMemoire = new WebAssembly.Memory(descripteurMemoire);
     - `maximum` {{optional_inline}}
       - : La taille maximale autorisée pour cet espace mémoire WebAssembly, exprimée en nombre de pages WebAssembly. Lorsque ce paramètre est utilisé, il est fournit comme indication au moteur pour que celui-ci réserve l'espace mémoire correspondant. Toutefois, le moteur peut choisir d'ignorer cette indication. Dans la plupart des cas, il n'est pas nécessaire d'indiquer un maximum pour les modules WebAssembly.
 
-> **Note :** Une page mémoire WebAssembly correspond à une taille fixe de 65 536 octets, soit environ 64 Ko.
+> [!NOTE]
+> Une page mémoire WebAssembly correspond à une taille fixe de 65 536 octets, soit environ 64 Ko.
 
 ### Exceptions
 
@@ -39,7 +40,7 @@ Aucune.
 
 ## Instances de `Memory`
 
-Toutes les instances de `Memory` héritent des propriétés du [prototype du constructeur](/fr/docs/Web/JavaScript/Reference/Objets_globaux/WebAssembly/Memory/prototype) `Memory()` qui peut être utilisé afin de modifier le comportement de l'ensemble des instances de `Memory`.
+Toutes les instances de `Memory` héritent des propriétés du [prototype du constructeur](/fr/docs/WebAssembly/JavaScript_interface/Memory) `Memory()` qui peut être utilisé afin de modifier le comportement de l'ensemble des instances de `Memory`.
 
 ### Propriétés
 

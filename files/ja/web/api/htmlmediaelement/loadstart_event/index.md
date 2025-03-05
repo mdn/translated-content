@@ -1,8 +1,9 @@
 ---
 title: "HTMLMediaElement: loadstart イベント"
+short-title: loadstart
 slug: Web/API/HTMLMediaElement/loadstart_event
 l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+  sourceCommit: bfd82524fe63319725243d07aab809f0d1617366
 ---
 
 {{APIRef}}
@@ -101,7 +102,7 @@ loadVideo.addEventListener("click", () => {
     source = document.createElement("source");
     source.setAttribute(
       "src",
-      "https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm",
+      "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm",
     );
     source.setAttribute("type", "video/webm");
 

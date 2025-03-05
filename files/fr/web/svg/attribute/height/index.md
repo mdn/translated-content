@@ -493,7 +493,8 @@ Pour [`<foreignObject>`](/fr/docs/Web/SVG/Element/foreignObject), `height` défi
   </tbody>
 </table>
 
-> **Note :** À partir de SVG2, `height` est une propriété _géométrique_, ce qui signifie que cet attribut peut aussi être utilisé comme une propriété CSS pour `<foreignObject>`.
+> [!NOTE]
+> À partir de SVG2, `height` est une propriété _géométrique_, ce qui signifie que cet attribut peut aussi être utilisé comme une propriété CSS pour `<foreignObject>`.
 
 ## `<image>`
 
@@ -518,7 +519,8 @@ Pour [`<image>`](/fr/docs/Web/SVG/Element/image), `height` définit la longueur 
   </tbody>
 </table>
 
-> **Note :** À partir de SVG2, `height` est une propriété _géométrique_, ce qui signifie que cet attribut peut également être utilisée comme propriété CSS pour les images.
+> [!NOTE]
+> À partir de SVG2, `height` est une propriété _géométrique_, ce qui signifie que cet attribut peut également être utilisée comme propriété CSS pour les images.
 
 ## `<mask>`
 
@@ -589,13 +591,15 @@ Pour [`<rect>`](/fr/docs/Web/SVG/Element/rect), `height` définit la longueur ve
   </tbody>
 </table>
 
-> **Note :** À partir de SVG2, `height` est une propriété _géométrique_, ce qui signifie que cet attribut peut aussi être utilisé comme une propriété CSS pour les rectangles.
+> [!NOTE]
+> À partir de SVG2, `height` est une propriété _géométrique_, ce qui signifie que cet attribut peut aussi être utilisé comme une propriété CSS pour les rectangles.
 
 ## `<svg>`
 
 Pour [`<svg>`](/fr/docs/Web/SVG/Element/svg), `height` définit la longueur verticale de la zone de rendu de la zone d'affichage SVG.
 
-> **Note :** Dans un document HTML, si les deux attributs [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) et `height` sont absents, [l'élément SVG sera rendu avec une hauteur de `150px`](https://svgwg.org/specs/integration/#svg-css-sizing).
+> [!NOTE]
+> Dans un document HTML, si les deux attributs [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) et `height` sont absents, [l'élément SVG sera rendu avec une hauteur de `150px`](https://svgwg.org/specs/integration/#svg-css-sizing).
 
 <table class="properties">
   <tbody>
@@ -616,7 +620,8 @@ Pour [`<svg>`](/fr/docs/Web/SVG/Element/svg), `height` définit la longueur vert
   </tbody>
 </table>
 
-> **Note :** À partir de SVG2, `height` est une propriété _géométrique_ et peut donc être utilisée comme propriété CSS pour `<svg>`.
+> [!NOTE]
+> À partir de SVG2, `height` est une propriété _géométrique_ et peut donc être utilisée comme propriété CSS pour `<svg>`.
 
 ## `<use>`
 
@@ -643,7 +648,8 @@ Pour [`<use>`](/fr/docs/Web/SVG/Element/use), `height` définit la longueur vert
 
 > **Note :** `height` n'a pas d'effet sur les éléments `<use>`, à moins que l'élément référencé ait un attribut [`viewbox`](/fr/docs/Web/SVG/Attribute/viewBox), c'est-à-dire que leur effet s'applique uniquement si `use` fait référence à un élément `<svg>` ou `<symbol>`.
 
-> **Note :** À partir de SVG2, `height` est une propriété _géométrique_, ce qui signifie que cet attribut peut également être utilisé comme propriété CSS sur les éléments utilisés.
+> [!NOTE]
+> À partir de SVG2, `height` est une propriété _géométrique_, ce qui signifie que cet attribut peut également être utilisé comme propriété CSS sur les éléments utilisés.
 
 ## Spécifications
 

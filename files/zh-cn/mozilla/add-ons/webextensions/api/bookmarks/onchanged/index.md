@@ -42,7 +42,8 @@ browser.bookmarks.onChanged.hasListener(listener)
     - `hangeInfo`
       - : [`object`](#changeinfo)。包含两个属性的对象：包含项目标题的字符串 `title` 和包含项目 URL 的字符串 `url`。如果项目是文件夹，则省略 `url`。
 
-> **备注：** 当书签更改时，可能会发生多个事件，且 changeInfo 对象可能只包含已更改的数据，而不是书签的所有数据。换句话说，如果书签的 `url` 发生变化，则 changeInfo 可能只包含新的 `url` 信息。
+> [!NOTE]
+> 当书签更改时，可能会发生多个事件，且 changeInfo 对象可能只包含已更改的数据，而不是书签的所有数据。换句话说，如果书签的 `url` 发生变化，则 changeInfo 可能只包含新的 `url` 信息。
 
 ## 示例
 
@@ -66,7 +67,8 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#event-onChanged) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.google.cn/docs/extensions/reference/api/bookmarks#event-onChanged) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

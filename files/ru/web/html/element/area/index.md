@@ -7,13 +7,13 @@ slug: Web/HTML/Element/area
 
 **HTML `<area>` элемент** определяет активную область на изображении и, при желании, связывает её с {{Glossary("Hyperlink", "гипертекстовой ссылкой")}}. Этот элемент используется только внутри элемента {{HTMLElement("map")}}.{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}
 
-| [Категории содержимого](/ru/docs/HTML/Content_categories) | [Элементы потока](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразового контента](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                            |
-| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                     | Нет, это {{Glossary("пустой элемент")}}.                                                                                                                                                                            |
-| Пропуск тегов                                             | Открывающий тег обязателен, закрывающего быть не должно.                                                                                                                                                            |
-| Допустимые родители                                       | Любой элемент, допускающий [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content). У элемента `<area>` должен быть родитель {{HTMLElement("map")}}, но он не должен быть прямым родителем. |
-| Допустимые ARIA-роли                                      | Нет                                                                                                                                                                                                                 |
-| DOM-интерфейс                                             | {{domxref("HTMLAreaElement")}}                                                                                                                                                                                      |
+| [Категории содержимого](/ru/docs/Web/HTML/Content_categories) | [Элементы потока](/ru/docs/Web/HTML/Content_categories#flow_content), [фразового контента](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                            |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                         | Нет, это {{Glossary("пустой элемент")}}.                                                                                                                                                                      |
+| Пропуск тегов                                                 | Открывающий тег обязателен, закрывающего быть не должно.                                                                                                                                                      |
+| Допустимые родители                                           | Любой элемент, допускающий [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content). У элемента `<area>` должен быть родитель {{HTMLElement("map")}}, но он не должен быть прямым родителем. |
+| Допустимые ARIA-роли                                          | Нет                                                                                                                                                                                                           |
+| DOM-интерфейс                                                 | {{domxref("HTMLAreaElement")}}                                                                                                                                                                                |
 
 ## Атрибуты
 
@@ -37,7 +37,6 @@ slug: Web/HTML/Element/area
   - : A hint of the media for which the linked resource was designed, for example `print and screen`. If omitted, it defaults to `all`. Use this attribute only if the **href** attribute is present.
 - `nohref`
   - : Indicates that no hyperlink exists for the associated area. Either this attribute or the **href** attribute must be present in the element.
-    > **Примечание:** This attribute is obsolete in HTML5, instead omitting the **href** attribute is sufficient.
 - `referrerpolicy` {{experimental_inline}}
   - : A string indicating which referrer to use when fetching the resource:
     - `"no-referrer"` meaning that the `Referer:` header will not be sent.
@@ -46,7 +45,7 @@ slug: Web/HTML/Element/area
     - "origin-when-cross-origin" meaning that navigations to other origins will be limited to the scheme, the host and the port, while navigations on the same origin will include the referrer's path.
     - `"unsafe-url"` meaning that the referrer will include the origin and the path (but not the fragment, password, or username). This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.
 - `rel`
-  - : For anchors containing the **href** attribute, this attribute specifies the relationship of the target object to the link object. The value is a space-separated list of [link types values](/ru/docs/Web/HTML/Link_types). The values and their semantics will be registered by some authority that might have meaning to the document author. The default relationship, if no other is given, is void. Use this attribute only if the **href** attribute is present.
+  - : For anchors containing the **href** attribute, this attribute specifies the relationship of the target object to the link object. The value is a space-separated list of [link types values](/ru/docs/Web/HTML/Attributes/rel). The values and their semantics will be registered by some authority that might have meaning to the document author. The default relationship, if no other is given, is void. Use this attribute only if the **href** attribute is present.
 - `shape`
   - : The shape of the associated hot spot. The specifications for HTML 5 and HTML 4 define the values `rect`, which defines a rectangular region; `circle`, which defines a circular region; `poly`, which defines a polygon; and `default`, which indicates the entire region beyond any defined shapes. Many browsers, notably Internet Explorer 4 and higher, support `circ`, `polygon`, and `rectangle` as valid values for **shape**; these values are {{Non-standard_inline}}.
 - `tabindex`

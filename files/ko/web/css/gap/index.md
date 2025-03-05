@@ -180,4 +180,4 @@ gap: revert-layer;
 ## 같이 보기
 
 - 관련 CSS 속성: {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}}
-- 그리드 레이아웃 안내서: _[Basic concepts of grid layout - Gutters](/ko/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Gutters)_
+- 그리드 레이아웃 안내서: _[Basic concepts of grid layout - Gutters](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)_

@@ -5,7 +5,7 @@ slug: Web/API/Element/transitionend_event
 
 {{ APIRef }}
 
-El evento `transitionend` es lanzado cuando una [transición CSS](/es/docs/CSS/Using_CSS_transitions) se ha completado. Si la transición es eliminada antes de haberse completado, como cuando {{cssxref("transition-property")}} es eliminado o {{cssxref("display")}} se establece a `"none"`, entonces el evento no será generado.
+El evento `transitionend` es lanzado cuando una [transición CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) se ha completado. Si la transición es eliminada antes de haberse completado, como cuando {{cssxref("transition-property")}} es eliminado o {{cssxref("display")}} se establece a `"none"`, entonces el evento no será generado.
 
 ## Información general
 
@@ -61,5 +61,5 @@ element.addEventListener(
 
 La interfaz {{domxref("TransitionEvent")}}
 
-- [`transitionstart`](/es/docs/Web/Reference/Events/transitionstart), [`transitioncancel`](/es/docs/Web/Reference/Events/transitioncancel)
+- [`transitionstart`](/es/docs/Web/Reference/Events/transitionstart), [`transitioncancel`](/es/docs/Web/API/Element/transitioncancel_event)
 - Propiedades CSS: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}.

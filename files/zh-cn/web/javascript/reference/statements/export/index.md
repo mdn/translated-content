@@ -90,7 +90,8 @@ export default function () { /* … */ }
 export default class { /* … */ }
 ```
 
-> **备注：** 导出声明的名称必须相互独立。导出名称重复或使用多个 `default` 导出将导致 {{jsxref("SyntaxError")}} 并阻止模块被执行。
+> [!NOTE]
+> 导出声明的名称必须相互独立。导出名称重复或使用多个 `default` 导出将导致 {{jsxref("SyntaxError")}} 并阻止模块被执行。
 
 `export default` 语法允许任何表达式。
 

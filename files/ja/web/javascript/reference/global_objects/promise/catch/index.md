@@ -9,7 +9,18 @@ l10n:
 
 **`catch()`** は {{jsxref("Promise")}} オブジェクトのメソッドで、プロミスが拒否されたときに呼び出される関数をスケジュールします。これは即座に同等の {{jsxref("Promise")}} オブジェクトを返すので、他のプロミスのメソッドを[連鎖](/ja/docs/Web/JavaScript/Guide/Using_promises#chaining) して呼び出すことができます。これは {{jsxref("Promise/then", "Promise.prototype.then(undefined, onRejected)")}} の省略形です。
 
-{{EmbedInteractiveExample("pages/js/promise-catch.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.catch()")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  throw new Error("Uh-oh!");
+});
+
+promise1.catch((error) => {
+  console.error(error);
+});
+// Expected output: Error: Uh-oh!
+```
 
 ## 構文
 
@@ -66,7 +77,8 @@ Promise.resolve().catch(function XXX() {});
 
 `catch()` は `then()` を呼び出すだけなので、サブクラス化に対応しています。
 
-> **メモ:** 下記の例では、[`Error`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error) のインスタンスを例外として発生させています。同期 [`throw`](/ja/docs/Web/JavaScript/Reference/Statements/throw) 文と同様、これは良い習慣と考えられています。さもなければ、捕捉を行う部分は引数が文字列かエラーかを調べる必要があり、スタックトレースのような貴重な情報を失う可能性があります。
+> [!NOTE]
+> 下記の例では、[`Error`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error) のインスタンスを例外として発生させています。同期 [`throw`](/ja/docs/Web/JavaScript/Reference/Statements/throw) 文と同様、これは良い習慣と考えられています。さもなければ、捕捉を行う部分は引数が文字列かエラーかを調べる必要があり、スタックトレースのような貴重な情報を失う可能性があります。
 
 ## 例
 

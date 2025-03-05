@@ -9,7 +9,8 @@ The deprecated **`Navigator.getUserMedia()`** method prompts the user for permis
 
 If permission is granted, a `MediaStream` whose video and/or audio tracks come from those devices is delivered to the specified success callback. If permission is denied, no compatible input devices exist, or any other error condition occurs, the error callback is executed with a {{domxref("MediaStreamError")}} object describing what went wrong. If the user instead doesn't make a choice at all, neither callback is executed.
 
-> **Примечание:** Это устаревший метод. Вместо этого используйте более новую версию {{domxref ("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia ()")}}. Хотя технически не рекомендуется, эта старая версия колбэка помечена как таковая, поскольку спецификация настоятельно рекомендует использовать более новую версию, возвращающую промис.
+> [!NOTE]
+> Это устаревший метод. Вместо этого используйте более новую версию {{domxref ("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia ()")}}. Хотя технически не рекомендуется, эта старая версия колбэка помечена как таковая, поскольку спецификация настоятельно рекомендует использовать более новую версию, возвращающую промис.
 
 ## Синтаксис
 
@@ -20,7 +21,7 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
 ### Параметры
 
 - `constraints`
-  - : {{domxref("MediaStreamConstraints")}} объект, определяющий типы запрашиваемых медиа, а также любые требования для каждого типа. Подробнее см. В разделе ограничений современного метода {{domxref ("MediaDevices.getUserMedia ()")}}, а также в статье [Возможности, ограничения и настройки.](/ru/docs/Web/API/Media_Streams_API/Constraints)
+  - : {{domxref("MediaStreamConstraints")}} объект, определяющий типы запрашиваемых медиа, а также любые требования для каждого типа. Подробнее см. В разделе ограничений современного метода {{domxref ("MediaDevices.getUserMedia ()")}}, а также в статье [Возможности, ограничения и настройки.](/ru/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - `successCallback`
 
   - : Функция, которая вызывается при утверждении запроса на доступ к мультимедиа. Функция вызывается с одним параметром: объектом {{domxref ("MediaStream")}}, который содержит медиапоток. Затем колбэк может назначить поток желаемому объекту (например, элементу {{HTMLElement ("audio")}} или {{HTMLElement ("video")}}), как показано в следующем примере:
@@ -90,7 +91,8 @@ if (navigator.getUserMedia) {
 
 См. Разрешение: аудио-захват и разрешение: видео-захват для получения дополнительной информации.
 
-> **Предупреждение:** New code should use {{domxref("Navigator.mediaDevices.getUserMedia()")}} instead.
+> [!WARNING]
+> New code should use {{domxref("Navigator.mediaDevices.getUserMedia()")}} instead.
 
 ## Спецификации
 
@@ -103,6 +105,6 @@ if (navigator.getUserMedia) {
 ## Смотрите также
 
 - {{domxref("MediaDevices.getUserMedia()")}} that replaces this deprecated method.
-- [WebRTC](/ru/docs/WebRTC) - the introductory page to the API
-- [MediaStream API](/ru/docs/WebRTC/MediaStream_API) - the API for the media stream objects
-- [Taking webcam photos](/ru/docs/WebRTC/taking_webcam_photos) - a tutorial on using `getUserMedia() for taking photos rather than video.`
+- [WebRTC](/ru/docs/Web/API/WebRTC_API) - the introductory page to the API
+- [MediaStream API](/ru/docs/Web/API/Media_Capture_and_Streams_API) - the API for the media stream objects
+- [Taking webcam photos](/ru/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - a tutorial on using `getUserMedia() for taking photos rather than video.`

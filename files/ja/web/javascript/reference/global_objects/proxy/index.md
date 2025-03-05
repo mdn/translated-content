@@ -2,7 +2,7 @@
 title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
 l10n:
-  sourceCommit: 0d4a751b6265b81a6564dde51318b2e391639713
+  sourceCommit: 2c762771070a207d410a963166adf32213bc3a45
 ---
 
 {{JSRef}}
@@ -55,7 +55,7 @@ const handler2 = {
 const proxy2 = new Proxy(target, handler2);
 ```
 
-ここで {{jsxref("Global_Objects/Proxy/Proxy/get", "get()")}} ハンドラーを実装し、ターゲットのプロパティへのアクセスに介入します。
+ここで {{jsxref("Proxy/Proxy/get", "get()")}} ハンドラーを実装し、ターゲットのプロパティへのアクセスに介入します。
 
 ハンドラー関数は*トラップ*と呼ばれることがありますが、これはおそらくターゲットオブジェクトへの呼び出しをトラップするからでしょう。上記の `handler2` のとても単純なトラップは、すべてのプロパティアクセサーを再定義します。
 
@@ -145,7 +145,7 @@ console.log(proxy3.message2); // world
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/Proxy/Proxy", "Proxy()")}}
+- {{jsxref("Proxy/Proxy", "Proxy()")}}
   - : 新しい `Proxy` オブジェクトを生成します。
 
 > **メモ:** `Proxy.prototype` プロパティはないので、`Proxy` インスタンスには特別なプロパティやメソッドはありません。
@@ -159,7 +159,7 @@ console.log(proxy3.message2); // world
 
 ### 基本的な例
 
-この例では、与えられたプロパティ名がオブジェクトに存在しない場合、既定値である `37` を返します。ここでは {{jsxref("Global_Objects/Proxy/Proxy/get", "get")}} ハンドラーを使用しています。
+この例では、与えられたプロパティ名がオブジェクトに存在しない場合、既定値である `37` を返します。ここでは {{jsxref("Proxy/Proxy/get", "get()")}} ハンドラーを使用しています。
 
 ```js
 const handler = {
@@ -194,7 +194,7 @@ console.log(target.a); // 37 （操作は正しく転送されました）
 
 ### プライベートプロパティは転送できない
 
-プロキシーは、やはり異なるアイデンティティを持つ別のオブジェクトであり、ラップされたオブジェクトと外部との間を運営する _プロキシー_ です。そのため、プロキシーは元オブジェクトの[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_class_fields)に直接アクセスすることができません。
+プロキシーは、やはり異なるアイデンティティを持つ別のオブジェクトであり、ラップされたオブジェクトと外部との間を運営する _プロキシー_ です。そのため、プロキシーは元オブジェクトの[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)に直接アクセスすることができません。
 
 ```js
 class Secret {
@@ -252,7 +252,7 @@ const proxy = new Proxy(aSecret, {
 console.log(proxy.x());
 ```
 
-JavaScript のネイティブオブジェクトの中には、_[内部スロット](https://tc39.es/ecma262/#sec-object-internal-methods-and-internal-slots)_ という、JavaScript コードからはアクセスできないプロパティを持つものがあります。例えば、[`Map`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map) オブジェクトは `[[MapData]]` という内部スロットを持っており、これはマップのキーと値のペアを格納しています。そのため、マップの転送プロキシーを些細なことで作成することはできません。
+JavaScript のネイティブオブジェクトの中には、_[内部スロット](https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-object-internal-methods-and-internal-slots)_ という、JavaScript コードからはアクセスできないプロパティを持つものがあります。例えば、[`Map`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map) オブジェクトは `[[MapData]]` という内部スロットを持っており、これはマップのキーと値のペアを格納しています。そのため、マップの転送プロキシーを些細なことで作成することはできません。
 
 ```js
 const proxy = new Proxy(new Map(), {});
@@ -263,7 +263,7 @@ console.log(proxy.size); // TypeError: get size method called on incompatible Pr
 
 ### 検証
 
-`Proxy` を使うと、オブジェクトに渡された値を簡単に検証できます。この例では {{jsxref("Global_Objects/Proxy/Proxy/set", "set()")}} ハンドラーを使用しています。
+`Proxy` を使うと、オブジェクトに渡された値を簡単に検証できます。この例では {{jsxref("Proxy/Proxy/set", "set()")}} ハンドラーを使用しています。
 
 ```js
 const validator = {
@@ -307,20 +307,20 @@ const view = new Proxy(
     selected: null,
   },
   {
-    set(obj, prop, newval) {
-      const oldval = obj[prop];
+    set(obj, prop, newVal) {
+      const oldVal = obj[prop];
 
       if (prop === "selected") {
-        if (oldval) {
-          oldval.setAttribute("aria-selected", "false");
+        if (oldVal) {
+          oldVal.setAttribute("aria-selected", "false");
         }
-        if (newval) {
-          newval.setAttribute("aria-selected", "true");
+        if (newVal) {
+          newVal.setAttribute("aria-selected", "true");
         }
       }
 
       // 値を保存する既定の挙動
-      obj[prop] = newval;
+      obj[prop] = newVal;
 
       // 成功を示す
       return true;
@@ -405,71 +405,6 @@ console.log(products.latestBrowser);
 //  'Edge'
 ```
 
-### 配列要素のオブジェクトをそのプロパティから検索
-
-このプロキシーは配列をいくつかの実用機能で拡張しています。見ての通り、 {{jsxref("Object.defineProperties", "Object.defineProperties()")}} を使わなくても柔軟にプロパティを「定義」できます。この例は、テーブルの列をそのセルから検索するようなコードに応用できます。その場合、ターゲットは {{domxref("HTMLTableElement.rows", "table.rows")}} となります。
-
-```js
-const products = new Proxy(
-  [
-    { name: "Firefox", type: "browser" },
-    { name: "SeaMonkey", type: "browser" },
-    { name: "Thunderbird", type: "mailer" },
-  ],
-  {
-    get(obj, prop) {
-      // 値を返す既定の挙動、prop は通常整数値
-      if (prop in obj) {
-        return obj[prop];
-      }
-
-      // 製品の数を取得、products.length のエイリアス
-      if (prop === "number") {
-        return obj.length;
-      }
-
-      let result;
-      const types = {};
-
-      for (const product of obj) {
-        if (product.name === prop) {
-          result = product;
-        }
-        if (types[product.type]) {
-          types[product.type].push(product);
-        } else {
-          types[product.type] = [product];
-        }
-      }
-
-      // 製品を名前で取得
-      if (result) {
-        return result;
-      }
-
-      // 製品を種類で取得
-      if (prop in types) {
-        return types[prop];
-      }
-
-      // 製品の種類を取得
-      if (prop === "types") {
-        return Object.keys(types);
-      }
-
-      return undefined;
-    },
-  },
-);
-
-console.log(products[0]); // { name: 'Firefox', type: 'browser' }
-console.log(products["Firefox"]); // { name: 'Firefox', type: 'browser' }
-console.log(products["Chrome"]); // undefined
-console.log(products.browser); // [{ name: 'Firefox', type: 'browser' }, { name: 'SeaMonkey', type: 'browser' }]
-console.log(products.types); // ['browser', 'mailer']
-console.log(products.number); // 3
-```
-
 ### 完全なトラップリストの例
 
 ここで、教育的な目的のために、完全なサンプル `traps` リストを作成するために、この種の処理に特に適している _ネイティブ_ オブジェクト、すなわち[単純な Cookie のフレームワーク](https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework)が作成した `docCookies` グローバルオブジェクトをプロキシー化してみることにしましょう。
@@ -540,5 +475,4 @@ console.log(docCookies.myCookie1);
 
 ## 関連情報
 
-- ["Proxies are awesome" Brendan Eich の JSConf でのプレゼンテーション](https://www.youtube.com/watch?v=sClk6aB_CPk) ([スライド](https://www.slideshare.net/BrendanEich/metaprog-5303821))
-- [プロキシーのチュートリアル](https://web.archive.org/web/20171007221059/https://soft.vub.ac.be/~tvcutsem/proxies/)
+- [Proxies are awesome](https://youtu.be/sClk6aB_CPk) プレゼンテーション (Brendan Eich, JSConf, 2014)

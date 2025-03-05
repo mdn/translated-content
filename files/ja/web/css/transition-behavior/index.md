@@ -162,7 +162,8 @@ html {
 
 {{ EmbedLiveSample("Transitioning a popover", "100%", "200") }}
 
-> **メモ:** ポップオーバーは表示されるたびに `display: none` から `display: block` に変化するので、表示トランジションが発生するたびに `@starting-style` スタイルから `[popover]:popover-open` スタイルに遷移します。ポップオーバーが閉じられたとき、その `[popover]:popover-open` 状態から既定の `[popover]` 状態に遷移します。
+> [!NOTE]
+> ポップオーバーは表示されるたびに `display: none` から `display: block` に変化するので、表示トランジションが発生するたびに `@starting-style` スタイルから `[popover]:popover-open` スタイルに遷移します。ポップオーバーが閉じられたとき、その `[popover]:popover-open` 状態から既定の `[popover]` 状態に遷移します。
 >
 > このような場合、出現時と消滅時で異なるスタイル設定が可能です。この例については、[開始スタイルを使用する場合のデモ](/ja/docs/Web/CSS/@starting-style#開始スタイルを使用する場合のデモ)を参照してください。
 

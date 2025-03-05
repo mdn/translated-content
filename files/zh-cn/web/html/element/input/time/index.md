@@ -7,9 +7,31 @@ slug: Web/HTML/Element/input/time
 
 类型为 **`time`** 的 {{htmlelement("input")}} 元素，旨在让用户轻松输入时间（小时和分钟，以及可选的秒）。
 
-控件的用户界面因浏览器而异，请查阅[浏览器兼容性](#浏览器兼容性)以了解更多细节。在不支持该类型的浏览器中，它会优雅地降级为 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/Input/text)。
+控件的用户界面因浏览器而异，请查阅[浏览器兼容性](#浏览器兼容性)以了解更多细节。在不支持该类型的浏览器中，它会优雅地降级为 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text)。
 
-{{EmbedInteractiveExample("pages/tabbed/input-time.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;time&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="appt">Choose a time for your meeting:</label>
+
+<input type="time" id="appt" name="appt" min="09:00" max="18:00" required />
+
+<small>Office hours are 9am to 6pm</small>
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## 外观
 
@@ -140,7 +162,8 @@ startTime.addEventListener(
 
 除了 {{HTMLElement("input")}} 元素共有的属性外，时间输入还提供以下属性：
 
-> **备注：** 与许多数据类型不同，时间值有一个**周期域**，意味着数值达到可能的最高值之后，就会绕回起点。例如，指定 `min` 为 `14:00`，`max` 为 `2:00` 意味着允许的时间值从下午 2:00 开始，通过午夜运行到第二天，结束于凌晨 2:00。更多信息请参见本文的[使最小值和最大值跨越午夜](#使最小值和最大值跨越午夜)部分。
+> [!NOTE]
+> 与许多数据类型不同，时间值有一个**周期域**，意味着数值达到可能的最高值之后，就会绕回起点。例如，指定 `min` 为 `14:00`，`max` 为 `2:00` 意味着允许的时间值从下午 2:00 开始，通过午夜运行到第二天，结束于凌晨 2:00。更多信息请参见本文的[使最小值和最大值跨越午夜](#使最小值和最大值跨越午夜)部分。
 
 ### list
 
@@ -158,7 +181,8 @@ startTime.addEventListener(
 
 如果该布尔属性存在，意味着用户将不能编辑此字段。然而其 `value` 值仍然可以直接通过 JavaScript 代码设置 {{domxref("HTMLInputElement")}} 的 `value` 属性改变。
 
-> **备注：** 由于只读字段不可以拥有值，`required` 不会对指定了 `readonly` 属性的字段起作用。
+> [!NOTE]
+> 由于只读字段不可以拥有值，`required` 不会对指定了 `readonly` 属性的字段起作用。
 
 ### step
 
@@ -166,7 +190,8 @@ startTime.addEventListener(
 
 字符串值 `any` 意味着不使用步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#max) 之外）。
 
-> **备注：** 当用户输入的数据不符合步进配置时，{{Glossary("user agent", "用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
+> [!NOTE]
+> 当用户输入的数据不符合步进配置时，{{Glossary("user agent", "用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
 
 对于 `time` 输入， `step` 的值以秒为单位，比例因子为 1000（因为基础数值以毫秒为单位）。`step` 的默认值为 60，表示 60 秒（或 1 分钟、60000 毫秒）。
 
@@ -195,7 +220,8 @@ _目前，尚不清楚当与 `time` 输入一起使用时，`any` 的值对 `ste
 
 你可以使用 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) 属性来更改每次递增或递减的时间数（例如，点击箭头控件时时间值会以 10 分钟为单位变动）。
 
-> **备注：** 此属性在不同浏览器之间有一些怪异的行为，并不可靠。
+> [!NOTE]
+> 此属性在不同浏览器之间有一些怪异的行为，并不可靠。
 
 它需要一个整数，相当于你要增加的秒数；默认值是 60 秒，或 1 分钟。如果你指定一个小于 60 秒（1 分钟）的值，`time` 输入将显示秒的输入区，同时显示小时和分钟。
 
@@ -214,7 +240,8 @@ _目前，尚不清楚当与 `time` 输入一起使用时，`any` 的值对 `ste
 
 在 Edge 浏览器中，step 值不起作用。
 
-> **备注：** 使用 `step` 可能会导致验证工作不正常（如下一节所见）。
+> [!NOTE]
+> 使用 `step` 可能会导致验证工作不正常（如下一节所见）。
 
 ## 验证方式
 
@@ -317,7 +344,8 @@ if (input.validity.valid && input.type === "time") {
 
 {{ EmbedLiveSample('使时间成为必需值', 600, 120) }}
 
-> **警告：** HTML 表单验证并*不能*替代确保输入数据格式正确的脚本。很容易对 HTML 进行调整，使他们能够绕过验证，或完全删除验证。也有可能会完全绕过 HTML 代码，直接将数据提交给你的服务器。如果你的服务器端代码不能验证它所收到的数据，那么当提交的数据格式不当（或数据过大、类型错误等等）时，灾难就会降临。
+> [!WARNING]
+> HTML 表单验证并*不能*替代确保输入数据格式正确的脚本。很容易对 HTML 进行调整，使他们能够绕过验证，或完全删除验证。也有可能会完全绕过 HTML 代码，直接将数据提交给你的服务器。如果你的服务器端代码不能验证它所收到的数据，那么当提交的数据格式不当（或数据过大、类型错误等等）时，灾难就会降临。
 
 ## 处理浏览器支持
 
@@ -540,6 +568,6 @@ minuteSelect.onchange = setMinutesToZero;
 
 - 通用 {{HTMLElement("input")}} 元素和用于操作该元素的接口 {{domxref("HTMLInputElement")}}
 - [HTML 中使用的日期和时间格式](/zh-CN/docs/Web/HTML/Date_and_time_formats)
-- [日期时间选择器教程](/zh-CN/docs/Learn/Forms/HTML5_input_types#日期和时间选择器)
-- [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/Input/datetime-local)、[`<input type="date">`](/zh-CN/docs/Web/HTML/Element/Input/date)、[`<input type="week">`](/zh-CN/docs/Web/HTML/Element/Input/week) 和 [`<input type="month">`](/zh-CN/docs/Web/HTML/Element/Input/month)
-- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [日期时间选择器教程](/zh-CN/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#日期和时间选择器)
+- [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)、[`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date)、[`<input type="week">`](/zh-CN/docs/Web/HTML/Element/input/week) 和 [`<input type="month">`](/zh-CN/docs/Web/HTML/Element/input/month)
+- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

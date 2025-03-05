@@ -23,7 +23,8 @@ Par exemple, on pourra gérer les évènements liés à l'orientation de l'appar
 
 - Pour la reconnaissance de certains gestes. Par exemple, on pourra identifier que l'appareil est secoué et déclencher une action en conséquence, comme la réinitialisation d'un champ.
 
-> **Note :** Cette API est bien prise en charge par les navigateurs mobiles. Pour les navigateurs de bureaux, il pourra y avoir des limitations liées aux capacités matérielles de ces appareils. Toutefois, ces contraintes sont rarement un problème, car l'API repose principalement sur une utilisation avec des appareils dotés de capteurs adéquats.
+> [!NOTE]
+> Cette API est bien prise en charge par les navigateurs mobiles. Pour les navigateurs de bureaux, il pourra y avoir des limitations liées aux capacités matérielles de ces appareils. Toutefois, ces contraintes sont rarement un problème, car l'API repose principalement sur une utilisation avec des appareils dotés de capteurs adéquats.
 
 ## Interfaces
 

@@ -24,7 +24,8 @@ Avec le fichier `index.html` mis à jour et le fichier `style.css` dans le même
 
 Ici, on voit la page à l'aide du protocole `file://`. Cela fonctionne bien pour notre projet dans l'état actuel, et suffira encore lorsque [nous ajouterons des fonctionnalités à l'aide de JavaScript](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality). Toutefois, les fichiers de manifeste et les <i lang="en">service workers</i>, qui sont des composants clés d'une PWA, ne fonctionnent qu'avec une connexion sécurisée (comme d'autres API). Une PWA doit donc être servie depuis un serveur web en HTTPS ou dans un environnement de développement local avec un hôte comme `localhost` ou `127.0.0.1` (avec ou sans numéro de port). Si nous consultons l'application finalisée avec le protocole `file://`, notre [manifeste](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file) sera ignoré et [les <i lang="en">service workers</i>](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers) ajoutés échoueront.
 
-> **Note :** Servir l'application avec HTTPS est une bonne chose, qu'il s'agisse d'une PWA ou d'un site web. Cela permet que l'information qui transite entre le serveur web et le navigateur de la personne soit chiffrée de bout en bout. [Plusieurs API web ne fonctionnent qu'avec un contexte sécurisé](/fr/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts). Autrement dit, même si on ne crée par de PWA installable, on pourra avoir besoin d'un contexte sécurisé lorsqu'on ajoute des fonctionnalités.
+> [!NOTE]
+> Servir l'application avec HTTPS est une bonne chose, qu'il s'agisse d'une PWA ou d'un site web. Cela permet que l'information qui transite entre le serveur web et le navigateur de la personne soit chiffrée de bout en bout. [Plusieurs API web ne fonctionnent qu'avec un contexte sécurisé](/fr/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts). Autrement dit, même si on ne crée par de PWA installable, on pourra avoir besoin d'un contexte sécurisé lorsqu'on ajoute des fonctionnalités.
 
 Il nous faut un environnement de développement local pour suivre ce tutoriel. Pour que [notre PWA soit installable](/fr/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable), il nous faut un serveur sécurisé. Les fichiers nécessaires devront être servis via une connexion sécurisée sur le Web pour tirer parti des avantages d'une PWA et pour distribuer l'application comme telle.
 
@@ -42,7 +43,8 @@ Il existe plusieurs extensions d'[IDE](/fr/docs/Glossary/IDE) et paquets propres
 
 Vous pouvez lancer un serveur HTTP local à [l'aide d'une extension Visual Studio Code plugin](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#using_an_extension_in_your_code_editor), qui permet d'exécuter un serveur local sur un port donné.[L'extension <i lang="en">Preview on Web Server</i>](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server) de l'IDE [Visual Studio Code](https://code.visualstudio.com/download) permet de créer un serveur à la racine du répertoire ouvert dans l'éditeur, en utilisant le port `8080` oar défaut. Les extensions peuvent être configurées et on pourra donc changer le paramètre `previewServer.port` pour utiliser un autre port. Par défaut, si on saisit `localhost:8080` dans la barre d'URL du navigateur, on pourra voir la page.
 
-> **Note :** L'extension <i lang="en">Preview on Web Server</i> utilise [Browsersync](https://browsersync.io/). Lorsque vous avez un environnement de développement démarré avec cette extension, l'adresse `localhost:3001` vous permet d'accéder à l'interface utilisateur de Browsersync.
+> [!NOTE]
+> L'extension <i lang="en">Preview on Web Server</i> utilise [Browsersync](https://browsersync.io/). Lorsque vous avez un environnement de développement démarré avec cette extension, l'adresse `localhost:3001` vous permet d'accéder à l'interface utilisateur de Browsersync.
 
 Vous pouvez également créer [un serveur local avec l'IDE IntelliJ](https://www.jetbrains.com/help/idea/creating-local-server-configuration.html), qui intègre un [serveur web PHP configurable](https://www.jetbrains.com/help/idea/php-built-in-web-server.html#configuring-built-in-web-server).
 
@@ -66,7 +68,8 @@ ws --https
 
 Vous devrez peut-être utiliser `sudo` pour la commande d'installation globale précédente.
 
-> **Note :** Si vous faites attention à la confidentialité et à la vie privée, vous verrez ici que vous pouvez construire votre PWA vous-même et l'installer sur votre machine depuis votre propre environnement de développement, sans jamais avoir besoin d'Internet. Cette application ne contient aucun pistage et aussi respectueuse de la vie privée que possible.
+> [!NOTE]
+> Si vous faites attention à la confidentialité et à la vie privée, vous verrez ici que vous pouvez construire votre PWA vous-même et l'installer sur votre machine depuis votre propre environnement de développement, sans jamais avoir besoin d'Internet. Cette application ne contient aucun pistage et aussi respectueuse de la vie privée que possible.
 
 ## Serveurs externes sécurisés
 

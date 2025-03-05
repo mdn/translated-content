@@ -9,7 +9,8 @@ l10n:
 
 **History API**는 {{DOMxRef("Window.history","history")}} 전역 객체를 통해 브라우저 세션 히스토리([웹 익스텐션 히스토리](/ko/docs/Mozilla/Add-ons/WebExtensions/API/history)와 혼동해서는 안 됩니다.)에 대한 접근을 제공합니다. 사용자의 방문 기록을 앞뒤로 탐색하고, 방문 기록 스택의 내용을 조작할 수 있는 유용한 메서드와 속성을 노출합니다.
 
-> **참고:** 이 API는 메인 스레드({{domxref("Window")}})에서만 사용할 수 있습니다. {{domxref("Worker")}} 또는 {{domxref("Worklet")}} 맥락에서는 접근할 수 없습니다.
+> [!NOTE]
+> 이 API는 메인 스레드({{domxref("Window")}})에서만 사용할 수 있습니다. {{domxref("Worker")}} 또는 {{domxref("Worklet")}} 맥락에서는 접근할 수 없습니다.
 
 ## 개념 및 사용법
 

@@ -2,14 +2,22 @@
 title: Array.from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
 l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
 ---
 
 {{JSRef}}
 
 **`Array.from()`** 静的メソッドは、[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)や[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)からシャローコピーされた、新しい `Array` インスタンスを生成します。
 
-{{EmbedInteractiveExample("pages/js/array-from.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.from()", "shorter")}}
+
+```js interactive-example
+console.log(Array.from("foo"));
+// Expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], (x) => x + x));
+// Expected output: Array [2, 4, 6]
+```
 
 ## 構文
 
@@ -49,7 +57,8 @@ Array.from(arrayLike, mapFn, thisArg)
 
 `Array.from()` にはオプションで `mapFn` という引数があり、 {{jsxref("Array/map", "map()")}} と同様に、作成する配列のそれぞれの要素に対して関数を実行することができます。より明確には、`Array.from(obj, mapFn, thisArg)` は `Array.from(obj).map(mapFn, thisArg)` と同じ結果を保有します。ただし、`Array.from(obj).map(mapFn, thisArg)` は中間配列を作成せず、`mapFn` は配列全体を持たずに 2 つの引数 (`element`, `index`) を受け取るだけです。
 
-> **メモ:** この動作は[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)にとってより重要です。なぜなら、中間の配列は適切な型を入力するために必然的に値が切り捨てられるからです。 `Array.from()` は {{jsxref("TypedArray.from()")}} と同じシグネチャを持つために実装します。
+> [!NOTE]
+> この動作は[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)にとってより重要です。なぜなら、中間の配列は適切な型を入力するために必然的に値が切り捨てられるからです。 `Array.from()` は {{jsxref("TypedArray.from()")}} と同じシグネチャを持つために実装します。
 
 `Array.from()` メソッドは汎用ファクトリーメソッドです。例えば、 `Array` のサブクラスが `from()` メソッドを継承した場合、継承した `from()` メソッドは `Array` インスタンスではなく、サブクラスの新しいインスタンスを返します。実際には、新しい配列の長さを表す単一の引数を受け入れるコンストラクター関数を `this` 値として指定することができます。反復可能オブジェクトが `arrayLike` として渡された場合、コンストラクターは引数なしで呼び出されます。配列風のオブジェクトが渡された場合、コンストラクターは配列風オブジェクトの[正規化された長さ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#length_プロパティの正規化)で呼び出されます。最終的な `length` は反復処理が完了したときに再び設定されます。もし `this` の値がコンストラクター関数でない場合、代わりにプレーンな `Array` コンストラクターが使用されます。
 
@@ -170,7 +179,7 @@ console.log(Array.from.call(NotArray, { length: 1, 0: "foo" }));
 // NotArray { '0': 'foo', length: 1 }
 ```
 
-`this` の値がコンストラクタでない場合は、プレーンな `Array` オブジェクトを返します。
+`this` の値がコンストラクターでない場合は、プレーンな `Array` オブジェクトを返します。
 
 ```js
 console.log(Array.from.call({}, { length: 1, 0: "foo" })); // [ 'foo' ]

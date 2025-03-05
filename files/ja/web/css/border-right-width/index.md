@@ -2,7 +2,7 @@
 title: border-right-width
 slug: Web/CSS/border-right-width
 l10n:
-  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
+  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
 {{CSSRef}}
@@ -42,7 +42,8 @@ border-right-width: unset;
     - `medium`
     - `thick`
 
-> **メモ:** 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、いずれかを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
+> [!NOTE]
+> 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、いずれかを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
 
 ## 公式定義
 
@@ -58,14 +59,14 @@ border-right-width: unset;
 
 #### HTML
 
-```html
+```html live-sample___comparing_border_widths
 <div>Element 1</div>
 <div>Element 2</div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___comparing_border_widths
 div {
   border: 1px solid red;
   margin: 1em 0;
@@ -81,7 +82,7 @@ div:nth-child(2) {
 
 #### 結果
 
-{{EmbedLiveSample('境界線の太さの比較', '100%')}}
+{{EmbedLiveSample('Comparing_border_widths', '100%')}}
 
 ## 仕様書
 

@@ -7,7 +7,7 @@ slug: Web/API/FileReader/FileReader
 
 Конструктор **`FileReader()`** создаёт новый FileReader.
 
-Дополнительные сведения об использовании `FileReader`, смотрите в разделе [Использование файлов из веб-приложений](/ru/docs/Web/API/File/Using_files_from_web_applications).
+Дополнительные сведения об использовании `FileReader`, смотрите в разделе [Использование файлов из веб-приложений](/ru/docs/Web/API/File_API/Using_files_from_web_applications).
 
 ## Синтаксис
 
@@ -39,4 +39,4 @@ function printFile(file) {
 
 ## Смотрите также
 
-- [Использование файлов из веб-приложений](/ru/docs/Web/API/File/Using_files_from_web_applications)
+- [Использование файлов из веб-приложений](/ru/docs/Web/API/File_API/Using_files_from_web_applications)

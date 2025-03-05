@@ -10,7 +10,8 @@ l10n:
 
 **`ariaLevel`** は {{domxref("Element")}} インターフェイスのプロパティで、構造内の要素の階層レベルを定義する `aria-level` 属性の値を反映します。
 
-> **メモ:** 使用可能な場合は、HTML の {{htmlelement("Heading_Elements", "h1")}} または他の正しい見出しレベルを使用してください。
+> [!NOTE]
+> 使用可能な場合は、HTML の {{htmlelement("Heading_Elements", "h1")}} または他の正しい見出しレベルを使用してください。
 
 ## 値
 

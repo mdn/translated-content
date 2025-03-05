@@ -2,7 +2,7 @@
 title: position
 slug: Web/CSS/position
 l10n:
-  sourceCommit: 00a72fc5f2984139f7bf3fb3360be365606fe4e5
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
@@ -31,7 +31,7 @@ position: unset;
 ### 値
 
 - `static`
-  - : 要素は文書の通常のフローに従って配置されます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, {{cssxref("z-index")}} プロパティは*効果がありません*。これが既定値です。
+  - : 要素は文書の[通常フロー](/ja/docs/Learn_web_development/Core/CSS_layout/Introduction#通常フロー)に従って配置されます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, {{cssxref("z-index")}} プロパティは効果がありません。これが既定値です。
 - `relative`
 
   - : 要素は文書の通常のフローに従って配置され、 `top`, `right`, `bottom`, `left` の値に基づいて*自分自身からの相対*オフセットで配置されます。オフセットは他の要素の配置には影響を与えません。つまり、ページレイアウト内で要素に与えられる空間は、位置が `static` であった時と同じです。
@@ -56,7 +56,8 @@ position: unset;
 
     この値は、常に新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)を生成します。なお粘着要素は、直近の祖先がスクロールしない場合でも、「スクロールの仕組み」を持つ直近の祖先（`overflow` が `hidden`, `scroll`, `auto`, `overlay` として作成されたもの）に「粘着」します。
 
-    > **メモ:** 要素を粘着させる必要がある軸に対して、少なくとも 1 つの [inset](/ja/docs/Web/CSS/inset) プロパティ（{{cssxref("top")}}, {{cssxref("inset-block-start")}}, {{cssxref("right")}}, {{cssxref("inset-inline-end")}} など）を `auto` 以外の値に設定する必要があります。軸の `inset` プロパティが両方とも `auto` に設定されている場合、その軸では `sticky` 値は `relative` として動作します。
+    > [!NOTE]
+    > 要素を粘着させる必要がある軸に対して、少なくとも 1 つの [inset](/ja/docs/Web/CSS/inset) プロパティ（{{cssxref("top")}}, {{cssxref("inset-block-start")}}, {{cssxref("right")}}, {{cssxref("inset-inline-end")}} など）を `auto` 以外の値に設定する必要があります。軸の `inset` プロパティが両方とも `auto` に設定されている場合、その軸では `sticky` 値は `relative` として動作します。
 
 ## 解説
 
@@ -64,7 +65,7 @@ position: unset;
 
 - **位置指定要素** (positioned element) とは、 `position` の[計算値](/ja/docs/Web/CSS/computed_value)が `relative`, `absolute`, `fixed`, `sticky` のいずれかである要素です。 (言い換えれば、 `static` 以外の全てです。)
 - **相対位置指定要素** (relatively positioned element) とは、 `position` の[計算値](/ja/docs/Web/CSS/computed_value)が `relative` である要素です。 {{Cssxref("top")}} および {{Cssxref("bottom")}} プロパティは、通常の位置からの垂直方向のオフセットを指定します。 {{Cssxref("left")}} および {{Cssxref("right")}} プロパティは、水平方向のオフセットを指定します。
-- **絶対位置指定要素** (absolutely positioned element) とは、 `position` の[計算値](/ja/docs/Web/CSS/computed_value)が `absolute` または `fixed` である要素です。 {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, {{Cssxref("left")}} の各プロパティは、この要素の[包含ブロック](/ja/docs/Web/CSS/Containing_block)の端からのオフセットを指定します。 (包含ブロックは配置される要素の祖先です。) 要素にマージンがある場合は、オフセットにマージンが追加されます。この要素は内容のために新しい [ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context) (BFC) を生成します。
+- **絶対位置指定要素** (absolutely positioned element) とは、 `position` の[計算値](/ja/docs/Web/CSS/computed_value)が `absolute` または `fixed` である要素です。 {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, {{Cssxref("left")}} の各プロパティは、この要素の[包含ブロック](/ja/docs/Web/CSS/Containing_block)の端からのオフセットを指定します。 (包含ブロックは配置される要素の祖先です。) 要素にマージンがある場合は、オフセットにマージンが追加されます。この要素は内容のために新しい [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) を生成します。
 - **粘着位置指定要素** (stickily positioned element) とは、 `position` の[計算値](/ja/docs/Web/CSS/computed_value)が `sticky` である要素です。これは[包含ブロック](/ja/docs/Web/CSS/Containing_block)がフロールート (またはその中でスクロールするコンテナー) 内の指定されたしきい値 (例えば {{Cssxref("top")}} に設定された auto 以外の値など) を達するまでは相対的な配置として扱われ、[包含ブロック](/ja/docs/Web/CSS/Containing_block)の反対の端が来るまでその位置に「粘着」するものとして扱われます。
 
 ほとんどの場合、絶対位置指定要素に {{Cssxref("height")}} および {{Cssxref("width")}} が `auto` が設定されると、内容に合うように大きさが調整されます。しかし、非[置換](/ja/docs/Web/CSS/Replaced_element)要素で絶対位置指定要素は、 {{Cssxref("top")}} および {{Cssxref("bottom")}} を指定して {{Cssxref("height")}} を指定しない (つまり `auto` の) ままにすることで、利用できる垂直の空間を埋めることができます。同様に、 {{Cssxref("left")}} および {{Cssxref("right")}} を指定して {{Cssxref("width")}} を `auto` のままにすることで、利用できる水平の空間を埋めることができます。
@@ -74,7 +75,7 @@ position: unset;
 - `top` と `bottom` の両方を指定すると (`auto`ではなく)、 `top` が優先されます。
 - `left` と `right` の両方を指定すると、 {{Cssxref("direction")}} が `ltr` (英語、横書き日本語、など) の場合は `left` が優先され、 {{Cssxref("direction")}} が `rtl` (ペルシャ語、アラビア語、ヘブライ語、 など)の場合は `right` が優先されます。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 `absolute` または `fixed` の値で配置された要素は、ページがズームしてテキストの大きさを大きくしたら、その他の要素を妨害していないかどうかを確認してください。
 
@@ -83,7 +84,7 @@ position: unset;
 
 ### パフォーマンスとアクセシビリティ
 
-`fixed` または `sticky` を含む要素の内容をスクロールすると、パフォーマンスやアクセシビリティの問題を引き起こす可能性があります。ユーザーがスクロールする際、ブラウザーは sticky や fixed のコンテンツを新しい場所に再描画しなければなりません。再描画する必要があるコンテンツ、ブラウザーの性能や、端末の処理速度によっては、ブラウザーは 60 fps で再描画を管理することができず、敏感な人々にアクセシビリティの問題を起こし、誰からも汚く見えることになります。一つの解決方法として、位置指定要素に {{cssxref("will-change", "will-change: transform")}} を追加して要素を独自のレイヤーで描画させるようにすると、再描画の速度が上がり、性能問題やアクセシビリティを改善することができます。
+`fixed` または `sticky` を含む要素の内容をスクロールすると、パフォーマンスやアクセシビリティの問題を引き起こす可能性があります。ユーザーがスクロールする際、ブラウザーは sticky や fixed のコンテンツを新しい場所に再描画しなければなりません。再描画する必要があるコンテンツ、ブラウザーの性能や、端末の処理速度によっては、ブラウザーは 60 fps で再描画を管理することができません。このような状況は、動作の不安定（[ジャンク](/ja/docs/Glossary/Jank)）につながる可能性があり、さらに重要なこととして、敏感な人にとってはアクセシビリティの問題となります。一つの解決方法として、位置指定要素に {{cssxref("will-change", "will-change: transform")}} を追加して要素を独自のレイヤーで描画させるようにすると、再描画の速度が上がり、性能問題やアクセシビリティを改善することができます。
 
 ## 公式定義
 
@@ -101,7 +102,7 @@ position: unset;
 
 #### HTML
 
-```html
+```html live-sample___relative_positioning
 <div class="box" id="one">One</div>
 <div class="box" id="two">Two</div>
 <div class="box" id="three">Three</div>
@@ -110,7 +111,7 @@ position: unset;
 
 #### CSS
 
-```css
+```css live-sample___relative_positioning
 * {
   box-sizing: border-box;
 }
@@ -131,46 +132,38 @@ position: unset;
 }
 ```
 
-{{EmbedLiveSample('相対位置指定', '', '200px')}}
+{{EmbedLiveSample('Relative_positioning', '', '200px')}}
 
 ### 絶対位置指定
 
-相対位置指定の要素も、文書の通常のフローの中に配置されます。それに対して、絶対位置指定の要素はフローから除外されます。つまり、他の要素はこの要素が存在しないかのように配置されます。絶対位置指定の要素は*配置された直近の祖先*（つまり、 `static` ではない直近の祖先) に対して相対的に配置されます。配置された祖先がない場合は、 ICB (initial containing block — [W3C の定義](https://www.w3.org/TR/CSS2/visudet.html#containing-block-details)も参照）すなわち文書のルート要素の包含ブロックに対する相対的な配置になります。
+相対位置指定の要素も、文書の通常のフローの中に配置されます。それに対して、絶対位置指定の要素はフローから除外されます。つまり、他の要素はこの要素が存在しないかのように配置されます。絶対位置指定の要素は*配置された直近の祖先*（つまり、 `static` ではない直近の祖先（に対して相対的に配置されます。配置された祖先がない場合は、 ICB （initial containing block — [W3C の定義](https://www.w3.org/TR/CSS2/visudet.html#containing-block-details)も参照）すなわち文書のルート要素の包含ブロックに対する相対的な配置になります。
 
 #### HTML
 
-```html
-<h1>Absolute positioning</h1>
+```html-nolint live-sample___absolute_positioning
+<h1>絶対位置指定</h1>
 
 <p>
-  I am a basic block level element. My adjacent block level elements sit on new
-  lines below me.
+  これは基本的なブロックレベル要素です。隣接するブロックレベル要素は、この下に新しい行に配置します。
 </p>
 
 <p class="positioned">
-  By default we span 100% of the width of our parent element, and we are as tall
-  as our child content. Our total width and height is our content + padding +
-  border width/height.
+  既定では、親要素の幅を100%使用し、子コンテンツの高さと同じ高さになります。コンテンツの幅と高さの合計は、コンテンツの高さ＋パディング＋境界線の幅/高さとなります。
 </p>
 
 <p>
-  We are separated by our margins. Because of margin collapsing, we are
-  separated by the width of one of our margins, not both.
+  これはマージンによって別個の存在となっています。マージンが相殺されているため、両方ではなく、一方のマージンの幅となっています。
 </p>
 
 <p>
-  inline elements <span>like this one</span> and <span>this one</span> sit on
-  the same line as one another, and adjacent text nodes, if there is space on
-  the same line. Overflowing inline elements
-  <span>wrap onto a new line if possible — like this one containing text</span>,
-  or just go on to a new line if not, much like this image will do:
+  インライン要素は、<span>この要素</span>と<span>この要素</span>が互いに同じ行に位置し、同じ行に空間がある場合には隣接するテキストノードが位置します。オーバーフローしたインライン要素は、可能な場合には新しい行に<span>このテキストを含む要素のように折り返されます</span>。またはそうでない場合には新しい行に移動します。この画像のようになります。
   <img src="long.jpg" />
 </p>
 ```
 
 #### CSS
 
-```css
+```css live-sample___absolute_positioning
 * {
   box-sizing: border-box;
 }
@@ -202,7 +195,7 @@ span {
 
 #### 結果
 
-{{EmbedLiveSample('絶対位置指定', '', '420px')}}
+{{EmbedLiveSample('Absolute_positioning', '', '420px')}}
 
 ### 固定位置指定
 
@@ -210,7 +203,7 @@ span {
 
 #### HTML
 
-```html
+```html live-sample___fixed_positioning
 <div class="outer">
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor
@@ -244,7 +237,7 @@ span {
 
 #### CSS
 
-```css
+```css live-sample___fixed_positioning
 * {
   box-sizing: border-box;
 }
@@ -273,11 +266,11 @@ span {
 
 #### 結果
 
-{{EmbedLiveSample('固定位置指定', '', '300px')}}
+{{EmbedLiveSample('Fixed_positioning', '', '300px')}}
 
 ### 粘着位置指定
 
-粘着位置指定は、直近のスクロールする祖先がビューポート内にある場合に、相対位置指定と固定位置指定を組み合わせたものです。粘着位置指定された要素は、指定したしきい値に達するまでは相対位置指定として、しきい値に達したら固定位置指定として扱われます。例えば次のようになっていたとします。
+次の CSS ルールは、ビューポートがスクロールされるまで、id が "one" である要素を相対的に位置指定し、要素が上から 10 ピクセルの位置にくるようにします。この閾値を超えると、要素は上から 10 ピクセルの位置に固定されます。
 
 ```css
 #one {
@@ -286,15 +279,15 @@ span {
 }
 ```
 
-上記の CSS ルールはは、ビューポートをスクロールして要素の位置が上端から 10px より小さくなるまでは、相対位置指定の要素としてふるまいます。それ以降はしきい値を超えるほどビューポートのスクロールを戻すまで、上端から 10px で固定位置指定になります。
+#### 粘着見出しのあるリスト
 
 粘着位置指定は一般的に、アルファベット順や五十音順のリストの見出しに使用されます。見出し A の項目をスクリーン外にスクロールするまで、見出し B は A の項目の後ろに表示されています。見出し B はコンテンツの残りの部分とともにスクリーン外に移動するのではなく、見出し B のすべての項目をスクリーン外にスクロールして見出し C に含まれる部分に達するまで、ビューポートの上部に固定されます。
 
 粘着位置指定を想定したとおりに動作させるためには、 `top`, `right`, `bottom`, `left` のうち少なくとも一つでしきい値を指定しなければなりません。しきい値を指定しなければ、相対位置指定との違いがなくなるでしょう。
 
-#### HTML
+##### HTML
 
-```html
+```html live-sample___list_with_sticky_headings
 <dl>
   <div>
     <dt>A</dt>
@@ -327,9 +320,9 @@ span {
 </dl>
 ```
 
-#### CSS
+##### CSS
 
-```css
+```css live-sample___list_with_sticky_headings
 * {
   box-sizing: border-box;
 }
@@ -370,9 +363,74 @@ dd + dd {
 }
 ```
 
-#### 結果
+##### 結果
 
-{{EmbedLiveSample('粘着位置指定', '', '300px')}}
+{{EmbedLiveSample('List with sticky headings', '', '300px')}}
+
+#### すべての内接境界を指定した粘着位置
+
+次の例は、すべての内接境界をすべて設定した場合の要素の動作を示しています。ここでは、2 つの電球の絵文字が段落内にあります。電球は粘着位置指定を使用しており、内接境界は上から 50px、右から 100px、下から 50px、左から 50pxと指定されています。親の div 要素の灰色の背景が内接領域を示しています。
+
+##### HTML
+
+```html-nolint live-sample___sticky_position_with_all_the_inset_boundaries_set
+スクロールバーを使用して、以下のテキスト内の正しい場所に電球 (💡) を配置してください。
+<div>
+  <p>
+    The representation of an idea by a light bulb(<span class="bulb">💡</span>)
+    is a commonly used metaphor that symbolizes the moment of inspiration or the
+    birth of a new idea. The association between a light bulb and an idea can be
+    traced back to the invention of the incandescent light bulb(<span
+      class="bulb"
+      >💡</span
+    >) by Thomas Edison in the late 19th century. The light bulb is a powerful
+    symbol because it represents illumination, clarity, and the sudden
+    brightening of one's thoughts or understanding. When someone has an idea, it
+    is often described as a light bulb turning on in their mind, signifying a
+    moment of insight or creativity. The image of a light bulb also suggests the
+    idea of energy, power, and the potential for growth and development.
+  </p>
+</div>
+```
+
+##### CSS
+
+```css hidden live-sample___sticky_position_with_all_the_inset_boundaries_set
+div {
+  width: 400px;
+  height: 200px;
+  overflow: scroll;
+  scrollbar-width: thin;
+  font-size: 16px;
+  font-family: verdana;
+  border: 1px solid;
+}
+
+p {
+  width: 600px;
+  user-select: none;
+  margin: 0;
+  border: 110px solid transparent;
+}
+```
+
+```css
+.bulb {
+  position: sticky;
+  inset: 50px 100px 50px 100px;
+}
+
+div {
+  /* mark area defined by the inset boundaries using gray color */
+  background: linear-gradient(#9999, #9999) 100px 50px / 192px 100px no-repeat;
+}
+```
+
+##### 結果
+
+{{EmbedLiveSample('Sticky position with all the inset boundaries set', '', '300px')}}
+
+どちらの電球も正しい場所に置くと、相対位置が内接領域内に指定されていることがわかります。内接領域から移されると、その方向の内接境界に固定（粘着）されます。
 
 ## 仕様書
 
@@ -384,4 +442,4 @@ dd + dd {
 
 ## 関連情報
 
-- [CSS の学習: 位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
+- [CSS の学習: 位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)

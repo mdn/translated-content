@@ -3,10 +3,10 @@ title: "Event: preventDefault() メソッド"
 short-title: preventDefault()
 slug: Web/API/Event/preventDefault
 l10n:
-  sourceCommit: 32b07aa5b6ac4799a88e7b87a4d8333643ab6427
+  sourceCommit: d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
 ---
 
-{{apiref("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 **`preventDefault()`** は {{domxref("Event")}} インターフェイスのメソッドで、{{Glossary("user agent", "ユーザーエージェント")}}に、このイベントが明示的に処理されない場合に、その既定のアクションを通常どおりに行うべきではないことを伝えます。
 
@@ -14,10 +14,12 @@ l10n:
 
 後述のように、 **`preventDefault()`** を {{domxref("EventTarget.dispatchEvent()")}} によってディスパッチされたイベントのようなキャンセルできないイベントに対して、 `cancelable: true` を指定せずに呼び出しても何も効果がありません。
 
+パッシブリスナーが `preventDefault()` を呼び出した場合、何も起こらず、コンソールに警告が表示される場合があります。
+
 ## 構文
 
 ```js-nolint
-event.preventDefault()
+preventDefault()
 ```
 
 ## 例
@@ -34,8 +36,8 @@ const checkbox = document.querySelector("#id-checkbox");
 checkbox.addEventListener("click", checkboxClick, false);
 
 function checkboxClick(event) {
-  let warn = "preventDefault() がこのチェックを妨害しています。<br>";
-  document.getElementById("output-box").innerHTML += warn;
+  const warn = "preventDefault() がこのチェックを妨害しています。\n";
+  document.getElementById("output-box").innerText += warn;
   event.preventDefault();
 }
 ```
@@ -59,7 +61,7 @@ function checkboxClick(event) {
 
 ### キーストロークが編集フィールドに到達するのを止める
 
-次の例は、無効なテキスト入力が入力フィールドに到達するのを `preventDefault()` で止める方法を示しています。今日では、[ネイティブの HTML フォーム検証](/ja/docs/Learn/Forms/Form_validation)を代わりに使用してください。
+次の例は、無効なテキスト入力が入力フィールドに到達するのを `preventDefault()` で止める方法を示しています。今日では、[ネイティブの HTML フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)を代わりに使用してください。
 
 #### HTML
 
@@ -78,7 +80,7 @@ function checkboxClick(event) {
 
 #### CSS
 
-ユーザが無効なキーを押したときに描画する警告ボックスには、CSS を少し使用します。
+ユーザーが無効なキーを押したときに描画する警告ボックスには、CSS を少し使用します。
 
 ```css
 .warning {
@@ -102,15 +104,13 @@ myTextbox.addEventListener("keydown", checkName, false);
 
 `checkName()` 関数は押されたキーを調べ、それを許可するかどうかを決定します。
 
-```js
+```js-nolint
 function checkName(evt) {
   const key = evt.key;
   const lowerCaseAlphabet = "abcdefghijklmnopqrstuvwxyz";
   if (!lowerCaseAlphabet.includes(key)) {
     evt.preventDefault();
-    displayWarning(
-      "小文字のみを使用してください。\n" + `押されたキー: ${key}\n`,
-    );
+    displayWarning(`小文字のみを使用してください。\n押されたキー: ${key}\n`);
   }
 }
 ```
@@ -123,12 +123,12 @@ const warningBox = document.createElement("div");
 warningBox.className = "warning";
 
 function displayWarning(msg) {
-  warningBox.innerHTML = msg;
+  warningBox.innerText = msg;
 
   if (document.body.contains(warningBox)) {
     clearTimeout(warningTimeout);
   } else {
-    // insert warningBox after myTextbox
+    // warningBox を myTextbox の後に挿入
     myTextbox.parentNode.insertBefore(warningBox, myTextbox.nextSibling);
   }
 

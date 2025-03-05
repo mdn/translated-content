@@ -41,7 +41,7 @@ contain-intrinsic-width: unset;
 
 ## 描述
 
-此属性的应用常常伴随如 {{CSSXref("contain", "contain: size")}} 和 {{CSSXref("content-visibility")}} 等可触发尺寸局限的要素，且亦可使用[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) {{CSSXref("contain-intrinsic-size")}} 设置。
+此属性的应用常常伴随如 {{CSSXref("contain", "contain: size")}} 和 {{CSSXref("content-visibility")}} 等可触发尺寸局限的要素，且亦可使用[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) {{CSSXref("contain-intrinsic-size")}} 设置。
 
 尺寸局限允许用户代理将元素视为具有固定尺寸进行布局。由此避免为确定实际尺寸而重渲子元素，阻止不必要的重排（进而改善用户体验）。尺寸局限默认将元素视为不包含内容，且可按与内容无宽度或高度相同的方式折叠布局。`contain-intrinsic-width` 允许作者为布局所用的宽度指定合适的值。
 
@@ -97,7 +97,7 @@ contain-intrinsic-width: unset;
 
 ## 参见
 
-- [content-visibility：提高渲染性能的新 CSS 属性](https://web.dev/articles/content-visibility)（web.dev）
+- [content-visibility：提高渲染性能的新 CSS 属性](https://web.developers.google.cn/articles/content-visibility)（web.developers.google.cn）
 - {{CSSXref("contain-intrinsic-size")}}
 - {{CSSXref("contain-intrinsic-height")}}
 - {{CSSXref("contain-intrinsic-block-size")}}

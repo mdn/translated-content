@@ -30,7 +30,7 @@ slug: Web/XSLT/Element/copy
 
 ### 정의
 
-[XSLT section 7.5, Copying](http://www.w3.org/TR/xslt#copying)
+[XSLT section 7.5, Copying](https://www.w3.org/TR/xslt#copying)
 
 ### Gecko 지원
 

@@ -12,7 +12,8 @@ l10n:
 
 {{domxref("HTMLInputElement.webkitdirectory", "webkitdirectory")}} プロパティが `true` である場合のみ、配列が入ることがあります。これは、 `<input>` 要素でユーザーがディレクトリーを選択することができることを意味します。
 
-> **メモ:** このプロパティは仕様書で `webkitEntries` と呼ばれていますが、これはもともと Google Chrome 独自の API であったためです。いつか改名される可能性があります。
+> [!NOTE]
+> このプロパティは仕様書で `webkitEntries` と呼ばれていますが、これはもともと Google Chrome 独自の API であったためです。いつか改名される可能性があります。
 
 ## 値
 

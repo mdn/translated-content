@@ -2,12 +2,12 @@
 title: 数组
 slug: Glossary/Array
 l10n:
-  sourceCommit: d842f8c32316dbe36cff9fc5e0e777602e32d958
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
 {{GlossarySidebar}}
 
-*数组*是一个有序的数据（根据语言不同，数据可以是{{Glossary("primitive","原始值")}}或{{Glossary("object","对象")}}）集合。相对于一个普通的变量，数组可用于在一个变量中存储多个变量值。
+**数组**是有序的数据（根据语言不同，数据可以是{{Glossary("primitive","原始值")}}或{{Glossary("object","对象")}}）集合。相对于普通的变量，数组可用于在一个变量中存储多个值。
 
 数组中的每一项都有可供访问的数字索引。在 JavaScript 中，数组索引从 0 开始，并可以使用多种{{Glossary("Method", "方法")}}操作。
 
@@ -25,4 +25,4 @@ console.log(barbieDollNamesArray[2]); // 输出：“Midge”
 
 ## 参见
 
-- MDN JavaScript {{jsxref("Array")}} 参考
+- JavaScript {{jsxref("Array")}} 参考

@@ -7,15 +7,15 @@ slug: Web/HTML/Element/p
 
 ### Definición
 
-- El elemento [p](/es/HTML/Elemento/p) (párrafo) es el apropiado para distribuir el texto en párrafos.
+- El elemento [p](/es/docs/Web/HTML/Element/p) (párrafo) es el apropiado para distribuir el texto en párrafos.
 
   - : **Sus etiquetas son**: \<p> y \</p> (la de cierre es opcional).
 
-    **Crea una caja**: [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **Crea una caja**: [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
-    **Está definido como**: [Elemento de frase](/es/HTML/Elemento/Tipos_de_elementos#de_frase).
+    **Está definido como**: [Elemento de frase](/es/docs/HTML/Elemento/Tipos_de_elementos#de_frase).
 
-    **Puede contener**: cero o más elementos [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **Puede contener**: cero o más elementos [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 #### Atributos
 
@@ -113,7 +113,8 @@ párrafo
 
 - [En la especificación del estándar](http://html.conclase.net/w3c/html401-es/struct/text.html#edef-P)
 
-> **Nota:** ¡Estamos en obras!... disculpen las molestias.
+> [!NOTE]
+> ¡Estamos en obras!... disculpen las molestias.
 > Este documento está siendo editado, posiblemente contenga carencias y defectos.
 >
 > ¿Quieres participar en la elaboración de este documento? Para más información sobre como ayudar o como empezar a hacerlo, consulta MDC:Como ayudar.

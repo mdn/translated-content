@@ -51,7 +51,8 @@ Hay muchas bibliotecas y _frameworks_ en existencia, que no son estándares web 
 
 El equipo de MDN Web Docs se concentra en documentar la plataforma web abierta. Si quieres que se considere una tecnología en esta área para la documentación en MDN Web Docs, necesitarás tener una comunidad reunida que esté dispuesta a escribir la documentación y mantenerla después de completarla. Nuestro equipo está feliz de proporcionar orientación en tales casos, incluidas ediciones y comentarios, pero no tenemos los recursos para más que eso.
 
-> **Nota:** El trabajo de MDN Web Docs se lleva a cabo en GitHub y 'en abierto'. Tu equipo debería estar familiarizado con git y GitHub y sentirse cómodo trabajando en código abierto.
+> [!NOTE]
+> El trabajo de MDN Web Docs se lleva a cabo en GitHub y 'en abierto'. Tu equipo debería estar familiarizado con git y GitHub y sentirse cómodo trabajando en código abierto.
 
 ## Proceso para seleccionar la nueva tecnología
 
@@ -79,7 +80,8 @@ Las tecnologías serán consideradas para su inclusión en MDN Web Docs caso por
 
 No necesitas proporcionarnos cientos de páginas de detalle en esta etapa (de hecho, preferiríamos que no lo hicieras). Un par de párrafos sobre cada uno de los puntos anteriores son más que adecuados.
 
-> **Nota:** MDN Web Docs es principalmente un sitio en inglés (en-US). El idioma principal para tu proyecto debe ser en inglés de EE. UU.
+> [!NOTE]
+> MDN Web Docs es principalmente un sitio en inglés (en-US). El idioma principal para tu proyecto debe ser en inglés de EE. UU.
 
 ### Esperar una respuesta
 

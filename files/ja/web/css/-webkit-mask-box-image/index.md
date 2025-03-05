@@ -1,5 +1,5 @@
 ---
-title: "-webkit-mask-box-image"
+title: -webkit-mask-box-image
 slug: Web/CSS/-webkit-mask-box-image
 ---
 
@@ -7,11 +7,11 @@ slug: Web/CSS/-webkit-mask-box-image
 
 `-webkit-mask-box-image` はマスク画像を要素の境界ボックスに設定します。
 
-- {{ Xref_cssinitial() }}: なし
+- [初期値](/ja/docs/Web/CSS/initial_value): なし
 - 適用先: すべての要素
-- {{ Xref_cssinherited() }}: なし
+- [継承](/ja/docs/Web/CSS/Inheritance): なし
 - メディア: {{cssxref("Media/Visual", "visual")}}
-- {{ Xref_csscomputed() }}: 指定通り
+- [計算値](/ja/docs/Web/CSS/computed_value): 指定通り
 
 ## 構文
 

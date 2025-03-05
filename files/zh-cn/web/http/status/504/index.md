@@ -19,10 +19,6 @@ slug: Web/HTTP/Status/504
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
-## 相关内容
+## 参见
 
 - {{HTTPStatus(502)}}

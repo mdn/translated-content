@@ -1,5 +1,5 @@
 ---
-title: ":indeterminate"
+title: :indeterminate
 slug: Web/CSS/:indeterminate
 ---
 
@@ -127,8 +127,8 @@ progress:indeterminate {
 
 ## 参见
 
-- [Web 表单——处理用户数据](/zh-CN/docs/Learn/Forms)
-- [样式化 Web 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
+- [Web 表单——处理用户数据](/zh-CN/docs/Learn_web_development/Extensions/Forms)
+- [样式化 Web 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Element/input/checkbox) 元素的 [`indeterminate`](/zh-CN/docs/Web/HTML/Element/input/checkbox#indeterminate) 属性
 - {{HTMLElement("input")}} 和实现它的 {{domxref("HTMLInputElement")}} 接口
 - {{cssxref(":checked")}} CSS 选择器可以让你根据复选框是否被选中来设置样式

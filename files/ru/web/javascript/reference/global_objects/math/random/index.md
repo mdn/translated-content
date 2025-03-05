@@ -9,9 +9,25 @@ l10n:
 
 Статический метод **`Math.random()`** возвращает псевдослучайное число с плавающей запятой, которое больше или равно нулю и меньше единицы с приблизительно равномерным распределением в этом диапазоне. В дальнейшем это число можно «отмасштабировать», привести к нужному диапазону. Выбор начального числа для алгоритма генерации случайных чисел происходит автоматически (зависит от реализации) и не может быть изменён пользователем.
 
-> **Примечание:** метод `Math.random()` _не предоставляет_ криптографически стойкие случайные числа. Не используйте его ни для чего, связанного с безопасностью. Для таких целей используйте Web Crypto API и более точный метод {{domxref("Crypto/getRandomValues", "window.crypto.getRandomValues()")}}.
+> [!NOTE]
+> Метод `Math.random()` _не предоставляет_ криптографически стойкие случайные числа. Не используйте его ни для чего, связанного с безопасностью. Для таких целей используйте Web Crypto API и более точный метод {{domxref("Crypto/getRandomValues", "window.crypto.getRandomValues()")}}.
 
-{{EmbedInteractiveExample("pages/js/math-random.html")}}
+{{InteractiveExample("JavaScript Demo: Math.random()")}}
+
+```js interactive-example
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+console.log(getRandomInt(3));
+// Expected output: 0, 1 or 2
+
+console.log(getRandomInt(1));
+// Expected output: 0
+
+console.log(Math.random());
+// Expected output: a number from 0 to <1
+```
 
 ## Синтаксис
 
@@ -61,7 +77,8 @@ function getRandomInt(min, max) {
 }
 ```
 
-> **Примечание:** Может показаться заманчивым использовать [`Math.round()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/round) для округления, но это может сделать распределение неравномерным и оказаться не тем, что вам нужно.
+> [!NOTE]
+> Может показаться заманчивым использовать [`Math.round()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/round) для округления, но это может сделать распределение неравномерным и оказаться не тем, что вам нужно.
 
 ### Получение случайного целого числа в заданном интервале, включительно
 

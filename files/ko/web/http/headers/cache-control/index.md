@@ -62,7 +62,7 @@ Cache-control: s-maxage=<seconds>
 
 ### 확장 `Cache-Control` 디렉티브
 
-확장 `Cache-Control` 디렉티브는 핵심 HTTP 캐싱 표준 문서에 속하지 않습니다. 지원 여부는 [호환성 테이블](#Browser_compatibility)을 확인하시기 바랍니다.
+확장 `Cache-Control` 디렉티브는 핵심 HTTP 캐싱 표준 문서에 속하지 않습니다. 지원 여부는 [호환성 테이블](#browser_compatibility)을 확인하시기 바랍니다.
 
 ```
 Cache-control: immutable
@@ -142,7 +142,7 @@ Cache-Control:public, max-age=31536000
 
 ## 함께 참고할 내용
 
-- [HTTP Caching FAQ](/ko/docs/Web/HTTP/Caching_FAQ)
+- [HTTP Caching FAQ](/ko/docs/Web/HTTP/Caching)
 - {{HTTPHeader("Age")}}
 - {{HTTPHeader("Expires")}}
 - {{HTTPHeader("Pragma")}}

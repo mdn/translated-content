@@ -11,17 +11,18 @@ Note: `getBBox` must return the actual bounding box at the time the method was c
 
 > **备注：** `getBBox` returns different values than getBoundingClientRect, as the latter returns value relative to the viewport
 
-## Syntax
+## 语法
 
-```
-let bboxRect = object.getBBox();
+```js-nolint
+getBBox()
+getBBox(options)
 ```
 
-### Return value
+### 返回值
 
 The returned value is a [SVGRect](/zh-CN/docs/Web/API/SVGRect) object, which defines the bounding box. This value is irrespective of any transformation attribute applied to it or the parent elements.
 
-## Example
+## 示例
 
 ### HTML
 
@@ -60,10 +61,10 @@ rectBoundingClientRect.setAttribute("width", boundingClientRectGroup.width);
 rectBoundingClientRect.setAttribute("height", boundingClientRectGroup.height);
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## See also
+## 参见
 
 - [getBBox in SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html#getBBox)

@@ -13,12 +13,12 @@ slug: Mozilla/Firefox/Releases/32
 
 Основные изменения:
 
-- [Редактор Web Audio](/ru/docs/Tools/Web_Audio_Editor)
+- [Редактор Web Audio](https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html)
 - [Автоподстановка и подсказки в Блокноте](/ru/docs/Tools/Scratchpad#Code_completion_and_inline_documentation)
-- [Стили User agent в представлении Inspector Rules](/ru/docs/Tools/Page_Inspector#Rules_view)
-- [Кнопка выбора элемента со страницы перемещена](/ru/docs/Tools/Page_Inspector#Firefox_32_onwards_2)
-- [Добавлено отображение размеров узла в информационную панель Инспектора](/ru/docs/Tools/Page_Inspector#Firefox_32_onwards)
-- [Добавлена кнопка снятия снимка всей страницы](/ru/docs/Tools/Tools_Toolbox#Extra_tools)
+- [Стили User agent в представлении Inspector Rules](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#rules_view)
+- [Кнопка выбора элемента со страницы перемещена](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#firefox_32_onwards_2)
+- [Добавлено отображение размеров узла в информационную панель Инспектора](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#firefox_32_onwards)
+- [Добавлена кнопка снятия снимка всей страницы](https://firefox-source-docs.mozilla.org/devtools-user/tools_toolbox/index.html#extra_tools)
 - Добавлены HiDPI изображения в инструменты
 - Узлы, содержащие `display:none` в Инспекторе отображаются иначе
 
@@ -45,7 +45,7 @@ slug: Mozilla/Firefox/Releases/32
 
 ### Интерфейсы/APIs/DOM
 
-- Реализованы свойство {{domxref("navigator.languages")}} и событие {{event("languagechange")}} ([Firefox bug 889335](https://bugzil.la/889335)).
+- Реализованы свойство {{domxref("navigator.languages")}} и событие {{domxref("Window.languagechange_event", "languagechange")}} ([Firefox bug 889335](https://bugzil.la/889335)).
 - В методы {{domxref("KeyboardEvent.getModifierState")}}() и {{domxref("MouseEvent.getModifierState")}}() добавлена поддержка виртуального модификатора `Accel` ([Firefox bug 1009388](https://bugzil.la/1009388)).
 - Добавлена экспериментальная реализация свойства {{domxref("KeyboardEvent.code")}}: она отключена в Release сборках ([Firefox bug 865649](https://bugzil.la/865649)).
 
@@ -63,7 +63,7 @@ _Без изменений._
 
 ## Безопасность
 
-- [Привилегированный код теперь обладает рентгеновским зрением относительно экземпляров `Object` и `Array` в](/ru/docs/Xray_vision#Xray_semantics_for_Object_and_Array) [JavaScript](/ru/docs/Xray_vision#Xray_semantics_for_Object_and_Array).
+- [Привилегированный код теперь обладает рентгеновским зрением относительно экземпляров `Object` и `Array` в](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xray_semantics_for_object_and_array) [JavaScript](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xray_semantics_for_object_and_array).
 
 ## Изменения для разработчиков дополнений и разработчиков Mozilla
 
@@ -73,7 +73,7 @@ _Без изменений._
 
 - Добавлено свойство [`exclude`](/en-US/Add-ons/SDK/High-Level_APIs/page-mod#PageMod%28options%29) в `PageMod`.
 - Добавлено свойство [`anonymous`](/en-US/Add-ons/SDK/High-Level_APIs/request#Request%28options%29) в `Request`.
-- [Add-on Debugger](/en-US/Add-ons/Add-on_Debugger) теперь содержит Консоль и Блокнот.
+- [Add-on Debugger](/ru/docs/Mozilla/Add-ons/Add-on_Debugger) теперь содержит Консоль и Блокнот.
 
 #### Подробнее
 

@@ -16,7 +16,8 @@ Esta especificación añade dos nuevos metodos a cualquier objeto implementando 
 - {{domxref("Element.querySelectorAll", "querySelectorAll()")}}
   - : devuelve un listado de nodos {{domxref("NodeList")}} conteniendo todos los elementos del nodo coincidentes( `Element`) dentro de las subramas del nodo, o Devuelve un Listado de Nodos vacio `NodeList` sino se encuentran coincidencias.
 
-> **Nota:** El {{domxref("NodeList")}} devuelto por {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} no es dinamico, Es decir que cualquier cambio realizado en el DOM no se vera reflejado en la coleccion. Esto es diferente de otros metodos de querying del dom que si devuelven listados de nodos dinamicos.
+> [!NOTE]
+> El {{domxref("NodeList")}} devuelto por {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} no es dinamico, Es decir que cualquier cambio realizado en el DOM no se vera reflejado en la coleccion. Esto es diferente de otros metodos de querying del dom que si devuelven listados de nodos dinamicos.
 
 Encontraras ejemplos y detalles leyendo el documento de metodos {{domxref("Element.querySelector()")}} y {{domxref("Element.querySelectorAll()")}}, Tambien en el articulo [Code snippets for querySelector](/es/docs/Code_snippets/QuerySelector).
 
@@ -40,7 +41,7 @@ Podes usar cualquier selector CSS con los metodos `querySelector()` y `querySele
 
 ## Ver tambien
 
-- [Selectors API](http://www.w3.org/TR/selectors-api/)
+- [Selectors API](https://www.w3.org/TR/selectors-api/)
 - {{domxref("Element.querySelector()")}}
 - {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}}

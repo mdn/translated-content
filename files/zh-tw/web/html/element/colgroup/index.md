@@ -7,7 +7,67 @@ slug: Web/HTML/Element/colgroup
 
 **`<colgroup>`** [HTML](/zh-TW/docs/Web/HTML) 中定義表格內的一組欄的元素。
 
-{{EmbedInteractiveExample("pages/tabbed/colgroup.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;colgroup&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Superheros and sidekicks
+  </caption>
+  <colgroup>
+    <col />
+    <col span="2" class="batman" />
+    <col span="2" class="flash" />
+  </colgroup>
+  <tr>
+    <td></td>
+    <th scope="col">Batman</th>
+    <th scope="col">Robin</th>
+    <th scope="col">The Flash</th>
+    <th scope="col">Kid Flash</th>
+  </tr>
+  <tr>
+    <th scope="row">Skill</th>
+    <td>Smarts, strong</td>
+    <td>Dex, acrobat</td>
+    <td>Super speed</td>
+    <td>Super speed</td>
+  </tr>
+</table>
+```
+
+```css interactive-example
+.batman {
+  background-color: #d7d9f2;
+}
+
+.flash {
+  background-color: #ffe8d4;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 6px;
+}
+
+td {
+  text-align: center;
+}
+```
 
 ## 屬性
 
@@ -17,7 +77,8 @@ slug: Web/HTML/Element/colgroup
 
   - : 指定`<colgroup>`元素跨越的連續欄數。該值必須是大於零的正整數。如果沒有指定，預設值為 `1`。
 
-    > **備註：** 如果在 `<colgroup>` 內有一個或多個 {{HTMLElement("col")}} 元素，則不允許使用 `span` 屬性。
+    > [!NOTE]
+    > 如果在 `<colgroup>` 內有一個或多個 {{HTMLElement("col")}} 元素，則不允許使用 `span` 屬性。
 
 ### 已棄用屬性
 
@@ -27,7 +88,8 @@ slug: Web/HTML/Element/colgroup
 
   - : 指定每個欄群組儲存格的水平對齊方式。可能的 {{Glossary("enumerated")}} 值包括 `left`、`center`、`right`、`justify` 和 `char`。當支援時，`char` 值將文字內容對齊到 [`char`](#char) 屬性中定義的字元和 [`charoff`](#charoff) 屬性中定義的偏移。請注意，後代{{HTMLElement("col")}}元素可能會使用其自己的 [`align`](/zh-TW/docs/Web/HTML/Element/col#align) 屬性覆蓋此值。請改用 {{cssxref("text-align")}} CSS 屬性應用於 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素，因為此屬性已棄用。
 
-    > **備註：** 在 `<colgroup>` 元素上設置 `text-align` 沒有效果，因為 {{HTMLElement("td")}} 和 {{HTMLElement("th")}} 元素不是 `<colgroup>` 元素的後代，因此不會繼承該屬性。
+    > [!NOTE]
+    > 在 `<colgroup>` 元素上設置 `text-align` 沒有效果，因為 {{HTMLElement("td")}} 和 {{HTMLElement("th")}} 元素不是 `<colgroup>` 元素的後代，因此不會繼承該屬性。
     >
     > 如果表格不使用 [`colspan`](/zh-TW/docs/Web/HTML/Element/td#colspan) 屬性，可以使用 `td:nth-of-type(an+b)` CSS 選擇器進行每欄的對齊，其中 `a` 是表格中欄的總數，`b` 是欄在表格中的序位位置，例如 `td:nth-of-type(7n+2) { text-align: right; }` 以使第二欄儲存格向右對齊。
     >
@@ -49,7 +111,8 @@ slug: Web/HTML/Element/colgroup
 
   - : 指定每個欄群組儲存格的垂直對齊方式。可能的{{Glossary("enumerated", "列舉")}}值包括 `baseline`、`bottom`、`middle` 和 `top`。請注意，後代 {{HTMLElement("col")}} 元素可能會使用其自己的 [`valign`](/zh-TW/docs/Web/HTML/Element/col#valign) 屬性覆蓋此值。請改用 {{cssxref("vertical-align")}} CSS 屬性應用於 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素，因為此屬性已棄用。
 
-    > **備註：** 在 `<colgroup>` 元素上設置 `vertical-align` 沒有效果，因為 {{HTMLElement("td")}} 和 {{HTMLElement("th")}} 元素不是 `<colgroup>` 元素的後代，因此不會繼承該屬性。
+    > [!NOTE]
+    > 在 `<colgroup>` 元素上設置 `vertical-align` 沒有效果，因為 {{HTMLElement("td")}} 和 {{HTMLElement("th")}} 元素不是 `<colgroup>` 元素的後代，因此不會繼承該屬性。
     >
     > 如果表格不使用 [`colspan`](/zh-TW/docs/Web/HTML/Element/td#colspan) 屬性，可以使用 [`td:nth-of-type()`](/zh-TW/docs/Web/CSS/:nth-of-type) CSS 選擇器進行每欄的對齊，例如 `td:nth-of-type(2) { vertical-align: middle; }` 使第二欄儲存格垂直居中。
     >
@@ -217,7 +280,7 @@ table {
 
 ## 參見
 
-- [學習：HTML 表格](/zh-TW/docs/Learn/HTML/Tables)
+- [學習：HTML 表格](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - {{HTMLElement("caption")}}、{{HTMLElement("col")}}、{{HTMLElement("table")}}、{{HTMLElement("tbody")}}、{{HTMLElement("td")}}、{{HTMLElement("tfoot")}}、{{HTMLElement("th")}}、{{HTMLElement("thead")}}、{{HTMLElement("tr")}}：其他與表格相關的元素
 - {{cssxref("background-color")}}：設置每個欄群組儲存格的背景顏色的 CSS 屬性
 - {{cssxref("border")}}：控制欄群組儲存格邊框的 CSS 屬性

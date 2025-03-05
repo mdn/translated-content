@@ -50,7 +50,8 @@ for (const screen of screenDetails.screens) {
 }
 ```
 
-> **Nota:** Consulta [Entorno de aprendizaje de multiples ventanas](https://mdn.github.io/dom-examples/window-management-api/) para un ejemplo completo (consulta también el [codigo fuente](https://github.com/mdn/dom-examples/tree/main/window-management-api)).
+> [!NOTE]
+> Consulta [Entorno de aprendizaje de multiples ventanas](https://mdn.github.io/dom-examples/window-management-api/) para un ejemplo completo (consulta también el [codigo fuente](https://github.com/mdn/dom-examples/tree/main/window-management-api)).
 
 ## Especificaciones
 

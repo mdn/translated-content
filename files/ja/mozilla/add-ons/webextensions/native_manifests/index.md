@@ -9,12 +9,12 @@ slug: Mozilla/Add-ons/WebExtensions/Native_manifests
 
 3 つの異なる種類のネイティブマニフェストがあります:
 
-| [Native messaging マニフェスト](#Native_messaging_manifests) | [native messaging](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_messaging) と呼ぶ機能を可能にします、ここでは拡張機能は端末にインストールされたネイティブアプリとやりとりできます。 |
+| [Native messaging マニフェスト](#native_messaging_manifests) | [native messaging](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_messaging) と呼ぶ機能を可能にします、ここでは拡張機能は端末にインストールされたネイティブアプリとやりとりできます。 |
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Managed storage マニフェスト](#Managed_storage_manifests)   | {{WebExtAPIRef("storage.managed")}} API 使って拡張機能がアクセスする読み込み専用データを定義します。                                                                                 |
-| [PKCS #11 マニフェスト](#PKCS_11_manifests)                  | 拡張機能が {{WebExtAPIRef("pkcs11")}} API を使って PKCS #11 セキュリティモジュールを列挙して、Firefox にインストールできるようにします。                                             |
+| [Managed storage マニフェスト](#managed_storage_manifests)   | {{WebExtAPIRef("storage.managed")}} API 使って拡張機能がアクセスする読み込み専用データを定義します。                                                                                 |
+| [PKCS #11 マニフェスト](#pkcs_11_manifests)                  | 拡張機能が {{WebExtAPIRef("pkcs11")}} API を使って PKCS #11 セキュリティモジュールを列挙して、Firefox にインストールできるようにします。                                             |
 
-すべてのネイティブマニフェスト用に、ブラウザーがマニフェストを見つけられるように調整する必要があります。 [マニフェストの場所](#Manifest_location) のセクションでこのルールを述べています。
+すべてのネイティブマニフェスト用に、ブラウザーがマニフェストを見つけられるように調整する必要があります。 [マニフェストの場所](#manifest_location) のセクションでこのルールを述べています。
 
 ## Native messaging マニフェスト
 
@@ -26,7 +26,7 @@ native messaging マニフェストは以下のプロパティを含む単一の
 | `description`        | String          | ネイティブアプリケーションの説明です。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | `path`               | String          | ネイティブアプリケーションのパスです。Windows では、マニフェスト自身からの相対パスを指定することもできます。OS X や Linux では絶対パスでなければなりません。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | `type`               | String          | 拡張機能にアプリケーションが接続するために使用する方法を記述します。現在のところ、"stdio" のみが指定可能です。これはアプリケーションが標準入力 (stdin) を介してメッセージを受信し、標準出力 (stdout) を使用してメッセージを送信することを示します。                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `allowed_extensions` | Array of String | [Add-on ID](/ja/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID) の配列です。配列中のそれぞれの値はこのネイティブアプリケーションとの通信が許可されている拡張機能を表します。つまり、作成する拡張機能の manifest.json ファイルに [applications](/ja/Add-ons/WebExtensions/manifest.json/applications) キーを含めたくなるものと思われるため、開発中に明示的な ID を設定しておくと良いでしょう。                                                                                                                                                                                                                                                                                     |
+| `allowed_extensions` | Array of String | [Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/) の配列です。配列中のそれぞれの値はこのネイティブアプリケーションとの通信が許可されている拡張機能を表します。つまり、作成する拡張機能の manifest.json ファイルに [applications](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーを含めたくなるものと思われるため、開発中に明示的な ID を設定しておくと良いでしょう。                                                                                                                                                                                                                                                |
 
 例として、"ping_pong" ネイティブアプリケーションのマニフェストを以下に示します:
 
@@ -46,12 +46,12 @@ native messaging マニフェストは以下のプロパティを含む単一の
 
 managed storage マニフェストには次のプロパティを含む単一の JSON オブジェクトです:
 
-| 名前          | 種類   | 説明                                                                                                                                                                                 |
-| ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `name`        | String | ストレージにアクセスできる拡張機能の ID で、拡張機能の [applications](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) キーで指定したのと同じものです。            |
-| `description` | String | 人間が読める説明で、Firefox には無視されます。                                                                                                                                       |
-| `type`        | String | "storage" でなければなりません。                                                                                                                                                     |
-| `data`        | Object | JSON オブジェクトで、その中にあらゆる有効な JSON 値(文字列、数値、真偽値、配列、オブジェクトを含む)が入ります。これは `browser.storage.managed` ストレージ領域内のデータになります。 |
+| 名前          | 種類   | 説明                                                                                                                                                                                   |
+| ------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`        | String | ストレージにアクセスできる拡張機能の ID で、拡張機能の [applications](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーで指定したのと同じものです。 |
+| `description` | String | 人間が読める説明で、Firefox には無視されます。                                                                                                                                         |
+| `type`        | String | "storage" でなければなりません。                                                                                                                                                       |
+| `data`        | Object | JSON オブジェクトで、その中にあらゆる有効な JSON 値(文字列、数値、真偽値、配列、オブジェクトを含む)が入ります。これは `browser.storage.managed` ストレージ領域内のデータになります。   |
 
 例えば:
 
@@ -85,7 +85,7 @@ PKCS #11 マニフェストは以下のプロパティを持った JSON オブ�
 | `description`        | String          | モジュールの説明です。ブラウザー UI (例えば、Firefox の "Security Devices" ダイアログ) で表示される、読みやすい名前を付けるのに使われます。                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `path`               | String          | モジュールのパスです。Windows では、マニフェスト自身からの相対パスを指定することもできます。OS X や Linux では絶対パスでなければなりません。                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `type`               | String          | "pkcs11" でなければなりません。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `allowed_extensions` | Array of String | [Add-on ID](/ja/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID) の配列です。配列中のそれぞれの値はモジュールとの通信が許可されている拡張機能を表します。つまり、作成する拡張機能の manifest.json ファイルに [applications](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) キーを含めたくなるものと思われるため、開発中に明示的な ID を設定しておくと良いでしょう。                                                                                                                                          |
+| `allowed_extensions` | Array of String | [Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/) の配列です。配列中のそれぞれの値はモジュールとの通信が許可されている拡張機能を表します。つまり、作成する拡張機能の manifest.json ファイルに [applications](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーを含めたくなるものと思われるため、開発中に明示的な ID を設定しておくと良いでしょう。                                                                                                                  |
 
 例えば:
 

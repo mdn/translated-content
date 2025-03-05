@@ -5,7 +5,7 @@ slug: Web/HTML/Attributes/crossorigin
 
 {{HTMLSidebar}}
 
-L'attribut **`crossorigin`**, valable sur les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<img>`](/fr/docs/Web/HTML/Element/Img), [`<link>`](/fr/docs/Web/HTML/Element/link), [`<script>`](/fr/docs/Web/HTML/Element/script) et [`<video>`](/fr/docs/Web/HTML/Element/video), fournit la prise en charge de [CORS](/fr/docs/Web/HTTP/CORS), définissant la manière dont l'élément traite les demandes d'origine croisée, permettant ainsi la configuration des demandes CORS pour les données extraites de l'élément. Selon l'élément, l'attribut peut être un attribut de paramètres CORS.
+L'attribut **`crossorigin`**, valable sur les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<img>`](/fr/docs/Web/HTML/Element/img), [`<link>`](/fr/docs/Web/HTML/Element/link), [`<script>`](/fr/docs/Web/HTML/Element/script) et [`<video>`](/fr/docs/Web/HTML/Element/video), fournit la prise en charge de [CORS](/fr/docs/Web/HTTP/CORS), définissant la manière dont l'élément traite les demandes d'origine croisée, permettant ainsi la configuration des demandes CORS pour les données extraites de l'élément. Selon l'élément, l'attribut peut être un attribut de paramètres CORS.
 
 L'attribut de contenu `crossorigin` sur les éléments médias est un attribut de paramétrage CORS.
 
@@ -21,7 +21,8 @@ Par défaut (quand l'attribut n'est pas spécifié), le CORS n'est pas du tout u
 
 Un mot-clé invalide ou une chaîne de caractères vide seront interprétés comme le mot-clé `anonymous`.
 
-> **Note :** Avant Firefox 83, l'attribut `crossorigin` n'était pas pris en charge pour `rel="icon"` ; il existe également [un bug sur Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
+> [!NOTE]
+> Avant Firefox 83, l'attribut `crossorigin` n'était pas pris en charge pour `rel="icon"` ; il existe également [un bug sur Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
 
 ## Exemples
 

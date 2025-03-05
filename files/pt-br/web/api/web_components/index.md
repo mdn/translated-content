@@ -27,11 +27,11 @@ A abordagem básica para se implementar um componente web geralmente se parece c
 
 ## Tutoriais
 
-- [Usando elementos customizados](/pt-BR/docs/Web/Web_Components/Usando_custom_elements)
+- [Usando elementos customizados](/pt-BR/docs/Web/API/Web_components/Using_custom_elements)
   - : Um guia que mostra como usar os recursos de elementos customizados para criar componentes web simples, além de como analisar o ciclo de vida das funções de retorno e outros recursos mais avançados.
-- [Usando shadow DOM](/pt-BR/docs/Web/Web_Components/Using_shadow_DOM)
+- [Usando shadow DOM](/pt-BR/docs/Web/API/Web_components/Using_shadow_DOM)
   - : Um guia que analisa os fundamentos do shadow DOM, mostrando como incorporá-lo a um elemento, adicioná-lo à árvore do shadow DOM, estilizá-lo, etc.
-- [Usando templates e slots](/pt-BR/docs/Web/Web_Components/Using_templates_and_slots)
+- [Usando templates e slots](/pt-BR/docs/Web/API/Web_components/Using_templates_and_slots)
   - : Um guia que mostra como definir uma estrutura HTML reutilzável através dos elementos {{htmlelement("template")}} e {{htmlelement("slot")}}, e como utilizar essa estrutura dentro de elementos web.
 
 ## Referência
@@ -42,7 +42,7 @@ A abordagem básica para se implementar um componente web geralmente se parece c
   - : Contém funcionalidade relacionada a elementos personalizados, principalmente o método {{domxref("CustomElementRegistry.define()")}} usado para registrar novos elementos personalizados, para que possam ser usados em seu documento.
 - {{domxref("Window.customElements")}}
   - : Retorna uma referência ao objeto `CustomElementRegistry`.
-- [Callbacks do ciclo de vida](/pt-BR/docs/Web/Web_Components/Using_custom_elements#Using_the_lifecycle_callbacks)
+- [Callbacks do ciclo de vida](/pt-BR/docs/Web/API/Web_components/Using_custom_elements#using_the_lifecycle_callbacks)
 
   - : Funções callback especiais definidas dentro da definição de classe de elemento customizado, afetando seu comportamento:
 
@@ -63,15 +63,15 @@ A abordagem básica para se implementar um componente web geralmente se parece c
   - : Pseudo-classes relacionadas especificamente a elementos customizados:
 
     - {{cssxref(":defined")}}: Corresponde a qualquer elemento que está definido, incluindo elementos built-in e elementos customizados que foram definidos com `CustomElementRegistry.define()`).
-    - {{cssxref(":host")}}: Seleciona o host fantasma do [shadow DOM](/pt-BR/docs/Web/Web_Components/Using_shadow_DOM) contendo o CSS utilizado internamente.
-    - {{cssxref(":host()")}}: Seleciona o host fantasma do [shadow DOM](/pt-BR/docs/Web/Web_Components/Using_shadow_DOM) contendo o CSS utilizado internamente (permitindo selecionar um elemento customizado de dentro de seu shadow DOM) — mas somente se o seletor que foi passado via parâmetro da função corresponder ao host fantasma.
-    - {{cssxref(":host-context()")}}: Seleciona o host fantasma do [shadow DOM](/pt-BR/docs/Web/Web_Components/Using_shadow_DOM) contendo o CSS utilizado internamente (permitindo selecionar um elemento customizado de dentro de seu shadow DOM) — mas somente se o seletor que foi passado via parâmetro da função corresponder ao(s) ancestral(ais) do host fantasma relativo à posição que ele toma dentro da hierarquida do DOM.
+    - {{cssxref(":host")}}: Seleciona o host fantasma do [shadow DOM](/pt-BR/docs/Web/API/Web_components/Using_shadow_DOM) contendo o CSS utilizado internamente.
+    - {{cssxref(":host()")}}: Seleciona o host fantasma do [shadow DOM](/pt-BR/docs/Web/API/Web_components/Using_shadow_DOM) contendo o CSS utilizado internamente (permitindo selecionar um elemento customizado de dentro de seu shadow DOM) — mas somente se o seletor que foi passado via parâmetro da função corresponder ao host fantasma.
+    - {{cssxref(":host-context()")}}: Seleciona o host fantasma do [shadow DOM](/pt-BR/docs/Web/API/Web_components/Using_shadow_DOM) contendo o CSS utilizado internamente (permitindo selecionar um elemento customizado de dentro de seu shadow DOM) — mas somente se o seletor que foi passado via parâmetro da função corresponder ao(s) ancestral(ais) do host fantasma relativo à posição que ele toma dentro da hierarquida do DOM.
 
 - CSS pseudo-elementos
 
   - : Pseudo-elementos relacionados especificamente a elementos customizados:
 
-    - {{cssxref("::part")}}: Representa qualquer elemento dentro de uma [shadow tree](/pt-BR/docs/Web/Web_Components/Using_shadow_DOM) que tenha um atributo [`part`](/pt-BR/docs/Web/HTML/Global_attributes#part) correspondente.
+    - {{cssxref("::part")}}: Representa qualquer elemento dentro de uma [shadow tree](/pt-BR/docs/Web/API/Web_components/Using_shadow_DOM) que tenha um atributo [`part`](/pt-BR/docs/Web/HTML/Global_attributes#part) correspondente.
 
 ### Shadow DOM
 
@@ -123,7 +123,7 @@ A abordagem básica para se implementar um componente web geralmente se parece c
 
     - {{cssxref("::slotted")}}: Corresponde a qualquer conteúdo inserido naquele slot.
 
-- O evento {{event("slotchange")}}
+- O evento [`slotchange`](/pt-BR/docs/Web/API/HTMLSlotElement/slotchange_event)
   - : Disparado em uma instância {{domxref("HTMLSlotElement")}} (elemento {{htmlelement("slot")}}) quando há mudança no nó(s) contido naquele slot.
 
 ## Exemplos

@@ -22,7 +22,7 @@ Téléchargez le html d'abords, puis le CSS et le JavaScript nécessaires à son
 
 Réduire le nombre de fichiers référencés dans une page web diminue le nombre de connexions [HTTP](/fr/docs/Web/HTTP) nécessaire pour télécharger une page.
 
-- Utilisez le moins d'images possible sur votre site (et de gif animés ofc). Preferez des [boutons graphiques en CSS](http://css-tricks.com/examples/ButtonMaker/).
+- Utilisez le moins d'images possible sur votre site (et de gif animés ofc). Preferez des [boutons graphiques en CSS](https://css-tricks.com/examples/ButtonMaker/).
 - Compressez vos images (éviter les .png). Vous pouvez pour cela utiliser [Gimp](http://www.gimp.org/) ou [Imagemagik](http://www.imagemagick.org/script/index.php).
 - Preferez le CSS ou le JavaScript au flash: il ralenti le navigateur.
 

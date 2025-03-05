@@ -10,7 +10,8 @@ l10n:
 
 `readystatechange` イベントは、 {{domxref("XMLHttpRequest")}} の {{domxref("XMLHttpRequest.readyState", "readyState")}} プロパティが変化するたびに発生します。
 
-> **警告:** これは同期リクエストで使用してはいけません。また、ネイティブコードから使用してはいけません。
+> [!WARNING]
+> これは同期リクエストで使用してはいけません。また、ネイティブコードから使用してはいけません。
 
 ## 構文
 

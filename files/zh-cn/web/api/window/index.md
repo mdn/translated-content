@@ -29,8 +29,6 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
   - : {{domxref("Window.navigator")}} 对象的别名。
 - {{domxref("Window.closed")}} {{ReadOnlyInline}}
   - : 此属性表示当前窗口是否关闭。
-- {{domxref("Window.console")}} {{ReadOnlyInline}}
-  - : 返回对 console 对象的引用，该对象提供对浏览器调试控制台的访问。
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : 返回一个布尔值，表示当前文档是否在无凭据（credentialless）的 {{htmlelement("iframe")}} 中加载。参见 [IFrame credentialless](/zh-CN/docs/Web/Security/IFrame_credentialless) 以了解更多细节。
 - {{domxref("Window.crypto")}} {{ReadOnlyInline}}
@@ -58,9 +56,9 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
 - {{domxref("Window.isSecureContext")}} {{ReadOnlyInline}}
   - : 返回一个布尔值，表示当前上下文安全（`true`）或不安全（`false`）。
 - {{domxref("Window.launchQueue")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 当一个[渐进式 web 应用](/zh-CN/docs/Web/Progressive_web_apps)（PWA）以 `focus-existing`、`navigate-new` 或 `navigate-existing` 的 [`launch_handler`](/zh-CN/docs/Web/Manifest/launch_handler) `client_mode` 值启动时，`launchQueue` 提供对 {{domxref("LaunchQueue")}} 类的访问，这允许为 PWA 实现自定义的启动导航处理。
+  - : 当一个[渐进式 web 应用](/zh-CN/docs/Web/Progressive_web_apps)（PWA）以 `focus-existing`、`navigate-new` 或 `navigate-existing` 的 [`launch_handler`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/launch_handler) `client_mode` 值启动时，`launchQueue` 提供对 {{domxref("LaunchQueue")}} 类的访问，这允许为 PWA 实现自定义的启动导航处理。
 - {{domxref("Window.length")}} {{ReadOnlyInline}}
-  - : 返回窗口中的帧数。参见 {{domxref("window.frames")}}。
+  - : 返回窗口中的框架（frame）数。参见 {{domxref("window.frames")}}。
 - {{domxref("Window.location")}}
   - : 获取/设置 window 对象的位置，或当前的 URL。
 - {{domxref("Window.locationbar")}} {{ReadOnlyInline}}
@@ -134,7 +132,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
 - `window[0]`、`window[1]` 等
   - : 以逐帧形式返回对 `window` 对象的引用，要了解更多细节，参见 {{domxref("Window.frames")}}。
 
-### 已废弃属性
+### 已弃用的属性
 
 - {{domxref("Window.event")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : 返回**当前事件**，即当前由 JavaScript 代码的上下文处理的事件，如果当前没有事件被处理，则返回 `undefined`。应尽可能使用直接传递给事件处理程序的 {{domxref("Event")}} 对象来代替。
@@ -151,37 +149,31 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
 
 _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 
-- {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}}
-  - : 为 window 上的特定事件类型注册一个事件处理器。
 - {{domxref("Window.atob()")}}
   - : 解码一个使用 base-64 编码的数据字符串。
 - {{domxref("Window.alert()")}}
   - : 显示一个警告对话框。
-- {{domxref("Window.blur()")}}
+- {{domxref("Window.blur()")}} {{deprecated_inline}}
   - : 将焦点从窗口上移开。
-- {{domxref("btoa", "Window.btoa()")}}
+- {{domxref("Window.btoa()")}}
   - : 从一串二进制数据中创建一个 base-64 编码的 ASCII 字符串。
 - {{domxref("Window.cancelAnimationFrame()")}}
   - : 取消之前使用 {{domxref("Window.requestAnimationFrame")}} 安排的回调。
 - {{domxref("Window.cancelIdleCallback()")}}
   - : 取消之前使用 {{domxref("Window.requestIdleCallback")}} 安排的回调。
-- {{domxref("Window.clearImmediate()")}}
-  - : 取消使用 `setImmediate()` 设置的重复执行任务。
-- {{domxref("clearInterval", "Window.clearInterval()")}}
-  - : 取消使用 {{domxref("setInterval()")}} 设置的重复执行任务。
-- {{domxref("clearTimeout()", "Window.clearTimeout()")}}
-  - : 取消使用 {{domxref("setTimeout()")}} 设置的延时执行任务。
+- {{domxref("Window.clearInterval()")}}
+  - : 取消使用 {{domxref("Window.setInterval()")}} 设置的重复执行任务。
+- {{domxref("Window.clearTimeout()")}}
+  - : 取消使用 {{domxref("Window.setTimeout()")}} 设置的延时执行任务。
 - {{domxref("Window.close()")}}
   - : 关闭当前窗口。
 - {{domxref("Window.confirm()")}}
   - : 显示一个带有用户需要回应的信息对话框。
-- {{domxref("createImageBitmap", "Window.createImageBitmap()")}}
+- {{domxref("Window.createImageBitmap()")}}
   - : 接受各种不同的图像源，并返回一个 {{jsxref("Promise")}}，经兑现可得到 {{domxref("ImageBitmap")}}。可以选择将图片源裁剪成以 _(sx, sy)_ 为起点的像素矩形，宽度为 sw，高度为 sh。
-- {{domxref("EventTarget.dispatchEvent", "Window.dispatchEvent()")}}
-  - : 用于触发事件。
 - {{domxref("Window.dump()")}} {{Non-standard_Inline}}
   - : 向控制台中写一条消息。
-- {{domxref("fetch", "Window.fetch()")}}
+- {{domxref("Window.fetch()")}}
   - : 开始从网络获取资源的过程。
 - {{domxref("Window.find()")}} {{Non-standard_Inline}}
   - : 在窗口中搜索给定的字符串。
@@ -207,10 +199,8 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
   - : 打开“打印”对话框，打印当前文档。
 - {{domxref("Window.prompt()")}}
   - : 返回用户在提示对话框中输入的文本。
-- {{DOMxRef("Window.queryLocalFonts()")}} {{Experimental_Inline}}
+- {{DOMxRef("Window.queryLocalFonts()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : 返回 {{jsxref("Promise")}}，经兑现可得到包含一个代表本地可用字体的 {{domxref("FontData")}} 对象数组。
-- {{domxref("EventTarget.removeEventListener", "Window.removeEventListener()")}}
-  - : 从 window 上移除一个事件监听器。
 - {{domxref("reportError", "Window.reportError()")}}
   - : 报告一个脚本中的错误，模拟一个未处理的异常。
 - {{domxref("Window.requestAnimationFrame()")}}
@@ -231,13 +221,9 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
   - : 按给定的页数滚动文档。
 - {{domxref("Window.scrollTo()")}}
   - : 将文档滚动至特定坐标。
-- {{domxref("Window.setImmediate()")}}
-  - : 在浏览器完成其他繁重的任务后执行一个函数。
-- {{domxref("setInterval", "Window.setInterval()")}}
+- {{domxref("Window.setInterval()")}}
   - : 安排一个函数，在给定的毫秒数过去后执行。
-- {{domxref("Window.setResizable()")}} {{Non-standard_Inline}}
-  - : 切换用户调整窗口大小的能力。
-- {{domxref("setTimeout", "Window.setTimeout()")}}
+- {{domxref("Window.setTimeout()")}}
   - : 安排函数在给定的时间内执行。
 - {{domxref("Window.sizeToContent()")}} {{Non-standard_Inline}}
   - : 根据窗口的内容确定其大小。
@@ -249,21 +235,31 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
   - : 显示一个目录选择器，允许用户选择一个目录。
 - {{domxref("Window.stop()")}}
   - : 该方法停止了窗口的加载。
-- {{domxref("Window.updateCommands()")}} {{Non-standard_Inline}}
-  - : 更新当前 chrome 窗口（用户界面）的命令状态。
 
-### 已废弃方法
+### 已弃用的方法
 
 - {{domxref("Window.back()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : 在窗口历史中后退一步。该方法已被废弃，应该使用 {{domxref("History.back", "history.back()")}} 代替。
 - {{domxref("Window.captureEvents()")}} {{Deprecated_Inline}}
   - : 注册窗口以捕获所有指定类型的事件。
+- {{domxref("Window.clearImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : 取消使用 `setImmediate()` 设置的重复执行任务。
 - {{domxref("Window.forward()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : 在窗口历史中前进一步。该方法已被废弃，应该使用 {{domxref("History.forward", "history.forward()")}} 代替。
 - {{domxref("Window.releaseEvents()")}} {{Deprecated_Inline}}
   - : 解除窗口对特定类型事件的捕获。
+- {{domxref("Window.requestFileSystem()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : 允许网站或应用访问沙盒文件系统以供自己使用。
+- {{domxref("Window.setImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : 在浏览器完成其他繁重的任务后执行一个函数。
+- {{domxref("Window.setResizable()")}} {{Non-standard_Inline}} {{deprecated_inline}}
+  - : 不执行操作（no-op）。保持对 Netscape 4.x 的向后兼容性。
 - {{domxref("Window.showModalDialog()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : 显示一个对话框。
+  - : 显示一个模态对话框。
+- {{domxref("Window.webkitConvertPointFromNodeToPage()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : 将 {{domxref("WebKitPoint")}} 从节点坐标系转换到页面坐标系。
+- {{domxref("Window.webkitConvertPointFromPageToNode()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : 将 {{domxref("WebKitPoint")}} 从页面坐标系转换到节点坐标系。
 
 ## 事件
 

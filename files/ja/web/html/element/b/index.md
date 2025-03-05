@@ -9,7 +9,22 @@ l10n:
 
 **`<b>`** は [HTML](/ja/docs/Web/HTML) の要素で、要素の内容に読み手の注意を惹きたい場合で、他の特別な重要性が与えられないものに使用します。これは以前は太字要素と呼ばれており、ほとんどのブラウザーでは文字列を太字で描画していました。しかし、 `<b>` を文字列の装飾に使うべきではありません。太字の文字列を作成するには、 CSS の {{cssxref("font-weight")}} プロパティを使用し、特別な重要性を持つテキストを示すには {{HTMLElement("strong")}} 要素を使用してください。
 
-{{EmbedInteractiveExample("pages/tabbed/b.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;b&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The two most popular science courses offered by the school are
+  <b class="term">chemistry</b> (the study of chemicals and the composition of
+  substances) and <b class="term">physics</b> (the study of the nature and
+  properties of matter and energy).
+</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+b {
+}
+```
 
 ## 属性
 
@@ -68,7 +83,7 @@ Keywords are displayed with the default style of the
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>

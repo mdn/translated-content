@@ -35,7 +35,8 @@ Une fois que votre image a été convertie en forme progressive, vous pouvez sim
 
 Lors de l'utilisation d'une image progressive, les données sont stockées de telle sorte que le navigateur est en mesure de rendre une représentation de faible qualité de l'image dès que possible, puis de mettre à jour l'image au fur et à mesure de son chargement — ou une fois celui-ci terminé — pour la présenter en pleine qualité.
 
-> **Note :** Les images progressives (ou entrelacées) sont par nature légèrement plus grandes que les versions non progressives des mêmes images. C'est à vous de déterminer si l'entrelacement sera bénéfique pour vos utilisateurs.
+> [!NOTE]
+> Les images progressives (ou entrelacées) sont par nature légèrement plus grandes que les versions non progressives des mêmes images. C'est à vous de déterminer si l'entrelacement sera bénéfique pour vos utilisateurs.
 
 ## Vérification de la compatibilité en JavaScript
 

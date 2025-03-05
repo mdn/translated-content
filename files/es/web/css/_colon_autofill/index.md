@@ -1,5 +1,5 @@
 ---
-title: ":-webkit-autofill"
+title: :-webkit-autofill
 slug: Web/CSS/:autofill
 ---
 
@@ -9,7 +9,8 @@ slug: Web/CSS/:autofill
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) CSS `:-webkit-autofill` CSS selecciona un elemento {{HTMLElement("input")}} cuando su valor es rellenado automáticamente por el navegador.
 
-> **Nota:** La hoja de estilos por defecto de muchos navegadores usan `!important` en sus declaraciones de estilo `:-webkit-autofill` , haciendo que no puedan ser sobrescritos por páginas que no usen trucos JavaScript.
+> [!NOTE]
+> La hoja de estilos por defecto de muchos navegadores usan `!important` en sus declaraciones de estilo `:-webkit-autofill` , haciendo que no puedan ser sobrescritos por páginas que no usen trucos JavaScript.
 
 ## Especificaciones
 

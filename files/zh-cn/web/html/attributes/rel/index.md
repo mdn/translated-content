@@ -50,7 +50,7 @@ slug: Web/HTML/Attributes/rel
 
   - : 表示当前文档的另一种方式。对 {{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 有效，其含义取决于其他属性的值。
 
-    - 在 `<link>` 上使用 [`stylesheet`](#stylesheet) 关键字，会创建一个[替代样式表](/zh-CN/docs/Web/CSS/Alternative_style_sheets)。
+    - 在 `<link>` 上使用 [`stylesheet`](#stylesheet) 关键字，会创建一个[替代样式表](/zh-CN/docs/Web/HTML/Attributes/rel/Alternate_stylesheet)。
 
       ```html
       <!-- 一个永久样式表 -->
@@ -103,14 +103,15 @@ slug: Web/HTML/Attributes/rel
 
     {{htmlelement('link')}} 元素代表了整个文档的作者信息。
 
-    > **备注：** 由于历史原因，废弃的属性值 `rev="made"` 被视为 `rel="author"`。
+    > [!NOTE]
+    > 由于历史原因，废弃的属性值 `rev="made"` 被视为 `rel="author"`。
 
 - `bookmark`
   - : 与 {{htmlelement('a')}} 和 {{htmlelement('area')}} 元素的 `rel` 属性值相关。如果有的话，给最近的祖先 {{htmlelement('article')}} 元素提供一个固定链接。如果没有祖先 `<article>` 元素，则给出链接元素与之联系最紧密的部分的固定链接。
 - `canonical`
   - : 对 {{htmlelement('link')}} 元素有效，它定义了当前文档的首选 URL，这有助于搜索引擎减少重复内容。
 - `dns-prefetch`
-  - : 在 {{htmlelement('body')}} 和 {{htmlelement('head')}} 元素内与 {{htmlelement('link')}} 元素相关。它告诉浏览器为目标资源的来源预先执行 DNS 解析。对于用户可能需要的资源来说，它有助于减少延迟，从而提高用户访问资源时的性能，因为浏览器会预先对指定资源的来源进行 DNS 解析。参见[资源提示](https://w3c.github.io/resource-hints/)中描述的 [dns-prefetch](/zh-CN/docs/Web/Performance/dns-prefetch)。
+  - : 在 {{htmlelement('body')}} 和 {{htmlelement('head')}} 元素内与 {{htmlelement('link')}} 元素相关。它告诉浏览器为目标资源的来源预先执行 DNS 解析。对于用户可能需要的资源来说，它有助于减少延迟，从而提高用户访问资源时的性能，因为浏览器会预先对指定资源的来源进行 DNS 解析。参见[资源提示](https://w3c.github.io/resource-hints/)中描述的 [dns-prefetch](/zh-CN/docs/Web/Performance/Guides/dns-prefetch)。
 - `external`
   - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，它表示引用的文档不是当前网站的一部分。这可以与属性选择器一起使用，使外部链接的样式向用户表明他们将离开当前网站。
 - `help`
@@ -127,9 +128,11 @@ slug: Web/HTML/Attributes/rel
 
     如果有多个 `<link rel="icon">`，浏览器会使用它们的 [`media`](/zh-CN/docs/Web/HTML/Element/link#media)、[`type`](/zh-CN/docs/Web/HTML/Element/link#type) 和 [`sizes`](/zh-CN/docs/Web/HTML/Element/link#sizes) 属性来选择最合适的图标。如果几个图标同样合适，则使用最后一个。如果后来发现最合适的图标不合适，例如使用了不支持的格式，浏览器就会继续选择下一个最合适的，以此类推。
 
-    > **备注：** 在 Firefox 83 之前，[crossorigin](/zh-CN/docs/Web/HTML/Attributes/crossorigin)属性不支持 `rel="icon"`，而 [Chrome 也仍有一个未解决的问题](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)。
+    > [!NOTE]
+    > 在 Firefox 83 之前，[crossorigin](/zh-CN/docs/Web/HTML/Attributes/crossorigin)属性不支持 `rel="icon"`，而 [Chrome 也仍有一个未解决的问题](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)。
 
-    > **备注：** 苹果的 iOS 系统不使用这种链接类型，也不像其他移动浏览器那样使用 [`sizes`](/zh-CN/docs/Web/HTML/Element/link#sizes) 属性，来选择网页夹或启动占位符的网页图标。相反，它分别使用非标准的 [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) 和 [`apple-touch-starttup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6)。
+    > [!NOTE]
+    > 苹果的 iOS 系统不使用这种链接类型，也不像其他移动浏览器那样使用 [`sizes`](/zh-CN/docs/Web/HTML/Element/link#sizes) 属性，来选择网页夹或启动占位符的网页图标。相反，它分别使用非标准的 [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) 和 [`apple-touch-starttup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6)。
 
     > **备注：** `shortcut` 链接类型经常出现在 `icon` 之前，但这种链接类型是不符合规定的，该类型会被忽略，且**网站作者不得再使用它**。
 
@@ -141,10 +144,11 @@ slug: Web/HTML/Attributes/rel
     <link rel="license" href="#license" />
     ```
 
-    > **备注：** 虽然同义词 `copyright` 也是可以识别的，但它是不正确的，必须避免使用。
+    > [!NOTE]
+    > 虽然同义词 `copyright` 也是可以识别的，但它是不正确的，必须避免使用。
 
 - `manifest`
-  - : 代表 [Web 应用清单](/zh-CN/docs/Web/Manifest)。需要使用 CORS 协议进行跨源获取。
+  - : 代表 [Web 应用清单](/zh-CN/docs/Web/Progressive_web_apps/Manifest)。需要使用 CORS 协议进行跨源获取。
 - `modulepreload`
   - : 对于提高性能很有用，并且与文档中的 {{htmlelement('link')}} 元素相关，设置 `rel="modulepreload"` 告诉浏览器预先获取脚本（和依赖关系）并存储在文档的模块映射中，以便以后评估。 `modulepreload` 链接可以确保网络抓取时，模块映射中的模块已经准备好（但没有评估），然后才一定需要它。参见 [`modulepreload`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload)。
 - `next`

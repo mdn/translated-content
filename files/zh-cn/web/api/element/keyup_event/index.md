@@ -87,4 +87,4 @@ input.onkeyup = logKey;
 - [`input`](/zh-CN/docs/Web/API/Element/input_event)
 - [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event)
 - [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event)
-- [Document `keyup` 事件](/zh-CN/docs/Web/API/Document/keyup_event)
+- [Document `keyup` 事件](/zh-CN/docs/Web/API/Element/keyup_event)

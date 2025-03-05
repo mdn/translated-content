@@ -11,7 +11,8 @@ l10n:
 
 > **メモ:** {{domxref("Blob.text()")}} メソッドは、ファイルをテキストとして読み取るための新しいプロミスベースの API です。
 
-> **メモ:** このメソッドは、ファイルの内容全体をメモリーに読み込みますので、巨大なファイルには適していません。巨大なファイルには [`readAsArrayBuffer()`](/ja/docs/Web/API/FileReader/readAsArrayBuffer) の方が適しています。
+> [!NOTE]
+> このメソッドは、ファイルの内容全体をメモリーに読み込みますので、巨大なファイルには適していません。巨大なファイルには [`readAsArrayBuffer()`](/ja/docs/Web/API/FileReader/readAsArrayBuffer) の方が適しています。
 
 ## 構文
 

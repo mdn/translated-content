@@ -25,18 +25,18 @@ PWA 赋予了我们创建同时拥有以上两种优势的应用的能力。
 
 正如前文所述，PWA 不是只使用一种技术创建的。它代表了构建 Web 应用程序的新理念，涉及一些特定的模式，API 和其他功能。一眼是看不出来一个 Web App 是不是 PWA 的。如果应用程序满足某些要求，或者实现了一组特定的功能，例如离线工作、可安装、易于同步、可以发送推送通知等，我们就可以将其视为 PWA。
 
-此外，还有一些工具可以按百分比衡量应用的完整性。（[Lighthouse](https://developers.google.com/web/tools/lighthouse/)目前是最受欢迎的工具）通过实施各种技术优势，我们可以使应用程序更加渐进式，从而最终获得更高的 Lighthouse 得分。但这只是一个粗略的指标。
+此外，还有一些工具可以按百分比衡量应用的完整性。（[Lighthouse](https://developer.chrome.google.cn/docs/lighthouse/overview) 目前是最受欢迎的工具）通过实施各种技术优势，我们可以使应用程序更加渐进式，从而最终获得更高的 Lighthouse 得分。但这只是一个粗略的指标。
 
 辨别一个 Web 应用是否是 PWA 有一些关键原则。一个 PWA 应该具有以下特点：
 
-- [可发现（Discoverable）](/zh-CN/Apps/Progressive/Advantages#Discoverable), 可以通过搜索引擎发现。
-- [可安装（Installable）](/zh-CN/Apps/Progressive/Advantages#Installable), 可以出现在设备的主屏幕。
-- [可链接（Linkable）](/zh-CN/Apps/Progressive/Advantages#Linkable), 可以简单地通过 URL 分享。
-- [独立于网络（Network independent）](/zh-CN/Apps/Progressive/Advantages#Network_independent), 可以在离线状态或者是在网速很差的情况下运行。
-- [渐进式（Progressive）](/zh-CN/Apps/Progressive/Advantages#Progressive), 在老版本的浏览器仍旧可以使用，在新版本的浏览器上可以使用全部功能。
-- [可重入（Re-engageable）](/zh-CN/Apps/Progressive/Advantages#Re-engageable), 无论何时有新的内容，都可以发送通知。
-- [响应式（Responsive）](/zh-CN/Apps/Progressive/Advantages#Responsive), 在任何具有屏幕和浏览器的设备上可以正常使用——包括手机、平板电脑、笔记本、电视、冰箱等。
-- [安全（Safe）](/zh-CN/Apps/Progressive/Advantages#Safe), 在用户、应用和服务器之间的连接是安全的，第三方无法访问你的敏感数据。
+- [可发现（Discoverable）](/zh-CN/docs/Web/Apps/Progressive/Advantages#discoverable), 可以通过搜索引擎发现。
+- [可安装（Installable）](/zh-CN/docs/Web/Apps/Progressive/Advantages#installable), 可以出现在设备的主屏幕。
+- [可链接（Linkable）](/zh-CN/docs/Web/Apps/Progressive/Advantages#linkable), 可以简单地通过 URL 分享。
+- [独立于网络（Network independent）](/zh-CN/docs/Web/Apps/Progressive/Advantages#network_independent), 可以在离线状态或者是在网速很差的情况下运行。
+- [渐进式（Progressive）](/zh-CN/docs/Web/Apps/Progressive/Advantages#progressive), 在老版本的浏览器仍旧可以使用，在新版本的浏览器上可以使用全部功能。
+- [可重入（Re-engageable）](/zh-CN/docs/Web/Apps/Progressive/Advantages#re-engageable), 无论何时有新的内容，都可以发送通知。
+- [响应式（Responsive）](/zh-CN/docs/Web/Apps/Progressive/Advantages#responsive), 在任何具有屏幕和浏览器的设备上可以正常使用——包括手机、平板电脑、笔记本、电视、冰箱等。
+- [安全（Safe）](/zh-CN/docs/Web/Apps/Progressive/Advantages#safe), 在用户、应用和服务器之间的连接是安全的，第三方无法访问你的敏感数据。
 
 ### 这么做值得吗？
 
@@ -67,7 +67,7 @@ PWA 非常值得一试，你可以自己查看它是否适用于你的应用程�
 
 PWA 所需的关键要素是 [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) 支持。值得庆幸的是，桌面和移动设备上的[所有主流浏览器都支持](https://jakearchibald.github.io/isserviceworkerready/) Service Worker。
 
-至于其他功能，像是[推送通知](/zh-CN/docs/Web/API/Push_API)、[通知功能](/zh-CN/docs/Web/API/Notifications_API)和[添加至主屏](/zh-CN/docs/Web/AppsProgressive_web_apps/Progressive/Guides/Making_PWAs_installable)功能也得到了广泛的支持。目前，Safari 对 [Web App Manifest](/zh-CN/docs/Web/Manifest) 和添加至主屏的支持有限，并且不支持 Web 推送通知。但是，其他主流浏览器都支持这里的所有功能。
+至于其他功能，像是[推送通知](/zh-CN/docs/Web/API/Push_API)、[通知功能](/zh-CN/docs/Web/API/Notifications_API)和[添加至主屏](/zh-CN/docs/Web/AppsProgressive_web_apps/Progressive/Guides/Making_PWAs_installable)功能也得到了广泛的支持。目前，Safari 对 [Web App Manifest](/zh-CN/docs/Web/Progressive_web_apps/Manifest) 和添加至主屏的支持有限，并且不支持 Web 推送通知。但是，其他主流浏览器都支持这里的所有功能。
 
 其中一些 API 是实验性的，文档仍在草稿中，但是 Flipkart 和 AliExpress 这样的成功案例应该也能说服你尝试在 Web 应用程序中实现一些 PWA 功能。
 
@@ -75,7 +75,7 @@ PWA 所需的关键要素是 [Service Worker](/zh-CN/docs/Web/API/Service_Worker
 
 ## 一个示例应用程序
 
-在本系列文章中，我们将研究一个超级简单网站的源代码，该网站列出了 [js13kGames 2017](http://2017.js13kgames.com/) 竞赛中提交给 [A-Frame category](http://js13kgames.com/aframe) 的游戏的相关信息。你不必考虑网站上的实际内容，这里主要是学习如何在你自己的项目中使用 PWA 功能。
+在本系列文章中，我们将研究一个超级简单网站的源代码，该网站列出了 [js13kGames 2017](https://2017.js13kgames.com/) 竞赛中提交给 [A-Frame category](https://js13kgames.com/aframe) 的游戏的相关信息。你不必考虑网站上的实际内容，这里主要是学习如何在你自己的项目中使用 PWA 功能。
 
 你可以在 [mdn.github.io/pwa-examples/js13kpwa](https://mdn.github.io/pwa-examples/js13kpwa/) 找到在线版本（另请[参阅源代码](https://github.com/mdn/pwa-examples/tree/main/js13kpwa)），我们将在接下来的几篇文章中对其进行详细解释。
 

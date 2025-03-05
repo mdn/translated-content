@@ -9,7 +9,33 @@ l10n:
 
 [HTML](/ko/docs/Web/HTML) **`<menu>`** 요소는 {{HTMLElement("ul")}}의 의미론적 대안으로 설명되지만, 브라우저에 의해서는 {{HTMLElement("ul")}}과 다르지 않게 다루어집니다. {{HTMLElement("li")}} 요소들로 표현되는 항목들의 비정렬 목록을 나타냅니다.
 
-{{EmbedInteractiveExample("pages/tabbed/menu.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;menu&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<div class="news">
+  <a href="#">NASA’s Webb Delivers Deepest Infrared Image of Universe Yet</a>
+  <menu>
+    <li><button id="save">Save for later</button></li>
+    <li><button id="share">Share this news</button></li>
+  </menu>
+</div>
+```
+
+```css interactive-example
+.news {
+  background-color: bisque;
+  padding: 1em;
+  border: solid thin black;
+}
+
+menu {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin-bottom: 0;
+  gap: 1em;
+}
+```
 
 ## 특성
 
@@ -19,7 +45,8 @@ l10n:
 
 `<menu>`와 {{HTMLElement("ul")}} 요소 모두 비정렬 목록을 표현합니다. 주요 차이점은 {{HTMLElement("ul")}}이 주로 표시를 위한 항목들을 포함하는 반면, `<menu>`는 상호작용을 위한 항목들을 포함하도록 의도되어 있습니다. 관련된 {{HTMLElement("menuitem")}} 요소는 사용이 중단되었습니다.
 
-> **참고:** HTML 사양의 초기 버전에서는 `<menu>` 요소가 [컨텍스트 메뉴](/ko/docs/Web/HTML/Global_attributes/contextmenu)로서 사용되는 사례가 있었습니다. 이 기능은 오래되었으며 사양에는 포함되어 있지 않습니다.
+> [!NOTE]
+> HTML 사양의 초기 버전에서는 `<menu>` 요소가 [컨텍스트 메뉴](/ko/docs/conflicting/Web/HTML/Element/menu)로서 사용되는 사례가 있었습니다. 이 기능은 오래되었으며 사양에는 포함되어 있지 않습니다.
 
 ## 예시
 
@@ -103,7 +130,7 @@ button {
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>불가능, 시작과 끝에 태그를 추가하는것은 필수입니다.</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>

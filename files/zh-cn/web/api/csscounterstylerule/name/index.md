@@ -2,16 +2,16 @@
 title: CSSCounterStyleRule：name 属性
 slug: Web/API/CSSCounterStyleRule/name
 l10n:
-  sourceCommit: f75fd658f627b5730a14ada901120cfa4ee01bda
+  sourceCommit: 9840d330e75b5fa4eec7034859a7d96e5d6ae07b
 ---
 
-{{APIRef("CSS Counter Styles")}}
+{{APIRef("CSSOM")}}
 
 {{domxref("CSSCounterStyleRule")}} 接口的 **`name`** 属性用于获取或设置 {{CSSxRef("&lt;custom-ident&gt;")}} 为关联规则定义的 `name`。
 
 ## 值
 
-字符串
+字符串。
 
 ## 示例
 

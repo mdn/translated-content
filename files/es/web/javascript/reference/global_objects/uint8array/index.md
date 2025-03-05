@@ -16,7 +16,7 @@ new Uint8Array(objeto);
 new Uint8Array(buffer [, byteOffset [, tamaño]]);
 ```
 
-Para más información acerca de la sintaxis del constructor y sus parámetros, mire _[TypedArray](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+Para más información acerca de la sintaxis del constructor y sus parámetros, mire _[TypedArray](/es/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntax)_.
 
 ## Propiedades
 
@@ -144,6 +144,6 @@ var z = new Uint8Array(buffer, 1, 4);
 
 ## Véase también
 
-- [JavaScript typed arrays](/es/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/es/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

@@ -76,7 +76,8 @@ grid-template-columns: unset;
 
     При использовании вне функции {{cssxref("minmax()", "minmax()")}}, `auto` представляет диапазон между минимумом и максимумом, описанным выше. В большинстве случаев это то же самое, что и `minmax(min-content,max-content)`.
 
-    > **Примечание:** размеры полос, заданные значением `auto` (и только `auto`) могут быть растянуты с помощью свойств {{cssxref("align-content")}} и {{cssxref("justify-content")}}. Поэтому по умолчанию грид-полоса с размером `auto` будет занимать всё оставшееся свободное пространство в грид-контейнере.
+    > [!NOTE]
+    > Размеры полос, заданные значением `auto` (и только `auto`) могут быть растянуты с помощью свойств {{cssxref("align-content")}} и {{cssxref("justify-content")}}. Поэтому по умолчанию грид-полоса с размером `auto` будет занимать всё оставшееся свободное пространство в грид-контейнере.
 
 - `{{cssxref("fit-content()", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}`
   - : Может быть выражен формулой `max(minimum, min(limit, max-content))`, где `minimum` представляет собой `auto`-минимум (который часто, но не всегда представляет наименьший размер минимального содержимого) и `limit` — любое значение или функция для определения размера полосы, переданная в качестве аргумента в `fit-content()`. По-другому можно сказать, что `fit-content()` получается выбором наименьшего значения среди `minmax(auto, max-content)`, `minmax(auto, limit)`.
@@ -84,10 +85,11 @@ grid-template-columns: unset;
   - : Представляет собой повторяющийся фрагмент списка полос, тем самым позволяя компактно определить большое количество колонок согласно повторяющемуся шаблону.
 - [`masonry`](/ru/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout){{Experimental_Inline}}
   - : Значение `masonry` указывает на то, что оси должны выстраиваться согласно алгоритму masonry (плиточной раскладки).
-- [`subgrid`](/ru/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- [`subgrid`](/ru/docs/Web/CSS/CSS_grid_layout/Subgrid)
   - : Значение `subgrid` указывает, что грид-раскладка примет размеры родительского грид-контейнера на соответствующих осях. Таким образом размеры колонок и рядов не задаются явно, а берутся из определения родительской грид-раскладки.
 
-> **Предупреждение:** Значение `masonry` появилось в CSS-спецификации Grid Level 3 и на данный момент в качестве эксперимента реализовано в Firefox и активируется через флаг в настройках.
+> [!WARNING]
+> Значение `masonry` появилось в CSS-спецификации Grid Level 3 и на данный момент в качестве эксперимента реализовано в Firefox и активируется через флаг в настройках.
 >
 > Значение `subgrid` представлено в CSS-спецификации Grid Level 2 и пока что реализовано только в Firefox с 71 версии.
 
@@ -145,6 +147,6 @@ grid-template-columns: unset;
 ## Смотрите также
 
 - Связанные CSS-свойства: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
-- Руководство по грид-раскладке: _[Основы грид-раскладки - грид-полосы](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#grid_tracks)_
-- Обучающее видео: _[Defining a Grid](http://gridbyexample.com/video/series-define-a-grid/)_
-- [Subgrid](/ru/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- Руководство по грид-раскладке: _[Основы грид-раскладки - грид-полосы](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_tracks)_
+- Обучающее видео: _[Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)_
+- [Subgrid](/ru/docs/Web/CSS/CSS_grid_layout/Subgrid)

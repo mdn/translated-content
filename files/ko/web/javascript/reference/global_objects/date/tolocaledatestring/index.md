@@ -11,7 +11,26 @@ l10n:
 
 `toLocaleString`을 호출할 때마다 방대한 현지화 문자열 데이터베이스에서 검색을 수행해야 하므로 비효율적일 수 있습니다. 메서드가 동일한 인수를 사용하여 여러 번 호출되는 경우 `DateTimeFormat` 객체가 전달된 인수를 기억하고 데이터베이스의 일부를 캐시하기로 결정할 수 있으므로 {{jsxref("Intl.DateTimeFormat")}} 객체를 생성하고 그 {{jsxref("Intl/DateTimeFormat/format", "format()")}} 메서드를 사용하는 것이 더 좋습니다. 이렇게 함으로서 향후 `format` 호출에서 보다 제한된 컨텍스트 내에서 현지화 문자열을 검색할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/date-tolocaledatestring.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Date.toLocaleDateString()", "taller")}}
+
+```js interactive-example
+const event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+
+console.log(event.toLocaleDateString("de-DE", options));
+// Expected output (varies according to local timezone): Donnerstag, 20. Dezember 2012
+
+console.log(event.toLocaleDateString("ar-EG", options));
+// Expected output (varies according to local timezone): الخميس، ٢٠ ديسمبر، ٢٠١٢
+
+console.log(event.toLocaleDateString(undefined, options));
+// Expected output (varies according to local timezone and default locale): Thursday, December 20, 2012
+```
 
 ## 구문
 
@@ -47,7 +66,8 @@ toLocaleDateString(locales, options)
 
 `Intl.DateTimeFormat`를 구현한 구현체에서는 `new Intl.DateTimeFormat(locales, options).format(date)`과 동일하며, 여기서 `options`은 위에서 설명한 대로 정규화됩니다.
 
-> **참고:** 대부분의 경우 `toLocaleDateString()`에서 반환되는 형식은 일관적입니다. 그러나 결과는 시간, 언어 및 구현체에 따라 달라질 수 있습니다. 또한 설계에 따라 다양한 결과가 있으며 명세에서 허용됩니다. `toLocaleDateString()`의 결과를 정적 값과 비교해서는 안됩니다.
+> [!NOTE]
+> 대부분의 경우 `toLocaleDateString()`에서 반환되는 형식은 일관적입니다. 그러나 결과는 시간, 언어 및 구현체에 따라 달라질 수 있습니다. 또한 설계에 따라 다양한 결과가 있으며 명세에서 허용됩니다. `toLocaleDateString()`의 결과를 정적 값과 비교해서는 안됩니다.
 
 ## 예제
 

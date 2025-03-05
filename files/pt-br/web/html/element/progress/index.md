@@ -7,11 +7,11 @@ o elemento HTML progress (\<progress>) é usado para visualizar o progresso de u
 
 ## Contexto de uso
 
-| Conteúdo permitido     | [Conteúdo de texto](/pt-BR/HTML/Content_categories#Phrasing_content)                                                             |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Omissão de Tag         | Nenhum, ambas as tags (abertura e encerramento) são obrigatórias                                                                 |
-| Elemento pai permitido | Conteúdo fraseado (phrasing content), mas não deve haver descendentes do elemento progress                                       |
-| Documento normativo    | [HTML5, seção 4.10.16](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-progress-element) |
+| Conteúdo permitido     | [Conteúdo de texto](/pt-BR/docs/HTML/Content_categories#phrasing_content)                                                         |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Omissão de Tag         | Nenhum, ambas as tags (abertura e encerramento) são obrigatórias                                                                  |
+| Elemento pai permitido | Conteúdo fraseado (phrasing content), mas não deve haver descendentes do elemento progress                                        |
+| Documento normativo    | [HTML5, seção 4.10.16](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-progress-element) |
 
 ## Atributos
 
@@ -36,7 +36,7 @@ Este elemento implementa a interface HTMLProgressElement.
 
 ### Resultado
 
-[View Live Examples](/samples/html/progress.html)
+[View Live Examples](https://mdn.dev/archives/media/samples/html/progress.html)
 
 No Mac OS X, o progresso resultante deve aparecer assim:
 

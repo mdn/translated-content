@@ -11,7 +11,18 @@ l10n:
 
 ブラウザーは複数の `<source>` 子要素を検討し、その中から最も適切なものを選択します。適切なものがない場合や、ブラウザーが `<picture>` 要素に対応してない場合、 `<img>` 要素の [`src`](/ja/docs/Web/HTML/Element/img#src) 属性で指定された URL が選択されます。選択された画像は `<img>` 要素が占有する領域に表示されます。
 
-{{EmbedInteractiveExample("pages/tabbed/picture.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;picture&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<!--Change the browser window width to see the image change.-->
+
+<picture>
+  <source
+    srcset="/shared-assets/images/examples/surfer.jpg"
+    media="(orientation: portrait)" />
+  <img src="/shared-assets/images/examples/painted-hand.jpg" alt="" />
+</picture>
+```
 
 どの URL を読み込むかを選択するには、{{Glossary("user agent","ユーザーエージェント")}}はそれぞれの `<source>` 要素の [`srcset`](/ja/docs/Web/HTML/Element/source#srcset), [`media`](/ja/docs/Web/HTML/Element/source#media), [`type`](/ja/docs/Web/HTML/Element/source#type) 属性を調べて、現在のページのレイアウトや表示装置の能力に最も合う画像を検討します。
 
@@ -25,7 +36,8 @@ l10n:
 - **アートディレクション**。様々な `media` の条件に合わせて画像を切り抜いたり変更したりする (例えば、小さな画面では、詳細すぎない、より簡単な版の画像を読み込むなど)。
 - 特定の形式に対応していないブラウザーに対して、**代替画像形式を提供する**。
 
-  > **メモ:** 例えば、[AVIF](/ja/docs/Web/Media/Formats/Image_types#avif_画像) や [WEBP](/ja/docs/Web/Media/Formats/Image_types#webp_画像) と言った新しい形式には多くの利点がありますが、ブラウザーが対応していない可能性があります。対応している画像形式のリストは、[画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Formats/Image_types)にあります。
+  > [!NOTE]
+  > 例えば、[AVIF](/ja/docs/Web/Media/Formats/Image_types#avif_画像) や [WEBP](/ja/docs/Web/Media/Formats/Image_types#webp_画像) と言った新しい形式には多くの利点がありますが、ブラウザーが対応していない可能性があります。対応している画像形式のリストは、[画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Formats/Image_types)にあります。
 
 - 見る人の画面に最も適合する画像を読み込むことで、**通信帯域を節約しページの読み込みをより速くする**。
 
@@ -54,7 +66,7 @@ DPI の高い（高解像度の）ディスプレイのために高解像度版�
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
@@ -87,7 +99,8 @@ DPI の高い（高解像度の）ディスプレイのために高解像度版�
 
 {{cssxref("object-position")}} プロパティを使用して、要素の枠内で画像の位置を調整したり、 {{cssxref("object-fit")}} プロパティを使用して、枠内に合わせるための画像の寸法を変更する方法を制御したりすることができます。
 
-> **メモ:** これらのプロパティは `<picture>` 要素**ではなく**、子の `<img>` 要素に用いてください。
+> [!NOTE]
+> これらのプロパティは `<picture>` 要素**ではなく**、子の `<img>` 要素に用いてください。
 
 ## 例
 
@@ -125,7 +138,7 @@ DPI の高い（高解像度の）ディスプレイのために高解像度版�
 
 ### type 属性
 
-`type` 属性は、 {{HTMLElement("source")}} 要素の `srcset` 属性で与えられるリソース URL の [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)を指定します。ユーザーエージェントが指定されたタイプに対応していない場合、その {{HTMLElement("source")}} 要素はスキップされます。
+`type` 属性は、 {{HTMLElement("source")}} 要素の `srcset` 属性で与えられるリソース URL の [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)を指定します。ユーザーエージェントが指定されたタイプに対応していない場合、その {{HTMLElement("source")}} 要素はスキップされます。
 
 ```html
 <picture>

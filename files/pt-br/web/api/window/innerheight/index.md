@@ -7,7 +7,8 @@ slug: Web/API/Window/innerHeight
 
 Altura (em pixels) da janela de visualização do navegador, incluindo, se renderizado, a barra de rolagem horizontal.
 
-> **Nota:** If you use `nsIDOMWindowUtils.setCSSViewport()` to set the virtual window size for page layout purposes, the value returned by this property corresponds to the viewport height set using that method.
+> [!NOTE]
+> If you use `nsIDOMWindowUtils.setCSSViewport()` to set the virtual window size for page layout purposes, the value returned by this property corresponds to the viewport height set using that method.
 
 ## Syntax
 
@@ -44,7 +45,7 @@ var intOuterFramesetHeight = top.innerHeight;
 // will return the height of the viewport of the outermost frameset
 ```
 
-{{todo("link to an interactive demo here")}}
+<!-- TODO: add content -->
 
 To change the size of a window, see {{domxref("window.resizeBy()")}} and {{domxref("window.resizeTo()")}}.
 

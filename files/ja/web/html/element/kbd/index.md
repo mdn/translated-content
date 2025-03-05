@@ -9,7 +9,32 @@ l10n:
 
 **`<kbd>`** は [HTML](/ja/docs/Web/HTML) の要素で、キーボード、音声入力、その他の入力端末からのユーザーによる文字入力を表す行内の文字列の区間を表します。慣習的に、{{Glossary("user agent", "ユーザーエージェント")}}は既定で `<kbd>` 要素の中身を等幅フォントで表示しますが、 HTML 標準で規定されているものではありません。
 
-{{EmbedInteractiveExample("pages/tabbed/kbd.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;kbd&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an
+  MDN page.
+</p>
+```
+
+```css interactive-example
+kbd {
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.2),
+    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: #333;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+```
 
 `<kbd>` は {{HTMLElement("samp")}}（サンプル出力）要素の中で様々な組み合わせの入れ子が行われ、様々な形の入力や視覚的な合図に基づいた入力を表現します。
 
@@ -25,7 +50,8 @@ l10n:
 - `<kbd>` 要素を {{HTMLElement("samp")}} 要素の中で使用すると、システムからユーザーにエコーバックされた入力を表します。以下の[入力のエコーバック](#入力のエコーバック)の例を参照してください。
 - 一方、 `<kbd>` 要素の中で `<samp>` 要素を使用すると、メニューやメニュー項目の名前、画面上に表示されているボタンの名前など、システムによって表示された文字列に基づく入力を表します。以下の[画面上に表示された入力の選択肢の表現](#画面上に表示された入力の選択肢の表現)を参照してください。
 
-> **メモ:** 専用のスタイルを定義して、 `<kbd>` 要素における既定のフォントの選択を上書きすることができますが、ユーザー設定によっては CSS より優先されることがあります。
+> [!NOTE]
+> 専用のスタイルを定義して、 `<kbd>` 要素における既定のフォントの選択を上書きすることができますが、ユーザー設定によっては CSS より優先されることがあります。
 
 ## 例
 
@@ -62,9 +88,11 @@ l10n:
 
 ここでは外側の `<kbd>` 要素でキー入力操作全体を囲み、それぞれのキーの組み合わせを記述するために、それぞれのキーを囲んでいます。
 
-> **メモ:** 常にこのように囲む必要はありません。外側の `<kbd>` 要素を省略して簡略化しても構いません。言い換えれば、単に `<kbd>Ctrl</kbd>+<kbd>N</kbd>` と表現するのも完全に有効です。
+> [!NOTE]
+> 常にこのように囲む必要はありません。外側の `<kbd>` 要素を省略して簡略化しても構いません。言い換えれば、単に `<kbd>Ctrl</kbd>+<kbd>N</kbd>` と表現するのも完全に有効です。
 >
-> **メモ:** しかし、スタイルシートによっては、このように重ねて囲んだ方が便利だと感じられるかもしれません。
+> [!NOTE]
+> しかし、スタイルシートによっては、このように重ねて囲んだ方が便利だと感じられるかもしれません。
 
 ##### 結果
 
@@ -168,7 +196,7 @@ kbd > kbd {
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>

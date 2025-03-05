@@ -9,7 +9,15 @@ l10n:
 
 **`<object>`** は [HTML](/ja/docs/Web/HTML) の要素で、画像、内部の閲覧コンテキスト、プラグインによって扱われるリソースなどのように扱われる外部リソースを表します。
 
-{{EmbedInteractiveExample("pages/tabbed/object.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;object&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<object
+  type="video/mp4"
+  data="/shared-assets/videos/flower.mp4"
+  width="250"
+  height="200"></object>
+```
 
 ## 属性
 
@@ -86,7 +94,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>

@@ -4,7 +4,7 @@ slug: orphaned/Web/SVG/Attribute/contentStyleType
 original_slug: Web/SVG/Attribute/contentStyleType
 ---
 
-« [Página inicial de referência do atributo SVG](/pt-BR/SVG/Attribute)
+« [Página inicial de referência do atributo SVG](/pt-BR/docs/SVG/Attribute)
 
 Este atributo especifica a linguagem da folha de estilo do fragmento do documento especificado. O contentStyleType é definido no elemento {{ SVGElement("svg") }}. Caso não seja definido, o valor padrão assumido será `text/css`.
 

@@ -11,7 +11,7 @@ l10n:
 
 图像被作为包含经过编码的图像的 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 提供。支持 JPEG 和 PNG 格式。
 
-虽然此 API 基于 Chrome 浏览器的 [`clipboard.setImageData()`](https://developer.chrome.com/docs/extensions/reference/clipboard/) API，但两者还是有一些区别：
+虽然此 API 基于 Chrome 浏览器的 [`clipboard.setImageData()`](https://developer.chrome.google.cn/docs/apps/reference/clipboard) API，但两者还是有一些区别：
 
 - Chrome API 仅适用于应用，不适用于扩展程序。
 - 此 API 仅需要 `"clipboardWrite"` 权限，Chrome 版本还需要 `"clipboard"` 权限。
@@ -67,4 +67,5 @@ fetch(browser.runtime.getURL("image.png"))
 
 {{WebExtExamples}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.clipboard`](https://developer.chrome.com/docs/extensions/reference/clipboard/) API。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.clipboard`](https://developer.chrome.google.cn/docs/apps/reference/clipboard) API。

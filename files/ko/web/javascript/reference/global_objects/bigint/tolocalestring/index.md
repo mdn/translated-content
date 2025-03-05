@@ -11,7 +11,21 @@ l10n:
 
 `toLocaleString`이 호출될 때마다 방대한 현지화 문자열 데이터베이스에서 검색을 수행해야 하므로 비효율적일 수 있습니다. 메서드가 동일한 인수를 사용하여 여러 번 호출되는 경우 `NumberFormat` 객체가 전달된 인수를 기억하고 데이터베이스의 일부를 캐시하기로 결정할 수 있으므로 {{jsxref("Intl/NumberFormat/format", "format()")}} 메서드를 사용하는 것이 더 좋습니다. 향후 `format` 호출이 보다 제한된 컨텍스트 내에서 현지화 문자열을 검색할 수 있으므로 {{jsxref("Intl.NumberFormat")}} 객체를 생성하고 그 {{jsxref("Intl/NumberFormat/format", "format()")}} 메서드를 사용하는 것이 더 좋습니다.
 
-{{EmbedInteractiveExample("pages/js/bigint-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: BigInt.toLocaleString()")}}
+
+```js interactive-example
+const bigint = 123456789123456789n;
+
+// German uses period for thousands
+console.log(bigint.toLocaleString("de-DE"));
+// Expected output: "123.456.789.123.456.789"
+
+// Request a currency format
+console.log(
+  bigint.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+);
+// Expected output: "123.456.789.123.456.789,00 €"
+```
 
 ## 구문
 
@@ -47,7 +61,8 @@ toLocaleString(locales, options)
 
 `Intl.NumberFormat`를 구현한 구현체에서는 이는 `new Intl.NumberFormat(locales, options).format(number)`과 동일합니다.
 
-> **참고:** 대부분의 경우 `toLocaleString()`이 반환하는 형식은 일관적입니다. 그러나 출력은 시간, 언어 및 구현에 따라 달라질 수 있으며, 출력 변형은 명세서에 의해 설계되고 허용됩니다. `toLocaleString()`의 결과를 정적 값과 비교해서는 안 됩니다.
+> [!NOTE]
+> 대부분의 경우 `toLocaleString()`이 반환하는 형식은 일관적입니다. 그러나 출력은 시간, 언어 및 구현에 따라 달라질 수 있으며, 출력 변형은 명세서에 의해 설계되고 허용됩니다. `toLocaleString()`의 결과를 정적 값과 비교해서는 안 됩니다.
 
 ## 예제
 

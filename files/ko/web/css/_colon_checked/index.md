@@ -1,5 +1,5 @@
 ---
-title: ":checked"
+title: :checked
 slug: Web/CSS/:checked
 ---
 
@@ -17,7 +17,8 @@ slug: Web/CSS/:checked
 
 사용자가 요소를 체크했거나 선택한 경우 활성화되고, 체크나 선택을 해제하는 경우 비활성화됩니다.
 
-> **참고:** 많은 경우 브라우저는 `<option>` 요소를 [대체 요소](/ko/docs/Web/CSS/Replaced_element)로 취급하므로, `:checked` 의사 클래스를 사용한 스타일을 적용할 수 있는 범위도 브라우저마다 다릅니다.
+> [!NOTE]
+> 많은 경우 브라우저는 `<option>` 요소를 [대체 요소](/ko/docs/Web/CSS/Replaced_element)로 취급하므로, `:checked` 의사 클래스를 사용한 스타일을 적용할 수 있는 범위도 브라우저마다 다릅니다.
 
 ## 구문
 

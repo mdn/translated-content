@@ -104,7 +104,7 @@ self.addEventListener("install", (e) => {
 });
 ```
 
-Expliquons ici deux éléments&nbsp;: le rôle de [`ExtendableEvent.waitUntil`](/fr/docs/Web/API/ExtendableEvent/waitUntil) fait et l'objet [`caches`](/fr/docs/Web/API/caches).
+Expliquons ici deux éléments&nbsp;: le rôle de [`ExtendableEvent.waitUntil`](/fr/docs/Web/API/ExtendableEvent/waitUntil) fait et l'objet [`caches`](/fr/docs/Web/API/Window/caches).
 
 Le <i lang="en">service worker</i> ne s'installe pas tant que le code situé à l'intérieur de `waitUntil()` n'est pas exécuté. Cette méthode renvoie une promesse, ce qui permet un fonctionnement asynchrone adéquat&nbsp;: l'installation peut prendre du temps et nous devons attendre qu'elle soit terminée.
 

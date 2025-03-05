@@ -4,7 +4,7 @@ slug: orphaned/Web/HTML/Inline_elements
 original_slug: Web/HTML/Inline_elements
 ---
 
-Los elementos en HTML (lenguaje de marcas de hipertexto - **Hypertext Markup Language**) usualmente son elementos "en línea" o [elementos "en bloque"](/es/docs/Web/HTML/Block-level_elements). Un elemento en línea ocupa sólo el espacio delimitado por las etiquetas que definen el elemento en línea. El siguiente ejemplo demuestra la influencia de los elementos en línea:
+Los elementos en HTML (lenguaje de marcas de hipertexto - **Hypertext Markup Language**) usualmente son elementos "en línea" o [elementos "en bloque"](/es/docs/Glossary/Block-level_content). Un elemento en línea ocupa sólo el espacio delimitado por las etiquetas que definen el elemento en línea. El siguiente ejemplo demuestra la influencia de los elementos en línea:
 
 ## Ejemplo en línea
 
@@ -33,11 +33,11 @@ span { background-color: #8ABB55; }
 
 Los siguientes elementos son "en línea":
 
-- [b](/es/docs/Web/HTML/Elemento/b), [big](/es/docs/Web/HTML/Elemento/big), [i](/es/docs/Web/HTML/Elemento/i), [small](/es/docs/Web/HTML/Elemento/small), [tt](/es/docs/Web/HTML/Elemento/tt)
-- [abbr](/es/docs/Web/HTML/Elemento/abbr), [acronym](/es/docs/Web/HTML/Elemento/acronym), [cite](/es/docs/Web/HTML/Elemento/cite), [code](/es/docs/Web/HTML/Elemento/code), [dfn](/es/docs/Web/HTML/Elemento/dfn), [em](/es/docs/Web/HTML/Elemento/em), [kbd](/es/docs/Web/HTML/Elemento/kbd), [strong](/es/docs/Web/HTML/Elemento/strong), [samp](/es/docs/Web/HTML/Elemento/samp), [time](/es/docs/Web/HTML/Elemento/time), [var](/es/docs/Web/HTML/Elemento/var)
-- [a](/es/docs/Web/HTML/Elemento/a), [bdo](/es/docs/Web/HTML/Elemento/bdo), [br](/es/docs/Web/HTML/Elemento/br), [img](/es/docs/Web/HTML/Elemento/Img), [map](/es/docs/Web/HTML/Elemento/map), [object](/es/docs/Web/HTML/Elemento/object), [q](/es/docs/Web/HTML/Elemento/q), [script](/es/docs/Web/HTML/Elemento/Script), [span](/es/docs/Web/HTML/Elemento/span), [sub](/es/docs/Web/HTML/Elemento/sub), [sup](/es/docs/Web/HTML/Elemento/sup)
-- [button](/es/docs/Web/HTML/Elemento/button), [input](/es/docs/Web/HTML/Elemento/Input), [label](/es/docs/Web/HTML/Elemento/label), [select](/es/docs/Web/HTML/Elemento/select), [textarea](/es/docs/Web/HTML/Elemento/textarea)
+- [b](/es/docs/Web/HTML/Element/b), [big](/es/docs/Web/HTML/Element/big), [i](/es/docs/Web/HTML/Element/i), [small](/es/docs/Web/HTML/Element/small), [tt](/es/docs/Web/HTML/Element/tt)
+- [abbr](/es/docs/Web/HTML/Element/abbr), [acronym](/es/docs/Web/HTML/Element/acronym), [cite](/es/docs/Web/HTML/Element/cite), [code](/es/docs/Web/HTML/Element/code), [dfn](/es/docs/Web/HTML/Element/dfn), [em](/es/docs/Web/HTML/Element/em), [kbd](/es/docs/Web/HTML/Element/kbd), [strong](/es/docs/Web/HTML/Element/strong), [samp](/es/docs/Web/HTML/Element/samp), [time](/es/docs/Web/HTML/Element/time), [var](/es/docs/Web/HTML/Element/var)
+- [a](/es/docs/Web/HTML/Element/a), [bdo](/es/docs/Web/HTML/Element/bdo), [br](/es/docs/Web/HTML/Element/br), [img](/es/docs/Web/HTML/Element/img), [map](/es/docs/Web/HTML/Element/map), [object](/es/docs/Web/HTML/Element/object), [q](/es/docs/Web/HTML/Element/q), [script](/es/docs/Web/SVG/Element/script), [span](/es/docs/Web/HTML/Element/span), [sub](/es/docs/Web/HTML/Element/sub), [sup](/es/docs/Web/HTML/Element/sup)
+- [button](/es/docs/Web/HTML/Element/button), [input](/es/docs/Web/HTML/Element/input), [label](/es/docs/Web/HTML/Element/label), [select](/es/docs/Web/HTML/Element/select), [textarea](/es/docs/Web/HTML/Element/textarea)
 
 ### Ver también
 
-- [Elementos en bloque](/es/docs/Web/HTML/Block-level_elements)
+- [Elementos en bloque](/es/docs/Glossary/Block-level_content)

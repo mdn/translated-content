@@ -51,7 +51,8 @@ ECMAScript 2015 이후, 문자열 리터럴은 소위 [템플릿 리터럴](/ko/
 | `\u{X}` ... `\u{XXXXXX}` | 유니코드 코드포인트 {{experimental_inline}} |
 | `\xXX`                   | Latin-1 문자                                |
 
-> **참고:** 일부 다른 프로그래밍 언어와 달리, JavaScript는 작은따옴표와 큰따옴표 문자열을 구분하지 않습니다. 따라서 위의 이스케이프 문자는 작은따옴표나 큰따옴표에서 상관 없이 작동합니다.
+> [!NOTE]
+> 일부 다른 프로그래밍 언어와 달리, JavaScript는 작은따옴표와 큰따옴표 문자열을 구분하지 않습니다. 따라서 위의 이스케이프 문자는 작은따옴표나 큰따옴표에서 상관 없이 작동합니다.
 
 ### 긴 문자열 리터럴
 
@@ -99,7 +100,7 @@ return "cat"[1]; // returns "a"
 
 ### 문자열 비교
 
-C 개발자는 문자열 비교를 위하여 `strcmp()` 함수를 사용합니다. JavaScript에서는 단지 [less-than와 greater-than 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)만을 사용하여 문자열을 비교할 수 있습니다:
+C 개발자는 문자열 비교를 위하여 `strcmp()` 함수를 사용합니다. JavaScript에서는 단지 [less-than와 greater-than 연산자](/ko/docs/Web/JavaScript/Reference/Operators)만을 사용하여 문자열을 비교할 수 있습니다:
 
 ```js
 var a = "a";

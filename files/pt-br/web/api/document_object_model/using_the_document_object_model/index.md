@@ -150,5 +150,5 @@ Você pode usar árvores DOM para modelar dados que não são adequados para RDF
 - [XML](/pt-BR/docs/Web/XML)
 - [JXON](/pt-BR/docs/JXON)
 - [XPath](/pt-BR/docs/Web/XPath)
-- [Parsing and serializing XML](/pt-BR/docs/Web/Guide/Parsing_and_serializing_XML)
+- [Parsing and serializing XML](/pt-BR/docs/Web/XML/Parsing_and_serializing_XML)
 - [XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest)

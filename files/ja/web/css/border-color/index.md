@@ -2,7 +2,7 @@
 title: border-color
 slug: Web/CSS/border-color
 l10n:
-  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
+  sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
 {{CSSRef}}
@@ -13,7 +13,7 @@ l10n:
 
 各辺を個々に設定する場合は、 {{CSSxRef("border-top-color")}}、 {{CSSxRef("border-right-color")}}、 {{CSSxRef("border-bottom-color")}}、 {{CSSxRef("border-left-color")}}、 または書字方向を意識した{{CSSxRef("border-block-start-color")}}、 {{CSSxRef("border-block-end-color")}}、 {{CSSxRef("border-inline-start-color")}}、 {{CSSxRef("border-inline-end-color")}} を使用します。
 
-境界線の色についての詳細な情報は、 [CSS の色](/ja/docs/Web/CSS/CSS_Colors/Applying_color#%E5%A2%83%E7%95%8C%E7%B7%9A_2)にあります。
+境界線の色についての詳細な情報は、 [HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color#境界線_2)にあります。
 
 ## 構成要素のプロパティ
 
@@ -147,7 +147,7 @@ ul {
 
 #### 結果
 
-{{EmbedLiveSample("完全な border-color の使用法", 600, 700)}}
+{{EmbedLiveSample("Complete_border-color_usage", 600, 700)}}
 
 ## 仕様書
 

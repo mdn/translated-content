@@ -57,7 +57,7 @@ Object.create(toto); // TypeError: "toto" is not an object or null
 
 ### Résoudre le problème
 
-Pour résoudre ce problème et écarter les cas où la valeur vaut `undefined`, on peut par exemple utiliser l'opérateur [`typeof`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_typeof).
+Pour résoudre ce problème et écarter les cas où la valeur vaut `undefined`, on peut par exemple utiliser l'opérateur [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof).
 
 ```js
 if (typeof toto !== "undefined") {

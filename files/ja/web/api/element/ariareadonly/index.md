@@ -10,7 +10,8 @@ l10n:
 
 **`ariaReadOnly`** は {{domxref("Element")}} インターフェイスのプロパティで、要素が編集不可であるが、それ以外は操作可能であることを示す [`aria-readonly`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) 属性の値を反映します。
 
-> **メモ:** 可能であれば、HTML の {{htmlelement("input")}} 要素の `type="text"` と {{htmlelement("textarea")}} を使用してください。これらは意味づけがあり、ARIA 属性を必要としません。
+> [!NOTE]
+> 可能であれば、HTML の {{htmlelement("input")}} 要素の `type="text"` と {{htmlelement("textarea")}} を使用してください。これらは意味づけがあり、ARIA 属性を必要としません。
 
 ## 値
 

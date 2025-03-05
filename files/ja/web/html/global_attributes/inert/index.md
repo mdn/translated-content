@@ -44,5 +44,5 @@ inert` 属性を使用する際には、アクセシビリティに十分配慮�
 ## 関連情報
 
 - HTML の {{HTMLElement("dialog")}} 要素
-- [Introducing inert](https://developer.chrome.com/articles/inert/)
+- [Introducing inert](https://web.dev/articles/inert)
 - [The "inert" attribute is finally coming to the web](https://www.stefanjudis.com/blog/the-inert-attribute-is-finally-coming-to-the-web/)

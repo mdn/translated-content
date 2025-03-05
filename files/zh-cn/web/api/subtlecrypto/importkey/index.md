@@ -160,7 +160,8 @@ JSON Web Key 看起来像这样（这是一个椭圆曲线算法的私钥）：
 
 ## 示例
 
-> **备注：** 你可以在 Github 上[尝试可用的示例](https://mdn.github.io/dom-examples/web-crypto/import-key/index.html)。
+> [!NOTE]
+> 你可以在 Github 上[尝试可用的示例](https://mdn.github.io/dom-examples/web-crypto/import-key/index.html)。
 
 ### 导入 Raw 格式的密钥
 

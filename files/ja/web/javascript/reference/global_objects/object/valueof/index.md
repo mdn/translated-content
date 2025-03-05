@@ -9,7 +9,22 @@ l10n:
 
 **`valueOf()`** は {{jsxref("Object")}} インスタンスのメソッドで、 `this` 値を[オブジェクトに](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#オブジェクト変換)変換します。このメソッドは、派生オブジェクトでは独自の[型変換](/ja/docs/Web/JavaScript/Data_structures#型変換)ロジックのためにオーバーライドされるためのものです。
 
-{{EmbedInteractiveExample("pages/js/object-prototype-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.valueOf()")}}
+
+```js interactive-example
+function MyNumberType(n) {
+  this.number = n;
+}
+
+MyNumberType.prototype.valueOf = function () {
+  return this.number;
+};
+
+const object1 = new MyNumberType(4);
+
+console.log(object1 + 3);
+// Expected output: 7
+```
 
 ## 構文
 
@@ -25,7 +40,8 @@ valueOf()
 
 指定されたオブジェクトのプリミティブ値を返します。
 
-> **メモ:** 型変換の際に `valueOf` が有益であるためには、プリミティブを返す必要があります。すべてのプリミティブ型は自分自身で `valueOf()` メソッドを持っているので、一般的に `aPrimitiveValue.valueOf()` を呼び出しても `Object.prototype.valueOf()` は呼び出されません。
+> [!NOTE]
+> 型変換の際に `valueOf` が有益であるためには、プリミティブを返す必要があります。すべてのプリミティブ型は自分自身で `valueOf()` メソッドを持っているので、一般的に `aPrimitiveValue.valueOf()` を呼び出しても `Object.prototype.valueOf()` は呼び出されません。
 
 ## 解説
 

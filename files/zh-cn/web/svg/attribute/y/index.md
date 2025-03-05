@@ -1,5 +1,5 @@
 ---
-title: "y"
+title: y
 slug: Web/SVG/Attribute/y
 ---
 
@@ -101,7 +101,8 @@ For {{SVGElement('use')}}, `y` defines the y coordinate of the upper left corner
   </tbody>
 </table>
 
-> **备注：** 从 SVG2 开始，`y` 变为*几何属性*，这意味着该元素也可以用作使用的元素的 CSS 属性。
+> [!NOTE]
+> 从 SVG2 开始，`y` 变为*几何属性*，这意味着该元素也可以用作使用的元素的 CSS 属性。
 
 ## 规范
 

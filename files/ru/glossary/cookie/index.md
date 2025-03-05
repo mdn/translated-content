@@ -15,4 +15,4 @@ Cookie - это небольшой фрагмент информации, сох
 
 ### Общие знания
 
-- [HTTP cookie](https://en.wikipedia.org/wiki/HTTP_cookie) в Википедии
+- [Cookie](https://ru.wikipedia.org/wiki/Cookie) в Википедии

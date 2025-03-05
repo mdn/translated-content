@@ -32,7 +32,7 @@ key(keyname ,value )
 
 ### 정의
 
-[XSLT 1.0 12.2](http://www.w3.org/TR/xslt#function-key)
+[XSLT 1.0 12.2](https://www.w3.org/TR/xslt#function-key)
 
 ### Gecko 지원
 

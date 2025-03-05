@@ -7,11 +7,33 @@ slug: Web/HTML/Element/br
 
 L'élément HTML **`<br>`** crée un saut de ligne (un retour chariot) dans le texte. Il s'avère utile lorsque les sauts de ligne ont une importance (par exemple lorsqu'on écrit une adresse ou un poème).
 
-{{EmbedInteractiveExample("pages/tabbed/br.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;br&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>
+  O’er all the hilltops<br />
+  Is quiet now,<br />
+  In all the treetops<br />
+  Hearest thou<br />
+  Hardly a breath;<br />
+  The birds are asleep in the trees:<br />
+  Wait, soon like these<br />
+  Thou too shalt rest.
+</p>
+```
+
+```css interactive-example
+p {
+  font-size: 1rem;
+  font-family: sans-serif;
+  margin: 20px;
+}
+```
 
 Comme vous pouvez le voir dans l'exemple ci-dessus, un élément `<br>` est inclus à chaque point où nous voulons que le texte soit interrompu. Le texte après le `<br>` recommence au début de la ligne suivante du bloc de texte.
 
-> **Note :** Attention, `<br>` ne doit pas être utilisé de façon abusive afin d'augmenter l'espace entre les lignes d'un texte. Pour cela, on utilisera la propriété [CSS](/fr/docs/Web/CSS) [`margin`](/fr/docs/Web/CSS/margin) sur l'élément HTML [`<p>`](/fr/docs/Web/HTML/Element/p).
+> [!NOTE]
+> Attention, `<br>` ne doit pas être utilisé de façon abusive afin d'augmenter l'espace entre les lignes d'un texte. Pour cela, on utilisera la propriété [CSS](/fr/docs/Web/CSS) [`margin`](/fr/docs/Web/CSS/margin) sur l'élément HTML [`<p>`](/fr/docs/Web/HTML/Element/p).
 
 ## Attributs
 

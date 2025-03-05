@@ -12,4 +12,4 @@ slug: Glossary/CSRF
 ### General knowledge
 
 - [Prevention measures](<https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet>)
-- [MDN security tutorial](/en-US/Learn/tutorial/Information_Security_Basics)
+- [MDN security tutorial](/ru/docs/Learn/tutorial/Information_Security_Basics)

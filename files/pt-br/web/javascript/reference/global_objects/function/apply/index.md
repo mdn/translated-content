@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 O método **`apply()`** chama uma função com um dado valor `this` e `arguments` providos como uma array (ou um objeto parecido com um array).
 
-> **Nota:** A sintaxe desta função é quase idêntica a essa da {{jsxref("Function.call", "call()")}}, a diferença é que `call()` aceita uma **lista de** **argumentos**, enquanto `apply()` aceita um **array de argumentos**.
+> [!NOTE]
+> A sintaxe desta função é quase idêntica a essa da {{jsxref("Function.call", "call()")}}, a diferença é que `call()` aceita uma **lista de** **argumentos**, enquanto `apply()` aceita um **array de argumentos**.
 
 ## Sintaxe
 
@@ -32,7 +33,8 @@ Você pode também usar {{jsxref("Functions/arguments", "arguments")}} para o pa
 
 Desde a 5a versão do ECMAScript você pode utilizar qualquer tipo de objeto que é parecido com um array (array-like), então na prática isso significa que ele vai ter uma propriedade `length` e propriedades inteiras no intervalor (`0... length`). Como um exemplo, você pode agora usar um {{domxref("NodeList")}} ou um objeto personalizado como `{ 'length': 2, '0': 'comer', '1': 'bananas' }`.
 
-> **Nota:** Muitos navegadores, incluindo o Chrome 14 e o Internet Explorer 9, ainda não aceitam objetos parecidos com array e irão lançar uma exceção.
+> [!NOTE]
+> Muitos navegadores, incluindo o Chrome 14 e o Internet Explorer 9, ainda não aceitam objetos parecidos com array e irão lançar uma exceção.
 
 ## Exemplos
 
@@ -48,7 +50,8 @@ Function.prototype.construct = function (aArgs) {
 };
 ```
 
-> **Nota:** O método `Object.create()` usado acima é relativamente novo. Para um método alternativo utilizando closures, por favor considere a seguinte alternativa.
+> [!NOTE]
+> O método `Object.create()` usado acima é relativamente novo. Para um método alternativo utilizando closures, por favor considere a seguinte alternativa.
 >
 > ```js
 > Function.prototype.construct = function (aArgs) {
@@ -78,7 +81,8 @@ console.log(myInstance instanceof MyConstructor); // logs 'true'
 console.log(myInstance.constructor); // logs 'MyConstructor'
 ```
 
-> **Nota:** Este método não nativo `Function.construct` não irá funcionar com alguns construtores nativos (como {{jsxref("Date")}}, por exemplo). Nestes casos você tem que usar o método {{jsxref("Function.prototype.bind")}} (por exemplo, imagine ter um array como o seguinte, para ser usado com o construtor {{jsxref("Global_Objects/Date", "Date")}}: `[2012, 11, 4]`; Neste caso você tem que escrever algom como: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` - de qualquer maneira essa não é a melhor forma de fazer as coisas e provavelmente não deve ser utilizado em qualquer ambiente de produção.
+> [!NOTE]
+> Este método não nativo `Function.construct` não irá funcionar com alguns construtores nativos (como {{jsxref("Date")}}, por exemplo). Nestes casos você tem que usar o método {{jsxref("Function.prototype.bind")}} (por exemplo, imagine ter um array como o seguinte, para ser usado com o construtor {{jsxref("Global_Objects/Date", "Date")}}: `[2012, 11, 4]`; Neste caso você tem que escrever algom como: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` - de qualquer maneira essa não é a melhor forma de fazer as coisas e provavelmente não deve ser utilizado em qualquer ambiente de produção.
 
 ### Usando `apply` e funções embutidas
 
@@ -142,7 +146,7 @@ someobject.foo = function () {
 };
 ```
 
-Esse método é especialmente útil quando você quer fazer debug de eventos, ou interagir com algo que não tem nenhuma API como os diversos eventos `.on([event]...` events, por exemplo aqueles utilizáveis no [Devtools Inspector](/pt-BR/docs/Tools/Page_Inspector#Developer_API)).
+Esse método é especialmente útil quando você quer fazer debug de eventos, ou interagir com algo que não tem nenhuma API como os diversos eventos `.on([event]...` events, por exemplo aqueles utilizáveis no [Devtools Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#developer_api)).
 
 ## Especificações
 

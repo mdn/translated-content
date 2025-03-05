@@ -51,7 +51,8 @@ _{{domxref("AudioNode")}}_ 를 부모로 가지는 매서드.
 
 이 예제는 two-second buffer를 생성하여 화이트 노이즈로 채워 이를 `AudioBufferSourceNode을 통해 재생한다.`
 
-> **참고:** You can also [run the code live](http://mdn.github.io/audio-buffer/), or [view the source](https://github.com/mdn/audio-buffer).
+> [!NOTE]
+> You can also [run the code live](https://mdn.github.io/audio-buffer/), or [view the source](https://github.com/mdn/audio-buffer).
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -95,7 +96,8 @@ button.onclick = function () {
 };
 ```
 
-> **참고:** For a `decodeAudioData` example, see the {{domxref("AudioContext.decodeAudioData")}} page.
+> [!NOTE]
+> For a `decodeAudioData` example, see the {{domxref("AudioContext.decodeAudioData")}} page.
 
 ## 명세서
 

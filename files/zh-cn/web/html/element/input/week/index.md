@@ -7,9 +7,35 @@ slug: Web/HTML/Element/input/week
 
 {{HTMLElement("input")}} 类型为 **`week`** 的元素会创建输入字段，以便轻松输入年份以及该年（即第 1 周到第 [52 或 53](https://zh.wikipedia.org/zh-cn/ISO_8601#日历星期表示法) 周）的 [ISO 8601 星期数](https://zh.wikipedia.org/zh-cn/ISO_8601#日历星期表示法)
 
-{{EmbedInteractiveExample("pages/tabbed/input-week.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;week&quot;&gt;", "tabbed-shorter")}}
 
-控件的用户界面因浏览器而异；跨浏览器的支持目前受到限制，目前只有 Chrome/Opera 和 Microsoft Edge 支持。在不支持的浏览器中，该控件会优雅降级至与 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/Input/text) 相同的功能。
+```html interactive-example
+<label for="camp-week">Choose a week in May or June:</label>
+
+<input
+  type="week"
+  name="week"
+  id="camp-week"
+  min="2018-W18"
+  max="2018-W26"
+  required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
+
+控件的用户界面因浏览器而异；跨浏览器的支持目前受到限制，目前只有 Chrome/Opera 和 Microsoft Edge 支持。在不支持的浏览器中，该控件会优雅降级至与 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text) 相同的功能。
 
 在 Chrome/Opera 中，`week` 控件提供了用于填写星期和年的插槽，弹出式日历界面（可以更直观地选择它们）以及“X”按钮以清除控件的值。
 
@@ -76,13 +102,13 @@ weekControl.value = "2017-W45";
 
 ### max
 
-接受以上[值](#值)部分中讨论的字符串格式的按时间最新年份和星期数。如果输入到该元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `max` 属性的值不是有效的星期字符串，则该元素没有最大值。
+接受以上[值](#值)部分中讨论的字符串格式的按时间最新年份和星期数。如果输入到该元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `max` 属性的值不是有效的星期字符串，则该元素没有最大值。
 
 此值必须大于或等于 `min` 属性指定的年和星期。
 
 ### min
 
-最早接受的年和星期数。如果输入到该元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 属性的值不是有效的星期字符串，则输入没有最小值。
+最早接受的年和星期数。如果输入到该元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `min` 属性的值不是有效的星期字符串，则输入没有最小值。
 
 该值必须小于或等于 `max` 属性的值。
 
@@ -90,7 +116,8 @@ weekControl.value = "2017-W45";
 
 布尔属性值，如果存在，说明此字段不能由用户编辑。然而，其 `value` 值仍然可以通过 JavaScript 代码直接设置 {{domxref("HTMLInputElement")}} 的 `value` 属性来改变。
 
-> **备注：** 由于只读字段不可以拥有值，`required` 不会对指定了 `readonly` 属性的字段起作用。
+> [!NOTE]
+> 由于只读字段不可以拥有值，`required` 不会对指定了 `readonly` 属性的字段起作用。
 
 ### step
 
@@ -98,7 +125,8 @@ weekControl.value = "2017-W45";
 
 字符串值 `any` 意味着不使用步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#max) 之外）。
 
-> **备注：** 当用户输入的数据不符合步进配置时，{{Glossary("user agent", "用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
+> [!NOTE]
+> 当用户输入的数据不符合步进配置时，{{Glossary("user agent", "用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
 
 对于 `week` 输入，`step` 的值以周为单位，比例因子为 604,800,000（因为基础数值以毫秒为单位）。`step` 的默认值为 1，表示 1 周。默认的步进基数是 -259,200,000，这是 1970 年第一周的开始（`"1970-W01"`）。
 
@@ -213,7 +241,8 @@ input:valid + span::after {
 
 ![The week form control has two dashes where the week number should be. A popup with a yellow warning symbol and a 'Please fill out this field' is emanating from the two dashes, which are highlighted in blue, the same blue as the input's focus ring.](week-validation-chrome.png)
 
-> **警告：** HTML 表单验证*不能*代替脚本来确保输入的数据采用正确的格式。对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了，甚至也可以完全绕开 HTML 并将数据直接提交到服务器。如果服务器端代码无法验证其接收到的数据，则在提交格式不正确的（或太大，类型错误……）的数据时，灾难可能会发生。
+> [!WARNING]
+> HTML 表单验证*不能*代替脚本来确保输入的数据采用正确的格式。对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了，甚至也可以完全绕开 HTML 并将数据直接提交到服务器。如果服务器端代码无法验证其接收到的数据，则在提交格式不正确的（或太大，类型错误……）的数据时，灾难可能会发生。
 
 ## 处理浏览器支持
 
@@ -348,7 +377,8 @@ function populateWeeks() {
 }
 ```
 
-> **备注：** 请记住，有些年份有 53 周（请参阅[每年的周数](https://zh.wikipedia.org/wiki/ISO週日曆#每年的星期))！在开发生产应用程序时，需要考虑到这一点。
+> [!NOTE]
+> 请记住，有些年份有 53 周（请参阅[每年的周数](https://zh.wikipedia.org/wiki/ISO週日曆#每年的星期))！在开发生产应用程序时，需要考虑到这一点。
 
 ## 规范
 
@@ -362,5 +392,5 @@ function populateWeeks() {
 
 - 通用 {{HTMLElement("input")}} 元素和用于操作该元素的接口 {{domxref("HTMLInputElement")}}
 - [HTML 中使用的日期和时间格式](/zh-CN/docs/Web/HTML/Date_and_time_formats)
-- [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/Input/datetime-local)、[`<input type="date">`](/zh-CN/docs/Web/HTML/Element/Input/date)、[`<input type="time">`](/zh-CN/docs/Web/HTML/Element/Input/time) 和 [`<input type="month">`](/zh-CN/docs/Web/HTML/Element/Input/month)
-- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)、[`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date)、[`<input type="time">`](/zh-CN/docs/Web/HTML/Element/input/time) 和 [`<input type="month">`](/zh-CN/docs/Web/HTML/Element/input/month)
+- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

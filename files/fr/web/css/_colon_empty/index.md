@@ -1,5 +1,5 @@
 ---
-title: ":empty"
+title: :empty
 slug: Web/CSS/:empty
 ---
 
@@ -15,7 +15,8 @@ div:empty {
 }
 ```
 
-> **Note :** Avec CSS4 Selectors, le sélecteur `:empty` a été modifié afin de se comporter comme {{CSSxRef(":-moz-only-whitespace")}} mais, à l'heure actuelle, aucun navigateur ne prend en charge cette fonctionnalité.
+> [!NOTE]
+> Avec CSS4 Selectors, le sélecteur `:empty` a été modifié afin de se comporter comme {{CSSxRef(":-moz-only-whitespace")}} mais, à l'heure actuelle, aucun navigateur ne prend en charge cette fonctionnalité.
 
 ## Syntaxe
 

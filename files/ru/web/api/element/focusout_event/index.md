@@ -10,7 +10,7 @@ slug: Web/API/Element/focusout_event
 Основная информация
 
 - Спецификация
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout)
 - Интерфейс
   - : {{domxref("FocusEvent")}}
 - Всплытие
@@ -38,6 +38,6 @@ slug: Web/API/Element/focusout_event
 
 ## Related Events
 
-- {{event("focus")}}
-- {{event("blur")}}
-- {{event("focusin")}}
+- [`focus`](/ru/docs/Web/API/Element/focus_event)
+- [`blur`](/ru/docs/Web/API/Element/blur_event)
+- [`focusin`](/ru/docs/Web/API/Element/focusin_event)

@@ -15,5 +15,5 @@ Chaque standard passe à travers quatre étapes de maturation : _Working Draft_ 
 
 ### Connaissances générales
 
-- [Site web du W3C](http://www.w3.org/)
+- [Site web du W3C](https://www.w3.org/)
 - [W3C](https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium) sur Wikipédia

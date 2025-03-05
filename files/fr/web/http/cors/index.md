@@ -7,7 +7,7 @@ slug: Web/HTTP/CORS
 
 Le «&nbsp; _Cross-origin resource sharing_ » (CORS) ou « partage des ressources entre origines multiples » (en français, moins usité) est un mécanisme qui consiste à ajouter des en-têtes HTTP afin de permettre à un agent utilisateur d'accéder à des ressources d'un serveur situé sur une autre origine que le site courant. Un agent utilisateur réalise une requête HTTP **multi-origine (_cross-origin_)** lorsqu'il demande une ressource provenant d'un domaine, d'un protocole ou d'un port différent de ceux utilisés pour la page courante.
 
-Prenons un exemple de requête multi-origine : une page HTML est servie depuis `http://domaine-a.com` contient un élément [`<img> src`](/fr/docs/Web/HTML/Element/Img#attr-src) ciblant `http://domaine-b.com/image.jpg`. Aujourd'hui, de nombreuses pages web chargent leurs ressources (feuilles CSS, images, scripts) à partir de domaines séparés (par exemple des CDN (_Content Delivery Network_ en anglais ou « Réseau de diffusion de contenu »).
+Prenons un exemple de requête multi-origine : une page HTML est servie depuis `http://domaine-a.com` contient un élément [`<img> src`](/fr/docs/Web/HTML/Element/img#attr-src) ciblant `http://domaine-b.com/image.jpg`. Aujourd'hui, de nombreuses pages web chargent leurs ressources (feuilles CSS, images, scripts) à partir de domaines séparés (par exemple des CDN (_Content Delivery Network_ en anglais ou « Réseau de diffusion de contenu »).
 
 Pour des raisons de sécurité, les requêtes HTTP multi-origine émises depuis les scripts sont restreintes. Ainsi, {{domxref("XMLHttpRequest")}} et l'[API Fetch](/fr/docs/Web/API/Fetch_API) respectent la règle [d'origine unique](/fr/docs/Web/Security/Same-origin_policy). Cela signifie qu'une application web qui utilise ces API peut uniquement émettre des requêtes vers la même origine que celle à partir de laquelle l'application a été chargée, sauf si des en-têtes CORS sont utilisés.
 
@@ -19,7 +19,7 @@ Le CORS permet de prendre en charge des requêtes multi-origines sécurisées et
 
 Cet article est destiné à toutes et à tous.
 
-Il pourra notamment servir aux administrateurs web, aux développeurs côté serveur ainsi qu'aux développeurs côté client. Les navigateurs récents permettent de gérer les règles de partage multi-origine côté client grâce à certaines règles et en-têtes mais cela implique également que des serveurs puissent gérer ces requêtes et réponses. Aussi, pour compléter le spectre concerné, nous vous invitons à lire d'autres articles complétant le point de vue « serveur » (par exemple [cet article utilisant des fragments de code PHP](/fr/docs/Web/HTTP/Server-Side_Access_Control)).
+Il pourra notamment servir aux administrateurs web, aux développeurs côté serveur ainsi qu'aux développeurs côté client. Les navigateurs récents permettent de gérer les règles de partage multi-origine côté client grâce à certaines règles et en-têtes mais cela implique également que des serveurs puissent gérer ces requêtes et réponses. Aussi, pour compléter le spectre concerné, nous vous invitons à lire d'autres articles complétant le point de vue « serveur » (par exemple [cet article utilisant des fragments de code PHP](/fr/docs/Web/HTTP/CORS)).
 
 ## Quelles requêtes utilisent le CORS ?
 
@@ -27,16 +27,16 @@ Le [standard CORS](https://fetch.spec.whatwg.org/#http-cors-protocol) est utilis
 
 - L'utilisation des API {{domxref("XMLHttpRequest")}} ou [Fetch](/fr/docs/Web/API/Fetch_API)
 - Les polices web (pour récupérer des polices provenant d'autres origines lorsqu'on utilise {{cssxref("@font-face")}} en CSS), [afin que les serveurs puissent déployer des polices TrueType uniquement chargées en _cross-site_ et utilisées par les sites web qui l'autorisent](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
-- [Les textures WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Utiliser_les_textures_avec_WebGL)
+- [Les textures WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)
 - Les _frames_ (images ou vidéo) dessinées sur un canevas avec [`drawImage`](/fr/docs/Web/API/CanvasRenderingContext2D/drawImage)
-- Les feuilles de style (pour les accès [CSSOM](/fr/docs/Web/CSS/CSSOM_View))
+- Les feuilles de style (pour les accès [CSSOM](/fr/docs/Web/CSS/CSSOM_view))
 - Les scripts (pour les exceptions non silencieuses (_unmuted exceptions_)).
 
 Cet article propose un aperçu général de _Cross-Origin Resource Sharing_ ainsi qu'un aperçu des en-têtes HTTP nécessaires.
 
 ## Aperçu fonctionnel
 
-Le standard CORS fonctionne grâce à l'ajout de nouveaux [en-têtes HTTP](/fr/docs/Web/HTTP/Headers) qui permettent aux serveurs de décrire un ensemble d'origines autorisées pour lire l'information depuis un navigateur web. De plus, pour les méthodes de requêtes HTTP qui entraînent des effets de bord sur les données côté serveur (notamment pour les méthodes en dehors de {{HTTPMethod("GET")}} ou pour les méthodes {{HTTPMethod("POST")}} utilisées avec certains [types MIME](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), la spécification indique que les navigateurs doivent effectuer une requête préliminaire (« _preflight request_ ») et demander au serveur les méthodes prises en charges via une requête utilisant la méthode {{HTTPMethod("OPTIONS")}} puis, après approbation du serveur, envoyer la vraie requête. Les serveurs peuvent également indiquer aux clients s'il est nécessaire de fournir des informations d'authentification (que ce soit des [cookies](/fr/docs/Web/HTTP/Cookies) ou des données d'authentification HTTP) avec les requêtes.
+Le standard CORS fonctionne grâce à l'ajout de nouveaux [en-têtes HTTP](/fr/docs/Web/HTTP/Headers) qui permettent aux serveurs de décrire un ensemble d'origines autorisées pour lire l'information depuis un navigateur web. De plus, pour les méthodes de requêtes HTTP qui entraînent des effets de bord sur les données côté serveur (notamment pour les méthodes en dehors de {{HTTPMethod("GET")}} ou pour les méthodes {{HTTPMethod("POST")}} utilisées avec certains [types MIME](/fr/docs/Web/HTTP/MIME_types)), la spécification indique que les navigateurs doivent effectuer une requête préliminaire (« _preflight request_ ») et demander au serveur les méthodes prises en charges via une requête utilisant la méthode {{HTTPMethod("OPTIONS")}} puis, après approbation du serveur, envoyer la vraie requête. Les serveurs peuvent également indiquer aux clients s'il est nécessaire de fournir des informations d'authentification (que ce soit des [cookies](/fr/docs/Web/HTTP/Cookies) ou des données d'authentification HTTP) avec les requêtes.
 
 Les sections qui suivent évoquent les différents scénarios relatifs au CORS ainsi qu'un aperçu des en-têtes HTTP utilisés.
 
@@ -46,7 +46,7 @@ Voyons ici trois scénarios qui illustrent le fonctionnement du CORS. Tous ces e
 
 Les fragments de code JavaScript (ainsi que les instances serveurs qui gèrent ces requêtes) se trouvent sur <http://arunranga.com/examples/access-control/> et fonctionnent pour les navigateurs qui prennent en charge {{domxref("XMLHttpRequest")}} dans un contexte multi-site.
 
-Un aperçu « côté serveur » des fonctionnalités CORS se trouve dans l'article [Contrôle d'accès côté serveur](/fr/docs/Web/HTTP/Server-Side_Access_Control).
+Un aperçu « côté serveur » des fonctionnalités CORS se trouve dans l'article [Contrôle d'accès côté serveur](/fr/docs/Web/HTTP/CORS).
 
 ### Requêtes simples
 
@@ -74,9 +74,11 @@ Certaines requêtes ne nécessitent pas de [requête CORS préliminaire](#prefli
 - Aucun gestionnaire d'évènement n'est enregistré sur aucun des objets {{domxref("XMLHttpRequestUpload")}} utilisés pour la requête, on y accède via la propriété {{domxref("XMLHttpRequest.upload")}}.
 - Aucun objet {{domxref("ReadableStream")}} n'est utilisé dans la requête.
 
-> **Note :** Cela correspond aux classes de requêtes généralement produites par du contenu web. Aucune donnée de réponse n'est envoyée au client qui a lancé la requête sauf si le serveur envoie un en-tête approprié. Aussi, les sites qui empêchent les requêtes étrangères falsifiées ne craignent rien de nouveau.
+> [!NOTE]
+> Cela correspond aux classes de requêtes généralement produites par du contenu web. Aucune donnée de réponse n'est envoyée au client qui a lancé la requête sauf si le serveur envoie un en-tête approprié. Aussi, les sites qui empêchent les requêtes étrangères falsifiées ne craignent rien de nouveau.
 
-> **Note :** WebKit Nightly et Safari Technology Preview ajoutent des restrictions supplémentaires pour les valeurs autorisées des en-têtes {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} et {{HTTPHeader("Content-Language")}}. Si l'un de ces en-têtes a une valeur non-standard, WebKit/Safari considère que la requête ne correspond pas à une requête simple. Les valeurs considérées comme non-standard par WebKit/Safari ne sont pas documentées en dehors de ces bugs WebKit : _[Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178)_, _[Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)_ et _[Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363)_. Aucun autre navigateur n'implémente ces restrictions supplémentaires, car elles ne font pas partie de la spécification.
+> [!NOTE]
+> WebKit Nightly et Safari Technology Preview ajoutent des restrictions supplémentaires pour les valeurs autorisées des en-têtes {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} et {{HTTPHeader("Content-Language")}}. Si l'un de ces en-têtes a une valeur non-standard, WebKit/Safari considère que la requête ne correspond pas à une requête simple. Les valeurs considérées comme non-standard par WebKit/Safari ne sont pas documentées en dehors de ces bugs WebKit : _[Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178)_, _[Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)_ et _[Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363)_. Aucun autre navigateur n'implémente ces restrictions supplémentaires, car elles ne font pas partie de la spécification.
 
 Si, par exemple, on a un contenu web situé sous le domaine `http://toto.example` qui souhaite invoquer du contenu situé sous le domaine `http://truc.autre`, on pourrait utiliser du code JavaScript semblable à ce qui suit sur `toto.example` :
 
@@ -154,10 +156,10 @@ Une requête devra être précédée d'une requête préliminaire si **une** des
   - {{HTTPHeader("Content-Language")}}
   - {{HTTPHeader("Content-Type")}} (cf. les contraintes supplémentaires ci-après)
   - {{HTTPHeader("Last-Event-ID")}}
-  - [`DPR`](http://httpwg.org/http-extensions/client-hints.html#dpr)
-  - [`Save-Data`](http://httpwg.org/http-extensions/client-hints.html#save-data)
-  - [`Viewport-Width`](http://httpwg.org/http-extensions/client-hints.html#viewport-width)
-  - [`Width`](http://httpwg.org/http-extensions/client-hints.html#width)
+  - [`DPR`](https://httpwg.org/http-extensions/client-hints.html#dpr)
+  - [`Save-Data`](https://httpwg.org/http-extensions/client-hints.html#save-data)
+  - [`Viewport-Width`](https://httpwg.org/http-extensions/client-hints.html#viewport-width)
+  - [`Width`](https://httpwg.org/http-extensions/client-hints.html#width)
 
 - **Ou si** l'en-tête {{HTTPHeader("Content-Type")}} possède une valeur autre que :
 
@@ -168,7 +170,8 @@ Une requête devra être précédée d'une requête préliminaire si **une** des
 - **Ou si** un ou plusieurs gestionnaires d'évènements sont enregistrés sur l'objet {{domxref("XMLHttpRequestUpload")}} utilisé dans la requête.
 - **Ou si** un objet {{domxref("ReadableStream")}} est utilisé dans la requête.
 
-> **Note :** WebKit Nightly et Safari Technology Preview ajoutent des restrictions supplémentaires pour les valeurs autorisées des en-têtes {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} et {{HTTPHeader("Content-Language")}}. Si l'un de ces en-têtes a une valeur non-standard, WebKit/Safari considère que la requête ne correspond pas à une requête simple. Les valeurs considérées comme non-standard par WebKit/Safari ne sont pas documentées en dehors de ces bugs WebKit : _[Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178)_, _[Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)_ et _[Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363)_. Aucun autre navigateur n'implémente ces restrictions supplémentaires, car elles ne font pas partie de la spécification.
+> [!NOTE]
+> WebKit Nightly et Safari Technology Preview ajoutent des restrictions supplémentaires pour les valeurs autorisées des en-têtes {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} et {{HTTPHeader("Content-Language")}}. Si l'un de ces en-têtes a une valeur non-standard, WebKit/Safari considère que la requête ne correspond pas à une requête simple. Les valeurs considérées comme non-standard par WebKit/Safari ne sont pas documentées en dehors de ces bugs WebKit : _[Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178)_, _[Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)_ et _[Switch to a blacklist model for restricted Accept headers in simple CORS requests](https://bugs.webkit.org/show_bug.cgi?id=166363)_. Aucun autre navigateur n'implémente ces restrictions supplémentaires, car elles ne font pas partie de la spécification.
 
 Voici un exemple d'une requête qui devra être précédée d'une requête préliminaire :
 
@@ -195,7 +198,8 @@ Dans le fragment de code ci-avant, à la ligne 3, on crée un corps XML envoyé 
 
 ![](preflight_correct.png)
 
-> **Note :** Comme décrit après, la vraie requête POST n'inclut pas les en-têtes `Access-Control-Request-*` qui sont uniquement nécessaires pour la requête OPTIONS.
+> [!NOTE]
+> Comme décrit après, la vraie requête POST n'inclut pas les en-têtes `Access-Control-Request-*` qui sont uniquement nécessaires pour la requête OPTIONS.
 
 Voyons ce qui se passe entre le client et le serveur. Le premier échange est la requête/réponse préliminaire :
 
@@ -504,7 +508,7 @@ Voir [ci-avant pour des exemples d'utilisation de cet en-tête](#preflight).
 
 - [Exemples de codes utilisant `XMLHttpRequest` et le CORS (en anglais)](https://arunranga.com/examples/access-control/)
 - [Exemples de code côté client et côté serveur utilisant le CORS (en anglais)](https://github.com/jackblackevo/cors-jsonp-sample)
-- [Le CORS vu côté serveur (PHP, etc.)](/fr/docs/Web/HTTP/Server-Side_Access_Control)
+- [Le CORS vu côté serveur (PHP, etc.)](/fr/docs/Web/HTTP/CORS)
 - {{domxref("XMLHttpRequest")}}
 - [L'API Fetch](/fr/docs/Web/API/Fetch_API)
 - [Utiliser le CORS - HTML5 Rocks (en anglais)](https://www.html5rocks.com/en/tutorials/cors/)

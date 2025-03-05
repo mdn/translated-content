@@ -9,9 +9,27 @@ l10n:
 
 **`<u>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示行内文本拥有一个非文本形式的注释，该注释需要以某种方式渲染出来。默认情况下渲染为一个实线下划线，可以用 CSS 替换。
 
-> **警告：** 此元素以前在旧版本的 HTML 中称为“下划线”元素，但有时仍会以这种方式被滥用。要为文本加下划线，你应该应用包含 CSS {{cssxref("text-decoration")}} 属性设置为 `underline` 的样式。
+> [!WARNING]
+> 此元素以前在旧版本的 HTML 中称为“下划线”元素，但有时仍会以这种方式被滥用。要为文本加下划线，你应该应用包含 CSS {{cssxref("text-decoration")}} 属性设置为 `underline` 的样式。
 
-{{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;u&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  You could use this element to highlight <u>speling</u> mistakes, so the writer
+  can <u>corect</u> them.
+</p>
+```
+
+```css interactive-example
+p {
+  margin: 0;
+}
+
+u {
+  text-decoration: #f00 wavy underline;
+}
+```
 
 有关何时适合使用以及何时不使用 `<u>` 的详细信息，请参阅[使用说明](#使用说明)部分。
 
@@ -23,7 +41,8 @@ l10n:
 
 就像所有纯样式元素那样，原本的下划线元素（`<u>`）在 HTML 4 中被废弃。但是 `<u>` 在 HTML 5 中被恢复，并被赋予了一个新的语义：将文本标记为应用了某种形式的非文本注释。
 
-> **备注：** 在可能和超链接混淆的地方，避免使用默认样式的 `<u>` 元素，它们都默认用下划线装饰。
+> [!NOTE]
+> 在可能和超链接混淆的地方，避免使用默认样式的 `<u>` 元素，它们都默认用下划线装饰。
 
 ### 使用场景
 

@@ -12,7 +12,7 @@ Los _Hipervínculos_ ó _enlaces_ permiten conectar entre sí datos ó páginas 
 ### Cultura General
 
 - [Hiperenlace](https://es.wikipedia.org/wiki/Hiperenlace) en Wikipedia
-- [Guía de Hipervínculos](/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks) en MDN
+- [Guía de Hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) en MDN
 
 ### Referencias técnicas
 
@@ -21,5 +21,5 @@ Los _Hipervínculos_ ó _enlaces_ permiten conectar entre sí datos ó páginas 
 
 ### Aprende sobre
 
-- [`<a>` en MDN](/es/docs/Web/HTML/Elemento/a)
-- [`<link>` en MDN](/es/docs/Web/HTML/Elemento/link)
+- [`<a>` en MDN](/es/docs/Web/HTML/Element/a)
+- [`<link>` en MDN](/es/docs/Web/HTML/Element/link)

@@ -9,7 +9,23 @@ l10n:
 
 **`for await...of`** 语句创建一个循环，该循环遍历[异步可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)以及[同步可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)。该语句只能在可以使用 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 的上下文中使用，包括[异步函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)体内以及[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)中。
 
-{{EmbedInteractiveExample("pages/js/statement-forawaitof.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Statement - For Await...Of", "taller")}}
+
+```js interactive-example
+async function* foo() {
+  yield 1;
+  yield 2;
+}
+
+(async function () {
+  for await (const num of foo()) {
+    console.log(num);
+    // Expected output: 1
+
+    break; // Closes iterator, triggers return
+  }
+})();
+```
 
 ## 语法
 
@@ -27,7 +43,7 @@ for await (variable of iterable)
 
 ## 描述
 
-当 `for await...of` 循环迭代一个可迭代对象时，它首先获取可迭代对象的 [`[@@asyncIterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator) 方法并调用它，该方法返回一个[异步迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)。如果 `@asyncIterator` 方法不存在，则会查找 [`[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) 方法，该方法返回一个[同步迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议)。然后将返回的同步迭代器封装成一个异步迭代器，通过将 `next()`、`return()` 和 `throw()` 方法返回的每个对象都包装成一个已兑现或已拒绝的 promise，如果 `value` 属性也是一个 promise，则将其兑现。然后循环重复调用最终异步迭代器的 [`next()`](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议) 方法，并[等待](/zh-CN/docs/Web/JavaScript/Reference/Operators/await)（await）返回的 promise，以生成要分配给 `variable` 的值的序列。
+当 `for await...of` 循环迭代一个可迭代对象时，它首先获取可迭代对象的 [`[Symbol.asyncIterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator) 方法并调用它，该方法返回一个[异步迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)。如果 `@asyncIterator` 方法不存在，则会查找 [`[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) 方法，该方法返回一个[同步迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议)。然后将返回的同步迭代器封装成一个异步迭代器，通过将 `next()`、`return()` 和 `throw()` 方法返回的每个对象都包装成一个已兑现或已拒绝的 promise，如果 `value` 属性也是一个 promise，则将其兑现。然后循环重复调用最终异步迭代器的 [`next()`](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议) 方法，并[等待](/zh-CN/docs/Web/JavaScript/Reference/Operators/await)（await）返回的 promise，以生成要分配给 `variable` 的值的序列。
 
 如果 `for await...of` 循环提前退出（例如遇到 `break` 语句或抛出错误），则会调用迭代器的 [`return()`](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议) 方法来执行任何清理任务。在循环退出之前，会等待返回的 promise。
 
@@ -167,7 +183,8 @@ for (const numOrPromise of generator()) {
 // 4
 ```
 
-> **备注：** 请注意，如果同步生成器生成了一个被拒绝的 promise，那么在使用 `for await...of` 进行处理时会抛出异常，并且**不会调用**生成器内部的 `finally` 块。如果你需要使用 `try/finally` 来释放一些已分配的资源，这可能是不可取的。
+> [!NOTE]
+> 请注意，如果同步生成器生成了一个被拒绝的 promise，那么在使用 `for await...of` 进行处理时会抛出异常，并且**不会调用**生成器内部的 `finally` 块。如果你需要使用 `try/finally` 来释放一些已分配的资源，这可能是不可取的。
 
 ```js
 function* generatorWithRejectedPromises() {

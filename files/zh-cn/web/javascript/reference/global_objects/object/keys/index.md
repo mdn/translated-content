@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/keys
 
 **`Object.keys()`** 静态方法返回一个由给定对象自身的可枚举的字符串键属性名组成的数组。
 
-{{EmbedInteractiveExample("pages/js/object-keys.html")}}
+{{InteractiveExample("JavaScript Demo: Object.keys()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+  c: false,
+};
+
+console.log(Object.keys(object1));
+// Expected output: Array ["a", "b", "c"]
+```
 
 ## 语法
 
@@ -76,7 +87,8 @@ console.log(Object.keys("foo")); // ['0', '1', '2']
 console.log(Object.keys(100)); // []
 ```
 
-> **备注：** 在 ES5 中，将一个非对象传递给 `Object.keys()` 会抛出一个 {{jsxref("TypeError")}}。
+> [!NOTE]
+> 在 ES5 中，将一个非对象传递给 `Object.keys()` 会抛出一个 {{jsxref("TypeError")}}。
 
 ## 规范
 

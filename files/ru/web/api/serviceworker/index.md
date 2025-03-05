@@ -5,7 +5,7 @@ slug: Web/API/ServiceWorker
 
 {{APIRef("Service Workers API")}}
 
-Интерфейс `ServiceWorker`, являющийся частью [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API), позволяет взаимодействовать с Service Worker. К одному Service Worker могут быть привязаны несколько контекстов (например страниц, Web Workers, и т.д.), каждый с использованием собственного объекта `ServiceWorker`.
+Интерфейс `ServiceWorker`, являющийся частью [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API), позволяет взаимодействовать с Service Worker. К одному Service Worker могут быть привязаны несколько контекстов (например страниц, Web Workers, и т.д.), каждый с использованием собственного объекта `ServiceWorker`.
 
 Объект `ServiceWorker` можно получить через свойства {{domxref("ServiceWorkerRegistration.active")}} и {{domxref("ServiceWorkerContainer.controller")}} — это Service Worker, который активировал и контролирует текущую страницу (в случае, если Service Worker был успешно зарегистрирован и страница была обновлена)
 
@@ -82,4 +82,4 @@ if ("serviceWorker" in navigator) {
 - [Базовый пример для Service Worker](https://github.com/mdn/sw-test)
 - [Поддержка ServiceWorker браузерами](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise", "Promises")}}
-- [Использование Web Workers](/ru/docs/DOM/Using_web_workers)
+- [Использование Web Workers](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)

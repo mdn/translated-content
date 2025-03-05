@@ -9,7 +9,7 @@ slug: Web/API/Selection/removeRange
 
 将一个区域从选区中移除。
 
-### 用法
+### 语法
 
 ```plain
 sel.removeRange(range)

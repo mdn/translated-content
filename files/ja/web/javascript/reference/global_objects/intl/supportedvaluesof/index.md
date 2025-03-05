@@ -13,7 +13,24 @@ l10n:
 
 このメソッドは、特定の実装が値に対応しているかの機能テストを行い、必要な場合のみポリフィルをダウンロードするために用いることができます。また、たとえば UI が WebGL やサーバーサイドで構築される場合に、ユーザーが好きなローカライズされた値を選択できる UI を構築するためにも使用できます。
 
-{{EmbedInteractiveExample("pages/js/intl-supportedvaluesof.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.supportedValuesOf", "taller")}}
+
+```js interactive-example
+console.log(Intl.supportedValuesOf("calendar"));
+console.log(Intl.supportedValuesOf("collation"));
+console.log(Intl.supportedValuesOf("currency"));
+console.log(Intl.supportedValuesOf("numberingSystem"));
+console.log(Intl.supportedValuesOf("timeZone"));
+console.log(Intl.supportedValuesOf("unit"));
+// Expected output: Array ['key'] (for each key)
+
+try {
+  Intl.supportedValuesOf("someInvalidKey");
+} catch (err) {
+  console.log(err.toString());
+  // Expected output: RangeError: invalid key: "someInvalidKey"
+}
+```
 
 ## 構文
 
@@ -58,7 +75,8 @@ Intl.supportedValuesOf("calendar").forEach((calendar) => {
 });
 ```
 
-> **メモ:** 暦の値に関して返される配列には、常に値 `"gregory"` (グレゴリオ暦) が含まれます。
+> [!NOTE]
+> 暦の値に関して返される配列には、常に値 `"gregory"` (グレゴリオ暦) が含まれます。
 
 他の値も、同様にして取得できます。
 

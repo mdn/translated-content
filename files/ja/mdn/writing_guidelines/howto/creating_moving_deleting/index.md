@@ -2,7 +2,7 @@
 title: ページの作成、移動、削除、編集方法
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
 l10n:
-  sourceCommit: 6e22ea863f8fc322648870bf5bbce00f95e99bda
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{MDNSidebar}}
@@ -11,12 +11,14 @@ l10n:
 
 ## ページの作成
 
-> **注目:** 訳注:
+> [!CALLOUT]
+> 訳注:
 > この記事は英語版のページを作成する方法を示しています。翻訳記事を作成する場合は、 [MDN Web Docs のローカライズ](/ja/docs/MDN/Community/Contributing/Translated_content)を参照してください。
 
 MDN Web Docs のすべてのページは Markdown 形式で書かれています。内容は `index.md` という名前のファイルに書かれ、自分自身で固有のディレクトリーに格納されます。ディレクトリー名はページの名前を表します。例えば、 `align-content` が新しい CSS プロパティであり、新しいリファレンスページを作成したい場合、 `en-us/web/css` に `align-content` という名前のフォルダーを作成し、その中に `index.md` という名前のファイルを作成してください。
 
-> **メモ:** ディレクトリーの名前はページのスラッグとは少し異なります。特に、スラッグは文章の大文字小文字の規則に従います。
+> [!NOTE]
+> ディレクトリーの名前はページのスラッグとは少し異なります。特に、スラッグは文章の大文字小文字の規則に従います。
 
 たくさんの異なる[ページの種類](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types)があり、特定の構造とそれに対応しているページテンプレートがありますので、取りかかる場合はそれをコピーしてください。
 
@@ -56,11 +58,11 @@ MDN Web Docs のすべてのページは Markdown 形式で書かれています
 yarn content move <from-slug> <to-slug> [locale]
 ```
 
-移動したい既存の文書のスラッグ（例: `Learn/Accessibility`）と新しい場所のスラッグ（例: `Learn/A11y`）を指定し、それに続いてオプションで既存の文書のロケール（既定では `en-US`）を指定するだけです。
+移動したい既存の文書のスラッグ（例: `Learn_web_development/Core/Accessibility`）と新しい場所のスラッグ（例: `Learn_web_development/A11y`）を指定し、それに続いてオプションで既存の文書のロケール（既定では `en-US`）を指定するだけです。
 
 移動させたい既存の文書に子文書がある場合（つまり文書ツリーを表している場合）、 `yarn content move` コマンドはツリー全体を移動します。
 
-例えば、 `/en-US/Learn/Accessibility` のツリー全体を `/en-US/Learn/A11y` に移動させたい場合、次のような手順を実行します
+例えば、 `/en-US/Learn_web_development/Core/Accessibility` のツリー全体を `/en-US/Learn_web_development/A11y` に移動させたい場合、次のような手順を実行します
 
 1. 作業用に新しいブランチで始めます。
 
@@ -77,7 +79,7 @@ yarn content move <from-slug> <to-slug> [locale]
 2. 移動を実行します（新しいファイルを作成するだけでなく、既存のファイルを削除、変更します）。
 
    ```bash
-   yarn content move Learn/Accessibility Learn/A11y
+   yarn content move Learn_web_development/Core/Accessibility Learn_web_development/A11y
    ```
 
 3. ファイルを移動したら、他のコンテンツファイル内のそれらのファイルへの参照も更新する必要があります。以下のコマンドを使用すると、すべての参照を自動的に一括更新します。
@@ -90,7 +92,7 @@ yarn content move <from-slug> <to-slug> [locale]
 
    ```bash
    git add .
-   git commit -m "Move Learn/Accessibility to Learn/A11y"
+   git commit -m "Move Learn_web_development/Core/Accessibility to Learn_web_development/A11y"
    git push -u origin my-move
    ```
 
@@ -108,13 +110,14 @@ MDN Web Docs から文書を除去されるべきなのは、特別な事情が�
 yarn content delete <document-slug> [locale]
 ```
 
-> **メモ:** MDN Web Docs からページを削除するには `yarn content delete` コマンドを使用する必要があります。リポジトリーからディレクトリーを削除するだけではいけません。 `yarn content delete` コマンドは `_wikihistory.json` ファイルの更新など、他にも必要な変更を処理します。
+> [!NOTE]
+> MDN Web Docs からページを削除するには `yarn content delete` コマンドを使用する必要があります。リポジトリーからディレクトリーを削除するだけではいけません。 `yarn content delete` コマンドは `_wikihistory.json` ファイルの更新など、他にも必要な変更を処理します。
 
-削除したい既存の文書のスラッグ（例: `Learn/Accessibility`）を指定し、オプションで既存の文書のロケール（既定では `en-US`）を続けてください。
+削除したい既存の文書のスラッグ（例: `Learn_web_development/Core/Accessibility`）を指定し、オプションで既存の文書のロケール（既定では `en-US`）を続けてください。
 
 削除したい既存の文書に子文書がある（つまり文書ツリーを表している）場合は、 `-r, --recursive` オプションも指定しなければなりません。
 
-例えば、 `/en-US/Learn/Accessibility` のツリー全体を削除したい場合は、以下の段階を踏むことになります：
+例えば、 `/en-US/Learn_web_development/Core/Accessibility` のツリー全体を削除したい場合は、以下の段階を踏むことになります：
 
 1. 作業用に新しいブランチで始めます。
 
@@ -131,7 +134,7 @@ yarn content delete <document-slug> [locale]
 2. 削除を実行します。
 
    ```bash
-   yarn content delete Learn/Accessibility --recursive
+   yarn content delete Learn_web_development/Core/Accessibility --recursive
    ```
 
 3. リダイレクトを追加します。対象とするページは外部 URL でも MDN Web Docs の別のページでもかまいません。
@@ -149,7 +152,8 @@ yarn content delete <document-slug> [locale]
 
 5. プルリクエストを作成します。
 
-> **メモ:** 削除したいページのスラッグに特殊文字が格納されている場合は、次のように引用符で囲んで記述してください。
+> [!NOTE]
+> 削除したいページのスラッグに特殊文字が格納されている場合は、次のように引用符で囲んで記述してください。
 >
 > ```bash
 > yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"

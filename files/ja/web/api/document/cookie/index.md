@@ -37,12 +37,14 @@ document.cookie = newCookie;
     ドメインが指定されれば、サブドメインも常に含まれます。
     初期の仕様とは対照的に、ドメイン名の前のドットは無視されますが、ブラウザーはその様なドットを含むクッキーの設定を辞退することができます。
 
-    > **メモ:** ドメインは JavaScript のオリジンと一致している*必要があります*。
+    > [!NOTE]
+    > ドメインは JavaScript のオリジンと一致している*必要があります*。
     > 外部ドメインへのクッキーの設定は暗黙に無視されます。
 
   - `;expires=date-in-GMTString-format`: クッキーの期限です。もし `expires` も `max-age` も指定されていなければ、有効期限はセッションの終了までになります。
 
-    > **警告:** ユーザーのプライバシーを考慮するのであれば、ブラウザーの有効期限の管理に頼るのではなく、ウェブアプリの実装で指定した期間の経過後にクッキーを無効化することが重要です。
+    > [!WARNING]
+    > ユーザーのプライバシーを考慮するのであれば、ブラウザーの有効期限の管理に頼るのではなく、ウェブアプリの実装で指定した期間の経過後にクッキーを無効化することが重要です。
     > 多くのブラウザーはユーザーがクッキーを無期限に設定することができますが、これは安全ではありません。
 
     - 値の形式について知りたい方は、 {{jsxref("Date.toUTCString()")}} をご覧ください。
@@ -73,11 +75,14 @@ document.cookie = newCookie;
     これは、クッキーが他のドメインに送出されることを防ぐために、 domain 属性が存在してはいけないことも指示します。
     Chrome では、 path 属性は常にオリジンになります。
 
-  > **メモ:** ダッシュは接頭辞の一部とみなされます。
+  > [!NOTE]
+  > ダッシュは接頭辞の一部とみなされます。
 
-  > **メモ:** これらのフラグは `secure` 属性と一緒の場合のみ設定できます。
+  > [!NOTE]
+  > これらのフラグは `secure` 属性と一緒の場合のみ設定できます。
 
-> **メモ:** 上記のコードに見られるように、 `document.cookie` はネイティブの*セッター*及び*ゲッター*を持つ[アクセサープロパティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description)であり、値を持つ [データプロパティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description)では*ありません*。書き込んだものと読みこんだものは同じにはならず、常に JavaScript インタープリターに仲介されます。
+> [!NOTE]
+> 上記のコードに見られるように、 `document.cookie` はネイティブの*セッター*及び*ゲッター*を持つ[アクセサープロパティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description)であり、値を持つ [データプロパティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description)では*ありません*。書き込んだものと読みこんだものは同じにはならず、常に JavaScript インタープリターに仲介されます。
 
 ## 例
 

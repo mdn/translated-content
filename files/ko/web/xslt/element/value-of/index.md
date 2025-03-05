@@ -29,7 +29,7 @@ slug: Web/XSLT/Element/value-of
 
 ### 정의
 
-[XSLT section 7.6.1, Generating Text with xsl:value-of](http://www.w3.org/TR/xslt#value-of)
+[XSLT section 7.6.1, Generating Text with xsl:value-of](https://www.w3.org/TR/xslt#value-of)
 
 ### Gecko 지원
 

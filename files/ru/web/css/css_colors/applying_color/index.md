@@ -24,7 +24,7 @@ slug: Web/CSS/CSS_colors/Applying_color
 Эти свойства используются для определения цвета текста, его фона и любого оформления текста.
 
 - {{cssxref("color")}}
-  - : Свойство color применяется к тексту и любому [оформлению текста](/ru/docs/Learn/CSS/Styling_text/Fundamentals#Font_style_font_weight_text_transform_and_text_decoration), например: подчёркивание, линии на текстом, перечёркивание и т.д.
+  - : Свойство color применяется к тексту и любому [оформлению текста](/ru/docs/Learn/CSS/Styling_text/Fundamentals#font_style_font_weight_text_transform_and_text_decoration), например: подчёркивание, линии на текстом, перечёркивание и т.д.
 - {{cssxref("background-color")}}
   - : Цвет фона текста.
 - {{cssxref("text-shadow")}}
@@ -51,7 +51,7 @@ slug: Web/CSS/CSS_colors/Applying_color
 
 ### Границы
 
-Вокруг любого элемента можно создать [границу](/ru/docs/Learn/CSS/Styling_boxes/Borders), т.е. линию вокруг содержимого элемента. См. [Box properties](/ru/docs/Learn/CSS/Building_blocks/The_box_model#box_properties), чтобы узнать больше про отношения между элементами и их границами, и статью [Оформляем Границы с Помощью CSS](/ru/docs/Learn/CSS/Styling_boxes/Borders), чтобы узнать больше про то, как применять стили к границам.
+Вокруг любого элемента можно создать [границу](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders), т.е. линию вокруг содержимого элемента. См. [Box properties](/ru/docs/Learn/CSS/Building_blocks/The_box_model#box_properties), чтобы узнать больше про отношения между элементами и их границами, и статью [Оформляем Границы с Помощью CSS](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders), чтобы узнать больше про то, как применять стили к границам.
 
 Существует краткая запись {{cssxref("border")}}, которая позволяет задать сразу все свойства границы, включая даже не связанные с цветом свойства, такие как толщина линии ([width](/ru/docs/Web/CSS/border-width)), стиль линии ([style](/ru/docs/Web/CSS/border-style)): сплошная (solid), штриховая (dashed) и так далее.
 
@@ -127,7 +127,7 @@ RGB запись в виде функции, как и шестнадцатер�
 
 ![HSL color cylinder](640px-hsl_color_solid_cylinder.png)
 
-_**Рис. 1. Цилиндрическая модель HSL.** Hue (оттенок) определяет фактический цвет, основанный на положении вдоль цветового круга, представляя цвета видимого спектра. Saturation (насыщенность) представляет собой процентное соотношение оттенка от серого до максимально насыщенного цвета. По мере увеличения значения luminance/ lightness (светлоты) цвет переходит от самого тёмного к самому светлому (от чёрного к белому). Изображение представлено пользователем [SharkD](http://commons.wikimedia.org/wiki/User:SharkD) в [Wikipedia](https://www.wikipedia.org/), распространяется на правах лицензии [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0) ._
+_**Рис. 1. Цилиндрическая модель HSL.** Hue (оттенок) определяет фактический цвет, основанный на положении вдоль цветового круга, представляя цвета видимого спектра. Saturation (насыщенность) представляет собой процентное соотношение оттенка от серого до максимально насыщенного цвета. По мере увеличения значения luminance/ lightness (светлоты) цвет переходит от самого тёмного к самому светлому (от чёрного к белому). Изображение представлено пользователем [SharkD](http://commons.wikimedia.org/wiki/User:SharkD) в [Wikipedia](https://www.wikipedia.org/), распространяется на правах лицензии [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) ._
 
 Значение компонента _оттенок_ (H) цветовой модели HSL определяется углом при движении вдоль окружности цилиндра от красного через жёлтый, зелёный, голубой, синий и маджента, и заканчивая через 360° снова красным. Данное значение определяет базовый цвет. Его можно задать в любых единицах, поддерживаемых CSS-свойством {{cssxref("&lt;angle&gt;")}}, а именно - в градусах (`deg`), радианах (`rad`), градиентах (`grad`) или поворотах (`turn`). Но компонент _оттенок_ никак не влияет на то, насколько насыщенным, ярким или темным будет цвет.
 
@@ -206,7 +206,8 @@ th {
 
 {{EmbedLiveSample("hsl-swatches", 300, 260)}}
 
-> **Примечание:** Обратите внимание, что, когда вы не указываете единицу измерения оттенка (hue), то предполагается, что он указан в градусах (`deg`).
+> [!NOTE]
+> Обратите внимание, что, когда вы не указываете единицу измерения оттенка (hue), то предполагается, что он указан в градусах (`deg`).
 
 ## Использование цвета
 
@@ -275,7 +276,7 @@ CSS мы рассмотрим более детально, чтобы по оч�
 }
 ```
 
-Вкратце класс `.box` устанавливает размер каждого блока и параметры шрифта. Также мы используем [CSS Flexbox](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout), чтобы с лёгкостью отцентрировать содержимое каждого блока. Мы включаем режим `flex` с помощью {{cssxref("display", "display: flex")}}, и присваиваем значение center {{cssxref("justify-content")}} и {{cssxref("align-items")}}. Затем мы создаём отдельные классы для каждого из двух блоков, которые определят индивидуальные свойства.
+Вкратце класс `.box` устанавливает размер каждого блока и параметры шрифта. Также мы используем [CSS Flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout), чтобы с лёгкостью отцентрировать содержимое каждого блока. Мы включаем режим `flex` с помощью {{cssxref("display", "display: flex")}}, и присваиваем значение center {{cssxref("justify-content")}} и {{cssxref("align-items")}}. Затем мы создаём отдельные классы для каждого из двух блоков, которые определят индивидуальные свойства.
 
 ```css
 .boxLeft {
@@ -322,7 +323,8 @@ Let's look at a simple example, in which the user can choose a color. As the use
 
 {{EmbedLiveSample("Example_Picking_a_color", 525, 275)}}
 
-> **Примечание:** On macOS, you indicate that you've finalized selection of the color by closing the color picker window.
+> [!NOTE]
+> On macOS, you indicate that you've finalized selection of the color by closing the color picker window.
 
 #### HTML
 
@@ -382,9 +384,9 @@ colorPicker.addEventListener(
 );
 ```
 
-The {{event("input")}} event is sent every time the value of the element changes; that is, every time the user adjusts the color in the color picker. Each time this event arrives, we set the box's border color to match the color picker's current value.
+The [`input`](/ru/docs/Web/API/Element/input_event) event is sent every time the value of the element changes; that is, every time the user adjusts the color in the color picker. Each time this event arrives, we set the box's border color to match the color picker's current value.
 
-The {{event("change")}} event is received when the color picker's value is finalized. We respond by setting the contents of the `<p>` element with the ID `"output"` to a string describing the finally selected color.
+The [`change`](/ru/docs/Web/API/HTMLElement/change_event) event is received when the color picker's value is finalized. We respond by setting the contents of the `<p>` element with the ID `"output"` to a string describing the finally selected color.
 
 ## Using color wisely
 
@@ -402,9 +404,10 @@ The first step is to choose your **base color**. This is the color that in some 
 - A color that comes from imagery associated with what your content is about. If you're creating a web site about a given item or product, choose a color that's physically present on that item.
 - Browse web sites that let you look at lots of existing color palettes and imags to find inspiration.
 
-When trying to decide upon a base color, you may find that browser extensions that let you select colors from web content can be particularly handy. Some of these are even specifically designed to help with this sort of work. For example, the web site [ColorZilla](http://www.colorzilla.com/) offers an extension ([Chrome](http://www.colorzilla.com/chrome) / [Firefox](http://www.colorzilla.com/firefox)) that offers an eyedropper tool for picking colors from the web. It can also take averages of the colors of pixels in various sized areas or even a selected area of the page.
+When trying to decide upon a base color, you may find that browser extensions that let you select colors from web content can be particularly handy. Some of these are even specifically designed to help with this sort of work. For example, the web site [ColorZilla](https://www.colorzilla.com/) offers an extension ([Chrome](https://www.colorzilla.com/chrome) / [Firefox](https://www.colorzilla.com/firefox)) that offers an eyedropper tool for picking colors from the web. It can also take averages of the colors of pixels in various sized areas or even a selected area of the page.
 
-> **Примечание:** The advantage to averaging colors can be that often what looks like a solid color is actually a surprisingly varied number of related colors all used in concert, blending to create a desired effect. Picking just one of these pixels can result in getting a color that on its own looks very out of place.
+> [!NOTE]
+> The advantage to averaging colors can be that often what looks like a solid color is actually a surprisingly varied number of related colors all used in concert, blending to create a desired effect. Picking just one of these pixels can result in getting a color that on its own looks very out of place.
 
 #### Fleshing out the palette
 
@@ -412,13 +415,14 @@ Once you have decided on your base color, there are plenty of online tools that 
 
 A few examples (all free to use as of the time this list was last revised):
 
-- [MDN's color picker tool](/ru/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [MDN's color picker tool](/ru/docs/Web/CSS/CSS_colors/Color_picker_tool)
 - [Paletton](http://paletton.com)
 - [Adobe Color CC online color wheel](https://color.adobe.com/create/color-wheel)
 
 When designing your palette, be sure to keep in mind that in addition to the colors these tools typically generate, you'll probably also need to add some core neutral colors such as white (or nearly white), black (or nearly black), and some number of shades of gray.
 
-> **Примечание:** Usually, you are far better off using the smallest number of colors possible. By using color to accentuate rather than adding color to everything on the page, you keep your content easy to read and the colors you do use have far more impact.
+> [!NOTE]
+> Usually, you are far better off using the smallest number of colors possible. By using color to accentuate rather than adding color to everything on the page, you keep your content easy to read and the colors you do use have far more impact.
 
 ### Color theory resources
 
@@ -433,7 +437,8 @@ There are several ways color can be an {{Glossary("accessibility")}} problem. Im
 
 You should do at least basic research into color blindness. There are several kinds; the most common is red-green color blindness, which causes people to be unable to differentiate between the colors red and green. There are others, too, ranging from inabilities to tell the difference between certain colors to total inability to see color at all.
 
-> **Примечание:** The most important rule: never use color as the only way to know something. If, for example, you indicate success or failure of an operation by changing the color of a shape from white to green for success and red for failure, users with red-green color-blindness won't be able to use your site properly. Instead, perhaps use both text and color together, so that everyone can understand what's happening.
+> [!NOTE]
+> The most important rule: never use color as the only way to know something. If, for example, you indicate success or failure of an operation by changing the color of a shape from white to green for success and red for failure, users with red-green color-blindness won't be able to use your site properly. Instead, perhaps use both text and color together, so that everyone can understand what's happening.
 
 For more information about color blindness, see the following articles:
 
@@ -474,5 +479,5 @@ Once you have these colors, you will probably still need to select appropriate n
 ## Смотрите также
 
 - [Drawing graphics](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Graphics on the web](/ru/docs/Web/Guide/Graphics)
-- [MDN's color picker tool](/ru/docs/Tools/DevToolsColors)
+- [Graphics on the web](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [MDN's color picker tool](https://firefox-source-docs.mozilla.org/devtools-user/devtoolscolors/index.html)

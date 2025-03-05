@@ -9,7 +9,7 @@ JavaScript 异常“_x_ is (not) _y_”在出现与期望不符的类型（通�
 
 ## 消息
 
-```
+```plain
 TypeError: Cannot read properties of undefined (reading 'x') (V8-based)
 TypeError: "x" is undefined (Firefox)
 TypeError: "undefined" is not an object (Firefox)

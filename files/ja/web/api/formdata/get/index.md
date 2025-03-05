@@ -10,7 +10,8 @@ l10n:
 
 **`get()`** は {{domxref("FormData")}} インターフェイスのメソッドで、`FormData` オブジェクトの中から、指定されたキーに関連付けられた最初の値を返します。複数の値を期待し、すべてが欲しい場合は、代わりに {{domxref("FormData.getAll()","getAll()")}} メソッドを使用してください。
 
-> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
+> [!NOTE]
+> このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
 ## 構文
 

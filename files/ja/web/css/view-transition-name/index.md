@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-**`view-transition-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、選択された要素に識別名 ({{cssxref("custom-ident")}}) を与え、ルートビュートランジションとは別の[ビュートランジション](/ja/docs/Web/API/View_Transitions_API)に参加させます。 `none` の値が指定された場合はビュートランジションを行いません。
+**`view-transition-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、選択された要素に識別名 ({{cssxref("custom-ident")}}) を与え、ルートビュー遷移とは別の[ビュー遷移](/ja/docs/Web/API/View_Transition_API)に参加させます。 `none` の値が指定された場合はビュー遷移を行いません。
 
 ## 構文
 
@@ -23,9 +23,9 @@ view-transition-name: none;
 ### 値
 
 - {{cssxref("custom-ident")}}
-  - : 選択した要素を、ルートビュートランジションとは別の[ビュートランジション](/ja/docs/Web/API/View_Transitions_API)に参加させるための識別名です。識別子は一意でなければなりません。 2 つのレンダリング要素が同時に同じ `view-transition-name` を持つ場合、 {{domxref("ViewTransition.ready")}} は拒否され、トランジションはスキップされます。
+  - : 選択した要素を、ルートビュー遷移とは別の[ビュー遷移](/ja/docs/Web/API/View_Transition_API)に参加させるための識別名です。識別子は一意でなければなりません。 2 つのレンダリング要素が同時に同じ `view-transition-name` を持つ場合、 {{domxref("ViewTransition.ready")}} は拒否され、トランジションはスキップされます。
 - `none`
-  - : 選択された要素はビュートランジションに参加しません。
+  - : 選択された要素はビュー遷移に参加しません。
 
 ## 公式定義
 
@@ -53,5 +53,5 @@ figcaption {
 
 ## 関連情報
 
-- [ビュートランジション API](/ja/docs/Web/API/View_Transitions_API)
+- [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)
 - [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)

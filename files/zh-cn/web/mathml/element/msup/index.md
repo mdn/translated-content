@@ -18,7 +18,8 @@ l10n:
 - `superscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
   - : {{cssxref("length-percentage")}} 值，表示上标基线向上移动的最小距离。
 
-> **备注：** 对于 `superscriptshift` 属性，一些浏览器可能也会接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
+> [!NOTE]
+> 对于 `superscriptshift` 属性，一些浏览器可能也会接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
 
 ## 示例
 

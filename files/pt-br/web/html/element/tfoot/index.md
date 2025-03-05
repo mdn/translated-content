@@ -7,7 +7,72 @@ slug: Web/HTML/Element/tfoot
 
 O **`<tfoot>`** é um **elemento HTML** que define um conjunto de linhas as quais farão parte do rodapé de uma tabela HTML
 
-{{EmbedInteractiveExample("pages/tabbed/tfoot.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;tfoot&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Council budget (in £) 2018
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Items</th>
+      <th scope="col">Expenditure</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Donuts</th>
+      <td>3,000</td>
+    </tr>
+    <tr>
+      <th scope="row">Stationery</th>
+      <td>18,000</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row">Totals</th>
+      <td>21,000</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+```css interactive-example
+thead,
+tfoot {
+  background-color: #2c5e77;
+  color: #fff;
+}
+
+tbody {
+  background-color: #e4f0f5;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td {
+  text-align: center;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -75,7 +140,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     > **Note:**Não use esse atributo o mesmo está obsoleto (não suportado) no último padrão.- Para obter os mesmo efeitos `left`, `center`, `right` ou `justify`, use a propriedade {{cssxref("text-align")}} do CSS.
     >
-    > - Para obter o mesmo efeito no CSS3, você pode usar os valores [`char`](/pt-BR/docs/Web/HTML/Element/tfoot#char) com o valor da propriedade {{cssxref("text-align")}}.
+    > - Para obter o mesmo efeito no CSS3, você pode usar os valores [`char`](#char) com o valor da propriedade {{cssxref("text-align")}}.
 
 - `bgcolor` {{Non-standard_inline}}
 
@@ -91,19 +156,22 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     |     | `purple` = "#800080"  |     | `teal` = "#008080"   |
     |     | `fuchsia` = "#FF00FF" |     | `aqua` = "#00FFFF"   |
 
-    > **Note:** Não use este atributo, como não é mais padrão ele não foi implementado em algumas versões do Microsoft Internet Explorer: o elemento {{HTMLElement("tfoot")}} pode ser estilizando com [CSS](/pt-BR/docs/Web/CSS). Para conseguir simular efeitos do atributo **bgcolor** use a propriedade {{cssxref("background-color")}} do [CSS](/pt-BR/docs/Web/CSS) , nos elementos {{HTMLElement("td")}} ou {{HTMLElement("th")}}.
+    > [!NOTE]
+    > Não use este atributo, como não é mais padrão ele não foi implementado em algumas versões do Microsoft Internet Explorer: o elemento {{HTMLElement("tfoot")}} pode ser estilizando com [CSS](/pt-BR/docs/Web/CSS). Para conseguir simular efeitos do atributo **bgcolor** use a propriedade {{cssxref("background-color")}} do [CSS](/pt-BR/docs/Web/CSS) , nos elementos {{HTMLElement("td")}} ou {{HTMLElement("th")}}.
 
 - `char` {{Deprecated_inline}}
 
-  - : O elemento é usado para alinhar as células em uma columa. Valores típicos para isso inclui o periódico (.) quando se alinha valores monetários. Se [`align`](/pt-BR/docs/Web/HTML/Element/tfoot#align) não é definido para `char`, este atributo é ignorado
+  - : O elemento é usado para alinhar as células em uma columa. Valores típicos para isso inclui o periódico (.) quando se alinha valores monetários. Se [`align`](#align) não é definido para `char`, este atributo é ignorado
 
-    > **Nota:** Não use esté atributo, ele é obsoleto (e não é mais suportado) desde da última versão padrão. Em vez disso use [`char`](/pt-BR/docs/Web/HTML/Element/tfoot#char) no CSS3, você pode usar o atributo [`char`](/pt-BR/docs/Web/HTML/Element/tfoot#char) com a propriedade {{cssxref("text-align")}}.
+    > [!NOTE]
+    > Não use esté atributo, ele é obsoleto (e não é mais suportado) desde da última versão padrão. Em vez disso use [`char`](#char) no CSS3, você pode usar o atributo [`char`](#char) com a propriedade {{cssxref("text-align")}}.
 
 - `charoff` {{Deprecated_inline}}
 
   - : O atributo é usado para indicar um número de caracteres para compensar os dados da coluna dos caracteres de alinhamento especificados pelo atributo **char**.
 
-    > **Nota:** Não use esse atributo o mesmo está obsoleto (e não é mais suportado) na última versão padrão.
+    > [!NOTE]
+    > Não use esse atributo o mesmo está obsoleto (e não é mais suportado) na última versão padrão.
 
 - `valign` {{Deprecated_inline}}
 
@@ -114,7 +182,8 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     - `middle`, centraliza o texto na célula;
     - e `top`, coloca o texto o mais próximo possível do topo da célula.
 
-    > **Nota:** Não use este atributo eles está obsoleto (e não é suportado) no último padrão: em vez disso use a propriedade {{cssxref("vertical-align")}} do CSS.
+    > [!NOTE]
+    > Não use este atributo eles está obsoleto (e não é suportado) no último padrão: em vez disso use a propriedade {{cssxref("vertical-align")}} do CSS.
 
 ## Exemplos
 

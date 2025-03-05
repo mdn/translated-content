@@ -1,5 +1,5 @@
 ---
-title: ":in-range"
+title: :in-range
 slug: Web/CSS/:in-range
 ---
 
@@ -15,11 +15,42 @@ input:in-range {
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-in-range.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :in-range", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:in-range {
+  background-color: palegreen;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="amount">How many tickets? (You can buy 2-6 tickets)</label>
+  <input id="amount" name="amount" type="number" min="2" max="6" value="4" />
+
+  <label for="dep">Departure Date: (Whole year 2022 is acceptable)</label>
+  <input
+    id="dep"
+    name="dep"
+    type="date"
+    min="2022-01-01"
+    max="2022-12-31"
+    value="2025-05-05" />
+
+  <label for="ret">Return Date: (Whole year 2022 is acceptable)</label>
+  <input id="ret" name="ret" type="date" min="2022-01-01" max="2022-12-31" />
+</form>
+```
 
 この擬似クラスは、入力欄の現在の値が許可された範囲内にあることをユーザーに視覚的に示すのに便利です。
 
-> **メモ:** この擬似クラスは範囲制限を持つ（または設定できる）要素にのみ適用されます。そのような制限がない場合は、要素は "in-range" にも "out-of-range" にもなりません。
+> [!NOTE]
+> この擬似クラスは範囲制限を持つ（または設定できる）要素にのみ適用されます。そのような制限がない場合は、要素は "in-range" にも "out-of-range" にもなりません。
 
 ## 構文
 
@@ -85,7 +116,8 @@ input:out-of-range + label::after {
 
 {{EmbedLiveSample('Examples', 600, 140)}}
 
-> **メモ:** 空の `<input>` は範囲外としてカウントされず、 `:out-of-range` 擬似クラスセレクターで選択されることはありません。空の入力を選択するための [`:blank`](/ja/docs/Web/CSS/:blank) 擬似クラスがありますが、この記事を書いている時点では、実験的で対応が十分ではありません。また、 `required` 属性と [`:invalid`](/ja/docs/Web/CSS/:invalid) 擬似クラスを使用すると、入力を必須にするためのより一般的なロジックとスタイルを提供できます (`:invalid` は空白*および*範囲外の入力のスタイルを指定します)。
+> [!NOTE]
+> 空の `<input>` は範囲外としてカウントされず、 `:out-of-range` 擬似クラスセレクターで選択されることはありません。空の入力を選択するための [`:blank`](/ja/docs/Web/CSS/:blank) 擬似クラスがありますが、この記事を書いている時点では、実験的で対応が十分ではありません。また、 `required` 属性と [`:invalid`](/ja/docs/Web/CSS/:invalid) 擬似クラスを使用すると、入力を必須にするためのより一般的なロジックとスタイルを提供できます (`:invalid` は空白*および*範囲外の入力のスタイルを指定します)。
 
 ## 仕様書
 

@@ -22,7 +22,8 @@ registerProcessor(name, processorCtor)
 - `processorCtor`
   - : {{domxref("AudioWorkletProcessor")}} から派生したクラスのコンストラクターです。
 
-> **メモ:** 処理器を登録すると、キーと値のペア `{ name: constructor }` が内部で {{domxref("AudioWorkletGlobalScope")}} に保存されます。登録した処理器をもとに {{domxref("AudioWorkletNode")}} を生成するとき、`name` が参照されます。指定の名前によって新しい処理器が内部で生成され、新しいノードと関連付けられます。
+> [!NOTE]
+> 処理器を登録すると、キーと値のペア `{ name: constructor }` が内部で {{domxref("AudioWorkletGlobalScope")}} に保存されます。登録した処理器をもとに {{domxref("AudioWorkletNode")}} を生成するとき、`name` が参照されます。指定の名前によって新しい処理器が内部で生成され、新しいノードと関連付けられます。
 
 ### 返値
 

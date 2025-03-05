@@ -11,7 +11,8 @@ l10n:
 
 与 {{jsxref("Atomics.wait()")}} 不同，`waitAsync` 是非阻塞的且可用于主线程。
 
-> **备注：** 此操作仅适用于基于 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}} 视图。
+> [!NOTE]
+> 此操作仅适用于基于 {{jsxref("SharedArrayBuffer")}} 的 {{jsxref("Int32Array")}} 或 {{jsxref("BigInt64Array")}} 视图。
 
 ## 语法
 

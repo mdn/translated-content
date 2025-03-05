@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/toString
 
 {{jsxref("Function")}} 实例的 **`toString()`** 方法返回一个表示该函数源码的字符串。
 
-{{EmbedInteractiveExample("pages/js/function-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Function.toString()")}}
+
+```js interactive-example
+function sum(a, b) {
+  return a + b;
+}
+
+console.log(sum.toString());
+// Expected output: "function sum(a, b) {
+//                     return a + b;
+//                   }"
+
+console.log(Math.abs.toString());
+// Expected output: "function abs() { [native code] }"
+```
 
 ## 语法
 
@@ -43,7 +57,8 @@ function someName() { [native code] }
 
 对于内部对象方法和函数，`someName` 是函数的初始名称；否则其可能是实现定义（implementation-defined）的，但始终以属性名称语法的形式呈现，如：`[1 + 1]`、`someName` 或 `1`。
 
-> **备注：** 这意味着对原生函数的字符串调用 [`eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval) 将始终产生语法错误。
+> [!NOTE]
+> 这意味着对原生函数的字符串调用 [`eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval) 将始终产生语法错误。
 
 若是在由 `Function` 构造函数生成的函数上调用 `toString()`，则 `toString()` 返回创建后的函数源码，包括形参和函数体，函数名为“anonymous”。例如：对于 `Function("a", "b", "return a + b").toString()`，则会返回：
 

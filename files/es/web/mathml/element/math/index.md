@@ -18,9 +18,9 @@ Además de los siguientes atributos, el elemento `<math>` acepta cualquier atrib
 - href
   - : Usado para definir un hipervínculo a un URI (**I**dentificador de **R**ecurso **U**nificado) especificado.
 - mathbackground
-  - : El color de fondo. Puedes usar `#rgb`, `#rrggbb` y [palabras clave de colores](/es/docs/Web/CSS/color_value#Palabras_clave_de_colores).
+  - : El color de fondo. Puedes usar `#rgb`, `#rrggbb` y [palabras clave de colores](/es/docs/Web/CSS/color_value#palabras_clave_de_colores).
 - mathcolor
-  - : El color de texto. Puedes usar `#rgb`, `#rrggbb` y [palabras clave de colores](/es/docs/Web/CSS/color_value#Palabras_clave_de_colores).
+  - : El color de texto. Puedes usar `#rgb`, `#rrggbb` y [palabras clave de colores](/es/docs/Web/CSS/color_value#palabras_clave_de_colores).
 - display
 
   - : Este atributo enumerado especifica de qué manera el marcado MathML debería ser renderizado. Puede tomar uno de los siguientes valores:
@@ -31,7 +31,7 @@ Además de los siguientes atributos, el elemento `<math>` acepta cualquier atrib
     De no estar presente, toma `inline` por defecto.
 
 - mode {{deprecated_inline}}
-  - : Deprecado a favor del [atributo display](/es/docs/MathML/Element/math#attr-display).
+  - : Deprecado a favor del [atributo display](#attr-display).
     Sus valores posibles son: `display` (que tiene el mismo efecto que `display="block"`) e `inline`.
 - overflow
   - : Especifica el comportamiento de una expresión si es demasiado larga para caber en el ancho asignado.
@@ -110,7 +110,7 @@ Además de los siguientes atributos, el elemento `<math>` acepta cualquier atrib
 </html>
 ```
 
-**Notas**: Los documentos XHTML con MathML deben servirse como `application/xhtml+xml`. Puedes lograrlo facilmente añadiendo la extensión `.xhtml` a tus archivos locales. Para servidores Apache puedes [configurar tu archivo `.htaccess`](http://httpd.apache.org/docs/2.4/mod/mod_mime.html#addtype) para direccionar extensiones al tipo Mime correcto. Ya que estás escribiendo tu MathML en un archivo XML, asegurate también de escribir un documento XML bien formado.
+**Notas**: Los documentos XHTML con MathML deben servirse como `application/xhtml+xml`. Puedes lograrlo facilmente añadiendo la extensión `.xhtml` a tus archivos locales. Para servidores Apache puedes [configurar tu archivo `.htaccess`](https://httpd.apache.org/docs/2.4/mod/mod_mime.html#addtype) para direccionar extensiones al tipo Mime correcto. Ya que estás escribiendo tu MathML en un archivo XML, asegurate también de escribir un documento XML bien formado.
 
 ## Especificaciones
 

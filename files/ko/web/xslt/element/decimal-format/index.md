@@ -61,7 +61,7 @@ slug: Web/XSLT/Element/decimal-format
 
 ### 정의
 
-[XSLT section 12.3, Number Formatting](http://www.w3.org/TR/xslt#format-number)
+[XSLT section 12.3, Number Formatting](https://www.w3.org/TR/xslt#format-number)
 
 ### Gecko 지원
 

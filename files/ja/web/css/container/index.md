@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**container** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、この要素をクエリーコンテナーとして確立し、[コンテナークエリー](/ja/docs/Web/CSS/CSS_container_queries)で使用される[格納コンテキスト](/ja/docs/Web/CSS/CSS_container_queries#naming_containment_contexts)の名前を指定します。
+**container** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、この要素をクエリーコンテナーとして確立し、[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)で使用される[コンテナーコンテキスト](/ja/docs/Web/CSS/CSS_containment/Container_queries#naming_containment_contexts)の名前を指定します。
 
 ## 構成要素のプロパティ
 
@@ -36,10 +36,10 @@ container: unset;
 ### 値
 
 - `<container-name>`
-  - : 格納コンテキストの大文字小文字を区別した名前です。
+  - : コンテナーコンテキストの大文字小文字を区別した名前です。
     構文の詳細は、 {{cssxref("container-name")}} プロパティのページにあります。
 - `<container-type>`
-  - : 格納コンテキストの種類です。
+  - : コンテナーコンテキストの種類です。
     構文の詳細は、 {{cssxref("container-type")}} プロパティのページにあります。
 
 ## 公式定義
@@ -100,7 +100,7 @@ container: unset;
 
 ## 関連情報
 
-- [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_container_queries)
+- [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
 - {{Cssxref("@container")}} アットルール
 - CSS {{Cssxref("contain")}} 一括指定プロパティ
 - CSS {{Cssxref("container-type")}} プロパティ

@@ -1,5 +1,5 @@
 ---
-title: ":nth-of-type"
+title: :nth-of-type
 slug: Web/CSS/:nth-of-type
 ---
 
@@ -7,7 +7,35 @@ slug: Web/CSS/:nth-of-type
 
 **`:nth-of-type()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)基于相同类型（标签名称）的兄弟元素中的位置来匹配元素。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-of-type.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :nth-of-type", "tabbed-shorter")}}
+
+```css interactive-example
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 3px;
+}
+
+dd:nth-of-type(even) {
+  border: 2px solid orange;
+}
+```
+
+```html interactive-example
+<dl>
+  <dt>Vegetables:</dt>
+  <dd>1. Tomatoes</dd>
+  <dd>2. Cucumbers</dd>
+  <dd>3. Mushrooms</dd>
+  <dt>Fruits:</dt>
+  <dd>4. Apples</dd>
+  <dd>5. Mangos</dd>
+  <dd>6. Pears</dd>
+  <dd>7. Oranges</dd>
+</dl>
+```
 
 ## 语法
 
@@ -68,7 +96,8 @@ p.fancy:nth-of-type(2n + 1) {
 
 {{EmbedLiveSample('基本示例', 250, 200)}}
 
-> **备注：** 使用此选择器无法选择 nth-of-class。选择器仅在创建匹配列表时查找类型。但是你可以基于 `:nth-of-type` 的位置**和**类名为元素应用 CSS，就像上面的示例中所示。
+> [!NOTE]
+> 使用此选择器无法选择 nth-of-class。选择器仅在创建匹配列表时查找类型。但是你可以基于 `:nth-of-type` 的位置**和**类名为元素应用 CSS，就像上面的示例中所示。
 
 ## 规范
 

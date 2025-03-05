@@ -18,9 +18,10 @@ Na versão HTTP/1.1 a conexão não é mais fechada após a terceira etapa compl
 Em protocolos cliente-servidor é o cliente quem estabelece as conexões. Abrir uma conexão HTTP significa iniciar uma conexão na camada de transporte subjacente, geralmente uma conexão usando o protocolo TCP.
 
 Usando o protocolo TCP, a porta padrão para um servidor HTTP em um computador é a porta 80, porém outras portas podem ser utilizadas, como a 8000 ou 8080.
-A URL da página a se requisitar contém o nome do domínio e o número da porta, embora este último pode ser omitido caso a porta seja a 80. Leia [Identificando recursos na Web](/pt-BR/docs/Web/HTTP/Basico_sobre_HTTP/Identifying_resources_on_the_Web) para mais informações.
+A URL da página a se requisitar contém o nome do domínio e o número da porta, embora este último pode ser omitido caso a porta seja a 80. Leia [Identificando recursos na Web](/pt-BR/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) para mais informações.
 
-> **Nota:** O modelo cliente-servidor não permite o servidor enviar dados ao cliente sem uma requisição explícita. Para contornar esse problema, os desenvolvedores Web usam várias técnicas: executar ping no servidor periodicamente por meio das APIs {{domxref ("XMLHTTPRequest")}}, {{domxref ("Fetch")}}, usando a [WebSockets API](/pt-BR/docs/WebSockets) ou protocolos semelhantes.
+> [!NOTE]
+> O modelo cliente-servidor não permite o servidor enviar dados ao cliente sem uma requisição explícita. Para contornar esse problema, os desenvolvedores Web usam várias técnicas: executar ping no servidor periodicamente por meio das APIs {{domxref ("XMLHTTPRequest")}}, {{domxref ("Fetch")}}, usando a [WebSockets API](/pt-BR/docs/Web/API/WebSockets_API) ou protocolos semelhantes.
 
 ## Enviando uma requisição de cliente
 
@@ -62,7 +63,7 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 HTTP define um conjunto de [métodos de requisição](/pt-BR/docs/Web/HTTP/Methods) indicando a ação desejada a ser executada em um recurso. Embora eles também possam ser substantivos, essas solicitações são às vezes chamadas de verbos HTTP. As requisições mais comuns são `GET` e `POST`:
 
 - O método {{HTTPMethod("GET")}} solicita uma representação de dados do recurso especificado. Requisições usando GET só devem retornar dados.
-- O método {{HTTPMethod("POST")}} envia dados para um servidor para que possa alterar seu estado. Esse é o método geralmente usado para [formulários HTML](/pt-BR/docs/Web/Guide/HTML/Forms).
+- O método {{HTTPMethod("POST")}} envia dados para um servidor para que possa alterar seu estado. Esse é o método geralmente usado para [formulários HTML](/pt-BR/docs/Learn/Forms).
 
 ## Estrutura de uma resposta do servidor
 
@@ -141,7 +142,7 @@ Content-Type: text/html
 
 ## Veja também
 
-- [Identificando recursos na web](/pt-BR/docs/Web/HTTP/Basico_sobre_HTTP/Identifying_resources_on_the_Web)
+- [Identificando recursos na web](/pt-BR/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
 - [Cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers)
 - [Métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Methods)
 - [HTTP response status codes](/pt-BR/docs/Web/HTTP/Status)

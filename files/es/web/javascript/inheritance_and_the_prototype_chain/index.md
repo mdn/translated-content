@@ -19,7 +19,8 @@ Aunque las clases ahora se adoptan ampliamente y se han convertido en un nuevo p
 
 Los objetos en JavaScript son "contenedores" dinámicos de propiedades (referidas como sus **propiedades particulares**). Los objetos en JavaScript poseen un enlace a un objeto prototipo. Al intentar acceder a una propiedad de un objeto, la propiedad no sólo se buscará en el objeto sino en el prototipo del objeto, el prototipo del prototipo, y así sucesivamente hasta que se encuentre una propiedad con un nombre coincidente o el final de la cadena prototipo.
 
-> **Nota:** Siguiendo el estándar ECMAScript, la notación `algunObjeto.[[Prototype]]` se utiliza para designar el prototipo de `algunObjeto.` Se puede acceder y modificar la ranura interna `[[Prototype]]` con las funciones {{jsxref("Object.getPrototypeOf()")}} y {{jsxref("Object.setPrototypeOf()")}} respectivamente. Esto es equivalente al descriptor de acceso de JavaScript [`__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto), que no es estándar pero está implementado de facto por muchos motores de JavaScript. Para evitar confusiones y al mismo tiempo ser conciso, en nuestra notación evitaremos usar `obj.__proto__` y usaremos `obj.[[Prototype]]` en su lugar. Esto corresponde a `Object.getPrototypeOf(obj)`.
+> [!NOTE]
+> Siguiendo el estándar ECMAScript, la notación `algunObjeto.[[Prototype]]` se utiliza para designar el prototipo de `algunObjeto.` Se puede acceder y modificar la ranura interna `[[Prototype]]` con las funciones {{jsxref("Object.getPrototypeOf()")}} y {{jsxref("Object.setPrototypeOf()")}} respectivamente. Esto es equivalente al descriptor de acceso de JavaScript [`__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto), que no es estándar pero está implementado de facto por muchos motores de JavaScript. Para evitar confusiones y al mismo tiempo ser conciso, en nuestra notación evitaremos usar `obj.__proto__` y usaremos `obj.[[Prototype]]` en su lugar. Esto corresponde a `Object.getPrototypeOf(obj)`.
 >
 > No debe confundirse con la propiedad de funciones `func.prototype`, que en cambio especifican el `[[Prototype]]` que se asigna a todas las _instancias_ de los objetos creados por la función dada cuando se usa como constructor. Discutiremos la propiedad `prototype` de las funciones constructoras en [una sección posterior](#constructores).
 
@@ -179,7 +180,8 @@ const boxes = [new Box(1), new Box(2), new Box(3)];
 
 Decimos que `new Box(1)` es una _instancia_ creada a partir de la función constructora `Box`. `Box.prototype` no es muy diferente del objeto `boxPrototype` que creamos anteriormente; es simplemente un objeto simple. Cada instancia creada a partir de una función constructora tendrá automáticamente la propiedad [`prototype`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) del constructor como su `[[Prototype]]` es decir, `Object.getPrototypeOf(new Box()) === Box.prototype`. `Constructor.prototype` por defecto tiene una propiedad: [`constructor`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor), que hace referencia a la misma función constructora, es decir,, `Box.prototype.constructor === Box`. Esto permite acceder al constructor original desde cualquier instancia.
 
-> **Nota:** Si la función constructora devuelve un valor no primitivo, ese valor se convertirá en el resultado de la expresión `new`. En este caso, es posible que el `[[Prototype]]` no esté correctamente vinculado, pero esto no debería suceder mucho en la práctica.
+> [!NOTE]
+> Si la función constructora devuelve un valor no primitivo, ese valor se convertirá en el resultado de la expresión `new`. En este caso, es posible que el `[[Prototype]]` no esté correctamente vinculado, pero esto no debería suceder mucho en la práctica.
 
 La función constructora anterior se puede reescribir en [clases](/es/docs/Web/JavaScript/Reference/Classes) de la siguiente manera:
 
@@ -247,9 +249,10 @@ const regexp = new RegExp("abc");
 
 Por ejemplo, los "métodos de array" como [`map()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) son simplemente métodos definidos en `Array.prototype`, por lo que están disponibles automáticamente en todas las instancias de la matriz.
 
-> **Advertencia:** Hay un error que solía ser frecuente: extender `Object.prototype` o uno de los otros prototipos integrados. Un ejemplo de esta característica errónea es definir `Array.prototype.myMethod = function () {...}` y luego usar `myMethod` en todas las instancias de matriz.
+> [!WARNING]
+> Hay un error que solía ser frecuente: extender `Object.prototype` o uno de los otros prototipos integrados. Un ejemplo de esta característica errónea es definir `Array.prototype.myMethod = function () {...}` y luego usar `myMethod` en todas las instancias de matriz.
 >
-> Esta característica errónea se llama _parche de mono_/_monkey patching_. Hacer parche de mono/monkey patching arriesga la compatibilidad futura, porque si el lenguaje agrega este método en el futuro pero con una firma diferente, su código se romperá. Ha provocado incidentes como el [SmooshGate](https://developer.chrome.com/blog/smooshgate?hl=es-419), y puede ser una gran molestia para que el lenguaje avance ya que JavaScript intenta "no romper la web".
+> Esta característica errónea se llama _parche de mono_/_monkey patching_. Hacer parche de mono/monkey patching arriesga la compatibilidad futura, porque si el lenguaje agrega este método en el futuro pero con una firma diferente, su código se romperá. Ha provocado incidentes como el [SmooshGate](https://developer.chrome.com/blog/smooshgate), y puede ser una gran molestia para que el lenguaje avance ya que JavaScript intenta "no romper la web".
 >
 > La **única** buena razón para extender un prototipo integrado es respaldar las características de los motores JavaScript más nuevos, como `Array.prototype.forEach`.
 
@@ -349,7 +352,8 @@ Como se vio arriba, `doSomething()` tiene una propiedad `prototype` predetermina
 }
 ```
 
-> **Nota:** La consola Chrome usa `[[Prototype]]` para indicar el prototipo del objeto, siguiendo los términos de la especificación; Firefox usa `<Prototype>`. Por coherencia usaremos `[[Prototype]]`.
+> [!NOTE]
+> La consola Chrome usa `[[Prototype]]` para indicar el prototipo del objeto, siguiendo los términos de la especificación; Firefox usa `<Prototype>`. Por coherencia usaremos `[[Prototype]]`.
 
 Podemos agregar propiedades al prototipo de `doSomething()`, como se muestra a continuación.
 

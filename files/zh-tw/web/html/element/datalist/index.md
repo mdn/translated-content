@@ -7,7 +7,27 @@ slug: Web/HTML/Element/datalist
 
 **`<datalist>`** [HTML](/zh-TW/docs/Web/HTML) 元素包含一組 {{HTMLElement("option")}} 元素，這些元素代表其他控制項中可選擇的允許或推薦選項。
 
-{{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;datalist&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="ice-cream-choice">Choose a flavor:</label>
+<input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+
+<datalist id="ice-cream-flavors">
+  <option value="Chocolate"></option>
+  <option value="Coconut"></option>
+  <option value="Mint"></option>
+  <option value="Strawberry"></option>
+  <option value="Vanilla"></option>
+</datalist>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+```
 
 要將 `<datalist>` 元素綁定到控制項，我們在 [`id`](/zh-TW/docs/Web/HTML/Global_attributes/id) 屬性中給予它一個唯一標識符，然後在具有相同標識符值的 {{HTMLElement("input")}} 元素中添加 [`list`](/zh-TW/docs/Web/HTML/Element/input#list) 屬性。只有某些類型的 {{HTMLElement("input")}} 支援此行為，並且在不同的瀏覽器中可能也會有所不同。
 
@@ -41,7 +61,8 @@ slug: Web/HTML/Element/datalist
 
 類型 {{HTMLElement("input/month", "month")}}、{{HTMLElement("input/week", "week")}}、{{HTMLElement("input/date", "date")}}、{{HTMLElement("input/time", "time")}} 和 {{HTMLElement("input/datetime-local", "datetime-local")}} 可以顯示一個界面，方便用戶選擇日期和時間。預定值可以在那裡顯示，允許用戶快速填寫控制項的值。
 
-> **備註：** 當類型不受支援時，將使用 `text` 類型創建簡單的文本字段。該字段將正確識別推薦值並將其顯示給用戶作為下拉菜單。
+> [!NOTE]
+> 當類型不受支援時，將使用 `text` 類型創建簡單的文本字段。該字段將正確識別推薦值並將其顯示給用戶作為下拉菜單。
 
 ```html
 <input type="time" list="popularHours" />

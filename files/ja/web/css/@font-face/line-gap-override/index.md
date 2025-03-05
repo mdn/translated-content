@@ -1,11 +1,13 @@
 ---
 title: line-gap-override
 slug: Web/CSS/@font-face/line-gap-override
+l10n:
+  sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
 ---
 
 {{CSSRef}}
 
-**`line-gap-override`** は CSS の記述子で、そのフォントの line-gap の寸法を定義します。 line-gap の寸法は、フォントが推奨する line-gap または external leading です。
+**`line-gap-override`** は CSS の {{cssxref("@font-face")}} アットルールの記述子で、そのフォントの line-gap の寸法を定義します。 line-gap の寸法は、フォントが推奨する line-gap または external leading です。
 
 ## 構文
 
@@ -64,10 +66,8 @@ line-gap-override: 90%;
 - {{cssxref("@font-face/font-weight", "font-weight")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
-- {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
 - {{cssxref("@font-face/src", "src")}}
 - {{cssxref("@font-face/size-adjust", "size-adjust")}}
-- {{cssxref("@font-face/unicode-range", "unicode-range descriptor")}}
+- {{cssxref("@font-face/unicode-range", "unicode-range")}} 記述子

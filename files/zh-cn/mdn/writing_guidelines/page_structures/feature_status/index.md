@@ -5,8 +5,6 @@ l10n:
   sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
 ---
 
-{{MDNSidebar}}
-
 特性状态为开发者提供了有关特性在各浏览器厂商的实现阶段的信息，有以下几种状态：
 
 - [`experimental`](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-experimental)
@@ -21,7 +19,8 @@ l10n:
 
 MDN 上记录的所有特性的特性状态都在其附带的 [@mdn/browser-compat-data](https://github.com/mdn/browser-compat-data)（BCD）仓库的条目中定义，并且每当发布新的 [BCD 版本](https://github.com/mdn/browser-compat-data/releases)时，都会在 `mdn/content` 仓库中*自动*更新。
 
-> **警告：** 不要手动更新 `mdn/content` 仓库中的特性状态。要更新特性的状态，你需要在 BCD 仓库中[提交拉取请求](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md#updating-the-compat-data)。在 BCD 仓库中的更改被批准且合并后，[自动创建的拉取请求](https://github.com/search?q=repo%3Amdn%2Fcontent+Synchronize+with+BCD&type=pullrequests)会更新 `mdn/content` 仓库中的状态。
+> [!WARNING]
+> 不要手动更新 `mdn/content` 仓库中的特性状态。要更新特性的状态，你需要在 BCD 仓库中[提交拉取请求](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md#updating-the-compat-data)。在 BCD 仓库中的更改被批准且合并后，[自动创建的拉取请求](https://github.com/search?q=repo%3Amdn%2Fcontent+Synchronize+with+BCD&type=pullrequests)会更新 `mdn/content` 仓库中的状态。
 
 自动化流程使用了元数据（front-matter）中的 [`browser-compat`](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#在_mdn_页面中使用浏览器兼容性数据) 键。该键存储了在兼容性数据中定位特性所需的 BCD 查询。如果 `browser-compat` 键有多个值，则自动化流程只使用第一个值来渲染状态宏。
 

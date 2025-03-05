@@ -8,7 +8,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
 **`Intl.Collator()`** 构造函数用于创建
 {{jsxref("Intl/Collator", "Intl.Collator")}} 对象，此类对象用于语言敏感的字符串比较。
 
-{{EmbedInteractiveExample("pages/js/intl-collator.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Collator")}}
+
+```js interactive-example
+console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("de").compare));
+// Expected output: Array ["a", "ä", "z", "Z"]
+
+console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("sv").compare));
+// Expected output: Array ["a", "z", "Z", "ä"]
+
+console.log(
+  ["Z", "a", "z", "ä"].sort(
+    new Intl.Collator("de", { caseFirst: "upper" }).compare,
+  ),
+);
+// Expected output: Array ["a", "ä", "Z", "z"]
+```
 
 ## 语法
 
@@ -32,7 +47,8 @@ Intl.Collator(locales, options)
 
     下面的这些 Unicode 扩展键也是被允许的：
 
-    > **备注：** 这些键通常也可用于 `options` 的设置（如下所列）。当两者同时设置时，`options` 属性的优先级更高。
+    > [!NOTE]
+    > 这些键通常也可用于 `options` 的设置（如下所列）。当两者同时设置时，`options` 属性的优先级更高。
 
     - `co`
 

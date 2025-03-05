@@ -14,8 +14,8 @@ Se você conhece uma boa demonstração ou aplicação da tecnologia web aberta,
 
 - [Blob Sallad: an interactive blob using javascript and canvas](http://www.blobsallad.se/) ([code demos)](http://blobsallad.se/article/)
 - [Flying through space](http://arapehlivanian.com/wp-content/uploads/2007/02/canvas.html)
-- [3D RayCaster](/samples/raycaster/RayCaster.html)
-- [processing.js](http://processingjs.org/exhibition/)
+- [3D RayCaster](http://mdn.github.io/canvas-raycaster/index.html)
+- [processing.js](https://processingjs.org/exhibition/)
 - [3D on 2D Canvas](http://gyu.que.jp/jscloth/)
 - [miniPaint: Image editor](http://viliusle.github.io/miniPaint/) ([source code](https://github.com/viliusle/miniPaint))
 
@@ -25,7 +25,7 @@ Se você conhece uma boa demonstração ou aplicação da tecnologia web aberta,
 - [HTML transformations](http://starkravingfinkle.org/blog/2007/07/firefox-3-svg-foreignobject/) using `foreignObject` (visual effects and transforms)
 - [Phonetics Guide](http://svg-whiz.com/svg/linguistics/theCreepyMouth.svg) (interactive)
 - [3D objects demo](http://www.lutanho.net/svgvml3d/platonic.html) (interactive)
-- [Blobular](http://www.themaninblue.com/experiment/Blobular/) (interactive)
+- [Blobular](https://www.themaninblue.com/experiment/Blobular/) (interactive)
 - [Video embedded in SVG](http://www.double.co.nz/video_test/video.svg) (or use the [local download](http://www.double.co.nz/video_test/video_svg.tar.bz2))
 - [Summer HTML image map creator](http://summerstyle.github.io/summer/) ([source code](https://github.com/summerstyle/summer))
 
@@ -59,10 +59,10 @@ Se você conhece uma boa demonstração ou aplicação da tecnologia web aberta,
 
 - [CSS Zen Garden](http://www.csszengarden.com/)
 - [CSS floating logo "mozilla"](https://codepen.io/SoftwareRVG/pen/OXkOWj/)
-- [Paperfold](http://felixniklas.com/paperfold/)
+- [Paperfold](https://felixniklas.com/paperfold/)
 - [CSS Blockout](http://ondras.github.io/blockout/)
-- [Rubik's cube](http://ondras.zarovi.cz/demos/rubik/)
-- [Pure CSS Slides](http://ondras.zarovi.cz/demos/nojs/)
+- [Rubik's cube](https://ondras.zarovi.cz/demos/rubik/)
+- [Pure CSS Slides](https://ondras.zarovi.cz/demos/nojs/)
 - Planetarium ([source code](https://github.com/littleworkshop/planetarium))
 
 ### Transformações
@@ -77,7 +77,7 @@ Se você conhece uma boa demonstração ou aplicação da tecnologia web aberta,
 
 ## HTML
 
-- [Zen Photon Garden](http://zenphoton.com) ([source code](https://github.com/scanlime/zenphoton))
+- [Zen Photon Garden](https://zenphoton.com) ([source code](https://github.com/scanlime/zenphoton))
 
 ## API da Web
 
@@ -91,7 +91,7 @@ Se você conhece uma boa demonstração ou aplicação da tecnologia web aberta,
 - [oscope.js - JavaScript oscilloscope](http://ondras.github.io/oscope/)
 - [HTML5 Web Audio Showcase](http://nipe-systems.de/webapps/html5-web-audio/) ([source code](https://github.com/NIPE-SYSTEMS/html5-web-audio-showcase))
 - [HTML5 Audio Visualizer](http://wayou.github.io/HTML5_Audio_Visualizer/) ([source code](https://github.com/Wayou/HTML5_Audio_Visualizer))
-- [Graphical Filter Editor and Visualizer](http://carlosrafaelgn.com.br/GraphicalFilterEditor/) ([source code](https://github.com/carlosrafaelgn/GraphicalFilterEditor))
+- [Graphical Filter Editor and Visualizer](https://carlosrafaelgn.com.br/GraphicalFilterEditor/) ([source code](https://github.com/carlosrafaelgn/GraphicalFilterEditor))
 
 ### API de arquivos
 
@@ -102,5 +102,5 @@ Se você conhece uma boa demonstração ou aplicação da tecnologia web aberta,
 - [Web Worker Fractals](http://ondras.github.io/fractal/)
 - [Photo editor](http://ondras.github.io/photo/)
 - [Coral generator](http://ondras.github.io/coral/)
-- [Raytracer](http://nerget.com/rayjs-mt/rayjs.html)
+- [Raytracer](https://nerget.com/rayjs-mt/rayjs.html)
 - [HotCold Touch Typing](http://palerdot.github.io/hotcold/)

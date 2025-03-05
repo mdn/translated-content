@@ -1,5 +1,5 @@
 ---
-title: ":-moz-window-inactive"
+title: :-moz-window-inactive
 slug: Web/CSS/:-moz-window-inactive
 ---
 
@@ -7,7 +7,8 @@ slug: Web/CSS/:-moz-window-inactive
 
 La pseudo-classe **`:-moz-window-inactive`**, spécifique à Mozilla, correspond à n'importe quel élément qui se trouve sur une fenêtre inactive.
 
-> **Note :** Avant l'existence de cette pseudo-classe, on pouvait donner des styles différents aux fenêtres avec l'attribut `active="true"` sur la fenêtre XUL de plus haut niveau. Cet attribut n'est plus utilisé.
+> [!NOTE]
+> Avant l'existence de cette pseudo-classe, on pouvait donner des styles différents aux fenêtres avec l'attribut `active="true"` sur la fenêtre XUL de plus haut niveau. Cet attribut n'est plus utilisé.
 
 `:-moz-window-inactive` fonctionne également pour le contenu des documents HTML.
 

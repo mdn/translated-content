@@ -39,7 +39,8 @@ JavaScriptのソーステキストでは、 \<ZWNJ> と \<ZWJ> は[識別子](#�
 
 > **メモ:** ["White_Space" プロパティがあるが "Space_Separator" 一般カテゴリーにない文字](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BWhite_Space%7D%26%5CP%7BGeneral_Category%3DSpace_Separator%7D)のうち、 U+0009, U+000B, U+000C は JavaScript でもホワイトスペースとして扱われ、 U+0085 NEXT LINE は特別な役割を持たず、他にも[改行文字](#改行文字)の集合となるものがあります。
 
-> **メモ:** JavaScript エンジンで使用される Unicode 規格が変更されると、プログラムの動作に影響を与える可能性があります。例えば、 ES2016 では参照する Unicode 規格が 5.1 から 8.0.0 にアップグレードされ、その影響で U+180E MONGOLIAN VOWEL SEPARATOR が "Space_Separator" カテゴリーから「書式化（Cf）」カテゴリーに移動し、空白でなくなっています。その結果、" \u180E".trim().length の結果が 0 から 1 に変更されました。
+> [!NOTE]
+> JavaScript エンジンで使用される Unicode 規格が変更されると、プログラムの動作に影響を与える可能性があります。例えば、 ES2016 では参照する Unicode 規格が 5.1 から 8.0.0 にアップグレードされ、その影響で U+180E MONGOLIAN VOWEL SEPARATOR が "Space_Separator" カテゴリーから「書式化（Cf）」カテゴリーに移動し、空白でなくなっています。その結果、" \u180E".trim().length の結果が 0 から 1 に変更されました。
 
 ## 改行文字
 
@@ -135,7 +136,8 @@ console.log("Hello world");
 
 JavaScript インタープリターはこれを通常のコメントとして扱います。スクリプトが直接シェルで実行された場合のみ、シェルに対して意味を持ちます。
 
-> **警告:** スクリプトをシェル環境で直接実行できるようにしたい場合は、 [BOM](https://ja.wikipedia.org/wiki/バイト順マーク) のない UTF-8 でエンコードしてください。ブラウザーで実行するコードでは BOM は何の問題も起こしませんが - UTF-8 デコードの際、ソーステキストが解析される前に取り除かれるからです - Unix/Linux のシェルでは、BOM 文字が前にあるとハッシュバンを認識しません。
+> [!WARNING]
+> スクリプトをシェル環境で直接実行できるようにしたい場合は、 [BOM](https://ja.wikipedia.org/wiki/バイト順マーク) のない UTF-8 でエンコードしてください。ブラウザーで実行するコードでは BOM は何の問題も起こしませんが - UTF-8 デコードの際、ソーステキストが解析される前に取り除かれるからです - Unix/Linux のシェルでは、BOM 文字が前にあるとハッシュバンを認識しません。
 
 `#!` の形のコメントは JavaScript インタープリターを指定するためにだけ使用してください。他の用途ではすべて `//` のコメント（または複数行コメント）を使用してください。
 
@@ -156,7 +158,8 @@ lbl: console.log(1); // ラベル
 
 JavaScript では、識別子は一般的に英数字、アンダースコア (`_`)、ドル記号 (`$`) で構成されます。識別子は数字で始めることはできません。しかし、JavaScript で使用できる識別子は {{Glossary("ASCII")}} だけではなく、ほとんどの Unicode コードポイントも使用可能です。つまり、識別子は [ID_Start](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Start%7D) カテゴリーにある文字で始めることができ、[ID_Continue](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Continue%7D) カテゴリーにある文字は先頭文字の後に置くことができます。
 
-> **メモ:** もし何らかの理由で JavaScript のソースを自分で解析する必要がある場合、すべての識別子が `/[A-Za-z_$][\w$]*/` のパターンに従っている（つまり ASCII のみ）と仮定しないでください。 識別子の範囲は正規表現 `/[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*/u` (Unicodeエスケープシーケンスを除く) で記述することができます。
+> [!NOTE]
+> もし何らかの理由で JavaScript のソースを自分で解析する必要がある場合、すべての識別子が `/[A-Za-z_$][\w$]*/` のパターンに従っている（つまり ASCII のみ）と仮定しないでください。 識別子の範囲は正規表現 `/[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*/u` (Unicodeエスケープシーケンスを除く) で記述することができます。
 
 また、JavaScript では、識別子の中で [Unicode エスケープシーケンス](#unicode_escape_sequences)を `\u0000` または `\u{000000}` という形式で使用することができ、これは実際の Unicode 文字と同じ文字列値をエンコードするものです。例えば、`你好` と `\u4f60\u597d` は同じ識別子です。
 
@@ -296,7 +299,8 @@ const els\u{65} = 1;
 
 ## リテラル
 
-> **メモ:** この節では、不可分なトークンであるリテラルについて説明します。[オブジェクトリテラル](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)や[配列リテラル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Array#配列リテラル記法)は、一連のトークンで構成される[式](/ja/docs/Web/JavaScript/Reference/Operators)です。
+> [!NOTE]
+> この節では、不可分なトークンであるリテラルについて説明します。[オブジェクトリテラル](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)や[配列リテラル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Array#配列リテラル記法)は、一連のトークンで構成される[式](/ja/docs/Web/JavaScript/Reference/Operators)です。
 
 ### Null リテラル
 
@@ -387,7 +391,7 @@ false
 0b11101001010101010101n // 955733
 ```
 
-長整数リテラルは、古い 8 進数と混同しないよう、`0` 出始めることはできません。
+長整数リテラルは、古い 8 進数と混同しないよう、`0` で始めることはできません。
 
 ```js-nolint example-bad
 0755n; // SyntaxError: invalid BigInt syntax

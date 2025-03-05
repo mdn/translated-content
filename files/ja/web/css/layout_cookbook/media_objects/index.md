@@ -23,7 +23,7 @@ slug: Web/CSS/Layout_cookbook/Media_objects
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/media-objects.html", '100%', 2700)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロードする](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html)
 
@@ -45,7 +45,7 @@ slug: Web/CSS/Layout_cookbook/Media_objects
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/media-objects-fallback.html", '100%', 3000)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html)
 

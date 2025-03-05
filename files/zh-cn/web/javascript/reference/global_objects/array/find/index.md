@@ -12,7 +12,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/find
 - 如果需要查找数组中是否**存在某个值**，请使用 {{jsxref("Array.prototype.includes()")}}。同样，它检查每个元素是否与值相等，而不是使用测试函数。
 - 如果需要查找是否有元素满足所提供的测试函数，请使用 {{jsxref("Array.prototype.some()")}}。
 
-{{EmbedInteractiveExample("pages/js/array-find.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.find()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find((element) => element > 10);
+
+console.log(found);
+// Expected output: 12
+```
 
 ## 语法
 
@@ -50,7 +59,8 @@ find(callbackFn, thisArg)
 - 对已经访问过的索引的更改不会导致再次在这些元素上调用 `callbackFn`。
 - 如果 `callbackFn` 改变了数组中已存在但尚未被访问的元素，则传递给 `callbackFn` 的该元素的值将是该元素在被访问时的值。被[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)的元素被视为 `undefined`。
 
-> **警告：** 上述类型的并发修改经常导致难以理解的代码，通常应避免（特殊情况除外）。
+> [!WARNING]
+> 上述类型的并发修改经常导致难以理解的代码，通常应避免（特殊情况除外）。
 
 `find()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 
@@ -172,7 +182,7 @@ console.log(Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)));
 ## 参见
 
 - [`core-js` 中 `Array.prototype.find` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.findLast()")}}

@@ -53,7 +53,7 @@ slug: Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow
 
 ## 요약정리
 
-이번 안내서에서는 매우 구체적인 유형의 위치잡기를 달성하기 위해 요소를 일반 대열에서 빼내는 여러 방법을 다루었습니다. 다음 안내서에서는 [서식 상황 해설](/ko/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained) 가운데에서 [블록 서식 상황](/ko/docs/Web/Guide/CSS/Block_formatting_context)을 생성하는 등의 관련 이슈를 살펴볼 겁니다.
+이번 안내서에서는 매우 구체적인 유형의 위치잡기를 달성하기 위해 요소를 일반 대열에서 빼내는 여러 방법을 다루었습니다. 다음 안내서에서는 [서식 상황 해설](/ko/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts) 가운데에서 [블록 서식 상황](/ko/docs/Web/CSS/CSS_display/Block_formatting_context)을 생성하는 등의 관련 이슈를 살펴볼 겁니다.
 
 ## 참조 항목
 

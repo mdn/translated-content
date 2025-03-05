@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 
 **`JSON.stringify()`** 方法将一个 JavaScript 对象或值转换为 JSON 字符串，如果指定了一个 replacer 函数，则可以选择性地替换值，或者指定的 replacer 是数组，则可选择性地仅包含数组指定的属性。
 
-{{EmbedInteractiveExample("pages/js/json-stringify.html")}}
+{{InteractiveExample("JavaScript Demo: JSON.stringify()")}}
+
+```js interactive-example
+console.log(JSON.stringify({ x: 5, y: 6 }));
+// Expected output: '{"x":5,"y":6}'
+
+console.log(
+  JSON.stringify([new Number(3), new String("false"), new Boolean(false)]),
+);
+// Expected output: '[3,"false",false]'
+
+console.log(JSON.stringify({ x: [10, undefined, function () {}, Symbol("")] }));
+// Expected output: '{"x":[10,null,null,null]}'
+
+console.log(JSON.stringify(new Date(2006, 0, 2, 15, 4, 5)));
+// Expected output: '"2006-01-02T15:04:05.000Z"'
+```
 
 ## 语法
 
@@ -183,7 +199,7 @@ JSON.stringify(circularReference);
 
 要序列化循环引用，你可以使用支持循环引用的库（例如 Douglas Crockford 的 [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js)），或者自己实现一个解决方案，这需要找到循环引用，并用可序列化的值替换（或移除）它们。
 
-如果你在使用 `JSON.stringify()` 来深拷贝一个对象，你可能想要使用 [`structuredClone()`](/zh-CN/docs/Web/API/structuredClone)，它支持循环引用。JavaScript 引擎的二进制序列化 API，比如 [`v8.serialize()`](https://nodejs.org/api/v8.html#v8serializevalue)，也支持循环引用。
+如果你在使用 `JSON.stringify()` 来深拷贝一个对象，你可能想要使用 {{DOMxRef("Window.structuredClone", "structuredClone()")}}，它支持循环引用。JavaScript 引擎的二进制序列化 API，比如 [`v8.serialize()`](https://nodejs.org/api/v8.html#v8serializevalue)，也支持循环引用。
 
 ### `JSON.stringify`用作 JavaScript
 

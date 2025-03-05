@@ -9,7 +9,20 @@ l10n:
 
 **`new`** 运算符允许开发人员创建一个用户定义的对象类型的实例或具有构造函数的内置对象的实例。
 
-{{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - new operator")}}
+
+```js interactive-example
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+const car1 = new Car("Eagle", "Talon TSi", 1993);
+
+console.log(car1.make);
+// Expected output: "Eagle"
+```
 
 ## 语法
 
@@ -35,7 +48,8 @@ new constructor(arg1, arg2, /* …, */ argN)
 1. 创建一个空的简单 JavaScript 对象。为方便起见，我们称之为 `newInstance`。
 2. 如果构造函数的 `prototype` 属性是一个{{jsxref("Object", "对象", "", 1)}}，则将 `newInstance` 的 [[Prototype]] 指向构造函数的 `prototype` 属性，否则 `newInstance` 将保持为一个普通对象，其 [[Prototype]] 为 `Object.prototype`。
 
-   > **备注：** 因此，通过构造函数创建的所有实例都可以访问添加到构造函数 `prototype` 属性中的属性/对象。
+   > [!NOTE]
+   > 因此，通过构造函数创建的所有实例都可以访问添加到构造函数 `prototype` 属性中的属性/对象。
 
 3. 使用给定参数执行构造函数，并将 `newInstance` 绑定为 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的上下文（换句话说，在构造函数中的所有 `this` 引用都指向 `newInstance`）。
 4. 如果构造函数返回[非原始值](/zh-CN/docs/Web/JavaScript/Data_structures#原始值)，则该返回值成为整个 `new` 表达式的结果。否则，如果构造函数未返回任何值或返回了一个原始值，则返回 `newInstance`。（通常构造函数不返回值，但可以选择返回值，以覆盖正常的对象创建过程。）
@@ -59,7 +73,8 @@ new constructor(arg1, arg2, /* …, */ argN)
    const myFoo = new Foo("Bar 1", 2021);
    ```
 
-> **备注：** 对象的属性可以是另一个对象。请参阅下面的示例。
+> [!NOTE]
+> 对象的属性可以是另一个对象。请参阅下面的示例。
 
 你始终可以对已定义的对象添加新的属性。例如，`car1.color = "black"` 语句给 `car1` 添加了一个新的属性 `color`，并将其赋值为 `"black"`。
 
@@ -84,7 +99,8 @@ console.log(car1.color); // '黑色'
 console.log(car2.color); // '原色'
 ```
 
-> **备注：** 虽然构造函数可以像任何常规函数一样被调用（即不使用 `new` 运算符），但在这种情况下并不会创建一个新的对象，`this` 的值也是不一样的。
+> [!NOTE]
+> 虽然构造函数可以像任何常规函数一样被调用（即不使用 `new` 运算符），但在这种情况下并不会创建一个新的对象，`this` 的值也是不一样的。
 
 函数可以通过检查 [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target) 来知道它是否是通过 `new` 被调用的。当函数在没有使用 `new` 的情况下被调用时，`new.target` 的值为 `undefined`。例如，你可以有一个在被调用时和被构造时具有不同表现的函数：
 

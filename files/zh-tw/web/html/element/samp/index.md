@@ -7,7 +7,21 @@ slug: Web/HTML/Element/samp
 
 **`<samp>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於封裝代表電腦程式的樣本（或引用）輸出的內嵌文本。其內容通常使用瀏覽器的預設等寬字體呈現（如 [Courier](https://zh.wikipedia.org/wiki/Courier) 或 Lucida Console）。
 
-{{EmbedInteractiveExample("pages/tabbed/samp.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;samp&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>I was trying to boot my computer, but I got this hilarious message:</p>
+
+<p>
+  <samp>Keyboard not found <br />Press F1 to continue</samp>
+</p>
+```
+
+```css interactive-example
+samp {
+  font-weight: bold;
+}
+```
 
 ## 屬性
 
@@ -25,7 +39,8 @@ samp {
 }
 ```
 
-> **備註：** 如果你需要一個元素來作為你的網站或應用程式 JavaScript 代碼生成的輸出的容器，則應該使用 {{HTMLElement("output")}} 元素。
+> [!NOTE]
+> 如果你需要一個元素來作為你的網站或應用程式 JavaScript 代碼生成的輸出的容器，則應該使用 {{HTMLElement("output")}} 元素。
 
 ## 範例
 

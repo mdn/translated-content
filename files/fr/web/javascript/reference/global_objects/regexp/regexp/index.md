@@ -7,9 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 
 Le constructeur **`RegExp`** crée une expression rationnelle pour manipuler les correspondances trouvées dans un texte par rapport à un motif.
 
-Pour une introduction au sujet des expressions rationnelles, nous vous conseillons de lire [le chapitre sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions) du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide).
+Pour une introduction au sujet des expressions rationnelles, nous vous conseillons de lire [le chapitre sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide).
 
-{{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Constructor")}}
+
+```js interactive-example
+const regex1 = /\w+/;
+const regex2 = new RegExp("\\w+");
+
+console.log(regex1);
+// Expected output: /\w+/
+
+console.log(regex2);
+// Expected output: /\w+/
+
+console.log(regex1 === regex2);
+// Expected output: false
+```
 
 ## Syntaxe
 
@@ -27,7 +41,7 @@ RegExp(motif[, marqueurs])
 
   - : Le texte de l'expression rationnelle.
 
-    Avec ES5, ce peut être un autre objet `RegExp` ou une valeur littérale (uniquement lorsqu'on utilise la notation avec la fonction / le constructeur). Un motif peut contenir [des caractères spéciaux](/fr/docs/Web/JavaScript/Guide/Regular_Expressions) pour cibler un ensemble plus large de valeurs que ce que permet une chaîne de caractère littérale.
+    Avec ES5, ce peut être un autre objet `RegExp` ou une valeur littérale (uniquement lorsqu'on utilise la notation avec la fonction / le constructeur). Un motif peut contenir [des caractères spéciaux](/fr/docs/Web/JavaScript/Guide/Regular_expressions) pour cibler un ensemble plus large de valeurs que ce que permet une chaîne de caractère littérale.
 
 - `marqueurs`
 
@@ -50,7 +64,7 @@ RegExp(motif[, marqueurs])
     - `s` ("dotAll")
       - : Permet à `.` de correspondre à des nouvelles lignes.
     - `u` (unicode)
-      - : Traite `motif` comme une séquence de codets Unicode (voir aussi [les chaînes de caractères binaires](/fr/docs/Web/API/DOMString/Binary)).
+      - : Traite `motif` comme une séquence de codets Unicode (voir aussi [les chaînes de caractères binaires](/fr/docs/Web/API/Window/btoa)).
     - `y` (adhérence)
       - : Ne cherche les correspondances dans la chaîne cible qu'à partir de l'indice porté par la propriété `lastIndex` de l'expression rationnelle. N'effectue pas de recherche sur des indices antérieurs.
 
@@ -90,7 +104,7 @@ L'utilisation du constructeur (`new RegExp('ab+c')`) causera une compilation à 
 
 ## Voir aussi
 
-- [Le chapitre sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions) dans [le guide JavaScript](/fr/docs/Web/JavaScript/Guide)
+- [Le chapitre sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) dans [le guide JavaScript](/fr/docs/Web/JavaScript/Guide)
 - [`String.prototype.match()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match)
 - [`String.prototype.replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
 - [Une prothèse d'émulation pour certaines fonctionnalités `RegExp` (`dotAll`, marqueur d'adhérence, groupes de capture nommés, etc.) sur `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)

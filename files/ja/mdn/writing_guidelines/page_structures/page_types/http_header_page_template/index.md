@@ -119,7 +119,8 @@ NameOfTheHeader: <directive1>, <directive2>, …
 
 詳しくは、[サンプルコード](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples)を追加する方法のガイドをご覧ください。
 
-> **メモ:** 他のページで紹介されている例にリンクしたい場合もあるでしょう。
+> [!NOTE]
+> 他のページで紹介されている例にリンクしたい場合もあるでしょう。
 >
 > **シナリオ 1:** このページにいくつかの例があり、別のページにさらにいくつかの例がある場合。
 >

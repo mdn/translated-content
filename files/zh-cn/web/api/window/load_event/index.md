@@ -11,7 +11,8 @@ slug: Web/API/Window/load_event
 
 > **备注：** _所有以 `load` 命名的事件都不会传递到 `Window` 上_，即使 `bubbles` 初始化为 `true`。要在 `window` 上捕获 `load` 事件，相关的 `load` 事件必须直接绑定到 `window` 上。
 
-> **备注：** 当主文档加载完成时，`load` 事件将在 `window` 上触发，但其有两个被修改的属性：`target` 为 `document`，以及 `path` 为 `undefined`。这是由遗留的一致性问题导致的。
+> [!NOTE]
+> 当主文档加载完成时，`load` 事件将在 `window` 上触发，但其有两个被修改的属性：`target` 为 `document`，以及 `path` 为 `undefined`。这是由遗留的一致性问题导致的。
 
 ## 语法
 

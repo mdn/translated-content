@@ -7,17 +7,18 @@ slug: Web/HTML/Element/optgroup
 
 Em um Formulário Web, o elemento HTML `<optgroup>` cria um agrupamento de opções dentro do elemento {{HTMLElement("select")}}.
 
-- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ Nenhuma.
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ Nenhuma.
 - _Conteúdo permitido_ Nenhum ou mais elementos do tipo {{HTMLElement("option")}}.
 - _Omissão da tag_ A abertura da tag é obrigatória. O fechamento da tag é opcional se o elemento é imediatamente seguido de de outro elemento \<optgroup>, ou se o elemento pai não tiver nenhum conteúdo.
 - _Elemento pai permitido_ Um elemento {{HTMLElement("select")}}.
 - _Interface DOM_ {{domxref("HTMLOptGroupElement")}}
 
-> **Nota:** Elementos do tipo <strong>optgroup</strong> não podem ser aninhados.
+> [!NOTE]
+> Elementos do tipo <strong>optgroup</strong> não podem ser aninhados.
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `disabled`
   - : Se este atributo booleano for definido, nenhum dos itens neste **optgroup** poderá ser selecionado. Muitos navegadores marcam como cinza e não permitem que o elemento receba nenhum evento de navegação, como cliques do mouse ou foco.

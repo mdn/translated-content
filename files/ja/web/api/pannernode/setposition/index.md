@@ -8,7 +8,8 @@ l10n:
 
 {{APIRef("Web Audio API")}}{{Deprecated_Header}}
 
-> **メモ:** この非推奨メソッドを置き換えるために推奨される方法は、 [`positionX`](/ja/docs/Web/API/PannerNode/positionX), [`positionY`](/ja/docs/Web/API/PannerNode/positionY), [`positionZ`](/ja/docs/Web/API/PannerNode/positionZ) 属性を直接設定することです。
+> [!NOTE]
+> この非推奨メソッドを置き換えるために推奨される方法は、 [`positionX`](/ja/docs/Web/API/PannerNode/positionX), [`positionY`](/ja/docs/Web/API/PannerNode/positionY), [`positionZ`](/ja/docs/Web/API/PannerNode/positionZ) 属性を直接設定することです。
 
 `setPosition()` は {{ domxref("PannerNode") }} インターフェイスのメソッドで、リスナー（{{domxref("BaseAudioContext.listener")}} 属性に格納されている {{domxref("AudioListener")}} オブジェクトで表されます）に対する音源の相対位置を定義します。 3 つの引数 `x`, `y`, `z` は単位がなく、正しい直交座標系を使用して 3D 空間における音源の位置を記述します。
 

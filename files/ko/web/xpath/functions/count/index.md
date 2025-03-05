@@ -24,7 +24,7 @@ count(node-set )
 
 ### 정의
 
-[1.0 4.1](http://www.w3.org/TR/xpath#function-count)
+[1.0 4.1](https://www.w3.org/TR/xpath#function-count)
 
 ### Gecko 지원
 

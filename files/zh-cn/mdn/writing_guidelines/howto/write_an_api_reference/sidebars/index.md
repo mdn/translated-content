@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fc7310a85a8e6d5c0677dfaffba9b8fbbadc94a9
 ---
 
-{{MDNSidebar}}
-
 你可以在 API 参考页面上包含一个自定义侧边栏，以便它显示与该 API 相关的接口、教程和其他资源的链接。本文介绍了如何实现。
 
 ## 创建侧边栏
@@ -68,14 +66,16 @@ l10n:
 
 1. `"overview"`——该值是一个数组，如果有的话，请在其中包含 API 概述页面的别名（slug）。“Fetch API”会创建如下链接：[https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API](/zh-CN/docs/Web/API/Fetch_API)。
 2. `"interfaces"`——该值是一个数组，你应该在其中列出组成该 API 的所有接口。“Response”会创建如下链接：[https://developer.mozilla.org/zh-CN/docs/Web/API/Response](/zh-CN/docs/Web/API/Response)。
-3. `"methods"`——该值是一个数组，其中应包含由规范添加的与其他 API 相关的接口的任何方法，例如在 {{domxref("Navigator")}} 或 {{domxref("Window")}} 上创建的实例化方法。如果有大量的方法，你可能需要考虑只列出最受欢迎的方法，或者将它们放在列表的前面。“fetch()”会创建如下链接：[https://developer.mozilla.org/zh-CN/docs/Web/API/fetch](/zh-CN/docs/Web/API/fetch)。请*不要*列出属于同一 API 拥有的接口的成员方法。
+3. `"methods"`——该值是一个数组，其中应包含由规范添加的与其他 API 相关的接口的任何方法，例如在 {{domxref("Navigator")}} 或 {{domxref("Window")}} 上创建的实例化方法。如果有大量的方法，你可能需要考虑只列出最受欢迎的方法，或者将它们放在列表的前面。“fetch()”会创建如下链接：[https://developer.mozilla.org/zh-CN/docs/Web/API/fetch](/zh-CN/docs/Web/API/Window/fetch)。请*不要*列出属于同一 API 拥有的接口的成员方法。
 4. `"properties"`——该值是一个数组，其中应包含与 API 相关的所有属性。这可以包括 API 规范中定义的接口的成员属性，以及 API 在其他接口上定义的属性。如果有大量的属性，你可能需要考虑只列出最受欢迎的属性，或者将它们放在列表的前面。“Headers.append”会创建如下链接：[https://developer.mozilla.org/zh-CN/docs/Web/API/Headers/append](/zh-CN/docs/Web/API/Headers/append)。
 5. `"events"`——该值是一个数组，其中应包含属于 API 而定义它的接口又*不*属于该 API 的事件的*标题*（属于 API 的接口（`interfaces`）中的事件会被默认记录）。如果有大量的事件，你可能需要考虑只列出最受欢迎的事件，或者将它们放在列表的前面。例如，`"Document: selectionchange"` 属于 [Selection API](/zh-CN/docs/Web/API/Selection_API)，但 `Document` 并不属于，所以我们将该事件添加到数组中，[Selection API](/zh-CN/docs/Web/API/Selection_API) 主题会链接到该事件。
 6. `"guides"`——该值是一个字符串数组，其中的每一个都是涉及解释如何使用该 API 的指南的主题。这些字符串包含了指南 URL 在语言路径之后的部分：即，指南 URL 的 `/docs/...` 部分。例如，要链接到位于 `https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch` 的主题“使用 Fetch”，指南数组中需要包含“/docs/Web/API/Fetch_API/Using_Fetch”。
 7. `"dictionaries"`——该值是一个字符串数组，其中列出了 API 的所有字典。通常，只有被多个属性或方法使用的字典才应该在此列出，除非它们具有特殊意义或可能需要从多个页面引用。“CryptoKeyPair”会创建如下链接：[https://developer.mozilla.org/zh-CN/docs/Web/API/CryptoKeyPair](/zh-CN/docs/Web/API/CryptoKeyPair)。
-   > **备注：** MDN 正在逐步停止单独记录字典。在可能的情况下，这里现在描述的是使用了它们的对象。
+   > [!NOTE]
+   > MDN 正在逐步停止单独记录字典。在可能的情况下，这里现在描述的是使用了它们的对象。
 8. `"types"`——该值是一个数组，其中包含 API 定义的 typedef 和枚举类型。你可以选择只列出那些特别重要的或被多个页面所引用的类型，以便保持列表的简洁。
-   > **备注：** MDN 正在逐步停止单独记录 typedef。在可能的情况下，这里现在描述的是使用了它们的值。
+   > [!NOTE]
+   > MDN 正在逐步停止单独记录 typedef。在可能的情况下，这里现在描述的是使用了它们的值。
 9. `"callbacks"`——该值是一个数组，其中包含 API 定义的所有回调类型的列表。你可能会发现即使是在包含回调类型的 API 上，也根本不需要使用这个组别，因为它们通常不适合单独记录。
 
 ## 侧边栏使用的标签

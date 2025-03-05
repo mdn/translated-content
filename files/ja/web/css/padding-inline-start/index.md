@@ -56,15 +56,15 @@ padding-inline-start: unset;
 
 #### HTML
 
-```html
+```html live-sample___setting_inline_start_padding_for_vertical_text
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___setting_inline_start_padding_for_vertical_text
 div {
   background-color: yellow;
   width: 120px;
@@ -80,7 +80,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("縦書きテキストにおけるインライン方向の先頭のパディングの設定", 140, 140)}}
+{{EmbedLiveSample("Setting_inline_start_padding_for_vertical_text", 140, 140)}}
 
 ## 仕様書
 

@@ -63,7 +63,7 @@ new FontFace(family, source, descriptors)
 ### 例外
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : 記述子の文字列が、対応する {{cssxref("@font-face")}} 記述子の文法に照合しないか、指定するバイナリソースを読み込むことができない場合に発生します。
+  - : 記述子の文字列が、対応する {{cssxref("@font-face")}} 記述子の文法に照合しないか、指定するバイナリーソースを読み込むことができない場合に発生します。
     このエラーでは {{domxref("FontFace.status")}} が `error` に設定されます。
 
 ## 例

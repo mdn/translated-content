@@ -491,4 +491,5 @@ Pour {{SVGElement('tspan')}}, `fill` est un attribut de présentation qui défin
 
 {{Compat}}
 
-> **Note :** Pour plus d'informations sur les valeurs de `context-fill` (et `context-stroke`) dans des documents HTML, voir la documentation pour la propriété non-standard {{cssxref("-moz-context-properties")}}.
+> [!NOTE]
+> Pour plus d'informations sur les valeurs de `context-fill` (et `context-stroke`) dans des documents HTML, voir la documentation pour la propriété non-standard {{cssxref("-moz-context-properties")}}.

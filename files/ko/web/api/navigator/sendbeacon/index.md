@@ -12,7 +12,8 @@ l10n:
 
 {{domxref("XMLHttpRequest","XMLHttpRequest")}} 같은 오래된 기술로 웹 서버에 분석 정보를 전송할 때 생길 수 있는 일부 문제를 피하기 위해 고안됐습니다.
 
-> **참고:** 요청을 `POST` 외의 다른 메서드로 보내야 하거나, 어떤 요청 속성을 바꾸어서 보내야 하거나, 서버로부터의 응답을 받아야 하면 [`fetch()`](/ko/docs/Web/API/fetch)의 [`keepalive`](/ko/docs/Web/API/fetch#keepalive)를 `true`로 설정한 것을 대신 사용하세요.
+> [!NOTE]
+> 요청을 `POST` 외의 다른 메서드로 보내야 하거나, 어떤 요청 속성을 바꾸어서 보내야 하거나, 서버로부터의 응답을 받아야 하면 [`fetch()`](/ko/docs/Web/API/Window/fetch)의 [`keepalive`](/ko/docs/Web/API/Window/fetch#keepalive)를 `true`로 설정한 것을 대신 사용하세요.
 
 ## 구문
 
@@ -108,6 +109,6 @@ document.addEventListener("visibilitychange", function logData() {
 - [`visibilitychange`](/ko/docs/Web/API/Document/visibilitychange_event) 이벤트.
 - {{domxref("Beacon_API","Beacon API", "" , "true")}} 개요.
 - [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/)에서는 왜 `beforeunload`/`unload` 대신 `visibilitychange`를 사용해야 하는지 자세히 설명합니다.
-- [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state)에서는 웹 애플리케이션에서 페이지의 수명 주기 동작을 처리하는 최선의 방법들을 제시합니다.
+- [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api#developer-recommendations-for-each-state)에서는 웹 애플리케이션에서 페이지의 수명 주기 동작을 처리하는 최선의 방법들을 제시합니다.
 - [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): 페이지 수명 주기의 브라우저간 불일치를 처리하기 위한 JavaScript 라이브러리입니다.
 - [Back/forward cache](https://web.dev/bfcache/). 뒤로/앞으로 캐시가 뭔지, 다양한 페이지 수명 주기 이벤트에서 이 캐시가 갖는 의미가 뭔지 설명합니다.

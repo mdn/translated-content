@@ -10,13 +10,13 @@ slug: Web/MathML/Element/menclose
 ## Атрибуты
 
 - class, id, style
-  - : Используются с [таблицами стилей](/ru/docs/CSS).
+  - : Используются с [таблицами стилей](/ru/docs/Web/CSS).
 - href
   - : Используется для установки гиперссылки на указанный URI.
 - mathbackground
-  - : Цвет фона. Вы можете использовать `#rgb`, `#rrggbb` и [HTML-имена цветов](/ru/docs/CSS/color_value#Color_Keywords).
+  - : Цвет фона. Вы можете использовать `#rgb`, `#rrggbb` и [HTML-имена цветов](/ru/docs/Web/CSS/color_value#color_keywords).
 - mathcolor
-  - : Цвет текста. Вы можете использовать `#rgb`, `#rrggbb` и [HTML-имена цветов](/ru/docs/CSS/color_value#Color_Keywords).
+  - : Цвет текста. Вы можете использовать `#rgb`, `#rrggbb` и [HTML-имена цветов](/ru/docs/Web/CSS/color_value#color_keywords).
 - notation
 
   - : Список нотаций, разделённых пробелами, применяемых к дочерним элементам. Изображённые символы могут перекрываться. Возможные значения:

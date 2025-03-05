@@ -9,7 +9,27 @@ l10n:
 
 **`<datalist>`** は [HTML](/ja/docs/Web/HTML) の要素で、この要素には {{HTMLElement("option")}} 要素の集合が含まれ、他のコントロール内で選択できる許容または推奨オプションを表します。
 
-{{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;datalist&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="ice-cream-choice">Choose a flavor:</label>
+<input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+
+<datalist id="ice-cream-flavors">
+  <option value="Chocolate"></option>
+  <option value="Coconut"></option>
+  <option value="Mint"></option>
+  <option value="Strawberry"></option>
+  <option value="Vanilla"></option>
+</datalist>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+```
 
 `<datalist>` 要素をコントロールに結びつけるには、[`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性で固有の識別子を与え、同じ識別子を値とした [`list`](/ja/docs/Web/HTML/Element/input#list) 属性を {{HTMLElement("input")}} 要素に追加します。
 この動作は、特定の種類の {{HTMLElement("input")}} だけが対応しており、また、ブラウザーの種類によっても異なる場合があります。
@@ -46,7 +66,8 @@ l10n:
 {{HTMLElement("input/month", "month")}}、{{HTMLElement("input/week", "week")}}、{{HTMLElement("input/date", "date")}}、{{HTMLElement("input/time", "time")}}、{{HTMLElement("input/datetime-local", "datetime-local")}} の各型は、日付や時刻を便利に選択できるようなインターフェイスを表示することができます。
 あらかじめ定義された値をそこに示すことで、ユーザーはすばやく制御値を満たすことができます。
 
-> **メモ:** type に対応していない場合、単純なテキストフィールドを作成する `text` 型が代わりに使用されます。このフィールドは推奨値を正しく認識し、ドロップダウンメニューでユーザーに表示します。
+> [!NOTE]
+> type に対応していない場合、単純なテキストフィールドを作成する `text` 型が代わりに使用されます。このフィールドは推奨値を正しく認識し、ドロップダウンメニューでユーザーに表示します。
 
 ```html
 <input type="time" list="popularHours" />
@@ -135,7 +156,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>

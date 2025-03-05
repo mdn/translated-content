@@ -9,7 +9,16 @@ l10n:
 
 **`every()`** は {{jsxref("Array")}} インスタンスのメソッドは、列内のすべての要素が指定された関数で実装されたテストに合格するかどうかをテストします。これは論理値を返します。
 
-{{EmbedInteractiveExample("pages/js/array-every.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.every()", "shorter")}}
+
+```js interactive-example
+const isBelowThreshold = (currentValue) => currentValue < 40;
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold));
+// Expected output: true
+```
 
 ## 構文
 
@@ -49,7 +58,8 @@ every(callbackFn, thisArg)
 - 既に処理したインデックスを変更しても、 `callbackFn` が再度呼び出されることはありません。
 - まだ処理していない既存の配列要素が `callbackFn` によって変更された場合、`callbackFn` に渡される値はその要素が取得された時点での値になります。[削除](/ja/docs/Web/JavaScript/Reference/Operators/delete)された要素は処理されません。
 
-> **警告:** 上記のように進行中の配列に対して変更を行うと、理解しにくいコードになることが多いので、（特別な場合を除いて）避けるのが一般的です。
+> [!WARNING]
+> 上記のように進行中の配列に対して変更を行うと、理解しにくいコードになることが多いので、（特別な場合を除いて）避けるのが一般的です。
 
 `every()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。このメソッドは `this` の値に `length` プロパティと整数のキーを持ったプロパティがあることだけを求めます。
 

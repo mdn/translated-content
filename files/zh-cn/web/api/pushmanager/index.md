@@ -9,7 +9,8 @@ slug: Web/API/PushManager
 
 可以通过 ServiceWorkerRegistration.pushManager 属性获得
 
-> **备注：** 这个属性替代了已被废弃的{{domxref("PushRegistrationManager")}}
+> [!NOTE]
+> 这个属性替代了已被废弃的{{domxref("PushRegistrationManager")}}
 
 ## Properties
 
@@ -70,6 +71,6 @@ navigator.serviceWorker
 
 ## See also
 
-- [Using the Push API](/zh-CN/docs/Web/API/Push_API/Using_the_Push_API)
+- [Using the Push API](/zh-CN/docs/Web/API/Push_API)
 - [Push API](/zh-CN/docs/Web/API/Push_API)
 - [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API)

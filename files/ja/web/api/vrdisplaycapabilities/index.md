@@ -9,7 +9,8 @@ l10n:
 
 **`VRDisplayCapabilities`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のインターフェイスで、 {{domxref("VRDisplay")}} の利用可能な機能を示しています。この機能は，例えば位置情報を返すことが可能か、といった VR 機器の動作可能テストに使うことができます。
 
-> **メモ:** このインターフェイスは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このインターフェイスは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 このインターフェイスには {{domxref("VRDisplay.capabilities")}} プロパティを通じてアクセスできます．
 

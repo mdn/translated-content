@@ -2,7 +2,7 @@
 title: CSS 背景和边框
 slug: Web/CSS/CSS_backgrounds_and_borders
 l10n:
-  sourceCommit: 8d4fb1e2934111a13989d2796152dc601468e7b5
+  sourceCommit: 5178e1e7c9edf0c9c652275ae62f090042ce2422
 ---
 
 {{CSSRef}}
@@ -87,13 +87,13 @@ box-shadow 包括内阴影和外阴影、单个或多个阴影，以及实心或
 
 ## 指南
 
-- [学习 CSS：背景与边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [学习 CSS：背景与边框](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
   - : 解释如何使用 CSS 背景图像实现装饰性图像。
 - [多个背景的应用](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
   - : 解释如何在元素上设置一个或多个背景。
 - [调整背景图片的大小](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
   - : 描述如何更改背景图像的大小和重复行为。
-- [学习 CSS：盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
+- [学习 CSS：盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)
   - : 解释边框以及其他模型属性如何影响 CSS 盒模型。
 - [使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
   - : 解释如何创建 CSS 渐变背景图像。
@@ -116,13 +116,13 @@ box-shadow 包括内阴影和外阴影、单个或多个阴影，以及实心或
 - {{cssxref("border-start-start-radius")}} 属性
 - {{cssxref("border-start-end-radius")}} 属性
 - {{cssxref("border-end-start-radius")}} 属性
-- {{cssxref("border-end-end-radius ")}} 属性
+- {{cssxref("border-end-end-radius")}} 属性
 
 - {{cssxref("box-sizing")}} 属性
 - {{cssxref("box-decoration-break")}} 属性
 - {{cssxref("text-shadow")}} 属性
 
-- {{cssxref("url", "url()")}} CSS 函数
+- {{cssxref("url_value", "&lt;url&gt;")}} CSS 类型
 - [`<color>`](/zh-CN/docs/Web/CSS/color) 数据类型
 - [`<image>`](/zh-CN/docs/Web/CSS/image) 数据类型
 - [`<position>`](/zh-CN/docs/Web/CSS/position) 数据类型

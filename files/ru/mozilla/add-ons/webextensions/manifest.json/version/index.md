@@ -24,7 +24,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/version
 
 Версия дополнения, отформатированная как числа и символы ASCII, разделённые точками. Подробнее о формате версий смотрите страницу [Version format](/ru/docs/Toolkit_version_format).
 
-Обратите внимание, что [синтаксис ключа `version` для Chrome](https://developer.chrome.com/extensions/manifest/version) более ограниченный, чем у Firefox:
+Обратите внимание, что [синтаксис ключа `version` для Chrome](https://developer.chrome.com/docs/extensions/reference/manifest/version) более ограниченный, чем у Firefox:
 
 - значения `version` которые действительны для Chrome, всегда будут действительны для Firefox
 - значения `version` которые действительны для Firefox, могут быть не действительны для Chrome

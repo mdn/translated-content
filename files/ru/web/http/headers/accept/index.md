@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/Accept
 
 {{HTTPSidebar}}
 
-HTTP заголовок запроса **`Accept`** указывает, какие типы контента, выраженные как [MIME типы](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types), клиент может понять. Используя [согласование контента](/ru/docs/Web/HTTP/Content_negotiation), сервер затем выбирает одно из предложений, использует его и информирует клиента о своём выборе с помощью заголовка ответа {{HTTPHeader ("Content-Type")}}. Браузеры задают адекватные значения для этого заголовка в зависимости от контекста, в котором выполняется запрос: при получении таблицы стилей CSS для запроса задаётся другое значение, чем при получении изображения, видео или скрипта.
+HTTP заголовок запроса **`Accept`** указывает, какие типы контента, выраженные как [MIME типы](/ru/docs/Web/HTTP/MIME_types), клиент может понять. Используя [согласование контента](/ru/docs/Web/HTTP/Content_negotiation), сервер затем выбирает одно из предложений, использует его и информирует клиента о своём выборе с помощью заголовка ответа {{HTTPHeader ("Content-Type")}}. Браузеры задают адекватные значения для этого заголовка в зависимости от контекста, в котором выполняется запрос: при получении таблицы стилей CSS для запроса задаётся другое значение, чем при получении изображения, видео или скрипта.
 
 <table class="properties">
   <tbody>
@@ -46,7 +46,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 ## Директивы
 
 - `<MIME_type>/<MIME_subtype>`
-  - : Один точный [MIME-тип](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types), например `text/html`.
+  - : Один точный [MIME-тип](/ru/docs/Web/HTTP/MIME_types), например `text/html`.
 - `<MIME_type>/*`
   - : MIME тип без какого-либо подтипа. `image/*` будет соответствовать типам `image/png`, `image/svg`, `image/gif` и любым другим типам изображений.
 - `*/*`
@@ -78,4 +78,4 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 
 - HTTP [согласование контента](/ru/docs/Web/HTTP/Content_negotiation)
 - Заголовок с результатами согласования контента: {{HTTPHeader("Content-Type")}}
-- Другие похожие заголовки: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}
+- Другие похожие заголовки: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}

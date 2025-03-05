@@ -53,6 +53,6 @@ browser.devtools.panels.elements.onSelectionChanged.addListener(
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools`](https://developer.chrome.com/extensions/devtools).

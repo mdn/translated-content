@@ -11,7 +11,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 
 如果想要不改变原数组的排序方法，可以使用 {{jsxref("Array/toSorted", "toSorted()")}}。
 
-{{EmbedInteractiveExample("pages/js/array-sort.html")}}
+{{InteractiveExample("JavaScript Demo: Array.sort()")}}
+
+```js interactive-example
+const months = ["March", "Jan", "Feb", "Dec"];
+months.sort();
+console.log(months);
+// Expected output: Array ["Dec", "Feb", "Jan", "March"]
+
+const array1 = [1, 30, 4, 21, 100000];
+array1.sort();
+console.log(array1);
+// Expected output: Array [1, 100000, 21, 30, 4]
+```
 
 ## 语法
 
@@ -43,7 +55,8 @@ sort(compareFn)
 
 `sort()` 方法保留空槽。如果源数组是[稀疏的](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，则空槽会被移动到数组的末尾，并始终排在所有 `undefined` 元素的后面。
 
-> **备注：** 在 UTF-16 中，Unicode 字符超出 `\uFFFF` 的范围会被编码为两个代理码元（surrogate code unit），这些码位的范围是 `\uD800` 到 `\uDFFF`。每个码位的值都会被单独考虑进行比较。因此，由代理对 `\uD855\uDE51` 组成的字符将排在字符 `\uFF3A` 的前面。
+> [!NOTE]
+> 在 UTF-16 中，Unicode 字符超出 `\uFFFF` 的范围会被编码为两个代理码元（surrogate code unit），这些码位的范围是 `\uD800` 到 `\uDFFF`。每个码位的值都会被单独考虑进行比较。因此，由代理对 `\uD855\uDE51` 组成的字符将排在字符 `\uFF3A` 的前面。
 
 如果提供了 `compareFn`，所有非 `undefined` 的数组元素都会按照比较函数的返回值进行排序（所有的 `undefined` 元素都会被排序到数组的末尾，并且不调用 `compareFn`）。
 
@@ -325,7 +338,7 @@ console.log(Array.prototype.sort.call(arrayLike));
 ## 参见
 
 - [Polyfill of `Array.prototype.sort` with modern behavior like stable sort in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.reverse()")}}
 - {{jsxref("Array.prototype.toSorted()")}}

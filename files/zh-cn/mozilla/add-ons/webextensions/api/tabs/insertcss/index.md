@@ -9,13 +9,15 @@ l10n:
 
 向一个页面注入 CSS。
 
-> **备注：** 当使用 Manifest V3 或更高版本时，请使用 {{WebExtAPIRef("scripting.insertCSS()")}} 和 {{WebExtAPIRef("scripting.removeCSS()")}} 来插入和移除 CSS。
+> [!NOTE]
+> 当使用 Manifest V3 或更高版本时，请使用 {{WebExtAPIRef("scripting.insertCSS()")}} 和 {{WebExtAPIRef("scripting.removeCSS()")}} 来插入和移除 CSS。
 
 使用该 API 前你必须拥有目标页面 URL 的权限，可以是[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限), 或者使用 [activeTab 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#活动标签权限)。
 
 你只能向 URL 符合[匹配模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)的网页注入 CSS——其方案必须是“http”、“https”、“file”和“ftp”之一。你不能向任何浏览器内置页面注入 CSS，比如 about:debugging、about:addons 或者你打开的一个新的空白页。
 
-> **备注：** Firefox 在注入的 CSS 文件中解析 URL 时是相对于 CSS 文件本身的位置，而不是相对于它被注入到的页面的位置。
+> [!NOTE]
+> Firefox 在注入的 CSS 文件中解析 URL 时是相对于 CSS 文件本身的位置，而不是相对于它被注入到的页面的位置。
 
 当再次调用 {{WebExtAPIRef("tabs.removeCSS()")}} 时，已经注入的 CSS 可能会被移除。
 
@@ -45,7 +47,7 @@ let inserting = browser.tabs.insertCSS(
     - `cssOrigin` {{optional_inline}}
 
       - : `string`。可以取以下两个值之一：“user”，表示将 CSS 添加为用户样式表；“author”，表示将其添加为作者样式表。如果省略此选项，则 CSS 将作为作者样式表添加。
-        - “user”允许你防止网站覆盖你插入的 CSS。参见[层叠顺序](/zh-CN/docs/Web/CSS/Cascade#层叠顺序)。
+        - “user”允许你防止网站覆盖你插入的 CSS。参见[层叠顺序](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#层叠顺序)。
         - “author”样式表的行为就像它们出现在页面指定的所有作者规则之后一样。这种行为包括页面脚本动态添加的任何作者样式表，即使此添加发生在 `insertCSS` 调用完成之后。
 
     - `file` {{optional_inline}}
@@ -97,7 +99,8 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-insertCSS) API。此文档来源于 Chromium 代码库中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-insertCSS) API。此文档来源于 Chromium 代码库中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

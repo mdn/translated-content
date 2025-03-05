@@ -5,7 +5,8 @@ slug: Web/API/Element/clientWidth
 
 {{APIRef("DOM")}} {{deprecated_header}}
 
-> **備註：** 從 Gecko 6.0 開始， `document.width` 將不再被支援。取而代之的是 `document.body.clientWidth`。請參照：{{domxref("element.clientWidth")}}.
+> [!NOTE]
+> 從 Gecko 6.0 開始， `document.width` 將不再被支援。取而代之的是 `document.body.clientWidth`。請參照：{{domxref("element.clientWidth")}}.
 
 傳回目前文件中，{{HTMLElement("body")}} 元素的寬度有多少像素。
 

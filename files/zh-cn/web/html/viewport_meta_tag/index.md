@@ -44,7 +44,8 @@ slug: Web/HTML/Viewport_meta_tag
 - `interactive-widget`
   - : 指定交互式 UI 组件（如虚拟键盘）对页面视口的影响。有效值：`resizes-visual`、`resizes-content` 或 `overlays-content`。默认值：`resizes-visual`。
 
-> **警告：** 使用 `user-scalable=no` 会给有视觉障碍的用户造成无障碍问题，如弱视力。[WCAG](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) 要求至少有 2 倍的缩放；然而，最佳做法是启用 5 倍的缩放。
+> [!WARNING]
+> 使用 `user-scalable=no` 会给有视觉障碍的用户造成无障碍问题，如弱视力。[WCAG](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) 要求至少有 2 倍的缩放；然而，最佳做法是启用 5 倍的缩放。
 
 ## 屏幕密度
 
@@ -79,7 +80,7 @@ slug: Web/HTML/Viewport_meta_tag
 - `overlays-content`
   - : {{Glossary("viewport", "视口")}}和{{Glossary("visual viewport", "可视视口")}}都不会被交互式组件调整大小。
 
-当{{Glossary("viewport", "视口")}}的大小被调整时，初始[布局和包含块](/zh-CN/docs/Web/CSS/Containing_block)的大小也会被调整，从而影响[视口单位](/zh-CN/docs/Web/CSS/length)的计算所得的大小。
+当{{Glossary("viewport", "视口")}}的大小被调整时，初始[布局和包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的大小也会被调整，从而影响[视口单位](/zh-CN/docs/Web/CSS/length)的计算所得的大小。
 
 ## 移动和平板电脑设备的常见视口大小
 
@@ -91,4 +92,4 @@ slug: Web/HTML/Viewport_meta_tag
 
 ## 参见
 
-- 文章：[为 Android 版 Chrome 做好视口大小调整行为变更的准备](https://developer.chrome.com/blog/viewport-resize-behavior/)
+- 文章：[为 Android 版 Chrome 做好视口大小调整行为变更的准备](https://developer.chrome.google.cn/blog/viewport-resize-behavior)

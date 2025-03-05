@@ -26,7 +26,7 @@ cancelled = !target.dispatchEvent(event)
 
 ## Примечания
 
-dispatchEvent является последним шагом для процесса создание => инициализация => диспетчер, который используется для контроля событий внутри модели выполнения событий.Событие может быть создано используя метод [document.createEvent](/ru/docs/DOM/document.createEvent) и инициализировано используя [initEvent](/ru/docs/DOM/event.initEvent) или другой, более конкретный, метод инициализации, такой как [initMouseEvent](/ru/docs/DOM/event.initMouseEvent) или [initUIEvent](/ru/docs/DOM/event.initUIEvent).
+dispatchEvent является последним шагом для процесса создание => инициализация => диспетчер, который используется для контроля событий внутри модели выполнения событий.Событие может быть создано используя метод [document.createEvent](/ru/docs/Web/API/Document/createEvent) и инициализировано используя [initEvent](/ru/docs/Web/API/Event/initEvent) или другой, более конкретный, метод инициализации, такой как [initMouseEvent](/ru/docs/Web/API/MouseEvent/initMouseEvent) или [initUIEvent](/ru/docs/Web/API/UIEvent/initUIEvent).
 
 Смотрите также [События](/ru/docs/Web/API/Event)
 
@@ -42,9 +42,9 @@ dispatchEvent является последним шагом для процес
 
 `dispatchEvent` представляет собой последний шаг в процессе create-init-dispatch, который служит для отправки событий.
 
-Событие может быть создано методом [document.createEvent](/en/DOM/document.createEvent) и инициализировано [initEvent](/en/DOM/event.initEvent) или, более конкретными инициализирующими методами, такими как [initMouseEvent](/en/DOM/event.initMouseEvent) или [initUIEvent](/en/DOM/event.initUIEvent).
+Событие может быть создано методом [document.createEvent](/en-US/DOM/document.createEvent) и инициализировано [initEvent](/en-US/DOM/event.initEvent) или, более конкретными инициализирующими методами, такими как [initMouseEvent](/en-US/DOM/event.initMouseEvent) или [initUIEvent](/en-US/DOM/event.initUIEvent).
 
-Смотрите также [справку по Event object](/en/DOM/event).
+Смотрите также [справку по Event object](/en-US/DOM/event).
 
 ## Совместимость с браузерами
 

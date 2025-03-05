@@ -11,7 +11,15 @@ l10n:
 
 **`SharedArrayBuffer()`** 构造函数创建 {{jsxref("SharedArrayBuffer")}} 对象。
 
-{{EmbedInteractiveExample("pages/js/sharedarraybuffer-constructor.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: SharedArrayBuffer Constructor", "shorter")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(8);
+
+console.log(buffer.byteLength);
+// Expected output: 8
+```
 
 ## 语法
 
@@ -61,7 +69,8 @@ const buffer = new SharedArrayBuffer(8, { maxByteLength: 16 });
 buffer.grow(12);
 ```
 
-> **备注：** 推荐设置 `maxByteLength` 为使用场景下最低的大小，不要超过 `1073741824`（1GB）以减小内存溢出风险。
+> [!NOTE]
+> 推荐设置 `maxByteLength` 为使用场景下最低的大小，不要超过 `1073741824`（1GB）以减小内存溢出风险。
 
 ## 规范
 

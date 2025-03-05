@@ -9,7 +9,8 @@ Un `RegisteredContentScript` est renvoyé par un appel à {{WebExtAPIRef("conten
 
 Il définit une seule fonction {{WebExtAPIRef("contentScripts.RegisteredContentScript.unregister()", "unregister()")}}, qui peut être utilisée pour annuler l'enregistrement des scripts de contenu.
 
-> **Note :** Si cet objet est détruit (par exemple parce qu'il est hors de portée), les scripts de contenu seront automatiquement désinscrits. Vous devriez donc garder une référence à cet objet aussi longtemps que vous voulez que les scripts de contenu restent enregistrés.
+> [!NOTE]
+> Si cet objet est détruit (par exemple parce qu'il est hors de portée), les scripts de contenu seront automatiquement désinscrits. Vous devriez donc garder une référence à cet objet aussi longtemps que vous voulez que les scripts de contenu restent enregistrés.
 
 ## Méthodes
 

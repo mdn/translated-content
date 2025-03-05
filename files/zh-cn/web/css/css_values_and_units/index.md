@@ -1,5 +1,5 @@
 ---
-title: CSS 值与单位
+title: CSS 值和单位
 slug: Web/CSS/CSS_Values_and_Units
 ---
 
@@ -100,7 +100,7 @@ left | right | none | inline-start | inline-end
 
 ### 整数
 
-一个整数包含 `0` 到 `9`的一个或多个十进制数字，例如 `1024` 或 `-55`。一个整数可能额外包含 `+` 或 `-` 前缀，在正负号和数值之间没有任何空格。
+一个整数包含 `0` 到 `9` 的一个或多个十进制数字，例如 `1024` 或 `-55`。一个整数可能额外包含 `+` 或 `-` 前缀，在正负号和数值之间没有任何空格。
 
 ### 数值
 
@@ -108,7 +108,7 @@ left | right | none | inline-start | inline-end
 
 ### 尺寸
 
-{{cssxref("&lt;dimension&gt;")}} 是一个包含单位的 `<number>`，例如 `45deg`，`100ms`，或者 `10px`。单位是大小写敏感的，且数值和单位之间不允许有任何的空格或其他字符。例如 `1 cm` 不是一个合法的值。
+{{cssxref("&lt;dimension&gt;")}} 是一个包含单位的 `<number>`，例如 `45deg`、`100ms` 或 `10px`。单位是大小写敏感的，且数值和单位之间不允许有任何的空格或其他字符。例如 `1 cm` 不是一个合法的值。
 
 CSS 使用尺寸来指定：
 
@@ -130,7 +130,7 @@ CSS 使用尺寸来指定：
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
 | `em`   | 元素的字号                                                                                                                            |
 | `ex`   | 字体的 X 字高（x-height）                                                                                                             |
-| `cap`  | 字体中大写字母的标称高度                                                                                                              |
+| `cap`  | 字体中大写字母的大写字高                                                                                                              |
 | `ch`   | Average character advance of a narrow glyph in the element’s font, as represented by the “0” (ZERO, U+0030) glyph.                    |
 | `ic`   | Average character advance of a full width glyph in the element’s font, as represented by the“水” (CJK water ideograph, U+6C34) glyph. |
 | `rem`  | 根元素的字体大小。                                                                                                                    |
@@ -240,9 +240,10 @@ The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object ins
 
 ### Functional notation
 
-- {{cssxref("calc()")}}
+- {{cssxref("calc", "calc()")}}
 - {{cssxref("min", "min()")}}
 - {{cssxref("max", "max()")}}
+- {{cssxref("minmax", "minmax()")}}
 - {{cssxref("clamp", "clamp()")}}
 - {{cssxref("toggle", "toggle()")}}
 - {{cssxref("attr", "attr()")}}
@@ -253,11 +254,11 @@ White space is allowed, but optional inside the parentheses. (But see notes rega
 
 Some legacy functional notations such as `rgba()` use commas, but generally commas are only used to separate items in a list. If a comma is used to separate arguments, white space is optional before and after the comma.
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## See also
+## 参见
 
-- [CSS Basic Data Types](/zh-CN/docs/Web/CSS/CSS_Types)
-- [Introduction to CSS: Values and Units](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [CSS 基本数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
+- [CSS 介绍：值和单位](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

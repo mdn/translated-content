@@ -17,7 +17,8 @@ l10n:
 
 背景（无论是图片还是颜色）都会被边框处裁剪，即便是圆角边框也不例外；裁剪的具体位置由 {{cssxref("background-clip")}} 属性的值来定义。
 
-> **备注：** 如果 `border-bottom-left-radius` CSS 属性之后的元素的 {{cssxref("border-radius")}} 简写属性中未设置此属性值，该属性值将会被[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)重置为其默认初始值。
+> [!NOTE]
+> 如果 `border-bottom-left-radius` CSS 属性之后的元素的 {{cssxref("border-radius")}} 简写属性中未设置此属性值，该属性值将会被[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)重置为其默认初始值。
 
 ## 语法
 

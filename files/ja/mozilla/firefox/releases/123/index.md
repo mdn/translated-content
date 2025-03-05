@@ -38,7 +38,7 @@ l10n:
 ### API
 
 - [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) で、クロスオリジンの資格情報作成をサポートしました。
-  特に、トップレベルで入れ子の [`<iframe>`](/ja/docs/Web/HTML/Element/iframe#allow) で [`Feature-Policy: publickey-credentials-create`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-create) によって許可されていれば、入れ子のブラウジングコンテキストで別のオリジンから [`navigator.credentials.create({publicKey})`](/ja/docs/Web/API/CredentialsContainer/create) を最上位のドキュメントへ呼び出せるようになりました。
+  特に、トップレベルで入れ子の [`<iframe>`](/ja/docs/Web/HTML/Element/iframe#allow) で [`Feature-Policy: publickey-credentials-create`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-create) によって許可されていれば、入れ子の閲覧コンテキストで別のオリジンから [`navigator.credentials.create({publicKey})`](/ja/docs/Web/API/CredentialsContainer/create) を最上位のドキュメントへ呼び出せるようになりました。
   ([Firefox bug 1870863](https://bugzil.la/1870863))
 
 #### DOM

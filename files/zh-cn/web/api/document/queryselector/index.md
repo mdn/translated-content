@@ -7,7 +7,8 @@ slug: Web/API/Document/querySelector
 
 文档对象模型{{domxref("Document")}}引用的 **`querySelector()`** 方法返回文档中与指定选择器或选择器组匹配的第一个 {{domxref("Element")}}对象。如果找不到匹配项，则返回`null`。
 
-> **备注：** 匹配是使用深度优先先序遍历，从文档标记中的第一个元素开始，并按子节点的顺序依次遍历。
+> [!NOTE]
+> 匹配是使用深度优先先序遍历，从文档标记中的第一个元素开始，并按子节点的顺序依次遍历。
 
 ## 语法
 
@@ -20,7 +21,8 @@ element = document.querySelector(selectors);
 - `selectors`
   - : 包含一个或多个要匹配的选择器的 DOM 字符串{{domxref("DOMString")}}。该字符串必须是有效的 CSS 选择器字符串；如果不是，则引发`SYNTAX_ERR`异常。请参阅[使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)以获取有关选择器以及如何管理它们的更多信息。
 
-> **备注：** 必须使用反斜杠字符转义不属于标准 CSS 语法的字符。由于 JavaScript 也使用退格转义，因此在使用这些字符编写字符串文字时必须特别小心。有关详细信息，请参阅[转义特殊字符](#转义特殊字符)。
+> [!NOTE]
+> 必须使用反斜杠字符转义不属于标准 CSS 语法的字符。由于 JavaScript 也使用退格转义，因此在使用这些字符编写字符串文字时必须特别小心。有关详细信息，请参阅[转义特殊字符](#转义特殊字符)。
 
 ### 返回值
 

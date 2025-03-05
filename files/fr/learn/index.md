@@ -13,13 +13,13 @@ Le but de cette section de MDN n'est pas de vous faire passer de «&nbsp;débuta
 
 Si vous débutez complètement, le développement web peut être un réel défi&nbsp;: notre but est de simplifier suffisamment le sujet pour que vous appreniez facilement, tout en vous fournissant assez de détails pour que vous soyez autonome. Vous devriez vous sentir chez vous, que vous soyez étudiant·e apprenant le développement web (de votre propre gré ou dans le cadre de vos études), un·e enseignant·e recherchant des supports de cours, une amatrice ou un amateur ou encore quelqu'un qui souhaite simplement comprendre comment fonctionnent le Web et ses technologies.
 
-> **Remarque :**
+> [!CALLOUT]
 >
 > Vous voulez devenir développeuse ou développeur web front-end&nbsp;?
 >
 > Nous avons mis au point un cours qui comprend toutes les informations essentielles dont vous avez besoin pour atteindre votre objectif.
 >
-> [Commencer](/fr/docs/Learn/Front-end_web_developer)
+> [Commencer](/fr/curriculum/)
 
 ## Par où commencer&nbsp;?
 
@@ -32,7 +32,8 @@ Si vous débutez complètement, le développement web peut être un réel défi&
 - Les <i lang="en">frameworks</i> et l'outillage
   - : Lorsque vous aurez appris l'essentiel de HTML, CSS, et JavaScript, vous devriez étudier [les outils de développement web côté client](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools) et éventuellement approfondir [les <i lang="en">frameworks</i> JavaScript côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks), ainsi que [la programmation web côté serveur](/fr/docs/Learn/Server-side).
 
-> **Note :** Notre [glossaire](/fr/docs/Glossary) fournit des définitions de la terminologie employée. Si vous avez des questions particulières à propos du développement web, la section sur les [questions fréquentes](/fr/docs/Learn/Common_questions) pourra éventuellement vous aider.
+> [!NOTE]
+> Notre [glossaire](/fr/docs/Glossary) fournit des définitions de la terminologie employée. Si vous avez des questions particulières à propos du développement web, la section sur les [questions fréquentes](/fr/docs/Learn/Common_questions) pourra éventuellement vous aider.
 
 ## Sujets abordés
 
@@ -108,7 +109,7 @@ Vous pouvez mettre à jour le dépôt de `learning-area` pour tout changement in
 
 Si vous voulez nous contacter au sujet de quoi que ce soit, le meilleur moyen est de nous [contacter](/fr/docs/MDN/Community/Communication_channels). N'hésitez pas à nous faire part de tout ce que vous pensez être erroné ou manquant sur le site, des demandes de nouveaux sujets d'apprentissage, des demandes d'aide pour des éléments que vous ne comprenez pas ou toute autre question ou préoccupation.
 
-Si vous souhaitez aider à développer/améliorer le contenu, jetez un coup d'œil à la [façon dont vous pouvez aider](/fr/docs/MDN/Contribute), et contactez-nous&nbsp;! Nous sommes plus qu'heureux de parler avec vous, que vous soyez apprenti, un enseignant, un développeur web expérimenté ou quelqu'un d'autre intéressé à améliorer l'expérience d'apprentissage.
+Si vous souhaitez aider à développer/améliorer le contenu, jetez un coup d'œil à la [façon dont vous pouvez aider](/fr/docs/MDN/Community/Contributing), et contactez-nous&nbsp;! Nous sommes plus qu'heureux de parler avec vous, que vous soyez apprenti, un enseignant, un développeur web expérimenté ou quelqu'un d'autre intéressé à améliorer l'expérience d'apprentissage.
 
 ## Voir aussi
 

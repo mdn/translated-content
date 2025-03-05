@@ -5,7 +5,8 @@ slug: Web/HTML/Element/embed
 
 **HTML `<embed>` 元素**将外部内容嵌入文档中的指定位置。此内容由外部应用程序或其他交互式内容源（如浏览器插件）提供。
 
-> **备注：** 这篇文档仅定义该元素在 HTML5 中定义的部分，不包含该元素之前的声明内容和非标准的实现。
+> [!NOTE]
+> 这篇文档仅定义该元素在 HTML5 中定义的部分，不包含该元素之前的声明内容和非标准的实现。
 
 请记住，大多数现代浏览器已经弃用并取消了对浏览器插件的支持，所以如果你希望你的网站可以在普通用户的浏览器上运行，那么依靠 `<embed>` 通常是不明智的。
 
@@ -40,7 +41,7 @@ slug: Web/HTML/Element/embed
 
 ## 属性
 
-这个元素的属性包括 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
+这个元素的属性包括 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `height`
   - : 资源显示的高度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
@@ -63,7 +64,8 @@ slug: Web/HTML/Element/embed
 
 ## 浏览器兼容性
 
-> **备注：** 不同浏览器之间显示有差异。Blink 内核浏览器（Chrome，Opera）会显示 HTML 资源的内容，但 Firefox 会显示一条通知消息，指出内容需要一个插件（见 [Firefox bug 730768](https://bugzil.la/730768)）。建议使用 \<object> 或 \<iframe> 元素。
+> [!NOTE]
+> 不同浏览器之间显示有差异。Blink 内核浏览器（Chrome，Opera）会显示 HTML 资源的内容，但 Firefox 会显示一条通知消息，指出内容需要一个插件（见 [Firefox bug 730768](https://bugzil.la/730768)）。建议使用 \<object> 或 \<iframe> 元素。
 
 {{Compat}}
 

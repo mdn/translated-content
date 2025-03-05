@@ -72,7 +72,7 @@ HTTP リクエストは、アクションを始めるためにクラアントか
 本体は、大きく 2 種類に分類されます。
 
 - 単一リソースの本体。1 個のファイルで構成され、{{HTTPHeader("Content-Type")}} と {{HTTPHeader("Content-Length")}} の 2 つのヘッダーで定義されます。
-- [複数リソースの本体](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data)。マルチパートの本体で構成され、それぞれが異なる情報を持ちます。これは主に、 [HTML フォーム](/ja/docs/Learn/Forms)と関連付けられます。
+- [複数リソースの本体](/ja/docs/Web/HTTP/MIME_types#multipartform-data)。マルチパートの本体で構成され、それぞれが異なる情報を持ちます。これは主に、 [HTML フォーム](/ja/docs/Learn/Forms)と関連付けられます。
 
 ## HTTP レスポンス
 
@@ -106,7 +106,7 @@ HTTP レスポンスの開始行は*ステータス行*と呼ばれ、以下の�
 
 - 大きさが判明している 1 個のファイルで構成される、単一リソースの本体。 {{HTTPHeader("Content-Type")}} と {{HTTPHeader("Content-Length")}} の 2 つのヘッダーで定義されます。
 - 大きさが不明な 1 個のファイルで構成される、単一リソースの本体。 {{HTTPHeader("Transfer-Encoding")}} を `chunked` に設定して、 chunked 形式でエンコードされます。
-- [複数リソースの本体](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data)。マルチパートの本体で構成され、それぞれが異なる情報のセクションを持ちます。これは比較的まれです。
+- [複数リソースの本体](/ja/docs/Web/HTTP/MIME_types#multipartform-data)。マルチパートの本体で構成され、それぞれが異なる情報のセクションを持ちます。これは比較的まれです。
 
 ## HTTP/2 フレーム
 

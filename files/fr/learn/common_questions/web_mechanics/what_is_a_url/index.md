@@ -1,171 +1,148 @@
 ---
-title: Comprendre les URL et leur structure
+title: Qu'est-ce qu'une URL ?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
+l10n:
+  sourceCommit: 803a7a460338dab4900fd44cf7ab569e3bf5799a
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
 
-Cet article aborde les _Uniform Resource Locators_ (URL) en expliquant leur rôle et leur structure.
+Cet article aborde les <i lang="en">Uniform Resource Locators</i> (URL) (qu'on peut traduire en français par «&nbsp;localisateurs uniformes de ressources&nbsp;»), et explique leur rôle et leur structure.
 
-<table class="standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Vous devez au préalable savoir
-        <a href="/fr/Apprendre/Fonctionnement_Internet"
-          >comment fonctionne Internet</a
-        >,
-        <a href="/fr/Apprendre/Qu_est-ce_qu_un_serveur_web"
-          >ce qu'est une serveur web</a
-        >
-        et
-        <a href="/fr/Apprendre/Le_fonctionnement_des_liens_sur_le_Web"
-          >les concepts sous-jacents aux liens sur le Web</a
-        >.
+        Comprendre <a href="/fr/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work">le fonctionnement général d'Internet</a>, <a href="/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server">ce qu'est un serveur web</a>, et <a href="/fr/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks">les concepts derrière les liens sur le Web</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objectifs&nbsp;:</th>
-      <td>Savoir ce qu'est une URL et comprendre son rôle sur le Web.</td>
+      <td>Apprendre ce qu'est une URL et comprendre son fonctionnement sur le Web.</td>
     </tr>
   </tbody>
 </table>
 
-Avec les concepts d'{{Glossary("hypertexte")}} et de {{Glossary("HTTP")}}, les **_URL_** sont une autre pierre angulaire du Web. Celles-ci sont utilisées par les navigateurs pour accéder aux différentes ressources publiées sur le Web.
+## Résumé
 
-**URL** signifie _Uniform Resource Locator_ (ou, en français, « localisateur uniforme de ressource »). Une URL est simplement l'adresse d'une ressource donnée, unique sur le Web. En théorie, chaque URL valide pointe vers une ressource unique. Ces ressources peuvent être des pages HTML, des documents CSS, des images, etc. En pratique, il y a quelques exceptions : les URL peuvent pointer vers une ressource qui n'existe plus ou qui a été déplacée. La ressource représentée par l'URL et l'URL elle-même sont gérées par le serveur web. C'est donc au gestionnaire de ce serveur que de gérer soigneusement la ressource et l'URL associée.
+Une **URL** (<i lang="en">Uniform Resource Locator</i>) correspond à l'adresse d'une ressource unique sur Internet. Il s'agit d'un des mécanismes principaux utilisés par [les navigateurs](/fr/docs/Glossary/Browser) pour récupérer des informations publiées, telles que des pages HTML, des documents CSS, des images, etc.
 
-## Pédagogie active
+En théorie, chaque URL valide pointe vers une ressource unique. En pratique, il existe certaines exceptions, notamment quand une URL pointe vers une ressource qui n'existe plus ou qui a été déplacée. Comme une ressource représentée par une URL et l'URL même sont gérées par le serveur web, c'est au gestionnaire du serveur web de gérer correctement la ressource et l'URL correspondante.
 
-_Il n'y a pour le moment pas d'élément de pédagogie active. [N'hésitez pas à contribuer](/fr/docs/MDN/Débuter_sur_MDN)._
+## Fondamentaux&nbsp;: anatomie d'une URL
 
-## Aller plus loin
+Voici quelques exemples d'URL&nbsp;:
 
-### Les bases : l'anatomie d'une URL
-
-Voici quelques exemples d'URL :
-
-```
+```plain
 https://developer.mozilla.org
-https://developer.mozilla.org/fr/docs/Apprendre/
+https://developer.mozilla.org/fr/docs/Learn/
 https://developer.mozilla.org/fr/search?q=URL
 ```
 
-Vous pouvez saisir chacune de ces URL dans la barre d'adresse de votre navigateur afin que celui chaque la ressource associée (ici des pages HTML).
+Chacune de ces URL peut être saisie dans la barre d'adresse d'un navigateur pour lui indiquer de charger la ressource associée. Dans ces trois exemples, il s'agit d'une page web.
 
-Une URL se compose de différents fragments dont certains sont obligatoires et d'autres optionnels. Pour commencer, voyons les parties les plus importantes d'une URL :
+Une URL se compose de différentes parties, certaines sont obligatoires tandis que d'autres sont optionnelles. Les parties les plus importantes sont mises en évidence dans l'illustration suivante et les sections ci-après décrivent en détails ces composantes&nbsp;:
 
-```
-http://www.exemple.com:80/chemin/vers/monfichier.html?clé1=valeur1&clé2=valeur2#QuelquePartDansLeDocument
-```
+![Une URL complète](mdn-url-all.png)
 
-- ![Protocol](protocole_1.png)
-  - : `http://` correspond au protocole. Ce fragment indique au navigateur le protocole qui doit être utilisé pour récupérer le contenu. Généralement, ce protocole sera HTTP ou sa version sécurisée : HTTPS. Le « Web » fonctionne autour de ces deux protocoles mais le navigateur peut parfois gérer d'autres protocoles comme `mailto:` (qui permet d'ouvrir un client de messagerie électronique) ou `ftp:` qui permet de transférer des fichiers. Ne soyez pas surpris donc si vous rencontrez ces autres protocoles.
-- ![Domaine Name](nom_de_domaine2.png)
-  - : `www.exemple.com` correspond au nom de domaine. Il indique le serveur web auquel le navigateur s'adresse pour échanger le contenu. À la place du nom de domaine, on peut utiliser une {{Glossary("adresse IP")}}, ce qui sera moins pratique (et qui est donc moins utilisé sur le Web).
-- ![Port](port_3.png)
-  - : `:80` correspond au port utilisé sur le serveur web. Il indique la « porte » technique à utiliser pour accéder aux ressources du serveur. Généralement, ce fragment est absent car le navigateur utilise les ports standards associés aux protocoles (80 pour HTTP, 443 pour HTTPS). Si le port utilisé par le serveur n'est pas celui par défaut, il faudra l'indiquer.
-- ![Path to the file](chemin_4.png)
-  - : `/chemin/vers/monfichier.html` est le chemin, sur le serveur web, vers la ressource. Aux débuts du Web, ce chemin correspondait souvent à un chemin « physique » existant sur le serveur. De nos jours, ce chemin n'est qu'une abstraction qui est gérée par le serveur web, il ne correspond plus à une réalité « physique ».
-- ![Parameters](parametres_5.png)
-  - : `?clé1=valeur1&clé2=valeur2` sont des paramètres supplémentaires fournis au serveur web. Ces paramètres sont construits sous la forme d'une liste de paires de clé/valeur dont chaque élément est séparé par une esperluette (&). Le serveur web pourra utiliser ces paramètres pour effectuer des actions supplémentaires avant d'envoyer la ressource. Chaque serveur web possède ses propres règles quant aux paramètres. Afin de les connaître, le mieux est de demander au propriétaire du serveur.
-- ![Anchor](ancre_6.png)
-  - : `#QuelquePartDansLeDocument` correspond à une ancre, celle-ci désigne un endroit donné de la ressource. Une ancre représente, en quelque sorte, un marque-page à l'intérieur de la ressource. Ajouter une ancre à une URL permet au navigateur d'afficher la ressource à l'endroit de ce marque page. Pour un document HTML, par exemple, le navigateur défilera la page jusqu'au niveau de l'ancre. Pour un document audio ou vidéo, le navigateur ira se placer à l'instant représenté par l'ancre. On notera également que la partie de l'URL située après le # n'est jamais envoyée au serveur avec la requête.
+> [!NOTE]
+> On peut voir une analogie entre une URL et une adresse postale classique&nbsp;: _le schéma_ s'apparente le type de service postal à utiliser, _le nom de domaine_ s'apparente la ville, _le port_ s'apparente le code postal, et _le chemin_ le bâtiment où on souhaite envoyer le courrier. _Les paramètres_ représentent des informations complémentaires, comme le numéro d'appartement dans le bâtiment. Enfin, _l'ancre_ s'apparente à la personne à laquelle le courrier s'adresse.
 
-> **Note :** Il existe [d'autres fragments et d'autres règles](http://en.wikipedia.org/wiki/Uniform_Resource_Locator) pour les URL mais ceux-ci ne sont pas pertinent pour le développement web et ne sont pas nécessaires pour pouvoir construire des URL tout à fait fonctionnelles.
+> [!NOTE]
+> Il existe [d'autres règles et composantes](https://fr.wikipedia.org/wiki/Uniform_Resource_Locator) pour les URL, mais qui ne concernent pas le Web. Ne vous en souciez pas pour le moment, vous n'en aurez pas besoin pour savoir comment construire et utiliser des URL fonctionnelles.
 
-On peut comparer les URL avec les adresses postales : le _protocole_ représente le service postal qu'on souhaite utiliser, le _nom de domaine_ correspond à la ville et le _port_ au code postal, le _chemin_ indique le bâtiment où la lettre doit être acheminée et les _paramètres_ pourraient indique le numéro de l'appartement, enfin l'_ancre_ désigne la personne à laquelle la lettre est adressée.
+## Schéma
 
-### Comment utiliser les URL
+![Le schéma](mdn-url-protocol@x2_update.png)
 
-N'importe quelle URL peut être saisie dans la barre d'adresse du navigateur afin d'accéder à la ressource correspondante mais ce n'est pas tout !
+_Le schéma_ est la première partie d'une URL et indique le protocole que le navigateur doit utiliser afin de demander la ressource (un [protocole](/fr/docs/Glossary/Protocol) est un ensemble de méthodes pour échanger ou transférer des données au sein d'un réseau d'ordinateurs. Pour les sites web, on utilise généralement le protocole HTTPS ou HTTP (une version non sécurisée). Pour accéder à une page web, il faut utiliser l'un de ces protocoles. Toutefois, les navigateurs gèrent également d'autres schémas comme `mailto:` (pour ouvrir un client de courrier électronique), ne soyez donc pas surpris de croiser d'autres protocoles.
 
-Le langage {{Glossary("HTML")}} — [que nous verrons par la suite](/fr/docs/Learn/HTML/HTML_tags) — permet de tirer parti des URL :
+## Autorité
 
-- en créant des liens vers d'autres documents grâce à l'élément {{HTMLElement("a")}} ;
-- en lient des document avec les ressources associées grâce aux éléments {{HTMLElement("link")}} et {{HTMLElement("script")}} ;
-- en affichant des médias comme des images (avec l'élément {{HTMLElement("img")}}), des vidéos (avec l'élément {{HTMLElement("video")}}), des sons ou de la musique (avec l'élément {{HTMLElement("audio")}}), etc. ;
-- en affichant d'autres documents HTML grâce à l'élément {{HTMLElement("iframe")}}.
+![L'autorité](mdn-url-authority.png)
 
-D'autres technologies web comme {{Glossary("CSS")}} ou {{Glossary("JavaScript")}}, utilisent les URL de façon intensive.
+Ensuite, on trouve _l'autorité_, séparée du schéma par les caractères `://`. Si elle est présente, l'autorité inclut _le domaine_ (par exemple `www.example.com`) et _le port_ (`80`), séparés par un double-point&nbsp;:
 
-### Les URL absolues et les URL relatives
+- Le domaine indique le serveur web auquel s'adresse la requête. Il s'agit généralement [d'un nom de domaine](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name), mais on peut aussi trouver [une adresse IP](/fr/docs/Glossary/IP_Address) (ce qui est plus rare, car moins pratique).
+- Le port indique la «&nbsp;porte&nbsp;» technique utilisée pour accéder aux ressources sur le serveur web. Cette information est généralement omise si le serveur web utilise les ports standard du protocole HTTP (80 pour HTTP, et 443 pour HTTPS) pour permettre l'accès aux ressources. Si le port utilisé n'est pas standard, il doit nécessairement être précisé.
 
-L'URL que nous avons disséquée avant est une URL _absolue_ et il existe également des URL _relatives_. Expliquons ici cette différence.
+> [!NOTE]
+> Le séparateur entre le schéma et l'autorité est `://`. Le double-point sépare le schéma de la partie suivante de l'URL, tandis que `//` indique que ce qui suit est l'autorité.
+>
+> Voici un exemple d'URL qui n'utilise pas d'autorité&nbsp;: `mailto:tototruc@example.com` pour le courrier électronique. Elle contient un schéma, mais pas d'autorité. Aussi, les deux-points ne sont pas suivis de deux barres obliques et servent uniquement de délimiteur entre le schéma et l'adresse électronique.
 
-Les fragments nécessaires pour construire une URL fonctionnelle dépendent du contexte dans lequel l'URL est utilisée. Dans la barre d'adresse du navigateur, il n'y a aucun contexte et il faut donc fournir une URL complète (ou absolue) comme celles que nous avons vus avant. Il n'est pas nécessaire d'inclure le protocole (le navigateur utilisera HTTP par défaut) ou le port (qui est nécessaire uniquement si le serveur web utilise des ports non conventionnels), en revanche, les autres fragments seront nécessaires.
+## Le chemin vers la ressource
 
-Lorsqu'une URL est utilisée dans un document (par exemple dans une page HTML), les choses sont différentes car le navigateur connaît déjà l'URL du document courant et pourra l'utiliser pour en déduire certaines informations afin de compléter les URL contenues dans le document. Une URL absolue se distingue d'une URL relative au niveau du chemin. Si le chemin de l'URL commence par le symbole `"/`", le navigateur ira cherche la ressource à la racine du serveur sans utiliser le contexte du document courant.
+![Le chemin vers le fichier](mdn-url-path@x2.png)
 
-Prenons quelques exemples concrets pour illustrer le concept.
+`/chemin/vers/le/fichier.html` est le chemin de la ressource vers le serveur web. Aux débuts du Web, un tel chemin correspondait généralement à l'emplacement physique du fichier sur le serveur web. De nos jours, il s'agit plutôt d'une abstraction gérée par les serveurs web et qui ne correspond pas nécessairement à un emplacement physique sur le système de fichiers du serveur.
 
-#### Exemples d'URL absolues
+## Les paramètres
 
-- URL complète
+![Les paramètres](mdn-url-parameters@x2.png)
 
-  - : Exemple :
+`?clef1=valeur1&clef2=valeur2` sont des paramètres supplémentaires fournis au serveur web. Ces paramètres prennent la forme d'une liste de paires de clef/valeur, chacune séparée par une esperluette (`&`). Le serveur web peut utiliser ces paramètres pour effectuer des traitements supplémentaires avant de renvoyer la ressource. Chaque serveur web applique ses propres règles pour la gestion des paramètres, et la seule façon fiable de déterminer si un serveur web donné gère des paramètres consiste à demander au propriétaire du serveur.
 
-    ```
-    https://developer.mozilla.org/fr/docs/Apprendre
-    ```
+## L'ancre
 
-- Protocole implicite
+![L'ancre](mdn-url-anchor@x2.png)
 
-  - : Exemple :
+`#QuelquePartDansLeDocument` est une ancre vers un emplacement au sein de la ressource. Une ancre représente en quelque sorte un marque-page au sein de la ressource, et qui indique au navigateur d'afficher le contenu de la ressource situé au niveau de ce marque-page. Pour un document HTML, par exemple, le navigateur fera défiler le document jusqu'à l'ancre. Pour un document vidéo ou audio, le navigateur tentera d'aller au moment précisé par l'ancre. Il faut noter que la partie située après le croisillon **#**, également appelée **identificateur de fragment**, n'est jamais envoyée au serveur avec la requête.
 
-    ```
-    //developer.mozilla.org/fr/docs/Apprendre
-    ```
+## Comment utiliser les URL
 
-    Dans ce cas, le navigateur saura que l'URL utilise le même protocole que celui utilisé pour charger le document qui contient cette URL.
+N'importe quelle URL peut être saisie dans la barre d'adresse du navigateur pour récupérer la ressource correspondante, mais ce n'est que la partie visible de l'iceberg&nbsp;!
 
-- Nom de domaine implicite
+Le langage [HTML](/fr/docs/Glossary/HTML) [que nous aborderons plus tard](/fr/docs/Learn/HTML/Introduction_to_HTML) utilise énormément les URL&nbsp;:
 
-  - : Exemple :
+- Pour créer des liens vers d'autres documents grâce aux éléments [`<a>`](/fr/docs/Web/HTML/Element/a)&nbsp;;
+- Pour rattacher un document aux ressources qui lui sont liées, par exemple grâce aux éléments [`<link>`](/fr/docs/Web/HTML/Element/link) ou [`<script>`](/fr/docs/Web/HTML/Element/script)&nbsp;;
+- Pour afficher des médias comme des images (avec l'élément [`<img>`](/fr/docs/Web/HTML/Element/img)), des vidéos (grâce à l'élément [`<video>`](/fr/docs/Web/HTML/Element/video)), des sons et de la musique (avec l'élément [`<audio>`](/fr/docs/Web/HTML/Element/audio)), etc.&nbsp;;
+- Pour afficher d'autres documents HTML à l'aide de l'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe).
 
-    ```
-    /fr/docs/Apprendre
-    ```
+> [!NOTE]
+> Lorsqu'on fournit une URL pour charger des ressources au sein d'une page (par exemple en utilisant les éléments `<script>`, `<audio>`, `<img>`, `<video>` ou autre), on utilise généralement uniquement des URL HTTP et HTTPS, sauf exception (notamment pour les [URL de données](/fr/docs/Web/URI/Schemes/data) qui utilisent le protocole `data:`). Ainsi, le protocole FTP, par exemple, n'est pas sécurisé et n'est plus pris en charge par les navigateurs récents.
 
-    Voici le cas le plus fréquent d'une URL absolue dans un document HTML. Le navigateur utilisera alors le même protocole et le même nom de domaine que ceux utilisés pour charger le document qui contient l'URL.
+D'autres technologies comme [CSS](/fr/docs/Glossary/CSS) ou [JavaScript](/fr/docs/Glossary/JavaScript) utilisent également fréquemment les URL et constituent les briques de base du Web.
 
-    > **Note :** _Il n'est pas possible d'omettre le nom de domaine sans omettre le protocole_.
+## URL absolues et URL relatives
 
-#### Exemples d'URL relatives
+L'exemple que nous avons étudié plus haut est une _URL absolue_. Il existe également des _URL relatives_. [Le standard qui spécifie les URL](https://url.spec.whatwg.org/#absolute-url-string) définit les deux types en utilisant respectivement les termes [_chaîne de caractères d'URL absolue_](https://url.spec.whatwg.org/#absolute-url-string) et [_chaîne de caractères d'URL relative_](https://url.spec.whatwg.org/#relative-url-string), pour les distinguer des [objets URL](https://url.spec.whatwg.org/#url) (qui correspondent à la représentation en mémoire des URL).
 
-Pour mieux comprendre les exemples qui suivent, nous nous placerons dans le contexte où les URL suivantes sont appelées depuis un document situé à l'URL suivante `https://developer.mozilla.org/fr/docs/Apprendre`
+Voyons la distinction entre _absolue_ et _relative_ dans le contexte des URL.
 
-- Sous-ressources
+Les composantes obligatoires d'une URL dépendent grandement du contexte dans lequel l'URL est utilisée. Dans la barre d'adresse du navigateur, une URL n'a pas de contexte particulier et il faut fournir une URL complète, une URL _absolue_, comme celle que nous avons vu précédemment. Il n'est pas strictement nécessaire d'inclure le protocole (le navigateur utilisera HTTP par défaut) ou le port (uniquement nécessaire si le serveur web cible utilise un port inhabituel), mais toutes les autres parties de l'URL sont nécessaires.
 
-  - : Exemple :
+Lorsqu'on utilise une URL au sein d'un document, comme dans une page HTML, la situation est différente. En effet, le navigateur dispose déjà de l'URL du document et peut utiliser cette information pour déduire les parties manquantes des URL utilisées dans le document. On peut distinguer une _URL absolue_ d'une _URL relative_ en examinant le _chemin_. Si le chemin de l'URL commence par une barre oblique (`/`), le navigateur récupèrera la ressource à la racine du serveur, sans faire référence au contexte fourni par le document courant.
 
-    ```
-    Compétences/Infrastructure/Comprendre_les_URL
-    ```
+Prenons quelques exemples pour illustrer cela. Dans ces exemples, nous considèrerons que les URL sont écrites dans un document lui-même situé à l'URL&nbsp;: `https://developer.mozilla.org/fr/docs/Learn`.
 
-    L'URL ne commence pas par `/`, le navigateur essaiera de trouver le document visé dans un sous-répertoire de la ressource actuelle. Dans cet exemple, l'URL absolue correspondante du document auquel on souhaite accéder est : `https://developer.mozilla.org/fr/docs/Apprendre/Compétences/Infrastructure/Comprendre_les_URL`
+`https://developer.mozilla.org/fr/docs/Learn` est une URL absolue. Elle contient toutes les composantes nécessaires à la localisation de la ressource.
 
-- Remonter dans l'arborescence des dossiers
+Toutes les URL suivantes sont des URL relatives&nbsp;:
 
-  - : Exemple :
+- URL relative par rapport au schéma&nbsp;: `//developer.mozilla.org/fr/docs/Learn`
+  - : Ici, seul le protocole manque. Le navigateur utilisera alors le même protocole que celui utilisé pour charger le document contenant cette URL.
+- URL relative par rapport au domaine&nbsp;: `/fr/docs/Learn`
+  - : Le protocole et le nom de domaine sont manquants. Le navigateur utiliser le même protocole et le même nom de domaine que ceux utilisés pour charger le document contenant cette URL.
+- Sous-ressources&nbsp;: `Common_questions/Web_mechanics/What_is_a_URL`
+  - : Le protocole et le nom de domaine sont manquants, et le chemin ne commence pas par `/`. Le navigateur tentera de trouver le document dans un sous-répertoire de celui contenant la ressource courante. Dans ce cas, cette URL relative correspond à l'URL absolue `https://developer.mozilla.org/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL`.
+- Remonter dans l'arborescence&nbsp;: `../CSS/display`
+  - : Le protocole et le nom de domaine sont manquants, et le chemin commence par `..`. Cette écriture suit celle du monde des systèmes de fichier UNIX qui indique de remonter d'un niveau dans l'arborescence. L'URL absolue correspondant à cet exemple est `https://developer.mozilla.org/fr/docs/Learn/../CSS/display`, qu'on peut simplifier en `https://developer.mozilla.org/fr/docs/CSS/display`.
+- Ancre uniquement&nbsp;: `#url_sémantiques`
+  - : Toutes les composantes sont absentes exceptée l'ancre. Le navigateur utilisera l'URL du document courant et remplacera ou ajoutera l'ancre à celle-ci. Cela s'avère utile quand on veut faire pointer un lien vers une partie spécifique du document courant.
 
-    ```
-    ../CSS/display
-    ```
+## URL sémantiques
 
-    Dans ce cas, on utilise la convention, héritée du monde UNIX : `../` indique au navigateur de remonter d'un répertoire dans l'arborescence. L'URL absolue correspodante à la ressource visée est ici `https://developer.mozilla.org/fr/docs/Apprendre/../CSS/display`, qui peut être simplifiée en : `https://developer.mozilla.org/fr/docs/CSS/display`
+Malgré leur aspect technique, les URL représentent des points d'entrées censées être compréhensibles par les humains. On peut les mémoriser, et les saisir manuellement dans la barre d'adresse du navigateur. Le Web est au service des personnes, et c'est une bonne pratique que de construire ce qu'on appelle des _URL sémantiques_. Les URL sémantiques utilisent des mots clairs, pouvant être compris par chacune ou chacun, quel que soit son niveau de connaissance technique.
 
-### Les URL sémantiques
+Les ordinateurs et serveurs se fichent bien des sémantiques linguistiques et vous avez sûrement déjà vu des URL qui ressemblent à du charabia de caractères. Toutefois, il y a de nombreux avantages à créer des URL compréhensibles par les humains&nbsp;:
 
-Bien qu'utiles sur le plan technique, les URL représentent également un point d'entrée vers un site web, compréhensible par un lecteur humain. Une URL peut être mémorisée et n'importe qui peut en saisir une dans la barre d'adresse d'un navigateur. Une bonne pratique, préconisée par les concepteurs du web, est de construire des [_URL sémantiques_](http://en.wikipedia.org/wiki/Semantic_URL). Les URL sémantiques utilisent des termes qui peuvent être compris par n'importe quel lecteur, quel que soit son niveau de connaissance.
+- Il est plus facile de les manipuler.
+- Cela clarifie les choses pour les utilisatrices et utilisateurs pour comprendre leur situation et leurs actions sur le Web.
+- Certains moteurs de recherche peuvent utiliser cette sémantique afin d'améliorer la classification des pages correspondantes.
 
-Les ordinateurs n'ont pas strictement besoin d'utiliser des URL sémantiques et vous avez déjà sûrement rencontré des URL pleines de charabia et de caractères aléatoires, URL qui fonctionnaient parfaitement. Cela dit, il y a plusieurs avantages à créer des URL compréhensibles par les humains :
+## Voir aussi
 
-- Elles sont plus simples à manipuler
-- Elles clarifient la situation pour le visiteur et indiquent où il est, ce qu'il fait et avec qui il intéragit sur le Web
-- Elles peuvent être utilisées par certains moteurs de recherche pour améliorer le classement des pages associées à un terme donné.
-
-## Prochaines étapes
-
-- [Comprendre les noms de domaine](/fr/Apprendre/Comprendre_noms_de_domaine)
+[Les URL de données](/fr/docs/Web/URI/Schemes/data) sont des URL préfixées par le schéma `data:` qui permettent d'embarquer de petits fichiers à même le document.

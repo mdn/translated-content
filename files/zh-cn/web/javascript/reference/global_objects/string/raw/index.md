@@ -5,9 +5,18 @@ slug: Web/JavaScript/Reference/Global_Objects/String/raw
 
 {{JSRef}}
 
-**`String.raw()`** 静态方法是[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/template_strings)的标签函数。它的作用类似于 Python 中的 `r` 前缀或 C# 中用于字符串字面量的 `@` 前缀。它用于获取模板字符串的原始字符串形式——即，替换表达式（例如 `${foo}`）会被替换处理，但转义序列（例如 `\n`）不会被处理。
+**`String.raw()`** 静态方法是[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)的标签函数。它的作用类似于 Python 中的 `r` 前缀或 C# 中用于字符串字面量的 `@` 前缀。它用于获取模板字符串的原始字符串形式——即，替换表达式（例如 `${foo}`）会被替换处理，但转义序列（例如 `\n`）不会被处理。
 
-{{EmbedInteractiveExample("pages/js/string-raw.html")}}
+{{InteractiveExample("JavaScript Demo: String.raw()")}}
+
+```js interactive-example
+// Create a variable that uses a Windows
+// path without escaping the backslashes:
+const filePath = String.raw`C:\Development\profile\aboutme.html`;
+
+console.log(`The file was uploaded from: ${filePath}`);
+// Expected output: "The file was uploaded from: C:\Development\profile\aboutme.html"
+```
 
 ## 语法
 
@@ -24,7 +33,7 @@ String.raw`templateString`
 - `...substitutions`
   - : 包含的替换表达式对应的值。
 - `templateString`
-  - : 一个[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/template_strings)，可以包含替换表达式（`${...}`）。
+  - : 一个[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)，可以包含替换表达式（`${...}`）。
 
 ### 返回值
 
@@ -41,7 +50,8 @@ String.raw`templateString`
 
 `String.raw()` 是唯一一个内置的模板字符串标签函数，因为它太常用了。不过它并没有什么特殊能力，你自己也可以实现一个和它功能一模一样的标签函数。
 
-> **警告：** 不应直接将 `String.raw` 作为“标识”标签。请参见[构建标识标签](#构建标识标签)以了解如何实现此操作。
+> [!WARNING]
+> 不应直接将 `String.raw` 作为“标识”标签。请参见[构建标识标签](#构建标识标签)以了解如何实现此操作。
 
 如果使用没有 `length` 属性或 `length` 为非正数的 `raw` 属性的对象调用 `String.raw()` 方法，它将返回一个空字符串 `""`。如果 `substitutions.length < strings.raw.length - 1`（即没有足够的替换项来填充占位符——这在一个格式正确的标记模板字面量中是不可能发生的），则其余的占位符将被填充为空字符串。
 
@@ -125,4 +135,4 @@ String.raw({ raw: "test" }, 0, 1, 2); // 't0e1s2t'
 - [`core-js` 中 `String.raw` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - [模版字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)
 - {{jsxref("String")}}
-- [词法文法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)

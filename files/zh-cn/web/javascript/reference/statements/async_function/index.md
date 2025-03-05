@@ -11,7 +11,26 @@ l10n:
 
 你也可以使用 [`async function` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function)来定义异步函数。
 
-{{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Statement - Async", "taller")}}
+
+```js interactive-example
+function resolveAfter2Seconds() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("resolved");
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log("calling");
+  const result = await resolveAfter2Seconds();
+  console.log(result);
+  // Expected output: "resolved"
+}
+
+asyncCall();
+```
 
 ## 语法
 
@@ -68,7 +87,7 @@ function foo() {
 }
 ```
 
-> **备注：**
+> [!NOTE]
 >
 > 即使异步函数的返回值看起来像是被包装在了一个 `Promise.resolve` 中，但它们不是等价的。
 >
@@ -248,7 +267,8 @@ setTimeout(concurrent2, 10000); // 1 秒后，打印“fast”，然后过 1 秒
 
 如果你希望在并发执行的两个或多个任务完成后安全地执行其他任务，那么在这些任务开始前，你必须等待对 {{jsxref("Promise.all()")}} 或 {{jsxref("Promise.allSettled()")}} 的调用。
 
-> **警告：** 函数 `sequentialWait` 和 `concurrent1` 在功能上并非等价的。
+> [!WARNING]
+> 函数 `sequentialWait` 和 `concurrent1` 在功能上并非等价的。
 >
 > 在 `sequentialWait` 中，如果较快的 promise 先于较慢的 promise 兑现前拒绝，则会出现未处理的 promise 拒绝错误，无论调用者是否配置了 catch 子句。
 >

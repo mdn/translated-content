@@ -3,7 +3,7 @@ title: browserSettings
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings
 ---
 
-{{AddonSidebar}}Habilita uma extensão para modificar certas configurações globais do navegador. Cada propriedade desta API é um objeto {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}}, provendo a capacidade de modificar uma configuração particular.Devido estas serem configurações globais, é possível haver conflito entre extensões. Veja a documentação [`BrowserSetting.set()`](/pt-BR/Add-ons/WebExtensions/API/types/BrowserSetting/set) para detalhes de como ligar com conflitos .
+{{AddonSidebar}}Habilita uma extensão para modificar certas configurações globais do navegador. Cada propriedade desta API é um objeto {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}}, provendo a capacidade de modificar uma configuração particular.Devido estas serem configurações globais, é possível haver conflito entre extensões. Veja a documentação [`BrowserSetting.set()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set) para detalhes de como ligar com conflitos .
 
 Para usar esta API você precisa ter a [permissão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "browserSettings".
 
@@ -36,7 +36,7 @@ Para usar esta API você precisa ter a [permissão](/pt-BR/docs/Mozilla/Add-ons/
 - {{WebExtAPIRef("browserSettings.useDocumentFonts")}}
   - : Controle se o navegador usará as fontes especificadas pela página web ou somente fontes embutidas.
 - {{WebExtAPIRef("browserSettings.webNotificationsDisabled")}}
-  - : Previne que os sites exibam notificações usando a API Web [`Notification`](/pt-BR/docs/Web/API/notification).
+  - : Previne que os sites exibam notificações usando a API Web [`Notification`](/pt-BR/docs/Web/API/Notification).
 
 ## Compatibilidade com navegadores
 

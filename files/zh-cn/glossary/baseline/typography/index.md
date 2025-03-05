@@ -2,7 +2,7 @@
 title: 基线（排版）
 slug: Glossary/Baseline/Typography
 l10n:
-  sourceCommit: 3e4bc80815d0fe8dd7879bb2af4f01572977aa10
+  sourceCommit: 703476742325afe583b74ba0203ff0894b831110
 ---
 
 {{GlossarySidebar}}
@@ -10,8 +10,6 @@ l10n:
 **基线**（baseline）是指欧洲和西亚文字排版中，字体中大多数文字坐落在其上的一条假想线。
 
 东亚文字没有基线，所有字形（glyph）坐落在一个方框中，既没有升部（ascender）也没有降部（descender）。当与有低基线的文字混排时，东亚文字应该坐落在有低基线的文字的基线与降部高度的中间。
-
-{{GlossaryDisambiguation}}
 
 ## 参见
 

@@ -7,15 +7,15 @@ slug: Web/HTML/Element/area
 
 O _HTML `<area>` elemento_ define uma região hot-spot em uma imagem, e, opcionalmente, associa-lo com um {{Glossary ("Hyperlink", "link de hipertexto")}}. Este elemento é usado somente dentro de um {{HTMLElement ("map")}} elemento.
 
-- _[As categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [de conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content) , [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content) .
+- _[As categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [de conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content) , [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content) .
 - _Permitida conteúdo_ vazio; este é um elemento vazio.
-- _Tag omissão_ {{no_tag_omission}}
-- _Permitida elementos pai_ Qualquer elemento que aceita [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content) . O `<area>` elemento deve ter um ancestral {{HTMLElement ("mapa")}}, mas ele não precisa ser um pai direta.
+- _Tag omissão_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
+- _Permitida elementos pai_ Qualquer elemento que aceita [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content) . O `<area>` elemento deve ter um ancestral {{HTMLElement ("mapa")}}, mas ele não precisa ser um pai direta.
 - _Interface DOM_ {{domxref ("HTMLAreaElement")}}
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `accesskey`
   - : Especifica um acelerador de navegação pelo teclado para o elemento. Pressionando ALT ou uma chave semelhante, em associação com o caractere especificado seleciona a forma de controle correlacionada com a seqüência de teclas. Os projetistas de página são avisados para evitar sequências de teclas já vinculados aos navegadores. Este atributo é global desde HTML5.
@@ -28,7 +28,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 - `href`
   - : A meta de hyperlink para a área. Seu valor é uma URL válida. Em HTML4, quer este atributo ou o **nohref** atributo deve estar presente no elemento. Em HTML5, este atributo pode ser omitido; em caso afirmativo, o elemento de área não representa um hiperlink.
 - `hreflang`
-  - : Indica o idioma do recurso ligado. Os valores permitidos são determinados por [BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt) . Utilize este atributo somente se a **href** atributo está presente.
+  - : Indica o idioma do recurso ligado. Os valores permitidos são determinados por [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt) . Utilize este atributo somente se a **href** atributo está presente.
 - `name`
   - : Defina um nome para a área clicável de modo que possa ser programado por navegadores mais antigos.
 - `media`

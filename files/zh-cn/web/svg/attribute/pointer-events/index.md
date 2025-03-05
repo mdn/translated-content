@@ -56,7 +56,7 @@ window.addEventListener("mouseup", (e) => {
 
 作为一个展示属性，他可以被很多元素使用，但和它紧密相关的只有下面的 23 个元素：{{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('marker')}}, {{SVGElement('mask')}}, {{SVGElement('path')}}, {{SVGElement('pattern')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('svg')}}, {{SVGElement('switch')}}, {{SVGElement('symbol')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tspan')}}, {{SVGElement('use')}}
 
-## 用法
+## 使用说明
 
 | 值         | `bounding-box` \| `visiblePainted` \| `visibleFill` \| `visibleStroke` \| `visible` \| `painted` \| `fill` \| `stroke` \| `all` \| `none` |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------- |

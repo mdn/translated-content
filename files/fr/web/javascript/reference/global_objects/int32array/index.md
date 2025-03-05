@@ -17,7 +17,7 @@ new Int32Array(objet);
 new Int32Array(buffer [, positionOctet [, longueur]]);
 ```
 
-Pour plus d'informations sur la syntaxe du constructeur, voir la page sur les [tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Syntaxe) _(TypedArray)_.
+Pour plus d'informations sur la syntaxe du constructeur, voir la page sur les [tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntaxe) _(TypedArray)_.
 
 ## Propriétés
 
@@ -168,6 +168,6 @@ var dv = new Int32Array([1, 2, 3]);
 
 ## Voir aussi
 
-- [Les tableaux typés (_typed arrays_) en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- [Les tableaux typés (_typed arrays_) en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

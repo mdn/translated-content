@@ -9,7 +9,8 @@ l10n:
 
 La méthode statique **`WebAssembly.instantiateStreaming()`** permet de compiler et d'instancier un module WebAssembly depuis un flux source. C'est la méthode la plus efficace, et la plus optimisée, permettant de charger du code WebAssembly.
 
-> **Note :** Les pages web qui utilisent une [CSP](/fr/docs/Web/HTTP/CSP) stricte peuvent bloquer la compilation WebAssembly et l'exécution des modules. Pour plus d'informations pour l'autorisation de la compilation et de l'exécution, voir [la directive CSP `script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
+> [!NOTE]
+> Les pages web qui utilisent une [CSP](/fr/docs/Web/HTTP/CSP) stricte peuvent bloquer la compilation WebAssembly et l'exécution des modules. Pour plus d'informations pour l'autorisation de la compilation et de l'exécution, voir [la directive CSP `script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
 
 ## Syntaxe
 
@@ -22,7 +23,7 @@ WebAssembly.instantiateStreaming(source, importObject)
 - `source`
   - : Un objet [`Response`](/fr/docs/Web/API/Response) ou une promesse qui sera tenue avec une valeur [`Response`](/fr/docs/Web/API/Response) qui représente la source du module .wasm dont on souhaite récupérer le flux, la compiler puis l'instancier.
 - `importObject` {{optional_inline}}
-  - : Un objet qui contient les valeurs qui doivent être importées dans le nouvel objet `Instance` résultant. Cela peut être des fonctions ou des objets [`WebAssembly.Memory`](/fr/docs/WebAssembly/JavaScript_interface/Memory). Il est nécessaire qu'il y ait une propriété correspondante pour chaque import déclaré dans le module compilé, sinon, une exception [`WebAssembly.LinkError`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/WebAssembly/LinkError) sera levée.
+  - : Un objet qui contient les valeurs qui doivent être importées dans le nouvel objet `Instance` résultant. Cela peut être des fonctions ou des objets [`WebAssembly.Memory`](/fr/docs/WebAssembly/JavaScript_interface/Memory). Il est nécessaire qu'il y ait une propriété correspondante pour chaque import déclaré dans le module compilé, sinon, une exception [`WebAssembly.LinkError`](/fr/docs/WebAssembly/JavaScript_interface/LinkError) sera levée.
 
 ### Valeur de retour
 
@@ -40,7 +41,7 @@ Un objet `Promise` dont la valeur de résolution est un objet `ResultObject` con
 
 ## Examples
 
-Dans l'exemple suivant (également disponible sur GitHub&nbsp;: [`instantiate-streaming.html`](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/instantiate-streaming.html) et avec [le résultat <i lang="en">live</i>](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)), on récupère le flux d'un module .wasm depuis une source, on le compile et on l'instancie. La promesse est alors résolue avec un objet `ResultObject`. La méthode `instantiateStreaming()` acceptant une promesse fournissant un objet [`Response`](/fr/docs/Web/API/Response), on peut directement l'appel de [`fetch()`](/fr/docs/Web/API/fetch) en argument qui transfèrera la réponse lorsque la promesse résultante sera tenue.
+Dans l'exemple suivant (également disponible sur GitHub&nbsp;: [`instantiate-streaming.html`](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/instantiate-streaming.html) et avec [le résultat <i lang="en">live</i>](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)), on récupère le flux d'un module .wasm depuis une source, on le compile et on l'instancie. La promesse est alors résolue avec un objet `ResultObject`. La méthode `instantiateStreaming()` acceptant une promesse fournissant un objet [`Response`](/fr/docs/Web/API/Response), on peut directement l'appel de [`fetch()`](/fr/docs/Web/API/Window/fetch) en argument qui transfèrera la réponse lorsque la promesse résultante sera tenue.
 
 ```js
 const importObject = { imports: { imported_func: (arg) => console.log(arg) } };
@@ -52,7 +53,8 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 Ensuite, on accède au champ `instance` de l'objet `ResultObject` afin de pouvoir invoquer une des fonctions exportées.
 
-> **Note :** Pour que cela fonctionne, il faut que les fichiers soient renvoyés avec le type MIME `application/wasm` par le serveur.
+> [!NOTE]
+> Pour que cela fonctionne, il faut que les fichiers soient renvoyés avec le type MIME `application/wasm` par le serveur.
 
 ## Spécifications
 

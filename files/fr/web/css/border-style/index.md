@@ -49,7 +49,8 @@ border-style: revert;
 border-style: unset;
 ```
 
-> **Note :** La valeur par défaut de `border-style` est `none`. Cela signifie que si on modifie [`border-width`](/fr/docs/Web/CSS/border-width) et [`border-color`](/fr/docs/Web/CSS/border-color), on ne verra pas la bordure tant que cette propriété n'est pas différente de `none` ou de `hidden`.
+> [!NOTE]
+> La valeur par défaut de `border-style` est `none`. Cela signifie que si on modifie [`border-width`](/fr/docs/Web/CSS/border-width) et [`border-color`](/fr/docs/Web/CSS/border-color), on ne verra pas la bordure tant que cette propriété n'est pas différente de `none` ou de `hidden`.
 
 La propriété `border-style` peut être définie avec une, deux, trois ou quatre valeurs&nbsp;:
 

@@ -2,14 +2,34 @@
 title: handler.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 5c9b080f763346a4a18cc2c50fa4e21d2feec700
 ---
 
 {{JSRef}}
 
 **`handler.construct()`** メソッドは、オブジェクトの `[[Construct]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Operators/new", "new")}} 演算子などの操作で使用されます。結果としてのプロキシーオブジェクトが new 演算子を使用できるようにするためには、プロキシを初期化するために使用されるターゲット自体が有効なコンストラクターである必要があります。
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-construct.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.construct()", "taller")}}
+
+```js interactive-example
+function monster1(disposition) {
+  this.disposition = disposition;
+}
+
+const handler1 = {
+  construct(target, args) {
+    console.log(`Creating a ${target.name}`);
+    // Expected output: "Creating a monster1"
+
+    return new target(...args);
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+console.log(new proxy1("fierce").disposition);
+// Expected output: "fierce"
+```
 
 ## 構文
 
@@ -17,7 +37,7 @@ l10n:
 new Proxy(target, {
   construct(target, argumentsList, newTarget) {
   }
-});
+})
 ```
 
 ### 引数
@@ -25,15 +45,15 @@ new Proxy(target, {
 次の引数が `construct()` メソッドに渡されます。 `this` はハンドラーにバインドされます。
 
 - `target`
-  - : ターゲットオブジェクト
+  - : ターゲットのコンストラクターオブジェクトです。
 - `argumentsList`
-  - : コンストラクタに対する引数のリスト
+  - : コンストラクターに渡された引数の入った配列 ({{jsxref("Array")}}) です。
 - `newTarget`
-  - : 上記の `p` に呼び出された元のコンストラクターです。
+  - : 呼び出された元のコンストラクターです。
 
 ### 返値
 
-`construct` メソッドはオブジェクトを返す必要があります。
+`construct` メソッドは新しく作成されたオブジェクトを表すオブジェクトを返す必要があります。
 
 ## 解説
 
@@ -48,9 +68,10 @@ new Proxy(target, {
 
 ### 不変条件
 
-以下の不変条件に違反している場合、呼び出されるとトラップで {{jsxref("TypeError")}} が発生します。
+プロキシーの `[[Construct]]` 内部メソッドは、以下の不変条件に違反している場合、呼び出されるとトラップで {{jsxref("TypeError")}} が発生します。
 
-- 結果が `Object` でならなければならない。
+- `target` がコンストラクター自身でなければならない。
+- 返値は {{jsxref("Object")}} でなければならない。
 
 ## 例
 
@@ -109,5 +130,5 @@ new p(); // TypeError is thrown, "p" is not a constructor
 
 - {{jsxref("Proxy")}}
 - [`Proxy()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Operators/new", "new")}} 演算子
+- {{jsxref("Operators/new", "new")}}
 - {{jsxref("Reflect.construct()")}}

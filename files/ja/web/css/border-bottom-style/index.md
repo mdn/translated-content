@@ -2,7 +2,7 @@
 title: border-bottom-style
 slug: Web/CSS/border-bottom-style
 l10n:
-  sourceCommit: d73dd4355247934e6b3f7081d3c1189089ecdc1e
+  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
 {{CSSRef}}
@@ -11,7 +11,8 @@ l10n:
 
 {{EmbedInteractiveExample("pages/css/border-bottom-style.html")}}
 
-> **メモ:** 仕様書では、異なるスタイルの境界線を角でどの様に接続するかを定義していません。
+> [!NOTE]
+> 仕様書では、異なるスタイルの境界線を角でどの様に接続するかを定義していません。
 
 ## 構文
 
@@ -52,7 +53,7 @@ border-bottom-style: unset;
 
 #### HTML
 
-```html
+```html live-sample___demonstrating_all_border_styles
 <table>
   <tr>
     <td class="b1">none</td>
@@ -75,7 +76,7 @@ border-bottom-style: unset;
 
 #### CSS
 
-```css
+```css live-sample___demonstrating_all_border_styles
 /* 表の外見を定義 */
 table {
   border-width: 3px;
@@ -121,7 +122,7 @@ td {
 
 #### 結果
 
-{{ EmbedLiveSample('すべての境界線のスタイルのデモ', 300, 200) }}
+{{ EmbedLiveSample('Demonstrating_all_border_styles', 300, 200) }}
 
 ## 仕様書
 

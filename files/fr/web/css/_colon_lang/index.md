@@ -1,5 +1,5 @@
 ---
-title: ":lang"
+title: :lang
 slug: Web/CSS/:lang
 ---
 
@@ -15,7 +15,8 @@ p:lang(en) {
 }
 ```
 
-> **Note :** En HTML, la langue d'un élément est déterminée par l'attribut [`lang`](/fr/docs/Web/HTML/Global_attributes#lang), l'élément {{HTMLElement("meta")}} et d'autres informations comme les en-têtes HTTP ; pour les autres types de documents, d'autres méthodes peuvent être utilisées.
+> [!NOTE]
+> En HTML, la langue d'un élément est déterminée par l'attribut [`lang`](/fr/docs/Web/HTML/Global_attributes#lang), l'élément {{HTMLElement("meta")}} et d'autres informations comme les en-têtes HTTP ; pour les autres types de documents, d'autres méthodes peuvent être utilisées.
 >
 > Les chaînes de caractères admissibles pour définir des langues sont définies dans la spécification HTML 4.0.
 

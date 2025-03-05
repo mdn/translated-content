@@ -10,7 +10,8 @@ l10n:
 
 **`forms`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、文書内に含まれるすべての {{HTMLElement("form")}} を列挙した {{domxref("HTMLCollection")}} を返します。
 
-> **メモ:** 同様に、{{domxref("HTMLFormElement.elements")}} プロパティを使用すると、フォームコンポーネントのユーザー入力要素のリストにアクセスすることができます。
+> [!NOTE]
+> 同様に、{{domxref("HTMLFormElement.elements")}} プロパティを使用すると、フォームコンポーネントのユーザー入力要素のリストにアクセスすることができます。
 
 ## 値
 

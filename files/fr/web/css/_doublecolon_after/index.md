@@ -1,5 +1,5 @@
 ---
-title: "::after"
+title: ::after
 slug: Web/CSS/::after
 l10n:
   sourceCommit: b7821748a66d5c581c17ddf62a74edf83638623e
@@ -11,7 +11,8 @@ En CSS, **`::after`** crée un [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elemen
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-element-after.html", "tabbed-standard")}}
 
-> **Note :** Les pseudo-éléments générés par `::before` et `::after` sont [contenus dans la boîte de mise en forme de l'élément](https://www.w3.org/TR/CSS2/generate.html#before-after-content). Aussi, [`::before`](/fr/docs/Web/CSS/::before) et `::after` ne s'appliquent pas aux _[éléments remplacés](/fr/docs/Web/CSS/Replaced_element)_ tels que les éléments [`<img>`](/fr/docs/Web/HTML/Element/img) ou [`<br>`](/fr/docs/Web/HTML/Element/br).
+> [!NOTE]
+> Les pseudo-éléments générés par `::before` et `::after` sont [contenus dans la boîte de mise en forme de l'élément](https://www.w3.org/TR/CSS2/generate.html#before-after-content). Aussi, [`::before`](/fr/docs/Web/CSS/::before) et `::after` ne s'appliquent pas aux _[éléments remplacés](/fr/docs/Web/CSS/Replaced_element)_ tels que les éléments [`<img>`](/fr/docs/Web/HTML/Element/img) ou [`<br>`](/fr/docs/Web/HTML/Element/br).
 
 ## Syntaxe
 
@@ -24,7 +25,8 @@ En CSS, **`::after`** crée un [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elemen
 
 Si la propriété [`content`](/fr/docs/Web/CSS/content) n'est pas indiquée, contient une valeur invalide, vaut `normal`, ou vaut `none`, le pseudo-élément `::after` ne sera pas rendu à l'écran. Il se comportera comme si `display: none` avait été appliqué.
 
-> **Note :** CSS a introduit la notation `::after` (avec deux deux-points) pour distinguer les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements). Les navigateurs acceptent aussi la notation `:after`, introduite précédemment, à des fins de rétro-compatibilité.
+> [!NOTE]
+> CSS a introduit la notation `::after` (avec deux deux-points) pour distinguer les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements). Les navigateurs acceptent aussi la notation `:after`, introduite précédemment, à des fins de rétro-compatibilité.
 
 ## Exemples
 

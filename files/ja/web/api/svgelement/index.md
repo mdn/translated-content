@@ -2,7 +2,7 @@
 title: SVGElement
 slug: Web/API/SVGElement
 l10n:
-  sourceCommit: c75fd1e241ed19f19400edb2765651949f35931f
+  sourceCommit: 32305cc3cf274fbfdcc73a296bbd400a26f38296
 ---
 
 {{APIRef("SVG")}}
@@ -17,7 +17,7 @@ _{{DOMxRef("Element")}} インターフェイスから継承したプロパテ�
 
 - {{DOMxRef("SVGElement.attributeStyleMap")}} {{ReadOnlyInline}}
   - : {{DOMxRef("StylePropertyMap")}} で、要素の {{SVGAttr("style")}} 属性の宣言を表します。
-- {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
+- {{DOMxRef("SVGElement.dataset")}} {{ReadOnlyInline}}
   - : {{DOMxRef("DOMStringMap")}} オブジェクトで、要素に添付された[カスタムデータ属性](/ja/docs/Learn/HTML/Howto/Use_data_attributes)に対応する、名前つきデータ属性のキーと値の組のリストを提供します。これらの組は SVG でも {{SVGAttr("data-*")}} の形で定義することができ、 `*` が、その組のキー名です。これは、HTML の {{DOMxRef("HTMLElement.dataset")}} 属性および HTML の [`data-*`](/ja/docs/Web/HTML/Global_attributes/data-*) グローバル属性と同様に動作します。
 - {{DOMxRef("SVGElement.className")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : {{DOMxRef("SVGAnimatedString")}} で、指定された要素上の {{SVGAttr("class")}} 属性の値を反映します。 `class` が存在しない場合は空文字列になります。この属性は非推奨であり、この仕様の将来のバージョンでは削除されるかもしれません。代わりに {{DOMxRef("Element.classList")}} を使用することをお勧めします。
@@ -30,7 +30,7 @@ _{{DOMxRef("Element")}} インターフェイスから継承したプロパテ�
 - {{DOMxRef("SVGElement.tabIndex")}}
   - : タブ順序における要素の位置です。
 - {{DOMxRef("SVGElement.viewportElement")}} {{ReadOnlyInline}}
-  - : 現在のビューポートを確立した {{DOMxRef("SVGElement")}} です。多くの場合は、直近の先祖の {{SVGElement("svg")}} 要素です。もし、与えられた要素が最も外側の `<svg>` 要素であれば、`null` です。
+  - : 現在のビューポートを確立した `SVGElement` です。多くの場合は、直近の先祖の {{SVGElement("svg")}} 要素です。もし、与えられた要素が最も外側の `<svg>` 要素であれば、`null` です。
 
 ## メソッド
 
@@ -65,4 +65,4 @@ _このインターフェイスにはメソッドがありませんが、 {{DOMx
 
 - HTML [`data-*`](/ja/docs/Web/HTML/Global_attributes/data-*) 属性
 - SVG {{SVGAttr("data-*")}} 属性
-- [HTML におけるカスタムデータ属性の使用](/ja/docs/earn/HTML/Howto/Use_data_attributes)
+- [HTML におけるカスタムデータ属性の使用](/ja/docs/Learn/HTML/Howto/Use_data_attributes)

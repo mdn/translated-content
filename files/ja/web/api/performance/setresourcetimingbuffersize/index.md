@@ -41,7 +41,7 @@ setResourceTimingBufferSize(maxSize)
 performance.setResourceTimingBufferSize(500);
 ```
 
-バッファーサイズを現在の項目数より小さい数に設定すると、項目は除去されません。代わりに、バッファをクリアするには {{domxref("Performance.clearResourceTimings()")}} を呼び出してください。
+バッファーサイズを現在の項目数より小さい数に設定すると、項目は除去されません。代わりに、バッファーをクリアするには {{domxref("Performance.clearResourceTimings()")}} を呼び出してください。
 
 ```js
 performance.getEntriesByType("resource").length; // 20

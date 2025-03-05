@@ -11,7 +11,8 @@ A propriedade [CSS](/pt-BR/docs/Web/CSS) **`background-origin`** define _a área
 
 Note que `background-origin` é ignorado quando {{cssxref("background-attachment")}} é `fixed`.
 
-> **Nota:** A taquigrafia {{cssxref("background")}} redefine o valor desta propriedade para seu valor inicial se esta não foi específicada.
+> [!NOTE]
+> A taquigrafia {{cssxref("background")}} redefine o valor desta propriedade para seu valor inicial se esta não foi específicada.
 
 ## Sintaxe
 
@@ -66,7 +67,8 @@ A propriedade `background-origin` é especificada por uma chave de valores lista
 
 ```css
 div {
-  background-image: url("logo.jpg"), url("mainback.png"); /* Applies two images to the background */
+  background-image:
+    url("logo.jpg"), url("mainback.png"); /* Applies two images to the background */
   background-position:
     top right,
     0px 0px;

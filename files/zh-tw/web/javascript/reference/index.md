@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference
 
 {{JsSidebar}}
 
-在 MDN 的 JavaScript 分區中，這一部分被作爲 Javascript 的資料庫。閱讀[關於該參考](/zh-TW/docs/Web/JavaScript/Reference/About)以了解更多。
+在 MDN 的 JavaScript 分區中，這一部分被作爲 Javascript 的資料庫。閱讀[關於該參考](/zh-TW/docs/Web/JavaScript/Reference)以了解更多。
 
 ## 全域物件
 

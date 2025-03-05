@@ -97,5 +97,5 @@ La propriété `border-image-outset` peut être définie à l'aide d'une, deux, 
 
 ## Voir aussi
 
-- [Les arrière-plans et bordures](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [Les arrière-plans et bordures](/fr/docs/Web/CSS/CSS_backgrounds_and_borders)
 - [Apprendre le CSS&nbsp;: les arrière-plans et les bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

@@ -13,9 +13,11 @@ l10n:
 
 始めに、テクスチャを読み込むコードを追加します。今回は単一のテクスチャを用いて、そのテクスチャを立方体の全 6 面に貼り付けますが、テクスチャがいくつある場合でも同じ方法が適用できます。
 
-> **メモ:** テクスチャの読み込みは[クロスドメインのルール](/ja/docs/Web/HTTP/CORS)に従うことへの注意が重要です。すなわち、コンテンツが CORS で認可されているサイトからのみ、テクスチャを読み込むことができます。詳しくは以下の[ドメインをまたぐテクスチャ](#ドメインをまたぐテクスチャ)を参照してください。
+> [!NOTE]
+> テクスチャの読み込みは[クロスドメインのルール](/ja/docs/Web/HTTP/CORS)に従うことへの注意が重要です。すなわち、コンテンツが CORS で認可されているサイトからのみ、テクスチャを読み込むことができます。詳しくは以下の[ドメインをまたぐテクスチャ](#ドメインをまたぐテクスチャ)を参照してください。
 
-> **メモ:** これら 2 つの関数を "webgl-demo.js" スクリプトに追加しましょう。
+> [!NOTE]
+> これら 2 つの関数を "webgl-demo.js" スクリプトに追加しましょう。
 
 ```js
 //
@@ -114,7 +116,8 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
 
 そのため、レンダリング時に画像テクスチャが間違った方向になるのを防ぐために、 [`pixelStorei()`](/ja/docs/Web/API/WebGLRenderingContext/pixelStorei) を `gl.UNPACK_FLIP_Y_WEBGL` 引数を `true` に設定して呼び出す必要があります。
 
-> **メモ:** 以下のコードを `main()` 関数の `initBuffers()` を呼び出した直後に追加してください。
+> [!NOTE]
+> 以下のコードを `main()` 関数の `initBuffers()` を呼び出した直後に追加してください。
 
 ```js
 // テクスチャの読み込み
@@ -123,13 +126,15 @@ const texture = loadTexture(gl, "cubetexture.png");
 gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
 ```
 
-> **メモ:** 最後に、 [cubetexture.png](https://raw.githubusercontent.com/mdn/dom-examples/main/webgl-examples/tutorial/sample6/cubetexture.png) ファイルを JavaScript ファイルと同じローカルディレクトリーにダウンロードしましょう。
+> [!NOTE]
+> 最後に、 [cubetexture.png](https://raw.githubusercontent.com/mdn/dom-examples/main/webgl-examples/tutorial/sample6/cubetexture.png) ファイルを JavaScript ファイルと同じローカルディレクトリーにダウンロードしましょう。
 
 ## テクスチャを表面にマッピングする
 
 以上で、テクスチャの読み込みと使用する準備ができました。しかしテクスチャが使用できるようになるには、まず立方体の面の頂点にテクスチャの座標をマッピングする必要があります。これには `initBuffers()` にある、立方体の各面に色を設定する既存のコードを置き換えます。
 
-> **メモ:** この関数を "init-buffer.js" モジュールに追加しましょう。
+> [!NOTE]
+> この関数を "init-buffer.js" モジュールに追加しましょう。
 
 ```js
 function initTextureBuffer(gl) {
@@ -171,13 +176,15 @@ function initTextureBuffer(gl) {
 
 次に、色バッファーの代わりにテクスチャー座標バッファーを作成して返すように `initBuffers()` を更新する必要があります。
 
-> **メモ:** "init-buffers.js" モジュールの `initBuffers()` 関数で、 `initColorBuffer()` の呼び出しを以下の行に置き換えましょう。
+> [!NOTE]
+> "init-buffers.js" モジュールの `initBuffers()` 関数で、 `initColorBuffer()` の呼び出しを以下の行に置き換えましょう。
 
 ```js
 const textureCoordBuffer = initTextureBuffer(gl);
 ```
 
-> **メモ:** "init-buffers.js" モジュールの `initBuffers()` 関数で、 `return` 文を以下に置き換えましょう。
+> [!NOTE]
+> "init-buffers.js" モジュールの `initBuffers()` 関数で、 `return` 文を以下に置き換えましょう。
 
 ```js
 return {
@@ -195,7 +202,8 @@ return {
 
 頂点シェーダーを、色データを取得する代わりに、テクスチャ座標データを取得するように置き換える必要があります。
 
-> **メモ:** 以下のように `main()` 関数の `vsSource` 宣言を更新しましょう。
+> [!NOTE]
+> 以下のように `main()` 関数の `vsSource` 宣言を更新しましょう。
 
 ```js
 const vsSource = `
@@ -220,7 +228,8 @@ const vsSource = `
 
 フラグメントシェーダーも同様に更新する必要があります。
 
-> **メモ:** 以下のように `main()` 関数の `fsSource` 宣言を更新しましょう。
+> [!NOTE]
+> 以下のように `main()` 関数の `fsSource` 宣言を更新しましょう。
 
 ```js
 const fsSource = `
@@ -262,7 +271,8 @@ const programInfo = {
 
 `drawScene()` 関数の変更点は簡単です。
 
-> **メモ:** "draw-scene.js" モジュールの `drawScene()` 関数内に、以下の関数を追加しましょう。
+> [!NOTE]
+> "draw-scene.js" モジュールの `drawScene()` 関数内に、以下の関数を追加しましょう。
 
 ```js
 // テクスチャ座標をバッファーから取り出す方法を webgl に伝える。
@@ -285,7 +295,8 @@ function setTextureAttribute(gl, buffers, programInfo) {
 }
 ```
 
-> **メモ:** "draw-scene.js" モジュールの `drawScene()` 関数内で、 `setColorAttribute()` の呼び出しを以下の行に置き換えましょう。
+> [!NOTE]
+> "draw-scene.js" モジュールの `drawScene()` 関数内で、 `setColorAttribute()` の呼び出しを以下の行に置き換えましょう。
 
 ```js
 setTextureAttribute(gl, buffers, programInfo);
@@ -332,7 +343,7 @@ drawScene(gl, programInfo, buffers, texture, cubeRotation);
 
 WebGL のテクスチャの読み込みは、ドメイン間アクセス制御に従います。コンテンツで他のドメインからテクスチャを読み込むためには、 CORS で許可を得なければなりません。 CORS について詳しくは、 [HTTP アクセス制御](/ja/docs/Web/HTTP/CORS) をご覧ください。
 
-WebGL は安全なコンテキストからテクスチャを読み込む必要があるため、 WebGL で `file:///` の URL から読み込んだテクスチャを使用することはできません。つまり、コードのテストと展開には、安全なウェブサーバーが必要だということです。ローカルでテストする場合は[ローカルテストサーバーを用意するには](/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)を参照してください。
+WebGL は保護されたコンテキストからテクスチャを読み込む必要があるため、 WebGL で `file:///` の URL から読み込んだテクスチャを使用することはできません。つまり、コードのテストと展開には、安全なウェブサーバーが必要だということです。ローカルでテストする場合は[ローカルテストサーバーを用意するには](/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)を参照してください。
 
 CORS で許可された画像を WebGL のテクスチャとして使用する方法の説明を、[こちらの hacks.mozilla.org の記事](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/)に掲載しています。
 

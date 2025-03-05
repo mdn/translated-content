@@ -46,4 +46,4 @@ WCAG 2.1 には以下が含まれます。
 
 このガイドは、より良く、よりアクセスしやすいウェブサイトを構築するのに役立つ実用的な情報を提供することを目的としています。 しかし、私たちは弁護士ではありません、そしてこれのどれも法的助言を構成しません。 ウェブのアクセシビリティが法的にどのような意味を持つのかを心配している場合は、あなたの国や地域のウェブや公共のリソースに対するアクセシビリティを規定する特定の法律を調べ、有資格の弁護士に相談することをお勧めします。
 
-[アクセシビリティとは？](/ja/docs/Learn/Accessibility/What_is_accessibility)と、その中の[アクセシビリティのガイドラインと法律](/ja/docs/Learn/Accessibility/What_is_accessibility#Accessibility_guidelines_and_the_law)のセクションには、より関連性の高い情報が記載されています。
+[アクセシビリティとは？](/ja/docs/Learn/Accessibility/What_is_accessibility)と、その中の[アクセシビリティのガイドラインと法律](/ja/docs/Learn/Accessibility/What_is_accessibility#accessibility_guidelines_and_the_law)のセクションには、より関連性の高い情報が記載されています。

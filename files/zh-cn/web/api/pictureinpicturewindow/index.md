@@ -2,7 +2,7 @@
 title: PictureInPictureWindow
 slug: Web/API/PictureInPictureWindow
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
 ---
 
 {{APIRef("Picture-in-Picture API")}}
@@ -31,7 +31,7 @@ _`PictureInPictureWindow` 接口不继承任何方法。_
 _`PictureInPictureWindow` 接口不继承任何事件。_
 
 - {{domxref("PictureInPictureWindow.resize_event", "resize")}}
-  - : 当浮动视频窗口的大小改变时，发送给 {{DOMxRef("PictureInPictureWindow")}}。
+  - : 当浮动视频窗口的大小改变时，发送给 `PictureInPictureWindow`。
 
 ## 示例
 

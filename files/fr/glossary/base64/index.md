@@ -11,18 +11,19 @@ l10n:
 
 Les schémas d'encodage en base64 sont principalement utilisés lorsqu'il s'agit d'enregistrer ou d'envoyer des données binaires via un média qui a été conçu pour gérer du texte en ASCII. Cette transformation permet de conserver l'intégrité des données envoyées lors du transport. Base64 est utilisé par plusieurs applications, notamment celles qui gèrent les courriels avec [MIME](https://fr.wikipedia.org/wiki/MIME), et le stockage de données complexes en [XML](/fr/docs/Web/XML).
 
-Sur le Web, on utilise généralement l'encodage base64 pour inclure des données binaires dans [une URL de données `data:`](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
+Sur le Web, on utilise généralement l'encodage base64 pour inclure des données binaires dans [une URL de données `data:`](/fr/docs/Web/URI/Schemes/data).
 
 En JavaScript, il existe deux fonctions utilisées pour encoder et décoder des chaînes en base64&nbsp;:
 
-- [`btoa()`](/fr/docs/Web/API/btoa)
+- [`btoa()`](/fr/docs/Web/API/Window/btoa)
   - : Crée une chaîne ASCII encodée en base64 à partir d'une «&nbsp;chaîne&nbsp;» de données binaires. (<i lang="en">btoa</i> signifie <i lang="en">binary to ASCII</i> en anglais, soit «&nbsp;binaire vers ASCII&nbsp;»)
-- [`atob()`](/fr/docs/Web/API/atob)
+- [`atob()`](/fr/docs/Web/API/Window/atob)
   - : Décode des données encodées en une chaîne de caractères en base64 (<i lang="en">atob</i> signifie <i lang="en">ASCII to binary</i> en anglais, soit «&nbsp;ASCII vers binaire&nbsp;»)
 
 L'algorithme utilisé par `atob()` et `btoa()` est défini dans la section 4 de [la RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648).
 
-> **Note :** La méthode `btoa()` s'attend à recevoir des données binaires et il émettra une erreur si la chaîne en paramètre contient n'importe lequel caractère dont la représentation UTF-16 occupe plus d'un octet.
+> [!NOTE]
+> La méthode `btoa()` s'attend à recevoir des données binaires et il émettra une erreur si la chaîne en paramètre contient n'importe lequel caractère dont la représentation UTF-16 occupe plus d'un octet.
 
 ## Augmentation de la taille lors de l'encodage
 
@@ -74,7 +75,8 @@ UnicodeDecodeB64("JUUyJTlDJTkzJTIwJUMzJUEwJTIwbGElMjBtb2Rl"); // "✓ à la mode
 
 ### Seconde solution&nbsp;: réécrire `atob()` et `btoa()` en utilisant des tableaux typés (`TypedArray`) et UTF-8
 
-> **Note :** Le code suivant peut également être utilisé pour obtenir un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) depuis une chaîne en base64 et vice-versa ([voir ci-après](#annexe_décoder_une_chaîne_en_base64_en_un_objet_uint8array_ou_arraybuffer)).
+> [!NOTE]
+> Le code suivant peut également être utilisé pour obtenir un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) depuis une chaîne en base64 et vice-versa ([voir ci-après](#annexe_décoder_une_chaîne_en_base64_en_un_objet_uint8array_ou_arraybuffer)).
 
 ```js
 "use strict";
@@ -326,7 +328,8 @@ var monBuffer = base64DecToArr(
 alert(monBuffer.byteLength);
 ```
 
-> **Note :** La fonction `base64DecToArr(sBase64[, nTailleBloc])` renvoie un [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) d'octets. Si vous souhaitez utiliser un tampon mémoire de 16 bits, 32 bits, 64 bits pour les données brutes, utilisez l'argument `nTailleBloc`, qui représente le nombre d'octets dont la propriété `uint8Array.buffer.bytesLength` doit être un multiple&nbsp;:
+> [!NOTE]
+> La fonction `base64DecToArr(sBase64[, nTailleBloc])` renvoie un [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) d'octets. Si vous souhaitez utiliser un tampon mémoire de 16 bits, 32 bits, 64 bits pour les données brutes, utilisez l'argument `nTailleBloc`, qui représente le nombre d'octets dont la propriété `uint8Array.buffer.bytesLength` doit être un multiple&nbsp;:
 >
 > - `1` ou pas de paramètre pour l'ASCII (chaque caractère dans la chaîne est considéré comme un octet de donnée binaire)
 > - `2` pour les chaînes UTF-16

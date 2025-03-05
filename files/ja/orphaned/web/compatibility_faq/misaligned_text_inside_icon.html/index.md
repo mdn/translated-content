@@ -81,4 +81,4 @@ slug: orphaned/Web/Compatibility_FAQ/Misaligned_Text_Inside_Icon.html
 - 画面サイズの可変に対応可能となります。
   - 他のブラウザーでも互換性を維持することができます。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

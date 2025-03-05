@@ -69,7 +69,8 @@ Flexbox 被设计为一维的布局工具，这意味着在处理元素布局方
 
 在下面的实时例子里，我有一个非包装的弹性容器。第三个物件相比其他的有跟多的内容被设置 `visibility: collaps` 并且因此弹性盒子会保持一个高度的结构来满足显示物件的需要。如果你从 CSS 里移除`visibility: collapse` 或是将值改变为 `visible`，你会看到物件消失了并且空间在非包装的物件之间重新分配；弹性容器的高度不应该改变。
 
-> **备注：** 对下面的两个例子使用 Firefox 浏览器，因为 Chrome 和 Safari 会把折叠处理为隐藏。
+> [!NOTE]
+> 对下面的两个例子使用 Firefox 浏览器，因为 Chrome 和 Safari 会把折叠处理为隐藏。
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/visibility-collapse.html", '100%', 650)}}
 

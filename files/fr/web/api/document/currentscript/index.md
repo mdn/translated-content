@@ -25,7 +25,7 @@ if (document.currentScript.async) {
 }
 ```
 
-[Voir l'exemple sur une page](/samples/html/currentScript.html)
+[Voir l'exemple sur une page](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
 ## Notes
 

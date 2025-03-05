@@ -26,11 +26,11 @@ l10n:
 无论何时渲染元素，这些属性都将用于确定文本的颜色、背景以及文本上的任何装饰。
 
 - {{cssxref("color")}}
-  - : 绘制文本和任何[文本装饰](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals#字体样式、字体粗细、文本转换和文本装饰)（如添加下划线或上划线、删除线等）时使用的颜色。
+  - : 绘制文本和任何[文本装饰](/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals#字体样式、字体粗细、文本转换和文本装饰)（如添加下划线或上划线、删除线等）时使用的颜色。
 - {{cssxref("background-color")}}
   - : 文本的背景色。
 - {{cssxref("text-shadow")}}
-  - : 配置应用于文字的阴影效果。阴影选项包括阴影的基色（然后根据其他参数将基色模糊并与背景混合）。请参阅[文字阴影](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals#文字阴影)以了解更多信息。
+  - : 配置应用于文字的阴影效果。阴影选项包括阴影的基色（然后根据其他参数将基色模糊并与背景混合）。请参阅[文字阴影](/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals#文字阴影)以了解更多信息。
 - {{cssxref("text-decoration-color")}}
   - : 默认情况下，文本装饰（如下划线、删除线等）使用 `color` 属性作为其颜色。不过，你可以使用 `text-decoration-color` 属性覆盖该行为，并为它们使用不同的颜色。
 - {{cssxref("text-emphasis-color")}}
@@ -53,7 +53,7 @@ l10n:
 
 ### 边框
 
-任何元素都可以在其周围绘制[边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)。基本的元素边框是围绕元素内容边缘绘制的一条线。请参阅[盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)了解元素与其边框之间的关系，并参阅文章[使用 CSS 为边框添加样式](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)了解为边框应用样式的更多信息。
+任何元素都可以在其周围绘制[边框](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)。基本的元素边框是围绕元素内容边缘绘制的一条线。请参阅[盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)了解元素与其边框之间的关系，并参阅文章[使用 CSS 为边框添加样式](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)了解为边框应用样式的更多信息。
 
 你可以使用 {{cssxref("border")}} 简写属性，这样就可以一次性配置边框的所有内容（包括边框的非颜色特性，如[宽度](/zh-CN/docs/Web/CSS/border-width)、[样式](/zh-CN/docs/Web/CSS/border-style)（实线、虚线等）等等）。
 
@@ -214,7 +214,8 @@ th {
 
 {{EmbedLiveSample("HSL 函数表示法", 300, 260)}}
 
-> **备注：** 如果省略了色相的单位，则假定其单位为度（`deg`）。
+> [!NOTE]
+> 如果省略了色相的单位，则假定其单位为度（`deg`）。
 
 #### HWB 函数表示法
 
@@ -474,7 +475,8 @@ Oklab 是一种色彩空间，它使用与 CIELAB 相同的模型类型，但在
 }
 ```
 
-> **备注：** 当尝试在 Safari 中显示它时，它将无法正常显示。因为 Safari 不支持 `text-decoration: underline wavy #88ff88`。
+> [!NOTE]
+> 当尝试在 Safari 中显示它时，它将无法正常显示。因为 Safari 不支持 `text-decoration: underline wavy #88ff88`。
 
 最后，`.boxRight` 类描述了绘制在右侧的方框的独特属性。它的配置是将方框浮动到右侧，使其出现在前一个方框的旁边。然后确定以下颜色：
 
@@ -496,7 +498,8 @@ Oklab 是一种色彩空间，它使用与 CIELAB 相同的模型类型，但在
 
 {{EmbedLiveSample("示例：选择一个颜色", 525, 275)}}
 
-> **备注：** 在 macOS 上，关闭颜色选择器窗口即表示已完成颜色选择。
+> [!NOTE]
+> 在 macOS 上，关闭颜色选择器窗口即表示已完成颜色选择。
 
 #### HTML
 
@@ -578,7 +581,8 @@ colorPicker.addEventListener(
 
 在尝试确定基本颜色时，你可能会发现能让你从网页内容中选择颜色的浏览器扩展程序会特别方便。其中有些甚至是专门为帮助完成此类工作而设计的。例如，[ColorZilla](https://www.colorzilla.com/) 网站提供了一个扩展工具（[Chrome](https://www.colorzilla.com/chrome/) 和 [Firefox](https://www.colorzilla.com/firefox/)），提供了一个从网页中挑选颜色的滴管工具。它还可以取不同大小区域甚至页面选定区域内像素颜色的平均值。
 
-> **备注：** 平均分配颜色的好处在于，通常看起来像纯色的颜色实际上是由多种相关颜色组成的，它们相互配合，创造出理想的效果。如果只选择其中的一个像素，那么得到的颜色本身看起来就很不协调。
+> [!NOTE]
+> 平均分配颜色的好处在于，通常看起来像纯色的颜色实际上是由多种相关颜色组成的，它们相互配合，创造出理想的效果。如果只选择其中的一个像素，那么得到的颜色本身看起来就很不协调。
 
 #### 丰富调色板
 
@@ -592,7 +596,8 @@ colorPicker.addEventListener(
 
 在设计调色板时，请务必记住，除了这些工具通常生成的颜色外，可能还需要添加一些核心中性色，如白色（或近似白色）、黑色（或近似黑色）以及一定数量的灰色。
 
-> **备注：** 通常情况下，使用尽可能少的颜色会好得多。通过使用色彩来突出重点，而不是为页面上的所有内容都添加色彩，这样就能使内容易于阅读，而且所使用的色彩也更有冲击力。
+> [!NOTE]
+> 通常情况下，使用尽可能少的颜色会好得多。通过使用色彩来突出重点，而不是为页面上的所有内容都添加色彩，这样就能使内容易于阅读，而且所使用的色彩也更有冲击力。
 
 ### 色彩理论的资源
 
@@ -609,7 +614,8 @@ colorPicker.addEventListener(
 
 你至少应该对[色盲](https://zh.wikipedia.org/wiki/色盲)进行基本研究。色盲有好几种，最常见的是红绿色盲，它会导致人们无法区分红色和绿色。还有其他一些色盲，从无法区分某些颜色到完全看不到颜色。
 
-> **备注：** 最重要的一条规则是：永远不要把颜色作为了解事物的唯一途径。例如，如果你通过将形状的颜色从白色变为绿色（成功）和红色（失败）来表示操作的成功或失败，那么患有红绿色盲的用户将无法正常使用你的网站。相反，也许可以同时使用文字和颜色，这样每个人都能明白发生了什么。
+> [!NOTE]
+> 最重要的一条规则是：永远不要把颜色作为了解事物的唯一途径。例如，如果你通过将形状的颜色从白色变为绿色（成功）和红色（失败）来表示操作的成功或失败，那么患有红绿色盲的用户将无法正常使用你的网站。相反，也许可以同时使用文字和颜色，这样每个人都能明白发生了什么。
 
 有关色盲的更多信息，请参阅以下文章：
 
@@ -657,10 +663,11 @@ colorPicker.addEventListener(
 
 可以将 `print-color-adjust` 设置为 `exact`，以便告诉浏览器，你使用该功能的一个或多个元素是专门设计的，可以在颜色和图像保持原样的情况下达到最佳效果。有了这个设置，浏览器就不会篡改元素的外观，而是按照 CSS 的指示来绘制。
 
-> **备注：** 不过，并不能保证 `print-color-adjust: exact` 就能完全按照给定的方式使用 CSS。如果浏览器提供了更改输出的用户首选项（如打印对话框中的“不打印背景”复选框），则该首选项会覆盖 `print-color-adjust` 的值。
+> [!NOTE]
+> 不过，并不能保证 `print-color-adjust: exact` 就能完全按照给定的方式使用 CSS。如果浏览器提供了更改输出的用户首选项（如打印对话框中的“不打印背景”复选框），则该首选项会覆盖 `print-color-adjust` 的值。
 
 ## 参见
 
-- [绘制图形](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Web 上的图形](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#web_上的其他图形)
+- [绘制图形](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
+- [Web 上的图形](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images#web_上的其他图形)
 - [CSS 颜色模块](/zh-CN/docs/Web/CSS/CSS_colors)

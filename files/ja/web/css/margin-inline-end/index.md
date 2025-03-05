@@ -50,15 +50,15 @@ margin-inline-end: unset;
 
 #### HTML
 
-```html
+```html live-sample___setting_inline_end_margin
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___setting_inline_end_margin
 div {
   background-color: yellow;
   width: 120px;
@@ -74,7 +74,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("インライン方向の末尾側のマージンの設定", 140, 140)}}
+{{EmbedLiveSample("Setting_inline_end_margin", 140, 140)}}
 
 ## 仕様書
 

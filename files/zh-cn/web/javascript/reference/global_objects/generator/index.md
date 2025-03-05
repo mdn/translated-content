@@ -11,7 +11,23 @@ l10n:
 
 `Generator` 是隐藏类 {{jsxref("Iterator")}} 的子类。
 
-{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - function* expression", "taller")}}
+
+```js interactive-example
+const foo = function* () {
+  yield "a";
+  yield "b";
+  yield "c";
+};
+
+let str = "";
+for (const val of foo()) {
+  str = str + val;
+}
+
+console.log(str);
+// Expected output: "abc"
+```
 
 ## 构造函数
 
@@ -43,8 +59,8 @@ console.log(gen.next().value); // 3
 
     > **备注：** `Generator` 对象不会存储创建它们的生成器函数的引用。
 
-- `Generator.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"Generator"`。该属性被 {{jsxref("Object.prototype.toString()")}} 使用。
+- `Generator.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"Generator"`。该属性被 {{jsxref("Object.prototype.toString()")}} 使用。
 
 ## 实例方法
 

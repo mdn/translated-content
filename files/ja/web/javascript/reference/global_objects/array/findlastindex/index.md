@@ -12,7 +12,17 @@ l10n:
 
 {{jsxref("Array/findLast", "findLast()")}} メソッドも参照してください。こちらはテスト関数を満たす最後の要素の（位置ではなく）値を返します。
 
-{{EmbedInteractiveExample("pages/js/array-findlastindex.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.findLastIndex()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 50, 130, 44];
+
+const isLargeNumber = (element) => element > 45;
+
+console.log(array1.findLastIndex(isLargeNumber));
+// Expected output: 3
+// Index of element with value: 130
+```
 
 ## 構文
 
@@ -51,7 +61,8 @@ findLastIndex(callbackFn, thisArg)
 - 既に訪問した位置を変更しても、 `callbackFn` が再度呼び出されることはありません。
 - まだ訪問していない既存の配列要素が `callbackFn` によって変更された場合、 `callbackFn` に渡される値はその要素が取得される時点の値になります。[削除された](/ja/docs/Web/JavaScript/Reference/Operators/delete) 要素は `undefined` であるかのように処理されます。
 
-> **警告:** 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
+> [!WARNING]
+> 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
 
 `findLastIndex()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
 

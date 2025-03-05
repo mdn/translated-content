@@ -18,7 +18,7 @@ l10n:
 
 ## プロパティ
 
-_このインタフェースは親である {{domxref("Event")}} からプロパティを継承しています。_
+_このインターフェイスは親である {{domxref("Event")}} からプロパティを継承しています。_
 
 - {{domxref("CloseEvent.code")}} {{ReadOnlyInline}}
   - : サーバーが送信したクローズコードが入った `unsigned short` を返します。

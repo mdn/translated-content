@@ -188,7 +188,8 @@ Une fois que cela est fait, nous créons un tableau JavaScript contenant la posi
 
 Une fois que les shaders sont définis, que les emplacements sont retrouvés, et que les positions des sommets du carré 2D sont stockées dans le tampon, nous pouvons faire effectivement le rendu de la scène. Puisque nous n'animons rien dans cet exemple, notre fonction `drawScene()` est très simple. Elle utilise quelques routines utilitaires que nous décrirons sous peu.
 
-> **Note :** Vous pourriez obtenir une erreur JavaScript indiquant _"mat4 n'est pas défini"_. Cela signifie qu'il existe une dépendance à **glmatrix**. Vous pouvez inclure [gl-matrix](https://www.npmjs.com/package/gl-matrix) pour résoudre ce problème.
+> [!NOTE]
+> Vous pourriez obtenir une erreur JavaScript indiquant _"mat4 n'est pas défini"_. Cela signifie qu'il existe une dépendance à **glmatrix**. Vous pouvez inclure [gl-matrix](https://www.npmjs.com/package/gl-matrix) pour résoudre ce problème.
 
 ```js
 function drawScene(gl, programInfo, buffers) {
@@ -287,12 +288,12 @@ Ensuite, nous établissons la position du carré 2D en chargeant la position de 
 
 ## Opérations utilitaires matricielles
 
-Les opérations matricielles peuvent sembler compliquées, mais [elles sont en fait assez simples si vous en prenez une à la fois](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html). En général, les gens utilisent une bibliothèque matricielle plutôt que d'écrire la leur. Dans notre cas, nous utilisons la bibliothèque populaire [glMatrix](http://glmatrix.net/).
+Les opérations matricielles peuvent sembler compliquées, mais [elles sont en fait assez simples si vous en prenez une à la fois](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html). En général, les gens utilisent une bibliothèque matricielle plutôt que d'écrire la leur. Dans notre cas, nous utilisons la bibliothèque populaire [glMatrix](https://glmatrix.net/).
 
 Voir aussi&nbsp;:
 
 - les [matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) sur WebGLFundamentals ;
-- les [matrices](http://mathworld.wolfram.com/Matrix.html) sur Wolfram MathWorld ;
+- les [matrices](https://mathworld.wolfram.com/Matrix.html) sur Wolfram MathWorld ;
 - l'article [matrice](<https://fr.wikipedia.org/wiki/Matrice_(mathématiques)>) sur Wikipédia.
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

@@ -1,11 +1,12 @@
 ---
-title: Request.text()
+title: "Request: text() メソッド"
+short-title: text()
 slug: Web/API/Request/text
 l10n:
-  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
+  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`text()`** は {{domxref("Request")}} インターフェイスのメソッドで、リクエスト本体を読み込み、文字列で解決されるプロミスとして返します。
 レスポンスは常に UTF-8 を使用してデコードされます。
@@ -22,7 +23,7 @@ text()
 
 ### 返値
 
-文字列で解決する {{jsxref("Promise")}}。
+文字列で解決するプロミスです。
 
 ## 例
 
@@ -35,7 +36,7 @@ const request = new Request("/myEndpoint", {
 });
 
 request.text().then((text) => {
-  // do something with the text sent in the request
+  // リクエストで送信されたテキストに対して何らかの処理を行う
 });
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: console：timeEnd() 静态方法
-slug: Web/API/console/timeend_static
+slug: Web/API/console/timeEnd_static
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
@@ -9,9 +9,10 @@ slug: Web/API/console/timeend_static
 
 停止一个通过 `console.time()` 启动的计时器
 
-> **备注：** 该方法在使用时不会将输出的时间返回到 js，它只能用于控制台调试。请勿将该方法作为普通计时器或性能数据收集器的一部分。
+> [!NOTE]
+> 该方法在使用时不会将输出的时间返回到 js，它只能用于控制台调试。请勿将该方法作为普通计时器或性能数据收集器的一部分。
 
-有关详细信息和示例，请参阅 [Timers](/zh-CN/docs/Web/API/console#Timers)
+有关详细信息和示例，请参阅 [Timers](/zh-CN/docs/Web/API/console#timers)
 
 {{AvailableInWorkers}}
 
@@ -37,4 +38,4 @@ timeEnd(label)
 
 ## 参见
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)

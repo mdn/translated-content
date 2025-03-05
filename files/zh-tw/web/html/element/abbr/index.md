@@ -11,7 +11,23 @@ slug: Web/HTML/Element/abbr
 
 可選的 [`title`](/zh-TW/docs/Web/HTML/Global_attributes#title) 屬性可在未提供完整展開時提供縮寫或縮略語的展開。這可為用戶代理提供如何宣布/顯示內容的提示，同時告知所有使用者該縮寫的含義。若存在，`title` 必須包含該完整描述，不能包含其他內容。
 
-{{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;abbr&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  You can use <abbr>CSS</abbr> (Cascading Style Sheets) to style your
+  <abbr>HTML</abbr> (HyperText Markup Language). Using style sheets, you can
+  keep your <abbr>CSS</abbr> presentation layer and <abbr>HTML</abbr> content
+  layer separate. This is called "separation of concerns."
+</p>
+```
+
+```css interactive-example
+abbr {
+  font-style: italic;
+  color: chocolate;
+}
+```
 
 ## 屬性
 
@@ -202,4 +218,4 @@ abbr {
 
 ## 參見
 
-- [使用 `<abbr>` 元素](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations)
+- [使用 `<abbr>` 元素](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abbreviations)

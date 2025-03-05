@@ -7,15 +7,15 @@ slug: Web/HTML/Element/del
 
 O **elemento** **HTML `<del>`** (ou _Elemento_ _HTML_ _de Texto Excluído_) representa uma parte do texto que foi excluída de um documento. Este elemento é (não necessariamente) renderizado pelos navegadores com uma linha entre o texto.
 
-- _[Content categories](/pt-BR/docs/HTML/Content_categories)_[Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content) or [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content).
-- _Permitted content_ [Transparent](/pt-BR/docs/HTML/Content_categories#Transparent).
-- _Tag omission_ {{no_tag_omission}}
-- _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
+- _[Content categories](/pt-BR/docs/Web/HTML/Content_categories)_[Phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content) or [flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content).
+- _Permitted content_ [Transparent](/pt-BR/docs/Web/HTML/Content_categories#transparent).
+- _Tag omission_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
+- _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
 - _DOM interface_ {{domxref("HTMLModElement")}}
 
 ## Attributes
 
-This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes).
+This element includes the [global attributes](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `cite`
   - : A URI for a resource that explains the change (for example, meeting minutes).

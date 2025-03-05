@@ -5,7 +5,7 @@ slug: Web/API/DataTransfer
 
 {{APIRef("HTML Drag and Drop API")}}
 
-L'objet `DataTransfer` contient les données glissées au cours d'une opération de glisser-déposer. Il peut contenir un ou plusieurs éléments, du même type ou de types différents. Pour plus d'informations sur le glisser-déposer, voir [Glisser et déposer](/fr/docs/Glisser_et_déposer).
+L'objet `DataTransfer` contient les données glissées au cours d'une opération de glisser-déposer. Il peut contenir un ou plusieurs éléments, du même type ou de types différents. Pour plus d'informations sur le glisser-déposer, voir [Glisser et déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API).
 
 Cet objet est disponible depuis la propriété `dataTransfer` de tous les événements de glisser. Il ne peut pas être créé séparément.
 
@@ -239,7 +239,8 @@ Contient une liste des types de format des données stockées pour le premier é
 
 L'état du curseur au cours d'un glisser. Cette propriété est surtout utilisée pour contrôler le curseur au cours d'un glisser d'onglet.
 
-> **Note :** Cette méthode n'est actuellement implémentée que sur Windows.
+> [!NOTE]
+> Cette méthode n'est actuellement implémentée que sur Windows.
 
 #### Valeurs possibles
 
@@ -248,25 +249,29 @@ L'état du curseur au cours d'un glisser. Cette propriété est surtout utilisé
 - `default`
   - : Utilise le comportement par défaut de Gecko, qui consiste à utiliser une flèche pour curseur au cours d'un glisser.
 
-> **Note :** Si vous spécifiez une valeur autre que "default", "auto" est supposé.
+> [!NOTE]
+> Si vous spécifiez une valeur autre que "default", "auto" est supposé.
 
 ### mozItemCount
 
 Le nombre d'éléments glissés.
 
-> **Note :** Cette propriété est spécifique a Gecko.
+> [!NOTE]
+> Cette propriété est spécifique a Gecko.
 
 ### mozSourceNode
 
 le {{ domxref("Node") }} au dessus duquel le curseur de la souris se trouvait lorsque le bouton a été pressé pour initialiser le glisser. Cette valeur est nulle pour un glisser externe, ou si l'appelant ne peut pas accéder au nœud.
 
-> **Note :** Cette propriété est spécifique a Gecko.
+> [!NOTE]
+> Cette propriété est spécifique a Gecko.
 
 ### mozUserCancelled
 
 Cette propriété s'applique uniquement à l'événement `dragend`, et est positionnée à `true` si l'utilisateur a annulé le glisser en appuyant sur la touche échappe. Elle est positionnée à `false` dans les autres cas, y compris si le glisser a échoué pour toute autre raison, par exemple en raison d'un déposer sur un emplacement non valide. Cette propriété n'est pas encore implémenté sous Linux.
 
-> **Note :** Cette propriété est spécifique a Gecko.
+> [!NOTE]
+> Cette propriété est spécifique a Gecko.
 
 ## Methods
 
@@ -368,7 +373,8 @@ Si le dernier format de l'élément est supprimé, l'élément entier est retir�
 
 Si la liste `format` est vide, alors les données associées à tous les formats sont supprimées. Si le format n'est pas trouvé, alors cette méthode n'a aucun effet.
 
-> **Note :** Cette méthode est spécifique à Gecko.
+> [!NOTE]
+> Cette méthode est spécifique à Gecko.
 
 ```
 void mozClearDataAt(
@@ -388,7 +394,8 @@ void mozClearDataAt(
 
 Récupère les données associées au format donné pour un élément à l'index spécifié, ou null si elle n'existe pas. L'indice devrait être compris entre zéro et le nombre d'éléments moins un.
 
-> **Note :** Cette méthode est spécifique à Gecko.
+> [!NOTE]
+> Cette méthode est spécifique à Gecko.
 
 ```
 nsIVariant mozGetDataAt(
@@ -412,7 +419,8 @@ Les données doivent être ajoutées par ordre de préférence, avec le format l
 
 La donnée doit être une chaîne, ou un type primitif booléen, ou un type numérique (qui sera converti en une chaîne), ou une [nsISupports](/fr/docs/XPCOM_Interface_Reference/nsISupports).
 
-> **Note :** Cette méthode est spécifique à Gecko.
+> [!NOTE]
+> Cette méthode est spécifique à Gecko.
 
 ```
 void mozSetDataAt(
@@ -435,7 +443,8 @@ void mozSetDataAt(
 
 Contient une liste des types de format des données qui sont stockées pour un élément à l'index spécifié. Si l'index n'est pas dans compris entre 0 et le nombre d'éléments moins un, une liste de chaîne vide est retournée.
 
-> **Note :** Cette méthode est spécifique à Gecko.
+> [!NOTE]
+> Cette méthode est spécifique à Gecko.
 
 ```
 nsIVariant mozTypesAt(

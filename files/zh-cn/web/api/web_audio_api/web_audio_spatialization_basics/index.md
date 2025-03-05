@@ -13,7 +13,8 @@ slug: Web/API/Web_Audio_API/Web_audio_spatialization_basics
 
 它对 WebXR 和游戏非常有用。在 3D 空间中，它是实现逼真的音频效果的唯一方式。像 [three.js](https://threejs.org/) 和 [A-frame](https://aframe.io/) 这样的库在处理声音时就利用了它的潜力。值得注意的是，你不必在完整的 3D 空间中移动声音 - 你可以只使用 2D 平面，因此如果你计划实现一个 2D 游戏，这依然是你要寻找的节点。
 
-> **备注：** 还有一个设计用于处理创建简单的左右立体声平移效果的 {{domxref("StereoPannerNode")}} 。这使用起来更简单，但显然无处可用。如果你只想要一个简单的立体声平移效果，我们的 [StereoPannerNode 示例](https://mdn.github.io/webaudio-examples/stereo-panner-node/)（[请参阅源码](https://github.com/mdn/webaudio-examples/tree/master/stereo-panner-node)）应该可以为你提供所需的一切。
+> [!NOTE]
+> 还有一个设计用于处理创建简单的左右立体声平移效果的 {{domxref("StereoPannerNode")}} 。这使用起来更简单，但显然无处可用。如果你只想要一个简单的立体声平移效果，我们的 [StereoPannerNode 示例](https://mdn.github.io/webaudio-examples/stereo-panner-node/)（[请参阅源码](https://github.com/mdn/webaudio-examples/tree/master/stereo-panner-node)）应该可以为你提供所需的一切。
 
 ## 3D boombox 演示
 
@@ -23,7 +24,8 @@ slug: Web/API/Web_Audio_API/Web_audio_spatialization_basics
 
 音箱放置于房间中（由浏览器视区边缘定义），在本 demo 中我们可以通过提供的控件移动和旋转它。当我们移动音箱时，它产生的声音会相应的改变，当它在移动到房间的左侧或右侧时声音平移，或当它远离用户时变得安静，或旋转使得扬声器背离它们等。这是通过给 `PannerNode` 对象实例设置不同的与该运动有关的属性来实现模拟空间化。
 
-> **备注：** 如果你使用耳机或者其他某种环绕声系统连接计算机，体验会更好。
+> [!NOTE]
+> 如果你使用耳机或者其他某种环绕声系统连接计算机，体验会更好。
 
 ## 创建 audio 收听者
 
@@ -105,7 +107,7 @@ const refDistance = 1;
 
 然后就是 roll-off 因子 ([`rolloffFactor`](/zh-CN/docs/Web/API/PannerNode/rolloffFactor)) — 描述随着 panner 远离收听者，音量减小的速度有多快。默认值为 1；让我们使其大一些以放大我们的动作。
 
-```
+```js
 const rollOff = 10;
 ```
 
@@ -453,7 +455,8 @@ moveControls.forEach(function (el) {
 
 希望本文能让你深入了解 Web Audio 空间化的工作原理，以及每个{{domxref("PannerNode")}} 属性的作用（其中有很多属性）。这些值有时难以操作，根据你的使用情况，可能需要一些时间才能使它们正确。
 
-> **备注：** 音频空间化在不同浏览器中的听起来略有不同。panner 节点在底层做了一些非常复杂的数学运算；这里有 [许多测试](https://wpt.fyi/results/webaudio/the-audio-api/the-pannernode-interface?label=stable&aligned=true)，因此你可以跟踪不同平台上此节点的内部工作状态。
+> [!NOTE]
+> 音频空间化在不同浏览器中的听起来略有不同。panner 节点在底层做了一些非常复杂的数学运算；这里有 [许多测试](https://wpt.fyi/results/webaudio/the-audio-api/the-pannernode-interface?label=stable&aligned=true)，因此你可以跟踪不同平台上此节点的内部工作状态。
 
 再次，你可以在 [这里查看最终的演示](https://mdn.github.io/webaudio-examples/spatialization/)，同时[最终的源代码在这里](https://github.com/mdn/webaudio-examples/tree/master/spatialization)。还有一个 [Codepen 的演示](https://codepen.io/Rumyra/pen/MqayoK?editors=0100)。
 

@@ -7,9 +7,26 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/name
 
 A propriedade somente-leitura **`name`** de um objeto {{jsxref("Function")}} indica o nome da função como especificado quando esta foi criada, ou `"anonymous"` para funções criadas anonimamente.
 
-{{EmbedInteractiveExample("pages/js/function-name.html")}}{{js_property_attributes(0,0,1)}}
+{{InteractiveExample("JavaScript Demo: Function.name")}}
 
-> **Nota:** Note que em implementações não-standard anteriores à ES2015 o atributo `configurable` tinha também o valor `false`.
+```js interactive-example
+const func1 = function () {};
+
+const object = {
+  func2: function () {},
+};
+
+console.log(func1.name);
+// Expected output: "func1"
+
+console.log(object.func2.name);
+// Expected output: "func2"
+```
+
+{{js_property_attributes(0,0,1)}}
+
+> [!NOTE]
+> Note que em implementações não-standard anteriores à ES2015 o atributo `configurable` tinha também o valor `false`.
 
 ## Exemplos
 
@@ -118,7 +135,8 @@ var fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // grava o log "Foo"
 ```
 
-> **Aviso:** O interpretador vai definir a propriedade interna `Function.name` somente se uma função não tiver uma propriedade já com o nome _name_ (veja a seção [9.2.11 da ECMAScript2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname)). Porém, a ES2015 especifica que a palavra-chave _static_ de maneira que métodos estáticos serão definidos como OwnProperty da função construtora de classe (ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation)).
+> [!WARNING]
+> O interpretador vai definir a propriedade interna `Function.name` somente se uma função não tiver uma propriedade já com o nome _name_ (veja a seção [9.2.11 da ECMAScript2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname)). Porém, a ES2015 especifica que a palavra-chave _static_ de maneira que métodos estáticos serão definidos como OwnProperty da função construtora de classe (ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation)).
 
 Portanto não podemos obter o nome de virtualmente qualquer classe com um método estático `name()`:
 
@@ -171,7 +189,8 @@ o[sym2].name; // ""
 
 ## Compressores e minificadores JavaScript
 
-> **Aviso:** Tenha cuidado ao usar `Function.name` e transformações de código-fonte, como aquelas executadas por compressores (minificadores) ou obfuscadores de JavaScript. Estas ferramentas são comumente usadas como parte de processos de _build_ de JavaScript para reduzir os tamanhos de programas antes da implementação em produção. Tais transformações frequentemente mudam nomes de função durante o _build_.
+> [!WARNING]
+> Tenha cuidado ao usar `Function.name` e transformações de código-fonte, como aquelas executadas por compressores (minificadores) ou obfuscadores de JavaScript. Estas ferramentas são comumente usadas como parte de processos de _build_ de JavaScript para reduzir os tamanhos de programas antes da implementação em produção. Tais transformações frequentemente mudam nomes de função durante o _build_.
 
 Código fonte do tipo:
 

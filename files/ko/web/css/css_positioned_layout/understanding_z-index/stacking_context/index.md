@@ -18,7 +18,7 @@ l10n:
 - 문서의 루트 요소. (`<html>`)
 - {{cssxref("position")}}이 `absolute` 또는 `relative`이고, {{cssxref("z-index")}}가 `auto`가 아닌 요소.
 - {{cssxref("position")}}이 `fixed` 또는 `sticky`인 요소. (`sticky`는 모든 모바일 브라우저에서는 해당하지만 구형 데스크톱 브라우저에서는 해당하지 않음)
-- [container queries](/ko/docs/Web/CSS/CSS_container_queries)를 위한 {{cssxref("container-type")}}이 `size` 또는 `inline-size`인 요소.
+- [container queries](/ko/docs/Web/CSS/CSS_containment/Container_queries)를 위한 {{cssxref("container-type")}}이 `size` 또는 `inline-size`인 요소.
 - 플렉스({{cssxref("flexbox")}}) 컨테이너의 자식 중 {{cssxref("z-index")}}가 `auto`가 아닌 요소.
 - 그리드({{cssxref("grid")}}) 컨테이너의 자식 중 {{cssxref("z-index")}}가 `auto`가 아닌 요소.
 - {{cssxref("opacity")}}가 1보다 작은 요소. ([불투명도 명세](https://www.w3.org/TR/css3-color/#transparency) 참고)
@@ -45,7 +45,8 @@ l10n:
 - 쌓임 맥락은 형제 쌓임 맥락과 완전히 분리됩니다. 쌓임을 처리할 땐 자손 요소만 고려합니다.
 - 각각의 쌓임 맥락은 독립적입니다. 어느 요소의 콘텐츠를 쌓은 후에는 그 요소를 통째 부모 쌓임 맥락 안에 배치합니다.
 
-> **참고:** 모든 요소가 쌓임 맥락을 생성하는 건 아니므로, 쌓임 맥락의 계층 구조는 HTML 요소 계층 구조의 부분집합입니다. 자신의 쌓임 맥락을 만들지 않은 요소는 '부모 쌓임 맥락에 의해 **동화된다**'라고 표현할 수 있겠습니다.
+> [!NOTE]
+> 모든 요소가 쌓임 맥락을 생성하는 건 아니므로, 쌓임 맥락의 계층 구조는 HTML 요소 계층 구조의 부분집합입니다. 자신의 쌓임 맥락을 만들지 않은 요소는 '부모 쌓임 맥락에 의해 **동화된다**'라고 표현할 수 있겠습니다.
 
 ## 예제
 

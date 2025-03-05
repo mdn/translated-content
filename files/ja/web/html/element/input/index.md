@@ -1,15 +1,42 @@
 ---
-title: "<input>: 入力欄（フォーム入力）要素"
+title: "<input>: HTML 入力要素"
 slug: Web/HTML/Element/input
 l10n:
-  sourceCommit: c88c96a09084aadc20ac2cabae2e19609b4a30d8
+  sourceCommit: 41f2977624562dde84c0ef5956a80ee2575c80f0
 ---
 
 {{HTMLSidebar}}
 
-**`<input>`** は [HTML](/ja/docs/Web/HTML) の要素で、ユーザーからデータを受け取るための、ウェブベースのフォーム用の操作可能なコントロールを作成するために使用します。端末と{{Glossary("user agent", "ユーザーエージェント")}}によりますが、広範に渡る種類のデータ入力やコントロールウィジェットが利用できます。`<input>` 要素は入力型と属性の組み合わせの数が非常に多いため、HTML の中で最も強力かつ最も複雑な要素の一つです。
+**`<input>`** は [HTML](/ja/docs/Web/HTML) の要素で、ユーザーからデータを受け取るための、ウェブベースのフォーム用の操作可能なコントロールを作成するために使用します。端末と{{Glossary("User agent", "ユーザーエージェント")}}によりますが、広範に渡る種類のデータ入力やコントロールウィジェットが利用できます。`<input>` 要素は入力型と属性の組み合わせの数が非常に多いため、HTML の中で最も強力かつ最も複雑な要素の一つです。
 
-{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="name">Name (4 to 8 characters):</label>
+
+<input
+  type="text"
+  id="name"
+  name="name"
+  required
+  minlength="4"
+  maxlength="8"
+  size="10" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## \<input> の型
 
@@ -332,14 +359,14 @@ l10n:
 | [`src`](#src)                                 | `image`                                                             | {{htmlelement('img')}} の `src` 属性と同じで、画像リソースのアドレス           |
 | [`step`](#step)                               | `date`, `month`, `week`, `time`, `datetime-local`, `range`          | 有効と見なされる増分                                                           |
 | [`type`](#type)                               | すべて                                                              | フォームコントロールの型                                                       |
-| [`value`](#value)                             | すべて                                                              | コントロールの初期値                                                           |
+| [`value`](#value)                             | すべて                                                              | コントロールの値。HTML で指定された場合、初期値に相当する                      |
 | [`width`](#width)                             | `image`                                                             | {{htmlelement('img')}} の `width` 属性と同じで、水平方向の大きさ               |
 
 標準的な属性の説明の後に、いくつかの非標準的な属性を追加で記載しています。
 
 ### 個々の属性
 
-- `accept`
+- [`accept`](/ja/docs/Web/HTML/Attributes/accept)
 
   - : `file` 入力型に対してのみ有効です。`accept` 属性は `file` アップロードコントロールの中でどのファイル形式が選択可能であるかを定義します。{{HTMLElement("input/file", "file")}} 入力型を参照してください。
 
@@ -369,21 +396,23 @@ l10n:
 
     `autofocus` は `hidden` 型の入力欄にはフォーカスを受け取ることができないため、使用することができません。
 
-    > **警告:** フォームコントロールに自動的にフォーカスを与えると、読み上げ技術を利用している視覚障碍者を混乱させる可能性があります。`autofocus` が割り当てられると、スクリーンリーダーは予告なしにフォームコントロールにその人を「テレポート」させることになるからです。
+    > [!WARNING]
+    > フォームコントロールに自動的にフォーカスを与えると、読み上げ技術を利用している視覚障碍者を混乱させる可能性があります。`autofocus` が割り当てられると、スクリーンリーダーは予告なしにフォームコントロールにその人を「テレポート」させることになるからです。
 
     `autofocus` 属性を適用する際には、アクセシビリティを慎重に検討してください。フォームコントロールにフォーカスを自動的に設定すると、読み込み時にページのスクロールが発生します。フォーカスを与えると、一部のタッチ端末では動的なキーボードを表示させることにもなります。スクリーンリーダーはフォーカスを受けているフォームコントロールのラベルをアナウンスする一方、ラベルよりも前は何もアナウンスしませんし、小さな端末を使用している視力のあるユーザーは、同様に先行するコンテンツによって作成された文脈を見逃してしまいます。
 
-- `capture`
+- [`capture`](/ja/docs/Web/HTML/Attributes/capture)
   - : HTML Media Capture 仕様書で導入され、`file` 入力型に対してのみ有効です。`capture` 属性は、どのメディア (マイク、ビデオ、カメラ) を使用して新しいファイルをキャプチャし、対応するシナリオで `file` アップロードコントロールを使用してアップロードするかを定義します。{{HTMLElement("input/file", "file")}} 入力型を参照してください。
 - `checked`
 
   - : `radio` 型と `checkbox` 型の両方で有効で、`checked` は論理属性です。`radio` 型に存在した場合、そのラジオボタンが同じ名前のラジオボタンのグループの中で現在選択されているものであることを示します。`checkbox` 型に存在した場合、(ページが読み込まれたとき) 既定でチェックボックスがチェックされていることを示します。このチェックボックスが現在チェックされているかどうかを示すものでは<em>ありません</em>。チェックボックスの状態が変更された場合でも、このコンテンツ属性はその変更を反映しません。（[`HTMLInputElement` の `checked` IDL 属性](/ja/docs/Web/API/HTMLInputElement)のみが更新されます。）
 
-    > **メモ:** 他の入力コントロールとは異なり、チェックボックスやラジオボタンの値は、現在 `checked` の状態にある場合だけ送信データに含まれます。存在する場合、チェックされたコントロールの名前と値が送信されます。
+    > [!NOTE]
+    > 他の入力コントロールとは異なり、チェックボックスやラジオボタンの値は、現在 `checked` の状態にある場合だけ送信データに含まれます。存在する場合、チェックされたコントロールの名前と値が送信されます。
     >
     > 例えば、`name` が `fruit` で、`value` が `cherry` であるチェックボックスがチェックされていると、送信されるフォームデータには `fruit=cherry` が含まれます。チェックボックスがチェックされていない場合、フォームデータには全く含まれません。チェックボックスやラジオボタンの既定の `value` は `on` です。
 
-- `dirname`
+- [`dirname`](/ja/docs/Web/HTML/Attributes/dirname)
 
   - : `hidden`, `text`, `search`, `url`, `tel`, `email` 入力型について有効で、`dirname` 属性によって要素の書字方向を送信することができます。これが含まれていると、フォームコントロールは 2 組の名前と値を送信します。1 組目は [`name`](#name) と [`value`](#value) であり、2 組目は名前が `dirname` 属性の値で、値に `ltr` または `rtl` がブラウザーによって設定されます。
 
@@ -401,13 +430,14 @@ l10n:
     上記のフォームが送信されると、入力欄は `name` / `value` の組である `fruit=cherry` と、`dirname` / 書字方向の組である `fruit-dir=ltr` が送信されます。
     詳しくは、 [`dirname` attribute](/ja/docs/Web/HTML/Attributes/dirname) を参照してください。
 
-- `disabled`
+- [`disabled`](/ja/docs/Web/HTML/Attributes/disabled)
 
   - : 論理属性で、存在する場合、ユーザーが入力欄を操作できないことを示します。無効な入力欄は、ふつうより薄い色や、その他のフィールドが使用できないことを示す形で表示されます。
 
     特に、無効になった入力欄は {{domxref("Element/click_event", "click")}} イベントを受け取らず、フォームと共に送信されることもありません。
 
-    > **メモ:** 仕様書で要件とはされていませんが、Firefox は既定で、ページを再読み込みしても `<input>` を [動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能は [`autocomplete`](#autocomplete) 属性で制御することができます。
+    > [!NOTE]
+    > 仕様書で要件とはされていませんが、Firefox は既定で、ページを再読み込みしても `<input>` を [動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能は [`autocomplete`](#autocomplete) 属性で制御することができます。
 
 - `form`
 
@@ -415,7 +445,8 @@ l10n:
 
     `form` 属性によって、入力欄を文書内のどこに置いても、文書内の他の場所にあるフォームと関連付けることができます。
 
-    > **メモ:** 入力欄は一つのフォームとしか関連付けることができません。
+    > [!NOTE]
+    > 入力欄は一つのフォームとしか関連付けることができません。
 
 - `formaction`
   - : `image` および `submit` 入力型でのみ有効です。詳しくは {{HTMLElement("input/submit", "submit")}} 入力型を参照してください。
@@ -445,19 +476,19 @@ l10n:
 
     {{htmlelement('datalist')}} 要素を参照してください。
 
-- `max`
+- [`max`](/ja/docs/Web/HTML/Attributes/max)
 
   - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効であり、許可される値の範囲の最大値を定義します。要素に入力された [`value`](#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に不合格になります。`max` 属性の値が数値でない場合は、要素に最大値は設定されません。
 
     特殊な場合があります。データ型が期間を表す場合（日付や時刻など）、`max` の値は `min` の値よりも小さくなる場合があり、これは範囲が折り返す可能性があることを表します。例えば、これによって午後10時から午前4時までの自国の範囲を指定することができます。
 
-- `maxlength`
+- [`maxlength`](/ja/docs/Web/HTML/Attributes/maxlength)
 
   - : `text`, `search`, `url`, `tel`, `email`, `password` で有効であり、ユーザーがフィールドに入力することができる最大文字列長（UTF-16 コード単位で計測）を定義します。これは `0` 以上の整数値でなければなりません。 `maxlength` が指定されなかった場合、または無効な値が指定された場合は、その入力欄には最大長が設定されません。この値は `minlength` の値以上である必要もあります。
 
-    欄に入力されたテキストの文字数が UTF-16 コード単位で `maxlength` よりも多いと、この入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に不合格になります。既定では、ブラウザーはユーザーが `maxlength` 属性で許可された文字数以上を入力するのを防ぎます。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
+    欄に入力されたテキストの文字数が UTF-16 コード単位で `maxlength` よりも多いと、この入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に不合格になります。既定では、ブラウザーはユーザーが `maxlength` 属性で許可された文字数以上を入力するのを防ぎます。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
 
-- `min`
+- [`min`](/ja/docs/Web/HTML/Attributes/min)
 
   - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効であり、許可される値の範囲の最も低い値を定義します。要素に入力された [`value`](#value) がこれを下回った場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に不合格になります。`min` 属性の値が数値でない場合は、要素に最小値は設定されません。
 
@@ -465,13 +496,13 @@ l10n:
 
     特殊な場合があります。データ型が期間を表す場合（日付や時刻など）、`max` の値は `min` の値よりも小さくなる場合があり、これは範囲が折り返す可能性があることを表します。例えば、これによって午後 10 時から午前 4 時までの自国の範囲を指定することができます。
 
-- `minlength`
+- [`minlength`](/ja/docs/Web/HTML/Attributes/minlength)
 
   - : `text`, `search`, `url`, `tel`, `email`, `password` で有効であり、ユーザーがフィールドに入力することができる最小文字列長 (UTF-16 コード単位で計測) を定義します。これは負数ではなく、`maxlength` で指定された値以下の整数値でなければなりません。`minlength` が指定されなかった場合、または無効な値が指定された場合は、その入力欄には最小文字数が設定されません。
 
-    欄に入力されたテキストの文字数が UTF-16 コード単位で `minlength` よりも少ないと、この入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に不合格になります。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
+    欄に入力されたテキストの文字数が UTF-16 コード単位で `minlength` よりも少ないと、この入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に不合格になります。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
 
-- `multiple`
+- [`multiple`](/ja/docs/Web/HTML/Attributes/multiple)
 
   - : 論理属性の `multiple` は、設定されている場合、email 入力欄ではユーザーがウィジェット内でカンマ区切りで複数のメールアドレスを入力できること、また `file` 入力欄では複数のファイルを選択することができることを意味します。{{HTMLElement("input/email", "email")}} および {{HTMLElement("input/file", "file")}} 入力型を参照してください。
 
@@ -483,7 +514,7 @@ l10n:
 
     特殊な場合が 2 つあります。
 
-    1. `_charset_` : `<input>` 要素の {{HTMLElement("input/hidden", "hidden")}} 型として使用された場合、入力欄の `value` には自動的に、フォームを送信するのに使用される文字エンコーディングが{{Glossary("user agent", "ユーザーエージェント")}}によって設定されます。
+    1. `_charset_` : `<input>` 要素の {{HTMLElement("input/hidden", "hidden")}} 型として使用された場合、入力欄の `value` には自動的に、フォームを送信するのに使用される文字エンコーディングが{{Glossary("User agent", "ユーザーエージェント")}}によって設定されます。
     2. `isindex`: 歴史的な理由で、[`isindex`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name) という名前は許可されていません。
 
     [`name`](#name) 属性はラジオボタンでは独特の動きをします。
@@ -505,19 +536,23 @@ l10n:
 
     このコードを実行すると、`guestName` が {{domxref("HTMLInputElement")}} の `guest` フィールドに、`hatSize` が `hat-size` フィールドのオブジェクトになります。
 
-    > **警告:** フォームの組み込みプロパティに対応する `name` をフォーム要素に与えないようにしてください。そうすると、対応する入力欄に参照するとき、定義済みのプロパティやメソッドを上書きしてしまうからです。
+    > [!WARNING]
+    > フォームの組み込みプロパティに対応する `name` をフォーム要素に与えないようにしてください。そうすると、対応する入力欄に参照するとき、定義済みのプロパティやメソッドを上書きしてしまうからです。
 
-- `pattern`
+- [`pattern`](/ja/docs/Web/HTML/Attributes/pattern)
 
-  - : `text`, `search`, `url`, `tel`, `email`, `password` で有効です。`pattern` 属性は、指定された場合、入力の [`value`](#value) が一致すれば値が[制約検証](/ja/docs/Web/HTML/Constraint_validation)を通過したとみなされる正規表現を指定します。これは {{jsxref("RegExp")}} 型で使用される有効な JavaScript の正規表現でなければならず、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で説明されている通りです。正規表現をコンパイルする際には `'u'` フラグが指定され、パターンが {{Glossary("ASCII")}} ではなく Unicode コードポイントのシーケンスとして扱われます。パターンのテキストの周囲にスラッシュを指定しないでください。
+  - : `text`, `search`, `url`, `tel`, `email`, `password` で有効です。`pattern` 属性は、指定された場合、入力の [`value`](#value) が一致すれば値が[制約検証](/ja/docs/Web/HTML/Constraint_validation)を通過したとみなされる正規表現をコンパイルするのに使われます。これは {{jsxref("RegExp")}} 型で使用される有効な JavaScript の正規表現でなければならず、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で説明されている通りです。パターンのテキストの周囲にスラッシュを指定しないでください。正規表現がコンパイルするときには、次のようになります。
 
-    `pattern` 属性が存在するが、指定されていないか無効な場合、正規表現は適用されず、この属性は完全に無視されます。`pattern` 属性が有効で、空でない値がパターンと一致しない場合、制約の検証によりフォームの送信ができなくなります。
+    1. パターンは暗黙的に `^(?:` と `)$` で囲まれ、入力値全体と一致することが要求されます。すなわち、 `^(?:<パターン>)$` となります。
+    2. `'v'` フラグを指定すると、パターンは {{Glossary("ASCII")}} ではなく、Unicode コードポイントの並びとして扱われます。
 
-    > **メモ:** `pattern` 属性を使用する場合は、期待される書式をユーザーに知らせる説明文を近くに配置してください。また、パターンに一致させるための要件が何であるかを説明するために、[`title`](#title) 属性を含めることもできます。ほとんどのブラウザーはこのタイトルをツールチップとして表示します。ツールチップは改善手段です。
+    `pattern` 属性が存在するが指定されていない、または不正な場合は、正規表現は適用されず、この属性は完全に無視されます。 pattern 属性が有効で、空ではない値がパターンと一致しない場合、制約検証によりフォームの送信が阻止されます。 [`multiple`](/ja/docs/Web/HTML/Attributes/multiple) が存在する場合は、コンパイルされた正規表現がカンマで区切られた各値と照合されます。
+
+    > **メモ:** `pattern` 属性を使用する場合は、期待される書式をユーザーに知らせる説明文を近くに配置してください。また、パターンに一致させるための要件が何であるかを説明するために、[`title`](#title) 属性を含めることもできます。 アクセシビリティを確保するには、視覚的な説明が必要です。ほとんどのブラウザーはこのタイトルをツールチップとして表示します。ツールチップは改善手段です。
 
 詳しくは[クライアント側の検証](#クライアント側の検証)を参照してください。
 
-- `placeholder`
+- [`placeholder`](/ja/docs/Web/HTML/Attributes/placeholder)
 
   - : `text`, `search`, `url`, `tel`, `email`, `password`, `number` で有効です。`placeholder` 属性は、フィールドでどのような情報が期待されているかについて、ユーザーに簡単なヒントを与える文字列です。説明やプロンプトではなく、期待されるデータのタイプのヒントとなる単語や短いフレーズである必要があります。テキストには、改行を含めては*いけません*。例えば、ユーザーの名前を入力するフィールドで、そのラベルが "First Name" の場合、適切なプレースホルダーは "e.g. Mustafa" となります。
 
@@ -538,19 +573,19 @@ l10n:
     - `"toggle"`
       - : このボタンは、ポップオーバーの表示と非表示を切り替えます。ポップオーバーが非表示の場合、表示させます。ポップオーバーが表示されている場合、非表示になります。`popovertargetaction` が省略された場合は、`"toggle"` が制御ボタンで実行される既定のアクションです。
 
-- `readonly`
+- [`readonly`](/ja/docs/Web/HTML/Attributes/readonly)
 
   - : 論理属性で、存在すれば、ユーザーが入力欄の値を編集できないことを示します。`readonly` 属性は `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `password` の各入力型が対応しています。
 
     詳しくは [HTML 属性: `readonly`](/ja/docs/Web/HTML/Attributes/readonly) を参照してください。
 
-- `required`
+- [`required`](/ja/docs/Web/HTML/Attributes/required)
 
   - : `required` は論理属性であり、所有するフォームが送信される前に、ユーザーが入力欄の値を指定しなければならないことを示します。`required` 属性は `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `password`, `checkbox`, `radio`, `file` の各入力型で対応しています。
 
     詳しくは[クライアント側の検証](#クライアント側の検証)および [HTML 属性: `required`](/ja/docs/Web/HTML/Attributes/required) を参照してください。
 
-- `size`
+- [`size`](/ja/docs/Web/HTML/Attributes/size)
 
   - : `email`, `password`, `tel`, `text` の `input` 型でのみ有効です。入力内容をどれだけ表示するかを指定します。基本的には、CSS の [`width`](/ja/docs/Web/CSS/width) プロパティを設定するのと同じ効果が得られますが、いくつかの特徴があります。値の実際の単位は、入力型によって異なります。`password` や `text` の場合は文字数（または `em` 単位）で既定値は `20`、それ以外の場合はピクセルとなります。CSS の `width` は `size` 属性よりも優先されます。
 
@@ -558,7 +593,7 @@ l10n:
 
   - : `image` 入力ボタンにのみ有効で、`src` は、グラフィカルな送信ボタンを表現するために表示する画像ファイルの URL を指定する文字列です。{{HTMLElement("input/image", "image")}} 入力型を参照してください。
 
-- `step`
+- [`step`](/ja/docs/Web/HTML/Attributes/step)
 
   - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効です。[`step`](/ja/docs/Web/HTML/Attributes/step) 属性は、値が準拠すべき粒度を指定する数値です。
 
@@ -573,7 +608,8 @@ l10n:
 
     例えば、`<input type="number" min="10" step="2">` とすると、`10` 以上の偶数の整数であればすべて有効となります。`<input type="number">` のように省略された場合は、整数であれば何でも有効ですが、浮動小数点実数 (`4.2` など) は `step` の既定値が `1` なので有効ではありません。`4.2` を有効にするためには、`step` に `any`、0.1、0.2 に設定するか、`min` の値を `.2` で終わる数に（例えば `<input type="number" min="-5.2">` に）設定する必要があります。
 
-    > **メモ:** ユーザーが入力したデータが刻みの設定に従っていない場合、その値は制約検証で無効とみなされ、`:invalid` 擬似クラスに一致するようになります。
+    > [!NOTE]
+    > ユーザーが入力したデータが刻みの設定に従っていない場合、その値は制約検証で無効とみなされ、`:invalid` 擬似クラスに一致するようになります。
 
     詳しくは[クライアント側の検証](#クライアント側の検証)を参照してください。
 
@@ -612,12 +648,6 @@ l10n:
   </thead>
   <tbody>
     <tr>
-      <td><a href="#autocorrect"><code>autocorrect</code></a></td>
-      <td>
-        自動補完が <code>on</code> であるか <code>off</code> であるかを示す文字列です。<strong>Safari のみ。</strong>
-      </td>
-    </tr>
-    <tr>
       <td><a href="#incremental"><code>incremental</code></a></td>
       <td>
         ユーザーがフィールドの値を編集している途中にライブで検索結果を更新できるように、{{domxref("HTMLInputElement/search_event", "search")}} イベントを繰り返し送信するかどうかを設定します。<strong>WebKit および Blink のみ（Safari, Chrome, Opera, など）。</strong>
@@ -652,18 +682,9 @@ l10n:
   </tbody>
 </table>
 
-- `autocorrect` {{non-standard_inline}}
-
-  - : （Safari のみ）。文字列で、ユーザーがこの欄を編集している間に自動修正を有効にするかどうかを示します。次の値が許されています。
-
-    - `on`
-      - : 構成されていれば、打ち間違いの自動修正や、テキストの置き換え処理を有効にします。
-    - `off`
-      - : 自動修正やテキストの置き換えを無効にします。
-
 - `incremental` {{non-standard_inline}}
 
-  - : 論理属性 `incremental` は WebKit および Blink 拡張で（そのため Safari, Opera, Chrome, などが対応）、もし存在すれば、{{Glossary("user agent", "ユーザーエージェント")}}に入力をライブ検索として処理します。ユーザーがフィールドの値を編集すると、ユーザーエージェントは {{domxref("HTMLInputElement/search_event", "search")}} イベントを検索ボックスを表す {{domxref("HTMLInputElement")}} オブジェクトへ送信します。これにより、ユーザーが検索を編集するたびに、コードからリアルタイムに検索結果を更新することができます。
+  - : 論理属性 `incremental` は WebKit および Blink 拡張で（そのため Safari, Opera, Chrome, などが対応）、もし存在すれば、{{Glossary("User agent", "ユーザーエージェント")}}に入力をライブ検索として処理します。ユーザーがフィールドの値を編集すると、ユーザーエージェントは {{domxref("HTMLInputElement/search_event", "search")}} イベントを検索ボックスを表す {{domxref("HTMLInputElement")}} オブジェクトへ送信します。これにより、ユーザーが検索を編集するたびに、コードからリアルタイムに検索結果を更新することができます。
 
     `incremental` が指定されていない場合、{{domxref("HTMLInputElement/search_event", "search")}} イベントはユーザーが明示的に検索を実行した時のみ（フィールドを編集中に <kbd>Enter</kbd> または <kbd>Return</kbd> キーを押すなど) 送信されます。
 
@@ -675,7 +696,7 @@ l10n:
 
 - `results` {{non-standard_inline}}
 
-  - : `results` 属性は Safari のみが対応しており、{{HTMLElement("input")}} 要素のネイティブな検索クエリーのドロップダウンメニューに表示する項目の最大数を上書きすることができる数値です。
+  - : `results` 属性は Safari のみが対応しており、 `<input>` 要素のネイティブな検索クエリーのドロップダウンメニューに表示する項目の最大数を上書きすることができる数値です。
 
     この値は、負でない 10 進数でなければならなりません。指定しない場合、または無効な値を指定した場合は、ブラウザーの既定の最大項目数が使用されます。
 
@@ -716,7 +737,7 @@ l10n:
 
 <table class="no-markdown">
   <caption>
-    <code>&#x3C;input></code> 要素に関連する説明
+    <code>&#x3C;input></code> 要素に関連する擬似クラス
   </caption>
   <thead>
     <tr>
@@ -823,6 +844,12 @@ l10n:
         <code>:invalid</code> と似ていますが、フォーカスを失ったときに適用されます。無効な入力欄に一致しますが、コントロールにフォーカスが移動したり、コントロールから離れたり、無効なコントロールを含むフォームを送信しようとしたときなど、ユーザーの操作があって初めて一致します。
       </td>
     </tr>
+    <tr>
+      <td>{{Cssxref(":open")}}</td>
+      <td>
+        ユーザーが値を選択するピッカーを表示する <code>&lt;input&gt;</code> 要素（<a href="/ja/docs/Web/HTML/Element/input/color"><code>&lt;input type="color"&gt;</code></a> など）のみで、要素が開いている状態、すなわちピッカーが表示されている状態の場合。
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -848,7 +875,7 @@ input:checked + label {
 
 ### 属性セレクター
 
-[属性セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)を使用すると、様々なフォームコントロールの型のターゲットを [type](#type) に基づいて絞ることができます。CSS の属性セレクターは、属性の有無または属性の値に基づいて要素を照合します。
+[属性セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)を使用すると、様々なフォームコントロールの型のターゲットを [type](#type) に基づいて絞ることができます。CSS の属性セレクターは、属性の有無または属性の値に基づいて要素を照合します。
 
 ```css
 /* password 入力欄に一致 */
@@ -929,9 +956,8 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
 
 こちらも参照してください。
 
-- [HTML フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
-- [HTML フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
-- [フォームウィジェット向けプロパティ実装状況一覧](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [HTML フォームへのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [HTML フォームへの高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
 
 ## 追加機能
 
@@ -973,11 +999,13 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
 
 プレイスホルダーは、スクリーンリーダーがアクセスできないだけでなく、ユーザーがフォームコントロールにテキストを入力したり、フォームコントロールにすでに値があったりした場合、プレイスホルダーは非表示になります。自動ページ翻訳機能を持つブラウザーは、翻訳時にこの属性をスキップすることがあります。すなわち `placeholder` は翻訳されないことがあります。
 
-> **メモ:** 避けることができるのであれば、[`placeholder`](#placeholder) 属性を使用しないでください。`<input>` 要素にラベルを付ける必要があるのであれば、{{HTMLElement("label")}} 属性を使用してください。
+> [!NOTE]
+> 避けることができるのであれば、[`placeholder`](#placeholder) 属性を使用しないでください。`<input>` 要素にラベルを付ける必要があるのであれば、{{HTMLElement("label")}} 属性を使用してください。
 
 ### クライアント側の検証
 
-> **警告:** クライアント側の検証は便利ですが、サーバーが有効なデータを受け取ることを保証するものではありません。データが特定の形式でなければならない場合は、必ずサーバー側でも検証を行い、形式が無効な場合は [HTTP の `400` レスポンス](/ja/docs/Web/HTTP/Status/400)を返してください。
+> [!WARNING]
+> クライアント側の検証は便利ですが、サーバーが有効なデータを受け取ることを保証するものではありません。データが特定の形式でなければならない場合は、必ずサーバー側でも検証を行い、形式が無効な場合は [HTTP の `400` レスポンス](/ja/docs/Web/HTTP/Status/400)を返してください。
 
 上記の [UI 擬似クラス](#ui_擬似クラス)の節で述べたように、CSS を用いて、それぞれの入力欄の現在の状態に基づく {{cssxref(":valid")}} または {{cssxref(":invalid")}} の UI 状態に基づいて入力欄にスタイル設定をすることに加え、フォームを送信（しようと）したときに、ブラウザーはクライアント側の検証を行います。フォームを送信する時に、制約検証に不合格になったフォームコントロールがある場合、対応しているブラウザーは、最初の無効なフォームコントロールにエラーメッセージを表示します。エラー種別に基づいた既定のメッセージを表示したり、ユーザーが設定したメッセージを表示したりします。
 
@@ -993,7 +1021,7 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
 
 <table class="no-markdown">
   <caption>
-    {{htmlelement('input')}} の属性とその値による検証オブジェクトエラー
+    <code>&lt;input&gt;</code> の属性とその値による検証オブジェクトエラー
   </caption>
   <thead>
     <tr>
@@ -1005,56 +1033,56 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
   <tbody>
     <tr>
       <td><a href="#max"><code>max</code></a></td>
-      <td>{{domxref('validityState.rangeOverflow')}}</td>
+      <td>{{domxref('ValidityState.rangeOverflow')}}</td>
       <td>
         値が <code>max</code> 属性で定義された最大値よりも大きい場合に発生する
       </td>
     </tr>
     <tr>
       <td><a href="#maxlength"><code>maxlength</code></a></td>
-      <td>{{domxref('validityState.tooLong')}}</td>
+      <td>{{domxref('ValidityState.tooLong')}}</td>
       <td>
         <code>maxlength</code> プロパティで許可された値よりも文字数が多い場合に発生する
       </td>
     </tr>
     <tr>
       <td><a href="#min"><code>min</code></a></td>
-      <td>{{domxref('validityState.rangeUnderflow')}}</td>
+      <td>{{domxref('ValidityState.rangeUnderflow')}}</td>
       <td>
         値が <code>min</code> 属性で定義された最小値よりも小さい場合には発生する
       </td>
     </tr>
     <tr>
       <td><a href="#minlength"><code>minlength</code></a></td>
-      <td>{{domxref('validityState.tooShort')}}</td>
+      <td>{{domxref('ValidityState.tooShort')}}</td>
       <td>
         <code>minlength</code> プロパティで必要とされる値よりも文字数が少ない場合に発生する
       </td>
     </tr>
     <tr>
       <td><a href="#pattern"><code>pattern</code></a></td>
-      <td>{{domxref('validityState.patternMismatch')}}</td>
+      <td>{{domxref('ValidityState.patternMismatch')}}</td>
       <td>
         pattern 属性に有効な正規表現が設定されており、<code>value</code> がそれに一致しない場合に発生する。
       </td>
     </tr>
     <tr>
       <td><a href="#required"><code>required</code></a></td>
-      <td>{{domxref('validityState.valueMissing')}}</td>
+      <td>{{domxref('ValidityState.valueMissing')}}</td>
       <td>
         <code>required</code> 属性があるにもかかわらず、値が <code>null</code> であるか、ラジオボタンやチェックボックスがチェックされていない場合に発生する。
       </td>
     </tr>
     <tr>
       <td><a href="#step"><code>step</code></a></td>
-      <td>{{domxref('validityState.stepMismatch')}}</td>
+      <td>{{domxref('ValidityState.stepMismatch')}}</td>
       <td>
         値が step の増分に一致していない。増分の既定値は <code>1</code> であるため、<code>type="number"</code> で step が指定されていない場合は整数のみが有効になります。<code>step="any"</code> ではこのエラーは発生しません。
       </td>
     </tr>
     <tr>
       <td><a href="#type"><code>type</code></a></td>
-      <td>{{domxref('validityState.typeMismatch')}}</td>
+      <td>{{domxref('ValidityState.typeMismatch')}}</td>
       <td>
         値が正しい型ではない場合、例えばメールアドレスに <code>@</code> が含まれていない場合や、URL にプロトコルが含まれていない場合に発生します。
       </td>
@@ -1068,17 +1096,17 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
 
 上記の表で説明したエラーに加え、`validityState` インターフェイスには `badInput`, `valid`, `customError` の論理型の読み取り専用プロパティがあります。検証オブジェクトに含まれるのは次の通りです。
 
-- {{domxref('validityState.valueMissing')}}
-- {{domxref('validityState.typeMismatch')}}
-- {{domxref('validityState.patternMismatch')}}
-- {{domxref('validityState.tooLong')}}
-- {{domxref('validityState.tooShort')}}
-- {{domxref('validityState.rangeUnderflow')}}
-- {{domxref('validityState.rangeOverflow')}}
-- {{domxref('validityState.stepMismatch')}}
-- {{domxref('validityState.badInput')}}
-- {{domxref('validityState', 'validityState.valid')}}
-- {{domxref('validityState', 'validityState.customError')}}
+- {{domxref('ValidityState.valueMissing')}}
+- {{domxref('ValidityState.typeMismatch')}}
+- {{domxref('ValidityState.patternMismatch')}}
+- {{domxref('ValidityState.tooLong')}}
+- {{domxref('ValidityState.tooShort')}}
+- {{domxref('ValidityState.rangeUnderflow')}}
+- {{domxref('ValidityState.rangeOverflow')}}
+- {{domxref('ValidityState.stepMismatch')}}
+- {{domxref('ValidityState.badInput')}}
+- {{domxref('ValidityState', 'validityState.valid')}}
+- {{domxref('ValidityState', 'validityState.customError')}}
 
 これらの論理型プロパティではそれぞれ、`true` の値で指定された観点の検証に合格しなかった可能性があることを示しますが、`valid` プロパティは例外で、その要素の値がすべての検証に合格したときに `true` になります。
 
@@ -1103,13 +1131,13 @@ function validate(input) {
 
 #### 独自の検証エラーの例
 
-フィールドの検査に不合格になった場合に独自のエラーメッセージを表示させたい場合は、`<input>` (および関連する) 要素で利用できる[制約検証機能](/ja/docs/Learn/Forms/Form_validation#validating_forms_using_javascript)を使用する必要があります。以下のような形を取ってください。
+フィールドの検査に不合格になった場合に独自のエラーメッセージを表示させたい場合は、`<input>` (および関連する) 要素で利用できる[制約検証 API](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation#javascript_を使用したフォーム検証) を使用する必要があります。以下のような形を取ってください。
 
-```html-nolint
+```html-nolint live-sample___custom_validation_error_example
 <form>
   <label for="name">ユーザー名を入力してください（英大文字および小文字）: </label>
   <input type="text" name="name" id="name" required pattern="[A-Za-z]+" />
-  <button>Submit</button>
+  <button>送信</button>
 </form>
 ```
 
@@ -1117,7 +1145,7 @@ function validate(input) {
 
 独自のエラーメッセージで代替したい場合は、以下のような JavaScript を使用することができます。
 
-```js
+```js live-sample___custom_validation_error_example
 const nameInput = document.querySelector("input");
 
 nameInput.addEventListener("input", () => {
@@ -1147,9 +1175,11 @@ nameInput.addEventListener("invalid", () => {
 - 結果として、送信ボタンが押されたときに入力値が有効ではない場合は、独自のエラーメッセージのうちの一つが表示されます。
 - 有効である場合は、期待通りに送信されます。この場合、独自の検証は `setCustomValidity()` を空文字列で呼び出すことで中断されます。従って、`input` イベントが発生するたびにこれが行われます。以前、独自の検証が設定され、これを行わないと、送信時に有効な値を持っていたとしても、入力欄は無効であるとして登録されます。
 
-> **メモ:** 常に、クライアント側とサーバー側の両方で入力値の制約を検証するようにしてください。制約検証は、*サーバー側*での検証の必要性をなくすものではありません。古いブラウザーや悪意のある人物によって、無効な値が送信される可能性があります。
+> [!NOTE]
+> 常に、クライアント側とサーバー側の両方で入力値の制約を検証するようにしてください。制約検証は、*サーバー側*での検証の必要性をなくすものではありません。古いブラウザーや悪意のある人物によって、無効な値が送信される可能性があります。
 
-> **メモ:** Firefox は多くの版で、同様の方法で独自のエラーメッセージを設定することができる、独自のエラー属性 — `x-moz-errormessage` — に対応していました。これはバージョン 66 で削除されました（[Firefox バグ 1513890](https://bugzil.la/1513890) を参照）。
+> [!NOTE]
+> Firefox は多くの版で、同様の方法で独自のエラーメッセージを設定することができる、独自のエラー属性 — `x-moz-errormessage` — に対応していました。これはバージョン 66 で削除されました（[Firefox バグ 1513890](https://bugzil.la/1513890) を参照）。
 
 ### ローカライズ
 
@@ -1160,6 +1190,27 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
 - 当該要素または親要素の `lang`/`xml:lang` 属性で指定された言語
 - HTTP の `Content-Language` ヘッダーで指定された言語
 - 何も指定されていない場合は、ブラウザーのロケール
+
+## アクセシビリティ
+
+### ラベル
+
+入力フィールドを設ける場合、横に並んだラベルを追加することはアクセシビリティの要件となります。これは、支援技術を使用する人が、その入力フィールドが何のためのものなのかを理解できるようにする必要があるためです。また、ラベルをクリックまたはタッチすると、そのラベルに関連付けられたフォームコントロールにフォーカスが移動します。これにより、視覚障碍者にとってのアクセシビリティとユーザビリティが向上し、ユーザーがフォームコントロールを起動するためにクリックまたはタッチできる領域が広がります。これは、特にラジオボタンやチェックボックスなど、小さなフォームコントロールに対して特に有用です。ラベルについての一般的な詳細情報は、[ラベル](#ラベル)をご覧ください。
+
+上記スタイル設定における `<label>` と `<input>` 要素の関連付けられた例を次に示します。 `<input>` には `id` 属性を指定する必要があります。 `<label>` には、入力の `id` と同じ値を持つ `for` 属性が必要です。
+
+```html
+<label for="peas">Do you like peas?</label>
+<input type="checkbox" name="peas" id="peas" />
+```
+
+### 大きさ
+
+フォーム入力欄のような対話型要素は、簡単に有効化できるだけの大きさを持たせてください。これにより、手足の不自由な人や、スタイラスや指のような精度の低い入力方法を使用している人など、様々な人にとって有用です。対話型の大きさとしては、44×44 [CSS ピクセル](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) を最小値とすることが推奨されています。
+
+- [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
+- [Target Size and 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+- [Quick test: Large touch targets - The A11Y Project](https://www.a11yproject.com/posts/large-touch-targets/)
 
 ## 技術的概要
 
@@ -1175,7 +1226,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
-      <td>なし。これは{{Glossary("void element", "空要素")}}です。</td>
+      <td>なし。これは{{Glossary("Void element", "空要素")}}です。</td>
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
@@ -1331,27 +1382,6 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
   </tbody>
 </table>
 
-## アクセシビリティの考慮
-
-### ラベル
-
-入力欄を設定する際、ラベルを一緒に付けることがアクセシビリティ上の要件です。これは、支援技術を使っている人が、何のための入力なのかを知るために必要です。また、ラベルをクリックまたはタッチすると、ラベルに関連付けられたフォームコントロールにフォーカスが設定されます。これにより、目の不自由なユーザーのアクセシビリティとユーザビリティが向上し、ユーザーがクリックまたはタッチしてフォームコントロールを起動できる領域が増えます。この機能は、ラジオボタンやチェックボックスのような小さなフォームコントロールに特に便利です。ラベルの詳細については、[ラベル](#ラベル)を参照してください。
-
-次の例は、上記の形で `<label>` を `<input>` 要素に関連付ける方法の例です。`<input>` に `id` 属性を設定する必要があります。そして `<label>` には入力欄の `id` と同じ値を持つ `for` 属性が必要になります。
-
-```html
-<label for="peas">Do you like peas?</label>
-<input type="checkbox" name="peas" id="peas" />
-```
-
-### 大きさ
-
-フォーム入力欄のような対話型要素は、簡単に有効化できるだけの大きさを持たせてください。これにより、手足の不自由な人や、スタイラスや指のような精度の低い入力方法を使用している人など、様々な人にとって有用です。対話型の大きさとしては、44×44 [CSS ピクセル](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) を最小値とすることが推奨されています。
-
-- [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
-- [Target Size and 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
-- [Quick test: Large touch targets - The A11Y Project](https://www.a11yproject.com/posts/large-touch-targets/)
-
 ## 仕様書
 
 {{Specifications}}
@@ -1363,13 +1393,13 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
 ## 関連情報
 
 - [フォームの制約検証](/ja/docs/Web/HTML/Constraint_validation)
-- [初めての HTML フォーム](/ja/docs/Learn/Forms/Your_first_form)
-- [HTML フォームを構成する方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
-- [ネイティブのフォームウィジェット](/ja/docs/Learn/Forms/Basic_native_form_controls)
-- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
-- [フォームデータの検証](/ja/docs/Learn/Forms/Form_validation)
-- [独自のフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [古いブラウザーでの HTML フォーム](/ja/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [HTML フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
-- [HTML フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
-- [CSS プロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [初めての HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms/Your_first_form)
+- [HTML フォームを構成する方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
+- [ネイティブのフォームウィジェット](/ja/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
+- [フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
+- [フォームデータの検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [独自のフォームコントロールの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [古いブラウザーでの HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
+- [HTML フォームへのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [HTML フォームへの高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
+- [垂直フォームコントロールの作成](/ja/docs/Web/CSS/CSS_writing_modes/Vertical_controls)

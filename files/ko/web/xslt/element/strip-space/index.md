@@ -28,7 +28,7 @@ slug: Web/XSLT/Element/strip-space
 
 ### 정의
 
-[XSLT section 3.4, Whitespace Stripping](http://www.w3.org/TR/xslt#strip)
+[XSLT section 3.4, Whitespace Stripping](https://www.w3.org/TR/xslt#strip)
 
 ### Gecko 지원
 

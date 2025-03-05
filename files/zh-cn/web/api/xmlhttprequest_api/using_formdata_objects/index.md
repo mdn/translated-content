@@ -31,7 +31,8 @@ request.open("POST", "http://foo.com/submitform.php");
 request.send(formData);
 ```
 
-> **备注：** 字段 "userfile" 和 "webmasterfile" 都包含一个文件。字段 "accountnum" 是数字类型，它将被[`FormData.append()`](/zh-CN/docs/Web/API/FormData/append) 方法转换成字符串（字段类型可以是 {{ domxref("Blob") }}、{{ domxref("File") }} 或者字符串：**如果它的字段类型不是 Blob 也不是 File，则会被转换成字符串类**）。
+> [!NOTE]
+> 字段 "userfile" 和 "webmasterfile" 都包含一个文件。字段 "accountnum" 是数字类型，它将被[`FormData.append()`](/zh-CN/docs/Web/API/FormData/append) 方法转换成字符串（字段类型可以是 {{ domxref("Blob") }}、{{ domxref("File") }} 或者字符串：**如果它的字段类型不是 Blob 也不是 File，则会被转换成字符串类**）。
 
 上面的示例创建了一个 `FormData` 实例，包含"username"、"accountnum"、"userfile" 和 "webmasterfile"四个字段，然后使用 `XMLHttpRequest` 的 [`send()`](/zh-CN/docs/Web/API/XMLHttpRequest/send) 方法发送表单数据。字段 "webmasterfile" 是 {{domxref("Blob")}} 类型。一个 **Blob** 对象表示一个不可变的，原始数据的类似文件对象。Blob 表示的数据不一定是一个 JavaScript 原生格式。 [`File`](/zh-CN/docs/Web/API/File) 接口基于 Blob，继承 blob 功能并将其扩展为支持用户系统上的文件。你可以通过 [`Blob()`](/zh-CN/docs/Web/API/Blob/Blob) 构造函数创建一个 Blob 对象。
 
@@ -39,7 +40,8 @@ request.send(formData);
 
 想要构造一个包含 Form 表单数据的 FormData 对象，需要在创建 FormData 对象时指定表单的元素。
 
-> **备注：** FormData 将仅使用具有 name 属性的输入字段。
+> [!NOTE]
+> FormData 将仅使用具有 name 属性的输入字段。
 
 ```js
 var formData = new FormData(someFormElement);
@@ -124,7 +126,8 @@ form.addEventListener(
 );
 ```
 
-> **备注：** 如果 FormData 对象是通过表单创建的，则表单中指定的请求方式会被应用到方法 open() 中。
+> [!NOTE]
+> 如果 FormData 对象是通过表单创建的，则表单中指定的请求方式会被应用到方法 open() 中。
 
 你还可以直接向 FormData 对象附加 File 或 Blob 类型的文件，如下所示：
 
@@ -150,7 +153,7 @@ $.ajax({
 
 ## 不使用 FormData 对象，通过 AJAX 提交表单和上传文件
 
-如果你想知道不使用 FormData 对象的情况下，如何序列化并通过 [AJAX](/zh-CN/docs/AJAX) 提交表单，[请点击这里](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#提交表单和上传文件)。
+如果你想知道不使用 FormData 对象的情况下，如何序列化并通过 [AJAX](/zh-CN/docs/Learn_web_development/Core/Scripting/Network_requests) 提交表单，[请点击这里](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#提交表单和上传文件)。
 
 ## 参见
 

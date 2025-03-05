@@ -13,7 +13,7 @@ WebExtension `clipboard` API 之所以存在，主要是因为标准剪贴板 AP
 
 此 API 不支持从剪贴板读取，因为剪贴板已经可以使用标准的 web 平台 API 进行读取。请参阅[与剪贴板交互](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard#读取系统粘贴板)。
 
-此 API 基于 Chrome 的 [`clipboard`](https://developer.chrome.com/docs/extensions/reference/clipboard/) API，但该 API 仅适用于 Chrome 应用，不适用于扩展。
+此 API 基于 Chrome 的 [`clipboard`](https://developer.chrome.google.cn/docs/apps/reference/clipboard) API，但该 API 仅适用于 Chrome 应用，不适用于扩展。
 
 要使用此 API，你需要有 `"clipboardWrite"` 扩展[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
@@ -28,4 +28,5 @@ WebExtension `clipboard` API 之所以存在，主要是因为标准剪贴板 AP
 
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.clipboard`](https://developer.chrome.google.cn/apps/clipboard) API。

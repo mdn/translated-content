@@ -9,7 +9,8 @@ l10n:
 
 {{glossary("HTML")}} **엔터티(Entity)**는 앰퍼샌드(`&`)로 시작하고 세미콜론(`;`)으로 끝나는 텍스트 조각('문자열')입니다. 엔터티는 예약된 문자(HTML 코드로 해석됨)와 보이지 않는 문자(예, 줄바꿈 없는 공백)를 표시하는 데 자주 사용됩니다. 표준 키보드로 입력하기 어려운 다른 문자 대신 사용할 수도 있습니다.
 
-> **참고:** 대부분의 문자는 기억할만한 엔터티를 가지고 있습니다. 예를 들어, 저작권 기호의 엔터티 (`©`)는 `&copy;`입니다. `&#8212;`나 `&#x2014;` 처럼 기억에 남지 않는 문자들은, [참조 차트](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references) 또는 [디코더 도구](https://mothereff.in/html-entities)를 사용할 수 있습니다.
+> [!NOTE]
+> 대부분의 문자는 기억할만한 엔터티를 가지고 있습니다. 예를 들어, 저작권 기호의 엔터티 (`©`)는 `&copy;`입니다. `&#8212;`나 `&#x2014;` 처럼 기억에 남지 않는 문자들은, [참조 차트](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references) 또는 [디코더 도구](https://mothereff.in/html-entities)를 사용할 수 있습니다.
 
 ## 예약된 문자
 

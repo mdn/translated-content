@@ -11,7 +11,8 @@ slug: Web/CSS/list-style-image
 
 {{EmbedInteractiveExample("pages/css/list-style-image.html")}}
 
-> **Примечание:** Это свойство применяется к элементам списка, т.е. к элементам с `{{cssxref("display")}}: list-item;` [по умолчанию](https://www.w3.org/TR/html5/rendering.html#lists) оно включает элементы {{HTMLElement("li")}}. Т.к. это свойство наследуется, его можно задать для родительского элемента (обычно {{HTMLElement("ol")}} или {{HTMLElement("ul")}}), что позволит применить его ко всем элементам списка.
+> [!NOTE]
+> Это свойство применяется к элементам списка, т.е. к элементам с `{{cssxref("display")}}: list-item;` [по умолчанию](https://www.w3.org/TR/html5/rendering.html#lists) оно включает элементы {{HTMLElement("li")}}. Т.к. это свойство наследуется, его можно задать для родительского элемента (обычно {{HTMLElement("ol")}} или {{HTMLElement("ul")}}), что позволит применить его ко всем элементам списка.
 
 ## Синтаксис
 
@@ -20,7 +21,7 @@ slug: Web/CSS/list-style-image
 list-style-image: none;
 
 /* <url> значения */
-list-style-image: url("starsolid.gif");
+list-style-image: url("star-solid.gif");
 
 /* Глобальные значения */
 list-style-image: inherit;
@@ -54,7 +55,7 @@ list-style-image: unset;
 
 ```css
 ul {
-  list-style-image: url("starsolid.gif");
+  list-style-image: url("star-solid.gif");
 }
 ```
 

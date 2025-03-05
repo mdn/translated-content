@@ -9,7 +9,7 @@ slug: Web/API/CSSMediaRule
 
 ## 语法
 
-下列语法是使用 [WebIDL](http://dev.w3.org/2006/webapi/WebIDL/) 格式描述的。
+下列语法是使用 [WebIDL](https://dev.w3.org/2006/webapi/WebIDL/) 格式描述的。
 
 ```plain
 interface CSSMediaRule : CSSConditionRule {

@@ -15,7 +15,16 @@ l10n:
 - 配列内に値が**存在する**かどうかを調べる必要がある場合は、 {{jsxref("Array/includes", "includes()")}} を使用してください。
 - 指定したテスト関数を満たす要素があるかどうかを調べる必要がある場合は、 {{jsxref("Array/some", "some()")}} を使用してください。
 
-{{EmbedInteractiveExample("pages/js/array-find.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.find()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find((element) => element > 10);
+
+console.log(found);
+// Expected output: 12
+```
 
 ## 構文
 
@@ -54,7 +63,8 @@ find(callbackFn, thisArg)
 - 既に訪問した位置を変更しても、 `callbackFn` が再度呼び出されることはありません。
 - まだ訪問していない既存の配列要素が `callbackFn` によって変更された場合、 `callbackFn` に渡される値はその要素が取得される時点の値になります。[削除された](/ja/docs/Web/JavaScript/Reference/Operators/delete) 要素は `undefined` であるかのように処理されます。
 
-> **警告:** 上で説明したような同時進行の変更は、理解しにくいコードになることが多いので、（特別な場合を除いて）避けるのが一般的です。
+> [!WARNING]
+> 上で説明したような同時進行の変更は、理解しにくいコードになることが多いので、（特別な場合を除いて）避けるのが一般的です。
 
 `find()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
 

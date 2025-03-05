@@ -5,7 +5,7 @@ slug: WebAssembly/JavaScript_interface/Global/Global
 
 {{WebAssemblySidebar}}
 
-Le constructeur **`WebAssembly.Global()`** permet de créer un nouvel objet `Global` représentant une instance d'une variable globale, accessible depuis le code JavaScript et importable/exportable dans plusieurs instances de [`WebAssembly.Module`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module). Cela permet la liaison dynamique de plusieurs modules.
+Le constructeur **`WebAssembly.Global()`** permet de créer un nouvel objet `Global` représentant une instance d'une variable globale, accessible depuis le code JavaScript et importable/exportable dans plusieurs instances de [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module). Cela permet la liaison dynamique de plusieurs modules.
 
 ## Syntaxe
 
@@ -19,7 +19,7 @@ new WebAssembly.Global(descripteur, valeur);
 
   - : Un objet dictionnaire `GlobalDescriptor` qui contient deux propriétés&nbsp;:
 
-    - `value`: Une chaîne [`USVString`](/fr/docs/Web/API/USVString) représentant le type de données de la variable globale. Elle peut être `i32`, `i64`, `f32`, ou `f64`. `USVString` correspond à l'ensemble des différentes séquences Unicode scalaires possibles. `USVString` correspond à `String` lorsqu'il est renvoyé en JavaScript et est un type généralement utilisé par les API qui effectuent du traitement de texte et qui ont besoin de manipuler une chaîne de valeurs Unicode scalaire. `USVString` est équivalent à `DOMString` sauf qu'il n'accepte pas les codets surrogate non appairés. De tels caractères présents dans une valeur `USVString` seront convertis par le navigateur en caractères de remplacement Unicode&nbsp;: U+FFFD, (�).
+    - `value`: Une chaîne [`USVString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le type de données de la variable globale. Elle peut être `i32`, `i64`, `f32`, ou `f64`. `USVString` correspond à l'ensemble des différentes séquences Unicode scalaires possibles. `USVString` correspond à `String` lorsqu'il est renvoyé en JavaScript et est un type généralement utilisé par les API qui effectuent du traitement de texte et qui ont besoin de manipuler une chaîne de valeurs Unicode scalaire. `USVString` est équivalent à `DOMString` sauf qu'il n'accepte pas les codets surrogate non appairés. De tels caractères présents dans une valeur `USVString` seront convertis par le navigateur en caractères de remplacement Unicode&nbsp;: U+FFFD, (�).
     - `mutable`: Une valeur booléenne qui indique si la variable globale est modifiable ou non. Par défaut, elle vaut `false`.
 
 - _valeur_
@@ -70,7 +70,8 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 );
 ```
 
-> **Note :** Voir [l'exemple live sur GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) et aussi [le code source](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).
+> [!NOTE]
+> Voir [l'exemple live sur GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) et aussi [le code source](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).
 
 ## Spécifications
 

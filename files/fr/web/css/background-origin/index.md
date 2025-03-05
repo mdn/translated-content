@@ -11,7 +11,8 @@ La propriété **`background-origin`** détermine l'origine de l'arrière-plan [
 
 Attention, `background-origin` est ignorée lorsque [`background-attachment`](/fr/docs/Web/CSS/background-attachment) vaut `fixed`.
 
-> **Note :** Cette propriété est rattachée à la propriété raccourcie [`background`](/fr/docs/Web/CSS/background). Aussi, si on a une déclaration `background-origin` avant la propriété raccourcie et que cette dernière ne définit pas la valeur de l'origine, ce sera la valeur initiale par défaut qui sera prise en compte pour `background-origin`.
+> [!NOTE]
+> Cette propriété est rattachée à la propriété raccourcie [`background`](/fr/docs/Web/CSS/background). Aussi, si on a une déclaration `background-origin` avant la propriété raccourcie et que cette dernière ne définit pas la valeur de l'origine, ce sera la valeur initiale par défaut qui sera prise en compte pour `background-origin`.
 
 ## Syntaxe
 
@@ -71,7 +72,8 @@ background-origin: unset;
 
 ```css
 div {
-  background-image: url("logo.jpg"), url("mainback.png"); /* Applique deux images en arrière-plan */
+  background-image:
+    url("logo.jpg"), url("mainback.png"); /* Applique deux images en arrière-plan */
   background-position:
     top right,
     0px 0px;
@@ -95,7 +97,8 @@ Dans cet exemple, la boîte possède une bordure épaisse en pointillés. Le pre
 .box {
   margin: 10px 0;
   color: #fff;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       90deg,
       rgba(131, 58, 180, 1) 0%,
       rgba(253, 29, 29, 0.6) 60%,

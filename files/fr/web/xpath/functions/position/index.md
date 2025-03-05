@@ -40,7 +40,7 @@ Un nombre entier égal à la position du contenu dans le contexte d'évaluation 
 
 ### Définition
 
-[XPath 1.0, section 4.1](http://www.w3.org/TR/xpath#function-position).
+[XPath 1.0, section 4.1](https://www.w3.org/TR/xpath#function-position).
 
 ### Support Gecko
 

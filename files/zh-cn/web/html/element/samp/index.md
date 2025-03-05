@@ -34,13 +34,14 @@ slug: Web/HTML/Element/samp
 
 ## 属性
 
-该元素只包含 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
+该元素只包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 ## DOM 接口
 
-该元素实现了 [`HTMLElement`](/zh-CN/DOM/element) 接口。
+该元素实现了 [`HTMLElement`](/zh-CN/docs/Web/API/element) 接口。
 
-> **备注：** 基于 Gecko 1.9.2 及以上，Firefox 还为该元素实现了[HTMLSpanElement](/zh-CN/DOM/span) 接口。
+> [!NOTE]
+> 基于 Gecko 1.9.2 及以上，Firefox 还为该元素实现了[HTMLSpanElement](/zh-CN/docs/DOM/span) 接口。
 
 ## 示例
 
@@ -62,4 +63,4 @@ Regular text. `This is sample text.` Regular text.
 
 ## 参见
 
-- [HTML Code Element](/zh-CN/HTML/Element/code)
+- [HTML Code Element](/zh-CN/docs/Web/HTML/Element/code)

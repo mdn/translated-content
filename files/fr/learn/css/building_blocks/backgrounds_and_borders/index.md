@@ -109,7 +109,8 @@ Essayez ce qui suit :
 
 La propriété [`background-position`](/fr/docs/Web/CSS/background-position) permet de choisir la position de l'arrière-plan à l'intérieur de la boîte dans laquelle il est appliqué. On utilise pour cela un système de coordonnées avec l'origine `(0,0)` au coin en haut à gauche de la boîte, l'axe (`x`) étant horizontal, l'axe (`y`) vertical.
 
-> **Note :** La valeur par défaut de `background-position` est `(0,0)`.
+> [!NOTE]
+> La valeur par défaut de `background-position` est `(0,0)`.
 
 Les valeurs les plus communes pour `background-position` se présentent sous la forme d'un couple — une valeur horizontale suivie d'une valeur verticale.
 
@@ -175,13 +176,14 @@ Il est aussi possible d'ajouter plusieurs images en arrière-plan — il suffit 
 
 Quand vous faites cela, il est possible de se retrouver avec plusieurs arrière-plans qui se chevauchent. Les arrière-plans se superposeront les uns sur les autres, avec le dernier se retrouvant sur le dessus, chacun suivant à leur tour, jusqu'au premier.
 
-> **Note :** On peut joyeusement mélanger dégradés et images de fond classiques.
+> [!NOTE]
+> On peut joyeusement mélanger dégradés et images de fond classiques.
 
 Les autres propriétés `background-*` peuvent aussi avoir une série de valeurs séparées de virgules, de la même manière que `background-image`:
 
 ```css
-background-image: url(image1.png), url(image2.png), url(image3.png),
-  url(image1.png);
+background-image:
+  url(image1.png), url(image2.png), url(image3.png), url(image1.png);
 background-repeat: no-repeat, repeat-x, repeat;
 background-position:
   10px 20px,
@@ -270,7 +272,8 @@ Pour la propriété qui concerne un des côtés&nbsp;:
 }
 ```
 
-> **Note :** Ces propriétés pour les bordures des côtés haut, droit, bas et gauche ont également des propriétés équivalentes _logiques_ qui ciblent les différents côtés de la boîte en fonction du mode d'écriture du document (par exemple de gauche à droite, de droite à gauche ou bien encore de haut en bas). Nous aborderons celles-ci dans la prochaine leçon qui traitera [de la directionnalité du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> [!NOTE]
+> Ces propriétés pour les bordures des côtés haut, droit, bas et gauche ont également des propriétés équivalentes _logiques_ qui ciblent les différents côtés de la boîte en fonction du mode d'écriture du document (par exemple de gauche à droite, de droite à gauche ou bien encore de haut en bas). Nous aborderons celles-ci dans la prochaine leçon qui traitera [de la directionnalité du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
 **Il existe différents styles qui peuvent être utilisés pour les bordures. Dans l'exemple qui suit, nous avons utilisé un style différent pour chacun des côtés de la boîte. N'hésitez pas à modifier l'exemple pour modifier le style, l'épaisseur et la couleur afin de voir comment les bordures fonctionnent.**
 
@@ -310,7 +313,8 @@ Testons vos nouvelles connaissances : en partant de l'exemple fourni plus bas :
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/task.html", '100%', 700)}}
 
-> **Note :** Vous pouvez [jeter un œil à la solution ici](https://github.com/mdn/css-examples/blob/master/learn/solutions.md) — mais essayez d'abord de la trouver par vous-même !
+> [!NOTE]
+> Vous pouvez [jeter un œil à la solution ici](https://github.com/mdn/css-examples/blob/master/learn/solutions.md) — mais essayez d'abord de la trouver par vous-même !
 
 ## Résumé
 

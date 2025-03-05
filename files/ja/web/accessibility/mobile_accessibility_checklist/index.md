@@ -9,7 +9,7 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 
 ## 色
 
-- カラーコントラストは、[WCAG 2.0](http://www.w3.org/TR/WCAG/)（英語）の AA レベルの要件に準拠**しなければならない**。
+- カラーコントラストは、[WCAG 2.0](https://www.w3.org/TR/WCAG/)（英語）の AA レベルの要件に準拠**しなければならない**。
 
   - 通常のテキストでは、4.5:1 のコントラスト比（18 ポイント未満または 14 ポイント未満の太字）。
   - 大きなテキストでは、3:1 のコントラスト比（少なくとも 18 ポイントまたは 14 ポイントの太字）。
@@ -61,6 +61,6 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 
 - `banner`、`complementary`、`contentinfo`、`main`、`navigation`、`search` のような [ARIA のランドマークロール](https://www.w3.org/TR/wai-aria/#landmark_roles)（英語）は、アプリやドキュメントの構造を説明するために使用**するべきです**（SHOULD）。
 - タッチイベントハンドラーは、`touchend` イベントでのみトリガ**されなければならない**。
-- タッチターゲットは、ユーザーが対話するのに十分な大きさ**でなければならない**（有用なタッチターゲットサイズのガイドラインについては、[BBC モバイルアクセシビリティ・ガイドライン](http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size)（英語）を参照してください）。
+- タッチターゲットは、ユーザーが対話するのに十分な大きさ**でなければならない**（有用なタッチターゲットサイズのガイドラインについては、[BBC モバイルアクセシビリティ・ガイドライン](https://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size)（英語）を参照してください）。
 
 > **メモ:** [この文書のオリジナル版](http://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)（英語）は、[Yura Zenevich](http://yzen.github.io/) によって書かれました。

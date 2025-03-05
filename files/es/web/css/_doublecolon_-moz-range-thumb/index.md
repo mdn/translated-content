@@ -1,5 +1,5 @@
 ---
-title: "::-moz-range-thumb"
+title: ::-moz-range-thumb
 slug: Web/CSS/::-moz-range-thumb
 ---
 
@@ -9,7 +9,8 @@ slug: Web/CSS/::-moz-range-thumb
 
 El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) CSS **`::-moz-range-thumb`** representa el elemento que el usuario puede usar en el _"camino"_ marcado por un elemento {{HTMLElement("input")}} con `type="range"` para alterar su valor numérico.
 
-> **Nota:** Si se usa `::-moz-range-thumb` en cualquier elemento que no sea `<input type="range">` ni se seleccionará nada ni se conseguirá efecto alguno.
+> [!NOTE]
+> Si se usa `::-moz-range-thumb` en cualquier elemento que no sea `<input type="range">` ni se seleccionará nada ni se conseguirá efecto alguno.
 
 ## Syntax
 
@@ -60,4 +61,4 @@ No es parte de ninguna especificación. El un pseudo-elemento propietario de Gec
   - {{cssxref("::-webkit-slider-thumb")}}, pseudo-elemento souportado por WebKit y Blink (Safari, Chrome and Opera).
 
 - [CSS-Tricks: Estilos con CSS para input con type="range" en los distintos navegadores.](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode: Dando estilos y haciendo script con elementos deslizadores.](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [QuirksMode: Dando estilos y haciendo script con elementos deslizadores.](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

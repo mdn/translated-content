@@ -5,12 +5,12 @@ slug: Web/API/HTMLInputElement/select_event
 
 {{APIRef}}
 
-L'évènement `select` est déclenché quand du texte est sélectionné. L'évènement peut ne pas être disponible pour tous les éléments dans tous les langages. Par exemple, en [HTML5](http://www.w3.org/TR/DOM-Level-3-Events/#references-HTML5), les évènements select ne peuvent être envoyés que sur des éléments `input` de formulaire et `textarea`.
+L'évènement `select` est déclenché quand du texte est sélectionné. L'évènement peut ne pas être disponible pour tous les éléments dans tous les langages. Par exemple, en [HTML5](https://www.w3.org/TR/DOM-Level-3-Events/#references-HTML5), les évènements select ne peuvent être envoyés que sur des éléments `input` de formulaire et `textarea`.
 
 ## Info générale
 
 - Spécification
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-select)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-select)
 - Interface
   - : UIEvent si généré depuis une interface utilisateur, Event sinon.
 - Remonte
@@ -24,14 +24,14 @@ L'évènement `select` est déclenché quand du texte est sélectionné. L'évè
 
 ## Propriétés
 
-| Property                        | Type                                          | Description                                                                                |
-| ------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `target` {{readonlyInline}}     | [`EventTarget`](/fr/docs/Web/API/EventTarget) | The event target (the topmost target in the DOM tree).                                     |
-| `type` {{readonlyInline}}       | [`DOMString`](/fr/docs/Web/API/DOMString)     | The type of event.                                                                         |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/fr/docs/Web/API/Boolean)         | Whether the event normally bubbles or not.                                                 |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/fr/docs/Web/API/Boolean)         | Whether the event is cancellable or not.                                                   |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/fr/docs/Web/API/WindowProxy) | [`document.defaultView`](/fr/docs/Web/API/Document/defaultView) (`window` of the document) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                              | 0.                                                                                         |
+| Property                        | Type                                                                   | Description                                                                                |
+| ------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `target` {{readonlyInline}}     | [`EventTarget`](/fr/docs/Web/API/EventTarget)                          | The event target (the topmost target in the DOM tree).                                     |
+| `type` {{readonlyInline}}       | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) | The type of event.                                                                         |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  | Whether the event normally bubbles or not.                                                 |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  | Whether the event is cancellable or not.                                                   |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/fr/docs/Web/API/WindowProxy)                          | [`document.defaultView`](/fr/docs/Web/API/Document/defaultView) (`window` of the document) |
+| `detail` {{readonlyInline}}     | `long` (`float`)                                                       | 0.                                                                                         |
 
 ## Exemple
 

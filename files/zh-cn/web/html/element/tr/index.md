@@ -9,7 +9,73 @@ l10n:
 
 [HTML](/zh-CN/docs/Web/HTML) **`<tr>`** 元素定义了表格中的一行单元格。然后可以使用 {{HTMLElement("td")}}（数据单元格）和 {{HTMLElement("th")}}（标题单元格）元素的组合来建立该行的单元格。
 
-{{EmbedInteractiveExample("pages/tabbed/tr.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;tr&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Alien football stars
+  </caption>
+  <tr>
+    <th scope="col">Player</th>
+    <th scope="col">Gloobles</th>
+    <th scope="col">Za'taak</th>
+  </tr>
+  <tr>
+    <th scope="row">TR-7</th>
+    <td>7</td>
+    <td>4,569</td>
+  </tr>
+  <tr>
+    <th scope="row">Khiresh Odo</th>
+    <td>7</td>
+    <td>7,223</td>
+  </tr>
+  <tr>
+    <th scope="row">Mia Oolong</th>
+    <td>9</td>
+    <td>6,219</td>
+  </tr>
+</table>
+```
+
+```css interactive-example
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+th[scope="col"] {
+  background-color: #505050;
+  color: #fff;
+}
+
+th[scope="row"] {
+  background-color: #d6ecd4;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-of-type(even) {
+  background-color: #eee;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+```
 
 ## 属性
 
@@ -288,7 +354,8 @@ td {
 
 {{domxref("HTMLDocument", "文档")}}中的每个 {{HTMLElement("table")}} 的每个表头（{{HTMLElement("th")}}元素）都添加了一个点击事件处理程序；它会根据行中包含的数据单元格（{{HTMLElement("td")}} 元素）的内容对 {{HTMLElement("tbody")}} 的所有行（`<tr>` 元素）进行排序。
 
-> **备注：** 此解决方案假设 {{HTMLElement("td")}} 元素由原始文本填充，没有后代元素。
+> [!NOTE]
+> 此解决方案假设 {{HTMLElement("td")}} 元素由原始文本填充，没有后代元素。
 
 ```js
 const allTables = document.querySelectorAll("table");
@@ -340,7 +407,8 @@ th {
 
 {{EmbedLiveSample('点击表头单元格以进行排序', '650', '100')}}
 
-> **备注：** 为了保证可用性和无障碍性，每个可排序列的标题单元格都必须可识别为排序按钮，并且每个标题单元格都必须以可视方式定义列当前是按升序还是降序排序，并使用 [`aria-sort`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-sort) 属性。更多信息请参阅 [ARIA 创作实践指南](https://www.w3.org/WAI/ARIA/apg/)的[可排序表格示例](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/)。
+> [!NOTE]
+> 为了保证可用性和无障碍性，每个可排序列的标题单元格都必须可识别为排序按钮，并且每个标题单元格都必须以可视方式定义列当前是按升序还是降序排序，并使用 [`aria-sort`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-sort) 属性。更多信息请参阅 [ARIA 创作实践指南](https://www.w3.org/WAI/ARIA/apg/)的[可排序表格示例](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/)。
 
 ## 技术概要
 
@@ -403,7 +471,7 @@ th {
 
 ## 参见
 
-- [学习：HTML 表格](/zh-CN/docs/Learn/HTML/Tables)
+- [学习：HTML 表格](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - {{HTMLElement("caption")}}、{{HTMLElement("col")}}、{{HTMLElement("colgroup")}}、{{HTMLElement("table")}}、{{HTMLElement("tbody")}}、{{HTMLElement("td")}}、{{HTMLElement("tfoot")}}、{{HTMLElement("th")}}、{{HTMLElement("thead")}}：其他与表格相关的元素
 - {{cssxref("background-color")}}：用于设置单元格背景颜色的 CSS 属性
 - {{cssxref("border")}}：用于控制行单元格边框的 CSS 属性

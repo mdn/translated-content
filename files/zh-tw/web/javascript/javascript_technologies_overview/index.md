@@ -11,11 +11,11 @@ slug: Web/JavaScript/JavaScript_technologies_overview
 
 ## JavaScript 的核心語言（ECMAScript）
 
-JavaScript 的核心語言是由 ECMA TC-39 委員會統一標準，並且命名為 [ECMAScript](/zh-TW/JavaScript/Language_Resources) 。隨著最新版本的規格 [ECMAScript 5](http://wiki.ecmascript.org/lib/exe/fetch.php?id=start&cache=cache&media=resources:tc39-2010-062-rev5p.pdf) 在 2011 年 3 月推出，大部分最新的網頁瀏覽器實作了 ECMAScript 3 與部分的 ECMAScript 5。
+JavaScript 的核心語言是由 ECMA TC-39 委員會統一標準，並且命名為 [ECMAScript](/zh-TW/docs/Web/JavaScript/JavaScript_technologies_overview)。隨著最新版本的規格 [ECMAScript 5](http://wiki.ecmascript.org/lib/exe/fetch.php?id=start&cache=cache&media=resources:tc39-2010-062-rev5p.pdf) 在 2011 年 3 月推出，大部分最新的網頁瀏覽器實作了 ECMAScript 3 與部分的 ECMAScript 5。
 
 ### ECMAScript 包含了什麼？
 
-[ECMAScript](/zh-TW/JavaScript/Language_Resources) 主要定義了以下的內容：
+[ECMAScript](/zh-TW/docs/Web/JavaScript/JavaScript_technologies_overview) 主要定義了以下的內容：
 
 - 語言的語法（解析規則，關鍵字，流程控制，物件的初始化… ）
 - 錯誤處理機制 （throw、 try/catch、 允許自訂錯誤型別）
@@ -33,32 +33,32 @@ JavaScript 的核心語言是由 ECMA TC-39 委員會統一標準，並且命名
 
 ### WebID
 
-[WebIDL 規格書](http://dev.w3.org/2006/webapi/WebIDL/) 是 DOM 技術與 ECMAScript 之間相互黏合的基礎。
+[WebIDL 規格書](https://webidl.spec.whatwg.org/) 是 DOM 技術與 ECMAScript 之間相互黏合的基礎。
 
 ### DOM 核心
 
 W3C 統一規範了文件物件模型的核心部分。它定義了無關語言而將 HTML 與 XML 文件抽象化為物件的介面，以及對抽象化物件進行處理的機制。在 DOM 的定義中包含：
 
-- [DOM core](http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) 中的文件結構、樹狀模型，DOM 事件結構：Node, Element, DocumentFragment, Document, DOMImplementation, Event, EventTarget, …
-- [DOM events](http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html) 中對 DOM 事件結構（DOM Event Architecture）和特定事件的廣義定義。
-- 其他如 [DOM Traversal](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html) 和 [DOM Range](http://html5.org/specs/dom-range.html)。
+- [DOM core](https://dom.spec.whatwg.org/) 中的文件結構、樹狀模型，DOM 事件結構：Node, Element, DocumentFragment, Document, DOMImplementation, Event, EventTarget, …
+- [DOM events](https://w3c.github.io/uievents/) 中對 DOM 事件結構（DOM Event Architecture）和特定事件的廣義定義。
+- 其他如 [DOM Traversal](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html) 和 [DOM Range](https://html5.org/specs/dom-range.html)。
 
 以 ECMAScript 的觀點來看，DOM 規範所定義的物件被稱為宿主物件（Host objects） 。
 
 ### HTML DOM
 
-網頁標記語言 [HTML](http://www.whatwg.org/html) 是依據 DOM 來規格化。在 DOM 核心中，定義了虛擬概念的分層，而 HTML 也定義了元素的意義。 HTML DOM 包含了 HTML 元素的 `className` 屬性與諸如 {{ domxref("document.body") }} 的 API。
+網頁標記語言 [HTML](https://html.spec.whatwg.org/multipage/) 是依據 DOM 來規格化。在 DOM 核心中，定義了虛擬概念的分層，而 HTML 也定義了元素的意義。 HTML DOM 包含了 HTML 元素的 `className` 屬性與諸如 {{ domxref("document.body") }} 的 API。
 
 HTML 的規格書也定義了在文件上的一些限制；例如，他要求所有 `ul` 元素（代表無順序編號的清單）的子元素必須是 `li 元素（代表清單`中的項目）。而未在標準中定義的元素和屬性通常在規格中被禁用。
 
 ## 其他重要的 API
 
-- setTimeout 和 setInterval 函數首次納入 HTML 標準中的 [Window](http://www.whatwg.org/html/#window) 介面
-- [XMLHttpRequest](http://dev.w3.org/2006/webapi/XMLHttpRequest-2/)：允許傳送非同步 HTTP 請求的 API。
-- [CSS Object Model](http://dev.w3.org/csswg/cssom/)：CSSOM 用來將 CSS 的規則轉換為物件。
-- [WebWorkers](http://www.whatwg.org/specs/web-workers/current-work/)：允許平行計算的 API。
-- [WebSockets](http://www.whatwg.org/C/#network)：允許低階雙向溝通的 API。
-- [Canvas 2D Context](http://www.whatwg.org/html/#2dcontext)：canvas 元素的繪圖 API。
+- setTimeout 和 setInterval 函數首次納入 HTML 標準中的 [Window](https://html.spec.whatwg.org/multipage/nav-history-apis.html#window) 介面
+- [XMLHttpRequest](https://xhr.spec.whatwg.org/)：允許傳送非同步 HTTP 請求的 API。
+- [CSS Object Model](https://drafts.csswg.org/cssom/)：CSSOM 用來將 CSS 的規則轉換為物件。
+- [WebWorkers](https://html.spec.whatwg.org/multipage/workers.html)：允許平行計算的 API。
+- [WebSockets](https://html.spec.whatwg.org/multipage/comms.html#network)：允許低階雙向溝通的 API。
+- [Canvas 2D Context](https://html.spec.whatwg.org/multipage/canvas.html#2dcontext)：canvas 元素的繪圖 API。
 
 ## Shell
 
@@ -78,10 +78,10 @@ A JavaScript shell allows you to quickly test snippets of JavaScript code withou
 
 - [Firebug](https://addons.mozilla.org/en-US/firefox/addon/firebug/) - Firefox 的開發者工具，同樣包函主控台
 - [Babel REPL](https://babeljs.io/repl) - 以瀏覽器為基準的 [REPL](https://en.wikipedia.org/wiki/REPL)，主要用來實驗未來的 JavaScript
-- [TypeScript playground](https://www.typescriptlang.org/play) — A browser-based playground for experimenting both new JavaScript features (via the tsc compiler) and TypeScript syntax.
+- [TypeScript playground](https://www.typescriptlang.org/play/) — A browser-based playground for experimenting both new JavaScript features (via the tsc compiler) and TypeScript syntax.
 
 ## 瀏覽器支援
 
-每個網頁開發者都曾經體會過[一團混亂的 DOM 支援狀況](http://ejohn.org/blog/the-dom-is-a-mess/)。某些功能上不同瀏覽器的支援可能差異很大，因為過去重要的 DOM 功能都沒有明確的規範，進而使不同網頁瀏覽器對相同的使用情境實踐了互不相容的功能（像是 Internet Explorer 的事件模型）。最近（截至 2011 年 6 月），由 W3C 與（特別是）WHATWG 對舊功能重新進行詳盡的定義以提升互通性成為了趨勢 。為了跟進這個趨勢，許多網頁瀏覽器也根據這些新規格改進它們的實作。
+每個網頁開發者都曾經體會過[一團混亂的 DOM 支援狀況](https://johnresig.com/blog/the-dom-is-a-mess/)。某些功能上不同瀏覽器的支援可能差異很大，因為過去重要的 DOM 功能都沒有明確的規範，進而使不同網頁瀏覽器對相同的使用情境實踐了互不相容的功能（像是 Internet Explorer 的事件模型）。最近（截至 2011 年 6 月），由 W3C 與（特別是）WHATWG 對舊功能重新進行詳盡的定義以提升互通性成為了趨勢 。為了跟進這個趨勢，許多網頁瀏覽器也根據這些新規格改進它們的實作。
 
-雖然並未完全可靠，使用 JavaScript 函式庫是解決跨瀏覽器相容問題的最普遍方式。 這些函式庫將 DOM 的功能抽象化，確保其 API 在不同的瀏覽器中能以相似的方式運作。廣為被使用的框架包括 [jQuery](http://jquery.com/)、[prototype](http://www.prototypejs.org/) 和 [YUI](http://developer.yahoo.com/yui/)。
+雖然並未完全可靠，使用 JavaScript 函式庫是解決跨瀏覽器相容問題的最普遍方式。 這些函式庫將 DOM 的功能抽象化，確保其 API 在不同的瀏覽器中能以相似的方式運作。廣為被使用的框架包括 [jQuery](https://jquery.com/)、[prototype](http://prototypejs.org/) 和 [YUI](https://clarle.github.io/yui3/)。

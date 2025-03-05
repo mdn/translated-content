@@ -12,7 +12,8 @@ l10n:
 
 このプロパティはワーカーでは使用できません。
 
-> **警告:** このプロパティは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} を使用してください。
+> [!WARNING]
+> このプロパティは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} を使用してください。
 
 ## 値
 

@@ -34,7 +34,8 @@ toJSON()
 - `usernameFragment` {{optional_inline}}
   - : 一个包含用户名片段（通常简称为“ufrag”或“ice-ufrag”）的字符串。其连同 ICE 密码（“ice-pwd”），作为一个正在进行的 ICE 交互的唯一标识（包括所有与 {{Glossary("STUN")}} 服务器的通信）。更多信息可以查阅 {{domxref("RTCIceCandidate.usernameFragment")}}。
 
-> **备注：** 返回的 JSON 对象的格式/属性，与传递给 {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}} 构造函数的配置候选者的 `candidateInfo` 对象相同。
+> [!NOTE]
+> 返回的 JSON 对象的格式/属性，与传递给 {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}} 构造函数的配置候选者的 `candidateInfo` 对象相同。
 
 ## 示例
 

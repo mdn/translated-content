@@ -154,7 +154,6 @@ HTML DOM API 中的大多数接口，几乎一对一地映射到单个 HTML 元�
 - {{DOMxRef("HTMLFrameElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameSetElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLIsIndexElement")}} {{deprecated_inline}}
-- {{DOMxRef("HTMLMenuItemElement")}} {{deprecated_inline}}
 
 ### Web 应用程序和浏览器集成接口
 
@@ -368,4 +367,4 @@ nameField.addEventListener("input", (event) => {
 
 ### 指南
 
-- [操作文档](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)：操作 DOM 的入门指南。
+- [操作文档](/zh-CN/docs/Learn_web_development/Core/Scripting/DOM_scripting)：操作 DOM 的入门指南。

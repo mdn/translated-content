@@ -38,5 +38,5 @@ var defaultReference = new Default();
 
 ### Referencia técnica
 
-- [El constructor en programación orientada a objetos para JavaScript](/es/docs/Learn/JavaScript/Objects#The_Constructor) en MDN
+- [El constructor en programación orientada a objetos para JavaScript](/es/docs/Learn/JavaScript/Objects#the_constructor) en MDN
 - [Operador new en JavaScript](/es/docs/Web/JavaScript/Reference/Operators/new) en MDN

@@ -32,7 +32,7 @@ ceiling (-5.2) = -5
 
 ### Définition
 
-[XPath 1.0, section 4.4](http://www.w3.org/TR/xpath#function-ceiling).
+[XPath 1.0, section 4.4](https://www.w3.org/TR/xpath#function-ceiling).
 
 ### Support Gecko
 

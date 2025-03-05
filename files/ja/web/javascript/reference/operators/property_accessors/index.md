@@ -1,47 +1,66 @@
 ---
 title: プロパティアクセサー
 slug: Web/JavaScript/Reference/Operators/Property_accessors
+l10n:
+  sourceCommit: e03b13c7e157ec7b7bb02a6c7c4854b862195905
 ---
 
 {{jsSidebar("Operators")}}
 
-**プロパティアクセサー**はオブジェクトのプロパティへのアクセスを提供するもので、ドット表記法またはブラケット表記法を使用します。
+**プロパティアクセサー**はオブジェクトのプロパティへのアクセスを提供するもので、ドット記法またはブラケット記法を使用します。
 
-{{EmbedInteractiveExample("pages/js/expressions-propertyaccessors.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Property accessors", "taller")}}
+
+```js interactive-example
+const person1 = {};
+person1["firstname"] = "Mario";
+person1["lastname"] = "Rossi";
+
+console.log(person1.firstname);
+// Expected output: "Mario"
+
+const person2 = {
+  firstname: "John",
+  lastname: "Doe",
+};
+
+console.log(person2["lastname"]);
+// Expected output: "Doe"
+```
 
 ## 構文
 
-```js
-object.property;
-object["property"];
+```js-nolint
+object.propertyName
+object[expression]
+object.#privateProperty
 ```
 
 ## 解説
 
-オブジェクトは実際には*連想配列* (別名 _map_、 _dictionary_、 _hash_、 _lookup table_) とみなすことができます。この配列における*キー*はオブジェクトのプロパティ名です。
+オブジェクトは実際には*連想配列*（別名 _map_、 _dictionary_、 _hash_、 _lookup table_）とみなすことができます。この配列における*キー*はオブジェクトの[プロパティ](/ja/docs/Glossary/Property/JavaScript)の名前です。
 
-一般的に、オブジェクトのプロパティについて説明する際には、プロパティとメソッドを区別します。しかし、プロパティとメソッドの区別は慣習的なものにすぎません。メソッドは呼び出すことができるプロパティです (例えば、値として {{jsxref("Function")}} インスタンスへの参照を持っているようなものです)。
+プロパティにアクセスするには、*ドット記法*と*ブラケット記法*の 2 通りがあります。
 
-プロパティにアクセスするには、*ドット表記法*と*ブラケット表記法*の 2 通りがあります。
+### ドット記法
 
-### ドット表記法
-
-`object.property` の構文では、 `property` は有効な JavaScript の [識別子](/ja/docs/Glossary/Identifier)でなければなりません。 (ECMAScript 標準では、プロパティの名前は技術的には "IdentifierNames" であり、 "Identifiers" ではないので、予約語を使用することができますがお勧めしません)。例えば、 `object.$1` は有効であるのに対し、 `object.1` は有効ではありません。
+`object.propertyName` の構文では、 `propertyName` は有効な JavaScript の [識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)でなければならず、[予約語](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#キーワード)であっても構いません。例えば、 `object.$1` は有効であるのに対し、 `object.1` は有効ではありません。
 
 ```js
-const variable = object.property_name;
-
-object.property_name = value;
+const variable = object.propertyName;
+object.propertyName = value;
 ```
 
 ```js
 const object = {};
+object.$1 = "foo";
+console.log(object.$1); // 'foo'
+```
 
-object.$1 = 'foo';
-console.log(object.$1);  // 'foo'
-
-object.1 = 'bar';        // SyntaxError
-console.log(object.1);   // SyntaxError
+```js-nolint example-bad
+const object = {};
+object.1 = 'bar'; // SyntaxError
+console.log(object.1); // SyntaxError
 ```
 
 ここで、 `createElement` というメソッドを `document` から取得し、呼び出します。
@@ -66,13 +85,15 @@ document.createElement("pre");
 // 77.と77.0は同じものとして評価されます
 ```
 
-### ブラケット表記法
+さらに、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)は、それを定義するクラス内でドット記法を使用してのみアクセスすることができます。
 
-`object[property_name]` の構文では、 `property_name` は文字列または[シンボル](/ja/docs/Glossary/Symbol)です。ですから、これは任意の文字列、例えば `'1foo'`、`'!bar!'`、または `' '` (空白) であっても構いません。
+### ブラケット記法
+
+`object[expression]` の構文では、`expression` は文字列または[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)です。ですから、これは任意の文字列、例えば `'1foo'`、`'!bar!'`、または `' '` (空白) であっても構いません。
 
 ```js
-const variable = object[property_name];
-object[property_name] = value;
+const variable = object[propertyName];
+object[propertyName] = value;
 ```
 
 これは前の例とまったく同じです。
@@ -81,18 +102,32 @@ object[property_name] = value;
 document["createElement"]("pre");
 ```
 
-ブラケット表記法の前には空白を入れることができます。
+ブラケット記法の前には空白を入れることができます。
 
 ```js-nolint
 document ["createElement"]("pre");
 ```
 
-### プロパティ名
-
-プロパティ名は文字列または[シンボル](/ja/docs/Glossary/Symbol)です。それ以外の値は、数値を含めて、文字列へ強制変換されます。これは `'value'` を出力します。 `1` が `'1'` に強制変換されるからです。
+プロパティ名として評価される式を渡すと、プロパティ名を直に直接渡すのと同じことが行われます。
 
 ```js
-let object = {};
+const key = "name";
+const getKey = () => "name";
+const Obj = { name: "Michel" };
+
+Obj["name"]; // "Michel" を返す
+Obj[key]; // Obj["name"] と解釈され、 "Michel" を返す
+Obj[getKey()]; // Obj["name"] と解釈され、 "Michel" を返す
+```
+
+ただし、外部入力で指定された名前のプロパティにアクセスするために角括弧を使用することには注意が必要です。これにより、コードが[オブジェクトインジェクション攻撃](https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md)を許しやすくなる可能性があります。
+
+### プロパティ名
+
+プロパティ名は文字列または[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)です。それ以外の値は、数値を含めて、文字列へ強制変換されます。これは `'value'` を出力します。 `1` が `'1'` に強制変換されるからです。
+
+```js
+const object = {};
 object["1"] = "value";
 console.log(object[1]);
 ```
@@ -100,35 +135,35 @@ console.log(object[1]);
 こちらも `'value'` を出力します。`foo` と `bar` は同じ文字列に変換されるからです。
 
 ```js
-let foo = { unique_prop: 1 },
-  bar = { unique_prop: 2 },
-  object = {};
+const foo = { uniqueProp: 1 };
+const bar = { uniqueProp: 2 };
+const object = {};
 object[foo] = "value";
 console.log(object[bar]);
 ```
 
-[SpiderMonkey](/ja/docs/Mozilla/Projects/SpiderMonkey) JavaScript エンジンでは、この文字列は "`[object Object]`" となります。
-
 ### メソッドのバインド
 
-メソッドは、そのメソッドが所属するオブジェクトにバインドされているわけではありません。特に、 `this` はメソッド内で固定されていません。つまり、 `this` は必ずしもそのメソッドを含んでいるオブジェクトを参照しているとは限りません。 `this` は関数呼び出し時に「渡される」ものです。[メソッドのバインド](/ja/docs/Web/JavaScript/Reference/Operators/this#method_binding)を参照してください。
+オブジェクトのプロパティについて話す場合は、プロパティとメソッドを区別するのが一般的です。しかし、プロパティとメソッドの区別は、単なる慣習にすぎません。メソッドは、呼び出すことができるプロパティです（例えば、{{jsxref("Function")}} インスタンスへの参照を値として保有している場合など）。
+
+メソッドは、そのメソッドが所属するオブジェクトにバインドされているわけではありません。特に、 `this` はメソッド内で固定されているわけではなく、必ずしもそのメソッドを含んでいるオブジェクトを参照しているとは限りません。 `this` は関数呼び出し時に「渡される」ものです。[`this` のリファレンス](/ja/docs/Web/JavaScript/Reference/Operators/this)を参照してください。
 
 ## 例
 
-### ブラケット表記法と `eval`
+### ブラケット記法と eval()
 
-JavaScript 初心者はしばしば、代わりにブラケット表記法を使えるところで {{jsxref("eval", "eval()")}} を使用してしまう間違いを犯します。
+JavaScript 初心者はしばしば、代わりにブラケット記法を使えるところで {{jsxref("eval", "eval()")}} を使用してしまう間違いを犯します。
 
 例えば、以下のような構文がたくさんのスクリプトで見られます。
 
 ```js
-x = eval("document.forms.form_name.elements." + strFormControl + ".value");
+const x = eval(`document.forms.form_name.elements.${strFormControl}.value`);
 ```
 
-`eval()` は低速であり、可能な限り避けるべきです。また、 `strFormControl` は ID を必要としますが、フォームコントロールの名前と `id` は必須ではありません。代わりにブラケット表記法を使った方が良いでしょう。
+`eval()` は低速であり、可能な限り避けるべきです。また、 `strFormControl` は ID を必要としますが、フォームコントロールの名前と `id` は必須ではありません。代わりにブラケット記法を使った方が良いでしょう。
 
 ```js
-x = document.forms["form_name"].elements[strFormControl].value;
+const x = document.forms.form_name.elements[strFormControl].value;
 ```
 
 ## 仕様書
@@ -143,4 +178,4 @@ x = document.forms["form_name"].elements[strFormControl].value;
 
 - {{jsxref("Object")}}
 - {{jsxref("Object.defineProperty()")}}
-- [オプショナルチェイニング](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [オプショナルチェーン (`?.`)](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining)

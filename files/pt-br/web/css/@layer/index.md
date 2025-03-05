@@ -7,7 +7,32 @@ slug: Web/CSS/@layer
 
 A [regra at (at-rule)](/pt-BR/docs/Web/CSS/At-rule) **`@layer`** é utilizada para definir uma _camada de cascata_, também definindo a ordem de prioridade quando temos mais de uma camada.
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-layer.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
+
+```css interactive-example
+@layer module, state;
+
+@layer state {
+  .alert {
+    background-color: brown;
+  }
+  p {
+    border: medium solid limegreen;
+  }
+}
+
+@layer module {
+  .alert {
+    border: medium solid violet;
+    background-color: yellow;
+    color: white;
+  }
+}
+```
+
+```html interactive-example
+<p class="alert">Beware of the zombies</p>
+```
 
 ## Sintaxe
 
@@ -61,7 +86,8 @@ Isto pode ser útil pois a ordem inicial na qual as camadas são declaradas defi
 
 A regra definida no `utilitarios` será aplicada _mesmo se tiver especificidade mais baixa_ que a regra em `tema`. Isso ocorre, pois uma vez que a ordem das camadas é estabelecida, especificidade e ordem de aparição das regras são ignoradas. Isso nos permite criar seletores CSS mais simples, já que você não precisa se preocupar tanto se um seletor CSS terá especificidade alta o suficiente para sobrescrever regras concorrentes, você só precisa verificar se a sua regra está localizada em uma camada definida posteriormente.
 
-> **Nota:** Ao declarar o nome de suas camadas e sua ordem, você pode adicionar regras CSS para a camada re-declarando seu nome. Os estilos serão incluídos na camada e a ordenação das camadas não será modificada.
+> [!NOTE]
+> Ao declarar o nome de suas camadas e sua ordem, você pode adicionar regras CSS para a camada re-declarando seu nome. Os estilos serão incluídos na camada e a ordenação das camadas não será modificada.
 
 A terceira opção de criação de camada são as camadas anônimas, como no exemplo abaixo:
 

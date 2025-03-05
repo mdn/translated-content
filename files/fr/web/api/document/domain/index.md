@@ -5,7 +5,7 @@ slug: Web/API/Document/domain
 
 {{ApiRef}}
 
-Retourne/définit la partie domaine de l'origine du document courant, telle qu'utilisée par la [politique d'origine identique](/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript).
+Retourne/définit la partie domaine de l'origine du document courant, telle qu'utilisée par la [politique d'origine identique](/fr/docs/Web/Security/Same-origin_policy).
 
 ## Syntaxe
 
@@ -38,13 +38,17 @@ Mozilla vous laissera la définir à un superdomaine de la valeur courante, cont
 
 Si cette propriété est définie avec succès, la partie "port" de l'origine est également définie à null.
 
-Mozilla fait la distinction entre la propriété d'un `document.domain` qui n'a jamais été modifiée d'une explicitement définie avec le même domaine que l'URL du document, même si la propriété renvoie la même valeur dans les deux cas. Un document est autorisé à accéder à un autre si il ont tous deux défini `document.domain` à la même valeur, indiquant leur intention de coopérer, ou si aucun des deux n'a défini `document.domain` et que les domaines dans les URLs sont les mêmes ([implementation](https://mxr.mozilla.org/mozilla-central/source/caps/nsPrincipal.cpp?rev=ecb7068b07a1&mark=199-215#199)). Sans cette politique spéciale, chaque site serait sujet au Cross-Site-Scripting (XSS) depuis ses sous-domaines (par exemple, <https://bugzilla.mozilla.org> pourrait être attaqué par des pièces jointes de bugs sur <https://bug*.bugzilla.mozilla.org>).
-
 ## Spécification
 
-- [DOM Level 2 HTML: document.domain](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-2250147) (le décrit comme étant en lecture-seule)
-- [HTML5: document.domain](https://html.spec.whatwg.org/multipage/browsers.html#relaxing-the-same-origin-restriction) (décrit un comportement similaire à celui de Mozilla)
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 
-- [Politique de même origine pour JavaScriptHTML](/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript)
+- [Politique de même origine](/fr/docs/Web/Security/Same-origin_policy)
+- {{domxref("Location.hostname")}}
+- {{domxref("Location.host")}}
+- {{domxref("Window.origin")}}

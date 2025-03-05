@@ -14,7 +14,7 @@ Les navigateurs ont tendance à gérer l'événement `popstate` différemment lo
 ## Informations générales
 
 - Specification
-  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-popstate)
+  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-popstate)
 - Interface
   - : PopStateEvent
 - Bubbles

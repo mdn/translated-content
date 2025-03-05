@@ -9,7 +9,33 @@ slug: Web/HTML/Element/input/date
 
 입력 칸의 값은 연, 월, 일을 포함하지만 시간은 포함하지 않습니다. {{HTMLElement("input/time", "time")}}과 {{HTMLElement("input/datetime-local", "datetime-local")}} 입력 유형이 시간과 시간+날짜 조합을 지원합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;date&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="start">Start date:</label>
+
+<input
+  type="date"
+  id="start"
+  name="trip-start"
+  value="2018-07-22"
+  min="2018-01-01"
+  max="2018-12-31" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 입력 UI는 브라우저마다 다릅니다. [브라우저 호환성](#브라우저_호환성)에서 더 자세한 정보를 알아보세요. 날짜 입력 유형을 지원하지 않는 브라우저에서는 우아하게 [`<input type="text">`](/ko/docs/Web/HTML/Element/input/text)로 저하됩니다.
 
@@ -123,7 +149,8 @@ The `step` attribute is a number that specifies the granularity that the value m
 
 A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
-> **참고:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
+> [!NOTE]
+> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
 
 `date` 입력 칸의 `step` 값은 날짜 단위, 즉 밀리초 단위로 86,400,000 ✕ `step`로 처리합니다. 기본값은 1로, 하루를 나타냅니다.
 
@@ -135,7 +162,8 @@ A string value of `any` means that no stepping is implied, and any value is allo
 
 이 구획에서는 `<input type="date">`의 기본 사용법과 복잡한 사용법을 살펴볼 것이고, 뒤에서는 브라우저 지원 문제를 처리할 때 사용할 수 있는 조언을 드리겠습니다. ([미지원 브라우저 처리하기](#미지원_브라우저_처리하기)로 가세요.)
 
-> **참고:** 모든 브라우저에서 날짜 입력 칸을 지원하는 날이 오면 이 문제도 자연스럽게 사라질 것입니다.
+> [!NOTE]
+> 모든 브라우저에서 날짜 입력 칸을 지원하는 날이 오면 이 문제도 자연스럽게 사라질 것입니다.
 
 ### 기본 예제
 
@@ -173,7 +201,8 @@ A string value of `any` means that no stepping is implied, and any value is allo
 
 실행 결과에서 2017년 4월의 날짜만 선택 가능함을 볼 수 있습니다. 입력 칸의 연과 월은 편집이 불가능해지며, 날짜 선택 위젯에서도 2017년 4월 바깥의 날짜는 선택할 수 없습니다.
 
-> **참고:** 원래 [`step`](/ko/docs/Web/HTML/Element/input#step) 특성을 사용해 날짜를 증감할 때 늘어날 일 수를 조절할 수 있어야 하고, 이를 이용해 토요일만 선택 가능하게 하는 등의 처리가 가능해야 합니다. 그러나 지금은 아무 브라우저에서도 구현하고 있지 않습니다.
+> [!NOTE]
+> 원래 [`step`](/ko/docs/Web/HTML/Element/input#step) 특성을 사용해 날짜를 증감할 때 늘어날 일 수를 조절할 수 있어야 하고, 이를 이용해 토요일만 선택 가능하게 하는 등의 처리가 가능해야 합니다. 그러나 지금은 아무 브라우저에서도 구현하고 있지 않습니다.
 
 ### 입력 칸 크기 조절
 
@@ -470,7 +499,8 @@ daySelect.onchange = function () {
 };
 ```
 
-> **참고:** 어떤 연도는 53주임을 기억하세요! ([Wikipedia](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)) 프로덕션 애플리케이션을 개발할 땐 고려해야 할 사항입니다.
+> [!NOTE]
+> 어떤 연도는 53주임을 기억하세요! ([Wikipedia](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)) 프로덕션 애플리케이션을 개발할 땐 고려해야 할 사항입니다.
 
 ## 명세
 

@@ -1,19 +1,34 @@
 ---
 title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
+l10n:
+  sourceCommit: dc90e6a09235136e0e5113e1fab2c11053e467d7
 ---
 
 {{JSRef}}
 
-**`Math.abs()`** 関数は、数値の絶対値を返します。
+**`Math.abs()`** は静的メソッドで、数値の絶対値を返します。
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.abs</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left left"><mtr><mtd><mi>x</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>></mo><mn>0</mn></mtd></mtr><mtr><mtd><mi>0</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>=</mo><mn>0</mn></mtd></mtr><mtr><mtd><mo>-</mo><mi>x</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>&#x3C;</mo><mn>0</mn></mtd></mtr></mtable></mrow></mrow><annotation encoding="TeX">{\mathtt{\operatorname{Math.abs}(z)}} = {|z|} = \begin{cases} x &#x26; \text{if} \quad x \geq 0 \\ x &#x26; \text{if} \quad x &#x3C; 0 \end{cases}</annotation></semantics></math>
+{{InteractiveExample("JavaScript Demo: Math.abs()")}}
 
-{{EmbedInteractiveExample("pages/js/math-abs.html")}}
+```js interactive-example
+function difference(a, b) {
+  return Math.abs(a - b);
+}
+
+console.log(difference(3, 5));
+// Expected output: 2
+
+console.log(difference(5, 3));
+// Expected output: 2
+
+console.log(difference(1.23456, 7.89012));
+// Expected output: 6.6555599999999995
+```
 
 ## 構文
 
-```
+```js-nolint
 Math.abs(x)
 ```
 
@@ -24,13 +39,24 @@ Math.abs(x)
 
 ### 返値
 
-与えられた数値の絶対値。
+`x` の絶対値です。`x` が負または `-0` の場合は、その反対の数である `-x` （非負の値）を返します。それ以外の場合、`x` 自体を返します。したがって、返値は常に正の値または `0` となります。
 
 ## 解説
 
 `abs()` は `Math` オブジェクトの静的メソッドなので、 `Math` オブジェクトを生成してメソッドとして使用するのではなく、常に `Math.abs()` として使用するようにしてください (`Math` はコンストラクターではありません)。
 
 ## 例
+
+### Math.abs() の使用
+
+```js
+Math.abs(-Infinity); // 無限大
+Math.abs(-1); // 1
+Math.abs(-0); // 0
+Math.abs(0); // 0
+Math.abs(1); // 1
+Math.abs(Infinity); // 無限大
+```
 
 ### Math.abs() の動作
 

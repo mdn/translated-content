@@ -2,7 +2,7 @@
 title: HTMLVideoElement
 slug: Web/API/HTMLVideoElement
 l10n:
-  sourceCommit: 04ebe57066db2cff350018649bdb15b2a10c67ba
+  sourceCommit: 3975bcf6caa09c9c5f7fddf2eef2be6c021d00f6
 ---
 
 {{APIRef("HTML DOM")}}
@@ -15,8 +15,10 @@ l10n:
 
 ## インスタンスプロパティ
 
-_祖先インターフェイスである {{domxref("HTMLMediaElement")}} および {{domxref("HTMLElement")}} から継承したプロパティがあります。_
+_親インターフェイスである {{domxref("HTMLMediaElement")}} および {{domxref("HTMLElement")}} から継承したプロパティがあります。_
 
+- {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
+  - : ユーザーエージェントがユーザーにピクチャインピクチャを提案するかしないかを示します。
 - {{domxref("HTMLVideoElement.height")}}
   - : 文字列で、 HTML の [`height`](/ja/docs/Web/HTML/Element/video#height) 属性を反映し、表示領域の高さを CSS ピクセル数で指定します。
 - {{domxref("HTMLVideoElement.poster")}}
@@ -27,10 +29,8 @@ _祖先インターフェイスである {{domxref("HTMLMediaElement")}} およ�
   - : 符号なし整数値で、リソースの内在的な幅を CSS ピクセル数で示す値を返します。メディアが利用できない場合は 0 を返します。
 - {{domxref("HTMLVideoElement.width")}}
   - : 文字列で、HTML の [`width`](/ja/docs/Web/HTML/Element/video#width) 属性を反映し、表示領域の幅を CSS ピクセル数で指定します。
-- {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
-  - : `disablePictureInPicture` プロパティは、ユーザーにピクチャインピクチャを提案しないようにするか、または自動的に要求するか、ユーザーエージェントにヒントを与えます。
 
-### Gecko 固有のプロパティ
+### Firefox 固有のプロパティ
 
 - {{domxref("HTMLVideoElement.mozParsedFrames")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : `unsigned long` で、メディアリソースから解析された動画のフレーム数を返します。
@@ -47,21 +47,29 @@ _祖先インターフェイスである {{domxref("HTMLMediaElement")}} およ�
 
 ## インスタンスメソッド
 
-_親である {{domxref("HTMLMediaElement")}} とその祖先である {{domxref("HTMLElement")}} から継承したメソッドがあります。_
+_親インターフェイスである {{domxref("HTMLMediaElement")}} および {{domxref("HTMLElement")}} から継承したメソッドがあります。_
 
+- {{DOMxRef("HTMLVideoElement.cancelVideoFrameCallback()")}}
+  - : 以前に登録された映像フレームコールバック（{{DOMxRef("HTMLVideoElement.requestVideoFrameCallback", "requestVideoFrameCallback()")}} を参照）を取り消します。
 - {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}}
   - : 現在の再生指標を含む {{domxref("VideoPlaybackQuality")}} オブジェクトを返します。この情報には、ドロップされたフレーム数や破損したフレーム数、総フレーム数などが含まれます。
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
   - : ユーザーエージェントが動画をピクチャーインピクチャーモードにすることをリクエストします。
+- {{DOMxRef("HTMLVideoElement.requestVideoFrameCallback()")}}
+  - : 新しい映像フレームが合成処理エンジンに送信された際に実行するコールバック関数を登録します。これにより、開発者はそれぞれの映像フレームに対して効率的な操作を行うことができます。
 
 ## イベント
 
-_親である {{domxref("HTMLMediaElement")}} およびその祖先である {{domxref("HTMLElement")}} から継承したイベントがあります。_ これらのイベントを待ち受けするには、 [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使用するか、イベントリスナーをこのインターフェイスの `onイベント名` に代入するかしてください。
+_親である {{domxref("HTMLMediaElement")}} およびその祖先である {{domxref("HTMLElement")}} から継承したイベントがあります。_
+
+これらのイベントを待ち受けするには、{{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用するか、イベントリスナーをこのインターフェイスの `onイベント名` に代入するかしてください。
 
 - {{DOMxRef("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}}
   - : ピクチャインピクチャモードになったときに {{DOMxRef("HTMLVideoElement")}} に送信されます。
 - {{DOMxRef("HTMLVideoElement.leavepictureinpicture_event", "leavepictureinpicture")}}
   - : ピクチャインピクチャモードになったときに {{DOMxRef("HTMLVideoElement")}} に送信されます。
+- {{DOMxRef("HTMLVideoElement.resize_event", "resize")}}
+  - : {{domxref("HTMLVideoElement.videoWidth", "videoWidth")}} と {{domxref("HTMLVideoElement.videoHeight", "videoHeight")}} プロパティのうち、どちらか一方または両方が更新された直後に発行されます。
 
 ## 仕様書
 

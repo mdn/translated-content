@@ -11,7 +11,17 @@ l10n:
 
 При сравнении большого количества строк, например при сортировке больших массивов, лучше создать объект {{jsxref("Intl.Collator")}} и использовать предоставляемый им метод {{jsxref("Intl/Collator/compare", "compare()")}}.
 
-{{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
+{{InteractiveExample("JavaScript Demo: String.localeCompare()")}}
+
+```js interactive-example
+const a = "réservé"; // With accents, lowercase
+const b = "RESERVE"; // No accents, uppercase
+
+console.log(a.localeCompare(b));
+// Expected output: 1
+console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
+// Expected output: 0
+```
 
 ## Синтаксис
 
@@ -57,7 +67,8 @@ localeCompare(compareString, locales, options)
 - Положительное число, когда `referenceStr` встречается после `compareString`,
 - Возвращает `0` если строки одинаковы.
 
-> **Предупреждение:** Не полагайтесь на точные значения `-1` и `1`!
+> [!WARNING]
+> Не полагайтесь на точные значения `-1` и `1`!
 >
 > Отрицательные и положительные ответы отличаются в зависимости от браузера (и версии браузера), потому что спецификация ECMAScript определяет только то, что числа должны быть положительными и отрицательными. Некоторые браузеры могут возвращать `-2` или `2` или другие значения.
 

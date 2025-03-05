@@ -32,7 +32,8 @@ slug: Web/API/Canvas_API/Tutorial/Basic_animations
 
 정해진 시간마다 특정 함수를 부를 때 사용할 수 있는 {{domxref("window.setInterval()")}}과 {{domxref("window.setTimeout()")}} 함수가 있습니다.
 
-> **참고:** 알아둘 것: 현재는 애니메이션을 만드는 방법으로 {{domxref("window.requestAnimationFrame()")}} 메소드를 추천합니다. 이에 대한 튜토리얼은 곧 업데이트할 것입니다.
+> [!NOTE]
+> 알아둘 것: 현재는 애니메이션을 만드는 방법으로 {{domxref("window.requestAnimationFrame()")}} 메소드를 추천합니다. 이에 대한 튜토리얼은 곧 업데이트할 것입니다.
 
 - `setInterval(function, delay)`
   - : `delay` 밀리세컨드(1,000분의 1초)마다 `function` 함수 반복 실행을 시작합니다.
@@ -45,7 +46,7 @@ slug: Web/API/Canvas_API/Tutorial/Basic_animations
 
 애니메이션을 제어하는 두번째 방법은 사용자 입력입니다. 게임을 만들려고 한다면, 애니메이션을 제어하기 위해 키보드나 마우스 이벤트를 사용할 수 있을 것입니다. {{domxref("EventListener")}}를 설정하여, 사용자와 상호 작용하여 애니메이션 함수를 실행합니다.
 
-사용자 상호 작용이 **필요하다면**, 우리가 만든 [애니메이션용 프레임웍(framework)](/ko/docs/JavaScript/Timers/Daemons)의 [최소 기능 버전](/ko/docs/DOM/window.setInterval#A_little_framework) 또는 [최대 기능 버전](/ko/docs/JavaScript/Timers/Daemons)을 사용할 수 있을 것입니다.
+사용자 상호 작용이 **필요하다면**, 우리가 만든 [애니메이션용 프레임웍(framework)](/ko/docs/JavaScript/Timers/Daemons)의 [최소 기능 버전](/ko/docs/Web/API/Window/setInterval#a_little_framework) 또는 [최대 기능 버전](/ko/docs/JavaScript/Timers/Daemons)을 사용할 수 있을 것입니다.
 
 ```js
 var myAnimation = new MiniDaemon(null, animateShape, 500, Infinity);
@@ -356,8 +357,8 @@ function draw() {
 ## 이것도 보세요
 
 - [JavaScript timers](/ko/docs/JavaScript/Timers)
-- [`setInterval` – A little framework](/ko/docs/DOM/window.setInterval#A_little_framework)
+- [`setInterval` – A little framework](/ko/docs/Web/API/Window/setInterval#a_little_framework)
 - [JavaScript Daemons Management](/ko/docs/JavaScript/Timers/Daemons)
-- [HTMLCanvasElement](/ko/docs/DOM/HTMLCanvasElement)
+- [HTMLCanvasElement](/ko/docs/Web/API/HTMLCanvasElement)
 
 {{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Compositing", "Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas")}}

@@ -2,7 +2,7 @@
 title: outline
 slug: Web/CSS/outline
 l10n:
-  sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
+  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
 {{CSSRef}}
@@ -15,9 +15,9 @@ l10n:
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- {{cssxref("outline-color")}}
-- {{cssxref("outline-style")}}
 - {{cssxref("outline-width")}}
+- {{cssxref("outline-style")}}
+- {{cssxref("outline-color")}}
 
 ## 構文
 
@@ -25,14 +25,14 @@ l10n:
 /* 種類 */
 outline: solid;
 
-/* 色 | 種類 */
-outline: #f66 dashed;
+/* 種類 | 色 */
+outline: dashed #f66;
 
-/* 種類 | 幅 */
-outline: inset thick;
+/* 幅 | 種類 */
+outline: thick inset;
 
-/* 色 | 種類 | 幅 */
-outline: green solid 3px;
+/* 幅 | 種類 | 色 */
+outline: 3px solid green;
 
 /* グローバル値 */
 outline: inherit;
@@ -44,16 +44,17 @@ outline: unset;
 
 `outline` プロパティは以下に挙げた 1 ～ 3 つの値を用いて指定することができます。値は順不同です。すべての一括指定プロパティと同様に、除外したサブ値はその[初期値](/ja/docs/Web/CSS/initial_value)に設定されます。
 
-> **メモ:** 多くの要素では、スタイルが定義されていないと輪郭線は表示されません。これは style の既定値が `none` だからです。特筆すべき例外は `input` 要素で、ブラウザーが既定のスタイルを与えます。
+> [!NOTE]
+> 多くの要素では、スタイルが定義されていないと輪郭線は表示されません。これは style の既定値が `none` だからです。特筆すべき例外は `input` 要素で、ブラウザーが既定のスタイルを与えます。
 
 ### 値
 
-- `<'outline-color'>`
-  - : 輪郭線の色を設定します。既定値は、対応しているブラウザーでは `invert` で、それ以外では `currentcolor` です。 {{cssxref("outline-color")}} を参照してください。
-- `<'outline-style'>`
-  - : 輪郭線の種類を設定します。未指定の場合の既定値は `none` です。 {{cssxref("outline-style")}} を参照してください。
 - `<'outline-width'>`
   - : 輪郭線の太さを設定します。未指定の場合の既定値は `medium` です。 {{cssxref("outline-width")}} を参照してください。
+- `<'outline-style'>`
+  - : 輪郭線の種類を設定します。未指定の場合の既定値は `none` です。 {{cssxref("outline-style")}} を参照してください。
+- `<'outline-color'>`
+  - : 輪郭線の色を設定します。既定値は、対応しているブラウザーでは `invert` で、それ以外では `currentcolor` です。 {{cssxref("outline-color")}} を参照してください。
 
 ## 解説
 
@@ -63,12 +64,12 @@ outline: unset;
 
 輪郭線は長方形であるとは限りません。複数行のテキストを扱う場合、ブラウザーによっては各行ごとに輪郭線を描画するものもあれば、テキスト全体を単一の輪郭線で囲むものもあります。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 `outline` の値を `0` または `none` にすると、ブラウザーの既定のフォーカス表示を削除します。要素が操作できるものであれば、視覚的なフォーカス表示が必要です。既定のフォーカス表示を削除するのであれば、目に見える分かりやすいフォーカスのスタイル付けを提供してください。
 
 - [How to Design Useful and Usable Focus Indicators](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
-- WCAG 2.1: [成功基準 2.4.7 の理解: フォーカスの可視性](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html)
+- WCAG 2.1: [達成基準 2.4.7 の理解: フォーカスの可視性](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html)
 
 ## 公式定義
 
@@ -84,13 +85,13 @@ outline: unset;
 
 #### HTML
 
-```html
+```html live-sample___using_outline_to_set_a_focus_style
 <a href="#">このリンクは特殊なフォーカスのスタイルです。</a>
 ```
 
 #### CSS
 
-```css
+```css live-sample___using_outline_to_set_a_focus_style
 a {
   border: 1px solid;
   border-radius: 3px;
@@ -108,7 +109,7 @@ a:focus {
 
 #### 結果
 
-{{EmbedLiveSample("輪郭線を使用してフォーカスのスタイルを設定", "100%", 85)}}
+{{EmbedLiveSample("Using_outline_to_set_a_focus_style", "100%", 85)}}
 
 ## 仕様書
 
@@ -120,6 +121,7 @@ a:focus {
 
 ## 関連情報
 
-- {{cssxref("outline-color")}}
-- {{cssxref("outline-style")}}
 - {{cssxref("outline-width")}}
+- {{cssxref("outline-style")}}
+- {{cssxref("outline-color")}}
+- {{Cssxref("border")}}

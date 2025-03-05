@@ -2,224 +2,482 @@
 title: フェッチ API の使用
 slug: Web/API/Fetch_API/Using_Fetch
 l10n:
-  sourceCommit: aae16b81e18d13dd006d418983558578563e9746
+  sourceCommit: c0e43030605b6f12bc4d550c0d5b8bf8a633eff3
 ---
 
 {{DefaultAPISidebar("Fetch API")}}
 
-[フェッチ API](/ja/docs/Web/API/Fetch_API) は、リクエストやレスポンスといった[プロトコル](/ja/docs/Glossary/Protocol)を操作する要素にアクセスするための JavaScript インターフェイスです。グローバルの {{domxref("fetch()")}} メソッドも提供しており、簡単で論理的な方法で、非同期にネットワーク越しでリソースを取得することができます。
+[フェッチ API](/ja/docs/Web/API/Fetch_API) は、HTTP リクエストを行い、レスポンスを処理するための JavaScript インターフェイスを提供します。
 
-コールバックベースの API である {{domxref("XMLHttpRequest")}} とは異なり、Fetch は Promise ベースであり、[サービスワーカー](/ja/docs/Web/API/Service_Worker_API) で簡単に使用できる優れた代替手段を提供します。Fetch は、[CORS](/ja/docs/Web/HTTP/CORS) やその他の HTTP 拡張機能などの高度な HTTP 概念も統合します。
+フェッチは {{domxref("XMLHttpRequest")}} の現代の置き換えです。コールバックを使用する `XMLHttpRequest` とは異なり、フェッチはプロミスベースで、[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)や[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS) のような現代のウェブの機能と統合されています。
 
-基本的なフェッチリクエストは、以下のコードを見てください。
+フェッチ API では、{{domxref("Window/fetch", "fetch()")}} を呼び出してリクエストを行います。これは {{domxref("Window", "ウィンドウ", "", "nocode")}}と{{domxref("WorkerGlobalScope", "ワーカー", "", "nocode")}}の両方のコンテキストでグローバル関数として利用できます。このコンテキストには {{domxref("Request")}} オブジェクトか、フェッチする URL を格納した文字列、およびリクエストを構成するためのオプション引数を渡します。
+
+`fetch()` 関数は {{jsxref("Promise")}} を返します。このプロミスはサーバーのレスポンスを表す {{domxref("Response")}} オブジェクトで履行されます。レスポンスに対して適切なメソッドを呼び出すと、リクエストのステータスを調べたり、レスポンス本体をテキストや JSON など様々な形式で取り出すことができます。
+
+以下は `fetch()` を使用してサーバーから JSON データを取得する最小限の関数です。
 
 ```js
-async function logMovies() {
-  const response = await fetch("http://example.com/movies.json");
-  const movies = await response.json();
-  console.log(movies);
+async function getData() {
+  const url = "https://example.org/products.json";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`レスポンスステータス: ${response.status}`);
+    }
+
+    const json = await response.json();
+    console.log(json);
+  } catch (error) {
+    console.error(error.message);
+  }
 }
 ```
 
-これはネットワーク越しに JSON ファイルを取得してパースし、コンソールにデータを出力するスクリプトです。 `fetch()` の最も簡単な使い方は 1 つの引数 — fetch で取得したいリソースへのパス — のみをとり、 {{domxref("Response")}} オブジェクトで解決するプロミスを返します。
+URL を格納した文字列を宣言し、`fetch()` を呼び出して、余計なオプションを付けずに URL を渡します。
 
-{{domxref("Response")}} は、実際の JSON レスポンス本体を直接持っているのではなく、 HTTP レスポンス全体を表現するものです。 {{domxref("Response")}} オブジェクトから JSON の本体の内容を抽出するには、 {{domxref("Response.json()", "json()")}} メソッドを使用します。これはレスポンス本体のテキストを JSON として解釈した結果で解決する第 2 のプロミスを返します。
+`fetch()` 関数は何かエラーがあるとプロミスを拒否しますが、サーバーが {{httpstatus("404")}} のようなエラーステータスで応答した場合は拒否しません。したがって、レスポンスのステータスも調べて、OK でない場合はエラーを throw します。
 
-> **メモ:** 本体の内容が他の形式である場合に展開する同様の方法は、[本体](#本体)の節を参照してください。
+そうでない場合は、`Response` の {{domxref("Response.json()", "json()")}} メソッドを呼び出して、レスポンス本体のコンテンツを {{glossary("JSON")}} として取得し、その値の一つをログ出力します。`fetch()` 自体と同様に、 `json()` はレスポンス本体のコンテンツにアクセスする他のすべてのメソッドと同様に非同期であることに注意してください。
 
-フェッチリクエストは、受け取るリソースからの指示ではなく、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Headers/Content-Security-Policy)の `connect-src` ディレクティブによって制御されます。
+このページの残りの部分では、このプロセスのさまざまな段階を詳しく見ていきます。
 
-## リクエストオプションの適用
+## リクエストを行う
 
-`fetch()` メソッドには 2 つ目の引数を適用することができ、 `init` オブジェクトで様々な種類の設定を制御することができます。
+リクエストを行うには、 `fetch()` を呼び出して、次のものを渡します。
 
-すべての設定可能なオプションや詳しい説明については、 {{domxref("fetch()")}} を参照してください。
+1. フェッチするリソースの定義。これは以下のいずれかです。
+   - URL を格納した文字列。
+   - {{domxref("URL")}} のインスタンスなどのオブジェクト、すなわち URL を格納した文字列を生成する{{glossary("stringifier", "文字列化子")}}のあるもの。
+   - {{domxref("Request")}} のインスタンス。
+2. オプションとして、リクエストを構成するためのオプションを含むオブジェクト。
+
+この節では、よく使用するオプションを見ていきます。指定されるすべてのオプションについては、[`fetch()`](/ja/docs/Web/API/Window/fetch) リファレンスページを参照してください。
+
+### メソッドの設定
+
+既定では、`fetch()` は {{httpmethod("GET")}} リクエストを行いますが、`method` オプションを使用すれば、別の[リクエストメソッド](/ja/docs/Web/HTTP/Methods)を使用することができます。
 
 ```js
-// POST メソッドの実装の例
-async function postData(url = "", data = {}) {
-  // 既定のオプションには * が付いています
-  const response = await fetch(url, {
-    method: "POST", // *GET, POST, PUT, DELETE, etc.
-    mode: "cors", // no-cors, *cors, same-origin
-    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: "same-origin", // include, *same-origin, omit
-    headers: {
-      "Content-Type": "application/json",
-      // 'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    redirect: "follow", // manual, *follow, error
-    referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-    body: JSON.stringify(data), // 本体のデータ型は "Content-Type" ヘッダーと一致させる必要があります
-  });
-  return response.json(); // JSON のレスポンスをネイティブの JavaScript オブジェクトに解釈
-}
-
-postData("https://example.com/answer", { answer: 42 }).then((data) => {
-  console.log(data); // `data.json()` の呼び出しで解釈された JSON データ
+const response = await fetch("https://example.org/post", {
+  method: "POST",
+  // ...
 });
 ```
 
-なお、 `mode: "no-cors"` はリクエスト中の限られたヘッダーにしか許可されていません。
+`mode` オプションが `no-cors` に設定されている場合、 `method` は `GET`、`POST`、`HEAD` のいずれかでなければなりません。
 
-- `Accept`
-- `Accept-Language`
-- `Content-Language`
-- `Content-Type` のうち、値が `application/x-www-form-urlencoded`, `multipart/form-data`, `text/plain` のいずれかのもの
+### 本体の設定
 
-## fetch の中止
+リクエスト本体はリクエストの内容です。クライアントがサーバーに送るものです。`GET` リクエストでは本体を含めることはできませんが、{{httpmethod("POST")}} や {{httpmethod("PUT")}} リクエストのようにサーバーにコンテンツを送信するリクエストでは有益です。例えば、サーバーにファイルをアップロードしたい場合、`POST` リクエストを行い、リクエスト本体にファイルを含めることができます。
 
-未完了の `fetch()` 操作を中止するには、{{DOMxRef("AbortController")}} および {{DOMxRef("AbortSignal")}} インターフェイスを使用します。
+リクエスト本体を設定するには、`body` オプションとして渡します。
+
+```js
+const response = await fetch("https://example.org/post", {
+  body: JSON.stringify({ username: "example" }),
+  // ...
+});
+```
+
+本体は、以下いずれかの型のインスタンスとして指定できます。
+
+- 文字列
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("TypedArray")}}
+- {{jsxref("DataView")}}
+- {{domxref("Blob")}}
+- {{domxref("File")}}
+- {{domxref("URLSearchParams")}}
+- {{domxref("FormData")}}
+
+レスポンス本体と同様に、リクエスト本体はストリームであり、リクエストを作成するとストリームを読み込むので、リクエストが本体を含む場合、2 回作成することはできないことに注意してください。
+
+```js example-bad
+const request = new Request("https://example.org/post", {
+  method: "POST",
+  body: JSON.stringify({ username: "example" }),
+});
+
+const response1 = await fetch(request);
+console.log(response1.status);
+
+// 例外が発生: "Body has already been consumed."
+const response2 = await fetch(request);
+console.log(response2.status);
+```
+
+その代わりに、リクエストを送信する前に{{domxref("Request.clone()", "複製を作成する", "", "nocode")}}する必要があります。
+
+```js
+const request1 = new Request("https://example.org/post", {
+  method: "POST",
+  body: JSON.stringify({ username: "example" }),
+});
+
+const request2 = request1.clone();
+
+const response1 = await fetch(request1);
+console.log(response1.status);
+
+const response2 = await fetch(request2);
+console.log(response2.status);
+```
+
+詳しくは、[ロックされ妨害されたストリーム](#ロックされ妨害されたストリーム)を参照してください。
+
+### ヘッダーの設定
+
+リクエストヘッダーは、リクエストに関する情報をサーバーに与えます。例えば {{httpheader("Content-Type")}} ヘッダーは、リクエスト本体の形式をサーバーに指示します。多くのヘッダーはブラウザーが自動的に設定し、スクリプトでは設定できません。これらは{{glossary("Forbidden header name", "禁止ヘッダー名")}}と呼ばれています。
+
+リクエストヘッダーを設定するには、`headers` オプションに割り当ててください。
+
+ここには `ヘッダー名: ヘッダー値` の形でプロパティを格納したオブジェクトリテラルを渡すことができます。
+
+```js
+const response = await fetch("https://example.org/post", {
+  headers: {
+    "Content-Type": "application/json",
+  },
+  // .,.
+});
+```
+
+あるいは、{{domxref("Headers")}} オブジェクトを構築し、{{domxref("Headers.append()")}} を使用してそのオブジェクトにヘッダーを追加し、`Headers` オブジェクトを `headers` オプションに割り当てることもできます。
+
+```js
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const response = await fetch("https://example.org/post", {
+  headers: myHeaders,
+  // .,.
+});
+```
+
+`mode` オプションが `no-cors` に設定されている場合、{{glossary("CORS-safelisted request header", "CORS セーフリストリクエストヘッダー")}}のみを設定することができます。
+
+### POST リクエストを行う
+
+`method`、`body`、`headers` オプションを組み合わせることで、POST リクエストを作ることができます。
+
+```js
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const response = await fetch("https://example.org/post", {
+  method: "POST",
+  body: JSON.stringify({ username: "example" }),
+  headers: myHeaders,
+});
+```
+
+### オリジン間リクエストを行う
+
+オリジン間のリクエストができるかどうかは `mode` オプションの値で決まります。これは `cors`、`no-cors`、`same-origin` の 3 つの値のいずれかを取ります。
+
+- 既定では `mode` は `cors` に設定され、リクエストがオリジンをまたぐものであれば、[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS) の仕組みを使用することを意味しています。これは以下のことを意味しています。
+
+  - リクエストが[単純リクエスト](/ja/docs/Web/HTTP/CORS#simple_requests)の場合、リクエストは常に送信されますが、サーバーは正しい {{httpheader("Access-Control-Allow-Origin")}} ヘッダーで応答しなければなりません。
+  - リクエストが単純なリクエストでない場合、ブラウザーは[プリフライトリクエスト](/ja/docs/Web/HTTP/CORS#preflighted_requests)を送信して、サーバーが CORS を理解し、リクエストを許可しているか調べ、サーバーが適切な CORS ヘッダーでプリフライトリクエストに応答しない限り、実際のリクエストは送信されません。
+
+- `mode` を `same-origin` に設定すると、オリジン間のリクエストを完全に禁止します。
+
+- `mode` を `no-cors` に設定すると、リクエストは単純なリクエストでなりません。これにより、設定するヘッダーは制限され、メソッドは `GET`、`HEAD`、`POST` に制限されます。
+
+### 資格情報を含める
+
+資格情報とはクッキー、{{glossary("TLS")}} クライアント証明書、またはユーザー名とパスワードを格納した認証ヘッダーのことです。
+
+ブラウザーが資格情報を送信するかどうか、および **`Set-Cookie`** レスポンスヘッダーを尊重するかどうかを制御するには、`credentials` オプションを設定します。
+
+- `omit`: リクエストに資格情報を送信したり、レスポンスに資格情報を含めたりしません。
+- `same-origin` （既定値）: 同一オリジンのリクエストに対してのみ資格情報を送信し、含めます。
+- `include`: オリジンをまたいだ場合であっても常に資格情報を含めます。
+
+クッキーの [`SameSite`](/ja/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 属性が `Strict` または `Lax` に設定されている場合、`credentials` が `include` に設定されていても、クッキーはサイトをまたいで送信されないことに注意してください。
+
+そのため、たとえ `credentials` が `include` に設定されていても、サーバーはレスポンスに {{httpheader("Access-Control-Allow-Credentials")}} ヘッダーを記載することで、資格情報を含めることに同意しなければなりません。さらに、この状況ではサーバーは {{httpheader("Access-Control-Allow-Origin")}} レスポンスヘッダーでクライアントの元のサーバーを明示的に指定しなければなりません（つまり、`*` は許可されません）。
+
+つまり、`credentials` が `include` に設定されていて、リクエストがオリジンをまたぐ場合、次のようになります。
+
+- リクエストが [単純リクエスト](/ja/docs/Web/HTTP/CORS#単純リクエスト)の場合、リクエストは資格情報と共に送信されますが、サーバーは {{httpheader("Access-Control-Allow-Credentials")}} と {{httpheader("Access-Control-Allow-Origin")}} レスポンスヘッダーを設定しなければなりません。サーバーが正しいヘッダーを設定した場合、資格情報を含むレスポンスが呼び出し元に配送されます。
+
+- リクエストが単純なリクエストでない場合、ブラウザーは資格情報なしの[プリフライトリクエスト](/ja/docs/Web/HTTP/CORS#プリフライトリクエスト)を送信し、サーバーは {{httpheader("Access-Control-Allow-Credentials")}} と {{httpheader("Access-Control-Allow-Origin")}} レスポンスヘッダーを設定しなければ、ブラウザーは呼び出し元にネットワークエラーを返します。サーバーが正しいヘッダーを設定した場合、ブラウザーは資格情報を含む本当のリクエストに続き、資格情報を含む本当のレスポンスを呼び出し元に送ります。
+
+### `Request` オブジェクトの作成
+
+{{domxref("Request.Request()", "Request()")}} コンストラクターは `fetch()` 自体と同じ引数を取ります。これは、オプションを `fetch()` に渡す代わりに、同じオプションを `Request()` コンストラクターに渡して、そのオブジェクトを `fetch()` に渡すことができるということです。
+
+例えば、次のようなコードを用いて `fetch()` にオプションを渡すことで POST リクエストを行うことができます。
+
+```js
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const response = await fetch("https://example.org/post", {
+  method: "POST",
+  body: JSON.stringify({ username: "example" }),
+  headers: myHeaders,
+});
+```
+
+しかし、同じ引数を `Request()` コンストラクターに渡すように書き換えることもできます。
+
+```js
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const myRequest = new Request("https://example.org/post", {
+  method: "POST",
+  body: JSON.stringify({ username: "example" }),
+  headers: myHeaders,
+});
+
+const response = await fetch(myRequest);
+```
+
+これは、2 つ目の引数を使用してプロパティの一部を変更しながら、 別のリクエストからリクエストを作成することができるということでもあります。
+
+```js
+async function post(request) {
+  try {
+    const response = await fetch(request);
+    const result = await response.json();
+    console.log("成功:", result);
+  } catch (error) {
+    console.error("エラー:", error);
+  }
+}
+
+const request1 = new Request("https://example.org/post", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({ username: "example1" }),
+});
+
+const request2 = new Request(request1, {
+  body: JSON.stringify({ username: "example2" }),
+});
+
+post(request1);
+post(request2);
+```
+
+## リクエストの中止
+
+リクエストを中止できるようにするには、{{domxref("AbortController")}} を作成し、{{domxref("AbortSignal")}} をリクエストの `signal` プロパティに割り当てます。
+
+リクエストを中止するには、コントローラーの {{domxref("AbortController.abort()", "abort()")}} メソッドを呼び出します。`fetch()` を呼び出すと、例外 `AbortError` が発生してプロミスが拒否されます。
 
 ```js
 const controller = new AbortController();
-const signal = controller.signal;
-const url = "video.mp4";
 
-const downloadBtn = document.querySelector("#download");
-const abortBtn = document.querySelector("#abort");
-
-downloadBtn.addEventListener("click", async () => {
+const fetchButton = document.querySelector("#fetch");
+fetchButton.addEventListener("click", async () => {
   try {
-    const response = await fetch(url, { signal });
-    console.log("Download complete", response);
-  } catch (error) {
-    console.error(`Download error: ${error.message}`);
+    console.log("フェッチを開始");
+    const response = await fetch("https://example.org/get", {
+      signal: controller.signal,
+    });
+    console.log(`レスポンス: ${response.status}`);
+  } catch (e) {
+    console.error(`エラー: ${e}`);
   }
 });
 
-abortBtn.addEventListener("click", () => {
+const cancelButton = document.querySelector("#cancel");
+cancelButton.addEventListener("click", () => {
   controller.abort();
-  console.log("Download aborted");
+  console.log("フェッチを中止");
 });
 ```
 
-## 資格情報つきのリクエストの送信
-
-ブラウザーに資格情報のついたリクエストを送るようにするには、同一オリジンの場合もオリジン間の呼び出しの場合も、 `credentials: 'include'` を `init` オブジェクトに追加して `fetch()` メソッドに渡してください。
+`fetch()` が履行された後で、レスポンス本体を読み込む前にリクエストが中止された場合、レスポンス本体を読み込もうとすると `AbortError` 例外が発生して拒否されます。
 
 ```js
-fetch("https://example.com", {
-  credentials: "include",
-});
+async function get() {
+  const controller = new AbortController();
+  const request = new Request("https://example.org/get", {
+    signal: controller.signal,
+  });
+
+  const response = await fetch(request);
+  controller.abort();
+  // 次の行では `AbortError` が発生
+  const text = await response.text();
+  console.log(text);
+}
 ```
 
-> **メモ:** `Access-Control-Allow-Origin` は `credentials: 'include'` を含むリクエストでは、ワイルドカードを使用することを禁止しています。このような場合、正確なオリジンを提供する必要があります。 CORS unblocker 拡張機能を使用している場合でも、リクエストは失敗します。
+## レスポンスの処理
 
-> **メモ:** この設定に関係なく、ブラウザーはプリフライトリクエストで資格情報を送信しないようにしてください。詳細については、 [CORS 資格情報を含むリクエスト](/ja/docs/Web/HTTP/CORS#資格情報を含むリクエスト)を参照してください。
+ブラウザーがサーバーからレスポンスステータスとヘッダーを受け取るとすぐに（潜在的にはレスポンス本体を受け取る前に）、`fetch()` が返すプロミスは {{domxref("Response")}} オブジェクトで履行されます。
 
-リクエスト URL が呼び出しスクリプトと同一オリジンの場合だけ資格情報を送りたい場合、 `credentials: 'same-origin'` を追加します。
+### レスポンスステータスのチェック
 
-```js
-// オリジン 'https://example.com' で呼び出すスクリプトです。
+`fetch()` が返すプロミスは、ネットワークエラーや不正なスキームなどのエラーでは拒否されます。しかし、サーバーが {{httpstatus("404")}} のようなエラーで応答した場合、 `fetch()` は `Response` で履行されるので、レスポンス本体を読み込む前にステータスを調べる必要があります。
 
-fetch("https://example.com", {
-  credentials: "same-origin",
-});
-```
+{{domxref("Response.status")}} プロパティはステータスコードを数値で指示し、{{domxref("Response.ok")}} プロパティはステータスが [200 番台](/ja/docs/Web/HTTP/Status#成功レスポンス)の場合は `true` を返します。
 
-ブラウザーがリクエストに資格情報を含めないことを保証するには、代わりに `credentials: 'omit'` を使用してください。
+よくあるパターンは、`ok` の値を調べて `false` なら例外を発生させることです。
 
 ```js
-fetch("https://example.com", {
-  credentials: "omit",
-});
-```
-
-## JSON データのアップロード
-
-{{domxref("fetch()")}} を使って JSON エンコードしたデータを POST します。
-
-```js
-async function postJSON(data) {
+async function getData() {
+  const url = "https://example.org/products.json";
   try {
-    const response = await fetch("https://example.com/profile", {
-      method: "POST", // or 'PUT'
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    const result = await response.json();
-    console.log("Success:", result);
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`レスポンスステータス: ${response.status}`);
+    }
+    // ...
   } catch (error) {
-    console.error("Error:", error);
+    console.error(error.message);
   }
 }
-
-const data = { username: "example" };
-postJSON(data);
 ```
 
-## ファイルのアップロード
+### レスポンス型のチェック
 
-ファイルは HTML の `<input type="file" />` input 要素と、{{domxref("FormData.FormData","FormData()")}} と {{domxref("fetch()")}} を使ってアップロードできます。
+レスポンスには {{domxref("Response.type", "type")}} プロパティがあり、以下のいずれかになります。
+
+- `basic`: リクエストが同一オリジンリクエストだった。
+- `cors`: リクエストがオリジン間の CORS リクエストだった。
+- `opaque`: リクエストは `no-cors` モードで行われた単純なオリジン間リクエストだった。
+- `opaqueredirect`: リクエストで `redirect` オプションが `manual` に設定されており、サーバーが[リダイレクトステータス](/ja/docs/Web/HTTP/Status#リダイレクトメッセージ)を返した。
+
+型はレスポンスに入りうる内容を、以下のように決定します。
+
+- 基本レスポンスは{{glossary("Forbidden response header name", "禁止レスポンスヘッダー名")}}リストにあるレスポンスヘッダーを除外します。
+
+- CORS レスポンスは {{glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}リストのレスポンスヘッダーのみを含みます。
+
+- 不透明なレスポンスと不透明なリダイレクトレスポンスは `status` が `0`、ヘッダーリストが空、そして本体が `null` になります。
+
+### ヘッダーのチェック
+
+リクエストと同じように、レスポンスにも {{domxref("Response.headers", "headers")}} オブジェクトである {{domxref("Headers")}} プロパティがあり、 レスポンス型に基づく除外に従って、スクリプトに公開されるレスポンスヘッダーが格納されます。
+
+この一般的な用途は、本体を読もうとする前にコンテンツ型を調べることです。
 
 ```js
-async function upload(formData) {
+async function fetchJSON(request) {
   try {
-    const response = await fetch("https://example.com/profile/avatar", {
-      method: "PUT",
-      body: formData,
-    });
-    const result = await response.json();
-    console.log("Success:", result);
+    const response = await fetch(request);
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      throw new TypeError("残念、受信したのは JSON ではなかった！");
+    }
+    // それ以外の場合、本体を JSON として読み取れる
   } catch (error) {
-    console.error("Error:", error);
+    console.error("エラー:", error);
   }
 }
-
-const formData = new FormData();
-const fileField = document.querySelector('input[type="file"]');
-
-formData.append("username", "abc123");
-formData.append("avatar", fileField.files[0]);
-
-upload(formData);
 ```
 
-## 複数のファイルのアップロード
+### レスポンス本体の読み取り
 
-ファイルのアップロードは、 HTML の `<input type="file" multiple />` 入力要素と {{domxref("FormData.FormData","FormData()")}} と {{domxref("fetch()")}} を使用して行うことができます。
+`Response` インターフェイスには、本体のコンテンツ全体を様々な形式で取得するためのメソッドがあります。
+
+- {{domxref("Response.arrayBuffer()")}}
+- {{domxref("Response.blob()")}}
+- {{domxref("Response.formData()")}}
+- {{domxref("Response.json()")}}
+- {{domxref("Response.text()")}}
+
+これらはすべて非同期メソッドで、本体のコンテンツで履行される {{jsxref("Promise")}} を返します。
+
+この例では、画像を読み取って {{domxref("Blob")}} として読み込み、それを使用してオブジェクト URL を作成することができます。
 
 ```js
-async function uploadMultiple(formData) {
+const image = document.querySelector("img");
+
+const url = "flowers.jpg";
+
+async function setImage() {
   try {
-    const response = await fetch("https://example.com/posts", {
-      method: "POST",
-      body: formData,
-    });
-    const result = await response.json();
-    console.log("Success:", result);
-  } catch (error) {
-    console.error("Error:", error);
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`レスポンスステータス: ${response.status}`);
+    }
+    const blob = await response.blob();
+    const objectURL = URL.createObjectURL(blob);
+    image.src = objectURL;
+  } catch (e) {
+    console.error(e);
   }
 }
-
-const photos = document.querySelector('input[type="file"][multiple]');
-const formData = new FormData();
-
-formData.append("title", "My Vegas Vacation");
-
-for (const [i, photo] of Array.from(photos.files).entries()) {
-  formData.append(`photos_${i}`, photo);
-}
-
-uploadMultiple(formData);
 ```
 
-### テキストファイルの 1 行ずつの処理
+このメソッドでは、レスポンス本体が適切な形式でない場合に例外が発生します。例えば、JSONとして解釈できないレスポンスに対して `json()` を呼び出した場合などです。
 
-レスポンスから読み込まれる塊は、行の境界できれいに分割されておらず、文字列ではなく Uint8Array になっています。テキストファイルを読み取って一行ずつ処理したい場合、これらの複雑な処理を行うのはあなた次第です。次の例は、行イテレーターを作成することでこれを行う方法の一つを示しています（簡単にするため、テキストは UTF-8 であると仮定しており、読み取りエラーは処理していません）。
+### レスポンス本体のストリーミング
+
+リクエスト本体とレスポンス本体は、実際には {{domxref("ReadableStream")}} オブジェクトであり、それらを読むときは常にコンテンツをストリーミングしています。これはメモリー効率が良くなります。呼び出し側が `json()` のようなメソッドを使用してレスポンスを取得する前に、 ブラウザーがレスポンス全体をメモリーにバッファリングする必要がないからです。
+
+また、これは呼び出し側がコンテンツを受信したときに増加しながら処理できることを意味しています。
+
+例えば、大きなテキストファイルを読み取って、それを何か方法で処理したり、ユーザーに表示したりする `GET` リクエストを考えてみましょう。
+
+```js
+const url = "https://www.example.org/a-large-file.txt";
+
+async function fetchText(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`レスポンスステータス: ${response.status}`);
+    }
+
+    const text = await response.text();
+    console.log(text);
+  } catch (e) {
+    console.error(e);
+  }
+}
+```
+
+上記のように {{domxref("Response.text()")}} を使用することができますが、ファイル全体を受信するまで待たなければなりません。
+
+代わりにレスポンスをストリーミングすると、本体をネットワークから受信した塊のままで処理することができます。
+
+```js
+const url = "https://www.example.org/a-large-file.txt";
+
+async function fetchTextAsStream(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`レスポンスステータス: ${response.status}`);
+    }
+
+    const stream = response.body.pipeThrough(new TextDecoderStream());
+    for await (const value of stream) {
+      console.log(value);
+    }
+  } catch (e) {
+    console.error(e);
+  }
+}
+```
+
+この例では、{{jsxref("Statements/for-await...of", "iterate asynchronously", "", "nocode")}} ストリームを処理し、到着したそれぞれの塊を処理しています。
+
+このように本体に直接アクセスすると、レスポンスの生のバイト列を取得し、それを自分で変換しなければならないことに注意しましょう。この場合、{{domxref("ReadableStream.pipeThrough()")}} を呼び出して {{domxref("TextDecoderStream")}} にレスポンスを通し、UTF-8 エンコードされた本体データをテキストとしてデコードします。
+
+### テキストファイルを 1 行ずつ処理する
+
+下記の例では、テキストリソースを取得し、それを行ごとに処理し、正規表現を使って行末を探しています。分かりやすいように、テキストは UTF-8 を想定し、読み取りエラーは処理しません。
 
 ```js
 async function* makeTextFileLineIterator(fileURL) {
-  const utf8Decoder = new TextDecoder("utf-8");
   const response = await fetch(fileURL);
-  const reader = response.body.getReader();
+  const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
+
   let { value: chunk, done: readerDone } = await reader.read();
-  chunk = chunk ? utf8Decoder.decode(chunk) : "";
+  chunk = chunk || "";
 
   const newline = /\r?\n/gm;
   let startIndex = 0;
@@ -231,7 +489,7 @@ async function* makeTextFileLineIterator(fileURL) {
       if (readerDone) break;
       const remainder = chunk.substr(startIndex);
       ({ value: chunk, done: readerDone } = await reader.read());
-      chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : "");
+      chunk = remainder + (chunk || "");
       startIndex = newline.lastIndex = 0;
       continue;
     }
@@ -241,252 +499,101 @@ async function* makeTextFileLineIterator(fileURL) {
 
   if (startIndex < chunk.length) {
     // Last line didn't end in a newline char
-    yield chunk.substr(startIndex);
+    yield chunk.substring(startIndex);
   }
 }
 
-async function run() {
+async function run(urlOfFile) {
   for await (const line of makeTextFileLineIterator(urlOfFile)) {
     processLine(line);
   }
 }
 
-run();
+function processLine(line) {
+  console.log(line);
+}
+
+run("https://www.example.org/a-large-file.txt");
 ```
 
-## フェッチが成功したかの確認
+### ロックされ妨害されたストリーム
 
-{{domxref("fetch()")}} のプロミスは、ネットワークエラーに遭遇したりサーバー側の CORS の設定（通常はアクセス権の問題など）が間違っていたりすると、 {{jsxref("TypeError")}} で拒否されます。例えば、 404 はネットワークエラーにはなりません。 `fetch()` が成功したかどうかを正確に判定するには、プロミスが解決された後で、 {{domxref("Response.ok")}} プロパティが true になっているかを確認してください。次のようなコードになるでしょう。
+リクエスト本体とレスポンス本体がストリームであることの結果は以下のとおりです：
 
-```js
-async function fetchImage() {
+- `ReadableStream.getReader()` を使用してストリームにリーダーが接続されている場合、そのストリームはロックされ、他の誰もストリームを読むことができません。
+- もしストリームから何らかのコンテンツが読み取られた場合、ストリームは妨害され、ストリームから読み取ることはできません。
+
+これは、同じレスポンス（またはリクエスト）本体を複数回読み取ることは不可能であるということです。
+
+```js example-bad
+async function getData() {
+  const url = "https://example.org/products.json";
   try {
-    const response = await fetch("flowers.jpg");
+    const response = await fetch(url);
     if (!response.ok) {
-      throw new Error("Network response was not OK");
+      throw new Error(`レスポンスステータス: ${response.status}`);
     }
-    const myBlob = await response.blob();
-    myImage.src = URL.createObjectURL(myBlob);
+
+    const json1 = await response.json();
+    const json2 = await response.json(); // 例外が発生
   } catch (error) {
-    console.error("There has been a problem with your fetch operation:", error);
+    console.error(error.message);
   }
 }
 ```
 
-## 独自のリクエストオブジェクトの提供
-
-`fetch()` の呼び出しに、リクエストしたいリソースへのパスを渡す代わりに、{{domxref("Request.Request","Request()")}} コンストラクターを使用して Request オブジェクトを作成し、 `fetch()` メソッドの引数として渡すこともできます。
+本体を複数回読み込む必要がある場合は、本体を読み込む前に {{domxref("Response.clone()")}} を呼び出す必要があります。
 
 ```js
-async function fetchImage(request) {
+async function getData() {
+  const url = "https://example.org/products.json";
   try {
-    const response = await fetch(request);
-    if (!response.ok) {
-      throw new Error("Network response was not OK");
+    const response1 = await fetch(url);
+    if (!response1.ok) {
+      throw new Error(`レスポンスステータス: ${response1.status}`);
     }
-    const myBlob = await response.blob();
-    myImage.src = URL.createObjectURL(myBlob);
+
+    const response2 = response1.clone();
+
+    const json1 = await response1.json();
+    const json2 = await response2.json();
   } catch (error) {
-    console.error("Error:", error);
+    console.error(error.message);
   }
 }
-
-const myHeaders = new Headers();
-
-const myRequest = new Request("flowers.jpg", {
-  method: "GET",
-  headers: myHeaders,
-  mode: "cors",
-  cache: "default",
-});
-
-fetchImage(myRequest);
 ```
 
-`Request()` は、 `fetch()` メソッドとまったく同じ引数を受け入れます。既存のリクエストオブジェクトを渡して、コピーを作成することもできます。
+これは[サービスワーカーのオフラインキャッシュ実装](/ja/docs/Web/Progressive_web_apps/Guides/Caching)でよくあるパターンです。サービスワーカーはアプリにレスポンスを返しますが、同時にレスポンスをキャッシュすることも望んでいます。そのため、レスポンスを複製して元を返し、複製をキャッシュします。
 
 ```js
-const anotherRequest = new Request(myRequest, myInit);
-```
-
-リクエストとレスポンスの本体は一度しか使用できないので、これはかなり有益なことです。
-このようにコピーを作成することで、リクエストやレスポンスを効果的に使用することができ、使用した場合には `init` オプションを変更することができます。
-コピーは本体が読み込まれる前に作成されなければなりません。
-
-> **メモ:** {{domxref("Request.clone","clone()")}} メソッドを利用してコピーを生成することもできます。コピーを作成するどちらの方法でも、元のリクエストまたはレスポンスの 本体がすでに読まれている場合は失敗しますが、複製されたレスポンスまたは リクエストの本体を読んでも、元で読み取り済みとマークされることはありません。
-
-## Headers
-
-{{domxref("Headers")}} インターフェイスでは、 {{domxref("Headers.Headers","Headers()")}} コンストラクターを使用して、ヘッダーオブジェクトを作成することができます。ヘッダーオブジェクトは、シンプルな複数の名前と値のマップです。
-
-```js
-const content = "Hello World";
-const myHeaders = new Headers();
-myHeaders.append("Content-Type", "text/plain");
-myHeaders.append("Content-Length", content.length.toString());
-myHeaders.append("X-Custom-Header", "ProcessThisImmediately");
-```
-
-コンストラクターに配列の配列またはオブジェクトリテラルを渡すことで、同じことが実現できます。
-
-```js
-const myHeaders = new Headers({
-  "Content-Type": "text/plain",
-  "Content-Length": content.length.toString(),
-  "X-Custom-Header": "ProcessThisImmediately",
-});
-```
-
-ヘッダーの中身を見たり、検索することができます。
-
-```js
-console.log(myHeaders.has("Content-Type")); // true
-console.log(myHeaders.has("Set-Cookie")); // false
-myHeaders.set("Content-Type", "text/html");
-myHeaders.append("X-Custom-Header", "AnotherValue");
-
-console.log(myHeaders.get("Content-Length")); // 11
-console.log(myHeaders.get("X-Custom-Header")); // ['ProcessThisImmediately', 'AnotherValue']
-
-myHeaders.delete("X-Custom-Header");
-console.log(myHeaders.get("X-Custom-Header")); // null
-```
-
-いくつかの操作は{{domxref("Service_Worker_API","サービスワーカー", "", 1)}}でしか役立ちませんが、ヘッダーを操作するためのより良い API を提供しています。
-
-Headers のメソッドはすべて、有効な HTTP ヘッダーではない名前が渡されたときは `TypeError` が発生します。 immutable ガード（[下記参照](#ガード)）がかかっている場合に変更操作を行った場合も `TypeError` が発生します。それ以外の場合は、暗黙に失敗します。例を示します。
-
-```js
-const myResponse = Response.error();
-try {
-  myResponse.headers.set("Origin", "http://mybank.com");
-} catch (e) {
-  console.log("銀行のふりをしないで下さい！");
-}
-```
-
-ヘッダーの良い使用方法としては、以下のように、処理を行う前に、コンテンツタイプが正しいかどうか判定する等の使い方があります。
-
-```js
-async function fetchJSON(request) {
+async function cacheFirst(request) {
+  const cachedResponse = await caches.match(request);
+  if (cachedResponse) {
+    return cachedResponse;
+  }
   try {
-    const response = await fetch(request);
-    const contentType = response.headers.get("content-type");
-    if (!contentType || !contentType.includes("application/json")) {
-      throw new TypeError("Oops, we haven't got JSON!");
+    const networkResponse = await fetch(request);
+    if (networkResponse.ok) {
+      const cache = await caches.open("MyCache_1");
+      cache.put(request, networkResponse.clone());
     }
-    const jsonData = await response.json();
-    // process your data further
+    return networkResponse;
   } catch (error) {
-    console.error("Error:", error);
+    return Response.error();
   }
 }
-```
 
-### ガード
-
-ヘッダーは、リクエストで送信でき、レスポンスで受信できます。また、どの情報が変更できる（または、すべき）かといったさまざまな制限があります。そのため、ヘッダーには _guard_ プロパティがあります。これはリクエストやレスポンスに含まれませんが、ヘッダーオブジェクトでできる変更操作に影響を与えます。
-
-設定できるガード値には以下のものがあります。
-
-- `none`: 既定値です。
-- `request`: リクエストから得たヘッダーオブジェクト ({{domxref("Request.headers")}}) を保護します。
-- `request-no-cors`: {{domxref("Request.mode")}} が `no-cors` で生成されたリクエストから得たヘッダーオブジェクトを保護します。
-- `response`: レスポンスから得たヘッダーオブジェクト ({{domxref("Response.headers")}}) を保護します。
-- `immutable`: ヘッダーを読み取り専用にします。主にサービスワーカーで使用されます。
-
-> **メモ:** `response` のガードされたヘッダーオブジェクトに `Content-Length` ヘッダーを追加したり設定したりすることはできません。同様に、レスポンスヘッダーに `Set-Cookie` を挿入することもできません。サービスワーカーは合成されたレスポンスでクッキーを設定することはできません。
-
-## Response オブジェクト
-
-すでに見てきたように、 {{domxref("Response")}} インスタンスは、 `fetch()` プロミスが解決 (resolve) されたときに返値として渡されます。
-
-使用できる主なレスポンスプロパティには、以下のものがあります。
-
-- {{domxref("Response.status")}} — 整数値 (既定値は 200) で、 HTTP ステータスコードが入ります。
-- {{domxref("Response.statusText")}} — HTTP ステータスコードに対応するメッセージの文字列 (既定値は "")。なお、 HTTP/2 ではステータスメッセージに[対応していません](https://fetch.spec.whatwg.org/#concept-response-status-message)。
-- {{domxref("Response.ok")}} — 上述の例で使用したように、これは HTTP ステータスコードが 200-299 の範囲にあるかどうかをチェックする略記法です。これは論理値を返します。
-
-Response オブジェクトは JavaScript で動的に作ることもできます。これは{{domxref("Service_Worker_API", "サービスワーカー", "", 1)}}で非常に役立ちます。例えばリクエストを受け取ったときに {{domxref("FetchEvent.respondWith","respondWith()")}} メソッドによってカスタマイズされたレスポンスを返すようなときに役立ちます。
-
-```js
-const myBody = new Blob();
-
-addEventListener("fetch", (event) => {
-  // ServiceWorker intercepting a fetch
-  event.respondWith(
-    new Response(myBody, {
-      headers: { "Content-Type": "text/plain" },
-    }),
-  );
+self.addEventListener("fetch", (event) => {
+  if (precachedResources.includes(url.pathname)) {
+    event.respondWith(cacheFirst(event.request));
+  }
 });
 ```
-
-{{domxref("Response.Response","Response()")}} コンストラクターは、オプションとして 2 つの引数をとることができます。レスポンス本体と初期化オブジェクトです。 ({{domxref("Request.Request","Request()")}} が受け取れるものと似ています。)
-
-> **メモ:** 静的メソッド {{domxref("Response/error_static","error()")}} は単純にエラーレスポンスを返します。同様に {{domxref("Response/redirect_static","redirect()")}} メソッドも 指定した URL にリダイレクトするレスポンスを返します。これらはサービスワーカーにのみ関連しています。
-
-## 本体
-
-リクエストにもレスポンスにも本体データが含まれています。本体は以下のタイプのいずれかのインスタンスです。
-
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("TypedArray")}} （Uint8Array など）
-- {{jsxref("DataView")}}
-- {{domxref("Blob")}}
-- {{domxref("File")}}
-- {{jsxref("String")}}、または文字列リテラル
-- {{domxref("URLSearchParams")}}
-- {{domxref("FormData")}}
-
-{{domxref("Request")}} および {{domxref("Response")}} インターフェイスは本体を展開するために以下のメソッドを持っています。これらはすべて最終的に実際の内容で解決されるプロミスを返します。
-
-- {{domxref("Request.arrayBuffer()")}} / {{domxref("Response.arrayBuffer()")}}
-- {{domxref("Request.blob()")}} / {{domxref("Response.blob()")}}
-- {{domxref("Request.formData()")}} / {{domxref("Response.formData()")}}
-- {{domxref("Request.json()")}} / {{domxref("Response.json()")}}
-- {{domxref("Request.text()")}} / {{domxref("Response.text()")}}
-
-これらはテキストでないデータを XHR よりはるかに楽に扱うことができます。
-
-リクエスト本体は、 body 引数を渡すことによって設定することができます。
-
-```js
-const form = new FormData(document.getElementById("login-form"));
-fetch("/login", {
-  method: "POST",
-  body: form,
-});
-```
-
-リクエストとレスポンス（および `fetch()` 関数の拡張）は、自動的にコンテンツ種別を決定しようとします。リクエストもまた、指定されていなければ自動で `Content-Type` ヘッダーを設定しようとします。
-
-## 使用可能かどうかの判別
-
-Fetch API が利用できるかどうかは、{{domxref("Headers")}}、{{domxref("Request")}}、{{domxref("Response")}}、{{domxref("fetch()")}} のいずれかが {{domxref("Window")}} もしくは {{domxref("Worker")}} のスコープで参照できるかどうかによって判断できます。例を挙げます。
-
-```js
-if (window.fetch) {
-  // ここで fetch リクエストを実行
-} else {
-  // XMLHttpRequest で何か実行する？
-}
-```
-
-## `jQuery.ajax()` との差異
-
-`fetch` の仕様は、 `jQuery.ajax()` とは特に以下の点で異なっています。
-
-- `fetch()` から返されるプロミスは、レスポンスが HTTP 404 や 500 を返す HTTP エラーステータスの場合でも拒否されません。サーバーがヘッダーで応答すると、プロミスは直ちに正常に解決します（レスポンスが 200-299 の範囲にない場合は、レスポンスの {{domxref("Response/ok", "ok")}} プロパティが `false` に設定されます）。拒否されるのは、ネットワーク障害があった場合や、何かがリクエストの完了を妨げた場合のみです。
-- [`credentials`](/ja/docs/Web/API/fetch#credentials) オプションを `include` に設定しない限り、`fetch()` は次のように動作します。
-  - オリジン間リクエストではクッキーを送信しません。
-  - オリジン間のレスポンスでは、送り返されたクッキーを設定しません。
-  - 2018 年 8 月現在、既定の資格情報ポリシーは same-origin に変更されています。
 
 ## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [ストリーム API](/ja/docs/Web/API/Streams_API)
+- [CORS](/ja/docs/Web/HTTP/CORS)
 - [HTTP](/ja/docs/Web/HTTP)
-- [フェッチのポリフィル](https://github.com/github/fetch)
 - [Fetch の例 (GitHub)](https://github.com/mdn/dom-examples/tree/main/fetch)

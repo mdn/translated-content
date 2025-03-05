@@ -46,7 +46,7 @@ Audio Output Devices API は以下の API を拡張し、以下の機能を追�
 
 この API へのアクセスは、以下の制限を受けます。
 
-- 全てのメソッドやプロパティは[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ呼びだせます。
+- 全てのメソッドやプロパティは[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ呼びだせます。
 
 - [`MediaDevices.selectAudioOutput()`](/ja/docs/Web/API/MediaDevices/selectAudioOutput) はユーザーから選択されたデバイスを音声の出力先として使用する許可を得ます。
 
@@ -61,7 +61,7 @@ Audio Output Devices API は以下の API を拡張し、以下の機能を追�
     - この許可は、`MediaDevices.selectAudioOutput()` によって開くプロンプトで選択することで得られます。
     - ユーザーが [`MediaDevices.getUserMedia()`](/ja/docs/Web/API/MediaDevices/getUserMedia) により既に同じグループのメディア入力デバイスを使用することを許可している場合、出力デバイスを使用する許可が暗黙的に得られます。
 
-許可の状態は、[Permissions API](/ja/docs/Web/API/Permissions_API) の [`navigator.permissions.query()`](/ja/docs/Web/API/Permissions/query) に `speaker-selection` 権限を含む `permissionDescriptor` を渡すことで取得できます。
+許可の状態は、[権限 API](/ja/docs/Web/API/Permissions_API) の [`navigator.permissions.query()`](/ja/docs/Web/API/Permissions/query) に `speaker-selection` 権限を含む `permissionDescriptor` を渡すことで取得できます。
 
 ## 例
 
@@ -74,7 +74,7 @@ Audio Output Devices API は以下の API を拡張し、以下の機能を追�
 document.querySelector("#myButton").addEventListener("click", async () => {
   if (!navigator.mediaDevices.selectAudioOutput) {
     console.log(
-      "selectAudioOutput() に未対応か、安全なコンテキストではありません。",
+      "selectAudioOutput() に未対応か、保護されたコンテキストではありません。",
     );
     return;
   }

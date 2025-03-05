@@ -121,7 +121,8 @@ Existen varios argumentos en contra de usar contenido de video para la documenta
 - El video tiene problemas de accesibilidad: es más costoso de producir en general que el texto, pero especialmente para localizarlo o hacerlo utilizable para los usuarios de lectores de pantalla.
 - Siguiendo con el último punto, el video es mucho más difícil de editar/actualizar/mantener que el contenido de texto.
 
-> **Nota:** Vale la pena tener estos problemas en mente incluso cuando estás haciendo videos, para que puedas tratar de mitigar algunos de ellos.
+> [!NOTE]
+> Vale la pena tener estos problemas en mente incluso cuando estás haciendo videos, para que puedas tratar de mitigar algunos de ellos.
 
 Hay muchos sitios de video populares que proporcionan muchos tutoriales en video.
 MDN Web Docs no es un sitio impulsado por video, pero el video tiene un lugar en MDN Web Docs en ciertos contextos.
@@ -217,7 +218,8 @@ Planea cuidadosamente lo que realmente vas a grabar y practica los pasos varias 
 
 - Planea niveles de zoom para las partes de la interfaz de usuario que vas a mostrar. No todos podrán ver tu video en alta definición. Podrás hacer zoom en partes específicas en la postproducción, pero también es una buena idea hacer zoom en la aplicación de antemano.
 
-> **Nota:** No hagas zoom tan lejos que las interfaces de usuario que estás mostrando comiencen a verse poco familiares o feas.
+> [!NOTE]
+> No hagas zoom tan lejos que las interfaces de usuario que estás mostrando comiencen a verse poco familiares o feas.
 
 ### Grabación
 
@@ -225,7 +227,8 @@ Cuando grabes el flujo de trabajo que deseas mostrar, pasa por el flujo suavemen
 
 Recuerda hacer una pausa durante uno o dos segundos al final para mostrar el resultado del flujo.
 
-> **Nota:** Si estás usando una herramienta realmente simple como QuickTime Player y la postproducción no es una opción por alguna razón, debes configurar tus ventanas en el tamaño correcto para mostrar el área que deseas mostrar. En las DevTools de Firefox, puedes usar la [Herramienta de reglas](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html) para asegurarte de que el área de visualización tenga la relación de aspecto correcta para la grabación.
+> [!NOTE]
+> Si estás usando una herramienta realmente simple como QuickTime Player y la postproducción no es una opción por alguna razón, debes configurar tus ventanas en el tamaño correcto para mostrar el área que deseas mostrar. En las DevTools de Firefox, puedes usar la [Herramienta de reglas](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html) para asegurarte de que el área de visualización tenga la relación de aspecto correcta para la grabación.
 
 ### Post-procesamiento
 
@@ -244,7 +247,8 @@ Recorta el video al formato de aspecto deseado, si es necesario.
 
 Los videos actualmente tienen que cargarse en YouTube para mostrarse en MDN Web Docs, por ejemplo, en el canal [mozhacks](https://www.youtube.com/user/mozhacks/videos). Pídele a un miembro del equipo de MDN Web Docs que cargue el video si no tienes un lugar adecuado para ponerlo.
 
-> **Nota:** Marca el video como "no listado" si no tiene sentido fuera del contexto de la página (si es un video corto, entonces probablemente no lo tenga).
+> [!NOTE]
+> Marca el video como "no listado" si no tiene sentido fuera del contexto de la página (si es un video corto, entonces probablemente no lo tenga).
 
 ### Incrustación
 

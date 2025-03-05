@@ -1,11 +1,13 @@
 ---
 title: text-overflow
 slug: Web/CSS/text-overflow
+l10n:
+  sourceCommit: 5bd9fe2b25c6eee2a14d0406ce7116998fa48c13
 ---
 
 {{CSSRef}}
 
-**`text-overflow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、非表示のあふれた内容をどのようにユーザーに知らせるのかを設定します。切り取られるか、省略記号 ('`…`') を表示するか、独自の文字列を表示するかです。
+**`text-overflow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、あふれたコンテンツが非表示になる場合、それをどのようにユーザーに示すのかを設定します。切り取られるか、省略記号 (`…`) を表示するか、独自の文字列を表示するかです。
 
 {{EmbedInteractiveExample("pages/css/text-overflow.html")}}
 
@@ -16,11 +18,9 @@ overflow: hidden;
 white-space: nowrap;
 ```
 
-`text-overflow` プロパティは、*インライン*の進行方向にブロックコンテナー要素をはみ出す内容にのみ作用します (例えば、ボックスの下をあふれるテキストには作用しません)。
+`text-overflow` プロパティは、*インライン*の進行方向にブロックコンテナー要素をあふれるコンテンツにのみ作用します（例えば、ボックスの下にあふれるテキストには作用しません）。
 
 ## 構文
-
-`text-overflow` プロパティは、1 つまたは 2 つの値を使用して指定することができます。1 つの値が与えられた場合は、行末 (左書きの場合は右、右書きの場合は左) をあふれた動作を指定します。2 つの値が指定された場合は、最初の値が行の左端、2 番目の値が行の右端のあふれの動作を指定します。
 
 ```css
 text-overflow: clip;
@@ -34,9 +34,7 @@ text-overflow: revert;
 text-overflow: unset;
 ```
 
-- キーワード値 `clip`, `ellipsis`, `fade` のうちの一つ
-- フェードの長さを制御するための `fade()` 関数に {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} が渡されたもの
-- `<string>`
+`text-overflow` プロパティは、1 つまたは 2 つの値を使用して指定することができます。1 つの値が与えられた場合は、行末（左書きの場合は右、右書きの場合は左）をあふれたときの動作を指定します。2 つの値が指定された場合は、最初の値が行の左端、2 番目の値が行の右端のあふれたときの動作を指定します。このプロパティは、キーワード値（`clip` または `ellipsis`）または `<string>` 値を受け入れます。
 
 ### 値
 
@@ -44,15 +42,8 @@ text-overflow: unset;
   - : このプロパティの既定値です。このキーワード値は[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)の末端でテキストを切り取るので、文字の途中で切り取る可能性があります。文字と文字の間で切り取るには、対象のブラウザーが `text-overflow` の空文字列に対応していれば、 `text-overflow: '';` を指定することができます。
 - `ellipsis`
   - : このキーワード値は、切り取られたテキストを表現するために省略記号 (`'…'`, `U+2026 HORIZONTAL ELLIPSIS`) を表示します。省略記号は[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)内に表示され、表示テキストのサイズを更に狭めます。省略記号を表示する場所がなければ、切り取られます。
-- `<string>` {{experimental_inline}}
+- `<string>`
   - : クリップされたテキストを表すために使われる {{cssxref("&lt;string&gt;")}} です。この文字列は[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)内に表示され、表示テキストのサイズをさらに狭めます。この文字列自身を表示する場所がなければ、切り取られます。
-- `fade` {{experimental_inline}}
-  - : このキーワードはあふれたインラインコンテンツを切り取り、行ボックスの端付近にフェードアウト効果を適用して、端が完全に透明になるようにします。
-- `fade( <length> | <percentage> )` {{experimental_inline}}
-
-  - : このキーワードはあふれたインラインコンテンツを切り取り、行ボックスの端付近にフェードアウト効果を適用して、端が完全に透明になるようにします。
-
-    引数はフェード効果が適用される範囲を指定します。 {{cssxref("&lt;percentage&gt;")}} は行ボックスの幅に対する割合になります。 `0` よりも小さい値は `0` に丸められます。行ボックスの幅よりも大きな値は、行ボックスの幅に丸められます。
 
 ## 公式定義
 
@@ -209,7 +200,7 @@ p {
 // それぞれの段落をスクロールされ、行頭が隠れるようにします
 const paras = document.querySelectorAll("p");
 
-for (let para of paras) {
+for (const para of paras) {
   para.scroll(100, 0);
 }
 ```

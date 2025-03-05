@@ -38,4 +38,4 @@ range.selectNodeContents(referenceNode);
 
 ## 같이 보기
 
-- [The DOM interfaces index](/ko/docs/DOM/DOM_Reference)
+- [The DOM interfaces index](/ko/docs/Web/API/Document_Object_Model)

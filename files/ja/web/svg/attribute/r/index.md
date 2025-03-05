@@ -86,7 +86,8 @@ svg {
   </tbody>
 </table>
 
-> **メモ:** SVG2 からは、`r` は _幾何プロパティ (Geometry Property)_ です。すなわち、この属性をは円に対して CSS プロパティとしても使うことができます。
+> [!NOTE]
+> SVG2 からは、`r` は _幾何プロパティ (Geometry Property)_ です。すなわち、この属性をは円に対して CSS プロパティとしても使うことができます。
 
 ## radialGradient
 

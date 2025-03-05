@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setPopup
 
 {{AddonSidebar}}
 
-Définit le document HTML qui sera ouvert en tant que popup lorsque l'utilisateur clique sur l'icône de l'action du navigateur. Les onglets sans popup spécifique hériteront de la popup globale, qui par défaut est la [`default_popup`](/fr/Add-ons/WebExtensions/manifest.json/browser_action) spécifiée dans le manifest.
+Définit le document HTML qui sera ouvert en tant que popup lorsque l'utilisateur clique sur l'icône de l'action du navigateur. Les onglets sans popup spécifique hériteront de la popup globale, qui par défaut est la [`default_popup`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) spécifiée dans le manifest.
 
 ## Syntaxe
 
@@ -96,7 +96,7 @@ browser.contextMenus.onClicked.addListener(function (info, tab) {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
 >

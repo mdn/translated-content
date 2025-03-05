@@ -46,5 +46,5 @@ l10n:
 
 ## 같이 보기
 
-- [`beforeinput` 이벤트](/ko/docs/Web/API/HTMLElement/beforeinput_event)
-- [`input` 이벤트](/ko/docs/Web/API/HTMLElement/input_event)
+- [`beforeinput` 이벤트](/ko/docs/Web/API/Element/beforeinput_event)
+- [`input` 이벤트](/ko/docs/Web/API/Element/input_event)

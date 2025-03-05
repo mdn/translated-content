@@ -11,7 +11,8 @@ La création de formulaires web a toujours été une tâche complexe. Bien que l
 
 Pour une introduction à ces concepts avec des exemples, voir [le tutoriel sur la validation des formulaires](/fr/docs/Learn/Forms/Form_validation).
 
-> **Note :** La validation des contraintes HTML ne signifie pas qu'il n'est plus nécessaire de vérifier _côté serveur_. Même si cela réduit les risques d'envoi de formulaires invalides, des acteurs malveillants pourraient passer outre ces vérifications côté client. Aussi, assurez-vous de toujours valider les contraintes de saisie côté serveur, en étant cohérent avec ce qui est fait côté client.
+> [!NOTE]
+> La validation des contraintes HTML ne signifie pas qu'il n'est plus nécessaire de vérifier _côté serveur_. Même si cela réduit les risques d'envoi de formulaires invalides, des acteurs malveillants pourraient passer outre ces vérifications côté client. Aussi, assurez-vous de toujours valider les contraintes de saisie côté serveur, en étant cohérent avec ce qui est fait côté client.
 
 ## Contraintes intrinsèques et contraintes de base
 
@@ -190,7 +191,7 @@ En complément de la validation native effectuée par le navigateur, on peut man
 
 On qualifie parfois un appel à `checkValidity()` de validation _statique_ des contraintes, en opposition à `reportValidity()` ou à l'envoi du formulaire qui constituent une validation _interactive_.
 
-> **Note :**
+> [!NOTE]
 >
 > - Si l'attribut [`novalidate`](/fr/docs/Web/HTML/Element/form#novalidate) est placé sur l'élément [`<form>`](/fr/docs/Web/HTML/Element/form), la validation interactive des contraintes n'a pas lieu.
 > - Appeler la méthode `submit()` d'un objet [`HTMLFormElement`](/fr/docs/Web/API/HTMLFormElement) ne déclenchera pas de validation des contraintes. Autrement dit, cette méthode envoie les données du formulaire au serveur, même si elles ne respectent pas les contraintes. Pour passer par la validation, on pourra appeler la méthode `click()` du bouton d'envoi.
@@ -205,7 +206,8 @@ Le principe consiste à déclencher une fonction JavaScript lorsqu'un évènemen
 
 Le format utilisé pour les codes postaux varie d'un pays à l'autre. Certains pays autorisent un préfixe avec le code du pays (comme `D-` en Allemagne, `F-` en France, etc.), d'autres ont des codes postaux avec un nombre précis de chiffres et d'autres encore, comme au Royaume-Uni, ont des structures plus complexes, où on peut avoir des lettres à certaines positions.
 
-> **Note :** Ce qui suit ne constitue pas une bibliothèque exhaustive de validation des codes postaux, il ne s'agit que d'un exemple.
+> [!NOTE]
+> Ce qui suit ne constitue pas une bibliothèque exhaustive de validation des codes postaux, il ne s'agit que d'un exemple.
 
 Pour cet exemple, nous allons ajouter un script de vérification pour ce formulaire&nbsp;:
 
@@ -274,7 +276,7 @@ function checkZIP() {
 }
 ```
 
-Ensuite, on ajoute des gestionnaires d'évènements pour l'évènement [`change`](/fr/docs/Web/API/HTMLElement/change_event) du champ [`<select>`](/fr/docs/Web/HTML/Element/select) et pour l'évènement [`input`](/fr/docs/Web/API/HTMLElement/input_event) de l'élément [`<input>`](/fr/docs/Web/HTML/Element/input)&nbsp;:
+Ensuite, on ajoute des gestionnaires d'évènements pour l'évènement [`change`](/fr/docs/Web/API/HTMLElement/change_event) du champ [`<select>`](/fr/docs/Web/HTML/Element/select) et pour l'évènement [`input`](/fr/docs/Web/API/Element/input_event) de l'élément [`<input>`](/fr/docs/Web/HTML/Element/input)&nbsp;:
 
 ```js
 window.onload = () => {

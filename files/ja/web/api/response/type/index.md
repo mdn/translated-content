@@ -3,7 +3,7 @@ title: "Response: type プロパティ"
 short-title: type
 slug: Web/API/Response/type
 l10n:
-  sourceCommit: 18234f36b082bdbdeb1177880974a3aa29a115ab
+  sourceCommit: 802b6063046dffb7634d2138aadcd92cb22ed40c
 ---
 
 {{APIRef("Fetch API")}}
@@ -22,7 +22,8 @@ l10n:
 - `opaqueredirect`: フェッチリクエストが `redirect: "manual"` で行われました。
   このレスポンスの status は 0、headers は空、body は null、トレーラーは空です。
 
-> **メモ:** "error" レスポンスは実際にスクリプトに公開されることはありません。 {{domxref("fetch()")}} に対するそのようなレスポンスは、プロミスを拒否します。
+> [!NOTE]
+> "error" レスポンスは実際にスクリプトに公開されることはありません。 {{domxref("Window/fetch", "fetch()")}} に対するそのようなレスポンスは、プロミスを拒否します。
 
 ## 値
 
@@ -30,7 +31,7 @@ l10n:
 
 ## 例
 
-[Fetch Response の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) （[Fetch Response のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-response/) を参照）では、新しい {{domxref("Request")}} オブジェクトを、 {{domxref("Request.Request","Request()")}} コンストラクターを使用して作成し、 JPG のパスを渡します。次に {{domxref("fetch()")}} を使用してこのリクエストをフェッチし、 {{domxref("Response.blob")}} を使用してリクエストから blob を抽出し、 {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} を使用してオブジェクト URL を作成し、これを {{htmlelement("img")}} に表示します。
+[Fetch Response の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) （[Fetch Response のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-response/) を参照）では、新しい {{domxref("Request")}} オブジェクトを、 {{domxref("Request.Request","Request()")}} コンストラクターを使用して作成し、 JPG のパスを渡します。次に {{domxref("Window/fetch", "fetch()")}} を使用してこのリクエストをフェッチし、 {{domxref("Response.blob")}} を使用してリクエストから blob を抽出し、 {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} を使用してオブジェクト URL を作成し、これを {{htmlelement("img")}} に表示します。
 
 なお、 `fetch()` ブロックの先頭で、レスポンスの `type` 値をコンソールにログ出力していることに注意してください。
 

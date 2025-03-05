@@ -22,7 +22,8 @@ analyserNode.smoothingTimeConstant = newValue;
 
 기술적인 측면에서, 우리는 [Blackman window](https://webaudio.github.io/web-audio-api/#blackman-window)를 적용했고 값들을 시간에 대해 매끄럽게 합니다. 기본값은 대부분의 경우에 적합합니다.
 
-> **참고:** 만약 범위 0-1 바깥의 값이 설정된다면, `INDEX_SIZE_ERR` 예외가 발생합니다.
+> [!NOTE]
+> 만약 범위 0-1 바깥의 값이 설정된다면, `INDEX_SIZE_ERR` 예외가 발생합니다.
 
 ## 예제
 

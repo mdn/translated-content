@@ -16,7 +16,7 @@ Nós podemos somente desenhar novas formas atrás das existentes formas mas nós
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}
   - : Este conjunto de operações compostas para aplicar quando desenha novas formas, onde type é uma string identificando quais das 12 operações compostas usar.
 
-Veja os seguintes [exemplos de composição](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Compositing/Example) para o código dos seguintes exemplos.
+Veja os seguintes [exemplos de composição](/pt-BR/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation) para o código dos seguintes exemplos.
 
 {{ EmbedLiveSample('Exemplo_de_composição', '', '', '', 'Web/Guide/HTML/Canvas_tutorial/Compositing/Exemplo') }}
 

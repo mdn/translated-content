@@ -90,7 +90,8 @@ Vous souhaiterez parfois utiliser un template HTML personnalisé. Voyons comment
 
 4. Maintenant, lançons l'exemple. La commande ci-dessus aura généré hello2.html, qui aura à peu près le même contenu que le template avec un peu de code "glue" pour charger le code wasm généré, l'exéuter, etc. Ouvrez-le dans votre navigateur et vous verrez quasiment la même chose qu'avec notre dernier exemple.
 
-> **Note :** Vous pouvez spécifier, comme sortie, juste le fichier JavaScript "glue" au lieu de la sortie HTML en specifiant un fichier .js au lieu d'un fichier HTML dans le flag `-o`. Par exemple: `emcc -o hello2.js hello2.c -O3 -s WASM=1`. Vous pouevz ensuite votre propre fichier HTML à partir de rien bien que ce soit une approche plus compliquée. Il est généralement plus simple d'utiliser le template HTML fournit.
+> [!NOTE]
+> Vous pouvez spécifier, comme sortie, juste le fichier JavaScript "glue" au lieu de la sortie HTML en specifiant un fichier .js au lieu d'un fichier HTML dans le flag `-o`. Par exemple: `emcc -o hello2.js hello2.c -O3 -s WASM=1`. Vous pouevz ensuite votre propre fichier HTML à partir de rien bien que ce soit une approche plus compliquée. Il est généralement plus simple d'utiliser le template HTML fournit.
 >
 > Emscripten necessite une grande variété de code Javascript "glue" pour gérer les allocations memoire, les fuites memoires et bien d'autres problèmes.
 
@@ -123,7 +124,8 @@ Si vous avez une fonction définie dans votre code C et que vous souhaitez l'app
 
    By default, Emscripten-generated code always just calls the `main()` function, and other functions are eliminated as dead code. Putting `EMSCRIPTEN_KEEPALIVE` before a function name stops this from happening. You also need to import the `emscripten.h` library to use `EMSCRIPTEN_KEEPALIVE`.
 
-   > **Note :** We are including the `#ifdef` blocks so that if you are trying to include this in C++ code, the example will still work. Due to C versus C++ name mangling rules, this would otherwise break, but here we are setting it so that it treats it as an external C function if you are using C++.
+   > [!NOTE]
+   > We are including the `#ifdef` blocks so that if you are trying to include this in C++ code, the example will still work. Due to C versus C++ name mangling rules, this would otherwise break, but here we are setting it so that it treats it as an external C function if you are using C++.
 
 2. Now add `html_template/shell_minimal.html` into this new directory too, just for convenience (you'd obviously put this in a central place in your real dev environment).
 3. Now let's run the compilation step again. From inside your latest directory (and while inside your Emscripten compiler environment terminal window), compile your C code with the following command. (Note that we need to compile with NO_EXIT_RUNTIME, which is necessary as otherwise when main() exits the runtime would be shut down - necessary for proper C emulation, e.g., atexits are called - and it wouldn't be valid to call compiled code.)

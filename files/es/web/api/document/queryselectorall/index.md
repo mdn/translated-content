@@ -7,7 +7,8 @@ slug: Web/API/Document/querySelectorAll
 
 El método **`querySelectorAll()`** de un {{domxref("Element")}} devuelve una {{domxref("NodeList")}} estática (no viva) que representa una lista de elementos del documento que coinciden con el grupo de selectores indicados.
 
-> **Nota:** Esto método se implementa en base al método {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} del mixin {{domxref("ParentNode")}}.
+> [!NOTE]
+> Esto método se implementa en base al método {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} del mixin {{domxref("ParentNode")}}.
 
 ## Sintaxis
 
@@ -18,15 +19,17 @@ elementList = parentNode.querySelectorAll(selectors);
 ### Parámetros
 
 - `selectors`
-  - : Un {{domxref("DOMString")}} que contiene uno o más selectores para buscar coincidencias. Esta cadena de texto debe ser una cadena [CSS selector](/es/docs/Web/CSS/CSS_Selectors) válida; si no lo es, se lanzará una excepción `SyntaxError`. Vea [Locating DOM elements using selectors](/es/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) para más información acerca de utilizar selectores para identificar elementos. Se pueden especificar varios selectores separándolos utilizando comas.
+  - : Un {{domxref("DOMString")}} que contiene uno o más selectores para buscar coincidencias. Esta cadena de texto debe ser una cadena [CSS selector](/es/docs/Web/CSS/CSS_selectors) válida; si no lo es, se lanzará una excepción `SyntaxError`. Vea [Locating DOM elements using selectors](/es/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors) para más información acerca de utilizar selectores para identificar elementos. Se pueden especificar varios selectores separándolos utilizando comas.
 
-> **Nota:** Los caracteres que no son parte de la sintaxis estándar de CSS deben ser escapados utilizando el caracter de barra invertida. Dado que JavaScript también utiliza el escapado por retroceso, se debe tener especial cuidado al escribir cadenas de texto literales utilizando estos caracteres. Vea [Escapando caracteres especiales](#escapando_caracteres_especiales) para más información.
+> [!NOTE]
+> Los caracteres que no son parte de la sintaxis estándar de CSS deben ser escapados utilizando el caracter de barra invertida. Dado que JavaScript también utiliza el escapado por retroceso, se debe tener especial cuidado al escribir cadenas de texto literales utilizando estos caracteres. Vea [Escapando caracteres especiales](#escapando_caracteres_especiales) para más información.
 
 ### Valor devuelto
 
 Una {{domxref("NodeList")}} _no viva_ que contenga un objeto {{domxref("Element")}} para cada elemento que coincida con al menos uno de los selectores especificados o una {{domxref("NodeList")}} vacía en caso de que no haya coincidencias.
 
-> **Nota:** Si los selectores indicados incluyen un [pseudo-elemento CSS](/es/docs/Web/CSS/Pseudo-elements), la lista devuelta siempre estará vacía.
+> [!NOTE]
+> Si los selectores indicados incluyen un [pseudo-elemento CSS](/es/docs/Web/CSS/Pseudo-elements), la lista devuelta siempre estará vacía.
 
 ### Excepciones
 
@@ -56,7 +59,7 @@ var container = document.querySelector("#test");
 var matches = container.querySelectorAll("div.highlighted > p");
 ```
 
-Este ejemplo usa un [selector de atributos](/es/docs/Web/CSS/Selectores_atributo) para devolver una lista de elementos {{domxref("iframe")}} en el documento que contienen un atributo llamado `"data-src"`:
+Este ejemplo usa un [selector de atributos](/es/docs/Web/CSS/Attribute_selectors) para devolver una lista de elementos {{domxref("iframe")}} en el documento que contienen un atributo llamado `"data-src"`:
 
 ```js
 var matches = document.querySelectorAll("iframe[data-src]");
@@ -127,9 +130,9 @@ inner.length; // 0
 
 ## Ver también
 
-- [Localizando elementos DOM utilizando selectores](/es/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-- [Selectores de atributo](/es/docs/Web/CSS/Selectores_atributo)
-- [Selectores de atributo](/es/docs/Learn/CSS/Introduction_to_CSS/Selectores_de_Atributos) en el área de aprendizaje de MDN
+- [Localizando elementos DOM utilizando selectores](/es/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [Selectores de atributo](/es/docs/Web/CSS/Attribute_selectors)
+- [Selectores de atributo](/es/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) en el área de aprendizaje de MDN
 - {{domxref("Element.querySelector()")}} y {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}}
 - {{domxref("DocumentFragment.querySelector()")}} y {{domxref("DocumentFragment.querySelectorAll()")}}

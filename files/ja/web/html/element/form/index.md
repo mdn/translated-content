@@ -2,14 +2,50 @@
 title: "<form>: フォーム要素"
 slug: Web/HTML/Element/form
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 991385e7cfb9ac8589332b07aadcc4b38edea512
 ---
 
 {{HTMLSidebar}}
 
 **`<form>`** は [HTML](/ja/docs/Web/HTML) の要素で、ウェブサーバーに情報を送信するための対話型コントロールを含む文書の区間を表します。
 
-{{EmbedInteractiveExample("pages/tabbed/form.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;form&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<form action="" method="get" class="form-example">
+  <div class="form-example">
+    <label for="name">Enter your name: </label>
+    <input type="text" name="name" id="name" required />
+  </div>
+  <div class="form-example">
+    <label for="email">Enter your email: </label>
+    <input type="email" name="email" id="email" required />
+  </div>
+  <div class="form-example">
+    <input type="submit" value="Subscribe!" />
+  </div>
+</form>
+```
+
+```css interactive-example
+form.form-example {
+  display: table;
+}
+
+div.form-example {
+  display: table-row;
+}
+
+label,
+input {
+  display: table-cell;
+  margin-bottom: 10px;
+}
+
+label {
+  padding-right: 10px;
+}
+```
 
 CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)を使用すると、`<form>` 要素をフォーム内の{{domxref("HTMLFormElement.elements", "要素", "", 1)}}が有効であるかどうかに応じてスタイル付けすることができます。
 
@@ -24,29 +60,26 @@ CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス
     > **メモ:** **この属性は非推奨であり、使用すべきではありません。** 代わりに `<input type=file>` 要素の [`accept`](/ja/docs/Web/HTML/Element/input#accept) 属性を使用してください。
 
 - `accept-charset`
+
   - : サーバーが受け付ける空白区切りの{{Glossary("character encoding", "文字エンコーディング")}}です。ブラウザーは、列挙されたされた順に使用します。既定値は、[ページと同じエンコーディング](/ja/docs/Web/HTTP/Headers/Content-Encoding)を意味します。
     （以前のバージョンの HTML では、文字エンコーディングをカンマで区切ることもできました。）
-- `autocapitalize` {{non-standard_inline}}
 
-  - : これは iOS 版 Safari で使用する標準外の属性であり、テキスト用のフォーム要素が自動的に大文字化を行うかどうかを制御します。フォーム要素の `autocapitalize` 属性は、`<form>` のものより優先します。指定可能な値は次の通りです。
+- `autocapitalize`
 
-    - `none`: 自動大文字化機能を無効にします。
-    - `sentences`: 文の先頭文字を自動的に大文字化します。
-    - `words`: 単語の先頭文字を自動的に大文字化します。
-    - `characters`: すべての文字を自動的に大文字化します。
+  - : 入力されたテキストを自動的に大文字にするかどうか、また、その場合はどのような方法で大文字にするかを制御します。 詳細については、 [`autocapitalize`](/ja/docs/Web/HTML/Global_attributes/autocapitalize) グローバル属性のページをご覧ください。
 
-- `autocomplete`
+- [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete)
 
   - : input 要素が既定で、ブラウザーによる値の入力補完を受けるかを示します。フォーム要素の `autocomplete` 属性は、 `<form>` のものより優先します。指定可能な値は次の通りです。
 
-    - `off`: ブラウザーは自動的には項目を補完しません。（ブラウザーは、ログインフォームが疑わしい場合、これを無視する傾向があります。[autocomplete 属性とログインフィールド](/ja/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields)を参照してください。
+    - `off`: ブラウザーは自動的には項目を補完しません。（ブラウザーは、ログインフォームが疑わしい場合、これを無視する傾向があります。[autocomplete 属性とログインフィールド](/ja/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#autocomplete_属性とログイン欄)を参照してください。
     - `on`: ブラウザーは自動的に項目を補完することがあります。
 
 - `name`
 
   - : フォームの名前。この値は空文字列であってはならず、また、フォームコレクションに含まれる `form` 要素がある場合は、その中で一意でなければなりません。
 
-- `rel`
+- [`rel`](/ja/docs/Web/HTML/Attributes/rel)
   - : 注釈や、このフォームが作成するリンク種別を制御します。注釈には [`external`](/ja/docs/Web/HTML/Attributes/rel#external)、[`nofollow`](/ja/docs/Web/HTML/Attributes/rel#nofollow)、[`opener`](/ja/docs/Web/HTML/Attributes/rel#opener)、[`noopener`](/ja/docs/Web/HTML/Attributes/rel#noopener)、[`noreferrer`](/ja/docs/Web/HTML/Attributes/rel#noreferrer) があります。リンク種別には [`help`](/ja/docs/Web/HTML/Attributes/rel#help)、[`prev`](/ja/docs/Web/HTML/Attributes/rel#prev)、[`next`](/ja/docs/Web/HTML/Attributes/rel#next)、[`search`](/ja/docs/Web/HTML/Attributes/rel#search)、[`license`](/ja/docs/Web/HTML/Attributes/rel#license) があります。[`rel`](/ja/docs/Web/HTML/Attributes/rel) の値はこれらの列挙値の空白区切りの値です。
 
 ### フォーム送信のための属性
@@ -85,6 +118,7 @@ CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス
     - `_blank`: 無名の新しい閲覧コンテキストに読み込みます。
     - `_parent`: 現在の親の閲覧コンテキストに読み込みます。親がない場合は、`_self` と同じ動作をします。
     - `_top`: 最上位の閲覧コンテキスト（すなわち、現在の閲覧コンテキストの祖先に当たり、親がないもの）に読み込みます。親がない場合は、`_self` と同じ動作をします。
+    - `_unfencedTop`: 埋め込みの[フェンスフレーム](/ja/docs/Web/API/Fenced_frame_API)内でフォームからレスポンスを読み込み、最上位のフレームに表示します（つまり、他の予約済み出力先とは異なり、フェンスフレームのルートを越えて移動します）。フェンスフレーム内でのみ利用できます。
 
     この値は、 {{HTMLElement("button")}}、[`<input type="submit">`](/ja/docs/Web/HTML/Element/input/submit)、[`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) の [`formtarget`](/ja/docs/Web/HTML/Element/button#formtarget) 属性によって上書きすることが可能です。
 
@@ -142,7 +176,7 @@ CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
@@ -153,7 +187,7 @@ CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/form_role">form</a></code>（フォームに<a href="https://www.w3.org/TR/accname-1.1/#dfn-accessible-name">アクセシブル名</a>がある場合）、それ以外の場合は<a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>。
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/form_role">form</a></code>
       </td>
     </tr>
     <tr>

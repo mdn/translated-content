@@ -11,7 +11,8 @@ l10n:
 
 Метод запроса и тело не изменяются, в отличие от ответа {{HTTPStatus("301")}}, при котором иногда метод может быть неправильно изменён на {{HTTPMethod("GET")}}.
 
-> **Примечание:** Некоторые веб-приложения могут использовать **308 Permanent Redirect** нестандартным образом и для других целей. Например, Google Drive использует ответ **308 Resume Incomplete**, чтобы указать клиенту, когда неполная загрузка остановилась (смотрите [Perform a resumable download](https://developers.google.com/drive/api/guides/manage-uploads) в документации Google Drive).
+> [!NOTE]
+> Некоторые веб-приложения могут использовать **308 Permanent Redirect** нестандартным образом и для других целей. Например, Google Drive использует ответ **308 Resume Incomplete**, чтобы указать клиенту, когда неполная загрузка остановилась (смотрите [Perform a resumable download](https://developers.google.com/drive/api/guides/manage-uploads) в документации Google Drive).
 
 ## Статус
 

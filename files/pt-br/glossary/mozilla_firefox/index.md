@@ -17,4 +17,4 @@ O primeiro lançamento foi em Novembro de 2004, Firefox é completamente customi
 
 ### Referência técnica
 
-- [Informações de documentação/desenvolvimento na MDN](/en-US/Firefox)
+- [Informações de documentação/desenvolvimento na MDN](/pt-BR/docs/Mozilla/Firefox)

@@ -17,4 +17,4 @@ HMAC est utilisé pour s'assurer de l'intégrité et de l'authenticité.
 
 ### Référence technique
 
-- [RFC 2104](http://www.ietf.org/rfc/rfc2104.txt) sur IETF
+- [RFC 2104](https://www.ietf.org/rfc/rfc2104.txt) sur IETF

@@ -201,4 +201,4 @@ See [`AudioContext.createBiquadFilter`](/ko/docs/Web/API/BaseAudioContext/create
 
 ## See also
 
-- [Using the Web Audio API](/ko/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

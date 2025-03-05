@@ -1,30 +1,29 @@
 ---
-title: DeviceOrientationEvent.beta
+title: DeviceOrientationEvent：beta 属性
 slug: Web/API/DeviceOrientationEvent/beta
+l10n:
+  sourceCommit: 358fa889eb017b3495e93d8b5aa6990752deb939
 ---
 
-{{ ApiRef("Device Orientation Events") }}
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-返回设备旋转时 X 轴的值。即：角度的数值，范围介于 -180 ------ 180 之间 表示设备正在向前或向后倾斜。更多信息见 [方向和运动数据详解](/zh-CN/DOM/Orientation_and_motion_data_explained)
+{{domxref("DeviceOrientationEvent")}} 接口的 **`beta`** 只读属性返回设备围绕 X 轴的旋转角度；即设备向前或向后倾斜的度数，范围在 -180 到 180 之间。有关详细信息，请参阅 [Orientation 和 motion 数据解释](/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)。
 
-## 语法
+## 值
 
-```plain
-var beta = instanceOfDeviceOrientationEvent.beta;
-```
+一个数字。
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器的兼容性
+## 浏览器兼容性
 
 {{Compat}}
 
 ## 参见
 
-- {{ domxref("DeviceOrientationEvent") }}
-- [Detecting device orientation](/zh-CN/Detecting_device_orientation)
-- [Orientation and motion data explained](/zh-CN/DOM/Orientation_and_motion_data_explained)
-- {{ domxref("window.ondeviceorientation") }}
-- [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)
+- {{domxref("Device orientation events/Detecting device orientation", "检测设备方向", "", "nocode")}}
+- {{domxref("Device orientation events/Orientation and motion data explained", "Orientation 和 motion 数据解释", "", "nocode")}}
+- {{domxref("Window.deviceorientation_event", "deviceorientation")}} 事件
+- {{domxref("Window.deviceorientationabsolute_event", "deviceorientationabsolute")}} 事件

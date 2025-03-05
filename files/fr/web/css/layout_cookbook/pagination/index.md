@@ -23,7 +23,7 @@ Généralement, l'outil de navigation sera centré horizontalement et placé sou
 
 ## Choix effectués
 
-Pour obtenir ce résultat, on utilise [les boîtes flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout) avec une conteneur flexible imbriqué dans un autre. L'élément {{htmlelement("nav")}} est utilisé comme conteneur flexible afin de pouvoir en centrer le contenu grâce à la propriété {{cssxref("justify-content")}}.
+Pour obtenir ce résultat, on utilise [les boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout) avec une conteneur flexible imbriqué dans un autre. L'élément {{htmlelement("nav")}} est utilisé comme conteneur flexible afin de pouvoir en centrer le contenu grâce à la propriété {{cssxref("justify-content")}}.
 
 La liste est elle-même un conteneur flexible qui permet d'organiser ces éléments sur une lignes. Pour espacer les éléments, on utilise la propriété {{cssxref("margin")}} pour espacer les éléments entre eux.
 

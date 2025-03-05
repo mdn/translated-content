@@ -23,8 +23,8 @@ l10n:
 
 ## 静态属性
 
-- `Atomics[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"Atomics"`。这个属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
+- `Atomics[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"Atomics"`。这个属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
 
 ## 静态方法
 

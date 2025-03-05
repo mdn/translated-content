@@ -9,7 +9,67 @@ l10n:
 
 Элемент **`<col>`** [HTML](/ru/docs/Web/HTML) определяет столбец в таблице и используется для определения общей семантики для всех общих ячеек. Обычно он находится внутри элемента {{HTMLElement("colgroup")}}.
 
-{{EmbedInteractiveExample("pages/tabbed/col.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;col&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Superheros and sidekicks
+  </caption>
+  <colgroup>
+    <col />
+    <col span="2" class="batman" />
+    <col span="2" class="flash" />
+  </colgroup>
+  <tr>
+    <td></td>
+    <th scope="col">Batman</th>
+    <th scope="col">Robin</th>
+    <th scope="col">The Flash</th>
+    <th scope="col">Kid Flash</th>
+  </tr>
+  <tr>
+    <th scope="row">Skill</th>
+    <td>Smarts, strong</td>
+    <td>Dex, acrobat</td>
+    <td>Super speed</td>
+    <td>Super speed</td>
+  </tr>
+</table>
+```
+
+```css interactive-example
+.batman {
+  background-color: #d7d9f2;
+}
+
+.flash {
+  background-color: #ffe8d4;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 6px;
+}
+
+td {
+  text-align: center;
+}
+```
 
 `<col>` позволяет стилизовать столбцы с помощью CSS, но не все свойства будут влиять на столбец ([смотри спецификацию CSS 2.1](https://www.w3.org/TR/CSS21/tables.html#columns) для получения списка).
 
@@ -35,7 +95,8 @@ l10n:
 
     If this attribute is not set, its value is inherited from the [`align`](/ru/docs/Web/HTML/Element/colgroup#align) of the {{HTMLElement("colgroup")}} element this `<col>` element belongs too. If there are none, the `left` value is assumed.
 
-    > **Примечание:** Чтобы достичь того же эффекта, что и значения `left`, `center`, `right` или `justify`, не пытайтесь установить свойство {{cssxref("text-align")}} для селектора, задающего элемент `<col>`. Поскольку элементы {{HTMLElement("td")}} не являются потомками элемента `<col>`, они не унаследуют его.
+    > [!NOTE]
+    > Чтобы достичь того же эффекта, что и значения `left`, `center`, `right` или `justify`, не пытайтесь установить свойство {{cssxref("text-align")}} для селектора, задающего элемент `<col>`. Поскольку элементы {{HTMLElement("td")}} не являются потомками элемента `<col>`, они не унаследуют его.
     >
     > Если таблица не использует атрибут [`colspan`](/ru/docs/Web/HTML/Element/td#colspan), используйте CSS-селектор `td:n-й дочерний элемент(an+b)`. Установите `a` равным нулю, а `b` - положению столбца в таблице, например `td:nth-child(2) { text-align: right; }`, чтобы выровнять второй столбец по правому краю.
     >
@@ -60,7 +121,8 @@ l10n:
     - `middle`, помещает текст по центру ячейки
     - и `top`, помещает текст как можно ближе к верхней части ячейки, насколько это возможно;
 
-    > **Примечание:** Не пытайтесь установить свойство {{cssxref("выравнивание по вертикали")}} для селектора, дающего элемент `<col>`. Поскольку элементы {{HTMLElement("td")}} не являются потомками элемента `<col>`, они не унаследуют его.
+    > [!NOTE]
+    > Не пытайтесь установить свойство {{cssxref("выравнивание по вертикали")}} для селектора, дающего элемент `<col>`. Поскольку элементы {{HTMLElement("td")}} не являются потомками элемента `<col>`, они не унаследуют его.
     >
     > Если таблица не использует атрибут [`colspan`](/ru/docs/Web/HTML/Element/td#colspan), используйте CSS-селектор `td:nth-child(an+b)`, где 'a' - общее количество столбцов в таблице, а 'b' - порядковый номер положение столбца в таблице. Только после этого выбора можно использовать свойство `выравнивание по вертикали`.
     >

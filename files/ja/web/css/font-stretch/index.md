@@ -2,10 +2,13 @@
 title: font-stretch
 slug: Web/CSS/font-stretch
 l10n:
-  sourceCommit: fb2af1f15456199685a9f4fbaf8c9d003a2bf91f
+  sourceCommit: 6de7472d2f9ff0a78a0098721df1d5473d51b953
 ---
 
 {{CSSRef}}
+
+> **メモ:** `font-stretch` プロパティは仕様書において [`font-width` に名前が変更されました](https://drafts.csswg.org/css-fonts/#font-stretch-desc)。 `font-stretch` は `font-width` プロパティの別名として維持されることになりました。
+> 新しい `font-width` という名前には、まだどのブラウザーでも対応していません。
 
 **`font-stretch`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの normal, condensed, expanded のフェイスを選択します。
 
@@ -14,12 +17,12 @@ l10n:
 ## 構文
 
 ```css
-/* キーワード値 */
+/* <font-stretch-css3> キーワード値 */
+font-stretch: normal;
 font-stretch: ultra-condensed;
 font-stretch: extra-condensed;
 font-stretch: condensed;
 font-stretch: semi-condensed;
-font-stretch: normal;
 font-stretch: semi-expanded;
 font-stretch: expanded;
 font-stretch: extra-expanded;
@@ -38,7 +41,7 @@ font-stretch: revert-layer;
 font-stretch: unset;
 ```
 
-このプロパティは、単一のキーワード値または単一の {{cssxref("&lt;percentage&gt;")}} 値として指定することができます。
+このプロパティは、単一の `<font-stretch-css3>` キーワード値または単一の {{cssxref("&lt;percentage&gt;")}} 値として指定することができます。
 
 ### 値
 
@@ -54,7 +57,7 @@ font-stretch: unset;
 
 ### キーワードと数値の対応
 
-以下の表は、キーワード値とパーセントの数値の間の対応を示しています。
+以下の表は、 `<font-stretch-css3>` キーワード値とパーセントの数値の対応を示しています。
 
 | キーワード        | パーセント値 |
 | ----------------- | ------------ |
@@ -202,19 +205,50 @@ td {
 
 ## 形式文法
 
-{{csssyntax}}
+{{csssyntax("font-width")}}
 
 ## 例
 
 ### フォントの引き伸ばしパーセント値の設定
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/font-stretch.html", '100%', 950)}}
+```html
+<p class="condensed">an elephantine lizard</p>
+<p class="normal">an elephantine lizard</p>
+<p class="expanded">an elephantine lizard</p>
+```
+
+```css
+@font-face {
+  src: url("https://mdn.github.io/shared-assets/fonts/LeagueMono-VF.ttf");
+  font-family: "LeagueMonoVariable";
+  font-style: normal;
+  font-stretch: 1% 500%; /* Required by Chrome */
+}
+
+p {
+  font:
+    1.5rem "LeagueMonoVariable",
+    sans-serif;
+}
+
+.condensed {
+  font-stretch: 50%;
+}
+
+.normal {
+  font-stretch: 100%;
+}
+
+.expanded {
+  font-stretch: 200%;
+}
+```
+
+{{EmbedLiveSample("Setting font stretch percentages", "100%", 200)}}
 
 ## 仕様書
 
 {{Specifications}}
-
-> **メモ:** CSS プロパティ `font-stretch` は初め CSS 2 で定義されましたが、CSS 2.1 で実装経験不足のため外されました。CSS 3 では新しく定義されました。
 
 ## ブラウザーの互換性
 
@@ -225,3 +259,4 @@ td {
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
 - [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
+- [CSS フォント](/ja/docs/Web/CSS/CSS_fonts)モジュール

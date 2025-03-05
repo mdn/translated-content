@@ -64,7 +64,7 @@ l10n:
 - `WindowProxy` リモートオブジェクトのシリアライズが、プロセス外 iframe でも正しく動作するようになりました ([Firefox bug 1867667](https://bugzil.la/1867667))。
 - [browsingContext.setViewport](https://w3c.github.io/webdriver-bidi/#command-browsingContext-setViewport) コマンドが、`viewport` 引数の値として `undefined` と `null` を区別するようになりました。`undefined` に設定すると、ビューポートが変更されないままにするべきであることを示します。一方 `null` を使用すると、ビューポートを元の寸法にリセットします ([Firefox bug 1865618](https://bugzil.la/1865618))。
 - [browsingContext.traverseHistory](https://w3c.github.io/webdriver-bidi/#command-browsingContext-traverseHistory) コマンドをサポートしました。ブラウザーの履歴で前へ戻る・次へ進むナビゲーションを可能にします ([Firefox bug 1841018](https://bugzil.la/1841018))。
-- iframe でナビゲーションが発生した場合でもトップレベルのブラウジングコンテキストの `context` ID が、すべてのサポート済みのネットワークイベントで一貫して報告される不具合を修正しました ([Firefox bug 1869735](https://bugzil.la/1869735))。
+- iframe でナビゲーションが発生した場合でもトップレベルの閲覧コンテキストの `context` ID が、すべてのサポート済みのネットワークイベントで一貫して報告される不具合を修正しました ([Firefox bug 1869735](https://bugzil.la/1869735))。
 
 #### Marionette
 

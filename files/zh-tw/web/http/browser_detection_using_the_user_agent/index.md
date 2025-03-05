@@ -9,14 +9,15 @@ slug: Web/HTTP/Browser_detection_using_the_user_agent
 
 不過瀏覽器與標準並不是完美的，有些特殊情況依舊需要偵測瀏覽器。透過用戶代理（user agent）去偵測瀏覽器看似簡單，要做好卻頗為困難。這份文件會盡可能引導你正確處理這種事。
 
-> **備註：** 因為很重要所以再說一次：實行用戶代理嗅探（User Agent sniffing）通常不是好主意。問題通常都會有更好、更通用的解決方法！
+> [!NOTE]
+> 因為很重要所以再說一次：實行用戶代理嗅探（User Agent sniffing）通常不是好主意。問題通常都會有更好、更通用的解決方法！
 
 ## 使用瀏覽器偵測前應當考慮什麼
 
 在考慮透過用戶代理字串，去偵測使用瀏覽器時，首先要盡可能避免這種用法。先從認清**為什麼**要這麼做開始。
 
 - 你正針對某瀏覽器的特定錯誤奮戰著？
-  - : 去專業論壇閱讀或提問：你不太可能是第一個碰上問題的人。另外，去找專家、或只是與你有不同觀點的人問問看，也會對你的除錯思路有所幫助。如果問題看來頗為罕見，你應該去檢查這個錯誤是不是透過缺陷跟蹤管理系統（bug tracking system：[Mozilla](https://bugzilla.mozilla.org)、[WebKit](http://bugs.webkit.org)、[Blink](https://www.chromium.org/issue-tracking)、[Opera](https://bugs.opera.com/)）報告到瀏覽器供應商。瀏覽器供應商很重視錯誤報告，相關分析也可能提示該錯誤的其他解決辦法。
+  - : 去專業論壇閱讀或提問：你不太可能是第一個碰上問題的人。另外，去找專家、或只是與你有不同觀點的人問問看，也會對你的除錯思路有所幫助。如果問題看來頗為罕見，你應該去檢查這個錯誤是不是透過缺陷跟蹤管理系統（[Mozilla](https://bugzilla.mozilla.org/)、[WebKit](https://bugs.webkit.org/)、[Blink](https://www.chromium.org/issue-tracking/)、[Opera](https://bugs.opera.com/)）報告到瀏覽器供應商。瀏覽器供應商很重視錯誤報告，相關分析也可能提示該錯誤的其他解決辦法。
 - 你正試圖檢查某個特定功能是否存在？
   - : 你的網站需要用到某些瀏覽器不支援的功能，並給這些用戶功能更少，但你知道能正常顯示的網站。這類用戶代理嗅探的理由非常糟糕，因為大多數的瀏覽器，最終都有可能支援該功能。對所有瀏覽器都予以測試也不實際。**絕對不要**用戶代理嗅探、功能偵測是**永遠**的替代方案。
 - 你希望給不同的瀏覽器不同的 HTML？
@@ -28,7 +29,7 @@ slug: Web/HTTP/Browser_detection_using_the_user_agent
 
 - 功能偵測
 
-  - : 功能偵測使你無須弄清是哪種瀏覽器在渲染你的網頁，只須檢查需要的具體功能是否能用。如果不能用，就採取備用方案。在極少數的情況下，各瀏覽器行為有所不同。面對這種情況，不要偵測用戶代理，而是用實作測試來檢查瀏覽器 API、並搞清楚用法。最近有個好例子：[Chrome 針對正規表達式，添加了實驗性的 lookbehind 支援](https://www.chromestatus.com/feature/5668726032564224)，但其他瀏覽器並不支援。你可能以為要這麼用：
+  - : 功能偵測使你無須弄清是哪種瀏覽器在渲染你的網頁，只須檢查需要的具體功能是否能用。如果不能用，就採取備用方案。在極少數的情況下，各瀏覽器行為有所不同。面對這種情況，不要偵測用戶代理，而是用實作測試來檢查瀏覽器 API、並搞清楚用法。最近有個好例子：[Chrome 針對正規表達式，添加了實驗性的 lookbehind 支援](https://chromestatus.com/feature/5668726032564224)，但其他瀏覽器並不支援。你可能以為要這麼用：
 
     ```js
     // 這個程式以特殊表示法把字串分開來
@@ -115,13 +116,13 @@ slug: Web/HTTP/Browser_detection_using_the_user_agent
 
     針對螢幕尺寸，則使用 _window.innerWidth_ 與 _window.addEventListener("resize", function(){ /*更新螢幕尺寸依賴的東西*/ })_。
 
-    不要刪減小螢幕能看到的資訊，這只會激怒被逼著切到桌面版的用戶們；而是應該針對小螢幕，提供行列更少，但頁面更長的資訊；針對大螢幕，則提供行列更多，但頁面更短的資訊。這種效果能透過 [flexboxes](/zh-TW/docs/Learn/CSS/CSS_layout/Flexbox) 實現。如果需要有限支援舊版本，請使用 [floats](/zh-TW/docs/Learn/CSS/CSS_layout/Floats) 屬性。
+    不要刪減小螢幕能看到的資訊，這只會激怒被逼著切到桌面版的用戶們；而是應該針對小螢幕，提供行列更少，但頁面更長的資訊；針對大螢幕，則提供行列更多，但頁面更短的資訊。這種效果能透過 [flexboxes](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Flexbox) 實現。如果需要有限支援舊版本，請使用 [floats](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Floats) 屬性。
 
     另外，試著把不相關或不重要的資訊放到下面、然後把資料放得有意義。然後雖然有點離題，但下面的詳細示例，可能會給你有力的見解和想法，放棄用戶代理嗅探。
 
     我們先想像一個由各種貓貓或狗狗的訊息框，所組成的頁面；每個訊息框都有圖片、概覽、還有歷史趣聞；而圖片即使在大螢幕上，也要保持最大的合理尺寸。為了讓內容有意義的排列在一起，所有的貓貓訊息框都和狗狗訊息框分開、兩種動物都不會混在一起。在大螢幕上，會節省具有多列的空間，從而減少了圖片左右兩側的間距。訊息框則會透過平分而被拆分為多列。
 
-    現在我們能假設在原始碼裡面，狗狗訊息框都在上面、而貓貓訊息框都在下面。而這兩個框框都在同一個父元素之下。很明顯，有一個狗狗訊息框，就在貓貓訊息框的上面。第一個方法，就是使用水平的 [Flexbox](/zh-TW/docs/Learn/CSS/CSS_layout/Flexbox) 把內容組合起來。這樣，當頁面顯示給最終用戶時，狗狗訊息框就在頁面上方、而貓貓訊息框就在頁面下方；第二個方法，就是使用 [Column](/zh-TW/docs/Web/CSS/Layout_cookbook/Column_layouts) layout and resent 把所有的狗狗與貓貓排到右邊。在這種情況下，就能給沒有 flexboxes/multicolumns 的老舊版本提供適當的呈現：他們會呈現一列非常寬的框。
+    現在我們能假設在原始碼裡面，狗狗訊息框都在上面、而貓貓訊息框都在下面。而這兩個框框都在同一個父元素之下。很明顯，有一個狗狗訊息框，就在貓貓訊息框的上面。第一個方法，就是使用水平的 [Flexbox](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Flexbox) 把內容組合起來。這樣，當頁面顯示給最終用戶時，狗狗訊息框就在頁面上方、而貓貓訊息框就在頁面下方；第二個方法，就是使用 [Column](/zh-TW/docs/Web/CSS/Layout_cookbook/Column_layouts) layout and resent 把所有的狗狗與貓貓排到右邊。在這種情況下，就能給沒有 flexboxes/multicolumns 的老舊版本提供適當的呈現：他們會呈現一列非常寬的框。
 
     再考慮一下這個例子：如果有人是想來看貓貓的，那我們就可以在原始碼裡面，把貓貓放到狗狗的上面。這樣一來，更多的人就可以在更小的螢幕上（內容折疊成一列）更快找到需要的內容。
 
@@ -255,14 +256,15 @@ addEventListener(
 
 以下表格概括了主要的瀏覽器製造者，如何表明它們的瀏覽器在手機上運作：
 
-| 瀏覽器                                           | 規則                                                                                                                                                                                                                                      | 示例                                                                                                                                                           |
-| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mozilla (Gecko, Firefox)                         | 註解內的 [**Mobile** 或 **Tablet** token](/zh-TW/docs/Gecko_user_agent_string_reference)                                                                                                                                                  | Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0                                                                                                 |
-| WebKit-based (Android, Safari)                   | 註解外的 [**Mobile Safari** token](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/OptimizingforSafarioniPhone/OptimizingforSafarioniPhone.html#//apple_ref/doc/uid/TP40006517-SW3) | Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30               |
-| Blink-based (Chromium, Google Chrome, Opera 15+) | 註解外的 [**Mobile Safari** token](https://developers.google.com/chrome/mobile/docs/user-agent)                                                                                                                                           | Mozilla/5.0 (Linux; Android 4.4.2); Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Mobile Safari/537.36 OPR/20.0.1396.72047 |
-| Presto-based (Opera 12-)                         | 註解內的 [**Opera Mobi/xyz** token](http://my.opera.com/community/openweb/idopera/) (Opera 12-)                                                                                                                                           | Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50                                                            |
-| Internet Explorer                                | 註解內的 **IEMobile/xyz**                                                                                                                                                                                                                 | Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)                                                                            |
+| 瀏覽器                                           | 規則                                                                                                                                                                                                                                       | 示例                                                                                                                                                           |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mozilla (Gecko, Firefox)                         | 註解內的 [**Mobile** 或 **Tablet** token](/zh-TW/docs/Gecko_user_agent_string_reference)                                                                                                                                                   | Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0                                                                                                 |
+| WebKit-based (Android, Safari)                   | 註解外的 [**Mobile Safari** token](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/OptimizingforSafarioniPhone/OptimizingforSafarioniPhone.html#//apple_ref/doc/uid/TP40006517-SW3) | Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30               |
+| Blink-based (Chromium, Google Chrome, Opera 15+) | 註解外的 [**Mobile Safari** token](https://developer.chrome.com/multidevice/user-agent)                                                                                                                                                    | Mozilla/5.0 (Linux; Android 4.4.2); Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Mobile Safari/537.36 OPR/20.0.1396.72047 |
+| Presto-based (Opera 12-)                         | 註解內的 [**Opera Mobi/xyz** token](https://blogs.opera.com/news/) (Opera 12-)                                                                                                                                                             | Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50                                                            |
+| Internet Explorer                                | 註解內的 **IEMobile/xyz**                                                                                                                                                                                                                  | Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)                                                                            |
 
 總之，我們建議藉著找出用戶代理的「Mobi」字串，來偵測行動設備。
 
-> **備註：** 如果設備尺寸夠大的話，它就不會標示「Mobi」。針對這種情形，你應該提供桌面版網站。另外，因為最近桌面設備的觸控螢幕越來越多，為了提供最佳習慣，網站應該支援觸控輸入。
+> [!NOTE]
+> 如果設備尺寸夠大的話，它就不會標示「Mobi」。針對這種情形，你應該提供桌面版網站。另外，因為最近桌面設備的觸控螢幕越來越多，為了提供最佳習慣，網站應該支援觸控輸入。

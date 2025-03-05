@@ -11,7 +11,7 @@ l10n:
 
 {{EmbedInteractiveExample("pages/css/type-gradient.html")}}
 
-CSS グラデーションは[自身の寸法を持ちません](/ja/docs/Web/CSS/image#description)。つまり、自然または推奨される寸法や、推奨される縦横比を持ちません。実際の寸法は適用される要素に一致します。
+CSS グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/image#description)。つまり、自然または推奨される寸法や、推奨される縦横比を持ちません。実際の寸法は適用される要素に一致します。
 
 ## 構文
 

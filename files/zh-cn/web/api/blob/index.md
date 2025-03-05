@@ -2,7 +2,7 @@
 title: Blob
 slug: Web/API/Blob
 l10n:
-  sourceCommit: 367b982b93c07f7f99e7bb768a6bf326fa5198e6
+  sourceCommit: de2ef1e9950eebbacdd55f072dfe03014d113bbd
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
@@ -33,6 +33,8 @@ Blob 表示的不一定是 JavaScript 原生格式的数据。{{DOMxRef("File")}
 
 - {{DOMxRef("Blob.arrayBuffer()")}}
   - : 返回一个 promise，其会兑现一个包含 `Blob` 所有内容的二进制格式的 {{jsxref("ArrayBuffer")}}。
+- {{DOMxRef("Blob.bytes()")}}
+  - : 返回一个 promise，其会兑现一个包含 `Blob` 内容的 {{jsxref("Uint8Array")}}。
 - {{DOMxRef("Blob.slice()")}}
   - : 返回一个新的 `Blob` 对象，其中包含调用它的 blob 的指定字节范围内的数据。
 - {{DOMxRef("Blob.stream()")}}

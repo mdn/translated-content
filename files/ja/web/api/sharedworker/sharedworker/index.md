@@ -10,7 +10,8 @@ l10n:
 
 **`SharedWorker()`** コンストラクターは、指定された URL でスクリプトを実行する {{domxref("SharedWorker")}} オブジェクトを作成します。このスクリプトは[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)に従わなければなりません。
 
-> **メモ:** ブラウザーメーカー間で、 data URL が同じ元であるかどうかについての見解の相違があります。 Firefox 10.0 以降では data URL を受け入れることができますが、他のすべてのブラウザーではその限りではありません。
+> [!NOTE]
+> ブラウザーメーカー間で、 data URL が同じ元であるかどうかについての見解の相違があります。 Firefox 10.0 以降では data URL を受け入れることができますが、他のすべてのブラウザーではその限りではありません。
 
 ## 構文
 
@@ -49,7 +50,7 @@ new SharedWorker(aURL, options)
 - `SecurityError` {{domxref("DOMException")}}
   - : ドキュメントがワーカーの開始を許可されていない場合、例えば URL が無効な構文であったり、同一オリジンポリシーに違反していたり、`sameSiteCookies` の値が指定されたコンテキストで対応していなかった場合に発生します。
 - `NetworkError` {{domxref("DOMException")}}
-  - : ワーカースクリプトの MIME 型が正しくない場合に発生します。常に `text/javascript` であるべきです（歴史的な理由から[他の JavaScript MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript)も受け入れられるかもしれません）。
+  - : ワーカースクリプトの MIME 型が正しくない場合に発生します。常に `text/javascript` であるべきです（歴史的な理由から[他の JavaScript MIME タイプ](/ja/docs/Web/HTTP/MIME_types#textjavascript)も受け入れられるかもしれません）。
 - `SyntaxError` {{domxref("DOMException")}}
   - : `aURL` が解釈できない場合に発生します。
 

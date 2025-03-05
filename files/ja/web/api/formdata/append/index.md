@@ -3,16 +3,14 @@ title: "FormData: append() メソッド"
 short-title: append()
 slug: Web/API/FormData/append
 l10n:
-  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
+  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
 **`append()`** は {{domxref("FormData")}} インターフェイスのメソッドで、`FormData` オブジェクト内の既存のキーに新しい値を追加します。キーがまだ存在しない場合は追加します。
 
 {{domxref("FormData.set", "set()")}} と `append()` の違いは、指定されたキーが既に存在する場合、`set()` は既存のすべての値を新しい値で上書きすることです。 一方、`append()` は、既存の値のセットの最後に新しい値を追加します。
-
-> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
 ## 構文
 
@@ -45,14 +43,14 @@ formData.append("username", "Chris");
 値が {{domxref("Blob")}} （または {{domxref("File")}}）である場合、`filename` 引数でそのファイル名を指定します。
 
 ```js
-formData.append("userpic", myFileInput.files[0], "chris.jpg");
+formData.append("user-pic", myFileInput.files[0], "chris.jpg");
 ```
 
 通常のフォームデータと同様に、同じ名前の複数の値を追加することができます。
 
 ```js
-formData.append("userpic", myFileInput.files[0], "chris1.jpg");
-formData.append("userpic", myFileInput.files[1], "chris2.jpg");
+formData.append("user-pic", myFileInput.files[0], "chris1.jpg");
+formData.append("user-pic", myFileInput.files[1], "chris2.jpg");
 ```
 
 値が文字列でも `Blob` でもない場合、`append()` は自動的に文字列に変換します。

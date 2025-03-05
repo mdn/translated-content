@@ -40,7 +40,7 @@ The [Payment Request API's](/ru/docs/Web/API/Payment_Request_API) **`PaymentRequ
 ## События
 
 - {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} {{securecontext_inline}}
-  - : With some payment handlers (e.g., Apple Pay), this event handler is called to handle the {{event("merchantvalidation")}} event, which is dispatched when the user agent requires that the merchant validate that the merchant or vendor requesting payment is legitimate.
+  - : With some payment handlers (e.g., Apple Pay), this event handler is called to handle the [`merchantvalidation`](/ru/docs/Web/API/PaymentRequest/merchantvalidation_event) event, which is dispatched when the user agent requires that the merchant validate that the merchant or vendor requesting payment is legitimate.
     Also available using the {{domxref("PaymentRequest.onmerchantvalidation", "onmerchantvalidation")}} event handler property.
 - {{domxref("PaymentRequest.paymentmethodchange_event", "paymentmethodchange")}} {{securecontext_inline}}
   - : With some payment handlers (e.g., Apple Pay), dispatched whenever the user changes payment instrument, like switching from a credit card to a debit card.

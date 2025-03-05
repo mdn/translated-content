@@ -7,7 +7,8 @@ l10n:
 
 {{JSRef}}{{Deprecated_Header}}
 
-> **참고:** 이 기능은 [객체 초기자 구문](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer) 또는 {{jsxref("Object.defineProperty()")}} API를 사용하여 [설정자](/ko/docs/Web/JavaScript/Reference/Functions/set) 정의하는 것을 권장하기 때문에 이 기능은 더 이상 사용되지 않습니다. 이 메서드의 동작은 웹 호환성을 위해서만 명시되며 모든 플랫폼에서 구현할 필요는 없습니다.모든 환경에서 작동하지 않을 수도 있습니다.
+> [!NOTE]
+> 이 기능은 [객체 초기자 구문](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer) 또는 {{jsxref("Object.defineProperty()")}} API를 사용하여 [설정자](/ko/docs/Web/JavaScript/Reference/Functions/set) 정의하는 것을 권장하기 때문에 이 기능은 더 이상 사용되지 않습니다. 이 메서드의 동작은 웹 호환성을 위해서만 명시되며 모든 플랫폼에서 구현할 필요는 없습니다.모든 환경에서 작동하지 않을 수도 있습니다.
 
 {{jsxref("Object")}} 인스턴스의 **`__defineSetter__()`** 메서드는 해당 속성을 설정하려고 시도할 때 호출될 함수에 객체의 속성을 바인딩합니다.
 

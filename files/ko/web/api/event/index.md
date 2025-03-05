@@ -15,9 +15,10 @@ l10n:
 
 많은 DOM 요소는 이벤트를 받고("수신"), 받은 이벤트를 "처리"할 수 있습니다. 이벤트 처리기는 주로 {{domxref("EventTarget.addEventListener()")}}를 사용해 다양한 요소(`<button>`, `<div>`, `<span>`, 등등)에 연결("부착")됩니다. 올바르게 부착한 경우, {{domxref("EventTarget.removeEventListener", "removeEventListener()")}}를 사용하면 반대로 제거할 수도 있습니다.
 
-> **참고:** 하나의 요소가 다수의 처리기를 가질 수 있습니다. 완전히 동일한 이벤트에 여러 처리기를 따로 등록할 수 있습니다. 예컨대 광고 모듈과 통계 모듈이 각각 비디오 시청 이벤트에 대한 처리기를 부착하는 것이 가능합니다.
+> [!NOTE]
+> 하나의 요소가 다수의 처리기를 가질 수 있습니다. 완전히 동일한 이벤트에 여러 처리기를 따로 등록할 수 있습니다. 예컨대 광고 모듈과 통계 모듈이 각각 비디오 시청 이벤트에 대한 처리기를 부착하는 것이 가능합니다.
 
-중첩된 많은 요소가 서로 자신만의 이벤트 처리기를 가지고 있으면 이벤트의 처리가 매우 복잡해질 수 있습니다. 특히 부모 요소와 자식 요소가 화면에서 차지하는 영역이 겹쳐서 (클릭 등의) 이벤트가 양쪽 모두에서 발생하는 경우, 이벤트 처리 순서는 각 처리기의 [이벤트 버블링과 캡처](/ko/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture) 설정에 따라 달라집니다.
+중첩된 많은 요소가 서로 자신만의 이벤트 처리기를 가지고 있으면 이벤트의 처리가 매우 복잡해질 수 있습니다. 특히 부모 요소와 자식 요소가 화면에서 차지하는 영역이 겹쳐서 (클릭 등의) 이벤트가 양쪽 모두에서 발생하는 경우, 이벤트 처리 순서는 각 처리기의 [이벤트 버블링과 캡처](/ko/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture) 설정에 따라 달라집니다.
 
 ## Event 기반 인터페이스
 
@@ -122,5 +123,5 @@ l10n:
 ## 같이 보기
 
 - 사용 가능한 이벤트 유형 목록: [이벤트 참고서](/ko/docs/Web/Events)
-- [이벤트 대상의 비교](/ko/docs/Web/API/Event/Comparison_of_Event_Targets) (`target` vs. `currentTarget` vs. `relatedTarget` vs `originalTarget`)
+- [이벤트 대상의 비교](/ko/docs/Learn/JavaScript/Building_blocks/Event_bubbling) (`target` vs. `currentTarget` vs. `relatedTarget` vs `originalTarget`)
 - [이벤트 생성 및 발동](/ko/docs/Web/Events/Creating_and_triggering_events)

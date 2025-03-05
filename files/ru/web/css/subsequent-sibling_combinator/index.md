@@ -42,4 +42,4 @@ p ~ span {
 
 ## Смотрите также
 
-- [Смежные селекторы](/ru/docs/Web/CSS/Adjacent_sibling_selectors)
+- [Смежные селекторы](/ru/docs/Web/CSS/Next-sibling_combinator)

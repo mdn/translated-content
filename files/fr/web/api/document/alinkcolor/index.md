@@ -20,9 +20,9 @@ _color_ est un echaîne de caractère contenant le nom de la couleur en anglais(
 
 La valeur par défaut pour cette propriété est rouge (`#ee000` en hexadécimal) sur Mozilla Firefox.
 
-`document.alinkColor` est obsolète dans [DOM Level 2 HTML](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268) (lien en anglais). Une alternative est le sélecteur CSS {{Cssxref(":active")}}.
+`document.alinkColor` est obsolète dans [DOM Level 2 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268) (lien en anglais). Une alternative est le sélecteur CSS {{Cssxref(":active")}}.
 
-Une autre alternative est `document.body.aLink`, même si elle est [obsolète dans HTML 4.01](http://www.w3.org/TR/html401/struct/global.html#adef-alink) (lien en anglais) en faveur de l'alternative CSS ci-dessus.
+Une autre alternative est `document.body.aLink`, même si elle est [obsolète dans HTML 4.01](https://www.w3.org/TR/html401/struct/global.html#adef-alink) (lien en anglais) en faveur de l'alternative CSS ci-dessus.
 
 [Gecko](/fr/docs/Glossary/Gecko) supporte `alinkColor`/`:active` et [`:focus`](/fr/docs/Web/CSS/:focus). Internet Explorer 6 et 7 supportent `alinkColor`/`:active` seulement pour la [balise HTML des liens (`<a>`)](/fr/docs/Web/HTML/Element/a) et le comportement est le même que `:focus` sur Gecko. Il n'y a pas de support pour `:focus` dans IE.
 

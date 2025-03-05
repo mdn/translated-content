@@ -202,7 +202,8 @@ window.addEventListener("load", drawSvg);
 
 {{ EmbedLiveSample('Code_jouable_2','220','350') }}
 
-> **Note :** Dans Gecko, les cercles semblent avoir du mal à être dessinés si le rayon est inférieur à 0.075 (on ignore s'il s'agit d'un bug de l'élément pattern ou non). Pour contourner ce problème, il est probablement préférable d'éviter de dessiner des cercles dans des unités "objectBoundingBox".
+> [!NOTE]
+> Dans Gecko, les cercles semblent avoir du mal à être dessinés si le rayon est inférieur à 0.075 (on ignore s'il s'agit d'un bug de l'élément pattern ou non). Pour contourner ce problème, il est probablement préférable d'éviter de dessiner des cercles dans des unités "objectBoundingBox".
 
 ## Unités du motif: userSpaceOnUse
 

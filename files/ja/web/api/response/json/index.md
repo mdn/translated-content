@@ -1,8 +1,9 @@
 ---
-title: Response.json()
+title: "Response: json() メソッド"
+short-title: json()
 slug: Web/API/Response/json
 l10n:
-  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
+  sourceCommit: 889fd7ca9d03276638ec065e47ea967c1a2fc10b
 ---
 
 {{APIRef("Fetch API")}}
@@ -25,9 +26,21 @@ json()
 
 JavaScript オブジェクトに解決される {{jsxref("Promise")}}。 このオブジェクトは、オブジェクト、配列、文字列、数値など、JSON で表現できるものであれば何でもなります。
 
+### 例外
+
+- {{domxref("DOMException")}} `AbortError`
+  - : リクエストが[中止された](/ja/docs/Web/API/Fetch_API/Using_Fetch#リクエストの中止)場合。
+- {{jsxref("TypeError")}}
+  - : 以下のいずれかの原因で発生します。
+    - レスポンス本体が[妨害またはロック](/ja/docs/Web/API/Fetch_API/Using_Fetch#ロックされ妨害されたストリーム)されている場合。
+    - 本体コンテンツをデコードする際にエラーが発生した場合（例えば、{{httpheader("Content-Encoding")}} ヘッダーが不正な場合など）。
+- {{jsxref("SyntaxError")}}
+  - : このレスポンスの本体が JSON として解釈できなかった場合。
+
 ## 例
 
-[fetch json の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-json)（[fetch json をライブで](https://mdn.github.io/dom-examples/fetch/fetch-json/)実行）では、 {{DOMxRef("Request.Request", "Request()")}} コンストラクターを使用して新しいリクエストを作成し、それを使用して `.json` ファイルを読み取ります。読み取りに成功したら、`json()` を使用してデータを読み取り、解析し、結果のオブジェクトから期待通りに値を読み出し、それらの値をリスト項目に追加して商品データとして表示します。
+[fetch json の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-json)（[fetch json をライブで](https://mdn.github.io/dom-examples/fetch/fetch-json/)実行）では、 {{DOMxRef("Request.Request", "Request()")}} コンストラクターを使用して新しいリクエストを作成し、それを使用して `.json` ファイルを読み取ります。
+読み取りに成功したら、`json()` を使用してデータを読み取り、解析し、結果のオブジェクトから期待通りに値を読み出し、それらの値をリスト項目に追加して商品データとして表示します。
 
 ```js
 const myList = document.querySelector("ul");

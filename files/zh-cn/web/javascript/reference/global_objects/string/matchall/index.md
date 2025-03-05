@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
 
 **`matchAll()`** 方法返回一个迭代器，该迭代器包含了检索字符串与[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)进行匹配的所有结果（包括[捕获组](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)）。
 
-{{EmbedInteractiveExample("pages/js/string-matchall.html")}}
+{{InteractiveExample("JavaScript Demo: String.matchAll()")}}
+
+```js interactive-example
+const regexp = /t(e)(st(\d?))/g;
+const str = "test1test2";
+
+const array = [...str.matchAll(regexp)];
+
+console.log(array[0]);
+// Expected output: Array ["test1", "e", "st1", "1"]
+
+console.log(array[1]);
+// Expected output: Array ["test2", "e", "st2", "2"]
+```
 
 ## 语法
 
@@ -36,7 +49,7 @@ matchAll(regexp)
 
 ## 描述
 
-`String.prototype.matchAll` 方法本身的实现非常简单，它只是调用了参数的 `Symbol.matchAll` 方法，并将字符串作为第一个参数传递了进去（除了额外的输入验证，即正则表达式必须是全局的）。实际的实现来自 [`RegExp.prototype[@@matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)。
+`String.prototype.matchAll` 方法本身的实现非常简单，它只是调用了参数的 `Symbol.matchAll` 方法，并将字符串作为第一个参数传递了进去（除了额外的输入验证，即正则表达式必须是全局的）。实际的实现来自 [`RegExp.prototypeSymbol.matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)。
 
 ## 示例
 
@@ -126,7 +139,7 @@ array[1];
 // ['test2', 'e', 'st2', '2', index: 5, input: 'test1test2', length: 4]
 ```
 
-### 使用实现了 @@matchAll 的非正则对象调用 matchAll()
+### 使用实现了 `[Symbol.matchAll]()` 的非正则对象调用 matchAll()
 
 如果一个对象有一个 `Symbol.matchAll` 方法，它可以被用作自定义匹配器。`Symbol.matchAll` 的返回值将成为 `matchAll()` 的返回值。
 
@@ -157,4 +170,4 @@ str.matchAll({
 - {{jsxref("RegExp")}}
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}
-- [`RegExp.prototype[@@matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
+- [`RegExp.prototype[Symbol.matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)

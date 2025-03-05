@@ -7,13 +7,47 @@ slug: Web/HTML/Element/input/range
 
 Элементы {{HTMLElement("input")}} с типом **`range`** позволяют пользователю определить числовое значение, которое должно быть в пределах указанного промежутка. Однако, точное значение должно быть не слишком важно. Обычно они представляет собой слайдер или контроллер, но не текстовое поле как {{HTMLElement('input/number', 'number')}}. Так как этот виджет неточен, его не следует использовать, в случае, если важно установить точное значение .
 
-{{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;range&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Audio settings:</p>
+
+<div>
+  <input type="range" id="volume" name="volume" min="0" max="11" />
+  <label for="volume">Volume</label>
+</div>
+
+<div>
+  <input
+    type="range"
+    id="cowbell"
+    name="cowbell"
+    min="0"
+    max="100"
+    value="90"
+    step="10" />
+  <label for="cowbell">Cowbell</label>
+</div>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 Если используемый браузер не поддерживает тип `range`, он будет отображаться как input`{{HTMLElement('input/text', 'text')}}.`
 
 | **[Value](#value)**               | {{domxref("DOMString")}}, содержащий строковое представление выбранного числового значения; используйте {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}} чтобы получить значение {{jsxref("Number")}}.                                           |
 | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **События**                       | {{event("change")}} и {{event("input")}}                                                                                                                                                                                                                       |
+| **События**                       | [`change`](/ru/docs/Web/API/HTMLElement/change_event) и [`input`](/ru/docs/Web/API/Element/input_event)                                                                                                                                                        |
 | **Поддерживаемые общие атрибуты** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`list`](/ru/docs/Web/HTML/Element/input#list), [`max`](/ru/docs/Web/HTML/Element/input#max), [`min`](/ru/docs/Web/HTML/Element/input#min), and [`step`](/ru/docs/Web/HTML/Element/input#step) |
 | **IDL атрибуты**                  | `list`, `value`, и `valueAsNumber`                                                                                                                                                                                                                             |
 | **Методы**                        | {{domxref("HTMLInputElement.stepDown", "stepDown()")}} и {{domxref("HTMLInputElement.stepUp", "stepUp()")}}                                                                                                                                                    |
@@ -58,7 +92,8 @@ defaultValue =
 
 Это значение должно быть меньше или равно значению атрибута [`max`](/ru/docs/Web/HTML/Attributes/max). Смотрите также HTML-атрибут [`min`](/ru/docs/Web/HTML/Attributes/min).
 
-> **Примечание:** Если значения `min` и `max` равны или `max` меньше `min`, то у пользователя не будет возможности взаимодействовать с диапазоном.
+> [!NOTE]
+> Если значения `min` и `max` равны или `max` меньше `min`, то у пользователя не будет возможности взаимодействовать с диапазоном.
 
 ### `step`
 
@@ -66,7 +101,8 @@ defaultValue =
 
 Атрибут `step` также может принимать строковое значение `any`. Такое значение означает, что пошаговое изменение не подразумевается и разрешены любые значения (за исключением других ограничений, таких как [`min`](#min) and [`max`](#max)).
 
-> **Примечание:** Когда введённые пользователем данные не соответствуют пошаговой конфигурации, {{Glossary("user agent", "агент пользователя")}} может использовать округление до ближайшего допустимого значения, предпочитая числа в положительном направлении, когда есть два одинаково близких варианта.
+> [!NOTE]
+> Когда введённые пользователем данные не соответствуют пошаговой конфигурации, {{Glossary("user agent", "агент пользователя")}} может использовать округление до ближайшего допустимого значения, предпочитая числа в положительном направлении, когда есть два одинаково близких варианта.
 
 По умолчанию размер шага для полей ввода `range` равен 1, что допускает ввод только целых чисел, пока размер шага является целым числом. Например, если установить `min` в -10, а `value` в 1.5, то `step` равный 1 будет допускать только такие значения, как 1.5, 2.5, 3.5,… больше нуля и -0.5, -1.5, -2.5,… меньше нуля. Смотрите также HTML-атрибут [`step`](/ru/docs/Web/HTML/Attributes/step).
 
@@ -79,7 +115,8 @@ defaultValue =
 - `orient` {{non-standard_inline}}
   - : Похоже на -moz-orient не стандартное CSS-свойство влияющее на {{htmlelement('progress')}} и{{htmlelement('meter')}} элементы, `orient` атрибут определяем ориентацию слайдера. Значение `horizontal`, значит что слайдер будет отображён горизонтально, а `vertical`- что вертикально .
 
-> **Примечание:** Note: Следующие атрибуты не применимы: `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, `src`, и `width`. Каждый из них будет проигнорирован в случае употребления.
+> [!NOTE]
+> Следующие атрибуты не применимы: `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, `src`, и `width`. Каждый из них будет проигнорирован в случае употребления.
 
 ## Examples
 
@@ -243,7 +280,8 @@ defaultValue =
   </tbody>
 </table>
 
-> **Примечание:** В настоящее время ни один браузер полностью не поддерживает эти возможности. Firefox не поддерживает хэш-метки и лейблы, например, в то время как Chrome поддерживает хэш-метки, но не поддерживает лейблы. Версия 66 (66.0.3359.181) Chrome поддерживает лейблы, но тэг {{htmlelement("datalist")}} должен быть стилизован с помощью CSS, так как его свойство {{cssxref("display")}} по умолчанию - `none`, тем самым скрывая лейблы.
+> [!NOTE]
+> В настоящее время ни один браузер полностью не поддерживает эти возможности. Firefox не поддерживает хэш-метки и лейблы, например, в то время как Chrome поддерживает хэш-метки, но не поддерживает лейблы. Версия 66 (66.0.3359.181) Chrome поддерживает лейблы, но тэг {{htmlelement("datalist")}} должен быть стилизован с помощью CSS, так как его свойство {{cssxref("display")}} по умолчанию - `none`, тем самым скрывая лейблы.
 
 ### Изменение ориентации
 

@@ -5,13 +5,12 @@ l10n:
   sourceCommit: 027477cb8fe471c15c216c08592b607ea9118e35
 ---
 
-{{MDNSidebar}}
-
 ## 添加图像
 
 要在文档中添加图像，请将图像文件添加到该文档的文件夹中，然后在文档的 `index.md` 文件中使用 [Markdown 图像语法](https://github.github.com/gfm/#images)或等效的 HTML `<img>` 元素引用该图像。
 
-> **备注：** 对于本地化的文档，若引用的图像与对应的英文文档中的图像*相同*，则*无需*将图像复制到本地化文档的文件夹中。只需在本地化文档的 `index.md` 文件中使用相同的图像文件名引用图像即可。
+> [!NOTE]
+> 对于本地化的文档，若引用的图像与对应的英文文档中的图像*相同*，则*无需*将图像复制到本地化文档的文件夹中。只需在本地化文档的 `index.md` 文件中使用相同的图像文件名引用图像即可。
 >
 > 下方的示例等内容翻译自英文文档，本地化文档的贡献者可根据实际情况调整工作流程。
 
@@ -41,9 +40,10 @@ l10n:
    yarn filecheck files/en-us/web/css/my-cool-image.png
    ```
 
-   > **备注：** 对于本地化文档中的图像文件，请在 `mdn/content` 的本地仓库中运行该命令，并将 `files/en-us/web/css/my-cool-image.png` 替换为到本地化文档中包含的图像文件的相对路径或绝对路径。
+   > [!NOTE]
+   > 对于本地化文档中的图像文件，请在 `mdn/content` 的本地仓库中运行该命令，并将 `files/en-us/web/css/my-cool-image.png` 替换为到本地化文档中包含的图像文件的相对路径或绝对路径。
 
-4. 在 `files/en-us/web/css/index.md` 文档中使用 Markdown 图像语法并在方括号间提供（用于描述图像的）[`alt` 属性的描述文本](/zh-CN/docs/Learn/Accessibility/HTML#替代文本)，或包含一个 {{htmlelement("img")}} 元素和 `alt` 属性来引用图像：
+4. 在 `files/en-us/web/css/index.md` 文档中使用 Markdown 图像语法并在方括号间提供（用于描述图像的）[`alt` 属性的描述文本](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML#替代文本)，或包含一个 {{htmlelement("img")}} 元素和 `alt` 属性来引用图像：
 
    ```md
    <img src="my-cool-image.png" alt="炫酷的图像" />
@@ -106,7 +106,8 @@ MDN Web 文档不是一个包含很多视频的网站，但是在某些情况下
 - 视频存在无障碍问题：一般而言，它的制作成本相对文本更高，尤其是对于本地化或屏幕阅读器用户。
 - 紧跟上一点，视频比文本内容更难编辑/更新/维护。
 
-> **备注：** 即使在制作视频时，也应牢记这些问题，这样你就可以尝试缓解其中的一些问题。
+> [!NOTE]
+> 即使在制作视频时，也应牢记这些问题，这样你就可以尝试缓解其中的一些问题。
 
 有许多流行的视频网站提供了大量的视频教程。MDN Web 文档不是视频驱动的网站，但是在某些情况下，视频确实在 MDN Web 文档中有一席之地。
 
@@ -186,7 +187,8 @@ MDN Web 文档的视频内容应该是：
 
 - 确定要显示的 UI 的缩放级别。并非每个人都能以高清晰度查看你的视频。你将能够在后期制作中缩放特定部分，但是提前缩放应用程序也是一个好主意。
 
-> **备注：** 请不要过度缩放，以至于你要显示的 UI 开始变得陌生或丑陋。
+> [!NOTE]
+> 请不要过度缩放，以至于你要显示的 UI 开始变得陌生或丑陋。
 
 ### 录制
 
@@ -194,7 +196,8 @@ MDN Web 文档的视频内容应该是：
 
 请注意在最后暂停一两秒钟，以显示流程的结果。
 
-> **备注：** 如果你使用的是 QuickTime Player 等非常简单的工具，并且由于某种原因无法进行后期制作，则应该将窗口设置为正确的大小以显示你想要显示的区域。在 Firefox 开发者工具中，你可以使用[标尺工具](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html)来确保视口的纵横比适合录制。
+> [!NOTE]
+> 如果你使用的是 QuickTime Player 等非常简单的工具，并且由于某种原因无法进行后期制作，则应该将窗口设置为正确的大小以显示你想要显示的区域。在 Firefox 开发者工具中，你可以使用[标尺工具](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html)来确保视口的纵横比适合录制。
 
 ### 后期制作
 
@@ -213,7 +216,8 @@ MDN Web 文档的视频内容应该是：
 
 目前，视频必须上传到 YouTube 才能在 MDN Web 文档上显示，例如，上传到 [mozhacks](https://www.youtube.com/user/mozhacks/videos) 频道。如果你没有合适的地方来上传视频，请请求 MDN Web 文档团队的成员来上传视频。
 
-> **备注：** 如果视频脱离了页面的上下文而没有意义（如果是一个短视频，那么它可能没有意义），请将其标记为“不公开列出”（unlisted）。
+> [!NOTE]
+> 如果视频脱离了页面的上下文而没有意义（如果是一个短视频，那么它可能没有意义），请将其标记为“不公开列出”（unlisted）。
 
 ### 嵌入
 

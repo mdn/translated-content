@@ -9,7 +9,8 @@ Save-Data 请求头字段是一个布尔值，在请求中，表示客户端对�
 
 值为 on 时，明确表示用户选择使用客户端简化数据使用模式，并且当与源进行通信时允许他们提供替代内容以减少下载的数据，例如较小的图像和视频资源，不同的标记和样式，禁用轮询和自动更新等。
 
-> **备注：** 禁用 HTTP/2 服务器端推送 ({{RFC("7540", "Server Push", "8.2")}}) 也可以用于减少数据下载。
+> [!NOTE]
+> 禁用 HTTP/2 服务器端推送 ({{RFC("7540", "Server Push", "8.2")}}) 也可以用于减少数据下载。
 
 ## 语法
 
@@ -80,6 +81,6 @@ Content-Type: image/jpeg
 ## 参见
 
 - [Help Your Users `Save-Data` - CSS Tricks](https://css-tricks.com/help-users-save-data/)
-- [Delivering Fast and Light Applications with Save-Data - Google Developers](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/save-data/)
+- [Delivering Fast and Light Applications with Save-Data - Google Developers](https://web.developers.google.cn/articles/optimizing-content-efficiency-save-data)
 - [Network Information API - WICG](https://wicg.github.io/netinfo/#save-data-request-header-field)
 - Header to indicate that the content served varies by `Save-Data`: {{HTTPHeader("Vary")}}

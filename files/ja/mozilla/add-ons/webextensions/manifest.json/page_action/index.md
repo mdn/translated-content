@@ -38,13 +38,13 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/page_action
 
 拡張機能では関連したポップアップをつけて、そこで HTML、CSS、 JavaScript を使ったコンテンツを提供することもできます。
 
-ポップアップを提供した場合、ユーザーがアイコンをクリックした時にポップアップが開いて、ポップアップ内で実行する JavaScript にてユーザーのインタラクションを扱います。ポップアップをつけない場合、ユーザーがアイコンをクリックした時のクリックイベントは拡張機能の [background scripts](/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_pages) に送られます。
+ポップアップを提供した場合、ユーザーがアイコンをクリックした時にポップアップが開いて、ポップアップ内で実行する JavaScript にてユーザーのインタラクションを扱います。ポップアップをつけない場合、ユーザーがアイコンをクリックした時のクリックイベントは拡張機能の [background scripts](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_pages) に送られます。
 
-[pageAction API](/ja/Add-ons/WebExtensions/API/pageAction) を使用してプログラムでページアクションを作成および操作することもできます。
+[pageAction API](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) を使用してプログラムでページアクションを作成および操作することもできます。
 
 ページアクションはブラウザーアクションと似ていますが、ブラウザー全体ではなく特定のウェブページに関連付けられている点が異なります。アクションが特定のページにのみ関連している場合は、ページアクションを使用して関連するページにのみ表示する必要があります。アクションがすべてのページまたはブラウザー自体に関連している場合は、ブラウザーアクションを使用してください。
 
-ブラウザーアクションはデフォルトで表示されますが、ページアクションはデフォルトで非表示になります。タブの ID を渡して [`pageAction.show()`](/ja/Add-ons/WebExtensions/API/pageAction/show) を呼び出すことで、それらを特定のタブに対して表示できます。show_matches プロパティを使用してこのデフォルトの動作を変更することもできます。
+ブラウザーアクションはデフォルトで表示されますが、ページアクションはデフォルトで非表示になります。タブの ID を渡して [`pageAction.show()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show) を呼び出すことで、それらを特定のタブに対して表示できます。show_matches プロパティを使用してこのデフォルトの動作を変更することもできます。
 
 ## 構文
 

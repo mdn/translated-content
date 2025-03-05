@@ -55,6 +55,6 @@ then.addEventListener('activar', función (evento) {
 
 ## Ver también
 
-- [Uso de trabajadores del servicio](/es/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Uso de trabajadores del servicio](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("caches")}}

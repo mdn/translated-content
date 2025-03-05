@@ -1,15 +1,15 @@
 ---
 title: <path>
 slug: Web/SVG/Element/path
+l10n:
+  sourceCommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
 ---
 
 {{SVGRef}}
 
 **`<path>`** [SVG](/ja/docs/Web/SVG)要素は図形を定義する汎用的な要素です。全ての基本図形は path 要素によって定義されます。
 
-## 使用可能な場所
-
-{{svginfo}}
+## 例
 
 ```css hidden
 html,
@@ -35,36 +35,21 @@ svg {
 ## 属性
 
 - {{SVGAttr("d")}}
-  - : この属性は図形のパスを定義します。
-    _値の型_: **\<string>** ; _初期値_: `''`; _アニメーション可否_: **yes**
+  - : この属性は、図形のパスを定義します。
+    _値の型_: **\<string>** ; _既定値_: `''`; _アニメーション_: **可**
 - {{SVGAttr("pathLength")}}
-  - : この属性は、ユーザ単位系でのパスの全長を指定することを可能にします。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#Number) ; _初期値_: _none_; _アニメーション可否_: **yes**
+  - : この属性は、ユーザー単位系でのパスの全長を指定することを可能にします。
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#number) ; _既定値_: _none_; _アニメーション_: **可**
 
-### グローバル属性
-
-- [コア属性](/ja/docs/Web/SVG/Attribute/Core)
-  - : 特に: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
-- [スタイル属性](/ja/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [条件処理属性](/ja/docs/Web/SVG/Attribute/Conditional_Processing)
-  - : 特に: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- イベント属性
-  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#グローバルイベント属性), [グラフィックイベント属性](/ja/docs/Web/SVG/Attribute/Events#グラフィックイベント属性)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation)
-  - : 特に: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
-- ARIA 属性
-  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
-
-## 利用ノート
+## 使用可能な場所
 
 {{svginfo}}
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat}}
 

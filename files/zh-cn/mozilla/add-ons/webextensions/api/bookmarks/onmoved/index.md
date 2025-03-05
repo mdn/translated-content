@@ -9,7 +9,8 @@ l10n:
 
 当书签或文件夹被移动到不同的父文件夹或在文件夹内的位置时触发。
 
-> **备注：** 如果你正在移动多个书签，由于此 API 是异步的，移动调用可能会以任何顺序处理。因此，每个书签的索引值可能会改变或在所有移动调用完成之前是未知的。如果书签的索引对你的扩展程序很重要，那么在移动多个书签时，扩展程序应等待每个 `bookmarks.move` 调用完成后再移动下一个书签。等待可以确保每个书签关联的索引不受正在执行的移动调用影响。
+> [!NOTE]
+> 如果你正在移动多个书签，由于此 API 是异步的，移动调用可能会以任何顺序处理。因此，每个书签的索引值可能会改变或在所有移动调用完成之前是未知的。如果书签的索引对你的扩展程序很重要，那么在移动多个书签时，扩展程序应等待每个 `bookmarks.move` 调用完成后再移动下一个书签。等待可以确保每个书签关联的索引不受正在执行的移动调用影响。
 
 ## 语法
 
@@ -78,7 +79,8 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 {{WebExtExamples}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#event-onMoved) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.google.cn/docs/extensions/reference/api/bookmarks#event-onMoved) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

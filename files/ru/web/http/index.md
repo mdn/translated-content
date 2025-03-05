@@ -19,7 +19,7 @@ slug: Web/HTTP
   - : Как работают куки, можно почитать в [RFC 6265](https://tools.ietf.org/html/rfc6265). При обслуживании HTTP-запроса сервер может отправить в ответе HTTP-заголовок `Set-Cookie`. После этого значение куки посылается клиентом с каждым запросом к этому серверу. Делается это в форме заголовка запроса `Cookie`. Дополнительно можно указать истечение срока куки, а так же ограничения для специфического домена или пути.
 - [Контроль доступа (совместное использование ресурсов между разными источниками, HTTP access control (CORS))](/ru/docs/Web/HTTP/CORS)
   - : **Межсайтовые HTTP-запросы** (кросс-сайтовые) - это HTTP-запросы к ресурсам, находящимся в домене, **отличающемся** от того, с которого производится запрос. Например, HTML-страница, загружаемая с домена А (`http://domaina.example`), запрашивает изображение с домена Б (`http://domainb.foo`), используя тег `img` (`http://domainb.foo/image.jpg`). Это происходит постоянно в мире веба: страницы загружают различные ресурсы в кросс-сайтовой манере, включая стили (CSS), изображения, скрипты и другие ресурсы. CORS позволяет разработчикам сайтов контролировать межсайтовые запросы.
-- [Эволюция HTTP](/ru/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
+- [Эволюция HTTP](/ru/docs/Web/HTTP/Evolution_of_HTTP)
   - : Краткое описание изменений, произошедших в HTTP, начиная с самых ранних версий, заканчивая новой HTTP/2 и далее.
 - [Принципы веб-безопасности Mozilla](https://wiki.mozilla.org/Security/Guidelines/Web_Security)
   - : Сборник советов для помощи в разработке защищённых веб-приложений.
@@ -29,7 +29,7 @@ slug: Web/HTTP
   - : Показывает и описывает течение обычного сеанса HTTP.
 - [Управление подключениями в HTTP/1.x](/ru/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
   - : Описывает три модели управления подключениями, доступными в HTTP/1.x, их сильные и слабые стороны.
-- [Контроль предварительной загрузки DNS (Controlling DNS prefetching)](/ru/docs/Web/HTTP/Controlling_DNS_prefetching)
+- [Контроль предварительной загрузки DNS (Controlling DNS prefetching)](/ru/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control)
   - : Firefox, как и большинство других браузеров, выполняет **предварительную загрузку DNS (DNS prefetching)**. Это действие, когда браузеры превентивно выполняют разрешение доменных имён (получают имена доменов) для ссылок, по которым пользователь может перейти, а также для ссылок на ресурсы, такие как картинки, CSS, JavaScript. Эта предварительная загрузка выполняется в фоновом режиме, так что вполне вероятно, что к моменту обращения к объектам в документе DNS уже получен. Это уменьшает задержки, когда, например, пользователь кликает на ссылку.
 
 ## Справочники
@@ -37,7 +37,7 @@ slug: Web/HTTP
 Глубже изучите HTTP с помощью справочников и документации.
 
 - [HTTP-заголовки (HTTP Headers)](/ru/docs/Web/HTTP/Headers)
-  - : Заголовки HTTP-сообщения используются для точного описания загружаемого ресурса или поведения сервера или клиента. Пользовательские заголовки можно добавить, используя `X-` префикс; другие перечислены в [IANA registry](http://www.iana.org/assignments/message-headers/perm-headers.html), содержание которого в свою очередь определено в [RFC 4229](http://tools.ietf.org/html/rfc4229). IANA так же поддерживает [регистр предложенных новых HTTP-заголовков](http://www.iana.org/assignments/message-headers/prov-headers.html).
+  - : Заголовки HTTP-сообщения используются для точного описания загружаемого ресурса или поведения сервера или клиента. Пользовательские заголовки можно добавить, используя `X-` префикс; другие перечислены в [IANA registry](https://www.iana.org/assignments/message-headers/perm-headers.html), содержание которого в свою очередь определено в [RFC 4229](https://tools.ietf.org/html/rfc4229). IANA так же поддерживает [регистр предложенных новых HTTP-заголовков](https://www.iana.org/assignments/message-headers/prov-headers.html).
 - [Методы HTTP-запроса](/ru/docs/Web/HTTP/Methods)
 
   - : Различные операции, которые выполняются с HTTP:
@@ -59,19 +59,19 @@ slug: Web/HTTP
 
 Полезные инструменты и ресурсы для понимания и отладки HTTP.
 
-- [Инструменты разработчика Firefox](/ru/docs/Tools)
-  - : [Сетевой монитор](/ru/docs/Tools/Network_Monitor)
+- [Инструменты разработчика Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+  - : [Сетевой монитор](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
 - [Mozilla Observatory](https://observatory.mozilla.org/)
   - : Проект, созданный в помощь разработчикам, системным администраторам и специалистам по безопасности для создания безопасных и надёжных сайтов.
 - [RedBot](https://redbot.org/)
   - : Инструмент для проверки кеширования заголовков.
-- [Принципы работы современных веб-браузеров](http://www.html5rocks.com/ru/tutorials/internals/howbrowserswork/)
+- [Принципы работы современных веб-браузеров](https://www.html5rocks.com/ru/tutorials/internals/howbrowserswork/)
   - : Комплексная статья по внутренностям браузеров и потоку запросов через протокол HTTP. Это нужно понимать всем веб-разработчикам.
 
 ## Смотрите также
 
-- [Controlling DNS prefetching](/En/Controlling_DNS_prefetching)
-- [HTTP pipelining FAQ](/en/HTTP_Pipelining_FAQ)
+- [Controlling DNS prefetching](/en-US/Controlling_DNS_prefetching)
+- [HTTP pipelining FAQ](/en-US/HTTP_Pipelining_FAQ)
 - [HTTP-куки (HTTP cookies)](/ru/docs/Web/HTTP/Cookies)
 - [HTTP заголовки](/ru/docs/Web/HTTP/Headers)
 - [Basic access authentication](/ru/docs/HTTP/Basic_access_authentication)

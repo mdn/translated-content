@@ -88,7 +88,8 @@ console.log(original.byteLength); // 0
 ブラウザーの対応は、それぞれのオブジェクトの互換性情報の `transferable` サブ機能で示す必要があります（例として [`RTCDataChannel`](/ja/docs/Web/API/RTCDataChannel#ブラウザーの互換性) を参照してください）。
 この記事を書いている時点では、すべての移譲可能なオブジェクトでこの情報が更新されているわけではありません。
 
-> **メモ:** 移譲可能なオブジェクトは [Web IDL ファイル](https://github.com/w3c/webref/tree/main/ed/idl) の中で `[Transferable]` という属性でマークアップされています。
+> [!NOTE]
+> 移譲可能なオブジェクトは [Web IDL ファイル](https://github.com/w3c/webref/tree/main/ed/idl) の中で `[Transferable]` という属性でマークアップされています。
 
 ## 関連情報
 

@@ -89,8 +89,8 @@ DIGIT = %x30-39            ; 0-9
 
 ## 静态属性
 
-- `JSON[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值为字符串 `"JSON"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
+- `JSON[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值为字符串 `"JSON"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
 
 ## 静态方法
 

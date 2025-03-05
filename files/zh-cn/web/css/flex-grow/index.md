@@ -11,7 +11,7 @@ CSS 属性 **`flex-grow`** [CSS](/zh-CN/docs/Web/CSS) 设置 flex 项 [主尺寸
 
 ## 语法
 
-满足[CSS 属性值定义语法](/zh-CN/docs/CSS/Value_definition_syntax) {{csssyntax("flex-grow")}}。
+满足 [CSS 属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax) {{csssyntax("flex-grow")}}。
 
 ```css
 /* <number> 值 */
@@ -104,7 +104,7 @@ flex-grow: unset;
 
 ## 参见
 
-- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Using_CSS_flexible_boxes)
+- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - CSS Flexbox 指南：[弹性盒子的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - CSS Flexbox 指南：[控制 Flex 子元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
 - [`flex-grow` is weird. Or is it?](https://css-tricks.com/flex-grow-is-weird/) Manuel Matuzovic 在 CSS-Tricks 上的文章，说明了 flex-grow 的工作原理

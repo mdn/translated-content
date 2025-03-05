@@ -8,7 +8,31 @@ slug: Web/JavaScript/Reference/Global_Objects/Map
 **`Map`** 객체는 키-값 쌍과 키의 원래 삽입 순서를 기억합니다. 모든 값(객체 및
 {{glossary("Primitive", "원시 값")}} 모두)은 키 또는 값으로 사용될 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/map.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Map", "taller")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("a", 1);
+map1.set("b", 2);
+map1.set("c", 3);
+
+console.log(map1.get("a"));
+// Expected output: 1
+
+map1.set("a", 97);
+
+console.log(map1.get("a"));
+// Expected output: 97
+
+console.log(map1.size);
+// Expected output: 3
+
+map1.delete("b");
+
+console.log(map1.size);
+// Expected output: 2
+```
 
 ## 설명
 
@@ -386,7 +410,8 @@ console.log(clone.get(1)); // one
 console.log(original === clone); // false (useful for shallow comparison)
 ```
 
-> **참고:** 데이터 자체는 복제가 안된다는 사실을 명심하셔야 합니다.
+> [!NOTE]
+> 데이터 자체는 복제가 안된다는 사실을 명심하셔야 합니다.
 
 맵은 키 유일성을 유지한채로 병합이 가능합니다.
 

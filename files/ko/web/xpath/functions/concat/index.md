@@ -24,7 +24,7 @@ concat(string1 ,string2 [,stringn]* )
 
 ### 정의
 
-[XPath 1.0 4.2](http://www.w3.org/TR/xpath#function-concat)
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-concat)
 
 ### Gecko 지원
 

@@ -7,13 +7,13 @@ l10n:
 
 {{GlossarySidebar}}
 
-一个**应用程序上下文**是一个应用了 [Web 应用程序清单](/zh-CN/docs/Web/Manifest) 的顶层[浏览上下文](/zh-CN/docs/Glossary/Browsing_context)。
+**应用程序上下文**是应用了 [Web 应用程序清单](/zh-CN/docs/Web/Progressive_web_apps/Manifest) 的顶层[浏览上下文](/zh-CN/docs/Glossary/Browsing_context)。
 
-如果一个应用程序上下文是由于用户代理被要求导航到一个深度链接而创建的，那么用户代理必须立即以替换启用的方式导航到深度链接。否则，当应用程序上下文被创建时，用户代理必须立即以替换启用的方式导航到起始 URL。
+如果应用程序上下文是由于用户代理被要求导航到一个深度链接而创建的，那么用户代理必须立即以替换启用的方式导航到深度链接。否则，当应用程序上下文被创建时，用户代理必须立即以替换启用的方式导航到起始 URL。
 
 请注意，起始 URL 不一定是 start_url 成员的值：用户或用户代理在应用被添加到主屏幕或以其他方式被书签时可能已经更改了它。
 
 ## 参见
 
 - [渐进式 Web 应用](/zh-CN/docs/Web/Progressive_web_apps)
-- [`scope`](/zh-CN/docs/Web/Manifest/scope)
+- [`scope`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/scope)

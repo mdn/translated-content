@@ -1,5 +1,5 @@
 ---
-title: ":host()"
+title: :host()
 slug: Web/CSS/:host_function
 ---
 
@@ -9,7 +9,8 @@ La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:host()`** pe
 
 Le scénario principal pour utiliser cette fonction consiste à vouloir cibler une certaine classe d'éléments personnalisés : pour cela, on passera la classe comme argument de la fonction `:host()`. Cette fonction ne peut pas être utilisée avec un sélecteur de descendant, pour cela il faudra utiliser {{cssxref(":host-context()")}}.
 
-> **Note :** Cette fonction n'a aucun effet si elle est utilisée en dehors d'un _shadow DOM_.
+> [!NOTE]
+> Cette fonction n'a aucun effet si elle est utilisée en dehors d'un _shadow DOM_.
 
 ```css
 /* On cible l'hôte du shadow DOM uniquement s'il
@@ -67,6 +68,6 @@ La règle `:host(.footer) { color : red; }` s'applique à toutes les instances d
 
 ## Voir aussi
 
-- [Les composants web](/fr/docs/Web/Web_Components)
+- [Les composants web](/fr/docs/Web/API/Web_components)
 - {{cssxref(":host")}}
 - {{cssxref(":host-context()")}}

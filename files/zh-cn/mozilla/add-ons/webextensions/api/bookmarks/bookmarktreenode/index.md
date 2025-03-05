@@ -23,7 +23,8 @@ l10n:
   - : 一个{{jsxref("string", "字符串", "", 1)}}，唯一标识节点。每个 ID 在用户的配置文件中是唯一的，在浏览器重新启动时保持不变。
 - `index` {{optional_inline}}
   - : 一个数字，表示该节点在其父文件夹中的从零开始的位置，其中零代表第一个条目。
-    > **备注：** 如果你创建或移动多个书签，由于 {{WebExtAPIRef("bookmarks.create()")}} 和 {{WebExtAPIRef("bookmarks.move()")}} 方法是异步的，请求可能以任何顺序处理。因此，直到所有请求完成之前，每个书签的索引值可能会改变或是未知的。如果与书签相关的索引对你的扩展很重要，那么在创建或移动多个书签时，扩展应等待每个 `bookmarks.create` 或 `bookmarks.move` 调用完成。等待确保与每个书签关联的索引不会受到在原始调用进行时并发执行的创建或移动调用的影响。
+    > [!NOTE]
+    > 如果你创建或移动多个书签，由于 {{WebExtAPIRef("bookmarks.create()")}} 和 {{WebExtAPIRef("bookmarks.move()")}} 方法是异步的，请求可能以任何顺序处理。因此，直到所有请求完成之前，每个书签的索引值可能会改变或是未知的。如果与书签相关的索引对你的扩展很重要，那么在创建或移动多个书签时，扩展应等待每个 `bookmarks.create` 或 `bookmarks.move` 调用完成。等待确保与每个书签关联的索引不会受到在原始调用进行时并发执行的创建或移动调用的影响。
 - `parentId` {{optional_inline}}
   - : 一个{{jsxref("string", "字符串", "", 1)}}，指定父文件夹的 ID。此属性不存在于根节点。
 - `title`
@@ -41,7 +42,8 @@ l10n:
 
 {{WebExtExamples}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#type-BookmarkTreeNode) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.google.cn/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

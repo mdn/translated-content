@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Operators/Bitwise_OR
 
 **按位或**（**`|`**）运算符在其中一个或两个操作数对应的二进制位为 `1` 时，该位的结果值为 `1`。
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-or.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise OR", "shorter")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = 3; // 00000000000000000000000000000011
+
+console.log(a | b); // 00000000000000000000000000000111
+// Expected output: 7
+```
 
 ## 语法
 
@@ -19,7 +27,7 @@ a | b
 
 操作数被转换为 32 位整数并由一系列二进制位（0 和 1）表示。超过 32 位的数字会丢弃其最高有效位。例如，以下超过 32 位的整数将被转换为 32 位整数：
 
-```
+```plain
 Before: 11100110111110100000000000000110000000000001
 After:              10100000000000000110000000000001
 ```
@@ -37,7 +45,7 @@ After:              10100000000000000110000000000001
 | 1   | 0   | 1      |
 | 1   | 1   | 1      |
 
-```
+```plain
      9 (base 10) = 00000000000000000000000000001001 (base 2)
     14 (base 10) = 00000000000000000000000000001110 (base 2)
                    --------------------------------

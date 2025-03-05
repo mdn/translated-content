@@ -2,14 +2,27 @@
 title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
 l10n:
-  sourceCommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
+  sourceCommit: 8b6cec0ceff01e7a9d6865cf5306788e15cce4b8
 ---
 
 {{JSRef}}
 
 **`Object.assign()`** 静的メソッドは、すべての{{jsxref("Object/propertyIsEnumerable", "列挙可能", "", 1)}}な{{jsxref("Object/hasOwn", "自身のプロパティ", "", 1)}}の値を、 1 つ以上の*コピー元オブジェクト*から*コピー先オブジェクト*にコピーするために使用されます。変更されたコピー先オブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/object-assign.html")}}
+{{InteractiveExample("JavaScript Demo: Object.assign()")}}
+
+```js interactive-example
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+
+const returnedTarget = Object.assign(target, source);
+
+console.log(target);
+// Expected output: Object { a: 1, b: 4, c: 5 }
+
+console.log(returnedTarget === target);
+// Expected output: true
+```
 
 ## 構文
 
@@ -57,7 +70,7 @@ console.log(copy); // { a: 1 }
 
 ### ディープクローンについての注意
 
-[ディープクローン](/ja/docs/Glossary/Deep_copy)を行う場合、別に [`structuredClone()`](/ja/docs/Web/API/structuredClone) のような代替手段を使用する必要があります。 `Object.assign()` はプロパティ値のみをコピーするからです。
+[ディープクローン](/ja/docs/Glossary/Deep_copy)を行う場合、別に {{DOMxRef("Window.structuredClone", "structuredClone()")}} のような代替手段を使用する必要があります。 `Object.assign()` はプロパティ値のみをコピーするからです。
 
 元の値がオブジェクトへの参照である場合、参照の値のみがコピーされます。
 

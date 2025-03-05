@@ -23,7 +23,8 @@ En JavaScript, las instrucciones se denominan {{Glossary("Statement", "declaraci
 
 No es necesario un punto y coma después de una declaración si está escrita en su propia línea. Pero si se deseas más de una declaración en una línea, entonces _debes_ separarlas con punto y coma.
 
-> **Nota:** ECMAScript también tiene reglas para la inserción automática del punto y coma —{{JSxRef("Gramatica_lexica", "IAPC", "#Insercion_automatica_de_punto_y_coma")}}— (_ASI_ en inglés, por sus siglas «_Automatic Semicolon Insertion_») al final de las declaraciones. (Para obtener más información, consulta la referencia detallada sobre la {{JSxRef("Gramatica_lexica", "gramática léxica")}} de JavaScript).
+> [!NOTE]
+> ECMAScript también tiene reglas para la inserción automática del punto y coma —{{JSxRef("Gramatica_lexica", "IAPC", "#Insercion_automatica_de_punto_y_coma")}}— (_ASI_ en inglés, por sus siglas «_Automatic Semicolon Insertion_») al final de las declaraciones. (Para obtener más información, consulta la referencia detallada sobre la {{JSxRef("Gramatica_lexica", "gramática léxica")}} de JavaScript).
 
 Sin embargo, se considera una buena práctica escribir siempre un punto y coma después de una declaración, incluso cuando no sea estrictamente necesario. Esta práctica reduce las posibilidades de que se introduzcan errores en el código.
 
@@ -45,7 +46,8 @@ La sintaxis de los **comentarios** es la misma que en C++ y en muchos otros leng
 
 Los comentarios se comportan como espacios en blanco y se descartan durante la ejecución del script.
 
-> **Nota:** También puedes ver un tercer tipo de sintaxis de comentario al comienzo de algunos archivos JavaScript, que se parece a esto: `#!/usr/bin/env node`.Esto se denomina sintaxis de **comentario hashbang** y es un comentario especial que se utiliza para especificar la ruta a un motor JavaScript en particular que debe ejecutar el script. Consulta {{JSxRef("Gramatica_lexica", "Comentarios Hashbang", "#Comentarios_hashbang")}} para obtener más detalles.
+> [!NOTE]
+> También puedes ver un tercer tipo de sintaxis de comentario al comienzo de algunos archivos JavaScript, que se parece a esto: `#!/usr/bin/env node`.Esto se denomina sintaxis de **comentario hashbang** y es un comentario especial que se utiliza para especificar la ruta a un motor JavaScript en particular que debe ejecutar el script. Consulta {{JSxRef("Gramatica_lexica", "Comentarios Hashbang", "#Comentarios_hashbang")}} para obtener más detalles.
 
 ## Declaraciones
 
@@ -352,7 +354,8 @@ En el caso que un valor representando un número está en memoria como texto, ha
 
 `parseInt` solo devuelve números enteros, por lo que su uso se reduce para decimales.
 
-> **Nota:** Además, una práctica recomendada para `parseInt` es incluir siempre el parámetro _radix_. El parámetro `radix` se utiliza para especificar qué sistema numérico se utilizará.
+> [!NOTE]
+> Además, una práctica recomendada para `parseInt` es incluir siempre el parámetro _radix_. El parámetro `radix` se utiliza para especificar qué sistema numérico se utilizará.
 
 ```js
 parseInt("101", 2); // 5
@@ -388,11 +391,13 @@ El siguiente ejemplo crea el arreglo `coffees` con tres elementos y `length` de 
 let coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
-> **Nota:** Un arreglo literal es un tipo de _iniciador de objeto_. Consulta {{JSxRef("Guide/Trabajando_con_objectos", "Uso de iniciadores de objetos", "#Uso_de_iniciadores_de_objeto")}}.
+> [!NOTE]
+> Un arreglo literal es un tipo de _iniciador de objeto_. Consulta {{JSxRef("Guide/Trabajando_con_objectos", "Uso de iniciadores de objetos", "#Uso_de_iniciadores_de_objeto")}}.
 
 Si creas un arreglo utilizando un literal en un script de nivel superior, JavaScript interpreta el arreglo cada vez que evalúa la expresión que contiene el arreglo literal. Además, cada vez que llamas a una función se crea un literal usado en ella.
 
-> **Nota:** Los arreglos literales también son objetos `Array`. Consulta {{JSxRef("Array")}} y {{JSxRef("Guide/colecciones_indexadas", "Colecciones indexadas")}} para obtener detalles sobre los objetos `Array`.
+> [!NOTE]
+> Los arreglos literales también son objetos `Array`. Consulta {{JSxRef("Array")}} y {{JSxRef("Guide/colecciones_indexadas", "Colecciones indexadas")}} para obtener detalles sobre los objetos `Array`.
 
 #### Comas adicionales en arreglos literales
 
@@ -412,7 +417,8 @@ Si incluyes una coma al final de la lista de los elementos, la coma es ignorada.
 
 En el siguiente ejemplo, el `length` del arreglo es tres. No hay `myList[3]`. Todas las demás comas de la lista indican un nuevo elemento.
 
-> **Nota:** Las comas finales pueden crear errores en versiones anteriores del navegador y se recomienda eliminarlas.
+> [!NOTE]
+> Las comas finales pueden crear errores en versiones anteriores del navegador y se recomienda eliminarlas.
 
 ```js-nolint
 let myList = ["home", , "school", ];
@@ -438,7 +444,8 @@ Sin embargo, al escribir tu propio código, debes declarar explícitamente los e
 
 El tipo booleano tiene dos valores literales: `true` y `false`.
 
-> **Nota:** No confundas los valores booleanos primitivos `true` y `false` con los valores `true` y `false` del objeto {{JSxRef("Boolean")}}.El objeto `Boolean` es un contenedor alrededor del tipo de dato primitivo `Boolean`. Consulta {{JSxRef("Boolean")}} para obtener más información.
+> [!NOTE]
+> No confundas los valores booleanos primitivos `true` y `false` con los valores `true` y `false` del objeto {{JSxRef("Boolean")}}.El objeto `Boolean` es un contenedor alrededor del tipo de dato primitivo `Boolean`. Consulta {{JSxRef("Boolean")}} para obtener más información.
 
 ### Literales numéricos
 

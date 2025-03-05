@@ -1,6 +1,8 @@
 ---
 title: column-rule
 slug: Web/CSS/column-rule
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
@@ -9,9 +11,13 @@ slug: Web/CSS/column-rule
 
 {{EmbedInteractiveExample("pages/css/column-rule.html")}}
 
-これは[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)であり、一回の便利な宣言で個別の `column-rule-*` プロパティ ({{Cssxref("column-rule-width")}}, {{Cssxref("column-rule-style")}}, {{Cssxref("column-rule-color")}}) を設定できます。
+## 構成要素のプロパティ
 
-> **メモ:** 他の一括指定プロパティと同様に、指定されなかった個別の値は初期値が設定されます (以前に個別指定プロパティを使用して設定された値を上書きする可能性があります)。
+このプロパティは、以下の CSS プロパティの一括指定です。
+
+- {{Cssxref("column-rule-color")}}
+- {{Cssxref("column-rule-style")}}
+- {{Cssxref("column-rule-width")}}
 
 ## 構文
 
@@ -25,12 +31,13 @@ column-rule: thick inset blue;
 column-rule: inherit;
 column-rule: initial;
 column-rule: revert;
+column-rule: revert-layer;
 column-rule: unset;
 ```
 
-`column-rule` プロパティは、以下に挙げる値のうち 1 ～ 3 個を任意の順序で指定します。
+### 値
 
-<h3 id="Values">値</h3>
+`column-rule` プロパティは、以下に挙げる値のうち 1 ～ 3 個を任意の順序で指定します。
 
 - `<'column-rule-width'>`
   - : {{cssxref("&lt;length&gt;")}} または 3 つのキーワード、 `thin`、`medium`、`thick` のうちの 1 つです。詳しくは {{cssxref("border-width")}} を参照してください。
@@ -76,11 +83,9 @@ p.abc {
 
 #### HTML
 
-```html
+```html-nolint
 <p class="content-box">
-  This is a bunch of text split into three columns. Take note of how the
-  `column-rule` property is used to adjust the style, width, and color of the
-  rule that appears between the columns.
+  これは 3 つ段に分割されたテキストの束です。 <code>column-rule</code> プロパティは、段と段の間に引かれる線のスタイル、太さ、色を変更するために使用されます。すばらしいと思いませんか？
 </p>
 ```
 
@@ -109,7 +114,7 @@ p.abc {
 
 ## 関連情報
 
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [学習: 段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
 - {{CSSXref("column-rule-style")}}
 - {{CSSXref("column-rule-width")}}
 - {{CSSXref("column-rule-color")}}

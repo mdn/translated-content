@@ -66,7 +66,8 @@ Vous pouvez créer un nouvel objet `Request` en utilisant le constructeur {{domx
 - {{domxref("Body.text()")}}
   - : Renvoie une promesse qui se résout avec une représentation {{domxref("USVString")}} (texte) du coprs de la requête.
 
-> **Note :** Les fonctions {{domxref("Body")}} ne peuvent être exécutées qu'une seule fois; les appels suivants seront résolus avec des chaînes vides / ArrayBuffers.
+> [!NOTE]
+> Les fonctions {{domxref("Body")}} ne peuvent être exécutées qu'une seule fois; les appels suivants seront résolus avec des chaînes vides / ArrayBuffers.
 
 ## Exemples
 
@@ -80,7 +81,7 @@ const method = request.method;
 const credentials = request.credentials;
 ```
 
-Vous pouvez ensuite récupérer cette requête en passant l'objet `Request` en tant que paramètre à un appel [`fetch()`](/fr/docs/Web/API/fetch), par exemple:
+Vous pouvez ensuite récupérer cette requête en passant l'objet `Request` en tant que paramètre à un appel [`fetch()`](/fr/docs/Web/API/Window/fetch), par exemple:
 
 ```js
 fetch(request)
@@ -104,9 +105,10 @@ const credentials = request.credentials;
 const bodyUsed = request.bodyUsed;
 ```
 
-> **Note :** Le type de body ne peut être qu'un {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} ou {{domxref("ReadableStream")}} donc pour ajouter un objet JSON à la charge utile, vous devez stringify cet objet.
+> [!NOTE]
+> Le type de body ne peut être qu'un {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} ou {{domxref("ReadableStream")}} donc pour ajouter un objet JSON à la charge utile, vous devez stringify cet objet.
 
-Vous pouvez ensuite récupérer cette demande d'API en passant l'objet `Request` en tant que paramètre à un appel [`fetch()`](/fr/docs/Web/API/fetch), par exemple et obtenir la réponse:
+Vous pouvez ensuite récupérer cette demande d'API en passant l'objet `Request` en tant que paramètre à un appel [`fetch()`](/fr/docs/Web/API/Window/fetch), par exemple et obtenir la réponse:
 
 ```js
 fetch(request)
@@ -136,6 +138,6 @@ fetch(request)
 
 ## Voir aussi
 
-- [ServiceWorker API](/fr/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/fr/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/fr/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/fr/docs/Web/HTTP/CORS)
 - [HTTP](/fr/docs/Web/HTTP)

@@ -9,7 +9,8 @@ l10n:
 
 **HTTP `GET` 方法**是用來請求指定資源的表示。使用 `GET` 的請求應僅用於請求數據（不應包含數據）。
 
-> **備註：** 在 `GET` 請求中發送主體/有效載荷可能會導致一些現有實現拒絕該請求——雖然規範沒有禁止，但語義是未定義的。最好直接避免在 `GET` 請求中發送有效載荷。
+> [!NOTE]
+> 在 `GET` 請求中發送主體/有效載荷可能會導致一些現有實現拒絕該請求——雖然規範沒有禁止，但語義是未定義的。最好直接避免在 `GET` 請求中發送有效載荷。
 
 <table class="properties">
   <tbody>
@@ -34,7 +35,7 @@ l10n:
       <td>是</td>
     </tr>
     <tr>
-      <th scope="row"><a href="/zh-TW/docs/Learn/Forms">HTML 表單</a>中是否允許</th>
+      <th scope="row"><a href="/zh-TW/docs/Learn_web_development/Extensions/Forms">HTML 表單</a>中是否允許</th>
       <td>是</td>
     </tr>
   </tbody>

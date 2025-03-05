@@ -7,13 +7,32 @@ l10n:
 
 {{JSRef}}
 
-> **メモ:** 一部のブラウザーのあるバージョンでは、このメソッドは `Array.prototype.groupToMap()` というメソッドとして実装されていました。ウェブの互換性の問題により、現在は静的メソッドとして実装されています。詳細は[ブラウザーの互換性](#ブラウザーの互換性)を確認してください
+> [!NOTE]
+> 一部のブラウザーのあるバージョンでは、このメソッドは `Array.prototype.groupToMap()` というメソッドとして実装されていました。ウェブの互換性の問題により、現在は静的メソッドとして実装されています。詳細は[ブラウザーの互換性](#ブラウザーの互換性)を確認してください
 
 **Map.groupBy()** 静的メソッドは、指定されたコールバック関数によって返された値を使用して、指定された反復可能な要素をグループ化します。最終的に返される {{jsxref("Map")}} は、テスト関数からの一意な値をキーとして使用し、各グループの要素の配列を取得するために使用できます。
 
 このメソッドは主に、あるオブジェクトに関連する要素をグループ化するときに便利で、特にそのオブジェクトが時間の経過とともに変化する可能性がある場合に便利です。オブジェクトが不変である場合は、代わりに文字列を使用してそれを表現し、{{jsxref("Object.groupBy()")}} で要素をグループ化することができます。
 
-{{EmbedInteractiveExample("pages/js/map-groupby.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Map.groupBy()", "taller")}}
+
+```js interactive-example
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+const restock = { restock: true };
+const sufficient = { restock: false };
+const result = Map.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? restock : sufficient,
+);
+console.log(result.get(restock));
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
+```
 
 ## 構文
 
@@ -44,7 +63,8 @@ Map.groupBy(items, callbackFn)
 
 このメソッドは、時間の経過とともに変更される可能性のある特定のオブジェクトに関連する情報をグループ化する必要がある場合に便利です。オブジェクトが変更されても、返される `Map` のキーとして機能し続けるからです。代わりにオブジェクトの文字列表現を作成し、それを {{jsxref("Object.groupBy()")}} のグループ化キーとして使用する場合は、オブジェクトが変更されても元のオブジェクトとその表現との間のマッピングを維持する必要があります。
 
-> **メモ:** 返された `Map` のグループにアクセスするには、`Map` のキーとして元々使用されていたのと同じオブジェクトを使用する必要があります（ただし、そのオブジェクトのプロパティを変更することはできます）。たまたま同じ名前とプロパティを持つ別のオブジェクトを使うことはできません。
+> [!NOTE]
+> 返された `Map` のグループにアクセスするには、`Map` のキーとして元々使用されていたのと同じオブジェクトを使用する必要があります（ただし、そのオブジェクトのプロパティを変更することはできます）。たまたま同じ名前とプロパティを持つ別のオブジェクトを使うことはできません。
 
 `Map.groupBy` は `this` の値を読みません。どんなオブジェクトでも呼び出すことができ、新しい {{jsxref("Map")}} インスタンスが返されます。
 

@@ -24,22 +24,24 @@
     "prepare": "husky || true"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20"
   },
   "dependencies": {
-    "autocorrect-node": "2.11.1",
-    "cld": "^2.9.1",
-    "fdir": "^6.1.1",
+    "autocorrect-node": "2.13.0",
+    "fdir": "^6.4.3",
+    "franc-min": "^6.2.0",
     "front-matter": "^4.0.2",
-    "husky": "9.0.11",
-    "lint-staged": "15.2.7",
+    "html-to-text": "^9.0.5",
+    "husky": "9.1.7",
+    "lint-staged": "15.4.3",
     "markdown-it": "^14.1.0",
-    "markdownlint-cli2": "0.13.0",
+    "markdownlint-cli2": "0.17.2",
     "markdownlint-rule-search-replace": "1.2.0",
-    "mdast-util-from-markdown": "^2.0.1",
-    "ora": "^8.0.1",
-    "prettier": "3.3.2",
+    "mdast-util-from-markdown": "^2.0.2",
+    "ora": "^8.2.0",
+    "prettier": "3.5.3",
     "unist-util-visit": "^5.0.0",
     "yargs": "^17.7.2"
-  }
+  },
+  "packageManager": "yarn@1.22.22"
 }

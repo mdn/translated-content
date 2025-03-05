@@ -7,7 +7,44 @@ slug: Web/HTML/Element/input/button
 
 **`button`** 유형의 {{htmlelement("input")}} 요소는 단순한 푸시 버튼으로 렌더링 됩니다. 이벤트 처리기(주로 [`click`](/ko/docs/Web/API/Element/click_event) 이벤트)를 부착하면, 사용자 지정 기능을 웹 페이지 어느 곳에나 제공할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;button&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<input class="styled" type="button" value="Add to favorites" />
+```
+
+```css interactive-example
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgb(220 0 0 / 100%);
+  background-image: linear-gradient(
+    to top left,
+    rgb(0 0 0 / 20%),
+    rgb(0 0 0 / 20%) 30%,
+    rgb(0 0 0 / 0%)
+  );
+  box-shadow:
+    inset 2px 2px 3px rgb(255 255 255 / 60%),
+    inset -2px -2px 3px rgb(0 0 0 / 60%);
+}
+
+.styled:hover {
+  background-color: rgb(255 0 0 / 100%);
+}
+
+.styled:active {
+  box-shadow:
+    inset -2px -2px 3px rgb(255 255 255 / 60%),
+    inset 2px 2px 3px rgb(0 0 0 / 60%);
+}
+```
 
 > **참고:** `<input>` 요소의 `button` 유형도 전혀 틀리지 않은 방법이지만, 이후에 생긴 {{HTMLElement("button")}} 요소를 사용하는 것이 선호되는 방식입니다. `<button>`의 레이블 텍스트는 여는 태그와 닫는 태그 사이에 넣기 때문에, 심지어 이미지까지도 포함할 수 있습니다.
 
@@ -127,7 +164,8 @@ function updateBtn() {
 
 {{EmbedLiveSample("버튼에_키보드_단축키_추가하기", 650, 100)}}
 
-> **참고:** 위 예제의 문제는, 사용자 입장에선 어떤 단축키가 있는지 알 수도 없다는 것입니다! 실제 웹 사이트에서는, 쉽게 접근 가능한 곳에 놓인 링크로 단축키 정보를 설명하는 문서를 가리키는 등 사이트 디자인을 방해하지 않는 선에서 단축키 정보를 제공해야 할 것입니다.
+> [!NOTE]
+> 위 예제의 문제는, 사용자 입장에선 어떤 단축키가 있는지 알 수도 없다는 것입니다! 실제 웹 사이트에서는, 쉽게 접근 가능한 곳에 놓인 링크로 단축키 정보를 설명하는 문서를 가리키는 등 사이트 디자인을 방해하지 않는 선에서 단축키 정보를 제공해야 할 것입니다.
 
 ### 버튼 활성화와 비활성화
 

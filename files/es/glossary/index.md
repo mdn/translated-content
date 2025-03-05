@@ -14,4 +14,5 @@ Las tecnologías web contienen largas listas de jerga y abreviaturas que se util
 
 Los términos del glosario se pueden seleccionar en la barra lateral.
 
-> **Nota:** Este glosario es un trabajo en progreso interminable. Puede ayudar a mejorarlo [escribiendo nuevas entradas](/es/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary) o mejorando las existentes.
+> [!NOTE]
+> Este glosario es un trabajo en progreso interminable. Puede ayudar a mejorarlo [escribiendo nuevas entradas](/es/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary) o mejorando las existentes.

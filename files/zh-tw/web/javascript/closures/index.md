@@ -137,7 +137,7 @@ document.getElementById("size-16").onclick = size16;
 
 JavaScript 並沒有的提供原生的方法完成這種事，不過它藉由閉包來模擬私有方法。私有方法不只能限制程式碼的存取，它還提供了強而有力的方式來管理全域命名空間，避免非必要的方法弄亂公開介面。
 
-以下展示如何使用閉包來定義一個能夠訪問私有函式與變數的公開函式。這種閉包的用法稱為模組設計模式([module pattern](http://www.google.com/search?q=javascript+module+pattern))。
+以下展示如何使用閉包來定義一個能夠訪問私有函式與變數的公開函式。這種閉包的用法稱為模組設計模式([module pattern](https://www.google.com/search?q=javascript+module+pattern))。
 
 ```js
 var counter = (function () {
@@ -172,7 +172,8 @@ console.log(counter.value()); // logs 1
 
 這三個公有函式，皆為共享同一個環境的閉包。由於 JavaScript 的語法作用域，它們都能訪問 `privateCounter` 變數與 `changeBy` 函式。
 
-> **備註：** 你應該也發現到我們定義了建立 counter 的匿名函式、而我們接著呼叫它，並給`counter` 變數指派了回傳值。我們也能在分離的變數 `makeCounter` 儲存函式並用其建立數個 counter。
+> [!NOTE]
+> 你應該也發現到我們定義了建立 counter 的匿名函式、而我們接著呼叫它，並給`counter` 變數指派了回傳值。我們也能在分離的變數 `makeCounter` 儲存函式並用其建立數個 counter。
 
 ```js
 var makeCounter = function () {
@@ -206,7 +207,8 @@ alert(counter2.value()); /* Alerts 0 */
 
 請注意 `counter1` 與 `counter2` 這兩個計數器是如何維護其獨立性的。每個閉包都以各自的閉包，在參照不同版本的 `privateCounter` 變數。每當呼叫其中一個計數器時，它會透過該變數的數值變更，改變語法作用域的環境。不過，在其中一個閉包的變數值改時，其他閉包的數值並不會受到影響。
 
-> **備註：** 使用這種方法的閉包，提供了一些與物件導向程式設計的益處，尤其是資料隱藏與封裝。
+> [!NOTE]
+> 使用這種方法的閉包，提供了一些與物件導向程式設計的益處，尤其是資料隱藏與封裝。
 
 ## 在迴圈建立閉包：一個常見錯誤
 
@@ -408,4 +410,4 @@ function MyObject(name, message) {
 }).call(MyObject.prototype);
 ```
 
-在前例中，所有物件可共享繼承的原型，物件創立時也無須每次都定義方法。詳細資料請參見[深入了解物件模型](/zh-TW/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)。
+在前例中，所有物件可共享繼承的原型，物件創立時也無須每次都定義方法。詳細資料請參見[深入了解物件模型](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。

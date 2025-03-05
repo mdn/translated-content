@@ -13,7 +13,7 @@ slug: Web/CSS/CSS_multicol_layout/Styling_columns
 
 ## `column-gap` プロパティ
 
-段同士の間隔 (段間) は、 `column-gap` プロパティで制御されます。このプロパティはもともと段組みレイアウト仕様書で定義されていました。しかし、現在は[ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)仕様書で定義され、 [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)などの他の仕様書におけるボックス同士の間隔と統合されました。
+段同士の間隔 (段間) は、 `column-gap` プロパティで制御されます。このプロパティはもともと段組みレイアウト仕様書で定義されていました。しかし、現在は[ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)仕様書で定義され、 [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)などの他の仕様書におけるボックス同士の間隔と統合されました。
 
 段組みにおける `column-gap` の初期値は `1em` です。つまり、段同士は互いに接しません。他のレイアウト方法では、 `column-gap` の初期値は 0 です。キーワード値 "normal" を使用した場合、間隔は 1em に設定されます。
 
@@ -41,4 +41,4 @@ slug: Web/CSS/CSS_multicol_layout/Styling_columns
 
 ## まとめ
 
-ここでは、現在段ボックスに対してスタイル付けすることができるすべての方法を説明しました。次のガイドでは、コンテナー内で[すべての段をまたがる](/ja/docs/Web/CSS/CSS_Columns/Spanning_Columns)要素の作成を見てみましょう。
+ここでは、現在段ボックスに対してスタイル付けすることができるすべての方法を説明しました。次のガイドでは、コンテナー内で[すべての段をまたがる](/ja/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns)要素の作成を見てみましょう。

@@ -14,8 +14,8 @@ Existen cuatro algoritmos de igualdad en ES2015:
 
 JavaScript proporciona tres operaciones distintas para comparar la igualdad de dos elementos:
 
-- [===](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity) - Igualdad estricta (o "triple igual" o "identidad")
-- [==](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality) - igualdad débil o relajada ("doble igual")
+- [===](/es/docs/Web/JavaScript/Reference/Operators#identity) - Igualdad estricta (o "triple igual" o "identidad")
+- [==](/es/docs/Web/JavaScript/Reference/Operators#equality) - igualdad débil o relajada ("doble igual")
 - {{jsxref("Object.is")}} proporciona SameValue (nuevo en ES2015).
 
 Elegir una u otra operación depende del tipo de comparación que se esté buscando realizar.
@@ -190,7 +190,7 @@ Similar a la igualdad same-value, pero +0 y -0 son considerados iguales.
 
 ## Igualdad abstracta, igualdad estricta e igualdad same value en la especificación
 
-En la especificación ES5, la comparación [`==`](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) queda descrita en [Section 11.9.3, The Abstract Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.3). La comparación [`===`](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) en [11.9.6, The Strict Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.6). (Búscala y leela, son breves y fáciles de leer. Nota: lee el algoritmo de la igualdad estricta primero.) ES5 también describe, en [Section 9.12, The SameValue Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-9.12) para uso interno del motor JS. Es, en su mayoría igual que el algoritmo de igualdad estricto, excepto porque 11.9..6.4 y 9.12.4 difieren en cómo tratar los [`Numbers`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number). ES2015 simplemente propone exponer este algoritmo mediante el uso de[`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is).
+En la especificación ES5, la comparación [`==`](/es/docs/Web/JavaScript/Reference/Operators) queda descrita en [Section 11.9.3, The Abstract Equality Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-11.9.3). La comparación [`===`](/es/docs/Web/JavaScript/Reference/Operators) en [11.9.6, The Strict Equality Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-11.9.6). (Búscala y leela, son breves y fáciles de leer. Nota: lee el algoritmo de la igualdad estricta primero.) ES5 también describe, en [Section 9.12, The SameValue Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-9.12) para uso interno del motor JS. Es, en su mayoría igual que el algoritmo de igualdad estricto, excepto porque 11.9..6.4 y 9.12.4 difieren en cómo tratar los [`Numbers`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number). ES2015 simplemente propone exponer este algoritmo mediante el uso de[`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is).
 
 Podemos ver con el igual doble y el triple que, con la excepción de hacer con antelación una comprobación de tipo en 11.9.6.1, el algorimto de igualdad estricta es un subconjunto del algorimot de igualdad abstracta porque 11.9.6.2-7 se corresponde con 11.9.3.1a-f.
 
@@ -229,11 +229,11 @@ Sin embargo. esta manera de pensar sobre los operadores de igualdad proporcionad
 
 ## Cuando usar `Object.is` o el igual triple
 
-Además de como trata [`NaN`](/es/docs/Web/JavaScript/Reference/Global_Objects/NaN), generalmente, la única vez en la que [`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is) posee un comportamiento especial hacia los ceros puede resultar de interés para usar ciertos esquemas de meta-programación, sobre todo en relación a los descriptores de porpiedades cuando es deseable que nuestro trabajo replique algunas de las características de [`Object.defineProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Si en tu situación no requiere de esto, lo mejor es evitar [`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is)y usar [`===.`](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)Incluso si entre tus requisitos está poseer que la comparación entre dos valores [`NaN`](/es/docs/Web/JavaScript/Reference/Global_Objects/NaN)sea verdadera, generalmente es más fácil hacer un caso especial para ello (usando el método [`isNaN`](/es/docs/Web/JavaScript/Reference/Global_Objects/isNaN)que está disponible en versiones previas de ECMAScript) que calcular cómo la operaciones van afectar a los posibles signos de los valores cero en tu comparación.
+Además de como trata [`NaN`](/es/docs/Web/JavaScript/Reference/Global_Objects/NaN), generalmente, la única vez en la que [`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is) posee un comportamiento especial hacia los ceros puede resultar de interés para usar ciertos esquemas de meta-programación, sobre todo en relación a los descriptores de porpiedades cuando es deseable que nuestro trabajo replique algunas de las características de [`Object.defineProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Si en tu situación no requiere de esto, lo mejor es evitar [`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is)y usar [`===.`](/es/docs/Web/JavaScript/Reference/Operators)Incluso si entre tus requisitos está poseer que la comparación entre dos valores [`NaN`](/es/docs/Web/JavaScript/Reference/Global_Objects/NaN)sea verdadera, generalmente es más fácil hacer un caso especial para ello (usando el método [`isNaN`](/es/docs/Web/JavaScript/Reference/Global_Objects/isNaN)que está disponible en versiones previas de ECMAScript) que calcular cómo la operaciones van afectar a los posibles signos de los valores cero en tu comparación.
 
 Aquí podemos ver una lista exhaustiva de los método y operadores nativos que pueden distinguir entre -0 y +0 en tu código:
 
-- [`- (unary negation)`](/es/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29)
+- [`- (unary negation)`](/es/docs/Web/JavaScript/Reference/Operators#-_.28unary_negation.29)
 
   - : Obviamente negar 0 genera -0. `Pero al abstracción de una expresión puede causar que un valor -0 se cuele sin darte cuenta` Consideremos el siguiente ejemplo:
 
@@ -271,11 +271,11 @@ Aquí podemos ver una lista exhaustiva de los método y operadores nativos que p
 
 <!---->
 
-- [`~`](/es/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
+- [`~`](/es/docs/Web/JavaScript/Reference/Operators)
   - : Empty
-- [`<<`](/es/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
+- [`<<`](/es/docs/Web/JavaScript/Reference/Operators)
   - : Empty
-- [`>>`](/es/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
+- [`>>`](/es/docs/Web/JavaScript/Reference/Operators)
   - : Cada uno de estos operadores usa el algoritmo ToInt32 de manera interna. Como sólo hay un representacion de 0 para el intero de 32-bit interno. -0 no sobrevivirá a la operación inversa. Por ejemplo Object.is(\~\~(-0), -0) y Object.is(-0 << 2 >> 2, -0) devolverán false.
 
 Confiar en [`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is) cuando no hay que tener en cuenta el signo de los ceros puede ser peligroso. Por supuesto para el caso contrario hará exactamente lo deseado.

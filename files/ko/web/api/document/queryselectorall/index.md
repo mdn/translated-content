@@ -18,7 +18,7 @@ elementList = parentNode.querySelectorAll(selectors);
 ### 파라미터
 
 - `selectors`
-  - : 매칭할 하나 이상의 셀렉터를 포함하는 {{domxref("DOMString")}}. 이 스트링은 반드시 유효한 [CSS 셀렉터](/ko/docs/Web/CSS/CSS_Selectors)여야 합니다; 그렇지 않을 경우, `SyntaxError` 예외가 발생합니다. 엘리먼트 식별을 위한 셀렉터 사용의 자세한 내용은 [셀렉터로 DOM 엘리먼트 찾기](/ko/docs/Gecko_DOM_Reference/Locating_DOM_elements_using_selectors) 문서를 확인하세요. 콤마를 사용해 분리하여 다중 셀렉터를 지정할수도 있습니다.
+  - : 매칭할 하나 이상의 셀렉터를 포함하는 {{domxref("DOMString")}}. 이 스트링은 반드시 유효한 [CSS 셀렉터](/ko/docs/Web/CSS/CSS_selectors)여야 합니다; 그렇지 않을 경우, `SyntaxError` 예외가 발생합니다. 엘리먼트 식별을 위한 셀렉터 사용의 자세한 내용은 [셀렉터로 DOM 엘리먼트 찾기](/ko/docs/Gecko_DOM_Reference/Locating_DOM_elements_using_selectors) 문서를 확인하세요. 콤마를 사용해 분리하여 다중 셀렉터를 지정할수도 있습니다.
 
 > **참고:** **노트:** 표준 CSS 구문이 아닌 문자들은 역슬래시를 사용해 이스케이프해야 합니다. JavaScript가 역슬래시 이스케이핑을 사용한 이후로, 그러한 문자들을 사용하는 문자열 리터럴을 작성할 때 특별히 신경써야 합니다. 자세한 내용은 [이스케이프 표현](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#%EC%9D%B4%EC%8A%A4%EC%BC%80%EC%9D%B4%ED%94%84_%ED%91%9C%ED%98%84)을 확인하세요.
 
@@ -127,9 +127,9 @@ inner.length; // 0
 
 ## 함께 보기
 
-- [셀렉터를 사용해 DOM 엘리먼트 찾기](/ko/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [셀렉터를 사용해 DOM 엘리먼트 찾기](/ko/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - CSS 가이드의 [속성 셀렉터](/ko/docs/Web/CSS/Attribute_selectors)
-- MDN 학습 영역의 [속성 셀렉터](/ko/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors)
+- MDN 학습 영역의 [속성 셀렉터](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
 - {{domxref("Element.querySelector()")}} 와 {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}}
 - {{domxref("DocumentFragment.querySelector()")}} 와 {{domxref("DocumentFragment.querySelectorAll()")}}

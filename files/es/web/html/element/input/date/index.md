@@ -9,7 +9,33 @@ Los elementos {{HTMLElement("input")}} de **`type="date"`** crean un campo de en
 
 El valor resultante incluye el año, el mes y el día, pero _no_ el tiempo. Las entradas de tipo {{HTMLElement("input/time", "time")}} y {{HTMLElement("input/datetime-local", "datetime-local")}} soportan el tiempo y la fecha + el tiempo, respectivamente.
 
-{{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;date&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="start">Start date:</label>
+
+<input
+  type="date"
+  id="start"
+  name="trip-start"
+  value="2018-07-22"
+  min="2018-01-01"
+  max="2018-12-31" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 La IU de la entrada generalmente varía entre navegadores; véase [Compatibiidad con navegadores](#compatibilidad_con_navegadores) para más detalles. En navegadores que no incluyen soporte, el control degrada hacía [`<input type="text">`](/es/docs/Web/HTML/Element/input/text).
 
@@ -68,7 +94,8 @@ Puedes establecer un valor por defecto para la entrada introduciendo una fecha e
 
 {{EmbedLiveSample('Value', 600, 40)}}
 
-> **Nota:** El formato mostrado puede ser diferente del `value` real, ya que la fecha mostrada es formateada _según el idioma del navegador del usuario_, pero el valor analizado es siempre formateado a `aaaa-mm-dd`.
+> [!NOTE]
+> El formato mostrado puede ser diferente del `value` real, ya que la fecha mostrada es formateada _según el idioma del navegador del usuario_, pero el valor analizado es siempre formateado a `aaaa-mm-dd`.
 
 Tu puedes obtener y establecer el valor fecha en JavaScript con las propiedades `value` y `valueAsNumber` de {{domxref("HTMLInputElement")}}. Por ejemplo:
 
@@ -87,13 +114,13 @@ Junto con los atributos comunes a todos los elementos {{HTMLElement("input")}}, 
 
 ### max
 
-La última fecha a aceptar. Si el [`value`](/es/docs/Web/HTML/Element/input#value) introducido en el elemento es posterior, el elemento no pasa la [validación de restricción](/es/docs/Web/Guide/HTML/Constraint_validation). Si el valor del atributo `max` es un valor que no es una fecha posible en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor máximo.
+La última fecha a aceptar. Si el [`value`](/es/docs/Web/HTML/Element/input#value) introducido en el elemento es posterior, el elemento no pasa la [validación de restricción](/es/docs/Web/HTML/Constraint_validation). Si el valor del atributo `max` es un valor que no es una fecha posible en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor máximo.
 
 Si los atributos `max` y `min` son establecidos, este valor tiene que ser una fecha en formtato cadena de texto posterior o igual a la fecha establecida en el atributo `min`.
 
 ### min
 
-La fecha más temprana a aceptar. Si el [`value`](/es/docs/Web/HTML/Element/input#value) introducido en el elemento es anterior, el elemento no pasa la [validación de restricció](/es/docs/Web/Guide/HTML/Constraint_validation). Si el valor del atributo `max` es un valor que no es una fecha posible en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor mínimo.
+La fecha más temprana a aceptar. Si el [`value`](/es/docs/Web/HTML/Element/input#value) introducido en el elemento es anterior, el elemento no pasa la [validación de restricció](/es/docs/Web/HTML/Constraint_validation). Si el valor del atributo `max` es un valor que no es una fecha posible en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor mínimo.
 
 Si los atributos `max` y `min` son establecidos, este valor tiene que ser una fecha en formtato cadena de texto anterior o igual a la fecha establecida en el atributo `max`.
 
@@ -103,11 +130,13 @@ El atributo `step` es un número que especifica la granularidad que un valor deb
 
 Si le damos un valor de cadena de texto `any` significa que ningún salto está marcado y, por lo tanto, cualquier valor está permitido (expecto otras constricciones, como [`min`](#min) y [`max`](#max)).
 
-> **Nota:** Cuando los datos introducidos por el usuario no siguen la configuración de avance, puede que el {{Glossary("user agent")}} lo redondeé al valor válido más cercano, prefiriendo valores mayores cuando hay dos opciones iguales cercanas.
+> [!NOTE]
+> Cuando los datos introducidos por el usuario no siguen la configuración de avance, puede que el {{Glossary("user agent")}} lo redondeé al valor válido más cercano, prefiriendo valores mayores cuando hay dos opciones iguales cercanas.
 
 Para entradas de tipo `date`, el valor del `step` es dado en días; y es tratado como el número de milisegundo igual a 86.400.000 veces el valor del `step` (el valor numérico subyacente está definido en milisegundos). El valor por defecto del `step` es 1, indicando 1 día.
 
-> **Nota:** Especificar `any` como el valor para `step` tiene el mismo efecto que `1` para las entradas de tipo `date`.
+> [!NOTE]
+> Especificar `any` como el valor para `step` tiene el mismo efecto que `1` para las entradas de tipo `date`.
 
 ## Usando entradas de tipo fecha
 
@@ -153,7 +182,8 @@ Tu puedes usar los atributos [`min`](/es/docs/Web/HTML/Element/input#min) y [`ma
 
 Como resultado, obtenemos que solo los días del mes de abril de 2017 pueden ser seleccionados (los meses y años que forman parte de la caja de texto no serán editables y las fechas fuera del mes de abril de 2017 no pueden ser selecionados en el menú de selección).
 
-> **Nota:** Tu _debes_ ser capaz de usar el atributo [`step`](/es/docs/Web/HTML/Element/input#step) para modificar el número de días que son saltados cada vez que la fecha es incrementada (por ejemplo, que solo los sábados sean seleccionables). Sin embargo, no parece estar en ninguna implementación en el momento de escribir este artículo.
+> [!NOTE]
+> Tu _debes_ ser capaz de usar el atributo [`step`](/es/docs/Web/HTML/Element/input#step) para modificar el número de días que son saltados cada vez que la fecha es incrementada (por ejemplo, que solo los sábados sean seleccionables). Sin embargo, no parece estar en ninguna implementación en el momento de escribir este artículo.
 
 ### Controlando el tamaño del input
 
@@ -213,7 +243,8 @@ input:valid + span::after {
 }
 ```
 
-> **Advertencia:** La validación en el lado del cliente _no es un sustituto_ de la validación en el servidor. Es fácil para alguien modificar el HTML o sobrepasar tu HTML completamente y mandar datos directamente a tu servidor. Si tu servidor no valida los datos recibidos, puede ocurrir un desastre: datos con un mal formato, demasiado grandes, del tipo equivocado, etc.
+> [!WARNING]
+> La validación en el lado del cliente _no es un sustituto_ de la validación en el servidor. Es fácil para alguien modificar el HTML o sobrepasar tu HTML completamente y mandar datos directamente a tu servidor. Si tu servidor no valida los datos recibidos, puede ocurrir un desastre: datos con un mal formato, demasiado grandes, del tipo equivocado, etc.
 
 ## Manejando el soporte de los navegadores
 

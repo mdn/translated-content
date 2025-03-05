@@ -9,7 +9,7 @@ Un objet **`String`** est utilisé afin de représenter et de manipuler une cha�
 
 ## Description
 
-Les chaînes de caractères sont utiles pour stocker des données qui peuvent être représentées sous forme de texte. Parmi les opérations les plus utilisées pour manipuler les chaînes de caractères, on a : la vérification de leur longueur avec [`length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/length), la construction et la concaténation avec [les opérateurs `+` et `+=`](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#string_operators), la recherche de sous-chaîne avec les méthodes [`includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/includes) ou [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf) ou encore l'extraction de sous-chaînes avec la méthode [`substring()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/substring).
+Les chaînes de caractères sont utiles pour stocker des données qui peuvent être représentées sous forme de texte. Parmi les opérations les plus utilisées pour manipuler les chaînes de caractères, on a : la vérification de leur longueur avec [`length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/length), la construction et la concaténation avec [les opérateurs `+` et `+=`](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#string_operators), la recherche de sous-chaîne avec les méthodes [`includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/includes) ou [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf) ou encore l'extraction de sous-chaînes avec la méthode [`substring()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/substring).
 
 ### Créer des chaînes de caractères
 
@@ -245,7 +245,7 @@ d'être passée à la ligne parce que sinon
   - : Renvoie une chaîne de caractères représentant l'objet courant. Surcharge la méthode [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
 - [`String.prototype.toUpperCase()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase)
   - : Renvoie la valeur de la chaîne de caractères, convertie en majuscules.
-- [`String.prototype.trim()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/Trim)
+- [`String.prototype.trim()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/trim)
   - : Retire les blancs situés au début et à la fin de la chaîne de caractères.
 - [`String.prototype.trimStart()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart)
   - : Retire les blancs situés au début de la chaîne de caractères.
@@ -253,12 +253,13 @@ d'être passée à la ligne parce que sinon
   - : Retire les blancs situés à la fin de la chaîne de caractères.
 - [`String.prototype.valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf)
   - : Renvoie la valeur primitive de l'objet courant. Surcharge la méthode [`Object.prototype.valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf).
-- [`String.prototype.@@iterator()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)
+- [`String.prototype.@@iterator()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)
   - : Renvoie un nouvel objet itérateur qui permet d'itérer sur les points de code composant la chaîne de caractère. Chaque point de code est renvoyé comme une chaîne de caractères.
 
 ## Méthodes de conversion HTML
 
-> **Attention :** Ces méthodes sont dépréciées et ne doivent plus être utilisées.
+> [!WARNING]
+> Ces méthodes sont dépréciées et ne doivent plus être utilisées.
 >
 > Elles ont des possibilités limitées et ne concernent qu'une petite sous-partie des éléments et attributs HTML disponibles.
 
@@ -293,7 +294,7 @@ d'être passée à la ligne parce que sinon
 
 ### Conversion en chaîne de caractères
 
-Il est possible d'utiliser `String` comme une alternative à [`toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toString) car cela permet de traiter les valeurs [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null), [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) et les [symboles](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol). Ainsi :
+Il est possible d'utiliser `String` comme une alternative à [`toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toString) car cela permet de traiter les valeurs [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null), [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) et les [symboles](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol). Ainsi :
 
 ```js
 let chainesSortie = [];
@@ -314,5 +315,5 @@ for (let i = 0, n = valeursEntree.length; i < n; ++i) {
 
 - [Formatage du texte dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Text_formatting)
 - [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
-- [`DOMString`](/fr/docs/Web/API/DOMString)
-- [Les chaînes binaires](/fr/docs/Web/API/DOMString/Binary)
+- [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)
+- [Les chaînes binaires](/fr/docs/Web/API/Window/btoa)

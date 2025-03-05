@@ -78,4 +78,4 @@ Accept-Language: ru-RU, ru;q=0.9, en-US;q=0.8, en;q=0.7, fr;q=0.6
 
 - HTTP [content negotiation](/ru/docs/Web/HTTP/Content_negotiation)
 - Header with the result of the content negotiation: {{HTTPHeader("Content-Language")}}
-- Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept")}}
+- Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept")}}

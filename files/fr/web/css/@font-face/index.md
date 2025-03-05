@@ -38,7 +38,8 @@ La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@font-face`**
   - : Une valeur [`font-style`](/fr/docs/Web/CSS/font-style). Il est possible d'utiliser deux valeurs afin d'indiquer l'intervalle pris en charge par une police, par exemple&nbsp;: `font-style: oblique 20deg 50deg;`.
 - [`font-weight`](/fr/docs/Web/CSS/@font-face/font-weight)
   - : Une valeur [`font-weight`](/fr/docs/Web/CSS/font-weight). Il est possible d'utiliser deux valeurs afin d'indiquer l'intervalle pris en charge par une police, par exemple&nbsp;: `font-weight: 100 400;`.
-    > **Note :** Le descripteur `font-variant` a été retiré de la spécification en 2018. La propriété [`font-variant`](/fr/docs/Web/CSS/font-variant) est bien prise en charge, mais il n'existe pas de descripteur équivalent.
+    > [!NOTE]
+    > Le descripteur `font-variant` a été retiré de la spécification en 2018. La propriété [`font-variant`](/fr/docs/Web/CSS/font-variant) est bien prise en charge, mais il n'existe pas de descripteur équivalent.
 - [`font-feature-settings`](/fr/docs/Web/CSS/font-feature-settings)
   - : Ce descripteur permet d'avoir un contrôle avancé sur les fonctionnalités typographiques relatives aux polices OpenType.
 - [`font-variation-settings`](/fr/docs/Web/CSS/@font-face/font-variation-settings)
@@ -51,7 +52,8 @@ La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@font-face`**
 
   - : Indique les ressources à utiliser pour la police. La valeur est une liste de valeurs indiquant les ressources à tenter les unes après les autres. Chaque ressource est indiquée avec `url()` ou `local()`. C'est la première ressource de la liste qui est chargée correctement qui est utilisée. Les éléments situés après sont ignorés. Si plusieurs descripteurs `src` sont définis, seule la dernière règle déclarée capable de charger une ressource est appliquée.
 
-    > **Note :** Les éléments que le navigateur considère comme invalides sont ignorés. Certains navigateurs pourront ignorer l'ensemble du descripteur si même un seul des éléments est invalide. Cela pourra avoir un impact sur la gestion des alternatives.
+    > [!NOTE]
+    > Les éléments que le navigateur considère comme invalides sont ignorés. Certains navigateurs pourront ignorer l'ensemble du descripteur si même un seul des éléments est invalide. Cela pourra avoir un impact sur la gestion des alternatives.
 
     Une notation `url()` peut être suivie des notations fonctionnelles `format()` et `tech()`, comme ceci&nbsp;:
 
@@ -88,7 +90,8 @@ La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@font-face`**
     | `embedded-opentype` | Embedded OpenType     | .eot                |
     | `svg`               | SVG Font (deprecated) | .svg, .svgz         |
 
-    > **Note :** Les valeurs `opentype` et `truetype` sont tout à fait équivalentes, que le fichier de police utilise des courbes de Bézier cubiques (pour le tableau CFF/CFF2) ou quadratiques (pour le tableau des glyphes).
+    > [!NOTE]
+    > Les valeurs `opentype` et `truetype` sont tout à fait équivalentes, que le fichier de police utilise des courbes de Bézier cubiques (pour le tableau CFF/CFF2) ou quadratiques (pour le tableau des glyphes).
 
     `tech()` est une notation **optionnelle** {{Experimental_inline}}. Sa valeur est l'un des mots-clés suivants&nbsp;: `variations`, `palettes`, `incremental`, `features-opentype`, `features-aat`, `features-graphite`, `color-COLRv0`, `color-COLRv1`, `color-SVG`, `color-sbix`, `color-CBDT`.
 
@@ -136,7 +139,8 @@ La règle @ `@font-face` peut être utilisé au niveau le plus haut d'une feuill
   .className {
     @font-face {
       font-family: "MyHelvetica";
-      src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+      src:
+        local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
         url("MgOpenModernaBold.ttf");
       font-weight: bold;
     }
@@ -190,7 +194,8 @@ Dans cet exemple, c'est l'exemplaire local de la police Helvetica Neue Bold qui 
 ```css
 @font-face {
   font-family: "MyHelvetica";
-  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+  src:
+    local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
     url("MgOpenModernaBold.ttf");
   font-weight: bold;
 }
@@ -238,6 +243,6 @@ On notera dans ce cas que les descripteurs `src` sont essayés dans l'ordre inve
 
 ## Voir aussi
 
-- [À propos de WOFF](/fr/docs/Web/Guide/WOFF)
+- [À propos de WOFF](/fr/docs/Web/CSS/CSS_fonts/WOFF)
 - [Générateur `@font-face` de FontSquirrel](https://www.fontsquirrel.com/tools/webfont-generator) (en anglais)
 - [<i lang="en">Font Library</i>](https://fontlibrary.org/), un site cataloguant des polices (en anglais)

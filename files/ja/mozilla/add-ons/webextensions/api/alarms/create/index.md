@@ -20,7 +20,7 @@ browser.alarms.create(
 
 - `name`{{optional_inline}}
   - : `string`. アラームの名前を指定します。デフォルト値は空の文字列です。
-    この値は {{WebExtAPIRef('alarms.get()')}} や {{WebExtAPIRef('alarms.clear()')}} で特定のアラームを参照する際に用います。また、{{WebExtAPIRef('alarms.onAlarm')}} のリスナ関数に渡すオブジェクト {{WebExtAPIRef('alarms.Alarm')}} のプロパティ `name` からも参照されます。
+    この値は {{WebExtAPIRef('alarms.get()')}} や {{WebExtAPIRef('alarms.clear()')}} で特定のアラームを参照する際に用います。また、{{WebExtAPIRef('alarms.onAlarm')}} のリスナー関数に渡すオブジェクト {{WebExtAPIRef('alarms.Alarm')}} のプロパティ `name` からも参照されます。
     アラームの名前は常に固有です（スコープはアドオンごとに区切られます）。以前そのアドオンが作成したアラーム名に一致する文字列を `name` に与えた場合、既存のアラームは削除されて発火しなくなります。
 - `alarmInfo`{{optional_inline}}
 
@@ -77,7 +77,8 @@ chrome.alarms.create("my-periodic-alarm", {
 });
 ```
 
-> **メモ:** この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!NOTE]
+> この API は Chromium の [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API に基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

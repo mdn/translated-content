@@ -7,7 +7,8 @@ l10n:
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}{{non-standard_header}}
 
-> **警告：** 此特性目前遭到两家浏览器厂商反对。有关反对详情，请参阅[标准立场](/zh-CN/docs/Web/API/Topics_API#标准立场)部分。
+> [!WARNING]
+> 此特性目前遭到两家浏览器厂商反对。有关反对详情，请参阅[标准立场](/zh-CN/docs/Web/API/Topics_API#标准立场)部分。
 
 {{domxref("HTMLIFrameElement")}} 接口的 **`browsingTopics`** 属性是一个指定当前用户选择的主题应与之关联的 {{htmlelement("iframe")}} 源请求一起以 {{httpheader("Sec-Browsing-Topics")}} 标头发送的布尔值。这反映了 `browsingtopics` HTML 属性。
 

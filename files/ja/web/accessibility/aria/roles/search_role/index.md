@@ -3,7 +3,7 @@ title: "ARIA: search ロール"
 slug: Web/Accessibility/ARIA/Roles/search_role
 ---
 
-検索 (`search`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、ページ、サイト、またはサイトのコレクションの検索に使用されるページのセクションを識別するために使用します。
+検索 (`search`) ロールは、ページ、サイト、またはサイトのコレクションの検索に使用されるページのセクションを識別するために使用します。
 
 ```html
 <form role="search">
@@ -13,9 +13,11 @@ slug: Web/Accessibility/ARIA/Roles/search_role
 
 ## 説明
 
-検索 (`search`) ロールは、[ランドマーク](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)です。 ランドマークは、支援技術によって使用され、文書の大きなセクションを素早く識別してナビゲートすることができます。 検索 (`search`) ロールは、全体として組み合わせて検索機能を作成する項目およびオブジェクトを含むコンテナー要素に追加します。 `<form>` が検索フォームの場合、フォーム ([`form`](/ja/docs/Web/Accessibility/ARIA/Roles/Form_Role)) ロールの代わりに検索 (`search`) ロールを使用します。 文書に複数の検索が含まれている場合、それぞれに固有のラベルを持つべきです。 [`search` 型の `<input>` 要素](/ja/docs/Web/HTML/Element/input/search)はありますが、検索ランドマークを定義する HTML 要素はありません。
+検索 (`search`) ロールは、文書やアプリケーションの検索機能を構成するために組み合わされたすべての要素を囲むコンテナー要素に追加できる[ランドマーク](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)で、これには子孫要素として [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search) が含まれます。文書に複数の検索が含まれている場合、それぞれに固有のラベルを持つべきです。ただし、同じ検索が繰り返される場合は同じラベルを使用します。 [`search` 型の `<input>` 要素](/ja/docs/Web/HTML/Element/input/search) がありますが、これ自体は検索ランドマークを定義するものではありません。検索ランドマークを定義するには、[`<search>`](/ja/docs/Web/HTML/Element/search) 要素を使用してください。
 
 ## 例
+
+[`<form>`](/ja/docs/Web/HTML/Element/form) 要素が検索フォームの場合、[`form`](/ja/docs/Web/Accessibility/ARIA/Roles/form_role) ロールの代わりに `search` ロールを使用してください。
 
 ```html
 <form id="search" role="search">
@@ -83,7 +85,7 @@ slug: Web/Accessibility/ARIA/Roles/search_role
 
 - [ランドマークブラウザー拡張](https://matatk.agrip.org.uk/landmarks/)（英語）
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

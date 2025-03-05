@@ -30,7 +30,7 @@ Firefox 28 は米国時間 2014 年 3 月 18 日にリリースされました�
 - 東アジア言語における長い表記のの[カウンタースタイル](/ja/docs/Web/CSS/list-style-type)を実装しました ([Firefox バグ 934072](https://bugzil.la/934072))。
 - {{cssxref("background-blend-mode")}} プロパティをサポートしました ([Firefox バグ 841601](https://bugzil.la/841601))。
 - {{cssxref("font-variant-ligatures")}} プロパティに値 `none` を追加しました ([Firefox バグ 913264](https://bugzil.la/913264))。
-- 疑似要素で {{cssxref(":hover")}} ユーザーアクション疑似クラスをサポートしました ([Firefox バグ 922669](https://bugzil.la/922669))。
+- 擬似要素で {{cssxref(":hover")}} ユーザーアクション擬似クラスをサポートしました ([Firefox バグ 922669](https://bugzil.la/922669))。
 
 ### HTML
 

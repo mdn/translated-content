@@ -17,7 +17,7 @@ slug: Glossary/Whitespace
 
 2. Ссылки
 
-   1. [Пробельные символы в модели DOM](/ru/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM)
+   1. [Пробельные символы в модели DOM](/ru/docs/Web/API/Document_Object_Model/Whitespace)
    2. {{cssxref("white-space")}}
 
 3. [Глоссарий](/ru/docs/Glossary)

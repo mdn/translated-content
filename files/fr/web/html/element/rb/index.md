@@ -9,7 +9,7 @@ L'élément de **base ruby (`<rb>`)** est utilisé afin de délimiter le composa
 
 ## Attributs
 
-Seuls les [attributs universels](/fr/docs/Web/HTML/Attributs_universels) peuvent être utilisés sur cet élément.
+Seuls les [attributs universels](/fr/docs/Web/HTML/Global_attributes) peuvent être utilisés sur cet élément.
 
 ## Notes d'utilisation
 
@@ -81,7 +81,8 @@ body {
 
 {{EmbedLiveSample("", "100%", 60)}}
 
-> **Note :** Voir l'article sur l'élément {{HTMLElement("ruby")}} pour de plus amples exemples.
+> [!NOTE]
+> Voir l'article sur l'élément {{HTMLElement("ruby")}} pour de plus amples exemples.
 
 ## Résumé technique
 

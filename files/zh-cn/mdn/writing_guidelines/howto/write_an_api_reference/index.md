@@ -3,8 +3,6 @@ title: 如何撰写 API 参考文档
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference
 ---
 
-{{MDNSidebar}}
-
 本篇指南将带你了解在 MDN 上编写 API 参考文档所需的所有知识。
 
 ## 做好准备
@@ -39,7 +37,8 @@ slug: MDN/Writing_guidelines/Howto/Write_an_api_reference
 
 当一个 API 发生变化时，你需要注意你所参考或学习的现有演示是否已经过时。检查演示中使用的主要结构，看它们是否与最新的规范相一致。它们也可能无法在最新的浏览器中工作，但这并不是一个非常可靠的测试，因为通常情况下，为了向后兼容，旧的功能会继续得到支持。
 
-> **备注：** 如果规范最近被更新了，比如说，一个方法现在被定义得不一样了，但旧的方法在浏览器中仍然有效，那么你通常需要在同一个地方记录这两种方法，这样新旧两种方法都可以得到覆盖。如果你需要帮助，可以参考你找到的演示，或询问工程联系人。
+> [!NOTE]
+> 如果规范最近被更新了，比如说，一个方法现在被定义得不一样了，但旧的方法在浏览器中仍然有效，那么你通常需要在同一个地方记录这两种方法，这样新旧两种方法都可以得到覆盖。如果你需要帮助，可以参考你找到的演示，或询问工程联系人。
 
 ### 建立你需要撰写或更新的页面列表
 
@@ -54,7 +53,8 @@ API 参考一般会包含以下页面。你可以在我们的[页面类型](/zh-
 7. 概念/使用指南页
 8. 示例
 
-> **备注：** 在本文中，我们将使用 [Web 音频 API](/zh-CN/docs/Web/API/Web_Audio_API) 作为示例。
+> [!NOTE]
+> 在本文中，我们将使用 [Web 音频 API](/zh-CN/docs/Web/API/Web_Audio_API) 作为示例。
 
 #### 概述页
 
@@ -80,7 +80,8 @@ API 参考一般会包含以下页面。你可以在我们的[页面类型](/zh-
 - 路径名：_AudioNode_
 - URL：[https://developer.mozilla.org/zh-CN/docs/Web/API/AudioNode](/zh-CN/docs/Web/API/AudioNode)
 
-> **备注：** 我们为接口中出现的每一个成员撰写文档。你应该牢记以下规则：
+> [!NOTE]
+> 我们为接口中出现的每一个成员撰写文档。你应该牢记以下规则：
 
 - 我们要为定义在实现该接口的对象原型上的方法（实例方法），以及定义在实际类本身上的方法（静态方法）撰写文档。在极少数情况下，如果它们都存在于同一个接口上，你应该把它们列在页面上的不同部分（静态方法/实例方法）。通常只有实例方法存在，在这种情况下，你可以把这些方法放在“Methods”标题下。
 - 不必为接口的继承属性和方法撰写文档：它们被列在各自的父接口上。不过我们确实暗示了它们的存在。
@@ -144,7 +145,7 @@ API 参考一般会包含以下页面。你可以在我们的[页面类型](/zh-
 - [https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API](/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 - [https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
-- [https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext](/zh-CN/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
+- [https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext](/zh-CN/docs/Web/API/Web_Audio_API)
 - [https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
 
 #### 示例
@@ -225,7 +226,8 @@ API 着陆页的长度会有很大的不同，这取决于 API 有多大，但�
    - _This interface doesn't implement any specific methods, but inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._（_本接口不实现任何特定方法，但是从 \\{{domxref("XYZ")}} 和 \\{{domxref("XYZ2")}} 继承方法。_）
    - _This interface also inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._（_本接口也从 \\{{domxref("XYZ")}} 和 \\{{domxref("XYZ2")}} 继承方法。_）
 
-   > **备注：** 只读属性应该使用 \\{{ReadOnlyInline}} 宏，它可以创建一个漂亮的“只读”徽章，与它们的 \\{{domxref}} 链接在同一行（如果需要使用 \\{{experimentalInline}}、\\{{non-standard_Inline}} 和 \\{{deprecatedInline}} 宏，则需要放置在它们之后）。
+   > [!NOTE]
+   > 只读属性应该使用 \\{{ReadOnlyInline}} 宏，它可以创建一个漂亮的“只读”徽章，与它们的 \\{{domxref}} 链接在同一行（如果需要使用 \\{{experimentalInline}}、\\{{non-standard_Inline}} 和 \\{{deprecatedInline}} 宏，则需要放置在它们之后）。
 
 6. **示例**：包括一个代码清单，以显示 API 的主要功能的典型用法。你不应该列出所有的代码，而应该列出其中一个有趣的子集。对于一个完整的代码清单，你可以参考包含完整示例的 [GitHub](https://github.com/) 仓库，你也可以链接到使用 [GitHub gh-pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) 功能创建的实时示例（当然，只要它只使用客户端代码）。如果该示例是可视化的，你也可以使用 MDN [实时示例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)功能，使其在页面上实时播放。
 7. **标准表格**：此时你需要包含一个标准表格——参见“创建规范参考表格”一节以获得更多信息。

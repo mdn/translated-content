@@ -20,7 +20,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage
 
 雖然這個 API 與{{domxref("Window.localStorage")}}很相似，建議你不要在套件裡使用 `Window.localStorage` 儲存套件相關資料。Firefox 在用戶由於隱私問題清除歷史記錄與資料時會清除 localStorage API 儲存的資料，而 [`storage.local`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) API 儲存的則會留著。
 
-> **備註：** 儲存空間不會被加密，所以你不應該把它們用來儲存用戶的機密資料。
+> [!NOTE]
+> 儲存空間不會被加密，所以你不應該把它們用來儲存用戶的機密資料。
 
 ## 型別
 
@@ -51,7 +52,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage
 
 {{WebExtExamples("h2")}}
 
-> **備註：** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

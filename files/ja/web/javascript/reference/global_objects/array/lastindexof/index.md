@@ -2,14 +2,24 @@
 title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: 85d7482697cc2bf407c58e809a2a754180d6714c
 ---
 
 {{JSRef}}
 
 **`lastIndexOf()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列中で与えられた要素が見つかった最後の添字を返します。もし存在しなければ -1 を返します。配列は `fromIndex` から逆向きに検索されます。
 
-{{EmbedInteractiveExample("pages/js/array-lastindexof.html")}}
+{{InteractiveExample("JavaScript Demo: Array.lastIndexOf()")}}
+
+```js interactive-example
+const animals = ["Dodo", "Tiger", "Penguin", "Dodo"];
+
+console.log(animals.lastIndexOf("Dodo"));
+// Expected output: 3
+
+console.log(animals.lastIndexOf("Tiger"));
+// Expected output: 1
+```
 
 ## 構文
 
@@ -24,7 +34,7 @@ lastIndexOf(searchElement, fromIndex)
   - : 検索する配列要素です。
 - `fromIndex` {{optional_inline}}
   - : 検索し始める位置のゼロから始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
-    - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `fromIndex < 0` の場合、 `fromIndex + array.length` が使用されます。
+    - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `-array.length <= fromIndex < 0` の場合、 `fromIndex + array.length` が使用されます。
     - `fromIndex < -array.length` の場合、配列は検索が行われず、 `-1` が返されます。概念的には、配列の先頭より前の存在しない位置から始めて、そこから逆方向に進むと考えることができます。途中には配列要素はないので、 `searchElement` は決して見つかりません。
     - `fromIndex >= array.length` または `fromIndex` が省略された場合、 `array.length - 1` が使用され、配列全体が検索されます。概念的には、配列の末尾の先にある存在しない位置から始めて、そこから後方に進むと考えることができます。最終的に配列の本当の末尾に到達し、この点から実在する配列要素を逆探索し始めます。
 
@@ -82,7 +92,7 @@ console.log(indices);
 ```
 
 ここで `idx == 0` の場合を分けて扱わないといけないことに注意してください。
-なぜなら、もし検索する値が配列の最初の要素にあると、その値は `fromIndex` パラメータにかかわらずいつもヒットしてしまうのです。
+なぜなら、もし検索する値が配列の最初の要素にあると、その値は `fromIndex` パラメーターにかかわらずいつもヒットしてしまうのです。
 これは {{jsxref("Array/indexOf", "indexOf()")}} メソッドとは異なります。
 
 ### 疎配列に対する lastIndexOf() の使用

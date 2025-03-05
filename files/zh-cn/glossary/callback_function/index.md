@@ -27,7 +27,7 @@ console.log(value);
 
 如果 `doSomething` 同步调用回调，则最后一条语句将记录 `2`，因为 `value = 2` 是同步执行的；如果回调是异步的，最后一条语句将记录 `1`，因为 `value = 2` 将在 `console.log` 语句之后执行。
 
-同步回调的示例包括传递给 {{jsxref("Array.prototype.map()")}}、{{jsxref("Array.prototype.forEach()")}} 等的回调。异步回调的示例包括传递给 [`setTimeout()`](/zh-CN/docs/Web/API/setTimeout) 和 {{jsxref("Promise.prototype.then()")}} 的回调。
+同步回调的示例包括传递给 {{jsxref("Array.prototype.map()")}}、{{jsxref("Array.prototype.forEach()")}} 等的回调。异步回调的示例包括传递给 {{domxref("Window.setTimeout", "setTimeout()")}} 和 {{jsxref("Promise.prototype.then()")}} 的回调。
 
 [使用 Promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#时序) 指南提供了有关异步回调时序的更多信息。
 

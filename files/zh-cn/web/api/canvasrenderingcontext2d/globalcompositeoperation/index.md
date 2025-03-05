@@ -1,13 +1,15 @@
 ---
-title: CanvasRenderingContext2D.globalCompositeOperation
+title: CanvasRenderingContext2D：globalCompositeOperation 属性
 slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
+l10n:
+  sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
 ---
 
 {{APIRef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.globalCompositeOperation`** 属性设置要在绘制新形状时应用的合成操作的类型，其中 type 是用于标识要使用的合成或混合模式操作的字符串。
+Canvas 2D API 的 **`CanvasRenderingContext2D.globalCompositeOperation`** 属性设置要在绘制新形状时应用的合成操作的类型。
 
-在 [Canvas Tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial) 中查看 [Compositing](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing) 章节。
+参见 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)中的[合成和裁剪](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing)。
 
 ## 值
 
@@ -300,7 +302,7 @@ const colorSphere = (element) => {
   const width = 360;
   const halfWidth = width / 2;
   const rotate = (1 / 360) * Math.PI * 2; // 每度的弧度
-  const offset = 0; // scrollbar offset
+  const offset = 0; // 滚动条偏移
   const oleft = -20;
   const otop = -20;
   for (let n = 0; n <= 359; n++) {
@@ -333,7 +335,7 @@ const colorSphere = (element) => {
 ```
 
 ```js
-// HSV (1978) = H: Hue / S: Saturation / V: Value
+// HSV (1978) = H：色调 / S：饱和度 / V：明度
 Color = {};
 Color.HSV_RGB = (o) => {
   const S = o.S / 100;
@@ -391,13 +393,13 @@ const createInterlace = (size, color1, color2) => {
   const proto = document.createElement("canvas").getContext("2d");
   proto.canvas.width = size * 2;
   proto.canvas.height = size * 2;
-  proto.fillStyle = color1; // top-left
+  proto.fillStyle = color1; // 左上角
   proto.fillRect(0, 0, size, size);
-  proto.fillStyle = color2; // top-right
+  proto.fillStyle = color2; // 右上角
   proto.fillRect(size, 0, size, size);
-  proto.fillStyle = color2; // bottom-left
+  proto.fillStyle = color2; // 左下角
   proto.fillRect(0, size, size, size);
-  proto.fillStyle = color1; // bottom-right
+  proto.fillStyle = color1; // 右下角
   proto.fillRect(size, size, size, size);
   const pattern = proto.createPattern(proto.canvas, "repeat");
   pattern.data = proto.canvas.toDataURL();
@@ -421,5 +423,5 @@ const op_8x8 = createInterlace(8, "#FFF", "#eee");
 
 ## 参见
 
-- 接口定义，{{domxref("CanvasRenderingContext2D")}}
+- 定义此属性的接口：{{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.globalAlpha")}}

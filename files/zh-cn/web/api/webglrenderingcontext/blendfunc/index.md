@@ -9,8 +9,8 @@ slug: Web/API/WebGLRenderingContext/blendFunc
 
 ## 语法
 
-```
-void gl.blendFunc(sfactor, dfactor);
+```js-nolint
+blendFunc(sfactor, dfactor)
 ```
 
 ### 参数

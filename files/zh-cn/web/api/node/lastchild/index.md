@@ -9,7 +9,8 @@ l10n:
 
 {{domxref("Node")}} 接口的 **`lastChild`** 只读属性返回节点的最后一个子节点，如果没有子节点，则返回 `null`。
 
-> **备注：** 此属性返回作为此节点最后一个子节点的任何类型的节点。它可能是 {{domxref("Text")}} 或 {{domxref("Comment")}} 节点。如果你要获取另一个元素的最后一个 {{domxref("Element")}} 子元素，可以考虑使用 {{domxref("Element.lastElementChild")}}。
+> [!NOTE]
+> 此属性返回作为此节点最后一个子节点的任何类型的节点。它可能是 {{domxref("Text")}} 或 {{domxref("Comment")}} 节点。如果你要获取另一个元素的最后一个 {{domxref("Element")}} 子元素，可以考虑使用 {{domxref("Element.lastElementChild")}}。
 
 ## 值
 

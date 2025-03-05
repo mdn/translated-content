@@ -17,5 +17,5 @@ WebVTT ファイルでは、動画の字幕やサブタイトル・動画の説�
 
 ### 技術リファレンス
 
-- MDN の「[WebVTT](/ja/docs/Web/API/Web_Video_Text_Tracks_Format)」の記事
+- MDN の「[WebVTT](/ja/docs/Web/API/WebVTT_API)」の記事
 - [W3C 規格文書](https://www.w3.org/TR/webvtt1/)

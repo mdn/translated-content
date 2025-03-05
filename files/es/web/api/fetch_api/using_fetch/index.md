@@ -12,7 +12,7 @@ Este tipo de funcionalidad se conseguía previamente haciendo uso de {{domxref("
 La especificación fetch difiere de `JQuery.ajax()` en dos formas principales:
 
 - El objeto Promise devuelto desde `fetch()` **no será rechazado con un estado de error HTTP** incluso si la respuesta es un error HTTP 404 o 500. En cambio, este se resolverá normalmente (con un estado `ok` configurado a false), y este solo sera rechazado ante un fallo de red o si algo impidió completar la solicitud.
-- Por defecto, `fetch` no enviará ni recibirá cookies del servidor, resultando en peticiones no autenticadas si el sitio permite mantentener una sesión de usuario (para mandar cookies, _credentials_ de la opción [init](/es/docs/Web/API/fetch#Parameters) deberan ser configuradas). Desde [el 25 de agosto de 2017](https://github.com/whatwg/fetch/pull/585). La especificación cambió la politica por defecto de las credenciales a `same-origin`. Firefox cambió desde la versión 61.0b13.
+- Por defecto, `fetch` no enviará ni recibirá cookies del servidor, resultando en peticiones no autenticadas si el sitio permite mantentener una sesión de usuario (para mandar cookies, _credentials_ de la opción [init](/es/docs/Web/API/Window/fetch#parameters) deberan ser configuradas). Desde [el 25 de agosto de 2017](https://github.com/whatwg/fetch/pull/585). La especificación cambió la politica por defecto de las credenciales a `same-origin`. Firefox cambió desde la versión 61.0b13.
 
 Una petición básica de `fetch` es realmente simple de realizar. Eche un vistazo al siguente código:
 
@@ -26,9 +26,10 @@ Aquí estamos recuperando un archivo JSON a través de red e imprimiendo en la c
 
 Esto es, por supuesto, una respuesta HTTP no el archivo JSON. Para extraer el contenido en el cuerpo del JSON desde la respuesta, usamos el método {{domxref("Body.json","json()")}} (definido en el [mixin](https://es.wikipedia.org/wiki/Mixin) de {{domxref("Body")}}, el cual está implementado por los objetos {{domxref("Request")}} y {{domxref("Response")}}).
 
-> **Nota:** El mixin de `Body` tambien tiene metodos parecidos para extraer otros tipos de contenido del cuerpo. Vease [Body](#body) para más información.
+> [!NOTE]
+> El mixin de `Body` tambien tiene metodos parecidos para extraer otros tipos de contenido del cuerpo. Vease [Body](#body) para más información.
 
-Las peticiones de Fetch son controladas por la directiva de `connect-src` de [Content Security Policy](/es/docs/Security/CSP/CSP_policy_directives) en vez de la directiva de los recursos que se han devuelto.
+Las peticiones de Fetch son controladas por la directiva de `connect-src` de [Content Security Policy](/es/docs/Web/HTTP/Headers/Content-Security-Policy) en vez de la directiva de los recursos que se han devuelto.
 
 ### Suministrando opciones de petición
 
@@ -124,7 +125,8 @@ var anotherRequest = new Request(myRequest, myInit);
 
 Esto es muy útil ya que el cuerpo de las solicitudes y respuestas son de un sólo uso. Haciendo una copia como esta te permite utilizar la petición/respuesta de nuevo, y al mismo tiempo, si lo deseas, modificar las opciones de `init`. La copia debe estar hecha antes de la lectura del \<body>, y leyendo el \<body> en la copia, se marcará como leido en la petición original.
 
-> **Nota:** Existe también un método {{domxref("Request.clone","clone()")}} que crea una copia. Este tiene una semántica ligeramente distinta al otro método de copia — el primero fallará si el cuerpo de la petición anterior ya ha sido leído (lo mismo para copiar una respuesta), mientras que `clone()` no.
+> [!NOTE]
+> Existe también un método {{domxref("Request.clone","clone()")}} que crea una copia. Este tiene una semántica ligeramente distinta al otro método de copia — el primero fallará si el cuerpo de la petición anterior ya ha sido leído (lo mismo para copiar una respuesta), mientras que `clone()` no.
 
 ### Enviar una petición con credenciales incluido
 
@@ -271,7 +273,8 @@ Los valores posibles de guarda (guard) son:
 - `response`: Guarda para una cabecera obetenida desde un respuesta ({{domxref("Response.headers")}}).
 - `immutable`: Mayormente utilizado para ServiceWorkers, produce un objeto headers de solo lectura.
 
-> **Nota:** No se debería añadir o establecer una petición a un objeto headers _guardado_ con la cabecera `Content-Length`. De igual manera, insertar `Set-Cookie` en la respuesta de la cabecera no esta permitido: ServiceWorkers no estan autorizados a establecer cookies a través de respuestas sintéticas.
+> [!NOTE]
+> No se debería añadir o establecer una petición a un objeto headers _guardado_ con la cabecera `Content-Length`. De igual manera, insertar `Set-Cookie` en la respuesta de la cabecera no esta permitido: ServiceWorkers no estan autorizados a establecer cookies a través de respuestas sintéticas.
 
 ## Objetos Response
 
@@ -299,7 +302,8 @@ addEventListener("fetch", function (event) {
 
 El constructor {{domxref("Response.Response","Response()")}} toma dos argurmentos opcionales, un cuerpo para la respuesta y un objeto init (similar al que acepta {{domxref("Request.Request","Request()")}}).
 
-> **Nota:** El método estático {{domxref("Response.error","error()")}} simplemente devuelve un error en la respuesta. De igual manera que {{domxref("Response.redirect","redirect()")}} devuelve una respuesta que resulta en un redirección a una URL especificada. Estos son solo relevantes tambien a ServiceWorkers.
+> [!NOTE]
+> El método estático {{domxref("Response.error","error()")}} simplemente devuelve un error en la respuesta. De igual manera que {{domxref("Response.redirect","redirect()")}} devuelve una respuesta que resulta en un redirección a una URL especificada. Estos son solo relevantes tambien a ServiceWorkers.
 
 ## Body
 
@@ -352,8 +356,8 @@ Para utilizar `fetch()` en un explorador no soportado, hay disponible un [Fetch 
 
 ## Vea también
 
-- [ServiceWorker API](/es/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/es/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/es/docs/Web/HTTP/CORS)
 - [HTTP](/es/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
 - [Fetch examples on Github](https://github.com/mdn/fetch-examples/)

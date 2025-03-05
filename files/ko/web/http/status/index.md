@@ -18,7 +18,7 @@ HTTP 응답 상태 코드는 특정 HTTP 요청이 성공적으로 완료되었�
   - : 이 코드는 서버가 요청을 수신하였으며 이를 처리하고 있지만, 아직 제대로 된 응답을 알려줄 수 없음을 알려줍니다.
 
 - {{HTTPStatus(103, "103 Early Hints")}}
-  - : 이 상태 코드는 주로 {{HTTPHeader("Link")}} 헤더와 함께 사용되어 서버가 응답을 준비하는 동안 사용자 에이전트가(user agent) 사전 로딩([preloading](/ko/docs/Web/HTML/Preloading_content))을 시작할 수 있도록 한다.
+  - : 이 상태 코드는 주로 {{HTTPHeader("Link")}} 헤더와 함께 사용되어 서버가 응답을 준비하는 동안 사용자 에이전트가(user agent) 사전 로딩([preloading](/ko/docs/Web/HTML/Attributes/rel/preload))을 시작할 수 있도록 한다.
 
 ## 성공 응답
 
@@ -165,4 +165,4 @@ HTTP 응답 상태 코드는 특정 HTTP 요청이 성공적으로 완료되었�
 ## 더 보기
 
 - [위키백과에서 상태코드 목록](https://ko.wikipedia.org/wiki/HTTP_%EC%83%81%ED%83%9C_%EC%BD%94%EB%93%9C)
-- [상태코드의 최상위 도메인 등록 단체 공식 등록](http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
+- [상태코드의 최상위 도메인 등록 단체 공식 등록](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)

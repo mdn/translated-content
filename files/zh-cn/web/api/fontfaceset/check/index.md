@@ -7,11 +7,11 @@ slug: Web/API/FontFaceSet/check
 
 {{domxref("FontFaceSet")}} 的`check()`方法会返回是否在给定的字体列表中的所有字体已经被加载并可用。
 
-## 句法
+## 语法
 
-```
-bool = aFontFaceSet .check(font);
-bool = aFontFaceSet .check(font，text);
+```js-nolint
+check(font)
+check(font, text)
 ```
 
 ### 返回
@@ -20,10 +20,10 @@ bool = aFontFaceSet .check(font，text);
 
 ### 参数
 
-- `font`：使用[CSS 值语法](/zh-CN/docs/)的字体规范，例如“italic bold 16px Roboto”
-- `text`：将字体面限制为 Unicode 范围至少包含文本中的一个字符。这[不检查单个字形覆盖](http://lists.w3.org/Archives/Public/www-style/2015Aug/0330.html)。
+- `font`：使用 CSS [`font`](/zh-CN/docs/Web/CSS/font) 属性语法的字体规范，例如 `"italic bold 16px Roboto"`。
+- `text`：将字体面限制为 Unicode 范围至少包含文本中的一个字符。这[不检查单个字形覆盖](https://lists.w3.org/Archives/Public/www-style/2015Aug/0330.html)。
 
-## 例子
+## 示例
 
 ```js
 document.fonts.check("12px courier"); //如果字体快递可用在 12px，则返回 true

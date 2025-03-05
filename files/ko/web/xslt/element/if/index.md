@@ -30,7 +30,7 @@ slug: Web/XSLT/Element/if
 
 ### 정의
 
-[XSLT section 9.1, Conditional Processing with xsl:if](http://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:if)
+[XSLT section 9.1, Conditional Processing with xsl:if](https://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:if)
 
 ### Gecko 지원
 

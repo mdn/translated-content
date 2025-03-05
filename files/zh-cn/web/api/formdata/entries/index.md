@@ -33,7 +33,7 @@ for (var pair of formData.entries()) {
 
 执行结果为：
 
-```
+```plain
 key1, value1
 key2, value2
 ```

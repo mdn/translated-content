@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("View Transitions API")}}
 
-**`startViewTransition()`** は {{domxref("Document")}} インターフェイスのメソッドで、新しいビュートランジションを始め、それを表す {{domxref("ViewTransition")}} オブジェクトを返します。
+**`startViewTransition()`** は {{domxref("Document")}} インターフェイスのメソッドで、新しいビュー遷移を始め、それを表す {{domxref("ViewTransition")}} オブジェクトを返します。
 
-`startViewTransition()` を呼び出すと、[ビュートランジションのプロセス](/ja/docs/Web/API/View_Transitions_API#ビュートランジションのプロセス)で説明されている一連の手順が続きます。
+`startViewTransition()` を呼び出すと、[ビュー遷移のプロセス](/ja/docs/Web/API/View_Transition_API/Using#ビュー遷移のプロセス)で説明されている一連の手順が続きます。
 
 ## 構文
 
@@ -22,7 +22,7 @@ startViewTransition(updateCallback)
 ### 引数
 
 - `updateCallback` {{optional_inline}}
-  - : 通常、ビュートランジションプロセス中に DOM を更新するために呼び出されるオプションのコールバック関数で、プロミス ({{jsxref("Promise")}}) を返します。コールバックは、 API が現在のページのスクリーンショットを導いたら呼び出されます。コールバックが返すプロミスが履行されると、次のフレームでビュートランジションが始まります。コールバックが返すプロミスが拒否された場合、トランジションは放棄されます。
+  - : 通常、ビュー遷移プロセス中に DOM を更新するために呼び出されるオプションのコールバック関数で、プロミス ({{jsxref("Promise")}}) を返します。コールバックは、 API が現在のページのスクリーンショットを導いたら呼び出されます。コールバックが返すプロミスが履行されると、次のフレームでビュー遷移が始まります。コールバックが返すプロミスが拒否された場合、トランジションは放棄されます。
 
 ### 返値
 
@@ -32,7 +32,7 @@ startViewTransition(updateCallback)
 
 ### 基本的な使用方法
 
-[基本的なビュートランジションのデモ](https://mdn.github.io/dom-examples/view-transitions/)では、 `updateView()` 関数はビュートランジション API に対応しているブラウザーと対応していないブラウザーの両方に対応しています。対応しているブラウザーで、返値を気にせずにビュートランジションのプロセスを設定するには `startViewTransition()` を呼び出します。
+[基本的なビュー遷移のデモ](https://mdn.github.io/dom-examples/view-transitions/)では、 `updateView()` 関数はビュー遷移 API に対応しているブラウザーと対応していないブラウザーの両方に対応しています。対応しているブラウザーで、返値を気にせずにビュー遷移のプロセスを設定するには `startViewTransition()` を呼び出します。
 
 ```js
 function updateView(event) {

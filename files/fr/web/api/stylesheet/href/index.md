@@ -46,4 +46,4 @@ Cette propriété est en lecture seule sur Firefox, Opera, Google Chrome et Safa
 
 ## Spécification
 
-[Href](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-href)
+[Href](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-href)

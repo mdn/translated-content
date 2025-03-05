@@ -31,7 +31,7 @@ let doc = domparser.parseFromString(string, mimeType);
 
 #### 반환
 
-**[`mimeType`](#Argument02)** 인자를 통해 정의한 형식에 따른 {{domxref("Document")}} 또는{{domxref("XMLDocument")}} 문서를 반환한다.
+**[`mimeType`](#argument02)** 인자를 통해 정의한 형식에 따른 {{domxref("Document")}} 또는{{domxref("XMLDocument")}} 문서를 반환한다.
 
 #### 인자
 
@@ -65,7 +65,7 @@ let doc = domparser.parseFromString(string, mimeType);
 
 ## 같이 보기
 
-- [XML 문서 직렬화와 해석](/ko/docs/Parsing_and_serializing_XML)
+- [XML 문서 직렬화와 해석](/ko/docs/Web/XML/Parsing_and_serializing_XML)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLSerializer")}}
 - {{jsxref("JSON.parse()")}} - {{jsxref("JSON")}} 문서에 대해 같은 역할을 제공한다.

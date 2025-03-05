@@ -21,7 +21,8 @@ Par défaut, la liste des en-têtes de réponse sûrs contient&nbsp;:
 
 Des en-têtes supplémentaires peuvent être indiqués comme sûr à l'aide de l'en-tête [`Access-Control-Expose-Headers`](/fr/docs/Web/HTTP/Headers/Access-Control-Expose-Headers).
 
-> **Note :** Initialement, [`Content-Length`](/fr/docs/Web/HTTP/Headers/Content-Length) ne faisait pas partie de la liste par défaut des en-têtes de réponse sûrs (voir [la <i lang="en">pull request</i> 626 du dépôt Fetch](https://github.com/whatwg/fetch/pull/626)).
+> [!NOTE]
+> Initialement, [`Content-Length`](/fr/docs/Web/HTTP/Headers/Content-Length) ne faisait pas partie de la liste par défaut des en-têtes de réponse sûrs (voir [la <i lang="en">pull request</i> 626 du dépôt Fetch](https://github.com/whatwg/fetch/pull/626)).
 
 ## Exemples
 

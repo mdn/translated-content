@@ -11,7 +11,8 @@ La [référence des en-têtes HTTP](/fr/docs/Web/HTTP/Headers) sur MDN Web Docs 
 
 Vous devrez avoir des connaissances en [HTTP](/fr/docs/Web/HTTP) ou être prêt à vous familiariser avec ses détails.
 
-> **Note :** La documentation de nouvelles en-têtes HTTP doit d'abord avoir lieu en anglais avant de pouvoir traduire le nouveau contenu en français. L'organisation du contenu de MDN ne permet pas de créer du contenu en français si celui-ci n'existe pas déjà en anglais.
+> [!NOTE]
+> La documentation de nouvelles en-têtes HTTP doit d'abord avoir lieu en anglais avant de pouvoir traduire le nouveau contenu en français. L'organisation du contenu de MDN ne permet pas de créer du contenu en français si celui-ci n'existe pas déjà en anglais.
 
 ## Étape 1 - Déterminer l'en-tête HTTP à documenter
 

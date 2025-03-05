@@ -18,4 +18,4 @@ l10n:
 ## 같이 보기
 
 - 위키백과 [유니코드](https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C)
-- [유니코드 표준: 기술 소개](http://www.unicode.org/standard/principles.html)
+- [유니코드 표준: 기술 소개](https://www.unicode.org/standard/principles.html)

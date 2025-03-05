@@ -5,7 +5,7 @@ slug: Web/SVG/Attribute/end
 
 {{SVGRef}}
 
-« [SVG Attribute reference home](/en/SVG/Attribute)
+« [SVG Attribute reference home](/en-US/SVG/Attribute)
 
 Этот атрибут определяет конечное значение для анимации, которое может ограничить активную длительность.
 
@@ -13,11 +13,11 @@ slug: Web/SVG/Attribute/end
 
 ## Usage context
 
-| Categories         | Animation timing attribute                                                  |
-| ------------------ | --------------------------------------------------------------------------- |
-| Value              | \<End-value-list>                                                           |
-| Animatable         | No                                                                          |
-| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#EndAttribute) |
+| Categories         | Animation timing attribute                                                   |
+| ------------------ | ---------------------------------------------------------------------------- |
+| Value              | \<End-value-list>                                                            |
+| Animatable         | No                                                                           |
+| Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#EndAttribute) |
 
 Для типов значений, разрешённых в, `<end-value-list>` см. {{ SVGAttr("begin") }} атрибут.
 
@@ -27,4 +27,4 @@ slug: Web/SVG/Attribute/end
 
 The following elements can use the `end` attribute
 
-- [Animation elements](/en/SVG/Element#Animation)
+- [Animation elements](/en-US/SVG/Element#animation)

@@ -101,7 +101,7 @@ console.log(proxy3.message2); // le monde
 
 ### Exemple simple
 
-Dans ce court exemple, on renvoie le nombre `37` comme valeur par défaut lorsque la propriété nommée n'est pas présente dans l'objet. Pour cela, on utilise le gestionnaire correspondant à [`get()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/get).
+Dans ce court exemple, on renvoie le nombre `37` comme valeur par défaut lorsque la propriété nommée n'est pas présente dans l'objet. Pour cela, on utilise le gestionnaire correspondant à [`get()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get).
 
 ```js
 const handler = {
@@ -141,7 +141,7 @@ On notera que bien que ceci fonctionne pour les objets JavaScript construits dan
 
 ### Validation
 
-En utilisant un `Proxy`, on peut simplement valider les valeurs passées à un objet. Dans cet exemple, on utilise le gestionnaire correspondant à [`set()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set).
+En utilisant un `Proxy`, on peut simplement valider les valeurs passées à un objet. Dans cet exemple, on utilise le gestionnaire correspondant à [`set()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set).
 
 ```js
 let validateur = {
@@ -173,7 +173,7 @@ personne.age = 300; // lève une exception
 
 ### Étendre un constructeur
 
-En utilisant une fonction proxy, on peut étendre un constructeur avec un nouveau constructeur. Dans cet exemple, on utilise les gestionnaires correspondants à [`construct()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct) et [`apply()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply).
+En utilisant une fonction proxy, on peut étendre un constructeur avec un nouveau constructeur. Dans cet exemple, on utilise les gestionnaires correspondants à [`construct()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct) et [`apply()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply).
 
 ```js
 function etendre(sup, base) {
@@ -329,7 +329,7 @@ console.log(produits.dernierNavigateur);
 
 ### Trouver un élément dans un tableau grâce à sa propriété
 
-Dans cet exemple, ce proxy étend le tableau avec des fonctionnalités supplémentaires. Ici, on définit des propriétés sans utiliser [`Object.defineProperties()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties). Cet exemple pourrait être adapté pour trouver la ligne d'un tableau à partir d'une de ces cellules (la cible serait alors [`table.rows`](/fr/docs/Web/API/HTMLTableElement.rows)).
+Dans cet exemple, ce proxy étend le tableau avec des fonctionnalités supplémentaires. Ici, on définit des propriétés sans utiliser [`Object.defineProperties()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties). Cet exemple pourrait être adapté pour trouver la ligne d'un tableau à partir d'une de ces cellules (la cible serait alors [`table.rows`](/fr/docs/Web/API/HTMLTableElement/rows)).
 
 ```js
 let produits = new Proxy(

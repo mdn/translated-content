@@ -13,7 +13,23 @@ slug: Web/JavaScript/Reference/Operators/Optional_chaining
 
 optional chaining은 선언되지 않은 루트 객체에 사용할 수 없지만, 정의되지 않은 루트 객체와는 함께 사용할 수 있다.
 
-{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Optional chaining operator")}}
+
+```js interactive-example
+const adventurer = {
+  name: "Alice",
+  cat: {
+    name: "Dinah",
+  },
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// Expected output: undefined
+
+console.log(adventurer.someNonExistentMethod?.());
+// Expected output: undefined
+```
 
 ## 문법
 
@@ -96,7 +112,7 @@ function doSomething(onContent, onError) {
 
 ### 표현식에서 Optional chaining
 
-optional chaining 연산자를 속성에 표현식으로 접근할 때 대괄호 표기법([the bracket notation of the property accessor](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation))을 사용할 수 있다:
+optional chaining 연산자를 속성에 표현식으로 접근할 때 대괄호 표기법([the bracket notation of the property accessor](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation))을 사용할 수 있다:
 
 ```js
 let nestedProp = obj?.["prop" + "Name"];

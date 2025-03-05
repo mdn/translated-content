@@ -9,7 +9,16 @@ l10n:
 
 **[HTML](/ko/docs/Web/HTML) `<link>`** 요소는 현재 문서와 외부 리소스의 관계를 명시합니다. `<link>`는 {{glossary("CSS", "스타일 시트")}}를 연결할 때 제일 많이 사용하지만, 사이트 아이콘("파비콘"과 홈 화면 아이콘, 모바일 앱 아이콘) 연결 등 여러가지로 쓰일 수 있습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/link.html")}}
+{{InteractiveExample("HTML Demo: &lt;link&gt;")}}
+
+```html interactive-example
+<link href="/shared-assets/misc/link-element-example.css" rel="stylesheet" />
+
+<p>This text will be red as defined in the external stylesheet.</p>
+<p style="color: blue">
+  The <code>style</code> attribute can override it, though.
+</p>
+```
 
 외부 스타일 시트를 연결하려면 {{htmlelement("head")}} 안에 다음과 같은 `<link>` 요소를 배치하세요.
 
@@ -158,7 +167,7 @@ l10n:
 
 - `crossorigin`
 
-  - : 리소스를 가져올 때 {{glossary("CORS")}}를 사용해야 하는지 나타내는 [열거형](/ko/docs/Glossary/Enumerated) 특성입니다. [CORS 활성화 이미지](/ko/docs/Web/HTML/CORS_Enabled_Image)는 {{HTMLElement("canvas")}} 요소를 "오염"(taint)시키지 않고 재사용할 수 있습니다. 가능한 값은 다음과 같습니다.
+  - : 리소스를 가져올 때 {{glossary("CORS")}}를 사용해야 하는지 나타내는 [열거형](/ko/docs/Glossary/Enumerated) 특성입니다. [CORS 활성화 이미지](/ko/docs/Web/HTML/CORS_enabled_image)는 {{HTMLElement("canvas")}} 요소를 "오염"(taint)시키지 않고 재사용할 수 있습니다. 가능한 값은 다음과 같습니다.
   - `anonymous`
     - : 교차 출처 요청({{HTTPHeader("Origin")}} HTTP 헤더를 가진 요청)을 수행하지만 인증 정보, 즉 쿠키, X.509 인증서, HTTP Basic 인증 중 어떠한 것도 전송하지 않습니다. 서버에서 {{HTTPHeader("Access-Control-Allow-Origin")}} HTTP 헤더를 설정하지 않아서 출처 사이트에 인증 정보를 전달하지 않으면 리소스가 오염되어 사용처가 제한됩니다.
   - `use-credentials`
@@ -186,7 +195,7 @@ l10n:
 - `href`
   - : 연결할 리소스의 {{glossary("URL")}}입니다. 절대와 상대 URL 모두 가능합니다.
 - `hreflang`
-  - : 연결할 리소스가 사용하는 언어입니다. 오직 제안하는 용도로만 사용합니다. 가능한 값은 [RFC 5646(BCP 47)](https://www.ietf.org/rfc/bcp/bcp47.txt)에 따릅니다. [`href`](/ko/docs/Web/HTML/Element/link#href) 특성이 존재할 때만 사용하세요.
+  - : 연결할 리소스가 사용하는 언어입니다. 오직 제안하는 용도로만 사용합니다. 가능한 값은 [RFC 5646(BCP 47)](https://www.ietf.org/rfc/bcp/bcp47.txt)에 따릅니다. [`href`](#href) 특성이 존재할 때만 사용하세요.
 - `imagesizes`
   - : `rel="preload"` 와 `as="image"` 에 한하여, `imagesizes` 특성은 `img` 요소에 사용되는 적절한 리소스를 해당 `srcset` 과 `sizes` 특성으로 preload 하도록 하는 [크기 특성](https://html.spec.whatwg.org/multipage/images.html#sizes-attribute)입니다.
 - `imagesrcset`
@@ -197,7 +206,7 @@ l10n:
 
   - : 연결된 리소스를 적용할 미디어를 명시합니다. 값으로는 반드시 미디어 유형이나 [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries)를 사용해야 합니다. `media` 특성은 사용자 에이전트가 현재 장치에 맞춰 최적의 스타일시트를 선택하도록 할 수 있으므로 주로 외부 스타일시트를 연결할 때 유용합니다.
 
-    > **참고:**
+    > [!NOTE]
     >
     > - HTML 4에서는 이 특성의 값으로 사용할 수 있는 `print`, `screen`, `aural`, `braille` 등과 같은 값을 공백으로 구분한 미디어 설명 문자열 목록, 예를 들어, 미디어 유형 및 그룹([media types and groups](/ko/docs/Web/CSS/@media))일 수 있습니다.HTML5에서는 이를 확장하여 HTML 4에서 허용되는 값 외에 어떤 유형의 [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries)든 사용할 수 있습니다.
     > - [CSS3 Media Queries](/ko/docs/Web/CSS/CSS_media_queries)를 지원하지 않는 브라우저는 이를 타당한 링크로 인식하지 않을 수 있으므로 HTML 4에 정의되어 있는 제한된 media query의 집합을 이용한 폴백(fallback) 링크를 설정하는 것을 잊지 말기 바랍니다.
@@ -213,7 +222,7 @@ l10n:
     - `unsafe-url` 은 레퍼러에 출처와 경로 (fragment, password, username은 제외)가 포함됨을 의미합니다. 이 경우 TLS로 보호된 리소스의 출처와 경로가 안전하지 않은 출처로 유출될 수 있으므로 안전하지 않습니다.
 
 - `rel`
-  - : 연결할 리소스와 현재 문서의 관계. [링크 유형](/ko/docs/Web/HTML/Link_types)의 값을 공백으로 구분한 리스트를 지정해야 합니다.
+  - : 연결할 리소스와 현재 문서의 관계. [링크 유형](/ko/docs/Web/HTML/Attributes/rel)의 값을 공백으로 구분한 리스트를 지정해야 합니다.
 - `sizes` {{Experimental_Inline}}
 
   - : 리소스에 포함된 시각 매체의 아이콘 크기를 정의합니다.
@@ -223,7 +232,8 @@ l10n:
     - `any`는 `image/svg+xml`와 같은 벡터 유형 그대로 어떤 크기로든 조정 가능함을 의미합니다.
     - 각각 `<width in pixels>x<height in pixels>` 혹은 `<width in pixels>X<height in pixels>` 형식으로 작성한, 공백으로 구분된 크기 목록. 목록에 명시된 크기들은 반드시 리소스에 포함되어 있어야 합니다.
 
-    > **참고:** 대부분의 아이콘 형식은 한 개의 단일 아이콘만을 저장할 수 있습니다. 따라서 대부분의 경우, [`sizes`](#sizes) 특성은 하나의 항목만 가지고 있습니다.
+    > [!NOTE]
+    > 대부분의 아이콘 형식은 한 개의 단일 아이콘만을 저장할 수 있습니다. 따라서 대부분의 경우, [`sizes`](#sizes) 특성은 하나의 항목만 가지고 있습니다.
     > MS의 ICO 형식도 그러하며, Apple의 ICNS도 마찬가지입니다. ICO는 더 보편화되어 있으므로, 브라우저 간 지원(특히 오래된 IE 버전)을 고려하는 경우 이 형식을 사용해야 합니다.
 
 - `title`
@@ -250,7 +260,8 @@ l10n:
     이 값은 {{rfc(2045)}}에 정의되어 있는 공백이나 쉼표로 구분된 문자 집합의 목록입니다.
     기본값은 `iso-8859-1` 입니다.
 
-    > **참고:** 이 폐기된 특성과 동일한 효과를 구현하려면, 링크된 리소스에서 {{HTTPHeader("Content-Type")}} HTTP 헤더를 사용하십시오.
+    > [!NOTE]
+    > 이 폐기된 특성과 동일한 효과를 구현하려면, 링크된 리소스에서 {{HTTPHeader("Content-Type")}} HTTP 헤더를 사용하십시오.
 
 - `rev` {{deprecated_inline}}
 

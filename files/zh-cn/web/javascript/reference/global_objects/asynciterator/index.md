@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`AsyncIterator`** 对象是符合[异步迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)的对象，其提供了 `next()` 方法用以返回一个兑现为迭代器结果对象的 promise。`AsyncIterator.prototype` 对象是一个隐藏的全局对象，所有内置的异步迭代器都继承自它。其提供了 [`@@asyncIterator`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/@@asyncIterator) 方法，该方法返回异步迭代器对象本身，使异步迭代器也[异步可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)。
+**`AsyncIterator`** 对象是符合[异步迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)的对象，其提供了 `next()` 方法用以返回一个兑现为迭代器结果对象的 promise。`AsyncIterator.prototype` 对象是一个隐藏的全局对象，所有内置的异步迭代器都继承自它。其提供了 [`[Symbol.asyncIterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/Symbol.asyncIterator) 方法，该方法返回异步迭代器对象本身，使异步迭代器也[异步可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)。
 
 注意，`AsyncIterator` *不是*全局对象，尽管将来会出现[异步迭代器辅助方法提案](https://github.com/tc39/proposal-async-iterator-helpers)。所有内置异步迭代器共享的 `AsyncIterator.prototype` 对象可以通过以下代码获得：
 
@@ -21,13 +21,13 @@ const AsyncIteratorPrototype = Object.getPrototypeOf(
 
 目前，唯一内置的 JavaScript 异步迭代器是由[异步生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)返回的 {{jsxref("AsyncGenerator")}} 对象。还有一些其他的内置异步迭代器存在于 web API 中，例如 {{domxref("ReadableStream")}} 的异步迭代器。
 
-每个异步迭代器都有一个不同的原型对象，它定义了特定异步迭代器使用的 `next()` 方法。所有这些原型对象都继承自 `AsyncIterator.prototype`，它提供了一个 [`@@asyncIterator`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator) 方法，该方法返回异步迭代器对象本身，使异步迭代器也[可异步迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)。
+每个异步迭代器都有一个不同的原型对象，它定义了特定异步迭代器使用的 `next()` 方法。所有这些原型对象都继承自 `AsyncIterator.prototype`，它提供了一个 [`[Symbol.asyncIterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator) 方法，该方法返回异步迭代器对象本身，使异步迭代器也[可异步迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)。
 
-> **备注：** `AsyncIterator.prototype` 并未实现 [`@@iterator`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)，因此默认情况下，异步迭代器不是[同步可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)。
+> **备注：** `AsyncIterator.prototype` 并未实现 [`[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)，因此默认情况下，异步迭代器不是[同步可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)。
 
 ## 实例方法
 
-- [`AsyncIterator.prototype[@@asyncIterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/@@asyncIterator)
+- [`AsyncIterator.prototype[Symbol.asyncIterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/Symbol.asyncIterator)
   - : 返回异步迭代器对象本身。这使异步迭代器对象也可以异步迭代。
 
 ## 示例

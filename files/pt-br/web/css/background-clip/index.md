@@ -168,4 +168,4 @@ p {
 ## Veja também
 
 - {{cssxref("clip")}}
-- [CSS Box Model](/pt-BR/docs/Web/CSS/box_model)
+- [CSS Box Model](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

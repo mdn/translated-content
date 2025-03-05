@@ -11,7 +11,8 @@ slug: Web/CSS/background-origin
 
 Обратите внимание, что `background-origin` игнорируется, когда {{cssxref("background-attachment")}} является `fixed`.
 
-> **Примечание:** Сокращение {{cssxref("background")}} сбрасывает значения этого свойства к его начальному значению, если оно не указано.
+> [!NOTE]
+> Сокращение {{cssxref("background")}} сбрасывает значения этого свойства к его начальному значению, если оно не указано.
 
 ## Синтаксис
 
@@ -66,7 +67,8 @@ background-origin: unset;
 
 ```css
 div {
-  background-image: url("logo.jpg"), url("mainback.png"); /* Applies two images to the background */
+  background-image:
+    url("logo.jpg"), url("mainback.png"); /* Applies two images to the background */
   background-position:
     top right,
     0px 0px;

@@ -5,7 +5,7 @@ slug: Web/API/Document/images
 
 {{APIRef("DOM")}}
 
-`document.images` 는 현재 HTML document 내부의 [images](/ko/docs/DOM/Image) collection을 반환합니다.
+`document.images` 는 현재 HTML document 내부의 [images](/ko/docs/Web/API/HTMLImageElement/Image) collection을 반환합니다.
 
 ## Syntax
 

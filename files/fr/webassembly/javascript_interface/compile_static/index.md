@@ -9,7 +9,8 @@ l10n:
 
 La méthode statique **`WebAssembly.compile()`**, permet de compiler un module ([`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module)) à partir d'un code binaire WebAssembly. Cette fonction est utile lorsqu'il est nécessaire de compiler un module avant de l'instancier (dans les autres cas, la méthode [`WebAssembly.instantiate()`](/fr/docs/WebAssembly/JavaScript_interface/instantiate_static) sera plus pertinente).
 
-> **Note :** Les pages web qui utilisent une [CSP](/fr/docs/Web/HTTP/CSP) stricte peuvent bloquer la compilation WebAssembly et l'exécution des modules. Pour plus d'informations pour l'autorisation de la compilation et de l'exécution, voir [la directive CSP `script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
+> [!NOTE]
+> Les pages web qui utilisent une [CSP](/fr/docs/Web/HTTP/CSP) stricte peuvent bloquer la compilation WebAssembly et l'exécution des modules. Pour plus d'informations pour l'autorisation de la compilation et de l'exécution, voir [la directive CSP `script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
 
 ## Syntaxe
 
@@ -20,11 +21,11 @@ WebAssembly.compile(bufferSource);
 ### Paramètres
 
 - `bufferSource`
-  - : Un [tableau typé](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray) ou un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) contenant le <i lang="en">bytecode</i> du module WebAssembly qu'on souhaite compiler.
+  - : Un [tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) ou un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) contenant le <i lang="en">bytecode</i> du module WebAssembly qu'on souhaite compiler.
 
 ### Valeur de retour
 
-Une promesse ([`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise)) dont la valeur de résolution est une instance de [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module) qui représente le module compilé.
+Une promesse ([`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)) dont la valeur de résolution est une instance de [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module) qui représente le module compilé.
 
 ### Exceptions
 
@@ -46,7 +47,8 @@ fetch("simple.wasm")
   .then((mod) => worker.postMessage(mod));
 ```
 
-> **Note :** Dans la plupart des cas, mieux vaudra utiliser [`WebAssembly.compileStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/compileStreaming_static) qui est plus efficace que `compile()`.
+> [!NOTE]
+> Dans la plupart des cas, mieux vaudra utiliser [`WebAssembly.compileStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/compileStreaming_static) qui est plus efficace que `compile()`.
 
 ## Spécifications
 

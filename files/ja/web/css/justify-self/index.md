@@ -1,6 +1,8 @@
 ---
 title: justify-self
 slug: Web/CSS/justify-self
+l10n:
+  sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
 ---
 
 {{CSSRef}}
@@ -13,9 +15,9 @@ slug: Web/CSS/justify-self
 
 - ブロックレベルレイアウトでは、包含ブロック内のアイテムをインライン軸で配置します。
 - 絶対位置指定の要素では、 top, left, bottom, right の各オフセット値を反映して、包含ブロック内のアイテムをインライン軸で配置します。
-- 表のセルレイアウトでは、このプロパティは*無視されます* (絶対位置指定および表レイアウトのブロック内の配置については[こちら](/ja/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables))
-- フレックスボックスレイアウトでは、このプロパティは*無視されます* (フレックスボックス内での配置については[こちら](/ja/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox))
-- グリッドレイアウトでは、グリッド領域内のアイテムをインライン軸に配置します (グリッドレイアウト内での配置については[こちら](/ja/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout))
+- 表のセルレイアウトでは、このプロパティは*無視されます*。詳しくは[ブロック、絶対配置、表レイアウトのブロック配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)を参照してください。
+- フレックスボックスレイアウトでは、このプロパティは*無視されます*。詳しくは[フレックスボックスでの配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)を参照してください。
+- グリッドレイアウトでは、グリッド領域内のアイテムをインライン軸に配置します。詳しくは[グリッドレイアウトでの配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)を参照してください。
 
 ## 構文
 
@@ -35,6 +37,7 @@ justify-self: self-start;
 justify-self: self-end;
 justify-self: left; /* 左側にアイテムを集める */
 justify-self: right; /* 右側にアイテムを集める */
+justify-self: anchor-center;
 
 /* ベースラインの配置 */
 justify-self: baseline;
@@ -49,6 +52,7 @@ justify-self: unsafe center;
 justify-self: inherit;
 justify-self: initial;
 justify-self: revert;
+justify-self: revert-layer;
 justify-self: unset;
 ```
 
@@ -68,6 +72,7 @@ justify-self: unset;
 - `normal`
 
   - : このキーワードの効果は、レイアウトモードに依存します。
+
     - ブロックレベルレイアウトでは、このキーワードは `start` の別名です。
     - 絶対位置のレイアウトでは、このキーワードは*置換*の絶対位置ボックスには `start` のように振舞い、*その他*の絶対位置ボックスには `stretch` のように振舞います。
     - 表のセルレイアウトでは、このキーワードは意味を持たず、*無視*されます。
@@ -97,6 +102,8 @@ justify-self: unset;
     `first baseline` の代替配置は `start`、 `last baseline` の代替配置は `end` です。
 - `stretch`
   - : アイテムの寸法の合計が配置コンテナーの寸法より小さい場合に、寸法が `auto` であるすべてのアイテムは (比例的にではなく) 均等に引き伸ばされます。ただし、 {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (あるいは同等の機能) による制限は尊重します。これにより、寸法の合計が配置コンテナーを主軸に沿って完全に埋めるようになります。
+- `anchor-center`
+  - : [アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)要素の場合、関連付けられたアンカー要素のインライン方向の中心にアイテムを配置します。 [`anchor-center` を使用してアンカーの中央に配置](/ja/docs/Web/CSS/CSS_anchor_positioning/Using#anchor-center_を使用してアンカーの中央に配置)を参照してください。
 - `safe`
   - : アイテムの寸法が配置コンテナーをあふれた場合、アイテムは配置モードが `start` であったかのように配置されます。
 - `unsafe`
@@ -143,6 +150,7 @@ article {
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 40px;
   grid-gap: 10px;
+  margin: 20px;
   width: 300px;
   justify-items: stretch;
 }
@@ -171,15 +179,11 @@ span {
   padding: 10px;
   border-radius: 7px;
 }
-
-article {
-  margin: 20px;
-}
 ```
 
 #### 結果
 
-{{EmbedLiveSample('簡単なデモ', '100%', 200)}}
+{{EmbedLiveSample('Simple_demonstration', '100%', 200)}}
 
 ## 仕様書
 
@@ -191,6 +195,6 @@ article {
 
 ## 関連情報
 
-- CSS グリッドガイド: _[グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)
-- {{CSSxRef("justify-items")}} プロパティ
+- {{CSSxRef("justify-items")}}
+- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュール

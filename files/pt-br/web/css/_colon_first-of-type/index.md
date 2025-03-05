@@ -1,5 +1,5 @@
 ---
-title: ":first-of-type"
+title: :first-of-type
 slug: Web/CSS/:first-of-type
 ---
 
@@ -15,7 +15,8 @@ p:first-of-type {
 }
 ```
 
-> **Nota:** Originalmente definido, o elemento selecionado tinha que ter um pai. Desde o Seletores Nível 4, isso não é mais necessário.
+> [!NOTE]
+> Originalmente definido, o elemento selecionado tinha que ter um pai. Desde o Seletores Nível 4, isso não é mais necessário.
 
 ## Sintaxe
 

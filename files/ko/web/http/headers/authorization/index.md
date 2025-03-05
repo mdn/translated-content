@@ -32,17 +32,18 @@ Authorization: <type> <credentials>
 
   - : [인증 타입](/ko/docs/Web/HTTP/Authentication#%EC%9D%B8%EC%A6%9D_%EC%8A%A4%ED%82%B4). 보통 타입은 ["Basic"](/ko/docs/Web/HTTP/Authentication#Basic_%EC%9D%B8%EC%A6%9D_%EC%8A%A4%ED%82%B4)이며. 다른 타입으로:
 
-    - [IANA registry of Authentication schemes](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
-    - [Authentification for AWS servers (`AWS4-HMAC-SHA256`)](http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)
+    - [IANA registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
+    - [Authentification for AWS servers (`AWS4-HMAC-SHA256`)](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)
 
 - \<credentials>
 
   - : 만약 "Basic" 인증 스킴이 사용되었다면, 증명은 다음과 같이 만들어집니다:
 
     - 사용자명과 비밀번호가 콜론을 이용하여 합쳐집니다(`aladdin:opensesame`).
-    - 그 결과에 대한 문자열을 [base64](/ko/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) 로 인코딩합니다 (`YWxhZGRpbjpvcGVuc2VzYW1l`).
+    - 그 결과에 대한 문자열을 [base64](/ko/docs/Glossary/Base64) 로 인코딩합니다 (`YWxhZGRpbjpvcGVuc2VzYW1l`).
 
-    > **참고:** Base64 인코딩은 암호화나 해싱을 의미하지 않습니다! 이 방법은 인증에 대해서 문자를 그대로 보내는 것과 동일하다고 할 수 있습니다 (base64인코딩은 복호화 가능). Basic 인증을 하는 경우 HTTPS로 접속하는 것을 권장합니다.
+    > [!NOTE]
+    > Base64 인코딩은 암호화나 해싱을 의미하지 않습니다! 이 방법은 인증에 대해서 문자를 그대로 보내는 것과 동일하다고 할 수 있습니다 (base64인코딩은 복호화 가능). Basic 인증을 하는 경우 HTTPS로 접속하는 것을 권장합니다.
 
 ## 예제
 

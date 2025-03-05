@@ -35,7 +35,7 @@ flatMap(callbackFn)
 
 ## 描述
 
-`flatMap` 接受 `callbackFn` 两种类型的返回值：迭代器或可迭代对象。它们与 {{jsxref("Iterator.from()")}} 处理方式相同：如果返回值是可迭代的，则调用 `@@iterator` 方法，并使用其返回值；否则，将返回值视为一个迭代器，并调用其 `next()` 方法。
+`flatMap` 接受 `callbackFn` 两种类型的返回值：迭代器或可迭代对象。它们与 {{jsxref("Iterator.from()")}} 处理方式相同：如果返回值是可迭代的，则调用 `[Symbol.iterator]()` 方法，并使用其返回值；否则，将返回值视为一个迭代器，并调用其 `next()` 方法。
 
 ```js
 [1, 2, 3]
@@ -63,14 +63,14 @@ flatMap(callbackFn)
         return {
           ...it,
           [Symbol.iterator]() {
-            console.log("@@iterator 被调用了");
+            console.log("[Symbol.iterator]() 被调用了");
             return it;
           },
         };
     }
   })
   .toArray();
-// 输出“@@iterator 被调用了”
+// 输出“[Symbol.iterator]() 被调用了”
 // 返回 [1, 2, 3]
 ```
 

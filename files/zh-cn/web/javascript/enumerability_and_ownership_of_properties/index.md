@@ -1,305 +1,84 @@
 ---
 title: 属性的可枚举性和所有权
 slug: Web/JavaScript/Enumerability_and_ownership_of_properties
+l10n:
+  sourceCommit: 2c762771070a207d410a963166adf32213bc3a45
 ---
 
 {{JsSidebar("More")}}
 
-可枚举属性是指那些内部“可枚举”标志设置为 `true` 的属性，对于通过直接的赋值和属性初始化的属性，该标识值默认为即为 `true`，对于通过 [Object.defineProperty](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 等定义的属性，该标识值默认为 `false`。可枚举的属性可以通过 [for...in](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环进行遍历（除非该属性名是一个 [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)）。属性的所有权是通过判断该属性是否直接属于某个对象决定的，而不是通过原型链继承的。一个对象的所有的属性可以一次性的获取到。有一些内置的方法可以用于判断、迭代/枚举以及获取对象的一个或一组属性，下表对这些方法进行了列举。对于部分不可用的类别，下方的示例代码对获取方法进行了演示。
+JavaScript 对象中的每个属性能根据三个因素进行分类：
 
-<table>
-  <caption>
-    属性的可枚举性和所有权 - 内置的判断、访问和迭代方法
-  </caption>
-  <tbody>
-    <tr>
-      <th>作用</th>
-      <th>自身对象</th>
-      <th>自身对象及其原型链</th>
-      <th>仅原型链</th>
-    </tr>
-    <tr>
-      <td>判断</td>
-      <td>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">可枚举属性</th>
-              <th scope="col">不可枚举属性</th>
-              <th scope="col">可枚举属性及不可枚举属性</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
-                    >propertyIsEnumerable</a
-                  ></code
-                ><br /><code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
-                    >hasOwnProperty</a
-                  ></code
-                >
-              </td>
-              <td>
-                <code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
-                    >hasOwnProperty</a
-                  ></code
-                >
-                获取属性后使用
-                <code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
-                    >propertyIsEnumerable</a
-                  ></code
-                >
-                过滤可枚举属性
-              </td>
-              <td>
-                <code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
-                    >hasOwnProperty</a
-                  ></code
-                >
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">可枚举属性</th>
-              <th scope="col">不可枚举属性</th>
-              <th scope="col">可枚举属性及不可枚举属性</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>需要额外代码实现</td>
-              <td>需要额外代码实现</td>
-              <td>
-                <code
-                  ><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/in"
-                    >in</a
-                  ></code
-                >
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td>需要额外代码实现</td>
-    </tr>
-    <tr>
-      <td>访问</td>
-      <td>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">可枚举属性</th>
-              <th scope="col">不可枚举属性</th>
-              <th scope="col">可枚举属性及不可枚举属性</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
-                    >Object.keys</a
-                  ></code
-                ><br /><code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
-                    >getOwnPropertyNames</a
-                  ></code
-                ><br /><code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
-                    >getOwnPropertySymbols</a
-                  ></code
-                >
-              </td>
-              <td>
-                <code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
-                    >getOwnPropertyNames</a
-                  ></code
-                >、<code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
-                    >getOwnPropertySymbols</a
-                  > </code
-                >获取属性后使用
-                <code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
-                    >propertyIsEnumerable</a
-                  ></code
-                >
-                过滤可枚举属性
-              </td>
-              <td>
-                <code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
-                    >getOwnPropertyNames</a
-                  ></code
-                ><br /><code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
-                    >getOwnPropertySymbols</a
-                  ></code
-                >
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td>需要额外代码实现</td>
-      <td>需要额外代码实现</td>
-    </tr>
-    <tr>
-      <td>迭代</td>
-      <td>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">可枚举属性</th>
-              <th scope="col">不可枚举属性</th>
-              <th scope="col">可枚举属性及不可枚举属性</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
-                    >Object.keys</a
-                  ></code
-                ><br /><code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
-                    >getOwnPropertyNames</a
-                  ></code
-                ><br /><code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
-                    >getOwnPropertySymbols</a
-                  ></code
-                >
-              </td>
-              <td>
-                <code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
-                    >getOwnPropertyNames</a
-                  ></code
-                >、<code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
-                    >getOwnPropertySymbols</a
-                  ></code
-                >
-                获取属性后使用
-                <code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
-                    >propertyIsEnumerable</a
-                  ></code
-                >
-                过滤可枚举属性
-              </td>
-              <td>
-                <code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
-                    >getOwnPropertyNames</a
-                  ></code
-                ><br /><code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
-                    >getOwnPropertySymbols</a
-                  ></code
-                >
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">可枚举属性</th>
-              <th scope="col">不可枚举属性</th>
-              <th scope="col">可枚举属性及不可枚举属性</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <code
-                  ><a
-                    href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in"
-                    >for..in</a
-                  ></code
-                ><br />（同时会排除 Symbol）
-              </td>
-              <td>需要额外代码实现</td>
-              <td>需要额外代码实现</td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td>需要额外代码实现</td>
-    </tr>
-  </tbody>
-</table>
+- 可枚举或不可枚举；
+- 字符串或 [symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)；
+- 自有属性或从原型链继承的属性。
+
+*可枚举属性*是那些内部的可枚举标志设置为 `true` 的属性，对于通过直接赋值或属性初始化器创建的属性，该标识值默认为 `true`。对于通过 [`Object.defineProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 等定义的属性，默认并不是可枚举的。大多数迭代方法（如：[`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环和 [`Object.keys`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)）仅访问可枚举的键。
+
+属性的所有权取决于属性是否直接属于该对象，而不是对象的原型链。
+
+所有的属性，不论是可枚举或不可枚举、是字符串或 symbol、是自有的或继承的，都能用[点记号表示法或方括号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)进行访问。在本文，我们将专注于 JavaScript 提供的逐一访问一组对象属性的方法。
+
+## 查询对象属性
+
+有四种内置的查询对象属性的方法。它们全部都支持字符串和 symbol 键。下表总结了每个方法支持的类型。
+
+|                                                                                                             | 可枚举的、自有的 | 可枚举的、继承的 | 不可枚举的、自有的 | 不可枚举的、继承的 |
+| ----------------------------------------------------------------------------------------------------------- | ---------------- | ---------------- | ------------------ | ------------------ |
+| [`propertyIsEnumerable()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable) | `true ✅`        | `false ❌`       | `false ❌`         | `false ❌`         |
+| [`hasOwnProperty()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)             | `true ✅`        | `false ❌`       | `true ✅`          | `false ❌`         |
+| [`Object.hasOwn()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)                      | `true ✅`        | `false ❌`       | `true ✅`          | `false ❌`         |
+| [`in`](/zh-CN/docs/Web/JavaScript/Reference/Operators/in)                                                   | `true ✅`        | `true ✅`        | `true ✅`          | `true ✅`          |
+
+## 遍历对象属性
+
+在 JavaScript 中有许多遍历对象属性的方法。有时候，属性作为数组返回；有时候，属性在循环中一个接着一个地迭代；有时候，属性用于构造或修改另一个对象。下表总结了属性能访问的情况。
+
+仅访问字符串属性或仅访问 symbol 属性的方法有额外的注解。✅ 表示能访问这个类型的属性；❌ 表示不能访问这个类型的属性。
+
+|                                                                                                                                                                                                                                                                        | 可枚举的、自有的   | 可枚举的、继承的   | 不可枚举的、自有的 | 不可枚举的、继承的 |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------ | ------------------ | ------------------ |
+| [`Object.keys`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)<br />[`Object.values`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/values)<br />[`Object.entries`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/entries) | ✅<br />(字符串)   | ❌                 | ❌                 | ❌                 |
+| [`Object.getOwnPropertyNames`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)                                                                                                                                                         | ✅<br />（字符串） | ❌                 | ✅<br />（字符串） | ❌                 |
+| [`Object.getOwnPropertySymbols`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols)                                                                                                                                                     | ✅<br />（symbol） | ❌                 | ✅<br />（symbol） | ❌                 |
+| [`Object.getOwnPropertyDescriptors`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors)                                                                                                                                             | ✅                 | ❌                 | ✅                 | ❌                 |
+| [`Reflect.ownKeys`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys)                                                                                                                                                                               | ✅                 | ❌                 | ✅                 | ❌                 |
+| [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in)                                                                                                                                                                                                 | ✅<br />（字符串） | ✅<br />（字符串） | ❌                 | ❌                 |
+| [`Object.assign`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)<br />（第一个参数之后）                                                                                                                                                           | ✅                 | ❌                 | ❌                 | ❌                 |
+| [对象展开](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)                                                                                                                                                                                               | ✅                 | ❌                 | ❌                 | ❌                 |
 
 ## 通过可枚举性和所有权获取对象的属性
 
-注：以下实现并非使用于所有情况的最优算法，但可以快捷的展示语言特性。
+注：以下实现并非是适用于所有情况的最优算法，但可以快捷的展示语言特性。
 
-- 使用 `SimplePropertyRetriever.theGetMethodYouWant(obj).indexOf(prop) > -1` 时将发生判断操作。
-- 使用 `SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});` 时将发生迭代操作。 (或使用 `filter()`、`map()` 等方法)
+- 使用 `SimplePropertyRetriever.theGetMethodYouWant(obj).includes(prop)` 时将发生检测操作。
+- 使用 `SimplePropertyRetriever.theGetMethodYouWant(obj).forEach((value, prop) => {}));` 时将发生迭代操作。（或使用 `filter()`、`map()` 等方法）
 
 ```js
-var SimplePropertyRetriever = {
-  getOwnEnumerables: function (obj) {
+const SimplePropertyRetriever = {
+  getOwnEnumerables(obj) {
     return this._getPropertyNames(obj, true, false, this._enumerable);
-    // Or could use for..in filtered with hasOwnProperty or just this: return Object.keys(obj);
+    // 或使用 for...in 和 Object.hasOwn 过滤，或者：return Object.keys(obj);
   },
-  getOwnNonenumerables: function (obj) {
+  getOwnNonenumerables(obj) {
     return this._getPropertyNames(obj, true, false, this._notEnumerable);
   },
-  getOwnEnumerablesAndNonenumerables: function (obj) {
+  getOwnEnumerablesAndNonenumerables(obj) {
     return this._getPropertyNames(
       obj,
       true,
       false,
       this._enumerableAndNotEnumerable,
     );
-    // Or just use: return Object.getOwnPropertyNames(obj);
+    // 或者仅使用：return Object.getOwnPropertyNames(obj);
   },
-  getPrototypeEnumerables: function (obj) {
+  getPrototypeEnumerables(obj) {
     return this._getPropertyNames(obj, false, true, this._enumerable);
   },
-  getPrototypeNonenumerables: function (obj) {
+  getPrototypeNonenumerables(obj) {
     return this._getPropertyNames(obj, false, true, this._notEnumerable);
   },
-  getPrototypeEnumerablesAndNonenumerables: function (obj) {
+  getPrototypeEnumerablesAndNonenumerables(obj) {
     return this._getPropertyNames(
       obj,
       false,
@@ -307,14 +86,14 @@ var SimplePropertyRetriever = {
       this._enumerableAndNotEnumerable,
     );
   },
-  getOwnAndPrototypeEnumerables: function (obj) {
+  getOwnAndPrototypeEnumerables(obj) {
     return this._getPropertyNames(obj, true, true, this._enumerable);
-    // Or could use unfiltered for..in
+    // 或者使用未过滤的 for...in
   },
-  getOwnAndPrototypeNonenumerables: function (obj) {
+  getOwnAndPrototypeNonenumerables(obj) {
     return this._getPropertyNames(obj, true, true, this._notEnumerable);
   },
-  getOwnAndPrototypeEnumerablesAndNonenumerables: function (obj) {
+  getOwnAndPrototypeEnumerablesAndNonenumerables(obj) {
     return this._getPropertyNames(
       obj,
       true,
@@ -322,61 +101,47 @@ var SimplePropertyRetriever = {
       this._enumerableAndNotEnumerable,
     );
   },
-  // Private static property checker callbacks
-  _enumerable: function (obj, prop) {
-    return obj.propertyIsEnumerable(prop);
+  // 私有的静态属性检查器回调
+  _enumerable(obj, prop) {
+    return Object.prototype.propertyIsEnumerable.call(obj, prop);
   },
-  _notEnumerable: function (obj, prop) {
-    return !obj.propertyIsEnumerable(prop);
+  _notEnumerable(obj, prop) {
+    return !Object.prototype.propertyIsEnumerable.call(obj, prop);
   },
-  _enumerableAndNotEnumerable: function (obj, prop) {
+  _enumerableAndNotEnumerable(obj, prop) {
     return true;
   },
-  // Inspired by http://stackoverflow.com/a/8024294/271577
-  _getPropertyNames: function getAllPropertyNames(
-    obj,
-    iterateSelfBool,
-    iteratePrototypeBool,
-    includePropCb,
-  ) {
-    var props = [];
-
+  // 受到 http://stackoverflow.com/a/8024294/271577 的启发
+  _getPropertyNames(obj, iterateSelf, iteratePrototype, shouldInclude) {
+    const props = [];
     do {
-      if (iterateSelfBool) {
-        Object.getOwnPropertyNames(obj).forEach(function (prop) {
-          if (props.indexOf(prop) === -1 && includePropCb(obj, prop)) {
+      if (iterateSelf) {
+        Object.getOwnPropertyNames(obj).forEach((prop) => {
+          if (props.indexOf(prop) === -1 && shouldInclude(obj, prop)) {
             props.push(prop);
           }
         });
       }
-      if (!iteratePrototypeBool) {
+      if (!iteratePrototype) {
         break;
       }
-      iterateSelfBool = true;
-    } while ((obj = Object.getPrototypeOf(obj)));
-
+      iterateSelf = true;
+      obj = Object.getPrototypeOf(obj);
+    } while (obj);
     return props;
   },
 };
 ```
 
-## 统计表
-
-|                    | `in` | `for..in` | `obj.hasOwnProperty` | `obj.propertyIsEnumerable` | `Object.keys` | `Object.getOwnPropertyNames` | `Object.getOwnPropertyDescriptors` | `Reflect.ownKeys()` |
-| ------------------ | ---- | --------- | -------------------- | -------------------------- | ------------- | ---------------------------- | ---------------------------------- | ------------------- |
-| 自身的可枚举属性   | true | true      | true                 | true                       | true          | true                         | true                               | true                |
-| 自身的不可枚举属性 | true | false     | true                 | false                      | false         | true                         | true                               | true                |
-| 自身的 Symbol 键   | true | false     | true                 | true                       | false         | false                        | true                               | true                |
-| 继承的可枚举属性   | true | true      | false                | false                      | false         | false                        | false                              | false               |
-| 继承的不可枚举属性 | true | false     | false                | false                      | false         | false                        | false                              | false               |
-| 继承的 Symbol 键   | true | false     | false                | false                      | false         | false                        | false                              | false               |
-
 ## 参见
 
 - [`in`](/zh-CN/docs/Web/JavaScript/Reference/Operators/in)
-- [`for..in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in)
-- {{jsxref("Object.hasOwnProperty()")}}
-- {{jsxref("Object.propertyIsEnumerable()")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.getOwnPropertyDescriptors()")}}
+- [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in)
+- [`Object.prototype.hasOwnProperty()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
+- [`Object.prototype.propertyIsEnumerable()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable)
+- [`Object.getOwnPropertyNames()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
+- [`Object.getOwnPropertySymbols()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols)
+- [`Object.keys()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
+- [`Object.getOwnPropertyDescriptors()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors)
+- [`Object.hasOwn()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)
+- [`Reflect.ownKeys()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys)

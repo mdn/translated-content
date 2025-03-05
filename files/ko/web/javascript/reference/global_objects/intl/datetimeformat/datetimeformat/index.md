@@ -7,7 +7,30 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
 
 **`Intl.DateTimeFormat`** 생성자는 언어에 맞는 날짜 및 시간 서식을 적용하기 위한 {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} 객체를 생성합니다.
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat", "taller")}}
+
+```js interactive-example
+const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
+// Results below assume UTC timezone - your results may vary
+
+// Specify default date formatting for language (locale)
+console.log(new Intl.DateTimeFormat("en-US").format(date));
+// Expected output: "12/20/2020"
+
+// Specify default date formatting for language with a fallback language (in this case Indonesian)
+console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
+// Expected output: "20/12/2020"
+
+// Specify date and time format using "style" options (i.e. full, long, medium, short)
+console.log(
+  new Intl.DateTimeFormat("en-GB", {
+    dateStyle: "full",
+    timeStyle: "long",
+    timeZone: "Australia/Sydney",
+  }).format(date),
+);
+// Expected output: "Sunday, 20 December 2020 at 14:23:16 GMT+11"
+```
 
 ## 구문
 
@@ -80,7 +103,7 @@ new Intl.DateTimeFormat(locales, options);
 
       - : (영어의 경우) "in the morning", "am", "noon", "n"처럼 시간의 위치를 나타낼 때 사용할 시간 서식입니다. "`narrow`", "`short`", " `long`" 등을 사용할 수 있습니다.
 
-      > **참고:**
+      > [!NOTE]
       >
       > - 12시간제 형식을 사용할 때만 결과의 차이가 있습니다.
       > - 한국어를 포함해, 많은 로케일에서는 지정한 너비에 상관하지 않고 같은 문자열을 반환합니다. ("새벽", "밤" 등)
@@ -195,7 +218,8 @@ new Intl.DateTimeFormat(locales, options);
         - "`shortGeneric`" 지역을 특정하지 않는 일반적인 형식 (`PT`)
         - "`longGeneric`" 지역을 특정하지 않는 긴 일반적인 형식 (`Pacific Time`)
 
-        > **참고:** 요구한 형식을 사용할 수 없을 경우 시간대 서식이 다른 형태로 대체될 수 있습니다. 예를 들어 지역을 특정하지 않는 서식의 경우 특정 국가나 도시 이름을 포함하지 않아야 하지만, "Los Angeles Time"처럼 필요할 경우 이름을 포함할 수 있습니다.
+        > [!NOTE]
+        > 요구한 형식을 사용할 수 없을 경우 시간대 서식이 다른 형태로 대체될 수 있습니다. 예를 들어 지역을 특정하지 않는 서식의 경우 특정 국가나 도시 이름을 포함하지 않아야 하지만, "Los Angeles Time"처럼 필요할 경우 이름을 포함할 수 있습니다.
 
     각 구성요소 속성의 기본값은 {{jsxref("undefined")}}입니다. 그러나 모든 속성이 `undefined`일 경우, `year`, `month`, `day`는 "`numeric`"으로 취급합니다.
 

@@ -2,7 +2,7 @@
 title: Notification：dir 属性
 slug: Web/API/Notification/dir
 l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
 {{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
@@ -20,7 +20,8 @@ l10n:
 - `rtl`
   - : 从右到左。
 
-> **备注：** 大多数浏览器似乎都忽略了明确的 ltr 和 rtl 设置，而是直接使用浏览器的通用设置。
+> [!NOTE]
+> 大多数浏览器似乎都忽略了明确的 ltr 和 rtl 设置，而是直接使用浏览器的通用设置。
 
 ## 示例
 

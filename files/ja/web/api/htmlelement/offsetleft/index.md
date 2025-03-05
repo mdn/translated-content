@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: offsetLeft プロパティ"
+short-title: offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
@@ -11,7 +12,7 @@ l10n:
 
 ブロックレベル要素では、 `offsetTop`, `offsetLeft`, `offsetWidth`, `offsetHeight` が `offsetParent` からの相対的な要素の境界ボックスを記述します。
 
-しかし、 (<strong>span</strong> などの) インラインレベル要素は行をまたいで折り返すことがあるので、 `offsetTop` および `offsetLeft` は*最初の*境界ボックス (その幅と高さを取得するには {{domxref("Element.getClientRects()")}} を使用) の位置を記述するのに対し、 `offsetWidth` および `offsetHeight` は*囲む*境界ボックス (位置を取得するには {{domxref("Element.getBoundingClientRect()")}} を使用) の寸法を記述します。したがって、 `offsetLeft`, `offsetTop`, `offsetWidth`, `offsetHeight` による左、上、幅、高さは折り返されたテキストの区間を囲むボックスにはなりません。
+しかし、 (**span** などの) インラインレベル要素は行をまたいで折り返すことがあるので、 `offsetTop` および `offsetLeft` は*最初の*境界ボックス (その幅と高さを取得するには {{domxref("Element.getClientRects()")}} を使用) の位置を記述するのに対し、 `offsetWidth` および `offsetHeight` は*囲む*境界ボックス (位置を取得するには {{domxref("Element.getBoundingClientRect()")}} を使用) の寸法を記述します。したがって、 `offsetLeft`, `offsetTop`, `offsetWidth`, `offsetHeight` による左、上、幅、高さは折り返されたテキストの区間を囲むボックスにはなりません。
 
 ## 値
 

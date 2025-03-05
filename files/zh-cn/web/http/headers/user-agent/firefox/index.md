@@ -23,7 +23,8 @@ Firefox 的用户代理字符串可被拆分为以下四个部分：
 - `Firefox/firefoxversion` 表示浏览器是 Firefox，并提供版本（如“`17.0`”）。
 - 从移动版 Firefox 10 开始，`geckotrail` 与 `firefoxversion` 相同。
 
-> **备注：** 嗅探基于 Gecko 的浏览器（如果你*必须*嗅探浏览器引擎而不是使用特性检测）的推荐方法是检测“`Gecko`”和“`rv:`”字符串是否存在，因为某些其他浏览器包含"`like Gecko`"标记。
+> [!NOTE]
+> 嗅探基于 Gecko 的浏览器（如果你*必须*嗅探浏览器引擎而不是使用特性检测）的推荐方法是检测“`Gecko`”和“`rv:`”字符串是否存在，因为某些其他浏览器包含"`like Gecko`"标记。
 
 对于其他基于 Gecko 的产品，UA 字符串会符合以下两个规则中的一个，除了下面的描述外，其他字段与上面描述的意义相同。
 
@@ -44,11 +45,13 @@ Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0
 Mozilla/5.0 (Android 4.4; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0
 ```
 
-> **备注：** 版本号无关。请避免据此推断材料。
+> [!NOTE]
+> 版本号无关。请避免据此推断材料。
 
 将内容定位到设备外形尺寸的首选方法是使用 CSS 媒体查询。但是，如果你使用 UA 嗅探将内容定位到设备外形，请在手机外形中查找 **Mobi**（包括使用 "Mobi "的 Opera Mobile），而**不要**假设“Android”与设备外形之间存在任何关联。这样，如果 Firefox 浏览器采用其他手机/平板电脑操作系统，或者笔记本电脑采用 Android 系统，你的代码也能正常工作。此外，请使用触摸检测来查找触摸设备，而不是查找“Mobi”或“Tablet”，因为可能存在不是平板电脑的触摸设备。
 
-> **备注：** Firefox OS 设备在标识自己时不标注任何操作系统，例如“Mozilla/5.0 (Mobile; rv:15.0) Gecko/15.0 Firefox/15.0”。web 就是它的平台。
+> [!NOTE]
+> Firefox OS 设备在标识自己时不标注任何操作系统，例如“Mozilla/5.0 (Mobile; rv:15.0) Gecko/15.0 Firefox/15.0”。web 就是它的平台。
 
 ## Windows
 
@@ -178,7 +181,8 @@ Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Ve
 | 2.2               | 37           |
 | 2.5               | 44           |
 
-> **备注：** 通过查看 [Mercurial 版本库名称](https://hg.mozilla.org/releases)，可以较容易地找出对应关系。其中以 `mozilla-b2g` 开头的发布便属于 Firefox OS，在其名字中包含了 Firefox OS 与 Gecko 的版本号。
+> [!NOTE]
+> 通过查看 [Mercurial 版本库名称](https://hg.mozilla.org/releases)，可以较容易地找出对应关系。其中以 `mozilla-b2g` 开头的发布便属于 Firefox OS，在其名字中包含了 Firefox OS 与 Gecko 的版本号。
 
 Firefox OS 的版本号由 4 位数字组成：`X.X.X.Y`。前两位数字由 Mozilla 产品团队决定，表明是包含新特性的版本（如：v1.1, 1.2 等）。第三位数字随安全更新而自增（约 6 周左右），第四位数字由 OEM 维护。
 

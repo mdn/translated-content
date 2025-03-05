@@ -15,7 +15,8 @@ l10n:
 
 在 HTML 5 之前，返回的对象是一个基于 `HTMLFormControlsCollection` 的 {{domxref("HTMLCollection")}}。
 
-> **备注：** 同样，你也可以使用文档中的 {{domxref("Document.forms", "forms")}} 属性获取给定文档中包含的所有表单的列表。
+> [!NOTE]
+> 同样，你也可以使用文档中的 {{domxref("Document.forms", "forms")}} 属性获取给定文档中包含的所有表单的列表。
 
 ## 值
 

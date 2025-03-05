@@ -25,7 +25,7 @@ console.info(msg [, subst1, ..., substN]);
 - `subst1` ... `substN`
   - : `Objeto javascript o qual substitui strings com msg. Isso permite controle adicional sobre o formato da saída.`
 
-Veja [Outputting text to the console](/pt-BR/docs/Web/API/console#Outputting_text_to_the_console) na documentação {{domxref("console")}} para mais detalhes.
+Veja [Outputting text to the console](/pt-BR/docs/Web/API/console#outputting_text_to_the_console) na documentação {{domxref("console")}} para mais detalhes.
 
 ## Especificações
 
@@ -37,5 +37,5 @@ Veja [Outputting text to the console](/pt-BR/docs/Web/API/console#Outputting_tex
 
 ## Veja também
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
 - [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)

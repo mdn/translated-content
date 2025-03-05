@@ -21,7 +21,8 @@ JavaScript は動的であり、固定的な型がないことから、クラス
 
 JavaScript のオブジェクトはプロパティ（**自身のプロパティ**を指す）の動的な「袋」です。 JavaScript のオブジェクトは、プロトタイプオブジェクトへのリンクを持っています。あるオブジェクトのプロパティにアクセスしようとすると、オブジェクトだけでなく、オブジェクトのプロトタイプ、プロトタイプのプロトタイプへと、一致する名前のプロパティが得られるか、プロトタイプチェーンの終端に到達するまで、プロパティの探索が行われます。
 
-> **メモ:** ECMAScript 標準に従い、 `someObject.[[Prototype]]` という表記を `someObject` のプロトタイプを示すのに使用しています。内部スロット `[[Prototype]]` には {{jsxref("Object.getPrototypeOf()")}} と {{jsxref("Object.setPrototypeOf()")}} 関数でアクセスすることができます。これは、標準ではないが、多くのJavaScriptエンジンで事実上実装されている JavaScript のアクセサー [`__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) と同等のものです。混乱を避けつつ簡潔にするために、ここでは `obj.__proto__` の使用を避け、代わりに `obj.[[Prototype]]` を使用することにします。これは `Object.getPrototypeOf(obj)` に対応するものです。
+> [!NOTE]
+> ECMAScript 標準に従い、 `someObject.[[Prototype]]` という表記を `someObject` のプロトタイプを示すのに使用しています。内部スロット `[[Prototype]]` には {{jsxref("Object.getPrototypeOf()")}} と {{jsxref("Object.setPrototypeOf()")}} 関数でアクセスすることができます。これは、標準ではないが、多くのJavaScriptエンジンで事実上実装されている JavaScript のアクセサー [`__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) と同等のものです。混乱を避けつつ簡潔にするために、ここでは `obj.__proto__` の使用を避け、代わりに `obj.[[Prototype]]` を使用することにします。これは `Object.getPrototypeOf(obj)` に対応するものです。
 >
 > これを関数の `func.prototype` プロパティと混同してはいけません。このプロパティは、指定された関数がコンストラクターとして使用されたときに作成されるオブジェクトのすべての「インスタンス」に割り当てられる `[[Prototype]]` を指定します。コンストラクター関数の `prototype` プロパティについては、[後の節](#コンストラクター)で説明します。
 
@@ -191,9 +192,10 @@ Box.prototype.getValue = function () {
 const boxes = [new Box(1), new Box(2), new Box(3)];
 ```
 
-`new Box(1)` は `Box` コンストラクター関数から生成された「インスタンス」と言います。 `Box.prototype` は前回作成した `boxPrototype` オブジェクトと大きな違いはなく、ただのオブジェクトです。コンストラクター関数から作成されたインスタンスは、自動的にコンストラクターの [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) プロパティを `[[Prototype]]` として保有します。つまり、 `Object.getPrototypeOf(new Box()) === Box.prototype` となります。 `Constructor.prototype` は既定で [`constructor`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) という自身のプロパティを 1 つ持ち、これがコンストラクター関数自身を参照します。つまり、 `Box.prototype.constructor === Box` になります。これにより、あらゆるインスタンスから元のコンストラクターにアクセスできるようになります。
+`new Box(1)` は `Box` コンストラクター関数から生成された「インスタンス」と言います。 `Box.prototype` は前回作成した `boxPrototype` オブジェクトと大きな違いはなく、ただのオブジェクトです。コンストラクター関数から作成されたインスタンスは、自動的にコンストラクターの [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティを `[[Prototype]]` として保有します。つまり、 `Object.getPrototypeOf(new Box()) === Box.prototype` となります。 `Constructor.prototype` は既定で [`constructor`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) という自身のプロパティを 1 つ持ち、これがコンストラクター関数自身を参照します。つまり、 `Box.prototype.constructor === Box` になります。これにより、あらゆるインスタンスから元のコンストラクターにアクセスできるようになります。
 
-> **メモ:** コンストラクター関数からプリミティブでない値が返された場合、その値が `new` 式の結果となります。この場合、`[[Prototype]]`は正しく結び付けられていないかもしれませんが、実際にはあまり起こらないはずです。
+> [!NOTE]
+> コンストラクター関数からプリミティブでない値が返された場合、その値が `new` 式の結果となります。この場合、`[[Prototype]]`は正しく結び付けられていないかもしれませんが、実際にはあまり起こらないはずです。
 
 上記のコンストラクター関数は、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)で書き直すことができます。
 
@@ -265,7 +267,8 @@ const regexp = new RegExp("abc");
 
 例えば、 [`map()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map) のような「配列のメソッド」は、単に `Array.prototype` で定義されたメソッドであり、そのため、すべての配列のインスタンスで自動的に利用することができます。
 
-> **警告:** かつて使用されていた誤った使い方が 1 つあります。 `Object.prototype` または他の組み込みプロトタイプのいずれかを拡張することです。この誤った使い方の例として、`Array.prototype.myMethod = function () {...}` を定義して、すべての配列インスタンスで `myMethod` できるようにするというものがあります。
+> [!WARNING]
+> かつて使用されていた誤った使い方が 1 つあります。 `Object.prototype` または他の組み込みプロトタイプのいずれかを拡張することです。この誤った使い方の例として、`Array.prototype.myMethod = function () {...}` を定義して、すべての配列インスタンスで `myMethod` できるようにするというものがあります。
 >
 > この誤った使い方は、「モンキーパッチ」と呼ばれています。モンキーパッチは前方互換性を損なう危険性があり、将来、言語がこのメソッドを別のシグネチャで追加した場合、コードが壊れてしまうからです。 [SmooshGate](https://developer.chrome.com/blog/smooshgate/) のような事件を引き起こし、 JavaScript が「ウェブを壊さない」ようにしようとするため、言語の進歩にとって非常に厄介な存在となりえます。
 >
@@ -367,7 +370,8 @@ console.log(doSomethingFromArrowFunction.prototype);
 }
 ```
 
-> **メモ:** Chrome のコンソールでは、 `[[Prototype]]` を使用してオブジェクトのプロトタイプを示しており、仕様の用語に従っています。Firefoxでは `<prototype>` を使用しています。一貫性を保つために、ここでは `[[Prototype]]` を使用します。
+> [!NOTE]
+> Chrome のコンソールでは、 `[[Prototype]]` を使用してオブジェクトのプロトタイプを示しており、仕様の用語に従っています。Firefoxでは `<prototype>` を使用しています。一貫性を保つために、ここでは `[[Prototype]]` を使用します。
 
 以下のように、 `doSomething()` のプロトタイプにプロパティを追加することができます。
 

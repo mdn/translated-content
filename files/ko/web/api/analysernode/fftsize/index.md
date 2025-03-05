@@ -20,7 +20,8 @@ FFT의 window 사이즈를 나타내는 샘플의 수로 주어지는 unsigned �
 
 반드시 <math><semantics><msup><mn>2</mn><mn>5</mn></msup><annotation encoding="TeX">2^5</annotation></semantics></math>와 <math><semantics><msup><mn>2</mn><mn>15</mn></msup><annotation encoding="TeX">2^15</annotation></semantics></math> 사이의 2의 제곱이여야만 합니다. 즉 다음 중 하나여야 합니다: `32`, `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`, `16384`, 그리고 `32768`. 기본값은 `2048`입니다.
 
-> **참고:** 만약 값이 2의 제곱이 아니거나 이 명시된 범위의 바깥에 있다면, `IndexSizeError`라는 이름의 {{domxref("DOMException")}}이 발생합니다.
+> [!NOTE]
+> 만약 값이 2의 제곱이 아니거나 이 명시된 범위의 바깥에 있다면, `IndexSizeError`라는 이름의 {{domxref("DOMException")}}이 발생합니다.
 
 ## 예제
 

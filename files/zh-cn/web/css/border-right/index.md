@@ -1,58 +1,85 @@
 ---
 title: border-right
 slug: Web/CSS/border-right
+l10n:
+  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
 {{CSSRef}}
 
-CSS 属性 **border-`right`** 是属性{{ Cssxref("border-right-color") }}, {{ Cssxref("border-right-style") }}, 和{{ Cssxref("border-right-width") }}的三者的缩写。这些属性都是在描述一个元素的右边的边框[`border`](/zh-CN/docs/Web/CSS/border)。
+**`border-right`** [CSS](/zh-CN/docs/Web/CSS) [简写](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)属性用于设置元素右[边框](/zh-CN/docs/Web/CSS/border)的所有属性。
+
+{{EmbedInteractiveExample("pages/css/border-right.html")}}
+
+与所有简写属性一样，`border-right` 始终设置它可以设置的所有属性的值，即使这些属性未被明确指定。它将那些未指定的值设置为默认值。请看下面的代码：
+
+```css
+border-right-style: dotted;
+border-right: thick green;
+```
+
+实际上，它和这个是一样的：
+
+```css
+border-right-style: dotted;
+border-right: none thick green;
+```
+
+在 `border-right` 之前给定的 {{cssxref("border-right-style")}} 的值将被忽略。由于 {{cssxref("border-right-style")}} 的默认值是 `none`，如果没有指定 `border-style` 部分，则不会显示边框。
+
+## 组成属性
+
+该属性为以下 CSS 属性的简写：
+
+- {{cssxref("border-right-color")}}
+- {{cssxref("border-right-style")}}
+- {{cssxref("border-right-width")}}
+
+## 语法
 
 ```css
 border-right: 1px;
 border-right: 2px dotted;
 border-right: medium dashed green;
+
+/* 全局值 */
+border-right: inherit;
+border-right: initial;
+border-right: revert;
+border-right: revert-layer;
+border-right: unset;
 ```
 
-> **备注：** 和 CSS 所有的缩写属性一样，border-`right` 总是会设置该缩写属性所包含的全部属性值，即使开发者并没有一一指定这些值。CSS 缩写属性会给没有被定义的属性一个默认的属性值。那就意味着下面这个例子......
->
-> ```css
-> border-right-style: dotted;
-> border-right: thick green;
-> ```
->
-> ......实际上应该是下面这个样子......
->
-> ```css
-> border-right-style: dotted;
-> border-right: none thick green;
-> ```
->
-> ......并且在 border-`right` 之前定义的 {{ Cssxref("border-right-style") }} 的值也会被覆盖。由于{{ Cssxref("border-right-style") }} 的默认值是 none, border-style 的最终结果就是没有边框。
+简写属性的三个值可以任意顺序指定，也可以省略其中的一个或两个值。
 
-{{cssinfo}}
-
-## Syntax
-
-这三种属性值的缩写需要按照顺序定义数值，也可以省略其中的一个或者两个。
-
-### Values
+### 值
 
 - `<br-width>`
-  - : 请参阅 {{ Cssxref("border-right-width") }}.
+  - : 参见 {{cssxref("border-right-width")}}。
 - `<br-style>`
-  - : 请参阅 {{ Cssxref("border-right-style") }}.
-- `{{cssxref("&lt;color&gt;")}}`
-  - : 请参阅 {{ Cssxref("border-right-color") }}.
+  - : 参见 {{cssxref("border-right-style")}}。
+- {{cssxref("&lt;color&gt;")}}
+  - : 参见 {{cssxref("border-right-color")}}。
 
-### Formal syntax
+## 形式定义
+
+{{CSSInfo}}
+
+## 形式语法
 
 {{csssyntax}}
 
-## Example
+## 示例
+
+### 应用右侧边框
+
+#### HTML
 
 ```html
-<div>This box has a border on the right side.</div>
+<div>这个盒子在右侧有一个边框。</div>
 ```
+
+#### CSS
 
 ```css
 div {
@@ -65,12 +92,20 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Example') }}
+#### 结果
 
-## Specifications
+{{EmbedLiveSample('应用右侧边框')}}
+
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{cssxref("border")}}
+- {{cssxref("border-block")}}
+- {{cssxref("outline")}}

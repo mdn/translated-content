@@ -25,7 +25,7 @@ _Herada métodos de la interfaz padre,_ _{{domxref("HTMLElement")}}._
 - {{domxref("HTMLCanvasElement.captureStream()")}} {{experimental_inline}}
   - : Retorna un {{domxref("CanvasCaptureMediaStream")}} que es una captura de video en tiempo real, de la superficie del canvas.
 - {{domxref("HTMLCanvasElement.getContext()")}}
-  - : Retorna el contexto del dibujado del canvas, o bien null(nulo) si el ID de contexto no está soportado. Un contexto de dibujo, te permite dibujar sobre el canvas. Llamando al método getContext con el parámetro `"2d"` retorna un objeto {{domxref("CanvasRenderingContext2D")}} , mientras que el llamarlo con el parámetroca `"experimental-webgl"` (o `"webgl"`) retorna un objeto {{domxref("WebGLRenderingContext")}} . Este tipo de contexto sólo está disponible en navegadores que implementen [WebGL](/es/docs/Web/WebGL).
+  - : Retorna el contexto del dibujado del canvas, o bien null(nulo) si el ID de contexto no está soportado. Un contexto de dibujo, te permite dibujar sobre el canvas. Llamando al método getContext con el parámetro `"2d"` retorna un objeto {{domxref("CanvasRenderingContext2D")}} , mientras que el llamarlo con el parámetroca `"experimental-webgl"` (o `"webgl"`) retorna un objeto {{domxref("WebGLRenderingContext")}} . Este tipo de contexto sólo está disponible en navegadores que implementen [WebGL](/es/docs/Web/API/WebGL_API).
 - {{domxref("HTMLCanvasElement.toDataURL()")}}
   - : Retorna una data-URL conteniendo una representación de la imagen en el formato especificado por el tipo de parámetro(png por defecto). La imagen de retorno se encuentra a una resolución de 96dpi.
 - {{domxref("HTMLCanvasElement.toBlob()")}}
@@ -34,7 +34,8 @@ _Herada métodos de la interfaz padre,_ _{{domxref("HTMLElement")}}._
 
   - : Retorna un objeto {{domxref("File")}} representando una imagen contenida en el canvas; este archivo es del tipo memory-based, con su nombre especificado. Si el tipo no se especifica, el tipo usado por defecto es `image/png`.
 
-    > **Nota:** Sólo puede ser invocado desde Chrome.
+    > [!NOTE]
+    > Sólo puede ser invocado desde Chrome.
 
 ## Especificaciones
 

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Console API")}}
 
-La méthode **`console.time()`** démarre un chronomètre qui permet de mesurer la durée d'une opération. Chaque chronomètre peut être identifié avec un nom donné et on peut avoir jusqu'à 10&nbsp;000 chronomètres simultanés sur une même page. Lorsqu'on appelle [`console.timeEnd()`](/fr/docs/Web/API/console/timeend_static) avec le même nom, la durée associée depuis le démarrage du chronomètre correspondant s'affichera dans la console (exprimée en millisecondes).
+La méthode **`console.time()`** démarre un chronomètre qui permet de mesurer la durée d'une opération. Chaque chronomètre peut être identifié avec un nom donné et on peut avoir jusqu'à 10&nbsp;000 chronomètres simultanés sur une même page. Lorsqu'on appelle [`console.timeEnd()`](/fr/docs/Web/API/console/timeEnd_static) avec le même nom, la durée associée depuis le démarrage du chronomètre correspondant s'affichera dans la console (exprimée en millisecondes).
 
 Voir [la section sur les chronomètres de la documentation de `console`](/fr/docs/Web/API/console#chronomètres) pour plus de détails et d'exemples.
 
@@ -23,7 +23,7 @@ time(libelle)
 ### Paramètres
 
 - `libelle` {{optional_inline}}
-  - : Une chaîne de caractères qui représente le nom à donner au chronomètre. Ce nom servira d'identifiant, qu'il faudra passer à [`console.timeEnd()`](/fr/docs/Web/API/console/timeend_static) pour arrêter le chronomètre correspondant. Si cet argument est omis, le libellé `"default"` sera utilisé.
+  - : Une chaîne de caractères qui représente le nom à donner au chronomètre. Ce nom servira d'identifiant, qu'il faudra passer à [`console.timeEnd()`](/fr/docs/Web/API/console/timeEnd_static) pour arrêter le chronomètre correspondant. Si cet argument est omis, le libellé `"default"` sera utilisé.
 
 ### Valeur de retour
 
@@ -39,5 +39,5 @@ Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 
 ## Voir aussi
 
-- [`console.timeEnd()`](/fr/docs/Web/API/console/timeend_static)
-- [`console.timeLog()`](/fr/docs/Web/API/console/timelog_static)
+- [`console.timeEnd()`](/fr/docs/Web/API/console/timeEnd_static)
+- [`console.timeLog()`](/fr/docs/Web/API/console/timeLog_static)

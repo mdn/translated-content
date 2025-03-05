@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/raw
 
 ## Сводка
 
-Статический метод **`String.raw()`** является теговой функцией для [шаблонных строк](/ru/docs/Web/JavaScript/Reference/template_strings); подобно префиксу `r` в Python или префиксу `@` в C# для строковых литералов, эта функция используется для получения необработанной строки из шаблона.
+Статический метод **`String.raw()`** является теговой функцией для [шаблонных строк](/ru/docs/Web/JavaScript/Reference/Template_literals); подобно префиксу `r` в Python или префиксу `@` в C# для строковых литералов, эта функция используется для получения необработанной строки из шаблона.
 
 ## Синтаксис
 
@@ -25,7 +25,7 @@ String.raw`templateString`
 - `...substitutions`
   - : Значения подстановок.
 - `templateString`
-  - : [Шаблонная строка](/ru/docs/Web/JavaScript/Reference/template_strings), возможно с подстановками (`${...}`).
+  - : [Шаблонная строка](/ru/docs/Web/JavaScript/Reference/Template_literals), возможно с подстановками (`${...}`).
 
 ### Выбрасываемые исключения
 
@@ -34,7 +34,7 @@ String.raw`templateString`
 
 ## Описание
 
-В большинстве случаев метод `String.raw()` используется вместе с шаблонными строками. Первый синтаксис, показанный выше, используется редко, поскольку движок JavaScript будет вызывать метод с соответствующими аргументами, подобно другим [теговым функциям](/ru/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings).
+В большинстве случаев метод `String.raw()` используется вместе с шаблонными строками. Первый синтаксис, показанный выше, используется редко, поскольку движок JavaScript будет вызывать метод с соответствующими аргументами, подобно другим [теговым функциям](/ru/docs/Web/JavaScript/Reference/Template_literals#tagged_template_strings).
 
 Метод `String.raw()` является единственной встроенной теговой функцией шаблонных строк, выступающей стандартной функцией по объединению их фрагментов. Вы и сами могли бы реализовать подобную функциональность на JavaScript.
 
@@ -74,6 +74,6 @@ String.raw({ raw: "тест" }, 0, 1, 2);
 
 ## Смотрите также
 
-- [Шаблонные строки](/ru/docs/Web/JavaScript/Reference/template_strings)
+- [Шаблонные строки](/ru/docs/Web/JavaScript/Reference/Template_literals)
 - {{jsxref("Global_Objects/String", "String")}}
 - [Лексическая грамматика](/ru/docs/Web/JavaScript/Reference/Lexical_grammar)

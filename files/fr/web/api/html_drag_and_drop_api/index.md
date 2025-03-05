@@ -21,18 +21,19 @@ Lors des opérations de déplacement, plusieurs évènements sont déclenchés (
 
 Chaque [type d'évènement de déplacement](/fr/docs/Web/API/DragEvent#Event_types) possède un [gestionnaire d'évènement global (une méthode `on...`)](/fr/docs/Web/API/DragEvent#GlobalEventHandlers) :
 
-| Évènement                                                   | Gestionnaire d'évènement global                              | Déclenchement                                                                                                                                                                             |
-| ----------------------------------------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`drag`](/fr/docs/Web/API/HTMLElement/drag_event)           | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}           | …un objet déplaçable (que ce soit un élément ou une sélection de texte) est déplacée.                                                                                                     |
-| [`dragend`](/fr/docs/Web/API/HTMLElement/dragend_event)     | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | …une opération de déplacement se termine (en relâchant le bouton de la souris ou en utilisant la touche Echap, voir [Terminer un déplacement](/fr/docs/DragDrop/Drag_Operations#dragend)) |
-| [`dragenter`](/fr/docs/Web/API/HTMLElement/dragenter_event) | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | …un élément en cours de déplacement arrive sur une zone de dépôt valide (voir [indiquer une cible de destination](/fr/docs/DragDrop/Drag_Operations#droptargets)).                        |
-| [`dragexit`](/fr/docs/Web/API/HTMLElement/dragexit_event)   | {{domxref('GlobalEventHandlers.ondragexit','ondragexit')}}   | …un élément n'est plus la sélection immédiate du déplacement.                                                                                                                             |
-| [`dragleave`](/fr/docs/Web/API/HTMLElement/dragleave_event) | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | …un élément en cours de déplacement quitte une zone de dépôt valide.                                                                                                                      |
-| [`dragover`](/fr/docs/Web/API/HTMLElement/dragover_event)   | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}   | …un élément en cours de déplacement est en cours de survol d'une zone de dépôt valide (cet évènement est déclenché toutes les quelques centaines de millisecondes).                       |
-| [`dragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event) | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | …l'utilisateur commence à déplacer un élément (voir [démarrer une opération de glissement](/fr/docs/DragDrop/Drag_Operations#dragstart)).                                                 |
-| [`drop`](/fr/docs/Web/API/HTMLElement/drop_event)           | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}           | …un élément est déposé sur une cible valide (voir [déposer un élément](/fr/docs/DragDrop/Drag_Operations#drop)).                                                                          |
+| Évènement                                                   | Gestionnaire d'évènement global                              | Déclenchement                                                                                                                                                                                                   |
+| ----------------------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`drag`](/fr/docs/Web/API/HTMLElement/drag_event)           | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}           | …un objet déplaçable (que ce soit un élément ou une sélection de texte) est déplacée.                                                                                                                           |
+| [`dragend`](/fr/docs/Web/API/HTMLElement/dragend_event)     | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | …une opération de déplacement se termine (en relâchant le bouton de la souris ou en utilisant la touche Echap, voir [Terminer un déplacement](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend)) |
+| [`dragenter`](/fr/docs/Web/API/HTMLElement/dragenter_event) | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | …un élément en cours de déplacement arrive sur une zone de dépôt valide (voir [indiquer une cible de destination](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets)).                        |
+| [`dragexit`](/fr/docs/Web/API/HTMLElement/dragexit_event)   | {{domxref('GlobalEventHandlers.ondragexit','ondragexit')}}   | …un élément n'est plus la sélection immédiate du déplacement.                                                                                                                                                   |
+| [`dragleave`](/fr/docs/Web/API/HTMLElement/dragleave_event) | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | …un élément en cours de déplacement quitte une zone de dépôt valide.                                                                                                                                            |
+| [`dragover`](/fr/docs/Web/API/HTMLElement/dragover_event)   | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}   | …un élément en cours de déplacement est en cours de survol d'une zone de dépôt valide (cet évènement est déclenché toutes les quelques centaines de millisecondes).                                             |
+| [`dragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event) | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | …l'utilisateur commence à déplacer un élément (voir [démarrer une opération de glissement](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragstart)).                                                 |
+| [`drop`](/fr/docs/Web/API/HTMLElement/drop_event)           | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}           | …un élément est déposé sur une cible valide (voir [déposer un élément](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop)).                                                                          |
 
-> **Note :** Les évènements `dragstart` et `dragend` ne sont pas déclenchés lors qu'on glisse-dépose un fichier de l'appareil dans le navigateur.
+> [!NOTE]
+> Les évènements `dragstart` et `dragend` ne sont pas déclenchés lors qu'on glisse-dépose un fichier de l'appareil dans le navigateur.
 
 ## Interfaces
 
@@ -59,7 +60,7 @@ La différence principale entre {{domxref("DataTransfer")}} et {{domxref("DataTr
 
 ### Interfaces spécifiques à Gecko
 
-Mozilla / Firefox prend en charge certaines fonctionnalités qui ne font pas partie du modèle standard. Ce sont des fonctions utilitaires pour aider au déplacement de plusieurs objets ou de données qui ne sont pas du texte (des fichiers par exemple). Pour plus d'informations, voir [Glisser-déposer plusieurs objets](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items). Voir aussi la page de référence de {{domxref("DataTransfer")}} pour la liste de l'ensemble [des propriétés spécifique à Gecko](/fr/docs/Web/API/DataTransfer#Gecko_properties) et [des méthodes spécifiques à Gecko](/fr/docs/Web/API/DataTransfer#Gecko_methods).
+Mozilla / Firefox prend en charge certaines fonctionnalités qui ne font pas partie du modèle standard. Ce sont des fonctions utilitaires pour aider au déplacement de plusieurs objets ou de données qui ne sont pas du texte (des fichiers par exemple). Pour plus d'informations, voir [Glisser-déposer plusieurs objets](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items). Voir aussi la page de référence de {{domxref("DataTransfer")}} pour la liste de l'ensemble [des propriétés spécifique à Gecko](/fr/docs/Web/API/DataTransfer#gecko_properties) et [des méthodes spécifiques à Gecko](/fr/docs/Web/API/DataTransfer#gecko_methods).
 
 ## Bases
 
@@ -82,7 +83,7 @@ Pour qu'un élément puisse être déplacé, il faut lui ajouter l'attribut [`dr
 </p>
 ```
 
-Voir [la page de référence sur l'attribut `draggable`](/fr/docs/Web/HTML/Global_attributes/draggable) et [le guide sur les opérations de déplacement](/fr/docs/Web/Guide/HTML/Drag_operations#draggableattribute) pour plus d'informations.
+Voir [la page de référence sur l'attribut `draggable`](/fr/docs/Web/HTML/Global_attributes/draggable) et [le guide sur les opérations de déplacement](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute) pour plus d'informations.
 
 ### Définir les données déplacées
 
@@ -102,7 +103,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-Pour connaître la liste des types de donnée communément utilisées lors d'un glisser/déposer (texte, HTML, liens, fichiers, etc.), voir [les types recommandés](/fr/docs/DragDrop/Recommended_Drag_Types). Pour plus d'informations sur les informations transportées, voir [Drag Data](/fr/docs/Web/Guide/HTML/Drag_operations#dragdata).
+Pour connaître la liste des types de donnée communément utilisées lors d'un glisser/déposer (texte, HTML, liens, fichiers, etc.), voir [les types recommandés](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types). Pour plus d'informations sur les informations transportées, voir [Drag Data](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragdata).
 
 ### Définir l'image pour le déplacement
 
@@ -119,7 +120,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-Pour en savoir plus, voir [Définir l'image de _feedback_ pour le glisser-déposer](/fr/docs/DragDrop/Drag_Operations#dragfeedback).
+Pour en savoir plus, voir [Définir l'image de _feedback_ pour le glisser-déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragfeedback).
 
 ### Définir l'effet de déplacement
 
@@ -141,7 +142,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-See [Drag Effects](/fr/docs/Web/Guide/HTML/Drag_operations#drageffects) for more details.
+See [Drag Effects](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drageffects) for more details.
 
 ### Définir la zone où déposer l'élément déplacé
 
@@ -171,7 +172,7 @@ Par défaut, le navigateur empêche de déposer quoi que ce soit sur la plupart 
 
 On voit ici que chaque gestionnaire invoque {{domxref("Event.preventDefault","preventDefault()")}} afin d'éviter toute gestion d'évènement ultérieure (comme [les évènements tactiles](/fr/docs/Web/API/Touch_events) ou [les évènements de pointeur](/fr/docs/Web/API/Pointer_events)).
 
-Pour plus d'information, voir [Indiquer une cible pour un glisser-déposer](/fr/docs/Web/Guide/HTML/Drag_operations#droptargets).
+Pour plus d'information, voir [Indiquer une cible pour un glisser-déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets).
 
 ### Gérer le dépôt de l'objet
 
@@ -210,13 +211,13 @@ Dans l'exemple suivant, on montre un gestionnaire pour le dépot de l'objet : on
 </div>
 ```
 
-Pour plus d'information, voir [Gérer le dépôt lors d'une opération de glisser-déposer](/fr/docs/Web/Guide/HTML/Drag_operations#drop).
+Pour plus d'information, voir [Gérer le dépôt lors d'une opération de glisser-déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop).
 
 ### Terminer l'opération de glisser/déposer
 
 À la fin de l'opération, c'est l'évènement [`dragend`](/fr/docs/Web/API/HTMLElement/dragend_event) qui est déclenché _sur l'élément source_ (celui qui a été "saisi" au début). Cet évènement est déclenché lorsque l'opération est terminée ou qu'elle a été annulée. Le gestionnaire d'évènement pour [`dragend`](/fr/docs/Web/API/HTMLElement/dragend_event) peut vérifier la valeur de la propriété {{domxref("DataTransfer.dropEffect","dropEffect")}} afin de déterminer si l'opération a réussi ou non.
 
-Pour plus d'informations sur la gestion de la fin d'une opération de glisser-déposer, voir [Terminer un glisser-déposer](/fr/docs/DragDrop/Drag_Operations#dragend).
+Pour plus d'informations sur la gestion de la fin d'une opération de glisser-déposer, voir [Terminer un glisser-déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend).
 
 ## Interopérabilité
 
@@ -225,7 +226,7 @@ Comme on peut le voir [dans le tableau de compatibilité pour l'interface `DataT
 ## Exemples et démos
 
 - [Copier et déplacer des éléments avec l'interface `DataTransfer`](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html)
-- [Copier et déplacer des éléments avec l'interface `DataTransferListItem`](http://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
+- [Copier et déplacer des éléments avec l'interface `DataTransferListItem`](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
 - [JSBin : Glisser-déposer des fichiers](https://jsbin.com/hiqasek/edit?html,js,output)
 - [Un parking réalisé avec l'API Drag and Drop](https://park.glitch.me/) ([lien pour éditer le code](https://glitch.com/edit/#!/park))
 

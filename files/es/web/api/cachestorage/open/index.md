@@ -10,7 +10,8 @@ El método **`open()`** de la interfaz {{domxref("CacheStorage")}} devuelve una 
 Puedes acceder a `CacheStorage` a través de la propiedad global
 {{domxref("caches")}}.
 
-> **Nota:** Si la {{domxref("Cache")}} especificada no existe, se crea
+> [!NOTE]
+> Si la {{domxref("Cache")}} especificada no existe, se crea
 > una nueva caché con ese `cacheName` y una {{jsxref("Promise")}} que
 > resuelve este nuevo objeto {{domxref("Cache")}} devuelto.
 

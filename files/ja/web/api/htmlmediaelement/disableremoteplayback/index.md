@@ -1,17 +1,18 @@
 ---
-title: HTMLMediaElement.disableRemotePlayback
+title: "HTMLMediaElement: disableRemotePlayback プロパティ"
+short-title: disableRemotePlayback
 slug: Web/API/HTMLMediaElement/disableRemotePlayback
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: 0b6bfb8a3a03de5956dd1cec4b47e5e37078149d
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Remote Playback API")}}
 
-**`HTMLMediaElement.disableRemotePlayback`** プロパティは、メディア要素がリモート再生 UI を持つことを許可するかどうかを決定します。
+**`disableRemotePlayback`** は {{domxref("HTMLMediaElement")}} インターフェイスのプロパティで、このメディア要素がリモート再生 UI を持つことを許可するかどうかを決定します。
 
 ## 値
 
-メディア要素がリモート再生 UI を持つことができるかどうかを示す論理値。（false は「無効ではない」、すなわち「有効」を意味します）
+論理値で、このメディア要素がリモート再生 UI を持つことができるかどうかを示します。（`false` は「無効ではない」、すなわち「有効」を意味します）
 
 ## 例
 
@@ -30,4 +31,5 @@ obj.disableRemotePlayback = true;
 
 ## 関連情報
 
-- 定義している {{domxref("HTMLMediaElement")}} インターフェイス
+- [`<audio>` 要素の `disableremoteplayback` 属性](/ja/docs/Web/HTML/Element/audio#disableremoteplayback)
+- [`<video>` 要素の `disableremoteplayback` 属性](/ja/docs/Web/HTML/Element/video#disableremoteplayback)

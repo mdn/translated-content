@@ -21,9 +21,9 @@ slug: Web/API/WebVR_API/Concepts
 
 那么有什么值得我们期待的呢？VR 硬件需要传输高精度的信息，在保证低延迟的情况下传递可接受的用户的体感信息；运行 VR 设备和程序的电脑，必需强大到足以维持这些庞大的信息。直到最近的这几年，如此高精度并且能量强大的设备，才能通过大众可以接受的价格被购买到。早期的 VR 原型设备，需要花费数万美元，然而最近出现的 [Oculus Rift](https://www.oculus.com/rift/) developer kit 却仅售 $350，并且还有更加便宜的解决方案，比如基于手机的 VR 设备像是 [Google Cardboard](https://www.google.com/get/cardboard/)。
 
-在软件方面，Valve 开发了 [SteamVR](http://store.steampowered.com/universe/vr) 软件系统，能够与 VIVE 和其他解决方案兼容，并提供软件访问权限，例如可用的 VR 用户界面。
+在软件方面，Valve 开发了 [SteamVR](https://store.steampowered.com/universe/vr) 软件系统，能够与 VIVE 和其他解决方案兼容，并提供软件访问权限，例如可用的 VR 用户界面。
 
-三星公司同 Oculus 合作，也推出了它的头戴设备 [GearVR](http://www.samsung.com/global/microsite/gearvr/gearvr_features.html)，这款设备可以连接旗下的 NOTE4 以及 6S 等手机。然而这款设备仅仅能够运行几款纯粹的 APP 应用，因而相对于 WEBVR 的特效领域而言，显得不是那么的有意思。
+三星公司同 Oculus 合作，也推出了它的头戴设备 [GearVR](https://www.samsung.com/global/microsite/gearvr/gearvr_features.html)，这款设备可以连接旗下的 NOTE4 以及 6S 等手机。然而这款设备仅仅能够运行几款纯粹的 APP 应用，因而相对于 WEBVR 的特效领域而言，显得不是那么的有意思。
 
 科技已经发展到了今天，随着时间的推移，只会有更多的昂贵的头显设备变得越来越便宜，从而令更多的人在将来能够亲自体验虚拟现实的乐趣。
 
@@ -38,12 +38,13 @@ slug: Web/API/WebVR_API/Concepts
 - 手机：通过使用一部智能手机可以营造一部头显设备（HMD）——扮演 VR 显示器的角色——安装在一个像谷歌 CARDBOARD 那样的 VR 框架中，其中包含了必需要有的透镜，用以提供投射在手机屏幕上的立体视觉效果。![Mobile based VR setup](mobilebasedvrsetup.png)
 - 电脑：将一部 VR 设备连接到你的电脑上——它是由一部包含了能分别为左眼和右眼显示图像的高分辨率全景镜头所组成的头显设备所组成，同时它还包含了两块分别为双眼配备的，可以提升左右眼图像分离（立体视觉）的透镜。这套设备还包含了一套分离式的感应设备，它能够测算出你的头部的位置/方向/速度/加速度等信息，并实时的把这些信息传输给计算机。![Computer based VR Setup](computerbasedvrsetup.png)
 
-> **备注：** 通过电脑连接的系统有时候不会包含定位传感装置，但是通常情况下都会有。
+> [!NOTE]
+> 通过电脑连接的系统有时候不会包含定位传感装置，但是通常情况下都会有。
 
 其余的帮助补充完整的 VR 体验的硬件包括：
 
 - 手持传感识别器：一个可以追踪你的手部位置和运动的传感器，这使得它变成了一个非常有趣的控制器，以及一件存在于 VR 游戏世界种的物体。迄今为止，最先进的这类设备首属 [Leap Motion](https://www.leapmotion.com/)，它可以同电脑配合使用（同 Oculus Rift 设备连接）并且同时还可以和手机兼容（暂时处于实验阶段）。
-- （手机）游戏手柄：我们可以配置一套 XBOX 控制器或者类似的设备作为浏览器的键盘——这种方法提供了另一种同 VR 网页互动的形式。有一些游戏手柄更可以和手机协同使用——就像 [MergeVR headset](http://www.mergevr.com/)——但是这些方法都是通过蓝牙连接设备的方法，并不能完全等同于和 WEBVR 结合。
+- （手机）游戏手柄：我们可以配置一套 XBOX 控制器或者类似的设备作为浏览器的键盘——这种方法提供了另一种同 VR 网页互动的形式。有一些游戏手柄更可以和手机协同使用——就像 [MergeVR headset](https://www.mergevr.com/)——但是这些方法都是通过蓝牙连接设备的方法，并不能完全等同于和 WEBVR 结合。
 - 眼动追踪传感器（实验产品）：FOVE 项目是第一个研究用于追踪和读取人眼运动设备的项目。
 - 面部表情追踪设备（实验产品）：位于南加州大学和 Facebook 的 Oculus 部门的研究人员，已经开始测试更多新的追踪人类面部表情并且能把他们转换成虚拟现实角色的方法。
 - 更加复杂的位置传感系统：SteamVR 控制器，结合了 [Lighthouse](http://www.roadtovr.com/steamvr-beta-update-brings-lighthouse-support-and-vr-tracking-app/) 追踪系统，旨在实现帮助我们能在一个 10x10 平方英尺的 VR 空间范围内自由活动的目的。
@@ -97,7 +98,8 @@ FOV 是通过下列的值来定义的：
 
 不同的使用者将会为了达成尽量完美的视觉体验，而要求略有不同的特性数值。因此，我们有理由在使用者开始使用一个 APP 之前，对这些特性进行测算。你可以使用{{domxref("VREyeParameters")}} 接口，并使用 {{domxref("HMDVRDevice.setFieldOfView()")}} 方法设置新的值，以侦测当前的特性值。
 
-> **备注：** 使用者可以看到所有他们身边的事物，这是一个 APP 和游戏中出现的全新的概念。那就是，试着传达给人们一个发现他们身后事物的理由——引导他们去发现那些在一开始并没有出现在他们视野中的事物。描述他们身后的世界。
+> [!NOTE]
+> 使用者可以看到所有他们身边的事物，这是一个 APP 和游戏中出现的全新的概念。那就是，试着传达给人们一个发现他们身后事物的理由——引导他们去发现那些在一开始并没有出现在他们视野中的事物。描述他们身后的世界。
 
 ## VR APP 的概念
 

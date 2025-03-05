@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
 
 **解構賦值** (Destructuring assignment) 語法是一種 JavaScript 運算式，可以把陣列或物件中的資料解開擷取成為獨立變數。
 
-{{EmbedInteractiveExample("pages/js/expressions-destructuringassignment.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Destructuring assignment", "taller")}}
+
+```js interactive-example
+let a, b, rest;
+[a, b] = [10, 20];
+
+console.log(a);
+// Expected output: 10
+
+console.log(b);
+// Expected output: 20
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+
+console.log(rest);
+// Expected output: Array [30, 40, 50]
+```
 
 ## 語法
 
@@ -207,7 +223,8 @@ let a, b;
 ({ a, b } = { a: 1, b: 2 });
 ```
 
-> **備註：** 當針對物件進行解構，而該句式沒有進行宣告時，指派式外必須加上括號 `( ... )` 。
+> [!NOTE]
+> 當針對物件進行解構，而該句式沒有進行宣告時，指派式外必須加上括號 `( ... )` 。
 >
 > `{a, b} = {a: 1, b: 2}` 不是有效的獨立語法，因為左邊的 `{a, b}` 被視為程式碼區塊而非物件。
 >
@@ -295,7 +312,8 @@ drawChart({
 });
 ```
 
-> **備註：** 在上述函式 **`drawChart`** 中，左方之解構式被指派到一個空物件: `{size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}` 。你也可以略過填寫右方的指派式。不過，當你沒有使用右方指派式時，函式在呼叫時會找出最少一個參數。透過上述形式，你可以直接不使用參數的呼叫 **`drawChart()`** 。當你希望在呼叫這個函式時不傳送參數，這個設計會帶來方便。而另一個設計則能讓你確保函式必須傳上一個物件作為參數。
+> [!NOTE]
+> 在上述函式 **`drawChart`** 中，左方之解構式被指派到一個空物件: `{size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}` 。你也可以略過填寫右方的指派式。不過，當你沒有使用右方指派式時，函式在呼叫時會找出最少一個參數。透過上述形式，你可以直接不使用參數的呼叫 **`drawChart()`** 。當你希望在呼叫這個函式時不傳送參數，這個設計會帶來方便。而另一個設計則能讓你確保函式必須傳上一個物件作為參數。
 
 ### 巢狀物件或陣列的解構
 
@@ -433,5 +451,5 @@ const {self, prot} = obj;
 
 ## 參見
 
-- [Assignment operators](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
+- [Assignment operators](/zh-TW/docs/Web/JavaScript/Reference/Operators#assignment_operators)
 - ["ES6 in Depth: Destructuring" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/)

@@ -1,77 +1,61 @@
 ---
-title: <dl>
+title: <dl> 설명 목록 요소
 slug: Web/HTML/Element/dl
+l10n:
+  sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
 ---
 
 {{HTMLSidebar}}
 
 **HTML `<dl>` 요소**는 설명 목록을 나타냅니다. `<dl>`은 {{htmlelement("dt")}}로 표기한 용어와 {{htmlelement("dd")}} 요소로 표기한 설명 그룹의 목록을 감싸서 설명 목록을 생성합니다. 주로 용어사전 구현이나 메타데이터(키-값 쌍 목록)를 표시할 때 사용합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;dl&gt;", "tabbed-standard")}}
 
-The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) and send us a pull request.
+```html interactive-example
+<p>Cryptids of Cornwall:</p>
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a
-          href="/ko/docs/Web/Guide/HTML/%EC%BB%A8%ED%85%90%ED%8A%B8_%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC"
-          >콘텐츠 카테고리</a
-        >
-      </th>
-      <td>
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#플로우_콘텐츠"
-          >플로우 콘텐츠</a
-        >. <code>&#x3C;dl></code>의 자식 중 이름-값 그룹이 있으면 뚜렷한 콘텐츠.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 콘텐츠</th>
-      <td>
-        <p>
-          하나 이상의 {{htmlelement("dt")}} 요소와 하나 이상의
-          {{htmlelement("dd")}} 요소로 구성한 그룹 0개 이상. 선택적으로
-          {{htmlelement("script")}}와
-          {{htmlelement("template")}}을 혼합 가능.<br />또는, 하나
-          이상의 {{htmlelement("div")}}. 선택적으로
-          {{htmlelement("script")}}, {{htmlelement("template")}}
-          혼합 가능.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 부모 요소</th>
-      <td>
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#플로우_콘텐츠"
-          >플로우 콘텐츠</a
-        >를 허용하는 모든 요소.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 ARIA 역할</th>
-      <td>
-        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 인터페이스</th>
-      <td>{{domxref("HTMLDListElement")}}</td>
-    </tr>
-  </tbody>
-</table>
+<dl>
+  <dt>Beast of Bodmin</dt>
+  <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+  <dt>Morgawr</dt>
+  <dd>A sea serpent.</dd>
+
+  <dt>Owlman</dt>
+  <dd>A giant owl-like creature.</dd>
+</dl>
+```
+
+```css interactive-example
+p,
+dt {
+  font-weight: bold;
+}
+
+dl,
+dd {
+  font-size: 0.9rem;
+}
+
+dd {
+  margin-bottom: 1em;
+}
+```
 
 ## 특성
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
+## 접근성 고려사항
+
+각각의 스크린 리더는 `<dl>`를 다르게 표현합니다. 즉, 총 아이템의 개수, 용어/정의 컨텍스트 및 탐색 방법등을 다르게 노출합니다. 이러한 차이가 반드시 버그는 아닙니다. iOS 14부터의 VoiceOver는 전체 읽기 멍령이 아닌 가상 커서 탐색 시, `<dl>` 콘텐츠가 목록임을 알립니다. VoiceOver는 `<dl>`를 이용한 목록 탐색을 지원하지 않습니다. ARIA 용어 및 정의 역할을 `<dl>` 구조에 적용하면 macOS 및 iOS에서 VoiceOver의 읽기 방식이 조정되므로 주의해야 합니다.
+
+- [iOS14에서의 VoiceOver 설명 목록 지원](https://adrianroselli.com/2020/09/voiceover-on-ios-14-supports-description-lists.html)
+- [설명 목록 지원에 대한 개략](https://adrianroselli.com/2022/12/brief-note-on-description-list-support.html)
+
 ## 예제
 
-### 하나의 용어와 하나의 정의
+### 단일 용어와 단일 정의
 
 ```html
 <dl>
@@ -85,9 +69,11 @@ The source for this interactive example is stored in a GitHub repository. If you
 </dl>
 ```
 
-{{EmbedLiveSample("하나의_용어와_하나의_정의")}}
+#### 결과
 
-### 여러 개의 용어와 하나의 정의
+{{EmbedLiveSample("Single_term_and_description")}}
+
+### 복수 용어와 단일 정의
 
 ```html
 <dl>
@@ -103,9 +89,11 @@ The source for this interactive example is stored in a GitHub repository. If you
 </dl>
 ```
 
-{{EmbedLiveSample("여러_개의_용어와_하나의_정의")}}
+#### 결과
 
-### 하나의 용어와 여러 개의 정의
+{{EmbedLiveSample("Multiple_terms_single_description")}}
+
+### 단일 용어와 복수 정의
 
 ```html
 <dl>
@@ -123,9 +111,11 @@ The source for this interactive example is stored in a GitHub repository. If you
 </dl>
 ```
 
-{{EmbedLiveSample("하나의_용어와_여러_개의_정의")}}
+#### 결과
 
-### 여러 개의 용어와 여러 개의 정의
+{{EmbedLiveSample("Single_term_multiple_descriptions")}}
+
+### 복수 용어와 복수 정의
 
 위의 예제를 결합하여 여러 용어를 여러 정의와 연결하는 것도 가능합니다.
 
@@ -146,7 +136,11 @@ The source for this interactive example is stored in a GitHub repository. If you
 </dl>
 ```
 
-팁: 아래처럼 키-값 구분자를 CSS로 지정하면 편리합니다.
+#### 결과
+
+{{EmbedLiveSample("Metadata")}}
+
+팁: 아래처럼 키-값 구분자를 CSS로 지정하면 유용합니다.
 
 ```css
 dt:after {
@@ -154,11 +148,9 @@ dt:after {
 }
 ```
 
-{{EmbedLiveSample("메타데이터")}}
+### 이름-값 그룹을 `<div>`로 감싸기
 
-### 이름-값 그룹을 {{htmlelement("div")}}로 감싸기
-
-{{glossary("WHATWG")}} HTML에서는 `<dl>` 안 각각의 이름-값 그룹을 {{htmlelement("div")}}로 감쌀 수 있습니다. 마이크로데이터를 사용할 때, 그룹에 전역 특성을 적용할 때, 아니면 스타일을 적용할 때 유용할 수 있습니다.
+HTML에서는 `<dl>` 요소의 각 이름-값 그룹을 {{htmlelement("div")}} 요소로 감쌀 수 있습니다. 이는 마이크로데이터를 사용하거나 전역 속성이 전체 그룹에 적용될 때 또는 스타일링 목적으로 유용할 수 있습니다.
 
 ```html
 <dl>
@@ -181,17 +173,80 @@ dt:after {
 </dl>
 ```
 
+#### 결과
+
+{{EmbedLiveSample('Wrapping name-value groups in `div` elements')}}
+
 ## 참고
 
 페이지에서 들여쓰기를 하기 위한 목적으로 `<dl>` (또는 {{htmlelement("ul")}}) 요소를 사용하지 마세요. 작동할 수는 있으나 좋지 않은 방법이고, 설명 목록의 원래 목적을 흐립니다.
 
 용어의 들여쓰기를 수정하려면 [CSS](/ko/docs/Web/CSS) {{cssxref("margin")}} 속성을 사용하세요.
 
-## 접근성 고려사항
+## 기술 요약
 
-각각의 스크린 리더는 `<dl>`을 다르게 표현합니다. iOS의 VoiceOver 등 일부 스크린 리더는 `<dl>`의 콘텐츠를 리스트로 표현하지 않습니다. 따라서, 각 아이템의 콘텐츠는 리스트 그룹 내 다른 항목과의 관계를 표현할 수 있는 방식으로 작성해야 합니다.
-
-- [CodePen - HTML Buddies: dt & dd](https://s.codepen.io/aardrian/debug/NzGaKP)
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a
+          href="/ko/docs/Web/HTML/Content_categories"
+          >콘텐츠 카테고리</a
+        >
+      </th>
+      <td>
+        <a href="/ko/docs/Web/HTML/Content_categories#플로우_콘텐츠"
+          >플로우 콘텐츠</a
+        >, 만약 <code>&#x3C;dl></code>의 자식 중 이름-값 그룹이 포함된 경우에는 <a href="/ko/docs/Web/HTML/Content_categories#뚜렷한_콘텐츠">뚜렷한 콘텐츠.</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">가능한 콘텐츠</th>
+      <td>
+        <p>
+          하나 이상의 {{htmlelement("dt")}} 요소와 하나 이상의
+          {{htmlelement("dd")}} 요소로 구성한 그룹 0개 이상. 선택적으로
+          {{htmlelement("script")}}와
+          {{htmlelement("template")}}을 혼합 가능.<br />또는, 하나
+          이상의 {{htmlelement("div")}}. 선택적으로
+          {{htmlelement("script")}}, {{htmlelement("template")}}
+          혼합 가능.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">태그 생략</th>
+      <td>불가능, 시작과 끝에 태그를 추가 필수.</td>
+    </tr>
+    <tr>
+      <th scope="row">가능한 부모 요소</th>
+      <td>
+        <a href="/ko/docs/Web/HTML/Content_categories#플로우_콘텐츠"
+          >플로우 콘텐츠</a
+        >를 허용하는 모든 요소.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">암시적 ARIA 역할</th>
+      <td>
+        <a href='https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role'>해당 역할 없음</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">가능한 ARIA 역할</th>
+      <td>
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/list_role'><code>list</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/none_role'><code>none</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 인터페이스</th>
+      <td>{{domxref("HTMLDListElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 명세
 

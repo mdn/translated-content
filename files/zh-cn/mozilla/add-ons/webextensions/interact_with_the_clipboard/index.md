@@ -21,7 +21,8 @@ navigator.clipboard.readText().then((text) => (outputElem.innerText = text));
 
 这将请求剪贴板内容，并且当接收到响应时存储剪贴板文本到一个元素的 {{domxref("Node.innerText", "innerText")}}.
 
-> **备注：** 异步的 Clipboard API 方法是一个近期新增的规范，并且这个规范可能不适用于所有浏览器。请在使用前测试了每一种方法的兼容性，以确保支持满足你的需求。
+> [!NOTE]
+> 异步的 Clipboard API 方法是一个近期新增的规范，并且这个规范可能不适用于所有浏览器。请在使用前测试了每一种方法的兼容性，以确保支持满足你的需求。
 
 ## 写入系统粘贴板
 
@@ -69,9 +70,7 @@ browser.alarms.onAlarm.addListener(copy);
 
 这种触发不一定成功，它取决于浏览器是否支持。Firefox 浏览器就不支持该功能，你会在浏览器控制台中看到以下信息：
 
-```
-"document.execCommand(‘cut’/‘copy’) was denied because it was not called from inside a short running user-generated event handler."
-```
+`document.execCommand('cut'/'copy') was denied because it was not called from inside a short running user-generated event handler.`
 
 为了能够在这种情形下使用，你需要拥有"clipboardWrite"的权限（ [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)）。因此，"clipboardWrite"权限能使你不通过临时事件处理程序就可以写入系统粘贴板中。
 
@@ -166,4 +165,4 @@ navigator.clipboard
 
 ### 特定浏览器注意事项
 
-Firefox 在 54 版本提供了 `"clipboardRead"` [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) ，但是仅支持向处于 [内容可编辑模式](/zh-CN/docs/Web/Guide/HTML/Editable_content) 的元素粘贴，对于内容脚本，只能在 {{HTMLElement("textarea")}} 工作。对于后台脚本，任何元素都可被设置为内容可编辑模式。
+Firefox 在 54 版本提供了 `"clipboardRead"` [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) ，但是仅支持向处于 [内容可编辑模式](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable) 的元素粘贴，对于内容脚本，只能在 {{HTMLElement("textarea")}} 工作。对于后台脚本，任何元素都可被设置为内容可编辑模式。

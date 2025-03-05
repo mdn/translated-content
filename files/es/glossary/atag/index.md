@@ -15,5 +15,5 @@ ATAG (Authoring Tool {{glossary("Accessibility")}} Guidelines/Pautas de accesibi
 
 ### Referencia técnica
 
-- [Resumen de Authoring Tool Accessibility Guidelines (ATAG)](http://www.w3.org/WAI/intro/atag.php)
-- [La recomendación ATAG 2.0](http://www.w3.org/TR/ATAG20/)
+- [Resumen de Authoring Tool Accessibility Guidelines (ATAG)](https://www.w3.org/WAI/intro/atag.php)
+- [La recomendación ATAG 2.0](https://www.w3.org/TR/ATAG20/)

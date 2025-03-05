@@ -11,7 +11,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 
 下面的例子能够帮助你理解 `reduce()` 的用处——计算数组所有元素的总和：
 
-{{EmbedInteractiveExample("pages/js/array-reduce.html")}}
+{{InteractiveExample("JavaScript Demo: Array.reduce()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+console.log(sumWithInitial);
+// Expected output: 10
+```
 
 reducer 逐个遍历数组元素，每一步都将当前元素的值与前一步的结果相加（该结果是之前所有步骤结果的总和）——直到没有更多需要相加的元素。
 
@@ -62,7 +76,8 @@ reduce(callbackFn, initialValue)
 - 对已访问索引的更改不会导致再次在这些元素上调用 `callbackFn`。
 - 如果数组中一个现有的、尚未访问的元素被 `callbackFn` 更改，则它传递给 `callbackFn` 的值将是该元素被修改后的值。被[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)的元素则不会被访问。
 
-> **警告：** 上述类型的并发修改经常导致难以理解的代码，通常应避免（特殊情况除外）。
+> [!WARNING]
+> 上述类型的并发修改经常导致难以理解的代码，通常应避免（特殊情况除外）。
 
 `reduce()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 
@@ -256,7 +271,8 @@ console.log(allbooks);
 
 ### 数组去重
 
-> **备注：** 可以使用 {{jsxref("Set")}} 和 {{jsxref("Array.from()")}} 来实现相同的效果，如 `const arrayWithNoDuplicates = Array.from(new Set(myArray))`，并且性能更好。
+> [!NOTE]
+> 可以使用 {{jsxref("Set")}} 和 {{jsxref("Array.from()")}} 来实现相同的效果，如 `const arrayWithNoDuplicates = Array.from(new Set(myArray))`，并且性能更好。
 
 ```js
 const myArray = ["a", "b", "a", "b", "c", "e", "e", "c", "d", "d", "d", "d"];
@@ -397,7 +413,7 @@ console.log(Array.prototype.reduce.call(arrayLike, (x, y) => x + y));
 ## 参见
 
 - [`core-js` 中 `Array.prototype.reduce` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.flat()")}}

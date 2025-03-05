@@ -7,7 +7,8 @@ l10n:
 
 {{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
-> **メモ:** WebVR API は [WebXR API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として批准されることはなく、ごく少数のブラウザーでしか既定で実装・有効化されず、少数の端末しか対応していませんでした。
+> [!NOTE]
+> WebVR API は [WebXR API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として批准されることはなく、ごく少数のブラウザーでしか既定で実装・有効化されず、少数の端末しか対応していませんでした。
 
 WebVR は、バーチャルリアリティデバイス — 例えば Oculus Rift のようなヘッドマウントディスプレイ — をウェブアプリへ公開し、ヘッドマウントディスプレイの位置や動きを 3D 空間上の動きへと変換する手助けを行います。これによって、バーチャルな製品紹介やインタラクティブな訓練アプリといったものから超臨場感のファーストパーソン・シューティングゲームといったものまで、非常に面白い様々なアプリケーションをつくることができます。
 
@@ -38,7 +39,7 @@ WebVR は、バーチャルリアリティデバイス — 例えば Oculus Rift
 
 ウェブ標準として承認されることのなかった WebVR API は、標準化プロセスの終了に向けて順調に進んでいる [WebXR API](/ja/docs/Web/API/WebXR_Device_API) に取って代わられて非推奨となりました。そのため、既存のコードを更新して、代わりに新しい API を使用するようにしてください。一般的には、移行はあまり苦痛のないものになるはずです。
 
-さらに、端末やブラウザーによっては、 WebVR は HTTPS 接続を介して安全なコンテキストを使用してページをロードする必要があります。ページが完全に安全でない場合、 WebVR のメソッドや機能は利用できません。これは、 {{domxref("Navigator")}} の {{domxref("Navigator.getVRDisplays", "getVRDisplays()")}} メソッドが `NULL` であるかどうかを確認することで簡単にテストできます。
+さらに、端末やブラウザーによっては、 WebVR は HTTPS 接続を介して保護されたコンテキストを使用してページをロードする必要があります。ページが完全に安全でない場合、 WebVR のメソッドや機能は利用できません。これは、 {{domxref("Navigator")}} の {{domxref("Navigator.getVRDisplays", "getVRDisplays()")}} メソッドが `NULL` であるかどうかを確認することで簡単にテストできます。
 
 ```js
 if (!navigator.getVRDisplays) {

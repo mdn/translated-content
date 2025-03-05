@@ -38,4 +38,4 @@ socket.addEventListener("message", function (event) {
 - [WebSocket: close event](/zh-CN/docs/Web/API/WebSocket/close_event)
 - [WebSocket: error event](/zh-CN/docs/Web/API/WebSocket/error_event)
 - [WebSocket: open event](/zh-CN/docs/Web/API/WebSocket/open_event)
-- [Writing WebSocket client applications](/zh-CN/docs/WebSockets/Writing_WebSocket_client_applications)
+- [Writing WebSocket client applications](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)

@@ -99,7 +99,8 @@ Pour des raisons de compatibilité, la propriété historique {{cssxref("page-br
 | `avoid`            | `avoid`       |
 | `always`           | `page`        |
 
-> **Note :** La valeur `always` de `page-break-*` a été implémenté par les navigateurs comme une rupture de page et pas comme une rupture de colonne. C'est pourquoi l'alias correspondant à cette valeur est `page` et pas `always`.
+> [!NOTE]
+> La valeur `always` de `page-break-*` a été implémenté par les navigateurs comme une rupture de page et pas comme une rupture de colonne. C'est pourquoi l'alias correspondant à cette valeur est `page` et pas `always`.
 
 ## Exemples
 

@@ -45,7 +45,7 @@ window.addEventListener("vrdisplaydisconnect", function () {
 });
 ```
 
-Ou utilisez la propriété du gestionnaire d'événements [`onvrdisplaydisconnect`](/fr/docs/Web/API/Window/onvrdisplaydisconnect) :
+Ou utilisez la propriété du gestionnaire d'événements [`onvrdisplaydisconnect`](/fr/docs/Web/API/Window/vrdisplaydisconnect_event) :
 
 ```js
 window.onvrdisplaydisconnect = function() {

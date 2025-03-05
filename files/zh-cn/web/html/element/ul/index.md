@@ -9,7 +9,30 @@ l10n:
 
 [HTML](/zh-CN/docs/Web/HTML) **`<ul>`** 元素表示无序的项目列表，通常渲染为项目符号列表。
 
-{{EmbedInteractiveExample("pages/tabbed/ul.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;ul&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<ul>
+  <li>Milk</li>
+  <li>
+    Cheese
+    <ul>
+      <li>Blue cheese</li>
+      <li>Feta</li>
+    </ul>
+  </li>
+</ul>
+```
+
+```css interactive-example
+li {
+  list-style-type: circle;
+}
+
+li li {
+  list-style-type: square;
+}
+```
 
 ## 属性
 
@@ -19,7 +42,8 @@ l10n:
 
   - : 此布尔属性提示列表是否需要被渲染为更紧凑的样式。{{glossary("user agent", "用户代理")}}决定如何解释这个属性，且并非所有浏览器都支持它。
 
-    > **警告：** 请不要使用这个属性，它已经被弃用了：请使用 [CSS](/zh-CN/docs/Web/CSS) 来更改样式。如果想达到与 `compact` 属性相同的效果，将 CSS 属性 {{cssxref("line-height")}} 的值设为 `80%` 即可。
+    > [!WARNING]
+    > 请不要使用这个属性，它已经被弃用了：请使用 [CSS](/zh-CN/docs/Web/CSS) 来更改样式。如果想达到与 `compact` 属性相同的效果，将 CSS 属性 {{cssxref("line-height")}} 的值设为 `80%` 即可。
 
 - `type` {{Deprecated_inline}}
 
@@ -33,7 +57,8 @@ l10n:
 
     如果未设置此 HTML 属性且没有 [CSS](/zh-CN/docs/Web/CSS) {{ cssxref("list-style-type") }} 属性作用于这个元素，用户代理会决定使用哪种着重号样式，一般来说这也和嵌套的层级数有关。
 
-    > **警告：** 请不要使用这个属性，它已经被弃用了：请使用 [CSS](/zh-CN/docs/Web/CSS) {{ cssxref("list-style-type") }} 属性作为代替。
+    > [!WARNING]
+    > 请不要使用这个属性，它已经被弃用了：请使用 [CSS](/zh-CN/docs/Web/CSS) {{ cssxref("list-style-type") }} 属性作为代替。
 
 ## 使用说明
 

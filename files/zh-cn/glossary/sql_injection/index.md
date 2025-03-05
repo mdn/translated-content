@@ -2,7 +2,7 @@
 title: SQL 注入
 slug: Glossary/SQL_Injection
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: b2af4eb16dd4c399ed81f67efd49777fa6ae9030
 ---
 
 {{GlossarySidebar}}
@@ -11,7 +11,9 @@ SQL 注入利用了未能验证用户输入的 Web 应用程序。黑客可以�
 
 SQL 注入可以获得对数据库的未经授权的访问，或直接从数据库检索信息。许多数据泄露事件都是由于 SQL 注入造成的。
 
-[![显示最常见漏洞的饼状图：SQL 注入占 50%，跨站脚本占 42%，源代码泄露占 7%。](sql_inj_xss.gif)](https://cdn.acunetix.com/wp_content/uploads/2010/09/sql_inj_xss.gif)
+![显示最常见漏洞的饼状图：SQL 注入占 50%，跨站脚本占 42%，源代码泄露占 7%。](sql_inj_xss.gif)
+
+[原始来源](https://cdn.acunetix.com/wp_content/uploads/2010/09/sql_inj_xss.gif)
 
 ## 如何实现
 

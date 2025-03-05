@@ -1,40 +1,40 @@
 ---
-title: ":only-of-type"
+title: :only-of-type
 slug: Web/CSS/:only-of-type
+l10n:
+  sourceCommit: 71d9840f3da24005b015d3d103b358d4f9f46819
 ---
 
 {{CSSRef}}
 
-## Описание
+CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:only-of-type`** выбирает элемент, который является единственным потомком своего типа.
 
-[CSS](/ru/docs/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:only-of-type` выбирает такой элемент, который является единственным потомком такого типа.
-
-```css
-/* Выбирает все <p>, которые являются */
-/* единственным потомками типа <p> */
-p:only-of-type {
-  background-color: lime;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-only-of-type.html", "tabbed-shorter")}}
 
 ## Синтаксис
 
-{{csssyntax}}
+```css
+:only-of-type {
+  /* ... */
+}
+```
 
-## Пример
+## Примеры
+
+### Применение стилей к элементам, которые являются единственными потомками своего типа
 
 #### HTML
 
 ```html
 <main>
-  <div>Я <code>div</code> №1.</div>
-  <p>Я тут единственный <code>p</code> элемент.</p>
-  <div>Я <code>div</code> №2.</div>
+  <div>Я элемент `div` #1.</div>
+  <p>Я единственный элемент `p` у своего родителя.</p>
+  <div>Я элемент `div` #2.</div>
   <div>
-    Я <code>div</code> №3.
-    <i>Я единственный потомок типа <code>i</code>.</i>
-    <em>Я <code>em</code> №1.</em>
-    <em>Я <code>em</code> №2.</em>
+    Я элемент `div` #3.
+    <i>Я единственный элемент `i` у своего родителя.</i>
+    <em>Я элемент `em` #1.</em>
+    <em>Я элемент `em` #2.</em>
   </div>
 </main>
 ```
@@ -49,7 +49,7 @@ main :only-of-type {
 
 #### Результат
 
-{{ EmbedLiveSample('Пример') }}
+{{EmbedLiveSample('Применение стилей к элементам, которые являются единственными потомками своего типа', '100%', 180)}}
 
 ## Спецификации
 
@@ -61,4 +61,7 @@ main :only-of-type {
 
 ## Смотрите также
 
-- {{Cssxref(":nth-of-type")}}, {{Cssxref(":first-of-type")}}, {{Cssxref(":last-of-type")}}
+- {{Cssxref(":only-child")}}
+- {{Cssxref(":first-of-type")}}
+- {{Cssxref(":last-of-type")}}
+- {{Cssxref(":nth-of-type")}}

@@ -2,7 +2,7 @@
 title: border-image
 slug: Web/CSS/border-image
 l10n:
-  sourceCommit: 41ad12d12544ea08825f7c0405061cd83190e18a
+  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
 {{CSSRef}}
@@ -11,7 +11,8 @@ l10n:
 
 {{EmbedInteractiveExample("pages/css/border-image.html")}}
 
-> **メモ:** 境界画像の読み込みに失敗したときのために、 {{cssxref("border-style")}} を指定してください。仕様では厳密には要求されていませんが、{{cssxref("border-style")}} が `none` または {{cssxref("border-width")}} が `0` の場合、境界画像を描画しないブラウザーもあります。
+> [!NOTE]
+> 境界画像の読み込みに失敗したときのために、 {{cssxref("border-style")}} を指定してください。仕様では厳密には要求されていませんが、{{cssxref("border-style")}} が `none` または {{cssxref("border-width")}} が `0` の場合、境界画像を描画しないブラウザーもあります。
 
 ## 構成要素のプロパティ
 
@@ -63,7 +64,7 @@ border-image: unset;
 - `<'border-image-repeat'>`
   - : source の画像の辺の領域を境界画像の寸法にどのように合わせるかを定義します。2つまでの値が指定できます。 {{cssxref("border-image-repeat")}} を参照してください。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 支援技術は境界画像を解釈することができません。画像にページ全体の目的を理解するために重要な情報が含まれている場合は、文書内に意味的に記述したほうがいいでしょう。
 
@@ -84,17 +85,19 @@ border-image: unset;
 
 この例では、要素の境界にダイヤモンド模様を適用します。 source の画像は、縦と横にダイヤモンドが 3 つずつ並んだ 81 × 81 ピクセルの ".png" ファイルです。
 
-![境界画像の例](border.png)
+![8 つのダイヤ： 4 つの赤いダイヤが各コーナーに 1 つずつ、 4 つのオレンジのダイヤが各辺に 1 つずつ。真ん中は空。](border.png)
 
 #### HTML
 
-```html
-<div id="bitmap">この要素はビットマップベースの境界画像に囲まれています。</div>
+```html-nolint
+<div id="bitmap">
+  この要素はビットマップベースの境界画像に囲まれています。
+</div>
 ```
 
 #### CSS
 
-個々のダイヤモンドの大きさに一致するように、3で割れる81の値を使用するか、角と辺の領域を分割するための `27` を使用します。境界画像が要素の背景の辺の中央になるように、 outset の値を幅の半分にします。最後に、 `round` に repeat の値を設定して、境界線の断片が等分に合うように、つまり、クリッピングをしたり隙間ができたりしないようにします。
+個々のダイヤモンドの大きさに一致するように、 3 で割れる 81 の値を使用するか、角と辺の領域を分割するための `27` を使用します。境界画像が要素の背景の辺の中央になるように、 outset の値を幅の半分にします。最後に、 `round` に repeat の値を設定して、境界線の断片が等分に合うように、つまり、クリッピングをしたり隙間ができたりしないようにします。
 
 ```css
 #bitmap {
@@ -117,8 +120,10 @@ border-image: unset;
 
 #### HTML
 
-```html
-<div id="gradient">この要素はグラデーションの境界に囲まれています。</div>
+```html-nolint
+<div id="gradient">
+  この要素はグラデーションの境界に囲まれています。
+</div>
 ```
 
 #### CSS
@@ -136,6 +141,41 @@ border-image: unset;
 
 {{EmbedLiveSample('グラデーション')}}
 
+### 角丸の境界線
+
+{{cssxref("border-radius")}} は境界画像に効果がありません。これは、 {{cssxref("border-image-outset")}} は画像を境界ボックスの外に置くことができるので、境界画像が境界領域でクリップされることに意味がないからです。境界画像を使用して角を丸めるには、画像自体の角を丸めて作成するか、グラデーションの場合は背景として描画する必要があります。次の例では、境界線を拡張する画像とパディング枠に使用する画像の 2 つの {{cssxref("background-image")}}を使用する手法を示します。
+
+#### HTML
+
+```html-nolint
+<div id="rounded">
+  この要素は、角が丸められた境界線で囲まれています！
+</div>
+```
+
+#### CSS
+
+```css
+#rounded {
+  width: 200px;
+  /* Use transparent so the background image is visible */
+  border: 10px solid transparent;
+  padding: 20px;
+  border-radius: 20px;
+  background-image:
+    linear-gradient(white, white), linear-gradient(to right, cyan, lime);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('rounded_borders')}}
+
+> [!NOTE]
+> この用途に向けて新しい `{{cssxref("background-clip")}}: border-area` の値が[提案されて](https://github.com/w3c/csswg-drafts/issues/9456)います。
+
 ## 仕様書
 
 {{Specifications}}
@@ -150,5 +190,6 @@ border-image: unset;
 - {{cssxref("outline")}}
 - {{cssxref("box-shadow")}}
 - {{cssxref("background-image")}}
-- {{cssxref("url", "url()")}} 関数
+- {{cssxref("url_value", "&lt;url&gt;")}} データ型
 - グラデーション関数: {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}, {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+- [Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/) (MDN blog, 2023)

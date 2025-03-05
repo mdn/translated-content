@@ -2,16 +2,29 @@
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
 {{JSRef}}
 
-**`splice()`** は {{jsxref("Array")}} インスタンスのメソッドは、[その場 (in-place)](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0) で既存の要素を取り除いたり、置き換えたり、新しい要素を追加したりすることで、配列の内容を変更します。
+**`splice()`** は {{jsxref("Array")}} インスタンスのメソッドで、[その場 (in-place)](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0) で既存の要素を取り除いたり、置き換えたり、新しい要素を追加したりすることで、配列の内容を変更します。
 
 元の配列を変更せずに、ある部分を除去したり置き換えたりした新しい配列を作成するには {{jsxref("Array/toSpliced", "toSpliced()")}} を使用してください。配列を変更せずに配列の一部にアクセスするには {{jsxref("Array/slice", "slice()")}} を参照してください。
 
-{{EmbedInteractiveExample("pages/js/array-splice.html")}}
+{{InteractiveExample("JavaScript Demo: Array.splice()")}}
+
+```js interactive-example
+const months = ["Jan", "March", "April", "June"];
+months.splice(1, 0, "Feb");
+// Inserts at index 1
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+months.splice(4, 1, "May");
+// Replaces 1 element at index 4
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+```
 
 ## 構文
 
@@ -37,7 +50,7 @@ splice(start, deleteCount, item1, item2, /* …, */ itemN)
 
   - : 配列の `start` の位置から取り除く古い要素の個数を示す整数です。
 
-    `deleteCount` が省略された場合、または `deleteCount` の値が `start` で指定した位置より後の要素数以上の場合、 `start` から配列の末尾までのすべての要素が削除されます。ただし、任意の `itemN` 引数を渡したい場合は、 `start` より後の要素をすべて削除するために `deleteCount` として `Infinity` を渡す必要があります。明示的に `undefined` を渡すと、[変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion)されて `0` になるからです。
+    `deleteCount` が省略された場合、または `deleteCount` の値が `start` で指定した位置より後の要素数以上の場合、 `start` から配列の末尾までのすべての要素が削除されます。ただし、任意の `itemN` 引数を渡したい場合は、 `start` より後の要素をすべて削除するために `deleteCount` として `Infinity` を渡す必要があります。明示的に `undefined` を渡すと、[変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)されて `0` になるからです。
 
     `deleteCount` が `0` または負の数の場合、どの要素も取り除かれません。この場合、少なくとも 1 つの新しい要素を指定する必要があります（以下参照）。
 
@@ -57,9 +70,9 @@ splice(start, deleteCount, item1, item2, /* …, */ itemN)
 
 ## 解説
 
-`splice()` メソッドは[変更メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)です。 `this` の内容を変更します。指定した挿入する要素数と除去される要素数が異なる場合、配列の `length` も変更されます。同時に、 [`@@species`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) を使用して、返す新しい配列インスタンスを作成します。
+`splice()` メソッドは[変更メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)です。 `this` の内容を変更します。指定した挿入する要素数と除去される要素数が異なる場合、配列の `length` も変更されます。同時に、 [`[Symbol.species]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species) を使用して、返す新しい配列インスタンスを作成します。
 
-削除された部分が[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)の場合、 `splice()` が返す配列も疎配列になり、対応するインデックスは空のスロットになります。
+削除された部分が[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)の場合、 `splice()` が返す配列も疎配列になり、対応するインデックスは空のスロットになります。
 
 `splice()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。このメソッドは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。文字列も配列風ですが、文字列は不変なので、このメソッドを適用するのには適していません。
 
@@ -83,6 +96,30 @@ const removed = myFish.splice(2, 0, "drum", "guitar");
 
 // myFish は ["angel", "clown", "drum", "guitar", "mandarin", "sturgeon"]
 // removed は [] であり、どの要素も取り除かれていない
+```
+
+### 0（ゼロ）個の要素を 0 の位置から削除して、"angel" を挿入
+
+`splice(0, 0, ...elements)` は、{{jsxref("Array/unshift", "unshift()")}} のように配列の先頭に要素を挿入します。
+
+```js
+const myFish = ["clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(0, 0, "angel");
+
+// myFish は ["angel", "clown", "mandarin", "sturgeon"]
+// アイテムは削除されない
+```
+
+### 0（ゼロ）個の要素を末尾の位置から削除して、"sturgeon" を挿入
+
+`splice(array.length, 0, ...elements)` は、{{jsxref("Array/push", "push()")}} のように配列の末尾に要素を挿入します。
+
+```js
+const myFish = ["angel", "clown", "mandarin"];
+const removed = myFish.splice(myFish.length, 0, "sturgeon");
+
+// myFish は ["angel", "clown", "mandarin", "sturgeon"]
+// アイテムは削除されない
 ```
 
 ### 3 の位置から 1 つ取り除く

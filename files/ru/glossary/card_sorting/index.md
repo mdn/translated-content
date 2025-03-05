@@ -11,4 +11,4 @@ slug: Glossary/Card_sorting
 
 ### Общие знания
 
-- [Card sorting](https://en.wikipedia.org/wiki/Card_sorting) на Википедии (англ.)
+- [Card sorting](https://en.wikipedia.org/wiki/Card_sorting) в Википедии (англ.)

@@ -72,5 +72,5 @@ Vous pouvez en savoir plus sur cette fonctionnalité dans l'article [Setting Hei
 
 ## Voir aussi
 
-- [Faire la correspondance des attributs width et height du conteneur des éléments média avec aspect-ratio](/fr/docs/Web/Media/images/aspect_ratio_mapping)
+- [Faire la correspondance des attributs width et height du conteneur des éléments média avec aspect-ratio](/fr/docs/Learn/Performance/Multimedia)
 - [Designing an aspect ratio unit for CSS (en anglais)](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)

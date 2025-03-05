@@ -31,7 +31,7 @@ l10n:
 - 所有可激活元素必须可被聚焦：
 
   - 标准控件，如链接、按钮、表单域默认可被聚焦。
-  - 非标准控件必须为它们分配一个适当的 [ARIA 角色](http://www.w3.org/TR/wai-aria/roles)，如 `button`、`link` 或 `checkbox`。
+  - 非标准控件必须为它们分配一个适当的 [ARIA 角色](https://www.w3.org/TR/wai-aria/roles)，如 `button`、`link` 或 `checkbox`。
 
 - 焦点应该有逻辑顺序，且方式一致。
 
@@ -76,6 +76,7 @@ l10n:
   - 松开事件将撤消在按下事件上触发的任何操作
   - 在按下事件上触发操作是必要的。例如，玩游戏或钢琴应用程序。
 
-- 触摸目标必须足够大，方便用户交互（参考 [BBC 移动端无障碍指南](http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size)关于触摸目标尺寸的指南）
+- 触摸目标必须足够大，方便用户交互（参考 [BBC 移动端无障碍指南](https://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size)关于触摸目标尺寸的指南）
 
-> **备注：** 该文档的[最初版本](https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)由 [Yura Zenevich](https://yzen.github.io/) 完成。
+> [!NOTE]
+> 该文档的[最初版本](https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)由 [Yura Zenevich](https://yzen.github.io/) 完成。

@@ -2,14 +2,27 @@
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
 l10n:
-  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
+  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
 ---
 
 {{JSRef}}
 
-**`search()`** メソッドは、正規表現とこの {{jsxref("String")}} オブジェクトが一致するかどうかを調べます。
+**`search()`** は {{jsxref("String")}} 値のメソッドで、正規表現とこの文字列の一致する箇所を検索し、文字列内の最初に一致する箇所の位置を返します。
 
-{{EmbedInteractiveExample("pages/js/string-search.html")}}
+{{InteractiveExample("JavaScript Demo: String.search()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+// Anything not a word character, whitespace or apostrophe
+const regex = /[^\w\s']/g;
+
+console.log(paragraph.search(regex));
+// Expected output: 41
+
+console.log(paragraph[paragraph.search(regex)]);
+// Expected output: "!"
+```
 
 ## 構文
 
@@ -31,14 +44,14 @@ search(regexp)
 
 ## 解説
 
-`String.prototype.search()` 自体の実装はとてもシンプルです。引数の文字列を最初の引数として `Symbol.search` メソッドを呼び出すだけです。実際の実装は [`RegExp.prototype[@@search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search) から来ています。
+`String.prototype.search()` 自体の実装はとてもシンプルです。引数の文字列を最初の引数として `Symbol.search` メソッドを呼び出すだけです。実際の実装は [`RegExp.prototype[Symbol.search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search) から来ています。
 
-`regexp` の `g` フラグは `search()` の結果には影響がなく、検索は常に正規表現の `lastIndex` が 0 であるかのように行われます。`search()` の動作についての詳しい情報は、[`RegExp.prototype[@@search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search) を参照してください。
+`regexp` の `g` フラグは `search()` の結果には影響がなく、検索は常に正規表現の `lastIndex` が 0 であるかのように行われます。`search()` の動作についての詳しい情報は、[`RegExp.prototype[Symbol.search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search) を参照してください。
 
 パターンが見つかるかどうかを知りたい場合、かつ、文字列内のインデックスを知りたい場合は、`search()` を使用してください。
 
 - パターンが存在するかどうかを知りたいだけであれば、{{jsxref("RegExp.prototype.test()")}} メソッドを使用してください。これは論理値を返します。
-- 一致したテキストの内容が必要な場合は、{{jsxref("String.prototype.match()", "match()")}} または {{jsxref("RegExp.prototype.exec()")}} を使用してください。
+- 一致したテキストの内容が必要な場合は、{{jsxref("String.prototype.match()")}} または {{jsxref("RegExp.prototype.exec()")}} を使用してください。
 
 ## 例
 
@@ -65,7 +78,7 @@ console.log(str.search(reDot)); // ドット記号 '.' が見つからないの�
 ## 関連情報
 
 - [`String.prototype.search` のポリフィル (`core-js`) （`Symbol.search` のようなの現代の修正や挙動つき）](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [JavaScript の正規表現の使用](/ja/docs/Web/JavaScript/Guide/Regular_expressions)
+- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)ガイド
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec()")}}
-- [`RegExp.prototype[@@search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
+- [`RegExp.prototype[Symbol.search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)

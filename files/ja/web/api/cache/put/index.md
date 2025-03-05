@@ -10,7 +10,7 @@ l10n:
 
 **`put()`** は {{domxref("Cache")}} インターフェイスのメソッドで、キーと値のペアを現在の {{domxref("Cache")}} オブジェクトに追加することができます。
 
-多くの場合、やりたいことは、ただ 1 つ以上のリクエストを {{domxref("fetch()")}} して、その結果を直接キャッシュに追加するだけです。そのような場合は、{{domxref("Cache.add","Cache.add()")}} や {{domxref("Cache.addAll","Cache.addAll()")}} を使用した方がよいでしょう。 これらはこうした操作を 1 つ以上行うための一括操作関数であるためです。
+多くの場合、やりたいことは、ただ 1 つ以上のリクエストを {{domxref("Window/fetch", "fetch()")}} して、その結果を直接キャッシュに追加するだけです。そのような場合は、{{domxref("Cache.add","Cache.add()")}} や {{domxref("Cache.addAll","Cache.addAll()")}} を使用した方がよいでしょう。 これらはこうした操作を 1 つ以上行うための一括操作関数であるためです。
 
 ```js
 fetch(url).then((response) => {

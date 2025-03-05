@@ -9,7 +9,8 @@ HTTP **`304 Not Modified`** 说明无需再次传输请求的内容，也就是�
 
 该响应必须不包含主体，并且必须包含在等价 {{HTTPStatus("200")}} `OK` 响应中会带有的 {{HTTPHeader("Cache-Control")}}、{{HTTPHeader("Content-Location")}}、{{HTTPHeader("Date")}}、{{HTTPHeader("ETag")}}、{{HTTPHeader("Expires")}} 和 {{HTTPHeader("Vary")}} 标头。
 
-> **备注：** 很多浏览器的 [开发者工具](/zh-CN/docs/Tools/Network_Monitor) 会发出额外的请求，以达到 `304` 的目的，这样可以把资源以本地缓存的形式展现给开发者。
+> [!NOTE]
+> 很多浏览器的 [开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) 会发出额外的请求，以达到 `304` 的目的，这样可以把资源以本地缓存的形式展现给开发者。
 
 ## 状态
 
@@ -20,10 +21,6 @@ HTTP **`304 Not Modified`** 说明无需再次传输请求的内容，也就是�
 ## 规范
 
 {{Specifications}}
-
-## 浏览器兼容性
-
-{{Compat}}
 
 ## 兼容性提醒
 

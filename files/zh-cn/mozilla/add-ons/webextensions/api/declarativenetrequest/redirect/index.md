@@ -9,7 +9,8 @@ l10n:
 
 描述重定向应该如何执行的详细信息，作为 {{WebExtAPIRef("declarativeNetRequest.RuleAction", "RuleAction")}} 的 `redirect` 属性。仅适用于重定向规则。
 
-> **备注：** 重定向操作不会重定向请求，请求会像往常一样继续进行，当：
+> [!NOTE]
+> 重定向操作不会重定向请求，请求会像往常一样继续进行，当：
 >
 > - 操作不更改请求。
 > - 重定向 URL 无效（例如，{{WebExtAPIRef("declarativeNetRequest.redirect","redirect.regexSubstitution")}} 的值不是有效的 URL）。

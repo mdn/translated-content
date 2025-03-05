@@ -5,7 +5,7 @@ slug: Web/API/CSS_Painting_API
 
 {{DefaultAPISidebar("CSS Painting API")}}
 
-CSS Painting API（[CSS Houdini](/ja/docs/Web/Houdini) API の傘の一部）を使用すると、開発者は要素の背景、境界線、またはコンテンツに直接描画できる JavaScript 関数を記述できます。
+CSS Painting API（[CSS Houdini](/ja/docs/Web/API/Houdini_APIs) API の傘の一部）を使用すると、開発者は要素の背景、境界線、またはコンテンツに直接描画できる JavaScript 関数を記述できます。
 
 ## 概念と使用方法
 
@@ -19,12 +19,12 @@ aside {
 }
 ```
 
-この API は {{domxref('PaintWorklet')}} を定義します。 これは、計算されたスタイルの変更に応じて画像をプログラムで生成するために使用できるワークレット（{{domxref('worklet')}}）です。 これの使用方法の詳細については、[CSS Painting API の使用](/ja/docs/Web/API/CSS_Painting_API/ガイド)を参照してください。
+この API は {{domxref('PaintWorklet')}} を定義します。 これは、計算されたスタイルの変更に応じて画像をプログラムで生成するために使用できるワークレット（{{domxref('worklet')}}）です。 これの使用方法の詳細については、[CSS Painting API の使用](/ja/docs/Web/API/CSS_Painting_API/Guide)を参照してください。
 
 ## インターフェイス
 
 - {{domxref('PaintWorklet')}}
-  - : CSS プロパティがファイルを予期している画像をプログラムで生成します。 [`CSS.paintWorklet`](/ja/docs/Web/API/CSS/paintWorklet) を介してこのインターフェイスにアクセスします。
+  - : CSS プロパティがファイルを予期している画像をプログラムで生成します。 [`CSS.paintWorklet`](/ja/docs/Web/API/CSS/paintWorklet_static) を介してこのインターフェイスにアクセスします。
 - {{domxref('PaintWorkletGlobalScope')}}
   - : `paintWorklet` のグローバル実行コンテキスト。
 - {{domxref('PaintRenderingContext2D')}}
@@ -39,9 +39,9 @@ aside {
 
 ## 例
 
-CSS で JavaScript を使用して要素の背景に直接描画するには、[`registerPaint()`](/ja/docs/Web/API/PaintWorklet/registerPaint) 関数を使用してペイントワークレットを定義し、paintWorklet の `addModule()` メソッドを使用してワークレットを含めるようドキュメントに指示し、CSS {{cssxref('paint', 'paint()')}} 関数を使用して作成した画像を含めます。
+CSS で JavaScript を使用して要素の背景に直接描画するには、[`registerPaint()`](/ja/docs/Web/API/PaintWorkletGlobalScope/registerPaint) 関数を使用してペイントワークレットを定義し、paintWorklet の `addModule()` メソッドを使用してワークレットを含めるようドキュメントに指示し、CSS {{cssxref('paint', 'paint()')}} 関数を使用して作成した画像を含めます。
 
-[`registerPaint()`](/ja/docs/Web/API/PaintWorklet/registerPaint) 関数を使用して、`'hollowHighlights'` という PaintWorklet を作成します。
+[`registerPaint()`](/ja/docs/Web/API/PaintWorkletGlobalScope/registerPaint) 関数を使用して、`'hollowHighlights'` という PaintWorklet を作成します。
 
 ```js
 registerPaint(
@@ -171,7 +171,7 @@ li:nth-of-type(3n + 1) {
 
 {{EmbedLiveSample("hollowExample", 300, 300)}}
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
@@ -181,6 +181,6 @@ li:nth-of-type(3n + 1) {
 
 ## 関連情報
 
-- [CSS Painting API の使用](/ja/docs/Web/API/CSS_Painting_API/ガイド)
-- [CSS Typed Object Model API](/ja/docs/Web/CSS_Typed_OM)
-- [CSS Houdini](/ja/docs/Web/Houdini)
+- [CSS Painting API の使用](/ja/docs/Web/API/CSS_Painting_API/Guide)
+- [CSS Typed Object Model API](/ja/docs/Web/API/CSS_Typed_OM_API)
+- [CSS Houdini](/ja/docs/Web/API/Houdini_APIs)

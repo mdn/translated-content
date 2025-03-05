@@ -11,7 +11,8 @@ slug: Web/API/XMLHttpRequest/setRequestHeader
 
 В целях безопасности, некоторые заголовки не могут быть установлены программно. Для более подробной информации, смотрите {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} и {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
 
-> **Примечание:** Для ваших собственных полей, вы можете увидеть исключение "**not allowed by Access-Control-Allow-Headers in preflight response**", когда вы делаете кросс-доменный запрос. В этом случае, вам нужно установить заголовок "Access-Control-Allow-Headers" в ответе на стороне сервера.
+> [!NOTE]
+> Для ваших собственных полей, вы можете увидеть исключение "**not allowed by Access-Control-Allow-Headers in preflight response**", когда вы делаете кросс-доменный запрос. В этом случае, вам нужно установить заголовок "Access-Control-Allow-Headers" в ответе на стороне сервера.
 
 ## Синтаксис
 

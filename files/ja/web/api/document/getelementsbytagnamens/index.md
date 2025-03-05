@@ -27,11 +27,13 @@ getElementsByTagNameNS(namespace, name)
 
 見つかった要素の生きた {{DOMxRef("NodeList")}}（但し下記のメモを参照）で、ツリーに現れる順です。
 
-> **メモ:** W3C の仕様書では返値は `NodeList` であるとされていますが、Firefox ではこのメソッドは {{DOMxRef("HTMLCollection")}} を返します。
+> [!NOTE]
+> W3C の仕様書では返値は `NodeList` であるとされていますが、Firefox ではこのメソッドは {{DOMxRef("HTMLCollection")}} を返します。
 > Opera は `NodeList` を返しますが、 `namedItem` メソッドを実装しているので、 `HTMLCollection` と同様になります。2012 年 1 月時点で、 WebKit ブラウザーのみが純粋な `NodeList` の値を返します。
 > 詳しくは [bug 14869](https://bugzil.la/14869) を参照してください。
 
-> **メモ:** 現在、このメソッドの引数は大文字と小文字を区別しますが、 Firefox 3.5 以前は大文字と小文字を区別していませんでした。
+> [!NOTE]
+> 現在、このメソッドの引数は大文字と小文字を区別しますが、 Firefox 3.5 以前は大文字と小文字を区別していませんでした。
 > 詳しくは [Firefox 3.6 の開発者リリースノート](/ja/docs/Mozilla/Firefox/Releases/3.6#dom)および {{domxref("Element.getElementsByTagNameNS")}} のブラウザーの互換性のメモをご覧ください。
 
 ## 例

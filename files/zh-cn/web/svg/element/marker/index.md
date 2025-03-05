@@ -183,7 +183,7 @@ svg {
   - : 该属性定义了当前 SVG 片段的 SVG 视口边界。
     _值的类型_：**[\<list-of-numbers>](/zh-CN/docs/Web/SVG/Content_type#t值数列)** ；_默认值_：none；_动画性_：**有**
 
-## 使用说明
+## 使用上下文
 
 {{svginfo}}
 

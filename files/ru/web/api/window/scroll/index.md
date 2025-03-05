@@ -28,8 +28,8 @@ window.scroll(x-coord,y-coord)
 
 ## Замечания
 
-[window.scrollTo](/ru/docs/DOM/window.scrollTo) имеет тот же самый эффект. Для того, чтобы прокрутить на некоторое количество пикселей относительно текущей позиции, используйте [window.scrollBy](/ru/docs/Window.scrollBy). Смотрите также [window.scrollByLines](/ru/docs/Window.scrollByLines), [window.scrollByPages](/ru/docs/Window.scrollByPages).
+[window.scrollTo](/ru/docs/Web/API/Window/scrollTo) имеет тот же самый эффект. Для того, чтобы прокрутить на некоторое количество пикселей относительно текущей позиции, используйте [window.scrollBy](/ru/docs/Web/API/Window/scrollBy). Смотрите также [window.scrollByLines](/ru/docs/Web/API/Window/scrollByLines), [window.scrollByPages](/ru/docs/Web/API/Window/scrollByPages).
 
 ## Спецификации
 
-- [CSSOM: scroll() Method](http://dev.w3.org/csswg/cssom-view/#dom-element-scrolloptions)
+- [CSSOM: scroll() Method](https://dev.w3.org/csswg/cssom-view/#dom-element-scrolloptions)

@@ -30,7 +30,7 @@ new Magnetometer(options)
 ### 例外
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : この機能の使用が [Permissions Policy](/ja/docs/Web/HTTP/Permissions_Policy) によりブロックされました。
+  - : この機能の使用が [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy) によりブロックされました。
 
 ## 仕様書
 

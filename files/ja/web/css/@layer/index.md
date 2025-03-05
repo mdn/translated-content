@@ -9,7 +9,32 @@ l10n:
 
 **`@layer`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、カスケードレイヤーを宣言するために使用し、また複数のカスケードレイヤーがある場合に、優先順位を定義するためにも使用することができます。
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-layer.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
+
+```css interactive-example
+@layer module, state;
+
+@layer state {
+  .alert {
+    background-color: brown;
+  }
+  p {
+    border: medium solid limegreen;
+  }
+}
+
+@layer module {
+  .alert {
+    border: medium solid violet;
+    background-color: yellow;
+    color: white;
+  }
+}
+```
+
+```html interactive-example
+<p class="alert">Beware of the zombies</p>
+```
 
 ## 構文
 
@@ -63,7 +88,8 @@ l10n:
 
 `utilities` のルールの方が `theme` ルールよりも詳細度が低くても適用されます。これは、レイヤーの順序が決まれば、詳細度や見た目の順序は無視されるからです。これは、セレクターが競合するルールを上書きするのに十分な高い詳細度を持つことを保証する必要がなく、後のレイヤーに表示されることだけを保証すればよいため、よりシンプルな CSS セレクターを作成することが可能になるのです。
 
-> **メモ:** レイヤー名を宣言して順番を決めたら、名前を宣言し直してレイヤーに CSS ルールを追加してください。すると、スタイルがレイヤーに追加され、レイヤーの順序は変更されません。
+> [!NOTE]
+> レイヤー名を宣言して順番を決めたら、名前を宣言し直してレイヤーに CSS ルールを追加してください。すると、スタイルがレイヤーに追加され、レイヤーの順序は変更されません。
 
 3 つ目は、次のように名前のないカスケードレイヤーを作成する方法です。
 

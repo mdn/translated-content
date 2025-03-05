@@ -18,7 +18,8 @@ Las cookies se utilizan principalmente con tres propósitos:
 
 Las cookies se usaron una vez para el almacenamiento general del lado del cliente. Si bien esto era legítimo cuando eran la única forma de almacenar datos en el cliente, hoy en día se recomienda preferir las API de almacenamiento modernas. Las cookies se envían con cada solicitud, por lo que pueden empeorar el rendimiento (especialmente para las conexiones de datos móviles). Las APIs modernas para el almacenamiento del cliente son la [Web storage API](/es/docs/Web/API/Web_Storage_API) (`localStorage` y `sessionStorage`) e [IndexedDB](/es/docs/Web/API/IndexedDB_API).
 
-> **Nota:** Para ver las cookies almacenadas (y otro tipo de almacenamiento que una página web puede usar), puede habilitar el [Inspector de Almacenamiento](/es/docs/Tools/Storage_Inspector) en Herramientas del desarrollador y seleccionar Cookies en el árbol de almacenamiento.
+> [!NOTE]
+> Para ver las cookies almacenadas (y otro tipo de almacenamiento que una página web puede usar), puede habilitar el [Inspector de Almacenamiento](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html) en Herramientas del desarrollador y seleccionar Cookies en el árbol de almacenamiento.
 
 ## Creando cookies
 
@@ -34,7 +35,8 @@ Set-Cookie: <nombre-cookie>=<valor-cookie>
 
 Este encabezado del servidor le dice al cliente que almacene una cookie.
 
-> **Nota:** Aquí se explica como usar el encabezado `Set-Cookie` en varias aplicaciones del lado del servidor:
+> [!NOTE]
+> Aquí se explica como usar el encabezado `Set-Cookie` en varias aplicaciones del lado del servidor:
 >
 > - [PHP](https://secure.php.net/manual/en/function.setcookie.php)
 > - [Node.JS](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value)
@@ -70,13 +72,14 @@ En lugar de expirar cuando el cliente se cierra, las _cookies permanentes_ expir
 Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 ```
 
-> **Nota:** Cuando se establece una fecha de expiración, la fecha y hora que se establece es relativa al cliente en el que se establece la cookie, no del servidor.
+> [!NOTE]
+> Cuando se establece una fecha de expiración, la fecha y hora que se establece es relativa al cliente en el que se establece la cookie, no del servidor.
 
 ### Cookies `Secure` y `HttpOnly`
 
 Una cookie segura sólo se envía al servidor con una petición cifrada sobre el protocolo HTTPS. Incluso con `Secure`, no debería almacenarse _nunca_ información sensible en la cookies, ya que son inherentemente inseguras y este flag no puede ofrecer protección real. A partir de Chrome 52 y Firefox 52, los sitios inseguros (`http:`) no pueden establecer cookies con la directiva `Secure`.
 
-Para prevenir ataques cross-site scripting ({{Glossary("XSS")}}), las cookies `HttpOnly` son inaccesibles desde la API de Javascript {{domxref("Document.cookie")}}; Solamente se envían al servidor. Por ejemplo, las cookies que persisten sesiones del lado del servidor no necesitan estar disponibles para JavaScript, por lo que debería establecerse el flag `HttpOnly`.
+Para prevenir ataques cross-site scripting ([XSS](/es/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)), las cookies `HttpOnly` son inaccesibles desde la API de Javascript {{domxref("Document.cookie")}}; Solamente se envían al servidor. Por ejemplo, las cookies que persisten sesiones del lado del servidor no necesitan estar disponibles para JavaScript, por lo que debería establecerse el flag `HttpOnly`.
 
 ```
 Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
@@ -102,7 +105,7 @@ Por ejemplo, si se establece `Path=/docs` estas rutas coincidirán:
 
 Las cookies `SameSite` permiten a los servidores requerir que una cookie no sea enviada con solicitudes cross-site (donde {{Glossary("Site")}} es definido por el dominio registrabe), lo que proporciona algo de protección contra ataques cross-site request forgery ({{Glossary("CSRF")}}).
 
-Las cookies `SameSite` son relativamente nuevas y [soportadas por los principales navegadores](/es/docs/Web/HTTP/headers/Set-Cookie#Browser_compatibility).
+Las cookies `SameSite` son relativamente nuevas y [soportadas por los principales navegadores](/es/docs/Web/HTTP/Headers/Set-Cookie#browser_compatibility).
 
 Aquí hay un ejemplo:
 
@@ -130,15 +133,16 @@ console.log(document.cookie);
 // logs "yummy_cookie=choco; tasty_cookie=strawberry"
 ```
 
-Tenga en cuenta las cuestiones de seguridad en la siguiente sección [Seguridad](/es/docs/Web/HTTP/Cookies#Security). Las cookies disponibles para JavaScript pueden ser robadas por medio de XSS.
+Tenga en cuenta las cuestiones de seguridad en la siguiente sección [Seguridad](#security). Las cookies disponibles para JavaScript pueden ser robadas por medio de XSS.
 
 ## Seguridad
 
-> **Nota:** Nunca se debe almacenar ni transmitir información confidecial o sensible mediante Cookies HTTP, ya que todo el mecanismo es inherentemente inseguro.
+> [!NOTE]
+> Nunca se debe almacenar ni transmitir información confidecial o sensible mediante Cookies HTTP, ya que todo el mecanismo es inherentemente inseguro.
 
 ### Secuestro de session y XSS
 
-Las cookies son utilizadas a menudo en aplicaciones web para identificar a un usuario y su sesión autenticada, así que el robo de una cookie puede implicar el secuestro de la sesión del usuario autenticado. Las formas más comunes de robar cookies incluyen ingeniería social o la explotación de una vulnerabilidad {{Glossary("XSS")}} de la aplicación.
+Las cookies son utilizadas a menudo en aplicaciones web para identificar a un usuario y su sesión autenticada, así que el robo de una cookie puede implicar el secuestro de la sesión del usuario autenticado. Las formas más comunes de robar cookies incluyen ingeniería social o la explotación de una vulnerabilidad [XSS](/es/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss) de la aplicación.
 
 ```js
 new Image().src =
@@ -176,7 +180,7 @@ Se presentan aquí algunas técnicas que se deberían usar para evitar que estas
 
   - Este método de protección recae en la imposibilidad de que un atacante pueda predecir este token autogenerado en cada inicio de sesión. Cabe aclarar que este token debería ser regenerado en cada inicio de sesión.
 
-- Al igual que con {{Glosario ("XSS")}}, el filtrado de entrada es importante.
+- Al igual que con [XSS](/es/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss), el filtrado de entrada es importante.
 - Debería de existir siempre un requerimiento de confirmación para cualquier acción delicada,.
 - Las cookies empleadas en acciones delicadas deberían de tener una vida útil breve.
 - Para más prevención visita [OWASP CSRF prevention cheat sheet](<https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet>).
@@ -224,7 +228,7 @@ Existen algunas técnicas diseñadas para recrear las cookies después de elimin
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - {{domxref("Navigator.cookieEnabled")}}
-- [Inspeccionar cookies usando el Storage Inspector](/es/docs/Tools/Storage_Inspector)
+- [Inspeccionar cookies usando el Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
 - [Cookie specification: RFC 6265](https://tools.ietf.org/html/rfc6265)
 - [Nicholas Zakas article on cookies](https://www.nczonline.net/blog/2009/05/05/http-cookies-explained/)
 - [Nicholas Zakas article on cookies and security](https://www.nczonline.net/blog/2009/05/12/cookies-and-security/)

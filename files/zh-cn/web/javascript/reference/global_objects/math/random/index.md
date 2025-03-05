@@ -11,7 +11,22 @@ l10n:
 
 > **备注：** `Math.random()` *不能*提供密码学安全的随机数。请不要使用它们来处理与安全相关的事情。请使用 Web Crypto API 代替，更具体地来说是 {{domxref("Crypto.getRandomValues()")}} 方法。
 
-{{EmbedInteractiveExample("pages/js/math-random.html")}}
+{{InteractiveExample("JavaScript Demo: Math.random()")}}
+
+```js interactive-example
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+console.log(getRandomInt(3));
+// Expected output: 0, 1 or 2
+
+console.log(getRandomInt(1));
+// Expected output: 0
+
+console.log(Math.random());
+// Expected output: a number from 0 to <1
+```
 
 ## 语法
 
@@ -61,7 +76,8 @@ function getRandomInt(min, max) {
 }
 ```
 
-> **备注：** 也许很容易想到用 [`Math.round()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/round) 来实现，但是这会导致你的随机数处于一个不均匀的分布，这可能不符合你的需求。
+> [!NOTE]
+> 也许很容易想到用 [`Math.round()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/round) 来实现，但是这会导致你的随机数处于一个不均匀的分布，这可能不符合你的需求。
 
 ### 得到一个两数之间的随机整数，包括两个数在内
 

@@ -2,14 +2,25 @@
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
 l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+  sourceCommit: 6e93ec8fc9e1f3bd83bf2f77e84e1a39637734f8
 ---
 
 {{JSRef}}
 
 {{jsxref("String")}} 값의 **`replace()`** 메서드는 `pattern`의 단일, 일부 혹은 모든 일치 항목이 `replacement`로 대치된 새로운 문자열을 반환합니다. `pattern`은 문자열 혹은 {{jsxref("RegExp")}}일 수 있습니다. `replacement`는 문자열이나 각 일치 항목마다 호출되는 함수일 수 있습니다. 만약 `pattern`이 문자열이라면, 오직 첫 번째 항목만 변경됩니다. 원본 문자열은 변하지 않습니다.
 
-{{EmbedInteractiveExample("pages/js/string-replace.html")}}
+{{InteractiveExample("JavaScript Demo: String.replace()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+console.log(paragraph.replace("Ruth's", "my"));
+// Expected output: "I think my dog is cuter than your dog!"
+
+const regex = /Dog/i;
+console.log(paragraph.replace(regex, "ferret"));
+// Expected output: "I think Ruth's ferret is cuter than your dog!"
+```
 
 ## 구문
 
@@ -36,7 +47,7 @@ replace(pattern, replacement)
 
 문자열 패턴은 한 번만 바뀝니다. 전역 검색 및 바꾸기를 수행하려면 `g` 플래그가 있는 정규 표현식을 사용하거나 [`replaceAll()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)을 대신 사용하세요.
 
-`pattern`이 [`Symbol.replace`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 메서드가 있는 객체(`RegExp` 객체 포함)인 경우, 해당 메서드는 대상 문자열과 `replacement`를 인수로 사용하여 호출됩니다. 그 반환 값은 `replace()`의 반환 값이 됩니다. 이 경우 `replace()`의 동작은 전적으로 `@@replace` 메서드로 인코딩됩니다. 예를 들어, 아래 설명에서 "그룹 캡처"에 대한 언급은 실제로 [`RegExp.prototype[@@replace]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)에서 제공하는 기능입니다.
+`pattern`이 [`Symbol.replace`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 메서드가 있는 객체(`RegExp` 객체 포함)인 경우, 해당 메서드는 대상 문자열과 `replacement`를 인수로 사용하여 호출됩니다. 그 반환 값은 `replace()`의 반환 값이 됩니다. 이 경우 `replace()`의 동작은 전적으로 `[Symbol.replace]()` 메서드로 인코딩됩니다. 예를 들어, 아래 설명에서 "그룹 캡처"에 대한 언급은 실제로 [`RegExp.prototype[Symbol.replace]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)에서 제공하는 기능입니다.
 
 `pattern`이 빈 문자열인 경우 문자열의 시작 부분에 대체 문자열이 추가됩니다.
 
@@ -44,7 +55,7 @@ replace(pattern, replacement)
 "xxx".replace("", "_"); // "_xxx"
 ```
 
-플래그가 `g`인 정규식은 `replace()`가 두 번 이상 대체하는 유일한 경우입니다. 정규식 속성(특히 [sticky](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) 플래그)이 `replace()`와 상호작용하는 방법에 대한 자세한 내용은 [`RegExp.prototype[@@replace]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)를 참고하세요.
+플래그가 `g`인 정규식은 `replace()`가 두 번 이상 대체하는 유일한 경우입니다. 정규식 속성(특히 [sticky](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) 플래그)이 `replace()`와 상호작용하는 방법에 대한 자세한 내용은 [`RegExp.prototype[Symbol.replace]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)를 참고하세요.
 
 ### 대체할 내용을 문자열로 지정하기
 
@@ -76,7 +87,8 @@ replace(pattern, replacement)
 
 함수를 두 번째 매개변수로 명시할 수 있습니다. 이 경우 함수는 각각의 문자열 일치가 발생할 때마다 호출됩니다. 이 함수의 결과(반환 값)는 대체 문자열로 사용됩니다.
 
-> **참고:** 위에서 언급한 특수 대체 패턴은 대체자 함수에서 반환된 문자열에는 적용되지 않습니다.
+> [!NOTE]
+> 위에서 언급한 특수 대체 패턴은 대체자 함수에서 반환된 문자열에는 적용되지 않습니다.
 
 함수 시그니처는 아래와 같습니다.
 
@@ -251,4 +263,4 @@ console.log("abcd".replace(/(?<group>bc)/, addOffset)); // "abc (1) d"
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}
 - [`Symbol.replace`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace)
-- [`RegExp.prototype[@@replace]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)
+- [`RegExp.prototype[Symbol.replace]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)

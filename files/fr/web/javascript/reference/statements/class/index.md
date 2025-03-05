@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Statements/class
 
 La **déclaration class** crée une nouvelle classe avec le nom fourni en utilisant l'héritage à base de prototypes pour émuler le fonctionnement de classe.
 
-{{EmbedInteractiveExample("pages/js/statement-class.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Class")}}
+
+```js interactive-example
+class Polygon {
+  constructor(height, width) {
+    this.area = height * width;
+  }
+}
+
+console.log(new Polygon(4, 3).area);
+// Expected output: 12
+```
 
 Il est aussi possible de définir une classe avec une {{jsxref("Opérateurs/class", "expression class","",1)}}.
 
@@ -23,7 +34,7 @@ class nom [extends autreNom] {
 
 Les déclarations qui composent le corps de la classe sont exécutées en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode). La propriété du constructeur est optionnelle.
 
-Les déclarations utilisées dans les classes ne sont pas remontées (_hoisted_) (à la différence des [déclarations de fonctions](/fr/docs/Web/JavaScript/Reference/Instructions/function)).
+Les déclarations utilisées dans les classes ne sont pas remontées (_hoisted_) (à la différence des [déclarations de fonctions](/fr/docs/Web/JavaScript/Reference/Statements/function)).
 
 ## Exemples
 
@@ -48,7 +59,8 @@ class Carré extends Polygone {
 }
 ```
 
-> **Attention :** Déclarer une classe deux fois lèvera une exception `SyntaxError`. De même, on ne pourra pas réutiliser un nom qui a déjà été utilisé dans une expression de classe.
+> [!WARNING]
+> Déclarer une classe deux fois lèvera une exception `SyntaxError`. De même, on ne pourra pas réutiliser un nom qui a déjà été utilisé dans une expression de classe.
 >
 > ```js
 > // Deux déclarations avec le même nom
@@ -70,6 +82,6 @@ class Carré extends Polygone {
 
 ## Voir aussi
 
-- [Les déclarations `function`](/fr/docs/Web/JavaScript/Reference/Instructions/function)
-- [Les expressions `class`](/fr/docs/Web/JavaScript/Reference/Opérateurs/class)
+- [Les déclarations `function`](/fr/docs/Web/JavaScript/Reference/Statements/function)
+- [Les expressions `class`](/fr/docs/Web/JavaScript/Reference/Operators/class)
 - [Les classes](/fr/docs/Web/JavaScript/Reference/Classes)

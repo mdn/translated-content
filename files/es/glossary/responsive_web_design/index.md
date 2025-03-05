@@ -11,6 +11,6 @@ Diseño web responsivo (del inglés _**R**esponsive **W**eb **D**esign_) o **RWD
 
 ### Conocimientos generales
 
-- [Resumen y recursos](/es/docs/Web_Development/Responsive_Web_design)
-- [Pros and cons of going responsive](/es/docs/Web_Development/Mobile/Responsive_design)
+- [Resumen y recursos](/es/docs/Web/Progressive_web_apps)
+- [Pros and cons of going responsive](/es/docs/Web/Progressive_web_apps)
 - [Diseño web responsivo](http://msdn.microsoft.com/en-us/magazine/hh653584.aspx)

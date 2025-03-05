@@ -11,7 +11,7 @@ SSL (Secure Sockets Layer) は古いセキュリティ標準技術で、サー�
 
    1. [Transport Layer Security (TLS) プロトコル](/ja/docs/Web/Security/Transport_Layer_Security)
 
-2. [用語集](/ja/docs/Glossary)
+2. 関連用語:
 
    1. {{Glossary("HTTPS")}}
    2. {{Glossary("TLS")}}

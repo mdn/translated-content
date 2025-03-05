@@ -11,5 +11,5 @@ slug: Glossary/DNS
 
 ### Connaissances générales
 
-- [Comprendre les noms de domaine](/fr/Apprendre/Comprendre_noms_de_domaine)
+- [Comprendre les noms de domaine](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
 - [Nom de domaine](https://fr.wikipedia.org/wiki/Nom_de_domaine) sur Wikipédia

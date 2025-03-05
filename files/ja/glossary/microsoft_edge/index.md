@@ -11,7 +11,7 @@ slug: Glossary/Microsoft_Edge
 
    1. [公式ウェブサイト](https://www.microsoft.com/edge)
 
-2. [MDN Web Docs 用語集](/ja/docs/Glossary)
+2. 関連用語:
 
    1. {{Glossary("Google Chrome")}}
    2. {{Glossary("Microsoft Edge")}}

@@ -7,13 +7,30 @@ slug: Web/HTML/Element/q
 
 L'élément HTML **`<q>`** indique que le texte qu'il contient est une citation en incise. La plupart des navigateurs modernes entoure le texte de cet élément avec des marques de citation. Cet élément est destiné aux citations courtes qui ne nécessitent pas de sauts de paragraphe. Pour les plus grandes citations, on utilisera l'élément {{HTMLElement("blockquote")}}.
 
-{{EmbedInteractiveExample("pages/tabbed/q.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;q&gt;", "tabbed-shorter")}}
 
-> **Note :** La plupart des navigateurs récents ajoutent automatiquement des guillemets autours du contenu d'un élément `<q>` mais il peut être nécessaire d'ajouter une règle CSS pour les ajouter dans les anciens navigateurs.
+```html interactive-example
+<p>
+  When Dave asks HAL to open the pod bay door, HAL answers:
+  <q
+    cite="https://www.imdb.com/title/tt0062622/quotes/?item=qt0396921&ref_=ext_shr_lnk">
+    I'm sorry, Dave. I'm afraid I can't do that.
+  </q>
+</p>
+```
+
+```css interactive-example
+q {
+  font-style: italic;
+}
+```
+
+> [!NOTE]
+> La plupart des navigateurs récents ajoutent automatiquement des guillemets autours du contenu d'un élément `<q>` mais il peut être nécessaire d'ajouter une règle CSS pour les ajouter dans les anciens navigateurs.
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `cite`
   - : La valeur de cet attribut est une URL désignant la source du message ou de l'information citée. Cet attribut est prévu pour fournir des renseignements concernant le contexte ou la référence de cette citation.
@@ -71,7 +88,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>

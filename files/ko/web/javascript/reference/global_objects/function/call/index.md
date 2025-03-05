@@ -7,9 +7,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/call
 
 **`call()`** 메소드는 주어진 `this` 값 및 각각 전달된 인수와 함께 함수를 호출합니다.
 
-> **참고:** **주의:** 이 함수 구문은 {{jsxref("Function.prototype.apply", "apply()")}}와 거의 동일하지만, `call()`은 **인수 목록**을, 반면에 `apply()`는 **인수 배열 하나**를 받는다는 점이 중요한 차이점입니다.
+> [!NOTE]
+> 이 함수 구문은 {{jsxref("Function.prototype.apply", "apply()")}}와 거의 동일하지만, `call()`은 **인수 목록**을, 반면에 `apply()`는 **인수 배열 하나**를 받는다는 점이 중요한 차이점입니다.
 
-{{EmbedInteractiveExample("pages/js/function-call.html")}}
+{{InteractiveExample("JavaScript Demo: Function.call()")}}
+
+```js interactive-example
+function Product(name, price) {
+  this.name = name;
+  this.price = price;
+}
+
+function Food(name, price) {
+  Product.call(this, name, price);
+  this.category = "food";
+}
+
+console.log(new Food("cheese", 5).name);
+// Expected output: "cheese"
+```
 
 ## 구문
 
@@ -119,7 +135,8 @@ function display() {
 display.call(); // sData value is Wisen
 ```
 
-> **참고:** **주의:** 엄격 모드(strict mode)에서, `this` 는 `undefined`값을 가집니다. See below.
+> [!NOTE]
+> 엄격 모드(strict mode)에서, `this` 는 `undefined`값을 가집니다. See below.
 
 ```js
 "use strict";
@@ -145,4 +162,4 @@ display.call(); // Cannot read the property of 'sData' of undefined
 
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.apply()")}}
-- [객체 지향 JavaScript 소개](/ko/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
+- [객체 지향 JavaScript 소개](/ko/docs/Learn/JavaScript/Objects)

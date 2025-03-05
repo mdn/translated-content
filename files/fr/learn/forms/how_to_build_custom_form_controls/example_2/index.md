@@ -3,7 +3,7 @@ title: Exemple 2
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_2
 ---
 
-Ceci est le deuxième exemple expliquant comment [construire un formulaire personnalisé](/fr/docs/HTML/Forms/How_to_build_custom_form_widgets).
+Ceci est le deuxième exemple expliquant comment [construire un formulaire personnalisé](/fr/docs/Learn/Forms/How_to_build_custom_form_controls).
 
 ## JS
 

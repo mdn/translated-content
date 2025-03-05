@@ -9,8 +9,8 @@ slug: Web/API/Selection/setBaseAndExtent
 
 ## 语法
 
-```
-sel.setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)
+```js-nolint
+setBaseAndExtent(anchorNode, anchorOffset, focusNode, focusOffset)
 ```
 
 ### 参数
@@ -24,7 +24,8 @@ sel.setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)
 - `focusOffset`
   - : 选中范围内结束位置在焦点节点下第几个子节点的位置。例如，如果是值为 0 的话，整个节点都是被选中的。如果值为 1 的话，那么至少整个节点至少有一个子节点被选中。以此类推。
 
-> **备注：** 如果源代码中`焦点节点`出现在`锚节点`之前的话，这两个将在参数中互换位置，也就是锚节点变为了焦点节点、焦点节点变为了锚节点。另外，这些参数的用法会颠倒 — 插入符是放置在文本的开头而不是结尾，这对于任何可能遵循这规则的键盘命令都是很重要的。例如，<kbd>Shift</kbd> + <kbd>➡︎</kbd> 会使选中状态范围的从开始缩小，而不是在结尾增加。
+> [!NOTE]
+> 如果源代码中`焦点节点`出现在`锚节点`之前的话，这两个将在参数中互换位置，也就是锚节点变为了焦点节点、焦点节点变为了锚节点。另外，这些参数的用法会颠倒 — 插入符是放置在文本的开头而不是结尾，这对于任何可能遵循这规则的键盘命令都是很重要的。例如，<kbd>Shift</kbd> + <kbd>➡︎</kbd> 会使选中状态范围的从开始缩小，而不是在结尾增加。
 
 ### 返回值
 
@@ -100,7 +101,8 @@ button.onclick = function () {
 
 {{ EmbedLiveSample('示例', '100%', 370) }}
 
-> **备注：** 实例在这里 [example on GitHub](https://github.com/chrisdavidmills/selection-api-examples/blob/master/setBaseAndExtent.html) ([see it live also](https://chrisdavidmills.github.io/selection-api-examples/setBaseAndExtent.html).)
+> [!NOTE]
+> 实例在这里 [example on GitHub](https://github.com/chrisdavidmills/selection-api-examples/blob/master/setBaseAndExtent.html) ([see it live also](https://chrisdavidmills.github.io/selection-api-examples/setBaseAndExtent.html).)
 
 ## 规范
 

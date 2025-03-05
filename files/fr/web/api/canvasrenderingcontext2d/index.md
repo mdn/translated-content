@@ -256,7 +256,7 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 ### WebKit only
 
 - {{non-standard_inline}} `CanvasRenderingContext2D.webkitBackingStorePixelRatio`
-  - : The backing store size in relation to the canvas element. See [High DPI Canvas](http://www.html5rocks.com/en/tutorials/canvas/hidpi/).
+  - : The backing store size in relation to the canvas element. See [High DPI Canvas](https://www.html5rocks.com/en/tutorials/canvas/hidpi/).
 - {{non-standard_inline}} `CanvasRenderingContext2D.webkitGetImageDataHD`
   - : Intended for HD backing stores, but removed from canvas specifications.
 - {{non-standard_inline}} `CanvasRenderingContext2D.webkitPutImageDataHD`

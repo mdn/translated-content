@@ -57,7 +57,8 @@ browser.browsingData
 
 Remove todos os cookies:
 
-> **Warning:** Usar a API para remover todos os cookies irá, simultâneamente, limpar todos os objetos local storage (incluindo aqueles de outras extensões)
+> [!WARNING]
+> Usar a API para remover todos os cookies irá, simultâneamente, limpar todos os objetos local storage (incluindo aqueles de outras extensões)
 >
 > Se você quer limpar todos os cookies sem alterar as informações do local storage, use [browser.cookies](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/cookies) para percorrer and remover os conteúdos de todos os cookies armazenados
 
@@ -79,7 +80,8 @@ browser.browsingData.removeCookies({}).then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **Note:** Esta API é baseada na API do Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/).
+> [!NOTE]
+> Esta API é baseada na API do Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
 >
 > A compatibilidade dos dados do Microsoft Edge é fornecida pela Microsoft Corporation e é incluída aqui sob a licença Creative Commons Attribution 3.0 United States.
 

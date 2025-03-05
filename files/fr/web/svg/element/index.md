@@ -204,7 +204,8 @@ Les dessins et les images SVG sont créés à l'aide d'un large éventail d'él�
 
 ## Élements obsolètes et dépréciés
 
-> **Attention :** Les éléments ci-dessous sont dépréciés et ne doivent pas être utilisés. **Vous ne devez absolument pas les utiliser dans des nouveux projets, et vous devez dans la mesure du possible les remplacer dans les vieux projets.** Ils sont listés là uniquemnt à titre informatif.
+> [!WARNING]
+> Les éléments ci-dessous sont dépréciés et ne doivent pas être utilisés. **Vous ne devez absolument pas les utiliser dans des nouveux projets, et vous devez dans la mesure du possible les remplacer dans les vieux projets.** Ils sont listés là uniquemnt à titre informatif.
 
 ### A
 
@@ -241,7 +242,7 @@ Les dessins et les images SVG sont créés à l'aide d'un large éventail d'él�
 ## Voir aussi
 
 - [Référence des attributs SVG](/fr/docs/Web/SVG/Attribute)
-- [Tutoriel SVG](/fr/docs/Web/SVG/Tutoriel)
-- [Référence des interfaces avec SVG](/fr/docs/Web/API/Document_Object_Model#SVG_interfaces)
+- [Tutoriel SVG](/fr/docs/Web/SVG/Tutorial)
+- [Référence des interfaces avec SVG](/fr/docs/Web/API/Document_Object_Model#svg_interfaces)
 
 {{SVGRef}}

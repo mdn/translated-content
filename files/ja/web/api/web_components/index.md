@@ -2,7 +2,7 @@
 title: ウェブコンポーネント
 slug: Web/API/Web_components
 l10n:
-  sourceCommit: 94b59a847d74883c9cf3a6aed38426c95cf3998b
+  sourceCommit: 839b5e82a117678948392e77b81d64a7f6d03811
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -47,7 +47,7 @@ l10n:
   - : カスタム要素に関わる機能が含まれています。中でも注目すべきは、 {{domxref("CustomElementRegistry.define()")}} メソッドで、新しいカスタム要素を登録するために用います。それにより、カスタム要素を文書内で使用できるようになります。
 - {{domxref("Window.customElements")}}
   - : `CustomElementRegistry` オブジェクトへの参照を返します。
-- [ライフサイクルコールバック](/ja/docs/Web/API/Web_components/Using_custom_elements#ライフサイクルコールバックの使用)
+- [ライフサイクルコールバック](/ja/docs/Web/API/Web_components/Using_custom_elements#カスタム要素のライフサイクルコールバック)
 
   - : カスタム要素のクラス定義の中で定義された特別なコールバック関数で、挙動に影響を与えます。
 
@@ -81,6 +81,9 @@ l10n:
       - : 使われている CSS を含む、[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) のシャドウホストを選択します。（シャドウ DOM の内側からカスタム要素を選択することができます。）ただし、関数の引数として渡されるセレクターがシャドウホストに一致している場合に限ります。
     - {{cssxref(":host-context", ":host-context()")}}
       - : 使われている CSS を含む、[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) のシャドウホストを選択します。（シャドウ DOM の内側からカスタム要素を選択することができます。）ただし、関数の引数として渡されるセレクターが DOM 階層内のシャドウホストの先祖要素に一致している場合に限ります。
+    - {{CSSxRef(":state",":state()")}}
+      - : 指定したカスタム状態にあるカスタム要素と一致します。
+        より正確に言えば、指定した状態が要素の {{domxref("CustomStateSet")}} に存在する無名カスタム要素と一致します。
 
 - CSS 擬似要素
 

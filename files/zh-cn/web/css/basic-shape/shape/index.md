@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`shape()`** [CSS 函数](/zh-CN/docs/Web/CSS/CSS_Functions)用于定义 {{cssxref("clip-path")}} 和 {{cssxref("offset-path")}} 属性的形状。它结合了一个初始起点和一系列定义形状路径的形状命令。`shape()` 函数是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型的成员。
+**`shape()`** [CSS 函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)用于定义 {{cssxref("clip-path")}} 和 {{cssxref("offset-path")}} 属性的形状。它结合了一个初始起点和一系列定义形状路径的形状命令。`shape()` 函数是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型的成员。
 
 ## 语法
 
@@ -78,7 +78,8 @@ clip-path: shape(
 
     `to`：表示 `<coordinate-pair>` 相对于参考框的左上角的位置（“绝对”值）。
 
-    > **备注：** 如果 `<coordinate-pair>` 中的坐标以百分比形式指定，则该值相对于参考框的宽度或高度进行计算。
+    > [!NOTE]
+    > 如果 `<coordinate-pair>` 中的坐标以百分比形式指定，则该值相对于参考框的宽度或高度进行计算。
 
     可以指定 `<move-command>`、`<line-command>`、`<hv-line-command>`、`<curve-command>`、`<smooth-command>`、`<arc-command>` 和 `close` 作为 `<shape-command>`。
 

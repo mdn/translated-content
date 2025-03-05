@@ -256,4 +256,4 @@ barcodeDetector
 ## 参见
 
 - [barcodefaq.com：包含有关不同条形码和不同类型示例的信息的网站。](https://www.barcodefaq.com/)
-- [Shape Detection API：一张图片胜过一千个单词、人脸和条形码](https://developer.chrome.com/docs/capabilities/shape-detection#barcodedetector)
+- [Shape Detection API：一张图片胜过一千个单词、人脸和条形码](https://developer.chrome.google.cn/docs/capabilities/shape-detection#barcodedetector)

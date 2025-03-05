@@ -1,63 +1,75 @@
 ---
 title: outline-width
 slug: Web/CSS/outline-width
+l10n:
+  sourceCommit: aa714bb37625b21b0f40db1f1ea557e773456fa2
 ---
 
 {{CSSRef}}
 
-CSS 属性 **`outline-width`** 用于设置一个元素的轮廓的厚度。元素轮廓是绘制于元素周围的一条线，位于 {{cssxref("border")}} 的外围。
+**`outline-width`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素轮廓的粗细。轮廓是绘制在元素周围的线，位于 {{cssxref("border")}} 之外。
 
 {{EmbedInteractiveExample("pages/css/outline-width.html")}}
 
-大多情况下用简写属性 {{cssxref("outline")}} 定义轮廓外观会更方便。
+在定义轮廓的外观时，通常使用简写属性 {{cssxref("outline")}} 更为方便。
 
-## Syntax
+## 语法
 
 ```css
-/* Keyword values */
+/* 关键字值 */
 outline-width: thin;
 outline-width: medium;
 outline-width: thick;
 
-/* <length> values */
+/* <length> 值 */
 outline-width: 1px;
 outline-width: 0.1em;
 
-/* Global values */
+/* 全局值 */
 outline-width: inherit;
+outline-width: initial;
+outline-width: revert;
+outline-width: revert-layer;
+outline-width: unset;
 ```
 
-`outline-width` 的值可以是下面列表中的任一项。
+`outline-width` 属性的值可以是以下列表的任意一项。
 
-### Values
+### 值
 
 - {{cssxref("&lt;length&gt;")}}
-  - : The width of the outline specified as a `<length>`.
+  - : 轮廓的宽度指定为 `<length>`。
 - `thin`
-  - : 取决于用户代理。通常等同于桌面浏览器的 `1px` （包括 Firefox）。
+  - : 取决于用户代理。通常等同于桌面浏览器的 `1px`（包括 Firefox）。
 - `medium`
-  - : 取决于用户代理。通常等同于桌面浏览器的 `3px` （包括 Firefox）。
+  - : 取决于用户代理。通常等同于桌面浏览器的 `3px`（包括 Firefox）。
 - `thick`
   - : 取决于用户代理。通常等同于桌面浏览器的 `5px`（包括 Firefox）。
 
-### Formal syntax
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
 
 {{csssyntax}}
 
-## Examples
+## 示例
 
-### HTML
+### 设置元素的轮廓宽度
+
+#### HTML
 
 ```html
-<span id="thin">thin</span>
-<span id="medium">medium</span>
-<span id="thick">thick</span>
+<span id="thin">细</span>
+<span id="medium">中等</span>
+<span id="thick">粗</span>
 <span id="twopixels">2px</span>
 <span id="oneex">1ex</span>
 <span id="em">1.2em</span>
 ```
 
-### CSS
+#### CSS
 
 ```css
 span {
@@ -91,14 +103,20 @@ span {
 }
 ```
 
-{{EmbedLiveSample('Examples', '100%', '80')}}
+#### 结果
 
-## Specifications
+{{EmbedLiveSample('设置元素的轮廓宽度', '100%', '80')}}
+
+## 规范
 
 {{Specifications}}
 
-{{cssinfo}}
-
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{cssxref("outline")}}
+- {{cssxref("outline-style")}}
+- {{cssxref("outline-color")}}

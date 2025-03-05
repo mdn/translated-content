@@ -9,7 +9,8 @@ slug: Web/CSS/font-feature-settings
 
 A propriedade **`font-feature-settings`** do CSS te dá controle sobre tipografia avançada nas fontes do tipo OpenType.
 
-> **Nota:** Sempre que possível, deve usar o {{cssxref("font-variant")}} propriedade abreviada ou uma propriedade extensa associada, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}} ou {{cssxref("font-variant-position")}}.
+> [!NOTE]
+> Sempre que possível, deve usar o {{cssxref("font-variant")}} propriedade abreviada ou uma propriedade extensa associada, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}} ou {{cssxref("font-variant-position")}}.
 >
 > Esta propriedade é um recurso de baixo nível projetado para lidar com casos especiais onde não existe outra maneira de habilitar ou acessar um recurso de fonte OpenType.
 >
@@ -43,7 +44,7 @@ font-feature-settings: unset;
   - : Text is laid out using default settings.
 - `<feature-tag-value>`
   - : Ao renderizar texto, a lista de características OpenType é passada para o mecanismo de layout de texto para ativar ou desativar recursos do tipo de letra. A tag é sempre uma {{cssxref("&lt;string&gt;")}} de 4 caracteres ASCII. Se possuir mais ou menos caracteres ou conter caracteres fora da faixa U+20 - U+7E, toda a propriedade é invalida.
-    O valor é um inteiro positivo. As duas palavras-chaves `on` e `off` são sinônimos de `1` e `0` respectivamente. Se nenhum valor é definido, o padrão é `1`. Para características OpenType não-booleanas (ex. [stylistic alternates](http://www.microsoft.com/typography/otspec/features_pt.htm#salt)), o valor implica em um glifo particular para ser selecionado; para valores booleanos, é um interruptor.
+    O valor é um inteiro positivo. As duas palavras-chaves `on` e `off` são sinônimos de `1` e `0` respectivamente. Se nenhum valor é definido, o padrão é `1`. Para características OpenType não-booleanas (ex. [stylistic alternates](https://www.microsoft.com/typography/otspec/features_pt.htm#salt)), o valor implica em um glifo particular para ser selecionado; para valores booleanos, é um interruptor.
 
 ### Sintaxe formal
 
@@ -105,5 +106,5 @@ td.tabular {
 ## Veja Também
 
 - [FontFont OpenType User Guide (pdf)](https://www.fontfont.com/staticcontent/downloads/FF_OT_User_Guide.pdf)
-- [OpenType Feature Tags](http://www.microsoft.com/typography/otspec/featurelist.htm) list
-- [Using the whole font](http://blogs.msdn.com/b/ie/archive/2012/01/09/css-corner-using-the-whole-font.aspx) (The -moz syntax is the old one. On Gecko, use the -ms syntax but with -moz).
+- [OpenType Feature Tags](https://www.microsoft.com/typography/otspec/featurelist.htm) list
+- [Using the whole font](https://blogs.msdn.com/b/ie/archive/2012/01/09/css-corner-using-the-whole-font.aspx) (The -moz syntax is the old one. On Gecko, use the -ms syntax but with -moz).

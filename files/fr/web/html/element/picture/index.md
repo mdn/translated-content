@@ -7,7 +7,18 @@ slug: Web/HTML/Element/picture
 
 L'élément HTML **`<picture>`** est un conteneur utilisé afin de définir zéro ou plusieurs éléments {{HTMLElement("source")}} destinés à un élément {{HTMLElement("img")}}. Le navigateur choisira la source la plus pertinente selon la disposition de la page (les contraintes qui s'appliquent à la boîte dans laquelle l'image devra être affichée), selon l'appareil utilisé (la densité de pixels de l'affichage par exemple avec les appareils hiDPI) et selon les formats pris en charge (ex. WebP pour les navigateurs Chromium ou PNG pour les autres). Si aucune correspondance n'est trouvée parmi les éléments `<source>`, c'est le fichier défini par l'attribut [`src`](/fr/docs/Web/HTML/Element/img#src) de l'élément `<img>` qui sera utilisé.
 
-{{EmbedInteractiveExample("pages/tabbed/picture.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;picture&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<!--Change the browser window width to see the image change.-->
+
+<picture>
+  <source
+    srcset="/shared-assets/images/examples/surfer.jpg"
+    media="(orientation: portrait)" />
+  <img src="/shared-assets/images/examples/painted-hand.jpg" alt="" />
+</picture>
+```
 
 L'agent utilisateur examine chaque attribut présent dans `<source>` ([`srcset`](/fr/docs/Web/HTML/Element/source#srcset), [`media`](/fr/docs/Web/HTML/Element/source#media), and [`type`](/fr/docs/Web/HTML/Element/source#type)) pour sélectionner l'URL de la meilleure ressource selon la disposition de la page, les caractéristiques de l'écran de l'appareil, etc.
 
@@ -20,13 +31,14 @@ Lorsqu'on fournit des versions haute densité d'une image pour les appareils ave
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes d'utilisation
 
 Il est possible d'utiliser la propriété CSS {{cssxref("object-position")}} afin d'ajuster le positionnement de l'image dans le cadre de l'élément. La propriété {{cssxref("object-fit")}} permet quant à elle de contrôler la façon dont la taille de l'image est ajustée.
 
-> **Note :** Ces propriétés doivent être utilisées sur les éléments `<img>` fils et pas sur l'élément `<picture>`.
+> [!NOTE]
+> Ces propriétés doivent être utilisées sur les éléments `<img>` fils et pas sur l'élément `<picture>`.
 
 ## Exemples
 
@@ -86,7 +98,7 @@ L'attribut `type` d'un élément {{HTMLElement("source")}} permet d'indiquer le 
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>

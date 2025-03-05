@@ -49,7 +49,7 @@ API の表面は同じですが、Storage Access API を使用するウェブサ
 - Firefox では、`requestStorageAccess()` から返された Promise が解決されると、埋め込まれたページは、クッキーだけでなく、ファーストパーティストレージ全体にアクセスできます。 これには、[Web Storage](/ja/docs/Web/API/Web_Storage_API)、[IndexedDB](/ja/docs/Web/API/IndexedDB_API)、[DOM Cache](/ja/docs/Web/API/Cache) などの API へのアクセスが含まれます。
 - Firefox では、ストレージアクセス許可は 30 暦日が経過すると段階的に廃止されますが、Safari では、ブラウザーの使用がユーザーの操作なしで 30 日が経過するとストレージアクセス許可が段階的に廃止されます。 これは現在、Firefox 実装の制限であり、将来のバージョンで対処する可能性があります。 Safari では、Storage Access API を正常に使用すると、このカウンターがリセットされます。
 
-追跡クッキーをブロックするための Firefox の新しいストレージアクセスポリシーの文書には、ストレージアクセス許可の範囲の[詳細な説明](/ja/docs/Mozilla/Firefox/Privacy/Storage_access_policy#Storage_access_grants)が含まれています。
+追跡クッキーをブロックするための Firefox の新しいストレージアクセスポリシーの文書には、ストレージアクセス許可の範囲の[詳細な説明](/ja/docs/Web/Privacy/Storage_Access_Policy#storage_access_grants)が含まれています。
 
 ## Storage Access API のメソッド
 
@@ -60,13 +60,14 @@ Storage Access API のメソッドは、{{domxref("Document")}} インターフ�
 - {{domxref("Document.requestStorageAccess()")}}
   - : ファーストパーティストレージへのアクセスが許可された場合に解決し、アクセスが拒否された場合に拒否する {{jsxref("Promise")}} を返します。
 
-> **メモ:** ユーザーとのやり取りは、これらの両方のメソッドによって返される Promise に伝播し、呼び出し元は、ユーザーからの 2 回目のクリックを必要とせずに、ユーザーとのやり取りを必要とするアクションを実行できます。 例えば、呼び出し元は、Firefox のポップアップブロッカーをトリガーせずに、解決した Promise からポップアップウィンドウを開くことができます。
+> [!NOTE]
+> ユーザーとのやり取りは、これらの両方のメソッドによって返される Promise に伝播し、呼び出し元は、ユーザーからの 2 回目のクリックを必要とせずに、ユーザーとのやり取りを必要とするアクションを実行できます。 例えば、呼び出し元は、Firefox のポップアップブロッカーをトリガーせずに、解決した Promise からポップアップウィンドウを開くことができます。
 
 ## \<iframe> サンドボックスの拡張
 
 {{htmlelement("iframe")}} 要素の `sandbox` 属性には新しいトークン `allow-storage-access-by-user-activation` があり、サンドボックス化した `<iframe>` は Storage Access API を使用してストレージアクセスを要求できます。
 
-## 仕様
+## 仕様書
 
 API は現在、提案段階にあり、標準化プロセスはまだ開始されていません。 現在、Apple の [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) ブログ投稿、および [WHATWG HTML issue 3338 — Proposal: Storage Access API](https://github.com/whatwg/html/issues/3338) で API の仕様の詳細を見つけることができます。
 

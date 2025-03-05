@@ -45,7 +45,8 @@ let creating = browser.tabs.create(
 
       - : `boolean`。标签页是否应成为窗口中选择的标签页。默认为 `true`。
 
-        > **警告：** 此属性已弃用，在 Firefox 中不受支持。请改用 `active`。
+        > [!WARNING]
+        > 此属性已弃用，在 Firefox 中不受支持。请改用 `active`。
 
     - `title` {{optional_inline}}
       - : `string`。标签页的标题。仅当将标签页创建为 `discarded` 设置为 `true` 时才允许使用。
@@ -101,7 +102,8 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-create) API。本文档内容源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-create) API。本文档内容源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -7,7 +7,36 @@ slug: Web/HTML/Element/fieldset
 
 **HTML `<fieldset>` 요소**는 웹 양식의 여러 컨트롤과 레이블({{htmlelement("label")}})을 묶을 때 사용합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;fieldset&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<form>
+  <fieldset>
+    <legend>Choose your favorite monster</legend>
+
+    <input type="radio" id="kraken" name="monster" value="K" />
+    <label for="kraken">Kraken</label><br />
+
+    <input type="radio" id="sasquatch" name="monster" value="S" />
+    <label for="sasquatch">Sasquatch</label><br />
+
+    <input type="radio" id="mothman" name="monster" value="M" />
+    <label for="mothman">Mothman</label>
+  </fieldset>
+</form>
+```
+
+```css interactive-example
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 위의 예제에서 보듯, `<fieldset>` 요소는 HTML 양식 속에서 그룹을 만들 수 있으며 {{htmlelement("legend")}} 요소로 그룹의 설명을 제공할 수 있습니다. 여러 특성을 지정할 수 있는데, 그 중 중요한 것 하나는 페이지 내 {{htmlelement("form")}} 요소의 `id`를 받을 수 있는 `form` 특성으로, `<form>` 바깥의 `<fieldset>` 요소를 해당 양식에 포함해야 할 때 사용합니다. 다른 하나는 `disabled`로, `<fieldset>`의 모든 콘텐츠를 한 번에 비활성화할 수 있습니다.
 
@@ -29,13 +58,14 @@ slug: Web/HTML/Element/fieldset
 
 `<fieldset>`에 스타일을 적용하기 전에 고려해야 하는 부분이 있습니다.
 
-`<fieldset>`의 {{cssxref("display")}} 속성의 값은 기본적으로 `block`이며, 새로운 [블록 서식 맥락](/ko/docs/Web/Guide/CSS/Block_formatting_context)을 형성합니다. 인라인형 `display` 값을 지정하면 `inline-block`, 그렇지 않으면 `block`처럼 행동합니다. `<fieldset>`은 기본 스타일로 콘텐츠를 감싸는 `2px` 너비의 `groove` 테두리, 작은 양의 내부 여백, 그리고 {{cssxref("min-inline-size", "min-inline-size: min-content")}}를 갖습니다.
+`<fieldset>`의 {{cssxref("display")}} 속성의 값은 기본적으로 `block`이며, 새로운 [블록 서식 맥락](/ko/docs/Web/CSS/CSS_display/Block_formatting_context)을 형성합니다. 인라인형 `display` 값을 지정하면 `inline-block`, 그렇지 않으면 `block`처럼 행동합니다. `<fieldset>`은 기본 스타일로 콘텐츠를 감싸는 `2px` 너비의 `groove` 테두리, 작은 양의 내부 여백, 그리고 {{cssxref("min-inline-size", "min-inline-size: min-content")}}를 갖습니다.
 
 {{htmlelement("legend")}} 요소는 `<fieldset>`의 블록 시작 방향(대개 위쪽) 테두리 위를 가로지르는 위치에 놓입니다. `<legend>` 또한 자신의 블록 서식 맥락을 만들며, 너비는 자신의 콘텐츠에 맞춰져 늘어나거나 줄어듭니다. `display`는 항상 블록형이 됩니다. 즉, `display: inline`도 `block`처럼 동작합니다.
 
 `<fieldset>`의 콘텐츠는 별도의 익명 상자가 담게 됩니다. 익명 상자는 `<fieldset>`으로부터 특정 속성을 상속합니다. `<fielset>`에 `display: grid` 또는 `display: inline-grid`를 지정하면 익명 상자는 그리드 서식 맥락을 가지며, `display: flex` 또는 `display: inline-flex`를 지정하면 익명 상자가 플렉스 서식 맥락을 갖습니다. 그 외의 경우 블록 서식 맥락입니다.
 
-> **참고:** 글 작성 시점에서, Microsoft Edge와 Google Chrome에는 {{htmlelement("fieldset")}} 내부에서 플렉스박스와 그리드 레이아웃을 사용할 수 없는 버그가 존재합니다. [GitHub 이슈](https://github.com/w3c/csswg-drafts/issues/321)에서 버그 추적 링크를 확인할 수 있습니다.
+> [!NOTE]
+> 글 작성 시점에서, Microsoft Edge와 Google Chrome에는 {{htmlelement("fieldset")}} 내부에서 플렉스박스와 그리드 레이아웃을 사용할 수 없는 버그가 존재합니다. [GitHub 이슈](https://github.com/w3c/csswg-drafts/issues/321)에서 버그 추적 링크를 확인할 수 있습니다.
 
 ## 예제
 
@@ -106,7 +136,7 @@ slug: Web/HTML/Element/fieldset
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>

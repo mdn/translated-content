@@ -9,7 +9,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/call
 
 O método **`call()`** invoca uma função com um dado valor `this` e argumentos passados individualmente.
 
-> **Nota:** Apesar de a sintaxe desta função ser quase idêntica à de {{jsxref("Function.prototype.apply", "apply()")}}, a principal diferença é que `call()` aceita uma **lista de argumentos**, enquanto `apply()` aceita **um único array de argumentos.**
+> [!NOTE]
+> Apesar de a sintaxe desta função ser quase idêntica à de {{jsxref("Function.prototype.apply", "apply()")}}, a principal diferença é que `call()` aceita uma **lista de argumentos**, enquanto `apply()` aceita **um único array de argumentos.**
 
 ## Sintaxe
 
@@ -115,4 +116,4 @@ apresentacao.call(i); // Douglas Crockford é um excelente Desenvolvedor Javascr
 
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.apply()")}}
-- [Introdução à JavaScript Orientado à Objetos](/pt-BR/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
+- [Introdução à JavaScript Orientado à Objetos](/pt-BR/docs/Learn/JavaScript/Objects)

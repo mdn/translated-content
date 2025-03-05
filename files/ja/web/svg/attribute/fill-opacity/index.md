@@ -2,14 +2,15 @@
 title: fill-opacity
 slug: Web/SVG/Attribute/fill-opacity
 l10n:
-  sourceCommit: 5f7c22deaa74973658257aeaa012ac2ec0be87ae
+  sourceCommit: a7615ee2f9e22946edff7633962bc1d9eee9e0ad
 ---
 
 {{SVGRef}}
 
 **`fill-opacity`** 属性は、図形に適用されるペイントサーバー(_色_, _勾配_, _パターン_, 等)の不透明度を定義するプレゼンテーション属性です。
 
-> **メモ:** プレゼンテーション属性としての`fill-opacity`CSS プロパティに適用できます。
+> [!NOTE]
+> プレゼンテーション属性であるため、`fill-opacity` は CSS プロパティとして使用できます。
 
 この属性は次の SVG 要素で使用できます。
 
@@ -36,23 +37,23 @@ svg {
 
 ```html
 <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- 既定のfill不透明度: 1 -->
+  <!-- 既定の fill opacity: 1 -->
   <circle cx="50" cy="50" r="40" />
 
-  <!-- 数値で指定するfill不透明度 -->
+  <!-- 数値で指定する fill opacity -->
   <circle cx="150" cy="50" r="40" fill-opacity="0.7" />
 
-  <!-- 割合で指定するfill不透明度 -->
+  <!-- 割合で指定する fill opacity -->
   <circle cx="250" cy="50" r="40" fill-opacity="50%" />
 
-  <!-- CSSプロパティで指定するfill不透明度 -->
+  <!-- CSS プロパティで指定する fill opacity -->
   <circle cx="350" cy="50" r="40" style="fill-opacity: .25;" />
 </svg>
 ```
 
 {{EmbedLiveSample("Example", '100%', 150)}}
 
-## 使用上の注意
+## 使用方法のメモ
 
 <table class="properties">
   <tbody>
@@ -61,7 +62,7 @@ svg {
       <td>
         <code>[0-1]</code> |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint"
+          ><a href="/ja/docs/Web/SVG/Content_type#paint"
             >&#x3C;percentage></a
           ></strong
         >
@@ -73,17 +74,24 @@ svg {
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
-      <td>Yes</td>
+      <td>可</td>
     </tr>
   </tbody>
 </table>
 
-> **メモ:** SVG2 では、`fill-opacity`への割合値を導入していますが、状況としてはこれはまだ広く対応されているわけではありません(_以下の[ブラウザー実装状況](#ブラウザー実装状況)を参照_)。最良の実装としては、不透明度を`[0-1]`の範囲の値として指定することです。
+> [!NOTE]
+> SVG2 では、`fill-opacity` へのパーセント値を導入していますが、現状としてはまだ広く対応されていません（_以下の[ブラウザーの互換性](#ブラウザーの互換性)を参照_）。最良の実装としては、不透明度を `[0-1]` の範囲の値として指定することです。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{SVGAttr("opacity")}}
+- {{SVGAttr("stop-opacity")}}
+- {{SVGAttr("stroke-opacity")}}

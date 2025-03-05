@@ -136,7 +136,7 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 
 ## `grid-column` 和 `grid-row` 的简写
 
-我们用了不少代码定位每个元素，你应该不会惊讶有[简写](/zh-CN/docs/Web/CSS/Shorthand_properties)。{{cssxref("grid-column-start")}} 和 {{cssxref("grid-column-end")}} 属性可以合并为 {{cssxref("grid-column")}}、{{cssxref("grid-row-start")}} 和 {{cssxref("grid-row-end")}} 则合并为 {{cssxref("grid-row")}}。
+我们用了不少代码定位每个元素，你应该不会惊讶有[简写](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)。{{cssxref("grid-column-start")}} 和 {{cssxref("grid-column-end")}} 属性可以合并为 {{cssxref("grid-column")}}、{{cssxref("grid-row-start")}} 和 {{cssxref("grid-row-end")}} 则合并为 {{cssxref("grid-row")}}。
 
 ```css hidden
 * {
@@ -462,7 +462,8 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 
 CSS 网格规范加入了用 {{cssxref("column-gap")}} 和 {{cssxref("row-gap")}} 属性定义列间距和行间距的能力。这两个属性的行为和多列布局中的 {{cssxref("column-gap")}} 属性很像。
 
-> **备注：** 在浏览器首次引入网格属性 {{cssxref("column-gap")}}、{{cssxref("row-gap")}} 和 {{cssxref("gap")}} 时，具有 `grid-` 前缀。分别是 `grid-column-gap`、`grid-row-gap` 和 `grid-gap`。
+> [!NOTE]
+> 在浏览器首次引入网格属性 {{cssxref("column-gap")}}、{{cssxref("row-gap")}} 和 {{cssxref("gap")}} 时，具有 `grid-` 前缀。分别是 `grid-column-gap`、`grid-row-gap` 和 `grid-gap`。
 >
 > 浏览器正在更新它们的渲染引擎，以删除这一前缀，但是携带有前缀的版本将以别名的形式进行维护，使得它们可以被安全地使用。
 

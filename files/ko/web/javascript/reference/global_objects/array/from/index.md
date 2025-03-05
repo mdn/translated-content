@@ -9,7 +9,15 @@ l10n:
 
 **`Array.from()`** 정적 메서드는 [순회 가능](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#순회_가능_프로토콜) 또는 [유사 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections##유사_배열_객체_다루기) 객체에서 얕게 복사된 새로운 `Array` 인스턴스를 생성합니다.
 
-{{EmbedInteractiveExample("pages/js/array-from.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.from()", "shorter")}}
+
+```js interactive-example
+console.log(Array.from("foo"));
+// Expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], (x) => x + x));
+// Expected output: Array [2, 4, 6]
+```
 
 ## 구문
 
@@ -49,7 +57,8 @@ Array.from(arrayLike, mapFn, thisArg)
 
 `Array.from()`에는 생성되는 배열의 각 요소에 대해 함수를 실행할 수 있는 {{jsxref("Array/map", "map()")}}과 비슷한 선택적 매개변수 `mapFn`이 있습니다. 좀 더 명확하게 설명하자면, `Array.from(obj, mapFn, thisArg)`는 중간 배열을 생성하지 않는다는 점과 배열이 아직 생성 중이기 때문에 전체 배열 없이 두 개의 인수(`element`, `index`)만 받는다는 점을 제외하면 `Array.from(obj).map(mapFn, thisArg)`과 동일한 결과를 가져옵니다.
 
-> **참고:** 이 동작은 [형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)에서 더 중요한데, 중간 배열에는 적절한 형식에 맞게 잘린 값이 있어야 하기 때문입니다. `Array.from()`은 {{jsxref("TypedArray.from()")}}과 동일한 동작을 하도록 구현되었습니다.
+> [!NOTE]
+> 이 동작은 [형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)에서 더 중요한데, 중간 배열에는 적절한 형식에 맞게 잘린 값이 있어야 하기 때문입니다. `Array.from()`은 {{jsxref("TypedArray.from()")}}과 동일한 동작을 하도록 구현되었습니다.
 
 `Array.from()` 메서드는 범용 팩토리 메서드입니다. 예를 들어, `Array`의 하위 클래스가 `from()` 메서드를 상속하는 경우, 상속된 `from()` 메서드는 `Array` 인스턴스 대신 하위 클래스의 새 인스턴스를 반환합니다. 실제로 `this` 값은 새 배열의 길이를 나타내는 단일 인수를 받는 모든 생성자 함수가 될 수 있습니다. 순회 가능이 `arrayLike`로 전달되면 인수 없이 생성자가 호출되고, 배열형 객체가 전달되면 배열형 객체의 [정규화된 length](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#length_속성_일반화)를 사용하여 생성자가 호출됩니다. 최종 `length`는 순회가 완료되면 다시 설정됩니다. `this` 값이 생성자 함수가 아닌 경우, 일반 `Array` 생성자가 대신 사용됩니다.
 

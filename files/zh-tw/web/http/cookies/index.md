@@ -20,7 +20,8 @@ Cookie 主要用於三個目的：
 
 Cookie 曾經用於一般的用戶端儲存。儘管在它們是用戶端唯一儲存數據的方式時這是合理的，但現代儲存 API 現在被推薦使用。Cookie 會隨著每個請求發送，因此可能會降低性能（特別是對於移動數據連接）。現代用戶端儲存的 API 包括 [Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API)（`localStorage` 和 `sessionStorage`）和 [IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API)。
 
-> **備註：** 若要查看儲存的 Cookie（以及網頁可以使用的其他儲存），你可以在開發者工具中啟用[儲存空間檢測器](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)，並從儲存樹中選擇 Cookie。
+> [!NOTE]
+> 若要查看儲存的 Cookie（以及網頁可以使用的其他儲存），你可以在開發者工具中啟用[儲存空間檢測器](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)，並從儲存樹中選擇 Cookie。
 
 ## 建立 Cookie
 
@@ -53,7 +54,8 @@ Host: www.example.org
 Cookie: yummy_cookie=choco; tasty_cookie=strawberry
 ```
 
-> **備註：** 以下是在各種伺服器端應用程序中如何使用 `Set-Cookie` 標頭的方法：
+> [!NOTE]
+> 以下是在各種伺服器端應用程序中如何使用 `Set-Cookie` 標頭的方法：
 >
 > - [PHP](https://www.php.net/manual/en/function.setcookie.php)
 > - [Node.JS](https://nodejs.org/dist/latest-v14.x/docs/api/http.html#http_response_setheader_name_value)
@@ -73,7 +75,8 @@ Cookie 的生存期取決於在創建它們時與 {{HTTPHeader("Set-Cookie")}} �
 Set-Cookie: id=a3fWa; Expires=Thu, 31 Oct 2021 07:28:00 GMT;
 ```
 
-> **備註：** 當你設置 `Expires` 日期和時間時，它們是相對於設置 Cookie 的用戶端，而不是伺服器。
+> [!NOTE]
+> 當你設置 `Expires` 日期和時間時，它們是相對於設置 Cookie 的用戶端，而不是伺服器。
 
 如果你的網站對用戶進行身份驗證，應該在用戶進行身份驗證時重新生成並重新發送會話 Cookie，即使已經存在。這種方法有助於防止[會話固定攻擊](/zh-TW/docs/Web/Security/Types_of_attacks#session_fixation)，其中第三方可以重用用戶的會話。
 
@@ -123,7 +126,7 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 
 ##### Path 的默認值
 
-如果未設置 `Path` 屬性，則其默認值從設置 Cookie 的 URI 的[路徑](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#path_to_resource)計算，如下所示：
+如果未設置 `Path` 屬性，則其默認值從設置 Cookie 的 URI 的[路徑](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#path_to_resource)計算，如下所示：
 
 - 如果路徑為空，不以 `"/"` 開頭，或者包含不超過一個 `"/"` 字符，則 `Path` 的默認值為 `"/"`。
 - 否則，`Path` 的默認值是從開始到最後一個 `"/"` 字符之前的路徑。
@@ -143,7 +146,8 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 Set-Cookie: mykey=myvalue; SameSite=Strict
 ```
 
-> **備註：** 關於 `SameSite` 的相關標準最近發生了變化（MDN 文件記錄了上述新行為）。請參見 cookie 的[瀏覽器相容性](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie#瀏覽器相容性)表，了解特定瀏覽器版本中如何處理該屬性的訊息：
+> [!NOTE]
+> 關於 `SameSite` 的相關標準最近發生了變化（MDN 文件記錄了上述新行為）。請參見 cookie 的[瀏覽器相容性](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie#瀏覽器相容性)表，了解特定瀏覽器版本中如何處理該屬性的訊息：
 >
 > - 如果未指定 `SameSite`，則 `SameSite=Lax` 是新的默認值。以前，默認情況下會將 Cookie 發送給所有請求。
 > - 現在，具有 `SameSite=None` 的 Cookie 還必須指定 `Secure` 屬性（它們需要安全上下文）。
@@ -164,7 +168,8 @@ Set-Cookie: mykey=myvalue; SameSite=Strict
 
 瀏覽器將拒絕不符合這些前綴限制的 Cookie。請注意，這確保了具有前綴的子域創建的 Cookie 要麼限制在該子域內，要麼完全被忽略。由於應用伺服器在確定用戶是否已驗證或 CSRF 令牌是否正確時僅檢查特定的 Cookie 名稱，因此這實際上是對抗會話固定的防禦措施。
 
-> **備註：** 在應用伺服器上，網路應用程式*必須*檢查包括前綴的完整 Cookie 名稱。用戶代理*不會*在將其在請求的 {{HTTPHeader("Cookie")}} 標頭中發送之前從 Cookie 中刪除前綴。
+> [!NOTE]
+> 在應用伺服器上，網路應用程式*必須*檢查包括前綴的完整 Cookie 名稱。用戶代理*不會*在將其在請求的 {{HTTPHeader("Cookie")}} 標頭中發送之前從 Cookie 中刪除前綴。
 
 有關 Cookie 前綴的更多訊息以及目前瀏覽器支持的情況，請參見 [Set-Cookie 參考文章的前綴部分](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie#cookie_prefixes)。
 
@@ -185,12 +190,13 @@ console.log(document.cookie);
 
 ## 安全
 
-> **備註：** 在 Cookie 中儲存訊息時，請記住所有 Cookie 值都對終端用戶可見，並且可以被終端用戶更改。根據應用程序的不同，你可能希望使用伺服器查找的不透明標識符，或者研究替代的身份驗證/保密機制，例如 JSON Web Token。
+> [!NOTE]
+> 在 Cookie 中儲存訊息時，請記住所有 Cookie 值都對終端用戶可見，並且可以被終端用戶更改。根據應用程序的不同，你可能希望使用伺服器查找的不透明標識符，或者研究替代的身份驗證/保密機制，例如 JSON Web Token。
 
 減少涉及 Cookie 的攻擊的方法：
 
 - 使用 `HttpOnly` 屬性防止通過 JavaScript 訪問 Cookie 值。
-- 用於敏感訊息（例如指示身份驗證的 Cookie）的 Cookie 應具有較短的生命期，並將 `SameSite` 屬性設置為 `Strict` 或 `Lax`。（請參見 [SameSite 屬性](#SameSite_屬性)）在[支持 SameSite 的瀏覽器](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie#瀏覽器相容性)中，這確保了身份驗證 Cookie 不會隨跨站請求發送。這將使應用伺服器對請求有效地未經身份驗證。
+- 用於敏感訊息（例如指示身份驗證的 Cookie）的 Cookie 應具有較短的生命期，並將 `SameSite` 屬性設置為 `Strict` 或 `Lax`。（請參見 [SameSite 屬性](#samesite_屬性)）在[支持 SameSite 的瀏覽器](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie#瀏覽器相容性)中，這確保了身份驗證 Cookie 不會隨跨站請求發送。這將使應用伺服器對請求有效地未經身份驗證。
 
 ## 追蹤和隱私
 
@@ -200,18 +206,20 @@ Cookie 與特定域和方案（如 `http` 或 `https`）相關，如果 {{HTTPHe
 
 如果域和方案不同，則不認為該 Cookie 與同一站點相同，並稱為*第三方 Cookie*。儘管托管網頁的伺服器設置了第一方 Cookie，該頁面可能包含儲存在其他域中的組件，例如嵌入在 {{htmlelement("iframe")}} 中的圖像或其他文件。這些組件可能設置第三方 Cookie。
 
-> **備註：** 有時將第三方 Cookie 稱為*跨站點 Cookie*。這可能是一個更準確的名稱，因為*第三方 Cookie*意味著由第三方公司或組織擁有。但是，無論你是否擁有所有涉及的站點，行為和潛在問題都是相同的。
+> [!NOTE]
+> 有時將第三方 Cookie 稱為*跨站點 Cookie*。這可能是一個更準確的名稱，因為*第三方 Cookie*意味著由第三方公司或組織擁有。但是，無論你是否擁有所有涉及的站點，行為和潛在問題都是相同的。
 
 第三方 Cookie 的典型用例包括共享用戶檔案訊息或在不同相關域上收集分析數據。它們也經常用於廣告和跟蹤用戶在網路上的活動。
 
-> **備註：** 公司應該披露其網站使用的 Cookie 類型，以確保透明度並符合[法規](#與_Cookie_相關的法規)。例如，參見 [Google 對其使用的 Cookie 類型的通知](https://policies.google.com/technologies/types)和 Mozilla 的[網站、通信和 Cookie 隱私通知](https://www.mozilla.org/zh-TW/privacy/websites/#cookies)。
+> [!NOTE]
+> 公司應該披露其網站使用的 Cookie 類型，以確保透明度並符合[法規](#與_cookie_相關的法規)。例如，參見 [Google 對其使用的 Cookie 類型的通知](https://policies.google.com/technologies/cookies#types-of-cookies)和 Mozilla 的[網站、通信和 Cookie 隱私通知](https://www.mozilla.org/zh-TW/privacy/websites/#cookies)。
 
 第三方伺服器可以根據同一瀏覽器在訪問多個站點時發送給它的 Cookie，創建用戶的瀏覽歷史和習慣檔案。默認情況下，Firefox 阻止已知包含跟蹤器的第三方 Cookie。第三方 Cookie（或僅為跟蹤而設置的 Cookie）也可能被其他瀏覽器設置或擴展阻止。Cookie 阻止可能導致一些第三方組件（例如社交媒體軟體部件）無法正常工作。
 
 開發人員希望尊重用戶隱私並最小化第三方跟蹤的場景中提供了一些有用的功能：
 
 - 伺服器可以（並且應該）設置 Cookie 的 [SameSite 屬性](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value)，以指定是否可以發送第三方 Cookie。
-- [獨立分區狀態的 Cookie（CHIPS）](/zh-TW/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)允許開發人員將其 Cookie 選擇性地選擇為分區儲存，每個頂級站點都有一個獨立的 Cookie 庫。這使得不跟蹤用途的第三方 Cookie 在不允許用於第三方跟蹤的瀏覽器中繼續工作。
+- [獨立分區狀態的 Cookie（CHIPS）](/zh-TW/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)允許開發人員將其 Cookie 選擇性地選擇為分區儲存，每個頂級站點都有一個獨立的 Cookie 庫。這使得不跟蹤用途的第三方 Cookie 在不允許用於第三方跟蹤的瀏覽器中繼續工作。
 
 ### 與 Cookie 相關的法規
 

@@ -18,7 +18,8 @@ l10n:
 - `inline`
   - : 要素は自分自身の前後に改行を生成しない、一つ以上のインライン要素ボックスを生成します。通常フローでは、次の要素は空間があれば同じ行に来ます。
 
-> **メモ:** 2 つの値の構文に対応しているブラウザーは、**外部** `display` 値（`display: block` や `display: inline` など）のみが指定されていると、内部表示種別を `flow` に設定します（`display: block flow` や `display: inline flow` など）。
+> [!NOTE]
+> 2 つの値の構文に対応しているブラウザーは、**外部** `display` 値（`display: block` や `display: inline` など）のみが指定されていると、内部表示種別を `flow` に設定します（`display: block flow` や `display: inline flow` など）。
 > これは単一のキーワード構文との下位互換性があります。
 
 ## 形式文法

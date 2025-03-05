@@ -33,7 +33,7 @@ La mise en cache HTTP est optionnelle, mais réutiliser une ressource en cache e
 - Résultat incomplet&nbsp;: une réponse {{HTTPStatus(206)}} _(Partial Content)_.
 - Réponses autres que {{HTTPMethod("GET")}} si quelque chose est défini comme pouvant être utilisé comme clé de cache.
 
-Une entrée de cache peut aussi consister en de multiples réponses stockées différenciées par une clé secondaire, si la requête fait l'objet de négociation de contenu. Pour plus de détails, voir les informations à propos de l'en-tête {{HTTPHeader("Vary")}} [ci-dessous](#Varying_responses).
+Une entrée de cache peut aussi consister en de multiples réponses stockées différenciées par une clé secondaire, si la requête fait l'objet de négociation de contenu. Pour plus de détails, voir les informations à propos de l'en-tête {{HTTPHeader("Vary")}} [ci-dessous](#varying_responses).
 
 ## Contrôle de la mise en cache
 
@@ -71,7 +71,7 @@ Cache-Control: public
 
 La directive la plus importante ici est "max-age = \<secondes>", qui correspond au temps maximum pendant lequel une ressource est considérée comme nouvelle. Contrairement à {{HTTPHeader ("Expires")}}, cette directive est relative à l'heure de la demande. Pour les fichiers de l'application qui ne changeront pas, vous pouvez généralement ajouter une mise en cache agressive. Cela inclut les fichiers statiques tels que les images, les fichiers CSS et les fichiers JavaScript, par exemple.
 
-Pour plus de détails, voir aussi la section [Freshness](#Freshness) ci-dessous..
+Pour plus de détails, voir aussi la section [Freshness](#freshness) ci-dessous..
 
 ```
 Cache-Control: max-age=31536000
@@ -79,7 +79,7 @@ Cache-Control: max-age=31536000
 
 #### Validation
 
-Lors de l'utilisation de la directive "must-revalidate", le cache doit vérifier l'état des ressources obsolètes avant de l'utiliser, et celles qui ont expiré ne doivent pas être utilisées. Pour plus de détails, voir la section [Validation](#Cache_validation) ci-dessous.
+Lors de l'utilisation de la directive "must-revalidate", le cache doit vérifier l'état des ressources obsolètes avant de l'utiliser, et celles qui ont expiré ne doivent pas être utilisées. Pour plus de détails, voir la section [Validation](#cache_validation) ci-dessous.
 
 ```
 Cache-Control: must-revalidate

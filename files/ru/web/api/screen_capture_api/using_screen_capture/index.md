@@ -7,7 +7,8 @@ slug: Web/API/Screen_Capture_API/Using_Screen_Capture
 
 В этой статье изучается использование программного интерфейса Screen Capture и его метода {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} для захвата потока экрана (всего или его части), его записи или передачи через сессию [WebRTC](/ru/docs/Web/API/WebRTC_API) .
 
-> **Примечание:** Полезно отметить, что последние версии библиотеки [WebRTC adapter.js](https://github.com/webrtcHacks/adapter) включают реализацию метода `getDisplayMedia()` для обмена изображениями с экрана на браузерах, которые его поддерживают, но ещё не реализуют текущий стандартный интерфейс, который реализован в последних версиях Chrome, Edge, и Firefox.
+> [!NOTE]
+> Полезно отметить, что последние версии библиотеки [WebRTC adapter.js](https://github.com/webrtcHacks/adapter) включают реализацию метода `getDisplayMedia()` для обмена изображениями с экрана на браузерах, которые его поддерживают, но ещё не реализуют текущий стандартный интерфейс, который реализован в последних версиях Chrome, Edge, и Firefox.
 
 ## Захват содержимого экрана
 
@@ -70,7 +71,8 @@ function startCapture(displayMediaOptions) {
 
 Объект ограничений, передающийся в метод {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} является объектом типа {{domxref("DisplayMediaStreamConstraints")}} , который используется для конфигурации получаемого объекта потока.
 
-> **Примечание:** В отличие от большинства применений ограничений в медиа-API, здесь он используется исключительно для определения конфигурации потока, а не для фильтрации доступных вариантов.
+> [!NOTE]
+> В отличие от большинства применений ограничений в медиа-API, здесь он используется исключительно для определения конфигурации потока, а не для фильтрации доступных вариантов.
 
 Существуют три новых ограничения, добавленные в объект типа `MediaTrackConstraints` (а так же в {{domxref("MediaTrackSupportedConstraints")}} и {{domxref("MediaTrackSettings")}}) для конфигурирования потока захвата экрана:
 
@@ -92,11 +94,13 @@ function startCapture(displayMediaOptions) {
 
 К примеру, если определить ограничение {{domxref("MediaTrackConstraints.width", "width")}} для видео, оно применится как масштабирование видео, после того, как пользователь выберет область, и не устанавливает ограничение на размер самого источника.
 
-> **Примечание:** Ограничения никогда не вызывают изменений в списке источников, доступных для захвата API Sharing Screen. Это гарантирует, что веб-приложения не могут заставить пользователя делиться определённым контентом, ограничивая исходный список, пока не останется только один элемент.
+> [!NOTE]
+> Ограничения никогда не вызывают изменений в списке источников, доступных для захвата API Sharing Screen. Это гарантирует, что веб-приложения не могут заставить пользователя делиться определённым контентом, ограничивая исходный список, пока не останется только один элемент.
 
 В процессе захвата экрана машина, которая обменивается содержимым экрана, будет отображать какую-то форму индикатора, чтобы пользователь знал, что обмен находиться в процессе.
 
-> **Примечание:** Из соображений конфиденциальности и безопасности источники совместного использования экрана не перечисляются с использованием метода {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}. По той-же причине, событие {{event("devicechange")}} никогда не вызывается, когда есть изменения в доступных источниках при выполнении `getDisplayMedia()`.
+> [!NOTE]
+> Из соображений конфиденциальности и безопасности источники совместного использования экрана не перечисляются с использованием метода {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}. По той-же причине, событие [`devicechange`](/ru/docs/Web/API/MediaDevices/devicechange_event) никогда не вызывается, когда есть изменения в доступных источниках при выполнении `getDisplayMedia()`.
 
 ### Захват передаваемого аудио
 
@@ -132,7 +136,8 @@ const gdmOptions = {
 
 Захват аудио всегда необязателен, и даже когда веб-контент запрашивает поток с аудио и видео, возвращаемый {{domxref ("MediaStream")}} может по-прежнему иметь только одну видеодорожку без звука.
 
-> **Примечание:** Некоторые свойства не реализованы широко и могут не использоваться движком. К примеру, `cursor` [имеет ограниченную поддержку](/ru/docs/Web/API/MediaTrackConstraints/cursor#Browser_compatibility).
+> [!NOTE]
+> Некоторые свойства не реализованы широко и могут не использоваться движком. К примеру, `cursor` [имеет ограниченную поддержку](/ru/docs/Web/API/MediaTrackConstraints#browser_compatibility).
 
 ## Using the captured stream
 
@@ -166,7 +171,8 @@ First, some constants are set up to reference the elements on the page to which 
 
 The object `displayMediaOptions` contains the {{domxref("MediaStreamConstraints")}} to pass into `getDisplayMedia()`; here, the {{domxref("MediaTrackConstraints.cursor", "cursor")}} property is set to `always`, indicating that the mouse cursor should always be included in the captured media.
 
-> **Примечание:** Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/ru/docs/Web/API/MediaTrackConstraints/cursor#Browser_compatibility).
+> [!NOTE]
+> Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/ru/docs/Web/API/MediaTrackConstraints#browser_compatibility).
 
 Finally, event listeners are established to detect user clicks on the start and stop buttons.
 
@@ -340,7 +346,7 @@ The final product looks like this. If your browser supports Screen Capture API, 
 
 ## Security
 
-In order to function when [Feature Policy](/ru/docs/Web/HTTP/Feature_Policy) is enabled, you will need the `display-capture` permission. This can be done using the {{HTTPHeader("Feature-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the `<iframe>` element's [`allow`](/ru/docs/Web/HTML/Element/iframe#allow) attribute.
+In order to function when [Feature Policy](/ru/docs/Web/HTTP/Permissions_Policy) is enabled, you will need the `display-capture` permission. This can be done using the {{HTTPHeader("Feature-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the `<iframe>` element's [`allow`](/ru/docs/Web/HTML/Element/iframe#allow) attribute.
 
 For example, this line in the HTTP headers will enable Screen Capture API for the document and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same origin:
 
@@ -357,6 +363,6 @@ If you're performing screen capture within an `<iframe>`, you can request permis
 ## Смотрите также
 
 - [Screen Capture API](/ru/docs/Web/API/Screen_Capture_API)
-- [Media Capture and Streams API](/ru/docs/Web/API/Media_Streams_API)
-- [Taking still photos with WebRTC](/ru/docs/Web/API/WebRTC_API/Taking_still_photos)
+- [Media Capture and Streams API](/ru/docs/Web/API/Media_Capture_and_Streams_API)
+- [Taking still photos with WebRTC](/ru/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos)
 - {{domxref("HTMLCanvasElement.captureStream()")}} to obtain a {{domxref("MediaStream")}} with the live contents of a {{HTMLElement("canvas")}}

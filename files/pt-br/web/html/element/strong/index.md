@@ -111,6 +111,6 @@ Ao fazer x é **imperativo** que se faça y antes de prosseguir.
 
 ## Veja também
 
-- [HTML bold element](/pt-BR/docs/HTML/Element/b)
+- [HTML bold element](/pt-BR/docs/Web/HTML/Element/b)
 
 {{HTMLSidebar}}

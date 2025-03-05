@@ -31,7 +31,7 @@ slug: Web/XSLT/Element/for-each
 
 ### 정의
 
-[XSLT section 8, Repetition](http://www.w3.org/TR/xslt#for-each)
+[XSLT section 8, Repetition](https://www.w3.org/TR/xslt#for-each)
 
 ### Gecko 지원
 

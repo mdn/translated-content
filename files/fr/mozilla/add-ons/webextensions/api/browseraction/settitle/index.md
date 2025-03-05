@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setTitle
 
 {{AddonSidebar}}
 
-Définit le titre de l'action du navigateur. Le titre est affiché dans une infobulle au-dessus de l'icône de l'action du navigateur. Vous pouvez passer un `tabId` dans ou une `windowId` comme paramètre optionnel — si vous le faites, le titre est changé seulement pour l'onglet donné ou la fenêtre donnée. Les onglets ou les fenêtres sans titre spécifique hériteront du texte du titre global, qui est par défaut à l'option [`default_title`](/fr/Add-ons/WebExtensions/manifest.json/browser_action) ou [`name`](/fr/Add-ons/WebExtensions/manifest.json/name) specifié dans le manifest.
+Définit le titre de l'action du navigateur. Le titre est affiché dans une infobulle au-dessus de l'icône de l'action du navigateur. Vous pouvez passer un `tabId` dans ou une `windowId` comme paramètre optionnel — si vous le faites, le titre est changé seulement pour l'onglet donné ou la fenêtre donnée. Les onglets ou les fenêtres sans titre spécifique hériteront du texte du titre global, qui est par défaut à l'option [`default_title`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) ou [`name`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) specifié dans le manifest.
 
 ## Syntaxe
 
@@ -68,7 +68,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
 >

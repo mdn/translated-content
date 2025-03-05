@@ -2,14 +2,23 @@
 title: <link>：外部资源链接元素
 slug: Web/HTML/Element/link
 l10n:
-  sourceCommit: 714c1dc1f8084c0ea81dc03d8e3261bc548744d4
+  sourceCommit: 783ffd9c1cf35421242e028a1b8743cf2b1918dd
 ---
 
 {{HTMLSidebar}}
 
 [HTML](/zh-CN/docs/Web/HTML) **`<link>`** 元素规定了当前文档与某个外部资源的关系。该元素最常用于链接{{Glossary("CSS", "样式表")}}，此外也可以被用来创建站点图标（比如 PC 端的“favicon”图标和移动设备上用以显示在主屏幕的图标) 。
 
-{{EmbedInteractiveExample("pages/tabbed/link.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;link&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<link href="/shared-assets/misc/link-element-example.css" rel="stylesheet" />
+
+<p>This text will be red as defined in the external stylesheet.</p>
+<p style="color: blue">
+  The <code>style</code> attribute can override it, though.
+</p>
+```
 
 要链接一个外部的样式表，你需要像这样在你的 {{HTMLElement("head")}} 中包含一个 `<link>` 元素：
 
@@ -102,7 +111,7 @@ l10n:
             <p>fetch、XHR</p>
             <div class="notecard note">
               <p>
-                <strong>备注：</strong> 此值需要
+                <strong>备注：</strong>此值需要
                 <code>&#x3C;link></code> 包含跨源属性，参见<a href="/zh-CN/docs/Web/HTML/Attributes/rel/preload#启用_cors_的获取请求">启用 CORS 的获取请求</a>。
               </p>
             </div>
@@ -114,7 +123,7 @@ l10n:
             <p>CSS @font-face</p>
             <div class="notecard note">
               <p>
-                <strong>备注：</strong> 此值需要
+                <strong>备注：</strong>此值需要
                 <code>&#x3C;link></code> 包含跨源属性，参见<a href="/zh-CN/docs/Web/HTML/Attributes/rel/preload#启用_cors_的获取请求">启用 CORS 的获取请求</a>。
               </p>
             </div>
@@ -160,20 +169,21 @@ l10n:
 
 - `blocking` {{Experimental_Inline}}
 
-  - : 该属性明确表示在获取外部资源时应阻止某些操作。要阻止的操作必须是下面列出的以空格分隔的阻止属性列表。
+  - : 该属性明确表示在获取外部资源时应阻止某些操作。它只能在 `rel` 属性包含 `expect` 或 `stylesheet` 关键字时才能使用。要阻止的操作必须是下面列出的以空格分隔的阻止标记列表。
     - `render`：屏幕上的内容渲染被阻止。
 
-- `crossorigin`
+- [`crossorigin`](/zh-CN/docs/Web/HTML/Attributes/crossorigin)
 
-  - : 该[枚举](/zh-CN/docs/Glossary/Enumerated)属性表示在获取资源时是否必须使用 {{Glossary("CORS")}}。[启用 CORS 的图像](/zh-CN/docs/Web/HTML/CORS_Enabled_Image)可以在 {{HTMLElement("canvas")}} 元素中重复使用，而不会受到*污染*。允许的值如下：
+  - : 该[枚举](/zh-CN/docs/Glossary/Enumerated)属性表示在获取资源时是否必须使用 {{Glossary("CORS")}}。[启用 CORS 的图像](/zh-CN/docs/Web/HTML/CORS_enabled_image)可以在 {{HTMLElement("canvas")}} 元素中重复使用，而不会受到*污染*。允许的值如下：
 
     - `anonymous`
       - : 会发起一个跨源请求（即包含 `Origin` HTTP 标头），但不会发送任何认证信息（即不发送 cookie、X.509 证书和 HTTP 基本认证信息）。如果服务器没有给出源站凭证（不设置 `Access-Control-Allow-Origin` HTTP 标头），资源就会被污染并限制使用。
     - `use-credentials`
       - : 会发起一个带有认证信息（进行 cookie、X.509 证书和/或 HTTP 基本认证）的跨域请求（即包含 `Origin` HTTP 标头）。如果服务器没有给出源站凭证（不设置 `Access-Control-Allow-Origin` HTTP 标头），资源就会被*污染*并限制使用。
-        当不设置此属性时，资源将会不使用 {{Glossary("CORS")}} 加载（即不发送 `Origin` HTTP 标头），从而无法使用该资源。若设置了非法的值，则视为使用 **anonymous**。前往 [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)获取更多信息。
 
-- `disabled` {{Non-standard_Inline}}
+    当不设置此属性时，资源将会不使用 {{Glossary("CORS")}} 加载（即不发送 `Origin` HTTP 标头），从而无法使用该资源。若设置了非法的值，则视为使用 **anonymous** 枚举关键字。前往 [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)获取更多信息。
+
+- `disabled`
 
   - : 仅对于 `rel="stylesheet"` 而言，`disabled` 布尔属性表示是否应加载所述样式表并将其应用于文档。如果在加载 HTML 时指定了`disabled`，则在页面加载过程中不会加载样式表。相反，如果将 `disabled` 属性更改为 `false` 或删除该属性，将按需加载样式表。
 
@@ -195,11 +205,11 @@ l10n:
 - `hreflang`
   - : 此属性指明了被链接资源的语言。其意义仅供参考。可取的值参见 {{RFC(5646, "语言识别标签（又称 BCP 47）")}}。仅当设置了 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性时才应设置该属性。
 - `imagesizes`
-  - : 仅适用于 `rel="preload"` 和 `as="image"`，`imagesizes` 属性是[一种 sizes 属性](https://html.spec.whatwg.org/multipage/images.html#sizes-attribute)，表示要预载 `img` 元素使用的适当资源，其 `srcset` 和 `sizes` 属性具有相应的值。
+  - : 仅适用于 `rel="preload"` 和 `as="image"`，`imagesizes` 属性具有与 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes) 属性类似的语法和语义，表示要预载 `img` 元素使用的适当资源，其 `srcset` 和 `sizes` 属性具有相应的值。
 - `imagesrcset`
-  - : 仅适用于 `rel="preload"` 和 `as="image"`，`imagesrcset` 属性是[一种 sourceset 属性](https://html.spec.whatwg.org/multipage/images.html#srcset-attribute)，表示要预载 `img` 元素使用的适当资源，其 `srcset` 和 `sizes` 属性具有相应的值。
-- `integrity` {{experimental_inline}}
-  - : 包含行内元数据，它是用于浏览器获取的资源文件的哈希值，以 base64 编码的方式加密。浏览器可利用这一点来验证所获取的资源是否受到意外修改。参见[子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)。
+  - : 仅适用于 `rel="preload"` 和 `as="image"`，`imagesrcset` 属性具有与 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 属性类似的语法和语义，表示要预载 `img` 元素使用的适当资源，其 `srcset` 和 `sizes` 属性具有相应的值。
+- `integrity`
+  - : 包含内联元数据——（你要求浏览器获取的）资源（文件）的以 base64 编码的密码学哈希值。浏览器可以使用这一点来验证所获取的资源是否已被传输且没有遭到意外的修改。该属性只有在指定了 `rel` 属性为 `stylesheet`、`preload` 或 `modulepreload` 时才能指定。参见[子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)。
 - `media`
 
   - : 该属性指定链接资源适用的媒体。其值必须是媒体类型或[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)。该属性主要用于链接外部样式表——它允许用户代理选择最适合其运行设备的样式表。
@@ -214,8 +224,8 @@ l10n:
     - `origin-when-cross-origin` 这意味着导航到其他来源将仅限于协议、主机和端口，而在同一源上导航将包括 referrer 的路径。
     - `unsafe-url` 意味着 referrer 网址将包含源和路径（但不包括片段、密码或用户名）。这种情况是不安全的，因为它可能会将源和路径从受 TLS 保护的资源泄漏到不安全的源。
 
-- `rel`
-  - : 此属性命名链接文档与当前文档的关系。该属性必须是[链接类型值](/zh-CN/docs/Web/HTML/Link_types)的用空格分隔的列表。
+- [`rel`](/zh-CN/docs/Web/HTML/Attributes/rel)
+  - : 此属性命名链接文档与当前文档的关系。该属性必须是[链接类型值](/zh-CN/docs/Web/HTML/Attributes/rel)的用空格分隔的列表。
 - `sizes`
 
   - : 这个属性定义了包含相应资源的可视化媒体中的图标的大小。只有在 [`rel`](#rel) 包含 `icon` 或诸如 Apple 的 `apple-touch-icon` 等非标准类型的值时，它才可以存在。它可能具有如下值：
@@ -223,33 +233,34 @@ l10n:
     - `any` 表示图标可以按矢量格式缩放到任意大小，例如 `image/svg+xml`。
     - 一个由空白符分隔的尺寸列表。每一个都以 `<像素宽度>x<像素高度>` 或 `<像素宽度>X<像素高度>` 给出。尺寸列表中的每一个尺寸都必须包含在资源里。
 
-    > **备注：** 大多数的图标格式只能存储一个图标。因此绝大多数使用 [`sizes`](#sizes) 时只包含一个值。微软的 ICO 格式和苹果的 ICNS 格式都是这样。ICO 更为普及，因此如果需要跨浏览器支持（尤其是旧版本的 IE），应使用这种格式。
+    > [!NOTE]
+    > 大多数的图标格式只能存储一个图标。因此绝大多数使用 [`sizes`](#sizes) 时只包含一个值。微软的 ICO 格式和苹果的 ICNS 格式可以在一个文件中存储多个图标尺寸。ICO 具有更好的浏览器支持，因此如果需要跨浏览器支持，应使用这种格式。
 
 - `title`
-  - : 属性在 `<link>` 元素上有特殊的语义。当用于 `<link rel="stylesheet"> `时，它定义了一个[默认样式表或备用样式表](/zh-CN/docs/Web/CSS/Alternative_style_sheets)。
+  - : `title` 属性在 `<link>` 元素上有特殊的语义。当用于 `<link rel="stylesheet">` 时，它定义了一个[默认样式表或备用样式表](/zh-CN/docs/Web/HTML/Attributes/rel/Alternate_stylesheet)。
 - `type`
   - : 这个属性被用于定义链接的内容的类型。这个属性的值应该是类似于 **text/html**、**text/css** 这样的 MIME 类型。该属性的通常用法是定义被引用的样式表类型（如 **text/css**），但由于 CSS 是网络上使用的唯一样式表语言，因此不仅可以省略 `type` 属性，而且现在已成为推荐做法。它还用于 `rel="preload"` 链接类型，以确保浏览器只下载其支持的文件类型。
 
 ### 非标准属性
 
-- `methods` {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : 此属性的值提供有关可能在对象上执行的功能的信息。这些值通常在使用时由 HTTP 协议给出，但是（出于与 **title** 属性类似的原因）将其预先包含在链接中可能是有用的。例如，浏览器可能根据指定的方法选择不同的链接呈现方式。可搜索的内容可能会得到其他图标，或者外部链接可能会显示离开当前站点的指示。即使是定义该属性的浏览器 Internet Explorer 4 也无法很好地理解或支持此属性。
 - `target` {{Deprecated_Inline}}
   - : 定义具有已定义链接关系或将显示任何链接资源渲染的框架或窗口名称。
 
-### 废弃的属性
+### 已弃用的属性
 
 - `charset` {{Deprecated_Inline}}
 
   - : 该属性定义链接资源的字符编码。其值是以空格和/或逗号分隔的字符集列表，如 {{rfc(2045)}} 所定义。默认值为 `iso-8859-1`。
 
-    > **备注：** 要产生与该废弃属性相同的效果，请在链接资源上使用 {{HTTPHeader("Content-Type")}} HTTP 标头。
+    > [!NOTE]
+    > 要产生与该过时属性相同的效果，请在链接资源上使用 {{HTTPHeader("Content-Type")}} HTTP 标头。
 
 - `rev` {{Deprecated_Inline}}
 
   - : 此属性的值显示了 [`href`](#href) 属性所定义的当前文档与链接文档的关系。因此，该属性定义了与 rel 属性的值相比的反向关系。该属性的[链接类型值](/zh-CN/docs/Web/HTML/Attributes/rel)类似于 [`rel`](#rel) 的可能值。
 
-    > **备注：** 你应该使用 [`rel`](#rel) 属性来代替 `rev`，并使用相反的[链接类型值](/zh-CN/docs/Web/HTML/Attributes/rel)。例如，要为 `made` 建立反向链接，应指定 `author`。此外，该属性并不代表“修订（revision）”，因此不得与版本号一起使用，尽管许多网站都会这样滥用该属性。
+    > [!NOTE]
+    > 你应该使用 [`rel`](#rel) 属性来代替 `rev`，并使用相反的[链接类型值](/zh-CN/docs/Web/HTML/Attributes/rel)。例如，要为 `made` 建立反向链接，应指定 `author`。此外，该属性并不代表“修订（revision）”，因此不得与版本号一起使用，尽管许多网站都会这样滥用该属性。
 
 ## 示例
 
@@ -263,7 +274,7 @@ l10n:
 
 ### 提供替代样式表
 
-你也可以指定[替代外部样式表](/zh-CN/docs/Web/CSS/Alternative_style_sheets)。
+你也可以指定[替代外部样式表](/zh-CN/docs/Web/HTML/Attributes/rel/Alternate_stylesheet)。
 
 用户可以从**查看 > 页面样式**菜单中选择要使用的样式表。这样，用户就可以看到一个页面的多个版本。
 
@@ -278,38 +289,34 @@ l10n:
 你可以在同一页面上包含指向多个不同图标的链接，浏览器将使用 `rel` 和 `sizes` 值作为提示来选择最适合其特定上下文的图标。
 
 ```html
-<!-- 配备高分辨率 Retina 显示屏的第三代 iPad -->
-<link rel="apple-touch-icon" sizes="144x144" href="favicon144.png" />
-<!-- 配备高分辨率 Retina 显示屏的 iPhone -->
-<link rel="apple-touch-icon" sizes="114x114" href="favicon114.png" />
-<!-- 第一代和第二代 iPad -->
-<link rel="apple-touch-icon" sizes="72x72" href="favicon72.png" />
-<!-- 非 Retina iPhone、iPod Touch 和 Android 2.1+ 设备 -->
-<link rel="apple-touch-icon" href="favicon57.png" />
+<!-- 配备高分辨率 Retina 显示屏的 iPad Pro: -->
+<link
+  rel="apple-touch-icon"
+  sizes="167x167"
+  href="/apple-touch-icon-167x167.png" />
+<!-- 3x 分辨率的 iPhone： -->
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/apple-touch-icon-180x180.png" />
+<!-- 非 Retina iPad、iPad mini，等等： -->
+<link
+  rel="apple-touch-icon"
+  sizes="152x152"
+  href="/apple-touch-icon-152x152.png" />
+<!-- 2x 分辨率的 iPhone 和其他设备： -->
+<link rel="apple-touch-icon" href="/apple-touch-icon-120x120.png" />
 <!-- 基本的 favicon -->
-<link rel="icon" href="favicon32.png" />
+<link rel="icon" href="/favicon.ico" />
 ```
+
+有关为苹果设备的图标选择什么尺寸（`sizes`）的信息，请参阅[苹果关于配置 Web 应用程序的文档](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4)和引用的[苹果人机界面指南](https://developer.apple.com/design/human-interface-guidelines/app-icons#App-icon-sizes)。通常，提供一个大图像（如 192x192）并让浏览器根据需要缩小它就足够了，但你可能想为不同尺寸提供细节级别不同的图像，正如苹果设计指南建议的那样。为较低分辨率提供较小的图标也可以节省带宽。
+
+可能根本不需要提供 `<link>` 元素。例如，浏览器会自动从站点的根目录请求 `/favicon.ico`，苹果设备也会自动请求 `/apple-touch-icon-[size].png`、`/apple-touch-icon.png` 等。但是，提供明确的链接可以防止这些约定发生变化。
 
 ### 通过媒体查询有条件地加载资源
 
-你可以在`media`属性中提供媒体类型或查询; 然后，只有在媒体条件为 true 时，才会加载此资源。例如：
-
-```html
-<link href="print.css" rel="stylesheet" media="print" />
-<link href="mobile.css" rel="stylesheet" media="all" />
-<link
-  href="desktop.css"
-  rel="stylesheet"
-  media="screen and (min-width: 600px)" />
-<link
-  href="highres.css"
-  rel="stylesheet"
-  media="screen and (min-resolution: 300dpi)" />
-```
-
-### 使用媒体查询条件性加载资源
-
-可以在 `media` 属性中提供媒体类型或查询；只有满足媒体查询条件时，才会加载该资源。例如：
+你可以在 `media` 属性中提供媒体类型或查询；然后，只有在媒体条件为真时，才会加载此资源。例如：
 
 ```html
 <link href="print.css" rel="stylesheet" media="print" />
@@ -330,7 +337,7 @@ l10n:
 
 ```html
 <script>
-  const stylesheet = document.querySelector("#my-stylesheet");
+  const stylesheet = document.getElementById("my-stylesheet");
 
   stylesheet.onload = () => {
     // 做点有意思的事情，样式表已经加载了
@@ -340,11 +347,10 @@ l10n:
     console.log("加载样式表时发生错误！");
   };
 </script>
-
-<link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet" />
 ```
 
-> **备注：** 一旦加载并解析了样式表及其所有导入内容，并在开始将样式应用到内容之前，`load` 事件就会触发。
+> [!NOTE]
+> 一旦加载并解析了样式表及其所有导入内容，并在开始将样式应用到内容之前，`load` 事件就会触发。
 
 ### 预加载示例
 
@@ -355,12 +361,7 @@ l10n:
 可以在 `blocking` 属性中包含 `render` 标记；页面的渲染将被阻止，直到资源被获取。例如：
 
 ```html
-<link
-  blocking="render"
-  rel="preload"
-  href="critical-font.woff2"
-  as="font"
-  crossorigin />
+<link blocking="render" rel="stylesheet" href="example.css" crossorigin />
 ```
 
 ## 技术概要
@@ -381,14 +382,13 @@ l10n:
     </tr>
     <tr>
       <th>标签省略</th>
-      <td>
-        鉴于这是一个空元素，开始标签必须存在，结束标签不可以存在。
-      </td>
+      <td>必须有开始标签，但不能有结束标签。</td>
     </tr>
     <tr>
       <th>允许的父元素</th>
       <td>
-        任何可以接受元数据的元素。如果使用了 <a href="/zh-CN/docs/Web/HTML/Global_attributes/itemprop">itemprop</a>属性，则其父元素可以是任何可接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>的元素。
+        任何可以接受元数据的元素。如果使用了 <a href="/zh-CN/docs/Web/HTML/Global_attributes/itemprop">itemprop</a>
+        属性，则其父元素可以是任何可接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>的元素。
       </td>
     </tr>
     <tr>
@@ -417,4 +417,3 @@ l10n:
 ## 参见
 
 - {{HTTPHeader("Link")}} HTTP 标头
-- [`integrity` 属性](https://150daysofhtml.com/book/day010/)，载于 150daysofhtml.com（2021）

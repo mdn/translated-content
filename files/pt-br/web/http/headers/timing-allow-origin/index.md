@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/Timing-Allow-Origin
 
 {{HTTPSidebar}}
 
-O cabeçalho de resposta **`Timing-Allow-Origin`** especifica origens que são permitidas de ver os valores dos atributos por funcionalidades da [Resource Timing API](/pt-BR/docs/Web/API/Resource_Timing_API), na qual caso contrário será reportada como zero dada as restrições entre origens.
+O cabeçalho de resposta **`Timing-Allow-Origin`** especifica origens que são permitidas de ver os valores dos atributos por funcionalidades da [Resource Timing API](/pt-BR/docs/Web/API/Performance_API/Resource_timing), na qual caso contrário será reportada como zero dada as restrições entre origens.
 
 <table class="properties">
   <tbody>
@@ -58,6 +58,6 @@ Timing-Allow-Origin: https://developer.mozilla.org
 
 ## Veja também
 
-- [Resource Timing API](/pt-BR/docs/Web/API/Resource_Timing_API)
-- [Usando a Resource Timing API](/pt-BR/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- [Resource Timing API](/pt-BR/docs/Web/API/Performance_API/Resource_timing)
+- [Usando a Resource Timing API](/pt-BR/docs/Web/API/Performance_API/Resource_timing)
 - {{HTTPHeader("Vary")}}

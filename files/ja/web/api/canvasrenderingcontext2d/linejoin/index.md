@@ -12,7 +12,8 @@ l10n:
 
 このプロパティは、接続された 2 つの線分の方向が同じであれば効果はありません。長さがゼロの縮退線分（つまり、すべての端点と制御点がまったく同じ位置にある）も無視されます。
 
-> **メモ:** 線は {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}、{{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}、{{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} メソッドを呼び出すことで描画することができます。
+> [!NOTE]
+> 線は {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}、{{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}、{{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} メソッドを呼び出すことで描画することができます。
 
 ## 値
 

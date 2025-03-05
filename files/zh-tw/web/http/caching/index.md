@@ -33,7 +33,7 @@ HTTP caching is optional, but reusing a cached resource is usually desirable. Ho
 - Incomplete results: a {{HTTPStatus(206)}} (Partial Content) response.
 - Responses other than {{HTTPMethod("GET")}} if something suitable for use as a cache key is defined.
 
-A cache entry might also consist of multiple stored responses differentiated by a secondary key, if the request is target of content negotiation. For more details see the information about the {{HTTPHeader("Vary")}} header [below](#Varying_responses).
+A cache entry might also consist of multiple stored responses differentiated by a secondary key, if the request is target of content negotiation. For more details see the information about the {{HTTPHeader("Vary")}} header [below](#varying_responses).
 
 ## 控制快取
 
@@ -72,7 +72,7 @@ Cache-Control: public
 
 在這裡最重要的指令就是"`max-age=<seconds>`" ，意思是指存放在快取伺服器上的資源有剩下多少時間被認定還是新鮮的。 跟{{HTTPHeader("Expires")}}不太一樣，這個檔頭欄位快取指的是請求此回覆的日期和時間。對於程式中不常更新的檔案，你可以積極地使用此機制。這些檔案包含了，圖檔、CSS、Javascripts 檔案等等。
 
-想要了解更多的話，請參見下面的[Freshness](#Freshness)。
+想要了解更多的話，請參見下面的[Freshness](#freshness)。
 
 ```plain
 Cache-Control: max-age=31536000
@@ -80,7 +80,7 @@ Cache-Control: max-age=31536000
 
 #### 驗證
 
-當使用"`must-revalidate`"指令時，快取伺服器一定要先發送請求訊息給網頁伺服器驗證，請已經確認是過有效期限且檔案有更新的回覆的話，舊的檔案就不能使用。假如想了解更多，請參見下面的[Validation](#Cache_validation)。
+當使用"`must-revalidate`"指令時，快取伺服器一定要先發送請求訊息給網頁伺服器驗證，請已經確認是過有效期限且檔案有更新的回覆的話，舊的檔案就不能使用。假如想了解更多，請參見下面的[Validation](#cache_validation)。
 
 ```plain
 Cache-Control: must-revalidate
@@ -152,7 +152,8 @@ When a cache receives a request that has a `Vary` header field, it must not use 
 Vary: Accept-Encoding
 ```
 
-> **備註：** Use `Vary` with care—it can easily reduce the effectiveness of caching! A caching server should use [normalization](#normalization) to reduce duplicated cache entries and unnecessary requests to the origin server. This is particularly true when using `Vary` with headers and header values that can have many values.
+> [!NOTE]
+> Use `Vary` with care—it can easily reduce the effectiveness of caching! A caching server should use [normalization](#normalization) to reduce duplicated cache entries and unnecessary requests to the origin server. This is particularly true when using `Vary` with headers and header values that can have many values.
 
 The `Vary` header can also be useful for serving different content to desktop and mobile users, or to allow search engines to discover the mobile version of a page (and perhaps also tell them that no [Cloaking](https://en.wikipedia.org/wiki/Cloaking) is intended). This is usually achieved with the `Vary: User-Agent` header, and works because the {{HTTPHeader("User-Agent")}} header value is different for mobile and desktop clients.
 
@@ -186,6 +187,6 @@ else {
 ## See also
 
 - [RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): Caching](https://datatracker.ietf.org/doc/html/rfc7234)
-- [Caching Tutorial – Mark Nottingham](https://www.mnot.net/cache_docs)
-- [HTTP caching – Ilya Grigorik](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching)
+- [Caching Tutorial – Mark Nottingham](https://www.mnot.net/cache_docs/)
+- [HTTP caching – Ilya Grigorik](https://web.dev/articles/http-cache)
 - [RedBot](https://redbot.org/), a tool to check your cache-related HTTP headers.

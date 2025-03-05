@@ -1,6 +1,8 @@
 ---
 title: scroll-behavior
 slug: Web/CSS/scroll-behavior
+l10n:
+  sourceCommit: a1596fe065b9c726f9412999d2218b7b6e256e30
 ---
 
 {{CSSRef}}
@@ -24,6 +26,7 @@ scroll-behavior: smooth;
 scroll-behavior: inherit;
 scroll-behavior: initial;
 scroll-behavior: revert;
+scroll-behavior: revert-layer;
 scroll-behavior: unset;
 ```
 
@@ -34,7 +37,7 @@ scroll-behavior: unset;
 - `auto`
   - : スクロールするボックスは瞬時にスクロールします。
 - `smooth`
-  - : スクロールするボックスは、ユーザーエージェント定義のタイミング関数を使い、ユーザーエージェント定義の時間をかけて、円滑にスクロールします。もし存在するなら、ユーザーエージェントはプラットフォームの慣例に従うべきです。
+  - : スクロールするボックスは、ユーザーエージェント定義のイージング関数を使い、ユーザーエージェント定義の時間をかけて、円滑にスクロールします。もし存在するなら、ユーザーエージェントはプラットフォームの慣例に従うべきです。
 
 ## 公式定義
 

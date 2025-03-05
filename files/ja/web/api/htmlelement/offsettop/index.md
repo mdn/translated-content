@@ -1,13 +1,14 @@
 ---
 title: "HTMLElement: offsetTop プロパティ"
+short-title: offsetTop
 slug: Web/API/HTMLElement/offsetTop
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 352f16613106ce1b1980e3f3da37cf153db553ea
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLElement.offsetTop`** は読み取り専用プロパティで、現在の要素の外枠から、*最も近い位置にある*祖先要素である {{domxref("HTMLelement.offsetParent", "offsetParent")}} の上枠の内側までの距離を相対的に返します。
+**`HTMLElement.offsetTop`** は読み取り専用プロパティで、現在の要素の外枠（そのマージンを含む）から、最も近い位置指定祖先要素である {{domxref("HTMLelement.offsetParent","offsetParent")}} のパディング上辺までの距離を返します。
 
 ## 値
 

@@ -40,7 +40,8 @@ element.insertAdjacentHTML(posição, texto);
 <!-- afterend -->
 ```
 
-> **Nota:** As posições beforeBegin e afterEnd funcionam apenas se o nó está em uma árvore DOM e tem um elemento pai.
+> [!NOTE]
+> As posições beforeBegin e afterEnd funcionam apenas se o nó está em uma árvore DOM e tem um elemento pai.
 
 ## Exemplo
 
@@ -68,4 +69,4 @@ d1.insertAdjacentHTML("afterend", '<div id="two">two</div>');
 
 - {{domxref("Node.insertBefore()")}}
 - {{domxref("Node.appendChild()")}} (mesmo efeito de `beforeend`)
-- [hacks.mozilla.org guest post](http://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) por Henri Sivonen incluem benchmarks que demonstram que insertAdjacentHTML pode ser bem rápido em alguns casos.
+- [hacks.mozilla.org guest post](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) por Henri Sivonen incluem benchmarks que demonstram que insertAdjacentHTML pode ser bem rápido em alguns casos.

@@ -11,7 +11,8 @@ La méthode **`append()`** de l'interface {{domxref("FormData")}} ajoute une nou
 
 La différence entre {{domxref("FormData.set")}} et `append()` est que, quand la clé existe, {{domxref("FormData.set")}} va remplacer les valeurs existantes avec la nouvelle alors qu' `append()` va rajouter celle-ci à la fin de l'ensemble des valeurs existantes.
 
-> **Note :** Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
 ## Syntaxe
 
@@ -31,7 +32,8 @@ formData.append(name, value, filename);
 - `filename` {{optional_inline}}
   - : Le nom du fichier envoyé au serveur (a {{domxref("USVString")}}), quand un {{domxref("Blob")}} ou un {{domxref("File")}} est passé en second paramètre. Le nom du fichier par défaut pour des objets {{domxref("Blob")}} est "blob". Le nom du fichier par défaut pour des objets {{domxref("File")}} est le nom du fichier de l'objet.
 
-> **Note :** Si vous spécifiez un {{domxref("Blob")}} comme donnée rattachée à un objet de type `FormData`, le nom de fichier envoyé au serveur sera dans l'entête "Content-Disposition" mais peut varier selon le navigateur.
+> [!NOTE]
+> Si vous spécifiez un {{domxref("Blob")}} comme donnée rattachée à un objet de type `FormData`, le nom de fichier envoyé au serveur sera dans l'entête "Content-Disposition" mais peut varier selon le navigateur.
 
 ### Retours
 
@@ -72,6 +74,6 @@ Cette technique permet de simplement gérer l'envoi de plusieurs fichiers avec l
 ## Voir aussi
 
 - {{domxref("XMLHTTPRequest")}}
-- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest)
-- [Utiliser les objets FormData](/fr/docs/Web/API/FormData/Utilisation_objets_FormData)
+- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Utiliser les objets FormData](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

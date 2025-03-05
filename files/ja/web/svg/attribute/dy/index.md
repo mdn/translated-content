@@ -105,7 +105,8 @@ line {
 
 ## glyphRef
 
-> **警告:** SVG2 において、 {{SVGElement('glyphRef')}} は非推奨であり、使用しないでください。
+> [!WARNING]
+> SVG2 において、 {{SVGElement('glyphRef')}} は非推奨であり、使用しないでください。
 
 {{SVGElement('glyphRef')}} の場合、 `dy` はグリフの y オフセットを定義します。
 
@@ -199,7 +200,8 @@ line {
 
 ## tref
 
-> **警告:** SVG2 において、 {{SVGElement('tref')}} は非推奨であり、使用しないでください。
+> [!WARNING]
+> SVG2 において、 {{SVGElement('tref')}} は非推奨であり、使用しないでください。
 
 {{SVGElement('tref')}} では、 1 つの値を格納している場合、 `dy` はすべてのグリフに対する y 軸方向のシフト量を定義します。
 

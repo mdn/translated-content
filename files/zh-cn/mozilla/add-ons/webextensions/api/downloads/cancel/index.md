@@ -51,7 +51,8 @@ canceling.then(onCanceled, onError);
 
 {{WebExtExamples}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-cancel) API。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.downloads`](https://developer.chrome.google.cn/docs/extensions/reference/api/downloads#method-cancel) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

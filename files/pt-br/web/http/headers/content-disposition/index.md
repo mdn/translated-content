@@ -113,6 +113,6 @@ value2
 
 ## Veja também
 
-- [Formulários HTML](/pt-BR/docs/Web/Guide/HTML/Forms)
+- [Formulários HTML](/pt-BR/docs/Learn/Forms)
 - O cabeçalho {{HTTPHeader("Content-Type")}} definindo o limite do corpo multipartes.
 - A interface {{domxref("FormData")}} usada para manipular dados de formulários para uso na API {{domxref("XMLHttpRequest")}}.

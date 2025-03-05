@@ -15,7 +15,7 @@ Pour utiliser un préprocesseur CSS, vous devez installer un compilateur CSS sur
 
 Ici certains des préprocesseurs CSS les plus populaires:
 
-- [SASS](http://sass-lang.com/)
-- [LESS](http://lesscss.org/)
+- [SASS](https://sass-lang.com/)
+- [LESS](https://lesscss.org/)
 - [Stylus](http://stylus-lang.com/)
 - [PostCSS](http://postcss.org/)

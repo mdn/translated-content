@@ -11,7 +11,8 @@ l10n:
 
 {{EmbedInteractiveExample("pages/css/border-image.html")}}
 
-> **备注：** 你应该另外指定 {{cssxref("border-style")}} 以防边框图像没能加载。虽然规范并没有严格要求这一点，但当 {{cssxref("border-style")}} 为 `none` 或 {{cssxref("border-width")}} 为 `0` 时，某些浏览器不会渲染边框图像。
+> [!NOTE]
+> 你应该另外指定 {{cssxref("border-style")}} 以防边框图像没能加载。虽然规范并没有严格要求这一点，但当 {{cssxref("border-style")}} 为 `none` 或 {{cssxref("border-width")}} 为 `0` 时，某些浏览器不会渲染边框图像。
 
 ## 成分属性
 
@@ -48,7 +49,8 @@ border-image: unset;
 
 `border-image` 属性可以用下面列出的 1 到 5 个值中的任意值指定。
 
-> **备注：** 如果 {{cssxref("border-image-source")}} 的[计算值](/zh-CN/docs/Web/CSS/computed_value)为 `none`，或图像无法显示，则将显示 {{cssxref("border-style")}}。
+> [!NOTE]
+> 如果 {{cssxref("border-image-source")}} 的[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)为 `none`，或图像无法显示，则将显示 {{cssxref("border-style")}}。
 
 ### 值
 
@@ -150,6 +152,6 @@ border-image: unset;
 - {{cssxref("outline")}}
 - {{cssxref("box-shadow")}}
 - {{cssxref("background-image")}}
-- {{cssxref("url", "url()")}} 函数
+- {{cssxref("url_value", "&lt;url&gt;")}} 类型
 - 渐变函数：{{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}、{{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}、{{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}、{{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}、{{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}、{{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
 - MDN 博客（2023）[CSS 中的边框图像：Interop 2023 的重点关注领域](/en-US/blog/border-images-interop-2023/)

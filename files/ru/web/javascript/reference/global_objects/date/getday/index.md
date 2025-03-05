@@ -36,7 +36,8 @@ let weekday = date.getDay();
 console.log(weekday); // 1
 ```
 
-> **Примечание:** При необходимости полное название дня (например, "`Понедельник`") можно получить, используя {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} с параметром `options` parameter. С помощью этого метода упрощается интернационализация:
+> [!NOTE]
+> При необходимости полное название дня (например, "`Понедельник`") можно получить, используя {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} с параметром `options` parameter. С помощью этого метода упрощается интернационализация:
 >
 > ```js
 > let options = { weekday: "long" };

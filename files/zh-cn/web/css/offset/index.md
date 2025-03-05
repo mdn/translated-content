@@ -5,9 +5,10 @@ slug: Web/CSS/offset
 
 {{CSSRef}}
 
-**`offset`** CSS [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)设置了沿定义的路径为元素设置动画所需的所有属性。
+**`offset`** CSS [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)设置了沿定义的路径为元素设置动画所需的所有属性。
 
-> **备注：** 规范的早期版本称此属性为 `motion`。
+> [!NOTE]
+> 规范的早期版本称此属性为 `motion`。
 
 {{EmbedInteractiveExample("pages/css/offset.html")}}
 

@@ -13,11 +13,11 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 这个 manifest 文件还可以指向其他一些类型的文件：
 
-- [后台脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#后台脚本): 执行一个长时间运行的逻辑。
+- [后台脚本](#后台脚本): 执行一个长时间运行的逻辑。
 - 图标：用于扩展插件和任何它可能定义的按钮儿。
-- [侧边栏，弹出窗口，选项页](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#侧边栏，弹出窗口，选项页面): 为各式各样用户界面组件提供内容的 HTML 文件。
-- [内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#内容脚本): 扩展中包含的 JavaScript，你可以注入它们到网页中。
-- [网络可访问资源](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#网络可访问资源): 使打包好的内容可用于网页与内容脚本中。
+- [侧边栏，弹出窗口，选项页](#侧边栏，弹出窗口，选项页面): 为各式各样用户界面组件提供内容的 HTML 文件。
+- [内容脚本](#内容脚本): 扩展中包含的 JavaScript，你可以注入它们到网页中。
+- [网络可访问资源](#网络可访问资源): 使打包好的内容可用于网页与内容脚本中。
 
 ![Web 扩展的组件。manifest.JSON 是所有扩展里都必须存在的。它提供指向后台页面、内容脚本、浏览器动作、页面动作、选项页和 web 可访问资源的引用。后台页面由 HTML 和 JS 组成。内容脚本由 JS 和 CSS 组成。用户单击扩展图标能够触发浏览器动作和页面动作，由此产生的弹出窗口由 HTML、CSS 和 JS 组成。选项页由 HTML、CSS 和 JS 组成。](webextension-anatomy.png)
 
@@ -75,7 +75,8 @@ background-page.html 的内容如下：
 
 后台脚本在一个被称为后台页面的特殊页面的上下文环境中运行。此环境为其提供了全局变量 [`window`](/zh-CN/docs/Web/API/Window) ，也提供了所有的标准 DOM API。
 
-> **警告：** 在 Firefox 浏览器中，后台页面不支持使用 [`alert()`](/zh-CN/docs/Web/API/Window/alert), [`confirm()`](/zh-CN/docs/Web/API/Window/alert)和 [`prompt()`](/zh-CN/docs/Web/API/Window/alert)
+> [!WARNING]
+> 在 Firefox 浏览器中，后台页面不支持使用 [`alert()`](/zh-CN/docs/Web/API/Window/alert)、[`confirm()`](/zh-CN/docs/Web/API/Window/alert) 和 [`prompt()`](/zh-CN/docs/Web/API/Window/alert)
 
 #### WebExtension API
 
@@ -100,7 +101,7 @@ background-page.html 的内容如下：
 你的扩展程序可以包含各种用户界面组件，其内容通过 HTML 文件来定义：
 
 - [侧边栏](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)是一个面板，它被显示在浏览器窗口左侧，就在网页旁边。
-- [弹出窗口](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)是一个对话框，可以在用户单击[工具栏按钮](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action)或[地址栏按钮](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)时显示该对话框。
+- [弹出窗口](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)是一个对话框，可以在用户单击[工具栏按钮](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)或[地址栏按钮](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)时显示该对话框。
 - [选项页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)是当用户访问扩展管理器内置的扩展选项页面时，内嵌显示的页面。
 
 对于这些组件，你可以创建一个 HTML 文件，并使用 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 中的特定属性指向它。HTML 文件可以引用 CSS 和 JavaScript 文件，就像普通的网页一样。

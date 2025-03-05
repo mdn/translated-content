@@ -39,7 +39,7 @@ elements = document.getElementsByName(name);
 
 ## Notas
 
-El atributo [`name`](/es/docs/DOM/element.name) es solamente aplicable al documento (X)HTML. El método retorna una colección existente de {{domxref("NodeList")}} que contiene todos los elementos con el valor dado para el atributo `name`, tanto {{htmlelement("meta")}} o {{htmlelement("object")}} o en caso que `name` sea colocado en elementos que no soportan un atributo de atributo del todo.
+El atributo [`name`](/es/docs/Web/API) es solamente aplicable al documento (X)HTML. El método retorna una colección existente de {{domxref("NodeList")}} que contiene todos los elementos con el valor dado para el atributo `name`, tanto {{htmlelement("meta")}} o {{htmlelement("object")}} o en caso que `name` sea colocado en elementos que no soportan un atributo de atributo del todo.
 
 El método **getElementsByName** trabaja de diferente manera en diferentes navegadires. En IE < 10, el método getElementsByName() tambipen retornará elementos que tienen un atributo `id` con el valor especificado. Entonces, debería tener cuidado de no usar el mismo string como `name` y `ID`.
 

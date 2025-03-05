@@ -1,5 +1,5 @@
 ---
-title: ":hover"
+title: :hover
 slug: Web/CSS/:hover
 ---
 
@@ -13,7 +13,8 @@ A pseudo-class `:hover` pode ser aplicada a qualquer [pseudo-elemento.](/pt-BR/d
 
 User agents visuais como Firefox, Internet Explorer, Safari, Opera ou Chrome, aplicam o estilo associado quando o cursor(mouse pointer) passa sobre um elemento.
 
-> **Nota:** Em telas de toque (touch screens) :hover é impossível ou problemático. Dependendo do navegador a pseudo-classe :hover pode nunca funcionar, ou funcionar apenas por um curto momento depois de "tocar" um elemento, ou podem continuar a funcionar mesmo depois que o usuário pare de "tocar" o elemento até que o usuário toque outro elemento. Como dispositivos touchscreen são comuns, é importante para desenvolvedores web não terem conteúdos acessíveis apenas quando passamos sobre ele, uma vez que esse conteúdo é mais complicado ou impossível de acessar para usuários desses dispositivos.
+> [!NOTE]
+> Em telas de toque (touch screens) :hover é impossível ou problemático. Dependendo do navegador a pseudo-classe :hover pode nunca funcionar, ou funcionar apenas por um curto momento depois de "tocar" um elemento, ou podem continuar a funcionar mesmo depois que o usuário pare de "tocar" o elemento até que o usuário toque outro elemento. Como dispositivos touchscreen são comuns, é importante para desenvolvedores web não terem conteúdos acessíveis apenas quando passamos sobre ele, uma vez que esse conteúdo é mais complicado ou impossível de acessar para usuários desses dispositivos.
 
 ## Exemplos
 
@@ -29,7 +30,7 @@ User agents visuais como Firefox, Internet Explorer, Safari, Opera ou Chrome, ap
 
 ### Menu dropdown
 
-Com a pseudo-classe`:hover`você pode criar algoritmos complexos de cascata. Esta é uma técnica comumente usada, por exemplo, para criar **menus dropdown com CSS** puro (apenas utilizando CSS, sem usar [JavaScript](/pt-Br/JavaScript)). A essência desta técnica é criação de uma regra como a seguinte:
+Com a pseudo-classe`:hover`você pode criar algoritmos complexos de cascata. Esta é uma técnica comumente usada, por exemplo, para criar **menus dropdown com CSS** puro (apenas utilizando CSS, sem usar [JavaScript](/pt-BR/docs/Web/JavaScript)). A essência desta técnica é criação de uma regra como a seguinte:
 
 ```css
 div.menu-bar ul ul {
@@ -79,7 +80,8 @@ Veja nosso [exemplo de menu dropdown baseado em CSS](css_dropdown_menu.html) par
 
 Você pode usar a pseudo-classe `:hover` para construir uma galeria de imagem, exibindo imagens full-size apenas quando o mouse passa sobre as imagens. Veja [esse exemplo](css-gallery.zip) para uma possível dica.
 
-> **Nota:** Para efeitos análogos, mas baseado na pseudo-classe [`:checked`](/pt-BR/CSS/%3Achecked) (aplicada para esconder radioboxes), veja [esse demo](css-checked-gallery.zip), tirado desta página [En/CSS/:checked.](/pt-BR/CSS/%3Achecked)
+> [!NOTE]
+> Para efeitos análogos, mas baseado na pseudo-classe [`:checked`](/pt-BR/docs/CSS/%3Achecked) (aplicada para esconder radioboxes), veja [esse demo](css-checked-gallery.zip), tirado desta página [En/CSS/:checked.](/pt-BR/docs/CSS/%3Achecked)
 
 ## Especificações
 

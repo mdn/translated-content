@@ -27,7 +27,7 @@ string = element.prefix
 
 ## Спецификации
 
-- [Node.prefix](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-NodeNSPrefix) (введено в употребление в DOM2)
+- [Node.prefix](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-NodeNSPrefix) (введено в употребление в DOM2)
 
 ## Совместимость с браузерами
 

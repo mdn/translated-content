@@ -1,8 +1,9 @@
 ---
 title: "HTML 属性: step"
+short-title: step
 slug: Web/HTML/Attributes/step
 l10n:
-  sourceCommit: 1582d17d5c39869980f3dc4a249a09292976acfe
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
@@ -11,7 +12,7 @@ l10n:
 
 `step` は、スピナーボタンを上下にクリックしたり、範囲上でスライダーを左右に動かしたり、異なる日付タイプを検証したりする際の*刻み間隔*を設定します。明示的に指定されていない場合、 `step` の既定値は、 `number` と `range` の場合は 1、日付/時刻入力型の場合は1単位 (分、週、月、日) になります。値は正の整数または浮動小数点数、または刻みが指定されておらず、 ([`min`](/ja/docs/Web/HTML/Attributes/min) や [`max`](/ja/docs/Web/HTML/Attributes/max) のような他の制約を除いて) すべての値が可能であることを意味する特別な値 `any` のいずれかでなければなりません。
 
-`number` 入力型の既定の刻み値は 1 で、刻みの基底値が整数でない場合を*除き*、整数のみを入力することができます。 `time` の既定の刻み値は 1 秒で、 900 は15分と等しくなります。
+`number` 入力型の既定の刻み値は 1 で、刻みの基底値が整数でない場合を除き、整数のみを入力することができます。 `time` の既定の刻み値は 60 秒で、 900 は 15 分と等しくなります。
 
 ## 構文
 
@@ -44,18 +45,18 @@ l10n:
     </tr>
     <tr>
       <td>{{HTMLElement("input/time", "time")}}</td>
-      <td>60 (分)</td>
+      <td>60 (秒)</td>
       <td><code>&#x3C;input type="time" min="09:00" step="900"></code></td>
     </tr>
     <tr>
       <td>
         {{HTMLElement("input/datetime-local", "datetime-local")}}
       </td>
-      <td>1 (日)</td>
+      <td>60 (秒)</td>
       <td>
         <code
           >&#x3C;input type="datetime-local" min="2019-12-25T19:30"
-          step="7"></code
+          step="900"></code
         >
       </td>
     </tr>
@@ -89,7 +90,7 @@ l10n:
 
 ### `min` の step への影響
 
-`min` の値は、 `step` 属性がなくても有効な値を定義します。これは `step` の既定値が 1 であるからです。
+`min` の値は、 `step` 属性がなくても有効な値を定義します。これは `step` の既定値が `number` 入力型では `1` であるからです。
 
 無効な入力の周囲に太く赤い境界を追加します。
 
@@ -109,7 +110,8 @@ input:invalid {
 
 {{EmbedLiveSample("min_impact_on_step","100%",55)}}
 
-> **メモ:** ユーザーが入力したデータが刻みの設定に従っていない場合、制約検証では無効とみなされ、 {{cssxref(":invalid")}} と {{cssxref(":out-of-range")}} の擬似クラスに一致します。
+> [!NOTE]
+> ユーザーが入力したデータが刻みの設定に従っていない場合、制約検証では無効とみなされ、 {{cssxref(":invalid")}} と {{cssxref(":out-of-range")}} の擬似クラスに一致します。
 
 詳しくは[クライアント側制約検証](/ja/docs/Web/HTML/Constraint_validation)と {{domxref("ValidityState.stepMismatch", "stepMismatch")}} を参照してください。
 
@@ -130,7 +132,7 @@ input:invalid {
 - [`max`](/ja/docs/Web/HTML/Attributes/max)
 - [`min`](/ja/docs/Web/HTML/Attributes/min)
 - [制約検証](/ja/docs/Web/HTML/Constraint_validation)
-- [制約検証 API](/ja/docs/Learn/Forms/Form_validation)
+- [制約検証 API](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{domxref('validityState.stepMismatch')}}
 - {{cssxref(':out-of-range')}}
 - {{htmlelement('input')}}

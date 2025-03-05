@@ -11,14 +11,14 @@ slug: Mozilla/Firefox/Releases/62
 
 ### Инструменты разработчика
 
-- Включён по умолчанию редактор Shape Path — подробности в статье [Edit Shape Paths in CSS](/ru/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes).
-- Появилась возможность вынести просмотр CSS-правил в отдельную от других вкладок панель. См. [Page inspector 3-pane mode](/ru/docs/Tools/Page_Inspector/3-pane_mode) для получения подробных сведений.
-- Инспектор CSS-сеток обзавёлся новыми возможностями и новой документацией — см. [CSS Grid Inspector: Examine grid layouts](/ru/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts).
+- Включён по умолчанию редактор Shape Path — подробности в статье [Edit Shape Paths in CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html).
+- Появилась возможность вынести просмотр CSS-правил в отдельную от других вкладок панель. См. [Page inspector 3-pane mode](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/3-pane_mode/index.html) для получения подробных сведений.
+- Инспектор CSS-сеток обзавёлся новыми возможностями и новой документацией — см. [CSS Grid Inspector: Examine grid layouts](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html).
 - Инструменты разработчика теперь можно разместить не только снизу и справа, но и слева (а также вынести в отдельное окно) ([Firefox bug 1192642](https://bugzil.la/1192642)).
-- На панель [консоли разделения](/ru/docs/Tools/Web_Console/Split_console) добавлена кнопка закрытия.
+- На панель [консоли разделения](https://firefox-source-docs.mozilla.org/devtools-user/web_console/split_console/index.html) добавлена кнопка закрытия.
 - При включённой настройке «Выбрать iframe в качестве текущего целевого документа» соответствующий значок будет появляться на панели инструментов при открытии настроек, даже если текущая страница не содержит фреймов ([Firefox bug 1456069](https://bugzil.la/1456069)).
-- Вкладка «[Куки](</ru/docs/Tools/Network_Monitor#Куки_(Cookies)>)» в [сетевом мониторе](/ru/docs/Tools/Network_Monitor) отображает атрибут `samesite` ([Firefox bug 1452715](https://bugzil.la/1452715)).
-- [Режим адаптивного дизайна](/ru/docs/Tools/Responsive_Design_View) работает и во вкладках, размещённых в контейнерах ([Firefox bug 1306975](https://bugzil.la/1306975)).
+- Вкладка «[Куки](</ru/docs/Tools/Network_Monitor#Куки_(Cookies)>)» в [сетевом мониторе](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) отображает атрибут `samesite` ([Firefox bug 1452715](https://bugzil.la/1452715)).
+- [Режим адаптивного дизайна](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) работает и во вкладках, размещённых в контейнерах ([Firefox bug 1306975](https://bugzil.la/1306975)).
 - При возникновении и выводе в консоль ошибки {{Glossary("CORS")}} Firefox предоставит ссылку на соответствующую [страницу с описанием ошибок CORS](/ru/docs/Web/HTTP/CORS/Errors) ([Firefox bug 1475391](https://bugzil.la/1475391)).
 - Появилась возможность создать снимок текущей страницы (без необходимости указывать имя файла) из консоли браузера ([Firefox bug 1464461](https://bugzil.la/1464461)). Используется команда
 
@@ -50,7 +50,7 @@ _Без изменений._
 
 #### Удалено
 
-- Из документов, отличных от XUL, удалены все [XUL-значения `display`](/ru/docs/Web/CSS/display#XUL_values) за исключением `-moz-box` и `-moz-inline-box` ([Firefox bug 1288572](https://bugzil.la/1288572)).
+- Из документов, отличных от XUL, удалены все [XUL-значения `display`](/ru/docs/Web/CSS/display#xul_values) за исключением `-moz-box` и `-moz-inline-box` ([Firefox bug 1288572](https://bugzil.la/1288572)).
 
 ### SVG
 
@@ -60,9 +60,9 @@ _Без изменений._
 
 - Реализована поддержка конструктора {{jsxref("WebAssembly.Global()")}} и глобальных переменных в WebAssembly ([Firefox bug 1464656](https://bugzil.la/1464656)).
 - Включена по умолчанию поддержка методов {{jsxref("Array.prototype.flat()")}} и {{jsxref("Array.prototype.flatMap()")}} ([Firefox bug 1435813](https://bugzil.la/1435813)).
-- Реализовано свойство [`import.meta`](/ru/docs/Web/JavaScript/Reference/Statements/import.meta), отображающее контекстно-специфичных метаданные для модуля JavaScript ([Firefox bug 1427610](https://bugzil.la/1427610)).
+- Реализовано свойство [`import.meta`](/ru/docs/Web/JavaScript/Reference/Operators/import.meta), отображающее контекстно-специфичных метаданные для модуля JavaScript ([Firefox bug 1427610](https://bugzil.la/1427610)).
 - [Строковые литералы](</ru/docs/Web/JavaScript/Reference/Lexical_grammar#Литерал_String_(Строка)>) могут напрямую содержать символы U+2028 LINE SEPARATOR и U+2029 PARAGRAPH SEPARATOR. Как следствие, синтаксис {{jsxref("JSON")}} отныне является подмножеством литерального синтаксиса JavaScript (см. [Firefox bug 1435828](https://bugzil.la/1435828) и предложенный TC39 [json-superset](https://github.com/tc39/proposal-json-superset)).
-- Для индексов, выходящих за границы [типизированных массивов](/ru/docs/Web/JavaScript/Typed_arrays), {{jsxref("Reflect.defineProperty()")}} и {{jsxref("Reflect.set()")}} будут возвращать `false` вместо `true` ([Firefox bug 1308735](https://bugzil.la/1308735)).
+- Для индексов, выходящих за границы [типизированных массивов](/ru/docs/Web/JavaScript/Guide/Typed_arrays), {{jsxref("Reflect.defineProperty()")}} и {{jsxref("Reflect.set()")}} будут возвращать `false` вместо `true` ([Firefox bug 1308735](https://bugzil.la/1308735)).
 
 #### Удалено
 
@@ -101,9 +101,9 @@ _Без изменений._
 
 #### Удалено
 
-- Поддержка событий {{event("userproximity")}}, {{event("deviceproximity")}} (см. {{domxref("UserProximityEvent")}} и {{domxref("DeviceProximityEvent")}}) отключена по умолчанию и управляется настройкой `device.sensors.proximity.enabled` ([Firefox bug 1462308](https://bugzil.la/1462308)).
-- Поддержка события {{event("devicelight")}} (см. также {{domxref("DeviceLightEvent")}}) отключена по умолчанию и управляется настройкой `device.sensors.ambientLight.enabled` ([Firefox bug 1462308](https://bugzil.la/1462308)).
-- [События мутации](/ru/docs/Web/Guide/Events/Mutation_events) {{event("DOMSubtreeModified")}} и {{event("DOMAttrModified")}} больше не выбрасываются, когда атрибут [`style`](/ru/docs/Web/HTML/Global_attributes#style) изменяется с помощью CSSOM ([Firefox bug 1460295](https://bugzil.la/1460295)).
+- Поддержка событий [`userproximity`](/ru/docs/Web/Events/userproximity), [`deviceproximity`](/ru/docs/Web/Events/deviceproximity) (см. {{domxref("UserProximityEvent")}} и {{domxref("DeviceProximityEvent")}}) отключена по умолчанию и управляется настройкой `device.sensors.proximity.enabled` ([Firefox bug 1462308](https://bugzil.la/1462308)).
+- Поддержка события [`devicelight`](/ru/docs/Web/Events/devicelight) (см. также {{domxref("DeviceLightEvent")}}) отключена по умолчанию и управляется настройкой `device.sensors.ambientLight.enabled` ([Firefox bug 1462308](https://bugzil.la/1462308)).
+- [События мутации](/ru/docs/Web/API/MutationEvent) [`DOMSubtreeModified`](/ru/docs/Web/Events/DOMSubtreeModified) и [`DOMAttrModified`](/ru/docs/Web/Events/DOMAttrModified) больше не выбрасываются, когда атрибут [`style`](/ru/docs/Web/HTML/Global_attributes#style) изменяется с помощью CSSOM ([Firefox bug 1460295](https://bugzil.la/1460295)).
 - Прекращена поддержка {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} ([Firefox bug 1408301](https://bugzil.la/1408301)).
 - Прекращена поддержка {{domxref("CSSValue")}}, {{domxref("CSSPrimitiveValue")}} и {{domxref("CSSValueList")}} ([Firefox bug 1459871](https://bugzil.la/1459871)).
 - {{domxref("window.getComputedStyle()")}} больше не возвращает `null`, если вызван на `Window`, у которого нет представления ([Firefox bug 1467722](https://bugzil.la/1467722)).
@@ -132,7 +132,7 @@ _Без изменений._
 
   <kbd>Ctrl</kbd>
 
-  &#x20;\+ `Click` синтезирует событие {{event("contextmenu")}} ([Firefox bug 1421323](https://bugzil.la/1421323)).
+  &#x20;\+ `Click` синтезирует событие [`contextmenu`](/ru/docs/Web/API/Element/contextmenu_event) ([Firefox bug 1421323](https://bugzil.la/1421323)).
 
 #### Изменения API
 

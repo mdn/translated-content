@@ -9,7 +9,15 @@ l10n:
 
 **`ArrayBuffer()`** 构造函数创建 {{jsxref("ArrayBuffer")}} 对象。
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer Constructor", "shorter")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+
+console.log(buffer.byteLength);
+// Expected output: 8
+```
 
 ## 语法
 
@@ -61,7 +69,8 @@ const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
 buffer.resize(12);
 ```
 
-> **备注：** 推荐将 `maxByteLength` 设置为使用场景下最小的大小。它不应超过 `1073741824`（1GB），以减少内存溢出风险。
+> [!NOTE]
+> 推荐将 `maxByteLength` 设置为使用场景下最小的大小。它不应超过 `1073741824`（1GB），以减少内存溢出风险。
 
 ## 规范
 

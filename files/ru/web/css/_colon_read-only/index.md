@@ -1,5 +1,5 @@
 ---
-title: ":read-only"
+title: :read-only
 slug: Web/CSS/:read-only
 ---
 
@@ -7,7 +7,7 @@ slug: Web/CSS/:read-only
 
 ## Описание
 
-CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:read-only` находит элементы, недоступные для редактирования пользователем.
+CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:read-only` находит элементы, недоступные для редактирования пользователем.
 
 ## Пример
 
@@ -31,4 +31,4 @@ input:read-only {
 ## Смотрите также
 
 - [`:read-write`](/ru/docs/Web/CSS/:read-write)
-- HTML атрибут [`contenteditable`](/ru/docs/HTML/Content_Editable)
+- HTML атрибут [`contenteditable`](/ru/docs/Web/HTML/Global_attributes/contenteditable)

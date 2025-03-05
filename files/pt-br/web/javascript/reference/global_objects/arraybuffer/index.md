@@ -5,9 +5,17 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 
 {{JSRef}}
 
-O objeto **`ArrayBuffer`** é um tipo de dado usado para representar um genérico, buffer de dados binários de tamanho fixo. Você não pode manipular diretamente os conteúdos de um `ArrayBuffer`; em vez disso, você cria um objeto [`ArrayBufferView`](/pt-BR/JavaScript_typed_arrays/ArrayBufferView) que representa o buffer em um formato específico, e usa para ler e escrever os conteúdos do buffer.
+O objeto **`ArrayBuffer`** é um tipo de dado usado para representar um genérico, buffer de dados binários de tamanho fixo. Você não pode manipular diretamente os conteúdos de um `ArrayBuffer`; em vez disso, você cria um objeto [`ArrayBufferView`](/pt-BR/docs/JavaScript_typed_arrays/ArrayBufferView) que representa o buffer em um formato específico, e usa para ler e escrever os conteúdos do buffer.
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer Constructor")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+
+console.log(buffer.byteLength);
+// Expected output: 8
+```
 
 ## Syntax
 
@@ -34,7 +42,7 @@ The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in
 
 ### Getting an array buffer from existing data
 
-- [From a Base64 string](/pt-BR/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
+- [From a Base64 string](/pt-BR/docs/Glossary/Base64#appendix.3a_decode_a_base64_string_to_uint8array_or_arraybuffer)
 - [From a local file](</pt-BR/docs/Web/API/FileReader#readAsArrayBuffer()>)
 
 ## Properties
@@ -59,11 +67,11 @@ All `ArrayBuffer` instances inherit from {{jsxref("ArrayBuffer.prototype")}}.
 
 ### Properties
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype','Properties')}}
+<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype','Properties') -->
 
 ### Methods
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype','Methods')}}
+<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype','Methods') -->
 
 - {{jsxref("ArrayBuffer.slice()")}} {{non-standard_inline}}
   - : Has the same functionality as {{jsxref("ArrayBuffer.prototype.slice()")}}.
@@ -101,5 +109,5 @@ var dv = new ArrayBuffer(10);
 
 ## Veja também
 
-- [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("SharedArrayBuffer")}}

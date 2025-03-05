@@ -2,12 +2,12 @@
 title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
 l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+  sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
 ---
 
 {{CSSRef}}
 
-**`grid-auto-rows`** は CSS のプロパティで、暗黙的に生成されたグリッドの行{{glossary("grid tracks", "トラック")}}またはトラックのパターンの大きさを指定します。
+**`grid-auto-rows`** は [CSS](/ja/docs/Web/CSS) のプロパティで、暗黙的に生成されたグリッドの行{{glossary("grid tracks", "トラック")}}またはトラックのパターンの大きさを指定します。
 
 {{EmbedInteractiveExample("pages/css/grid-auto-rows.html")}}
 
@@ -88,7 +88,8 @@ grid-auto-rows: unset;
 
     {{cssxref("minmax", "minmax()")}} 記法の外で使用された場合、 `auto` は上記の最小値と最大値の間の範囲を表します。多くの場合は `minmax(min-content,max-content)` のように動作します。
 
-    > **メモ:** トラックの寸法が `auto` の場合（かつ `auto` だけの場合）は、 {{cssxref("align-content")}} および {{cssxref("justify-content")}} プロパティによって引き伸ばすことができます。
+    > [!NOTE]
+    > トラックの寸法が `auto` の場合（かつ `auto` だけの場合）は、 {{cssxref("align-content")}} および {{cssxref("justify-content")}} プロパティによって引き伸ばすことができます。
     > 従って既定では、トラックの寸法が `auto` の場合、グリッドコンテナー内の残りの空間を占有します。
 
 ## 公式定義
@@ -105,7 +106,7 @@ grid-auto-rows: unset;
 
 #### HTML
 
-```html
+```html live-sample___setting_grid_row_size
 <div id="grid">
   <div id="item1"></div>
   <div id="item2"></div>
@@ -115,7 +116,7 @@ grid-auto-rows: unset;
 
 #### CSS
 
-```css
+```css live-sample___setting_grid_row_size
 #grid {
   width: 200px;
   display: grid;
@@ -131,7 +132,7 @@ grid-auto-rows: unset;
 
 #### 結果
 
-{{EmbedLiveSample("グリッド行の寸法を設定", "210px", "210px")}}
+{{EmbedLiveSample("Setting_grid_row_size", "210px", "210px")}}
 
 ## 仕様書
 
@@ -143,6 +144,8 @@ grid-auto-rows: unset;
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}
-- グリッドレイアウトガイド: [CSS グリッドレイアウトでの自動配置 - 暗黙のグリッド内での行の大きさ](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout#暗黙のグリッド内での行の大きさ)
-- 動画チュートリアル: _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid-auto-flow")}}
+- {{cssxref("grid")}}
+- [CSS グリッドレイアウトでの自動配置: 暗黙のグリッド内での行の大きさ](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout#暗黙のグリッド内での行の大きさ)
+- 動画: [Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)

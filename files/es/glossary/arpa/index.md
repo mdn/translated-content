@@ -11,5 +11,5 @@ slug: Glossary/ARPA
 
 ### General knowledge
 
-- [Official website](http://www.iana.org/domains/arpa)
+- [Official website](https://www.iana.org/domains/arpa)
 - [.arpa](https://es.wikipedia.org/wiki/.arpa) on Wikipedia

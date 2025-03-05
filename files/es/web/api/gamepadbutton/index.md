@@ -9,7 +9,8 @@ La interfaz **`GamepadButton`** define un botón individual de un gamepad u otro
 
 Un objeto `GamepadButton` se devuelve al solicitar cualquier valor del array devuelto por la propiedad `buttons` de la interfaz {{domxref("Gamepad")}}.
 
-> **Nota:** Este es el caso en Firefox Gecko 28 en adelante; Chrome y versiones anteriores de Firefox continúan devolviendo un array de valores dobles cuando se accede a esta propiedad.
+> [!NOTE]
+> Este es el caso en Firefox Gecko 28 en adelante; Chrome y versiones anteriores de Firefox continúan devolviendo un array de valores dobles cuando se accede a esta propiedad.
 
 ## Propiedades
 
@@ -67,4 +68,4 @@ function gameLoop() {
 
 ## Recomendado
 
-[Usando la API de Gamepad](/es/docs/Web/Guide/API/Gamepad)
+[Usando la API de Gamepad](/es/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

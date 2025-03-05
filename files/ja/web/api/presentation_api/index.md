@@ -1,5 +1,5 @@
 ---
-title: Presentation API
+title: プレゼンテーション API
 slug: Web/API/Presentation_API
 l10n:
   sourceCommit: 88c098f5bd651a5c587d7b32dba055766c1789ca
@@ -21,9 +21,9 @@ Presentation API は、(ウェブブラウザーなどの) {{Glossary("user agen
 ## インターフェイス
 
 - {{domxref("Presentation")}}
-  - : 操作を行うブラウジングコンテキストでは、`Presentation` インターフェイスが外部の画面へのプレゼンテーションを開始する際のブラウザーのデフォルトの挙動を上書きする方法を提供します。受信を行うブラウジングコンテキストでは、`Presentation` インターフェイスは利用可能なプレゼンテーションの接続へのアクセスを提供します。
+  - : 操作を行う閲覧コンテキストでは、`Presentation` インターフェイスが外部の画面へのプレゼンテーションを開始する際のブラウザーのデフォルトの挙動を上書きする方法を提供します。受信を行う閲覧コンテキストでは、`Presentation` インターフェイスは利用可能なプレゼンテーションの接続へのアクセスを提供します。
 - {{domxref("PresentationRequest")}}
-  - : 操作を行うブラウジングコンテキストで生成されたプレゼンテーションを開始または再接続します。
+  - : 操作を行う閲覧コンテキストで生成されたプレゼンテーションを開始または再接続します。
 - {{domxref("PresentationAvailability")}}
   - : [PresentationAvailability](/ja/docs/Web/API/PresentationAvailability) オブジェクトは、利用可能なプレゼンテーション用の画面に紐付けられ、プレゼンテーションの要求に対する _プレゼンテーション用の画面の利用可能性_ を表します。
 - {{domxref("PresentationConnectionAvailableEvent")}}
@@ -33,7 +33,7 @@ Presentation API は、(ウェブブラウザーなどの) {{Glossary("user agen
 - {{domxref("PresentationConnectionCloseEvent")}}
   - : `PresentationConnectionCloseEvent` は、プレゼンテーションの接続が `closed` 状態になった時発火します。
 - {{domxref("PresentationReceiver")}}
-  - : [PresentationReceiver](/ja/docs/Web/API/PresentationReceiver) は、受信を行うブラウジングコンテキストが操作を行うブラウジングコンテキストへのアクセスとやり取りをできるようにします。
+  - : [PresentationReceiver](/ja/docs/Web/API/PresentationReceiver) は、受信を行う閲覧コンテキストが操作を行う閲覧コンテキストへのアクセスとやり取りをできるようにします。
 - {{domxref("PresentationConnectionList")}}
   - : `PresentationConnectionList` は、終了していないプレゼンテーションの接続のコレクションを表します。これは、新しいプレゼンテーションの接続が利用可能になったイベントのモニターでもあります。
 

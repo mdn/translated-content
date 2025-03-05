@@ -130,11 +130,13 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");
 
 2 аргумент функции `loadFile` устанавливает время ожидание равное 2000ms.
 
-> **Примечание:** Поддержка `timeout` была добавлена начиная с Gecko 12.0.
+> [!NOTE]
+> Поддержка `timeout` была добавлена начиная с Gecko 12.0.
 
 ## Synchronous request
 
-> **Примечание:** Starting with Gecko 30.0, Blink 39.0, and Edge 13, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.
+> [!NOTE]
+> Starting with Gecko 30.0, Blink 39.0, and Edge 13, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.
 
 Synchronous XHR often causes hangs on the web. But developers typically don't notice the problem because the hang only manifests during poor network conditions or slow server response. Synchronous XHR is now in deprecation state. Developers are recommended to move away from the API.
 
@@ -202,13 +204,14 @@ self.onmessage = function (event) {
 };
 ```
 
-> **Примечание:** The effect, because of the use of the `Worker`, is however asynchronous.
+> [!NOTE]
+> The effect, because of the use of the `Worker`, is however asynchronous.
 
 It could be useful in order to interact in the background with the server or to preload some content. See [Using web workers](/ru/docs/Web/API/Web_Workers_API/Using_web_workers) for examples and details.
 
 ### Adapting Sync XHR usecases to the Beacon API
 
-There are some cases in which the synchronous usage of XMLHttpRequest was not replaceable, like during the [`window.onunload`](/ru/docs/Web/API/WindowEventHandlers/onunload) and [`window.onbeforeunload`](/ru/docs/Web/API/WindowEventHandlers/onbeforeunload) events. You should consider using the `fetch` API with `keepalive` flag. When `fetch` with `keepalive` isn't available, you can consider using the [navigator.sendBeacon](/ru/docs/Web/API/Navigator/sendBeacon) API can support these use cases typically while delivering a good UX.
+There are some cases in which the synchronous usage of XMLHttpRequest was not replaceable, like during the [`window.onunload`](/ru/docs/Web/API/Window/unload_event) and [`window.onbeforeunload`](/ru/docs/Web/API/Window/beforeunload_event) events. You should consider using the `fetch` API with `keepalive` flag. When `fetch` with `keepalive` isn't available, you can consider using the [navigator.sendBeacon](/ru/docs/Web/API/Navigator/sendBeacon) API can support these use cases typically while delivering a good UX.
 
 The following example (from the [sendBeacon docs](/ru/docs/Web/API/Navigator/sendBeacon)) shows a theoretical analytics code that attempts to submit data to a server by using a synchronous XMLHttpRequest in an unload handler. This results in the unloading of the page to be delayed.
 

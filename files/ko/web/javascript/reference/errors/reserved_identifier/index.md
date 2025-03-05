@@ -74,4 +74,4 @@ class DocArchiver {}
 
 ## 같이 보기
 
-- [Good variable names](http://wiki.c2.com/?GoodVariableNames)
+- [Good variable names](https://wiki.c2.com/?GoodVariableNames)

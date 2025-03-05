@@ -7,7 +7,7 @@ slug: Web/API/Window
 
 L'objet `window` représente une fenêtre contenant un document DOM ; la propriété `document` pointe vers le [document DOM](/fr/docs/Web/API/Document) chargé dans cette fenêtre. Une fenêtre pour un document donné peut être obtenue en utilisant la propriété {{Domxref("document.defaultView")}}.
 
-Cette section fournit une brève référence pour toutes les méthodes, propriétés et événements disponibles via l'objet DOM `window`. L'objet `window` implémente l'interface `Window`, qui à son tour hérite de l'interface [`AbstractView`](http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView). Certaines fonctions globales supplémentaires, espaces de noms, objets, interfaces et constructeurs, non typiquement associés à la fenêtre, mais disponibles sur celle-ci, sont répertoriés dans la [Référence JavaScript](/fr/docs/Web/JavaScript/Reference) et la [Référence DOM](/fr/docs/Web/API/Document_Object_Model).
+Cette section fournit une brève référence pour toutes les méthodes, propriétés et événements disponibles via l'objet DOM `window`. L'objet `window` implémente l'interface `Window`, qui à son tour hérite de l'interface [`AbstractView`](https://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView). Certaines fonctions globales supplémentaires, espaces de noms, objets, interfaces et constructeurs, non typiquement associés à la fenêtre, mais disponibles sur celle-ci, sont répertoriés dans la [Référence JavaScript](/fr/docs/Web/JavaScript/Reference) et la [Référence DOM](/fr/docs/Web/API/Document_Object_Model).
 
 Dans un navigateur utilisant des onglets, comme Firefox, chaque onglet contient son propre objet `window` (et si vous écrivez une extension, la fenêtre du navigateur elle-même est un objet `window` séparé — consultez [Travailler avec des fenêtres dans du code chrome](/fr/docs/Mozilla/Working_with_windows_in_chrome_code#Fen.C3.AAtres_de_contenu) pour plus d'informations). C'est-à-dire que l'objet `window` n'est pas partagé entre les onglets dans la même fenêtre. Certaines méthodes, notamment {{ Domxref("window.resizeTo") }} et {{ Domxref("window.resizeBy") }}, s'appliquent à la fenêtre entière et non à l'onglet spécifique auquel l'objet `window` appartient. En général, ce qui ne peut raisonnablement pas concerner un onglet se rapporte à la fenêtre à la place.
 
@@ -161,13 +161,13 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
 
 ### Propriétés implémentées depuis ailleurs
 
-- [`caches`](/fr/docs/Web/API/caches) {{readOnlyinline}}
+- [`caches`](/fr/docs/Web/API/Window/caches) {{readOnlyinline}}
   - : Renvoie l'objet {{domxref("CacheStorage")}} associé au contexte en cours. Cet objet active des fonctionnalités telles que le stockage des ressources pour une utilisation hors connexion, et la génération de réponses personnalisées aux requêtes.
-- [`indexedDB`](/fr/docs/Web/API/indexedDB) {{readonlyInline}}
+- [`indexedDB`](/fr/docs/Web/API/Window/indexedDB) {{readonlyInline}}
   - : Fournit un mécanisme permettant aux applications d'accéder de manière asynchrone à des bases de données indexées ; renvoie un objet {{domxref("IDBFactory")}}.
-- [`isSecureContext`](/fr/docs/Web/API/isSecureContext) {{readOnlyinline}}
+- [`isSecureContext`](/fr/docs/Web/API/Window/isSecureContext) {{readOnlyinline}}
   - : Renvoie un booléen indiquant si le contexte actuel est sécurisé (`true`) ou non (`false`).
-- [`origin`](/fr/docs/Web/API/origin) {{readOnlyinline}}
+- [`origin`](/fr/docs/Web/API/Window/origin) {{readOnlyinline}}
   - : Renvoie l'origine de l'objet global, sérialisé comme une chaîne. (Cela ne semble pas encore être implémenté dans aucun navigateur.)
 
 ## Méthodes
@@ -193,13 +193,13 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
 - {{domxref("Window.confirm()")}}
   - : Affiche une boîte de dialogue avec un message auquel l'utilisateur doit répondre.
 - {{domxref("Window.disableExternalCapture()")}} {{deprecated_inline}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.dispatchEvent()")}}
   - : Utilisé pour déclencher un évènement.
 - {{domxref("Window.dump()")}} {{Non-standard_inline}}
   - : Écrit un message à la console.
 - {{domxref("Window.enableExternalCapture()")}} {{deprecated_inline}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.find()")}}
   - : Recherche la chaîne de caractères donnée dans une fenêtre.
 - {{domxref("Window.focus()")}}
@@ -209,7 +209,7 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
 - {{domxref("Window.getAttention()")}} {{Non-standard_inline}} {{deprecated_inline}}
   - : Fait flasher l'icône de l'application.
 - {{domxref("Window.getAttentionWithCycleCount()")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.getComputedStyle()")}}
   - : Récupère un style calculé pour l'élément donné. Un style calculé indique les valeurs de toutes les propriétés CSS de l'élément.
 - {{domxref("Window.getDefaultComputedStyle()")}} {{Non-standard_inline}}
@@ -221,7 +221,7 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
 - {{domxref("Window.matchMedia()")}}
   - : Renvoie un objet {{domxref("MediaQueryList")}} représentant la chaîne d'interrogation de média spécifiée.
 - {{domxref("Window.maximize()")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.minimize()")}} (top-level XUL windows only)
   - : Minimize la fenêtre.
 - {{domxref("Window.moveBy()")}}
@@ -249,9 +249,9 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
 - {{domxref("Window.resizeTo()")}}
   - : Redimensionne dynamiquement la fenêtre.
 - {{domxref("Window.restore()")}} {{Non-standard_inline}} {{deprecated_inline}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.routeEvent()")}} {{deprecated_inline}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.scroll()")}}
   - : Fait défiler la fenêtre à un endroit particulier dans le document.
 - {{domxref("Window.scrollBy()")}}
@@ -279,23 +279,23 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
 
 - {{domxref("EventTarget.addEventListener()")}}
   - : Enregistre un gestionnaire d'événement pour un type d'événement spécifique dans la fenêtre.
-- [`atob()`](/fr/docs/Web/API/atob)
+- [`atob()`](/fr/docs/Web/API/Window/atob)
   - : Décode une chaîne de données qui a été codée en utilisant l'encodage en base 64.
-- [`btoa()`](/fr/docs/Web/API/btoa)
+- [`btoa()`](/fr/docs/Web/API/Window/btoa)
   - : Crée une chaîne ASCII codée en base 64 à partir d'une chaîne de données binaires.
-- [`clearInterval()`](/fr/docs/Web/API/clearInterval)
-  - : Annule l'exécution répétée définie en utilisant [`setInterval()`](/fr/docs/Web/API/setInterval).
-- [`clearTimeout()`](/fr/docs/Web/API/atob)
-  - : Annule l'exécution différée définie en utilisant [`setTimeout()`](/fr/docs/Web/API/setTimeout).
-- [`createImageBitmap()`](/fr/docs/Web/API/createImageBitmap)
+- [`clearInterval()`](/fr/docs/Web/API/Window/clearInterval)
+  - : Annule l'exécution répétée définie en utilisant [`setInterval()`](/fr/docs/Web/API/Window/setInterval).
+- [`clearTimeout()`](/fr/docs/Web/API/Window/atob)
+  - : Annule l'exécution différée définie en utilisant [`setTimeout()`](/fr/docs/Web/API/Window/setTimeout).
+- [`createImageBitmap()`](/fr/docs/Web/API/Window/createImageBitmap)
   - : Accepte une variété de sources d'images différentes, et renvoie un {{domxref("Promise")}} qui se résout en une {{domxref("ImageBitmap")}}. En option, la source est détourée avec le rectangle des pixels d'origine en (sx, sy) et de largeur sw, et de hauteur sh.
-- [`fetch()`](/fr/docs/Web/API/fetch)
+- [`fetch()`](/fr/docs/Web/API/Window/fetch)
   - : Démarre le processus de récupération d'une ressource à partir du réseau.
 - {{domxref("EventTarget.removeEventListener")}}
   - : Supprime un gestionnaire d'événement de la fenêtre.
-- [`setInterval()`](/fr/docs/Web/API/setInterval)
+- [`setInterval()`](/fr/docs/Web/API/Window/setInterval)
   - : Planifie une fonction à exécuter à chaque fois qu'un nombre donné de millisecondes s'est écoulé.
-- [`setTimeout()`](/fr/docs/Web/API/setTimeout)
+- [`setTimeout()`](/fr/docs/Web/API/Window/setTimeout)
   - : Planifie une fonction à exécuter dans un laps de temps donné.
 
 ### Méthodes obsolètes
@@ -309,7 +309,8 @@ Ce sont des propriétés de l'objet window qui peuvent être définies pour éta
 
 _Cette interface hérite des gestionnaires d'événements de l'interface {{domxref("EventTarget")}} et elle implémente les gestionnaires d'événements de {{domxref("WindowEventHandlers")}}._
 
-> **Note :** à partir de Gecko 9.0, vous pouvez maintenant utiliser la syntaxe `if ("onabort" in window)` pour déterminer si une propriété de gestionnaire d'événements donnée existe ou non. Cela est dû au fait que les interfaces du gestionnaire d'événements ont été mises à jour pour être des interfaces Web IDL correctes. Voir les gestionnaires d'événements DOM pour plus de détails.
+> [!NOTE]
+> À partir de Gecko 9.0, vous pouvez maintenant utiliser la syntaxe `if ("onabort" in window)` pour déterminer si une propriété de gestionnaire d'événements donnée existe ou non. Cela est dû au fait que les interfaces du gestionnaire d'événements ont été mises à jour pour être des interfaces Web IDL correctes. Voir les gestionnaires d'événements DOM pour plus de détails.
 
 - {{domxref("GlobalEventHandlers.onabort")}}
 
@@ -438,9 +439,9 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 - {{domxref("Window.onvrdisplaydeactivate")}}
   - : Représente un gestionnaire d'événements qui s'exécute lorsqu'un affichage ne peut plus être présenté (lorsque l'événement [`vrdisplaydeactivate`](/fr/docs/Web/API/Window/vrdisplaydeactivate_event) se déclenche), par exemple si un HMD est passé en veille ou en hibernation en raison d'une période d'inactivité.
 - {{domxref("Window.onvrdisplayblur")}}
-  - : Représente un gestionnaire d'événements qui s'exécutera lorsque la présentation sur un affichage a été suspendue pour une raison quelconque par le navigateur, le SE ou le matériel de RV (lorsque l'événement [`vrdisplayblur`](/fr/docs/Web/API/Window/vrdisplayblur_event) se déclenche - par exemple, lorsque l'utilisateur interagit avec un menu système ou un navigateur, pour empêcher le suivi ou la perte d'expérience.
+  - : Représente un gestionnaire d'événements qui s'exécutera lorsque la présentation sur un affichage a été suspendue pour une raison quelconque par le navigateur, le SE ou le matériel de RV (lorsque l'événement [`vrdisplayblur`](/fr/docs/Web/API/Window) se déclenche - par exemple, lorsque l'utilisateur interagit avec un menu système ou un navigateur, pour empêcher le suivi ou la perte d'expérience.
 - {{domxref("Window.onvrdisplayfocus")}}
-  - : Représente un gestionnaire d'événements qui sera exécuté lorsque la présentation sur un afficheur a repris après avoir perdu la focalisation (lorsque l'événement [`vrdisplayfocus`](/fr/docs/Web/API/Window/vrdisplayfocus_event) se déclenche).
+  - : Représente un gestionnaire d'événements qui sera exécuté lorsque la présentation sur un afficheur a repris après avoir perdu la focalisation (lorsque l'événement [`vrdisplayfocus`](/fr/docs/Web/API/Window) se déclenche).
 - {{domxref("Window.onvrdisplaypresentchange")}}
   - : Représente un gestionnaire d'événements qui s'exécute lorsque l'état de présentation d'un périphérique de RV change, c'est-à-dire qu'il passe de présentation à non présentation, ou vice versa (lorsque l'événement [`vrdisplaypresentchange`](/fr/docs/Web/API/Window/vrdisplaypresentchange_event) se déclenche).
 
@@ -451,21 +452,21 @@ Voir aussi les [Interfaces DOM](/fr/docs/Web/API/Document_Object_Model).
 - {{domxref("DOMParser")}}
   - : `DOMParser` peut analyser un source XML ou HTML stocké dans une chaîne de caractères en un [Document](/fr/docs/Web/API/Document) DOM. `DOMParser` est spécifié dans [DOM Parsing et Serialization](https://w3c.github.io/DOM-Parsing/).
 - {{domxref("Window.GeckoActiveXObject")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Image")}}
   - : Used for creating an {{domxref("HTMLImageElement")}}.
 - {{domxref("Option")}}
   - : Used for creating an {{domxref("HTMLOptionElement")}}
 - {{domxref("Window.QueryInterface")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.XMLSerializer")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Worker")}}
-  - : Used for creating a [Web worker](/fr/docs/DOM/Using_web_workers)
+  - : Used for creating a [Web worker](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
 - {{domxref("Window.XPCNativeWrapper")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.XPCSafeJSObjectWrapper")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 
 ## Interfaces
 

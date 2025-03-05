@@ -5,7 +5,8 @@ slug: Web/API/PerformanceNavigation
 
 {{APIRef("Navigation Timing")}}
 
-> **Attention :** cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!WARNING]
+> Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
 
 L'ancienne interface **`PerformanceNavigation`** représente des informations sur la façon dont la navigation vers le document actuel a été effectuée.
 

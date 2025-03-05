@@ -3,12 +3,12 @@ title: "File: webkitRelativePath プロパティ"
 short-title: webkitRelativePath
 slug: Web/API/File/webkitRelativePath
 l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+  sourceCommit: 367b982b93c07f7f99e7bb768a6bf326fa5198e6
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File and Directory Entries API")}}{{AvailableInWorkers}}
 
-**`File.webkitRelativePath`** は、[`webkitdirectory`](/ja/docs/Web/HTML/Element/input#webkitdirectory) 属性が設定された {{HTMLElement("input")}} 要素で、ユーザーが選択したディレクトリーに対するファイルのパスを指定する文字列を持つ読み取り専用のプロパティです。
+**`webkitRelativePath`** は {{domxref("File")}} インターフェイスの読み取り専用プロパティで、[`webkitdirectory`](/ja/docs/Web/HTML/Element/input#webkitdirectory) 属性が設定された {{HTMLElement("input")}} 要素において、ユーザーが選択したディレクトリーに対するファイルのパスを指定する文字列を保持します。
 
 ## 値
 
@@ -16,7 +16,7 @@ l10n:
 
 ## 例
 
-この例では、ユーザーが 1 つまたは複数のディレクトリーを選択することができるディレクトリーピッカーが表示されます。 {{domxref("HTMLElement/change_event", "change")}} イベントが発生すると、選択されたディレクトリ階層に含まれるすべてのファイルのリストが生成され、表示されます。
+この例では、ユーザーが 1 つまたは複数のディレクトリーを選択することができるディレクトリーピッカーが表示されます。 {{domxref("HTMLElement/change_event", "change")}} イベントが発生すると、選択されたディレクトリー階層に含まれるすべてのファイルのリストが生成され、表示されます。
 
 ### HTML
 

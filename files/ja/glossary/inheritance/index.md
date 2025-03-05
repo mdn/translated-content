@@ -13,4 +13,4 @@ slug: Glossary/Inheritance
 
 ### それについて学ぶ
 
-- [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

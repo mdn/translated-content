@@ -7,7 +7,73 @@ slug: Web/HTML/Element/td
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<td>`** définit une cellule d'un tableau qui contient des données. Cet élément fait partie du _modèle de tableau_.
 
-{{EmbedInteractiveExample("pages/tabbed/td.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;td&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Alien football stars
+  </caption>
+  <tr>
+    <th scope="col">Player</th>
+    <th scope="col">Gloobles</th>
+    <th scope="col">Za'taak</th>
+  </tr>
+  <tr>
+    <th scope="row">TR-7</th>
+    <td>7</td>
+    <td>4,569</td>
+  </tr>
+  <tr>
+    <th scope="row">Khiresh Odo</th>
+    <td>7</td>
+    <td>7,223</td>
+  </tr>
+  <tr>
+    <th scope="row">Mia Oolong</th>
+    <td>9</td>
+    <td>6,219</td>
+  </tr>
+</table>
+```
+
+```css interactive-example
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+th[scope="col"] {
+  background-color: #505050;
+  color: #fff;
+}
+
+th[scope="row"] {
+  background-color: #d6ecd4;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-of-type(even) {
+  background-color: #eee;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -71,7 +137,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 
   - : Cet attribut contient une description courte et abrégée du contenu de la cellule. Certains outils utilisateurs, comme la synthèse vocale, peuvent décrire cette information avant le contenu lui-même.
 
-    > **Note :** Cet attribut est obsolète dans le dernier standard et ne doit donc plus être utilisé. Il faut dans ces cas introduire la description au sein de la cellule comme un élément [`<abbr>`](/fr/docs/Web/HTML/Element/abbr) indépendant ou utiliser l'attribut `title` de la cellule pour représenter le contenu et la cellule elle-même pour représenter le contenu abrégé.
+    > [!NOTE]
+    > Cet attribut est obsolète dans le dernier standard et ne doit donc plus être utilisé. Il faut dans ces cas introduire la description au sein de la cellule comme un élément [`<abbr>`](/fr/docs/Web/HTML/Element/abbr) indépendant ou utiliser l'attribut `title` de la cellule pour représenter le contenu et la cellule elle-même pour représenter le contenu abrégé.
 
 - `align` {{deprecated_inline}}
 
@@ -90,7 +157,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 
     Si cet attribut n'est pas renseigné, la valeur `left` est prise par défaut.
 
-    > **Note :** Cet attribut est devenu obsolète dans le dernier standard et ne doit donc plus être utilisé.
+    > [!NOTE]
+    > Cet attribut est devenu obsolète dans le dernier standard et ne doit donc plus être utilisé.
     >
     > - Pour réaliser les mêmes effets que les valeurs `left`, `center`, `right` ou `justify`, il faut utiliser la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align) sur l'élément
     > - Pour réaliser le même effet qu'avec la valeur `char`. Il est possible, en CSS3, d'utiliser la valeur de l'attribut `char` comme valeur de la propriété [`text-align`](/fr/docs/Web/CSS/text-align) (non implémenté à date).

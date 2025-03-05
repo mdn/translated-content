@@ -2,7 +2,7 @@
 title: HTMLTextAreaElement
 slug: Web/API/HTMLTextAreaElement
 l10n:
-  sourceCommit: a3a58404e3f50524464bc1b3ff34ad76fad5c566
+  sourceCommit: d47348199a379f68bea876a403eb510628ec4ccb
 ---
 
 {{APIRef("HTML DOM")}}
@@ -15,8 +15,6 @@ l10n:
 
 _親インターフェイスである {{DOMxRef("HTMLElement")}} から継承したプロパティもあります。_
 
-- {{domxref("HTMLTextAreaElement.autocapitalize", "autocapitalize")}}
-  - : 文字列で、この要素がユーザーの入力を大文字化する動作を表します。有効な値は `none`, `off`, `characters`, `words`, `sentences` です。
 - {{domxref("HTMLTextAreaElement.autocomplete", "autocomplete")}}
   - : 文字列で、この要素の [`autocomplete`](/ja/docs/Web/HTML/Element/textarea#autocomplete) 属性を表しいます。
 - {{domxref("HTMLTextAreaElement.cols", "cols")}}
@@ -28,7 +26,7 @@ _親インターフェイスである {{DOMxRef("HTMLElement")}} から継承し
 - {{domxref("HTMLTextAreaElement.disabled", "disabled")}}
   - : 論理値で、この要素の [`disabled`](/ja/docs/Web/HTML/Element/textarea#disabled) 属性を表します。これは、このコントロールが操作できない状態を示します。
 - {{domxref("HTMLTextAreaElement.form", "form")}} {{ReadOnlyInline}}
-  - : 親フォーム要素への参照を返します。この要素がフォーム要素配下にない場合、任意の {{HTMLElement("form")}} 要素の [`id`](/ja/docs/Web/HTML/Element/form#id) 属性もしくは `null` 値になります。
+  - : 親フォーム要素への参照を返します。この要素がフォーム要素配下にない場合、任意の {{HTMLElement("form")}} 要素の [`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性もしくは `null` 値になります。
 - {{domxref("HTMLTextAreaElement.labels", "labels")}} {{ReadOnlyInline}}
   - : この要素に関連付けられた {{HTMLElement("label")}} 要素の {{domxref("NodeList")}} を返します。
 - {{domxref("HTMLTextAreaElement.maxLength", "maxLength")}}
@@ -103,9 +101,9 @@ _親インターフェイスである {{DOMxRef("HTMLElement")}} から継承し
 #### JavaScript
 
 ```js
-function autoGrow(oField) {
-  if (oField.scrollHeight > oField.clientHeight) {
-    oField.style.height = `${oField.scrollHeight}px`;
+function autoGrow(field) {
+  if (field.scrollHeight > field.clientHeight) {
+    field.style.height = `${field.scrollHeight}px`;
   }
 }
 ```
@@ -113,7 +111,7 @@ function autoGrow(oField) {
 #### CSS
 
 ```css
-textarea.noscrollbars {
+textarea.no-scrollbars {
   overflow: hidden;
   width: 300px;
   height: 100px;
@@ -126,13 +124,13 @@ textarea.noscrollbars {
 <form>
   <fieldset>
     <legend>あなたのコメント</legend>
-    <p><textarea class="noscrollbars" onkeyup="autoGrow(this);"></textarea></p>
+    <p><textarea class="no-scrollbars" onkeyup="autoGrow(this);"></textarea></p>
     <p><input type="submit" value="送信" /></p>
   </fieldset>
 </form>
 ```
 
-{{EmbedLiveSample('Autogrowing_textarea_example', 600, 300)}}
+{{EmbedLiveSample('自動拡張するテキストエリアの例', 600, 300)}}
 
 ### HTML タグを挿入する例
 
@@ -212,72 +210,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vita
 </form>
 ```
 
-{{EmbedLiveSample('Insert_HTML_tags_example', 600, 300)}}
-
-### 長さと行数の制限の例
-
-1 行あたりの最大文字数と最大行数のあるテキストエリアを作成します。
-
-最初に、テキストフィールドと入力時のキーイベントを取り、何れかの制限に達したかどうかを判断する関数を作成します。判断に達していなければ、そのキーを返します。
-
-```js
-function checkRows(oField, oKeyEvent) {
-  let nKey = (
-      oKeyEvent ||
-      /* old IE */ window.event || /* check is not supported! */ { keyCode: 38 }
-    ).keyCode,
-    // 行の最大文字数をここに入力
-    nCols = 30,
-    // 最大行数をここに入力
-    nRows = 5,
-    nSelS = oField.selectionStart,
-    nSelE = oField.selectionEnd,
-    sVal = oField.value,
-    nLen = sVal.length,
-    nBackward = nSelS >= nCols ? nSelS - nCols : 0,
-    nDeltaForw =
-      sVal
-        .substring(nBackward, nSelS)
-        .search(new RegExp(`\\n(?!.{0,${String(nCols - 2)}}\\n)`)) + 1,
-    nRowStart = nBackward + nDeltaForw,
-    aReturns = (
-      sVal.substring(0, nSelS) + sVal.substring(nSelE, sVal.length)
-    ).match(/\n/g),
-    nRowEnd = nSelE + nRowStart + nCols - nSelS,
-    sRow =
-      sVal.substring(nRowStart, nSelS) +
-      sVal.substring(nSelE, nRowEnd > nLen ? nLen : nRowEnd),
-    bKeepCols =
-      nKey === 13 ||
-      nLen + 1 < nCols ||
-      /\n/.test(sRow) ||
-      ((nRowStart === 0 || nDeltaForw > 0 || nKey > 0) &&
-        (sRow.length < nCols ||
-          (nKey > 0 && (nLen === nRowEnd || sVal.charAt(nRowEnd) === "\n"))));
-
-  return (
-    (nKey !== 13 || (aReturns ? aReturns.length + 1 : 1) < nRows) &&
-    ((nKey > 32 && nKey < 41) || bKeepCols)
-  );
-}
-```
-
-HTML では、この関数を `onkeypress` イベントでフックし、テキストエリアが貼り付けを受け付けないように設定します。
-
-```html
-<form>
-  <p>
-    1行の文字数が固定されたテキストエリア:<br />
-    <textarea
-      cols="50"
-      rows="10"
-      onkeypress="return checkRows(this, event);"
-      onpaste="return false;"></textarea>
-  </p>
-</form>
-```
-
-{{EmbedLiveSample('長さと行数の制限の例', 600, 300)}}
+{{EmbedLiveSample('HTML タグを挿入する例', 600, 300)}}
 
 ## 仕様書
 

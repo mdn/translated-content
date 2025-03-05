@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`polygon()`** [CSS](/zh-CN/docs/Web/CSS) 函数是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)之一。它用于通过提供一个或多个坐标对（每一个坐标代表形状的一个顶点）来绘制[多边形](https://zh.wikipedia.org/wiki/多边形)。
+**`polygon()`** [CSS](/zh-CN/docs/Web/CSS) 函数是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)之一。它用于通过提供一个或多个坐标对（每一个坐标代表形状的一个顶点）来绘制[多边形](https://zh.wikipedia.org/wiki/多边形)。
 
 {{EmbedInteractiveExample("pages/css/function-polygon.html")}}
 
@@ -30,7 +30,8 @@ polygon(evenodd, 0% 0%, 50% 50%, 0% 100%)
 
 `polygon()` 的参数用逗号和可选的空格分隔。第一个参数是一个可选的 [`<fill-rule>`](/zh-CN/docs/Web/SVG/Attribute/fill-rule) 值。其他参数是定义多边形的点。每个点是一对 x/y 坐标 {{cssxref("length-percentage")}} 值，用空格分隔，例如左/上角和右下角的“0 0”和“100% 100%”。
 
-> **备注：** SVG [`<polygon>`](/zh-CN/docs/Web/SVG/Element/polygon) 元素有单独的属性用于 [`fill-rule`](/zh-CN/docs/Web/SVG/Attribute/fill-rule) 和 [`points`](/zh-CN/docs/Web/SVG/Attribute/points)，而 `points` 在使用空格和逗号分隔时是灵活的。CSS `polygon()` 规则对分隔符严格执行。
+> [!NOTE]
+> SVG [`<polygon>`](/zh-CN/docs/Web/SVG/Element/polygon) 元素有单独的属性用于 [`fill-rule`](/zh-CN/docs/Web/SVG/Attribute/fill-rule) 和 [`points`](/zh-CN/docs/Web/SVG/Attribute/points)，而 `points` 在使用空格和逗号分隔时是灵活的。CSS `polygon()` 规则对分隔符严格执行。
 
 ### 参数
 

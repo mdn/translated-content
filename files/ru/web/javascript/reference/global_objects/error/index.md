@@ -120,9 +120,11 @@ try {
 
 Также смотрите обсуждение [«Какой способ расширения Error в JavaScript более предпочтителен?»](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) на StackOverflow.
 
-> **Предупреждение:** Встроенные подклассы не могут быть надёжно преобразованы в ES6 код, потому что нет возможности создать базовый класс со специфичным `new.target` без {{jsxref("Reflect.construct()")}}. Требуется [дополнительная конфигурация](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend) или ручной вызов {{jsxref("Object/setPrototypeOf", "Object.setPrototypeOf(this, CustomError.prototype)")}} в конце конструктора, иначе создаваемый экземпляр не будет экземпляром `CustomError`. Смотрите [TypeScript FAQ](https://github.com/microsoft/TypeScript/wiki/FAQ#why-doesnt-extending-built-ins-like-error-array-and-map-work) для получения дополнительной информации.
+> [!WARNING]
+> Встроенные подклассы не могут быть надёжно преобразованы в ES6 код, потому что нет возможности создать базовый класс со специфичным `new.target` без {{jsxref("Reflect.construct()")}}. Требуется [дополнительная конфигурация](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend) или ручной вызов {{jsxref("Object/setPrototypeOf", "Object.setPrototypeOf(this, CustomError.prototype)")}} в конце конструктора, иначе создаваемый экземпляр не будет экземпляром `CustomError`. Смотрите [TypeScript FAQ](https://github.com/microsoft/TypeScript/wiki/FAQ#why-doesnt-extending-built-ins-like-error-array-and-map-work) для получения дополнительной информации.
 
-> **Примечание:** Некоторые браузеры включают конструктор `CustomError` в трассировку стека при использовании классов ES2015.
+> [!NOTE]
+> Некоторые браузеры включают конструктор `CustomError` в трассировку стека при использовании классов ES2015.
 
 ```js
 class CustomError extends Error {

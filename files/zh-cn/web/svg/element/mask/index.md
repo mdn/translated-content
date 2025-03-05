@@ -46,9 +46,9 @@ svg {
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/docs/SVG/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -64,7 +64,7 @@ svg {
 
 ## DOM 接口
 
-该元素实现了 [`SVGMaskElement`](/zh-CN/DOM/SVGMaskElement) 接口。
+该元素实现了 [`SVGMaskElement`](/zh-CN/docs/DOM/SVGMaskElement) 接口。
 
 ## 参见
 

@@ -15,7 +15,21 @@ l10n:
 
 `reduce()` で一番わかりやすいのは、配列のすべての要素の和を返す場合でしょう。
 
-{{EmbedInteractiveExample("pages/js/array-reduce.html")}}
+{{InteractiveExample("JavaScript Demo: Array.reduce()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+console.log(sumWithInitial);
+// Expected output: 10
+```
 
 縮小関数は配列を要素ごとに走査し、それぞれの段階で、前の段階の結果に現在の配列の値を加えていきます (この結果は、それ以前のすべての段階を合算したものです)。
 
@@ -68,7 +82,8 @@ reduce(callbackFn, initialValue)
 - 既に処理したインデックスを変更しても、 `callbackFn` が再度呼び出されることはありません。
 - まだ処理していない既存の配列要素が `callbackFn` によって変更された場合、 `callbackFn` に渡される値はその要素が取得される時点の値になります。[削除](/ja/docs/Web/JavaScript/Reference/Operators/delete)された要素は `undefined` であるかのように処理されます。
 
-> **警告:** 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
+> [!WARNING]
+> 前項で説明したような、参照中の配列の同時進行での変更は（特殊な場合を除いて）普通は避けるべきです。多くの場合、理解しにくいコードになります。
 
 `reduce()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
 

@@ -1,18 +1,17 @@
 ---
-title: <calc-constant>
+title: <calc-keyword>
 slug: Web/CSS/calc-keyword
-original_slug: Web/CSS/calc-constant
 l10n:
-  sourceCommit: fb1c7f8985e4c4142f482f809366e3cba6b96b94
+  sourceCommit: 62ebcab471aceef4d843e57e310dae4ab1eda94a
 ---
 
 {{CSSRef}}
 
-**`<calc-constant>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 `e` や `pi` のようなよく定義された定数を表します。これらの数学定数を何桁も手作業で入力したり、計算したりする必要はなく、利便性のために CSS によって直接提供されています。
+**`<calc-keyword>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 `e` や `pi` のようなよく定義された定数を表します。これらの数学定数を何桁も手作業で入力したり、計算したりする必要はなく、利便性のために CSS によって直接提供されています。
 
 ## 構文
 
-`<calc-constant>` 型は、 [CSS 数学関数](/ja/docs/Web/CSS/CSS_Functions#数学関数)で使用される数値の定数を定義します。
+`<calc-keyword>` 型は、 [CSS 数学関数](/ja/docs/Web/CSS/CSS_Functions#数学関数)で使用される数値の定数を定義します。
 
 ### 値
 
@@ -66,7 +65,7 @@ l10n:
 - `line-height: e;` は無効ですが、 `line-height: calc(e);` は有効です。
 - `rotate(1rad * pi);` は動作しません。 {{CSSxRef("transform-function/rotate", "rotate()")}} は数学関数ではないからです。 `rotate(calc(1rad * pi));` を使用してください。
 
-数学関数では、 `<calc-constant>` 値は {{CSSxRef("number")}} 値として評価されるので、 `e` と `pi` は数値定数として動作します。
+数学関数では、 `<calc-keyword>` 値は {{CSSxRef("number")}} 値として評価されるので、 `e` と `pi` は数値定数として動作します。
 
 `infinity` と `NaN` は少し異なり、退化した数値定数とみなされます。
 技術的には数値ではありませんが、 {{CSSxRef("number")}} 値として動作するので、例えば無限大の {{CSSxRef("length")}} を取得するには `calc(infinity * 1px)` のような式が必要となります。

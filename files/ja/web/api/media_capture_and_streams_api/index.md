@@ -19,7 +19,7 @@ l10n:
 
 `MediaStream` オブジェクトは、1 つの**入力**と 1 つの**出力**を持ちます。 `MediaStream` オブジェクトは、ローカルで呼び出される {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} によって生成され、ユーザーのカメラやマイクの 1 つを入力ソースとして持ちます。ローカルでない `MediaStream` は、 {{HTMLElement("video")}} や {{HTMLElement("audio")}} などのメディア要素や、WebRTC {{domxref("RTCPeerConnection")}} API によって取得できるネットワーク越しに生成されたストリーム、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) の {{domxref("MediaStreamAudioDestinationNode")}} によって作成されたストリームとして表現されます。
 
-`MediaStream` オブジェクトの出力は**コンシューマー** (consumer) に接続されます。出力として {{HTMLElement("audio")}} や {{HTMLElement("video")}} などのメディア要素、 WebRTC {{domxref("RTCPeerConnection")}} API、[ウェブオーディオ API](/ja/docs/Web_Audio_API) の {{domxref("MediaStreamAudioSourceNode")}}が使用できます。
+`MediaStream` オブジェクトの出力は**コンシューマー** (consumer) に接続されます。出力として {{HTMLElement("audio")}} や {{HTMLElement("video")}} などのメディア要素、 WebRTC {{domxref("RTCPeerConnection")}} API、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) の {{domxref("MediaStreamAudioSourceNode")}}が使用できます。
 
 ## インターフェイス
 

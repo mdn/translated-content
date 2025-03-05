@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/from
 
 Метод **`Array.from()`** создаёт новый экземпляр `Array` из массивоподобного или итерируемого объекта.
 
-{{EmbedInteractiveExample("pages/js/array-from.html")}}
+{{InteractiveExample("JavaScript Demo: Array.from()")}}
+
+```js interactive-example
+console.log(Array.from("foo"));
+// Expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], (x) => x + x));
+// Expected output: Array [2, 4, 6]
+```
 
 ## Синтаксис
 
@@ -35,7 +43,7 @@ Array.from(arrayLike[, mapFn[, thisArg]])
 - массивоподобных объектов (объектов со свойством `length` и элементами по индексным ключам) или
 - [итерируемых объектов](/ru/docs/Web/JavaScript/Reference/Iteration_protocols) (объектов, из которых вы можете достать их элементы, например {{jsxref("Map")}} или {{jsxref("Set")}}).
 
-`Array.from()` имеет необязательный параметр `mapFn`, который позволяет вам выполнять функцию {{jsxref("Array.prototype.map", "map")}} для каждого элемента создаваемого массива (или его подкласса). Проще говоря, вызов `Array.from(obj, mapFn, thisArg)` эквивалентен цепочке `Array.from(obj).map(mapFn, thisArg)`, за исключением того, что он не создаёт промежуточного массива. Это особенно важно для некоторых подклассов массива, вроде [типизированных массивов](/ru/docs/Web/JavaScript/Typed_arrays), поскольку промежуточный массив неизбежно приведёт к усечению значений, чтобы они подпали под подходящий тип.
+`Array.from()` имеет необязательный параметр `mapFn`, который позволяет вам выполнять функцию {{jsxref("Array.prototype.map", "map")}} для каждого элемента создаваемого массива (или его подкласса). Проще говоря, вызов `Array.from(obj, mapFn, thisArg)` эквивалентен цепочке `Array.from(obj).map(mapFn, thisArg)`, за исключением того, что он не создаёт промежуточного массива. Это особенно важно для некоторых подклассов массива, вроде [типизированных массивов](/ru/docs/Web/JavaScript/Guide/Typed_arrays), поскольку промежуточный массив неизбежно приведёт к усечению значений, чтобы они подпали под подходящий тип.
 
 Свойство `length` метода `from()` равно 1.
 

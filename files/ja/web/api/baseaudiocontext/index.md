@@ -55,7 +55,7 @@ _{{domxref("EventTarget")}} インターフェイスから継承しているメ�
 - {{domxref("BaseAudioContext.createGain()")}}
   - : {{domxref("GainNode")}} を作成します。これはオーディオグラフの全体的な音量を制御するために使用することができます。
 - {{domxref("BaseAudioContext.createIIRFilter()")}}
-  - : {{domxref("IIRFilterNode")}} を作成します。これは複数の異なる一般的なフィルター種別として設定可能な二次フィルタを表します。
+  - : {{domxref("IIRFilterNode")}} を作成します。これは複数の異なる一般的なフィルター種別として設定可能な二次フィルターを表します。
 - {{domxref("BaseAudioContext.createOscillator()")}}
   - : {{domxref("OscillatorNode")}} を作成します。これは周期的な波形を表すソースです。基本的には音程を生成します。
 - {{domxref("BaseAudioContext.createPanner()")}}

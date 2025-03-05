@@ -64,7 +64,8 @@ if (supportsPopover()) {
 }
 ```
 
-> **Note :** Un élément <i lang="en">popover</i> est masqué par défaut, mais si l'API n'est pas prise en charge, il s'affichera de façon classique.
+> [!NOTE]
+> Un élément <i lang="en">popover</i> est masqué par défaut, mais si l'API n'est pas prise en charge, il s'affichera de façon classique.
 
 Vous pouvez essayer l'exemple ci-après. Affichez et masquez le <i lang="en">popover</i> en activant le bouton. Le <i lang="en">popover</i> `"auto"` peut également être fermé facilement («&nbsp;<i lang="en">light-dismissed</i>&nbsp;») en cliquant en dehors des limites du <i lang="en">popover</i>.
 

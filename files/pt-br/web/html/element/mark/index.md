@@ -14,15 +14,15 @@ O **Elemento HMTL `<mark>` **representa um trecho de destaque em um texto, por e
 > - Não use o o elemento `<mark>` para destaque de sintaxe; uso o elemento {{HTMLElement("span")}} para essa finalidade.
 > - Não confunda o elemento `<mark>` com o elemento {{HTMLElement("strong")}} . O elemento {{HTMLElement("strong")}} é usado para denotar trechos de importância especial, quando o elemento `<mark>` é utilizado para denotar trechos de relevância especial.
 
-- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Conteúdo de Fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), palpable content.
-- _Conteúdo Permitido_ [Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
-- _Omissão de Tag_ {{no_tag_omission}}
-- _Elementos parent permitidos_ Qualquer elemento que aceite [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdo de Fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), palpable content.
+- _Conteúdo Permitido_ [Phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
+- _Omissão de Tag_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
+- _Elementos parent permitidos_ Qualquer elemento que aceite [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
 - _DOM interface_ {{domxref("HTMLElement")}}
 
 ## Atributos
 
-Este elemento inclue apenas [atributos Globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclue apenas [atributos Globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 ## Exemplo
 

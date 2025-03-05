@@ -464,7 +464,8 @@ l10n:
 
 CSS Grid 仕様書では、{{cssxref("column-gap")}} と {{cssxref("row-gap")}} プロパティを使って、列と行のトラックの間に溝を追加する機能があります。これらは、段組みレイアウトにおける {{cssxref("column-gap")}} プロパティと同様の働きをする間隔を指定します。
 
-> **メモ:** グリッドがブラウザーに初めて搭載されたとき、{{cssxref("column-gap")}}、{{cssxref("row-gap")}}、{{cssxref("gap")}} プロパティには、それぞれ `grid-` という接頭辞が付けられ、`grid-column-gap`、`grid-row-gap`、`grid-gap` となっていました。
+> [!NOTE]
+> グリッドがブラウザーに初めて搭載されたとき、{{cssxref("column-gap")}}、{{cssxref("row-gap")}}、{{cssxref("gap")}} プロパティには、それぞれ `grid-` という接頭辞が付けられ、`grid-column-gap`、`grid-row-gap`、`grid-gap` となっていました。
 >
 > ブラウザーのレンダリングエンジンはこの接頭辞を削除するように更新されていますが、接頭辞付きのバージョンは別名として維持されるため、安全に使用することができます。
 

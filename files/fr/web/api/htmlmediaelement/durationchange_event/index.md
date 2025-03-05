@@ -10,7 +10,7 @@ L'évènement **`durationchange`** est déclenché quand l'attribut de durée es
 ## Informations générales
 
 - Spécification
-  - : [HTML5 media](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-durationchange)
+  - : [HTML5 media](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-durationchange)
 - Interface
   - : {{domxref("Event")}}
 - Propagation

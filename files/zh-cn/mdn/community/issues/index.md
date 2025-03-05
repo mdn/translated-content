@@ -3,8 +3,6 @@ title: 创建和解决议题指南
 slug: MDN/Community/Issues
 ---
 
-{{MDNSidebar}}
-
 作为贡献者，你可以[报告](#报告议题指南)和[解决](#解决议题指南)议题（issue）。
 
 在你报告议题后，议题会被分类。议题[分类](#议题分类指南)通常由被指定为维护者或所有者的人员完成。
@@ -31,7 +29,7 @@ slug: MDN/Community/Issues
 
 ### 创建议题前
 
-如果你认为你发现了 MDN Web 文档内容或网站界面外观的错误，请搜索[相关的仓库](/zh-CN/docs/MDN/Community/Contributing/Our_repositories)中当前未解决的议题，确保没有其他人报告该议题。
+如果你认为你发现了 MDN Web 文档内容或网站界面外观的错误，请搜索[相关的仓库](/zh-CN/docs/MDN/Community/Our_repositories)中当前未解决的议题，确保没有其他人报告该议题。
 
 ### 报告议题
 
@@ -96,7 +94,8 @@ CSS 属性页面模板在[此处](/zh-CN/docs/MDN/Writing_guidelines/Page_struct
 
 1. **查找议题**：如果你想要做出贡献，请搜索带有 [`good first issue`、`help wanted`](#设置其他标签) 或 [`p3`](#设置优先级标签) 标签的议题。大多数仓库都有带有这些标签的议题。你可以浏览并选择适合你的技能的议题。另一个寻找议题的有用方法是 [MDN 贡献者任务板](https://github.com/orgs/mdn/projects/25)。该项目的视图列出了多个仓库中的未解决的议题。你可以根据你感兴趣的主题（`label` 列）来筛选列表。请参阅议题分类时应用的一些[标签](#设置其他标签)的描述。
 
-   > **备注：** 若议题带有 `needs triage` 标签，表明 MDN Web 文档的核心团队尚未审核该议题，你不应开始处理该议题。
+   > [!NOTE]
+   > 若议题带有 `needs triage` 标签，表明 MDN Web 文档的核心团队尚未审核该议题，你不应开始处理该议题。
 
 2. **将议题分配给自己**：在找到你想要解决的议题后，请确保该议题尚未分配给其他人。创建评论，说明你想要解决该议题，并且如果你能够解决该议题，请[将议题分配给你自己](https://docs.github.com/zh/issues/tracking-your-work-with-issues/assigning-issues-and-pull-requests-to-other-github-users#assigning-an-individual-issue-or-pull-request)。
 
@@ -120,7 +119,8 @@ CSS 属性页面模板在[此处](/zh-CN/docs/MDN/Writing_guidelines/Page_struct
 
 对于所有其他类型的错误，请先[创建议题](#报告议题指南)。添加有关你打算解决该议题的意图的评论，如果可能，请描述你提议的解决方案或解决议题的步骤。等待议题被分类，以便 MDN Web 文档团队可以验证该议题是否正当，并批准你提议的解决方案。
 
-> **备注：** 如果你在对问题被分类前创建了拉取请求，那么如果链接的问题被视为无效或解决方案与 MDN Web 文档团队期望的不符，你的时间和精力可能会被浪费。请在议题被分类后，将议题分配给你自己。
+> [!NOTE]
+> 如果你在对问题被分类前创建了拉取请求，那么如果链接的问题被视为无效或解决方案与 MDN Web 文档团队期望的不符，你的时间和精力可能会被浪费。请在议题被分类后，将议题分配给你自己。
 
 遵循[解决议题的指南](#解决议题指南)，尝试通过更新适当的源内容来解决问题，例如：
 
@@ -214,4 +214,5 @@ CSS 属性页面模板在[此处](/zh-CN/docs/MDN/Writing_guidelines/Page_struct
 - `document not written`：如果议题涉及尚未编写的必要文档（通常是因为有链接指向该文档），请设置此标签。
 - `needs content update`：如果另一个仓库中的议题的修复需要在 `mdn/content` 仓库中进行等效的修复，请设置此标签。
 
-  > **备注：** 在分类过程完成后，请删除 `needs triage` 标签。
+  > [!NOTE]
+  > 在分类过程完成后，请删除 `needs triage` 标签。

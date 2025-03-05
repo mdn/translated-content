@@ -71,5 +71,5 @@ Les pistes créées dans la grille implicite ont une taille définie automatique
 
 ### En lire plus
 
-- Guide des grilles CSS : [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)
+- Guide des grilles CSS : [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - [Définition des pistes de grille dans la spécification CSS Grid Layout](https://drafts.csswg.org/css-grid/#grid-track-concept)

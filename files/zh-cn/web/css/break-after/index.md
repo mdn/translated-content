@@ -5,7 +5,7 @@ slug: Web/CSS/break-after
 
 {{CSSRef}}
 
-**`break-after`** [CSS](/zh-CN/docs/CSS) 属性描述在生成的盒子之后的页面，列或区域中断行为（换句话说，如何以及是否中断）。如果没有生成的盒子，则该属性将被忽略。
+**`break-after`** [CSS](/zh-CN/docs/Web/CSS) 属性描述在生成的盒子之后的页面，列或区域中断行为（换句话说，如何以及是否中断）。如果没有生成的盒子，则该属性将被忽略。
 
 ```css
 /* Generic break values */
@@ -109,7 +109,8 @@ For compatibility reasons, the legacy {{cssxref("page-break-after")}} property s
 | `avoid`          | `avoid`     |
 | `always`         | `page`      |
 
-> **备注：** The `always` value of `page-break-*` was implemented by browsers as a page break, and not as a column break. Therefore the aliasing is to `page`, rather than the `always` value in the Level 4 spec.
+> [!NOTE]
+> The `always` value of `page-break-*` was implemented by browsers as a page break, and not as a column break. Therefore the aliasing is to `page`, rather than the `always` value in the Level 4 spec.
 
 ## 规范
 

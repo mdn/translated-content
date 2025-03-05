@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Statements/for...in
 
 **`for...in` 문**은 상속된 열거 가능한 속성들을 포함하여 객체에서 문자열로 키가 지정된 모든 열거 가능한 속성에 대해 반복합니다. ([Symbol](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol)로 키가 지정된 속성은 무시합니다.)
 
-{{EmbedInteractiveExample("pages/js/statement-forin.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For...In")}}
+
+```js interactive-example
+const object = { a: 1, b: 2, c: 3 };
+
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
+}
+
+// Expected output:
+// "a: 1"
+// "b: 2"
+// "c: 3"
+```
 
 ## 문법
 
@@ -117,7 +130,7 @@ alert(show_own_props(o, "o")); /* alerts: o.color = red */
 Prior to Firefox 40, it was possible to use an initializer expression
 (`i=0`) in a `for...in` loop:
 
-```js example-bad
+```js-nolint example-bad
 const obj = { a: 1, b: 2, c: 3 };
 for (var i = 0 in obj) {
   console.log(obj[i]);
@@ -137,7 +150,7 @@ investigating whether to remove the nonstandard behavior as well.
 - {{jsxref("Statements/for...of", "for...of")}} – a similar statement that iterates
   over the property _values_
 - {{jsxref("Statements/for", "for")}}
-- [Iterators and Generator functions](/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators) (usable with `for...of` syntax)
+- [Iterators and Generator functions](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators) (usable with `for...of` syntax)
 - [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Object.hasOwn()")}}

@@ -7,15 +7,63 @@ slug: Web/HTML/Element/ins
 
 HTML-элемент **`<ins>`** представляет диапазон текста, который был добавлен в документ.
 
-{{EmbedInteractiveExample("pages/tabbed/ins.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;ins&gt;", "tabbed-standard")}}
 
-| [Содержимое категорий](/ru/docs/HTML/Content_categories) | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content) or [содержимое потока](/ru/docs/HTML/Content_categories#Flow_content). |
-| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                    | [Прозрачный](/ru/docs/HTML/Content_categories#Transparent_content_model).                                                                    |
-| Пропуск тегов                                            | {{no_tag_omission}}                                                                                                                          |
-| Допустимые родители                                      | Любой элемент, который принимает [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                      |
-| Допустимые ARIA-роли                                     | Любые                                                                                                                                        |
-| DOM-интерфейс                                            | {{domxref("HTMLModElement")}}                                                                                                                |
+```html interactive-example
+<p>&ldquo;You're late!&rdquo;</p>
+<del>
+  <p>&ldquo;I apologize for the delay.&rdquo;</p>
+</del>
+<ins cite="../howtobeawizard.html" datetime="2018-05">
+  <p>&ldquo;A wizard is never late &hellip;&rdquo;</p>
+</ins>
+```
+
+```css interactive-example
+del,
+ins {
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+
+del {
+  background-color: #fbb;
+}
+
+ins {
+  background-color: #d4fcbc;
+}
+
+del::before,
+ins::before {
+  position: absolute;
+  left: 0.5rem;
+  font-family: monospace;
+}
+
+del::before {
+  content: "−";
+}
+
+ins::before {
+  content: "+";
+}
+
+p {
+  margin: 0 1.8rem 0;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+}
+```
+
+| [Содержимое категорий](/ru/docs/Web/HTML/Content_categories) | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content) or [содержимое потока](/ru/docs/Web/HTML/Content_categories#flow_content). |
+| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                        | [Прозрачный](/ru/docs/Web/HTML/Content_categories#transparent_content_model).                                                                        |
+| Пропуск тегов                                                | Нет, открывающий и закрывающий теги обязательны.                                                                                                     |
+| Допустимые родители                                          | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                          |
+| Допустимые ARIA-роли                                         | Любые                                                                                                                                                |
+| DOM-интерфейс                                                | {{domxref("HTMLModElement")}}                                                                                                                        |
 
 ## Атрибуты
 

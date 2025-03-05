@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/encodeURI
 
 **`encodeURI()`** 함수는 {{glossary("URI")}}의 특정한 문자를 UTF-8로 인코딩해 하나, 둘, 셋, 혹은 네 개의 연속된 이스케이프 문자로 나타냅니다. (두 개의 대리 문자로 이루어진 문자만 이스케이프 문자 네 개로 변환됩니다.)
 
-{{EmbedInteractiveExample("pages/js/globalprops-encodeuri.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - encodeURI()")}}
+
+```js interactive-example
+const uri = "https://mozilla.org/?x=шеллы";
+const encoded = encodeURI(uri);
+console.log(encoded);
+// Expected output: "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+
+try {
+  console.log(decodeURI(encoded));
+  // Expected output: "https://mozilla.org/?x=шеллы"
+} catch (e) {
+  // Catches a malformed URI
+  console.error(e);
+}
+```
 
 ## 구문
 
@@ -73,7 +88,7 @@ console.log(encodeURIComponent("\uD800"));
 console.log(encodeURIComponent("\uDFFF"));
 ```
 
-또한, URL의 보다 최신 RFC인 [RFC3986](http://tools.ietf.org/html/rfc3986)을 따르고자 한다면, 대괄호가 {{glossary("IPv6")}} 지원을 위해 추가로 예약됨에 따라 `encodeURI()`가 인코딩하지 않으므로 URL을 생성할 때 주의해야 합니다. 다음 예시 코드가 도움이 될 수도 있습니다.
+또한, URL의 보다 최신 RFC인 [RFC3986](https://tools.ietf.org/html/rfc3986)을 따르고자 한다면, 대괄호가 {{glossary("IPv6")}} 지원을 위해 추가로 예약됨에 따라 `encodeURI()`가 인코딩하지 않으므로 URL을 생성할 때 주의해야 합니다. 다음 예시 코드가 도움이 될 수도 있습니다.
 
 ```js
 function fixedEncodeURI(str) {

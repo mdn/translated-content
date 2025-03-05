@@ -1,8 +1,9 @@
 ---
 title: "HTMLElement: inputMode プロパティ"
+short-title: inputMode
 slug: Web/API/HTMLElement/inputMode
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 270351317fdaa57ba9123a19aa281e9e40bb0baa
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -29,7 +30,7 @@ l10n:
     端末によって、マイナスキーがある場合とない場合があります。
 - `search`
   - : 検索入力に最適化された仮想キーボードです。
-    例えば、[リターン/送信キー](https://html.spec.whatwg.org/dev/interaction.html#input-modalities:-the-enterkeyhint-attribute)は「検索」と表示されているかもしれません。
+    例えば、[リターン/送信キー](https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute)には「検索」と表示されているかもしれません。
 - `tel`
   - : 電話機のキーパッド入力で、0 ～ 9 の数字、アスタリスク (<kbd>\*</kbd>)、ナンバー (<kbd>#</kbd>) キーを含めるために使用します。
 - `text`

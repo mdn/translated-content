@@ -5,14 +5,14 @@ slug: Web/HTML/Attributes/crossorigin
 
 {{HTMLSidebar}}
 
-В HTML5 некоторые теги поддерживают [CORS](/ru/docs/HTTP/Access_control_CORS), например {{ HTMLElement("img") }} или {{ HTMLElement("video") }}, имеют атрибут `crossorigin` (`crossOrigin` свойство), которое позволяет настроить CORS запросы для данных получаемых элементом. Эти атрибуты могут иметь следующие значения:
+В HTML5 некоторые теги поддерживают [CORS](/ru/docs/Web/HTTP/CORS), например {{ HTMLElement("img") }} или {{ HTMLElement("video") }}, имеют атрибут `crossorigin` (`crossOrigin` свойство), которое позволяет настроить CORS запросы для данных получаемых элементом. Эти атрибуты могут иметь следующие значения:
 
 | Ключевое слово    | Описание                                                           |
 | ----------------- | ------------------------------------------------------------------ |
 | `anonymous`       | CORS запросы от этого элемента не будут передавать учётные данные. |
 | `use-credentials` | CORS запросы от этого элемента будут передавать учётные данные.    |
 
-По умолчанию (если значение атрибута не задано), CORS не используется вообще. Ключевое слово "anonymous" означает что не будет обмена **учётных данных**(user credentials) через cookies, client-side SSL сертификаты или HTTP аутентификацию как описано в [Секции Терминология CORS спецификации](http://www.w3.org/TR/cors/#user-credentials).
+По умолчанию (если значение атрибута не задано), CORS не используется вообще. Ключевое слово "anonymous" означает что не будет обмена **учётных данных**(user credentials) через cookies, client-side SSL сертификаты или HTTP аутентификацию как описано в [Секции Терминология CORS спецификации](https://www.w3.org/TR/cors/#user-credentials).
 
 Неправильное ключевое слово или пустая строка, будет обработано как `anonymous`.
 
@@ -36,4 +36,4 @@ slug: Web/HTML/Attributes/crossorigin
 
 ## Смотрите также
 
-- [HTTP access control](/En/HTTP_access_control)
+- [HTTP access control](/en-US/HTTP_access_control)

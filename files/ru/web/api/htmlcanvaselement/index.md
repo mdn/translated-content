@@ -27,7 +27,7 @@ _Наследуются от родителя,_ _{{domxref("HTMLElement")}}._
 - {{domxref("HTMLCanvasElement.captureStream()")}} {{experimental_inline}}
   - : Возвращает {{domxref("CanvasCaptureMediaStream")}} — поток видео, которое захватывается в реальном времени с поверхности холста.
 - {{domxref("HTMLCanvasElement.getContext()")}}
-  - : Возвращает связный с холстом контекст, который позволяет рисовать на холсте. Если context ID не поддерживается, возвращает null. Вызов getContext с параметром `"2d"` возвращает объект {{domxref("CanvasRenderingContext2D")}}, тогда так вызов с параметром `"experimental-webgl"` (или `"webgl"`) возвращает объект {{domxref("WebGLRenderingContext")}}. Этот контекст поддерживается только в браузерах, в которых реализован [WebGL](/ru/docs/Web/WebGL).
+  - : Возвращает связный с холстом контекст, который позволяет рисовать на холсте. Если context ID не поддерживается, возвращает null. Вызов getContext с параметром `"2d"` возвращает объект {{domxref("CanvasRenderingContext2D")}}, тогда так вызов с параметром `"experimental-webgl"` (или `"webgl"`) возвращает объект {{domxref("WebGLRenderingContext")}}. Этот контекст поддерживается только в браузерах, в которых реализован [WebGL](/ru/docs/Web/API/WebGL_API).
 - {{domxref("HTMLCanvasElement.toDataURL()")}}
   - : Возвращает data-URL, который содержит представление картинки в формате. указанном в параметре `type` (по умолчанию `png`). Возвращаемая картинка имеет разрешение 96dpi.
 - {{domxref("HTMLCanvasElement.toBlob()")}}

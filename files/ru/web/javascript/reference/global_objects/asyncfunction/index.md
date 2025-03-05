@@ -33,7 +33,8 @@ _Также наследует свойства своего родителя {{
 - `AsyncFunction.prototype[@@toStringTag]`
   - : Начальным значением свойства [`@@toStringTag`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) является строка `"AsyncFunction"`. Это свойство используется в {{jsxref("Object.prototype.toString()")}}.
 
-> **Примечание:** Экземпляры `AsyncFunction` не имею свойства [`prototype`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype).
+> [!NOTE]
+> Экземпляры `AsyncFunction` не имею свойства [`prototype`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype).
 
 ## Методы экземпляра
 

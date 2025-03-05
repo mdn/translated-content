@@ -46,5 +46,5 @@ _このインターフェイスは、親である {{DOMxRef("UIEvent")}}、{{DOM
 
 ## 関連情報
 
-- [`beforeinput` イベント](/ja/docs/Web/API/HTMLElement/beforeinput_event)
-- [`input` イベント](/ja/docs/Web/API/HTMLElement/input_event)
+- [`beforeinput` イベント](/ja/docs/Web/API/Element/beforeinput_event)
+- [`input` イベント](/ja/docs/Web/API/Element/input_event)

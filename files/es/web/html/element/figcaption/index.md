@@ -7,7 +7,40 @@ slug: Web/HTML/Element/figcaption
 
 El elemento **HTML `<figcaption>`** representa un subtítulo o leyenda asociado al contenido del elemento padre {{HTMLElement("figure")}}, pudiendo ser colocado como primer o último hijo. Es importante destacar que el elemento **`<figcaption>`** es opcional.
 
-{{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;figcaption&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<figure>
+  <img
+    src="/shared-assets/images/examples/elephant.jpg"
+    alt="Elephant at sunset" />
+  <figcaption>An elephant at sunset</figcaption>
+</figure>
+```
+
+```css interactive-example
+figure {
+  border: thin #c0c0c0 solid;
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  max-width: 220px;
+  margin: auto;
+}
+
+img {
+  max-width: 220px;
+  max-height: 150px;
+}
+
+figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -33,7 +66,7 @@ El elemento **HTML `<figcaption>`** representa un subtítulo o leyenda asociado 
     </tr>
     <tr>
       <th scope="row">Omisión de etiqueta</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th scope="row">Elementos padre permitidos</th>
@@ -57,7 +90,7 @@ El elemento **HTML `<figcaption>`** representa un subtítulo o leyenda asociado 
 
 ## Atributos
 
-Este elemento sólo incluye los [global attributes](/es/docs/HTML/Global_attributes).
+Este elemento sólo incluye los [global attributes](/es/docs/Web/HTML/Global_attributes).
 
 ## Ejemplos
 

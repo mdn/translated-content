@@ -57,7 +57,8 @@ _从其父接口 {{domxref("BaseAudioContext")}} 继承方法。_
 
 在此刻，我们创建了一个另外的音频上下文，在它里面创建了一个 {{domxref("AudioBufferSourceNode")}}，并且设置它的 buffer 为之前生成的 Promise 中的 `AudioBuffer`，这样它就可以作为简单标准音频图来播放了。
 
-> **备注：** 你可以[在线运行完整示例](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/)，或[查看源代码](https://github.com/mdn/webaudio-examples/blob/main/offline-audio-context-promise/)。
+> [!NOTE]
+> 你可以[在线运行完整示例](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/)，或[查看源代码](https://github.com/mdn/webaudio-examples/blob/main/offline-audio-context-promise/)。
 
 ```js
 // 定义一个在线或者离线的音频上下文

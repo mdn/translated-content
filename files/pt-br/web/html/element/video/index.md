@@ -7,7 +7,21 @@ slug: Web/HTML/Element/video
 
 O elemento [HTML](/pt-BR/docs/Web/HTML) **`<video>`** incorpora um reprodutor de mídia que suporta a reprodução de vídeo no documento. Você também pode usar `<video>` para conteúdo de áudio, mas o elemento {{HTMLElement("audio")}} pode proporcionar uma experiência de usuário mais adequada.
 
-{{EmbedInteractiveExample("pages/tabbed/video.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;video&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video controls width="250">
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+```
 
 O exemplo acima mostra um uso simples do elemento `<video>`. Semelhante ao elemento {{htmlelement("img")}}, incluímos o caminho da mídia que queremos exibir dentro do atributo `src`; também podemos incluir outros atributos para especificar informações, como largura e altura do vídeo, se queremos que ele seja reproduzido automaticamente e em loop, se queremos mostrar os controles de vídeo padrão do navegador etc.
 
@@ -21,7 +35,8 @@ Como qualquer elemento HTML, este elemento suporta os [atributos globais](/pt-BR
 
   - : Um atributo Booleano; se especificado, o video vai ser executado assim que possível sem precisar de carregar todo o arquivo.
 
-    > **Nota:** Sites que reproduzem automaticamente áudio (ou vídeos com uma faixa de áudio) podem proporcionar uma experiência desagradável para os usuários, portanto, devem ser evitados sempre que possível. Se você precisar oferecer a funcionalidade de reprodução automática, é recomendável torná-la opcional (exigindo que o usuário a habilite especificamente). No entanto, isso pode ser útil ao criar elementos de mídia cuja fonte será definida posteriormente, sob controle do usuário. Consulte nosso [guia sobre reprodução automática](/pt-BR/docs/Web/Media/Autoplay_guide) para obter informações adicionais sobre como usar a reprodução automática corretamente.
+    > [!NOTE]
+    > Sites que reproduzem automaticamente áudio (ou vídeos com uma faixa de áudio) podem proporcionar uma experiência desagradável para os usuários, portanto, devem ser evitados sempre que possível. Se você precisar oferecer a funcionalidade de reprodução automática, é recomendável torná-la opcional (exigindo que o usuário a habilite especificamente). No entanto, isso pode ser útil ao criar elementos de mídia cuja fonte será definida posteriormente, sob controle do usuário. Consulte nosso [guia sobre reprodução automática](/pt-BR/docs/Web/Media/Autoplay_guide) para obter informações adicionais sobre como usar a reprodução automática corretamente.
 
     Para desativar a reprodução automática, `autoplay="false"` não vai funcionar; o vídeo será reproduzido automaticamente se o atributo estiver presente na tag `<video>`. Para remover a reprodução automática, o atributo deve ser removido por completo.
 
@@ -77,7 +92,9 @@ Como qualquer elemento HTML, este elemento suporta os [atributos globais](/pt-BR
 
     Se não definido, seu valor padrão será definido pelo navegador (isto é, cada navegador pode escolher seu valor padrão), embora a especificação recomende que seja definido para o `metadata`.
 
-    > **Nota:**
+    > [!NOTE]
+    >
+    > >
     >
     > - O atributo `autoplay` tem precedência sobre o `preload`, pois se é necessário executar o vídeo automaticamente, o navegador obviamente o baixará. Definindo ambos `autoplay` e `preload` é permitido pela especificação.
     > - O navegador não é forçado pela especifição a seguir o valor desse atributo; é apenas uma sugestão.
@@ -542,4 +559,4 @@ As legendas não devem obstruir o assunto principal do vídeo. Elas podem ser po
 - {{htmlelement("audio")}}
 - [Usando áudio e vídeo em HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [Manipulando vídeo usando canvas](/pt-BR/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-- [Configurando servidores para mídia Ogg](/pt-BR/docs/Web/HTTP/Configuring_servers_for_Ogg_media)
+- [Configurando servidores para mídia Ogg](/pt-BR/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media)

@@ -7,7 +7,8 @@ slug: Web/API/AudioWorkletProcessor/port
 
 {{domxref("AudioWorkletProcessor")}} 인터페이스의 읽기 전용 **`port`** 속성은 연관된 {{domxref("MessagePort")}}를 반환합니다. 이것은 프로세서와 프로세서가 속한 {{domxref("AudioWorkletNode")}} 사이에서 소통하기 위해 사용될 수 있습니다.
 
-> **참고:** 채널의 다른 쪽 끝에 있는 포트는
+> [!NOTE]
+> 채널의 다른 쪽 끝에 있는 포트는
 > 노드의 {{domxref("AudioWorkletNode.port", "port")}} 속성 아래에서 사용 가능합니다.
 
 ## 구문

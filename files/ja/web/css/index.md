@@ -2,71 +2,44 @@
 title: "CSS: カスケーディングスタイルシート"
 slug: Web/CSS
 l10n:
-  sourceCommit: b85bf9fcc2c0062a765d104799d7d45d9e9b13bb
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
 
-**カスケーディングスタイルシート** (Cascading Style Sheets、**CSS**) は[スタイルシート](/ja/docs/Web/API/StyleSheet)言語であり、[HTML](/ja/docs/Web/HTML) や [XML](/ja/docs/Web/XML/XML_introduction) (方言である [SVG](/ja/docs/Web/SVG)、[MathML](/ja/docs/Web/MathML)、{{Glossary("XHTML")}} などを含む) で記述された文書の体裁や見栄えを表現するために用いられます。 CSS は、要素が画面上で (あるいは紙や音声といった別のメディア上で) どのように表現されるのかを定義します。
+**カスケーディングスタイルシート** (Cascading Style Sheets、**CSS**) は[スタイルシート](/ja/docs/Web/API/StyleSheet)言語であり、[HTML](/ja/docs/Web/HTML) や [XML](/ja/docs/Web/XML/XML_introduction)（派生言語である [SVG](/ja/docs/Web/SVG)、[MathML](/ja/docs/Web/MathML)、{{Glossary("XHTML")}} などを含む）で記述された文書の体裁や見栄えを表現するために用いられます。CSS は、要素が画面上で (あるいは紙や音声といった別のメディア上で) どのように表現されるのかを定義します。
 
-CSS は**オープンウェブ**の核となる言語に含まれており、[W3C 標準仕様](https://www.w3.org/Style/CSS/#specs)によってウェブブラウザー間で標準化されています。以前は CSS 仕様書の様々な部分が同時に開発されており、最新勧告の版数付けができていました。皆さんも CSS1、CSS2.1、また CSS3 についても聞いたことがあるでしょう。CSS3 や CSS4 にはなりません。すべてバージョン番号のない CSS になりました。
+CSS は**オープンウェブ**の核となる言語に含まれており、[W3C 標準仕様](https://www.w3.org/Style/CSS/#specs)によってウェブブラウザー間で標準化されています。以前は CSS 仕様書の様々な部分が同時に開発されており、最新勧告の版数付けができていました。皆さんも CSS1、CSS2.1、また CSS3 についても聞いたことがあるでしょう。CSS3 や CSS4 にはなりません。すべて単なる "CSS" と、バージョン番号を持つ個々の CSS モジュールとなりました。
 
 CSS 2.1 以降、仕様の範囲が大幅に拡大し、CSS モジュールごとに進捗状況が大きく異なるようになったため、[モジュールごとに勧告を開発して公開する](https://www.w3.org/Style/CSS/current-work)ことがより効果的になりました。W3C では、CSS 仕様のバージョン管理の代わりに、[最新の CSS 仕様の安定した状態](https://www.w3.org/TR/css/)のスナップショットと独立したモジュールの進捗を定期的に取得するようになりました。CSS のモジュールは、[CSS Color Module Level 5](https://drafts.csswg.org/css-color-5/) のように、バージョン番号またはレベルを持つようになりました。
 
-## 主なリソース
+## 初心者向けチュートリアル
 
-- CSS 入門
-  - : ウェブ開発が初めての人は、[CSS の基本](/ja/docs/Learn/Getting_started_with_the_web/CSS_basics)の記事を読んで、CSS とは何か、どのように使用するかを学習しましょう。
-- CSS チュートリアル
-  - : [CSS 学習領域](/ja/docs/Learn/CSS)は、初心者から中級者になるための、すべての基本事項を網羅した豊富なコンテンツがあります。
-- CSS リファレンス
-  - : CSS のすべてのプロパティや概念について記述された、熟練のウェブ開発者向けの[包括的な CSS リファレンス](/ja/docs/Web/CSS/Reference)です。
-
-> **注目:**
->
-> #### フロントエンドのウェブ開発者を目指している方へ
->
-> ゴールに向かって頑張るために必要な情報をまとめたコースをご用意しました。
->
-> [**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
-
-## チュートリアル
-
-[CSS 学習領域](/ja/docs/Learn/CSS) は基礎から CSS を教える複数のモジュールにスポットを当てています — 事前の知識は必要ありません。
-
-- [CSS の第一歩](/ja/docs/Learn/CSS/First_steps)
-  - : CSS (Cascading Style Sheets) はウェブページをスタイル付けしたりレイアウトしたりするのに使われます。例えば、文字、色、大きさを変えたり、コンテンツに余白を設けたり、複数列に分けたり、あるいはアニメーションを加えたりなど様々な装飾機能があります。このモジュールでは CSS を習得するために、どう働くかの基本とともに、構文のありかたと HTML にスタイル付けを加えることを簡単な始め方を提供します。
-- [CSS の構成要素](/ja/docs/Learn/CSS/Building_blocks)
-
-  - : このモジュールは [CSS の第一歩](/ja/docs/Learn/CSS/First_steps)が終わったところを引き継いでいます。言語とその構文に慣れてきて、基本的な使用経験を積んだところで、もう少し深く掘り下げてみましょう。このモジュールでは、カスケードと継承、利用可能なすべてのセレクターのタイプ、単位、寸法の調整、背景や境界のスタイル付け、デバッグなど多くのことを見ていきます。
-
-    ここでの目的は、[テキストの装飾](/ja/docs/Learn/CSS/Styling_text)や[CSS レイアウト](/ja/docs/Learn/CSS/CSS_layout)などのより具体的な分野に進む前に、適切な CSS を書くための手法を知り、すべての重要な理論を理解できるようになることです。
-
-- [CSS テキスト装飾](/ja/docs/Learn/CSS/Styling_text)
-  - : CSS 言語の基本を習得したら、次に取り組むべき CSS のトピックはテキストの装飾です — これは、CSS で行う最も一般的なことの一つです。ここでは、フォント、太字、イタリック体、ラインと文字の間隔、ドロップシャドウやその他のテキスト機能の設定を含む、テキストの装飾の基本を見ていきます。あなたのページにカスタムフォントを適用し、リストとリンクを装飾するところを見ることによって、このモジュールを締めくくります。
-- [CSS レイアウト](/ja/docs/Learn/CSS/CSS_layout)
-  - : 現段階で、すでに CSS の基本、テキストの装飾方法、コンテンツを格納するボックスの装飾方法と操作方法を見てきました。今度は、ビューポートからの相対でボックスを適切な場所に配置する方法、および互いの配置方法を検討します。必要な前提知識をカバーしているので、さまざまな表示の設定、フレックスボックス・CSS グリッド・位置指定などの最新のレイアウトツール、そしてまだ知っておきたいと思うかもしれない過去のテクニックのいくつかを見ながら、CSS レイアウトについて深く掘り下げることができます。
-- [CSS を使ってよくある問題を解決する](/ja/docs/Learn/CSS/Howto)
-  - : このモジュールは、ウェブページを作成する際の一般的な問題を解決するための CSS の使用方法を説明するコンテンツの節へのリンクを提供しています。
+- [初めてのウェブサイト: コンテンツのスタイル設定](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
+  - : この記事では、 CSS とは何か、またどのように使用されているかについて、ウェブ開発に完全に新しい人々を対象に、簡単な紹介を提供しています。
+- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)
+  - : [ウェブ開発の学習](/ja/docs/Learn_web_development)の部の CSS 基礎モジュールでは、 CSS の基礎を一から学べます。
+- [CSS テキスト装飾](/ja/docs/Learn_web_development/Core/Text_styling)
+  - : ここでは、フォント、太字、イタリック体、ラインと文字の間隔、ドロップシャドウやその他のテキスト機能の設定を含む、テキストの装飾の基本を見ていきます。ページにカスタムフォントを適用し、リストとリンクを装飾するところを見るところまでで、このモジュールを締めくくります。
+- [CSS レイアウト](/ja/docs/Learn_web_development/Core/CSS_layout)
+  - : これで、ボックスを互いに、そしてブラウザーのビューポートに対して正しくレイアウトする方法を検討する時が来ました。このモジュールでは、浮動ボックス、位置指定、他にも最新のレイアウトツール、さまざまな端末、画面サイズ、解像度に適応するレスポンシブデザインの構築について検討します。
 
 ## リファレンス
 
-- [CSS リファレンス](/ja/docs/Web/CSS/Reference): CSS のすべてのプロパティや概念について記述された、熟練のウェブ開発者向けの CSS リファレンスです。
-- CSS の主要な概念:
+[CSS リファレンス](/ja/docs/Web/CSS/Reference)は、経験豊富なウェブ開発者向けの包括的なリファレンスであり、CSS のすべてのプロパティと概念を記述しています。
 
-  - [言語の構文と書式](/ja/docs/Web/CSS/Syntax)
-  - [詳細度](/ja/docs/Web/CSS/Specificity)と[継承](/ja/docs/Web/CSS/Inheritance)と[カスケード](/ja/docs/Web/CSS/Cascade)
-  - [CSS 単位と値](/ja/docs/Web/CSS/CSS_Values_and_Units)および[関数記法](/ja/docs/Web/CSS/CSS_Functions)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)と[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - [包含ブロック](/ja/docs/Web/CSS/Containing_block)
-  - [重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)と[ブロック整形](/ja/docs/Web/Guide/CSS/Block_formatting_context)コンテキスト
-  - [初期値](/ja/docs/Web/CSS/initial_value)、[計算値](/ja/docs/Web/CSS/computed_value)、[使用値](/ja/docs/Web/CSS/used_value)、[実効値](/ja/docs/Web/CSS/actual_value)
-  - [CSS 一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
-  - [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)
-  - [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)
-  - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
-  - [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
-  - [アニメーション](/ja/docs/Web/CSS/animation)
+- [言語の構文と書式](/ja/docs/Web/CSS/Syntax)
+- [詳細度](/ja/docs/Web/CSS/Specificity)と[継承](/ja/docs/Web/CSS/Inheritance)と[カスケード](/ja/docs/Web/CSS/Cascade)
+- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)、[擬似要素](/ja/docs/Web/CSS/CSS_pseudo-elements)、[入れ子](/ja/docs/Web/CSS/CSS_nesting)、[スコープ化](/ja/docs/Web/CSS/CSS_scoping)、[シャドウパーツ](/ja/docs/Web/CSS/CSS_shadow_parts)
+- [CSS アットルール](/ja/docs/Web/CSS/At-rule)（[メディア](/ja/docs/Web/CSS/CSS_media_queries)や[コンテナー](/ja/docs/Web/CSS/CSS_containment)クエリーを含む）
+- [CSS 単位と値](/ja/docs/Web/CSS/CSS_Values_and_Units)および[関数記法](/ja/docs/Web/CSS/CSS_Functions)
+- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)と[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [包含ブロック](/ja/docs/Web/CSS/Containing_block)
+- [重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)と[ブロック整形](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)コンテキスト
+- [初期値](/ja/docs/Web/CSS/initial_value)、[計算値](/ja/docs/Web/CSS/computed_value)、[使用値](/ja/docs/Web/CSS/used_value)、[実効値](/ja/docs/Web/CSS/actual_value)
+- [CSS 一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
+- [CSS フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)、[段組み](/ja/docs/Web/CSS/CSS_multicol_layout)、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)レイアウト
+- [アニメーション](/ja/docs/Web/CSS/animation)、[トランジション](/ja/docs/Web/CSS/CSS_transitions)、[座標変換](/ja/docs/Web/CSS/CSS_transforms)
 
 ## 料理帳
 
@@ -84,6 +57,5 @@ CSS 2.1 以降、仕様の範囲が大幅に拡大し、CSS モジュールご�
 
 ## 関連情報
 
-- [CSS のデモ](/ja/docs/Web/Demos#css): 最新の CSS テクノロジーの例を探索して想像力をかきたてましょう。
 - CSS がよく適用されるウェブ言語。[HTML](/ja/docs/Web/HTML)、[SVG](/ja/docs/Web/SVG)、[MathML](/ja/docs/Web/MathML)、{{Glossary("XHTML")}}、[XML](/ja/docs/Web/XML/XML_introduction)
 - [CSS に関する Stack Overflow の質問](https://stackoverflow.com/questions/tagged/css)

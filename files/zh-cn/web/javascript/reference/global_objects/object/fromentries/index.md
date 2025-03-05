@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 
 **`Object.fromEntries()`** 静态方法将键值对列表转换为一个对象。
 
-{{EmbedInteractiveExample("pages/js/object-fromentries.html")}}
+{{InteractiveExample("JavaScript Demo: Object.fromEntries()")}}
+
+```js interactive-example
+const entries = new Map([
+  ["foo", "bar"],
+  ["baz", 42],
+]);
+
+const obj = Object.fromEntries(entries);
+
+console.log(obj);
+// Expected output: Object { foo: "bar", baz: 42 }
+```
 
 ## 语法
 
@@ -34,11 +46,12 @@ Object.fromEntries(iterable)
 
 ## 描述
 
-`Object.fromEntries()` 方法接收一个键值对列表，并返回一个新对象，该对象的属性由这些条目给定。`iterable` 参数应该是实现了 `@@iterator` 方法的可迭代对象。该方法返回一个可迭代对象，产生包含两个元素的类数组对象。第一个元素是将用作属性键的值，第二个元素是要与该属性键关联的值。
+`Object.fromEntries()` 方法接收一个键值对列表，并返回一个新对象，该对象的属性由这些条目给定。`iterable` 参数应该是实现了 `[Symbol.iterator]()` 方法的可迭代对象。该方法返回一个可迭代对象，产生包含两个元素的类数组对象。第一个元素是将用作属性键的值，第二个元素是要与该属性键关联的值。
 
 `Object.fromEntries()` 是 {{jsxref("Object.entries()")}} 的逆操作，只是 `Object.entries()` 只返回字符串键属性，而 `Object.fromEntries()` 还可以创建符号键属性。
 
-> **备注：** 与 {{jsxref("Array.from()")}} 不同的是，`Object.fromEntries()` 不使用 `this` 的值，因此在另一个构造函数上调用它不会创建该类型的对象。
+> [!NOTE]
+> 与 {{jsxref("Array.from()")}} 不同的是，`Object.fromEntries()` 不使用 `this` 的值，因此在另一个构造函数上调用它不会创建该类型的对象。
 
 ## 示例
 

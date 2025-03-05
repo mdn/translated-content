@@ -25,7 +25,7 @@ _A interface `RTCIceTransport` herda propriedades de sua interface pai, {{domxre
 _Também inclui métodos da interface pai {{domxref("EventTarget")}}._
 
 - {{domxref("RTCIceTransport.getLocalCandidates", "getLocalCandidates()")}}
-  - : Retorna um array de objetos {{domxref("RTCIceCandidate")}}, cada descrevendo um dos candidatos ICE que foram reunidos para o dispositivo local até o momento. Esses são os mesmos candidatos que já foram enviados para o peer remoto, enviando um evento {{event("icecandidate")}} ao {{domxref("RTCPeerConnection")}} para transmissão.
+  - : Retorna um array de objetos {{domxref("RTCIceCandidate")}}, cada descrevendo um dos candidatos ICE que foram reunidos para o dispositivo local até o momento. Esses são os mesmos candidatos que já foram enviados para o peer remoto, enviando um evento [`icecandidate`](/pt-BR/docs/Web/API/RTCPeerConnection/icecandidate_event) ao {{domxref("RTCPeerConnection")}} para transmissão.
 - {{domxref("RTCIceTransport.getLocalParameters", "getLocalParameters()")}}
   - : Retorna o objeto {{domxref("RTCIceParameters")}} descrevendo o parâmetro ICE estabelecido através de uma ligação ao método {{domxref("RTCPeerConnection.setLocalDescription()")}}. Retorna `null` se os parâmetros ainda não foram recebidos.
 - {{domxref("RTCIceTransport.getRemoteCandidates", "getRemoteCandidates()")}}
@@ -33,7 +33,7 @@ _Também inclui métodos da interface pai {{domxref("EventTarget")}}._
 - {{domxref("RTCIceTransport.getRemoteParameters", "getRemoteParameters()")}}
   - : Retorna um objeto {{domxref("RTCIceParameters")}} contendo os parâmetros ICE para o dispositivo remoto, como definido por uma chamada para {{domxref("RTCPeerConnection.setRemoteDescription()")}}. Se `setRemoteDescription()` não foi chamada ainda, o retorno será `null`.
 - {{domxref("RTCIceTransport.getSelectedCandidatePair", "getSelectedCandidatePair()")}}
-  - : Retorna um objeto {{domxref("RTCIceCandidatePair")}} que identifica os dois candidatos — um para cada conexão — que foram selecionados até o momento. É possível que um par melhor sejá encontrado e selecionado posteriormente; Se você precisar acompanhar isso, veja o evento {{event("selectedcandidatepairchange")}}. Se nenhum par de candidatos foi selecionado ainda o valor retornado será `null`.
+  - : Retorna um objeto {{domxref("RTCIceCandidatePair")}} que identifica os dois candidatos — um para cada conexão — que foram selecionados até o momento. É possível que um par melhor sejá encontrado e selecionado posteriormente; Se você precisar acompanhar isso, veja o evento [`selectedcandidatepairchange`](/pt-BR/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event). Se nenhum par de candidatos foi selecionado ainda o valor retornado será `null`.
 
 ## Eventos
 

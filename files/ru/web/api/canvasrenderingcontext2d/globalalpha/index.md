@@ -7,7 +7,8 @@ slug: Web/API/CanvasRenderingContext2D/globalAlpha
 
 Свойство **`CanvasRenderingContext2D.globalAlpha`** Canvas 2D API определяет альфа-(прозрачность) значение, которое будет применено к фигурам и картинкам до того как они будут отрисованы на холсте.
 
-> **Примечание:** Смотрите также [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) в [Canvas Tutorial](/ru/docs/Web/API/Canvas_API/Tutorial).
+> [!NOTE]
+> Смотрите также [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) в [Canvas Tutorial](/ru/docs/Web/API/Canvas_API/Tutorial).
 
 ## Синтаксис
 
@@ -97,7 +98,7 @@ for (let i = 0; i < 7; i++) {
 
 {{Compat}}
 
-## Читайте также
+## Смотрите также
 
 - The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}

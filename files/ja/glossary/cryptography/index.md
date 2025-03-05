@@ -10,10 +10,10 @@ slug: Glossary/Cryptography
 1. 一般知識
 
    1. Wikipedia 上の [暗号理論](https://ja.wikipedia.org/wiki/暗号理論)
-   2. [情報セキュリティの基本](/ja/docs/Web/Security/Information_Security_Basics)
+   2. [情報セキュリティの基本](/ja/docs/orphaned/Web/Security/Information_Security_Basics)
    3. [Encrypting and Decrypting](/ja/docs/Archive/Security/Encryption_and_Decryption)
 
-2. [MDN Web Docs 用語集](/ja/docs/Glossary)
+2. 関連用語:
 
    1. {{Glossary("Block cipher mode of operation", "暗号利用モード")}}
    2. {{Glossary("Cipher", "サイファー")}}

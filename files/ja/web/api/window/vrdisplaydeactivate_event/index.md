@@ -9,7 +9,8 @@ l10n:
 
 **`vrdisplaydeactivate`** は [WebVR API](/ja/docs/Web/API/WebVR_API) のイベントで、 HMD が一定時間使用されないためにスタンバイまたはスリープモードになった場合など、VR ディスプレイを表示することができなくなったときに発行されます。
 
-> **メモ:** このイベントは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
+> [!NOTE]
+> このイベントは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 このイベントはキャンセル不可で、バブリングしません。
 

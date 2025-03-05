@@ -13,7 +13,8 @@ l10n:
 
 元素的内边距区域是其内容和边框之间的空间。
 
-> **备注：** 通过 {{cssxref("padding")}} 属性，只需一次声明，就可以为元素的所有四边设置内边距。
+> [!NOTE]
+> 通过 {{cssxref("padding")}} 属性，只需一次声明，就可以为元素的所有四边设置内边距。
 
 ## 语法
 
@@ -41,7 +42,7 @@ padding-right: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 作为定值的内边距尺寸。必须是非负值。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : 相对于[包含块](/zh-CN/docs/Web/CSS/Containing_block)的行内尺寸（水平语言中的*宽度*，由 {{cssxref("writing-mode")}} 定义）的百分比。必须是非负值。
+  - : 相对于[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的行内尺寸（水平语言中的*宽度*，由 {{cssxref("writing-mode")}} 定义）的百分比。必须是非负值。
 
 ## 形式定义
 

@@ -2,7 +2,7 @@
 title: ARPA
 slug: Glossary/ARPA
 l10n:
-  sourceCommit: 93d51b92f6c466892d994dd00c5c5b039c37478b
+  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
 {{GlossarySidebar}}
@@ -17,6 +17,7 @@ l10n:
 
 ## 参见
 
-- {{Glossary("ARPANET")}}
+- 相关术语：
+  - {{Glossary("ARPANET")}}
 - [官方网站](https://www.iana.org/domains/arpa)
 - 维基百科上的 [.arpa](https://zh.wikipedia.org/wiki/.arpa)

@@ -10,7 +10,8 @@ l10n:
 
 **`CanvasRenderingContext2D.lineCap`** はキャンバス 2D API のプロパティで、描く線の端点の形状を設定します。
 
-> **メモ:** 線は {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}、{{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}、{{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} の各メソッドで描画されます。
+> [!NOTE]
+> 線は {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}、{{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}、{{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} の各メソッドで描画されます。
 
 ## 値
 

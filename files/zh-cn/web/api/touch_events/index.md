@@ -31,7 +31,8 @@ slug: Web/API/Touch_events
 
 本示例通过对多个触控点进行同步跟踪，让用户通过多点触控的方式在 {{ HTMLElement("canvas") }} 元素上用两个（或以上）手指同时画图。本示例只在支持触摸事件的浏览器下生效。
 
-> **备注：** 下文中用“手指”表示与平面的交互，当然触控笔等也是可行的。
+> [!NOTE]
+> 下文中用“手指”表示与平面的交互，当然触控笔等也是可行的。
 
 ### 创建画布
 
@@ -220,7 +221,8 @@ function colorForTouch(touch) {
 
 这个函数返回一个表示颜色的字符串，可以在调用 {{ HTMLElement("canvas") }} 的函数时使用。比如，若 {{ domxref("Touch.identifier") }} 的值为 10，则返回的字符串为 "#aaa"。
 
-> **警告：** 这里的 `colorForTouch()` 不是一个好主意。`Touch.identifier` 是一个实验性属性，存在兼容性问题，不同浏览器之间实现方法不同，因此会得到不同的结果。
+> [!WARNING]
+> 这里的 `colorForTouch()` 不是一个好主意。`Touch.identifier` 是一个实验性属性，存在兼容性问题，不同浏览器之间实现方法不同，因此会得到不同的结果。
 
 #### 拷贝触摸对象
 
@@ -255,9 +257,9 @@ function ongoingTouchIndexById(idToFind) {
 
 #### 显示后台操作记录
 
-```
+```js
 function log(msg) {
-  const p = document.getElementById('log');
+  const p = document.getElementById("log");
   p.innerHTML = msg + "\n" + p.innerHTML;
 }
 ```

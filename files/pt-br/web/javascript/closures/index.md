@@ -134,7 +134,7 @@ Linguagens como Java oferecem a habilidade de declarar métodos privados, o que 
 
 O JavaScript não oferece uma maneira nativa de fazer isso, mas é possível emular métodos privados usando closures. Métodos privados não são somente úteis para restringir acesso ao código: eles também oferecem uma maneira eficaz de gerenciar seu namespace global, evitando que métodos não essenciais baguncem a interface pública do seu código.
 
-Veja como definir algumas funções públicas que acessam funções e variáveis privadas, usando closures que também é conhecido como [module pattern](http://www.google.com/search?q=javascript+module+pattern):
+Veja como definir algumas funções públicas que acessam funções e variáveis privadas, usando closures que também é conhecido como [module pattern](https://www.google.com/search?q=javascript+module+pattern):
 
 ```js
 var Counter = (function () {
@@ -169,7 +169,8 @@ O ambiente compartilhado é criado no corpo de uma função anônima, da qual é
 
 Aquelas três funções públicas são closures que compartilham o mesmo ambiente. Graças ao escopo léxico do JavaScript, cada uma delas tem acesso a variável `privateCounter` e à função `changeBy`.
 
-> **Nota:** Você perceberá que estamos definindo uma função anônima que cria um contador , e então o executamos imediatamente e atribuímos o resultado à variável `Counter`. Poderíamos armazenar essa função em uma variável separada e usá-la para criar diversos contadores.
+> [!NOTE]
+> Você perceberá que estamos definindo uma função anônima que cria um contador , e então o executamos imediatamente e atribuímos o resultado à variável `Counter`. Poderíamos armazenar essa função em uma variável separada e usá-la para criar diversos contadores.
 
 ```js
 var makeCounter = function () {
@@ -203,11 +204,12 @@ alert(Counter2.value()); /* Alerts 0 */
 
 Observe como cada um dos contadores mantém a sua independência em relação ao outro. Seu ambiente durante a execução da função `makeCounter()` é diferente a cada vez que ocorre. A variável `privateCounter` contém uma instância diferente a cada vez.
 
-> **Nota:** Usar closures desta maneira oferece uma série de benefícios que estão normalmente associados a programação orientada a objetos, em particular encapsulamento e ocultação de dados.
+> [!NOTE]
+> Usar closures desta maneira oferece uma série de benefícios que estão normalmente associados a programação orientada a objetos, em particular encapsulamento e ocultação de dados.
 
 ## Criando closures dentro de loops: Um erro comum
 
-Antes da introdução da palavra chave [`let`](/pt-BR/docs/JavaScript/Reference/Statements/let) no JavaScript 1.7, um problema comum ocorria com closures quando eram criadas dentro de um loop. Considere o exemplo:
+Antes da introdução da palavra chave [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let) no JavaScript 1.7, um problema comum ocorria com closures quando eram criadas dentro de um loop. Considere o exemplo:
 
 ```html
 <p id="help">Notas úteis aparecerão aqui</p>
@@ -308,7 +310,7 @@ function setupHelp() {
 setupHelp();
 ```
 
-Se você não quiser usar mais closures, você pode usar a palavra-chave [`let`](/pt-BR/docs/JavaScript/Reference/Statements/let) ou [`const`](/pt-BR/docs/Web/JavaScript/Reference/Statements/const):
+Se você não quiser usar mais closures, você pode usar a palavra-chave [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let) ou [`const`](/pt-BR/docs/Web/JavaScript/Reference/Statements/const):
 
 ```js
 function showHelp(help) {
@@ -413,4 +415,4 @@ MyObject.prototype.getMessage = function () {
 };
 ```
 
-Nos dois exemplos anteriores, o protótipo herdado pode ser compartilhado por todos os objetos, e as definições de métodos não precisam ocorrer sempre que o objeto for criado. Veja [Detalhes do modelo de objeto](/pt-BR/docs/JavaScript/Guide/Details_of_the_Object_Model) para mais detalhes.
+Nos dois exemplos anteriores, o protótipo herdado pode ser compartilhado por todos os objetos, e as definições de métodos não precisam ocorrer sempre que o objeto for criado. Veja [Detalhes do modelo de objeto](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) para mais detalhes.

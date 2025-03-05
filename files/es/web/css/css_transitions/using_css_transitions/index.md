@@ -7,7 +7,8 @@ slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 
 Las transiciones CSS, parte del borrador de la especificación CSS3, proporcionan una forma de animar los cambios de las propiedades CSS, en lugar de que los cambios surtan efecto de manera instantánea. Por ejemplo, si cambias el color de un elemento de blanco a negro, normalmente el cambio es instantáneo. Al habilitar las transiciones CSS, el cambio sucede en un intervalo de tiempo que puedes especificar, siguiendo una curva de aceleración que puedes personalizar.
 
-> **Nota:** como la especificación de las transiciones CSS todavía se encuentra en fase de borrador, a todas las propiedades asociadas con ellas se les añade el prefijo "-moz-" para usarse en Gecko. Para la compatibilidad con WebKit, se aconseja usar también el prefijo "-webkit-" y para la compatibilidad con Opera, el prefijo "-o-". Es decir, por ejemplo, la propiedad de transición se especificaría como `-moz-transition`, `-webkit-transition` y `-o-transition`.
+> [!NOTE]
+> Como la especificación de las transiciones CSS todavía se encuentra en fase de borrador, a todas las propiedades asociadas con ellas se les añade el prefijo "-moz-" para usarse en Gecko. Para la compatibilidad con WebKit, se aconseja usar también el prefijo "-webkit-" y para la compatibilidad con Opera, el prefijo "-o-". Es decir, por ejemplo, la propiedad de transición se especificaría como `-moz-transition`, `-webkit-transition` y `-o-transition`.
 
 ## Las propiedades de transición CSS
 
@@ -39,13 +40,15 @@ Como es habitual, puedes usar el método {{ domxref("element.addEventListener()"
 el.addEventListener("transitionend", updateTransition, true);
 ```
 
-> **Nota:** el evento "transitionend" no se dispara si la transición se anula debido a que el valor de la propiedad de animación es modificado antes de que la transición se complete.
+> [!NOTE]
+> El evento "transitionend" no se dispara si la transición se anula debido a que el valor de la propiedad de animación es modificado antes de que la transición se complete.
 
 ## Propiedades que pueden ser animadas
 
 Las transiciones y las animaciones CSS pueden usarse para animar las siguientes propiedades.
 
-> **Nota:** el conjunto de propiedades que puede animarse está sujeto a cambios, por lo tanto se recomienda evitar incluir cualquier propiedad en la lista que no anime porque en un futuro podría provocar resultados inesperados.
+> [!NOTE]
+> El conjunto de propiedades que puede animarse está sujeto a cambios, por lo tanto se recomienda evitar incluir cualquier propiedad en la lista que no anime porque en un futuro podría provocar resultados inesperados.
 
 | Propiedad                                                       | Tipo de valor                                                                                             |
 | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
@@ -287,7 +290,7 @@ Después construimos la CSS para implementar el aspecto de nuestro menú. Las po
 
 Esta CSS establece el aspecto del menú con los colores de fondo y del texto que cambian cuando el elemento está en su estado {{ cssxref(":hover") }}.
 
-En lugar de describir el efecto con todo detalle, puedes echar un [vistazo a la muestra en vivo](/samples/cssref/transitions/sample2) si tu navegador admite transiciones (Firefox y WebKit nightlies, Opera 10.5).
+En lugar de describir el efecto con todo detalle, puedes echar un [vistazo a la muestra en vivo](https://mdn.dev/archives/media/samples/cssref/transitions/sample2) si tu navegador admite transiciones (Firefox y WebKit nightlies, Opera 10.5).
 
 ### Usar eventos de transición para animar un objeto
 
@@ -326,7 +329,7 @@ Lo único que hay que observar aquí es que establecemos la clase para nuestra c
 
 #### La CSS
 
-Para crear nuestro efecto de animación, usamos dos clases de CSS, "slideRight" y "slideLeft". Si deseas ver el código completo de CSS, puedes mirar el archivo [`transitions.css`](/samples/cssref/transitions/sample1/transitions.css) en su totalidad. A continuación se muestran sólo los trozos relevantes:
+Para crear nuestro efecto de animación, usamos dos clases de CSS, "slideRight" y "slideLeft". Si deseas ver el código completo de CSS, puedes mirar el archivo [`transitions.css`](https://mdn.dev/archives/media/samples/cssref/transitions/sample1/transitions.css) en su totalidad. A continuación se muestran sólo los trozos relevantes:
 
 ```
 .slideRight {
@@ -377,7 +380,8 @@ Los valores de color aquí se han cambiado para hacer que los colores de fondo y
 
 Una vez que hemos establecido los extremos de la secuencia de animación, lo que tenemos que hacer es iniciar la animación. Podemos hacerlo fácilmente usando JavaScript.
 
-> **Nota:** una vez que [la compatibilidad para las animaciones](http://dev.w3.org/csswg/css3-animations/) CSS esté disponible, el código JavaScript no será necesario para lograr este efecto.
+> [!NOTE]
+> Una vez que [la compatibilidad para las animaciones](https://dev.w3.org/csswg/css3-animations/) CSS esté disponible, el código JavaScript no será necesario para lograr este efecto.
 
 En primer lugar, la función `runDemo()` que se llama cuando el documento se carga para inicializar la secuencia de animación:
 
@@ -417,7 +421,7 @@ Si no se halla ningún elemento que coincida con la clase "slideLeft", buscamos 
 
 ## Consultar también
 
-- [Módulo de transiciones CSS nivel 3](http://www.w3.org/TR/css3-transitions)
+- [Módulo de transiciones CSS nivel 3](https://www.w3.org/TR/css3-transitions)
 - {{ cssxref("-moz-transition") }}
 - {{ cssxref("-moz-transition-property") }}
 - {{ cssxref("-moz-transition-duration") }}

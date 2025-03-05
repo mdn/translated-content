@@ -9,7 +9,8 @@ l10n:
 
 `aria-checked` 属性指示复选框、单选按钮和其他小部件的当前“已选中”状态。
 
-> **备注：** 在可能的情况下，请使用带有 `type="checkbox"` 和 `type="radio"` 的 HTML {{htmlelement("input")}} 元素，因为它们具有内置语义，并且不需要 ARIA 属性。
+> [!NOTE]
+> 在可能的情况下，请使用带有 `type="checkbox"` 和 `type="radio"` 的 HTML {{htmlelement("input")}} 元素，因为它们具有内置语义，并且不需要 ARIA 属性。
 
 ## 描述
 
@@ -81,5 +82,5 @@ myHTMLElement.ariaChecked = true;
 - [`<input type="radio">`](/zh-CN/docs/Web/HTML/Element/input/radio)
 - [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
 - [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
-- [双态复选框示例](https://www.w3.org/WAI/ARIA/apg/example-index/checkbox/checkbox.html)—w3.org
-- [混合状态复选框示例](https://www.w3.org/WAI/ARIA/apg/example-index/checkbox/checkbox-mixed.html)—w3.org
+- [双态复选框示例](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/examples/checkbox/)—w3.org
+- [混合状态复选框示例](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/examples/checkbox-mixed/)—w3.org

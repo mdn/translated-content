@@ -2,7 +2,7 @@
 title: accent-color
 slug: Web/CSS/accent-color
 l10n:
-  sourceCommit: 3c1fd4b3e12458003f4d325ad394fc62bcc7fb3b
+  sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
 {{CSSRef}}
@@ -61,14 +61,14 @@ accent-color: unset;
 
 #### HTML
 
-```html
+```html live-sample___setting_a_custom_accent_color
 <input type="checkbox" checked />
 <input type="checkbox" class="custom" checked />
 ```
 
 #### CSS
 
-```css
+```css live-sample___setting_a_custom_accent_color
 input {
   accent-color: auto;
   display: block;
@@ -83,7 +83,7 @@ input.custom {
 
 #### 結果
 
-{{EmbedLiveSample('独自の強調色を設定', 500, 200)}}
+{{EmbedLiveSample('Setting_a_custom_accent_color', 500, 200)}}
 
 ## 仕様書
 
@@ -98,4 +98,3 @@ input.custom {
 - {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("caret-color")}}, {{cssxref("color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}: その他の色に関するプロパティ
 - {{cssxref("&lt;color&gt;")}} データ型
 - {{HTMLElement("input")}} 要素
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)

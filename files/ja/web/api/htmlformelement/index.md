@@ -2,7 +2,7 @@
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
 l10n:
-  sourceCommit: 494da677b2f5df61c97ba8b8efe8e80881e9d688
+  sourceCommit: d47348199a379f68bea876a403eb510628ec4ccb
 ---
 
 {{APIRef("HTML DOM")}}
@@ -53,11 +53,6 @@ _このインターフェイスには親である {{domxref("HTMLElement")}} か
 - {{domxref("HTMLFormElement.submit", "submit()")}}
   - : フォームをサーバーへ送信します。
 
-### 非推奨のメソッド
-
-- {{domxref("HTMLFormElement.requestAutocomplete()")}} {{deprecated_inline}}
-  - : ネイティブのブラウザーインターフェイスを起動して、[自動補完フィールド名](https://html.spec.whatwg.org/#autofill-field-name) の値が `off` または `on` ではないフィールドを補完してユーザーを支援します。ユーザーがインターフェイスの操作を終えると、フォームはフィールドが入力された場合は `autocomplete`、問題があった場合は `autocompleteerror` のいずれかのイベントを受け取ります。
-
 ## イベント
 
 これらのイベントを待ち受けするには、`addEventListener()` を使用するか、このインターフェイスの `oneventname` プロパティへイベントリスナーを代入するかしてください。
@@ -73,7 +68,7 @@ _このインターフェイスには親である {{domxref("HTMLElement")}} か
 
 ### フォーム要素オブジェクトの取得
 
-`HTMLFormElement` オブジェクトを取得するには、[CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)と {{domxref("Document.querySelector", "querySelector()")}} を使うか、document の {{domxref("Document.forms", "forms")}} プロパティを使ってすべてのフォームのリストを取得できます。
+`HTMLFormElement` オブジェクトを取得するには、[CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)と {{domxref("Document.querySelector", "querySelector()")}} を使うか、document の {{domxref("Document.forms", "forms")}} プロパティを使ってすべてのフォームのリストを取得できます。
 
 {{domxref("Document.forms")}} は `HTMLFormElement` オブジェクトの配列、つまりそのページの各フォームの一覧を返します。その後、以下の構文を使用して、個々のフォームを取得することができます。
 
@@ -96,13 +91,13 @@ _このインターフェイスには親である {{domxref("HTMLElement")}} か
 
 例えば、
 
-- `<input name="id">` は `<form id="…">` よりも優先されます。つまり `form.id` ではフォームの id を参照せずに、名前が "`id`" である要素を参照します。その他のプロパティも同様であり、例えば `<input name="action">` や `<input name="post">` もそうです。
+- `<input name="id">` は `<form id="…">` よりも優先されます。つまり `form.id` ではフォームの id を参照せずに、名前が `"id"` である要素を参照します。その他のプロパティも同様であり、例えば `<input name="action">` や `<input name="post">` もそうです。
 - `<input name="elements">` を使うと、`elements` のコレクションがアクセス不能になります。`form.elements` は特定の要素を参照するようになります。
 
 要素名のこうした問題を避けるには、
 
 - _常に_ `elements` のコレクションを使って、要素名とフォームプロパティとのあいまいさを避けましょう。
-- *決して*要素名に "`elements`" を使わないでください。
+- *決して*要素名に `"elements"` を使わないでください。
 
 JavaScript を使っていなければ、これは問題になりません。
 
@@ -192,10 +187,10 @@ f.submit(); // フォームの submit() メソッド
   <body>
     <form action="test.php" target="_blank">
       <p>
-        <label>First name: <input type="text" name="firstname" /></label>
+        <label>First name: <input type="text" name="first-name" /></label>
       </p>
       <p>
-        <label>Last name: <input type="text" name="lastname" /></label>
+        <label>Last name: <input type="text" name="last-name" /></label>
       </p>
       <p>
         <label><input type="password" name="pwd" /></label>

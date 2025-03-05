@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
 
 ブラウザーアクションアイコンがクリックされたときに発火します。このイベントはブラウザーアクションがポップアップを持っているときは発火しません。
 
-右クリックを定義するには、[`contextMenus`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus) API の"browser_action" [context type](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/ContextType)を利用してください。
+右クリックを定義するには、[`contextMenus`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus) API の"browser_action" [context type](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType)を利用してください。
 
 ## 書式
 
@@ -56,7 +56,8 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 {{WebExtExamples}}
 
-> **メモ:** この API は Chromium の[`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#event-onClicked) API に基づいています。このドキュメントは Chromium コードの[`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)から派生したものです。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、Creative Commons Attribution 3.0 United States License のもとにここに含まれています。
+> [!NOTE]
+> この API は Chromium の[`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#event-onClicked) API に基づいています。このドキュメントは Chromium コードの[`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)から派生したものです。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、Creative Commons Attribution 3.0 United States License のもとにここに含まれています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

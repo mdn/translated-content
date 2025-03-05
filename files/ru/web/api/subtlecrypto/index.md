@@ -7,7 +7,8 @@ slug: Web/API/SubtleCrypto
 
 Интерфейс **`SubtileCrypto`** представляет набор криптографических примитивов. Экземпляр **`SubtileCrypto`** доступен как {{domxref("Crypto.subtle")}}, в контексте window ({{domxref("Window.crypto")}}).
 
-> **Предупреждение:** Per the spec: "Developers making use of the SubtleCrypto interface are expected to be aware of the security concerns associated with both the design and implementation of the various algorithms provided. The raw algorithms are provided in order to allow developers maximum flexibility in implementing a variety of protocols and applications, each of which may represent the composition and security parameters in a unique manner that necessitate the use of the raw algorithms."
+> [!WARNING]
+> Per the spec: "Developers making use of the SubtleCrypto interface are expected to be aware of the security concerns associated with both the design and implementation of the various algorithms provided. The raw algorithms are provided in order to allow developers maximum flexibility in implementing a variety of protocols and applications, each of which may represent the composition and security parameters in a unique manner that necessitate the use of the raw algorithms."
 
 ## Свойства
 

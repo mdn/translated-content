@@ -7,7 +7,7 @@ slug: Web/API/Element/requestPointerLock
 
 Метод **`Element.requestPointerLock()`** позволяет асинхронно запросить блокировку курсора для заданного элемента.
 
-Чтобы отследить успех или ошибку запроса, необходимо обрабатывать события {{event("pointerlockchange")}} и {{event("pointerlockerror")}} на уровне {{domxref("Document")}}.
+Чтобы отследить успех или ошибку запроса, необходимо обрабатывать события [`pointerlockchange`](/ru/docs/Web/API/Document/pointerlockchange_event) и [`pointerlockerror`](/ru/docs/Web/API/Document/pointerlockerror_event) на уровне {{domxref("Document")}}.
 
 ## Синтаксис
 

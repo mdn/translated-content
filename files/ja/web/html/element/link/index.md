@@ -10,7 +10,16 @@ l10n:
 **`<link>`** は [HTML](/ja/docs/Web/HTML) の要素で、現在の文書と外部のリソースとの関係を指定します。
 この要素は{{Glossary("CSS", "スタイルシート")}}へのリンクに最もよく使用されますが、サイトのアイコン（"favicon" スタイルのアイコンと、モバイル端末のホーム画面やアプリのアイコンの両方）の確立や、その他のことにも使用されます。
 
-{{EmbedInteractiveExample("pages/tabbed/link.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;link&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<link href="/shared-assets/misc/link-element-example.css" rel="stylesheet" />
+
+<p>This text will be red as defined in the external stylesheet.</p>
+<p style="color: blue">
+  The <code>style</code> attribute can override it, though.
+</p>
+```
 
 外部スタイルシートへリンクするには、 {{HTMLElement("head")}} の中に次のような `<link>` 要素を入れてください。
 
@@ -238,7 +247,8 @@ l10n:
     - `any`: `image/svg+xml` のようなベクター画像であるため、どのようなサイズにも調整可能であることを示します。
     - ホワイトスペースで区切られたサイズのリスト。サイズはそれぞれ `<幅のピクセル数>x<高さのピクセル数>` または `<幅のピクセル数>X<高さのピクセル数>` という形式です。それぞれのサイズがリソースに含まれていることが必要です。
 
-    > **メモ:** ほとんどのアイコン形式は 1 個のアイコンのみ保存可能です。よってほとんどの場合、 [`sizes`](#sizes) 属性はエントリーが 1 個だけになります。
+    > [!NOTE]
+    > ほとんどのアイコン形式は 1 個のアイコンのみ保存可能です。よってほとんどの場合、 [`sizes`](#sizes) 属性はエントリーが 1 個だけになります。
     > アップルの ICN はもちろん、マイクロソフトの ICO 形式も使用できます。 ICO の方が一般的であり、複数ブラウザーの対応 (特に IE の古いバージョン) が重要である場合はこの形式を使用してください。
 
 - `title`
@@ -266,7 +276,8 @@ l10n:
   - : この属性は、リンク先のリソースの文字エンコーディングを定義します。この値は {{rfc(2045)}} で定義されている文字セットの、スペースまたはカンマで区切られたリストです。
     既定値は `iso-8859-1` です。
 
-    > **メモ:** この廃止された属性と同じ効果を生み出すためには、リンク先のリソースで HTTP の {{HTTPHeader("Content-Type")}} ヘッダーを使用してください。
+    > [!NOTE]
+    > この廃止された属性と同じ効果を生み出すためには、リンク先のリソースで HTTP の {{HTTPHeader("Content-Type")}} ヘッダーを使用してください。
 
 - `rev` {{deprecated_inline}}
 
@@ -274,7 +285,8 @@ l10n:
     従って、この属性は `rel` 属性の値と比べたときに逆向きの関係を定義します。
     この属性向けの[リンク種別の値](/ja/docs/Web/HTML/Attributes/rel)は、[`rel`](#rel) 向けの値と似ています。
 
-    > **メモ:** 代わりに、逆の意味の[リンク種別の値](/ja/docs/Web/HTML/Attributes/rel)を与えた [`rel`](#rel) 属性を使用してください。例えば `made` は `author` に置き換えます。また、この属性は「リビジョン」 (revision) を表すものではないので、バージョン番号を指定してはいけませんが、残念ながらいくつものサイトでそのように使用されています。
+    > [!NOTE]
+    > 代わりに、逆の意味の[リンク種別の値](/ja/docs/Web/HTML/Attributes/rel)を与えた [`rel`](#rel) 属性を使用してください。例えば `made` は `author` に置き換えます。また、この属性は「リビジョン」 (revision) を表すものではないので、バージョン番号を指定してはいけませんが、残念ながらいくつものサイトでそのように使用されています。
 
 ## 例
 

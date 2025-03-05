@@ -15,7 +15,8 @@ l10n:
 
 一个 16 位整数，指示候选对等端可以到达的 {{domxref("RTCIceCandidate/address", "address")}} 所指定的设备上的端口号。如果在 `candidate` 中未指定 `port`，或者 `candidate` 字符串无法正确解析，则将端口初始化为 `null`。
 
-> **备注：** 如果 `port` 值为 `null`，则将该候选者传递给 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 时将失败，抛出 `OperationError` 异常。只有当候选者实现 `port` 时才适用此规则。
+> [!NOTE]
+> 如果 `port` 值为 `null`，则将该候选者传递给 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 时将失败，抛出 `OperationError` 异常。只有当候选者实现 `port` 时才适用此规则。
 
 ## 使用说明
 

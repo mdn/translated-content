@@ -100,7 +100,8 @@ requestAnimationFrame(draw);
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/dfh2tpu1/","","395")}}
 
-> **참고:** 생명의 수와 공이 패들에서 튕겨나가는 각도를 변경해 보세요.
+> [!NOTE]
+> 생명의 수와 공이 패들에서 튕겨나가는 각도를 변경해 보세요.
 
 ## 게임 오버 - 마무리!
 

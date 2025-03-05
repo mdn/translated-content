@@ -11,7 +11,8 @@ El valor de este atributo es una cadena de caracteres opaca: es decir, el autor 
 
 El valor de este atributo no debe contener espacios en blanco. Los navegadores tratan los IDs que contienen espacios en blanco como si los espacios fueran parte del ID. En contraste con el atributo **class**, el cual permite valores separados por espacios, los elementos pueden tener sólo un ID definido mediante el atributo ID. Tenga en cuenta que un elemento puede tener muchos ID, pero los demás deben ser definidos de otra forma, como por medio de un script interactuando con el DOM.
 
-> **Nota:** El uso de caracteres a excepción de letras en ASCII, dígitos, '\_', `'-'` y `'.'` pueden ocasionar problemas de compatibilidad, por no ser permitidos en HTML 4. A pesar de que esta limitación ha sido removida en HTML 5, un ID debe iniciar con una letra para asegurar la compatibilidad.
+> [!NOTE]
+> El uso de caracteres a excepción de letras en ASCII, dígitos, '\_', `'-'` y `'.'` pueden ocasionar problemas de compatibilidad, por no ser permitidos en HTML 4. A pesar de que esta limitación ha sido removida en HTML 5, un ID debe iniciar con una letra para asegurar la compatibilidad.
 
 ## Especificaciones
 

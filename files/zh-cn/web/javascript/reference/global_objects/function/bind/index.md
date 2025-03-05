@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 {{jsxref("Function")}} 实例的 **`bind()`** 方法创建一个新函数，当调用该新函数时，它会调用原始函数并将其 `this` 关键字设置为给定的值，同时，还可以传入一系列指定的参数，这些参数会插入到调用新函数时传入的参数的前面。
 
-{{EmbedInteractiveExample("pages/js/function-bind.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Function.bind()", "taller")}}
+
+```js interactive-example
+const module = {
+  x: 42,
+  getX: function () {
+    return this.x;
+  },
+};
+
+const unboundGetX = module.getX;
+console.log(unboundGetX()); // The function gets invoked at the global scope
+// Expected output: undefined
+
+const boundGetX = unboundGetX.bind(module);
+console.log(boundGetX());
+// Expected output: 42
+```
 
 ## 语法
 
@@ -117,7 +134,8 @@ const boundGetX = retrieveX.bind(module);
 console.log(boundGetX()); // 81
 ```
 
-> **备注：** 如果在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下运行这个示例，`retrieveX` 的 `this` 参数会绑定到 `undefined` 而不是 `globalThis`，这会导致 `retrieveX()` 的调用失败。
+> [!NOTE]
+> 如果在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下运行这个示例，`retrieveX` 的 `this` 参数会绑定到 `undefined` 而不是 `globalThis`，这会导致 `retrieveX()` 的调用失败。
 >
 > 如果在一个 ECMAScript 模块中运行这个示例，顶级的 `this` 会绑定到 `undefined` 而不是 `globalThis`，导致 `this.x = 9` 赋值失败。
 >
@@ -159,7 +177,7 @@ console.log(addThirtySeven(5, 10)); // 42
 
 ### 配合 setTimeout()
 
-在默认情况下，在 {{domxref("setTimeout()")}} 内部，`this` 关键字将被设置为 [`globalThis`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis)，在浏览器中它是 {{domxref("window")}} 对象。当处理需要将 `this` 引用类实例的类方法时，你可以显式地将 `this` 绑定到回调函数，以便保持实例的引用。
+在默认情况下，在 {{domxref("Window.setTimeout", "setTimeout()")}} 内部，`this` 关键字将被设置为 [`globalThis`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis)，在浏览器中它是 {{domxref("window")}} 对象。当处理需要将 `this` 引用类实例的类方法时，你可以显式地将 `this` 绑定到回调函数，以便保持实例的引用。
 
 ```js
 class LateBloomer {

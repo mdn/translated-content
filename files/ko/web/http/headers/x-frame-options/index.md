@@ -48,7 +48,8 @@ X-Frame-Options: allow-from https://example.com/
 
 ## 예시
 
-> **참고:** 메타 테그 설정은 무용지물이다! 이를테면, `<meta http-equiv="X-Frame-Options" content="deny">` 태그는 아무런 영향을 미치지 않는다. 따라서 사용하지 말자! 오직 아래의 예제처럼 HTTP 헤더 설정을 통해서만 `X-Frame-Options`이 동작한다.
+> [!NOTE]
+> 메타 테그 설정은 무용지물이다! 이를테면, `<meta http-equiv="X-Frame-Options" content="deny">` 태그는 아무런 영향을 미치지 않는다. 따라서 사용하지 말자! 오직 아래의 예제처럼 HTTP 헤더 설정을 통해서만 `X-Frame-Options`이 동작한다.
 
 ### Apache 설정
 

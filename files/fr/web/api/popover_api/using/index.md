@@ -17,7 +17,8 @@ Dans sa forme la plus simple, un <i lang="en">popover</i> est créé en ajoutant
 <div id="my-popover" popover>Contenu du popover</div>
 ```
 
-> **Note :** Définir l'attribut `popover` sans valeur est équivalent à utiliser `popover="auto"`.
+> [!NOTE]
+> Définir l'attribut `popover` sans valeur est équivalent à utiliser `popover="auto"`.
 
 Ajouter cet attribut masque l'élément dès le chargement de la page, comme si on lui appliquait la déclaration CSS [`display: none`](/fr/docs/Web/CSS/display). Pour afficher/masquer le <i lang="en">popover</i>, il faut utiliser un ou plusieurs boutons de contrôle. Vous pouvez utiliser un élément [`<button>`](/fr/docs/Web/HTML/Element/button) (ou [`<input>`](/fr/docs/Web/HTML/Element/input) avec l'attribut `type="button"`) en lui ajoutant l'attribut [`popovertarget`](/fr/docs/Web/HTML/Element/button#popovertarget) avec la valeur de l'identifiant (attribut `id`) de l'élément <i lang="en">popover</i> à contrôler.
 
@@ -42,7 +43,8 @@ Vous pouvez modifier ce comportement en utilisant l'attribut [`popovertargetacti
 
 Vous pouvez voir ce code en action dans [notre exemple de <i lang="en">popover</i> déclaratif](https://mdn.github.io/dom-examples/popover-api/basic-declarative/) ([voir le code source](https://github.com/mdn/dom-examples/tree/main/popover-api/basic-declarative)).
 
-> **Note :** Si l'attribut `popovertargetaction` n'est pas défini, il vaudra `"toggle"` par défaut.
+> [!NOTE]
+> Si l'attribut `popovertargetaction` n'est pas défini, il vaudra `"toggle"` par défaut.
 
 Quand un <i lang="en">popover</i> est affiché, la déclaration CSS `display:none` associée est retirée et il est placé dans la [couche supérieure](/fr/docs/Glossary/Top_layer)&nbsp;: de cette manière il est affiché par-dessus les autres éléments de la page.
 
@@ -54,7 +56,8 @@ Quand un élément <i lang="en">popover</i> a l'attribut `popover` ou `popover="
 - Le <i lang="en">popover</i> peut être fermé à l'aide des mécanismes fournis par le navigateur, comme la touche <kbd>Esc</kbd> du clavier.
 - En général, un seul <i lang="en">popover</i> peut être affiché à la fois. Si un <i lang="en">popover</i> est déjà affiché, l'affichage d'un autre <i lang="en">popover</i> masquera le premier. La seule exception porte sur les <i lang="en">popovers</i> imbriqués les uns dans les autres. Lisez la section [<i lang="en">Popovers</i> imbriqués](#popovers_imbriqués) pour plus d'informations.
 
-> **Note :** Les <i lang="en">popovers</i> avec l'état automatique sont également masqués lorsque les méthodes [`HTMLDialogElement.showModal()`](/fr/docs/Web/API/HTMLDialogElement/showModal) et [`Element.requestFullscreen()`](/fr/docs/Web/API/Element/requestFullscreen) sont appelées sur un autre élément du document. Gardez à l'esprit qu'appeler ces méthodes sur un élément <i lang="en">popover</i> visible échouera dans la mesure ou ces méthodes n'ont pas de sens pour un <i lang="en">popover</i> visible. Cependant, vous pouvez appeler ces méthodes sur un élément avec l'attribut `popover` qui n'est pas encore visible.
+> [!NOTE]
+> Les <i lang="en">popovers</i> avec l'état automatique sont également masqués lorsque les méthodes [`HTMLDialogElement.showModal()`](/fr/docs/Web/API/HTMLDialogElement/showModal) et [`Element.requestFullscreen()`](/fr/docs/Web/API/Element/requestFullscreen) sont appelées sur un autre élément du document. Gardez à l'esprit qu'appeler ces méthodes sur un élément <i lang="en">popover</i> visible échouera dans la mesure ou ces méthodes n'ont pas de sens pour un <i lang="en">popover</i> visible. Cependant, vous pouvez appeler ces méthodes sur un élément avec l'attribut `popover` qui n'est pas encore visible.
 
 L'état automatique est utile pour afficher un seul <i lang="en">popover</i> à la fois. Cela peut être utile lorsqu'on a plusieurs messages à afficher les uns à la suite des autres (plutôt que d'avoir un affichage confus et encombré), ou lorsqu'on affiche des messages de statut, où le dernier l'emportera de toute façon sur le statut précédent.
 
@@ -163,7 +166,7 @@ Allez voir [notre exemple d'interface d'aide](https://mdn.github.io/dom-examples
 
 ## Masquer les <i lang="en">popovers</i> automatiquement avec un minuteur
 
-Un autre scénario fréquent en JavaScript consiste à masquer un <i lang="en">popover</i> automatiquement après un certain temps. Par exemple, vous pouvez vouloir créer un système de notifications «&nbsp;toast&nbsp;» pour une application qui exécute de multiples actions en arrière plan (par exemple, du téléversement de fichiers multiples) et qui affichera une notification pour chaque action terminée. Pour cela, vous voulez utiliser des <i lang="en">popovers</i> manuels afin d'en afficher plusieurs en même temps et utiliser [`setTimeout()`](/fr/docs/Web/API/setTimeout) pour les supprimer. Une fonction pour gérer ce genre de <i lang="en">popover</i> pourrait ressembler à ceci&nbsp;:
+Un autre scénario fréquent en JavaScript consiste à masquer un <i lang="en">popover</i> automatiquement après un certain temps. Par exemple, vous pouvez vouloir créer un système de notifications «&nbsp;toast&nbsp;» pour une application qui exécute de multiples actions en arrière plan (par exemple, du téléversement de fichiers multiples) et qui affichera une notification pour chaque action terminée. Pour cela, vous voulez utiliser des <i lang="en">popovers</i> manuels afin d'en afficher plusieurs en même temps et utiliser [`setTimeout()`](/fr/docs/Web/API/Window/setTimeout) pour les supprimer. Une fonction pour gérer ce genre de <i lang="en">popover</i> pourrait ressembler à ceci&nbsp;:
 
 ```js
 function makeToast(result) {
@@ -318,7 +321,8 @@ Les <i lang="en">popovers</i> sont mis en forme avec la déclaration `display: n
 - Quand `display` est animé de `none` à `block` (ou toute autre valeur visible de `display`), la valeur passera à `block` à 0% de la durée de l'animation, ce qui la rendra visible du début à la fin.
 - Quand `display` est animé de `block` (ou toute autre valeur visible de `display`) à `none`, la valeur passera à `none` à 100% de la durée de l'animation, ce qui la rendra visible du début à la fin.
 
-> **Note :** Quand on anime en utilisant [les transitions CSS](/fr/docs/Web/CSS/CSS_transitions), la déclaration [`transition-behavior: allow-discrete`](/fr/docs/Web/CSS/transition-behavior) doit être appliquée sur l'élément <i lang="en">popover</i> pour activer le comportement décrit ci-avant. Quand on anime avec [les animations CSS](/fr/docs/Web/CSS/CSS_animations), le comportement décrit ci-avant est activé par défaut, et il n'y a pas besoin de définir cette propriété.
+> [!NOTE]
+> Quand on anime en utilisant [les transitions CSS](/fr/docs/Web/CSS/CSS_transitions), la déclaration [`transition-behavior: allow-discrete`](/fr/docs/Web/CSS/transition-behavior) doit être appliquée sur l'élément <i lang="en">popover</i> pour activer le comportement décrit ci-avant. Quand on anime avec [les animations CSS](/fr/docs/Web/CSS/CSS_animations), le comportement décrit ci-avant est activé par défaut, et il n'y a pas besoin de définir cette propriété.
 
 ### Les transitions sur les <i lang="en">popovers</i>
 
@@ -431,7 +435,8 @@ Le code donne ce résultat&nbsp;:
 
 {{EmbedLiveSample("", "100%", "200")}}
 
-> **Note :** Parce que les <i lang="en">popovers</i> passent de `display: none` à `display: block` à chaque fois qu'ils apparaissent, le <i lang="en">popover</i> transitionne des styles définis dans `@starting-style` aux styles définis dans `[popover]:popover-open` à chaque fois qu'il apparait. Quand le <i lang="en">popover</i> se ferme, il transitionne des styles définis dans `[popover]:popover-open` aux styles définis dans `[popover]`.
+> [!NOTE]
+> Parce que les <i lang="en">popovers</i> passent de `display: none` à `display: block` à chaque fois qu'ils apparaissent, le <i lang="en">popover</i> transitionne des styles définis dans `@starting-style` aux styles définis dans `[popover]:popover-open` à chaque fois qu'il apparait. Quand le <i lang="en">popover</i> se ferme, il transitionne des styles définis dans `[popover]:popover-open` aux styles définis dans `[popover]`.
 >
 > Il est possible que les styles de transition pour l'entrée et la sortie puissent être différents. Regarder [notre démonstration d'utilisation des styles de départ](/fr/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used) pour voir un exemple.
 

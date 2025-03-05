@@ -2,7 +2,7 @@
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 l10n:
-  sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
+  sourceCommit: c9f7361807d9b0fbf0fcf0ccc5cc166bf33d307d
 ---
 
 {{JSRef}}
@@ -21,7 +21,7 @@ l10n:
 
 `ArrayBuffer` 对象可以通过在调用 {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer()")}} 构造函数时包含 `maxByteLength` 选项来使其大小可变。你可以通过访问其 {{jsxref("ArrayBuffer/resizable", "resizable")}} 和 {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} 属性来查询 `ArrayBuffer` 的大小是否可变以及其最大值。你可以通过调用 {{jsxref("ArrayBuffer/resize", "resize()")}} 为可变大小的 `ArrayBuffer` 分配一个新的大小。新的字节会被初始化为 0。
 
-这些特性使得调整 `ArrayBuffer` 的大小更加高效——否则，你必须使用新的大小创建一个缓冲副本。这也使得 JavaScript 在这方面与 WebAssembly 相当（Wasm 线性内存可以使用 [`WebAssembly.Memory.prototype.grow()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory/grow) 调整大小）。
+这些特性使得调整 `ArrayBuffer` 的大小更加高效——否则，你必须使用新的大小创建一个缓冲副本。这也使得 JavaScript 在这方面与 WebAssembly 相当（Wasm 线性内存可以使用 [`WebAssembly.Memory.prototype.grow()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) 调整大小）。
 
 ### 传输 ArrayBuffer
 
@@ -41,7 +41,7 @@ l10n:
 
 ## 静态属性
 
-- {{jsxref("ArrayBuffer/@@species", "ArrayBuffer[@@species]")}}
+- [`ArrayBuffer[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species)
   - : 用于创建派生对象的构造函数。
 
 ## 静态方法
@@ -57,14 +57,14 @@ l10n:
   - : `ArrayBuffer` 的大小，以字节为单位。它在构造时确定，并且只有在 `ArrayBuffer` 可调整大小的情况下才能通过 {{jsxref("ArrayBuffer.prototype.resize()")}} 方法进行改变。
 - {{jsxref("Object/constructor", "ArrayBuffer.prototype.constructor")}}
   - : 创建实例对象的构造函数。对于 `ArrayBuffer` 实例，初始值为 {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer")}} 构造函数。
-- {{jsxref("ArrayBuffer.prototype.detached")}} {{experimental_inline}}
+- {{jsxref("ArrayBuffer.prototype.detached")}}
   - : 只读。如果 `ArrayBuffer` 已分离（传输），则返回 `true`，否则返回 `false`。
 - {{jsxref("ArrayBuffer.prototype.maxByteLength")}}
   - : 只读，`ArrayBuffer` 可以调整到的最大字节长度。它在构造时确定，并且无法更改。
 - {{jsxref("ArrayBuffer.prototype.resizable")}}
   - : 只读。如果 `ArrayBuffer` 可调整大小，则返回 `true`，否则返回 `false`。
-- `ArrayBuffer.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"ArrayBuffer"`。它用于 {{jsxref("Object.prototype.toString()")}}。
+- `ArrayBuffer.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"ArrayBuffer"`。它用于 {{jsxref("Object.prototype.toString()")}}。
 
 ## 实例方法
 
@@ -72,9 +72,9 @@ l10n:
   - : 将 `ArrayBuffer` 调整为指定大小，以字节为单位。
 - {{jsxref("ArrayBuffer.prototype.slice()")}}
   - : 返回一个新的 `ArrayBuffer` 对象，其内容是从 `begin`（包含）到 `end`（不包含）的 `ArrayBuffer` 的字节内容的副本。如果 `begin` 或 `end` 为负数，则它将从数组的末尾开始计算索引，而非从数组的开头。
-- {{jsxref("ArrayBuffer.prototype.transfer()")}} {{experimental_inline}}
+- {{jsxref("ArrayBuffer.prototype.transfer()")}}
   - : 创建一个新的 `ArrayBuffer` 对象，其内容是与此缓冲区相同的字节内容，然后分离此缓冲区。
-- {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}} {{experimental_inline}}
+- {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}}
   - : 创建一个新的不可调整大小的 `ArrayBuffer` 对象，其内容与此缓冲区相同，然后分离此缓冲区。
 
 ## 示例

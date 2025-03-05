@@ -53,7 +53,8 @@ generateKey(algorithm, extractable, keyUsages)
 
 ## 示例
 
-> **备注：** 你可以在 Github 上[尝试可用的示例](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html)。
+> [!NOTE]
+> 你可以在 Github 上[尝试可用的示例](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html)。
 
 ### 生成 RSA 密钥对
 

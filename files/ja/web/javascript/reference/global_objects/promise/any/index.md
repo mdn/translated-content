@@ -9,7 +9,19 @@ l10n:
 
 **`Promise.any()`** は静的メソッドで、入力としてプロミスの反復可能オブジェクトを取り、単一の {{jsxref("Promise")}} を返します。この返されたプロミスは、入力のプロミスのいずれかが履行されたときに、この最初の履行値で履行されます。入力のプロミスがすべて拒否された場合（空の反復可能オブジェクトが渡された場合を含む）、拒否理由の配列を格納した {{jsxref("AggregateError")}} で、拒否されます。
 
-{{EmbedInteractiveExample("pages/js/promise-any.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.any()")}}
+
+```js interactive-example
+const promise1 = Promise.reject(0);
+const promise2 = new Promise((resolve) => setTimeout(resolve, 100, "quick"));
+const promise3 = new Promise((resolve) => setTimeout(resolve, 500, "slow"));
+
+const promises = [promise1, promise2, promise3];
+
+Promise.any(promises).then((value) => console.log(value));
+
+// Expected output: "quick"
+```
 
 ## 構文
 
@@ -34,7 +46,8 @@ Promise.any(iterable)
 
 `Promise.any()` メソッドは[プロミスの並行処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並行処理)メソッドの 1 つです。このメソッドは、最初に履行されたプロミスを返すのに有益なものです。最初のプロミスが履行された後は短絡的に処理するので、一つを見つけると、他のプロミスが完了するのを待つことはありません。
 
-> **メモ:** 日本語の技術文書では、このメソッドが複数のプロミスを並列に処理すると説明されることがありますが、実際には複数のスレッドでプロミスが処理されるわけではないことに注意してください。詳細は[プロミスの並行処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並行処理)を参照してください。
+> [!NOTE]
+> 日本語の技術文書では、このメソッドが複数のプロミスを並列に処理すると説明されることがありますが、実際には複数のスレッドでプロミスが処理されるわけではないことに注意してください。詳細は[プロミスの並行処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並行処理)を参照してください。
 
 {{JSxRef("Promise.all()")}} が履行された値の _配列_ を返すのとは異なり、 1 つの履行値だけを取得します（少なくとも 1 つのプロミスが履行されることを想定しています）。これは、履行されるプロミスが 1 つだけ必要で、どれが履行されるかは気にしない場合、有益なことがあります。もう一つの異なる形に注意してください。このメソッドは、_空の反復可能オブジェクト_ を受け取ると拒否します。なぜなら、正直に言うと、反復処理オブジェクトには、履行されるアイテムが格納されていないからです。`Promise.any()` と `Promise.all()` を {{jsxref("Array.prototype.some()")}} と {{jsxref("Array.prototype.every()")}} で比較することができます。
 

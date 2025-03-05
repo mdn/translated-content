@@ -23,7 +23,35 @@ slug: Web/CSS/@supports
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-supports.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: @supports", "tabbed-standard")}}
+
+```css interactive-example
+.flex-container > * {
+  padding: 0.3em;
+  list-style-type: none;
+  text-shadow: 0 0 2px red;
+  float: left;
+}
+
+@supports (display: flex) {
+  .flex-container > * {
+    text-shadow: 0 0 2px blue;
+    float: none;
+  }
+
+  .flex-container {
+    display: flex;
+  }
+}
+```
+
+```html interactive-example
+<ul class="flex-container">
+  <li><a href="#">Index</a></li>
+  <li><a href="#">About me</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+```
 
 JavaScript では `@supports` は CSS オブジェクトモデルインターフェイスの {{DOMxRef("CSSSupportsRule")}} からアクセスできます。
 
@@ -199,5 +227,5 @@ CSS Conditional Rules Level 4 仕様では、セレクターの対応を検査�
 
 ## 関連情報
 
-- [機能クエリーの使用](/ja/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries)
+- [機能クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
 - JavaScript で同様のチェックを実行できる、CSSOM の {{DOMxRef("CSSSupportsRule")}} クラスおよび {{DOMxRef("CSS.supports()")}} メソッド

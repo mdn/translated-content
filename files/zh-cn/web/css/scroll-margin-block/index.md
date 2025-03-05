@@ -5,7 +5,7 @@ slug: Web/CSS/scroll-margin-block
 
 {{CSSRef}}
 
-[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) `scroll-margin-block` 设置了元素的块向滚动外边距。
+[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) `scroll-margin-block` 设置了元素的块向滚动外边距。
 
 {{EmbedInteractiveExample("pages/css/scroll-margin-block.html")}}
 
@@ -59,4 +59,4 @@ scroll-margin-block: unset;
 ## 参见
 
 - [CSS 滚动吸附](/zh-CN/docs/Web/CSS/CSS_scroll_snap)
-- [用 CSS 滚动吸附明确控制滚动](https://web.dev/articles/css-scroll-snap)
+- [用 CSS 滚动吸附明确控制滚动](https://web.developers.google.cn/articles/css-scroll-snap)

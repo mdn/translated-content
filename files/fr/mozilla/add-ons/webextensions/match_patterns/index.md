@@ -5,14 +5,15 @@ slug: Mozilla/Add-ons/WebExtensions/Match_patterns
 
 {{AddonSidebar}}
 
-Les modèles de correspondance sont un moyen de spécifier des groupes d'URL : un modèle de correspondance correspond à un ensemble spécifique d'URL. Ils sont destinés à des extensions à l'aide d'API WebExtensions dans quelques endroits, notamment pour spécifier les documents dans lesquels charger des [content scripts](/fr/Add-ons/WebExtensions/Content_scripts), et pour spécifier les URL à ajouter aux auditeurs [`webRequest`](/fr/Add-ons/WebExtensions/API/webRequest).
+Les modèles de correspondance sont un moyen de spécifier des groupes d'URL : un modèle de correspondance correspond à un ensemble spécifique d'URL. Ils sont destinés à des extensions à l'aide d'API WebExtensions dans quelques endroits, notamment pour spécifier les documents dans lesquels charger des [content scripts](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts), et pour spécifier les URL à ajouter aux auditeurs [`webRequest`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest).
 
-Les API qui utilisent des modèles de correspondance acceptent généralement une liste de modèles de correspondance et effectueront les actions appropriées si l'URL correspond à l'un des motifs. Voir, par exemple, la clé [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts) dans manifest.json.
+Les API qui utilisent des modèles de correspondance acceptent généralement une liste de modèles de correspondance et effectueront les actions appropriées si l'URL correspond à l'un des motifs. Voir, par exemple, la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) dans manifest.json.
 
 ## Structure du modèle de correspondance
 
-> **Note :** Certains navigateurs ne prennent pas en charge certains schémas.
-> Consultez le [tableau de compatibilité du navigateur](#Browser_compatibility) pour plus de détails.
+> [!NOTE]
+> Certains navigateurs ne prennent pas en charge certains schémas.
+> Consultez le [tableau de compatibilité du navigateur](#browser_compatibility) pour plus de détails.
 
 Tous les modèles de correspondance sont spécifiés comme des chaînes. Outre le motif spécial « [\<all_urls>](/fr/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E) », les modèles de correspondance se composent de trois partie : _schéma_, l'hôte, et le _chemin d'accès._ Le schéma et l'hôte sont séparés par « :// ».
 
@@ -93,7 +94,8 @@ La valeur du _chemin_ matches correspond à la chaîne de caractères qui est le
 
 Ni l'[identificateur de fragment d'URL](https://en.wikipedia.org/wiki/Fragment_identifier), ni le `#` qui le précède, ne sont considérés comme faisant partie du _chemin_.
 
-> **Note :** La chaîne de modèle de chemin d'accès ne doit pas inclure de numéro de port. Ajout d'un port, comme dans : `http://localhost:1234/*` fait que le motif de match est ignoré. Cependant, `http://localhost:1234` correspondra avec `http://localhost/*`.
+> [!NOTE]
+> La chaîne de modèle de chemin d'accès ne doit pas inclure de numéro de port. Ajout d'un port, comme dans : `http://localhost:1234/*` fait que le motif de match est ignoré. Cependant, `http://localhost:1234` correspondra avec `http://localhost/*`.
 
 ### \<all_urls>
 

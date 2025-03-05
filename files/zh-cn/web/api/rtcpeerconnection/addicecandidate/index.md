@@ -58,7 +58,8 @@ addIceCandidate(candidate, successCallback, failureCallback) // 已弃用
 
           更多信息请参见 {{domxref("RTCIceCandidate.candidate")}}。
 
-          > **备注：** 为了向后兼容历史版本的 WebRTC 规范，构造函数也接受一个字符串作为参数。
+          > [!NOTE]
+          > 为了向后兼容历史版本的 WebRTC 规范，构造函数也接受一个字符串作为参数。
 
     - `sdpMid` {{optional_inline}}
 

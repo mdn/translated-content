@@ -1,5 +1,5 @@
 ---
-title: ":host()"
+title: :host()
 slug: Web/CSS/:host_function
 l10n:
   sourceCommit: 252883e907316930561d4ce72f57b501d73c50f3
@@ -11,9 +11,54 @@ l10n:
 
 この最も明白な使用法は、特定のカスタム要素インスタンスにのみクラス名を付け、関数の引数として関連するクラスセレクターを指定することです。特定の祖先の内部にあるカスタム要素のインスタンスのみを選択するために、子孫セレクター式でこれを使用することはできません。それは {{CSSxRef(":host-context", ":host-context()")}} の仕事です。
 
-> **メモ:** 他にも、 {{CSSxRef(":is", ":is()")}} や {{CSSxRef(":not", ":not()")}} のような関数型擬似クラスは、引数として複合セレクターのリストを受け入れますが、 `:host()` は単一の複合セレクターを受け入れます。さらに、 `:is()` と `:not()` が引数の詳細度しか考慮しないのに対して、 `:host()` の詳細度は擬似クラスの詳細度**および**引数の詳細度の両方です。
+> [!NOTE]
+> 他にも、 {{CSSxRef(":is", ":is()")}} や {{CSSxRef(":not", ":not()")}} のような関数型擬似クラスは、引数として複合セレクターのリストを受け入れますが、 `:host()` は単一の複合セレクターを受け入れます。さらに、 `:is()` と `:not()` が引数の詳細度しか考慮しないのに対して、 `:host()` の詳細度は擬似クラスの詳細度**および**引数の詳細度の両方です。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-host_function.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :host()", "tabbed-shorter")}}
+
+```css interactive-example
+/* Following CSS is being applied inside the shadow DOM. */
+
+:host(h1) {
+  color: red;
+}
+
+:host(#shadow-dom-host) {
+  border: 2px dashed blue;
+}
+```
+
+```html interactive-example
+<!-- elements outside shadow dom -->
+<div id="container">
+  <h1 id="shadow-dom-host"></h1>
+</div>
+```
+
+```js interactive-example
+const shadowDom = init();
+
+// add a <span> element in the shadow DOM
+const span = document.createElement("span");
+span.textContent = "Inside shadow DOM";
+shadowDom.appendChild(span);
+
+// attach shadow DOM to the #shadow-dom-host element
+function init() {
+  const host = document.getElementById("shadow-dom-host");
+  const shadowDom = host.attachShadow({ mode: "open" });
+
+  const cssTab = document.querySelector("#css-output");
+  const shadowStyle = document.createElement("style");
+  shadowStyle.textContent = cssTab.textContent;
+  shadowDom.appendChild(shadowStyle);
+
+  cssTab.addEventListener("change", () => {
+    shadowStyle.textContent = cssTab.textContent;
+  });
+  return shadowDom;
+}
+```
 
 ```css
 /* セレクターの引数に一致する場合のみ、

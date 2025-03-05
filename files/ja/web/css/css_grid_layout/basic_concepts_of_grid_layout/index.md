@@ -478,7 +478,8 @@ CSS グリッドレイアウトについて学び、使っていく中で、こ�
 
 {{ EmbedLiveSample('Positioning_items_against_lines', '230', '450') }}
 
-> **メモ:** Firefox の開発者ツールで[グリッドインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)が使えることを忘れないでください。アイテムがグリッド線に対してどのように配置されるか知ることができます。
+> [!NOTE]
+> Firefox の開発者ツールで[グリッドインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)が使えることを忘れないでください。アイテムがグリッド線に対してどのように配置されるか知ることができます。
 
 ### 線による配置の一括指定
 
@@ -529,7 +530,8 @@ _グリッドセル_ は、グリッド上の最も小さな単位です。コ�
 }
 ```
 
-> **メモ:** グリッドが最初にブラウザーに実装されたとき、 {{cssxref("column-gap")}}, {{cssxref("row-gap")}}, {{cssxref("gap")}} に `grid-` の接頭辞がつき、それぞれ `grid-column-gap`, `grid-row-gap`, `grid-gap` のようになっていました。
+> [!NOTE]
+> グリッドが最初にブラウザーに実装されたとき、 {{cssxref("column-gap")}}, {{cssxref("row-gap")}}, {{cssxref("gap")}} に `grid-` の接頭辞がつき、それぞれ `grid-column-gap`, `grid-row-gap`, `grid-gap` のようになっていました。
 >
 > ブラウザーはすべて接頭辞なしの値に対応しましたが、接頭辞付きの版も安全に利用できるよう保守されるでしょう。
 

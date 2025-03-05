@@ -2,23 +2,39 @@
 title: Map.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Map/entries
 l10n:
-  sourceCommit: ab97df6ce8865569507bcfc884206a1ed297a690
+  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
 ---
 
 {{JSRef}}
 
-**`entries()`** 메서드는 새 [반복자](/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators)
-객체를 반환합니다. 이 객체에는 `Map` 객체의 각 요소에 대한 `[key, value]` 쌍이 삽입 순서대로 포함됩니다.
-이 특별한 경우, 이 반복자 객체도 반복이 가능하므로 for-of 루프를 사용할 수 있습니다. `[Symbol.iterator]` 프로토콜이
-사용될 경우, 호출될 때 반복자 자체를 반환하는 함수를 반환합니다.
+{{jsxref("Map")}} 객체의 **`entries()`** 메서드는 이 Map의 각 요소의 `[key, value]`쌍을 삽입 순서대로 가지는 새로운 [맵 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator) 객체를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-entries.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.entries()")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("0", "foo");
+map1.set(1, "bar");
+
+const iterator1 = map1.entries();
+
+console.log(iterator1.next().value);
+// Expected output: Array ["0", "foo"]
+
+console.log(iterator1.next().value);
+// Expected output: Array [1, "bar"]
+```
 
 ## 구문
 
 ```js-nolint
 entries()
 ```
+
+### 매개변수
+
+없음.
 
 ### 반환 값
 

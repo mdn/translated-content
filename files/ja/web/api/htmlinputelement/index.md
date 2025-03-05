@@ -2,7 +2,7 @@
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
 l10n:
-  sourceCommit: 562fa094ba46f4b118daf30321820dbf13800eba
+  sourceCommit: 050bcdba594e759c0a4dde172de5d334f5a3b20f
 ---
 
 {{APIRef("HTML DOM")}}
@@ -162,6 +162,10 @@ _親インターフェイスである {{domxref("HTMLElement")}} から継承し
 
   - : 文字列で、サーバーが受け入れるファイル形式をカンマ区切りのリストで表すこの要素の [`accept`](/ja/docs/Web/HTML/Element/input#accept) 属性を表します。
 
+- {{domxref("HTMLInputElement.capture", "capture")}}
+
+  - : 文字列で、この要素の [`capture`](/ja/docs/Web/HTML/Element/input#capture) 属性を表し、ファイルアップロードコントロール内でメディアキャプチャの入力方法を示します。
+
 - {{domxref("HTMLInputElement.files", "files")}}
 
   - : {{domxref("FileList")}} で、アップロードするために選択されたファイルのリストを表します。
@@ -178,10 +182,6 @@ _親インターフェイスである {{domxref("HTMLElement")}} から継承し
 - {{domxref("HTMLInputElement.autocomplete", "autocomplete")}}
 
   - : 文字列で、この要素の [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) 属性を表します。これはコントロールの値をブラウザーで自動的に補完できるかどうかを示します。
-
-- {{domxref("HTMLInputElement.capture", "capture")}}
-
-  - : 文字列で、この要素の [`capture`](/ja/docs/Web/HTML/Element/input#capture) 属性を表し、ファイルアップロードコントロール内でメディアキャプチャの入力方法を示します。
 
 - {{domxref("HTMLInputElement.max", "max")}}
 
@@ -213,7 +213,7 @@ _親インターフェイスである {{domxref("HTMLElement")}} から継承し
 
 - {{domxref("HTMLInputElement.selectionDirection", "selectionDirection")}}
 
-  - : 文字列で、選択された方向を表します。可能な値は、 `forward` （現在のロケールの文頭から文末の方向に選択）、 `backward` （逆方向）、 `none` （方向は不明）のいずれかです。。
+  - : 文字列で、選択された方向を表します。可能な値は、 `forward` （現在のロケールの文頭から文末の方向に選択）、 `backward` （逆方向）、 `none` （方向は不明）のいずれかです。
 
 - {{domxref("HTMLInputElement.selectionEnd", "selectionEnd")}}
 

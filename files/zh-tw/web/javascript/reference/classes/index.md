@@ -100,7 +100,7 @@ console.log(square.area); //100
 
 ### 靜態方法(Static methods)
 
-關鍵字 [`static`](/zh-TW/docs/Web/JavaScript/Reference/Classes/static) 定義了一個類別的靜態方法，靜態方法不需要[實體化](/zh-TW/docs/Learn/JavaScript/Objects)它所屬類別的實例就可以被呼叫，它也**無法**被已實體化的類別物件呼叫。靜態方法經常被用來建立給應用程式使用的工具函數。
+關鍵字 [`static`](/zh-TW/docs/Web/JavaScript/Reference/Classes/static) 定義了一個類別的靜態方法，靜態方法不需要[實體化](/zh-TW/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)它所屬類別的實例就可以被呼叫，它也**無法**被已實體化的類別物件呼叫。靜態方法經常被用來建立給應用程式使用的工具函數。
 
 ```js
 class Point {
@@ -178,7 +178,8 @@ class Rectangle {
 
 通過宣告這些在類別以外不可見的東西，你可以確保類別的使用者不會倚賴類別的內部結構，畢竟一個類別的內部結構可能會隨著版本的更新而有所變化。
 
-> **備註：** 私有欄位只能在建立類別時事先宣告。
+> [!NOTE]
+> 私有欄位只能在建立類別時事先宣告。
 
 私有欄位不像普通欄位一樣，可以在類別宣告完後才建立。
 

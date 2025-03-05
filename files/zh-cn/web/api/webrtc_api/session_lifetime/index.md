@@ -5,7 +5,8 @@ slug: Web/API/WebRTC_API/Session_lifetime
 
 {{DefaultAPISidebar("WebRTC")}}
 
-> **备注：** 此页面正在建设中，部分内容会移至其他页面，因为 WebRTC 指导资料已经建成。
+> [!NOTE]
+> 此页面正在建设中，部分内容会移至其他页面，因为 WebRTC 指导资料已经建成。
 >
 > WebRTC 允许你将任意数据，音频或视频（或其任何组合）的点对点通信构建到浏览器应用程序中。在本文中，我们将介绍一个 WebRTC 会话的生命周期，从建立连接到不再需要时关闭连接。
 
@@ -21,7 +22,7 @@ slug: Web/API/WebRTC_API/Session_lifetime
 
 ### 信令
 
-信令是在两个设备之间发送控制信息以确定通信协议、信道、媒体编解码器和格式以及数据传输方法以及任何所需的路由信息的过程。关于 WebRTC 的信令流程最重要的一点是：**信令在规范中并没有定义。**所以开发者需要自己决定如何实现这个过程。开发者可以为应用程序引擎选择任意的信息协议（如 SIP 或 XMPP），任意双向通信信道（如 WebSocket 或 XMLHttpRequest) 与持久连接服务器的 API（如[Google Channel API](https://developers.google.com/appengine/docs/python/channel/overview)）一起工作。
+信令是在两个设备之间发送控制信息以确定通信协议、信道、媒体编解码器和格式以及数据传输方法以及任何所需的路由信息的过程。关于 WebRTC 的信令流程最重要的一点是：**信令在规范中并没有定义。**
 
 你可能会想，为什么这么一个对于建立 WebRTC 连接至关重要的基本过程居然没有定义在规范里？答案很简单：由于两个设备无法直接相互联系，规范无法预测 WebRTC 的所有可能用例，因此更明智的做法就是让开发人员们自己选择合适的网络技术和消息传递协议。
 
@@ -77,4 +78,5 @@ LocalMediaStream object
 
 WebRTC 在 Firefox 浏览器的偏好选择选项是隐藏的。可以到 [about:config](/about:config) 这个页面设置 'media.navigator.enabled' 为 'true'。
 
-> **备注：** 在 Source tree 中有一些测试文件可以提供给你关于 WebRTC 如何工作的一个想法。具体例子请查看：[dom/media/tests/local_video_test.html](http://hg.mozilla.org/projects/alder/file/tip/dom/media/tests/local_video_test.html)。你也可以尝试 [服务器 demo](http://webrtc-demo.herokuapp.com/mozdemo) ，源代码： [server source](https://github.com/anantn/webrtc-demo/)。
+> [!NOTE]
+> 在 Source tree 中有一些测试文件可以提供给你关于 WebRTC 如何工作的一个想法。具体例子请查看：[dom/media/tests/local_video_test.html](http://hg.mozilla.org/projects/alder/file/tip/dom/media/tests/local_video_test.html)。你也可以尝试 [服务器 demo](http://webrtc-demo.herokuapp.com/mozdemo) ，源代码： [server source](https://github.com/anantn/webrtc-demo/)。

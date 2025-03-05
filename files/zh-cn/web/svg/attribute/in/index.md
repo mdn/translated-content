@@ -75,7 +75,8 @@ l10n:
 
 在现代浏览器中，`BackgroundImage` 不支持作为滤镜源（请参见 [feComposite 兼容性表](/zh-CN/docs/Web/SVG/Element/feComposite#浏览器兼容性)）。因此，我们需要在滤镜内部使用 `<feImage>` 元素导入一个图像进行混合。
 
-> **备注：** Firefox [Bug 455986](https://bugzil.la/455986) 表明了 `feImage` 无法加载图像的一部分（包括在文档中定义的圆圈、矩形、路径或其他片段）。因此，为了使此示例在更多浏览器上工作，我们加载了完整的外部标志图像。
+> [!NOTE]
+> Firefox [Bug 455986](https://bugzil.la/455986) 表明了 `feImage` 无法加载图像的一部分（包括在文档中定义的圆圈、矩形、路径或其他片段）。因此，为了使此示例在更多浏览器上工作，我们加载了完整的外部标志图像。
 
 ### HTML
 

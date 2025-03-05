@@ -16,7 +16,8 @@ l10n:
 
 ## 例
 
-> **メモ:** 完全な三次元音声空間処理の例は、 [panner-node](https://github.com/mdn/webaudio-examples/tree/main/panner-node) のデモを参照してください。
+> [!NOTE]
+> 完全な三次元音声空間処理の例は、 [panner-node](https://github.com/mdn/webaudio-examples/tree/main/panner-node) のデモを参照してください。
 
 ```js
 const audioCtx = new AudioContext();

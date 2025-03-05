@@ -31,7 +31,8 @@ slug: Web/API/Document/scroll_event
   </tbody>
 </table>
 
-> **Примечание:** В iOS UIWebViews события `scroll` не срабатывают во время самого прокручивания, только по его завершении. См. [issue в Bootstrap #16202](https://github.com/twbs/bootstrap/issues/16202). Safari и WKWebViews не подвержены этому багу.
+> [!NOTE]
+> В iOS UIWebViews события `scroll` не срабатывают во время самого прокручивания, только по его завершении. См. [issue в Bootstrap #16202](https://github.com/twbs/bootstrap/issues/16202). Safari и WKWebViews не подвержены этому багу.
 
 ## Примеры
 

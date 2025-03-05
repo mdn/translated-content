@@ -71,6 +71,6 @@ var bigint64 = new BigInt64Array(iterable);
 
 ## 関連情報
 
-- [JavaScript typed arrays](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("BigUint64Array")}}
 - {{jsxref("DataView")}}

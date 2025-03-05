@@ -9,7 +9,8 @@ l10n:
 
 **`<maction>`** [MathML](/zh-CN/docs/Web/MathML) 元素允许将行为绑定到数学表达式上。默认情况下，只有第一个子元素会被渲染，但是一些浏览器可能会根据 `actiontype` 和 `selection` 属性来实现自定义行为。
 
-> **备注：** 从历史的角度来看，该元素提供了一种使 MathML 公式可以交互的机制。但如今，建议使用 [JavaScript](/zh-CN/docs/Web/JavaScript) 和其他 Web 技术来实现这种用例。
+> [!NOTE]
+> 从历史的角度来看，该元素提供了一种使 MathML 公式可以交互的机制。但如今，建议使用 [JavaScript](/zh-CN/docs/Web/JavaScript) 和其他 Web 技术来实现这种用例。
 
 ## 属性
 

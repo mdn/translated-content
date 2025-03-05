@@ -1,11 +1,12 @@
 ---
 title: console：profileEnd() 静态方法
-slug: Web/API/console/profileend_static
+slug: Web/API/console/profileEnd_static
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
 
-> **警告：** 在 console.profile() 之后立刻调用此 API 可能会导致其无法工作。为解决此问题，请在 setTimeOut 中至少延迟 5 毫秒后再调用。请看 [bug #1173588](https://bugzilla.mozilla.org/show_bug.cgi?id=1173588)。
+> [!WARNING]
+> 在 console.profile() 之后立刻调用此 API 可能会导致其无法工作。为解决此问题，请在 setTimeOut 中至少延迟 5 毫秒后再调用。请看 [bug #1173588](https://bugzilla.mozilla.org/show_bug.cgi?id=1173588)。
 
 profileEnd 方法会停止记录之前已经由{{domxref("console.profile()")}}开始记录的性能描述信息
 
