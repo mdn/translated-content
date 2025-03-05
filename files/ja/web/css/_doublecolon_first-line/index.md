@@ -14,7 +14,25 @@ p::first-line {
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-first-line.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::first-line", "tabbed-shorter")}}
+
+```css interactive-example
+p::first-line {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+```
+
+```html interactive-example
+<p>
+  In warm ocean waters around the world, you may see a strange sight: A fish
+  leaping from the water and soaring dozens of meters before returning to the
+  ocean's depths. Early Mediterranean sailors thought these flying fish returned
+  to the shore at night to sleep, and therefore called this family of marine
+  fish Exocoetidae.
+</p>
+```
 
 > [!NOTE]
 > CSS3 では `::first-line` という (二重コロン付き) 表記が、[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)と[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を見分けやすくするために導入されました。ブラウザーでは CSS2 で導入された `:first-line` も使用できます。

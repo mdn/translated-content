@@ -320,7 +320,7 @@
 /zh-CN/docs/DOM/document.contentType	/zh-CN/docs/Web/API/Document/contentType
 /zh-CN/docs/DOM/document.createAttribute	/zh-CN/docs/Web/API/Document/createAttribute
 /zh-CN/docs/DOM/document.createComment	/zh-CN/docs/Web/API/Document/createComment
-/zh-CN/docs/DOM/document.createElement	/zh-CN/docs/Web/API/document/createElement
+/zh-CN/docs/DOM/document.createElement	/zh-CN/docs/Web/API/Document/createElement
 /zh-CN/docs/DOM/document.createExpression	/zh-CN/docs/Web/API/Document/createExpression
 /zh-CN/docs/DOM/document.createTextNode	/zh-CN/docs/Web/API/Document/createTextNode
 /zh-CN/docs/DOM/document.currentScript	/zh-CN/docs/Web/API/Document/currentScript
@@ -349,7 +349,7 @@
 /zh-CN/docs/DOM/document.referrer	/zh-CN/docs/Web/API/Document/referrer
 /zh-CN/docs/DOM/document.releaseCapture	/zh-CN/docs/Web/API/Document/releaseCapture
 /zh-CN/docs/DOM/document.width	/zh-CN/docs/Web/API/Element/clientWidth
-/zh-CN/docs/DOM/element	/zh-CN/docs/Web/API/element
+/zh-CN/docs/DOM/element	/zh-CN/docs/Web/API/Element
 /zh-CN/docs/DOM/element.addEventListener	/zh-CN/docs/Web/API/EventTarget/addEventListener
 /zh-CN/docs/DOM/element.attributes	/zh-CN/docs/Web/API/Element/attributes
 /zh-CN/docs/DOM/element.childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
@@ -412,7 +412,7 @@
 /zh-CN/docs/DOM/form.reset	/zh-CN/docs/Web/API/HTMLFormElement/reset
 /zh-CN/docs/DOM/form.submit	/zh-CN/docs/Web/API/HTMLFormElement/submit
 /zh-CN/docs/DOM/navigator.doNotTrack	/zh-CN/docs/Web/API/Navigator/doNotTrack
-/zh-CN/docs/DOM/range	/zh-CN/docs/Web/API/range
+/zh-CN/docs/DOM/range	/zh-CN/docs/Web/API/Range
 /zh-CN/docs/DOM/stylesheet.insertRule	/zh-CN/docs/Web/API/CSSStyleSheet/insertRule
 /zh-CN/docs/DOM/table.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
 /zh-CN/docs/DOM/window	/zh-CN/docs/Web/API/Window
@@ -467,11 +467,11 @@
 /zh-CN/docs/DOM:HTMLDocument	/zh-CN/docs/Web/API/HTMLDocument
 /zh-CN/docs/DOM:XMLDocument	/zh-CN/docs/Web/API/XMLDocument
 /zh-CN/docs/DOM:document	/zh-CN/docs/Web/API/Document
-/zh-CN/docs/DOM:document.createElement	/zh-CN/docs/Web/API/document/createElement
+/zh-CN/docs/DOM:document.createElement	/zh-CN/docs/Web/API/Document/createElement
 /zh-CN/docs/DOM:document.designMode	/zh-CN/docs/Web/API/Document/designMode
 /zh-CN/docs/DOM:document.evaluate	/zh-CN/docs/Web/API/Document/evaluate
 /zh-CN/docs/DOM:document.getElementById	/zh-CN/docs/Web/API/Document/getElementById
-/zh-CN/docs/DOM:element	/zh-CN/docs/Web/API/element
+/zh-CN/docs/DOM:element	/zh-CN/docs/Web/API/Element
 /zh-CN/docs/DOM:element.attributes	/zh-CN/docs/Web/API/Element/attributes
 /zh-CN/docs/DOM:element.childNodes	/zh-CN/docs/Web/API/Node/childNodes
 /zh-CN/docs/DOM:element.className	/zh-CN/docs/Web/API/Element/className
@@ -489,7 +489,7 @@
 /zh-CN/docs/DOM:element.onblur	/zh-CN/docs/Web/API/Window/blur_event
 /zh-CN/docs/DOM:element.removeAttribute	/zh-CN/docs/Web/API/Element/removeAttribute
 /zh-CN/docs/DOM:event	/zh-CN/docs/Web/API/Event
-/zh-CN/docs/DOM:range	/zh-CN/docs/Web/API/range
+/zh-CN/docs/DOM:range	/zh-CN/docs/Web/API/Range
 /zh-CN/docs/DOM:window	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/DOM:window.onresize	/zh-CN/docs/Web/API/Window/resize_event
 /zh-CN/docs/DOM:window.open	/zh-CN/docs/Web/API/Window/open
@@ -765,8 +765,8 @@
 /zh-CN/docs/JS-ref/String/toLowerCase	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 /zh-CN/docs/JS-ref/String/toUpperCase	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 /zh-CN/docs/JS-ref/WeakMap	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
-/zh-CN/docs/JS-ref/arrow_functions	/zh-CN/docs/Web/JavaScript/Reference/Functions/arrow_functions
-/zh-CN/docs/JS-ref/default_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/default_parameters
+/zh-CN/docs/JS-ref/arrow_functions	/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+/zh-CN/docs/JS-ref/default_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters
 /zh-CN/docs/JS-ref/rest_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters
 /zh-CN/docs/JavaScript	/zh-CN/docs/Web/JavaScript
 /zh-CN/docs/JavaScript-840092-dup	/zh-CN/docs/Web/JavaScript
@@ -1008,9 +1008,9 @@
 /zh-CN/docs/JavaScript/Reference/String/toLowerCase	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 /zh-CN/docs/JavaScript/Reference/String/toUpperCase	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 /zh-CN/docs/JavaScript/Reference/WeakMap	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
-/zh-CN/docs/JavaScript/Reference/arrow_functions	/zh-CN/docs/Web/JavaScript/Reference/Functions/arrow_functions
-/zh-CN/docs/JavaScript/Reference/default_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/default_parameters
-/zh-CN/docs/JavaScript/Reference/default_parameters-redirect-1	/zh-CN/docs/Web/JavaScript/Reference/Functions/default_parameters
+/zh-CN/docs/JavaScript/Reference/arrow_functions	/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+/zh-CN/docs/JavaScript/Reference/default_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters
+/zh-CN/docs/JavaScript/Reference/default_parameters-redirect-1	/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters
 /zh-CN/docs/JavaScript/Reference/rest_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters
 /zh-CN/docs/JavaScript/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Same-origin_policy
 /zh-CN/docs/JavaScript/Strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
@@ -2483,6 +2483,7 @@
 /zh-CN/docs/Web/CSS/Reference/Webkit_Extensions	/zh-CN/docs/Web/CSS/WebKit_Extensions
 /zh-CN/docs/Web/CSS/Reference/background-blend-mode	/zh-CN/docs/Web/CSS/background-blend-mode
 /zh-CN/docs/Web/CSS/Reference/mix-blend-mode	/zh-CN/docs/Web/CSS/mix-blend-mode
+/zh-CN/docs/Web/CSS/Shorthand_properties	/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties
 /zh-CN/docs/Web/CSS/Specificity	/zh-CN/docs/Web/CSS/CSS_cascade/Specificity
 /zh-CN/docs/Web/CSS/Syntax	/zh-CN/docs/Web/CSS/CSS_syntax/Syntax
 /zh-CN/docs/Web/CSS/Tools	/zh-CN/docs/Web/CSS
@@ -2495,6 +2496,7 @@
 /zh-CN/docs/Web/CSS/Using_CSS_custom_properties	/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 /zh-CN/docs/Web/CSS/Using_CSS_variables	/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 /zh-CN/docs/Web/CSS/Value_definition_syntax	/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+/zh-CN/docs/Web/CSS/Viewport_concepts	/zh-CN/docs/Web/CSS/CSSOM_view/Viewport_concepts
 /zh-CN/docs/Web/CSS/actual_value	/zh-CN/docs/Web/CSS/CSS_cascade/actual_value
 /zh-CN/docs/Web/CSS/attr()	/zh-CN/docs/Web/CSS/attr
 /zh-CN/docs/Web/CSS/box_model	/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
@@ -3071,8 +3073,8 @@
 /zh-CN/docs/Web/JavaScript/Reference/String/toUpperCase	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 /zh-CN/docs/Web/JavaScript/Reference/WeakMap	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
 /zh-CN/docs/Web/JavaScript/Reference/WeakMap/delete	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/delete
-/zh-CN/docs/Web/JavaScript/Reference/arrow_functions	/zh-CN/docs/Web/JavaScript/Reference/Functions/arrow_functions
-/zh-CN/docs/Web/JavaScript/Reference/default_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/default_parameters
+/zh-CN/docs/Web/JavaScript/Reference/arrow_functions	/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+/zh-CN/docs/Web/JavaScript/Reference/default_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters
 /zh-CN/docs/Web/JavaScript/Reference/eval	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval
 /zh-CN/docs/Web/JavaScript/Reference/rest_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters
 /zh-CN/docs/Web/JavaScript/Reference/template_strings	/zh-CN/docs/Web/JavaScript/Reference/Template_literals

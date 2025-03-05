@@ -14,7 +14,42 @@ input:required {
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-required.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: :required", "tabbed-standard")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+.req {
+  color: red;
+}
+
+*:required {
+  background-color: gold;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="name">Name: <span class="req">*</span></label>
+  <input id="name" name="name" type="text" required />
+
+  <label for="birth">Date of Birth:</label>
+  <input id="birth" name="birth" type="date" />
+
+  <label for="origin"
+    >How did you find out about us? <span class="req">*</span></label
+  >
+  <select id="origin" name="origin" required>
+    <option>Google</option>
+    <option>Facebook</option>
+    <option>Advertisement</option>
+  </select>
+  <p><span class="req">*</span> - Required field</p>
+</form>
+```
 
 この擬似クラスは、フォームを送信する前に有効なデータを持っている必要がある入力欄を強調表示するのに便利です。
 

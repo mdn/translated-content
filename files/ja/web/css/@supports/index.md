@@ -23,7 +23,35 @@ slug: Web/CSS/@supports
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-supports.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: @supports", "tabbed-standard")}}
+
+```css interactive-example
+.flex-container > * {
+  padding: 0.3em;
+  list-style-type: none;
+  text-shadow: 0 0 2px red;
+  float: left;
+}
+
+@supports (display: flex) {
+  .flex-container > * {
+    text-shadow: 0 0 2px blue;
+    float: none;
+  }
+
+  .flex-container {
+    display: flex;
+  }
+}
+```
+
+```html interactive-example
+<ul class="flex-container">
+  <li><a href="#">Index</a></li>
+  <li><a href="#">About me</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+```
 
 JavaScript では `@supports` は CSS オブジェクトモデルインターフェイスの {{DOMxRef("CSSSupportsRule")}} からアクセスできます。
 
