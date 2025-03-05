@@ -33,7 +33,7 @@ l10n:
 ```
 
 ```html interactive-example
-<p class="alert">Beware of the zombies</p>
+<p class="alert">Остерегайтесь зомби!</p>
 ```
 
 ## Синтаксис
