@@ -27,9 +27,9 @@ slug: Web/API/DataTransferItem
 - {{domxref("DataTransferItem.webkitGetAsEntry()")}} {{Non-standard_inline}}
   - : 返回一个基于 {{domxref("FileSystemEntry")}} 的对象来表示文件系统中选中的项目。通常是返回一个{{domxref("FileSystemFileEntry")}} 或是 {{domxref("FileSystemDirectoryEntry")}} 对象。
 
-## 例子
+## 示例
 
-这个接口所有的属性和方法都有自己的介绍页，请到各自的介绍页中查看示例用法。
+这个接口所有的属性和方法都有自己的参考页，请到各自的参考页中查看用法示例。
 
 ## 规范
 
