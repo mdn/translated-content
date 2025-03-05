@@ -7,15 +7,10 @@ slug: Web/HTTP/Status/226
 
 HTTP **`226 IM Used`** [成功响应](/zh-CN/docs/Web/HTTP/Status#successful_responses)状态代码表示服务器在响应 {{HTTPMethod("GET")}} 请求时返回了一个 {{Glossary("delta")}}。该状态码用于 HTTP delta 编码的上下文中。
 
-`IM` 是 _instance manipulation_ 的缩写，指的是生成一个 _delta_ 算法。在 delta 编码中，客户端发送一个 {{HTTPMethod("GET")}} 请求，并携带了两个头部信息，`A-IM:` 表示偏好使用的差异算法，{{HTTPHeader("If-None-Match")}} 指定了客户端已有的资源版本。
-服务器会返回相对于给定基础文档的增量，而不是完整的文档。
-此响应使用 `226` 状态码，一个描述所用差异算法的 `IM:` 标头，并可能包含一个 `Delta-Base:` 标头，其中带有与 delta 关联的基础文档的 {{HTTPHeader("ETag")}}。
+`IM` 是 _instance manipulation_ 的缩写，指的是生成一个 _delta_ 算法。在 delta 编码中，客户端发送一个 {{HTTPMethod("GET")}} 请求，并携带了两个头部信息，`A-IM:` 表示偏好使用的差异算法，{{HTTPHeader("If-None-Match")}} 指定了客户端已有的资源版本。 服务器会返回相对于给定基础文档的增量，而不是完整的文档。 此响应使用 `226` 状态码，一个描述所用差异算法的 `IM:` 标头，并可能包含一个 `Delta-Base:` 标头，其中带有与 delta 关联的基础文档的 {{HTTPHeader("ETag")}}。
 
-> [! 警告]
-> 对 HTTP delta 编码的支持较差，这意味着实现的情况很少。
-> 相反，大多数系统只依靠 [压缩请求](/zh-CN/docs/Web/HTTP/Compression) 来减少带宽，不过也可以将压缩和 delta 编码结合起来。
->
-> 即使客户端和服务器支持 delta 编码，代理或缓存可能不支持，且实现 HTTP 增量编码的复杂性可能超过其带来的收益。
+> [! NOTE]
+> 对 HTTP delta 编码的支持较差，这意味着实现的情况很少。相反，大多数系统只依靠[压缩请求](/zh-CN/docs/Web/HTTP/Compression)来减少带宽，不过也可以将压缩和 delta 编码结合起来。即使客户端和服务器支持 delta 编码，代理或缓存可能不支持，且实现 HTTP 增量编码的复杂性可能超过其带来的收益。
 
 ## 状态
 
