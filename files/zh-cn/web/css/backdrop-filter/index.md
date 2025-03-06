@@ -47,7 +47,7 @@ backdrop-filter: unset;
 
 - `none`
   - : 没有应用于背景的滤镜。
-- `<filter-function-list>`
+- `<filter-value-list>`
   - : 以空格分隔的 {{cssxref("&lt;filter-function&gt;")}} 或是要应用到背景上的 [SVG 滤镜](/zh-CN/docs/Web/SVG/Element/filter)。CSS 的 `<filter-function>` 包括 {{CSSxRef("filter-function/blur", "blur()")}}、{{CSSxRef("filter-function/brightness", "brightness()")}}、{{CSSxRef("filter-function/contrast", "contrast()")}}、{{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}、{{CSSxRef("filter-function/grayscale", "grayscale()")}}、{{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}、{{CSSxRef("filter-function/invert", "invert()")}}、{{CSSxRef("filter-function/opacity", "opacity()")}}、{{CSSxRef("filter-function/saturate", "saturate()")}} 和 {{CSSxRef("filter-function/sepia", "sepia()")}}。
 
 ## 形式定义
