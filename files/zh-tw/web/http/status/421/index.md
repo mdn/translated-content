@@ -45,6 +45,6 @@ Server: Apache/2.4.1 (Unix)
 - [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
 - [多個主機與錯誤導向請求](https://httpd.apache.org/docs/2.4/mod/mod_http2.html#misdirected) Apache 伺服器文件
 - [TLS 1.3](/zh-TW/docs/Web/Security/Transport_Layer_Security#tls_1.3)
-- [伺服器名稱指示 (SNI)](https://en.wikipedia.org/wiki/Server_Name_Indication)
-- [傳輸層安全性 (TLS) 配置](/zh-TW/docs/Web/Security/Practical_implementation_guides/TLS)
+- [伺服器名稱指示（SNI）](https://en.wikipedia.org/wiki/Server_Name_Indication)
+- [傳輸層安全性（TLS）配置](/zh-TW/docs/Web/Security/Practical_implementation_guides/TLS)
 - Apache [錯誤代碼 `AH02032`](https://svn.apache.org/viewvc?view=revision&revision=1705672) 實作
