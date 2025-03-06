@@ -43,11 +43,11 @@ Un booléen représente le résultat d'une assertion logique et peut avoir deux 
 
 ### Le type nul
 
-Le type nul ne possède qu'une valeur&nbsp;: `null`. Voir [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null) et [la page du glossaire](/fr/docs/Glossary/Null) pour plus d'informations.
+Le type nul ne possède qu'une valeur&nbsp;: `null`. Voir [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) et [la page du glossaire](/fr/docs/Glossary/Null) pour plus d'informations.
 
 ### Le type indéfini
 
-Une variable à laquelle on n'a pas affecté de valeur vaudra `undefined`. Voir [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) et [la page du glossaire](/fr/docs/Glossary/undefined) pour plus d'informations.
+Une variable à laquelle on n'a pas affecté de valeur vaudra `undefined`. Voir [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) et [la page du glossaire](/fr/docs/Glossary/Undefined) pour plus d'informations.
 
 ### Les types numériques
 
@@ -135,7 +135,7 @@ En résumé, les chaînes doivent être utilisées pour les données de texte. P
 
 Un symbole est une valeur primitive **unique** et **immuable** pouvant être utilisée comme clé pour propriété d'un objet (voir ci-après). Dans d'autres langages de programmation, les symboles sont appelés atomes.
 
-Pour plus de détails, voir les pages [du glossaire](/fr/docs/Glossary/Symbol) et de [`Symbol`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) JavaScript.
+Pour plus de détails, voir les pages [du glossaire](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) et de [`Symbol`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) JavaScript.
 
 ## Les objets
 
@@ -242,7 +242,7 @@ Lorsqu'on souhaite représenter des dates, il est tout indiqué d'utiliser le ty
 
 De plus, les tableaux héritent de `Array.prototype` qui permet de bénéficier de plusieurs méthodes pour manipuler les tableaux. Par exemple, [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) qui permet de rechercher une valeur dans le tableau ou [`push()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push) qui permet d'ajouter un élément au tableau. Les tableaux sont donc indiqués quand on souhaite représenter des listes de valeurs ou d'objets.
 
-[Les tableaux typés](/fr/docs/Web/JavaScript/Typed_arrays) (<i lang="en">Typed Arrays</i> en anglais) ont été ajoutés avec ECMAScript 2015 et offrent une vue sous forme d'un tableau pour manipuler des tampons de données binaires. Le tableau qui suit illustre les types de données équivalents en C&nbsp;:
+[Les tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays) (<i lang="en">Typed Arrays</i> en anglais) ont été ajoutés avec ECMAScript 2015 et offrent une vue sous forme d'un tableau pour manipuler des tampons de données binaires. Le tableau qui suit illustre les types de données équivalents en C&nbsp;:
 
 <table class="standard-table">
   <tbody>

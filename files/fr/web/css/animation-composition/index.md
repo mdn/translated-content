@@ -31,7 +31,7 @@ animation-composition: unset;
 ```
 
 > [!NOTE]
-> Lorsqu'on indique plusieurs valeurs, séparées par des virgules, à une propriété `animation-*`, celles-ci seront appliquées aux animations selon leur ordre d'apparition dans [`animation-name`](/fr/docs/Web/CSS/animation-name). Si le nombre d'animations et de compositions est différent, les valeurs de `animation-composition` seront réutilisées en bouclant depuis le début, jusqu'à ce que toutes les animations aient reçue une valeur `animation-composition`. Pour plus d'informations, voir [définir les valeurs de propriétés pour plusieurs animations](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
+> Lorsqu'on indique plusieurs valeurs, séparées par des virgules, à une propriété `animation-*`, celles-ci seront appliquées aux animations selon leur ordre d'apparition dans [`animation-name`](/fr/docs/Web/CSS/animation-name). Si le nombre d'animations et de compositions est différent, les valeurs de `animation-composition` seront réutilisées en bouclant depuis le début, jusqu'à ce que toutes les animations aient reçue une valeur `animation-composition`. Pour plus d'informations, voir [définir les valeurs de propriétés pour plusieurs animations](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values).
 
 ### Valeurs
 
@@ -168,5 +168,5 @@ Ici, la valeur sous-jacente est `translateX(50px) rotate(45deg)`.
 
 ## Voir aussi
 
-- [Utiliser des animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Utiliser des animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - [La propriété `composite` de l'interface `KeyFrameEffect` de l'API Web Animations](/fr/docs/Web/API/KeyframeEffect/composite)

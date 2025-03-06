@@ -1,7 +1,6 @@
 ---
 title: Глобальная функция setInterval()
 slug: Web/API/Window/setInterval
-original_slug: Web/API/setInterval
 ---
 
 {{APIRef("HTML DOM")}}{{AvailableInWorkers}}
@@ -22,7 +21,7 @@ var intervalID = scope.setInterval(code, delay);
 - `code`
   - : Этот необязательный синтаксис позволяет вам включать строку вместо функции, которая компилируется и выполняется каждые `delay` миллисекунд. Однако такая форма не рекомендуется по тем же причинам, которые делают {{jsxref("eval", "eval()")}} угрозой безопасности.
 - `delay`
-  - : Время в миллисекундах (одна тысячная секунды), на которое таймер выполнит задержку между вызовом функции. Если задано значение меньше 10, то будет использовано число 10. На самом деле задержка может быть больше чем указано, дополнительное объяснение приведено здесь: [Reasons for delays longer than specified](/ru/docs/Web/API/setTimeout#объяснение).
+  - : Время в миллисекундах (одна тысячная секунды), на которое таймер выполнит задержку между вызовом функции. Если задано значение меньше 10, то будет использовано число 10. На самом деле задержка может быть больше чем указано, дополнительное объяснение приведено здесь: [Reasons for delays longer than specified](/ru/docs/Web/API/Window/setTimeout#объяснение).
 - `param1, ..., paramN` {{optional_inline}}
   - : Дополнительные параметры, передаваемые в функцию _func_.
 
@@ -91,7 +90,7 @@ function myCallback() {
 
 ### Пример 3: Симуляция пишущей машинки
 
-The following example simulates typewriter by first clearing and then slowly typing content into the [`NodeList`](/ru/docs/DOM/NodeList) that matches a specified group of selectors.
+The following example simulates typewriter by first clearing and then slowly typing content into the [`NodeList`](/ru/docs/Web/API/NodeList) that matches a specified group of selectors.
 
 ```html
 <!doctype html>
@@ -337,7 +336,7 @@ Nullam commodo suscipit lacus non aliquet. Phasellus ac nisl lorem, sed facilisi
 </html>
 ```
 
-[View this demo in action](/files/3997/typewriter.html). See also: [`clearInterval()`](/ru/docs/DOM/window.clearInterval).
+[View this demo in action](/files/3997/typewriter.html). See also: [`clearInterval()`](/ru/docs/Web/API/Window/clearInterval).
 
 ## Аргументы колбэк-функции
 
@@ -419,7 +418,7 @@ Starting in Gecko 5.0, intervals are clamped to fire no more often than once per
 
 ## Проблема с "[`this`](/ru/docs/Web/JavaScript/Reference/Operators/this)"
 
-When you pass a method to `setInterval()` or any other function, it is invoked with the wrong [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this) value. This problem is explained in detail in the [JavaScript reference](/ru/docs/Web/JavaScript/Reference/Operators/this#As_an_object_method).
+When you pass a method to `setInterval()` or any other function, it is invoked with the wrong [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this) value. This problem is explained in detail in the [JavaScript reference](/ru/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
 
 ### Объяснение
 
@@ -448,7 +447,7 @@ As you can see there are no ways to pass the `this` object to the callback funct
 
 ### Возможное решение
 
-A possible way to solve the "`this`" problem is to replace the two native `setTimeout()` or `setInterval()` global functions with two _non-native_ ones that enable their invocation through the [`Function.prototype.call`](/ru/docs/JavaScript/Reference/Global_Objects/Function/call) method. The following example shows a possible replacement:
+A possible way to solve the "`this`" problem is to replace the two native `setTimeout()` or `setInterval()` global functions with two _non-native_ ones that enable their invocation through the [`Function.prototype.call`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/call) method. The following example shows a possible replacement:
 
 ```js
 // Enable the passage of the 'this' object through the JavaScript timers
@@ -503,11 +502,11 @@ setTimeout.call(myArray, myArray.myMethod, 2000); // prints "zero,one,two" after
 setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 seconds
 ```
 
-Another, more complex, solution for **the [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this) problem** is [the following framework](#A_little_framework).
+Another, more complex, solution for **the [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this) problem** is [the following framework](#a_little_framework).
 
 ## MiniDaemon - фреймворк для управления таймерами
 
-In pages requiring many timers, it can often be difficult to keep track of all of the running timer events. One approach to solving this problem is to store information about the state of a timer in an object. Following is a minimal example of such an abstraction. The constructor architecture explicitly avoids the use of closures. It also offers an alternative way to pass the [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this) object to the callback function (see [The "this" problem](#The_.22this.22_problem) for details). The following code is also [available on GitHub](https://github.com/madmurphy/minidaemon.js).
+In pages requiring many timers, it can often be difficult to keep track of all of the running timer events. One approach to solving this problem is to store information about the state of a timer in an object. Following is a minimal example of such an abstraction. The constructor architecture explicitly avoids the use of closures. It also offers an alternative way to pass the [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this) object to the callback function (see [The "this" problem](#the_.22this.22_problem) for details). The following code is also [available on GitHub](https://github.com/madmurphy/minidaemon.js).
 
 ### minidaemon.js
 
@@ -619,7 +618,7 @@ Returns a JavaScript [`Object`](/ru/docs/Web/JavaScript/Reference/Global_Objects
 - `thisObject`
   - : The [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this) object on which the _callback_ function is called. It can be an [`object`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object) or `null`.
 - `callback`
-  - : The function that is repeatedly invoked . **It is called with three parameters**: _index_ (the iterative index of each invocation), _length_ (the number of total invocations assigned to the _daemon_ - finite or [`Infinity`](/ru/docs/JavaScript/Reference/Global_Objects/Infinity)) and _backwards_ (a boolean expressing whether the _index_ is increasing or decreasing). It is something like _callback_.call(_thisObject_, _index_, _length_, _backwards_). **If the callback function returns a `false` value the _daemon_ is paused**.
+  - : The function that is repeatedly invoked . **It is called with three parameters**: _index_ (the iterative index of each invocation), _length_ (the number of total invocations assigned to the _daemon_ - finite or [`Infinity`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Infinity)) and _backwards_ (a boolean expressing whether the _index_ is increasing or decreasing). It is something like _callback_.call(_thisObject_, _index_, _length_, _backwards_). **If the callback function returns a `false` value the _daemon_ is paused**.
 - `rate (optional)`
   - : The time lapse (in number of milliseconds) between each invocation. The default value is 100.
 - `length (optional)`
@@ -630,7 +629,7 @@ Returns a JavaScript [`Object`](/ru/docs/Web/JavaScript/Reference/Global_Objects
 - `myDaemon.owner`
   - : The [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this) object on which is executed the daemon (read/write). It can be an [`object`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object) or `null`.
 - `myDaemon.task`
-  - : The function that is repeatedly invoked (read/write). It is called with three arguments: _index_ (the iterative index of each invocation), _length_ (the number of total invocations assigned to the daemon - finite or [`Infinity`](/ru/docs/JavaScript/Reference/Global_Objects/Infinity)) and backwards (a boolean expressing whether the _index_ is decreasing or not) – see above. If the `myDaemon.task` function returns a `false` value the _daemon_ is paused.
+  - : The function that is repeatedly invoked (read/write). It is called with three arguments: _index_ (the iterative index of each invocation), _length_ (the number of total invocations assigned to the daemon - finite or [`Infinity`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Infinity)) and backwards (a boolean expressing whether the _index_ is decreasing or not) – see above. If the `myDaemon.task` function returns a `false` value the _daemon_ is paused.
 - `myDaemon.rate`
   - : Промежуток времени (в миллисекундах) между каждым вызовом (чтение / запись).
 - `myDaemon.length`
@@ -731,7 +730,7 @@ In the above snippet, a named function `loop()` is declared and is immediately e
 
 ### Throttling of intervals
 
-`setInterval()` is subject to the same throttling restrictions in Firefox as {{domxref("setTimeout()")}}; see [Reasons for delays longer than specified](/ru/docs/Web/API/setTimeout#Reasons_for_delays_longer_than_specified).
+`setInterval()` is subject to the same throttling restrictions in Firefox as {{domxref("setTimeout()")}}; see [Reasons for delays longer than specified](/ru/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified).
 
 ## Спецификации
 

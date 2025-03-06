@@ -7,14 +7,37 @@ slug: Web/HTML/Element/optgroup
 
 L'élément HTML **`<optgroup>`**, utilisé dans un formulaire, permet de créer un groupe d'options parmi lesquelles on peut choisir dans un élément {{HTMLElement("select")}}.
 
-{{EmbedInteractiveExample("pages/tabbed/optgroup.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;optgroup&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="dino-select">Choose a dinosaur:</label>
+<select id="dino-select">
+  <optgroup label="Theropods">
+    <option>Tyrannosaurus</option>
+    <option>Velociraptor</option>
+    <option>Deinonychus</option>
+  </optgroup>
+  <optgroup label="Sauropods">
+    <option>Diplodocus</option>
+    <option>Saltasaurus</option>
+    <option>Apatosaurus</option>
+  </optgroup>
+</select>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+```
 
 > [!NOTE]
 > Il n'est pas possible d'imbriquer plusieurs éléments `<optgroup>` entre eux.
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `disabled`
   - : Si cet attribut booléen est défini et aucun élément du groupe d'options ne peut être sélectionné. Cet élément ne recevra pas les évènements de navigation (tels que les clics ou les changements de focus). Les navigateurs affichent ces éléments en les grisant.

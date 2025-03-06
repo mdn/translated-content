@@ -104,7 +104,7 @@ La clé `chrome_url_overrides` est un objet qui peut avoir les propriétés suiv
   </tbody>
 </table>
 
-Toutes les propriétés sont [localisables](/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
+Toutes les propriétés sont [localisables](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
 ## Exemple
 

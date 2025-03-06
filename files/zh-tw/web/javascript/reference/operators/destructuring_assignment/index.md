@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
 
 **解構賦值** (Destructuring assignment) 語法是一種 JavaScript 運算式，可以把陣列或物件中的資料解開擷取成為獨立變數。
 
-{{EmbedInteractiveExample("pages/js/expressions-destructuringassignment.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Destructuring assignment", "taller")}}
+
+```js interactive-example
+let a, b, rest;
+[a, b] = [10, 20];
+
+console.log(a);
+// Expected output: 10
+
+console.log(b);
+// Expected output: 20
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+
+console.log(rest);
+// Expected output: Array [30, 40, 50]
+```
 
 ## 語法
 
@@ -435,5 +451,5 @@ const {self, prot} = obj;
 
 ## 參見
 
-- [Assignment operators](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
+- [Assignment operators](/zh-TW/docs/Web/JavaScript/Reference/Operators#assignment_operators)
 - ["ES6 in Depth: Destructuring" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/)

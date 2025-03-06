@@ -34,7 +34,7 @@ slug: orphaned/Feed_content_access_API
 
 ## 例: Web からフィードを読む
 
-フィードを読み込みパースすることは本当に簡単です。 フィードを読み込むために [`XMLHttpRequest`](/ja/XMLHttpRequest) を使い、次にフィードをパースするためにその文字列を [`nsIFeedProcessor`](/ja/NsIFeedProcessor) に渡します。
+フィードを読み込みパースすることは本当に簡単です。 フィードを読み込むために [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) を使い、次にフィードをパースするためにその文字列を [`nsIFeedProcessor`](/ja/NsIFeedProcessor) に渡します。
 
 フィードを読み込み、パーサにそれを渡すことはこのようなコードを使って行うことができます:
 

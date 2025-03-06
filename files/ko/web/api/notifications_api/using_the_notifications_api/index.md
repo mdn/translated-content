@@ -258,5 +258,5 @@ window.addEventListener("load", function () {
 
 ## 참고
 
-- [사용자 알림 편람](/ko/Apps/Build/User_notifications)
+- [사용자 알림 편람](/ko/docs/Apps/Build/User_notifications)
 - {{ domxref("Notification") }}

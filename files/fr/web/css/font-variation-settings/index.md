@@ -116,7 +116,7 @@ L'exemple suivant peut être édite afin de voir l'effet de la modification des 
 
 ### Autres exemples
 
-- [Guide sur les polices variables](/fr/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
+- [Guide sur les polices variables](/fr/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
 - [v-fonts.com](https://v-fonts.com)
 - [axis-praxis.org](https://axis-praxis.org)
 
@@ -130,7 +130,7 @@ L'exemple suivant peut être édite afin de voir l'effet de la modification des 
 
 ## Voir aussi
 
-- [Guide sur les polices variables](/fr/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
+- [Guide sur les polices variables](/fr/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
 - [OpenType Font Variations Overview](https://www.microsoft.com/typography/otspec180/otvaroverview.htm)
 - [OpenType specification](https://www.microsoft.com/typography/otspec180/default.htm)
 - [OpenType Design-Variation Axis Tag Registry](https://www.microsoft.com/typography/otspec/dvaraxisreg.htm)

@@ -46,9 +46,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 - `index`
   - : `integer`. 0 を底としたウィンドウの中のタブのインデックス。
 - `isArticle`
-  - : `boolean`. True なら[rendered in Reader Mode](/ja/Add-ons/WebExtensions/API/tabs/toggleReaderMode)で閲覧可能、false ならそれ以外。
+  - : `boolean`. True なら[rendered in Reader Mode](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode)で閲覧可能、false ならそれ以外。
 - `isInReaderMode`
-  - : `boolean`. True なら[rendered in Reader Mode](/ja/Add-ons/WebExtensions/API/tabs/toggleReaderMode)で閲覧中、false ならそれ以外。
+  - : `boolean`. True なら[rendered in Reader Mode](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode)で閲覧中、false ならそれ以外。
 - `lastAccessed`
   - : `double`. タブが最後にアクセスされた時刻(単位: [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time))。
 - `mutedInfo` {{optional_inline}}

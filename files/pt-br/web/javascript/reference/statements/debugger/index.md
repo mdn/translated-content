@@ -39,4 +39,4 @@ Quando o depurador é invocado, a execução é parada na declaração debugger.
 ## Veja também
 
 - [Depurando JavaScript](/pt-BR/docs/Debugging_JavaScript)
-- [O Depurador nas Ferramentas de Desenvolvedor do Firefox](/pt-BR/docs/Tools/Debugger)
+- [O Depurador nas Ferramentas de Desenvolvedor do Firefox](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)

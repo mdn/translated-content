@@ -52,7 +52,7 @@ keyword value keyword value /* Each value is an offset from the keyword that pre
 
 ## 보간
 
-애니메이션에서 점의 가로 값과 세로 값은 각각 따로 보간됩니다. 그러나 두 좌표 모두에 대한 보간 속도는 하나의 [타이밍 함수](/ko/docs/Web/CSS/single-transition-timing-function)가 결정하므로, 점은 직선을 따라 이동하게 됩니다.
+애니메이션에서 점의 가로 값과 세로 값은 각각 따로 보간됩니다. 그러나 두 좌표 모두에 대한 보간 속도는 하나의 [타이밍 함수](/ko/docs/Web/CSS/easing-function)가 결정하므로, 점은 직선을 따라 이동하게 됩니다.
 
 ## 예제
 
@@ -89,7 +89,7 @@ bottom top
 ## 같이 보기
 
 - [CSS 값과 단위](/ko/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS 값과 단위 소개](/ko/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [CSS 값과 단위 소개](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
 - {{cssxref("background-position")}}
 - {{cssxref("radial-gradient()")}}
 - {{cssxref("conic-gradient()")}}

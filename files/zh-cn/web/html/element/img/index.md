@@ -7,7 +7,20 @@ slug: Web/HTML/Element/img
 
 **`<img>`** [HTML](/zh-CN/docs/Web/HTML) 元素将一张图像嵌入文档。
 
-{{EmbedInteractiveExample("pages/tabbed/img.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;img&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<img
+  class="fit-picture"
+  src="/shared-assets/images/examples/grapefruit-slice.jpg"
+  alt="Grapefruit slice atop a pile of other slices" />
+```
+
+```css interactive-example
+.fit-picture {
+  width: 250px;
+}
+```
 
 上面的例子展示了 `<img>` 元素的用法：
 
@@ -16,27 +29,27 @@ slug: Web/HTML/Element/img
 
 还有很多其他属性，可以实现各种不同的目的：
 
-- [Referrer](/zh-CN/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} 控制，保证安全与隐私：详见 [`crossorigin`](/zh-CN/docs/Web/HTML/Element/img#crossorigin) 和 [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/img#referrerpolicy) 属性。
-- 使用 [`width`](/zh-CN/docs/Web/HTML/Element/img#width) 和 [`height`](/zh-CN/docs/Web/HTML/Element/img#height) 设置图像的固有尺寸（intrinsic size）：这将设置图像应占用的空间，以确保图像被加载之前页面的布局是稳定的。
-- 使用 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes) 和 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 设置响应式图像（参见 {{htmlelement("picture")}} 元素和我们的[响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)教程）。
+- [Referrer](/zh-CN/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} 控制，保证安全与隐私：详见 [`crossorigin`](#crossorigin) 和 [`referrerpolicy`](#referrerpolicy) 属性。
+- 使用 [`width`](#width) 和 [`height`](#height) 设置图像的固有尺寸（intrinsic size）：这将设置图像应占用的空间，以确保图像被加载之前页面的布局是稳定的。
+- 使用 [`sizes`](#sizes) 和 [`srcset`](#srcset) 设置响应式图像（参见 {{htmlelement("picture")}} 元素和我们的[响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)教程）。
 
 ## 支持的图像格式
 
 HTML 标准并没有给出需要支持的图像格式的列表，因此每个{{glossary("user agent", "用户代理")}}支持一组不同的格式。
 
-> **备注：** [网页浏览器图像格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)提供了有关图像格式及 Web 浏览器支持的综合信息。本节只是一个总结！
+> **备注：** [网页浏览器图像格式指南](/zh-CN/docs/Web/Media/Guides/Formats/Image_types)提供了有关图像格式及 Web 浏览器支持的综合信息。本节只是一个总结！
 
 Web 最常用的图像格式是：
 
-- [APNG（动态可移植网络图形）](/zh-CN/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics)——无损动画序列的不错选择（GIF 性能较差）。
-- [AVIF（AV1 图像文件格式）](/zh-CN/docs/Web/Media/Formats/Image_types#avif_image)——静态图像或动画的不错选择，其性能较好。
-- [GIF（图像互换格式）](/zh-CN/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format)——*简单*图像和动画的不错选择。
-- [JPEG（联合图像专家组）](/zh-CN/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image)——有损压缩静态图像的不错选择（目前最流行的格式）。
-- [PNG（便携式网络图形）](/zh-CN/docs/Web/Media/Formats/Image_types#png_portable_network_graphics)——对于无损压缩静态图像而言是不错的选择（质量略好于 JPEG）。
-- [SVG（可缩放矢量图形）](/zh-CN/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics)——矢量图像格式。用于必须以不同尺寸准确描绘的图像。
-- [WebP（网络图片格式）](/zh-CN/docs/Web/Media/Formats/Image_types#webp_image)——图像和动画的绝佳选择。
+- [APNG（动态可移植网络图形）](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#apng_animated_portable_network_graphics)——无损动画序列的不错选择（GIF 性能较差）。
+- [AVIF（AV1 图像文件格式）](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#avif_image)——静态图像或动画的不错选择，其性能较好。
+- [GIF（图像互换格式）](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#gif_graphics_interchange_format)——*简单*图像和动画的不错选择。
+- [JPEG（联合图像专家组）](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image)——有损压缩静态图像的不错选择（目前最流行的格式）。
+- [PNG（便携式网络图形）](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics)——对于无损压缩静态图像而言是不错的选择（质量略好于 JPEG）。
+- [SVG（可缩放矢量图形）](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics)——矢量图像格式。用于必须以不同尺寸准确描绘的图像。
+- [WebP（网络图片格式）](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#webp_image)——图像和动画的绝佳选择。
 
-推荐使用诸如 [WebP](/zh-CN/docs/Web/Media/Formats/Image_types#webp_image) 和 [AVIF](/zh-CN/docs/Web/Media/Formats/Image_types#avif_image) 等图像格式，因为它们在静态图像和动画的性能均比 PNG、JPEG、JIF 好得多。WebP 得到了广泛的支持，而 AVIF 则缺乏 Safari 的支持。
+推荐使用诸如 [WebP](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#webp_image) 和 [AVIF](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#avif_image) 等图像格式，因为它们在静态图像和动画的性能均比 PNG、JPEG、JIF 好得多。WebP 得到了广泛的支持，而 AVIF 则缺乏 Safari 的支持。
 
 对于必须以不同尺寸准确绘制的图像，则仍然推荐使用 SVG 格式。
 
@@ -52,7 +65,7 @@ Web 最常用的图像格式是：
 
 ## 属性
 
-此元素支持[全局属性](/zh-CN/docs/HTML/Global_attributes)。
+此元素支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `alt`
 
@@ -142,7 +155,7 @@ Web 最常用的图像格式是：
 
     - `no-referrer`：不会发送 {{httpheader("Referer")}} 标头。
     - `no-referrer-when-downgrade`：若未使用 {{Glossary("TLS")}}（{{glossary("HTTPS")}}）导航到源站，则不发送 `Referer` 标头。
-    - `origin`：发送到源站的来源地址将被限制为：[协议](/zh-CN/docs/Learn/Common_questions/What_is_a_URL)、{{Glossary("host", "主机")}}和{{Glossary("port", "端口")}}。
+    - `origin`：发送到源站的来源地址将被限制为：[协议](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "主机")}}和{{Glossary("port", "端口")}}。
     - `origin-when-cross-origin`：发送到其他来源的来源地址会被限制为协议、主机和端口。同源导航仍将包含路径。
     - `same-origin`：仅{{Glossary("Same-origin policy", "同源")}}请求发送来源地址，而跨源请求则不包含来源地址信息。
     - `strict-origin`：仅在协议安全级别保持不变（HTTPS→HTTPS）的情况下将文档的来源作为来源地址发送。而在目标的安全性降低（HTTPS→HTTP）时则不发送来源地址。
@@ -176,13 +189,13 @@ Web 最常用的图像格式是：
 
     在相同的 `srcset` 属性中混合使用宽度描述符和像素密度描述符时，会导致该值无效。重复的描述符（比如，两个源在相同的 `srcset` 两个源都是 `2x`）也是无效的。
 
-    用户代理自行决定选择任何可用的来源。这位它们提供了一个很大的选择余地，可以根据用户偏好或{{glossary("bandwidth", "带宽")}}条件等因素来进行选择。有关示例，可以参阅[响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)教程。
+    用户代理自行决定选择任何可用的来源。这位它们提供了一个很大的选择余地，可以根据用户偏好或{{glossary("bandwidth", "带宽")}}条件等因素来进行选择。有关示例，可以参阅[响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)教程。
 
 - `width`
   - : 图像的宽度，以像素为单位。必须是没有单位的整数。
 - `usemap`
 
-  - : 与元素相关联的[图像映射（image map）](/zh-CN/docs/HTML/Element/map)的部分 URL（以 `#` 开始的部分）。
+  - : 与元素相关联的[图像映射（image map）](/zh-CN/docs/Web/HTML/Element/map)的部分 URL（以 `#` 开始的部分）。
 
     > [!NOTE]
     > 如果 `<img>` 元素是 {{htmlelement("a")}} 或 {{HTMLElement("button")}} 元素的后代元素则不能使用这个属性。
@@ -460,8 +473,8 @@ Web 最常用的图像格式是：
 
 ## 参见
 
-- [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [图像文件类型与格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)
-- [响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [HTML 中的图片](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images)
+- [图像文件类型与格式指南](/zh-CN/docs/Web/Media/Guides/Formats/Image_types)
+- [响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)
 - {{HTMLElement("picture")}}、{{HTMLElement("object")}} 和 {{HTMLElement("embed")}} 元素
 - 其他与图像相关的 CSS 属性：{{cssxref("object-fit")}}、{{cssxref("object-position")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}} 和 {{cssxref("image-resolution")}}。

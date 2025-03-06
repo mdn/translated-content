@@ -13,7 +13,7 @@ slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 
 Примеры: [Amazon Assistant for Firefox](https://addons.mozilla.org/en-US/firefox/addon/amazon-browser-bar/), [OneNote Web Clipper](https://addons.mozilla.org/en-US/firefox/addon/onenote-clipper/) и [Grammarly for Firefox](https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/).
 
-**Дайте пользователям продемонстрировать себя**: Дополнения могут управлять содержимым сайтов, например, позволять пользователям добавлять их любимые изображения как фоновые картинки для каждого сайта, которые они посещают. Ещё дополнения могут изменять и то, как выглядит сам интерфейс Firefox, делая это тем же способом, что и [обычные темы](/ru/docs/Mozilla/Add-ons/Themes/Theme_concepts).
+**Дайте пользователям продемонстрировать себя**: Дополнения могут управлять содержимым сайтов, например, позволять пользователям добавлять их любимые изображения как фоновые картинки для каждого сайта, которые они посещают. Ещё дополнения могут изменять и то, как выглядит сам интерфейс Firefox, делая это тем же способом, что и [обычные темы](https://extensionworkshop.com/documentation/themes/).
 
 ![Как расширение может изменить фоновую картинку сайта](https://mdn.dev/archives/media/attachments/2018/02/13/15809/ce69d140dc91da804ce6eb8f20d03c07/MyWeb_New_Tab_add_on.png)
 
@@ -43,10 +43,10 @@ slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 
 Примеры: [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/), [Web React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) и [aXe Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/).
 
-Расширения для Firefox создаются с помощью [WebExtension API](/ru/docs/Mozilla/Add-ons/WebExtensions) — кросс-браузерной системы разработки дополнений браузера. В значительной степени её API совместим с [extension API](https://developer.chrome.com/docs/extensions), который поддерживается браузерами Google Chrome и Opera. Расширения, разработанные для этих браузеров, в большинстве случаев будут работать в Firefox или Microsoft Edge с минимальными изменениями. Также API полностью совместим с [мультипроцессным Firefox](/ru/Firefox/Multiprocess_Firefox).
+Расширения для Firefox создаются с помощью [WebExtension API](/ru/docs/Mozilla/Add-ons/WebExtensions) — кросс-браузерной системы разработки дополнений браузера. В значительной степени её API совместим с [extension API](https://developer.chrome.com/docs/extensions), который поддерживается браузерами Google Chrome и Opera. Расширения, разработанные для этих браузеров, в большинстве случаев будут работать в Firefox или Microsoft Edge с минимальными изменениями. Также API полностью совместим с [мультипроцессным Firefox](/ru/docs/Mozilla/Firefox/Multiprocess_Firefox).
 
 ## Что дальше?
 
 - Попробуйте создать [Ваше первое расширение](/ru/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension).
 - Изучите структуру и [Внутреннее устройство расширений](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension).
-- Посмотрите другие [Примеры расширений](/ru/Add-ons/WebExtensions/Examples).
+- Посмотрите другие [Примеры расширений](/ru/docs/Mozilla/Add-ons/WebExtensions/Examples).

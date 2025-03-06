@@ -32,7 +32,7 @@ worker.postMessage(sab);
 
 共有メモリーと高解像度タイマーは、[Spectre](https://ja.wikipedia.org/wiki/Spectre) の対策として 2018 年の初めに事実上[無効化されました](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/)。 2020 年には、共有メモリーを再び有効にするために、新しい安全なアプローチが標準化されました。
 
-基本的な要件として、文書が[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)にある必要があります。
+基本的な要件として、文書が[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)にある必要があります。
 
 最上位の文書では、サイトにオリジン間の分離性を持たせるため、次の 2 つのヘッダーを設定する必要があります。
 
@@ -44,7 +44,7 @@ Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
 
-オリジン間の分離が成功したかどうかは、ウィンドウとワーカーのコンテキストで利用できる [`crossOriginIsolated`](/ja/docs/Web/API/crossOriginIsolated) プロパティを使って確認することができます。
+オリジン間の分離が成功したかどうかは、ウィンドウとワーカーのコンテキストで利用できる [`crossOriginIsolated`](/ja/docs/Web/API/Window/crossOriginIsolated) プロパティを使って確認することができます。
 
 ```js
 const myWorker = new Worker("worker.js");
@@ -152,7 +152,7 @@ gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
 
 - {{jsxref("Atomics")}}
 - {{jsxref("ArrayBuffer")}}
-- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - [ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)
 - [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – 同期と作業分配抽象化を提供するシンプルなライブラリーです。
 - [共有メモリー – 簡潔なチュートリアル](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md)
@@ -161,5 +161,5 @@ gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
 - `Cross-Origin-Opener-Policy`: [whatwg/html issue #3740](https://github.com/whatwg/html/issues/3740), [draft specification](https://gist.github.com/annevk/6f2dd8c79c77123f39797f6bdac43f3e).
 - `Cross-Origin-Embedder-Policy`: [whatwg/html issue #4175](https://github.com/whatwg/html/issues/4175), [draft specification](https://mikewest.github.io/corpp/).
 - `Cross-Origin-Resource-Policy`: [Fetch で標準化され](https://fetch.spec.whatwg.org/#cross-origin-resource-policy-header)、新しい `cross-origin` 値が `Cross-Origin-Embedder-Policy` の効果の一部になります。
-- `postMessage()` の変更と [`self.crossOriginIsolated`](/ja/docs/Web/API/crossOriginIsolated): [whatwg/html issue #4732](https://github.com/whatwg/html/issues/4732), [whatwg/html issue #4872](https://github.com/whatwg/html/issues/4872), [draft specification](https://github.com/whatwg/html/pull/4734).
+- `postMessage()` の変更と [`self.crossOriginIsolated`](/ja/docs/Web/API/Window/crossOriginIsolated): [whatwg/html issue #4732](https://github.com/whatwg/html/issues/4732), [whatwg/html issue #4872](https://github.com/whatwg/html/issues/4872), [draft specification](https://github.com/whatwg/html/pull/4734).
 - [SharedArrayBuffer updates in Android Chrome 88 and Desktop Chrome 92](https://developer.chrome.com/blog/enabling-shared-array-buffer/)

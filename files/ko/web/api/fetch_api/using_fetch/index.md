@@ -478,7 +478,7 @@ if (window.fetch) {
 
 ## 같이 보기
 
-- [ServiceWorker API](/ko/docs/Web/API/ServiceWorker_API)
+- [ServiceWorker API](/ko/docs/Web/API/Service_Worker_API)
 - [HTTP 접근 제어 (CORS)](/ko/docs/Web/HTTP/CORS)
 - [HTTP](/ko/docs/Web/HTTP)
 - [Fetch 폴리필](https://github.com/github/fetch)

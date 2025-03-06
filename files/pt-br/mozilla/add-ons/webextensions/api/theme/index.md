@@ -10,7 +10,7 @@ Permite que extensões do navegador alterem seu tema.
 Para usar esta API, uma extensão deve solicitar a [permission](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) (permissão) de "tema" em seu arquivo [manifest.json](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
 > [!NOTE]
-> Quando configuramos um arquivo de plano de fundo, devemos declarar a [permission](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) (permissão) de "tema" e, assim sendo, nós não poderemos usar a função [theme](/pt-BR/Add-ons/WebExtensions/manifest.json/theme) (de tema), se esta for incompatível.
+> Quando configuramos um arquivo de plano de fundo, devemos declarar a [permission](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) (permissão) de "tema" e, assim sendo, nós não poderemos usar a função [theme](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) (de tema), se esta for incompatível.
 
 ## Tipo
 

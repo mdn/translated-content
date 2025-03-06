@@ -578,8 +578,8 @@ Le code requis pour le mappeur d'URL et les vues sera virtuellement identique au
 
 > [!NOTE]
 >
-> - Une fois que vous aurez créé le mappeur d'URL pour la page "liste d'auteurs", vous aurez besoin de mettre aussi à jour le lien **All authors** dans le template de base. Suivez la [même procédure](#Update_the_base_template) que celle adoptée quand nous avons mis à jour le lien **All books**.
-> - Une fois créé le mappeur d'URL pour la page de détails sur l'auteur, vous devrez aussi mettre à jour le [template de la vue détail d'un livre](#Creating_the_Detail_View_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**), de sorte que le lien vers l'auteur pointe vers votre nouvelle page de détails sur l'auteur (au lieu d'être une URL vide). La ligne va avoir comme changement la balise montrée en gras ci-dessous.
+> - Une fois que vous aurez créé le mappeur d'URL pour la page "liste d'auteurs", vous aurez besoin de mettre aussi à jour le lien **All authors** dans le template de base. Suivez la [même procédure](#update_the_base_template) que celle adoptée quand nous avons mis à jour le lien **All books**.
+> - Une fois créé le mappeur d'URL pour la page de détails sur l'auteur, vous devrez aussi mettre à jour le [template de la vue détail d'un livre](#creating_the_detail_view_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**), de sorte que le lien vers l'auteur pointe vers votre nouvelle page de détails sur l'auteur (au lieu d'être une URL vide). La ligne va avoir comme changement la balise montrée en gras ci-dessous.
 >
 >   ```django
 >   <p>

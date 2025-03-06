@@ -5,7 +5,7 @@ slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Formes_géométriques", "Dessin_de_texte_avec_canvas")}}
 
-Dans le chapitre sur [les formes géométriques](/fr/docs/Tutoriel_canvas/Formes_géométriques), nous avons utilisé les styles de lignes et de remplissage par défaut. Ici, nous allons explorer les options de canvas à notre disposition pour rendre nos dessins un peu plus attrayants. Vous apprendrez comment ajouter des couleurs différentes, des styles de ligne, des dégradés, des motifs et des ombres à vos dessins.
+Dans le chapitre sur [les formes géométriques](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes), nous avons utilisé les styles de lignes et de remplissage par défaut. Ici, nous allons explorer les options de canvas à notre disposition pour rendre nos dessins un peu plus attrayants. Vous apprendrez comment ajouter des couleurs différentes, des styles de ligne, des dégradés, des motifs et des ombres à vos dessins.
 
 ## Les couleurs
 
@@ -445,7 +445,7 @@ draw();
 
 `setLineDash` et `lineDashOffset` précisent le modèle de lignes. `setLineDash` accepte une liste de nombres qui spécifie les distances pour dessiner alternativement une ligne et un espace et `lineDashOffset` définit un décalage pour commencer le motif.
 
-Dans cet exemple, nous créons un effet de fourmis en marche. C'est une technique d'animation souvent employée dans les sélections d'outils des programmes graphiques. Cet effet permet à l'utilisateur de distinguer la frontière de l'image de fond de la sélection en animant la frontière. Dans une partie de ce tutoriel, vous pouvez apprendre comment faire cela et d'autres animations de base [animation basiques.](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations)[.](/fr/docs/Tutoriel_canvas/Animations_basiques)
+Dans cet exemple, nous créons un effet de fourmis en marche. C'est une technique d'animation souvent employée dans les sélections d'outils des programmes graphiques. Cet effet permet à l'utilisateur de distinguer la frontière de l'image de fond de la sélection en animant la frontière. Dans une partie de ce tutoriel, vous pouvez apprendre comment faire cela et d'autres animations de base [animation basiques.](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations)[.](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations)
 
 ```html hidden
 <canvas id="canvas" width="110" height="110"></canvas>
@@ -715,7 +715,7 @@ draw();
 
 {{EmbedLiveSample("Un_exemple_de_texte_ombré", "180", "100", "shadowed-string.png")}}
 
-Nous allons regarder la propriété de la `font` _(police de caratères)_ et la méthode `fillText` dans le chapitre suivant sur le [dessin de texte](/fr/docs/Dessin_de_texte_avec_canvas).
+Nous allons regarder la propriété de la `font` _(police de caratères)_ et la méthode `fillText` dans le chapitre suivant sur le [dessin de texte](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 ## Règles de remplissage Canvas
 

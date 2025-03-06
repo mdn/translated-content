@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Operators/Property_accessors
 
 属性访问器提供了两种方式用于访问一个对象的属性，它们分别是点号和方括号。
 
-{{EmbedInteractiveExample("pages/js/expressions-propertyaccessors.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Property accessors")}}
+
+```js interactive-example
+const person1 = {};
+person1["firstname"] = "Mario";
+person1["lastname"] = "Rossi";
+
+console.log(person1.firstname);
+// Expected output: "Mario"
+
+const person2 = {
+  firstname: "John",
+  lastname: "Doe",
+};
+
+console.log(person2["lastname"]);
+// Expected output: "Doe"
+```
 
 ## 语法
 
@@ -98,7 +115,7 @@ console.log(object[bar]);
 
 ### 方法绑定
 
-一个方法没有绑定到对象上，那就意味着这个方法是不起作用的。特别要注意的是，在一个方法中`this`对象并不是固定的，例如，`this`不需要指向包含当前方法的对象。`this`可通过函数调用被传递过去的值所替换。详见[方法绑定](/zh-CN/docs/Web/JavaScript/Reference/Operators/this#Method_binding)。
+一个方法没有绑定到对象上，那就意味着这个方法是不起作用的。特别要注意的是，在一个方法中`this`对象并不是固定的，例如，`this`不需要指向包含当前方法的对象。`this`可通过函数调用被传递过去的值所替换。详见[方法绑定](/zh-CN/docs/Web/JavaScript/Reference/Operators/this#method_binding)。
 
 ### 注意`eval`
 

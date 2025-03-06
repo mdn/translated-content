@@ -14,7 +14,7 @@ La interfaz **`StorageManager`** de la [API de almacenamiento](/es/docs/Web/API/
 - {{domxref("StorageManager.estimate()")}} {{securecontext_inline}}
   - : Devuelve una {{jsxref('Promise','Promesa')}} que se resuelve en un objeto que contiene números de uso y cuota para su origen.
 - {{domxref("StorageManager.getDirectory()")}} {{securecontext_inline}}
-  - : Se utiliza para obtener una referencia a un objeto {{domxref("FileSystemDirectoryHandle")}} que permite el acceso a un directorio y su contenido, almacenado en el [sistema de archivos privado de origen](/es/docs/Web/API/File_System_Access_API#origin_private_file_system). Devuelve una {{jsxref('Promise','Promesa')}} que cumple con un objeto {{domxref("FileSystemDirectoryHandle")}}.
+  - : Se utiliza para obtener una referencia a un objeto {{domxref("FileSystemDirectoryHandle")}} que permite el acceso a un directorio y su contenido, almacenado en el [sistema de archivos privado de origen](/es/docs/Web/API/File_System_API#origin_private_file_system). Devuelve una {{jsxref('Promise','Promesa')}} que cumple con un objeto {{domxref("FileSystemDirectoryHandle")}}.
 - {{domxref("StorageManager.persist()")}} {{securecontext_inline}}
   - : Devuelve una {{jsxref('Promise','Promesa')}} que se resuelve en `true` si el agente de usuario puede conservar el almacenamiento de su sitio.
 - {{domxref("StorageManager.persisted()")}} {{securecontext_inline}}

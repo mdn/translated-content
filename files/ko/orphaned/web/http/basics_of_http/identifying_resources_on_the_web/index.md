@@ -53,7 +53,7 @@ urn:ietf:rfc:7230
 
 | 스키마      | 설명                                                         |
 | ----------- | ------------------------------------------------------------ |
-| data        | [Data URL](/ko/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)       |
+| data        | [Data URL](/ko/docs/Web/URI/Schemes/data)       |
 | file        | 호스트별 파일 이름                                           |
 | ftp         | {{Glossary("FTP","파일 전송 프로토콜")}}                     |
 | http/https  | [하이퍼 텍스트 전송 프로토콜 (보안)](/ko/docs/Glossary/HTTP) |
@@ -113,5 +113,5 @@ mailto:help@supercyberhelpdesk.info
 
 ## 같이 보기
 
-- [URL이란 무엇인가?](/ko/docs/Learn/Common_questions/What_is_a_URL)
+- [URL이란 무엇인가?](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 - [IANA URI 체계 목록](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

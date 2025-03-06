@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies/getAllCookieStores
 
 La méthode **`getAllCookieStores()`** de l'API {{WebExtAPIRef("cookies")}} retourne une liste de tous les cookies stores.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -21,7 +21,7 @@ Aucun.
 
 ### Valeur renvoyée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un `tableau` d'objets {{WebExtAPIRef('cookies.CookieStore')}} représentant tous les cookies stores existants.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un `tableau` d'objets {{WebExtAPIRef('cookies.CookieStore')}} représentant tous les cookies stores existants.
 
 ## Compatibibilité du navigateur
 

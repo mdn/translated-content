@@ -54,6 +54,6 @@ valeur2
 ## Voir aussi
 
 - {{domxref("XMLHTTPRequest")}}
-- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest)
-- [Utiliser les objets FormData](/fr/docs/Web/Guide/Using_FormData_Objects)
+- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Utiliser les objets FormData](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

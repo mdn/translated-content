@@ -9,7 +9,7 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 
 ## Цвет
 
-- Контраст цвета **ДОЛЖЕН** соответствовать требованиям уровня AA [WCAG 2.0](http://www.w3.org/TR/WCAG/):
+- Контраст цвета **ДОЛЖЕН** соответствовать требованиям уровня AA [WCAG 2.0](https://www.w3.org/TR/WCAG/):
 
   - Коэффициент контрастности 4.5:1 для обычного текста (менее 18 пунктов или 14 пунктов для жирного текста).
   - Коэффициент контрастности 3:1 для крупного текста (минимум 18 пунктов или 14 пунктов для жирного текста).
@@ -29,7 +29,7 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 - Все интерактивные элементы **ДОЛЖНЫ** иметь состояние фокуса:
 
   - Стандартные элементы, такие как ссылки, кнопки и поля формы фокусируемые по умолчанию.
-  - Нестандартные элементы **ДОЛЖНЫ** иметь соответствующую [ARIA-роль](http://www.w3.org/TR/wai-aria/roles), назначенную им. Например, кнопка, ссылка или чекбокс.
+  - Нестандартные элементы **ДОЛЖНЫ** иметь соответствующую [ARIA-роль](https://www.w3.org/TR/wai-aria/roles), назначенную им. Например, кнопка, ссылка или чекбокс.
 
 - Фокус должен обрабатываться в логическом порядке и последовательным образом.
 
@@ -38,14 +38,14 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 - Текстовый эквивалент **ДОЛЖЕН** быть предусмотрен для каждого не строго презентационного нетекстового элемента в приложении.
 
   - Используйте _alt_ и _title_ там, где это уместно ([см. статью](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/) Steve Faulkner's про использование HTML атрибута {{ htmlelement("title") }}).
-  - Если вышеуказанные атрибуты неприменимы, используйте соответствующие [ARIA-свойства](http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header), такие как `aria-label`, `aria-labelledby`, или `aria-describedby`.
+  - Если вышеуказанные атрибуты неприменимы, используйте соответствующие [ARIA-свойства](https://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header), такие как `aria-label`, `aria-labelledby`, или `aria-describedby`.
 
 - Необходимо **ИЗБЕГАТЬ** текста внутри изображений.
 - Все элементы формы **ДОЛЖНЫ** иметь метки ({{ htmlelement("label") }} элементы) в интересах пользователей программы чтения с экрана.
 
 ## Обработка состояния
 
-- Стандартные элементы, такие как радиокнопки и чекбоксы обрабатываются операционной системой. Однако, для других кастомных элементов изменения состояния должны быть предоставлены через [ARIA-состояния](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header), такие как `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`, and `aria-pressed`.
+- Стандартные элементы, такие как радиокнопки и чекбоксы обрабатываются операционной системой. Однако, для других кастомных элементов изменения состояния должны быть предоставлены через [ARIA-состояния](https://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header), такие как `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`, and `aria-pressed`.
 
 ## Общие рекомендации
 
@@ -59,8 +59,8 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
   <h3>Заголовок низкого уровня</h3>
   ```
 
-- [ARIA Landmark Roles](http://www.w3.org/TR/wai-aria/roles#landmark_roles_header) **СЛЕДУЕТ** использовать для описания приложения или структуры документа, такие как `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.
+- [ARIA Landmark Roles](https://www.w3.org/TR/wai-aria/roles#landmark_roles_header) **СЛЕДУЕТ** использовать для описания приложения или структуры документа, такие как `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.
 - Обработчики сенсорных событий **ДОЛЖНЫ** запускаться только при соответствующих событиях.
-- Области нажатия **ДОЛЖНЫ** быть достаточно большими, чтобы пользователь мог взаимодействовать с ними (см. статью [BBC Mobile Accessibility Guidelines](http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size) с полезными рекомендациями по размеру области нажатия для сенсорного объекта).
+- Области нажатия **ДОЛЖНЫ** быть достаточно большими, чтобы пользователь мог взаимодействовать с ними (см. статью [BBC Mobile Accessibility Guidelines](https://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size) с полезными рекомендациями по размеру области нажатия для сенсорного объекта).
 
 > [!NOTE] > [Исходную версию этого документа](http://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html) написал [Юра Зеневич](http://yzen.github.io/).

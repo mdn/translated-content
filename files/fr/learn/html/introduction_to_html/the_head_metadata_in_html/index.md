@@ -56,7 +56,7 @@ Le contenu de l'en-tête HTML {{htmlelement("head")}} — à la différence du c
 </head>
 ```
 
-Toutefois dans les pages plus importantes, l'en-tête peut contenir un grand nombre d'éléments — essayez d'aller sur certains de vos sites web préférés et utilisez les [outils de développement](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) pour vérifier le contenu de l'en-tête. Notre objectif ici n'est pas de vous montrer comment utiliser tout ce qui peut être mis dans l'élément \<head>, mais plutôt de vous apprendre à utiliser les outils les plus évidents, que vous souhaiterez inclure dans l'en-tête, et vous les rendre plus familiers. Commençons.
+Toutefois dans les pages plus importantes, l'en-tête peut contenir un grand nombre d'éléments — essayez d'aller sur certains de vos sites web préférés et utilisez les [outils de développement](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) pour vérifier le contenu de l'en-tête. Notre objectif ici n'est pas de vous montrer comment utiliser tout ce qui peut être mis dans l'élément \<head>, mais plutôt de vous apprendre à utiliser les outils les plus évidents, que vous souhaiterez inclure dans l'en-tête, et vous les rendre plus familiers. Commençons.
 
 ## Ajouter un titre
 

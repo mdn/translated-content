@@ -11,4 +11,4 @@ Il peut également s'agir du dernier composant lorsqu'un nouveau document est cr
 
 ## Voir aussi
 
-- [Choosing titles and slugs](/fr/docs/MDN/Contribute/Guidelines/Writing_style_guide#Choosing_titles_and_slugs)
+- [Choosing titles and slugs](/fr/docs/MDN/Writing_guidelines/Writing_style_guide#choosing_titles_and_slugs)

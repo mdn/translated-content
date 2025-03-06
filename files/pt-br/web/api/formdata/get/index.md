@@ -59,6 +59,6 @@ formData.get("usuario_nome"); // Retorna "Sabrina"
 ## Veja também
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Using FormData objects](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

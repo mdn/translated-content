@@ -5,15 +5,15 @@ slug: Web/EXSLT
 
 {{ XsltRef() }} EXSLT는 [XSLT](/ko/XSLT)의 확장입니다. 많은 모듈이 있으며, Firefox에서 지원되는 것들은 다음과 같습니다.
 
-- [Common](#Common) (`exsl`)
+- [Common](#common) (`exsl`)
   - : 기본적인 확장 요소와 함수를 제공합니다.
-- [Math](#Math) (`math`)
+- [Math](#math) (`math`)
   - : 노드를 비교하는 기능을 제공합니다.
-- [Regular expressions](#Regular_expressions) (`regexp`)
+- [Regular expressions](#regular_expressions) (`regexp`)
   - : JavaScript 구문 형식의 정규 표현식을 사용할 수 있는 기능을 제공합니다.
-- [Sets](#Sets) (`set`)
+- [Sets](#sets) (`set`)
   - : 집합을 처리하는 기능을 제공합니다.
-- [Strings](#Strings) (`str`)
+- [Strings](#strings) (`str`)
   - : 문자열을 처리하는 함수를 제공합니다.
 
 ### EXSLT 사용하기

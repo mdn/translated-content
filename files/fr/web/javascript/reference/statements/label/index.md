@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Statements/label
 
 Une **instruction étiquetée (_labeled_ en anglais)** peut être utilisée avec les instructions {{jsxref("Instructions/break", "break")}} ou {{jsxref("Instructions/continue", "continue")}}. Un label permet d'identifier une instruction avec un identifiant pour y faire référence plus tard.
 
-{{EmbedInteractiveExample("pages/js/statement-label.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Label")}}
+
+```js interactive-example
+let str = "";
+
+loop1: for (let i = 0; i < 5; i++) {
+  if (i === 1) {
+    continue loop1;
+  }
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "0234"
+```
 
 > [!NOTE]
 > Les boucles ou les blocs étiquetés sont très rares et on peut généralement utiliser des appels de fonction plutôt que des sauts de boucle.
@@ -140,7 +154,7 @@ console.log("swap");
 
 ### Déclarations de fonctions étiquetées
 
-À partir d'ECMAScript 2015, les déclarations de fonctions étiquetées sont standardisées pour du code non-strict [au sein de l'annexe de la spécification relative à la compatibilité web](http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations).
+À partir d'ECMAScript 2015, les déclarations de fonctions étiquetées sont standardisées pour du code non-strict [au sein de l'annexe de la spécification relative à la compatibilité web](https://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations).
 
 ```js
 L: function F() {}
@@ -154,7 +168,7 @@ L: function F() {}
 // SyntaxError: functions cannot be labelled
 ```
 
-[Les fonctions génératrices](/fr/docs/Web/JavaScript/Reference/Instructions/function*) ne peuvent pas être étiquetées, en mode strict, comme en mode non-strict :
+[Les fonctions génératrices](/fr/docs/Web/JavaScript/Reference/Statements/function*) ne peuvent pas être étiquetées, en mode strict, comme en mode non-strict :
 
 ```js
 L: function* F() {}

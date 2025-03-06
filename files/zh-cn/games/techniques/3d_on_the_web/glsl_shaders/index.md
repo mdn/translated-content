@@ -52,7 +52,7 @@ void main() {
 
 - 确保你在使用对 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 有良好支持的现代浏览器，比如最新版的 Firefox 或 Chrome.
 - 创建一个目录保存你的实验。
-- 拷贝一份的 [压缩版的 Three.js 库](http://threejs.org/build/three.min.js) 到你的目录。
+- 拷贝一份的 [压缩版的 Three.js 库](https://threejs.org/build/three.min.js) 到你的目录。
 
 ### HTML 结构
 
@@ -118,7 +118,7 @@ void main() {
 每次的`gl_Position` 的结果是计算 model-view 矩阵和投射矩阵和投射矩阵相乘并得到最后的顶点位置。
 
 > [!NOTE]
-> 你可以在 [顶点处理](/zh-CN/docs/Games/Techniques/3D_on_the_web/Basic_theory#Vertex_processing)中学到更多关于模型，视图和投射变换，并且你可以在文末看到更多学习链接。
+> 你可以在 [顶点处理](/zh-CN/docs/Games/Techniques/3D_on_the_web/Basic_theory#vertex_processing)中学到更多关于模型，视图和投射变换，并且你可以在文末看到更多学习链接。
 
 `projectionMatrix` 和 `modelViewMatrix` 两个函数都是 Three.js 提供的，并且传入了一个新的 3D 位置向量，转成着色器之后直接导致立方体向 `x` 轴移动 10 个单位，向`z` 轴移动了 5 个单位。我们可以忽略第四个参数并且保持为默认的`1.0` ; 这是用来控制 3D 空间中订单位置裁剪的，这个例子中不需要。
 
@@ -142,7 +142,7 @@ void main() {
 // var basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
 ```
 
-然后创建 [`shaderMaterial`](http://threejs.org/docs/#Reference/Materials/ShaderMaterial):
+然后创建 [`shaderMaterial`](https://threejs.org/docs/#Reference/Materials/ShaderMaterial):
 
 ```js
 var shaderMaterial = new THREE.ShaderMaterial({
@@ -182,4 +182,4 @@ Three.js 编译和运行这两个这两个着色器到材质所在的网格 (mes
 ## 其他链接
 
 - [学习 WebGL](http://learningwebgl.com/blog/?page_id=1217) — 基本 WebGL 知识
-- [WebGL 着色器和 WebGL 中的 GLSL 基础](http://webglfundamentals.org/webgl/lessons/webgl-shaders-and-glsl.html) — GLSL 特定信息
+- [WebGL 着色器和 WebGL 中的 GLSL 基础](https://webglfundamentals.org/webgl/lessons/webgl-shaders-and-glsl.html) — GLSL 特定信息

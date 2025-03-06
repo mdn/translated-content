@@ -9,7 +9,67 @@ l10n:
 
 **`<col>`** [HTML](/zh-CN/docs/Web/HTML) 元素在其父 {{HTMLElement("colgroup")}} 元素所代表的列组中定义一列或多列。`<col>` 元素只有作为没有定义 [`span`](/zh-CN/docs/Web/HTML/Element/colgroup#span) 属性的 {{HTMLElement("colgroup")}} 元素的子元素才有效。
 
-{{EmbedInteractiveExample("pages/tabbed/col.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;col&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Superheros and sidekicks
+  </caption>
+  <colgroup>
+    <col />
+    <col span="2" class="batman" />
+    <col span="2" class="flash" />
+  </colgroup>
+  <tr>
+    <td></td>
+    <th scope="col">Batman</th>
+    <th scope="col">Robin</th>
+    <th scope="col">The Flash</th>
+    <th scope="col">Kid Flash</th>
+  </tr>
+  <tr>
+    <th scope="row">Skill</th>
+    <td>Smarts, strong</td>
+    <td>Dex, acrobat</td>
+    <td>Super speed</td>
+    <td>Super speed</td>
+  </tr>
+</table>
+```
+
+```css interactive-example
+.batman {
+  background-color: #d7d9f2;
+}
+
+.flash {
+  background-color: #ffe8d4;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 6px;
+}
+
+td {
+  text-align: center;
+}
+```
 
 ## 属性
 
@@ -221,7 +281,7 @@ table {
 
 ## 参见
 
-- [学习区：HTML 表格](/zh-CN/docs/Learn/HTML/Tables)
+- [学习区：HTML 表格](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - {{HTMLElement("caption")}}、{{HTMLElement("colgroup")}}、{{HTMLElement("table")}}、{{HTMLElement("tbody")}}、{{HTMLElement("td")}}、{{HTMLElement("tfoot")}}、{{HTMLElement("th")}}、{{HTMLElement("thead")}}、{{HTMLElement("tr")}}：其他与表格相关的元素。
 - {{cssxref("background-color")}}：用于设置每列单元格背景颜色的 CSS 属性
 - {{cssxref("border")}}：用于控制列单元格边框的 CSS 属性

@@ -28,7 +28,7 @@ not( expression )
 
 ### Définition
 
-[XPath 1.0, section 4.3](http://www.w3.org/TR/xpath#function-not).
+[XPath 1.0, section 4.3](https://www.w3.org/TR/xpath#function-not).
 
 ### Support Gecko
 

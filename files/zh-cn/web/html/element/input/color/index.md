@@ -11,7 +11,34 @@ slug: Web/HTML/Element/input/color
 
 此元素的外观会因浏览器不同而不同，它可能是一个简单的文本输入，自动验证以确保颜色信息以正确的格式输入，或一个平台标准的颜色选择器，或某种自定义的颜色选择器窗口。
 
-{{EmbedInteractiveExample("pages/tabbed/input-color.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;color&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Choose your monster's colors:</p>
+
+<div>
+  <input type="color" id="head" name="head" value="#e66465" />
+  <label for="head">Head</label>
+</div>
+
+<div>
+  <input type="color" id="body" name="body" value="#f6b73c" />
+  <label for="body">Body</label>
+</div>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 <table class="properties">
  <tbody>
@@ -202,4 +229,4 @@ function updateAll(event) {
 
 ## 参见
 
-- [CSS 属性兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

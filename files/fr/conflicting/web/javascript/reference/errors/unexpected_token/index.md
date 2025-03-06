@@ -19,7 +19,7 @@ SyntaxError: missing ; before statement (Firefox)
 
 ## Quel est le problème ?
 
-Un point-virgule est absent quelque part. En JavaScript, [les instructions doivent se terminer par des points-virgules](/fr/docs/Web/JavaScript/Reference/Instructions). Certaines de ces instructions sont traitées par [l'insertion automatique de point-virgule (_ASI_ pour _Automatic Semicolon Insertion)_](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Insertion_automatique_de_points-virgules), mais pour le code qui provoque l'erreur, un point-virgule est nécessaire afin que le moteur JavaScript puisse analyser le code source correctement.
+Un point-virgule est absent quelque part. En JavaScript, [les instructions doivent se terminer par des points-virgules](/fr/docs/Web/JavaScript/Reference/Statements). Certaines de ces instructions sont traitées par [l'insertion automatique de point-virgule (_ASI_ pour _Automatic Semicolon Insertion)_](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#insertion_automatique_de_points-virgules), mais pour le code qui provoque l'erreur, un point-virgule est nécessaire afin que le moteur JavaScript puisse analyser le code source correctement.
 
 La plupart du temps, cette erreur est la conséquence d'une autre erreur : ne pas « fermer » les chaînes de caractères correctement ou utiliser `var` de façon incorrecte. Il peut également y avoir trop de parenthèses à un endroit. Lorsque cette erreur apparaît, faites attention à la syntaxe du code environnant.
 
@@ -83,5 +83,5 @@ function print(info) {
 
 ## Voir aussi
 
-- [L'insertion automatique de points-virgules](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Insertion_automatique_de_points-virgules)
-- [Les instructions JavaScript](/fr/docs/Web/JavaScript/Reference/Instructions)
+- [L'insertion automatique de points-virgules](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#insertion_automatique_de_points-virgules)
+- [Les instructions JavaScript](/fr/docs/Web/JavaScript/Reference/Statements)

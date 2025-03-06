@@ -288,12 +288,12 @@ Ensuite, nous établissons la position du carré 2D en chargeant la position de 
 
 ## Opérations utilitaires matricielles
 
-Les opérations matricielles peuvent sembler compliquées, mais [elles sont en fait assez simples si vous en prenez une à la fois](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html). En général, les gens utilisent une bibliothèque matricielle plutôt que d'écrire la leur. Dans notre cas, nous utilisons la bibliothèque populaire [glMatrix](http://glmatrix.net/).
+Les opérations matricielles peuvent sembler compliquées, mais [elles sont en fait assez simples si vous en prenez une à la fois](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html). En général, les gens utilisent une bibliothèque matricielle plutôt que d'écrire la leur. Dans notre cas, nous utilisons la bibliothèque populaire [glMatrix](https://glmatrix.net/).
 
 Voir aussi&nbsp;:
 
 - les [matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) sur WebGLFundamentals ;
-- les [matrices](http://mathworld.wolfram.com/Matrix.html) sur Wolfram MathWorld ;
+- les [matrices](https://mathworld.wolfram.com/Matrix.html) sur Wolfram MathWorld ;
 - l'article [matrice](<https://fr.wikipedia.org/wiki/Matrice_(mathématiques)>) sur Wikipédia.
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

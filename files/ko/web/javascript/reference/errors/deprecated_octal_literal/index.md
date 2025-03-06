@@ -64,4 +64,4 @@ original_slug: Web/JavaScript/Reference/Errors/Deprecated_octal
 ## See also
 
 - [Lexical grammar](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#Octal)
-- [Warning: 08/09 is not a legal ECMA-262 octal constant](/ko/docs/Web/JavaScript/Reference/Errors/Bad_octal)
+- [Warning: 08/09 is not a legal ECMA-262 octal constant](/ko/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal)

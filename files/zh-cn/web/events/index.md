@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4ca4fa3d9d1de5601b406b13dc75aff30709c66f
 ---
 
-[事件](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)的触发用于通知“对变化感兴趣”的代码以影响代码的执行。这些事件可能来自用户的交互（例如：使用鼠标或调整窗口大小）、底层环境状态的改变（例如：电池电量不足或操作系统的媒体事件）和其他的情况。
+[事件](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)的触发用于通知“对变化感兴趣”的代码以影响代码的执行。这些事件可能来自用户的交互（例如：使用鼠标或调整窗口大小）、底层环境状态的改变（例如：电池电量不足或操作系统的媒体事件）和其他的情况。
 
 每个事件都使用继承自 {{domxref("Event")}} 接口的对象来表示，可以包括额外的自定义成员属性及函数，以获取事件发生时相关的更多信息。本文为每个事件都提供了一个表格（靠近顶部的区域），其中包含了指向相关事件接口的链接和其他相关的信息。[事件 > 基于 `Event` 的接口](/zh-CN/docs/Web/API/Event#基于_event_的接口)中完整地列出了不同的事件类型。
 
@@ -360,7 +360,7 @@ l10n:
       <td>清单</td>
       <td>
         <p>
-          与安装<a href="/zh-CN/docs/Web/Manifest">渐进式 web 应用清单</a>相关的事件。
+          与安装<a href="/zh-CN/docs/Web/Progressive_web_apps/Manifest">渐进式 web 应用清单</a>相关的事件。
         </p>
       </td>
       <td>
@@ -737,6 +737,6 @@ l10n:
 
 <section id="Quick_links">
   <ol>
-    <li><a href="/zh-CN/docs/Learn/JavaScript/Building_blocks/Events">事件介绍</a></li>
+    <li><a href="/zh-CN/docs/Learn_web_development/Core/Scripting/Events">事件介绍</a></li>
   </ol>{{ListSubpages}}
 </section>

@@ -18,7 +18,7 @@ SyntaxError: missing ; before statement
 
 ## ¿Qué salio mal?
 
-Hay un punto y coma (`;`) faltando en alguna parte. Las declaraciones Javascript deben terminar con punto y coma. Algunas de ellas son afectadas por la inserción automática [(ASI)](/es/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion), pero en este caso necesitas colocar un punto y coma, de esta forma Javascript puede analizar el código fuente de forma correcta.
+Hay un punto y coma (`;`) faltando en alguna parte. Las declaraciones Javascript deben terminar con punto y coma. Algunas de ellas son afectadas por la inserción automática [(ASI)](/es/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion), pero en este caso necesitas colocar un punto y coma, de esta forma Javascript puede analizar el código fuente de forma correcta.
 
 Sin embargo, algunas veces, este error es solo una consecuencia de otro error, como no separar las cadenas de texto correctamente, o usar _var_ incorrectamente. Tal vez tengas muchos paréntesis en algún lugar. Revisa cuidadosamente la sintaxis cuando este error es lanzado.
 
@@ -67,5 +67,5 @@ array[0] = "mundo";
 
 ## Ver también
 
-- [Automatic semicolon insertion (ASI)](/es/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)
+- [Automatic semicolon insertion (ASI)](/es/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)
 - [JavaScript statements](/es/docs/Web/JavaScript/Reference/Statements)

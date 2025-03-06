@@ -35,7 +35,7 @@ Content-Security-Policy: base-uri <source> <source>;
 
 ### Sources
 
-Cette directive utilise en grande partie les mêmes valeurs de source comme arguments que les autres directives CSP&nbsp;: [valeurs sources pour CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+Cette directive utilise en grande partie les mêmes valeurs de source comme arguments que les autres directives CSP&nbsp;: [valeurs sources pour CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
 
 On notera toutefois que certaines de ces valeurs n'ont pas de sens pour `base-uri`, à l'instar des mots-clés `'unsafe-inline'` et `'strict-dynamic'`.
 

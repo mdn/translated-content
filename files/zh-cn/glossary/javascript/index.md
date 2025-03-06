@@ -28,5 +28,5 @@ Brendan Eich（彼时受雇于 Netscape）为服务器端构想的语言——Ja
 - [NodeSchool 的“javascripting”工坊](https://nodeschool.io/#workshoppers)
 - [codecademy.com 的 JavaScript 课程](https://www.codecademy.com/catalog/language/javascript)
 - [最新的 ECMAScript 标准](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
-- MDN 的 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/reference)
+- MDN 的 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference)
 - [_Eloquent JavaScript_](https://eloquentjavascript.net/) 一书

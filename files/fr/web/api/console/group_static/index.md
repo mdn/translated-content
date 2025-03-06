@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Console API")}}
 
-La méthode **`console.group()`** crée un nouveau groupe dans le journal affiché dans la console. Les messages affichés ensuite seront indentés d'un niveau jusqu'à ce que [`console.groupEnd()`](/fr/docs/Web/API/console/groupend_static) soit appelée.
+La méthode **`console.group()`** crée un nouveau groupe dans le journal affiché dans la console. Les messages affichés ensuite seront indentés d'un niveau jusqu'à ce que [`console.groupEnd()`](/fr/docs/Web/API/console/groupEnd_static) soit appelée.
 
 {{AvailableInWorkers}}
 
@@ -29,9 +29,9 @@ Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 
 ## Exemples
 
-Vous pouvez utiliser des groupes imbriqués pour organiser l'affichage dans la console et regrouper les messages associés. Pour créer un nouveau bloc imbriqué, on appellera `console.group()`. La méthode [`console.groupCollapsed()`](/fr/docs/Web/API/console/groupcollapsed_static) est similaire, mais produit un groupe replié par défaut (il faut cliquer sur le symbole de dépliage pour voir les messages).
+Vous pouvez utiliser des groupes imbriqués pour organiser l'affichage dans la console et regrouper les messages associés. Pour créer un nouveau bloc imbriqué, on appellera `console.group()`. La méthode [`console.groupCollapsed()`](/fr/docs/Web/API/console/groupCollapsed_static) est similaire, mais produit un groupe replié par défaut (il faut cliquer sur le symbole de dépliage pour voir les messages).
 
-Pour clôturer le groupe courant, on appellera [`console.groupEnd()`](/fr/docs/Web/API/console/groupend_static). Par exemple, si on a écrit&nbsp;:
+Pour clôturer le groupe courant, on appellera [`console.groupEnd()`](/fr/docs/Web/API/console/groupEnd_static). Par exemple, si on a écrit&nbsp;:
 
 ```js
 console.log("Il s'agit du niveau extérieur");
@@ -62,5 +62,5 @@ Voir [Utiliser les groupes dans la console](/fr/docs/Web/API/console#utiliser_de
 
 ## Voir aussi
 
-- [`console.groupEnd()`](/fr/docs/Web/API/console/groupend_static)
-- [`console.groupCollapsed()`](/fr/docs/Web/API/console/groupcollapsed_static)
+- [`console.groupEnd()`](/fr/docs/Web/API/console/groupEnd_static)
+- [`console.groupCollapsed()`](/fr/docs/Web/API/console/groupCollapsed_static)

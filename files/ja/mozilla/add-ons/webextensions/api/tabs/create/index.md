@@ -32,7 +32,7 @@ var creating = browser.tabs.create(
     - `openerTabId`{{optional_inline}}
       - : `整数値`。開くタブの ID を指定します。指定した場合、開く側のタブは新しいタブと同じウィンドウにある必要があります。
     - `openInReaderMode`{{optional_inline}}
-      - : `真理値`。もし`true`であれば[リーダーモード](/ja/Add-ons/WebExtensions/API/tabs/toggleReaderMode)で開かれます。 デフォルトは`false`。
+      - : `真理値`。もし`true`であれば[リーダーモード](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode)で開かれます。 デフォルトは`false`。
     - `pinned`{{optional_inline}}
       - : `真理値`。タブをピン留めするかを指定します。デフォルトは`false`。
     - `selected`{{optional_inline}}

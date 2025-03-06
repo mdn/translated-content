@@ -9,7 +9,7 @@ HTTP のようなクライアントサーバープロトコルでは、セッシ
 
 1. クライアントは TCP コネクション (トランスポート層が TCP ではない場合は、他の適切なコネクション) を確立します。
 2. クライアントは要求を送り、回答を待ちます。
-3. サーバは要求を処理して、ステータスコードや適切なデータを提供する回答を返信します。
+3. サーバーは要求を処理して、ステータスコードや適切なデータを提供する回答を返信します。
 
 HTTP/1.1 では第 3 段階の後にコネクションは閉じられなくなり、クライアントはさらに要求を発行することができます。つまり、第 2 段階と第 3 段階を複数回行うことができます。
 
@@ -17,10 +17,10 @@ HTTP/1.1 では第 3 段階の後にコネクションは閉じられなくな�
 
 クライアントサーバープロトコルでは、クライアントがコネクションを確立します。HTTP のコネクションを開くとは、下層のトランスポート層のコネクションを確立することであり、これは通常 TCP です。
 
-コンピューター上の HTTP サーバー用の、 TCP の既定のポートは 80 番です。8000 番や 8080 番など、ほかのポートを使用することもできます。読み込むページの URL はドメイン名とポート番号の両方を含みますが、後者は 80 番である場合に省略できます。詳しくは [Identifying resources on the Web](/ja/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) をご覧ください。
+コンピューター上の HTTP サーバー用の、 TCP の既定のポートは 80 番です。8000 番や 8080 番など、ほかのポートを使用することもできます。読み込むページの URL はドメイン名とポート番号の両方を含みますが、後者は 80 番である場合に省略できます。詳しくは [Identifying resources on the Web](/ja/docs/Web/URI) をご覧ください。
 
 > [!NOTE]
-> クライアントサーバーモデルでは、明示的な要求なくサーバーがクライアントにデータを送信することを認めていません。この問題を回避するために、ウェブ開発者はいくつかの技術を使用しています。 {{domxref("XMLHTTPRequest")}} や {{domxref("Fetch")}} API で定期的にサーバーに ping を送ったり、 [WebSockets API](/ja/docs/WebSockets) や同様のプロトコルを使用したりします。
+> クライアントサーバーモデルでは、明示的な要求なくサーバーがクライアントにデータを送信することを認めていません。この問題を回避するために、ウェブ開発者はいくつかの技術を使用しています。 {{domxref("XMLHTTPRequest")}} や {{domxref("Fetch")}} API で定期的にサーバーに ping を送ったり、 [WebSockets API](/ja/docs/Web/API/WebSockets_API) や同様のプロトコルを使用したりします。
 
 ## クライアントの要求の送信
 
@@ -36,7 +36,7 @@ HTTP/1.1 では第 3 段階の後にコネクションは閉じられなくな�
 
 ### 要求の例
 
-developer.mozilla.org のルートページ、すなわち <http://developer.mozilla.org/> を読み込む、また可能であればユーザーエージェントはフランス語のページを希望することをサーバに伝えます:
+developer.mozilla.org のルートページ、すなわち <http://developer.mozilla.org/> を読み込む、また可能であればユーザーエージェントはフランス語のページを希望することをサーバーに伝えます:
 
 ```
 GET / HTTP/1.1
@@ -62,7 +62,7 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 HTTP では、リソースに対して実行したいアクションを示す[要求メソッド](/ja/docs/Web/HTTP/Methods)のセットを定義しています。要求メソッドには名詞も存在しますが、 HTTP 動詞と言われることがあります。 `GET` と `POST` が最も一般的です。
 
 - {{HTTPMethod("GET")}} メソッドは、指定したリソースのデータを要求します。 `GET` を使用する要求は、データの取り込みに限ります。
-- {{HTTPMethod("POST")}} メソッドはサーバーにデータを送信しますので、データの状態を変更できます。これは、 [HTML フォーム](/ja/docs/Web/Guide/HTML/Forms)用によく使用されるメソッドです。
+- {{HTTPMethod("POST")}} メソッドはサーバーにデータを送信しますので、データの状態を変更できます。これは、 [HTML フォーム](/ja/docs/Learn/Forms)用によく使用されるメソッドです。
 
 ## サーバー応答の構造
 
@@ -141,7 +141,7 @@ Content-Type: text/html
 
 ## 関連情報
 
-- [ウェブ上のリソースの識別](/ja/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [ウェブ上のリソースの識別](/ja/docs/Web/URI)
 - [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)
 - [HTTP 要求メソッド](/ja/docs/Web/HTTP/Methods)
 - [HTTP 応答ステータスコード](/ja/docs/Web/HTTP/Status)

@@ -106,5 +106,5 @@ grid: unset;
 ## Ver también
 
 - Propiedades CSS relacionadas: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
-- Grid Layout Guide: _[Line-based placement with CSS Grid](/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
+- Grid Layout Guide: _[Line-based placement with CSS Grid](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
 - Grid Layout Guide: _[Grid template areas - Grid definition shorthands](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#Grid_definition_shorthands)_

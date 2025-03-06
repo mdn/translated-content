@@ -33,7 +33,7 @@ slug: Web/API/CSSStyleDeclaration
 - {{domxref("CSSStyleDeclaration.setProperty()")}}
   - : Modifie une propriété CSS existante ou crée une nouvelle propriété CSS dans le bloc de déclaration.
 - {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} {{deprecated_inline}}
-  - : Uniquement supporté via getComputedStyle dans Firefox. Retourne la valeur de la propriété en tant que {{domxref("CSSPrimitiveValue")}} ou `null` pour les [propriétés raccourcies](/fr/docs/Web/CSS/Propriétés_raccourcies).
+  - : Uniquement supporté via getComputedStyle dans Firefox. Retourne la valeur de la propriété en tant que {{domxref("CSSPrimitiveValue")}} ou `null` pour les [propriétés raccourcies](/fr/docs/Web/CSS/Shorthand_properties).
 
 ## Exemple
 
@@ -59,4 +59,4 @@ Le bloc de déclaration est la partie de la règle de mise en forme qui apparaî
 
 ## Voir aussi
 
-- [Référence des propriétés CSS](/fr/docs/Web/CSS/CSS_Properties_Reference)
+- [Référence des propriétés CSS](/fr/docs/Web/CSS/Reference#index_des_mots-clés)

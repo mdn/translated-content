@@ -9,7 +9,26 @@ La declaración de función **`async`** define una _función asíncrona_, la cua
 
 Es posible definir también funciones asíncronas a través de una {{jsxref("Operators/async_function", "expresión de función async", "", 1)}}.
 
-{{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Statement - Async", "taller")}}
+
+```js interactive-example
+function resolveAfter2Seconds() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("resolved");
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log("calling");
+  const result = await resolveAfter2Seconds();
+  console.log(result);
+  // Expected output: "resolved"
+}
+
+asyncCall();
+```
 
 The source for this interactive demo is stored in a GitHub repository. If you'd like to contribute to the interactive demo project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
 
@@ -130,4 +149,4 @@ Observe que, en el ejemplo anterior, no hay ninguna instrucción `await` dentro 
 - {{jsxref("Operators/async_function", "Expresión de función async")}}
 - Objeto {{jsxref("AsyncFunction")}}
 - {{jsxref("Operators/await", "await")}}
-- [«Decorar funciones async de JavaScript» en innolitics.com](http://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) (en inglés)
+- [«Decorar funciones async de JavaScript» en innolitics.com](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) (en inglés)

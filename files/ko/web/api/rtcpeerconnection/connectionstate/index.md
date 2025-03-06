@@ -5,7 +5,7 @@ slug: Web/API/RTCPeerConnection/connectionState
 
 {{APIRef("WebRTC")}}
 
-{{domxref("RTCPeerConnection")}} 인터페이스의 읽기 속성인 **`connectionState`** 는 피어 연결의 현재 상태를 알려줍니다. 이 속성은 [`RTCPeerConnectionState`](#RTCPeerConnectionState_enum) `enum` 값 중 하나를 문자열로 반환해줍니다.
+{{domxref("RTCPeerConnection")}} 인터페이스의 읽기 속성인 **`connectionState`** 는 피어 연결의 현재 상태를 알려줍니다. 이 속성은 [`RTCPeerConnectionState`](#rtcpeerconnectionstate_enum) `enum` 값 중 하나를 문자열로 반환해줍니다.
 
 만약 이 속성의 값이 바뀌게되면, {{domxref("RTCPeerConnection")}} 인스턴스로 {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}} 이벤트가 전송됩니다.
 
@@ -17,7 +17,7 @@ var connectionState = RTCPeerConnection.connectionState;
 
 ### 값
 
-연결의 현재 상태를 [`RTCPeerConnectionState`](#RTCPeerConnectionState_enum) enum의 값 중 하나로 표시합니다.
+연결의 현재 상태를 [`RTCPeerConnectionState`](#rtcpeerconnectionstate_enum) enum의 값 중 하나로 표시합니다.
 
 ### RTCPeerConnectionState enum
 
@@ -30,7 +30,7 @@ var connectionState = RTCPeerConnection.connectionState;
 | `"connected"`    | 연결에 의해 사용되는 모든 ICE 전송이 사용 중 (`"connected"` 혹은 `"completed"`)이거나, 종료된 상태입니다. 추가적으로 최소 하나의 전송이 `"connected"` 혹은 `"completed"`입니다.                                                                                                                     |
 | `"disconnected"` | 연결에 대한 최소 한 개의 ICE 전송이 `"disconnected"`상태이고, 그 외의 다른 전송 상태는 `"failed"`, `"connecting"`, 혹은 `"checking"`이 아님을 알려주는 값.                                                                                                                                          |
 | `"failed"`       | 연결에 대한 하나 혹은 여러개의 ICE 전송이 `"failed"`상태임을 알려주는 값.                                                                                                                                                                                                                           |
-| `"closed"`       | `RTCPeerConnection` 개통되지 않음을 알려주는 값.2016년 5월 13일에 작성된 명세서의 초안에 따르면, 이 값은 [`RTCPeerConnectionState` enum](#RTCPeerConnectionState_enum) 안에 존재했었습니다. 따라서, {{domxref("RTCPeerConnection.signalingState", "signalingState")}}의 값을 통해 찾을 수 있습니다. |
+| `"closed"`       | `RTCPeerConnection` 개통되지 않음을 알려주는 값.2016년 5월 13일에 작성된 명세서의 초안에 따르면, 이 값은 [`RTCPeerConnectionState` enum](#rtcpeerconnectionstate_enum) 안에 존재했었습니다. 따라서, {{domxref("RTCPeerConnection.signalingState", "signalingState")}}의 값을 통해 찾을 수 있습니다. |
 
 ## 예시
 
@@ -55,4 +55,4 @@ var connectionState = pc.connectionState;
 - [Lifetime of a WebRTC session](/ko/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}
 - {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/ko/docs/Web/API/WebRTC_API)

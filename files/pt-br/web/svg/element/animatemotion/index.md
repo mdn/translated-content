@@ -19,13 +19,13 @@ O elemento `animateMotion` interfere em uma elemento referenciado para se mover 
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#ConditionalProccessing) »
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#Core) »
-- [Atributos de eventos da animação](/pt-BR/docs/SVG/Attribute#AnimationEvent) »
-- [Atributos XLink](/pt-BR/docs/SVG/Attribute#XLink) »
-- [Atributos de cronometragem da animação](/pt-BR/docs/SVG/Attribute#AnimationTiming) »
-- [Atributos de valor de animação](/pt-BR/docs/SVG/Attribute#AnimationValue) »
-- [Atributos de animação adicionais](/pt-BR/docs/SVG/Attribute#AnimationAddition) »
+- [Atributos de processamento condicional](/pt-BR/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [Atributos principais](/pt-BR/docs/Web/SVG/Attribute#core) »
+- [Atributos de eventos da animação](/pt-BR/docs/Web/SVG/Attribute#animationevent) »
+- [Atributos XLink](/pt-BR/docs/Web/SVG/Attribute#xlink) »
+- [Atributos de cronometragem da animação](/pt-BR/docs/Web/SVG/Attribute#animationtiming) »
+- [Atributos de valor de animação](/pt-BR/docs/Web/SVG/Attribute#animationvalue) »
+- [Atributos de animação adicionais](/pt-BR/docs/Web/SVG/Attribute#animationaddition) »
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### Atributos específicos
@@ -38,7 +38,7 @@ O elemento `animateMotion` interfere em uma elemento referenciado para se mover 
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGAnimateMotionElement`](/pt-BR/docs/DOM/SVGAnimateMotionElement).
+Este elemento implementa a interface do [`SVGAnimateMotionElement`](/pt-BR/docs/Web/API/SVGAnimateMotionElement).
 
 ## Relacionado
 

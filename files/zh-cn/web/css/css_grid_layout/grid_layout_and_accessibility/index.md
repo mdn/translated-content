@@ -84,7 +84,7 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
 
 Firefox 中一个[久已存在的 bug](https://bugzilla.mozilla.org/show_bug.cgi?id=812687) 因此变得非常显眼。虽然这个问题在 Firefox 的 CSS 网格布局实现中不存在，但它确实暴露了一个我们在使用网格时需要考虑的问题。
 
-目前，在使用 flex 布局时，Firefox 将遵循视觉顺序而不是逻辑顺序浏览文档。[有人认为](http://tink.uk/flexbox-the-keyboard-navigation-disconnect/)，这实际上是一个更好的方法——使 tab 键顺序遵循文档的视觉顺序。然而，事实证明，这是 Firefox 实现中的一个 bug。两种规范都声明逻辑顺序就是源文档的结构顺序，而 tab 键顺序和语音浏览器应遵循文档的逻辑顺序。
+目前，在使用 flex 布局时，Firefox 将遵循视觉顺序而不是逻辑顺序浏览文档。[有人认为](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)，这实际上是一个更好的方法——使 tab 键顺序遵循文档的视觉顺序。然而，事实证明，这是 Firefox 实现中的一个 bug。两种规范都声明逻辑顺序就是源文档的结构顺序，而 tab 键顺序和语音浏览器应遵循文档的逻辑顺序。
 
 ## 如何处理网格布局的无障碍？
 
@@ -101,7 +101,7 @@ Firefox 中一个[久已存在的 bug](https://bugzilla.mozilla.org/show_bug.cgi
 
 CSS 网格布局中需要注意的另一个问题（在 CSS Flex 布局中程度较轻），是标记*变平*的诱惑。我们已经知道，一个项目要成为一个网格项目，它需是网格容器的直接子项目，因此，如果在网格容器中有一个 {{HTMLElement("ul")}} 元素，那么*这个* `ul` 是一个网格项目，但子元素 {{HTMLElement("li")}} 并不是网格项目。
 
-如果 {{cssxref("display")}} 属性的 `subgrid` 值得以实现，则可以通过将 `ul` 元素声明为 _subgrid_ 来使网格项目的这些子元素参与到整个网格布局中。目前唯一的解决方法是使用 `display：contents` 使 `ul` 生成的方框从 DOM 中消失。有关此相互影响的更多信息，请参阅本指南的[网格布局与其他布局方法的关系](/zh-CN/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)一文及文中的 [`display: contents`](/zh-CN/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods#Grid_and_display_contents) 部分。
+如果 {{cssxref("display")}} 属性的 `subgrid` 值得以实现，则可以通过将 `ul` 元素声明为 _subgrid_ 来使网格项目的这些子元素参与到整个网格布局中。目前唯一的解决方法是使用 `display：contents` 使 `ul` 生成的方框从 DOM 中消失。有关此相互影响的更多信息，请参阅本指南的[网格布局与其他布局方法的关系](/zh-CN/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)一文及文中的 [`display: contents`](/zh-CN/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods#grid_and_display_contents) 部分。
 
 由于对可互相影响的 `display: contents` 的支持有限，而且 subgrid 还没得到支持，所以当开发一个使用 CSS 网格布局的网站时，为了简单地创建布局，不可避免地要受到标签扁平化和移除语义元素的诱惑。例如，某些内容在语义上被标记为列表，但是为了通过 `display: grid` 将这些元素设置为容器的直接子元素，可能会决定用一组 {{HTMLElement("div")}} 标签来替代。要抵抗这种诱惑，找到不删除标记的设计方法。从一个结构良好的文档开始，是避免这个问题是一个好办法，当不得已去修改文档时，你就会意识到，你将仅是为了让布局工作而要删除语义元素！
 
@@ -111,4 +111,4 @@ CSS 网格布局中需要注意的另一个问题（在 CSS Flex 布局中程度
 
 依据文档源代码顺序进行可视化显示的概念在 _WCAG（无障碍网页内容指引）成熟标准技巧 - [技巧 C27](https://www.w3.org/TR/WCAG20-TECHS/C27.html)_ 中有详细描述。
 
-作为一种开始思考这些问题的方式，当使用 CSS 网格布局时，建议阅读 Leonie Watson 的 _[Flexbox & the Keyboard Navigation Disconnect](http://tink.uk/flexbox-the-keyboard-navigation-disconnect/)。[来自 ffconf 的 Leoie 的演示视频](https://www.youtube.com/watch?v=spxT2CmHoPk)有助于了解屏幕阅读器如何使用 CSS 的视觉表示进行工作。Adrian Roselli 也发表了 [tab order in various browsers](http://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html)——尽管这是在 Firefox 完全实现网格支持之前。_
+作为一种开始思考这些问题的方式，当使用 CSS 网格布局时，建议阅读 Leonie Watson 的 _[Flexbox & the Keyboard Navigation Disconnect](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)。[来自 ffconf 的 Leoie 的演示视频](https://www.youtube.com/watch?v=spxT2CmHoPk)有助于了解屏幕阅读器如何使用 CSS 的视觉表示进行工作。Adrian Roselli 也发表了 [tab order in various browsers](https://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html)——尽管这是在 Firefox 完全实现网格支持之前。_

@@ -82,7 +82,7 @@ element.scrollHeight - element.scrollTop === element.clientHeight
 
 ## scrollHeight Demo
 
-Asociada al evento `onscroll` , esta equivalencia puede ser útil para determinar si un usuario ha leido un texto o no (ver también las propiedades de [`element.scrollTop`](/es/docs/DOM/element.scrollTop) y [`element.clientHeight`](/es/docs/DOM/element.clientHeight) ). Por ejemplo:
+Asociada al evento `onscroll` , esta equivalencia puede ser útil para determinar si un usuario ha leido un texto o no (ver también las propiedades de [`element.scrollTop`](/es/docs/Web/API/Element/scrollTop) y [`element.clientHeight`](/es/docs/Web/API/Element/clientHeight) ). Por ejemplo:
 
 ### HTML
 
@@ -186,4 +186,4 @@ onload = function () {
 - [MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
 - {{domxref("Element.clientHeight")}}
 - {{domxref("HTMLElement.offsetHeight")}}
-- [Determinación de las dimensiones de los elementos](/es/docs/Determining_the_dimensions_of_elements)
+- [Determinación de las dimensiones de los elementos](/es/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

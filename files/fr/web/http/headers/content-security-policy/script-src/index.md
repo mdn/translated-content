@@ -37,9 +37,9 @@ Content-Security-Policy: script-src <source> <source>;
 
 ### Sources
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#directives_associées)).
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
 
 ## Exemples
 
@@ -124,8 +124,8 @@ La valeur `'unsafe-eval'` contrôle différents méthodes qui créent du code Ja
 - [`Function()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function)
 - En passant une chaine à des méthodes tel que : `window.setTimeout("alert('Coucou le monde');", 500);`
 
-  - [`setTimeout()`](/fr/docs/Web/API/setTimeout)
-  - [`setInterval()`](/fr/docs/Web/API/setInterval)
+  - [`setTimeout()`](/fr/docs/Web/API/Window/setTimeout)
+  - [`setInterval()`](/fr/docs/Web/API/Window/setInterval)
   - [`window.setImmediate()`](/fr/docs/Web/API/window/setImmediate)
 
 - `window.execScript()` {{non-standard_inline}} (IE10 et versions précédentes)

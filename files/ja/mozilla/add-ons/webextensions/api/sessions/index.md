@@ -13,7 +13,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/sessions
 
 この API は拡張機能にタブやウィンドウに関連する追加状態の保存させる関数グループも提供します。それで、タブやウィンドウが閉じられて順次復帰された場合、拡張機能は状態を取得できます。例えば、タブをグループ化する拡張機能は、これを使ってタブがどのグループにいるのかを記憶し、ユーザーがタブを復帰した時に正しいグループに復帰できるようになります。
 
-セッション API を使うには "sessions" [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)が必要です。
+セッション API を使うには "sessions" [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)が必要です。
 
 ## 型
 

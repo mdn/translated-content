@@ -7,7 +7,7 @@ slug: Games/Publishing_games
 
 ## Distribuição do jogo
 
-Então você realizou [um](/pt-BR/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript) ou [dois tutoriais](/pt-BR/docs/Games/Workflows/2D_Breakout_game_Phaser) e desenvolveu um jogo em HTML5 - isso é ótimo! Distribuição de jogos provém tudo o que você necessita saber para poder distribuir o seu jogo recém criado para o mundo — incluindo hospedagem online, submetendo para marketplaces aberto, e submetendo para marketplaces fechados como Google Play ou iOS App Store.
+Então você realizou [um](/pt-BR/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) ou [dois tutoriais](/pt-BR/docs/Games/Tutorials/2D_breakout_game_Phaser) e desenvolveu um jogo em HTML5 - isso é ótimo! Distribuição de jogos provém tudo o que você necessita saber para poder distribuir o seu jogo recém criado para o mundo — incluindo hospedagem online, submetendo para marketplaces aberto, e submetendo para marketplaces fechados como Google Play ou iOS App Store.
 
 ## Promovendo o jogo
 

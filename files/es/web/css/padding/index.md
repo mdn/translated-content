@@ -129,6 +129,6 @@ padding: 1em 3px 30px 5px; /* arriba:      1em  de relleno  */
 
 ## Véase también
 
-- [Introducción al modelo de caja básica CSS](/es/docs/Web/CSS/CSS_Box_Model/introduction_to_the_CSS_box_model)
+- [Introducción al modelo de caja básica CSS](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, y {{cssxref("padding-left")}}.
 - Las propiedades lógicas asignadas: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, y {{cssxref("padding-inline-end")}} y las abreviaciones {{cssxref("padding-block")}} y {{cssxref("padding-inline")}}

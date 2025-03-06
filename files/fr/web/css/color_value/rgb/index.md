@@ -12,7 +12,7 @@ La notation fonctionnelle **`rgb()`** exprime une couleur selon ses composantes 
 {{EmbedInteractiveExample("pages/css/function-rgb.html")}}
 
 > [!NOTE]
-> Le niveau 4 du module de spécification <i lang="en">CSS Color</i> a apporté certaines modifications à `rgb()`. Pour les navigateurs qui prennent en charge la notation standard [`rgba()`](/fr/docs/Web/CSS/color_value/rgba), `rgb()` est désormais un synonyme de `rgba()`, les deux acceptent les mêmes paramètres et se comportent de la même façon.
+> Le niveau 4 du module de spécification <i lang="en">CSS Color</i> a apporté certaines modifications à `rgb()`. Pour les navigateurs qui prennent en charge la notation standard [`rgba()`](/fr/docs/Web/CSS/color_value/rgb), `rgb()` est désormais un synonyme de `rgba()`, les deux acceptent les mêmes paramètres et se comportent de la même façon.
 >
 > Le niveau 4 de la spécification permet également de séparer les paramètres par des espaces en complément de la séparation avec des virgules.
 

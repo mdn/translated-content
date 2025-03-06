@@ -48,7 +48,7 @@ transform-origin: initial;
 transform-origin: unset;
 ```
 
-The `transform-origin` p 屬性可以使用多次，每一次都代表著一個偏移量。若未設定偏移量，則重置為其對應的 [初始值](/zh-TW/docs/Web/CSS/initial_value)。
+`transform-origin` 屬性可以使用多次，每一次都代表著一個偏移量。若未設定偏移量，則重置為其對應的[初始值](/zh-TW/docs/Web/CSS/CSS_cascade/initial_value)。
 
 If two or more values are defined and either no value is a keyword, or the only used keyword is `center`, then the first value represents the horizontal offset and the second represents the vertical offset.
 
@@ -296,4 +296,4 @@ transform-origin: 100% -30%;
 
 ## See also
 
-- [Using CSS transforms](/zh-TW/docs/CSS/Using_CSS_transforms)
+- [Using CSS transforms](/zh-TW/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

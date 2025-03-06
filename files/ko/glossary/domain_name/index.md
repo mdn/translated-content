@@ -12,4 +12,4 @@ l10n:
 ## 같이 보기
 
 - 위키피디아의 [도메인 네임](https://ko.wikipedia.org/wiki/%EB%8F%84%EB%A9%94%EC%9D%B8_%EB%84%A4%EC%9E%84)
-- [도메인 네임 이해하기](/ko/docs/Learn/Common_questions/What_is_a_domain_name)
+- [도메인 네임 이해하기](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)

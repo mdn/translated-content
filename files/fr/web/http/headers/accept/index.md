@@ -40,7 +40,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 ## Directives
 
 - `<MIME_type>/<MIME_subtype>`
-  - : Un type MIME unique et déterminé [MIME type](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types), comme par exemple `text/html`.
+  - : Un type MIME unique et déterminé [MIME type](/fr/docs/Web/HTTP/MIME_types), comme par exemple `text/html`.
 - `<MIME_type>/*`
   - : un type MIME type ne comprenant pas de sous-type. `image/*` prendra en charge `image/png`, `image/svg`, `image/gif` et tous autres types d'image.
 - `*/*`

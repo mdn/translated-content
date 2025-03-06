@@ -29,7 +29,7 @@ error(msg, subst1, /* …, */ substN)
 - `subst1` ... `substN`
   - : JavaScript 对象可以用此来替换`msg`里的替代字符串。你可以控制输出的格式。
 
-详情请看{{domxref("console")}}文档中的 [输出文本到控制台](/zh-CN/docs/Web/API/console#Outputting_text_to_the_console) 。
+详情请看{{domxref("console")}}文档中的 [输出文本到控制台](/zh-CN/docs/Web/API/console#outputting_text_to_the_console) 。
 
 ## 规范
 

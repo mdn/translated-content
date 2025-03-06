@@ -27,7 +27,7 @@ target.removeEventListener(type, listener[, useCapture]);
     - `capture` : un {{jsxref("Boolean")}} indiquant que les évènements de ce type seront envoyés au `listener` enregistré avant d'être distribués à tout `EventTarget` en-dessous dans l'arborescence du DOM.
 
 - `useCapture` {{optional_inline}}
-  - : Indique si l'[`EventListener`](/fr/docs/Web/API/EventListener) à retirer a été enregistré comme un écouteur capturant, ou non. Si le paramètre est absent, la valeur par défaut est `false` (_faux_).
+  - : Indique si l'[`EventListener`](/fr/docs/Web/API/EventTarget/addEventListener) à retirer a été enregistré comme un écouteur capturant, ou non. Si le paramètre est absent, la valeur par défaut est `false` (_faux_).
 
 Si un écouteur est enregistré deux fois, un avec capture et un sans, supprimez chacun séparément. La suppression d'un écouteur de capture n'affecte pas une version non capturante du même écouteur, et vice versa.
 

@@ -3,8 +3,6 @@ title: 页面类型
 slug: MDN/Writing_guidelines/Page_structures/Page_types
 ---
 
-{{MDNSidebar}}
-
 MDN 有许多复用的页面类型。本文描述了这些页面类型和它们的作用，并给出了每个页面类型的示例和创建新页面时使用的模板。
 
 MDN 有三个大类的页面类型，尽管有些页面类型属于多个类别。
@@ -168,7 +166,7 @@ MDN 有三个大类的页面类型，尽管有些页面类型属于多个类别�
 
 - [使用 WebVR API](/zh-CN/docs/Web/API/WebVR_API/Using_the_WebVR_API)
 - [基于 Web Audio API 的可视化](/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [CSS 的层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [CSS 的层叠与继承](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 
 ## 术语页
 
@@ -188,7 +186,7 @@ MDN 有三个大类的页面类型，尽管有些页面类型属于多个类别�
 
 **着陆页**作为其子页面的菜单，因此主要作为*导航*页面。着陆页布局通常用于关于特定主题的页面树的根页面。它以对主题的简要概述开头，然后呈现一个结构化的链接列表，指向其子页面，以及可选的其他对读者有用的材料。
 
-子页面列表可使用 [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs) 和 [`LandingPageListSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/LandingPageListSubpages.ejs) 模板自动生成。但是，在更复杂的情况下，列表可能需要手动创建（和维护！）。
+子页面列表可使用 [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs) 模板自动生成。但是，在更复杂的情况下，列表可能需要手动创建（和维护）。
 
 ### 示例
 

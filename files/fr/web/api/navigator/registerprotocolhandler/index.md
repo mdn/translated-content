@@ -130,5 +130,5 @@ La personne recevra une notification indiquant que le code a demandé à enregis
 
 ## Voir aussi
 
-- [Gestionnaires de protocoles web](/fr/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers)
+- [Gestionnaires de protocoles web](/fr/docs/conflicting/Web/API/Navigator/registerProtocolHandler)
 - [Améliorer le Web fédéré avec RegisterProtocolHandler (en anglais)](https://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) (Mozilla Webdev)

@@ -9,7 +9,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 
 ブラウザーは拡張機能がローカルストレージエリアに保存できるデータ量を制限します。
 
-- Chrome では、この API を使用して、["unlimitedStorage"](/ja/Add-ons/WebExtensions/manifest.json/permissions#Unlimited_storage)パーミッションを許可しない場合は 5MB まで保存できます。
+- Chrome では、この API を使用して、["unlimitedStorage"](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#unlimited_storage)パーミッションを許可しない場合は 5MB まで保存できます。
 - Firefox ではバージョン 56 以降で"unlimitedStorage"パーミッションを利用できます。保存できるデータ量は現在では制限していませんが、将来的には制限するため、もし大きなデータ量を保存するのであれば"unlimitedStorage"パーミッションを今から使用するとよいでしょう。
 
 拡張機能をアンインストールすると、関連するローカルストレージは削除されます。

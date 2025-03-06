@@ -7,14 +7,22 @@ slug: Web/HTML/Element/embed
 
 O **elemento HTML `<embed>`** incorpora conteúdo externo no ponto especificado no documento. Este conteúdo é fornecido por um aplicativo externo ou outra fonte de conteúdo interativo, como um plug-in de navegador.
 
-{{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;embed&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<embed
+  type="video/mp4"
+  src="/shared-assets/videos/flower.mp4"
+  width="250"
+  height="200" />
+```
 
 > [!NOTE]
 > Este tópico documenta apenas o elemento definido como parte do HTML5. Ele não trata da implementação anterior e não padronizada do elemento.
 
 Lembre-se de que a maioria dos navegadores modernos descontinuou e removeu o suporte para plug-ins de navegador. Portanto, confiar no `<embed>` geralmente não é aconselhável se você deseja que seu site funcione no navegador do usuário comum.
 
-- _[Categoria de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), embedded content, interactive content, palpable content.
+- _[Categoria de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), embedded content, interactive content, palpable content.
 - _Conteúdo permitido_ Nenhum, é um {{Glossary("empty element")}}.
 - _Omissão de Tag_ Deve iniciar com uma tag de início, mas não deve ter uma tag de fechamento.
 - _Elementos pai (ancestral) permitidos_ Qualquer elemento que aceita incorporação de conteúdo.
@@ -22,7 +30,7 @@ Lembre-se de que a maioria dos navegadores modernos descontinuou e removeu o sup
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `height`
   - : A altura apresentada do recurso, em [CSS pixels.](https://drafts.csswg.org/css-values/#px) Este deve ser um valor absoluto; porcentagens _não_ são permitidas.

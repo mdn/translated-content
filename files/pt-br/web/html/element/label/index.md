@@ -7,10 +7,10 @@ slug: Web/HTML/Element/label
 
 Um **elemento** **HTML `<label>` **representa uma legenda para um item em uma interface de usuário. Ele pode estar associado com um elemento de controle, colocando este dentro do elemento `label`, ou usando o atributo `for`. Tal controle é chamado o _controle etiquetado_ do elemento etiqueta. Um input pode ser associado a diversas etiquetas (\<label>s).
 
-- _[As categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content), [interactive content](/pt-BR/docs/Web/HTML/Content_categories#Interactive_content), [form-associated element](/pt-BR/docs/Web/HTML/Content_categories#Form-associated_content), palpable content.
-- _conteúdo permitido_ [Phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content), mas há elementos do rótulo descendente. Nenhum outro do que o controle rotulado elementos labelable são permitidos.
+- _[As categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), [interactive content](/pt-BR/docs/Web/HTML/Content_categories#interactive_content), [form-associated element](/pt-BR/docs/Web/HTML/Content_categories#form-associated_content), palpable content.
+- _conteúdo permitido_ [Phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), mas há elementos do rótulo descendente. Nenhum outro do que o controle rotulado elementos labelable são permitidos.
 - _Omissão de tag_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
-- _Elementos pai permitidas_ Qualquer elemento que aceita [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content).
+- _Elementos pai permitidas_ Qualquer elemento que aceita [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
 - _DOM interface_ {{domxref("HTMLLabelElement")}}
 
 ## Atributos

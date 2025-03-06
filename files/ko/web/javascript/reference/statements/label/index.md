@@ -138,7 +138,7 @@ console.log("swap");
 
 ### 레이블 붙인 함수 선언문
 
-ECMAScript 2015에서, 레이블 붙인 함수 선언문은 [web compatibility annex of the specification](http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations)의 non-strict 모드에서 표준화되어 있다.
+ECMAScript 2015에서, 레이블 붙인 함수 선언문은 [web compatibility annex of the specification](https://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations)의 non-strict 모드에서 표준화되어 있다.
 
 ```js
 L: function F() {}

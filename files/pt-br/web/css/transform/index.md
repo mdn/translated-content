@@ -58,7 +58,7 @@ Se {{cssxref("transform-function/perspective()", "perspective()")}} é uma das m
 
 ## Exemplos
 
-Veja [Using CSS transforms](/En/CSS/Using_CSS_transforms).
+Veja [Using CSS transforms](/en-US/CSS/Using_CSS_transforms).
 
 ### Exemplo ao vivo
 
@@ -222,6 +222,6 @@ Translates the element by the given amount along the Y axis.
 
 ## See also
 
-- [Using CSS Transforms](/pt-BR/docs/CSS/Using_CSS_transforms)
-- [More info](http://paulirish.com/2010/introducing-css3please/#comment-36380) on CSS3 Rotation / Matrix Filter issues in the comments on Paul Irish's blog.
+- [Using CSS Transforms](/pt-BR/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [More info](https://paulirish.com/2010/introducing-css3please/#comment-36380) on CSS3 Rotation / Matrix Filter issues in the comments on Paul Irish's blog.
 - A cross-browser 2D [transform plugin for jQuery](http://plugins.jquery.com/project/jquery-transform)

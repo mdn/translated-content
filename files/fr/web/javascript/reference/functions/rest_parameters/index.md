@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Functions/rest_parameters
 
 Cette syntaxe permet de représenter un nombre indéfini d'arguments sous forme d'un tableau.
 
-{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Rest Parameters")}}
+
+```js interactive-example
+function sum(...theArgs) {
+  let total = 0;
+  for (const arg of theArgs) {
+    total += arg;
+  }
+  return total;
+}
+
+console.log(sum(1, 2, 3));
+// Expected output: 6
+
+console.log(sum(1, 2, 3, 4));
+// Expected output: 10
+```
 
 ## Syntaxe
 

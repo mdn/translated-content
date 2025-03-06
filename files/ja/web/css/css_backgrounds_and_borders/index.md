@@ -2,7 +2,7 @@
 title: CSS 背景と境界
 slug: Web/CSS/CSS_backgrounds_and_borders
 l10n:
-  sourceCommit: 5178e1e7c9edf0c9c652275ae62f090042ce2422
+  sourceCommit: 5755d6dfbac15abc29ddcd924cee110c4139b073
 ---
 
 {{CSSRef}}
@@ -19,11 +19,64 @@ l10n:
 
 この境界、背景、ボックスシャドウの例は、線形および放射グラデーションで作られた中央の背景画像で構成されています。一連のボックスシャドウが、境界を「ポップ」に見せています。左の要素には境界画像が設定されています。右の要素には丸い点線の境界があります。
 
-{{EmbedGHLiveSample("css-examples/modules/backgrounds.html", '100%', 430)}}
+```html hidden live-sample___backgrounds
+<article>
+  <div></div>
+  <div></div>
+</article>
+```
+
+```css hidden live-sample___backgrounds
+article {
+  display: flex;
+  gap: 10px;
+}
+div {
+  color: #58ade3;
+  height: 320px;
+  width: 240px;
+  padding: 20px;
+  margin: 10px;
+  border: dotted 15px; /* 既定値の `currentcolor` */
+  border-radius: 100px 0;
+  background-image:
+    radial-gradient(
+      circle,
+      transparent 60%,
+      currentcolor 60% 70%,
+      transparent 70%
+    ),
+    linear-gradient(45deg, currentcolor, white),
+    linear-gradient(transparent, transparent);
+  /* 3 枚目の透明な背景画像が追加され、背景色が透けて見えるスペースが確保された */
+  background-color: currentcolor;
+  background-position: center;
+  background-size:
+    60px 60px,
+    120px 120px;
+  background-clip: content-box, content-box, padding-box;
+  box-shadow:
+    inset 5px 5px 5px rgb(0 0 0 / 0.4),
+    inset -5px -5px 5px rgb(0 0 0 / 0.4),
+    5px 5px 5px rgb(0 0 0 / 0.4),
+    -5px -5px 5px rgb(0 0 0 / 0.4);
+}
+div:first-of-type {
+  border-radius: 0;
+  border-image-source: repeating-conic-gradient(
+    from 3deg at 25% 25%,
+    currentColor 0 3deg,
+    transparent 3deg 6deg
+  );
+  border-image-slice: 30;
+}
+```
+
+{{EmbedLiveSample("backgrounds", "", "450px")}}
 
 背景画像は {{cssxref("background-image")}} で定義されています。画像は {{cssxref("background-position")}} で中央に配置されています。複数の背景画像に対して別々の {{cssxref("background-clip")}} プロパティの値を使用して、背景画像がコンテンツボックス内に収まるようにしています。背景色は、 {{cssxref("border-image")}} および{{cssxref("border-style", "点線")}}の {{cssxref("border")}} の透明部分から背景が現れるのを防ぐために、パディングボックスでクリップしています。右の要素の角丸は {{cssxref("border-radius")}} プロパティを使用して作成しています。単一の {{cssxref("box-shadow")}} 宣言を使用して、内側と外側のすべての影を設定しています。
 
-この例のコードを見るには、 [GitHub でソースを表示](https://github.com/mdn/css-examples/blob/main/modules/backgrounds.html)してください。
+上記の例の "Play" をクリックすると、 MDN Playground でコードを見たり編集したりすることができます。
 
 ## リファレンス
 

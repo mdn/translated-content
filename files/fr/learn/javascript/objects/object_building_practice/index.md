@@ -43,7 +43,7 @@ Dans cet article, nous écrirons une démo classique de "balles bondissantes", p
 
 ![](bouncing-balls.png)
 
-Cet exemple utilise l'[API Canvas](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) pour dessiner les balles sur l'écran, et l'API [requestAnimationFrame](/fr/docs/Web/API/window/requestAnimationFrame) pour animer l'ensemble de l'affichage — Nul besoin d'avoir une connaissance préalable de ces APIs, nous espérons qu'une fois cet article terminé, vous aurez envie d'en faire une exploration approfondie. Tout le long du parcours nous utiliserons certains objets formidables et vous montrerons nombre de techniques sympathiques comme des balles bondissantes sur les murs et la vérification de balles qui s'entrechoquent (encore connue sous l'appelation **détection de collision**).
+Cet exemple utilise l'[API Canvas](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) pour dessiner les balles sur l'écran, et l'API [requestAnimationFrame](/fr/docs/Web/API/Window/requestAnimationFrame) pour animer l'ensemble de l'affichage — Nul besoin d'avoir une connaissance préalable de ces APIs, nous espérons qu'une fois cet article terminé, vous aurez envie d'en faire une exploration approfondie. Tout le long du parcours nous utiliserons certains objets formidables et vous montrerons nombre de techniques sympathiques comme des balles bondissantes sur les murs et la vérification de balles qui s'entrechoquent (encore connue sous l'appelation **détection de collision**).
 
 Pour commencer, faites des copies locales de nos fichiers [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), et [`main.js`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js). Ces fichiers contiennent respectivement :
 
@@ -301,7 +301,7 @@ Maintenant, pour un peu de plaisir, ajoutons une détection de collision à notr
 3. Enregistrez et rafraîchissez la démo à nouveau, et vous verrez vos balles changer de couleur quand elles entrent en collision !
 
 > [!NOTE]
-> Si vous avez des difficultés à faire fonctionner cet exemple, essayez de comparer votre code JavaScript avec notre [version finale](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (voir également la [démo en ligne](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
+> Si vous avez des difficultés à faire fonctionner cet exemple, essayez de comparer votre code JavaScript avec notre [version finale](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (voir également la [démo en ligne](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
 
 ## Résumé
 
@@ -312,7 +312,7 @@ C'est tout pour les articles sur les objets — il ne vous reste plus qu'à test
 ## Voir aussi
 
 - [Didacticiel sur canvas](/fr/docs/Web/API/Canvas_API/Tutorial) — un guide pour débutants sur l'utilisation de canvas 2D.
-- [requestAnimationFrame()](/fr/docs/Web/API/window/requestAnimationFrame)
+- [requestAnimationFrame()](/fr/docs/Web/API/Window/requestAnimationFrame)
 - [Détection de collision 2D](/fr/docs/Games/Techniques/2D_collision_detection)
 - [Détection de collision 3D](/fr/docs/Games/Techniques/3D_collision_detection)
 - [Jeu d'évasion 2D utilisant du JavaScript pu](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) —un excellent tutoriel pour débutant montrant comment construire un jeu en 2D.

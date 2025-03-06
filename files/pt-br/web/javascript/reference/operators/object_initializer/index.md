@@ -75,7 +75,7 @@ var object = {
 
 ### Acessando propriedades
 
-Uma vez que você criou um objeto, é interessante que possa ler ou alterá-lo. As propriedades de um objeto podem ser acessadas utilizando a notação de ponto ou colchetes. Veja [assessores de propriedade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors) para mais informações.
+Uma vez que você criou um objeto, é interessante que possa ler ou alterá-lo. As propriedades de um objeto podem ser acessadas utilizando a notação de ponto ou colchetes. Veja [assessores de propriedade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_accessors) para mais informações.
 
 ```js
 object.foo; // "bar"
@@ -184,11 +184,11 @@ var o = {
 };
 ```
 
-Para mais informações e exemplos, veja [definições de método](/pt-BR/docs/Web/JavaScript/Reference/Functions/Definicoes_metodos).
+Para mais informações e exemplos, veja [definições de método](/pt-BR/docs/Web/JavaScript/Reference/Functions/Method_definitions).
 
 ### Nomes de propriedades computados
 
-Começando com ECMAScript 2015, a sintaxe _inicializador_ de objeto também suporta "nomes de propriedades computados". Isso permite que você possa inserir uma expressão dentro de colchetes `[]`, que será computada como o nome de uma propriedade. Isto é semelhante à notação de chaves utilizado em [acessor de propriedade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors), utilizado para ler a alterar as propriedades existentes em um objeto. Segue um exemplo utilizando a mesma sintaxe em objetos literais:
+Começando com ECMAScript 2015, a sintaxe _inicializador_ de objeto também suporta "nomes de propriedades computados". Isso permite que você possa inserir uma expressão dentro de colchetes `[]`, que será computada como o nome de uma propriedade. Isto é semelhante à notação de chaves utilizado em [acessor de propriedade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_accessors), utilizado para ler a alterar as propriedades existentes em um objeto. Segue um exemplo utilizando a mesma sintaxe em objetos literais:
 
 ```js
 // Nomes de propriedades computados (ES2015)
@@ -214,7 +214,7 @@ console.log(config); // { size: 12, mobileSize: 4 }
 
 ### Mutação Prototype
 
-Uma definição de propriedade na forma de `__proto__: valor` or `"__proto__": valor` não cria uma propriedade com o nome `__proto__`. Inclusive, se o valor fornecido for um objeto ou [`null`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/null), muda o `[[Prototype]]` do objeto criado para o valor informado. (Se o valor fornecido não é um objeto ou null, o valor não será alterado.)
+Uma definição de propriedade na forma de `__proto__: valor` or `"__proto__": valor` não cria uma propriedade com o nome `__proto__`. Inclusive, se o valor fornecido for um objeto ou [`null`](/pt-BR/docs/Web/JavaScript/Reference/Operators/null), muda o `[[Prototype]]` do objeto criado para o valor informado. (Se o valor fornecido não é um objeto ou null, o valor não será alterado.)
 
 ```js
 var obj1 = {};
@@ -257,7 +257,7 @@ assert(obj3.__proto__ === 17);
 
 ## Notação de objeto literal vs JSON
 
-A notação de objeto literal não é a mesma de **J**ava**S**cript **O**bject **N**otation ([JSON](/pt-BR/docs/JSON)). Mesmo que possuam semelhanças, há as seguintes diferenças:
+A notação de objeto literal não é a mesma de **J**ava**S**cript **O**bject **N**otation ([JSON](/pt-BR/docs/Glossary/JSON)). Mesmo que possuam semelhanças, há as seguintes diferenças:
 
 - JSON permite definições de propriedades utilizando apenas aspas duplas, como `"propriedade": valor`. E a definição não pode ser abreviada.
 - Os valores JSON podem ser apenas strings, numbers, arrays, `true`, `false`, `null`, ou outro objeto JSON.
@@ -275,7 +275,7 @@ A notação de objeto literal não é a mesma de **J**ava**S**cript **O**bject *
 
 ## Veja também
 
-- [Assesores de propriedade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Assesores de propriedade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 - [`get`](/pt-BR/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/pt-BR/docs/Web/JavaScript/Reference/Functions/set)
-- [Definições de métodos](/pt-BR/docs/Web/JavaScript/Reference/Functions/Definicoes_metodos)
+- [Definições de métodos](/pt-BR/docs/Web/JavaScript/Reference/Functions/Method_definitions)
 - [Lexical grammar](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar)

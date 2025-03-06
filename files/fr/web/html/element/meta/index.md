@@ -34,7 +34,7 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
     - `content-security-policy`
       - : Cette valeur permet de créer des [règles de gestion de contenu (CSP)](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) pour les ressources qui sont servies. Cela permet notamment d'indiquer les origines valides et les points d'accès aux scripts afin de protéger contre les attaques XSS.
     - `content-type`
-      - : Ce champ d'attribut définit le [type MIME](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types) du document, suivi du jeu de caractères utilisé pour l'encodage du document. Si cette valeur est utilisée, l'attribut `content` doit valoir `"text/html; charset=utf-8"`. Cette formulation est équivalente à un élément `<meta>` ayant l'attribut [`charset`](#charset), et les mêmes restrictions s'appliquent quant à l'emplacement dans le document (1024 premiers octets).
+      - : Ce champ d'attribut définit le [type MIME](/fr/docs/Web/HTTP/MIME_types) du document, suivi du jeu de caractères utilisé pour l'encodage du document. Si cette valeur est utilisée, l'attribut `content` doit valoir `"text/html; charset=utf-8"`. Cette formulation est équivalente à un élément `<meta>` ayant l'attribut [`charset`](#charset), et les mêmes restrictions s'appliquent quant à l'emplacement dans le document (1024 premiers octets).
         > [!NOTE]
         > Cette valeur peut uniquement être utilisée pour les documents servis avec le type `text/html`. Elle ne peut pas être utilisée pour les documents servis avec un type MIME XML.
     - `default-style`

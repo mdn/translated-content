@@ -32,7 +32,7 @@ The `text-transform` property takes into account language-specific case mapping 
 
 The language is defined by the `lang` HTML attribute or the `xml:lang` XML attribute.
 
-Support for these specific cases vary from one browser to the other, so check the [browser compatibility table](#Browser_compatibility).
+Support for these specific cases vary from one browser to the other, so check the [browser compatibility table](#browser_compatibility).
 
 {{cssinfo}}
 

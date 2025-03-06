@@ -19,4 +19,4 @@ Dans la pratique, si l'on divise deux variables dans un programme {{glossary("Ja
 
 ### Informations techniques
 
-- [NaN dans JavaScript](/fr/docs/Web/JavaScript/Reference/Objets_globaux/NaN)
+- [NaN dans JavaScript](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN)

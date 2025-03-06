@@ -2,7 +2,7 @@
 title: MDN Web Docs の掲載基準
 slug: MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
 l10n:
-  sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
+  sourceCommit: ce83b64f1132a29a19471e46bfffced755f775eb
 ---
 
 {{MDNSidebar}}

@@ -141,7 +141,7 @@ Esta interação sobre os toques também muda, mas parece em cache as informaç�
 
 Isto permite obter as coordenadas da posição anterior de cada contato e usar os métodos de contexto apropriado para desenhar uma linha que une as duas posições.
 
-Depois de desenhar a linha, nós chamamos [`Array.splice()`](/pt-BR/JavaScript/Reference/Global_Objects/Array/splice) para substituir as informações previas sobre o ponto de toque com a informação atual no array `ongoingTouches`.
+Depois de desenhar a linha, nós chamamos [`Array.splice()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) para substituir as informações previas sobre o ponto de toque com a informação atual no array `ongoingTouches`.
 
 #### Gerenciando o final do evento de toque
 
@@ -174,7 +174,7 @@ function handleEnd(evt) {
 }
 ```
 
-Isto é muito semelhante a função anterior, as únicas diferenças reais são o desenho de um pequeno quadrado para marcar o fim e quando chamamos [`Array.splice()`](/pt-BR/JavaScript/Reference/Global_Objects/Array/splice), nós simplesmente removemos a antiga entrada da lista de toque do ongoing, sem adição das informações atualizadas. O resultado é que paramos o tracking do ponto de contato.
+Isto é muito semelhante a função anterior, as únicas diferenças reais são o desenho de um pequeno quadrado para marcar o fim e quando chamamos [`Array.splice()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/splice), nós simplesmente removemos a antiga entrada da lista de toque do ongoing, sem adição das informações atualizadas. O resultado é que paramos o tracking do ponto de contato.
 
 #### Tratando toques cancelados
 

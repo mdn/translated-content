@@ -754,5 +754,5 @@ window.addEventListener(
 ## 같이 보기
 
 - {{domxref("EventTarget.removeEventListener()")}}
-- [이벤트 생성 및 발동](/ko/docs/DOM/Creating_and_triggering_events)
+- [이벤트 생성 및 발동](/ko/docs/Web/Events/Creating_and_triggering_events)
 - [이벤트 처리기의 `this`에 관한 더 자세한 정보](https://www.quirksmode.org/js/this.html)

@@ -10,7 +10,7 @@ La methode **`write()`** de {{domxref("Clipboard")}} écrie des données arbitra
 Avant de pouvoir écrire dans le presse-papier, vous devez utiliser [Permissions API](/fr/docs/Web/API/Permissions_API) pour avoir l'autorisation `"clipboard-write"`.
 
 > [!NOTE]
-> Les API Presse-papiers (<i lang="en">clipboard</i>) asynchrones sont toujours en cours d'implémentation. Consultez le [tableau de compatibilité](#compatibilité_des_navigateurs) et la section [Disponibilité du presse-papiers](/fr/docs/Web/API/clipboard#disponibilité_du_presse-papiers) sur la page [`Clipboard`](/fr/docs/Web/API/clipboard) pour plus d'informations.
+> Les API Presse-papiers (<i lang="en">clipboard</i>) asynchrones sont toujours en cours d'implémentation. Consultez le [tableau de compatibilité](#compatibilité_des_navigateurs) et la section [Disponibilité du presse-papiers](/fr/docs/Web/API/Clipboard#disponibilit%c3%a9_du_presse-papiers) sur la page [`Clipboard`](/fr/docs/Web/API/Clipboard) pour plus d'informations.
 
 ## Syntaxe
 

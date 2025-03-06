@@ -33,6 +33,6 @@ On utilise ici les attributs `aria-label` et `aria-current` afin d'aider les uti
 
 ## Voir aussi
 
-- [Les boîtes flexibles CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [Les boîtes flexibles CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout)
 - [Fournir un fil d'Ariane](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
 - [Utiliser l'attribut `aria-current`](https://tink.uk/using-the-aria-current-attribute/)

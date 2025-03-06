@@ -35,7 +35,7 @@ document(URI [,node-set] )
 
 ### 정의
 
-[XSLT 1.0 12.1](http://www.w3.org/TR/xslt#function-document)
+[XSLT 1.0 12.1](https://www.w3.org/TR/xslt#function-document)
 
 ### Gecko 지원
 

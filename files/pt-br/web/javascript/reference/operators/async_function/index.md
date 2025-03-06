@@ -13,7 +13,7 @@ async function [nome]([parametro1[, parametro2[, ..., parametroN]]]) {
 }
 ```
 
-Como no [ES2015](/pt-BR/docs/), você tambem pode usar [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+Como no [ES2015](/pt-BR/docs/Web), você tambem pode usar [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Parâmetros
 

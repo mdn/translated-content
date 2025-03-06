@@ -73,4 +73,4 @@ String(sym); // "Symbol(示例)"
 
 ## 参见
 
-- [JavaScript 指南中的文本格式化](/zh-CN/docs/Web/JavaScript/Guide/Text_formatting)
+- [数字与字符串](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_strings)指南

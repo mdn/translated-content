@@ -32,7 +32,7 @@ slug: Web/JavaScript/Reference/Lexical_grammar
 
 ## 行终止符
 
-除了空白符之外，行终止符也可以提高源码的可读性。不同的是，行终止符可以影响 JavaScript 代码的执行。行终止符也会影响[自动分号补全](#Automatic_semicolon_insertion)的执行。在[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中，行终止符会被 **\s** 匹配。
+除了空白符之外，行终止符也可以提高源码的可读性。不同的是，行终止符可以影响 JavaScript 代码的执行。行终止符也会影响[自动分号补全](#automatic_semicolon_insertion)的执行。在[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中，行终止符会被 **\s** 匹配。
 
 在 ECMAScript 中，只有下列 Unicode 字符会被当成行终止符，其他的行终止符（比如 Next Line、NEL、U+0085 等）都会被当成空白符。
 
@@ -310,7 +310,7 @@ false
 42
 ```
 
-请注意，十进制数字字面量可以以 0 开头，但是如果 0 以后的最高位比 8 小，数值将会被认为是八进制而不会报错。更多信息可以参考 [Firefox bug 957513](https://bugzil.la/957513) 和 [`parseInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix)。
+请注意，十进制数字字面量可以以 0 开头，但是如果 0 以后的最高位比 8 小，数值将会被认为是八进制而不会报错。更多信息可以参考 [Firefox bug 957513](https://bugzil.la/957513) 和 [`parseInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt#octal_interpretations_with_no_radix)。
 
 #### 二进制
 
@@ -440,7 +440,7 @@ ECMAScript 6 新增特性。使用 Unicode 编码转义，任何字符都可以�
 
 ### 模板字面量
 
-更多信息可以参考[template strings](/zh-CN/docs/Web/JavaScript/Reference/template_strings)。
+更多信息可以参考[template strings](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)。
 
 ```js-nolint
 `string text`
@@ -465,9 +465,9 @@ tag`string text ${expression} string text`
 - `continue`、`break`、`throw`
 - `return`
 
-ECMAScript 规格提到[自动分号补全的三个规则](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-rules-of-automatic-semicolon-insertion)。
+ECMAScript 规格提到[自动分号补全的三个规则](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-rules-of-automatic-semicolon-insertion)。
 
-1. 当出现一个不允许的[行终止符](#Line_terminators)或“}”时，会在其之前插入一个分号。
+1. 当出现一个不允许的[行终止符](#line_terminators)或“}”时，会在其之前插入一个分号。
 
    ```js
    { 1 2 } 3
@@ -479,7 +479,7 @@ ECMAScript 规格提到[自动分号补全的三个规则](http://people.mozilla
 
 2. 当捕获到标识符输入流的结尾，并且无法将单个输入流转换为一个完整的程序时，将在结尾插入一个分号。
 
-   在下面这段中，由于在 `b` 和 `++` 之间出现了一个行终止符，所以 `++` 未被当成变量 `b` 的[后置运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment)。
+   在下面这段中，由于在 `b` 和 `++` 之间出现了一个行终止符，所以 `++` 未被当成变量 `b` 的[后置运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#increment)。
 
    ```js-nolint
    a = b
@@ -516,8 +516,8 @@ ECMAScript 规格提到[自动分号补全的三个规则](http://people.mozilla
 
 ## 参见
 
-- [Jeff Walden: Binary and octal numbers](http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
-- [Mathias Bynens: JavaScript character escape sequences](http://mathiasbynens.be/notes/javascript-escapes)
+- [Jeff Walden: Binary and octal numbers](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
+- [Mathias Bynens: JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes)
 - {{jsxref("Boolean")}}
 - {{jsxref("Number")}}
 - {{jsxref("RegExp")}}

@@ -12,7 +12,7 @@ Le format SVG peut être utilisé en tant qu'image dans de nombreux contextes. B
 
 ## Contexte spécifique à Gecko
 
-De plus, Gecko 2.0 prend en charge l'usage du format [SVG](/fr/docs/SVG) dans ces contextes:
+De plus, Gecko 2.0 prend en charge l'usage du format [SVG](/fr/docs/Web/SVG) dans ces contextes:
 
 - la propriété CSS {{cssxref("list-style-image")}}
 - la propriété CSS {{cssxref("content")}}
@@ -37,4 +37,4 @@ A noter que les restrictions précédentes sont spécifiques à l'usage de SVG e
 
 ## Voir aussi
 
-- [Introduction à SVG dans HTML](/fr/docs/Introduction_à_SVG_dans_HTML)
+- [Introduction à SVG dans HTML](/fr/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction)

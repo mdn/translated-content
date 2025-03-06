@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace
 
 {{jsxref("RegExp")}} 实例的 **`[Symbol.replace]()`** 方法指定了 [`String.prototype.replace()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 和 [`String.prototype.replaceAll()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) 在传入作为模式的正则表达式时的行为。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-@@replace.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype[SYmbol.replace]()")}}
+
+```js interactive-example
+class RegExp1 extends RegExp {
+  [Symbol.replace](str) {
+    return RegExp.prototype[Symbol.replace].call(this, str, "#!@?");
+  }
+}
+
+console.log("football".replace(new RegExp1("foo")));
+// Expected output: "#!@?tball"
+```
 
 ## 语法
 

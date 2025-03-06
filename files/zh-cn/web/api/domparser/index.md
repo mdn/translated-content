@@ -31,7 +31,7 @@ let doc = domparser.parseFromString(string, mimeType);
 
 ### 返回值
 
-基于 **[`mimeType`](#Argument02)** 参数，返回 {{domxref("Document")}} 或 {{domxref("XMLDocument")}} 或其他文档类型。
+基于 **[`mimeType`](#argument02)** 参数，返回 {{domxref("Document")}} 或 {{domxref("XMLDocument")}} 或其他文档类型。
 
 ### 参数
 
@@ -147,7 +147,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 ## 参见
 
-- [Parsing and serializing XML](/zh-CN/docs/Parsing_and_serializing_XML)
+- [Parsing and serializing XML](/zh-CN/docs/Web/XML/Parsing_and_serializing_XML)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLSerializer")}}
 - {{jsxref("JSON.parse()")}} - counterpart for {{jsxref("JSON")}} documents.

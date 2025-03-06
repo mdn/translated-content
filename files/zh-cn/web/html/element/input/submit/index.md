@@ -147,7 +147,7 @@ slug: Web/HTML/Element/input/submit
 
 试着输入一些文字到文本字段，然后提交表单。
 
-在提交时，键值对数据将会被发送到服务端。在此列子中，字符串将会是 `text=usertext`，其中“usertext”是用户输入的字符，它转换为保留的特殊字符。数据提交的方式和位置都由 `<form>` 的设置决定，参阅[发送表单数据](/zh-CN/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)文章以获取更多细节。
+在提交时，键值对数据将会被发送到服务端。在此列子中，字符串将会是 `text=usertext`，其中“usertext”是用户输入的字符，它转换为保留的特殊字符。数据提交的方式和位置都由 `<form>` 的设置决定，参阅[发送表单数据](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)文章以获取更多细节。
 
 ### 添加提交的快捷键
 
@@ -186,7 +186,7 @@ slug: Web/HTML/Element/input/submit
 可以在运行时通过简单地将 `disabled` 设置为 `true` 或 `false` 来启用和禁用按钮。在 JavaScript 中，这看起来像 `btn.disabled = true` 或 `btn.disabled = false`。
 
 > [!NOTE]
-> 有关启用和禁用按钮的更多想法，请参见 [`<input type="button">`](/zh-CN/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button) 。
+> 有关启用和禁用按钮的更多想法，请参见 [`<input type="button">`](/zh-CN/docs/Web/HTML/Element/input/button#disabling_and_enabling_a_button) 。
 
 ## 验证方式
 
@@ -207,7 +207,7 @@ slug: Web/HTML/Element/input/submit
 ## 参见
 
 - {{HTMLElement("input")}} 元素和实现它的 {{domxref("HTMLInputElement")}} 接口。
-- [表单与按钮](/zh-CN/docs/Learn/Forms/Basic_native_form_controls#actual_buttons)
-- [HTML 表单](/zh-CN/docs/Learn/HTML/Forms)
+- [表单与按钮](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#按钮)
+- [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("button")}} 元素
-- [CSS 属性兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

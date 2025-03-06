@@ -64,4 +64,4 @@ Web Storage API에 의존하는 웹 사이트를 개발할 때, 개발자는 이
 ## 같이 보기
 
 - [Web Storage API 사용하기](/ko/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- [브라우저 저장 공간 제한과 정리 기준](/ko/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)
+- [브라우저 저장 공간 제한과 정리 기준](/ko/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)

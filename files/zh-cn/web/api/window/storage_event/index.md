@@ -9,7 +9,7 @@ slug: Web/API/Window/storage_event
 
 ## 常规信息
 
-说明：_[Web Storage](http://www.w3.org/TR/webstorage/#the-storage-event)_
+说明：_[Web Storage](https://www.w3.org/TR/webstorage/#the-storage-event)_
 
 <table class="properties">
   <tbody>

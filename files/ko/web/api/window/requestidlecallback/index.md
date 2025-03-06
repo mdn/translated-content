@@ -31,7 +31,7 @@ var handle = window.requestIdleCallback(callback[, options])
 
 ## Example
 
-[Cooperative Scheduling of Background Tasks API](/ko/docs/Web/API/Background_Tasks_API) 포스트의 [complete example](/ko/docs/Web/API/Background_Tasks_API#Example) 예제를 참조해 주십시오.
+[Cooperative Scheduling of Background Tasks API](/ko/docs/Web/API/Background_Tasks_API) 포스트의 [complete example](/ko/docs/Web/API/Background_Tasks_API#example) 예제를 참조해 주십시오.
 
 ## 명세서
 

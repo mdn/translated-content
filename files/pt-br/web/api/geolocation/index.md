@@ -37,4 +37,4 @@ _A interface_ Geolocation _não herda qualquer métodos._
 
 ## Veja Também
 
-- [Usando Geolocation](/pt-BR/docs/WebAPI/Using_geolocation)
+- [Usando Geolocation](/pt-BR/docs/Web/API/Geolocation_API)

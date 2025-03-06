@@ -29,7 +29,7 @@ No exemplo de código a seguir, nós vamos focar em fazer download de um vídeo 
 
 Nós primeiro criaremos um controller usando o construtor do {{domxref("AbortController.AbortController","AbortController()")}}, e então pegar a referência de seu objeto {{domxref("AbortSignal")}} associado usando a propriedade {{domxref("AbortController.signal")}}.
 
-Quando a [requisição Fetch](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch) é iniciada, nós passamos o `AbortSignal` como uma opção dentro do objeto de opções da request (veja `{signal}`, abaixo). Isso associa o sinal e o controller com a requisição fetch e nos permite aborta-la chamando {{domxref("AbortController.abort()")}}, como visto abaixo no segundo `event listener`.
+Quando a [requisição Fetch](/pt-BR/docs/Web/API/Window/fetch) é iniciada, nós passamos o `AbortSignal` como uma opção dentro do objeto de opções da request (veja `{signal}`, abaixo). Isso associa o sinal e o controller com a requisição fetch e nos permite aborta-la chamando {{domxref("AbortController.abort()")}}, como visto abaixo no segundo `event listener`.
 
 ```js
 var controller = new AbortController();

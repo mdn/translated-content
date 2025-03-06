@@ -9,10 +9,10 @@ slug: Web/API/HTMLStyleElement
 
 Consultez les pages suivantes pour plus d'informations sur certains des objets utilisés pour manipuler les propriétés CSS depuis le DOM&nbsp;:
 
-- [L'objet DOM element.style](/fr/DOM/element.style)
-- [L'objet DOM stylesheet](/fr/DOM/stylesheet)
-- [L'objet DOM cssRule](/fr/DOM/cssRule)
-- [La liste des propriétés DOM CSS](/fr/DOM/CSS)
+- [L'objet DOM element.style](/fr/docs/Web/API/HTMLElement/style)
+- [L'objet DOM stylesheet](/fr/docs/DOM/stylesheet)
+- [L'objet DOM cssRule](/fr/docs/DOM/cssRule)
+- [La liste des propriétés DOM CSS](/fr/docs/DOM/CSS)
 
 ### Informations à déplacer vers d'autres pages
 
@@ -27,9 +27,9 @@ var ss = document.styleSheets[1];
 ss.cssRules[0].style.backgroundColor = "blue";
 ```
 
-La liste des propriétés disponibles dans le DOM pour la propriété de style est donnée dans la [liste des propriétés DOM CSS](/fr/DOM/CSS).
+La liste des propriétés disponibles dans le DOM pour la propriété de style est donnée dans la [liste des propriétés DOM CSS](/fr/docs/DOM/CSS).
 
-La propriété [style](/fr/DOM/style) de l'élément peut également être utilisée pour obtenir et définir les styles d'un élément. Cependant, cette propriété renvoie uniquement les attributs de style qui ont été définis
+La propriété [style](/fr/docs/Web/API/HTMLStyleElement) de l'élément peut également être utilisée pour obtenir et définir les styles d'un élément. Cependant, cette propriété renvoie uniquement les attributs de style qui ont été définis
 _in-line_
 ou directement sur cet élément à l'aide de `element.style.propertyName` (par exemple `<td style="background-color: lightblue">` renvoie la chaîne "background-color:lightblue", même si d'autres styles peuvent s'appliquer à l'élément depuis une feuille de style).
 
@@ -78,7 +78,7 @@ La méthode `getComputedStyle()` de l'objet `document.defaultView` renvoie tous 
 
 ### L'objet DOM style
 
-L'objet `style` représente une règle de style individuelle. Contrairement aux règles individuelles disponibles depuis la collection [`document.styleSheets`](/fr/DOM/document.styleSheets), on accède à l'objet depuis l'objet `document` ou depuis les éléments auxquels ce style est appliqué. Il représente les styles
+L'objet `style` représente une règle de style individuelle. Contrairement aux règles individuelles disponibles depuis la collection [`document.styleSheets`](/fr/docs/DOM/document.styleSheets), on accède à l'objet depuis l'objet `document` ou depuis les éléments auxquels ce style est appliqué. Il représente les styles
 _in-line_
 d'un élément particulier.
 
@@ -104,7 +104,7 @@ Mais il y a plus important que les deux propriétés exposées ici, c'est l'util
 </html>
 ```
 
-Les attributs **media** et **type** du style peuvent être donnés ou non. Notez qu'il est également possible de changer les styles d'un élément en obtenant une référence vers cet élément et en utilisant ensuite sa méthode DOM [setAttribute()](/fr/DOM/element.setAttribute) pour spécifier à la fois la propriété CSS et sa valeur.
+Les attributs **media** et **type** du style peuvent être donnés ou non. Notez qu'il est également possible de changer les styles d'un élément en obtenant une référence vers cet élément et en utilisant ensuite sa méthode DOM [setAttribute()](/fr/docs/Web/API/Element/setAttribute) pour spécifier à la fois la propriété CSS et sa valeur.
 
 ```js
 var el = document.getElementById("un-element");
@@ -115,7 +115,7 @@ Soyez cependant conscient que `setAttribute` écrasera toute propriété de styl
 
 ##### Propriétés
 
-- [style.media](/fr/DOM/style.media)
+- [style.media](/fr/docs/DOM/style.media)
   - : spécifie le média de destination pour lequel l'information de style est prévue.
-- [style.type](/fr/DOM/style.type)
+- [style.type](/fr/docs/DOM/style.type)
   - : renvoie le type de style appliqué par cette règle.

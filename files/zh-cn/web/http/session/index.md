@@ -62,7 +62,7 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 HTTP 定义了一组[请求方法](/zh-CN/docs/Web/HTTP/Methods)用来指定对目标资源的行为。它们一般是名词，但这些请求方法有时会被叫做 HTTP 动词。最常用的请求方法是 `GET` 和 `POST`：
 
 - {{HTTPMethod("GET")}} 方法请求指定的资源。`GET` 请求应该只被用于获取数据。
-- {{HTTPMethod("POST")}} 方法向服务器发送数据，因此会改变服务器状态。这个方法常在 [HTML 表单](/zh-CN/docs/Learn/Forms)中使用。
+- {{HTTPMethod("POST")}} 方法向服务器发送数据，因此会改变服务器状态。这个方法常在 [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)中使用。
 
 ## 服务器响应结构
 

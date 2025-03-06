@@ -11,4 +11,4 @@ Un validateur est un programme qui vérifie les erreurs de syntaxe d'un code inf
 
 ### Culture générale
 
-- [Petite liste de validateurs](/fr/docs/Outils/Validateurs)
+- [Petite liste de validateurs](https://firefox-source-docs.mozilla.org/devtools-user/validators/index.html)

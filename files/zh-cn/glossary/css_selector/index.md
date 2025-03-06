@@ -57,7 +57,7 @@ div.warning {
 
 ## 参见
 
-- 在 CSS 介绍中[学习更多 CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
+- 在 CSS 介绍中[学习更多 CSS 选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 - 基础选择器
 
   - [标签选择器](/zh-CN/docs/Web/CSS/Type_selectors) `elementname`

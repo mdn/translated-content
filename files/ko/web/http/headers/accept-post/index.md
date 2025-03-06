@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**`Accept-Post`** 응답 HTTP 헤더는 HTTP 포스트 요청에 대해 서버가 수락하는 [미디어 유형](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types)을 알립니다.
+**`Accept-Post`** 응답 HTTP 헤더는 HTTP 포스트 요청에 대해 서버가 수락하는 [미디어 유형](/ko/docs/Web/HTTP/MIME_types)을 알립니다.
 
 모든 메소드에 대한 응답으로 **`Accept-Post`** 를 사용하면 요청된 리소스에서 `POST`가 허용됨을 의미합니다. 헤더의 모든 문서/미디어 형식은 해당 문서 형식이 허용됨을 추가로 나타냅니다.
 

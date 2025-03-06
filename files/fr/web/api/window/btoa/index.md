@@ -37,7 +37,7 @@ var donneesDecodees = window.atob(donneesEncodees); // décode la chaîne
 
 ## Notes
 
-Vous pouvez utiliser cette méthode pour encoder des données qui, autrement, pourraient engendrer des problèmes de communication, les transmettre et utiliser alors la méthode [`atob()`](/fr/docs/Web/API/atob) pour décoder les données à nouveau. Par exemple, vous pouvez encoder des caractères de contrôle tels que les valeurs ASCII de 0 à 31.
+Vous pouvez utiliser cette méthode pour encoder des données qui, autrement, pourraient engendrer des problèmes de communication, les transmettre et utiliser alors la méthode [`atob()`](/fr/docs/Web/API/Window/atob) pour décoder les données à nouveau. Par exemple, vous pouvez encoder des caractères de contrôle tels que les valeurs ASCII de 0 à 31.
 
 `btoa()` est également disponible pour les composants XPCOM implémentés en JavaScript, même si {domxref("Window")}} n'est pas l'objet global dans les composants.
 
@@ -64,7 +64,7 @@ uena("I \u2661 Unicode!"); // SSDimaEgVW5pY29kZSE=
 aenu("SSDimaEgVW5pY29kZSE="); // "I ♡ Unicode!"
 ```
 
-Une solution meilleure, plus fiable et moins coûteuse consiste à [utiliser des tableaux typés pour faire la conversion](/fr/docs/Décoder_encoder_en_base64).
+Une solution meilleure, plus fiable et moins coûteuse consiste à [utiliser des tableaux typés pour faire la conversion](/fr/docs/Glossary/Base64).
 
 ## Spécifications
 
@@ -76,7 +76,7 @@ Une solution meilleure, plus fiable et moins coûteuse consiste à [utiliser des
 
 ## Voir aussi
 
-- [Base64 encoding and decoding](/fr/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)
-- [Les URL de `données`](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
-- [`atob()`](/fr/docs/Web/API/atob)
+- [Base64 encoding and decoding](/fr/docs/Glossary/Base64)
+- [Les URL de `données`](/fr/docs/Web/URI/Schemes/data)
+- [`atob()`](/fr/docs/Web/API/Window/atob)
 - [Components.utils.importGlobalProperties](/fr/docs/Components.utils.importGlobalProperties)

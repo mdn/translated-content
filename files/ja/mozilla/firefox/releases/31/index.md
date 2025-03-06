@@ -78,7 +78,7 @@ _変更なし。_
 
 ## セキュリティ
 
-- [特権コードは `Date` のインスタンスで Xray vision が適用されるようになりました](/ja/docs/Xray_vision#Xrays_for_JavaScript_objects)。
+- [特権コードは `Date` のインスタンスで Xray vision が適用されるようになりました](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xrays_for_javascript_objects)。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 

@@ -20,9 +20,9 @@ slug: Web/SVG/Element/cursor
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/zh-CN/docs/SVG/Attribute#Core) »
-- [Xlink 属性](/zh-CN/docs/SVG/Attribute#XLink) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Attribute#core) »
+- [Xlink 属性](/zh-CN/docs/Web/SVG/Attribute#xlink) »
 - {{SVGAttr("externalResourcesRequired")}}
 
 ### 专有属性
@@ -33,7 +33,7 @@ slug: Web/SVG/Element/cursor
 
 ## DOM 接口
 
-该元素实现了 [`SVGCursorElement`](/zh-CN/docs/DOM/SVGCursorElement) 接口。
+该元素实现了 [`SVGCursorElement`](/zh-CN/docs/Web/API/SVGCursorElement) 接口。
 
 ## 规范
 

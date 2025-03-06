@@ -15,7 +15,7 @@ event.stopPropagation();
 
 ## 範例
 
-請參考範例五：[事件傳遞](/zh-TW/docs/DOM/DOM_Reference/Examples#Example_5:_Event_Propagation)章節中關於此方法與 DOM 事件傳遞的更詳細範例。
+請參考範例五：[事件傳遞](/zh-TW/docs/Web/API/Document_Object_Model/Examples#example_5:_event_propagation)章節中關於此方法與 DOM 事件傳遞的更詳細範例。
 
 ## 規範
 

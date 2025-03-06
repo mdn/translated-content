@@ -11,12 +11,12 @@ Essencialmente, um _service worker_ se comporta como um servidor _proxy_ situado
 
 Um _service worker_ é um tipo especial de _[worker](/pt-BR/docs/Web/API/Worker)_ baseado em eventos, o qual é registrado para um determinado _path_ e origem. Na prática, ele é um arquivo JavaScript que pode controlar as páginas do site ao qual ele está associado, interceptando e modificando requisições e a navegação em si. Ele também faz _cache_ dos recursos trafegados de maneira bastante granular, visando oferecer controle total sobre como a sua aplicação se comporta em determinadas situações (o exemplo mais óbvio, naturalmente, é quando não há conexão de rede disponível).
 
-Assim como outros tipos de _worker_, um _service worker_ é executado em um contexto isolado. Dessa forma, não tem acesso ao DOM e roda em uma thread completamente separada, sendo incapaz de realizar operações blocantes. Service workers foram projetados para ser totalmente assíncronos; como consequência disso, não permitem o acesso a APIs como [XHR síncrono](/pt-BR/docs/Web/API/XMLHttpRequest/Requisicoes_sincronas_e_assincronas#Synchronous_request) e [localStorage](/pt-BR/docs/Web/API/Window/Window.localStorage).
+Assim como outros tipos de _worker_, um _service worker_ é executado em um contexto isolado. Dessa forma, não tem acesso ao DOM e roda em uma thread completamente separada, sendo incapaz de realizar operações blocantes. Service workers foram projetados para ser totalmente assíncronos; como consequência disso, não permitem o acesso a APIs como [XHR síncrono](/pt-BR/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests#synchronous_request) e [localStorage](/pt-BR/docs/Web/API/Window/localStorage).
 
 Por questões de segurança, _service workers_ funcionam apenas em sites servidos via HTTPS. A possibilidade de modificar requisições em um domínio desprotegido contra ataques do tipo [man-in-the-middle](/pt-BR/docs/Glossary/MitM) seria desastrosa. No Firefox, é vetado o acesso à API de _service workers_ para sites abertos no [Modo de navegação privativa](https://support.mozilla.org/pt-BR/kb/navegacao-privativa-use-firefox-sem-historico).
 
 > [!NOTE]
-> Os service workers superaram tentativas anteriores de resolver problemas semelhantes, como o [AppCache](http://alistapart.com/article/application-cache-is-a-douchebag). Há uma explicação simples para eles terem sido bem-sucedidos: Service workers **não** tentam adivinhar o que você está tentando fazer e, muito menos, deixam de funcionar caso não tenham adivinhado corretamente. Pelo contrário, você tem o controle milimétrico de tudo.
+> Os service workers superaram tentativas anteriores de resolver problemas semelhantes, como o [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag). Há uma explicação simples para eles terem sido bem-sucedidos: Service workers **não** tentam adivinhar o que você está tentando fazer e, muito menos, deixam de funcionar caso não tenham adivinhado corretamente. Pelo contrário, você tem o controle milimétrico de tudo.
 
 > [!NOTE]
 > Service workers fazem uso intenso de [promessas](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise), uma vez que eles têm de esperar por respostas assíncronas para, após retornadas, poderem executar a ação apropriada (de sucesso ou erro). A arquitetura de promessas é ideal para esse tipo de cenário.
@@ -126,9 +126,9 @@ No futuro, service workers serão capazes de fazer várias outras coisas úteis 
 ## Veja também
 
 - [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook/)
-- [Using Service Workers](/pt-BR/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/pt-BR/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Promises](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Using web workers](/pt-BR/docs/Web/Guide/Performance/Using_web_workers)
+- [Using web workers](/pt-BR/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [Best Practices for using the VARY header](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)

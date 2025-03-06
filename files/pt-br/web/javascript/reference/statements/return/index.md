@@ -30,7 +30,7 @@ return x + y / 3;
 
 ### Inserção Automática de Ponto-e-Vírgula
 
-A declaração `return` é afetada pela [inserção automática de ponto e vírgula (ASI)](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion). Nenhum terminador de linha é permitido entre a palavra-chave `return` e a expressão.
+A declaração `return` é afetada pela [inserção automática de ponto e vírgula (ASI)](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion). Nenhum terminador de linha é permitido entre a palavra-chave `return` e a expressão.
 
 ```js-nolint
 return
@@ -117,5 +117,5 @@ answer(1337); // 56154
 
 ## Veja também
 
-- [Funções](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope)
+- [Funções](/pt-BR/docs/Web/JavaScript/Reference/Functions)
 - [Closures](/pt-BR/docs/Web/JavaScript/Closures)

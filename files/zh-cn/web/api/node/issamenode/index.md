@@ -22,5 +22,5 @@ var isSameNode = node.isSameNode(other);
 
 ## 规范
 
-- [DOM Level 3 Core: isSameNode](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-isSameNode)
-- This has been removed from [DOM Core Level 4](http://www.w3.org/TR/domcore/)
+- [DOM Level 3 Core: isSameNode](https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-isSameNode)
+- This has been removed from [DOM Core Level 4](https://www.w3.org/TR/domcore/)

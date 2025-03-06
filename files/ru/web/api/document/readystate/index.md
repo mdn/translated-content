@@ -85,5 +85,5 @@ document.onreadystatechange = function () {
 ## Смотрите также
 
 - Событие [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event)
-- Событие [`DOMContentLoaded`](/ru/docs/Web/Events/DOMContentLoaded)
+- Событие [`DOMContentLoaded`](/ru/docs/Web/API/Document/DOMContentLoaded_event)
 - Событие [`load`](/ru/docs/Web/API/Window/load_event)

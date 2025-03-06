@@ -33,7 +33,7 @@ slug: Web/CSS/CSS_images
 
 - [Using CSS gradients](/pt-BR/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
   - : Presents a specific type of CSS images, _gradients_, and how to create and use these.
-- [Implementing image sprites in CSS](/pt-BR/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS)
+- [Implementing image sprites in CSS](/pt-BR/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
   - : Describes the common technique grouping several images in one single document to save download requests and speed up the availability of a page.
 
 ## Specifications

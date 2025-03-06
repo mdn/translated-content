@@ -5,9 +5,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/join
 
 {{JSRef}}
 
-El método **`join()`** une todos los elementos de una matriz (o un [objeto similar a una matriz](/es/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)) en una cadena y devuelve esta cadena.
+El método **`join()`** une todos los elementos de una matriz (o un [objeto similar a una matriz](/es/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)) en una cadena y devuelve esta cadena.
 
-{{EmbedInteractiveExample("pages/js/array-join.html")}}
+{{InteractiveExample("JavaScript Demo: Array.join()")}}
+
+```js interactive-example
+const elements = ["Fire", "Air", "Water"];
+
+console.log(elements.join());
+// Expected output: "Fire,Air,Water"
+
+console.log(elements.join(""));
+// Expected output: "FireAirWater"
+
+console.log(elements.join("-"));
+// Expected output: "Fire-Air-Water"
+```
 
 ## Sintaxis
 

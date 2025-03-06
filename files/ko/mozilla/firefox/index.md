@@ -11,7 +11,7 @@ Firefox는 오픈소스 프로젝트이기 때문에 대부분의 코드가 커�
 
 [Firefox](https://www.mozilla.org/firefox/)를 위한 애드온을 어떻게 만드는 지, 어떻게 Firefox를 스스로 빌드하고 개발하는 지, Firefox와 그 하위 프로젝트들이 어떻게 이루어 지는 지 알아보세요.
 
-- 개발자 릴리즈노트 [개발자를 위한 릴리즈 노트 읽기](/en-US/Firefox/Releases) 어떤 기능이나 애드온이 Firefox에 추가되었는지, 웹사이트에 대한 지원이 어떻게 바뀌었는지 알아보세요.
+- 개발자 릴리즈노트 [개발자를 위한 릴리즈 노트 읽기](/ko/docs/Mozilla/Firefox/Releases) 어떤 기능이나 애드온이 Firefox에 추가되었는지, 웹사이트에 대한 지원이 어떻게 바뀌었는지 알아보세요.
 - 프로젝트 문서 [Firefox의 내부 구성물](/ko/docs/Mozilla)에서 더 자세한 정보를 알아보세요. 그 다음에는 빌드시스템에 대한 정보를 알아내어 코드를 어떻게 작성할 지 알아보세요.
 - 개발자 가이드 [개발자 가이드](/ko/docs/Developer_Guide)는 어떻게 Firefox 소스코드를 얻고 컴파일 하는지에 대한 가이드를 제공합니다. 또한 이를 통해 어떻게 프로젝트에 기여하는 지 알 수 있습니다.
 
@@ -29,7 +29,7 @@ Firefox는 네 가지 **채널**로 이루어져 있습니다.
 
 이 버전은 오직 개발자들을 위해 만들어진 Firefox입니다. 6주마다, 저희는 Firefox Nightly에서 안정화된 기능을 Firefox 개발자 에디션에 넣어 빌드합니다. 저희는 또한 몇가지 개발자들만을 위한 이 에디션에서만 사용할 수 있는 기능을 추가합니다.
 
-[Firefox 개발자 에디션에 대하여 더 자세히 알아보기](/ko/docs/Firefox/Developer_Edition)
+[Firefox 개발자 에디션에 대하여 더 자세히 알아보기](/ko/docs/Mozilla/Firefox/Developer_Edition)
 
 ### Firefox Beta
 

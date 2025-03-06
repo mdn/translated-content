@@ -17,17 +17,17 @@ HTML 的 drag & drop 使用了 {{domxref("Event","DOM event model")}} 以及从 
 
 在操作期间，会触发一些事件类型，有一些事件类型可能会被多次触发（比如[`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event) 和 [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event) 事件类型）。
 
-所有的 [拖拽事件类型](/zh-CN/docs/Web/API/DragEvent#Event_types) 有一个对应的 [拖拽全局属性](/zh-CN/docs/Web/API/DragEvent#GlobalEventHandlers)。每个拖拽事件类型和拖拽全局属性都有对应的描述文档。下面的表格提供了一个简短的事件类型描述，以及一个相关文档的链接。
+所有的 [拖拽事件类型](/zh-CN/docs/Web/API/DragEvent#event_types) 有一个对应的 [拖拽全局属性](/zh-CN/docs/Web/API/DragEvent#globaleventhandlers)。每个拖拽事件类型和拖拽全局属性都有对应的描述文档。下面的表格提供了一个简短的事件类型描述，以及一个相关文档的链接。
 
-| 事件                                                           | On 型事件处理程序                                            | 触发时刻                                                                                                              |
-| -------------------------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
-| [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event)           | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}           | 当拖拽元素或选中的文本时触发。                                                                                        |
-| [`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event)     | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | 当拖拽操作结束时触发 (比如松开鼠标按键或敲“Esc”键). (见[结束拖拽](/zh-CN/docs/DragDrop/Drag_Operations#dragend))      |
-| [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event) | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | 当拖拽元素或选中的文本到一个可释放目标时触发（见 [指定释放目标](/zh-CN/docs/DragDrop/Drag_Operations#droptargets)）。 |
-| [`dragleave`](/zh-CN/docs/Web/API/HTMLElement/dragleave_event) | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | 当拖拽元素或选中的文本离开一个可释放目标时触发。                                                                      |
-| [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)   | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}   | 当元素或选中的文本被拖到一个可释放目标上时触发（每 100 毫秒触发一次）。                                               |
-| [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | 当用户开始拖拽一个元素或选中的文本时触发（见[开始拖拽操作](/zh-CN/docs/DragDrop/Drag_Operations#dragstart)）。        |
-| [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event)           | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}           | 当元素或选中的文本在可释放目标上被释放时触发（见[执行释放](/zh-CN/docs/DragDrop/Drag_Operations#drop)）。             |
+| 事件                                                           | On 型事件处理程序                                            | 触发时刻                                                                                                                                    |
+| -------------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event)           | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}           | 当拖拽元素或选中的文本时触发。                                                                                                              |
+| [`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event)     | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | 当拖拽操作结束时触发 (比如松开鼠标按键或敲“Esc”键). (见[结束拖拽](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend))      |
+| [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event) | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | 当拖拽元素或选中的文本到一个可释放目标时触发（见 [指定释放目标](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets)）。 |
+| [`dragleave`](/zh-CN/docs/Web/API/HTMLElement/dragleave_event) | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | 当拖拽元素或选中的文本离开一个可释放目标时触发。                                                                                            |
+| [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)   | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}   | 当元素或选中的文本被拖到一个可释放目标上时触发（每 100 毫秒触发一次）。                                                                     |
+| [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | 当用户开始拖拽一个元素或选中的文本时触发（见[开始拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragstart)）。        |
+| [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event)           | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}           | 当元素或选中的文本在可释放目标上被释放时触发（见[执行释放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop)）。             |
 
 **注意：**当从操作系统向浏览器中拖拽文件时，不会触发 `dragstart` 和`dragend` 事件。
 
@@ -51,7 +51,7 @@ HTML 的拖拽接口有 {{domxref("DragEvent")}}, {{domxref("DataTransfer")}}, {
 
 ### Gecko 专用接口
 
-Mozilla 和 Firefox 支持一些不在标准拖放模型中的特性。请查看 {{domxref("DataTransfer")}} 参考页以获取所有 [Gecko 专有属性](/zh-CN/docs/Web/API/DataTransfer#Gecko_properties) 和 [Gecko 专有方法](/zh-CN/docs/Web/API/DataTransfer#Gecko_methods)。
+Mozilla 和 Firefox 支持一些不在标准拖放模型中的特性。请查看 {{domxref("DataTransfer")}} 参考页以获取所有 [Gecko 专有属性](/zh-CN/docs/Web/API/DataTransfer#gecko_properties) 和 [Gecko 专有方法](/zh-CN/docs/Web/API/DataTransfer#gecko_methods)。
 
 ## 基础
 
@@ -79,7 +79,7 @@ Mozilla 和 Firefox 支持一些不在标准拖放模型中的特性。请查看
 <p id="p1" draggable="true">This element is draggable.</p>
 ```
 
-查看更多 [draggable 属性](/zh-CN/docs/Web/HTML/Global_attributes/draggable) 和 [拖拽操作指南](/zh-CN/docs/Web/Guide/HTML/Drag_operations#draggableattribute)。
+查看更多 [draggable 属性](/zh-CN/docs/Web/HTML/Global_attributes/draggable) 和 [拖拽操作指南](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute)。
 
 ### 定义拖拽数据
 
@@ -99,7 +99,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-查看 [推荐拖拽类型](/zh-CN/docs/DragDrop/Recommended_Drag_Types) 了解可拖拽的常见数据类型（如文本、HTML、链接和文件），移步 [拖拽数据](/zh-CN/docs/Web/Guide/HTML/Drag_operations#dragdata) 获取更多有关拖拽数据的信息。
+查看 [推荐拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types) 了解可拖拽的常见数据类型（如文本、HTML、链接和文件），移步 [拖拽数据](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragdata) 获取更多有关拖拽数据的信息。
 
 ### 定义拖拽图像
 
@@ -116,7 +116,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-欲了解更多关于拖拽图像的信息，见 [设置拖拽图像](/zh-CN/docs/DragDrop/Drag_Operations#dragfeedback)。
+欲了解更多关于拖拽图像的信息，见 [设置拖拽图像](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragfeedback)。
 
 ### 定义拖拽效果
 
@@ -138,7 +138,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-查看 [拖拽效果](/zh-CN/docs/Web/Guide/HTML/Drag_operations#drageffects) 更多细节。
+查看 [拖拽效果](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drageffects) 更多细节。
 
 ### 定义一个放置区
 
@@ -168,7 +168,7 @@ function dragstart_handler(ev) {
 
 注意每个处理程序调用 {{domxref("Event.preventDefault","preventDefault()")}} 来阻止对这个事件的其他处理过程（如触点事件或指针事件）。
 
-欲了解更多信息，参见 [指定释放目标](/zh-CN/docs/Web/Guide/HTML/Drag_operations#droptargets)。
+欲了解更多信息，参见 [指定释放目标](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets)。
 
 ### 处理放置效果
 
@@ -206,22 +206,22 @@ function dragstart_handler(ev) {
 </div>
 ```
 
-更多信息请参见 [执行释放](/zh-CN/docs/Web/Guide/HTML/Drag_operations#drop)。
+更多信息请参见 [执行释放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop)。
 
 ### 拖拽结束
 
 拖拽操作结束时，在源元素（开始拖拽时的目标元素）上触发 [`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event) 事件。不管拖拽是完成还是被取消这个事件都会被触发。[`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event) 事件处理程序可以检查{{domxref("DataTransfer.dropEffect","dropEffect")}} 属性的值来确认拖拽成功与否。
 
-更多关于处理拖拽结束的信息请参见 [结束拖拽](/zh-CN/docs/DragDrop/Drag_Operations#dragend)。
+更多关于处理拖拽结束的信息请参见 [结束拖拽](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend)。
 
 ## 互操作性
 
-在 [数据交换对象接口的浏览器兼容性表](/zh-CN/docs/Web/API/DataTransferItem#Browser_compatibility) 中可以看到拖放在桌面浏览器中相对支持得比较完整（除了 {{domxref("DataTransferItem")}} 和 {{domxref("DataTransferItemList")}} 接口支持得较少）。这个数据也显示出拖放操作在移动浏览器中支持得非常弱。
+在 [数据交换对象接口的浏览器兼容性表](/zh-CN/docs/Web/API/DataTransferItem#browser_compatibility) 中可以看到拖放在桌面浏览器中相对支持得比较完整（除了 {{domxref("DataTransferItem")}} 和 {{domxref("DataTransferItemList")}} 接口支持得较少）。这个数据也显示出拖放操作在移动浏览器中支持得非常弱。
 
 ## 示例和演示
 
 - [使用 `DataTransfer` 接口拷贝和移动元素](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html)
-- [使用 `DataTransferListItem` 接口拷贝和移动元素](http://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
+- [使用 `DataTransferListItem` 接口拷贝和移动元素](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
 - 拖放文件；仅 Firefox 支持：<https://jsfiddle.net/9C2EF/>
 - 拖放文件；所有浏览器支持：[https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
 - 使用了拖放 API 的停车小页面：<https://park.glitch.me/> （在 [这里](https://glitch.com/edit/#!/park) 编辑）

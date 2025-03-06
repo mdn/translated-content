@@ -54,7 +54,7 @@ console.log(eArr.next().value); // 50
 
 ## Voir aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.keys()")}}

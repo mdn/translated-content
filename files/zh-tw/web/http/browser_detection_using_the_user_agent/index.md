@@ -116,13 +116,13 @@ slug: Web/HTTP/Browser_detection_using_the_user_agent
 
     針對螢幕尺寸，則使用 _window.innerWidth_ 與 _window.addEventListener("resize", function(){ /*更新螢幕尺寸依賴的東西*/ })_。
 
-    不要刪減小螢幕能看到的資訊，這只會激怒被逼著切到桌面版的用戶們；而是應該針對小螢幕，提供行列更少，但頁面更長的資訊；針對大螢幕，則提供行列更多，但頁面更短的資訊。這種效果能透過 [flexboxes](/zh-TW/docs/Learn/CSS/CSS_layout/Flexbox) 實現。如果需要有限支援舊版本，請使用 [floats](/zh-TW/docs/Learn/CSS/CSS_layout/Floats) 屬性。
+    不要刪減小螢幕能看到的資訊，這只會激怒被逼著切到桌面版的用戶們；而是應該針對小螢幕，提供行列更少，但頁面更長的資訊；針對大螢幕，則提供行列更多，但頁面更短的資訊。這種效果能透過 [flexboxes](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Flexbox) 實現。如果需要有限支援舊版本，請使用 [floats](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Floats) 屬性。
 
     另外，試著把不相關或不重要的資訊放到下面、然後把資料放得有意義。然後雖然有點離題，但下面的詳細示例，可能會給你有力的見解和想法，放棄用戶代理嗅探。
 
     我們先想像一個由各種貓貓或狗狗的訊息框，所組成的頁面；每個訊息框都有圖片、概覽、還有歷史趣聞；而圖片即使在大螢幕上，也要保持最大的合理尺寸。為了讓內容有意義的排列在一起，所有的貓貓訊息框都和狗狗訊息框分開、兩種動物都不會混在一起。在大螢幕上，會節省具有多列的空間，從而減少了圖片左右兩側的間距。訊息框則會透過平分而被拆分為多列。
 
-    現在我們能假設在原始碼裡面，狗狗訊息框都在上面、而貓貓訊息框都在下面。而這兩個框框都在同一個父元素之下。很明顯，有一個狗狗訊息框，就在貓貓訊息框的上面。第一個方法，就是使用水平的 [Flexbox](/zh-TW/docs/Learn/CSS/CSS_layout/Flexbox) 把內容組合起來。這樣，當頁面顯示給最終用戶時，狗狗訊息框就在頁面上方、而貓貓訊息框就在頁面下方；第二個方法，就是使用 [Column](/zh-TW/docs/Web/CSS/Layout_cookbook/Column_layouts) layout and resent 把所有的狗狗與貓貓排到右邊。在這種情況下，就能給沒有 flexboxes/multicolumns 的老舊版本提供適當的呈現：他們會呈現一列非常寬的框。
+    現在我們能假設在原始碼裡面，狗狗訊息框都在上面、而貓貓訊息框都在下面。而這兩個框框都在同一個父元素之下。很明顯，有一個狗狗訊息框，就在貓貓訊息框的上面。第一個方法，就是使用水平的 [Flexbox](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Flexbox) 把內容組合起來。這樣，當頁面顯示給最終用戶時，狗狗訊息框就在頁面上方、而貓貓訊息框就在頁面下方；第二個方法，就是使用 [Column](/zh-TW/docs/Web/CSS/Layout_cookbook/Column_layouts) layout and resent 把所有的狗狗與貓貓排到右邊。在這種情況下，就能給沒有 flexboxes/multicolumns 的老舊版本提供適當的呈現：他們會呈現一列非常寬的框。
 
     再考慮一下這個例子：如果有人是想來看貓貓的，那我們就可以在原始碼裡面，把貓貓放到狗狗的上面。這樣一來，更多的人就可以在更小的螢幕上（內容折疊成一列）更快找到需要的內容。
 

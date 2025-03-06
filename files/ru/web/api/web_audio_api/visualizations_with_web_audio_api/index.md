@@ -60,7 +60,7 @@ analyser.getByteTimeDomainData(dataArray);
 
 ## Создание формы волны/осциллографа
 
-Чтобы визуализировать осциллограф (спасибо [Soledad Penadés](http://soledadpenades.com/) за код в [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), мы сначала следуем шаблону, описанному в предыдущей секции, для создания буфера:
+Чтобы визуализировать осциллограф (спасибо [Soledad Penadés](https://soledadpenades.com/) за код в [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167)), мы сначала следуем шаблону, описанному в предыдущей секции, для создания буфера:
 
 ```js
 analyser.fftSize = 2048;
@@ -214,4 +214,4 @@ draw();
 ![a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal](bar-graph.png)
 
 > [!NOTE]
-> Примеры, используемые в данной статье, используют {{ domxref("AnalyserNode.getByteFrequencyData()") }} и {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. Примеры работы с {{ domxref("AnalyserNode.getFloatFrequencyData()") }} и {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} можно найти в демо [Voice-change-O-matic-float-data](http://mdn.github.io/voice-change-o-matic-float-data/) (Вы также можете посмотреть [исходный код](https://github.com/mdn/voice-change-o-matic-float-data)) — это то же самое, что и [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/), но здесь используются данные типа float, а не unsigned vyte.
+> Примеры, используемые в данной статье, используют {{ domxref("AnalyserNode.getByteFrequencyData()") }} и {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. Примеры работы с {{ domxref("AnalyserNode.getFloatFrequencyData()") }} и {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} можно найти в демо [Voice-change-O-matic-float-data](https://mdn.github.io/voice-change-o-matic-float-data/) (Вы также можете посмотреть [исходный код](https://github.com/mdn/voice-change-o-matic-float-data)) — это то же самое, что и [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/), но здесь используются данные типа float, а не unsigned vyte.

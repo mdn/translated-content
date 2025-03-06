@@ -7,7 +7,7 @@ slug: Web/API/IntersectionObserver/thresholds
 
 La propriété en lecture seule **`thresholds`** de l'interface [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver) retourne la liste des seuils d'intersection spécifiés lors de l'instanciation avec [`IntersectionObserver()`](/fr/docs/Web/API/IntersectionObserver/IntersectionObserver). Si un seul seuil a été fourni lors de l'instanciation de l'objet, cette propriété sera un tableau contenant cette unique valeur numérique.
 
-Voir [la section sur les seuils](/fr/docs/Web/API/Intersection_Observer_API#Thresholds) pour apprendre comment fonctionnent les seuils d'intersection.
+Voir [la section sur les seuils](/fr/docs/Web/API/Intersection_Observer_API#thresholds) pour apprendre comment fonctionnent les seuils d'intersection.
 
 ## Syntaxe
 

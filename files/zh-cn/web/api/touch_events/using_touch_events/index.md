@@ -123,7 +123,7 @@ function process_touchmove(ev) {
 
 ## What about Pointer Events?
 
-The introduction of new input mechanisms results in increased application complexity to handle various input events, such as key events, mouse events, pen/stylus events, and touch events. To help address this problem, the [Pointer Events standard](http://www.w3.org/TR/pointerevents/) _defines events and related interfaces for handling hardware agnostic pointer input from devices including a mouse, pen, touchscreen, etc._. That is, the abstract _pointer_ creates a unified input model that can represent a contact point for a finger, pen/stylus or mouse.
+The introduction of new input mechanisms results in increased application complexity to handle various input events, such as key events, mouse events, pen/stylus events, and touch events. To help address this problem, the [Pointer Events standard](https://www.w3.org/TR/pointerevents/) _defines events and related interfaces for handling hardware agnostic pointer input from devices including a mouse, pen, touchscreen, etc._. That is, the abstract _pointer_ creates a unified input model that can represent a contact point for a finger, pen/stylus or mouse.
 
 The pointer event model can simplify an application's input processing since a pointer represents input from any input device. Additionally, the pointer event types are very similar to mouse event types (for example, `pointerdown` `pointerup`) thus code to handle pointer events closely matches mouse handling code.
 
@@ -136,7 +136,7 @@ The following documents describe how to use touch events and include example cod
 - {{domxref("Touch_events","Touch Events Overview")}}
 - [Implement Custom Gestures](https://web.developers.google.cn/articles/add-touch-to-your-site)
 - [Introduction to Touch events in JavaScript](http://www.javascriptkit.com/javatutors/touchevents.shtml)
-- [Add touch screen support to your website (The easy way)](http://www.codicode.com/art/easy_way_to_add_touch_support_to_your_website.aspx)
+- [Add touch screen support to your website (The easy way)](https://www.codicode.com/art/easy_way_to_add_touch_support_to_your_website.aspx)
 
 Touch event demonstrations:
 
@@ -146,9 +146,9 @@ Touch event demonstrations:
 ## Community
 
 - [Touch Events Community Group](https://github.com/w3c/touch-events)
-- [Mail list](http://lists.w3.org/Archives/Public/public-touchevents/)
+- [Mail list](https://lists.w3.org/Archives/Public/public-touchevents/)
 - [W3C #touchevents IRC channel](irc://irc.w3.org:6667/)
 
 ## Related topics and resources
 
-- [Pointer Events Standard](http://www.w3.org/TR/pointerevents/)
+- [Pointer Events Standard](https://www.w3.org/TR/pointerevents/)

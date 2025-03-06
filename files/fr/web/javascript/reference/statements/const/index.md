@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Statements/const
 
 La **déclaration `const`** permet de créer une constante nommée accessible uniquement en lecture. Cela ne signifie pas que la valeur contenue est immuable, uniquement que l'identifiant ne peut pas être réaffecté. Autrement dit la valeur d'une constante ne peut pas être modifiée par des réaffectations ultérieures. Une constante ne peut pas être déclarée à nouveau.
 
-{{EmbedInteractiveExample("pages/js/statement-const.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Const")}}
+
+```js interactive-example
+const number = 42;
+
+try {
+  number = 99;
+} catch (err) {
+  console.log(err);
+  // Expected output: TypeError: invalid assignment to const 'number'
+  // (Note: the exact output may be browser-dependent)
+}
+
+console.log(number);
+// Expected output: 42
+```
 
 ## Syntaxe
 
@@ -18,7 +33,7 @@ const nom1 = valeur1 [, nom2 = valeur2 [, … [, nomN = valeurN]]];
 - `nomN`
   - : Le nom de la constante. Ce nom peut être n'importe quel identifiant valide.
 - `valeurN`
-  - : La valeur à associer à la constante. Cette valeur peut être n'importe quelle [expression](/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs#new) valide (éventuellement [une expression de fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function)).
+  - : La valeur à associer à la constante. Cette valeur peut être n'importe quelle [expression](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#new) valide (éventuellement [une expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function)).
 
 ## Description
 
@@ -110,4 +125,4 @@ mon_tableau = ["B"]; // lève une exception
 
 - {{jsxref("Instructions/var","var")}}
 - {{jsxref("Instructions/let","let")}}
-- [Les constantes dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux#Constantes)
+- [Les constantes dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#constantes)

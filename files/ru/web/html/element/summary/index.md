@@ -7,14 +7,47 @@ slug: Web/HTML/Element/summary
 
 The **HTML Disclosure Summary element** (**`<summary>`**) element specifies a summary, caption, or legend for a {{HTMLElement("details")}} element's disclosure box. Clicking the `<summary>` element toggles the state of the parent `<details>` element open and closed.
 
-{{EmbedInteractiveExample("pages/tabbed/summary.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;summary&gt;", "tabbed-shorter")}}
 
-| Permitted content    | [Phrasing content](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content) or one element of [Heading content](/ru/docs/Web/Guide/HTML/Content_categories#Heading_content) |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tag omission         | None, both the start tag and the end tag are mandatory.                                                                                                                         |
-| Permitted parents    | The {{HTMLElement("details")}} element.                                                                                                                                         |
-| Permitted ARIA roles | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>                                                                                             |
-| DOM interface        | {{domxref("HTMLElement")}}                                                                                                                                                      |
+```html interactive-example
+<details>
+  <summary>
+    I have keys but no doors. I have space but no room. You can enter but can’t
+    leave. What am I?
+  </summary>
+  A keyboard.
+</details>
+```
+
+```css interactive-example
+details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+```
+
+| Permitted content    | [Phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content) or one element of [Heading content](/ru/docs/Web/HTML/Content_categories#heading_content) |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tag omission         | None, both the start tag and the end tag are mandatory.                                                                                                             |
+| Permitted parents    | The {{HTMLElement("details")}} element.                                                                                                                             |
+| Permitted ARIA roles | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>                                                                                 |
+| DOM interface        | {{domxref("HTMLElement")}}                                                                                                                                          |
 
 ## Атрибуты
 
@@ -24,7 +57,7 @@ The **HTML Disclosure Summary element** (**`<summary>`**) element specifies a su
 
 Содержимым элемента `<summary>` может быть любой заголовок, простой текст или HTML, которые можно использовать в абзаце.
 
-Элемент `<summary>` может быть использован в качестве потомка элемента `<details>` . Когда пользователь кликает по элементу summary, его родитель - `<details>` меняет состояние с раскрытого или закрытого на обратное,и тогда [`toggle`](/ru/docs/Web/Events/toggle) event is sent to the `<details>` element, which can be used to let you know when this state change occurs.
+Элемент `<summary>` может быть использован в качестве потомка элемента `<details>` . Когда пользователь кликает по элементу summary, его родитель - `<details>` меняет состояние с раскрытого или закрытого на обратное,и тогда [`toggle`](/ru/docs/Web/API/HTMLElement/toggle_event) event is sent to the `<details>` element, which can be used to let you know when this state change occurs.
 
 ### Default label text
 

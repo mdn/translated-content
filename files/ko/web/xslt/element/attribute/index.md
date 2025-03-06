@@ -31,7 +31,7 @@ slug: Web/XSLT/Element/attribute
 
 ### 정의
 
-[XSLT section 7.1.3, Creating Attributes with xsl:attribute](http://www.w3.org/TR/xslt#creating-attributes)
+[XSLT section 7.1.3, Creating Attributes with xsl:attribute](https://www.w3.org/TR/xslt#creating-attributes)
 
 ### Gecko 지원
 

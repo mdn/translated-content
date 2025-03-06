@@ -7,7 +7,25 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 
 A propriedade **`sticky`** indica se a busca é "pegajosa" (percorre a string somente a partir do índice indicado pela propriedade {{jsxref("RegExp.lastIndex", "lastIndex")}} desta expressão regular). A propriedade `sticky` em um objeto de expressão regular é somente para leitura.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-sticky.html")}}{{js_property_attributes(0, 0, 1)}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.sticky")}}
+
+```js interactive-example
+const str1 = "table football";
+const regex1 = new RegExp("foo", "y");
+
+regex1.lastIndex = 6;
+
+console.log(regex1.sticky);
+// Expected output: true
+
+console.log(regex1.test(str1));
+// Expected output: true
+
+console.log(regex1.test(str1));
+// Expected output: false
+```
+
+{{js_property_attributes(0, 0, 1)}}
 
 ## Descrição
 
@@ -32,7 +50,7 @@ regex.lastIndex; // 0 (reinicia quando não ocorre correspondência)
 
 ### Flag sticky ancorada
 
-Por diversas versões, a engine SpiderMonkey do Firefox apresentou um [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=773687) na asserção de `^` com a flag _sticky_ que fazia expressões iniciando com `^` e usando a flag _sticky_ encontrarem correspondências onde não deveriam. O bug foi introduzido algum tempo após o Firefox 3.6 (que possuía a flag sticky mas não apresentava o bug) e corrigido em 2015. Talvez por este motivo, a especificação ES2015 [destaca especificamente](http://www.ecma-international.org/ecma-262/7.0/index.html#sec-assertion) que:
+Por diversas versões, a engine SpiderMonkey do Firefox apresentou um [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=773687) na asserção de `^` com a flag _sticky_ que fazia expressões iniciando com `^` e usando a flag _sticky_ encontrarem correspondências onde não deveriam. O bug foi introduzido algum tempo após o Firefox 3.6 (que possuía a flag sticky mas não apresentava o bug) e corrigido em 2015. Talvez por este motivo, a especificação ES2015 [destaca especificamente](https://www.ecma-international.org/ecma-262/7.0/index.html#sec-assertion) que:
 
 > Quando a flag `y` for usada em um padrão, ^ indica que a correspondência ocorrerá apenas no início da entrada, ou (se `multiline` for `true`) no início de uma linha.
 

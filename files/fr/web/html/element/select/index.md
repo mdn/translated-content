@@ -7,7 +7,34 @@ slug: Web/HTML/Element/select
 
 L'élément HTML **`<select>`** représente un contrôle qui fournit une liste d'options parmi lesquelles l'utilisateur pourra choisir.
 
-{{EmbedInteractiveExample("pages/tabbed/select.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;select&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="pet-select">Choose a pet:</label>
+
+<select name="pets" id="pet-select">
+  <option value="">--Please choose an option--</option>
+  <option value="dog">Dog</option>
+  <option value="cat">Cat</option>
+  <option value="hamster">Hamster</option>
+  <option value="parrot">Parrot</option>
+  <option value="spider">Spider</option>
+  <option value="goldfish">Goldfish</option>
+</select>
+```
+
+```css interactive-example
+label {
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding-right: 10px;
+}
+
+select {
+  font-size: 0.9rem;
+  padding: 2px 5px;
+}
+```
 
 L'exemple ci-avant illustre une utilisation simple de `<select>` où l'attribut `id` peut être associé à un élément {{htmlelement("label")}} qui permettra d'avoir un libellé accessible pour ce champ et où un attribut `name` représente le nom de la donnée qui sera envoyée au serveur. Chaque option est définie grâce à un élément {{htmlelement("option")}} qui se situe à l'intérieur de l'élément `<select>`.
 
@@ -17,14 +44,14 @@ L'élément `<select>` possède certains attributs spécifiques dont `multiple` 
 
 Il est possible de regrouper plusieurs éléments `<option>` à l'intérieur d'éléments {{htmlelement("optgroup")}} afin de créer des groupes d'options distincts.
 
-Pour plus d'exemples, voir [les contrôles natifs pour les formulaires](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs#Contenu_déroulant).
+Pour plus d'exemples, voir [les contrôles natifs pour les formulaires](/fr/docs/Learn/Forms/Basic_native_form_controls#contenu_déroulant).
 
 ## Attributs
 
-Comme tous les autres éléments HTML, celui-ci inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Comme tous les autres éléments HTML, celui-ci inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `autocomplete`
-  - : Une chaîne de caractères qui fournit une indication à l'agent utilisateur pour les fonctionnalités d'autocomplétion. Voir [la page sur l'attribut `autocomplete`](/fr/docs/Web/HTML/Attributs/autocomplete) pour une liste des valeurs utilisables et de leurs impacts sur l'autocomplétion.
+  - : Une chaîne de caractères qui fournit une indication à l'agent utilisateur pour les fonctionnalités d'autocomplétion. Voir [la page sur l'attribut `autocomplete`](/fr/docs/Web/HTML/Attributes/autocomplete) pour une liste des valeurs utilisables et de leurs impacts sur l'autocomplétion.
 - `autofocus`
   - : Cet attribut booléen permet d'indiquer si ce contrôle du formulaire devrait recevoir le focus au chargement de la page. Pour un même document, seul un élément de formulaire peut avoir l'attribut `autofocus` activé.
 - `disabled`
@@ -42,14 +69,14 @@ Comme tous les autres éléments HTML, celui-ci inclut [les attributs universels
 
 ## Mise en forme avec CSS
 
-Il est communément admis que l'élément `<select>` est difficilement mis en forme avec CSS. Certains aspects de l'élément, [son modèle de boîte](/fr/docs/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte), [la police utilisée](/fr/docs/Web/CSS/CSS_Fonts) ou encore l'apparence ({{cssxref("appearance")}}), peuvent être modifiés.
+Il est communément admis que l'élément `<select>` est difficilement mis en forme avec CSS. Certains aspects de l'élément, [son modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model), [la police utilisée](/fr/docs/Web/CSS/CSS_fonts) ou encore l'apparence ({{cssxref("appearance")}}), peuvent être modifiés.
 
 Toutefois, ces propriétés peuvent fournir des résultats incohérents entre les différents navigateurs et il peut être difficile d'aligner différents contrôles sur une colonne.Aussi, si la structure interne de cet élément est trop complexe, on pourra créer un tel contrôle en utilisant des éléments non sémantiques, du code JavaScript et WAI-ARIA afin de décrire la sémantique du contrôle.
 
 Pour plus d'informations sur la mise en forme de `<select>` :
 
-- [Mettre en forme les formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms)
+- [Mettre en forme les formulaires HTML](/fr/docs/Learn/Forms/Styling_web_forms)
+- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_form_styling)
 
 ## Exemples
 
@@ -247,4 +274,4 @@ Les utilisateurs du clavier pourront sélectionner des options non-contigües de
 ## Voir aussi
 
 - Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}
-- Les évènements déclenchés par `<select>` : [`input`](/fr/docs/Web/Events/input), [`change`](/fr/docs/Web/Events/change)
+- Les évènements déclenchés par `<select>` : [`input`](/fr/docs/Web/API/Element/input_event), [`change`](/fr/docs/Web/API/HTMLElement/change_event)

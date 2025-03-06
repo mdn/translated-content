@@ -85,6 +85,6 @@ var arr = [1, 2, 3, 4, 5];
 
 ## Ver también
 
-- [Good variable names](http://wiki.c2.com/?GoodVariableNames)
+- [Good variable names](https://wiki.c2.com/?GoodVariableNames)
 - [`var`](/es/docs/Web/JavaScript/Reference/Statements/var)
-- [Variable declarations in the JavaScript Guide](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations)
+- [Variable declarations in the JavaScript Guide](/es/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)

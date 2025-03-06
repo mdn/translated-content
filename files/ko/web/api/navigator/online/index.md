@@ -5,7 +5,7 @@ slug: Web/API/Navigator/onLine
 
 {{ApiRef("HTML DOM")}}
 
-In progress [Firefox 3](/ko/Firefox_3_for_developers)는 [WHATWG 웹 애플리케이션 1.0 명세](http://www.whatwg.org/specs/web-apps/current-work/)에 기술된 [온라인/오프라인 이벤트](http://www.whatwg.org/specs/web-apps/current-work/#offline)를 구현합니다.
+In progress [Firefox 3](/ko/Firefox_3_for_developers)는 [WHATWG 웹 애플리케이션 1.0 명세](https://www.whatwg.org/specs/web-apps/current-work/)에 기술된 [온라인/오프라인 이벤트](https://www.whatwg.org/specs/web-apps/current-work/#offline)를 구현합니다.
 
 ### 개요
 
@@ -28,7 +28,7 @@ In progress [Firefox 3](/ko/Firefox_3_for_developers)는 [WHATWG 웹 애플리�
 
 #### `navigator.onLine`
 
-[`navigator.onLine`](/ko/DOM/window.navigator.onLine)는 `true`/`false`(온라인은 `true`, 오프라인은 `false`)를 보관하는 속성입니다. 이 속성은 사용자가 해당 메뉴 항목(파일 -> 오프라인 작업)을 선택하여 "오프라인 모드"로 전환할 때마다 갱신됩니다.
+[`navigator.onLine`](/ko/docs/DOM/window.navigator.onLine)는 `true`/`false`(온라인은 `true`, 오프라인은 `false`)를 보관하는 속성입니다. 이 속성은 사용자가 해당 메뉴 항목(파일 -> 오프라인 작업)을 선택하여 "오프라인 모드"로 전환할 때마다 갱신됩니다.
 
 또한 이 속성은 브라우저가 네트워크에 더 이상 연결할 수 없을 때마다 갱신됩니다. 명세에 따르면:
 
@@ -44,7 +44,7 @@ Firefox 2는 윈도우와 리눅스에서 브라우저의 온라인/오프라인
 
 널리 알려진 몇 가지 방법으로 해당 이벤트에 대한 리스너(listener)를 등록할 수 있습니다.
 
-- `window`, `document`, `document.body`에서 [`addEventListener`](/ko/DOM/element.addEventListener)를 이용
+- `window`, `document`, `document.body`에서 [`addEventListener`](/ko/docs/DOM/element.addEventListener)를 이용
 - JavaScript의 `Function` 개체에서 `document`나 `document.body`에 `.ononline` 혹은 `.onoffline` 속성을 설정 (**참고:** 호환성 때문에`window.ononline`이나 `window.onoffline`은 올바로 동작하지 않습니다.)
 - HTML 마크업의 `<body>` 태그에 `ononline="..."` 혹은 `onoffline="..."` 속성을 지정
 
@@ -101,7 +101,7 @@ Firefox 2는 윈도우와 리눅스에서 브라우저의 온라인/오프라인
 
 ### 참고
 
-- ['Online/Offline events' section from the WHATWG Web Applications 1.0 Specification](http://www.whatwg.org/specs/web-apps/current-work/#offline)
+- ['Online/Offline events' section from the WHATWG Web Applications 1.0 Specification](https://www.whatwg.org/specs/web-apps/current-work/#offline)
 - [The bug tracking online/offline events implementation in Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=336359) and a [follow-up](https://bugzilla.mozilla.org/show_bug.cgi?id=336682)
 - [A simple test case](https://bugzilla.mozilla.org/attachment.cgi?id=220609)
 - [An explanation of Online/Offline events](http://ejohn.org/blog/offline-events/)

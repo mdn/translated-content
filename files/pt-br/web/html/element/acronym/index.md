@@ -12,7 +12,7 @@ O Elemento HTML Acrônimo (`<acronym>)` permite à autores claramente indicar qu
 
 ## Atributos
 
-Este elemento não possui qualquer outro atributo além dos [atributos globais](/pt-BR/docs/HTML/global_attributes), comuns à todos os elementos.
+Este elemento não possui qualquer outro atributo além dos [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes), comuns à todos os elementos.
 
 ## Interface DOM
 

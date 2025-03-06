@@ -15,8 +15,8 @@ Une **méthode** est une {{glossary("fonction", "fonction")}} (`function`) qui e
 ### Culture générale
 
 - [Méthode (informatique)](<https://fr.wikipedia.org/wiki/Méthode_(informatique)>) sur Wikipédia
-- [Définir une méthode en JavaScript](/fr/docs/Web/JavaScript/Reference/Fonctions/Définition_de_méthode) (comparaison entre la syntaxe traditionnelle et la version proposée pour ECMAScript 6)
+- [Définir une méthode en JavaScript](/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions) (comparaison entre la syntaxe traditionnelle et la version proposée pour ECMAScript 6)
 
 ### Référence technique
 
-- [Liste des méthodes fournies par JavaScript](/fr/docs/Web/JavaScript/Reference/Methods_Index)
+- [Liste des méthodes fournies par JavaScript](/fr/docs/Web/JavaScript/Reference)

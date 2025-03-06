@@ -30,7 +30,7 @@ Votre code n'en sera que plus qualitatif et plus professionnel, et vous serez en
 
 Nous avons créé un cours qui inclut toutes les informations essentielles dont vous avez besoin pour atteindre votre objectif.
 
-[Commencer](/fr/docs/Learn/Front-end_web_developer)
+[Commencer](/fr/curriculum/)
 
 ## Guides d'introduction
 

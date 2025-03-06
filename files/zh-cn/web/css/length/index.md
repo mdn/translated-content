@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<length>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示距离值。许多 CSS 属性会用到长度，比如 {{Cssxref("width")}}、{{Cssxref("margin")}}、{{Cssxref("padding")}}、{{Cssxref("border-width")}}、{{Cssxref("font-size")}} 和 {{Cssxref("text-shadow")}}。
+**`<length>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示距离值。许多 CSS 属性会用到长度，比如 {{Cssxref("width")}}、{{Cssxref("margin")}}、{{Cssxref("padding")}}、{{Cssxref("border-width")}}、{{Cssxref("font-size")}} 和 {{Cssxref("text-shadow")}}。
 
 > [!NOTE]
 > 虽然 {{cssxref("&lt;percentage&gt;")}} 值可以在接受 `<length>` 值的某些相同属性中使用，但它们本身不是 `<length>` 值。具体请参阅 {{cssxref("&lt;length-percentage&gt;")}}。
@@ -19,7 +19,7 @@ l10n:
 > [!NOTE]
 > 有些属性支持使用负数的 `<length>` 值，而有些不支持。
 
-长度的[指定值](/zh-CN/docs/Web/CSS/specified_value)由其数量和单位表示。长度的[计算值](/zh-CN/docs/Web/CSS/computed_value)是解析为绝对长度的指定长度，其单位没有区分。
+长度的[指定值](/zh-CN/docs/Web/CSS/CSS_cascade/specified_value)由其数量和单位表示。长度的[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)是解析为绝对长度的指定长度，其单位没有区分。
 
 `<length>` 的单位可以是相对或绝对的。相对长度表示以其他距离为单位的测量值。根据单位的不同，这个距离可以是特定字符的大小、[行高](/zh-CN/docs/Web/CSS/line-height)或{{Glossary("viewport", "视口")}}的大小。使用相对长度单位的样式表可以更容易地从一个输出环境扩展到另一个输出环境。
 
@@ -103,20 +103,20 @@ CSS 相对长度单位可以基于字体、容器或视口尺寸。
     > [!NOTE]
     > 例如，浏览器可能会将默认视口百分比高度单位（`vh`）等同于大视口百分比高度单位（`lvh`）。如果是这样，当浏览器界面展开时，这可能会遮挡全页面显示的内容。
 
-视口百分比长度定义了相对于初始[包含块](/zh-CN/docs/Web/CSS/Containing_block)大小的百分比值 `<length>`，而初始[包含块](/zh-CN/docs/Web/CSS/Containing_block)的大小又基于{{Glossary("viewport", "视口")}}或页面区域（即文档的可见部分）的大小。当初始包含块的高度或宽度发生变化时，根据它们确定大小的元素也会相应缩放。如下所述，每个视口尺寸都有一个与之相对应的视口百分比长度单位变量。
+视口百分比长度定义了相对于初始[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)大小的百分比值 `<length>`，而初始[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的大小又基于{{Glossary("viewport", "视口")}}或页面区域（即文档的可见部分）的大小。当初始包含块的高度或宽度发生变化时，根据它们确定大小的元素也会相应缩放。如下所述，每个视口尺寸都有一个与之相对应的视口百分比长度单位变量。
 
 > [!NOTE]
 > 视口长度在 {{cssxref("@page")}} 声明块中无效。
 
 - `vh`
 
-  - : 代表视口初始[包含块](/zh-CN/docs/Web/CSS/Containing_block)高度的百分比。`1vh` 是视口高度的 1%。例如，如果视口高度为 `300px`，那么属性上的 `70vh` 值就是 `210px`。
+  - : 代表视口初始[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)高度的百分比。`1vh` 是视口高度的 1%。例如，如果视口高度为 `300px`，那么属性上的 `70vh` 值就是 `210px`。
 
     对于小、大和动态视口尺寸，视口百分比单位分别是 `svh`、`lvh` 和 `dvh`。`vh` 表示基于浏览器默认视口尺寸的视口百分比长度单位。
 
 - `vw`
 
-  - : 代表视口初始[包含块](/zh-CN/docs/Web/CSS/Containing_block)宽度的百分比。`1vw` 是视口宽度的 1%。例如，如果视口宽度为 `800px`，那么属性上的 `50vw` 值就是 `400px`。
+  - : 代表视口初始[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)宽度的百分比。`1vw` 是视口宽度的 1%。例如，如果视口宽度为 `800px`，那么属性上的 `50vw` 值就是 `400px`。
 
     对于小、大和动态视口尺寸，视口百分比单位分别是 `svw`、`lvw` 和 `dvw`。`vw` 表示基于浏览器默认视口尺寸的视口百分比长度单位。
 
@@ -134,13 +134,13 @@ CSS 相对长度单位可以基于字体、容器或视口尺寸。
 
 - `vb`
 
-  - : 代表初始[包含块](/zh-CN/docs/Web/CSS/Containing_block)大小在根元素的[区块轴](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)方向上的百分比。
+  - : 代表初始[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)大小在根元素的[区块轴](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)方向上的百分比。
 
     对于小、大和动态视口尺寸，各自的视口百分比单位分别是 `svb`、`lvb` 和 `dvb`。`vb` 表示基于浏览器默认视口尺寸的视口百分比长度单位。
 
 - `vi`
 
-  - : 代表初始[包含块](/zh-CN/docs/Web/CSS/Containing_block)大小的百分比，方向与根元素的[行向轴](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)一致。
+  - : 代表初始[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)大小的百分比，方向与根元素的[行向轴](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)一致。
 
     对于小、大和动态视口尺寸，相应的视口百分比单位分别是 `svi`、`lvi` 和 `dvi`。`vi` 表示基于浏览器默认视口尺寸的视口百分比长度单位。
 
@@ -317,6 +317,6 @@ inputElem.addEventListener("change", () => {
 
 ## 参见
 
-- [CSS 值和单位教程](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS 值和单位教程](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [CSS 值和单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)模块
 - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model)

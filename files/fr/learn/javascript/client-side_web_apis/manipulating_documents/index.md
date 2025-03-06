@@ -277,11 +277,11 @@ La démo terminée doit ressembler à ça&nbsp;:
 Pour compléter l'exercice, suivez les étapes ci-dessous, et assurez-vous que votre exemple se comporte comme décrit ci-dessus.
 
 1. Tout d'abord, téléchargez une copie du fichier [`shopping-list.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html). Vous verrez qu'il contient un peu de CSS, une liste avec un titre, un champ, un bouton, une liste vide et un élément [`<script>`](/fr/docs/Web/HTML/Element/script). Vous apporterez toutes vos modifications à l'intérieur du script.
-2. Créez trois variables, contenant des références aux éléments de liste [`<ul>`](/fr/docs/Web/HTML/Element/ul), de champ [`<input>`](/fr/docs/Web/HTML/Element/Input) et de bouton [`<button>`](/fr/docs/Web/HTML/Element/Button).
+2. Créez trois variables, contenant des références aux éléments de liste [`<ul>`](/fr/docs/Web/HTML/Element/ul), de champ [`<input>`](/fr/docs/Web/HTML/Element/input) et de bouton [`<button>`](/fr/docs/Web/HTML/Element/button).
 3. Créez une [fonction](/fr/docs/Learn/JavaScript/Building_blocks/Functions) qui sera déclenchée lorsqu'on clique sur le bouton.
 4. À l'intérieur du corps de la fonction, commencez par stocker la [valeur actuelle](/fr/docs/Web/API/HTMLInputElement#propriétés) (propriété `value`) du champ dans une variable.
 5. Ensuite, videz le champ en définissant sa valeur comme une chaîne vide — `''`.
-6. Créez trois nouveaux éléments&nbsp;: un élément de liste [`<li>`](/fr/docs/Web/HTML/Element/li), un [`<span>`](/fr/docs/Web/HTML/Element/span) et un bouton [`<button>`](/fr/docs/Web/HTML/Element/Button), et stockez-les chacun dans des variables.
+6. Créez trois nouveaux éléments&nbsp;: un élément de liste [`<li>`](/fr/docs/Web/HTML/Element/li), un [`<span>`](/fr/docs/Web/HTML/Element/span) et un bouton [`<button>`](/fr/docs/Web/HTML/Element/button), et stockez-les chacun dans des variables.
 7. Attachez le `<span>` et le `<button>` comme enfants de `<li>`.
 8. Définissez le contenu texte du `<span>` comme égal à la valeur du champ que vous avez récupéré précédemment, et le contenu du bouton à «&nbsp;Supprimer&nbsp;».
 9. Attachez l'article `<li>` comme enfant de la liste.

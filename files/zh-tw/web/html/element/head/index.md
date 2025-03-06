@@ -11,7 +11,7 @@ slug: Web/HTML/Element/head
 
 ## 屬性
 
-這個元件屬性含有[全域屬性](/zh-TW/docs/HTML/Global_attributes)。
+這個元件屬性含有[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
 ## 範例
 

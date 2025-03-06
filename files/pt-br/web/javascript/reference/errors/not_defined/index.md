@@ -67,5 +67,5 @@ console.log(num1); // 2
 ## Veja também
 
 - {{Glossary("Scope")}}
-- [Declarando variáveis no JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals)
+- [Declarando variáveis no JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types)
 - [Escopo de função no JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Fun%C3%A7%C3%B5es)

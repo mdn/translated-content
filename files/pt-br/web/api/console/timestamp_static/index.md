@@ -7,7 +7,7 @@ slug: Web/API/console/timeStamp_static
 
 ## Sumário
 
-Adiciona um marcador simples para as ferramentas [Timeline](https://developer.chrome.com/docs/devtools/performance/timeline-reference) ou [Waterfall](/pt-BR/docs/Tools/Performance/Waterfall) do navegador. Ele deixa você relacionar um ponto no seu código com os outros eventos gravados na linha do tempo, como um evento de layout ou de pintura.
+Adiciona um marcador simples para as ferramentas [Timeline](https://developer.chrome.com/docs/devtools/performance/timeline-reference) ou [Waterfall](https://profiler.firefox.com/docs/) do navegador. Ele deixa você relacionar um ponto no seu código com os outros eventos gravados na linha do tempo, como um evento de layout ou de pintura.
 
 Opcionalmente, você pode fornecer um argumento como rótulo do carimbo de hora, e esse rótulo será então mostrado juntamente com a marcação.
 
@@ -37,4 +37,4 @@ console.timeStamp(rotulo);
 
 - {{ domxref("Console.time()") }}
 - {{ domxref("Console.timeEnd()") }}
-- [Adding timestamps to the Waterfall](/pt-BR/docs/Tools/Performance/Waterfall#Timestamp_markers)
+- [Adding timestamps to the Waterfall](https://profiler.firefox.com/docs/#timestamp_markers)

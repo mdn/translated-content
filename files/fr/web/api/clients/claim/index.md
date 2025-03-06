@@ -48,9 +48,9 @@ self.addEventListener("activate", function (event) {
 
 ## Voir aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Example simple de service workers](https://github.com/mdn/sw-test)
 - [Est-ce que les ServiceWorker sont prêt?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Utilisation optimisée des web workers](/fr/docs/Web/Guide/Performance/Using_web_workers)
+- [Utilisation optimisée des web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
 - {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}}

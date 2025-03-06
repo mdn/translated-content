@@ -23,7 +23,7 @@ var source = audioCtx.createBufferSource();
 在这个例子中，我们将会创建一个 2 秒的缓冲器，并用白噪音填充它，然后通过{{ domxref("AudioBufferSourceNode") }}来播放它。
 
 > [!NOTE]
-> You can also [run the code live](http://mdn.github.io/audio-buffer/), or [view the source](https://github.com/mdn/audio-buffer).
+> You can also [run the code live](https://mdn.github.io/audio-buffer/), or [view the source](https://github.com/mdn/audio-buffer).
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -77,4 +77,4 @@ button.onclick = function () {
 
 ## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

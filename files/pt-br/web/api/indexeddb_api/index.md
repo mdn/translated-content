@@ -3,15 +3,15 @@ title: IndexedDB
 slug: Web/API/IndexedDB_API
 ---
 
-IndexedDB é uma API para armazenamento client-side de quantidades significantes de informações e buscas com alta performance por índices. Enquanto [DOM Storage](/pt-BR/docs/DOM/Storage) é útil para armazenamento de pequenas quantidade de dados, IndexedDB é a solução para grande porção de dados estruturados.
+IndexedDB é uma API para armazenamento client-side de quantidades significantes de informações e buscas com alta performance por índices. Enquanto [DOM Storage](/pt-BR/docs/Web/API/Web_Storage_API) é útil para armazenamento de pequenas quantidade de dados, IndexedDB é a solução para grande porção de dados estruturados.
 
-Esta página basicamente é o ponto de entrada para uma descrição técnica dos objetos da API. Precisando de suporte ainda mais inicial consulte os [Conceitos Básicos sobre IndexedDb](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB). Para mais detalhes sobre a implementação, veja [Usando IndexedDB](/pt-BR/docs/IndexedDB/Using_IndexedDB).
+Esta página basicamente é o ponto de entrada para uma descrição técnica dos objetos da API. Precisando de suporte ainda mais inicial consulte os [Conceitos Básicos sobre IndexedDb](/pt-BR/docs/Web/API/IndexedDB_API/Basic_Terminology). Para mais detalhes sobre a implementação, veja [Usando IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB).
 
-IndexedDB provém APIs separadas para acesso tanto síncrono quanto assíncrono. As APIs síncronas devem ser utilizadas apenas dentro de [Web Workers](/pt-BR/docs/DOM/Worker), apesar de não ser implementada por nenhum navegador atualmente. A API assíncrona funciona tanto com ou sem Web Workers, sendo que o Firefox ainda não implementou este.
+IndexedDB provém APIs separadas para acesso tanto síncrono quanto assíncrono. As APIs síncronas devem ser utilizadas apenas dentro de [Web Workers](/pt-BR/docs/Web/API/Worker), apesar de não ser implementada por nenhum navegador atualmente. A API assíncrona funciona tanto com ou sem Web Workers, sendo que o Firefox ainda não implementou este.
 
 ## API Assíncrona
 
-Os métodos da API assíncrona são chamados sem bloquear a thread que os chama. Para obter acesso assíncrono à database, chame [open()](/pt-BR/docs/Web/API/IDBFactory.open) no atributo [indexedDB](/pt-BR/docs/Web/API/IDBEnvironment.indexedDB) do objeto [window](/pt-BR/docs/DOM/window), que retornará um objeto {{domxref("IDBRequest")}}. Operações assíncronas comunicam-se com a aplicação que os chamam executando eventos nos objetos {{domxref("IDBRequest")}}.
+Os métodos da API assíncrona são chamados sem bloquear a thread que os chama. Para obter acesso assíncrono à database, chame [open()](/pt-BR/docs/Web/API/IDBFactory/open) no atributo [indexedDB](/pt-BR/docs/Web/API/Window/indexedDB) do objeto [window](/pt-BR/docs/Web/API/Window), que retornará um objeto {{domxref("IDBRequest")}}. Operações assíncronas comunicam-se com a aplicação que os chamam executando eventos nos objetos {{domxref("IDBRequest")}}.
 
 > [!NOTE]
 > Nota: O objeto indexedDB é prefixado em navegadores mais antigos (propriedade mozIndexedDB em Gecko < 16, webkitIndexedDb em Chrome e msIndexedDB no IE 10).
@@ -49,7 +49,7 @@ Uma versão anterior da especificação também define estas interfaces agora re
   - : Representa condições de erro que podem ser encontradas enquanto performando operações no banco de dados.
 
 > [!NOTE]
-> há também a [versão síncrona da API](/pt-BR/docs/IndexedDB/Syncronous_API). A versão síncrona não tem implementação em qualquer navegador. É feita para ser utilizada com [WebWorkers](/pt-BR/docs/DOM/Using_web_workers).
+> há também a [versão síncrona da API](/pt-BR/docs/Web/API/IndexedDB_API). A versão síncrona não tem implementação em qualquer navegador. É feita para ser utilizada com [WebWorkers](/pt-BR/docs/Web/API/Web_Workers_API/Using_web_workers).
 
 ## Limites de Armazenamento
 
@@ -65,9 +65,9 @@ Não há qualquer limite em um único elemento da database. Entretanto podem hav
 
 ## Veja Também
 
-- [Conceitos Básicos sobre IndexedDB](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB)
-- [Utilizando IndexedDB](/pt-BR/docs/IndexedDB/Using_IndexedDB)
-- [Armazenando Imagens e Arquivos com IndexedDB](http://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
+- [Conceitos Básicos sobre IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API/Basic_Terminology)
+- [Utilizando IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- [Armazenando Imagens e Arquivos com IndexedDB](https://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
 - [Especificação da API de Indexed Database](https://www.w3.org/TR/IndexedDB/)
 - [IndexedDB — O armazenamento em seu Navegador](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)
 - [IndexedDB Exemplos](http://nparashuram.com/IndexedDB/trialtool/index.html)

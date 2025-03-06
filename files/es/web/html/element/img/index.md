@@ -8,7 +8,7 @@ slug: Web/HTML/Element/img
 El elemento de imagen HTML **`<img>`** representa una imagen en el documento.
 
 > [!NOTE]
-> Los navegadores no siempre muestran la imagen a la que el elemento hace referencia. Es el caso de los navegadores no gráficos (incluyendo aquellos usados por personas con problemas de visión), sí el usuario elige no mostrar la imagen, o sí el navegador es incapaz de mostrarla porque no es válida o [soportada](/es/docs/Web/HTML/Elemento/img#Supported_image_formats). En ese caso, el navegador la reemplazará con el texto definido en el atributo `alt`.
+> Los navegadores no siempre muestran la imagen a la que el elemento hace referencia. Es el caso de los navegadores no gráficos (incluyendo aquellos usados por personas con problemas de visión), sí el usuario elige no mostrar la imagen, o sí el navegador es incapaz de mostrarla porque no es válida o [soportada](#supported_image_formats). En ese caso, el navegador la reemplazará con el texto definido en el atributo `alt`.
 
 <table class="properties">
   <tbody>
@@ -65,7 +65,7 @@ Este elemento incluye atributos globales.
   - : Alineamiento de la texto respecto al contexto que la rodea.
 - `alt`
 
-  - : Este atributo define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un [formato no soportado](/es/docs/Web/HTML/Elemento/img#Supported_image_formats) o si la imagen aún no se ha descargado.
+  - : Este atributo define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un [formato no soportado](#supported_image_formats) o si la imagen aún no se ha descargado.
 
     > [!NOTE]
     > Omitir este atributo indica que la imagen es una parte clave del contenido, y no tiene equivalencia textual. Establecer este atributo como cadena vacía indica que la imagen no es una parte clave del contenido; los navegadores no gráficos pueden omitirlo.
@@ -76,14 +76,14 @@ Este elemento incluye atributos globales.
 
 - `crossorigin`
 
-  - : Este atributo enumerado indica si la búsqueda de la imagen debe ser por CORS o no. [Imagen hablidata CORS](/es/docs/Web/HTML/Imagen_con_CORS_habilitado) puede ser usada en el elemento {{HTMLElement("canvas")}} sin ser pintada. Los valores permitidos son:
+  - : Este atributo enumerado indica si la búsqueda de la imagen debe ser por CORS o no. [Imagen hablidata CORS](/es/docs/Web/HTML/CORS_enabled_image) puede ser usada en el elemento {{HTMLElement("canvas")}} sin ser pintada. Los valores permitidos son:
 
     - `"anonymous"`
       - : Una petición cross-origin (i.e., with `Origin:` HTTP header) es realizada. Sin embargo, no fueron enviadas credenciales "_(i.e., no cookie, no X.509 certificate, and no HTTP Basic authentication is sent)_". Sí el servidor no emite credenciales al sitio de origen (no ajustando el `Access-Control-Allow-Origin:` HTTP header), la imagen será pintada y su uso restringido.
     - `"use-credentials"`
       - : Una petición cross-origin (i.e., with `Origin:` HTTP header) es realizada con credenciales (i.e., a cookie, a certificate, and HTTP Basic authentication is performed). Sí el servidor no emite credenciales al sitio de origen (a través del `Access-Control-Allow-Credentials:` HTTP header), la imagen será pintada y su uso restringido.
 
-    Cuando no existe, el recurso es buscado sin petición CORS (i.e., `sin enviar el Origen:` HTTP header) , previniendo el uso no pintado del elemento {{HTMLElement('canvas')}}. Si es inválido, se maneja como si se hubiese usado **anonymous**. Ver [atributos de configuración CORS](/es/docs/HTML/CORS_settings_attributes) para más información.
+    Cuando no existe, el recurso es buscado sin petición CORS (i.e., `sin enviar el Origen:` HTTP header) , previniendo el uso no pintado del elemento {{HTMLElement('canvas')}}. Si es inválido, se maneja como si se hubiese usado **anonymous**. Ver [atributos de configuración CORS](/es/docs/Web/HTML/Attributes/crossorigin) para más información.
 
 - `height`
   - : La altura de la imagen en píxeles CSS en HTML5 o píxeles o como porcentaje en HTML4.
@@ -141,7 +141,7 @@ Este elemento incluye atributos globales.
   - : El ancho de la imagen en píxeles CSS en HTML5, o píxeles o porcentaje en HTML4.
 - `usemap`
 
-  - : La URL parcial (empezando con '#') de un [mapa de imagea](/es/docs/HTML/Element/map) asociado a un elemento.
+  - : La URL parcial (empezando con '#') de un [mapa de imagea](/es/docs/Web/HTML/Element/map) asociado a un elemento.
 
     > [!NOTE]
     > No puedes usar este atributo si el elemento `<img>` es descendiente de un elemento {{htmlelement("a")}} o {{HTMLElement("button")}}.
@@ -157,7 +157,7 @@ El estándar de HTML no ofrece una lista de formatos de imagen soportados, de mo
 - [GIF](http://en.wikipedia.org/wiki/Graphics_Interchange_Format), including animated GIFs
 - [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics)
 - [APNG](/es/docs/Animated_PNG_graphics)
-- [SVG](/es/docs/SVG)
+- [SVG](/es/docs/Web/SVG)
 - [BMP](http://en.wikipedia.org/wiki/BMP_file_format)
 - [BMP ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
 - [PNG ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
@@ -167,7 +167,7 @@ El estándar de HTML no ofrece una lista de formatos de imagen soportados, de mo
 
 ## Interacción con CSS
 
-Respecto a CSS, `una <img>` es un [elemento de reemplazo](/es/docs/Web/CSS/Elemento_reemplazo). No tiene base, asi que cuando las imágenes se usan en un contexto de formato en línea con {{cssxref("vertical-align")}}: `baseline`, el bajo de la imagen se posa sobre la base del contenedor.
+Respecto a CSS, `una <img>` es un [elemento de reemplazo](/es/docs/Web/CSS/Replaced_element). No tiene base, asi que cuando las imágenes se usan en un contexto de formato en línea con {{cssxref("vertical-align")}}: `baseline`, el bajo de la imagen se posa sobre la base del contenedor.
 
 Dependiendo de su tipo, una imagen puede tener ancho y alto intrínseco, pero no necesariamente. Por ejempo, las imagenes SVG no tienen dimensiones intrínsecas.
 

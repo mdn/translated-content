@@ -24,7 +24,7 @@ slug: Web/CSS/@document
 - `url-prefix()`, который совпадает, если URL-адрес документа начинается с указанного значения.
 - `domain()`, который совпадает, если URL-адрес документа находится в предоставленном домене (или его субдомене).
 - `media-document()`,с параметром видео, изображения, плагина или всего.
-- `regexp()`, который совпадает, если URL-адрес документа сопоставляется с предоставленным [регулярным выражением](/ru/docs/Web/JavaScript/Guide/Regular_Expressions). Выражение должно соответствовать всему URL-адресу.
+- `regexp()`, который совпадает, если URL-адрес документа сопоставляется с предоставленным [регулярным выражением](/ru/docs/Web/JavaScript/Guide/Regular_expressions). Выражение должно соответствовать всему URL-адресу.
 
 Значения, предоставляемые функциям `url()`, `url-prefix()`, `domain()`, и `media-document()` могут быть необязательно заключены в одинарные или двойные кавычки. Значения, предоставляемые функции `regexp()` должны быть заключены в кавычки. .
 
@@ -65,7 +65,7 @@ slug: Web/CSS/@document
 
 ## Спецификации
 
-[Initially](http://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document) in [CSS Conditional Rules Module Level 3](https://drafts.csswg.org/css-conditional-3/), `@document` has been [postponed](http://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes) to Level 4.
+[Initially](https://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document) in [CSS Conditional Rules Module Level 3](https://drafts.csswg.org/css-conditional-3/), `@document` has been [postponed](https://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes) to Level 4.
 
 ## Совместимость с браузерами
 
@@ -73,6 +73,6 @@ slug: Web/CSS/@document
 
 ## Смотрите также
 
-- [Per-site user style sheet rules](http://lists.w3.org/Archives/Public/www-style/2004Aug/0135) on the www-style mailing list.
+- [Per-site user style sheet rules](https://lists.w3.org/Archives/Public/www-style/2004Aug/0135) on the www-style mailing list.
 
 {{CSSRef}}

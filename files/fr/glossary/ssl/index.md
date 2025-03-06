@@ -15,5 +15,5 @@ SSL (Secure Sockets Layer) est un protocole standard qui garantit que la communi
 
 ### Voir aussi
 
-- [SSL functions](/fr/docs/Mozilla/Projects/NSS/SSL_functions)
+- [SSL functions](https://firefox-source-docs.mozilla.org/security/nss/legacy/ssl_functions/index.html)
 - {{Glossary("HTTPS")}}

@@ -3,7 +3,7 @@ title: "Element: mouseover イベント"
 short-title: mouseover
 slug: Web/API/Element/mouseover_event
 l10n:
-  sourceCommit: b965392d6e4f2c897e914a3b69dec3e2a4212782
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{APIRef}}
@@ -22,7 +22,7 @@ onmouseover = (event) => {};
 
 ## イベント型
 
-{{domxref("MouseEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxref("MouseEvent")}} です。 {{domxref("UIEvent")}} および {{domxref("Event")}} を継承しています。
 
 {{InheritanceDiagram("MouseEvent")}}
 
@@ -144,13 +144,12 @@ test.addEventListener(
 
 ## 関連情報
 
-- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
+- [学習: イベント入門](/ja/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/mousedown_event", "mousedown")}}
 - {{domxref("Element/mouseup_event", "mouseup")}}
 - {{domxref("Element/mousemove_event", "mousemove")}}
 - {{domxref("Element/click_event", "click")}}
 - {{domxref("Element/dblclick_event", "dblclick")}}
-- {{domxref("Element/mouseover_event", "mouseover")}}
 - {{domxref("Element/mouseout_event", "mouseout")}}
 - {{domxref("Element/mouseenter_event", "mouseenter")}}
 - {{domxref("Element/mouseleave_event", "mouseleave")}}

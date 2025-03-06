@@ -9,7 +9,24 @@ l10n:
 
 **`bind()`** メソッドは新しい関数を生成し、これは呼び出された際に `this` キーワードに指定された値が設定されます。この値は新しい関数が呼び出されたとき、一連の引数の前に置かれます。
 
-{{EmbedInteractiveExample("pages/js/function-bind.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Function.bind()", "taller")}}
+
+```js interactive-example
+const module = {
+  x: 42,
+  getX: function () {
+    return this.x;
+  },
+};
+
+const unboundGetX = module.getX;
+console.log(unboundGetX()); // The function gets invoked at the global scope
+// Expected output: undefined
+
+const boundGetX = unboundGetX.bind(module);
+console.log(boundGetX());
+// Expected output: 42
+```
 
 ## 構文
 
@@ -63,7 +80,7 @@ const BoundBase = Base.bind(null, 1, 2);
 new BoundBase(3, 4); // true, [1, 2, 3, 4]
 ```
 
-しかし、バインド済み関数は [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) プロパティを持たないので、 [`extends`](/ja/docs/Web/JavaScript/Reference/Classes/extends) の基底クラスとして使用することはできません。
+しかし、バインド済み関数は [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティを持たないので、 [`extends`](/ja/docs/Web/JavaScript/Reference/Classes/extends) の基底クラスとして使用することはできません。
 
 ```js example-bad
 class Derived extends class {}.bind(null) {}

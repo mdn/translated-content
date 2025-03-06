@@ -41,7 +41,7 @@ slug: Web/XSLT/Element/template
 
 ### 정의
 
-[XSLT section 5.3, Defining Template Rules](http://www.w3.org/TR/xslt#section-Defining-Template-Rules)
+[XSLT section 5.3, Defining Template Rules](https://www.w3.org/TR/xslt#section-Defining-Template-Rules)
 
 ### Gecko 지원
 

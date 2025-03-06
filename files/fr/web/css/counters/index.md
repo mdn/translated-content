@@ -20,7 +20,7 @@ counters(countername, '-');
 counters(countername, '.', upper-roman)
 ```
 
-Un compteur n'est pas visible en tant que tel. Les fonctions `counters()` et [`counter()`](/fr/docs/Web/CSS/counter_function) doivent être utilisées pour créer du contenu.
+Un compteur n'est pas visible en tant que tel. Les fonctions `counters()` et [`counter()`](/fr/docs/Web/CSS/counter) doivent être utilisées pour créer du contenu.
 
 > [!NOTE]
 > Bien que la fonction `counters()` puisse être utilisée avec n'importe quelle propriété CSS, la prise en charge des propriétés autres que {{CSSxRef("content")}} reste experimentale.
@@ -160,9 +160,9 @@ li::before {
 
 ## Voir aussi
 
-- [Utiliser les compteurs CSS](/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+- [Utiliser les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
 - {{cssxref("counter-reset")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("@counter-style")}}
-- La fonction CSS [`counter()`](/fr/docs/Web/CSS/counter_function)
+- La fonction CSS [`counter()`](/fr/docs/Web/CSS/counter)
 - {{cssxref("::marker")}}

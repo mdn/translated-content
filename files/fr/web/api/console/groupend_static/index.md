@@ -36,4 +36,4 @@ Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 ## Voir aussi
 
 - [`console.group()`](/fr/docs/Web/API/console/group_static)
-- [`console.groupCollapsed()`](/fr/docs/Web/API/console/groupcollapsed_static)
+- [`console.groupCollapsed()`](/fr/docs/Web/API/console/groupCollapsed_static)

@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-ind
 
 {{CSSRef}}
 
-« [CSS](/es/CSS) « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index)
+« [CSS](/es/docs/Web/CSS) « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
 
 Cuando ningún elemento tiene z-index, los elementos son apilados en este orden (de abajo hacia arriba):
 
@@ -111,15 +111,15 @@ En el siguiente ejemplo, los bloques con posiciones absolutas y relativas son ap
 
 ### También puedes ver
 
-- [Apilamiento y float](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Apilamiento_y_float) : Cómo son manejados los elementos flotantes
-- [Agregando z-index](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Agregando_z-index) : Usando z-index para cambiar el apilamiento por defecto
-- [El contexto de apilamiento](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/El_contexto_de_apilamiento) : Notas sobre el contexto de apilamiento
-- [Ejemplo 1 del contexto de apilamiento](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_1_del_contexto_de_apilamiento) : Jerarquía HTML de 2 niveles, z-index en el último nivel
-- [Ejemplo 2 del contexto de apilamiento](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_2_del_contexto_de_apilamiento) : Jerarquía HTML de 2 niveles, z-index en todos los niveles
-- [Ejemplo 3 del contexto de apilamiento](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_3_del_contexto_de_apilamiento) : Jerarquía HTML de 3 niveles, z-index en el segundo nivel
+- [Apilamiento y float](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements) : Cómo son manejados los elementos flotantes
+- [Agregando z-index](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index) : Usando z-index para cambiar el apilamiento por defecto
+- [El contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) : Notas sobre el contexto de apilamiento
+- [Ejemplo 1 del contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1) : Jerarquía HTML de 2 niveles, z-index en el último nivel
+- [Ejemplo 2 del contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2) : Jerarquía HTML de 2 niveles, z-index en todos los niveles
+- [Ejemplo 3 del contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3) : Jerarquía HTML de 3 niveles, z-index en el segundo nivel
 
 ### Información del documento original
 
 - Autor(es): Paolo Lombardi
-- Este artículo es una traducción al inglés de un artículo que escribí en italiano para [YappY](http://www.yappy.it). He dado el derecho de compartir el contenido bajo [Creative Commons: Attribution-Sharealike license](http://creativecommons.org/licenses/by-sa/2.0/)
+- Este artículo es una traducción al inglés de un artículo que escribí en italiano para [YappY](http://www.yappy.it). He dado el derecho de compartir el contenido bajo [Creative Commons: Attribution-Sharealike license](https://creativecommons.org/licenses/by-sa/2.0/)
 - Last Updated Date: November 3rd, 2014

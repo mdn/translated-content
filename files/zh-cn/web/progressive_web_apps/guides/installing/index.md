@@ -25,7 +25,7 @@ slug: Web/Progressive_web_apps/Guides/Installing
 
 ### 添加到主屏幕
 
-2007 年的 iPhone 开始，智能手机增加了“保存到主屏幕”的功能。对于普通（非 PWA）网站，此功能类似于书签，但它不是将页面的 favicon 和标题添加到书签菜单（这是浏览器功能），而是通过这种方式[添加图标](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site)到操作系统的主屏幕。
+2007 年的 iPhone 开始，智能手机增加了“保存到主屏幕”的功能。对于普通（非 PWA）网站，此功能类似于书签，但它不是将页面的 favicon 和标题添加到书签菜单（这是浏览器功能），而是通过这种方式[添加图标](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#在你的站点增加自定义图标)到操作系统的主屏幕。
 
 将非 PWA 网站添加到主屏幕不会在设备上安装该网站。相反，它会将开发者定义的图标添加到主屏幕，当点击图标时，会在默认浏览器中打开该书签链接。
 
@@ -75,7 +75,7 @@ Firefox 需要 [PWA 扩展](https://addons.mozilla.org/zh-CN/firefox/addon/pwas-
 
 用于安装 PWA 的浏览器将知道 PWA 已安装，但其他浏览器将无法访问安装状态。例如，如果你使用 MS Edge 安装一个 PWA，在访问该站点时，Edge 会提示你打开 PWA，而 Chrome 将继续提示你安装该应用程序。如果你也使用 Chrome 安装 PWA，你将拥有两个副本的 PWA。当打开来自不同浏览器安装的多个 PWA 实例时，实例之间不共享数据。
 
-当你点击 Web 应用的图标时，它会在安装 PWA 的浏览器环境中打开，通常没有浏览器的用户界面，尽管这取决于开发者配置的 [Web 应用清单](/zh-CN/docs/Web/Manifest)。类似的，卸载 PWA 的方法取决于用于安装它的浏览器。
+当你点击 Web 应用的图标时，它会在安装 PWA 的浏览器环境中打开，通常没有浏览器的用户界面，尽管这取决于开发者配置的 [Web 应用清单](/zh-CN/docs/Web/Progressive_web_apps/Manifest)。类似的，卸载 PWA 的方法取决于用于安装它的浏览器。
 
 ### 卸载
 

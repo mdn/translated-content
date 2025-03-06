@@ -15,4 +15,4 @@ slug: Glossary/CardDAV
 
 ### 技術文書
 
-- [RFC 6352: vCard Extensions to Web Distributed Authoring and Versioning (WebDAV)](http://tools.ietf.org/html/rfc6352)
+- [RFC 6352: vCard Extensions to Web Distributed Authoring and Versioning (WebDAV)](https://tools.ietf.org/html/rfc6352)

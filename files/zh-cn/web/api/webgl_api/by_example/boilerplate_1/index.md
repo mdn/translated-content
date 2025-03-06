@@ -3,7 +3,7 @@ title: Boilerplate 1
 slug: Web/API/WebGL_API/By_example/Boilerplate_1
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Canvas_size_and_WebGL","Learn/WebGL/By_example/Scissor_animation")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Canvas_size_and_WebGL","Web/API/WebGL_API/By_example/Scissor_animation")}}
 
 这个例子描述了从现在开始将要隐藏重复的代码片断，以及定义一个 JavaScript 函数复用以简化 WebGL 初始化。
 
@@ -73,4 +73,4 @@ function getRenderingContext() {
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/boilerplate-1).
 
-{{PreviousNext("Learn/WebGL/By_example/Canvas_size_and_WebGL","Learn/WebGL/By_example/Scissor_animation")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Canvas_size_and_WebGL","Web/API/WebGL_API/By_example/Scissor_animation")}}

@@ -21,7 +21,7 @@ websocket が ws\:// and wss\:// としてリクエストするものも含め�
 
 リスナー関数はリクエストの情報を含む `details` オブジェクトを渡されます。これにはリクエスト ID が入っていて、その ID でアドオンは単一のリクエストとイベントを関連付けられます。これはブラウザーセッションとアドオンのコンテキストごとにユニークです。リダイレクトと認証交換であっても、リクエストを通じて同じ値を保ちます。
 
-あるホストに webRequest API を使うには、拡張機能は "webRequest" [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) とそのホストの [host パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) を持たねばなりません。「ブロッキング」機能を使うためには、拡張機能は "webRequestBlocking" API 権限も必要です。
+あるホストに webRequest API を使うには、拡張機能は "webRequest" [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) とそのホストの [host パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) を持たねばなりません。「ブロッキング」機能を使うためには、拡張機能は "webRequestBlocking" API 権限も必要です。
 
 ページに読み込まれるリソース (例えば画像、スクリプト、スタイルシート) を中断するには、拡張機能はそのメインページと同様にリソースの host パーミッションも持っている必要があります。例えば、"https\://developer.mozilla.org" のページが "https\://mdn.mozillademos.org" から画像を読み込む場合、画像のリクエストを中断するには拡張機能は両方の host パーミッションを持たねばなりません。
 
@@ -67,7 +67,7 @@ TLS ハンドシェイクについて詳しく読むことができますが、�
 
 {{WebExtAPIRef("webRequest.filterResponseData")}} にリクエスト ID を渡すことで得られる {{WebExtAPIRef("webRequest.StreamFilter")}} を使うと、ブラウザーが受け取った HTTP リクエストのレスポンス本文を検査したり修正したりすることができます。
 
-そのためには、"webRequestBlocking" パーミッションと "webRequest" [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) 、さらに修正したい対象のリクエスト URL にあてはまる [host permission](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) 権限を得ている必要があります。
+そのためには、"webRequestBlocking" パーミッションと "webRequest" [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) 、さらに修正したい対象のリクエスト URL にあてはまる [host permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) 権限を得ている必要があります。
 
 ## 型
 
@@ -127,7 +127,7 @@ TLS ハンドシェイクについて詳しく読むことができますが、�
 
 {{Compat}}
 
-[Extra notes on Chrome incompatibilities](/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webRequest_incompatibilities).
+[Extra notes on Chrome incompatibilities](/ja/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webrequest_incompatibilities).
 
 {{WebExtExamples("h2")}}
 

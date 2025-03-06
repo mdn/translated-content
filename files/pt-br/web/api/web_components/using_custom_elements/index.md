@@ -304,4 +304,4 @@ Observe que as classes ES2015 não podem ser transpiladas de forma confiável em
 
 ## Bibliotecas
 
-Existem várias bibliotecas que são construídas em Web Components com o objetivo de aumentar o nível de abstração ao criar elementos personalizados. Algumas dessas bibliotecas são [snuggsi ツ](https://github.com/devpunks/snuggsi), [X-Tag](https://x-tag.github.io/), [Slim.js](http://slimjs.com/), [LitElement](https://lit-element.polymer-project.org/), [Smart](https://www.htmlelements.com/), [Stencil](https://stenciljs.com) e [hyperHTML-Element](https://github.com/WebReflection/hyperHTML-Element).
+Existem várias bibliotecas que são construídas em Web Components com o objetivo de aumentar o nível de abstração ao criar elementos personalizados. Algumas dessas bibliotecas são [snuggsi ツ](https://github.com/devpunks/snuggsi), [X-Tag](https://x-tag.github.io/), [Slim.js](https://slimjs.com/), [LitElement](https://lit-element.polymer-project.org/), [Smart](https://www.htmlelements.com/), [Stencil](https://stenciljs.com) e [hyperHTML-Element](https://github.com/WebReflection/hyperHTML-Element).

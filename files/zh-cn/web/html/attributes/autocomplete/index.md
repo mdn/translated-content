@@ -22,7 +22,25 @@ HTML `autocomplete` 属性允许 web 开发人员指定{{Glossary("user agent","
 > 2. 作为 `<form>` 元素的后代
 > 3. 具有 {{HTMLElement("input/submit", "submit")}} 按钮的表单
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-autocomplete.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: autocomplete", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="firstName">First Name:</label>
+<input name="firstName" id="firstName" type="text" autocomplete="given-name" />
+
+<label for="lastName">Last Name:</label>
+<input name="lastName" id="lastName" type="text" autocomplete="family-name" />
+
+<label for="email">Email:</label>
+<input name="email" id="email" type="email" autocomplete="off" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1rem;
+}
+```
 
 ## 值
 
@@ -31,7 +49,7 @@ HTML `autocomplete` 属性允许 web 开发人员指定{{Glossary("user agent","
   - : 浏览器不允许为此字段自动输入或选择一个值。文档或应用程序可能提供其自己的自动完成功能，或者出于安全方面的考虑，要求不要自动输入该字段的值。
 
     > [!NOTE]
-    > 在大多数现代浏览器中，`autocomplete` 设置为“`off`”不会阻止密码管理器询问用户是否要保存用户名和密码信息，或者自动在网站的登录表单中填写这些值。请参阅 [autocomplete 属性与登录表单](/zh-CN/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#autocomplete_属性和登录字段)一文。
+    > 在大多数现代浏览器中，`autocomplete` 设置为“`off`”不会阻止密码管理器询问用户是否要保存用户名和密码信息，或者自动在网站的登录表单中填写这些值。请参阅 [autocomplete 属性与登录表单](/zh-CN/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#autocomplete_属性和登录字段)一文。
 
 - "`on`"
   - : 允许浏览器自动完成输入。没有提供有关该字段中期望的数据类型的指导，因此浏览器可以使用自己的判断。
@@ -57,7 +75,7 @@ HTML `autocomplete` 属性允许 web 开发人员指定{{Glossary("user agent","
 - "`username`"
   - : 用户名或账户名。
 - "`new-password`"
-  - : 新密码。创建新账户或更改密码时，应将其用于“输入新密码”或“确认新密码”字段，而不是通常出现的“输入当前密码”字段。浏览器可以使用它来避免意外填写现有密码，并在创建安全密码时提供帮助（参见[使用 autocomplete="new-password" 阻止自动填充](/zh-CN/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#使用_autocompletenew-password_阻止自动填充)）。
+  - : 新密码。创建新账户或更改密码时，应将其用于“输入新密码”或“确认新密码”字段，而不是通常出现的“输入当前密码”字段。浏览器可以使用它来避免意外填写现有密码，并在创建安全密码时提供帮助（参见[使用 autocomplete="new-password" 阻止自动填充](/zh-CN/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#使用_autocompletenew-password_阻止自动填充)）。
 - "`current-password`"
   - : 用户的当前密码。
 - "`one-time-code`"
@@ -234,5 +252,5 @@ TN99 8ZZ
 - {{htmlelement("select")}} 元素。
 - {{htmlelement("textarea")}} 元素。
 - {{htmlelement("form")}} 元素。
-- [HTML 表单](/zh-CN/docs/Learn/Forms)
+- [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - 所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。

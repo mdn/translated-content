@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Operators/yield
 
 `yield` キーワードは、ジェネレーター関数 ({{jsxref("Statements/function*", "function*")}} または[古いジェネレーター関数](/ja/docs/Archive/Web/JavaScript/Legacy_generator_function_statement)) を一時停止したり再開したりするために使用します。
 
-{{EmbedInteractiveExample("pages/js/expressions-yield.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - yield", "taller")}}
+
+```js interactive-example
+function* foo(index) {
+  while (index < 2) {
+    yield index;
+    index++;
+  }
+}
+
+const iterator = foo(0);
+
+console.log(iterator.next().value);
+// Expected output: 0
+
+console.log(iterator.next().value);
+// Expected output: 1
+```
 
 ## 構文
 
@@ -101,7 +118,7 @@ console.log(generatorFunc.next(10).value); // 26
 
 ## 関連情報
 
-- [Iterator プロトコル](/ja/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [Iterator プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield*", "yield*")}}

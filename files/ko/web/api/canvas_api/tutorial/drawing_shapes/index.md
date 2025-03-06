@@ -541,7 +541,7 @@ function draw() {
 
 새로운 캔버스 path2D API 또다른 강력한 특징 중 하나는, 캔버스의 path를 초기화 하기 위해 [SVG path data](/ko/docs/Web/SVG/Tutorial/Paths)를 사용한다는 것입니다. 이는 path 데이터를 이동시키며, SVG와 canvas 에서 재사용 할 수 있도록 해줍니다.
 
-path는 (`M10 10`) 점으로 이동한 다음, 수평하게 오른쪽으로 으로 80 포인트 (`h 80`) 만큼 이동합니다. 이후 수직으로 80포인트 (v 80) 내려간 다음, 80 포인트 왼쪽으로 (`h -80`) 수평하게 이동하고 다시 시작점 (`z`)으로 돌아갑니다. 예시는 [이곳](/ko/docs/Web/API/Path2D.Path2D#Using_SVG_paths)( `Path2D` constructor )에서 확인하실 수 있습니다.
+path는 (`M10 10`) 점으로 이동한 다음, 수평하게 오른쪽으로 으로 80 포인트 (`h 80`) 만큼 이동합니다. 이후 수직으로 80포인트 (v 80) 내려간 다음, 80 포인트 왼쪽으로 (`h -80`) 수평하게 이동하고 다시 시작점 (`z`)으로 돌아갑니다. 예시는 [이곳](/ko/docs/Web/API/Path2D/Path2D#using_svg_paths)( `Path2D` constructor )에서 확인하실 수 있습니다.
 
 ```js
 var p = new Path2D("M10 10 h 80 v 80 h -80 Z");

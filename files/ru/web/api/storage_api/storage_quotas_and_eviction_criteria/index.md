@@ -70,5 +70,5 @@ We track the "last access time" for each origin using temporary storage. Once th
 
 ## Смотрите также
 
-- [Working with quota on mobile browsers](http://www.html5rocks.com/en/tutorials/offline/quota-research/), by [Eiji Kitamura.](http://blog.agektmr.com) A detailed analysis of client-side storage on mobile browsers.
-- [Quota Management API: Fast Facts](https://developers.google.com/web/updates/2011/11/Quota-Management-API-Fast-Facts), by[Eiji Kitamura.](http://blog.agektmr.com) A look at the Quota Management API in Chrome/Blink (which should include Opera, too).
+- [Working with quota on mobile browsers](https://www.html5rocks.com/en/tutorials/offline/quota-research/), by [Eiji Kitamura.](https://blog.agektmr.com) A detailed analysis of client-side storage on mobile browsers.
+- [Quota Management API: Fast Facts](https://developers.google.com/web/updates/2011/11/Quota-Management-API-Fast-Facts), by[Eiji Kitamura.](https://blog.agektmr.com) A look at the Quota Management API in Chrome/Blink (which should include Opera, too).

@@ -6,7 +6,7 @@ slug: Web/CSS/box-flex-group
 {{CSSRef}}{{Non-standard_Header}}
 
 > [!WARNING]
-> これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)を参照してください。
+> これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)を参照してください。
 
 **`box-flex-group`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスボックスの子要素をフレックスグループに割り当てます。
 

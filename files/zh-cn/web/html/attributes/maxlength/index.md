@@ -17,7 +17,39 @@ l10n:
 
 虽然浏览器通常会阻止用户输入超过 maxlength 属性允许的文本长度，但如果输入的长度确实超出了 maxlength 的限制，{{domxref("ValidityState")}} 对象的 {{domxref("ValidityState.tooLong", "tooLong")}} 属性会返回 true。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-maxlength.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: maxlength", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="name">Product name:</label>
+<input
+  id="name"
+  name="name"
+  type="text"
+  value="Shampoo"
+  minlength="3"
+  maxlength="20"
+  required />
+
+<label for="description">Product description:</label>
+<textarea
+  id="description"
+  name="description"
+  minlength="10"
+  maxlength="40"
+  required></textarea>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:valid,
+textarea:valid {
+  background-color: palegreen;
+}
+```
 
 ## 示例
 
@@ -41,5 +73,5 @@ l10n:
 - [`size`](/zh-CN/docs/Web/HTML/Attributes/size)
 - [`pattern`](/zh-CN/docs/Web/HTML/Attributes/pattern)
 - [约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)
-- [表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
+- [表单验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{htmlelement('input')}}

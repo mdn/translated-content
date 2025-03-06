@@ -9,7 +9,18 @@ l10n:
 
 **`Object.values()`** 静的メソッドは、指定されたオブジェクトが持つ列挙可能なプロパティの文字列キーのプロパティ値を配列で返します。
 
-{{EmbedInteractiveExample("pages/js/object-values.html")}}
+{{InteractiveExample("JavaScript Demo: Object.values()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+  c: false,
+};
+
+console.log(Object.values(object1));
+// Expected output: Array ["somestring", 42, false]
+```
 
 ## 構文
 

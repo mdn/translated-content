@@ -9,9 +9,9 @@ slug: Web/CSS/box-shadow
 
 {{EmbedInteractiveExample("pages/css/box-shadow.html")}}
 
-你几乎可以在任何元素上使用`box-shadow`来添加阴影效果。如果元素同时设置了 {{ cssxref("border-radius") }}属性，那么阴影也会有圆角效果。多个阴影在 z 轴上的顺序和多个 [text shadows](/zh-CN/CSS/text-shadow) 规则相同 (第一个阴影在最上面)。
+你几乎可以在任何元素上使用`box-shadow`来添加阴影效果。如果元素同时设置了 {{ cssxref("border-radius") }}属性，那么阴影也会有圆角效果。多个阴影在 z 轴上的顺序和多个 [text shadows](/zh-CN/docs/Web/CSS/text-shadow) 规则相同 (第一个阴影在最上面)。
 
-[Box-shadow generator](/zh-CN/docs/Web/CSS/CSS_box_model/Box-shadow_generator) 是一个允许你生成 `box-shadow` 的交互式工具。
+[Box-shadow generator](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator) 是一个允许你生成 `box-shadow` 的交互式工具。
 
 ## 语法
 
@@ -154,4 +154,4 @@ p {
 
 - {{cssxref("&lt;color&gt;")}} 数据类型
 - 其他与 color 相关的属性：{{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- [使用 CSS 给 HTML 元素添加颜色](/zh-CN/docs/Web/HTML/Applying_color)
+- [使用 CSS 给 HTML 元素添加颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)

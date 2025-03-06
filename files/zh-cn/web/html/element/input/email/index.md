@@ -7,7 +7,27 @@ slug: Web/HTML/Element/input/email
 
 **`"email"`** 类型的 {{HTMLElement("input")}} 元素能够让用户输入或编辑一个电子邮箱地址，如果指定了 [`multiple`](/zh-CN/docs/Web/HTML/Attributes/multiple) 属性，则可以输入多个电子邮箱地址。
 
-{{EmbedInteractiveExample("pages/tabbed/input-email.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="email">Enter your example.com email:</label>
+
+<input type="email" id="email" pattern=".+@example\.com" size="30" required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 在表单提交前，输入框会自动验证输入值是否是一个或多个合法的电子邮箱地址（非空值且符合电子邮箱地址格式）。CSS 伪标签 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}} 能够在校验后自动应用，代表被校验的邮箱地址是否合法。
 
@@ -217,7 +237,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 ```
 
-要了解更多关于表单验证的工作原理，以及如何利用 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}} 这两个 CSS 属性，根据当前值是否有效来设计输入的样式，请参阅[表单数据验证](/zh-CN/docs/Learn/HTML/Forms/Form_validation)一文。
+要了解更多关于表单验证的工作原理，以及如何利用 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}} 这两个 CSS 属性，根据当前值是否有效来设计输入的样式，请参阅[表单数据验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)一文。
 
 > [!NOTE]
 > 有一些已知的规范问题与国际域名和 HTML 中电子邮件地址的验证有关。参阅 [W3C bug 15489](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489) 以了解详细内容。
@@ -260,7 +280,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 {{EmbedLiveSample("模式验证", 700, 275)}}
 
-我们的 {{HTMLElement("form")}} 表单包含一个 `email` 类型的 {{HTMLElement("input")}}，用于用户电子邮件地址，一个 {{HTMLElement("textarea")}}，用来输入他们的 IT 信息，以及一个 `<input>` 类型为 [`"submit"`](/zh-CN/docs/Web/HTML/Element/Input/submit) 的按钮，用来创建一个提交表单。每个文本输入框都有一个 {{HTMLElement("label")}} 与之相关，让用户知道对他们的期望。
+我们的 {{HTMLElement("form")}} 表单包含一个 `email` 类型的 {{HTMLElement("input")}}，用于用户电子邮件地址，一个 {{HTMLElement("textarea")}}，用来输入他们的 IT 信息，以及一个 `<input>` 类型为 [`"submit"`](/zh-CN/docs/Web/HTML/Element/input/submit) 的按钮，用来创建一个提交表单。每个文本输入框都有一个 {{HTMLElement("label")}} 与之相关，让用户知道对他们的期望。
 
 让我们仔细看看电子邮件地址输入框。它的 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 和 [`maxlength`](/zh-CN/docs/Web/HTML/Element/input#maxlength) 属性都被设置为 64，以便为 64 个字符的电子邮件地址提供空间，并将实际输入的字符数限制在最大 64 个。这里还指定了 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性，使得用户必须提供一个有效的电子邮件地址。
 
@@ -359,10 +379,10 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ## 参见
 
-- [HTML 表单指南](/zh-CN/docs/Learn/Forms)
+- [HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
-- [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/Input/tel)
-- [`<input type="url">`](/zh-CN/docs/Web/HTML/Element/Input/url)
+- [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/input/tel)
+- [`<input type="url">`](/zh-CN/docs/Web/HTML/Element/input/url)
 - 属性：
 
   - [`list`](/zh-CN/docs/Web/HTML/Attributes/list)
@@ -374,4 +394,4 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
   - [`readonly`](/zh-CN/docs/Web/HTML/Attributes/readonly)
   - [`size`](/zh-CN/docs/Web/HTML/Attributes/size)
 
-- [CSS 属性兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

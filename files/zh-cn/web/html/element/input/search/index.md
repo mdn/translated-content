@@ -5,9 +5,30 @@ slug: Web/HTML/Element/input/search
 
 {{HTMLSidebar}}
 
-**`search`** 类型的 {{HTMLElement("input")}} 是专为用户输入查询文本而设计的字段。功能上与 [`text`](/zh-CN/docs/Web/HTML/Element/Input/text) 输入相同，但是根据{{Glossary("user agent","用户代理")}}不同，可能会有不同的样式表现。
+**`search`** 类型的 {{HTMLElement("input")}} 是专为用户输入查询文本而设计的字段。功能上与 [`text`](/zh-CN/docs/Web/HTML/Element/input/text) 输入相同，但是根据{{Glossary("user agent","用户代理")}}不同，可能会有不同的样式表现。
 
-{{EmbedInteractiveExample("pages/tabbed/input-search.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;search&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="site-search">Search the site:</label>
+<input type="search" id="site-search" name="q" />
+
+<button>Search</button>
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 <table class="properties">
  <tbody>
@@ -60,17 +81,17 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 用户可以在搜索字段中输入的最大字符数（UTF-16 代码单元）。必须为 0 或更高的整数。如果未指定 `maxlength` 或指定了无效值，则搜索字段没有最大长度。此值还必须大于或等于 `minlength` 的值。
 
-如果输入到字段中的文本的长度大于 `maxlength` UTF-16 代码单元的长度，则输入无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。
+如果输入到字段中的文本的长度大于 `maxlength` UTF-16 代码单元的长度，则输入无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。
 
 ### minlength
 
 用户可以在搜索字段中输入的最小字符数（UTF-16 代码单元）。该值必须是小于或等于 `maxlength` 指定的值的非负整数值。如果未指定 `minlength` 或指定了无效值，则搜索输入没有最小长度。
 
-如果在字段中输入的文本的长度小于 `minlength` UTF-16 代码单元的长度，则搜索字段将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。
+如果在字段中输入的文本的长度小于 `minlength` UTF-16 代码单元的长度，则搜索字段将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。
 
 ### pattern
 
-如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
+如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
 
 如果模式未指定或无效，则不应用任何正则表达式，并且将完全忽略此属性。
 
@@ -204,7 +225,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 
 搜索表单的一个问题是它们的无障碍性。常见的设计惯例是不为搜索字段提供标签（尽管可能会有放大镜或类似图标），因为由于放置位置的原因，搜索表单的目的通常对于视力正常的用户而言相当明显（[这个例子展示了一个典型的模式](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)）。
 
-但是，这可能会使屏幕阅读器用户感到困惑，因为它们不会对搜索输入内容有任何口头指示。解决此问题而不会影响你的视觉设计的一种方法是使用 [WAI-ARIA](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics) 功能：
+但是，这可能会使屏幕阅读器用户感到困惑，因为它们不会对搜索输入内容有任何口头指示。解决此问题而不会影响你的视觉设计的一种方法是使用 [WAI-ARIA](/zh-CN/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) 功能：
 
 - `<form>` 元素上， `search` 值的 `role` 属性向屏幕阅读器用户声明该表单是搜索表单。
 - 还可以在 {{HTMLElement("input")}} 本身使用 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性。这应该是一个描述性的文本标签，屏幕阅读器会读出该标签；它用作 `<label>` 的非可视等效项。
@@ -232,7 +253,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 与上一个示例没有视觉上的区别，但是屏幕阅读器用户可以获得更多可用信息。
 
 > [!NOTE]
-> 有关此类辅助功能的更多信息，请参见 [Signposts/Landmarks](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) 。
+> 有关此类辅助功能的更多信息，请参见[路牌/地标](/zh-CN/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics#路牌地标) 。
 
 ### 输入框元素物理大小
 
@@ -381,7 +402,7 @@ input:valid ~ span::after {
 
 ### 指定模式
 
-你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性指定一个正则表达式，输入值必须遵循该正则表达式才能被视为有效（请参照[使用正则表达式进行验证](/zh-CN/docs/Learn/Forms/Form_validation#使用正则表达式校验)）。
+你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性指定一个正则表达式，输入值必须遵循该正则表达式才能被视为有效（请参照[使用正则表达式进行验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation#使用正则表达式校验)）。
 
 让我们看一个例子。假设我们想提供一个产品 ID 搜索表格，这些 ID 都是由两个字母和四个数字组成的代码。以下示例对此进行了介绍：
 
@@ -439,7 +460,7 @@ input:valid ~ span::after {
 
 ## 参见
 
-- [HTML 表单](/zh-CN/docs/Learn/Forms)
+- [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} 及其所基于的接口 {{domxref("HTMLInputElement")}}
-- [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/Input/text)
-- [CSS 属性的兼容性](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text)
+- [CSS 属性的兼容性](/zh-CN/docs/Learn_web_development/Extensions/Forms)

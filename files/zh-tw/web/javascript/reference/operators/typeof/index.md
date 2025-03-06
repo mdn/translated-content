@@ -135,4 +135,4 @@ typeof /s/ === "object"; // Firefox 5+ ...    // 符合 ECMAScript 5.1
 
 ## 參照
 
-- [instanceof](/zh-TW/docs/JavaScript/Reference/Operators/instanceof)
+- [instanceof](/zh-TW/docs/Web/JavaScript/Reference/Operators/instanceof)

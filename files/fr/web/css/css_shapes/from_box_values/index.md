@@ -63,4 +63,4 @@ Malgré cela, il est possible de créer des effets intéressants en n'utilisant 
 
 {{EmbedGHLiveSample("css-examples/shapes/box/bottom-margin-box.html", '100%', 800)}}
 
-Pour obtenir des formes plus complexes, il faudra utiliser les valeurs de [type `<basic-shape>` (les formes simples)](/fr/docs/Web/CSS/CSS_Shapes/Basic_Shapes) ou [définir une forme à partir d'une image](/fr/docs/Web/CSS/CSS_Shapes/Shapes_From_Images), tel que nous le verrons dans les autres guides de cette section.
+Pour obtenir des formes plus complexes, il faudra utiliser les valeurs de [type `<basic-shape>` (les formes simples)](/fr/docs/Web/CSS/CSS_shapes/Basic_shapes) ou [définir une forme à partir d'une image](/fr/docs/Web/CSS/CSS_shapes/Shapes_from_images), tel que nous le verrons dans les autres guides de cette section.

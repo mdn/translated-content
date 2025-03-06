@@ -73,7 +73,7 @@ string text line 2`);
 
 ### 字符串插值
 
-如果没有模板字面量，当你想组合表达式的输出与字符串时，可以使用[加法运算符 `+`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition) [连接它们](/zh-CN/docs/Learn/JavaScript/First_steps/Strings#连接字符串)：
+如果没有模板字面量，当你想组合表达式的输出与字符串时，可以使用[加法运算符 `+`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition) [连接它们](/zh-CN/docs/Learn_web_development/Core/Scripting/Strings#连接字符串)：
 
 ```js
 const a = 5;
@@ -154,7 +154,7 @@ console.log(output);
 // That Mike is a youngster.
 ```
 
-标签不必是普通的标识符，你可以使用任何[优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#汇总表)大于 16 的表达式，包括[属性访问](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)、函数调用、[new 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，甚至其他带标签的模板字面量。
+标签不必是普通的标识符，你可以使用任何[优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence#%e6%b1%87%e6%80%bb%e8%a1%a8)大于 16 的表达式，包括[属性访问](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)、函数调用、[new 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，甚至其他带标签的模板字面量。
 
 ```js
 console.log`Hello`; // [ 'Hello' ]

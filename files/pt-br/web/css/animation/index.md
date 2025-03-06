@@ -100,7 +100,7 @@ Considere fornecer um mecanismo para pausar ou desabilitar a animação, bem com
 ## Exemplos
 
 > [!NOTE]
-> A animação das propriedades do [CSS Box Model](/pt-BR/docs/Web/CSS/CSS_Box_Model) não é recomendada. A animação de qualquer propriedade de box model é inerentemente para a CPU; considere animar a propriedade [transform](/pt-BR/docs/Web/CSS/transform).
+> A animação das propriedades do [CSS Box Model](/pt-BR/docs/Web/CSS/CSS_box_model) não é recomendada. A animação de qualquer propriedade de box model é inerentemente para a CPU; considere animar a propriedade [transform](/pt-BR/docs/Web/CSS/transform).
 
 ### Nascer do Sol
 
@@ -286,7 +286,7 @@ embora uma animação de ascensão seja definida. A propriedade de transformaç�
 
 {{EmbedLiveSample('Cascading Multiple Animations')}}
 
-Veja [Usando animações CSS](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations#examples) para exemplos adicionais.
+Veja [Usando animações CSS](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations#examples) para exemplos adicionais.
 
 ## Especificações
 
@@ -298,5 +298,5 @@ Veja [Usando animações CSS](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_anima
 
 ## Veja também
 
-- [Usando animações CSS](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Usando animações CSS](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - API JavaScript {{domxref("AnimationEvent")}}

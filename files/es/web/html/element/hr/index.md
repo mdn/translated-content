@@ -11,9 +11,9 @@ slug: Web/HTML/Element/hr
 
   - : **Sus etiquetas son**: `<hr/>` (solo tiene una).
 
-    **Crea una caja**: [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **Crea una caja**: [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
-    **Está definido como**: [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **Está definido como**: [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
     **Puede contener**: Nada, es un "elemento vacío" del un Glosario.
 

@@ -10,7 +10,7 @@ L'évènement `focusout` est déclenché lorsqu'un élément du DOM est sur le p
 ## Informations générales
 
 - Spécification
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout)
 - Interface
   - : {{domxref("FocusEvent")}}
 - Propagation

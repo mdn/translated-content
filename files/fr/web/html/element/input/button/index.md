@@ -7,7 +7,44 @@ slug: Web/HTML/Element/input/button
 
 Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comme des boutons poussoirs qui peuvent être programmés afin de contrôler des fonctionnalités de la page via un gestionnaire d'évènement (la plupart du temps pour l'évènement [`click`](/fr/docs/Web/API/Element/click_event)).
 
-{{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<input class="styled" type="button" value="Add to favorites" />
+```
+
+```css interactive-example
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgb(220 0 0 / 100%);
+  background-image: linear-gradient(
+    to top left,
+    rgb(0 0 0 / 20%),
+    rgb(0 0 0 / 20%) 30%,
+    rgb(0 0 0 / 0%)
+  );
+  box-shadow:
+    inset 2px 2px 3px rgb(255 255 255 / 60%),
+    inset -2px -2px 3px rgb(0 0 0 / 60%);
+}
+
+.styled:hover {
+  background-color: rgb(255 0 0 / 100%);
+}
+
+.styled:active {
+  box-shadow:
+    inset -2px -2px 3px rgb(255 255 255 / 60%),
+    inset 2px 2px 3px rgb(0 0 0 / 60%);
+}
+```
 
 > [!NOTE]
 > Bien que les éléments `<input>` de type `"button"` représentent toujours des éléments HTML valides, l'élément {{HTMLElement("button")}}, plus récent, est la meilleure méthode pour créer des boutons hors d'un formulaire. Il est aussi possible d'insérer des éléments HTML dans l'étiquette du bouton, ce qui permet notamment d'avoir des images.
@@ -72,9 +109,9 @@ Dans ce script, on récupère une référence à l'objet {{domxref("HTMLInputEle
 
 ### Ajouter des raccourcis clavier
 
-Les raccourcis clavier permettent à un utilisateur de déclencher une action grâce à une touche ou grâce à une combinaison de touches du clavier. Pour ajouter un raccourci clavier déclenchant le bouton, on pourra ajouter l'attribut universel [`accesskey`](/fr/docs/Web/HTML/Attributs_universels/accesskey) (qu'on peut d'ailleurs utiliser pour les autres éléments {{HTMLElement("input")}}).
+Les raccourcis clavier permettent à un utilisateur de déclencher une action grâce à une touche ou grâce à une combinaison de touches du clavier. Pour ajouter un raccourci clavier déclenchant le bouton, on pourra ajouter l'attribut universel [`accesskey`](/fr/docs/Web/HTML/Global_attributes/accesskey) (qu'on peut d'ailleurs utiliser pour les autres éléments {{HTMLElement("input")}}).
 
-Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit, il faudra appuyer sur la touche <kbd>s</kbd> avec une ou plusieurs touches supplémentaires qui dépendent du navigateur et du système d'exploitation, cf. [`accesskey`](/fr/docs/Web/HTML/Attributs_universels/accesskey) pour la liste de ces touches).
+Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit, il faudra appuyer sur la touche <kbd>s</kbd> avec une ou plusieurs touches supplémentaires qui dépendent du navigateur et du système d'exploitation, cf. [`accesskey`](/fr/docs/Web/HTML/Global_attributes/accesskey) pour la liste de ces touches).
 
 ```html
 <form>

@@ -47,7 +47,7 @@ CSS **视觉格式化模型**（visual formatting model）是用来处理和在�
 
 当元素的 {{ cssxref("display") }} 为 `block`、`list-item` 或 `table` 时，该元素将成为块级元素。一个块级元素会被格式化成一个块（例如文章的一个段落），默认按照垂直方向依次排列。
 
-每个块级盒子都会参与[块格式化上下文（block formatting context）](/zh-CN/docs/CSS/block_formatting_context)的创建，而每个块级元素都会至少生成一个块级盒子，即主块级盒子（_principal block-level_ *box）。有*一些元素，比如列表项会生成额外的盒子来放置项目符号，而那些会生成列表项的元素可能会生成更多的盒子。不过，多数元素只生成一个主块级盒子。
+每个块级盒子都会参与[块格式化上下文（block formatting context）](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)的创建，而每个块级元素都会至少生成一个块级盒子，即主块级盒子（_principal block-level_ *box）。有*一些元素，比如列表项会生成额外的盒子来放置项目符号，而那些会生成列表项的元素可能会生成更多的盒子。不过，多数元素只生成一个主块级盒子。
 
 主块级盒子包含由后代元素生成的盒子以及内容，同时它也会参与[定位方案](/zh-CN/docs/CSS/Positioning_scheme)。
 
@@ -115,8 +115,8 @@ Run-in 盒子通过 `display:run-in` 来定义，它可以是块盒子，也可�
 
 除了行内格式化上下文和块格式化上下文之外，CSS 还定义了几种内容模型，这些模型同样可以应用于元素。这些模型一般用来描述布局，它们可能会定义一些额外的盒子类型：
 
-- [表格内容模型](/zh-CN/docs/CSS/table-layout)可能会创建一个表格包装器盒子和一个表格盒子，以及多个其他盒子如表格标题盒子等
-- [多列内容模型](/zh-CN/docs/CSS/Using_CSS_multi-column_layouts)可能会在容器盒子和内容之间创建多个列盒子
+- [表格内容模型](/zh-CN/docs/Web/CSS/table-layout)可能会创建一个表格包装器盒子和一个表格盒子，以及多个其他盒子如表格标题盒子等
+- [多列内容模型](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)可能会在容器盒子和内容之间创建多个列盒子
 - 实验性的网格内容模型或 flex-box 内容模型同样会创建一些其他种类的盒子
 
 #### 定位规则
@@ -161,7 +161,7 @@ Run-in 盒子通过 `display:run-in` 来定义，它可以是块盒子，也可�
 
 ### 绝对定位
 
-在绝对定位中，盒子会完全从当前流中移除，并且不会再与其有任何联系（译注：此处仅指定位和位置计算，而绝对定位的元素在文档树中仍然与其他元素有父子或兄弟等关系），其位置会使用 {{ cssxref("top") }}、{{ cssxref("bottom") }}、{{ cssxref("left") }} 和 {{ cssxref("right") }} 相对其[包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)进行计算。
+在绝对定位中，盒子会完全从当前流中移除，并且不会再与其有任何联系（译注：此处仅指定位和位置计算，而绝对定位的元素在文档树中仍然与其他元素有父子或兄弟等关系），其位置会使用 {{ cssxref("top") }}、{{ cssxref("bottom") }}、{{ cssxref("left") }} 和 {{ cssxref("right") }} 相对其[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)进行计算。
 
 如果元素的 {{ cssxref("position") }} 为 `absolute` 或 `fixed`，该元素为绝对定位。
 
@@ -171,24 +171,24 @@ Run-in 盒子通过 `display:run-in` 来定义，它可以是块盒子，也可�
 
 - CSS 重要概念：
 
-  - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
-  - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
-  - [注释](/zh-CN/docs/Web/CSS/Comments)
-  - [优先级](/zh-CN/docs/Web/CSS/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/inheritance)
+  - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
+  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
+  - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
+  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
+  - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
   - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
-    - [初始值](/zh-CN/docs/Web/CSS/initial_value)
-    - [计算值](/zh-CN/docs/Web/CSS/computed_value)
+    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)
+    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)
     - [解析值](/zh-CN/docs/Web/CSS/resolved_value)
-    - [指定值](/zh-CN/docs/Web/CSS/specified_value)
-    - [应用值](/zh-CN/docs/Web/CSS/used_value)
-    - [实际值](/zh-CN/docs/Web/CSS/actual_value)
+    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/specified_value)
+    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
+    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
 
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
-  - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)

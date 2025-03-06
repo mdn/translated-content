@@ -346,7 +346,7 @@ console.log(it.next().value); // 2
 
 ### 클래스로 반복자 정의하기
 
-상태 캡슐화는 [프라이빗 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields)으로도 수행할 수 있습니다.
+상태 캡슐화는 [프라이빗 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_properties)으로도 수행할 수 있습니다.
 
 ```js
 class SimpleClass {
@@ -392,7 +392,7 @@ const someString = "hi";
 console.log(typeof someString[Symbol.iterator]); // "function"
 ```
 
-`String`의 [기본 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)는 다음과 같이 문자열의 코드 포인트를 하나씩 반환합니다.
+`String`의 [기본 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)는 다음과 같이 문자열의 코드 포인트를 하나씩 반환합니다.
 
 ```js
 const iterator = someString[Symbol.iterator]();

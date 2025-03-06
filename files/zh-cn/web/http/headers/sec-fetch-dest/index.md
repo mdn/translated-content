@@ -80,7 +80,7 @@ Sec-Fetch-Dest: xslt
 - `image`
   - : 目标是图片。这可能源自 HTML {{HTMLElement("image")}}、SVG {{SVGElement("image")}}、CSS {{cssxref("background-image")}}、CSS {{cssxref("cursor")}}、CSS {{cssxref("list-style-image")}} 等等。
 - `manifest`
-  - : 目标是 mainfest。这可能源自 HTML [\<link rel=manifest>](/zh-CN/docs/Web/HTML/Link_types/manifest)。
+  - : 目标是 mainfest。这可能源自 HTML [\<link rel=manifest>](/zh-CN/docs/Web/HTML/Attributes/rel/manifest)。
 - `object`
   - : 目标是对象，这可能源自 {{HTMLElement("object")}} 标签。
 - `paintworklet`

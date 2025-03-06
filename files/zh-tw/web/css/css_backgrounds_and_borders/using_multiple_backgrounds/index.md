@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 
 {{CSSRef}}
 
-藉由 [CSS3](/zh-TW/CSS/CSS3) 我們可以對元素使用 **多重背景**。每個設定的背景被一個個分層，第一個背景在最上面，最後一個背景是在最下面一層。 記得只有最後一個背景可以設定 background color。
+藉由 [CSS3](/zh-TW/docs/CSS/CSS3) 我們可以對元素使用 **多重背景**。每個設定的背景被一個個分層，第一個背景在最上面，最後一個背景是在最下面一層。 記得只有最後一個背景可以設定 background color。
 
 簡易的表達方式:
 
@@ -29,11 +29,12 @@ slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 
 ## 範例
 
-下面的範例中，重疊三個背景：Firefox logo、[線性漸層](/zh-TW/CSS/linear-gradient)、一張泡泡的圖片
+下面的範例中，重疊三個背景：Firefox logo、[線性漸層](/zh-TW/docs/Web/CSS/gradient/linear-gradient)、一張泡泡的圖片
 
 ```css
 .multi_bg_example {
-  background-image: url(firefox.png), url(bubbles.png),
+  background-image:
+    url(firefox.png), url(bubbles.png),
     linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
 
   background-repeat: no-repeat, no-repeat, no-repeat;
@@ -71,4 +72,4 @@ slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 
 ## 參見
 
-- [使用 CSS 漸層](/zh-TW/docs/CSS/Using_CSS_gradients)
+- [使用 CSS 漸層](/zh-TW/docs/Web/CSS/CSS_images/Using_CSS_gradients)

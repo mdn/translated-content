@@ -178,7 +178,7 @@ fetch('https://example.com/', {
 
 ## 示例
 
-在 [Fetch 请求示例](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request)（查看 [Fetch 请求在线示例](http://mdn.github.io/fetch-examples/fetch-request/)）中，我们使用对应的构造函数创建了一个新的 {{domxref("Request")}} 对象，然后调用 `fetch()` 获取资源。因为我们是在请求一个图片，为了解析正常，我们对响应执行 {{domxref("Body.blob")}} 来设置相应的 MIME 类型。然后创建一个 Object URL，并在 {{htmlelement("img")}} 元素中把它显示出来。
+在 [Fetch 请求示例](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request)（查看 [Fetch 请求在线示例](https://mdn.github.io/fetch-examples/fetch-request/)）中，我们使用对应的构造函数创建了一个新的 {{domxref("Request")}} 对象，然后调用 `fetch()` 获取资源。因为我们是在请求一个图片，为了解析正常，我们对响应执行 {{domxref("Body.blob")}} 来设置相应的 MIME 类型。然后创建一个 Object URL，并在 {{htmlelement("img")}} 元素中把它显示出来。
 
 ```js
 const myImage = document.querySelector("img");
@@ -199,7 +199,7 @@ window
   });
 ```
 
-在[带有初始化的 Fetch 请求示例](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-with-init-then-request)（查看[带有初始化的 Fetch 请求在线示例](http://mdn.github.io/fetch-examples/fetch-with-init-then-request/)）中，我们做同样的操作，除了在调用 `fetch()` 时传入了 _options_ 对象。在本例中，我们可以设置 {{HTTPHeader("Cache-Control")}} 值来指示我们可以接受什么类型的缓存响应：
+在[带有初始化的 Fetch 请求示例](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-with-init-then-request)（查看[带有初始化的 Fetch 请求在线示例](https://mdn.github.io/fetch-examples/fetch-with-init-then-request/)）中，我们做同样的操作，除了在调用 `fetch()` 时传入了 _options_ 对象。在本例中，我们可以设置 {{HTTPHeader("Cache-Control")}} 值来指示我们可以接受什么类型的缓存响应：
 
 ```js
 const myImage = document.querySelector("img");

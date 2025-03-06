@@ -33,7 +33,7 @@ l10n:
 
 ### SVG
 
-- [`lh` 和 `rlh`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#line_height_units) 行高单位首先在 CSS 中得到支持（[在 Firefox 120 中](/zh-CN/docs/Mozilla/Firefox/Releases/120#css)），现在也在 SVG 中得到了支持。它们可以在 CSS 属性值（`stroke-width: 0.5lh`）和 SVG 属性值（`stroke-width="0.5lh"`）中使用。（[Firefox bug 1892089](https://bugzil.la/1892089)）。
+- [`lh` 和 `rlh`](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#line_height_units) 行高单位首先在 CSS 中得到支持（[在 Firefox 120 中](/zh-CN/docs/Mozilla/Firefox/Releases/120#css)），现在也在 SVG 中得到了支持。它们可以在 CSS 属性值（`stroke-width: 0.5lh`）和 SVG 属性值（`stroke-width="0.5lh"`）中使用。（[Firefox bug 1892089](https://bugzil.la/1892089)）。
 
 ### 安全
 

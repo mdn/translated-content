@@ -8,7 +8,7 @@ slug: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 网页音频接口最有趣的特性之一它就是可以获取频率、波形和其他来自声源的数据，这些数据可以被用作音频可视化。这篇文章将解释如何做到可视化，并提供了一些基础使用案例。
 
 > [!NOTE]
-> 你可以在[Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)演示里找到本文出现的所有代码片段。
+> 你可以在[Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/)演示里找到本文出现的所有代码片段。
 
 ## 基本概念
 
@@ -60,7 +60,7 @@ analyser.getByteTimeDomainData(dataArray);
 
 ## 创建一个波形/示波器
 
-要创建一个示波器视觉效果（感谢 [Soledad Penadés](http://soledadpenades.com/) 在 [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167) 中提供的源码），我们首先用下面代码框中的代码为标准设置一个 buffer：
+要创建一个示波器视觉效果（感谢 [Soledad Penadés](https://soledadpenades.com/) 在 [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167) 中提供的源码），我们首先用下面代码框中的代码为标准设置一个 buffer：
 
 ```js
 analyser.fftSize = 2048;
@@ -214,4 +214,4 @@ draw();
 ![a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal](bar-graph.png)
 
 > [!NOTE]
-> 本文中的案例展现了 {{ domxref("AnalyserNode.getByteFrequencyData()") }} 和 {{ domxref("AnalyserNode.getByteTimeDomainData()") }} 的用法。如果想要查看 {{ domxref("AnalyserNode.getFloatFrequencyData()") }} 和 {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} 的用法，请参考我们的 [Voice-change-O-matic-float-data](http://mdn.github.io/voice-change-o-matic-float-data/) 演示（也能看到 [源代码](https://github.com/mdn/voice-change-o-matic-float-data) ）——它和本文中出现的 [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/) 功能完全相同，唯一区别就是它使用的是浮点数作数据，而不是本文中的无符号整型数。
+> 本文中的案例展现了 {{ domxref("AnalyserNode.getByteFrequencyData()") }} 和 {{ domxref("AnalyserNode.getByteTimeDomainData()") }} 的用法。如果想要查看 {{ domxref("AnalyserNode.getFloatFrequencyData()") }} 和 {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} 的用法，请参考我们的 [Voice-change-O-matic-float-data](https://mdn.github.io/voice-change-o-matic-float-data/) 演示（也能看到 [源代码](https://github.com/mdn/voice-change-o-matic-float-data) ）——它和本文中出现的 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 功能完全相同，唯一区别就是它使用的是浮点数作数据，而不是本文中的无符号整型数。

@@ -7,7 +7,28 @@ slug: Web/HTML/Element/label
 
 L'élément HTML **`<label>`** représente une légende pour un objet d'une interface utilisateur. Il peut être associé à un contrôle en utilisant l'attribut `for` ou en plaçant l'élément du contrôle à l'intérieur de l'élément `<label>`. Un tel contrôle est appelé _contrôle étiqueté_ par l'élément `<label>`.
 
-{{EmbedInteractiveExample("pages/tabbed/label.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;label&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<div class="preference">
+  <label for="cheese">Do you like cheese?</label>
+  <input type="checkbox" name="cheese" id="cheese" />
+</div>
+
+<div class="preference">
+  <label for="peas">Do you like peas?</label>
+  <input type="checkbox" name="peas" id="peas" />
+</div>
+```
+
+```css interactive-example
+.preference {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0.5rem;
+}
+```
 
 Rattacher un libellé à un élément de saisie ({{HTMLElement("input")}}) offre différents avantages :
 
@@ -27,7 +48,7 @@ On peut également créer un lien implicite en imbriquant l'élément `<input>` 
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `for`
 
@@ -109,7 +130,7 @@ Il ne faut pas placer d'éléments interactifs (tels que les ancres ({{HTMLEleme
 
 ### Titres
 
-Placer des [éléments de titres](/fr/docs/Web/HTML/Element/Heading_Elements) à l'intérieur d'un élément `label` causera des interférences avec de nombreux outils d'assistance car les titres sont généralement utilisés comme [une aide à la navigation](/fr/docs/Web/HTML/Element/Heading_Elements#Navigation). Si le texte du libellé doit être ajusté visuellement, on utilisera une mise en forme via CSS.
+Placer des [éléments de titres](/fr/docs/Web/HTML/Element/Heading_Elements) à l'intérieur d'un élément `label` causera des interférences avec de nombreux outils d'assistance car les titres sont généralement utilisés comme [une aide à la navigation](/fr/docs/Web/HTML/Element/Heading_Elements#navigation). Si le texte du libellé doit être ajusté visuellement, on utilisera une mise en forme via CSS.
 
 S'il faut associer un titre à un formulaire ou à une section d'un formulaire, on utilisera l'élément {{HTMLElement("legend")}} au sein d'un élément {{HTMLElement("fieldset")}}.
 

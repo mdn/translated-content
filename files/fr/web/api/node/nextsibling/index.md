@@ -20,9 +20,9 @@ vides dans le balisage source. Par conséquent, un nœud obtenu par exemple via 
 [`Node.previousSibling`](/fr/docs/Web/API/Node/previousSibling "{{APIRef("DOM")}}") peut faire référence à un nœud texte contenant des espaces plutôt qu'au véritable élément
 que l'auteur comptait obtenir.
 
-Consultez [Gestion des espaces dans le DOM](/fr/docs/Gestion_des_espaces_dans_le_DOM)
+Consultez [Gestion des espaces dans le DOM](/fr/docs/Web/API/Document_Object_Model/Whitespace)
 et [_Why are some Text nodes empty?_
-dans la FAQ DOM 3 du W3C](http://www.w3.org/DOM/faq.html#emptytext) pour plus d'informations.
+dans la FAQ DOM 3 du W3C](https://www.w3.org/DOM/faq.html#emptytext) pour plus d'informations.
 
 {{domxref("Element.nextElementSibling")}} peut être utilisé pour obtenir l'élément suivant en ignorant les noeuds d'espace.
 
@@ -64,8 +64,8 @@ L'inclusion possible de nœuds textes dans le DOM doit être prise en compte pou
 
 ## Spécification
 
-- [DOM Level 1 Core: nextSibling](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling) — [traduction](http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling) (non normative)
-- [DOM Level 2 Core: nextSibling](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-6AC54C2F) (non normative)
+- [DOM Level 1 Core: nextSibling](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling) — [traduction](http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling) (non normative)
+- [DOM Level 2 Core: nextSibling](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-6AC54C2F) (non normative)
 
 ## Compatibilité des navigateurs
 

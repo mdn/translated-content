@@ -74,6 +74,6 @@ Cette technique permet de simplement gérer l'envoi de plusieurs fichiers avec l
 ## Voir aussi
 
 - {{domxref("XMLHTTPRequest")}}
-- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest)
-- [Utiliser les objets FormData](/fr/docs/Web/API/FormData/Utilisation_objets_FormData)
+- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Utiliser les objets FormData](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

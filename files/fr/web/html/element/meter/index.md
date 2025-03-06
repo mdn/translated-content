@@ -7,11 +7,26 @@ slug: Web/HTML/Element/meter
 
 L'élément HTML **`<meter>`** représente une valeur scalaire dans un intervalle donné ou une valeur fractionnaire.
 
-{{EmbedInteractiveExample("pages/tabbed/meter.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;meter&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="fuel">Fuel level:</label>
+
+<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
+  at 50/100
+</meter>
+```
+
+```css interactive-example
+label {
+  padding-right: 10px;
+  font-size: 1rem;
+}
+```
 
 ## Attributs
 
-Comme pour les autres éléments HTML, cet élément inclut également [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Comme pour les autres éléments HTML, cet élément inclut également [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `form`
   - : Cet attribut contient l'attribut **`id`** de l'élément {{HTMLElement("form")}} auquel celui-ci est rattaché. Par défaut, il est à l'élément {{HTMLElement("form")}} qui est son plus proche ancêtre.

@@ -5,7 +5,7 @@ slug: Web/CSS/animation-duration
 
 {{CSSRef}}
 
-**`animation-duration`** [CSS](/zh-CN/docs/CSS) 属性设置动画完成一个动画周期所需的时间。
+**`animation-duration`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画完成一个动画周期所需的时间。
 
 {{EmbedInteractiveExample("pages/css/animation-duration.html")}}
 
@@ -109,6 +109,6 @@ animation-duration: unset;
 
 ## 参见
 
-- [使用 CSS 动画](/zh-CN/docs/CSS/Tutorials/Using_CSS_animations)
+- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API
 - 其他相关的动画属性：{{cssxref("animation")}}、{{cssxref("animation-composition")}}、{{cssxref("animation-delay")}}、{{cssxref("animation-direction")}}、{{cssxref("animation-fill-mode")}}、{{cssxref("animation-iteration-count")}}、{{cssxref("animation-name")}}、{{cssxref("animation-play-state")}}、{{cssxref("animation-timeline")}}、{{cssxref("animation-timing-function")}}

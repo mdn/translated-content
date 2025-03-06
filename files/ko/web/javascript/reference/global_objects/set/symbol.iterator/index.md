@@ -16,7 +16,22 @@ l10n:
 
 이 속성의 초기 값은 {{jsxref("Set.prototype.values")}} 속성의 초기 값과 동일한 함수 객체입니다.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype[Symbol.iterator]()")}}
+
+```js interactive-example
+const set1 = new Set();
+
+set1.add(42);
+set1.add("forty two");
+
+const iterator1 = set1[Symbol.iterator]();
+
+console.log(iterator1.next().value);
+// Expected output: 42
+
+console.log(iterator1.next().value);
+// Expected output: "forty two"
+```
 
 ## 구문
 

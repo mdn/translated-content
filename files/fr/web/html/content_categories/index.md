@@ -33,18 +33,18 @@ Les éléments appartenant à la catégorie de contenu de flux contiennent gén�
 Quelques autres éléments appartiennent à cette catégorie mais seulement sous certaines conditions :
 
 - {{HTMLElement("area")}} s'il est un descendant de l'élément {{HTMLElement("map")}}
-- {{HTMLElement("link")}} si l'attribut [**itemprop**](/fr/docs/HTML/Global_attributes#itemprop) est présent
-- {{HTMLElement("meta")}} si l'attribut [**itemprop**](/fr/docs/HTML/Global_attributes#itemprop) est présent
+- {{HTMLElement("link")}} si l'attribut [**itemprop**](/fr/docs/Web/HTML/Global_attributes#itemprop) est présent
+- {{HTMLElement("meta")}} si l'attribut [**itemprop**](/fr/docs/Web/HTML/Global_attributes#itemprop) est présent
 - {{HTMLElement("style")}} si l'attribut [`scoped`](/fr/docs/Web/HTML/Element/style#scoped) {{deprecated_inline()}} est présent
 
 ### Contenu sectionnant
 
-Les éléments appartenant à cette catégorie sont ceux créant une nouvelle [section dans le plan du document](/fr/docs/HTML/Sections_and_Outlines_of_an_HTML5_document) qui définit la portée des éléments {{HTMLElement("header")}}, des éléments {{HTMLElement("footer")}} et du [contenu de titre](#contenu_de_titre).
+Les éléments appartenant à cette catégorie sont ceux créant une nouvelle [section dans le plan du document](/fr/docs/Web/HTML/Element/Heading_Elements) qui définit la portée des éléments {{HTMLElement("header")}}, des éléments {{HTMLElement("footer")}} et du [contenu de titre](#contenu_de_titre).
 
 Les éléments appartenant à cette catégorie sont les éléments {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} et {{HTMLElement("section")}}.
 
 > [!NOTE]
-> Il ne faut pas confondre ce modèle de contenu avec la catégorie de [racine de sectionnement](/fr/docs/HTML/Sections_and_Outlines_of_an_HTML5_document#Racines_de_sectionnement) qui isole un contenu par rapport à la structure (ou plan) principale.
+> Il ne faut pas confondre ce modèle de contenu avec la catégorie de [racine de sectionnement](/fr/docs/Web/HTML/Element/Heading_Elements#racines_de_sectionnement) qui isole un contenu par rapport à la structure (ou plan) principale.
 
 ### Contenu de titre
 
@@ -69,9 +69,9 @@ Quelques autres éléments appartiennent à cette catégorie mais seulement selo
 - {{HTMLElement("area")}} s'il est un descendant de l'élément {{HTMLElement("map")}}
 - {{HTMLElement("del")}} s'il contient seulement du contenu phrasé
 - {{HTMLElement("ins")}} s'il contient seulement du contenu phrasé
-- {{HTMLElement("link")}} si l'attribut [**itemprop**](/fr/docs/HTML/Global_attributes#itemprop) est présent
+- {{HTMLElement("link")}} si l'attribut [**itemprop**](/fr/docs/Web/HTML/Global_attributes#itemprop) est présent
 - {{HTMLElement("map")}} s'il contient seulement du contenu phrasé
-- {{HTMLElement("meta")}} si l'attribut [**itemprop**](/fr/docs/HTML/Global_attributes#itemprop) est présent
+- {{HTMLElement("meta")}} si l'attribut [**itemprop**](/fr/docs/Web/HTML/Global_attributes#itemprop) est présent
 
 ### Contenu intégré
 
@@ -114,7 +114,7 @@ Cette catégorie contient les éléments :
 Cette catégorie peut être subdivisée en plusieurs sous-catégories.
 
 - listed (éléments listés)
-  - : Les éléments étant listés sont les ensembles IDL [form.elements](/fr/docs/DOM/form.elements) et fieldset.elements. Ce sont : {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, et {{HTMLElement("textarea")}}.
+  - : Les éléments étant listés sont les ensembles IDL [form.elements](/fr/docs/Web/API/HTMLFormElement/elements) et fieldset.elements. Ce sont : {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, et {{HTMLElement("textarea")}}.
 - labelable (éléments étiquetables)
   - : Les éléments pouvant être associés avec des éléments {{HTMLElement("label")}}. Ce sont : {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}}.
 - submittable (éléments participants à l'envoi du formulaire)
@@ -153,4 +153,4 @@ Si ces éléments étaient retirés, ce fragment de code HTML serait toujours du
 
 ## Autres modèles de contenu
 
-[Racine de sectionnement.](/fr/docs/HTML/Sections_and_Outlines_of_an_HTML5_document#Racines_de_sectionnement)
+[Racine de sectionnement.](/fr/docs/Web/HTML/Element/Heading_Elements#racines_de_sectionnement)

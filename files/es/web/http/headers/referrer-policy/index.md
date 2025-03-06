@@ -95,7 +95,7 @@ Referrer-Policy: unsafe-url
 
   - Un elemento {{HTMLElement("meta")}} con un [nombre de `referrer`](/es/docs/Web/HTML/Element/meta#attr-name).
   - Un atributo `referrerpolicy` en un elemento {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}} o {{HTMLElement("link")}}.
-  - La [relación de enlace](/es/docs/Web/HTML/Link_types) `noreferrer` en un elemento a, area o link (`rel="noreferrer"`).
+  - La [relación de enlace](/es/docs/Web/HTML/Attributes/rel) `noreferrer` en un elemento a, area o link (`rel="noreferrer"`).
   - Al utilizar [Fetch](/es/docs/Web/API/Fetch_API): {{domxref("Request.referrerPolicy")}}
 
 - [Directiva de origen equivalente](/es/docs/Web/Security/Same-origin_policy)

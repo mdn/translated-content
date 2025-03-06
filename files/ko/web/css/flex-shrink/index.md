@@ -5,7 +5,7 @@ slug: Web/CSS/flex-shrink
 
 {{CSSRef}}
 
-**`flex-shrink`** [CSS](/ko/docs/CSS) property는 `flex-item` 요소의 `flex-shrink` 값을 설정하는 속성입니다. 만약 `flex-item` 요소의 크기가 `flex-container` 요소의 크기보다 클 때 flex-shrink 속성을 사용하는데, 설정된 숫자값에 따라 `flex-container` 요소 내부에서 `flex-item` 요소의 크기가 **축소**됩니다.
+**`flex-shrink`** [CSS](/ko/docs/Web/CSS) property는 `flex-item` 요소의 `flex-shrink` 값을 설정하는 속성입니다. 만약 `flex-item` 요소의 크기가 `flex-container` 요소의 크기보다 클 때 flex-shrink 속성을 사용하는데, 설정된 숫자값에 따라 `flex-container` 요소 내부에서 `flex-item` 요소의 크기가 **축소**됩니다.
 
 {{EmbedInteractiveExample("pages/css/flex-shrink.html")}}
 
@@ -88,5 +88,5 @@ The `flex-shrink` property is specified as a single [`<number>`](#number).
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/ko/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_

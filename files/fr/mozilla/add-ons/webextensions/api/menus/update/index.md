@@ -9,7 +9,7 @@ Met à jour un élément de menu précédemment créé.
 
 Pour la compatibilité avec d'autres navigateurs, Firefox rend cette méthode disponible via l'espace de noms `contextMenus` ainsi que l'espace de noms des `menus`.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -104,7 +104,7 @@ var updating = browser.menus.update(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera satisfaite sans argument si la mise à jour a réussi, ou rejetée avec un message d'erreur si la mise à jour a échoué.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera satisfaite sans argument si la mise à jour a réussi, ou rejetée avec un message d'erreur si la mise à jour a échoué.
 
 ## Exemples
 

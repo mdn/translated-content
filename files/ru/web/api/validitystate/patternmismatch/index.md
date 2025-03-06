@@ -69,6 +69,6 @@ input:invalid {
 
 ## Смотрите также
 
-- [Валидация ограничений](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Валидация ограничений](/ru/docs/Web/HTML/Constraint_validation)
 - [Формы: Валидация форм](/ru/docs/Learn/Forms/Form_validation)
-- [Регулярные выражения](/ru/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Регулярные выражения](/ru/docs/Web/JavaScript/Guide/Regular_expressions)

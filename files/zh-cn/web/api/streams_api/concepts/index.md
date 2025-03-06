@@ -16,7 +16,7 @@ slug: Web/API/Streams_API/Concepts
 - **Push source** 会在你访问了它们之后，不断地主动推送数据。你可以自行开始（start）、暂停（pause）或取消（cancel）对流的访问。例如视频流和 TCP/[Web socket](/zh-CN/docs/Web/API/WebSockets_API)。
 - **Pull source** 需要在你连接到它们后，显式地请求数据。例如通过 [Fetch](/zh-CN/docs/Web/API/Fetch_API) 或 [XHR](/zh-CN/docs/Web/API/XMLHttpRequest/XMLHttpRequest) 请求访问一个文件。
 
-数据被按序读入到许多小的片段，这些片段被称作**分块**（chunk）。**分块**可以是单个字节，也可以是某种更大的数据类型，例如特定大小的[类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)。单个流的**分块**可以有不同的大小和类型。
+数据被按序读入到许多小的片段，这些片段被称作**分块**（chunk）。**分块**可以是单个字节，也可以是某种更大的数据类型，例如特定大小的[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)。单个流的**分块**可以有不同的大小和类型。
 
 ![](readable_streams.png)
 

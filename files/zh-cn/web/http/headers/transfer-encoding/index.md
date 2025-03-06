@@ -49,7 +49,7 @@ Transfer-Encoding: gzip, chunked
 - `compress`
   - : 采用 [Lempel-Ziv-Welch](http://zh.wikipedia.org/wiki/LZW)（LZW）压缩算法。这个名称来自 UNIX 系统的 _compress_ 程序，该程序实现了前述算法。与已从大多数 UNIX 发行版中消失的 compress 程序一样，如今几乎没有浏览器使用这种内容编码，部分原因是专利问题（2003 年到期）。
 - `deflate`
-  - : 采用 [zlib](http://zh.wikipedia.org/wiki/Zlib) 结构（于 [RFC 1950](http://tools.ietf.org/html/rfc1950) 定义）和 [_deflate_](https://zh.wikipedia.org/wiki/Deflate) 压缩算法（于 [RFC 1951](http://tools.ietf.org/html/rfc1952) 定义）。
+  - : 采用 [zlib](http://zh.wikipedia.org/wiki/Zlib) 结构（于 [RFC 1950](https://tools.ietf.org/html/rfc1950) 定义）和 [_deflate_](https://zh.wikipedia.org/wiki/Deflate) 压缩算法（于 [RFC 1951](https://tools.ietf.org/html/rfc1952) 定义）。
 - `gzip`
   - : 表示采用 [Lempel-Ziv coding](https://zh.wikipedia.org/wiki/LZ77与LZ78#LZ77)（LZ77）压缩算法，以及 32 位 CRC 校验的编码方式。这个编码方式最初由 UNIX 平台上的 _gzip_ 程序采用。出于兼容性的考虑，HTTP/1.1 标准提议支持这种编码方式的服务器应该识别作为别名的 `x-gzip` 指令。
 

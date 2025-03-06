@@ -27,7 +27,7 @@ l10n:
 
 過去にプッシュ通知が悪用されることがあったため、ウェブブラウザーや開発者はこの問題を緩和するための対策を実装し始めています。通知を表示することの許可を求めるのは、ユーザーの操作 (ボタンをクリックするなど) の反応として行うべきです。ユーザーが同意していない通知でユーザーに迷惑をかけるべきではないので、これはベストプラクティスであるだけでなく、今後ブラウザーはユーザーの操作によって起動されたものではない通知の許可の要求を明示的に拒否するようになるでしょう。例えば、 Firefox はバージョン72からすでにこれを行っており、 Safari もしばらく前からこれを行っています。
 
-加えて、 Chrome と Firefox では、サイトが安全なコンテキスト (すなわち HTTPS) ではない限り通知を要求することができず、また別オリジンの {{htmlelement("iframe")}} から要求された通知を許可することができなくなりました。
+加えて、 Chrome と Firefox では、サイトが保護されたコンテキスト (すなわち HTTPS) ではない限り通知を要求することができず、また別オリジンの {{htmlelement("iframe")}} から要求された通知を許可することができなくなりました。
 
 ### 現在の許可状態を確認する
 
@@ -225,7 +225,7 @@ window.addEventListener("load", () => {
 
 {{ EmbedLiveSample('Tag_example', '100%', 150) }}
 
-上記の例をテストするには、ウェブサイト `https://live.mdnplay.dev` の[通知設定](https://support.mozilla.org/en-US/kb/firefox-page-info-window#w_permissions)を変更してください。。
+上記の例をテストするには、ウェブサイト `https://live.mdnplay.dev` の[通知設定](https://support.mozilla.org/en-US/kb/firefox-page-info-window#w_permissions)を変更してください。
 
 ## 関連情報
 

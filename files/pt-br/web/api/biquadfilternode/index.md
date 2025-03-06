@@ -85,4 +85,4 @@ _Herda os métodos de seu pai,_ _{{domxref("AudioNode")}}_.
 
 ## Veja também
 
-- [Utilizando a Web Audio API](/pt-BR/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Utilizando a Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -14,7 +14,24 @@ l10n:
 > [!NOTE]
 > 在类的上下文中，MDN Web 文档内容交替使用属性和[字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)这两个术语。
 
-{{EmbedInteractiveExample("pages/js/classes-static.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Classes Static", "taller")}}
+
+```js interactive-example
+class ClassWithStaticMethod {
+  static staticProperty = "someValue";
+  static staticMethod() {
+    return "static method has been called.";
+  }
+  static {
+    console.log("Class static initialization block called");
+  }
+}
+
+console.log(ClassWithStaticMethod.staticProperty);
+// Expected output: "someValue"
+console.log(ClassWithStaticMethod.staticMethod());
+// Expected output: "static method has been called."
+```
 
 ## 语法
 
@@ -125,7 +142,7 @@ console.log(Triple.calculate(6)); // 18
 
 let tp = new Triple();
 
-console.log(SquaredTriple.tripple(3)); // 81（不会受父类实例化的影响）
+console.log(SquaredTriple.calculate(3)); // 81（不会受父类实例化的影响）
 console.log(SquaredTriple.description); // '我可以让你提供的任何数变为其三倍的平方'
 console.log(SquaredTriple.longDescription); // undefined
 console.log(SquaredTriple.customName); // '三倍器'

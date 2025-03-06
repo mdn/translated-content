@@ -60,7 +60,7 @@ Las diferentes páginas que necesitas escribir desde cero o actualizar varían s
 
 ### Menús laterales
 
-Es posible que también sea necesario definir o actualizar el menú lateral de las páginas que escribe. Para saber si esto es necesario y cómo hacerlo, [consulte nuestra guía del menú lateral](/es/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars).
+Es posible que también sea necesario definir o actualizar el menú lateral de las páginas que escribe. Para saber si esto es necesario y cómo hacerlo, [consulte nuestra guía del menú lateral](/es/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars).
 
 ### Ejemplos de código
 

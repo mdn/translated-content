@@ -35,11 +35,11 @@ svg {
 
 ### Animation Attributes
 
-- [Animation timing attributes](/docs/Web/SVG/Attribute#Animation_Timing_Attributes)
+- [Animation timing attributes](/pt-BR/docs/Web/SVG/Attribute#animation_timing_attributes)
   - : {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
-- [Animation value attributes](/docs/Web/SVG/Attribute#Animation_Value_Attributes)
+- [Animation value attributes](/pt-BR/docs/Web/SVG/Attribute#animation_value_attributes)
   - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}
-- [Other Animation attributes](/docs/Web/SVG/Attribute#Animation_Attributes)
+- [Other Animation attributes](/pt-BR/docs/Web/SVG/Attribute#animation_attributes)
   - : Most notably: {{SVGAttr("attributeName")}}, {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
 - [Animation event attributes](/docs/Web/SVG/Attribute/Events#Animation_Event_Attributes)
   - : Most notably: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}

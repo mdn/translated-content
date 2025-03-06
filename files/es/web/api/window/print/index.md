@@ -29,6 +29,6 @@ Empezando con Chrome 46.0 este método esta bloqueado dentro de un {{htmlelement
 
 ## Ver también
 
-- [Impresión](/en/Printing)
+- [Impresión](/en-US/Printing)
 - {{ domxref("window.onbeforeprint") }}
 - {{ domxref("window.onafterprint") }}

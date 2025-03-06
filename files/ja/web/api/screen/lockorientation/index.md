@@ -102,4 +102,4 @@ if (
 - {{DOMxRef("Screen.orientation")}}
 - {{DOMxRef("Screen.unlockOrientation()")}}
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} イベント
-- [画面の向きの管理](/ja/docs/Managing_screen_orientation)
+- [画面の向きの管理](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

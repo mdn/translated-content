@@ -15,7 +15,7 @@ Web Notifications API 可將通知傳送至頁面以外的系統層級並顯示�
 
 在 Apps 傳送通知之前，使用者必須先許可 Apps 的動作。只要 APIs 嘗試予網頁之外的東西互動，均必須先獲得使用者的授權。如此可避免濫發通知而影響使用經驗。
 
-透過 [`Notification.permission`](/zh-TW/docs/Web/API/Notification.permission) 唯讀屬性，要傳送通知的 Apps 將檢查目前的授權狀態。此屬性共有 3 組參數：
+透過 [`Notification.permission`](/zh-TW/docs/Web/API/Notification/permission_static) 唯讀屬性，要傳送通知的 Apps 將檢查目前的授權狀態。此屬性共有 3 組參數：
 
 - `default`：使用者尚未給予任何權限 (因此不會顯示任何通知)
 - `granted`：使用者允許接收到 Apps 的通知
@@ -24,7 +24,7 @@ Web Notifications API 可將通知傳送至頁面以外的系統層級並顯示�
 > [!NOTE]
 > Chrome 與 Safari 尚未建構 `permission` 屬性。
 
-若使用者尚未給予權限，則 Apps 必須透過 [`Notification.requestPermission()`](/zh-TW/docs/Web/API/Notification.requestPermission) 函式讓使用者選擇，接著由此函式接收 1 組回呼 (Callback) 函式作為參數；而該回呼函式則提供使用者是否授權的資訊。
+若使用者尚未給予權限，則 Apps 必須透過 [`Notification.requestPermission()`](/zh-TW/docs/Web/API/Notification/requestPermission_static) 函式讓使用者選擇，接著由此函式接收 1 組回呼 (Callback) 函式作為參數；而該回呼函式則提供使用者是否授權的資訊。
 
 以下為啟動 Apps 時要求權限的常用範例：
 
@@ -53,19 +53,19 @@ permissions: {
 
 ## 建立通知
 
-透過 [`Notification`](/zh-TW/docs/Web/API/Notification) 建構子 (Constructor) 即可建立通知。此建構子包含 1 組標題，可於通知內顯示；另有如 [`icon`](/zh-TW/docs/Web/API/Notification.icon) 或文字 [`body`](/zh-TW/docs/Web/API/Notification.body) 等數個選項，可強化通知的內容。
+透過 [`Notification`](/zh-TW/docs/Web/API/Notification) 建構子 (Constructor) 即可建立通知。此建構子包含 1 組標題，可於通知內顯示；另有如 [`icon`](/zh-TW/docs/Web/API/Notification/icon) 或文字 [`body`](/zh-TW/docs/Web/API/Notification/body) 等數個選項，可強化通知的內容。
 
 在建立實體 (Instantiated) 之後，就會儘快顯示通知。若要追蹤通知的目前狀態，必須在 [`Notification`](/zh-TW/docs/Web/API/Notification) 的實體階層觸發 4 個事件：
 
 - [show](/zh-TW/docs/Web/Reference/Events/show)：對使用者顯示通知之後，隨即觸發
-- [click](/zh-TW/docs/Web/Reference/Events/click)：使用者點擊通知之後，隨即觸發
+- [click](/zh-TW/docs/Web/API/Element/click_event)：使用者點擊通知之後，隨即觸發
 - [close](/zh-TW/docs/Web/Reference/Events/close)：關閉通知之後，隨即觸發
-- [error](/zh-TW/docs/Web/Reference/Events/error)：通知發生任何錯誤 (大多數是因為某種情況而未顯示通知)，隨即觸發
+- [error](/zh-TW/docs/Web/API/HTMLElement/error_event)：通知發生任何錯誤 (大多數是因為某種情況而未顯示通知)，隨即觸發
 
-而透過 [`onshow`](/zh-TW/docs/Web/API/Notification.onshow)、[`onclick`](/zh-TW/docs/Web/API/Notification.onclick)、[`onclose`](/zh-TW/docs/Web/API/Notification.onclose)，或 [`onerror`](/zh-TW/docs/Web/API/Notification.onerror) 等事件處理器 (Event handler)，即可追蹤這些事件。由於 [`Notification`](/zh-TW/docs/Web/API/Notification) 是繼承 [`EventTarget`](/zh-TW/docs/Web/API/EventTarget) 而來，因此亦可使用 [`addEventListener()`](/zh-TW/docs/Web/API/EventTarget.addEventListener) 函式。
+而透過 [`onshow`](/zh-TW/docs/Web/API/Notification/show_event)、[`onclick`](/zh-TW/docs/Web/API/Notification/click_event)、[`onclose`](/zh-TW/docs/Web/API/Notification/close_event)，或 [`onerror`](/zh-TW/docs/Web/API/Notification/error_event) 等事件處理器 (Event handler)，即可追蹤這些事件。由於 [`Notification`](/zh-TW/docs/Web/API/Notification) 是繼承 [`EventTarget`](/zh-TW/docs/Web/API/EventTarget) 而來，因此亦可使用 [`addEventListener()`](/zh-TW/docs/Web/API/EventTarget/addEventListener) 函式。
 
 > [!NOTE]
-> Firefox 與 Safari 並未遵守 close 事件的規格。此規格雖然規定「僅限使用者能關閉通知」，但 Firefox 與 Safari 卻可於數分鐘後自動關閉通知。因此不一定是由使用者關閉通知。此規格並明確規定「應透過 [`Notification.close()`](/zh-TW/docs/Web/API/Notification.close) 函式，於應用程式層級完成自動關閉通知」。範例程式碼如下：
+> Firefox 與 Safari 並未遵守 close 事件的規格。此規格雖然規定「僅限使用者能關閉通知」，但 Firefox 與 Safari 卻可於數分鐘後自動關閉通知。因此不一定是由使用者關閉通知。此規格並明確規定「應透過 [`Notification.close()`](/zh-TW/docs/Web/API/Notification/close) 函式，於應用程式層級完成自動關閉通知」。範例程式碼如下：
 >
 > ```js
 > var n = new Notification("Hi!");

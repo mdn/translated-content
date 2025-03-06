@@ -29,7 +29,7 @@ slug: Web/XSLT/Element/comment
 
 ### 정의
 
-[XSLT section 7.4, Creating Comments](http://www.w3.org/TR/xslt#section-Creating-Comments)
+[XSLT section 7.4, Creating Comments](https://www.w3.org/TR/xslt#section-Creating-Comments)
 
 ### Gecko 지원
 

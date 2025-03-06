@@ -5,7 +5,7 @@ slug: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 
 {{DefaultAPISidebar("WebRTC")}}
 
-A interface {{domxref("RTCDataChannel")}} é um recurso da [WebRTC API](/pt-BR/docs/Web/API/WebRTC_API) que permite abrir um canal entre dois pares sobre os quais você pode enviar e receber dados arbitrários. A API é intencionalmente semelhante à [WebSocket API](/pt-BR/docs/Web/API/WebSocket_API), de modo que o mesmo modelo de programação pode ser usado para ambos.
+A interface {{domxref("RTCDataChannel")}} é um recurso da [WebRTC API](/pt-BR/docs/Web/API/WebRTC_API) que permite abrir um canal entre dois pares sobre os quais você pode enviar e receber dados arbitrários. A API é intencionalmente semelhante à [WebSocket API](/pt-BR/docs/Web/API/WebSockets_API), de modo que o mesmo modelo de programação pode ser usado para ambos.
 
 Neste exemplo, abriremos um {{domxref("RTCDataChannel")}} para realizar a conexão entre dois elementos na mesma página. Embora seja obviamente um cenário artificial, é útil para demonstrar o fluxo de conexão entre dois pares. Vamos cobrir a mecânica necessária para conectar, transmitir e receber dados, mas vamos deixar para outro exemplo os detalhes sobre como localizar e se conectar a um computador remoto.
 
@@ -112,7 +112,7 @@ remoteConnection = new RTCPeerConnection();
 remoteConnection.ondatachannel = receiveChannelCallback;
 ```
 
-O ponto remoto está configurado de forma semelhante, exceto que não precisamos nós mesmos criar explicitamente um {{domxref("RTCDataChannel")}} , uma vez que vamos ser conectados através do canal estabelecido acima. Em vez disso, criamos um [`datachannel`](/pt-BR/docs/Web/Events/datachannel) manipulador de eventos (event handler); Isso será chamado quando o canal de dados (data channel) for aberto; Este manipulador (handler) receberá um objeto `RTCDataChannel`; você verá isso abaixo.
+O ponto remoto está configurado de forma semelhante, exceto que não precisamos nós mesmos criar explicitamente um {{domxref("RTCDataChannel")}} , uma vez que vamos ser conectados através do canal estabelecido acima. Em vez disso, criamos um [`datachannel`](/pt-BR/docs/Web/API/RTCPeerConnection/datachannel_event) manipulador de eventos (event handler); Isso será chamado quando o canal de dados (data channel) for aberto; Este manipulador (handler) receberá um objeto `RTCDataChannel`; você verá isso abaixo.
 
 #### Configurando ICE candidates
 
@@ -131,7 +131,7 @@ remoteConnection.onicecandidate = (e) =>
   localConnection.addIceCandidate(e.candidate).catch(handleAddCandidateError);
 ```
 
-Configuramos cada {{domxref("RTCPeerConnection")}} para ter um manipulador de eventos (event handler) para o evento [`icecandidate`](/pt-BR/docs/Web/Events/icecandidate) .
+Configuramos cada {{domxref("RTCPeerConnection")}} para ter um manipulador de eventos (event handler) para o evento [`icecandidate`](/pt-BR/docs/Web/API/RTCPeerConnection/icecandidate_event) .
 
 #### Iniciando a tentativa de conexão
 
@@ -167,7 +167,7 @@ Vamos passar por isto linha por linha e decifrar o que significa.
 
 #### Manipulação da conexão de pares bem sucedida
 
-Como cada lado da conexão peer-to-peer é conectado com sucesso, o evento correspondente {{domxref("RTCPeerConnection")}}'s [`icecandidate`](/pt-BR/docs/Web/Events/icecandidate) é disparado. Esses manipuladores podem fazer o que for necessário, mas, neste exemplo, tudo o que precisamos fazer é atualizar a interface do usuário:
+Como cada lado da conexão peer-to-peer é conectado com sucesso, o evento correspondente {{domxref("RTCPeerConnection")}}'s [`icecandidate`](/pt-BR/docs/Web/API/RTCPeerConnection/icecandidate_event) é disparado. Esses manipuladores podem fazer o que for necessário, mas, neste exemplo, tudo o que precisamos fazer é atualizar a interface do usuário:
 
 ```js
 function handleLocalAddCandidateSuccess() {
@@ -183,7 +183,7 @@ A única coisa que fazemos aqui é desativar o botão "Conectar" quando o ponto 
 
 #### Conectando o canal de dados
 
-Uma vez que o {{domxref("RTCPeerConnection")}} é aberto, o evento [`datachannel`](/pt-BR/docs/Web/Events/datachannel) é enviado para o ponto remoto para completar o processo de abertura do canal de dados; Isso invoca nosso método `receiveChannelCallback()`, que se parece com isso:
+Uma vez que o {{domxref("RTCPeerConnection")}} é aberto, o evento [`datachannel`](/pt-BR/docs/Web/API/RTCPeerConnection/datachannel_event) é enviado para o ponto remoto para completar o processo de abertura do canal de dados; Isso invoca nosso método `receiveChannelCallback()`, que se parece com isso:
 
 ```js
 function receiveChannelCallback(event) {
@@ -194,7 +194,7 @@ function receiveChannelCallback(event) {
 }
 ```
 
-O evento[`datachannel`](/pt-BR/docs/Web/Events/datachannel) inclui, em sua propriedade de canal, uma referência a um {{domxref("RTCDataChannel")}} Representando o ponto remoto do canal. Isso é salvo, e nós configuramos, no canal, ouvintes de eventos para os eventos que queremos manipular. Uma vez feito isso, nosso método `handleReceiveMessage()` Será chamado cada vez que os dados são recebidos pelo ponto remoto, e o método `handleReceiveChannelStatusChange()` será chamado sempre que mudar o estado da conexão do canal, para que possamos reagir quando o canal estiver totalmente aberto e quando ele for fechado.
+O evento[`datachannel`](/pt-BR/docs/Web/API/RTCPeerConnection/datachannel_event) inclui, em sua propriedade de canal, uma referência a um {{domxref("RTCDataChannel")}} Representando o ponto remoto do canal. Isso é salvo, e nós configuramos, no canal, ouvintes de eventos para os eventos que queremos manipular. Uma vez feito isso, nosso método `handleReceiveMessage()` Será chamado cada vez que os dados são recebidos pelo ponto remoto, e o método `handleReceiveChannelStatusChange()` será chamado sempre que mudar o estado da conexão do canal, para que possamos reagir quando o canal estiver totalmente aberto e quando ele for fechado.
 
 ### Lidando com as mudanças de status do canal
 

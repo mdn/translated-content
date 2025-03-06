@@ -48,8 +48,8 @@ rect {
 
 下列元素可以使用`stroke-opacity`属性：
 
-- [形状元素](/zh-CN/SVG/Element#Shape) »
-- [文本内容元素](/zh-CN/SVG/Element#TextContent) »
+- [形状元素](/zh-CN/docs/Web/SVG/Element#shape) »
+- [文本内容元素](/zh-CN/docs/Web/SVG/Element#textcontent) »
 
 ## 规范
 

@@ -33,10 +33,10 @@ svg {
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
-- [展现属性](/zh-CN/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/docs/SVG/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/SVG/Attribute#graphicalevent) »
+- [展现属性](/zh-CN/docs/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

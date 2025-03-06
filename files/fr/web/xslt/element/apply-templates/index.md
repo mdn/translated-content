@@ -36,7 +36,7 @@ Instruction, apparaît dans un modèle.
 
 ### Définition
 
-[XSLT 1.0, section 5.4](http://www.w3.org/TR/xslt#section-Applying-Template-Rules).
+[XSLT 1.0, section 5.4](https://www.w3.org/TR/xslt#section-Applying-Template-Rules).
 
 ### Support Gecko
 

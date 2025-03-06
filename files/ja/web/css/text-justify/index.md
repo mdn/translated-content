@@ -1,11 +1,13 @@
 ---
 title: text-justify
 slug: Web/CSS/text-justify
+l10n:
+  sourceCommit: 75326725db2daa924618e58ae31a43345c7a16dc
 ---
 
 {{CSSRef}}
 
-**`text-justify`** は CSS のプロパティで、要素に {{cssxref("text-align")}}`: justify;` が設定された時にテキストに適用される両端揃えの種類を設定します。
+**`text-justify`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に {{cssxref("text-align", "text-align: justify;")}} が設定された時にテキストに適用される両端揃えの種類を設定します。
 
 ## 構文
 
@@ -20,6 +22,7 @@ text-justify: distribute; /* 非推奨の値 */
 text-justify: inherit;
 text-justify: initial;
 text-justify: revert;
+text-justify: revert-layer;
 text-justify: unset;
 ```
 
@@ -33,7 +36,7 @@ text-justify: unset;
   - : 単語間に間隔を挿入する (事実上 {{cssxref("word-spacing")}} を変化させる) ことでテキストを揃えるもので、これは英語や韓国語のように、空白で単語を区切る言語に最も適しています。
 - `inter-character`
   - : 文字間に間隔を挿入する (事実上 {{cssxref("letter-spacing")}} を変化させる) ことでテキストを揃えるもので、これは日本語のような言語に最も適しています。
-- `distribute` {{deprecated_inline}}
+- `distribute`
   - : `inter-character` と同じ動作を見せます。この値は後方互換性のためのものです。
 
 ## 公式定義
@@ -44,11 +47,11 @@ text-justify: unset;
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
 ### text-justify の様々な値のデモ
 
-```html hidden
+```html hidden live-sample___examples
 <p class="none">
   <code>text-justify: none</code> —<br />Lorem ipsum dolor sit amet, consectetur
   adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id
@@ -81,7 +84,7 @@ text-justify: unset;
 </p>
 ```
 
-```css
+```css live-sample___examples
 p {
   font-size: 1.5em;
   border: 1px solid black;

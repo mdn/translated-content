@@ -5,7 +5,7 @@ slug: WebAssembly/JavaScript_interface/validate_static
 
 {{WebAssemblySidebar}}
 
-**`WebAssembly.validate()`** 함수는 바이트가 유효한 wasm 모듈을 형성하는지 (`true`) 또는 생성하지 않는지 (`false`)를 반환하여 WebAssembly 바이너리 코드의 지정된 [typed array](/ko/docs/Web/JavaScript/Typed_arrays)의 유효성을 검사합니다.
+**`WebAssembly.validate()`** 함수는 바이트가 유효한 wasm 모듈을 형성하는지 (`true`) 또는 생성하지 않는지 (`false`)를 반환하여 WebAssembly 바이너리 코드의 지정된 [typed array](/ko/docs/Web/JavaScript/Guide/Typed_arrays)의 유효성을 검사합니다.
 
 ## Syntax
 
@@ -14,7 +14,7 @@ slug: WebAssembly/JavaScript_interface/validate_static
 ### Parameters
 
 - `bufferSource`
-  - : 유효성을 검사 할 WebAssembly 바이너리 코드가 들어있는 [typed array](/ko/docs/Web/JavaScript/Typed_arrays) 또는 [ArrayBuffer](/ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)입니다.
+  - : 유효성을 검사 할 WebAssembly 바이너리 코드가 들어있는 [typed array](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 또는 [ArrayBuffer](/ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)입니다.
 
 ### Return value
 
@@ -22,7 +22,7 @@ slug: WebAssembly/JavaScript_interface/validate_static
 
 ### Exceptions
 
-`bufferSource`가 [typed array](/ko/docs/Web/JavaScript/Typed_arrays)이나 [ArrayBuffer](/ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)가 아닌 경우 {{jsxref ( "TypeError")}}가 발생합니다.
+`bufferSource`가 [typed array](/ko/docs/Web/JavaScript/Guide/Typed_arrays)이나 [ArrayBuffer](/ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)가 아닌 경우 {{jsxref ( "TypeError")}}가 발생합니다.
 
 ## Examples
 

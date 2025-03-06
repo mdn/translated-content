@@ -46,7 +46,7 @@ Si vous voulez faire un jeu, et utiliser les événements du clavier et de la so
 Dans les exemples suivants, nous utiliserons {{domxref("window.requestAnimationFrame()")}} pour contrôler les animations. Cette technique est plus fluide et plus efficace, elle appelle les opérations de rendu quand le système est prêt à dessiner l'image. Dans des conditions idéales, la fonction est alors lancée 60 fois par seconde, mais la fréquence sera réduite si l'animation se passe dans un onglet non visible.
 
 > [!NOTE]
-> Pour plus d'informations sur la boucle d'animation, plus spécialement pour les jeux, rendez-vous sur l'article [L'anatomie d'un jeu vidéo](/fr/docs/Jeux/Anatomie) dans notre section [Développement de jeux vidéo](/fr/docs/Jeux).
+> Pour plus d'informations sur la boucle d'animation, plus spécialement pour les jeux, rendez-vous sur l'article [L'anatomie d'un jeu vidéo](/fr/docs/Games/Anatomy) dans notre section [Développement de jeux vidéo](/fr/docs/Games).
 
 ## Un système terrestre animé
 
@@ -331,7 +331,7 @@ En dessous, vous trouvez l'élément {{HTMLElement("canvas")}} avec l'image qui 
 
 - [Un raycaster basique avec canvas](/fr/docs/Un_raycaster_basique_avec_canvas)
   - : Un bon exemple d'animation contrôlée par le clavier.
-- [Animations avancées](/fr/docs/Tutoriel_canvas/Advanced_animations)
+- [Animations avancées](/fr/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
   - : Nous nous attarderons sur quelques techniques d'animation et de gestion de physique avancées dans le prochain châpitre.
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Tutoriel_canvas/Advanced_animations")}}

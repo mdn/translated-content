@@ -58,7 +58,7 @@ O **elemento** **HTML \<cite>** representa uma referência a um trabalho artíst
 
 ## Atributos
 
-Este elemento inclui apenas [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui apenas [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 ## Notas
 

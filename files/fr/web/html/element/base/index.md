@@ -75,7 +75,7 @@ Les [attributs universels](/fr/docs/Web/HTML/Global_attributes) peuvent être ut
     Les URI absolues et relatives sont autorisées (voir la note ci-après).
 - **`target`**
 
-  - : Un **mot-clé** ou un **nom défini par l'auteur** du [contexte de navigation](/fr/docs/Glossary/Browsing_context) par défaut pour afficher les résultats de la navigation à partir des éléments [`<a>`](/fr/docs/Web/HTML/Element/a), [`<area>`](/fr/docs/Web/HTML/Element/area) ou [`<form>`](/fr/docs/Web/HTML/Element/Form) sans attributs `target` explicites.
+  - : Un **mot-clé** ou un **nom défini par l'auteur** du [contexte de navigation](/fr/docs/Glossary/Browsing_context) par défaut pour afficher les résultats de la navigation à partir des éléments [`<a>`](/fr/docs/Web/HTML/Element/a), [`<area>`](/fr/docs/Web/HTML/Element/area) ou [`<form>`](/fr/docs/Web/HTML/Element/form) sans attributs `target` explicites.
 
     Les mots-clés suivants ont des significations particulières :
 

@@ -9,7 +9,18 @@ l10n:
 
 **`then()`** は {{jsxref("Promise")}} インスタンスのメソッドであり、最大 2 つの引数として、この `Promise` が成功した場合と失敗した場合のコールバック関数を取ります。コールバックは、それが呼び出されたプロミス内に格納され、すぐに別の {{jsxref("Promise")}} オブジェクトを返値において返し、他のプロミスのメソッドに対する[連鎖](/ja/docs/Web/JavaScript/Guide/Using_promises#連鎖)呼び出しを行うことができます。
 
-{{EmbedInteractiveExample("pages/js/promise-then.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.then()")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  resolve("Success!");
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: "Success!"
+});
+```
 
 ## 構文
 
@@ -27,7 +38,7 @@ then(onFulfilled, onRejected)
     - `value`
       - : このプロミスが履行されたときの値。
 
-    これが関数ではない場合は、内部的に、履行された値を送るための _識別_ 関数 (`(x) => x`) に置き換えられます。
+    これが関数ではない場合は、内部的に、履行された値を送るための _恒等_ 関数 (`(x) => x`) に置き換えられます。
 
 - `onRejected` {{optional_inline}}
 

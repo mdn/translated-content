@@ -72,7 +72,7 @@ console.assert(false, "слово %s", "foo");
 // Assertion failed: слово %s foo
 ```
 
-Смотрите также [Вывод текста в консоль](/ru/docs/Web/API/console#Outputting_text_to_the_console) в документации {{domxref("console")}} для более детальной информации.
+Смотрите также [Вывод текста в консоль](/ru/docs/Web/API/console#outputting_text_to_the_console) в документации {{domxref("console")}} для более детальной информации.
 
 ## Спецификации
 
@@ -84,6 +84,6 @@ console.assert(false, "слово %s", "foo");
 
 ## Смотрите также
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
 - [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
 - [Chrome Developer Tools: Using the Console](https://developer.chrome.com/docs/devtools/#assertions)

@@ -28,7 +28,7 @@ animation-delay: 2s, 4ms;
   - : La durée avec laquelle décaler le début de l'animation à partir du moment où celle-ci a été appliquée à l'élément. La valeur peut être indiquée en secondes (`s` comme suffixe) ou en millisecondes (`ms` comme suffixe). Si aucune unité n'est définie, la déclaration sera considérée comme invalide.
 
 > [!NOTE]
-> Lorsqu'on utilise plusieurs valeurs (séparées par des virgules) pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/Animations_CSS/Utiliser_les_animations_CSS).
+> Lorsqu'on utilise plusieurs valeurs (séparées par des virgules) pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 
 ## Définition formelle
 
@@ -86,5 +86,5 @@ p {
 
 ## Voir aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Utiliser_les_animations_CSS)
+- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

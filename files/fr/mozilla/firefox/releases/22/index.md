@@ -17,12 +17,12 @@ Vous voulez aider à documenter Firefox 22 ? Parcourez la [liste des bugs qui on
 ### JavaScript
 
 - Les optimizations [Asm.js](http://asmjs.org/spec/latest/) sont activées, rendant possible la compilation d'applications C / C++ vers un sous-ensemble Javascript pour de meilleures performances.
-- La syntaxe ES6 [Arrow Function](/fr/docs/JavaScript/Reference/arrow_functions) a été implémentée ([bug Firefox 846406](https://bugzil.la/846406)).
+- La syntaxe ES6 [Arrow Function](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) a été implémentée ([bug Firefox 846406](https://bugzil.la/846406)).
 - La nouvelle fonction [Object.is](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is) a été ajoutée ([bug Firefox 839979](https://bugzil.la/839979)).
 
 ### DOM
 
-- Support de la propriété `multipart` avec `XMLHttpRequest`. Les réponses `multipart/x-mixed-replace` dans `XMLHttpRequest` ont été supprimées. C'était une fonctionnalité uniquement supportée par Gecko et jamais standardisée. Il est possible d'utiliser [Server-Sent Events](/fr/docs/Server-sent_events) et [Web Sockets](/fr/docs/WebSockets) ou d'inspecter la propriété `responseText` des _progress events_ à la place.
+- Support de la propriété `multipart` avec `XMLHttpRequest`. Les réponses `multipart/x-mixed-replace` dans `XMLHttpRequest` ont été supprimées. C'était une fonctionnalité uniquement supportée par Gecko et jamais standardisée. Il est possible d'utiliser [Server-Sent Events](/fr/docs/Web/API/Server-sent_events) et [Web Sockets](/fr/docs/Web/API/WebSockets_API) ou d'inspecter la propriété `responseText` des _progress events_ à la place.
 - Le support des [Web Notifications](http://notifications.spec.whatwg.org/) est activé par défaut. ([bug Firefox 782211](https://bugzil.la/782211)).
 - La méthode {{domxref("XMLHttpRequest/FormData", "FormData")}} `append` accepte maintenant un troisième paramètre optionnel `filename` ([bug Firefox 690659](https://bugzil.la/690659)).
 - {{domxref("Node.isSupported")}} a été supprimé ([bug Firefox 801562](https://bugzil.la/801562)).
@@ -32,13 +32,13 @@ Vous voulez aider à documenter Firefox 22 ? Parcourez la [liste des bugs qui on
 
 ### CSS
 
-- Le support de [CSS Flexbox layout](/fr/docs/CSS/Tutorials/Using_CSS_flexible_boxes) a été activé par défaut ([bug Firefox 841876](https://bugzil.la/841876)).
+- Le support de [CSS Flexbox layout](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) a été activé par défaut ([bug Firefox 841876](https://bugzil.la/841876)).
 - Le support de CSS Conditionals ({{cssxref("@supports")}} et {{domxref("CSS.supports")}}) ont été activés par défaut ([bug Firefox 855455](https://bugzil.la/855455)).
 
 ## Changements pour les développeurs Mozilla et développeurs d'add-on
 
 - Le paramètre `properties` a été supprimé des méthodes `nsITreeView.getCellProperties()` `nsITreeView.getColumnProperties()` et `nsITreeView.getRowProperties()` de l'interface `nsITreeView`. Ces méthodes retourneront maintenant un string de noms de propriétés séparées par des espaces. ([bug Firefox 407956](https://bugzil.la/407956))
-- La méthode `inIDOMUtils.getCSSPropertyNames()` a été implémentée et retourne le nom de toutes les [propriétés CSS](/fr/docs/CSS/CSS_Reference) supportées.
+- La méthode `inIDOMUtils.getCSSPropertyNames()` a été implémentée et retourne le nom de toutes les [propriétés CSS](/fr/docs/Web/CSS/Reference) supportées.
 - Voir [tous les changements](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/).
 
 ### Outils pour développeurs de Firefox
@@ -51,7 +51,7 @@ Vous voulez aider à documenter Firefox 22 ? Parcourez la [liste des bugs qui on
 
 ## Voir aussi
 
-- [Notes de version de Firefox 22 Beta](http://www.mozilla.org/en-US/firefox/22.0beta/releasenotes/)
+- [Notes de version de Firefox 22 Beta](https://www.mozilla.org/en-US/firefox/22.0beta/releasenotes/)
 - [Compatibilité des sites avec Firefox 22](/fr/docs/Site_Compatibility_for_Firefox_22)
 - [Compatibilité des add-ons avec Firefox 22](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/)
 

@@ -14,5 +14,5 @@ l10n:
 ## 参见
 
 - 维基百科上的[面向对象程序设计](https://zh.wikipedia.org/wiki/面向对象程序设计)
-- [JavaScript 对象入门](/zh-CN/docs/Learn/JavaScript/Objects)
+- [JavaScript 对象入门](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
 - [继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

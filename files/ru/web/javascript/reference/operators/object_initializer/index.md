@@ -73,7 +73,7 @@ var object = {
 
 ### Доступность свойств
 
-После того, как создали объект, вы, вероятно, захотите прочитать или изменить его. Свойства объектов могут быть получены при помощи точечной нотации или квадратных скобок. Смотрите [property accessors](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors) для детальной информации.
+После того, как создали объект, вы, вероятно, захотите прочитать или изменить его. Свойства объектов могут быть получены при помощи точечной нотации или квадратных скобок. Смотрите [property accessors](/ru/docs/Web/JavaScript/Reference/Operators/Property_accessors) для детальной информации.
 
 ```js
 object.foo; // "bar"
@@ -184,7 +184,7 @@ var o = {
 
 ### Вычисляемые имена свойств
 
-Начиная с ECMAScript 2015, синтаксис объявления объектов также поддерживает вычисляемые имена свойств. Это позволяет добавлять в скобки `[]` выражение, которое будет вычислено, как имя свойства. Это похоже на скобочную нотацию синтаксиса [property accessor](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors), которую вы, вероятно, уже использовали, чтобы прочитать и задать свойство. Теперь можно использовать аналогичный способ с литеральными объектами:
+Начиная с ECMAScript 2015, синтаксис объявления объектов также поддерживает вычисляемые имена свойств. Это позволяет добавлять в скобки `[]` выражение, которое будет вычислено, как имя свойства. Это похоже на скобочную нотацию синтаксиса [property accessor](/ru/docs/Web/JavaScript/Reference/Operators/Property_accessors), которую вы, вероятно, уже использовали, чтобы прочитать и задать свойство. Теперь можно использовать аналогичный способ с литеральными объектами:
 
 ```js
 // Вычисляемое имя свойства (ES2015)
@@ -210,7 +210,7 @@ console.log(config); // {size: 12, mobileSize: 4}
 
 ### Spread-свойства
 
-[Rest/Spread свойство ECMAScript](https://github.com/tc39/proposal-object-rest-spread) предлагает (stage 3) добавлять [spread](/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator) свойства в литеральную нотацию. Оно копирует собственные перечисляемые свойства из представленного объекта в новый.
+[Rest/Spread свойство ECMAScript](https://github.com/tc39/proposal-object-rest-spread) предлагает (stage 3) добавлять [spread](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax) свойства в литеральную нотацию. Оно копирует собственные перечисляемые свойства из представленного объекта в новый.
 
 Поверхностное копирование (исключая prototype) или слияние объектов теперь возможно с помощью более короткого синтаксиса, чем {{jsxref("Object.assign()")}}.
 
@@ -229,7 +229,7 @@ var mergedObj = { ...obj1, ...obj2 };
 
 ### Изменение Prototype
 
-Объявление свойства в виде `__proto__: value` или `"__proto__": value` не создаст свойства с именем `__proto__`. Вместо этого, если предоставляемое значение объект или [`null`](/ru/docs/Web/JavaScript/Reference/Global_Objects/null), оно заменит `[[Prototype]]` создаваемого объекта на это значение. (Если значение не объект или null, объект не изменится.)
+Объявление свойства в виде `__proto__: value` или `"__proto__": value` не создаст свойства с именем `__proto__`. Вместо этого, если предоставляемое значение объект или [`null`](/ru/docs/Web/JavaScript/Reference/Operators/null), оно заменит `[[Prototype]]` создаваемого объекта на это значение. (Если значение не объект или null, объект не изменится.)
 
 ```js
 var obj1 = {};
@@ -290,7 +290,7 @@ assert(obj3.__proto__ === 17);
 
 ## Смотрите также
 
-- [Property accessors](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Property accessors](/ru/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 - [`get`](/ru/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/ru/docs/Web/JavaScript/Reference/Functions/set)
 - [Method definitions](/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions)
 - [Lexical grammar](/ru/docs/Web/JavaScript/Reference/Lexical_grammar)

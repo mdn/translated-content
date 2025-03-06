@@ -92,4 +92,4 @@ document.addEventListener('readystatechange', event => {
 
 ## Veja também
 
-- [document.onreadystatechange](/pt-BR/docs/Web/Events/readystatechange)
+- [document.onreadystatechange](/pt-BR/docs/Web/API/Document/readystatechange_event)

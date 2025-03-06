@@ -62,4 +62,4 @@ Cela peut être utile pour s'assurer que les utilisateurs consultent chaque sect
 
 ## Compatibilité des navigateurs
 
-Les pages de chaque propriété détaillent la compatibilité des différents navigateurs. On notera qu'avant Firefox 68, une ancienne version de la spécification était implémentée. Vous pouvez [poursuivre avec le guide suivant](/fr/docs/Web/CSS/CSS_Scroll_Snap/Browser_compat) pour en savoir plus sur l'écriture de code compatible entre les différents navigateurs qui implémentent différentes versions de la spécification.
+Les pages de chaque propriété détaillent la compatibilité des différents navigateurs. On notera qu'avant Firefox 68, une ancienne version de la spécification était implémentée. Vous pouvez [poursuivre avec le guide suivant](/fr/docs/Web/CSS/CSS_scroll_snap) pour en savoir plus sur l'écriture de code compatible entre les différents navigateurs qui implémentent différentes versions de la spécification.

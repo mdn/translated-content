@@ -15,7 +15,7 @@ l10n:
 
 ## 사용자 정보 보안
 
-- [양식 자동 완성을 끄는 법](/ko/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion)
+- [양식 자동 완성을 끄는 법](/ko/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion)
   - : Gecko는 양식 필드의 자동 완성을 지원합니다. 즉, 양식의 값을 기억하고 있다가 다음에 사이트를 방문할 때 자동으로 불러올 수 있습니다. 특정 데이터 유형의 경우, 이 기능을 비활성화할 수 있습니다.
 - [사생활과 :visited 선택자](/ko/docs/Web/CSS/Privacy_and_the_:visited_selector)
   - : 이 문서에서는 악의적인 사이트가 사용자의 검색 기록을 파악하는 기능을 제거하는 `getComputedStyle()` 메서드의 변경 사항에 대해 설명합니다.

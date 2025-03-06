@@ -5,7 +5,7 @@ slug: Web/CSS/transition-delay
 
 {{CSSRef}}
 
-A propriedade CSS **`transition-delay`** (atraso de transição) determina o tempo de duração da espera antes de iniciar um efeito de transição([transition effect](/pt-BR/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)) quando seu valor muda.
+A propriedade CSS **`transition-delay`** (atraso de transição) determina o tempo de duração da espera antes de iniciar um efeito de transição([transition effect](/pt-BR/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)) quando seu valor muda.
 
 {{EmbedInteractiveExample("pages/css/transition-delay.html")}}
 
@@ -33,7 +33,7 @@ transition-delay: unset;
 ### Valores
 
 - {{cssxref("&lt;time&gt;")}}
-  - : Indica a quantidade de tempo de espera entre um valor de propriedade e o inicio do efeito de transição([transition effect](/pt-BR/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)).
+  - : Indica a quantidade de tempo de espera entre um valor de propriedade e o inicio do efeito de transição([transition effect](/pt-BR/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)).
 
 ### Sintaxe Formal
 
@@ -337,5 +337,5 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## Veja também
 
-- [Usando Transições CSS](/pt-BR/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Usando Transições CSS](/pt-BR/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{domxref("TransitionEvent")}} API

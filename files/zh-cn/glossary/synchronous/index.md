@@ -17,4 +17,4 @@ l10n:
 
 - 相关术语：
   - {{glossary("Asynchronous", "异步")}}
-- [异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)
+- [异步 JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)

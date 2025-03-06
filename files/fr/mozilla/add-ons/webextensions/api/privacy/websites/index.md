@@ -52,7 +52,7 @@ Les valeurs par défaut de ces propriétés ont tendance à varier selon les nav
     Par défaut à `false`.
 
 - `thirdPartyCookiesAllowed`
-  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen. Si `false`, le navigateur bloque les [cookies tiers](/fr/docs/Web/HTTP/Cookies#Third-party_cookies).
+  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen. Si `false`, le navigateur bloque les [cookies tiers](/fr/docs/Web/HTTP/Cookies#third-party_cookies).
 - `trackingProtectionMode`
 
   - : La "protection de suivi" est une fonctionnalité de navigateur qui bloque les requêtes faites sur des domaines qui sont connus pour s'engager dans le suivi multi-sites des utilisateurs. Les sites qui suivent les utilisateurs sont généralement des sites publicitaires et analytiques tiers. Ce paramètre est un objet {{WebExtAPIRef("types.BrowserSetting")}} qui détermine si le navigateur doit activer la protection de suivi. Sa valeur sous-jacente est une chaîne qui peut prendre l'une des trois valeurs :

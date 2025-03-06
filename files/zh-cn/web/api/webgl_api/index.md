@@ -94,7 +94,7 @@ WebGL 2 是对 WebGL 的一次重大更新，通过 {{domxref("WebGL2RenderingCo
 
 - [3D 纹理](/zh-CN/docs/Web/API/WebGL2RenderingContext/texImage3D)、
 - [采样对象](/zh-CN/docs/Web/API/WebGLSampler)、
-- [Uniform 缓冲对象](/zh-CN/docs/Web/API/WebGL2RenderingContext#Uniform_缓冲对象)、
+- [Uniform 缓冲对象](/zh-CN/docs/Web/API/WebGL2RenderingContext#uniform_缓冲对象)、
 - [同步对象](/zh-CN/docs/Web/API/WebGLSync)、
 - [查询对象](/zh-CN/docs/Web/API/WebGLQuery)、
 - [变换反馈对象](/zh-CN/docs/Web/API/WebGLTransformFeedback)、

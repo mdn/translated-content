@@ -11,13 +11,13 @@ slug: Web/HTML/Element/font
 
   - : **Sus etiquetas son**: \<font> y \</font> (ambas obligatorias).
 
-    - **Está definido como**: Elemento [desaprobado](/es/HTML/Elemento/Tipos_de_elementos#desaprobado).
+    - **Está definido como**: Elemento [desaprobado](/es/docs/HTML/Elemento/Tipos_de_elementos#desaprobado).
 
-      - : En un doctype transicional está definido como un elemento [especial](/es/HTML/Elemento/Tipos_de_elementos#especial) y por lo tanto [en línea](/es/HTML/Elemento/Tipos_de_elementos#enlinea).
+      - : En un doctype transicional está definido como un elemento [especial](/es/docs/HTML/Elemento/Tipos_de_elementos#especial) y por lo tanto [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#enlinea).
 
     **Crea una caja**: En línea.
 
-    **Puede contener**: Texto, y/o cero o más elementos [en línea](/es/HTML/Elemento/Tipos_de_elementos#enlinea).
+    **Puede contener**: Texto, y/o cero o más elementos [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#enlinea).
 
 #### Atributos
 

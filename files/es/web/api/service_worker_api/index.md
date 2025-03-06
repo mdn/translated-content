@@ -11,12 +11,12 @@ Los Service workers actúan esencialmente como proxy servers asentados entre las
 
 Un service worker es un [worker](/es/docs/Web/API/Worker) manejado por eventos registrado para una fuente y una ruta. Consiste en un fichero JavaScript que controla la página web (o el sitio) con el que está asociado, interceptando y modificando la navegación y las peticiones de recursos, y cacheando los recursos de manera muy granular para ofrecer un control completo sobre cómo la aplicación debe comportarse en ciertas situaciones (la mas obvia es cuando la red no está disponible).
 
-Un service worker se ejecuta en un contexto worker: por lo tanto no tiene acceso al DOM, y se ejecuta en un hilo distinto al JavaScript principal de la aplicación, de manera que no es bloqueante. Está diseñado para ser completamente asíncrono, por lo que APIs como el [XHR](/es/docs/Web/API/XMLHttpRequest) asíncrono y [localStorage](/es/docs/Web/Guide/API/DOM/Storage) no se pueden usar dentro de un service worker.
+Un service worker se ejecuta en un contexto worker: por lo tanto no tiene acceso al DOM, y se ejecuta en un hilo distinto al JavaScript principal de la aplicación, de manera que no es bloqueante. Está diseñado para ser completamente asíncrono, por lo que APIs como el [XHR](/es/docs/Web/API/XMLHttpRequest) asíncrono y [localStorage](/es/docs/Web/API/Web_Storage_API) no se pueden usar dentro de un service worker.
 
 Los service workers solo funcionan sobre HTTPS, por razones de seguridad. Modificar las peticiones de red en abierto permitiría ataques man in the middle realmente peligrosos. En Firefox, las APIs de service worker se ocultan y no pueden ser empleadas cuando el usuario está en [modo de navegación en privado](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history).
 
 > [!NOTE]
-> Los Service Workers mejoran los intentos anteriores en este área tal como [AppCache](http://alistapart.com/article/application-cache-is-a-douchebag) puesto que no hacen suposiciones sobre qué se está intentando hacer para luego tener que cortar cuando las suposiciones no son correctas; hay control granular sobre todos los aspectos.
+> Los Service Workers mejoran los intentos anteriores en este área tal como [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag) puesto que no hacen suposiciones sobre qué se está intentando hacer para luego tener que cortar cuando las suposiciones no son correctas; hay control granular sobre todos los aspectos.
 
 > [!NOTE]
 > Los Service workers hace un uso intensivo de las [promesas](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise), por lo que generalmente esperarán a que lleguen las respuestasas correspondientes, tras lo cual responderán con una acción de éxito o de fracaso. La arquitectura de promesas es ideal en este caso.
@@ -52,7 +52,7 @@ Tu service worker puede responder a las peticiones usando el evento {{domxref("F
 > [!NOTE]
 > Dado que `oninstall`/`onactivate` puede tardar un poco en completarse, la especificación de service worker spec provee un método `waitUntil` que, cuando es llamado `oninstall` o `onactivate`, pasa una promesa. Los eventos funcionales no se envían al service worker hasta que la promesa se resuelve con éxito.
 
-Para un tutorial completo que muestra cómo construir tu primer ejemplo básico, lee [Using Service Workers](/es/docs/Web/API/ServiceWorker_API/Using_Service_Workers).
+Para un tutorial completo que muestra cómo construir tu primer ejemplo básico, lee [Using Service Workers](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers).
 
 ## Otras posibilidades
 
@@ -119,9 +119,9 @@ En el futuro, los service workers podrán hacer una cantidad de cosas útiles pa
 ## Ver también
 
 - [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook)
-- [Using Service Workers](/es/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Promises](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Using web workers](/es/docs/Web/Guide/Performance/Using_web_workers)
+- [Using web workers](/es/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [Best Practices for using the VARY header](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)

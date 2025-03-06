@@ -324,7 +324,7 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
 
 ## Ver también
 
-- [Funciones](/es/docs/Web/JavaScript/Referencia/Funciones)
+- [Funciones](/es/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Statements/class", "class declaration")}}
 - {{jsxref("Operators/class", "class expression")}}
 - {{jsxref("Operators/super", "super")}}

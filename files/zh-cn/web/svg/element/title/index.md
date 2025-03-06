@@ -31,7 +31,7 @@ SVG 绘图中的每个窗口元素或图形元素都可以提供一个`title`描
 
 ### 全局属性
 
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -41,7 +41,7 @@ _没有专有属性。_
 
 ## DOM 接口
 
-该元素实现了 [`SVGTitleElement`](/zh-CN/DOM/SVGTitleElement) 接口。
+该元素实现了 [`SVGTitleElement`](/zh-CN/docs/DOM/SVGTitleElement) 接口。
 
 ## 浏览器兼容性
 

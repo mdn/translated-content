@@ -12,7 +12,20 @@ l10n:
 
 이 속성의 초기 값은 {{jsxref("Array.prototype.values")}} 속성의 초기 값과 동일한 함수 객체입니다.
 
-{{EmbedInteractiveExample("pages/js/array-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype[Symbol.iterator]()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const iterator1 = array1[Symbol.iterator]();
+
+for (const value of iterator1) {
+  console.log(value);
+}
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## 구문
 
@@ -72,7 +85,7 @@ console.log(arrIter.next().value); // e
 
 ### 동일한 함수로 문자열과 문자열 배열 처리하기
 
-[문자열](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)과 배열은 모두 순회 가능 프로토콜을 구현하기 때문에, 범용 함수는 두 입력을 동일한 방식으로 처리하도록 설계할 수 있습니다. 이는 입력이 배열이거나 적어도 해당 메서드가 있는 객체여야 하는 {{jsxref("Array.prototype.values()")}}를 직접 호출하는 것보다 낫습니다.
+[문자열](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)과 배열은 모두 순회 가능 프로토콜을 구현하기 때문에, 범용 함수는 두 입력을 동일한 방식으로 처리하도록 설계할 수 있습니다. 이는 입력이 배열이거나 적어도 해당 메서드가 있는 객체여야 하는 {{jsxref("Array.prototype.values()")}}를 직접 호출하는 것보다 낫습니다.
 
 ```js
 function logIterable(it) {

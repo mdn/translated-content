@@ -108,7 +108,7 @@ _変更なし。_
 #### フェッチとサービスワーカー
 
 - {{domxref("Response.redirect()")}} メソッドが、最初の引数で有効な URL が指定されていない場合に、正しく `TypeError` を発生させるようになりました ([Firefox バグ 1503276](https://bugzil.la/1503276))。
-- {{domxref("ServiceWorkerContainer.register()")}} および {{domxref("WorkerGlobalScope.importScripts()")}} (Service worker で使用している場合) メソッドが、有効な [JavaScript MIME type](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript) のファイルを受け入れるようになりました ([Firefox バグ 1354577](https://bugzil.la/1354577))。
+- {{domxref("ServiceWorkerContainer.register()")}} および {{domxref("WorkerGlobalScope.importScripts()")}} (Service worker で使用している場合) メソッドが、有効な [JavaScript MIME type](/ja/docs/Web/HTTP/MIME_types#textjavascript) のファイルを受け入れるようになりました ([Firefox バグ 1354577](https://bugzil.la/1354577))。
 - {{domxref("FetchEvent.replacesClientId")}} および {{domxref("FetchEvent.resultingClientId")}} プロパティをサポートしました ([Firefox バグ 1264177](https://bugzil.la/1264177))。
 - {{domxref("ServiceWorkerGlobalScope.onmessageerror")}} および {{domxref("ServiceWorkerContainer.onmessageerror")}} ハンドラープロパティを実装しました ([Firefox バグ 1399446](https://bugzil.la/1399446))。
 - {{HTTPMethod("HEAD")}} または {{HTTPMethod("GET")}} メソッドの Fetch リクエストで、{{httpheader("Origin")}} ヘッダーを設定しないようにしました ([Firefox バグ 1508661](https://bugzil.la/1508661))。
@@ -159,7 +159,7 @@ _変更なし。_
 
 ### その他
 
-- [WebP](/ja/docs/Glossary/webp) 画像をサポートしました ([Firefox バグ 1294490](https://bugzil.la/1294490))。
+- [WebP](/ja/docs/Glossary/WebP) 画像をサポートしました ([Firefox バグ 1294490](https://bugzil.la/1294490))。
 
   - また、特定の状況でブラウザー間の互換性を向上するために、WebP の MIMEType (`image/webp`) を HTML ファイルの {{httpheader("Accept")}} 標準 HTTP 要求ヘッダーに追加しました ([Firefox バグ 1507691](https://bugzil.la/1507691))。
 

@@ -2,7 +2,7 @@
 title: MathML 要素リファレンス
 slug: Web/MathML/Element
 l10n:
-  sourceCommit: 3558f9be9acfcfd4b625229962b6f1b38f1b85af
+  sourceCommit: 34c43aca36f776c824e698dfd07e3ece34cc6f00
 ---
 
 {{MathMLRef}}

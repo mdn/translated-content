@@ -20,13 +20,13 @@ Proxy-Authorization: <type> <credentials>
 ## 指令
 
 - \<type>
-  - : [身份验证类型](/zh-CN/docs/Web/HTTP/Authentication#Authentication_schemes)。一个常见的类型是 ["基本验证"。](/zh-CN/docs/Web/HTTP/Authentication#Basic_authentication_scheme)IANA 机构维护了 [一系列的身份验证机制](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)。
+  - : [身份验证类型](/zh-CN/docs/Web/HTTP/Authentication#authentication_schemes)。一个常见的类型是 ["基本验证"。](/zh-CN/docs/Web/HTTP/Authentication#basic_authentication_scheme)IANA 机构维护了 [一系列的身份验证机制](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)。
 - \<credentials>
 
   - : 凭证的构成方式如下：
 
     - 将用户名和密码用冒号拼接（aladdin:opensesame）。
-    - 将拼接生成的字符串使用 [base64](/zh-CN/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) 编码方式进行编码（YWxhZGRpbjpvcGVuc2VzYW1l）。
+    - 将拼接生成的字符串使用 [base64](/zh-CN/docs/Glossary/Base64) 编码方式进行编码（YWxhZGRpbjpvcGVuc2VzYW1l）。
 
     > [!NOTE]
     > Base64 编码方式不是用来加密或者获取摘要的！这种方法的安全性相当于将凭证使用明文发送（base64 是一种可逆编码方式）。在使用基本身份验证方式的时候推荐与 HTTPS 搭配使用。

@@ -19,4 +19,4 @@ Même s'il n'y a pas de différence flagrante de qualité entre les deux images 
 
 ## Voir aussi
 
-- [Compression sans perte](/fr/docs/Glossaire/Compression_sans_perte)
+- [Compression sans perte](/fr/docs/Glossary/Lossless_compression)

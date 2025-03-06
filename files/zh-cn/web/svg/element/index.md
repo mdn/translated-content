@@ -1,6 +1,8 @@
 ---
 title: SVG 元素参考
 slug: Web/SVG/Element
+l10n:
+  sourceCommit: 2befe9ec5792e13f720396535a4aa20111be96ef
 ---
 
 {{SVGRef}}
@@ -20,7 +22,6 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 
 - {{SVGElement("circle")}}
 - {{SVGElement("clipPath")}}
-- {{SVGElement("color-profile")}}
 
 ### D
 
@@ -65,11 +66,6 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 
 - {{SVGElement("g")}}
 
-### H
-
-- {{SVGElement("hatch")}}
-- {{SVGElement("hatchpath")}}
-
 ### I
 
 - {{SVGElement("image")}}
@@ -83,10 +79,6 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 
 - {{SVGElement("marker")}}
 - {{SVGElement("mask")}}
-- {{SVGElement("mesh")}}
-- {{SVGElement("meshgradient")}}
-- {{SVGElement("meshpatch")}}
-- {{SVGElement("meshrow")}}
 - {{SVGElement("metadata")}}
 - {{SVGElement("mpath")}}
 
@@ -106,7 +98,6 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 
 - {{SVGElement("script")}}
 - {{SVGElement("set")}}
-- {{SVGElement("solidcolor")}}
 - {{SVGElement("stop")}}
 - {{SVGElement("style")}}
 - {{SVGElement("svg")}}
@@ -122,34 +113,35 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 
 ### U
 
-- {{SVGElement("unknown")}}
 - {{SVGElement("use")}}
 
 ### V
 
 - {{SVGElement("view")}}
 
-## SVG 元素（按类别分类）
+> **备注：** [SVG 2 规范要求](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)，出于渲染目的，所有未知元素都应被视为 {{SVGElement("g")}} 元素处理。
+
+## 按类别划分的 SVG 元素
 
 ### 动画元素
 
-{{SVGElement("animate")}}、{{SVGElement("animateColor")}}、{{SVGElement("animateMotion")}}、{{SVGElement("animateTransform")}}、{{SVGElement("mpath")}}、{{SVGElement("set")}}
+{{SVGElement("animate")}}、{{SVGElement("animateMotion")}}、{{SVGElement("animateTransform")}}、{{SVGElement("mpath")}}、{{SVGElement("set")}}
 
-### 基本形状元素
+### 基本形状
 
 {{SVGElement("circle")}}、{{SVGElement("ellipse")}}、{{SVGElement("line")}}、{{SVGElement("polygon")}}、{{SVGElement("polyline")}}、{{SVGElement("rect")}}
 
 ### 容器元素
 
-{{SVGElement("a")}}、{{SVGElement("defs")}}、{{SVGElement("g")}}、{{SVGElement("marker")}}、{{SVGElement("mask")}}、{{SVGElement("missing-glyph")}}、{{SVGElement("pattern")}}、{{SVGElement("svg")}}、{{SVGElement("switch")}}、{{SVGElement("symbol")}}、{{SVGElement("unknown")}}
+{{SVGElement("a")}}、{{SVGElement("defs")}}、{{SVGElement("g")}}、{{SVGElement("marker")}}、{{SVGElement("mask")}}、{{SVGElement("missing-glyph")}}、{{SVGElement("pattern")}}、{{SVGElement("svg")}}、{{SVGElement("switch")}}、{{SVGElement("symbol")}}
 
 ### 描述性元素
 
 {{SVGElement("desc")}}、{{SVGElement("metadata")}}、{{SVGElement("title")}}
 
-### 滤镜元素
+### 滤镜原语元素
 
-{{SVGElement("feBlend")}}、{{SVGElement("feColorMatrix")}}、{{SVGElement("feComponentTransfer")}}、{{SVGElement("feComposite")}}、{{SVGElement("feConvolveMatrix")}}、{{SVGElement("feDiffuseLighting")}}、{{SVGElement("feDisplacementMap")}}、{{SVGElement("feDropShadow")}}、{{SVGElement("feFlood")}},{{SVGElement("feFuncA")}}、{{SVGElement("feFuncB")}}、{{SVGElement("feFuncG")}}、{{SVGElement("feFuncR")}},{{SVGElement("feGaussianBlur")}}、{{SVGElement("feImage")}}、{{SVGElement("feMerge")}}、{{SVGElement("feMergeNode")}}、{{SVGElement("feMorphology")}}、{{SVGElement("feOffset")}}、{{SVGElement("feSpecularLighting")}}、{{SVGElement("feTile")}}、{{SVGElement("feTurbulence")}}
+{{SVGElement("feBlend")}}、{{SVGElement("feColorMatrix")}}、{{SVGElement("feComponentTransfer")}}、{{SVGElement("feComposite")}}、{{SVGElement("feConvolveMatrix")}}、{{SVGElement("feDiffuseLighting")}}、{{SVGElement("feDisplacementMap")}}、{{SVGElement("feDropShadow")}}、{{SVGElement("feFlood")}}、{{SVGElement("feFuncA")}}、{{SVGElement("feFuncB")}}、{{SVGElement("feFuncG")}}、{{SVGElement("feFuncR")}}、{{SVGElement("feGaussianBlur")}}、{{SVGElement("feImage")}}、{{SVGElement("feMerge")}}、{{SVGElement("feMergeNode")}}、{{SVGElement("feMorphology")}}、{{SVGElement("feOffset")}}、{{SVGElement("feSpecularLighting")}}、{{SVGElement("feTile")}}、{{SVGElement("feTurbulence")}}
 
 ### 字体元素
 
@@ -157,15 +149,15 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 
 ### 渐变元素
 
-{{SVGElement("linearGradient")}}、{{SVGElement("meshgradient")}}、{{SVGElement("radialGradient")}}、{{SVGElement("stop")}}
+{{SVGElement("linearGradient")}}、{{SVGElement("radialGradient")}}、{{SVGElement("stop")}}
 
 ### 图形元素
 
-{{SVGElement("circle")}}、{{SVGElement("ellipse")}}、{{SVGElement("image")}}、{{SVGElement("line")}}、{{SVGElement("mesh")}}、{{SVGElement("path")}}、{{SVGElement("polygon")}}、{{SVGElement("polyline")}}、{{SVGElement("rect")}}、{{SVGElement("text")}}、{{SVGElement("use")}}
+{{SVGElement("circle")}}、{{SVGElement("ellipse")}}、{{SVGElement("image")}}、{{SVGElement("line")}}、{{SVGElement("path")}}、{{SVGElement("polygon")}}、{{SVGElement("polyline")}}、{{SVGElement("rect")}}、{{SVGElement("text")}}、{{SVGElement("use")}}
 
 ### 图像渲染元素
 
-{{SVGElement("mesh")}}、{{SVGElement("use")}}
+{{SVGElement("use")}}
 
 ### 光源元素
 
@@ -173,19 +165,21 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 
 ### 非渲染元素
 
-{{SVGElement("clipPath")}}、{{SVGElement("defs")}}、{{SVGElement("hatch")}}、{{SVGElement("linearGradient")}}、{{SVGElement("marker")}}、{{SVGElement("mask")}}、{{SVGElement("meshgradient")}}、{{SVGElement("metadata")}}、{{SVGElement("pattern")}}、{{SVGElement("radialGradient")}}、{{SVGElement("script")}}、{{SVGElement("style")}}、{{SVGElement("symbol")}}、{{SVGElement("title")}}
+{{SVGElement("clipPath")}}、{{SVGElement("defs")}}、{{SVGElement("linearGradient")}}、{{SVGElement("marker")}}、{{SVGElement("mask")}}、{{SVGElement("metadata")}}、{{SVGElement("pattern")}}、{{SVGElement("radialGradient")}}、{{SVGElement("script")}}、{{SVGElement("style")}}、{{SVGElement("symbol")}}、{{SVGElement("title")}}
 
 ### 绘制服务器元素
 
-{{SVGElement("hatch")}}、{{SVGElement("linearGradient")}}、{{SVGElement("meshgradient")}}、{{SVGElement("pattern")}}、{{SVGElement("radialGradient")}}、{{SVGElement("solidcolor")}}
+{{SVGElement("linearGradient")}}、{{SVGElement("pattern")}}、{{SVGElement("radialGradient")}}
 
 ### 可渲染元素
 
-{{SVGElement("a")}}、{{SVGElement("circle")}}、{{SVGElement("ellipse")}}、{{SVGElement("foreignObject")}}、{{SVGElement("g")}}、{{SVGElement("image")}}、{{SVGElement("line")}}、{{SVGElement("mesh")}}、{{SVGElement("path")}}、{{SVGElement("polygon")}}、{{SVGElement("polyline")}}、{{SVGElement("rect")}}、{{SVGElement("svg")}}、{{SVGElement("switch")}}、{{SVGElement("symbol")}}、{{SVGElement("text")}}、{{SVGElement("textPath")}}、{{SVGElement("tspan")}}、{{SVGElement("unknown")}}、{{SVGElement("use")}}
+{{SVGElement("a")}}、{{SVGElement("circle")}}、{{SVGElement("ellipse")}}、{{SVGElement("foreignObject")}}、{{SVGElement("g")}}、{{SVGElement("image")}}、{{SVGElement("line")}}、{{SVGElement("path")}}、{{SVGElement("polygon")}}、{{SVGElement("polyline")}}、{{SVGElement("rect")}}、{{SVGElement("svg")}}、{{SVGElement("switch")}}、{{SVGElement("symbol")}}、{{SVGElement("text")}}、{{SVGElement("textPath")}}、{{SVGElement("tspan")}}、{{SVGElement("use")}}
+
+> **备注：** [SVG 2 规范要求](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)，出于渲染目的，所有未知元素都应被视为 {{SVGElement("g")}} 元素处理。
 
 ### 形状元素
 
-{{SVGElement("circle")}}、{{SVGElement("ellipse")}}、{{SVGElement("line")}}、{{SVGElement("mesh")}}、{{SVGElement("path")}}、{{SVGElement("polygon")}}、{{SVGElement("polyline")}}、{{SVGElement("rect")}}
+{{SVGElement("circle")}}、{{SVGElement("ellipse")}}、{{SVGElement("line")}}、{{SVGElement("path")}}、{{SVGElement("polygon")}}、{{SVGElement("polyline")}}、{{SVGElement("rect")}}
 
 ### 结构元素
 
@@ -195,18 +189,18 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 
 {{SVGElement("glyph")}}、{{SVGElement("glyphRef")}}、{{SVGElement("textPath")}}、{{SVGElement("text")}}、{{SVGElement("tref")}}、{{SVGElement("tspan")}}
 
-### 文本子内容元素
+### 文本内容子元素
 
 {{SVGElement("textPath")}}、{{SVGElement("tref")}}、{{SVGElement("tspan")}}
 
 ### 未分类元素
 
-{{SVGElement("clipPath")}}、{{SVGElement("color-profile")}}、{{SVGElement("cursor")}}、{{SVGElement("filter")}}、{{SVGElement("foreignObject")}}、{{SVGElement("hatchpath")}}、{{SVGElement("meshpatch")}}、{{SVGElement("meshrow")}}、{{SVGElement("script")}}、{{SVGElement("style")}}、{{SVGElement("view")}}
+{{SVGElement("clipPath")}}、{{SVGElement("cursor")}}、{{SVGElement("filter")}}、{{SVGElement("foreignObject")}}、{{SVGElement("script")}}、{{SVGElement("style")}}、{{SVGElement("view")}}
 
 ## 过时和弃用的元素
 
 > [!WARNING]
-> 这些是旧的 SVG 元素，已弃用且不应使用。**你绝不应在新项目中使用它们，并应尽快在旧项目中替换它们**。在此列出，仅供参考。
+> 这些都是旧的已弃用 SVG 元素，不应使用。**你不应在新的项目中使用它们，并且应尽快在旧项目中将其替换掉**。在此列出这些信息仅供参考。
 
 ### C
 
@@ -238,6 +232,6 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 
 ## 参见
 
-- [SVG attribute reference](/zh-CN/docs/Web/SVG/Attribute)
-- [SVG Tutorial](/zh-CN/docs/Web/SVG/Tutorial)
-- [SVG interface reference](/zh-CN/docs/Web/API/Document_Object_Model#SVG_interfaces)
+- [SVG 属性参考](/zh-CN/docs/Web/SVG/Attribute)
+- [SVG 教程](/zh-CN/docs/Web/SVG/Tutorial)
+- [SVG 接口参考](/zh-CN/docs/Web/API/Document_Object_Model#svg_dom)

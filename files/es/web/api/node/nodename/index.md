@@ -23,20 +23,20 @@ var str = node.nodeName;
 
 Aquí tenemos el valor devuelto por varios tipos de nodo.
 
-| Interfaz                                               | nodeName                                                                         |
-| ------------------------------------------------------ | -------------------------------------------------------------------------------- |
-| [Attr](/es/DOM/Attr)                                   | igual que [`Attr.name`](/es/DOM/Attr.name)                                       |
-| [CDATASection](/es/DOM/CDATASection)                   | "#cdata-section"                                                                 |
-| [Comment](/es/DOM/Comment)                             | "#comment"                                                                       |
-| [Document](/es/DOM/document)                           | "#document"                                                                      |
-| [DocumentFragment](/es/DOM/DocumentFragment)           | "#document-fragment"                                                             |
-| [DocumentType](/es/DOM/DocumentType)                   | igual que [`DocumentType.name`](/es/DOM/DocumentType.name)                       |
-| [Element](/es/DOM/element)                             | igual que [`Element.tagName`](/es/DOM/element.tagName)                           |
-| [Entity](/es/DOM/Entity)                               | nombre de entity                                                                 |
-| [EntityReference](/es/DOM/EntityReference)             | nombre de la identidad de referencia                                             |
-| [Notation](/es/DOM/Notation)                           | nombre de la notación                                                            |
-| [ProcessingInstruction](/es/DOM/ProcessingInstruction) | igual que [`ProcessingInstruction.target`](/es/DOM/ProcessingInstruction.target) |
-| Text                                                   | "#text"                                                                          |
+| Interfaz                                                        | nodeName                                                                              |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| [Attr](/es/docs/Web/API/Attr)                                   | igual que [`Attr.name`](/es/docs/DOM/Attr.name)                                       |
+| [CDATASection](/es/docs/Web/API/CDATASection)                   | "#cdata-section"                                                                      |
+| [Comment](/es/docs/Web/API/Comment)                             | "#comment"                                                                            |
+| [Document](/es/docs/Web/API/Document)                           | "#document"                                                                           |
+| [DocumentFragment](/es/docs/Web/API/DocumentFragment)           | "#document-fragment"                                                                  |
+| [DocumentType](/es/docs/Web/API/DocumentType)                   | igual que [`DocumentType.name`](/es/docs/DOM/DocumentType.name)                       |
+| [Element](/es/docs/Web/API/Element)                             | igual que [`Element.tagName`](/es/docs/Web/API/Element/tagName)                       |
+| [Entity](/es/docs/DOM/Entity)                                   | nombre de entity                                                                      |
+| [EntityReference](/es/docs/DOM/EntityReference)                 | nombre de la identidad de referencia                                                  |
+| [Notation](/es/docs/DOM/Notation)                               | nombre de la notación                                                                 |
+| [ProcessingInstruction](/es/docs/Web/API/ProcessingInstruction) | igual que [`ProcessingInstruction.target`](/es/docs/DOM/ProcessingInstruction.target) |
+| Text                                                            | "#text"                                                                               |
 
 ### Ejemplo
 
@@ -57,10 +57,10 @@ text_field.value = div1.nodeName;
 
 En XHTML (o alguna otra forma de XML) el valor de `text_field` será "div". Sin embargo, en HTML, el valor de `text_field` sería "DIV".
 
-Ten en cuenta que podríamos haber usado la propiedad [`tagName`](/es/DOM/element.tagName) en su lugar, ya que `nodeName` tiene el mismo valor que `tagName` para un elemento. Presta atención, sin embargo, a que `nodeName` devolverá `#text` para los nodos de texto, mientras que `tagName` devolverá `undefined`.
+Ten en cuenta que podríamos haber usado la propiedad [`tagName`](/es/docs/Web/API/Element/tagName) en su lugar, ya que `nodeName` tiene el mismo valor que `tagName` para un elemento. Presta atención, sin embargo, a que `nodeName` devolverá `#text` para los nodos de texto, mientras que `tagName` devolverá `undefined`.
 
 ### Especificaciones
 
-[DOM Level 2 Core: Node.nodeName](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D095)
+[DOM Level 2 Core: Node.nodeName](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D095)
 
-[DOM Level 3 Core: Node.nodeName](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-F68D095)
+[DOM Level 3 Core: Node.nodeName](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-F68D095)

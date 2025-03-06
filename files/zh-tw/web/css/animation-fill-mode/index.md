@@ -46,7 +46,7 @@ animation-fill-mode: both, forwards, none;
 
   - : 与上面 **`forwards`** 值效果相反，动画执行后停留到第一个关键帧动画，准确说是没有执行动画之前的初始状态。
 
-    【（the animation will apply the values defined in the first relevant [keyframe](/zh-TW/docs/CSS/@keyframes) as soon as it is applied to the target, and retain this during the `"animation-delay"` period.）原文大概意思是会停留第一个关键帧，并会保留 `"animation-delay"` 延迟属性的所设定周期。】
+    【（the animation will apply the values defined in the first relevant [keyframe](/zh-TW/docs/Web/CSS/@keyframes) as soon as it is applied to the target, and retain this during the `"animation-delay"` period.）原文大概意思是会停留第一个关键帧，并会保留 `"animation-delay"` 延迟属性的所设定周期。】
 
     会在延迟之后才开始执行关键帧动画，而不是一开始使用第一帧进行停留，具体可以结合 **`both`** 的例子进行尝试。
 
@@ -109,7 +109,7 @@ You can see the effect of `animation-fill-mode` in the following example. It dem
 }
 ```
 
-查看 [CSS animations](/zh-TW/docs/CSS/CSS_animations) 更多有關的例子
+查看 [CSS animations](/zh-TW/docs/Web/CSS/CSS_animations/Using_CSS_animations) 更多有關的例子
 
 ## 相關鏈接
 

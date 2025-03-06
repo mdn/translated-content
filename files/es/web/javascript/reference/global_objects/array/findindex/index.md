@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 El método **`findIndex()`** devuelve el **índice** del **primer elemento** de un array que cumpla con la función de prueba proporcionada. En caso contrario devuelve -1.
 
-{{EmbedInteractiveExample("pages/js/array-findindex.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.findIndex()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const isLargeNumber = (element) => element > 13;
+
+console.log(array1.findIndex(isLargeNumber));
+// Expected output: 3
+```
 
 Vea también el método {{jsxref("Array.find", "find()")}}, que devuelve el **valor** de un elemento encontrado en el array en lugar de su índice.
 
@@ -52,7 +61,7 @@ Si el parámetro `thisArg` es provisto a findIndex, entonces será usado como el
 
 El rango de elementos procesados por `findIndex()` se establece antes de la primera invocación de la función _`callback`_. Los elementos añadidos al array después de que la llamada a `findIndex()` comience no serán visitados por el `callback`. Si un elemento existente que no ha sido visitado en el array es modificado por el _`callback`_, el valor pasado al _`callback`_ que lo visite será el valor en el momento en que `findIndex()` visite el índice del elemento.
 
-Los elementos [eliminados](/es/docs/Web/JavaScript/Referencia/Operadores/delete) aún son visitados.
+Los elementos [eliminados](/es/docs/Web/JavaScript/Reference/Operators/delete) aún son visitados.
 
 ## Ejemplos
 
@@ -141,7 +150,7 @@ if (!Array.prototype.findIndex) {
 }
 ```
 
-Si necesita soporte para motores de JavaScript obsoletos que no soportan [`Object.defineProperty`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/defineProperty) es mejor no emplear polyfills para métodos `Array.prototype`, ya que no puede hacerlos no-enumerables.
+Si necesita soporte para motores de JavaScript obsoletos que no soportan [`Object.defineProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) es mejor no emplear polyfills para métodos `Array.prototype`, ya que no puede hacerlos no-enumerables.
 
 ## Especificaciones
 

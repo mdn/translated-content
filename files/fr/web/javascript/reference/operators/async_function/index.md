@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Operators/async_function
 Le mot-clé **`async function`** peut être utilisé pour définir une fonction asynchrone au sein d'une expression.
 
 > [!NOTE]
-> Il est aussi possible de définir une fonction asynchrone en utilisant une [instruction `async function`](/fr/docs/Web/JavaScript/Reference/Instructions/async_function).
+> Il est aussi possible de définir une fonction asynchrone en utilisant une [instruction `async function`](/fr/docs/Web/JavaScript/Reference/Statements/async_function).
 
 ## Syntaxe
 
@@ -28,11 +28,11 @@ async function [name]([param1[, param2[, …, paramN]]]) {
   - : Les instructions qui composent le corps de la fonction.
 
 > [!NOTE]
-> À partir d'ES2015 (ES6), il est aussi possible d'utiliser des [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) pour les expressions de fonction asynchrone.
+> À partir d'ES2015 (ES6), il est aussi possible d'utiliser des [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) pour les expressions de fonction asynchrone.
 
 ## Description
 
-Une expression `async function` est très proche, et partage quasiment la même syntaxe avec {{jsxref('Instructions/async_function', 'une instruction async function',"",1)}}. La différence principale entre une expression async `function` et une instruction async `function` est qu'on peut omettre le nom de la fonction dans les expressions `async function`. On peut donc utiliser une expression `async function` afin de créer une _IIFE_ (pour _Immediately Invoked Function Expression_) qu'on appelle au moment de sa définition. Voir également le chapitre sur [les fonctions](/fr/docs/Web/JavaScript/Reference/Fonctions) pour plus d'informations.
+Une expression `async function` est très proche, et partage quasiment la même syntaxe avec {{jsxref('Instructions/async_function', 'une instruction async function',"",1)}}. La différence principale entre une expression async `function` et une instruction async `function` est qu'on peut omettre le nom de la fonction dans les expressions `async function`. On peut donc utiliser une expression `async function` afin de créer une _IIFE_ (pour _Immediately Invoked Function Expression_) qu'on appelle au moment de sa définition. Voir également le chapitre sur [les fonctions](/fr/docs/Web/JavaScript/Reference/Functions) pour plus d'informations.
 
 ## Exemples
 

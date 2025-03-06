@@ -1,11 +1,11 @@
 ---
-title: "::selection"
+title: ::selection
 slug: Web/CSS/::selection
 ---
 
 {{CSSRef}}
 
-O [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elementos) CSS **`::selection`** aplica estilos para partes do documento que foram selecionadas pelo usuário (tal como clicar e arrastar o ponteiro do mouse através de um texto.
+O [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elements) CSS **`::selection`** aplica estilos para partes do documento que foram selecionadas pelo usuário (tal como clicar e arrastar o ponteiro do mouse através de um texto.
 
 ```css
 ::selection {

@@ -34,7 +34,7 @@ slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 
 ### XHTML
 
-如果你的網頁使用 [XHTML](/zh-TW/docs/XHTML) 並在 `Content-Type` HTTP 標頭使用 `application/xhtml+xml` MIME 類型，你不需要使用 DOCTYPE 啟動標準模式，因為這種文件會永遠使用標準模式。不過請注意服務頁面使用 `application/xhtml+xml` 會令 Internet Explorer 8 出於未知格式之故出現下載對話框，支持 XHTML 的第一個 Internet Explorer 版本是 Internet Explorer 9。
+如果你的網頁使用 [XHTML](/zh-TW/docs/Glossary/XHTML) 並在 `Content-Type` HTTP 標頭使用 `application/xhtml+xml` MIME 類型，你不需要使用 DOCTYPE 啟動標準模式，因為這種文件會永遠使用標準模式。不過請注意服務頁面使用 `application/xhtml+xml` 會令 Internet Explorer 8 出於未知格式之故出現下載對話框，支持 XHTML 的第一個 Internet Explorer 版本是 Internet Explorer 9。
 
 如果你的類 XHTML 網頁使用 `text/html` MIME 類型，瀏覽器會視為 HTML，你就需要 DOCTYPE 啟用標準模式。
 

@@ -42,7 +42,7 @@ L'événement `touchend` est déclenché quand un point de contact est retiré d
 
 ## Exemples
 
-Des exemples d'implémentation de cet événement sont disponibles : [Touch events](/fr/docs/DOM/Touch_events).
+Des exemples d'implémentation de cet événement sont disponibles : [Touch events](/fr/docs/Web/API/Touch_events).
 
 ## Compatibilité des navigateurs
 

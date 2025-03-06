@@ -9,7 +9,7 @@ Représente la zone de stockage `local`. Les éléments stockés `localement` so
 
 Le navigateur peut limiter la quantité de données qu'une extension peut stocker dans la zone de stockage locale :
 
-- Chrome limite l'extension à 5 Mo de données à l'aide de cette API à moins qu'elle ne dispose de [permission "unlimitedStorage"](/fr/Add-ons/WebExtensions/manifest.json/permissions#Unlimited_storage).
+- Chrome limite l'extension à 5 Mo de données à l'aide de cette API à moins qu'elle ne dispose de [permission "unlimitedStorage"](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#unlimited_storage).
 - Firefox vous permet de demander la permission "unlimitedStorage" à partir de la version 56. Il ne limite pas encore la quantité de données que votre extension peut stocker, mais commencera à le faire dans une future version : c'est donc une bonne idée de demander la permission "unlimitedStorage" maintenant, si vous avez l'intention de stocker une grande quantité de données.
 
 Lorsque l'extension est désinstallée, son stockage local associé est effacé.

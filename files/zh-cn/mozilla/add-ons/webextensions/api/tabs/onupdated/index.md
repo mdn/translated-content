@@ -2,7 +2,7 @@
 title: tabs.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
 l10n:
-  sourceCommit: 44c93b0fb4940a9b9b9942a0a6ca28305c62078f
+  sourceCommit: 934dace5fd2f456fb9178b687ad0abb6e4b0a049
 ---
 
 {{AddonSidebar}}
@@ -68,6 +68,7 @@ browser.tabs.onUpdated.hasListener(listener)
         - `"hidden"`
         - `"isArticle"`
         - `"mutedInfo"`
+        - `"openerTabId"`
         - `"pinned"`
         - `"status"`
         - `"title"`
@@ -99,9 +100,11 @@ browser.tabs.onUpdated.hasListener(listener)
 - `hidden` {{optional_inline}}
   - : `boolean`。如果标签页是{{WebExtAPIRef("tabs.hide()", "隐藏的", "", 1)}}，则为 `true`。
 - `isArticle` {{optional_inline}}
-  - : `boolean`。如果标签页是文章，因此可以显示在{{WebExtAPIRef("tabs.toggleReaderMode()", "阅读模式", "", 1)}}中，则为 `true`。
+  - : `boolean`。如果标签页是文章，因此可以显示在[阅读模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode)中，则为 `true`。
 - `mutedInfo` {{optional_inline}}
   - : {{WebExtAPIRef('tabs.MutedInfo')}}。标签页的新静音状态及更改原因。
+- `openerTabId` {{optional_inline}}
+  - : `integer`。打开了当前标签页的标签页的 ID（如果存在）。仅当打开当前标签页的标签页存在且与当前标签页在同一窗口中时，才会出现此属性。
 - `pinned` {{optional_inline}}
   - : `boolean`。标签页的新固定状态。
 - `status` {{optional_inline}}
@@ -139,11 +142,11 @@ browser.tabs.onUpdated.addListener(handleUpdated);
 
 ### 过滤示例
 
-仅当标签页的 `url` 属性[匹配](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `https://developer.mozilla.org/*` 或 `https://mozilla.social/@mdn` 时记录更改：
+仅当标签页的 `url` 属性[匹配](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `https://developer.mozilla.org/*` 或 `https://mastodon.social/@mdn` 时记录更改：
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://mozilla.social/@mdn";
+const pattern2 = "https://mastodon.social/@mdn";
 
 const filter = {
   urls: [pattern1, pattern2],
@@ -174,11 +177,11 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
 browser.tabs.onUpdated.addListener(handleUpdated, filter);
 ```
 
-组合前两个过滤器，仅当标签页的 `pinned` 属性更改且 `url` 属性匹配 `https://developer.mozilla.org/*` 或 `https://mozilla.social/@mdn` 时记录更改：
+组合前两个过滤器，仅当标签页的 `pinned` 属性更改且 `url` 属性匹配 `https://developer.mozilla.org/*` 或 `https://mastodon.social/@mdn` 时记录更改：
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://mozilla.social/@mdn";
+const pattern2 = "https://mastodon.social/@mdn";
 
 const filter = {
   urls: [pattern1, pattern2],
@@ -194,11 +197,11 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
 browser.tabs.onUpdated.addListener(handleUpdated, filter);
 ```
 
-仅当标签页的 `pinned` 属性更改且 `url` 属性[匹配](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `https://developer.mozilla.org/*` 或 `https://mozilla.social/@mdn` 且在事件触发时标签页属于当前浏览器窗口时记录更改：
+仅当标签页的 `pinned` 属性更改且 `url` 属性[匹配](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `https://developer.mozilla.org/*` 或 `https://mastodon.social/@mdn` 且在事件触发时标签页属于当前浏览器窗口时记录更改：
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://mozilla.social/@mdn";
+const pattern2 = "https://mastodon.social/@mdn";
 
 const filter = {
   urls: [pattern1, pattern2],

@@ -271,5 +271,5 @@ Le SVG est alors importé depuis un fichier nommé `resources.svg`, utilisant `c
 ## Voir aussi
 
 - [SVG](/fr/docs/Web/SVG)
-- [SVG Effects for HTML Content](http://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (blog post)
+- [SVG Effects for HTML Content](https://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (blog post)
 - [\[archive.org\] Web Tech Blog » Blog Archive » SVG External Document References](http://web.archive.org/web/20120512132948/https://developer.mozilla.org/web-tech/2008/10/10/svg-external-document-references/)

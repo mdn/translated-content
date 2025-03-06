@@ -20,7 +20,7 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.miterLimit`** 属性用于设置�
 
 ### 使用 `miterLimit` 属性
 
-参见 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)的[应用样式和色彩](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#miterLimit_属性的演示示例)章节获取更多信息。
+参见 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)的[应用样式和色彩](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#miterlimit_属性的演示示例)章节获取更多信息。
 
 ## 规范
 

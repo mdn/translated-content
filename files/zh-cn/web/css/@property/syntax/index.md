@@ -7,7 +7,7 @@ slug: Web/CSS/@property/syntax
 
 **`syntax`** [CSS](/zh-CN/docs/Web/CSS) 描述符在使用{{cssxref("@property")}} {{cssxref("at-rule")}}时是必需的，它描述了该属性所允许的语法结构。
 
-## Syntax
+## 语法
 
 如下是所有的有效 syntax 字符串：
 
@@ -23,7 +23,7 @@ syntax: "*"; /* 任何有效字符 */
 
 ## 取值
 
-规范定义的、受语法支持的字符串。支持的语法是[CSS types](/zh-CN/docs/Web/CSS/CSS_Types)的子集。这些可以单独使用，一些类型也可以结合使用。
+规范定义的、受语法支持的字符串。支持的语法是[CSS types](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)的子集。这些可以单独使用，一些类型也可以结合使用。
 
 - `"<length>"`
   - : 任何有效的 {{cssxref("&lt;length&gt;")}} 值。
@@ -66,7 +66,7 @@ syntax: "*"; /* 任何有效字符 */
 
 为 `--my-color` {{cssxref('--*', '自定义属性')}}添加颜色值类型检测、设置默认值并且设置属性值不允许被继承。
 
-使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('@property')}} [规则](/zh-CN/docs/Web/CSS/At-rule):
+使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('@property')}} [规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule):
 
 ```css
 @property --my-color {
@@ -100,4 +100,4 @@ window.CSS.registerProperty({
 - [CSS 属性与值 API](/zh-CN/docs/Web/API/CSS_Properties_and_值_API)
 - [CSS 绘图 API](/zh-CN/docs/Web/API/CSS_Painting_API)
 - [CSS 类型对象模型](/zh-CN/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/zh-CN/docs/Web/Houdini)
+- [CSS Houdini](/zh-CN/docs/Web/API/Houdini_APIs)

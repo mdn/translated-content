@@ -9,7 +9,7 @@ Parcourez l'onglet vers une nouvelle URL ou modifiez d'autres propriétés de l'
 
 Pour utiliser cette fonction, transmettez l'ID de l'onglet à mettre à jour et un objet `updateProperties` contenant les propriétés que vous souhaitez mettre à jour. Les propriétés qui ne sont pas spécifiées dans `updateProperties` ne sont pas modifiées.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -72,7 +72,7 @@ var updating = browser.tabs.update(
 
 ### Valeur retournée
 
-A [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('tabs.Tab')}} contenant des détails sur l'onglet mis à jour. L'objet {{WebExtAPIRef('tabs.Tab')}} ne contient pas d' `url`, `title` et `favIconUrl` sauf si la permission `"tabs"` a été demandée. Si l'onglet n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
+A [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet {{WebExtAPIRef('tabs.Tab')}} contenant des détails sur l'onglet mis à jour. L'objet {{WebExtAPIRef('tabs.Tab')}} ne contient pas d' `url`, `title` et `favIconUrl` sauf si la permission `"tabs"` a été demandée. Si l'onglet n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
 ## Exemples
 

@@ -76,6 +76,6 @@ formData = new FormData(myForm);
 ## Voir aussi
 
 - {{domxref("XMLHTTPRequest")}}
-- [Manipuler `XMLHttpRequest`](/fr/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Utiliser les objets `FormData`](/fr/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Manipuler `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Utiliser les objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

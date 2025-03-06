@@ -30,7 +30,7 @@ slug: Web/XSLT/Element/text
 
 ### 정의
 
-[XSLT section 7.2, Creating Text](http://www.w3.org/TR/xslt#section-Creating-Text)
+[XSLT section 7.2, Creating Text](https://www.w3.org/TR/xslt#section-Creating-Text)
 
 ### Gecko 지원
 

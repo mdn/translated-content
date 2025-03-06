@@ -42,7 +42,7 @@ slug: Web/CSS/CSS_shapes/Overview_of_shapes
 
 すでに `circle()` が円形のシェイプを作成するのを見てきました。 `ellipse()` は基本的なつぶれた円です。これらの単純なシェイプで対応できない場合は、 `polygon()` を作成して好きなだけ複雑なシェイプにすることができます。
 
-この章の[基本シェイプのガイド](/ja/docs/Web/CSS/CSS_Shapes/Basic_Shapes)で、利用できるそれぞれの基本シェイプとその作成方法を紹介します。
+この章の[基本シェイプのガイド](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes)で、利用できるそれぞれの基本シェイプとその作成方法を紹介します。
 
 ### ボックス値からのシェイプの作成
 
@@ -57,7 +57,7 @@ slug: Web/CSS/CSS_shapes/Overview_of_shapes
 
 {{EmbedGHLiveSample("css-examples/shapes/overview/box.html", '100%', 810)}}
 
-ボックス値についてより詳しく知るには、[ボックス値からのシェイプの作成](/ja/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values)を参照してください。
+ボックス値についてより詳しく知るには、[ボックス値からのシェイプの作成](/ja/docs/Web/CSS/CSS_shapes/From_box_values)を参照してください。
 
 ### 画像からのシェイプの作成
 
@@ -77,7 +77,7 @@ slug: Web/CSS/CSS_shapes/Overview_of_shapes
 
 {{EmbedGHLiveSample("css-examples/shapes/overview/threshold.html", '100%', 820)}}
 
-画像からのシェイプの作成については、このガイドの[画像からのシェイプ](/ja/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)でより深く見てみます。
+画像からのシェイプの作成については、このガイドの[画像からのシェイプ](/ja/docs/Web/CSS/CSS_shapes/Shapes_from_images)でより深く見てみます。
 
 ## `shape-margin` プロパティ
 
@@ -105,7 +105,7 @@ slug: Web/CSS/CSS_shapes/Overview_of_shapes
 
 ## シェイプのための開発者ツール
 
-ブラウザーが CSS シェイプに対応するのと同時に、 Firefox は開発ツール内で[シェイプパスエディター](/ja/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes)を公開しています。このツールはつまり、ページ内にあるシェイプを検査し、値の変更も行います。ポリゴンが正しくない場合は、シェイプエディターを使用して調整してから、新しい値をコピーして CSS に書き戻すことができます。
+ブラウザーが CSS シェイプに対応するのと同時に、 Firefox は開発ツール内で[シェイプパスエディター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)を公開しています。このツールはつまり、ページ内にあるシェイプを検査し、値の変更も行います。ポリゴンが正しくない場合は、シェイプエディターを使用して調整してから、新しい値をコピーして CSS に書き戻すことができます。
 
 シェイプパスエディターは、 Firefox 60 で `clip-path` から生成されるシェイプと共に既定で有効になる予定です。 `shape-outside` で生成されるシェイプを使用することもできますが、 `layout.css.shape-outside.enabled` の設定を有効にした場合のみです。
 

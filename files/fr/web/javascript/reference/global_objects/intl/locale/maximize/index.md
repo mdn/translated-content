@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
 
 La méthode **`Intl.Locale.prototype.maximize()`** permet d'obtenir les valeurs les plus vraisemblantes pour la langue, le script et la région de la locale en fonction des valeurs existantes.
 
-{{EmbedInteractiveExample("pages/js/intl-locale-prototype-maximize.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Locale.prototype.maximize()")}}
+
+```js interactive-example
+const english = new Intl.Locale("en");
+const korean = new Intl.Locale("ko");
+const arabic = new Intl.Locale("ar");
+
+console.log(english.maximize().baseName);
+// Expected output: "en-Latn-US"
+
+console.log(korean.maximize().baseName);
+// Expected output: "ko-Kore-KR"
+
+console.log(arabic.maximize().baseName);
+// Expected output: "ar-Arab-EG"
+```
 
 ## Syntaxe
 
@@ -21,7 +36,7 @@ Une instance {{jsxref("Locale", "Locale")}} dont la propriété `baseName` renvo
 
 ## Description
 
-Il est parfois utile d'identifier les composantes les plus probables d'une locale en fonction d'un identifiant incomplet. Cette méthode utilise un algorithme qui permet de déduire les composantes restantes les plus probables. Par exemple, si on fournit la langue `"en"`, l'algorithme renverra `"en-Latn-US"`, car l'anglais ne s'écrit qu'avec l'alphabet latin et est le plus largement parlé aux États-Unis. La méthode `maximize()` n'opère que sur les composantes principales (langue, script, région) et pas sur les extensions éventuellement indiquées après `"-u"` (dont [`Locale.hourCycle`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale/hourCycle), [`Locale.calendar`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale/calendar) et [`Locale.numeric`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale/numeric) entre autres).
+Il est parfois utile d'identifier les composantes les plus probables d'une locale en fonction d'un identifiant incomplet. Cette méthode utilise un algorithme qui permet de déduire les composantes restantes les plus probables. Par exemple, si on fournit la langue `"en"`, l'algorithme renverra `"en-Latn-US"`, car l'anglais ne s'écrit qu'avec l'alphabet latin et est le plus largement parlé aux États-Unis. La méthode `maximize()` n'opère que sur les composantes principales (langue, script, région) et pas sur les extensions éventuellement indiquées après `"-u"` (dont [`Locale.hourCycle`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle), [`Locale.calendar`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar) et [`Locale.numeric`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric) entre autres).
 
 ## Exemples
 

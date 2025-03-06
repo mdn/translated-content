@@ -20,7 +20,7 @@ doc = window.document;
 
 ### Parámetros
 
-- `doc` es una referencia al objeto del [document](/es/docs/DOM/document).
+- `doc` es una referencia al objeto del [document](/es/docs/Web/API/Document).
 
 ## Example
 
@@ -41,4 +41,4 @@ doc = window.document;
 
 ## Especificación
 
-- [HTML](http://www.whatwg.org/html/#the-window-object)
+- [HTML](https://www.whatwg.org/html/#the-window-object)

@@ -7,13 +7,33 @@ slug: Web/HTML/Element/input/number
 
 {{HTMLElement("input")}} элементы типа **`number`** используются для того, чтобы дать возможность пользователю ввести число. У них есть встроенная валидация, запрещающая вводить нечисловые значения. Браузер может предоставить возможность увеличить или уменьшить значение специальными стрелками, используя мышь или просто двигая пальцем по экрану.
 
-{{EmbedInteractiveExample("pages/tabbed/input-number.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="tentacles">Number of tentacles (10-100):</label>
+
+<input type="number" id="tentacles" name="tentacles" min="10" max="100" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 В браузерах, которые не поддерживают тип `number`, тип `number` приводится к `text`.
 
 | **[Value](#value)**             | A {{jsxref("Number")}} representing a number, or empty                                                                                                                                                                               |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Events**                      | [`change`](/ru/docs/Web/Events/change) and [`input`](/ru/docs/Web/Events/input)                                                                                                                                                      |
+| **Events**                      | [`change`](/ru/docs/Web/API/HTMLElement/change_event) and [`input`](/ru/docs/Web/API/Element/input_event)                                                                                                                            |
 | **Supported Common Attributes** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`list`](/ru/docs/Web/HTML/Element/input#list), [`placeholder`](/ru/docs/Web/HTML/Element/input#placeholder), [`readonly`](/ru/docs/Web/HTML/Element/input#readonly) |
 | **IDL attributes**              | `list`, `value`, `valueAsNumber`                                                                                                                                                                                                     |
 | **Methods**                     | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}                                                                       |
@@ -42,7 +62,7 @@ In addition to the attributes commonly supported by all {{HTMLElement("input")}}
 
 ### `max`
 
-The maximum value to accept for this input. If the [`value`](/ru/docs/Web/HTML/Element/input#value) entered into the element exceeds this, the element fails [constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation). If the value of the `max` attribute isn't a number, then the element has no maximum value.
+The maximum value to accept for this input. If the [`value`](/ru/docs/Web/HTML/Element/input#value) entered into the element exceeds this, the element fails [constraint validation](/ru/docs/Web/HTML/Constraint_validation). If the value of the `max` attribute isn't a number, then the element has no maximum value.
 
 This value must be greater than or equal to the value of the `min` attribute.
 
@@ -244,7 +264,7 @@ input:valid + span:after {
 }
 ```
 
-Here we use the {{cssxref(":invalid")}} and {{cssxref(":valid")}} pseudo classes to display an appropriate invalid or valid icon as generated content on the adjacent {{htmlelement("span")}} element, indicating if the current value is valid. We put it on a separate `<span>` element for added flexibility; some browsers don't display generated content very effectively on some types of form inputs (read for example the section on [`<input type="date">` validation](/ru/docs/Web/HTML/Element/input/date#Validation)).
+Here we use the {{cssxref(":invalid")}} and {{cssxref(":valid")}} pseudo classes to display an appropriate invalid or valid icon as generated content on the adjacent {{htmlelement("span")}} element, indicating if the current value is valid. We put it on a separate `<span>` element for added flexibility; some browsers don't display generated content very effectively on some types of form inputs (read for example the section on [`<input type="date">` validation](/ru/docs/Web/HTML/Element/input/date#validation)).
 
 > [!WARNING]
 > HTML form validation is _not_ a substitute for server-side scripts that ensure that the entered data is in the proper format!
@@ -377,6 +397,6 @@ After declaring a few variables, we add an event listener to the button to contr
 
 ## Смотрите также
 
-- [HTML forms guide](/ru/docs/Learn/HTML/Forms)
+- [HTML forms guide](/ru/docs/Learn/Forms)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/ru/docs/Web/HTML/Element/input/tel)

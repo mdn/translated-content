@@ -11,15 +11,15 @@ Você pode utilizar recursos avançados da API de áudio — que são específic
 
 ## Contexto de Uso
 
-| Conteúdo permitido       | [Transparent content](/pt-BR/docs/HTML/Content_categories#transparent_content), tanto um atributo `src` quanto um ou mais elementos {{ HTMLElement("source") }}, seguidos por um [flow content](/pt-BR/docs/HTML/Content_categories#flow_content) ou [phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content), sem{{ HTMLElement("video") }} ou elementos `<audio>`. |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Omissão de tag           | Nenhuma, tanto as tags iniciais quanto as finais devem estar presentes.                                                                                                                                                                                                                                                                                                              |
-| Elementos pai permitidos | Qualquer elemento que aceite [flow content](/pt-BR/docs/HTML/Content_categories#flow_content), ou qualquer elemento que aceite [phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content).                                                                                                                                                                             |
-| Documento normativo      | [HTML5, section 4.8.7](https://www.w3.org/TR/html5/video.html#audio)                                                                                                                                                                                                                                                                                                                 |
+| Conteúdo permitido       | [Transparent content](/pt-BR/docs/Web/HTML/Content_categories#transparent_content), tanto um atributo `src` quanto um ou mais elementos {{ HTMLElement("source") }}, seguidos por um [flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content) ou [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), sem{{ HTMLElement("video") }} ou elementos `<audio>`. |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Omissão de tag           | Nenhuma, tanto as tags iniciais quanto as finais devem estar presentes.                                                                                                                                                                                                                                                                                                                          |
+| Elementos pai permitidos | Qualquer elemento que aceite [flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), ou qualquer elemento que aceite [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).                                                                                                                                                                                 |
+| Documento normativo      | [HTML5, section 4.8.7](https://www.w3.org/TR/html5/video.html#audio)                                                                                                                                                                                                                                                                                                                             |
 
 ## Atributos
 
-Como todos os elementos HTML, este elemento suporta os [global attributes](/pt-BR/docs/HTML/Global_attributes).
+Como todos os elementos HTML, este elemento suporta os [global attributes](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `autoplay`
   - : Um atributo Booleano; se especificado (mesmo se o valor for "false"!), o áudio iniciará automaticamente assim que possível sem parar de carregar os dados.
@@ -53,7 +53,7 @@ Como todos os elementos HTML, este elemento suporta os [global attributes](/pt-B
     > - O navegador não é forçado pela especifição a seguir o valor desse atributo; é apenas uma sugestão.
 
 - `src`
-  - : A URL do áudio a ser incorporado. Isso é sujeito a [HTTP access controls](/pt-BR/docs/HTTP_access_control). Isto é opcional; ao invés disso você pode usar o elemento [`<source>`](http://developer.mozilla.org/pt-BR/docs/pt-BR/HTML/Element/source) dentro do bloco do áudio para especificar o vídeo a ser incorporado .
+  - : A URL do áudio a ser incorporado. Isso é sujeito a [HTTP access controls](/pt-BR/docs/Web/HTTP/CORS). Isto é opcional; ao invés disso você pode usar o elemento [`<source>`](http://developer.mozilla.org/pt-BR/docs/pt-BR/HTML/Element/source) dentro do bloco do áudio para especificar o vídeo a ser incorporado .
 
 O tempo de compensação (time offset) entre o áudio e o vídeo está especificado como um valor de ponto flutuante (float) representando o número de segundos da compensação.
 
@@ -79,7 +79,7 @@ Reproduz o arquivo de áudio anexado a esse artigo.
 
 ## Interface do DOM
 
-- [HTMLAudioElement](/pt-BR/docs/DOM/HTMLAudioElement)
+- [HTMLAudioElement](/pt-BR/docs/Web/API/HTMLAudioElement)
 
 ## Compatibilidade com navegadores
 
@@ -87,10 +87,10 @@ Reproduz o arquivo de áudio anexado a esse artigo.
 
 ## Veja também
 
-- [Media formats supported by the audio and video elements](/pt-BR/docs/Media_formats_supported_by_the_audio_and_video_elements)
+- [Media formats supported by the audio and video elements](/pt-BR/docs/Web/Media/Formats)
 - [Introducing the audio API extension](/pt-BR/docs/Introducing_the_Audio_API_Extension)
-- [`HTMLAudioElement`](/pt-BR/docs/DOM/HTMLAudioElement)
+- [`HTMLAudioElement`](/pt-BR/docs/Web/API/HTMLAudioElement)
 - [`nsIDOMHTMLMediaElement`](/pt-BR/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement)
 - [`video`](http://developer-new.mozilla.org/pt-BR/docs/HTML/Element/Video)
-- [Using audio and video](/pt-BR/docs/Using_HTML5_audio_and_video)
-- [The `audio` element](http://www.whatwg.org/specs/web-apps/current-work/#audio) (Especificação HTML5)
+- [Using audio and video](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [The `audio` element](https://www.whatwg.org/specs/web-apps/current-work/#audio) (Especificação HTML5)

@@ -7,7 +7,30 @@ slug: Web/HTML/Element/ul
 
 **HTML `<ul>` 요소**는 정렬되지 않은 목록을 나타냅니다. 보통 불릿으로 표현합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/ul.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;ul&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<ul>
+  <li>Milk</li>
+  <li>
+    Cheese
+    <ul>
+      <li>Blue cheese</li>
+      <li>Feta</li>
+    </ul>
+  </li>
+</ul>
+```
+
+```css interactive-example
+li {
+  list-style-type: circle;
+}
+
+li li {
+  list-style-type: square;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -70,7 +93,7 @@ slug: Web/HTML/Element/ul
   - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the {{glossary("user agent")}}, and it doesn't work in all browsers.
 
     > [!WARNING]
-    > Do not use this attribute, as it has been deprecated: use [CSS](/ko/docs/CSS) instead. To give a similar effect as the `compact` attribute, the CSS property {{cssxref("line-height")}} can be used with a value of `80%`.
+    > Do not use this attribute, as it has been deprecated: use [CSS](/ko/docs/Web/CSS) instead. To give a similar effect as the `compact` attribute, the CSS property {{cssxref("line-height")}} can be used with a value of `80%`.
 
 - `type` {{Deprecated_inline}}
 
@@ -82,7 +105,7 @@ slug: Web/HTML/Element/ul
 
     A fourth bullet type has been defined in the WebTV interface, but not all browsers support it: `<code>`triangle`.
 
-    If not present and if no [CSS](/ko/docs/CSS) {{ cssxref("list-style-type") }} property applies to the element, the user agent selects a bullet type depending on the nesting level of the list.
+    If not present and if no [CSS](/ko/docs/Web/CSS) {{ cssxref("list-style-type") }} property applies to the element, the user agent selects a bullet type depending on the nesting level of the list.
 
     > [!WARNING]
     > Do not use this attribute, as it has been deprecated; use the [CSS](/ko/docs/Web/CSS) {{ cssxref("list-style-type") }} property instead.
@@ -175,6 +198,6 @@ slug: Web/HTML/Element/ul
 - `<ol>` 요소와 유용하게 사용할 수 있는 CSS 속성
 
   - 서수를 표현할 방식을 지정하는 {{cssxref("list-style")}} 속성.
-  - 복잡한 중첩 목록을 처리하기 위한 [CSS 카운터](/ko/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+  - 복잡한 중첩 목록을 처리하기 위한 [CSS 카운터](/ko/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
   - 더 이상 사용하지 않는 `compact` 특성을 대체할 수 있는 {{cssxref("line-height")}}
   - 항목의 들여쓰기를 조정하기 위한 {{cssxref("margin")}} 속성.

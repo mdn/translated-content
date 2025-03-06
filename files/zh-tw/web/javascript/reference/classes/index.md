@@ -100,7 +100,7 @@ console.log(square.area); //100
 
 ### 靜態方法(Static methods)
 
-關鍵字 [`static`](/zh-TW/docs/Web/JavaScript/Reference/Classes/static) 定義了一個類別的靜態方法，靜態方法不需要[實體化](/zh-TW/docs/Learn/JavaScript/Objects)它所屬類別的實例就可以被呼叫，它也**無法**被已實體化的類別物件呼叫。靜態方法經常被用來建立給應用程式使用的工具函數。
+關鍵字 [`static`](/zh-TW/docs/Web/JavaScript/Reference/Classes/static) 定義了一個類別的靜態方法，靜態方法不需要[實體化](/zh-TW/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)它所屬類別的實例就可以被呼叫，它也**無法**被已實體化的類別物件呼叫。靜態方法經常被用來建立給應用程式使用的工具函數。
 
 ```js
 class Point {

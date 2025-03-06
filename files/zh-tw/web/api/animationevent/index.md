@@ -7,7 +7,7 @@ slug: Web/API/AnimationEvent
 
 ## 摘要
 
-**`AnimationEvent`** 介面表現提供[動畫](/zh-TW/docs/Web/Guide/CSS/Using_CSS_animations)相關資訊的事件。
+**`AnimationEvent`** 介面表現提供[動畫](/zh-TW/docs/Web/CSS/CSS_animations/Using_CSS_animations)相關資訊的事件。
 
 {{InheritanceDiagram}}
 
@@ -44,5 +44,5 @@ _同時繼承其父{{domxref("事件")}}方法_。
 
 ## 另請參見
 
-- [使用 CSS 動畫](/zh-TW/docs/CSS/Using_CSS_animations)
+- [使用 CSS 動畫](/zh-TW/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - Animation-related CSS properties and at-rules: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.

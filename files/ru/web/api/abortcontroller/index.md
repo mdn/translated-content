@@ -22,7 +22,7 @@ slug: Web/API/AbortController
 ## Методы
 
 - {{domxref("AbortController.abort()")}}
-  - : Прерывает DOM запрос до момента его завершения. Это даёт возможность обрывать [fetch запросы](/ru/docs/Web/API/fetch), потребителей любых ответов с {{domxref("Body")}} и потоки.
+  - : Прерывает DOM запрос до момента его завершения. Это даёт возможность обрывать [fetch запросы](/ru/docs/Web/API/Window/fetch), потребителей любых ответов с {{domxref("Body")}} и потоки.
 
 ## Примеры
 
@@ -30,7 +30,7 @@ slug: Web/API/AbortController
 
 Для начала мы создадим контроллер используя конструктор {{domxref("AbortController.AbortController","AbortController()")}}, затем возьмём ссылку на ассоциированный с ним объект {{domxref("AbortSignal")}} используя свойство {{domxref("AbortController.signal")}}.
 
-При инициализации [fetch запроса](/ru/docs/Web/API/fetch), мы передаём `AbortSignal` в качестве параметра (смотрите ниже `{signal}`). Это ассоциирует сигнал и контроллер с fetch запросом и даёт нам возможность остановить запрос вызовом метода {{domxref("AbortController.abort()")}}, что можно увидеть во втором addEventListener.
+При инициализации [fetch запроса](/ru/docs/Web/API/Window/fetch), мы передаём `AbortSignal` в качестве параметра (смотрите ниже `{signal}`). Это ассоциирует сигнал и контроллер с fetch запросом и даёт нам возможность остановить запрос вызовом метода {{domxref("AbortController.abort()")}}, что можно увидеть во втором addEventListener.
 
 ```js
 var controller = new AbortController();

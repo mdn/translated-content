@@ -34,7 +34,7 @@ Um {{jsxref("TypeError")}}, se o `alvo` não for um {{jsxref("Object")}}.
 
 ## Descrição
 
-O método `Reflect.set` permite que você defina uma propriedade em um objeto. Ele define a propriedade e is like the [property accessor](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax as a function.
+O método `Reflect.set` permite que você defina uma propriedade em um objeto. Ele define a propriedade e is like the [property accessor](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_accessors) syntax as a function.
 
 ## Exemplos
 
@@ -73,4 +73,4 @@ Reflect.getOwnPropertyDescriptor(obj, "undefined");
 ## Veja também
 
 - {{jsxref("Reflect")}}
-- [Property accessors](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Property accessors](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_accessors)

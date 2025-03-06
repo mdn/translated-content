@@ -14,7 +14,7 @@ slug: Web/CSS/color_value
 - HSL 실린더형 좌표계 사용 (`hsl()`, `hsla()`의 함수형 표기법)
 
 > [!NOTE]
-> 이 글은 `<color>` 자료형에 대해 상세히 기술합니다. HTML에서 실제로 색을 쓰는 법이 더 알고 싶으시면 [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/HTML/Applying_color)를 참고하세요.
+> 이 글은 `<color>` 자료형에 대해 상세히 기술합니다. HTML에서 실제로 색을 쓰는 법이 더 알고 싶으시면 [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/CSS/CSS_colors/Applying_color)를 참고하세요.
 
 ## 구문
 
@@ -1199,11 +1199,11 @@ hsla(240 100% 50% / 5%)   /*   5% opaque blue */
 
 ## 보간
 
-애니메이션과 [그레이디언트](/ko/docs/Web/CSS/CSS_Images/Using_CSS_gradients)는 `<color>` 값의 빨강, 초록, 파랑 각 구성 성분을 부동소수점 실수를 사용해 보간합니다. 보간 중 예상하지 못한 무채색이 등장하는걸 방지하기 위해 계산은 [알파 채널을 미리 곱한 sRGBA 색 공간](https://www.gimp.org/docs/plug-in/appendix-alpha.html)에서 수행합니다. 애니메이션에서 보간의 속도는 [타이밍 함수](/ko/docs/Web/CSS/single-transition-timing-function)가 결정합니다.
+애니메이션과 [그레이디언트](/ko/docs/Web/CSS/CSS_images/Using_CSS_gradients)는 `<color>` 값의 빨강, 초록, 파랑 각 구성 성분을 부동소수점 실수를 사용해 보간합니다. 보간 중 예상하지 못한 무채색이 등장하는걸 방지하기 위해 계산은 [알파 채널을 미리 곱한 sRGBA 색 공간](https://www.gimp.org/docs/plug-in/appendix-alpha.html)에서 수행합니다. 애니메이션에서 보간의 속도는 [타이밍 함수](/ko/docs/Web/CSS/easing-function)가 결정합니다.
 
 ## 접근성 고려사항
 
-색을 구별하기 어려운 사람도 있으므로, [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) 권고안은 특정 메시지, 행동, 또는 결과를 나타내는 방법으로 오직 색만 사용하는걸 강력히 반대하고 있습니다. [색과 색상 대비](/ko/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast)를 참고하세요.
+색을 구별하기 어려운 사람도 있으므로, [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) 권고안은 특정 메시지, 행동, 또는 결과를 나타내는 방법으로 오직 색만 사용하는걸 강력히 반대하고 있습니다. [색과 색상 대비](/ko/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast)를 참고하세요.
 
 ## 명세
 
@@ -1217,4 +1217,4 @@ hsla(240 100% 50% / 5%)   /*   5% opaque blue */
 
 - {{Cssxref("opacity")}} 속성으로 요소 자체의 투명도를 바꿀 수 있습니다.
 - `<color>`를 지정할 수 있는 흔히 쓰이는 속성: {{Cssxref("color")}}, {{Cssxref("background-color")}}, {{Cssxref("border-color")}}, {{Cssxref("box-shadow")}}, {{Cssxref("outline-color")}}, {{Cssxref("text-shadow")}}
-- [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/HTML/Applying_color)
+- [CSS로 HTML 요소에 색 입히기](/ko/docs/Web/CSS/CSS_colors/Applying_color)

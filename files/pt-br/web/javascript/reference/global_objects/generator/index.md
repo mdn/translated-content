@@ -92,7 +92,7 @@ console.log(it.next()); // throws StopIteration (Como o generator está fechado)
 - {{jsxref("Statements/Legacy_generator_function", "The legacy generator function", "", 1)}}
 - {{jsxref("Operators/Legacy_generator_function", "The legacy generator function expression", "", 1)}}
 - {{jsxref("StopIteration")}}
-- [The legacy Iterator protocol](/pt-BR/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol)
+- [The legacy Iterator protocol](/pt-BR/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
 
 ### ES6 generators
 
@@ -103,4 +103,4 @@ console.log(it.next()); // throws StopIteration (Como o generator está fechado)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("GeneratorFunction")}}
-- [The Iterator protocol](/pt-BR/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols)

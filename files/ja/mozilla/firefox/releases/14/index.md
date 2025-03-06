@@ -16,7 +16,7 @@ Firefox 14 は 米国時間 2012 年 7 月 17 日にリリースされました�
 
 ### DOM
 
-- [input](/ja/docs/Web/API/HTMLElement/input_event) イベントが [contenteditable](/ja/docs/Web/API/HTMLElement/contentEditable) エディターをホストしている要素および [designMode](/ja/docs/Web/API/Document/designMode) エディターのルート要素上での編集でも発生するようになりました。
+- [input](/ja/docs/Web/API/Element/input_event) イベントが [contenteditable](/ja/docs/Web/API/HTMLElement/contentEditable) エディターをホストしている要素および [designMode](/ja/docs/Web/API/Document/designMode) エディターのルート要素上での編集でも発生するようになりました。
 - {{domxref("DOMException", "DOMException.code")}} は最新の DOM Level 4 仕様に従って非推奨になりました。
 - {{domxref("Range.insertNode()")}} が 折り畳まれた (collapsed) 範囲上で用いられたときに正しく動作するようになりました。
 - {{domxref("BlobBuilder", "MozBlobBuilder")}} インターフェイスが {{domxref("Blob")}} コンストラクターの利用を促すために非推奨になりました。 `MozBlobBuilder` を利用した場合、ウェブコンソールに警告が表示されます。

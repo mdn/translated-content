@@ -166,7 +166,7 @@ Allez voir [notre exemple d'interface d'aide](https://mdn.github.io/dom-examples
 
 ## Masquer les <i lang="en">popovers</i> automatiquement avec un minuteur
 
-Un autre scénario fréquent en JavaScript consiste à masquer un <i lang="en">popover</i> automatiquement après un certain temps. Par exemple, vous pouvez vouloir créer un système de notifications «&nbsp;toast&nbsp;» pour une application qui exécute de multiples actions en arrière plan (par exemple, du téléversement de fichiers multiples) et qui affichera une notification pour chaque action terminée. Pour cela, vous voulez utiliser des <i lang="en">popovers</i> manuels afin d'en afficher plusieurs en même temps et utiliser [`setTimeout()`](/fr/docs/Web/API/setTimeout) pour les supprimer. Une fonction pour gérer ce genre de <i lang="en">popover</i> pourrait ressembler à ceci&nbsp;:
+Un autre scénario fréquent en JavaScript consiste à masquer un <i lang="en">popover</i> automatiquement après un certain temps. Par exemple, vous pouvez vouloir créer un système de notifications «&nbsp;toast&nbsp;» pour une application qui exécute de multiples actions en arrière plan (par exemple, du téléversement de fichiers multiples) et qui affichera une notification pour chaque action terminée. Pour cela, vous voulez utiliser des <i lang="en">popovers</i> manuels afin d'en afficher plusieurs en même temps et utiliser [`setTimeout()`](/fr/docs/Web/API/Window/setTimeout) pour les supprimer. Une fonction pour gérer ce genre de <i lang="en">popover</i> pourrait ressembler à ceci&nbsp;:
 
 ```js
 function makeToast(result) {

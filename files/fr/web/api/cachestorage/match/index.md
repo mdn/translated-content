@@ -7,7 +7,7 @@ slug: Web/API/CacheStorage/match
 
 La fonction **`match()`** de l'interface {{domxref("CacheStorage")}} qu'une {{domxref("Request", "Requête")}} est la clé d'un objet {{domxref("Cache")}} object suivie par un objet {{domxref("CacheStorage")}} et retourne une {{jsxref("Promise", "Promesse")}} qui renvoie la {{domxref("Response", "Réponse")}} correspondante.
 
-Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr/docs/Web/API/caches).
+Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr/docs/Web/API/Window/caches).
 
 Les objets `Cache` sont cherchés par ordre de création.
 
@@ -88,4 +88,4 @@ self.addEventListener("fetch", function (event) {
 
 - [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- [`caches`](/fr/docs/Web/API/caches)
+- [`caches`](/fr/docs/Web/API/Window/caches)

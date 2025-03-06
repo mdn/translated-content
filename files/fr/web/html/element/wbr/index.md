@@ -7,11 +7,29 @@ slug: Web/HTML/Element/wbr
 
 L'élément HTML **`<wbr>`** permet de représenter un emplacement où casser la ligne si nécessaire. Le navigateur pourra alors utiliser cet emplacement pour effectuer un saut de ligne si le texte est trop long et qu'en temps normal, une règle empêche le saut de ligne.
 
-{{EmbedInteractiveExample("pages/tabbed/wbr.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;wbr&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<div id="example-paragraphs">
+  <p>Fernstraßenbauprivatfinanzierungsgesetz</p>
+  <p>Fernstraßen<wbr />bau<wbr />privat<wbr />finanzierungs<wbr />gesetz</p>
+  <p>Fernstraßen&shy;bau&shy;privat&shy;finanzierungs&shy;gesetz</p>
+</div>
+```
+
+```css interactive-example
+#example-paragraphs {
+  background-color: white;
+  overflow: hidden;
+  resize: horizontal;
+  width: 9rem;
+  border: 2px dashed #999;
+}
+```
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes
 

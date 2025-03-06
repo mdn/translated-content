@@ -160,11 +160,11 @@ En 2000, un nouveau modèle pour utiliser HTTP fût conçu : {{glossary("REST", 
 Depuis 2005, le nombre d'APIs ouvertes sur des pages a énormément augmenté. Certaines APIs ont d'ailleurs étendu HTTP via des en-têtes HTTP spécifiques afin de répondre à des besoins particuliers tels que:
 
 - [Évènements générés par le serveur](/fr/docs/Web/API/Server-sent_events), le serveur peut éventuellement pousser des messages au navigateur.
-- [WebSocket](/fr/docs/Web/API/WebSocket_API), un nouveau protocole qui peut être utilisé en passant à une version récente de HTTP.
+- [WebSocket](/fr/docs/Web/API/WebSockets_API), un nouveau protocole qui peut être utilisé en passant à une version récente de HTTP.
 
 ### Relâcher les contraintes du modèle de sécurité du Web
 
-HTTP est indépendant du modèle de sécurité du Web, principalement créé via la _[same-origin policy](/fr/docs/Web/Security/Same-origin_policy)_. En réalité le modèle de sécurité du Web s'est développé après la création de HTTP. D'années en années, il s'est avéré utile de devenir plus tolérant en termes d'origine de contenu, en supprimant certaines restrictions, sous certaines conditions. L'étendue des restrictions levées ainsi que l'application est transmise au client à l'aide d'en-têtes HTTP. Ces en-têtes sont définis au travers des spécifications [Cross-Origin Resource Sharing](/fr/docs/Glossary/CORS) (CORS) ou [Content Security Policy](/fr/docs/Web/Security/CSP) (CSP).
+HTTP est indépendant du modèle de sécurité du Web, principalement créé via la _[same-origin policy](/fr/docs/Web/Security/Same-origin_policy)_. En réalité le modèle de sécurité du Web s'est développé après la création de HTTP. D'années en années, il s'est avéré utile de devenir plus tolérant en termes d'origine de contenu, en supprimant certaines restrictions, sous certaines conditions. L'étendue des restrictions levées ainsi que l'application est transmise au client à l'aide d'en-têtes HTTP. Ces en-têtes sont définis au travers des spécifications [Cross-Origin Resource Sharing](/fr/docs/Glossary/CORS) (CORS) ou [Content Security Policy](/fr/docs/Web/HTTP/CSP) (CSP).
 
 D'autres extensions de HTTP sont apparues, parfois de manière expérimentale. On mentionnera par exemple les en-têtes connus tels : Do Not Track (Ne pas me pister) ({{HTTPHeader("DNT")}}) permettant de contrôler la vie privée, {{HTTPHeader("X-Frame-Options")}}, ou {{HTTPHeader('Upgrade-Insecure-Requests')}} même s'il en existe beaucoup d'autres.
 

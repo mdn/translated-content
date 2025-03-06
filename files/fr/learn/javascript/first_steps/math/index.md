@@ -58,7 +58,7 @@ L'autre bonne nouvelle, c'est que contrairement à d'autres langages de programm
 
 ### Ce ne sont que des nombres pour moi
 
-Amusons‑nous avec quelques nombres pour nous familiariser avec la syntaxe de base dont nous aurons besoin. Entrez les commandes listées ci-dessous dans la [console JavaScript des outils de développement](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools), ou utilisez la simple console intégrée que vous voyez ci-dessous si vous préférez.
+Amusons‑nous avec quelques nombres pour nous familiariser avec la syntaxe de base dont nous aurons besoin. Entrez les commandes listées ci-dessous dans la [console JavaScript des outils de développement](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), ou utilisez la simple console intégrée que vous voyez ci-dessous si vous préférez.
 
 1. Premièrement, déclarons une paire de variables et initialisons‑les respectivement avec un entier et un nombre avec des décimales, puis saisissons les noms des variables à nouveau pour vérifier que tout est correct&nbsp;:
 
@@ -94,7 +94,7 @@ partieDecimaleAdeuxChiffres;
 
 ### Convertir des valeurs en type numérique
 
-Parfois vous pourrez rencontrer un nombre enregistré sous la forme d'une chaîne de caractères, et il sera alors plus difficile d'effectuer des calculs avec. Cela arrive le plus souvent lorsqu'une donnée est entrée dans une entrée de [formulaire](/fr/docs/Learn/Forms), et que le [type de donnée entré est du texte](/fr/docs/Web/HTML/Element/Input/text). Il existe une façon de résoudre ce problème&nbsp;: passer la valeur qu'est la chaîne de caractères au constructeur [`Number()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) pour retourner une version numérique de la même valeur.
+Parfois vous pourrez rencontrer un nombre enregistré sous la forme d'une chaîne de caractères, et il sera alors plus difficile d'effectuer des calculs avec. Cela arrive le plus souvent lorsqu'une donnée est entrée dans une entrée de [formulaire](/fr/docs/Learn/Forms), et que le [type de donnée entré est du texte](/fr/docs/Web/HTML/Element/input/text). Il existe une façon de résoudre ce problème&nbsp;: passer la valeur qu'est la chaîne de caractères au constructeur [`Number()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) pour retourner une version numérique de la même valeur.
 
 Par exemple, essayez de taper ces lignes dans votre console&nbsp;:
 
@@ -181,7 +181,7 @@ Les opérateurs arithmétiques sont les opérateurs de base pour effectuer diver
 > [!NOTE]
 > Vous pourrez parfois voir les puissances calculées à l'aide de la méthode [`Math.pow()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/pow) qui existait avant `**` et qui fonctionne de façon semblable. Ainsi, `Math.pow(7, 3)` exprime `7` à la puissance `3`, ce qui est équivalent à `7**3`, et qui donne `343`.
 
-Nous n'avons certainement pas besoin de vous apprendre les quatre opérations, mais ce serait bien de tester si vous avez bien compris la syntaxe. Entrez les exemples ci‑dessous dans la [console des outils de développement JavaScript](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools).
+Nous n'avons certainement pas besoin de vous apprendre les quatre opérations, mais ce serait bien de tester si vous avez bien compris la syntaxe. Entrez les exemples ci‑dessous dans la [console des outils de développement JavaScript](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
 
 1. Essayez de saisir quelques exemples simples de votre cru, comme&nbsp;:
 
@@ -234,11 +234,11 @@ Si vous voulez contourner les règles de précédence des opérateurs, vous pouv
 Essayez-le et voyez le résultat obtenu.
 
 > [!NOTE]
-> La liste complète de tous les opérateurs JavaScript et de leur précédence peut être trouvée dans [la page de référence sur les expressions et les opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#précédence_des_opérateurs).
+> La liste complète de tous les opérateurs JavaScript et de leur précédence peut être trouvée dans [la page de référence sur les expressions et les opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#pr%c3%a9c%c3%a9dence_des_op%c3%a9rateurs).
 
 ## Opérateurs d'incrémentation et de décrémentation
 
-Quelquefois vous aurez besoin d'ajouter ou retrancher 1 à une valeur de variable de manière répétitive. On effectue commodément cette opération à l'aide des opérateurs d'incrémentation (`++`) ou de décrémentation (`--`). Nous nous sommes servis de `++` dans le jeu «&nbsp;Devinez le nombre&nbsp;» dans notre article [Première plongée dans le JavaScript](/fr/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash) pour ajouter 1 à la variable `guessCount` afin de décompter le nombre de suppositions restantes après chaque tour.
+Quelquefois vous aurez besoin d'ajouter ou retrancher 1 à une valeur de variable de manière répétitive. On effectue commodément cette opération à l'aide des opérateurs d'incrémentation (`++`) ou de décrémentation (`--`). Nous nous sommes servis de `++` dans le jeu «&nbsp;Devinez le nombre&nbsp;» dans notre article [Première plongée dans le JavaScript](/fr/docs/Learn/JavaScript/First_steps/A_first_splash) pour ajouter 1 à la variable `guessCount` afin de décompter le nombre de suppositions restantes après chaque tour.
 
 ```js
 guessCount++;
@@ -304,7 +304,7 @@ x *= y; // x contient maintenant la valeur 12
 ```
 
 > [!NOTE]
-> Il y a des tas d'[autres opérateurs d'affectation disponibles](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#opérateurs_d'affectation), mais ceux‑ci sont les plus courants, à apprendre dès maintenant.
+> Il y a des tas d'[autres opérateurs d'affectation disponibles](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#op%c3%a9rateurs_d'affectation), mais ceux‑ci sont les plus courants, à apprendre dès maintenant.
 
 ## Apprentissage actif&nbsp;: dimensionner la boîte d'un canevas
 
@@ -392,6 +392,6 @@ Dans cet article, nous avons abordé les informations fondamentales concernant l
 Dans l'article suivant, nous étudierons le texte et les façons dont JavaScript nous permet de le manipuler.
 
 > [!NOTE]
-> Si les maths vous plaisent et que vous souhaitez en savoir plus sur la manière dont elles sont implémentées en JavaScript, vous trouverez plus de précisions dans la section principale JavaScript de MDN. Pour commencer, nous vous conseillons [Nombres et dates](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates) et [Expressions et opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators).
+> Si les maths vous plaisent et que vous souhaitez en savoir plus sur la manière dont elles sont implémentées en JavaScript, vous trouverez plus de précisions dans la section principale JavaScript de MDN. Pour commencer, nous vous conseillons [Nombres et dates](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates) et [Expressions et opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators).
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}

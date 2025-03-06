@@ -130,7 +130,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 ## Ver también
 
-- [Formularios HTML](/es/docs/Web/Guide/HTML/Forms).
+- [Formularios HTML](/es/docs/Learn/Forms).
 - El evento [`close`](/es/docs/Web/Reference/Events/close)
 - El evento [`cancel`](/es/docs/Web/Reference/Events/cancel)
 - El pseudo-elemento {{cssxref("::backdrop")}}

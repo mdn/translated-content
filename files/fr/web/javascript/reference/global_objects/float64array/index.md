@@ -17,7 +17,7 @@ new Float64Array(objet);
 new Float64Array(buffer [, positionOctet [, longueur]]);
 ```
 
-Pour plus d'informations sur la syntaxe du constructeur et ses paramètres, voir _[TypedArray](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntaxe)_.
+Pour plus d'informations sur la syntaxe du constructeur et ses paramètres, voir _[TypedArray](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntaxe)_.
 
 ## Propriétés
 
@@ -167,6 +167,6 @@ var dv = new Float64Array([1, 2, 3]);
 
 ## Voir aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

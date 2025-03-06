@@ -19,9 +19,9 @@ O elemento `linearGradient` permite que os autores definam gradientes lineares p
 
 ### Atributos globais
 
-- [Atributos centrais](/pt-BR/SVG/Attribute#Core) »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
-- [Atributos Xlink](/pt-BR/SVG/Attribute#XLink) »
+- [Atributos centrais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
+- [Atributos Xlink](/pt-BR/docs/SVG/Attribute#xlink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -39,7 +39,7 @@ O elemento `linearGradient` permite que os autores definam gradientes lineares p
 
 ## Interface DOM
 
-Este elemento implementa a interface [`SVGLinearGradientElement`](/pt-BR/DOM/SVGLinearGradientElement).
+Este elemento implementa a interface [`SVGLinearGradientElement`](/pt-BR/docs/DOM/SVGLinearGradientElement).
 
 ## Compatibilidade com navegadores
 

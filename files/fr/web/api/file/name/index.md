@@ -62,4 +62,4 @@ function processSelectedFiles(fileInput) {
 
 ## Voir aussi
 
-- [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File/Using_files_from_web_applications)
+- [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications)

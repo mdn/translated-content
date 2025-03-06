@@ -112,7 +112,7 @@ slug: Web/HTML/Attributes/rel/preload
 
 ## 启用 CORS 的获取请求
 
-在预加载启用 [CORS](/zh-CN/docs/Web/HTTP/CORS) 的资源（例如 [`fetch()`](/zh-CN/docs/Web/API/fetch)、[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 或[字体](/zh-CN/docs/Web/CSS/@font-face)）时，需要特别注意在你的 [`<link>`](/zh-CN/docs/Web/HTML/Element/link) 元素上设置 [`crossorigin`](/zh-CN/docs/Web/HTML/Element/link#crossorigin) 属性。该属性需要设置为与资源的 CORS 和凭据模式相匹配，即使获取请求不跨域也需要设置。
+在预加载启用 [CORS](/zh-CN/docs/Web/HTTP/CORS) 的资源（例如 [`fetch()`](/zh-CN/docs/Web/API/Window/fetch)、[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 或[字体](/zh-CN/docs/Web/CSS/@font-face)）时，需要特别注意在你的 [`<link>`](/zh-CN/docs/Web/HTML/Element/link) 元素上设置 [`crossorigin`](/zh-CN/docs/Web/HTML/Element/link#crossorigin) 属性。该属性需要设置为与资源的 CORS 和凭据模式相匹配，即使获取请求不跨域也需要设置。
 
 如上所述，其中一个适用的有趣情况是字体文件。由于各种原因，这些文件必须使用匿名模式的 CORS 进行获取（参见[字体获取要求](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)）。
 

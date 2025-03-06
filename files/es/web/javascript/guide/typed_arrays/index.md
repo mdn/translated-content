@@ -117,7 +117,7 @@ En otras palabras, los dos arreglos se ven simplemente en el mismo búfer de dat
 
 ### Trabajar con complejas estructuras de datos
 
-Al combinar un solo búfer con múltiples vistas de diferentes tipos, comenzando con diferentes desplazamientos en el búfer, puedes interactuar con objetos de datos que contienen múltiples tipos de datos. Esto te permite, por ejemplo, interactuar con complejas estructuras de datos [WebGL](/es/docs/Web/API/WebGL_API), archivos de datos o estructuras C que necesitas utilizar mientras usas [js-ctypes](/es/docs/Web/JavaScript/Typed_arrays).
+Al combinar un solo búfer con múltiples vistas de diferentes tipos, comenzando con diferentes desplazamientos en el búfer, puedes interactuar con objetos de datos que contienen múltiples tipos de datos. Esto te permite, por ejemplo, interactuar con complejas estructuras de datos [WebGL](/es/docs/Web/API/WebGL_API), archivos de datos o estructuras C que necesitas utilizar mientras usas [js-ctypes](/es/docs/Web/JavaScript/Guide/Typed_arrays).
 
 Considera esta estructura C:
 
@@ -162,5 +162,5 @@ normalArray.constructor === Array;
 - [Conseguir ArrayBuffers o arreglos tipados a partir de cadenas codificadas en Base64](/es/docs/Glossary/Base64#appendix.3a_decode_a_base64_string_to_uint8array_or_arraybuffer)
 - [StringView: una representación en C de cadenas basadas en arreglos tipados](/es/docs/Code_snippets/StringView)
 - [Rápida manipulación de píxeles en canvas con arreglos tipados](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays)
-- [Arreglos tipados: Datos binarios en el navegador](http://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
+- [Arreglos tipados: Datos binarios en el navegador](https://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
 - {{Glossary("Endianness")}}

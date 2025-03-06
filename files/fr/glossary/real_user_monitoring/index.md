@@ -11,4 +11,4 @@ Le **Real User Monitoring** ou RUM mesure les performances d'une page à partir 
 
 - [Surveillance des utilisateurs réels (RUM) vs surveillance synthétique](/fr/docs/Web/Performance/Rum-vs-Synthetic)
 - [Surveillance synthétique](/fr/docs/Glossary/Synthetic_monitoring)
-- [Beacon](/fr/docs/Glossary/beacon)
+- [Beacon](/fr/docs/Glossary/Beacon)

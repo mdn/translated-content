@@ -359,7 +359,7 @@ Il a été créé autant de chaînes de 200 pixels qu'il y a de place dans le co
 
 ## Placement sur les lignes
 
-Nous passons maintenant de la création du quadrillage à la mise en place des choses dans celui-ci. Le quadrillage a toujours des fils de chaîne, ils commencent à 1 et sont en relation avec le [«&nbsp;_writing mode_&nbsp;» (mode d'écriture)](/fr/docs/Web/CSS/CSS_Writing_Modes) du document. Ainsi, en anglais, la rangée de la chaîne 1 sera une colonne et se trouvera à gauche du quadrillage et la rangée de la trame sera une ligne 1 en haut. En arabe, la rangée de la chaîne 1 se situera du côté droit, car l'arabe s'écrit de droite à gauche.
+Nous passons maintenant de la création du quadrillage à la mise en place des choses dans celui-ci. Le quadrillage a toujours des fils de chaîne, ils commencent à 1 et sont en relation avec le [«&nbsp;_writing mode_&nbsp;» (mode d'écriture)](/fr/docs/Web/CSS/CSS_writing_modes) du document. Ainsi, en anglais, la rangée de la chaîne 1 sera une colonne et se trouvera à gauche du quadrillage et la rangée de la trame sera une ligne 1 en haut. En arabe, la rangée de la chaîne 1 se situera du côté droit, car l'arabe s'écrit de droite à gauche.
 
 Nous pouvons placer les choses dans ces rangées en indiquant les rangées de début et de fin. Pour ce faire, nous utilisons les propriétés suivantes&nbsp;:
 
@@ -747,7 +747,7 @@ aside {
 
 {{ EmbedLiveSample('', '100%', 600) }}
 
-Si vous utilisez [_Firefox Grid Inspector_ (inspecteur de grilles)](/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) (Inspecteur > Mise en page > Grilles) pour superposer les lignes du quadrillage sur le design, vous verrez comment le quadrillage à 12 colonnes fonctionne.
+Si vous utilisez [_Firefox Grid Inspector_ (inspecteur de grilles)](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) (Inspecteur > Mise en page > Grilles) pour superposer les lignes du quadrillage sur le design, vous verrez comment le quadrillage à 12 colonnes fonctionne.
 
 ![Les lignes d'un quadrillage à 12 colonnes superposées sur notre design.](learn-grids-inspector.png)
 
@@ -761,7 +761,7 @@ Dans cet aperçu, nous avons parcouru les principales caractéristiques de la mi
 
 ## Voir aussi
 
-- [Grilles CSS (CSS Grid)&nbsp;: Guides](/fr/docs/Web/CSS/CSS_Grid_Layout#guides)
-- [Inspecteur de grille CSS&nbsp;: examiner les grilles](/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
+- [Grilles CSS (CSS Grid)&nbsp;: Guides](/fr/docs/Web/CSS/CSS_grid_layout#guides)
+- [Inspecteur de grille CSS&nbsp;: examiner les grilles](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}

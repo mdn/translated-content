@@ -5,7 +5,7 @@ slug: Web/HTML/CORS_enabled_image
 
 HTML предоставляет атрибут [`crossorigin`](/ru/docs/Web/HTML/Element/img#crossorigin) для изображений, которые в сочетании с соответствующим заголовком {{Glossary("CORS")}} позволяют использовать изображения, определённые элементом {{ HTMLElement("img") }}, загруженные из внешних источников, в {{HTMLElement("canvas")}} , как если бы они были загружены из текущего источника.
 
-Дополнительные сведения об использовании атрибута `crossorigin` смотрите в разделе [атрибуты параметров CORS](/ru/docs/Web/HTML/CORS_settings_attributes).
+Дополнительные сведения об использовании атрибута `crossorigin` смотрите в разделе [атрибуты параметров CORS](/ru/docs/Web/HTML/Attributes/crossorigin).
 
 ## Безопасность и испорченные холсты canvas
 
@@ -107,7 +107,7 @@ function imageReceived() {
 
 ## Смотрите также
 
-- [Using Cross-domain images in WebGL and Chrome 13](http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
+- [Using Cross-domain images in WebGL and Chrome 13](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
 - [HTML Specification - the `crossorigin` attribute](http://whatwg.org/html#attr-img-crossorigin)
 - [Веб хранилище (API)](/ru/docs/Web/API/Web_Storage_API)
 

@@ -157,7 +157,7 @@ t2Closure("Hello", { foo: "World" }); // "Hello World!"
 
 ### 原始字串
 
-標籤函數的第一個參數，帶有一個特殊的屬性「 `raw` 」，允許你獲取原始輸入的、未處理任何[轉義序列](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Using_special_characters_in_strings)的字串值。
+標籤函數的第一個參數，帶有一個特殊的屬性「 `raw` 」，允許你獲取原始輸入的、未處理任何[轉義序列](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#using_special_characters_in_strings)的字串值。
 
 ```js
 function tag(strings) {

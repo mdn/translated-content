@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/String/split
 
 La méthode **`split()`** divise une [chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) en une liste ordonnée de sous-chaînes, place ces sous-chaînes dans un tableau et retourne le tableau. La division est effectuée en recherchant un motif ; où le motif est fourni comme premier paramètre dans l'appel de la méthode.
 
-{{EmbedInteractiveExample("pages/js/string-split.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.split()", "taller")}}
+
+```js interactive-example
+const str = "The quick brown fox jumps over the lazy dog.";
+
+const words = str.split(" ");
+console.log(words[3]);
+// Expected output: "fox"
+
+const chars = str.split("");
+console.log(chars[8]);
+// Expected output: "k"
+
+const strCopy = str.split();
+console.log(strCopy);
+// Expected output: Array ["The quick brown fox jumps over the lazy dog."]
+```
 
 ## Syntaxe
 
@@ -28,7 +44,7 @@ str.split([separator[, limit]])
     - Si `separator` est une chaîne vide (`""`), la chaîne `str` est convertie en un tableau de chacun de ses "caractères" UTF-16.
 
     > [!WARNING]
-    > Lorsque une chaîne vide (`""`) est utilisée comme séparateur, la chaîne n'est **pas** divisée par des _caractères perçus par l'utilisateur_ ([grappes de graphèmes](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) ou des caractères unicodes (codepoints), mais par des unités de code UTF-16. Cela détruit les [paires de substituts](http://unicode.org/faq/utf_bom.html#utf16-2). Voir [« Comment obtenir une chaîne de caractères vers un tableau de caractères en JavaScript ? » sur StackOverflow](https://stackoverflow.com/a/34717402).
+    > Lorsque une chaîne vide (`""`) est utilisée comme séparateur, la chaîne n'est **pas** divisée par des _caractères perçus par l'utilisateur_ ([grappes de graphèmes](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) ou des caractères unicodes (codepoints), mais par des unités de code UTF-16. Cela détruit les [paires de substituts](https://unicode.org/faq/utf_bom.html#utf16-2). Voir [« Comment obtenir une chaîne de caractères vers un tableau de caractères en JavaScript ? » sur StackOverflow](https://stackoverflow.com/a/34717402).
 
 - `limit` Facultatif
 
@@ -161,7 +177,7 @@ Ce script affichera :
 ["Hello ", "1", " word. Sentence number ", "2", "."];
 ```
 
-> **Note :** `\d` correspond à la [classe de caractères](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) pour les chiffres compris entre 0 et 9.
+> **Note :** `\d` correspond à la [classe de caractères](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) pour les chiffres compris entre 0 et 9.
 
 ### Inverser une chaîne en utilisant `split()`
 
@@ -200,4 +216,4 @@ Ce script affichera :
 - [`String.prototype.indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)
 - [`String.prototype.lastIndexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf)
 - [`Array.prototype.join()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
-- [Expressions régulières](/fr/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Expressions régulières](/fr/docs/Web/JavaScript/Guide/Regular_expressions)

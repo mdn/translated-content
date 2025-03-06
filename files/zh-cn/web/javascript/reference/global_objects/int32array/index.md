@@ -16,7 +16,7 @@ new Int32Array(object);
 new Int32Array(buffer [, byteOffset [, length]]);
 ```
 
-更多关于构造函数语法和参数的详细信息，请参阅*[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)。*
+更多关于构造函数语法和参数的详细信息，请参阅*[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntax)。*
 
 ## 静态属性
 
@@ -103,6 +103,6 @@ var dv = new Int32Array([1, 2, 3]);
 
 ## 参见
 
-- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

@@ -9,7 +9,7 @@ slug: Web/API/Document_Object_Model
 
 雖然常常使用 JavaScript 來存取 DOM，但它本身並不是 JavaScript 語言的一部分，而且它也可以被其他語言存取（雖然不太常見就是了）。
 
-這裡有一篇 DOM 的[介紹](/zh-TW/docs/DOM/DOM_Reference/Introduction)可供查閱。
+這裡有一篇 DOM 的[介紹](/zh-TW/docs/Web/API/Document_Object_Model/Introduction)可供查閱。
 
 ## DOM 介面
 
@@ -331,4 +331,4 @@ slug: Web/API/Document_Object_Model
 
 ## 相關連結
 
-- [DOM 範例](/zh-TW/docs/DOM/DOM_Reference/Examples)
+- [DOM 範例](/zh-TW/docs/Web/API/Document_Object_Model/Examples)

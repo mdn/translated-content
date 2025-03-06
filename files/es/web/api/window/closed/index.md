@@ -26,7 +26,7 @@ isClosed = windowRef.closed;
 
 ### Cambiar la URL de una ventana desde una ventana emergente
 
-El siguiente ejemplo demuestra cómo una ventana emergente puede cambiar la URL de la ventana que la abrió. Antes de intentar cambiar la URL, verifica que la ventana actual tiene referencia a la ventana que la abrió usando la propiedad [window.opener](/es/docs/DOM/window.opener) y que esa ventana no está cerrada:
+El siguiente ejemplo demuestra cómo una ventana emergente puede cambiar la URL de la ventana que la abrió. Antes de intentar cambiar la URL, verifica que la ventana actual tiene referencia a la ventana que la abrió usando la propiedad [window.opener](/es/docs/Web/API/Window/opener) y que esa ventana no está cerrada:
 
 ```js
 // Verifica que opener existe y no esté cerrado

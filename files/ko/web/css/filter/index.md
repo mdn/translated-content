@@ -1271,4 +1271,4 @@ URL 함수와 SVG 리소스를 사용하는 방법은 다음과 같습니다.
 - [HTML 콘텐츠에 SVG 효과 적용하기](/ko/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
 - {{cssxref("mask")}} 속성
 - [SVG](/ko/docs/Web/SVG)
-- [Understanding CSS filters](http://www.html5rocks.com/en/tutorials/filters/understanding-css/) (HTML5Rocks! 글)
+- [Understanding CSS filters](https://www.html5rocks.com/en/tutorials/filters/understanding-css/) (HTML5Rocks! 글)

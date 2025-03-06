@@ -85,7 +85,7 @@ svg|a:active {
     값 유형: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; 기본 값: 없음; 애니메이션 가능: **아니요**
 - [`rel`](/ko/docs/Web/HTML/Element/a#rel)
   - : 이 속성은 타겟 객체와 링크 객체의 관계를 지정합니다.
-    값 유형: **[\<list-of-Link-Types>](/docs/Web/HTML/Link_types)** ; 기본 값: 없음; 에니메이션 가능: **예**
+    값 유형: **[\<list-of-Link-Types>](/ko/docs/Web/HTML/Attributes/rel)** ; 기본 값: 없음; 에니메이션 가능: **예**
 - {{SVGAttr("target")}}
   - : 연결된 {{Glossary("URL")}}을 표시할 위치입니다.
     값 유형: `_self`|`_parent`|`_top`|`_blank`|**\<name>** ; 기본 값: `_self`; 에니메이션 가능: **예**
@@ -98,15 +98,15 @@ svg|a:active {
 
 ### 전역 속성
 
-- [코어 속성](/ko/docs/Web/SVG/Attribute/Core)
+- [코어 속성](/ko/docs/Web/SVG/Attribute)
   - : 특히: {{SVGAttr('id')}}, {{SVGAttr('lang')}}, {{SVGAttr('tabindex')}}
-- [스타일 속성](/ko/docs/Web/SVG/Attribute/Styling)
+- [스타일 속성](/ko/docs/Web/SVG/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [조건부 처리 속성](/ko/docs/Web/SVG/Attribute/Conditional_Processing)
+- [조건부 처리 속성](/ko/docs/Web/SVG/Attribute)
   - : 특히: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
 - 이벤트 속성
-  - : [전역 이벤트 속성](/ko/docs/Web/SVG/Attribute/Events#global_event_attributes), [문서 요소 이벤트 속성](/ko/docs/Web/SVG/Attribute/Events#document_element_event_attributes), [그래픽 이벤트 속성](/ko/docs/Web/SVG/Attribute/Events#graphical_event_attributes)
-- [프레젠테이션 속성](/ko/docs/Web/SVG/Attribute/Presentation)
+  - : [전역 이벤트 속성](/ko/docs/Web/SVG/Attribute#global_event_attributes), [문서 요소 이벤트 속성](/ko/docs/Web/SVG/Attribute#document_element_event_attributes), [그래픽 이벤트 속성](/ko/docs/Web/SVG/Attribute#graphical_event_attributes)
+- [프레젠테이션 속성](/ko/docs/Web/SVG/Attribute)
   - : 특히: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - XLink 속성
   - : 특히: {{SVGAttr("xlink:title")}}

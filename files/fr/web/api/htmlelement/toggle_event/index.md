@@ -13,7 +13,7 @@ L'évènement **`toggle`** de l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLE
 - Si le <i lang="en">popover</i> passe d'affiché à masqué, alors `event.oldState` sera `open` et `event.newState` sera `closed`.
 
 > [!NOTE]
-> L'évènement `toggle` se comporte différemment lorsqu'il est déclenché sur les éléments [`<details>`](/fr/docs/Web/HTML/Element/details). Dans ce cas, il ne concerne pas les <i lang="en">popovers</i>, et se déclenche plutôt lorsque l'état `open`/`closed` d'un élément `<details>` est modifié. Consultez [la page sur l'évènement `toggle` de `HTMLDetailsElement`](/fr/docs/Web/API/HTMLDetailsElement/toggle_event) pour plus de détails.
+> L'évènement `toggle` se comporte différemment lorsqu'il est déclenché sur les éléments [`<details>`](/fr/docs/Web/HTML/Element/details). Dans ce cas, il ne concerne pas les <i lang="en">popovers</i>, et se déclenche plutôt lorsque l'état `open`/`closed` d'un élément `<details>` est modifié. Consultez [la page sur l'évènement `toggle` de `HTMLDetailsElement`](/fr/docs/Web/API/HTMLElement/toggle_event) pour plus de détails.
 
 ## Syntaxe
 

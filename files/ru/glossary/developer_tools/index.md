@@ -11,7 +11,7 @@ slug: Glossary/Developer_Tools
 
 ### Technical reference
 
-- [Firefox Developer Tools](/ru/docs/Tools) on MDN
+- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) on MDN
 - [Firebug](https://getfirebug.com/) (former developer tool for Firefox)
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/) on chrome.com
 - [Safari Web Inspector](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007874-CH1-SW1) on apple.com

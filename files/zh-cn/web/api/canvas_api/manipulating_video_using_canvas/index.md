@@ -7,7 +7,7 @@ slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 
 通过在一个 canvas（画布）上结合 video 元素功能，你可以实时地操纵视频数据来合成各种视觉特效到正在呈现的视频画面中。本教程示范如何使用 JavaScript 代码执行色度键控（也被称为“绿屏效果”）。
 
-[查看该实例](/samples/video/chroma-key/index.xhtml)。
+[查看该实例](https://mdn.dev/archives/media/samples/video/chroma-key/index.xhtml)。
 
 ## 文档内容
 
@@ -149,8 +149,8 @@ processor.computeFrame = function computeFrame() {
 
 这随视频播放而被反复实现，所以一帧接着一帧被处理并带有色键效果被显示出来。
 
-[查看该实例](/samples/video/chroma-key/index.xhtml)。
+[查看该实例](https://mdn.dev/archives/media/samples/video/chroma-key/index.xhtml)。
 
 ## 参见
 
-- [使用音频和视频](/zh-CN/docs/Web/Guide/HTML/Using_HTML5_audio_and_video)
+- [使用音频和视频](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)

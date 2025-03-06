@@ -131,7 +131,7 @@ input:invalid {
 - [`max`](/zh-CN/docs/Web/HTML/Attributes/max)
 - [`min`](/zh-CN/docs/Web/HTML/Attributes/min)
 - [约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)
-- [表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
+- [表单验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{domxref('validityState.stepMismatch')}}
 - {{cssxref(':out-of-range')}}
 - {{htmlelement('input')}}

@@ -9,7 +9,7 @@ HTML5 游戏在发布和分发上具有极大的优势--你可以通过网络自
 
 ## 游戏发布
 
-你按照一个或两个教程（[1](/zh-CN/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript)，[2](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser)）制作了一个 HTML5 游戏。[Game distribution](/zh-CN/docs/Games/Publishing_games/Game_distribution)提供了你发布游戏时所需的一切知识。包括如何在线托管游戏，提交游戏到开放的游戏市场，或封闭的游戏市场，如 Google Play，iOS App Store.
+你按照一个或两个教程（[1](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)，[2](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser)）制作了一个 HTML5 游戏。[Game distribution](/zh-CN/docs/Games/Publishing_games/Game_distribution)提供了你发布游戏时所需的一切知识。包括如何在线托管游戏，提交游戏到开放的游戏市场，或封闭的游戏市场，如 Google Play，iOS App Store.
 
 ## 游戏推广
 

@@ -23,7 +23,7 @@ l10n:
   - : **교차 사이트 HTTP 요청**은 요청을 생성한 리소스의 도메인과 **다른 도메인**의 리소스에 대한 HTTP 요청입니다. 예를 들면, 도메인 A(`http://domaina.example/`)의 HTML 페이지가 `img` 요소를 통해 도메인 B(`http://domainb.foo/image.jpg`)의 이미지에 대한 요청을 생성하는 것입니다. 오늘날의 웹 페이지가 CSS 스타일시트, 이미지, 스크립트 등을 포함하는 교차-사이트 리소스을 로드하는 것을 아주 흔하게 볼 수 있습니다. CORS를 통해 웹 개발자는 그들의 사이트가 교차-사이트 요청에 대해 어떻게 반응할지 제어할 수 있습니다.
 - [클라이언트 힌트](/ko/docs/Web/HTTP/Client_hints)
   - : **클라이언트 힌트**는 서버가 클라이언트로부터 디바이스, 네트워크, 사용자 및 사용자 에이전트별 기본 설정에 대한 정보를 사전에 요청하기 위해 사용할 수 있는 응답 헤더의 집합입니다. 이에 따라 서버는 클라이언트가 제공하는 정보에 기반하여 전송할 리소스를 결정할 수 있습니다.
-- [HTTP의 진화](/ko/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
+- [HTTP의 진화](/ko/docs/Web/HTTP/Evolution_of_HTTP)
   - : 초기 버전의 HTTP와 현대의 HTTP/2 및 새로 등장한 HTTP/3 이후 버전 간의 변경 사항에 대한 간략한 설명입니다.
 - [Mozilla 웹 보안 가이드라인](https://wiki.mozilla.org/Security/Guidelines/Web_Security)
   - : 안전한 웹 어플리케이션을 만들어주는 운영 팀에 도움이 될 만한 힌트 모음입니다.

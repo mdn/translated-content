@@ -11,7 +11,7 @@ slug: Web/CSS/background-image
 
 在绘制时，图像以 z 方向堆叠的方式进行。先指定的图像会在之后指定的图像上面绘制。因此指定的第一个图像“最接近用户”。
 
-然后元素的边框 [border](/zh-CN/CSS/border) 会在它们之上被绘制，而 {{cssxref("background-color")}} 会在它们之下绘制。图像的绘制与盒子以及盒子的边框的关系，需要在 CSS 属性{{cssxref("background-clip")}} 和 {{cssxref("background-origin")}} 中定义。
+然后元素的边框 [border](/zh-CN/docs/Web/CSS/border) 会在它们之上被绘制，而 {{cssxref("background-color")}} 会在它们之下绘制。图像的绘制与盒子以及盒子的边框的关系，需要在 CSS 属性{{cssxref("background-clip")}} 和 {{cssxref("background-origin")}} 中定义。
 
 如果一个指定的图像无法被绘制 (比如，被指定的 URI 所表示的文件无法被加载)，浏览器会将此情况等同于其值被设为 `none`。
 
@@ -25,12 +25,9 @@ slug: Web/CSS/background-image
 可以提供由逗号分隔的多个值来指定多个背景图像：
 
 ```css
-background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 0, 0.5),
-    rgba(0, 0, 255, 0.5)
-  ),
-  url("catfront.png");
+background-image:
+  linear-gradient(to bottom, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)),
+  url("cat-front.png");
 ```
 
 ### 取值
@@ -38,7 +35,7 @@ background-image: linear-gradient(
 - `none`
   - : 是一个表示无背景图的关键字。
 - `<image>`
-  - : {{cssxref("&lt;image&gt;")}} 用来标记将要显示的图片。支持[多背景](/zh-CN/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds)设置，背景之间以逗号隔开。
+  - : {{cssxref("&lt;image&gt;")}} 用来标记将要显示的图片。支持[多背景](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)设置，背景之间以逗号隔开。
 
 ### 正规语法
 
@@ -74,7 +71,7 @@ div {
 }
 
 .catsandstars {
-  background-image: url("startransparent.gif"), url("catfront.png");
+  background-image: url("star-transparent.gif"), url("cat-front.png");
   background-color: transparent;
 }
 ```

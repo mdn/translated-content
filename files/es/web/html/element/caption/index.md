@@ -13,9 +13,9 @@ slug: Web/HTML/Element/caption
 
     **Crea una caja**: .
 
-    **Está definido como**: Elemento [para tablas](/es/HTML/Elemento/Tipos_de_elementos#para_tablas).
+    **Está definido como**: Elemento [para tablas](/es/docs/HTML/Elemento/Tipos_de_elementos#para_tablas).
 
-    **Puede contener**: Texto y/o cero o más elementos [en línea](/es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).
+    **Puede contener**: Texto y/o cero o más elementos [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_l.c3.adnea).
 
 #### Atributos
 

@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/setZoom
 
 Effectue un zoom sur l'onglet spécifié.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -27,7 +27,7 @@ var zooming = browser.tabs.setZoom(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) cela sera accompli sans arguments après que le facteur de zoom ait été changé. Si l'onglet n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) cela sera accompli sans arguments après que le facteur de zoom ait été changé. Si l'onglet n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
 ## Exemples
 

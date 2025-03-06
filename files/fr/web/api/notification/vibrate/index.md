@@ -15,7 +15,7 @@ Notification.vibrate;
 
 ### Valeur
 
-Un [modèle de vibration](/fr/docs/Web/Guide/API/Vibration#Vibration_patterns), tel que spécifié dans la spécification de l'{{domxref ("Vibration_API", "Api de Vibration")}}.
+Un [modèle de vibration](/fr/docs/Web/API/Vibration_API#vibration_patterns), tel que spécifié dans la spécification de l'{{domxref ("Vibration_API", "Api de Vibration")}}.
 
 ## Spécifications
 

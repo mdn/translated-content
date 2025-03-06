@@ -1,5 +1,5 @@
 ---
-title: ":has()"
+title: :has()
 slug: Web/CSS/:has
 ---
 
@@ -16,7 +16,7 @@ h1:has(+ p) {
 }
 ```
 
-`:has()` 伪类的[优先级](/zh-CN/docs/Web/CSS/Specificity)计算方法与 {{CSSxRef(":is", ":is()")}} 和 {{CSSxRef(":not", ":not()")}} 相同：以其参数中具体的选择器进行计算。
+`:has()` 伪类的[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)计算方法与 {{CSSxRef(":is", ":is()")}} 和 {{CSSxRef(":not", ":not()")}} 相同：以其参数中具体的选择器进行计算。
 
 ## 语法
 
@@ -197,6 +197,6 @@ h3 {
 
 - [`:is()`](/zh-CN/docs/Web/CSS/:is)、[`:where()`](/zh-CN/docs/Web/CSS/:where)、[`:not()`](/zh-CN/docs/Web/CSS/:not)
 - [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)
-- [CSS 组合符](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+- [CSS 组合符](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Combinators)
 - [选择器列表](/zh-CN/docs/Web/CSS/Selector_list)
-- [使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)

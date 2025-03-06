@@ -11,14 +11,14 @@ Firefox 63 は、米国時間 2018 年 10 月 23 日 にリリースされまし
 
 ### 開発者ツール
 
-- [インスペクター](/ja/docs/Tools/Page_Inspector) のフォントタブに、ページ上のフォントの設定を簡単に確認および編集できるエディターを追加しました。詳しくは [フォントを編集する](/ja/docs/Tools/Page_Inspector/How_to/Edit_fonts) をご覧ください。
-- [アクセシビリティインスペクター](/ja/docs/Tools/Accessibility_inspector) をデフォルトで有効化しました ([Firefox バグ 1482454](https://bugzil.la/1482454))。
-- [アクセシビリティインスペクター](/ja/docs/Tools/Accessibility_inspector) でオブジェクトにマウスポインターを載せると、[アイテムを強調表示](/ja/docs/Tools/Accessibility_inspector#Highlighting_of_UI_items) して、ページ上の情報バーにアイテムのロールや名前を表示するようになりました ([Firefox バグ 1473030](https://bugzil.la/1473030))。
-- [ウェブコンソール](/ja/docs/Tools/Web_Console) で、コマンドラインをコンソール出力の直後に表示するようになりました ([Firefox バグ 1136299](https://bugzil.la/1136299))。
-- [ネットワークモニター](/ja/docs/Tools/Network_Monitor) で、URL が既知のトラッカーに属することを示すアイコンを追加しました。[セキュリティアイコン](/ja/docs/Tools/Network_Monitor/request_list#Security_icons) をご覧ください ([Firefox バグ 1333994](https://bugzil.la/1333994))。
+- [インスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) のフォントタブに、ページ上のフォントの設定を簡単に確認および編集できるエディターを追加しました。詳しくは [フォントを編集する](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_fonts/index.html) をご覧ください。
+- [アクセシビリティインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) をデフォルトで有効化しました ([Firefox バグ 1482454](https://bugzil.la/1482454))。
+- [アクセシビリティインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) でオブジェクトにマウスポインターを載せると、[アイテムを強調表示](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#highlighting_of_ui_items) して、ページ上の情報バーにアイテムのロールや名前を表示するようになりました ([Firefox バグ 1473030](https://bugzil.la/1473030))。
+- [ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) で、コマンドラインをコンソール出力の直後に表示するようになりました ([Firefox バグ 1136299](https://bugzil.la/1136299))。
+- [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) で、URL が既知のトラッカーに属することを示すアイコンを追加しました。[セキュリティアイコン](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#security_icons) をご覧ください ([Firefox バグ 1333994](https://bugzil.la/1333994))。
 - `devtools.aboutdebugging.showSystemAddons` の既定値が `false` になりました。これは、`about:debugging` ページにシステムアドオンを表示しないことを意味します。`about:config` で、この設定を変更できます ([Firefox バグ 1425347](https://bugzil.la/1425347))。
-- [レスポンシブデザインモード](/ja/docs/Tools/Responsive_Design_Mode) のツールバーをわかりやすくして、ビューポートを左寄せにするオプションを追加しました。
-- ページインスペクターに、カスタム要素の [クラス定義へのリンク](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Custom_element_definition) を表示する機能を追加しました ([Firefox バグ 1443923](https://bugzil.la/1443923))。
+- [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) のツールバーをわかりやすくして、ビューポートを左寄せにするオプションを追加しました。
+- ページインスペクターに、カスタム要素の [クラス定義へのリンク](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#custom_element_definition) を表示する機能を追加しました ([Firefox バグ 1443923](https://bugzil.la/1443923))。
 
 ### HTML
 
@@ -31,16 +31,16 @@ Firefox 63 は、米国時間 2018 年 10 月 23 日 にリリースされまし
 ### CSS
 
 - {{Cssxref(":defined")}} 擬似クラスをサポートしました ([Firefox バグ 1331334](https://bugzil.la/1331334))。
-- [Flexbox レイアウト](/ja/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox#The_gap_properties) で {{cssxref("row-gap")}}、{{cssxref("column-gap")}}、{{cssxref("gap")}} をサポートしました ([Firefox バグ 1398483](https://bugzil.la/1398483))。
+- [Flexbox レイアウト](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#the_gap_properties) で {{cssxref("row-gap")}}、{{cssxref("column-gap")}}、{{cssxref("gap")}} をサポートしました ([Firefox バグ 1398483](https://bugzil.la/1398483))。
 - [webkit 接頭辞付きの画素密度に関する @media クエリー](/ja/docs/Web/CSS/@media/-webkit-device-pixel-ratio) のサポートを再び有効化しました ([Firefox バグ 1444139](https://bugzil.la/1444139))。
 - Firefox で [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) の {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("align-items")}}、{{cssxref("justify-content")}} プロパティをサポートしました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
 - {{cssxref("offset-path")}} の `path()` 関数を実装しました ([Firefox バグ 1429298](https://bugzil.la/1429298))。
-- [Media Queries Level 4 仕様で改良された構文](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#level_4_での構文の拡張) を実装しました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
+- [Media Queries Level 4 仕様で改良された構文](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#level_4_での構文の拡張) を実装しました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
 - `offset-*` プロパティを {{cssxref("inset-block-start")}}、{{cssxref("inset-block-end")}}、{{cssxref("inset-inline-start")}}、{{cssxref("inset-inline-end")}} に改名しました ([Firefox バグ 1464782](https://bugzil.la/1464782))。
 - [prefers-reduced-motion](/ja/docs/Web/CSS/@media/prefers-reduced-motion) メディア特性をサポートしました ([Firefox バグ 1365045](https://bugzil.la/1365045)、[Firefox バグ 1475462](https://bugzil.la/1475462))。
 - {{cssxref("resize")}} プロパティにフロー関連の値 (`block`、`inline`) を追加しました ([Firefox バグ 1464786](https://bugzil.la/1464786))。
 - {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("justify-content")}} で、`safe` および `unsafe` 値の flexbox レイアウトを実装しました ([Firefox バグ 1297774](https://bugzil.la/1297774))。
-- 適切な [論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties) がアニメーション可能になりました ([Firefox バグ 1309752](https://bugzil.la/1309752))。
+- 適切な [論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values) がアニメーション可能になりました ([Firefox バグ 1309752](https://bugzil.la/1309752))。
 
 #### 廃止
 
@@ -54,7 +54,7 @@ _変更なし。_
 
 - {{jsxref("Symbol.prototype.description")}} プロパティを実装しました ([Firefox バグ 1472170](https://bugzil.la/1472170))。
 - {{JSxRef("Object.fromEntries()")}} メソッドを実装しました ([Firefox バグ 1469019](https://bugzil.la/1469019))。
-- undefined であるオブジェクトのプロパティにアクセスしようとしたときのエラーメッセージを改善しました。`x` が undefined である状況で `x.y` にアクセスしようとすると、コンソールが従来の `TypeError: x is undefined` に代わって、より具体的な [`x is undefined; can't access its "y" property`](/ja/docs/Web/JavaScript/Reference/Errors/cant_access_property) を返します ([Firefox バグ 1259822](https://bugzil.la/1259822))。
+- undefined であるオブジェクトのプロパティにアクセスしようとしたときのエラーメッセージを改善しました。`x` が undefined である状況で `x.y` にアクセスしようとすると、コンソールが従来の `TypeError: x is undefined` に代わって、より具体的な [`x is undefined; can't access its "y" property`](/ja/docs/Web/JavaScript/Reference/Errors/Unexpected_type) を返します ([Firefox バグ 1259822](https://bugzil.la/1259822))。
 
 #### 廃止
 
@@ -212,7 +212,7 @@ _変更なし。_
 - {{WebExtAPIRef("menus.create()")}} で非表示のメニュー項目を作成できるようになりました。また、{{WebExtAPIRef("menus.update()")}} で項目の表示・非表示を切り替えられるようになりました ([Firefox バグ 1482529](https://bugzil.la/1482529))。
 - {{WebExtAPIRef("menus")}} API を使用して作成した項目でアクセスキーをサポートしました ([Firefox バグ 1320462](https://bugzil.la/1320462))。
 - {{WebExtApiRef("menus.create()")}} および {{WebExtApiRef("menus.update()")}} の `targetUrlPatterns` 引数で、通常はマッチパターンで許可されないものを含む任意の URL スキームをサポートしました ([Firefox バグ 1280370](https://bugzil.la/1280370))。
-- タブのコンテキストメニューがクリックされたとき、そのタブが現在アクティブなタブではない場合でも ["activeTab" パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) が認められるようになりました ([Firefox バグ 1446956](https://bugzil.la/1446956))。
+- タブのコンテキストメニューがクリックされたとき、そのタブが現在アクティブなタブではない場合でも ["activeTab" パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) が認められるようになりました ([Firefox バグ 1446956](https://bugzil.la/1446956))。
 
 #### その他
 

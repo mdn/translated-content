@@ -11,15 +11,15 @@ slug: Web/HTML/Element/frameset
 
   - : **Sus etiquetas son**: `<frameset>` y `</frameset>` (ambas obligatorias).
 
-    - **Está definido como**: Elemento [para marcos](/es/HTML/Elemento/Tipos_de_elementos#paramarcos).
+    - **Está definido como**: Elemento [para marcos](/es/docs/HTML/Elemento/Tipos_de_elementos#paramarcos).
 
       - : Con un doctype para marcos está definido como contenido de html.
 
     **Crea una caja**: .
 
-    **Puede y debe contener**: Uno o más elementos [frameset](/es/HTML/Elemento/frameset) y [frame](/es/HTML/Elemento/frame). además puede contener un elemento [noframes](/es/HTML/Elemento/noframes).
+    **Puede y debe contener**: Uno o más elementos [frameset](/es/docs/Web/HTML/Element/frameset) y [frame](/es/docs/Web/HTML/Element/frame). además puede contener un elemento [noframes](/es/docs/Web/HTML/Element/noframes).
 
-    **Debe ser contenido por**: Elementos [html](/es/HTML/Elemento/html)
+    **Debe ser contenido por**: Elementos [html](/es/docs/Web/HTML/Element/html)
 
 #### Atributos
 

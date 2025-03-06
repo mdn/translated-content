@@ -7,7 +7,32 @@ slug: Web/HTML/Element/cite
 
 L'élément **`<cite>`** contient le titre d'une œuvre telle qu'un livre, une chanson, un film, une sculpture… Cet élément doit inclure le titre de l'œuvre. Cette référence peut-être abrégée en accord avec les conventions d'usages pour l'ajout des métadonnées de citations.
 
-{{EmbedInteractiveExample("pages/tabbed/cite.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;cite&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<figure>
+  <blockquote>
+    <p>
+      It was a bright cold day in April, and the clocks were striking thirteen.
+    </p>
+  </blockquote>
+  <figcaption>
+    First sentence in
+    <cite
+      ><a href="http://www.george-orwell.org/1984/0.html"
+        >Nineteen Eighty-Four</a
+      ></cite
+    >
+    by George Orwell (Part 1, Chapter 1).
+  </figcaption>
+</figure>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+cite {
+}
+```
 
 <table class="properties">
   <tbody>

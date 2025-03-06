@@ -137,7 +137,7 @@ document.getElementById("size-16").onclick = size16;
 
 JavaScript 並沒有的提供原生的方法完成這種事，不過它藉由閉包來模擬私有方法。私有方法不只能限制程式碼的存取，它還提供了強而有力的方式來管理全域命名空間，避免非必要的方法弄亂公開介面。
 
-以下展示如何使用閉包來定義一個能夠訪問私有函式與變數的公開函式。這種閉包的用法稱為模組設計模式([module pattern](http://www.google.com/search?q=javascript+module+pattern))。
+以下展示如何使用閉包來定義一個能夠訪問私有函式與變數的公開函式。這種閉包的用法稱為模組設計模式([module pattern](https://www.google.com/search?q=javascript+module+pattern))。
 
 ```js
 var counter = (function () {
@@ -410,4 +410,4 @@ function MyObject(name, message) {
 }).call(MyObject.prototype);
 ```
 
-在前例中，所有物件可共享繼承的原型，物件創立時也無須每次都定義方法。詳細資料請參見[深入了解物件模型](/zh-TW/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)。
+在前例中，所有物件可共享繼承的原型，物件創立時也無須每次都定義方法。詳細資料請參見[深入了解物件模型](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。

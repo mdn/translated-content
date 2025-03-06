@@ -26,7 +26,7 @@ webkitGetAsEntry()
 
 ## 示例
 
-在此示例中，创建了一个放置区域，该放置区域[`drop`](/zh-CN/docs/Web/Events/drop)通过扫描已删除的文件和目录来响应事件，从而输出分层目录列表。
+在此示例中，创建了一个放置区域，该放置区域[`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event)通过扫描已删除的文件和目录来响应事件，从而输出分层目录列表。
 
 ### HTML
 
@@ -113,7 +113,7 @@ function scanFiles(item, container) {
 
 之后，[`directoryReader.readEntries()`](/zh-CN/docs/Web/API/FileSystemDirectoryReader/readEntries)调用读取目录中的所有条目。反过来，这些都被传递到递归调用`scanFiles()`以处理它们。其中任何文件都只是插入到列表中; 将任何目录插入到列表中，并在下面添加列表层次结构的新级别，依此类推。
 
-然后是事件处理程序。首先，我们阻止[`dragover`](/zh-CN/docs/Web/Events/dragover)事件由默认处理程序处理，以便我们的 drop 区域可以接收 drop：
+然后是事件处理程序。首先，我们阻止[`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)事件由默认处理程序处理，以便我们的 drop 区域可以接收 drop：
 
 ```js
 dropzone.addEventListener(
@@ -125,7 +125,7 @@ dropzone.addEventListener(
 );
 ```
 
-当然，关闭所有事件的事件处理程序是事件的处理程序[`drop`](/zh-CN/docs/Web/Events/drop)：
+当然，关闭所有事件的事件处理程序是事件的处理程序[`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event)：
 
 ```js
 dropzone.addEventListener(
@@ -171,7 +171,6 @@ dropzone.addEventListener(
 ## 参见
 
 - [文件和目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
-- [文件系统 API 简介](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("DataTransferItem")}}
 - {{domxref("FileSystemEntry")}}，{{domxref("FileSystemFileEntry")}}和{{domxref("FileSystemDirectoryEntry")}}
 - 活动：[`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)和[`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event)

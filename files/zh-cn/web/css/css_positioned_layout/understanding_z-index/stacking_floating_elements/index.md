@@ -129,9 +129,9 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elem
 
 ### 相关链接
 
-- [未使用 z-index 的层叠](/zh-CN/CSS/Understanding_z-index/Stacking_without_z-index)：默认层叠规则
-- [使用 z-index 的层叠](/zh-CN/CSS/Understanding_z-index/Using_z-index)：使用 z-index 来改变默认层叠顺序
-- [层叠上下文](/zh-CN/CSS/Understanding_z-index/Stacking_context)：关于层叠上下文的注意事项
+- [未使用 z-index 的层叠](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index)：默认层叠规则
+- [使用 z-index 的层叠](/zh-CN/docs/CSS/Understanding_z-index/Using_z-index)：使用 z-index 来改变默认层叠顺序
+- [层叠上下文](/zh-CN/docs/CSS/Understanding_z-index/Stacking_context)：关于层叠上下文的注意事项
 - [层叠上下文示例 1](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1)：两层嵌套标签的 HTML 中，z-index 作用在内层标签上
 - [层叠上下文示例 2](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2)：两层嵌套标签的 HTML 中，z-index 作用在内外层标签上
 - [层叠上下文示例 3](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3)：三层嵌套标签的 HTML 中，z-index 作用在中间层标签上
@@ -139,5 +139,5 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elem
 ### 原始文档信息
 
 - 作者：Paolo Lombardi
-- 该文档的英文原始版本是从我为 [YappY](http://www.yappy.it) 写的意大利文章翻译而来的，该文章版权为 [Creative Commons: Attribution-Sharealike license](http://creativecommons.org/licenses/by-sa/2.0/)
+- 该文档的英文原始版本是从我为 [YappY](http://www.yappy.it) 写的意大利文章翻译而来的，该文章版权为 [Creative Commons: Attribution-Sharealike license](https://creativecommons.org/licenses/by-sa/2.0/)
 - 上次更新于：2014 年 11 月 3 日

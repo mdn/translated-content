@@ -7,7 +7,7 @@ slug: Web/HTML/Constraint_validation
 
 创建 web 表单始终是一个复杂的任务。仅仅组装表单是容易的，但是检查每一个字段的值是否有效并且一致是一件更加困难的事情，而如何告知用户错误所在可能会令人头痛。[HTML5](/zh-CN/docs/Glossary/HTML5) 引入了表单相关的一些新机制：它为 {{ HTMLElement("input") }} 元素和*约束验证*增加了一些新的语义类型，使得客户端检查表单内容变得容易。基本上，通过设置一些新的属性，常用的约束条件可以无需 JavaScript 代码而检测到；对于更复杂的约束条件的校验可以尝试使用约束验证 API。
 
-对于这些概念的基本介绍和示例，参阅[表单数据校验教程](/zh-CN/docs/Learn/Forms/Form_validation)一页的介绍。
+对于这些概念的基本介绍和示例，参阅[表单数据校验教程](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)一页的介绍。
 
 > [!NOTE]
 > HTML 约束验证并不能移除*服务端*验证的需要。尽管无效的表单请求要少得多，但无效的表单请求仍然可能被发送，例如被试图欺骗你的网络应用的坏人发送。因此，你需要始终在服务端验证输入约束，其方式与在客户端所做的一致。
@@ -23,10 +23,10 @@ slug: Web/HTML/Constraint_validation
 
 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性中的固有约束有：
 
-| Input 类型                                                         | 约束描述                                                                                                                       | 相关违约                                                                    |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| [`<input type="URL">`](/zh-CN/docs/Web/HTML/Element/input/url)     | 值必须为 [URL 现行标准](https://url.spec.whatwg.org/)定义的绝对 [URL](/zh-CN/docs/Learn/Common_questions/What_is_a_URL) 地址。 | **[TypeMismatch](/zh-CN/docs/Web/API/ValidityState/typeMismatch)** 约束违反 |
-| [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email) | 该值必须是一个语法上有效的电子邮件地址，其格式一般为 `username@hostname.tld`，但也可以是本地的，如 `username@hostname`。       | **[TypeMismatch](/zh-CN/docs/Web/API/ValidityState/typeMismatch)** 约束违反 |
+| Input 类型                                                         | 约束描述                                                                                                                                          | 相关违约                                                                    |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| [`<input type="URL">`](/zh-CN/docs/Web/HTML/Element/input/url)     | 值必须为 [URL 现行标准](https://url.spec.whatwg.org/)定义的绝对 [URL](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL) 地址。 | **[TypeMismatch](/zh-CN/docs/Web/API/ValidityState/typeMismatch)** 约束违反 |
+| [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email) | 该值必须是一个语法上有效的电子邮件地址，其格式一般为 `username@hostname.tld`，但也可以是本地的，如 `username@hostname`。                          | **[TypeMismatch](/zh-CN/docs/Web/API/ValidityState/typeMismatch)** 约束违反 |
 
 对于这两种输入类型，如果设置了 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性，可以设置几个值，作为一个逗号分隔的列表。如果其中任何一个不满足这里描述的条件，就会触发 **TypeMismatch** 约束的违反。
 

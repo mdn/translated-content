@@ -8,7 +8,7 @@ slug: Web/API/Window/clearImmediate
 Cette méthode efface l'action spécifiée par {{DOMxRef("window.setImmediate")}}.
 
 > [!NOTE]
-> Cette méthode ne devrait pas devenir standard et n'est implémentée que par les versions récentes d'Internet Explorer et de Node.js 0.10+. Il rencontre la résistance à la fois de [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) et [Webkit](http://code.google.com/p/chromium/issues/detail?id=146172) (Google/Apple).
+> Cette méthode ne devrait pas devenir standard et n'est implémentée que par les versions récentes d'Internet Explorer et de Node.js 0.10+. Il rencontre la résistance à la fois de [Gecko](https://bugzilla.mozilla.org/show_bug.cgi?id=686201) (Firefox) et [Webkit](https://code.google.com/p/chromium/issues/detail?id=146172) (Google/Apple).
 
 ## Syntaxe
 

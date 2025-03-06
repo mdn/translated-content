@@ -167,5 +167,5 @@ article {
 
 ## 参见
 
-- [多栏布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [多栏布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
 - [使用 CSS 片段分割盒子](https://www.smashingmagazine.com/2019/02/css-fragmentation/)

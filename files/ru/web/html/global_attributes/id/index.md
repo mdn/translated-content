@@ -5,9 +5,30 @@ slug: Web/HTML/Global_attributes/id
 
 {{HTMLSidebar("Global_attributes")}}
 
-**{{glossary("global attribute", "Глобальный атрибут")}} `id`** устанавливает элементу уникальный идентификатор (ID), имя которого должно быть уникальным в документе (на странице). Его назначением является идентификация элемента при связывании (использование [идентификатора фрагмента](/ru/docs/Web/URI#Fragment)), скриптинге или стилизации (с помощью {{glossary("CSS")}}).
+**{{glossary("global attribute", "Глобальный атрибут")}} `id`** устанавливает элементу уникальный идентификатор (ID), имя которого должно быть уникальным в документе (на странице). Его назначением является идентификация элемента при связывании (использование [идентификатора фрагмента](/ru/docs/Web/URI#fragment)), скриптинге или стилизации (с помощью {{glossary("CSS")}}).
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-id.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: id", "tabbed-shorter")}}
+
+```html interactive-example
+<p>A normal, boring paragraph. Try not to fall asleep.</p>
+
+<p id="exciting">The most exciting paragraph on the page. One of a kind!</p>
+```
+
+```css interactive-example
+#exciting {
+  background: linear-gradient(to bottom, #ffe8d4, #f69d3c);
+  border: 1px solid #696969;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px black;
+}
+
+#exciting:before {
+  content: "ℹ️";
+  margin-right: 5px;
+}
+```
 
 Значение этого атрибута "непрозрачная" строка: это означает, что веб-автор не должен использовать его для передачи какой-либо информации. Особое значение, например семантическое, получать из этой строки не надо.
 
@@ -26,5 +47,5 @@ slug: Web/HTML/Global_attributes/id
 
 ## Смотрите также
 
-- Все [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
+- Все [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 - {{domxref("Element.id")}} отражает этот атрибут.

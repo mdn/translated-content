@@ -37,7 +37,7 @@ Content-Security-Policy: base-uri <source> <source>;
 
 ### ソース
 
-このディレクティブは、他の CSP ディレクティブと同じように、引数のソース値のほとんどを使用します。 [CSP のソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#ソース)。
+このディレクティブは、他の CSP ディレクティブと同じように、引数のソース値のほとんどを使用します。 [CSP のソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#ソース)。
 
 なお、 `base-uri` ではいくつかの値、たとえば `'unsafe-inline'` や `'strict-dynamic'` などのキーワードは意味がありません。
 

@@ -38,7 +38,7 @@ Les événements ont trois fonctions :
     <!---->
 
     - `attachInfo`
-      - : [`object`](#attachInfo). ID de la nouvelle fenêtre, et index de l'onglet à l'intérieur.
+      - : [`object`](#attachinfo). ID de la nouvelle fenêtre, et index de l'onglet à l'intérieur.
 
 ## Objets supplémentaires
 

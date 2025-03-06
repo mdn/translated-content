@@ -92,6 +92,6 @@ mesHeaders.get("Content-Type"); // doit retourner 'text/xml'
 
 ## Voir aussi
 
-- [API ServiceWorker](/fr/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/fr/docs/Web/HTTP/Access_control_CORS)
+- [API ServiceWorker](/fr/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/fr/docs/Web/HTTP/CORS)
 - [HTTP](/fr/docs/Web/HTTP)

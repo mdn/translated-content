@@ -8,7 +8,7 @@ slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 有许多 Web 技术可以在客户端（即本地磁盘上）存储这种或那种数据。浏览器计算分配给 Web 数据存储的空间大小以及达到该限制时要删除的内容的过程并不简单，并且浏览器之间有所不同。本文介绍了浏览器如何确定要清除的本地内容以及何时释放所需的本地存储空间。
 
 > [!NOTE]
-> 对于大多数现代浏览器，以下信息应该相当准确，但在已知的情况下会调出特定于浏览器的信息。Opera 和 Chrome 在所有情况下都应该表现相同。[Opera Mini](http://www.opera.com/mobile/mini)（仍然是基于 presto 的，服务器端呈现）不会在客户端上存储任何数据。
+> 对于大多数现代浏览器，以下信息应该相当准确，但在已知的情况下会调出特定于浏览器的信息。Opera 和 Chrome 在所有情况下都应该表现相同。[Opera Mini](https://www.opera.com/mobile/mini)（仍然是基于 presto 的，服务器端呈现）不会在客户端上存储任何数据。
 
 ## 什么技术使用浏览器数据存储？
 
@@ -27,7 +27,7 @@ slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 
 源的“最后访问时间”会更新，当其中任何一个被激活/停用时——所有这些源下的配额客户端的数据会被回收。
 
-在 Chrome/Opera 中，Quota Management API 处理 [AppCache](/zh-CN/docs/Web/HTML/Using_the_application_cache)、[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)、WebSQL 和 [File System API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction) 的配额管理。
+在 Chrome/Opera 中，Quota Management API 处理 [AppCache](/zh-CN/docs/Web/HTML/Using_the_application_cache)、[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)、WebSQL 和[文件系统 API](/zh-CN/docs/Web/API/File_System_API) 的配额管理。
 
 ## 数据存储的不同类型
 

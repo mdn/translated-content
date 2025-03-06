@@ -15,7 +15,7 @@ WebRTC의 구현이 계속 진화하고 있으며 각 브라우저마다 다른 
 
 Adapter.js는 shim 및 polyfill을 사용하여 다양한 플랫폼에서 WebRTC 구현 간의 다양한 차이점을 없애줍니다. 또한 WebRTC 개발 프로세스를 전체적으로 쉽게 수행 할 수 있도록 접두사와 다른 이름 지정의 차이점을 처리하며보다 광범위하게 호환되는 결과를 제공합니다. 라이브러리는 [NPM 패키지](https://www.npmjs.com/package/webrtc-adapter)로도 제공됩니다.
 
-Adapter.js에 대한 자세한 내용은 [Improving compatibility using WebRTC adapter.js](/ko/docs/Web/API/WebRTC_API/adapter.js)를 참조하십시오.
+Adapter.js에 대한 자세한 내용은 [Improving compatibility using WebRTC adapter.js](/ko/docs/Web/API/WebRTC_API#상호_운용성)를 참조하십시오.
 
 ## WebRTC 개념 및 사용법
 
@@ -119,12 +119,12 @@ WebRTC API에는 보안 및 식별자를 관리하기위한 여러 인터페이�
 
 ## Tutorials
 
-- [Improving compatibility using WebRTC adapter.js](/ko/docs/Web/API/WebRTC_API/adapter.js)
+- [Improving compatibility using WebRTC adapter.js](/ko/docs/Web/API/WebRTC_API#상호_운용성)
   - : The WebRTC organization [provides on GitHub the WebRTC adapter](https://github.com/webrtc/adapter/) to work around compatibility issues in different browsers' WebRTC implementations. The adapter is a JavaScript shim which lets your code to be written to the specification so that it will "just work" in all browsers with WebRTC support.
-- [Taking still photos with WebRTC](/ko/docs/Web/API/WebRTC_API/Taking_still_photos)
+- [Taking still photos with WebRTC](/ko/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos)
   - : This article shows how to use WebRTC to access the camera on a computer or mobile phone with WebRTC support and take a photo with it.
 - [A simple RTCDataChannel sample](/ko/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
-  - : The {{domxref("RTCDataChannel")}} interface is a feature which lets you open a channel between two peers over which you may send and receive arbitrary data. The API is intentionally similar to the [WebSocket API](/ko/docs/Web/API/WebSocket_API), so that the same programming model can be used for each.
+  - : The {{domxref("RTCDataChannel")}} interface is a feature which lets you open a channel between two peers over which you may send and receive arbitrary data. The API is intentionally similar to the [WebSocket API](/ko/docs/Web/API/WebSockets_API), so that the same programming model can be used for each.
 
 ## Resources
 
@@ -132,13 +132,13 @@ WebRTC API에는 보안 및 식별자를 관리하기위한 여러 인터페이�
 
 #### WebRTC-proper protocols
 
-- [Application Layer Protocol Negotiation for Web Real-Time Communications](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-alpn/)
-- [WebRTC Audio Codec and Processing Requirements](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-audio/)
-- [RTCWeb Data Channels](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-channel/)
-- [RTCWeb Data Channel Protocol](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-protocol/)
-- [Web Real-Time Communication (WebRTC): Media Transport and Use of RTP](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-rtp-usage/)
-- [WebRTC Security Architecture](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-security-arch/)
-- [Transports for RTCWEB](http://datatracker.ietf.org/doc/draft-ietf-rtcweb-transports/)
+- [Application Layer Protocol Negotiation for Web Real-Time Communications](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-alpn/)
+- [WebRTC Audio Codec and Processing Requirements](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-audio/)
+- [RTCWeb Data Channels](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-channel/)
+- [RTCWeb Data Channel Protocol](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-protocol/)
+- [Web Real-Time Communication (WebRTC): Media Transport and Use of RTP](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-rtp-usage/)
+- [WebRTC Security Architecture](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-security-arch/)
+- [Transports for RTCWEB](https://datatracker.ietf.org/doc/draft-ietf-rtcweb-transports/)
 
 #### Related supporting protocols
 
@@ -153,7 +153,7 @@ WebRTC API에는 보안 및 식별자를 관리하기위한 여러 인터페이�
 
 {{Specifications}}
 
-In additions to these specifications defining the API needed to use WebRTC, there are several protocols, listed under [resources](#Protocols).
+In additions to these specifications defining the API needed to use WebRTC, there are several protocols, listed under [resources](#protocols).
 
 <h2 class="Related_Topics" id="See_also">See also</h2>
 

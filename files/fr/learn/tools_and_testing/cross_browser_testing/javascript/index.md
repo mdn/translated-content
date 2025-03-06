@@ -307,7 +307,7 @@ Prenons un exemple où nous utiliserons une prothèse pour l'API Fetch et une au
    });
    ```
 
-5. Si vous chargez alors la page dans un navigateur qui n'est pas compatible avec [l'API Fetch](/fr/docs/Web/API/fetch), vous devriez néanmoins voir l'image apparaître&nbsp;!
+5. Si vous chargez alors la page dans un navigateur qui n'est pas compatible avec [l'API Fetch](/fr/docs/Web/API/Window/fetch), vous devriez néanmoins voir l'image apparaître&nbsp;!
    ![Un titre "fetch basic example" suivi d'une photo de fleurs violettes](fetch-image.jpg)
 
 > [!NOTE]
@@ -340,7 +340,7 @@ function navigateurPrendEnCharge() {
 }
 ```
 
-Nous testons ici si l'objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) et si la fonction [`fetch()`](/fr/docs/Web/API/fetch) existent dans le navigateur. Si c'est le cas pour les deux, la fonction renvoie `true`. Dans le cas contraire, on exécute le code situé dans l'autre branche conditionnelle, qui appelle la fonction `chargerScript()`, qui s'occupe de charger les <i lang="en">polyfills</i> dans la page avant d'appeler `main()` lorsque le chargement est terminé. `chargerScript()` est implémentée ainsi&nbsp;:
+Nous testons ici si l'objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) et si la fonction [`fetch()`](/fr/docs/Web/API/Window/fetch) existent dans le navigateur. Si c'est le cas pour les deux, la fonction renvoie `true`. Dans le cas contraire, on exécute le code situé dans l'autre branche conditionnelle, qui appelle la fonction `chargerScript()`, qui s'occupe de charger les <i lang="en">polyfills</i> dans la page avant d'appeler `main()` lorsque le chargement est terminé. `chargerScript()` est implémentée ainsi&nbsp;:
 
 ```js
 function chargerScript(src, done) {

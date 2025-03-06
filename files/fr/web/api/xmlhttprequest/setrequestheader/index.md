@@ -43,5 +43,5 @@ XMLHttpRequest.setRequestHeader(header, value);
 
 ## Voir aussi
 
-- [Using XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML in XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [Using XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [HTML in XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)

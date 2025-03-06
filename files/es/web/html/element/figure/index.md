@@ -14,20 +14,20 @@ El _elemento HTML_ \<figure> representa contenido independiente, a menudo con un
 
 ### Contexto de uso
 
-| Tipo                           | Seccionador raíz                                                                                                                                                                                         |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido            | Un elemento {{ HTMLElement ("figcaption") }}, seguido por [contenido dinámico](/en/HTML/Content_categories#flow_content) , o contenido dinámico seguido por un elemento{{ HTMLElement ("figcaption") }}. |
-| Omisión de etiquetas           | Ninguna, tanto la etiqueta inicial como la etiqueta de cierre son obligatorias                                                                                                                           |
-| Elementos primarios permitidos | Cualquier elemento que acepte elementos dinámicos.                                                                                                                                                       |
-| Documento normativo            | [HTML 5, sección 4.5.11](http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-mark-element)                                                                         |
+| Tipo                           | Seccionador raíz                                                                                                                                                                                                  |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido            | Un elemento {{ HTMLElement ("figcaption") }}, seguido por [contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content) , o contenido dinámico seguido por un elemento{{ HTMLElement ("figcaption") }}. |
+| Omisión de etiquetas           | Ninguna, tanto la etiqueta inicial como la etiqueta de cierre son obligatorias                                                                                                                                    |
+| Elementos primarios permitidos | Cualquier elemento que acepte elementos dinámicos.                                                                                                                                                                |
+| Documento normativo            | [HTML 5, sección 4.5.11](https://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-mark-element)                                                                                 |
 
 ### Atributos
 
-Este elemento no tiene atributos que no sean los [atributos globales](/en/HTML/Global_attributes), comunes a todos los elementos.
+Este elemento no tiene atributos que no sean los [atributos globales](/es/docs/Web/HTML/Global_attributes), comunes a todos los elementos.
 
 ### Interfaz DOM
 
-Este elemento implementa la interfaz [`HTMLElement`](/en/DOM/element).
+Este elemento implementa la interfaz [`HTMLElement`](/es/docs/Web/API/Element).
 
 ### Consulta también
 

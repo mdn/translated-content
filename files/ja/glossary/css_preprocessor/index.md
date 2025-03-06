@@ -11,8 +11,8 @@ CSS プリプロセッサーを使うためには、 CSS コンパイラーを�
 
 1. 有名な CSS プリプロセッサーの例
 
-   1. [Sass](http://sass-lang.com/)
-   2. [LESS](http://lesscss.org/)
+   1. [Sass](https://sass-lang.com/)
+   2. [LESS](https://lesscss.org/)
    3. [Stylus](http://stylus-lang.com/)
    4. [PostCSS](http://postcss.org/)
 

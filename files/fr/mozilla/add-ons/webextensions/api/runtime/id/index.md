@@ -15,7 +15,7 @@ var myAddonId = browser.runtime.id;
 
 ### Value
 
-Une `chaîne` représentant l'ID du module complémentaire. Si l'extension a spécifié un ID dans la clé manifest.json de ses [applications](/fr/Add-ons/WebExtensions/manifest.json/applications), `runtime.id` contiendra la valeur. SInon `runtime.id` contiendra l'ID généré pour l'extension.
+Une `chaîne` représentant l'ID du module complémentaire. Si l'extension a spécifié un ID dans la clé manifest.json de ses [applications](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings), `runtime.id` contiendra la valeur. SInon `runtime.id` contiendra l'ID généré pour l'extension.
 
 ## Compatibilité des navigateurs
 

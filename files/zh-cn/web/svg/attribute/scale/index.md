@@ -13,10 +13,10 @@ slug: Web/SVG/Attribute/scale
 
 ## 使用说明
 
-| 类别   | _无_                                        |
-| ------ | ------------------------------------------- |
-| 值     | [\<number>](/zh-CN/SVG/Content_type#Number) |
-| 可变性 | Yes                                         |
+| 类别   | _无_                                             |
+| ------ | ------------------------------------------------ |
+| 值     | [\<number>](/zh-CN/docs/SVG/Content_type#number) |
+| 可变性 | Yes                                              |
 
 ## 示例
 

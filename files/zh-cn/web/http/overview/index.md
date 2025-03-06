@@ -135,7 +135,7 @@ HTTP 请求的一个例子：
 
 请求由以下元素组成：
 
-- HTTP [方法](/zh-CN/docs/Web/HTTP/Methods)，通常是由一个动词，像 {{HTTPMethod("GET")}}、{{HTTPMethod("POST")}} 等，或者一个名词，像 {{HTTPMethod("OPTIONS")}}、{{HTTPMethod("HEAD")}} 等，来定义客户端执行的动作。典型场景有：客户端意图获取某个资源（使用 `GET`）；发送 [HTML 表单](/zh-CN/docs/Learn/Forms)的参数值（使用 `POST`）；以及其他情况下需要的那些其他操作。
+- HTTP [方法](/zh-CN/docs/Web/HTTP/Methods)，通常是由一个动词，像 {{HTTPMethod("GET")}}、{{HTTPMethod("POST")}} 等，或者一个名词，像 {{HTTPMethod("OPTIONS")}}、{{HTTPMethod("HEAD")}} 等，来定义客户端执行的动作。典型场景有：客户端意图获取某个资源（使用 `GET`）；发送 [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)的参数值（使用 `POST`）；以及其他情况下需要的那些其他操作。
 - 要获取的那个资源的路径——去除了当前上下文中显而易见的信息之后的 URL，比如说，它不包括{{glossary("protocol","协议")}}（`http://`）、{{glossary("domain","域名")}}（这里是 `developer.mozilla.org`），或是 TCP 的{{glossary("port","端口")}}（这里是 `80`）。
 - HTTP 协议版本号。
 - 为服务端表达其他信息的可选[标头](/zh-CN/docs/Web/HTTP/Headers)。

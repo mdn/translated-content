@@ -103,7 +103,7 @@ Mozilla/5.0 (Linux; <Android Version> <Build Tag etc.>) AppleWebKit/<WebKit Rev>
 
 ## Klar for Android
 
-バージョン 4.1 以降、 Klar for Android は [Focus for Android](#focus_for_android) と同じ UA 文字列を使用します。バージョン 4.1 より前では、 _Klar/\<version>_ _product/version_ のトークンを送っていました。.
+バージョン 4.1 以降、 Klar for Android は [Focus for Android](#focus_for_android) と同じ UA 文字列を使用します。バージョン 4.1 より前では、 _Klar/\<version>_ _product/version_ のトークンを送っていました。
 
 | Klar のバージョン (レンダリングエンジン) | ユーザーエージェント文字列                                                                                                             |
 | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |

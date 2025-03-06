@@ -7,7 +7,35 @@ slug: Web/HTML/Element/input/tel
 
 **`tel`** 类型的 {{HTMLElement("input")}} 元素用于让用户输入和编辑电话号码。不同于 [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email) 和 [`<input type="url">`](/zh-CN/docs/Web/HTML/Element/input/url)，在提交表单之前，输入值不会被自动验证为特定格式，因为世界各地的电话号码格式差别很大。
 
-{{EmbedInteractiveExample("pages/tabbed/input-tel.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;tel&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="phone">
+  Enter your phone number:<br />
+  <small>Format: 123-456-7890</small>
+</label>
+
+<input
+  type="tel"
+  id="phone"
+  name="phone"
+  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+  required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 尽管 `tel` 类型的输入在功能上和 `text` 输入一致，但它们确实有用；其中最明显的就是移动浏览器（特别是在手机上），可能会选择提供为输入电话号码而优化的自定义键盘。使用电话号码的特定输入类型也使添加自定义验证和处理电话号码更方便。
 
@@ -67,17 +95,17 @@ list 属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素�
 
 用户可以在电话号码字段中输入的最大字符数（作为 UTF-16 编码单位）。这必须是一个不低于 0 的整数值。如果没有指定 `maxlength`，或者指定了一个无效的值，则电话号码字段没有最大长度。这个值也必须大于或等于 `minlength` 的值。
 
-如果输入字段的文本长度大于 `maxlength` UTF-16 编码单位长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。
+如果输入字段的文本长度大于 `maxlength` UTF-16 编码单位长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。
 
 ### minlength
 
 用户可以在电话号码字段中输入的最小字符数（作为 UTF-16 编码单位）。这必须是一个小于或等于 `maxlength` 所指定的值的非负整数。如果没有指定 `minlength`，或者指定了一个无效的值，电话号码的输入就没有最小长度。
 
-如果输入字段的文本长度小于 `maxlength` UTF-16 编码单位长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。
+如果输入字段的文本长度小于 `maxlength` UTF-16 编码单位长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。
 
 ### pattern
 
-如果指定了 `pattern` 属性，则该 input 的 [`value`](/zh-CN/docs/Web/HTML/Global_attributes#value) 将必须要满足其所指定的正则表达式，以通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。它必须是一个合法的 {{jsxref("RegExp")}} 类型 JavaScript 正则表达式，其具体使用方法记载到了我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中。在编译正则表达式时，使用了 `'u'` 标志，故所指定模式将视为 Unicode 码点，而非 ASCII。在模式文本中，不可以指定正斜杠符号。
+如果指定了 `pattern` 属性，则该 input 的 [`value`](/zh-CN/docs/Web/HTML/Global_attributes#value) 将必须要满足其所指定的正则表达式，以通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。它必须是一个合法的 {{jsxref("RegExp")}} 类型 JavaScript 正则表达式，其具体使用方法记载到了我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中。在编译正则表达式时，使用了 `'u'` 标志，故所指定模式将视为 Unicode 码点，而非 ASCII。在模式文本中，不可以指定正斜杠符号。
 
 具体介绍和示例请参阅[模式验证](#模式验证)部分。
 
@@ -503,10 +531,10 @@ input:valid + span::after {
 
 ## 参见
 
-- [HTML 表单指南](/zh-CN/docs/Learn/Forms)
+- [HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - 相关的 {{HTMLElement("input")}} 元素
 
   - [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text)
   - [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email)
 
-- [CSS 属性兼容性](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性兼容性](/zh-CN/docs/Learn_web_development/Extensions/Forms)

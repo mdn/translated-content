@@ -113,4 +113,4 @@ user-select: unset;
 
 - {{Cssxref("::selection")}}
 - The JavaScript {{domxref("Selection")}} object.
-- [user-select](http://www.w3.org/TR/css-ui-4/#propdef-user-select) in [CSS Basic User Interface Module Level 4](http://www.w3.org/TR/css-ui-4/).
+- [user-select](https://www.w3.org/TR/css-ui-4/#propdef-user-select) in [CSS Basic User Interface Module Level 4](https://www.w3.org/TR/css-ui-4/).

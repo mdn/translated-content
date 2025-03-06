@@ -115,7 +115,7 @@ window.location = "https://example.com/";
   - : 一个常见的场景是，假如站点位于 `www.example.com` 域名下，那么通过 `example.com` 也应该可以访问到。这种情况下，可以建立从 `example.com` 的页面到 `www.example.com` 的重定向。此外还可以提供你域名常见的同义词，或者该域名容易导致的拼写错误的别称来重定向到你的网站。
 - 迁移到新的域名
   - : 例如，公司改名后，你希望用户在搜索旧名称的时候，依然可以访问到应用了新名称的站点。
-- 强制使用 [HTTPS](/zh-CN/docs/Glossary/https)
+- 强制使用 [HTTPS](/zh-CN/docs/Glossary/HTTPS)
   - : 对你网站的 `http://` 版本的请求将重定向到你网站的 `https://` 版本。
 
 ### 保持链接有效
@@ -172,7 +172,7 @@ Redirect permanent / https://www.example.com
 Redirect 301 / https://www.example.com
 ```
 
-[mod_rewrite](http://httpd.apache.org/docs/current/mod/mod_rewrite.html) 模块也可以用来设置重定向。它应用起来更灵活，但也更加复杂。
+[mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) 模块也可以用来设置重定向。它应用起来更灵活，但也更加复杂。
 
 ### Nginx
 

@@ -86,9 +86,9 @@ Ces ressources sont créées par des entreprises et des développeuses et dével
 
 ### Niveau avancé
 
-- [Utilisation des transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Utilisation des transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : Appliquer une rotation, une inclinaison, une mise à l'échelle et un déplacement à l'aide de CSS.
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
   - : Les transitions CSS, qui font partie du projet de spécification CSS3, permettent d'animer les changements apportés aux propriétés CSS, plutôt que de leur donner un effet immédiat.
 
 <!---->
@@ -132,7 +132,7 @@ Ces ressources sont créées par des entreprises et des développeuses et dével
 
 <!---->
 
-- [Réintroduction à JavaScript](/fr/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+- [Réintroduction à JavaScript](/fr/docs/Web/JavaScript/Language_overview)
   - : Une récapitulation du langage de programmation JavaScript destinée aux développeuses et développeurs de niveau intermédiaire.
 - [Eloquent JavaScript](https://eloquentjavascript.net/) (en anglais)
   - : Un guide complet des méthodologies JavaScript intermédiaires et avancées.

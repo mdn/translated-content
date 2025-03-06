@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/name
 
 La propriété **`function.name`** est une propriété en lecture seule qui renvoie le nom de la fonction courante ou `"anonymous"` si celle-ci a été créée de façon anonyme.
 
-{{EmbedInteractiveExample("pages/js/function-name.html")}}{{js_property_attributes(0,0,1)}}
+{{InteractiveExample("JavaScript Demo: Function.name")}}
+
+```js interactive-example
+const func1 = function () {};
+
+const object = {
+  func2: function () {},
+};
+
+console.log(func1.name);
+// Expected output: "func1"
+
+console.log(object.func2.name);
+// Expected output: "func2"
+```
+
+{{js_property_attributes(0,0,1)}}
 
 > [!NOTE]
 > Dans les implémentations non-standards antérieures à ES2015, l'attribut `configurable` valait `false`.
@@ -95,7 +111,7 @@ toto.bind({}).name; // "bound toto"
 
 ### Noms de fonction pour les accesseurs et les mutateurs
 
-Lorsqu'on utilise les propriétés d'accesseur [`get`](/fr/docs/Web/JavaScript/Reference/Fonctions/get) / [`set`](/fr/docs/Web/JavaScript/Reference/Fonctions/set), "get" ou "set" apparaîtra avant le nom de la fonction.
+Lorsqu'on utilise les propriétés d'accesseur [`get`](/fr/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/fr/docs/Web/JavaScript/Reference/Functions/set), "get" ou "set" apparaîtra avant le nom de la fonction.
 
 ```js
 var o = {

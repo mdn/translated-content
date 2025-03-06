@@ -66,5 +66,5 @@ console.log(num1); // 2
 
 ## Voir aussi
 
-- [La déclaration de variables dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Déclaration_de_variables)
-- [Les notions de portées dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Fonctions#Portée_d'une_fonction)
+- [La déclaration de variables dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#déclaration_de_variables)
+- [Les notions de portées dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Functions#portée_d'une_fonction)

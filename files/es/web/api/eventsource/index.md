@@ -26,7 +26,7 @@ _Esta interfaz también heredará propiedades de su antecesor, {{domxref("EventT
 ### Manejadores de Eventos
 
 - {{domxref("EventSource.onerror")}}
-  - : En un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que se invoca cuando ocurre un error y se envía el evento [`error`](/es/docs/Web/Reference/Events/error) a través del objeto `EventSource`.
+  - : En un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que se invoca cuando ocurre un error y se envía el evento [`error`](/es/docs/Web/API/HTMLElement/error_event) a través del objeto `EventSource`.
 - {{domxref("EventSource.onmessage")}}
   - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que se invoca cuando se recibe un evento [`message`](/es/docs/Web/Reference/Events/message), que indica que se ha enviado un mensaje desde la fuente.
 - {{domxref("EventSource.onopen")}}

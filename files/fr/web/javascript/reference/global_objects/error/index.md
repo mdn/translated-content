@@ -40,7 +40,7 @@ En plus du constructeur `Error` générique, il existe d'autres constructeurs d'
 ## Méthodes statiques methods
 
 - [`Error.captureStackTrace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/captureStackTrace)
-  - : Une fonction non-standard implémentée par le moteur V8 qui crée la propriété [`stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack) d'une instance de `Error`.
+  - : Une fonction non-standard implémentée par le moteur V8 qui crée la propriété [`stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack) d'une instance de `Error`.
 
 ## Propriétés des instances
 
@@ -58,7 +58,7 @@ En plus du constructeur `Error` générique, il existe d'autres constructeurs d'
   - : Une propriété non-standard, implémentée par Mozilla, qui indique le numéro de la ligne du fichier à l'origine de l'erreur.
 - [`Error.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber) {{non-standard_inline}}
   - : Une propriété non-standard, implémentée par Mozilla, qui indique le numéro de la colonne de la ligne du fichier à l'origine de l'erreur.
-- [`Error.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack) {{non-standard_inline}}
+- [`Error.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack) {{non-standard_inline}}
   - : Une propriété non-standard, implémentée par Mozilla, pour fournir une trace de la pile d'appels.
 
 ## Méthodes des instances

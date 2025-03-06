@@ -1,5 +1,5 @@
 ---
-title: ":lang"
+title: :lang
 slug: Web/CSS/:lang
 ---
 
@@ -30,7 +30,7 @@ p:lang(en) {
 
 ## Ejemplo
 
-En este ejemplo, la pseudo-clase `:lang()` se usa para hacer coincidir los elementos primarios de los elementos de cita ({{htmlElement("q")}}) utilizando [selectores de hijo](/es/docs/Web/CSS/Child_selectors). Tenga en cuenta que esto no ilustra la única manera de hacerlo, y que el mejor método para usar depende del tipo de documento. También tenga en cuenta que los valores de {{glossary("Unicode")}} se utilizan para especificar algunos de los caracteres de comillas especiales.
+En este ejemplo, la pseudo-clase `:lang()` se usa para hacer coincidir los elementos primarios de los elementos de cita ({{htmlElement("q")}}) utilizando [selectores de hijo](/es/docs/Web/CSS/Child_combinator). Tenga en cuenta que esto no ilustra la única manera de hacerlo, y que el mejor método para usar depende del tipo de documento. También tenga en cuenta que los valores de {{glossary("Unicode")}} se utilizan para especificar algunos de los caracteres de comillas especiales.
 
 ### HTML
 

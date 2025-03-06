@@ -69,4 +69,4 @@ En el siguiente ejemplo, he creado una _grilla explícita_ de tres columnas y do
 
 ### Otras lecturas
 
-- Guía de diseño CSS Grid: _[Conceptos Básicos de Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- Guía de diseño CSS Grid: _[Conceptos Básicos de Grid Layout](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_

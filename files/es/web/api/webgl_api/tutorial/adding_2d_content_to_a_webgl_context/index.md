@@ -266,12 +266,12 @@ Entonces establecemos la posición del cuadrado plano al cargar la posición de 
 
 ## Utilidades para operaciones de Matrices
 
-Las operaciones de matrices pueden parecer complicadas pero [en realidad son muy fáciles si las tomas un paso a la vez](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html). Generalmente la gente usa una librería de matrices antes que escribir la suya. En nuestro caso estamos usando la popular [librería glMatrix](http://glmatrix.net/).
+Las operaciones de matrices pueden parecer complicadas pero [en realidad son muy fáciles si las tomas un paso a la vez](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html). Generalmente la gente usa una librería de matrices antes que escribir la suya. En nuestro caso estamos usando la popular [librería glMatrix](https://glmatrix.net/).
 
 Ver también
 
 - [Matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) en WebGLFundamentals
-- [Matrices](http://mathworld.wolfram.com/Matrix.html) en Wolfram MathWorld
+- [Matrices](https://mathworld.wolfram.com/Matrix.html) en Wolfram MathWorld
 - [Matriz](<http://en.wikipedia.org/wiki/Matrix_(mathematics)>) en Wikipedia
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

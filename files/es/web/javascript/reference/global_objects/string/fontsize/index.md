@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
 El método **`fontsize()`** crea {{HTMLElement("font")}} elemento HTML que muestra una cadena con el tamaño especificado.
 
 > [!NOTE]
-> El elemento \<font> ha sido eliminado [HTML5](/es/docs/Web/Guide/HTML/HTML5) y no se debe usar. Los desarrolladores web deben usar propiedades [CSS](/es/docs/Web/CSS).
+> El elemento \<font> ha sido eliminado [HTML5](/es/docs/Glossary/HTML5) y no se debe usar. Los desarrolladores web deben usar propiedades [CSS](/es/docs/Web/CSS).
 
 ## Sintaxis
 

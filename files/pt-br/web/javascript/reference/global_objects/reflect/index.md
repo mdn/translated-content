@@ -42,7 +42,7 @@ Alguns deste métodos são também os mesmos correspondentes aos métodos em {{j
 - {{jsxref("Reflect.set()", "Reflect.set(<var>target</var>, <var>propertyKey</var>, <var>value</var>[, <var>receiver</var>])")}}
   - : Uma função que atribui valores a propriedades. Retorna um {{jsxref ("Boolean")}} com o valor `true` se a atualização foi bem sucedida.
 - {{jsxref("Reflect.setPrototypeOf()", "Reflect.setPrototypeOf(<var>target</var>, <var>prototype</var>)")}}
-  - : Uma função que define o [protótipo de um objeto](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype). Retorna um {{jsxref ("Boolean")}} com o valor `true` se a atualização foi bem sucedida.
+  - : Uma função que define o [protótipo de um objeto](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object). Retorna um {{jsxref ("Boolean")}} com o valor `true` se a atualização foi bem sucedida.
 
 ## Exemplos
 

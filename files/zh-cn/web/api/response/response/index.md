@@ -36,7 +36,7 @@ let myResponse = new Response(body, init);
 
 ## 例子
 
-在我们的 [Fetch Response 示例](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response)中 (参见[Fetch Response live](http://mdn.github.io/fetch-examples/fetch-response/)) 我们使用构造函数创建了一个新的 Response 对象，传递一个新的 {{domxref("Blob")}} 作为 body，和一个包含自定义 `status` 和`statusText`的 init 对象：
+在我们的 [Fetch Response 示例](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response)中 (参见[Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/)) 我们使用构造函数创建了一个新的 Response 对象，传递一个新的 {{domxref("Blob")}} 作为 body，和一个包含自定义 `status` 和`statusText`的 init 对象：
 
 ```js
 var myBlob = new Blob();
@@ -54,6 +54,6 @@ var myResponse = new Response(myBlob, init);
 
 ## See also
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

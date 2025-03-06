@@ -11,7 +11,7 @@ slug: Web/HTML/Element/frame
 
   - : **Sus etiquetas son**: `<frame>` (solo tiene una).
 
-    **Está definido como**: Elemento [para marcos](/es/HTML/Elemento/Tipos_de_elementos#paramarcos).
+    **Está definido como**: Elemento [para marcos](/es/docs/HTML/Elemento/Tipos_de_elementos#paramarcos).
 
     **Crea una caja**: .
 

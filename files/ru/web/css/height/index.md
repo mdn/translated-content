@@ -5,7 +5,7 @@ slug: Web/CSS/height
 
 {{CSSRef}}
 
-CSS атрибут **`height`** позволят обозначать высоту элемента. По умолчанию, свойство определяет высоту [внутренней области](/ru/docs/Web/CSS/box_model#content). Если {{cssxref("box-sizing")}} имеет значение `border-box`, то свойство будет определять высоту [области рамки](/ru/docs/Web/CSS/box_model#border).
+CSS атрибут **`height`** позволят обозначать высоту элемента. По умолчанию, свойство определяет высоту [внутренней области](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content). Если {{cssxref("box-sizing")}} имеет значение `border-box`, то свойство будет определять высоту [области рамки](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border).
 
 {{EmbedInteractiveExample("pages/css/height.html")}}
 
@@ -121,4 +121,4 @@ div {
 
 ## Смотрите также
 
-- [Блочная модель](/ru/docs/Web/CSS/box_model), {{cssxref("width")}}, {{cssxref("box-sizing")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}}
+- [Блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("width")}}, {{cssxref("box-sizing")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}}

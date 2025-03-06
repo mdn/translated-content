@@ -9,7 +9,34 @@ slug: Web/HTML/Element/input/color
 
 Представление элемента может существенно отличаться от одного браузера и/или платформы к другой — это может быть простой текстовый ввод, который автоматически проверяет правильность ввода информации о цвете в соответствующем формате, или стандартный для платформы выбор цвета, или какое-то пользовательское окно выбора цвета.
 
-{{EmbedInteractiveExample("pages/tabbed/input-color.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;color&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Choose your monster's colors:</p>
+
+<div>
+  <input type="color" id="head" name="head" value="#e66465" />
+  <label for="head">Head</label>
+</div>
+
+<div>
+  <input type="color" id="body" name="body" value="#f6b73c" />
+  <label for="body">Body</label>
+</div>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 | **[Value](#value)**               | 7-значная {{domxref("DOMString")}} , указывающая {{cssxref("&lt;color&gt;")}} в строчной шестнадцатеричной системе счисления |
 | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
@@ -177,4 +204,4 @@ function updateAll(event) {
 
 ## Изучите также
 
-- [Compatibility of CSS properties](/ru/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [Compatibility of CSS properties](/ru/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

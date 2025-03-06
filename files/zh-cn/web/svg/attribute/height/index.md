@@ -26,7 +26,7 @@ slug: Web/SVG/Attribute/height
 
 下列元素可以使用 `height` 属性：
 
-- [滤镜元素](/zh-CN/SVG/Element#FilterPrimitive) »
+- [滤镜元素](/zh-CN/docs/Web/SVG/Element#filterprimitive) »
 - {{ SVGElement("filter") }}
 - {{ SVGElement("foreignObject") }}
 - {{ SVGElement("image") }}

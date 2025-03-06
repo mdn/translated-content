@@ -11,7 +11,7 @@ slug: Mozilla/Add-ons/WebExtensions/Match_patterns
 
 ## 匹配模式结构
 
-所有的匹配模式用一个字符串来定义，而且都是["\<all_urls>"](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#all_urls) 模板的一部份，匹配模板包含三个部分：_scheme_、_host_ 和 _path_。scheme 和 host 用 `://` 分隔。
+所有的匹配模式用一个字符串来定义，而且都是["\<all_urls>"](#all_urls) 模板的一部份，匹配模板包含三个部分：_scheme_、_host_ 和 _path_。scheme 和 host 用 `://` 分隔。
 
 ```plain
 <scheme>://<host><path>

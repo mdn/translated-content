@@ -27,7 +27,7 @@ Dans le [forum d'apprentissage du MDN](https://discourse.mozilla.org/c/mdn/learn
 
 ## Comment aider
 
-1. Tout d'abord, [créez-vous un compte MDN](/fr/docs/MDN/Contribute/Getting_started#step_1_create_an_account_on_mdn), si vous n'en avez pas déjà un. Vous n'avez pas nécessairement besoin de le faire pour contribuer à l'espace d'apprentissage, mais cela vous sera utile à long terme.
+1. Tout d'abord, [créez-vous un compte MDN](/fr/docs/MDN/Community/Contributing/Getting_started#step_1_create_an_account_on_mdn), si vous n'en avez pas déjà un. Vous n'avez pas nécessairement besoin de le faire pour contribuer à l'espace d'apprentissage, mais cela vous sera utile à long terme.
 2. Inscrivez-vous également à [Mozilla Discourse](https://discourse.mozilla.org/), si ce n'est pas déjà fait.
 3. Jetez un coup d'œil à la section [Apprendre le développement web](/fr/docs/Learn) et acquérez un niveau de familiarité de base avec ce qui s'y trouve, si ce n'est pas déjà fait (voir la section [Structure de l'espace d'apprentissage MDN](Structure_of_the_MDN_Learning_Area) ci-dessous pour vous aider).
 

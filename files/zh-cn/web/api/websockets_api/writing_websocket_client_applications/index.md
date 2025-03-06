@@ -36,7 +36,7 @@ webSocket = new WebSocket(url, protocols);
 
 如果尝试连接过程中发生错误，那么首先一个名为 "error" 的事件会被发送给 [`WebSocket`](/zh-CN/WebSockets/WebSockets_reference/WebSocket) 对象（然后调用其`onerror` handler），然后 [`CloseEvent`](/zh-CN/WebSockets/WebSockets_reference/CloseEvent) 被发送给[`WebSocket`](/zh-CN/WebSockets/WebSockets_reference/WebSocket) （然后调用其 `onclose` handler）以说明连接关闭的原因。
 
-在 Firefox 11 中，通常会从 Mozilla 平台的控制台中收到一个描述性的错误信息，以及一个通过 [`CloseEvent`](/zh-CN/WebSockets/WebSockets_reference/CloseEvent) 在 [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4) 中定义的错误代码。
+在 Firefox 11 中，通常会从 Mozilla 平台的控制台中收到一个描述性的错误信息，以及一个通过 [`CloseEvent`](/zh-CN/WebSockets/WebSockets_reference/CloseEvent) 在 [RFC 6455, Section 7.4](https://tools.ietf.org/html/rfc6455#section-7.4) 中定义的错误代码。
 
 ### 示例
 
@@ -72,7 +72,7 @@ var exampleSocket = new WebSocket("ws://www.example.com/socketserver", [
 exampleSocket.send("Here's some text that the server is urgently awaiting!");
 ```
 
-你可以把数据作为字符串，{{ domxref("Blob") }}，或者[`ArrayBuffer`](/zh-CN/JavaScript_typed_arrays/ArrayBuffer)来发送。
+你可以把数据作为字符串，{{ domxref("Blob") }}，或者[`ArrayBuffer`](/zh-CN/docs/JavaScript_typed_arrays/ArrayBuffer)来发送。
 
 因为连接的建立是异步的，而且容易失败，所以不能保证刚创建 WebSocket 对象时使用 `send()` 方法会成功。我们至少可以确定企图在链接建立起来之后立马发送数据，可以通过注册 `onopen` 事件处理器解决：
 
@@ -171,7 +171,7 @@ exampleSocket.onmessage = function (event) {
 };
 ```
 
-这里我们使用 [`JSON.parse()`](/zh-CN/JavaScript/Reference/Global_Objects/JSON/parse) 来将 JSON 转换回原始对象，然后检查并根据其内容做下一步动作。
+这里我们使用 [`JSON.parse()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/JSON/parse) 来将 JSON 转换回原始对象，然后检查并根据其内容做下一步动作。
 
 ### 文本数据的格式
 

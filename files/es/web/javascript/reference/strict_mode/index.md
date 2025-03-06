@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Strict_mode
 
 {{JsSidebar("More", "Más")}}A veces, verás que llaman {{Glossary("Sloppy_mode", "sloppy mode — modo poco riguroso")}} al modo no estricto predeterminado. Este no es un término oficial, pero tenlo en cuenta, por si acaso.
 
-El modo estricto de [ECMAScript 5](http://www.ecma-international.org/publications/standards/Ecma-262.htm) es una forma de elegir una variante _restringida_ de _JavaScript_, así implícitamente se deja de lado el modo poco riguroso. El modo estricto no es sólo un subconjunto: _intencionalmente_ tiene diferencia semántica del código normal. Los navegadores que no admiten el modo estricto ejecutarán el código con un comportamiento diferente a los que sí lo soportan, por lo tanto no confíes en el modo estricto sin antes hacer pruebas de sus características más relevantes. Los modos estricto y no estricto pueden coexistir, por lo tanto el código se puede transformar a modo estricto incrementalmente.
+El modo estricto de [ECMAScript 5](https://www.ecma-international.org/publications/standards/Ecma-262.htm) es una forma de elegir una variante _restringida_ de _JavaScript_, así implícitamente se deja de lado el modo poco riguroso. El modo estricto no es sólo un subconjunto: _intencionalmente_ tiene diferencia semántica del código normal. Los navegadores que no admiten el modo estricto ejecutarán el código con un comportamiento diferente a los que sí lo soportan, por lo tanto no confíes en el modo estricto sin antes hacer pruebas de sus características más relevantes. Los modos estricto y no estricto pueden coexistir, por lo tanto el código se puede transformar a modo estricto incrementalmente.
 
 El modo estricto tiene varios cambios en la semántica normal de JavaScript:
 
@@ -13,11 +13,11 @@ El modo estricto tiene varios cambios en la semántica normal de JavaScript:
 2. Corrige errores que hacen difícil para los motores de JavaScript realizar optimizaciones: a veces, el código en modo estricto puede correr más rápido que un código idéntico pero no estricto.
 3. Prohíbe cierta sintaxis que probablemente sea definida en futuras versiones de ECMAScript.
 
-Ve [transición a modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode), si deseas cambiar tu código para trabajar en la variante estricta de JavaScript.
+Ve [transición a modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode), si deseas cambiar tu código para trabajar en la variante estricta de JavaScript.
 
 ## Invocar el modo estricto
 
-El modo estricto se aplica a un _script completo_ o a _funciones individuales_. No se aplica a bloques entre corchetes `{}`; intentar aplicarlo en tales contextos no hace nada. Código `eval`, código `Function`, atributos de controladores de eventos, cadenas pasadas a [`setTimeout`](/es/docs/Web/API/WindowTimers.setTimeout), y similares son scripts enteros, de modo que invocar modo estricto en tales contextos funciona como se espera.
+El modo estricto se aplica a un _script completo_ o a _funciones individuales_. No se aplica a bloques entre corchetes `{}`; intentar aplicarlo en tales contextos no hace nada. Código `eval`, código `Function`, atributos de controladores de eventos, cadenas pasadas a [`setTimeout`](/es/docs/Web/API/Window/setTimeout), y similares son scripts enteros, de modo que invocar modo estricto en tales contextos funciona como se espera.
 
 ### Modo estricto para scripts
 
@@ -311,7 +311,7 @@ function privilegedInvoker() {
 privilegedInvoker();
 ```
 
-Tercero, en funciones de modo estricto, el objeto `arguments` no provee acceso a las variables usadas al llamar a la función. En algunas implementaciones antiguas de ECMAScript, `arguments.caller` era un objeto cuyas propiedades apuntaban a las variables en la función. Esto es una [amenaza de seguridad](http://stuff.mit.edu/iap/2008/facebook/) por que rompe la habilidad de ocultar valores privilegiados a través de la abstracción de la función; además, frena algunas optimizaciones. Por estas razones los navegadores modernos no la implementan. Por su funcionalidad a lo largo de los años, `arguments.caller` en una función de modo estricto es una propiedad que lanza una excepción cuando se usa.
+Tercero, en funciones de modo estricto, el objeto `arguments` no provee acceso a las variables usadas al llamar a la función. En algunas implementaciones antiguas de ECMAScript, `arguments.caller` era un objeto cuyas propiedades apuntaban a las variables en la función. Esto es una [amenaza de seguridad](https://stuff.mit.edu/iap/2008/facebook/) por que rompe la habilidad de ocultar valores privilegiados a través de la abstracción de la función; además, frena algunas optimizaciones. Por estas razones los navegadores modernos no la implementan. Por su funcionalidad a lo largo de los años, `arguments.caller` en una función de modo estricto es una propiedad que lanza una excepción cuando se usa.
 
 ```js
 "use strict";
@@ -349,7 +349,7 @@ function fun(static) {
 
 _Dos advertencias específicas de Mozilla_: Primero, si tu código esta escrito en JavaScript 1.7 o mayor (por ejemplo en código chrome o cuando se usa bien `<script type="">`) y el código esta en modo estricto, `let` y `yield` tienen la funcionalidad que han tenido desde que esas palabras clave se introdujeron por primera vez. Pero el código en modo estricto en la web, cargado con `<script src="">` o `<script>...</script>`, no podrá usar `let`/`yield` como identificadores. _Segundo, mientras que ES5 incondicionalmente reserva las palabras `class`, `enum`, `export`, `extends`, `import` y `super`, Mozilla Firefox 5 solo las reserva en modo estricto_.
 
-En segundo lugar, [el modo estricto prohíbe las declaraciones de función, no en el nivel superior de un script o función](http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/). En el modo normal de los navegadores, las declaraciones de función se permiten "en todas partes". _¡Esto no es parte de ES5 (ni siquiera de ES3)!_ Es una extensión con semántica incompatible en diferentes navegadores. Ten en cuenta que en ES2015 se permiten declaraciones de función fuera del nivel superior.
+En segundo lugar, [el modo estricto prohíbe las declaraciones de función, no en el nivel superior de un script o función](https://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/). En el modo normal de los navegadores, las declaraciones de función se permiten "en todas partes". _¡Esto no es parte de ES5 (ni siquiera de ES3)!_ Es una extensión con semántica incompatible en diferentes navegadores. Ten en cuenta que en ES2015 se permiten declaraciones de función fuera del nivel superior.
 
 ```js
 "use strict";
@@ -381,11 +381,11 @@ La mayoría de los navegadores ya implementan el modo estricto. Sin embargo, no 
 
 ## Ve también
 
-- [¿Dónde está Walden? » Nuevo soporte de modo estricto ES5: ¡ahora con píldoras venenosas!](http://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/)
-- [¿Dónde está Walden? » Nuevo requisito del modo estricto de ES5: se prohíben las declaraciones de función que no estén en el nivel superior de un programa o función](http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/)
-- [¿Dónde está Walden? » Nueva compatibilidad con el modo estricto de ES5: las nuevas variables creadas por el código de evaluación del modo estricto son locales solo para ese código](http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/)
+- [¿Dónde está Walden? » Nuevo soporte de modo estricto ES5: ¡ahora con píldoras venenosas!](https://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/)
+- [¿Dónde está Walden? » Nuevo requisito del modo estricto de ES5: se prohíben las declaraciones de función que no estén en el nivel superior de un programa o función](https://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/)
+- [¿Dónde está Walden? » Nueva compatibilidad con el modo estricto de ES5: las nuevas variables creadas por el código de evaluación del modo estricto son locales solo para ese código](https://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/)
 - [Tutorial de "uso estricto" de JavaScript para principiantes.](http://qnimate.com/javascript-strict-mode-in-nutshell/)
 - [John Resig — Modo estricto ECMAScript 5, JSON y más](http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/)
 - [ECMA-262-5 en detalle. Capitulo 2. Modo estricto.](http://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/)
 - [Tabla de compatibilidad del modo estricto](http://kangax.github.io/compat-table/es5/#Strict_mode)
-- [Transición al modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)
+- [Transición al modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode)

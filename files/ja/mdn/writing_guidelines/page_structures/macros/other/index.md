@@ -13,7 +13,7 @@ l10n:
 
 このマクロは、固有の API リファレンスなど、特定のコンテキストでのみ使用します。
 
-- [`RFC`](https://github.com/mdn/yari/blob/main/kumascript/macros/RFC.ejs) は数値を指定して、特定の RFC へのリンクを生成します。構文は `\{\{RFC(number)\}\}` です。例えば、 `\{\{RFC(2616)\}\}` は {{ RFC(2616) }} になります。
+- [`RFC`](https://github.com/mdn/yari/blob/main/kumascript/macros/RFC.ejs) は数値を指定して、特定の RFC へのリンクを生成します。構文は `\{{RFC(number)}}` です。例えば、 `\{{RFC(2616)}}` は {{ RFC(2616) }} になります。
 
 ### ランディングページの部品
 

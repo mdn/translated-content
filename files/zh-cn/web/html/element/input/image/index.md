@@ -7,7 +7,37 @@ slug: Web/HTML/Element/input/image
 
 **`image`** 类型的 {{HTMLElement("input")}} 元素用于创建图形化的提交按钮，即采用图像而非文本形式的提交按钮。
 
-{{EmbedInteractiveExample("pages/tabbed/input-image.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;image&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Sign in to your account:</p>
+
+<div>
+  <label for="userId">User ID</label>
+  <input type="text" id="userId" name="userId" />
+</div>
+
+<input
+  type="image"
+  id="image"
+  alt="Login"
+  src="/shared-assets/images/examples/login-button.png" />
+```
+
+```css interactive-example
+label {
+  font-size: 0.8rem;
+}
+
+label,
+input[type="image"] {
+  margin-top: 1rem;
+}
+
+input[type="image"] {
+  width: 80px;
+}
+```
 
 ## 值
 
@@ -213,4 +243,4 @@ label {
 
 - 实现它的 {{HTMLElement("input")}} 和 {{domxref("HTMLInputElement")}} 接口。
 - 在 `<input>` 元素的框架内改变图像的位置和大小：{{cssxref("object-position")}} 和 {{cssxref("object-fit")}}
-- [CSS 属性的兼容性](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性的兼容性](/zh-CN/docs/Learn_web_development/Extensions/Forms)

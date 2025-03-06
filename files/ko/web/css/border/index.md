@@ -115,5 +115,5 @@ div {
 - {{Cssxref("border-width")}}
 - {{Cssxref("border-style")}}
 - {{Cssxref("border-color")}}
-- [배경 및 테두리](/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [배경 및 테두리](/ko/docs/Web/CSS/CSS_backgrounds_and_borders)
 - [CSS 배우기: 배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

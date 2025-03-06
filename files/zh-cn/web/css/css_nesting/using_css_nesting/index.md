@@ -148,7 +148,7 @@ label {
 
 ## 关系选择器
 
-[CSS 关系选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)也可以在使用或不使用 `&` 嵌套选择器的情况下使用。
+[CSS 关系选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Combinators)也可以在使用或不使用 `&` 嵌套选择器的情况下使用。
 
 ### 示例
 
@@ -402,7 +402,7 @@ h2 {
 ```
 
 > [!WARNING]
-> 这在 CSS 嵌套中是不可能的：当不使用[组合器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)时，嵌套选择器将被当作[类型选择器](/zh-CN/docs/Web/CSS/Type_selectors)。允许拼接会使得这个规则无效。
+> 这在 CSS 嵌套中是不可能的：当不使用[组合器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Combinators)时，嵌套选择器将被当作[类型选择器](/zh-CN/docs/Web/CSS/Type_selectors)。允许拼接会使得这个规则无效。
 
 在[组合选择器](/zh-CN/docs/Web/CSS/CSS_selectors/Selector_structure#组合选择器)中，类型选择器必须是第一位。`&Element`（一个[类型选择器](/zh-CN/docs/Web/CSS/Type_selectors)）会使得这个选择器和整个样式块无效。因为类型选择器必须是第一位，所以这个组合选择器必须写成 `Element&`。
 

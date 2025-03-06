@@ -62,7 +62,7 @@ La suite de ce chapitre est consacrée pas à pas aux étapes de création d'un 
 
 ## Créer le projet _locallibrary_
 
-Tout d'abord, il est nécessaire d'ouvrir une fenêtre pour exécuter des commandes en ligne (un terminal sous Linux/MacOS ou une fenêtre command sous Windows). Assurez-vous d'être dans un [environnement virtuel python](/fr/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment), déplacez-vous dans votre arborescence de dossiers pour être dans votre zone de développement des applications Django. Créez-y un sous-dossier pour les projets Django `django_projects` et déplacez-vous dans ce dernier :
+Tout d'abord, il est nécessaire d'ouvrir une fenêtre pour exécuter des commandes en ligne (un terminal sous Linux/MacOS ou une fenêtre command sous Windows). Assurez-vous d'être dans un [environnement virtuel python](/fr/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment), déplacez-vous dans votre arborescence de dossiers pour être dans votre zone de développement des applications Django. Créez-y un sous-dossier pour les projets Django `django_projects` et déplacez-vous dans ce dernier :
 
 ```bash
 mkdir django_projects

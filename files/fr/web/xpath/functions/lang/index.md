@@ -58,7 +58,7 @@ La sortie sera&nbsp;:
 
 ### Définition
 
-[XPath 1.0, section 4.3](http://www.w3.org/TR/xpath#function-lang).
+[XPath 1.0, section 4.3](https://www.w3.org/TR/xpath#function-lang).
 
 ### Support Gecko
 

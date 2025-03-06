@@ -42,7 +42,7 @@ slug: Web/HTTP/Compression
 
 압축이 명확한 성능 향상을 가져다주므로, 모든 파일에 대해 활성화하는 것을 추천하지만, 이미지, 오디오나 비디오와 같은 파일들은 이미 압축되어 있을 겁니다.
 
-Apache는 압축을 지원하며 [mod_deflate](http://httpd.apache.org/docs/current/mod/mod_deflate.html)를 사용합니다; nginx의 경우 [ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html) 모듈이 있고 IIS는 [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression) 엘리먼트를 지원합니다.
+Apache는 압축을 지원하며 [mod_deflate](https://httpd.apache.org/docs/current/mod/mod_deflate.html)를 사용합니다; nginx의 경우 [ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html) 모듈이 있고 IIS는 [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression) 엘리먼트를 지원합니다.
 
 ## Hop-by-hop 압축
 

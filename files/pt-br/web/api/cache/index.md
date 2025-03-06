@@ -11,7 +11,7 @@ Uma origem pode ter múltiplos objetos de `cache` nomeados. Você é o responsá
 
 Você é também o responsavel por, periódicamente, limpar as entradas de cache. Cada browser tem um limite fixo do tamanho de armazenamento de cache que cada origem pode utilizar. O browser faz o melhor que pode para gerenciar o espaço em disco, mas ele pode deletar um cache que não devia. Ele também vai, geralmente, deletar todos os dados de uma origem ou nenhum dado da mesma, nunca haverá uma ocasião não atômica onde o browser delete parcialmente os dados.
 
-Certifique-se de versionar seus caches por nome e usar somente os caches nas versões do script que eles podem seguramente operar. Veja também o artigo sobre [remoção de caches antigos](/pt-BR/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Deleting_old_caches) para mais informações.
+Certifique-se de versionar seus caches por nome e usar somente os caches nas versões do script que eles podem seguramente operar. Veja também o artigo sobre [remoção de caches antigos](/pt-BR/docs/Web/API/Service_Worker_API/Using_Service_Workers#deleting_old_caches) para mais informações.
 
 > [!NOTE]
 > Implementações iniciais do Cache (tanto no Blink quando no Gecko) resolvem promises de {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, e {{domxref("Cache.put")}} somente quando o corpo completo da resposta foi armazenado. Versões mais recentes desta especificação possuem uma melhora de linguagem informando que o browser pode resolver a promise assim que a entrada é registrada no banco de dados, mesmo que o corpo da resposta ainda esteja sendo enviado.
@@ -119,8 +119,8 @@ self.addEventListener("fetch", function (event) {
 
 ## Ver também
 
-- [Usando Service Workers](/pt-BR/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Usando Service Workers](/pt-BR/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Exemplo básico de service workers](https://github.com/mdn/sw-test)
 - [Service workers estão prontos?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Usando Web Workers](/pt-BR/docs/Web/Guide/Performance/Using_web_workers)
+- [Usando Web Workers](/pt-BR/docs/Web/API/Web_Workers_API/Using_web_workers)

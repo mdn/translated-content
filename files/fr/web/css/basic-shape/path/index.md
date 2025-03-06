@@ -43,8 +43,8 @@ La fonction `path()` est utilisée pour créer un tracé à suivre pour l'élém
 ## Voir aussi
 
 - {{cssxref("&lt;shape-outside&gt;")}}
-- [Formes CSS](/fr/docs/Web/CSS/CSS_Shapes)
-- [Vue d'ensemble des formes CSS](/fr/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
+- [Formes CSS](/fr/docs/Web/CSS/CSS_shapes)
+- [Vue d'ensemble des formes CSS](/fr/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
 - <i lang="en">SVG Path Syntax Illustrated Guide</i>
 
   [<i lang="en">SVG Path Syntax Illustrated Guide</i> (en anglais)](https://css-tricks.com/svg-path-syntax-illustrated-guide/)

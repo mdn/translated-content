@@ -7,7 +7,37 @@ slug: Web/HTML/Element/footer
 
 **`<footer>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示其最近的[章節型內容](/zh-TW/docs/Web/HTML/Content_categories#章節型內容)或[章節根](/zh-TW/docs/Web/HTML/Element/Heading_Elements#章節根)元素的頁尾。`<footer>` 通常包含有關該章節作者的信息、版權數據或與相關文檔的鏈接。
 
-{{EmbedInteractiveExample("pages/tabbed/footer.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;footer&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<article>
+  <h1>How to be a wizard</h1>
+  <ol>
+    <li>Grow a long, majestic beard.</li>
+    <li>Wear a tall, pointed hat.</li>
+    <li>Have I mentioned the beard?</li>
+  </ol>
+  <footer>
+    <p>© 2018 Gandalf</p>
+  </footer>
+</article>
+```
+
+```css interactive-example
+article {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #45a1ff;
+  color: #fff;
+}
+```
 
 ## 屬性
 
@@ -51,7 +81,7 @@ footer {
 
 ## 無障礙議題
 
-在 Safari 13 之前的版本中，`contentinfo` [標誌角色](/zh-TW/docs/Learn/Accessibility/WAI-ARIA_basics#路標地標)未能被 [VoiceOver](https://help.apple.com/voiceover/info/guide/) 正確顯示。如果需要支持舊版 Safari 瀏覽器，請在 `footer` 元素中添加 `role="contentinfo"`，以確保該標誌能夠被正確顯示。
+在 Safari 13 之前的版本中，`contentinfo` [標誌角色](/zh-TW/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics#路標地標)未能被 [VoiceOver](https://help.apple.com/voiceover/info/guide/) 正確顯示。如果需要支持舊版 Safari 瀏覽器，請在 `footer` 元素中添加 `role="contentinfo"`，以確保該標誌能夠被正確顯示。
 
 - 相關：[WebKit Bugzilla: 146930 – AX: HTML native elements (header, footer, main, aside, nav) should work the same as ARIA landmarks, sometimes they don't](https://webkit.org/b/146930)
 

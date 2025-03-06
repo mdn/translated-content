@@ -210,5 +210,5 @@ dataProvider.prototype = {
 ## 参见
 
 - [HTML Drag and Drop API (Overview)](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Drag Operations](/zh-CN/docs/Web/Guide/HTML/Drag_operations)
+- [Drag Operations](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

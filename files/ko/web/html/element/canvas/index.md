@@ -5,7 +5,7 @@ slug: Web/HTML/Element/canvas
 
 {{HTMLSidebar}}
 
-**HTML `<canvas>` 요소**는 [캔버스 스크립팅 API](/ko/docs/Web/HTML/Canvas) 또는 [WebGL API](/ko/docs/Web/API/WebGL_API)와 함께 사용해 그래픽과 애니메이션을 그릴 수 있습니다.
+**HTML `<canvas>` 요소**는 [캔버스 스크립팅 API](/ko/docs/Web/API/Canvas_API) 또는 [WebGL API](/ko/docs/Web/API/WebGL_API)와 함께 사용해 그래픽과 애니메이션을 그릴 수 있습니다.
 
 <table class="properties">
   <tbody>
@@ -154,7 +154,7 @@ ctx.fillRect(10, 10, 100, 100);
 
 ## 같이 보기
 
-- [Canvas API](/ko/docs/Web/HTML/Canvas)
-- [캔버스 자습서](/ko/docs/Web/HTML/Canvas/Tutorial)
+- [Canvas API](/ko/docs/Web/API/Canvas_API)
+- [캔버스 자습서](/ko/docs/Web/API/Canvas_API/Tutorial)
 - [캔버스 치트 시트](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
 - [캔버스 관련 데모](/ko/docs/Web/Demos_of_open_web_technologies)

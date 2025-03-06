@@ -5,22 +5,22 @@ slug: Web/API/DataTransfer
 
 {{APIRef("HTML DOM")}}
 
-O objeto `DataTransfer` é usado para guardar os dados que estão sendo arrastados durante uma operação de Drag e Drop (arrastar e soltar). Ele pode guardar um ou mais itens de dados, cada um de um ou mais tipos de dados. Para mais informações sobre drag e drop (arrastar e soltar), veja [Drag and Drop](/En/DragDrop/Drag_and_Drop).
+O objeto `DataTransfer` é usado para guardar os dados que estão sendo arrastados durante uma operação de Drag e Drop (arrastar e soltar). Ele pode guardar um ou mais itens de dados, cada um de um ou mais tipos de dados. Para mais informações sobre drag e drop (arrastar e soltar), veja [Drag and Drop](/en-US/DragDrop/Drag_and_Drop).
 
 Esse objeto está disponível pela propriedade `dataTransfer` de todos os eventos de drag. Ele não pode ser criado separadamente.
 
 ## Visão geral das propriedades
 
-| Propriedades                                                      | Tipo                                                               |
-| ----------------------------------------------------------------- | ------------------------------------------------------------------ |
-| [`dropEffect`](#dropEffect.28.29)                                 | [`String`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String) |
-| [`effectAllowed`](#effectAllowed.28.29)                           | [`String`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String) |
-| [`files`](#files.28.29)                                           | {{ domxref("FileList") }}                                          |
-| [`mozCursor`](#mozCursor) {{ non-standard_inline() }}             | [`String`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String) |
-| [`mozItemCount`](#mozItemCount.28.29) {{ non-standard_inline() }} | `unsigned long`                                                    |
-| [`mozSourceNode`](#mozSourceNode) {{ non-standard_inline() }}     | {{ domxref("Node") }}                                              |
-| [`mozUserCancelled`](#mozUserCancelled)                           | [`Boolean`](/pt-BR/JavaScript/Reference/Global_Objects/Boolean)    |
-| [`types`](#types.28.29)                                           | [`DOMStringList`](/pt-BR/docs/Web/API/DOMStringList)               |
+| Propriedades                                                      | Tipo                                                                   |
+| ----------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [`dropEffect`](#dropeffect.28.29)                                 | [`String`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String) |
+| [`effectAllowed`](#effectallowed.28.29)                           | [`String`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String) |
+| [`files`](#files.28.29)                                           | {{ domxref("FileList") }}                                              |
+| [`mozCursor`](#mozcursor) {{ non-standard_inline() }}             | [`String`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String) |
+| [`mozItemCount`](#mozitemcount.28.29) {{ non-standard_inline() }} | `unsigned long`                                                        |
+| [`mozSourceNode`](#mozsourcenode) {{ non-standard_inline() }}     | {{ domxref("Node") }}                                                  |
+| [`mozUserCancelled`](#mozusercancelled)                           | [`Boolean`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Boolean)   |
+| [`types`](#types.28.29)                                           | [`DOMStringList`](/pt-BR/docs/Web/API/DOMStringList)                   |
 
 ## Visão geral dos métodos
 
@@ -313,4 +313,4 @@ Holds a list of the format types of the data that is stored for an item at the s
 
 ## See also
 
-[Drag and Drop](/En/DragDrop/Drag_and_Drop)
+[Drag and Drop](/en-US/DragDrop/Drag_and_Drop)

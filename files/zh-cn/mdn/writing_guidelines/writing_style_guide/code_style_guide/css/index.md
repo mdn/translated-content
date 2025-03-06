@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4680281518d584657960f984b3b720d79b3119ab
 ---
 
-{{MDNSidebar}}
-
 下面的指南涵盖了如何为 MDN Web 文档编写 CSS 示例代码。
 
 ## CSS 代码示例常规指南
@@ -25,7 +23,7 @@ Prettier 格式化所有代码并保持风格一致。尽管如此，你仍需�
 
 ### 使用弹性/相对单位
 
-为了在尽可能广泛的设备上获得最大的灵活性，建议使用 em 和 rem 或百分比和视口单位等相对单位来设置容器、填充等的大小，如果你希望它们随视口宽度变化。你可以在我们的 [CSS 值与单位指南](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#相对长度单位)中阅读更多相关内容。
+为了在尽可能广泛的设备上获得最大的灵活性，建议使用 em 和 rem 或百分比和视口单位等相对单位来设置容器、填充等的大小，如果你希望它们随视口宽度变化。你可以在我们的 [CSS 值与单位指南](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#相对长度单位)中阅读更多相关内容。
 
 ### 不要使用预处理器
 
@@ -126,7 +124,7 @@ h3 {
 
 ## 移动优先的媒体查询
 
-在包含针对不同目标视口大小的[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)样式的样式表中，首先包含窄屏/移动设备的样式，然后再添加任何其他媒体查询。通过连续的媒体查询添加更宽视口大小的样式。遵循这个规则有很多优点，这些优点在[移动优先](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)文章中有详细的解释。
+在包含针对不同目标视口大小的[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)样式的样式表中，首先包含窄屏/移动设备的样式，然后再添加任何其他媒体查询。通过连续的媒体查询添加更宽视口大小的样式。遵循这个规则有很多优点，这些优点在[移动优先](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)文章中有详细的解释。
 
 ```css example-good
 /* 适用于窄屏的默认 CSS 布局 */

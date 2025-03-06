@@ -92,4 +92,4 @@ Firefox 23부터 혼합 액티브 콘텐츠는 기본적으로 차단됩니다(�
 ## 같이 보기
 
 - [혼합 콘텐츠 - W3C Editor's Draft](https://w3c.github.io/webappsec/specs/mixedcontent/)
-- [혼합 콘텐츠가 있는 웹사이트를 고치는 방법](/ko/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
+- [혼합 콘텐츠가 있는 웹사이트를 고치는 방법](/ko/docs/orphaned/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)

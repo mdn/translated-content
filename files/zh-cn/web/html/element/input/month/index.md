@@ -7,7 +7,27 @@ slug: Web/HTML/Element/input/month
 
 类型为 **`month`** 的 {{htmlelement("input")}} 可以让你容易地创建一个方便输入年份或月份的一个 {{htmlelement("input")}}。输入的值是一个经过“`YYYY-MM`”格式化的字符串，其中 `YYYY` 是四位数的年份，而 `MM` 是月份的数值表示。
 
-{{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;month&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="start">Start month:</label>
+
+<input type="month" id="start" name="start" min="2018-03" value="2018-05" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 通常来说控件的 UI 界面因浏览器的不同而有变化，到目前为止此控件还不被所有浏览器支持，在桌面浏览器中只有 Chrome/Opera 和 Edge 支持；在移动端被大部分现代浏览器所支持。在不支持的浏览器中，这个控件会被优雅的降级到 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text)，不过对输入的文字会有自动的验证，保证它按照预期进行格式化。
 
@@ -95,13 +115,13 @@ monthControl.value = "2001-06";
 
 ### max
 
-使用在[值](#值)章节中讨论的字符串格式指定的所接受的最大年份和月份。如果输入到该元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 超过了这个，则该元素无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `max` 属性的值不是格式为 `yyyy-MM` 的有效字符串，则该元素没有最大值。
+使用在[值](#值)章节中讨论的字符串格式指定的所接受的最大年份和月份。如果输入到该元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 超过了这个，则该元素无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `max` 属性的值不是格式为 `yyyy-MM` 的有效字符串，则该元素没有最大值。
 
 该值必须晚于或等于 `min` 属性所指定的年份—月份对。
 
 ### min
 
-使用在[值](#值)章节中讨论的字符串格式指定的所接受的最小年份和月份。如果输入到该元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于这个，则该元素无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 属性的值不是格式为 `yyyy-MM` 的有效字符串，则该元素没有最小值。
+使用在[值](#值)章节中讨论的字符串格式指定的所接受的最小年份和月份。如果输入到该元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于这个，则该元素无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `min` 属性的值不是格式为 `yyyy-MM` 的有效字符串，则该元素没有最小值。
 
 该值必须早于或等于 `max` 属性所指定的年份—月份对。
 
@@ -456,6 +476,6 @@ function populateYears() {
 
 - 通用 {{HTMLElement("input")}} 元素和用于操作该元素的接口 {{domxref("HTMLInputElement")}}
 - [HTML 中使用的日期和时间格式](/zh-CN/docs/Web/HTML/Date_and_time_formats)
-- [日期时间选择器教程](/zh-CN/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker)
+- [日期时间选择器教程](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#date_and_time_picker)
 - [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)、[`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date)、[`<input type="time">`](/zh-CN/docs/Web/HTML/Element/input/time) 和 [`<input type="week">`](/zh-CN/docs/Web/HTML/Element/input/week)
-- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

@@ -12,16 +12,16 @@ O elemento HTML _meter_ (`<meter>`) pode representar um valor escalar dentro de 
 
 ## Contexto de uso
 
-| [Content categories](/pt-BR/HTML/Content_categories) | [flow content](/pt-BR/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/HTML/Content_categories#phrasing_content), [Labelable](/pt-BR/HTML/Content_categories#form-labelable) [Form-associated content](/pt-BR/HTML/Content_categories#form-associated) |
-| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Conteúdo permitido                                   | [Phrasing content](/pt-BR/HTML/Content_categories#Phrasing_content), mas nenhum elemento `meter` descendente.                                                                                                                                                          |
-| Tag omission                                         | Nenhuma, ambas as tags iniciais e finais são obrigatórias.                                                                                                                                                                                                             |
-| Elementos pais permitidos                            | Qualquer elemento que aceite phrasing content.                                                                                                                                                                                                                         |
-| Documento normativo                                  | [HTML5, section 4.10.8](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-meter-element)                                                                                                                                         |
+| [Content categories](/pt-BR/docs/HTML/Content_categories) | [flow content](/pt-BR/docs/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content), [Labelable](/pt-BR/docs/HTML/Content_categories#form-labelable) [Form-associated content](/pt-BR/docs/HTML/Content_categories#form-associated) |
+| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Conteúdo permitido                                        | [Phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content), mas nenhum elemento `meter` descendente.                                                                                                                                                                         |
+| Tag omission                                              | Nenhuma, ambas as tags iniciais e finais são obrigatórias.                                                                                                                                                                                                                                 |
+| Elementos pais permitidos                                 | Qualquer elemento que aceite phrasing content.                                                                                                                                                                                                                                             |
+| Documento normativo                                       | [HTML5, section 4.10.8](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-meter-element)                                                                                                                                                            |
 
 ## Atributos
 
-Como todos os elementos HTML, esse elemento suporta [attributes](/pt-BR/HTML/Global_attributes).
+Como todos os elementos HTML, esse elemento suporta [attributes](/pt-BR/docs/HTML/Global_attributes).
 
 - `value`
   - : O valor numérico atual. Ele deve estar entre os valores mínimos e máximo (o atributo **min** e o atributo **max**) se eles estiverem especificados. Se não especificado ou mal formatado, o valor é 0. Se especificado, mas fora do intervalo dado pelos atributos **min** e **max**, o valor é igual ao extremo do intervalo mais próximo.

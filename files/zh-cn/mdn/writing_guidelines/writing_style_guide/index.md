@@ -3,8 +3,6 @@ title: 文档写作规范
 slug: MDN/Writing_guidelines/Writing_style_guide
 ---
 
-{{MDNSidebar}}
-
 本篇写作风格指南描述了 MDN Web 文档上的内容应该如何书写、组织、拼写和格式化。
 
 这些指南是为了确保整个网站的语言和风格的一致性。也就是说，我们对内容而不是格式更感兴趣，所以不必在为 MDN Web 文档贡献前学习整个写作风格指南。然而，如果其他贡献者后来编辑你的作品以符合该指南，请不要感到不安或惊讶。当你提交内容拉取请求时，审稿人也可能将你指向这个风格指南。
@@ -82,7 +80,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide
   > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/zh-CN/docs/Web/API/Canvas_API), strokes (draws the outlines of) the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
   > The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
   >
-  > For more details and examples, see the [Text](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#text) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+  > For more details and examples, see the [Text](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics#文本) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 ### 使用包容性语言
 
@@ -561,7 +559,7 @@ MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章
 - [JavaScript/指南](/zh-CN/docs/Web/JavaScript/Guide)——主目录页
 - [JavaScript/指南/JavaScript 概述](/zh-CN/docs/Web/JavaScript/Guide/Introduction)
 - [JavaScript/指南/函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)
-- [JavaScript/指南/对象模型的细节](/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+- [JavaScript/指南/对象模型的细节](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
 尽量避免把文章内容放置在层次结构的顶层，这会降低网站的访问速度，同时搜索和导航的效率也会下降。
 

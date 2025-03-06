@@ -6,7 +6,7 @@ original_slug: Web/API/Document_Object_Model/How_to_create_a_DOM_tree
 
 {{DefaultAPISidebar("DOM")}}
 
-Esta página describe cómo usar el API [DOM Core](http://www.w3.org/TR/DOM-Level-3-Core/core.html) en JavaScript para crear o modificar objetos DOM. Es aplicable a todas las aplicaciones basadas en Gecko (como Mozilla Firefox) cuyo código tenga privilegios (como las extensiones) y a las que no (páginas web).
+Esta página describe cómo usar el API [DOM Core](https://www.w3.org/TR/DOM-Level-3-Core/core.html) en JavaScript para crear o modificar objetos DOM. Es aplicable a todas las aplicaciones basadas en Gecko (como Mozilla Firefox) cuyo código tenga privilegios (como las extensiones) y a las que no (páginas web).
 
 ### Creación dinámica de un DOM tree
 
@@ -83,9 +83,9 @@ peopleElem.appendChild(personElem2);
 doc.appendChild(peopleElem);
 ```
 
-Vea también el [Capítulo DOM del Tutorial de XUL](/en/XUL_Tutorial/Document_Object_Model).
+Vea también el [Capítulo DOM del Tutorial de XUL](/en-US/XUL_Tutorial/Document_Object_Model).
 
-Se puede automatizar la creación de un DOM tree usando el [JXON reverse algorithm (algoritmo inverso JXON)](/en/JXON#JXON_reverse_algorithms) en asociación con la siguiente representación JSON:
+Se puede automatizar la creación de un DOM tree usando el [JXON reverse algorithm (algoritmo inverso JXON)](/en-US/JXON#jxon_reverse_algorithms) en asociación con la siguiente representación JSON:
 
 ```js
 {
@@ -131,15 +131,15 @@ Se puede automatizar la creación de un DOM tree usando el [JXON reverse algorit
 
 ### ¿Ahora qué?
 
-Los DOM trees pueden ser [invocados usando expresiones XPath](/en/Using_XPath), convertidos a cadenas de texto, salvados a un archivo local o remoto usando [XMLSerializer](/en/Parsing_and_serializing_XML) (sin tener que convertirlo primero a una cadena de texto), Enviados mediante [POST a un servidor web](/en/DOM/XMLHttpRequest) (via `XMLHttpRequest`), transformados usando [XSLT](/en/XSLT), [XLink](/en/XLink), convertidos a un objeto JavaScript a tráves del [algoritmo](/en/JXON)[JXON](/en/JXON), etc.
+Los DOM trees pueden ser [invocados usando expresiones XPath](/en-US/Using_XPath), convertidos a cadenas de texto, salvados a un archivo local o remoto usando [XMLSerializer](/en-US/Parsing_and_serializing_XML) (sin tener que convertirlo primero a una cadena de texto), Enviados mediante [POST a un servidor web](/es/docs/Web/API/XMLHttpRequest) (via `XMLHttpRequest`), transformados usando [XSLT](/en-US/XSLT), [XLink](/en-US/XLink), convertidos a un objeto JavaScript a tráves del [algoritmo](/en-US/JXON)[JXON](/en-US/JXON), etc.
 
 Adicionalmente se puede hacer uso de los DOM trees para modelar los datos que no estén bien formados para RDF (o si sólo no prefieres usar RDF). Otra aplicación que puedes darle, se relaciona a XUL (que es XML), la UI (interfaz) de tu aplicación puede ser manipulada dinámicamente, descargada, subida, guardada, cargada, convertida, o transformada fácilmente.
 
 ## Vea también
 
-- [XML](/en/XML)
-- [JXON](/en/JXON)
-- [XPath](/en/XPath)
-- [E4X (ECMAScript for XML)](/en/E4X)
-- [Parsing and serializing XML](/en/Parsing_and_serializing_XML)
-- [XMLHttpRequest](/en/DOM/XMLHttpRequest)
+- [XML](/en-US/XML)
+- [JXON](/en-US/JXON)
+- [XPath](/en-US/XPath)
+- [E4X (ECMAScript for XML)](/en-US/E4X)
+- [Parsing and serializing XML](/en-US/Parsing_and_serializing_XML)
+- [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest)

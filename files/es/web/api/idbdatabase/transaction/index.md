@@ -23,12 +23,12 @@ Un objeto {{domxref("IDBTransaction")}}.
 
 Éste método puede invocar una excepción {{domxref("DOMException")}} de alguno de los siguientes tipos:
 
-| Excepción                        | Descripción                                                                                      |
-| -------------------------------- | ------------------------------------------------------------------------------------------------ |
-| [`InvalidStateError`](/es/docs/) | El método `close()` ha sido llamado previamente en esta instancia de {{domxref("IDBDatabase")}}. |
-| `NotFoundError`                  | Un almacén de objetos especificado en el parámetro `storeNames` ha sido borrado o removido.      |
-| `TypeError`                      | El valor para el parámetro `mode` es inválido.                                                   |
-| `InvalidAccessError`             | La función fue llamada con una lista vacía de nombres de almacenes.                              |
+| Excepción                           | Descripción                                                                                      |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------ |
+| [`InvalidStateError`](/es/docs/Web) | El método `close()` ha sido llamado previamente en esta instancia de {{domxref("IDBDatabase")}}. |
+| `NotFoundError`                     | Un almacén de objetos especificado en el parámetro `storeNames` ha sido borrado o removido.      |
+| `TypeError`                         | El valor para el parámetro `mode` es inválido.                                                   |
+| `InvalidAccessError`                | La función fue llamada con una lista vacía de nombres de almacenes.                              |
 
 ## Ejemplo
 

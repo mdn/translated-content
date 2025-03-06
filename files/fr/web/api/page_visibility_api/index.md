@@ -31,11 +31,11 @@ Historiquement, les développeurs ont utilisé des solutions de remplacement imp
 En parallèle avec l'API _Page Visibility,_ un certain nombre de politiques sont en place pour atténuer l'impact négatif sur les performances lié aux onglets en arrière-plan&nbsp;:
 
 - Les appels à {{domxref("Window.requestAnimationFrame()")}} sont suspendus dans la plupart des navigateurs lorsqu'ils sont effectués dans un onglet en arrière-plan ou une {{ HTMLElement("iframe") }} cachée, afin d'améliorer les performances et l'autonomie de la batterie.
-- Les timers tels que {{domxref("WindowOrWorkerGlobalScope.setTimeout")}} sont retardés dans les onglets inactifs ou en arrière-plan pour aider à l'amélioration des performances. Voir [_Reasons for delays longer than specified_](/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Reasons_for_delays_longer_than_specified) pour plus de détails.
+- Les timers tels que {{domxref("WindowOrWorkerGlobalScope.setTimeout")}} sont retardés dans les onglets inactifs ou en arrière-plan pour aider à l'amélioration des performances. Voir [_Reasons for delays longer than specified_](/fr/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) pour plus de détails.
 - Les navigateurs modernes (Firefox 58+, Chrome 57+) ont mis en œuvre un retardement basé sur un budget pour les timeouts en arrière-plan. Cela place une limite supplémentaire sur la consommation de CPU des timers en arrière-plan. Cette limite opère de manière similaire dans tous les navigateurs modernes, avec les détails qui suivent&nbsp;:
 
   - Dans Firefox, les fenêtres d'onglets en arrière-plan ont chacune leur propre budget de temps en millisecondes — une valeur maximum et minimum de +50 ms et -150 ms, respectivement. Chrome est très similaire, excepté que le budget est spécifié en secondes.
-  - Les fenêtres sont sujettes au retardement après 30 secondes, avec les mêmes règles de délai de retardement que spécifiées pour les timers (encore une fois, voir _[Reasons for delays longer than specified](/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Reasons_for_delays_longer_than_specified)_). Pour Chrome, cette valeur est de 10 secondes.
+  - Les fenêtres sont sujettes au retardement après 30 secondes, avec les mêmes règles de délai de retardement que spécifiées pour les timers (encore une fois, voir _[Reasons for delays longer than specified](/fr/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified)_). Pour Chrome, cette valeur est de 10 secondes.
   - Les tâches de timers sont permises seulement quand le budget est non négatif.
   - Quand un timer a été exécuté, son temps d'exécution est retranché au budget de la fenêtre depuis laquelle le timer a été appelé.
   - Le budget regénère à un taux de 10 ms par seconde, sous Firefox et sous Chrome.
@@ -154,5 +154,5 @@ if (
 
 ## Voir aussi
 
-- La description de [l'API Page Visibility](http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx) sur l'IEBlog
-- La description de [l'API Page Visibility](http://code.google.com/chrome/whitepapers/pagevisibility.html) par Google
+- La description de [l'API Page Visibility](https://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx) sur l'IEBlog
+- La description de [l'API Page Visibility](https://code.google.com/chrome/whitepapers/pagevisibility.html) par Google

@@ -11,57 +11,57 @@ Firefox 3.6 では新規あるいは開発中のウェブ標準のサポート�
 
 ### CSS
 
-- [グラデーションの利用](/ja/docs/Using_gradients)
-  - : Firefox 3.6 では [`background`](/ja/docs/Web/CSS/background) において、Mozilla が提案中の [`-moz-linear-gradient`](/ja/docs/Web/CSS/-moz-linear-gradient) と [`-moz-radial-gradient`](/ja/docs/Web/CSS/-moz-radial-gradient) プロパティのサポートが追加されました。
-- [複数の背景](/ja/docs/CSS/Multiple_backgrounds)
+- [グラデーションの利用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+  - : Firefox 3.6 では [`background`](/ja/docs/Web/CSS/background) において、Mozilla が提案中の [`-moz-linear-gradient`](/ja/docs/Web/CSS/gradient/linear-gradient) と [`-moz-radial-gradient`](/ja/docs/Web/CSS/gradient/radial-gradient) プロパティのサポートが追加されました。
+- [複数の背景](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
   - : [`background`](/ja/docs/Web/CSS/background) プロパティ（および [`background-color`](/ja/docs/Web/CSS/background-color)、[`background-image`](/ja/docs/Web/CSS/background-image)、[`background-position`](/ja/docs/Web/CSS/background-position)、[`background-repeat`](/ja/docs/Web/CSS/background-repeat)、[`background-attachment`](/ja/docs/Web/CSS/background-attachment)）が複数の背景をサポートしました。これによりひとつのレイヤーの中で他に重なるような背景を指定できます。
-- [Mozilla 独自のメディア特性](/ja/docs/CSS/Media_queries#Mozilla-specific_media_features)
-  - : Mozilla 独自のシステムメトリックスに複数のメディア特性が追加されました。このメディア特性により、タッチサポートのような機能の有効性の確認を、[media queries](/ja/docs/CSS/Media_queries) を使用してより安全に行えるようになりました。
-- [背景画像のスケーリング](/ja/docs/CSS/Scaling_background_images)
-  - : [CSS 3 Backgrounds and Borders 草案](http://dev.w3.org/csswg/css3-background/)の `background-size プロパティが` [`-moz-background-size`](/ja/docs/Web/CSS/-moz-background-size) としてサポートされました。
-- [WOFF フォントのサポート](/ja/docs/About_WOFF)
+- [Mozilla 独自のメディア特性](/ja/docs/Web/CSS/CSS_media_queries#mozilla-specific_media_features)
+  - : Mozilla 独自のシステムメトリックスに複数のメディア特性が追加されました。このメディア特性により、タッチサポートのような機能の有効性の確認を、[media queries](/ja/docs/Web/CSS/CSS_media_queries) を使用してより安全に行えるようになりました。
+- [背景画像のスケーリング](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
+  - : [CSS 3 Backgrounds and Borders 草案](https://dev.w3.org/csswg/css3-background/)の `background-size プロパティが` [`-moz-background-size`](/ja/docs/Web/CSS/background-size) としてサポートされました。
+- [WOFF フォントのサポート](/ja/docs/Web/CSS/CSS_fonts/WOFF)
   - : [`@font-face`](/ja/docs/Web/CSS/@font-face) が新しい WOFF ウェブフォントファイルフォーマットをサポートしました。
-- [ポインターイベント](/ja/docs/CSS/pointer-events)
+- [ポインターイベント](/ja/docs/Web/CSS/pointer-events)
   - : [`pointer-events`](/ja/docs/Web/CSS/pointer-events) プロパティにより、要素がマウスポインターのイベントのターゲットであるかどうかをコンテンツが指定できるようになります。
 
 #### その他の CSS の変更
 
-- [CSS3 Values and Units](http://www.w3.org/TR/css3-values/#lengths) で定義されている長さの単位 [`rem`](/ja/docs/CSS/Length#Relative_length_units) がサポートされました。 [バグ 472195](https://bugzilla.mozilla.org/show_bug.cgi?id=472195)
+- [CSS3 Values and Units](https://www.w3.org/TR/css3-values/#lengths) で定義されている長さの単位 [`rem`](/ja/docs/Web/CSS/Length#relative_length_units) がサポートされました。 [バグ 472195](https://bugzilla.mozilla.org/show_bug.cgi?id=472195)
 - [`image-rendering`](/ja/docs/Web/CSS/image-rendering) が画像、背景画像、ビデオ、canvas でサポートされました。 [バグ 423756](https://bugzilla.mozilla.org/show_bug.cgi?id=423756)
 - [`text-align`](/ja/docs/Web/CSS/text-align):end がサポートされました。[バグ 299837](https://bugzilla.mozilla.org/show_bug.cgi?id=299837)
 - table [`display`](/ja/docs/Web/CSS/display) タイプの要素に対する DOM の変更がより良く動作するようになりました。
-- `indeterminate` 属性が `true` である `checkbox` [`input`](/ja/docs/HTML/Element/Input) 要素にマッチする [`:indeterminate`](/ja/docs/Web/CSS/:indeterminate) 擬似クラスのサポートが追加されました。
+- `indeterminate` 属性が `true` である `checkbox` [`input`](/ja/docs/Web/HTML/Element/Input) 要素にマッチする [`:indeterminate`](/ja/docs/Web/CSS/:indeterminate) 擬似クラスのサポートが追加されました。
 - [`:-moz-locale-dir(ltr)`](</ja/docs/Web/CSS/:-moz-locale-dir(ltr)> 'CSS の :-moz-locale-dir(ltr) 擬似クラスは Mozilla 拡張であり、ユーザーインターフェイスが左から右へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "ltr" に設定されていることで特定されます。') と [`:-moz-locale-dir(rtl)`](</ja/docs/Web/CSS/:-moz-locale-dir(rtl)> 'CSS の :-moz-locale-dir(ltr) 擬似クラスは Mozilla 拡張であり、ユーザーインターフェイスが右から左へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "rtl" に設定されていることで特定されます。') が追加され、ユーザーインターフェイスが left-to-right または right-to-left のどちらで描画されるかに応じて、容易にレイアウトをカスタマイズできるようになりました。[バグ 478416](https://bugzilla.mozilla.org/show_bug.cgi?id=478416)
 - ウィンドウ化されたプラグインは CSS transforms の中では表示されなくなりました。これはコンポジターによって正しく変換されないためです。
 
 ### HTML
 
-- [ウェブアプリケーションからファイルを扱う](/ja/docs/Using_files_from_web_applications)
+- [ウェブアプリケーションからファイルを扱う](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
   - : 新しい HTML5 File API のサポートが Gecko に追加され、ウェブアプリケーションがユーザーの選択したローカルファイルにアクセス出来るようになりました。これには `input type="file"` HTML 要素において複数のファイルを選択する `multiple` 属性のサポートが含まれます。
 
 <!---->
 
 - HTML5 video がポスター・フレームをサポート
-  - : [`video`](/ja/docs/HTML/Element/Video) 要素で `poster` 属性がサポートされ、コンテンツがビデオの再生が開始されるまでに表示されるポスター・フレームを指定できるようになりました。
+  - : [`video`](/ja/docs/Web/HTML/Element/video) 要素で `poster` 属性がサポートされ、コンテンツがビデオの再生が開始されるまでに表示されるポスター・フレームを指定できるようになりました。
 - チェックボックスとラジオボタンが `indeterminate` 属性をサポート
-  - : `checkbox` と `radio` タイプの HTML [`input`](/ja/docs/HTML/Element/Input) 要素が indeterminate 属性をサポートし、3 番目の "indeterminate" 状態を持てるようになりました。
+  - : `checkbox` と `radio` タイプの HTML [`input`](/ja/docs/Web/HTML/Element/Input) 要素が indeterminate 属性をサポートし、3 番目の "indeterminate" 状態を持てるようになりました。
 - Canvas 画像のスムージングが制御可能に
-  - : [`canvas`](/ja/docs/HTML/Canvas) 要素のスケーリング時に、新しい [`mozImageSmoothingEnabled`](/ja/docs/Canvas_tutorial/Using_images#Controlling_image_scaling_behavior) プロパティでスムージングの有無を指定できるようになりました。
+  - : [`canvas`](/ja/docs/Web/API/Canvas_API) 要素のスケーリング時に、新しい [`mozImageSmoothingEnabled`](/ja/docs/Canvas_tutorial/Using_images#Controlling_image_scaling_behavior) プロパティでスムージングの有無を指定できるようになりました。
 
 ### JavaScript
 
-Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/JavaScript/ECMAScript_5_support_in_Mozilla) から多くの言語機能が追加されました:
+Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/docs/JavaScript/ECMAScript_5_support_in_Mozilla) から多くの言語機能が追加されました:
 
-- [`Date.parse()`](/ja/docs/JavaScript/Reference/Global_Objects/Date/parse) は YYYY-MM-DD のような ISO 8601 dates をデコードできるようになりました。
-- function インスタンスの [`prototype`](/ja/docs/JavaScript/Reference/Global_Objects/Function/prototype) プロパティは列挙可能 (enumerable)ではなくなりました。
+- [`Date.parse()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) は YYYY-MM-DD のような ISO 8601 dates をデコードできるようになりました。
+- function インスタンスの [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティは列挙可能 (enumerable)ではなくなりました。
 
 ### DOM
 
 - Web workers が自己終了可能に
   - : Workers が [`nsIWorkerScope.close()`](</ja/docs/XPCOM_Interface_Reference/nsIWorkerScope#close()>) メソッドをサポートし、自分自身で終了できるようになりました。
 - ドラッグ＆ドロップがファイルをサポート
-  - : ドラッグリスナーで提供される [`DataTransfer`](/ja/docs/DragDrop/DataTransfer) オブジェクトがドラッグされたファイルを含むようになりました。
-- [デバイスの傾きの検出](/ja/docs/Detecting_device_orientation)
+  - : ドラッグリスナーで提供される [`DataTransfer`](/ja/docs/Web/API/DataTransfer) オブジェクトがドラッグされたファイルを含むようになりました。
+- [デバイスの傾きの検出](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
   - : コンテンツはデバイスが加速度センサー（accelerometer）をサポートしていれば [`MozOrientation`](/ja/docs/DOM/MozOrientation) イベントによりその傾きを検出できるようになりました。Firefox 3.6 は Mac のノートブックで加速度センサーをサポートします。
 - [document の幅と高さの変化の検出](/ja/docs/DOM/Detecting_document_width_and_height_changes)
   - : document の `scrollWidth` または `scrollHeight` プロパティが変化すると、 `MozScrollAreaChanged` イベントが発動します。
@@ -69,11 +69,11 @@ Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/Java
 #### その他の DOM の変更
 
 - `getBoxObjectFor()` メソッドが**削除されました**。このメソッドは非標準であり、さらに非標準なものをウェブにさらすことになるからです。[バグ 340571](https://bugzilla.mozilla.org/show_bug.cgi?id=340571) を参照してください。これはまた、Gecko の検出にこのメソッドをコールする MooTools にも影響します。これは最新の MooTools で修正されたのでいずれ更新されるでしょう。
-- DOM windows に新しい [`mozInnerScreenX`](/ja/docs/DOM/window.mozInnerScreenX) と [`mozInnerScreenY`](/ja/docs/DOM/window.mozInnerScreenY) プロパティが追加されました。これらはウィンドウ表示領域の左上コーナーを基準にしたスクリーンの座標を返します。
+- DOM windows に新しい [`mozInnerScreenX`](/ja/docs/Web/API/Window/mozInnerScreenX) と [`mozInnerScreenY`](/ja/docs/Web/API/Window/mozInnerScreenY) プロパティが追加されました。これらはウィンドウ表示領域の左上コーナーを基準にしたスクリーンの座標を返します。
 - chrome に対してのみアクセス可能な新しい [`mozScreenPixelsPerCSSPixel`](/ja/docs/DOM/window.mozScreenPixelsPerCSSPixel) プロパティは CSS ピクセルとスクリーン・ピクセルの変換率を提供します。この値はコンテンツのズームレベルに応じて変化します。
 - ページ URI の文書フラグメント識別子（"#" (ハッシュ) 文字の後の部分）が変更になったとき、新たな `hashchange` イベントがページに送られます。[バグ 385434](https://bugzilla.mozilla.org/show_bug.cgi?id=385434)、[バグ 504837](https://bugzilla.mozilla.org/show_bug.cgi?id=504837 "FIXED: hashchange event should not be restricted to firing only when the document's ready state is")、および [バグ 504220](https://bugzilla.mozilla.org/show_bug.cgi?id=504220) を参照してください。
 - `document.readystate で` `complete`属性がサポートされました。[バグ 347174](https://bugzilla.mozilla.org/show_bug.cgi?id=347174 'FIXED: Implement document.readystate == "complete"')。
-- HTML5 の [`element.classList`](/ja/DOM/element.classList) がサポートされ、クラス属性の処理が容易になりました。[バグ 501257](https://bugzilla.mozilla.org/show_bug.cgi?id=501257)
+- HTML5 の [`element.classList`](/ja/docs/Web/API/Element/classList) がサポートされ、クラス属性の処理が容易になりました。[バグ 501257](https://bugzilla.mozilla.org/show_bug.cgi?id=501257)
 - HTML 文書の `localName` と `namespaceURI` が XHTML 文書と同じように振舞うようになりました。`localName` は小文字で値を返し、HTML 要素の `namespaceURI` は `"http://www.w3.org/1999/xhtml"` です。
 - [`nsIDOMGeoPositionAddress`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMGeoPositionAddress) インターフェイスによりジオロケーションの address がサポートされ、新しいフィールドが [`nsIDOMGeoPosition`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMGeoPosition) に追加されました。[バグ 503942](https://bugzilla.mozilla.org/show_bug.cgi?id=503942)
 - [`window.getComputedStyle`](/ja/docs/Web/API/Window/getComputedStyle) 関数は `url()` 値の中をクォートして返すようになりました。
@@ -81,15 +81,15 @@ Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/Java
 ### XPath
 
 - choose() XPath メソッドをサポート
-  - : [`choose()`](/ja/docs/XPath/Functions/choose) メソッドが [XPath](/ja/docs/XPath) でサポートされました。
+  - : [`choose()`](/ja/docs/Web/XPath/Functions/choose) メソッドが [XPath](/ja/docs/Web/XPath) でサポートされました。
 
 ## XUL とアドオン開発者向け
 
-あなたが拡張機能の開発者なら、あなたの拡張機能に影響するかもしれない変更点の役に立つ概要を記した [Updating extensions for Firefox 3.6](/ja/docs/Updating_extensions_for_Firefox_3.6) を読むことから始めてください。プラグインの開発者は [Updating plug-ins for Firefox 3.6](/ja/docs/Updating_plug-ins_for_Firefox_3.6) を読んでください。
+あなたが拡張機能の開発者なら、あなたの拡張機能に影響するかもしれない変更点の役に立つ概要を記した [Updating extensions for Firefox 3.6](/ja/docs/Mozilla/Firefox/Releases/3.6/Updating_extensions) を読むことから始めてください。プラグインの開発者は [Updating plug-ins for Firefox 3.6](/ja/docs/Mozilla/Firefox/Releases/3.6/Updating_plug-ins) を読んでください。
 
 ### 新機能
 
-- [デバイスの傾きの検出](/ja/docs/Detecting_device_orientation)
+- [デバイスの傾きの検出](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
   - : コンテンツはデバイスが加速度センサー（accelerometer）をサポートしていれば [`MozOrientation`](/ja/docs/DOM/MozOrientation) イベントによりその傾きを検出できるようになりました。Firefox 3.6 は Mac のノートブックで加速度センサーをサポートします。
 - [HTTP アクティビティのモニタリング](/ja/docs/Monitoring_HTTP_activity)
   - : HTTP トランザクションをモニタし、リアルタイムでリクエストとレスポンスを観察できます。
@@ -106,7 +106,7 @@ Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/Java
 - [Storage API でデータのロケールを考慮した照合がサポートされました](</ja/docs/Storage#Collation_(sorting)> "Storage#Collation (sorting)")
   - : Gecko 1.9.2 にロケールを考慮した技術を用いて最適化された照合を提供する複数の新しい（ソート付き）照合メソッドが追加されました。
 - [ステートメントのプロパティが列挙可能になりました](/ja/docs/mozIStorageStatementParams#Enumeration_of_properties)
-  - : ステートメントのすべてのプロパティを列挙する [`for..in`](/ja/docs/JavaScript/Reference/Statements/for...in) enumeration が利用できるようになりました。
+  - : ステートメントのすべてのプロパティを列挙する [`for..in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) enumeration が利用できるようになりました。
 - mozIStorageStatement の getParameterIndex の動作が 3.5 と 3.6 の間で変更された
   - : 詳細は [バグ 528166](https://bugzilla.mozilla.org/show_bug.cgi?id=528166) を参照してください。
 - 複数の引数のセットを非同期バインドしてステートメントを実行
@@ -118,7 +118,7 @@ Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/Java
 
 ### テーマ
 
-テーマに関する変更の詳細は [Updating themes for Firefox 3.6](/ja/docs/Updating_themes_for_Firefox_3.6) を参照してください。
+テーマに関する変更の詳細は [Updating themes for Firefox 3.6](/ja/docs/Mozilla/Firefox/Releases/3.6/Updating_themes) を参照してください。
 
 - [軽量テーマ](/ja/docs/Themes/Lightweight_themes)
   - : Firefox 3.6 は軽量テーマをサポートします。これは作成するのが簡単なテーマで、ブラウザーウィンドウの上部（URL バーとボタンバー）と下部（ステータスバー）に単純に画像を適用します。これは既存の [Personas](http://www.getpersonas.com/) テーマ構造の Firefox への統合です。

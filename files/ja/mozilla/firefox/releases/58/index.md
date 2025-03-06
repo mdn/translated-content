@@ -11,10 +11,10 @@ Firefox 58 は、米国時間 2018 年 1 月 23 日にリリースされまし�
 
 ### 開発者ツール
 
-- {{cssxref("clip-path")}} で生成したシェイプ用の [シェイプパスエディター](/ja/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes) を、既定で有効にしました ([Firefox バグ 1405339](https://bugzil.la/1405339))。
-- [ネットワークモニター](/ja/docs/Tools/Network_Monitor) に、[ネットワーク通信の記録を停止/再開する](/ja/docs/Tools/Network_Monitor#Pausing_and_resume_network_traffic_recording) ボタンを追加しました ([Firefox バグ 1005755](https://bugzil.la/1005755))。
-- [ネットワークモニター](/ja/docs/Tools/Network_Monitor) で "Flash" フィルターボタンが使用できなくなりました。Flash の要求は "その他" フィルターに含まれます ([Firefox バグ 1413540](https://bugzil.la/1413540))。
-- 古いレスポンシブデザインモード (Firefox 52 より前のバージョンで、デフォルトで有効でした) のコードを、開発ツールから削除しました ([Firefox バグ 1305777](https://bugzil.la/1305777))。新しいツールの情報は [レスポンシブデザインモード](/ja/docs/Tools/Responsive_Design_Mode) で確認してください。
+- {{cssxref("clip-path")}} で生成したシェイプ用の [シェイプパスエディター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html) を、既定で有効にしました ([Firefox バグ 1405339](https://bugzil.la/1405339))。
+- [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) に、[ネットワーク通信の記録を停止/再開する](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#pausing_and_resume_network_traffic_recording) ボタンを追加しました ([Firefox バグ 1005755](https://bugzil.la/1005755))。
+- [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) で "Flash" フィルターボタンが使用できなくなりました。Flash の要求は "その他" フィルターに含まれます ([Firefox バグ 1413540](https://bugzil.la/1413540))。
+- 古いレスポンシブデザインモード (Firefox 52 より前のバージョンで、デフォルトで有効でした) のコードを、開発ツールから削除しました ([Firefox バグ 1305777](https://bugzil.la/1305777))。新しいツールの情報は [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) で確認してください。
 - ページインスペクターの CSS ペインから、MDN のドキュメントを参照する機能を削除しました (バージョン 55 から無効化していました。[Firefox バグ 1382171](https://bugzil.la/1382171))。
 
 ### HTML
@@ -50,7 +50,7 @@ _変更なし。_
 - いくつかの API において、error オブジェクトで報告されるエラー (例えば {{domxref("FileReader")}}、{{domxref("IDBRequest")}}、{{domxref("IDBTransaction")}} の `error` プロパティや、{{domxref("RTCPeerConnection")}} で一定の方法によるリクエストが成功しなかったとき) が、{{domxref("DOMException")}} のインスタンスになりました。{{domxref("DOMError")}} は非推奨になり、DOM4 仕様書から削除されました ([Firefox バグ 1120178](https://bugzil.la/1120178))。
 - [WebVR API](/ja/docs/Web/API/WebVR_API) を、macOS でデフォルトで有効にしました ([Firefox バグ 1374399](https://bugzil.la/1374399))。
 - {{domxref("PerformanceResourceTiming.workerStart")}} プロパティをサポートしました ([Firefox バグ 1191943](https://bugzil.la/1191943))。
-- バジェットベースのバックグラウンドタイムアウト調節を実装しました。詳しくは [Policies in place to aid background page performance](/ja/docs/Web/API/Page_Visibility_API#Policies_in_place_to_aid_background_page_performance) をご覧ください ([Firefox バグ 1377766](https://bugzil.la/1377766))。
+- バジェットベースのバックグラウンドタイムアウト調節を実装しました。詳しくは [Policies in place to aid background page performance](/ja/docs/Web/API/Page_Visibility_API#policies_in_place_to_aid_background_page_performance) をご覧ください ([Firefox バグ 1377766](https://bugzil.la/1377766))。
 
 #### DOM イベント
 
@@ -88,7 +88,7 @@ _変更なし。_
 
 ### その他
 
-- [プログレッシブ ウェブアプリ](/ja/Apps/Progressive) の取り組みの一環として、Android 版 Firefox で "ホーム画面に追加" をサポートしました ([Firefox バグ 1212648](https://bugzil.la/1212648))。
+- [プログレッシブ ウェブアプリ](/ja/docs/Web/Progressive_web_apps) の取り組みの一環として、Android 版 Firefox で "ホーム画面に追加" をサポートしました ([Firefox バグ 1212648](https://bugzil.la/1212648))。
 - [WebAssembly](/ja/docs/WebAssembly) に、読み込み時間を最適化する階層型コンパイラー ([Firefox バグ 1277562](https://bugzil.la/1277562)) と、新たなストリーミング API ({{jsxref("WebAssembly.compileStreaming()")}} および {{jsxref("WebAssembly.installStreaming()")}}) を搭載しました ([Firefox バグ 1347644](https://bugzil.la/1347644))。
 
 ## ウェブプラットフォームから廃止
@@ -137,15 +137,15 @@ _変更なし。_
 
 ### JavaScript
 
-- 非標準の {{jsxref("Date.prototype.toLocaleFormat()")}} メソッドを削除しました ([Firefox バグ 818634](https://bugzil.la/818634))。詳細および移行方法について、[Warning: Date.prototype.toLocaleFormat is deprecated](/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat) をご覧ください。
+- 非標準の {{jsxref("Date.prototype.toLocaleFormat()")}} メソッドを削除しました ([Firefox バグ 818634](https://bugzil.la/818634))。詳細および移行方法について、[Warning: Date.prototype.toLocaleFormat is deprecated](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) をご覧ください。
 - 非標準および非推奨の {{jsxref("Object.prototype.watch()")}} および {{jsxref("Object.prototype.unwatch", "unwatch()")}} メソッドを削除しました。今後は動作しません ([Firefox バグ 638054](https://bugzil.la/638054))。代わりに [setters および getters](/ja/docs/Web/JavaScript/Guide/Working_with_objects#ゲッターとセッターの定義) または [proxy](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy) の使用を検討してください。
-- [レガシーイテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol)、[`StopIteration`](/ja/docs/Archive/Web/StopIteration) オブジェクト、[レガシージェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)、非標準の {{jsxref("Function.prototype.isGenerator()")}} メソッドを削除しました。代わりに ES2015 の [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols) や、標準準拠の [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators) を使用してください ([Firefox バグ 1083482](https://bugzil.la/1083482), [Firefox バグ 1413867](https://bugzil.la/1413867), [Firefox バグ 1119777](https://bugzil.la/1119777))。
-- 非標準の [配列内包](/ja/docs/Web/JavaScript/Reference/Operators/Array_comprehensions) および [ジェネレーター内包](/ja/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions) を削除しました ([Firefox バグ 1414340](https://bugzil.la/1414340))。
+- [レガシーイテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)、[`StopIteration`](/ja/docs/Archive/Web/StopIteration) オブジェクト、[レガシージェネレーター関数](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)、非標準の {{jsxref("Function.prototype.isGenerator()")}} メソッドを削除しました。代わりに ES2015 の [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols) や、標準準拠の [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators) を使用してください ([Firefox バグ 1083482](https://bugzil.la/1083482), [Firefox バグ 1413867](https://bugzil.la/1413867), [Firefox バグ 1119777](https://bugzil.la/1119777))。
+- 非標準の [配列内包](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) および [ジェネレーター内包](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) を削除しました ([Firefox バグ 1414340](https://bugzil.la/1414340))。
 
 ### API
 
 - {{domxref("XMLHttpRequest.responseType")}} プロパティの独自仕様の値である `moz-blob` および `moz-chunked-text` を、Firefox 58 で完全に削除しました ([Firefox バグ 1397145](https://bugzil.la/1397145), [Firefox バグ 1397151](https://bugzil.la/1397151), [Firefox バグ 1120171](https://bugzil.la/1120171))。
-- [Abort API の機能](/ja/docs/Web/API/Fetch_API#Aborting_a_fetch) を制御する設定項目である `dom.abortController.enabled` および `dom.abortController.fetch.enabled` を削除しました ([Firefox バグ 1402317](https://bugzil.la/1402317))。デフォルトで有効化したためです。
+- [Abort API の機能](/ja/docs/Web/API/Fetch_API#aborting_a_fetch) を制御する設定項目である `dom.abortController.enabled` および `dom.abortController.fetch.enabled` を削除しました ([Firefox バグ 1402317](https://bugzil.la/1402317))。デフォルトで有効化したためです。
 - 独自仕様である `mozSrcObject` プロパティを Firefox 58 で削除しました ([Firefox バグ 1183495](https://bugzil.la/1183495))。代わりに、標準の {{domxref("HTMLMediaElement.srcObject")}} プロパティを使用してください。
 
 ### SVG

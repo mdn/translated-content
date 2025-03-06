@@ -1,7 +1,6 @@
 ---
 title: 'SyntaxError: "0"-prefixed octal literals and octal escape seq. are deprecated'
 slug: Web/JavaScript/Reference/Errors/Deprecated_octal_literal
-original_slug: Web/JavaScript/Reference/Errors/Deprecated_octal
 ---
 
 {{jsSidebar("Errors")}}
@@ -68,5 +67,5 @@ for octal literals use the "0o" prefix instead
 
 ## Смотрите также
 
-- [Lexical grammar](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Octal)(Лексическая грамматика)
-- [Warning: 08/09 is not a legal ECMA-262 octal constant](/ru/docs/Web/JavaScript/Reference/Errors/Bad_octal)(Предупреждение: 08/09 нет законной восьмиштырьковой константы ECMA-262)
+- [Lexical grammar](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#octal)(Лексическая грамматика)
+- [Warning: 08/09 is not a legal ECMA-262 octal constant](/ru/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal)(Предупреждение: 08/09 нет законной восьмиштырьковой константы ECMA-262)

@@ -11,7 +11,7 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 
 - [CSS](/ja/docs/Web/CSS) の {{cssxref("@media")}} および {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/At-rule)により、条件付きでスタイルを適用する。
 - {{HTMLElement("link")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}, などの [HTML](/ja/docs/Web/HTML) 要素で `media=` 属性を付けて特定のメディアを対象とする。
-- [メディアの状態の検査と監視](/ja/docs/Web/CSS/Media_Queries/Testing_media_queries)をするために、[JavaScript](/ja/docs/Web/JavaScript) で {{domxref("Window.matchMedia()")}} および {{domxref("MediaQueryList.addListener()")}} メソッドを使用する
+- [メディアの状態の検査と監視](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)をするために、[JavaScript](/ja/docs/Web/JavaScript) で {{domxref("Window.matchMedia()")}} および {{domxref("MediaQueryList.addListener()")}} メソッドを使用する
 
 > [!NOTE]
 > このページの例では説明のために CSS の `@media` を使用していますが、基本構文はすべての種類のメディアクエリーで共通です。
@@ -214,7 +214,7 @@ Level 4 の構文に変換すると、次のようになります。
 
 ## 関連情報
 
-- [プログラムからのメディアクエリーの検査](/ja/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [プログラムからのメディアクエリーの検査](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries)
 - [Mozilla 拡張メディア特性](/ja/docs/Web/CSS/Mozilla_Extensions#media_features)
 - [WebKit 拡張メディア特性](/ja/docs/Web/CSS/WebKit_Extensions#media_features)

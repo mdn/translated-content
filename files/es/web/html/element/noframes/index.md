@@ -11,13 +11,13 @@ slug: Web/HTML/Element/noframes
 
   - : **Sus etiquetas son**: `<noframes>` y `</noframes>` (ambas obligatorias).
 
-    **Está definido como**: En un doctype transicional está definido como elemento [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **Está definido como**: En un doctype transicional está definido como elemento [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
     **Crea una caja**: en bloque.
 
-    En un documento transicional **puede contener**: texto y/o cero o más elementos [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque) o [en línea](/es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).
+    En un documento transicional **puede contener**: texto y/o cero o más elementos [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque) o [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_l.c3.adnea).
 
-    En un documento de marcos **puede y debe contener**: Un elementos [body](/es/HTML/Elemento/body) y no puede contener [noframes](/es/HTML/Elemento/noframes).
+    En un documento de marcos **puede y debe contener**: Un elementos [body](/es/docs/Web/HTML/Element/body) y no puede contener [noframes](/es/docs/Web/HTML/Element/noframes).
 
 #### Atributos
 

@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Functions/arguments
 
 **`arguments`** は配列風 (`Array`-like) オブジェクトであり、[関数](/ja/docs/Web/JavaScript/Guide/Functions)に渡された引数の値を含んでおり、関数内からアクセスすることができます。
 
-{{EmbedInteractiveExample("pages/js/functions-arguments.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Arguments")}}
+
+```js interactive-example
+function func1(a, b, c) {
+  console.log(arguments[0]);
+  // Expected output: 1
+
+  console.log(arguments[1]);
+  // Expected output: 2
+
+  console.log(arguments[2]);
+  // Expected output: 3
+}
+
+func1(1, 2, 3);
+```
 
 ## 解説
 
@@ -155,7 +170,7 @@ foo(1, 2, 3); // [1, 2, 3]
 
 厳格モードでは、 `arguments` オブジェクトは関数に残余引数、デフォルト引数、分割引数が渡されたかどうかにかかわらず同じ動作をします。すなわち、関数の本体で変数に新しい値を代入しても、 `arguments` オブジェクトには影響しません。また、 `arguments` オブジェクトに新しい変数を代入しても、変数の値には影響ありません。
 
-> **メモ:** `"use strict";` ディレクティブを、残余引数、デフォルト引数、分割引数を受け付ける関数の本体に書くことはできません。そうすると、[構文エラー](/ja/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params)が発生します。
+> **メモ:** `"use strict";` ディレクティブを、残余引数、デフォルト引数、分割引数を受け付ける関数の本体に書くことはできません。そうすると、[構文エラー](/ja/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params)が発生します。
 
 厳格モードでない関数で、単純な引数のみを渡した場合（すなわち、残余引数、デフォルト引数、分割引数ではない場合）、関数の本体で変数の値を新しい値にすると、 `arguments` オブジェクトと同期します。
 

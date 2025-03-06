@@ -7,7 +7,33 @@ slug: Web/HTML/Element/input/datetime-local
 
 {{htmlelement("input")}} 元素的 **`datetime-local`** 类型创建让用户便捷输入日期和时间的输入控件，包括“年”、“月”、“日”，以及“时”和“分”。
 
-{{EmbedInteractiveExample("pages/tabbed/input-datetime-local.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;datetime-local&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="meeting-time">Choose a time for your appointment:</label>
+
+<input
+  type="datetime-local"
+  id="meeting-time"
+  name="meeting-time"
+  value="2018-06-12T19:30"
+  min="2018-06-07T00:00"
+  max="2018-06-14T00:00" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 此控件的 UI 因浏览器而异。在不支持的浏览器中，其会优雅地降级为简单的 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text) 控件。
 
@@ -95,13 +121,13 @@ JavaScript 的 {{jsxref("Date")}} 提供了几种用于将数值类型的日期�
 
 ### max
 
-接受的最晚日期和时间的值。如果 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 的值晚于这一时间戳，则该元素不会通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `max` 属性的值不是遵循 `YYYY-MM-DDThh:mm` 格式的有效字符串，则该元素没有最大值。
+接受的最晚日期和时间的值。如果 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 的值晚于这一时间戳，则该元素不会通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `max` 属性的值不是遵循 `YYYY-MM-DDThh:mm` 格式的有效字符串，则该元素没有最大值。
 
 该属性指定的值必须晚于或等于 `min` 属性的值。
 
 ### min
 
-接受的最早日期和时间的值。如果早于这一时间戳，则该元素不会通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 属性的值不是遵循 `YYYY-MM-DDThh:mm` 格式的有效字符串，则该元素没有最小值。
+接受的最早日期和时间的值。如果早于这一时间戳，则该元素不会通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `min` 属性的值不是遵循 `YYYY-MM-DDThh:mm` 格式的有效字符串，则该元素没有最小值。
 
 该属性指定的值必须早于或等于 `max` 属性的值。
 
@@ -169,7 +195,7 @@ Date/time 输入控件乍看非常实用；它们提供了方便的用户接口�
 
 ### 设置时区
 
-`datetime-local` 控件并没有地方可以设置日期/时间的时区和/或区域属性。在 [`datetime`](/zh-CN/docs/Web/HTML/Element/input/datetime) 输入类型上提供过此功能，但这个类型现在已被废弃，也已从标准中移除。这项被移除的主要原因是缺少浏览器的支持，以及出于用户交互/用户体验方法的考量。相比之下，仅使用一个（或多个）控件来设置日期/时间，然后单独在另一控件处理时区，这样更容易一些。
+`datetime-local` 控件并没有地方可以设置日期/时间的时区和/或区域属性。在 [`datetime`](/zh-CN/docs/Web/HTML/Element/input/datetime-local) 输入类型上提供过此功能，但这个类型现在已被废弃，也已从标准中移除。这项被移除的主要原因是缺少浏览器的支持，以及出于用户交互/用户体验方法的考量。相比之下，仅使用一个（或多个）控件来设置日期/时间，然后单独在另一控件处理时区，这样更容易一些。
 
 例如，如果你在开发一套系统，某位用户可能已经登录进来，并且已经设置了时区，你可以把时区放在一个 [`hidden`](/zh-CN/docs/Web/HTML/Element/input/hidden) 输入控件里。例如：
 
@@ -616,4 +642,4 @@ daySelect.onchange = () => {
 
 - 通用 {{HTMLElement("input")}} 元素以及操作它的接口 {{domxref("HTMLInputElement")}}
 - [`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date) 和 [`<input type="time">`](/zh-CN/docs/Web/HTML/Element/input/time)
-- [日期和时间选择器教程](/zh-CN/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker)
+- [日期和时间选择器教程](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#date_and_time_picker)

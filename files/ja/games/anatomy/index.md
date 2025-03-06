@@ -109,7 +109,7 @@ window.cancelAnimationFrame( MyGame.stopMain );
 
 ## JavaScript でもっと最適化されたメインループを作る
 
-究極的には JavaScript ではブラウザーはそれ自身のメインループを走らせて、あなたのコードはそれのいくつかの段階に存在します。これからのセクションではメインループがブラウザーからコントロールを奪い取らないようにすることについて記述します。これらのメイン関数は自身 を`window.requestAnimationFrame()` にアタッチし、`window.requestAnimationFrame()` はブラウザーに次に来るであろうフレームへのコントロールを要求します。どうやってこれらの要求をブラウザーのメインループと関連付けるかはブラウザー任せです。[W3C の requestAnimationFrame の仕様](http://www.w3.org/TR/animation-timing/)はいつ requestAnimationFrame コールバックが実行されるのか厳密に定義していません。これはいいことです - なぜかというと、そうすることでブラウザーのベンダーが自由に最適だと感じる解決策を実験し、何回も微調整することができるからです。
+究極的には JavaScript ではブラウザーはそれ自身のメインループを走らせて、あなたのコードはそれのいくつかの段階に存在します。これからのセクションではメインループがブラウザーからコントロールを奪い取らないようにすることについて記述します。これらのメイン関数は自身 を`window.requestAnimationFrame()` にアタッチし、`window.requestAnimationFrame()` はブラウザーに次に来るであろうフレームへのコントロールを要求します。どうやってこれらの要求をブラウザーのメインループと関連付けるかはブラウザー任せです。[W3C の requestAnimationFrame の仕様](https://www.w3.org/TR/animation-timing/)はいつ requestAnimationFrame コールバックが実行されるのか厳密に定義していません。これはいいことです - なぜかというと、そうすることでブラウザーのベンダーが自由に最適だと感じる解決策を実験し、何回も微調整することができるからです。
 
 最近の Firefox と Google Chrome (と、たぶん他のも) のバーションはフレームのタイムスライスの初めで `requestAnimationFrame` コールバックをメインスレッドに接続**_しよう_**とします。ブラウザーのメインスレッドはしたがってこんな風に見**_せよう_**とします。
 
@@ -208,7 +208,7 @@ var tNow = window.performance.now();
 
   - これはフォーカスされていないときや最小化されている時でも処理時間を使い、メインスレッドを占有して、ひょっとしたら昔のゲームのループの遺物なのかもしれません(が、簡単です)
 
-- `requestAnimationFrame` で描画し [Web Worker](/ja/docs/Web/Guide/Performance/Using_web_workers) の `setInterval` か `setTimeout` で更新する。
+- `requestAnimationFrame` で描画し [Web Worker](/ja/docs/Web/API/Web_Workers_API/Using_web_workers) の `setInterval` か `setTimeout` で更新する。
 
   - 上述のものと同じですが、メインスレッドを占有しない (または、メインスレッドがこれ自体を占有しない) 点で違います。これはより複雑な解決策で、単純な更新に対してはオーバーヘッドが大きすぎるかもしれません。
 

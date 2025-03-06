@@ -31,7 +31,7 @@ slug: Web/XSLT/Element/with-param
 
 ### 정의
 
-[XSLT section 11.6, Passing Parameters to Templates](http://www.w3.org/TR/xslt#section-Passing-Parameters-to-Templates)
+[XSLT section 11.6, Passing Parameters to Templates](https://www.w3.org/TR/xslt#section-Passing-Parameters-to-Templates)
 
 ### Gecko 지원
 

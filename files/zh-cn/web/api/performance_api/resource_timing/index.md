@@ -54,7 +54,7 @@ The {{domxref("PerformanceResourceTiming")}} interface's {{domxref("PerformanceR
 
 ## Implementation status
 
-As shown in the {{domxref("PerformanceResourceTiming")}} interface's [Browser Compatibility](/zh-CN/docs/Web/API/PerformanceResourceTiming#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers. However, note that some properties have little to no implementation so see each property's "Browser compatibility" section for more specific interoperability data.
+As shown in the {{domxref("PerformanceResourceTiming")}} interface's [Browser Compatibility](/zh-CN/docs/Web/API/PerformanceResourceTiming#browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers. However, note that some properties have little to no implementation so see each property's "Browser compatibility" section for more specific interoperability data.
 
 To test your browser's support for these interfaces, run the [`perf-api-support`](https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html) application.
 
@@ -62,6 +62,6 @@ To test your browser's support for these interfaces, run the [`perf-api-support`
 
 - [Resource Timing Standard](https://w3c.github.io/resource-timing/); W3C Editor's Draft
 - [CanIUse data](http://caniuse.com/#search=resource-timing)
-- [Resource Timing practical tips](http://www.stevesouders.com/blog/2014/08/21/resource-timing-practical-tips/); Steve Souders; 2014 August 21
-- [Measuring network performance with Resource Timing API](http://googledevelopers.blogspot.ca/2013/12/measuring-network-performance-with.html); Ilya Grigorik; 2013 December 11
+- [Resource Timing practical tips](https://www.stevesouders.com/blog/2014/08/21/resource-timing-practical-tips/); Steve Souders; 2014 August 21
+- [Measuring network performance with Resource Timing API](https://googledevelopers.blogspot.ca/2013/12/measuring-network-performance-with.html); Ilya Grigorik; 2013 December 11
 - [A Primer for Web Performance Timing APIs](http://siusin.github.io/perf-timing-primer/); Xiaoqian Wu; W3C Editor's Draft

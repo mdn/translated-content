@@ -64,9 +64,9 @@ window.addEventListener("beforeunload", function (e) {
 
 ## Смотрите также
 
-- [`DOMContentLoaded`](/ru/docs/Web/Events/DOMContentLoaded)
+- [`DOMContentLoaded`](/ru/docs/Web/API/Document/DOMContentLoaded_event)
 - [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event)
 - [`load`](/ru/docs/Web/API/Window/load_event)
-- [`beforeunload`](/ru/docs/Web/Events/beforeunload)
-- [`unload`](/ru/docs/Web/Events/unload)
-- [Выгрузка Документов - Запрос на выгрузку документа](http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)
+- [`beforeunload`](/ru/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/ru/docs/Web/API/Window/unload_event)
+- [Выгрузка Документов - Запрос на выгрузку документа](https://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)

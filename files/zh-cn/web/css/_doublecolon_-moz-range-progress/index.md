@@ -1,5 +1,5 @@
 ---
-title: "::-moz-range-progress"
+title: ::-moz-range-progress
 slug: Web/CSS/::-moz-range-progress
 ---
 
@@ -59,4 +59,4 @@ input[type="range"]::-moz-range-progress {
   - {{cssxref("::-ms-fill-upper")}}, Internet Explorer 和 Edge 支持的伪元素
 
 - [CSS-Tricks：使用 CSS 设置跨浏览器兼容范围输入的样式](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode：样式和脚本滑块](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [QuirksMode：样式和脚本滑块](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

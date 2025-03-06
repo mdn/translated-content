@@ -17,16 +17,16 @@ l10n:
 
 对人类来说，电子邮件就是一种异步通信方式；发送者发送了一封邮件，接着接收者会在方便时读取和回复该邮件，而不是马上这样做。双方可以继续随时发送和接收信息，而无需双方安排何时进行操作。
 
-在异步软件中，发出请求（例如向服务器），并在等待响应时不会阻塞其他进程。该软件可以继续执行其他任务。例如，在[基于 Promise 的 API](/zh-CN/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API) 中，会为长时间的操作创建 {{JSxRef("Promise")}} 对象。在操作完成后，Promise 会被处理。有了 Promise，软件不必等待操作的完成。
+在异步软件中，发出请求（例如向服务器），并在等待响应时不会阻塞其他进程。该软件可以继续执行其他任务。例如，在[基于 Promise 的 API](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API) 中，会为长时间的操作创建 {{JSxRef("Promise")}} 对象。在操作完成后，Promise 会被处理。有了 Promise，软件不必等待操作的完成。
 
 ## 软件设计
 
 异步软件设计通过构建代码扩展了异步的概念，按照这种设计编写的代码使得程序能够要求一个任务与先前的一个（或多个）任务一起执行，而无需为了等待它们完成而停止执行。当后来的任务完成时，程序将使用约定好的机制通知先前的任务，以便让它知道任务已经完成，以及如果有结果存在的话，这个结果是可用的。
 
-还有许多用来实现异步软件的编程技术。查看文章[异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous) 来了解它们吧。
+还有许多用来实现异步软件的编程技术。查看文章[异步 JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS) 来了解它们吧。
 
 ## 参见
 
-- [从服务器获取数据](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)（学习区）
+- [从服务器获取数据](/zh-CN/docs/Learn_web_development/Core/Scripting/Network_requests)（学习区）
 - 相关术语：
   - {{glossary("Synchronous", "同步")}}

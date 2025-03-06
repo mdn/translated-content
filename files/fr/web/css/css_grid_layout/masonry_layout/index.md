@@ -80,5 +80,5 @@ S'il y a moins de valeurs que de pistes, la dernière valeur est utilisée pour 
 ## Voir aussi
 
 - Les propriétés CSS associées&nbsp;:
-  - [`justify-tracks`](/fr/docs/Web/CSS/justify-tracks)
-  - [`masonry-auto-flow`](/fr/docs/Web/CSS/masonry-auto-flow)
+  - [`justify-tracks`](/fr/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
+  - [`masonry-auto-flow`](/fr/docs/Web/CSS/grid-auto-flow)

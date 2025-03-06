@@ -7,15 +7,30 @@ slug: Web/HTML/Element/meter
 
 HTML-элемент **`<meter>`** представляет собой скалярное значение в пределах известного диапазона или дробного значения.
 
-{{EmbedInteractiveExample("pages/tabbed/meter.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;meter&gt;", "tabbed-shorter")}}
 
-| [Категории контента](/ru/docs/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), контент, ассоциированный с label, явный контент. |
-| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                  | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), но среди его потомков не должно быть элемента `<meter>`.                                                                 |
-| Пропуск тегов                                          | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                    |
-| Допустимые родители                                    | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                         |
-| Допустимые ARIA-роли                                   | Нет                                                                                                                                                                                                 |
-| DOM-интерфейс                                          | {{domxref("HTMLMeterElement")}}                                                                                                                                                                     |
+```html interactive-example
+<label for="fuel">Fuel level:</label>
+
+<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
+  at 50/100
+</meter>
+```
+
+```css interactive-example
+label {
+  padding-right: 10px;
+  font-size: 1rem;
+}
+```
+
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content), контент, ассоциированный с label, явный контент. |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                      | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content), но среди его потомков не должно быть элемента `<meter>`.                                                                 |
+| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                    |
+| Допустимые родители                                        | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                                                         |
+| Допустимые ARIA-роли                                       | Нет                                                                                                                                                                                                 |
+| DOM-интерфейс                                              | {{domxref("HTMLMeterElement")}}                                                                                                                                                                     |
 
 ## Атрибуты
 

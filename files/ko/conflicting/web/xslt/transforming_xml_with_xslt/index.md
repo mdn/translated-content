@@ -48,19 +48,19 @@ original_slug: Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Refer
 
 ### Axes
 
-- [ancestor](/ko/docs/Web/XPath/Axes/ancestor)
-- [ancestor-or-self](/ko/docs/Web/XPath/Axes/ancestor-or-self)
-- [attribute](/ko/docs/Web/XPath/Axes/attribute)
-- [child](/ko/docs/Web/XPath/Axes/child)
-- [descendant](/ko/docs/Web/XPath/Axes/descendant)
-- [descendant-or-self](/ko/docs/Web/XPath/Axes/descendant-or-self)
-- [following](/ko/docs/Web/XPath/Axes/following)
-- [following-sibling](/ko/docs/Web/XPath/Axes/following-sibling)
-- [namespace](/ko/docs/Web/XPath/Axes/namespace) _(not supported)_
-- [parent](/ko/docs/Web/XPath/Axes/parent)
-- [preceding](/ko/docs/Web/XPath/Axes/preceding)
-- [preceding-sibling](/ko/docs/Web/XPath/Axes/preceding-sibling)
-- [self](/ko/docs/Web/XPath/Axes/self)
+- [ancestor](/ko/docs/Web/XPath/Axes#ancestor)
+- [ancestor-or-self](/ko/docs/Web/XPath/Axes#ancestor-or-self)
+- [attribute](/ko/docs/Web/XPath/Axes#attribute)
+- [child](/ko/docs/Web/XPath/Axes#child)
+- [descendant](/ko/docs/Web/XPath/Axes#descendant)
+- [descendant-or-self](/ko/docs/Web/XPath/Axes#descendant-or-self)
+- [following](/ko/docs/Web/XPath/Axes#following)
+- [following-sibling](/ko/docs/Web/XPath/Axes#following-sibling)
+- [namespace](/ko/docs/Web/XPath/Axes#namespace) _(not supported)_
+- [parent](/ko/docs/Web/XPath/Axes#parent)
+- [preceding](/ko/docs/Web/XPath/Axes#preceding)
+- [preceding-sibling](/ko/docs/Web/XPath/Axes#preceding-sibling)
+- [self](/ko/docs/Web/XPath/Axes#self)
 
 ### Functions
 

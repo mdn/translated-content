@@ -41,7 +41,7 @@ Con **cuatro** colores, el primero para arriba, el segundo para la derecha, el t
 
 ### Ejemplos
 
-[Ver El Ejemplo Vivo](/samples/cssref/border.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/border.html)
 
 ```
 element {

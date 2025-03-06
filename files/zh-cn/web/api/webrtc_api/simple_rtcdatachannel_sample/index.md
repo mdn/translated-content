@@ -5,7 +5,7 @@ slug: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 
 {{DefaultAPISidebar("WebRTC")}}
 
-{{domxref("RTCDataChannel")}} 接口是 [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API) 的一个功能，可以让你在两个对等点之间打开一个通道，你可以通过该通道发送和接收任意数据。API 有意地类似于 [WebSocket API](/zh-CN/docs/Web/API/WebSocket_API)，因此可以为每个 API 使用相同的编程模型。
+{{domxref("RTCDataChannel")}} 接口是 [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API) 的一个功能，可以让你在两个对等点之间打开一个通道，你可以通过该通道发送和接收任意数据。API 有意地类似于 [WebSocket API](/zh-CN/docs/Web/API/WebSockets_API)，因此可以为每个 API 使用相同的编程模型。
 
 在本示例中，我们会在一个页面内建立一条 {{domxref("RTCDataChannel")}} 连接。这个场景是为了演示如何连接两个 Peer，实际场景并不常见。在本示例中解释了协商和建立连接的过程，定位和连接另外一台主机的场景在另外的一个示例中。
 

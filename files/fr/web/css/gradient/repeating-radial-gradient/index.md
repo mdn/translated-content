@@ -120,7 +120,7 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 Le dégradé elliptique a son centre situé à 20% du coin supérieur gauche et se répètera 10 fois entre le centre et le coin le plus éloigné (situé donc dans le coin inférieur droit). Les navigateurs qui prennent en charge les arrêts de couleur multiples afficheront des bandes elliptiques rouges et vertes. Les navigateurs qui n'implémentent pas cette fonctionnalité afficheront un dégradé qui va du rouge au noir puis du bleu au vert.
 
 > [!NOTE]
-> Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients) pour plus d'exemples.
+> Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) pour plus d'exemples.
 
 ## Spécifications
 
@@ -132,7 +132,7 @@ Le dégradé elliptique a son centre situé à 20% du coin supérieur gauche et 
 
 ## Voir aussi
 
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Les autres fonctions de dégradés&nbsp;:
   - [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient)
   - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)

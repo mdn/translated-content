@@ -9,7 +9,7 @@ L'interface `Cache` fournit un mécanisme de stockage pour les paires d'objets [
 
 Une origine peut avoir plusieurs objets nommés `Cache`. Vous êtes responsable de l'implémentation de la manière dont votre script (par exemple dans un {{domxref("ServiceWorker")}}) gère les mises à jour du cache. Les éléments d'un cache ne sont pas mis à jour, sauf demande explicite ; ils n'expirent pas, sauf s'ils sont supprimés. Utilisez {{domxref("CacheStorage.open", "CacheStorage.open()")}} pour ouvrir un objet `Cache` spécifique et appelez ensuite l'une des méthodes `Cache` pour maintenir le `Cache`.
 
-Vous êtes également responsable de la purge périodique des entrées du cache. Chaque navigateur a une limite stricte sur la quantité de mémoire cache qu'une origine donnée peut utiliser. Les estimations de l'utilisation du quota de cache sont disponibles via le lien {{domxref("StorageEstimate")}} API. Le navigateur fait de son mieux pour gérer l'espace disque, mais il peut supprimer le stockage en cache d'une origine. Le navigateur supprime généralement toutes les données d'une origine ou aucune des données d'une origine. Veillez à nommer les caches et à n'utiliser les caches qu'à partir de la version du script sur laquelle ils peuvent fonctionner en toute sécurité. Pour plus d'informations, voir [Suppression des anciens caches](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers#Supprimer_les_anciens_caches).
+Vous êtes également responsable de la purge périodique des entrées du cache. Chaque navigateur a une limite stricte sur la quantité de mémoire cache qu'une origine donnée peut utiliser. Les estimations de l'utilisation du quota de cache sont disponibles via le lien {{domxref("StorageEstimate")}} API. Le navigateur fait de son mieux pour gérer l'espace disque, mais il peut supprimer le stockage en cache d'une origine. Le navigateur supprime généralement toutes les données d'une origine ou aucune des données d'une origine. Veillez à nommer les caches et à n'utiliser les caches qu'à partir de la version du script sur laquelle ils peuvent fonctionner en toute sécurité. Pour plus d'informations, voir [Suppression des anciens caches](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers#supprimer_les_anciens_caches).
 
 > [!NOTE]
 > Les implémentations initiales du cache (dans Blink et Gecko) résolvent les engagements {{domxref("Cache.add()")}}, {{domxref("Cache.addAll()")}}, et {{domxref("Cache.put()")}} lorsque le corps de la réponse est entièrement écrit sur le stockage. Des versions plus récentes de la spécification précisent que le navigateur peut résoudre la promesse dès que l'entrée est enregistrée dans la base de données, même si le corps de réponse est encore en cours d'écriture.
@@ -107,7 +107,7 @@ self.addEventListener("fetch", function (event) {
 
 ### Storing cookies in Caches
 
-L'[API Fetch](/fr/docs/Web/API/Fetch_API) exige que les en-têtes {{httpheader("Set-Cookie")}} soient supprimés avant de renvoyer un objet {{domxref("Response")}} à partir de [`fetch()`](/fr/docs/Web/API/fetch). Ainsi, une réponse stockée dans un cache ne contiendra pas d'en-têtes.
+L'[API Fetch](/fr/docs/Web/API/Fetch_API) exige que les en-têtes {{httpheader("Set-Cookie")}} soient supprimés avant de renvoyer un objet {{domxref("Response")}} à partir de [`fetch()`](/fr/docs/Web/API/Window/fetch). Ainsi, une réponse stockée dans un cache ne contiendra pas d'en-têtes.
 
 ## Spécifications
 
@@ -123,4 +123,4 @@ L'[API Fetch](/fr/docs/Web/API/Fetch_API) exige que les en-têtes {{httpheader("
 - [Code d'exemple basique de Service workers](https://github.com/mdn/sw-test)
 - [Le ServiceWorker est prêt ?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise" , "Promesse" )}}
-- [Utilisation des Web Workers](/fr/docs/Web/API/Web_Workers_API/Utilisation_des_web_workers)
+- [Utilisation des Web Workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)

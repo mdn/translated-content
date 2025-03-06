@@ -52,7 +52,7 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 
 ## 警告コード
 
-[HTTP Warn Codes registry at iana.org](http://www.iana.org/assignments/http-warn-codes/http-warn-codes.xhtml) では、警告コードの名前空間を定義しています。
+[HTTP Warn Codes registry at iana.org](https://www.iana.org/assignments/http-warn-codes/http-warn-codes.xhtml) では、警告コードの名前空間を定義しています。
 
 | コード | テキスト                         | 説明                                                                                               |
 | ------ | -------------------------------- | -------------------------------------------------------------------------------------------------- |

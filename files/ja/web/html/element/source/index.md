@@ -9,7 +9,19 @@ l10n:
 
 **`<source>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("picture")}}、{{HTMLElement("audio")}}、{{HTMLElement("video")}} の各要素に対し、複数のメディアリソースを指定します。この要素は{{glossary("void element", "空要素")}}であり、すなわち中身も閉じタグもありません。[画像ファイル形式](/ja/docs/Web/Media/Formats/Image_types)や[メディアファイル形式](/ja/docs/Web/Media/Formats)の対応状況が様々であるブラウザーの幅広い互換性を確保するために、同じメディアコンテンツを複数のファイル形式で提供することはよくあることです。
 
-{{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video controls width="250" height="200" muted>
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+```
 
 ## 属性
 
@@ -43,7 +55,7 @@ l10n:
 
 - `media`
 
-  - : リソースの志向するメディアの[メディアクエリー](/ja/docs/Web/CSS/Media_Queries)です。
+  - : リソースの志向するメディアの[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)です。
 
 - `height`
 
@@ -119,7 +131,7 @@ l10n:
 ### `picture` で `height` および `width` 属性を使う例
 
 この例では、`height` と `width` 属性を持つ 3 つの`<source>`要素が、{{HTMLElement("picture")}} 要素に含まれています。
-[メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)により、[ビューポート](/ja/docs/Glossary/Viewport)の寸法に基づいて、`height` および `width` 属性により表示すべき画像をブラウザーに選択させます。
+[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)により、[ビューポート](/ja/docs/Glossary/Viewport)の寸法に基づいて、`height` および `width` 属性により表示すべき画像をブラウザーに選択させます。
 
 ```html
 <picture>

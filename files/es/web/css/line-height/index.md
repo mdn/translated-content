@@ -47,7 +47,7 @@ line-height: unset;
 - `<longitud>`
   - : La [`<longitud>`](/es/docs/Web/CSS/length) especificada se utiliza en el cálculo de la altura de la casilla encuadrada por líneas. Los valores dados en unidades `em` pueden producir resultados inesperados (ver ejemplo más abajo).
 - `<porcentaje>`
-  - : En relación con el tamaño de fuente del elemento en sí. El valor calculado es este [\<porcentaje>](/es/docs/Web/CSS/porcentaje) multiplicado por el tamaño de letra del elemento calculado. Los valores porcentuales pueden producir resultados inesperados (ver el segundo ejemplo a continuación).
+  - : En relación con el tamaño de fuente del elemento en sí. El valor calculado es este [\<porcentaje>](/es/docs/Web/CSS/percentage) multiplicado por el tamaño de letra del elemento calculado. Los valores porcentuales pueden producir resultados inesperados (ver el segundo ejemplo a continuación).
 
 ### Ejemplos
 

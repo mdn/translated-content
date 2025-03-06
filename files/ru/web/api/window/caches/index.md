@@ -1,7 +1,6 @@
 ---
 title: Глобальное свойство caches
 slug: Web/API/Window/caches
-original_slug: Web/API/caches
 ---
 
 {{APIRef("Service Workers API")}}{{AvailableInWorkers}}
@@ -52,7 +51,7 @@ this.addEventListener("install", (event) => {
 
 ## Смотрите также
 
-- [Service Workers](/ru/docs/Web/API/ServiceWorker_API)
+- [Service Workers](/ru/docs/Web/API/Service_Worker_API)
 - [Web Workers](/ru/docs/Web/API/Web_Workers_API)
 - {{domxref("CacheStorage")}}
 - {{domxref("Cache")}}

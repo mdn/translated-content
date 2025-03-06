@@ -211,7 +211,7 @@ Web Audio API에서 사용하기 위한 오디오 소스를 정의하는 인터�
 - [ConstantSourceNode로 다수의 매개변수 제어하기](/ko/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [positional audio와 WebGL 같이 사용하기](https://www.html5rocks.com/tutorials/webaudio/positional_audio/)
 - [Web Audio API로 게임 오디오 개발하기](https://www.html5rocks.com/tutorials/webaudio/games/)
-- [webkitAudioContext 코드를 AudioContext 기반 표준에 포팅하기](/ko/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
+- [webkitAudioContext 코드를 AudioContext 기반 표준에 포팅하기](/ko/docs/conflicting/Web/API/Web_Audio_API)
 
 ### 라이브러리
 

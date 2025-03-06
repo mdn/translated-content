@@ -9,7 +9,27 @@ slug: Web/HTML/Element/input/number
 
 浏览器可能会选择提供步进箭头，让用户可以使用鼠标增加和减少输入的值，或者只需用指尖敲击即可。
 
-{{EmbedInteractiveExample("pages/tabbed/input-number.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="tentacles">Number of tentacles (10-100):</label>
+
+<input type="number" id="tentacles" name="tentacles" min="10" max="100" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 不支持 `number` 类型的浏览器会回退为标准的 `text` 输入框。
 
@@ -62,13 +82,13 @@ list 属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素�
 
 ### `max`
 
-允许值范围内的最大值。如果输入到元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `max` 属性的值不是数字，则元素没有最大值。
+允许值范围内的最大值。如果输入到元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `max` 属性的值不是数字，则元素没有最大值。
 
 此值必须大于或等于 `min` 属性的值。
 
 ### `min`
 
-允许值范围内的最小值。如果元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果为 `min` 指定的值不是有效数字，则输入没有最小值。
+允许值范围内的最小值。如果元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果为 `min` 指定的值不是有效数字，则输入没有最小值。
 
 该值必须小于或等于 `max` 属性的值。
 
@@ -283,7 +303,7 @@ input:valid + span::after {
 
 我们使用了 {{cssxref(":invalid")}} 和 {{cssxref(":valid")}} 伪类，在相邻的 {{htmlelement("span")}} 元素上显示一个适当的无效或有效图标作为生成内容，作为有效性的视觉指标。
 
-我们把它放在一个单独的 `<span>`元素上，以增加灵活性；一些浏览器在某些类型的表单输入上不能很有效地显示生成的内容（请阅读 [`<input type="date">` 验证](/zh-CN/docs/Web/HTML/Element/input/date#Validation)一节的示例以了解）。
+我们把它放在一个单独的 `<span>`元素上，以增加灵活性；一些浏览器在某些类型的表单输入上不能很有效地显示生成的内容（请阅读 [`<input type="date">` 验证](/zh-CN/docs/Web/HTML/Element/input/date#validation)一节的示例以了解）。
 
 > [!WARNING]
 > 客户端表单验证*不能*替代服务端验证。对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了，甚至也可以完全绕开 HTML 并将数据直接提交到服务器。如果服务器端代码无法验证其接收到的数据，则在提交格式不正确的（或太大，类型错误……）的数据时，灾难可能会发生。
@@ -433,8 +453,8 @@ switchBtn.addEventListener("click", () => {
 
 ## 参见
 
-- [HTML 表单指南](/zh-CN/docs/Learn/Forms)
+- [HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/input/tel)
-- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - [文章：为什么 Gov.UK 为数字输入改变了输入类型](https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/)

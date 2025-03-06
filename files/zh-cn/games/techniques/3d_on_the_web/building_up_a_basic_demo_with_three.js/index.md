@@ -16,8 +16,8 @@ slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 
 - 确保使用的支持 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 的现代浏览器，例如最新版的 Firefox 或 Chrome.
 - 创建一个目录保存例子。
-- 复制最新的压缩版 [Three.js](http://threejs.org/build/three.min.js) 到你的目录。
-- 用单独的浏览器 tab 打开 [Three.js](http://threejs.org/docs/) 文档 — 对应参考很有用。
+- 复制最新的压缩版 [Three.js](https://threejs.org/build/three.min.js) 到你的目录。
+- 用单独的浏览器 tab 打开 [Three.js](https://threejs.org/docs/) 文档 — 对应参考很有用。
 
 ## HTML 结构
 
@@ -105,7 +105,7 @@ You should experiment with these values and see how they change what you see in 
 
 ## Rendering the scene
 
-Everything is ready, but we still can't see anything. Although we set the renderer up, we still have to actually render everything. Our `render()` function will do this job, with a little help from [`requestAnimationFrame()`](/zh-CN/docs/Web/API/window/requestAnimationFrame), which causes the scene to be re-rendered constantly on every frame:
+Everything is ready, but we still can't see anything. Although we set the renderer up, we still have to actually render everything. Our `render()` function will do this job, with a little help from [`requestAnimationFrame()`](/zh-CN/docs/Web/API/Window/requestAnimationFrame), which causes the scene to be re-rendered constantly on every frame:
 
 ```js
 function render() {

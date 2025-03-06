@@ -5,9 +5,9 @@ slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 
 {{MDNSidebar}}
 
-Cette page énumère les différentes macros utilisées sur MDN. Pour plus d'informations sur leur utilisation, voir [Utiliser les macros](/fr/docs/MDN/Structures/Macros).
+Cette page énumère les différentes macros utilisées sur MDN. Pour plus d'informations sur leur utilisation, voir [Utiliser les macros](/fr/docs/MDN/Writing_guidelines/Page_structures).
 
-Voir la page [Autres macros](/fr/docs/MDN/Structures/Macros/Other) pour plus d'informations quant aux macros moins usitées ou uniquement utilisées dans certains contextes ou qui sont dépréciées.
+Voir la page [Autres macros](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Other) pour plus d'informations quant aux macros moins usitées ou uniquement utilisées dans certains contextes ou qui sont dépréciées.
 
 ## Liens
 
@@ -153,9 +153,9 @@ Pour la macro [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/
 
 ## Exemples de code
 
-- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) permet d'embarquer le résultat d'un exemple de code de la page (voir [les exemples intégrés](/fr/docs/MDN/Structures/Live_samples)).
-- [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) crée un lien vers une page contenant le résultat d'un exemple de code de la page (voir [les exemples intégrés](/fr/docs/MDN/Structures/Live_samples)).
-- [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs) permet d'embarquer des exemples interactifs depuis des pages GitHub (voir [exemples interactifs depuis GitHub](/fr/docs/MDN/Structures/Code_examples#github_live_samples)).
+- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) permet d'embarquer le résultat d'un exemple de code de la page (voir [les exemples intégrés](/fr/docs/MDN/Writing_guidelines/Page_structures)).
+- [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) crée un lien vers une page contenant le résultat d'un exemple de code de la page (voir [les exemples intégrés](/fr/docs/MDN/Writing_guidelines/Page_structures)).
+- [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs) permet d'embarquer des exemples interactifs depuis des pages GitHub (voir [exemples interactifs depuis GitHub](/fr/docs/MDN/Writing_guidelines/Page_structures/Code_examples#github_live_samples)).
 
 ## Barres latérales de navigation
 
@@ -231,7 +231,7 @@ ou
 Les macros qui suivent possèdent la même sémantique que les équivalents en ligne abordés avant. Ces macros doivent être placées directement après le préambule de la page. On peut aussi les utiliser pour marquer une section donnée d'une page.
 
 - [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs). Exemple&nbsp;: `\{{Non-standard_Header}}` {{Non-standard_Header}}
-- [`SeeCompatTable`](https://github.com/mdn/yari/blob/main/kumascript/macros/SeeCompatTable.ejs) devrait être utilisée sur les pages documentant [des fonctionnalités expérimentales](/fr/docs/MDN/Guidelines/Conventions_definitions#experimental). Exemple&nbsp;: `\{{SeeCompatTable}}` {{SeeCompatTable}}
+- [`SeeCompatTable`](https://github.com/mdn/yari/blob/main/kumascript/macros/SeeCompatTable.ejs) devrait être utilisée sur les pages documentant [des fonctionnalités expérimentales](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental). Exemple&nbsp;: `\{{SeeCompatTable}}` {{SeeCompatTable}}
 - [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs). Exemple&nbsp;: `\{{Deprecated_Header}}` {{Deprecated_Header}}
 - [`secureContext_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/secureContext_header.ejs) devrait être utilisée sur les pages principales des interfaces ou d'aperçu des API, mais pas sur les sous-pages décrivant les méthodes ou les propriétés. Exemple&nbsp;: `\{{SecureContext_Header}}` {{SecureContext_Header}}
 

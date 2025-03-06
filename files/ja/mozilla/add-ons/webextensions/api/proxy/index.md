@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/proxy
 
 {{AddonSidebar}}
 
-拡張された [Proxy Auto-Configuration (PAC) file](/ja/Add-ons/WebExtensions/API/proxy#PAC_file_specification) (これはウェブのリクエストをプロキシー化するポリシーを実装します) を実装するのにプロキシー API を使います。この実装は標準の PAC 設計といくつかそれていて、なぜなら PAC ファイルのデファクト仕様は 1995 年頃の初期実装から変えられてないためです。仕様を維持している標準化団体はありません。
+拡張された [Proxy Auto-Configuration (PAC) file](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy#pac_file_specification) (これはウェブのリクエストをプロキシー化するポリシーを実装します) を実装するのにプロキシー API を使います。この実装は標準の PAC 設計といくつかそれていて、なぜなら PAC ファイルのデファクト仕様は 1995 年頃の初期実装から変えられてないためです。仕様を維持している標準化団体はありません。
 
 Google Chrome では [同じく"proxy"という拡張機能 API](https://developer.chrome.com/docs/extensions/reference/api/proxy) が提供されていて、その機能はこの API と似ていて、拡張機能はプロキシーポリシーを使うことができます。しかし、Chrome API の設計はこの API とまったく違います。Chrome の API では拡張機能は PAC ファイルを定義できて、明示的なプロキシールールも定義できます。このため拡張機能 PAC ファイルも使用できて、この API は PAC ファイルアプローチのみをサポートします。この API は Chrome `proxy` API と互換性がないため、この API は `browser` 名前空間のみで利用できます。
 
@@ -100,7 +100,7 @@ Code running in the PAC file does not get access to:
 
 - any DOM functions (例えば、 [window](/ja/docs/Web/API/Window) or any of its properties)
 - any WebExtension APIs except [`runtime.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) and [`runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
-- the [console API](/ja/docs/Web/API/Console) - to log messages from a PAC, send a message to the background script:
+- the [console API](/ja/docs/Web/API/console) - to log messages from a PAC, send a message to the background script:
 
 ```js
 //  pac.js

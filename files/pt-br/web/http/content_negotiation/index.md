@@ -20,7 +20,7 @@ Ao longo dos anos, outras propostas de negociação de conteúdo, como _negocia�
 
 ## Negociação baseada no servidor
 
-Na _negociação baseada no servidor_, ou negociação proativa, o navegador (ou outro tipo de agente do usuário) envia diversos cabeçalhos HTTP junto com a URL. Estes cabeçalhos descrevem a escolha preferida do usuário. O servidor usa-os como sugestões e um algoritmo intero escolhe o melhor conteúdo para ser servido ao usuário. O algoritmo é específico para cada servidor e não é definido no padrão. Veja, por-exemplo, o [algoritmo de negociação do Apache 2.2](http://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm).
+Na _negociação baseada no servidor_, ou negociação proativa, o navegador (ou outro tipo de agente do usuário) envia diversos cabeçalhos HTTP junto com a URL. Estes cabeçalhos descrevem a escolha preferida do usuário. O servidor usa-os como sugestões e um algoritmo intero escolhe o melhor conteúdo para ser servido ao usuário. O algoritmo é específico para cada servidor e não é definido no padrão. Veja, por-exemplo, o [algoritmo de negociação do Apache 2.2](https://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm).
 
 ![](httpnegoserver.png)
 

@@ -18,7 +18,7 @@ l10n:
 ### CSS
 
 - 已更新 {{cssxref("align-content")}} 属性，使其适用于 `display: block;` 布局。这将 `flex` 和 `grid` 中所有的布局定位带到 `block`，使开发人员能够对齐块级元素，而无需将其容器转换为 `flex` 或 `grid` 容器。（[Firefox bug 1882853](https://bugzil.la/1882853)）。
-- CSS 属性 [`transform-box`](/zh-CN/docs/Web/CSS/transform-box) 现已支持 `content-box` 和 `stroke-box` 值。对于参照的盒子，`content-box` 值使用[内容盒子](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#盒模型的各个部分)，而 `stroke-box` 值使用包含 SVG 形状的描边边界框（stroke bounding box）（[Firefox bug 1868374](https://bugzil.la/1868374)）。
+- CSS 属性 [`transform-box`](/zh-CN/docs/Web/CSS/transform-box) 现已支持 `content-box` 和 `stroke-box` 值。对于参照的盒子，`content-box` 值使用[内容盒子](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model#盒模型的各个部分)，而 `stroke-box` 值使用包含 SVG 形状的描边边界框（stroke bounding box）（[Firefox bug 1868374](https://bugzil.la/1868374)）。
 - [`content-visibility`](/zh-CN/docs/Web/CSS/content-visibility) CSS 属性值 `auto` 现已默认启用。其允许在内容不[与用户相关](/zh-CN/docs/Web/CSS/CSS_containment#与用户相关)的情况下跳过对其的渲染。（[Firefox bug 1874874](https://bugzil.la/1874874)）。
 
 ### JavaScript
@@ -61,7 +61,7 @@ l10n:
 
 #### Media、WebRTC 和 Web Audio
 
-- 现已为[加密媒体扩展](/zh-CN/docs/Web/API/Encrypted_Media_Extensions_API) 提供 [AV1](/zh-CN/docs/Web/Media/Formats/Video_codecs#av1) 编解码器的支持，其用于播放来自视频流提供商的更高质量的视频。（[Firefox bug 1601817](https://bugzil.la/1601817)）。
+- 现已为[加密媒体扩展](/zh-CN/docs/Web/API/Encrypted_Media_Extensions_API) 提供 [AV1](/zh-CN/docs/Web/Media/Guides/Formats/Video_codecs#av1) 编解码器的支持，其用于播放来自视频流提供商的更高质量的视频。（[Firefox bug 1601817](https://bugzil.la/1601817)）。
 
 #### 移除
 
@@ -69,7 +69,7 @@ l10n:
 
 ### WebAssembly
 
-- 已添加对 Wasm 模块使用多个独立线性内存的支持。多内存区域使模块之间的互操作更高效，并为即将到来的 Wasm 标准提供更好的 polyfill。例如，它们可以用于为内部和共享数据、临时和持久数据或需要在线程之间共享的数据创建单独的内存。内存可以在 JavaScript 中创建并导入到 Wasm 模块中，或在 Wasm 模块中创建并导出。Wasm 实例中的每个新的线性内存区域都会被赋予一个从零开始的顺序索引。WebAssembly 的[内存指令](/zh-CN/docs/WebAssembly/Reference/Memory)使用索引引用它们正在操作的内存，如果未指定索引，则默认为第一块定义的内存区域。有关更多信息，请参阅*理解 WebAssembly 文本格式*中的 [WebAssembly Memory](/zh-CN/docs/WebAssembly/Understanding_the_text_format#webassembly_内存)。（[Firefox bug 1860816](https://bugzil.la/1860816)）。
+- 已添加对 Wasm 模块使用多个独立线性内存的支持。多内存区域使模块之间的互操作更高效，并为即将到来的 Wasm 标准提供更好的 polyfill。例如，它们可以用于为内部和共享数据、临时和持久数据或需要在线程之间共享的数据创建单独的内存。内存可以在 JavaScript 中创建并导入到 Wasm 模块中，或在 Wasm 模块中创建并导出。Wasm 实例中的每个新的线性内存区域都会被赋予一个从零开始的顺序索引。WebAssembly 的[内存指令](/zh-CN/docs/WebAssembly/Reference/Memory)使用索引引用它们正在操作的内存，如果未指定索引，则默认为第一块定义的内存区域。有关更多信息，请参阅*理解 WebAssembly 文本格式*中的 [WebAssembly Memory](/zh-CN/docs/WebAssembly/Guides/Understanding_the_text_format#webassembly_内存)。（[Firefox bug 1860816](https://bugzil.la/1860816)）。
 
 ### WebDriver 一致性（WebDriver BiDi、Marionette）
 

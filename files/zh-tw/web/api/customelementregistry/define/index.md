@@ -11,7 +11,7 @@ slug: Web/API/CustomElementRegistry/define
 **`document.registerElement()`** 可以在瀏覽器中註冊一個新的自訂標籤(元素)and returns a constructor for the new element.
 
 > [!NOTE]
-> This is an experimental technology. The browser you use it in must support Web Components. See [Enabling Web Components in Firefox](/zh-TW/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox).
+> This is an experimental technology. The browser you use it in must support Web Components. See [Enabling Web Components in Firefox](/zh-TW/docs/Web/API/Web_components#enabling_web_components_in_firefox).
 
 ## 語法
 
@@ -53,4 +53,4 @@ mytag.textContent = "I am a my-tag element.";
 
 ## 也看一下
 
-- [Custom Elements](/zh-TW/docs/Web/Web_Components/Custom_Elements)
+- [Custom Elements](/zh-TW/docs/Web/API/Web_components/Using_custom_elements)

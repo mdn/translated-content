@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Statements/return
 
 Оператор **`return`** завершает выполнение текущей функции и возвращает её значение.
 
-{{EmbedInteractiveExample("pages/js/statement-return.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Return")}}
+
+```js interactive-example
+function getRectArea(width, height) {
+  if (width > 0 && height > 0) {
+    return width * height;
+  }
+  return 0;
+}
+
+console.log(getRectArea(3, 4));
+// Expected output: 12
+
+console.log(getRectArea(-3, 4));
+// Expected output: 0
+```
 
 ## Синтаксис
 
@@ -44,7 +59,7 @@ return x + y / 3;
 
 ### Автоматическая расстановка точек с запятыми
 
-На выражение `return` влияет [автоматическая расстановка точек с запятыми (ASI)](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion). Разрыв строки не допускается между ключевым словом `return` и выражением.
+На выражение `return` влияет [автоматическая расстановка точек с запятыми (ASI)](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion). Разрыв строки не допускается между ключевым словом `return` и выражением.
 
 ```js-nolint
 return

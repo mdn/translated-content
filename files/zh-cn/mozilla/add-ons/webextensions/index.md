@@ -23,7 +23,7 @@ slug: Mozilla/Add-ons/WebExtensions
 
 ## 开始
 
-在构建[你的第一个扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)之前，先去了解下[扩展都可以做些什么](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)。学习[扩展剖析](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)章节，对[扩展开发、发布工作流和 Firefox 风格](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview)有一个大致的了解。在[扩展示例](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Examples)中
+在构建[你的第一个扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)之前，先去了解下[扩展都可以做些什么](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)。学习[扩展剖析](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)章节，对[扩展开发、发布工作流和 Firefox 风格](https://extensionworkshop.com/documentation/develop/firefox-workflow-overview/)有一个大致的了解。在[扩展示例](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Examples)中
 你会有一个全面的选择来进行更深入的探索，这些示例你都是可以正常运行在 Firefox 中的。
 
 ## 概念

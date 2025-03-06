@@ -10,7 +10,7 @@ slug: Web/HTML/Element
 它们已被按照功能进行分组，以便更轻松地找到你想要的内容。同时，侧边栏中也按照字母排序列出了所有元素。
 
 > [!NOTE]
-> 若想获知更多关于 HTML 元素、属性的基本信息，请查阅 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)中的相关内容。
+> 若想获知更多关于 HTML 元素、属性的基本信息，请查阅 [HTML 介绍](/zh-CN/docs/Learn_web_development/Core/Structuring_content)中的相关内容。
 
 ## 主根元素
 
@@ -183,11 +183,11 @@ HTML 支持各种多媒体资源，例如图像、音频和视频。
 
 ## 表单
 
-HTML 提供了许多可一起使用的元素，这些元素能用来创建一个用户可以填写并提交到网站或应用程序的表单。详情请参阅 [HTML 表单指南](/zh-CN/docs/Learn/Forms)。
+HTML 提供了许多可一起使用的元素，这些元素能用来创建一个用户可以填写并提交到网站或应用程序的表单。详情请参阅 [HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)。
 
 | 元素                        | 描述                                                                                                                                                                                                                      |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{HTMLElement("button")}}   | 一个可交互元素（可通过用户的鼠标、键盘、手指、声音指令或其他辅助技术激活）。一旦被激活，它就会执行一个动作，例如提交[表单](/zh-CN/docs/Learn/Forms)或打开对话框。                                                         |
+| {{HTMLElement("button")}}   | 一个可交互元素（可通过用户的鼠标、键盘、手指、声音指令或其他辅助技术激活）。一旦被激活，它就会执行一个动作，例如提交[表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)或打开对话框。                              |
 | {{HTMLElement("datalist")}} | 包含了一组 {{HTMLElement("option")}} 元素，这些元素表示其它表单控件可选值。                                                                                                                                               |
 | {{HTMLElement("fieldset")}} | 用于对 web 表单中的控件和标签（{{HTMLElement("label")}}）进行分组。                                                                                                                                                       |
 | {{HTMLElement("form")}}     | 表示文档中的一个区域，此区域包含交互控件，用于向 Web 服务器提交信息。                                                                                                                                                     |

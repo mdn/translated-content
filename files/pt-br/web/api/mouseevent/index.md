@@ -64,7 +64,7 @@ _Essa interface também herda propriedades de seus pais, [`UIEvent`](/pt-BR/docs
   - : A coordenada X do ponteiro do mouse em relação a todo o documento.
 - [`MouseEvent.pageY`](/pt-BR/docs/Web/API/MouseEvent/pageY) Read only
   - : A coordenada Y do ponteiro do mouse em relação a todo o documento.
-- [`MouseEvent.region`](/pt-BR/docs/Web/API/MouseEvent/region) Read only
+- [`MouseEvent.region`](/pt-BR/docs/Web/API/MouseEvent) Read only
   - : Retorna o id da região afetada pelo evento. Se nenhuma região atingida for afetada, **`null`** será retornado.
 - [`MouseEvent.relatedTarget`](/pt-BR/docs/Web/API/MouseEvent/relatedTarget)Read only
   - : O destino secundário do evento, se houver.
@@ -80,7 +80,7 @@ _Essa interface também herda propriedades de seus pais, [`UIEvent`](/pt-BR/docs
 
     estava pressionada quando o evento do mouse foi disparado.
 
-- [MouseEvent.which](/pt-BR/docs/Web/API/MouseEvent/which) Read only
+- [MouseEvent.which](/pt-BR/docs/Web/API/UIEvent/which) Read only
   - : O botão sendo pressionado quando o evento do mouse foi disparado.
 - `MouseEvent.mozPressure` Read only
   - : A quantidade de pressão aplicada a um dispositivo de toque ou tablet ao gerar o evento; este valor varia entre `0.0` (pressão mínima) e `1.0` (pressão máxima).
@@ -97,9 +97,9 @@ _Essa interface também herda propriedades de seus pais, [`UIEvent`](/pt-BR/docs
 
 ## Constantes
 
-- [`MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN`](/pt-BR/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_MOUSE_DOWN) Read only
+- [`MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN`](/pt-BR/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_MOUSE_DOWN_static) Read only
   - : Força mínima necessária para um clique normal.
-- [`MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN`](/pt-BR/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN) Read only
+- [`MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN`](/pt-BR/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN_static) Read only
   - : Força mínima necessária para um clique de força
 
 ## Método

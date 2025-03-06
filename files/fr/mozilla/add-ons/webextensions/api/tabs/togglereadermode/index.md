@@ -9,7 +9,7 @@ Bascule en mode Lecteur pour l'onglet donné.
 
 Cette fonction permet de basculer en mode Lecteur pour l'onglet donné. Il prend un identifiant de tabulation en tant que paramètre: s'il est omis, l'onglet actuellement actif est basculé.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 Le mode Lecteur, également connu sous le nom de Reader View, est une fonction de navigateur qui permet à l'utilisateur de se concentrer plus facilement sur un article en :
 
@@ -45,7 +45,7 @@ var toggling = browser.tabs.toggleReaderMode(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque l'onglet a été mis à jour. Si une erreur se produit (par exemple, parce que la page n'était pas un article), la promesse sera rejetée avec un message d'erreur..
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans argument lorsque l'onglet a été mis à jour. Si une erreur se produit (par exemple, parce que la page n'était pas un article), la promesse sera rejetée avec un message d'erreur..
 
 ## Exemples
 

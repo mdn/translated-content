@@ -1,5 +1,5 @@
 ---
-title: "::marker"
+title: ::marker
 slug: Web/CSS/::marker
 ---
 
@@ -21,7 +21,7 @@ Seul un sous-ensemble de propriétés CSS peuvent être utilisées pour une règ
 - {{cssxref("color")}},
 - {{cssxref("text-combine-upright")}}, {{cssxref("unicode-bidi")}} et {{cssxref("direction")}}
 - {{cssxref("content")}}
-- [Toutes les propriétés liées aux polices (font).](/fr/docs/Web/CSS/CSS_Fonts)
+- [Toutes les propriétés liées aux polices (font).](/fr/docs/Web/CSS/CSS_fonts)
 
 > [!NOTE]
 > La spécification indique que d'autres propriétés CSS pourraient être prises en charge à l'avenir.

@@ -9,7 +9,24 @@ l10n:
 
 [HTML](/zh-CN/docs/Web/HTML) 元素 **`<iframe>`** 表示嵌套的{{Glossary("browsing context", "浏览上下文")}}。它能够将另一个 HTML 页面嵌入到当前页面中。
 
-{{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;iframe&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<iframe
+  id="inlineFrameExample"
+  title="Inline Frame Example"
+  width="300"
+  height="200"
+  src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik">
+</iframe>
+```
+
+```css interactive-example
+iframe {
+  border: 1px solid black;
+  width: 100%; /* takes precedence over the width set with the HTML width attribute */
+}
+```
 
 每个嵌入的浏览上下文都有自己的[文档](/zh-CN/docs/Web/API/Document)并允许并且允许 URL 导航。每个嵌入式浏览上下文的导航都会被线性嵌入到*顶级*浏览上下文的[会话历史记录](/zh-CN/docs/Web/API/History)中。包含嵌入内容的浏览上下文称为*父级浏览上下文*。*顶级*浏览上下文（没有父级）通常是由 {{domxref("Window")}} 对象表示的浏览器窗口。
 
@@ -75,7 +92,7 @@ l10n:
     - `no-referrer-when-downgrade`
       - : 向不受 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）保护的{{Glossary("origin", "源")}}发送请求时，不发送 {{HTTPHeader("Referer")}} 标头。
     - `origin`
-      - : 发送的 referrer 仅包含来源（referring）页面的源（origin）：其[协议](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host", "主机")}}和{{Glossary("port", "端口")}}。
+      - : 发送的 referrer 仅包含来源（referring）页面的源（origin）：其[协议](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "主机")}}和{{Glossary("port", "端口")}}。
     - `origin-when-cross-origin`
       - : 当 referrer 被发送到其他源时，其仅限于协议、主机和端口。同源的导航仍会包含路径。
     - `same-origin`

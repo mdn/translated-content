@@ -7,7 +7,41 @@ slug: Web/HTML/Element/aside
 
 L'élément **`<aside>`** (en français, « aparté ») représente une partie d'un document dont le contenu n'a qu'un rapport indirect avec le contenu principal du document. Les apartés sont fréquemment présents sous la forme d'encadrés ou de boîtes de légende.
 
-{{EmbedInteractiveExample("pages/tabbed/aside.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;aside&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>
+  Salamanders are a group of amphibians with a lizard-like appearance, including
+  short legs and a tail in both larval and adult forms.
+</p>
+
+<aside>
+  <p>The Rough-skinned Newt defends itself with a deadly neurotoxin.</p>
+</aside>
+
+<p>
+  Several species of salamander inhabit the temperate rainforest of the Pacific
+  Northwest, including the Ensatina, the Northwestern Salamander and the
+  Rough-skinned Newt. Most salamanders are nocturnal, and hunt for insects,
+  worms and other small creatures.
+</p>
+```
+
+```css interactive-example
+aside {
+  width: 40%;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  float: right;
+  box-shadow: inset 5px 0 5px -5px #29627e;
+  font-style: italic;
+  color: #29627e;
+}
+
+aside > p {
+  margin: 0.5rem;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -128,5 +162,5 @@ Dans cet exemple, on utilise `<aside>` afin de baliser un paragraphe d'un articl
 ## Voir aussi
 
 - Les autres éléments en rapport avec les sections : [`<body>`](/fr/docs/Web/HTML/Element/body), [`<article>`](/fr/docs/Web/HTML/Element/article), [`<section>`](/fr/docs/Web/HTML/Element/section), [`<nav>`](/fr/docs/Web/HTML/Element/nav), [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<hgroup>`](/fr/docs/Web/HTML/Element/hgroup), [`<header>`](/fr/docs/Web/HTML/Element/header), [`<footer>`](/fr/docs/Web/HTML/Element/footer), [`<address>`](/fr/docs/Web/HTML/Element/address)
-- [Structures et sections d'un document HTML5](/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)
+- [Structures et sections d'un document HTML5](/fr/docs/Web/HTML/Element/Heading_Elements)
 - [ARIA : le rôle `complementary`](/fr/docs/Web/Accessibility/ARIA/Roles/Complementary_role)

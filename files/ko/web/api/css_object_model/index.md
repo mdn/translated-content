@@ -83,7 +83,7 @@ slug: Web/API/CSS_Object_Model
 
 ## 자습서
 
-- [화면 방향 관리](/ko/docs/WebAPI/Managing_screen_orientation)
+- [화면 방향 관리](/ko/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 
 ## 명세서
 

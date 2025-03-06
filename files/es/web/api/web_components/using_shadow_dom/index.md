@@ -198,7 +198,7 @@ wrapper.appendChild(info);
 
 ### Using our custom element
 
-Once the class is defined, using the element is as simple as defining it, and putting it on the page, as explained in [Using custom elements](/es/docs/Web/Web_Components/Using_custom_elements):
+Once the class is defined, using the element is as simple as defining it, and putting it on the page, as explained in [Using custom elements](/es/docs/Web/API/Web_components/Using_custom_elements):
 
 ```js
 // Define the new element
@@ -213,5 +213,5 @@ customElements.define("popup-info", PopUpInfo);
 
 ## See also
 
-- [Using custom elements](/es/docs/Web/Web_Components/Using_custom_elements)
-- [Using templates and slots](/es/docs/Web/Web_Components/Using_templates_and_slots)
+- [Using custom elements](/es/docs/Web/API/Web_components/Using_custom_elements)
+- [Using templates and slots](/es/docs/Web/API/Web_components/Using_templates_and_slots)

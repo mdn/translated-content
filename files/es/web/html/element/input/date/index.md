@@ -9,7 +9,33 @@ Los elementos {{HTMLElement("input")}} de **`type="date"`** crean un campo de en
 
 El valor resultante incluye el año, el mes y el día, pero _no_ el tiempo. Las entradas de tipo {{HTMLElement("input/time", "time")}} y {{HTMLElement("input/datetime-local", "datetime-local")}} soportan el tiempo y la fecha + el tiempo, respectivamente.
 
-{{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;date&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="start">Start date:</label>
+
+<input
+  type="date"
+  id="start"
+  name="trip-start"
+  value="2018-07-22"
+  min="2018-01-01"
+  max="2018-12-31" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 La IU de la entrada generalmente varía entre navegadores; véase [Compatibiidad con navegadores](#compatibilidad_con_navegadores) para más detalles. En navegadores que no incluyen soporte, el control degrada hacía [`<input type="text">`](/es/docs/Web/HTML/Element/input/text).
 
@@ -88,13 +114,13 @@ Junto con los atributos comunes a todos los elementos {{HTMLElement("input")}}, 
 
 ### max
 
-La última fecha a aceptar. Si el [`value`](/es/docs/Web/HTML/Element/input#value) introducido en el elemento es posterior, el elemento no pasa la [validación de restricción](/es/docs/Web/Guide/HTML/Constraint_validation). Si el valor del atributo `max` es un valor que no es una fecha posible en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor máximo.
+La última fecha a aceptar. Si el [`value`](/es/docs/Web/HTML/Element/input#value) introducido en el elemento es posterior, el elemento no pasa la [validación de restricción](/es/docs/Web/HTML/Constraint_validation). Si el valor del atributo `max` es un valor que no es una fecha posible en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor máximo.
 
 Si los atributos `max` y `min` son establecidos, este valor tiene que ser una fecha en formtato cadena de texto posterior o igual a la fecha establecida en el atributo `min`.
 
 ### min
 
-La fecha más temprana a aceptar. Si el [`value`](/es/docs/Web/HTML/Element/input#value) introducido en el elemento es anterior, el elemento no pasa la [validación de restricció](/es/docs/Web/Guide/HTML/Constraint_validation). Si el valor del atributo `max` es un valor que no es una fecha posible en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor mínimo.
+La fecha más temprana a aceptar. Si el [`value`](/es/docs/Web/HTML/Element/input#value) introducido en el elemento es anterior, el elemento no pasa la [validación de restricció](/es/docs/Web/HTML/Constraint_validation). Si el valor del atributo `max` es un valor que no es una fecha posible en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor mínimo.
 
 Si los atributos `max` y `min` son establecidos, este valor tiene que ser una fecha en formtato cadena de texto anterior o igual a la fecha establecida en el atributo `max`.
 

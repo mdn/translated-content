@@ -36,7 +36,7 @@ Un objet `Promise` dont la valeur de résolution est un objet [`WebAssembly.Modu
 
 ## Exemples
 
-Dans l'exemple suivant (également disponible sur GitHub&nbsp;: [`compile-streaming.html`](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/compile-streaming.html) et avec [le résultat _live_](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html)), on récupère un flux dedpuis un module .wasm puis on le compile en un objet [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module). La fonction `compileStreaming()` acceptant une promesse pour un objet [`Response`](/fr/docs/Web/API/Response), on peut directement passer l'appel à [`fetch()`](/fr/docs/Web/API/fetch) qui transfèrera la réponse dès que la promesse sera tenue.
+Dans l'exemple suivant (également disponible sur GitHub&nbsp;: [`compile-streaming.html`](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/compile-streaming.html) et avec [le résultat _live_](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html)), on récupère un flux dedpuis un module .wasm puis on le compile en un objet [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module). La fonction `compileStreaming()` acceptant une promesse pour un objet [`Response`](/fr/docs/Web/API/Response), on peut directement passer l'appel à [`fetch()`](/fr/docs/Web/API/Window/fetch) qui transfèrera la réponse dès que la promesse sera tenue.
 
 ```js
 const importObject = { imports: { imported_func: (arg) => console.log(arg) } };

@@ -24,7 +24,7 @@ Los códigos de estado se definen en la sección 10 de[RFC 2616](https://tools.i
 - {{HTTPStatus(102, "102 Processing")}} ({{Glossary("WebDAV")}})
   - : Este código indica que el servidor ha recibido la solicitud y aún se encuentra procesandola, por lo que no hay respuesta disponible.
 - {{HTTPStatus(103, "103 Early Hints")}}
-  - : Este código de estado está pensado principalmente para ser usado con el encabezado {{HTTPHeader("Link")}}, permitiendo que el agente de usuario empiece a [pre-cargar](/es/docs/Web/HTML/Preloading_content) recursos mientras el servidor prepara una respuesta.
+  - : Este código de estado está pensado principalmente para ser usado con el encabezado {{HTTPHeader("Link")}}, permitiendo que el agente de usuario empiece a [pre-cargar](/es/docs/Web/HTML/Attributes/rel/preload) recursos mientras el servidor prepara una respuesta.
 
 ## Respuestas satisfactorias
 
@@ -95,7 +95,7 @@ Los códigos de estado se definen en la sección 10 de[RFC 2616](https://tools.i
 - {{HTTPStatus(405, "405 Method Not Allowed")}}
   - : El método solicitado es conocido por el servidor pero ha sido deshabilitado y no puede ser utilizado. Los dos métodos obligatorios, `GET` y `HEAD`, nunca deben ser deshabilitados y no deberían retornar este código de error.
 - {{HTTPStatus(406, "406 Not Acceptable")}}
-  - : Esta respuesta es enviada cuando el servidor, después de aplicar una [negociación de contenido servidor-impulsado](/es/docs/HTTP/Content_negotiation#Server-driven_negotiation), no encuentra ningún contenido seguido por la criteria dada por el usuario.
+  - : Esta respuesta es enviada cuando el servidor, después de aplicar una [negociación de contenido servidor-impulsado](/es/docs/Web/HTTP/Content_negotiation#server-driven_negotiation), no encuentra ningún contenido seguido por la criteria dada por el usuario.
 - {{HTTPStatus(407, "407 Proxy Authentication Required")}}
   - : Esto es similar al código 401, pero la autenticación debe estar hecha a partir de un proxy.
 - {{HTTPStatus(408, "408 Request Timeout")}}
@@ -167,5 +167,5 @@ Los códigos de estado se definen en la sección 10 de[RFC 2616](https://tools.i
 ## Ver también
 
 - [Anexo:Códigos de estado HTTP](https://es.wikipedia.org/wiki/Anexo:C%C3%B3digos_de_estado_HTTP)
-- [IANA official registry of HTTP status codes](http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
+- [IANA official registry of HTTP status codes](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
 - [Códigos HTTP: Una guía con los códigos de estado más comunes](https://www.lucushost.com/blog/codigos-http-mas-comunes/)

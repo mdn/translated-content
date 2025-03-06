@@ -144,4 +144,4 @@ table td {
 
 ## 같이 보기
 
-- [템플릿과 슬롯 사용하기](/ko/docs/Web/Web_Components/Using_templates_and_slots)
+- [템플릿과 슬롯 사용하기](/ko/docs/Web/API/Web_components/Using_templates_and_slots)

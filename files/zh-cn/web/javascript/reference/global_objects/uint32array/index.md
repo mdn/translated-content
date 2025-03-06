@@ -17,7 +17,7 @@ new Uint32Array(object);
 new Uint32Array(buffer [, byteOffset [, length]]);
 ```
 
-更多的构造器语法和属性请参照 _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)。_
+更多的构造器语法和属性请参照 _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntax)。_
 
 ## 静态属性
 

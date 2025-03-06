@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction
 
 拡張機能のサイドバーのプロパティを取得、設定します。
 
-[サイドバー](/ja/docs/Mozilla/Add-ons/WebExtensions/Sidebars) はブラウザーウィンドウのウェブページの隣の、右側か左側にあるペインです。ブラウザーはユーザーが利用できるサイドバーを見て、表示するサイドバーを選択できる UI を提供します。manifest.json の [`sidebar_action`](/ja/Add-ons/WebExtensions/manifest.json/sidebar_action) キーを使って、拡張機能は自身のサイドバーを定義できます。ここで述べる `sidebarAction` API を使って、拡張機能はサイドバーのプロパティを設定、取得できます。
+[サイドバー](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) はブラウザーウィンドウのウェブページの隣の、右側か左側にあるペインです。ブラウザーはユーザーが利用できるサイドバーを見て、表示するサイドバーを選択できる UI を提供します。manifest.json の [`sidebar_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) キーを使って、拡張機能は自身のサイドバーを定義できます。ここで述べる `sidebarAction` API を使って、拡張機能はサイドバーのプロパティを設定、取得できます。
 
 `sidebarAction` API は {{WebExtAPIRef("browserAction")}} API と緊密にモデリングされています。
 

@@ -53,7 +53,7 @@ Si se especifica una propiedad abreviada (por ejemplo , {{cssxref("background")}
 
 ## Ejemplos
 
-Hay varios ejemplos de transiciones CSS incluídos en el artículo principal [Transiciones CSS.](/es/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+Hay varios ejemplos de transiciones CSS incluídos en el artículo principal [Transiciones CSS.](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 
 ## Especificaciones
 
@@ -65,5 +65,5 @@ Hay varios ejemplos de transiciones CSS incluídos en el artículo principal [Tr
 
 ## Véase también
 
-- [Usando transiciones CSS](/es/docs/Web/Guide/CSS/Using_CSS_transitions)
+- [Usando transiciones CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{domxref("TransitionEvent")}}

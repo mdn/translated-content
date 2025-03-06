@@ -33,7 +33,7 @@ _インスタンスプロパティを親である {{jsxref("Function")}} から�
 - `AsyncFunction.prototype[@@toStringTag]`
   - : [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は、文字列 `"AsyncFunction"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
 
-> **メモ:** `AsyncFunction` のインスタンスには [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) プロパティがありません。
+> **メモ:** `AsyncFunction` のインスタンスには [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティがありません。
 
 ## インスタンスメソッド
 

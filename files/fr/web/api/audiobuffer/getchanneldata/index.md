@@ -24,7 +24,7 @@ Un {{domxref("Float32Array")}}.
 
 ## Exemple
 
-Dans l'exemple suivant crée un buffer de 2 secondes, le remplit avec du bruit blanc puis le lit via un {{ domxref("AudioBufferSourceNode") }}. Vous pouvez aussi [exécuter le code](http://mdn.github.io/audio-buffer/), or [voir le code source](https://github.com/mdn/audio-buffer).
+Dans l'exemple suivant crée un buffer de 2 secondes, le remplit avec du bruit blanc puis le lit via un {{ domxref("AudioBufferSourceNode") }}. Vous pouvez aussi [exécuter le code](https://mdn.github.io/audio-buffer/), or [voir le code source](https://github.com/mdn/audio-buffer).
 
 ```js
 var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();

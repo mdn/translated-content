@@ -2,12 +2,12 @@
 title: border-left-color
 slug: Web/CSS/border-left-color
 l10n:
-  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
+  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
 {{CSSRef}}
 
-**`border-left-color`** は CSS のプロパティで、要素の左側の[境界線](/ja/docs/Web/CSS/border)の色を設定します。一括指定プロパティの {{cssxref("border-color")}} または {{cssxref("border-left")}} でも設定することができます。
+**`border-left-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の[境界線](/ja/docs/Web/CSS/border)の色を設定します。一括指定プロパティの {{cssxref("border-color")}} または {{cssxref("border-left")}} でも設定することができます。
 
 {{EmbedInteractiveExample("pages/css/border-left-color.html")}}
 
@@ -51,31 +51,31 @@ border-left-color: unset;
 
 #### HTML
 
-```html-nolint
-<div class="mybox">
+```html-nolint live-sample___a_simple_div_with_a_border
+<div class="my-box">
   <p>
-    これは周囲に境界線があるボックスです。 なお、ボックスのその辺が<span class="redtext">赤</span>になっています。
+    これは周囲に境界線があるボックスです。 なお、ボックスのその辺が<span class="red-text">赤</span>になっています。
   </p>
 </div>
 ```
 
 #### CSS
 
-```css
-.mybox {
+```css live-sample___a_simple_div_with_a_border
+.my-box {
   border: solid 0.3em gold;
   border-left-color: red;
   width: auto;
 }
 
-.redtext {
+.red-text {
   color: red;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('境界線が付いた単純な div')}}
+{{EmbedLiveSample('A_simple_div_with_a_border')}}
 
 ## 仕様書
 

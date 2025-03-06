@@ -150,5 +150,5 @@ grid-column: unset;
 ## Смотрите также
 
 - Связанные CSS-свойства: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}
-- Руководство по грид-раскладке: _[Line-based placement with CSS Grid](/ru/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
-- Обучающее видео: _[Line-based placement](http://gridbyexample.com/video/series-line-based-placement/)_
+- Руководство по грид-раскладке: _[Line-based placement with CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
+- Обучающее видео: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_

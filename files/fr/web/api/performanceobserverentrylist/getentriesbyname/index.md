@@ -19,9 +19,9 @@ let entries = list.getEntriesByName(name, type);
 ### Paramètres
 
 - _`name`_
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) représentant le nom de l'entrée à récupérer.
+  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le nom de l'entrée à récupérer.
 - _`type`_ {{optional_inline}}
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) représentant le type d'entrée à récupérer tel que « `mark` ». Les types d'entrée valides sont énumérés dans [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType).
+  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le type d'entrée à récupérer tel que « `mark` ». Les types d'entrée valides sont énumérés dans [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType).
 
 ### Valeur de retour
 

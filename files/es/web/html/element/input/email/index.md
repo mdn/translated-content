@@ -7,7 +7,27 @@ slug: Web/HTML/Element/input/email
 
 Los elementos {{HTMLElement("input")}} de tipo **`email`** se utilizan para permitir que el usuario ingrese y edite una dirección de correo electrónico o, si se especifica el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple), una lista de direcciones de correo.
 
-{{EmbedInteractiveExample("pages/tabbed/input-email.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="email">Enter your example.com email:</label>
+
+<input type="email" id="email" pattern=".+@example\.com" size="30" required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 El valor de la entrada es automáticamente validado para asegurarse que no está vacía o que el correo (o la lista de correos) introducidos están con el formato correcto antes de que el formulario puede ser enviado. Las pseudoclases {{cssxref(":valid")}} e {{cssxref(":invalid")}} son automáticamente aplicadas como corresponde para denotar visualmente si el valor actual del campo es una dirección válida de correo o no.
 
@@ -84,13 +104,13 @@ El valor del atributo lista es el {{domxref("Element.id", "id")}} del elemento {
 
 El número máximo de caracteres (como unidades de código UTF-16) que el usuario puede ingresar en la entrada `email`. Debe ser un valor entero 0 o superior. Si no se especifica `maxlength`, o se especifica un valor no válido, la entrada `email` no tiene una longitud máxima. Este valor también debe ser mayor o igual que el valor de `minlength`.
 
-La entrada fallará la [restricción de validación](/es/docs/Web/Guide/HTML/Constraint_validation) si la longitud del valor de texto del campo es mayor que la longitud de `maxlength` en unidades de código UTF-16. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
+La entrada fallará la [restricción de validación](/es/docs/Web/HTML/Constraint_validation) si la longitud del valor de texto del campo es mayor que la longitud de `maxlength` en unidades de código UTF-16. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
 
 ### minlength
 
 El número mínimo de caracteres (como unidades de código UTF-16) que el usuario puede ingresar en la entrada `email`. Debe ser un valor entero no negativo menor o igual al valor especificado por `maxlength`. Si no se especifica `minlength` o se especifica un valor no válido, la entrada de `email` no tiene una longitud mínima.
 
-La entrada fallará la [restricción de validación](/es/docs/Web/Guide/HTML/Constraint_validation) si la longitud del texto ingresado en el campo es menor que la longitud de `minlength` en unidades de código UTF-16. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
+La entrada fallará la [restricción de validación](/es/docs/Web/HTML/Constraint_validation) si la longitud del texto ingresado en el campo es menor que la longitud de `minlength` en unidades de código UTF-16. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
 
 ### multiple
 
@@ -101,7 +121,7 @@ Un atributo booleano que, si está presente, indica que el usuario puede ingresa
 
 ## pattern
 
-El atributo `pattern`, cuando es especificado, es una expresión regular que el [`value`](/es/docs/Web/HTML/Global_attributes#value) del input debe seguir para que el valor pase la [restricción de validación](/es/docs/Web/Guide/HTML/Constraint_validation). Debe ser una expresión regular de JavaScript válida, como las usadas en el tipo {{jsxref("RegExp")}}, y como se explica en nuestra [guía sobre expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions); la bandera `'u'` es especificada cuando se compila la expresión regular, por lo tanto el patrón es tratado como una secuencia de puntos de código Unicode, y no como ASCII. No deben colocarse barras diagonales alrededor del patrón de texto.
+El atributo `pattern`, cuando es especificado, es una expresión regular que el [`value`](/es/docs/Web/HTML/Global_attributes#value) del input debe seguir para que el valor pase la [restricción de validación](/es/docs/Web/HTML/Constraint_validation). Debe ser una expresión regular de JavaScript válida, como las usadas en el tipo {{jsxref("RegExp")}}, y como se explica en nuestra [guía sobre expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions); la bandera `'u'` es especificada cuando se compila la expresión regular, por lo tanto el patrón es tratado como una secuencia de puntos de código Unicode, y no como ASCII. No deben colocarse barras diagonales alrededor del patrón de texto.
 
 Si el patrón no está especificado o es inválido, no se aplica la expresión regular y el atributo es completamente ignorado.
 

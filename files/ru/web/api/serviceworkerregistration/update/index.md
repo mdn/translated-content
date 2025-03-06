@@ -53,8 +53,8 @@ if ("serviceWorker" in navigator) {
 
 ## Смотрите также
 
-- [Использование Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Использование Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers базовый пример кода](https://github.com/mdn/sw-test)
 - [Готов ли ServiceWorker?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Промисы")}}
-- [Использование web workers](/ru/docs/Web/Guide/Performance/Using_web_workers)
+- [Использование web workers](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)

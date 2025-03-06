@@ -172,7 +172,7 @@ console.log(new MyError("test", { cause: new Error("cause") }).cause);
 
 `Error` から派生した独自のエラー型を定義して `throw new CustomError()` ができるようにし、`instanceof CustomError` で例外ハンドラー内のエラーの種類を確認したいでしょう。これを行う一般的な方法の実例を以下に示します。
 
-StackOverflow の突っ込んだ議論、 ["What's a good way to extend Error in JavaScript?"](http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) も参照してください。
+StackOverflow の突っ込んだ議論、 ["What's a good way to extend Error in JavaScript?"](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) も参照してください。
 
 > **警告**: 組み込みのサブクラス化は、ES6 より古いコードに確実にトランスパイルできるわけではありません。なぜなら、 {{jsxref("Reflect.construct()")}} を使わずに特定の `new.target` を持つ基底クラスを構築する手段がないためです。[追加の設定](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend)を行うか、コンストラクターの最後で {{jsxref("Object/setPrototypeOf", "Object.setPrototypeOf(this, CustomError.prototype)")}} を手動で呼ぶ必要があります。そうしないと、構築されたインスタンスは `CustomError` のインスタンスになりません。詳しくは [the TypeScript FAQ](https://github.com/microsoft/TypeScript/wiki/FAQ#why-doesnt-extending-built-ins-like-error-array-and-map-work) をご覧ください。
 

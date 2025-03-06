@@ -340,7 +340,7 @@ Isso extrai o `id`, `displayName` e `firstName` do objeto `user` e os imprime na
 
 ### Nomes computados de propriedade de objeto e desestruturação
 
-Nomes computados de propriedades, como em [objetos literais](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names), podem ser usados com desestruturação.
+Nomes computados de propriedades, como em [objetos literais](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names), podem ser usados com desestruturação.
 
 ```js
 let key = "z";
@@ -364,5 +364,5 @@ console.log(foo); // "bar"
 
 ## Veja também
 
-- [Operadores de Atribuição](/pt-BR/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
+- [Operadores de Atribuição](/pt-BR/docs/Web/JavaScript/Reference/Operators#Assignment_operators)
 - ["ES6 in Depth: Destructuring" on hacks.mozilla.org (em inglês)](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/)

@@ -19,7 +19,7 @@ slug: Web/HTTP
   - : [RFC 6265](https://datatracker.ietf.org/doc/html/rfc6265) 定義了 cookies 的工作方式，當 HTTP 請求一個服務時，一個伺服器可以發送一個`Set-Cookie`的 HTTP header 回應。客戶端將以 header 的方式回傳 cookie 值給每個請求的同 一個伺服器，Cookie 也會在某些時間進行更新，或是限制一個實體網域或路徑。
 - [HTTP Access Control (CORS)](/zh-TW/docs/Web/HTTP/CORS)
   - : **Cross-site HTTP requests** 是來自不同網域的資源請求。舉個例子，一個 HTML 網頁從網域 A (`http://domaina.example/`) 從網域 B(`http://domainb.foo/image.jpg`)請求一個圖片，經由`img`元件。現今的網頁通常會讀取跨站資源，包括 CSS 樣式表、圖片、腳本與其他資源。CORS 允許網頁開發人員的網站響應跨站讀取。
-- [HTTP 的演化](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
+- [HTTP 的演化](/zh-TW/docs/Web/HTTP/Evolution_of_HTTP)
   - : HTTP 早期版本變化的簡要說明，到現在的 HTTP/2 與其他版本。
 - [網頁安全方針](https://infosec.mozilla.org/guidelines/web_security)
   - : 一些技巧幫助運作團隊開發安全的網頁。

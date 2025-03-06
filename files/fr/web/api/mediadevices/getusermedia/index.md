@@ -244,7 +244,7 @@ var constraints = { video: { facingMode: front ? "user" : "environment" } };
 
 ## Permissions
 
-Pour utiliser `getUserMedia()` dans une application installable (par exemple, une [application Firefox OS](/fr/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial) ), vous devez spécifier un ou les deux champs suivants dans votre fichier manifeste:
+Pour utiliser `getUserMedia()` dans une application installable (par exemple, une [application Firefox OS](/fr/docs/Web/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial) ), vous devez spécifier un ou les deux champs suivants dans votre fichier manifeste:
 
 ```js
 "permissions": {
@@ -257,7 +257,7 @@ Pour utiliser `getUserMedia()` dans une application installable (par exemple, un
 }
 ```
 
-Voir [permission: audio-capture](/fr/Apps/Developing/App_permissions#audio-capture) et [permission: video-capture](/fr/Apps/Developing/App_permissions#video-capture) pour plus d'informations.
+Voir [permission: audio-capture](/fr/docs/Web/Apps/Developing/App_permissions#audio-capture) et [permission: video-capture](/fr/docs/Web/Apps/Developing/App_permissions#video-capture) pour plus d'informations.
 
 ## Spécifications
 
@@ -272,5 +272,5 @@ Voir [permission: audio-capture](/fr/Apps/Developing/App_permissions#audio-captu
 - L'ancienne API {{domxref("navigator.getUserMedia()")}}.
 - {{domxref("mediaDevices.enumerateDevices()")}} : Apprenez les types et le nombre de périphériques que l'utilisateur dispose.
 - [WebRTC API](/fr/docs/Web/API/WebRTC_API)
-- [Media Capture and Streams API (Media Streams)](/fr/docs/Web/API/Media_Streams_API)
-- [Taking webcam photos](/fr/docs/Web/API/WebRTC_API/Taking_still_photos) : un tutoriel sur l'utilisation de `getUserMedia()` pour prendre des photos plutôt que de la vidéo.
+- [Media Capture and Streams API (Media Streams)](/fr/docs/Web/API/Media_Capture_and_Streams_API)
+- [Taking webcam photos](/fr/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) : un tutoriel sur l'utilisation de `getUserMedia()` pour prendre des photos plutôt que de la vidéo.

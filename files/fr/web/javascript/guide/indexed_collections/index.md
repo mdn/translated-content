@@ -403,7 +403,7 @@ L'objet `Array` possède les méthodes suivantes&nbsp;:
 
 - [`reduceRight(callback[, valeurInitiale])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight) fonctionne comme `reduce()`, mais débute avec le dernier élément (parcourt le tableau de droite à gauche).
 
-  `reduce()` et `reduceRight()` sont à utiliser lorsqu'on souhaite n'obtenir qu'une seule valeur, récursivement, à partir des différents éléments du tableau. Pour plus d'informations sur l'utilisation d'une valeur d'initialisation pour ces deux fonctions, se référer à leurs pages&nbsp;: [`Array.reduceRight`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight) et [`Array.reduce`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+  `reduce()` et `reduceRight()` sont à utiliser lorsqu'on souhaite n'obtenir qu'une seule valeur, récursivement, à partir des différents éléments du tableau. Pour plus d'informations sur l'utilisation d'une valeur d'initialisation pour ces deux fonctions, se référer à leurs pages&nbsp;: [`Array.reduceRight`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) et [`Array.reduce`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 
 ### Tableaux multi-dimensionnels
 
@@ -442,7 +442,7 @@ console.log(tableau.propriete); // Affiche "valeur" dans la console
 
 ### Les tableaux et les expressions rationnelles
 
-Lorsqu'un tableau est le résultat d'une correspondance entre une expression rationnelle et une chaîne de caractères, les éléments et propriétés du tableau fournissent des informations sur la correspondance. Les méthodes suivantes peuvent renvoyer un tableau&nbsp;: [`RegExp.exec()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), [`String.match()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match), [`String.split()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split). Pour plus d'informations sur les tableaux et les expressions rationnelles, voir le chapitre du guide JavaScript sur [les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions).
+Lorsqu'un tableau est le résultat d'une correspondance entre une expression rationnelle et une chaîne de caractères, les éléments et propriétés du tableau fournissent des informations sur la correspondance. Les méthodes suivantes peuvent renvoyer un tableau&nbsp;: [`RegExp.exec()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), [`String.match()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match), [`String.split()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split). Pour plus d'informations sur les tableaux et les expressions rationnelles, voir le chapitre du guide JavaScript sur [les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions).
 
 ### Manipuler des objets semblables à des tableaux
 
@@ -477,7 +477,7 @@ Array.prototype.forEach.call("une chaîne", function (chr) {
 
 ## Les tableaux typés
 
-[Les tableaux typés JavaScript](/fr/docs/Web/JavaScript/Typed_arrays) sont des objets semblables à des tableaux qui fournissent un moyen d'accéder à des données binaires. Comme on l'a vu ci-avant, les objets [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) grandissent et rétrécissent dynamiquement et peuvent contenir n'importe quelle valeur JavaScript. Les moteurs JavaScript effectuent des optimisations afin que les tableaux puissent être utilisés rapidement. Cependant, avec le développement des applications web, les applications viennent à manipuler des données audio, vidéo, binaires et accèdent à des données brutes via les [WebSockets](/fr/docs/Web/API/WebSockets_API) d'autres outils. Il apparaît donc nécessaire d'avoir les outils JavaScript pertinents pour manipuler efficacement des données binaires, organisées au sein de tableaux typés.
+[Les tableaux typés JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays) sont des objets semblables à des tableaux qui fournissent un moyen d'accéder à des données binaires. Comme on l'a vu ci-avant, les objets [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) grandissent et rétrécissent dynamiquement et peuvent contenir n'importe quelle valeur JavaScript. Les moteurs JavaScript effectuent des optimisations afin que les tableaux puissent être utilisés rapidement. Cependant, avec le développement des applications web, les applications viennent à manipuler des données audio, vidéo, binaires et accèdent à des données brutes via les [WebSockets](/fr/docs/Web/API/WebSockets_API) d'autres outils. Il apparaît donc nécessaire d'avoir les outils JavaScript pertinents pour manipuler efficacement des données binaires, organisées au sein de tableaux typés.
 
 ### Les vues et les tampons de mémoire (<i lang="en">buffers</i>)&nbsp;: l'architecture des tableaux typés
 
@@ -507,6 +507,6 @@ Les vues de tableaux typés possèdent des noms explicites et fournissent des vu
 | [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array)         | `-2^63` à `2^63 - 1`                                                | 8                         | Entier signé avec complément à deux sur 64 bits                                    | `bigint`              | `int64_t (signed long long)`    |
 | [`BigUint64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)       | `0` à `2^64 - 1`                                                    | 8                         | Entier non-signé sur 64 bits                                                       | `bigint`              | `uint64_t (unsigned long long)` |
 
-Pour plus d'informations sur les tableaux typés, voir [l'article de la référence](/fr/docs/Web/JavaScript/Typed_arrays) sur les différents objets [`TypedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray).
+Pour plus d'informations sur les tableaux typés, voir [l'article de la référence](/fr/docs/Web/JavaScript/Guide/Typed_arrays) sur les différents objets [`TypedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray).
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}

@@ -9,7 +9,7 @@ slug: Web/API/Window/fetch
 
 Промис {{domxref("fetch()")}} завершается {{jsxref("TypeError")}}, если возникает сетевая ошибка, хотя обычно это означает проблему с доступами или аналогичную ей. Для успешного завершения `fetch()` достаточно удостовериться в том, что промис выполнен и что свойство {{domxref("Response.ok")}} имеет значение `true`. HTTP статус 404 не является сетевой ошибкой.
 
-Метод `fetch()` контролируется директивой `connect-src` directive of [Content Security Policy](/ru/docs/Security/CSP/CSP_policy_directives) (политика безопасности контента), а не директивой ресурсов, которые извлекает.
+Метод `fetch()` контролируется директивой `connect-src` directive of [Content Security Policy](/ru/docs/Web/HTTP/Headers/Content-Security-Policy) (политика безопасности контента), а не директивой ресурсов, которые извлекает.
 
 > [!NOTE]
 > Аргументы метода `fetch()` идентичны аргументам {{domxref("Request.Request","Request()")}} конструктора.
@@ -128,6 +128,6 @@ var myRequest = new Request("flowers.jpg", myInit);
 ## Смотрите также
 
 - [Fetch API](/ru/docs/Web/API/Fetch_API)
-- [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/ru/docs/Web/HTTP/CORS)
 - [HTTP](/ru/docs/Web/HTTP)

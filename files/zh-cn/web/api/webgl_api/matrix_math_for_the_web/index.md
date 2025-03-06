@@ -137,7 +137,7 @@ var someMatrixResult = multiplyMatrices(identityMatrix, someMatrix);
 ```
 
 > [!WARNING]
-> 这些函数是为了解释的清晰而编写，而不是为了速度或者内存管理。这些函数新建了大量数组，可能在实时运算时导致垃圾回收的巨大开销。在实际产品中最好使用优化过的函数。比如[glMatrix](http://glmatrix.net/)就是一个注重速度和性能的库。
+> 这些函数是为了解释的清晰而编写，而不是为了速度或者内存管理。这些函数新建了大量数组，可能在实时运算时导致垃圾回收的巨大开销。在实际产品中最好使用优化过的函数。比如[glMatrix](https://glmatrix.net/)就是一个注重速度和性能的库。
 
 ## 平移矩阵
 

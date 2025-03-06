@@ -52,9 +52,9 @@ for (var i = 0; i < myNodeList.length; ++i) {
 }
 ```
 
-Don't be tempted to use [`for...in`](/zh-TW/docs/JavaScript/Reference/Statements/for...in) or [`for each...in`](/zh-TW/docs/JavaScript/Reference/Statements/for_each...in) to enumerate the items in the list, since that will also enumerate the length and item properties of the `NodeList` and cause errors if your script assumes it only has to deal with {{domxref("element")}} objects. Also, `for..in` is not guaranteed to visit the properties in any particular order.
+Don't be tempted to use [`for...in`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in) or [`for each...in`](/zh-TW/docs/JavaScript/Reference/Statements/for_each...in) to enumerate the items in the list, since that will also enumerate the length and item properties of the `NodeList` and cause errors if your script assumes it only has to deal with {{domxref("element")}} objects. Also, `for..in` is not guaranteed to visit the properties in any particular order.
 
-[`for...of`](/zh-TW/docs/JavaScript/Reference/Statements/for...of) loops will loop over `NodeList` objects correctly:
+[`for...of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) loops will loop over `NodeList` objects correctly:
 
 ```js
 var list = document.querySelectorAll("input[type=checkbox]");

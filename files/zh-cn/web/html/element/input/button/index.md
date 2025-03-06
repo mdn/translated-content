@@ -7,7 +7,44 @@ slug: Web/HTML/Element/input/button
 
 **`button`** 类型的 {{htmlelement("input")}} 元素被渲染为简单的按钮，可以根据需要对其进行编程，可以为其分配一个事件处理函数（通常为 {{domxref("Element/click_event", "click")}} 事件），以控制网页上的任何地方的自定义功能。
 
-{{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<input class="styled" type="button" value="Add to favorites" />
+```
+
+```css interactive-example
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgb(220 0 0 / 100%);
+  background-image: linear-gradient(
+    to top left,
+    rgb(0 0 0 / 20%),
+    rgb(0 0 0 / 20%) 30%,
+    rgb(0 0 0 / 0%)
+  );
+  box-shadow:
+    inset 2px 2px 3px rgb(255 255 255 / 60%),
+    inset -2px -2px 3px rgb(0 0 0 / 60%);
+}
+
+.styled:hover {
+  background-color: rgb(255 0 0 / 100%);
+}
+
+.styled:active {
+  box-shadow:
+    inset -2px -2px 3px rgb(255 255 255 / 60%),
+    inset 2px 2px 3px rgb(0 0 0 / 60%);
+}
+```
 
 > **备注：** `button` 类型的 `<input>` 元素仍然是合法的 HTML 代码，但是新的 {{HTMLElement("button")}} 元素是创建按钮的更好的方式。鉴于 {{HTMLElement("button")}} 的标签文字可以插入至开闭标签之间，你可以在标签中包含 HTML 代码，甚至是图像。
 
@@ -15,7 +52,7 @@ slug: Web/HTML/Element/input/button
 
 ### 含有值的按钮
 
-`<input type="button">` 的 [`value`](/zh-CN/docs/Web/HTML/Element/Input#值) 属性包含用作按钮标签的字符串。
+`<input type="button">` 的 [`value`](/zh-CN/docs/Web/HTML/Element/input#%e5%80%bc) 属性包含用作按钮标签的字符串。
 
 ```html
 <input type="button" value="点我" />
@@ -35,7 +72,7 @@ slug: Web/HTML/Element/input/button
 
 ## 使用按钮
 
-`<input type="button">` 元素没有默认行为（与之类似的 `<input type="submit">` 和 [`<input type="reset">`](/zh-CN/docs/Web/HTML/Element/Input/reset) 分别用于提交和重置表单）。要让按钮做任何事情，你必须编写 JavaScript 代码。
+`<input type="button">` 元素没有默认行为（与之类似的 `<input type="submit">` 和 [`<input type="reset">`](/zh-CN/docs/Web/HTML/Element/input/reset) 分别用于提交和重置表单）。要让按钮做任何事情，你必须编写 JavaScript 代码。
 
 ### 简单的按钮
 
@@ -343,4 +380,4 @@ draw();
 
 - {{HTMLElement("input")}} 和实现它的 {{domxref("HTMLInputElement")}} 接口。
 - 更现代的 {{HTMLElement("button")}} 元素。
-- [表单控件 CSS 兼容性表格](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [表单控件 CSS 兼容性表格](/zh-CN/docs/Learn_web_development/Extensions/Forms)

@@ -21,13 +21,13 @@ O método `dispatchEvent joga` `UNSPECIFIED_EVENT_TYPE_ERR` se o tipo do evento 
 
 ## Notas
 
-`dispatchEvent` é a última fase do processo create-init-dispatch, a qual é usada para disparar eventos na implementação do event model. O evento pode ser criado utilizando o método [document.createEvent](/pt-BR/docs/DOM/document.createEvent) e pode ser inicializado com [initEvent](/pt-BR/docs/DOM/event.initEvent) ou outro método de inicialização mais específico, como [initMouseEvent](/pt-BR/docs/DOM/event.initMouseEvent) ou [initUIEvent](/pt-BR/docs/DOM/event.initUIEvent).
+`dispatchEvent` é a última fase do processo create-init-dispatch, a qual é usada para disparar eventos na implementação do event model. O evento pode ser criado utilizando o método [document.createEvent](/pt-BR/docs/Web/API/Document/createEvent) e pode ser inicializado com [initEvent](/pt-BR/docs/Web/API/Event/initEvent) ou outro método de inicialização mais específico, como [initMouseEvent](/pt-BR/docs/Web/API/MouseEvent/initMouseEvent) ou [initUIEvent](/pt-BR/docs/Web/API/UIEvent/initUIEvent).
 
-Veja também a [referência Event object](/pt-BR/docs/DOM/event).
+Veja também a [referência Event object](/pt-BR/docs/Web/API/Event).
 
 ## Exemplo
 
-Veja [Creating and triggering events](/pt-BR/docs/Web/Guide/DOM/Events/Creating_and_triggering_events).
+Veja [Creating and triggering events](/pt-BR/docs/Web/Events/Creating_and_triggering_events).
 
 ## Especificações
 

@@ -93,4 +93,4 @@ function updateValue(e) {
 
 ## 関連情報
 
-- 関連イベント: [`input`](/ja/docs/Web/API/HTMLElement/input_event)
+- 関連イベント: [`input`](/ja/docs/Web/API/Element/input_event)

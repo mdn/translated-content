@@ -5,7 +5,7 @@ slug: Web/HTML/CORS_enabled_image
 
 The HTML specification introduces a [`crossorigin`](/pt-BR/docs/Web/HTML/Element/img#crossorigin) attribute for images that, in combination with an appropriate {{Glossary("CORS")}} header, allows images defined by the {{ HTMLElement("img") }} element that are loaded from foreign origins to be used in canvas as if they were being loaded from the current origin.
 
-See [CORS settings attributes](/pt-BR/HTML/CORS_settings_attributes) for details on how the `crossorigin` attribute is used.
+See [CORS settings attributes](/pt-BR/docs/HTML/CORS_settings_attributes) for details on how the `crossorigin` attribute is used.
 
 ## O que é um "contaminado" canvas?
 
@@ -28,7 +28,7 @@ Você precisa ter um servidor hospedando as imagenscom o apropriado Access-Contr
 </IfModule>
 ```
 
-Dado que está tudo classificado, você permiti salvar àquelas imagens no [Armazenamento DOM](/pt-BR/docs/Web/Guide/API/DOM/Storage)
+Dado que está tudo classificado, você permiti salvar àquelas imagens no [Armazenamento DOM](/pt-BR/docs/Web/API/Web_Storage_API)
 
 ```js
 var img = new Image(),
@@ -55,5 +55,5 @@ if (img.complete || img.complete === undefined) {
 
 ## Veja também
 
-- [Usando imagens de Cross-domínio em WebGL e Chrome 13](http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
+- [Usando imagens de Cross-domínio em WebGL e Chrome 13](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
 - [Especificações HTML - o atributo crossorigin](http://whatwg.org/html#attr-img-crossorigin)

@@ -71,7 +71,7 @@ function handleSubmit(e) {
 }
 ```
 
-Pour que cette fonction soit utilisée, ajoutez un attribut `onSubmit` à l'élément [`<form>`](/fr/docs/Web/HTML/Element/Form) en utilisant `handleSubmit` comme valeur&nbsp;:
+Pour que cette fonction soit utilisée, ajoutez un attribut `onSubmit` à l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) en utilisant `handleSubmit` comme valeur&nbsp;:
 
 ```jsx
 <form onSubmit={handleSubmit}>

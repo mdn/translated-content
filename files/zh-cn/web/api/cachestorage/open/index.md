@@ -63,6 +63,6 @@ self.addEventListener("install", (event) => {
 
 ## 参见
 
-- [使用 Service Worker](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("Window.caches")}} 和 {{domxref("WorkerGlobalScope.caches")}}

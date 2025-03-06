@@ -55,7 +55,7 @@ XSL 템플릿이 이렇다면
 
 ### 정의
 
-[XPath 1.0 4.3](http://www.w3.org/TR/xpath#function-lang)
+[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-lang)
 
 ### Gecko 지원
 

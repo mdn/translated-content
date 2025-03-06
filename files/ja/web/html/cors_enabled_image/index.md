@@ -55,7 +55,7 @@ CORS による許可なしに他のオリジンから読み込んだ何らかの
 
 サーバーをオリジン間の画像の取得ができるように構成したので、画像がコードを実行しているところと同じドメインから提供されたものであるかのように、ユーザーが画像を[ローカルストレージ](/ja/docs/Web/API/Web_Storage_API)に保存することができるようにするコードを書くことができます。
 
-鍵となるのは、 {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} を画像が読み込まれる {{domxref("HTMLImageElement")}} に設定することで、[`crossorigin`](/ja/docs/Web/HTML/Element/image#crossorigin) 属性を使用することです。これでブラウザーに画像データをダウンロードしようとするときにオリジン間のリクエストを命じます。
+鍵となるのは、 {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} を画像が読み込まれる {{domxref("HTMLImageElement")}} に設定することで、[`crossorigin`](/ja/docs/Web/HTML/Element/img#crossorigin) 属性を使用することです。これでブラウザーに画像データをダウンロードしようとするときにオリジン間のリクエストを命じます。
 
 #### ダウンロードの開始
 

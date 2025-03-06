@@ -7,7 +7,37 @@ slug: Web/HTML/Element/textarea
 
 L'élément HTML **`<textarea>`** représente un contrôle qui permet d'éditer du texte sur plusieurs lignes.
 
-{{EmbedInteractiveExample("pages/tabbed/textarea.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;textarea&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="story">Tell us your story:</label>
+
+<textarea id="story" name="story" rows="5" cols="33">
+It was a dark and stormy night...
+</textarea>
+```
+
+```css interactive-example
+label,
+textarea {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+textarea {
+  padding: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+```
 
 Dans les exemples ci-avant, on peut voir plusieurs fonctionnalités de `<textarea>`. Le premier exemple illustre l'utilisation la plus simple avec seul un attribut `id` qui permet d'associer l'élément `<textarea>` avec un élément {{HTMLElement("label")}} à des fins d'accessibilité ainsi qu'un attribut `name` qui permet de nommer la donnée qui sera envoyée au serveur lors de l'envoi du formulaire.
 
@@ -22,7 +52,7 @@ L'élément `<textarea>` gère plusieurs attributs utilisés par les éléments 
 
 ## Attributs
 
-À l'instar des autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+À l'instar des autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `autocapitalize` {{non-standard_inline}}
 
@@ -78,9 +108,9 @@ L'élément `<textarea>` gère plusieurs attributs utilisés par les éléments 
 
 ## Interaction avec CSS
 
-Pour CSS, un élément `<textarea>` est [un élément remplacé](/fr/docs/Web/CSS/Élément_remplacé) qui possède des dimensions intrinsèques (comme une image matricielle). La valeur initiale de la propriété {{cssxref("display")}} pour cet élément est `block`.
+Pour CSS, un élément `<textarea>` est [un élément remplacé](/fr/docs/Web/CSS/Replaced_element) qui possède des dimensions intrinsèques (comme une image matricielle). La valeur initiale de la propriété {{cssxref("display")}} pour cet élément est `block`.
 
-[Le guide sur la mise en forme des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML) fournit différentes indications pour mettre en forme les éléments `<textarea>`.
+[Le guide sur la mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Styling_web_forms) fournit différentes indications pour mettre en forme les éléments `<textarea>`.
 
 ### Incohérences quant à la ligne de base
 

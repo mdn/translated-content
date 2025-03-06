@@ -1,5 +1,5 @@
 ---
-title: "-moz-device-pixel-ratio"
+title: -moz-device-pixel-ratio
 slug: Web/CSS/@media/-moz-device-pixel-ratio
 ---
 
@@ -37,7 +37,7 @@ slug: Web/CSS/@media/-moz-device-pixel-ratio
   (min-resolution: 192dpi); /* dppx のフォールバック */
 ```
 
-> **メモ:** `resolution` および `dppx` に関わる互換性の良い習慣については、 [CSSWG の記事](http://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/)を参照してください。
+> **メモ:** `resolution` および `dppx` に関わる互換性の良い習慣については、 [CSSWG の記事](https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/)を参照してください。
 
 ## 仕様書
 
@@ -49,5 +49,5 @@ slug: Web/CSS/@media/-moz-device-pixel-ratio
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/ja/docs/Web/CSS/@media)

@@ -5,9 +5,29 @@ slug: Web/HTML/Element/input/file
 
 {{HTMLSidebar}}
 
-**`file`** 유형의 {{htmlelement("input")}} 요소에는 저장 장치의 파일을 하나 혹은 여러 개 선택할 수 있습니다. 그 후, [양식을 제출](/ko/docs/Learn/HTML/Forms)해 서버로 전송하거나, [File API](/ko/docs/Web/API/File/Using_files_from_web_applications)를 사용한 JavaScript 코드로 조작할 수 있습니다.
+**`file`** 유형의 {{htmlelement("input")}} 요소에는 저장 장치의 파일을 하나 혹은 여러 개 선택할 수 있습니다. 그 후, [양식을 제출](/ko/docs/Learn/Forms)해 서버로 전송하거나, [File API](/ko/docs/Web/API/File_API/Using_files_from_web_applications)를 사용한 JavaScript 코드로 조작할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="avatar">Choose a profile picture:</label>
+
+<input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -94,7 +114,7 @@ slug: Web/HTML/Element/input/file
 
 ### `files`
 
-선택한 모든 파일을 나열하는 {{domxref("FileList")}} 객체입니다. [`multiple`](/ko/docs/Web/HTML/Element/input/file#multiple) 특성을 지정하지 않았다면 두 개 이상의 파일을 포함하지 않습니다.
+선택한 모든 파일을 나열하는 {{domxref("FileList")}} 객체입니다. [`multiple`](#multiple) 특성을 지정하지 않았다면 두 개 이상의 파일을 포함하지 않습니다.
 
 ### `multiple`
 
@@ -161,7 +181,7 @@ div {
 
 사용자의 장치와 운영체제에 상관없이, 파일 입력 칸은 사용자가 파일을 선택할 수 있도록 파일 선택 대화창을 여는 하나의 버튼을 제공합니다.
 
-예제 코드와 같이 [`multiple`](/ko/docs/Web/HTML/Element/input/file#multiple) 특성을 지정한 경우 파일 여러 개를 한 번에 선택할 수 있습니다. 사용자는 플랫폼이 허용하는 방법(<kbd>Shift</kbd>, <kbd>Ctrl</kbd> 누르기 등)을 통해 파일 선택 창에서 두 개 이상의 파일을 선택합니다. `<input>` 하나에 파일 하나씩만 선택을 허용하고 싶은 경우 `multiple` 특성을 제거하세요.
+예제 코드와 같이 [`multiple`](#multiple) 특성을 지정한 경우 파일 여러 개를 한 번에 선택할 수 있습니다. 사용자는 플랫폼이 허용하는 방법(<kbd>Shift</kbd>, <kbd>Ctrl</kbd> 누르기 등)을 통해 파일 선택 창에서 두 개 이상의 파일을 선택합니다. `<input>` 하나에 파일 하나씩만 선택을 허용하고 싶은 경우 `multiple` 특성을 제거하세요.
 
 ### 선택한 파일의 정보 가져오기
 
@@ -178,9 +198,9 @@ div {
 - `size`
   - : 파일의 크기를 바이트 단위로 나타낸 값.
 - `type`
-  - : 파일의 [MIME 유형](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
+  - : 파일의 [MIME 유형](/ko/docs/Web/HTTP/MIME_types).
 - `webkitRelativePath` {{non-standard_inline}}
-  - : [`webkitdirectory`](/ko/docs/Web/HTML/Element/input/file#webkitdirectory) 특성을 사용한 경우, 기준 디렉토리에 대한 파일의 상대적인 경로. 비표준 특성이므로 사용에 주의가 필요합니다.
+  - : [`webkitdirectory`](#webkitdirectory) 특성을 사용한 경우, 기준 디렉토리에 대한 파일의 상대적인 경로. 비표준 특성이므로 사용에 주의가 필요합니다.
 
 <div class="hidden note"><p><strong>Note</strong>: You can set as well as get the value of <code>HTMLInputElement.files</code> in all modern browsers; this was most recently added to Firefox, in version 57 (see [Firefox bug 1384030](https://bugzil.la/1384030)).</p></div>
 
@@ -188,7 +208,7 @@ div {
 
 종종, 사용자가 아무 파일이나 선택하지 못하도록 제한하고, 받을 수 있는 파일의 유형을 정해두고 싶을 때가 있습니다. 예를 들어, 프로필 사진을 받는 입력 칸의 경우, {{glossary("JPEG")}}, {{glossary("PNG")}}처럼 웹 호환 가능한 이미지 형식을 선택하도록 해야 할 것입니다.
 
-허용하는 파일 유형은 [`accept`](/ko/docs/Web/HTML/Element/input/file#accept) 특성을 사용해 지정할 수 있으며, 허용할 파일 확장자나 MIME 유형을 쉼표로 구분한 값을 제공해야 합니다. 다음은 몇 가지 예시입니다.
+허용하는 파일 유형은 [`accept`](#accept) 특성을 사용해 지정할 수 있으며, 허용할 파일 확장자나 MIME 유형을 쉼표로 구분한 값을 제공해야 합니다. 다음은 몇 가지 예시입니다.
 
 - `accept="image/png"` or `accept=".png"` — PNG 파일을 허용합니다.
 - `accept="image/png, image/jpeg"` 또는 `accept=".png, .jpg, .jpeg"` — PNG와 JPEG를 허용합니다.
@@ -457,5 +477,5 @@ function returnFileSize(number) {
 
 ## 같이 보 기
 
-- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications) — `<input type="file">`과 File API에 대한 유용한 예제를 더 가지고 있습니다.
+- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File_API/Using_files_from_web_applications) — `<input type="file">`과 File API에 대한 유용한 예제를 더 가지고 있습니다.
 - [CSS 속성 호환성](/ko/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

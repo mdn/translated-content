@@ -9,7 +9,36 @@ l10n:
 
 **`<fieldset>`** は [HTML](/ja/docs/Web/HTML) の要素で、ウェブフォーム内のラベル ({{HTMLElement("label")}}) などのようにいくつかのコントロールをグループ化するために使用します。
 
-{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;fieldset&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<form>
+  <fieldset>
+    <legend>Choose your favorite monster</legend>
+
+    <input type="radio" id="kraken" name="monster" value="K" />
+    <label for="kraken">Kraken</label><br />
+
+    <input type="radio" id="sasquatch" name="monster" value="S" />
+    <label for="sasquatch">Sasquatch</label><br />
+
+    <input type="radio" id="mothman" name="monster" value="M" />
+    <label for="mothman">Mothman</label>
+  </fieldset>
+</form>
+```
+
+```css interactive-example
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 上記の例にあるように、`<fieldset>` 要素は HTML フォームの一部をグループ化し、内側の {{htmlelement("legend")}} 要素で `<fieldset>` のキャプションを提供します。いくつかの属性を取りますが、特に重要なものとして `form` は、同じページの {{htmlelement("form")}} の `id` を含むことができ、`<fieldset>` が `<form>` の中になくてもその一部として扱うことができたり、`disabled` は、`<fieldset>` およびその中身を一度に無効にすることができたりします。
 
@@ -32,7 +61,7 @@ l10n:
 
 `<fieldset>` には、スタイル付けの特殊な考慮事項がいくつかあります。
 
-{{cssxref("display")}} の値は既定で `block` であり、[ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)を確立します。 `<fieldset>` がインラインレベルの `display` の値でスタイル付けされた場合は `inline-block` として動作し、そうでなければ `block` として動作します。既定では、コンテンツを囲む `2px` `groove` の境界線があり、少量の既定のパディングがあります。要素は既定で {{cssxref("min-inline-size", "min-inline-size: min-content")}} を持ちます。
+{{cssxref("display")}} の値は既定で `block` であり、[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)を確立します。 `<fieldset>` がインラインレベルの `display` の値でスタイル付けされた場合は `inline-block` として動作し、そうでなければ `block` として動作します。既定では、コンテンツを囲む `2px` `groove` の境界線があり、少量の既定のパディングがあります。要素は既定で {{cssxref("min-inline-size", "min-inline-size: min-content")}} を持ちます。
 
 {{htmlelement("legend")}} が存在する場合は、`block-start` 境界線の上に配置されます。 `<legend>` は縮小折り返しであり、整形コンテキストを確立します。`display` の値はブロック的です。（例えば、`display: inline` は `block` として動作します。）
 

@@ -456,7 +456,7 @@ You should note that we've used a conditional expression to detect whether the l
 
 ## WebVR events
 
-The WebVR spec features a number of events that are fired, allowing our app code to react to changes in the state of the VR display (see [Window events](/es/docs/Web/API/WebVR_API#Window_events)). For example:
+The WebVR spec features a number of events that are fired, allowing our app code to react to changes in the state of the VR display (see [Window events](/es/docs/Web/API/WebVR_API#window_events)). For example:
 
 - [`vrdisplaypresentchange`](/es/docs/Web/Reference/Events/vrdisplaypresentchange) — Fires when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.
 - [`vrdisplayconnect`](/es/docs/Web/Reference/Events/vrdisplayconnect) — Fires when a compatible VR display has been connected to the computer.

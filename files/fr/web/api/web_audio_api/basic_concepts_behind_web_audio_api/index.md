@@ -30,7 +30,7 @@ Les sources audio peuvent être de provenance variée&nbsp;:
 - générées directement en JavaScript avec un noeud audio (tel qu'un oscillateur)
 - créées à partir de données PCM brutes (le contexte audio a des méthodes pour décoder les formats audio supportés)
 - fournies par une balise HTML media (telle que {{HTMLElement("video")}} ou {{HTMLElement("audio")}})
-- récupérées directement avec [WebRTC](/fr/docs/WebRTC) {{domxref("MediaStream")}} (une webcam ou un microphone)
+- récupérées directement avec [WebRTC](/fr/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} (une webcam ou un microphone)
 
 ## Données audio: ce qu'on trouve dans un échantillon
 

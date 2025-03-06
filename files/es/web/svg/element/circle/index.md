@@ -34,10 +34,10 @@ svg {
 
 ### Atributos globales
 
-- [Atributos de procesamiento condicional](/en/SVG/Attribute#ConditionalProccessing) »
-- [Atributos principales](/en/SVG/Attribute#Core) »
-- [Atributos de eventos gráficos](/en/SVG/Attribute#GraphicalEvent) »
-- [Atributos de presentación](/en/SVG/Attribute#Presentation) »
+- [Atributos de procesamiento condicional](/es/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [Atributos principales](/es/docs/Web/SVG/Attribute#core) »
+- [Atributos de eventos gráficos](/es/docs/Web/SVG/Attribute#graphicalevent) »
+- [Atributos de presentación](/es/docs/Web/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

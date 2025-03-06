@@ -9,7 +9,7 @@ L'élément de **base ruby (`<rb>`)** est utilisé afin de délimiter le composa
 
 ## Attributs
 
-Seuls les [attributs universels](/fr/docs/Web/HTML/Attributs_universels) peuvent être utilisés sur cet élément.
+Seuls les [attributs universels](/fr/docs/Web/HTML/Global_attributes) peuvent être utilisés sur cet élément.
 
 ## Notes d'utilisation
 

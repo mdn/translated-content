@@ -198,12 +198,12 @@ Voici un résumé de la façon dont la navigation au clavier devrait fonctionner
 
 Ainsi, pour l'exemple de widget `Tabs` ci-dessus, l'utilisatrice ou l'utilisateur devrait être capable de naviguer dans le conteneur du widget (l'élément [`<ol>`](/fr/docs/Web/HTML/Element/ol) dans notre balisage) en utilisant les touches <kbd>Tab</kbd> et <kbd>Maj</kbd>+<kbd>Tab</kbd>. Une fois que le focus du clavier est à l'intérieur du conteneur, les touches fléchées devraient permettre à l'utilisatrice ou l'utilisateur de naviguer entre chaque onglet (les éléments [`<li>`](/fr/docs/Web/HTML/Element/li)). De là, les conventions varient d'une plateforme à l'autre. Sous Windows, l'onglet suivant doit être automatiquement activé lorsque l'utilisatrice ou l'utilisateur appuie sur les touches fléchées. Sous Mac OS X, on peut appuyer sur <kbd>Entrée</kbd> ou sur <kbd>Espace</kbd> pour activer l'onglet suivant. Un tutoriel en profondeur pour créer des [widgets navigables grâce à des contrôles JavaScript](/fr/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets) comme décrit ici montre comment avoir ce comportement en JS.
 
-Pour plus de détails à propos de ces conventions de navigation au clavier, un aperçu ici [DHTML style guide](http://dev.aol.com/dhtml_style_guide) est disponible. Il délivre un aperçu de la façon dont la navigation au clavier devrait fonctionner pour chaque type de widget pris en charge par ARIA. Le W3C offre également un document utile [ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html) qui inclut la navigation au clavier et les raccourcis pour une variété de widgets.
+Pour plus de détails à propos de ces conventions de navigation au clavier, un aperçu ici [DHTML style guide](http://dev.aol.com/dhtml_style_guide) est disponible. Il délivre un aperçu de la façon dont la navigation au clavier devrait fonctionner pour chaque type de widget pris en charge par ARIA. Le W3C offre également un document utile [ARIA Best Practices](https://www.w3.org/WAI/PF/aria-practices/Overview.html) qui inclut la navigation au clavier et les raccourcis pour une variété de widgets.
 
 ## Voir aussi
 
-- [ARIA](/fr/docs/Accessibilité/ARIA)
-- [Des applications WEB et la FAQ ARIA](/fr/docs/Accessibilité/ARIA/FAQ_Applications_Web_et_ARIA)
-- [WAI-ARIA Spécification](http://www.w3.org/TR/wai-aria/)
-- [WAI-ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html)
+- [ARIA](/fr/docs/Web/Accessibility/ARIA)
+- [Des applications WEB et la FAQ ARIA](/fr/docs/Web/Accessibility/ARIA)
+- [WAI-ARIA Spécification](https://www.w3.org/TR/wai-aria/)
+- [WAI-ARIA Best Practices](https://www.w3.org/WAI/PF/aria-practices/Overview.html)
 - [DHTML Style Guide](http://dev.aol.com/dhtml_style_guide)

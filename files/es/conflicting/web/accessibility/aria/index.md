@@ -10,7 +10,7 @@ Tienes un formulario — un formulario de contacto — por ejemplo, en el que de
 
 ## El formulario
 
-Primero, lee acerca de la [`técnica requerida por aria`](/es/docs/Web/Accessibility/ARIA/forms/Basic_form_hints#Required_and_invalid_fields) si no lo has hecho, ya que esta técnica amplía a esa.
+Primero, lee acerca de la [`técnica requerida por aria`](/es/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea#required_and_invalid_fields) si no lo has hecho, ya que esta técnica amplía a esa.
 
 Aquí hay un sencillo formulario:
 
@@ -100,7 +100,7 @@ Si se encuentra el término de búsqueda, el atributo `aria-invalid` se restable
 
 Esta función primero elimina las alertas antiguas. La función es simple: busca un elemento con id "`alert`" y, si lo encuentra, lo elimina del [modelo de objetos del documento](/es/docs/Mozilla/Tech/XUL/Tutorial/Document_Object_Model).
 
-A continuación, la función crea un elemento `div` para contener el texto de alerta. Obtiene un ID de "`alert`". Y obtiene un conjunto de roles de "alert". En realidad, está inspirado en ARIA, aunque no dice "aria" en el nombre del atributo. Esto se debe a que ese rol se basa en el [Módulo de atributos de rol XHTML](http://www.w3.org/TR/xhtml-role/) que simplemente se transfirió a HTML para simplificar.
+A continuación, la función crea un elemento `div` para contener el texto de alerta. Obtiene un ID de "`alert`". Y obtiene un conjunto de roles de "alert". En realidad, está inspirado en ARIA, aunque no dice "aria" en el nombre del atributo. Esto se debe a que ese rol se basa en el [Módulo de atributos de rol XHTML](https://www.w3.org/TR/xhtml-role/) que simplemente se transfirió a HTML para simplificar.
 
 El texto se agrega al elemento `div` y el elemento `div` se agrega al documento.
 

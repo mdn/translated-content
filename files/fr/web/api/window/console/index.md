@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-La propriété **`Window.console`** renvoie une référence à l'objet [`console`](/fr/docs/Web/API/Console) qui fournit des méthodes pour journaliser et afficher des informations dans la console du navigateur. Ces méthodes sont uniquement destinées au débogage et ne devraient pas être utilisées pour présenter des informations aux utilisatrices et utilisateurs des sites et applications web.
+La propriété **`Window.console`** renvoie une référence à l'objet [`console`](/fr/docs/Web/API/console) qui fournit des méthodes pour journaliser et afficher des informations dans la console du navigateur. Ces méthodes sont uniquement destinées au débogage et ne devraient pas être utilisées pour présenter des informations aux utilisatrices et utilisateurs des sites et applications web.
 
 ## Exemples
 
@@ -25,7 +25,7 @@ Dans l'exemple suivant, on affiche un objet dans la console et les propriétés 
 console.dir(someObject);
 ```
 
-Pour plus d'exemples, voir la section [Exemples](/fr/docs/Web/API/Console#exemples) de l'article sur [`console`](/fr/docs/Web/API/Console).
+Pour plus d'exemples, voir la section [Exemples](/fr/docs/Web/API/console#exemples) de l'article sur [`console`](/fr/docs/Web/API/console).
 
 ## Spécifications
 

@@ -44,7 +44,7 @@ font-feature-settings: unset;
   - : 文本使用默认设置进行布局。
 - `<feature-tag-value>`
   - : 在呈现文本时，OpenType 要素标记值的列表被传递到文本布局引擎以启用或禁用字体特征。标签始终是 4 个 ASCII 字符的 {{cssxref("&lt;string&gt;")}} 。如果是 U + 20 - U + 7E 代码点范围以外的字符或字符个数不对，则整个属性无效。
-    值是一个正整数。两个关键字 on 和 off 分别是 1 和 0 的同义词。如果未设置任何值，则默认值为 1。对于非布尔型 OpenType 功能（例如，文体替代 [stylistic alternates](http://www.microsoft.com/typography/otspec/features_pt.htm#salt)），该值意味着要选择特定的字形；对于布尔值，它是一个开关。
+    值是一个正整数。两个关键字 on 和 off 分别是 1 和 0 的同义词。如果未设置任何值，则默认值为 1。对于非布尔型 OpenType 功能（例如，文体替代 [stylistic alternates](https://www.microsoft.com/typography/otspec/features_pt.htm#salt)），该值意味着要选择特定的字形；对于布尔值，它是一个开关。
 
 ### 形式语法
 
@@ -106,5 +106,5 @@ td.tabular {
 ## 其他参考
 
 - [FontFont OpenType User Guide (pdf)](https://www.fontfont.com/staticcontent/downloads/FF_OT_User_Guide.pdf)
-- [OpenType Feature Tags](http://www.microsoft.com/typography/otspec/featurelist.htm) 列表
-- [Using the whole font](http://blogs.msdn.com/b/ie/archive/2012/01/09/css-corner-using-the-whole-font.aspx) ( -moz 语法是旧的。在 Gecko 上，使用-ms 语法，但使用-moz ).
+- [OpenType Feature Tags](https://www.microsoft.com/typography/otspec/featurelist.htm) 列表
+- [Using the whole font](https://blogs.msdn.com/b/ie/archive/2012/01/09/css-corner-using-the-whole-font.aspx) ( -moz 语法是旧的。在 Gecko 上，使用-ms 语法，但使用-moz ).

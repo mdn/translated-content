@@ -9,7 +9,22 @@ l10n:
 
 **`Object.defineProperty()`** は静的メソッドで、あるオブジェクトに新しいプロパティを直接定義したり、オブジェクトの既存のプロパティを変更したりして、そのオブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/object-defineproperty.html")}}
+{{InteractiveExample("JavaScript Demo: Object.defineProperty()")}}
+
+```js interactive-example
+const object1 = {};
+
+Object.defineProperty(object1, "property1", {
+  value: 42,
+  writable: false,
+});
+
+object1.property1 = 77;
+// Throws an error in strict mode
+
+console.log(object1.property1);
+// Expected output: 42
+```
 
 ## 構文
 
@@ -118,7 +133,7 @@ Object.defineProperty(obj, "key", withValue("static"));
 
 古い記述子の `configurable` 属性が `false` に設定されていた場合、そのプロパティは _構成不可_ と言います。設定不可能なアクセサープロパティの属性を変更することはできませんし、データプロパティとアクセサープロパティの種類を切り替えることもできません。 `writable: true` のデータプロパティでは、値を変更して `writable` 属性を `true` から `false` に変更することが可能です。データプロパティで元の値と同じ値を定義する場合を除き、設定不可能なプロパティ属性（許可されている場合は `value` と `writable` を除く）を変更しようとすると {{jsxref("TypeError")}} が発生します。
 
-現在のプロパティが構成可能な場合、属性を `undefined` に定義すると、その属性は効果的に削除されます。例えば、 `o.k` がアクセサープロパティである場合、 `Object.defineProperty(o, "k", { set: undefined })` とするとセッターを除去し、`k` はゲッターのみを持つことになるので、、読み取り専用になります。新しい記述子に属性がない場合、古い記述子の属性値は保持されます（暗黙的に `undefined` に再定義されることはありません）。異なる「風味」の記述子を与えることで、データとアクセサープロパティを切り替えることが可能です。例えば、新しい記述子が（`value` または `writable` を持つ）データ記述子の場合、元の記述子の `get` 属性と `set` 属性は両方とも削除されます。
+現在のプロパティが構成可能な場合、属性を `undefined` に定義すると、その属性は効果的に削除されます。例えば、 `o.k` がアクセサープロパティである場合、 `Object.defineProperty(o, "k", { set: undefined })` とするとセッターを除去し、`k` はゲッターのみを持つことになるので、読み取り専用になります。新しい記述子に属性がない場合、古い記述子の属性値は保持されます（暗黙的に `undefined` に再定義されることはありません）。異なる「風味」の記述子を与えることで、データとアクセサープロパティを切り替えることが可能です。例えば、新しい記述子が（`value` または `writable` を持つ）データ記述子の場合、元の記述子の `get` 属性と `set` 属性は両方とも削除されます。
 
 ## 例
 

@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/history/deleteRange
 
 Supprime toutes les visites aux pages que l'utilisateur a effectuées pendant la période donnée. Si cela supprime toutes les visites effectuées sur une page donnée, alors la page n'apparaîtra plus dans l'historique du navigateur et {{WebExtAPIRef("history.onVisitRemoved")}} se déclenchera pour cela.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -30,7 +30,7 @@ var deletingRange = browser.history.deleteRange(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie sans paramètre lorsque la plage a été supprimée.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera remplie sans paramètre lorsque la plage a été supprimée.
 
 ## Compatibilité des navigateurs
 

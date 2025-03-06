@@ -59,7 +59,7 @@ Après les 8 allers-retours, le navigateur est enfin en mesure de faire la deman
 
 ## Response
 
-Une fois la connexion établie avec un serveur Web établie, le navigateur envoie une [demande HTTP `GET`](/fr/docs/Web/HTTP/Méthode) initiale au nom de l'utilisateur, qui pour les sites Web est le plus souvent un fichier HTML. Dès que le serveur reçoit la demande, il répond avec les en-têtes de réponse pertinents et le contenu du code HTML.
+Une fois la connexion établie avec un serveur Web établie, le navigateur envoie une [demande HTTP `GET`](/fr/docs/Web/HTTP/Methods) initiale au nom de l'utilisateur, qui pour les sites Web est le plus souvent un fichier HTML. Dès que le serveur reçoit la demande, il répond avec les en-têtes de réponse pertinents et le contenu du code HTML.
 
 ```html
 <!doctype html>
@@ -152,9 +152,9 @@ Lors de l'analyse du CSS et de la création du CSSOM, d'autres ressources, notam
 
 #### Construire l'arbre d'accessibilité
 
-Le navigateur crée également une arbre d'[accessibilité](/fr/docs/Apprendre/a11y) que les périphériques d'assistance utilisent pour analyser et interpréter le contenu. Le modèle d'objet d'accessibilité (AOM) est comme une version sémantique du DOM. Le navigateur met à jour l'arbre d'accessibilité lorsque le DOM est mis à jour. L'arbre d'accessibilité n'est pas modifiable par les technologies d'assistance elles-mêmes.
+Le navigateur crée également une arbre d'[accessibilité](/fr/docs/Learn/Accessibility) que les périphériques d'assistance utilisent pour analyser et interpréter le contenu. Le modèle d'objet d'accessibilité (AOM) est comme une version sémantique du DOM. Le navigateur met à jour l'arbre d'accessibilité lorsque le DOM est mis à jour. L'arbre d'accessibilité n'est pas modifiable par les technologies d'assistance elles-mêmes.
 
-Jusqu'à la construction de l'AOM, le contenu n'est pas accessible aux [lecteurs d'écran](/fr/docs/Accessibilité/ARIA/FAQ_Applications_Web_et_ARIA).
+Jusqu'à la construction de l'AOM, le contenu n'est pas accessible aux [lecteurs d'écran](/fr/docs/Web/Accessibility/ARIA).
 
 ## Rendre
 
@@ -192,7 +192,7 @@ Pour assurer un défilement et une animation fluides, tout ce qui occupe le fil 
 
 La peinture peut diviser les éléments de l'arborescence en couches. La promotion du contenu en couches sur le GPU (au lieu du thread principal sur le CPU) améliore la performances de la peinture originale et chaque la performances de repeinte supplémentaire.
 
-Il existe des propriétés et des éléments spécifiques qui instancient un calque, notamment `<video>` et `<canvas>`, ainsi que tout élément possédant les propriétés CSS d'[opacité](/fr/docs/Web/CSS/opacity), de [transformation 3D](/fr/docs/Web/CSS/CSS_Transforms), de et de plusieurs valeur de [`will-change`](/fr/docs/Web/CSS/will-change), [`isolation`](/fr/docs/Web/CSS/isolation) et [`contain`](/fr/docs/Web/CSS/contain). Ces nœuds seront peints sur leur propre calque, avec leurs descendants, à moins qu'un descendant ne nécessite son propre calque pour une (ou plusieurs) des raisons ci-dessus.
+Il existe des propriétés et des éléments spécifiques qui instancient un calque, notamment `<video>` et `<canvas>`, ainsi que tout élément possédant les propriétés CSS d'[opacité](/fr/docs/Web/CSS/opacity), de [transformation 3D](/fr/docs/Web/CSS/CSS_transforms), de et de plusieurs valeur de [`will-change`](/fr/docs/Web/CSS/will-change), [`isolation`](/fr/docs/Web/CSS/isolation) et [`contain`](/fr/docs/Web/CSS/contain). Ces nœuds seront peints sur leur propre calque, avec leurs descendants, à moins qu'un descendant ne nécessite son propre calque pour une (ou plusieurs) des raisons ci-dessus.
 
 Les couches améliorent les performances, mais sont coûteuses en termes de gestion de la mémoire et ne doivent donc pas être utilisées de manière excessive dans les stratégies d'optimisation des performances Web.
 
@@ -204,7 +204,7 @@ Si la page continue de charger des ressources, des retraits peuvent se produire 
 
 ## L'interactivité
 
-Une fois que le fil principal est terminé, on pourrait penser que nous serions "tout prêt". Ce n'est pas nécessairement le cas. Si le chargement inclut JavaScript, correctement différé et exécuté uniquement après le déclenchement de l'événement [onload](/fr/docs/Web/API/GlobalEventHandlers/onload), le thread principal est peut-être occupé et indisponible pour les interactions de défilement, tactiles et autres.
+Une fois que le fil principal est terminé, on pourrait penser que nous serions "tout prêt". Ce n'est pas nécessairement le cas. Si le chargement inclut JavaScript, correctement différé et exécuté uniquement après le déclenchement de l'événement [onload](/fr/docs/Web/API/Window/load_event), le thread principal est peut-être occupé et indisponible pour les interactions de défilement, tactiles et autres.
 
 {{glossary('Time to Interactive')}} (TTI) est la mesure du temps qu'il a fallu à cette première demande pour aboutir à la recherche DNS et à la connexion SSL lorsque la page est interactive - interactif étant le point dans le temps après le {{glossary('First Contentful Paint')}} lorsque la page répond aux interactions de l'utilisateur dans un délai de 50 ms. Si le thread principal est occupé à analyser, compiler et exécuter JavaScript, il n'est pas disponible et ne peut donc pas répondre aux interactions de l'utilisateur dans les meilleurs délais (moins de 50 ms).
 
@@ -216,4 +216,4 @@ Dans cet exemple, le processus de chargement du contenu du DOM a duré plus de 1
 
 ## Voir aussi
 
-- [Web Performance](/fr/docs/Web/Guide/Performance)
+- [Web Performance](/fr/docs/Web/Performance)

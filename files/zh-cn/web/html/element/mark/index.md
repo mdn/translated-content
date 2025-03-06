@@ -9,15 +9,15 @@ HTML 标记文本元素 (< Mark >) 表示为引用或符号目的而标记或突
 
 这个 _HTML mark_ 标签代表突出显示的文字，例如可以为了**标记**特定上下文中的文本而使用这个标签**.** 举个例子，它可以用来显示搜索引擎搜索后关键词
 
-- _内容分类_ [Flow content](/zh-CN/docs/HTML/Content_categories#Flow_content), [phrasing content](/zh-CN/docs/HTML/Content_categories#Phrasing_content), palpable content.
-- _允许的内容_ [Phrasing content](/zh-CN/docs/HTML/Content_categories#Phrasing_content).
+- _内容分类_ [Flow content](/zh-CN/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/zh-CN/docs/Web/HTML/Content_categories#phrasing_content), palpable content.
+- _允许的内容_ [Phrasing content](/zh-CN/docs/Web/HTML/Content_categories#phrasing_content).
 - _标签省略_：不允许，开始标签和结束标签都不能省略。
-- *允许的父元素*任何接受[phrasing content](/zh-CN/docs/HTML/Content_categories#Phrasing_content) 的元素。
+- *允许的父元素*任何接受[phrasing content](/zh-CN/docs/Web/HTML/Content_categories#phrasing_content) 的元素。
 - _DOM 接口_ {{domxref("HTMLElement")}}
 
 ## 属性
 
-这个元素只包含了 [全局属性](/zh-CN/docs/HTML/Global_attributes).
+这个元素只包含了 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes).
 
 ## 使用说明
 

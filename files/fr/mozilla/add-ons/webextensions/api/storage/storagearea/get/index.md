@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 
 Récupère un ou plusieurs éléments de la zone de stockage.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -26,7 +26,7 @@ let gettingItem = browser.storage.<storageType>.get(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet de `resultat` contenant tous les objets dans les `clefs` trouvées dans la zone de stockage. Si l'opération a échoué, la promesse sera rejetée avec un message d'erreur. Si le stockage géré n'est pas défini, les données `non définies` seront retournées.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet de `resultat` contenant tous les objets dans les `clefs` trouvées dans la zone de stockage. Si l'opération a échoué, la promesse sera rejetée avec un message d'erreur. Si le stockage géré n'est pas défini, les données `non définies` seront retournées.
 
 > [!WARNING]
 > Lorsqu'elle est utilisée dans un script de contenu dans les versions de Firefox antérieures à 52, la promesse retournée par `browser.storage.local.get()` est remplie avec un tableau contenant un objet. L'objet dans le tableau contient les `clefs` trouvées dans la zone de stockage, comme décrit ci-dessus. La promesse est correctement remplie avec un objet lorsqu'il est utilisé dans le contexte d'arrière-plan

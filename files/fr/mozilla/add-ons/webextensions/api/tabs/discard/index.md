@@ -11,9 +11,9 @@ Certains navigateurs "suppriment" automatiquement les onglets dont ils ne pensen
 
 Les détails de ce qui est supprimé sont spécifiques au navigateur, mais en général, l'abandon d'un onglet permet au navigateur de libérer une partie de la mémoire occupée par cet onglet.
 
-L'API {{WebExtAPIRef("tabs.discard()")}} permet à une extension d'ignorer un ou plusieurs onglets. Il n'est pas possible de supprimer l'onglet actuellement actif ou un onglet dont le document contient un programme d'écoute [`beforeunload`](/fr/docs/Web/Events/beforeunload) qui afficherait une invite.
+L'API {{WebExtAPIRef("tabs.discard()")}} permet à une extension d'ignorer un ou plusieurs onglets. Il n'est pas possible de supprimer l'onglet actuellement actif ou un onglet dont le document contient un programme d'écoute [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event) qui afficherait une invite.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -30,7 +30,7 @@ var discarding = browser.tabs.discard(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque tous les onglets spécifiés ont été supprimés. Si une erreur se produit (par exemple, ID d'onglet non valide), la promesse sera rejetée avec un message d'erreur.Si l'ID de l'onglet actif est transmis, il ne sera pas supprimé, mais la promesse sera satisfaite et tous les autres onglets transférés seront supprimés.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans argument lorsque tous les onglets spécifiés ont été supprimés. Si une erreur se produit (par exemple, ID d'onglet non valide), la promesse sera rejetée avec un message d'erreur.Si l'ID de l'onglet actif est transmis, il ne sera pas supprimé, mais la promesse sera satisfaite et tous les autres onglets transférés seront supprimés.
 
 ## Exemples
 

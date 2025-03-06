@@ -70,4 +70,4 @@ Cela a également l'avantage de rendre le code plus compréhensible et explicite
 
 - [Discussion originale à propos de la précédence de l'opérateur d'exponentiation (en anglais)](https://esdiscuss.org/topic/exponentiation-operator-precedence)
 - [L'opérateur d'exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [La précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [La précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence)

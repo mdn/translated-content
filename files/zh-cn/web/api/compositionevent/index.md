@@ -43,5 +43,5 @@ _这个接口也从 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承方法
 - [compositionstart](/zh-CN/docs/Web/API/Element/compositionstart_event)
 - [compositionend](/zh-CN/docs/Web/API/Element/compositionend_event)
 - [compositionupdate](/zh-CN/docs/Web/API/Element/compositionupdate_event)
-- [UIEvent](/zh-CN/docs/DOM/Event/UIEvent)
-- [Event](/zh-CN/docs/DOM/event)
+- [UIEvent](/zh-CN/docs/Web/API/UIEvent)
+- [Event](/zh-CN/docs/Web/API/Event)

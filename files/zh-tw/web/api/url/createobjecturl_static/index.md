@@ -24,7 +24,7 @@ objectURL = URL.createObjectURL(blob);
 
 ## 範例
 
-參見 [Using object URLs to display images](/zh-TW/docs/Using_files_from_web_applications#Example.3A_Using_object_URLs_to_display_images).(藉由物件 URL 來顯示圖像)
+參見 [Using object URLs to display images](/zh-TW/docs/Web/API/File_API/Using_files_from_web_applications#example.3a_using_object_urls_to_display_images).(藉由物件 URL 來顯示圖像)
 
 ## 注意事項
 
@@ -41,4 +41,4 @@ objectURL = URL.createObjectURL(blob);
 ## 另見
 
 - {{domxref("URL.revokeObjectURL()")}}
-- [Using files from web applications](/zh-TW/docs/Using_files_from_web_applications)
+- [Using files from web applications](/zh-TW/docs/Web/API/File_API/Using_files_from_web_applications)

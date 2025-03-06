@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Functions/arguments
 
 **`arguments`** 是一个对应于传递给函数的参数的类数组对象。
 
-{{EmbedInteractiveExample("pages/js/functions-arguments.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Arguments")}}
+
+```js interactive-example
+function func1(a, b, c) {
+  console.log(arguments[0]);
+  // Expected output: 1
+
+  console.log(arguments[1]);
+  // Expected output: 2
+
+  console.log(arguments[2]);
+  // Expected output: 3
+}
+
+func1(1, 2, 3);
+```
 
 ## 描述
 
@@ -15,7 +30,7 @@ slug: Web/JavaScript/Reference/Functions/arguments
 > 如果你编写兼容 ES6 的代码，那么优先推荐使用 [剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 
 > [!NOTE]
-> “类数组”意味着 `arguments` 有 {{jsxref("Functions/arguments/length", "长度")}} 属性 并且属性的索引是从零开始的，但是它没有 {{JSxRef("Array")}}的 内置方法，例如 {{jsxref("Array.forEach", "forEach()")}} 和 {{jsxref("Array.map", "map()")}}都是没有的。详情可以看 [§Description](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments#Description).
+> “类数组”意味着 `arguments` 有 {{jsxref("Functions/arguments/length", "长度")}} 属性 并且属性的索引是从零开始的，但是它没有 {{JSxRef("Array")}}的 内置方法，例如 {{jsxref("Array.forEach", "forEach()")}} 和 {{jsxref("Array.map", "map()")}}都是没有的。详情可以看 [§Description](#Description).
 
 `arguments`对象是所有（非箭头）函数中都可用的**局部变量**。你可以使用`arguments`对象在函数中引用函数的参数。此对象包含传递给函数的每个参数，第一个参数在索引 0 处。例如，如果一个函数传递了三个参数，你可以以如下方式引用他们：
 
@@ -52,7 +67,7 @@ const args = [...arguments];
 >   arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments);
 > ```
 
-如果调用的参数多于正式声明接受的参数，则可以使用`arguments`对象。这种技术对于可以传递可变数量的参数的函数很有用。使用 [`arguments.length`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length)来确定传递给函数参数的个数，然后使用`arguments`对象来处理每个参数。要确定函数[签名](/zh-CN/docs/Glossary/Signature/Function)中（输入）参数的数量，请使用[`Function.length`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/length)属性。
+如果调用的参数多于正式声明接受的参数，则可以使用`arguments`对象。这种技术对于可以传递可变数量的参数的函数很有用。使用 [`arguments.length`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/length)来确定传递给函数参数的个数，然后使用`arguments`对象来处理每个参数。要确定函数[签名](/zh-CN/docs/Glossary/Signature/Function)中（输入）参数的数量，请使用[`Function.length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length)属性。
 
 ### 对参数使用 `typeof`
 
@@ -82,7 +97,7 @@ console.log(typeof arguments[0]); //this will return the typeof individual argum
 
 ### 对参数使用扩展语法
 
-你还可以使用{{jsxref("Array.from()")}}方法或[扩展运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator)将参数转换为真实数组：
+你还可以使用{{jsxref("Array.from()")}}方法或[扩展运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)将参数转换为真实数组：
 
 ```js
 var args = Array.from(arguments);
@@ -169,7 +184,7 @@ var listHTML = list("u", "One", "Two", "Three");
 
 ### 剩余参数、默认参数和解构赋值参数
 
-`arguments`对象可以与[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)参数结合使用。
+`arguments`对象可以与[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)参数结合使用。
 
 ```js
 function foo(...args) {
@@ -178,9 +193,9 @@ function foo(...args) {
 foo(1, 2, 3); // [1,2,3]
 ```
 
-在严格模式下，[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)参数的存在不会改变 `arguments`对象的行为，但是在非严格模式下就有所不同了。
+在严格模式下，[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)参数的存在不会改变 `arguments`对象的行为，但是在非严格模式下就有所不同了。
 
-当非严格模式中的函数**没有**包含[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)，那么`arguments`对象中的值**会**跟踪参数的值（反之亦然）。看下面的代码：
+当非严格模式中的函数**没有**包含[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)，那么`arguments`对象中的值**会**跟踪参数的值（反之亦然）。看下面的代码：
 
 ```js
 function func(a) {
@@ -200,7 +215,7 @@ function func(a) {
 func(10); // 99
 ```
 
-当非严格模式中的函数**有**包含[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)，那么`arguments`对象中的值**不会**跟踪参数的值（反之亦然）。相反，`arguments`反映了调用时提供的参数：
+当非严格模式中的函数**有**包含[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)，那么`arguments`对象中的值**不会**跟踪参数的值（反之亦然）。相反，`arguments`反映了调用时提供的参数：
 
 ```js
 function func(a = 55) {

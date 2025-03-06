@@ -19,7 +19,7 @@ Las cookies se utilizan principalmente con tres propósitos:
 Las cookies se usaron una vez para el almacenamiento general del lado del cliente. Si bien esto era legítimo cuando eran la única forma de almacenar datos en el cliente, hoy en día se recomienda preferir las API de almacenamiento modernas. Las cookies se envían con cada solicitud, por lo que pueden empeorar el rendimiento (especialmente para las conexiones de datos móviles). Las APIs modernas para el almacenamiento del cliente son la [Web storage API](/es/docs/Web/API/Web_Storage_API) (`localStorage` y `sessionStorage`) e [IndexedDB](/es/docs/Web/API/IndexedDB_API).
 
 > [!NOTE]
-> Para ver las cookies almacenadas (y otro tipo de almacenamiento que una página web puede usar), puede habilitar el [Inspector de Almacenamiento](/es/docs/Tools/Storage_Inspector) en Herramientas del desarrollador y seleccionar Cookies en el árbol de almacenamiento.
+> Para ver las cookies almacenadas (y otro tipo de almacenamiento que una página web puede usar), puede habilitar el [Inspector de Almacenamiento](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html) en Herramientas del desarrollador y seleccionar Cookies en el árbol de almacenamiento.
 
 ## Creando cookies
 
@@ -105,7 +105,7 @@ Por ejemplo, si se establece `Path=/docs` estas rutas coincidirán:
 
 Las cookies `SameSite` permiten a los servidores requerir que una cookie no sea enviada con solicitudes cross-site (donde {{Glossary("Site")}} es definido por el dominio registrabe), lo que proporciona algo de protección contra ataques cross-site request forgery ({{Glossary("CSRF")}}).
 
-Las cookies `SameSite` son relativamente nuevas y [soportadas por los principales navegadores](/es/docs/Web/HTTP/headers/Set-Cookie#Browser_compatibility).
+Las cookies `SameSite` son relativamente nuevas y [soportadas por los principales navegadores](/es/docs/Web/HTTP/Headers/Set-Cookie#browser_compatibility).
 
 Aquí hay un ejemplo:
 
@@ -133,7 +133,7 @@ console.log(document.cookie);
 // logs "yummy_cookie=choco; tasty_cookie=strawberry"
 ```
 
-Tenga en cuenta las cuestiones de seguridad en la siguiente sección [Seguridad](/es/docs/Web/HTTP/Cookies#Security). Las cookies disponibles para JavaScript pueden ser robadas por medio de XSS.
+Tenga en cuenta las cuestiones de seguridad en la siguiente sección [Seguridad](#security). Las cookies disponibles para JavaScript pueden ser robadas por medio de XSS.
 
 ## Seguridad
 
@@ -228,7 +228,7 @@ Existen algunas técnicas diseñadas para recrear las cookies después de elimin
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - {{domxref("Navigator.cookieEnabled")}}
-- [Inspeccionar cookies usando el Storage Inspector](/es/docs/Tools/Storage_Inspector)
+- [Inspeccionar cookies usando el Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
 - [Cookie specification: RFC 6265](https://tools.ietf.org/html/rfc6265)
 - [Nicholas Zakas article on cookies](https://www.nczonline.net/blog/2009/05/05/http-cookies-explained/)
 - [Nicholas Zakas article on cookies and security](https://www.nczonline.net/blog/2009/05/12/cookies-and-security/)

@@ -205,7 +205,7 @@ person1.bio()
 ```
 
 > [!NOTE]
-> Si tienes problemas para lograr que funcione, puedes comparar tu código con nuestra versión — ve [oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html) (también lo puedes ver [corriendo en vivo](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html)).
+> Si tienes problemas para lograr que funcione, puedes comparar tu código con nuestra versión — ve [oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html) (también lo puedes ver [corriendo en vivo](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html)).
 
 ### Ejercicios adicionales
 
@@ -214,11 +214,11 @@ Para empezar, intenta añadir un par de líneas de creación de objetos propias,
 Además, hay un par de problemas con nuestro método `bio()` — la salida siempre incluye el pronombre "He", incluso para personas de otros géneros. Y `bio` solamente incluye dos intereses, sin importar la cantidad que hay en el arreglo `interests`. ¿Podrías corregir esto en la definición de la clase (constructor)? Puedes poner cualquier código dentro de un constructor (probablemente necesites algunos condicionales y un bucle). Piensa como se deben estructurar las declaraciones dependiendo del género, y de la cantidad de intereses.
 
 > [!NOTE]
-> Si estás atascado, hay una [respuesta en nuestro repositorio de GitHub](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) ([see it live](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) — igualmente ¡intentea resolverla primero!
+> Si estás atascado, hay una [respuesta en nuestro repositorio de GitHub](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) ([see it live](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) — igualmente ¡intentea resolverla primero!
 
 ## Otras formas de crear instancias de objetos
 
-Hasta ahora hemos visto dos diferentes formas de crear una instancia de objeto — [declarando un objeto literal](/es/docs/Learn/JavaScript/Objects/Basics#Object_basics), y usando una función constructora (ver arriba).
+Hasta ahora hemos visto dos diferentes formas de crear una instancia de objeto — [declarando un objeto literal](/es/docs/Learn/JavaScript/Objects/Basics#object_basics), y usando una función constructora (ver arriba).
 
 Esto tiene sentido, pero hay otras formas — se muestran aquí para que te vayas familiarizando en caso de encontrarte con ellas.
 
@@ -292,9 +292,9 @@ En el próximo artículo, exploraremos los prototipos de objeto JavaScript.
 ## En este modulo
 
 - [Objetos básicos](/es/docs/Learn/JavaScript/Objects/Basics)
-- [JavaScript orientedo a objetos para principiantes](/es/docs/Learn/JavaScript/Objects/Object-oriented_JS)
+- [JavaScript orientedo a objetos para principiantes](/es/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript)
 - [Prototipos de Objetos](/es/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Herencia en JavaScript](/es/docs/Learn/JavaScript/Objects/Inheritance)
+- [Herencia en JavaScript](/es/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
 - [Trabajando con datos JSON](/es/docs/Learn/JavaScript/Objects/JSON)
 - [Práctica de construcción de objetos](/es/docs/Learn/JavaScript/Objects/Object_building_practice)
 - [Agregar funciones a nuestro demo de pelotas que rebotan](/es/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

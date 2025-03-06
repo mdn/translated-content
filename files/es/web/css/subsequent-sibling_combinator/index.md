@@ -45,4 +45,4 @@ p ~ span {
 
 ## Ver también
 
-- [Selectores de hermanos adyacentes](/es/docs/Web/CSS/Adjacent_sibling_selectors)
+- [Selectores de hermanos adyacentes](/es/docs/Web/CSS/Next-sibling_combinator)

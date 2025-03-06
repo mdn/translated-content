@@ -13,7 +13,7 @@ slug: Web/HTML/Element/frame
 
 ## 属性
 
-就像其他 HTML 元素一样，这个元素支持 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
+就像其他 HTML 元素一样，这个元素支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `src`
   - : 这个属性指定了由帧展示的文档。

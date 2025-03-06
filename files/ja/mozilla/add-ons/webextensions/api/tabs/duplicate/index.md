@@ -24,7 +24,7 @@ var duplicating = browser.tabs.duplicate(
 
 ### 戻り値
 
-A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the duplicated tab. The `Tab` object only contains `url`, `title` and `favIconUrl` if the extension has the [`"tabs"` permission](/ja/Add-ons/WebExtensions/manifest.json/permissions). If any error occurs the promise will be rejected with an error message.
+A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the duplicated tab. The `Tab` object only contains `url`, `title` and `favIconUrl` if the extension has the [`"tabs"` permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). If any error occurs the promise will be rejected with an error message.
 
 ## ブラウザーの互換性
 

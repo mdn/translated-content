@@ -33,7 +33,7 @@ slug: Web/JavaScript/Reference/Functions/set
 Обратите внимание на следующие моменты при работе с синтаксисом `set`:
 
 - Он может иметь идентификатор, который является либо числом, либо строкой;
-- Он должен иметь ровно один параметр (смотрите [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) для более подробной информации);
+- Он должен иметь ровно один параметр (смотрите [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) для более подробной информации);
 - Он не должен объявляться в литерале объекта, с другим набором или вводом данных для того же самого свойства.
   ( `{ set x(v) { }, set x(v) { } }` и `{ x: ..., set x(v) { } }` запрещены)
 
@@ -113,4 +113,4 @@ console.log(obj.baz); // "baz"
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Defining Getters and Setters](/ru/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) в руководстве по JavaScript
+- [Defining Getters and Setters](/ru/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) в руководстве по JavaScript

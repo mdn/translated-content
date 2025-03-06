@@ -51,7 +51,7 @@ De plus, lorsqu'on dit "à travers un nombre acceptable de navigateurs", on ne v
 
 ## Pourquoi y'a-t-il des problèmes en navigateur croisé?
 
-Il y a beaucoup de raisons différentes qui amènent des problèmes en navigateur croisé, et notez qu'ici nous parlons des bug qui se comportent différemment selon les navigateurs / supports / préférences de navigateurs. Avant même d'attaquer les problèmes en navigateurs croisés, commencez déjà par fixer encore et encore tous les bugs présents dans votre propre code (voir [Debugging HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Debugging CSS](/fr/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS), et [What went wrong? Troubleshooting JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong) des sujets précédents afin de vous rafraichir la mémoire si nécessaire).
+Il y a beaucoup de raisons différentes qui amènent des problèmes en navigateur croisé, et notez qu'ici nous parlons des bug qui se comportent différemment selon les navigateurs / supports / préférences de navigateurs. Avant même d'attaquer les problèmes en navigateurs croisés, commencez déjà par fixer encore et encore tous les bugs présents dans votre propre code (voir [Debugging HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Debugging CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS), et [What went wrong? Troubleshooting JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong) des sujets précédents afin de vous rafraichir la mémoire si nécessaire).
 
 Les problèmes en navigateurs croisés se produisent le plus fréquemment parce que :
 
@@ -141,7 +141,7 @@ C'est souvent une bonne idée de tester sur les versions en avant-première des 
 - [Edge Insider Preview](https://insider.windows.com/)
 - [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
 - [Chrome Canary](https://www.google.com/chrome/browser/canary.html)
-- [Opera Developer](http://www.opera.com/computer/beta)
+- [Opera Developer](https://www.opera.com/computer/beta)
 
 C'est surtout répandu lorsque vous utiliser des technologies très récentes sur votre site, et que vous voulez les tester par rapport aux anciennes implémentations, ou si vous rencontrez un bug dans la dernières version sortie d'un navigateur, et que vous voulez vérifier si les développeurs du navigateur on fixé le bug sur une version plus récente.
 
@@ -153,7 +153,7 @@ La première chose à faire est de réduire l'origine du bug avec un maximum de 
 
 Ce n'est pas forcément de votre faute — si un bug existe sur un navigateur, alors on peut espérer que le distributeur le fixera rapidement. Il est peut-être même déjà réparé — par exemple si un bug est présent sur la release 49 de Firefox, mais qu'il n'existe plus sur Firefox Nightly (version52), alors il a été fixé. S'il n'a pas été résolu, alors vous pouvez déposer un bug (voir [Rapporter un bug](#rapporter_un_bug), plus bas).
 
-Si c'est de votre faute, vous devez le résoudre ! Trouver la cause d'un bug implique la même stratégie que pour n'importe quel bug de développement web (à nouveau, voir [Debugging HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Debugging CSS](/fr/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS), et [What went wrong? Troubleshooting JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong)). Une fois que vous avez découvert ce qui causait le bug, vous devez décider comment est-ce que vous allez travailler sur le navigateur en particulier qui vous pose problèmes — vous ne pouvez pas juste modifier le code du problème, cela risque de casser le code sur un autre navigateur. En général, l'approche veut qu'on fasse bifurquer le code dans une certaine direction, par exemple utilisez une fonctionnalité de détecton en code Javascript pour détecter les situations où une fonctionnalité ne marche pas, et éxecuter un code différent qui fonctionnera dans ce cas.
+Si c'est de votre faute, vous devez le résoudre ! Trouver la cause d'un bug implique la même stratégie que pour n'importe quel bug de développement web (à nouveau, voir [Debugging HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Debugging CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS), et [What went wrong? Troubleshooting JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong)). Une fois que vous avez découvert ce qui causait le bug, vous devez décider comment est-ce que vous allez travailler sur le navigateur en particulier qui vous pose problèmes — vous ne pouvez pas juste modifier le code du problème, cela risque de casser le code sur un autre navigateur. En général, l'approche veut qu'on fasse bifurquer le code dans une certaine direction, par exemple utilisez une fonctionnalité de détecton en code Javascript pour détecter les situations où une fonctionnalité ne marche pas, et éxecuter un code différent qui fonctionnera dans ce cas.
 
 Lorsque le fix a été créé, vous devrez repéter votre processus de test afin de vous assurer que votre réparation fonctionne bien, et n'a pas causé une faille autre part sur le site ou sur un autre navigateur.
 

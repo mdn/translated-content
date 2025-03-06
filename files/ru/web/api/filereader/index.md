@@ -21,7 +21,7 @@ slug: Web/API/FileReader
 FileReader FileReader();
 ```
 
-Более детально, с примерами см. [использование файлов в веб-приложениях](/ru/Using_files_from_web_applications).
+Более детально, с примерами см. [использование файлов в веб-приложениях](/ru/docs/Web/API/File_API/Using_files_from_web_applications).
 
 ## Свойства
 
@@ -35,7 +35,7 @@ FileReader FileReader();
 ### Обработка событий
 
 - {{domxref("FileReader.onabort")}}
-  - : Обработчик события [`abort`](/ru/docs/Web/Events/abort). Это событие возникает каждый раз, когда прерывается операция чтения.
+  - : Обработчик события [`abort`](/ru/docs/Web/API/HTMLMediaElement/abort_event). Это событие возникает каждый раз, когда прерывается операция чтения.
 - {{domxref("FileReader.onerror")}}
   - : Обработчик события [`error`](/ru/docs/Web/API/HTMLElement/error_event). Это событие возникает каждый раз, когда при чтении возникает ошибка.
 - {{domxref("FileReader.onload")}}
@@ -43,9 +43,9 @@ FileReader FileReader();
 - {{domxref("FileReader.onloadstart")}}
   - : Обработчик события [`loadstart`](/ru/docs/Web/API/XMLHttpRequest/loadstart_event). Это событие возникает каждый раз, при запуске процесса чтения.
 - {{domxref("FileReader.onloadend")}}
-  - : Обработчик события [`loadend`](/ru/docs/Web/Events/loadend). Это событие возникает каждый раз по окончании процесса чтения (не важно, успешном или нет).
+  - : Обработчик события [`loadend`](/ru/docs/Web/API/XMLHttpRequest/loadend_event). Это событие возникает каждый раз по окончании процесса чтения (не важно, успешном или нет).
 - {{domxref("FileReader.onprogress")}}
-  - : Обработчик события [`progress`](/ru/docs/Web/Events/progress). Это событие возникает во время чтения данных из {{domxref("Blob")}}.
+  - : Обработчик события [`progress`](/ru/docs/Web/API/XMLHttpRequest/progress_event). Это событие возникает во время чтения данных из {{domxref("Blob")}}.
 
 > [!NOTE]
 > Т.к. `FileReader` унаследован от {{domxref("EventTarget")}}, на все перечисленные события можно подписаться, используя метод {{domxref("EventTarget.addEventListener()","addEventListener")}}.
@@ -80,7 +80,7 @@ FileReader FileReader();
 ### Примечания по реализации
 
 - Для IE9 есть [File API Lab](http://html5labs.interoperabilitybridges.com/prototypes/fileapi/fileapi/info).
-- Opera предоставляет [частичную поддержку](http://www.opera.com/docs/specs/presto28/file/) в версии 11.1.
+- Opera предоставляет [частичную поддержку](https://www.opera.com/docs/specs/presto28/file/) в версии 11.1.
 
 #### Относительно движка Gecko
 
@@ -89,7 +89,7 @@ FileReader FileReader();
 
 ## Смотрите также
 
-- [Использование файлов в веб-приложениях](/ru/Using_files_from_web_applications)
+- [Использование файлов в веб-приложениях](/ru/docs/Web/API/File_API/Using_files_from_web_applications)
 - {{ domxref("File") }}
 - {{ domxref("Blob") }}
 - [nsIDOMFileReader](/ru/docs/nsIDOMFileReader) - For addons/privileged scope

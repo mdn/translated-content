@@ -11,13 +11,13 @@ l10n:
 
 Les schémas d'encodage en base64 sont principalement utilisés lorsqu'il s'agit d'enregistrer ou d'envoyer des données binaires via un média qui a été conçu pour gérer du texte en ASCII. Cette transformation permet de conserver l'intégrité des données envoyées lors du transport. Base64 est utilisé par plusieurs applications, notamment celles qui gèrent les courriels avec [MIME](https://fr.wikipedia.org/wiki/MIME), et le stockage de données complexes en [XML](/fr/docs/Web/XML).
 
-Sur le Web, on utilise généralement l'encodage base64 pour inclure des données binaires dans [une URL de données `data:`](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
+Sur le Web, on utilise généralement l'encodage base64 pour inclure des données binaires dans [une URL de données `data:`](/fr/docs/Web/URI/Schemes/data).
 
 En JavaScript, il existe deux fonctions utilisées pour encoder et décoder des chaînes en base64&nbsp;:
 
-- [`btoa()`](/fr/docs/Web/API/btoa)
+- [`btoa()`](/fr/docs/Web/API/Window/btoa)
   - : Crée une chaîne ASCII encodée en base64 à partir d'une «&nbsp;chaîne&nbsp;» de données binaires. (<i lang="en">btoa</i> signifie <i lang="en">binary to ASCII</i> en anglais, soit «&nbsp;binaire vers ASCII&nbsp;»)
-- [`atob()`](/fr/docs/Web/API/atob)
+- [`atob()`](/fr/docs/Web/API/Window/atob)
   - : Décode des données encodées en une chaîne de caractères en base64 (<i lang="en">atob</i> signifie <i lang="en">ASCII to binary</i> en anglais, soit «&nbsp;ASCII vers binaire&nbsp;»)
 
 L'algorithme utilisé par `atob()` et `btoa()` est défini dans la section 4 de [la RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648).

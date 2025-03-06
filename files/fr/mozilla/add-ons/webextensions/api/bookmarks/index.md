@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
 
 L'API de la [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} permet à une extension d'interagir et de manipuler le système de Bookmarking du navigateur. Vous pouvez l'utiliser pour enregistrer des marque-pages, récupérer des marque-pages existants et éditer, supprimer ou organiser des marque-pages.
 
-Pour utiliser cette API, une extension doit demander la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) « bookmarks » dans son fichier [`manifest.json`](/fr/Add-ons/WebExtensions/manifest.json).
+Pour utiliser cette API, une extension doit demander la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) « bookmarks » dans son fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
 Les extensions ne peuvent pas créer, modifier ou supprimer des signets dans le nœud racine de l'arborescence de signets. Cela provoquerait une erreur avec le message: _"La racine du signet ne peut pas être modifiée"_
 

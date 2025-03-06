@@ -7,7 +7,23 @@ slug: Web/HTML/Element/a
 
 El _Elemento HTML `Anchor`_ **`<a>`** crea un enlace a otras páginas de internet, archivos o ubicaciones dentro de la misma página, direcciones de correo, o cualquier otra URL.
 
-{{EmbedInteractiveExample("pages/tabbed/a.html")}}The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
+{{InteractiveExample("HTML Demo: &lt;a&gt;")}}
+
+```html interactive-example
+<p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul>
+```
+
+```css interactive-example
+li {
+  margin-bottom: 0.5rem;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -64,7 +80,7 @@ El _Elemento HTML `Anchor`_ **`<a>`** crea un enlace a otras páginas de interne
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
 - `download`
 
@@ -73,14 +89,14 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
     > [!NOTE]
     >
     > - Este atributo sólo funciona para las [políticas de mismo origen (same-origin URLs)](/es/docs/Web/Security/Same-origin_policy).
-    > - Este atributo puede ser utilizado con [`blob:` URLs](/es/docs/Web/API/URL.createObjectURL) y [`data:` URLs](/es/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) para descargar contenido generado por JavaScript, tales como fotografías creadas por una aplicación web de edición de imágenes.
+    > - Este atributo puede ser utilizado con [`blob:` URLs](/es/docs/Web/API/URL/createObjectURL_static) y [`data:` URLs](/es/docs/Web/URI/Schemes/data) para descargar contenido generado por JavaScript, tales como fotografías creadas por una aplicación web de edición de imágenes.
     > - Si el encabezado (_header_) HTTP [`Content-Disposition:`](/es/docs/Web/HTTP/Headers/Content-Disposition) proporciona un nombre de archivo diferente al de este atributo, el encabezado HTTP tiene prioridad sobre este atributo.
     > - Si `Content-Disposition:` está ajustado a `inline`, Firefox prioriza `Content-Disposition`, como en el caso del nombre de archivo, mientras que Chrome prioriza el atributo `download`.
 
 - `href`
 
   - : Contiene una URL o un fragmento de URL al cual apunta el enlace.
-    Un fragmento de URL es un nombre ("name") precedido por el símbolo de número (`#`), el cual especifíca una ubicación interna objetivo (un [ID](/es/docs/HTML/Global_attributes#attr-id) de un elemento HTML) dentro del actual documento. Las URLs no están restringidas sólo a documentos de internet basados en HTTP, sin embargo pueden utilizar cualquier protocolo soportado por el navegador. Por ejemplo, [`file:`](https://en.wikipedia.org/wiki/File_URI_scheme), `ftp:`, and `mailto:` funcionan en la mayoría de los navegadores.
+    Un fragmento de URL es un nombre ("name") precedido por el símbolo de número (`#`), el cual especifíca una ubicación interna objetivo (un [ID](/es/docs/Web/HTML/Global_attributes#attr-id) de un elemento HTML) dentro del actual documento. Las URLs no están restringidas sólo a documentos de internet basados en HTTP, sin embargo pueden utilizar cualquier protocolo soportado por el navegador. Por ejemplo, [`file:`](https://en.wikipedia.org/wiki/File_URI_scheme), `ftp:`, and `mailto:` funcionan en la mayoría de los navegadores.
     Este atributo puede ser omitido (a partir de HTML5) para crear un enlace de marcador de posición. Un enlace de marcador de posición se parece a un enlace tradicional, pero que no dirige a algún lugar.
 
     > [!NOTE]
@@ -99,7 +115,7 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
     - `'unsafe-url'` significa que la referencia (_referrer_) incuirá el origen(`origin`) y la trayectoria (_path_), pero no el fragmento, contraseña o nombre de usuario. Esto es inseguro, ya que puede filtrar datos desde una URL segura hacia URLs inseguras.
 
 - `rel`
-  - : Especifica la relación del objeto de destino con el objeto de enlace. El valor es una lista separada por espacios de tipos de enlace[tipos de enlace (link types)](/es/docs/Web/HTML/Link_types).
+  - : Especifica la relación del objeto de destino con el objeto de enlace. El valor es una lista separada por espacios de tipos de enlace[tipos de enlace (link types)](/es/docs/Web/HTML/Attributes/rel).
 - `target`
 
   - : Especifica en donde desplegar la URL enlazada. Es un nombre (_name of_), o palabra clave (_keyword for_), un contexto de navegación _(browsing context)_: una pestaña, ventana, o `<iframe>`. Las siguientes palabras clave (_keywords_) tienen significado especial:
@@ -119,7 +135,7 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
 - `charset` {{Deprecated_Inline}}
 
-  - : Este atributo define la [codificación de caracteres (character encoding)](/es/docs/Glossary/character_encoding) de la URL enlazada. El valor debe de ser una lista delimitada por espacio y/o coma de caracteres definidos en [RFC 2045](https://tools.ietf.org/html/rfc2045). El valor por defecto es `ISO-8859-1`.
+  - : Este atributo define la [codificación de caracteres (character encoding)](/es/docs/Glossary/Character_encoding) de la URL enlazada. El valor debe de ser una lista delimitada por espacio y/o coma de caracteres definidos en [RFC 2045](https://tools.ietf.org/html/rfc2045). El valor por defecto es `ISO-8859-1`.
 
     > [!NOTE]
     > Este atributo es obsoleto en HTML5 y **no debe ser utilizado por autores**. Para lograr su efecto, se debe utilzar el encabezado HTTP [`Content-Type:`](/es/docs/Web/HTTP/Headers/Content-Type) en la URL enlazada.
@@ -131,7 +147,7 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
   - : Este atributo era requerido para anclas (_anchors_) que definían una posible ubicación dentro de la página. En HTML 4.01, `id` y `name` podían ser utilizados simultáneamente en un elemento `<a>` simpre y cuando tuvieran valores idénticos.
 
     > [!NOTE]
-    > Este atributo es obsoleto en HTML5, se utiliza el [atributo global `id`](/es/docs/HTML/Global_attributes#attr-id) en su lugar.
+    > Este atributo es obsoleto en HTML5, se utiliza el [atributo global `id`](/es/docs/Web/HTML/Global_attributes#attr-id) en su lugar.
 
 - `rev` {{Deprecated_Inline}}
   - : Este atributo especifica un enlace inverso, la relación inversa del atributo **rel**. Fue desechado por ser muy confuso.
@@ -192,7 +208,7 @@ Es común crear enlaces que abren el programa de correo del usuario para permiti
 
 [Envia un correo a: nowhere](mailto:nowhere@mozilla.org)
 
-Para detalles adicionales acerca del esquema de la URL `mailto`, tales como incluir el asunto, el cuerpo u otros contenidos predeterminados, consultar [Enlaces de correo (Email links)](/es/docs/Web/Guide/HTML/Email_links) o {{RFC(6068)}}.
+Para detalles adicionales acerca del esquema de la URL `mailto`, tales como incluir el asunto, el cuerpo u otros contenidos predeterminados, consultar [Enlaces de correo (Email links)](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links) o {{RFC(6068)}}.
 
 ### Creando un enlace a un número de teléfono
 

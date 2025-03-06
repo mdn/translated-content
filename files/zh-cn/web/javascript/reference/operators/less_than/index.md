@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/Less_than
 
 **小于**（`<`）运算符在左操作数比右操作数小时返回 `true`，否则返回 `false`。
 
-{{EmbedInteractiveExample("pages/js/expressions-less-than.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Less than operator")}}
+
+```js interactive-example
+console.log(5 < 3);
+// Expected output: false
+
+console.log(3 < 3);
+// Expected output: false
+
+// Compare bigint to number
+console.log(3n < 5);
+// Expected output: true
+
+console.log("aa" < "ab");
+// Expected output: true
+```
 
 ## 语法
 

@@ -9,7 +9,41 @@ slug: Web/HTML/Element/input/radio
 
 Одновременно пользователь может выбрать лишь одну радиокнопку из предложенных. Радиокнопки обычно отображаются как небольшие кружки, которые заполняются или подсвечиваются, когда выбраны.
 
-{{EmbedInteractiveExample("pages/tabbed/input-radio.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;radio&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<fieldset>
+  <legend>Select a maintenance drone:</legend>
+
+  <div>
+    <input type="radio" id="huey" name="drone" value="huey" checked />
+    <label for="huey">Huey</label>
+  </div>
+
+  <div>
+    <input type="radio" id="dewey" name="drone" value="dewey" />
+    <label for="dewey">Dewey</label>
+  </div>
+
+  <div>
+    <input type="radio" id="louie" name="drone" value="louie" />
+    <label for="louie">Louie</label>
+  </div>
+</fieldset>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 Радиокнопки называются так потому, что выглядят и функционируют в схожей манере с кнопками старомодных радиоприёмников, подобных представленному ниже.
 
@@ -17,12 +51,12 @@ slug: Web/HTML/Element/input/radio
 
 > **Примечание:** [Чекбоксы](/ru/docs/Web/HTML/Element/input/checkbox) похожи на радиокнопки, но с одним важным отличием: радиокнопки предназначены для выбора одного значения из предложенных, в то время как чекбоксы позволяют "включать" и "выключать" значения. Если существует несколько элементов управления, то с помощью радиокнопок пользователь сможет выбрать лишь один из них, а чекбоксы позволят выбрать несколько значений одновременно.
 
-| **[Value](#value)**        | {{domxref("Строка DOM")}} отображающая значение радиокнопки                   |
-| -------------------------- | ----------------------------------------------------------------------------- |
-| **События**                | [`change`](/ru/docs/Web/Events/change) и [`input`](/ru/docs/Web/Events/input) |
-| **Универсальные атрибуты** | [`checked`](/ru/docs/Web/HTML/Element/input#checked)                          |
-| **Атрибуты IDL**           | `checked` и `value`                                                           |
-| **Методы**                 | {{domxref("HTMLInputElement.select", "select()")}}                            |
+| **[Value](#value)**        | {{domxref("Строка DOM")}} отображающая значение радиокнопки                                             |
+| -------------------------- | ------------------------------------------------------------------------------------------------------- |
+| **События**                | [`change`](/ru/docs/Web/API/HTMLElement/change_event) и [`input`](/ru/docs/Web/API/Element/input_event) |
+| **Универсальные атрибуты** | [`checked`](/ru/docs/Web/HTML/Element/input#checked)                                                    |
+| **Атрибуты IDL**           | `checked` и `value`                                                                                     |
+| **Методы**                 | {{domxref("HTMLInputElement.select", "select()")}}                                                      |
 
 ## Атрибут value
 
@@ -94,7 +128,7 @@ HTML будет выглядеть следующим образом:
 <pre id="log"></pre>
 ```
 
-Затем добавим немного [JavaScript](/ru/docs/Web/JavaScript). Установим обработчик события [`submit`](/ru/docs/Web/Events/submit), которая будет отправляться при клике пользователя на кнопку "Отправить":
+Затем добавим немного [JavaScript](/ru/docs/Web/JavaScript). Установим обработчик события [`submit`](/ru/docs/Web/API/HTMLFormElement/submit_event), которая будет отправляться при клике пользователя на кнопку "Отправить":
 
 ```js
 var form = document.querySelector("form");

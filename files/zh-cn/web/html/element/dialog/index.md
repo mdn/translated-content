@@ -191,6 +191,6 @@ favDialog.addEventListener("close", () => {
 
 - {{domxref("HTMLDialogElement/close_event", "close")}} 事件
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}} 事件
-- [HTML 表单指南](/zh-CN/docs/Learn/Forms)
+- [HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{cssxref("::backdrop")}} 伪元素
 - [dialog-polyfill](https://github.com/GoogleChrome/dialog-polyfill)

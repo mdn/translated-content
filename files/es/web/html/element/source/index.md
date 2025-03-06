@@ -3,9 +3,21 @@ title: <source>
 slug: Web/HTML/Element/source
 ---
 
-El **elemento HTML `<source>`** especifica recursos de medios múltiples para los elementos {{HTMLElement("picture")}}, {{HTMLElement("audio")}}, o {{HTMLElement("video")}}. Es un elemento vacío. Normalmente se utiliza para servir el mismo contenido multimedia en [varios formatos soportados por diferentes navegadores](/es/docs/Media_formats_supported_by_the_audio_and_video_elements).
+El **elemento HTML `<source>`** especifica recursos de medios múltiples para los elementos {{HTMLElement("picture")}}, {{HTMLElement("audio")}}, o {{HTMLElement("video")}}. Es un elemento vacío. Normalmente se utiliza para servir el mismo contenido multimedia en [varios formatos soportados por diferentes navegadores](/es/docs/Web/Media/Formats).
 
-{{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video controls width="250" height="200" muted>
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+```
 
 La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, por favor clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples)y envíenos una solicitud de pull.
 
@@ -60,10 +72,10 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
 - `sizes` {{experimental_inline}}
-  - : Es una lista de tamaños del origen que describe el ancho renderizado final de la imagen representada por el origen. Cada tamaño de origen consiste de una lista separada por comas de pares de longitud de condición de medios. Esta información es utilizada por el navegador para determinar, antes de distribuir la página, qué imagen definida en [`srcset`](/es/docs/Web/HTML/Element/source#srcset) se utilizará.
+  - : Es una lista de tamaños del origen que describe el ancho renderizado final de la imagen representada por el origen. Cada tamaño de origen consiste de una lista separada por comas de pares de longitud de condición de medios. Esta información es utilizada por el navegador para determinar, antes de distribuir la página, qué imagen definida en [`srcset`](#srcset) se utilizará.
     El atributo `sizes` tiene un efecto solo cuando el elemento {{HTMLElement("source")}} es hijo directo de un elemento {{HTMLElement("picture")}}.
 - `src`
   - : Es la ubicación del recurso multimedia, requerido por los elementos {{HTMLElement("audio")}} y {{HTMLElement("video")}}. El valor de este atributo es ignorado cuando el elemento `<source>` se coloca dentro de un elemento {{HTMLElement("picture")}}.
@@ -82,13 +94,13 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 - `type`
   - : El tipo MIME del recurso, opcionalmente con un parámetro `codecs`. Consultar [RFC 4281](https://tools.ietf.org/html/rfc4281)para obtener información sobre cómo especificar los códecs.
 - `media` {{experimental_inline}}
-  - : [Consulta multimedia](/es/docs/CSS/Media_queries) de los medios destinados al recurso; esto solo debe usarse en un elemento {{HTMLElement("picture")}}.
+  - : [Consulta multimedia](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries) de los medios destinados al recurso; esto solo debe usarse en un elemento {{HTMLElement("picture")}}.
 
 Si el atributo `type` no se especifica, el tipo de medio se recupera del servidor y se verifica para ver si el agente de usuario puede manejarlo; si no se puede procesar, se comprueba el siguiente `<source>`. Si se especifica el atributo `type`, se compara con los tipos que puede presentar el agente de usuario y, si no se reconoce, el servidor ni siquiera recibe consultas; en su lugar, el siguiente elemento `<source>` se comprueba a la vez.
 
 ## Ejemplos
 
-Este ejemplo muestra cómo ofrecer un video en formato Ogg para usuarios cuyos navegadores admiten el formato Ogg, y un video en formato QuickTime para usuarios cuyos navegadores lo admiten. Si el navegador no admite los elementos `audio` o `video`, se muestra un aviso. Si el navegador admite los elementos pero no admite ninguno de los formatos especificados, se genera un evento `error` y los controles de medios predeterminados (si están habilitados) indicarán un error. Consulte también la lista de [formatos de medios compatibles con los elementos de audio y video](/es/docs/Media_formats_supported_by_the_audio_and_video_elements) en varios navegadores.
+Este ejemplo muestra cómo ofrecer un video en formato Ogg para usuarios cuyos navegadores admiten el formato Ogg, y un video en formato QuickTime para usuarios cuyos navegadores lo admiten. Si el navegador no admite los elementos `audio` o `video`, se muestra un aviso. Si el navegador admite los elementos pero no admite ninguno de los formatos especificados, se genera un evento `error` y los controles de medios predeterminados (si están habilitados) indicarán un error. Consulte también la lista de [formatos de medios compatibles con los elementos de audio y video](/es/docs/Web/Media/Formats) en varios navegadores.
 
 ```html
 <video controls>
@@ -99,7 +111,7 @@ Este ejemplo muestra cómo ofrecer un video en formato Ogg para usuarios cuyos n
 </video>
 ```
 
-Para obtener más ejemplos, consulte [Uso de audio y video en Firefox](/es/docs/Using_HTML5_audio_and_video).
+Para obtener más ejemplos, consulte [Uso de audio y video en Firefox](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content).
 
 ## Especificaciones
 

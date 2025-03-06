@@ -19,7 +19,7 @@ URL は、ファイル転送 ({{Glossary("FTP")}}) や電子メール ({{Glossar
 
 ### この項目について学ぶ
 
-- [URL とは何か](/ja/docs/Learn/Common_questions/What_is_a_URL)
+- [URL とは何か](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 
 ### 仕様書
 

@@ -68,13 +68,13 @@ background-clip: unset;
 
 ### HTML
 
-```html-nolint
+```html-nolint live-sample___examples
 <p class="border-box">背景が境界の裏まで拡張されます。</p>
 <p class="padding-box">
   背景が境界の内側の縁まで拡張されます。
 </p>
 <p class="content-box">
-  背景がコンテンツボックスの縁までだけ表示されます。
+  背景がコンテンツボックスの縁までだしか表示されません。
 </p>
 <p class="text">背景が前景のテキストで切り取られます。</p>
 <p class="border-area">
@@ -84,7 +84,7 @@ background-clip: unset;
 
 ### CSS
 
-```css
+```css live-sample___examples
 p {
   border: 0.8em darkviolet;
   border-style: dotted double;
@@ -118,7 +118,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample('例', 600, 630)}}
+{{EmbedLiveSample('Examples', 600, 630)}}
 
 ## 仕様書
 

@@ -98,7 +98,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 - `Max-Age=<number>` {{optional_inline}}
   - : 在 cookie 过期之前需要经过的秒数。秒数为 0 或负值将会使 cookie 立刻过期。假如同时设置了 `Expires` 和 `Max-Age` 属性，那么 `Max-Age` 的优先级更高。
 - `Partitioned` {{optional_inline}}{{experimental_inline}}
-  - : 表示应使用分区存储来存储 cookie。有关更多详细信息，请参见[具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Partitioned_cookies)。
+  - : 表示应使用分区存储来存储 cookie。有关更多详细信息，请参见[具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)。
 - `Path=<path-value>` {{optional_inline}}
 
   - : 表示浏览器要发送该 `Cookie` 标头时，请求的 URL 中所*必须*存在的路径。

@@ -27,12 +27,9 @@ Cada imagen de fondo se especifica como la palabra clave `none` o como un valor 
 Para especificar varias imágenes de fondo, proporcione varios valores, separados por una coma:
 
 ```css
-background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 0, 0.5),
-    rgba(0, 0, 255, 0.5)
-  ),
-  url("catfront.png");
+background-image:
+  linear-gradient(to bottom, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)),
+  url("cat-front.png");
 
 /* Valores globales */
 background-image: inherit;
@@ -47,7 +44,7 @@ background-image: unset;
 - `none`
   - : Utilizado para especificar que un elemento no debe tener imagen de fondo.
 - `<image>`
-  - : Es un {{cssxref("&lt;image&gt;")}} que indica la imagen que se va a mostrar. Puede haber varios, separados por comas, ya que se admiten [fondos múltiples](/es/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds).
+  - : Es un {{cssxref("&lt;image&gt;")}} que indica la imagen que se va a mostrar. Puede haber varios, separados por comas, ya que se admiten [fondos múltiples](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds).
 
 ## Problemas de accesibilidad
 
@@ -96,7 +93,7 @@ div {
 }
 
 .catsandstars {
-  background-image: url("startransparent.gif"), url("catfront.png");
+  background-image: url("star-transparent.gif"), url("cat-front.png");
   background-color: transparent;
 }
 ```

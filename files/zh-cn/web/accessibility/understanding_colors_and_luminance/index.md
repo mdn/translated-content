@@ -193,7 +193,7 @@ _较大并且笔画较宽的文本在低对比度下更容易阅读。因此，�
 
 红色和绿色的锥体共同产生亮度，我们可以将其视为与色调无关的明度/暗度。分开来看，红色、绿色和蓝色的锥体允许标准视觉感知数百万种颜色。对于无障碍性，了解我们的大脑将亮度与颜色（色调和色彩饱和度）分开处理是很重要的。
 
-亮度提供了精细的视觉细节，包括区分边缘和文本。色调和色彩饱和度携带亮度的三分之一的细节。图像数据压缩利用了这一事实。例如，[h.264 视频编解码器](/zh-CN/docs/Web/Media/Formats/Video_codecs)以四分之一的亮度分辨率对颜色进行采样。
+亮度提供了精细的视觉细节，包括区分边缘和文本。色调和色彩饱和度携带亮度的三分之一的细节。图像数据压缩利用了这一事实。例如，[h.264 视频编解码器](/zh-CN/docs/Web/Media/Guides/Formats/Video_codecs)以四分之一的亮度分辨率对颜色进行采样。
 
 对于无障碍性而言，这意味着亮度对比对文本非常重要。颜色，如色调和色彩饱和度，对于*区分*项目（例如地图上的不同线条或图表中的条形）也很重要。
 
@@ -315,7 +315,7 @@ _不止一个“红色”可以被认为是“饱和”的红色_。例如，颜
 ## 参见
 
 - [无障碍](/zh-CN/docs/Web/Accessibility)
-- [无障碍学习路径](/zh-CN/docs/Learn/Accessibility)
+- [无障碍学习路径](/zh-CN/docs/Learn_web_development/Core/Accessibility)
 - CSS [`color`](/zh-CN/docs/Web/CSS/color) 属性
 - [`<color>`](/zh-CN/docs/Web/CSS/color_value) 数据类型
 - [癫痫和身体反应的 web 无障碍](/zh-CN/docs/Web/Accessibility/Seizure_disorders)

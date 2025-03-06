@@ -2,7 +2,7 @@
 title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
 l10n:
-  sourceCommit: e7fab5265b54dc9faeff7e8cf4972cc171ec856b
+  sourceCommit: 47962c4ebad5a138673422ec63a282ab9a63d454
 ---
 
 {{JSRef}}
@@ -85,12 +85,12 @@ DIGIT = %x30-39            ; 0-9
       ; DIGIT equivalent to DIGIT rule in [RFC5234]
 ```
 
-重要でない{{Glossary("whitespace", "ホワイトスペース")}}は、基本的に任意の場所に置くことができますが、 `JSONNumber` （数値に空白を含んではいけません）や `JSONString` （対応する文字であると解釈されるか、エラーが発生します）の内部では置くことができません。。ホワイトスペースとして有効な文字はタブ文字 ([U+0009](https://symbl.cc/jp/0009/))、キャリッジリターン ([U+000D](https://symbl.cc/jp/000D/))、ラインフィード ([U+000A](https://symbl.cc/jp/000A/))、空白 ([U+0020](https://symbl.cc/jp/0020/)) のみです。
+重要でない{{Glossary("whitespace", "ホワイトスペース")}}は、基本的に任意の場所に置くことができますが、 `JSONNumber` （数値に空白を含んではいけません）や `JSONString` （対応する文字であると解釈されるか、エラーが発生します）の内部では置くことができません。ホワイトスペースとして有効な文字はタブ文字 (U+0009)、キャリッジリターン (U+000D)、ラインフィード (U+000A)、空白 (U+0020) のみです。
 
 ## 静的プロパティ
 
-- `JSON[@@toStringTag]`
-  - : プロパティ [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) の初期値は文字列 `"JSON"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用します。
+- `JSON[Symbol.toStringTag]`
+  - : プロパティ [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) の初期値は文字列 `"JSON"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用します。
 
 ## 静的メソッド
 

@@ -53,4 +53,4 @@ function f(arg) {
 - [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let)
 - [`const`](/ru/docs/Web/JavaScript/Reference/Statements/const)
 - [`var`](/ru/docs/Web/JavaScript/Reference/Statements/var)
-- [Объявления переменных](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Объявления) в [Руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide)
+- [Объявления переменных](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#объявления) в [Руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide)

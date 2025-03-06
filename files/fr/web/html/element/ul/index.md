@@ -7,11 +7,34 @@ slug: Web/HTML/Element/ul
 
 L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre particulier. Il est souvent représenté par une liste à puces.
 
-{{EmbedInteractiveExample("pages/tabbed/ul.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;ul&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<ul>
+  <li>Milk</li>
+  <li>
+    Cheese
+    <ul>
+      <li>Blue cheese</li>
+      <li>Feta</li>
+    </ul>
+  </li>
+</ul>
+```
+
+```css interactive-example
+li {
+  list-style-type: circle;
+}
+
+li li {
+  list-style-type: square;
+}
+```
 
 ## Attributs
 
-À l'instar des différents éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+À l'instar des différents éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ### Attributs dépréciés ou obsolètes
 
@@ -193,6 +216,6 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
 - Les propriétés CSS particulièrement utiles pour mettre en forme l'élément `<ul>` :
 
   - La propriété {{cssxref("list-style")}} qui permet de choisir la façon dont l'indicateur ordinal est affiché,
-  - [Les compteurs CSS](/fr/docs/Web/CSS/Compteurs_CSS), qui permettent de gérer des listes imbriquées complexes,
-  - La propriété {{cssxref("line-height")}} qui permet de simuler l'attribut [`compact`](/fr/docs/Web/HTML/Element/ul#compact) désormais déprécié,
+  - [Les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), qui permettent de gérer des listes imbriquées complexes,
+  - La propriété {{cssxref("line-height")}} qui permet de simuler l'attribut [`compact`](#compact) désormais déprécié,
   - La propriété {{cssxref("margin")}} peut être utilisée pour contrôler l'indentation de la liste.

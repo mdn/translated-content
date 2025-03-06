@@ -21,7 +21,7 @@ Uma string contendo o código fonte do erro.
 
 ### Usando toSource
 
-Chamando método `toSource` de uma instância {{jsxref("Error")}} (incluindo *[NativeErrors](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error#Error_types)*) irá retornar uma string contendo o código fonte do erro. Essa string pode ser avaliada para criar (aproximadamente) um objeto igual. Naturalmente, a string contendo o fonte segue a estrutura do construtor {{jsxref("Error")}}. Por exemplo:
+Chamando método `toSource` de uma instância {{jsxref("Error")}} (incluindo *[NativeErrors](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types)*) irá retornar uma string contendo o código fonte do erro. Essa string pode ser avaliada para criar (aproximadamente) um objeto igual. Naturalmente, a string contendo o fonte segue a estrutura do construtor {{jsxref("Error")}}. Por exemplo:
 
 ```js
 (newname(message ,fileName,lineNumber))

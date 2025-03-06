@@ -5,11 +5,48 @@ slug: Web/HTML/Element/button
 
 {{HTMLSidebar}}
 
-**`<button>`** [HTML](/zh-TW/docs/Web/HTML) 元素是一個由使用者使用滑鼠、鍵盤、手指、語音命令或其他輔助技術啟動的互動元素。一旦啟動，它將執行一個動作，例如提交一個[表單](/zh-TW/docs/Learn/Forms)或打開對話框。
+**`<button>`** [HTML](/zh-TW/docs/Web/HTML) 元素是一個由使用者使用滑鼠、鍵盤、手指、語音命令或其他輔助技術啟動的互動元素。一旦啟動，它將執行一個動作，例如提交一個[表單](/zh-TW/docs/Learn_web_development/Extensions/Forms)或打開對話框。
 
 預設情況下，HTML 按鈕會呈現為與{{Glossary("user agent", "使用者代理")}}所在平台類似的樣式，但你可以使用 [CSS](/zh-TW/docs/Web/CSS) 更改按鈕的外觀。
 
-{{EmbedInteractiveExample("pages/tabbed/button.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;button&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<button class="favorite styled" type="button">Add to favorites</button>
+```
+
+```css interactive-example
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgba(220, 0, 0, 1);
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
+  box-shadow:
+    inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.styled:hover {
+  background-color: rgba(255, 0, 0, 1);
+}
+
+.styled:active {
+  box-shadow:
+    inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+```
 
 ## 屬性
 
@@ -51,7 +88,7 @@ slug: Web/HTML/Element/button
 
 - `formnovalidate`
 
-  - : 如果按鈕是提交按鈕，此布林屬性指定提交表單時不應[驗證](/zh-TW/docs/Learn/Forms/Form_validation)表單。如果指定了此屬性，則它將覆蓋按鈕的表單所有者的 [`novalidate`](/zh-TW/docs/Web/HTML/Element/form#novalidate) 屬性。
+  - : 如果按鈕是提交按鈕，此布林屬性指定提交表單時不應[驗證](/zh-TW/docs/Learn_web_development/Extensions/Forms/Form_validation)表單。如果指定了此屬性，則它將覆蓋按鈕的表單所有者的 [`novalidate`](/zh-TW/docs/Web/HTML/Element/form#novalidate) 屬性。
 
     此屬性也適用於 [`<input type="image">`](/zh-TW/docs/Web/HTML/Element/input/image) 和 [`<input type="submit">`](/zh-TW/docs/Web/HTML/Element/input/submit) 元素。
 
@@ -102,7 +139,7 @@ slug: Web/HTML/Element/button
 
 如果你的按鈕不是用於將表單數據提交到服務器，請務必將其 `type` 屬性設置為 `button`。否則，它們將嘗試提交表單數據並加載（不存在的）響應，可能破壞文件的當前狀態。
 
-雖然 `<button type="button">` 沒有默認行為，但可以編寫事件處理程序以觸發行為。使用[JavaScript](/zh-TW/docs/Learn/JavaScript)可以編寫可編程動作，例如從列表中刪除項目。
+雖然 `<button type="button">` 沒有默認行為，但可以編寫事件處理程序以觸發行為。使用[JavaScript](/zh-TW/docs/Learn_web_development/Core/Scripting)可以編寫可編程動作，例如從列表中刪除項目。
 
 ## 範例
 
@@ -116,7 +153,7 @@ slug: Web/HTML/Element/button
 
 ### 圖標按鈕
 
-僅顯示圖標以表示的按鈕沒有*可訪問名稱*。可訪問名稱提供了輔助技術（例如螢幕閱讀器）在解析文件並生成[無障礙樹](/zh-TW/docs/Learn/Accessibility/What_is_accessibility#無障礙網頁_api)時使用的信息。然後，輔助技術使用無障礙樹來導航和操作頁面內容。
+僅顯示圖標以表示的按鈕沒有*可訪問名稱*。可訪問名稱提供了輔助技術（例如螢幕閱讀器）在解析文件並生成[無障礙樹](/zh-TW/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#無障礙網頁_api)時使用的信息。然後，輔助技術使用無障礙樹來導航和操作頁面內容。
 
 要為圖標按鈕提供可訪問名稱，請在 `<button>` 元素中放置簡要描述按鈕功能的文本。
 

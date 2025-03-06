@@ -7,10 +7,10 @@ slug: Mozilla/Add-ons/WebExtensions/API/theme
 
 Permet aux extensions du navigateur de mettre à jour le thème du navigateur.
 
-Pour utiliser cette API, une extension doit demander la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "theme" dans son fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json).
+Pour utiliser cette API, une extension doit demander la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "theme" dans son fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
 > [!NOTE]
-> Quand on met un thème en arrière plan, on doit déclarer la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) 'theme' et on ne peut pas utiliser la fonction [theme](/fr/Add-ons/WebExtensions/manifest.json/theme) du manifest, puisque ce n'est pas compatible.
+> Quand on met un thème en arrière plan, on doit déclarer la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 'theme' et on ne peut pas utiliser la fonction [theme](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) du manifest, puisque ce n'est pas compatible.
 
 ## Types
 

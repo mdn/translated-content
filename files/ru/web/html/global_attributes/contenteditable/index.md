@@ -28,6 +28,6 @@ slug: Web/HTML/Global_attributes/contenteditable
 
 ## Смотрите также
 
-- [Создание контента для редактирования](/ru/docs/Web/Guide/HTML/Editable_content)
-- Все [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты)
+- [Создание контента для редактирования](/ru/docs/Web/HTML/Global_attributes/contenteditable)
+- Все [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.contentEditable")}} и {{domxref("HTMLElement.isContentEditable")}}

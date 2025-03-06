@@ -15,12 +15,12 @@ Firefox 39 は、米国時間 2015 年 6 月 30 日にリリースされまし�
 
 - [WebIDE で、Wi-Fi 経由で Firefox OS デバイスのデバッグが可能になりました](/ja/docs/Tools/WebIDE/Setting_up_runtimes#Connecting_over_WiFi)
 - [WebIDE で Cordova のプロジェクトをサポートしました](/ja/docs/Tools/WebIDE/Working_with_Cordova_apps_in_WebIDE)
-- [アニメーションビューで早戻し、早送り、特定の時間へのジャンプが可能になりました](/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations#Firefox_39)
-- [3 次ベジェ曲線エディターにプリセットを 31 個搭載しました](/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations#Firefox_39)
-- [インスペクターで要素のドラッグ・アンド・ドロップが可能になりました](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Drag_and_drop)
-- [ウェブコンソールのコマンド履歴が、セッションをまたいで維持されるようになりました](/ja/docs/Tools/Web_Console#Command_history)
-- [コンソールで最後に評価された式の結果を表示する $\_ コマンド](/ja/docs/Tools/Web_Console#Helper_commands)
-- [インライン要素のボックスモデルのハイライト機能を改善](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model#Firefox_39)
+- [アニメーションビューで早戻し、早送り、特定の時間へのジャンプが可能になりました](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#firefox_39)
+- [3 次ベジェ曲線エディターにプリセットを 31 個搭載しました](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#firefox_39)
+- [インスペクターで要素のドラッグ・アンド・ドロップが可能になりました](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#drag_and_drop)
+- [ウェブコンソールのコマンド履歴が、セッションをまたいで維持されるようになりました](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#command_history)
+- [コンソールで最後に評価された式の結果を表示する $\_ コマンド](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#helper_commands)
+- [インライン要素のボックスモデルのハイライト機能を改善](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html#firefox_39)
 
 [Firefox 38 から Firefox 39 の間に解決した開発ツール関連のバグ一覧](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&query_based_on=devtools_resolved_week&chfieldto=2015-03-31&chfield=resolution&query_format=advanced&chfieldfrom=2015-02-22&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&known_name=devtools_resolved_week&list_id=12157026)
 
@@ -52,11 +52,11 @@ Firefox 39 は、米国時間 2015 年 6 月 30 日にリリースされまし�
 
 ### インターフェイス/API/DOM
 
-- 実験的機能である {{domxref("CanvasRenderingContext2D.addHitRegion()")}} メソッドで、`path` オプションをサポートしました。これは [hit region](/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility#Hit_regions) を {{domxref("Path2D")}} オブジェクトに追加できます ([Firefox バグ 1129147](https://bugzil.la/1129147))。
+- 実験的機能である {{domxref("CanvasRenderingContext2D.addHitRegion()")}} メソッドで、`path` オプションをサポートしました。これは [hit region](/ja/docs/Web/API/Canvas_API/Tutorial#hit_regions) を {{domxref("Path2D")}} オブジェクトに追加できます ([Firefox バグ 1129147](https://bugzil.la/1129147))。
 - {{domxref("FormData")}} オブジェクトを操作する新たなメソッドを追加しました ([Firefox バグ 1085283](https://bugzil.la/1085283))。また、Web workers で `FormData` をサポートしました ([Firefox バグ 739173](https://bugzil.la/739173))。
 - 非標準の {{domxref("XMLHttpRequest.sendAsBinary()")}} メソッドを削除しました ([Firefox バグ 853162](https://bugzil.la/853162))。
 - Web Animations の実験的な実装を続けています。{{domxref("AnimationPlayer.startTime")}} が書き込み可能になりました ([Firefox バグ 1073379](https://bugzil.la/1073379))。
-- [Service Worker](/ja/docs/Web/API/ServiceWorker_API) の実験的な実装を進めています。{{domxref("Cache")}} インターフェイスおよび {{domxref("CacheStorage")}} インターフェイスを実装しました ([Firefox バグ 940273](https://bugzil.la/940273))。
+- [Service Worker](/ja/docs/Web/API/Service_Worker_API) の実験的な実装を進めています。{{domxref("Cache")}} インターフェイスおよび {{domxref("CacheStorage")}} インターフェイスを実装しました ([Firefox バグ 940273](https://bugzil.la/940273))。
 - [Fetch API](/ja/docs/Web/API/Fetch_API) の実験的な実装をデフォルトで有効にしました ([Firefox バグ 1133861](https://bugzil.la/1133861))。
 - WebGL2 の実験的な実装を続けています。{{domxref("WebGLSync")}} を実装しました ([Firefox バグ 1048721](https://bugzil.la/1048721))。
 - デスクトップ版 Firefox で {{domxref("MouseEvent.offsetX")}} および {{domxref("MouseEvent.offsetY")}} をサポートしました ([Firefox バグ 69787](https://bugzil.la/69787)。Android 版 Firefox および Firefox OS ではサポートしていません ([Firefox 43](/ja/docs/Mozilla/Firefox/Releases/43) でサポート予定)。
@@ -75,9 +75,9 @@ _変更なし。_
 
 ### その他
 
-- [WOFF2](/ja/docs/Web/Guide/WOFF) フォントのサポートを Release バージョンの Firefox でも、デフォルトで有効にしました (Nightly や Developer Edition に加えて、Beta や Release も有効) ([Firefox バグ 1084026](https://bugzil.la/1084026))。
-- [`-remote`](/ja/docs/Mozilla/Command_Line_Options#-remote_remote_command) コマンドラインオプションを削除しました ([Firefox バグ 1080319](https://bugzil.la/1080319))。
-- 新たに [Unicode 8.0 skin tone emoji](http://www.bbc.co.uk/newsbeat/article/32220611/diverse-thumbs-up-emojis-with-different-skin-tones-finally-here) サポートしました ([Firefox バグ 1153460](https://bugzil.la/1153460))。
+- [WOFF2](/ja/docs/Web/CSS/CSS_fonts/WOFF) フォントのサポートを Release バージョンの Firefox でも、デフォルトで有効にしました (Nightly や Developer Edition に加えて、Beta や Release も有効) ([Firefox バグ 1084026](https://bugzil.la/1084026))。
+- [`-remote`](https://wiki.mozilla.org/Firefox/CommandLineOptions#-remote_remote_command) コマンドラインオプションを削除しました ([Firefox バグ 1080319](https://bugzil.la/1080319))。
+- 新たに [Unicode 8.0 skin tone emoji](https://www.bbc.co.uk/newsbeat/article/32220611/diverse-thumbs-up-emojis-with-different-skin-tones-finally-here) サポートしました ([Firefox バグ 1153460](https://bugzil.la/1153460))。
 
 ## ネットワーク
 

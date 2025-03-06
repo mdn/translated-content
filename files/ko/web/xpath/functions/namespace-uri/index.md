@@ -29,7 +29,7 @@ namespace-uri( [node-set] )
 
 ### 정의
 
-[XPath 1.0 4.1](http://www.w3.org/TR/xpath#function-local-name)
+[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-local-name)
 
 ### Gecko 지원
 

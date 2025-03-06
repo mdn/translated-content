@@ -66,4 +66,4 @@ _没有特有的方法；从父类 {{domxref("AudioNode")}} 继承了方法_。
 
 ## 参见
 
-- [使用 Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

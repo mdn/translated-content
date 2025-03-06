@@ -25,7 +25,7 @@ Firefox 60 は、米国時間 2018 年 5 月 9 日にリリースされました
 
 ### HTML
 
-- `designMode` および `contenteditable` の状況で、ブロックレベルの編集ホストの子であるインライン要素またはテキストノードの内部にキャレットがあるときに Enter キーを押下すると、`<div>` 要素を挿入するようになりました。以前は、`<br>` 要素を挿入していました。アプリで以前の動作を望む場合は、`document.execCommand()` で実現できます。詳しくは [マークアップ生成の違い](/ja/docs/Web/Guide/HTML/Editable_content#differences_in_markup_generation) をご覧ください ([Firefox バグ 1430551](https://bugzil.la/1430551))。
+- `designMode` および `contenteditable` の状況で、ブロックレベルの編集ホストの子であるインライン要素またはテキストノードの内部にキャレットがあるときに Enter キーを押下すると、`<div>` 要素を挿入するようになりました。以前は、`<br>` 要素を挿入していました。アプリで以前の動作を望む場合は、`document.execCommand()` で実現できます。詳しくは [マークアップ生成の違い](/ja/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation) をご覧ください ([Firefox バグ 1430551](https://bugzil.la/1430551))。
 
 ### CSS
 

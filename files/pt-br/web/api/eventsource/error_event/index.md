@@ -5,7 +5,7 @@ slug: Web/API/EventSource/error_event
 
 {{APIRef('WebSockets API')}}
 
-A propriedade **`onerror`** da interface {{domxref("EventSource")}} é um [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) chamado quando um erro ocorre e um evento [`error`](/pt-BR/docs/Web/Events/error) é despachado para o objeto `EventSource`.
+A propriedade **`onerror`** da interface {{domxref("EventSource")}} é um [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) chamado quando um erro ocorre e um evento [`error`](/pt-BR/docs/Web/API/HTMLElement/error_event) é despachado para o objeto `EventSource`.
 
 ## Sintaxe
 

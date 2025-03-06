@@ -7,7 +7,21 @@ slug: Web/HTML/Element/var
 
 **`<var>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於表示數學表達式或編程上下文中的變數名稱。通常使用斜體版本的當前字型呈現，儘管該行為依賴於瀏覽器。
 
-{{EmbedInteractiveExample("pages/tabbed/var.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;var&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where
+  <var>l</var> represents the length, <var>w</var> the width and
+  <var>h</var> the height of the box.
+</p>
+```
+
+```css interactive-example
+var {
+  font-weight: bold;
+}
+```
 
 ## 屬性
 

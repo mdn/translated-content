@@ -9,7 +9,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 
 瀏覽器可能會限制套件本地可儲存的資料數量：
 
-- Chrome 限制套件內用到此 API 資料的上限為 5MB，除非有 [unlimitedStorage](/zh-TW/Add-ons/WebExtensions/manifest.json/permissions#Unlimited_storage) 權限。
+- Chrome 限制套件內用到此 API 資料的上限為 5MB，除非有 [unlimitedStorage](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#unlimited_storage) 權限。
 - 56 版以後的 Firefox 將能要求 unlimitedStorage 權限。目前 Firefox 還沒有限制套件內的資料上限，但這功能會在未來引入：因此，如果可能會儲存大容量的資料，最好要實做 unlimitedStorage 的請求。
 
 如果套件被移除、相關的儲存資料也會一併移除。

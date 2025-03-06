@@ -14,7 +14,7 @@ Cet élément est désormais obsolète et un élément {{HTMLElement("code")}}, 
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Exemples
 

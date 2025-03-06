@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-**`<mrow>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于对子表达式进行分组，子表达式通常包含一个或多个[运算符](/zh-CN/docs/MathML/Element/mo)及其操作数（比如 {{ MathMLElement("mi") }} 和 {{ MathMLElement("mn") }}）。此元素呈现为包含其内容的水平行。
+**`<mrow>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于对子表达式进行分组，子表达式通常包含一个或多个[运算符](/zh-CN/docs/Web/MathML/Element/mo)及其操作数（比如 {{ MathMLElement("mi") }} 和 {{ MathMLElement("mn") }}）。此元素呈现为包含其内容的水平行。
 
 在编写 MathML 表达式时，你应该按照表达式的数学解释中所使用的分组方式，使用 `<mrow>` 对表达式中的元素进行分组。正确的分组有助于表达式的呈现，具体体现在以下几个方面：
 

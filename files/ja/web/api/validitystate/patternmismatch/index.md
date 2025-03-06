@@ -77,4 +77,4 @@ input:invalid {
 
 - [制約検証](/ja/docs/Web/HTML/Constraint_validation)
 - [フォーム: データフォームの検証](/ja/docs/Learn/Forms/Form_validation)
-- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)

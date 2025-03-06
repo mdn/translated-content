@@ -1,5 +1,5 @@
 ---
-title: "::after (:after)"
+title: ::after
 slug: Web/CSS/::after
 ---
 
@@ -22,7 +22,7 @@ a::after {
 {{csssyntax}}
 
 > [!NOTE]
-> В CSS3 появилась запись `::after` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Псевдо-классы) и [псевдоэлементов](/ru/docs/Web/CSS/Pseudo-elements). Браузеры также поддерживают запись `:after`, введённую в CSS2.
+> В CSS3 появилась запись `::after` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Pseudo-classes) и [псевдоэлементов](/ru/docs/Web/CSS/Pseudo-elements). Браузеры также поддерживают запись `:after`, введённую в CSS2.
 
 ## Примеры
 

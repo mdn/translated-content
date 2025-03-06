@@ -6,9 +6,9 @@ slug: Web/CSS/width
 {{CSSRef}}
 
 La propiedad [CSS](/es/docs/Web/CSS) **`width`** establece el ancho de un elemento.
-Por defecto, establece el ancho del [área de contenido](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area),
+Por defecto, establece el ancho del [área de contenido](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area),
 pero si el {{cssxref("box-sizing")}} se establece en `border-box`,
-establece el ancho del [área del borde](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border_area).
+establece el ancho del [área del borde](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area).
 
 {{EmbedInteractiveExample("pages/css/width.html")}}
 
@@ -176,7 +176,7 @@ p.minblue {
 
 ## Véase también
 
-- [El modelo de caja](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [El modelo de caja](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{cssxref("height")}}
 - {{cssxref("box-sizing")}}
 - {{cssxref("min-width")}}, {{cssxref("max-width")}}

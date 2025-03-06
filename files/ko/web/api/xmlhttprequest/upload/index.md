@@ -29,6 +29,6 @@ upload 이벤트에서 다음 이벤트가 트리거되어 업로드를 모니�
 
 ## See also
 
-- [Using XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [FileHandle API](/ko/docs/Web/API/File_Handle_API)
+- [Using XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [FileHandle API](/ko/docs/Web/API/File_and_Directory_Entries_API)
 - [File and Directory Entries API](/ko/docs/Web/API/File_and_Directory_Entries_API)

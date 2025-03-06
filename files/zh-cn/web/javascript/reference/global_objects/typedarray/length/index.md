@@ -9,7 +9,16 @@ l10n:
 
 {{jsxref("TypedArray")}} 实例的 **`length`** 访问器属性返回该类型化数组的长度（以元素为单位）。
 
-{{EmbedInteractiveExample("pages/js/typedarray-length.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.length", "shorter")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+const uint8 = new Uint8Array(buffer, 2);
+
+console.log(uint8.length);
+// Expected output: 6
+```
 
 ## 描述
 

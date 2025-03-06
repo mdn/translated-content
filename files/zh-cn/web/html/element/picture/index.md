@@ -7,7 +7,18 @@ slug: Web/HTML/Element/picture
 
 **HTML `<picture>` 元素**通过包含零或多个 {{HTMLElement("source")}} 元素和一个 {{HTMLElement("img")}} 元素来为不同的显示/设备场景提供图像版本。浏览器会选择最匹配的子 `<source>` 元素，如果没有匹配的，就选择 `<img>` 元素的 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 属性中的 URL。然后，所选图像呈现在\<img>元素占据的空间中。
 
-{{EmbedInteractiveExample("pages/tabbed/picture.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;picture&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<!--Change the browser window width to see the image change.-->
+
+<picture>
+  <source
+    srcset="/shared-assets/images/examples/surfer.jpg"
+    media="(orientation: portrait)" />
+  <img src="/shared-assets/images/examples/painted-hand.jpg" alt="" />
+</picture>
+```
 
 要决定加载哪个 URL，{{Glossary("user agent")}} 检查每个 `<source>` 的 [`srcset`](/zh-CN/docs/Web/HTML/Element/source#srcset)、[`media`](/zh-CN/docs/Web/HTML/Element/source#media) 和 [`type`](/zh-CN/docs/Web/HTML/Element/source#type) 属性，来选择最匹配页面当前布局、显示设备特征等的兼容图像。
 
@@ -22,7 +33,7 @@ slug: Web/HTML/Element/picture
 - 遇到不支持的特定格式时，**提供替代的图像格式**。
 
   > [!NOTE]
-  > 例如，像 [AVIF](/zh-CN/docs/Web/Media/Formats/Image_types#avif_图像) 或 [WEBP](/zh-CN/docs/Web/Media/Formats/Image_types#webp_图像) 这样的新格式具有诸多优点，但可能不受浏览器的支持。可以在[图像文件格式和格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)中找到支持的图像格式的列表。
+  > 例如，像 [AVIF](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#avif_图像) 或 [WEBP](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#webp_图像) 这样的新格式具有诸多优点，但可能不受浏览器的支持。可以在[图像文件格式和格式指南](/zh-CN/docs/Web/Media/Guides/Formats/Image_types)中找到支持的图像格式的列表。
 
 - 通过加载最适合观看者显示的图像来**节省带宽和提高页面加载速度**。
 

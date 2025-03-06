@@ -29,7 +29,7 @@ SVG 中使用了许多数据类型。本文列出了这些数据类型以及它�
     anything ::= Char\*
     ```
 
-    在这里，[Char](http://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char) 表示一个字符，XML 1.0 第 2.2 节中定义了它。
+    在这里，[Char](https://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char) 表示一个字符，XML 1.0 第 2.2 节中定义了它。
 
 ## 时钟值
 
@@ -82,9 +82,9 @@ SVG 中使用了许多数据类型。本文列出了这些数据类型以及它�
 
   - : 基本类型\<color>是一个 CSS2 兼容的规范，针对 sRGB 颜色空间的颜色。\<color> 应用在 SVG 的属性 {{SVGAttr("color")}} 上，也是属性{{SVGAttr("fill")}}、属性{{SVGAttr("stroke")}}、属性{{SVGAttr("stop-color")}}、属性 {{SVGAttr("flood-color")}}和属性{{SVGAttr("lighting-color")}}的定义的组成部分，\<color> 还提供了可选的基于 ICC 的颜色规范。
 
-    SVG 支持所有的定义在 [CSS2 语法和基本数据类型](http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color)中的 \<color> 供选择的语法，而且还支持 [CSS Color Module Level 3](http://www.w3.org/TR/css3-color/) 中的 \<color> 语法（取决于编译器）。
+    SVG 支持所有的定义在 [CSS2 语法和基本数据类型](https://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color)中的 \<color> 供选择的语法，而且还支持 [CSS Color Module Level 3](https://www.w3.org/TR/css3-color/) 中的 \<color> 语法（取决于编译器）。
 
-    一个 \<color> 可以是一个关键词，或者一个数字化的 RGB 规范。除了这些颜色关键词，用户可以利用用户环境中的对象指定对应于颜色的关键词。这些关键词的规范定义可以在[用户对颜色的引用](http://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors)（CSS2 规范第 18.2 节）中找到。
+    一个 \<color> 可以是一个关键词，或者一个数字化的 RGB 规范。除了这些颜色关键词，用户可以利用用户环境中的对象指定对应于颜色的关键词。这些关键词的规范定义可以在[用户对颜色的引用](https://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors)（CSS2 规范第 18.2 节）中找到。
 
     一个 16 进制记号法的 RGB 值的格式是一个“#”后面紧跟着 3 个或者 6 个 16 进制字符。三数字 RGB 记号法（#rgb）可以转换成六数字 RGB 格式（#rrggbb），只需要复制数字，而不是添加 0。举个例子，#fb0 扩展为 #ffbb00。这样确保白色（#ffffff）可以用缩写记法 #fff 指定，去掉任何对显示器的色深的依赖。一个函数记号法的 RGB 值的格式是一个 RGB 开头函数后面跟着一个逗号分隔的三数值数列（可以是三个数字或者三个百分数）后面跟着一个右括号“)”。一个 RGB 开头函数是一个大小写不敏感的字符串“rgb(”，举个例子，“RGB(”或者“rGb(”。为了兼容性，建议使用全小写形式“rgb(”。整型值 255 对应于 100%，也对应于 16 进制计号法中的 F 或 FF：`rgb(255,255,255)` = `rgb(100%,100%,100%)` = `#FFF`。数字值周围允许存在空白字符。所有的 RGB 值都指定在 sRGB 颜色空间里。使用 sRGB 提供了一个清楚的、客观的、可测量的颜色定义，可以关联到国际标准。
 
@@ -96,18 +96,18 @@ SVG 中使用了许多数据类型。本文列出了这些数据类型以及它�
     hexdigit ::= [0-9A-Fa-f]
     ```
 
-    在这里，color-keyword 要于匹配列于 [CSS Color Module Level 3](http://www.w3.org/TR/css3-color/) 中的颜色关键词（大小写不敏感）中的一个，要么匹配列于[对颜色的用户参考](http://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors)中的一个。SVG DOM 对 \<color> 的定义，CSS 中也做了同样的定义。SVG 对颜色的扩展，包括指定基于 ICC 的颜色的能力，可以使用 DOM 接口{{domxref("SVGColor")}}来表现。
+    在这里，color-keyword 要于匹配列于 [CSS Color Module Level 3](https://www.w3.org/TR/css3-color/) 中的颜色关键词（大小写不敏感）中的一个，要么匹配列于[对颜色的用户参考](https://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors)中的一个。SVG DOM 对 \<color> 的定义，CSS 中也做了同样的定义。SVG 对颜色的扩展，包括指定基于 ICC 的颜色的能力，可以使用 DOM 接口{{domxref("SVGColor")}}来表现。
 
 ## 坐标
 
 - \<coordinate>
-  - : 一个\<coordinate> 是一个用户坐标系统中的长度，是从用户坐标系统的原点沿着相关轴走出给定的距离（X 轴针对 X 坐标，Y 轴针对 Y 坐标）。它的句法与[\<length>](/zh-CN/docs/SVG/Content_type#length)相同。在 SVG DOM 内部，一个 \<coordinate> 代表了一个{{domxref("SVGLength")}} 或者一个{{domxref("SVGAnimatedLength")}}.
+  - : 一个\<coordinate> 是一个用户坐标系统中的长度，是从用户坐标系统的原点沿着相关轴走出给定的距离（X 轴针对 X 坐标，Y 轴针对 Y 坐标）。它的句法与[\<length>](/zh-CN/docs/Web/SVG#length)相同。在 SVG DOM 内部，一个 \<coordinate> 代表了一个{{domxref("SVGLength")}} 或者一个{{domxref("SVGAnimatedLength")}}.
 
 ## 频率
 
 - \<frequency>
 
-  - : 频率值用在可听到的属性上。就如 CSS2 中所定义的，一个频率值是一个 [\<number>](/zh-CN/docs/SVG/Content_type#Number) 后面跟着一个频率单位标识符。频率单位标识符可以是：
+  - : 频率值用在可听到的属性上。就如 CSS2 中所定义的，一个频率值是一个 [\<number>](/zh-CN/docs/Web/SVG#number) 后面跟着一个频率单位标识符。频率单位标识符可以是：
 
     - `Hz`：赫兹
     - `kHz`：千赫
@@ -258,12 +258,12 @@ SVG 中使用了许多数据类型。本文列出了这些数据类型以及它�
 ## 不透明度值
 
 - \<opacity-value>
-  - : 颜色不透明度或者当前对象填充的内容的不透明度，它是一个[\<number>](/zh-CN/docs/SVG/Content_type#Number)。任何超出 0.0 到 1.0 范围的值将被压制回这个范围。0.0 表示完全透明，1.0 表示完全不透明。
+  - : 颜色不透明度或者当前对象填充的内容的不透明度，它是一个[\<number>](/zh-CN/docs/Web/SVG#number)。任何超出 0.0 到 1.0 范围的值将被压制回这个范围。0.0 表示完全透明，1.0 表示完全不透明。
 
 ## 涂色
 
 - \<paint>
-  - : {{SVGAttr("fill")}} 属性和 {{SVGAttr("stroke")}} 属性的值，是涂色类型的规范，用在要对一个给定元素填充或描边的时候。SVG 规范的 [Specifying paint](http://www.w3.org/TR/SVG/painting.html#SpecifyingPaint) 章节中描述了\<paint>可用的选项以及句法。在 SVG DOM 内部，\<paint> 值用 {{domxref("SVGPaint")}} 对象表达。
+  - : {{SVGAttr("fill")}} 属性和 {{SVGAttr("stroke")}} 属性的值，是涂色类型的规范，用在要对一个给定元素填充或描边的时候。SVG 规范的 [Specifying paint](https://www.w3.org/TR/SVG/painting.html#SpecifyingPaint) 章节中描述了\<paint>可用的选项以及句法。在 SVG DOM 内部，\<paint> 值用 {{domxref("SVGPaint")}} 对象表达。
 
 ## 百分数
 

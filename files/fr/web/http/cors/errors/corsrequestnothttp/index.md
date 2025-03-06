@@ -36,7 +36,7 @@ Toutefois, cela a eu des conséquences en termes de sécurité (voir ce bulletin
 De nombreux navigateurs, comme Firefox et Chrome, considèrent désormais que les fichiers locaux ont, par défaut, _des origines opaques_.
 Par conséquent, le chargement d'un fichier local utilisant des ressources locales entraînera désormais des erreurs CORS.
 
-Les développeuses et développeurs qui doivent réaliser des tests en local doivent désormais [mettre en place un serveur local](/fr/docs/Learn/Common_questions/set_up_a_local_testing_server).
+Les développeuses et développeurs qui doivent réaliser des tests en local doivent désormais [mettre en place un serveur local](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
 
 De cette façon, l'ensemble des fichiers est servi depuis le même domaine (`localhost`) et avec le même schéma&nbsp;: ils ont la même origine et ne déclenchent plus d'erreurs liées à la multiplicité des origines.
 
@@ -47,4 +47,4 @@ De cette façon, l'ensemble des fichiers est servi depuis le même domaine (`loc
 
 - [Les erreurs relatives au CORS](/fr/docs/Web/HTTP/CORS/Errors)
 - [Introduction au CORS](/fr/docs/Web/HTTP/CORS)
-- [Qu'est-ce qu'une URL&nbsp;?](/fr/docs/Learn/Common_questions/What_is_a_URL)
+- [Qu'est-ce qu'une URL&nbsp;?](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)

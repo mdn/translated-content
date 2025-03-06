@@ -1,5 +1,5 @@
 ---
-title: "-moz-appearance (-webkit-appearance)"
+title: -moz-appearance (-webkit-appearance)
 slug: Web/CSS/appearance
 ---
 
@@ -168,5 +168,5 @@ La propiedad `appearance` no se encuentra actualmente presente en ninguna nueva 
 
 ## Ver también
 
-- [Definición de `appearance` en CSS 3 Interfaz Básico de Usuario](http://www.w3.org/TR/2004/CR-css3-ui-20040511/#appearance) (Candidata a Recomendación desde 2004-05-11), desactualizada (La propiedad `appearance` se ha abandonado en las nuevas versiones de esta especificación.)
-- [Características CSS3 abandonadas en la UI especificación.](http://wiki.csswg.org/spec/css4-ui#dropped-css3-features)
+- [Definición de `appearance` en CSS 3 Interfaz Básico de Usuario](https://www.w3.org/TR/2004/CR-css3-ui-20040511/#appearance) (Candidata a Recomendación desde 2004-05-11), desactualizada (La propiedad `appearance` se ha abandonado en las nuevas versiones de esta especificación.)
+- [Características CSS3 abandonadas en la UI especificación.](https://wiki.csswg.org/spec/css4-ui#dropped-css3-features)

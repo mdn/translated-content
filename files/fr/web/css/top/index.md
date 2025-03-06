@@ -143,4 +143,4 @@ p.absolu {
 - {{cssxref("height")}}
 - {{cssxref("left")}}
 - {{cssxref("right")}}
-- [Les bases de CSS : la disposition et le positionnement](/fr/Apprendre/CSS/Les_bases/La_disposition#Le_positionnement)
+- [Les bases de CSS : la disposition et le positionnement](/fr/docs/Learn/CSS/CSS_layout/Introduction#le_positionnement)

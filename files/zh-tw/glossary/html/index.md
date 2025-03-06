@@ -33,7 +33,7 @@ HTML 文件的副檔名通常存為 `.htm` 或是 `.html`。它們會放在{{Glo
 
 ### 學習 HTML
 
-- [我們的 HTML 教學](/zh-TW/docs/Learn/HTML)
+- [我們的 HTML 教學](/zh-TW/docs/Learn_web_development/Core/Structuring_content)
 - [codecademy.com 的網路課程](https://www.codecademy.com/en/tracks/web)
 
 ### 技術參考

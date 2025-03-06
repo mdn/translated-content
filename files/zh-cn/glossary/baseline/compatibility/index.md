@@ -41,7 +41,7 @@ l10n:
 
 ## 参见
 
-- [跨浏览器测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)
+- [跨浏览器测试](/zh-CN/docs/Learn_web_development/Extensions/Testing)
 - [web-platform-dx/web-features 仓库](https://github.com/web-platform-dx/web-features)
 - [W3C WebDX 社区小组](https://www.w3.org/community/webdx/)
 - [mdn/browser-compat-data 仓库](https://github.com/mdn/browser-compat-data)

@@ -71,11 +71,11 @@ slug: Web/Accessibility/ARIA/Roles/link_role
 
 ### 注
 
-リンクを押すとアクションがトリガーされますが、ブラウザーのフォーカスは変更されず、新しいページに移動することもありません。 `link` ロールの代わりに [`button`](http://www.w3.org/TR/wai-aria/#button) ロールを使用することを検討してください。
+リンクを押すとアクションがトリガーされますが、ブラウザーのフォーカスは変更されず、新しいページに移動することもありません。 `link` ロールの代わりに [`button`](https://www.w3.org/TR/wai-aria/#button) ロールを使用することを検討してください。
 
 ### 使用された ARIA 属性
 
-- [link](http://www.w3.org/TR/wai-aria/#link)
+- [link](https://www.w3.org/TR/wai-aria/#link)
 
 ### 関連する ARIA 技術
 

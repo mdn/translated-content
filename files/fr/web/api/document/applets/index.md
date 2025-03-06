@@ -22,4 +22,4 @@ my_java_app = document.applets[1];
 
 ### Spécification
 
-[DOM Level 2 HTML: applets](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-85113862)
+[DOM Level 2 HTML: applets](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-85113862)

@@ -12,7 +12,7 @@ SPA 能讓用戶在使用網站時，不用從伺服器載入整個頁面，所�
 ## 參見
 
 - 維基百科上的[單頁應用程式](https://zh.wikipedia.org/wiki/单页应用)
-- [了解客戶端 JavaScript 框架](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
+- [了解客戶端 JavaScript 框架](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries)
 - [術語表](/zh-TW/docs/Glossary)
 
   - {{Glossary("API")}}

@@ -10,7 +10,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
 > [!WARNING]
 > Si votre extension tente de mettre à jour un signet dans le nœud racine de l'arborescence de signets, l'appel déclenche une erreur avec le message suivant: "La racine du signet ne peut pas être modifiée" et le signet ne sera pas mis à jour.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -36,7 +36,7 @@ var updating = browser.bookmarks.update(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera satisfaite avec un seul objet [`bookmarks.BookmarkTreeNode`](/fr/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) représentant le signet mis à jour. Si l'élément de signet correspondant au paramètre `id` ne peut pas être trouvé, la promesse est rejetée.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera satisfaite avec un seul objet [`bookmarks.BookmarkTreeNode`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) représentant le signet mis à jour. Si l'élément de signet correspondant au paramètre `id` ne peut pas être trouvé, la promesse est rejetée.
 
 ## Exemples
 

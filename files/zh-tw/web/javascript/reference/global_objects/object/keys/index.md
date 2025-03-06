@@ -137,7 +137,7 @@ if (!Object.keys) {
 
 ## 參見
 
-- [Enumerability and ownership of properties](/zh-TW/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/zh-TW/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}

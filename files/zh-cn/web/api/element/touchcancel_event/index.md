@@ -60,4 +60,4 @@ _此接口从其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承
 
 ## 参见
 
-- 以 [`Document`](/zh-CN/docs/Web/API/Document) 为目标的相同事件：[`touchcancel`](/zh-CN/docs/Web/API/Document/touchcancel_event)
+- 以 [`Document`](/zh-CN/docs/Web/API/Document) 为目标的相同事件：[`touchcancel`](/zh-CN/docs/Web/API/Element/touchcancel_event)

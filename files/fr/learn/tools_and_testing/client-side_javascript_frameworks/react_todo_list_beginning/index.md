@@ -194,7 +194,7 @@ Après avoir rafraîchi la page dans votre navigateur, vous pourrez voir quelque
 
 C'est plutôt laid et cela ne fonctionne pas encore, mais ce n'est pas grave&nbsp;: nous allons ajouter la mise en forme dans un instant. Tout d'abord, revoyons le JSX utilisé plus tôt et comment il correspond à nos scénarios d'utilisation&nbsp;:
 
-- Nous avons un élément [`<form>`](/fr/docs/Web/HTML/Element/Form), avec un élément [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text) qui permet d'écrire une nouvelle tâche, ainsi qu'un bouton pour soumettre le formulaire.
+- Nous avons un élément [`<form>`](/fr/docs/Web/HTML/Element/form), avec un élément [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text) qui permet d'écrire une nouvelle tâche, ainsi qu'un bouton pour soumettre le formulaire.
 - Nous avons une série de boutons qui seront utilisés pour filtrer nos tâches.
 - Nous avons également un titre qui nous indique le nombre de tâches restantes.
 - Nos trois tâches sont présentées sous forme de liste non-ordonnée. Chaque tâche est un élément de liste ([`<li>`](/fr/docs/Web/HTML/Element/li)), et dispose de boutons pour la modifier et la supprimer, ainsi qu'une case à cocher pour la marquer comme terminée.

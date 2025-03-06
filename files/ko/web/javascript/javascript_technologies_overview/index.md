@@ -15,7 +15,7 @@ l10n:
 
 ## 핵심 언어, JavaScript(ECMAScript)
 
-JavaScript의 핵심 언어는 ECMA TC39 위원회가 [ECMAScript](/ko/docs/Web/JavaScript/Language_Resources)라는 언어로 표준화했습니다. "ECMAScript"는 언어 표준을 나타내는 용어이지만, "ECMAScript"와 "JavaScript"는 같은 의미로 사용할 수 있습니다.
+JavaScript의 핵심 언어는 ECMA TC39 위원회가 [ECMAScript](/ko/docs/Web/JavaScript/JavaScript_technologies_overview)라는 언어로 표준화했습니다. "ECMAScript"는 언어 표준을 나타내는 용어이지만, "ECMAScript"와 "JavaScript"는 같은 의미로 사용할 수 있습니다.
 
 핵심 언어는 [Node.js](https://nodejs.org) 등 비브라우저 환경에서도 사용됩니다.
 
@@ -72,7 +72,7 @@ DOM(Document Object Model)은 HTML, XHTML, XML 문서의 객체를 나타내고 
 
 - 문서 구조, 트리 모델, [DOM core](https://dom.spec.whatwg.org/)의 DOM Event Architecture: [`Node`](/ko/docs/Web/API/Node), [`Element`](/ko/docs/Web/API/Element), [`DocumentFragment`](/ko/docs/Web/API/DocumentFragment), [`Document`](/ko/docs/Web/API/Document), [`DOMImplementation`](/ko/docs/Web/API/DOMImplementation), [`Event`](/ko/docs/Web/API/Event), [`EventTarget`](/ko/docs/Web/API/EventTarget), …
 - 덜 엄격한 DOM Event Architecture 정의, [DOM events](https://w3c.github.io/uievents/)에 속하는 특정 이벤트.
-- [DOM Traversal](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html), [DOM Range](https://dom.spec.whatwg.org/#ranges) 등
+- [DOM Traversal](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html), [DOM Range](https://dom.spec.whatwg.org/#ranges) 등
 
 ECMAScript의 관점에서, DOM 명세에 정의된 객체는 "호스트 객체"라고 부릅니다.
 
@@ -86,7 +86,7 @@ HTML 명세는 문서의 제약도 정의합니다. 예를 들어, 순서가 없
 
 ## 알아둘만한 다른 API
 
-- [`setTimeout`](/ko/docs/Web/API/setTimeout) 과 [`setInterval`](/ko/docs/Web/API/setInterval) 함수는 HTML 표준의 [`Window`](/ko/docs/Web/API/Window) 인터페이스에 처음으로 정의되었습니다.
+- [`setTimeout`](/ko/docs/Web/API/Window/setTimeout) 과 [`setInterval`](/ko/docs/Web/API/Window/setInterval) 함수는 HTML 표준의 [`Window`](/ko/docs/Web/API/Window) 인터페이스에 처음으로 정의되었습니다.
 - [XMLHttpRequest](https://xhr.spec.whatwg.org/)는 비동기적 HTTP 요청을 보낼 수 있게 해주는 API입니다.
 - [Fetch API](https://fetch.spec.whatwg.org/)는 네트워크 요청에 대해 보다 인체공학적인 추상화를 제공합니다.
 - [CSS Object Model](https://drafts.csswg.org/cssom/)는 CSS 규칙을 객체처럼 다룰 수 있도록 추상화합니다.
@@ -95,7 +95,7 @@ HTML 명세는 문서의 제약도 정의합니다. 예를 들어, 순서가 없
 - [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext)는 [`<canvas>`](/ko/docs/Web/HTML/Element/canvas) 요소에 그릴 수 있게 해주는 API입니다.
 - [WebAssembly 인터페이스](https://webassembly.github.io/spec/js-api)는 JavaScript 코드와 [WebAssembly](/ko/docs/WebAssembly) 모듈 간의 통신을 위한 기능을 제공합니다.
 
-비 브라우저 환경(예: Node.js)에는 DOM API가 없는 경우가 많은데, 문서와 상호 작용하지 않기 때문입니다. [`fetch()`](/ko/docs/Web/API/fetch) 및 [`setTimeout()`](/ko/docs/Web/API/setTimeout)과 같은 많은 웹 API를 구현합니다.
+비 브라우저 환경(예: Node.js)에는 DOM API가 없는 경우가 많은데, 문서와 상호 작용하지 않기 때문입니다. [`fetch()`](/ko/docs/Web/API/Window/fetch) 및 [`setTimeout()`](/ko/docs/Web/API/Window/setTimeout)과 같은 많은 웹 API를 구현합니다.
 
 ## JavaScript 구현체
 

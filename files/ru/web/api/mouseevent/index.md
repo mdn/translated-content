@@ -5,7 +5,7 @@ slug: Web/API/MouseEvent
 
 {{APIRef("UI Events")}}
 
-Интерфейс **`MouseEvent`** представляет собой событие, которое происходит в результате взаимодействия пользователя с манипулятором ( например, мышью). Наиболее частые из таких событий: [`click`](/ru/docs/Web/Events/click), [`dblclick`](/ru/docs/Web/Events/dblclick), [`mouseup`](/ru/docs/Web/Events/mouseup), [`mousedown`](/ru/docs/Web/API/Element/mousedown_event).
+Интерфейс **`MouseEvent`** представляет собой событие, которое происходит в результате взаимодействия пользователя с манипулятором ( например, мышью). Наиболее частые из таких событий: [`click`](/ru/docs/Web/API/Element/click_event), [`dblclick`](/ru/docs/Web/API/Element/dblclick_event), [`mouseup`](/ru/docs/Web/API/Element/mouseup_event), [`mousedown`](/ru/docs/Web/API/Element/mousedown_event).
 
 `MouseEvent` выводится из метода {{domxref("UIEvent")}}, который в свою очередь происходит из метода {{domxref("Event")}}. Метод {{domxref("MouseEvent.initMouseEvent()")}} допустимо использовать для лучшей совместимости с предыдущими версиями, однако, для создания `MouseEvent` рекомендуется использовать конструктор метода {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}.
 
@@ -53,9 +53,9 @@ _Данный интерфейс наследует свойства от род
     &#x20;была нажата во время движения мыши.
 
 - {{domxref("MouseEvent.movementX")}} {{readonlyinline}}
-  - : Отображает X координат указателя мыши относительно позиции последнего [`mousemove`](/ru/docs/Web/Events/mousemove) события.
+  - : Отображает X координат указателя мыши относительно позиции последнего [`mousemove`](/ru/docs/Web/API/Element/mousemove_event) события.
 - {{domxref("MouseEvent.movementY")}} {{readonlyinline}}
-  - : Отображает Y координат указателя мыши относительно позиции последнего [`mousemove`](/ru/docs/Web/Events/mousemove) события.
+  - : Отображает Y координат указателя мыши относительно позиции последнего [`mousemove`](/ru/docs/Web/API/Element/mousemove_event) события.
 - {{domxref("MouseEvent.offsetX")}} {{readonlyinline}}{{experimental_inline}}
   - : Отображает X координат указателя мыши относительно позиции границы отступа целевого узла.
 - {{domxref("MouseEvent.offsetY")}} {{readonlyinline}}{{experimental_inline}}

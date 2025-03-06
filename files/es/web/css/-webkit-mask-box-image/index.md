@@ -1,5 +1,5 @@
 ---
-title: "-webkit-mask-box-image"
+title: -webkit-mask-box-image
 slug: Web/CSS/-webkit-mask-box-image
 ---
 
@@ -13,7 +13,7 @@ slug: Web/CSS/-webkit-mask-box-image
 
 - [Valor inicial](/es/docs/Web/CSS/initial_value): none
 - Se aplica a : Todos los elementos
-- [Heredable](/es/docs/Web/CSS/inheritance): no
+- [Heredable](/es/docs/Web/CSS/Inheritance): no
 - Media: {{cssxref("Media/Visual", "visual")}}
 - [Valor calculado](/es/docs/Web/CSS/computed_value): tal y como se especfica
 

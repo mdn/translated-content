@@ -36,7 +36,7 @@ font-language-override: unset;
 - `normal`
   - : 指示浏览器使用适合 `lang` 属性指定的语言的字体字形。这是默认值。
 - {{cssxref("string")}}
-  - : 指示浏览器使用适合该字符串指定的语言的字体字形。该字符串必须与 [OpenType 语言系统](http://www.microsoft.com/typography/otspec/languagetags.htm)中的语言标签相匹配。例如，"ENG "是英语，"KOR "是韩语。
+  - : 指示浏览器使用适合该字符串指定的语言的字体字形。该字符串必须与 [OpenType 语言系统](https://www.microsoft.com/typography/otspec/languagetags.htm)中的语言标签相匹配。例如，"ENG "是英语，"KOR "是韩语。
 
 ### 正式语法
 

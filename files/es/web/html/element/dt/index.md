@@ -9,7 +9,38 @@ El **elemento HTML `<dt>`** especifica un término en una descripción o lista d
 
 El subsecuente elemento {{HTMLElement("dd")}} (**Detalles de la descripción**) provee la definición u otro texto relacionado asociado con el término especificado utilizando `<dt>`.
 
-{{EmbedInteractiveExample("pages/tabbed/dt.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;dt&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Please use the following paint colors for the new house:</p>
+
+<dl>
+  <dt>Denim (semigloss finish)</dt>
+  <dd>Ceiling</dd>
+
+  <dt>Denim (eggshell finish)</dt>
+  <dt>Evening Sky (eggshell finish)</dt>
+  <dd>Layered on the walls</dd>
+</dl>
+```
+
+```css interactive-example
+p,
+dl {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+dl > dt {
+  font-weight: normal;
+  font-style: oblique;
+}
+
+dd {
+  margin-bottom: 1rem;
+}
+```
 
 La fuente para este ejemplo interactivo se encuetra almacenado en un repositorio GitHub. Si desea contribuir al proyecto de ejemplos interactivos, por favor clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples)y envíe una petición de extración (pull request).
 
@@ -70,11 +101,11 @@ La fuente para este ejemplo interactivo se encuetra almacenado en un repositorio
 
 ## Atributos
 
-Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
+Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
 ## Ejemplo
 
-Para ver un ejemplo, vea el [proveído por el elemento `<dl>`](/es/docs/Web/HTML/Elemento/dl#Examples).
+Para ver un ejemplo, vea el [proveído por el elemento `<dl>`](/es/docs/Web/HTML/Element/dl#examples).
 
 ## Especificaciones
 

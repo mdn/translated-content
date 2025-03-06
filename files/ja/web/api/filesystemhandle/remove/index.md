@@ -87,5 +87,5 @@ async function deleteFile(e) {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_Access_API)
+- [File System Access API](/ja/docs/Web/API/File_System_API)
 - [FileSystemHandle.remove() demo](https://filesystemhandle-remove.glitch.me/)

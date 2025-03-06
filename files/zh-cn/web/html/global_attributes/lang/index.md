@@ -5,9 +5,31 @@ slug: Web/HTML/Global_attributes/lang
 
 {{HTMLSidebar("Global_attributes")}}
 
-**lang** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 参与了元素语言的定义。这个语言是不可编辑元素写入的语言，或者可编辑元素应该写入的语言。标签包含单个条目，值的格式由 [_用于定义语言的标签 (BCP47)_](http://www.ietf.org/rfc/bcp/bcp47.txt) IETF 文档定义。如果标签的内容是空字符串，语言就设为*未知*。如果标签内容是无效的，根据 BCP47，它就设为*无效*。
+**lang** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 参与了元素语言的定义。这个语言是不可编辑元素写入的语言，或者可编辑元素应该写入的语言。标签包含单个条目，值的格式由 [_用于定义语言的标签 (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt) IETF 文档定义。如果标签的内容是空字符串，语言就设为*未知*。如果标签内容是无效的，根据 BCP47，它就设为*无效*。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-lang.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: lang", "tabbed-shorter")}}
+
+```html interactive-example
+<p>This paragraph is English, but the language is not specifically defined.</p>
+
+<p lang="en-GB">This paragraph is defined as British English.</p>
+
+<p lang="fr">Ce paragraphe est défini en français.</p>
+```
+
+```css interactive-example
+p::before {
+  padding-right: 5px;
+}
+
+[lang="en-GB"]::before {
+  content: "(In British English) ";
+}
+
+[lang="fr"]::before {
+  content: "(In French) ";
+}
+```
 
 > [!NOTE]
 > 语言标签语法完整的 BCP47 语法足以标记极其特定的语言方言，但大多数用法都要简单得多。语言标记由连字符分隔的语言子标签组成，其中每个子标签指示该语言的特定属性。3 个最常见的子标签是：

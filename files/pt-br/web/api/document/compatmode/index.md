@@ -36,4 +36,4 @@ if (document.compatMode == "BackCompat") {
 
 ## Especificações
 
-- [DOM: Document.compatMode](http://dom.spec.whatwg.org/#dom-document-compatmode)
+- [DOM: Document.compatMode](https://dom.spec.whatwg.org/#dom-document-compatmode)

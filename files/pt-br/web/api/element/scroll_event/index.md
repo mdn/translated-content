@@ -22,7 +22,7 @@ target.onscroll = functionRef;
 
 `functionRef` é o nome de uma função ou uma [expressão de função](/pt-BR/docs/Web/JavaScript/Reference/Operators/function). A função recebe um {{domxref("UIEvent")}} objeto com um único argumento.
 
-Apenas um manipulador `onscroll` pode ser associado à um objeto por vez. Para uma maior flexibilidade, você pode passar um [`scroll`](/pt-BR/docs/Web/Events/scroll) evento para o {{domxref("EventTarget.addEventListener()")}} metódo ao invés disso.
+Apenas um manipulador `onscroll` pode ser associado à um objeto por vez. Para uma maior flexibilidade, você pode passar um [`scroll`](/pt-BR/docs/Web/API/Document/scroll_event) evento para o {{domxref("EventTarget.addEventListener()")}} metódo ao invés disso.
 
 ## Exemplo
 

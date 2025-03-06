@@ -7,7 +7,28 @@ slug: Web/HTML/Element/br
 
 **HTML-элемент `<br>`** устанавливает перевод строки в тексте (возврат каретки). Он полезен при написании поэмы или адреса, где важно деление на строки.
 
-{{EmbedInteractiveExample("pages/tabbed/br.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;br&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>
+  O’er all the hilltops<br />
+  Is quiet now,<br />
+  In all the treetops<br />
+  Hearest thou<br />
+  Hardly a breath;<br />
+  The birds are asleep in the trees:<br />
+  Wait, soon like these<br />
+  Thou too shalt rest.
+</p>
+```
+
+```css interactive-example
+p {
+  font-size: 1rem;
+  font-family: sans-serif;
+  margin: 20px;
+}
+```
 
 Как мы видим из примера выше, элемент `<br>` поставлен в том месте, где мы хотим перенести строку. Текст после `<br>` начинается со следующей строки текстового блока.
 
@@ -16,7 +37,7 @@ slug: Web/HTML/Element/br
 
 ## Атрибуты
 
-Этот элемент включает в себя [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
+Этот элемент включает в себя [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 ### Устаревшие атрибуты
 
@@ -54,10 +75,10 @@ USA<br />
 
 ## Техническая сводка
 
-- _[Категории контента](/ru/docs/Web/Guide/HTML/Content_categories)_ [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [текстовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).
+- _[Категории контента](/ru/docs/Web/HTML/Content_categories)_ [Основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток), [текстовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content).
 - _Разрешённое содержимое_ Отсутствует, это {{Glossary("пустой элемент")}}.
 - *Пропуск тегов*Должен иметь открывающий тег, но не закрывающий тег. В XHTML документах элемент пишется как `<br />`.
-- _Допустимые родительские элементы_ Любой элемент, который поддерживает [текстовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).
+- _Допустимые родительские элементы_ Любой элемент, который поддерживает [текстовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content).
 - _Интерфейс DOM_ {{domxref("HTMLBRElement")}}
 
 ## Спецификации

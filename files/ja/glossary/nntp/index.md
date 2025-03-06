@@ -15,4 +15,4 @@ slug: Glossary/NNTP
 
 ### 技術リファレンス
 
-- IETF より: [RFC 3977 about NNTP](http://tools.ietf.org/html/rfc3977) (2006)
+- IETF より: [RFC 3977 about NNTP](https://tools.ietf.org/html/rfc3977) (2006)

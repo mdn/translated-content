@@ -11,7 +11,21 @@ slug: Web/JavaScript/Reference/Global_Objects/undefined
 
 {{js_property_attributes(0, 0, 0)}}
 
-{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - undefined")}}
+
+```js interactive-example
+function test(t) {
+  if (t === undefined) {
+    return "Undefined value!";
+  }
+  return t;
+}
+
+let x;
+
+console.log(test(x));
+// Expected output: "Undefined value!"
+```
 
 ## Синтаксис
 
@@ -27,7 +41,7 @@ undefined
 
 Переменная, не имеющая присвоенного значения, обладает типом `undefined`. Также `undefined` возвращают метод или инструкция, если переменная, участвующая в вычислениях, не имеет присвоенного значения. Функция возвращает `undefined`, если она не {{jsxref("Statements/return", "возвращает", "", 1)}} какого-либо значения.
 
-Поскольку `undefined` не является {{jsxref("Reserved_Words", "зарезервированным словом", "", 1)}}, он может использоваться в качестве [идентификатора](/ru/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Variables) (имени переменной) в любой области видимости, за исключением глобальной.
+Поскольку `undefined` не является {{jsxref("Reserved_Words", "зарезервированным словом", "", 1)}}, он может использоваться в качестве [идентификатора](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#variables) (имени переменной) в любой области видимости, за исключением глобальной.
 
 ```js
 // печатает 'foo string'

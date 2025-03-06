@@ -7,7 +7,43 @@ slug: Web/HTML/Element/form
 
 **`<form>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表了一個包含用於提交信息的交互式控制項的文件章節。
 
-{{EmbedInteractiveExample("pages/tabbed/form.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;form&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<form action="" method="get" class="form-example">
+  <div class="form-example">
+    <label for="name">Enter your name: </label>
+    <input type="text" name="name" id="name" required />
+  </div>
+  <div class="form-example">
+    <label for="email">Enter your email: </label>
+    <input type="email" name="email" id="email" required />
+  </div>
+  <div class="form-example">
+    <input type="submit" value="Subscribe!" />
+  </div>
+</form>
+```
+
+```css interactive-example
+form.form-example {
+  display: table;
+}
+
+div.form-example {
+  display: table-row;
+}
+
+label,
+input {
+  display: table-cell;
+  margin-bottom: 10px;
+}
+
+label {
+  padding-right: 10px;
+}
+```
 
 可以使用 {{cssxref(':valid')}} 和 {{cssxref(':invalid')}} CSS [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)根據表單內的{{domxref("HTMLFormElement.elements", "元素", "", 1)}}是否有效來設置 `<form>` 元素的樣式。
 
@@ -33,7 +69,7 @@ slug: Web/HTML/Element/form
 
   - : 指示瀏覽器是否可以默認情況下自動完成輸入元素的值。表單元素上的 `autocomplete` 屬性會覆蓋 `<form>` 上的它。可能的值：
 
-    - `off`：瀏覽器可能不會自動完成輸入。（瀏覽器傾向於忽略對懷疑的登錄表單的此屬性；請參見[自動完成屬性和登入欄](/zh-TW/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields)）
+    - `off`：瀏覽器可能不會自動完成輸入。（瀏覽器傾向於忽略對懷疑的登錄表單的此屬性；請參見[自動完成屬性和登入欄](/zh-TW/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields)）
     - `on`：瀏覽器可能會自動完成輸入。
 
 - `name`
@@ -177,7 +213,7 @@ slug: Web/HTML/Element/form
 
 ## 參見
 
-- [HTML 表單指南](/zh-TW/docs/Learn/Forms)
+- [HTML 表單指南](/zh-TW/docs/Learn_web_development/Extensions/Forms)
 - 在創建表單時使用的其他元素：{{HTMLElement("button")}}、{{HTMLElement("datalist")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("input")}}、{{HTMLElement("label")}}、{{HTMLElement("legend")}}、{{HTMLElement("meter")}}、{{HTMLElement("optgroup")}}、{{HTMLElement("option")}}、{{HTMLElement("output")}}、{{HTMLElement("progress")}}、{{HTMLElement("select")}}、{{HTMLElement("textarea")}}。
 - 獲取表單中元素的列表：{{domxref("HTMLFormElement.elements")}}
 - [ARIA：表單角色](/zh-TW/docs/Web/Accessibility/ARIA/Roles/form_role)

@@ -49,8 +49,8 @@ Algunas otras interfaces también son complementadas por las especificaciones re
 
 ## Tutoriales
 
-- [Determinar las dimensiones de los elementos](/es/docs/Determining_the_dimensions_of_elements) (Necesita actualización porque se realizó con DHTML/Ajax).
-- [Gestionando la orientación de la pantalla](/es/docs/WebAPI/Managing_screen_orientation)
+- [Determinar las dimensiones de los elementos](/es/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements) (Necesita actualización porque se realizó con DHTML/Ajax).
+- [Gestionando la orientación de la pantalla](/es/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 
 ## Especificaciones
 

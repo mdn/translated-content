@@ -9,4 +9,4 @@ slug: Glossary/Stringifier
 
 ## 関連情報
 
-- [WebIDL ファイルに含まれる情報](/ja/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifier)の中の文字列化子
+- [WebIDL ファイルに含まれる情報](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#stringifier)の中の文字列化子

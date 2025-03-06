@@ -362,7 +362,7 @@ Pour commencer, enregistrez le fichier [hidden-info-panel-start.html](https://gi
 <aside>...</aside>
 ```
 
-Pour commencer, nous avons un élément [`<label>`](/fr/docs/Web/HTML/Element/Label) et un élément [`<input>`](/fr/docs/Web/HTML/Element/Input). Les éléments `<label>` sont généralement utilisés afin d'associer un libellé avec un élément de formulaire à des fins d'accessibilité (permettant par exemple à quelqu'un qui utilise un lecteur d'écran de connaître la description du contenu attendu dans ce champ de formulaire). Ici, ce libellé est associé avec la case à cocher `<input>` grâce aux attributs `for` et `id`.
+Pour commencer, nous avons un élément [`<label>`](/fr/docs/Web/HTML/Element/label) et un élément [`<input>`](/fr/docs/Web/HTML/Element/input). Les éléments `<label>` sont généralement utilisés afin d'associer un libellé avec un élément de formulaire à des fins d'accessibilité (permettant par exemple à quelqu'un qui utilise un lecteur d'écran de connaître la description du contenu attendu dans ce champ de formulaire). Ici, ce libellé est associé avec la case à cocher `<input>` grâce aux attributs `for` et `id`.
 
 > [!NOTE]
 > Nous avons utilisé un point d'interrogation dans notre HTML afin que celui-ci serve d'icône pour accéder à l'information&nbsp;: il représente le bouton qu'on utilisera pour afficher/masquer le panneau.

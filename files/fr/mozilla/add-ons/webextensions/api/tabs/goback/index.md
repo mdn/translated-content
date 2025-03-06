@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/goBack
 
 Naviguer à la page précédente dans l'historique de l'onglet, si disponible.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -27,7 +27,7 @@ var withgoingBack = browser.tabs.goBack(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est tenue lorsque la navigation sur la page se termine.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est tenue lorsque la navigation sur la page se termine.
 
 ## Compatibilité des navigateurs
 

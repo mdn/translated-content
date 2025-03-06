@@ -50,6 +50,6 @@ const decodedData = self.atob(encodedData); // 文字列をデコード
 ## 関連情報
 
 - [`atob` のポリフィル](https://github.com/zloirock/core-js#base64-utility-methods) は [`core-js`](https://github.com/zloirock/core-js) にあります
-- [`data` URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
+- [`data` URL](/ja/docs/Web/URI/Schemes/data)
 - {{domxref("Window.atob()")}}: 同じメソッドですが、ウィンドウのスコープのものです。
 - {{domxref("WorkerGlobalScope.btoa()")}}

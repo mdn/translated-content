@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a5682b8bcf2b9761fa576004deea720f76735aaf
 ---
 
-{{MDNSidebar}}
-
 本文介绍了如何使用 Markdown 来编写 MDN Web 文档项目中的文档。我们以 GitHub 风格的 Markdown（GFM）为基础，并添加了一些扩展来支持一些我们在 MDN 上需要而 GFM 仍不支持的东西。
 
 ## 基础：Github 风格的 Markdown
@@ -98,7 +96,7 @@ GFM 规范定义了两种基础的链接类型：
   - `django`——Django 模板
   - `svelte`——Svelte 模板
   - `handlebars`——Handlebars 模板
-  - `pug`——[Pug 模板](https://pugjs.org/zh-cn/api/getting-started.html)（可以被 [Express](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer) 使用）
+  - `pug`——[Pug 模板](https://pugjs.org/zh-cn/api/getting-started.html)（可以被 [Express](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer) 使用）
 - 其他
   - `plain`——纯文本
   - `diff`——Diff 文件

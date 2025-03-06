@@ -56,4 +56,4 @@ On notera que le nom du chronomètre est affiché avec la durée lors de l'appel
 ## Voir aussi
 
 - [`console.time()`](/fr/docs/Web/API/console/time_static)
-- [`console.timeLog()`](/fr/docs/Web/API/console/timelog_static)
+- [`console.timeLog()`](/fr/docs/Web/API/console/timeLog_static)

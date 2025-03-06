@@ -5,7 +5,7 @@ slug: Web/CSS/animation-fill-mode
 
 {{CSSRef}}
 
-[CSS](/zh-CN/CSS) 属性 **`animation-fill-mode`** 设置 CSS 动画在执行之前和之后如何将样式应用于其目标。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`animation-fill-mode`** 设置 CSS 动画在执行之前和之后如何将样式应用于其目标。
 
 {{EmbedInteractiveExample("pages/css/animation-fill-mode.html")}}
 
@@ -31,7 +31,7 @@ animation-fill-mode: both, forwards, none;
   - : 当动画未执行时，动画将不会将任何样式应用于目标，而是已经赋予给该元素的 CSS 规则来显示该元素。这是默认值。
 - `forwards`
 
-  - : 目标将保留由执行期间遇到的最后一个[关键帧](/zh-CN/docs/CSS/@keyframes)计算值。最后一个关键帧取决于{{cssxref("animation-direction")}}和{{cssxref("animation-iteration-count")}}的值：
+  - : 目标将保留由执行期间遇到的最后一个[关键帧](/zh-CN/docs/Web/CSS/@keyframes)计算值。最后一个关键帧取决于{{cssxref("animation-direction")}}和{{cssxref("animation-iteration-count")}}的值：
 
     | `animation-direction` | `animation-iteration-count` | last keyframe encountered |
     | --------------------- | --------------------------- | ------------------------- |
@@ -55,7 +55,7 @@ animation-fill-mode: both, forwards, none;
   - : 动画将遵循`forwards`和`backwards`的规则，从而在两个方向上扩展动画属性。
 
 > [!NOTE]
-> 当你在`animation-*`属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxref("animation-name")}} 属性中指定的动画。有关更多信息，请参阅[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#Setting_multiple_animation_property_values)。
+> 当你在`animation-*`属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxref("animation-name")}} 属性中指定的动画。有关更多信息，请参阅[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)。
 
 ### 正式语法
 
@@ -106,7 +106,7 @@ animation-fill-mode: both, forwards, none;
 
 {{EmbedLiveSample('示例',700,300)}}
 
-更多示例请查看 [CSS 动画](/zh-CN/CSS/CSS_animations) 。
+更多示例请查看 [CSS 动画](/zh-CN/docs/CSS/CSS_animations) 。
 
 ## 规范
 

@@ -46,7 +46,7 @@ _Hérite des propriétés de son parent, {{domxref("AudioNode")}}._
 - {{domxref("AudioBufferSourceNode.buffer")}}
   - : {{domxref ("AudioBuffer")}} qui définit la ressource à jouer; lorsqu'il a la valeur NULL, définit un canal unique silencieux (dans lequel chaque échantillon vaut 0.0).
 - {{domxref("AudioBufferSourceNode.detune")}}
-  - : {{domxref("AudioParam")}} de type [k-rate](/fr/docs/DOM/AudioParam#k-rate) représentant le désaccordage de la fréquence exprimé en [cents](http://en.wikipedia.org/wiki/Cent_%28music%29). Cette valeur est composée à partir du `playbackRate` pour déterminer la vitesse à laquelle le son sera jouée. Sa valeur par défaut est `0` (qui correspond à aucun désaccordage), et son rang nominal va de -∞ à ∞.
+  - : {{domxref("AudioParam")}} de type [k-rate](/fr/docs/Web/API/AudioParam#k-rate) représentant le désaccordage de la fréquence exprimé en [cents](http://en.wikipedia.org/wiki/Cent_%28music%29). Cette valeur est composée à partir du `playbackRate` pour déterminer la vitesse à laquelle le son sera jouée. Sa valeur par défaut est `0` (qui correspond à aucun désaccordage), et son rang nominal va de -∞ à ∞.
 - {{domxref("AudioBufferSourceNode.loop")}}
   - : Attribut booléen indiquant si la ressource doit être lue de nouveau lorsque la fin de l'{{domxref ("AudioBuffer")}} est atteinte. Sa valeur par défaut est `false`.
 - {{domxref("AudioBufferSourceNode.loopStart")}} {{optional_inline}}
@@ -69,7 +69,7 @@ _Hérite des méthodes de son parent, {{domxref("AudioNode")}}._
 Cet exemple crée un tampon de deux secondes, le remplit avec du bruit blanc et le joue par l'intermédiaire d'un `AudioBufferSourceNode`.
 
 > [!NOTE]
-> Vous pouvez aussi [exécuter the code](http://mdn.github.io/audio-buffer/), ou [regarder le code source](https://github.com/mdn/audio-buffer).
+> Vous pouvez aussi [exécuter the code](https://mdn.github.io/audio-buffer/), ou [regarder le code source](https://github.com/mdn/audio-buffer).
 
 ```js
 var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();

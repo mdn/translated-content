@@ -17,4 +17,4 @@ RTF (リッチテキストフォーマット) は書式設定 (例：太字、�
 
 ### 技術リファレンス
 
-- [Microsoft による最後の仕様](http://www.microsoft.com/en-us/download/details.aspx?id=10725)
+- [Microsoft による最後の仕様](https://www.microsoft.com/en-us/download/details.aspx?id=10725)

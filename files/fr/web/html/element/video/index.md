@@ -7,13 +7,27 @@ slug: Web/HTML/Element/video
 
 L'élément HTML **`<video>`** intègre un contenu vidéo dans un document.
 
-{{EmbedInteractiveExample("pages/tabbed/video.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;video&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video controls width="250">
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+```
 
 L'exemple précédent illustre comment utiliser l'élément `<video>` simplement, à la façon d'un élément {{htmlelement("img")}}. Le chemin vers le média à afficher est fourni via l'attribut `src` et on peut inclure d'autres attributs afin de spécifier la largeur et la hauteur, la lecture automatique et/ou en boucle, les contrôles affichés, etc.
 
 Le contenu fourni entre les balises `<video></video>` est affiché comme contenu alternatif par les navigateurs qui ne prennent pas en charge l'élément.
 
-Les navigateurs ne prennent pas en charge [l'ensemble des formats vidéo](/fr/docs/Web/HTML/Formats_pour_audio_video) et il est possible de fournir plusieurs sources grâce à des éléments {{htmlelement("source")}}, le navigateur utilisera la première ressource dont il connaît le format :
+Les navigateurs ne prennent pas en charge [l'ensemble des formats vidéo](/fr/docs/Web/Media/Formats) et il est possible de fournir plusieurs sources grâce à des éléments {{htmlelement("source")}}, le navigateur utilisera la première ressource dont il connaît le format :
 
 ```html
 <video controls>
@@ -28,16 +42,16 @@ Les navigateurs ne prennent pas en charge [l'ensemble des formats vidéo](/fr/do
 
 Quelques notes d'utilisation :
 
-- Si l'attribut `controls` n'est pas indiqué, la vidéo n'incluera pas les contrôles par défaut du navigateurs et il est nécessaire de fournir ses propres contrôles en utilisant JavaScript et l'API {{domxref("HTMLMediaElement")}} API. Voir l'article [créer un lecteur vidéo multi-navigateurs](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player) pour plus de détails.
+- Si l'attribut `controls` n'est pas indiqué, la vidéo n'incluera pas les contrôles par défaut du navigateurs et il est nécessaire de fournir ses propres contrôles en utilisant JavaScript et l'API {{domxref("HTMLMediaElement")}} API. Voir l'article [créer un lecteur vidéo multi-navigateurs](/fr/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player) pour plus de détails.
 - L'API `HTMLMediaElement` déclenche de nombreux [évènements](/fr/docs/Web/Guide/DOM/Events/evenement_medias) qui permettent d'avoir un contrôle précis sur l'audio et la vidéo.
 - La propriété {{cssxref("object-position")}} permet d'ajuster la position de la vidéo dans le cadre du lecteur et la propriété {{cssxref("object-fit")}} permet de contrôler l'ajustement de la taille de la vidéo dans le cadre.
-- Afin de fournir des sous-titres et légendes à la vidéo, on peut utiliser du code JavaScript ainsi que des éléments {{htmlelement("track")}} au format [WebVTT](/fr/docs/Web/API/WebVTT_API). Voir l'article [Ajouter des sous-titres et légendes à une vidéo HTML5](/fr/docs/Web/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) pour plus d'informations.
+- Afin de fournir des sous-titres et légendes à la vidéo, on peut utiliser du code JavaScript ainsi que des éléments {{htmlelement("track")}} au format [WebVTT](/fr/docs/Web/API/WebVTT_API). Voir l'article [Ajouter des sous-titres et légendes à une vidéo HTML5](/fr/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) pour plus d'informations.
 
-Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulter [le tutoriel sur le contenu audio et video](/fr/docs/Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video).
+Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulter [le tutoriel sur le contenu audio et video](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content).
 
 ## Attributs
 
-À l'instar des autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+À l'instar des autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `autoplay`
 
@@ -66,12 +80,12 @@ Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulte
 
 - `crossorigin`
 
-  - : Cet attribut à valeur contrainte permet d'indiquer si le CORS doit être utilisé pour récupérer la vidéo. [Les ressources avec le CORS activé](/fr/docs/Web/HTML/Images_avec_le_contrôle_d_accès_HTTP) peuvent être réutilisées dans un élément {{HTMLElement("canvas")}} sans le _corrompre_. Les valeurs autorisées sont :
+  - : Cet attribut à valeur contrainte permet d'indiquer si le CORS doit être utilisé pour récupérer la vidéo. [Les ressources avec le CORS activé](/fr/docs/Web/HTML/CORS_enabled_image) peuvent être réutilisées dans un élément {{HTMLElement("canvas")}} sans le _corrompre_. Les valeurs autorisées sont :
 
     - `anonymous` : une requête _cross-origine_ est envoyée sans information d'authentification. Autrement dit, un en-tête HTTP {{HTTPHeader("Origin")}} est envoyé, sans cookie, certificat X.509 ou sans authentification HTTP simple. Si le serveur ne fournit pas d'informations d'authentification au site d'origine (c'est-à-dire en n'envoyant pas l'en-tête HTTP {{HTTPHeader("Access-Control-Allow-Origin")}}), la vidéo sera corrompue et son utilisation sera restreinte.
     - `use-credentials` : une requête _cross-origine_ est envoyée avec une information d'authentification. Autrement dit, un en-tête HTTP `Header` est envoyé, avec un cookie, une certification ou une authentification HTTP simple. Si le serveur ne fournit pas d'informations d'authentification au site d'origine (c'est-à-dire en n'envoyant pas l'en-tête HTTP {{HTTPHeader("Access-Control-Allow-Origin")}}), la vidéo sera corrompue et son utilisation sera restreinte.
 
-    Lorsque cet attribut n'est pas présent, la ressource est récupérée sans requête CORS (l'en-tête HTTP {{HTTPHeader("Origin")}}) n'est pas envoyé) et elle ne peut pas être utilisée dans un élément {{HTMLElement('canvas')}}. Si la valeur est invalide, elle sera gérée comme si le mot-clé `anonymous` était utilisé. Pour plus d'informations, consulter l'article sur [les attributs de paramétrage du CORS](/fr/docs/Web/HTML/Reglages_des_attributs_CORS).
+    Lorsque cet attribut n'est pas présent, la ressource est récupérée sans requête CORS (l'en-tête HTTP {{HTTPHeader("Origin")}}) n'est pas envoyé) et elle ne peut pas être utilisée dans un élément {{HTMLElement('canvas')}}. Si la valeur est invalide, elle sera gérée comme si le mot-clé `anonymous` était utilisé. Pour plus d'informations, consulter l'article sur [les attributs de paramétrage du CORS](/fr/docs/Web/HTML/Attributes/crossorigin).
 
 - `height`
   - : La hauteur de la zone où afficher la vidéo, exprimée en pixels CSS (en valeur absolue uniquement).
@@ -140,7 +154,7 @@ Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulte
 
 L'élément `<video>` est un élément remplacé et, pour cet élément, la valeur initiale de {{cssxref("display")}} est `inline` mais la hauteur et la largeur du cadre sont définies par les caractéristiques de la vidéo embarquée.
 
-On peut changer la valeur de `display` en `block` afin de simplifier le positionnement et le dimensionnement. L'article [Bases de la mise en forme d'un lecteur vidéo](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics) fournit différentes techniques de mise en forme.
+On peut changer la valeur de `display` en `block` afin de simplifier le positionnement et le dimensionnement. L'article [Bases de la mise en forme d'un lecteur vidéo](/fr/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics) fournit différentes techniques de mise en forme.
 
 ### Détecter l'ajout et la suppression de pistes
 
@@ -257,12 +271,12 @@ C'est… C'est un…
 [La vaisselle se brise]
 ```
 
-Les sous-titres ne doivent pas masquer le sujet principal de la vidéo. Ils peuvent être positionnés grâce à [l'indication `align`](/fr/docs/Web/API/WebVTT_API#Cue_settings).
+Les sous-titres ne doivent pas masquer le sujet principal de la vidéo. Ils peuvent être positionnés grâce à [l'indication `align`](/fr/docs/Web/API/WebVTT_API#cue_settings).
 
-- [Sous-titres et légendes - _Plugins_](/fr/docs/Plugins/Flash_to_HTML5/Video/Subtitles_captions)
+- [Sous-titres et légendes - _Plugins_](/fr/docs/Glossary/Plugin)
 - [API Web Video Text Tracks Format (WebVTT)](/fr/docs/Web/API/WebVTT_API)
 - [WebAIM : _Captions, Transcripts, and Audio Descriptions_ (en anglais)](https://webaim.org/techniques/captions/)
-- [Comprendre les règles WCAG 1.2](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.2_—_Providing_text_alternatives_for_time-based_media)
+- [Comprendre les règles WCAG 1.2](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
 - [_Understanding Success Criterion 1.2.1 - W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
 - [_Understanding Success Criterion 1.2.2 - W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 
@@ -347,9 +361,9 @@ Les sous-titres ne doivent pas masquer le sujet principal de la vidéo. Ils peuv
 
 ## Voir aussi
 
-- [Les formats pris en charge par `<audio>` et `<video>`](/fr/docs/Web/HTML/Formats_pour_audio_video)
+- [Les formats pris en charge par `<audio>` et `<video>`](/fr/docs/Web/Media/Formats)
 - {{htmlelement("audio")}}
 - Les propriétés CSS permettant de positionner/redimensionner le contenu : {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 - [Utiliser les éléments `<audio>` et `<video>`](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [Manipuler l'élément `<video>` avec `<canvas>`](/fr/docs/HTML/Manipulating_video_using_canvas)
-- [Configuration côté serveur pour les média Ogg](/fr/docs/Web/HTTP/Configuring_servers_for_Ogg_media)
+- [Manipuler l'élément `<video>` avec `<canvas>`](/fr/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
+- [Configuration côté serveur pour les média Ogg](/fr/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media)

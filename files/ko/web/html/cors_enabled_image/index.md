@@ -9,7 +9,7 @@ l10n:
 
 HTML은 이미지 처리를 위해 {{Glossary("CORS")}} header를 포함하고 있는 [`crossorigin`](/ko/docs/Web/HTML/Element/img#crossorigin) 속성을 제공합니다. 이는 {{ HTMLElement("img") }} 요소에서 정의된, 외부 origin으로 부터 가져오는 이미지가 {{HTMLElement("canvas")}}에서 사용할 수 있도록 해줍니다. 마치 현재 origin에서 가져온 것처럼 말입니다
 
-`crossorigin` 속성이 어떻게 사용되는지 자세히 알고 싶다면, [CORS settings attributes](/ko/docs/Web/HTML/CORS_settings_attributes) 를 참고하세요.
+`crossorigin` 속성이 어떻게 사용되는지 자세히 알고 싶다면, [CORS settings attributes](/ko/docs/Web/HTML/Attributes/crossorigin) 를 참고하세요.
 
 ## 보안과 오염된 canvas들
 
@@ -108,6 +108,6 @@ function imageReceived() {
 
 ## See also
 
-- [WebGL 과 Chrome 13에서 교차출처 이미지 사용하기](http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
+- [WebGL 과 Chrome 13에서 교차출처 이미지 사용하기](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
 - [HTML 명세 - `crossorigin` 속성](http://whatwg.org/html#attr-img-crossorigin)
 - [Web Storage API](/ko/docs/Web/API/Web_Storage_API)

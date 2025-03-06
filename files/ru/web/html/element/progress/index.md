@@ -7,13 +7,26 @@ slug: Web/HTML/Element/progress
 
 HTML-элемент **`<progress>`** отображает индикатор, показывающий ход выполнения задачи, обычно отображаемый в виде прогресс бара (индикатора выполнения).
 
-{{EmbedInteractiveExample("pages/tabbed/progress.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;progress&gt;", "tabbed-standard")}}
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), контент, ассоциированный с label, явный контент. |
+```html interactive-example
+<label for="file">File progress:</label>
+
+<progress id="file" max="100" value="70">70%</progress>
+```
+
+```css interactive-example
+label {
+  padding-right: 10px;
+  font-size: 1rem;
+}
+```
+
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content), контент, ассоциированный с label, явный контент. |
 | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимый контент                                         | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), но среди его потомков не должно быть элемента `<progress>`.                                                              |
+| Допустимый контент                                         | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content), но среди его потомков не должно быть элемента `<progress>`.                                                              |
 | Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                    |
-| Допустимые родители                                        | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                         |
+| Допустимые родители                                        | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                                                         |
 | Допустимые ARIA-роли                                       | Нет                                                                                                                                                                                                 |
 | DOM-интерфейс                                              | {{domxref("HTMLProgressElement")}}                                                                                                                                                                  |
 

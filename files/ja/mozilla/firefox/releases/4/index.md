@@ -7,28 +7,28 @@ slug: Mozilla/Firefox/Releases/4
 
 Firefox 4 （6 月後半にベータ版リリースが予定されています）では、パフォーマンスが向上し、 HTML 5 やその他の革新的なウェブ技術のさらなるサポートが追加され、さらには、セキュリティも改善しています。 この記事では、この次期リリースについてのとっかかりの情報と、ウェブ開発者、アドオン開発者、そして、Gecko プラットフォーム開発者向けに利用可能になる機能の一覧を提供します。
 
-これらの機能の多くはすでに [Firefox 4 beta](http://www.mozilla.com/en-US/firefox/beta/) リリース、もしくは（冒険心にあふれているなら）[ナイトリー trunk ビルド](http://nightly.mozilla.org/) で試すことできます。
+これらの機能の多くはすでに [Firefox 4 beta](http://www.mozilla.com/en-US/firefox/beta/) リリース、もしくは（冒険心にあふれているなら）[ナイトリー trunk ビルド](https://nightly.mozilla.org/) で試すことできます。
 
 > [!NOTE]
 > この記事は作成中であり、このページからリンクされている記事もまた同様です。多くの記事名が仮名であり、いくつかのトピックは複数の記事に分割されるかもしれません。
 
 ## ウェブ開発者向け機能
 
-Gecko は現在 [HTML5](/ja/docs/HTML/HTML5) パーサーを利用しています。それはバグが修正され、相互運用性が改善され、また、パフォーマンスが向上されたものです。また、HTML マークアップでコンテンツに [SVG](/ja/docs/SVG) と [MathML](/ja/docs/MathML) を直接埋め込むことも可能にします。
+Gecko は現在 [HTML5](/ja/docs/HTML/HTML5) パーサーを利用しています。それはバグが修正され、相互運用性が改善され、また、パフォーマンスが向上されたものです。また、HTML マークアップでコンテンツに [SVG](/ja/docs/Web/SVG) と [MathML](/ja/docs/Web/MathML) を直接埋め込むことも可能にします。
 
 ### HTML
 
-- [HTML5 パーサー入門](/ja/docs/HTML/HTML5/HTML5_Parser)
+- [HTML5 パーサー入門](/ja/docs/Learn_web_development/Core/Structuring_content)
   - : HTML5 パーサーが意味することと、どのように SVG と MathML をコンテンツにインラインで埋め込むかの概説。
-- [HTML5 におけるフォーム](/ja/docs/HTML/HTML5/Forms_in_HTML5)
+- [HTML5 におけるフォーム](/ja/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)
   - : HTML5 におけるウェブフォームの改善の概説。これらの変更点には [`<input>`](/ja/docs/Web/HTML/Element/input) 要素における入力種類の追加、データバリデーションなどが含まれています。
-- [HTML5 Sections](/ja/docs/Sections_and_outlines_of_an_HTML5_document)
+- [HTML5 Sections](/ja/docs/Web/HTML/Element/Heading_Elements)
   - : Gecko は文書におけるセクションに関する新しい HTML5 要素をサポートします。: [`<article>`](/ja/docs/Web/HTML/Element/article)、[`<section>`](/ja/docs/Web/HTML/Element/section)、[`<nav>`](/ja/docs/Web/HTML/Element/nav)、[`<aside>`](/ja/docs/Web/HTML/Element/aside)、 [`<hgroup>`](/ja/docs/Web/HTML/Element/hgroup)、[`<header>`](/ja/docs/Web/HTML/Element/header) および [`<footer>`](/ja/docs/Web/HTML/Element/footer)。
-- [HTML5 の hidden 属性](/ja/docs/HTML/Global_attributes#attr-hidden)
+- [HTML5 の hidden 属性](/ja/docs/Web/HTML/Global_attributes#attr-hidden)
   - : この属性は、すべての要素に共通であり、ウェブページでユーザーに現在は関係しないコンテントを隠すために用いられます。
 - その他の HTML5 要素
   - : Gecko は次の新しい HTML5 要素もサポートします。: [`<mark>`](/ja/docs/Web/HTML/Element/mark)、[`<figure>`](/ja/docs/Web/HTML/Element/figure) および [`<figcaption>`](/ja/docs/Web/HTML/Element/figcaption)。
-- [WebSocket](/ja/docs/WebSockets)
+- [WebSocket](/ja/docs/Web/API/WebSockets_API)
   - : ウェブアプリケーションとサーバーの間でリアルタイムコミュニケーションを行うための WebSocket API を利用するためのガイド。
 
 #### Canvas improvements
@@ -50,41 +50,41 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 - `canvas2dcontext.globalCompositeOperation` が認識できない値を設定したときに例外を投げなくなりました。また、非標準の値 `darker` をサポートしなくなりました。
 - 他のブラウザーでは実装されておらず、非推奨 な要素である [`<spacer>`](/ja/docs/Web/HTML/Element/spacer) 要素のサポートが無くなりました。
 - The [`<isindex>`](/ja/docs/Web/HTML/Element/isindex) 要素が、[`document.createElement()`](/ja/docs/Web/API/Document/createElement) メソッドによって作成されたときに、 一切プロパティもメソッドも持たない単純な要素として作成されるようになりました。
-- Gecko に [`<input>`](/ja/docs/Web/HTML/Element/input) 要素での `click()`メソッドの呼び出しが追加されました。このメソッドを用いることでファイル選択ダイアログが開けます。[ウェブアプリケーションからファイルを利用する](/ja/docs/Using_files_from_web_applications) の記事内の [例](/ja/docs/Using_files_from_web_applications#Using_hidden_file_input_elements_using_the_click%28%29_method) を参照してください。
-- [`<input>`](/ja/docs/Web/HTML/Element/input) 要素に新しい [`mozactionhint`](/ja/docs/HTML/Element/Input#attr-mozactionhint) 属性が追加されました。これを用いることで仮想キーボード上でのエンターキーのラベルを指定できます。
+- Gecko に [`<input>`](/ja/docs/Web/HTML/Element/input) 要素での `click()`メソッドの呼び出しが追加されました。このメソッドを用いることでファイル選択ダイアログが開けます。[ウェブアプリケーションからファイルを利用する](/ja/docs/Web/API/File_API/Using_files_from_web_applications) の記事内の [例](/ja/docs/Using_files_from_web_applications#Using_hidden_file_input_elements_using_the_click%28%29_method) を参照してください。
+- [`<input>`](/ja/docs/Web/HTML/Element/input) 要素に新しい [`mozactionhint`](/ja/docs/Web/HTML/Element/Input#attr-mozactionhint) 属性が追加されました。これを用いることで仮想キーボード上でのエンターキーのラベルを指定できます。
 - [`<iframe>`](/ja/docs/Web/HTML/Element/iframe)、[`<noembed>`](/ja/docs/Web/HTML/Element/noembed)、および [`<noframes>`](/ja/docs/Web/HTML/Element/noframes) 要素内の [`<script>`](/ja/docs/Web/HTML/Element/script) 要素が実行されるようになりました。以前のバージョンの Firefox ではこれらの要素内での実行はされませんでした。これは仕様準拠であり、他のブラウザーの挙動と合致します。
 
 ### CSS
 
-- [CSS transitions](/ja/docs/CSS/CSS_transitions)
+- [CSS transitions](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
   - : 新しい CSS transitions サポートが Firefox 4 では利用できるようになりました。
 - CSS での算出値
-  - : [`-moz-calc`](/ja/docs/Web/CSS/-moz-calc) のサポートが追加されました。これを用いることで、[`<length>`](/ja/docs/Web/CSS/length) の値を数式で指定できます。
+  - : [`-moz-calc`](/ja/docs/Web/CSS/calc) のサポートが追加されました。これを用いることで、[`<length>`](/ja/docs/Web/CSS/length) の値を数式で指定できます。
 - セレクターのグルーピング
-  - : セレクターをグループ化しコンビネータを分解する [`:-moz-any`](/ja/docs/Web/CSS/:-moz-any) がサポートされました。
+  - : セレクターをグループ化しコンビネータを分解する [`:-moz-any`](/ja/docs/Web/CSS/:is) がサポートされました。
 - 背景画像の部分領域のサポート
   - : [`-moz-image-rect`](/ja/docs/Web/CSS/-moz-image-rect) 関数を用いることで、画像の一部分の領域 (subrectangle)を背景画像として利用できるようになります。
 - CSS touch プロパティ群
   - : touch プロパティ群が追加されました。詳細と正式な記事名は後日追記予定です。
-- [CSS 背景として任意の要素を使用する](/ja/docs/CSS/-moz-element)
-  - : [`-moz-element`](/ja/docs/Web/CSS/-moz-element) CSS 関数と [`document.mozSetImageElement()`](/ja/docs/Web/API/Document/mozSetImageElement) DOM 関数を用いることで、任意の HTML 要素を背景として使用することができます。
-- [プライバシーと :visited セレクター](/ja/docs/CSS/Privacy_and_the_:visited_selector)
+- [CSS 背景として任意の要素を使用する](/ja/docs/Web/CSS/element)
+  - : [`-moz-element`](/ja/docs/Web/CSS/element) CSS 関数と [`document.mozSetImageElement()`](/ja/docs/Web/API/Document/mozSetImageElement) DOM 関数を用いることで、任意の HTML 要素を背景として使用することができます。
+- [プライバシーと :visited セレクター](/ja/docs/Web/CSS/Privacy_and_the_:visited_selector)
   - : CSS セレクターを用いた訪問済みリンクのスタイルについて取得できる情報が変更されました。これはいくつかのウェブアプリケーションに影響するかもしれません。
 
 #### 新しい CSS プロパティ
 
-| プロパティ                                                                  | 説明                                                                     |
-| --------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [`-moz-font-feature-settings`](/ja/docs/Web/CSS/-moz-font-feature-settings) | OpenType フォントの高度な機能を変更できます。                            |
-| [`-moz-tab-size`](/ja/docs/Web/CSS/-moz-tab-size)                           | テキストを描画するときのタブ文字 (U+0009) の幅を空白文字数で指定します。 |
-| [`resize`](/ja/docs/Web/CSS/resize)                                         | サイズ変更可能な要素の方向を制御できます。                               |
+| プロパティ                                                             | 説明                                                                     |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [`-moz-font-feature-settings`](/ja/docs/Web/CSS/font-feature-settings) | OpenType フォントの高度な機能を変更できます。                            |
+| [`-moz-tab-size`](/ja/docs/Web/CSS/tab-size)                           | テキストを描画するときのタブ文字 (U+0009) の幅を空白文字数で指定します。 |
+| [`resize`](/ja/docs/Web/CSS/resize)                                    | サイズ変更可能な要素の方向を制御できます。                               |
 
 #### 新しい CSS 擬似クラス
 
 | 擬似クラス                                                        | 説明                                                                                                            |
 | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | [`:-moz-handler-crashed`](/ja/docs/Web/CSS/:-moz-handler-crashed) | プラグインがクラッシュした要素の表示に用いられます。                                                            |
-| [`:-moz-placeholder`](/ja/docs/Web/CSS/:-moz-placeholder)         | フォームフィールドのガイドテキストに適用されます。                                                              |
+| [`:-moz-placeholder`](/ja/docs/Web/CSS/:placeholder-shown)        | フォームフィールドのガイドテキストに適用されます。                                                              |
 | [`:-moz-submit-invalid`](/ja/docs/Web/CSS/:-moz-submit-invalid)   | 1 つ、もしくは、複数のフォームフィールドの入力が妥当でないときのフォームの送信ボタンに適用されます。            |
 | [`:-moz-window-inactive`](/ja/docs/Web/CSS/:-moz-window-inactive) | アクティブでないウィンドウの要素に適用されます。                                                                |
 | [`:invalid`](/ja/docs/Web/CSS/:invalid)                           | 入力が妥当でない [`<input>`](/ja/docs/Web/HTML/Element/input) フィールドに自動的に適用されます。                |
@@ -94,17 +94,17 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 
 #### 新しい CSS 擬似セレクター
 
-| 擬似セレクター                                        | 説明                                                                             |
-| ----------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [`:-moz-focusring`](/ja/docs/Web/CSS/:-moz-focusring) | Gecko がフォーカスインジケータを描画すべきとしている要素の見え方を指定できます。 |
+| 擬似セレクター                                       | 説明                                                                             |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------- |
+| [`:-moz-focusring`](/ja/docs/Web/CSS/:focus-visible) | Gecko がフォーカスインジケータを描画すべきとしている要素の見え方を指定できます。 |
 
 #### 新しい CSS 関数
 
 | 関数                                                  | 説明                                                                                                                                               |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`:-moz-any`](/ja/docs/Web/CSS/:-moz-any)             | セレクターをグループ化しコンビネータを分解できます。                                                                                               |
-| [`-moz-calc`](/ja/docs/Web/CSS/-moz-calc)             | `<length> の値を数式で指定できます。`                                                                                                              |
-| [`-moz-element`](/ja/docs/Web/CSS/-moz-element)       | 任意の要素を [`background-image`](/ja/docs/Web/CSS/background-image) および [`background`](/ja/docs/Web/CSS/background) の背景として使用できます。 |
+| [`:-moz-any`](/ja/docs/Web/CSS/:is)                   | セレクターをグループ化しコンビネータを分解できます。                                                                                               |
+| [`-moz-calc`](/ja/docs/Web/CSS/calc)                  | `<length> の値を数式で指定できます。`                                                                                                              |
+| [`-moz-element`](/ja/docs/Web/CSS/element)            | 任意の要素を [`background-image`](/ja/docs/Web/CSS/background-image) および [`background`](/ja/docs/Web/CSS/background) の背景として使用できます。 |
 | [`-moz-image-rect`](/ja/docs/Web/CSS/-moz-image-rect) | 画像の一部分を [`background-image`](/ja/docs/Web/CSS/background-image) もしくは [`background`](/ja/docs/Web/CSS/background)で利用できます。        |
 
 #### 改名された CSS プロパティ
@@ -119,19 +119,19 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 
 - [`text-shadow`](/ja/docs/Web/CSS/text-shadow) プロパティのぼかし範囲が 300 までに制限されるようになりました。これは健全さとパフォーマンスの理由によるものです。
 - [`overflow`](/ja/docs/Web/CSS/overflow) プロパティがテーブルグループ要素 (`<thead>`、`<tbody>`、および `<tfoot>`) に適用されなくなりました。
-- [`-moz-appearance`](/ja/docs/Web/CSS/-moz-appearance) プロパティが要素に境界のない Aero Glass の見た目を適用する `-moz-win-borderless-glass 値をサポートするようになりました。`
-- [`-moz-device-pixel-ratio`](/ja/docs/CSS/Media_queries#-moz-device-pixel-ratio) メディア機能が追加されました。これを用いることで、[Media Query](/ja/docs/CSS/Media_queries) で用いられる、CSS ピクセルを基準としたデバイスのピクセル比率を指定できます。
-- Gecko の [CSS 単位の](/ja/docs/CSS-2_Quick_Reference/Units) 扱いが他のブラウザーにより良く適合するように、また、絶対的長さをデバイスの DPI を基準にした画面ピクセル数により的確に変換するように修正されました。
+- [`-moz-appearance`](/ja/docs/Web/CSS/appearance) プロパティが要素に境界のない Aero Glass の見た目を適用する `-moz-win-borderless-glass 値をサポートするようになりました。`
+- [`-moz-device-pixel-ratio`](/ja/docs/Web/CSS/CSS_media_queries#-moz-device-pixel-ratio) メディア機能が追加されました。これを用いることで、[Media Query](/ja/docs/Web/CSS/CSS_media_queries) で用いられる、CSS ピクセルを基準としたデバイスのピクセル比率を指定できます。
+- Gecko の [CSS 単位の](/ja/docs/Web/CSS/length) 扱いが他のブラウザーにより良く適合するように、また、絶対的長さをデバイスの DPI を基準にした画面ピクセル数により的確に変換するように修正されました。
 
 ### グラフィックとビデオ
 
-- [WebGL](/ja/docs/WebGL)
+- [WebGL](/ja/docs/Web/API/WebGL_API)
   - : 開発中の WebGL 標準が Firefox でサポートされました。
 - [グラフィックパフォーマンスの最適化](/ja/docs/Optimizing_graphics_performance)
   - : Firefox 4 でグラフィックとビデオのパフォーマンスを最大限引き出すための Tips & Tricks。
-- [WebM ビデオのサポート](/ja/docs/Media_formats_supported_by_the_audio_and_video_elements#WebM)
+- [WebM ビデオのサポート](/ja/docs/Web/Media/Formats#webm)
   - : 新しいオープンな [WebM](http://www.webmproject.org/) ビデオフォーマットが Gecko2.0 でサポートされます。このサポートは 6 月 9 日以降のナイトリーに含まれています。
-- [SMIL による SVG アニメーション](/ja/docs/SVG/SVG_animation_with_SMIL)
+- [SMIL による SVG アニメーション](/ja/docs/Web/SVG/SVG_animation_with_SMIL)
   - : SVG の SMIL アニメーションのサポートが利用できるようになりました。[バグ 482402](https://bugzilla.mozilla.org/show_bug.cgi?id=482402 'FIXED: Enable "svg.smil.enabled" pref by default') を参照してください。
 - 画像と CSS 背景としての SVG の利用
   - : SVG を [`<img>`](/ja/docs/Web/HTML/Element/img) 要素とともに、また、CSS の [`background-image`](/ja/docs/Web/CSS/background-image) で利用することができるようになりました。
@@ -144,16 +144,16 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 
 ### DOM
 
-- [JavaScript 型付き配列](/ja/docs/JavaScript_typed_arrays)
-  - : JavaScript 型付き配列 (typed arrays) のサポートが追加されました。これを用いることで、ネイティブデータ型を用いた生のデータを含むバッファーを扱えます。 [File API](/ja/docs/DOM/File)、[WebGL](/ja/docs/WebGL)、および [WebSockets](/ja/docs/WebSockets) を含む、いくつかの API でこれを用いることができます。
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
+  - : JavaScript 型付き配列 (typed arrays) のサポートが追加されました。これを用いることで、ネイティブデータ型を用いた生のデータを含むバッファーを扱えます。 [File API](/ja/docs/Web/API/File)、[WebGL](/ja/docs/Web/API/WebGL_API)、および [WebSockets](/ja/docs/Web/API/WebSockets_API) を含む、いくつかの API でこれを用いることができます。
 - 範囲の境界領域の保持
   - : [`Range`](/ja/docs/Web/API/Range) オブジェクトに [`range.getClientRects()`](/ja/docs/Web/API/Range/getClientRects) および [`range.getBoundingClientRect()`](/ja/docs/Web/API/Range/getBoundingClientRect) メソッドが追加されました。
 - 任意の要素上でのマウスイベントのキャプチャ
   - : Internet Explorer 由来の `setCapture()` と `releaseCapture()`API のサポートが追加されました。[バグ 503943](https://bugzilla.mozilla.org/show_bug.cgi?id=503943) を参照してください。
-- [ブラウザー履歴の操作](/ja/docs/DOM/Manipulating_the_browser_history)
+- [ブラウザー履歴の操作](/ja/docs/Web/API/History_API)
   - : [`window.history`](/ja/docs/Web/API/Window/history) オブジェクトを通して利用できる、既存のドキュメント履歴オブジェクトが新しい HTML5 の `pushState()` と `replaceState()` メソッドをサポートするようになりました。
 - [MozBeforePaint を用いたアニメーション](/ja/docs/DOM/Animations_using_MozBeforePaint)
-  - : 追加された新しいイベントと [`window.mozRequestAnimationFrame()`](/ja/docs/Web/API/Window/mozRequestAnimationFrame) メソッドおよび [`window.mozAnimationStartTime`](/ja/docs/Web/API/Window/mozAnimationStartTime) プロパティを組み合わせることで、互いに同期したアニメーションを作成する方法が提供されます。
+  - : 追加された新しいイベントと [`window.mozRequestAnimationFrame()`](/ja/docs/Web/API/Window/requestAnimationFrame) メソッドおよび [`window.mozAnimationStartTime`](/ja/docs/Web/API/Animation/startTime) プロパティを組み合わせることで、互いに同期したアニメーションを作成する方法が提供されます。
 - タッチイベントとマルチタッチイベント
   - : タッチイベントとマルチタッチイベントのサポートが追加されました。
 
@@ -161,11 +161,11 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 
 いくつかの HTML 要素に関連づけられた DOM インターフェイスが、以下のように、 HTML5 仕様で要求されるひとつのインターフェイスに変更されました。
 
-| Firefox 3.6 でのインターフェイス                      | Firefox 4 でのインターフェイス            | HTML 要素                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ----------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [`HTMLSpanElement`](/ja/docs/Web/API/HTMLSpanElement) | [`HTMLElement`](/ja/docs/DOM/HTMLElement) | [`<abbr>`](/ja/docs/Web/HTML/Element/abbr), [`<acronym>`](/ja/docs/Web/HTML/Element/acronym), [`<address>`](/ja/docs/Web/HTML/Element/address), [`<b>`](/ja/docs/Web/HTML/Element/b), [`<bdo>`](/ja/docs/Web/HTML/Element/bdo), [`<big>`](/ja/docs/Web/HTML/Element/big), [`<blink>`](/ja/docs/Web/HTML/Element/blink), [`<center>`](/ja/docs/Web/HTML/Element/center), [`<cite>`](/ja/docs/Web/HTML/Element/cite), [`<code>`](/ja/docs/Web/HTML/Element/code), [`<dd>`](/ja/docs/Web/HTML/Element/dd), [`<dfn>`](/ja/docs/Web/HTML/Element/dfn), [`<dt>`](/ja/docs/Web/HTML/Element/dt), [`<em>`](/ja/docs/Web/HTML/Element/em), [`<i>`](/ja/docs/Web/HTML/Element/i), [`<kbd>`](/ja/docs/Web/HTML/Element/kbd), [`<listing>`](/ja/docs/Web/HTML/Element/listing), [`<nobr>`](/ja/docs/Web/HTML/Element/nobr), [`<plaintext>`](/ja/docs/Web/HTML/Element/plaintext), [`<s>`](/ja/docs/Web/HTML/Element/s), [`<samp>`](/ja/docs/Web/HTML/Element/samp), [`<small>`](/ja/docs/Web/HTML/Element/small), [`<strike>`](/ja/docs/Web/HTML/Element/strike), [`<strong>`](/ja/docs/Web/HTML/Element/strong), [`<sub>`](/ja/docs/Web/HTML/Element/sub), [`<sup>`](/ja/docs/Web/HTML/Element/sup), , [`<tt>`](/ja/docs/Web/HTML/Element/tt), [`<u>`](/ja/docs/Web/HTML/Element/u), [`<var>`](/ja/docs/Web/HTML/Element/var), [`<xmp>`](/ja/docs/Web/HTML/Element/xmp) |
-| [`HTMLDivElement`](/ja/docs/DOM/HTMLDivElement)       | [`HTMLElement`](/ja/docs/DOM/HTMLElement) | [`<noembed>`](/ja/docs/Web/HTML/Element/noembed), [`<noframes>`](/ja/docs/Web/HTML/Element/noframes), [`<noscript>`](/ja/docs/Web/HTML/Element/noscript)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| [`HTMLWBRElement`](/ja/docs/DOM/HTMLWBRElement)       | [`HTMLElement`](/ja/docs/DOM/HTMLElement) | [`<wbr>`](/ja/docs/Web/HTML/Element/wbr)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Firefox 3.6 でのインターフェイス                      | Firefox 4 でのインターフェイス                | HTML 要素                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ----------------------------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [`HTMLSpanElement`](/ja/docs/Web/API/HTMLSpanElement) | [`HTMLElement`](/ja/docs/Web/API/HTMLElement) | [`<abbr>`](/ja/docs/Web/HTML/Element/abbr), [`<acronym>`](/ja/docs/Web/HTML/Element/acronym), [`<address>`](/ja/docs/Web/HTML/Element/address), [`<b>`](/ja/docs/Web/HTML/Element/b), [`<bdo>`](/ja/docs/Web/HTML/Element/bdo), [`<big>`](/ja/docs/Web/HTML/Element/big), [`<blink>`](/ja/docs/Web/HTML/Element/blink), [`<center>`](/ja/docs/Web/HTML/Element/center), [`<cite>`](/ja/docs/Web/HTML/Element/cite), [`<code>`](/ja/docs/Web/HTML/Element/code), [`<dd>`](/ja/docs/Web/HTML/Element/dd), [`<dfn>`](/ja/docs/Web/HTML/Element/dfn), [`<dt>`](/ja/docs/Web/HTML/Element/dt), [`<em>`](/ja/docs/Web/HTML/Element/em), [`<i>`](/ja/docs/Web/HTML/Element/i), [`<kbd>`](/ja/docs/Web/HTML/Element/kbd), [`<listing>`](/ja/docs/Web/HTML/Element/listing), [`<nobr>`](/ja/docs/Web/HTML/Element/nobr), [`<plaintext>`](/ja/docs/Web/HTML/Element/plaintext), [`<s>`](/ja/docs/Web/HTML/Element/s), [`<samp>`](/ja/docs/Web/HTML/Element/samp), [`<small>`](/ja/docs/Web/HTML/Element/small), [`<strike>`](/ja/docs/Web/HTML/Element/strike), [`<strong>`](/ja/docs/Web/HTML/Element/strong), [`<sub>`](/ja/docs/Web/HTML/Element/sub), [`<sup>`](/ja/docs/Web/HTML/Element/sup), , [`<tt>`](/ja/docs/Web/HTML/Element/tt), [`<u>`](/ja/docs/Web/HTML/Element/u), [`<var>`](/ja/docs/Web/HTML/Element/var), [`<xmp>`](/ja/docs/Web/HTML/Element/xmp) |
+| [`HTMLDivElement`](/ja/docs/Web/API/HTMLDivElement)   | [`HTMLElement`](/ja/docs/Web/API/HTMLElement) | [`<noembed>`](/ja/docs/Web/HTML/Element/noembed), [`<noframes>`](/ja/docs/Web/HTML/Element/noframes), [`<noscript>`](/ja/docs/Web/HTML/Element/noscript)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| [`HTMLWBRElement`](/ja/docs/DOM/HTMLWBRElement)       | [`HTMLElement`](/ja/docs/Web/API/HTMLElement) | [`<wbr>`](/ja/docs/Web/HTML/Element/wbr)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 #### 小さな DOM の変更
 
@@ -173,21 +173,21 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 - [`document.createElement()`](/ja/docs/Web/API/Document/createElement) を用いて作成されてドキュメントに追加された [`<script>`](/ja/docs/Web/HTML/Element/script) 要素が、標準で HTML5 仕様に従って動作するようになりました。 `src` 属性で指定されたスクリプトは（順番を調整することはせずに）実行可能になりしだい実行され、`src` 属性で指定されていないスクリプトは同期的に実行されます。`src` 属性を持つ挿入されたスクリプトを挿入された順番で実行するには、`それらに .async=false を指定します。`
 - DOM の [`file`](/ja/docs/Web/API/File) オブジェクトが url プロパティを提供するようになりました。
 - DOM の [`file`](/ja/docs/Web/API/File) オブジェクトに`新しく click()` メソッドが追加されました。
-- XMLHttpRequest で [FormData](/ja/docs/XMLHttpRequest/Using_XMLHttpRequest#Using_FormData_objects) がサポートされました。
+- XMLHttpRequest で [FormData](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#using_formdata_objects) がサポートされました。
 - [`element.isContentEditable`](/ja/docs/Web/API/Element/isContentEditable) プロパティが実装されました。
 - [`document.currentScript`](/ja/docs/Web/API/Document/currentScript) プロパティを用いることで、現在実行されている [`<script>`](/ja/docs/Web/HTML/Element/script) 要素のスクリプトを判別できます。新しく追加された [`element.onbeforescriptexecute`](/ja/docs/Web/API/Element/onbeforescriptexecute) および [`element.onafterscriptexecute`](/ja/docs/Web/API/Element/onafterscriptexecute) イベントは script 要素の実行前後に発生します。
-- [`DragTransfer`](/ja/docs/DragDrop/DataTransfer) オブジェクトに [`mozSourceNode`](/ja/docs/DragDrop/DataTransfer#mozSourceNode) プロパティが追加されました。
-- [`Selection`](/ja/docs/Web/API/Selection) オブジェクトに [`selection.modify()`](/ja/docs/DOM/Selection/modify) メソッドが追加されました。このメソッドを用いると、ブラウザーウィンドウでの現在のテキスト選択範囲あるいはカーソル位置を簡単に変更できます。
+- [`DragTransfer`](/ja/docs/Web/API/DataTransfer) オブジェクトに [`mozSourceNode`](/ja/docs/Web/API/DataTransfer#mozsourcenode) プロパティが追加されました。
+- [`Selection`](/ja/docs/Web/API/Selection) オブジェクトに [`selection.modify()`](/ja/docs/Web/API/Selection/modify) メソッドが追加されました。このメソッドを用いると、ブラウザーウィンドウでの現在のテキスト選択範囲あるいはカーソル位置を簡単に変更できます。
 - `window.directories` オブジェクトと [`window.open`](/ja/docs/Web/API/Window/open) の `directories` 特性（これらは他のブラウザーではサポートされていません）が 削除されました。代わりに `personalbar` を利用してください。[バグ 474058](https://bugzilla.mozilla.org/show_bug.cgi?id=474058)
 - [`event.mozInputSource`](/ja/docs/Web/API/Event/mozInputSource) プロパティが DOM ユーザーインターフェイスイベントに追加されました。この非標準プロパティを用いると、イベントを生成したデバイスのタイプを判別できます。
 - [`document.onreadystatechange`](/ja/docs/Web/API/Document/onreadystatechange) イベントが実装されました。
 - [`document.createElement`](/ja/docs/Web/API/Document/createElement) メソッドが Quirks モードでタグ名の前後の `<` と `>` を受け入れないようになりました。
 - [`element.setCapture()`](/ja/docs/Web/API/Element/setCapture) および[`document.releaseCapture()`](/ja/docs/Web/API/Document/releaseCapture) メソッドが追加され、これらを用いることで、`指定要素で mousedown` イベントが発生した後にマウスが通常の追跡領域を越えても、マウスイベントを追い続けることができます。
-- The [`window.mozPaintCount`](/ja/docs/Web/API/Window/mozPaintCount) プロパティが追加されました。これを用いることで、何回ドキュメントが描画されたかを判定できます。これはウェブアプリケーションのパフォーマンスをテストするときに役立ちます。
-- [`window.navigator.appVersion`](/ja/docs/Web/API/Window/navigator/appVersion) および [`window.navigator.userAgent`](/ja/docs/Web/API/Window/navigator/userAgent) から言語トークンが削除されました。代わりに [`window.navigator.language`](/ja/docs/Web/API/Window/navigator/language) もしくは [Accept-Language ヘッダー](/ja/docs/Content_negotiation) を利用してください。 [バグ 572656](https://bugzilla.mozilla.org/show_bug.cgi?id=572656)
-- [XMLHttpRequest](/ja/docs/XMLHttpRequest) オブジェクトに追加された Gecko 固有の `mozResponseArrayBuffer`プロパティを用いると、レスポンスを文字列と同様 に JavaScript Typed Array として扱えます。
-- [Mouse イベント](/ja/docs/DOM/Event/UIEvent/MouseEvent) に `mozPressure` プロパティが追加されました。このプロパティは圧力感知をサポートする入力デバイスでの圧力を示します。
-- ~~window\.createBlobURL()~~ [`window.URL.createObjectURL()`](/ja/docs/Web/API/Window/URL/createObjectURL) および [`window.URL.revokeObjectURL()`](/ja/docs/Web/API/Window/URL/revokeObjectURL) メソッドを用いることで、ローカルファイルを参照する BLOB ("Binary Large OBject") URL を作成できます。
+- The [`window.mozPaintCount`](/ja/docs/Web/API/Window) プロパティが追加されました。これを用いることで、何回ドキュメントが描画されたかを判定できます。これはウェブアプリケーションのパフォーマンスをテストするときに役立ちます。
+- [`window.navigator.appVersion`](/ja/docs/Web/API/Window/navigator/appVersion) および [`window.navigator.userAgent`](/ja/docs/Web/API/Window/navigator/userAgent) から言語トークンが削除されました。代わりに [`window.navigator.language`](/ja/docs/Web/API/Window/navigator/language) もしくは [Accept-Language ヘッダー](/ja/docs/Web/HTTP/Content_negotiation) を利用してください。 [バグ 572656](https://bugzilla.mozilla.org/show_bug.cgi?id=572656)
+- [XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest) オブジェクトに追加された Gecko 固有の `mozResponseArrayBuffer`プロパティを用いると、レスポンスを文字列と同様 に JavaScript Typed Array として扱えます。
+- [Mouse イベント](/ja/docs/Web/API/MouseEvent) に `mozPressure` プロパティが追加されました。このプロパティは圧力感知をサポートする入力デバイスでの圧力を示します。
+- ~~window\.createBlobURL()~~ [`window.URL.createObjectURL()`](/ja/docs/Web/API/URL/createObjectURL_static) および [`window.URL.revokeObjectURL()`](/ja/docs/Web/API/URL/revokeObjectURL_static) メソッドを用いることで、ローカルファイルを参照する BLOB ("Binary Large OBject") URL を作成できます。
 - [`DOMImplementation.createHTMLDocument()`](/ja/docs/Web/API/DOMImplementation/createHTMLDocument) メソッドを用いることで、新しい HTML 文書を作成できます。
 - [`Node.mozMatchesSelector()`](/ja/docs/Web/API/Node/mozMatchesSelector) が指定セレクター文字列が妥当ではない場合に正しくない `false` を返すのではなく、`SYNTAX_ERR` 例外を投げるようになりました。
 - CSS 同様の省略構文を用いて 要素の SVG プロパティの値を設定できるようになりました。例: `element.style.fill = 'lime'`。詳細は [`element.style`](/ja/docs/Web/API/Element/style) を参照してください。
@@ -199,13 +199,13 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 
 ### セキュリティ
 
-- [Content Security Policy (CSP)](/ja/docs/Introducing_Content_Security_Policy)
+- [Content Security Policy (CSP)](/ja/docs/Web/HTTP/CSP)
   - : Content Security Policy (CSP) は Mozilla が提案するウェブデザイナーとサーバー管理者がウェブサイトの相互利用でどのようなコンテンツを指定するかの仕様です。目的はクロスサイトスクリプティングを含む攻撃とデータインジェクション攻撃を判定し、軽減することです。
-- [HTTP Strict Transport Security](/ja/docs/Security/HTTP_Strict_Transport_Security)
+- [HTTP Strict Transport Security](/ja/docs/Web/HTTP/Headers/Strict-Transport-Security)
   - : HTTP Strict Transport Security はウェブサイトがブラウザーに HTTP を用いる代わりに HTTPS を用いてのみやり取りすべきであることを伝えるセキュリティ機能です。
-- [X-FRAME-OPTIONS レスポンスヘッダー](/ja/docs/The_X-FRAME-OPTIONS_response_header)
+- [X-FRAME-OPTIONS レスポンスヘッダー](/ja/docs/Web/HTTP/Headers/X-Frame-Options)
   - : Internet Explorer 8 で導入された X-FRAME-OPTIONS HTTP レスポンスヘッダーが Firefox でサポートされるようになりました。これを用いることでサイトがページをフレーム内で用いることができるかどうか、フレーム内で利用可能ならば、同じドメイン内に限定するかどうかを指示することができます。
-- [User Agent 文字列](/ja/docs/User_Agent_Strings_Reference) の変更
+- [User Agent 文字列](/ja/docs/Web/HTTP/Headers/User-Agent/Firefox) の変更
   - : [HTTP リクエストで送ったデータとエントロピーの総量を減少させるべき](https://bugzilla.mozilla.org/show_bug.cgi?id=572650)にあるように、 ユーザーエージェント文字列から暗号の強度を表す文字列と言語を表す文字列が削除されました。
 
 ### JavaScript
@@ -214,7 +214,7 @@ JavaScript 1.8.5 で実装される変更の概要については、[JavaScript 
 
 ### 開発者ツール
 
-- [ウェブコンソールの利用](/ja/docs/Using_the_Web_Console)
+- [ウェブコンソールの利用](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
   - : ウェブコンソールツールはウェブ開発者および拡張開発者のデバッグ作業の補助に役立ちます。
 
 > [!NOTE]
@@ -252,7 +252,7 @@ Firefox 4 向けに既存の拡張を更新する上で役立つ Tips は、[Upd
 
 - [`ChromeWorker`](/ja/docs/Web/API/ChromeWorker)
   - : 特権コード向けの新しいタイプの Worker です。これを用いると、拡張およびアプリケーションコードで Worker から [js-ctypes](/ja/docs/js-ctypes) のようなものを用いることができます。
-- [タッチイベント](/ja/docs/DOM/Touch_events)
+- [タッチイベント](/ja/docs/Web/API/Touch_events)
   - : (非標準の) タッチイベントのサポートが追加されました。これを用いると、タッチスクリーン上で同時に複数の指でトラックできます。
 
 ### XUL
@@ -306,7 +306,7 @@ Firefox 4 向けに既存の拡張を更新する上で役立つ Tips は、[Upd
 
 ### 開発者に影響がある UI の変更
 
-- [アドオンバー](/ja/docs/The_add-on_bar)
+- [アドオンバー](/ja/docs/Mozilla/Firefox/Releases/4/The_add-on_bar)
   - : ステータスバーが削除され、新しいアドオンバーに置き換えられました。以前にステータスバーに UI を追加していた拡張は更新する必要があります。
 - [ブラウザーのクロームを隠す](/ja/docs/Hiding_browser_chrome)
   - : ブラウザーのクロームを隠したいときに、隠せるようになりました。例えば、`about:addons` がこれを用いています。
@@ -379,7 +379,7 @@ Firefox 4 向けに既存の拡張を更新する上で役立つ Tips は、[Upd
 - `accessibility.disablecache` 設定はサポートされなくなりました。これはデバッグ目的で公開されており、もはや用いられません。
 - バージョンアップによって GUID が変更になるアドオンが正しく更新されるようになりました。
 - プラットフォーム固有のディレクトリーを削除した副作用として、各プラットフォーム向けに異なった設定を提供することができなくなりました。
-- デフォルトで、拡張はインストール時に展開されなくなりました。その代わりに XPI ファイルから直接実行されます。拡張は古い挙動を選択するために[インストールマニフェスト](/ja/docs/Install_Manifests)内で [unpack](/ja/docs/Install_Manifests#unpack) プロパティを使用できます。バイナリーコンポーネントや、[js-ctypes](/ja/docs/js-ctypes) を利用して読み込まれる DLL、[検索プラグイン](/ja/docs/Creating_OpenSearch_plugins_for_Firefox)、辞書、ウィンドウアイコンは展開される必要があるように指定しなければなりません。[SQLite データベースを生成する](/ja/docs/XUL/School_tutorial/Local_Storage#SQLite)拡張や、拡張ディレクトリーからファイルシステムへ相対的に何かをコピーする拡張も、それらのコードを変更する必要があるかもしれません。
+- デフォルトで、拡張はインストール時に展開されなくなりました。その代わりに XPI ファイルから直接実行されます。拡張は古い挙動を選択するために[インストールマニフェスト](/ja/docs/Install_Manifests)内で [unpack](/ja/docs/Install_Manifests#unpack) プロパティを使用できます。バイナリーコンポーネントや、[js-ctypes](/ja/docs/js-ctypes) を利用して読み込まれる DLL、[検索プラグイン](/ja/docs/Web/OpenSearch)、辞書、ウィンドウアイコンは展開される必要があるように指定しなければなりません。[SQLite データベースを生成する](/ja/docs/XUL/School_tutorial/Local_Storage#SQLite)拡張や、拡張ディレクトリーからファイルシステムへ相対的に何かをコピーする拡張も、それらのコードを変更する必要があるかもしれません。
 - カスタマイズされた Firefox に[アプリケーションスタートアップ時に自動でインストールされる](/ja/docs/Developer_Guide/Customizing_Firefox#Including_extensions_with_your_distribution_of_Firefox)拡張を含められるようになりました。
 
 ## その他の変更

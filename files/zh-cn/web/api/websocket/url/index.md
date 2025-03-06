@@ -17,7 +17,7 @@ var url = aWebSocket.url;
 
 ## 返回值
 
-A [`DOMString`](/zh-CN/docs/Web/API/DOMString).
+A [`DOMString`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String).
 
 ## 规范
 

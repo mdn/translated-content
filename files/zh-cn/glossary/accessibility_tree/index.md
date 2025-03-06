@@ -29,7 +29,7 @@ l10n:
 ## 参见
 
 - [无障碍](/zh-CN/docs/Web/Accessibility)
-- [学习无障碍](/zh-CN/docs/Learn/Accessibility)
+- [学习无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility)
 - 维基百科的 [Web 无障碍](https://zh.wikipedia.org/wiki/网站无障碍)
 - [Web Accessibility In Mind](https://webaim.org/)
 - [无障碍富互联网应用（ARIA）](/zh-CN/docs/Web/Accessibility/ARIA)

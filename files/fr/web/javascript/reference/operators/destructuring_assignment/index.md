@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
 
 L'**affectation par décomposition** (_destructuring_ en anglais) est une expression JavaScript qui permet d'extraire (_unpack_ en anglais) des données d'un tableau ou d'un objet grâce à une syntaxe dont la forme ressemble à la structure du tableau ou de l'objet.
 
-{{EmbedInteractiveExample("pages/js/expressions-destructuringassignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Destructuring assignment")}}
+
+```js interactive-example
+let a, b, rest;
+[a, b] = [10, 20];
+
+console.log(a);
+// Expected output: 10
+
+console.log(b);
+// Expected output: 20
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+
+console.log(rest);
+// Expected output: Array [30, 40, 50]
+```
 
 ## Syntaxe
 
@@ -39,7 +55,7 @@ console.log(rest); // {c: 30, d: 40}
 
 ## Description
 
-Ces expressions utilisant des littéraux pour les [objets](/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux#Litt.C3.A9raux_objets) ou les [tableaux](/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux#Litt.C3.A9raux_de_tableaux) permettent de créer simplement des données regroupées. Une fois créées, on peut les utiliser de n'importe quelle façon, y compris comme valeur renvoyée par une fonction.
+Ces expressions utilisant des littéraux pour les [objets](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#litt.c3.a9raux_objets) ou les [tableaux](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#litt.c3.a9raux_de_tableaux) permettent de créer simplement des données regroupées. Une fois créées, on peut les utiliser de n'importe quelle façon, y compris comme valeur renvoyée par une fonction.
 
 ```js
 const x = [1, 2, 3, 4, 5]; // On crée un "paquet" de données
@@ -154,7 +170,7 @@ Après avoir exécuté ce code, on aura a égal à 1 et b égal à 3. La valeur 
 
 ### Exploiter les résultats d'une expression rationnelle
 
-Lorsque la méthode [`exec()`](/fr/docs/JavaScript/Reference/Objets_globaux/Object/RegExp/Exec), liées aux expressions rationnelles, trouve une correspondance, elle renvoie un tableau qui contient d'abord la partie complète de la chaîne qui correspond puis ensuite les différentes portions correspondant aux différents groupes. L'affectation par décomposition permet de filtrer simplement les valeurs qu'on souhaite exploiter. Ici, on ignore le premier élément qui est la correspondance complète :
+Lorsque la méthode [`exec()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), liées aux expressions rationnelles, trouve une correspondance, elle renvoie un tableau qui contient d'abord la partie complète de la chaîne qui correspond puis ensuite les différentes portions correspondant aux différents groupes. L'affectation par décomposition permet de filtrer simplement les valeurs qu'on souhaite exploiter. Ici, on ignore le premier élément qui est la correspondance complète :
 
 ```js
 function parseProtocol(url) {
@@ -324,7 +340,7 @@ console.log(englishTitle); // "Scratchpad"
 console.log(localeTitle); // "JavaScript-Umgebung"
 ```
 
-### Décomposition et utilisation de [for of](/fr/docs/JavaScript/Référence_JavaScript/Instructions/for...of)
+### Décomposition et utilisation de [for of](/fr/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ```js
 const personnes = [
@@ -388,7 +404,7 @@ Cela permet d'accéder directement à `id`, `displayName` et `firstName` depuis 
 
 ### Les noms de propriétés calculés et la décomposition
 
-Il est possible d'utiliser des noms de propriétés calculés, comme avec les [littéraux objets](/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet#Noms_de_propri.C3.A9t.C3.A9s_calcul.C3.A9s), avec la décomposition.
+Il est possible d'utiliser des noms de propriétés calculés, comme avec les [littéraux objets](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer#noms_de_propri.c3.a9t.c3.a9s_calcul.c3.a9s), avec la décomposition.
 
 ```js
 let clef = "z";
@@ -399,7 +415,7 @@ console.log(toto); // "truc"
 
 ### Syntaxe du « reste » et décomposition d'un objet
 
-[La proposition de décomposition des propriétés et de la syntaxe du reste dans ECMAScript](https://github.com/tc39/proposal-object-rest-spread) ajoute [la syntaxe du reste](/fr/docs/Web/JavaScript/Reference/Fonctions/paramètres_du_reste) pour la décomposition. La propriété du reste permet de collecter les propriétés énumérables restantes qui n'auraient pas été extraites par la décomposition :
+[La proposition de décomposition des propriétés et de la syntaxe du reste dans ECMAScript](https://github.com/tc39/proposal-object-rest-spread) ajoute [la syntaxe du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters) pour la décomposition. La propriété du reste permet de collecter les propriétés énumérables restantes qui n'auraient pas été extraites par la décomposition :
 
 ```js
 let { a, b, ...reste } = { a: 10, b: 20, c: 30, d: 40 };
@@ -444,5 +460,5 @@ console.log(nom); // Bidule
 
 ## Voir aussi
 
-- [Opérateurs d'affectation](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_d_affectation)
+- [Opérateurs d'affectation](/fr/docs/Web/JavaScript/Reference/Operators)
 - [ES6 en détails : La décomposition sur tech.mozfr.org](https://tech.mozfr.org/post/2015/06/05/ES6-en-details-%3A-la-decomposition)

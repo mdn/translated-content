@@ -27,7 +27,7 @@ with (expressão)
 JavaScript procura por um nome não qualificado procurando uma cadeia de escopo associada à execução do contexto do script ou função contendo um nome não qualificado. A declaração 'with' adiciona o dado objeto à frenet dessa cadeia de escopo durante a validação desse corpo de declarações. Se um nome não qualificado usado no corpo for igual ao de uma propriedade na cadeia de escopo, então o nome ficará ligado à propriedade e ao objeto contendo a propriedade. Senão, um {{jsxref("ReferenceError")}} será invocado.
 
 > [!NOTE]
-> Usar `with` não é recomendado, e está probido no [strict mode](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode) do ECMAScript 5. A alternativa recomendada é atribuir o objeto cujas propriedades você quer acessar a uma variável temporária.
+> Usar `with` não é recomendado, e está probido no [strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode) do ECMAScript 5. A alternativa recomendada é atribuir o objeto cujas propriedades você quer acessar a uma variável temporária.
 
 ### Pros & contras de perfomance
 
@@ -89,6 +89,6 @@ with (Math) {
 ## Veja também
 
 - {{jsxref("Statements/block", "block")}}
-- [Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
+- [Strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)
 - {{jsxref("Symbol.unscopables")}}
 - {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}

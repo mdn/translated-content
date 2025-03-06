@@ -28,7 +28,7 @@ slug: Web/XSLT/Element/include
 
 ### 정의
 
-[XSLT section 2.6.1, Stylesheet Inclusion](http://www.w3.org/TR/xslt#include)
+[XSLT section 2.6.1, Stylesheet Inclusion](https://www.w3.org/TR/xslt#include)
 
 ### Gecko 지원
 

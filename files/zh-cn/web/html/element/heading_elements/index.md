@@ -5,7 +5,46 @@ slug: Web/HTML/Element/Heading_Elements
 
 **HTML `<h1>`–`<h6>` 标题 (Heading) 元素**呈现了六个不同的级别的标题，`<h1>` 级别最高，而 `<h6>` 级别最低。
 
-{{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;h1-h6&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Beetles</h1>
+<h2>External morphology</h2>
+<h3>Head</h3>
+<h4>Mouthparts</h4>
+<h3>Thorax</h3>
+<h4>Prothorax</h4>
+<h4>Pterothorax</h4>
+```
+
+```css interactive-example
+h1,
+h2,
+h3,
+h4 {
+  margin: 0.1rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding-left: 20px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  padding-left: 40px;
+}
+
+h4 {
+  font-size: 1rem;
+  font-style: italic;
+  padding-left: 60px;
+}
+```
 
 <table class="properties">
  <tbody>
@@ -182,7 +221,7 @@ Sectioning content can be labeled using a combination of the [`aria-labelledby`]
 
 In this example, screen reading technology would announce that there are two {{HTMLElement("nav")}} sections, one called "Primary navigation" and one called "Footer navigation". If labels were not provided, the person using screen reading software may have to investigate each `nav` element's contents to determine their purpose.
 
-- [Using the aria-labelledby attribute](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
+- [Using the aria-labelledby attribute](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
 
 ## 规范

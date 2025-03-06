@@ -15,7 +15,7 @@ Avec l'API de `gestion` vous pouvez :
 - Découvrez quels sont les alertes des permissions envoyés particulièrement par les modules complémentaires ou les manifest
 - Obtenir les notifications sur l'ajout des modules complémentaires, désinstallé, activé ou désactivé.
 
-La plupart de ces opérations requièrent les [permissions d'APIs](/fr/Add-ons/WebExtensions/manifest.json/permissions) de gestion. Les opérations qui ne fournissent pas d'accès à d'autres modules complémentaires ne nécessitent pas de permissions.
+La plupart de ces opérations requièrent les [permissions d'APIs](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) de gestion. Les opérations qui ne fournissent pas d'accès à d'autres modules complémentaires ne nécessitent pas de permissions.
 
 ## Types
 

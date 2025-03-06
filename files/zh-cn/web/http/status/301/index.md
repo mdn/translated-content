@@ -8,7 +8,7 @@ slug: Web/HTTP/Status/301
 HTTP **`301 Moved Permanently`** 说明请求的资源已经被移动到了由 {{HTTPHeader("Location")}} 头部指定的 url 上，是固定的不会再改变。搜索引擎会根据该响应修正。
 
 > [!NOTE]
-> 尽管[规范](/zh-CN/docs/Web/HTTP/Status/301#规范)要求浏览器在收到该响应并进行重定向时不应该修改 http method 和 body，但并非所有的用户代理都符合此要求。所以最好将 301 状态码用作 {{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}} 方法的响应，而对于 {{HTTPMethod("POST")}} 则改用 {{HTTPStatus("308", "308 Permanent Redirect")}}，因为此状态码会禁止更改请求方法。
+> 尽管[规范](#规范)要求浏览器在收到该响应并进行重定向时不应该修改 http method 和 body，但并非所有的用户代理都符合此要求。所以最好将 301 状态码用作 {{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}} 方法的响应，而对于 {{HTTPMethod("POST")}} 则改用 {{HTTPStatus("308", "308 Permanent Redirect")}}，因为此状态码会禁止更改请求方法。
 
 ## 状态
 

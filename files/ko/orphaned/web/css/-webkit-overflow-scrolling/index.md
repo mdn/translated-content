@@ -74,4 +74,4 @@ p {
 
 ## 같이 보기
 
-- [CSS-Tricks article with demo](http://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/)
+- [CSS-Tricks article with demo](https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/)

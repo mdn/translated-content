@@ -33,10 +33,10 @@ SVG 允许我们定义以后需要重复使用的图形元素。建议把所有�
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/docs/SVG/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/SVG/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -48,7 +48,7 @@ _没有专有属性。_
 
 ## DOM 接口
 
-这个元素实现了 [`SVGDefsElement`](/zh-CN/DOM/SVGDefsElement) 接口。
+这个元素实现了 [`SVGDefsElement`](/zh-CN/docs/DOM/SVGDefsElement) 接口。
 
 ## 浏览器兼容性
 

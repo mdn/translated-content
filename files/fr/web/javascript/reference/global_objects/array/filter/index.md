@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 
 La méthode **`filter()`** crée et retourne un nouveau tableau contenant tous les éléments du tableau d'origine qui remplissent une condition déterminée par la fonction `callback`.
 
-{{EmbedInteractiveExample("pages/js/array-filter.html")}}
+{{InteractiveExample("JavaScript Demo: Array.filter()")}}
+
+```js interactive-example
+const words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+const result = words.filter((word) => word.length > 6);
+
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+```
 
 ## Syntaxe
 
@@ -48,7 +57,7 @@ La fonction `callback` est appelée avec trois arguments :
 2. l'index de l'élément courant,
 3. l'objet `Array` parcouru.
 
-Si le paramètre `thisArg` est fourni, il sera utilisé comme valeur `this` lors de l'appel de la fonction `callback`. S'il n'est pas fourni, la valeur `undefined` sera utilisée à la place. La valeur de `this` qui est finalement utilisée par la fonction `callback` est déterminée selon [les règles usuelles pour déterminer la valeur `this` au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this).
+Si le paramètre `thisArg` est fourni, il sera utilisé comme valeur `this` lors de l'appel de la fonction `callback`. S'il n'est pas fourni, la valeur `undefined` sera utilisée à la place. La valeur de `this` qui est finalement utilisée par la fonction `callback` est déterminée selon [les règles usuelles pour déterminer la valeur `this` au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Operators/this).
 
 Noter que `filter()` ne modifie pas le tableau d'origine.
 
@@ -126,7 +135,7 @@ console.log(filtreTexte(fruits, "m")); // ['pomme', 'mangue'];
 
 ### Implémentation avec la syntaxe ECMAScript 2015 (ES6)
 
-L'exemple suivant utilise [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées), et le mot clé [`const`](/fr/docs/Web/JavaScript/Reference/Instructions/const) disponible en ES6.
+L'exemple suivant utilise [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions), et le mot clé [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) disponible en ES6.
 
 ```js
 const fruits = ["pomme", "banane", "raisin", "mangue"];

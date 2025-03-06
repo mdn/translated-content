@@ -30,7 +30,7 @@ slug: Web/XSLT/Element/namespace-alias
 
 ### 정의
 
-[XSLT section 7.1.1, Literal Result Elements](http://www.w3.org/TR/xslt#literal-result-element)
+[XSLT section 7.1.1, Literal Result Elements](https://www.w3.org/TR/xslt#literal-result-element)
 
 ### Gecko 지원
 

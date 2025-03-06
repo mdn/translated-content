@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp
 
 **`RegExp`** 생성자는 패턴을 사용해 텍스트를 판별할 때 사용합니다.
 
-정규 표현식에 대한 소개는 JavaScript 안내서의 [정규 표현식 장](/ko/docs/Web/JavaScript/Guide/Regular_Expressions)을 참고하세요. 정규 표현식 구문에 대한 더 자세한 정보는 [정규 표현식 참고서](/ko/docs/Web/JavaScript/Reference/Regular_expressions)를 참고하시기 바랍니다.
+정규 표현식에 대한 소개는 JavaScript 안내서의 [정규 표현식 장](/ko/docs/Web/JavaScript/Guide/Regular_expressions)을 참고하세요. 정규 표현식 구문에 대한 더 자세한 정보는 [정규 표현식 참고서](/ko/docs/Web/JavaScript/Reference/Regular_expressions)를 참고하시기 바랍니다.
 
 ## 설명
 
@@ -198,7 +198,7 @@ console.log(regex.lastIndex); // logs '15'
 // and so on
 ```
 
-[유니코드 속성 이스케이프](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) 기능을 사용해 `\p{scx=Cyrl}`과 같은 간단한 구문으로 이 문제를 해결할 수 있습니다.
+[유니코드 속성 이스케이프](/ko/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) 기능을 사용해 `\p{scx=Cyrl}`과 같은 간단한 구문으로 이 문제를 해결할 수 있습니다.
 
 ### URL에서 서브도메인 추출하기
 
@@ -220,6 +220,6 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // logs 'xxx'
 
 ## 같이 보기
 
-- [JavaScript 안내서의 정규 표현식 장](/ko/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [JavaScript 안내서의 정규 표현식 장](/ko/docs/Web/JavaScript/Guide/Regular_expressions)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.replace()")}}

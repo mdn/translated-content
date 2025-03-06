@@ -11,7 +11,7 @@ La propiedad `min-width` se usa para determinar la anchura mínima de un element
 
 - [Valor inicial](/es/docs/Web/CSS/initial_value): 0
 - Aplicable a: elementos de tipo bloque.
-- [Heredable](/es/docs/Web/CSS/inheritance): no
+- [Heredable](/es/docs/Web/CSS/Inheritance): no
 - Porcentajes: se refieren a la anchura del bloque contenedor.
 - Media: {{cssxref("Media/Visual", "visual")}}
 - [Valor calculado](/es/docs/Web/CSS/computed_value):
@@ -51,4 +51,4 @@ form{min-width: 0;}
 
 ### Ver también
 
-[box model](/es/CSS/box_model), {{ Cssxref("min-height") }}, {{ Cssxref("-moz-box-sizing") }}, {{ Cssxref("width") }}, {{ Cssxref("max-width") }}
+[box model](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{ Cssxref("min-height") }}, {{ Cssxref("-moz-box-sizing") }}, {{ Cssxref("width") }}, {{ Cssxref("max-width") }}

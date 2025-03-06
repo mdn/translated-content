@@ -5,9 +5,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/values
 
 {{JSRef}}
 
-La méthode **`values()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs) qui contient les valeurs de chacun des éléments contenu dans l'objet `Map` donné, dans leur ordre d'insertion.
+La méthode **`values()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators) qui contient les valeurs de chacun des éléments contenu dans l'objet `Map` donné, dans leur ordre d'insertion.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-values.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.values")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("0", "foo");
+map1.set(1, "bar");
+
+const iterator1 = map1.values();
+
+console.log(iterator1.next().value);
+// Expected output: "foo"
+
+console.log(iterator1.next().value);
+// Expected output: "bar"
+```
 
 ## Syntaxe
 

@@ -19,7 +19,7 @@ Lorsqu'on utilise un envoi de formulaire HTML standard, comme décrit dans l'art
 
 Une interface utilisateur moderne utilisera généralement des formulaires HTML pour récupérer des données saisies par la personne, pas nécessairement pour les envoyer. Lorsque la personne soumet le formulaire, l'application prend le contrôle et transmet les données en arrière-plan, de façon asynchrone, mettant uniquement à jour les éléments de l'interface qui le nécessitent.
 
-L'envoi de données arbitraires de façon asynchrone est généralement désigné par l'acronyme [AJAX](/fr/docs/Web/Guide/AJAX), qui signifie **<i lang="en">Asynchronous JavaScript And XML</i>** en anglais (qu'on pourrait traduire par «&nbsp;JavaScript et XML asynchrones&nbsp;»).
+L'envoi de données arbitraires de façon asynchrone est généralement désigné par l'acronyme [AJAX](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data), qui signifie **<i lang="en">Asynchronous JavaScript And XML</i>** en anglais (qu'on pourrait traduire par «&nbsp;JavaScript et XML asynchrones&nbsp;»).
 
 ### En quoi est-ce différent&nbsp;?
 
@@ -119,7 +119,7 @@ Construire une requête HTTP manuellement peut s'avérer laborieux. Heureusement
 
 On peut utiliser un objet [`FormData`](/fr/docs/Web/API/FormData) pour construire des données de formulaire à transmettre ou pour obtenir les données provenant d'un formulaire afin de gérer leur envoi.
 
-L'article [Utiliser les objets `FormData`](/fr/docs/Web/API/FormData/Using_FormData_Objects) couvre ce sujet en particulier, mais voici deux exemples&nbsp;:
+L'article [Utiliser les objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects) couvre ce sujet en particulier, mais voici deux exemples&nbsp;:
 
 #### Construire un objet `FormData` autonome
 
@@ -174,7 +174,7 @@ btn.addEventListener("click", () => {
 
 #### Utiliser un objet `FormData` couplé à un élément `<form>`
 
-Il est aussi possible de rattacher un objet `FormData` à un élément [`<form>`](/fr/docs/Web/HTML/Element/Form). On obtient ainsi un objet `FormData` qui représente les données contenues dans le formulaire.
+Il est aussi possible de rattacher un objet `FormData` à un élément [`<form>`](/fr/docs/Web/HTML/Element/form). On obtient ainsi un objet `FormData` qui représente les données contenues dans le formulaire.
 
 ##### HTML
 

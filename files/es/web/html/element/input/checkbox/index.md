@@ -9,7 +9,7 @@ El elemento HTML **`<input type="checkbox">`** es un elemento de entrada que te 
 
 ## Atributos
 
-Este elemento posee los "[atributos globales](/es/docs/HTML/Global_attributes)".
+Este elemento posee los "[atributos globales](/es/docs/Web/HTML/Global_attributes)".
 
 - `checked`
   - : Cuando el valor del atributo **type** es **`checkbox`**, la presencia de este atributo booleano indica que el control se selecciona de forma predeterminada; de lo contrario, se ignora.

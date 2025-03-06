@@ -15,7 +15,7 @@ var protocol = aWebSocket.protocol;
 
 ## 返回值
 
-[`DOMString`](/zh-CN/docs/Web/API/DOMString).
+[`DOMString`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String).
 
 ## 规范
 

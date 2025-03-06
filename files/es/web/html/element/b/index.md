@@ -15,9 +15,9 @@ slug: Web/HTML/Element/b
 
     **Crea una caja**: en línea.
 
-    **Está definido como**: Elemento [de estilo de fuente](/es/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente) y por lo tanto [en línea](/es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).
+    **Está definido como**: Elemento [de estilo de fuente](/es/docs/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente) y por lo tanto [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_l.c3.adnea).
 
-    **Puede contener**: Texto y/o cero o más elementos [en línea](/es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).
+    **Puede contener**: Texto y/o cero o más elementos [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_l.c3.adnea).
 
 ##### Atributos
 
@@ -242,7 +242,7 @@ El inherente a su condición: **negrita.** Prueba el siguiente ejemplo:
 
 ### Notas
 
-- El [W3C](http://html.conclase.net/w3c/html401-es/present/styles.html) (y nosotros) desaconseja el uso de este elemento, para manejar el estilo del texto es mejor usar [CSS](/es/CSS).
+- El [W3C](http://html.conclase.net/w3c/html401-es/present/styles.html) (y nosotros) desaconseja el uso de este elemento, para manejar el estilo del texto es mejor usar [CSS](/es/docs/Web/CSS).
 
 ### Referencia
 

@@ -5,7 +5,7 @@ slug: Web/CSS/Specificity
 
 {{cssref}}
 
-**명시도**란 브라우저가 어느 요소와 가장 연관된 속성을 찾는 수단으로, 이렇게 찾은 속성이 해당 요소에 적용됩니다. 명시도는 여러 종류의 [CSS 선택자](/ko/docs/Web/CSS/CSS_Reference#Selectors)로 구성된 일치 규칙에 기반합니다.
+**명시도**란 브라우저가 어느 요소와 가장 연관된 속성을 찾는 수단으로, 이렇게 찾은 속성이 해당 요소에 적용됩니다. 명시도는 여러 종류의 [CSS 선택자](/ko/docs/Web/CSS/Reference#selectors)로 구성된 일치 규칙에 기반합니다.
 
 ## 어떻게 계산되는가?
 
@@ -334,11 +334,11 @@ h1 {
   - [@규칙](/ko/docs/Web/CSS/At-rule)
   - [주석](/ko/docs/Web/CSS/Comments)
   - [명시도](/ko/docs/Web/CSS/Specificity)
-  - [상속](/ko/docs/Web/CSS/inheritance)
-  - [박스 모델](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [상속](/ko/docs/Web/CSS/Inheritance)
+  - [박스 모델](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [레이아웃 모드](/ko/docs/Web/CSS/Layout_mode)
   - [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
-  - [마진 중첩](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [마진 중첩](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 값
 
     - [초깃값](/ko/docs/Web/CSS/initial_value)

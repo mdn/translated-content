@@ -3,7 +3,7 @@ title: String.prototype.trim()
 slug: Web/JavaScript/Reference/Global_Objects/String/trim
 ---
 
-{{JSRef}}O método **`trim()`** remove os espaços em branco ([whitespaces](/pt-BR/docs/DOM/Referencia_do_DOM/Whitespace_in_the_DOM)) do início e/ou fim de um texto. É considerado espaço em branco (espaço, tabulação, espaço fixo/rígido, etc.) e todo sinal de fim de linha de texto (LF, CR, etc.).
+{{JSRef}}O método **`trim()`** remove os espaços em branco ([whitespaces](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace)) do início e/ou fim de um texto. É considerado espaço em branco (espaço, tabulação, espaço fixo/rígido, etc.) e todo sinal de fim de linha de texto (LF, CR, etc.).
 
 ## Sintaxe
 
@@ -15,7 +15,17 @@ str.trim()
 
 O método `trim()` retorna o texto sem espaços em branco no início e/ou fim da string. O `trim()` não altera o valor da string original.
 
-{{EmbedInteractiveExample("pages/js/string-trim.html")}}
+{{InteractiveExample("JavaScript Demo: String.trim()")}}
+
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trim());
+// Expected output: "Hello world!";
+```
 
 ## Exemplos
 

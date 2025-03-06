@@ -14,8 +14,8 @@ slug: Web/JavaScript/Equality_comparisons_and_sameness
 
 JavaScript 提供三種不同的值比較運算操作：
 
-- 嚴格相等 (或稱 "三等於"、"全等") 使用 [===](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity)
-- 一般相等 ("雙等於") 使用 [==](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality)
+- 嚴格相等 (或稱 "三等於"、"全等") 使用 [===](/zh-TW/docs/Web/JavaScript/Reference/Operators#identity)
+- 一般相等 ("雙等於") 使用 [==](/zh-TW/docs/Web/JavaScript/Reference/Operators#equality)
 - 還有 [`Object.is`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/is) (ECMAScript 2015 新加入)
 
 要用哪個操作取決於你要哪種類型的比較。
@@ -180,7 +180,7 @@ function attemptMutation(v) {
 
 ## 一般相等、嚴格相等和同值相等的規範
 
-在 ES5，一般相等 [`==`](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) 在 [Section 11.9.3, The Abstract Equality Algorithm](https://262.ecma-international.org/5.1/#sec-11.9.3) 中規範。嚴格相等 [`===`](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) 在 [11.9.6, The Strict Equality Algorithm](https://262.ecma-international.org/5.1/#sec-11.9.6)。（可以看看，這很簡短且可讀。註：先讀嚴格相等。）ES5 也在 [Section 9.12, The SameValue Algorithm](https://262.ecma-international.org/5.1/#sec-9.12) 規範 JS 引擎的行為。他幾乎和嚴格相等一樣，除了 11.9.6.4 和 9.12.4 在處理 [`Number`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number) 時的不同。ES2015 簡短的提出了 `Object.is`。
+在 ES5，一般相等 [`==`](/zh-TW/docs/Web/JavaScript/Reference/Operators) 在 [Section 11.9.3, The Abstract Equality Algorithm](https://262.ecma-international.org/5.1/#sec-11.9.3) 中規範。嚴格相等 [`===`](/zh-TW/docs/Web/JavaScript/Reference/Operators) 在 [11.9.6, The Strict Equality Algorithm](https://262.ecma-international.org/5.1/#sec-11.9.6)。（可以看看，這很簡短且可讀。註：先讀嚴格相等。）ES5 也在 [Section 9.12, The SameValue Algorithm](https://262.ecma-international.org/5.1/#sec-9.12) 規範 JS 引擎的行為。他幾乎和嚴格相等一樣，除了 11.9.6.4 和 9.12.4 在處理 [`Number`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number) 時的不同。ES2015 簡短的提出了 `Object.is`。
 
 我們可以發現在 11.9.6.1 中，除了 11.9.6.1 規範型別檢查，嚴格相等規範是從屬於一般相等規範，因為 11.9.6.2–7 和 11.9.3.1.a–f 相應。
 
@@ -219,11 +219,11 @@ ES2015 以後，你或許會將雙等於和三等於解讀成是彼此的「加�
 
 ## When to use [`Object.is`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/is) versus triple equals
 
-Aside from the way it treats [`NaN`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/NaN), generally, the only time [`Object.is`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/is)'s special behavior towards zeros is likely to be of interest is in the pursuit of certain meta-programming schemes, especially regarding property descriptors when it is desirable for your work to mirror some of the characteristics of [`Object.defineProperty`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). If your use case does not require this, it is suggested to avoid [`Object.is`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/is) and use [`===`](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) instead. Even if your requirements involve having comparisons between two [`NaN`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/NaN) values evaluate to `true`, generally it is easier to special-case the [`NaN`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/NaN) checks (using the [`isNaN`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/isNaN) method available from previous versions of ECMAScript) than it is to work out how surrounding computations might affect the sign of any zeros you encounter in your comparison.
+Aside from the way it treats [`NaN`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/NaN), generally, the only time [`Object.is`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/is)'s special behavior towards zeros is likely to be of interest is in the pursuit of certain meta-programming schemes, especially regarding property descriptors when it is desirable for your work to mirror some of the characteristics of [`Object.defineProperty`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). If your use case does not require this, it is suggested to avoid [`Object.is`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/is) and use [`===`](/zh-TW/docs/Web/JavaScript/Reference/Operators) instead. Even if your requirements involve having comparisons between two [`NaN`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/NaN) values evaluate to `true`, generally it is easier to special-case the [`NaN`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/NaN) checks (using the [`isNaN`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/isNaN) method available from previous versions of ECMAScript) than it is to work out how surrounding computations might affect the sign of any zeros you encounter in your comparison.
 
 Here's an in-exhaustive list of built-in methods and operators that might cause a distinction between `-0` and `+0` to manifest itself in your code:
 
-- [`- (unary negation)`](/zh-TW/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29)
+- [`- (unary negation)`](/zh-TW/docs/Web/JavaScript/Reference/Operators#-_.28unary_negation.29)
   - : It's obvious that negating `0` produces `-0`. But the abstraction of an expression can cause `-0` to creep in when you don't realize it. For example, consider:`js let stoppingForce = obj.mass * -obj.velocity` If `obj.velocity` is `0` (or computes to `0`), a `-0` is introduced at that place and propogates out into `stoppingForce`.
 - [`Math.atan2`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2),
   [`Math.ceil`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil),
@@ -237,9 +237,9 @@ Here's an in-exhaustive list of built-in methods and operators that might cause 
   [`Math.sqrt`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt),
   [`Math.tan`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/tan)
   - : It's possible to get a `-0` return value out of these methods in some cases where a `-0` exists as one of the parameters. E.g., `Math.min(-0, +0)` evalutes to `-0`. Refer to the documentation for the individual methods.
-- [`~`](/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators),
-  [`<<`](/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators),
-  [`>>`](/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
+- [`~`](/zh-TW/docs/Web/JavaScript/Reference/Operators),
+  [`<<`](/zh-TW/docs/Web/JavaScript/Reference/Operators),
+  [`>>`](/zh-TW/docs/Web/JavaScript/Reference/Operators)
   - : Each of these operators uses the ToInt32 algorithm internally. Since there is only one representation for 0 in the internal 32-bit integer type, `-0` will not survive a round trip after an inverse operation. E.g., both `Object.is(~~(-0), -0)` and `Object.is(-0 << 2 >> 2, -0)` evaluate to `false`.
 
 Relying on [`Object.is`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/is) when the signedness of zeros is not taken into account can be hazardous. Of course, when the intent is to distinguish between `-0` and `+0`, it does exactly what's desired.

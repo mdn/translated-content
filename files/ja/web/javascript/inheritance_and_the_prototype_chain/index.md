@@ -192,7 +192,7 @@ Box.prototype.getValue = function () {
 const boxes = [new Box(1), new Box(2), new Box(3)];
 ```
 
-`new Box(1)` は `Box` コンストラクター関数から生成された「インスタンス」と言います。 `Box.prototype` は前回作成した `boxPrototype` オブジェクトと大きな違いはなく、ただのオブジェクトです。コンストラクター関数から作成されたインスタンスは、自動的にコンストラクターの [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) プロパティを `[[Prototype]]` として保有します。つまり、 `Object.getPrototypeOf(new Box()) === Box.prototype` となります。 `Constructor.prototype` は既定で [`constructor`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) という自身のプロパティを 1 つ持ち、これがコンストラクター関数自身を参照します。つまり、 `Box.prototype.constructor === Box` になります。これにより、あらゆるインスタンスから元のコンストラクターにアクセスできるようになります。
+`new Box(1)` は `Box` コンストラクター関数から生成された「インスタンス」と言います。 `Box.prototype` は前回作成した `boxPrototype` オブジェクトと大きな違いはなく、ただのオブジェクトです。コンストラクター関数から作成されたインスタンスは、自動的にコンストラクターの [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティを `[[Prototype]]` として保有します。つまり、 `Object.getPrototypeOf(new Box()) === Box.prototype` となります。 `Constructor.prototype` は既定で [`constructor`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) という自身のプロパティを 1 つ持ち、これがコンストラクター関数自身を参照します。つまり、 `Box.prototype.constructor === Box` になります。これにより、あらゆるインスタンスから元のコンストラクターにアクセスできるようになります。
 
 > [!NOTE]
 > コンストラクター関数からプリミティブでない値が返された場合、その値が `new` 式の結果となります。この場合、`[[Prototype]]`は正しく結び付けられていないかもしれませんが、実際にはあまり起こらないはずです。

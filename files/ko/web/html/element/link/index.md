@@ -9,7 +9,16 @@ l10n:
 
 **[HTML](/ko/docs/Web/HTML) `<link>`** 요소는 현재 문서와 외부 리소스의 관계를 명시합니다. `<link>`는 {{glossary("CSS", "스타일 시트")}}를 연결할 때 제일 많이 사용하지만, 사이트 아이콘("파비콘"과 홈 화면 아이콘, 모바일 앱 아이콘) 연결 등 여러가지로 쓰일 수 있습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/link.html")}}
+{{InteractiveExample("HTML Demo: &lt;link&gt;")}}
+
+```html interactive-example
+<link href="/shared-assets/misc/link-element-example.css" rel="stylesheet" />
+
+<p>This text will be red as defined in the external stylesheet.</p>
+<p style="color: blue">
+  The <code>style</code> attribute can override it, though.
+</p>
+```
 
 외부 스타일 시트를 연결하려면 {{htmlelement("head")}} 안에 다음과 같은 `<link>` 요소를 배치하세요.
 
@@ -158,7 +167,7 @@ l10n:
 
 - `crossorigin`
 
-  - : 리소스를 가져올 때 {{glossary("CORS")}}를 사용해야 하는지 나타내는 [열거형](/ko/docs/Glossary/Enumerated) 특성입니다. [CORS 활성화 이미지](/ko/docs/Web/HTML/CORS_Enabled_Image)는 {{HTMLElement("canvas")}} 요소를 "오염"(taint)시키지 않고 재사용할 수 있습니다. 가능한 값은 다음과 같습니다.
+  - : 리소스를 가져올 때 {{glossary("CORS")}}를 사용해야 하는지 나타내는 [열거형](/ko/docs/Glossary/Enumerated) 특성입니다. [CORS 활성화 이미지](/ko/docs/Web/HTML/CORS_enabled_image)는 {{HTMLElement("canvas")}} 요소를 "오염"(taint)시키지 않고 재사용할 수 있습니다. 가능한 값은 다음과 같습니다.
   - `anonymous`
     - : 교차 출처 요청({{HTTPHeader("Origin")}} HTTP 헤더를 가진 요청)을 수행하지만 인증 정보, 즉 쿠키, X.509 인증서, HTTP Basic 인증 중 어떠한 것도 전송하지 않습니다. 서버에서 {{HTTPHeader("Access-Control-Allow-Origin")}} HTTP 헤더를 설정하지 않아서 출처 사이트에 인증 정보를 전달하지 않으면 리소스가 오염되어 사용처가 제한됩니다.
   - `use-credentials`
@@ -186,7 +195,7 @@ l10n:
 - `href`
   - : 연결할 리소스의 {{glossary("URL")}}입니다. 절대와 상대 URL 모두 가능합니다.
 - `hreflang`
-  - : 연결할 리소스가 사용하는 언어입니다. 오직 제안하는 용도로만 사용합니다. 가능한 값은 [RFC 5646(BCP 47)](https://www.ietf.org/rfc/bcp/bcp47.txt)에 따릅니다. [`href`](/ko/docs/Web/HTML/Element/link#href) 특성이 존재할 때만 사용하세요.
+  - : 연결할 리소스가 사용하는 언어입니다. 오직 제안하는 용도로만 사용합니다. 가능한 값은 [RFC 5646(BCP 47)](https://www.ietf.org/rfc/bcp/bcp47.txt)에 따릅니다. [`href`](#href) 특성이 존재할 때만 사용하세요.
 - `imagesizes`
   - : `rel="preload"` 와 `as="image"` 에 한하여, `imagesizes` 특성은 `img` 요소에 사용되는 적절한 리소스를 해당 `srcset` 과 `sizes` 특성으로 preload 하도록 하는 [크기 특성](https://html.spec.whatwg.org/multipage/images.html#sizes-attribute)입니다.
 - `imagesrcset`
@@ -213,7 +222,7 @@ l10n:
     - `unsafe-url` 은 레퍼러에 출처와 경로 (fragment, password, username은 제외)가 포함됨을 의미합니다. 이 경우 TLS로 보호된 리소스의 출처와 경로가 안전하지 않은 출처로 유출될 수 있으므로 안전하지 않습니다.
 
 - `rel`
-  - : 연결할 리소스와 현재 문서의 관계. [링크 유형](/ko/docs/Web/HTML/Link_types)의 값을 공백으로 구분한 리스트를 지정해야 합니다.
+  - : 연결할 리소스와 현재 문서의 관계. [링크 유형](/ko/docs/Web/HTML/Attributes/rel)의 값을 공백으로 구분한 리스트를 지정해야 합니다.
 - `sizes` {{Experimental_Inline}}
 
   - : 리소스에 포함된 시각 매체의 아이콘 크기를 정의합니다.

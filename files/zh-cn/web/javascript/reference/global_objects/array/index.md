@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-与其他编程语言中的数组一样，**`Array`** 对象支持[在单个变量名下存储多个元素](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)，并具有[执行常见数组操作](#示例)的成员。
+与其他编程语言中的数组一样，**`Array`** 对象支持[在单个变量名下存储多个元素](/zh-CN/docs/Learn_web_development/Core/Scripting/Arrays)，并具有[执行常见数组操作](#示例)的成员。
 
 ## 描述
 
@@ -378,7 +378,7 @@ f("a", "b"); // 'a+b'
 本节提供一些 JavaScript 中常见的数组操作示例。
 
 > [!NOTE]
-> 如果你还不熟悉数组的基础知识，可以考虑先读一下 [JavaScript 第一步：数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)，它解释了[数组是什么](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays#数组是什么？)，还包括其他常见的数组操作示例。
+> 如果你还不熟悉数组的基础知识，可以考虑先读一下 [JavaScript 第一步：数组](/zh-CN/docs/Learn_web_development/Core/Scripting/Arrays)，它解释了[数组是什么](/zh-CN/docs/Learn_web_development/Core/Scripting/Arrays#数组是什么？)，还包括其他常见的数组操作示例。
 
 ### 创建数组
 

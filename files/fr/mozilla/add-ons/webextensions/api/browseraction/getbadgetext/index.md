@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeText
 
 Obtient le texte du badge de l'action du navigateur.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -35,7 +35,7 @@ var gettingText = browser.browserAction.getBadgeText(
 
 ### Valeur de retour
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une chaîne contenant le texte du badge.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec une chaîne contenant le texte du badge.
 
 ## Exemples
 

@@ -9,26 +9,26 @@ slug: Web/HTML/Element/form
 
 El elemento HTML form (`<form>`) representa una sección de un documento que contiene controles interactivos que permiten a un usuario enviar información a un servidor web.
 
-Es posible usar las pseudo-clasess de CSS [`:valid`](/es/CSS/%3Avalid) e [`:invalid`](/es/CSS/%3Ainvalid) para darle estilos a un elemento form.
+Es posible usar las pseudo-clasess de CSS [`:valid`](/es/docs/Web/CSS/:valid) e [`:invalid`](/es/docs/Web/CSS/:invalid) para darle estilos a un elemento form.
 
 ## Contexto de uso
 
-| Categorías de contenido | [Contenido dinámico](/en/HTML/Content_categories#flow_content)                                                                                                                        |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido     | [Contenido dinámico](/en/HTML/Content_categories#flow_content), pero sin contener elementos `<form>`                                                                                  |
-| Omisión de etiquetas    | Ninguna, ambas, la etiqueta de apertura y cierre deben estar presentes                                                                                                                |
-| Normative document      | [HTML5, section 4.10.3](http://www.w3.org/TR/html5/forms.html#the-form-element) ([HTML4.01, section 17.3](http://www.w3.org/TR/1999/REC-html401-19991224/interact/forms.html#h-17.3)) |
+| Categorías de contenido | [Contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content)                                                                                                                 |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido     | [Contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content), pero sin contener elementos `<form>`                                                                           |
+| Omisión de etiquetas    | Ninguna, ambas, la etiqueta de apertura y cierre deben estar presentes                                                                                                                  |
+| Normative document      | [HTML5, section 4.10.3](https://www.w3.org/TR/html5/forms.html#the-form-element) ([HTML4.01, section 17.3](https://www.w3.org/TR/1999/REC-html401-19991224/interact/forms.html#h-17.3)) |
 
 ## Atributos
 
-Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/en/HTML/Global_attributes)
+Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/es/docs/Web/HTML/Global_attributes)
 
 - `accept` {{deprecated_inline}}
 
   - : Una lista separada por comas de los tipos de contenido que el servidor acepta.
 
     > [!NOTE]
-    > Eeste atributo ha sido removido en HTML5 y no debe ser usado. En su lugar, usar el atributo **[accept](/es/HTML/Element/Input#attr-accept)** del elemento específico {{ HTMLElement("input") }}.
+    > Eeste atributo ha sido removido en HTML5 y no debe ser usado. En su lugar, usar el atributo **[accept](/es/docs/Web/HTML/Element/Input#attr-accept)** del elemento específico {{ HTMLElement("input") }}.
 
 - `accept-charset`
 
@@ -61,10 +61,10 @@ Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/e
 
 - `method`
 
-  - : El método [HTTP](http://www.w3.org/Protocols/rfc2616/rfc2616.html) que el navegador usa para enviar el formulario. Valores posibles son:
+  - : El método [HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616.html) que el navegador usa para enviar el formulario. Valores posibles son:
 
-    - `post`: Corresponde al [método POST](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) HTTP ; los datos del formulario son incluidos en el cuerpo del formulario y son enviados al servidor.
-    - `get`: Corresponde al [método GET](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3) HTTP; los datos del formulario son adjuntados a la URI del atributo `action` , con un '?' como separador, y la URI resultante es enviada al servidor. Use este método cuando el formulario no tiene efectos secundarios y contiene solo caracteres ASCII.
+    - `post`: Corresponde al [método POST](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) HTTP ; los datos del formulario son incluidos en el cuerpo del formulario y son enviados al servidor.
+    - `get`: Corresponde al [método GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3) HTTP; los datos del formulario son adjuntados a la URI del atributo `action` , con un '?' como separador, y la URI resultante es enviada al servidor. Use este método cuando el formulario no tiene efectos secundarios y contiene solo caracteres ASCII.
 
     Este valor puede ser sobreescrito por un atributo [`formmethod`](/es/docs/Web/HTML/Element/button#formmethod) en un {{ HTMLElement("button") }} o elemento {{ HTMLElement("input") }}.
 
@@ -85,7 +85,7 @@ Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/e
 
 ## Interfaz DOM
 
-Este elemento implementa la interfaz [`HTMLFormElement`](/es/DOM/HTMLFormElement).
+Este elemento implementa la interfaz [`HTMLFormElement`](/es/docs/Web/API/HTMLFormElement).
 
 ## Ejemplos
 

@@ -9,9 +9,9 @@ l10n:
 
 La méthode **`console.profile()`** démarre l'enregistrement d'un profil de performance.
 
-On peut fournir un argument indiquant le nom du profil, ce qui permet d'enregistrer plusieurs profils nommés en parallèle. Voir la documentation de [`console.profileEnd()`](/fr/docs/Web/API/console/profileend_static) pour plus d'informations sur cet argument.
+On peut fournir un argument indiquant le nom du profil, ce qui permet d'enregistrer plusieurs profils nommés en parallèle. Voir la documentation de [`console.profileEnd()`](/fr/docs/Web/API/console/profileEnd_static) pour plus d'informations sur cet argument.
 
-Pour arrêter l'enregistrement du profil, on appellera [`console.profileEnd()`](/fr/docs/Web/API/console/profileend_static).
+Pour arrêter l'enregistrement du profil, on appellera [`console.profileEnd()`](/fr/docs/Web/API/console/profileEnd_static).
 
 {{AvailableInWorkers}}
 
@@ -36,4 +36,4 @@ Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 
 ## Voir aussi
 
-- [`console.profileEnd()`](/fr/docs/Web/API/console/profileend_static)
+- [`console.profileEnd()`](/fr/docs/Web/API/console/profileEnd_static)

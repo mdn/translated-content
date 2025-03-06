@@ -9,7 +9,33 @@ l10n:
 
 El elemento [HTML](/es/docs/Web/HTML) **`<menu>`** se describe en la especificación HTML como una alternativa semántica a {{HTMLElement("ul")}}, pero los navegadores lo tratan (y lo exponen a través del árbol de accesibilidad) como no diferente de {{HTMLElement("ul")}}. Representa una lista desordenada de elementos (que están representados por elementos {{HTMLElement("li")}}).
 
-{{EmbedInteractiveExample("pages/tabbed/menu.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;menu&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<div class="news">
+  <a href="#">NASA’s Webb Delivers Deepest Infrared Image of Universe Yet</a>
+  <menu>
+    <li><button id="save">Save for later</button></li>
+    <li><button id="share">Share this news</button></li>
+  </menu>
+</div>
+```
+
+```css interactive-example
+.news {
+  background-color: bisque;
+  padding: 1em;
+  border: solid thin black;
+}
+
+menu {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin-bottom: 0;
+  gap: 1em;
+}
+```
 
 ## Atributos
 

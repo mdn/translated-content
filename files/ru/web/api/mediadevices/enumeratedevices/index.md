@@ -62,7 +62,7 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 
 ## Разрешения
 
-Что бы использовать метод `enumerateDevices()` в устанавливаемом приложении (к примеру в [Firefox OS приложение](/en-US/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)), необходимо указать оба поля внутри файла манифеста приложения:
+Что бы использовать метод `enumerateDevices()` в устанавливаемом приложении (к примеру в [Firefox OS приложение](/ru/docs/Web/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)), необходимо указать оба поля внутри файла манифеста приложения:
 
 ```js
 "permissions": {
@@ -75,7 +75,7 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 }
 ```
 
-Смотрите также : [разрешение: аудио захват](/en-US/Apps/Developing/App_permissions#audio-capture) and [разрешение : видео захват](/en-US/Apps/Developing/App_permissions#video-capture) в продолжение темы.
+Смотрите также : [разрешение: аудио захват](/ru/docs/Web/Apps/Developing/App_permissions#audio-capture) and [разрешение : видео захват](/ru/docs/Web/Apps/Developing/App_permissions#video-capture) в продолжение темы.
 
 ## Спецификации
 
@@ -88,6 +88,6 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 ## Смотрите также
 
 - [navigator.mediaDevices.getUserMedia](/ru/docs/Web/API/MediaDevices/getUserMedia)
-- [WebRTC](/ru/docs/WebRTC) - the introductory page to the API
-- [MediaStream API](/ru/docs/WebRTC/MediaStream_API) - the API for the media stream objects
-- [Taking webcam photos](/ru/docs/WebRTC/taking_webcam_photos) - a tutorial on using `getUserMedia() for taking photos rather than video.`
+- [WebRTC](/ru/docs/Web/API/WebRTC_API) - the introductory page to the API
+- [MediaStream API](/ru/docs/Web/API/Media_Capture_and_Streams_API) - the API for the media stream objects
+- [Taking webcam photos](/ru/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - a tutorial on using `getUserMedia() for taking photos rather than video.`

@@ -9,13 +9,47 @@ slug: Web/HTML/Element/input/radio
 
 在给定单选组中，同时只可以选择一个选项。单选按钮通常渲染为小圆圈，当选中该选项时，圆圈被填充或高亮。
 
-{{EmbedInteractiveExample("pages/tabbed/input-radio.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;radio&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<fieldset>
+  <legend>Select a maintenance drone:</legend>
+
+  <div>
+    <input type="radio" id="huey" name="drone" value="huey" checked />
+    <label for="huey">Huey</label>
+  </div>
+
+  <div>
+    <input type="radio" id="dewey" name="drone" value="dewey" />
+    <label for="dewey">Dewey</label>
+  </div>
+
+  <div>
+    <input type="radio" id="louie" name="drone" value="louie" />
+    <label for="louie">Louie</label>
+  </div>
+</fieldset>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 它们被称为单选按钮，因为它们的外观和操作方式与老式无线电上的按钮类似，如下图所示。
 
 ![旧时收音机上的按钮。](old-radio.jpg)
 
-> **备注：** [复选框](/zh-CN/docs/Web/HTML/Element/Input/checkbox)类似于单选按钮，但是有个重要的区别——单选按钮为选择集合中的其中一项而设计，然而复选框允许决定单个值的选定情况。当多个控件存在时，单选按钮允许选择其中的一个，而多选按钮允许选择其中多个。
+> **备注：** [复选框](/zh-CN/docs/Web/HTML/Element/input/checkbox)类似于单选按钮，但是有个重要的区别——单选按钮为选择集合中的其中一项而设计，然而复选框允许决定单个值的选定情况。当多个控件存在时，单选按钮允许选择其中的一个，而多选按钮允许选择其中多个。
 
 ## 值
 
@@ -273,7 +307,7 @@ button:active {
 }
 ```
 
-这里最值得注意的是 {{cssxref("appearance")}} 属性的使用（为了支持某些浏览器，需要加前缀）。默认情况下，单选按钮（和[复选框](/zh-CN/docs/Web/HTML/Element/Input/checkbox)）的样式使用了操作系统对这些控件的本地样式。通过指定 `appearance: none`，你可以完全删除本地样式，并为它们创建自己的样式。这里我们使用了 {{cssxref("border")}} 和 {{cssxref("border-radius")}}，以及 {{cssxref("transition")}} 来创建一个漂亮的带动画单选。请注意 {{cssxref(":checked")}} 伪类是如何用来指定单选按钮被选中时的外观样式的。
+这里最值得注意的是 {{cssxref("appearance")}} 属性的使用（为了支持某些浏览器，需要加前缀）。默认情况下，单选按钮（和[复选框](/zh-CN/docs/Web/HTML/Element/input/checkbox)）的样式使用了操作系统对这些控件的本地样式。通过指定 `appearance: none`，你可以完全删除本地样式，并为它们创建自己的样式。这里我们使用了 {{cssxref("border")}} 和 {{cssxref("border-radius")}}，以及 {{cssxref("transition")}} 来创建一个漂亮的带动画单选。请注意 {{cssxref(":checked")}} 伪类是如何用来指定单选按钮被选中时的外观样式的。
 
 > [!NOTE]
 > 如果你想使用 {{cssxref("appearance")}} 属性，你需要小心测试。即使大多数流行浏览器都支持它，它的实现变化很广。在老式浏览器中，即使是关键字 `none`，不同浏览器之间差异也很大，有些浏览器根本不支持。在新的浏览器中，差别就会小得多。
@@ -335,4 +369,4 @@ button:active {
 
 - {{HTMLElement("input")}} 和实现它的 {{domxref("HTMLInputElement")}} 接口。
 - {{domxref("RadioNodeList")}}：描述一系列单选按钮的接口
-- [CSS 属性兼容性](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性兼容性](/zh-CN/docs/Learn_web_development/Extensions/Forms)

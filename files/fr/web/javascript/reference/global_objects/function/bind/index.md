@@ -5,9 +5,26 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 {{JSRef}}
 
-La méthode **`bind()`** crée une nouvelle fonction qui, lorsqu'elle est appelée, a pour contexte [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this) la valeur passée en paramètre et éventuellement une suite d'arguments qui précéderont ceux fournis à l'appel de la fonction créée.
+La méthode **`bind()`** crée une nouvelle fonction qui, lorsqu'elle est appelée, a pour contexte [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) la valeur passée en paramètre et éventuellement une suite d'arguments qui précéderont ceux fournis à l'appel de la fonction créée.
 
-{{EmbedInteractiveExample("pages/js/function-bind.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Function.bind()", "taller")}}
+
+```js interactive-example
+const module = {
+  x: 42,
+  getX: function () {
+    return this.x;
+  },
+};
+
+const unboundGetX = module.getX;
+console.log(unboundGetX()); // The function gets invoked at the global scope
+// Expected output: undefined
+
+const boundGetX = unboundGetX.bind(module);
+console.log(boundGetX());
+// Expected output: 42
+```
 
 ## Syntaxe
 

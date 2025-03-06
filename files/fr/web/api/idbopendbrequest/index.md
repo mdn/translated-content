@@ -88,7 +88,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Démarrage de transactions : {{domxref("IDBDatabase")}}
 - Utilisation de transactions : {{domxref("IDBTransaction")}}
 - Définition un intervalle de clés : {{domxref("IDBKeyRange")}}

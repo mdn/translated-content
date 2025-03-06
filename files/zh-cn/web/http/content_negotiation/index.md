@@ -25,7 +25,7 @@ slug: Web/HTTP/Content_negotiation
 
 ## 服务端驱动型内容协商机制
 
-在*服务端驱动型内容协商*或者主动内容协商中，浏览器（或者其他任何类型的用户代理）会随同 URL 发送一系列的 HTTP 标头。这些标头描述了用户倾向的选择。服务器则以此为线索，通过内部算法来选择最佳方案提供给客户端。如果它不能提供一个合适的资源，它可能使用 {{HTTPStatus("406")}}（Not Acceptable）、{{HTTPStatus("415")}}（Unsupported Media Type）进行响应并为其支持的媒体类型设置标头（例如，分别对 POST 和 PATCH 请求使用 {{HTTPHeader("Accept-Post")}} 或 {{HTTPHeader("Accept-Patch")}} 标头）。相关算法与具体的服务器相关，并没有在规范中进行规定。例如这里有一份 [Apache 服务器的内容协商算法](http://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm)。
+在*服务端驱动型内容协商*或者主动内容协商中，浏览器（或者其他任何类型的用户代理）会随同 URL 发送一系列的 HTTP 标头。这些标头描述了用户倾向的选择。服务器则以此为线索，通过内部算法来选择最佳方案提供给客户端。如果它不能提供一个合适的资源，它可能使用 {{HTTPStatus("406")}}（Not Acceptable）、{{HTTPStatus("415")}}（Unsupported Media Type）进行响应并为其支持的媒体类型设置标头（例如，分别对 POST 和 PATCH 请求使用 {{HTTPHeader("Accept-Post")}} 或 {{HTTPHeader("Accept-Patch")}} 标头）。相关算法与具体的服务器相关，并没有在规范中进行规定。例如这里有一份 [Apache 服务器的内容协商算法](https://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm)。
 
 ![客户端请求一个 URL，其中标头表示对内容类型的偏好。服务器有多个由 URL 表示的资源并根据偏好的语言发回内容，然后根据客户端的请求标头压缩请求主体](httpnegoserver.png)
 

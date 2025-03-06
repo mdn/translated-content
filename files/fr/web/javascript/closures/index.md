@@ -436,4 +436,4 @@ MonObjet.prototype.getMessage = function () {
 };
 ```
 
-Les deux derniers exemples permettent de voir que le prototype hérité est partagé par tous les objets construits et que les méthodes n'ont pas besoin d'être reconstruites pour chaque création d'objet. Veuillez consulter la page sur [le modèle objet JavaScript en détails](/fr/docs/Web/JavaScript/Guide/Le_modèle_objet_JavaScript_en_détails) pour plus d'informations.
+Les deux derniers exemples permettent de voir que le prototype hérité est partagé par tous les objets construits et que les méthodes n'ont pas besoin d'être reconstruites pour chaque création d'objet. Veuillez consulter la page sur [le modèle objet JavaScript en détails](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) pour plus d'informations.

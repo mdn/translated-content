@@ -28,9 +28,9 @@ Cette propriété s'avère utile pour les pages qui contiennent de nombreux comp
 > [!NOTE]
 > Lorsqu'elle est appliquée avec une valeur `paint`, `strict` ou `content`, cette propriété crée :
 >
-> - un nouveau [bloc englobant](/fr/docs/Web/CSS/A_Propos_Du_Bloc_Conteneur) (le bloc servant de référence pour les éléments fils dont la position sera absolue ou `fixed`)
-> - un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Comprendre_z-index/Empilement_de_couches)
-> - un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/Block_formatting_context).
+> - un nouveau [bloc englobant](/fr/docs/Web/CSS/Containing_block) (le bloc servant de référence pour les éléments fils dont la position sera absolue ou `fixed`)
+> - un nouveau [contexte d'empilement](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+> - un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context).
 
 ## Syntaxe
 

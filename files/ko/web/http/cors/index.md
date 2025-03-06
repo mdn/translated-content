@@ -11,7 +11,7 @@ l10n:
 
 교차 출처 요청의 예시: `https://domain-a.com` 에서 제공되는 프론트엔드 JavaScript 코드가 {{domxref("Window/fetch", "fetch()")}}를 사용하여 `https://domain-b.com/data.json` 에 요청하는 경우.
 
-보안 상의 이유로 브라우저는 스크립트에서 시작한 교차 출처 HTTP 요청을 제한합니다. 예를 들어, `fetch()` 와 {{domxref("XMLHttpRequest")}} 는 [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)을 따릅니다. 이는 이러한 API를 사용하는 웹 애플리케이션이 애플리케이션이 로드된 동일한 출처에서만 리소스를 요청할 수 있으며, 다른 출처의 응답에 올바른 CORS 헤더가 포함되어 있지 않는 한 그렇지 못하다는 것을 의미합니다.
+보안상의 이유로 브라우저는 스크립트에서 시작한 교차 출처 HTTP 요청을 제한합니다. 예를 들어, `fetch()` 와 {{domxref("XMLHttpRequest")}} 는 [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)을 따릅니다. 이는 이러한 API를 사용하는 웹 애플리케이션이 애플리케이션이 로드된 동일한 출처에서만 리소스를 요청할 수 있으며, 다른 출처의 응답에 올바른 CORS 헤더가 포함되어 있지 않는 한 그렇지 못하다는 것을 의미합니다.
 
 ![Diagrammatic representation of CORS mechanism](https://mdn.github.io/shared-assets/images/diagrams/http/cors/fetching-page-cors.svg)
 
@@ -22,7 +22,7 @@ CORS 메커니즘은 브라우저와 서버 간의 안전한 교차 출처 요�
 이 [교차 출처 공유 표준](https://fetch.spec.whatwg.org/#http-cors-protocol)은 다음과 같은 경우에 교차 출처 HTTP 요청을 가능하게 합니다.
 
 - 위에서 언급한 `fetch()` 또는 `XMLHttpRequest`의 호출.
-- 웹 폰트(CSS 내 `@font-face`에서 교차 도메인 폰트 사용 시), [서버가 교차 출처로만 로드될 수 있고 허가된 웹사이트에서만 사용할 수 있는 TrueType 폰트를 배포할 수 있게 합니다.](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
+- 웹 폰트(CSS 내 `@font-face`에서 교차 도메인 폰트 사용 시), [서버가 교차 출처로만 로드될 수 있고 허가된 웹사이트에서만 사용할 수 있는 True Type 폰트를 배포할 수 있게 합니다.](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
 - [WebGL 텍스쳐](/ko/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 - {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}}를 사용해 캔버스에 그린 이미지/비디오 프레임.
 - [이미지로부터 추출하는 CSS Shapes.](/ko/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
@@ -31,7 +31,7 @@ CORS 메커니즘은 브라우저와 서버 간의 안전한 교차 출처 요�
 
 ## 기능적 개요
 
-교차 출처 리소스 공유 표준은 서버가 웹 브라우저에서 해당 정보를 읽는 것이 허용된 출처를 설명할 수 있도록 새로운 [HTTP 헤더](/ko/docs/Web/HTTP/Headers)를 추가함으로써 동작합니다. 추가적으로, 서버 데이터에 부수 효과(side effect)를 일으킬 수 있는 HTTP 요청 방법(특히 {{HTTPMethod("GET")}} 이외의 HTTP 메서드 또는 특정 [MIME 타입](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types)을 사용하는 {{HTTPMethod("POST")}})에 대해서, CORS 명세는 브라우저가 HTTP {{HTTPMethod("OPTIONS")}} 메서드로 서버에서 지원하는 메서드들을 요구하는 요청을 "사전 전달(프리플라이트)"한 다음, 서버로부터 "승인"을 받은 후 실제 요청을 보내도록 지시합니다. 또한 서버는 요청과 함께 "자격 증명"(예를 들어 [쿠키](/ko/docs/Web/HTTP/Cookies) 및 [HTTP 인증](/ko/docs/Web/HTTP/Authentication))을 전송해야 하는지 여부를 클라이언트에게 알릴 수 있습니다.
+교차 출처 리소스 공유 표준은 서버가 웹 브라우저에서 해당 정보를 읽는 것이 허용된 출처를 설명할 수 있도록 새로운 [HTTP 헤더](/ko/docs/Web/HTTP/Headers)를 추가함으로써 동작합니다. 추가적으로, 서버 데이터에 부수 효과(side effect)를 일으킬 수 있는 HTTP 요청 방법(특히 {{HTTPMethod("GET")}} 이외의 HTTP 메서드 또는 특정 [MIME 타입](/ko/docs/Web/HTTP/MIME_types)을 사용하는 {{HTTPMethod("POST")}})에 대해서, CORS 명세는 브라우저가 HTTP {{HTTPMethod("OPTIONS")}} 메서드로 서버에서 지원하는 메서드들을 요구하는 요청을 "사전 전달(프리플라이트)"한 다음, 서버로부터 "승인"을 받은 후 실제 요청을 보내도록 지시합니다. 또한 서버는 요청과 함께 "자격 증명"(예를 들어 [쿠키](/ko/docs/Web/HTTP/Cookies) 및 [HTTP 인증](/ko/docs/Web/HTTP/Authentication))을 전송해야 하는지 여부를 클라이언트에게 알릴 수 있습니다.
 
 CORS 실패는 오류를 발생시키지만, 보안상의 이유로 오류에 대한 세부 사항은 JavaScript에 제공되지 않습니다. 코드가 알 수 있는 것은 오류가 발생했다는 것뿐입니다. 무엇이 구체적으로 잘못되었는지를 확인하려면 브라우저의 콘솔에서 세부 사항을 살펴봐야 합니다.
 
@@ -55,7 +55,7 @@ CORS 실패는 오류를 발생시키지만, 보안상의 이유로 오류에 �
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
-- 유저 에이전트가 자동으로 설정한 헤더(예를들어, {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}}, [Fetch 명세에서 "forbidden header name"으로 정의한 헤더](https://fetch.spec.whatwg.org/#forbidden-header-name)) 외에, 수동으로 설정할 수 있는 헤더는 오직 [Fetch 명세에서 "CORS-safelisted request-header"로 정의한 헤더](https://fetch.spec.whatwg.org/#cors-safelisted-request-header) 뿐입니다.
+- 사용자 에이전트가 자동으로 설정한 헤더(예를 들어, {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}}, [Fetch 명세에서 "forbidden header name"으로 정의한 헤더](https://fetch.spec.whatwg.org/#forbidden-header-name)) 외에, 수동으로 설정할 수 있는 헤더는 오직 [Fetch 명세에서 "CORS-safelisted request-header"로 정의한 헤더](https://fetch.spec.whatwg.org/#cors-safelisted-request-header) 뿐입니다.
 
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
@@ -81,7 +81,7 @@ CORS 실패는 오류를 발생시키지만, 보안상의 이유로 오류에 �
 >
 > 이 부분은 CORS 명세가 아니기 때문에 다른 브라우저에는 이러한 추가 제한 사항이 없습니다.
 
-예를 들어 `https://foo.example`의 웹 콘텐츠가 `https://bar.other` 도메인에서 JSON 콘텐츠를 가져오고자 한다고 가정해봅시다. 이러한 종류의 코드는 `foo.example`에 배포된 JavaScript에서 사용될 수 있습니다.
+예를 들어 `https://foo.example`의 웹 콘텐츠가 `https://bar.other` 도메인에서 JSON 콘텐츠를 가져오고자 한다고 가정해 봅시다. 이러한 종류의 코드는 `foo.example`에 배포된 JavaScript에서 사용될 수 있습니다.
 
 ```js
 const fetchPromise = fetch("https://bar.other");
@@ -203,7 +203,7 @@ Access-Control-Request-Method: POST
 Access-Control-Request-Headers: content-type,x-pingother
 ```
 
-{{HTTPHeader("Access-Control-Request-Method")}} 헤더는 사전 요청의 일부로써 서버에게 실제 요청이 전송될 때 `POST` 요청 메서드를 사용할 것임을 알립니다. {{HTTPHeader("Access-Control-Request-Headers")}} 헤더는 실제 요청이 전송될 때 사용자 정의 헤더 `X-PINGOTHER` 와 `Content-Type` 를 사용할 것임을 서버에게 알립니다. 이제 서버는 이러한 조건 하에서 요청을 수락할 수 있는지 여부를 결정할 기회를 갖게 됩니다.
+{{HTTPHeader("Access-Control-Request-Method")}} 헤더는 사전 요청의 일부로써 서버에게 실제 요청이 전송될 때 `POST` 요청 메서드를 사용할 것임을 알립니다. {{HTTPHeader("Access-Control-Request-Headers")}} 헤더는 실제 요청이 전송될 때 사용자 정의 헤더 `X-PINGOTHER` 와 `Content-Type` 를 사용할 것임을 서버에게 알립니다. 이제 서버는 이러한 조건에서 요청을 수락할 수 있는지 결정할 기회를 얻게 됩니다.
 
 위 두 번째 블록은 서버가 반환하는 응답으로, 요청 메서드(`POST`)와 요청 헤더(`X-PINGOTHER`)가 허용된다는 것을 나타냅니다. 이어지는 내용을 자세히 살펴보겠습니다.
 
@@ -216,9 +216,9 @@ Access-Control-Max-Age: 86400
 
 서버는 `Access-Control-Allow-Origin: https://foo.example` 헤더로 응답하여 요청을 보낸 출처 도메인만 접근 가능하도록 제한합니다. 또한 `Access-Control-Allow-Methods` 헤더로 응답하여 `POST` 와 `GET` 메서드가 해당 리소스를 요청하는 데 유효한 메서드임을 나타냅니다(이 헤더는 {{HTTPHeader("Allow")}} 응답 헤더와 유사하지만, 접근 제어 맥락 내에서 엄격하게 사용됩니다).
 
-서버는 또한 `Access-Control-Allow-Headers` 헤더에 "`X-PINGOTHER, Content-Type`" 값을 설정하여 보내 이 헤더들이 실제 요청에 사용할 수 있는 허용된 헤더임을 확인해줍니다. `Access-Control-Allow-Methods` 와 마찬가지로 `Access-Control-Allow-Headers` 는 허용 가능한 헤더의 쉼표로 구분합니다.
+서버는 또한 `Access-Control-Allow-Headers` 헤더에 "`X-PINGOTHER, Content-Type`" 값을 설정하여 보내 이 헤더들이 실제 요청에 사용할 수 있는 허용된 헤더임을 확인해 줍니다. `Access-Control-Allow-Methods` 와 마찬가지로 `Access-Control-Allow-Headers` 는 허용 가능한 헤더의 쉼표로 구분합니다.
 
-마지막으로, {{HTTPHeader("Access-Control-Max-Age")}} 는 또 다른 사전 요청을 보내지 않도록 사전 요청에 대한 응답을 얼마나 오래동안 캐시할 수 있는지 초 단위 시간 값을 제공합니다. 기본 값은 5초입니다. 현재 최대 캐시 시간은 86400초(= 24시간)입니다. 각 브라우저는 `Access-Control-Max-Age` 가 이를 초과할 때 우선되는 [최대 내부 값](/ko/docs/Web/HTTP/Headers/Access-Control-Max-Age)을 가집니다.
+마지막으로, {{HTTPHeader("Access-Control-Max-Age")}} 는 또 다른 사전 요청을 보내지 않도록 사전 요청에 대한 응답을 얼마나 오랫동안 캐시할 수 있는지 초 단위 시간 값을 제공합니다. 기본 값은 5초입니다. 현재 최대 캐시 시간은 86400초(= 24시간)입니다. 각 브라우저는 `Access-Control-Max-Age` 가 이를 초과할 때 우선되는 [최대 내부 값](/ko/docs/Web/HTTP/Headers/Access-Control-Max-Age)을 가집니다.
 
 사전 요청이 한번 완료되면 실제 요청이 전송됩니다.
 
@@ -340,7 +340,7 @@ Content-Type: text/plain
 CORS 사전 요청에는 자격 증명이 절대로 포함되지 않아야 합니다. 사전 요청에 대한 응답은 실제 요청이 자격 증명과 함께 수행될 수 있음을 나타내기 위해 `Access-Control-Allow-Credentials: true` 를 명시해야 합니다.
 
 > [!NOTE]
-> 알부 기업 인증 서비스는 사전 요청할 때 TLS 클라이언트 인증서을 보내는 것을 요청합니다. 이는 [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) 사양에 어긋나는 동작입니다.
+> 일부 기업 인증 서비스는 사전 요청할 때 TLS 클라이언트 인증서를 보내는 것을 요청합니다. 이는 [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) 사양에 어긋나는 동작입니다.
 >
 > 파이어폭스(Firefox)87 는 `network.cors_preflight.allow_client_cert` 을 `true` 으로 설정하여 이 비표준 동작을 활성화하는 것을 허용합니다.([Firefox bug 1511151](https://bugzil.la/1511151)) 현재 Chromium 기반 브라우저는 CORS 사전 요청에서 항상 TLS 클라이언트 인증서를 전송합니다 ([Chrome bug 775438](https://crbug.com/775438)).
 
@@ -382,9 +382,9 @@ CORS 응답에 설정된 쿠키는 일반적인 서드 파티(third-party) 쿠�
 Access-Control-Allow-Origin: <origin> | *
 ```
 
-`Access-Control-Allow-Origin` 은 단일 출처를 지정하여 브라우저가 해당 출처가 리소스에 접근하도록 허용합니다. 또는 자격 증명이 **없는** 요청의 경우 "`*`" 와일드 카드는 브라우저의 origin에 상관없이 모든 리소스에 접근하도록 허용합니다.
+`Access-Control-Allow-Origin` 은 단일 출처를 지정하여 브라우저가 해당 출처가 리소스에 접근하도록 허용합니다. 또는 자격 증명이 **없는** 요청의 경우 "`*`" 와일드카드는 브라우저의 origin에 상관없이 모든 리소스에 접근하도록 허용합니다.
 
-예를 들어 `https://mozilla.org` 의 코드가 리소스에 접근 할 수 있도록 하려면 다음과 같이 지정할 수 있습니다.
+예를 들어 `https://mozilla.org` 의 코드가 리소스에 접근할 수 있도록 하려면 다음과 같이 지정할 수 있습니다.
 
 ```http
 Access-Control-Allow-Origin: https://mozilla.org
@@ -417,7 +417,7 @@ Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
 Access-Control-Max-Age: <delta-seconds>
 ```
 
-`delta-seconds` 파라미터는 결과를 캐시할 수 있는 시간(초)를 나타냅니다.
+`delta-seconds` 파라미터는 결과를 캐시할 수 있는 시간(초)을 나타냅니다.
 
 ### Access-Control-Allow-Credentials
 

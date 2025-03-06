@@ -9,7 +9,23 @@ slug: Web/HTML/Element/a
 
 `<a>` 中的内容*应该*指明链接的目标。如果存在 `href` 属性，当 `<a>` 元素聚焦时按下回车键就会激活它。
 
-{{EmbedInteractiveExample("pages/tabbed/a.html")}}
+{{InteractiveExample("HTML Demo: &lt;a&gt;")}}
+
+```html interactive-example
+<p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul>
+```
+
+```css interactive-example
+li {
+  margin-bottom: 0.5rem;
+}
+```
 
 ## 属性
 
@@ -23,7 +39,7 @@ slug: Web/HTML/Element/a
 
       - {{HTTPHeader("Content-Disposition")}} HTTP 标头。
       - URL [路径](/zh-CN/docs/Web/API/URL/pathname)的最后一段。
-      - {{Glossary("MIME_type", "媒体类型")}}。来自 {{HTTPHeader("Content-Type")}} 标头，[`data:` URL](/zh-CN/docs/Web/URI/Schemes/data) 的开头，或 [`blob:` URL](/zh-CN/docs/Web/API/URL/createObjectURL_static) 的 {{domxref("Blob.type")}}。
+      - {{Glossary("MIME_type", "媒体类型")}}。来自 {{HTTPHeader("Content-Type")}} 标头，[`data:` URL](/zh-CN/docs/Web/URI/Reference/Schemes/data) 的开头，或 [`blob:` URL](/zh-CN/docs/Web/API/URL/createObjectURL_static) 的 {{domxref("Blob.type")}}。
 
     - `filename`：决定文件名的值。`/` 和 `\` 被转化为下划线（`_`）。文件系统可能会阻止文件名中其他的字符，因此浏览器会在必要时适当调整文件名。
 
@@ -41,7 +57,7 @@ slug: Web/HTML/Element/a
   - : 超链接所指向的 URL。链接不限于基于 HTTP 的 URL——它们可以使用浏览器支持的任何 URL 协议：
 
     - 使用文档片段链接到页面的某一段
-    - 使用[文本片段](/zh-CN/docs/Web/URI/Fragment/Text_fragments)链接到某一段文字
+    - 使用[文本片段](/zh-CN/docs/Web/URI/Reference/Fragment/Text_fragments)链接到某一段文字
     - 使用媒体片段链接到某个媒体文件
     - 使用 `tel:` URL 链接到一个电话号码
     - 使用 `mailto:` URL 链接到一个邮箱地址
@@ -57,7 +73,7 @@ slug: Web/HTML/Element/a
 
     - `no-referrer`：{{HTTPHeader("Referer")}} 标头将不会被发送。
     - `no-referrer-when-downgrade`：如果没有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}），{{HTTPHeader("Referer")}} 头将不会被发送到{{Glossary("origin","源")}}上。
-    - `origin`：发送的 referrer 将被限制在其页面的来源：[协议](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host","主机")}}和{{Glossary("port","端口")}}。
+    - `origin`：发送的 referrer 将被限制在其页面的来源：[协议](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host","主机")}}和{{Glossary("port","端口")}}。
     - `origin-when-cross-origin`：发送到其他源的 referrer 将只包含协议、主机和端口，而导航到相同的源仍将包括路径。
     - `same-origin`：将向[同源](/zh-CN/docs/Glossary/Same-origin_policy)地址发送 referrer，但跨源请求不包含 referrer 信息。
     - `strict-origin`：当协议安全级别保持不变（HTTPS→HTTPS）时，只将文档的来源作为 referrer 发送，但不要将其发送到安全性较低的目的地（HTTPS→HTTP）。
@@ -97,7 +113,7 @@ slug: Web/HTML/Element/a
   - : 在定义一个可能的目标位置时曾经是必需的。在 HTML 4.01 规范中，`<a>` 元素可以同时使用 `id` 和 `name`，只要它们有相同的值。
 
     > [!NOTE]
-    > 使用全局属性 [`id`](/zh-CN/docs/HTML/Global_attributes#id) 来代替。
+    > 使用全局属性 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 来代替。
 
 - `rev` {{Deprecated_Inline}}
   - : 指定一个反向链接；与 [`rel` 属性](#rel)作用相反。因为非常混乱而被废弃。
@@ -171,7 +187,7 @@ a {
 
 {{EmbedLiveSample('链接到 email 地址')}}
 
-有关 `mailto:` URL 协议的更多细节，比如如何包含主题、正文，或其他预定内容，参考 [Email 链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_链接)或 {{RFC(6068)}}。
+有关 `mailto:` URL 协议的更多细节，比如如何包含主题、正文，或其他预定内容，参考 [Email 链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links#email_链接)或 {{RFC(6068)}}。
 
 ### 链接到电话号码
 
@@ -520,4 +536,4 @@ document
 - {{CSSxRef(":link")}} 是一个 CSS 伪类，将匹配 `<a>` 元素，其 `href` 属性中的 URL 用户尚未访问。
 - {{CSSxRef(":visited")}} 是一个 CSS 伪类，将匹配 `<a>` 元素，其 `href` 属性中的 URL 被用户在过去访问过。
 - {{CSSxRef(":any-link")}} 是一个 CSS 伪类，将匹配带有 `href` 属性的 `<a>` 元素。
-- [文本片段](/zh-CN/docs/Web/URI/Fragment/Text_fragments)是添加到 URL 的用户代理指令，允许内容作者链接到页面上的特定文本，而不需要 ID。
+- [文本片段](/zh-CN/docs/Web/URI/Reference/Fragment/Text_fragments)是添加到 URL 的用户代理指令，允许内容作者链接到页面上的特定文本，而不需要 ID。

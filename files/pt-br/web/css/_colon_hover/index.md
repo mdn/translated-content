@@ -1,5 +1,5 @@
 ---
-title: ":hover"
+title: :hover
 slug: Web/CSS/:hover
 ---
 
@@ -30,7 +30,7 @@ User agents visuais como Firefox, Internet Explorer, Safari, Opera ou Chrome, ap
 
 ### Menu dropdown
 
-Com a pseudo-classe`:hover`você pode criar algoritmos complexos de cascata. Esta é uma técnica comumente usada, por exemplo, para criar **menus dropdown com CSS** puro (apenas utilizando CSS, sem usar [JavaScript](/pt-Br/JavaScript)). A essência desta técnica é criação de uma regra como a seguinte:
+Com a pseudo-classe`:hover`você pode criar algoritmos complexos de cascata. Esta é uma técnica comumente usada, por exemplo, para criar **menus dropdown com CSS** puro (apenas utilizando CSS, sem usar [JavaScript](/pt-BR/docs/Web/JavaScript)). A essência desta técnica é criação de uma regra como a seguinte:
 
 ```css
 div.menu-bar ul ul {
@@ -81,7 +81,7 @@ Veja nosso [exemplo de menu dropdown baseado em CSS](css_dropdown_menu.html) par
 Você pode usar a pseudo-classe `:hover` para construir uma galeria de imagem, exibindo imagens full-size apenas quando o mouse passa sobre as imagens. Veja [esse exemplo](css-gallery.zip) para uma possível dica.
 
 > [!NOTE]
-> Para efeitos análogos, mas baseado na pseudo-classe [`:checked`](/pt-BR/CSS/%3Achecked) (aplicada para esconder radioboxes), veja [esse demo](css-checked-gallery.zip), tirado desta página [En/CSS/:checked.](/pt-BR/CSS/%3Achecked)
+> Para efeitos análogos, mas baseado na pseudo-classe [`:checked`](/pt-BR/docs/CSS/%3Achecked) (aplicada para esconder radioboxes), veja [esse demo](css-checked-gallery.zip), tirado desta página [En/CSS/:checked.](/pt-BR/docs/CSS/%3Achecked)
 
 ## Especificações
 

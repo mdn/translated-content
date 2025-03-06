@@ -16,7 +16,7 @@ _无障碍_（Accessibility，缩写：**A11Y**）意味着让尽可能多的人
 ## 参见
 
 - [无障碍](/zh-CN/docs/Web/Accessibility)
-- [学习无障碍](/zh-CN/docs/Learn/Accessibility)
+- [学习无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility)
 - [无障碍富互联网应用（ARIA）](/zh-CN/docs/Web/Accessibility/ARIA)
 - 维基百科的 [Web 无障碍](https://zh.wikipedia.org/wiki/网站无障碍)
 - W3C 上的 [Web 无障碍倡议（WAI）](https://www.w3.org/WAI/)

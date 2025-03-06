@@ -322,4 +322,4 @@ npm run serve
 
 이것이 튜토리얼의 끝입니다. 우리는 당신이 이것이 쓸모있다는 것을 알게 되었길 기대합니다.
 
-여기에 많은 흥미로운 작업이 진행되고 있습니다. 이것을 좀 더 낫게 만들고 싶다면, [the Rust Webassembly Working Group](http://fitzgeraldnick.com/2018/02/27/wasm-domain-working-group.html)을 확인해보세요.
+여기에 많은 흥미로운 작업이 진행되고 있습니다. 이것을 좀 더 낫게 만들고 싶다면, [the Rust Webassembly Working Group](https://fitzgeraldnick.com/2018/02/27/wasm-domain-working-group.html)을 확인해보세요.

@@ -79,7 +79,7 @@ HTML 内でリファラーポリシーを設定することもできます。例
 <a href="http://example.com" referrerpolicy="origin"></a>
 ```
 
-他に、 `noreferrer` [link 関係](/ja/docs/Web/HTML/Link_types)を `a`, `area`, `link` の各要素に設定することもできます。
+他に、 `noreferrer` [link 関係](/ja/docs/Web/HTML/Attributes/rel)を `a`, `area`, `link` の各要素に設定することもできます。
 
 ```html
 <a href="http://example.com" rel="noreferrer"></a>

@@ -8,7 +8,7 @@ slug: Web/API/Streams_API/Using_readable_streams
 JavaScript 개발자로서, 프로그래밍적으로 네트워크로부터 받은 데이터 스트림을 Chunk단위로 읽고 다루는 것은 매우 유용합니다! 그러나 어떻게 스트림 API의 Readable stream을 잘 사용할수 있을까요. 이번 내용은 그것을 설명하고 있습니다.
 
 > [!NOTE]
-> This article assumes that you understand the use cases of readable streams, and are aware of the high-level concepts. If not, we suggest that you first read the [Streams concepts and usage overview](/ko/docs/Web/API/Streams_API#Concepts_and_usage) and dedicated [Streams API concepts](/ko/docs/Web/API/Streams_API/Concepts) article, then come back.
+> This article assumes that you understand the use cases of readable streams, and are aware of the high-level concepts. If not, we suggest that you first read the [Streams concepts and usage overview](/ko/docs/Web/API/Streams_API#concepts_and_usage) and dedicated [Streams API concepts](/ko/docs/Web/API/Streams_API/Concepts) article, then come back.
 
 > [!NOTE]
 > If you are looking for information on writable streams try [Using writable streams](/ko/docs/Web/API/Streams_API/Using_writable_streams) instead.

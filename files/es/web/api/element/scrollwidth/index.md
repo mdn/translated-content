@@ -91,4 +91,4 @@ _xScrollWidth_ es el ancho del contenido de _element_ en pixels.
 
 - {{domxref("Element.clientWidth")}}
 - {{domxref("HTMLElement.offsetWidth")}}
-- [Determinando las dimensiones de elementos](/es/docs/Determining_the_dimensions_of_elements)
+- [Determinando las dimensiones de elementos](/es/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

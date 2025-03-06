@@ -8,7 +8,7 @@ slug: Web/API/HTMLElement/style
 La propriété en lecture seule **`style`** renvoie le style _en incise_ d'un élément sous la forme d'un objet [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration) contenant une liste de l'ensemble des propriétés de style pour cet élément dont les valeurs sont celles des attributs défini par [l'attribut HTML `style`](/fr/docs/Web/HTML/Global_attributes/style).
 
 > [!NOTE]
-> Voir [la référence des propriétés CSS](/fr/docs/Web/CSS/CSS_Properties_Reference) pour une liste des propriétés CSS accessibles `style`. La propriété `style` possède la même priorité (la plus haute) dans la cascade que les déclarations de mise en forme effectuées en incise avec l'attribut `style`.
+> Voir [la référence des propriétés CSS](/fr/docs/Web/CSS/Reference#index_des_mots-clés) pour une liste des propriétés CSS accessibles `style`. La propriété `style` possède la même priorité (la plus haute) dans la cascade que les déclarations de mise en forme effectuées en incise avec l'attribut `style`.
 
 ## Valeur
 

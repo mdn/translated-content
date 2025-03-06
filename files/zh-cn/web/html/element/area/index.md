@@ -7,7 +7,7 @@ slug: Web/HTML/Element/area
 
 _HTML `<area>` 元素 在图片上定义一个热点区域，可以关联一个超链接。\<area>元素仅在\<map>元素内部使用。_
 
-- _[内容分类](/zh-CN/docs/HTML/Content_categories)_ [流内容](/zh-CN/docs/HTML/Content_categories#Flow_content), [短语内容](/zh-CN/docs/HTML/Content_categories#Phrasing_content).
+- _[内容分类](/zh-CN/docs/Web/HTML/Content_categories)_ [流内容](/zh-CN/docs/Web/HTML/Content_categories#flow_content), [短语内容](/zh-CN/docs/Web/HTML/Content_categories#phrasing_content).
 - *允许的内容*它是一个空的元素不允许嵌套任何子元素或者文本。
 - *标签省略*只能允许有开始标签不允许有结束标签。
 - _允许的父元素_ \<area>元素必须拥有一个\<map>元素祖先元素，但不一定是直接的父元素。
@@ -28,7 +28,7 @@ _HTML `<area>` 元素 在图片上定义一个热点区域，可以关联一个�
 - `href`
   - : area 的超链接，值为一个 URL. HTML4 里，这个值不管是不是有值都要明确指定出来。HTML5 里则不需要。
 - `hreflang`
-  - : 指明链接资源的语言类型，值的范围参考[BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt). 这个属性只能在指明 href 属性之后使用。
+  - : 指明链接资源的语言类型，值的范围参考[BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt). 这个属性只能在指明 href 属性之后使用。
 - `name` {{Deprecated_Inline}}
   - : 为可点击区域定义一个名字以使旧浏览器解析。
 - `media`

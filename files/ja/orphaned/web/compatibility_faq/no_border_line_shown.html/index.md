@@ -50,4 +50,4 @@ slug: orphaned/Web/Compatibility_FAQ/No_Border_Line_Shown.html
 - 他のブラウザーでも互換性を維持することができます。
   - 作成者の把握できていないブラウザー独自の装飾をリセットすることで作成時の想定に近いコンテンツが作成できます。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

@@ -20,7 +20,7 @@ TypeError: Right-hand side of 'instanceof' is not callable (Chrome)
 
 ## Quel est le problème ?
 
-L'opérateur [`instanceof`](/fr/docs/Web/JavaScript/Reference/Opérateurs/instanceof) attend un opérande droit qui soit un objet constructeur, c'est-à-dire un objet possédant une propriété `prototype` et qui puisse être appelé.
+L'opérateur [`instanceof`](/fr/docs/Web/JavaScript/Reference/Operators/instanceof) attend un opérande droit qui soit un objet constructeur, c'est-à-dire un objet possédant une propriété `prototype` et qui puisse être appelé.
 
 ## Exemples
 
@@ -36,7 +36,7 @@ x instanceof f; // TypeError: invalid 'instanceof' operand f
 x instanceof x; // TypeError: x is not a function
 ```
 
-Pour corriger ces erreurs, il faut remplacer l'opérateur `instanceof` avec l'opérateur [`typeof`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_typeof) ou s'assurer que l'opérande droit est la fonction et non le résultat de son évaluation.
+Pour corriger ces erreurs, il faut remplacer l'opérateur `instanceof` avec l'opérateur [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof) ou s'assurer que l'opérande droit est la fonction et non le résultat de son évaluation.
 
 ```js example-good
 typeof "test" == "string"; // true
@@ -52,5 +52,5 @@ x instanceof Toto; // true
 
 ## Voir aussi
 
-- L'opérateur [`instanceof`](/fr/docs/Web/JavaScript/Reference/Opérateurs/instanceof)
-- L'opérateur [`typeof`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_typeof)
+- L'opérateur [`instanceof`](/fr/docs/Web/JavaScript/Reference/Operators/instanceof)
+- L'opérateur [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof)

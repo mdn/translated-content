@@ -27,10 +27,10 @@ O elemento `circle` é uma forma básica do SVG, utilizada para criar círculos 
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing) »
-- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
-- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent) »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
+- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#conditionalproccessing) »
+- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#graphicalevent) »
+- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

@@ -7,19 +7,37 @@ slug: Web/HTML/Element/wbr
 
 HTML-элемент **`<wbr>`** предоставляет возможность переноса слова – позицию в тексте, где браузер может по желанию разбить строку, в противном случае его правила разрыва строки не будут создавать разрыв в этом месте.
 
-{{EmbedInteractiveExample("pages/tabbed/wbr.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;wbr&gt;", "tabbed-shorter")}}
 
-| Категории контента    | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content). |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое | Отсутствует                                                                                                                                                 |
-| Пропуск тегов         | It is an {{Glossary("empty element")}}; it must have a start tag, but must not have an end tag.                                                             |
-| Допустимые родители   | Любой элемент принимающий [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                  |
-| Допустимые ARIA-роли  | Любые                                                                                                                                                       |
-| DOM-интерфейс         | {{domxref("HTMLElement")}}                                                                                                                                  |
+```html interactive-example
+<div id="example-paragraphs">
+  <p>Fernstraßenbauprivatfinanzierungsgesetz</p>
+  <p>Fernstraßen<wbr />bau<wbr />privat<wbr />finanzierungs<wbr />gesetz</p>
+  <p>Fernstraßen&shy;bau&shy;privat&shy;finanzierungs&shy;gesetz</p>
+</div>
+```
+
+```css interactive-example
+#example-paragraphs {
+  background-color: white;
+  overflow: hidden;
+  resize: horizontal;
+  width: 9rem;
+  border: 2px dashed #999;
+}
+```
+
+| Категории контента    | [Основной поток](/ru/docs/Web/HTML/Content_categories#flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content). |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое | Отсутствует                                                                                                                                     |
+| Пропуск тегов         | It is an {{Glossary("empty element")}}; it must have a start tag, but must not have an end tag.                                                 |
+| Допустимые родители   | Любой элемент принимающий [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                            |
+| Допустимые ARIA-роли  | Любые                                                                                                                                           |
+| DOM-интерфейс         | {{domxref("HTMLElement")}}                                                                                                                      |
 
 ## Атрибуты
 
-**Элемент может содержать только [глобальные атрибуты](/ru/docs/HTML/Global_attributes).**
+**Элемент может содержать только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).**
 
 ## Примечания
 

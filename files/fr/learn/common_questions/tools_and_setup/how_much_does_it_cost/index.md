@@ -65,7 +65,7 @@ Vous pouvez utiliser n'importe lequel de ces éditeurs. Leurs fonctionnalités s
 
 Si vous souhaitez intégrer des éléments audio ou vidéo dans votre site, vous pourrez utiliser des services en ligne (par exemple YouTube, Vimeo ou Dailymotion) pour intégrer les vidéos depuis ces sites ou vous pourrez créer ves propres vidéos (voir ci-après quant à la bande passante).
 
-Pour éditer des fichiers audio, il existe des logiciels gratuits ([Audacity](http://audacity.sourceforge.net/?lang=en), [Wavosaur](http://www.wavosaur.com/)) ou d'autres qui coûtent quelques centaines d'euros ([Sony Sound Forge](http://www.sonycreativesoftware.com/soundforge), [Adobe Audition](http://www.adobe.com/products/audition.html)). Les logiciels d'édition vidéo peuvent être gratuits ([PiTiVi](http://www.pitivi.org/), [OpenShot](http://www.openshot.org/) pour Linux, [iMovie](https://www.apple.com/mac/imovie/) pour Mac), coûter moins d'une centaine d'euros ([Adobe Premiere Elements](https://www.adobe.com/us/products/premiere-elements.html)) ou coûter plusieurs centaines d'euros ([Adobe Premiere Pro](https://www.adobe.com/products/premiere.html), [Avid Media Composer](http://www.avid.com/US/products/family/Media-Composer), [Final Cut Pro](https://www.apple.com/final-cut-pro/)). Le logiciel qui est fourni avec votre caméra peut également parfaitement subvenir à vos besoins.
+Pour éditer des fichiers audio, il existe des logiciels gratuits ([Audacity](http://audacity.sourceforge.net/?lang=en), [Wavosaur](http://www.wavosaur.com/)) ou d'autres qui coûtent quelques centaines d'euros ([Sony Sound Forge](http://www.sonycreativesoftware.com/soundforge), [Adobe Audition](https://www.adobe.com/products/audition.html)). Les logiciels d'édition vidéo peuvent être gratuits ([PiTiVi](http://www.pitivi.org/), [OpenShot](http://www.openshot.org/) pour Linux, [iMovie](https://www.apple.com/mac/imovie/) pour Mac), coûter moins d'une centaine d'euros ([Adobe Premiere Elements](https://www.adobe.com/us/products/premiere-elements.html)) ou coûter plusieurs centaines d'euros ([Adobe Premiere Pro](https://www.adobe.com/products/premiere.html), [Avid Media Composer](http://www.avid.com/US/products/family/Media-Composer), [Final Cut Pro](https://www.apple.com/final-cut-pro/)). Le logiciel qui est fourni avec votre caméra peut également parfaitement subvenir à vos besoins.
 
 ##### Outils de publication : client {{Glossary("FTP")}}
 
@@ -152,7 +152,7 @@ Selon les réponses à ces questions, votre site peut coûter entre quelques mil
 
 ## Prochaines étapes
 
-Maintenant que la question du coût est résolue, il est temps de commencer à concevoir ce site web et de [préparer un environnement de travail](/fr/docs/Learn/Set_up_a_basic_working_environment).
+Maintenant que la question du coût est résolue, il est temps de commencer à concevoir ce site web et de [préparer un environnement de travail](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
 
-- Vous pouvez lire [cet article sur comment choisir et installer un éditeur de texte](/fr/Apprendre/Choisir_installer_paramétrer_un_éditeur_de_texte).
-- Si vous souhaitez en savoir plus sur les aspects de conception, vous pouvez [décortiquer l'anatomie d'une page web](/fr/Apprendre/Concevoir_page_web).
+- Vous pouvez lire [cet article sur comment choisir et installer un éditeur de texte](/fr/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors).
+- Si vous souhaitez en savoir plus sur les aspects de conception, vous pouvez [décortiquer l'anatomie d'une page web](/fr/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts).

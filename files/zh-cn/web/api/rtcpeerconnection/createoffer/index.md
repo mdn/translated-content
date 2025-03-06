@@ -18,13 +18,13 @@ createOffer(successCallback, failureCallback, options) // 已弃用
 ### 参数
 
 - 选项 {{optional_inline}}
-  - : [`RTCOfferOptions`](#RTCOfferOptions_dictionary) 词典提供要约所要求的选项。
+  - : [`RTCOfferOptions`](#rtcofferoptions_dictionary) 词典提供要约所要求的选项。
 
 #### RTCOfferOptions 词典
 
 `RTCOfferOptions` 词典被用于自定义通过此方法创建 offer。
 
-- [`iceRestart`](/zh-CN/docs/Web/API/RTCOfferOptions/iceRestart) {{optional_inline}}
+- [`iceRestart`](/zh-CN/docs/Web/API/RTCPeerConnection/createOffer) {{optional_inline}}
   - : 要在活动连接上重新启动 ICE，请将其设置为`true`。这将导致返回的 offer 与已经存在的凭证不同。如果你应用返回的 offer，则 ICE 将重新启动。指定`false`以保留相同的凭据，因此不重新启动 ICE。默认值为`false`。
 - `offerToReceiveAudio` {{optional_inline}} (Legacy)
 
@@ -57,7 +57,7 @@ createOffer(successCallback, failureCallback, options) // 已弃用
 - `errorCallback` {{deprecated_inline}}
   - : {{domxref("RTCPeerConnectionErrorCallback")}}将会传递给一个{{domxref("DOMException")}}对象，该对象说明了创建 offer 的请求失败的原因。
 - `options` {{optional_inline}}
-  - : 可选的[`RTCOfferOptions`](#RTCOfferOptions_dictionary)词典，提供 offer 所要求的选项。
+  - : 可选的[`RTCOfferOptions`](#rtcofferoptions_dictionary)词典，提供 offer 所要求的选项。
 
 ### 返回值
 
@@ -79,7 +79,7 @@ createOffer(successCallback, failureCallback, options) // 已弃用
 在这里，我们看到了 {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} 事件的处理程序，该处理程序创建了要约，并通过信令通道将其发送到远程系统。
 
 > [!NOTE]
-> 请记住，这是信令过程的一部分，传输层的实现细节完全由你决定。在这种情况下，[WebSocket](/zh-CN/docs/Web/API/WebSocket_API)连接用于向其他端点发送带有值为“video-offer”的类型字段的{{Glossary("JSON")}}消息。传递给`sendToServer()`函数的对象的内容，以及承诺履行处理程序中的所有其他内容，完全取决于你的设计。
+> 请记住，这是信令过程的一部分，传输层的实现细节完全由你决定。在这种情况下，[WebSocket](/zh-CN/docs/Web/API/WebSockets_API)连接用于向其他端点发送带有值为“video-offer”的类型字段的{{Glossary("JSON")}}消息。传递给`sendToServer()`函数的对象的内容，以及承诺履行处理程序中的所有其他内容，完全取决于你的设计。
 
 ```js
 myPeerConnection

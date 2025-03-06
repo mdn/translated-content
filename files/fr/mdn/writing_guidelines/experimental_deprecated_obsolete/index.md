@@ -131,7 +131,7 @@ Il existe souvent du contenu utile sur un sujet donné en dehors de MDN. Toutefo
 
 Sur le plan technique, les moteurs de recherche ont tendance à pénaliser le classement d'un site qui reproduit du contenu existant par ailleurs. Il est donc préférable d'avoir du contenu original sur MDN pour veiller au bon référencement. On peut tout à fait ajouter des liens vers du contenu externe.
 
-Sur le plan légal, il faut être autorisé à contribuer au contenu et il doit être sous une licence et une attribution compatible avec [celle de MDN](/fr/docs/MDN/About#copyrights_and_licenses).
+Sur le plan légal, il faut être autorisé à contribuer au contenu et il doit être sous une licence et une attribution compatible avec [celle de MDN](/fr/docs/MDN/Writing_guidelines#copyrights_and_licenses).
 
 - **Si vous avez créé le contenu en question** (pour votre propre intérêt et en dehors de tout travail rémunéré) et que vous souhaitez contribuer à MDN sous la licence de MDN, c'est la situation la plus simple, n'hésitez pas à contribuer avec ce contenu.
 - **Si les droits d'auteur du contenu appartiennent à quelqu'un d'autre**, il devra être sous une licence et attribué de façon compatible avec la licence de MDN. Il n'est souvent pas facile de déterminer la compatibilité entre deux licences sans bagage juridique. Pour ne pas prendre de risque inutile, vous pouvez contacter quelqu'un de l'équipe MDN sur [le canal MDN](https://chat.mozilla.org/#/room/#mdn:mozilla.org) sur [Matrix](https://wiki.mozilla.org/Matrix) ou sur le forum de discussion [Discourse](https://discourse.mozilla.org/c/mdn).

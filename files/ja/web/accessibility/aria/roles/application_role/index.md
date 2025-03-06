@@ -17,7 +17,7 @@ slug: Web/Accessibility/ARIA/Roles/application_role
 
 このモードでは、ウェブ作成者は、キーボード入力、フォーカス管理、その他のインタラクションを全て処理する責任があり、支援技術が最終的に何らかの処理を行うとは想定できません。
 
-アプリケーション (`application`) ロールに包まれるウェブアプリケーションに、通常のウェブコンテンツと同様に扱われるべき部分が含まれている場合は、文書 ([`document`](/ja/docs/Web/Accessibility/ARIA/Roles/Document_Role)) ロールや記事 ([`article`](/ja/docs/Web/Accessibility/ARIA/Roles/Article_Role)) ロールを使用するべきです。
+アプリケーション (`application`) ロールに包まれるウェブアプリケーションに、通常のウェブコンテンツと同様に扱われるべき部分が含まれている場合は、文書 ([`document`](/ja/docs/Web/Accessibility/ARIA/Roles/document_role)) ロールや記事 ([`article`](/ja/docs/Web/Accessibility/ARIA/Roles/article_role)) ロールを使用するべきです。
 
 ### 背景
 
@@ -31,7 +31,7 @@ slug: Web/Accessibility/ARIA/Roles/application_role
 
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 
-- [`document`](/ja/docs/Web/Accessibility/ARIA/Roles/Document_Role), [`article`](/ja/docs/Web/Accessibility/ARIA/Roles/Article_Role)
+- [`document`](/ja/docs/Web/Accessibility/ARIA/Roles/document_role), [`article`](/ja/docs/Web/Accessibility/ARIA/Roles/article_role)
   - : 通常のウェブコンテンツとして扱われるべきアプリケーションの部分を示すために使用します。
 - aria-activedescendant
   - : アプリケーション内でのフォーカスの管理に使用します。

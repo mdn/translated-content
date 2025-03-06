@@ -41,7 +41,7 @@ slug: Web/SVG/Element/style
 
 ### 全局属性
 
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
 
 ### 专有属性
 
@@ -51,7 +51,7 @@ slug: Web/SVG/Element/style
 
 ## DOM 接口
 
-该元素实现了 [`SVGStyleElement`](/zh-CN/DOM/SVGStyleElement) 接口。
+该元素实现了 [`SVGStyleElement`](/zh-CN/docs/DOM/SVGStyleElement) 接口。
 
 ## 浏览器兼容性
 
@@ -59,4 +59,4 @@ slug: Web/SVG/Element/style
 
 ## 参见
 
-- [HTML 中的 `<style>` 元素](/zh-CN/HTML/Element/style)
+- [HTML 中的 `<style>` 元素](/zh-CN/docs/HTML/Element/style)

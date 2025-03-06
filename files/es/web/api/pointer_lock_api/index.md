@@ -195,7 +195,7 @@ function lockChangeAlert() {
 }
 ```
 
-La función `updatePosition()` actualiza la posición de la bola en el lienzo (`x` e `y`), y también incluye sentencias `if ()` para comprobar si la bola se ha salido de los bordes del lienzo. Si es así, hace que la bola se desplace hasta el borde opuesto. También incluye una comprobación de si se ha hecho previamente una llamada a [`requestAnimationFrame()`](/es/docs/Web/API/window/requestAnimationFrame), y si es así, la llama de nuevo si es necesario, y llama a la función `canvasDraw()` que actualiza la escena del lienzo. También se configura un rastreador para escribir los valores X e Y en la pantalla, como referencia.
+La función `updatePosition()` actualiza la posición de la bola en el lienzo (`x` e `y`), y también incluye sentencias `if ()` para comprobar si la bola se ha salido de los bordes del lienzo. Si es así, hace que la bola se desplace hasta el borde opuesto. También incluye una comprobación de si se ha hecho previamente una llamada a [`requestAnimationFrame()`](/es/docs/Web/API/Window/requestAnimationFrame), y si es así, la llama de nuevo si es necesario, y llama a la función `canvasDraw()` que actualiza la escena del lienzo. También se configura un rastreador para escribir los valores X e Y en la pantalla, como referencia.
 
 ```js
 const tracker = document.getElementById("tracker");

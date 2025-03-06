@@ -9,7 +9,41 @@ l10n:
 
 如果设置了布尔属性 **`multiple`**，则意味着表单控件将接受一个及以上的值。该属性对 {{HTMLElement("input/email", "email")}} 和 {{HTMLElement("input/file", "file")}} 输入类型以及 {{HTMLElement("select")}} 元素有效。用户选择多个值的方式取决于表单控件。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-multiple.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: multiple", "tabbed-standard")}}
+
+```html interactive-example
+<label for="recipients">Where should we send the receipt?</label>
+<input id="recipients" name="recipients" type="email" multiple />
+
+<label for="shakes">Which shakes would you like to order?</label>
+<select id="shakes" name="shakes" multiple>
+  <option>Vanilla Shake</option>
+  <option>Strawberry Shake</option>
+  <option>Chocolate Shake</option>
+</select>
+
+<label for="payment">How would you like to pay?</label>
+<select id="payment" name="payment">
+  <option>Credit card</option>
+  <option>Bank Transfer</option>
+</select>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input,
+select {
+  width: 100%;
+}
+
+input:invalid {
+  background-color: lightpink;
+}
+```
 
 ## 概述
 
@@ -120,7 +154,7 @@ input:invalid {
 
 请注意设置了 `multiple` 的示例与未设置 `file` 的其他输入在外观上的区别。
 
-提交表单时，如果我们使用 [`method="get"`](/zh-CN/docs/Web/HTML/Element/form)，每个选定文件的名称都会以 `?uploads=img1.jpg&uploads=img2.svg` 的形式添加到 URL 参数中。但是，由于我们提交的是多部分表单数据，因此必须使用 post。更多信息请参阅 {{htmlelement('form')}} 元素和[发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data#method_属性)。
+提交表单时，如果我们使用 [`method="get"`](/zh-CN/docs/Web/HTML/Element/form)，每个选定文件的名称都会以 `?uploads=img1.jpg&uploads=img2.svg` 的形式添加到 URL 参数中。但是，由于我们提交的是多部分表单数据，因此必须使用 post。更多信息请参阅 {{htmlelement('form')}} 元素和[发送表单数据](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#method_属性)。
 
 ### select 元素
 

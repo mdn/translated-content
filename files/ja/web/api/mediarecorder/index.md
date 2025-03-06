@@ -63,7 +63,7 @@ l10n:
   - : メディアの収録を開始したときに発生します。
 - [`stop`](/ja/docs/Web/API/MediaRecorder/stop_event)
   - : {{domxref("MediaStream")}} が終了したか、または {{domxref("MediaRecorder.stop()")}} メソッドが呼び出された場合のいずれかでメディアの収録が終了したときに発生します。
-- [`warning`](/ja/docs/Web/API/MediaRecorder/warning_event) {{deprecated_inline}}
+- [`warning`](/ja/docs/Web/API/MediaRecorder) {{deprecated_inline}}
   - : メディアの収録に致命的でないエラーが発生したとき、または {{domxref("MediaRecorder.onwarning()")}} メソッドが呼び出された後に発行されます。
 
 ## 例

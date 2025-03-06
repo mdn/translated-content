@@ -1,11 +1,11 @@
 ---
-title: ":indeterminate"
+title: :indeterminate
 slug: Web/CSS/:indeterminate
 ---
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) **`:indeterminate`** находит элементы в неопределённом состоянии.
+[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:indeterminate`** находит элементы в неопределённом состоянии.
 
 ```css
 /* Выбирает все элементы <input>, которые находятся в неопределённом состоянии */

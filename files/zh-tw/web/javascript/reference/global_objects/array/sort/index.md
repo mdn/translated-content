@@ -9,7 +9,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 
 由於依賴執行環境的實作，所以並不能保證排序的時間及空間複雜度。
 
-{{EmbedInteractiveExample("pages/js/array-sort.html")}}
+{{InteractiveExample("JavaScript Demo: Array.sort()")}}
+
+```js interactive-example
+const months = ["March", "Jan", "Feb", "Dec"];
+months.sort();
+console.log(months);
+// Expected output: Array ["Dec", "Feb", "Jan", "March"]
+
+const array1 = [1, 30, 4, 21, 100000];
+array1.sort();
+console.log(array1);
+// Expected output: Array [1, 100000, 21, 30, 4]
+```
 
 ## 語法
 
@@ -20,7 +32,7 @@ arr.sort([compareFunction])
 ### 參數
 
 - `compareFunction` {{optional_inline}}
-  - : 指定一個函式來定義排序順序。假如省略此參數，陣列將根據各個元素轉為字串後的每一個字元之 [Unicode](/zh-TW/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode) 編碼位置值進行排序。
+  - : 指定一個函式來定義排序順序。假如省略此參數，陣列將根據各個元素轉為字串後的每一個字元之 [Unicode](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#unicode) 編碼位置值進行排序。
 
 ### 回傳值
 
@@ -60,7 +72,7 @@ function compareNumbers(a, b) {
 }
 ```
 
-`sort` 方法可以直接使用{{jsxref("Operators/function", "函式運算式", "", 1)}}（以及[閉包（closures）](/zh-TW/docs/Web/JavaScript/Guide/Closures)）：
+`sort` 方法可以直接使用{{jsxref("Operators/function", "函式運算式", "", 1)}}（以及[閉包（closures）](/zh-TW/docs/Web/JavaScript/Closures)）：
 
 ```js
 var numbers = [4, 2, 5, 1, 3];

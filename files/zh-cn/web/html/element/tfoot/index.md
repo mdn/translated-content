@@ -55,7 +55,7 @@ HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
     > 此属性在最新标准中已被废弃（不支持），所以请勿使用。
     >
     > - 为达到与`left`, `center`, `right`或`justify`相同的效果，请使用 CSS {{cssxref("text-align")}}属性。
-    > - 为达到与 char 值相同的效果，在 CSS3 中可将 [`char`](/zh-CN/docs/Web/HTML/Element/tfoot#char) 的值用作 {{cssxref("text-align")}} 的属性值。
+    > - 为达到与 char 值相同的效果，在 CSS3 中可将 [`char`](#char) 的值用作 {{cssxref("text-align")}} 的属性值。
 
 - `bgcolor` {{Non-standard_inline}}
 
@@ -66,10 +66,10 @@ HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
 
 - `char` {{Deprecated_inline}}
 
-  - : 此属性设置单元格对齐的基准字符。当对齐数字或货币值时，一个典型值会带有一个句点 (.)。如果[`align`](/zh-CN/docs/Web/HTML/Element/tfoot#align)未设置为`char`，此属性将被忽略。
+  - : 此属性设置单元格对齐的基准字符。当对齐数字或货币值时，一个典型值会带有一个句点 (.)。如果[`align`](#align)未设置为`char`，此属性将被忽略。
 
     > [!NOTE]
-    > 请勿使用此属性，因为在最新标准中此属性被废弃（且不受支持）。想要达到与[`char`](/zh-CN/docs/Web/HTML/Element/tbtfootody#char)相同的效果，在 CSS3 中，可将{{cssxref("text-align")}}属性设置为[`char`](/zh-CN/docs/Web/HTML/Element/tfoot#char)的属性值。
+    > 请勿使用此属性，因为在最新标准中此属性被废弃（且不受支持）。想要达到与[`char`](/zh-CN/docs/Web/HTML/Element/tbtfootody#char)相同的效果，在 CSS3 中，可将{{cssxref("text-align")}}属性设置为[`char`](#char)的属性值。
 
 - `charoff` {{Deprecated_inline}}
 

@@ -70,7 +70,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("style-src")}}
   - : Specifies valid sources for stylesheets.
 - {{CSP("webrtc-src")}} {{experimental_inline}}
-  - : Specifies valid sources for [WebRTC](/docs/Web/API/WebRTC_API) connections.
+  - : Specifies valid sources for [WebRTC](/es/docs/Web/API/WebRTC_API) connections.
 - {{CSP("worker-src")}}
   - : Specifies valid sources for {{domxref("Worker")}}, {{domxref("SharedWorker")}}, or {{domxref("ServiceWorker")}} scripts.
 
@@ -193,7 +193,7 @@ See [Mozilla Web Security Guidelines](https://wiki.mozilla.org/Security/Guidelin
 ## Mirar tambien
 
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
-- [Learn about: Content Security Policy](/docs/Web/HTTP/CSP)
+- [Learn about: Content Security Policy](/es/docs/Web/HTTP/CSP)
 - [Content Security in WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
 - [Display security and privacy policies In Firefox Developer Tools](/es/docs/Tools/GCLI/Display_security_and_privacy_policies)
 - [Adopting a strict policy](https://csp.withgoogle.com/docs/strict-csp.html)

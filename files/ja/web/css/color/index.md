@@ -9,7 +9,7 @@ CSS の **`color`** プロパティは、要素のテキストや[テキスト�
 
 {{EmbedInteractiveExample("pages/css/color.html")}}
 
-HTML における色の使用の概要については、[CSS を使用した HTML 要素への色の適用](/ja/docs/Web/HTML/Applying_color)をご覧ください。
+HTML における色の使用の概要については、[CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)をご覧ください。
 
 ## 構文
 
@@ -129,4 +129,4 @@ p {
 
 - {{cssxref("&lt;color&gt;")}} データ型
 - 他の色に関するプロパティ: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("color-adjust")}}
-- [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/HTML/Applying_color)
+- [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)

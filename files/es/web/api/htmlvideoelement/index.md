@@ -7,7 +7,7 @@ slug: Web/API/HTMLVideoElement
 
 El interfaz de **`HTMLVideoElement`** provee propiedades especiales y metodos para manipular objectos de videos. Tambien, este interfaz hereda propiedades y métodos de {{domxref("HTMLMediaElement")}} y {{domxref("HTMLElement")}}.
 
-La lista de [supported media formats](/es/docs/HTML/Supported_media_formats) (formatos de medios compatibles) varía de un navegador a otro. Debe proveer su video en un formato sencillo que sea compatible con todos los navegadores o proveer varias fuentes de videos in varios formatos, para que así todo navegador que necesite este cubierto.
+La lista de [supported media formats](/es/docs/Web/Media/Formats) (formatos de medios compatibles) varía de un navegador a otro. Debe proveer su video en un formato sencillo que sea compatible con todos los navegadores o proveer varias fuentes de videos in varios formatos, para que así todo navegador que necesite este cubierto.
 
 {{InheritanceDiagram(600, 140)}}
 
@@ -59,5 +59,5 @@ _Hereda los métodos anteriores de_ _{{domxref("HTMLMediaElement")}} y_ _{{domxr
 ## Lea Tambien
 
 - Elemento HTML implementando este interfaz: {{HTMLElement("video")}}.
-- [Demonstracion de estadisticas de pintura de video](http://people.mozilla.org/~cpearce/paint-stats-demo.html)
-- [Formatos de medios compatibles](/es/docs/HTML/Supported_media_formats)
+- [Demonstracion de estadisticas de pintura de video](https://people.mozilla.org/~cpearce/paint-stats-demo.html)
+- [Formatos de medios compatibles](/es/docs/Web/Media/Formats)

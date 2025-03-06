@@ -9,7 +9,7 @@ A interface **Worker** da [API do Web Worker](/pt-BR/docs/Web/API/Web_Workers_AP
 
 Um worker pode, por sua vez, gerar outros workers, contanto que estes estejam hospedados na mesma [origem](/pt-BR/docs/Web/Security/Same-origin_policy) da página principal (Nota: workers aninhados [não estão atualmente implementados no Blink](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU)). Além disso, workers podem utilizar [XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest) para E/S de rede, desde que seja estipulado que os atributos `responseXML` e `channel` em `XMLHttpRequest` retornem sempre `null`.
 
-[Não são todas as interfaces e funções que estão disponíveis](/En/DOM/Worker/Functions_available_to_workers) para o script associado a um `Worker`.
+[Não são todas as interfaces e funções que estão disponíveis](/en-US/DOM/Worker/Functions_available_to_workers) para o script associado a um `Worker`.
 
 > [!NOTE]
 > No Firefox, se você deseja utilizar workers em extensões e gostaria de ter acesso a [js-ctypes](/pt-BR/js-ctypes), você deveria utilizar o objeto {{ domxref("ChromeWorker") }} .
@@ -68,7 +68,7 @@ first.onchange = function () {
 };
 ```
 
-For a full example, see our[Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
+For a full example, see our[Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
 
 ## Especificações
 
@@ -80,7 +80,7 @@ For a full example, see our[Basic dedicated worker example](https://github.com/m
 
 ## See also
 
-- [Using web workers](/En/Using_web_workers)
-- [Functions available to workers](/En/DOM/Worker/Functions_available_to_workers)
-- Other kind of workers: {{ domxref("SharedWorker") }} and [ServiceWorker](/pt-BR/docs/Web/API/ServiceWorker_API).
+- [Using web workers](/en-US/Using_web_workers)
+- [Functions available to workers](/en-US/DOM/Worker/Functions_available_to_workers)
+- Other kind of workers: {{ domxref("SharedWorker") }} and [ServiceWorker](/pt-BR/docs/Web/API/Service_Worker_API).
 - Non-standard, Gecko-specific workers: {{ domxref("ChromeWorker") }}, used by extensions.

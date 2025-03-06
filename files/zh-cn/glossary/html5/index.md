@@ -19,5 +19,5 @@ l10n:
 ## 参见
 
 - [HTML 文档](/zh-CN/docs/Web/HTML)
-- [HTML 新手学习教程](/zh-CN/docs/Learn/HTML)
+- [HTML 新手学习教程](/zh-CN/docs/Learn_web_development/Core/Structuring_content)
 - [Web API](/zh-CN/docs/Web/API)

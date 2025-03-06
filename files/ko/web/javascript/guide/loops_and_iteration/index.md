@@ -317,7 +317,7 @@ car.model = Mustang;
 
 ## `for...of` 문
 
-[`for...of`](/ko/docs/Web/JavaScript/Reference/Statements/for...of) 문은 각각의 고유한 특성의 값을 실행할 명령과 함께 사용자 지정 반복 후크를 호출하여, [반복 가능한 객체](/ko/docs/Web/JavaScript/Guide/iterable)({{jsxref("배열")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, [인수](/ko/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) 객체 등을 포함)를 통해 반복하는 루프를 만듭니다.
+[`for...of`](/ko/docs/Web/JavaScript/Reference/Statements/for...of) 문은 각각의 고유한 특성의 값을 실행할 명령과 함께 사용자 지정 반복 후크를 호출하여, [반복 가능한 객체](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)({{jsxref("배열")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, [인수](/ko/docs/Web/JavaScript/Reference/Functions/arguments) 객체 등을 포함)를 통해 반복하는 루프를 만듭니다.
 
 ```
     for (variable of object) {

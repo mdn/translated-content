@@ -5,7 +5,7 @@ slug: Web/Accessibility/ARIA/Roles/slider_role
 
 {{AccessibilitySidebar}}
 
-このテクニックは、[`slider`](http://www.w3.org/TR/wai-aria/#slider) ロールの使い方を示し、ブラウザーと支援技術に及ぼす影響について説明します。
+このテクニックは、[`slider`](https://www.w3.org/TR/wai-aria/#slider) ロールの使い方を示し、ブラウザーと支援技術に及ぼす影響について説明します。
 
 `slider` ロールは、ユーザーが所定の範囲内から値を選択できるマークアップに使用されます。 `slider` ロールは、値を変更するために調節するコントロールである「つまみ」に割り当てられます。 ユーザーがつまみとやり取りするとき、アプリケーションはスライダーの `aria-valuenow`（および可能なら `aria-valuetext`）属性をプログラムで調整して現在の値を反映する必要があります。 詳細については、下記の[例](#examples)のセクションを参照してください。
 

@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
 
 ブラウザーアクションアイコンがクリックされたときに発火します。このイベントはブラウザーアクションがポップアップを持っているときは発火しません。
 
-右クリックを定義するには、[`contextMenus`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus) API の"browser_action" [context type](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/ContextType)を利用してください。
+右クリックを定義するには、[`contextMenus`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus) API の"browser_action" [context type](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType)を利用してください。
 
 ## 書式
 

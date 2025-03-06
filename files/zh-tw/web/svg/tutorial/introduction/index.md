@@ -11,7 +11,7 @@ slug: Web/SVG/Tutorial/Introduction
 
 ![Mozilla dino logo](dino.svg)
 
-SVG 于 1999 年推出，之前有几个相互竞争的格式规范被提交到 [W3C](https://www.w3.org/)，但是都没有完全通过。虽然规范已经出现存在很长时间了，但浏览器实现的进度却比较缓慢，所以目前（2009 年）应用在 web 上的 SVG 内容并不是很多。即便浏览器实现了一些规范，但实现速度完全不能和竞争技术相比，比如 [HTML Canvas](/zh-TW/docs/HTML/Canvas) 和 Adobe Flash，都已经实现了成熟的应用接口。但是 SVG 也有自身的优点，比如它实现了 DOM 接口（比 Canvas 方便），不需要安装第三方插件就可以在浏览器中使用（比 Flash 方便）。当然，是否使用 SVG 还要取决于你要实现什么。
+SVG 于 1999 年推出，之前有几个相互竞争的格式规范被提交到 [W3C](https://www.w3.org/)，但是都没有完全通过。虽然规范已经出现存在很长时间了，但浏览器实现的进度却比较缓慢，所以目前（2009 年）应用在 web 上的 SVG 内容并不是很多。即便浏览器实现了一些规范，但实现速度完全不能和竞争技术相比，比如 [HTML Canvas](/zh-TW/docs/Web/API/Canvas_API) 和 Adobe Flash，都已经实现了成熟的应用接口。但是 SVG 也有自身的优点，比如它实现了 DOM 接口（比 Canvas 方便），不需要安装第三方插件就可以在浏览器中使用（比 Flash 方便）。当然，是否使用 SVG 还要取决于你要实现什么。
 
 ### 基本要素
 

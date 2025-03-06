@@ -42,7 +42,7 @@ additional information here).
 - [原因：CORS header 'Access-Control-Allow-Origin' does not match 'xyz'](/zh-CN/docs/Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin)
 - [原因：Credential is not supported if the CORS header 'Access-Control-Allow-Origin' is '\*'](/zh-CN/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials)
 - [原因：Did not find method in CORS header 'Access-Control-Allow-Methods'](/zh-CN/docs/Web/HTTP/CORS/Errors/CORSMethodNotFound)
-- [原因：expected 'true' in CORS header 'Access-Control-Allow-Credentials'](/zh-CN/docs/Web/HTTP/CORS/Errors/CORSMissingAllowCredentials)
+- [原因：expected 'true' in CORS header 'Access-Control-Allow-Credentials'](/zh-CN/docs/Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials)
 - [原因：CORS preflight channel did not succeed](/zh-CN/docs/Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed)
 - [原因：invalid token 'xyz' in CORS header 'Access-Control-Allow-Methods'](/zh-CN/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod)
 - [原因：invalid token 'xyz' in CORS header 'Access-Control-Allow-Headers'](/zh-CN/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowHeader)
@@ -53,7 +53,7 @@ additional information here).
 
 - 术语：{{Glossary("CORS")}}
 - [CORS 介绍](/zh-CN/docs/Web/HTTP/CORS)
-- [服务端 CORS 设置](/zh-CN/docs/Web/HTTP/Server-Side_Access_Control)
+- [服务端 CORS 设置](/zh-CN/docs/Web/HTTP/CORS)
 - [允许图片跨源请求](/zh-CN/docs/Web/HTML/CORS_enabled_image)
-- [CORS 设置属性](/zh-CN/docs/Web/HTML/CORS_settings_attributes)
+- [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)
 - <https://www.test-cors.org>——用于测试 CORS 请求的页面

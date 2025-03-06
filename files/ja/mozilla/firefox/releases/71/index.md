@@ -11,17 +11,17 @@ Firefox 71 は、米国時間 2019 年 12 月 3 日 にリリースされまし�
 
 ### 開発者ツール
 
-[コンソール](/ja/docs/Tools/Web_Console):
+[コンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html):
 
-- コンソールの [マルチラインモード](/ja/docs/Tools/Web_Console/The_command_line_interpreter#Multi-line_mode) をデフォルトで有効にしました。
-- コンソールの設定項目が、新しい [ツールバーの設定メニュー](/ja/docs/Tools/Web_Console/Opening_the_Web_Console#Toolbar) に統合されました ([Firefox バグ 1523868](https://bugzil.la/1523868))。
+- コンソールの [マルチラインモード](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#multi-line_mode) をデフォルトで有効にしました。
+- コンソールの設定項目が、新しい [ツールバーの設定メニュー](https://firefox-source-docs.mozilla.org/devtools-user/web_console/ui_tour/index.html#toolbar) に統合されました ([Firefox バグ 1523868](https://bugzil.la/1523868))。
 
-[JavaScript デバッガー](/ja/docs/Tools/Debugger):
+[JavaScript デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html):
 
-- [インラインの変数プレビュー](/ja/docs/Tools/Debugger/How_to/Set_a_breakpoint#Inline_variable_preview) を有効にしました ([Firefox バグ 1576679](https://bugzil.la/1576679))。
-- as is the ability to [イベントのタイプによるフィルタリング](/ja/docs/Tools/Debugger/Set_event_listener_breakpoints#Filter_by_event_type) と同様に、[イベントのログ記録](/ja/docs/Tools/Debugger/Set_event_listener_breakpoints#Logging_on_events) が可能になりました ([Firefox バグ 1110276](https://bugzil.la/1110276))。
-- デバッガーの新しい [一時停止のオーバーレイ](/ja/docs/Tools/Debugger/How_to/Step_through_code#Pause_on_breakpoints_overlay) を、設定項目 `devtools.debugger.features.overlay` を使用して無効化できるようになりました ([Firefox バグ 1579768](https://bugzil.la/1579768))。
-- デバッガーを開く新しい [キーボードショートカット](/ja/docs/Tools/Keyboard_shortcuts) が使用可能になりました: Linux/Windows では&#x20;
+- [インラインの変数プレビュー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_a_breakpoint/index.html#inline_variable_preview) を有効にしました ([Firefox バグ 1576679](https://bugzil.la/1576679))。
+- as is the ability to [イベントのタイプによるフィルタリング](https://firefox-source-docs.mozilla.org/devtools-user/debugger/set_event_listener_breakpoints/index.html#filter_by_event_type) と同様に、[イベントのログ記録](https://firefox-source-docs.mozilla.org/devtools-user/debugger/set_event_listener_breakpoints/index.html#logging_on_events) が可能になりました ([Firefox バグ 1110276](https://bugzil.la/1110276))。
+- デバッガーの新しい [一時停止のオーバーレイ](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/step_through_code/index.html#pause_on_breakpoints_overlay) を、設定項目 `devtools.debugger.features.overlay` を使用して無効化できるようになりました ([Firefox バグ 1579768](https://bugzil.la/1579768))。
+- デバッガーを開く新しい [キーボードショートカット](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html) が使用可能になりました: Linux/Windows では&#x20;
 
   <kbd>Ctrl</kbd>
 
@@ -47,17 +47,17 @@ Firefox 71 は、米国時間 2019 年 12 月 3 日 にリリースされまし�
 
   &#x20;です ([Firefox バグ 1583042](https://bugzil.la/1583042))。
 
-- [DOM Mutation のブレークポイント](/ja/docs/Tools/Debugger/Break_on_DOM_mutation) で一時停止すると、ブレークポイントを持つ DOM ノードや (存在すれば) 追加/削除された子ノードを表示するようになりました ([Firefox バグ 1576145](https://bugzil.la/1576145))。
-- [整形されたソース](/ja/docs/Tools/Debugger/How_to/Pretty-print_a_minified_file) 内の位置が、整形した後やインスペクターの [イベントリスナーのツールチップ](/ja/docs/Tools/Page_Inspector/How_to/Examine_event_listeners) からジャンプしたときも正確になりました ([Firefox バグ 1500222](https://bugzil.la/1500222))。
+- [DOM Mutation のブレークポイント](https://firefox-source-docs.mozilla.org/devtools-user/debugger/break_on_dom_mutation/index.html) で一時停止すると、ブレークポイントを持つ DOM ノードや (存在すれば) 追加/削除された子ノードを表示するようになりました ([Firefox バグ 1576145](https://bugzil.la/1576145))。
+- [整形されたソース](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/pretty-print_a_minified_file/index.html) 内の位置が、整形した後やインスペクターの [イベントリスナーのツールチップ](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_event_listeners/index.html) からジャンプしたときも正確になりました ([Firefox バグ 1500222](https://bugzil.la/1500222))。
 
-[ネットワークモニター](/ja/docs/Tools/Network_Monitor):
+[ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html):
 
-- [Web sockets インスペクター](/ja/docs/Tools/Network_Monitor/Inspecting_web_sockets) をデフォルトで有効化しました ([Firefox バグ 1573805](https://bugzil.la/1573805))。
-- 要求/応答のボディ、ヘッダー、Cookie の [全文検索](/ja/docs/Tools/Network_Monitor/request_list#Search_in_requests) が可能になりました。
-- 読み込み時に [特定の URL をブロックする](/ja/docs/Tools/Network_Monitor/request_list#Blocking_specific_URLs) パターンを入力できるようになりました。
-- [タイミングタブ](/ja/docs/Tools/Network_Monitor/request_details#Timings) で、{{httpheader("Server-Timing")}} ヘッダーで送信したタイミングデータを表示するようになりました ([Firefox バグ 1403051](https://bugzil.la/1403051))。
+- [Web sockets インスペクター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/inspecting_web_sockets/index.html) をデフォルトで有効化しました ([Firefox バグ 1573805](https://bugzil.la/1573805))。
+- 要求/応答のボディ、ヘッダー、Cookie の [全文検索](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#search_in_requests) が可能になりました。
+- 読み込み時に [特定の URL をブロックする](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#blocking_specific_urls) パターンを入力できるようになりました。
+- [タイミングタブ](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#timings) で、{{httpheader("Server-Timing")}} ヘッダーで送信したタイミングデータを表示するようになりました ([Firefox バグ 1403051](https://bugzil.la/1403051))。
 
-[インスペクター](/ja/docs/Tools/Page_Inspector):
+[インスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html):
 
 - 色の値を持つ CSS 変数の定義の隣に、色見本を表示するようになりました ([Firefox バグ 1456167](https://bugzil.la/1456167))。
 - {{cssxref(":visited")}} のスタイルを CSS ルールビューで表示するようになりました ([Firefox バグ 713106](https://bugzil.la/713106))。
@@ -65,9 +65,9 @@ Firefox 71 は、米国時間 2019 年 12 月 3 日 にリリースされまし�
 ### CSS
 
 - CSS Grid Level 2 から値 [subgrid](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid) を、{{cssxref("grid-template-columns")}} および {{cssxref("grid-template-rows")}} に追加しました ([Firefox バグ 1580894](https://bugzil.la/1580894))。
-- [段組みレイアウト](/ja/docs/Web/CSS/CSS_Columns) で {{cssxref("column-span")}} をサポートしました ([Firefox バグ 1426010](https://bugzil.la/1426010))。
+- [段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout) で {{cssxref("column-span")}} をサポートしました ([Firefox バグ 1426010](https://bugzil.la/1426010))。
 - {{cssxref("clip-path")}} で `path()` の値をサポートしました ([Firefox バグ 1488530](https://bugzil.la/1488530))。
-- {{htmlelement("img")}} 要素の `height` および `width` HTML 属性を、内部の {{cssxref("aspect-ratio")}} プロパティにマッピングしました ([Firefox バグ 1585637](https://bugzil.la/1585637))。[この機能について、MDN のガイドをご覧ください](/ja/docs/Web/Media/images/aspect_ratio_mapping)。
+- {{htmlelement("img")}} 要素の `height` および `width` HTML 属性を、内部の {{cssxref("aspect-ratio")}} プロパティにマッピングしました ([Firefox バグ 1585637](https://bugzil.la/1585637))。[この機能について、MDN のガイドをご覧ください](/ja/docs/Learn/Performance/Multimedia)。
 
 #### 廃止
 
@@ -137,7 +137,7 @@ Firefox 71 は、米国時間 2019 年 12 月 3 日 にリリースされまし�
 
 #### 廃止
 
-- [`proxy.register()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register) および [`proxy.unregister()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister) 関数を削除しました ([Firefox バグ 1443259](https://bugzil.la/1443259))。要求のプロキシ使用を制御するには {{WebExtAPIRef("proxy.onRequest")}} を使用してください。
+- [`proxy.register()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy) および [`proxy.unregister()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy) 関数を削除しました ([Firefox バグ 1443259](https://bugzil.la/1443259))。要求のプロキシ使用を制御するには {{WebExtAPIRef("proxy.onRequest")}} を使用してください。
 
 ## 関連情報
 

@@ -15,7 +15,7 @@ Ce module contient un ensemble d'article pour acquérir les notions fondamentale
 >
 > Nous avons construit un module qui contient toutes les informations essentielles pour parvenir à cet objectif.
 >
-> [**Commencez ici**](/fr/docs/Learn/Front-end_web_developer)
+> [**Commencez ici**](/fr/curriculum/)
 
 ## Prérequis
 
@@ -67,7 +67,7 @@ Les articles suivants ne sont pas nécessaires à l'apprentissage initial, mais 
 - [Comment construire des contrôles de formulaire spécifiques](/fr/docs/Learn/Forms/How_to_build_custom_form_controls)
   - : Dans certains cas, les contrôles natifs des formulaires pourront ne pas répondre à votre besoin (que ce soit à cause de la mise en forme ou des fonctionnalités). Pour ces cas, vous aurez peut-être à construire votre propre contrôle à l'aide de HTML. Dans cet article, nous verrons comment faire et les considérations à avoir, tout en mettant en œuvre un cas pratique.
 - [Envoyer des formulaires avec JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
-  - : Dans cet article, nous verrons comment utiliser un formulaire pour créer une requête HTTP et l'envoyer avec du code JavaScript (plutôt que d'utiliser l'envoi standard natif). Nous verrons pourquoi cela peut être pertinent et les implications associées (voir aussi [Utiliser les objets `FormData`](/fr/docs/Web/API/FormData/Using_FormData_Objects)).
+  - : Dans cet article, nous verrons comment utiliser un formulaire pour créer une requête HTTP et l'envoyer avec du code JavaScript (plutôt que d'utiliser l'envoi standard natif). Nous verrons pourquoi cela peut être pertinent et les implications associées (voir aussi [Utiliser les objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)).
 - [Tableau de compatibilité des propriétés CSS pour les contrôles de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
   - : Ce dernier article fournit une référence pratique qui permet de connaître la compatibilité entre les propriétés CSS et les différents éléments de formulaire.
 

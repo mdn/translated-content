@@ -21,7 +21,7 @@ TypeError: Cannot assign to read only property '0' of [object Array] (Chrome)
 
 ## Quel est le problème ?
 
-La variable globale ou la propriété ne peut pas recevoir de valeur ou être modifiée car elle est en lecture seule (d'un point de vue technique, il s'agit d'[une propriété de donnée en lecture seule](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/defineProperty#Attribut_writable)).
+La variable globale ou la propriété ne peut pas recevoir de valeur ou être modifiée car elle est en lecture seule (d'un point de vue technique, il s'agit d'[une propriété de donnée en lecture seule](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#attribut_writable)).
 
 Cette erreur ne se produit qu'avec [le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode). En mode non-strict, l'affectation est ignorée silencieusement.
 

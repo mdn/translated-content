@@ -49,13 +49,13 @@ text_field.value = div1.nodeName;
 
 En XHTML (ou tout autre format XML), la valeur de `text_field` sera «&nbsp;div&nbsp;». Cependant, en HTML, la valeur de `text_field` sera «&nbsp;DIV&nbsp;», parce que `nodeName` et `tagName` renvoient en casse majuscule sur les éléments HTML dans les DOM marqués comme des documents HTML. En lire plus [détails sur la sensibilité à la casse de nodeName dans différents navigateurs](http://ejohn.org/blog/nodename-case-sensitivity/) (en).
 
-Notez que la propriété [`tagName`](/fr/DOM/element.tagName) aurait pu être uilisée à la place, puisque `nodeName` a la même valeur que `tagName` pour un élément. Souvenez vous cependant que `nodeName` renverra `#text` pour les nœuds texte tandis que `tagName` renverra `undefined`.
+Notez que la propriété [`tagName`](/fr/docs/Web/API/Element/tagName) aurait pu être uilisée à la place, puisque `nodeName` a la même valeur que `tagName` pour un élément. Souvenez vous cependant que `nodeName` renverra `#text` pour les nœuds texte tandis que `tagName` renverra `undefined`.
 
 ## Spécification
 
-- [DOM Level 2 Core: Node.nodeName](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D095) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-F68D095) (non normative)
-- [DOM Level 3 Core: Node.nodeName](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-F68D095)
-- [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
+- [DOM Level 2 Core: Node.nodeName](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D095) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-F68D095) (non normative)
+- [DOM Level 3 Core: Node.nodeName](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-F68D095)
+- [HTML 5: APIs in HTML documents](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
 
 ## Compatibilité des navigateurs
 

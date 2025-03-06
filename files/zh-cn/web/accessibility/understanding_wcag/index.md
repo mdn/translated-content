@@ -49,4 +49,4 @@ WCAG 2.1 包括：
 
 该指南旨在提供实用信息，以帮助你构建更好、更易于访问的网站。然而，我们不是律师，这些内容不构成法律建议。如果你担心 Web 无障碍的法律影响，我们建议你查看你所在国家或地区的 Web/公共资源无障碍法规，并寻求执业律师的建议。
 
-[什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)特别是[无障碍指南和法律](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#无障碍指南和法律)部分提供了更多相关信息。
+[什么是无障碍？](/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)特别是[无障碍指南和法律](/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#无障碍指南和法律)部分提供了更多相关信息。

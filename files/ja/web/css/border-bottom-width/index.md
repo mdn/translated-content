@@ -59,14 +59,14 @@ border-bottom-width: unset;
 
 #### HTML
 
-```html
+```html live-sample___comparing_bottom_border_widths
 <div>Element 1</div>
 <div>Element 2</div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___comparing_bottom_border_widths
 div {
   border: 1px solid red;
   margin: 1em 0;
@@ -82,7 +82,7 @@ div:nth-child(2) {
 
 #### 結果
 
-{{EmbedLiveSample('下境界の太さの比較', '100%')}}
+{{EmbedLiveSample('Comparing_bottom_border_widths', '100%')}}
 
 ## 仕様書
 

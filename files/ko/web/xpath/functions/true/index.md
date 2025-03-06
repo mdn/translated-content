@@ -19,7 +19,7 @@ true()
 
 ### 정의
 
-[XPath 1.0 4.3](http://www.w3.org/TR/xpath#function-true)
+[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-true)
 
 ### Gecko 지원
 

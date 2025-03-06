@@ -9,12 +9,12 @@ slug: Web/JavaScript/Language_overview
 
 Es útil comenzar con una descripción general de la historia del lenguaje. JavaScript fue creado en 1995 por Brendan Eich mientras era ingeniero en Netscape. JavaScript se lanzó por primera vez con Netscape 2 a principios de 1996. Originalmente se iba a llamar LiveScript, pero se le cambió el nombre en una desafortunada decisión de marketing que intentó capitalizar la popularidad del lenguaje Java de Sun Microsystem, a pesar de que los dos tienen muy poco en común. Esto ha sido una fuente de confusión desde entonces.
 
-Varios meses después, Microsoft lanzó JScript con Internet Explorer 3. Era un JavaScript prácticamente compatible. Varios meses después de eso, Netscape envió JavaScript a [Ecma International](http://www.ecma-international.org/), una organización europea de estándares, que resultó en la primera edición del estándar {{Glossary("ECMAScript")}} ese año. El estándar recibió una actualización significativa como [ECMAScript edición 3](http://www.ecma-international.org/publications/standards/Ecma-262.htm) en 1999, y se ha mantenido bastante estable desde entonces. La cuarta edición fue abandonada debido a diferencias políticas sobre la complejidad del lenguaje. Muchas partes de la cuarta edición formaron la base para la edición 5 de ECMAScript, publicada en diciembre de 2009, y para la sexta edición principal del estándar, publicada en junio de 2015.
+Varios meses después, Microsoft lanzó JScript con Internet Explorer 3. Era un JavaScript prácticamente compatible. Varios meses después de eso, Netscape envió JavaScript a [Ecma International](https://www.ecma-international.org/), una organización europea de estándares, que resultó en la primera edición del estándar {{Glossary("ECMAScript")}} ese año. El estándar recibió una actualización significativa como [ECMAScript edición 3](https://www.ecma-international.org/publications/standards/Ecma-262.htm) en 1999, y se ha mantenido bastante estable desde entonces. La cuarta edición fue abandonada debido a diferencias políticas sobre la complejidad del lenguaje. Muchas partes de la cuarta edición formaron la base para la edición 5 de ECMAScript, publicada en diciembre de 2009, y para la sexta edición principal del estándar, publicada en junio de 2015.
 
 > [!NOTE]
 > Debido a que es más familiar, nos referiremos a ECMAScript como "JavaScript" de ahora en adelante.
 
-A diferencia de la mayoría de los lenguajes de programación, el lenguaje JavaScript no tiene un concepto de entrada o salida. Está diseñado para ejecutarse como un lenguaje de `scripting` en un entorno hospedado, y depende del entorno para proporcionar los mecanismos para comunicarse con el mundo exterior. El entorno de alojamiento más común es el navegador, pero también se pueden encontrar intérpretes de JavaScript en una gran lista de otros lugares, incluidos Adobe Acrobat, Adobe Photoshop, imágenes SVG, el motor de widgets de Yahoo, entornos de lado del servidor como [Node.js](http://nodejs.org/), bases de datos NoSQL como [Apache CouchDB](http://couchdb.apache.org/) de código abierto, computadoras integradas, entornos de escritorio completos como [GNOME](http://www.gnome.org/) (una de las IGU —_Interfaz Gráfica de Usuario_— más populares para sistemas operativos GNU/Linux), y otros.
+A diferencia de la mayoría de los lenguajes de programación, el lenguaje JavaScript no tiene un concepto de entrada o salida. Está diseñado para ejecutarse como un lenguaje de `scripting` en un entorno hospedado, y depende del entorno para proporcionar los mecanismos para comunicarse con el mundo exterior. El entorno de alojamiento más común es el navegador, pero también se pueden encontrar intérpretes de JavaScript en una gran lista de otros lugares, incluidos Adobe Acrobat, Adobe Photoshop, imágenes SVG, el motor de widgets de Yahoo, entornos de lado del servidor como [Node.js](https://nodejs.org/), bases de datos NoSQL como [Apache CouchDB](https://couchdb.apache.org/) de código abierto, computadoras integradas, entornos de escritorio completos como [GNOME](https://www.gnome.org/) (una de las IGU —_Interfaz Gráfica de Usuario_— más populares para sistemas operativos GNU/Linux), y otros.
 
 ## Información general
 
@@ -143,7 +143,7 @@ isFinite(NaN); // false
 
 ## Strings
 
-Las cadenas en JavaScript son secuencias de [caracteres Unicode](/es/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode). Esta debería ser una buena noticia para cualquiera que haya tenido que lidiar con la internacionalización. Exactamente, son secuencias de unidades de código UTF-16; cada unidad de código está representada por un número de 16 bits. Cada caracter Unicode está representado por 1 o 2 unidades de código.
+Las cadenas en JavaScript son secuencias de [caracteres Unicode](/es/docs/Web/JavaScript/Guide/Grammar_and_types#unicode). Esta debería ser una buena noticia para cualquiera que haya tenido que lidiar con la internacionalización. Exactamente, son secuencias de unidades de código UTF-16; cada unidad de código está representada por un número de 16 bits. Cada caracter Unicode está representado por 1 o 2 unidades de código.
 
 Si deseas representar un solo caracter, simplemente usa una cadena que consta de ese único caracter.
 
@@ -245,7 +245,7 @@ x = x + 5;
 
 Puedes usar `++` y `--` para incrementar y disminuir respectivamente. Estos se pueden utilizar como operadores prefijos o sufijos.
 
-El [operador `+`](/es/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition) también hace concatenación de cadenas:
+El [operador `+`](/es/docs/Web/JavaScript/Reference/Operators#addition) también hace concatenación de cadenas:
 
 ```js
 "hello" + " world"; // "hello world"
@@ -260,7 +260,7 @@ Si agregas una cadena a un número (u otro valor), todo se convierte primero en 
 
 Agregar una cadena vacía a algo es una forma útil de convertirla en cadena.
 
-[Se pueden realizar comparaciones](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) en JavaScript utilizando `<`, `>`, `<=` y `>=`. Estas funcionan tanto para cadenas como para números. La igualdad es un poco menos sencilla. El operador doble-igual realiza la coerción de tipos si le das diferentes tipos, con resultados a veces interesantes:
+[Se pueden realizar comparaciones](/es/docs/Web/JavaScript/Reference/Operators) en JavaScript utilizando `<`, `>`, `<=` y `>=`. Estas funcionan tanto para cadenas como para números. La igualdad es un poco menos sencilla. El operador doble-igual realiza la coerción de tipos si le das diferentes tipos, con resultados a veces interesantes:
 
 ```js
 123 == "123"; // true
@@ -276,7 +276,7 @@ Para evitar la coerción de tipos, usa el operador triple-igual:
 
 También hay operadores `!=` y `!==`.
 
-JavaScript también tiene [operaciones bit a bit](/es/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators). Si quieres usarlas, ahí están.
+JavaScript también tiene [operaciones bit a bit](/es/docs/Web/JavaScript/Reference/Operators). Si quieres usarlas, ahí están.
 
 ## Estructuras de control
 
@@ -469,7 +469,7 @@ var user = prompt("¿cuál es su clave?");
 obj[user] = prompt("¿cuál es su valor?");
 ```
 
-Estas también son semánticamente equivalentes. El segundo método tiene la ventaja de que el nombre de la propiedad se proporciona como una cadena, lo cual significa que se puede calcular en tiempo de ejecución. Sin embargo, el uso de este método evita que se apliquen algunas optimizaciones de minificación y del motor de JavaScript. También se puede utilizar para establecer y obtener propiedades con nombres [palabras reservadas](/es/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords):
+Estas también son semánticamente equivalentes. El segundo método tiene la ventaja de que el nombre de la propiedad se proporciona como una cadena, lo cual significa que se puede calcular en tiempo de ejecución. Sin embargo, el uso de este método evita que se apliquen algunas optimizaciones de minificación y del motor de JavaScript. También se puede utilizar para establecer y obtener propiedades con nombres [palabras reservadas](/es/docs/Web/JavaScript/Reference/Lexical_grammar#keywords):
 
 ```js
 obj.for = "Simon"; // Error de sintaxis, porque 'for' es una palabra reservada
@@ -665,7 +665,7 @@ avg.apply(null, [2, 3, 4, 5]); // 3.5
 El segundo argumento de `apply()` es el arreglo que se utilizará como `arguments`; el primero se explicará más adelante. Esto enfatiza el hecho de que las funciones también son objetos.
 
 > [!NOTE]
-> Puedes lograr el mismo resultado utilizando el [operador de propagación](/es/docs/Web/JavaScript/Reference/Operators/Spread_operator) en la llamada de función.
+> Puedes lograr el mismo resultado utilizando el [operador de propagación](/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax) en la llamada de función.
 >
 > Por ejemplo: `avg(...numbers)`
 
@@ -735,7 +735,7 @@ Ten en cuenta que las funciones de JavaScript en sí mismas son objetos, como to
 ## Objetos personalizados
 
 > [!NOTE]
-> Para obtener una descripción más detallada de la programación orientada a objetos en JavaScript, consulta [Introducción a JavaScript orientado a objetos](/es/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript).
+> Para obtener una descripción más detallada de la programación orientada a objetos en JavaScript, consulta [Introducción a JavaScript orientado a objetos](/es/docs/Learn/JavaScript/Objects).
 
 En la programación clásica orientada a objetos, los objetos son colecciones de datos y métodos que operan sobre esos datos. JavaScript es un lenguaje basado en prototipos que no contiene una declaración de clase, como la encontrarías en C++ o Java (esto, a veces es confuso para los programadores acostumbrados a lenguajes con una declaración de clase). En cambio, JavaScript usa funciones como clases. Consideremos un objeto `person` con campos `first` y `last name`. Hay dos formas de mostrar el nombre: como "primero último" o como "último, primero". Usando las funciones y objetos que hemos explicado anteriormente, podríamos mostrar los datos de esta manera:
 
@@ -981,4 +981,4 @@ Entonces, cuando se llama a `makeAdder()`, se crea un objeto `scope` con una pro
 
 Los objetos `scope` forman una cadena llamada cadena de ámbito, similar a la cadena de prototipos utilizada por el sistema de objetos de JavaScript.
 
-Un **cierre** es la combinación de una función y el objeto `scope` en el que se creó. Los cierres te permiten guardar el estado — como tal, a menudo se pueden usar en lugar de objetos. Puedes encontrar [varias presentaciones excelentes de los cierres](http://stackoverflow.com/questions/111102/how-do-javascript-closures-work).
+Un **cierre** es la combinación de una función y el objeto `scope` en el que se creó. Los cierres te permiten guardar el estado — como tal, a menudo se pueden usar en lugar de objetos. Puedes encontrar [varias presentaciones excelentes de los cierres](https://stackoverflow.com/questions/111102/how-do-javascript-closures-work).

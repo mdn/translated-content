@@ -63,7 +63,7 @@ margin-inline: unset;
 
 #### CSS
 
-```css
+```css live-sample___setting_inline_start_and_end_margins
 div {
   background-color: yellow;
   width: 120px;
@@ -84,18 +84,18 @@ p {
 
 #### HTML
 
-```html
+```html live-sample___setting_inline_start_and_end_margins
 <div>
-  <p>Example text</p>
+  <p>テキストの例</p>
 </div>
 <div class="verticalExample">
-  <p>Example text</p>
+  <p>テキストの例</p>
 </div>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("インライン方向の先頭と末尾のマージンの設定", 140, 240)}}
+{{EmbedLiveSample("Setting_inline_start_and_end_margins", 140, 240)}}
 
 ## 仕様書
 

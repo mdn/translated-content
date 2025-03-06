@@ -18,13 +18,13 @@ slug: Web/API/WebRTC_API/Signaling_and_video_calling
 
 两个设备之间建立 WebRTC 连接需要一个**信令服务器**来实现双方通过网络进行连接。信令服务器的作用是作为一个中间人帮助双方在尽可能少的暴露隐私的情况下建立连接。那我们如何实现这个服务器并且它是如何工作的呢？
 
-WebRTC 并没有提供信令传递机制，你可以使用任何你喜欢的方式如[WebSocket](/zh-CN/docs/Web/API/WebSocket_API) 或者{{domxref("XMLHttpRequest")}} 等等，来交换彼此的令牌信息。
+WebRTC 并没有提供信令传递机制，你可以使用任何你喜欢的方式如[WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 或者{{domxref("XMLHttpRequest")}} 等等，来交换彼此的令牌信息。
 
 重要的是信令服务器并不需要理解和解释信令数据内容。虽然它基于 {{Glossary("SDP")}}但这并不重要：通过信令服务器的消息的内容实际上是一个黑盒。重要的是，当{{Glossary("ICE")}}子系统指示你将信令数据发送给另一个对等方时，你就这样做，而另一个对等方知道如何接收此信息并将其传递给自己的 ICE 子系统。你所要做的就是来回传递信息。内容对信令服务器一点都不重要。
 
 ### 开始准备聊天服务器来处理信令
 
-我们的[聊天服务器和客户端](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)使用 [WebSocket API](/zh-CN/docs/Web/API/WebSocket_API) {{Glossary("JSON")}} 格式的字符串来传递数据。服务器支持多种消息格式来处理不同的任务，比如注册新用户、设置用户名、发送公共信息等等。
+我们的[聊天服务器和客户端](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)使用 [WebSocket API](/zh-CN/docs/Web/API/WebSockets_API) {{Glossary("JSON")}} 格式的字符串来传递数据。服务器支持多种消息格式来处理不同的任务，比如注册新用户、设置用户名、发送公共信息等等。
 
 为了让服务器支持信令和 ICE 协商，我们需要升级代码，我们需要直接发送聊天系统到指定的用户而不是发送给所有人，并且保证服务器在不需要理解数据内容的情况下传递未被认可的任何消息类型。这让我们可以使用一台服务器来传递信令和消息而不是多台。
 

@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages
 
 {{AddonSidebar}}
 
-ブラウザーの [accept-languages](/ja/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header) を取得します。これは、ブラウザーに使用されているロケールとは異なります。ロケールを取得するには、{{WebExtAPIRef('i18n.getUILanguage')}} を使用してください。
+ブラウザーの [accept-languages](/ja/docs/Web/HTTP/Content_negotiation#the_accept-language_header) を取得します。これは、ブラウザーに使用されているロケールとは異なります。ロケールを取得するには、{{WebExtAPIRef('i18n.getUILanguage')}} を使用してください。
 
 これは、[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
 

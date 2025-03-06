@@ -20,15 +20,15 @@ La interfaz de Geolocalización no implementa ni hereda propiedades.
 
 _La interfaz `Geolocation` no hereda ningún método._
 
-- [Geolocation.getCurrentPosition()](/es/docs/Web/API/Geolocation.getCurrentPosition)
+- [Geolocation.getCurrentPosition()](/es/docs/Web/API/Geolocation/getCurrentPosition)
   - : Determina la ubicación actual del dispositivo y devuelve un objeto de posición({{domxref("Position")}}) con los datos.
 
-[Geolocation.watchPosition()](/es/docs/Web/API/Geolocation.watchPosition)
+[Geolocation.watchPosition()](/es/docs/Web/API/Geolocation/watchPosition)
 
 Devuelve un valor de largo(`long`) que representa la función de devolución de llamada de reciente creación que se invoca cada vez que cambia la ubicación del dispositivo.
 
-- [Geolocation.clearWatch()](/es/docs/Web/API/Geolocation.clearWatch)
-  - : Elimina el controlador especial instalado previamente utilizando [`watchPosition()`](/es/docs/Web/API/Geolocation.watchPosition).
+- [Geolocation.clearWatch()](/es/docs/Web/API/Geolocation/clearWatch)
+  - : Elimina el controlador especial instalado previamente utilizando [`watchPosition()`](/es/docs/Web/API/Geolocation/watchPosition).
 
 ## Especificaciones
 

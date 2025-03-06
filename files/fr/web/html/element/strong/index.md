@@ -7,11 +7,25 @@ slug: Web/HTML/Element/strong
 
 L'élément HTML **`<strong>`** indique que le texte a une importance particulière ou un certain sérieux voire un caractère urgent. Cela se traduit généralement par un affichage en gras.
 
-{{EmbedInteractiveExample("pages/tabbed/strong.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;strong&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  ... the most important rule, the rule you can never forget, no matter how much
+  he cries, no matter how much he begs:
+  <strong>never feed him after midnight</strong>.
+</p>
+```
+
+```css interactive-example
+p {
+  font-size: 1rem;
+}
+```
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes d'utilisation
 

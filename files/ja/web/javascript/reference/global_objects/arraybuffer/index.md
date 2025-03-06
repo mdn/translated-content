@@ -82,6 +82,6 @@ const view = new Int32Array(buffer);
 ## 関連情報
 
 - [`ArrayBuffer` ポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("SharedArrayBuffer")}}
 - [RangeError: invalid array length](/ja/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

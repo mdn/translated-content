@@ -77,7 +77,7 @@ Hay varias formas de definir funciones constructor para implementar la jerarquí
 
 Esta sección muestra como utilizar definiciones muy sencillas (y comparativamente inflexibles) para mostrar como hacer funcionar la herencia. En estas definiciones no puedes especificar valores de propiedades cuando creas un objeto. El nuevo objeto que se crea simplemente obtiene valores por defecto, que puedes cambiar posteriormente. La figura 8.2 muestra la jerarquía con estas definiciones sencillas.
 
-En una aplicación real probablemente definirías constructores que proporcionen valores a las propiedades en el momento de la creación del objeto (para más información ver [Constructores más flexibles](#More_flexible_constructors)). Por ahora, estas definiciones sencillas nos sirven para mostrar como funciona la herencia.
+En una aplicación real probablemente definirías constructores que proporcionen valores a las propiedades en el momento de la creación del objeto (para más información ver [Constructores más flexibles](#more_flexible_constructors)). Por ahora, estas definiciones sencillas nos sirven para mostrar como funciona la herencia.
 
 ![figure8.2.png](figure8.2.png)
 **Figura 8.2: Definiciones de los objetos de la jerarquía Employee**
@@ -213,7 +213,7 @@ mark.dept = "general";
 mark.projects = [];
 ```
 
-El objeto `mark` hereda valores para las propiedades `name` y `dept` su objeto prototipico que enlaza en `mark.__proto__`. Se le asigna un valor local la propiedad `projects` a través del constructor `WorkerBee`. De esta forma se heredan propiedades y sus valores en JavaScript. En la sección [Property inheritance revisited](#Property_inheritance_revisited) se discuten algunos detalles de este proceso.
+El objeto `mark` hereda valores para las propiedades `name` y `dept` su objeto prototipico que enlaza en `mark.__proto__`. Se le asigna un valor local la propiedad `projects` a través del constructor `WorkerBee`. De esta forma se heredan propiedades y sus valores en JavaScript. En la sección [Property inheritance revisited](#property_inheritance_revisited) se discuten algunos detalles de este proceso.
 
 Debido a que estos constructores no permiten especificar valores específicos de instancia, esta información es genérica. Los valores de las propiedades son los valores por omisión, compartidos por todos los objetos nuevos creados a partir de `WorkerBee`. Por supuesto se pueden cambiar después los valores de estas propiedades. Por ejemplo podríamos dar valores con información específica a `mark` de la siguiente forma:
 
@@ -417,7 +417,7 @@ Employee.prototype.specialty = "none";
 
 Ahora el valor de la propiedad `specialty `del objeto` jane` si es "none".
 
-Otra forma de llamar al constructor es mediante el uso de los métodos [`call()`](/es/docs/JavaScript/Reference/Global_Objects/Function/call) / [`apply()`](/es/docs/JavaScript/Reference/Global_Objects/Function/apply):
+Otra forma de llamar al constructor es mediante el uso de los métodos [`call()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/call) / [`apply()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/apply):
 
 #### JavaScript
 
@@ -526,7 +526,7 @@ var f = new Foo();
 var isTrue = (f instanceof Foo);
 ```
 
-Para ver un ejemplo más detallado, supongamos que tenemos el conjunto de definiciones mostrado en [heredando propiedades](#Inheriting_properties). Creamos un objeto `Engineer` somo sigue:
+Para ver un ejemplo más detallado, supongamos que tenemos el conjunto de definiciones mostrado en [heredando propiedades](#inheriting_properties). Creamos un objeto `Engineer` somo sigue:
 
 ```js
 var chris = new Engineer("Pigman, Chris", ["jsd"], "fiji");

@@ -45,7 +45,7 @@ console.log(result); // 421
 | [Null 타입](#null_타입)           | `"object"`            | N/A                   |
 | [Undefined 타입](#undefined_타입) | `"undefined"`         | N/A                   |
 | [Boolean 타입](#boolean_타입)     | `"boolean"`           | {{jsxref("Boolean")}} |
-| [Number 타입](#Number_타입)       | `"number"`            | {{jsxref("Number")}}  |
+| [Number 타입](#number_타입)       | `"number"`            | {{jsxref("Number")}}  |
 | [BigInt 타입](#bigint_타입)       | `"bigint"`            | {{jsxref("BigInt")}}  |
 | [String 타입](#string_타입)       | `"string"`            | {{jsxref("String")}}  |
 | [Symbol 타입](#symbol_타입)       | `"symbol"`            | {{jsxref("Symbol")}}  |

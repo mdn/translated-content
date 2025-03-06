@@ -19,11 +19,11 @@ TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chro
 
 ## Quel est le problème ?
 
-On essaie de fournir une nouvelle valeur pour une propriété qui ne dispose que d'un [accesseur](/fr/docs/Web/JavaScript/Reference/Fonctions/get). Ceci échouera en mode non-strict mais lèvera une exception {{jsxref("TypeError")}} en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
+On essaie de fournir une nouvelle valeur pour une propriété qui ne dispose que d'un [accesseur](/fr/docs/Web/JavaScript/Reference/Functions/get). Ceci échouera en mode non-strict mais lèvera une exception {{jsxref("TypeError")}} en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
 
 ## Exemples
 
-Dans l'exemple qui suit, on voit comment créer un accesseur sur une propriété. En revanche, dans la définition de l'objet, on n'inclut aucun [mutateur](/fr/docs/Web/JavaScript/Reference/Fonctions/set) et une exception `TypeError` sera déclenchée lorsqu'on voudra modifier la propriété `temperature` pour la passer à `30`. Pour plus de détails, on pourra consulter la page {{jsxref("Object.defineProperty()")}}.
+Dans l'exemple qui suit, on voit comment créer un accesseur sur une propriété. En revanche, dans la définition de l'objet, on n'inclut aucun [mutateur](/fr/docs/Web/JavaScript/Reference/Functions/set) et une exception `TypeError` sera déclenchée lorsqu'on voudra modifier la propriété `temperature` pour la passer à `30`. Pour plus de détails, on pourra consulter la page {{jsxref("Object.defineProperty()")}}.
 
 ```js example-bad
 "use strict";

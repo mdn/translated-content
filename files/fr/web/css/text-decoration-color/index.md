@@ -88,4 +88,4 @@ text-decoration-color: unset;
 - La propriété raccourcie {{cssxref("text-decoration")}} qui permet, entre autres, de paramétrer `text-decoration-color`.
 - Le type de données {{cssxref("&lt;color&gt;")}}
 - D'autres propriétés relatives aux couleurs : {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}
-- [Appliquer des couleurs aux éléments HTML](/fr/docs/Web/HTML/Applying_color)
+- [Appliquer des couleurs aux éléments HTML](/fr/docs/Web/CSS/CSS_colors/Applying_color)

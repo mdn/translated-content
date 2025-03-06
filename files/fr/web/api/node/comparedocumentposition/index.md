@@ -39,7 +39,7 @@ if (
 ```
 
 > [!NOTE]
-> Parce que le résultat renvoyé par `compareDocumentPosition` est un masque de bits, des [opérateurs binaires](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_binaires) doivent être utilisés pour des résultats significatifs.
+> Parce que le résultat renvoyé par `compareDocumentPosition` est un masque de bits, des [opérateurs binaires](/fr/docs/Web/JavaScript/Reference/Operators) doivent être utilisés pour des résultats significatifs.
 
 > [!NOTE]
 > La première instruction utilise l' `item(0)` de la méthode [NodeList](/fr/docs/Web/API/NodeList/item) , qui est l'équivalent de `getElementsByTagName('head')[0].`

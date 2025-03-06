@@ -42,7 +42,7 @@ flex-flow: unset;
 
 ### 取值
 
-更多取值信息请查看 [`flex-direction`](/zh-CN/docs/CSS/flex-direction) 和 [`flex-wrap`](/zh-CN/docs/CSS/flex-wrap)
+更多取值信息请查看 [`flex-direction`](/zh-CN/docs/Web/CSS/flex-direction) 和 [`flex-wrap`](/zh-CN/docs/Web/CSS/flex-wrap)
 
 ## 示例
 

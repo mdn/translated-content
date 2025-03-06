@@ -18,7 +18,7 @@ l10n:
 
 `RegisteredContentScript` 对象表示这是在 `register()` 调用中注册的脚本。它定义了一个 `unregister()` 方法，你可以使用它来取消注册内容脚本。当创建它们的页面被销毁时，内容脚本也会自动取消注册。例如，如果它们是从背景页注册的，当背景页被销毁时，它们会自动取消注册；如果它们是从侧边栏或弹出窗口注册的，当侧边栏或弹出窗口关闭时，它们会自动取消注册。
 
-没有与 `contentScripts` API 相关联的权限，但是拓展必须拥有与其试图通过 `register()` 注册的脚本的匹配模式相对应的[主机权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
+没有与 `contentScripts` API 相关联的权限，但是拓展必须拥有与其试图通过 `register()` 注册的脚本的匹配模式相对应的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
 
 ## 类型
 

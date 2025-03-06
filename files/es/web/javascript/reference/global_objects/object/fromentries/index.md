@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 
 El método **`Object.fromEntries()`** transforma una lista de pares con `[clave-valor]` en un objeto.
 
-{{EmbedInteractiveExample("pages/js/object-fromentries.html")}}
+{{InteractiveExample("JavaScript Demo: Object.fromEntries()")}}
+
+```js interactive-example
+const entries = new Map([
+  ["foo", "bar"],
+  ["baz", 42],
+]);
+
+const obj = Object.fromEntries(entries);
+
+console.log(obj);
+// Expected output: Object { foo: "bar", baz: 42 }
+```
 
 ## Sintaxis
 
@@ -18,7 +30,7 @@ Object.fromEntries(iterable);
 ### Parámetros
 
 - `iterador`
-  - : Un iterador como {{jsxref("Array")}}, {{jsxref("Map")}} u otros objetos que implementen el [protocolo iterable](/es/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol).
+  - : Un iterador como {{jsxref("Array")}}, {{jsxref("Map")}} u otros objetos que implementen el [protocolo iterable](/es/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol).
 
 ### Valor de retorno
 
@@ -61,7 +73,7 @@ console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 
 ### Transformación de Objetos
 
-Con `Object.fromEntries`, su método inverso {{jsxref("Object.entries()")}}, y [array métodos de manipulación de arreglos](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2), puedes transformar objetos así:
+Con `Object.fromEntries`, su método inverso {{jsxref("Object.entries()")}}, y [array métodos de manipulación de arreglos](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#methods_2), puedes transformar objetos así:
 
 ```js
 const object1 = { a: 1, b: 2, c: 3 };

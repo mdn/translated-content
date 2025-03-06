@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/String/split
 
 O método `split()` divide uma {{jsxref ("String")}} em uma lista ordenada de substrings, coloca essas substrings em um array e retorna o array. A divisão é feita procurando um padrão, onde o padrão é fornecido como o primeiro parâmetro na chamada do método.
 
-{{EmbedInteractiveExample("pages/js/string-split.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.split()", "taller")}}
+
+```js interactive-example
+const str = "The quick brown fox jumps over the lazy dog.";
+
+const words = str.split(" ");
+console.log(words[3]);
+// Expected output: "fox"
+
+const chars = str.split("");
+console.log(chars[8]);
+// Expected output: "k"
+
+const strCopy = str.split();
+console.log(strCopy);
+// Expected output: Array ["The quick brown fox jumps over the lazy dog."]
+```
 
 ## Sintaxe
 
@@ -29,7 +45,7 @@ str.split([separator[, limit]])
   - : Opcional. Especifica o caractere, ou conjunto de caracteres, a ser usado para separar a string. O separador pode ser uma string ou uma {{jsxref("Global_Objects/RegExp", "expressão regular", "", 1)}}.
 
 > [!WARNING]
-> Quando uma string vazia (`""`) é usada como separador, a string não é dividida por caracteres percebidos pelo usuário ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) ou caracteres Unicode (pontos de código), mas por unidades de código UTF-16. Isso destrói [pares substitutos](http://unicode.org/faq/utf_bom.html#utf16-2). Consulte "[Como você transforma uma string em um array de caracteres em JavaScript?" no StackOverflow](https://stackoverflow.com/questions/4547609/how-do-you-get-a-string-to-a-character-array-in-javascript/34717402#34717402).
+> Quando uma string vazia (`""`) é usada como separador, a string não é dividida por caracteres percebidos pelo usuário ([grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) ou caracteres Unicode (pontos de código), mas por unidades de código UTF-16. Isso destrói [pares substitutos](https://unicode.org/faq/utf_bom.html#utf16-2). Consulte "[Como você transforma uma string em um array de caracteres em JavaScript?" no StackOverflow](https://stackoverflow.com/questions/4547609/how-do-you-get-a-string-to-a-character-array-in-javascript/34717402#34717402).
 
 - `limite`
 

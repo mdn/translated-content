@@ -27,7 +27,7 @@ var sending = browser.runtime.sendNativeMessage(
 ### 参数
 
 - `application`
-  - : `字符串类型。`native application 的名字。它必须和 [native application's manifest file](/zh-CN/Add-ons/WebExtensions/Native_messaging#App_manifest)中的‘name’字段一致。
+  - : `字符串类型。`native application 的名字。它必须和 [native application's manifest file](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#app_manifest)中的‘name’字段一致。
 - `message`
   - : `对象类型。一个将要发送给` native application 的 JSON 对象。
 

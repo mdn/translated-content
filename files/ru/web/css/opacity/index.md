@@ -11,9 +11,9 @@ CSS-свойство **`opacity`** устанавливает непрозрач
 
 `opacity` применяется к элементу в целом, включая его содержимое, даже если значение не наследуется дочерними элементами. Таким образом, элемент и его потомки имеют одинаковую непрозрачность относительно фона элемента, даже если они имеют различную непрозрачность относительно друг друга.
 
-Использование `opacity` со значением, отличным от `1`, помещает элемент в новый [контекст наложения](/ru/docs/CSS/Understanding_z-index/The_stacking_context).
+Использование `opacity` со значением, отличным от `1`, помещает элемент в новый [контекст наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
 
-Если вы [не хотите применять opacity к дочерним элементам](http://stackoverflow.com/questions/13508877/resetting-the-opacity-of-a-child-elements-maple-browser-samsung-tv-app), используйте взамен свойство {{cssxref("background")}}. Например:
+Если вы [не хотите применять opacity к дочерним элементам](https://stackoverflow.com/questions/13508877/resetting-the-opacity-of-a-child-elements-maple-browser-samsung-tv-app), используйте взамен свойство {{cssxref("background")}}. Например:
 
 ```css
 background: rgba(0, 0, 0, 0.4);

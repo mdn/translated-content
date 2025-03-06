@@ -19,7 +19,7 @@ str.fontcolor(color)
 ### Parâmetros
 
 - `color`
-  - : Deve ser um string que expresse uma cor em formato hexadecimal ou o nome, em Inglês, de uma cor. Os nomes das cores estão listados na referência de [cores CSS](/pt-BR/docs/Web/CSS/color_value#Palavras-chave_de_cores).
+  - : Deve ser um string que expresse uma cor em formato hexadecimal ou o nome, em Inglês, de uma cor. Os nomes das cores estão listados na referência de [cores CSS](/pt-BR/docs/Web/CSS/color_value#palavras-chave_de_cores).
 
 ### Valor retornado
 
@@ -47,7 +47,7 @@ console.log(
 // '<font color="FF00">Olá, mundo</font> está vermelho em hexadecimal nesta linha'
 ```
 
-Com o objeto [`element.style`](/pt-BR/docs/Web/API/ElementCSSInlineStyle/style) você pode obter o atributo `style` do elemento e manipulá-lo de forma mais genérica, por exemplo:
+Com o objeto [`element.style`](/pt-BR/docs/Web/API/HTMLElement/style) você pode obter o atributo `style` do elemento e manipulá-lo de forma mais genérica, por exemplo:
 
 ```js
 document.getElementById("#oIdDoElemento").style.color = "red";

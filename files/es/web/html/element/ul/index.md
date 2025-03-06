@@ -11,11 +11,11 @@ slug: Web/HTML/Element/ul
 
   - : **Sus etiquetas son**: `<ul> y </ul>` (ambas obligatorias).
 
-    **Está definido como**: Elemento [para listas](/es/HTML/Elemento/Tipos_de_elementos#delista).
+    **Está definido como**: Elemento [para listas](/es/docs/HTML/Elemento/Tipos_de_elementos#delista).
 
     **Crea una caja**: En bloque.
 
-    **Puede contener**: Uno o más elementos [li](/es/HTML/Elemento/li)
+    **Puede contener**: Uno o más elementos [li](/es/docs/Web/HTML/Element/li)
 
 #### Atributos
 

@@ -117,7 +117,7 @@ svg {
 
 ### arcs
 
-> **备注：** `arcs` 来自于 SVG2 但尚未被广泛支持，详情参见 [浏览器兼容性](#Browser_compatibility)
+> **备注：** `arcs` 来自于 SVG2 但尚未被广泛支持，详情参见 [浏览器兼容性](#browser_compatibility)
 
 `arcs` 值指示将使用圆弧拐角来连接路径线段。通过用与连接点的外边缘具有相同曲率的圆弧在连接点处延伸笔触的外边缘来形成弧形。
 
@@ -262,7 +262,7 @@ svg {
 
 ### miter-clip
 
-> **备注：** `miter-clip` 来自于 SVG2 但尚未被广泛支持，详情参见 [浏览器兼容性](#Browser_compatibility)
+> **备注：** `miter-clip` 来自于 SVG2 但尚未被广泛支持，详情参见 [浏览器兼容性](#browser_compatibility)
 
 The `miter-clip` 用尖角连接路径段。通过在路径段的切线处延伸笔触的外边缘直到它们相交，来形成拐角。
 

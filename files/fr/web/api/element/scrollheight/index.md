@@ -8,7 +8,7 @@ slug: Web/API/Element/scrollHeight
 L'attribut en lecture seule **`element.scrollHeight`** est une mesure de la hauteur du contenu d'un élément qui inclut le contenu débordant et non visible à l'écran. La valeur `scrollHeight` est égale à la hauteur minimum dont l'élément aurait besoin pour que le contenu rentre dans le viewpoint sans utiliser de barre de défilement. Cela inclut les marges internes mais pas les marges externes.
 
 > [!NOTE]
-> Cette propriété arrondit la valeur à l'entier le plus proche. Si vous avez besoin d'une valeur précise, utilisez [element.getBoundingClientRect()](/fr/docs/DOM/element.getBoundingClientRect).
+> Cette propriété arrondit la valeur à l'entier le plus proche. Si vous avez besoin d'une valeur précise, utilisez [element.getBoundingClientRect()](/fr/docs/Web/API/Element/getBoundingClientRect).
 
 ## Syntaxe
 
@@ -127,7 +127,7 @@ L'expression suivante renvoie `true` si l'élément est à la fin du défilement
 element.scrollHeight - element.scrollTop === element.clientHeight;
 ```
 
-Associée à l'événement [element.onscroll](/fr/docs/DOM/element.onscroll), l'expression peut être utile pour déterminer si un utilisateur a lu un texte ou non (voir aussi les propriétés [element.scrollTop](/fr/docs/DOM/element.scrollTop) et [element.clientHeight](/fr/docs/DOM/element.clientHeight). Par exemple :
+Associée à l'événement [element.onscroll](/fr/docs/Web/API/Element/scroll_event), l'expression peut être utile pour déterminer si un utilisateur a lu un texte ou non (voir aussi les propriétés [element.scrollTop](/fr/docs/Web/API/Element/scrollTop) et [element.clientHeight](/fr/docs/Web/API/Element/clientHeight). Par exemple :
 
 ```html
 <!doctype html>
@@ -170,5 +170,5 @@ onload = function () {
 ## Voir aussi
 
 - [MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
-- [element.clientHeight](/fr/docs/DOM/element.clientHeight)
-- [element.offsetHeight](/fr/docs/DOM/element.offsetHeight)
+- [element.clientHeight](/fr/docs/Web/API/Element/clientHeight)
+- [element.offsetHeight](/fr/docs/Web/API/HTMLElement/offsetHeight)

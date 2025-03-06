@@ -16,7 +16,7 @@ slug: Web/CSS/percentage
 
 ## 보간
 
-애니메이션에서 `<percentage>` 자료형의 값은 유동소수점 실수를 사용해 보간됩니다. 보간의 속도는 애니메이션과 연결된 [타이밍 함수](/ko/docs/Web/CSS/single-transition-timing-function)가 결정합니다.
+애니메이션에서 `<percentage>` 자료형의 값은 유동소수점 실수를 사용해 보간됩니다. 보간의 속도는 애니메이션과 연결된 [타이밍 함수](/ko/docs/Web/CSS/easing-function)가 결정합니다.
 
 ## 예제
 

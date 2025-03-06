@@ -10,7 +10,7 @@ A palavra-chave CSS **`initial`** CSS se aplica ao [valor inicial (ou padrão)](
 Isto inclui também o atalho CSS {{cssxref("all")}}, no qual o `initial` pode ser utilizado para restaurar todas as propriedades CSS para o seu estado inicial.
 
 > [!NOTE]
-> Em [propriedades herdadas](/pt-BR/docs/Web/CSS/inheritance#propriedades_herdadas), O valor inicial pode ser inesperado. Neste caso, considere o uso dos termos {cssxref("inherit")}}, {{cssxref("unset")}}, ou {{cssxref("revert")}}.
+> Em [propriedades herdadas](/pt-BR/docs/Web/CSS/Inheritance#propriedades_herdadas), O valor inicial pode ser inesperado. Neste caso, considere o uso dos termos {cssxref("inherit")}}, {{cssxref("unset")}}, ou {{cssxref("revert")}}.
 
 ## Exemplo
 

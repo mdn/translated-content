@@ -10,13 +10,13 @@ slug: Web/MathML/Element/merror
 ## Атрибуты
 
 - class, id, style
-  - : Предполагается использование с [таблицами стилей](/ru/docs/CSS).
+  - : Предполагается использование с [таблицами стилей](/ru/docs/Web/CSS).
 - href
   - : Используется для установки гиперссылки на указанный URI.
 - mathbackground
-  - : Цвет фона. Ты можешь использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/CSS/color_value#Color_Keywords).
+  - : Цвет фона. Ты можешь использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/Web/CSS/color_value#color_keywords).
 - mathcolor
-  - : Цвет текста, а также цвет линии дроби. Вы можете использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/CSS/color_value#Color_Keywords).
+  - : Цвет текста, а также цвет линии дроби. Вы можете использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/Web/CSS/color_value#color_keywords).
 
 ## Примеры
 

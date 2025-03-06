@@ -61,13 +61,13 @@ _无变化。_
 
 #### Media、Web Audio 和 WebRTC
 
-- 增加了对 [WebP](/zh-CN/docs/Glossary/webp) Google 压缩图像文件的支持 ([bug 1294490](https://bugzilla.mozilla.org/show_bug.cgi?id=1294490)) 。
+- 增加了对 [WebP](/zh-CN/docs/Glossary/WebP) Google 压缩图像文件的支持 ([bug 1294490](https://bugzilla.mozilla.org/show_bug.cgi?id=1294490)) 。
 
 #### Canvas 和 WebGL
 
 #### 移除
 
-- [Mutation events](/zh-CN/docs/Web/Guide/Events/Mutation_events) 在 shadow trees 上已经被禁用 ([Firefox bug 1489858](https://bugzil.la/1489858)).
+- [Mutation events](/zh-CN/docs/Web/API/MutationEvent) 在 shadow trees 上已经被禁用 ([Firefox bug 1489858](https://bugzil.la/1489858)).
 - The non-standard {{domxref("MediaStream")}} property `currentTime` has been removed ([Firefox bug 1502927](https://bugzil.la/1502927)).
 - The obsolete {{domxref("BasicCardRequest.supportedTypes")}} property is no longer supported by the Payment Request API; instead of requiring the web app or site to figure out what type of card is being used, it's now the server's job to deal with it ([Firefox bug 1504032](https://bugzil.la/1504032)).
 

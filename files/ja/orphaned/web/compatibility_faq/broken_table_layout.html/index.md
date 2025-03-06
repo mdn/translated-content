@@ -54,4 +54,4 @@ slug: orphaned/Web/Compatibility_FAQ/Broken_Table_Layout.html
   - また、後続するセルのコンテンツが用意された列幅をオーバーフロー(はみ出し)した場合にも、
     発生したセルに対して[overflow](/ja/docs/Web/CSS/overflow)プロパティを用いればはみ出したセルの内容を表示できるようになるなど、セルの内容変更にも柔軟に対応できます。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

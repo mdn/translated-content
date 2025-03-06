@@ -70,7 +70,7 @@ setCookie.then(logCookie, logError);
 
 #### [notifications](/ja/docs/Mozilla/Add-ons/WebExtensions/API/notifications)
 
-- `notifications.create()`の `"basic"` [`type`](/ja/Add-ons/WebExtensions/API/notifications/TemplateType)を指定した場合の、 `iconUrl` は Firefox では任意です。Chrome では必須です。
+- `notifications.create()`の `"basic"` [`type`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType)を指定した場合の、 `iconUrl` は Firefox では任意です。Chrome では必須です。
 - 通知はユーザーがクリックするとすぐに消去されます。 これは Chrome では当てはまりません。
 - `notifications.create()` を複数回連続して呼び出すと、Firefox が通知を一切表示しなくなることがあります。 `chrome.notifications.create()` のコールバック 関数内に入るまでの時間は、後続のスクリプトが実行されるまで待つほど十分な時間ではありません。
 
@@ -91,7 +91,7 @@ setCookie.then(logCookie, logError);
 - Firefox では、`tabs.query()` を使用して URL でタブにクエリーを行うには、`"tabs"`権限が必要です。 Chrome では、`"tabs"`権限がなくても可能ですが、URL がホスト権限と一致するタブに制限されます。
 - Firefox では、`beforeunload` イベントの後に `tabs.remove()` の promise が実行されますが、Chrome では コールバック が `beforeunload` を待ちません。
 
-#### [webRequest](/ja/Add-ons/WebExtensions/API/webRequest)
+#### [webRequest](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)
 
 - Firefox では、元の URL が`http:`または`https:`を使用する場合にのみ、リクエストをリダイレクトできます。
 - Firefox では、システム要求（拡張機能のアップグレードや検索バーの提案など）でイベントが発生しません。 Firefox 57 以降では、Firefox はプロキシー認証のために{{WebExtAPIRef("webRequest.onAuthRequired")}}を遮断する必要がある拡張機能の例外を生成します。{{WebExtAPIRef("webRequest.onAuthRequired")}}のドキュメントをご覧ください。

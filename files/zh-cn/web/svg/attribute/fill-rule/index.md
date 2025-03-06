@@ -55,12 +55,12 @@ svg {
 
 ## 使用说明
 
-| 类别     | 外观属性                                                                         |
-| -------- | -------------------------------------------------------------------------------- |
-| 值       | nonzero \| evenodd                                                               |
-| 默认值   | nonzero                                                                          |
-| 可变性   | Yes                                                                              |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#FillRuleProperty) |
+| 类别     | 外观属性                                                                          |
+| -------- | --------------------------------------------------------------------------------- |
+| 值       | nonzero \| evenodd                                                                |
+| 默认值   | nonzero                                                                           |
+| 可变性   | Yes                                                                               |
+| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/painting.html#FillRuleProperty) |
 
 `fill-rule` 属性为如何确定一个形状的内部（即可以被填充的区域）提供了两个可选值：
 

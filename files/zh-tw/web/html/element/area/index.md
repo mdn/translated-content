@@ -9,7 +9,50 @@ slug: Web/HTML/Element/area
 
 此元素僅在 {{HTMLElement("map")}} 元素內使用。
 
-{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;area&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<map name="infographic">
+  <area
+    shape="poly"
+    coords="129,0,260,95,129,138"
+    href="https://developer.mozilla.org/docs/Web/HTTP"
+    alt="HTTP" />
+  <area
+    shape="poly"
+    coords="260,96,209,249,130,138"
+    href="https://developer.mozilla.org/docs/Web/HTML"
+    alt="HTML" />
+  <area
+    shape="poly"
+    coords="209,249,49,249,130,139"
+    href="https://developer.mozilla.org/docs/Web/JavaScript"
+    alt="JavaScript" />
+  <area
+    shape="poly"
+    coords="48,249,0,96,129,138"
+    href="https://developer.mozilla.org/docs/Web/API"
+    alt="Web APIs" />
+  <area
+    shape="poly"
+    coords="0,95,128,0,128,137"
+    href="https://developer.mozilla.org/docs/Web/CSS"
+    alt="CSS" />
+</map>
+<img
+  usemap="#infographic"
+  src="/shared-assets/images/examples/mdn-info.png"
+  alt="MDN infographic" />
+```
+
+```css interactive-example
+img {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 260px;
+}
+```
 
 ## 屬性
 
@@ -39,7 +82,7 @@ slug: Web/HTML/Element/area
 
     - `no-referrer`：不會發送 {{HTTPHeader("Referer")}} 標頭。
     - `no-referrer-when-downgrade`：不會將 {{HTTPHeader("Referer")}} 標頭發送給沒有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的 {{Glossary("origin")}}。
-    - `origin`：發送的引用網址將被限制為引用頁面的原始位置：其 [scheme](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host")}} 和 {{Glossary("port")}}。
+    - `origin`：發送的引用網址將被限制為引用頁面的原始位置：其 [scheme](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host")}} 和 {{Glossary("port")}}。
     - `origin-when-cross-origin`：發送到其他來源的引用網址將被限制為方案、主機和端口。相同來源的導航仍將包括路徑。
     - `same-origin`：對於{{Glossary("Same-origin policy", "相同源策略")}}，將發送一個引用網址，但跨來源請求將不包含引用網址信息。
     - `strict-origin`：僅在協議安全等級保持不變（HTTPS→HTTPS）時發送文件的原始位置作為引用網址，但不要將其發送到較不安全的目的地（HTTPS→HTTP）。

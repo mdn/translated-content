@@ -49,7 +49,7 @@ l10n:
 - [サイドバー](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)
   - : ブラウザーウィンドウの左側の、ウェブページの横に表示されるペインです。
 - [ポップアップ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
-  - : ユーザーが[ツールバーボタン](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action)や[アドレスバーボタン](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)をクリックした時に表示されるダイアログです。
+  - : ユーザーが[ツールバーボタン](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)や[アドレスバーボタン](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)をクリックした時に表示されるダイアログです。
 - [オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)
   - : ユーザーがブラウザーネイティブのアドオンマネージャー内でアドオン設定にアクセスする時に表示するページです。
 

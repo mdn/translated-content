@@ -67,5 +67,5 @@ console.log(num1); // 2
 ## 참조
 
 - {{Glossary("Scope")}}
-- [Declaring variables in the JavaScript Guide](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#Declaring_variables)
+- [Declaring variables in the JavaScript Guide](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#declaring_variables)
 - [Function scope in the JavaScript Guide](/ko/docs/Web/JavaScript/Guide/Functions#함수_스코프)

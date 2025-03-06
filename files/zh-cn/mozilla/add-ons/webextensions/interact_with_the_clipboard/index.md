@@ -165,4 +165,4 @@ navigator.clipboard
 
 ### 特定浏览器注意事项
 
-Firefox 在 54 版本提供了 `"clipboardRead"` [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) ，但是仅支持向处于 [内容可编辑模式](/zh-CN/docs/Web/Guide/HTML/Editable_content) 的元素粘贴，对于内容脚本，只能在 {{HTMLElement("textarea")}} 工作。对于后台脚本，任何元素都可被设置为内容可编辑模式。
+Firefox 在 54 版本提供了 `"clipboardRead"` [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) ，但是仅支持向处于 [内容可编辑模式](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable) 的元素粘贴，对于内容脚本，只能在 {{HTMLElement("textarea")}} 工作。对于后台脚本，任何元素都可被设置为内容可编辑模式。

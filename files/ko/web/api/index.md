@@ -21,4 +21,4 @@ Web API는 보통 JavaScript와 함께 사용하지만, 항상 그렇지는 않�
 
 ## 같이 보기
 
-- [웹 API 이벤트 참고서](/ko/docs/Web/Reference/Events)
+- [웹 API 이벤트 참고서](/ko/docs/Web/Events)

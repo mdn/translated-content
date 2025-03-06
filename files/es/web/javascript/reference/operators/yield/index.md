@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Operators/yield
 
 La palabra clave `yield` se usa para pausar y reanudar una función generadora ({{jsxref("Statements/function*", "function*")}} o {{jsxref("Statements/Legacy_generator_function", "función generadora heredada")}}).
 
-{{EmbedInteractiveExample("pages/js/expressions-yield.html", "taller")}}La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
+{{InteractiveExample("JavaScript Demo: Expressions - yield", "taller")}}
+
+```js interactive-example
+function* foo(index) {
+  while (index < 2) {
+    yield index;
+    index++;
+  }
+}
+
+const iterator = foo(0);
+
+console.log(iterator.next().value);
+// Expected output: 0
+
+console.log(iterator.next().value);
+// Expected output: 1
+```
 
 ## Sintaxis
 
@@ -101,7 +118,7 @@ console.log(generatorFunc.next(10).value); // 26
 
 ## Ve también
 
-- [El protocolo `Iterator`](/es/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [El protocolo `Iterator`](/es/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield*", "yield*")}}

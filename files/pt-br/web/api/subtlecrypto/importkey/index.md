@@ -5,7 +5,7 @@ slug: Web/API/SubtleCrypto/importKey
 
 {{APIRef("Web Crypto API")}}
 
-O método **`SubtleCrypto.importKey()`** retorna como {{jsxref("Promise")}} de uma {{domxref("CryptoKey")}} de uma informção dada como parâmetro.
+O método **`SubtleCrypto.importKey()`** retorna como {{jsxref("Promise")}} de uma {{domxref("CryptoKey")}} de uma informação dada como parâmetro.
 
 ## Sintaxe
 
@@ -18,7 +18,7 @@ var result = crypto.subtle.importKey(format, keyData, algo, extractable, usages)
 - _`format`_ é um valor enumerado descrevendo o formato de informação da key exportada. Podendo ser um dos seguintes:
 
   - `"raw"`, a key como um conjunto de bytes, normalmente uma key secreta.
-  - `"pkcs8"` uma key privada, no [IETF Public Key-Cryptographic Standard Encryption #8](http://tools.ietf.org/html/rfc5208).
+  - `"pkcs8"` uma key privada, no [IETF Public Key-Cryptographic Standard Encryption #8](https://tools.ietf.org/html/rfc5208).
   - `"spki"`, normalmente uma key pública, no [Simple public key infrastructure](http://en.wikipedia.org/wiki/Simple_public-key_infrastructure) padrão.
   - `"jwk"`, a key no formato [JSON Web Key](https://tools.ietf.org/html/draft-ietf-jose-json-web-key-41).
 

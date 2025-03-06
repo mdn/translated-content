@@ -9,7 +9,7 @@ l10n:
 
 画面の向きとは、ブラウザーの[ビューポート](/ja/docs/Glossary/Viewport)がランドスケープモード（つまり、ビューポートの幅がその高さよりも大きい）か、そうでなければポートレートモード（ビューポートの高さがその幅よりも大きい）であるかを参照するものです。
 
-CSS は [`orientation`](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#orientation) というメディア特性を提供し、画面の向きに応じてレイアウトを調整できるようにしています。
+CSS は [`orientation`](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation) というメディア特性を提供し、画面の向きに応じてレイアウトを調整できるようにしています。
 
 [画面方向 API](/ja/docs/Web/API/Screen_Orientation_API) は、画面の内側へ作業するためのプログラム的な JavaScript API を提供します。これには、ビューポートを特定の方向に固定する機能が含まれます。
 
@@ -175,4 +175,4 @@ screen.orientation.lock();
 - {{domxref("Screen.orientation", "screen.orientation")}}
 - {{domxref("ScreenOrientation")}}
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} イベント
-- [orientation メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#orientation)
+- [orientation メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation)

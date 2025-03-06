@@ -7,10 +7,53 @@ slug: Web/HTML/Element/input/reset
 
 **`reset`** 类型的 {{HTMLElement("input")}} 元素将渲染为按钮，且带有默认的 {{domxref("Element/click_event", "click")}} 事件，用于将表单中的所有输入重置为其初始值。
 
-{{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;reset&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<form>
+  <div class="controls">
+    <label for="id">User ID:</label>
+    <input type="text" id="id" name="id" />
+
+    <input type="reset" value="Reset" />
+    <input type="submit" value="Submit" />
+  </div>
+</form>
+```
+
+```css interactive-example
+.controls {
+  padding-top: 1rem;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr;
+  gap: 0.7rem;
+}
+
+label {
+  font-size: 0.8rem;
+  justify-self: end;
+}
+
+input[type="reset"],
+input[type="submit"] {
+  width: 5rem;
+  justify-self: end;
+}
+
+input[type="reset"] {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+input[type="submit"] {
+  grid-column: 2;
+  grid-row: 3;
+}
+```
 
 > [!NOTE]
-> 你应该尽量避免在表单中包含重置按钮。它们很少具有实用性，事实上更有可能使用户因误点而感到沮丧（通常是在尝试单击[提交](/zh-CN/docs/Web/HTML/Element/Input/submit)按钮时）。
+> 你应该尽量避免在表单中包含重置按钮。它们很少具有实用性，事实上更有可能使用户因误点而感到沮丧（通常是在尝试单击[提交](/zh-CN/docs/Web/HTML/Element/input/submit)按钮时）。
 
 <table class="properties">
  <tbody>
@@ -65,7 +108,7 @@ slug: Web/HTML/Element/input/reset
 
 ## 使用重置按钮
 
-`<input type="reset">` 按钮用于重置表单。如果要创建自定义按钮，并使用 JavaScript 自定义行为，你需要使用 [`<input type="button">`](/zh-CN/docs/Web/HTML/Element/Input/button)，或者最好使用 `{{htmlelement("button")}}` 元素。
+`<input type="reset">` 按钮用于重置表单。如果要创建自定义按钮，并使用 JavaScript 自定义行为，你需要使用 [`<input type="button">`](/zh-CN/docs/Web/HTML/Element/input/button)，或者最好使用 `{{htmlelement("button")}}` 元素。
 
 ### 一个简单的重置按钮
 
@@ -143,7 +186,7 @@ slug: Web/HTML/Element/input/reset
 ## 参见
 
 - {{HTMLElement("input")}} 和 {{domxref("HTMLInputElement")}} 实现接口
-- [表单和按钮](/zh-CN/docs/Learn/Forms/Basic_native_form_controls#按钮)
-- [HTML 表单](/zh-CN/docs/Learn/Forms)
+- [表单和按钮](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#按钮)
+- [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("button")}} 元素
-- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

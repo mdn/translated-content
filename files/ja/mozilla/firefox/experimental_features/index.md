@@ -226,7 +226,7 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 
 ### メディアクエリーで縦横比として 1 つの数値を使用
 
-[メディアクエリー](/ja/docs/Web/CSS/Media_queries)で縦横比を指定する際に、 1 つの {{cssxref("number")}} を {{cssxref("ratio")}} として使用できるようになりました。 (詳細は [Firefox バグ 1565562](https://bugzil.la/1565562) を参照してください。)
+[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)で縦横比を指定する際に、 1 つの {{cssxref("number")}} を {{cssxref("ratio")}} として使用できるようになりました。 (詳細は [Firefox バグ 1565562](https://bugzil.la/1565562) を参照してください。)
 
 <table>
   <thead>
@@ -429,7 +429,7 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 ### スクロール連動レイアウト
 
 {{cssxref('@scroll-timeline')}} アットルールと {{cssxref('animation-timeline')}} プロパティで、（時間ではなく）コンテナーのスクロール進行に連動するアニメーションを定義することができます。
-指定されたスクロールタイムラインは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations) に `animation-timeline` プロパティを用いて関連付けられます。
+指定されたスクロールタイムラインは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations) に `animation-timeline` プロパティを用いて関連付けられます。
 詳しくは [Firefox バグ 1676791](https://bugzil.la/1676791) と [Firefox バグ 1676782](https://bugzil.la/1676782) を参照してください。
 
 <table>
@@ -1660,7 +1660,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 ### 機能ポリシー
 
-[機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)は、ウェブ開発者がブラウザーの特定の機能や API の動作を選択的に有効化、無効化、変更することを可能にします。 CSP と似ていますが、セキュリティの動作ではなく機能を制御します。
+[機能ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)は、ウェブ開発者がブラウザーの特定の機能や API の動作を選択的に有効化、無効化、変更することを可能にします。 CSP と似ていますが、セキュリティの動作ではなく機能を制御します。
 
 > **メモ:** `Feature-Policy` ヘッダーは、仕様書では `Permissions-Policy` に名称が変更されており、本記事もいずれその変更を反映して更新される予定です。
 

@@ -24,7 +24,7 @@ Aquí esta el HTML anterion en acción:
 
 ## Ejecutando Comandos
 
-Cuando un elemento HTML tiene el parametro `contenteditable` en `true`, se hace disponible el método {{ domxref("document.execCommand") }}. Esto te permite ejecutar [comandos](/es/docs/Web/API/document.execCommand#Commands) para manipular el contenido de una region editable. La mayoria de estos comandos afectan a la selección del documento (bold, italics, etc), mientras que otros insertan nuevos elementos (como añadiendo un link) o afectan a una linea entera (indenting). Cuando usas `contentEditable`, estás llamando a `execCommand` que afectará al elemento editable activo.
+Cuando un elemento HTML tiene el parametro `contenteditable` en `true`, se hace disponible el método {{ domxref("document.execCommand") }}. Esto te permite ejecutar [comandos](/es/docs/Web/API/Document/execCommand#commands) para manipular el contenido de una region editable. La mayoria de estos comandos afectan a la selección del documento (bold, italics, etc), mientras que otros insertan nuevos elementos (como añadiendo un link) o afectan a una linea entera (indenting). Cuando usas `contentEditable`, estás llamando a `execCommand` que afectará al elemento editable activo.
 
 ## Differences in markup generation
 

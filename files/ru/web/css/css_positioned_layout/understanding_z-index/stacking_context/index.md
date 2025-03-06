@@ -7,24 +7,24 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
 
 Контекст наложения (stacking context) это концепция трёхмерного расположения HTML-элементов вдоль оси Z по отношению к пользователю, находящемуся перед экраном. HTML-элементы занимают это место по порядку, основанному на атрибутах элемента.
 
-« [CSS](/ru/docs/CSS) « [Understanding CSS z-index](/ru/docs/CSS/Understanding_z-index)
+« [CSS](/ru/docs/Web/CSS) « [Understanding CSS z-index](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
 
 ## Контекст наложения
 
-В предыдущем примере [Добавляем z-index](/ru/docs/CSS/Understanding_z-index/Adding_z-index), порядок отображения определённых DIVs элементов зависел от их z-index значения. Это возникает благодаря тому, что у этих элементов есть специальные свойства, которые заставляют их формировать контекст наполнения ( _stacking context )_.
+В предыдущем примере [Добавляем z-index](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index), порядок отображения определённых DIVs элементов зависел от их z-index значения. Это возникает благодаря тому, что у этих элементов есть специальные свойства, которые заставляют их формировать контекст наполнения ( _stacking context )_.
 
 Контекст может формироваться в любом месте документа, любым элементом, у которого выполняется одно из следующих условий:
 
 - является корневым элементом (HTML),
 - позиционирован абсолютно (position:absolute) или относительно (position:relative) с z-index значением отличным от "auto",
 - flex элемент с z-index отличным от "auto", чей родительский элемент имеет свойство display: flex|inline-flex,
-- элементы с {{cssxref("opacity")}} меньше чем 1. (См. [the specification for opacity](http://www.w3.org/TR/css3-color/#transparency)),
+- элементы с {{cssxref("opacity")}} меньше чем 1. (См. [the specification for opacity](https://www.w3.org/TR/css3-color/#transparency)),
 - элементы с {{cssxref("transform")}} отличным от "none",
 - элементы с {{cssxref("mix-blend-mode")}} значением отличным от "normal",
 - элементы с {{cssxref("filter")}} значением отличным от "none",
 - элементы с {{cssxref("isolation")}} установленным в "isolate",
 - `position: fixed`
-- если мы указываем элементу атрибут `{{cssxref("will-change")}}` при этом не обязательно присваивать ему значения (См. [this post](http://dev.opera.com/articles/css-will-change-property/))
+- если мы указываем элементу атрибут `{{cssxref("will-change")}}` при этом не обязательно присваивать ему значения (См. [this post](https://dev.opera.com/articles/css-will-change-property/))
 - элементы с {{cssxref("-webkit-overflow-scrolling")}} установленным в "touch"
 
 Внутри контекста наложения дочерние элементы расположены в соответствии с правилами, описанными ранее. Важно заметить, что значения свойства z-index для дочерних элементов формирующих контекст наложения, будут учитываться только в рамках родительского элемента. Контекст наложения обрабатываются атомарно, как единое целое в контексте наложения родителя.
@@ -235,9 +235,9 @@ z-index: 3;
 
 ## Смотрите также
 
-- [Stacking without z-index](/ru/docs/CSS/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
-- [Stacking and float](/ru/docs/CSS/Understanding_z-index/Stacking_and_float) : How floating elements are handled
-- [Adding z-index](/ru/docs/CSS/Understanding_z-index/Adding_z-index) : Using z-index to change default stacking
-- [Stacking context example 1](/ru/docs/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
-- [Stacking context example 2](/ru/docs/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
-- [Stacking context example 3](/ru/docs/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
+- [Stacking without z-index](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
+- [Stacking and float](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements) : How floating elements are handled
+- [Adding z-index](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index) : Using z-index to change default stacking
+- [Stacking context example 1](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
+- [Stacking context example 2](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
+- [Stacking context example 3](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level

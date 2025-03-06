@@ -466,7 +466,7 @@ Nous vous encourageons ici à manipuler cet exemple et à l'adapter comme bon vo
 
 L'exemple de la boucle précédente était intéressante, mais ce n'est pas une boucle continue qui permet de dessiner en _live_ (comme pour un jeu vidéo ou un outil de visualisation en temps réel). Si on prend le canevas comme un film, on voudrait afficher une mise à jour à chaque <i lang="en">frame</i>, idéalement en affichant 60 images par secondes afin que le mouvement apparaisse fluide pour l'œil humain.
 
-Il existe plusieurs fonctions JavaScript qui permettent d'exécuter des fonctions de façon répétée, plusieurs fois par seconde. La plus adaptée ici est [`window.requestAnimationFrame()`](/fr/docs/Web/API/window/requestAnimationFrame). Cette fonction prend comme seul paramètre le nom de la fonction qu'on veut exécuter à chaque <i lang="en">frame</i>. La prochaine fois que le navigateur sera prêt à mettre à jour le contenu de l'écran, la fonction sera appelée. Si la fonction dessine une mise à jour d'une animation, on pourra appeler `requestAnimationFrame()` à nouveau, juste avant la fin de la fonction afin que la boucle de l'animation continue. La boucle se termine lorsqu'on arrête d'appeler `requestAnimationFrame()` ou si la méthode [`window.cancelAnimationFrame()`](/fr/docs/Web/API/window/cancelAnimationFrame) est appelée après `requestAnimationFrame()` et avant le rendu de la <i lang="en">frame</i>.
+Il existe plusieurs fonctions JavaScript qui permettent d'exécuter des fonctions de façon répétée, plusieurs fois par seconde. La plus adaptée ici est [`window.requestAnimationFrame()`](/fr/docs/Web/API/Window/requestAnimationFrame). Cette fonction prend comme seul paramètre le nom de la fonction qu'on veut exécuter à chaque <i lang="en">frame</i>. La prochaine fois que le navigateur sera prêt à mettre à jour le contenu de l'écran, la fonction sera appelée. Si la fonction dessine une mise à jour d'une animation, on pourra appeler `requestAnimationFrame()` à nouveau, juste avant la fin de la fonction afin que la boucle de l'animation continue. La boucle se termine lorsqu'on arrête d'appeler `requestAnimationFrame()` ou si la méthode [`window.cancelAnimationFrame()`](/fr/docs/Web/API/Window/cancelAnimationFrame) est appelée après `requestAnimationFrame()` et avant le rendu de la <i lang="en">frame</i>.
 
 > [!NOTE]
 > C'est une bonne pratique que d'appeler `cancelAnimationFrame()` à partir du code principal lorsque l'animation est terminée, pour s'assurer qu'aucune mise à jour n'est en attente.
@@ -599,7 +599,7 @@ Créons maintenant notre propre animation en recréant un personnage d'un ancien
 
    Si le personnage n'a pas dépassé le bord droit de l'écran, on incrémente `posX` de 2, ce qui a pour effet de le déplacer légèrement à droite pour la prochaine itération.
 
-10. Enfin, on lance la boucle d'animation en appelant [`requestAnimationFrame()`](/fr/docs/Web/API/window/requestAnimationFrame) à la fin de la fonction `draw()`&nbsp;:
+10. Enfin, on lance la boucle d'animation en appelant [`requestAnimationFrame()`](/fr/docs/Web/API/Window/requestAnimationFrame) à la fin de la fonction `draw()`&nbsp;:
 
     ```js
     window.requestAnimationFrame(draw);

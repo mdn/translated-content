@@ -13,7 +13,7 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 
 ウェブサイトをインストール可能にするには、以下のものが必要になります。
 
-- [正しくフィールドが入力された](/ja/docs/Web/Progressive_web_apps/Add_to_home_screen#マニフェスト)ウェブマニフェスト
+- [正しくフィールドが入力された](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#マニフェスト)ウェブマニフェスト
 - 安全な (HTTPS) ドメインから提供されるウェブサイト
 - 端末上のアプリを表すアイコン
 - アプリをオフラインで動作させるために登録された[service worker](/ja/docs/Web/API/Service_Worker_API) (現時点では Android の Chrome にのみ必要です)
@@ -110,7 +110,7 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 
 この記事では、適切に設定されたウェブマニフェストで PWA をインストール可能にする方法と、その後でブラウザーの「ホーム画面に追加」機能を使って PWA をインストールする方法について学びました。
 
-a2hs の詳細については、必ず[ホーム画面に追加のガイド](/ja/docs/Web/Progressive_web_apps/Add_to_home_screen)をお読みください。 ブラウザーのサポートは現在、Android の Firefox 58 以降、Mobile Chrome および Android Webview 31 以降、および Android の Opera 32 以降に制限されていますが、近い将来に改善されるはずです。
+a2hs の詳細については、必ず[ホーム画面に追加のガイド](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)をお読みください。 ブラウザーのサポートは現在、Android の Firefox 58 以降、Mobile Chrome および Android Webview 31 以降、および Android の Opera 32 以降に制限されていますが、近い将来に改善されるはずです。
 
 それでは、PWA パズルの最後のピース、プッシュ通知を使用してユーザーとアナウンスを共有し、ユーザーがアプリに再び参加できるようにする方法に移りましょう。
 

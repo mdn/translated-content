@@ -35,7 +35,7 @@ slug: Web/SVG/Tutorial/Getting_Started
 
    - 不使用類似(X)HTML 的文檔聲明，因為基於 SVG 的 DTD 會造成很多問題，弊大於利。
    - 為了明確 SVG 版本，`version` 和 baseProfile 兩個屬性必須要寫
-   - 作為 XML 方言，SVG 必須始終绑定正確的命名空間（xmlns 属性）。更多資訊，請參考[命名空間速成班頁面](/zh-TW/SVG/Namespaces_Crash_Course)
+   - 作為 XML 方言，SVG 必須始終绑定正確的命名空間（xmlns 属性）。更多資訊，請參考[命名空間速成班頁面](/zh-TW/docs/Web/SVG/Namespaces_Crash_Course)
 
 2. 畫一個覆蓋整個圖形的矩形 ，將背景設為红色
 3. 在红色矩形中間畫一個綠色的圓形，半徑是 80 像素（圓心坐標：x 軸向左偏移 150 像素，y 軸向上偏移 100 像素）【坐標系統會在後面章節介紹】

@@ -32,7 +32,7 @@ The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in
 
 ### 從既有的資料取得 ArrayBuffer
 
-- [From a Base64 string](/zh-TW/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
+- [From a Base64 string](/zh-TW/docs/Glossary/Base64#appendix.3a_decode_a_base64_string_to_uint8array_or_arraybuffer)
 - [從本地端檔案](</zh-TW/docs/Web/API/FileReader#readAsArrayBuffer()>)
 
 ## 屬性

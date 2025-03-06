@@ -59,7 +59,7 @@ l10n:
   - {{cssxref("align")}}、{{cssxref("justify-self")}}`:baseline`、`last-baseline` ("baseline self-alignment" として知られる) でグリッドレイアウトをサポートしました ([Firefox バグ 1221525](https://bugzil.la/1221525))。
   - グリッドアイテムの Baseline Content Alignment を実装しました ([Firefox バグ 1256429](https://bugzil.la/1256429))。
 
-- [CSS マスク](/ja/docs/Web/CSS/CSS_Masking) の実験的な実装が進展しました。
+- [CSS マスク](/ja/docs/Web/CSS/CSS_masking) の実験的な実装が進展しました。
 
   - {{cssxref("mask-origin")}} プロパティの初期値を、仕様書に合わせて `padding-box` から `border-box` に変更しました ([Firefox バグ 1258286](https://bugzil.la/1258286))。
   - {{cssxref("mask-repeat")}} プロパティで値 `space` および `round` をサポートしました ([Firefox バグ 1258626](https://bugzil.la/1258626))。
@@ -185,7 +185,7 @@ Firefox 49 より、サイトが正しく機能するために必要ではない
 
 ## セキュリティ
 
-- {{domxref("isSecureContext")}} プロパティを実装し、これが[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)を必要とする機能を使用できるコンテキストであるかを示ようになりました ([Firefox バグ 1162772](https://bugzil.la/1162772))。
+- {{domxref("isSecureContext")}} プロパティを実装し、これが[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)を必要とする機能を使用できるコンテキストであるかを示ようになりました ([Firefox バグ 1162772](https://bugzil.la/1162772))。
 
 ## 互換性
 
@@ -269,7 +269,7 @@ Firefox 49 より、サイトが正しく機能するために必要ではない
 - `WebKitCSSMatrix` インターフェイスを {{domxref("DOMMatrix")}} の別名にしました。
 - 以下のメディアクエリー特性を実装しました:
 
-  - `-webkit-min-device-pixel-ratio` を [`min-resolution`](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#resolution) の別名として、同じ値 (`dppx`) で実装しました。ただし、この機能は [デフォルトで無効](https://bugzilla.mozilla.org/show_bug.cgi?id=1237720) です (about:config の設定 `layout.css.prefixes.device-pixel-ratio-webkit` で制御)。
+  - `-webkit-min-device-pixel-ratio` を [`min-resolution`](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#resolution) の別名として、同じ値 (`dppx`) で実装しました。ただし、この機能は [デフォルトで無効](https://bugzilla.mozilla.org/show_bug.cgi?id=1237720) です (about:config の設定 `layout.css.prefixes.device-pixel-ratio-webkit` で制御)。
   - `-webkit-max-device-pixel-ratio` を [`max-resolution`](/ja/docs/Web/CSS/@media/resolution) の別名として、同じ値 (`dppx`) で実装しました。この機能も about:config の同じ設定で、デフォルトで無効にしています。
   - [`-webkit-transform-3d`](/ja/docs/Web/CSS/@media/-webkit-transform-3d) がマッチするようになりました。3D Transform をサポートすることを示します。
 

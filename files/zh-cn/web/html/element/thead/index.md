@@ -5,7 +5,72 @@ slug: Web/HTML/Element/thead
 
 [HTML](/zh-CN/docs/Web/HTML) 的 **`<thead>`** 元素定义了一组定义表格的列头的行。
 
-{{EmbedInteractiveExample("pages/tabbed/thead.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;thead&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Council budget (in £) 2018
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Items</th>
+      <th scope="col">Expenditure</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Donuts</th>
+      <td>3,000</td>
+    </tr>
+    <tr>
+      <th scope="row">Stationery</th>
+      <td>18,000</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row">Totals</th>
+      <td>21,000</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+```css interactive-example
+thead,
+tfoot {
+  background-color: #2c5e77;
+  color: #fff;
+}
+
+tbody {
+  background-color: #e4f0f5;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td {
+  text-align: center;
+}
+```
 
 <table class="properties">
  <tbody>
@@ -48,27 +113,27 @@ This element includes the [global attributes](/zh-CN/docs/Web/HTML/Global_attrib
     - `center`, centering the content in the cell
     - `right`, aligning the content to the right of the cell
     - `justify`, inserting spaces into the textual content so that the content is justified in the cell
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](/zh-CN/docs/Web/HTML/Element/thead#char) and [`charoff`](/zh-CN/docs/Web/HTML/Element/thead#charoff) attributes. If this attribute is not set, the `left` value is assumed.
+    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](#char) and [`charoff`](#charoff) attributes. If this attribute is not set, the `left` value is assumed.
 
     > [!NOTE]
     > Do not use this attribute as it is obsolete (not supported) in the latest standard.
     >
     > - To achieve the same effect as the `left`, `center`, `right` or `justify` values, use the CSS {{ cssxref("text-align") }} property on it.
-    > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the [`char`](/zh-CN/docs/Web/HTML/Element/thead#char) as the value of the {{ cssxref("text-align") }} property.
+    > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the [`char`](#char) as the value of the {{ cssxref("text-align") }} property.
 
 - `bgcolor` {{ Non-standard_inline() }}
 
   - : This attribute defines the background color of each cell of the column. It is one of the 6-digit hexadecimal code as defined in [sRGB](https://www.w3.org/Graphics/Color/sRGB), prefixed by a '#'. One of the sixteen predefined color strings may be used.
 
     > [!NOTE]
-    > Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: the {{ HTMLElement("thead") }} element should be styled using [CSS](/zh-CN/docs/CSS). To give a similar effect to the **bgcolor** attribute, use the [CSS](/zh-CN/docs/CSS) property {{ cssxref("background-color") }}, on the relevant {{ HTMLElement("td") }} or {{ HTMLElement("th") }} elements.
+    > Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: the {{ HTMLElement("thead") }} element should be styled using [CSS](/zh-CN/docs/Web/CSS). To give a similar effect to the **bgcolor** attribute, use the [CSS](/zh-CN/docs/Web/CSS) property {{ cssxref("background-color") }}, on the relevant {{ HTMLElement("td") }} or {{ HTMLElement("th") }} elements.
 
 - `char` {{Deprecated_Inline}}
 
   - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](/zh-CN/docs/Web/HTML/Element/tr#align) is not set to `char`, this attribute is ignored.
 
     > [!NOTE]
-    > Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the [`char`](/zh-CN/docs/Web/HTML/Element/thead#char), in CSS3, you can use the character set using the [`char`](/zh-CN/docs/Web/HTML/Element/thead#char) attribute as the value of the {{ cssxref("text-align") }} property.
+    > Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the [`char`](#char), in CSS3, you can use the character set using the [`char`](#char) attribute as the value of the {{ cssxref("text-align") }} property.
 
 - `charoff` {{Deprecated_Inline}}
 

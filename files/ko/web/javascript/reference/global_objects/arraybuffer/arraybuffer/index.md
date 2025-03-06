@@ -9,7 +9,15 @@ l10n:
 
 **`ArrayBuffer()`** 생성자는 {{jsxref("ArrayBuffer")}} 객체를 생성합니다.
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer Constructor", "shorter")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+
+console.log(buffer.byteLength);
+// Expected output: 8
+```
 
 ## 구문
 
@@ -78,5 +86,5 @@ buffer.resize(12);
 ## 같이 보기
 
 - [`core-js`에서의 `ArrayBuffer` 폴리필](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays) 안내서
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 안내서
 - {{jsxref("SharedArrayBuffer")}}

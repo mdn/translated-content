@@ -41,15 +41,15 @@ setTimeout(functionRef, delay, param1, param2, /* ... ,*/ paramN);
 
 ### Valeur de retour
 
-Un entier positif `timeoutID` qui identifie le minuteur créé par l'appel à `setTimeout()`. Cette valeur peut être passée à [`clearTimeout()`](/fr/docs/Web/API/clearTimeout) pour annuler le minuteur.
+Un entier positif `timeoutID` qui identifie le minuteur créé par l'appel à `setTimeout()`. Cette valeur peut être passée à [`clearTimeout()`](/fr/docs/Web/API/Window/clearTimeout) pour annuler le minuteur.
 
 Une même valeur de `timeoutID` ne sera jamais réutilisée par un appel ultérieur à `setTimeout()` ou `setInterval()` sur le même objet (que ce soit une fenêtre ou un <i lang="en">worker</i>). Toutefois, des objets différents utilisent des ensembles distincts d'identifiants.
 
 ## Description
 
-Les minuteurs sont annulés grâce à la fonction [`clearTimeout()`](/fr/docs/Web/API/clearTimeout).
+Les minuteurs sont annulés grâce à la fonction [`clearTimeout()`](/fr/docs/Web/API/Window/clearTimeout).
 
-Pour appeler une fonction de façon répétée (toutes les _N_ millisecondes), on utilisera plutôt [`setInterval()`](/fr/docs/Web/API/setInterval).
+Pour appeler une fonction de façon répétée (toutes les _N_ millisecondes), on utilisera plutôt [`setInterval()`](/fr/docs/Web/API/Window/setInterval).
 
 ### Conversion de valeur non-numérique pour la durée
 
@@ -132,7 +132,7 @@ setTimeout(monTableau.maMethode, 1.5 * 1000, "1"); // affiche "undefined" après
 
 La fonction `monTableau.maMethode` est passée à `setTimeout`, et lorsqu'elle est appelée, la valeur de `this` n'est pas définie et vaut `window` par défaut.
 
-Il n'y a pas d'argument `thisArg` pour `setTimeout` (comme on peut en voir pour [`forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) et [`reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce). Comme indiqué après, utiliser `call()` ne fonctionne pas non plus.
+Il n'y a pas d'argument `thisArg` pour `setTimeout` (comme on peut en voir pour [`forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) et [`reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce). Comme indiqué après, utiliser `call()` ne fonctionne pas non plus.
 
 ```js
 setTimeout.call(monTableau, monTableau.maMethode, 2.0 * 1000); // erreur
@@ -375,7 +375,7 @@ function clearMessage() {
 
 {{EmbedLiveSample('')}}
 
-Voir aussi [l'exemple `clearTimeout()`](/fr/docs/Web/API/clearTimeout#example).
+Voir aussi [l'exemple `clearTimeout()`](/fr/docs/Web/API/Window/clearTimeout#example).
 
 ## Spécifications
 
@@ -388,7 +388,7 @@ Voir aussi [l'exemple `clearTimeout()`](/fr/docs/Web/API/clearTimeout#example).
 ## Voir aussi
 
 - [Prothèse d'émulation de `setTimeout()` qui permet de passer des arguments à la fonction de rappel, avec la bibliothèque tierce `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
-- [`clearTimeout()`](/fr/docs/Web/API/clearTimeout)
-- [`setInterval()`](/fr/docs/Web/API/setInterval)
+- [`clearTimeout()`](/fr/docs/Web/API/Window/clearTimeout)
+- [`setInterval()`](/fr/docs/Web/API/Window/setInterval)
 - [`Window.requestAnimationFrame()`](/fr/docs/Web/API/Window/requestAnimationFrame)
-- [`queueMicrotask()`](/fr/docs/Web/API/queueMicrotask)
+- [`queueMicrotask()`](/fr/docs/Web/API/Window/queueMicrotask)

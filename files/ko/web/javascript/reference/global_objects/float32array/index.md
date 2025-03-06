@@ -83,7 +83,7 @@ console.log(float32FromIterable);
 ## 같이 보기
 
 - [`core-js`에서 `Float32Array`의 폴리필](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays) 가이드
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 가이드
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

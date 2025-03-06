@@ -5,7 +5,7 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Utilisation_de_base", "Tutoriel_canvas/Ajout_de_styles_et_de_couleurs")}}
 
-Maintenant que nous avons défini notre [environnement de canevas](/fr/docs/Tutoriel_canvas/Utilisation_de_base), nous pouvons entrer dans les détails de la façon de dessiner sur le canevas. A la fin de cet article, vous aurez appris à tracer des rectangles, des triangles, des lignes, des arcs et des courbes, vous rendant ainsi familier avec certaines des formes de base. Le travail avec les trajets est essentiel lors du dessin d'objets sur le canevas, et nous verrons comment cela peut être fait.
+Maintenant que nous avons défini notre [environnement de canevas](/fr/docs/Web/API/Canvas_API/Tutorial/Basic_usage), nous pouvons entrer dans les détails de la façon de dessiner sur le canevas. A la fin de cet article, vous aurez appris à tracer des rectangles, des triangles, des lignes, des arcs et des courbes, vous rendant ainsi familier avec certaines des formes de base. Le travail avec les trajets est essentiel lors du dessin d'objets sur le canevas, et nous verrons comment cela peut être fait.
 
 ## La grille
 
@@ -508,7 +508,7 @@ new Path2D(trajet); // copie depuis un autre objet Path2D
 new Path2D(d); // trajet depuis des données de trajet SVG
 ```
 
-Toutes les [méthodes de trajet](/fr/docs/Web/API/CanvasRenderingContext2D#Paths) telles que `moveTo`, `rect`, `arc` ou `quadraticCurveTo`, etc., que nous avons appris à connaître ci-dessus, sont disponibles sur les objets `Path2D`.
+Toutes les [méthodes de trajet](/fr/docs/Web/API/CanvasRenderingContext2D#paths) telles que `moveTo`, `rect`, `arc` ou `quadraticCurveTo`, etc., que nous avons appris à connaître ci-dessus, sont disponibles sur les objets `Path2D`.
 
 L'API `Path2D` ajoute aussi une manière de combiner des trajets en utilisant la méthode `addPath`. Cela peut être utile quand vous voulez contruire des objets à partir de plusieurs composants, par exemple.
 
@@ -552,7 +552,7 @@ function draw() {
 
 Une autre fonctionnalité puissante de la nouvelle API `Path2D` de canevas est l'utilisation de [données de trajet SVG](/fr/docs/Web/SVG/Tutorial/Paths) pour initialiser des trajets sur votre canevas. Cela peut vous permettre de faire circuler des données de trajet et les réutiliser, à la fois en SVG et dans un canevas.
 
-Le trajet se déplacera au point (`M10 10`) et se déplacera alors de 80 points horizontalement vers la droite (`h 80`), ensuite de 80 points vers le bas (`v 80`), puis de 80 points vers la gauche (`h -80`), et reviendra alors au départ (`z`). Vous pouvez voir cet exemple sur la page du [constructeur `Path2D`](/fr/docs/Web/API/Path2D.Path2D#Using_SVG_paths).
+Le trajet se déplacera au point (`M10 10`) et se déplacera alors de 80 points horizontalement vers la droite (`h 80`), ensuite de 80 points vers le bas (`v 80`), puis de 80 points vers la gauche (`h -80`), et reviendra alors au départ (`z`). Vous pouvez voir cet exemple sur la page du [constructeur `Path2D`](/fr/docs/Web/API/Path2D/Path2D#using_svg_paths).
 
 ```js
 var p = new Path2D("M10 10 h 80 v 80 h -80 Z");

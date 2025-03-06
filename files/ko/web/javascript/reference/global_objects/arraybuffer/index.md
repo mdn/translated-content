@@ -104,6 +104,6 @@ const view = new Int32Array(buffer);
 ## 같이 보기
 
 - [Polyfill of `ArrayBuffer` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("SharedArrayBuffer")}}
 - [RangeError: invalid array length](/ko/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

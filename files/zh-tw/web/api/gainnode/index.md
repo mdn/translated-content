@@ -66,4 +66,4 @@ See [`BaseAudioContext.createGain()`](/zh-TW/docs/Web/API/BaseAudioContext/creat
 
 ## See also
 
-- [Using the Web Audio API](/zh-TW/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-TW/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

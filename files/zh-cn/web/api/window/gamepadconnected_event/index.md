@@ -10,7 +10,7 @@ slug: Web/API/Window/gamepadconnected_event
 ## 基本信息
 
 - 文档
-  - : [Gamepad](http://www.w3.org/TR/gamepad/#the-gamepadconnected-event)
+  - : [Gamepad](https://www.w3.org/TR/gamepad/#the-gamepadconnected-event)
 - 类型
   - : 事件
 - 冒泡
@@ -48,8 +48,8 @@ window.addEventListener("gamepadconnected", function (event) {
 
 ## 相关事件
 
-- [gamepaddisconnected](/zh-CN/docs/Web/Reference/Events/gamepaddisconnected)
+- [gamepaddisconnected](/zh-CN/docs/Web/API/Window/gamepaddisconnected_event)
 
 ## 还可以参考
 
-- [Using Gamepad API](/zh-CN/docs/API/Gamepad/Using_Gamepad_API)
+- [Using Gamepad API](/zh-CN/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

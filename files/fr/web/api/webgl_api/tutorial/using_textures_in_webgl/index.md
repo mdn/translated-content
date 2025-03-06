@@ -294,9 +294,9 @@ Arrivés ce point, le cube en rotation devrait être prêt à fonctionner.
 
 ## Textures inter-domaines
 
-Le chargement des textures WebGL est soumis aux contrôles d'accès inter-domaines. Pour que votre contenu puisse charger une texture d'un autre domaine, une approbation CORS doit être obtenue. Voir le [Contrôle d'accès HTTP](/fr/docs/HTTP/Access_control_CORS) pour plus de détails sur CORS.
+Le chargement des textures WebGL est soumis aux contrôles d'accès inter-domaines. Pour que votre contenu puisse charger une texture d'un autre domaine, une approbation CORS doit être obtenue. Voir le [Contrôle d'accès HTTP](/fr/docs/Web/HTTP/CORS) pour plus de détails sur CORS.
 
-Voir cet [article sur hacks.mozilla.org](http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) pour une explication de l'utilisation des images approuvées CORS comme textures WebGL, avec [un exemple complet](http://people.mozilla.org/~bjacob/webgltexture-cors-js.html).
+Voir cet [article sur hacks.mozilla.org](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) pour une explication de l'utilisation des images approuvées CORS comme textures WebGL, avec [un exemple complet](https://people.mozilla.org/~bjacob/webgltexture-cors-js.html).
 
 > [!NOTE]
 > Le support CORS pour les texture WebGL et l'attribut `crossOrigin` pour les éléments image est implémenté dans Gecko 8.0.

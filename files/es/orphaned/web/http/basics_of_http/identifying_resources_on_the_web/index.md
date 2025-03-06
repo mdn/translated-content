@@ -53,7 +53,7 @@ Las dos URNs corresponden a
 
 | Esquema     | Descripción                                                                 |
 | ----------- | --------------------------------------------------------------------------- |
-| data        | [URLs de datos](/es/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)                 |
+| data        | [URLs de datos](/es/docs/Web/URI/Schemes/data)                 |
 | file        | Host-nombre de archivo específicos                                          |
 | ftp         | [Protocolo de Transferencia de Archivos](/es/docs/Glossary/FTP)             |
 | http/https  | [Protocolo de transferencia de Hipertexto (Seguro)](/es/docs/Glossary/HTTP) |

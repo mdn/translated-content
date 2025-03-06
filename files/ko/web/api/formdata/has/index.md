@@ -54,6 +54,6 @@ formData.has("username"); // Returns true
 ## See also
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ko/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/ko/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Using FormData objects](/ko/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

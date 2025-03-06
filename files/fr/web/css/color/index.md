@@ -110,7 +110,7 @@ Il est important de vérifier le contraste entre la couleur utilisée pour le te
 Le ratio de contraste est déterminé en comparant la luminosité de la couleur du texte et celle de la couleur d'arrière-plan. Afin de respecter [les règles d'accessibilité (WCAG)](https://www.w3.org/WAI/intro/wcag), on doit avoir un ratio de 4.5:1 pour les textes « normaux » et un ratio de 3:1 pour les textes plus grands comme les titres (un texte est considéré comme « grand » s'il est en gras et qu'une lettre mesure plus de 18.66 px ou bien si une lettre mesure plus de 24 pixels).
 
 - [Contrôleur de contraste WebAIM](https://webaim.org/resources/contrastchecker/)
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - _[Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)_
 
 ## Spécifications
@@ -125,4 +125,4 @@ Le ratio de contraste est déterminé en comparant la luminosité de la couleur 
 
 - Le type de donnée {{cssxref("&lt;color&gt;")}}
 - Les autres propriétés relatives aux couleurs : {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}} et {{cssxref("color-adjust")}}
-- [Appliquer des couleurs aux éléments HTML grâce à CSS](/fr/docs/Web/HTML/Applying_color)
+- [Appliquer des couleurs aux éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)

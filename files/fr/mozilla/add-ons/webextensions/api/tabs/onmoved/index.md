@@ -40,7 +40,7 @@ Les événements ont trois fonctions:
     <!---->
 
     - `moveInfo`
-      - : [`object`](#moveInfo). Informations sur le déménagement.
+      - : [`object`](#moveinfo). Informations sur le déménagement.
 
 ## Objets supplémentaires
 

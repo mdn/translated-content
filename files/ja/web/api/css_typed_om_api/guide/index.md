@@ -346,7 +346,7 @@ console.log(parsedUnit.value); // 1.2
 
 ### CSSMathSum
 
-[`<button>`](/ja/docs/Web/HTML/Element/button) 要素は既定ではインライン要素ですが、サイズ調整を可能にするために [`display: inline-block;`](/ja/docs/Web/CSS/CSS_Display) を追加しています。 CSS では、`width: calc(30% + 20px);` を指定していますが、これは [`calc()`](/ja/docs/Web/CSS/calc) という関数で幅を定義しています。
+[`<button>`](/ja/docs/Web/HTML/Element/button) 要素は既定ではインライン要素ですが、サイズ調整を可能にするために [`display: inline-block;`](/ja/docs/Web/CSS/CSS_display) を追加しています。 CSS では、`width: calc(30% + 20px);` を指定していますが、これは [`calc()`](/ja/docs/Web/CSS/calc) という関数で幅を定義しています。
 
 この `width` を `get()` すると、[`CSSMathSum`](/ja/docs/Web/API/CSSMathSum) が返されます。 {{domxref('CSSMathSum.values')}} は {{domxref('CSSNumericArray')}} で、 2 つの `CSSUnitValues` があります。
 
@@ -362,7 +362,7 @@ console.log(btnWidth.operator); // 'sum'
 
 ### CSSTransformValue に CSSScale を付ける
 
-また、 [`display: inline-block;`](/ja/docs/Web/CSS/CSS_Display) により座標変換もできるようになります。私たちの CSS では、 `transform: scale(0.95);` が {{cssxref('transform')}} 関数です。
+また、 [`display: inline-block;`](/ja/docs/Web/CSS/CSS_display) により座標変換もできるようになります。私たちの CSS では、 `transform: scale(0.95);` が {{cssxref('transform')}} 関数です。
 
 ```js
 const transform = allComputedStyles.get("transform");

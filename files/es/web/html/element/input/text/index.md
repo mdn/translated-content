@@ -7,7 +7,34 @@ slug: Web/HTML/Element/input/text
 
 Los elementos {{HTMLElement("input")}} de tipo `text` crean campos de texto básicos de una sola línea.
 
-{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="name">Name (4 to 8 characters):</label>
+
+<input
+  type="text"
+  id="name"
+  name="name"
+  required
+  minlength="4"
+  maxlength="8"
+  size="10" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
 
@@ -92,17 +119,17 @@ Los valores del atributo `list` son el {{DOMxRef("Element.id", "id")}} de un ele
 
 El número máximo de caracteres (como unidades de código UTF-16) que el usuario puede ingresar en la entrada de `text`. Debe ser un valor entero 0 o superior. Si no se especifica `maxlength`, o se especifica un valor no válido, el `text` de la entrada no tiene una longitud máxima. Este valor también debe ser mayor o igual que el valor de [`minlength`](/es/docs/Web/HTML/Element/input#minlength).
 
-La entrada fallará [restricción de validación](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation) si la longitud del valor de texto del campo es mayor que [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength) Unidades de código UTF-16 de longitud. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
+La entrada fallará [restricción de validación](/es/docs/Web/HTML/Constraint_validation) si la longitud del valor de texto del campo es mayor que [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength) Unidades de código UTF-16 de longitud. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
 
 ### `minlength`
 
 El número mínimo de caracteres (como unidades de código UTF-16) que el usuario puede ingresar en la entrada de `texto`. Debe ser un valor entero no negativo menor o igual al valor especificado por [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength). Si no se especifica `minlength`, o se especifica un valor no válido, la entrada de `text` no tiene una longitud mínima.
 
-La entrada fallará [restricción de validación](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation) si la longitud del texto ingresado en el campo es menor que `minlength` Unidades de código UTF-16 de longitud. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
+La entrada fallará [restricción de validación](/es/docs/Web/HTML/Constraint_validation) si la longitud del texto ingresado en el campo es menor que `minlength` Unidades de código UTF-16 de longitud. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
 
 ### `pattern`
 
-El atributo `pattern`, cuando se especifica, es una expresión regular que el [`value`](/es/docs/Web/HTML/Global_attributes#value) de la entrada debe coincidir para que el valor pase [restricciones de validación](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation). Debe ser una expresión regular de JavaScript válida, como la usada por el tipo {{JSxRef("RegExp")}} y como se documenta en la [guía sobre expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions); el indicador `'u'` se especifica al compilar la expresión regular, de modo que el patrón se trata como una secuencia de puntos de código Unicode, en lugar de ASCII. No se deben especificar barras diagonales alrededor del texto del patrón.
+El atributo `pattern`, cuando se especifica, es una expresión regular que el [`value`](/es/docs/Web/HTML/Global_attributes#value) de la entrada debe coincidir para que el valor pase [restricciones de validación](/es/docs/Web/HTML/Constraint_validation). Debe ser una expresión regular de JavaScript válida, como la usada por el tipo {{JSxRef("RegExp")}} y como se documenta en la [guía sobre expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions); el indicador `'u'` se especifica al compilar la expresión regular, de modo que el patrón se trata como una secuencia de puntos de código Unicode, en lugar de ASCII. No se deben especificar barras diagonales alrededor del texto del patrón.
 
 Si el patrón especificado no se especifica o no es válido, no se aplica ninguna expresión regular y este atributo se ignora por completo.
 
@@ -385,7 +412,7 @@ Si intentas enviar el formulario con menos de 4 caracteres, se te dará un mensa
 
 ### Especificación de un patrón
 
-Puedes utilizar el atributo [`pattern`](/es/docs/Web/HTML/Element/input#pattern) para especificar una expresión regular con la que el valor ingresado debe coincidir para que se considere válido (ve un curso intensivo simple en [Validación con una expresión regular](/es/docs/Learn/HTML/Forms/Form_validation#Validación_con_una_expresión_regular) sobre el uso de expresiones regulares para validar entradas).
+Puedes utilizar el atributo [`pattern`](/es/docs/Web/HTML/Element/input#pattern) para especificar una expresión regular con la que el valor ingresado debe coincidir para que se considere válido (ve un curso intensivo simple en [Validación con una expresión regular](/es/docs/Learn/Forms/Form_validation#validaci%c3%b3n_con_una_expresi%c3%b3n_regular) sobre el uso de expresiones regulares para validar entradas).
 
 El siguiente ejemplo restringe el valor a 4-8 caracteres y requiere que contenga solo letras minúsculas.
 
@@ -446,7 +473,7 @@ Esto se renderiza así:
 
 ## Ejemplos
 
-Puedes ver buenos ejemplos de entradas de texto utilizadas en contexto en los artículos [Mi primer formulario HTML](/es/docs/Learn/HTML/Forms/Your_first_HTML_form) y [Cómo estructurar un formulario HTML](/es/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form).
+Puedes ver buenos ejemplos de entradas de texto utilizadas en contexto en los artículos [Mi primer formulario HTML](/es/docs/Learn/Forms/Your_first_form) y [Cómo estructurar un formulario HTML](/es/docs/Learn/Forms/How_to_structure_a_web_form).
 
 ## Especificaciones
 
@@ -458,8 +485,8 @@ Puedes ver buenos ejemplos de entradas de texto utilizadas en contexto en los ar
 
 ## Ve también
 
-- [Formularios HTML](/es/docs/Learn/HTML/Forms)
+- [Formularios HTML](/es/docs/Learn/Forms)
 - {{HTMLElement("input")}} y la interfaz {{DOMxRef("HTMLInputElement")}} en que se basa.
 - [`<input type="search">`](/es/docs/Web/HTML/Element/input/search)
 - {{HTMLElement("textarea")}}: Campo de entrada de texto multilínea
-- [Compatibilidad de propiedades CSS](/es/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [Compatibilidad de propiedades CSS](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -31,7 +31,7 @@ slug: Web/XSLT/Element/attribute-set
 
 ### 정의
 
-[XSLT section 7.1.4, Named Attribute Sets](http://www.w3.org/TR/xslt#attribute-sets)
+[XSLT section 7.1.4, Named Attribute Sets](https://www.w3.org/TR/xslt#attribute-sets)
 
 ### Gecko 지원
 

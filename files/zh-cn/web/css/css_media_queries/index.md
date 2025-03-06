@@ -7,13 +7,13 @@ l10n:
 
 {{CSSRef}}
 
-**CSS 媒体查询**（media query）是[响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)的关键组成部分，你可以根据各种设备特征和参数是否存在以及对应的值来应用 CSS 样式。
+**CSS 媒体查询**（media query）是[响应式设计](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)的关键组成部分，你可以根据各种设备特征和参数是否存在以及对应的值来应用 CSS 样式。
 
 通常根据{{Glossary("viewport", "视口")}}大小来应用媒体查询，以便可以为不同屏幕大小的设备做出布局调整。例如，你可以为小屏设备设置较小的字体，在纵向模式下查看页面时增加段落间的边距，或者增加触摸屏上按钮的大小。
 
 ![笔记本电脑和移动设备具有不同的视口大小，可以使用媒体查询进行查询，我们可以看到内容布局的不同。](media-queries.svg)
 
-在 CSS 中，可以使用 {{cssxref("@media")}} [at 规则](/zh-CN/docs/Web/CSS/At-rule)根据媒体查询的结果有条件地应用样式表的一部分。要有条件地应用整个样式表，请使用 {{cssxref("@import")}}。
+在 CSS 中，可以使用 {{cssxref("@media")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)根据媒体查询的结果有条件地应用样式表的一部分。要有条件地应用整个样式表，请使用 {{cssxref("@import")}}。
 
 在设置可重用的 HTML 组件时，你还可以使用容器查询，它允许你根据容器元素的大小而非视口或者其他设备特征来应用样式。
 

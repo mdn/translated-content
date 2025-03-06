@@ -212,7 +212,7 @@ function sameValueZero(x, y) {
 
 ### 注意：Object.is() 和 NaN
 
-{{jsxref("Object.is")}} 规范将所有 {{jsxref("NaN")}} 的实例视为同一对象。然而，由于可以使用[类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)，我们可以拥有 `NaN` 的不同浮点表示，这些表示在所有上下文中的行为不完全相同。例如：
+{{jsxref("Object.is")}} 规范将所有 {{jsxref("NaN")}} 的实例视为同一对象。然而，由于可以使用[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)，我们可以拥有 `NaN` 的不同浮点表示，这些表示在所有上下文中的行为不完全相同。例如：
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);

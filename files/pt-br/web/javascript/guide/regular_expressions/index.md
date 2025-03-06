@@ -5,7 +5,7 @@ slug: Web/JavaScript/Guide/Regular_expressions
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 
-Expressões regulares são padrões utilizados para selecionar combinações de caracteres em uma string. Em JavaScript, expressões regulares também são objetos. Elas podem ser utilizadas com os métodos [`exec`](/pt-BR/docs/JavaScript/Reference/Global_Objects/RegExp/exec) e [`test`](/pt-BR/docs/JavaScript/Reference/Global_Objects/RegExp/test) do objeto [`RegExp`](/pt-BR/docs/JavaScript/Reference/Global_Objects/RegExp), e com os métodos [`match`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/match), [`replace`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/replace),[`search`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/search), e [`split`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/split) do objeto [`String`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String). Este capítulo descreve o uso de expressões regulares em JavaScript.
+Expressões regulares são padrões utilizados para selecionar combinações de caracteres em uma string. Em JavaScript, expressões regulares também são objetos. Elas podem ser utilizadas com os métodos [`exec`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) e [`test`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test) do objeto [`RegExp`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp), e com os métodos [`match`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match), [`replace`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace),[`search`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/search), e [`split`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split) do objeto [`String`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String). Este capítulo descreve o uso de expressões regulares em JavaScript.
 
 ## Criando uma Expressão Regular
 
@@ -19,7 +19,7 @@ const re = /ab+c/;
 
 As expressões regulares na forma literal são compiladas quando o script é carregado. Esta forma de construção possui melhor performace quando a expressão regular utilizada é uma constante, ou seja, não muda durante a execução.
 
-Ou chamando o construtor do objeto [`RegExp`](/pt-BR/docs/JavaScript/Reference/Global_Objects/RegExp):
+Ou chamando o construtor do objeto [`RegExp`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp):
 
 ```js
 let re = new RegExp("ab+c");
@@ -32,7 +32,7 @@ Usando o construtor, a compilação da expressão regular é realizada em tempo 
 
 ## Escrevendo um padrão de expressão regular
 
-Um padrão de expressão é composto por um conjunto de caracteres simples, como `/abc/`, ou uma combinação de caracteres simples e especiais, como `/ab*c/` ou `/Capitulo (\d+)\.\d*/`. O último exemplo contém parênteses, que são usados como um mecanismo de armazenamento. A correspondência feita por essa parte da expressão é armazenada para uso posterior, como descrito em: [Using Parenthesized Substring Matches](#Using_Parenthesized_Substring_Matches).
+Um padrão de expressão é composto por um conjunto de caracteres simples, como `/abc/`, ou uma combinação de caracteres simples e especiais, como `/ab*c/` ou `/Capitulo (\d+)\.\d*/`. O último exemplo contém parênteses, que são usados como um mecanismo de armazenamento. A correspondência feita por essa parte da expressão é armazenada para uso posterior, como descrito em: [Using Parenthesized Substring Matches](#using_parenthesized_substring_matches).
 
 ### Uso de Padrões Simples
 
@@ -776,7 +776,7 @@ A tabela abaixo fornece uma lista completa dos caracteres especiais que podem se
 
 ### Usando Parênteses
 
-Usar parênteses em volta de qualquer parte de uma expressão regular faz com que essa parte seja lembrada para ser usada depois, como descrito em [Usando as Substrings entre Parênteses na Expressão Regular](#Using_Parenthesized_Substring_Matches).
+Usar parênteses em volta de qualquer parte de uma expressão regular faz com que essa parte seja lembrada para ser usada depois, como descrito em [Usando as Substrings entre Parênteses na Expressão Regular](#using_parenthesized_substring_matches).
 
 Por Exemplo, a expressão `/Capitulo (\d+)\.\d*/` ilustra caracteres adicionais escapados e especiais e indica que parte do padrão deve ser lembrado. Corresponde precisamente aos caracteres 'Capitulo ' seguidos por um ou mais caracteres numéricos (`\d` significa qualquer caracter numérico e `+` significa 1 ou mais vezes), seguidos por um ponto decimal (que é um caracter especial; preceder com um \ significa que a expressão regular deve buscar pelo caracter literal '.'), seguido por qualquer caracter numérico 0 ou mais vezes (`\d` significa caracter numérico, `*` significa 0 ou mais vezes). Além disso, os parenteses são usados para relembrar os primeiros caracteres numéricos correspondentes.
 
@@ -786,16 +786,16 @@ Para encontrar uma substring sem que a correspondência seja relembrada, dentro 
 
 ## Trabalhando com expressões regulares
 
-Expressões Regulares são usadas com os metodos `test` e `exec` do objeto `RegExp`e com os metodos `match`, `replace`, `search`, e `split` do objeto `String`. Estes metodos são explicados em detalhe em [JavaScript Reference](/pt-BR/docs/JavaScript/Reference).
+Expressões Regulares são usadas com os metodos `test` e `exec` do objeto `RegExp`e com os metodos `match`, `replace`, `search`, e `split` do objeto `String`. Estes metodos são explicados em detalhe em [JavaScript Reference](/pt-BR/docs/Web/JavaScript/Reference).
 
-| Metodo                                                                      | Descrição                                                                                                                                                      |
-| --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`exec`](/pt-BR/docs/JavaScript/Reference/Global_Objects/RegExp/exec)       | Um método `RegExp` que execute uma pesquisa por uma correspondência em uma string. Retorna um array de informações.                                            |
-| [`test`](/pt-BR/docs/JavaScript/Reference/Global_Objects/RegExp/test)       | Um método `RegExp` que testa uma correspondência em uma string. Retorna true ou false.                                                                         |
-| [`match`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/match)     | Um método `String` que executa uma pesquisa por uma correspondência em uma string. Retorna uma array de informações ou null caso não haja uma correspondência. |
-| [`search`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/search)   | Um método `String` que testa uma correspondência em uma string. Retorna o indice da correspondência ou -1 se o teste falhar.                                   |
-| [`replace`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/replace) | Um método `String` que executa uma pesquisa por uma correspondência em uma string, e substitui a substring correspondênte por uma substring de substituição.   |
-| [`split`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/split)     | Um método `String` que usa uma expressão regular ou uma string fixa para quebrar uma string dentro de um array de substrings.                                  |
+| Metodo                                                                          | Descrição                                                                                                                                                      |
+| ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`exec`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)       | Um método `RegExp` que execute uma pesquisa por uma correspondência em uma string. Retorna um array de informações.                                            |
+| [`test`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)       | Um método `RegExp` que testa uma correspondência em uma string. Retorna true ou false.                                                                         |
+| [`match`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match)     | Um método `String` que executa uma pesquisa por uma correspondência em uma string. Retorna uma array de informações ou null caso não haja uma correspondência. |
+| [`search`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/search)   | Um método `String` que testa uma correspondência em uma string. Retorna o indice da correspondência ou -1 se o teste falhar.                                   |
+| [`replace`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace) | Um método `String` que executa uma pesquisa por uma correspondência em uma string, e substitui a substring correspondênte por uma substring de substituição.   |
+| [`split`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split)     | Um método `String` que usa uma expressão regular ou uma string fixa para quebrar uma string dentro de um array de substrings.                                  |
 
 Quando você quer saber se um padrão é encontrado em uma string, use o método `test` ou `search`; para mais informações (mas execução mais lenta) use o método `exec` ou `match`. Se você usar `exec` ou `match` e se houver correspondência, estes métodos retornam um array e atualizam as propriedades do objeto da expressão regular associada e também do objeto da expressão regular predfinada `RegExp`. Se não houver corespondência, o método `exec` retorna `null` (convertido para `false`).
 
@@ -913,7 +913,7 @@ O número de substring entre parênteses possíveis é ilimitado. A matriz retor
 
 #### Exemplo 1
 
-O script a seguir usa o método [`replace()`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/replace) para alternar as palavras na string. Para o texto de substituição, o script usa o `$1` e `$2` na substituição para indicar a primeira e a segunda correspondências de substring entre parênteses.
+O script a seguir usa o método [`replace()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace) para alternar as palavras na string. Para o texto de substituição, o script usa o `$1` e `$2` na substituição para indicar a primeira e a segunda correspondências de substring entre parênteses.
 
 ```js
 var re = /(\w+)\s(\w+)/;

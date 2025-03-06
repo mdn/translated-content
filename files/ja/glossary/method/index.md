@@ -19,7 +19,7 @@ slug: Glossary/Method
 
 ### 技術リファレンス
 
-- [JavaScript 内蔵メソッド一覧](/ja/docs/Web/JavaScript/Reference/Methods_Index)
+- [JavaScript 内蔵メソッド一覧](/ja/docs/Web/JavaScript/Reference)
 
 <!---->
 

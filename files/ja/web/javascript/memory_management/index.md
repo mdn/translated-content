@@ -7,7 +7,7 @@ l10n:
 
 {{JsSidebar("Advanced")}}
 
-C のような低水準言語には、[`malloc()`](https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html) や [`free()`](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions) のような低水準のメモリー管理プリミティブがあります。これに対して JavaScript では、オブジェクトを作成するときにメモリーを自動的に確保し、使用しなくなったらメモリーを解放します（_ガーベジコレクション_）。この自動性が混乱の元になる可能性があります。メモリー管理について心配する必要がないという誤った印象を開発者に与える可能性があります。
+[C言語](https://ja.wikipedia.org/wiki/C%E8%A8%80%E8%AA%9E) のような低水準言語には、[`malloc()`](https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html) や [`free()`](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions) のような低水準のメモリー管理プリミティブがあります。これに対して JavaScript では、オブジェクトを作成するときにメモリーを自動的に確保し、使用しなくなったらメモリーを解放します（_ガベージコレクション_）。この自動性が混乱の元になる可能性があります。メモリー管理について心配する必要がないという誤った印象を開発者に与える可能性があります。
 
 ## メモリーライフサイクル
 

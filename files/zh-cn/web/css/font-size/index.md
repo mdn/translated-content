@@ -5,7 +5,7 @@ slug: Web/CSS/font-size
 
 {{CSSRef}}
 
-**`font-size`** [CSS](/zh-CN/Web/docs/CSS) 属性设置字体大小。更改字体大小还会更新字体大小相关的 {{cssxref("&lt;length&gt;")}} 单位，例如 `em`、`ex` 等。
+**`font-size`** [CSS](/zh-CN/docs/Web/docs/CSS) 属性设置字体大小。更改字体大小还会更新字体大小相关的 {{cssxref("&lt;length&gt;")}} 单位，例如 `em`、`ex` 等。
 
 {{EmbedInteractiveExample("pages/css/font-size.html")}}
 
@@ -220,4 +220,4 @@ span {
 - {{cssxref("font-weight")}}
 - {{cssxref("math-depth")}}
 - {{cssxref("math-style")}}
-- [基本文本和字体样式](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)
+- [基本文本和字体样式](/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals)

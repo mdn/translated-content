@@ -7,7 +7,7 @@ slug: Web/API/console/timeEnd_static
 
 Останавливает таймер, который был запущен до этого через функцию {{domxref("console.time()")}}.
 
-Более подробная документация и примеры есть в разделе [Таймеры](/ru/docs/DOM/console#Timers) документации к {{domxref("console")}}.
+Более подробная документация и примеры есть в разделе [Таймеры](/ru/docs/Web/API/console#timers) документации к {{domxref("console")}}.
 
 {{AvailableInWorkers}}
 
@@ -20,7 +20,7 @@ console.timeEnd(label);
 ### Параметры
 
 - `label`
-  - : Метка таймера, который будет остановлен. Останавливается один раз. После остановки время отображается в [Веб-консоли](/ru/docs/Tools/Web_Console).
+  - : Метка таймера, который будет остановлен. Останавливается один раз. После остановки время отображается в [Веб-консоли](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
 
 ## Примеры
 
@@ -49,4 +49,4 @@ console.timeEnd("answer time");
 ## Смотрите также
 
 - {{domxref("Console.time")}}
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)

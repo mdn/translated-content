@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 
 {{JSRef}}
 
-La propriété d'accesseur **`TypedArray[@@species]`** renvoie le constructeur [du tableau typé](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
+La propriété d'accesseur **`TypedArray[@@species]`** renvoie le constructeur [du tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
 
 ## Syntaxe
 
@@ -32,7 +32,7 @@ L'accesseur `species` renvoie le constructeur par défaut pour les tableaux typ�
 
 ## Exemples
 
-La propriété `species` renvoie le constructeur par défaut qui est l'un des constructeurs de tableau typé (selon le type [de tableau typé](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray) de l'objet) :
+La propriété `species` renvoie le constructeur par défaut qui est l'un des constructeurs de tableau typé (selon le type [de tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray) de l'objet) :
 
 ```js
 Int8Array[Symbol.species]; // function Int8Array()

@@ -176,7 +176,7 @@ Box.prototype.getValue = function () {
 const boxes = [new Box(1), new Box(2), new Box(3)];
 ```
 
-`new Box(1)`이 `Box` 생성자 함수에서 생성된 "인스턴스"라고 말할 수 있는데, `Box.prototype`은 이전에 생성한 `boxPrototype` 객체와 크게 다르지 않습니다. `Box.prototype`은 그냥 일반 객체입니다. 생성자 함수에서 생성된 모든 인스턴스는 자동으로 생성자의 [`prototype`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 속성을 `[[Prototype]]`으로 갖게 됩니다. 즉, `Object.getPrototypeOf(new Box()) === Box.prototype`입니다. 기본적으로 `Constructor.prototype`에는 생성자 함수 자체를 참조하는 [`constructor`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 속성이 하나 있습니다. 즉, `Box.prototype.constructor === Box`이기 때문에, 모든 인스턴스에서 원래 생성자에 접근할 수 있게 됩니다.
+`new Box(1)`이 `Box` 생성자 함수에서 생성된 "인스턴스"라고 말할 수 있는데, `Box.prototype`은 이전에 생성한 `boxPrototype` 객체와 크게 다르지 않습니다. `Box.prototype`은 그냥 일반 객체입니다. 생성자 함수에서 생성된 모든 인스턴스는 자동으로 생성자의 [`prototype`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function) 속성을 `[[Prototype]]`으로 갖게 됩니다. 즉, `Object.getPrototypeOf(new Box()) === Box.prototype`입니다. 기본적으로 `Constructor.prototype`에는 생성자 함수 자체를 참조하는 [`constructor`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 속성이 하나 있습니다. 즉, `Box.prototype.constructor === Box`이기 때문에, 모든 인스턴스에서 원래 생성자에 접근할 수 있게 됩니다.
 
 > [!NOTE]
 > 생성자 함수에서 반환된 값이 원시 값이 아니라면, 해당 값은 `new` 표현식의 결과가 됩니다. 이 경우, `[[Prototype]]`이 올바르게 바인딩되지 않을 수 있지만, 실제로는 많이 발생하지 않습니다.
@@ -502,7 +502,7 @@ const p = { b: 2, __proto__: o };
 
 ### 생성자 함수를 이용
 
-JavaScript에서 생성자는 단지 [new 연산자](/en/JavaScript/Reference/Operators/new)를 사용해 함수를 호출하면 된다.
+JavaScript에서 생성자는 단지 [new 연산자](/en-US/JavaScript/Reference/Operators/new)를 사용해 함수를 호출하면 된다.
 
 ```js
 function Graph() {

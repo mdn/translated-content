@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/query
 
 Obtient des informations sur toutes les identités contextuelles ou sur les identités contextuelles correspondant à un argument de filtre donné.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -28,7 +28,7 @@ var getContext = browser.contextualIdentities.query(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un tableau d'objets {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} chacun décrivant une seule identité. Si la fonctionnalité d'identités contextuelles n'est pas activée, la promesse est rejetée.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un tableau d'objets {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} chacun décrivant une seule identité. Si la fonctionnalité d'identités contextuelles n'est pas activée, la promesse est rejetée.
 
 ## Compatibilité des navigateurs
 

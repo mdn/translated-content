@@ -9,7 +9,23 @@ slug: Web/HTML/Element/a
 
 每個 `<a>` 元素內的內容*應該*指示連結的目的地。如果存在 `href` 屬性，則在焦點位於 `<a>` 元素上時按下 Enter 鍵將激活它。
 
-{{EmbedInteractiveExample("pages/tabbed/a.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;a&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul>
+```
+
+```css interactive-example
+li {
+  margin-bottom: 0.5rem;
+}
+```
 
 ## 屬性
 
@@ -23,7 +39,7 @@ slug: Web/HTML/Element/a
 
       - {{HTTPHeader("Content-Disposition")}} HTTP 標頭
       - URL [路徑](/zh-TW/docs/Web/API/URL/pathname)中的最終段落
-      - {{HTTPHeader("Content-Type")}} 標頭中的{{Glossary("MIME_type", "媒體類型")}}，以及 [`data:` URL](/zh-TW/docs/Web/URI/Schemes/data) 的開頭，或是 [`blob:` URL](/zh-TW/docs/Web/API/URL/createObjectURL_static) 的 {{domxref("Blob.type")}}。
+      - {{HTTPHeader("Content-Type")}} 標頭中的{{Glossary("MIME_type", "媒體類型")}}，以及 [`data:` URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 的開頭，或是 [`blob:` URL](/zh-TW/docs/Web/API/URL/createObjectURL_static) 的 {{domxref("Blob.type")}}。
 
     - `filename`：定義值可建議作為文件名。`/` 和 `\` 字符將轉換為底線（`_`）。檔案系統可能禁止文件名中的其他字符，因此如果需要，瀏覽器將調整建議的名稱。
 
@@ -41,7 +57,7 @@ slug: Web/HTML/Element/a
   - : 超連結指向的 URL。連結不限於基於 HTTP 的 URL——它們可以使用瀏覽器支持的任何 URL 方案：
 
     - 具有文件片段的頁面部分
-    - 具有[文字片段](/zh-TW/docs/Web/URI/Fragment/Text_fragments)的特定文本部分
+    - 具有[文字片段](/zh-TW/docs/Web/URI/Reference/Fragment/Text_fragments)的特定文本部分
     - 具有媒體片段的媒體文件部分
     - 使用 `tel:` URL 的電話號碼
     - 使用 `mailto:` URL 的電子郵件地址
@@ -58,7 +74,7 @@ slug: Web/HTML/Element/a
 
     - `no-referrer`：不發送 {{HTTPHeader("Referer")}} 標頭。
     - `no-referrer-when-downgrade`：不發送 {{HTTPHeader("Referer")}} 標頭至沒有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的[來源](/zh-TW/docs/Web/Security/Same-origin_policy)。
-    - `origin`：發送的引用者將僅限於引用頁面的來源：其[協定](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host", "主機")}}和{{Glossary("port", "通訊埠")}}。
+    - `origin`：發送的引用者將僅限於引用頁面的來源：其[協定](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "主機")}}和{{Glossary("port", "通訊埠")}}。
     - `origin-when-cross-origin`：發送給其他來源的引用者將僅限於協定、主機和端口。對同一來源的導航仍將包含路徑。
     - `same-origin`：對於{{Glossary("Same-origin policy", "同一來源")}}，將發送引用者，但跨來源請求將不包含引用者信息。
     - `strict-origin`：僅在協定安全級別保持不變時（HTTPS→HTTPS）發送文件的源作為引用者，但不要將其發送給不太安全的目的地（HTTPS→HTTP）。
@@ -174,7 +190,7 @@ a {
 
 {{EmbedLiveSample('鏈接到電子郵件地址')}}
 
-有關 `mailto:` URL 的詳細信息，例如包括主題或正文，請參見[電子郵件鏈接](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links)或 {{RFC(6068)}}。
+有關 `mailto:` URL 的詳細信息，例如包括主題或正文，請參見[電子郵件鏈接](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Creating_links#e-mail_連結)或 {{RFC(6068)}}。
 
 ### 鏈接到電話號碼
 
@@ -519,4 +535,4 @@ document
 - {{CSSxRef(":link")}} 是一個 CSS 虛擬類，將匹配 `<a>` 元素，其中 `href` 屬性中的 URL 尚未被用戶訪問過。
 - {{CSSxRef(":visited")}} 是一個 CSS 虛擬類，將匹配 `<a>` 元素，其中 `href` 屬性中的 URL 曾經被用戶訪問過。
 - {{CSSxRef(":any-link")}} 是一個 CSS 虛擬類，將匹配具有 `href` 屬性的 `<a>` 元素。
-- [文字片段](/zh-TW/docs/Web/URI/Fragment/Text_fragments)是添加到 URL 中的用戶代理指令，允許內容作者鏈接到頁面上的特定文本，而不需要 ID。
+- [文字片段](/zh-TW/docs/Web/URI/Reference/Fragment/Text_fragments)是添加到 URL 中的用戶代理指令，允許內容作者鏈接到頁面上的特定文本，而不需要 ID。

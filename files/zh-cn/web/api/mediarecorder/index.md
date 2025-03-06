@@ -68,7 +68,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - [`error`](/zh-CN/docs/Web/API/MediaRecorder/error_event)
   - : Fired when an error occurs: for example because recording wasn't allowed or was attempted using an unsupported codec.
-    Also available via the [`onerror`](/zh-CN/docs/Web/API/MediaRecorder/onerror) property.
+    Also available via the [`onerror`](/zh-CN/docs/Web/API/MediaRecorder/error_event) property.
 
 ## 示例
 
@@ -157,7 +157,7 @@ if (navigator.mediaDevices) {
 
 ## See also
 
-- [Using the MediaRecorder API](/zh-CN/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API)
+- [Using the MediaRecorder API](/zh-CN/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
 - [Recording a media element](/zh-CN/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).

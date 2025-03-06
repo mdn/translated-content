@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Strict_mode
 > [!CALLOUT]
 > 가끔 엄격하지 않은 기본값을 " **[느슨한 모드](/ko/docs/Glossary/Sloppy_mode)**(sloppy mode)"라고 부르기도 합니다. 공식적인 용어는 아니지만 혹시 모르니 알아두세요.
 
-[ECMAScript 5](http://www.ecma-international.org/publications/standards/Ecma-262.htm) 에서 소개된 JavaScript 의 엄격모드는 JavaScript 의 제한된 버전을 선택하여 암묵적인 "**[느슨한 모드](/ko/docs/Glossary/Sloppy_mode)**(sloppy mode)" 를 해제하기 위한 방법입니다. 엄격 모드는 단지 부분적인 것이 아니며, 이것은 _고의적으로_ 일반 코드와 다른 시멘틱을 가지고 있습니다. 엄격모드를 지원하지 않는 브라우저에서는 엄격 모드의 코드가 다른 방식으로 동작할 것입니다, 그 때문에 엄격 모드가 적절하게 적용된 피쳐 테스트 없이 엄격 모드에 의존하면 안됩니다. 엄격 모드의 코드와 비-엄격 모드의 코드는 공존할 수 있으며, 때문에 스크립트의 엄격 모드를 취사 선택하는 것이 점진적으로 가능하게 되었습니다.
+[ECMAScript 5](https://www.ecma-international.org/publications/standards/Ecma-262.htm) 에서 소개된 JavaScript 의 엄격모드는 JavaScript 의 제한된 버전을 선택하여 암묵적인 "**[느슨한 모드](/ko/docs/Glossary/Sloppy_mode)**(sloppy mode)" 를 해제하기 위한 방법입니다. 엄격 모드는 단지 부분적인 것이 아니며, 이것은 _고의적으로_ 일반 코드와 다른 시멘틱을 가지고 있습니다. 엄격모드를 지원하지 않는 브라우저에서는 엄격 모드의 코드가 다른 방식으로 동작할 것입니다, 그 때문에 엄격 모드가 적절하게 적용된 피쳐 테스트 없이 엄격 모드에 의존하면 안됩니다. 엄격 모드의 코드와 비-엄격 모드의 코드는 공존할 수 있으며, 때문에 스크립트의 엄격 모드를 취사 선택하는 것이 점진적으로 가능하게 되었습니다.
 
 엄격 모드는 평범한 JavaScript 시멘틱스에 몇가지 변경이 일어나게 합니다.
 
@@ -16,7 +16,7 @@ slug: Web/JavaScript/Reference/Strict_mode
 2. JavaScript 엔진의 최적화 작업을 어렵게 만드는 실수들을 바로잡습니다. 가끔씩 엄격 모드의 코드는 비-엄격 모드의 동일한 코드보다 더 빨리 작동하도록 만들어집니다.
 3. 엄격 모드는 ECMAScript의 차기 버전들에서 정의 될 문법을 금지합니다.
 
-코드를 JavaScript의 변형이 제한된 환경에서 동작하도록 하고 싶다면, 엄격 모드로의 변환([transitioning to strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode))을 참고하세요.
+코드를 JavaScript의 변형이 제한된 환경에서 동작하도록 하고 싶다면, 엄격 모드로의 변환([transitioning to strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode))을 참고하세요.
 
 ## 엄격모드 적용하기
 
@@ -186,7 +186,7 @@ with (obj) {
 
 이름이 짧은 변수에 객체를 할당한 후, 변수에 해당하는 프로퍼티에 접근하는 간단한 대안은 `with` 를 대체할 준비가 되었습니다.
 
-둘째로, [엄격모드 코드의 `eval` 은 새로운 변수를 주위 스코프에 추가하지 않습니다](http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/). 일반적인 코드에서 `eval("var x;")` 는 변수 `x` 를 주위 함수나 전역 스코프에 추가합니다. 이는, 일반적으로 `eval` 호출을 포함하는 함수에서 인수나 지역 변수를 참조하지 않는 모든 이름은 런타임에 특정 정의에 반드시 매핑되어야 함을 의미합니다(`eval` 이 외부 변수를 숨기는 새로운 변수를 추가했기 때문입니다). 엄격모드에서 `eval` 은 evaluated 된 코드에서만 변수를 생성하므로, 외부 변수나 일부 로컬 변수에 참조하는지에 영향을 주지 않습니다.
+둘째로, [엄격모드 코드의 `eval` 은 새로운 변수를 주위 스코프에 추가하지 않습니다](https://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/). 일반적인 코드에서 `eval("var x;")` 는 변수 `x` 를 주위 함수나 전역 스코프에 추가합니다. 이는, 일반적으로 `eval` 호출을 포함하는 함수에서 인수나 지역 변수를 참조하지 않는 모든 이름은 런타임에 특정 정의에 반드시 매핑되어야 함을 의미합니다(`eval` 이 외부 변수를 숨기는 새로운 변수를 추가했기 때문입니다). 엄격모드에서 `eval` 은 evaluated 된 코드에서만 변수를 생성하므로, 외부 변수나 일부 로컬 변수에 참조하는지에 영향을 주지 않습니다.
 
 ```js
 var x = 17;
@@ -280,7 +280,7 @@ f(); // TypeError
 
 엄격모드는 "보안된" JavaScript를 작성하기 쉽게 해줍니다. 일부 웹사이트들은 사용자가 다른 사용자들을 대신하여 웹사이트에서 실행시키는 JavaScript를 작성하는 방법을 제공합니다. 브라우저에서 JavaScript는 사용자의 개인정보에 접근할수 있기 때문에, JavaScript는 금지된 기능에 대한 검열을 하기위해 반드시 실행전에 부분적으로 변경되어야 합니다. JavaScript의 유연성으로 인해 많은 런타임 체크없이 이것을 수행하는것은 사실상 불가능합니다. 특정 언어의 기능들이 너무 광범위하여 런타임 검사 수행은 상당한 성능비용이 생깁니다. 엄격모드의 작은 수정과 사용자가 제출한 JavaScript가 엄격모드가 되면 특정 방식으로 호출되므로 런타임 검사의 필요성이 크게 줄어 듭니다.
 
-첫째, 엄격모드에서는 `this` 로 함수에 전달된 값은 강제로 객체가 되지 않습니다 (a.k.a. "boxed"). 보통 함수의 경우, `this` 는 언제나 객체입니다: 객체값 `this` 와 함께 호출된 경우 제공된 객체이거나 ; 부울값, 문자 또는 숫자 `this` 로 호출된 경우 그 값은 Boxed 입니다; 또는 `undefined` 또는 `null` `this` 로 호출되면 전역객체입니다. (특정된 `this` 명세를 위해서는 [`call`](/en-US/Web/JavaScript/Reference/Global_Objects/Function/call), [`apply`](/en-US/Web/JavaScript/Reference/Global_Objects/Function/apply), 또는 [`bind`](/en-US/Web/JavaScript/Reference/Global_Objects/Function/bind) 를 사용하십시요) 자동 박싱은 성능 비용뿐 아니라 전역 객체가 브라우저에 노출되는것은 보안상 위험합니다. 전역객체들은 JavaScript 환경의 "보안" 기능에 접근하는것을 제공하기때문에 제한되어야 합니다. 따라서 엄격모드의 함수는, 정의된 `this` 는 박스드 객체가 되지 않으며, 정의되지 않은경우 `this` 는 `undefined` 가 됩니다:
+첫째, 엄격모드에서는 `this` 로 함수에 전달된 값은 강제로 객체가 되지 않습니다 (a.k.a. "boxed"). 보통 함수의 경우, `this` 는 언제나 객체입니다: 객체값 `this` 와 함께 호출된 경우 제공된 객체이거나 ; 부울값, 문자 또는 숫자 `this` 로 호출된 경우 그 값은 Boxed 입니다; 또는 `undefined` 또는 `null` `this` 로 호출되면 전역객체입니다. (특정된 `this` 명세를 위해서는 [`call`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [`apply`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), 또는 [`bind`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 를 사용하십시요) 자동 박싱은 성능 비용뿐 아니라 전역 객체가 브라우저에 노출되는것은 보안상 위험합니다. 전역객체들은 JavaScript 환경의 "보안" 기능에 접근하는것을 제공하기때문에 제한되어야 합니다. 따라서 엄격모드의 함수는, 정의된 `this` 는 박스드 객체가 되지 않으며, 정의되지 않은경우 `this` 는 `undefined` 가 됩니다:
 
 ```js
 "use strict";
@@ -310,7 +310,7 @@ function privilegedInvoker() {
 privilegedInvoker();
 ```
 
-셋째, 엄격모드의 `인수` 는 더이상 해당 함수의 호출 변수에 대한 접근을 제공하지 않습니다. 일부 이전 ECMAScript에서 `arguments.caller` 해당 함수에 별명이 지정된 객체였습니다. 이것은 함수의 추상화를 통해 권한이 있는 값을 숨길수 있는 기능을 차단하여 [보안의 위협](http://stuff.mit.edu/iap/2008/facebook/)이 됩니다; 이것은 또한 대부분의 최적화를 배제시킵니다. 이러한 이유로 최신 브라우저들은 이를 구현하지 않습니다. 하지만 이것들의 이전 기능들 때문에, 엄격모드함수에서 `arguments.caller` 설정이나 검색시 삭제 불가능한 요소가 됩니다:
+셋째, 엄격모드의 `인수` 는 더이상 해당 함수의 호출 변수에 대한 접근을 제공하지 않습니다. 일부 이전 ECMAScript에서 `arguments.caller` 해당 함수에 별명이 지정된 객체였습니다. 이것은 함수의 추상화를 통해 권한이 있는 값을 숨길수 있는 기능을 차단하여 [보안의 위협](https://stuff.mit.edu/iap/2008/facebook/)이 됩니다; 이것은 또한 대부분의 최적화를 배제시킵니다. 이러한 이유로 최신 브라우저들은 이를 구현하지 않습니다. 하지만 이것들의 이전 기능들 때문에, 엄격모드함수에서 `arguments.caller` 설정이나 검색시 삭제 불가능한 요소가 됩니다:
 
 ```js
 "use strict";
@@ -348,7 +348,7 @@ function fun(static) {
 
 Mozilla의 특별 지시 두 가지 : 먼저, 코드가 JavaScript 1.7 또는 그보다 높고 (예를 들어, 크롬 코드 또는 `<script type="">` 를 바로 사용할 때) 엄격 모드의 코드라면, `let` 와 `yield`는 처음 소개되었을 때의 그 기능을 가진다. 그러나 웹에서의 엄격 모드 코드는, `<script src="">`나 `<script>...</script>`로 로딩되지, `let`/`yield`를 식별자로 사용할 수가 없을 것이다. 그리고 나서는, ES5 가 `class`, `enum`, `export`, `extends`, `import`, and `super` 와 같은 예약어들을 무조건 리저브함에도 불구하고, 먼저 Firefox 5 Mozilla 는 그것들을 엄격 모드에서만 리저브한다.
 
-다음은, 엄격 모드는 스크립트나 함수의 탑 레벨이 아닌 곳에서의 함수 내용 정의를 제한합니다. ([strict mode prohibits function statements not at the top level of a script or function](http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/)). 브라우저에서 일반적인 코드는 함수 내용 정의가 "어디에서든" 허용됩니다. _이것은 ES5의 부분이 아닙니다!(심지어 ES3도 아니다.)_ 이건 다른 브라우저에서 공존할 수 없는 시멘틱의 확장입니다. 앞으로의 ECMAScript 에디션은 바라건대, 스크립트나 함수의 탑 레벨이 아닌 곳에서의 함수 내용 정의를 위해, 새로운 시멘틱을 명시할 것입니다. 엄격 모드에서 이러한 함수 정의를 금지하는 것([Prohibiting such function statements in strict mode](http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls))은 앞으로 출시될 ECMAScript의 사양을 위한 "준비"입니다. :
+다음은, 엄격 모드는 스크립트나 함수의 탑 레벨이 아닌 곳에서의 함수 내용 정의를 제한합니다. ([strict mode prohibits function statements not at the top level of a script or function](https://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/)). 브라우저에서 일반적인 코드는 함수 내용 정의가 "어디에서든" 허용됩니다. _이것은 ES5의 부분이 아닙니다!(심지어 ES3도 아니다.)_ 이건 다른 브라우저에서 공존할 수 없는 시멘틱의 확장입니다. 앞으로의 ECMAScript 에디션은 바라건대, 스크립트나 함수의 탑 레벨이 아닌 곳에서의 함수 내용 정의를 위해, 새로운 시멘틱을 명시할 것입니다. 엄격 모드에서 이러한 함수 정의를 금지하는 것([Prohibiting such function statements in strict mode](http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls))은 앞으로 출시될 ECMAScript의 사양을 위한 "준비"입니다. :
 
 ```js
 "use strict";
@@ -380,11 +380,11 @@ function baz() {
 
 ## 함께 보기
 
-- [Where's Walden? » New ES5 strict mode support: now with poison pills!](http://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/)
-- [Where's Walden? » New ES5 strict mode requirement: function statements not at top level of a program or function are prohibited](http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/)
-- [Where's Walden? » New ES5 strict mode support: new vars created by strict mode eval code are local to that code only](http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/)
+- [Where's Walden? » New ES5 strict mode support: now with poison pills!](https://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/)
+- [Where's Walden? » New ES5 strict mode requirement: function statements not at top level of a program or function are prohibited](https://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/)
+- [Where's Walden? » New ES5 strict mode support: new vars created by strict mode eval code are local to that code only](https://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/)
 - [JavaScript "use strict" tutorial for beginners.](http://qnimate.com/javascript-strict-mode-in-nutshell/)
 - [John Resig - ECMAScript 5 Strict Mode, JSON, and More](http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/)
 - [ECMA-262-5 in detail. Chapter 2. Strict Mode.](http://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/)
 - [Strict mode compatibility table](http://kangax.github.io/compat-table/es5/#Strict_mode)
-- [Transitioning to strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)
+- [Transitioning to strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode)

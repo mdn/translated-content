@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/dns/resolve
 
 Résout le nom d'hôte donné en un enregistrement DNS.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 

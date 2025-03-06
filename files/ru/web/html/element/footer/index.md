@@ -7,19 +7,49 @@ slug: Web/HTML/Element/footer
 
 **HTML-элемент** **`<footer>`** представляет собой нижний колонтитул (футер, подвал) для своего ближайшего [секционного контента](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document#Задание_разделов_в_HTML5) или [секционного корня](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document#Корни_задания_разделов). Футер обычно содержит информацию об авторе раздела, информацию об авторском праве или ссылки на связанные документы.
 
-{{EmbedInteractiveExample("pages/tabbed/footer.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;footer&gt;", "tabbed-standard")}}
 
-| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [явный контент](/ru/docs/Web/Guide/HTML/Content_categories#Явный_контент).                                                                                                                                                          |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                            | [Контент основного потока](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), кроме `<footer>` и {{HTMLElement("header")}}.                                                                                                                                                                             |
-| Пропуск тегов                                                    | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                                                                                                                 |
-| Допустимые родители                                              | Любой элемент, который разрешает [Контент основного потока](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток) в качестве содержимого. Обратите внимание, что элемент `<footer>` не должен быть потомком элемента {{HTMLElement("address")}}, {{HTMLElement("header")}} или другого элемента `<footer>`. |
-| Допустимые ARIA-роли                                             | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>                                                                                                                               |
-| DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                                       |
+```html interactive-example
+<article>
+  <h1>How to be a wizard</h1>
+  <ol>
+    <li>Grow a long, majestic beard.</li>
+    <li>Wear a tall, pointed hat.</li>
+    <li>Have I mentioned the beard?</li>
+  </ol>
+  <footer>
+    <p>© 2018 Gandalf</p>
+  </footer>
+</article>
+```
+
+```css interactive-example
+article {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #45a1ff;
+  color: #fff;
+}
+```
+
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток), [явный контент](/ru/docs/Web/HTML/Content_categories#явный_контент).                                                                                                                                                                |
+| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                      | [Контент основного потока](/ru/docs/Web/HTML/Content_categories#основной_поток), кроме `<footer>` и {{HTMLElement("header")}}.                                                                                                                                                                             |
+| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                                                                                                           |
+| Допустимые родители                                        | Любой элемент, который разрешает [Контент основного потока](/ru/docs/Web/HTML/Content_categories#основной_поток) в качестве содержимого. Обратите внимание, что элемент `<footer>` не должен быть потомком элемента {{HTMLElement("address")}}, {{HTMLElement("header")}} или другого элемента `<footer>`. |
+| Допустимые ARIA-роли                                       | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>                                                                                                                         |
+| DOM-интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                                 |
 
 ## Атрибуты
 
-К этому элементу применимы только [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
+К этому элементу применимы только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 ## Примечание
 

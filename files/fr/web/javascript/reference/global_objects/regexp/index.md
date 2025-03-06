@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp
 
 Un objet **RegExp** est utilisé pour étudier les correspondances d'un texte avec un motif donné.
 
-Pour une introduction aux expressions rationnelles, lire [le chapitre Expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions) dans [le Guide JavaScript](/fr/docs/Web/JavaScript/Guide/Regular_Expressions).
+Pour une introduction aux expressions rationnelles, lire [le chapitre Expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) dans [le Guide JavaScript](/fr/docs/Web/JavaScript/Guide/Regular_expressions).
 
 ## Description
 
@@ -196,7 +196,7 @@ console.log(regex.lastIndex); // affiche '15'
 // et ainsi de suite
 ```
 
-Les [échappements de propriété Unicode](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), plus récents, permettent une solution plus élégante en utilisant `\p{scx=Cyrl}` à la place.
+Les [échappements de propriété Unicode](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape), plus récents, permettent une solution plus élégante en utilisant `\p{scx=Cyrl}` à la place.
 
 ### Extraire un sous-domaine d'une URL
 
@@ -237,7 +237,7 @@ Pour des raisons de compatibilité web, `RegExp.$N` renverra une chaîne vide au
 ## Voir aussi
 
 - [Une prothèse d'émulation pour les différentes fonctionnalités récentes des `RegExp` (marqueurs `dotAll` et `sticky`, groupes de capture nommés, etc.) avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [Le chapitre sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions) au sein du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide)
+- [Le chapitre sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) au sein du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide)
 - [`String.prototype.match()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match)
 - [`String.prototype.replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
 - [`String.prototype.split()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split)

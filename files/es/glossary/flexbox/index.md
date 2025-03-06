@@ -31,10 +31,10 @@ Flexbox también permite la alineación de los elementos en el eje principal o t
 ### Otras lecturas
 
 - _[CSS: Especificaciones del módulo de diseño de caja flexible Nivel 1](https://www.w3.org/TR/css-flexbox-1/)_
-- CSS: Guía de Flexbox - _[Conceptos básicos de Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS: Guía de Flexbox - _[Conceptos básicos de Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
 - CSS: Guía de Flexbox - _[Relación de flexbox con otros métodos de diseño](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)_
-- CSS: Guía de Flexbox - _[Alinear elementos en un contenedor flex](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- CSS: Guía de Flexbox - _[Alinear elementos en un contenedor flex](/es/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
 - CSS: Guía de Flexbox - _[Ordenar elementos flex](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
-- CSS: Guía de Flexbox - _[Controlando la proporción de elementos flex a lo largo del eje principal](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS: Guía de Flexbox - _[Controlando la proporción de elementos flex a lo largo del eje principal](/es/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
 - CSS: Guía de Flexbox - _[Dominar el envoltorio de elementos flex](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
-- CSS: Guía de Flexbox - _[Casos de uso típicos de flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)_
+- CSS: Guía de Flexbox - _[Casos de uso típicos de flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)_

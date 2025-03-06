@@ -13,5 +13,5 @@ l10n:
 
 ## 関連項目
 
-- [JavaScript の変数スコープ入門](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#Variable_scope)
+- [JavaScript の変数スコープ入門](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#変数のスコープ)
 - [スコープ](https://ja.wikipedia.org/wiki/スコープ)（ウィキペディア）

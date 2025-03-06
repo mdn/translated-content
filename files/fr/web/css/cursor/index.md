@@ -409,6 +409,6 @@ Pour plus d'informations, voir le tableau de compatibilité ci-après.
 
 ## Voir aussi
 
-- [Utiliser des valeurs URL pour `cursor`](/fr/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property)
+- [Utiliser des valeurs URL pour `cursor`](/fr/docs/Web/CSS/cursor)
 - [`pointer-events`](/fr/docs/Web/CSS/pointer-events)
 - La fonction CSS {{cssxref("url()", "url()")}}

@@ -216,7 +216,7 @@ WebP (`image/webp`) 추가에 대한 논의가 있지만 새로운 타입의 이
 
 ### `multipart/form-data`
 
-`multipart/form-data`은 브라우저에서 서버로 완성된 [HTML Form](/ko/docs/Web/Guide/HTML/Forms)의 내용을 전송 시 사용할 수 있습니다.
+`multipart/form-data`은 브라우저에서 서버로 완성된 [HTML Form](/ko/docs/Learn/Forms)의 내용을 전송 시 사용할 수 있습니다.
 
 다중부분 문서 형식으로써, 경계(이중 대시 `'--'` 로 시작되는 문자열)로 구분되어지는 다른 파트들로 구성됩니다. 각 파트는 그 자체로 개체이며 자신만의 HTTP 헤더를 가지는데, 파일 업로드 필드를 위한 헤더로는 {{HTTPHeader("Content-Disposition")}}, {{HTTPHeader("Content-Type")}}이 있습니다.
 
@@ -349,4 +349,4 @@ MIME 타입이 문서 타입 정보를 전달하는 유일한 방법은 아닙�
 
 - [웹 미디어 기술](/ko/docs/Web/Media)
 - [웹에서 사용되는 미디어 타입 가이드](/ko/docs/Web/Media/Formats)
-- [서버의 MIME 타입을 적절하게 구성하기](/ko/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types)
+- [서버의 MIME 타입을 적절하게 구성하기](/ko/docs/Learn/Server-side/Configuring_server_MIME_types)

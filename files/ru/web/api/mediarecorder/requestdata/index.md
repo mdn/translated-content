@@ -5,7 +5,7 @@ slug: Web/API/MediaRecorder/requestData
 
 {{APIRef("MediaStream Recording")}}
 
-Метод **`MediaRecorder.requestData()`** (часть [MediaRecorder API](/ru/docs/Web/API/MediaRecorder_API)) используется, чтобы поднять {{domxref("dataavailable")}} событие содержащее {{domxref("Blob")}} объект захваченных медиа-данных как это было когда метод был вызван. This can then be grabbed и манипулировать как необходимо.
+Метод **`MediaRecorder.requestData()`** (часть [MediaRecorder API](/ru/docs/Web/API/MediaStream_Recording_API)) используется, чтобы поднять {{domxref("dataavailable")}} событие содержащее {{domxref("Blob")}} объект захваченных медиа-данных как это было когда метод был вызван. This can then be grabbed и манипулировать как необходимо.
 
 When the `requestData()` method is invoked, the browser queues a task that runs the following steps:
 
@@ -48,7 +48,7 @@ An `InvalidState` error is raised if the `requestData()` method is called while 
 
 ## Смотрите также
 
-- [Using the MediaRecorder API](/ru/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API)
-- [Web Dictaphone](http://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
-- [simpl.info MediaStream Recording demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+- [Using the MediaRecorder API](/ru/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
+- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("Navigator.getUserMedia")}}

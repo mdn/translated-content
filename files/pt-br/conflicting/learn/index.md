@@ -11,7 +11,7 @@ Se você quiser dar feedback sobre qualquer uma dessas novas adições, deixe se
 
 ## Junho 2020
 
-Nosso [Caminho de aprendizagem para desenvolvedores da web de front-end](/pt-BR/docs/Learn/Front-end_web_developer) foi oficialmente lançado! confira um caminho opcional a seguir para o desenvolvimento de front-end de aprendizagem! Consulte também nossa postagem sobro hacks — [Apresentando o caminho de aprendizagem do desenvolvimento do MDN Web Docs Front-end](https://hacks.mozilla.org/2020/06/introducing-the-mdn-web-docs-front-end-developer-learning-pathway/) — para obter mais informações sobre a lógica por trás disso.
+Nosso [Caminho de aprendizagem para desenvolvedores da web de front-end](/pt-BR/docs/orphaned/Learn/Front-end_web_developer) foi oficialmente lançado! confira um caminho opcional a seguir para o desenvolvimento de front-end de aprendizagem! Consulte também nossa postagem sobro hacks — [Apresentando o caminho de aprendizagem do desenvolvimento do MDN Web Docs Front-end](https://hacks.mozilla.org/2020/06/introducing-the-mdn-web-docs-front-end-developer-learning-pathway/) — para obter mais informações sobre a lógica por trás disso.
 
 ## Maio 2020
 
@@ -42,7 +42,7 @@ O módulo de formulários HTML foi significativamente atualizado:
 
 Mais seções "Teste suas habilidades" foram adicionadas. Você pode ver isso em:
 
-- [CSS layout: Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox#Test_your_skills!)
+- [CSS layout: Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox#test_your_skills!)
 - [CSS layout: Grids](/pt-BR/docs/Learn/CSS/CSS_layout/Grids#Test_your_skills!)
 - [CSS layout: Floats](/pt-BR/docs/Learn/CSS/CSS_layout/Floats#Test_your_skills!)
 
@@ -50,9 +50,9 @@ Mais seções "Teste suas habilidades" foram adicionadas. Você pode ver isso em
 
 estamos adicionando um novo tipo de artigo de avaliação à área de aprendizado — "Teste suas habilidades" — que oferecerá várias perguntas curtas destinadas a testar rapidadmente se você entendeu o que está acontecendo. Isso é uma adição aos artigos de avaliação mais longos que você já encontrará em alguns módulos de aprendizagem. Você encontrará esses novos artigos com links nas seções "Teste suas habilidades" na parte inferior dos artigos relevantes. Você pode ver isso em:
 
-- [HTML text fundamentals](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Test_your_skills!)
-- [Creating hyperlinks](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Test_your_skills!)
-- [Advanced text formatting](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Test_your_skills!)
-- [Images in HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#Test_your_skills!)
-- [Video and audio content](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#Test_your_skills!)
-- [From object to iframe — other embedding technologies](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#Test_your_skills!)
+- [HTML text fundamentals](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#test_your_skills!)
+- [Creating hyperlinks](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#test_your_skills!)
+- [Advanced text formatting](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#test_your_skills!)
+- [Images in HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#test_your_skills!)
+- [Video and audio content](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#test_your_skills!)
+- [From object to iframe — other embedding technologies](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#test_your_skills!)

@@ -16,7 +16,7 @@ new Float64Array(object);
 new Float64Array(buffer [, byteOffset [, length]]);
 ```
 
-更多的语法信息和参数，参见 _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+更多的语法信息和参数，参见 _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntax)_.
 
 ## 静态属性
 
@@ -101,6 +101,6 @@ var dv = new Float64Array([1, 2, 3]);
 
 ## 参见
 
-- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

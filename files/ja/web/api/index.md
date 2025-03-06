@@ -38,7 +38,7 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 
 - [サーバー送信イベント](/ja/docs/Web/API/Server-sent_events)
 - [サービスワーカー API](Web/API/Service_Worker_API)
-- [CSS カウンタースタイル](/ja/docs/Web/API/CSS_Counter_Styles)
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)
 - [ストレージ API](/ja/docs/Web/API/Storage_API)
 - [ストレージアクセス API](/ja/docs/Web/API/Storage_Access_API)
 - [センサー API 群](/ja/docs/Web/API/Sensor_APIs)
@@ -58,7 +58,7 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 - [バックグラウンドフェッチ API](/ja/docs/Web/API/Background_Fetch_API)
 - [バッジ API](/ja/docs/Web/API/Badging_API)
 - [パフォーマンス API](/ja/docs/Web/API/Performance_API)
-- [ビュー遷移 API](/ja/docs/Web/API/View_Transitions_API)
+- [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)
 - [フェッチ API](/ja/docs/Web/API/Fetch_API)
 - [プッシュ通知 API](/ja/docs/Web/API/Push_API)
 - [プレゼンテーション API](/ja/docs/Web/API/Presentation_API)

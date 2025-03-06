@@ -111,6 +111,6 @@ value2
 
 ## Смотрите также
 
-- [HTML-формы](/ru/docs/Web/Guide/HTML/Forms)
+- [HTML-формы](/ru/docs/Learn/Forms)
 - {{HTTPHeader("Content-Type")}} определяет границу для частей составного тела.
 - Интерфейс {{domxref("FormData")}} используется для обработки данных форм для использования в API {{domxref("XMLHttpRequest")}}.

@@ -11,7 +11,7 @@ Pour les nouveaux téléchargements, les icônes de fichiers sont disponibles ap
 
 La récupération d'icônes s'effectue en interrogeant la plateforme sous-jacente. L'icône renvoyée dépendra donc d'un certain nombre de facteurs, notamment l'état du téléchargement, la plate-forme, les types de fichiers enregistrés et le thème visuel.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -35,7 +35,7 @@ var gettingIcon = browser.downloads.getFileIcon(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si la requête réussit, la promesse sera remplie avec une chaîne représentant l'URL absolue de l'icône. Si la requête échoue, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si la requête réussit, la promesse sera remplie avec une chaîne représentant l'URL absolue de l'icône. Si la requête échoue, la promesse sera rejetée avec un message d'erreur.
 
 ## Compatibilité des navigateurs
 

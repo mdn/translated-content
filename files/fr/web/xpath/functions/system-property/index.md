@@ -30,7 +30,7 @@ Un objet représentant le propriété système donnée.
 
 ### Définition
 
-[XSLT 1.0, section 12.4](http://www.w3.org/TR/xslt#function-system-property).
+[XSLT 1.0, section 12.4](https://www.w3.org/TR/xslt#function-system-property).
 
 ### Support Gecko
 

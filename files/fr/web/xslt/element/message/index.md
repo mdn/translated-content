@@ -30,7 +30,7 @@ Instruction, apparaît dans un modèle.
 
 ### Définition
 
-[XSLT 1.0, section 13](http://www.w3.org/TR/xslt#message).
+[XSLT 1.0, section 13](https://www.w3.org/TR/xslt#message).
 
 ### Support Gecko
 

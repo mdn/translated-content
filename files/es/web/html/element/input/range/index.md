@@ -309,6 +309,6 @@ Además de los ejemplos anteriores, encontrarás más ejemplos en los siguientes
 
 ## Ver también
 
-- [HTML Forms](/es/docs/Learn/HTML/Forms)
+- [HTML Forms](/es/docs/Learn/Forms)
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
 - [`<input type="number">`](/es/docs/Web/HTML/Element/input/number)

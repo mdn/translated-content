@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/String/split
 
 **`split()`** 메서드는 {{jsxref("String")}} 객체를 지정한 구분자를 이용하여 여러 개의 문자열로 나눕니다.
 
-{{EmbedInteractiveExample("pages/js/string-split.html")}}
+{{InteractiveExample("JavaScript Demo: String.split()")}}
+
+```js interactive-example
+const str = "The quick brown fox jumps over the lazy dog.";
+
+const words = str.split(" ");
+console.log(words[3]);
+// Expected output: "fox"
+
+const chars = str.split("");
+console.log(chars[8]);
+// Expected output: "k"
+
+const strCopy = str.split();
+console.log(strCopy);
+// Expected output: Array ["The quick brown fox jumps over the lazy dog."]
+```
 
 ## 구문
 
@@ -17,7 +33,7 @@ split(separator);
 split(separator, limit);
 ```
 
-> **경고:** **주의:** 구분자로 빈 문자열(`""`)을 제공하면, 사용자가 인식하는 문자 하나([grapheme cluster](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) 또는 유니코드 문자(코드포인트) 하나씩으로 나누는 것이 아니라, UTF-16 코드유닛으로 나누게 되며 [써로게이트 페어](http://unicode.org/faq/utf_bom.html#utf16-2)가 망가질 수 있습니다. 스택 오버플로우의 [How do you get a string to a character array in JavaScript?](https://stackoverflow.com/a/34717402) 질문도 참고해 보세요.
+> **경고:** **주의:** 구분자로 빈 문자열(`""`)을 제공하면, 사용자가 인식하는 문자 하나([grapheme cluster](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) 또는 유니코드 문자(코드포인트) 하나씩으로 나누는 것이 아니라, UTF-16 코드유닛으로 나누게 되며 [써로게이트 페어](https://unicode.org/faq/utf_bom.html#utf16-2)가 망가질 수 있습니다. 스택 오버플로우의 [How do you get a string to a character array in JavaScript?](https://stackoverflow.com/a/34717402) 질문도 참고해 보세요.
 
 ### 매개변수
 

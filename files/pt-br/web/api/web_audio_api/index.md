@@ -214,7 +214,7 @@ Você pode encontrar vários exemplos em nosso [repositório webaudio-example](h
 - [Controlando vários parâmetros com ConstantSourceNode](/pt-BR/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [Misturando áudio posicional e WebGL (2012)](https://web.dev/webaudio-positional-audio/)
 - [Desenvolvendo o áudio do jogo com a API de áudio da Web (2012)](https://auth.web.dev/webaudio-games/)
-- [Migrando código webkitAudioContext para padrões baseados em AudioContext](/pt-BR/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
+- [Migrando código webkitAudioContext para padrões baseados em AudioContext](/pt-BR/docs/Web/API/Web_Audio_API)
 
 ### Bibliotecas
 

@@ -146,8 +146,8 @@ Inclua este polyfill para suportar browsers antigos.
 
 ## Veja também
 
-- O [`close`](/pt-BR/docs/Web/Events/close) evento
-- O [`cancel`](/pt-BR/docs/Web/Events/cancel) evento
+- O [`close`](/pt-BR/docs/Web/API/HTMLDialogElement/close_event) evento
+- O [`cancel`](/pt-BR/docs/Web/API/HTMLDialogElement/cancel_event) evento
 - Guia de formulários HTML.
 
 {{HTMLSidebar}}

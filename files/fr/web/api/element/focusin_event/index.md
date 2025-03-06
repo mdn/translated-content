@@ -10,7 +10,7 @@ L'événement **focusin** est déclenché lorsqu'un élément est sur le point d
 ## Informations générales
 
 - Spécification
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusIn)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusIn)
 - Interface
   - : {{domxref("FocusEvent")}}
 - Propagation

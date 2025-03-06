@@ -33,9 +33,9 @@ p {
 ### Техническая документация
 
 - [CSS документация на MDN](/ru/docs/Web/CSS)
-- [Рабочая группа CSS по текущей работе](http://www.w3.org/Style/CSS/current-work)
+- [Рабочая группа CSS по текущей работе](https://www.w3.org/Style/CSS/current-work)
 
 ### Веб-курсы CSS
 
-- [Веб курсы на codecademy.com](http://www.codecademy.com/en/tracks/web)
+- [Веб курсы на codecademy.com](https://www.codecademy.com/en/tracks/web)
 - [Веб курсы на W3Schools](http://www.w3schools.com/css/default.asp)

@@ -40,4 +40,4 @@ _Aucun._
 
 ## Voir aussi
 
-- [Web Audio API](/fr/docs/Web_Audio_API)
+- [Web Audio API](/fr/docs/Web/API/Web_Audio_API)

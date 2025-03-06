@@ -38,7 +38,7 @@ set(options)
     - `name`
       - : Cookie の名前が入った文字列です。
     - `partitioned` {{Optional_Inline}}
-      - : 論理値で、既定値は `false` です。`true` に設定すると、設定された Cookie はパーティション化された Cookie になります。詳しくは [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Partitioned_cookies) を参照してください。
+      - : 論理値で、既定値は `false` です。`true` に設定すると、設定された Cookie はパーティション化された Cookie になります。詳しくは [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) を参照してください。
     - `path` {{Optional_Inline}}
       - : Cookie のパスの入った文字列です。
     - `sameSite` {{Optional_Inline}}

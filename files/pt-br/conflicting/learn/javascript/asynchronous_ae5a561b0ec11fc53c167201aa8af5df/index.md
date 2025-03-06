@@ -28,11 +28,11 @@ Por um longo tempo, a plataforma web tem oferecido à programadores JavaScript u
 
 Essas funções são:
 
-- [`setTimeout()`](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)
+- [`setTimeout()`](/pt-BR/docs/Web/API/Window/setTimeout)
   - : Executa um bloco específico uma vez depois de um determinado tempo
-- [`setInterval()`](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
+- [`setInterval()`](/pt-BR/docs/Web/API/Window/setInterval)
   - : Executa um bloco específico repetidamente com um intervalo fixo entre cada chamada.
-- [`requestAnimationFrame()`](/pt-BR/docs/Web/API/window/requestAnimationFrame)
+- [`requestAnimationFrame()`](/pt-BR/docs/Web/API/Window/requestAnimationFrame)
   - : Uma versão moderna de `setInterval()`. Ela executa um bloc de código específico antes do navegador renderizar a tela novamento, permitindo que seja executada em uma taxa de quadros adequada, independentemente do ambiente em que está sendo executado.
 
 O código executado por estas funções é executado na main thread (depois do dado intervalo).
@@ -43,7 +43,7 @@ De qualquer forma, essas funções são usadas para executar animações constan
 
 ## setTimeout()
 
-Como foi dito anteriormente, o [`setTimeout()`](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) executa um bloco de código particular depois que um determinado período de tempo passou. Ele toma os seguintes parâmetros:
+Como foi dito anteriormente, o [`setTimeout()`](/pt-BR/docs/Web/API/Window/setTimeout) executa um bloco de código particular depois que um determinado período de tempo passou. Ele toma os seguintes parâmetros:
 
 - Uma função a ser executada, ou uma referência de uma função definida em outro lugar.
 - Um número representando o intervalo de tempo em milissegundos (1000 milissegundos equivalem a 1 segundo) para esperar antes de executar o código. Se você especificar um valor de 0 (ou simplesmente omitir o valor), a função será executada assim que possível (mas não imediatamente).
@@ -101,7 +101,7 @@ let myGreeting = setTimeout(sayHi, 2000, 'Mr. Universe');
 
 ### Cancelando timeouts
 
-Finalmente, se um timeout foi criado, você pode cancelá-lo antes que o tempo especificado tenha passado chamando [`clearTimeout()`](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout), passando para o identificador a chamada `setTimeout()` como um parâmetreo. então para cancelar o timeout acima, você fará isso:
+Finalmente, se um timeout foi criado, você pode cancelá-lo antes que o tempo especificado tenha passado chamando [`clearTimeout()`](/pt-BR/docs/Web/API/Window/clearTimeout), passando para o identificador a chamada `setTimeout()` como um parâmetreo. então para cancelar o timeout acima, você fará isso:
 
 ```js
 clearTimeout(myGreeting);
@@ -114,7 +114,7 @@ clearTimeout(myGreeting);
 
 `setTimeout()` funciona perfeitamento quando você precisa executar algum código depois de um período de tempo. Mas o que acontece quando voc\~e precisa executar o código de novo e de novo — por exemplo, no caso de uma animação?
 
-É aí que o [`setInterval()`](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setInterval) entra. Ele funciona de uma maneira muito similar à `setTimeout()`, exceto que a função que você passar como primeiro parâmetro é executada repetidamente em não menos que um número determinado de milissegundos dado no segundo parâmetro, ao invés de apenas uma vez. Você também pode passar qualquer parâmetro sendo executado como um parâmetro subsequente da chamada de `setInterval()`.
+É aí que o [`setInterval()`](/pt-BR/docs/Web/API/Window/setInterval) entra. Ele funciona de uma maneira muito similar à `setTimeout()`, exceto que a função que você passar como primeiro parâmetro é executada repetidamente em não menos que um número determinado de milissegundos dado no segundo parâmetro, ao invés de apenas uma vez. Você também pode passar qualquer parâmetro sendo executado como um parâmetro subsequente da chamada de `setInterval()`.
 
 Vamos dar uma olhada em um exemplo. A função a seguir cria um novo objeto [`Date()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date), tira uma string de tempo usando [`toLocaleTimeString()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString), e depois a mostra naUI. Em seguida, ela executa a função uma vez por segundo usando `setInterval()`, criando o efeito de um relógio digital que é atualizado uma vez por segundo ([veja aqui](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html), e também [veja o código](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html)):
 
@@ -132,7 +132,7 @@ Assim como o `setTimeout()`, o `setInterval()` também retorna um valor identifi
 
 ### Cancelando intervalos
 
-`setInterval()` continua sua execução para sempre, a menos que você faça algo sobre isso. Você provavelmente quer um jeito de parar tais tarefas, do contrário você pode acabar com error quando o navegador não puder completar outras versões futuras da tarefa, ou se a animação acabar. Você pode fazer isso do mesmo jeito que você para timeouts — passando o identificador retornado por `setInterval()` para a função [`clearInterval()`](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval):
+`setInterval()` continua sua execução para sempre, a menos que você faça algo sobre isso. Você provavelmente quer um jeito de parar tais tarefas, do contrário você pode acabar com error quando o navegador não puder completar outras versões futuras da tarefa, ou se a animação acabar. Você pode fazer isso do mesmo jeito que você para timeouts — passando o identificador retornado por `setInterval()` para a função [`clearInterval()`](/pt-BR/docs/Web/API/Window/clearInterval):
 
 ```js
 const myInterval = setInterval(myFunction, 2000);
@@ -235,7 +235,7 @@ Mas mesmo assim, você deve usar o `clearTimeout()` para entradas `setTimeout()`
 
 ## requestAnimationFrame()
 
-[`requestAnimationFrame()`](/pt-BR/docs/Web/API/window/requestAnimationFrame) é uma função de loop especializada criada para executar animações com eficiência no navegador. Ela é basicamente a versão moderna de `setInterval()` — ela executa um bloco de código específico antes que o navegador renove o display, permitindo que uma animação seja executada em um framerate adequado independente do ambiente em que está sendo executada.
+[`requestAnimationFrame()`](/pt-BR/docs/Web/API/Window/requestAnimationFrame) é uma função de loop especializada criada para executar animações com eficiência no navegador. Ela é basicamente a versão moderna de `setInterval()` — ela executa um bloco de código específico antes que o navegador renove o display, permitindo que uma animação seja executada em um framerate adequado independente do ambiente em que está sendo executada.
 
 Ela foi criada em resposta à problemas ocorridos com `setInterval()`, que por exemplo não roda em uma taxa de quadros otimizada para o dispositivo, e às vezes diminui os frames, continua a rodar mesmo se a guia não esiver ativa ou se a animação for rolada para fora da página, etc.
 
@@ -599,7 +599,7 @@ Let's work through this:
 
     1. First, cancel the spinner animation with {{domxref("window.cancelAnimationFrame", "cancelAnimationFrame()")}} (it is always good to clean up unneeded processes), and hide the spinner container.
     2. Next, display the results paragraph and set its text content to "PLAYERS GO!!" to signal to the players that they can now press their button to win.
-    3. Attach a [`keydown`](/pt-BR/docs/Web/API/Document/keydown_event) event listener to the document. When any button is pressed down, the `keyHandler()` function is run.
+    3. Attach a [`keydown`](/pt-BR/docs/Web/API/Element/keydown_event) event listener to the document. When any button is pressed down, the `keyHandler()` function is run.
     4. Inside `keyHandler()`, the code includes the event object as a parameter (represented by `e`) — its {{domxref("KeyboardEvent.key", "key")}} property contains the key that was just pressed, and you can use this to respond to specific key presses with specific actions.
     5. Log `e.key` to the console, which is a useful way of finding out the `key` value of different keys you are pressing.
     6. When `e.key` is "a", display a message to say that Player 1 won, and when `e.key` is "l", display a message to say Player 2 won. (**Note:** This will only work with lowercase a and l — if an uppercase A or L is submitted (the key plus&#x20;
@@ -623,9 +623,9 @@ So that's it — all the essentials of async loops and intervals covered in one 
 
 ## In this module
 
-- [General asynchronous programming concepts](/pt-BR/docs/Learn/JavaScript/Asynchronous/Concepts)
+- [General asynchronous programming concepts](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing)
 - [Introducing asynchronous JavaScript](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [Cooperative asynchronous JavaScript: Timeouts and intervals](/pt-BR/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
+- [Cooperative asynchronous JavaScript: Timeouts and intervals](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df)
 - [Graceful asynchronous programming with Promises](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Making asynchronous programming easier with async and await](/pt-BR/docs/Learn/JavaScript/Asynchronous/Async_await)
-- [Choosing the right approach](/pt-BR/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)
+- [Making asynchronous programming easier with async and await](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Promises)
+- [Choosing the right approach](/pt-BR/docs/Learn/JavaScript/Asynchronous)

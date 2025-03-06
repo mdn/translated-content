@@ -104,7 +104,7 @@ Instruction, apparaît dans un modèle.
 
 ### Définition
 
-[XSLT 1.0, section 7.7](http://www.w3.org/TR/xslt#number).
+[XSLT 1.0, section 7.7](https://www.w3.org/TR/xslt#number).
 
 ### Support Gecko
 

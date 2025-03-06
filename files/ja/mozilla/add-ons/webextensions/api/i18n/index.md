@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n
 
 {{AddonSidebar}}
 
-拡張機能を国際化する関数です。これらの API は、拡張機能に同梱したロケールファイルからローカライズ文字列を取得したり、ブラウザーの現在の言語や、その [Accept-Language ヘッダー](/ja/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header) を調べるために使用します。
+拡張機能を国際化する関数です。これらの API は、拡張機能に同梱したロケールファイルからローカライズ文字列を取得したり、ブラウザーの現在の言語や、その [Accept-Language ヘッダー](/ja/docs/Web/HTTP/Content_negotiation#the_accept-language_header) を調べるために使用します。
 
 拡張機能で i18n を使用するための詳細は、以下の記事を参照してください:
 
@@ -20,7 +20,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n
 ## 関数
 
 - {{WebExtAPIRef("i18n.getAcceptLanguages()")}}
-  - : ブラウザーの [accept-languages](/ja/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header) を取得します。これは、ブラウザーに使用されているロケールとは異なります。ロケールを取得するには、{{WebExtAPIRef('i18n.getUILanguage')}} を使用してください。
+  - : ブラウザーの [accept-languages](/ja/docs/Web/HTTP/Content_negotiation#the_accept-language_header) を取得します。これは、ブラウザーに使用されているロケールとは異なります。ロケールを取得するには、{{WebExtAPIRef('i18n.getUILanguage')}} を使用してください。
 - {{WebExtAPIRef("i18n.getMessage()")}}
   - : 指定したメッセージのローカライズ文字列を取得します。
 - {{WebExtAPIRef("i18n.getUILanguage()")}}

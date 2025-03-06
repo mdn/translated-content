@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 027477cb8fe471c15c216c08592b607ea9118e35
 ---
 
-{{MDNSidebar}}
-
 ## 添加图像
 
 要在文档中添加图像，请将图像文件添加到该文档的文件夹中，然后在文档的 `index.md` 文件中使用 [Markdown 图像语法](https://github.github.com/gfm/#images)或等效的 HTML `<img>` 元素引用该图像。
@@ -45,7 +43,7 @@ l10n:
    > [!NOTE]
    > 对于本地化文档中的图像文件，请在 `mdn/content` 的本地仓库中运行该命令，并将 `files/en-us/web/css/my-cool-image.png` 替换为到本地化文档中包含的图像文件的相对路径或绝对路径。
 
-4. 在 `files/en-us/web/css/index.md` 文档中使用 Markdown 图像语法并在方括号间提供（用于描述图像的）[`alt` 属性的描述文本](/zh-CN/docs/Learn/Accessibility/HTML#替代文本)，或包含一个 {{htmlelement("img")}} 元素和 `alt` 属性来引用图像：
+4. 在 `files/en-us/web/css/index.md` 文档中使用 Markdown 图像语法并在方括号间提供（用于描述图像的）[`alt` 属性的描述文本](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML#替代文本)，或包含一个 {{htmlelement("img")}} 元素和 `alt` 属性来引用图像：
 
    ```md
    <img src="my-cool-image.png" alt="炫酷的图像" />

@@ -132,7 +132,7 @@ JavaScript
 
 - [DOMContentLoaded](/ja/docs/Web/API/Document/DOMContentLoaded_event)
 - [ガベージコレクション](/ja/docs/Glossary/Garbage_collection)
-- [requestAnimationFrame](/ja/docs/Web/API/window/requestAnimationFrame)
+- [requestAnimationFrame](/ja/docs/Web/API/Window/requestAnimationFrame)
 
 API
 
@@ -161,7 +161,7 @@ API
 
 - [Content-encoding](/ja/docs/Web/HTTP/Headers/Content-Encoding)
 - HTTP/2
-- [gZip](/ja/docs/Glossary/GZip_compression)
+- [gZip](/ja/docs/Glossary/gzip_compression)
 - クライアントヒント
 
 ツール

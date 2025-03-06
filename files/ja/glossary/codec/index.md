@@ -16,5 +16,5 @@ slug: Glossary/Codec
 ### 技術文書
 
 - [ウェブ動画コーデックガイド](/ja/docs/Web/Media/Formats/Video_codecs)
-- [HTML の audio および video で対応しているメディア形式](/ja/docs/Web/HTML/Supported_media_formats)
+- [HTML の audio および video で対応しているメディア形式](/ja/docs/Web/Media/Formats)
 - [メディアの種類と形式のガイド](/ja/docs/Web/Media/Formats)

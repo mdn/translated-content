@@ -5,9 +5,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Date
 
 {{JSRef}}
 
-创建一个 JavaScript `Date` 实例，该实例呈现时间中的某个时刻。`Date` 对象则基于 [Unix Time Stamp](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16)，即自 1970 年 1 月 1 日（UTC）起经过的毫秒数。
+创建一个 JavaScript `Date` 实例，该实例呈现时间中的某个时刻。`Date` 对象则基于 [Unix Time Stamp](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16)，即自 1970 年 1 月 1 日（UTC）起经过的毫秒数。
 
-{{EmbedInteractiveExample("pages/js/date-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Date Constructor")}}
+
+```js interactive-example
+const date1 = new Date("December 17, 1995 03:24:00");
+// Sun Dec 17 1995 03:24:00 GMT...
+
+const date2 = new Date("1995-12-17T03:24:00");
+// Sun Dec 17 1995 03:24:00 GMT...
+
+console.log(date1 === date2);
+// Expected output: false
+
+console.log(date1 - date2);
+// Expected output: 0
+```
 
 ## 语法
 
@@ -33,10 +47,10 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 #### Unix 时间戳
 
 - `value`
-  - : 一个 Unix 时间戳（[Unix Time Stamp](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16)），它是一个整数值，表示自 1970 年 1 月 1 日 00:00:00 UTC（the Unix epoch）以来的毫秒数，忽略了闰秒。请注意大多数 Unix 时间戳功能仅精确到最接近的秒。
+  - : 一个 Unix 时间戳（[Unix Time Stamp](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16)），它是一个整数值，表示自 1970 年 1 月 1 日 00:00:00 UTC（the Unix epoch）以来的毫秒数，忽略了闰秒。请注意大多数 Unix 时间戳功能仅精确到最接近的秒。
 - 时间戳字符串 `dateString`
 
-  - : 表示日期的字符串值。该字符串应该能被 {{jsxref("Date.parse()")}} 正确方法识别（即符合 [IETF-compliant RFC 2822 timestamps](http://tools.ietf.org/html/rfc2822#page-14) 或 [version of ISO8601](http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15)）。
+  - : 表示日期的字符串值。该字符串应该能被 {{jsxref("Date.parse()")}} 正确方法识别（即符合 [IETF-compliant RFC 2822 timestamps](https://tools.ietf.org/html/rfc2822#page-14) 或 [version of ISO8601](https://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15)）。
 
     > [!NOTE]
     > 由于浏览器之间的差异与不一致性，强烈不推荐使用`Date`构造函数来解析日期字符串 (或使用与其等价的`Date.parse`)。对 RFC 2822 格式的日期仅有约定俗成的支持。对 ISO 8601 格式的支持中，仅有日期的串 (例如 "1970-01-01") 会被处理为 UTC 而不是本地时间，与其他格式的串的处理不同。

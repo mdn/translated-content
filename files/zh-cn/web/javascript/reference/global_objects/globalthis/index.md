@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/globalThis
 
 全局属性 `globalThis` 包含全局的 `this` 值，类似于全局对象（global object）。
 
-{{EmbedInteractiveExample("pages/js/globalprops-globalthis.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - globalThis", "shorter")}}
+
+```js interactive-example
+function canMakeHTTPRequest() {
+  return typeof globalThis.XMLHttpRequest === "function";
+}
+
+console.log(canMakeHTTPRequest());
+// Expected output (in a browser): true
+```
 
 {{JS_Property_Attributes(1, 0, 1)}}
 

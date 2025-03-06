@@ -7,16 +7,55 @@ slug: Web/HTML/Element/Heading_Elements
 
 Os **elementos HTML** **`<h1>`–`<h6>`** representam seis níveis de título de seção. `<h1>` é o nível de seção mais alto e `<h6>` é o mais baixo.
 
-{{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;h1-h6&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Beetles</h1>
+<h2>External morphology</h2>
+<h3>Head</h3>
+<h4>Mouthparts</h4>
+<h3>Thorax</h3>
+<h4>Prothorax</h4>
+<h4>Pterothorax</h4>
+```
+
+```css interactive-example
+h1,
+h2,
+h3,
+h4 {
+  margin: 0.1rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding-left: 20px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  padding-left: 40px;
+}
+
+h4 {
+  font-size: 1rem;
+  font-style: italic;
+  padding-left: 60px;
+}
+```
 
 ## Sumário
 
 Elementos de **cabeçalho** são implementados em seis níveis, `<h1>` é o mais importante e `<h6>` é o de menor importância. Um elemento de cabeçalho descreve brevemente o tópico da seção em que ele está. As informações de cabeçalho podem ser usadas por agentes de usuário, por exemplo, para construir uma tabela de conteúdos para um documento automaticamente.
 
-- _[Categorias do conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdos de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content), conteúdos de cabeçalho, conteúdos palpáveis.
-- _Conteúdo permitido_ [Conteúdo com texto](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content).
+- _[Categorias do conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdos de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), conteúdos de cabeçalho, conteúdos palpáveis.
+- _Conteúdo permitido_ [Conteúdo com texto](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
 - _Omissão de tag_ Não há, porém, as tags de abertura e fechamento são obrigatórias.
-- _Elementos pais permitidos_ Qualquer elemento que aceite [conteúdos de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content); ou como um elemento filho do grupo de elementos de cabeçalho {{HTMLElement("hgroup")}}
+- _Elementos pais permitidos_ Qualquer elemento que aceite [conteúdos de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content); ou como um elemento filho do grupo de elementos de cabeçalho {{HTMLElement("hgroup")}}
 - _Interface DOM_ {{domxref("HTMLHeadingElement")}}
 
 ## Atributos

@@ -11,7 +11,7 @@ slug: Web/API/Screen/unlockOrientation
 > この機能は非推奨であり、代わりに {{DOMxRef("ScreenOrientation.unlock()")}} メソッドを使用してください。
 
 > [!NOTE]
-> このメソッドはインストールされたウェブアプリまたは[全画面モード](/ja/docs/Web/Guide/DOM/Using_full_screen_mode)のウェブページでのみ動作します。
+> このメソッドはインストールされたウェブアプリまたは[全画面モード](/ja/docs/Web/API/Fullscreen_API)のウェブページでのみ動作します。
 
 ## 構文
 
@@ -58,4 +58,4 @@ if (unlockOrientation()) {
 - {{DOMxRef("Screen.orientation")}}
 - {{DOMxRef("Screen.lockOrientation()")}}
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} イベント
-- [画面の向きの制御](/ja/docs/Managing_screen_orientation)
+- [画面の向きの制御](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

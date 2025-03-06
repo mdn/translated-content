@@ -355,7 +355,7 @@ Voici un tableau de quelques éditeurs de texte connus :
 
 ## Pédagogie active
 
-_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/Débuter_sur_MDN)._
+_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Aller plus loin
 
@@ -432,8 +432,8 @@ Lorsque vous installez un nouvel éditeur de texte, il est probable que votre sy
 
 - Windows
 
-  - [Windows 8](http://windows.microsoft.com/fr-fr/windows-8/choose-programs-windows-uses-default)
-  - [Windows 7](http://windows.microsoft.com/fr-fr/windows/change-default-programs#1TC=windows-7)
+  - [Windows 8](https://windows.microsoft.com/fr-fr/windows-8/choose-programs-windows-uses-default)
+  - [Windows 7](https://windows.microsoft.com/fr-fr/windows/change-default-programs#1TC=windows-7)
 
 - [Mac OS X](http://www.youtips.com/fr/mac/changer-lapplication-par-defaut/)
 - Linux
@@ -444,4 +444,4 @@ Lorsque vous installez un nouvel éditeur de texte, il est probable que votre sy
 
 ## Prochaines étapes
 
-Maintenant que vous avez un bon éditeur de texte, vous pouvez prendre le temps de finaliser [votre environnement de travail](/fr/Learn/Set_up_a_basic_working_environment) ou vous pouvez aussi démarrer tout de suite et écrire [votre première page web](/fr/Learn/HTML/Write_a_simple_page_in_HTML).
+Maintenant que vous avez un bon éditeur de texte, vous pouvez prendre le temps de finaliser [votre environnement de travail](/fr/docs/Learn/Set_up_a_basic_working_environment) ou vous pouvez aussi démarrer tout de suite et écrire [votre première page web](/fr/docs/Learn/HTML/Write_a_simple_page_in_HTML).

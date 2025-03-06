@@ -40,7 +40,7 @@ Chaque ombre est spécifiée par deux ou trois valeurs `<length>`, suivies d'une
 
 Lorsque plus d'une ombre est indiquée, les ombres sont appliquées d'avant en arrière, avec la première ombre spécifiée sur le dessus.
 
-Cette propriété s'applique aux deux [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-éléments) {{cssxref("::first-line")}} et {{cssxref("::first-letter")}}.
+Cette propriété s'applique aux deux [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) {{cssxref("::first-line")}} et {{cssxref("::first-letter")}}.
 
 ### Valeurs
 
@@ -115,4 +115,4 @@ Cette propriété s'applique aux deux [pseudo-éléments](/fr/docs/Web/CSS/Pseud
 - [Text Shadow Generator](https://cssgenerator.org/text-shadow-css-generator.html) - Un générateur CSS d'ombre de texte interactif
 - {{cssxref("box-shadow")}}
 - Le type de données {{cssxref("&lt;color&gt;")}} (pour spécifier la couleur d'ombre)
-- [Appliquer des couleurs sur des éléments HTML](/fr/docs/Web/HTML/Applying_color)
+- [Appliquer des couleurs sur des éléments HTML](/fr/docs/Web/CSS/CSS_colors/Applying_color)

@@ -2,7 +2,7 @@
 title: 语义
 slug: Glossary/Semantics
 l10n:
-  sourceCommit: 8578969fc0a4321e2bb10c7efeb2db77deec93c3
+  sourceCommit: a29769d6d10261f771321eb60f3990029c160924
 ---
 
 {{GlossarySidebar}}
@@ -19,13 +19,13 @@ CSS 中，考虑给一个列表设置样式，`li` 元素代表不同类型的�
 
 ## HTML 中的语义
 
-HTML 中，例如，{{htmlelement("h1")}} 元素是一个语义化元素，赋予了它包裹着的文本“这个页面中最高级别标题”的角色（或含义） 。
+HTML 中，例如，{{htmlelement("h1")}} 元素是一个语义化元素，赋予了它包裹着的文本“这个页面中最高级别标题”的角色（或含义）。
 
 ```html
 <h1>这是顶级标题</h1>
 ```
 
-默认情况下，绝大多数浏览器的[用户代理样式表](/zh-CN/docs/Web/CSS/Cascade#用户代理样式表)会赋予 {{htmlelement("h1")}} 元素很大的字号尺寸从而让它看上去更像是一个标题（虽然你可以把它格式化为任何你想要的样式）。
+默认情况下，绝大多数浏览器的[用户代理样式表](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#用户代理样式表)会赋予 {{htmlelement("h1")}} 元素很大的字号尺寸从而让它看上去更像是一个标题（虽然你可以把它格式化为任何你想要的样式）。
 
 另一方面，你可以让任何的元素*看上去*像是最高级别的标题，就像下面所展示的一样：
 
@@ -70,6 +70,6 @@ HTML 应该编写为表示将要填充的*数据*，而不是基于其默认的�
 - MDN 上的 [HTML 元素参考](/zh-CN/docs/Web/HTML/Element#inline_text_semantics)
 - MDN 上的[使用 HTML 章节和大纲](/zh-CN/docs/Web/HTML/Element/Heading_Elements#使用要点)
 - 维基百科上的[计算机科学中语义的意义](https://en.wikipedia.org/wiki/Semantics#Computer_science)
-- [术语](/zh-CN/docs/Glossary)
+- 相关术语：
 
   - {{Glossary("SEO")}}

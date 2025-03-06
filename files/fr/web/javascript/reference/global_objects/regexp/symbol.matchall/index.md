@@ -8,7 +8,23 @@ original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
 
 La méthode **`[@@matchAll]`** renvoie l'ensemble des correspondances d'une expression rationnelle sur une chaîne de caractères.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-@@matchall.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.matchAll]()")}}
+
+```js interactive-example
+class MyRegExp extends RegExp {
+  [Symbol.matchAll](str) {
+    const result = RegExp.prototype[Symbol.matchAll].call(this, str);
+    if (!result) {
+      return null;
+    }
+    return Array.from(result);
+  }
+}
+
+const re = new MyRegExp("-[0-9]+", "g");
+console.log("2016-01-02|2019-03-07".matchAll(re));
+// Expected output: Array [Array ["-01"], Array ["-02"], Array ["-03"], Array ["-07"]]
+```
 
 ## Syntaxe
 
@@ -23,7 +39,7 @@ regexp[Symbol.matchAll](str);
 
 ### Valeur de retour
 
-Un [itérateur](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs).
+Un [itérateur](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators).
 
 ## Description
 
@@ -54,7 +70,7 @@ console.log(Array.from(resultat, (x) => x[0]));
 
 ### Utiliser `@@matchAll` dans une sous-classe
 
-Les sous-classes de {{jsxref("RegExp")}} peuvent surcharger la méthode `[@@matchAll]()` afin de modifier le comportement par défaut (par exemple pour renvoyer un tableau ({{jsxref("Array")}}) plutôt qu'un [itérateur](/fr/docs/Web/JavaScript/Guide/Iterators_and_Generators)).
+Les sous-classes de {{jsxref("RegExp")}} peuvent surcharger la méthode `[@@matchAll]()` afin de modifier le comportement par défaut (par exemple pour renvoyer un tableau ({{jsxref("Array")}}) plutôt qu'un [itérateur](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators)).
 
 ```js
 class MaRegExp extends RegExp {

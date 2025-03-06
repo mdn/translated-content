@@ -7,12 +7,12 @@ slug: Web/API/DataTransfer/clearData
 
 La méthode **`DataTransfer.clearData()`** retire les données du type indiqué de l'opération de glisser-déposer. S'il n'existe pas de données pour le type indiqué, cette méthode n'a aucun effet.
 
-Si cette méthode est appelée sans argument ou que le format est une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) vide, la suppression des données concernera tous les types.
+Si cette méthode est appelée sans argument ou que le format est une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) vide, la suppression des données concernera tous les types.
 
 Cette méthode _ne retire pas_ les fichiers de l'opération de glisser-déposer et il est donc possible d'avoir un élément restant avec le type `Files` dans la liste [`DataTransfer.types`](/fr/docs/Web/API/DataTransfer/types) si des fichiers font partie du glisser-déposer.
 
 > [!NOTE]
-> Cette méthode peut uniquement être utilisée dans le gestionnaire d'évènement pour [`dragstart`](/fr/docs/Web/API/Document/dragstart_event), car c'est le seul moment où le magasin de données pour l'opération de glisser-déposer est accessible en écriture.
+> Cette méthode peut uniquement être utilisée dans le gestionnaire d'évènement pour [`dragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event), car c'est le seul moment où le magasin de données pour l'opération de glisser-déposer est accessible en écriture.
 
 ## Syntaxe
 
@@ -23,7 +23,7 @@ DataTransfer.clearData([format]);
 ### Paramètres
 
 - `format` {{optional_inline}}
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) qui indique le type de données à retirer. Si ce paramètre est une chaîne vide ou qu'il n'est pas fourni, les données pour l'ensemble des types seront retirées.
+  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui indique le type de données à retirer. Si ce paramètre est une chaîne vide ou qu'il n'est pas fourni, les données pour l'ensemble des types seront retirées.
 
 ## Exemple
 

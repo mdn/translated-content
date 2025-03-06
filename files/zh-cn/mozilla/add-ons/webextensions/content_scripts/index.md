@@ -21,7 +21,7 @@ Content Script 只能访问 WebExtension APIS 的一个小的子集，但是它�
 你可以通过两种方法之一在一个页面加载 Content script：
 
 - **声明式**: 在你的 manifest.json 中使用 content_scripts 关键字，你可以要求浏览器每当加载一个与指定正则表达式匹配的网页时加载一个 Content Script。
-- **程序式**: 使用 [`tabs.executeScript()`](/zh-CN/Add-ons/WebExtensions/API/Tabs/executeScript) API, 你可以在任何你想要的时候加载一个 Content script 到一个指定的标签：比如，作为用户点击事件的回应。
+- **程序式**: 使用 [`tabs.executeScript()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/executeScript) API, 你可以在任何你想要的时候加载一个 Content script 到一个指定的标签：比如，作为用户点击事件的回应。
 
 在每一个 extension 的每一个 frame 中，只有一个全局作用域。所以在一个 content script 中的变量可以被另外的 content script 访问到，而与 content script 如何被加载无关。
 
@@ -106,7 +106,7 @@ window.confirm("Are you sure?"); // calls the original window.confirm()
 ]
 ```
 
-### WebExtension APIs
+### WebExtension API
 
 除了 standard DOM APIS，content script 还能使用以下 WebExtension APIS:
 
@@ -364,7 +364,7 @@ window.addEventListener("message", function (event) {
 >
 > 这部分的技术打破了这个隔离，它们从根本上是危险的而应该被谨慎使用。
 
-我们在 [DOM access](/zh-CN/Add-ons/WebExtensions/Content_scripts#DOM_access) 中看到 content scripts 不会察觉到通过网页脚本修改的某些属性。这意味着，如果一个网页加载了一个库比如 JQuery，content script 将不会使用它，而不得不加载它自己的一个复制。相反的，网页加载的脚本也不能获知 content script 的修改。
+我们在 [DOM access](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#dom_access) 中看到 content scripts 不会察觉到通过网页脚本修改的某些属性。这意味着，如果一个网页加载了一个库比如 JQuery，content script 将不会使用它，而不得不加载它自己的一个复制。相反的，网页加载的脚本也不能获知 content script 的修改。
 
 然而，Firefox 提供了一些 APIS 可以使得 content script 能够：
 
@@ -381,7 +381,7 @@ window.addEventListener("message", function (event) {
 
 让我们来举个例子，当一个 content script 访问一个页面的 [window](/zh-CN/docs/Web/API/Window) 类，他不会看见任何该页面脚本对这个 window 添加的任何属性，如果页面脚本重定义了任何已存在的属性，content script 将只能看见该属性的原始版本。
 
-更多信心请查看 [Xray vision](/zh-CN/docs/Mozilla/Tech/Xray_vision) 和 [Script security](/zh-CN/docs/Mozilla/Gecko/Script_security).
+更多信心请查看 [Xray vision](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html) 和 [Script security](/zh-CN/docs/Mozilla/Gecko/Script_security).
 
 ### 从 content script 中访问 页面脚本对象
 
@@ -433,14 +433,14 @@ console.log(window.wrappedJSObject.foo); // "I'm defined in a page script!"
 XPCNativeWrapper(window.wrappedJSObject.foo);
 ```
 
-查看 [Xray vision](/zh-CN/docs/Mozilla/Tech/Xray_vision) 文档获取更多。
+查看 [Xray vision](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html) 文档获取更多。
 
 ### 与页面脚本共享 content script 对象
 
 Firefox 同样提供 APIS 允许 content scripts 是对象对于页面脚本可用。这里是两个主要的 APIS:
 
-- [`exportFunction()`](/zh-CN/Add-ons/WebExtensions/Content_scripts#exportFunction): 导出一个函数至页面脚本
-- [`cloneInto()`](/zh-CN/Add-ons/WebExtensions/Content_scripts#cloneInto): 导出一个对象至页面脚本
+- [`exportFunction()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#exportfunction): 导出一个函数至页面脚本
+- [`cloneInto()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#cloneinto): 导出一个对象至页面脚本
 
 #### exportFunction
 

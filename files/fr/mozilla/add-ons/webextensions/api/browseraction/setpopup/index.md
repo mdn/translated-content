@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setPopup
 
 {{AddonSidebar}}
 
-Définit le document HTML qui sera ouvert en tant que popup lorsque l'utilisateur clique sur l'icône de l'action du navigateur. Les onglets sans popup spécifique hériteront de la popup globale, qui par défaut est la [`default_popup`](/fr/Add-ons/WebExtensions/manifest.json/browser_action) spécifiée dans le manifest.
+Définit le document HTML qui sera ouvert en tant que popup lorsque l'utilisateur clique sur l'icône de l'action du navigateur. Les onglets sans popup spécifique hériteront de la popup globale, qui par défaut est la [`default_popup`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) spécifiée dans le manifest.
 
 ## Syntaxe
 

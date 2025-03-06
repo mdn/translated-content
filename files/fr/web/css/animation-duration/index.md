@@ -31,7 +31,7 @@ animation-duration: 10s, 30s, 230ms;
 > Les valeurs négatives sont considérées comme invalides. Certaines implémentations, préfixées, considèrent parfois que ces valeurs sont synonymes de `0s`.
 
 > [!NOTE]
-> Lorsqu'on utiliser plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations).
+> Lorsqu'on utiliser plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 
 ## Définition formelle
 
@@ -88,5 +88,5 @@ p {
 
 ## Voir aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

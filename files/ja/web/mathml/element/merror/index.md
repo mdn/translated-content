@@ -10,13 +10,13 @@ MathML `<merror>` 要素は、エラーメッセージとしてコンテンツ�
 ## 属性
 
 - class, id, style
-  - : [スタイルシート](/ja/docs/CSS)と一緒に用いて提供されます。
+  - : [スタイルシート](/ja/docs/Web/CSS)と一緒に用いて提供されます。
 - href
   - : 指定された URI へのハイパーリンクの設定に使用されます。
 - mathbackground
-  - : 背景色。`#rgb`、`#rrggbb`および[HTML 色名](/ja/docs/CSS/color_value#Color_Keywords)を使用できます。
+  - : 背景色。`#rgb`、`#rrggbb`および[HTML 色名](/ja/docs/Web/CSS/color_value#color_keywords)を使用できます。
 - mathcolor
-  - : 文字色と分数の線の色。`#rgb`、`#rrggbb`および[HTML 色名](/ja/docs/CSS/color_value#Color_Keywords)を使用できます。
+  - : 文字色と分数の線の色。`#rgb`、`#rrggbb`および[HTML 色名](/ja/docs/Web/CSS/color_value#color_keywords)を使用できます。
 
 ## 例
 
@@ -34,7 +34,7 @@ MathML `<merror>` 要素は、エラーメッセージとしてコンテンツ�
 </math>
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

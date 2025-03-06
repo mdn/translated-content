@@ -77,7 +77,7 @@ Access-Control-Allow-Origin: *
   crossorigin="anonymous"></script>
 ```
 
-> **メモ:** **crossorigin** 属性については [CORS 設定属性](/ja/docs/Web/HTML/CORS_settings_attributes)を参照してください。
+> **メモ:** **crossorigin** 属性については [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)を参照してください。
 
 ## サブリソース完全性のブラウザーでの扱い
 
@@ -89,7 +89,7 @@ Access-Control-Allow-Origin: *
 1. ブラウザは `integrity` 属性を持った {{HTMLElement("script")}} または {{HTMLElement("link")}} 属性を見つけると、スクリプトや {{HTMLElement("link")}} 属性で指定された任意のスタイルシートを適用する前に、`integrity` 属性のハッシュ値とスクリプトやスタイルシートのハッシュ値を比較しなくてはなりません。
 2. スクリプトやスタイルシートが対応する `integrity` 属性値と一致しない場合、ブラウザーはスクリプトを実行したりスタイルシートを適用してはいけません。その代わりに、スクリプトやスタイルシートの取得が失敗したというネットワークエラーを返さなくてはなりません。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

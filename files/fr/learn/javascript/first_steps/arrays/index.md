@@ -32,7 +32,7 @@ Les tableaux sont généralement décrits comme des "objets de type liste" ; un 
 
 Sans tableaux, nous devrions stocker chaque valeur dans une variable séparée, puis appeler le code qui effectue l'affichage ou l'impression, puis ajouter séparément chaque élément. Ce serait plus long à écrire, moins efficace et cela comporterait plus de risques d'erreurs. Si nous avions 10 articles à ajouter à la facture, ce serait déjà assez mauvais, mais qu'en serait-il de 100 articles ou de 1000&nbsp;? Nous reviendrons sur cet exemple plus loin dans l'article.
 
-Comme précédemment, initions‑nous aux bases pratiques des tableaux en entrant quelques exemples dans une console JavaScript. En voici une plus bas (vous pouvez aussi [ouvrir cette console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) dans un onglet ou une fenêtre séparés ou utiliser la [console développeur de l'explorateur](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) si vous préférez).
+Comme précédemment, initions‑nous aux bases pratiques des tableaux en entrant quelques exemples dans une console JavaScript. En voici une plus bas (ou utilisez la [console développeur de l'explorateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) si vous préférez).
 
 ```html hidden
 <!doctype html>

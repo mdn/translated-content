@@ -5,7 +5,7 @@ slug: Web/API/Document/evaluate
 
 {{ ApiRef("DOM") }}
 
-根据传入的 [XPath](/zh-CN/docs/XPath) 表达式以及其他参数，返回一个 {{domxref("XPathResult")}} 对象。
+根据传入的 [XPath](/zh-CN/docs/Web/XML/XPath) 表达式以及其他参数，返回一个 {{domxref("XPathResult")}} 对象。
 
 ## 语法
 
@@ -16,7 +16,7 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
 - `xpathExpression` 表示要计算的 Xpath 字符串。
 - `contextNode` 表示本次查询的*上下文节点*（参照 XPath 规范 <http://www.w3.org/TR/xpath>）。通常会使用 `document`。
 - `namespaceResolver` 是函数。传入名空间前缀，返回跟此前缀相关的名空间 URI（字符串）。通常用来解析 Xpath 内的前缀，以便对文档进行匹配。HTML 文档或者不使用名空间前缀的文档，通常传入 `null`。
-- `resultType` 是整数。指定所返回的 `XPathResult` 的类型，常使用 [named constant properties](#Result_types)，如 `XPathResult.ANY_TYPE`，范围 0 到 9，见下表。
+- `resultType` 是整数。指定所返回的 `XPathResult` 的类型，常使用 [named constant properties](#result_types)，如 `XPathResult.ANY_TYPE`，范围 0 到 9，见下表。
 - `result` 为 `XPathResult` 型，用以存储查询结果。通常传入 `null`，此时将创建新的 `XPathResult` 对象。
 
 ## 示例
@@ -50,7 +50,7 @@ document.evaluate(".//h2", document.body, null, XPathResult.ANY_TYPE, null);
 
 注意上面的 `document.body` 已经替代了 document 作为上下文，所以 XPath 从 body 元素开始查找。（在这个例子中，`"."` 很重要，因为它指示了查找要从 document.body 这个上下文节点开始。如果遗漏了 `"."` (剩下 `//h2`) ，查找会从根节点（`html`）处开始，这样会很浪费。）
 
-查阅 [Introduction to using XPath in JavaScript](/zh-CN/docs/Introduction_to_using_XPath_in_JavaScript) 获得更多信息。
+查阅[在 JavaScript 中使用 XPath 的简介](/zh-CN/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript)获得更多信息。
 
 ## 注意
 

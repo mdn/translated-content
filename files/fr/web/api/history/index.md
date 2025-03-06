@@ -44,11 +44,11 @@ _L'interface `History`_ _n'hérite d'aucune méthode._
   - : Charge une page dans l'historique de navigation, identifiée par sa position relative à la page courante, par exemple `-1` pour la page précédente ou `1` pour la page suivante. Lorsque `integerDelta` sort du cadre de l'historique (aka. -1 alors qu'il n'y a pas de page précédente), cette méthode n'aura aucun effet et ne déclenchera pas d'exception. Appeler `go()` sans paramètres ou un paramètre autre qu'un `Integer` n'a aucun effet (sauf par Internet Explorer, [qui supporte les URLs en String comme paramètre](<http://msdn.microsoft.com/en-us/library/ms536443(VS.85).aspx>)).
 - {{domxref("History.pushState()")}}
 
-  - : Insère les paramètres fournis dans la pile de l'historique de navigation avec un titre donné et, si fourni, l'URL. Les données sont traitées comme opaque par le DOM; il est nécessaire de spécifier chaque objet JavaScript devant être sérialisé. Notez que Firefox ignore actuellement le paramètre titre; pour plus d'informations, voir [Manipuler l'historique du navigateur](/fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur).
+  - : Insère les paramètres fournis dans la pile de l'historique de navigation avec un titre donné et, si fourni, l'URL. Les données sont traitées comme opaque par le DOM; il est nécessaire de spécifier chaque objet JavaScript devant être sérialisé. Notez que Firefox ignore actuellement le paramètre titre; pour plus d'informations, voir [Manipuler l'historique du navigateur](/fr/docs/Web/API/History_API).
 
 - {{domxref("History.replaceState()")}}
 
-  - : Modifie la page la plus récente dans la pile de l'historique de navigation pour avoir les données, titre, et si spécifiée, URL. Les données sont traitées comme opaque par le DOM; il est nécessaire de spécifier chaque objet JavaScript devant être sérialisé. Notez que Firefox ignore actuellement le paramètre titre; pour plus d'informations, voir [Manipuler l'historique du navigateur](/fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur).
+  - : Modifie la page la plus récente dans la pile de l'historique de navigation pour avoir les données, titre, et si spécifiée, URL. Les données sont traitées comme opaque par le DOM; il est nécessaire de spécifier chaque objet JavaScript devant être sérialisé. Notez que Firefox ignore actuellement le paramètre titre; pour plus d'informations, voir [Manipuler l'historique du navigateur](/fr/docs/Web/API/History_API).
 
 ## Spécifications
 

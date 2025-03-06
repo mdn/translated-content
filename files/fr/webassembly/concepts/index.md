@@ -97,7 +97,7 @@ Ainsi le code "passe-plat" implémente les fonctionnalités de chaque librairie 
 
 Le document HTML généré charge le fichier JavaScript contenant le code "passe-plat" et écrit stdout dans un {{htmlelement("textarea")}}. Si l'application utilise OpenGL, le HTML contient aussi un élément {{htmlelement("canvas")}} qui est utilisé comme cible de rendu. Il est vraiment simple de modifier la sortie Emscripten pour en faire l'application web que vous souhaitez.
 
-Vous pouvez trouver toute la documentation sur Emscripten à l'adresse [emscripten.org](http://emscripten.org), et un guide pour exploiter la chaîne de compilation et ainsi compiler votre propre application C/C++ en wasm à l'adresse [Compiler du C/C++ en WebAssembly](/fr/docs/WebAssembly/C_to_wasm).
+Vous pouvez trouver toute la documentation sur Emscripten à l'adresse [emscripten.org](http://emscripten.org), et un guide pour exploiter la chaîne de compilation et ainsi compiler votre propre application C/C++ en wasm à l'adresse [Compiler du C/C++ en WebAssembly](/fr/docs/WebAssembly/C_to_Wasm).
 
 ### Écrire du WebAssembly directement
 

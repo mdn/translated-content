@@ -785,7 +785,7 @@ async function readFile(filename) {
 
 实际上，单线程模型让 Node.js 成为服务器端编程的热门选择，因为它非阻塞的 IO，使得处理大量的数据库或文件系统请求非常高效。然而，纯 JavaScript 的 CPU 密集型（计算密集型）任务仍会阻塞主线程。为了实现真正的并行，你需要使用 [worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)。
 
-想要学习更多有关异步编程的知识，你可以阅读[使用 Promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)，或者关注[异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous) 教程。
+想要学习更多有关异步编程的知识，你可以阅读[使用 Promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)，或者关注[异步 JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS) 教程。
 
 ## 模块
 

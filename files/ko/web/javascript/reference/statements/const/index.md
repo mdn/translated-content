@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Statements/const
 
 **`const` 선언**은 블록 범위의 상수를 선언합니다. 상수의 값은 재할당할 수 없으며 다시 선언할 수도 없습니다.
 
-{{EmbedInteractiveExample("pages/js/statement-const.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Const")}}
+
+```js interactive-example
+const number = 42;
+
+try {
+  number = 99;
+} catch (err) {
+  console.log(err);
+  // Expected output: TypeError: invalid assignment to const 'number'
+  // (Note: the exact output may be browser-dependent)
+}
+
+console.log(number);
+// Expected output: 42
+```
 
 ## 구문
 
@@ -18,7 +33,7 @@ slug: Web/JavaScript/Reference/Statements/const
 - `nameN`
   - : 상수의 이름. 아무 유효한 {{Glossary("identifier", "식별자")}}를 사용할 수 있습니다.
 - `valueN`
-  - : 상수의 값. 아무 유효한 [표현식](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#표현식)이나 가능합니다.
+  - : 상수의 값. 아무 유효한 [표현식](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#%ed%91%9c%ed%98%84%ec%8b%9d)이나 가능합니다.
 
 ## 설명
 
@@ -26,7 +41,7 @@ slug: Web/JavaScript/Reference/Statements/const
 
 상수는 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let) 문을 사용하여 정의된 변수와 마찬가지로 블록 범위(block-scope)입니다. 상수의 값은 재할당을 통해 바뀔 수 없고 재선언될 수 없습니다.
 
-[`let`](/ko/docs/Web/JavaScript/Reference/Statements/let)에 적용한 "[일시적 사각 지대](/ko/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)"에 관한 모든 고려는, `const`에도 적용합니다.
+[`let`](/ko/docs/Web/JavaScript/Reference/Statements/let)에 적용한 "[일시적 사각 지대](/ko/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)"에 관한 모든 고려는, `const`에도 적용합니다.
 
 상수는 같은 범위의 상수 또는 변수와 그 이름을 공유할 수 없습니다.
 
@@ -105,4 +120,4 @@ MY_ARRAY = ['B']
 
 - [`var`](/ko/docs/Web/JavaScript/Reference/Statements/var)
 - [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let)
-- [JavaScript 안내서의 상수](/ko/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Constants)
+- [JavaScript 안내서의 상수](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#constants)

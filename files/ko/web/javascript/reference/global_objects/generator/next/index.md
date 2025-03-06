@@ -119,4 +119,4 @@ g.next(2);
 ## 같이 보기
 
 - {{jsxref("Statements/function*", "function*")}}
-- [반복자와 제너레이터](/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [반복자와 제너레이터](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators)

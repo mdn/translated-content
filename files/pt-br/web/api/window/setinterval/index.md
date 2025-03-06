@@ -22,12 +22,12 @@ var intervalID = scope.setInterval(code, delay);
 - `code`
   - : Uma sintaxe opcional permite você incuir uma string ao invés de uma função, no qual é compilado e executada a cada `delay` em milisegundos. Esta sintaxe _não é recomendada_ pelos mesmos motivos que envolvem riscos de segurança de {{jsxref("eval", "eval()")}}.
 - `delay`
-  - : O tempo, em milisegundos (milésimos de segundo), o temporizador deve atrasar entre cada execução de uma especifica função ou código. Se esse parâmetro for menos que 10, um valor de 10 é usado. Note que o atraso pode vir a ser mais longo; veja [Razões para atrasos maiores do que o especificado](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#reasons_for_delays_longer_than_specified) para exemplos.
+  - : O tempo, em milisegundos (milésimos de segundo), o temporizador deve atrasar entre cada execução de uma especifica função ou código. Se esse parâmetro for menos que 10, um valor de 10 é usado. Note que o atraso pode vir a ser mais longo; veja [Razões para atrasos maiores do que o especificado](/pt-BR/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) para exemplos.
 - `param1, ..., paramN` {{optional_inline}}
   - : Parâmetros adicionais que são passados através da função especificada pela _func_ quando o temporizador expirar.
 
 > [!NOTE]
-> Passing additional parameters to `setInterval()` in the first syntax does not work in Internet Explorer 9 and earlier. If you want to enable this functionality on that browser, you must use a polyfill (see the [Callback arguments](#Callback_arguments) section).
+> Passing additional parameters to `setInterval()` in the first syntax does not work in Internet Explorer 9 and earlier. If you want to enable this functionality on that browser, you must use a polyfill (see the [Callback arguments](#callback_arguments) section).
 
 ### Return value
 
@@ -94,7 +94,7 @@ O seguinte exemplo chama a função `flashtext()` uma vez por segundo até o bot
 
 ### Exemplo 3: Simulação de máquina de escrever
 
-O seguinte exemplo simula uma máquina de escrever primeiro limpando e digitando lentamente o conteúdo para [`NodeList`](/pt-BR/docs/DOM/NodeList) que corresponde a um grupo especificado de seletores.
+O seguinte exemplo simula uma máquina de escrever primeiro limpando e digitando lentamente o conteúdo para [`NodeList`](/pt-BR/docs/Web/API/NodeList) que corresponde a um grupo especificado de seletores.
 
 ```html
 <!doctype html>
@@ -340,7 +340,7 @@ Nullam commodo suscipit lacus non aliquet. Phasellus ac nisl lorem, sed facilisi
 </html>
 ```
 
-[View this demo in action](/files/3997/typewriter.html). See also: [`clearInterval()`](/pt-BR/docs/DOM/window.clearInterval).
+[View this demo in action](/files/3997/typewriter.html). See also: [`clearInterval()`](/pt-BR/docs/Web/API/Window/clearInterval).
 
 ## Argumentos callback
 
@@ -422,7 +422,7 @@ Iniciado no Gecko 5.0, intervalos são fixados para disparar não mais do que um
 
 ## O problema do "[`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this)"
 
-Quando você passa um método para `setInterval()` ou qualquer outra função, ela é chamada com o valor do [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) errado. Este problema é explicado em detalhes em [JavaScript reference](/pt-BR/docs/Web/JavaScript/Reference/Operators/this#As_an_object_method).
+Quando você passa um método para `setInterval()` ou qualquer outra função, ela é chamada com o valor do [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) errado. Este problema é explicado em detalhes em [JavaScript reference](/pt-BR/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
 
 ### Explicação
 
@@ -451,7 +451,7 @@ Como você pode ver, não há maneiras de passar o objeto `this` para a função
 
 ### Uma possível solução
 
-Um possível caminho para resolver o problema do `this`, é sobreescrever as duas funções globais nativas `setTimeout()` ou `setInterval()` com duas _non-native_ que permitem sua invocação através do método [`Function.prototype.call`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function/call). O seguinte exemplo mostra a possível substituição.
+Um possível caminho para resolver o problema do `this`, é sobreescrever as duas funções globais nativas `setTimeout()` ou `setInterval()` com duas _non-native_ que permitem sua invocação através do método [`Function.prototype.call`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/call). O seguinte exemplo mostra a possível substituição.
 
 ```js
 // Enable the passage of the 'this' object through the JavaScript timers
@@ -493,7 +493,7 @@ window.setInterval = function (
 ```
 
 > [!NOTE]
-> These two replacements also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as _non-standard-compliant_ polyfills also. See the [callback arguments paragraph](#Callback_arguments) for a _standard-compliant_ polyfill.
+> These two replacements also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as _non-standard-compliant_ polyfills also. See the [callback arguments paragraph](#callback_arguments) for a _standard-compliant_ polyfill.
 
 Teste da nova implementação:
 
@@ -516,10 +516,10 @@ Outra, mais complexa, solução para o problema do `this` é [the following fram
 
 ## MiniDaemon - A framework for managing timers
 
-In pages requiring many timers, it can often be difficult to keep track of all of the running timer events. One approach to solving this problem is to store information about the state of a timer in an object. Following is a minimal example of such an abstraction. The constructor architecture explicitly avoids the use of closures. It also offers an alternative way to pass the [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) object to the callback function (see [The "this" problem](#The_.22this.22_problem) for details). The following code is also [available on GitHub](https://github.com/madmurphy/minidaemon.js).
+In pages requiring many timers, it can often be difficult to keep track of all of the running timer events. One approach to solving this problem is to store information about the state of a timer in an object. Following is a minimal example of such an abstraction. The constructor architecture explicitly avoids the use of closures. It also offers an alternative way to pass the [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) object to the callback function (see [The "this" problem](#the_.22this.22_problem) for details). The following code is also [available on GitHub](https://github.com/madmurphy/minidaemon.js).
 
 > [!NOTE]
-> For a more complex but still modular version of it (`Daemon`) see [JavaScript Daemons Management](/pt-BR/Add-ons/Code_snippets/Timers/Daemons). This more complex version is nothing but a big and scalable collection of methods for the `Daemon` constructor. However, the `Daemon` constructor itself is nothing but a clone of `MiniDaemon` with an added support for _init_ and _onstart_ functions declarable during the instantiation of the `daemon`. **So the `MiniDaemon` framework remains the recommended way for simple animations**, because `Daemon` without its collection of methods is essentially a clone of it.
+> For a more complex but still modular version of it (`Daemon`) see [JavaScript Daemons Management](/pt-BR/docs/Mozilla/Add-ons/Code_snippets/Timers/Daemons). This more complex version is nothing but a big and scalable collection of methods for the `Daemon` constructor. However, the `Daemon` constructor itself is nothing but a clone of `MiniDaemon` with an added support for _init_ and _onstart_ functions declarable during the instantiation of the `daemon`. **So the `MiniDaemon` framework remains the recommended way for simple animations**, because `Daemon` without its collection of methods is essentially a clone of it.
 
 ### minidaemon.js
 
@@ -634,7 +634,7 @@ Returns a JavaScript [`Object`](/pt-BR/docs/Web/JavaScript/Reference/Global_Obje
 - `thisObject`
   - : The [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) object on which the _callback_ function is called. It can be an [`object`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object) or `null`.
 - `callback`
-  - : The function that is repeatedly invoked . **It is called with three parameters**: _index_ (the iterative index of each invocation), _length_ (the number of total invocations assigned to the _daemon_ - finite or [`Infinity`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Infinity)) and _backwards_ (a boolean expressing whether the _index_ is increasing or decreasing). It is something like _callback_.call(_thisObject_, _index_, _length_, _backwards_). **If the callback function returns a `false` value the _daemon_ is paused**.
+  - : The function that is repeatedly invoked . **It is called with three parameters**: _index_ (the iterative index of each invocation), _length_ (the number of total invocations assigned to the _daemon_ - finite or [`Infinity`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Infinity)) and _backwards_ (a boolean expressing whether the _index_ is increasing or decreasing). It is something like _callback_.call(_thisObject_, _index_, _length_, _backwards_). **If the callback function returns a `false` value the _daemon_ is paused**.
 - `rate (optional)`
   - : The time lapse (in number of milliseconds) between each invocation. The default value is 100.
 - `length (optional)`
@@ -645,7 +645,7 @@ Returns a JavaScript [`Object`](/pt-BR/docs/Web/JavaScript/Reference/Global_Obje
 - `myDaemon.owner`
   - : The [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) object on which is executed the daemon (read/write). It can be an [`object`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object) or `null`.
 - `myDaemon.task`
-  - : The function that is repeatedly invoked (read/write). It is called with three arguments: _index_ (the iterative index of each invocation), _length_ (the number of total invocations assigned to the daemon - finite or [`Infinity`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Infinity)) and backwards (a boolean expressing whether the _index_ is decreasing or not) – see above. If the `myDaemon.task` function returns a `false` value the _daemon_ is paused.
+  - : The function that is repeatedly invoked (read/write). It is called with three arguments: _index_ (the iterative index of each invocation), _length_ (the number of total invocations assigned to the daemon - finite or [`Infinity`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Infinity)) and backwards (a boolean expressing whether the _index_ is decreasing or not) – see above. If the `myDaemon.task` function returns a `false` value the _daemon_ is paused.
 - `myDaemon.rate`
   - : The time lapse (in number of milliseconds) between each invocation (read/write).
 - `myDaemon.length`
@@ -746,7 +746,7 @@ In the above snippet, a named function `loop()` is declared and is immediately e
 
 ### Throttling of intervals
 
-`setInterval()` is subject to the same throttling restrictions in Firefox as {{domxref("WindowOrWorkerGlobalScope.setTimeout","setTimeout()")}}; see [Reasons for delays longer than specified](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Reasons_for_delays_longer_than_specified).
+`setInterval()` is subject to the same throttling restrictions in Firefox as {{domxref("WindowOrWorkerGlobalScope.setTimeout","setTimeout()")}}; see [Reasons for delays longer than specified](/pt-BR/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified).
 
 ## Especificações
 
@@ -758,9 +758,9 @@ In the above snippet, a named function `loop()` is declared and is immediately e
 
 ## See also
 
-- [JavaScript timers](/pt-BR/Add-ons/Code_snippets/Timers)
+- [JavaScript timers](/pt-BR/docs/Mozilla/Add-ons/Code_snippets/Timers)
 - {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}
 - {{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}
 - {{domxref("WindowOrWorkerGlobalScope.clearInterval")}}
 - {{domxref("window.requestAnimationFrame")}}
-- [_Daemons_ management](/pt-BR/Add-ons/Code_snippets/Timers/Daemons)
+- [_Daemons_ management](/pt-BR/docs/Mozilla/Add-ons/Code_snippets/Timers/Daemons)

@@ -193,5 +193,5 @@ Pour plus d'exemples, consulter [les recommandations de Mozilla pour la sécurit
 ## Voir aussi
 
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
-- [La sécurité du contenu pour les WebExtensions](/fr/Add-ons/WebExtensions/Content_Security_Policy)
+- [La sécurité du contenu pour les WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
 - [Les sécurités pour l'affichage et la confidentialité dans les outils de développement de Firefox](/fr/docs/Outils/Barre_de_développement/Display_security_and_privacy_policies)

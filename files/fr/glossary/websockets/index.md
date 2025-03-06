@@ -21,5 +21,5 @@ Toute application cliente ou serveur peut utiliser WebSocket, mais plus particul
 
 ### Apprendre
 
-- [Écrire des applications clients WebSocket](/fr/docs/WebSockets/Writing_WebSocket_client_applications)
-- [Écriture de serveurs WebSocket](/fr/docs/WebSockets/Writing_WebSocket_servers)
+- [Écrire des applications clients WebSocket](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [Écriture de serveurs WebSocket](/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)

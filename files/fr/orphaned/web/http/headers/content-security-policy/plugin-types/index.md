@@ -33,7 +33,7 @@ L'instanciation d'éléments {{HTMLElement("embed")}}, {{HTMLElement("object")}}
 
 ## Syntaxe
 
-Un ou plusieurs [types MIME](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types) peuvent être autorisées pour cette directive :
+Un ou plusieurs [types MIME](/fr/docs/Web/HTTP/MIME_types) peuvent être autorisées pour cette directive :
 
 ```
 Content-Security-Policy: plugin-types <type>/<subtype>;
@@ -41,7 +41,7 @@ Content-Security-Policy: plugin-types <type>/<subtype> <type>/<subtype>;
 ```
 
 - \<type>/\<subtype>
-  - : Un [type MIME](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types) valide.
+  - : Un [type MIME](/fr/docs/Web/HTTP/MIME_types/Common_types) valide.
 
 ## Exemples
 

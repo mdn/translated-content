@@ -7,7 +7,7 @@ slug: Web/API/EventSource
 
 A interface `EventSource` é usada para receber eventos enviados pelo servidor ([server-sent events](/pt-BR/docs/Web/API/Server-sent_events)). Ele se conecta via HTTP em um servidor e recebe eventos com o formato `text/event-stream`. A conexão permanece aberta até ser fechada chamando {{domxref("EventSource.close()")}}.
 
-Assim que a conexão estiver aberta, mensagens recebidas do servidor são entregues para o seu código na forma de eventos [`message`](/pt-BR/docs/Web/Events/message).
+Assim que a conexão estiver aberta, mensagens recebidas do servidor são entregues para o seu código na forma de eventos [`message`](/pt-BR/docs/Web/API/BroadcastChannel/message_event).
 
 Ao contrário dos [WebSockets](/pt-BR/docs/Web/API/WebSockets_API), server-sent events são unidirecionais; ou seja, mensagens são entregues em uma direção, do servidor para o cliente (por exemplo, um navegador web). Isso torna-os uma excelente escolha quando não há necessidade de enviar mensagens do cliente para o servidor. Por exemplo, `EventSource` é uma abordagem útil para lidar com atualizações de status de mídias sociais, feeds de notícias, or entregar dados para um mecanismo de [armazenamento do lado cliente](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) como o [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API) ou o [web storage](/pt-BR/docs/Web/API/Web_Storage_API).
 
@@ -30,11 +30,11 @@ _Essa interface também herda propriedades do seu pai, {{domxref("EventTarget")}
 ### Eventos
 
 - {{domxref("EventSource.onerror")}}
-  - : É um [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) chamado quando um erro ocorre e o evento [`error`](/pt-BR/docs/Web/Events/error) é despachado para o objeto `EventSource`.
+  - : É um [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) chamado quando um erro ocorre e o evento [`error`](/pt-BR/docs/Web/API/HTMLElement/error_event) é despachado para o objeto `EventSource`.
 - {{domxref("EventSource.onmessage")}}
-  - : É um [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) chamado quando um evento [`message`](/pt-BR/docs/Web/Events/message) é recebido, ou seja, quando uma mensagem está sendo recebida da origem.
+  - : É um [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) chamado quando um evento [`message`](/pt-BR/docs/Web/API/BroadcastChannel/message_event) é recebido, ou seja, quando uma mensagem está sendo recebida da origem.
 - {{domxref("EventSource.onopen")}}
-  - : É um [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) chamado quando um evento [`open`](/pt-BR/docs/Web/Events/open) é recebido, ou seja, logo após a abertura da conexão.
+  - : É um [`event handler`](/pt-BR/docs/Web/Events/Event_handlers) chamado quando um evento [`open`](/pt-BR/docs/Web/API/RTCDataChannel/open_event) é recebido, ou seja, logo após a abertura da conexão.
 
 ## Métodos
 

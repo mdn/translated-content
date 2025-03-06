@@ -3,7 +3,7 @@ title: Escrevendo aplicações cliente WebSocket
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 ---
 
-Aplicações cliente usam o [WebSocket API](/pt-BR/docs/Web/API/Websockets_API) para se comunicar com [WebSocket servers](/pt-BR/docs/Web/API/WebSockets_API/Writing_WebSocket_servers) sob o protocolo WebSocket.
+Aplicações cliente usam o [WebSocket API](/pt-BR/docs/Web/API/WebSockets_API) para se comunicar com [WebSocket servers](/pt-BR/docs/Web/API/WebSockets_API/Writing_WebSocket_servers) sob o protocolo WebSocket.
 
 {{AvailableInWorkers}}
 
@@ -34,7 +34,7 @@ O construtor lançará a exceção **`SECURITY_ERR`** se o destino não permitir
 
 Se um erro ocorrer durante a tentativa de conexão, primeiro um simpes evento com o nome "error" é enviado ao objeto [`WebSocket`](/pt-BR/WebSockets/WebSockets_reference/WebSocket) (invocando, assim, seu manipulador `onerror`), e então o [`CloseEvent`](/pt-BR/WebSockets/WebSockets_reference/CloseEvent) é enviado ao objeto [`WebSocket`](/pt-BR/WebSockets/WebSockets_reference/WebSocket) (invocando o manipulador `onclose`) para indicar a razão pela qual a conexão foi fechada.
 
-O browser pode exibir uma descrição de erro mais detalhada na saída do console, ou mesmo um código de encerramento conforme definido na [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4) através do [`CloseEvent`](/pt-BR/WebSockets/WebSockets_reference/CloseEvent). Está implementado a partir do Firefox 11.
+O browser pode exibir uma descrição de erro mais detalhada na saída do console, ou mesmo um código de encerramento conforme definido na [RFC 6455, Section 7.4](https://tools.ietf.org/html/rfc6455#section-7.4) através do [`CloseEvent`](/pt-BR/WebSockets/WebSockets_reference/CloseEvent). Está implementado a partir do Firefox 11.
 
 ### Exemplos
 
@@ -72,7 +72,7 @@ exampleSocket.send(
 );
 ```
 
-Você pode enviar dados como uma string, {{ domxref("Blob") }}, ou um [`ArrayBuffer`](/pt-BR/JavaScript_typed_arrays/ArrayBuffer).
+Você pode enviar dados como uma string, {{ domxref("Blob") }}, ou um [`ArrayBuffer`](/pt-BR/docs/JavaScript_typed_arrays/ArrayBuffer).
 
 > [!NOTE]
 > Nas versões anteriores à 11, o Firefox suporta apenas o envio de dados como string.
@@ -112,7 +112,7 @@ function sendText() {
 
 ## Recebendo mensagens do servidor
 
-A API WebSockets é dirigida por [eventos](/pt-BR/docs/Web/Guide/Events/Overview_of_Events_and_Handlers); quando mensagens são recebidas, um evento de "mensagem" é entregue à função `onmessage`. Para começar a ouvir os dados de entrada, você pode fazer algo conforme o exemplo abaixo:
+A API WebSockets é dirigida por [eventos](/pt-BR/docs/Web/Events); quando mensagens são recebidas, um evento de "mensagem" é entregue à função `onmessage`. Para começar a ouvir os dados de entrada, você pode fazer algo conforme o exemplo abaixo:
 
 ```js
 exampleSocket.onmessage = function (event) {
@@ -176,7 +176,7 @@ exampleSocket.onmessage = function (event) {
 };
 ```
 
-Aqui utilizamos [`JSON.parse()`](/pt-BR/JavaScript/Reference/Global_Objects/JSON/parse) para conveter o objeto JSON de volta ao objeto original, em seguida, examine e aja de acordo com seu conteúdo.
+Aqui utilizamos [`JSON.parse()`](/pt-BR/docs/JavaScript/Reference/Global_Objects/JSON/parse) para conveter o objeto JSON de volta ao objeto original, em seguida, examine e aja de acordo com seu conteúdo.
 
 ### Formato de dados de texto
 

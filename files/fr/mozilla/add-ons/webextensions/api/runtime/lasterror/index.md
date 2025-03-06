@@ -22,7 +22,7 @@ var myError = browser.runtime.lastError; // null or Error object
 
 ### Valeur
 
-Un objet [Error](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error) représentant une erreur. La propriété [`message`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/message) est un `string` avec une description lisible par l'utilisateur de l'erreur. Si `lastError` n'a pas été défini, la valeur est `null`.
+Un objet [Error](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error) représentant une erreur. La propriété [`message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message) est un `string` avec une description lisible par l'utilisateur de l'erreur. Si `lastError` n'a pas été défini, la valeur est `null`.
 
 ## Examples
 

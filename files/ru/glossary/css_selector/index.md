@@ -46,10 +46,10 @@ p {
 
 3. Комбинаторы
 
-   1. [Adjacent sibling selectors](/ru/docs/Web/CSS/Adjacent_sibling_selectors) `A + B`
-   2. [General sibling selectors](/ru/docs/Web/CSS/General_sibling_selectors) `A ~ B`
-   3. [Child selectors](/ru/docs/Web/CSS/Child_selectors) `A > B`
-   4. [Descendant selectors](/ru/docs/Web/CSS/Descendant_selectors) `A B`
+   1. [Adjacent sibling selectors](/ru/docs/Web/CSS/Next-sibling_combinator) `A + B`
+   2. [General sibling selectors](/ru/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
+   3. [Child selectors](/ru/docs/Web/CSS/Child_combinator) `A > B`
+   4. [Descendant selectors](/ru/docs/Web/CSS/Descendant_combinator) `A B`
 
 4. Псевдо
 

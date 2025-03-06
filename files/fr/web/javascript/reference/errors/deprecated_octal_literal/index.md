@@ -63,5 +63,5 @@ Pour former une séquence d'échappement en base octale, on écrira une séquenc
 
 ## Voir aussi
 
-- [La grammaire lexicale JavaScript](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Octaux)
-- [Warning: 08/09 is not a legal ECMA-262 octal constant](/fr/docs/Web/JavaScript/Reference/Erreurs/Bad_octal)
+- [La grammaire lexicale JavaScript](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#octaux)
+- [Warning: 08/09 is not a legal ECMA-262 octal constant](/fr/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal)

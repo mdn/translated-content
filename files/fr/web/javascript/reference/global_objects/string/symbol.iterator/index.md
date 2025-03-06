@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 
 {{JSRef}}
 
-La méthode **`[@@iterator]()`** renvoie un nouvel objet [`Iterator`](/fr/docs/Web/JavaScript/Guide/Le_protocole_iterator) qui itère sur les points de code (codets) d'une chaîne de caractères, en renvoyant chaque point de code sous forme d'une chaîne de caractères.
+La méthode **`[@@iterator]()`** renvoie un nouvel objet [`Iterator`](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) qui itère sur les points de code (codets) d'une chaîne de caractères, en renvoyant chaque point de code sous forme d'une chaîne de caractères.
 
 {{EmbedInteractiveExample("pages/js/string-iterator.html")}}
 
@@ -59,4 +59,4 @@ for (var c of chaine) {
 
 ## Voir aussi
 
-- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration)
+- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)

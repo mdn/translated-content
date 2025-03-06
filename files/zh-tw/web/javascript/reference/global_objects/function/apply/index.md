@@ -149,7 +149,7 @@ someobject.foo = function () {
 };
 ```
 
-This method is especially handy where you want to debug events, or interface with something that has no API like the various `.on([event]...` events, such as those usable on the [Devtools Inspector](/zh-TW/docs/Tools/Page_Inspector#Developer_API)).
+This method is especially handy where you want to debug events, or interface with something that has no API like the various `.on([event]...` events, such as those usable on the [Devtools Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#developer_api)).
 
 ## 規範
 

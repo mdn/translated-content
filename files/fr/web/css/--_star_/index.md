@@ -72,4 +72,4 @@ La portée des propriétés personnalisées est celle des éléments sur lesquel
 
 ## Voir aussi
 
-- [Utiliser les variables CSS](/fr/docs/Web/CSS/Les_variables_CSS)
+- [Utiliser les variables CSS](/fr/docs/Web/CSS/Using_CSS_custom_properties)

@@ -66,9 +66,9 @@ A' | 0 0 0 1 0 |
 
 ### グローバル属性
 
-- [コア属性](/ja/docs/Web/SVG/Attribute#Core_attributes)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute#Presentation_attributes)
-- [フィルタープリミティブ属性](/ja/docs/Web/SVG/Attribute#Filter_primitive_attributes)
+- [コア属性](/ja/docs/Web/SVG/Attribute#core_attributes)
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute#presentation_attributes)
+- [フィルタープリミティブ属性](/ja/docs/Web/SVG/Attribute#filter_primitive_attributes)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 

@@ -16,12 +16,12 @@ Algunos caracteres son reservados para uso en HTML, es decir que no pueden utili
 
 Para utilizar estos caracteres como texto, deben reemplazarse por la entidad que les corresponda, a saber:
 
-| Caracter | Entitdad | Nota                                                                                        |
-| -------- | -------- | ------------------------------------------------------------------------------------------- |
-| &        | `&amp;`  | Interpretado como el comienzo de una entidad HTML.                                          |
-| <        | `&lt;`   | Interpretado como la apertura de una [etiqueta](/es/docs/Glossary/Tag).                     |
-| >        | `&gt;`   | Interpretado como el cierre de una [etiqueta](/es/docs/Glossary/Tag).                       |
-| "        | `&quot;` | Interpretado como apertura o cierre del valor de un [atributo](/es/docs/Glossary/Atributo). |
+| Caracter | Entitdad | Nota                                                                                         |
+| -------- | -------- | -------------------------------------------------------------------------------------------- |
+| &        | `&amp;`  | Interpretado como el comienzo de una entidad HTML.                                           |
+| <        | `&lt;`   | Interpretado como la apertura de una [etiqueta](/es/docs/Glossary/Tag).                      |
+| >        | `&gt;`   | Interpretado como el cierre de una [etiqueta](/es/docs/Glossary/Tag).                        |
+| "        | `&quot;` | Interpretado como apertura o cierre del valor de un [atributo](/es/docs/Glossary/Attribute). |
 
 ## Aprende más
 

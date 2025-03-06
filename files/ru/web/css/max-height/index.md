@@ -88,5 +88,5 @@ form {
 
 ## Смотрите также
 
-- [Блочная модель](/ru/docs/CSS/box_model)
+- [Блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{ Cssxref("max-width") }}, {{ Cssxref("box-sizing") }}, {{ Cssxref("height") }}, {{ Cssxref("min-height") }}

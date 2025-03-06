@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/setZoomSettings
 
 Définit les paramètres de zoom pour l'onglet spécifié. Ces paramètres sont réinitialisés aux paramètres par défaut lors de la navigation dans l'onglet.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -27,7 +27,7 @@ var settingZoomSettings = browser.tabs.setZoomSettings(
 
 ### Valeur retournée
 
-une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments après que les paramètres de zoom ont été modifiés. Si l'onglet n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
+une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments après que les paramètres de zoom ont été modifiés. Si l'onglet n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
 ## Exemples
 

@@ -72,7 +72,7 @@ WebXR Device API 受到一系列许可与安全性的控制。这些控制不涉
 
 #### VR 的沉浸式（immersive）
 
-首先，如果域名不支持请求有权限打开沉浸模式，那么 `immersive-vr` 模式就会被拒绝。这个权限管理来自`xr-spatial-tracking` [特征策略](/zh-CN/docs/Web/HTTP/Feature_Policy)。
+首先，如果域名不支持请求有权限打开沉浸模式，那么 `immersive-vr` 模式就会被拒绝。这个权限管理来自`xr-spatial-tracking` [特征策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)。
 
 一旦有权限了，申请开启 `immersive-vr` 模式的请求还需要再检查以下三点，全部满足才能开启：
 
@@ -234,8 +234,8 @@ The following guides and tutorials are a great resource to learn how to comprehe
 
 ## 参见
 
-- [Web 上的图形](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#web_上的其他图形)
-- [绘制图形](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [Web 上的图形](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images#web_上的其他图形)
+- [绘制图形](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
 - [WebGL API](/zh-CN/docs/Web/API/WebGL_API)：加速 Web 上的 2D 和 3D 图形
 - [Canvas API](/zh-CN/docs/Web/API/Canvas_API)：Web 2D 绘图
 - [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)

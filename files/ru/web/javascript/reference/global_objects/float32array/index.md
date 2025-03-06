@@ -17,7 +17,7 @@ new Float32Array(object);
 new Float32Array(buffer [, byteOffset [, length]]);
 ```
 
-Для более подробной информации о синтаксисе конструктора и его параметрах смотрите _[TypedArray](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+Для более подробной информации о синтаксисе конструктора и его параметрах смотрите _[TypedArray](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntax)_.
 
 ## Свойства
 
@@ -166,6 +166,6 @@ var dv = new Float32Array([1, 2, 3]);
 
 ## Смотрите также
 
-- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

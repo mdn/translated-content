@@ -7,7 +7,7 @@ slug: Web/API/console/timeEnd_static
 
 Detiene un temporizador que haya sido establecido previamente con {{domxref("console.time()")}}.
 
-Consulte la documentación de [Timers](/es/docs/Web/API/console#Timers) para más detalles y ejemplos.
+Consulte la documentación de [Timers](/es/docs/Web/API/console#timers) para más detalles y ejemplos.
 
 {{AvailableInWorkers}}
 
@@ -20,7 +20,7 @@ console.timeEnd(etiqueta);
 ### Parámetros
 
 - `etiqueta`
-  - : El nombre del temporizador a detener. Al detenerse, el tiempo transcurrido será mostrado automáticamente en la [Consola del Navegador](/es/docs/Tools/Web_Console).
+  - : El nombre del temporizador a detener. Al detenerse, el tiempo transcurrido será mostrado automáticamente en la [Consola del Navegador](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
 
 ## Especificaciones
 
@@ -32,4 +32,4 @@ console.timeEnd(etiqueta);
 
 ## Relacionados
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)

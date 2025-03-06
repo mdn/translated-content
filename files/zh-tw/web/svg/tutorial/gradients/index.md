@@ -81,7 +81,7 @@ Linear gradients change along a straight line. To insert one, you create a {{SVG
 >     xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Gradient1"/>
 > ```
 >
-> 這裡我直接在元素裡定義了 xlink 的命名空間，通常我們會在文檔的頂部定義它。在 [talk about images](/zh-TW/SVG/Tutorial/Other_content_in_SVG) 有更多相關內容。
+> 這裡我直接在元素裡定義了 xlink 的命名空間，通常我們會在文檔的頂部定義它。在 [talk about images](/zh-TW/docs/Web/SVG/Tutorial/Other_content_in_SVG) 有更多相關內容。
 
 ## 放射形漸層
 
@@ -270,7 +270,7 @@ Linear gradients change along a straight line. To insert one, you create a {{SVG
   gradientUnits="userSpaceOnUse"></radialGradient>
 ```
 
-你還可以使用`gradientTransform`屬性創建其他類型的變換，但現在我們還沒說到[introduced transforms](/zh-TW/SVG/Tutorial/Basic_Transformations)，所以這些內容會留到後面再講。
+你還可以使用`gradientTransform`屬性創建其他類型的變換，但現在我們還沒說到[introduced transforms](/zh-TW/docs/Web/SVG/Tutorial/Basic_Transformations)，所以這些內容會留到後面再講。
 
 當圖形對象的不是方形時，還有一個需要注意的處理方式：`gradientUnits="objectBoundingBox"`。但是它太複雜了，需要其他專家來講解。
 

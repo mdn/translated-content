@@ -20,7 +20,7 @@ const url = new URL(url [, base])
 ### Параметры
 
 - `url`
-  - : Строка типа {{domxref("USVString")}} или любой объект, который может быть [преобразован в строку](/ru/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers), включая, например, элементы {{htmlelement("a")}} и {{htmlelement("area")}}, представляющие абсолютный и относительный URL-адрес соответственно. Если `url` это относительный URL-адрес, то параметр `base` становится обязательным, так как он будет использован в качестве базового URL-адреса. Если же `url` — абсолютный URL-адрес, то значение параметра `base` будет проигнорировано.
+  - : Строка типа {{domxref("USVString")}} или любой объект, который может быть [преобразован в строку](/ru/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#stringifiers), включая, например, элементы {{htmlelement("a")}} и {{htmlelement("area")}}, представляющие абсолютный и относительный URL-адрес соответственно. Если `url` это относительный URL-адрес, то параметр `base` становится обязательным, так как он будет использован в качестве базового URL-адреса. Если же `url` — абсолютный URL-адрес, то значение параметра `base` будет проигнорировано.
 - `base` {{optional_inline}}
   - : Строка типа {{domxref("USVString")}}. Используется в качестве базового адреса, когда `url` это относительный URL-адрес. Значение по умолчанию: `undefined`.
 

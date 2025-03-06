@@ -34,7 +34,7 @@ Il est difficile d'imaginer un jeu sans la détection de collision — nous devo
 
 ### Réalité virtuelle sur le web
 
-Le concept de réalité virtuelle n'est pas nouveau, mais il est en train de conquérir le web grâce à des avancées matérielles telles que l' [Oculus Rift](https://www.oculus.com/en-us/rift/) et l'[API WebVR](/fr/docs/Web/API/WebVR_API) (actuellement expérimental) pour capturer les informations du matériel de réalité virtuelle et les rendre disponibles pour les applications JavaScript. Pour en savoir plus, lisez [WebVR - Réalité virtuelle pour le Web](/fr/docs/Games/Techniques/3D_on_the_web/WebVR).
+Le concept de réalité virtuelle n'est pas nouveau, mais il est en train de conquérir le web grâce à des avancées matérielles telles que l' [Oculus Rift](https://www.oculus.com/en-us/rift/) et l'[API WebVR](/fr/docs/Web/API/WebVR_API) (actuellement expérimental) pour capturer les informations du matériel de réalité virtuelle et les rendre disponibles pour les applications JavaScript. Pour en savoir plus, lisez [WebVR - Réalité virtuelle pour le Web](/fr/docs/Games/Techniques/3D_on_the_web/WebXR).
 
 Il y a aussi la [construction d'une démo de base avec l'article A-Frame](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) qui montre comment il est facile de construire des environnements 3D pour la réalité virtuelle en utilisant le framework [A-Frame](https://aframe.io//) .
 
@@ -76,7 +76,7 @@ Vous pouvez trouver tous les codes source de cette série de [démos sur GitHub]
 
 ### API
 
-- [Canvas API](/fr/docs/Web/HTML/Canvas)
+- [Canvas API](/fr/docs/Web/API/Canvas_API)
 - [WebGL API](/fr/docs/Web/API/WebGL_API)
 - [WebVR API](/fr/docs/Web/API/WebVR_API)
 

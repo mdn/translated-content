@@ -30,5 +30,5 @@ _Интерфейс `GeolocationPosition` не наследует свойств
 
 ## Смотрите также
 
-- [Using the Geolocation API](/ru/docs/Web/API/Geolocation_API/Using)
+- [Using the Geolocation API](/ru/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - {{domxref("Geolocation")}}

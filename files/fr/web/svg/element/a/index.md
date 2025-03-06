@@ -67,11 +67,11 @@ svgns|a:active {
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel)
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#Événement_graphiques)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation)
-- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#Attributs_XLink)
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#attributs_de_traitement_conditionnel)
+- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#événement_graphiques)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
+- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#attributs_xlink)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}
@@ -95,7 +95,7 @@ svgns|a:active {
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGAElement`](/fr/docs/DOM/SVGAElement).
+Cet élément implémente l'interface [`SVGAElement`](/fr/docs/Web/API/SVGAElement).
 
 ## Spécifications
 

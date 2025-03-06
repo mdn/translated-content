@@ -49,7 +49,7 @@ console.log(eArr.next().value); // 50
 
 ## 참조
 
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.keys()")}}

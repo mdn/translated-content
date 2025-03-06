@@ -43,12 +43,12 @@ Ejemplos: [Asteroids in Popup](https://addons.mozilla.org/en-US/firefox/addon/as
 
 **Ejemplos:** [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/), [Web React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/), and [aXe Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/)
 
-Las extensiones para Firefox se construyen utilizando las [APIs de WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions), un sistema multi-navegador para desarrollar extensiones. En gran medida, la API es compatible con la [extension API](https://developer.chrome.com/docs/extensions) soportada por Google Chrome y Opera. Extensiones escritas para estos navegadores en la mayoría de los casos se ejecutan en Firefox o Microsoft Edge con sólo unos pocos [cambios](/es/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension). La API es también totalmente compatible con los [multiprocesos de Firefox](/es/Firefox/Multiprocess_Firefox).
+Las extensiones para Firefox se construyen utilizando las [APIs de WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions), un sistema multi-navegador para desarrollar extensiones. En gran medida, la API es compatible con la [extension API](https://developer.chrome.com/docs/extensions) soportada por Google Chrome y Opera. Extensiones escritas para estos navegadores en la mayoría de los casos se ejecutan en Firefox o Microsoft Edge con sólo unos pocos [cambios](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). La API es también totalmente compatible con los [multiprocesos de Firefox](/es/docs/Mozilla/Firefox/Multiprocess_Firefox).
 
 Si tiene ideas o preguntas, o necesita ayuda para migrar un Add-on heredado a las APIs de WebExtensions, puede comunicarse con nosotros en el [Discourse de Add-ons](https://discourse.mozilla.org/c/add-ons/35) o en [#extdev](irc://irc.mozilla.org/extdev) en [IRC](https://wiki.mozilla.org/IRC).
 
 ## ¿Qué sigue?
 
-- Para recorrer el desarrollo de una simple extensión, vea [Tu primera extensión](/es/docs/Mozilla/Add-ons/WebExtensions/Tu_primera_WebExtension).
-- Aprende sobre la estructura de una extensión en [anatomía de una extensión](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomia_de_una_WebExtension).
+- Para recorrer el desarrollo de una simple extensión, vea [Tu primera extensión](/es/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension).
+- Aprende sobre la estructura de una extensión en [anatomía de una extensión](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension).
 - Pruebe algunos ejemplos de extensiones en [Extensiones de ejemplo](/es/docs/Mozilla/Add-ons/WebExtensions/Examples).

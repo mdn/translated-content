@@ -30,7 +30,7 @@ Instruction, apparaît dans un modèle.
 
 ### Définition
 
-[XSLT 1.0 section 9.1](http://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:if).
+[XSLT 1.0 section 9.1](https://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:if).
 
 ### Support Gecko
 

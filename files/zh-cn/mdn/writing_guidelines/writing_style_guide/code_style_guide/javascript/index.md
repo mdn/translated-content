@@ -3,8 +3,6 @@ title: JavaScript 代码示例编写指南
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
 ---
 
-{{MDNSidebar}}
-
 以下指南涵盖了如何为 MDN Web Docs 编写 JavaScript 示例代码。本文列出了编写简洁示例的规则，以期这些示例将被尽可能多的人理解。
 
 ## JavaScript 代码示例常规指南
@@ -316,7 +314,7 @@ function doIt() {
 
 ### 循环初始化
 
-当需要[循环](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)时，从 [`for(;;)`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for)、[`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)、[`while`](/zh-CN/docs/Web/JavaScript/Reference/Statements/while) 等中选择合适的。
+当需要[循环](/zh-CN/docs/Learn_web_development/Core/Scripting/Loops)时，从 [`for(;;)`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for)、[`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)、[`while`](/zh-CN/docs/Web/JavaScript/Reference/Statements/while) 等中选择合适的。
 
 - 在遍历集合中的所有元素时，避免使用传统的 `for (;;)` 循环；优先使用 `for...of` 或 `forEach()`。请注意，如果你使用的是一个不是 `Array` 的集合，你必须检查 `for...of` 是否真的被支持（它需要变量是可迭代的），或者 `forEach()` 方法是否存在。
 

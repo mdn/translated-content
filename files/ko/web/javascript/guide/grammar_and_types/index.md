@@ -397,7 +397,7 @@ let coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
 > [!NOTE]
-> 배열 리터럴은 일종의 객체 초기자(initializer) 입니다. [객체 초기자 사용하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#객체_초기자_사용하기) 참고.
+> 배열 리터럴은 일종의 객체 초기자(initializer) 입니다. [객체 초기자 사용하기](/ko/docs/Web/JavaScript/Guide/Working_with_objects#%ea%b0%9d%ec%b2%b4_%ec%b4%88%ea%b8%b0%ec%9e%90_%ec%82%ac%ec%9a%a9%ed%95%98%ea%b8%b0) 참고.
 
 배열이 최상단 스크립트에서 리터럴을 사용하여 만들어진 경우, JavaScript는 배열 리터럴을 포함한 식을 평가할 때마다 배열로 해석합니다. 게다가, 함수에서 사용되는 리터럴은 함수가 호출될 때마다 생성됩니다.
 
@@ -581,7 +581,7 @@ var obj = {
 
 ### 정규식 리터럴
 
-정규식 리터럴은 ([정규식 상세](/ko/docs/Web/JavaScript/Guide/Regular_Expressions)) 슬래시 사이에 감싸인 패턴입니다. 다음은 정규식 리터럴 예제입니다.
+정규식 리터럴은 ([정규식 상세](/ko/docs/Web/JavaScript/Guide/Regular_expressions)) 슬래시 사이에 감싸인 패턴입니다. 다음은 정규식 리터럴 예제입니다.
 
 ```js
 var re = /ab+c/;
@@ -790,7 +790,7 @@ and so is foo.`;
 - [흐름 제어와 에러 처리](/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - [루프와 반복](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [함수](/ko/docs/Web/JavaScript/Guide/Functions)
-- [표현식과 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [표현식과 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
 다음 장에서는, 흐름 제어 구조와 에러 처리를 살펴 볼 것입니다.
 

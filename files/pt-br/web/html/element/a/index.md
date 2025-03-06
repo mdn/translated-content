@@ -7,7 +7,23 @@ slug: Web/HTML/Element/a
 
 O **elemento** **`<a>`** em **HTML** (ou elemento âncora), com o atributo [`href`](#href) cria-se um hiperligação nas páginas web, arquivos, endereços de emails, ligações na mesma página ou endereços na URL. O conteúdo dentro de cada `<a>` **precisará** indicar o destino do link.
 
-{{EmbedInteractiveExample("pages/tabbed/a.html")}}
+{{InteractiveExample("HTML Demo: &lt;a&gt;")}}
+
+```html interactive-example
+<p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul>
+```
+
+```css interactive-example
+li {
+  margin-bottom: 0.5rem;
+}
+```
 
 ## Atributos
 
@@ -21,7 +37,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 
       - O cabeçalho HTTP {{HTTPHeader("Content-Disposition")}}
       - O segmento final no [path](/pt-BR/docs/Web/API/URL/pathname) (caminho) da URL
-      - The {{Glossary("MIME_type", "media type")}} (from the ({{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/Data_URIs), or {{domxref("Blob.type")}} for a [`blob:` URL](/pt-BR/docs/Web/API/URL/createObjectURL))
+      - The {{Glossary("MIME_type", "media type")}} (from the ({{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/pt-BR/docs/Web/URI/Schemes/data), or {{domxref("Blob.type")}} for a [`blob:` URL](/pt-BR/docs/Web/API/URL/createObjectURL_static))
 
     - A definição de um valor o sugere como o nome do arquivo. Caracteres `/` e `\` são convertidos para _underscores_ (`_`).Arquivos de sistema talvez proibam alguns caracteres em nomes de arquivos, então o navegador irá ajustar o nome sugerido caso necessário.
 
@@ -46,7 +62,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 - `referrerpolicy`{{Experimental_Inline}}
   - : Quanto do [referrer](/pt-BR/docs/Web/HTTP/Headers/Referer) para ser enviado quando acessar o link. Acesse [`Referrer-Policy`](/pt-BR/docs/Web/HTTP/Headers/Referrer-Policy) para possíveis valores e seus efeitos.
 - `rel`
-  - : The relationship of the linked URL as space-separated [link types](/pt-BR/docs/Web/HTML/Link_types).
+  - : The relationship of the linked URL as space-separated [link types](/pt-BR/docs/Web/HTML/Attributes/rel).
 - `target`
 
   - : Where to display the linked URL, as the name for a _browsing context_ (a tab, window, or `<iframe>`). The following keywords have special meanings for where to load the URL:
@@ -241,7 +257,7 @@ To create links that open in the user's email program to let them send a new mes
 <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
 ```
 
-For details about `mailto:` URLs, such as including a subject or body, see [Email links](/pt-BR/docs/Web/Guide/HTML/Email_links) or {{RFC(6068)}}.
+For details about `mailto:` URLs, such as including a subject or body, see [Email links](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links) or {{RFC(6068)}}.
 
 ### Linking to telephone numbers
 
@@ -449,7 +465,7 @@ Interactive elements, like links, should provide an area large enough that it is
 Text-only links in prose content are exempt from this requirement, but it's still a good idea to make sure enough text is hyperlinked to be easily activated.
 
 - [Understanding Success Criterion 2.5.5: Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
-- [Target Size and 2.5.5](http://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+- [Target Size and 2.5.5](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
 - [Quick test: Large touch targets](https://a11yproject.com/posts/large-touch-targets/)
 
 #### Proximity

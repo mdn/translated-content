@@ -6,7 +6,7 @@ slug: Web/API/FileReader/readAsDataURL
 {{APIRef("File API")}}
 
 O método `readAsDataURL` é usado para ler o conteúdo do tipo {{domxref("Blob")}} ou {{domxref("File")}}.
-Quando a operação de leitura acaba, a flag {{domxref("FileReader.readyState","readyState")}} muda para **DONE** e o evento [`loadend`](/pt-BR/docs/Web/Events/loadend) é disparado.
+Quando a operação de leitura acaba, a flag {{domxref("FileReader.readyState","readyState")}} muda para **DONE** e o evento [`loadend`](/pt-BR/docs/Web/API/XMLHttpRequest/loadend_event) é disparado.
 Então o atributo {{domxref("FileReader.result","result")}} irá conter a URL codificada em base64 do arquivo.
 
 ## Sintaxe

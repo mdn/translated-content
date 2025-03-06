@@ -57,11 +57,11 @@ slug: Web/SVG/Element/textPath
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
-- [Xlink 属性](/zh-CN/SVG/Attribute#XLink) »
+- [条件处理属性](/zh-CN/docs/SVG/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/SVG/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
+- [Xlink 属性](/zh-CN/docs/SVG/Attribute#xlink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -75,4 +75,4 @@ slug: Web/SVG/Element/textPath
 
 ## DOM 接口
 
-该元素实现了 [`SVGTextPathElement`](/zh-CN/DOM/SVGTextPathElement) 接口。
+该元素实现了 [`SVGTextPathElement`](/zh-CN/docs/DOM/SVGTextPathElement) 接口。

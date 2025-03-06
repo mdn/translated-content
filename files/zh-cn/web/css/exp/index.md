@@ -5,7 +5,7 @@ slug: Web/CSS/exp
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`exp()`** 为指数型函数，以数值为参数，返回数学常数 `e` 的指定次方。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) **`exp()`** 为指数型函数，以数值为参数，返回数学常数 `e` 的指定次方。
 
 数学常数 [e](<https://zh.wikipedia.org/wiki/E_(数学常数)>) 为自然对数的底数，约为 `2.718281828459045`。
 

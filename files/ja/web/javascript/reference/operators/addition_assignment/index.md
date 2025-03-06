@@ -9,7 +9,18 @@ l10n:
 
 **加算代入 (`+=`)** 演算子は、 2 つのオペランドの[加算](/ja/docs/Web/JavaScript/Reference/Operators/Addition)（数値の加算または文字列の結合のどちらか）を実行し、左オペランドへ結果を代入します。
 
-{{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Addition assignment operator")}}
+
+```js interactive-example
+let a = 2;
+let b = "hello";
+
+console.log((a += 3)); // Addition
+// Expected output: 5
+
+console.log((b += " world")); // Concatenation
+// Expected output: "hello world"
+```
 
 ## 構文
 

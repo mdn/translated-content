@@ -48,7 +48,7 @@ typeof Object(1n) === "object"; // true
 
 ### 运算
 
-以下操作符可以和 `BigInt` 一起使用： `+`、`*`、`-`、`**`、`%`。除 `>>>` （无符号右移）之外的 [位操作](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) 也可以支持。因为 `BigInt` 都是有符号的， `>>>` （无符号右移）不能用于 `BigInt`。[为了兼容 asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs)，`BigInt` 不支持单目 (`+`) 运算符。
+以下操作符可以和 `BigInt` 一起使用： `+`、`*`、`-`、`**`、`%`。除 `>>>` （无符号右移）之外的 [位操作](/zh-CN/docs/Web/JavaScript/Reference/Operators) 也可以支持。因为 `BigInt` 都是有符号的， `>>>` （无符号右移）不能用于 `BigInt`。[为了兼容 asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs)，`BigInt` 不支持单目 (`+`) 运算符。
 
 ```js
 const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);

@@ -9,7 +9,29 @@ Elementos `<input>` do tipo **`time`** (hora) criam campos de inserção que per
 
 A interface de usuário deste tipo de campo varia de navegador para navegador. A maioria dos navegadores modernos é compatível com ele exceto pelo Safari, o único grande navegador que ainda não o implementou; no Safari (e em qualquer outro navegador que ainda não suporte `<time>`), ele regride para [`<input type="text">`](/pt-BR/docs/Web/HTML/Element/input/text).
 
-{{EmbedInteractiveExample("pages/tabbed/input-time.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;time&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="appt">Choose a time for your meeting:</label>
+
+<input type="time" id="appt" name="appt" min="09:00" max="18:00" required />
+
+<small>Office hours are 9am to 6pm</small>
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## Aparência
 
@@ -342,7 +364,7 @@ input:valid + span:after {
 }
 ```
 
-The best way to deal with times in forms in a cross-browser way, for the time being, is to get the user to enter the hours and minutes (and seconds if required) in separate controls ({{htmlelement("select")}} elements are popular; see below for an example), or use JavaScript libraries such as the [jQuery timepicker plugin](http://timepicker.co/).
+The best way to deal with times in forms in a cross-browser way, for the time being, is to get the user to enter the hours and minutes (and seconds if required) in separate controls ({{htmlelement("select")}} elements are popular; see below for an example), or use JavaScript libraries such as the [jQuery timepicker plugin](https://timepicker.co/).
 
 ## Examples
 
@@ -485,5 +507,5 @@ minuteSelect.onchange = setMinutesToZero;
 ## See also
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-- [Date and Time picker tutorial](/pt-BR/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker)
+- [Date and Time picker tutorial](/pt-BR/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
 - [`<input type="datetime-local">`](/pt-BR/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/pt-BR/docs/Web/HTML/Element/input/date), [`<input type="week">`](/pt-BR/docs/Web/HTML/Element/input/week), and [`<input type="month">`](/pt-BR/docs/Web/HTML/Element/input/month)

@@ -51,6 +51,6 @@ animationEvent.initAnimationEvent(typeArg, canBubbleArg, cancelableArg, animatio
 
 ## See also
 
-- [Using CSS animations](/pt-BR/docs/CSS/Using_CSS_animations)
+- [Using CSS animations](/pt-BR/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - Animation-related CSS properties and at-rules: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
 - The {{domxref("AnimationEvent")}} interface it belongs to.

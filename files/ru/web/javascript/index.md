@@ -5,11 +5,11 @@ slug: Web/JavaScript
 
 {{JsSidebar()}}
 
-**JavaScript** (**JS**) — это легковесный интерпретируемый (или [JIT-компилируемый](https://ru.wikipedia.org/wiki/JIT-компиляция)) язык программирования с {{Glossary("First-class_Function", "функциями первого класса")}}. Наиболее широкое применение находит как язык сценариев веб-страниц, но также [используется и в других программных продуктах](http://en.wikipedia.org/wiki/JavaScript#Uses_outside_web_pages), например, {{Glossary("Node.js")}} или [Apache CouchDB](http://couchdb.apache.org). JavaScript это {{Glossary("Prototype-based_programming", "прототипно-ориентированный")}}, мультипарадигменный язык с динамической типизацией, который поддерживает объектно-ориентированный, императивный и декларативный (например, функциональное программирование) стили программирования. Подробнее [о JavaScript](/ru/docs/Web/JavaScript/%D0%9E_JavaScript).
+**JavaScript** (**JS**) — это легковесный интерпретируемый (или [JIT-компилируемый](https://ru.wikipedia.org/wiki/JIT-компиляция)) язык программирования с {{Glossary("First-class_Function", "функциями первого класса")}}. Наиболее широкое применение находит как язык сценариев веб-страниц, но также [используется и в других программных продуктах](http://en.wikipedia.org/wiki/JavaScript#Uses_outside_web_pages), например, {{Glossary("Node.js")}} или [Apache CouchDB](https://couchdb.apache.org). JavaScript это {{Glossary("Prototype-based_programming", "прототипно-ориентированный")}}, мультипарадигменный язык с динамической типизацией, который поддерживает объектно-ориентированный, императивный и декларативный (например, функциональное программирование) стили программирования. Подробнее [о JavaScript](/ru/docs/Web/JavaScript/%D0%9E_JavaScript).
 
-Эта часть сайта посвящена самому языку JavaScript, и она не затрагивает тонкостей, связанных с веб-страницами или окружением, в котором исполняется JavaScript. Информация об {{Glossary("API")}}, относящихся к веб-страницам, находится в разделах, посвящённых [Веб-API](/ru/docs/Web/API) и [DOM](/ru/docs/DOM).
+Эта часть сайта посвящена самому языку JavaScript, и она не затрагивает тонкостей, связанных с веб-страницами или окружением, в котором исполняется JavaScript. Информация об {{Glossary("API")}}, относящихся к веб-страницам, находится в разделах, посвящённых [Веб-API](/ru/docs/Web/API) и [DOM](/ru/docs/Web/API/Document_Object_Model).
 
-Стандартом языка JavaScript является [ECMAScript](/ru/docs/JavaScript/Language_Resources). По состоянию на 2012 год, все современные браузеры полностью поддерживают ECMAScript 5.1. Старые версии браузеров поддерживают по крайней мере - ECMAScript 3. 17 июня 2015 года состоялся выпуск шестой версии ECMAScript. Эта версия официально называется ECMAScript 2015, которую чаще всего называют ECMAScript 2015 или просто ES2015. С недавнего времени стандарты ECMAScript выпускаются ежегодно. Эта документация относится к последней версии черновика, которой является [ECMAScript 2018](http://tc39.github.io/ecma262/).
+Стандартом языка JavaScript является [ECMAScript](/ru/docs/Web/JavaScript/JavaScript_technologies_overview). По состоянию на 2012 год, все современные браузеры полностью поддерживают ECMAScript 5.1. Старые версии браузеров поддерживают по крайней мере - ECMAScript 3. 17 июня 2015 года состоялся выпуск шестой версии ECMAScript. Эта версия официально называется ECMAScript 2015, которую чаще всего называют ECMAScript 2015 или просто ES2015. С недавнего времени стандарты ECMAScript выпускаются ежегодно. Эта документация относится к последней версии черновика, которой является [ECMAScript 2018](http://tc39.github.io/ecma262/).
 
 Не следует путать JavaScript c [языком программирования Java](https://ru.wikipedia.org/wiki/Java). И "Java", и "JavaScript" являются торговыми марками или зарегистрированными торговыми марками Oracle в США и других странах. Однако, у обоих языков различный синтаксис, семантика и применение.
 
@@ -41,9 +41,9 @@ slug: Web/JavaScript
 
 ### Средний уровень
 
-- [Понимание JavaScript-фреймворков для фронтенда](/ru/docs/Learn/Tools_and_testing/Фронтенд_JavaScript_фреймворки)
+- [Понимание JavaScript-фреймворков для фронтенда](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
   - : JavaScript-ффреймворки являются неотъемлемой частью современной веб-разработки,предоставляя разработчикам проверенные и протестированныеинструменты для создания масштабируемых и интерактивных веб-приложений. Многиесовременные компании используют фреймворки для своих решений, поэтому многие задачи связанные с разработкой клиентской части веб-приложений теперь требуют опыта работы с ними.
-- [Повторное введение в JavaScript](/ru/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+- [Повторное введение в JavaScript](/ru/docs/Web/JavaScript/Language_overview)
   - : Обзор для тех, кто _думает_, что знает JavaScript.
 - [Структуры данных JavaScript](/ru/docs/Web/JavaScript/Data_structures)
   - : Обзор существующих структур данных в JavaScript.
@@ -54,18 +54,18 @@ slug: Web/JavaScript
 
 ### Продвинутый уровень
 
-- [Наследование и цепочка прототипов](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [Наследование и цепочка прототипов](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
   - : Статья разъясняет бытующие заблуждения и недооцененность наследования, основанного на прототипах.
 - [Строгий режим — "use strict"](/ru/docs/Web/JavaScript/Reference/Strict_mode)
   - : Строгий режим говорит о том, что вы не можете использовать какую-либо переменную до её объявления. Это ограниченный вариант ECMAScript 5, для более быстрой производительности и простой отладки.
-- [Типизированные массивы](/ru/docs/Web/JavaScript/Typed_arrays)
+- [Типизированные массивы](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
   - : Типизированные массивы предоставляют механизм для работы с необработанными двоичными данными в JavaScript.
-- [Управление памятью](/ru/docs/Web/JavaScript/Memory_Management)
+- [Управление памятью](/ru/docs/Web/JavaScript/Memory_management)
   - : Жизненный цикл памяти и сборка мусора в JavaScript.
-- [Модель параллелизма (мультипоточности) и цикл событий](/ru/docs/Web/JavaScript/EventLoop)
+- [Модель параллелизма (мультипоточности) и цикл событий](/ru/docs/Web/JavaScript/Event_loop)
   - : В JavaScript есть модель параллелизма, основанная на "цикле событий".
-- [Введение в использование XPath в JavaScript](/ru/docs/Web/JavaScript/Introduction_to_using_XPath_in_JavaScript)
-  - : Этот документ описывает интерфейс для использования [XPath](/ru/docs/XPath) в JavaScript напрямую, внутри расширений и на веб-сайтах.
+- [Введение в использование XPath в JavaScript](/ru/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)
+  - : Этот документ описывает интерфейс для использования [XPath](/ru/docs/Web/XPath) в JavaScript напрямую, внутри расширений и на веб-сайтах.
 
 ## Справочник
 
@@ -74,7 +74,7 @@ slug: Web/JavaScript
 - [Стандартные встроенные объекты](/ru/docs/Web/JavaScript/Reference/Global_Objects)
   - : Узнайте о стандартных встроенных объектах {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}} , {{jsxref("WeakSet")}} и других.
 - [Выражения и операторы](/ru/docs/Web/JavaScript/Reference/Operators)
-  - : Узнайте о поведении таких операторов в JavaScript, как {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}, [приоритете операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) и многом другом.
+  - : Узнайте о поведении таких операторов в JavaScript, как {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}, [приоритете операторов](/ru/docs/Web/JavaScript/Reference/Operators/Operator_precedence) и многом другом.
 - [Инструкции и объявления](/ru/docs/Web/JavaScript/Reference/Statements)
   - : Узнайте о {{jsxref("Statements/do...while", "do-while")}}, {{jsxref("Statements/for...in", "for-in")}}, {{jsxref("Statements/for...of", "for-of")}}, {{jsxref("Statements/try...catch", "try-catch")}}, {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/var", "var")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/if...else", "if-else")}}, {{jsxref("Statements/switch", "switch")}} и многих других выражениях и ключевых словах в JavaScript.
 - [Функции](/ru/docs/Web/JavaScript/Reference/Functions)
@@ -84,13 +84,13 @@ slug: Web/JavaScript
 
 Полезные инструменты для написания и отладки вашего **JavaScript** кода.
 
-- [Инструменты разработчика Firefox](/ru/docs/Tools)
-  - : [Простой редактор JavaScript](/ru/docs/Tools/Черновик), [Веб-консоль](/ru/docs/Tools/Web_Console), [JavaScript Профайлер](/ru/docs/Tools/Profiler), [Отладчик](/ru/docs/Tools/Debugger) и другие.
+- [Инструменты разработчика Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+  - : [Простой редактор JavaScript](/ru/docs/Tools/Черновик), [Веб-консоль](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html), [JavaScript Профайлер](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html), [Отладчик](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) и другие.
 - [JavaScript шеллы](/ru/docs/Web/JavaScript/JavaScript_шеллы)
   - : JavaScript шеллы позволяют быстро проверять фрагменты JavaScript-кода.
 - [TogetherJS](https://togetherjs.com/)
   - : Объединение усилий стало проще. Добавляя TogetherJS на вашу веб-страницу, ваши пользователи могут помочь другу-другу в реальном времени!
-- [Stack Overflow](http://stackoverflow.com/questions/tagged/javascript)
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/javascript)
   - : Вопросы по JavaScript на Stack Overflow.
 - [Версии JavaScript и информация о релизах](/ru/docs/Web/JavaScript/New_in_JavaScript)
   - : Просмотрите историю возможностей JavaScript и их статус.

@@ -5,9 +5,29 @@ slug: Web/HTML/Element/input/file
 
 {{HTMLSidebar}}
 
-Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"file"`** permettent à un utilisateur de sélectionner un ou plusieurs fichiers depuis leur appareil et de les _uploader_ vers un serveur via [un formulaire](/fr/docs/Web/Guide/HTML/Formulaires) ou grâce à du code JavaScript [via l'API _File_](/fr/docs/Using_files_from_web_applications).
+Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"file"`** permettent à un utilisateur de sélectionner un ou plusieurs fichiers depuis leur appareil et de les _uploader_ vers un serveur via [un formulaire](/fr/docs/Learn/Forms) ou grâce à du code JavaScript [via l'API _File_](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
 
-{{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="avatar">Choose a profile picture:</label>
+
+<input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## Valeur
 
@@ -15,7 +35,7 @@ L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) contient une chaîne
 
 > [!NOTE]
 >
-> 1. Si plusieurs fichiers sont sélectionnés, la chaîne de caractères représente le chemin du premier fichier sélectionné. Il est possible d'accéder aux autres fichiers en JavaScript [grâce à la propriété `FileList`](/fr/docs/Using_files_from_web_applications#getting_information_about_selected_files).
+> 1. Si plusieurs fichiers sont sélectionnés, la chaîne de caractères représente le chemin du premier fichier sélectionné. Il est possible d'accéder aux autres fichiers en JavaScript [grâce à la propriété `FileList`](/fr/docs/Web/API/File_API/Using_files_from_web_applications#getting_information_about_selected_files).
 > 2. Si aucun fichier n'est sélectionné, la chaîne de caractères sera vide (`""`).
 > 3. La chaîne de caractères [est préfixée avec `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly) afin d'éviter la fuite d'informations sensibles concernant la structure des fichiers de l'utilisateur.
 
@@ -51,7 +71,7 @@ Une chaîne de caractères qui indique la caméra à utiliser pour capturer des 
 
 ### `files`
 
-Un objet {{domxref("FileList")}} qui liste chaque fichier sélectionné. Cette liste n'a qu'un seul élément, sauf si [`multiple`](/fr/docs/Web/HTML/Element/input/file#multiple) est indiqué.
+Un objet {{domxref("FileList")}} qui liste chaque fichier sélectionné. Cette liste n'a qu'un seul élément, sauf si [`multiple`](#multiple) est indiqué.
 
 ### `multiple`
 
@@ -133,7 +153,7 @@ Chaque objet `File` contient les informations suivantes :
 - `lastModified` : un nombre représentant la date à laquelle le fichier a été modifié pour la dernière fois (sous la forme d'un horodatage UNIX).
 - `lastModifiedDate` : un objet {{domxref("Date")}} qui représente la date et l'heure à laquelle le fichier a été modifié pour la dernière fois.
 - `size` : un nombre qui représente la taille du fichier en octets.
-- `type` : une chaîne de caractères ({{domxref("DOMString")}}) qui représente [le type MIME](/fr/docs/Glossaire/Type_MIME) du fichier.
+- `type` : une chaîne de caractères ({{domxref("DOMString")}}) qui représente [le type MIME](/fr/docs/Glossary/MIME_type) du fichier.
 - `webkitRelativePath`{{non-standard_inline}} : une chaîne de caractères qui indique l'emplacement relatif du fichier par rapport au dossier de base indiqué par l'attribut [`webkitdirectory`](/fr/docs/Web/HTML/Element/input#webkitdirectory). _Attention, cette fonctionnalité est non-standard et doit être utilisée avec précaution._
 
 > [!NOTE]
@@ -141,7 +161,7 @@ Chaque objet `File` contient les informations suivantes :
 
 ### Restreindre les types de fichiers acceptés
 
-Il arrive souvent qu'on souhaite sélectionner certains types de fichiers. Par exemple, si on souhaite fournir une image de profil, on restreindra probablemnt les formats à ceux des formats d'image compatibles pour le Web comme [JPEG](/fr/docs/Glossaire/jpeg) ou [PNG](/fr/docs/Glossaire/PNG).
+Il arrive souvent qu'on souhaite sélectionner certains types de fichiers. Par exemple, si on souhaite fournir une image de profil, on restreindra probablemnt les formats à ceux des formats d'image compatibles pour le Web comme [JPEG](/fr/docs/Glossary/JPEG) ou [PNG](/fr/docs/Glossary/PNG).
 
 Pour cela, on peut utiliser l'attribut [`accept`](/fr/docs/Web/HTML/Element/input#accept) afin d'indiquer les formats de fichier acceptés (sous la forme d'une liste d'extensions de fichier ou de types MIME séparés par des virgules). Par exemple :
 
@@ -468,5 +488,5 @@ Et voici le résultat :
 
 ## Voir aussi
 
-- [Manipuler des fichiers à partir d'applications web](/fr/docs/Using_files_from_web_applications) contient différents exemples d'applications relatifs à `<input type="file">`
+- [Manipuler des fichiers à partir d'applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications) contient différents exemples d'applications relatifs à `<input type="file">`
 - [L'API _File_](/fr/docs/Web/API/File).

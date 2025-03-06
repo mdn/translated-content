@@ -260,5 +260,5 @@ Some legacy functional notations such as `rgba()` use commas, but generally comm
 
 ## 参见
 
-- [CSS 基本数据类型](/zh-CN/docs/Web/CSS/CSS_Types)
-- [CSS 介绍：值和单位](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [CSS 基本数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
+- [CSS 介绍：值和单位](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

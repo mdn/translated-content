@@ -147,5 +147,5 @@ grid-column-end: unset;
 - {{cssxref("grid-row-start")}}
 - {{cssxref("grid-row-end")}}
 - {{cssxref("grid-row")}}
-- [Guide : le placement sur les lignes d'une grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+- [Guide : le placement sur les lignes d'une grille](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
 - Tutoriel vidéo : [le placement sur les lignes (en anglais)](https://gridbyexample.com/video/series-line-based-placement/)

@@ -7,7 +7,7 @@ slug: Web/API/SpeechGrammar
 
 [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API) 的 **`SpeechGrammar`** 接口 表示了语音识别对象服务想要识别的一系列词语或模式。
 
-文法通过 [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/) (**JSGF**.) 来定义，其他格式的文法会在以后支持。
+文法通过 [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**.) 来定义，其他格式的文法会在以后支持。
 
 ## 构造函数
 

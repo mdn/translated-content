@@ -56,7 +56,7 @@ L'URL de donnée pourra ainsi utiliser la donnée encodée après l'en-tête.
 
 ### Dans une page web, via JavaScript
 
-Les APIs web contiennent des méthodes pour encoder et décoder en base64 : [Décoder et encoder en base64](/fr/docs/Web/API/WindowBase64/Base64_encoding_and_decoding).
+Les APIs web contiennent des méthodes pour encoder et décoder en base64 : [Décoder et encoder en base64](/fr/docs/Glossary/Base64).
 
 ## Problèmes habituels
 
@@ -95,8 +95,8 @@ beaucoup de texte...<p><a name="bottom">bottom</a>?arg=val
 
 ## Voir_aussi
 
-- [Décoder et encoder en base64](/fr/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)
+- [Décoder et encoder en base64](/fr/docs/Glossary/Base64)
 - {{domxref("WindowBase64.atob","atob()")}}
 - {{domxref("WindowBase64.btoa","btoa()")}}
-- [CSS `url()`](/fr/docs/Web/CSS/uri)
+- [CSS `url()`](/fr/docs/Web/CSS/url_value)
 - [URI](/fr/docs/Glossary/URI)

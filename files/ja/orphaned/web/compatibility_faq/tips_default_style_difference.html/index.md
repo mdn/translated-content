@@ -54,4 +54,4 @@ slug: orphaned/Web/Compatibility_FAQ/Tips_Default_Style_Difference.html
 }
 ```
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

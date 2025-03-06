@@ -20,7 +20,7 @@ l10n:
 
 ## 属性
 
-除[全局属性](/zh-CN/docs/Web/HTML/global_attributes)（适用于所有元素）外，此元素无其他属性。
+除[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)（适用于所有元素）外，此元素无其他属性。
 
 ## DOM 接口
 

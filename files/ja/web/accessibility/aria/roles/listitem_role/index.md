@@ -24,9 +24,9 @@ ARIA のリスト項目 (`listitem`) ロールは、項目のリスト内の項�
 
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 
-- [list](/ja/docs/Web/Accessibility/ARIA/Roles/List_role)
+- [list](/ja/docs/Web/Accessibility/ARIA/Roles/list_role)
   - : 項目のリスト。 リスト (`list`) ロールを持つ要素には、子として 1 つ以上のリスト項目 (`listitem`) ロールを持つ要素か、子として 1 つ以上のリスト項目 (`listitem`) ロールを持つ要素を含む 1 つ以上のグループ (`group`) ロールを持つ要素が必要です。
-- [group](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role)
+- [group](/ja/docs/Web/Accessibility/ARIA/Roles/group_role)
   - : ページの目次に掲載されるほど重要ではなく、リスト内にネストされている場合はリスト項目に限定される、関連するオブジェクトのコレクションです。 (訳注: リスト内にグループをネストできるという仕様は、ARIA 1.2 で、無くなる予定です。)
 
 ### キーボードインタラクション
@@ -86,7 +86,7 @@ TBD
 - [HTML `<li>` 要素](/ja/docs/Web/HTML/Element/li)
 - [HTML `<ul>` 要素](/ja/docs/Web/HTML/Element/ul)
 - [HTML `<ol>` 要素](/ja/docs/Web/HTML/Element/ol)
-- [ARIA: list ロール](/ja/docs/Web/Accessibility/ARIA/Roles/List_role)
-- [ARIA: group ロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role)
+- [ARIA: list ロール](/ja/docs/Web/Accessibility/ARIA/Roles/list_role)
+- [ARIA: group ロール](/ja/docs/Web/Accessibility/ARIA/Roles/group_role)
 
 1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

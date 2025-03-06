@@ -7,7 +7,7 @@ slug: Web/API/Location/search
 
 A propriedade **`search`** da interface {{domxref("Location")}} é um texto de busca, também chamado de _query string_ ou _querystring_; isso é, uma {{domxref("USVString")}} contendo um `'?'` seguido pelos parâmetros da URL.
 
-Os navegadores modernos fornecem o [`URLSearchParams`](/pt-BR/docs/Web/API/URLSearchParams/get#Examples) e o [`URL.searchParams`](/pt-BR/docs/Web/API/URL/searchParams#Examples) para facilitar a análise dos parâmetros da querystring.
+Os navegadores modernos fornecem o [`URLSearchParams`](/pt-BR/docs/Web/API/URLSearchParams/get#examples) e o [`URL.searchParams`](/pt-BR/docs/Web/API/URL/searchParams#examples) para facilitar a análise dos parâmetros da querystring.
 
 ## Sintaxe
 

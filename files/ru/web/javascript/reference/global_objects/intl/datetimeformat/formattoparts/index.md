@@ -104,7 +104,7 @@ formatter.formatToParts(date);
 ];
 ```
 
-Теперь информация доступна по отдельности и может быть отформатирована и объединена снова в пользовательском порядке. Например, используя {{jsxref("Array.prototype.map()")}}, [стрелочные функции](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions), [инструкцию switch](/ru/docs/Web/JavaScript/Reference/Statements/switch), [шаблонные строки](/ru/docs/Web/JavaScript/Reference/template_strings) и {{jsxref("Array.prototype.reduce()")}}.
+Теперь информация доступна по отдельности и может быть отформатирована и объединена снова в пользовательском порядке. Например, используя {{jsxref("Array.prototype.map()")}}, [стрелочные функции](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions), [инструкцию switch](/ru/docs/Web/JavaScript/Reference/Statements/switch), [шаблонные строки](/ru/docs/Web/JavaScript/Reference/Template_literals) и {{jsxref("Array.prototype.reduce()")}}.
 
 ```js
 var dateString = formatter

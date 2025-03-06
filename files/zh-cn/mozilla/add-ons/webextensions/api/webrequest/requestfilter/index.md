@@ -12,7 +12,7 @@ webRequest 事件参数
 该参数值是一个对象，包括以下属性：
 
 - `urls`
-  - : 字符串数组类型，数组内的每个字符串为[模式匹配](/zh-CN/Add-ons/WebExtensions/Match_patterns)格式。当请求地址符合给定模式时，事件监听器才会响应。需注意的是，仅支持 http 和 HTTPS 协议的参数地址，其他协议即使与该给定模式匹配也不会响应。
+  - : 字符串数组类型，数组内的每个字符串为[模式匹配](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)格式。当请求地址符合给定模式时，事件监听器才会响应。需注意的是，仅支持 http 和 HTTPS 协议的参数地址，其他协议即使与该给定模式匹配也不会响应。
 - `types`{{optional_inline}}
   - : webRequest.ResourceType 类型的数组，表示资源类型列表。例如：stylesheets、images、scripts。事件监听器仅响应出现在该指定列表的资源类型。
 - `tabId`{{optional_inline}}

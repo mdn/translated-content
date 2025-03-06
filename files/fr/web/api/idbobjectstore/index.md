@@ -16,7 +16,7 @@ Le magasin d'objet peut en plus de l'index primaire avoir des index qui ordonnen
 ## Méthodes
 
 - {{domxref("IDBObjectStore.add()")}}
-  - : Une {{domxref("IDBRequest","requête")}} pour ajouter un enregistrement au magasin d'objet relié, un [clone structuré](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) de la valeur passé en paramètre et sa clé .
+  - : Une {{domxref("IDBRequest","requête")}} pour ajouter un enregistrement au magasin d'objet relié, un [clone structuré](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) de la valeur passé en paramètre et sa clé .
 - {{domxref("IDBObjectStore.clear()")}}
   - : Une {{domxref("IDBRequest","requête")}} pour vider le magasin d'objet relié.
 - {{domxref("IDBObjectStore.delete()")}}
@@ -34,7 +34,7 @@ Le magasin d'objet peut en plus de l'index primaire avoir des index qui ordonnen
 - {{domxref("IDBObjectStore.index()")}}
   - : L'{{domxref("IDBIndex","accès")}} à l'index dont le nom est passé en paramètre du magasin d'objet relié.
 - {{domxref("IDBObjectStore.put()")}}
-  - : Une {{domxref("IDBRequest","requête")}} pour ajouter ou mettre à jour un enregistrement du magasin d'objet relié, un [clone structuré](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) de la valeur passée en paramètre et sa clé.
+  - : Une {{domxref("IDBRequest","requête")}} pour ajouter ou mettre à jour un enregistrement du magasin d'objet relié, un [clone structuré](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) de la valeur passée en paramètre et sa clé.
 - {{domxref("IDBObjectStore.openCursor()")}}
   - : Une {{domxref("IDBRequest","requête")}} récursive suivant un {{domxref("IDBCursorWithValue","curseur avec valeur")}} qui itère le magasin d'objet relié.
 - {{domxref("IDBObjectStore.openKeyCursor()")}}
@@ -47,7 +47,7 @@ Le magasin d'objet peut en plus de l'index primaire avoir des index qui ordonnen
 - {{domxref("IDBObjectStore.indexNames")}} {{readonlyInline}}
   - : La liste des noms d'index du magasin d'objet relié.
 - {{domxref("IDBObjectStore.keyPath")}} {{readonlyInline}}
-  - : Le [nom de la clé](/fr/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath) du magasin d'objets relié.
+  - : Le [nom de la clé](/fr/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keypath) du magasin d'objets relié.
 - {{domxref("IDBObjectStore.name")}} {{readonlyInline}}
   - : Le nom du magasin d'objet relié.
 - {{domxref("IDBObjectStore.transaction")}} {{readonlyInline}}

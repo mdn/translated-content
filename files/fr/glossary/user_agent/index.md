@@ -23,4 +23,4 @@ Une chaîne classique d'agent utilisateur ressemble à ceci : `"Mozilla/5.0 (X11
 
 ### Référence technique
 
-- En-tête [User agent](http://tools.ietf.org/html/rfc2616#section-14.43) dans la RFC 2616
+- En-tête [User agent](https://tools.ietf.org/html/rfc2616#section-14.43) dans la RFC 2616

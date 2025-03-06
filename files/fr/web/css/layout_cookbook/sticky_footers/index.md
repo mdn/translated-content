@@ -45,4 +45,4 @@ On commence de la même façon mais on utilise `display:flex` plutôt que `displ
 
 ## Voir aussi
 
-- [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)

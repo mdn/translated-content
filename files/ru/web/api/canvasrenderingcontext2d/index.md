@@ -258,7 +258,7 @@ ctx.fillRect(10, 10, 55, 50);
 ### Только WebKit
 
 - {{non-standard_inline}} `CanvasRenderingContext2D.webkitBackingStorePixelRatio`
-  - : Размер хранилища по отношению к элементу canvas. Смотри [High DPI Canvas](http://www.html5rocks.com/en/tutorials/canvas/hidpi/).
+  - : Размер хранилища по отношению к элементу canvas. Смотри [High DPI Canvas](https://www.html5rocks.com/en/tutorials/canvas/hidpi/).
 - {{non-standard_inline}} `CanvasRenderingContext2D.webkitGetImageDataHD`
   - : Предназначался для HD хранилищ, но удалён из спецификации canvas.
 - {{non-standard_inline}} `CanvasRenderingContext2D.webkitPutImageDataHD`

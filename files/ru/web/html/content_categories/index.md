@@ -108,7 +108,7 @@ slug: Web/HTML/Content_categories
 Данная категория включает несколько подкатегорий:
 
 - listed
-  - : Элементы, перечисленные в IDL коллекциях [form.elements](/ru/docs/DOM/form.elements) и fieldset.elements. Включают {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, и {{HTMLElement("textarea")}}.
+  - : Элементы, перечисленные в IDL коллекциях [form.elements](/ru/docs/Web/API/HTMLFormElement/elements) и fieldset.elements. Включают {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, и {{HTMLElement("textarea")}}.
 - labelable
   - : Элементы, которые могут ассоциироваться с элементами {{HTMLElement("label")}}. Включают {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}} и {{HTMLElement("textarea")}}.
 - submittable

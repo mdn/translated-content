@@ -5,7 +5,7 @@ slug: Web/MathML
 
 {{MathMLRef}}
 
-**Mathematical Markup Language (MathML)** 是一種基於 [XML](/zh-TW/docs/XML) 的延伸，可以用來描述數學符號以及保留數學式結構和內容。在這裡你可以找到參考文件, 範例以及工具。你可以從 [slides for the innovation fairs at Mozilla Summit 2013](http://fred-wang.github.io/MozSummitMathML/index.html) 做個快速的大致瀏覽。
+**Mathematical Markup Language (MathML)** 是一種基於 [XML](/zh-TW/docs/Web/XML) 的延伸，可以用來描述數學符號以及保留數學式結構和內容。在這裡你可以找到參考文件, 範例以及工具。你可以從 [slides for the innovation fairs at Mozilla Summit 2013](http://fred-wang.github.io/MozSummitMathML/index.html) 做個快速的大致瀏覽。
 
 ## MathML references
 

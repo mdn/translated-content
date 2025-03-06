@@ -139,5 +139,5 @@ grid-area: unset;
 - {{cssxref("grid-column")}}
 - {{cssxref("grid-column-start")}}
 - {{cssxref("grid-column-end")}}
-- [Guide : les zones des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+- [Guide : les zones des grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
 - Tutoriel vidéo : [les zones des grilles CSS (en anglais)](https://gridbyexample.com/video/grid-template-areas/)

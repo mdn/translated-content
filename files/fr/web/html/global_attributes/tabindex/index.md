@@ -5,9 +5,39 @@ slug: Web/HTML/Global_attributes/tabindex
 
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`tabindex`** est un entier indiquant si l'élément peut capturer le focus et si c'est le cas, dans quel ordre il le capture lors de la navigation au clavier (généralement à l'aide de la touche <kbd>Tab</kbd>). Si plusieurs éléments partagent la même valeur d'attribut **`tabindex`**, leur ordre sera calculé en fonction de leur position dans le document.
+L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`tabindex`** est un entier indiquant si l'élément peut capturer le focus et si c'est le cas, dans quel ordre il le capture lors de la navigation au clavier (généralement à l'aide de la touche <kbd>Tab</kbd>). Si plusieurs éléments partagent la même valeur d'attribut **`tabindex`**, leur ordre sera calculé en fonction de leur position dans le document.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-tabindex.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: tabindex", "tabbed-standard")}}
+
+```html interactive-example
+<p>Click anywhere in this pane, then try tabbing through the elements.</p>
+
+<label>First in tab order:<input type="text" /></label>
+
+<div tabindex="0">Tabbable due to tabindex.</div>
+
+<div>Not tabbable: no tabindex.</div>
+
+<label>Third in tab order:<input type="text" /></label>
+```
+
+```css interactive-example
+p {
+  font-style: italic;
+  font-weight: bold;
+}
+
+div,
+label {
+  display: block;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+div:focus {
+  font-weight: bold;
+}
+```
 
 Cet attribut peut prendre l'une des valeurs suivantes :
 
@@ -48,9 +78,9 @@ Si on utilise l'attribut `tabindex` sur un élément {{HTMLElement("div")}}, on 
 
 ## Accessibilité
 
-Il faut éviter d'utiliser l'attribut `tabindex` avec du contenu [non-interactif](/fr/docs/Web/Guide/HTML/Catégories_de_contenu#Contenu_interactif) si on souhaite uniquement rendre cet élément accessible au clavier (par exemple en voulant utiliser un élément {{HTMLElement("div")}} plutôt qu'un élément {{HTMLElement("button")}}).
+Il faut éviter d'utiliser l'attribut `tabindex` avec du contenu [non-interactif](/fr/docs/Web/HTML/Content_categories#contenu_interactif) si on souhaite uniquement rendre cet élément accessible au clavier (par exemple en voulant utiliser un élément {{HTMLElement("div")}} plutôt qu'un élément {{HTMLElement("button")}}).
 
-Les composants rendus interactifs par cette méthode ne feront pas partie de l'[arbre d'accessibilité](/fr/Apprendre/a11y/What_is_accessibility#Accessibility_APIs) et ne pourront pas être analysés par les technologies d'assistance. Le contenu devrait être décrit sémantiquement avec des éléments interactifs ({{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, etc.). En effet, ces éléments disposent nativement de rôles et d'états qui peuvent être utilisées par les API d'accessibilité (il faut sinon les gérer via [ARIA](/fr/docs/Accessibilité/ARIA)).
+Les composants rendus interactifs par cette méthode ne feront pas partie de l'[arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) et ne pourront pas être analysés par les technologies d'assistance. Le contenu devrait être décrit sémantiquement avec des éléments interactifs ({{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, etc.). En effet, ces éléments disposent nativement de rôles et d'états qui peuvent être utilisées par les API d'accessibilité (il faut sinon les gérer via [ARIA](/fr/docs/Web/Accessibility/ARIA)).
 
 - [Utiliser l'attribut `tabindex`|_The Paciello Group_ (en anglais)](https://developer.paciellogroup.com/blog/2014/08/using-the-tabindex-attribute/)
 
@@ -65,6 +95,6 @@ Les composants rendus interactifs par cette méthode ne feront pas partie de l'[
 ## Voir aussi
 
 - La propriété {{domxref("HTMLElement.tabIndex")}} qui reflète cet attribut.
-- [Les différents attributs universels](/fr/docs/Web/HTML/Attributs_universels)
+- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
 - [Ce billet en anglais sur l'accessibilité et `tabindex`](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html) écrit par Adrian Roselli
 - [`Document.hasFocus()`](/fr/docs/Web/API/Document/hasFocus)

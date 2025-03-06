@@ -22,7 +22,7 @@ slug: Web/MathML/Element/mn
 - mathcolor
   - : Цвет текста. Вы можете использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/Web/CSS/color_value).
 - mathsize
-  - : Размер контента. Смотрите [length](/ru/docs/Web/CSS/размер) для возможных значений.
+  - : Размер контента. Смотрите [length](/ru/docs/Web/CSS/length) для возможных значений.
     Устаревшие значения: `small`, `normal` и `big`. Они будут удалены в будущем.
 - mathvariant
 

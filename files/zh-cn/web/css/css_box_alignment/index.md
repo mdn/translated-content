@@ -174,7 +174,7 @@ CSS 盒子对齐 (Box Alignment) 模块指定了在各种 CSS 盒子布局模型
 - [Box alignment in Flexbox](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
 - [Box alignment in CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Grid_Layout)
 - [Box alignment in multiple-column layout](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_in_Multi-column_Layout)
-- [Box alignment for block, absolutely positioned and table layout](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Block_Abspos_Tables)
+- [Box alignment for block, absolutely positioned and table layout](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
 
 ## 参考
 

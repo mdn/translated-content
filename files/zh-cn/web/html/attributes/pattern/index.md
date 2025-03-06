@@ -7,13 +7,42 @@ slug: Web/HTML/Attributes/pattern
 
 **`pattern`** 属性规定了一个表单控件的值应该匹配的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。如果一个非 `null` 值不满足 `pattern` 值设置的约束，{{domxref('ValidityState')}} 对象的只读属性 {{domxref('ValidityState.patternMismatch','patternMismatch')}} 将为 true。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-pattern.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: pattern", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="username">Username: (3-16 characters)</label>
+<input
+  id="username"
+  name="username"
+  type="text"
+  value="Sasha"
+  pattern="\w{3,16}"
+  required />
+
+<label for="pin">PIN: (4 digits)</label>
+<input id="pin" name="pin" type="password" pattern="\d{4,4}" required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:valid {
+  background-color: palegreen;
+}
+
+input:invalid {
+  background-color: lightpink;
+}
+```
 
 ## 概述
 
 `pattern` 属性是 {{HTMLElement("input/text", "text")}}、{{HTMLElement("input/tel", "tel")}}、{{HTMLElement("input/email", "email")}}、{{HTMLElement("input/url", "url")}}、{{HTMLElement("input/password", "password")}} 和 {{HTMLElement("input/search", "search")}} 等输入类型的属性。
 
-当指定 `pattern` 属性时，它是一个正则表达式，代表输入的 [`value`](/zh-CN/docs/Web/HTML/Global_attributes#value) 必须与之匹配，以便该值能够通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。它必须是一个有效的 JavaScript 正则表达式，它会被 {{jsxref("RegExp")}} 类型所使用，正如我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中所述；在编译正则表达式时指定 `'u'` 标志，以便将该模式作为 Unicode 码点序列，而不是 ASCII。模式文本周围不应指定正斜杠。
+当指定 `pattern` 属性时，它是一个正则表达式，代表输入的 [`value`](/zh-CN/docs/Web/HTML/Global_attributes#value) 必须与之匹配，以便该值能够通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。它必须是一个有效的 JavaScript 正则表达式，它会被 {{jsxref("RegExp")}} 类型所使用，正如我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中所述；在编译正则表达式时指定 `'u'` 标志，以便将该模式作为 Unicode 码点序列，而不是 ASCII。模式文本周围不应指定正斜杠。
 
 如果没有指定模式或无效，则不应用正则表达式，此属性被忽略。
 
@@ -84,7 +113,7 @@ input:invalid {
 
 ### 指定一种模式
 
-你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性来指定一个正则表达式，输入的值必须与之匹配，才能被视为有效（参见[根据正则表达式进行验证](/zh-CN/docs/Learn/Forms/Form_validation#使用正则表达式校验)了解关于使用正则表达式来验证输入的简单速成课程）。
+你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性来指定一个正则表达式，输入的值必须与之匹配，才能被视为有效（参见[根据正则表达式进行验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation#使用正则表达式校验)了解关于使用正则表达式来验证输入的简单速成课程）。
 
 下面的例子将值限制为 4-8 个字符，并要求它只包含小写字母。
 
@@ -157,6 +186,6 @@ input:valid + span::after {
 
 ## 参见
 
-- [约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)
-- [表单数据校验](/zh-CN/docs/Learn/Forms/Form_validation)
+- [约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)
+- [表单数据校验](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)

@@ -186,7 +186,7 @@ t3Closure({ nombre: "MDN", edad: 30 }); //"Me llamo MDN. Tengo casi 30 años."
 
 ### Cadenas en crudo (raw)
 
-La propiedad especial `raw`, disponible en el primer argumento de la función de etiqueta, permite acceso a las cadenas de caracteres tal como fueron ingresadas, sin procesar [secuencias de escape](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Literales_String).
+La propiedad especial `raw`, disponible en el primer argumento de la función de etiqueta, permite acceso a las cadenas de caracteres tal como fueron ingresadas, sin procesar [secuencias de escape](/es/docs/Web/JavaScript/Guide/Grammar_and_types#literales_string).
 
 ```js
 function etiqueta(cadenas) {
@@ -234,7 +234,7 @@ latex`\unicode`;
 
 Las plantillas etiquetadas deberías permitir la inserción de lenguages (como los [DSL](https://en.wikipedia.org/wiki/Domain-specific_language), o [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), en donde otras secuencias de escape se ven comúnmente. La propuesta para ECMAScript [Template Literal Revision](https://tc39.es/proposal-template-literal-revision/) (Revisión de Plantilla Literal) (Cuarta Etapa, en camino a ser integrada al estándar de ECMAScript 2018) elimina la restricción de las secuencias de escape en ECMAScript para las plantillas etiquetadas.
 
-Aún así, las secuencias de escape no permitidas deben ser representadas en la representación "cocinada" de la cadena. Aparecerán como elementos [no definidos](/es/docs/Glossary/undefined) en el array llamado "cocinado" en el siguiente ejemplo.
+Aún así, las secuencias de escape no permitidas deben ser representadas en la representación "cocinada" de la cadena. Aparecerán como elementos [no definidos](/es/docs/Glossary/Undefined) en el array llamado "cocinado" en el siguiente ejemplo.
 
 ```js
 function latex(str) {

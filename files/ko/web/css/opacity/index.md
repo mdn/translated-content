@@ -11,7 +11,7 @@ slug: Web/CSS/opacity
 
 `opacity`는 요소의 내용을 포함해 모든 곳에 영향을 주지만 자식 요소가 상속하지는 않습니다. 따라서 요소와 자식의 투명도가 서로 다르더라도 배경에 대해서는 상대적으로 같은 투명도를 갖습니다.
 
-`opacity` 값이 `1`이 아니면 요소를 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)에 배치합니다.
+`opacity` 값이 `1`이 아니면 요소를 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)에 배치합니다.
 
 자식 요소는 불투명하게 유지하고 싶다면 {{cssxref("background")}} 속성을 대신 사용하세요.
 

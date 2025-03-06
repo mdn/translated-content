@@ -27,7 +27,7 @@ objectURL = URL.createObjectURL(object);
 
 ## Ejemplo
 
-Ver [Usando objetos URL para representar imágenes](/es/docs/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images).
+Ver [Usando objetos URL para representar imágenes](/es/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images).
 
 ## Notas
 
@@ -48,4 +48,4 @@ Cada vez que se llama a `createObjectURL()`, un nuevo objeto URL es creado, incl
 
 - {{domxref("URL.revokeObjectURL()")}}
 - {{domxref("HTMLMediaElement.srcObject")}}
-- [Usando archivos desde aplicaciones web](/es/docs/Using_files_from_web_applications)
+- [Usando archivos desde aplicaciones web](/es/docs/Web/API/File_API/Using_files_from_web_applications)

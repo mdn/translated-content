@@ -45,7 +45,7 @@ Feature-Policy: <directive> <allowlist>
 - {{httpheader('Feature-Policy/autoplay','autoplay')}}
   - : Controla se o documento atual é permitido de tocar a mídia requisitada automaticamente através da interface {{domxref("HTMLMediaElement")}}. Quando esta política é desabilitada e não há ação do usuário, o {{domxref("Promise")}} retornado pelo {{domxref("HTMLMediaElement.play()")}} irá rejeitar com uma {{domxref("DOMException")}}. O atributo _autoplay_ em elementos {{HTMLELement("audio")}} e {{HTMLElement("video")}} será ignorado.
 - {{httpheader('Feature-Policy/battery','battery')}}
-  - : Controla se o uso da [API de Status de Bateria](/docs/Web/API/Battery_Status_API) é permitido. Quando esta política está desabilitada, o {{JSxRef("Promise")}} retornado pelo{{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} irá rejeitar com um {{DOMxRef("NotAllowedError")}} {{DOMxRef("DOMException")}}.
+  - : Controla se o uso da [API de Status de Bateria](/pt-BR/docs/Web/API/Battery_Status_API) é permitido. Quando esta política está desabilitada, o {{JSxRef("Promise")}} retornado pelo{{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} irá rejeitar com um {{DOMxRef("NotAllowedError")}} {{DOMxRef("DOMException")}}.
 - {{httpheader('Feature-Policy/camera', 'camera')}}
   - : Controla se o documento atual é permitido de usar entradas de dispositivos de vídeo. Quando esta política está desabilitada, o {{jsxref("Promise")}} retornado pelo {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} irá rejeitar com um {{DOMxRef("NotAllowedError")}} {{DOMxRef("DOMException")}}.
 - {{HTTPHeader('Feature-Policy/display-capture', 'display-capture')}}
@@ -117,7 +117,7 @@ Especificando a palavra-chave `'none'` para a lista de origem, as funcionalidade
 
 ## Veja também
 
-- [Feature Policy](/pt-BR/docs/Web/HTTP/Feature_Policy)
+- [Feature Policy](/pt-BR/docs/Web/HTTP/Permissions_Policy)
 - [Usando Feature Policy](/pt-BR/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
 - {{DOMxRef("Document.featurePolicy")}} and {{DOMxRef("FeaturePolicy")}}
 - [Feature-Policy Tester (Chrome Developer Tools extensão)](https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop)

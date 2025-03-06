@@ -165,7 +165,7 @@ document.getElementById("size-16").onclick = size16;
 
 没有[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)之前的 JavaScript 没有声明[私有方法](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties#private_methods)的原生方式，但使用闭包模拟私有方法是可能的。私有方法不仅有利于限制代码访问，还为管理全局命名空间提供强大能力。
 
-下面的代码展示了如何使用闭包定义能访问私有函数和私有变量的公共函数。注意，这些闭包遵循[模块设计模式](http://www.google.com/search?q=javascript+module+pattern)。
+下面的代码展示了如何使用闭包定义能访问私有函数和私有变量的公共函数。注意，这些闭包遵循[模块设计模式](https://www.google.com/search?q=javascript+module+pattern)。
 
 ```js
 const counter = (function () {

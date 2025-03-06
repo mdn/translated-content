@@ -54,7 +54,7 @@ getAll(options)
 
 - `partitioned`
 
-  - : 論理値で、クッキーがパーティション化クッキーであるか (`true`) そうでないか (`false`) を表します。詳しくは [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Partitioned_cookies) を参照してください。
+  - : 論理値で、クッキーがパーティション化クッキーであるか (`true`) そうでないか (`false`) を表します。詳しくは [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) を参照してください。
 
 - `path`
 
@@ -73,7 +73,7 @@ getAll(options)
 
 - `secure`
 
-  - : 論理値で、このクッキーが安全なコンテキストでのみ使用されるか (`true`) またはそうではないか (`false`) を示します。
+  - : 論理値で、このクッキーが保護されたコンテキストでのみ使用されるか (`true`) またはそうではないか (`false`) を示します。
 
 - `value`
   - : このクッキーの値が入った文字列です。

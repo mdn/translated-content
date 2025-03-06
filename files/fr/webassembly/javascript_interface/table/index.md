@@ -38,7 +38,7 @@ var monTableau = new WebAssembly.Table(descripteurTableau);
 
 ## Instances de `Table`
 
-Toutes les instances `Table` héritent des propriétés [du prototype du constructeur](/fr/docs/Web/JavaScript/Reference/Objets_globaux/WebAssembly/Table/prototype) `Table()`. Ce dernier peut être utilisé afin de modifier l'ensemble des instances `Table`.
+Toutes les instances `Table` héritent des propriétés [du prototype du constructeur](/fr/docs/WebAssembly/JavaScript_interface/Table) `Table()`. Ce dernier peut être utilisé afin de modifier l'ensemble des instances `Table`.
 
 ### Propriétés
 

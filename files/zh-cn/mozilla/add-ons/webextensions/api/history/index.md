@@ -12,15 +12,15 @@ slug: Mozilla/Add-ons/WebExtensions/API/history
 
 浏览器历史记录是对用户所访问的页面按时间顺序进行的记录和保存。history API 可以帮你实现以下功能：
 
-- [查找浏览器历史记录中出现过的页面](/zh-CN/Add-ons/WebExtensions/API/history/search)
-- [移除浏览器历史记录中的单个页面](/zh-CN/Add-ons/WebExtensions/API/history/deleteUrl)
-- [向浏览器历史记录中添加页面](/zh-CN/Add-ons/WebExtensions/API/history/addUrl)
-- [移除所有浏览器历史记录中的页面](/zh-CN/Add-ons/WebExtensions/API/history/deleteAll)
+- [查找浏览器历史记录中出现过的页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/history/search)
+- [移除浏览器历史记录中的单个页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteUrl)
+- [向浏览器历史记录中添加页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/history/addUrl)
+- [移除所有浏览器历史记录中的页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteAll)
 
 然而，用户可能多次访问单个页面，因此 API 中有访问集合“visits”的概念。所以，该 API 还可以做如下使用：
 
-- [获取用户对单个页面的所有访问记录的集合](/zh-CN/Add-ons/WebExtensions/API/history/getVisits)
-- [移除给定期间内任意页面的访问记录的集合](/zh-CN/Add-ons/WebExtensions/API/history/deleteRange)
+- [获取用户对单个页面的所有访问记录的集合](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/history/getVisits)
+- [移除给定期间内任意页面的访问记录的集合](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteRange)
 
 使用该 API 之前，扩展程序必须在其 [`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中获取 history 的[许可](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 

@@ -34,7 +34,7 @@ Si vous avez créé plus d'un élément de menu contextuel ou plus d'un élémen
 
 ## Icônes
 
-Si vous avez spécifié des icônes pour votre extension à l'aide de la [clé de manifest "icons"](/fr/Add-ons/WebExtensions/manifest.json/icons), votre élément de menu affichera l'icône spécifiée à côté de son libellé. Le navigateur va essayer de choisir une icône de 16x16 pixels pour un affichage normal ou une icône de 32x32 pixels pour un affichage haute définition :
+Si vous avez spécifié des icônes pour votre extension à l'aide de la [clé de manifest "icons"](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons), votre élément de menu affichera l'icône spécifiée à côté de son libellé. Le navigateur va essayer de choisir une icône de 16x16 pixels pour un affichage normal ou une icône de 32x32 pixels pour un affichage haute définition :
 
 ![](menus-2.png)
 

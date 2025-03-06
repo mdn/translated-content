@@ -9,7 +9,41 @@ slug: Web/HTML/Element/input/range
 
 由于这种小部件不精确，因此除非控件的确切值不重要，否则通常不应使用它。
 
-{{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;range&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Audio settings:</p>
+
+<div>
+  <input type="range" id="volume" name="volume" min="0" max="11" />
+  <label for="volume">Volume</label>
+</div>
+
+<div>
+  <input
+    type="range"
+    id="cowbell"
+    name="cowbell"
+    min="0"
+    max="100"
+    value="90"
+    step="10" />
+  <label for="cowbell">Cowbell</label>
+</div>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 如果用户的浏览器不支持 `range` 类型，它将回退并将其视为 `{{HTMLElement('input/text', 'text')}}` 输入。
 
@@ -76,13 +110,13 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ### max
 
-允许值范围内的最大值。如果输入到元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 超过此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性的值不是数字，则元素没有最大值。
+允许值范围内的最大值。如果输入到元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 超过此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性的值不是数字，则元素没有最大值。
 
 此值必须大于或等于 `min` 属性的值。请参见 HTML [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性。
 
 ### min
 
-允许值范围内的最小值。如果元素的[`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 指定的值不是有效数字，则输入没有最小值。
+允许值范围内的最小值。如果元素的[`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `min` 指定的值不是有效数字，则输入没有最小值。
 
 该值必须小于或等于 [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性的值。请参见 HTML [`min`](/zh-CN/docs/Web/HTML/Attributes/min) 属性。
 
@@ -323,10 +357,10 @@ input[type="range"] {
 
 ## 另请参考
 
-- [HTML 表单](/zh-CN/docs/Learn/Forms)
+- [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} 元素和其基于的 {{domxref("HTMLInputElement")}} 接口
 - [`<input type="number">`](/zh-CN/docs/Web/HTML/Element/input/number)
 - {{domxref('validityState.rangeOverflow')}} 和 {{domxref('validityState.rangeUnderflow')}}
 - [使用 ConstantSourceNode 控制多个参数](/zh-CN/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [设置范围元素的样式](https://css-tricks.com/sliding-nightmare-understanding-range-input)
-- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

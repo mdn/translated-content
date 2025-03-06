@@ -44,7 +44,7 @@ Para selecionar o algoritmo a ser usado, os navegadores e servidores usam a [neg
 
 Como a copressão de dados traz melhorias significativas no desempenho, recomenda-se ativá-la para todos os arquivos, com exceção daqueles já comprimidos, como imagens, arquivos de áudio e vídeos.
 
-Apache suporta compressão e usa [mod_deflate](http://httpd.apache.org/docs/current/mod/mod_deflate.html); para nginx existe [ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html); para IIS, o elemento [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression).
+Apache suporta compressão e usa [mod_deflate](https://httpd.apache.org/docs/current/mod/mod_deflate.html); para nginx existe [ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html); para IIS, o elemento [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression).
 
 ## Compressão de nó a nó (_Hop-by-hop_)
 

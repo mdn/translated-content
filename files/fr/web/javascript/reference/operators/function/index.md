@@ -8,9 +8,18 @@ slug: Web/JavaScript/Reference/Operators/function
 Le mot-clé **`function`** permet de définir une fonction à l'intérieur d'une expression.
 
 > [!NOTE]
-> Il est également possible de définir des fonctions grâce au constructeur [`Function`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function) et aux [déclarations de fonction](/fr/docs/Web/JavaScript/Reference/Instructions/function).
+> Il est également possible de définir des fonctions grâce au constructeur [`Function`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) et aux [déclarations de fonction](/fr/docs/Web/JavaScript/Reference/Statements/function).
 
-{{EmbedInteractiveExample("pages/js/expressions-functionexpression.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - function expression")}}
+
+```js interactive-example
+const getRectArea = function (width, height) {
+  return width * height;
+};
+
+console.log(getRectArea(3, 4));
+// Expected output: 12
+```
 
 ## Syntaxe
 
@@ -30,11 +39,11 @@ function [nom]([param1[, param2[, …, paramN]]]) {
   - : Les instructions constituant le corps de la fonction.
 
 > [!NOTE]
-> À partir d'ES2015/ES6, on peut également former des expressions de fonction avec [des fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées).
+> À partir d'ES2015/ES6, on peut également former des expressions de fonction avec [des fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ## Description
 
-Une expression de fonction est très similaire et a presque la même syntaxe qu'une déclaration de fonction (consultez la page sur l'instruction [`function`](/fr/docs/Web/JavaScript/Reference/Instructions/function) pour plus de détails). La différence principale entre une expression de fonction et une instruction est le nom de la fonction. En effet, pour les expressions, celui peut être omis (on parle alors d'une fonction _anonyme_). Consultez l'article [Fonctions](/fr/docs/Web/JavaScript/Guide/Fonctions) pour des informations concernant les différences entre les instructions de fonctions et les expressions de fonctions. Une fonction peut être appelée [immédiatement après sa définition (on parle alors de fonction invoquée immédiatement ou _IIFE_ pour _Immediately Invoked Function Expression_ en anglais)](/fr/docs/Glossaire/IIFE).
+Une expression de fonction est très similaire et a presque la même syntaxe qu'une déclaration de fonction (consultez la page sur l'instruction [`function`](/fr/docs/Web/JavaScript/Reference/Statements/function) pour plus de détails). La différence principale entre une expression de fonction et une instruction est le nom de la fonction. En effet, pour les expressions, celui peut être omis (on parle alors d'une fonction _anonyme_). Consultez l'article [Fonctions](/fr/docs/Web/JavaScript/Guide/Functions) pour des informations concernant les différences entre les instructions de fonctions et les expressions de fonctions. Une fonction peut être appelée [immédiatement après sa définition (on parle alors de fonction invoquée immédiatement ou _IIFE_ pour _Immediately Invoked Function Expression_ en anglais)](/fr/docs/Glossary/IIFE).
 
 ### Remontée (_hoisting_) des expressions de fonction
 
@@ -60,7 +69,7 @@ var x = function (y) {
 
 ### Expression nommée
 
-Si on souhaite faire référence à une fonction au sein du corps de la fonction, il faudra créer une expression de fonction nommée. Le nom sera alors local au corps de la fonction (portée). Cela permet entre autres d'éviter d'utiliser la propriété non-standard [`arguments.callee`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/callee).
+Si on souhaite faire référence à une fonction au sein du corps de la fonction, il faudra créer une expression de fonction nommée. Le nom sera alors local au corps de la fonction (portée). Cela permet entre autres d'éviter d'utiliser la propriété non-standard [`arguments.callee`](/fr/docs/Web/JavaScript/Reference/Functions/arguments/callee).
 
 ```js
 var math = {
@@ -73,7 +82,7 @@ var math = {
 };
 ```
 
-La variable affectée à l'expression de fonction aura une propriété `name`. Ce nom n'est pas modifié si la variable est réaffectée. Si le nom de la fonction est absent, ce sera celui de la variable (nom « implicite »). Cela vaut également pour [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) :
+La variable affectée à l'expression de fonction aura une propriété `name`. Ce nom n'est pas modifié si la variable est réaffectée. Si le nom de la fonction est absent, ce sera celui de la variable (nom « implicite »). Cela vaut également pour [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) :
 
 ```js
 var toto = function () {};
@@ -117,6 +126,6 @@ var b = "monde";
 - {{jsxref("Instructions/function*", "Instruction function*")}}
 - {{jsxref("Opérateurs/function*", "Expression function*")}}
 - {{jsxref("GeneratorFunction")}}
-- [Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées)
-- [Les expressions de fonctions asynchrones (l'opérateur `async function`)](/fr/docs/Web/JavaScript/Reference/Opérateurs/async_function)
-- [Les déclarations de fonctions asynchrones (l'instruction `async function`)](/fr/docs/Web/JavaScript/Reference/Instructions/async_function)
+- [Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [Les expressions de fonctions asynchrones (l'opérateur `async function`)](/fr/docs/Web/JavaScript/Reference/Operators/async_function)
+- [Les déclarations de fonctions asynchrones (l'instruction `async function`)](/fr/docs/Web/JavaScript/Reference/Statements/async_function)

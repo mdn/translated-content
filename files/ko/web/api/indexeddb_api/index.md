@@ -17,7 +17,7 @@ IndexedDB는 SQL을 사용하는 관계형 데이터베이스(RDBMS)와 같이 �
 
 - [IndexedDB 주요 특성 및 기본 용어 (en-US)](/ko/docs/Web/API/IndexedDB_API/Basic_Terminology)에 대해 더 알아보세요.
 - [IndexedDB 사용하기](/ko/docs/Web/API/IndexedDB_API/Using_IndexedDB) 안내서를 통해 IndexedDB의 기초적인 비동기 사용법을 배워보세요.
-- [서비스 워커를 사용해 PWA가 오프라인에서 동작하게 만들기](/ko/docs/Web/Progressive_web_apps/Offline_Service_workers) 문서에서 IndexedDB를 사용해 오프라인 데이터를 저장하고, 서비스 워커를 사용해 오프라인 자산을 저장하는 방법을 살펴보세요.
+- [서비스 워커를 사용해 PWA가 오프라인에서 동작하게 만들기](/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers) 문서에서 IndexedDB를 사용해 오프라인 데이터를 저장하고, 서비스 워커를 사용해 오프라인 자산을 저장하는 방법을 살펴보세요.
 
 > [!NOTE]
 > 대부분의 웹 저장 솔루션처럼, IndexedDB도 [동일 출처 정책](https://www.w3.org/Security/wiki/Same_Origin_Policy)을 따릅니다. 그렇기 때문에, 저장한 데이터는 같은 도메인에서만 접근할 수 있으며 다른 도메인에서는 접근할 수 없습니다.
@@ -28,11 +28,11 @@ IndexedDB 작업은 애플리케이션 블록을 방지하기 위해 모두 비�
 
 ### 저장 용량 한도와 제거 기준
 
-하나의 종류 또는 다른 종류의 데이터를 클라이언트 측(즉, 로컬 디스크 상)에 저장하는 웹 기술은 많습니다. IndexedDB는 가장 일반적으로 언급되는 것입니다. 브라우저가 얼마만큼의 공간을 web data storage에 할당할지 그리고 용량이 한계에 도달했을 때 무엇을 지울지의 프로세스는 간단하지 않고, 브라우저마다 다릅니다. [브라우저 저장 공간 제한과 축출 기준 (en-US)](/ko/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)을 Firefox의 경우에 이것이 어떻게 작동하는지 설명하려고 시도합니다.
+하나의 종류 또는 다른 종류의 데이터를 클라이언트 측(즉, 로컬 디스크 상)에 저장하는 웹 기술은 많습니다. IndexedDB는 가장 일반적으로 언급되는 것입니다. 브라우저가 얼마만큼의 공간을 web data storage에 할당할지 그리고 용량이 한계에 도달했을 때 무엇을 지울지의 프로세스는 간단하지 않고, 브라우저마다 다릅니다. [브라우저 저장 공간 제한과 축출 기준 (en-US)](/ko/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)을 Firefox의 경우에 이것이 어떻게 작동하는지 설명하려고 시도합니다.
 
 ## 인터페이스
 
-데이터베이스에 접속하기 위해서는 [window](/ko/docs/Web/API/Window) 객체의 [`indexedDB` (en-US)](/ko/docs/Web/API/indexedDB) 속성에서 [`open()` (en-US)](/ko/docs/Web/API/IDBFactory/open)을 호출해야 합니다. 이 메소드는 {{domxref("IDBRequest")}} 객체를 반환합니다. 비동기 작업은 {{domxref("IDBRequest")}} 객체에서 이벤트를 발생시켜 호출한 애플리케이션과 통신합니다.
+데이터베이스에 접속하기 위해서는 [window](/ko/docs/Web/API/Window) 객체의 [`indexedDB` (en-US)](/ko/docs/Web/API/Window/indexedDB) 속성에서 [`open()` (en-US)](/ko/docs/Web/API/IDBFactory/open)을 호출해야 합니다. 이 메소드는 {{domxref("IDBRequest")}} 객체를 반환합니다. 비동기 작업은 {{domxref("IDBRequest")}} 객체에서 이벤트를 발생시켜 호출한 애플리케이션과 통신합니다.
 
 ### 데이터베이스에 연결하기
 

@@ -10,7 +10,7 @@ l10n:
 
 **`startViewTransition()`** は {{domxref("Document")}} インターフェイスのメソッドで、新しいビュー遷移を始め、それを表す {{domxref("ViewTransition")}} オブジェクトを返します。
 
-`startViewTransition()` を呼び出すと、[ビュー遷移のプロセス](/ja/docs/Web/API/View_Transitions_API/Using#ビュー遷移のプロセス)で説明されている一連の手順が続きます。
+`startViewTransition()` を呼び出すと、[ビュー遷移のプロセス](/ja/docs/Web/API/View_Transition_API/Using#ビュー遷移のプロセス)で説明されている一連の手順が続きます。
 
 ## 構文
 

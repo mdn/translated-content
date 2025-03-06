@@ -5,7 +5,7 @@ slug: Web/API/MediaRecorder/start
 
 {{APIRef("Media Recorder API")}}
 
-Метод **`MediaRecorder.start()`** (часть [MediaRecorder API](/ru/docs/Web/API/MediaRecorder_API)) используется для начала захвата медиа {{domxref("Blob")}}.
+Метод **`MediaRecorder.start()`** (часть [MediaRecorder API](/ru/docs/Web/API/MediaStream_Recording_API)) используется для начала захвата медиа {{domxref("Blob")}}.
 
 When the `start()` method is invoked, the UA queues a task that runs the following steps:
 
@@ -58,7 +58,7 @@ An `InvalidState` error is raised if the `start()` method is called while the `M
 
 ## Смотрите также
 
-- [Использование MediaRecorder API](/ru/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API)
-- [Веб-диктофон](http://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API от [Chris Mills](https://twitter.com/chrisdavidmills) ([исходники на Github](https://github.com/mdn/web-dictaphone/).)
-- [simpl.info Пример использования MediaStream](http://simpl.info/mediarecorder/) от [Sam Dutton](https://twitter.com/sw12).
+- [Использование MediaRecorder API](/ru/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Веб-диктофон](https://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API от [Chris Mills](https://twitter.com/chrisdavidmills) ([исходники на Github](https://github.com/mdn/web-dictaphone/).)
+- [simpl.info Пример использования MediaStream](https://simpl.info/mediarecorder/) от [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("Navigator.getUserMedia")}}

@@ -40,4 +40,4 @@ distortion.curve = myCurveDataArray; // myCurveDataArray is a Float32Array
 
 ## 参见
 
-- [使用 Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

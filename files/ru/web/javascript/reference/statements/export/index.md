@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Statements/export
 Инструкция **export** используется для экспорта функций, объектов или примитивов из файла (или модуля).
 
 > [!NOTE]
-> Эта функциональность не реализована в браузерах на данный момент, но она реализована во многих транспайлерах, таких как [Traceur Compiler](https://github.com/google/traceur-compiler), [Babel](http://babeljs.io/) or [Rollup](https://github.com/rollup/rollup).
+> Эта функциональность не реализована в браузерах на данный момент, но она реализована во многих транспайлерах, таких как [Traceur Compiler](https://github.com/google/traceur-compiler), [Babel](https://babeljs.io/) or [Rollup](https://github.com/rollup/rollup).
 
 ## Синтаксис
 
@@ -106,4 +106,4 @@ console.log(cube(3)); // 27
 
 - {{jsxref("Statements/import", "import")}}
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+- [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)

@@ -9,4 +9,4 @@ HTML5 は、{{Glossary("HTML")}} の最新の安定バージョンであり、�
 
 ## 詳細
 
-- [HTML5 ガイド](/ja/docs/Web/Guide/HTML/HTML5)
+- [HTML5 ガイド](/ja/docs/Glossary/HTML5)

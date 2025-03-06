@@ -81,6 +81,6 @@ Les navigateurs ne fournissent pas d'informations particulières aux outils d'as
 - [`<image>`](/fr/docs/Web/CSS/image)
 - [`image()`](/fr/docs/Web/CSS/image/image)
 - [`element()`](/fr/docs/Web/CSS/element)
-- [`url()`](/fr/docs/Web/CSS/url)
+- [`url()`](/fr/docs/Web/CSS/url_value)
 - [`<gradient>`](/fr/docs/Web/CSS/gradient)
 - [`cross-fade()`](/fr/docs/Web/CSS/cross-fade)

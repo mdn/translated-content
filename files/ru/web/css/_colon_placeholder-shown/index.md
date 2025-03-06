@@ -1,5 +1,5 @@
 ---
-title: ":placeholder-shown"
+title: :placeholder-shown
 slug: Web/CSS/:placeholder-shown
 ---
 
@@ -195,4 +195,4 @@ input.studentid:placeholder-shown {
 
 - Псевдоэлемент {{cssxref("::placeholder")}}, применяющий стили к _самому себе_.
 - Связанные HTML-элементы: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
-- [HTML формы](/ru/docs/Learn/HTML/Forms)
+- [HTML формы](/ru/docs/Learn/Forms)

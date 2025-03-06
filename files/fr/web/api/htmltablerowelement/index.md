@@ -16,7 +16,7 @@ _Hérite des propriétés de son parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLTableRowElement.align")}} {{deprecated_inline}}
   - : Est un {{domxref("DOMString")}} contenant une valeur énumérée reflétant l'attribut [`align`](/fr/docs/Web/HTML/Element/tr#align). Il indique l'alignement du contenu de l'élément par rapport au contexte environnant. Les valeurs possibles sont `"left"`, `"right"`, et `"center"`.
 - {{domxref("HTMLTableRowElement.bgColor")}} {{deprecated_inline}}
-  - : Est un {{domxref("DOMString")}} contenant la couleur de fond des cellules. Il reflète l'attribut obsolète [`bgColor`](/fr/docs/Web/HTML/Element/tr#bgColor) attribute.
+  - : Est un {{domxref("DOMString")}} contenant la couleur de fond des cellules. Il reflète l'attribut obsolète [`bgColor`](/fr/docs/Web/HTML/Element/tr#bgcolor) attribute.
 - {{domxref("HTMLTableRowElement.cells")}} {{readonlyInline}}
   - : Renvoie une {{domxref("HTMLCollection")}} en direct contenant les cellules de la ligne. La `HTMLCollection` est active et est automatiquement mise à jour lorsque des cellules sont ajoutées ou supprimées.
 - {{domxref("HTMLTableRowElement.ch")}} {{deprecated_inline}}

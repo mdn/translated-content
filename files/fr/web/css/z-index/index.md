@@ -11,7 +11,7 @@ La propriété **`z-index`** définit le «&nbsp;_z-order_&nbsp;» (NdT&nbsp;: �
 
 Pour les boîtes positionnées (celles pour lesquelles `position` est différent de `static`), la propriété `z-index` définit&nbsp;:
 
-1. Le niveau de la boîte dans la pile par rapport [au contexte d'empilement](/fr/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context) courant
+1. Le niveau de la boîte dans la pile par rapport [au contexte d'empilement](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) courant
 2. Si la boîte crée un contexte d'empilement local.
 
 ## Syntaxe
@@ -115,4 +115,4 @@ La propriété `z-index` se définit grâce au mot-clé [`auto`](#auto) ou grâc
 ## Voir aussi
 
 - La propriété CSS [`position`](/fr/docs/Web/CSS/position)
-- [Comprendre le fonctionnement de `z-index`](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
+- [Comprendre le fonctionnement de `z-index`](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)

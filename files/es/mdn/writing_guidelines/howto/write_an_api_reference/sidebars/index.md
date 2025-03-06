@@ -80,7 +80,7 @@ Todos estos son técnicamente opcionales, pero se recomienda encarecidamente que
    "Response" da como resultado un enlace a [https://developer.mozilla.org/es/docs/Web/API/Response](/es/docs/Web/API/Response).
 3. `"methods"`: el valor es un arreglo que debe contener cualquier método que la especificación agregue a las interfaces asociadas con otras API, como los métodos de instanciación creados en {{domxref ("Navigator")}} o {{domxref("Window")}}.
    Si hay una gran cantidad de métodos, es posible que desees considerar solo enumerar los más populares o ponerlos en primer lugar en la lista.
-   "fetch()" da como resultado un enlace a [https://developer.mozilla.org/es/docs/Web/API/fetch](/es/docs/Web/API/fetch).
+   "fetch()" da como resultado un enlace a [https://developer.mozilla.org/es/docs/Web/API/fetch](/es/docs/Web/API/Window/fetch).
    _No_ agregue métodos que son miembros de interfaces que son propiedad de la misma API.
 4. `"properties"` — el valor es un arreglo que debe contener todas las propiedades asociadas con la API.
    Esto puede incluir propiedades que son miembros de interfaces definidas en la especificación de la API y propiedades que la API define en otras interfaces.

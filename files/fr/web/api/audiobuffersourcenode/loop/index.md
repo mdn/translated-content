@@ -27,7 +27,7 @@ Lorsque la lecture en boucle est activée, le son commence à jouer au point sp�
 Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est utilisée pour décoder une piste audio et la placer dans un {{domxref("AudioBufferSourceNode")}}. Les boutons mis à disposition permettent de lire et d'arrêter la lecture audio, et un slider est utilisé pour changer la valeur de `playbackRate` en temps réel. Quand la lecture est terminée, elle boucle.
 
 > [!NOTE]
-> Vous pouvez [essayer un exemple live](http://mdn.github.io/decode-audio-data/) (or [voir la source](https://github.com/mdn/decode-audio-data).)
+> Vous pouvez [essayer un exemple live](https://mdn.github.io/decode-audio-data/) (or [voir la source](https://github.com/mdn/decode-audio-data).)
 
 ```js
 function getData() {

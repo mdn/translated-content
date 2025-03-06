@@ -106,6 +106,6 @@ animation-direction: unset;
 
 ## 参见
 
-- [使用 CSS 动画](/zh-CN/docs/CSS/Tutorials/Using_CSS_animations)
+- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API
 - 其他相关的动画属性：{{cssxref("animation")}}、{{cssxref("animation-composition")}}、{{cssxref("animation-delay")}}、{{cssxref("animation-duration")}}、{{cssxref("animation-fill-mode")}}、{{cssxref("animation-iteration-count")}}、{{cssxref("animation-name")}}、{{cssxref("animation-play-state")}}、{{cssxref("animation-timeline")}}、{{cssxref("animation-timing-function")}}

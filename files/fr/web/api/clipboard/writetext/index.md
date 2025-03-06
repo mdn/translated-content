@@ -8,7 +8,7 @@ slug: Web/API/Clipboard/writeText
 La méthode **`writeText()`** de l'interface {{domxref("Clipboard")}} écrit le texte spécifié dans le presse-papiers du système.
 
 > [!NOTE]
-> La spécification requiert que l'[API Permissions](/fr/docs/Web/API/Permissions_API) soit utilisée pour obtenir la permission `"clipboardWrite"` avant d'écrire dans le presse-papiers. Cependant, les prérequis exacts varient de navigateur en navigateur, car c'est une API récente. Consultez la [table de compatibilité](#compatibilité_des_navigateurs) et la section [Disponibilité du presse-papiers](/fr/docs/Web/API/clipboard#disponibilité_du_presse-papiers) sur la page [`Clipboard`](/fr/docs/Web/API/clipboard) pour plus de détails.
+> La spécification requiert que l'[API Permissions](/fr/docs/Web/API/Permissions_API) soit utilisée pour obtenir la permission `"clipboardWrite"` avant d'écrire dans le presse-papiers. Cependant, les prérequis exacts varient de navigateur en navigateur, car c'est une API récente. Consultez la [table de compatibilité](#compatibilité_des_navigateurs) et la section [Disponibilité du presse-papiers](/fr/docs/Web/API/Clipboard#disponibilit%c3%a9_du_presse-papiers) sur la page [`Clipboard`](/fr/docs/Web/API/Clipboard) pour plus de détails.
 
 ## Syntaxe
 

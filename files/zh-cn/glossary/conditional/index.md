@@ -14,6 +14,6 @@ l10n:
 ## 参见
 
 - {{glossary("Control_flow", "控制流")}}
-- [在你的代码中决策——条件](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [在你的代码中决策——条件](/zh-CN/docs/Learn_web_development/Core/Scripting/Conditionals)
 - [JavaScript 中的控制流与错误捕获](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - 维基百科上的[条件](<https://zh.wikipedia.org/wiki/條件_(編程)>)

@@ -7,20 +7,44 @@ slug: Web/HTML/Element/track
 
 HTML-элемент **`<track>`** используется как дочерний элемент медиа-элементов {{HTMLElement("audio")}} and {{HTMLElement("video")}}. Позволяет указать синхронизированные текстовые дорожки (или данные на основе времени), например, для автоматической обработки субтитров. Файлы треков используют [формат WebVTT](/ru/docs/Web/API/WebVTT_API) (`.vtt` файлы) — Web Video Text Tracks или [Timed Text Markup Language (TTML).](https://w3c.github.io/ttml2/index.html)
 
-{{EmbedInteractiveExample("pages/tabbed/track.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;track&gt;", "tabbed-standard")}}
 
-| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | Нет                                                                                                                                                                                             |
-| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                            | Нет, это {{Glossary("empty element", "пустой элемент")}}.                                                                                                                                       |
-| Пропуск тегов                                                    | Так как это пустой элемент, то открывающий тег обязателен, закрывающего не должно быть.                                                                                                         |
-| Неявная ARIA-роль                                                | [Нет соответствующей роли](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                                                          |
-| Допустимые родители                                              | Медиа элемент, перед любым [потоковым контентом](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9F%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82). |
-| Допустимые ARIA-роли                                             | Нет                                                                                                                                                                                             |
-| DOM интерфейс                                                    | {{domxref("HTMLTrackElement")}}                                                                                                                                                                 |
+```html interactive-example
+<video controls src="/shared-assets/videos/friday.mp4">
+  <track
+    default
+    kind="captions"
+    srclang="en"
+    src="/shared-assets/misc/friday.vtt" />
+  Download the
+  <a href="/shared-assets/videos/friday.mp4">MP4</a>
+  video, and
+  <a href="/shared-assets/misc/friday.vtt">subtitles</a>.
+</video>
+```
+
+```css interactive-example
+video {
+  width: 250px;
+}
+
+video::cue {
+  font-size: 1rem;
+}
+```
+
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | Нет                                                                                                                                                                                             |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                      | Нет, это {{Glossary("empty element", "пустой элемент")}}.                                                                                                                                       |
+| Пропуск тегов                                              | Так как это пустой элемент, то открывающий тег обязателен, закрывающего не должно быть.                                                                                                         |
+| Неявная ARIA-роль                                          | [Нет соответствующей роли](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                                                          |
+| Допустимые родители                                        | Медиа элемент, перед любым [потоковым контентом](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9F%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82). |
+| Допустимые ARIA-роли                                       | Нет                                                                                                                                                                                             |
+| DOM интерфейс                                              | {{domxref("HTMLTrackElement")}}                                                                                                                                                                 |
 
 ## Атрибуты
 
-Этот элемент использует [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
+Этот элемент использует [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 - `default`
   - : Этот атрибут указывает, что дорожка должна быть включена, если пользовательские настройки не указывают, что другая дорожка является более подходящей. Может использоваться только для одного элемента `track` в элементе мультимедиа.
@@ -55,7 +79,7 @@ HTML-элемент **`<track>`** используется как дочерни
 - `label`
   - : Видимый пользователю заголовок текстовой дорожки, который используется браузером при выводе списка доступных текстовых дорожек.
 - `src`
-  - : Адрес файла текстовой дорожки (`.vtt` файл). Должен быть действительным URL. Этот атрибут должен быть указан, а его значение URL должно иметь то же происхождение, что и документ — исключая случаи, когда родительский {{HTMLElement("audio")}} или {{HTMLElement("video")}} данного `track` элемента имеет атрибут [`crossorigin`](/ru/docs/Web/HTML/CORS_settings_attributes).
+  - : Адрес файла текстовой дорожки (`.vtt` файл). Должен быть действительным URL. Этот атрибут должен быть указан, а его значение URL должно иметь то же происхождение, что и документ — исключая случаи, когда родительский {{HTMLElement("audio")}} или {{HTMLElement("video")}} данного `track` элемента имеет атрибут [`crossorigin`](/ru/docs/Web/HTML/Attributes/crossorigin).
 - `srclang`
   - : Язык текстовых данных трека. Это должен быть валидный [BCP 47](https://r12a.github.io/app-subtags/) языковой тег (см. также [языковые тэги в HTML и XML)](https://www.w3.org/International/articles/language-tags/). Если для атрибута `kind` установлено значение `subtitles`, должен быть определён атрибут `srclang`.
 

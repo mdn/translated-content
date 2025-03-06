@@ -158,4 +158,4 @@ const text = await blob.text();
 - {{domxref("File")}}
 - {{domxref("URL.createObjectURL")}}
 - [Components.utils.importGlobalProperties](/ru/docs/Components.utils.importGlobalProperties)
-- [Использование файлов в веб-приложениях](/ru/docs/Web/API/File/Using_files_from_web_applications)
+- [Использование файлов в веб-приложениях](/ru/docs/Web/API/File_API/Using_files_from_web_applications)

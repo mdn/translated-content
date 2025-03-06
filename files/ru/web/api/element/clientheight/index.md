@@ -36,4 +36,4 @@ var h = element.clientHeight;
 
 - {{domxref("HTMLElement.offsetHeight")}}
 - {{domxref("Element.scrollHeight")}}
-- [Determining the dimensions of elements](/ru/docs/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/ru/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

@@ -5,9 +5,29 @@ slug: Web/HTML/Element/input/file
 
 {{HTMLSidebar("Input_types")}}
 
-带有 **`type="file"`** 的 {{HTMLElement("input")}} 元素允许用户可以从他们的设备中选择一个或多个文件。选择后，这些文件可以使用[提交表单](/zh-CN/docs/Learn/Forms)的方式上传到服务器上，或者通过 Javascript 代码和[文件 API](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications) 对文件进行操作。
+带有 **`type="file"`** 的 {{HTMLElement("input")}} 元素允许用户可以从他们的设备中选择一个或多个文件。选择后，这些文件可以使用[提交表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)的方式上传到服务器上，或者通过 Javascript 代码和[文件 API](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications) 对文件进行操作。
 
-{{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="avatar">Choose a profile picture:</label>
+
+<input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 <table class="properties">
  <tbody>
@@ -139,7 +159,7 @@ div {
 
 无论用户的设备或操作系统是什么，文件输入都提供一个按钮，打开一个允许用户选择文件的文件选择对话框。
 
-通过包含上述的 [`multiple`](/zh-CN/docs/Web/HTML/Element/input/file#multiple) 属性，可以指定一次选择多个文件。用户可以用他们选择的平台允许的任何方式从文件选择器中选择多个文件（如按住 <kbd>Shift</kbd> 或 <kbd>Control</kbd>，然后单击）。如果只想让用户为每个 `<input>` 选择一个文件，那么省略 `multiple` 属性。
+通过包含上述的 [`multiple`](#multiple) 属性，可以指定一次选择多个文件。用户可以用他们选择的平台允许的任何方式从文件选择器中选择多个文件（如按住 <kbd>Shift</kbd> 或 <kbd>Control</kbd>，然后单击）。如果只想让用户为每个 `<input>` 选择一个文件，那么省略 `multiple` 属性。
 
 ### 获取已选择文件的信息
 
@@ -158,7 +178,7 @@ div {
 - `type`
   - : 文件的 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)。
 - `webkitRelativePath` {{non-standard_inline}}
-  - : 一个字符串，指定了相对于在目录选择器中选择的基本目录的文件路径（即，一个设置了 [`webkitdirectory`](/zh-CN/docs/Web/HTML/Element/input/file#webkitdirectory) 属性的 `file` 选择器）。_这是非标准的，应该谨慎使用。_
+  - : 一个字符串，指定了相对于在目录选择器中选择的基本目录的文件路径（即，一个设置了 [`webkitdirectory`](#webkitdirectory) 属性的 `file` 选择器）。_这是非标准的，应该谨慎使用。_
 
 > [!NOTE]
 > 你可以在所有现代浏览器中读写 `HTMLInputElement.files` 的值；该特性已经添加到了 Firefox 57 中（见 [Firefox bug 1384030](https://bugzil.la/1384030)）。
@@ -167,7 +187,7 @@ div {
 
 通常，你不希望用户能够选择任意类型的文件；相反，你通常希望它们选择特定类型的文件。例如，如果你的文件输入让用户上传个人资料图片，你可能希望他们选择 Web 兼容的图像格式，如 {{Glossary("JPEG")}} 或 {{Glossary("PNG")}}。
 
-可以用 [`accept`](/zh-CN/docs/Web/HTML/Element/input/file#accept) 属性指定可接受的文件类型，它是一个以逗号间隔的文件扩展名和 MIME 类型列表。一些例子如下所示：
+可以用 [`accept`](#accept) 属性指定可接受的文件类型，它是一个以逗号间隔的文件扩展名和 MIME 类型列表。一些例子如下所示：
 
 - `accept="image/png"` 或 `accept=".png"`——接受 PNG 文件。
 - `accept="image/png, image/jpeg"` 或 `accept=".png, .jpg, .jpeg"`——接受 PNG 或 JPEG 文件。
@@ -436,4 +456,4 @@ function returnFileSize(number) {
 ## 参见
 
 - [在 web 应用中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)——包含许多其他关于 `<input type="file">` 和 [File API](/zh-CN/docs/Web/API/File) 的有用示例。
-- [CSS 属性兼容性](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性兼容性](/zh-CN/docs/Learn_web_development/Extensions/Forms)

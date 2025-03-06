@@ -1,11 +1,11 @@
 ---
-title: "::before (:before)"
+title: ::before (:before)
 slug: Web/CSS/::before
 ---
 
 {{CSSRef}}
 
-**`::before`** crée un [pseudo-élément](/fr/docs/Web/CSS/Pseudo-éléments) qui sera le premier enfant de l'élément ciblé. Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS {{cssxref("content")}}. Par défaut, l'élément créé est de type en-ligne (_inline_).
+**`::before`** crée un [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) qui sera le premier enfant de l'élément ciblé. Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS {{cssxref("content")}}. Par défaut, l'élément créé est de type en-ligne (_inline_).
 
 ```css
 /* On ajoute un coeur avant les liens */
@@ -15,13 +15,13 @@ a::before {
 ```
 
 > [!NOTE]
-> Les pseudo-éléments générés par `::before` et `::after` sont contenus dans la boîte de mise en forme de l'élément. Aussi, `::before` et `::after` ne s'appliquent pas [aux éléments remplacés](/fr/docs/Web/CSS/Élément_remplacé) tels que {{HTMLElement("img")}} ou {{HTMLElement("br")}}.
+> Les pseudo-éléments générés par `::before` et `::after` sont contenus dans la boîte de mise en forme de l'élément. Aussi, `::before` et `::after` ne s'appliquent pas [aux éléments remplacés](/fr/docs/Web/CSS/Replaced_element) tels que {{HTMLElement("img")}} ou {{HTMLElement("br")}}.
 
 ## Syntaxe
 
 {{csssyntax}}
 
-La notation `::before` a été introduite par CSS 3 pour différencier les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) et les [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-éléments). Les navigateurs acceptent aussi la notation `:before` introduite par CSS 2.
+La notation `::before` a été introduite par CSS 3 pour différencier les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) et les [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements). Les navigateurs acceptent aussi la notation `:before` introduite par CSS 2.
 
 ## Exemples
 

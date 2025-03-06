@@ -7,9 +7,35 @@ slug: Web/HTML/Element/input/date
 
 **`type="date"`** 类型的 {{htmlelement("input")}} 元素会创建一个让用户输入一个日期的输入区域，可以使用自动验证内容的文本框，也可以使用特殊的日期选择器界面。结果值包括年份，月份和日期，但*不*包括时间。{{HTMLElement("input/time", "time")}} 和 {{HTMLElement("input/datetime-local", "datetime-local")}} 类型支持时间和日期时间输入。
 
-{{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;date&quot;&gt;", "tabbed-shorter")}}
 
-通常来说控件的 UI 界面因浏览器的不同而有变化，到目前为止此控件还不被所有浏览器支持，具体细节请参阅[浏览器兼容性](#浏览器兼容性)。在不支持的浏览器当中，控件因此会被优雅的降级为普通的 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/Input/text) 输入框。
+```html interactive-example
+<label for="start">Start date:</label>
+
+<input
+  type="date"
+  id="start"
+  name="trip-start"
+  value="2018-07-22"
+  min="2018-01-01"
+  max="2018-12-31" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
+
+通常来说控件的 UI 界面因浏览器的不同而有变化，到目前为止此控件还不被所有浏览器支持，具体细节请参阅[浏览器兼容性](#浏览器兼容性)。在不支持的浏览器当中，控件因此会被优雅的降级为普通的 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text) 输入框。
 
 <table class="properties">
  <tbody>
@@ -72,13 +98,13 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 ### max
 
-所接受最新的日期。如果输入到该元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 发生在此之后，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `max` 属性的值不是格式为 `yyyy-mm-dd` 的有效日期星期字符串，则该元素没有最大日期值。
+所接受最新的日期。如果输入到该元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 发生在此之后，则元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `max` 属性的值不是格式为 `yyyy-mm-dd` 的有效日期星期字符串，则该元素没有最大日期值。
 
 如果同时设置了 `max` 和 `min` 值，此值必须**晚于或等于** `min` 属性指定的日期值。
 
 ### min
 
-所接受最早的日期。如果输入到该元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 发生在此之前，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 属性的值不是格式为 `yyyy-mm-dd` 的有效日期星期字符串，则该元素没有最小日期值。
+所接受最早的日期。如果输入到该元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 发生在此之前，则元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `min` 属性的值不是格式为 `yyyy-mm-dd` 的有效日期星期字符串，则该元素没有最小日期值。
 
 如果同时设置了 `max` 和 `min` 值，此值必须**早于或等于** `max` 属性指定的日期值。
 
@@ -467,6 +493,6 @@ daySelect.onchange = () => {
 ## 参见
 
 - 通用的 {{HTMLElement("input")}} 元素和用于操作该元素的接口 {{domxref("HTMLInputElement")}}
-- [日期时间选择器教程](/zh-CN/docs/Learn/Forms/HTML5_input_types#日期和时间选择器)
+- [日期时间选择器教程](/zh-CN/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#日期和时间选择器)
 - [HTML 中使用的日期和时间格式](/zh-CN/docs/Web/HTML/Date_and_time_formats)
-- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

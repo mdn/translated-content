@@ -367,4 +367,4 @@ nameField.addEventListener("input", (event) => {
 
 ### 指南
 
-- [操作文档](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)：操作 DOM 的入门指南。
+- [操作文档](/zh-CN/docs/Learn_web_development/Core/Scripting/DOM_scripting)：操作 DOM 的入门指南。

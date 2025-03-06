@@ -17,7 +17,7 @@ index 是一个持久的键 - 值存储，其中其记录的值部分是被引�
 
 ## Methods
 
-Inherits from: [EventTarget](/zh-CN/DOM/EventTarget)
+Inherits from: [EventTarget](/zh-CN/docs/Web/API/EventTarget)
 
 - {{domxref("IDBIndex.count")}}
   - : Returns an {{domxref("IDBRequest")}} object, and in a separate thread, returns the number of records within a key range.

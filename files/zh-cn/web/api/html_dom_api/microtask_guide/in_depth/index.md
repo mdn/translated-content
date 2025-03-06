@@ -135,7 +135,7 @@ greetUser("Veronica");
 
 使用 [web worker](/zh-CN/docs/Web/API/Web_Workers_API) 可以让主线程另起新的线程来运行脚本，这能够缓解上面的情况。一个设计良好的网站或应用会把一些复杂的或者耗时的操作交给 worker 去做，这样可以让主线程除了更新、布局和渲染网页之外，尽可能少的去做其他事情。
 
-通过使用像 [promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 这样的[异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous) 技术可以使得主线程在等待请求返回结果的同时继续往下执行，这能够更进一步减轻上面提到的情况。然而，一些更接近于基础功能的代码——比如一些框架代码，可能更需要将代码安排在主线程上一个安全的时间来运行，它与任何请求的结果或者任务无关。
+通过使用像 [promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 这样的[异步 JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS) 技术可以使得主线程在等待请求返回结果的同时继续往下执行，这能够更进一步减轻上面提到的情况。然而，一些更接近于基础功能的代码——比如一些框架代码，可能更需要将代码安排在主线程上一个安全的时间来运行，它与任何请求的结果或者任务无关。
 
 微任务是另一种解决该问题的方案，通过将代码安排在下一次事件循环开始之前运行而不是必须要等到下一次开始之后才执行，这样可以提供一个更好的访问级别。
 
@@ -145,7 +145,7 @@ greetUser("Veronica");
 
 - [微任务指南](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide)
 - {{domxref("Window.queueMicrotask()")}}
-- [异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)
-  - [异步 JavaScript 简介](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - [合作的异步 JavaScript：超时和间隔](/zh-CN/docs/Learn/JavaScript/Asynchronous)
-  - [用 Promise 进行优雅的异步编程](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises)
+- [异步 JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)
+  - [异步 JavaScript 简介](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Introducing)
+  - [合作的异步 JavaScript：超时和间隔](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)
+  - [用 Promise 进行优雅的异步编程](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Promises)

@@ -5,7 +5,7 @@ slug: Glossary/Inline-level_content
 
 {{GlossarySidebar}}
 
-Les éléments HTML (**Hypertext Markup Language**) étaient historiquement catégorisés comme des éléments de type « bloc » (_block_ en anglais) ou de type « en ligne » (_inline_ en anglais). Comme il s'agit d'une caractéristique de présentation, elle est aujourd'hui spécifiée par CSS dans le module de spécification [_Flow Layout_](/fr/docs/Web/CSS/CSS_Flow_Layout) qui définit l'organisation visuelle par défaut des éléments (le « flux » normal). Les éléments en lignes n'occupent que l'espace entre leurs balises et s'insèrent dans le flux du contenu plutôt que de créer un nouveau « bloc » visuel. Dans cet article, nous verrons en détails ces éléments en ligne et leurs différences par rapport aux [éléments de bloc](/fr/docs/Web/HTML/Block-level_elements).
+Les éléments HTML (**Hypertext Markup Language**) étaient historiquement catégorisés comme des éléments de type « bloc » (_block_ en anglais) ou de type « en ligne » (_inline_ en anglais). Comme il s'agit d'une caractéristique de présentation, elle est aujourd'hui spécifiée par CSS dans le module de spécification [_Flow Layout_](/fr/docs/Web/CSS/CSS_flow_layout) qui définit l'organisation visuelle par défaut des éléments (le « flux » normal). Les éléments en lignes n'occupent que l'espace entre leurs balises et s'insèrent dans le flux du contenu plutôt que de créer un nouveau « bloc » visuel. Dans cet article, nous verrons en détails ces éléments en ligne et leurs différences par rapport aux [éléments de bloc](/fr/docs/Glossary/Block-level_content).
 
 > [!NOTE]
 > Un élément en ligne ne commence pas sur une nouvelle ligne et prend uniquement la largeur qui lui est nécessaire.
@@ -91,7 +91,7 @@ Voici, en résumé, les différences conceptuelles entre les éléments en ligne
 
 ## Liste des éléments en ligne
 
-Bien que cette notion de présentation soit désormais (depuis HTML5) portée par le CSS et remplacée par les [catégories de contenu](/fr/docs/Web/Guide/HTML/Content_categories), voici les éléments HTML qui se comportent par défaut comme des éléments en ligne:
+Bien que cette notion de présentation soit désormais (depuis HTML5) portée par le CSS et remplacée par les [catégories de contenu](/fr/docs/Web/HTML/Content_categories), voici les éléments HTML qui se comportent par défaut comme des éléments en ligne:
 
 - [`<a>`](/fr/docs/Web/HTML/Element/a)
 - [`<abbr>`](/fr/docs/Web/HTML/Element/abbr)
@@ -102,7 +102,7 @@ Bien que cette notion de présentation soit désormais (depuis HTML5) portée pa
 - [`<bdo>`](/fr/docs/Web/HTML/Element/bdo)
 - [`<big>`](/fr/docs/Web/HTML/Element/big)
 - [`<br>`](/fr/docs/Web/HTML/Element/br)
-- [`<button>`](/fr/docs/Web/HTML/Element/Button)
+- [`<button>`](/fr/docs/Web/HTML/Element/button)
 - [`<canvas>`](/fr/docs/Web/HTML/Element/canvas)
 - [`<cite>`](/fr/docs/Web/HTML/Element/cite)
 - [`<code>`](/fr/docs/Web/HTML/Element/code)
@@ -114,19 +114,19 @@ Bien que cette notion de présentation soit désormais (depuis HTML5) portée pa
 - [`<embed>`](/fr/docs/Web/HTML/Element/embed)
 - [`<i>`](/fr/docs/Web/HTML/Element/i)
 - [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)
-- [`<img>`](/fr/docs/Web/HTML/Element/Img)
-- [`<input>`](/fr/docs/Web/HTML/Element/Input)
+- [`<img>`](/fr/docs/Web/HTML/Element/img)
+- [`<input>`](/fr/docs/Web/HTML/Element/input)
 - [`<ins>`](/fr/docs/Web/HTML/Element/ins)
 - [`<kbd>`](/fr/docs/Web/HTML/Element/kbd)
-- [`<label>`](/fr/docs/Web/HTML/Element/Label)
+- [`<label>`](/fr/docs/Web/HTML/Element/label)
 - [`<map>`](/fr/docs/Web/HTML/Element/map)
 - [`<mark>`](/fr/docs/Web/HTML/Element/mark)
-- [`<meter>`](/fr/docs/Web/HTML/Element/Meter)
+- [`<meter>`](/fr/docs/Web/HTML/Element/meter)
 - [`<noscript>`](/fr/docs/Web/HTML/Element/noscript)
 - [`<object>`](/fr/docs/Web/HTML/Element/object)
 - [`<output>`](/fr/docs/Web/HTML/Element/output)
 - [`<picture>`](/fr/docs/Web/HTML/Element/picture)
-- [`<progress>`](/fr/docs/Web/HTML/Element/Progress)
+- [`<progress>`](/fr/docs/Web/HTML/Element/progress)
 - [`<q>`](/fr/docs/Web/HTML/Element/q)
 - [`<ruby>`](/fr/docs/Web/HTML/Element/ruby)
 - [`<s>`](/fr/docs/Web/HTML/Element/s)
@@ -149,10 +149,10 @@ Bien que cette notion de présentation soit désormais (depuis HTML5) portée pa
 
 ## Voir aussi
 
-- [Les éléments de bloc](/fr/docs/Web/HTML/Block-level_elements)
+- [Les éléments de bloc](/fr/docs/Glossary/Block-level_content)
 - [Référence des éléments HTML](/fr/docs/Web/HTML/Element)
 - [La propriété CSS `display`](/fr/docs/Web/CSS/display)
-- [Les catégories de contenu](/fr/docs/Web/Guide/HTML/Content_categories)
-- [Les éléments de bloc et les éléments en ligne dans le flux normal](/fr/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
+- [Les catégories de contenu](/fr/docs/Web/HTML/Content_categories)
+- [Les éléments de bloc et les éléments en ligne dans le flux normal](/fr/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
 
 {{QuickLinksWithSubpages("/fr/docs/Web/HTML/")}}

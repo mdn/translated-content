@@ -1,17 +1,29 @@
 ---
-title: mpath
+title: <mpath>
 slug: Web/SVG/Element/mpath
+l10n:
+  sourceCommit: da99ca19ae62059f81dbee3f7b4919de784f3510
 ---
 
 {{SVGRef}}
 
-{{ SVGElement("animateMotion") }} 元素的`mpath`子元素使{{ SVGElement("animateMotion") }} 元素能够引用一个外部的{{ SVGElement("path") }}元素作为运动路径的定义。
+**`<mpath>`** [SVG](/zh-CN/docs/Web/SVG) 子元素用于 {{SVGElement("animateMotion")}} 元素，它提供了引用外部 {{SVGElement("path")}} 元素作为运动路径定义的能力。
 
 ## 使用上下文
 
 {{svginfo}}
 
+## 属性
+
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
+
+## DOM 接口
+
+该元素实现了 {{domxref("SVGMPathElement")}} 接口。
+
 ## 示例
+
+### SVG
 
 ```html
 <svg
@@ -29,8 +41,7 @@ slug: Web/SVG/Element/mpath
     stroke="blue"
     stroke-width="2" />
 
-  <!-- Draw the outline of the motion path in blue, along
-          with three small circles at the start, middle and end. -->
+  <!-- 用蓝色绘制运动路径的轮廓，并在起始点、中点和结束点处绘制三个小圆圈。 -->
   <path
     id="path1"
     d="M100,250 C 100,50 400,50 400,250"
@@ -41,42 +52,32 @@ slug: Web/SVG/Element/mpath
   <circle cx="250" cy="100" r="17.64" fill="blue" />
   <circle cx="400" cy="250" r="17.64" fill="blue" />
 
-  <!-- Here is a triangle which will be moved about the motion path.
-       It is defined with an upright orientation with the base of
-       the triangle centered horizontally just above the origin. -->
+  <!-- 这里有一个三角形，它将沿着运动路径移动。它定义为直立方向，三角形的底边水平居中，位于原点上方。 -->
   <path
     d="M-25,-12.5 L25,-12.5 L 0,-87.5 z"
     fill="yellow"
     stroke="red"
     stroke-width="7.06">
-    <!-- Define the motion path animation -->
+    <!-- 定义运动路径动画 -->
     <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
-      <mpath xlink:href="#path1" />
+      <mpath href="#path1" />
     </animateMotion>
   </path>
 </svg>
 ```
 
-实时输出：
+### 结果
 
-{{EmbedLiveSample("示例",250,165)}}
+{{EmbedLiveSample("示例", 250, 400)}}
 
-## 属性
+## 规范
 
-### 全局属性
+{{Specifications}}
 
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [Xlink 属性](/zh-CN/SVG/Attribute#XLink) »
-- {{ SVGAttr("externalResourcesRequired") }}
+## 浏览器兼容性
 
-### 专有属性
+{{Compat}}
 
-- {{ SVGAttr("xlink:href") }}
+## 参见
 
-## DOM 接口
-
-该元素实现了 [`SVGMPathElement`](/zh-CN/DOM/SVGMPathElement) 接口。
-
-## 相关的内容
-
-- {{ SVGElement("animateMotion") }}
+- {{SVGElement("animateMotion")}}

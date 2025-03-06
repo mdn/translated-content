@@ -20,7 +20,7 @@ dataChannel = RTCPeerConnection.createDataChannel(label[, options]);
 - `label`
   - : 사람이 읽을 수 있는 채널 이름입니다. 이름의 문자열은 65,535 바이트 보다 작아야합니다.
 - `options` {{optional_inline}}
-  - : [`RTCDataChannelInit` dictionary](#RTCDataChannelInit_dictionary)가 데이터 채널에 대한 설정 옵션들을 제공합니다.
+  - : [`RTCDataChannelInit` dictionary](#rtcdatachannelinit_dictionary)가 데이터 채널에 대한 설정 옵션들을 제공합니다.
 
 ### RTCDataChannelInit 딕셔너리
 

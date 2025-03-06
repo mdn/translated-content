@@ -1,5 +1,5 @@
 ---
-title: ":lang()"
+title: :lang()
 slug: Web/CSS/:lang
 ---
 
@@ -30,7 +30,7 @@ p:lang(en) {
 
 ## Пример
 
-In this example, the `:lang()` pseudo-class is used to match the parents of quote elements ({{htmlElement("q")}}) using [child combinators](/ru/docs/Web/CSS/Child_selectors). Note that this doesn't illustrate the only way to do this, and that the best method to use depends on the type of document. Also note that {{glossary("Unicode")}} values are used to specify some of the special quote characters.
+In this example, the `:lang()` pseudo-class is used to match the parents of quote elements ({{htmlElement("q")}}) using [child combinators](/ru/docs/Web/CSS/Child_combinator). Note that this doesn't illustrate the only way to do this, and that the best method to use depends on the type of document. Also note that {{glossary("Unicode")}} values are used to specify some of the special quote characters.
 
 ### HTML
 

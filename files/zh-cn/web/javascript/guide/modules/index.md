@@ -738,7 +738,7 @@ squareBtn.addEventListener("click", () => {
 
 ## 顶层 await
 
-顶层 await 是模块中可用的一个特性。这意味着可以使用 `await` 关键字。它允许模块像大[异步函数](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)一样运行，这意味着代码可以在父模块中使用之前进行评估，但不会阻止兄弟模块的加载。
+顶层 await 是模块中可用的一个特性。这意味着可以使用 `await` 关键字。它允许模块像大[异步函数](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Introducing)一样运行，这意味着代码可以在父模块中使用之前进行评估，但不会阻止兄弟模块的加载。
 
 让我们看一个例子。你可以在 [`top-level-await`](https://github.com/mdn/js-examples/tree/main/module-examples/top-level-await) 目录中找到本节中描述的所有文件和代码，这些文件和代码是从前面的示例扩展而来的。
 

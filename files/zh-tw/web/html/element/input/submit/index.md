@@ -62,7 +62,7 @@ slug: Web/HTML/Element/input/submit
 
 試著在文字區塊內輸入些文字，接著提交表單。
 
-提交時，送到伺服器的成對 name/value 資料會 be along the lines of `text=mytext`，視你在文字區塊內輸入了什麼。資料在哪裡並如何被送出，取決於 `<form>` 屬性和其他細節的設定：請參見[傳送表單資料](/zh-TW/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)。
+提交時，送到伺服器的成對 name/value 資料會 be along the lines of `text=mytext`，視你在文字區塊內輸入了什麼。資料在哪裡並如何被送出，取決於 `<form>` 屬性和其他細節的設定：請參見[傳送表單資料](/zh-TW/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)。
 
 ### 增加提交的快捷鍵
 

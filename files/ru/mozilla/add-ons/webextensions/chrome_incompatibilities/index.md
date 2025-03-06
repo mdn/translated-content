@@ -15,16 +15,16 @@ slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 
 ### Полностью поддерживаемые ключи
 
-- [`applications`](/en-US/Add-ons/WebExtensions/manifest.json/applications)
-- [`browser_action`](/en-US/Add-ons/WebExtensions/manifest.json/browser_action)
-- [`default_locale`](/en-US/Add-ons/WebExtensions/manifest.json/default_locale)
-- [`description`](/en-US/Add-ons/WebExtensions/manifest.json/description)
-- [`icons`](/en-US/Add-ons/WebExtensions/manifest.json/icons)
-- [`manifest_version`](/en-US/Add-ons/WebExtensions/manifest.json/manifest_version)
-- [`name`](/en-US/Add-ons/WebExtensions/manifest.json/name)
-- [`page_action`](/en-US/Add-ons/WebExtensions/manifest.json/page_action)
-- [`version`](/en-US/Add-ons/WebExtensions/manifest.json/version)
-- [`web_accessible_resources`](/en-US/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
+- [`applications`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)
+- [`browser_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
+- [`default_locale`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale)
+- [`description`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description)
+- [`icons`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)
+- [`manifest_version`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)
+- [`name`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)
+- [`page_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)
+- [`version`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version)
+- [`web_accessible_resources`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
 
 ### Частично поддерживаемые ключи
 
@@ -58,7 +58,7 @@ Firefox не поддерживает:
 
 - `chrome_style`
 
-Using `options_ui` requires a valid value for the [applications.gecko.id](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) property.
+Using `options_ui` requires a valid value for the [applications.gecko.id](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) property.
 
 #### permissions
 
@@ -88,7 +88,7 @@ Firefox does not support the following incognito (private browsing) modes:
   - Relative URLs passed to `setPopup()` are resolved relative to the caller document, rather than to the extension root
 
 - [commands](/ru/docs/Mozilla/Add-ons/WebExtensions/API/commands)
-- [contextMenus](/ru/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus)
+- [contextMenus](/ru/docs/Mozilla/Add-ons/WebExtensions/API/menus)
 - [cookies](/ru/docs/Mozilla/Add-ons/WebExtensions/API/cookies)
 - [i18n](/ru/docs/Mozilla/Add-ons/WebExtensions/API/i18n)
 - [pageAction](/ru/docs/Mozilla/Add-ons/WebExtensions/API/pageAction)
@@ -259,4 +259,4 @@ Firefox resolves URLs in injected CSS files relative to the CSS file itself, rat
 
 #### Additional incompatibilities
 
-Firefox does not support using [alert()](/ru/docs/Web/API/Window/alert) from background pages. Using `alert(message)` from a background page will cause the [Browser Console](/ru/docs/Tools/Browser_Console) to be opened and both a line stating "alert() is not supported in background windows; please use console.log instead." and the `message` will be output to the console.
+Firefox does not support using [alert()](/ru/docs/Web/API/Window/alert) from background pages. Using `alert(message)` from a background page will cause the [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) to be opened and both a line stating "alert() is not supported in background windows; please use console.log instead." and the `message` will be output to the console.

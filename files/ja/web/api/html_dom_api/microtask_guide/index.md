@@ -291,5 +291,5 @@ log("Main program exiting");
 - {{domxref("queueMicrotask()")}}
 - [非同期 JavaScript](/ja/docs/Learn/JavaScript/Asynchronous)
   - [非同期 JavaScript 入門](/ja/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - [強調的非同期 JavaScript: タイムアウトとインターバル](/ja/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
+  - [強調的非同期 JavaScript: タイムアウトとインターバル](/ja/docs/Learn/JavaScript/Asynchronous)
   - [プロミスによる礼儀正しい非同期プログラミング](/ja/docs/Learn/JavaScript/Asynchronous/Promises)

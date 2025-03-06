@@ -70,4 +70,4 @@ g.next(); // { value: undefined, done: true }
 
 ## Voir aussi
 
-- [`function*`](/fr/docs/Web/JavaScript/Reference/Instructions/function*)
+- [`function*`](/fr/docs/Web/JavaScript/Reference/Statements/function*)
