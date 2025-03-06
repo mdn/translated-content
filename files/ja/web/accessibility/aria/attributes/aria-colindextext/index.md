@@ -14,7 +14,7 @@ l10n:
 非常に大きい表の場合、または意図的に表の一部だけを表示したい場合、全ての列がDOMに存在しない場合があります。
 このような場合は、整数値の [`aria-colcount`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) 属性を使用して、全ての列が存在する場合に表（またはグリッド）に含まれる列の数を定義し、各列に [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) 属性を追加して、全ての列が表示されている場合の表内の列インデックスに関する情報を提供します。
 
-次の HTML スニペットでは、表に 8 つの列がありますが、表示されているのは 4 つだけです。「City」列は、`aria-colindex="5"` で定義されているように、大きな表の 5 番目の列です。
+次の HTML スニペットでは、表に 8 つの列がありますが、表示されているのは 4 つだけです。 "City" 列は、`aria-colindex="5"` で定義されているように、大きな表の 5 番目の列です。
 
 ```html
 <table aria-colcount="8">
@@ -58,7 +58,7 @@ l10n:
 </table>
 ```
 
-上記の例では、表には 128 列ありますが、そのうち 4 列のみが表示されています。`aria-colindextext` は 3 つの列で使用され、人間が読める代替テキストを提供しています。`aria-colindextext="Value at start of 2021"` を含めることで、支援技術は「Column 110」ではなく「Value at start of 2021」と読み上げることができます。
+上記の例では、表には 128 列ありますが、そのうち 4 列のみが表示されています。`aria-colindextext` は 3 つの列で使用され、人間が読める代替テキストを提供しています。`aria-colindextext="Value at start of 2021"` を含めることで、支援技術は "Column 110" ではなく "Value at start of 2021" と読み上げることができます。
 
 `aria-colindex` の提供または計算された値が意味をなさないか、表示されたインデックスを反映しない場合にのみ `aria-colindextext` を使用します。`aria-colindextext` を含める場合は常に `aria-colindex` も使用するようにしてください。これは、一部の支援技術ではユーザーの位置を追跡し、代替表ナビゲーションを提供するために数値列インデックスに依存しているためです。
 
