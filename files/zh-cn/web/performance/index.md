@@ -159,7 +159,7 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn_web_development/Extensions/Perfor
   - {{glossary('Effective connection type', '有效连接类型')}}
   - {{glossary('First contentful paint', '首次内容绘制')}}
   - {{glossary('First CPU idle', '首次 CPU 空闲')}}
-  - {{glossary('First Paint', '首次绘制')}}
+  - {{glossary('First paint', '首次绘制')}}
   - {{glossary('HTTP')}}
   - {{glossary('HTTP_2', 'HTTP/2')}}
   - {{glossary('Interaction to next paint', '交互到下次绘制')}}
