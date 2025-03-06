@@ -38,7 +38,7 @@ Content-Length: 165
 }
 ```
 
-在此實作中，伺服器預期嚴格符合 {{rfc("4648")}} 的 Base64 編碼內容（使用[嚴格編碼方法](https://ruby-doc.org/3.3.2/stdlibs/base64/Base64.html#method-i-strict_encode64)）。伺服器回應 `422 Unprocessable Content`，並在 `message` 欄位中提供有關驗證錯誤的上下文資訊：
+在此實作中，伺服器預期嚴格符合 {{rfc("4648")}} 的 Base64 編碼內容（使用[嚴格編碼方法](https://ruby-doc.org/3.3.2/stdlibs/base64/Base64.html#method-i-strict_encode64)）。伺服器回應 `422` Unprocessable Content，並在 `message` 欄位中提供有關驗證錯誤的上下文資訊：
 
 ```http
 HTTP/1.1 422 Unprocessable Content
