@@ -1,6 +1,6 @@
 ---
 title: Краткая форма записи свойств
-slug: Web/CSS/Shorthand_properties
+slug: Web/CSS/CSS_cascade/Shorthand_properties
 ---
 
 {{cssref}}
