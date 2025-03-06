@@ -7,7 +7,25 @@ slug: Web/CSS/:lang
 
 **`:lang()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)基于元素语言来匹配页面元素。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-function-lang.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :lang()", "tabbed-shorter")}}
+
+```css interactive-example
+*:lang(en-US) {
+  outline: 2px solid deeppink;
+}
+```
+
+```html interactive-example
+<p lang="en-US">
+  Music during road trips and long commutes aren’t a problem, but using
+  headphones isn’t the best thing to do while driving in your car.
+</p>
+
+<p lang="pl-PL">
+  Gdy widzimy znak z narysowaną czaszką i napisem
+  <strong lang="en-US">DANGER</strong> to lepiej nie wchodzić do środka.
+</p>
+```
 
 > [!NOTE]
 > 在 HTML 中，语言是通过 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性和 {{HTMLElement("meta")}} 元素的组合来决定的，也可能是通过协议的信息来确定（例如 HTTP 标头）。对于其他文档类型，也可能存在其他用于确定语言的方法。

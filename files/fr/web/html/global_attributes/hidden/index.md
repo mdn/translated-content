@@ -7,7 +7,28 @@ slug: Web/HTML/Global_attributes/hidden
 
 L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`hidden`** est un attribut booléen qui indique s'il n'est pas encore ou s'il n'est plus pertinent d'afficher l'élément courant. Cet attribut peut, par exemple, être utilisé afin de masquer des éléments tant que l'utilisateur ne s'est pas connecté. Le navigateur n'affichera pas les éléments masqués via cet attribut.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-hidden.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: hidden", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  This content should be read right now, as it is important. I am so glad you
+  are able to find it!
+</p>
+
+<p hidden>
+  This content is not relevant to this page right now, so should not be seen.
+  Nothing to see here. Nada.
+</p>
+```
+
+```css interactive-example
+p {
+  background: #ffe8d4;
+  border: 1px solid #f69d3c;
+  padding: 5px;
+  border-radius: 5px;
+}
+```
 
 Cet attribut ne doit pas être utilisé pour masquer du contenu qui devrait pouvoir être vu sous une autre présentation. Si un contenu est marqué comme masqué, il sera masqué pour l'ensemble des présentations, y compris pour les lecteurs d'écran et autres outils d'assistance.
 

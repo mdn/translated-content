@@ -108,7 +108,7 @@ bold && <length>
 
 ### “或”组合符：||
 
-*“或”组合符*表示其连接的所有组成元素是可选的，**次序任意，但是至少其中一个要出现**。“或”组合符通常用来描述[属性缩写](/zh-CN/docs/Web/CSS/Shorthand_properties)中的各部分。
+*“或”组合符*表示其连接的所有组成元素是可选的，**次序任意，但是至少其中一个要出现**。“或”组合符通常用来描述[属性缩写](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)中的各部分。
 
 ```css
 <'border-width'> || <'border-style'> || <'border-color'>
@@ -399,5 +399,5 @@ bold smaller#
     - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
 
   - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-  - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
+  - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
