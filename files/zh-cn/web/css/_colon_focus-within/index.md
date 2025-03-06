@@ -7,7 +7,34 @@ slug: Web/CSS/:focus-within
 
 **`:focus-within`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示当元素或其任意后代元素被聚焦时，将匹配该元素。换言之，它表示 {{CSSxRef(":focus")}} 伪类匹配到该元素自身或它的后代时，该伪类生效。（这也包括 [shadow 树](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)中的后代元素。）
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-focus-within.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :focus-within", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+label:focus-within {
+  font-weight: bold;
+}
+```
+
+```html interactive-example
+<form>
+  <p>Which flavor would you like to order?</p>
+  <label>Full Name: <input name="firstName" type="text" /></label>
+  <label
+    >Flavor:
+    <select name="flavor">
+      <option>Cherry</option>
+      <option>Green Tea</option>
+      <option>Moose Tracks</option>
+      <option>Mint Chip</option>
+    </select>
+  </label>
+</form>
+```
 
 这个选择器非常有用，举个常见的例子，当用户聚焦于一个 {{htmlElement("input")}} 字段时，可以用它来突出显示整个 {{HTMLElement("form")}} 容器。
 

@@ -11,7 +11,32 @@ l10n:
 
 `counter()` 関数は、ふつうは[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の中の {{cssxref("content")}} で用いることが多いものの、理論的には [`<string>`](/ja/docs/Web/CSS/string) に対応するすべての箇所で用いることができます。
 
-{{EmbedInteractiveExample("pages/tabbed/function-counter.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: counter()", "tabbed-shorter")}}
+
+```css interactive-example
+.double-list {
+  counter-reset: count -1;
+}
+
+.double-list li {
+  counter-increment: count 2;
+}
+
+.double-list li::marker {
+  content: counter(count, decimal) ") ";
+}
+```
+
+```html interactive-example
+<p>Best Dynamic Duos in Sports:</p>
+<ol class="double-list">
+  <li>Simone Biles + Jonathan Owens</li>
+  <li>Serena Williams + Venus Williams</li>
+  <li>Aaron Judge + Giancarlo Stanton</li>
+  <li>LeBron James + Dwyane Wade</li>
+  <li>Xavi Hernandez + Andres Iniesta</li>
+</ol>
+```
 
 ## 構文
 

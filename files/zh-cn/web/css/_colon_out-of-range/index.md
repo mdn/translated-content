@@ -7,7 +7,37 @@ slug: Web/CSS/:out-of-range
 
 **`:out-of-range`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示一个 {{htmlelement("input")}} 元素，其当前值处于属性 [`min`](/zh-CN/docs/Web/HTML/Element/input#attr-min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#attr-max) 限定的范围外。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-out-of-range.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :out-of-range", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:out-of-range {
+  background-color: orangered;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="amount">How many tickets? (You can buy 2-6 tickets)</label>
+  <input id="amount" name="amount" type="number" min="2" max="6" value="4" />
+
+  <label for="dep">Departure Date: (Whole year 2022 is acceptable)</label>
+  <input
+    id="dep"
+    name="dep"
+    type="date"
+    min="2022-01-01"
+    max="2022-12-31"
+    value="2025-05-05" />
+
+  <label for="ret">Return Date: (Whole year 2022 is acceptable)</label>
+  <input id="ret" name="ret" type="date" min="2022-01-01" max="2022-12-31" />
+</form>
+```
 
 这个伪类很有用，可以给用户提供一个视觉提示，让他们知道字段的当前值是否超出了允许的范围。
 

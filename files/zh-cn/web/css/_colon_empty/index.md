@@ -7,7 +7,25 @@ slug: Web/CSS/:empty
 
 **`:empty`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)用于选择不包含任何子元素的元素。子元素可以是元素节点或文本（包括空格）。但是注释、处理指令和 CSS {{cssxref("content")}} 不会影响元素是否被认定为空。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-empty.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :empty", "tabbed-shorter")}}
+
+```css interactive-example
+div:empty {
+  outline: 2px solid deeppink;
+  height: 1em;
+}
+```
+
+```html interactive-example
+<p>Element with no content:</p>
+<div></div>
+
+<p>Element with comment:</p>
+<div><!-- Simple Comment --></div>
+
+<p>Element with nested empty element:</p>
+<div><p></p></div>
+```
 
 > [!NOTE]
 > 在[选择器 Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo) 中，`:empty` 伪类被更改为与 {{CSSxRef(":-moz-only-whitespace")}} 类似一样的行为，但目前还没有浏览器支持它。

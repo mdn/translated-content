@@ -142,7 +142,7 @@ console.log(Triple.calculate(6)); // 18
 
 let tp = new Triple();
 
-console.log(SquaredTriple.tripple(3)); // 81（不会受父类实例化的影响）
+console.log(SquaredTriple.calculate(3)); // 81（不会受父类实例化的影响）
 console.log(SquaredTriple.description); // '我可以让你提供的任何数变为其三倍的平方'
 console.log(SquaredTriple.longDescription); // undefined
 console.log(SquaredTriple.customName); // '三倍器'

@@ -22007,13 +22007,6 @@
       "Tortik217"
     ]
   },
-  "conflicting/MDN/Community": {
-    "modified": "2019-01-17T00:00:52.853Z",
-    "contributors": [
-      "wbamberg",
-      "warsan"
-    ]
-  },
   "conflicting/Web/API/console": {
     "modified": "2019-03-18T21:20:36.516Z",
     "contributors": [
@@ -22030,15 +22023,6 @@
       "redishko",
       "PavelG94",
       "Prographer"
-    ]
-  },
-  "orphaned/MDN/At_ten": {
-    "modified": "2019-03-23T22:49:58.338Z",
-    "contributors": [
-      "dimakozakov",
-      "acidicMercury8",
-      "Myshov",
-      "anmo"
     ]
   }
 }
