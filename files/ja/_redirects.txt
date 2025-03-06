@@ -277,7 +277,7 @@
 /ja/docs/CSS/Pseudo-elements-redirect-1	/ja/docs/Web/CSS/Pseudo-elements
 /ja/docs/CSS/Replaced_element	/ja/docs/Web/CSS/Replaced_element
 /ja/docs/CSS/Scaling_background_images	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
-/ja/docs/CSS/Shorthand_properties	/ja/docs/Web/CSS/Shorthand_properties
+/ja/docs/CSS/Shorthand_properties	/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties
 /ja/docs/CSS/Specificity	/ja/docs/Web/CSS/CSS_cascade/Specificity
 /ja/docs/CSS/Syntax	/ja/docs/Web/CSS/CSS_syntax/Syntax
 /ja/docs/CSS/Tutorial/Using_CSS_transforms	/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
@@ -3936,6 +3936,7 @@
 /ja/docs/Web/CSS/Adjacent_sibling_selectors	/ja/docs/Web/CSS/Next-sibling_combinator
 /ja/docs/Web/CSS/Alternative_style_sheets	/ja/docs/Web/HTML/Attributes/rel/alternate_stylesheet
 /ja/docs/Web/CSS/At-rule	/ja/docs/Web/CSS/CSS_syntax/At-rule
+/ja/docs/Web/CSS/At-rule-functions	/ja/docs/Web/CSS/CSS_syntax/At-rule_functions
 /ja/docs/Web/CSS/Background_Backup	/ja/docs/Web/CSS/background
 /ja/docs/Web/CSS/Block_formatting_context	/ja/docs/Web/CSS/CSS_display/Block_formatting_context
 /ja/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support	/ja/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
@@ -4065,6 +4066,8 @@
 /ja/docs/Web/CSS/Reference/@viewport/zoom	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
 /ja/docs/Web/CSS/Scaling_background_images	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
+/ja/docs/Web/CSS/Scaling_of_SVG_backgrounds	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
+/ja/docs/Web/CSS/Shorthand_properties	/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties
 /ja/docs/Web/CSS/Specificity	/ja/docs/Web/CSS/CSS_cascade/Specificity
 /ja/docs/Web/CSS/Syntax	/ja/docs/Web/CSS/CSS_syntax/Syntax
 /ja/docs/Web/CSS/Tools	/ja/docs/conflicting/Web/CSS
@@ -4086,6 +4089,7 @@
 /ja/docs/Web/CSS/Using_multi-column_layouts	/ja/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /ja/docs/Web/CSS/Using_multiple_backgrounds	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 /ja/docs/Web/CSS/Value_definition_syntax	/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
+/ja/docs/Web/CSS/Viewport_concepts	/ja/docs/Web/CSS/CSSOM_view/Viewport_concepts
 /ja/docs/Web/CSS/actual_value	/ja/docs/Web/CSS/CSS_cascade/actual_value
 /ja/docs/Web/CSS/align-tracks	/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /ja/docs/Web/CSS/attr()	/ja/docs/Web/CSS/attr

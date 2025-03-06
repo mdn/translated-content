@@ -2112,6 +2112,7 @@
 /es/docs/Web/CSS/Selectores_atributo	/es/docs/Web/CSS/Attribute_selectors
 /es/docs/Web/CSS/Selectores_hermanos_adyacentes	/es/docs/Web/CSS/Next-sibling_combinator
 /es/docs/Web/CSS/Selectores_hermanos_generales	/es/docs/Web/CSS/Subsequent-sibling_combinator
+/es/docs/Web/CSS/Shorthand_properties	/es/docs/Web/CSS/CSS_cascade/Shorthand_properties
 /es/docs/Web/CSS/Sintaxis_definición_de_valor	/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
 /es/docs/Web/CSS/Specificity	/es/docs/Web/CSS/CSS_cascade/Specificity
 /es/docs/Web/CSS/Syntax	/es/docs/Web/CSS/CSS_syntax/Syntax

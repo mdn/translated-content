@@ -70,5 +70,5 @@ CSS 在某些情况下会对可替换元素做一些特殊处理，比如计算�
     - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
 
   - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-  - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
+  - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)

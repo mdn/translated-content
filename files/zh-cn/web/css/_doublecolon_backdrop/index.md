@@ -9,7 +9,36 @@ l10n:
 
 **`::backdrop`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是一个与{{Glossary("viewport", "视口")}}大小相同的盒子，它会被渲染在任何{{Glossary("top layer", "顶层")}}展示元素的下方。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-backdrop.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::backdrop", "tabbed-shorter")}}
+
+```css interactive-example
+button {
+  font-size: 1.2rem;
+  padding: 5px 15px;
+}
+
+dialog::backdrop {
+  background-color: salmon;
+}
+```
+
+```html interactive-example
+<button id="showDialogBtn">Show a dialog</button>
+
+<dialog id="favDialog">
+  <form method="dialog">
+    <p>The background shown outside of this dialog is a backdrop.</p>
+    <button id="confirmBtn">Close the dialog</button>
+  </form>
+</dialog>
+```
+
+```js interactive-example
+const showDialogBtn = document.getElementById("showDialogBtn");
+const favDialog = document.getElementById("favDialog");
+
+showDialogBtn.addEventListener("click", () => favDialog.showModal());
+```
 
 ## 语法
 

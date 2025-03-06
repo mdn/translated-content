@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`gap`** [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)用于设置行与列之间的间隙（{{glossary("gutters", "网格间距")}}）。
+[CSS](/zh-CN/docs/Web/CSS) **`gap`** [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)用于设置行与列之间的间隙（{{glossary("gutters", "网格间距")}}）。
 
 规范的早期版本将该属性命名为 `grid-gap`，且为了保持与旧网站的兼容性，浏览器仍然会接受 `grid-gap` 作为 `gap` 的别名。
 

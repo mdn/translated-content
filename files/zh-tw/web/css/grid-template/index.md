@@ -5,11 +5,11 @@ slug: Web/CSS/grid-template
 
 {{CSSRef}}
 
-的**`grid-template`**CSS 屬性是一個[速記屬性](/zh-TW/docs/Web/CSS/Shorthand_properties)，用於定義{{glossary("grid column","grid columns")}}，{{glossary("grid rows","rows")}}，和{{glossary("grid areas","area")}}。
+CSS 的 **`grid-template`** 屬性是一個用於定義{{glossary("grid column","網格欄")}}、{{glossary("grid rows","列")}}和{{glossary("grid areas","區域")}}的[簡寫屬性](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)。
 
-{{EmbedInteractiveExample("pages / css / grid-template.html")}}
+{{EmbedInteractiveExample("pages/css/grid-template.html")}}
 
-作者可以為長期屬性設置值：{{cssxref("grid-template-rows")}},{{cssxref("grid-template-columns")}}和{{cssxref("grid-template-areas ")}}。
+作者可以為長期屬性設置值：{{cssxref("grid-template-rows")}}、{{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-areas ")}}。
 
 ## 句法
 

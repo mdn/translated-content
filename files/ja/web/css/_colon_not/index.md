@@ -9,7 +9,35 @@ l10n:
 
 **`:not()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、列挙されたセレクターに一致しない要素を表します。特定の項目が選択されることを防ぐため、否定擬似クラス (_negation pseudo-class_) と呼ばれています。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-not.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :not", "tabbed-shorter")}}
+
+```css interactive-example
+p:not(.irrelevant) {
+  font-weight: bold;
+}
+
+p > strong,
+p > b.important {
+  color: crimson;
+}
+
+p > :not(strong, b.important) {
+  color: darkmagenta;
+}
+```
+
+```html interactive-example
+<p>
+  <b>Mars</b> is one of the most Earth-like planets. <b>Mars</b> day is almost
+  the same as an Earth day, only <strong>37 minutes</strong> longer.
+</p>
+
+<p class="irrelevant">
+  <b class="important">NASA</b>'s Jet <del>Momentum</del> Propulsion Laboratory
+  is designing mission concepts to survive the <b>Venus</b> extreme temperatures
+  and atmospheric pressure.
+</p>
+```
 
 `:not()` 擬似クラスには、使用する前に知っておいた方が良い[クセやコツ、予想外の結果](#解説)がいくつかあります。
 
