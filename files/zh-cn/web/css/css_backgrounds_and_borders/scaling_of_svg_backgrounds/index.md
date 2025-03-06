@@ -1,7 +1,6 @@
 ---
 title: SVG 背景缩放
 slug: Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
-original_slug: Web/CSS/Scaling_of_SVG_backgrounds
 ---
 
 {{CSSRef}}
