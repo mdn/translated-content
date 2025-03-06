@@ -27,9 +27,9 @@ l10n:
 </article>
 ```
 
-スクリーンリーダーなどのほとんどの支援技術では、上記の内容を「slide, welcome to my talk. Image, Me.」と読み上げます。点字支援技術では、点字で「sld welcome to my talk gra me」と表示されます。{{HTMLElement('article')}} セマンティクスには、`aria-roledescription` 属性によって「slide」ロールが与えられます。「slide」は仕様では定義されていないロールですが、プレゼンテーションのスライドに与えられる一般的なロールです。点字では、ロールは「sld」と表示されます。「gra」は「graphic」の略で、点字では「image」のロールがこのように短縮されます。
+スクリーンリーダーなどのほとんどの支援技術では、上記の内容を "slide, welcome to my talk. Image, Me." と読み上げます。点字支援技術では、点字で "sld welcome to my talk gra me" と表示されます。{{HTMLElement('article')}} セマンティクスには、`aria-roledescription` 属性によって "slide" ロールが与えられます。 "slide" は仕様では定義されていないロールですが、プレゼンテーションのスライドに与えられる一般的なロールです。点字では、ロールは "sld" と表示されます。 "gra" は "graphic" の略で、点字では "image" のロールがこのように短縮されます。
 
-`aria-brailleroledescription` 属性は、「group」や「region」などの非対話型コンテナのロールの目的を明確にするため、または点字コンテキストで、ウィジェットのより具体的な説明を提供する場合にのみ使用するべきです。
+`aria-brailleroledescription` 属性は、 "group" や "region" などの非対話型コンテナのロールの目的を明確にするため、または点字コンテキストで、ウィジェットのより具体的な説明を提供する場合にのみ使用するべきです。
 
 `aria-brailleroledescription` 属性は、支援技術がロールの名前を点字でローカライズして表現する方法を上書きするため、値が不適切であると、ユーザーは点字ディスプレイ上の要素を理解して操作できなくなります。
 
@@ -45,7 +45,7 @@ l10n:
 > [!WARNING]
 > コンテンツが Unicode 点字パターンのみの場合、値はユーザーの優先翻訳テーブルに従って翻訳されません。
 
-> [!NOTE] > `aria-roledescription` をそのまま `aria-brailleroledescription` に使用しないでください。`aria-roledescription` が適切な点字表現を提供しない場合にのみ、この属性を含めてください。
+> **メモ:** `aria-roledescription` をそのまま `aria-brailleroledescription` に使用しないでください。`aria-roledescription` が適切な点字表現を提供しない場合にのみ、この属性を含めてください。
 
 次の場合、`aria-brailleroledescription` の値は点字ユーザーに公開されません:
 
