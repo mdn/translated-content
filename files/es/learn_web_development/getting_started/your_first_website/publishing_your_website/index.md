@@ -26,10 +26,10 @@ Una vez que termines de escribir el código y organizar los archivos que compone
       <th scope="row">Resultados del aprendizaje:</th>
       <td>
         <ul>
-          <li>Las herramientas y conceptos básicos involucrados en la publicación de un sitio web: *hosting*, dominios, programas FTP.</li>
-          <li>Qué opciones alternativas de *hosting* están disponibles, por ejemplo, Google App Engine, GitHub y CodePen.</li>
+          <li>Las herramientas y conceptos básicos involucrados en la publicación de un sitio web: alojamiento, dominios, programas FTP.</li>
+          <li>Qué opciones alternativas de alojamiento están disponibles, por ejemplo, Google App Engine, GitHub y CodePen.</li>
           <li>Publicar un sitio web utilizando GitHub Pages.</li>
-          <li>*Hosting*, cómo comprarlo y cómo poner un sitio web en línea.</li>
+          <li>Alojamiento, cómo comprarlo y cómo poner un sitio web en línea.</li>
           <li>Cómo registrar un dominio.</li>
         </ul>
       </td>
@@ -41,40 +41,40 @@ Una vez que termines de escribir el código y organizar los archivos que compone
 
 Publicar un sitio web es un tema complejo porque hay muchas maneras de hacerlo. Este artículo no pretende documentar todos los métodos posibles. En cambio, explica las ventajas y desventajas de tres enfoques que son prácticos para los principiantes. Luego, describe un método que puede funcionar de inmediato para muchos lectores.
 
-### Obtener _hosting_ y un nombre de dominio
+### Obtener alojamiento y un nombre de dominio
 
-Para tener más control sobre el contenido y la apariencia del sitio web, la mayoría de los profesionales/empresas optan por comprar _web hosting_ y un nombre de dominio:
+Para tener más control sobre el contenido y la apariencia del sitio web, la mayoría de los profesionales/empresas optan por comprar alojamiento web y un nombre de dominio:
 
-- El _Web hosting_ es el espacio de archivo alquilado en el [servidor web](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server) de una empresa de _hosting_. Colocas los archivos del sitio web en el servidor web. El servidor web proporciona el contenido del sitio web a los visitantes del sitio web.
+- El alojamiento web es el espacio de archivo alquilado en el [servidor web](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server) de una empresa de alojamiento. Colocas los archivos del sitio web en el servidor web. El servidor web proporciona el contenido del sitio web a los visitantes del sitio web.
 - Un [nombre de dominio](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name) es la dirección web única donde la gente encuentra tu sitio web, como `https://www.mozilla.org` o `https://www.bbc.co.uk`. Puedes alquilar tu nombre de dominio por tantos años como quieras de un **registrador de dominios**.
 
-Si obtienes tu _web hosting_ _y_ tu nombre de dominio de la misma empresa, tienden a estar configurados automáticamente para comunicarse entre sí. Sin embargo, si los obtienes de empresas separadas, o quieres cambiar tu _hosting_ a una empresa diferente, necesitas hacer un poco de configuración para apuntar el nombre de dominio al servidor correcto. Esto es para que la gente vea tu sitio web cuando navegue a esa dirección web. Esto se hace normalmente accediendo al sitio web de tu registrador de dominios y configurando los [servidores de nombres](https://kinsta.com/knowledgebase/what-is-a-nameserver/) de tu dominio a los proporcionados por tu empresa de _hosting_.
+Si obtienes tu alojamiento web _y_ tu nombre de dominio de la misma empresa, tienden a estar configurados automáticamente para comunicarse entre sí. Sin embargo, si los obtienes de empresas separadas, o quieres cambiar tu alojamiento a una empresa diferente, necesitas hacer un poco de configuración para apuntar el nombre de dominio al servidor correcto. Esto es para que la gente vea tu sitio web cuando navegue a esa dirección web. Esto se hace normalmente accediendo al sitio web de tu registrador de dominios y configurando los [servidores de nombres](https://kinsta.com/knowledgebase/what-is-a-nameserver/) de tu dominio a los proporcionados por tu empresa de alojamiento.
 
 Las empresas utilizan varios mecanismos para transferir archivos a sus servidores web. Muchas tendrán más de una opción; las opciones típicas incluyen:
 
 - Una interfaz de arrastrar y soltar (verás un ejemplo de esto en [Publicar a través de GitHub](#publishing_via_github), más adelante).
-- Un programa {{Glossary("FTP", "File Transfer Protocol (FTP)")}}. Los programas FTP varían mucho, pero generalmente, tienes que conectarte a tu servidor web utilizando los detalles proporcionados por tu empresa de _hosting_ (típicamente nombre de usuario, contraseña, nombre de _host_). Entonces el programa te muestra tus archivos locales y los archivos del servidor web en dos ventanas, y te proporciona una forma de transferir archivos de un lado a otro.
-- Mantener el código fuente del sitio web en un repositorio de GitHub (véase más abajo) y conceder acceso a la empresa de _hosting_ para que pueda obtener el código fuente, construirlo si es necesario y publicarlo.
+- Un programa de {{Glossary("FTP", "Protocolo de Transferencia de Archivos (FTP)")}}. Los programas FTP varían mucho, pero generalmente, tienes que conectarte a tu servidor web utilizando los detalles proporcionados por tu empresa de alojamiento (típicamente nombre de usuario, contraseña, nombre de dominio). Entonces el programa te muestra tus archivos locales y los archivos del servidor web en dos ventanas, y te proporciona una forma de transferir archivos de un lado a otro.
+- Mantener el código fuente del sitio web en un repositorio de GitHub (véase más abajo) y conceder acceso a la empresa de alojamiento para que pueda obtener el código fuente, construirlo si es necesario y publicarlo.
 - Algunas empresas proporcionarán [herramientas de línea de comandos](/es/docs/Learn_web_development/Getting_started/Environment_setup/Command_line) para que las uses para transferir tus archivos.
 
-#### Consejos para encontrar _hosting_ y dominios
+#### Consejos para encontrar alojamiento y dominios
 
-- MDN no promueve ninguna empresa comercial de _hosting_ o registrador de nombres de dominio específicos. Para encontrar empresas de _hosting_ y registradores, simplemente busca "_web hosting_" y "_domain names_". Todos los registradores tendrán una función para permitirte comprobar si el nombre de dominio que quieres está disponible.
-- Tu {{Glossary("ISP", "proveedor de servicios de Internet")}} doméstico o de la oficina puede proporcionar algún _hosting_ limitado para un sitio web pequeño. El conjunto de características disponibles será limitado, pero podría ser perfecto para tus primeros experimentos.
+- MDN no promueve ninguna empresa comercial de alojamiento o registrador de nombres de dominio específicos. Para encontrar empresas de alojamiento y registradores, simplemente busca "alojamiento web" y "nombres de dominio". Todos los registradores tendrán una función para permitirte comprobar si el nombre de dominio que quieres está disponible.
+- Tu {{Glossary("ISP", "proveedor de servicios de Internet")}} doméstico o de la oficina puede proporcionar algún alojamiento limitado para un sitio web pequeño. El conjunto de características disponibles será limitado, pero podría ser perfecto para tus primeros experimentos.
 - También hay servicios gratuitos disponibles como [Neocities](https://neocities.org/), [Google Sites](https://sites.google.com/) y [WordPress](https://wordpress.com/). Estos servicios pueden ser limitados en su alcance, pero son lo suficientemente buenos para los experimentos iniciales.
 
 ### Usar una herramienta en línea como GitHub o Google App Engine
 
 Algunas herramientas te permiten publicar tu sitio web en línea:
 
-- [GitHub](https://github.com/) es un sitio de "codificación social". Te permite subir repositorios de código para su almacenamiento en el [Git](https://git-scm.com/) **sistema de control de versiones.** Puedes entonces colaborar en proyectos de código, y el sistema es de código abierto por defecto, lo que significa que cualquiera en el mundo puede encontrar tu código de GitHub, usarlo, aprender de él y mejorarlo. GitHub tiene una característica muy útil llamada [GitHub Pages](https://pages.github.com/), que te permite exponer el código de tu sitio web en vivo en la web.
+- [GitHub](https://github.com/) es un sitio de "codificación social". Te permite subir repositorios de código para su almacenamiento en el **sistema de control de versiones** [Git](https://git-scm.com/). Puedes entonces colaborar en proyectos de código, y el sistema es de código abierto por defecto, lo que significa que cualquiera en el mundo puede encontrar tu código de GitHub, usarlo, aprender de él y mejorarlo. GitHub tiene una característica muy útil llamada [GitHub Pages](https://pages.github.com/), que te permite exponer el código de tu sitio web en vivo en la web.
 - [Google App Engine](https://cloud.google.com/appengine/) es una potente plataforma que te permite construir y ejecutar aplicaciones en la infraestructura de Google, ya sea que necesites construir una aplicación web de múltiples niveles desde cero o alojar un sitio web estático. Véase [¿Cómo alojar tu sitio web en Google App Engine?](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine) para más información.
 
 Estas opciones son generalmente gratuitas, con un conjunto de características limitado.
 
 ### Usar un IDE basado en la web como CodePen
 
-Hay una serie de aplicaciones web que emulan un entorno de desarrollo de sitios web, permitiéndote escribir HTML, CSS y JavaScript, que luego se renderiza y se muestra en un panel de salida. En términos generales, estas herramientas son fáciles de usar, geniales para el aprendizaje, buenas para compartir código (por ejemplo, si quieres compartir una técnica o pedir ayuda para la depuración a colegas en una oficina diferente) y gratuitas (para las características básicas). Alojan tu página renderizada en una dirección web única. Sin embargo, las características son limitadas, y estas aplicaciones a menudo no proporcionan espacio de _hosting_ para activos (como imágenes).
+Hay una serie de aplicaciones web que emulan un entorno de desarrollo de sitios web, permitiéndote escribir HTML, CSS y JavaScript, que luego se renderiza y se muestra en un panel de salida. En términos generales, estas herramientas son fáciles de usar, geniales para el aprendizaje, buenas para compartir código (por ejemplo, si quieres compartir una técnica o pedir ayuda para la depuración a colegas en una oficina diferente) y gratuitas (para las características básicas). Alojan tu página renderizada en una dirección web única. Sin embargo, las características son limitadas, y estas aplicaciones a menudo no proporcionan espacio de alojamiento para activos (como imágenes).
 
 Intenta jugar con algunos de estos ejemplos para averiguar cuál funciona mejor para ti:
 
