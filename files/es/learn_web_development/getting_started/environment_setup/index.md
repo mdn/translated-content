@@ -28,14 +28,14 @@ Si necesitas repasar estos conceptos básicos, te recomendamos los siguientes re
 ## Tutoriales
 
 - [Instalación de software](/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)
-  - En este artículo, te mostraremos qué herramientas necesitas para realizar un desarrollo web simple y cómo instalarlas correctamente. Configuraremos las herramientas mínimas necesarias por ahora, incluyendo un editor de texto y algunos navegadores web modernos.
+  - : En este artículo, te mostraremos qué herramientas necesitas para realizar un desarrollo web simple y cómo instalarlas correctamente. Configuraremos las herramientas mínimas necesarias por ahora, incluyendo un editor de texto y algunos navegadores web modernos.
 - [Navegando por la web](/es/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web)
-  - Este artículo profundiza un poco más en el uso de los navegadores, analizando cómo funciona un navegador web, la diferencia entre algunos de los elementos comunes con los que interactuarás y cómo buscar información.
+  - : Este artículo profundiza un poco más en el uso de los navegadores, analizando cómo funciona un navegador web, la diferencia entre algunos de los elementos comunes con los que interactuarás y cómo buscar información.
 - [Editores de código](/es/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors)
-  - En este artículo, analizamos los editores de código con más detalle, dándote una idea de lo que pueden hacer por ti.
+  - : En este artículo, analizamos los editores de código con más detalle, dándote una idea de lo que pueden hacer por ti.
 - [Manejo de archivos](/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)
-  - Este artículo analiza algunos problemas de los que debes ser consciente con los sistemas de archivos, para que puedas configurar una estructura de archivos sensata para tu sitio web.
+  - : Este artículo analiza algunos problemas de los que debes ser consciente con los sistemas de archivos, para que puedas configurar una estructura de archivos sensata para tu sitio web.
 - [Curso intensivo de línea de comandos](/es/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)
-  - Este artículo proporciona una introducción a la terminal, los comandos esenciales que deberás introducir en ella, cómo encadenar comandos y cómo añadir tus propias herramientas de interfaz de línea de comandos (CLI).
+  - : Este artículo proporciona una introducción a la terminal, los comandos esenciales que deberás introducir en ella, cómo encadenar comandos y cómo añadir tus propias herramientas de interfaz de línea de comandos (CLI).
 
 ## Véase también
