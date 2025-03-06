@@ -145,13 +145,13 @@ the last one.
 
 ```html
 <table width="1200">
-  <!-- main heading row -->
+  <!-- 主標題列 -->
   <tr id="heading">
     <td colspan="6">
       <h1 align="center">Header</h1>
     </td>
   </tr>
-  <!-- nav menu row -->
+  <!-- 主導航列 -->
   <tr id="nav" bgcolor="#ffffff">
     <td width="200">
       <a href="#" align="center">Home</a>
@@ -181,26 +181,26 @@ the last one.
       <button width="100">Go!</button>
     </td>
   </tr>
-  <!-- spacer row -->
+  <!-- 空格列 -->
   <tr id="spacer" height="10">
     <td></td>
   </tr>
-  <!-- main content and aside row -->
+  <!-- 主要內容和側邊欄列 -->
   <tr id="main">
     <td id="content" colspan="4">
-      <!-- main content goes here -->
+      <!-- 主要內容在這裡 -->
     </td>
     <td id="aside" colspan="2" valign="top">
       <h2>Related</h2>
 
-      <!-- aside content goes here -->
+      <!-- 側邊欄內容在這裡 -->
     </td>
   </tr>
-  <!-- spacer row -->
+  <!-- 空格列 -->
   <tr id="spacer" height="10">
     <td></td>
   </tr>
-  <!-- footer row -->
+  <!-- 頁尾列 -->
   <tr id="footer">
     <td colspan="6">
       <p>©Copyright 1996 by nobody. All rights reversed.</p>
@@ -218,29 +218,29 @@ the last one.
 </header>
 
 <nav>
-  <!-- main navigation in here -->
+  <!-- 主導航包在這裡面 -->
 </nav>
 
-<!-- Here is our page's main content -->
+<!-- 這裡是頁面的主要內容 -->
 <main>
-  <!-- It contains an article -->
+  <!-- 這裡包含一篇文章 -->
   <article>
     <h2>Article heading</h2>
 
-    <!-- article content in here -->
+    <!-- 文章內容包在裡面 -->
   </article>
 
   <aside>
     <h2>Related</h2>
 
-    <!-- aside content in here -->
+    <!-- 側邊內容在這裡 -->
   </aside>
 </main>
 
-<!-- And here is our main footer that is used across all the pages of our website -->
+<!-- 這裡是主要用在所有頁面的頁尾 -->
 
 <footer>
-  <!-- footer content in here -->
+  <!-- 頁尾內容在這裡 -->
 </footer>
 ```
 
@@ -320,7 +320,7 @@ UI 控制無障礙性的一個關鍵方面是，默認情況下，瀏覽器允�
 
 #### 重建鍵盤無障礙性
 
-重新加入這些默認優勢需要一些額外的工作（你可以 [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 查看範例——也可以查看[原始碼](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)）。在這裡，我們為假的 `<div>` 按鈕提供了可以被聚焦的能力（包括通過 tab 鍵），方法是給每個按鈕新增屬性 `tabindex="0"`。我們還包含了 `role="button"`，這樣螢幕閱讀器使用者就知道他們可以聚焦並與該元素互動：
+重新加入這些默認優勢需要一些額外的工作（你可以 [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 查看範例——也可以查看[原始碼](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)）。在這裡，我們為假的 `<div>` 按鈕提供了可以被聚焦的能力（包括透過 tab 鍵），方法是給每個按鈕新增屬性 `tabindex="0"`。我們還包含了 `role="button"`，這樣螢幕閱讀器使用者就知道他們可以聚焦並與該元素互動：
 
 ```html
 <div data-message="This is from the first button" tabindex="0" role="button">
@@ -337,22 +337,20 @@ UI 控制無障礙性的一個關鍵方面是，默認情況下，瀏覽器允�
 基本上，[`tabindex`](/zh-TW/docs/Web/HTML/Global_attributes/tabindex) 屬性主要是允許可標籤元素擁有自定義的標籤順序（以正數數字順序指定），而不僅僅是按照在原始碼中的默認順序進行標籤。由於它可能會導致重大混淆，因此建議只有在真正需要時才使用它，例如，如果佈局顯示的內容在視覺順序上與原始碼相差很大，而你希望它運作得更符合邏輯。`tabindex` 還有兩個其他選項：
 
 - `tabindex="0"` — 如上所述，此值允許通常不可標籤的元素變得可標籤。這是 `tabindex` 最有用的值。
-- `tabindex="-1"` — 這允許通常不可標籤的元素通過程式接收焦點，例如，通過 JavaScript，或作為連結的目標。
+- `tabindex="-1"` — 這允許通常不可標籤的元素透過程式接收焦點，例如，透過 JavaScript，或作為連結的目標。
 
-雖然上述允許我們使用 tab 鍵導航到按鈕，但它不允許我們通過 <kbd>Enter</kbd>/<kbd>Return</kbd> 鍵啟用它們。為此，我們必須新增以下 JavaScript：
+雖然上述允許我們使用 tab 鍵導航到按鈕，但它不允許我們透過 <kbd>Enter</kbd>/<kbd>Return</kbd> 鍵啟用它們。為此，我們必須新增以下 JavaScript：
 
 ```js
 document.onkeydown = (e) => {
-  // The Enter/Return key
+  // Enter/Return 鍵
   if (e.key === "Enter") {
     document.activeElement.click();
   }
 };
 ```
 
-Here we add a listener to the `document` object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's [`key`](/zh-TW/docs/Web/API/KeyboardEvent/key) property; if the key pressed is <kbd>Enter</kbd>/<kbd>Return</kbd>, we run the function stored in the button's `onclick` handler using `document.activeElement.click()`. [`activeElement`](/zh-TW/docs/Web/API/Document/activeElement) which gives us the element that is currently focused on the page.
-
-在這裡，我們向 `document` 物件新增一個監聽器，來檢測何時在鍵盤上按下了按鈕。我們通過事件物件的 [`key`](/zh-TW/docs/Web/API/KeyboardEvent/key) 屬性檢查按下了什麼按鈕；如果按下的是 <kbd>Enter</kbd>/<kbd>Return</kbd> 鍵，我們使用 `document.activeElement.click()` 執行儲存在按鈕 `onclick` 處理程式中的函式。[`activeElement`](/zh-TW/docs/Web/API/Document/activeElement) 為我們提供了頁面上當前聚焦的元素。
+在這裡，我們向 `document` 物件新增一個監聽器，來檢測何時在鍵盤上按下了按鈕。我們透過事件物件的 [`key`](/zh-TW/docs/Web/API/KeyboardEvent/key) 屬性檢查按下了什麼按鈕；如果按下的是 <kbd>Enter</kbd>/<kbd>Return</kbd> 鍵，我們使用 `document.activeElement.click()` 執行儲存在按鈕 `onclick` 處理程式中的函式。[`activeElement`](/zh-TW/docs/Web/API/Document/activeElement) 為我們提供了頁面上當前聚焦的元素。
 
 重建這些功能會帶來許多額外的麻煩。而且肯定還有其他問題。**因此從一開始就使用正確的元素做正確的工作是最佳解**。
 
@@ -502,11 +500,10 @@ Fill in your name: <input type="text" id="name" name="name" />
 > 閱讀 [HTML 影像](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_images) and [Responsive images](/zh-TW/docs/Web/HTML/Responsive_images) 獲取更多關於影像的最佳實踐。
 > 你也可以查看 [替代文字決策樹](https://www.w3.org/WAI/tutorials/images/decision-tree/) 來學習如何在不同的情境下為影像撰寫替代文字。
 
-If you do want to provide extra contextual information, you should put it in the text surrounding the image, or inside a `title` attribute, as shown above. In this case, most screen readers will read out the alt text, the title attribute, and the filename. In addition, browsers display title text as tooltips when moused over.
+如果你確實想提供額外的上下文，應該將它放在圖片周圍的文字中，或者放在 `title` 屬性中，如上所示。在這種情況下，大多數螢幕閱讀器會讀出替代文字、`title` 屬性和檔案名稱。此外，當滑鼠懸停時，瀏覽器會將 `title` 文字顯示為工具提示。
+![紅色暴龍的截圖，當滑鼠懸停時顯示「The mozilla red dinosaur」文字作為工具提示。](title-attribute.png)
 
-![Screenshot of a red Tyrannosaurus Rex with the text "The mozilla red dinosaur" displayed as tooltip on mouseover.](title-attribute.png)
-
-Let's have another quick look at the fourth method:
+讓我們快速看一下第四種方法：
 
 ```html
 <img src="dinosaur.png" aria-labelledby="dino-label" />
@@ -514,13 +511,13 @@ Let's have another quick look at the fourth method:
 <p id="dino-label">The Mozilla red Tyrannosaurus…</p>
 ```
 
-In this case, we are not using the `alt` attribute at all — instead, we have presented our description of the image as a regular text paragraph, given it an `id`, and then used the `aria-labelledby` attribute to refer to that `id`, which causes screen readers to use that paragraph as the alt text/label for that image. This is especially useful if you want to use the same text as a label for multiple images — something that isn't possible with `alt`.
+在這種情況下，我們完全不使用 `alt` 屬性——相反，我們將圖片的描述作為常規文字段落呈現，給它一個 `id`，然後使用 `aria-labelledb` 屬性引用該 `id`，這使得螢幕閱讀器將該段落作為圖片的替代文字/標籤。這在你想要為多個圖片使用相同文字作為標籤時特別有用——這是使用 `alt` 屬性無法實現的。
 
-> **Note:** [`aria-labelledby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) is part of the [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) spec, which allows developers to add in extra semantics to their markup to improve screen reader accessibility where needed.
+> **Note:** [`aria-labelledby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 規範的其中一部分， 它允許開發者在需要時增加額外的語意，來改善螢幕閱讀器的無障礙性。
 
-### Figures and figure captions
+### Figures 和 figure captions
 
-HTML includes two elements — {{htmlelement("figure")}} and {{htmlelement("figcaption")}} — which associate a figure of some kind (it could be anything, not necessarily an image) with a figure caption:
+HTML 包含兩個元素——{{htmlelement("figure")}} 和 {{htmlelement("figcaption")}}——它們可將圖形（可以是任何東西，不一定是圖片）與說明文字關聯起來：
 
 ```html
 <figure>
@@ -535,9 +532,9 @@ HTML includes two elements — {{htmlelement("figure")}} and {{htmlelement("figc
 </figure>
 ```
 
-While there is mixed screen reader support of associating figure captions with their figures, including [`aria-labelledby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-describedby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) creates the association if none is present. That said, the element structure is useful for CSS styling, plus it provides a way to place a description of the image next to it in the source.
+雖然螢幕閱讀器對於將圖形說明文字與其圖形關聯的支援程度不一，但包含 [`aria-labelledby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 或 [`aria-describedby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 可以在沒有關聯的情況下建立這種關聯。話雖如此，元素結構對於 CSS 樣式很有用，而且它提供了一種方法，可以在原始碼中將描述放在圖片旁邊。
 
-### Empty alt attributes
+### 空的 alt 屬性
 
 ```html
 <h3>
@@ -546,36 +543,32 @@ While there is mixed screen reader support of associating figure captions with t
 </h3>
 ```
 
-There may be times where an image is included in a page's design, but its primary purpose is for visual decoration. You'll notice in the code example above that the image's `alt` attribute is empty — this is to make screen readers recognize the image, but not attempt to describe the image (instead they'd just say "image", or similar).
-
-The reason to use an empty `alt` instead of not including it is because many screen readers announce the whole image URL if no `alt` is provided. In the above example, the image is acting as a visual decoration to the heading it's associated with. In cases like this, and in cases where an image is only decoration and has no content value, you should include an empty `alt` in your `img` elements. Another alternative is to use the aria [`role`](/zh-TW/docs/Web/Accessibility/ARIA/Roles) attribute [`role="presentation"`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role) as this also stops screen readers from reading out alternative text.
+有時候，圖片被包含在頁面設計中，其主要目的是視覺裝飾。你會注意到在上面的程式碼範例中，圖片的 `alt` 屬性是空的——這是為了讓螢幕閱讀器識別圖片，但不嘗試描述圖片（相反，它們只會說「圖片」或類似的內容）。
+使用空的 `alt` 而不是完全不包含它的原因是，如果沒有提供 `alt`，許多螢幕閱讀器會朗讀整個圖片 URL。在上面的例子中，圖片作為與其關聯的標題的視覺裝飾。在這種圖片僅作為裝飾且沒有內容價值的情況下，應該在 `img` 元素中包含一個空的 `alt`。另一種替代方法是使用 aria [`role`](/zh-TW/docs/Web/Accessibility/ARIA/Roles) 屬性 [`role="presentation`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role)，這也能阻止螢幕閱讀器讀出替代文字。
 
 > [!NOTE]
-> If possible you should use CSS to display images that are only decorative.
+> 可以的話，盡量使用 CSS 顯示裝飾用的圖片。
 
-## More on links
+## 更多關於連結的資訊
 
-Links (the [`<a>`](/zh-TW/docs/Web/HTML/Element/a) element with an `href` attribute), depending on how they are used, can help or harm accessibility. By default, links are accessible in appearance. They can improve accessibility by helping a user quickly navigate to different sections of a document. They can also harm accessibility if their accessible styling is removed or if JavaScript causes them to behave in unexpected ways.
+連結（具有 `href` 屬性的 [`<a> `](/zh-TW/docs/Web/HTML/Element/a) 元素），根據使用方式的不同，可以幫助或損害無障礙性。默認情況下，連結在外觀上是無障礙的。可透過幫助使用者快速導航到文件的不同部分來改善無障礙性。如果移除了連結的無障礙樣式或 JavaScript 導致它們以意外方式運作，可能損害無障礙性。
 
-### Link styling
+### 連結的樣式
 
-By default, links are visually different from other text in both color and [text-decoration](/zh-TW/docs/Web/CSS/text-decoration), with links being blue and underlined by default, purple and underlined if visited, and with a [focus-ring](/zh-TW/docs/Web/CSS/:focus) when they receive keyboard focus.
+默認情況下，連結在顏色和文字裝飾方面與其他文字在視覺上有所不同，默認情況下連結是藍色且帶有底線，訪問過的連結是紫色且帶有底線，當它們獲得鍵盤焦點時會有[焦點環](/zh-TW/docs/Web/CSS/:focus)。
+顏色不應作為區分連結和非連結內容的唯一方法。連結文字顏色，如同所有文字，須與背景顏色有顯著差異（[a 4.5:1的對比度](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)）。此外，連結在視覺上應與非連結文字有所不同，連結文字與周圍文字之間以及默認、已訪問和焦點/啟用狀態之間的最低對比度要求為3:1，所有這些狀態顏色與背景顏色之間的對比度為4.5:1。
 
-Color should not be used as the sole method of distinguishing links from non-linking content. Link text color, like all text, has to be significantly different from the background color ([a 4.5:1 contrast](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)). In addition, links should visually be significantly different from non-linking text, with a minimum contrast requirement of 3:1 between link text and surrounding text and between default, visited, and focus/active states and a 4.5:1 contrast between all those state colors and the background color.
+### `onclick` 事件
 
-### `onclick` events
+錨點標籤常被濫用，透過設置 **href** 為 `#` 或 `javascript:void(0)` 並使用 `onclick` 事件來建立偽按鈕，以防止頁面重新整理。
+這些值會導致複製或拖曳連結、在新分頁或視窗中開啟連結、加入書籤時出現意外行為，以及當 JavaScript 仍在下載、出錯或被禁用時出現問題。這也會向輔助技術（如螢幕閱讀器）傳達了錯誤的語意。在這些情況下，建議使用 {{HTMLElement("button")}} 代替。一般來說，你應該只使用錨點標籤透過適當的 URL 進行導航。
 
-Anchor tags are often abused with the `onclick` event to create pseudo-buttons by setting **href** to `"#"` or `"javascript:void(0)"` to prevent the page from refreshing.
+### 外部連結和連結到非 HTML 資源
 
-These values cause unexpected behavior when copying or dragging links, opening links in a new tab or window, bookmarking, and when JavaScript is still downloading, errors out, or is disabled. This also conveys incorrect semantics to assistive technologies (e.g., screen readers). In these cases, it is recommended to use a {{HTMLElement("button")}} instead. In general you should only use an anchor for navigation using a proper URL.
+透過 `target="_blank` 聲明在新分頁或視窗中開啟的連結，以及 `href` 值指向檔案資源的連結，應包含一個指示器，說明啟用連結時會發生的行為。
+視力較差的人、使用螢幕閱讀技術導航的人或有認知問題的人可能會因意外開啟新分頁、視窗或應用程式而感到困惑。較舊版本的螢幕閱讀軟體甚至可能不會宣告這種行為。
 
-### External links and linking to non-HTML resources
-
-Links that open in a new tab or window via the `target="_blank"` declaration and links to whose `href` value points to a file resource should include an indicator about the behavior that will occur when the link is activated.
-
-People experiencing low vision conditions, who are navigating with the aid of screen reading technology, or who have cognitive concerns may become confused when the new tab, window, or application is opened unexpectedly. Older versions of screen reading software may not even announce the behavior.
-
-#### Link that opens a new tab or window
+#### 打開新分頁或視窗的連結
 
 ```html
 <a target="_blank" href="https://www.wikipedia.org/"
@@ -583,7 +576,7 @@ People experiencing low vision conditions, who are navigating with the aid of sc
 >
 ```
 
-#### Link to a non-HTML resource
+#### 連結到非 HTML 資源
 
 ```html
 <a target="_blank" href="2017-annual-report.ppt"
@@ -591,38 +584,38 @@ People experiencing low vision conditions, who are navigating with the aid of sc
 >
 ```
 
-If an icon is used in place of text to signify this kind of links behavior, make sure it includes an [alternate description](/zh-TW/docs/Web/HTML/Element/img#alt).
+如果使用圖示代替文字來表示這類連結行為，請確保它包含[替代描述](/zh-TW/docs/Web/HTML/Element/img#alt)。
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
-- [MDN Understanding WCAG, Guideline 3.2 explanations](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+- [MDN 了解 WCAG, 指引 3.2 詳解](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
 - [G200: Opening new windows and tabs from a link only when necessary | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
 - [G201: Giving users advanced warning when opening a new window | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 
-### Skip links
+### 跳過連結
 
-A skip link, also known as skipnav, is an `a` element placed as close as possible to the opening {{HTMLElement("body")}} element that links to the beginning of the page's main content. This link allows people to bypass content repeated throughout multiple pages on a website, such as a website's header and primary navigation.
+跳過連結（skip link），也稱為 skipnav，是一個放置在盡可能靠近開始的 {{HTMLElement("body")}} 元素處的 `a` 元素，它連結到頁面主要內容的開頭。這個連結允許使用者繞過網站多個頁面中重複出現的內容，如網站的頁首和主要導航。
 
-Skip links are especially useful for people who navigate with the aid of assistive technology such as switch control, voice command, or mouth sticks/head wands, where the act of moving through repetitive links can be a laborious task.
+跳過連結對使用輔助技術導航的人特別有用，例如使用開關控制、語音命令或口控搖桿/頭控搖桿的人，對他們來說，瀏覽重複的連結可能是一項費力的任務。
 
 - [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
 - [How–to: Use Skip Navigation links - The A11Y Project](https://www.a11yproject.com/posts/skip-nav-links/)
-- [MDN Understanding WCAG, Guideline 2.4 explanations](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN 了解 WCAG, 指引 2.4 詳解](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 
-### Proximity
+### 鄰近性
 
-Large amounts of interactive content—including anchors—placed in close visual proximity to each other should have space inserted to separate them. This spacing is beneficial for people who suffer from fine motor control issues and may accidentally activate the wrong interactive content while navigating.
+大量視覺上彼此靠近的互動內容——包括錨點——應該插入間距來分隔它們。這種間距有助於患有小肌肉(精細)運動控制問題的使用者，因為他們在導航時可能會意外啟用錯誤的互動內容。
 
-Spacing may be created using CSS properties such as {{CSSxRef("margin")}}.
+間距可以使用 CSS 屬性如 {{CSSxRef("margin")}} 來建立。
 
 - [Hand tremors and the giant-button-problem - Axess Lab](https://axesslab.com/hand-tremors/)
 
-## Test your skills
+## 測試你的技能
 
-You've reached the end of this article, but can you remember the most important information? See [Test your skills: HTML Accessibility](/zh-TW/docs/Learn_web_development/Core/Accessibility/Test_your_skills:_HTML_accessibility) to verify that you've retained this information before you move on.
+你已經到達本文的結尾，但能記住最重要的資訊嗎？查看[測試的技能：HTML無障礙](/zh-TW/docs/Learn_web_development/Core/Accessibility/Test_your_skills:_HTML_accessibility)來驗證你是否已經記住了這些資訊。
 
-## Summary
+## 結論
 
-You should now be well-versed in writing accessible HTML for most occasions. Our WAI-ARIA basics article will help to fill gaps in this knowledge, but this article has taken care of the basics. Next up we'll explore CSS and JavaScript, and how accessibility is affected by their good or bad use.
+你現在應該已經了解如何為大部分的情境撰寫無障礙 HTML 了。我們的 WAI-ARIA 基礎文章將幫助填補這方面知識的空白，但本文已經處理了基礎知識。接下來我們將探討 CSS 和 JavaScript，以及使用良好或使用不良將如何影響無障礙性。
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
