@@ -66,7 +66,7 @@ HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决
 </blockquote>
 ```
 
-浏览器的默认样式会将其呈现为缩进的段落，作为引用的指示；引用上面的段落是为了证明这一点。
+浏览器的默认样式会将其渲染为缩进的段落，以表明这是一个引用；引用上面的段落是为了证明这一点。
 
 {{EmbedLiveSample('块引用', '100%', '200px')}}
 
@@ -76,8 +76,7 @@ HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决
 
 ```html
 <p>
-  引用元素 <code>&lt;q&gt;</code> 是
-  <q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q"
+  引用元素 <code>&lt;q&gt;</code> 是<q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q"
     >用于不需要段落分隔的短引用。</q
   >
 </p>
@@ -106,8 +105,7 @@ HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决
 </blockquote>
 
 <p>
-  引用元素 <code>&lt;q&gt;</code> 是
-  <q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q">用于不需要段落分隔的短引用。</q>——<a href="/zh-CN/docs/Web/HTML/Element/q"> <cite>MDN q 页面</cite></a>
+  引用元素 <code>&lt;q&gt;</code> 是<q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q">用于不需要段落分隔的短引用。</q>——<a href="/zh-CN/docs/Web/HTML/Element/q"> <cite>MDN q 页面</cite></a>
 </p>
 ```
 
@@ -183,11 +181,7 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = `<p>你好！欢迎访问我的激励网页！<a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>孔子</cite></a>曰：</p>
-<blockquote cite="https://zh.wikipedia.org/zh-hans/孔子">
-  <p>譬如为山，未成一篑，止，吾止也。譬如平地，虽覆一篑，进，吾往也。</p>
-</blockquote>
-<p>要保持乐观，<q cite="http://example.com/affirmationsforpositivethinking">不要说泄气的话</q>。（源自 <a href="http://example.com/affirmationsforpositivethinking"><cite>Affirmations for Positive Thinking</cite></a>。）</p>`;
+const htmlSolution = `<p>你好！欢迎访问我的激励网页！<a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>孔子</cite></a>曰：</p>\n\n<blockquote cite="https://zh.wikipedia.org/zh-hans/孔子">\n<p>譬如为山，未成一篑，止，吾止也。譬如平地，虽覆一篑，进，吾往也。</p>\n</blockquote>\n\n<p>要保持乐观，<q cite="http://example.com/affirmationsforpositivethinking">不要说泄气的话</q>。（源自 <a href="http://example.com/affirmationsforpositivethinking"><cite>Affirmations for Positive Thinking</cite></a>。）</p>`;
 let solutionEntry = htmlSolution;
 
 reset.addEventListener("click", () => {
@@ -445,7 +439,7 @@ HTML 有个用于标记联系方式的元素——{{htmlelement("address")}}。�
 
 ## 上标和下标
 
-当你使用日期、化学方程式、和数学方程式时会偶尔使用上标和下标，以确保它们的正确含义。{{htmlelement("sup")}} 和 {{htmlelement("sub")}} 元素可以解决这样的问题。例如：
+当你使用日期、化学方程式和数学方程式时会偶尔使用上标和下标，以确保它们的正确含义。{{htmlelement("sup")}} 和 {{htmlelement("sub")}} 元素可以解决这样的问题。例如：
 
 ```html
 <p>我的生日是在 2021 年 5 月 25 日（译者注：英文原文为 25<sup>th</sup>）</p>
