@@ -15,9 +15,9 @@ l10n:
   - : 一个字符串，应设置为 `RSA-OAEP`。
 - `label` {{optional_inline}}
 
-  - : 一个 {{jsxref("ArrayBuffer")}}、一个 {{jsxref("TypedArray")}} 或 一个 {{jsxref("DataView")}} —— 一个字节数组，其本身不需要被加密，但应与密文绑定。标签的摘要是加密操作输入的一部分。
+  - : {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}}——一个字节数组，其本身不需要被加密，但应与密文绑定。标签的摘要是加密运算输入的一部分。
 
-    除非应用程序需要使用标签，否则可以省略此参数，且不会影响加密操作的安全性。
+    除非应用程序需要使用标签，否则可以省略此参数，且不会影响加密运算的安全性。
 
 ## 示例
 
