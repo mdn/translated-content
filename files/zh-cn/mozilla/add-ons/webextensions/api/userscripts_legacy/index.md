@@ -10,16 +10,16 @@ l10n:
 > [!WARNING]
 > 本文档针对旧版 `userScripts` API 编写，适用于 Firefox Manifest V2 版本。如希望在 Manifest V3 中使用用户脚本功能，可参见新的 {{WebExtAPIRef("userScripts")}} API。
 
-使用此 API 注册用户脚本，即那些设计用于操作网页或提供新功能的第三方脚本。注册用户脚本会指示浏览器将脚本附加到在注册期间指定的 URL 模式匹配的页面上。
+使用此 API 注册用户脚本，即那些设计用于操作网页或提供新功能的第三方脚本。注册用户脚本会指示浏览器将脚本附加到与注册期间指定的 URL 模式匹配的页面上。
 
 此 API 提供类似 {{WebExtAPIRef("contentScripts")}} 的功能，但包含一些专为处理第三方脚本而设计的特性：
 
-- 在隔离的沙箱中执行：每个用户脚本都在网页内容进程中的隔离沙箱中运行，避免脚本之间的意外或故意干扰。
+- 在隔离的沙箱中执行：每个用户脚本都在 web 内容进程的隔离沙箱中运行，避免脚本之间的意外或故意干扰。
 - 访问与附加了用户脚本的网页相关的 `window` 和 `document` 全局值。
 - 不可访问 WebExtension API 以及授予扩展的相关权限：API 脚本继承扩展的权限，可以向注册的用户脚本提供打包的 WebExtension API。API 脚本需要在扩展的清单文件中通过“user_scripts”键声明。
 
 > [!WARNING]
-> 即使未指定 API 脚本，此 API 仍需要在 manifest.json 中包含“user_scripts”键。例如：`user_scripts: {}`。
+> 即使未指定 API 脚本，此 API 仍需要在 manifest.json 中包含  [`user_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) 键。例如：`user_scripts: {}`。
 
 要使用该 API，请调用 {{WebExtAPIRef("userScripts_legacy.register","register()")}} 方法，传入一个定义要注册的脚本的对象。该方法将返回一个 Promise，其将以 {{WebExtAPIRef("userScripts_legacy.RegisteredUserScript","RegisteredUserScript")}} 对象的形式兑现。
 
@@ -29,7 +29,7 @@ l10n:
 ## 类型
 
 - {{WebExtAPIRef("userScripts_legacy.RegisteredUserScript")}}
-  - : {{WebExtAPIRef("userScripts_legacy.register","register()")}} 方法返回的对象表示已注册的用户脚本，并可用于取消注册用户脚本。
+  - : {{WebExtAPIRef("userScripts_legacy.register","register()")}} 方法返回的对象（`object`）。其表示已注册的用户脚本，并可用于取消注册用户脚本。
 
 ## 方法
 
