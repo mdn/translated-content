@@ -19,7 +19,7 @@ l10n:
 - 不可访问 WebExtension API 以及授予扩展的相关权限：API 脚本继承扩展的权限，可以向注册的用户脚本提供打包的 WebExtension API。API 脚本需要在扩展的清单文件中通过“user_scripts”键声明。
 
 > [!WARNING]
-> 即使未指定 API 脚本，此 API 仍需要在 manifest.json 中包含  [`user_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) 键。例如：`user_scripts: {}`。
+> 即使未指定 API 脚本，此 API 仍需要在 manifest.json 中包含 [`user_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) 键。例如：`user_scripts: {}`。
 
 要使用该 API，请调用 {{WebExtAPIRef("userScripts_legacy.register","register()")}} 方法，传入一个定义要注册的脚本的对象。该方法将返回一个 Promise，其将以 {{WebExtAPIRef("userScripts_legacy.RegisteredUserScript","RegisteredUserScript")}} 对象的形式兑现。
 
