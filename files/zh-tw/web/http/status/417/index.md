@@ -29,7 +29,7 @@ Content-Length: 1234567890987
 Expect: 100-continue
 ```
 
-在此範例伺服器實作中，不支援期望，且如果請求中包含任何值的 `Expect` 標頭，將導致伺服器回應 417。
+在此範例伺服器實作中，不支援期望，且如果請求中包含任何值的 `Expect` 標頭，將導致伺服器回應 417：
 
 ```http
 HTTP/1.1 417 Expectation Failed
