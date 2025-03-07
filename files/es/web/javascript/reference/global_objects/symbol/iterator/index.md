@@ -9,7 +9,20 @@ l10n:
 
 El símbolo conocido como **`Symbol.iterator`** especifica el iterador por defecto para un objeto. Utilizado por [`for...of`](/es/docs/Web/JavaScript/Reference/Statements/for...of).
 
-{{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.iterator")}}
+
+```js interactive-example
+const iterable1 = {};
+
+iterable1[Symbol.iterator] = function* () {
+  yield 1;
+  yield 2;
+  yield 3;
+};
+
+console.log([...iterable1]);
+// Expected output: Array [1, 2, 3]
+```
 
 ## Descripción
 

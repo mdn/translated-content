@@ -32,7 +32,7 @@ slug: Mozilla/Firefox/Releases/96
 ### HTTP
 
 - 同じドメインであるが異なるスキーム (例えば http と https) で送信された Cookie が、[SameSite](/ja/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) ディレクティブについて別のサイトから送信されたものとみなすようになりました。
-  加えて、`SameSite` 属性が指定されていない Cookie は暗黙的に `SameSite=Lax`が指定されたとみなすようになり (以前の既定値は `SameSite=None`)、また `SameSite=None` を指定した Cookie は安全なコンテキストが必要になりました ([Firefox バグ 1617609](https://bugzil.la/1617609))。
+  加えて、`SameSite` 属性が指定されていない Cookie は暗黙的に `SameSite=Lax`が指定されたとみなすようになり (以前の既定値は `SameSite=None`)、また `SameSite=None` を指定した Cookie は保護されたコンテキストが必要になりました ([Firefox バグ 1617609](https://bugzil.la/1617609))。
 
 ### API
 

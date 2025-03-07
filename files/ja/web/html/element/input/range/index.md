@@ -2,7 +2,7 @@
 title: <input type="range">
 slug: Web/HTML/Element/input/range
 l10n:
-  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
@@ -11,7 +11,41 @@ l10n:
 
 この種のウィジェットは厳密なものではないので、コントロールの正確な値が重要でない限り、通常は使用するべきではありません。
 
-{{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;range&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Audio settings:</p>
+
+<div>
+  <input type="range" id="volume" name="volume" min="0" max="11" />
+  <label for="volume">Volume</label>
+</div>
+
+<div>
+  <input
+    type="range"
+    id="cowbell"
+    name="cowbell"
+    min="0"
+    max="100"
+    value="90"
+    step="10" />
+  <label for="cowbell">Cowbell</label>
+</div>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 ユーザーのブラウザーが `range` 型に対応していない場合は、 `{{HTMLElement('input/text', 'text')}}` 入力で代替されて扱われます。
 
@@ -41,6 +75,9 @@ defaultValue =
 
 すべての {{HTMLElement("input")}} 型で共通する属性に加え、 `range` 型の入力欄は次の属性にも対応しています。
 
+> [!NOTE]
+> range 型の入力欄に適用できない入力属性は、 `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, `src` です。これらの属性が指定されても、無視されます。
+
 ### list
 
 list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち、この [`type`](/ja/docs/Web/HTML/Element/input#type) と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
@@ -69,7 +106,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 `step` 属性には文字列値 `any` を設定することもできます。この `step` 値は、刻み間隔を意味せず、指定した範囲内で任意の値が許されることを意味します（他にも [`min`](#min) や [`max`](#max) のような制約がある場合は除きます）。対応しているブラウザーでこのように動作するのかについては、[step を `any` に設定](#step_を_any_に設定)の例を参照してください。
 
 > [!NOTE]
-> ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
+> ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("User agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
 
 `range` 入力欄の既定の刻み値は 1 であり、刻みの基準値が整数ではない場合を*除いて*、整数の入力のみを許可します。例えば、 `min` に -10 を、 `value` に 1.5 を設定した場合、 `step` が 1 の場合は正の方向に 1.5, 2.5, 3.5,… など、負の方向に -0.5, -1.5, -2.5,… などのみが許可されます。 [HTML の `step` 属性](/ja/docs/Web/HTML/Attributes/step)を参照してください。</p>
 
@@ -78,9 +115,6 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 ### orient
 
 CSS の標準外の -moz-orient non-standard プロパティと同様に {{htmlelement('progress')}} および {{htmlelement('meter')}} 要素に影響を与える `orient` 属性は、範囲スライダーの向きを定義する定義します。値は `horizontal` が範囲を水平方向に描画することを、 `vertical` が範囲を垂直に描画することを意味します。
-
-> [!NOTE]
-> input 型の属性のうち、 `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, `src` は範囲入力には適用されません。これらの属性が含まれた場合は無視されます。
 
 ## 例
 
@@ -251,96 +285,29 @@ input[type="range"] {
 
 {{EmbedLiveSample("Adding labels")}}
 
-### 垂直の範囲コントロール
+### 垂直の範囲コントロールの作成
 
 既定では、ブラウザーは範囲入力を、つまみが左右にスライドするスライダーとして描画します。
 
-つまみが上下にスライドする垂直方向の範囲を作成するには、CSS の {{cssxref('appearance')}} プロパティを `slider-vertical` に設定し、Firefox の標準外の `orient` 属性を記載してください。
+つまみが上下にスライドする垂直方向の範囲を作成するには、CSS の {{cssxref("writing-mode")}} プロパティを `vertical-rl` または `vertical-lr` に設定してください。
 
-#### 水平の範囲コントロール
-
-この範囲コントロールを考えてみてください。
-
-```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1" />
+```html hidden
+<input type="range" min="0" max="10" value="8" />
 ```
-
-{{EmbedLiveSample("Horizontal_range_control", 200, 40)}}
-
-このコントロールは水平です（少なくとも主要なブラウザーではそうですが、他のブラウザーでは異なるかもしれません）。
-
-#### appearance プロパティの使用
-
-{{cssxref('appearance')}} プロパティには `slider-vertical` という標準外の値があり、スライダーを縦にします。
-
-これまでの例と同じ HTML を使用します。
-
-```html
-<input type="range" min="0" max="11" value="7" step="1" />
-```
-
-`range` 型の入力だけを対象にします。
 
 ```css
 input[type="range"] {
-  appearance: slider-vertical;
+  writing-mode: vertical-lr;
 }
 ```
 
-{{EmbedLiveSample("Using_the_appearance_property", 200, 200)}}
+これにより、範囲スライダーが垂直に描画されます。
 
-#### orient 属性の使用
+{{EmbedLiveSample("Creating vertical range controls", 200, 200)}}
 
-Firefox だけですが、標準外の `orient` プロパティがあります。
+CSS の {{cssxref('appearance')}} プロパティを標準外の `slider-vertical` 値に設定すると、 Chrome と Safari の古いバージョンに対応することもでき、標準外の `orient="vertical"` 属性を設定すると、 Firefox の古いバージョンに対応することもできます。
 
-前述の例と同様の HTML を使用しますが、この属性に `vertical` の値を設定します。
-
-```html
-<input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
-```
-
-{{EmbedLiveSample("Using_the_orient_attribute", 200, 200)}}
-
-#### writing-mode: bt-lr
-
-{{cssxref('writing-mode')}} プロパティは、一般に国際化やローカライズのためにテキスト方向を変更するために使用するべきではありませんが、特殊効果のために使うことができます。
-
-前述の例と同様の HTML を使用します。
-
-```html
-<input type="range" min="0" max="11" value="7" step="1" />
-```
-
-入力型が range のものだけを対象に、書字方向を `bt-lr`、すなわち下から上へ、右から左へ設定します。
-
-```css
-input[type="range"] {
-  writing-mode: bt-lr;
-}
-```
-
-{{EmbedLiveSample("writing-mode_bt-lr", 200, 40)}}
-
-#### すべて一緒に設定
-
-上記の例は動作するブラウザーが異なるため、単一の例が複数のブラウザーで動作するように一緒に指定することができます。
-
-`orient` 属性に `vertical` の値を設定することで Firefox に対応します。
-
-```html
-<input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
-```
-
-`input` の `type` が `range` で `orient` が `vertical` のものだけを対象とし、`writing-mode` を既定値から `bt-lr` （下から上、左から右）に変更し、Blink と Webkit のブラウザーに対応している `appearance: slider-vertical` を追加します。
-
-```css
-input[type="range"][orient="vertical"] {
-  writing-mode: bt-lr;
-  appearance: slider-vertical;
-}
-```
-
-{{EmbedLiveSample("Putting_it_all_together", 200, 200)}}
+例については[垂直フォームコントロールの作成](/ja/docs/Web/CSS/CSS_writing_modes/Vertical_controls)をご覧ください。
 
 ## 技術的概要
 
@@ -372,7 +339,9 @@ input[type="range"][orient="vertical"] {
     <tr>
       <td><strong>IDL 属性</strong></td>
       <td>
-        <code>list</code>, <code>value</code>, <code>valueAsNumber</code>
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>,
+        <code>valueAsNumber</code>
       </td>
     </tr>
     <tr>
@@ -405,10 +374,10 @@ input[type="range"][orient="vertical"] {
 
 ## 関連情報
 
-- [HTML フォーム](/ja/docs/Learn/Forms)
+- [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} およびそれに基づく {{domxref("HTMLInputElement")}} インターフェイス
 - [`<input type="number">`](/ja/docs/Web/HTML/Element/input/number)
-- {{domxref('validityState.rangeOverflow')}} および {{domxref('validityState.rangeUnderflow')}}
+- {{domxref('ValidityState.rangeOverflow')}} および {{domxref('ValidityState.rangeUnderflow')}}
 - [ConstantSourceNode による複数の引数の制御](/ja/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
+- [垂直フォームコントロールの作成](/ja/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
 - [Styling the range element](https://css-tricks.com/sliding-nightmare-understanding-range-input)
-- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

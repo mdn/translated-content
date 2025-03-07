@@ -10,7 +10,21 @@ l10n:
 **`Atomics.and()`** 정적 메서드는 배열의 지정된 위치에서 지정된 값으로 비트 연산 AND를 계산한 후 해당 위치의
 이전 값을 반환합니다. 이 아토믹 연산은 수정된 값이 다시 쓰여질 때까지 다른 쓰기가 발생하지 않도록 보장합니다.
 
-{{EmbedInteractiveExample("pages/js/atomics-and.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.and()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 7;
+
+// 7 (0111) AND 2 (0010) = 2 (0010)
+console.log(Atomics.and(uint8, 0, 2));
+// Expected output: 7
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+```
 
 ## 구문
 

@@ -7,7 +7,33 @@ slug: Web/HTML/Element/section
 
 HTML-элемент **`<section>`** представляет собой автономный раздел — который не может быть представлен более точным по семантике элементом — внутри HTML-документа. Как правило, но не всегда, разделы имеют заголовок.
 
-{{EmbedInteractiveExample("pages/tabbed/section.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;section&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Choosing an Apple</h1>
+<section>
+  <h2>Introduction</h2>
+  <p>
+    This document provides a guide to help with the important task of choosing
+    the correct Apple.
+  </p>
+</section>
+
+<section>
+  <h2>Criteria</h2>
+  <p>
+    There are many different criteria to be considered when choosing an Apple —
+    size, color, firmness, sweetness, tartness...
+  </p>
+</section>
+```
+
+```css interactive-example
+h1,
+h2 {
+  margin: 0;
+}
+```
 
 Например, меню навигации должно быть помещено в элемент {{htmlelement("nav")}}, но список результатов поиска и отображение карты с её элементами управления не имеют специфических элементов и могут быть помещены в `<section>`.
 

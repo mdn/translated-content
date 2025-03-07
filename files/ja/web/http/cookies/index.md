@@ -204,7 +204,7 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
   Set-Cookie: affiliate=e4rt45dw; SameSite=Lax
   ```
 
-- `None` は、Cookie が元のサイトとサイト間のリクエストの両方で送信されることを指定します。これは、例えば広告技術や分析ツールのプロバイダーなど、他のサイトに埋め込まれたサードパーティのコンテンツから送信されたリクエストとともに Cookie を送信したい場合に便利です。`SameSite=None` が設定されている場合、`Secure` 属性も設定する必要があることに注意してください。`SameSite=None` では、安全なコンテキストが要求されます。
+- `None` は、Cookie が元のサイトとサイト間のリクエストの両方で送信されることを指定します。これは、例えば広告技術や分析ツールのプロバイダーなど、他のサイトに埋め込まれたサードパーティのコンテンツから送信されたリクエストとともに Cookie を送信したい場合に便利です。`SameSite=None` が設定されている場合、`Secure` 属性も設定する必要があることに注意してください。`SameSite=None` では、保護されたコンテキストが要求されます。
 
   ```http
   Set-Cookie: widget_session=7yjgj57e4n3d; SameSite=None; Secure; HttpOnly

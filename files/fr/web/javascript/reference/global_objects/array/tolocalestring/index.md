@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 
 La méthode **`toLocaleString()`** renvoie une chaîne de caractères qui représente les éléments du tableau. Les éléments sont convertis en chaînes de caractères grâce à leurs méthodes `toLocaleString` et chacune de ces chaînes est séparée des autres avec un séparateur propre à la locale courante (par exemple une virgule ou un point).
 
-{{EmbedInteractiveExample("pages/js/array-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: Array.toLocaleString()")}}
+
+```js interactive-example
+const array1 = [1, "a", new Date("21 Dec 1997 14:12:00 UTC")];
+const localeString = array1.toLocaleString("en", { timeZone: "UTC" });
+
+console.log(localeString);
+// Expected output: "1,a,12/21/1997, 2:12:00 PM",
+// This assumes "en" locale and UTC timezone - your results may vary
+```
 
 ## Syntaxe
 

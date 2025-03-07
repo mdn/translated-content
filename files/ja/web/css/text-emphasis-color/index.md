@@ -50,7 +50,7 @@ text-emphasis-color: unset;
 
 #### CSS
 
-```css
+```css live-sample___emphasis_with_a_color_and_custom_character
 em {
   text-emphasis-color: green;
   text-emphasis-style: "*";
@@ -59,7 +59,7 @@ em {
 
 #### HTML
 
-```html
+```html live-sample___emphasis_with_a_color_and_custom_character
 <p>例:</p>
 
 <em>これには圏点があります！</em>

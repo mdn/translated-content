@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Statements/const
 
 Constantes possuem escopo de bloco, semelhantes às variáveis declaradas usando o palavra-chave [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let). O valor de uma constante não pode ser alterado por uma atribuição, e ela não pode ser redeclarada.
 
-{{EmbedInteractiveExample("pages/js/statement-const.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Const")}}
+
+```js interactive-example
+const number = 42;
+
+try {
+  number = 99;
+} catch (err) {
+  console.log(err);
+  // Expected output: TypeError: invalid assignment to const 'number'
+  // (Note: the exact output may be browser-dependent)
+}
+
+console.log(number);
+// Expected output: 42
+```
 
 ## Resumo
 

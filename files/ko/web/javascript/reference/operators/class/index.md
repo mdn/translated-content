@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/class
 
 **class 표현식**은 ECMAScript 2015 (ES6)에서 클래스를 정의하는 한 방법입니다. [function 식](/ko/docs/Web/JavaScript/Reference/Operators/function)과 비슷하게, class 식은 기명(named) 또는 익명(unnamed)일 수 있습니다. 기명인 경우, 클래스명은 클래스 본체(body)에서만 지역(local)입니다. JavaScript 클래스는 프로토타입(원형) 기반 상속을 사용합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-classexpression.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - class expression")}}
+
+```js interactive-example
+const Rectangle = class {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+  area() {
+    return this.height * this.width;
+  }
+};
+
+console.log(new Rectangle(5, 8).area());
+// Expected output: 40
+```
 
 ## 구문
 

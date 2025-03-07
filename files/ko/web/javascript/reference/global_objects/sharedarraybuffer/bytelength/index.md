@@ -9,7 +9,15 @@ l10n:
 
 {{jsxref("SharedArrayBuffer")}} 인스턴스의 **`byteLength`** 접근자 속성은 이 `SharedArrayBuffer`의 바이트 단위 길이를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/sharedarraybuffer-bytelength.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: SharedArrayBuffer.byteLength", "shorter")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(8);
+
+console.log(buffer.byteLength);
+// Expected output: 8
+```
 
 ## 설명
 

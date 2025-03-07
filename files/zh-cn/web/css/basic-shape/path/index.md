@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-`path()` [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions)接受 [SVG 路径](/zh-CN/docs/Web/SVG/Element/path)字符串作为参数，用于 [CSS 形状](/zh-CN/docs/Web/CSS/CSS_shapes)和[运动路径](/zh-CN/docs/Web/CSS/CSS_motion_path)模块中绘制形状。`path()` 函数是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型的值。它可以用于 CSS 的 [`offset-path`](/zh-CN/docs/Web/CSS/offset-path) 和 [`clip-path`](/zh-CN/docs/Web/CSS/clip-path) 属性，以及 SVG 的 [`d`](/zh-CN/docs/Web/SVG/Attribute/d) 属性。
+`path()` [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)接受 [SVG 路径](/zh-CN/docs/Web/SVG/Element/path)字符串作为参数，用于 [CSS 形状](/zh-CN/docs/Web/CSS/CSS_shapes)和[运动路径](/zh-CN/docs/Web/CSS/CSS_motion_path)模块中绘制形状。`path()` 函数是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型的值。它可以用于 CSS 的 [`offset-path`](/zh-CN/docs/Web/CSS/offset-path) 和 [`clip-path`](/zh-CN/docs/Web/CSS/clip-path) 属性，以及 SVG 的 [`d`](/zh-CN/docs/Web/SVG/Attribute/d) 属性。
 
 {{EmbedInteractiveExample("pages/css/function-path.html")}}
 

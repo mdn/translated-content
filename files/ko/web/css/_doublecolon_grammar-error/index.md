@@ -1,5 +1,5 @@
 ---
-title: "::grammar-error"
+title: ::grammar-error
 slug: Web/CSS/::grammar-error
 l10n:
   sourceCommit: d6defd737678e99d62bf838ad12eba532567fba5

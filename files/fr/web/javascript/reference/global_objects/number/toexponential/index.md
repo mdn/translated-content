@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 
 La méthode **`toExponential()`** renvoie une chaîne de caractères, représentant l'objet Number en notation exponentielle.
 
-{{EmbedInteractiveExample("pages/js/number-toexponential.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toExponential()")}}
+
+```js interactive-example
+function expo(x, f) {
+  return Number.parseFloat(x).toExponential(f);
+}
+
+console.log(expo(123456, 2));
+// Expected output: "1.23e+5"
+
+console.log(expo("123456"));
+// Expected output: "1.23456e+5"
+
+console.log(expo("oink"));
+// Expected output: "NaN"
+```
 
 ## Syntaxe
 

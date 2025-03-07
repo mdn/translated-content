@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/round
 
 **`Math.round()`** 함수는 입력값을 반올림한 수와 가장 가까운 정수 값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/math-round.html")}}
+{{InteractiveExample("JavaScript Demo: Math.round()")}}
+
+```js interactive-example
+console.log(Math.round(0.9));
+// Expected output: 1
+
+console.log(Math.round(5.95), Math.round(5.5), Math.round(5.05));
+// Expected output: 6 6 5
+
+console.log(Math.round(-5.05), Math.round(-5.5), Math.round(-5.95));
+// Expected output: -5 -5 -6
+```
 
 ## 문법
 

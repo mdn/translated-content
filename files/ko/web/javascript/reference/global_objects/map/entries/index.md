@@ -9,7 +9,22 @@ l10n:
 
 {{jsxref("Map")}} 객체의 **`entries()`** 메서드는 이 Map의 각 요소의 `[key, value]`쌍을 삽입 순서대로 가지는 새로운 [맵 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator) 객체를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-entries.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.entries()")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("0", "foo");
+map1.set(1, "bar");
+
+const iterator1 = map1.entries();
+
+console.log(iterator1.next().value);
+// Expected output: Array ["0", "foo"]
+
+console.log(iterator1.next().value);
+// Expected output: Array [1, "bar"]
+```
 
 ## 구문
 

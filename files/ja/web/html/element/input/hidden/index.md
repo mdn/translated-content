@@ -2,7 +2,7 @@
 title: <input type="hidden">
 slug: Web/HTML/Element/input/hidden
 l10n:
-  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
@@ -46,7 +46,7 @@ l10n:
 
 隠し入力欄は、ウェブサイトのセキュリティを高めるためにセキュリティトークンや秘密を格納しておくことができます。基本的な考え方としては、例えばオンラインバンキングで他の口座に送金するためのフォームなど、機密を要するフォームにユーザーが記入するときに、秘密を提供することで自分が誰であるか、正しいフォームを利用して送金リクエストを行っているかを証明することができます。
 
-これで悪意のあるユーザーが偽のフォームを作成して、銀行に成りすまし、騙されやすいユーザーを騙して別なところに送金させるようなことを防ぐことができます。この種の攻撃は[クロスサイトリクエストフォージェリ (CSRF)](/ja/docs/Learn/Server-side/First_steps/Website_security#クロスサイトリクエストフォージェリ_csrf) と呼ばれており、非常に多くの信頼されているサーバー側フレームワークがこのような攻撃を防ぐために隠した秘密を使用しています。
+これで悪意のあるユーザーが偽のフォームを作成して、銀行に成りすまし、騙されやすいユーザーを騙して別なところに送金させるようなことを防ぐことができます。この種の攻撃は[クロスサイトリクエストフォージェリ (CSRF)](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security#クロスサイトリクエストフォージェリ_csrf) と呼ばれており、非常に多くの信頼されているサーバー側フレームワークがこのような攻撃を防ぐために隠した秘密を使用しています。
 
 > [!NOTE]
 > 前述のように、隠し入力欄に秘密を配置することは、本質的に安全ではありません。鍵の組み合わせやエンコーディングによって実現すべきものです。隠し入力欄の値は秘密とデータを関連付け、フォームがサーバーに送信されるときに自動的に含められます。本当にウェブサイトを安全にするには、よく設計された秘密を使用する必要があります。
@@ -80,7 +80,7 @@ This is the content of my excellent blog post. I hope you enjoy it!
 </form>
 ```
 
-簡単な CSS も追加しましょう。
+CSS も追加しましょう。
 
 ```css
 html {
@@ -116,7 +116,7 @@ textarea {
 }
 ```
 
-サーバーはフォームをユーザーのブラウザーに送信する前に、 ID が "`postID`" である隠し入力欄の値にデータベース内の投稿の ID を設定し、フォームが戻されたときにこの情報を、変更された情報を更新するデータベースのレコードを知るために使用します。コンテンツの中でこれを扱うためにスクリプトは必要はありません。
+サーバーはフォームをユーザーのブラウザーに送信する前に、 ID が `postID` である隠し入力欄の値にデータベース内の投稿の ID を設定し、フォームが戻されたときにこの情報を、変更された情報を更新するデータベースのレコードを知るために使用します。コンテンツの中でこれを扱うためにスクリプトは必要はありません。
 
 出力結果は次のようになります。
 
@@ -163,7 +163,7 @@ textarea {
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>対応するロールなし</code></a></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
     </tr>
   </tbody>
 </table>
@@ -178,5 +178,5 @@ textarea {
 
 ## 関連情報
 
-- [HTML フォームガイド](/ja/docs/Learn/Forms)
+- [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} および {{domxref("HTMLInputElement")}} インターフェイス

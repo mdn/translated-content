@@ -25,12 +25,9 @@ slug: Web/CSS/background-image
 여러 개의 배경 이미지를 지정하려면 쉼표로 구분한 다수의 값을 지정하세요.
 
 ```css
-background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 0, 0.5),
-    rgba(0, 0, 255, 0.5)
-  ),
-  url("catfront.png");
+background-image:
+  linear-gradient(to bottom, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)),
+  url("cat-front.png");
 ```
 
 ### 값
@@ -87,7 +84,7 @@ div {
 }
 
 .catsandstars {
-  background-image: url("startransparent.gif"), url("catfront.png");
+  background-image: url("star-transparent.gif"), url("cat-front.png");
   background-color: transparent;
 }
 ```

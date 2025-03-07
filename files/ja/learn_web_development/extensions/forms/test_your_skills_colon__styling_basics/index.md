@@ -1,19 +1,17 @@
 ---
 title: "スキルテスト: スタイル設定の基本"
 slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics
-original_slug: Learn/Forms/Test_your_skills:_Styling_basics
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{learnsidebar}}
 
-このスキルテストの目的は、あなたが[ウェブフォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)の記事を理解したかどうかを評価することです。
+このスキルテストの目的は、あなたが[ウェブフォームへのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)の記事を理解したかどうかを評価することです。
 
 > [!NOTE]
-> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
->
-> もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
+> 解答はこのページのオンラインエディターか、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターで試すことができます。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ## スタイル設定の基本 1
 

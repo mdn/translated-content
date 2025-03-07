@@ -9,7 +9,18 @@ l10n:
 
 **`accesskey`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、現在の要素のショートカットキーを生成するためのヒントを与えます。この属性は空白で区切った表示可能な文字（キーボードから生成できるアクセント付き文字やその他の文字を含む）から成ります。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-accesskey.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: accesskey", "tabbed-shorter")}}
+
+```html interactive-example
+<p>If you need to relax, press the <b>S</b>tress reliever!</p>
+<button accesskey="s">Stress reliever</button>
+```
+
+```css interactive-example
+b {
+  text-decoration: underline;
+}
+```
 
 > [!NOTE]
 > WHATWG の仕様書では、空白区切りの複数の文字を指定することができ、ブラウザーは対応する最初の一つを使用するとしています。しかし、これは多くのブラウザーでは動作しません。 IE や Edge は、他のコマンドと競合がない問題なく使用することができる最初の 1 つを使用します。

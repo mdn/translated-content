@@ -25,6 +25,6 @@ l10n:
 ## 参见
 
 - [文件与目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
-- [文件与目录条目 API 简介](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [文件与目录条目 API 简介](/zh-CN/docs/Web/API/File_System_API)
 - {{domxref("FileSystemDirectoryEntry")}}
 - {{domxref("FileSystem")}}

@@ -9,7 +9,15 @@ l10n:
 
 **`getMilliseconds()`** メソッドは、地方時に基づき、指定された日時の「ミリ秒」を返します。
 
-{{EmbedInteractiveExample("pages/js/date-getmilliseconds.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.getMilliseconds()", "shorter")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+moonLanding.setMilliseconds(123);
+
+console.log(moonLanding.getMilliseconds());
+// Expected output: 123
+```
 
 ## 構文
 

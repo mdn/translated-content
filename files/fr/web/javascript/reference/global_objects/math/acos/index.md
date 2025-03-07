@@ -9,7 +9,20 @@ La fonction **`Math.acos()`** renvoie l'arc cosinus d'une valeur exprimée en ra
 
 <math><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stretchy="false">[</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>;</mo><mn>1</mn><mo stretchy="false">]</mo><mo>,</mo><mspace width="thickmathspace"></mspace><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.acos</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">arccos</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> le seul </mtext><mi>y</mi><mo>∊</mo><mo stretchy="false">[</mo><mn>0</mn><mo>;</mo><mi>π</mi><mo stretchy="false">]</mo><mspace width="thinmathspace"></mspace><mtext>tel que</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in [{-1};1],\;\mathtt{\operatorname{Math.acos}(x)} = \arccos(x) = \text{ the unique } \; y \in [0; \pi] \, \text{such that} \; \cos(y) = x</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-acos.html")}}
+{{InteractiveExample("JavaScript Demo: Math.acos()")}}
+
+```js interactive-example
+// Calculates angle of a right-angle triangle in radians
+function calcAngle(adjacent, hypotenuse) {
+  return Math.acos(adjacent / hypotenuse);
+}
+
+console.log(calcAngle(8, 10));
+// Expected output: 0.6435011087932843
+
+console.log(calcAngle(5, 3));
+// Expected output: NaN
+```
 
 ## Syntaxe
 

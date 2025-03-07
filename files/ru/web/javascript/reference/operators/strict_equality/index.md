@@ -9,7 +9,21 @@ l10n:
 
 Оператор **строгого равенства (`===`)** проверяет, являются ли два его операнда равными, возвращая логическое значение. В отличие от оператора [нестрогого равенства](/ru/docs/Web/JavaScript/Reference/Operators/Equality) всегда считает операнды разных типов неравными.
 
-{{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Strict equality operator")}}
+
+```js interactive-example
+console.log(1 === 1);
+// Expected output: true
+
+console.log("hello" === "hello");
+// Expected output: true
+
+console.log("1" === 1);
+// Expected output: false
+
+console.log(0 === false);
+// Expected output: false
+```
 
 ## Синтаксис
 

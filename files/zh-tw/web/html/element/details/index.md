@@ -9,7 +9,37 @@ slug: Web/HTML/Element/details
 
 通常，揭露小部件在螢幕上以小三角形呈現，該三角形旋轉（或扭曲）以指示開啟/關閉狀態，並帶有三角形旁邊的標籤。`<summary>` 元素的內容用作揭露小部件的標籤。`<details>` 的內容提供了 `<summary>` 的{{glossary("accessible description", "無障礙描述")}}。
 
-{{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;details&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<details>
+  <summary>Details</summary>
+  Something small enough to escape casual notice.
+</details>
+```
+
+```css interactive-example
+details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+```
 
 `<details>` 小部件可以處於兩種狀態之一。默認的「關閉」狀態僅顯示三角形和 `<summary>` 內的標籤（或如果沒有 `<summary>`，則是{{Glossary("user agent", "使用者代理")}}定義的默認字串）。
 

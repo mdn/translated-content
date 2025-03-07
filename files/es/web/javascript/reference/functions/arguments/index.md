@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Functions/arguments
 
 **`arguments`** es un objeto similar a `Array` accesible dentro de [funciones](/es/docs/Web/JavaScript/Guide/Functions) que contiene los valores de los argumentos pasados a esa función.
 
-{{EmbedInteractiveExample("pages/js/functions-arguments.html")}}La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
+{{InteractiveExample("JavaScript Demo: Functions Arguments")}}
+
+```js interactive-example
+function func1(a, b, c) {
+  console.log(arguments[0]);
+  // Expected output: 1
+
+  console.log(arguments[1]);
+  // Expected output: 2
+
+  console.log(arguments[2]);
+  // Expected output: 3
+}
+
+func1(1, 2, 3);
+```
 
 ## Descripción
 
