@@ -2,14 +2,14 @@
 title: 415 Unsupported Media Type
 slug: Web/HTTP/Status/415
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: ae86913908651e6008079242691e06b5e01d1c78
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`415 Unsupported Media Type`** [用戶端錯誤回應](/en-US/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示伺服器拒絕接受請求，因為訊息{{Glossary("HTTP Content", "內容")}}是不受支援的。
+HTTP **`415 Unsupported Media Type`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示伺服器拒絕接受請求，因為訊息的{{Glossary("HTTP Content", "內容")}}是不受支援的。
 
-格式問題可能是由於請求中指定的 {{HTTPHeader("Content-Type")}} 或 {{HTTPHeader("Content-Encoding")}}，或處理請求訊息內容導致的。Some servers may be strict about the expected `Content-Type` of requests.For example, sending `UTF8` instead of `UTF-8` to specify the {{glossary("UTF-8")}} charset may cause the server to consider the media type invalid.
+格式問題可能是由於請求中指定的 {{HTTPHeader("Content-Type")}} 或 {{HTTPHeader("Content-Encoding")}}，或是處理請求訊息內容時導致的。有些伺服器對於請求的 `Content-Type` 可能有嚴格的要求。例如，使用 `UTF8` 而非 `UTF-8` 來指定 {{glossary("UTF-8")}} 字元編碼可能會導致伺服器認為媒體類型無效。
 
 ## 狀態
 
@@ -17,11 +17,11 @@ HTTP **`415 Unsupported Media Type`** [用戶端錯誤回應](/en-US/docs/Web/HT
 415 Unsupported Media Type
 ```
 
-## Examples
+## 範例
 
-### Missing content type
+### 缺少內容類型
 
-In the following example, the {{HTTPHeader("Content-Type")}} header is missing entirely:
+在以下範例中，請求中完全缺少 {{HTTPHeader("Content-Type")}} 標頭：
 
 ```http
 POST /comments HTTP/1.1
@@ -34,7 +34,7 @@ Content-Length: 23
 }
 ```
 
-If the server implementation expects at least a MIME type `Content-Type: application/json;` for the request at that endpoint, it may send the following response:
+如果伺服器實作要求該端點的請求至少要有 MIME 類型 `Content-Type: application/json;`，則可能會回應如下：
 
 ```http
 HTTP/1.1 415 Unsupported Media Type
@@ -44,9 +44,9 @@ Accept-Post: application/json; charset=UTF-8
 Content-Length: 0
 ```
 
-### Invalid content type
+### 無效的內容類型
 
-In the following example, the {{HTTPHeader("Content-Type")}} header is incorrectly set to URL-encoded form data when the {{Glossary("HTTP Content", "content")}} is in the request body instead:
+在以下範例中，{{HTTPHeader("Content-Type")}} 標頭被錯誤地設定為 URL 編碼的表單數據，而實際上{{Glossary("HTTP Content", "內容")}}位於請求主體中：
 
 ```http
 POST /comments HTTP/1.1
@@ -60,7 +60,7 @@ Content-Type: application/x-www-form-urlencoded
 }
 ```
 
-In this case, the server responds with a 415, with the required content type for the request in the {{HTTPHeader("Accept-Post")}} header:
+在這種情況下，伺服器會回應 415，並在 {{HTTPHeader("Accept-Post")}} 標頭中指明該請求所需的內容類型：
 
 ```http
 HTTP/1.1 415 Unsupported Media Type
@@ -76,7 +76,7 @@ Content-Length: 0
 
 ## 參見
 
-- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
 - {{HTTPHeader("Content-Type")}}
 - {{HTTPHeader("Content-Encoding")}}
 - {{HTTPHeader("Accept-Post")}}
