@@ -38,7 +38,7 @@ Web 性能是客观的衡量标准，是用户对加载时间和运行时的直�
 - [性能监控：RUM 与模拟监控](/zh-CN/docs/Web/Performance/Guides/Rum-vs-Synthetic)
   - : **模拟监控**和**真实用户监控（RUM）** 是监控和深入了解 web 性能的两种方法。RUM 和模拟监控提供了不同的性能视图，各有优点、良好的使用案例和不足之处。RUM 通常最适合用于了解长期趋势，而合成监控则非常适合用于回归测试和缓解开发过程中的短期性能问题。本文将对这两种性能监控方法进行定义和比较。
 - [CSS 和 JavaScript 动画性能](/zh-CN/docs/Web/Performance/Guides/CSS_JavaScript_animation_performance)
-  - : 在许多应用程序中，动画对于愉悦的用户体验至关重要。实现 web 动画的方法有很多，例如 CSS {{cssxref("transition")}}/{{cssxref("animation")}}或基于 JavaScript 的动画（使用 {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}）。本文将分析基于 CSS 的动画和基于 JavaScript 的动画之间的性能差异。
+  - : 在许多应用程序中，动画对于愉悦的用户体验至关重要。实现 web 动画的方法有很多，例如 CSS {{cssxref("transition")}}/{{cssxref("animation")}} 或基于 JavaScript 的动画（使用 {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}）。本文将分析基于 CSS 的动画和基于 JavaScript 的动画之间的性能差异。
 - [动画性能与帧率](/zh-CN/docs/Web/Performance/Guides/Animation_performance_and_frame_rate)
   - : web 上的动画可以通过 {{domxref('SVGAnimationElement', 'SVG')}}、{{domxref('Window.requestAnimationFrame','JavaScript')}}，包括 {{htmlelement('canvas')}} 和 {{domxref('WebGL_API', 'WebGL')}}、CSS {{cssxref('animation')}}、{{htmlelement('video')}}、GIF 动画，甚至 PNG 动画和其他图像类型。为 CSS 属性设置动画的性能成本因属性而异，而为昂贵的 CSS 属性设置动画可能会因浏览器难以达到流畅的{{glossary("FPS", "帧率")}}导致{{glossary('Jank', '卡顿')}}。
 
