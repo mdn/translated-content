@@ -44,6 +44,7 @@ mask-composite: unset;
 {{cssinfo}}
 
 ## 正式语法
+
 {{csssyntax}}
 
 ## 示例
@@ -75,6 +76,7 @@ mask-composite: unset;
 {{Specifications}}
 
 ## 浏览器兼容性
+
 {{Compat}}
 
 ## 参见
