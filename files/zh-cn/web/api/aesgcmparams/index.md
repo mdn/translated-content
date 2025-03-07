@@ -21,8 +21,7 @@ l10n:
 
 - `additionalData` {{optional_inline}}
 
-  - : 一个 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}}。
-    这包含了一些额外的不会被加密的数据，但会与加密数据一起进行认证。如果在此处提供了 `additionalData`，则在相应的 [`decrypt()`](/zh-CN/docs/Web/API/SubtleCrypto/decrypt) 调用中也必须提供相同的数据：如果 `decrypt()` 调用中提供的数据与原始数据不匹配，解密操作将抛出异常。这提供了一种无需加密即可对关联数据进行认证的方法。
+  - : 一个 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}}。这包含了一些额外的不会被加密的数据，但会与加密数据一起进行认证。如果在此处提供了 `additionalData`，则在相应的 [`decrypt()`](/zh-CN/docs/Web/API/SubtleCrypto/decrypt) 调用中也必须提供相同的数据：如果 `decrypt()` 调用中提供的数据与原始数据不匹配，解密操作将抛出异常。这提供了一种无需加密即可对关联数据进行认证的方法。
 
     `additionalData` 的位长度必须小于 `2^64 - 1`。
 
@@ -32,7 +31,7 @@ l10n:
 
   - : 一个 `Number`。这决定了加密操作中生成的认证标签的位数，用于相应解密过程中的认证。
 
-    根据[Web Crypto 规范](https://www.w3.org/TR/WebCryptoAPI/#dfn-AesGcmParams)，此值必须是以下之一：32、64、96、104、112、120 或 128。AES-GCM 规范建议该值应为 96、104、112、120 或 128，尽管在某些应用中，32 或 64 位也可能是可接受的：[规范的附录 C](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf#%5B%7B%22num%22%3A92%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C0%2C792%2Cnull%5D) 对此提供了更多指导。
+    根据 [Web Crypto 规范](https://www.w3.org/TR/WebCryptoAPI/#dfn-AesGcmParams)，此值必须是以下之一：32、64、96、104、112、120 或 128。AES-GCM 规范建议该值应为 96、104、112、120 或 128，尽管在某些应用中，32 或 64 位也可能是可接受的：[规范的附录 C](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf#%5B%7B%22num%22%3A92%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C0%2C792%2Cnull%5D) 对此提供了更多指导。
 
     `tagLength` 是可选的，如果没有指定，默认是 128。
 

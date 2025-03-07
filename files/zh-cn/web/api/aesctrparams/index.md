@@ -18,7 +18,7 @@ AES 是一种分组密码，意味着它将消息分割成多个块，并逐块�
 
 通常，这是通过将初始计数器块值拆分为两个相连的部分来实现的：
 
-- [随机数](https://en.wikipedia.org/wiki/Cryptographic_nonce)（即只能使用一次的数字）。在消息中的每个块中，块的随机数部分保持不变。每次要加密新消息时，都会选择一个新的随机数。随机数不需要保密，但绝不能与相同的密钥一起重复使用。
+- [随机数](https://zh.wikipedia.org/wiki/Nonce)（即只能使用一次的数字）。在消息中的每个块中，块的随机数部分保持不变。每次要加密新消息时，都会选择一个新的随机数。随机数不需要保密，但绝不能与相同的密钥一起重复使用。
 - 计数器。块的这一部分在每次加密一个块时都会递增。
 
 本质上：随机数应确保计数器块在一条消息到下一条消息之间不会被重复使用，而计数器则应确保在单条消息内部计数器块不会被重复使用。
@@ -33,7 +33,7 @@ AES 是一种分组密码，意味着它将消息分割成多个块，并逐块�
 - `counter`
   - : 一个 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}}——计数器块的初始值。此值必须为 16 字节长（即 AES 块大小）。该块的最右边 `length` 位用于计数器，其余部分用于随机数。例如，如果 `length` 设置为 64，则 `counter` 的前半部分用作随机数，后半部分用作计数器。
 - `length`
-  - : 一个 `Number`——计数器块中用于实际计数器的位数。计数器必须足够大，以避免溢出：如果消息有 `n` 个块，且计数器为 `m` 位长，则必须满足以下条件：`n <= 2^m`。定义 CTR 模式的[NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final)标准建议计数器应占用计数器块的一半（见[附录 B.2](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf#%5B%7B%22num%22%3A73%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22Fit%22%7D%5D)），因此对于 AES 来说，这个数值应为 64。
+  - : 一个 `Number`——计数器块中用于实际计数器的位数。计数器必须足够大，以避免溢出：如果消息有 `n` 个块，且计数器为 `m` 位长，则必须满足以下条件：`n <= 2^m`。定义 CTR 模式的 [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final) 标准建议计数器应占用计数器块的一半（见[附录 B.2](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf#%5B%7B%22num%22%3A73%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22Fit%22%7D%5D)），因此对于 AES 来说，这个数值应为 64。
 
 ## 示例
 
