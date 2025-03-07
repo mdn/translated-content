@@ -32,11 +32,11 @@ HTML은 기본적으로 빠르고 접근하기 쉽습니다. HTML 코드를 작�
   </tbody>
 </table>
 
-## 최적화 할 것인가 말 것인가
+## 최적화 할 것인가, 하지 않을 것인가
 
-HTML 최적화를 시작하기 전에 대답해야 하는 첫 번째 질문은 "어느 부분을 최적화 할 것인가?"입니다. 아래에서 다루는 몇 가지 팁과 기법은 대부분 웹 프로젝트에서든 좋은 영향을 주는 모범 사례이지만, 특정 상황에서만 필요한 경우도 있습니다. 모든 기법을 적용하려고 시도하는 것은 아마 불필요한 시간이 낭비될 수도 있습니다. 각 프로젝트에서 실제로 성능 최적화가 필요한 곳을 파악하는 것이 중요합니다.
+HTML 최적화를 시작하기 전에 대답해야 하는 첫 번째 질문은 "어떤 부분을 최적화 할 것인가?"입니다. 아래에서 다루는 몇 가지 팁과 기법은 대부분 웹 프로젝트에서 좋은 영향을 주는 모범 사례이지만, 특정 상황에서만 필요한 경우도 있습니다. 모든 기법을 적용하려고 시도하는 것은 아마 불필요한 시간이 낭비될 수도 있습니다. 각 프로젝트에서 실제로 성능 최적화가 필요한 곳을 파악하는 것이 중요합니다.
 
-그러려면, 사이트 [성능 측정](/ko/docs/Learn_web_development/Extensions/Performance/Measuring_performance)을 할 필요가 있습니다. 링크에서 보여주듯이, 정교한 [성능 API](/ko/docs/Web/API/Performance_API)를 포함해서 성능을 측정하기 위한 몇 가지 다른 방법이 있습니다. 시작하기 가장 좋은 방법은 브라우저에 내장되어 있는 [네트워크](/ko/docs/Learn_web_development/Extensions/Performance/Measuring_performance#network_monitor_tools)와 [성능](/ko/docs/Learn_web_development/Extensions/Performance/Measuring_performance#performance_monitor_tools) 도구 사용 방법을 배워서 로드 시간이 오래 걸리고 최적화가 필요한 페이지 부분을 검사하는 것입니다.
+이를 위해서는, 사이트 [성능 측정](/ko/docs/Learn_web_development/Extensions/Performance/Measuring_performance)을 할 필요가 있습니다. 링크에서 보여주듯이, 정교한 [성능 API](/ko/docs/Web/API/Performance_API)를 포함해서 성능을 측정하기 위한 몇 가지 다른 방법이 있습니다. 가장 쉽게 시작하는 방법은 브라우저에 내장되어 있는 [네트워크](/ko/docs/Learn_web_development/Extensions/Performance/Measuring_performance#network_monitor_tools)와 [성능](/ko/docs/Learn_web_development/Extensions/Performance/Measuring_performance#performance_monitor_tools) 도구 사용 방법을 배우고, 페이지 로딩 속도가 느린 부분을 찾아 최적화 하는 것입니다.
 
 ## 주요한 HTML 성능 이슈
 
