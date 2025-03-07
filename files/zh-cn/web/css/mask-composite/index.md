@@ -1,8 +1,6 @@
 ---
 title: mask-composite
 slug: Web/CSS/mask-composite
-page-type: css-property
-browser-compat: css.properties.mask-composite
 ---
 
 {{CSSRef}}
