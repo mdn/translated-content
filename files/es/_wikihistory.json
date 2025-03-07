@@ -8263,7 +8263,14 @@
       "teoli"
     ]
   },
-  "Web/Accessibility/ARIA/Attributes/aria-label": {
+  "Web/Accessibility/ARIA/Guides/Multipart_labels": {
+    "modified": "2019-11-27T15:16:55.571Z",
+    "contributors": [
+      "IsaacAaron",
+      "IsraelFloresDGA"
+    ]
+  },
+  "Web/Accessibility/ARIA/Reference/Attributes/aria-label": {
     "modified": "2020-12-02T07:09:06.472Z",
     "contributors": [
       "AlePerez92",
@@ -8274,60 +8281,53 @@
       "NelsonWF"
     ]
   },
-  "Web/Accessibility/ARIA/Attributes/aria-required": {
+  "Web/Accessibility/ARIA/Reference/Attributes/aria-required": {
     "modified": "2019-08-28T11:54:04.515Z",
     "contributors": [
       "IsraelFloresDGA",
       "Karla_Glez"
     ]
   },
-  "Web/Accessibility/ARIA/Multipart_labels": {
-    "modified": "2019-11-27T15:16:55.571Z",
-    "contributors": [
-      "IsaacAaron",
-      "IsraelFloresDGA"
-    ]
-  },
-  "Web/Accessibility/ARIA/Roles/alert_role": {
+  "Web/Accessibility/ARIA/Reference/Roles/alert_role": {
     "modified": "2019-03-18T21:31:32.978Z",
     "contributors": [
       "IsraelFloresDGA",
       "mayrars"
     ]
   },
-  "Web/Accessibility/ARIA/Roles/alertdialog_role": {
+  "Web/Accessibility/ARIA/Reference/Roles/alertdialog_role": {
     "modified": "2019-08-28T12:48:39.532Z",
     "contributors": [
       "IsraelFloresDGA"
     ]
   },
-  "Web/Accessibility/Understanding_WCAG": {
+  "Web/Accessibility/Guides/Understanding_WCAG": {
     "modified": "2019-03-18T21:25:29.001Z",
     "contributors": [
       "evaferreira"
     ]
   },
-  "Web/Accessibility/Understanding_WCAG/Keyboard": {
+  "Web/Accessibility/Guides/Understanding_WCAG/Keyboard": {
     "modified": "2020-09-28T17:32:58.697Z",
     "contributors": [
       "megatux",
       "IsraelFloresDGA"
     ]
   },
-  "Web/Accessibility/Understanding_WCAG/Perceivable": {
+  "Web/Accessibility/Guides/Understanding_WCAG/Perceivable": {
     "modified": "2019-03-18T21:25:19.991Z",
     "contributors": [
       "evaferreira"
     ]
   },
-  "Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast": {
+  "Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast": {
     "modified": "2020-06-09T06:15:36.471Z",
     "contributors": [
       "11bits",
       "apenab"
     ]
   },
-  "Web/Accessibility/Understanding_WCAG/Text_labels_and_names": {
+  "Web/Accessibility/Guides/Understanding_WCAG/Text_labels_and_names": {
     "modified": "2020-05-21T19:43:48.950Z",
     "contributors": [
       "giioaj",
@@ -14177,71 +14177,6 @@
       "RJacinto"
     ]
   },
-  "Web/JavaScript/Closures": {
-    "modified": "2020-04-08T19:26:44.700Z",
-    "contributors": [
-      "camsa",
-      "wbamberg",
-      "AzazelN28",
-      "JonasBrandel",
-      "fscholz",
-      "guty",
-      "Siro_Diaz",
-      "luigli",
-      "teoli",
-      "FNK",
-      "juanc.jara",
-      "Josias",
-      "neosergio",
-      "hjoaco"
-    ]
-  },
-  "Web/JavaScript/Data_structures": {
-    "modified": "2020-08-30T02:21:59.996Z",
-    "contributors": [
-      "Nachec",
-      "edwinmunguia",
-      "arzr",
-      "rayrojas",
-      "melgard",
-      "mmngreco",
-      "AngryDev",
-      "Gorzas",
-      "alejandrochung",
-      "IXTRUnai",
-      "damnyorch",
-      "devconcept",
-      "sancospi"
-    ]
-  },
-  "Web/JavaScript/Enumerability_and_ownership_of_properties": {
-    "modified": "2020-08-30T03:56:15.697Z",
-    "contributors": [
-      "Nachec",
-      "teoli",
-      "LeoHirsch"
-    ]
-  },
-  "Web/JavaScript/Equality_comparisons_and_sameness": {
-    "modified": "2020-03-24T18:47:23.011Z",
-    "contributors": [
-      "camsa",
-      "abestrad1",
-      "EduardoCasanova",
-      "pekechis"
-    ]
-  },
-  "Web/JavaScript/Event_loop": {
-    "modified": "2020-03-12T19:43:05.672Z",
-    "contributors": [
-      "AzazelN28",
-      "omonteon",
-      "guillermojmc",
-      "eljonims",
-      "MrCoffey",
-      "Anonymous"
-    ]
-  },
   "Web/JavaScript/Guide": {
     "modified": "2020-09-12T21:03:22.983Z",
     "contributors": [
@@ -14261,6 +14196,25 @@
       "teoli",
       "mitogh",
       "xavo7"
+    ]
+  },
+  "Web/JavaScript/Guide/Closures": {
+    "modified": "2020-04-08T19:26:44.700Z",
+    "contributors": [
+      "camsa",
+      "wbamberg",
+      "AzazelN28",
+      "JonasBrandel",
+      "fscholz",
+      "guty",
+      "Siro_Diaz",
+      "luigli",
+      "teoli",
+      "FNK",
+      "juanc.jara",
+      "Josias",
+      "neosergio",
+      "hjoaco"
     ]
   },
   "Web/JavaScript/Guide/Control_flow_and_error_handling": {
@@ -14288,6 +14242,41 @@
       "humbertaco",
       "fscholz",
       "isnardi"
+    ]
+  },
+  "Web/JavaScript/Guide/Data_structures": {
+    "modified": "2020-08-30T02:21:59.996Z",
+    "contributors": [
+      "Nachec",
+      "edwinmunguia",
+      "arzr",
+      "rayrojas",
+      "melgard",
+      "mmngreco",
+      "AngryDev",
+      "Gorzas",
+      "alejandrochung",
+      "IXTRUnai",
+      "damnyorch",
+      "devconcept",
+      "sancospi"
+    ]
+  },
+  "Web/JavaScript/Guide/Enumerability_and_ownership_of_properties": {
+    "modified": "2020-08-30T03:56:15.697Z",
+    "contributors": [
+      "Nachec",
+      "teoli",
+      "LeoHirsch"
+    ]
+  },
+  "Web/JavaScript/Guide/Equality_comparisons_and_sameness": {
+    "modified": "2020-03-24T18:47:23.011Z",
+    "contributors": [
+      "camsa",
+      "abestrad1",
+      "EduardoCasanova",
+      "pekechis"
     ]
   },
   "Web/JavaScript/Guide/Expressions_and_operators": {
@@ -14391,6 +14380,28 @@
       "joanvasa"
     ]
   },
+  "Web/JavaScript/Guide/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-03-12T19:41:32.707Z",
+    "contributors": [
+      "LeChonch",
+      "SphinxKnight",
+      "Arcandres",
+      "cocososo",
+      "blaipas",
+      "Anonymous",
+      "abnerey",
+      "kdex",
+      "zgluis",
+      "mariodev12",
+      "tavofigse",
+      "guumo",
+      "alagos",
+      "metalback",
+      "MartinIbarra",
+      "10537",
+      "blacknack"
+    ]
+  },
   "Web/JavaScript/Guide/Introduction": {
     "modified": "2020-09-14T00:29:05.489Z",
     "contributors": [
@@ -14431,6 +14442,33 @@
       "eljonims"
     ]
   },
+  "Web/JavaScript/Guide/Language_overview": {
+    "modified": "2020-09-01T08:31:36.135Z",
+    "contributors": [
+      "Nachec",
+      "pmcarballo",
+      "VictorSan45",
+      "DaniNz",
+      "jlopezfdez",
+      "mariodev12",
+      "javier_junin",
+      "GdoSan",
+      "unaisainz",
+      "oleurud",
+      "JavierHspn",
+      "jlmurgas",
+      "rivacubano",
+      "aaguilera",
+      "StripTM",
+      "bicentenario",
+      "NatiiDC",
+      "NicolasMendoza",
+      "LeoHirsch",
+      "lomejordejr",
+      "rogeliomtx",
+      "Jarkaos"
+    ]
+  },
   "Web/JavaScript/Guide/Loops_and_iteration": {
     "modified": "2020-10-21T16:48:14.421Z",
     "contributors": [
@@ -14447,6 +14485,17 @@
       "danielfer",
       "Pablo_Ivan",
       "joanvasa"
+    ]
+  },
+  "Web/JavaScript/Guide/Memory_management": {
+    "modified": "2020-03-12T19:40:38.018Z",
+    "contributors": [
+      "Jairgc",
+      "sergio_p_d",
+      "heliogabalo",
+      "elenatorro",
+      "JavierHspn",
+      "cesaralvarado9"
     ]
   },
   "Web/JavaScript/Guide/Meta_programming": {
@@ -14585,77 +14634,6 @@
       "fmagrosoto",
       "neosergio",
       "bluesky777"
-    ]
-  },
-  "Web/JavaScript/Inheritance_and_the_prototype_chain": {
-    "modified": "2020-03-12T19:41:32.707Z",
-    "contributors": [
-      "LeChonch",
-      "SphinxKnight",
-      "Arcandres",
-      "cocososo",
-      "blaipas",
-      "Anonymous",
-      "abnerey",
-      "kdex",
-      "zgluis",
-      "mariodev12",
-      "tavofigse",
-      "guumo",
-      "alagos",
-      "metalback",
-      "MartinIbarra",
-      "10537",
-      "blacknack"
-    ]
-  },
-  "Web/JavaScript/JavaScript_technologies_overview": {
-    "modified": "2020-09-02T05:54:39.004Z",
-    "contributors": [
-      "Nachec",
-      "duduindo",
-      "threevanny",
-      "Bluterg",
-      "jairoambunad",
-      "geinerjv"
-    ]
-  },
-  "Web/JavaScript/Language_overview": {
-    "modified": "2020-09-01T08:31:36.135Z",
-    "contributors": [
-      "Nachec",
-      "pmcarballo",
-      "VictorSan45",
-      "DaniNz",
-      "jlopezfdez",
-      "mariodev12",
-      "javier_junin",
-      "GdoSan",
-      "unaisainz",
-      "oleurud",
-      "JavierHspn",
-      "jlmurgas",
-      "rivacubano",
-      "aaguilera",
-      "StripTM",
-      "bicentenario",
-      "NatiiDC",
-      "NicolasMendoza",
-      "LeoHirsch",
-      "lomejordejr",
-      "rogeliomtx",
-      "Jarkaos"
-    ]
-  },
-  "Web/JavaScript/Memory_management": {
-    "modified": "2020-03-12T19:40:38.018Z",
-    "contributors": [
-      "Jairgc",
-      "sergio_p_d",
-      "heliogabalo",
-      "elenatorro",
-      "JavierHspn",
-      "cesaralvarado9"
     ]
   },
   "Web/JavaScript/Reference": {
@@ -14903,6 +14881,17 @@
     "modified": "2020-03-12T19:47:18.421Z",
     "contributors": [
       "presercomp"
+    ]
+  },
+  "Web/JavaScript/Reference/Execution_model": {
+    "modified": "2020-03-12T19:43:05.672Z",
+    "contributors": [
+      "AzazelN28",
+      "omonteon",
+      "guillermojmc",
+      "eljonims",
+      "MrCoffey",
+      "Anonymous"
     ]
   },
   "Web/JavaScript/Reference/Functions": {
@@ -17527,6 +17516,17 @@
       "oagarcia"
     ]
   },
+  "Web/JavaScript/Reference/JavaScript_technologies_overview": {
+    "modified": "2020-09-02T05:54:39.004Z",
+    "contributors": [
+      "Nachec",
+      "duduindo",
+      "threevanny",
+      "Bluterg",
+      "jairoambunad",
+      "geinerjv"
+    ]
+  },
   "Web/JavaScript/Reference/Lexical_grammar": {
     "modified": "2020-10-15T22:24:10.289Z",
     "contributors": [
@@ -17586,7 +17586,7 @@
       "FranciscoImanolSuarez"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Destructuring_assignment": {
+  "Web/JavaScript/Reference/Operators/Destructuring": {
     "modified": "2020-10-15T21:38:20.062Z",
     "contributors": [
       "Nachec",
