@@ -2,20 +2,20 @@
 title: 414 URI Too Long
 slug: Web/HTTP/Status/414
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`414 URI Too Long`** [用戶端錯誤回應](/en-US/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示用戶端請求的 URI 長度超過伺服器願意解釋的長度。
+HTTP **`414 URI Too Long`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示用戶端請求的 URI 長度超過伺服器願意解析的範圍。
 
-有幾種罕見的情況可能會發生錯誤：
+此錯誤可能發生於以下幾種罕見情況：
 
-- a client has improperly converted a {{HTTPMethod("POST")}} request to a {{HTTPMethod("GET")}} request with long query information,
-- a client has descended into a loop of redirection (for example, a redirected URI prefix that points to a suffix of itself), or
-- the server is under attack by a client attempting to exploit potential security holes.
+- 用戶端錯誤地將 {{HTTPMethod("POST")}} 請求轉換為攜帶大量查詢資訊的 {{HTTPMethod("GET")}} 請求。
+- 用戶端進入了重導迴圈（例如，重導的 URI 前綴指向自身的一部分）。
+- 伺服器遭受來自用戶端的攻擊，試圖利用潛在的安全漏洞。
 
-Some systems implement `414 URI Too Long` as `414 Request-URI Too Large`.
+一些系統將 `414 URI 過長` 實作為 `414 Request-URI Too Large`。
 
 ## 狀態
 
@@ -23,19 +23,18 @@ Some systems implement `414 URI Too Long` as `414 Request-URI Too Large`.
 414 URI Too Long
 ```
 
-## Examples
+## 範例
 
-### Form submission using GET
+### 使用 GET 進行表單提交
 
-In the following example, an HTML [`<form>` method](/en-US/docs/Web/HTML/Element/form#method) accidentally uses `get` instead of `post`.
-A large amount of form data is appended to the URL specified at the form's `action` attribute and is sent as a GET request:
+在以下範例中，HTML [`<form>` 方法](/zh-TW/docs/Web/HTML/Element/form#方法)錯誤地使用了 `get` 而非 `post`。由於 `get` 方法會將大量表單數據附加至 `action` 屬性指定的 URL，最終導致請求 URI 過長：
 
 ```http
 GET /search?feedback=it+was+the+best+of+times+it+was+the+worst+of+times… HTTP/1.1
 Host: example.com
 ```
 
-The particular server's URI length limit is reached with this request and a 414 is sent in response:
+該伺服器設定的 URI 長度上限被觸發，因此回應 414：
 
 ```http
 HTTP/1.1 414 URI Too Long
@@ -45,11 +44,11 @@ Content-Length: 1234
 
 <!doctype html>
 <head>
-<title>414 - URI Too Long</title>
+  <title>414 - URI Too Long</title>
 </head>
 <body>
-<h1>414 - URI Too Long</h1>
-<p>The URI provided was too long for the server to process.</p>
+  <h1>414 - URI Too Long</h1>
+  <p>伺服器無法處理提供的 URI，因為它超出了允許的長度。</p>
 </body>
 </html>
 ```
@@ -60,5 +59,5 @@ Content-Length: 1234
 
 ## 參見
 
-- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
 - {{Glossary("URI")}}
