@@ -7,9 +7,9 @@ browser-compat: css.properties.mask-composite
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`mask-composite`** 表示在当前蒙版层及其下方的蒙版层上使用的合成操作。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`mask-composite`** 表示对当前遮罩层及其下方遮罩层执行的合成操作。
 
-## Syntax
+## 语法
 
 ```css
 /* Keyword values */
@@ -26,36 +26,31 @@ mask-composite: revert-layer;
 mask-composite: unset;
 ```
 
-以下列出的一个或多个关键词值，用逗号分隔。
+取值为下列一个或多个关键字，多个值用逗号分隔。
 
-### Values
+### 值
 
-对于蒙版合成，以下称当前蒙版层为_源_，其下方所有层为_目标_。
-For the composition the current mask layer is referred to as _source_, while all layers below it are referred to as _destination_.
+在合成操作中，称当前遮罩层为 _源_，其下方所有层为 _目标_。
 
 - `add`
-  - : 源覆盖在目标上方。 
-  - : The source is placed over the destination.
+  - : 将源叠加在目标上方。 
 - `subtract`
-  - : 保留源与目标不相交的部分。
-  - : The source is placed, where it falls outside of the destination.
+  - : 仅保留源中超出目标范围的部分。
 - `intersect`
-  - : 
-  - : The parts of source that overlap the destination, replace the destination.
+  - : 仅保留源与目标的重叠区域。
 - `exclude`
-  - : The non-overlapping regions of source and destination are combined.
+  - : 合并源与目标的非重叠区域。
 
 ## Formal definition
 
 {{cssinfo}}
 
-## Formal syntax
-
+## 正式语法
 {{csssyntax}}
 
-## Examples
+## 示例
 
-### Compositing mask layers with addition
+### 使用叠加模式合成遮罩层
 
 ```html live-sample___mask-composite-example
 <div class="masked"></div>
@@ -77,14 +72,13 @@ For the composition the current mask layer is referred to as _source_, while all
 
 {{EmbedLiveSample("mask-composite-example", "", "150px")}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
-
+## 浏览器兼容性
 {{Compat}}
 
-## See also
+## 参见
 
 - [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
