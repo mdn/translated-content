@@ -23687,6 +23687,13 @@
       "Aaron_Zhung"
     ]
   },
+  "Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds": {
+    "modified": "2020-05-06T01:51:11.555Z",
+    "contributors": [
+      "vvian00",
+      "rguanghui"
+    ]
+  },
   "Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds": {
     "modified": "2019-03-18T21:45:25.619Z",
     "contributors": [
@@ -24893,13 +24900,6 @@
       "kevinfszu",
       "peanut_tao",
       "yaway"
-    ]
-  },
-  "Web/CSS/Scaling_of_SVG_backgrounds": {
-    "modified": "2020-05-06T01:51:11.555Z",
-    "contributors": [
-      "vvian00",
-      "rguanghui"
     ]
   },
   "Web/CSS/Selector_list": {

@@ -30,7 +30,7 @@ A criação de formulários é um passo importante quando você está construind
 
 Neste artigo vamos construir um formulário de contato simples. Vamos fazer um esboço.
 
-![The form to build, roughly sketch](/files/4579/form-sketch-low.jpg)
+![The form to build, roughly sketch](form-sketch-low.jpg)
 
 O nosso formulário terá três campos de texto e um botão. Basicamente, pedimos ao usuário o seu nome, seu e-mail e a mensagem que deseja enviar. Ao apertar o botão apenas irá enviar os dados para o servidor web.
 

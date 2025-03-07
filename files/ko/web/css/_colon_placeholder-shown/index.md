@@ -9,7 +9,38 @@ l10n:
 
 **`:placeholder-shown`** [CSS](/ko/docs/Web/CSS) [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes) 는 현재 [플레이스홀더 텍스트](/ko/docs/Web/HTML/Element/input#placeholder)를 표시 중인 모든 {{HTMLElement("input")}} 또는 {{HTMLElement("textarea")}} 요소를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-placeholder-shown.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :placeholder-shown", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:placeholder-shown {
+  background-color: ivory;
+  border: 2px solid darkorange;
+  border-radius: 5px;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="name">Full Name:</label>
+  <input id="name" name="name" type="text" />
+
+  <label for="email">Email Address:</label>
+  <input id="email" name="email" type="email" placeholder="name@example.com" />
+
+  <label for="age">Your age:</label>
+  <input
+    id="age"
+    name="age"
+    type="number"
+    value="18"
+    placeholder="You must be 18+" />
+</form>
+```
 
 ## 구문
 
