@@ -1,5 +1,5 @@
 ---
-title: "HTML：無障礙的良好基礎"
+title: HTML：無障礙的良好基礎
 slug: Learn_web_development/Core/Accessibility/HTML
 ---
 
