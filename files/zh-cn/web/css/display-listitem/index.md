@@ -7,11 +7,11 @@ l10n:
 
 {{CSSRef}}
 
-`list-item` 关键字会使元素生成一个 `::marker` 伪元素，其内容由元素的 {{CSSxRef("list-style")}} 属性指定（例如，一个项目符号），同时为其自身内容生成一个指定类型的主体盒子。
+`list-item` 关键字会使元素生成一个 `::marker` 伪元素，其内容由元素的 {{CSSxRef("list-style")}} 属性指定（例如，一个项目符号），同时为其自身内容生成一个指定类型的主盒子。
 
 ## 语法
 
-`list-item` 的单独值将导致元素的行为类似于一个列表元素。其可以与 {{CSSxRef("list-style-type")}} 和 {{CSSxRef("list-style-position")}} 一起使用。
+`list-item` 的单独值将导致元素的行为类似于列表元素。其可以与 {{CSSxRef("list-style-type")}} 和 {{CSSxRef("list-style-position")}} 一起使用。
 
 `list-item` 也可以与任意的 {{CSSxRef("&lt;display-outside&gt;")}} 关键字和 {{CSSxRef("&lt;display-inside&gt;")}} 中的 `flow` 或 `flow-root` 关键字组合使用。
 
