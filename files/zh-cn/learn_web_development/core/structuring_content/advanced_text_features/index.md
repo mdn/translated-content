@@ -47,7 +47,7 @@ HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决
 ```html
 <p>
   <strong>HTML <code>&lt;blockquote&gt;</code> 元素</strong>（或<em
-    >HTML Block Quotation Element</em
+    >HTML 块级引用元素</em
   >）表示所附文本为扩展引用。
 </p>
 ```
@@ -60,7 +60,7 @@ HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决
   cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/blockquote">
   <p>
     <strong>HTML <code>&lt;blockquote&gt;</code> 元素</strong>（或<em
-      >HTML Block Quotation Element</em
+      >HTML 块级引用元素</em
     >）表示所附文本为扩展引用。
   </p>
 </blockquote>
@@ -91,7 +91,7 @@ HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决
 
 [`cite`](/zh-CN/docs/Web/HTML/Element/blockquote#cite) 属性的内容听起来很有用，但不幸的是，浏览器、屏幕阅读器并没有充分利用它。如果不使用 JavaScript 或 CSS 编写自己的解决方案，就没有办法让浏览器显示 `cite` 的内容。如果你想在页面上提供引文的来源，你需要在文本中通过链接或其他适当的方式来提供它。
 
-这里有 {{htmlelement("cite")}} 元素，但它是为了包含所引用资源的标题，例如：书名。然而，你没有理由不把 `<cite>` 内的文字以某种方式链接到引用源。
+这里有 {{htmlelement("cite")}} 元素，但它是为了包含所引用资源的标题（如书名）。然而，你没有理由不把 `<cite>` 内的文字以某种方式链接到引用源。
 
 ```html-nolint
 <p>
@@ -101,7 +101,7 @@ HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决
 <blockquote
   cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/blockquote">
   <p>
-    <strong>HTML <code>&lt;blockquote&gt;</code> 元素</strong>（或<em>HTML Block Quotation Element</em>）表示所附文本为扩展引用。
+    <strong>HTML <code>&lt;blockquote&gt;</code> 元素</strong>（或<em>HTML 块级引用元素</em>）表示所附文本为扩展引用。
   </p>
 </blockquote>
 
@@ -256,7 +256,7 @@ textarea.onkeyup = () => {
 
 另一个你在 Web 上看到的相当常见的元素是 {{htmlelement("abbr")}}——它常被用来包裹一个缩略语或缩写，并且提供缩写的解释。当包括这两种情况时，在第一次使用时提供纯文本的完整扩展，同时用 `<abbr>` 来标记缩写。这为用户代理提供了如何公布/显示内容的提示，同时告知所有用户该缩写的含义。
 
-如果为缩写提供扩展信息的意义不大，而且该缩写或首字母缩写是一个相当简短的术语，则应提供该术语的完整扩展，作为 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性的值：
+如果为缩写提供扩展信息的意义不大，而且该缩写或首字母缩写是一个相当简短的术语，则应提供该术语的完整扩展，作为 [`title`](/zh-CN/docs/Web/HTML/Global_attributes/title) 属性的值：
 
 ### 缩略语示例
 
@@ -273,7 +273,7 @@ textarea.onkeyup = () => {
 {{EmbedLiveSample('缩略语示例', '100%', '150')}}
 
 > [!NOTE]
-> 在之前版本的 html 中还包含对另一个元素 {{htmlelement("acronym")}} 的支持，但是它已经从 HTML spec 中移除，因为可以只使用 `<abbr>` 元素代表缩略语。不应再使用 `<acronym>`。
+> 在之前版本的 html 中还包含对另一个元素 {{htmlelement("acronym")}} 的支持，但是它已经从 HTML 标准中移除，因为可以只使用 `<abbr>` 元素代表缩略语。不应再使用 `<acronym>`。
 
 ### 主动学习：标记一个缩略语
 
@@ -386,10 +386,9 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// 每次用户更新文本区域代码，更新存储的 userCode
 textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
+  // 我们只想在用户代码显示时保存状态，而不是答案，以免答案覆盖用户代码。
   if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
@@ -459,7 +458,7 @@ HTML 有个用于标记联系方式的元素——{{htmlelement("address")}}。�
 有大量的 HTML 元素可以来标记计算机代码：
 
 - {{htmlelement("code")}}：用于标记计算机通用代码。
-- {{htmlelement("pre")}}：用于保留空白字符（通常用于代码块）——如果文本中使用了缩进或多余的空白，浏览器将忽略它，你将不会在呈现的页面上看到它。但是，如果你将文本包含在 `<pre></pre>` 标签中，那么空白将会以与你在文本编辑器中看到的相同的方式渲染出来。
+- {{htmlelement("pre")}}：用于保留空白字符（通常用于代码块）——如果文本中使用了缩进或多余的空白，浏览器将忽略它，你将不会在渲染的页面上看到它。但是，如果你将文本包含在 `<pre></pre>` 标签中，那么空白将会以与你在文本编辑器中看到的相同的方式渲染出来。
 - {{htmlelement("var")}}：用于标记具体变量名。
 - {{htmlelement("kbd")}}：用于标记输入电脑的键盘（或其他类型）输入。
 - {{htmlelement("samp")}}：用于标记计算机程序的输出。
@@ -509,8 +508,8 @@ HTML 还支持将时间和日期标记为可供机器识别的格式的 {{htmlel
 - 20/06/16
 - 06/20/16
 - The 20th of next month
-- 20e Janvier 2016
-- 2016 年 1 月 20 日
+- <span lang="fr">20e Janvier 2016</span>
+- <span lang="ja">2016 年 1 月 20 日</span>
 - 等等
 
 <!-- markdownlint-enable MD033 -->
