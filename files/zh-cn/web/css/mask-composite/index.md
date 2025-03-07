@@ -26,7 +26,7 @@ mask-composite: revert-layer;
 mask-composite: unset;
 ```
 
-取值为下列一个或多个关键字，多个值用逗号分隔。
+取值为下列一个或多个关键词，多个值用逗号分隔。
 
 ### 值
 
@@ -35,13 +35,13 @@ mask-composite: unset;
 - `add`
   - : 将源叠加在目标上方。 
 - `subtract`
-  - : 仅保留源中超出目标范围的部分。
+  - : 仅保留源中目标范围外的部分。
 - `intersect`
   - : 仅保留源与目标的重叠区域。
 - `exclude`
   - : 合并源与目标的非重叠区域。
 
-## Formal definition
+## 正式定义
 
 {{cssinfo}}
 
