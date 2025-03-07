@@ -9,7 +9,31 @@ l10n:
 
 **`::placeholder`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 {{HTMLElement("input")}} 혹은 {{HTMLElement("textarea")}} 요소 안에 있는 [플레이스홀더 텍스트](/ko/docs/Web/HTML/Element/input#placeholder)를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-placeholder.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::placeholder", "tabbed-shorter")}}
+
+```css interactive-example
+input {
+  margin-top: 0.5rem;
+}
+
+input::placeholder {
+  font-weight: bold;
+  opacity: 0.5;
+  color: red;
+}
+```
+
+```html interactive-example
+<label for="first-name">Your phone number:</label><br />
+
+<input
+  id="first-name"
+  type="tel"
+  name="phone"
+  minlength="9"
+  maxlength="9"
+  placeholder="It must be 9 digits" />
+```
 
 {{cssxref("::first-line")}} 의사 요소에 적용할 수 있는 하위 집합의 CSS만이 `::placeholder` 와 그 선택자 규칙에 사용될 수 있습니다.
 
