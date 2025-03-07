@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("Web Crypto API") }}
 
-[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`AesCbcParams`** 字典表示当使用 [AES-CBC](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-cbc) 算法时，对象应该以 `algorithm` 参数传递给 {{domxref("SubtleCrypto.encrypt()")}}、{{domxref("SubtleCrypto.decrypt()")}}、{{domxref("SubtleCrypto.wrapKey()")}} 或 {{domxref("SubtleCrypto.unwrapKey()")}}。
+当使用 [AES-CBC](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-cbc) 算法时，[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`AesCbcParams`** 字典表示应作为 `algorithm` 参数传递给 {{domxref("SubtleCrypto.encrypt()")}}、{{domxref("SubtleCrypto.decrypt()")}}、{{domxref("SubtleCrypto.wrapKey()")}} 或 {{domxref("SubtleCrypto.unwrapKey()")}} 的对象。
 
 ## 实例属性
 
