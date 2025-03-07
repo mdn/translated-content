@@ -27,19 +27,19 @@ CSS 명세는 같은 주제를 가진 여러 공통 속성을 묶기 위해 단�
 
    1. {{cssxref("border-style")}}, {{cssxref("margin")}}, {{cssxref("padding")}}처럼 박스의 모서리와 관련된 속성을 다루는 단축 속성은 항상 같은 쪽의 모서리를 가리키는 1\~4 값 구문을 사용합니다:
 
-      | ![border1.png](/files/3646/border1.png) | 1개 값 구문: `border-width: 1em` — 유일한 값이 모든 변을 나타냅니다.                                                                                     |
+      | ![border1.png](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties/border1.png) | 1개 값 구문: `border-width: 1em` — 유일한 값이 모든 변을 나타냅니다.                                                                                     |
       | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-      | ![border2.png](/files/3647/border2.png) | 2개 값 구문: `border-width: 1em 2em` — 첫 번째 값은 세로(상하)변을, 두 번째는 가로(좌우)변을 나타냅니다.                                                 |
-      | ![border3.png](/files/3648/border3.png) | 3개 값 구문: `border-width: 1em 2em 3em` — 첫 번째 값은 상변을, 두 번째는 가로변, 세 번째는 하변을 나타냅니다.                                           |
-      | ![border4.png](/files/3649/border4.png) | 4개 값 구문: `border-width: 1em 2em 3em 4em` — 네 값이 각각 상, 우, 하, 좌변을 나타냅니다. 상변에서 시작하여 시계 방향으로, 항상 같은 순서를 사용합니다. |
+      | ![border2.png](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties/border2.png) | 2개 값 구문: `border-width: 1em 2em` — 첫 번째 값은 세로(상하)변을, 두 번째는 가로(좌우)변을 나타냅니다.                                                 |
+      | ![border3.png](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties/border3.png) | 3개 값 구문: `border-width: 1em 2em 3em` — 첫 번째 값은 상변을, 두 번째는 가로변, 세 번째는 하변을 나타냅니다.                                           |
+      | ![border4.png](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties/border4.png) | 4개 값 구문: `border-width: 1em 2em 3em 4em` — 네 값이 각각 상, 우, 하, 좌변을 나타냅니다. 상변에서 시작하여 시계 방향으로, 항상 같은 순서를 사용합니다. |
 
    2. 비슷하게, {{cssxref("border-radius")}} 같은 박스의 꼭짓점과 관련된 속성을 다루는 단축 속성은 항상 같은 쪽의 꼭짓점을 가리키는 1-4-값 구문을 사용합니다:
 
-      | ![corner1.png](/files/3650/corner1.png) | 1개 값 구문: `border-radius: 1em` — 유일한 값이 모든 귀를 나타냅니다.                                                                                                 |
+      | ![corner1.png](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties/corner1.png) | 1개 값 구문: `border-radius: 1em` — 유일한 값이 모든 귀를 나타냅니다.                                                                                                 |
       | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-      | ![corner2.png](/files/3651/corner2.png) | 2개 값 구문: `border-radius: 1em 2em` — 첫 번째 값은 좌상 및 우하귀, 두 번째는 우상 및 좌하귀를 나타냅니다.                                                           |
-      | ![corner3.png](/files/3652/corner3.png) | 3개 값 구문: `border-radius: 1em 2em 3em` — 첫 번째 값은 좌상귀, 두 번째는 우상 및 좌하귀, 세 번째 값은 우하귀를 나타냅니다.                                          |
-      | ![corner4.png](/files/3653/corner4.png) | 4개 값 구문: `border-radius: 1em 2em 3em 4em` — 네 값은 각각 좌상, 우상, 우하 및 좌하귀를 나타냅니다. 좌상귀에서 시작하여 시계 방향으로, 항상 같은 순서를 사용합니다. |
+      | ![corner2.png](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties/corner1.png) | 2개 값 구문: `border-radius: 1em 2em` — 첫 번째 값은 좌상 및 우하귀, 두 번째는 우상 및 좌하귀를 나타냅니다.                                                           |
+      | ![corner3.png](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties/corner1.png) | 3개 값 구문: `border-radius: 1em 2em 3em` — 첫 번째 값은 좌상귀, 두 번째는 우상 및 좌하귀, 세 번째 값은 우하귀를 나타냅니다.                                          |
+      | ![corner4.png](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties/corner1.png) | 4개 값 구문: `border-radius: 1em 2em 3em 4em` — 네 값은 각각 좌상, 우상, 우하 및 좌하귀를 나타냅니다. 좌상귀에서 시작하여 시계 방향으로, 항상 같은 순서를 사용합니다. |
 
 ## 배경 속성
 
