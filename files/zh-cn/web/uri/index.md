@@ -38,7 +38,7 @@ urn:ietf:rfc:7230
 
 两个 URN 分别代表
 
-- 书籍：《一九八四》（乔治-奥威尔）
+- 书籍：《一九八四》（乔治·奥威尔）
 - IETF 规范 7230《超文本传输协议》（HTTP/1.1）：消息语法和路由。
 
 ## 统一资源标识符（URI）的语法
@@ -87,7 +87,7 @@ URI 的 [_authority_](/zh-CN/docs/Web/URI/Reference/Authority) 由用户信息�
 
 ![锚点](mdn-url-anchor@x2.png)
 
-`#SomewhereInTheDocument` 是 URL 的[*片段*](/zh-CN/docs/Web/URI/Reference/Fragment)，是指向资源本身另一部分的锚点。锚点代表资源内部的一种 “书签”，为浏览器提供了显示位于该“书签”位置的内容的方向。例如，在 HTML 文档中，浏览器会滚动到定义了锚点的位置；在视频或音频文档中，浏览器会尝试转到锚点所代表的时间。值得注意的是，#后面的部分（也称为片段标识符）永远不会随请求发送到服务器。
+`#SomewhereInTheDocument` 是 URL 的[_片段_](/zh-CN/docs/Web/URI/Reference/Fragment)，是指向资源本身另一部分的锚点。锚点代表资源内部的一种“书签”，为浏览器提供了显示位于该“书签”位置的内容的方向。例如，在 HTML 文档中，浏览器会滚动到定义了锚点的位置；在视频或音频文档中，浏览器会尝试转到锚点所代表的时间。值得注意的是，#后面的部分（也称为片段标识符）永远不会随请求发送到服务器。
 
 有一种特殊的[文本片段](/zh-CN/docs/Web/URI/Reference/Fragment/Text_fragments)特性，可以链接到网页中由文本内容标识的特定部分。
 
