@@ -76,7 +76,8 @@ HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决
 
 ```html
 <p>
-  引用元素 <code>&lt;q&gt;</code> 是<q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q"
+  引用元素 <code>&lt;q&gt;</code> 是<q
+    cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q"
     >用于不需要段落分隔的短引用。</q
   >
 </p>
