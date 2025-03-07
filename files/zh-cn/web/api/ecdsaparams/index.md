@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("Web Crypto API") }}
 
-[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`EcdsaParams`** 字典表示当使用 [ECDSA](/zh-CN/docs/Web/API/SubtleCrypto/sign#ecdsa) 算法时，对象应该以 `algorithm` 参数传递给 {{domxref("SubtleCrypto.sign()")}} 或 {{domxref("SubtleCrypto.verify()")}}。
+当使用 [ECDSA](/zh-CN/docs/Web/API/SubtleCrypto/sign#ecdsa) 算法时，[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`EcdsaParams`** 字典表示应作为 `algorithm` 参数传递给 {{domxref("SubtleCrypto.sign()")}} 或 {{domxref("SubtleCrypto.verify()")}} 的对象。
 
 ## 实例属性
 

@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("Web Crypto API") }}
 
-[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`EcKeyGenParams`** 字典表示在生成任何基于椭圆曲线的密钥对时，对象应该以 `algorithm` 参数传递给 {{domxref("SubtleCrypto.generateKey()")}}：即当算法被标记为 [ECDSA](/zh-CN/docs/Web/API/SubtleCrypto/sign#ecdsa) 或 [ECDH](/zh-CN/docs/Web/API/SubtleCrypto/deriveKey#ecdh) 中的任一种时。
+在生成任何基于椭圆曲线的密钥对时，[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`EcKeyGenParams`** 字典应作为 `algorithm` 参数传递给 {{domxref("SubtleCrypto.generateKey()")}} 的对象：即当算法被标记为 [ECDSA](/zh-CN/docs/Web/API/SubtleCrypto/sign#ecdsa) 或 [ECDH](/zh-CN/docs/Web/API/SubtleCrypto/deriveKey#ecdh) 中的任一种时。
 
 ## 实例属性
 
