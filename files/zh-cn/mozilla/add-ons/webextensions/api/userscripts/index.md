@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-使用此 API 注册用户脚本，即那些设计用于操作网页或提供新特性的第三方脚本。注册用户脚本会指示浏览器将脚本附加到与在注册期间指定的 URL 模式匹配的页面上。
+使用此 API 注册用户脚本，即那些设计用于操作网页或提供新特性的第三方脚本。注册用户脚本会指示浏览器将脚本附加到与注册期间指定的 URL 模式匹配的页面上。
 
 > [!NOTE]
 > 本文档针对新版 API 编写，适用于 Firefox Manifest V3 版本。参见 {{WebExtAPIRef("userScripts_legacy","userScripts（旧版）")}}以获取有关可用于 Firefox Manifest V2 的 API。
