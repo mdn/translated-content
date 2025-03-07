@@ -11409,6 +11409,12 @@
       "BychekRU"
     ]
   },
+  "Web/CSS/CSS_cascade/Shorthand_properties": {
+    "modified": "2019-03-23T22:04:06.155Z",
+    "contributors": [
+      "brolnickij"
+    ]
+  },
   "Web/CSS/CSS_cascade/Specificity": {
     "modified": "2019-03-23T22:31:13.059Z",
     "contributors": [
@@ -11967,12 +11973,6 @@
     "modified": "2020-10-15T22:26:00.077Z",
     "contributors": [
       "opereverzeva"
-    ]
-  },
-  "Web/CSS/Shorthand_properties": {
-    "modified": "2019-03-23T22:04:06.155Z",
-    "contributors": [
-      "brolnickij"
     ]
   },
   "Web/CSS/Subsequent-sibling_combinator": {
