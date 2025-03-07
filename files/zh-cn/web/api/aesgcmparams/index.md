@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("Web Crypto API") }}
 
-[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`AesGcmParams`** 字典表示当使用 [AES-GCM](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-gcm) 算法时，对象应该以 `algorithm` 参数传递给 {{domxref("SubtleCrypto.encrypt()")}}、{{domxref("SubtleCrypto.decrypt()")}}、{{domxref("SubtleCrypto.wrapKey()")}} 或 {{domxref("SubtleCrypto.unwrapKey()")}}。
+当使用 [AES-GCM](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-gcm) 算法时，[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`AesGcmParams`** 字典表示应作为 `algorithm` 参数传递给 {{domxref("SubtleCrypto.encrypt()")}}、{{domxref("SubtleCrypto.decrypt()")}}、{{domxref("SubtleCrypto.wrapKey()")}} 或 {{domxref("SubtleCrypto.unwrapKey()")}} 的对象。
 
 有关如何为此参数提供合适值的详细信息，请参阅 AES-GCM 规范：[NIST SP800-38D](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf)，特别是关于输入数据的 5.2.1.1 节。
 

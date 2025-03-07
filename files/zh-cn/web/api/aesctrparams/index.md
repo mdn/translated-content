@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Crypto API")}}
 
-[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`AesCtrParams`** 字典表示当使用 [AES-CTR](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-ctr) 算法时，对象应该以 `algorithm` 参数传递给 {{domxref("SubtleCrypto.encrypt()")}}、{{domxref("SubtleCrypto.decrypt()")}}、{{domxref("SubtleCrypto.wrapKey()")}} 或 {{domxref("SubtleCrypto.unwrapKey()")}}。
+当使用 [AES-CTR](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-ctr) 算法时，[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`AesCtrParams`** 字典表示应作为 `algorithm` 参数传递给 {{domxref("SubtleCrypto.encrypt()")}}、{{domxref("SubtleCrypto.decrypt()")}}、{{domxref("SubtleCrypto.wrapKey()")}} 或 {{domxref("SubtleCrypto.unwrapKey()")}} 的对象。
 
 AES 是一种分组密码，意味着它将消息分割成多个块，并逐块进行加密。在 CTR 模式下，每次消息的一个块被加密时，都会混入一个额外的数据块。这个额外的数据块被称为“计数器块”。
 

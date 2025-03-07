@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("Web Crypto API") }}
 
-[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`AesKeyGenParams`** 字典表示在生成 AES 密钥时，对象应该以 `algorithm` 参数传递给 {{domxref("SubtleCrypto.generateKey()")}}：即当算法被标记为 [AES-CBC](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-cbc)、[AES-CTR](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-ctr)、[AES-GCM](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-gcm) 或 [AES-KW](/zh-CN/docs/Web/API/SubtleCrypto/wrapKey#aes-kw) 中的任一种时。
+在生成 AES 密钥时，[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`AesKeyGenParams`** 字典表示应作为 `algorithm` 参数传递给 {{domxref("SubtleCrypto.generateKey()")}} 的对象：即当算法被标记为 [AES-CBC](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-cbc)、[AES-CTR](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-ctr)、[AES-GCM](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-gcm) 或 [AES-KW](/zh-CN/docs/Web/API/SubtleCrypto/wrapKey#aes-kw) 中的任一种时。
 
 ## 实例属性
 
