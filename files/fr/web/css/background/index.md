@@ -117,7 +117,7 @@ Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assi
 }
 
 .banniere {
-  background: url("starsolid.gif") #99f repeat-y fixed;
+  background: url("star-solid.gif") #99f repeat-y fixed;
 }
 ```
 

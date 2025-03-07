@@ -9,7 +9,21 @@ l10n:
 
 **`Math.floor()`** 정적 메서드는 언제나 버림 처리하고 주어진 숫자와 같거나 작은 정수 중에서 가장 큰 수를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/math-floor.html")}}
+{{InteractiveExample("JavaScript Demo: Math.floor()")}}
+
+```js interactive-example
+console.log(Math.floor(5.95));
+// Expected output: 5
+
+console.log(Math.floor(5.05));
+// Expected output: 5
+
+console.log(Math.floor(5));
+// Expected output: 5
+
+console.log(Math.floor(-5.05));
+// Expected output: -6
+```
 
 ## 구문
 

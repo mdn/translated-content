@@ -9,7 +9,35 @@ l10n:
 
 **[HTML](/ko/docs/Web/HTML) `<pre>` 요소**는 미리 서식을 지정한 텍스트를 나타내며, HTML에 작성한 내용 그대로 표현합니다. 텍스트는 보통 [고정폭 글꼴](https://ko.wikipedia.org/wiki/고정폭_글꼴)을 사용해 렌더링하고, 요소 내 공백문자를 그대로 유지합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;pre&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<pre>
+  L          TE
+    A       A
+      C    V
+       R A
+       DOU
+       LOU
+      REUSE
+      QUE TU
+      PORTES
+    ET QUI T'
+    ORNE O CI
+     VILISÉ
+    OTE-  TU VEUX
+     LA    BIEN
+    SI      RESPI
+            RER       - Apollinaire
+</pre>
+```
+
+```css interactive-example
+pre {
+  font-size: 0.7rem;
+  margin: 0;
+}
+```
 
 `<pre>` 태그 안에서 `<`, `>`, `&`, `"` 와 같은 예약 문자를 표시하려면, 각각의 [HTML 개체](/ko/docs/Glossary/Entity)를 사용해 이스케이프해야 합니다.
 

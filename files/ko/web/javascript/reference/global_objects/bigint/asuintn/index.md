@@ -9,7 +9,22 @@ l10n:
 
 **`BigInt.asUintN()`** 정적 메서드는 `BigInt` 값을 주어진 최하위 비트 수로 자르고 해당 값을 부호 없는 정수로 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/bigint-asuintn.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: BigInt.asUintN()", "taller")}}
+
+```js interactive-example
+const U64_CEIL = 2n ** 64n;
+
+console.log(BigInt.asUintN(64, U64_CEIL - 1n));
+// 18446744073709551615n (2n ** 64n - 1n, the maximum non-wrapping value)
+console.log(BigInt.asUintN(64, U64_CEIL));
+// 0n (wraps to zero)
+console.log(BigInt.asUintN(64, U64_CEIL + 1n));
+// 1n
+console.log(BigInt.asUintN(64, U64_CEIL * 2n));
+// 0n (wraps on multiples)
+console.log(BigInt.asUintN(64, U64_CEIL * -42n));
+// 0n (also wraps on negative multiples)
+```
 
 ## 구문
 

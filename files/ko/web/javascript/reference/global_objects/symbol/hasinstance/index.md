@@ -11,7 +11,18 @@ l10n:
 {{jsxref("Operators/instanceof", "instanceof")}} 연산자는 생성자 객체가 객체를 인스턴스로 인식하는지 여부를 확인하기 위해
 사용하는 메서드의 오른쪽 피연산자에서 이 심볼을 찾습니다.
 
-{{EmbedInteractiveExample("pages/js/symbol-hasinstance.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.hasInstance")}}
+
+```js interactive-example
+class Array1 {
+  static [Symbol.hasInstance](instance) {
+    return Array.isArray(instance);
+  }
+}
+
+console.log([] instanceof Array1);
+// Expected output: true
+```
 
 ## 값
 

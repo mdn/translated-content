@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Classes/constructor
 
 **`constructor`** 메서드는 {{jsxref("Statements/class", "클래스", "", 1)}}의 인스턴스 객체를 생성하고 초기화하는 특별한 메서드입니다.
 
-{{EmbedInteractiveExample("pages/js/classes-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Classes Constructor")}}
+
+```js interactive-example
+class Polygon {
+  constructor() {
+    this.name = "Polygon";
+  }
+}
+
+const poly1 = new Polygon();
+
+console.log(poly1.name);
+// Expected output: "Polygon"
+```
 
 ## 구문
 

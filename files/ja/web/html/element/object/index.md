@@ -9,7 +9,15 @@ l10n:
 
 **`<object>`** は [HTML](/ja/docs/Web/HTML) の要素で、画像、内部の閲覧コンテキスト、プラグインによって扱われるリソースなどのように扱われる外部リソースを表します。
 
-{{EmbedInteractiveExample("pages/tabbed/object.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;object&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<object
+  type="video/mp4"
+  data="/shared-assets/videos/flower.mp4"
+  width="250"
+  height="200"></object>
+```
 
 ## 属性
 

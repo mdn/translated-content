@@ -2,10 +2,10 @@
 title: クラスの使用
 slug: Web/JavaScript/Guide/Using_classes
 l10n:
-  sourceCommit: 9c4fb236cd9ced12b1eb8e7696d8e6fcb8d8bad3
+  sourceCommit: c16a0ee78e5142b3bfcdaf57d595add3ce825f13
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_objects", "Web/JavaScript/Guide/Using_promises")}}
 
 JavaScript はプロトタイプベースの言語です。オブジェクトの動作は、自分自身のプロパティとプロトタイプのプロパティで指定します。しかし、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)の追加により、オブジェクトの階層の作成、プロパティとその値の継承は、Java などの他のオブジェクト指向言語とかなり方向性が近くなっています。この章では、クラスからオブジェクトを作成する方法を説明します。
 
@@ -17,7 +17,7 @@ JavaScript はプロトタイプベースの言語です。オブジェクトの
 
 ## クラスの概要
 
-JavaScript をある程度使いこなしている方、あるいはガイドに沿って進んできた方は、たとえ作成していなくても、すでにクラスを使用したことがあるのではないでしょうか？例えば、これは[馴染みがあるかもしれません](/ja/docs/Web/JavaScript/Guide/Numbers_and_dates)。
+JavaScript をある程度使いこなしている方、あるいはガイドに沿って進んできた方は、たとえ作成していなくても、すでにクラスを使用したことがあるのではないでしょうか？例えば、これは[馴染みがあるかもしれません](/ja/docs/Web/JavaScript/Guide/Representing_dates_times)。
 
 ```js
 const bigDay = new Date(2019, 6, 19);
@@ -175,7 +175,7 @@ console.log(red);
 
 このような出力が確認できるはずです。
 
-```
+```plain
 Object { values: (3) […] }
   values: Array(3) [ 255, 0, 0 ]
 ```
@@ -325,7 +325,7 @@ const red = new Color(255, 0, 0);
 console.log(red.values[0]); // 0。255 ではなくなります。純粋な赤の H の値は 0 だからです。
 ```
 
-ユーザーは `values` が RGB 値を突然崩壊させることを意味していると思い込み、自分のロジックが壊れる原因になりかねません。そのため、もしあなたがクラスの実装者であれば、インスタンスの内部データ構造をユーザーから隠したいでしょう。これは、API をきれいに保つためと、あなたが「害のないリファクタリング」をしたときにユーザーのコードが壊れるのを防ぐためです。クラスでは、これは [_private fields_](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties) を通して行われます。
+ユーザーは `values` が RGB 値を突然崩壊させることを意味していると思い込み、自分のロジックが壊れる原因になりかねません。そのため、もしあなたがクラスの実装者であれば、インスタンスの内部データ構造をユーザーから隠したいでしょう。これは、API をきれいに保つためと、あなたが「害のないリファクタリング」をしたときにユーザーのコードが壊れるのを防ぐためです。クラスでは、これは[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)を通して行われます。
 
 プライベートフィールドは、接頭辞に `#` (ハッシュ記号) を持つ識別子です。このハッシュはフィールドの名前に不可欠な要素であり、プライベートプロパティがパブリックプロパティと名前が衝突することはないことを意味しています。プライベートフィールドをクラスのどこかで参照するには、クラス本体でそれを宣言する必要があります（プライベートプロパティをその場で作成することはできません）。これを除けば、プライベートフィールドは通常のプロパティとほとんど同じです。
 
@@ -350,9 +350,12 @@ console.log(red.getRed()); // 255
 
 クラス外からプライベートフィールドにアクセスすると、初期の構文エラーになります。`#privateField` は特殊な構文なので、静的解析を行い、コードを評価する前にプライベートフィールドの使い方をすべて見つけることができるため、言語はこれを防ぐことができます。
 
-```js example-bad
+```js-nolint example-bad
 console.log(red.#values); // SyntaxError: Private field '#values' must be declared in an enclosing class
 ```
+
+> [!NOTE]
+> Chrome コンソールで実行するコードは、クラスの外部からプライベートプロパティにアクセスすることができます。これは、 JavaScript の構文制限を緩和した開発ツール独自の機能です。
 
 JavaScript でのプライベートフィールドはハードプライベートです。クラスがこのプライベートフィールドを公開するメソッドを実装していない場合、クラスの外からそれを取得する仕組みは全くありません。つまり、公開されるメソッドの動作が変わらない限り、クラスのプライベートフィールドにどんなリファクタリングを行っても安全だということです。
 
@@ -424,7 +427,7 @@ class Color {
 
 プライベートプロパティを使用するには、いくつかの制限があります。同じ名前を単一のクラスで 2 回宣言することはできませんし、削除することもできません。どちらも初期の構文エラーにつながります。
 
-```js example-bad
+```js-nolint example-bad
 class BadIdeas {
   #firstName;
   #firstName; // syntax error occurs here
@@ -630,7 +633,7 @@ class ColorWithAlpha extends Color {
 }
 ```
 
-すぐに気付くことがいくつかあります。最初の点は、コンストラクタの中で、`super(r, g, b)` を呼び出していることです。`this` にアクセスする前に [`super()`](/ja/docs/Web/JavaScript/Reference/Operators/super) を呼び出すことは言語要件です。`super()` は親クラスのコンストラクターを呼び出して `this` を初期化します — ここでは `this = new Color(r, g, b)` とほぼ同じ意味です。`super()` の前にコードを置くことはできますが、`super()` の前に `this` にアクセスすることはできません。言語上、未初期化の `this` にアクセスすることはできないからです。
+すぐに気付くことがいくつかあります。最初の点は、コンストラクターの中で、`super(r, g, b)` を呼び出していることです。`this` にアクセスする前に [`super()`](/ja/docs/Web/JavaScript/Reference/Operators/super) を呼び出すことは言語要件です。`super()` は親クラスのコンストラクターを呼び出して `this` を初期化します — ここでは `this = new Color(r, g, b)` とほぼ同じ意味です。`super()` の前にコードを置くことはできますが、`super()` の前に `this` にアクセスすることはできません。言語上、未初期化の `this` にアクセスすることはできないからです。
 
 親クラスが `this` を変更した後、派生クラスは自分自身でロジックを作成することができます。ここでは、`#alpha` というプライベートフィールドを追加し、それと対話するためのゲッター/セッターのペアを提供しました。
 
@@ -692,7 +695,7 @@ console.log(ColorWithAlpha.isValid(255, 0, 0, -1)); // false
 
 派生クラスは親クラスのプライベートフィールドにアクセスできません。これは、JavaScript のプライベートフィールドが「ハードプライベート」であることのもう一つの重要な側面です。プライベートフィールドは、クラス本体にスコープされ、外部のコードにアクセスすることはできません。
 
-```js example-bad
+```js-nolint example-bad
 class ColorWithAlpha extends Color {
   log() {
     console.log(this.#values); // SyntaxError: Private field '#values' must be declared in an enclosing class
@@ -766,4 +769,4 @@ function isValidColor(color) {
 
 JavaScript には、コードを正規のオブジェクト指向で整理する仕組みがありますが、それを使用するかどうか、どのように使用するかは、すべてプログラマーの裁量に委ねられています。
 
-{{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}
+{{PreviousNext("Web/JavaScript/Guide/Working_with_objects", "Web/JavaScript/Guide/Using_promises")}}

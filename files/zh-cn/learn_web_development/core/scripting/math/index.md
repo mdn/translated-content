@@ -51,8 +51,6 @@ original_slug: Learn/JavaScript/First_steps/Math
 
 让我们快点玩一些数字，以重新定义我们所需要的基本语法。在你的[开发工具 JavaScript 控制台](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)中输入下面列出的命令。
 
-**[在新窗口中打开](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/)**
-
 1. 首先，我们先声明一对变量，并分别用一个整数和一个浮点数来初始化它们，然后再输入变量名来检查是否正确：
 
    ```js

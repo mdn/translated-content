@@ -105,7 +105,7 @@
       {
         "name": "gfm-alert",
         "message": "Use the GFM syntax: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#备注、警告和标注",
-        "searchPattern": "/^ *> \\*\\*(Note|Warning|Callout):\\*\\*(?! [[{`_*])/gm",
+        "searchPattern": "/^ *> \\*\\*(备注|警告|标注)：\\*\\*(?! ?[[{`_*])/gm",
         "searchScope": "text",
       },
       {

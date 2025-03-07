@@ -9,7 +9,37 @@ l10n:
 
 **`<textarea>`** は [HTML](/ja/docs/Web/HTML) の要素で、複数行のプレーンテキスト編集コントロールを表し、レビューのコメントやお問い合わせフォーム等のように、ユーザーが大量の自由記述テキストを入力できるようにするときに便利です。
 
-{{EmbedInteractiveExample("pages/tabbed/textarea.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;textarea&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="story">Tell us your story:</label>
+
+<textarea id="story" name="story" rows="5" cols="33">
+It was a dark and stormy night...
+</textarea>
+```
+
+```css interactive-example
+label,
+textarea {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+textarea {
+  padding: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+```
 
 上記の例では `<textarea>` の様々な機能を紹介しています。
 
@@ -112,7 +142,7 @@ HTML 仕様書では、 `<textarea>` のベースラインがどこであるか�
 
 ### テキストエリアの大きさの変更が可能かどうかの制御
 
-多くのブラウザーでは、 `<textarea>` は大きさの変更が可能です。右側の隅にドラッグのためのハンドルがあり、ページ内の要素の大きさを変更するための使用できることが分かるでしょう。これは CSS の {{ cssxref("resize") }} プロパティで制御されます。既定では大きさの変更が有効ですが、 `resize` の値に `none` を使用することで明示的に無効にすることができます。
+多くのブラウザーでは、 `<textarea>` は大きさの変更が可能です。右側の隅にドラッグのためのハンドルがあり、ページ内の要素の大きさを変更するために使用できることが分かるでしょう。これは CSS の {{ cssxref("resize") }} プロパティで制御されます。既定では大きさの変更が有効ですが、 `resize` の値に `none` を使用することで明示的に無効にすることができます。
 
 ```css
 textarea {
@@ -138,7 +168,7 @@ textarea:valid {
 
 ### 基本的な例
 
-次の例ではテキストエリアを表示させ、行と列の数を設定し、既定のコンテンツを表示させ、ユーザーが要素のサイズを幅 500px、高さ 130px 以上に変更できないように CSS スタイルを設定しています。
+次の例ではテキストエリアを表示させ、行と列の数を設定し、既定のコンテンツを表示させ、ユーザーが要素のサイズを幅 500px、高さ 130px を超えて変更できないように CSS スタイルを設定しています。
 
 ```html-nolint
 <textarea name="textarea" rows="5" cols="15">ここに何か書いてください</textarea>
@@ -180,7 +210,7 @@ textarea {
 
 ### "placeholder" の使用
 
-この例はプレースホルダーを設定します。ボックスに入力を開始した時に消えることを確認して下さい。
+この例はプレースホルダーを設定します。ボックスに入力を開始した時に消えることを確認してください。
 
 ```html
 <textarea

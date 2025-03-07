@@ -1,5 +1,5 @@
 ---
-title: "::placeholder"
+title: ::placeholder
 slug: Web/CSS/::placeholder
 l10n:
   sourceCommit: 59ef5b046557b45a515b654458667e6da6d0f4aa
@@ -9,7 +9,31 @@ l10n:
 
 [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) **`::placeholder`** 表示 {{HTMLElement("input")}} 或 {{HTMLElement("textarea")}} 元素中的[占位文本](/zh-CN/docs/Web/HTML/Element/input#placeholder)。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-placeholder.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::placeholder", "tabbed-shorter")}}
+
+```css interactive-example
+input {
+  margin-top: 0.5rem;
+}
+
+input::placeholder {
+  font-weight: bold;
+  opacity: 0.5;
+  color: red;
+}
+```
+
+```html interactive-example
+<label for="first-name">Your phone number:</label><br />
+
+<input
+  id="first-name"
+  type="tel"
+  name="phone"
+  minlength="9"
+  maxlength="9"
+  placeholder="It must be 9 digits" />
+```
 
 只有可以应用于 {{cssxref("::first-line")}} 伪元素的 CSS 属性子集可以在使用了 `::placeholder` 选择器的规则中使用。
 

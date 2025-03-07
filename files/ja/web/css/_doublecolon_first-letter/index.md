@@ -1,5 +1,5 @@
 ---
-title: "::first-letter"
+title: ::first-letter
 slug: Web/CSS/::first-letter
 l10n:
   sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
@@ -9,7 +9,28 @@ l10n:
 
 **`::first-letter`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、[ブロックコンテナー](/ja/docs/Web/CSS/Visual_formatting_model#ブロックコンテナー)の最初の行の最初の文字にスタイルを適用します。ただし、最初の文字より前に他のコンテンツ（画像やインラインテーブルなど）がないときに限ります。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-first-letter.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::first-letter", "tabbed-shorter")}}
+
+```css interactive-example
+p::first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: brown;
+}
+```
+
+```html interactive-example
+<p>
+  Scientists exploring the depths of Monterey Bay unexpectedly encountered a
+  rare and unique species of dragonfish. This species is the rarest of its
+  species.
+</p>
+
+<p>
+  When Robison and a team of researchers discovered this fish, they were aboard
+  a week-long expedition.
+</p>
+```
 
 要素の最初の文字は、常に単純に識別できるとは限りません。
 

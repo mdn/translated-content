@@ -1,5 +1,5 @@
 ---
-title: "::view-transition-old"
+title: ::view-transition-old
 slug: Web/CSS/::view-transition-old
 ---
 

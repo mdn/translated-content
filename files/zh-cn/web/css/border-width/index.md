@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`border-width`** [CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)用于设置元素边框的宽度。
+**`border-width`** [CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)用于设置元素边框的宽度。
 
 {{EmbedInteractiveExample("pages/css/border-width.html")}}
 

@@ -1,47 +1,21 @@
 ---
 title: MathML テキストコンテナー
 slug: Web/MathML/Guides/Text_containers
-original_slug: Learn/MathML/First_steps/Text_containers
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Getting_started", "Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps")}}
+{{MathMLRef}}
+
+{{PreviousMenuNext("Web/MathML/Guides/Getting_started", "Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides")}}
 
 これで MathML の概要を理解していただけたと思いますので、次は MathML 数式の構成要素として使用するテキストコンテナー（変数、数値、演算子...）に焦点を移します。
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提知識:</th>
-      <td>
-        <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >基本的なソフトウェアがインストールされていること</a
-        >
-        <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >ファイルでの作業</a
-        >に関する基本的な知識、 HTML の基本（
-        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >を学ぶこと）、テキストのスタイル付けのための CSS 記法（<a href="/ja/docs/Learn/CSS/Styling_text/Fundamentals">基本的なテキストとフォントのスタイル設定</a>および<a href="/ja/docs/Learn/CSS/Styling_text/Web_fonts">ウェブフォント</a>を読んでください）。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">目標:</th>
-      <td>
-        テキストを書くために使用する MathML 要素に慣れ、特別な動作に気づくこと。
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## 数式のための Unicode 文字
 
-数式には多くの特殊文字が含まれます。例えば、ギリシャ文字（例: Δ）、フラクター文字（例: 𝔄）、二重打文字（例: ℂ）、二項演算子（例: ≠）、矢印（例: ⇒）、積分記号（例: ∮）、和記号 (例: ∑), 論理記号 (例: ↪Ps∀), 柵 (例: ↪Ps_230A) など。ウィキペディアの記事[Unicodeにおける数学演算子と記号](https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode)は、使用する文字の概要を提供しています。
+数式には多くの特殊文字が含まれます。例えば、ギリシャ文字（例: Δ）、フラクター文字（例: 𝔄）、二重打文字（例: ℂ）、二項演算子（例: ≠）、矢印（例: ⇒）、積分記号（例: ∮）、和記号 (例: ∑), 論理記号 (例: ↪Ps∀), 柵 (例: ↪Ps_230A) など。ウィキペディアの記事 [Unicode における数学演算子と記号](https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode)は、使用する文字の概要を提供しています。
 
-これらの文字のほとんどは基本ラテン語 Unicode ブロックに属しませんので、[文書の文字エンコーディング](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#html_文書の文字コードを指定する)を指定し、適切なウェブフォントで提供することをお勧めします。以下は UTF-8 エンコーディング方式と[ラテン語の現行の数学](/ja/docs/Web/MathML/Fonts#fonts_with_a_math_table)フォントを使用する基本的なテンプレートです。
+これらの文字のほとんどは基本ラテン語 Unicode ブロックに属しませんので、[文書の文字エンコーディング](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#html_文書の文字コードを指定する)を指定し、適切なウェブフォントで提供することをお勧めします。以下は UTF-8 エンコーディング方式と [Latin Modern Math](/ja/docs/Web/MathML/Fonts#math_表を含むフォント) フォントを使用する基本的なテンプレートです。
 
 ```html
 <!doctype html>
@@ -61,12 +35,12 @@ l10n:
 
 {{ EmbedLiveSample('Unicode_characters_for_mathematics', 700, 100, "", "") }}
 
-## 少し意味づけ
+## ちょっとした意味づけ
 
-[MathML を始めるには](/ja/docs/Learn/MathML/First_steps/Getting_started)の記事で、 MathML の数式中のテキストは `<mn>` や `<mo>` のような固有のコンテナー要素に包まれていることに注目しました。より一般的には、 MathML 数式のすべてのテキストはトークン要素と呼ばれるコンテナーの中に記載しなければなりません。さらに、 MathML ではテキストコンテンツの様々な意味を判別するために、複数のトークン要素を指定しています。
+[MathML を始めよう](/ja/docs/Web/MathML/Guides/Getting_started)の記事で、 MathML の数式中のテキストは `<mn>` や `<mo>` のような固有のコンテナー要素に包まれていることに注目しました。より一般的には、 MathML 数式のすべてのテキストはトークン要素と呼ばれるコンテナーの中に記載しなければなりません。さらに、 MathML ではテキストコンテンツの様々な意味を判別するために、複数のトークン要素を指定しています。
 
 - `<mi>` 要素は「識別子」を表します。この「識別子」は記号でも任意のテキストでもかまいません。例えば、`<mi>x</mi>` （変数）、`<mi>cos</mi>` （関数名）、`<mi>π</mi>`（記号定数）などです。
-- `<mn>`要素は「数値リテラル」、または数値リテラルとして表示されるべき他のデータを表します。例えば、`<mn>2</mn>` （整数）、 `<mn>0.123</mn>` （10 進数）、 `<mn>0xFFEF</mn>` （16 進数値）などです。
+- `<mn>` 要素は「数値リテラル」、または数値リテラルとして表示されるべき他のデータを表します。例えば、`<mn>2</mn>` （整数）、 `<mn>0.123</mn>` （10 進数）、 `<mn>0xFFEF</mn>` （16 進数値）などです。
 - `<mo>` 要素は演算子、または演算子として表示されるべき何らかのものを表します。例えば、 `<mo>+</mo>` （二項演算子）、 `<mo>≤</mo>` （二項関係演算子）、 `<mo>∑</mo>` （和記号）、 `<mo>[</mo>` （フェンス）などです。
 - `<mtext>` 要素は任意のテキストを表すために使用します。例えば `<mtext>if<mtext>` や `<mtext>maps to</mtext>` のような数式中の短い単語です。
 
@@ -139,7 +113,7 @@ tokenElements.forEach((token) => {
 });
 document.getElementById("clearOutput").addEventListener("click", () => {
   clearHighlight();
-  outputDiv.innerHTML = "";
+  outputDiv.textContent = "";
 });
 ```
 
@@ -172,7 +146,7 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 
 ## \<mi> の自動的なイタリック化
 
-数学における組版上の慣例として、変数にはイタリック体を使用する慣例があります。そのために、単一の文字を持つ `<mi>` 要素は自動的にイタリック体として表示されます。これはラテン文字とギリシャ文字のすべてについて当てはまります。以下の式の 2 つの `<mi>` 要素のレンダリングを見比べてください：
+数学における組版上の慣例として、変数にはイタリック体を使用する慣例があります。そのために、単一の文字を持つ `<mi>` 要素は自動的にイタリック体として表示されます。これはラテン文字とギリシャ文字のすべてについて当てはまります。以下の式の 2 つの `<mi>` 要素のレンダリングを見比べてください。
 
 ```html
 <math>
@@ -417,7 +391,7 @@ tokenElements.forEach((token) => {
 });
 document.getElementById("clearOutput").addEventListener("click", () => {
   clearHighlight();
-  outputDiv.innerHTML = "";
+  outputDiv.textContent = "";
 });
 ```
 
@@ -461,13 +435,11 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 ```
 
 > [!WARNING]
-> 伸縮できるようにするには、一般に特別な[数学フォント](/ja/docs/Web/MathML/Fonts)が要求されます。前回の例は[ウェブフォント](/ja/docs/Learn/CSS/Styling_text/Web_fonts)に頼っています。
+> 伸縮できるようにするには、一般に特別な[数学フォント](/ja/docs/Web/MathML/Fonts)が要求されます。上記の例は[ウェブフォント](/ja/docs/Learn_web_development/Core/Text_styling/Web_fonts)に頼っています。
 
 ## まとめ
 
-この記事では、テキストコンテナーとして使用されるいくつかのトークン要素とその意味付け、すなわち `<mi>` （識別子）、 `<mn>` （数値）、 `<mo>` （演算子）、 `<mtext>` （汎用テキスト）について学びました。ここまで、数式でよく使われる特殊な Unicode 文字を見て、 `<mi>` と `<mo>` 要素の監視できる動作の概要を述べてきました。次の記事では、トークン要素によって[分数と根号](/ja/docs/Learn/MathML/First_steps/Fractions_and_roots)のような複雑な式を作る方法を見ていきます。
-
-{{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Getting_started", "Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps")}}
+この記事では、テキストコンテナーとして使用されるいくつかのトークン要素とその意味付け、すなわち `<mi>` （識別子）、 `<mn>` （数値）、 `<mo>` （演算子）、 `<mtext>` （汎用テキスト）について学びました。ここまで、数式でよく使われる特殊な Unicode 文字を見て、 `<mi>` と `<mo>` 要素の監視できる動作の概要を述べてきました。次の記事では、トークン要素によって[分数と根号](/ja/docs/Web/MathML/Guides/Fractions_and_roots)のような複雑な式を作る方法を見ていきます。
 
 ## 関連情報
 
@@ -475,3 +447,5 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 - [`<mn>` 要素](/ja/docs/Web/MathML/Element/mn)
 - [`<mo>` 要素](/ja/docs/Web/MathML/Element/mo)
 - [`<mtext>` 要素](/ja/docs/Web/MathML/Element/mtext)
+
+{{PreviousMenuNext("Web/MathML/Guides/Getting_started", "Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides")}}

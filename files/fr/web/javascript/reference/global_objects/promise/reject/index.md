@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
 
 La méthode **`Promise.reject(raison)`** renvoie un objet `Promise` qui est rejeté (la promesse n'est pas tenue) à cause d'une raison donnée.
 
-{{EmbedInteractiveExample("pages/js/promise-reject.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.reject()")}}
+
+```js interactive-example
+function resolved(result) {
+  console.log("Resolved");
+}
+
+function rejected(result) {
+  console.error(result);
+}
+
+Promise.reject(new Error("fail")).then(resolved, rejected);
+// Expected output: Error: fail
+```
 
 ## Syntaxe
 

@@ -9,7 +9,32 @@ l10n:
 
 **`<li>`** は [HTML](/ja/docs/Web/HTML) の要素で、リストの項目を表すために用いられます。この要素は、その項目が属する順序付きリスト ({{HTMLElement("ol")}})、順序なしリスト ({{HTMLElement("ul")}})、メニュー ({{HTMLElement("menu")}}) のいずれかの子要素として配置する必要があります。メニュー要素および順序なしリスト内においては、リストの項目は通常、行頭文字を伴って表示されます。順序付きリスト内では、数字や文字による連番のリストマーカーを伴って表示されます。
 
-{{EmbedInteractiveExample("pages/tabbed/li.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;li&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>Apollo astronauts:</p>
+
+<ul>
+  <li>Neil Armstrong</li>
+  <li>Alan Bean</li>
+  <li>Peter Conrad</li>
+  <li>Edgar Mitchell</li>
+  <li>Alan Shepard</li>
+</ul>
+```
+
+```css interactive-example
+p,
+li {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+p {
+  font-weight: bold;
+}
+```
 
 ## 属性
 

@@ -300,7 +300,7 @@ onmessage = function (oEvent) {
 
 #### 範例 1: 非同步 `eval()`
 
-下面透過 [data URL](/zh-TW/docs/Web/URI/Schemes/data) 和 `eval()`，示範如何在 worker 非同步執行允許的程式碼：
+下面透過 [data URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 和 `eval()`，示範如何在 worker 非同步執行允許的程式碼：
 
 ```js
 // Syntax: asyncEval(code[, listener])
@@ -328,7 +328,7 @@ var asyncEval = (function () {
 })();
 ```
 
-[data URL](/zh-TW/docs/Web/URI/Schemes/data) 相當於網路請求，範例中的 data URL 會在 worker 執行下列程式碼回應訊息：
+[data URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 相當於網路請求，範例中的 data URL 會在 worker 執行下列程式碼回應訊息：
 
 ```js
 onmessage = function (oEvent) {

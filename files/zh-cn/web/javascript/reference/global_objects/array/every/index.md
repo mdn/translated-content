@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/every
 
 **`every()`** 方法测试一个数组内的所有元素是否都能通过指定函数的测试。它返回一个布尔值。
 
-{{EmbedInteractiveExample("pages/js/array-every.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.every()", "shorter")}}
+
+```js interactive-example
+const isBelowThreshold = (currentValue) => currentValue < 40;
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold));
+// Expected output: true
+```
 
 ## 语法
 

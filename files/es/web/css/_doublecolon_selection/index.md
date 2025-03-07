@@ -1,5 +1,5 @@
 ---
-title: "::selection"
+title: ::selection
 slug: Web/CSS/::selection
 l10n:
   sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
@@ -9,7 +9,20 @@ l10n:
 
 El [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) de CSS **`::selection`** aplica estilos a la parte de un documento que ha sido resaltada por el usuario (como hacer clic y arrastrar el ratón sobre el texto).
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-selection.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::selection", "tabbed-shorter")}}
+
+```css interactive-example
+p::selection {
+  color: red;
+  background-color: yellow;
+}
+```
+
+```html interactive-example
+<p>
+  Select a fragment of this paragraph, to see how its appearance is affected.
+</p>
+```
 
 ## Propiedades permitidas
 

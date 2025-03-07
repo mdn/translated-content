@@ -261,7 +261,7 @@ l10n:
 - **详细调试报告**为与归因报告关联的归因来源和归因触发事件提供更多可见性。它们使你能够确保来源已成功注册，或跟踪丢失的报告并确定其原因（例如，由于来源或触发事件注册失败或发送或生成报告时失败）。详细调试报告在来源或触发器注册时立即发送。
 
 > [!NOTE]
-> 要使用调试报告，报告来源（origin）需要设置 cookie。如果配置为接收报告的来源是第三方，则该 cookie 将是[第三方 cookie](/zh-CN/docs/Web/Privacy/Third-party_cookies)，这意味着在禁用/不可用第三方 cookie 的浏览器中将无法使用调试报告。
+> 要使用调试报告，报告来源（origin）需要设置 cookie。如果配置为接收报告的来源是第三方，则该 cookie 将是[第三方 cookie](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies)，这意味着在禁用/不可用第三方 cookie 的浏览器中将无法使用调试报告。
 
 ### 使用调试报告
 

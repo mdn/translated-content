@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 Метод **`forEach()`** выполняет указанную функцию один раз для каждого элемента в массиве.
 
-{{EmbedInteractiveExample("pages/js/array-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Array.forEach()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+array1.forEach((element) => console.log(element));
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## Синтаксис
 

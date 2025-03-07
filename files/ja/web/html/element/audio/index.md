@@ -9,7 +9,21 @@ l10n:
 
 **`<audio>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書内に音声コンテンツを埋め込むために使用します。この要素は、1 つまたは複数の音源を含むことができます。音源は `src` 属性または {{HTMLElement("source")}} 要素を使用して表し、ブラウザーがもっとも適切な音源を選択します。また、 {{domxref("MediaStream")}} を使用してストリーミングメディアを指し示すこともできます。
 
-{{EmbedInteractiveExample("pages/tabbed/audio.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;audio&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<figure>
+  <figcaption>Listen to the T-Rex:</figcaption>
+  <audio controls src="/shared-assets/audio/t-rex-roar.mp3"></audio>
+  <a href="/shared-assets/audio/t-rex-roar.mp3"> Download audio </a>
+</figure>
+```
+
+```css interactive-example
+figure {
+  margin: 0;
+}
+```
 
 上記の例は、 `<audio>` 要素の基本的な使用方法を示しています。 {{htmlelement("img")}} 要素と同様の方法で、埋め込みたいメディアへのパスを `src` 属性に設定します。他にも自動再生や繰り返しを行うかどうか、ブラウザーの既定のオーディオコントロールを表示したいかどうか、などの情報を指定する属性を含めることができます。
 
@@ -269,7 +283,7 @@ navigator.mediaDevices
 - `<audio>` 要素は `<video>` 要素と同じような方法で字幕を持つことができません。 Ian Devlin による [WebVTT and Audio](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio) で、役立つ情報や作業があります。
 - この要素を対応しているブラウザーで代替コンテンツをテストするには、`<audio>` を `<notanaudio>` のような存在しない要素に置き換えることで行うことができます。
 
-HTML の `<audio>` 要素の使用に関する良い情報源として、[映像および音声コンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)の初心者向けチュートリアルがあります。
+HTML の `<audio>` 要素の使用に関する良い情報源として、 [HTML 動画および音声](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)の初心者向けチュートリアルがあります。
 
 ### CSS でのスタイル付け
 
@@ -466,5 +480,5 @@ elem.audioTrackList.onremovetrack = (event) => {
 - {{domxref("HTMLAudioElement")}}
 - {{htmlelement("source")}}
 - {{htmlelement("video")}}
-- [学習りゅいき: 動画及び音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [学習領域: HTML 動画および音声](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [ブラウザーに依存しない音声の基本](/ja/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)

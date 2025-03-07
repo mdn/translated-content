@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 
 {{jsxref("Object")}} 实例的 **`valueOf()`** 方法将 `this` 值[转换成对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#对象强制转换)。该方法旨在被派生对象重写，以实现自定义[类型转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)逻辑。
 
-{{EmbedInteractiveExample("pages/js/object-prototype-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.valueOf()")}}
+
+```js interactive-example
+function MyNumberType(n) {
+  this.number = n;
+}
+
+MyNumberType.prototype.valueOf = function () {
+  return this.number;
+};
+
+const object1 = new MyNumberType(4);
+
+console.log(object1 + 3);
+// Expected output: 7
+```
 
 ## 语法
 

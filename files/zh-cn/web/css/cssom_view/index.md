@@ -1,5 +1,5 @@
 ---
-title: CSSOM View
+title: CSSOM 视图
 slug: Web/CSS/CSSOM_view
 ---
 

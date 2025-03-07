@@ -2,7 +2,7 @@
 title: 標準後設資料名稱
 slug: Web/HTML/Element/meta/name
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: b8ed1dc2ae2ff1b6f44f389ac9756fed78b03f0e
 ---
 
 {{HTMLSidebar}}
@@ -175,6 +175,8 @@ CSS Device Adaptation 規範定義了以下的後設資料名稱：
 
 ### 其他後設資料名稱
 
+#### WHATWG MetaExtensions wiki 定義的名稱
+
 [WHATWG Wiki MetaExtensions 頁面](https://wiki.whatwg.org/wiki/MetaExtensions) 包含一大批尚未正式採納的非標準後設資料名稱。然而，其中一些名稱已廣泛使用，包括：
 
 - `creator`：文件創建者的名稱，例如機構或組織。若有多個，應使用多個 {{HTMLElement("meta")}} 元素。
@@ -204,6 +206,10 @@ CSS Device Adaptation 規範定義了以下的後設資料名稱：
   > - 一些值如 `index` 和 `noindex`，或 `follow` 和 `nofollow` 是互斥的。在這些情況下，機器人的行為未定，可能會有所差異。
   > - 部分爬蟲機器人，如 Google、Yahoo 和 Bing，也支援 HTTP 標頭 {{HTTPHeader("X-Robots-Tag")}} 的相同值；這允許非 HTML 文件（如圖片）也能使用這些規則。
 
+#### 其他名稱
+
+- `application-title`：用於在桌面作業系統上針對已安裝為獨立應用程式的 Web 應用程式，自訂該應用程式的標題。當應用程式在瀏覽器中執行時，通常會在瀏覽器分頁中顯示 {{HTMLElement("title")}} 元素的文字內容。但後設資料名稱 `application-title` 可用於在應用程式以獨立應用程式形式執行時設定不同的標題。
+
 ## 規範
 
 {{Specifications}}
@@ -215,4 +221,4 @@ CSS Device Adaptation 規範定義了以下的後設資料名稱：
 ## 參見
 
 - [Viewport `<meta>` 標籤](/zh-TW/docs/Web/HTML/Viewport_meta_tag)
-- [HTML 的後設資料：`<meta>` 元素](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_meta_元素) 在 [HTML 中的標頭內容](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [後設資料：`<meta>` 元素](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_meta_元素)
