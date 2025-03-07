@@ -2,12 +2,10 @@
 title: 学習フォーラム
 slug: MDN/Community/Learn_forum
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
 ---
 
-{{MDNSidebar}}
-
-[ウェブ開発を学ぶ](/ja/docs/Learn)のページ群は、毎月 100 万回以上の閲覧があり、支援を求めるための[アクティブなフォーラム](https://discourse.mozilla.org/c/mdn/learn/250)があります。
+[ウェブ開発の学習](/ja/docs/Learn_web_development)のページ群は、毎月 100 万回以上の閲覧があり、支援を求めるための[アクティブなフォーラム](https://discourse.mozilla.org/c/mdn/learn/250)があります。
 投稿に回答したり、学習コミュニティを成長させたりする手伝いをしてくださると幸いです。
 
 ## どのような支援が必要か
@@ -28,7 +26,7 @@ MDN でウェブ開発を学ぶセクションに現れるトピックに基づ�
 ## 支援する方法
 
 1. もし、まだであれば [Mozilla Discourse](https://discourse.mozilla.org/) にも登録してください。
-2. もしまだであれば、[ウェブ開発を学ぶ](/ja/docs/Learn)の章を見て、そこにあるものについて基本的なレベルの知識を得てください。
+2. もしまだであれば、[ウェブ開発を学ぶ](/ja/docs/Learn_web_development)の章を見て、そこにあるものについて基本的なレベルの知識を得てください。
 
 設定が終わったら、[学習フォーラム](https://discourse.mozilla.org/c/mdn/learn/250)を見て、返信のない投稿があるかどうかを確認してください。ここが始めるにあたって最適な場所です。
 もし返信している投稿が一般的な助けを求めるものであれば、彼らに返信し、時間が許す限り助けてあげてください。

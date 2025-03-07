@@ -9,7 +9,20 @@ l10n:
 
 **`matchAll()`** は {{jsxref("String")}} 値のメソッドで、この文字列と[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)を照合したすべての結果を、[キャプチャグループ](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)を含み、イテレーターで返すメソッドです。
 
-{{EmbedInteractiveExample("pages/js/string-matchall.html")}}
+{{InteractiveExample("JavaScript Demo: String.matchAll()")}}
+
+```js interactive-example
+const regexp = /t(e)(st(\d?))/g;
+const str = "test1test2";
+
+const array = [...str.matchAll(regexp)];
+
+console.log(array[0]);
+// Expected output: Array ["test1", "e", "st1", "1"]
+
+console.log(array[1]);
+// Expected output: Array ["test2", "e", "st2", "2"]
+```
 
 ## 構文
 

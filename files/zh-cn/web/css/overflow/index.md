@@ -5,7 +5,7 @@ slug: Web/CSS/overflow
 
 {{CSSRef}}
 
-**`overflow`** 是 [CSS](/zh-CN/docs/Web/CSS) 的[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)，其设置了元素溢出时所需的行为——即当元素的内容太大而无法适应它的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)时。
+**`overflow`** 是 [CSS](/zh-CN/docs/Web/CSS) 的[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)，其设置了元素溢出时所需的行为——即当元素的内容太大而无法适应它的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)时。
 
 {{EmbedInteractiveExample("pages/css/overflow.html")}}
 

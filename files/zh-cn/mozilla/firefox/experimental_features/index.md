@@ -1299,7 +1299,7 @@ JavaScript 中的字符串由无符号 16 位整数序列表示，因此有可�
 
 #### AVIF 严格合规性
 
-`image.avif.compliance_strictness` 偏好设置可用于控制处理 [AVIF](/zh-CN/docs/Web/Media/Formats/Image_types#avif_图像) 图像时应用的*严格程度*。这允许 Firefox 用户显示在某些其他浏览器上呈现的图像，即使这些图像并不严格符合标准。
+`image.avif.compliance_strictness` 偏好设置可用于控制处理 [AVIF](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#avif_图像) 图像时应用的*严格程度*。这允许 Firefox 用户显示在某些其他浏览器上呈现的图像，即使这些图像并不严格符合标准。
 
 允许的值为：
 

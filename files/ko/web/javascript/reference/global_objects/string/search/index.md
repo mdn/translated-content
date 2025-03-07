@@ -10,7 +10,20 @@ l10n:
 {{jsxref("String")}} 값의 **`search()`** 메서드는 정규식과 이 문자열 간에 일치하는 항목이 있는지 검색하여
 문자열에서 첫 번째로 일치하는 항목의 인덱스를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-search.html")}}
+{{InteractiveExample("JavaScript Demo: String.search()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+// Anything not a word character, whitespace or apostrophe
+const regex = /[^\w\s']/g;
+
+console.log(paragraph.search(regex));
+// Expected output: 41
+
+console.log(paragraph[paragraph.search(regex)]);
+// Expected output: "!"
+```
 
 ## 구문
 

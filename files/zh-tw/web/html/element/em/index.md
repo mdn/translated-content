@@ -7,7 +7,21 @@ slug: Web/HTML/Element/em
 
 **`<em>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於標記具有強調重點的文字。`<em>` 元素可以進行嵌套，每個嵌套層級表示更大程度的強調。
 
-{{EmbedInteractiveExample("pages/tabbed/em.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;em&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>Get out of bed <em>now</em>!</p>
+
+<p>We <em>had</em> to do something about it.</p>
+
+<p>This is <em>not</em> a drill!</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+em {
+}
+```
 
 ## 屬性
 

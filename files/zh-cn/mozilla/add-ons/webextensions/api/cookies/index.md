@@ -51,14 +51,14 @@ l10n:
 1. 你访问 `a-shopping-site.com`，该网站使用 `ad-tracker.com` 在网络上投放广告。`ad-tracker.com` 设置了一个与 `ad-tracker.com` 域相关联的 Cookie。当你在 `a-shopping-site.com` 上时，`ad-tracker.com` 会接收到你浏览的产品信息。
 2. 现在你访问了 `a-news-site.com`，该网站也使用 `ad-tracker.com` 投放广告。`ad-tracker.com` 读取其 Cookie，并利用从 `a-shopping-site.com` 收集的信息来决定向你显示哪些广告。
 
-Firefox 包含拦截跟踪的特性。这些特性会分隔 cookie，以使跟踪器无法关联所访问的网站。因此，在上述示例中，当访问 `a-shopping-site.com` 时，`ad-tracker.com` 无法看到在 `a-news-site.com` 上创建的 cookie。这种保护的首次实现是第一方隔离，现在正在被[动态分区](/zh-CN/docs/Web/Privacy/State_Partitioning#动态分区)取代。
+Firefox 包含拦截跟踪的特性。这些特性会分隔 cookie，以使跟踪器无法关联所访问的网站。因此，在上述示例中，当访问 `a-shopping-site.com` 时，`ad-tracker.com` 无法看到在 `a-news-site.com` 上创建的 cookie。这种保护的首次实现是第一方隔离，现在正在被[动态分区](/zh-CN/docs/Web/Privacy/Guides/State_Partitioning#动态分区)取代。
 
 > [!NOTE]
-> 第一方隔离和动态分区不会同时生效。如果用户或扩展程序启用了第一方隔离，它将优先于动态分区。然而，当私密浏览使用动态分区时，普通浏览可能不会分隔 cookie。有关详细信息，请参阅 [Firefox 中分区的状态](/zh-CN/docs/Web/Privacy/State_Partitioning#firefox_中分区的状态)。
+> 第一方隔离和动态分区不会同时生效。如果用户或扩展程序启用了第一方隔离，它将优先于动态分区。然而，当私密浏览使用动态分区时，普通浏览可能不会分隔 cookie。有关详细信息，请参阅 [Firefox 中分区的状态](/zh-CN/docs/Web/Privacy/Guides/State_Partitioning#firefox_中分区的状态)。
 
 ### 存储分区
 
-在使用[动态分区](/zh-CN/docs/Web/Privacy/State_Partitioning#动态分区)时，Firefox 通过顶级站点分隔 JavaScript API 可访问的存储，同时为了满足常见用例而提供适当的对未分区的存储的访问。此功能正在逐步推出。有关实施详细信息，请参阅 [Firefox 中分区的状态](/zh-CN/docs/Web/Privacy/State_Partitioning#firefox_中分区的状态)。
+在使用[动态分区](/zh-CN/docs/Web/Privacy/Guides/State_Partitioning#动态分区)时，Firefox 通过顶级站点分隔 JavaScript API 可访问的存储，同时为了满足常见用例而提供适当的对未分区的存储的访问。此功能正在逐步推出。有关实施详细信息，请参阅 [Firefox 中分区的状态](/zh-CN/docs/Web/Privacy/Guides/State_Partitioning#firefox_中分区的状态)。
 
 存储分区的键由顶级{{glossary("Site","网站")}}的 URL 构成，当动态分区处于激活状态时，键值通过 cookies API 中的 `partitionKey.topLevelSite` 属性获得，例如，`partitionKey: {topLevelSite: "http://site"}`。
 

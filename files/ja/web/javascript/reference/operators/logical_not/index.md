@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Operators/Logical_NOT
 
 論理否定 (`!`) 演算子 (論理反転、否定) は、真値を取ると偽値になり、その逆も同様です。これは通常論理型 (ブール型) の値に使用されます。論理型以外の値に使用した場合、単一のオペランドが `true` に変換できる場合は `false` を返し、それ以外は `true` を返します。
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-not.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical NOT", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(!(a > 0 || b > 0));
+// Expected output: false
+```
 
 ## 構文
 

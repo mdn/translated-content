@@ -9,7 +9,16 @@ l10n:
 
 **[HTML](/ko/docs/Web/HTML) `<link>`** 요소는 현재 문서와 외부 리소스의 관계를 명시합니다. `<link>`는 {{glossary("CSS", "스타일 시트")}}를 연결할 때 제일 많이 사용하지만, 사이트 아이콘("파비콘"과 홈 화면 아이콘, 모바일 앱 아이콘) 연결 등 여러가지로 쓰일 수 있습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/link.html")}}
+{{InteractiveExample("HTML Demo: &lt;link&gt;")}}
+
+```html interactive-example
+<link href="/shared-assets/misc/link-element-example.css" rel="stylesheet" />
+
+<p>This text will be red as defined in the external stylesheet.</p>
+<p style="color: blue">
+  The <code>style</code> attribute can override it, though.
+</p>
+```
 
 외부 스타일 시트를 연결하려면 {{htmlelement("head")}} 안에 다음과 같은 `<link>` 요소를 배치하세요.
 

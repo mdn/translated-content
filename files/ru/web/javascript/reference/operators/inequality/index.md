@@ -10,7 +10,21 @@ l10n:
 Оператор **нестрогого неравенства (`!=`)** проверяет, являются ли два его операнда неравными, возвращая логическое значение.
 В отличие от оператора [строгого неравенства](/ru/docs/Web/JavaScript/Reference/Operators/Strict_inequality) пытается привести и сравнить операнды разных типов.
 
-{{EmbedInteractiveExample("pages/js/expressions-inequality.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Inequality operator")}}
+
+```js interactive-example
+console.log(1 != 1);
+// Expected output: false
+
+console.log("hello" != "hello");
+// Expected output: false
+
+console.log("1" != 1);
+// Expected output: false
+
+console.log(0 != false);
+// Expected output: false
+```
 
 ## Синтаксис
 

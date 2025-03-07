@@ -1,5 +1,5 @@
 ---
-title: ":is()"
+title: :is()
 slug: Web/CSS/:is
 l10n:
   sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
@@ -12,7 +12,50 @@ La función [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) de [CSS](/es/docs/We
 > [!NOTE]
 > Originalmente llamado `:matches()` (y `:any()`), este selector pasó a llamarse `:is()` en [CSSWG número 3258](https://github.com/w3c/csswg-drafts/issues/3258).
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-is.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :is", "tabbed-shorter")}}
+
+```css interactive-example
+ol {
+  list-style-type: upper-alpha;
+  color: darkblue;
+}
+
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:is(ol, ul, menu:unsupported) :is(ol, ul) {
+  color: green;
+}
+
+:is(ol, ul) :is(ol, ul) ol {
+  list-style-type: lower-greek;
+  color: chocolate;
+}
+```
+
+```html interactive-example
+<ol>
+  <li>Saturn</li>
+  <li>
+    <ul>
+      <li>Mimas</li>
+      <li>Enceladus</li>
+      <li>
+        <ol>
+          <li>Voyager</li>
+          <li>Cassini</li>
+        </ol>
+      </li>
+      <li>Tethys</li>
+    </ul>
+  </li>
+  <li>Uranus</li>
+  <li>
+    <ol>
+      <li>Titania</li>
+      <li>Oberon</li>
+    </ol>
+  </li>
+</ol>
+```
 
 Los pseudoelementos no son válidos en la lista de selección para `:is()`.
 
@@ -225,6 +268,6 @@ some-element::after {
 
 ## Véase también
 
-- {{CSSxRef(":where", ":where()")}} - Como `:is()`, pero con 0 [especificidad](/es/docs/Web/CSS/Specificity).
+- {{CSSxRef(":where", ":where()")}} - Como `:is()`, pero con 0 [especificidad](/es/docs/Web/CSS/CSS_cascade/Specificity).
 - [Lista de selección](/es/docs/Web/CSS/Selector_list)
 - [Componentes web](/es/docs/Web/API/Web_components)

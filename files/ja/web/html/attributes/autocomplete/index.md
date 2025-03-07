@@ -3,7 +3,7 @@ title: "HTML 属性: autocomplete"
 short-title: autocomplete
 slug: Web/HTML/Attributes/autocomplete
 l10n:
-  sourceCommit: 06b418a190b8e4a46682ab706d14984e7db34862
+  sourceCommit: 0a406fde67d297e7d2771e4ba239f545eee46d07
 ---
 
 {{HTMLSidebar}}
@@ -12,7 +12,25 @@ HTML の `autocomplete` 属性は、ウェブ開発者は入力欄にどの種�
 
 入力値としてテキストまたは数値を取る {{HTMLElement("input")}} 要素、 {{HTMLElement("textarea")}} 要素、 {{HTMLElement("select")}} 要素、 {{HTMLElement("form")}} 要素で利用できます。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-autocomplete.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: autocomplete", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="firstName">First Name:</label>
+<input name="firstName" id="firstName" type="text" autocomplete="given-name" />
+
+<label for="lastName">Last Name:</label>
+<input name="lastName" id="lastName" type="text" autocomplete="family-name" />
+
+<label for="email">Email:</label>
+<input name="email" id="email" type="email" autocomplete="off" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1rem;
+}
+```
 
 ## 解説
 
@@ -180,7 +198,7 @@ HTML の `autocomplete` 属性は、ウェブ開発者は入力欄にどの種�
 - `address-level2`
   - : 少なくとも 2 段階の行政レベルがある住所において、 2 番目の[行政レベル](#住所における行政レベル)です。 2 つの行政レベルがある国では、これはふつう市区町村や、住所のあるその他の地域を表します。
 - `address-level1`
-  - : 住所の一番上[行政レベル](#住所における行政レベル)です。これはふつう、住所がある都道府県です。合衆国では州になります。スイスでは、カートンになります。イギリスでは、ポストタウンになります。
+  - : 住所の一番上[行政レベル](#住所における行政レベル)です。これはふつう、住所がある都道府県です。合衆国では州になります。スイスでは、カートンになります。イギリスでは、カウンティになります。
 - `country`
   - : 国コードです。
 - `country-name`
@@ -275,16 +293,18 @@ Exampleville CA 95555
 
 #### イギリス
 
-イギリスの住所入力フォームでは、住所のレベルは 1 つで、住所に応じて 1 ～ 3 行の住所が含まれることがあります。完全な住所は次のようになります。
+イギリスの住所入力フォームでは、住所のレベルは 1 つまたは 2 つで、住所に応じて 1 ～ 3 行の住所が含まれることがあります。完全な住所は次のようになります。
 
 103 Frogmarch Street
 Upper-Wapping
 Winchelsea
+Whereshire
 TN99 8ZZ
 
 住所レベルは次のようになります。
 
-- `address-level1`: ポストタウン — この場合は "Winchelsea" です。
+- `address-level1`: カウンティ — この場合は "Whereshire" です。
+- `address-level2`: ポストタウン — この場合は "Winchelsea" です。
 - `address-line2`: 地区 — この場合は "Upper-Wapping" です。
 - `address-line1`: 家屋番号や通りの詳細 — "103 Frogmarch Street"
 
@@ -324,5 +344,5 @@ TN99 8ZZ
 - {{htmlelement("select")}} 要素
 - {{htmlelement("textarea")}} 要素
 - {{htmlelement("form")}} 要素
-- [HTML フォーム](/ja/docs/Learn/Forms)
+- [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)
 - すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)

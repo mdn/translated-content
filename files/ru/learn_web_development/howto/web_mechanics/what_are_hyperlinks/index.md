@@ -33,7 +33,7 @@ slug: Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks
 
 ## Активно изучаем
 
-_В данном разделе нет контента. [Please, consider contributing](/ru/docs/MDN/Community/Contributing/Getting_started)._
+_В данном разделе нет контента. [Please, consider contributing](/ru/docs/MDN/Community/Getting_started)._
 
 ## Глубокое погружение
 

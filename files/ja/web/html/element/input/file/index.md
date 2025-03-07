@@ -2,14 +2,34 @@
 title: <input type="file">
 slug: Web/HTML/Element/input/file
 l10n:
-  sourceCommit: f75b2c86ae4168e59416aed4c7121f222afc201d
+  sourceCommit: 27bceead8e9b1fe9c92df0fa5e418f81bd5b9fdf
 ---
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} 要素の **`type="file"`** 型は、ユーザーが一つまたは複数のファイルを端末のストレージから選択することができるようにします。選択されると、ファイルは[フォーム投稿](/ja/docs/Learn/Forms)を使用してサーバーにアップロードしたり、JavaScript コードと[ファイル API](/ja/docs/Web/API/File_API/Using_files_from_web_applications) を使用して操作したりすることができます。
+{{HTMLElement("input")}} 要素の **`type="file"`** 型は、ユーザーが一つまたは複数のファイルを端末のストレージから選択することができるようにします。選択されると、ファイルは[フォーム投稿](/ja/docs/Learn_web_development/Extensions/Forms)を使用してサーバーにアップロードしたり、JavaScript コードと[ファイル API](/ja/docs/Web/API/File_API/Using_files_from_web_applications) を使用して操作したりすることができます。
 
-{{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="avatar">Choose a profile picture:</label>
+
+<input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## 値
 
@@ -37,7 +57,7 @@ l10n:
 
 ### capture
 
-[`capture`](/ja/docs/Web/HTML/Attributes/capture) 属性は文字列で、 [`accept`](/ja/docs/Web/HTML/Attributes/accept) 属性で入力が画像または映像データであると示した場合、これらのデータを取り込むためにどのカメラを使用するかを指定します。 `user` の値では、ユーザーの方を向いているカメラやマイクを使用します。 `environment` は外側を向いたカメラやマイクを使用します。この属性がない場合、{{Glossary("user agent", "ユーザーエージェント")}}は何をするかを自分で自由に決めます。要求された方向が有効ではない場合、ユーザーエージェントは推奨される既定のモードで代用します。
+[`capture`](/ja/docs/Web/HTML/Attributes/capture) 属性は文字列で、 [`accept`](/ja/docs/Web/HTML/Attributes/accept) 属性で入力が画像または映像データであると示した場合、これらのデータを取り込むためにどのカメラを使用するかを指定します。 `user` の値では、ユーザーの方を向いているカメラやマイクを使用します。 `environment` は外側を向いたカメラやマイクを使用します。この属性がない場合、{{Glossary("User agent", "ユーザーエージェント")}}は何をするかを自分で自由に決めます。要求された方向が有効ではない場合、ユーザーエージェントは推奨される既定のモードで代用します。
 
 > **メモ:** `capture` は以前は論理値であり、存在した場合、ファイル入力を要求する代わりに、カメラやマイクなどその端末のメディア取り込み機器を使用するように要求していました。
 
@@ -53,7 +73,7 @@ l10n:
 
 論理型の `webkitdirectory` 属性は、もし存在する場合は、ファイル選択インターフェイスでユーザーがディレクトリーのみを選択することができることを示します。詳しい解説と例については {{domxref("HTMLInputElement.webkitdirectory")}} を参照してください。
 
-> **メモ:** `webkitdirectory` はもともと WebKit ベースのブラウザー向けのみに実装されたものですが、 Microsoft Edge や Firefox 50 以降でも使用できます。しかし、比較的広く対応されていますが、まだ標準になっておらず、代替手段がない限りは使用するべきではありません。
+> **メモ:** `webkitdirectory` はもともと WebKit ベースのブラウザー向けのみに実装されたものですが、 Firefox でも使用できます。しかし、比較的広く対応されていますが、まだ標準になっておらず、代替手段がない限りは使用するべきではありません。
 
 ## 固有ファイル型指定子
 
@@ -122,9 +142,6 @@ div {
   - : ファイルの [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)です。
 - `webkitRelativePath` {{non-standard_inline}}
   - : ディレクトリー選択ダイアログ (つまり、 [`webkitdirectory`](#webkitdirectory) 属性が設定されている `file` ダイアログ) で選択されたベースディレクトリーからのファイルの相対パスを表す文字列です。_これは標準外なので使用するには注意してください。_
-
-> [!NOTE]
-> 最近のブラウザーはすべて、 `HTMLInputElement.files` の値を取得だけではなく設定もできるようになっています。これが最も後に追加されたのは Firefox で、バージョン 57 で追加されました (see [Firefox バグ 1384030](https://bugzil.la/1384030))。
 
 ### 受け付けるファイル型の制限
 
@@ -373,7 +390,7 @@ function updateImageDisplay() {
 独自の `validFileType()` 関数は {{domxref("File")}} オブジェクトを引数として取り、それから {{jsxref("Array.prototype.includes()")}} を使用して、 `fileTypes` の中の値にファイルの `type` プロパティに一致するものがあるかどうかをチェックします。一致するものが見つかった場合は、関数は `true` を返します。一致するものが見つからなければ、 `false` を返します。
 
 ```js
-// https://developer.mozilla.org/ja/docs/Web/Media/Formats/Image_types
+// https://developer.mozilla.org/ja/docs/Web/Media/Guides/Formats/Image_types
 const fileTypes = [
   "image/apng",
   "image/bmp",
@@ -438,7 +455,7 @@ button.addEventListener("click", (e) => {
       <td>
         {{domxref("HTMLElement/change_event", "change")}},
         {{domxref("Element/input_event", "input")}},
-        {{domxref("HTMLElement/cancel_event", "cancel")}}
+        {{domxref("HTMLInputElement/cancel_event", "cancel")}}
       </td>
     </tr>
     <tr>
@@ -485,4 +502,3 @@ button.addEventListener("click", (e) => {
 ## 関連情報
 
 - [ウェブアプリケーションからのファイルの利用](/ja/docs/Web/API/File_API/Using_files_from_web_applications) — `<input type="file">` および[ファイル API](/ja/docs/Web/API/File) に関するたくさんの有用な例も含まれています。
-- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

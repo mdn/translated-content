@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 
 La méthode **`lastIndexOf()`** renvoie l'indice, dans la chaîne courante, de la dernière occurence de la valeur donnée en argument. Si cette sous-chaîne n'est pas trouvée, la méthode renvoie -1. La recherche s'effectue de la fin vers le début de la chaîne, à partir de `indiceDébut`.
 
-{{EmbedInteractiveExample("pages/js/string-lastindexof.html")}}
+{{InteractiveExample("JavaScript Demo: String.lastIndexOf()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+const searchTerm = "dog";
+
+console.log(
+  `Index of the last ${searchTerm} is ${paragraph.lastIndexOf(searchTerm)}`,
+);
+// Expected output: "Index of the last "dog" is 38"
+```
 
 ## Syntaxe
 

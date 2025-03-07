@@ -9,7 +9,22 @@ l10n:
 
 El método **`entries()`** de las instancias {{jsxref("Map")}} regresa un nuevo objeto _[iterador de mapa](/es/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ que contiene las tuplas `[llave, valor]` para cada elemento en este _map_ en orden de inserción.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-entries.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.entries()")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("0", "foo");
+map1.set(1, "bar");
+
+const iterator1 = map1.entries();
+
+console.log(iterator1.next().value);
+// Expected output: Array ["0", "foo"]
+
+console.log(iterator1.next().value);
+// Expected output: Array [1, "bar"]
+```
 
 ## Sintaxis
 

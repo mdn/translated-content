@@ -9,7 +9,22 @@ l10n:
 
 **`Object.is()`** 정적 메서드는 두 값이 [같은 값](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness)인지 결정합니다.
 
-{{EmbedInteractiveExample("pages/js/object-is.html")}}
+{{InteractiveExample("JavaScript Demo: Object.is()")}}
+
+```js interactive-example
+console.log(Object.is("1", 1));
+// Expected output: false
+
+console.log(Object.is(NaN, NaN));
+// Expected output: true
+
+console.log(Object.is(-0, 0));
+// Expected output: false
+
+const obj = {};
+console.log(Object.is(obj, {}));
+// Expected output: false
+```
 
 ## 구문
 

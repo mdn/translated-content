@@ -5,8 +5,6 @@ l10n:
   sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
 ---
 
-{{MDNSidebar}}
-
 特性状态为开发者提供了有关特性在各浏览器厂商的实现阶段的信息，有以下几种状态：
 
 - [`experimental`](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-experimental)

@@ -9,7 +9,14 @@ l10n:
 
 **`TypedArray.from()`** 静态方法从类数组对象或可迭代对象创建一个新的[类型化数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)。此方法与 {{jsxref("Array.from()")}} 几乎相同。
 
-{{EmbedInteractiveExample("pages/js/typedarray-from.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.from()", "shorter")}}
+
+```js interactive-example
+const uint16 = Int16Array.from("12345");
+
+console.log(uint16);
+// Expected output: Int16Array [1, 2, 3, 4, 5]
+```
 
 ## 语法
 

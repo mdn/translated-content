@@ -9,7 +9,27 @@ l10n:
 
 **オブジェクト初期化子** (object initializer) は、オブジェクトのプロパティ名と関連する値の 0 個以上のペアを中括弧 (`{}`) で囲んだカンマ区切りのリストです。オブジェクトは [`Object.create()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create) や [`new`](/ja/docs/Web/JavaScript/Guide/Working_with_objects#using_a_constructor_function) 演算子で[コンストラクター関数を呼び出して](/ja/docs/Web/JavaScript/Reference/Operators/new)使用することもできます。
 
-{{EmbedInteractiveExample("pages/js/expressions-objectinitializer.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Object initializer", "taller")}}
+
+```js interactive-example
+const object1 = { a: "foo", b: 42, c: {} };
+
+console.log(object1.a);
+// Expected output: "foo"
+
+const a = "foo";
+const b = 42;
+const c = {};
+const object2 = { a: a, b: b, c: c };
+
+console.log(object2.b);
+// Expected output: 42
+
+const object3 = { a, b, c };
+
+console.log(object3.a);
+// Expected output: "foo"
+```
 
 ## 構文
 

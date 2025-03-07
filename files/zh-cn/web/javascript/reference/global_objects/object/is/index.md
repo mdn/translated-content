@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/is
 
 **`Object.is()`** 静态方法确定两个值是否为[相同值](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#使用_object.is_进行同值相等比较)。
 
-{{EmbedInteractiveExample("pages/js/object-is.html")}}
+{{InteractiveExample("JavaScript Demo: Object.is()")}}
+
+```js interactive-example
+console.log(Object.is("1", 1));
+// Expected output: false
+
+console.log(Object.is(NaN, NaN));
+// Expected output: true
+
+console.log(Object.is(-0, 0));
+// Expected output: false
+
+const obj = {};
+console.log(Object.is(obj, {}));
+// Expected output: false
+```
 
 ## 语法
 

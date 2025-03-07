@@ -39,12 +39,12 @@ slug: Web/CSS
 - [CSS 參考](/zh-TW/docs/Web/CSS/Reference)：一個詳細的參考資料，為資深網頁開發人員設計，包含 CSS 各種屬性和觀念。
 - CSS 關鍵概念：
 
-  - [語法](/zh-TW/docs/Web/CSS/Syntax)
-  - [權重](/zh-TW/docs/Web/CSS/Specificity)和[繼承](/zh-TW/docs/Web/CSS/Inheritance)
+  - [語法](/zh-TW/docs/Web/CSS/CSS_syntax/Syntax)
+  - [權重](/zh-TW/docs/Web/CSS/Specificity)和[繼承](/zh-TW/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒子模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)和[邊框的崩潰](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - [堆疊](/zh-TW/docs/CSS/Understanding_z-index/Stacking_context)和[格式化區塊](/zh-TW/docs/Web/CSS/CSS_display/Block_formatting_context)
-  - [初始值](/zh-TW/docs/Web/CSS/initial_value) 、[計算值（computed）](/zh-TW/docs/Web/CSS/computed_value)、 [使用值（used）](/zh-TW/docs/Web/CSS/used_value)和[運作值](/zh-TW/docs/Web/CSS/actual_value)
-  - [CSS 簡寫屬性](/zh-TW/docs/Web/CSS/Shorthand_properties)
+  - [初始值](/zh-TW/docs/Web/CSS/CSS_cascade/initial_value) 、[計算值（computed）](/zh-TW/docs/Web/CSS/CSS_cascade/computed_value)、 [使用值（used）](/zh-TW/docs/Web/CSS/CSS_cascade/used_value)和[運作值](/zh-TW/docs/Web/CSS/CSS_cascade/actual_value)
+  - [CSS 簡寫屬性](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [CSS 彈性盒子排版](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout)
   - [CSS 格線排版](/zh-TW/docs/Web/CSS/CSS_grid_layout)
   - [媒體查詢](/zh-TW/docs/Web/CSS/CSS_media_queries)
