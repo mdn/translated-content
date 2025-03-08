@@ -1,7 +1,6 @@
 ---
-title: Stacking context example 2
+title: 层叠上下文示例 2
 slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2
-original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2
 ---
 
 {{CSSRef}}
@@ -122,17 +121,11 @@ original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_cont
 </html>
 ```
 
-### 相关文章
+## 参见
 
-- [Stacking without z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
-- [Stacking and float](/zh-CN/docs/CSS/Understanding_z-index/Stacking_floating_elements) : How floating elements are handled
-- [Adding z-index](/zh-CN/docs/CSS/Understanding_z-index/Using_z-index) : Using z-index to change default stacking
-- [The stacking context](/zh-CN/docs/CSS/Understanding_z-index/Stacking_context) : Notes on the stacking context
-- [Stacking context example 1](/zh-CN/docs/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
-- [Stacking context example 3](/zh-CN/docs/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
-
-### 原文信息
-
-- Author(s): Paolo Lombardi
-- This article is the english translation of an article I wrote in italian for [YappY](http://www.yappy.it). I grant the right to share all the content under [Creative Commons: Attribution-Sharealike license](https://creativecommons.org/licenses/by-sa/2.0/)
-- Last Updated Date: July 9th, 2005
+- [堆叠时不使用 `z-index` 属性](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)：在不使用 `z-index` 的情况下应用的堆叠规则。
+- [堆叠浮动元素](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements)：浮动元素如何与堆叠一起处理。
+- [使用 z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Using_z-index)：如何使用 `z-index` 来改变默认堆叠。
+- [层叠上下文示例 1](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1)：2 级 HTML 层级，z-index 在最后一级
+- [层叠上下文示例 3](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3)：3 级 HTML 层级，z-index 在第二级
+- [顶层](/zh-CN/docs/Glossary/Top_layer)

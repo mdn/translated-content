@@ -112,9 +112,9 @@ div {
 
 ## 参见
 
-- [堆叠浮动元素](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements)：浮动元素如何与堆叠一起处理。
-- [使用 z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index)：如何使用 `z-index` 来更改默认堆叠。
-- [层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)：关于堆叠上下文的说明。
-- [层叠上下文示例 1](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1)：2 级 HTML 层级，z-index 在最后一级
-- [层叠上下文示例 2](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2)：2 级 HTML 层级，z-index 在所有层级
-- [层叠上下文示例 3](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3)：3 级 HTML 层级，z-index 在第二级
+- [堆叠浮动元素](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements)：浮动元素如何与堆叠一起处理。
+- [使用 z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Using_z-index)：如何使用 `z-index` 来更改默认堆叠。
+- [层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)：关于堆叠上下文的说明。
+- [层叠上下文示例 1](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1)：2 级 HTML 层级，z-index 在最后一级
+- [层叠上下文示例 2](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2)：2 级 HTML 层级，z-index 在所有层级
+- [层叠上下文示例 3](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3)：3 级 HTML 层级，z-index 在第二级
