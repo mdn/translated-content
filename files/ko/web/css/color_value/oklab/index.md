@@ -140,7 +140,7 @@ oklab(from hsl(0 100% 50%) calc(l + 0.2) calc(a - 0.08) calc(b - 0.2) / calc(alp
 > [!NOTE]
 > 기준 색상의 채널 값들은 `<number>` 값으로 변환되므로, 계산할 때 반드시 숫자를 더해야 합니다. 이는 특정 채널이 일반적으로 `<percentage>`, `<angle>` 또는 기타 값 유형을 허용하는 경우에도 마찬가지입니다. 예를 들어, `<number>` 값에 `<percentage>` 값을 더하는 것은 동작하지 않습니다.
 
-### 형식적 구문
+### 형식 구문
 
 {{csssyntax}}
 
