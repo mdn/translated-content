@@ -1,48 +1,54 @@
 ---
 title: HTML 的标题和段落
 slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
-original_slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content")}}
 
-HTML 的主要工作之一是赋予文本结构，使浏览器能够按照开发者的意图显示 HTML 文档。本文解释了 {{glossary("HTML")}} 如何通过添加标题和段落、强调单词、创建列表等方式来构造文本。
+HTML 的主要工作之一是赋予文本结构，使浏览器能够按照开发者的意图显示 HTML 文档。本文介绍了如何使用 {{glossary("HTML")}} 通过定义标题和段落来提供基本的页面结构。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>
       <td>
-        阅读
-        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
-          >开始学习 HTML</a
-        >，了解基本的 HTML 知识。
+        基本熟悉了<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >基本 HTML 语法</a
+        >中所涵盖的内容。
       </td>
     </tr>
     <tr>
-      <th scope="row">目标：</th>
+      <th scope="row">学习成果：</th>
       <td>
-        学习如何用标记（段落、标题、列表、强调、引用等）来建立页面的基本文本结构和文本内容。
+        <ul>
+          <li>如何创建包含标题和标题下内容的良好文档结构。</li>
+          <li>使用语义 HTML 而不是表现 HTML，以及为什么这很重要。</li>
+          <li>需要合理地使用标题级别，即不能跳过级别，也不能因为要达到某种字体大小而随意使用级别（这是 CSS 的工作）。</li>
+          <li>搜索引擎优化优势：例如，标题中的关键词会得到加强。</li>
+          <li>无障碍优势：屏幕阅读器等辅助技术（AT）使用标题（和其他地标）作为导航内容的路标。如果没有标题，辅助技术用户很难使用 HTML 文档。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-## 基础：标题和段落
+## 标题和段落
 
-大部分结构化文本由标题和段落组成。不管是小说、报刊、教科书还是杂志等。
+无论是阅读故事、报纸、大学教科书还是杂志等，大多数结构化文本都由标题和段落组成。
 
 ![一个报纸封面的例子，显示了顶级标题、副标题和段落的使用。](newspaper_small.jpg)
 
-内容结构化会使读者的阅读体验更轻松，更愉快。
+结构化内容会使读者的阅读体验更轻松，更愉快。
 
-在 HTML 中，每个段落是通过 {{htmlelement("p")}} 元素标签进行定义的，比如下面这样：
+在 HTML 中，每个段落是通过 {{htmlelement("p")}} 元素进行定义的，比如下面这样：
 
 ```html
 <p>我是一个段落，千真万确。</p>
 ```
 
-每个标题（Heading）都必须被包裹在一个标题元素中：
+每个标题都必须被包裹在一个标题元素中：
 
 ```html
 <h1>我是文章的标题</h1>
@@ -50,9 +56,9 @@ HTML 的主要工作之一是赋予文本结构，使浏览器能够按照开发
 
 一共有六种标题元素标签——{{htmlelement("Heading_Elements", "h1")}}、{{htmlelement("Heading_Elements", "h2")}}、{{htmlelement("Heading_Elements", "h3")}}、{{htmlelement("Heading_Elements", "h4")}}、{{htmlelement("Heading_Elements", "h5")}} 和 {{htmlelement("Heading_Elements", "h6")}}。每个元素代表文档中不同级别的内容：`<h1>` 表示主标题，`<h2>` 表示二级子标题，`<h3>` 表示三级子标题，依此类推。
 
-### 编辑结构层次
+## 实现结构层级
 
-这里举一个例子。在一个故事中，`<h1>` 表示故事的名字，`<h2>` 表示每个章节的标题，`<h3>` 表示每个章节下的子标题，以此类推。
+举个例子，在一个故事中，`<h1>` 表示故事的标题，`<h2>` 表示每个章节的标题，`<h3>` 表示每个章节下的子标题，以此类推。
 
 ```html
 <h1>三国演义</h1>
@@ -84,7 +90,7 @@ HTML 的主要工作之一是赋予文本结构，使浏览器能够按照开发
 - 请确保在层次结构中以正确的顺序使用标题。不要使用 `<h3>` 来表示副标题，后面再跟 `<h2>` 来表示二级副标题——这是没有意义的，会导致奇怪的结果。
 - 在现有的六个标题层次中，除非觉得有必要，否则应该争取每页使用不超过三个。有很多层次的文件（例如，深层次的标题层次）会变得笨重，难以浏览。在这种情况下，如果可能的话，建议将内容分散到多个页面。
 
-### 为什么我们需要结构化？
+## 为什么我们需要结构化？
 
 回答这个问题前，让我们先来看一段[文档示例](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/html-text-formatting/text-start.html)——并从运行这段文档示例（美味的豆沙食谱）开始。你应该在本地机器上保存一份这个文件的副本，因为在以后的练习中会需要它。这个文件的主体目前包含了多条内容。它们没有任何标记，但都用换行符隔开（按回车键进入下一行）。
 
@@ -101,7 +107,7 @@ HTML 的主要工作之一是赋予文本结构，使浏览器能够按照开发
 
 因此，我们需要给我们的内容进行结构性标记。
 
-### 主动学习：编辑我们的内容结构
+## 主动学习：为我们的内容赋予结构
 
 让我们直接进入一个运行实例。在下面的示例中，向*可编辑代码*字段中的原始文本添加元素，使其在*实时输出*字段中显示为标题和两个段落。
 
@@ -189,8 +195,8 @@ solution.addEventListener("click", () => {
 textarea.addEventListener("input", updateCode);
 window.addEventListener("load", updateCode);
 
-// Stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// 阻止制表键跳出文本区域
+// 而是在光标位置输出制表符
 textarea.onkeydown = (e) => {
   if (e.code === "Tab") {
     e.preventDefault();
@@ -219,10 +225,10 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// 每次用户更新文本区域代码时，更新已保存的 userCode
 textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
+  // 我们只想在显示用户代码时保存状态，
+  // 而不是保存解答，因此解答不会保存在用户代码上
   if (solution.value === "显示答案") {
     userEntry = textarea.value;
   } else {
@@ -233,7 +239,7 @@ textarea.onkeyup = function () {
 };
 ```
 
-{{ EmbedLiveSample('主动学习：编辑我们的内容结构', 700, 400) }}
+{{ EmbedLiveSample('主动学习：为我们的内容赋予结构', 700, 400, "", "") }}
 
 ## 为什么我们需要语义？
 
@@ -247,7 +253,7 @@ textarea.onkeyup = function () {
 
 一般来说，浏览器会给它一个更大的字形来让它看上去像个标题（虽然也可以使用 CSS 让它变成任何你想要的样式）。更重要的是，它的语义值将以多种方式被使用，比如通过上文提到过的搜索引擎和屏幕阅读器。
 
-在另一方面，你可以让任一元素看起来像一个顶级标题，考虑如下：
+在另一方面，你可以让任一元素*看起来*像一个顶级标题，考虑如下：
 
 ```html
 <span style="font-size: 32px; margin: 21px 0; display: block;"
@@ -255,7 +261,7 @@ textarea.onkeyup = function () {
 >
 ```
 
-这是一个 {{htmlelement("span")}} 元素，它没有语义。当想要对它用 CSS（或者 JS）时，可以用它包裹内容，且不附加任何额外的意义（在未来的课程中你会发现更多这类元素）。我们已经对它使用了 CSS 来让它看起来像一个顶级标题。然而，由于它没有语义值，所以它不会有任何上文提到的帮助。最好的方法是使用相关的 HTML 元素来标记这个项目。
+这是一个 {{htmlelement("span")}} 元素，它没有语义。当想要对它用 CSS（或者 JavaScript）时，可以用它包裹内容，且不附加任何额外的意义（在未来的课程中你会发现更多这类元素）。我们已经对它使用了 CSS 来让它看起来像一个顶级标题。然而，由于它没有语义值，所以它不会有任何上文提到的帮助。最好的方法是使用相关的 HTML 元素来标记这个项目。
 
 ## 总结
 
