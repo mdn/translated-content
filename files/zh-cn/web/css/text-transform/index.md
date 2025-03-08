@@ -69,7 +69,7 @@ text-transform: unset;
 
 大段将文字 `text-transform` 值设置为 `uppercase`，对于有认知障碍的人（比如阅读障碍）来说可能难以阅读。
 
-- [MDN：理解 WCAG，条例 1.4 的解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN：理解 WCAG，条例 1.4 的解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [W3C：理解 WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## 形式定义

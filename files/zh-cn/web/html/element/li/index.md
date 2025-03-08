@@ -138,13 +138,13 @@ p {
     <tr>
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
-        如果是 <code><a href="/zh-CN/docs/Web/HTML/Element/ol">ol</a></code>、<code><a href="/zh-CN/docs/Web/HTML/Element/ul">ul</a></code> 或 <code><a href="/zh-CN/docs/Web/HTML/Element/menu">menu</a></code> 的子项，则为 <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/listitem_role">listitem</a></code>
+        如果是 <code><a href="/zh-CN/docs/Web/HTML/Element/ol">ol</a></code>、<code><a href="/zh-CN/docs/Web/HTML/Element/ul">ul</a></code> 或 <code><a href="/zh-CN/docs/Web/HTML/Element/menu">menu</a></code> 的子项，则为 <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role">listitem</a></code>
       </td>
     </tr>
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a>
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role"><code>separator</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role"><code>treeitem</code></a>
       </td>
     </tr>
     <tr>

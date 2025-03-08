@@ -1,7 +1,6 @@
 ---
 title: 理解客户端 web 开发工具
 slug: Learn_web_development/Extensions/Client-side_tools
-original_slug: Learn/Tools_and_testing/Understanding_client-side_tools
 l10n:
   sourceCommit: b771ad01e0774fe112fde3a3e6467eb18176997e
 ---

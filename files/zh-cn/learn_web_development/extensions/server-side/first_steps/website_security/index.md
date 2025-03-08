@@ -1,7 +1,6 @@
 ---
 title: 站点安全
 slug: Learn_web_development/Extensions/Server-side/First_steps/Website_security
-original_slug: Learn/Server-side/First_steps/Website_security
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}

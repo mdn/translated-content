@@ -1,7 +1,6 @@
 ---
 title: 编写快速加载的 HTML 网页的技巧
 slug: Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
-original_slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 ---
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Learn/HTML/Howto")}}

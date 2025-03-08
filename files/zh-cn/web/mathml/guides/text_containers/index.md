@@ -1,7 +1,6 @@
 ---
 title: MathML 文本容器
 slug: Web/MathML/Guides/Text_containers
-original_slug: Learn/MathML/First_steps/Text_containers
 ---
 
 {{MathMLRef}}

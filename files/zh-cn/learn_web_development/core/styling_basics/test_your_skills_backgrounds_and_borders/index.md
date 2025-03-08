@@ -1,7 +1,6 @@
 ---
 title: 技能测试：背景与边框
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and_borders
-original_slug: Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders
 ---
 
 {{learnsidebar}}

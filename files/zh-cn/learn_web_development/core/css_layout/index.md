@@ -1,7 +1,6 @@
 ---
 title: CSS 布局
 slug: Learn_web_development/Core/CSS_layout
-original_slug: Learn/CSS/CSS_layout
 ---
 
 {{LearnSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: 测验：无障碍疑难解答
 slug: Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
-original_slug: Learn/Accessibility/Accessibility_troubleshooting
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Mobile","Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core/Accessibility")}}

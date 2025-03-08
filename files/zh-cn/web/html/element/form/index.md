@@ -176,15 +176,15 @@ label {
     <tr>
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
-        <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/form_role">form</a></code>
+        <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/form_role">form</a></code>
       </td>
     </tr>
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
       <td>
-        <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code>、<a
-          href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a
-        > 或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+        <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/search_role">search</a></code>、<a
+          href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a
+        > 或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
