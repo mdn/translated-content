@@ -559,7 +559,7 @@ MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章
 - [JavaScript/指南](/zh-CN/docs/Web/JavaScript/Guide)——主目录页
 - [JavaScript/指南/JavaScript 概述](/zh-CN/docs/Web/JavaScript/Guide/Introduction)
 - [JavaScript/指南/函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)
-- [JavaScript/指南/对象模型的细节](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JavaScript/指南/对象模型的细节](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 
 尽量避免把文章内容放置在层次结构的顶层，这会降低网站的访问速度，同时搜索和导航的效率也会下降。
 

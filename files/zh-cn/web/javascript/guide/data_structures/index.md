@@ -10,7 +10,7 @@ l10n:
 
 编程语言都有内置的数据结构，但各种编程语言的数据结构常有不同之处。本文尝试列出 JavaScript 语言中内置的数据结构及其属性。它们可以用来构建其他的数据结构。
 
-[语言概述](/zh-CN/docs/Web/JavaScript/Language_overview)对常见的数据类型提供了类似的总结，但是更倾向于和其他语言进行比较。
+[语言概述](/zh-CN/docs/Web/JavaScript/Guide/Language_overview)对常见的数据类型提供了类似的总结，但是更倾向于和其他语言进行比较。
 
 ## 动态类型和弱类型
 
@@ -67,7 +67,7 @@ Undefined 类型只有一个值：[`undefined`](/zh-CN/docs/Web/JavaScript/Refer
 - 变量声明时没有初始化（`let x;`），隐式初始化为 `undefined`。
 - 许多像 {{jsxref("Array.prototype.find()")}} 和 {{jsxref("Map.prototype.get()")}} 的方法，当没有找到元素时，返回 `undefined`。
 
-`null` 在核心语言中使用频率少得多。最重要的地方是[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)的末端，其次是与原型交互的方法，如 {{jsxref("Object.getPrototypeOf()")}}、{{jsxref("Object.create()")}} 等，接受或返回 `null` 而不是 `undefined`。
+`null` 在核心语言中使用频率少得多。最重要的地方是[原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)的末端，其次是与原型交互的方法，如 {{jsxref("Object.getPrototypeOf()")}}、{{jsxref("Object.create()")}} 等，接受或返回 `null` 而不是 `undefined`。
 
 `null` 是一个[关键字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#关键字)，但 `undefined` 是一个普通的[标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)，这个标识符恰好是一个全局属性。实际上区别很小，因为 `undefined` 不应该被重新定义或者遮蔽。
 
@@ -171,7 +171,7 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 - `writable`
   - : 布尔值，表示属性是否可以通过赋值进行修改。
 - `enumerable`
-  - : 布尔值，表示属性是否可以通过 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环进行枚举。另请参阅[属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)，以了解枚举性如何与其他函数和语法交互。
+  - : 布尔值，表示属性是否可以通过 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环进行枚举。另请参阅[属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)，以了解枚举性如何与其他函数和语法交互。
 - `configurable`
   - : 布尔值，表示属性是否可以删除，是否可以更改为访问器属性，以及是否可以更改其特性。
 
@@ -189,11 +189,11 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 - `set`
   - : 使用包含赋予的值的参数调用函数。每当尝试更改指定属性时执行。参见 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。可能是 `undefined`。
 - `enumerable`
-  - : 布尔值，表示属性是否可以通过 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环进行枚举。另请参阅[属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)，以了解枚举性如何与其他函数和语法交互。
+  - : 布尔值，表示属性是否可以通过 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环进行枚举。另请参阅[属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)，以了解枚举性如何与其他函数和语法交互。
 - `configurable`
   - : 布尔值，表示属性是否可以删除，是否可以更改为访问器属性，以及是否可以更改其特性。
 
-对象的[原型](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)指向另一个对象或者 `null`——从概念上讲，它是对象的隐藏属性，通常表示为 `[[Prototype]]`。对象的 `[[Prototype]]` 的属性也可以在对象自身上访问。
+对象的[原型](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)指向另一个对象或者 `null`——从概念上讲，它是对象的隐藏属性，通常表示为 `[[Prototype]]`。对象的 `[[Prototype]]` 的属性也可以在对象自身上访问。
 
 对象是临时的键值对，因此经常被用作 map。不过，这可能存在人体工程学、安全性和性能方面的问题。请使用 {{jsxref("Map")}} 存储任意的数据。[`Map` 参考](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map#object_和_map_的比较)对使用普通对象和使用 map 存储键值之间的利弊进行了更详细的讨论。
 
@@ -217,7 +217,7 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 
 通常，要将数据绑定到 DOM 节点，可以直接在对象上设置属性，或使用 `data-*` 属性。这样做的缺点是，在同一上下文中运行的任何脚本都可以使用这些数据。而 `Map` 和 `WeakMap` 则可以轻松地将数据*隐蔽地*绑定到对象上。
 
-`WeakMap` 和 `WeakSet` 只允许将可垃圾回收的值作为键，这些键要么是对象，要么是[未注册的 symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)，即使键仍在集合中，也可能被回收。它们专门用于[优化内存使用](/zh-CN/docs/Web/JavaScript/Memory_management#帮助内存管理的数据结构)。
+`WeakMap` 和 `WeakSet` 只允许将可垃圾回收的值作为键，这些键要么是对象，要么是[未注册的 symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)，即使键仍在集合中，也可能被回收。它们专门用于[优化内存使用](/zh-CN/docs/Web/JavaScript/Guide/Memory_management#帮助内存管理的数据结构)。
 
 ### 结构化数据：JSON
 

@@ -565,4 +565,4 @@ MyObject.prototype.getMessage = function () {
 };
 ```
 
-在前面两个示例中，继承的原型由所有的对象共享，因此方法定义不需要出现在对象创建中。参见[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)了解更多。
+在前面两个示例中，继承的原型由所有的对象共享，因此方法定义不需要出现在对象创建中。参见[继承与原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)了解更多。

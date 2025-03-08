@@ -31,7 +31,7 @@ x - y
 
 ## 描述
 
-减法运算符[将两个操作数转换为数值](/zh-CN/docs/Web/JavaScript/Data_structures#强制数字类型转换)，并根据两个操作数的类型执行数字减法或 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 减法。如果类型不匹配，则抛出 {{jsxref("TypeError")}}。
+减法运算符[将两个操作数转换为数值](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#强制数字类型转换)，并根据两个操作数的类型执行数字减法或 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 减法。如果类型不匹配，则抛出 {{jsxref("TypeError")}}。
 
 ## 示例
 

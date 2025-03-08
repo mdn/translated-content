@@ -116,7 +116,7 @@ let myVariable = "鲍勃";
 myVariable = "斯蒂夫";
 ```
 
-注意变量可以存储不同[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)的值：
+注意变量可以存储不同[数据类型](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)的值：
 
 <table class="standard-table">
   <thead>

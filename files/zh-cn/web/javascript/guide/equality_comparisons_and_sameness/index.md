@@ -74,7 +74,7 @@ switch (NaN) {
    - 大整型（BigInt）：仅当两个操作数的值相同时返回 `true`。
    - 符号（Symbol）：仅当两个操作数引用相同的符号时返回 `true`。
 2. 如果其中一个操作数为 `null` 或 `undefined`，另一个操作数也必须为 `null` 或 `undefined` 以返回 `true`。否则返回 `false`。
-3. 如果其中一个操作数是对象，另一个是原始值，则[将对象转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#原始值强制转换)。
+3. 如果其中一个操作数是对象，另一个是原始值，则[将对象转换为原始值](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#原始值强制转换)。
 4. 在这一步，两个操作数都被转换为原始值（字符串、数字、布尔值、符号和大整型中的一个）。剩余的转换将分情况完成。
    - 如果是相同的类型，使用步骤 1 进行比较。
    - 如果其中一个操作数是符号而另一个不是，返回 `false`。

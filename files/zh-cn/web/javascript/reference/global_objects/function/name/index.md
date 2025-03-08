@@ -131,7 +131,7 @@ f.name; // "f"
 
 ### 初始化器和默认值
 
-在[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#默认值)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)等的初始化器（默认值）中的函数，将继承绑定标识符的名称作为它们的 `name`。
+在[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring#默认值)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)等的初始化器（默认值）中的函数，将继承绑定标识符的名称作为它们的 `name`。
 
 ```js
 const [f = () => {}] = [];

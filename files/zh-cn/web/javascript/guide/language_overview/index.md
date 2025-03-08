@@ -8,7 +8,7 @@ l10n:
 
 {{jsSidebar}}
 
-JavaScript 是一门多范式的动态语言，它包含类型、运算符、标准内置对象和方法。它的语法基于 Java 和 C 语言——这两门语言的许多结构也适用于 JavaScript。JavaScript 使用[对象原型](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)和类支持面向对象编程。它也支持函数式编程，因为函数是[头等](/zh-CN/docs/Glossary/First-class_Function)对象，它能通过表达式轻松创建，并像其他对象一样进行传递。
+JavaScript 是一门多范式的动态语言，它包含类型、运算符、标准内置对象和方法。它的语法基于 Java 和 C 语言——这两门语言的许多结构也适用于 JavaScript。JavaScript 使用[对象原型](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)和类支持面向对象编程。它也支持函数式编程，因为函数是[头等](/zh-CN/docs/Glossary/First-class_Function)对象，它能通过表达式轻松创建，并像其他对象一样进行传递。
 
 本文的目的是作为各种 JavaScript 语言特性的快速概览，为有其他语言（如 C 或 Java）背景的读者编写。
 
@@ -16,15 +16,15 @@ JavaScript 是一门多范式的动态语言，它包含类型、运算符、标
 
 我们从任何编程语言都不可缺少的构建块开始：类型。JavaScript 程序操作值，这些值都有各自的类型。JavaScript 提供了 7 种*原始类型*：
 
-- [Number](/zh-CN/docs/Web/JavaScript/Data_structures#number_类型)：表示除了*非常*大的整数之外的所有数值（整数和浮点数）。
-- [BigInt](/zh-CN/docs/Web/JavaScript/Data_structures#bigint_类型)：表示任意大整数。
-- [String](/zh-CN/docs/Web/JavaScript/Data_structures#string_类型)：用于存储文本。
-- [Boolean](/zh-CN/docs/Web/JavaScript/Data_structures#boolean_类型)：`true` 和 `false`——通常用于条件逻辑。
-- [Symbol](/zh-CN/docs/Web/JavaScript/Data_structures#symbol_类型)：用于创建唯一的、不会冲突的标识符。
-- [Undefined](/zh-CN/docs/Web/JavaScript/Data_structures#undefined_类型)：表示变量还未被赋值。
-- [Null](/zh-CN/docs/Web/JavaScript/Data_structures#null_类型)：表示故意的空值。
+- [Number](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#number_类型)：表示除了*非常*大的整数之外的所有数值（整数和浮点数）。
+- [BigInt](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#bigint_类型)：表示任意大整数。
+- [String](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#string_类型)：用于存储文本。
+- [Boolean](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#boolean_类型)：`true` 和 `false`——通常用于条件逻辑。
+- [Symbol](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#symbol_类型)：用于创建唯一的、不会冲突的标识符。
+- [Undefined](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#undefined_类型)：表示变量还未被赋值。
+- [Null](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#null_类型)：表示故意的空值。
 
-其他的称为[对象](/zh-CN/docs/Web/JavaScript/Data_structures#object)。常见的对象类型包括：
+其他的称为[对象](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#object)。常见的对象类型包括：
 
 - {{jsxref("Function")}}
 - {{jsxref("Array")}}
@@ -317,7 +317,7 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-JavaScript 也包含其他两个著名循环：[`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)（其对[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)进行迭代，特别是数组）和 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in)（其访问对象的全部[可枚举](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)属性）。
+JavaScript 也包含其他两个著名循环：[`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)（其对[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)进行迭代，特别是数组）和 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in)（其访问对象的全部[可枚举](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)属性）。
 
 ```js
 for (const value of array) {
@@ -459,7 +459,7 @@ console.log(stillMe.x); // 1
 
 想要了解关于对象和原型的更多知识，参见 [`Object` 参考页](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)。想要了解关于对象初始化器语法的更多信息，参见其[参考页](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)。
 
-本文忽略了有关对象原型和继承的全部细节，因为你通常使用[类](#类)实现继承，不需要接触到底层机制（你可能听说底层机制很深奥）。想要学习底层机制，参见[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。
+本文忽略了有关对象原型和继承的全部细节，因为你通常使用[类](#类)实现继承，不需要接触到底层机制（你可能听说底层机制很深奥）。想要学习底层机制，参见[继承与原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)。
 
 ## 数组
 
@@ -564,7 +564,7 @@ avg(2, 3, 4, 5); // 3.5
 
 如果有一个接收一组参数的函数并且你已经将这些参数存储在数组中，你可以在函数调用中使用[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)将数组*展开*为一组元素。例如，`avg(...numbers)`。
 
-我们提到过 JavaScript 没有具名参数。然而使用[对象解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)实现具名参数是可能的，对象解构能方便地实现打包和解包。
+我们提到过 JavaScript 没有具名参数。然而使用[对象解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)实现具名参数是可能的，对象解构能方便地实现打包和解包。
 
 ```js
 // 注意 { } 括号：这是在解构一个对象
@@ -629,7 +629,7 @@ const sum = (a, b, c) => a + b + c;
 })();
 ```
 
-想要了解 IIFE 的用法，你可以阅读[用闭包模拟私有方法](/zh-CN/docs/Web/JavaScript/Closures#用闭包模拟私有方法)。
+想要了解 IIFE 的用法，你可以阅读[用闭包模拟私有方法](/zh-CN/docs/Web/JavaScript/Guide/Closures#用闭包模拟私有方法)。
 
 ### 递归函数
 
@@ -671,7 +671,7 @@ const charsInBody = (function counter(elm) {
 
 ### 函数是头等对象
 
-JavaScript 函数是头等对象。这意味着它们可以被赋值给变量、作为参数被传递给其他函数、作为其他函数的返回值。此外，JavaScript 支持开箱即用不需要显式捕获的[闭包](/zh-CN/docs/Web/JavaScript/Closures)，让你能方便地应用函数式编程风格。
+JavaScript 函数是头等对象。这意味着它们可以被赋值给变量、作为参数被传递给其他函数、作为其他函数的返回值。此外，JavaScript 支持开箱即用不需要显式捕获的[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)，让你能方便地应用函数式编程风格。
 
 ```js
 // 返回函数的函数
@@ -741,7 +741,7 @@ class Admin extends withAuthentication(Person) {
 
 ## 异步编程
 
-JavaScript 本质上是单线程的。没有[并行](https://zh.wikipedia.org/wiki/并行计算)；只有[并发](https://zh.wikipedia.org/wiki/并发计算)。异步编程由[事件循环](/zh-CN/docs/Web/JavaScript/Event_loop)驱动，事件循环准许一组任务入队并轮询任务直至完成。
+JavaScript 本质上是单线程的。没有[并行](https://zh.wikipedia.org/wiki/并行计算)；只有[并发](https://zh.wikipedia.org/wiki/并发计算)。异步编程由[事件循环](/zh-CN/docs/Web/JavaScript/Reference/Execution_model)驱动，事件循环准许一组任务入队并轮询任务直至完成。
 
 在 JavaScript 中，有三种惯用的书写异步代码的方式：
 
@@ -813,7 +813,7 @@ export const a = 1;
 
 在本文中，我们不断提及某个特性是*语言级别的*，而其他的则是*运行时级别的*。
 
-JavaScript 是通用型脚本语言。[核心语言规范](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_核心语言（ecmascript）)专注于纯计算逻辑。它不处理任何的输入/输出——实际上，没有额外的运行时级别的 API（特别是 [`console.log()`](/zh-CN/docs/Web/API/console/log_static)），JavaScript 程序的行为是完全不可预测的。
+JavaScript 是通用型脚本语言。[核心语言规范](/zh-CN/docs/Web/JavaScript/Reference/JavaScript_technologies_overview#javascript_核心语言（ecmascript）)专注于纯计算逻辑。它不处理任何的输入/输出——实际上，没有额外的运行时级别的 API（特别是 [`console.log()`](/zh-CN/docs/Web/API/console/log_static)），JavaScript 程序的行为是完全不可预测的。
 
 运行时或者宿主将数据反馈给 JavaScript 引擎（解释器）、提供额外的全局属性、为引擎提供钩子与外部世界交互。模块解析、读取数据、打印消息、发送网络请求等都是运行时级别的操作。自诞生以来，JavaScript 已被各种环境所采用。例如，浏览器（其提供诸如 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 这样的 API）、Node.js（其提供诸如[文件系统访问](https://nodejs.org/api/fs.html)这样的 API）等。JavaScript 已经成功整合到 Web（其为 JavaScript 的主要用途）、移动应用、桌面应用、服务器端应用、无服务、嵌入式系统等等。在学习 JavaScript 核心特性的同时，了解宿主提供的特性也很重要，以便将知识付诸实践。例如，你可以阅读所有的 [Web 平台 API](/zh-CN/docs/Web/API)，其由浏览器实现，有时非浏览器宿主也会实现。
 
@@ -823,7 +823,7 @@ JavaScript 是通用型脚本语言。[核心语言规范](/zh-CN/docs/Web/JavaS
 
 由于篇幅和复杂性，我们省略了语言的一些基本部分，但你可以自行探索：
 
-- [继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
-- [闭包](/zh-CN/docs/Web/JavaScript/Closures)
+- [继承与原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)
 - [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
 - [迭代](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)

@@ -36,7 +36,7 @@ var name1 = value1, name2, /* …, */ nameN = valueN;
 ```
 
 - `nameN`
-  - : 要声明的变量的名称。必须是有效的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)或[解构绑定模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
+  - : 要声明的变量的名称。必须是有效的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)或[解构绑定模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
 - `valueN` {{optional_inline}}
   - : 变量的初始值。可以是任何合法的表达式。默认值为 `undefined`。
 
@@ -301,7 +301,7 @@ var [, a, b, c] = result;
 console.log(a, b, c); // "aaa" "b" "cc"
 ```
 
-有关更多信息，请参阅[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
+有关更多信息，请参阅[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
 
 ## 规范
 

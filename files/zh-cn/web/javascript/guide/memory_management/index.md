@@ -95,7 +95,7 @@ const a3 = a.concat(a2);
 
 ### 引用
 
-垃圾回收算法依赖的主要概念是引用。在内存管理的上下文中，如果一个对象有访问另一个对象的权限（隐式或者显式），称作前面的对象引用后面的对象。例如，一个 JavaScript 对象具有对它的[原型](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)的引用（隐式引用）和对它属性的引用（显式引用）。
+垃圾回收算法依赖的主要概念是引用。在内存管理的上下文中，如果一个对象有访问另一个对象的权限（隐式或者显式），称作前面的对象引用后面的对象。例如，一个 JavaScript 对象具有对它的[原型](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)的引用（隐式引用）和对它属性的引用（显式引用）。
 
 在这个上下文中，“对象”的概念不仅指常规的 JavaScript 对象，还包括函数作用域（或者全局词法作用域）。
 

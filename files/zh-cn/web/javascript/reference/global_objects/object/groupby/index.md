@@ -83,7 +83,7 @@ const result = Object.groupBy(inventory, ({ type }) => type);
 
 <!-- autocorrect-enable -->
 
-箭头函数每次被调用时都只返回每个数组元素的 `type` 属性。请注意，函数参数 `{ type }` 是一个[函数参数的对象解构语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#从作为函数参数传递的对象中提取属性)的基本示例。这会解构传递为参数的对象的 `type` 属性，并将其赋值给函数体中名为 `type` 的变量。这是一种非常简洁的访问函数中相关元素的值的方式。
+箭头函数每次被调用时都只返回每个数组元素的 `type` 属性。请注意，函数参数 `{ type }` 是一个[函数参数的对象解构语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring#从作为函数参数传递的对象中提取属性)的基本示例。这会解构传递为参数的对象的 `type` 属性，并将其赋值给函数体中名为 `type` 的变量。这是一种非常简洁的访问函数中相关元素的值的方式。
 
 我们还可以创建根据元素的一个或多个属性中的值推断的分组。下面是一个非常类似的示例，根据 `quantity` 字段的值将项目分为 `ok` 或 `restock` 组。
 

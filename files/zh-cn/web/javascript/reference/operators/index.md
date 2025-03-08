@@ -218,7 +218,7 @@ JavaScript 中的基本关键字和常用表达式。这些表达式具有最高
   - : 逻辑或赋值运算符。
 - {{jsxref("Operators/Nullish_coalescing_assignment", "??=")}}
   - : 逻辑空赋值运算符。
-- [`[a, b] = arr`、`{ a, b } = obj`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [`[a, b] = arr`、`{ a, b } = obj`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)
   - : 解构赋值允许你使用类似于数组或对象字面量的语法将数组或对象的属性赋值给变量。
 
 ### Yield 运算符

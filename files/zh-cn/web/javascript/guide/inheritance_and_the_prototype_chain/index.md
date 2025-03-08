@@ -8,9 +8,9 @@ l10n:
 
 {{jsSidebar("Advanced")}}
 
-在编程中，*继承*是指将特性从父代传递给子代，以便新代码可以重用并基于现有代码的特性进行构建。JavaScript 使用[对象](/zh-CN/docs/Web/JavaScript/Data_structures#object)实现继承。每个对象都有一条链接到另一个称作*原型*的对象的内部链。该原型对象有自己的原型，依此类推，直到原型是 `null` 的对象。根据定义，`null` 没有原型，并作为这条*原型链*中最后的一环。在运行时修改原型链的任何成员、甚至是换掉原型都是可能的，所以像[静态分派](https://en.wikipedia.org/wiki/Static_dispatch)这样的概念在 JavaScript 中不存在。
+在编程中，*继承*是指将特性从父代传递给子代，以便新代码可以重用并基于现有代码的特性进行构建。JavaScript 使用[对象](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#object)实现继承。每个对象都有一条链接到另一个称作*原型*的对象的内部链。该原型对象有自己的原型，依此类推，直到原型是 `null` 的对象。根据定义，`null` 没有原型，并作为这条*原型链*中最后的一环。在运行时修改原型链的任何成员、甚至是换掉原型都是可能的，所以像[静态分派](https://en.wikipedia.org/wiki/Static_dispatch)这样的概念在 JavaScript 中不存在。
 
-对于有基于类的语言（如 Java 或 C++）经验的开发者来说，JavaScript 有些令人困惑——因为它是[动态的](/zh-CN/docs/Web/JavaScript/Data_structures#动态类型和弱类型)并且没有静态类型。尽管这个困惑通常被认为是 JavaScript 的弱点之一，但是原型继承模型实际上比类式模型更强大。例如，在原型模型的基础上构建类式模型（即[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)的实现方式）相当简单。
+对于有基于类的语言（如 Java 或 C++）经验的开发者来说，JavaScript 有些令人困惑——因为它是[动态的](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#动态类型和弱类型)并且没有静态类型。尽管这个困惑通常被认为是 JavaScript 的弱点之一，但是原型继承模型实际上比类式模型更强大。例如，在原型模型的基础上构建类式模型（即[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)的实现方式）相当简单。
 
 尽管类现在被广泛使用并成为 JavaScript 中新的范式，但是类并没有引入新的继承模式。尽管类抽象掉了大部分的原型机制，但是理解原型的底层工作机制仍然十分有用。
 
