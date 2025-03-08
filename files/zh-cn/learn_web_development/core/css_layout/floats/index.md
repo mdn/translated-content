@@ -1,7 +1,6 @@
 ---
 title: 浮动
 slug: Learn_web_development/Core/CSS_layout/Floats
-original_slug: Learn/CSS/CSS_layout/Floats
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}

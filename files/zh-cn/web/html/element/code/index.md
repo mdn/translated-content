@@ -95,7 +95,7 @@ code {
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles#包含_html_等价形式的结构角色">code</a
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#包含_html_等价形式的结构角色">code</a
           ></code
         >
       </td>

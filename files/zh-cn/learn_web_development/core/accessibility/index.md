@@ -1,7 +1,6 @@
 ---
 title: 无障碍
 slug: Learn_web_development/Core/Accessibility
-original_slug: Learn/Accessibility
 l10n:
   sourceCommit: 33d92d501901ca505f1d33f914531753ca289f2e
 ---

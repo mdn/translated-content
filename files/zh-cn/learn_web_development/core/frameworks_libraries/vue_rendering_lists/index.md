@@ -1,7 +1,6 @@
 ---
 title: 渲染 Vue 组件列表
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_first_component","Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models", "Learn_web_development/Core/Frameworks_libraries")}}

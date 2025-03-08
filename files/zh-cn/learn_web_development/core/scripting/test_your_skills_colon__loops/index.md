@@ -1,7 +1,6 @@
 ---
 title: 技能测试：循环
 slug: Learn_web_development/Core/Scripting/Test_your_skills:_Loops
-original_slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Loops
 l10n:
   sourceCommit: bc0d0d1ef796435e969f6d65c7e5d3c08f4023aa
 ---

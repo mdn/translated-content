@@ -1,7 +1,6 @@
 ---
 title: 框架的主要特性
 slug: Learn_web_development/Core/Frameworks_libraries/Main_features
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features
 ---
 
 {{LearnSidebar}}

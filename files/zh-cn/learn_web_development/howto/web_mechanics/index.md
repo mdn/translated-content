@@ -1,7 +1,6 @@
 ---
 title: Web 机制
 slug: Learn_web_development/Howto/Web_mechanics
-original_slug: Learn/Common_questions/Web_mechanics
 ---
 
 {{LearnSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: HTML5 的输入（input）类型
 slug: Learn_web_development/Extensions/Forms/HTML5_input_types
-original_slug: Learn/Forms/HTML5_input_types
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms/Other_form_controls", "Learn_web_development/Extensions/Forms")}}

@@ -1,7 +1,6 @@
 ---
 title: 异步 JavaScript 简介
 slug: Learn_web_development/Extensions/Async_JS/Introducing
-original_slug: Learn/JavaScript/Asynchronous/Introducing
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS/Sequencing_animations", "Learn_web_development/Extensions/Async_JS")}}

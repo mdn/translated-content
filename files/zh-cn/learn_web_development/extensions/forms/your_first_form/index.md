@@ -1,7 +1,6 @@
 ---
 title: 创建我的第一个表单
 slug: Learn_web_development/Extensions/Forms/Your_first_form
-original_slug: Learn/Forms/Your_first_form
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms")}}

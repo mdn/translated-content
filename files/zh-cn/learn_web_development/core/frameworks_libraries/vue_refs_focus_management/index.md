@@ -1,7 +1,6 @@
 ---
 title: 使用 Vue 模板引用进行焦点管理
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering","Learn_web_development/Core/Frameworks_libraries/Vue_resources", "Learn_web_development/Core/Frameworks_libraries")}}

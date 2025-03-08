@@ -1,7 +1,6 @@
 ---
 title: 循环吧，代码
 slug: Learn_web_development/Core/Scripting/Loops
-original_slug: Learn/JavaScript/Building_blocks/Looping_code
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
