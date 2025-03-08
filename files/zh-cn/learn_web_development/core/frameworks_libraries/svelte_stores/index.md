@@ -1,7 +1,7 @@
 ---
 title: 使用 Svelte store
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_stores
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores
+
 l10n:
   sourceCommit: e9be22eaa7416206e3f263a058f0d509a7f81f88
 ---

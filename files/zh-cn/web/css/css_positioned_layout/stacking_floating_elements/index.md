@@ -1,7 +1,6 @@
 ---
 title: 层叠与浮动
 slug: Web/CSS/CSS_positioned_layout/Stacking_floating_elements
-original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements
 ---
 
 {{CSSRef}}

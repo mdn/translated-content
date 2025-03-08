@@ -1,7 +1,6 @@
 ---
 title: 什么是无障碍？
 slug: Learn_web_development/Core/Accessibility/What_is_accessibility
-original_slug: Learn/Accessibility/What_is_accessibility
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Accessibility/Tooling", "Learn_web_development/Core/Accessibility")}}

@@ -1,7 +1,7 @@
 ---
 title: 表单样式化进阶
 slug: Learn_web_development/Extensions/Forms/Advanced_form_styling
-original_slug: Learn/Forms/Advanced_form_styling
+
 l10n:
   sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---

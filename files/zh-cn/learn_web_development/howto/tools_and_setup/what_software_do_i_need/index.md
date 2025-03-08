@@ -1,7 +1,7 @@
 ---
 title: 我需要什么软件来构建一个网站
 slug: Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need
-original_slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
+
 l10n:
   sourceCommit: 721a334af54dd04cbd005bb91edc2c8ce2ad4744
 ---

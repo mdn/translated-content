@@ -1,7 +1,6 @@
 ---
 title: HTML 调试
 slug: Learn_web_development/Core/Structuring_content/Debugging_HTML
-original_slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}

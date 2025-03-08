@@ -1,12 +1,9 @@
 ---
 title: 键盘导航的 JavaScript 微件
 slug: Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets
-original_slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 l10n:
   sourceCommit: 02e06e701230eb5c67caa00fc8d09604a07d5734
 ---
-
-{{AccessibilitySidebar}}
 
 网页应用经常使用 JavaScript 来模拟桌面组件，比如菜单、树状视图、富文本以及标签面板等。网页中这些微件通常是由 {{ HTMLElement("div") }} 和 {{ HTMLElement("span") }} 等元素组合而成，并不是原生的，也不会提供对应的桌面组件所拥有的键盘功能。本文档主要描述能让 JavaScript 微件使用键盘访问的技术。
 

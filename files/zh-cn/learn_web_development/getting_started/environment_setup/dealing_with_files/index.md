@@ -1,7 +1,7 @@
 ---
 title: 处理文件
 slug: Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
-original_slug: Learn/Getting_started_with_the_web/Dealing_with_files
+
 l10n:
   sourceCommit: 865acb22b74a49927b98267566369d4677414f53
 ---

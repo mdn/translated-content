@@ -1,7 +1,6 @@
 ---
 title: 表单数据校验
 slug: Learn_web_development/Extensions/Forms/Form_validation
-original_slug: Learn/Forms/Form_validation
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn_web_development/Extensions/Forms")}}

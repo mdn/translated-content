@@ -1,7 +1,7 @@
 ---
 title: 服务器端网站编程
 slug: Learn_web_development/Extensions/Server-side
-original_slug: Learn/Server-side
+
 l10n:
   sourceCommit: 8184fa218341dbb193ce6adaa1240c89fae045ec
 ---

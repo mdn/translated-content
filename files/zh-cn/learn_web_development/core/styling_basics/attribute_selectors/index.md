@@ -1,7 +1,6 @@
 ---
 title: 属性选择器
 slug: Learn_web_development/Core/Styling_basics/Attribute_selectors
-original_slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics")}}

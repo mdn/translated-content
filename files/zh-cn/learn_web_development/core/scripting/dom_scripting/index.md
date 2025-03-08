@@ -1,7 +1,7 @@
 ---
 title: DOM 脚本简介
 slug: Learn_web_development/Core/Scripting/DOM_scripting
-original_slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
+
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---

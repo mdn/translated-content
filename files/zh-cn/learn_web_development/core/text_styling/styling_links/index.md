@@ -1,7 +1,7 @@
 ---
 title: 样式化链接
 slug: Learn_web_development/Core/Text_styling/Styling_links
-original_slug: Learn/CSS/Styling_text/Styling_links
+
 l10n:
   sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---

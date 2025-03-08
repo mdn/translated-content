@@ -1,7 +1,7 @@
 ---
 title: 闭包
 slug: Web/JavaScript/Guide/Closures
-original_slug: Web/JavaScript/Closures
+
 l10n:
   sourceCommit: 2463abc1ca0fb6588d182651f8f659ae0d618915
 ---

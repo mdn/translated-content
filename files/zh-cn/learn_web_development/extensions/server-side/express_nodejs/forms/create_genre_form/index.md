@@ -1,7 +1,7 @@
 ---
 title: 创建类型表单
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_genre_form
-original_slug: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
+
 l10n:
   sourceCommit: 8d5440dbd259fd6eea32b4f4a200f25257d1bf41
 ---

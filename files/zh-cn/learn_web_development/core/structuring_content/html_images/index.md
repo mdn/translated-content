@@ -1,7 +1,7 @@
 ---
 title: HTML 中的图片
 slug: Learn_web_development/Core/Structuring_content/HTML_images
-original_slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
+
 l10n:
   sourceCommit: 26aeffa549ae61cd863afcb8fdcb3ba0e1e33b0c
 ---

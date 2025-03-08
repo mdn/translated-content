@@ -1,7 +1,7 @@
 ---
 title: 你的网站会是什么样子？
 slug: Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like
-original_slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
+
 l10n:
   sourceCommit: 14f7331883bfa16ca5c0e3cd3b19d412e1b412fd
 ---

@@ -1,7 +1,7 @@
 ---
 title: 事件循环
 slug: Web/JavaScript/Reference/Execution_model
-original_slug: Web/JavaScript/Event_loop
+
 l10n:
   sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---

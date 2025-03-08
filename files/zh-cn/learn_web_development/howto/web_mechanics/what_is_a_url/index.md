@@ -1,7 +1,7 @@
 ---
 title: 什么是 URL？
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_URL
-original_slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
+
 l10n:
   sourceCommit: 9de3d03957f1d66f02f45400a6981372aa368c1f
 ---

@@ -1,7 +1,7 @@
 ---
 title: JavaScript 数据类型和数据结构
 slug: Web/JavaScript/Guide/Data_structures
-original_slug: Web/JavaScript/Data_structures
+
 l10n:
   sourceCommit: 0b0cac4814d37f8a62d69de1b0d76dbe20d085ec
 ---

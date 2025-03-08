@@ -1,7 +1,7 @@
 ---
 title: Web 和 Web 标准
 slug: Learn_web_development/Getting_started/Web_standards/The_web_standards_model
-original_slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
+
 l10n:
   sourceCommit: f75b2c86ae4168e59416aed4c7121f222afc201d
 ---

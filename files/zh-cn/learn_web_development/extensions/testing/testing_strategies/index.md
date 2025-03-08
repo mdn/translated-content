@@ -1,7 +1,7 @@
 ---
 title: 测试的策略
 slug: Learn_web_development/Extensions/Testing/Testing_strategies
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
+
 l10n:
   sourceCommit: 54c4741354cf49b4dd62e1bb3d8ab13181b210f0
 ---

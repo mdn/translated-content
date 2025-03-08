@@ -1,7 +1,6 @@
 ---
 title: 文本格式进阶
 slug: Learn_web_development/Core/Structuring_content/Advanced_text_features
-original_slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}

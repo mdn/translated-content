@@ -1,7 +1,6 @@
 ---
 title: HTML 性能优化
 slug: Learn_web_development/Extensions/Performance/HTML
-original_slug: Learn/Performance/HTML
 ---
 
 {{LearnSidebar}} {{PreviousMenuNext("Learn_web_development/Extensions/Performance/Javascript", "Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance")}}

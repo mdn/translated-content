@@ -1,7 +1,7 @@
 ---
 title: 视频和音频内容
 slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio
-original_slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
+
 l10n:
   sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---

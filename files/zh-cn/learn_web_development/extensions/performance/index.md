@@ -1,7 +1,7 @@
 ---
 title: Web 性能
 slug: Learn_web_development/Extensions/Performance
-original_slug: Learn/Performance
+
 l10n:
   sourceCommit: 5085525b3452de07dbac7fa700aaaf5ff5360a2f
 ---

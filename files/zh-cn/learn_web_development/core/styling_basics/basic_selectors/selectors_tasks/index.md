@@ -1,7 +1,6 @@
 ---
 title: 技能测试：选择器
 slug: Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks
-original_slug: Learn/CSS/Building_blocks/Selectors/Selectors_Tasks
 ---
 
 {{LearnSidebar}}

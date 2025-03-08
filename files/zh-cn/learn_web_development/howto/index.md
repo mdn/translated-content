@@ -1,7 +1,7 @@
 ---
 title: 常见问题
 slug: Learn_web_development/Howto
-original_slug: Learn/Common_questions
+
 l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---

@@ -1,7 +1,7 @@
 ---
 title: 处理不同方向的文本
 slug: Learn_web_development/Core/Styling_basics/Handling_different_text_directions
-original_slug: Learn/CSS/Building_blocks/Handling_different_text_directions
+
 l10n:
   sourceCommit: 68772e87a84d6d6fc6a8e377dea4998afbeb511c
 ---

@@ -1,7 +1,7 @@
 ---
 title: 绘图
 slug: Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics
-original_slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
+
 l10n:
   sourceCommit: 4dec42ed700040565e8af0e14ff104054ebc20f5
 ---

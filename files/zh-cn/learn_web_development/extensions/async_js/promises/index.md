@@ -1,7 +1,7 @@
 ---
 title: 如何使用 Promise
 slug: Learn_web_development/Extensions/Async_JS/Promises
-original_slug: Learn/JavaScript/Asynchronous/Promises
+
 l10n:
   sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---

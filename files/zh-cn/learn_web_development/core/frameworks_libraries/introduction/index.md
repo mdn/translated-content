@@ -1,7 +1,6 @@
 ---
 title: 客户端框架介绍
 slug: Learn_web_development/Core/Frameworks_libraries/Introduction
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Main_features", "Learn_web_development/Core/Frameworks_libraries")}}

@@ -1,7 +1,7 @@
 ---
 title: 部署以及下一步
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_deployment_next
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next
+
 l10n:
   sourceCommit: e769461724eef53106e9e44656d95b99c4d520e5
 ---

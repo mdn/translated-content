@@ -1,7 +1,6 @@
 ---
 title: 介绍 CSS 布局
 slug: Learn_web_development/Core/CSS_layout/Introduction
-original_slug: Learn/CSS/CSS_layout/Introduction
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}

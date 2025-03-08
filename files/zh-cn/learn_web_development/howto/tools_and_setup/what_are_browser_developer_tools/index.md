@@ -1,7 +1,7 @@
 ---
 title: 什么是浏览器开发者工具？
 slug: Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
-original_slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
+
 l10n:
   sourceCommit: 9a5b5597483ca34a58d400060f2e0534dceda240
 ---

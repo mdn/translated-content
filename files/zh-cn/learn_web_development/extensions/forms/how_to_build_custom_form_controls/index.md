@@ -1,7 +1,6 @@
 ---
 title: 如何构建自定义表单控件
 slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls
-original_slug: Learn/Forms/How_to_build_custom_form_controls
 ---
 
 {{LearnSidebar}}

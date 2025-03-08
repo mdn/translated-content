@@ -1,7 +1,7 @@
 ---
 title: 文本处理——JavaScript 中的字符串
 slug: Learn_web_development/Core/Scripting/Strings
-original_slug: Learn/JavaScript/First_steps/Strings
+
 l10n:
   sourceCommit: 3e77d220b829f7477da24af0fa4acf1a54f5dbc9
 ---

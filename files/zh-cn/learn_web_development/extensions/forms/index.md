@@ -1,7 +1,7 @@
 ---
 title: Web 表单构建块
 slug: Learn_web_development/Extensions/Forms
-original_slug: Learn/Forms
+
 l10n:
   sourceCommit: b76266228bd0900aa1256902c7858971156a58c9
 ---
