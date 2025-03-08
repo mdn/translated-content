@@ -2,12 +2,12 @@
 title: 413 Content Too Large
 slug: Web/HTTP/Status/413
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`413 Content Too Large`** [用戶端錯誤回應](/en-US/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示請求實體大於伺服器定義的限制。伺服器可能會關閉連接或返回一個 {{HTTPHeader("Retry-After")}} 標頭欄位。
+HTTP **`413 Content Too Large`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示請求實體大於伺服器定義的限制。伺服器可能會關閉連接或返回一個 {{HTTPHeader("Retry-After")}} 標頭欄位。
 
 在 {{rfc("9110")}} 之前，此狀態的回應詞為 **`Payload Too Large`**。這個訊息仍然被廣泛使用。
 
@@ -17,11 +17,11 @@ HTTP **`413 Content Too Large`** [用戶端錯誤回應](/en-US/docs/Web/HTTP/St
 413 Content Too Large
 ```
 
-## Examples
+## 範例
 
-### File upload limit exceeded
+### 超過檔案上傳限制
 
-The following example shows what the client may send when an [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file) element includes an image on form submission with `method="post"`:
+以下範例展示了當 [`<input type="file">`](/zh-TW/docs/Web/HTML/Element/input/file) 元素包含影像檔案並透過 `method="post"` 送出表單時，用戶端可能發送的請求：
 
 ```http
 POST /upload HTTP/1.1
@@ -37,7 +37,8 @@ Content-Type: image/jpeg
 ------Boundary1234--
 ```
 
-The server may reject the upload if there is a restriction on the maximum size of files it will process, and the response body includes a `message` with some context:
+如果對可處理的檔案大小有最大限制，伺服器可能會拒絕上傳，且回應主體包含帶有相關資訊的 `message`。
+
 
 ```http
 HTTP/1.1 413 Content Too Large
@@ -46,7 +47,7 @@ Content-Length: 97
 
 {
   "error": "Upload failed",
-  "message": "Maximum allowed upload size is 4MB",
+  "message": "Maximum allowed upload size is 4MB"
 }
 ```
 
