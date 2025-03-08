@@ -1,6 +1,6 @@
 ---
 title: JavaScript 的資料型別與資料結構
-slug: Web/JavaScript/Data_structures
+slug: Web/JavaScript/Guide/Data_structures
 ---
 
 {{jsSidebar("More")}}
@@ -105,12 +105,12 @@ There are two types of object properties which have certain attributes: The data
 
 Associates a key with a value and has the following attributes:
 
-| Attribute        | Type                | Description                                                                                                                                                                                                                                          | Default value |
-| ---------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| [[Value]]        | Any JavaScript type | The value retrieved by a get access of the property.                                                                                                                                                                                                 | undefined     |
-| [[Writable]]     | Boolean             | If `false`, the property's [[Value]] can't be changed.                                                                                                                                                                                               | false         |
-| [[Enumerable]]   | Boolean             | If `true`, the property will be enumerated in [for...in](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in) loops. See also [Enumerability and ownership of properties](/zh-TW/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) | false         |
-| [[Configurable]] | Boolean             | If `false`, the property can't be deleted and attributes other than [[Value]] and [[Writable]] can't be changed.                                                                                                                                     | false         |
+| Attribute        | Type                | Description                                                                                                                                                                                                                                                | Default value |
+| ---------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| [[Value]]        | Any JavaScript type | The value retrieved by a get access of the property.                                                                                                                                                                                                       | undefined     |
+| [[Writable]]     | Boolean             | If `false`, the property's [[Value]] can't be changed.                                                                                                                                                                                                     | false         |
+| [[Enumerable]]   | Boolean             | If `true`, the property will be enumerated in [for...in](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in) loops. See also [Enumerability and ownership of properties](/zh-TW/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) | false         |
+| [[Configurable]] | Boolean             | If `false`, the property can't be deleted and attributes other than [[Value]] and [[Writable]] can't be changed.                                                                                                                                           | false         |
 
 | Attribute  | Type    | Description                                           |
 | ---------- | ------- | ----------------------------------------------------- |

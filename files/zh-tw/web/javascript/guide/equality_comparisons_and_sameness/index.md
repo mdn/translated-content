@@ -1,6 +1,6 @@
 ---
 title: 相等比較
-slug: Web/JavaScript/Equality_comparisons_and_sameness
+slug: Web/JavaScript/Guide/Equality_comparisons_and_sameness
 ---
 
 {{jsSidebar("Intermediate")}}

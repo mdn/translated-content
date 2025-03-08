@@ -1,6 +1,6 @@
 ---
 title: JavaScript 技術概觀
-slug: Web/JavaScript/JavaScript_technologies_overview
+slug: Web/JavaScript/Reference/JavaScript_technologies_overview
 ---
 
 {{JsSidebar("Introductory")}}
@@ -11,11 +11,11 @@ slug: Web/JavaScript/JavaScript_technologies_overview
 
 ## JavaScript 的核心語言（ECMAScript）
 
-JavaScript 的核心語言是由 ECMA TC-39 委員會統一標準，並且命名為 [ECMAScript](/zh-TW/docs/Web/JavaScript/JavaScript_technologies_overview)。隨著最新版本的規格 [ECMAScript 5](http://wiki.ecmascript.org/lib/exe/fetch.php?id=start&cache=cache&media=resources:tc39-2010-062-rev5p.pdf) 在 2011 年 3 月推出，大部分最新的網頁瀏覽器實作了 ECMAScript 3 與部分的 ECMAScript 5。
+JavaScript 的核心語言是由 ECMA TC-39 委員會統一標準，並且命名為 [ECMAScript](/zh-TW/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)。隨著最新版本的規格 [ECMAScript 5](http://wiki.ecmascript.org/lib/exe/fetch.php?id=start&cache=cache&media=resources:tc39-2010-062-rev5p.pdf) 在 2011 年 3 月推出，大部分最新的網頁瀏覽器實作了 ECMAScript 3 與部分的 ECMAScript 5。
 
 ### ECMAScript 包含了什麼？
 
-[ECMAScript](/zh-TW/docs/Web/JavaScript/JavaScript_technologies_overview) 主要定義了以下的內容：
+[ECMAScript](/zh-TW/docs/Web/JavaScript/Reference/JavaScript_technologies_overview) 主要定義了以下的內容：
 
 - 語言的語法（解析規則，關鍵字，流程控制，物件的初始化… ）
 - 錯誤處理機制 （throw、 try/catch、 允許自訂錯誤型別）
