@@ -15,9 +15,9 @@ l10n:
 
 ## 描述
 
-`aria-checked` 属性指示元素是否被选中（`true`）、未选中（`false`）或者选中状态不确定（`mixed`），表示它既未被选中也未取消选中。`mixed` 值受到 [`checkbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/checkbox_role) 和 [`menuitemcheckbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role) 的三态输入角色支持。
+`aria-checked` 属性指示元素是否被选中（`true`）、未选中（`false`）或者选中状态不确定（`mixed`），表示它既未被选中也未取消选中。`mixed` 值受到 [`checkbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role) 和 [`menuitemcheckbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role) 的三态输入角色支持。
 
-`mixed` 值不受 [`radio`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/radio_role)、[`menuitemradio`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role) 或 [`switch`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/switch_role) 以及继承自这些角色的元素支持。如果不支持 `mixed`，则值将为 false。
+`mixed` 值不受 [`radio`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)、[`menuitemradio`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role) 或 [`switch`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role) 以及继承自这些角色的元素支持。如果不支持 `mixed`，则值将为 false。
 
 ```html
 <span
@@ -47,7 +47,7 @@ l10n:
 - true
   - : 元素被选中。
 - mixed
-  - : 仅适用于 [`checkbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/checkbox_role) 和 [`menuitemcheckbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)，相当于 `indeterminate`，表示既不选中也不取消选中的混合模式值。
+  - : 仅适用于 [`checkbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role) 和 [`menuitemcheckbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)，相当于 `indeterminate`，表示既不选中也不取消选中的混合模式值。
 - undefined（默认）
   - : 元素不支持被选中。
 
@@ -55,12 +55,12 @@ l10n:
 
 适用于以下角色：
 
-- [`checkbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
-- [`menuitemcheckbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
-- [`menuitemradio`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
-- [`option`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role)
-- [`radio`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/radio_role)
-- [`switch`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/switch_role)
+- [`checkbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
+- [`menuitemcheckbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
+- [`menuitemradio`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
+- [`option`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
+- [`radio`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
+- [`switch`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
 
 ## 关联接口
 
@@ -81,7 +81,7 @@ myHTMLElement.ariaChecked = true;
 
 - [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Element/input/checkbox)
 - [`<input type="radio">`](/zh-CN/docs/Web/HTML/Element/input/radio)
-- [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
-- [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
+- [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed)
+- [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
 - [双态复选框示例](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/examples/checkbox/)—w3.org
 - [混合状态复选框示例](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/examples/checkbox-mixed/)—w3.org

@@ -54,7 +54,7 @@ header > time {
 
 ## 使用说明
 
-`<header>` 元素的意义与网站范围内的 [`banner`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/banner_role) 地标角色相同，除非嵌套在分段内容内。在这种情况下，`<header>` 元素不再是地标。
+`<header>` 元素的意义与网站范围内的 [`banner`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) 地标角色相同，除非嵌套在分段内容内。在这种情况下，`<header>` 元素不再是地标。
 
 `<header>` 元素可以定义一个全局站点标题，在无障碍树中描述为 `banner`。它通常包括一个徽标、公司名称、搜索功能，以及可能的全局导航或标语。它通常位于页面的顶端。
 
@@ -70,7 +70,7 @@ header > time {
 
 ## 无障碍
 
-当 `<header>` 元素的上下文为 {{HTMLElement('body')}} 元素时，它定义了一个 [`banner`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/banner_role) 地标。当 HTML 标题元素是 {{HTMLElement('article')}}、{{HTMLElement('aside')}}、{{HTMLElement('main')}}、{{HTMLElement('nav')}} 或 {{HTMLElement('section')}} 元素的后代时，则不视为 banner 地标。
+当 `<header>` 元素的上下文为 {{HTMLElement('body')}} 元素时，它定义了一个 [`banner`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) 地标。当 HTML 标题元素是 {{HTMLElement('article')}}、{{HTMLElement('aside')}}、{{HTMLElement('main')}}、{{HTMLElement('nav')}} 或 {{HTMLElement('section')}} 元素的后代时，则不视为 banner 地标。
 
 ## 示例
 
@@ -157,34 +157,34 @@ header > time {
         <code><a href="/zh-CN/docs/Web/HTML/Element/section">section</a></code>
         元素的后代，或者是带有
         <code
-          >role=<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/article_role"
+          >role=<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/article_role"
             >article</a
           ></code
         >、<code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/complementary_role"
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role"
             >complementary</a
           ></code
         >、<code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/main_role"
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/main_role"
             >main</a
           ></code
         >、<code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/navigation_role"
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role"
             >navigation</a
           ></code
         >
         或
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/region_role"
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/region_role"
             >region</a
           ></code
-        > 属性的元素的后代，则为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/generic_role">generic</a>；否则为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/banner_role">banner</a>。
+        > 属性的元素的后代，则为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role">generic</a>；否则为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role">banner</a>。
       </td>
     </tr>
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> 或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a> 或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>

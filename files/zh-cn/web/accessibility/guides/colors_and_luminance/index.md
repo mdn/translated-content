@@ -10,7 +10,7 @@ l10n:
 
 对于所有视力正常的用户来说，理解颜色、亮度和饱和度对设计和可读性都很重要；对于视力减退、色盲以及特定神经、认知和其他障碍的人来说，这些因素也是必不可少的。
 
-无障碍性指南定义了适用于视力减退用户的[颜色对比度](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)以及旨在帮助色盲用户的准则。了解颜色还对预防患有前庭障碍或其他神经障碍的人产生[癫痫和其他身体反应](/zh-CN/docs/Web/Accessibility/Seizure_disorders)至关重要。
+无障碍性指南定义了适用于视力减退用户的[颜色对比度](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)以及旨在帮助色盲用户的准则。了解颜色还对预防患有前庭障碍或其他神经障碍的人产生[癫痫和其他身体反应](/zh-CN/docs/Web/Accessibility/Guides/Seizure_disorders)至关重要。
 
 ## 概述
 
@@ -152,7 +152,7 @@ Protanopia 是一种色觉缺陷，眼睛中没有红色锥；sRGB 仍然可以�
 
 ### 对比度和字体大小
 
-[WCAG 对比度指南](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)将“大”文本定义为正常（`normal`）状态下为 `18pt`（大约为 `24px`）或更大，加粗（`bold`）文本为 `14pt`（大约为 `18.7px`）的文本。指出：
+[WCAG 对比度指南](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)将“大”文本定义为正常（`normal`）状态下为 `18pt`（大约为 `24px`）或更大，加粗（`bold`）文本为 `14pt`（大约为 `18.7px`）的文本。指出：
 
 _较大并且笔画较宽的文本在低对比度下更容易阅读。因此，较大文本的对比度要求较低。这允许作者对大文本使用更广泛的颜色选择，这有助于页面的设计，特别是标题部分。_
 
@@ -319,7 +319,7 @@ _不止一个“红色”可以被认为是“饱和”的红色_。例如，颜
 - [无障碍学习路径](/zh-CN/docs/Learn_web_development/Core/Accessibility)
 - CSS [`color`](/zh-CN/docs/Web/CSS/color) 属性
 - [`<color>`](/zh-CN/docs/Web/CSS/color_value) 数据类型
-- [癫痫和身体反应的 web 无障碍](/zh-CN/docs/Web/Accessibility/Seizure_disorders)
+- [癫痫和身体反应的 web 无障碍](/zh-CN/docs/Web/Accessibility/Guides/Seizure_disorders)
 - [红色如何影响我们的行为](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) 《科学美国人》作者：Susana Martinez-Conde，Stephen L. Macknik，2014 年 11 月 1 日
 - [红色褪色](https://www.smart-optometry.com/red-desaturation/) 人眼对红色的敏感度非常高，因此眼科医生利用它进行测试，评估视神经的完整性。
 - [美国癫痫基金会工作组的专家共识：光致和图案诱发癫痫](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.532.7063&rep=rep1&type=pdf)

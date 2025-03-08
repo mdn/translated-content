@@ -93,8 +93,8 @@ original_slug: Learn/Accessibility/What_is_accessibility
 
 ### 注意
 
-- 具有[认知无障碍](/zh-CN/docs/Web/Accessibility/Cognitive_accessibility)的设计将导致良好的设计实践。他们将使所有人受益。
-- 许多有认知障碍的人也可能患有身体残疾。网站必须遵循 W3C 的“[网页内容无障碍指南](https://www.w3.org/WAI/standards-guidelines/wcag/)”包括[认知无障碍指南](/zh-CN/docs/Web/Accessibility/Cognitive_accessibility#guidelines)。
+- 具有[认知无障碍](/zh-CN/docs/Web/Accessibility/Guides/Cognitive_accessibility)的设计将导致良好的设计实践。他们将使所有人受益。
+- 许多有认知障碍的人也可能患有身体残疾。网站必须遵循 W3C 的“[网页内容无障碍指南](https://www.w3.org/WAI/standards-guidelines/wcag/)”包括[认知无障碍指南](/zh-CN/docs/Web/Accessibility/Guides/Cognitive_accessibility#guidelines)。
 - W3C 的“[认知和学习残疾无障碍专案组](https://www.w3.org/WAI/GL/task-forces/coga/)”为认知障碍人士制作了 web 无障碍指南。
 - WebAIM 有一个[认知网页](https://webaim.org/articles/cognitive/)提供了相关的信息和资源。
 - 美国疾病控制中心估计，截至 2018 年，美国四分之一的公民有残疾，[其中认知障碍是年轻人最常见的疾病](https://www.cdc.gov/media/releases/2018/p0816-disability.html)。
@@ -163,11 +163,11 @@ Web 浏览器使用特殊的无障碍 API(由底层操作系统提供)，这些 
 
 ## 参见
 
-- [WCAG](/zh-CN/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG)
 
-  - [Perceivable](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
-  - [Operable](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable)
-  - [Understandable](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Understandable)
-  - [Robust](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Robust)
+  - [Perceivable](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
+  - [Operable](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
+  - [Understandable](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)
+  - [Robust](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust)
 
 {{NextMenu("Learn_web_development/Core/Accessibility/Tooling", "Learn_web_development/Core/Accessibility")}}

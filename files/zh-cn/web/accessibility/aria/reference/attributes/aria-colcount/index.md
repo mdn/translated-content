@@ -8,7 +8,7 @@ l10n:
 
 {{AccessibilitySidebar}}
 
-`aria-colcount` 属性定义了当所有列都不在 [DOM](/zh-CN/docs/Glossary/DOM) 中时，在 [`table`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/table_role)、[`grid`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/grid_role) 或 [`treegrid`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/treegrid_role) 中的列总数。
+`aria-colcount` 属性定义了当所有列都不在 [DOM](/zh-CN/docs/Glossary/DOM) 中时，在 [`table`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)、[`grid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) 或 [`treegrid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) 中的列总数。
 
 ## 描述
 
@@ -16,9 +16,9 @@ l10n:
 
 如果表格中的所有列都存在于 DOM 中，则不需要 `aria-colcount` 属性，因为浏览器会自动计算列的总数。但是，如果在给定时刻只有一部分列存在于 DOM 中，那么这个属性就很有用并且是必需的。
 
-当使用 `aria-colcount` 时，如果你知道列的数量，请确保还使用 [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) 为每列标记，或者如果列是连续的，即它们是原始顺序中没有中断的一组列，则为每行标记。
+当使用 `aria-colcount` 时，如果你知道列的数量，请确保还使用 [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) 为每列标记，或者如果列是连续的，即它们是原始顺序中没有中断的一组列，则为每行标记。
 
-以下示例显示了一个网格，具有 6 列，其中列 1、2、5 和 6 显示给用户。将表格本身设置为 `aria-colcount="6"`，表示组成表格的列的总数。由于列不是连续的，因此在本例中每个[单元格](/zh-CN/docs/Web/Accessibility/ARIA/Roles/cell_role)的 [`columnheader`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/columnheader_role) 和 [`gridcell`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/gridcell_role) 元素都设置了 `aria-colindex` 属性。
+以下示例显示了一个网格，具有 6 列，其中列 1、2、5 和 6 显示给用户。将表格本身设置为 `aria-colcount="6"`，表示组成表格的列的总数。由于列不是连续的，因此在本例中每个[单元格](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)的 [`columnheader`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role) 和 [`gridcell`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role) 元素都设置了 `aria-colindex` 属性。
 
 ```html
 <div role="grid" aria-colcount="6">
@@ -75,12 +75,12 @@ ARIA 使用的第一条规则是：“如果你可以使用具有你所需语义
 
 适用于以下角色：
 
-- [`table`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/table_role)
+- [`table`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)
 
 继承到以下角色：
 
-- [`grid`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/grid_role)
-- [`treegrid`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
+- [`grid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)
+- [`treegrid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
 
 ## 规范
 
@@ -88,4 +88,4 @@ ARIA 使用的第一条规则是：“如果你可以使用具有你所需语义
 
 ## 参见
 
-- [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
+- [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex)

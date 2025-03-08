@@ -44,7 +44,7 @@ l10n:
 
 ## WCAG 指南
 
-WCAG，即 Web 内容无障碍指南，包括几项改善认知无障碍的指南。这些指南由万维网联盟（W3C，互联网主要的国际标准组织）的 Web 无障碍倡议（WAI）发布。该组织还负责[无障碍富互联网应用（ARIA）](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Guides)指南。
+WCAG，即 Web 内容无障碍指南，包括几项改善认知无障碍的指南。这些指南由万维网联盟（W3C，互联网主要的国际标准组织）的 Web 无障碍倡议（WAI）发布。该组织还负责[无障碍富互联网应用（ARIA）](/zh-CN/docs/Web/Accessibility/ARIA/Guides)指南。
 
 WCAG 的指导原则有四条：网站必须是可感知、可操作、可理解，并具有健壮性。为此，他们定义了 17 条具体的准则，其中有六条特别与认知无障碍相关。
 
@@ -243,7 +243,7 @@ WCAG [准则 3.2](https://www.w3.org/WAI/WCAG21/Understanding/predictable) 表�
 
 标签应具有描述性，并放置在与其相关的输入附近。当需要特定格式的输入时，请提供以正确方式格式化的示例。此外，考虑执行服务器端验证以帮助格式化输入数据，以便更轻松地输入。
 
-如果表单控件是必填的，请通过视觉和[代码](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-required)指示它。如果表单控件更改了上下文，请描述将会发生的情况，以便用户在引起上下文更改之前能够理解。
+如果表单控件是必填的，请通过视觉和[代码](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)指示它。如果表单控件更改了上下文，请描述将会发生的情况，以便用户在引起上下文更改之前能够理解。
 
 ### 错误建议
 
@@ -275,8 +275,8 @@ WCAG [准则 3.2](https://www.w3.org/WAI/WCAG21/Understanding/predictable) 表�
 
 - [无障碍指南](https://extensionworkshop.com/documentation/develop/build-an-accessible-extension/)
 - [什么是无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
-- [癫痫症的无障碍](/zh-CN/docs/Web/Accessibility/Seizure_disorders)
-- [理解 WCAG 指南](/zh-CN/docs/Web/Accessibility/Understanding_WCAG)
+- [癫痫症的无障碍](/zh-CN/docs/Web/Accessibility/Guides/Seizure_disorders)
+- [理解 WCAG 指南](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG)
 - [无障碍概述](/zh-CN/docs/Learn_web_development/Core/Accessibility)
 - [Web 内容无障碍指南](https://www.w3.org/WAI/standards-guidelines/wcag/)，包括[认知无障碍指南](#wcag_指南)
 - [W3C 认知和学习障碍无障碍特别任务组](https://www.w3.org/WAI/GL/task-forces/coga/)

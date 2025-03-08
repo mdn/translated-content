@@ -74,7 +74,7 @@ transform: unset;
 
 了解更多信息：
 
-- [MDN 对 WCAG 的理解：对指南 2.3 的解读](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_—_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
+- [MDN 对 WCAG 的理解：对指南 2.3 的解读](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.3_—_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
 - [理解成功标准 2.3.3 | W3C 对 WCAG 2.1 的解读](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
 ## 形式定义

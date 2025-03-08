@@ -88,9 +88,9 @@ l10n:
 
 ## 参见
 
-- [`aria-disabled`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
-- [`aria-modal`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
-- [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
+- [`aria-disabled`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
+- [`aria-modal`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)
+- [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
 - HTML [`hidden`](/zh-CN/docs/Web/HTML/Global_attributes/hidden) 属性
 - CSS {{CSSXref('display')}} 属性
 - CSS {{CSSXref('visibility')}} 属性

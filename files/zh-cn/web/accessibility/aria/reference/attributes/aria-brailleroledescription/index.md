@@ -14,7 +14,7 @@ l10n:
 
 盲文不是字母和数字的一对一转译，而是包括各种缩写、缩略词和代表单词的字符（称为词符）。
 
-`aria-brailleroledescription` 属性允许提供 [`aria-roledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) 值的缩写版本，这是一个人类可读的、作者本地化的元素角色描述，用于改进盲文界面的用户体验，而不是将长角色描述转换为盲文。
+`aria-brailleroledescription` 属性允许提供 [`aria-roledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription) 值的缩写版本，这是一个人类可读的、作者本地化的元素角色描述，用于改进盲文界面的用户体验，而不是将长角色描述转换为盲文。
 
 基本上，`aria-brailleroledescription` 的值是 `aria-roledescription` 属性的缩写版本，用于转换为盲文。
 
@@ -34,7 +34,7 @@ l10n:
 
 由于 `aria-brailleroledescription` 属性覆盖了辅助技术如何在盲文中本地化和表达角色的名称，不合适的值将阻止用户在盲文界面上理解和与元素交互。
 
-只有当存在 [`aria-roledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) 时才使用 `aria-brailleroledescription`。然而，如果 `aria-roledescription` 值在盲文中有效，则不需要该属性的盲文版本。通常情况下，只有在 `aria-roledescription` 对盲文太冗长时才使用 `aria-brailleroledescription`。
+只有当存在 [`aria-roledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription) 时才使用 `aria-brailleroledescription`。然而，如果 `aria-roledescription` 值在盲文中有效，则不需要该属性的盲文版本。通常情况下，只有在 `aria-roledescription` 对盲文太冗长时才使用 `aria-brailleroledescription`。
 
 一些需要记住的规则：
 
@@ -65,7 +65,7 @@ l10n:
 
 ## 关联角色
 
-适用于**所有**角色（除了 [`generic`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/generic_role)）。
+适用于**所有**角色（除了 [`generic`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role)）。
 
 ## 规范
 
@@ -74,5 +74,5 @@ l10n:
 ## 参见
 
 - {{domxref("Element.ariaBrailleRoleDescription")}}
-- [`aria-roledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription).
+- [`aria-roledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription).
 - [`Element.ariaRoleDescription`](/zh-CN/docs/Web/API/Element/ariaRoleDescription)

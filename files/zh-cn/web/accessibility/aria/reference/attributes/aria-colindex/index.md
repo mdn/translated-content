@@ -16,17 +16,17 @@ l10n:
 
 ARIA 提供了几个属性来提供关于 `table`、`grid` 和 `treegrid` 结构的信息。`aria-colindex` 属性定义了在这些结构中的子结构中，元素相对于总列数的列索引或位置。
 
-与 [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) 属性一起使用，后者告知辅助技术如果所有列都存在，则表格将拥有多少列，`aria-colindex` 用于表示元素相对于该总列数的列索引或位置。
+与 [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount) 属性一起使用，后者告知辅助技术如果所有列都存在，则表格将拥有多少列，`aria-colindex` 用于表示元素相对于该总列数的列索引或位置。
 
 如果所有列都在 DOM 中，则不需要包括 `aria-colindex`，因为用户代理可以计算每个单元格或网格单元的列索引。然而，如果在任何时候将任何列留在 DOM 之外，则使用 `aria-colindex` 来指示每个单元格或网格单元相对于完整表格的列。
 
 `aria-colindex` 的值是大于等于 1 的整数。每个值应大于前一列的 `aria-colindex`，并且小于或等于完整表格中的列数。
 
-如果单元格或网格单元跨越多列，则设置 [`aria-colspan`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) 为其跨越的列数（如果未使用 {{htmlelement('td')}} 和 {{htmlelement('th')}} HTML 元素），并将 `aria-colindex` 设置为跨越范围的开始值；如果它跨越的列宽仅为一，则它将只跨越其列中的第一个。
+如果单元格或网格单元跨越多列，则设置 [`aria-colspan`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan) 为其跨越的列数（如果未使用 {{htmlelement('td')}} 和 {{htmlelement('th')}} HTML 元素），并将 `aria-colindex` 设置为跨越范围的开始值；如果它跨越的列宽仅为一，则它将只跨越其列中的第一个。
 
 如果 DOM 中存在的列集是连续的，并且在该集中没有跨越多行或多列的单元格，则只需在每行的第一列中一次放置 `aria-colindex`。如果列不连续，则在每行的所有子元素或拥有的元素上包含 `aria-colindex` 值。
 
-下面的示例显示了一个网格，其中有 6 列，其中列 1、2、5 和 6 显示给用户。表格本身的总列数设置为 `aria-colcount="6"`。由于列不是连续的，因此每个[单元格](/zh-CN/docs/Web/Accessibility/ARIA/Roles/cell_role)（在本例中为 [`columnheader`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/columnheader_role) 和 [`gridcell`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/gridcell_role) 元素）都设置了 `aria-colindex` 属性。
+下面的示例显示了一个网格，其中有 6 列，其中列 1、2、5 和 6 显示给用户。表格本身的总列数设置为 `aria-colcount="6"`。由于列不是连续的，因此每个[单元格](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)（在本例中为 [`columnheader`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role) 和 [`gridcell`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role) 元素）都设置了 `aria-colindex` 属性。
 
 ```html
 <div role="grid" aria-colcount="6">
@@ -94,14 +94,14 @@ ARIA 使用的第一条规则是：“如果你可以使用具有你所需语义
 
 用于角色：
 
-- [`cell`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/cell_role)
-- [`row`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/row_role)
+- [`cell`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
+- [`row`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 
 继承到角色：
 
-- [`columnheader`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`gridcell`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
-- [`rowheader`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
+- [`columnheader`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`gridcell`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
+- [`rowheader`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
 
 ## 规范
 
@@ -109,9 +109,9 @@ ARIA 使用的第一条规则是：“如果你可以使用具有你所需语义
 
 ## 参见
 
-- [`aria-colindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext) 属性
-- [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) 属性
-- [`aria-colspan`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) 属性
+- [`aria-colindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext) 属性
+- [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount) 属性
+- [`aria-colspan`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan) 属性
 - HTML {{HTMLElement('table')}} 元素
 - HTML {{HTMLElement('th')}} 元素
 - HTML {{HTMLElement('td')}} 元素

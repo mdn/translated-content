@@ -12,16 +12,16 @@ l10n:
 
 - [设计无障碍的表单](https://www.w3.org/WAI/tutorials/forms/)
 - [理解 WAI-ARIA 基础知识](/zh-CN/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)
-- [创建可通过键盘导航的 JavaScript 微件](/zh-CN/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
-- [使用嵌入字段的标签的 ARIA](/zh-CN/docs/Web/Accessibility/ARIA/Multipart_labels)
+- [创建可通过键盘导航的 JavaScript 微件](/zh-CN/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
+- [使用嵌入字段的标签的 ARIA](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Multipart_labels)
 - [在复合微件中管理焦点](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/)（`aria-activedescendant` vs. 循环 tabindex）
 - [测试 ARIA](https://www.w3.org/WAI/test-evaluate/)
 - [显示无障碍表格](https://www.w3.org/WAI/tutorials/tables/)
 
 ## 参见
 
-- [为微件添加标签](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-- [地标角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/landmark_role)
-- [ARIA 实时区域](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
+- [为微件添加标签](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
+- [地标角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/landmark_role)
+- [ARIA 实时区域](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Live_regions)
 - [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
-- [ARIA：presentation 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role)
+- [ARIA：presentation 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role)

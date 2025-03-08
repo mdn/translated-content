@@ -8,11 +8,11 @@ l10n:
 
 {{AccessibilitySidebar}}
 
-`aria-colindextext` 属性定义了数字 [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) 的可读文本替代。
+`aria-colindextext` 属性定义了数字 [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) 的可读文本替代。
 
 ## 描述
 
-当你有一个非常大的表格，或者当你有意地只想显示表格的一部分时，可能不是所有的列都会出现在 DOM 中。当出现这种情况时，我们使用具有整数值的 [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) 来定义表格（或网格）在所有列都存在时会有多少列，并在每一列上添加 [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) 属性，以提供有关该较大表格中列索引的信息。
+当你有一个非常大的表格，或者当你有意地只想显示表格的一部分时，可能不是所有的列都会出现在 DOM 中。当出现这种情况时，我们使用具有整数值的 [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount) 来定义表格（或网格）在所有列都存在时会有多少列，并在每一列上添加 [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) 属性，以提供有关该较大表格中列索引的信息。
 
 在下面的 HTML 片段中，我们的表格有 8 列，但我们只显示了 4 列。“城市”列是我们较大表格的第五列，由 `aria-colindex="5"` 定义。
 
@@ -60,14 +60,14 @@ l10n:
 只有在提供或计算的 `aria-colindex` 的值不具有意义或不反映出显示的索引时，才使用 `aria-colindextext`。每当包含 `aria-colindextext` 时，也要保留 `aria-colindex`，因为一些辅助技术依赖于数字列索引来跟踪用户的位置，并提供替代的表格导航。
 
 > [!NOTE]
-> 虽然当所有存在的列都是连续的时，`aria-colindex` 可以添加到行中，因为可以推断出顺序值，但 `aria-colindextext` 不是 [`row`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/row_role) 的受支持属性。
+> 虽然当所有存在的列都是连续的时，`aria-colindex` 可以添加到行中，因为可以推断出顺序值，但 `aria-colindextext` 不是 [`row`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) 的受支持属性。
 
-请参阅相关的 [`aria-rowindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext)。
+请参阅相关的 [`aria-rowindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext)。
 
 ## 值
 
 - `<string>`
-  - : 数字 [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) 的可读文本替代
+  - : 数字 [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) 的可读文本替代
 
 ## 关联接口
 
@@ -80,12 +80,12 @@ l10n:
 
 用于角色：
 
-- [`cell`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/cell_role)
+- [`cell`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
 
 继承到角色：
 
-- [`columnheader`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`rowheader`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
+- [`columnheader`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`rowheader`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
 
 ## 规范
 
@@ -94,9 +94,9 @@ l10n:
 ## 参见
 
 - [`Element.ariaColIndexText`](/zh-CN/docs/Web/API/Element/ariaColIndexText)
-- [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
-- [`aria-rowindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext)
-- [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
-- [`cell` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/cell_role)
-- [`columnheader` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`rowheader` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
+- [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex)
+- [`aria-rowindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext)
+- [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount)
+- [`cell` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
+- [`columnheader` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`rowheader` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)

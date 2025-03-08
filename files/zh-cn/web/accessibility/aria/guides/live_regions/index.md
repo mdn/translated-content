@@ -11,7 +11,7 @@ l10n:
 使用 JavaScript，我们可以动态更改页面的某些部分，而无需重新加载整个页面——例如，可以动态更新搜索结果列表，或者显示不需要用户交互的警告或通知。虽然这些更改对于能够看到页面的用户来说通常是显而易见的，但是对于使用辅助技术的用户来说，它们可能并不明显。ARIA 实时区域（live region）填补了这个空白，并提供了一种以编程方式显现动态内容更改的方法，这种方式可以由辅助技术提供宣告。
 
 > [!NOTE]
-> 辅助技术通常只会宣告实时区域中的*动态*内容变更。在你希望宣告发生变更的元素，你只需要在变更发生之前在相应的元素上包含 `aria-live` 属性或专门的实时区域 `role`（例如 [`role="status"`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/status_role)）——无论是在原始标记中，还是使用 JavaScript 动态添加。首先创建一个空的实时区域，然后——在单独的步骤中——更改区域内的内容。虽然在规范中没有明确记录，但浏览器/辅助技术确实对 [`role="alert"`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/alert_role) 包含了特殊处理：在大多数情况下，即使页面的初始标记中已经存在包含通知/消息的 `role="alert"` 区域，或者动态注入到页面中，该区域内的内容也会被宣告。但是，请注意，`role="alert"` 区域在被宣告时会根据特定的浏览器/辅助技术组合自动添“警报”前缀。
+> 辅助技术通常只会宣告实时区域中的*动态*内容变更。在你希望宣告发生变更的元素，你只需要在变更发生之前在相应的元素上包含 `aria-live` 属性或专门的实时区域 `role`（例如 [`role="status"`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/status_role)）——无论是在原始标记中，还是使用 JavaScript 动态添加。首先创建一个空的实时区域，然后——在单独的步骤中——更改区域内的内容。虽然在规范中没有明确记录，但浏览器/辅助技术确实对 [`role="alert"`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role) 包含了特殊处理：在大多数情况下，即使页面的初始标记中已经存在包含通知/消息的 `role="alert"` 区域，或者动态注入到页面中，该区域内的内容也会被宣告。但是，请注意，`role="alert"` 区域在被宣告时会根据特定的浏览器/辅助技术组合自动添“警报”前缀。
 
 ## 实时区域
 
@@ -118,7 +118,7 @@ renderPlanetInfoButton.addEventListener("click", (event) => {
 
 ## 具有隐式实时区域属性的角色
 
-以下 [`role="…"`](/zh-CN/docs/Web/Accessibility/ARIA/Roles) 值的元素默认表现为实时区域：
+以下 [`role="…"`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles) 值的元素默认表现为实时区域：
 
 <table style="width: 100%;">
  <thead>
@@ -167,7 +167,7 @@ renderPlanetInfoButton.addEventListener("click", (event) => {
 实时区域得到了很好的支持。Paciello Group 在 2014 年发布了[有关实时区域支持状态的信息](https://www.tpgi.com/screen-reader-support-aria-live-regions/)。Paul J. Adam 特别研究了 [`aria-atomic` 和 `aria-relevant` 的支持情况](https://pauljadam.com/demos/aria-atomic-relevant.html)。
 
 1. **`aria-atomic`**：`aria-atomic=BOOLEAN` 用于设置屏幕阅读器是否应始终将实时区域呈现为一个整体，即使只有部分区域发生更改。可能的设置有：`false` 或 `true`。默认设置为 `false`。
-2. [**`aria-relevant`**](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)：`aria-relevant=[LIST_OF_CHANGES]` 用于设置哪些类型的更改对于实时区域是相关的。可能的设置是 `additions`、`removals`、`text`、`all` 中的一个或多个。默认设置为 `additions text`。
+2. [**`aria-relevant`**](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)：`aria-relevant=[LIST_OF_CHANGES]` 用于设置哪些类型的更改对于实时区域是相关的。可能的设置是 `additions`、`removals`、`text`、`all` 中的一个或多个。默认设置为 `additions text`。
 
 ### 基本示例：`aria-atomic`
 
@@ -255,4 +255,4 @@ ARIA 实时区域属性的详细说明：
 
 ## 参见
 
-- [ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
+- [ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles)

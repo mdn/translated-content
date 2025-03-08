@@ -12,7 +12,7 @@ l10n:
 
 ## 描述
 
-全局 `aria-braillelabel` 属性类似于全局 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label)，它定义了一个用于标记当前元素的字符串值。`aria-label` 用于被屏幕阅读器读取，而 `aria-braillelabel` 属性的内容被用于转换为盲文；为用户提供对象的可识别名称的盲文形式。
+全局 `aria-braillelabel` 属性类似于全局 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)，它定义了一个用于标记当前元素的字符串值。`aria-label` 用于被屏幕阅读器读取，而 `aria-braillelabel` 属性的内容被用于转换为盲文；为用户提供对象的可识别名称的盲文形式。
 
 `aria-braillelabel` 属性的目的是覆盖辅助技术如何在盲文中本地化和表达元素的无障碍名称。只有在没有此属性而无障碍名称在转换为盲文时无法达到用户预期的体验时，才应使用它。
 
@@ -53,5 +53,5 @@ l10n:
 ## 参见
 
 - {{domxref("Element.ariaBrailleLabel")}}
-- [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-- [`aria-brailleroledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription)
+- [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
+- [`aria-brailleroledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription)

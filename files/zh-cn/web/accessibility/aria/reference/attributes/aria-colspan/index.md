@@ -8,11 +8,11 @@ l10n:
 
 {{AccessibilitySidebar}}
 
-`aria-colspan` 属性定义了在 [`table`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/table_role)、[`grid`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/grid_role) 或 [`treegrid`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/treegrid_role) 中，单元格或网格单元格跨越的列数。
+`aria-colspan` 属性定义了在 [`table`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)、[`grid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) 或 [`treegrid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) 中，单元格或网格单元格跨越的列数。
 
 ## 描述
 
-`aria-colspan` 主要用于不包含在原生 HTML {{HTMLElement('table')}} 中的 [`cell`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/cell_role) 和 [`gridcell`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/gridcell_role)，该属性值定义了一个单元格在 ARIA [`table`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/table_role)、[`grid`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/grid_role) 或 [`treegrid`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/treegrid_role) 中跨越的列数。
+`aria-colspan` 主要用于不包含在原生 HTML {{HTMLElement('table')}} 中的 [`cell`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) 和 [`gridcell`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)，该属性值定义了一个单元格在 ARIA [`table`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)、[`grid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) 或 [`treegrid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) 中跨越的列数。
 
 在 HTML 中，{{HTMLElement('th')}} 和 {{HTMLElement('td')}} 元素具有 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#attributes) 属性。当使用语义化的 {{HTMLElement('table')}} 时，按设计使用原生的 `colspan` 属性即可。此 ARIA 属性用于不包含在原生表格中的单元格和网格单元格，如果用于 {{HTMLElement('table')}} 中的单元格，将被忽略。
 
@@ -149,12 +149,12 @@ l10n:
 
 用于角色：
 
-- [`cell`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/cell_role)
+- [`cell`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
 
 继承到角色：
 
-- [`columnheader`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`rowheader`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
+- [`columnheader`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`rowheader`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
 
 ## 规范
 
@@ -163,8 +163,8 @@ l10n:
 ## 参见
 
 - {{HTMLElement('th')}} 和 {{HTMLElement('td')}} [`colspan`](/zh-CN/docs/Web/HTML/Element/td#attributes) 属性
-- [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) 属性
-- [`aria-rowspan`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) 属性
-- [`cell`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/cell_role) 角色
-- [`columnheader`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/columnheader_role) 角色
-- [`rowheader`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/columnheader_role) 角色
+- [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) 属性
+- [`aria-rowspan`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan) 属性
+- [`cell`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) 角色
+- [`columnheader`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role) 角色
+- [`rowheader`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role) 角色

@@ -140,7 +140,7 @@ l10n:
 
 ### 方法 2：`aria-activedescendant`
 
-这个办法包含绑定一个单独的事件句柄到容器窗口微件上，运用 `aria-activedescendent` 属性来追踪一个“虚拟”焦点。（关于 ARIA 更多的信息，查看[无障碍的 Web 应用程序和微件概述](/zh-CN/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)。）
+这个办法包含绑定一个单独的事件句柄到容器窗口微件上，运用 `aria-activedescendent` 属性来追踪一个“虚拟”焦点。（关于 ARIA 更多的信息，查看[无障碍的 Web 应用程序和微件概述](/zh-CN/docs/Web/Accessibility/Guides/Accessible_web_applications_and_widgets)。）
 
 `aria-activedescendant` 属性标识当前具有虚拟焦点的后代元素的 ID。容器上的事件处理程序必须通过更新 `aria-activedescendant` 属性的值来响应按键和鼠标事件，并确保当前项目的样式适当（例如，使用边框或背景色）。
 

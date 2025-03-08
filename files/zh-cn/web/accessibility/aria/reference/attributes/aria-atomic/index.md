@@ -8,11 +8,11 @@ l10n:
 
 {{AccessibilitySidebar}}
 
-在 ARIA 实时区域中，`aria-atomic` 全局属性指示辅助技术（如屏幕阅读器）是否基于由 [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) 属性定义的更改通知，呈现所有或仅部分更改区域。
+在 ARIA 实时区域中，`aria-atomic` 全局属性指示辅助技术（如屏幕阅读器）是否基于由 [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) 属性定义的更改通知，呈现所有或仅部分更改区域。
 
 ## 描述
 
-实时区域是网页的部分，在用户焦点在其他地方时更新，无论是通过用户交互还是其他方式。由于它们在用户焦点之外更新，因此辅助技术（如屏幕阅读器）可能无法“看到”更新并将其报告给用户。WAI-ARIA 有 4 个属性，允许开发人员识别这些实时区域并告诉辅助技术如何处理它们，包括 [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-live)、[`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)、[`aria-busy`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-busy) 和 `aria-atomic`。
+实时区域是网页的部分，在用户焦点在其他地方时更新，无论是通过用户交互还是其他方式。由于它们在用户焦点之外更新，因此辅助技术（如屏幕阅读器）可能无法“看到”更新并将其报告给用户。WAI-ARIA 有 4 个属性，允许开发人员识别这些实时区域并告诉辅助技术如何处理它们，包括 [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)、[`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)、[`aria-busy`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) 和 `aria-atomic`。
 
 当实时区域的内容发生更改时，DOM 从更改的元素经过其祖先以找到首个设置了 `aria-atomic` 的元素。这确定了应该向用户呈现的内容。
 
@@ -27,7 +27,7 @@ l10n:
 
 ## 关联角色
 
-适用于**所有**[角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)。
+适用于**所有**[角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles)。
 
 ## 规范
 

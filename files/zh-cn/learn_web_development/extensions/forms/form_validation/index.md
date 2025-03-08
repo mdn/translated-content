@@ -475,7 +475,7 @@ email.addEventListener("input", function (event) {
 
 这个简单的表单使用 [`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate) 属性关闭浏览器的自动校验；这允许我们使用脚本控制表单校验。但是，这并不禁止对约束校验 API 的支持或是以下 CSS 伪类：{{cssxref(":valid")}}、{{cssxref(":invalid")}}、{{cssxref(":in-range")}} 、{{cssxref(":out-of-range")}} 的应用。这意味着，即使浏览器在发送数据之前没有自动检查表单的有效性，你仍然可以自己做，并相应地设置表单的样式。
 
-[`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) 属性确保我们的自定义错误信息将呈现给所有人，包括使用屏幕阅读器等辅助技术的人。
+[`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Live_regions) 属性确保我们的自定义错误信息将呈现给所有人，包括使用屏幕阅读器等辅助技术的人。
 
 ##### CSS
 

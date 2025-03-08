@@ -29,9 +29,9 @@ ARIA `list` 角色可用于标识项目列表。它通常与 `listitem` 角色�
 
 ### 关联的 WAI-ARIA 角色、状态和属性
 
-- [`listitem`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/listitem_role) 角色
+- [`listitem`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role) 角色
   - : 列表或目录中的单个项目。角色为 listitem 的元素只能在角色为 `list` 或 `group` 的元素中找到。
-- [`group`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role) 角色
+- [`group`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) 角色
   - : 相关对象的集合，在嵌套在列表中时仅限于列表项，其重要性不足以在页面目录中拥有自己的位置。
 
 ## 最佳实践
@@ -61,10 +61,10 @@ ARIA `list` 角色可用于标识项目列表。它通常与 `listitem` 角色�
 > [!NOTE]
 > ARIA `list` / `listitem` 角色不区分有序列表和无序列表。
 
-顺便说一句，请注意，如果你使用 `<ol>` 或 `<ul>` 的语义 HTML 元素并应用 [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role) 角色，则每个子 `<li>` 元素都会继承 `presentation` 角色，因为 ARIA 需要 `listitem` 元素具有父 `list` 元素。因此，`<li>` 元素不会暴露给辅助技术，但是包含在这些 `<li>` 元素中的元素，包括嵌套列表，对辅助技术是可见的。
+顺便说一句，请注意，如果你使用 `<ol>` 或 `<ul>` 的语义 HTML 元素并应用 [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) 角色，则每个子 `<li>` 元素都会继承 `presentation` 角色，因为 ARIA 需要 `listitem` 元素具有父 `list` 元素。因此，`<li>` 元素不会暴露给辅助技术，但是包含在这些 `<li>` 元素中的元素，包括嵌套列表，对辅助技术是可见的。
 
 > [!NOTE]
-> 如果要标记将用作标签页式界面的项目列表，则应改为使用 [`tab`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tab_role)、[`tabpanel`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) 和 [`tablist`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tablist_role) 角色。
+> 如果要标记将用作标签页式界面的项目列表，则应改为使用 [`tab`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)、[`tabpanel`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role) 和 [`tablist`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role) 角色。
 
 ## 规范
 
@@ -75,8 +75,8 @@ ARIA `list` 角色可用于标识项目列表。它通常与 `listitem` 角色�
 - {{HTMLElement("ul")}} 元素
 - {{HTMLElement("ol")}} 元素
 - {{HTMLElement("li")}} 元素
-- [ARIA：listitem 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/listitem_role)
-- [ARIA：group 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role)
+- [ARIA：listitem 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role)
+- [ARIA：group 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)
 - [ARIA 列表示例](https://www.scottohara.me/blog/2018/05/26/aria-lists.html)——由 Scott O'Hara 撰写
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)

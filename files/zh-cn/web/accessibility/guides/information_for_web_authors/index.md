@@ -15,7 +15,7 @@ l10n:
 - [Web 内容无障碍性指南 (<abbr>WCAG</abbr>)](https://www.w3.org/WAI/standards-guidelines/wcag/)
   - : 来自 W3C _Web Accessibility Initiative (<abbr>WAI</abbr>)_ 的另一组重要指南。欧盟计划基于这些指南制定即将推出的无障碍性规定。这些指南在 [<abbr>WAI</abbr> 兴趣组讨论列表](https://www.w3.org/WAI/about/groups/waiig/#mailinglist)上进行了讨论。
 - [本站点上的 ARIA](/zh-CN/docs/Web/Accessibility/ARIA)
-  - : <abbr>MDN</abbr> 提供的关于所有 [ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)和 [ARIA 属性](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)的指南，包括最佳实践、关联角色和属性以及示例。
+  - : <abbr>MDN</abbr> 提供的关于所有 [ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles)和 [ARIA 属性](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes)的指南，包括最佳实践、关联角色和属性以及示例。
 
 ## 如何操作
 

@@ -18,11 +18,11 @@ l10n:
 
 所有可交互元素都必须具有无障碍名称。当一个元素的无障碍名称需要使用来自 DOM 其他位置的内容时，可以使用 `aria-labelledby` 引用另一个元素来定义其无障碍名称。
 
-如果没有可以引用以创建无障碍名称的内容，则应使用 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性。
+如果没有可以引用以创建无障碍名称的内容，则应使用 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性。
 
 `aria-labelledby` 的目的与 `aria-label` 相同。它为交互元素提供可识别的无障碍名称。如果一个元素同时设置了这两个属性，那么 `aria-labelledby` 将被使用。`aria-labelledby` 优先于所有其他提供无障碍名称的方法，包括 `aria-label`、{{HTMLElement('label')}} 和元素的内部文本。
 
-`aria-labelledby` 和 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)属性都引用其他元素来计算文本替代。`aria-labelledby` 应引用提供给元素无障碍名称的简短文本。`aria-describedby` 用于引用提供描述的较长内容。如果 DOM 中没有为交互元素提供适合作为无障碍名称的简短标签的元素，则使用 `aria-label` 来定义交互元素的无障碍名称。
+`aria-labelledby` 和 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)属性都引用其他元素来计算文本替代。`aria-labelledby` 应引用提供给元素无障碍名称的简短文本。`aria-describedby` 用于引用提供描述的较长内容。如果 DOM 中没有为交互元素提供适合作为无障碍名称的简短标签的元素，则使用 `aria-label` 来定义交互元素的无障碍名称。
 
 > [!NOTE]
 > 虽然在美式英语中会假定该属性的拼写为“labeledby”，但“labelledby”拼写已被确立，并且是无障碍 API 中使用的拼写。
@@ -93,21 +93,21 @@ l10n:
 
 `aria-labelledby` 属性**不**被以下元素所支持：
 
-- [`code`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`caption`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`deletion`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`emphasis`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`generic`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/generic_role)
-- [`insertion`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`mark`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/mark_role)
-- [`paragraph`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role) / [`none`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role)
-- [`strong`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`subscript`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`superscript`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`suggestion`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/suggestion_role)
-- [`term`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/term_role)
-- [`time`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`code`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`caption`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`deletion`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`emphasis`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`generic`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role)
+- [`insertion`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`mark`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/mark_role)
+- [`paragraph`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) / [`none`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role)
+- [`strong`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`subscript`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`superscript`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`suggestion`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/suggestion_role)
+- [`term`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/term_role)
+- [`time`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 
 ## 规范
 
@@ -118,5 +118,5 @@ l10n:
 - HTML {{HTMLElement('label')}} 元素
 - HTML {{HTMLElement('legend')}} 元素
 - HTML {{HTMLElement('caption')}} 元素
-- [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-- [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
+- [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
+- [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)

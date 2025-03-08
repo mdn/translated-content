@@ -8,7 +8,7 @@ l10n:
 
 {{AccessibilitySidebar}}
 
-`aria-autocomplete` 属性指示对于 [`combobox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role)、[`searchbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/searchbox_role) 或 [`textbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/textbox_role)，输入文本是否可能触发显示用户预期值的一个或多个预测，并指定如果进行预测，预测将如何呈现。
+`aria-autocomplete` 属性指示对于 [`combobox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)、[`searchbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role) 或 [`textbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)，输入文本是否可能触发显示用户预期值的一个或多个预测，并指定如果进行预测，预测将如何呈现。
 
 ## 描述
 
@@ -24,10 +24,10 @@ l10n:
 
 在实现值列表时，当显示建议列表时，DOM 焦点应保留在文本输入上。
 
-- 包括具有建议值 id 的值的 [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-controls)。
-- 包括与包含建议值集合的元素的角色匹配的 [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)。
-- 管理焦点，如果需要，包括使用 [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)，如果集合容器支持。
-- 使用具有 [`combobox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role) 角色的元素上的 [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) 状态来传达列表是否显示。
+- 包括具有建议值 id 的值的 [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls)。
+- 包括与包含建议值集合的元素的角色匹配的 [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup)。
+- 管理焦点，如果需要，包括使用 [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant)，如果集合容器支持。
+- 使用具有 [`combobox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) 角色的元素上的 [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) 状态来传达列表是否显示。
 
 如果在字段失去焦点时自动接受自动填充列表值，则列表必须包含在支持 `aria-activedescendant` 的角色中，输入字段上的 `aria-activedescendant` 值动态调整为引用包含选定建议的元素。
 
@@ -46,9 +46,9 @@ l10n:
 
 在以下角色中使用：
 
-- [`combobox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role) 角色
-- [`textbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/textbox_role) 角色
-- 继承自 [`searchbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/searchbox_role) 角色
+- [`combobox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) 角色
+- [`textbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) 角色
+- 继承自 [`searchbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role) 角色
 
 ## 规范
 
@@ -56,13 +56,13 @@ l10n:
 
 ## 参见
 
-- [`combobox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role) 角色
-- [`textbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/textbox_role) 角色
-- [`searchbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/searchbox_role) 角色
+- [`combobox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) 角色
+- [`textbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) 角色
+- [`searchbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role) 角色
 - {{HTMLElement('datalist')}} 元素和 [`<input> list` 属性](/zh-CN/docs/Web/HTML/Element/input#list)
-- [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-controls) 属性
-- [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) 属性
-- [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) 属性
-- [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) 属性
+- [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 属性
+- [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) 属性
+- [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) 属性
+- [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) 属性
 - [带有内联和列表自动填充的可编辑组合框示例](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-autocomplete-both/)
 - [Event.ariaAutoComplete](/zh-CN/docs/Web/API/Element/ariaAutoComplete)

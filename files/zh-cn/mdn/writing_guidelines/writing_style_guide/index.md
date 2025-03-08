@@ -525,10 +525,10 @@ MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章
 
 #### 链接文字
 
-- 链接文本应与被链接的页面或章节的标题相同。例如，这个 [ARIA](/zh-CN/docs/Web/Accessibility/ARIA/Attributes) 页面的链接文本将是：
-  - **正确**：[ARIA 状态和属性](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)
-- 在链接文本中使用句子大小写，即使它与链接的页面标题或章节标题不同。这可能是页面或章节标题中使用的大小写不正确。例如，[WAI-ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)页面的链接文本将是：
-  - **正确**：[WAI-ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
+- 链接文本应与被链接的页面或章节的标题相同。例如，这个 [ARIA](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes) 页面的链接文本将是：
+  - **正确**：[ARIA 状态和属性](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes)
+- 在链接文本中使用句子大小写，即使它与链接的页面标题或章节标题不同。这可能是页面或章节标题中使用的大小写不正确。例如，[WAI-ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles)页面的链接文本将是：
+  - **正确**：[WAI-ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles)
 - 对于外部链接也要使用句子的大小写，即使目标文章页面上的大小写不同。这是为了确保整个 MDN Web 文档的一致性。例外情况包括书籍的名称。
 - 使用适当的宏来链接到[参考文档页面](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#链接到_mdn_的参考文档页面)。使用宏将为链接文本中的关键词添加代码格式，如前面的例子所示。
 - 链接列表项的开头不需要冠词（"A"、"An"、"The"）。链接文本后不需要标点符号，因为它必然是一个术语或一个短语。

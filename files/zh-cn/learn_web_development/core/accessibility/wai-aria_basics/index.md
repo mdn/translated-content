@@ -61,7 +61,7 @@ original_slug: Learn/Accessibility/WAI-ARIA_basics
 
 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 是 W3C 编写的规范，定义了一组可用于其他元素的 HTML 特性，用于提供额外的语义化以及改善缺乏的无障碍。以下是规范中三个主要的特性：
 
-- [角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
+- [角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles)
   - : 这定义了元素是干什么的。许多「标志性的角色」，其实重复了 HTML5 的结构元素的语义价值。例如 `role="navigation"` ({{htmlelement("nav")}}) 或者 `role="complementary"` ({{htmlelement("aside")}})，这也有一些描述其他页面结构的（角色），例如 `role="banner"`, `role="search"`, `role="tabgroup"`, `role="tab"` 等等。我们通常能从 UI 层面找到它们。
 - 属性
   - : 定义元素的属性，使元素具备额外的含义或语义。例如，`aria-required="true"` 指定表单输入元素需要被填写才能有效，而 `aria-labelledby="label"` 允许你在元素上设置一个 ID，用于在页面中的其他地方（包括多个元素）引用其作为标签，`<label for="input">` 不可能做到这一点。举个例子：你可以用 `aria-labelledby` 指定在 {{htmlelement("div")}} 中包含的关键描述是多个表格单元的标签，或者将它指定为图像的替代文本——为图像替代文本指定额外信息，而无需在每一个 `alt` 属性中重复。你可以在[替代文本](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML#替代文本)中查看示例。

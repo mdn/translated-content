@@ -84,7 +84,7 @@ l10n:
 
 - [无障碍](/zh-CN/docs/Web/Accessibility)
 - [无障碍学习路径](/zh-CN/docs/Learn_web_development/Core/Accessibility)
-- [用于癫痫和身体反应的 web 无障碍](/zh-CN/docs/Web/Accessibility/Seizure_disorders)
+- [用于癫痫和身体反应的 web 无障碍](/zh-CN/docs/Web/Accessibility/Guides/Seizure_disorders)
 - [颜色视觉模拟](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/simulation/index.html)
 - 讨论：“[辅助功能选项中的‘灰度’设置有什么用处？](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)”
 

@@ -82,7 +82,7 @@ header {
 
 ### 界标
 
-`<main>` 元素的行为与 [`main` 界标](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Main_role)所定义的角色相一致。 [界标](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)可被辅助技术使用，以快速识别并将用户导航到文档中的分段。通常使用 `<main>` 元素，而不是定义 `role="main"`，除非是考虑[对于旧浏览器的兼容性](#Browser_compatibility).
+`<main>` 元素的行为与 [`main` 界标](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Main_role)所定义的角色相一致。 [界标](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)可被辅助技术使用，以快速识别并将用户导航到文档中的分段。通常使用 `<main>` 元素，而不是定义 `role="main"`，除非是考虑[对于旧浏览器的兼容性](#Browser_compatibility).
 
 ### 直达内容
 

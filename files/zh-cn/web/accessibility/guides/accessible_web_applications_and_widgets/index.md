@@ -158,7 +158,7 @@ ARIA 允许开发者在这个元素本身提供了错误语义或没有语义的
 ### 异步内容变化
 
 > [!NOTE]
-> 正在施工中。请参见[实时区域](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)。
+> 正在施工中。请参见[实时区域](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Live_regions)。
 
 ## 键盘导航
 
@@ -174,11 +174,11 @@ ARIA 允许开发者在这个元素本身提供了错误语义或没有语义的
 - 若在表单内，空格键应该选择或激活控件，而回车键应该将表单提交到默认的地址（action）。
 - 如果不确定，请模仿你正在创建的控件的标准桌面行为。
 
-因此，对于上面的标签页微件示例，用户应该能够使用制表键和上档键 + 制表键导航到微件的容器（上面标记中的 {{HTMLElement('ol')}}）中并从其导航出来。一旦键盘焦点位于容器内，方向键应该允许用户在每个标签之间导航（{{HTMLElement('li')}} 元素）。从这里开始，约定因平台而异。在 Windows 上，当用户按下方向键时，下一个标签应该自动激活。在 macOS 上，用户可以按回车或空格键来激活下一个标签。[键盘导航的 JavaScript 微件](/zh-CN/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)的深入教程描述了如何使用 JavaScript 实现此行为。
+因此，对于上面的标签页微件示例，用户应该能够使用制表键和上档键 + 制表键导航到微件的容器（上面标记中的 {{HTMLElement('ol')}}）中并从其导航出来。一旦键盘焦点位于容器内，方向键应该允许用户在每个标签之间导航（{{HTMLElement('li')}} 元素）。从这里开始，约定因平台而异。在 Windows 上，当用户按下方向键时，下一个标签应该自动激活。在 macOS 上，用户可以按回车或空格键来激活下一个标签。[键盘导航的 JavaScript 微件](/zh-CN/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)的深入教程描述了如何使用 JavaScript 实现此行为。
 
 ## 参见
 
 - [ARIA](/zh-CN/docs/Web/Accessibility/ARIA)
-- [键盘导航的 JavaScript 微件](/zh-CN/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- [键盘导航的 JavaScript 微件](/zh-CN/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
 - [WAI-ARIA 规范](https://www.w3.org/TR/wai-aria-1.1/)
 - [WAI-ARIA 创作实践](https://www.w3.org/WAI/ARIA/apg/)

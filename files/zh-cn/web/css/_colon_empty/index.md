@@ -88,7 +88,7 @@ body {
 
 - [什么是无障碍名称？ | The Paciello Group](https://www.tpgi.com/what-is-an-accessible-name/)
 - [隐藏内容以获得更好的辅助功能 | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
-- [MDN 理解 WCAG，指南 2.4 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN 理解 WCAG，指南 2.4 解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [理解成功标准 2.4.4 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html)
 
 ## 规范

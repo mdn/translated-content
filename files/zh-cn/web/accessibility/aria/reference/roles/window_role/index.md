@@ -14,7 +14,7 @@ l10n:
 
 ## 描述
 
-`window` 角色是一个抽象角色，是定义浏览器或应用程序窗口的角色的超类。目前唯一的子类为 [`dialog`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/dialog_role) 角色，它具有类似于窗口的 <abbr>GUI</abbr>（图形用户界面），无论是整个原生窗口，还是只是外观像窗口的文档部分，使用 `role="dialog"` 最为合适。
+`window` 角色是一个抽象角色，是定义浏览器或应用程序窗口的角色的超类。目前唯一的子类为 [`dialog`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role) 角色，它具有类似于窗口的 <abbr>GUI</abbr>（图形用户界面），无论是整个原生窗口，还是只是外观像窗口的文档部分，使用 `role="dialog"` 最为合适。
 
 ## 最佳实践
 
@@ -26,5 +26,5 @@ l10n:
 
 ## 参见
 
-- [ARIA：`roletype` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/roletype_role)
-- [ARIA：`dialog` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/dialog_role)
+- [ARIA：`roletype` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/roletype_role)
+- [ARIA：`dialog` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
