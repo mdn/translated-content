@@ -91,7 +91,7 @@ pc.ontrack = ({ track, streams }) => {
 };
 ```
 
-当发生 `track` 事件时，将执行该处理器。使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)可以提取 {{domxref("RTCTrackEvent")}} 的 {{domxref("RTCTrackEvent.track", "track")}} 和 {{domxref("RTCTrackEvent.streams", "streams")}} 属性。前者是接收到的视频轨或音频轨。后者是一个 {{domxref("MediaStream")}} 对象数组，每个对象代表一个包含该音轨的流（在极少数情况下，一个音轨可能同时属于多个流）。在我们的例子中，这将始终包含一个流，位于 0 号索引，因为我们之前在 `addTrack()` 中传递了一个流。
+当发生 `track` 事件时，将执行该处理器。使用[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)可以提取 {{domxref("RTCTrackEvent")}} 的 {{domxref("RTCTrackEvent.track", "track")}} 和 {{domxref("RTCTrackEvent.streams", "streams")}} 属性。前者是接收到的视频轨或音频轨。后者是一个 {{domxref("MediaStream")}} 对象数组，每个对象代表一个包含该音轨的流（在极少数情况下，一个音轨可能同时属于多个流）。在我们的例子中，这将始终包含一个流，位于 0 号索引，因为我们之前在 `addTrack()` 中传递了一个流。
 
 我们为轨道添加一个取消静音事件处理器，因为轨道一旦开始接收数据包，就会取消静音。我们将接收代码的其余部分放在这里。
 

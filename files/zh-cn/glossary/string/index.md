@@ -14,4 +14,4 @@ l10n:
 ## 参见
 
 - 维基百科上的[字符串](https://zh.wikipedia.org/wiki/字符串)
-- [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures#string_类型)
+- [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#string_类型)

@@ -1,7 +1,6 @@
 ---
 title: 伪类和伪元素
 slug: Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
-original_slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}

@@ -168,7 +168,7 @@ caption {
     <tr>
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/columnheader_role"><code>columnheader</code></a> 或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/rowheader_role"><code>rowheader</code></a>
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role"><code>columnheader</code></a> 或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role"><code>rowheader</code></a>
       </td>
     </tr>
     <tr>

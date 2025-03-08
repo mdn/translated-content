@@ -11,7 +11,7 @@ CSS **`z-index`** 属性设置定位元素及其后代元素或 flex 项目的 Z
 
 对于定位盒子（即 `position` 属性值非 `static` 的盒子），`z-index` 属性会指定：
 
-1. 盒子在当前[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)中的层叠等级。
+1. 盒子在当前[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)中的层叠等级。
 2. 盒子是否会创建局部层叠上下文。
 
 ## 语法

@@ -2,7 +2,7 @@
 title: CSS 行內排版
 slug: Web/CSS/CSS_inline_layout
 l10n:
-  sourceCommit: 169f071e7bdff5e9b03cc56259e93907c5ea4f1d
+  sourceCommit: c037c6870bb89d81ccd9204809b06c92677c3a9a
 ---
 
 {{CSSRef}}
@@ -24,9 +24,14 @@ l10n:
 
 規範中還定義了以下屬性，但尚未被任何瀏覽器支援：`baseline-shift`、`baseline-source`、`initial-letter-align`、`initial-letter-wrap`、`inline-sizing`、`line-fit-edge`。
 
+### 資料類型
+
+- {{cssxref("&lt;text-edge&gt;")}}
+
 ### 術語表條目
 
 - {{glossary("baseline/typography", "基線")}}
+- {{glossary("leading", "行距")}}
 
 ## 相關概念
 

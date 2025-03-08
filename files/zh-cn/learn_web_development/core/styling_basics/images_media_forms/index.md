@@ -1,7 +1,6 @@
 ---
 title: 图像、媒体和表单元素
 slug: Learn_web_development/Core/Styling_basics/Images_media_forms
-original_slug: Learn/CSS/Building_blocks/Images_media_form_elements
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}

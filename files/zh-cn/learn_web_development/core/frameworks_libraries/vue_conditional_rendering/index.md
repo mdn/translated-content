@@ -1,7 +1,6 @@
 ---
 title: Vue 中的条件渲染：编辑现有的待办事项
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties","Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management", "Learn_web_development/Core/Frameworks_libraries")}}
