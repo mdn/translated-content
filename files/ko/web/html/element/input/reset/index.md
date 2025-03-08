@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`reset`** 유형의 {{HTMLElement("input")}} 요소는 버튼으로 렌더링되며, 기본 {{domxref("Element/click_event", "click")}} 이벤트 처리기가 설정되어 있어 폼 내 모든 입력 값을 초기 값으로 초기화합니다. 
+**`reset`** 유형의 {{HTMLElement("input")}} 요소는 버튼으로 렌더링되며, 기본 {{domxref("Element/click_event", "click")}} 이벤트 처리기가 설정되어 있어 폼 내 모든 입력 값을 초기 값으로 초기화합니다.
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;reset&quot;&gt;", "tabbed-standard")}}
 
@@ -125,14 +125,13 @@ input[type="submit"] {
 
 {{EmbedLiveSample("Adding_a_reset_keyboard_shortcut", 650, 100)}}
 
-위 예제의 문제는 사용자가 접근 키가 무엇인지 알 수 없다는 점입니다! 특히 수정 키의 충돌을 피하기 위해 일반적이지 않은 키로 설정하는 경우가 많기 때문에 문제가 더욱 두드러집니다. 
+위 예제의 문제는 사용자가 접근 키가 무엇인지 알 수 없다는 점입니다! 특히 수정 키의 충돌을 피하기 위해 일반적이지 않은 키로 설정하는 경우가 많기 때문에 문제가 더욱 두드러집니다.
 
 사이트를 만들 때는 이 정보를 사이트 디자인에 방해되지 않는 방식으로 제공해야 합니다 (예: 사이트 접근 키에 대한 정보를 제공하는 쉽게 접근할 수 있는 링크를 제공하는 방식). 버튼에 툴팁을 추가하는 것도 도움이 될 수 있지만, [`title`](/ko/docs/Web/HTML/Global_attributes/title) 속성을 사용하는 것처럼 접근성 측면에서 완전한 해결책은 아닙니다.
 
-
 ### 초기화 버튼 비활성화 및 활성화
 
-초기화 버튼을 비활성화하려면, 그 위에 [`disabled`](/ko/docs/Web/HTML/Element/input#disabled) 속성을 지정하면 됩니다. 
+초기화 버튼을 비활성화하려면, 그 위에 [`disabled`](/ko/docs/Web/HTML/Element/input#disabled) 속성을 지정하면 됩니다.
 
 ```html
 <input type="reset" value="Disabled" disabled />
