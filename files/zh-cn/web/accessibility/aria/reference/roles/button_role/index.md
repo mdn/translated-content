@@ -1,12 +1,9 @@
 ---
 title: ARIA：button 角色
 slug: Web/Accessibility/ARIA/Reference/Roles/button_role
-original_slug: Web/Accessibility/ARIA/Roles/button_role
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 `button` 角色用于可单击的元素，在用户激活时触发响应。添加 `role="button"` 会告诉屏幕阅读器这个元素是个按钮，但是不提供按钮的功能。你应该使用的 {{HTMLElement("button")}} 或者 `type="button"` 的 {{HTMLElement("input")}}。
 

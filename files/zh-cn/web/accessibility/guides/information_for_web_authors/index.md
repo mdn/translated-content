@@ -1,12 +1,9 @@
 ---
 title: Web 作者的无障碍信息
 slug: Web/Accessibility/Guides/Information_for_Web_authors
-original_slug: Web/Accessibility/Information_for_Web_authors
 l10n:
   sourceCommit: 6b8bb90a20d7fe2628d17a81cfd42d10747e8dbb
 ---
-
-{{AccessibilitySidebar}}
 
 ## 指南和规定
 

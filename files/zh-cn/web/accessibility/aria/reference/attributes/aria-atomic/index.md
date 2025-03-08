@@ -1,12 +1,9 @@
 ---
 title: aria-atomic
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-atomic
-original_slug: Web/Accessibility/ARIA/Attributes/aria-atomic
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 在 ARIA 实时区域中，`aria-atomic` 全局属性指示辅助技术（如屏幕阅读器）是否基于由 [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) 属性定义的更改通知，呈现所有或仅部分更改区域。
 

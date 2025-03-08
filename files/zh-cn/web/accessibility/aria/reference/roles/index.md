@@ -1,12 +1,9 @@
 ---
 title: WAI-ARIA 角色
 slug: Web/Accessibility/ARIA/Reference/Roles
-original_slug: Web/Accessibility/ARIA/Roles
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 ARIA 角色为内容提供了语义，允许屏幕阅读器和其他工具与对象类型的用户预期一致的方式进行呈现并支持交互。<abbr>ARIA</abrr> 角色可以用于描述不在 HTML 中原生存在的元素，或者存在但没有完整的浏览器支持的元素。
 

@@ -1,12 +1,9 @@
 ---
 title: aria-label
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-label
-original_slug: Web/Accessibility/ARIA/Attributes/aria-label
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 `aria-label` 属性定义了一个字符串值，用于为交互元素提供标签。
 

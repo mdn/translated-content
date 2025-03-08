@@ -1,12 +1,9 @@
 ---
 title: Web 无障碍：理解颜色和亮度
 slug: Web/Accessibility/Guides/Colors_and_Luminance
-original_slug: Web/Accessibility/Understanding_Colors_and_Luminance
 l10n:
   sourceCommit: 312b03847b403e68cdca43f974f4b87b69e5bf34
 ---
-
-{{AccessibilitySidebar}}
 
 对于所有视力正常的用户来说，理解颜色、亮度和饱和度对设计和可读性都很重要；对于视力减退、色盲以及特定神经、认知和其他障碍的人来说，这些因素也是必不可少的。
 

@@ -1,12 +1,9 @@
 ---
 title: aria-colcount
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-colcount
-original_slug: Web/Accessibility/ARIA/Attributes/aria-colcount
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 `aria-colcount` 属性定义了当所有列都不在 [DOM](/zh-CN/docs/Glossary/DOM) 中时，在 [`table`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)、[`grid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) 或 [`treegrid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) 中的列总数。
 

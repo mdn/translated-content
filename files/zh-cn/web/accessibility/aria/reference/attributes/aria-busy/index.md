@@ -1,12 +1,9 @@
 ---
 title: aria-busy
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-busy
-original_slug: Web/Accessibility/ARIA/Attributes/aria-busy
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 在 [ARIA 实时区域](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Live_regions)中，全局的 `aria-busy` 状态指示元素正在被修改，并且辅助技术可能希望等到更改完成后再通知用户更新情况。
 

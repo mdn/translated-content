@@ -1,12 +1,9 @@
 ---
 title: aria-hidden
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-hidden
-original_slug: Web/Accessibility/ARIA/Attributes/aria-hidden
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 `aria-hidden` 状态指示元素是否暴露给无障碍 API。
 

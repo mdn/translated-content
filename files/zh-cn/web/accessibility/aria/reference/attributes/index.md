@@ -1,10 +1,7 @@
 ---
 title: ARIA 状态及属性
 slug: Web/Accessibility/ARIA/Reference/Attributes
-original_slug: Web/Accessibility/ARIA/Attributes
 ---
-
-{{AccessibilitySidebar}}
 
 这个页面列出了 MDN 上讨论的所有 WAI-ARIA 属性的参考页面。
 

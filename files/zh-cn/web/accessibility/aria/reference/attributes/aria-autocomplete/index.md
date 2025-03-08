@@ -1,12 +1,9 @@
 ---
 title: aria-autocomplete
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete
-original_slug: Web/Accessibility/ARIA/Attributes/aria-autocomplete
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 `aria-autocomplete` 属性指示对于 [`combobox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)、[`searchbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role) 或 [`textbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)，输入文本是否可能触发显示用户预期值的一个或多个预测，并指定如果进行预测，预测将如何呈现。
 

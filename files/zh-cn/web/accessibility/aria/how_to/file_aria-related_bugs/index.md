@@ -1,12 +1,9 @@
 ---
 title: 如何提交与 ARIA 相关的错误
 slug: Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
-original_slug: Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 ARIA 技术的状态一直依赖于社区。如果你注意到了一个实现问题，请花点时间告诉开发人员。以下是提交错误的位置：
 

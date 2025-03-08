@@ -1,12 +1,9 @@
 ---
 title: aria-activedescendant
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant
-original_slug: Web/Accessibility/ARIA/Attributes/aria-activedescendant
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 `aria-activedescendant` 属性用于标识焦点位于 [`composite`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role) 微件、[`combobox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)、[`textbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)、[`group`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)或 [`application`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/application_role) 上时当前活动的元素。
 

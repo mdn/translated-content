@@ -1,12 +1,9 @@
 ---
 title: aria-colspan
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-colspan
-original_slug: Web/Accessibility/ARIA/Attributes/aria-colspan
 l10n:
   sourceCommit: 194bd13942ad0c532c92d364e0d5d0c36732d98c
 ---
-
-{{AccessibilitySidebar}}
 
 `aria-colspan` 属性定义了在 [`table`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)、[`grid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) 或 [`treegrid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) 中，单元格或网格单元格跨越的列数。
 

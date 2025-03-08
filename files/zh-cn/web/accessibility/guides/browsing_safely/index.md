@@ -1,12 +1,9 @@
 ---
 title: 无障碍：用户如何更安全地浏览网页
 slug: Web/Accessibility/Guides/Browsing_safely
-original_slug: Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 这篇文章讨论了如何通过利用操作系统内置的个性化和无障碍设置，使患有前庭障碍的人以及支持他们的人能够更加方便地访问 web 内容。充分利用个性化设置可以帮助防止接触可能引发癫痫或其他身体反应的内容。
 

@@ -1,12 +1,9 @@
 ---
 title: 理解 Web 内容无障碍指南
 slug: Web/Accessibility/Guides/Understanding_WCAG
-original_slug: Web/Accessibility/Understanding_WCAG
 l10n:
   sourceCommit: 4e689448e34b2a4bfaa3a8462903cde4ab53643e
 ---
-
-{{AccessibilitySidebar}}
 
 这一组文章提供了帮助你理解如何遵循 W3C Web 内容无障碍指南 2.0 或 2.1（或者只是 WCAG，出于撰写本文的目的）建议的步骤的快速解释。
 

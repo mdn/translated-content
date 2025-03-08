@@ -1,12 +1,9 @@
 ---
 title: 多部分标签：使用嵌入字段的标签的 ARIA
 slug: Web/Accessibility/ARIA/Guides/Multipart_labels
-original_slug: Web/Accessibility/ARIA/Multipart_labels
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 ## 问题
 

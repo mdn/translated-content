@@ -1,12 +1,9 @@
 ---
 title: aria-labelledby
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby
-original_slug: Web/Accessibility/ARIA/Attributes/aria-labelledby
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 `aria-labelledby` 属性标识用作应用到当前元素的标签的元素。
 

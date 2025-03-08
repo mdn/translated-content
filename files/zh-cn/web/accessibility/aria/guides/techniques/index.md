@@ -1,12 +1,9 @@
 ---
 title: 使用 ARIA：角色、状态和属性
 slug: Web/Accessibility/ARIA/Guides/Techniques
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques
 l10n:
   sourceCommit: 07f0cf4375aaa02e1071d8bd0e8518db7609b7a9
 ---
-
-{{AccessibilitySidebar}}
 
 ARIA 定义了可以应用于元素的语义，这些语义分为**角色**（定义一种用户界面元素）和由角色支持的**状态**和**属性**。作者必须在元素的生命周期中为其分配一个 ARIA 角色和适当的状态和属性，除非该元素已经具有适当的 ARIA 语义（通过使用适当的 HTML 元素）。添加 ARIA 语义只会向浏览器的无障碍 API 公开额外信息，而不会影响页面的 DOM。
 

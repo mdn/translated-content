@@ -1,12 +1,9 @@
 ---
 title: ARIA：listitem 角色
 slug: Web/Accessibility/ARIA/Reference/Roles/listitem_role
-original_slug: Web/Accessibility/ARIA/Roles/listitem_role
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 ARIA `listitem` 角色可用于标识项目列表中的项目。它通常与 [`list`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/list_role) 角色（用于标识列表容器）结合使用。
 

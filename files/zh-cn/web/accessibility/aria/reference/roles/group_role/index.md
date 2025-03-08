@@ -1,12 +1,9 @@
 ---
 title: ARIA：group 角色
 slug: Web/Accessibility/ARIA/Reference/Roles/group_role
-original_slug: Web/Accessibility/ARIA/Roles/group_role
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 `group` 角色用于标识无需被辅助技术所包含的页面摘要或目录中的 UI 对象。
 

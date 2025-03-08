@@ -1,12 +1,9 @@
 ---
 title: ARIA 指南
 slug: Web/Accessibility/ARIA/Guides
-original_slug: Web/Accessibility/ARIA/ARIA_Guides
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 无障碍富互联网应用（**ARIA**）定义了能够让残障人士更方便地使用 web 的方法。本页面列出了可用于帮助改善网页特性（如表格、表单和键盘导航）的无障碍水平的指南。
 

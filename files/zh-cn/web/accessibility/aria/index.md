@@ -3,8 +3,6 @@ title: ARIA
 slug: Web/Accessibility/ARIA
 ---
 
-{{AccessibilitySidebar}}
-
 无障碍富互联网应用（Accessible Rich Internet Applications，**<abbr>ARIA</abbr>**）是一组[角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles)和[属性](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes)，用于定义使残障人士更易于访问 web 内容和 web 应用程序（尤其是使用 JavaScript 开发的应用程序）的方法。
 
 它补充了 HTML，以便在没有其他机制时可以将应用程序中常用的交互和小部件传递给辅助技术。例如，ARIA 支持无障碍 JavaScript 小部件、表单提示和错误消息、实时内容更新等。

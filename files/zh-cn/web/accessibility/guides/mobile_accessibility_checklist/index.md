@@ -1,12 +1,9 @@
 ---
 title: 移动无障碍清单
 slug: Web/Accessibility/Guides/Mobile_accessibility_checklist
-original_slug: Web/Accessibility/Mobile_accessibility_checklist
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 该文档为移动应用开发者提供一个无障碍需求的简要清单。此文档将随着技术模式的发展而不断演进。
 

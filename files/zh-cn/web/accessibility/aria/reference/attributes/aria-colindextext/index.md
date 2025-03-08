@@ -1,12 +1,9 @@
 ---
 title: aria-colindextext
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext
-original_slug: Web/Accessibility/ARIA/Attributes/aria-colindextext
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 `aria-colindextext` 属性定义了数字 [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) 的可读文本替代。
 

@@ -1,12 +1,9 @@
 ---
 title: aria-colindex
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-colindex
-original_slug: Web/Accessibility/ARIA/Attributes/aria-colindex
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 `aria-colindex` 属性定义了元素相对于 `table`、`grid` 或 `treegrid` 中总列数的列索引或位置。
 

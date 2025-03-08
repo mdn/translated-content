@@ -1,12 +1,9 @@
 ---
 title: aria-brailleroledescription
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription
-original_slug: Web/Accessibility/ARIA/Attributes/aria-brailleroledescription
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 全局 `aria-brailleroledescription` 属性定义了一个人类可读的、作者本地化的缩写描述，用于指定一个元素的角色，旨在转换为盲文。
 

@@ -1,12 +1,9 @@
 ---
 title: ARIA：list 角色
 slug: Web/Accessibility/ARIA/Reference/Roles/list_role
-original_slug: Web/Accessibility/ARIA/Roles/list_role
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 ARIA `list` 角色可用于标识项目列表。它通常与 `listitem` 角色结合使用，该角色用于标识包含在列表中的列表项。
 

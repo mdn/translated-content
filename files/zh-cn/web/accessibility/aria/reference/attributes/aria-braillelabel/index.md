@@ -1,12 +1,9 @@
 ---
 title: aria-braillelabel
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel
-original_slug: Web/Accessibility/ARIA/Attributes/aria-braillelabel
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 全局 `aria-braillelabel` 属性定义了一个用于标记当前元素的字符串值，该字符串值旨在转换为盲文。
 

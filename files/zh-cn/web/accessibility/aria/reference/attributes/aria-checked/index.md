@@ -1,12 +1,9 @@
 ---
 title: aria-checked
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-checked
-original_slug: Web/Accessibility/ARIA/Attributes/aria-checked
 l10n:
   sourceCommit: 3810b129d05f1076d271c4498cbecdec30ad1d39
 ---
-
-{{AccessibilitySidebar}}
 
 `aria-checked` 属性指示复选框、单选按钮和其他小部件的当前“已选中”状态。
 
