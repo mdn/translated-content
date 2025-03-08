@@ -1,7 +1,6 @@
 ---
 title: JavaScript 的資料型別與資料結構
 slug: Web/JavaScript/Guide/Data_structures
-original_slug: Web/JavaScript/Data_structures
 ---
 
 {{jsSidebar("More")}}

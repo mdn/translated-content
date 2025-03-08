@@ -1,10 +1,7 @@
 ---
 title: 行動無障礙檢核清單
 slug: Web/Accessibility/Guides/Mobile_accessibility_checklist
-original_slug: Web/Accessibility/Mobile_accessibility_checklist
 ---
-
-{{AccessibilitySidebar}}
 
 本文提供行動應用程式開發者一個簡潔的無障礙必備要件檢核清單，本文將隨著更多模型產生而不斷地演進。
 

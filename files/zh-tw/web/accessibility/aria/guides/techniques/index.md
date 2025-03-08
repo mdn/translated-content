@@ -1,10 +1,7 @@
 ---
 title: 使用 ARIA：角色、狀態和屬性
 slug: Web/Accessibility/ARIA/Guides/Techniques
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques
 ---
-
-{{AccessibilitySidebar}}
 
 ## 角色
 

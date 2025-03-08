@@ -1,7 +1,6 @@
 ---
 title: 解構
 slug: Web/JavaScript/Reference/Operators/Destructuring
-original_slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
 
 {{jsSidebar("Operators")}}
