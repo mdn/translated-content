@@ -1,36 +1,23 @@
 ---
 title: 为 HTML 5 视频提供的 DASH 自适应串流
 slug: Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming
-original_slug: Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video
 ---
 
 经由 HTTP 的动态自适应串流（DASH）是一种自适应串流协议。这意味着它使得视频串流能基于网络性能来调整比特率，以保证视频流畅播放。
 
-## 浏览器支持
-
-Firefox 21 包含了针对 HTM5 WebM 视频的 DASH 实现，但默认没有启用。可以通过在“about:config”里调整“`media.dash.enabled`”首选项来开启。
-
-Firefox 23 移除了针对 HTML5 WebM 视频的 DASH 实现。此功能将被 [媒体源扩展 API（MSE）](https://www.w3.org/TR/media-source/)的实现取代。MSE 可实现通过 JavaScript 库（例如 dash.js）来提供对 DASH 的支持。详情参见 Bug [778617](https://bugzilla.mozilla.org/show_bug.cgi?id=778617)。
-
-## 使用 DASH - 服务端
-
 首先，你需要将 WebM 视频转换为带有不同比特率的随附视频文件的 DASH 清单。根据你的需求，启动从 [ffmpeg.org](https://www.ffmpeg.org/) 的 ffmpeg 程序，就可以使用 libvpx 和 libbvorbis 支持的 WebM 视频和音频（版本 2.5 以上，3.2.5 版本已通过测试）。
 
-### 1. 使用现有的 WebM 文件创建一个音频文件和多个视频文件
-
-例如：
-
-文件**_in.video_**可以是任何包含至少一个音频和一个视频流的容器，这些容器可以由 ffmpeg 解码，
+首先，使用现有的 WebM 文件创建一个音频文件和多个视频文件。在以下的示例中，文件 **_in.video_** 可以是任何包含至少一个音频和一个视频流的容器，这些容器可以由 FFmpeg 解码。
 
 创建音频：
 
-```plain
+```bash
 ffmpeg -i in.video -vn -acodec libvorbis -ab 128k my_audio.webm
 ```
 
 创建不同的视频
 
-```plain
+```bash
 ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 -g 150 -tile-columns 4 -frame-parallel 1  -f webm -dash 1 \
 -an -vf scale=160:190 -b:v 250k video_160x90_250k.webm
 
@@ -49,7 +36,7 @@ ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 -g 150 -tile-columns 4 -frame
 
 或使用命令创建以上视频：
 
-```plain
+```bash
 ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 \
 -g 150 -tile-columns 4 -frame-parallel 1  -f webm -dash 1 \
 -an -vf scale=160:190 -b:v 250k video_160x90_250k.webm \
@@ -59,9 +46,9 @@ ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 \
 -an -vf scale=1280:720 -b:v 1500k  video_1280x720_1500k.webm
 ```
 
-### 2. 创建清单文件
+然后，创建清单文件
 
-```plain
+```bash
 ffmpeg \
   -f webm_dash_manifest -i video_160x90_250k.webm \
   -f webm_dash_manifest -i video_320x180_500k.webm \
@@ -93,10 +80,8 @@ ffmpeg \
 
 如果浏览器支持 DASH，则你的视频现在将自适应地流式传输。
 
-## Links
+## 参见
 
-[WebM DASH Specification at The WebM Project](https://wiki.webmproject.org/adaptive-streaming/webm-dash-specification)
-
-[DASH Industry Forum](https://dashif.org/)
-
-[WebM project description of how to create DASH files with FFMPEG](https://wiki.webmproject.org/adaptive-streaming/instructions-to-playback-adaptive-webm-using-dash)
+- [WebM 项目，WebM DASH 规范](https://wiki.webmproject.org/adaptive-streaming/webm-dash-specification)
+- [DASH 行业论坛](https://dashif.org/)
+- [WebM 项目有关如何使用 FFMPEG 创建 DASH 文件的说明](https://wiki.webmproject.org/adaptive-streaming/instructions-to-playback-adaptive-webm-using-dash)
