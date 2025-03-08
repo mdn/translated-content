@@ -39,7 +39,6 @@ Content-Type: image/jpeg
 
 如果對可處理的檔案大小有最大限制，伺服器可能會拒絕上傳，且回應主體包含帶有相關資訊的 `message`。
 
-
 ```http
 HTTP/1.1 413 Content Too Large
 Content-Type: application/json
