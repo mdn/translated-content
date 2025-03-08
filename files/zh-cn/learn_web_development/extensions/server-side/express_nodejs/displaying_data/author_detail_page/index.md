@@ -1,7 +1,6 @@
 ---
 title: 作者详情页面
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
-
 l10n:
   sourceCommit: 8d5440dbd259fd6eea32b4f4a200f25257d1bf41
 ---

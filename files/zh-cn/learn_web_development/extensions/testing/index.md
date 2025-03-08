@@ -1,7 +1,6 @@
 ---
 title: 跨浏览器测试
 slug: Learn_web_development/Extensions/Testing
-
 l10n:
   sourceCommit: 26e2f9883e0e73def04c0e86fec6da3ec42e66b3
 ---

@@ -1,7 +1,6 @@
 ---
 title: 互联网是如何工作的
 slug: Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
-
 l10n:
   sourceCommit: 8dfa0ecf5bda526ccd6244ca5c7720767e3f013f
 ---

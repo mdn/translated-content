@@ -1,7 +1,6 @@
 ---
 title: Express 教程 4：路由和控制器
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/routes
-
 l10n:
   sourceCommit: 1467f47e1944c151b368e047fe4f9cf7f1f0e0e2
 ---

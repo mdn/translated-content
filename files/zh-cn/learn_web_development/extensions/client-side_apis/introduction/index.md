@@ -1,7 +1,6 @@
 ---
 title: Web API 简介
 slug: Learn_web_development/Extensions/Client-side_APIs/Introduction
-
 l10n:
   sourceCommit: 7e97f3c5ada65b6638909bde92881a4b8d46a2b8
 ---

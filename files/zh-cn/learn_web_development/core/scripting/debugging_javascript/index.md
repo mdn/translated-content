@@ -1,7 +1,6 @@
 ---
 title: 处理常见的 JavaScript 问题
 slug: Learn_web_development/Core/Scripting/Debugging_JavaScript
-
 l10n:
   sourceCommit: e8d495591fefeb3c0c484b989cc155b84b50bb57
 ---

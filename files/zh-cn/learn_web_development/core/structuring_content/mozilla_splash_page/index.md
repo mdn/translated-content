@@ -1,7 +1,6 @@
 ---
 title: Mozilla 欢迎页面
 slug: Learn_web_development/Core/Structuring_content/Mozilla_splash_page
-
 l10n:
   sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
 ---

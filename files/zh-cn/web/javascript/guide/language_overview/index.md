@@ -1,7 +1,6 @@
 ---
 title: JavaScript 语言概览
 slug: Web/JavaScript/Guide/Language_overview
-
 l10n:
   sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---

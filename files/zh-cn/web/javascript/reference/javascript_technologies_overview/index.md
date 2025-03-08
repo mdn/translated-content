@@ -1,7 +1,6 @@
 ---
 title: JavaScript 技术概览
 slug: Web/JavaScript/Reference/JavaScript_technologies_overview
-
 l10n:
   sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---

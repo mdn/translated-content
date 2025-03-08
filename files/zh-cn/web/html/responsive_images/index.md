@@ -1,7 +1,6 @@
 ---
 title: 响应式图片
 slug: Web/HTML/Responsive_images
-
 l10n:
   sourceCommit: dee5effadcb82cf2de9b50c128f7a050919ed523
 ---

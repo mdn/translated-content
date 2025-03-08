@@ -1,7 +1,6 @@
 ---
 title: Web 入门
 slug: Learn_web_development/Getting_started/Your_first_website
-
 l10n:
   sourceCommit: 33d92d501901ca505f1d33f914531753ca289f2e
 ---

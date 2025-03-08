@@ -1,7 +1,6 @@
 ---
 title: 什么是 web 服务器？
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
-
 l10n:
   sourceCommit: b2af4eb16dd4c399ed81f67efd49777fa6ae9030
 ---

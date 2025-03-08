@@ -1,7 +1,6 @@
 ---
 title: CSS 基础
 slug: Learn_web_development/Getting_started/Your_first_website/Styling_the_content
-
 l10n:
   sourceCommit: cde9330e9bbaddea72febf44dcc3a7db16fe1a11
 ---

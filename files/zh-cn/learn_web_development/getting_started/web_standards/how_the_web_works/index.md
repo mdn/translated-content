@@ -1,7 +1,6 @@
 ---
 title: 万维网是如何工作的
 slug: Learn_web_development/Getting_started/Web_standards/How_the_web_works
-
 l10n:
   sourceCommit: 530c1f54e63834411aa38789b1ac82e3831c4dfa
 ---

@@ -1,7 +1,6 @@
 ---
 title: 客户端 Web API
 slug: Learn_web_development/Extensions/Client-side_APIs
-
 l10n:
   sourceCommit: 26e2f9883e0e73def04c0e86fec6da3ec42e66b3
 ---

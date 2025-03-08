@@ -1,7 +1,6 @@
 ---
 title: 发布你的网站
 slug: Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
-
 l10n:
   sourceCommit: d71da812ee94c20658cb1916a123a42254ea545c
 ---

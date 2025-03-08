@@ -1,7 +1,6 @@
 ---
 title: 如何构建 HTML 表单
 slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
-
 l10n:
   sourceCommit: b76266228bd0900aa1256902c7858971156a58c9
 ---

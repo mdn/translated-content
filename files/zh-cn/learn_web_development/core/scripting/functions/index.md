@@ -1,7 +1,6 @@
 ---
 title: 函数——可复用的代码块
 slug: Learn_web_development/Core/Scripting/Functions
-
 l10n:
   sourceCommit: d36a0f08f71bc7e17a013da81ed63144a96f7699
 ---

@@ -1,7 +1,6 @@
 ---
 title: 内存管理
 slug: Web/JavaScript/Guide/Memory_management
-
 l10n:
   sourceCommit: 2c762771070a207d410a963166adf32213bc3a45
 ---

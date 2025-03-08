@@ -1,7 +1,6 @@
 ---
 title: 样式化表格
 slug: Learn_web_development/Core/Styling_basics/Tables
-
 l10n:
   sourceCommit: 75326725db2daa924618e58ae31a43345c7a16dc
 ---

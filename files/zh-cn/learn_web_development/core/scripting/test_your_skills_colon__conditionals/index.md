@@ -1,7 +1,6 @@
 ---
 title: 技能测试：条件语句
 slug: Learn_web_development/Core/Scripting/Test_your_skills:_Conditionals
-
 l10n:
   sourceCommit: bc0d0d1ef796435e969f6d65c7e5d3c08f4023aa
 ---

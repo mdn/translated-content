@@ -1,7 +1,6 @@
 ---
 title: 解决常见的无障碍问题
 slug: Learn_web_development/Core/Accessibility/Tooling
-
 l10n:
   sourceCommit: af1e384356e21dbcc573d1c1cc015ec79c644de1
 ---

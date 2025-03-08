@@ -1,7 +1,6 @@
 ---
 title: 自动化测试简介
 slug: Learn_web_development/Extensions/Testing/Automated_testing
-
 l10n:
   sourceCommit: 4dec42ed700040565e8af0e14ff104054ebc20f5
 ---

@@ -1,7 +1,6 @@
 ---
 title: 盒模型
 slug: Learn_web_development/Core/Styling_basics/Box_model
-
 l10n:
   sourceCommit: cafb94fe8b20ea9f38db7910b7da1b13e29354b5
 ---

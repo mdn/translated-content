@@ -1,7 +1,6 @@
 ---
 title: 从服务器获取数据
 slug: Learn_web_development/Core/Scripting/Network_requests
-
 l10n:
   sourceCommit: c215109b90da51435eaa2c94a8f6764909f628e0
 ---

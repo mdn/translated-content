@@ -1,7 +1,6 @@
 ---
 title: JavaScript 基础
 slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
-
 l10n:
   sourceCommit: 9e8b77593a626b1e0765494e4928b8f4a5c2d9bd
 ---

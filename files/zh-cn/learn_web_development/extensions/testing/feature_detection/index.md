@@ -1,7 +1,6 @@
 ---
 title: 实现特性检测
 slug: Learn_web_development/Extensions/Testing/Feature_detection
-
 l10n:
   sourceCommit: cde9330e9bbaddea72febf44dcc3a7db16fe1a11
 ---

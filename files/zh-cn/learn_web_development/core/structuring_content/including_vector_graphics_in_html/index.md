@@ -1,7 +1,6 @@
 ---
 title: 向 web 中添加矢量图形
 slug: Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
-
 l10n:
   sourceCommit: 2492742db9d7341fa74604a1b4cd97dc3c079cab
 ---

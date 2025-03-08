@@ -1,7 +1,6 @@
 ---
 title: 第三方 API
 slug: Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs
-
 l10n:
   sourceCommit: bc0d0d1ef796435e969f6d65c7e5d3c08f4023aa
 ---
