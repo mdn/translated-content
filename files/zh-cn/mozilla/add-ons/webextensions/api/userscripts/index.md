@@ -12,7 +12,7 @@ l10n:
 > [!NOTE]
 > 本文档针对新版 API 编写，适用于 Firefox Manifest V3 版本。参见 {{WebExtAPIRef("userScripts_legacy","userScripts（旧版）")}}以获取有关可用于 Firefox Manifest V2 的 API。
 
-此 API 提供类似 {{WebExtAPIRef("contentScripts")}} 的功能，但包含一些专为处理第三方脚本而设计的特性。
+此 API 提供类似 {{WebExtAPIRef("scripting")}} 的功能，但包含一些专为处理第三方脚本而设计的特性。
 
 ## 权限
 
@@ -25,7 +25,7 @@ l10n:
 
 当用户脚本被注册或更新（使用 {{WebExtAPIRef("userScripts.register()")}} 或 {{WebExtAPIRef("userScripts.update()")}}）时，你的扩展可以将其设置为在隔离的 `USER_SCRIPT` 环境（word）或 `MAIN` 环境中运行。
 
-`USER_SCRIPT` 环境提供了隔离的运行时环境，无法访问宿主页面和其他扩展。这种隔离与[内容脚本环境](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#内容脚本环境)类似，除了 `USER_SCRIPT` 环境不能访问扩展 API。
+`USER_SCRIPT` 环境提供了隔离的运行环境，无法访问宿主页面和其他扩展。这种隔离与[内容脚本环境](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#内容脚本环境)类似，除了 `USER_SCRIPT` 环境不能访问扩展 API。
 
 用户脚本可以共享 `USER_SCRIPT` 环境，也可以通过设置 {{WebExtAPIRef("userScripts.RegisteredUserScript", "RegisteredUserScript")}} 的 `worldId` 属性将自己隔离在 `USER_SCRIPT` 环境中。此 API 允许扩展使用 {{WebExtAPIRef("userScripts.configureWorld()")}} 配置 `USER_SCRIPT` 环境的内容安全策略（CSP）。
 
@@ -52,9 +52,9 @@ browser.userScripts.configureWorld({
 ## 类型
 
 - {{WebExtAPIRef("userScripts.ExecutionWorld")}}
-  - : 使用 {{WebExtAPIRef("userScripts.register()")}} 或 {{WebExtAPIRef("userScripts.update()")}} 注入的脚本的执行环境。
+  - : 使用 {{WebExtAPIRef("userScripts.register()")}} 或 {{WebExtAPIRef("userScripts.update()")}} 注入的脚本的运行环境。
 - {{WebExtAPIRef("userScripts.RegisteredUserScript")}}
-  - : 一个由 {{WebExtAPIRef("userScripts.getScripts","getScripts()")}} 返回的对象，表示注册的用户脚本，用作 {{WebExtAPIRef("userScripts.register","register()")}} 和 {{WebExtAPIRef("userScripts.update","update()")}} 的输入。
+  - : 一个由 {{WebExtAPIRef("userScripts.getScripts","getScripts()")}} 返回的对象（`object`），表示注册的用户脚本，用作 {{WebExtAPIRef("userScripts.register","register()")}} 和 {{WebExtAPIRef("userScripts.update","update()")}} 的输入。
 - {{WebExtAPIRef("userScripts.ScriptSource")}}
   - : 用作用户脚本的代码或文件的源。
 - {{WebExtAPIRef("userScripts.UserScriptFilter")}}
@@ -65,7 +65,7 @@ browser.userScripts.configureWorld({
 ## 方法
 
 - {{WebExtAPIRef("userScripts.configureWorld()")}}
-  - : 配置一个扩展的 `USER_SCRIPT` 执行环境。
+  - : 配置一个扩展的 `USER_SCRIPT` 运行环境。
 - {{WebExtAPIRef("userScripts.getScripts()")}}
   - : 返回由扩展注册的用户脚本。
 - {{WebExtAPIRef("userScripts.getWorldConfigurations()")}}
@@ -75,7 +75,7 @@ browser.userScripts.configureWorld({
 - {{WebExtAPIRef("userScripts.resetWorldConfiguration()")}}
   - : 重置由扩展注册的 `USER_SCRIPT` 环境的配置。
 - {{WebExtAPIRef("userScripts.unregister()")}}
-  - : 取消注册由扩展注册的用户脚本。
+  - : 注销由扩展注册的用户脚本。
 - {{WebExtAPIRef("userScripts.update()")}}
   - : 更新由扩展注册的用户脚本。
 
