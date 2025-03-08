@@ -2,7 +2,7 @@
 title: Navigation：reload() 方法
 slug: Web/API/Navigation/reload
 l10n:
-  sourceCommit: d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
+  sourceCommit: eb7531ab58621ef93a76520b91bc3550357a64df
 ---
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
@@ -12,6 +12,7 @@ l10n:
 ## 语法
 
 ```js-nolint
+reload()
 reload(options)
 ```
 
