@@ -1,6 +1,8 @@
 ---
 title: 技能测试：选择器
 slug: Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks
+l10n:
+  sourceCommit: 782d88782968782657abad748e20770229c6aab6
 ---
 
 {{LearnSidebar}}
@@ -18,9 +20,9 @@ slug: Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks
 - 使 `<h2>` 标题具有蓝色背景和白色文本。
 - 使 `<span>` 中的文本的字体大小为 200%。
 
-你的最终结果应该看起来像这样：
+你的最终结果应该与下面的图片类似：
 
-![用于任务 1 解决方案的 CSS 文本。](selectors1.jpg)
+![应用了任务 1 解决方案的 CSS 的文本。](selectors1.jpg)
 
 尝试更新下面的代码，以重现完整的示例：
 
@@ -77,13 +79,13 @@ span {
 在此任务中，我们希望你在不改变 HTML 的情况下，对本例中内容的外观进行以下更改：
 
 - 为 id 为 `special` 的元素设置黄色背景。
-- 将 `alert` 类的元素添加 2px 灰色边框。
+- 为 `alert` 类的元素添加 2px 灰色边框。
 - 为同时是 `alert` 类和 `stop` 类的元素设置红色背景。
 - 为同时是 `alert` 类和 `go` 类的元素设置绿色背景。
 
-你的最终结果应该看起来像这样：
+你的最终结果应该与下面的图片类似：
 
-![用于任务 2 解决方案的 CSS 文本。](selectors2.jpg)
+![应用了任务 2 解决方案的 CSS 的文本。](selectors2.jpg)
 
 尝试更新下面的代码，以重现完整的示例：
 
@@ -148,9 +150,9 @@ body {
 - 为容器内的第一个元素设置 `font-size: 150%` ，并将其第一行文字设为红色。
 - 为表格每隔一行添加条纹效果，设置背景颜色为 `#333`，前景色为白色。
 
-你的最终结果应该看起来像这样：
+你的最终结果应该与下面的图片类似：
 
-![用于任务 3 解决方案的 CSS 文本。](selectors3.jpg)
+![应用了任务 3 解决方案的 CSS 的文本。](selectors3.jpg)
 
 尝试更新下面的代码，以重现完整的示例：
 
@@ -262,11 +264,11 @@ tr:nth-child(even) {
 在此任务中，我们希望你做到：
 
 - 将 `<h2>` 元素后的首个段落文字设为红色。
-- 为 list 类的无序列表移除其子元素的项目符号，并为其添加 1px 的灰色下边框。
+- 为 `list` 类的无序列表（ul）移除其子元素的项目符号，并为其添加 1px 的灰色下边框。
 
-你的最终结果应该看起来像这样：
+你的最终结果应该与下面的图片类似：
 
-![用于任务 4 解决方案的 CSS 文本。](selectors4.jpg)
+![应用了任务 4 解决方案的 CSS 的文本。](selectors4.jpg)
 
 尝试更新下面的代码，以重现完整的示例：
 
@@ -304,8 +306,7 @@ body {
 <details>
 <summary>点击查看答案</summary>
 
-这个任务旨在检查你是否理解如何使用不同的组合器。
-以下是一个合适的解决方案：
+这个任务旨在检查你是否理解如何使用不同的组合器。以下是一个合适的解决方案：
 
 ```css
 h2 + p {
@@ -328,7 +329,7 @@ h2 + p {
 - 选择带有 `href` 属性且属性值中包含 `contact` 的 `<a>` 元素，将其边框颜色设置为橙色（`border-color: orange`）。
 - 选择 `href` 属性值以 `https` 开头的 `<a>` 元素，将其边框颜色设置为绿色（`border-color: green`）。
 
-你的最终结果应该看起来像这样：
+你的最终结果应该与下面的图片类似：
 
 ![4 个具有不同的颜色边框的链接。](selectors-attribute.png)
 
@@ -377,12 +378,8 @@ a {
 <summary>点击查看答案</summary>
 
 - 要选择带有 title 属性的元素，我们可以在方括号中添加 title（如 `a[title]`），这样会选中第二个链接，因为它是唯一带有 title 属性的链接。
-
-- 选择 href 属性中包含 "contact" 的 `<a>` 元素，并将其边框设为橙色（`border-color: orange`）。
-  这里需要匹配两种情况：`/contact` 和 `../contact`。因此，我们可以使用 `*=` 来匹配 href 值中任意位置包含 "contact" 的链接。这样会选中第三个和第四个链接。
-
-- 选择 href 值以 https 开头的 `<a>` 元素，并将其边框设为绿色（`border-color: green`）。
-  查找 href 值以 "https" 开头的链接，因此使用 `^=` 来仅选中第一个链接。
+- 选择 `href` 属性中包含“contact”的 `<a>` 元素，并将其边框设为橙色（`border-color: orange`）。这里需要匹配两种情况：`/contact` 和 `../contact`。因此，我们可以使用 `*=` 来匹配 href 值中任意位置包含“contact”的链接。这样会选中第三个和第四个链接。
+- 选择 href 值以 `https` 开头的 `<a>` 元素，并将其边框设为绿色（`border-color: green`）。查找 href 值以“https”开头的链接，因此使用 `^=` 来仅选中第一个链接。
 
 ```css
 a[title] {
