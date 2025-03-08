@@ -9,7 +9,7 @@ l10n:
 
 {{NextMenu("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills")}}
 
-Web 开发者需要掌握的知识很多，同时还需要不断学习。但应该如何才能最有效地找到自己需要的知识呢？本文将为你提供研究和学习方面的实用技巧。
+Web 开发者需要掌握很多的知识，同时还需要不断学习。但应该如何才能最有效地找到自己需要的知识呢？本文将为你提供研究和学习方面的实用技巧。
 
 <table>
   <tbody>
@@ -43,7 +43,7 @@ Web 开发者需要掌握的知识很多，同时还需要不断学习。但应�
 
 ### 选择高质量的资源
 
-你应该确保你所选择用于研究的资源质量高、声誉好。为了解哪些资源声誉卓著，你可以征求老师或更有经验的同事的推荐，也可以在网上搜索，了解网络上其他人推荐的资源。当然，MDN 是值得推荐的；其他不错的资源也包括：
+你应该确保你所选择用于研究的资源质量高、声誉好。为了解哪些资源声誉卓著，你可以征求老师或更有经验的同事的推荐，也可以在网上搜索，了解 Web 上其他人推荐的资源。当然，MDN 是值得推荐的；还有一些其他不错的资源，例如：
 
 - [Stack Overflow](https://stackoverflow.com/)
 - [Scrimba](https://scrimba.com/?via=mdn) <sup>课程伙伴</sup>
@@ -269,7 +269,7 @@ ul {
 
 Web 中有[开发者工具](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)允许你查看任何网站构建时所用的代码。如果你手头没有现成的解决方案，一个好的研究方法是寻找功能类似的网站，并查看他们是如何实现的。
 
-## 持有不断学习的心态
+## 保持不断学习的心态
 
 你应当培养一个持续学习的心态。Web 技术在不断演变，技术和趋势总是在变化，你需要不断更新知识来跟上时代。你永远也不可能学完所有东西！
 
