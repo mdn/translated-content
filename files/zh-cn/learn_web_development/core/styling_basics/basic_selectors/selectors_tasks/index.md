@@ -1,33 +1,54 @@
 ---
 title: 技能测试：选择器
 slug: Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks
-original_slug: Learn/CSS/Building_blocks/Selectors/Selectors_Tasks
 ---
 
 {{LearnSidebar}}
 
-这个任务的目的是帮助你理解 CSS 里的选择器。
+这个技能测试的目的是帮助你理解 [CSS 选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)。
 
 > [!NOTE]
-> 你可以在下面的交互式编辑器中尝试解决问题，然而把代码下载然后使用一个在线工具比如 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/) 去解决这些问题可能对你更有作用。
->
-> 如果你卡住了，可以向我们寻求帮助——请参阅本页底部的[打分评估或进一步帮助](#打分评估或进一步帮助)部分。
+> 点击下方代码块中的“**Play**”即可在 MDN 代码演练场中编辑示例。你也可以将代码复制并粘贴到在线编辑器（比如 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)）中。如果你卡住了，可以通过[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
 
 ## 任务一
 
-在此任务中，请在不改变 HTML 的情况下，使用 CSS 去完成下面的要求：:
+在此任务中，请在不改变 HTML 的情况下，使用 CSS 去完成下面的要求：
 
-- 使 `<h1>` 的字体颜色变为蓝色
-- 使 `<h2>` 为蓝色背景且白色文本。
+- 使 `<h1>` 标题变为蓝色。
+- 使 `<h2>` 标题具有蓝色背景和白色文本。
 - 使 `<span>` 中的文本的字体大小为 200%。
 
 你的最终结果应该看起来像这样：
 
-![Text with the CSS applied for the solution to task 1.](selectors1.jpg)
+![用于任务 1 解决方案的 CSS 文本。](selectors1.jpg)
 
-尝试更新下面的实时代码，以重现完整的示例：
+尝试更新下面的代码，以重现完整的示例：
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/selectors/type.html", '100%', 700)}}
+```html live-sample___type
+<div class="container">
+  <h1>This is a heading</h1>
+  <p>
+    Veggies es <span>bonus vobis</span>, proinde vos postulo essum magis
+    kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean
+    garlic.
+  </p>
+  <h2>A level 2 heading</h2>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+</div>
+```
+
+```css live-sample___type
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+/* 在这里添加样式 */
+```
+
+{{EmbedLiveSample("type", "", "260px")}}
 
 <details>
 <summary>点击显示答案</summary>
@@ -51,10 +72,6 @@ span {
 
 </details>
 
-> [!CALLOUT]
->
-> 如需提交测评或进一步练习，[下载本任务的初始文件](https://github.com/mdn/css-examples/blob/main/learn/tasks/selectors/type-download.html)，然后在本地或在线编辑器中练习。
-
 ## 任务二
 
 在此任务中，我们希望你在不改变 HTML 的情况下，对本例中内容的外观进行以下更改：
@@ -66,11 +83,37 @@ span {
 
 你的最终结果应该看起来像这样：
 
-![Text with the CSS applied for the solution to task 2.](selectors2.jpg)
+![用于任务 2 解决方案的 CSS 文本。](selectors2.jpg)
 
-尝试更新下面的实时代码，以重现完整的示例：
+尝试更新下面的代码，以重现完整的示例：
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/selectors/class-id.html", '100%', 800)}}
+```html live-sample___class-id
+<div class="container">
+  <h1>This is a heading</h1>
+  <p>
+    Veggies es <span class="alert">bonus vobis</span>, proinde vos postulo
+    <span class="alert stop">essum magis</span> kohlrabi welsh onion daikon
+    amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+  <h2 id="special">A level 2 heading</h2>
+  <p>Gumbo beet greens corn soko endive gumbo gourd.</p>
+  <h2>Another level 2 heading</h2>
+  <p>
+    <span class="alert go">Parsley shallot</span> courgette tatsoi pea sprouts
+    fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
+    earthnut pea peanut soko zucchini.
+  </p>
+</div>
+```
+
+```css live-sample___class-id
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+/* 在这里添加样式 */
+```
+
+{{EmbedLiveSample("class-id", "", "320px")}}
 
 <details>
 <summary>点击查看答案</summary>
@@ -97,10 +140,6 @@ span {
 
 </details>
 
-> [!CALLOUT]
->
-> 如需提交测评或进一步练习，[下载本任务的初始文件](https://github.com/mdn/css-examples/blob/main/learn/tasks/selectors/class-id-download.html)，然后在本地或在线编辑器中练习。
-
 ## 任务三
 
 在此任务中，我们希望你在不改变 HTML 的情况下进行以下更改。
@@ -111,17 +150,83 @@ span {
 
 你的最终结果应该看起来像这样：
 
-![Text with the CSS applied for the solution to task 3.](selectors3.jpg)
+![用于任务 3 解决方案的 CSS 文本。](selectors3.jpg)
 
-尝试更新下面的实时代码，以重现完整的示例：
+尝试更新下面的代码，以重现完整的示例：
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/selectors/pseudo.html", '100%', 800)}}
+```html live-sample___pseudo
+<div class="container">
+  <p>
+    Veggies es <a href="http://example.com">bonus vobis</a>, proinde vos postulo
+    essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon
+    azuki bean garlic.
+  </p>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Fruits</th>
+        <th>Vegetables</th>
+      </tr>
+      <tr>
+        <td>Apple</td>
+        <td>Potato</td>
+      </tr>
+      <tr>
+        <td>Orange</td>
+        <td>Carrot</td>
+      </tr>
+      <tr>
+        <td>Tomato</td>
+        <td>Parsnip</td>
+      </tr>
+      <tr>
+        <td>Kiwi</td>
+        <td>Onion</td>
+      </tr>
+      <tr>
+        <td>Banana</td>
+        <td>Beet</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+```
+
+```css hidden live-sample___pseudo
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  width: 300px;
+}
+
+td,
+th {
+  padding: 0.2em;
+  text-align: left;
+}
+```
+
+```css live-sample___pseudo
+/* 在这里添加样式 */
+```
+
+{{EmbedLiveSample("pseudo", "", "320px")}}
 
 <details>
 <summary>点击查看答案</summary>
 
-对内容应用伪类（`:first-child`）和伪元素（`::first-line`）。
-设置 `a` 元素的 `:link`、`:visited` 和 `:hover` 状态，并使用 `:nth-child` 伪类为表格行创建条纹效果。
+对内容应用伪类（`:first-child`）和伪元素（`::first-line`）。设置 `a` 元素的 `:link`、`:visited` 和 `:hover` 状态，并使用 `:nth-child` 伪类为表格行创建条纹效果。
 
 ```css
 .container p:first-child {
@@ -152,10 +257,6 @@ tr:nth-child(even) {
 
 </details>
 
-> [!CALLOUT]
->
-> 如需提交测评或进一步练习，[下载本任务的初始文件](https://github.com/mdn/css-examples/blob/main/learn/tasks/selectors/pseudo-download.html)，然后在本地或在线编辑器中练习。
-
 ## 任务四
 
 在此任务中，我们希望你做到：
@@ -165,11 +266,40 @@ tr:nth-child(even) {
 
 你的最终结果应该看起来像这样：
 
-![Text with the CSS applied for the solution to task 4.](selectors4.jpg)
+![用于任务 4 解决方案的 CSS 文本。](selectors4.jpg)
 
-尝试更新下面的实时代码，以重现完整的示例：
+尝试更新下面的代码，以重现完整的示例：
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/selectors/combinators.html", '100%', 800)}}
+```html live-sample___combinators
+<div class="container">
+  <h2>This is a heading</h2>
+  <p>This paragraph comes after the heading.</p>
+  <p>This is the second paragraph.</p>
+
+  <h2>Another heading</h2>
+  <p>This paragraph comes after the heading.</p>
+  <ul class="list">
+    <li>One</li>
+    <li>
+      Two
+      <ul>
+        <li>2.1</li>
+        <li>2.2</li>
+      </ul>
+    </li>
+    <li>Three</li>
+  </ul>
+</div>
+```
+
+```css live-sample___combinators
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+/* 在这里添加样式 */
+```
+
+{{EmbedLiveSample("combinators", "", "350px")}}
 
 <details>
 <summary>点击查看答案</summary>
@@ -190,10 +320,6 @@ h2 + p {
 
 </details>
 
-> [!CALLOUT]
->
-> 如需提交测评或进一步练习，[下载本任务的初始文件](https://github.com/mdn/css-examples/blob/main/learn/tasks/selectors/combinators-download.html)，然后在本地或在线编辑器中练习。
-
 ## 任务五
 
 在此任务中，添加 CSS 并使用属性选择器以执行以下操作：
@@ -204,11 +330,48 @@ h2 + p {
 
 你的最终结果应该看起来像这样：
 
-![Four links with different color borders.](selectors-attribute.png)
+![4 个具有不同的颜色边框的链接。](selectors-attribute.png)
 
-尝试更新下面的实时代码，以重现完整的示例：
+尝试更新下面的代码，以重现完整的示例：
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/selectors/attribute-links.html", '100%', 800)}}
+```html live-sample___attribute-links
+<ul>
+  <li><a href="https://example.com">Link 1</a></li>
+  <li><a href="http://example.com" title="Visit example.com">Link 2</a></li>
+  <li><a href="/contact">Link 3</a></li>
+  <li><a href="../contact/index.html">Link 4</a></li>
+</ul>
+```
+
+```css hidden live-sample___attribute-links
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0 0 0.5em 0;
+}
+
+a {
+  display: block;
+  padding: 0.5em;
+}
+```
+
+```css live-sample___attribute-links
+a {
+  border: 5px solid grey;
+}
+/* 在这里添加样式 */
+```
+
+{{EmbedLiveSample("attribute-links", "", "300px")}}
 
 <details>
 <summary>点击查看答案</summary>
@@ -235,20 +398,6 @@ a[href^="https"] {
 
 </details>
 
-> [!CALLOUT]
->
-> 如需提交测评或进一步练习，[下载本任务的初始文件](https://github.com/mdn/css-examples/blob/main/learn/tasks/selectors/attribute-links-download.html)，然后在本地或在线编辑器中练习。
+## 参见
 
-## 打分评估或进一步帮助
-
-你可以在上面的交互式编辑器中练习示例这些示例。
-
-如果你想得到任务评价，或者遇到了问题需要帮助，请按如下操作进行：
-
-1. 将你的作业上传到可共享的在线编辑器上，比如 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)。你可以自己编写代码，也可以使用上面给出的初始文件。
-2. 在 [MDN 论坛的学习板块](https://discourse.mozilla.org/c/mdn/learn)上发帖以寻求打分或帮助。你的帖子中应包含：
-
-   - 一个简述问题的标题。如“Assessment wanted for Selectors skill test 1”（请使用英文发帖）。
-   - 详细描述你的尝试和你预期的网页效果。比如你在哪个位置需要帮助，或者你需要打分评估。
-   - 你需要打分或帮助的作业链接（通过上述的在线编辑器上传）。只有让别人看到你的代码，你才能得到更好的帮助。
-   - 本题的链接。让别人知道你所问的具体题目。
+- [CSS 样式基础](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
