@@ -48,7 +48,7 @@ function f(a, b, ...args) {}
 
 ### 解構其餘參數 rest parameters
 
-其餘參數可以被解構，換句話說，可以把這個陣列解開，並將各個元素取出成為個別的變數。請參考[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
+其餘參數可以被解構，換句話說，可以把這個陣列解開，並將各個元素取出成為個別的變數。請參考[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring)。
 
 ```js
 function f(...[a, b, c]) {
@@ -132,4 +132,4 @@ console.log(sortArguments(5, 3, 7, 1)); // 顯示 1, 3, 5, 7
 - [Functions](/zh-TW/docs/Web/JavaScript/Reference/Functions)
 - [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
 - [JavaScript arguments object and beyond](https://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
-- [Destructuring assignment](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [Destructuring assignment](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring)

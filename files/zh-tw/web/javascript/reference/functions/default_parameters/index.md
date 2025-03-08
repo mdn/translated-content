@@ -233,7 +233,7 @@ withoutDefaults.call({ value: "=^_^=" });
 
 ### 有指定預設值的解構參數
 
-你可以透過[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)語法指定預設值。
+你可以透過[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring)語法指定預設值。
 
 一種常見的做法是將空物件或空陣列作為解構參數的預設值，例如：`[x = 1, y = 2] = []`。這樣即使函式沒有接收到任何引數，這些值仍然會被預先填入：
 

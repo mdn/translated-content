@@ -31,7 +31,7 @@ for (variable of iterable)
 ```
 
 - `variable`
-  - : 在每次迭代中從序列得到一個值，可以是用 [`const`](/zh-TW/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) 或 [`var`](/zh-TW/docs/Web/JavaScript/Reference/Statements/var) 宣告的變數，也可以是[賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment)目標（例如先前宣告的變數、物件屬性或[解構賦值模式](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)）。使用 `var` 宣告的變數不是迴圈的局部變數，即它們與 `for...of` 迴圈位於同一作用域中。
+  - : 在每次迭代中從序列得到一個值，可以是用 [`const`](/zh-TW/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) 或 [`var`](/zh-TW/docs/Web/JavaScript/Reference/Statements/var) 宣告的變數，也可以是[賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment)目標（例如先前宣告的變數、物件屬性或[解構賦值模式](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring)）。使用 `var` 宣告的變數不是迴圈的局部變數，即它們與 `for...of` 迴圈位於同一作用域中。
 - `iterable`
   - : 可迭代物件，迴圈操作的值序列的來源。
 - `statement`
@@ -67,7 +67,7 @@ for (let value of iterable) {
 > [!NOTE]
 > 每次迭代都會創建一個新的變數。在迴圈主體內重新賦值不會影響可迭代物件（在本例中是一個陣列）中的原始值。
 
-你可以使用[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)指派多個局部變數，或者使用屬性訪問子（如 `for (x.y of iterable)`）賦值給物件屬性。
+你可以使用[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring)指派多個局部變數，或者使用屬性訪問子（如 `for (x.y of iterable)`）賦值給物件屬性。
 
 然而，有一條特別規則──禁止以 `async` 作為變數名稱，這是無效語法：
 
@@ -338,7 +338,7 @@ for (const value of generator) {
 
 `for...in` 和 `for...of` 都用於迭代某個東西，它們之間的主要差別在於迭代的對象。
 
-{{jsxref("Statements/for...in", "for...in")}} 用於迭代物件的[可枚舉字串屬性](/zh-TW/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)，而 `for...of` 用於迭代[可迭代物件](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代協議)定義的要進行迭代的值。
+{{jsxref("Statements/for...in", "for...in")}} 用於迭代物件的[可枚舉字串屬性](/zh-TW/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)，而 `for...of` 用於迭代[可迭代物件](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代協議)定義的要進行迭代的值。
 
 下面的範例演示了在迭代 {{jsxref("Array")}} 時，`for...of` 迴圈和 `for...in` 迴圈之間的差別。
 
@@ -367,9 +367,9 @@ for (const i of iterable) {
 // 3 5 7
 ```
 
-`iterable` 物件繼承了 `objCustom` 和 `arrCustom` 屬性，因為其[原型鏈](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)中同時包含了 `Object.prototype` 和 `Array.prototype`。
+`iterable` 物件繼承了 `objCustom` 和 `arrCustom` 屬性，因為其[原型鏈](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)中同時包含了 `Object.prototype` 和 `Array.prototype`。
 
-`for...in` 迴圈只輸出了 `iterable` 物件的[可枚舉屬性](/zh-TW/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。它不會輸出陣列中的*元素* `3`、`5`、`7` 或 `"hello"`，因為它們不是*屬性*，而是*值*。它輸出了陣列的*索引*以及 `arrCustom` 和 `objCustom`，它們是實際的屬性。如果你對為什麼迭代這些屬性感到困惑，可以查看關於[陣列迭代和 `for...in`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in#陣列迭代和_for...in) 的工作原理，裡面有更詳細的解釋。
+`for...in` 迴圈只輸出了 `iterable` 物件的[可枚舉屬性](/zh-TW/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)。它不會輸出陣列中的*元素* `3`、`5`、`7` 或 `"hello"`，因為它們不是*屬性*，而是*值*。它輸出了陣列的*索引*以及 `arrCustom` 和 `objCustom`，它們是實際的屬性。如果你對為什麼迭代這些屬性感到困惑，可以查看關於[陣列迭代和 `for...in`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in#陣列迭代和_for...in) 的工作原理，裡面有更詳細的解釋。
 
 第二個迴圈與第一個迴圈類似，但它使用 {{jsxref("Object.hasOwn()")}} 來檢查找到的可枚舉屬性是否為物件的自有屬性，即非繼承屬性。如果是，則輸出該屬性。屬性 `0`、`1`、`2` 和 `foo` 皆被輸出，因為它們是自有屬性。屬性 `arrCustom` 和 `objCustom` 都沒有被輸出，因為它們是繼承屬性。
 

@@ -114,7 +114,7 @@ blockquote + p {
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
         <code>
-          <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents"
+          <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents"
             >blockquote</a
           ></code
         >

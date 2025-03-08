@@ -411,4 +411,4 @@ function MyObject(name, message) {
 }).call(MyObject.prototype);
 ```
 
-在前例中，所有物件可共享繼承的原型，物件創立時也無須每次都定義方法。詳細資料請參見[深入了解物件模型](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。
+在前例中，所有物件可共享繼承的原型，物件創立時也無須每次都定義方法。詳細資料請參見[深入了解物件模型](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)。
