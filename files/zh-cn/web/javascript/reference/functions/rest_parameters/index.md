@@ -77,7 +77,7 @@ function f(...args) {
 
 ### 解构剩余参数
 
-剩余参数可以被解构，这意味着他们的数据可以被解包到不同的变量中。请参阅[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
+剩余参数可以被解构，这意味着他们的数据可以被解包到不同的变量中。请参阅[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
 
 ```js
 function f(...[a, b, c]) {

@@ -182,9 +182,9 @@ var listHTML = list("u", "One", "Two", "Three");
 */
 ```
 
-### 剩余参数、默认参数和解构赋值参数
+### 剩余参数、默认参数和解构参数
 
-`arguments`对象可以与[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)参数结合使用。
+`arguments`对象可以与[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)参数结合使用。
 
 ```js
 function foo(...args) {
@@ -193,9 +193,9 @@ function foo(...args) {
 foo(1, 2, 3); // [1,2,3]
 ```
 
-在严格模式下，[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)参数的存在不会改变 `arguments`对象的行为，但是在非严格模式下就有所不同了。
+在严格模式下，[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)参数的存在不会改变 `arguments`对象的行为，但是在非严格模式下就有所不同了。
 
-当非严格模式中的函数**没有**包含[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)，那么`arguments`对象中的值**会**跟踪参数的值（反之亦然）。看下面的代码：
+当非严格模式中的函数**没有**包含[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)，那么`arguments`对象中的值**会**跟踪参数的值（反之亦然）。看下面的代码：
 
 ```js
 function func(a) {
@@ -215,7 +215,7 @@ function func(a) {
 func(10); // 99
 ```
 
-当非严格模式中的函数**有**包含[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)，那么`arguments`对象中的值**不会**跟踪参数的值（反之亦然）。相反，`arguments`反映了调用时提供的参数：
+当非严格模式中的函数**有**包含[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)，那么`arguments`对象中的值**不会**跟踪参数的值（反之亦然）。相反，`arguments`反映了调用时提供的参数：
 
 ```js
 function func(a = 55) {

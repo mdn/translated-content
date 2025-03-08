@@ -137,7 +137,7 @@ MY_ARRAY = ["B"];
 MY_ARRAY.push("A"); // ["A"]
 ```
 
-### 带解构赋值的声明
+### 带解构的声明
 
 每个 `=` 后面的左侧也可以是绑定模式。这允许一次创建多个变量。
 
@@ -147,7 +147,7 @@ const [, a, b, c] = result;
 console.log(a, b, c); // "aaa" "b" "cc"
 ```
 
-有关更多信息，请参阅[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
+有关更多信息，请参阅[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
 
 ## 规范
 

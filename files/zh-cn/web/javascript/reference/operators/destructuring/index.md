@@ -1,29 +1,28 @@
 ---
-title: 解构赋值
+title: 解构
 slug: Web/JavaScript/Reference/Operators/Destructuring
-original_slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
 
 {{jsSidebar("Operators")}}
 
-**解构赋值**语法是一种 Javascript 表达式。可以将数组中的值或对象的属性取出，赋值给其他变量。
+**解构**语法是一种 Javascript 语法。可以将数组中的值或对象的属性取出，赋值给其他变量。它可以在接收数据的位置使用（例如赋值的左侧或创建新标识符绑定的任何位置）。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Destructuring assignment", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Destructuring", "taller")}}
 
 ```js interactive-example
 let a, b, rest;
 [a, b] = [10, 20];
 
 console.log(a);
-// Expected output: 10
+// 期望输出：10
 
 console.log(b);
-// Expected output: 20
+// 期望输出：20
 
 [a, b, ...rest] = [10, 20, 30, 40, 50];
 
 console.log(rest);
-// Expected output: Array [30, 40, 50]
+// 期望输出：Array [30, 40, 50]
 ```
 
 ## 语法
@@ -65,10 +64,10 @@ let a, b, a1, b1, c, d, rest, pop, push;
 对象和数组字面量表达式提供了一种简单的方法来创建*特别的*数据包。
 
 ```js
-const x = [1, 2, 3, 4, 5];
+const arr = [a, b, c];
 ```
 
-解构赋值使用类似的语法，但在赋值的左侧定义了要从原变量中取出哪些值。
+解构使用类似的语法，但在赋值的左侧定义了要从原变量中取出哪些值。
 
 ```js
 const x = [1, 2, 3, 4, 5];
@@ -108,10 +107,10 @@ const {
 
 ```js
 const obj = { a: 1, b: { c: 2 } };
-const { a } = obj; // a is constant
+const { a } = obj; // a 未常量
 let {
   b: { c: d },
-} = obj; // d is re-assignable
+} = obj; // d 可被重新赋值
 ```
 
 在赋值模式中，模式不以关键字开头。每个解构属性都被赋值给一个赋值目标——这个赋值目标可以事先用 `var` 或 `let` 声明，也可以是另一个对象的属性——一般来说，可以是任何可以出现在赋值表达式左侧的东西。
@@ -124,7 +123,7 @@ const obj = { a: 1, b: 2 };
 ```
 
 > [!NOTE]
-> 当使用对象文字解构赋值而不带声明时，在赋值语句周围必须添加括号 `( ... )`。
+> 当使用对象文字解构而不带声明时，在赋值语句周围必须添加括号 `( ... )`。
 >
 > `{ a, b } = { a: 1, b: 2 }` 不是有效的独立语法，因为左侧的 `{a, b}` 被视为块而不是对象字面量。但是，`({ a, b } = { a: 1, b: 2 })` 是有效的，`const { a, b } = { a: 1， b: 2 }` 也是有效的。
 >
@@ -225,7 +224,7 @@ console.log(blue); //undefined
 
 可以在一个解构表达式中交换两个变量的值。
 
-没有解构赋值的情况下，交换两个变量需要一个临时变量（或者用低级语言中的[异或交换技巧](https://en.wikipedia.org/wiki/XOR_swap_algorithm)）。
+没有解构的情况下，交换两个变量需要一个临时变量（或者用低级语言中的[异或交换技巧](https://en.wikipedia.org/wiki/XOR_swap_algorithm)）。
 
 ```js
 let a = 1;
@@ -281,7 +280,7 @@ console.log(c); // 1
 
 #### 使用绑定模式作为剩余属性
 
-数组解构赋值的剩余属性可以是另一个数组或对象绑定模式。这允许你同时提取数组的属性和索引。
+数组解构的剩余属性可以是另一个数组或对象绑定模式。这允许你同时提取数组的属性和索引。
 
 ```js
 const [a, b, ...{ pop, push }] = [1, 2];
@@ -314,7 +313,7 @@ let a, b;
 
 #### 从正则表达式匹配项中提取值
 
-当正则表达式的 [`exec()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) 方法找到匹配项时，它将返回一个数组，该数组首先包含字符串的整个匹配部分，然后返回与正则表达式中每个括号组匹配的字符串部分。解构赋值允许你轻易地提取出需要的部分，如果不需要，则忽略完整匹配。
+当正则表达式的 [`exec()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) 方法找到匹配项时，它将返回一个数组，该数组首先包含字符串的整个匹配部分，然后返回与正则表达式中每个括号组匹配的字符串部分。解构允许你轻易地提取出需要的部分，如果不需要，则忽略完整匹配。
 
 ```js
 function parseProtocol(url) {

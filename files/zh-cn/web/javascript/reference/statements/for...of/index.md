@@ -31,7 +31,7 @@ for (variable of iterable)
 ```
 
 - `variable`
-  - : 每次迭代时从序列接收一个值。可以是用 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 或 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 声明的变量，也可以是[赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)目标（例如之前声明的变量、对象属性或[解构赋值模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)）。使用 `var` 声明的变量不会局限于循环内部，即它们与 `for...of` 循环所在的作用域相同。
+  - : 每次迭代时从序列接收一个值。可以是用 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 或 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 声明的变量，也可以是[赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)目标（例如之前声明的变量、对象属性或[解构模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)）。使用 `var` 声明的变量不会局限于循环内部，即它们与 `for...of` 循环所在的作用域相同。
 - `iterable`
   - : 可迭代对象。循环操作的序列值的来源。
 - `statement`
@@ -64,7 +64,7 @@ for (let value of iterable) {
 > [!NOTE]
 > 每次迭代都会创建一个新的变量。在循环体内部重新赋值变量不会影响可迭代对象（在本例中，是一个数组）的原始值。
 
-你可以使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)来分配多个局部变量，或者使用属性访问器（如 `for (x.y of iterable)`）来给对象属性赋值。
+你可以使用[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)来分配多个局部变量，或者使用属性访问器（如 `for (x.y of iterable)`）来给对象属性赋值。
 
 然而，有一条特别的规则禁止使用 `async` 作为变量名。这是无效语法：
 

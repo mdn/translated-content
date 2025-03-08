@@ -73,7 +73,7 @@ JavaScript 拥有二元和一元运算符和一个特殊的三元运算符（条
 
 #### 解构
 
-对于更复杂的赋值，[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)语法是一个能从数组或对象对应的数组结构或对象字面量里提取数据的 Javascript 表达式。
+对于更复杂的赋值，[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)语法是一个能从数组或对象对应的数组结构或对象字面量里提取数据的 Javascript 表达式。
 
 ```js
 var foo = ["one", "two", "three"];

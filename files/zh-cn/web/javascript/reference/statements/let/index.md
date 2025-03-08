@@ -287,7 +287,7 @@ let [, a, b, c] = result;
 console.log(a, b, c); // "aaa" "b" "cc"
 ```
 
-更多信息，参见[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
+更多信息，参见[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
 
 ## 规范
 

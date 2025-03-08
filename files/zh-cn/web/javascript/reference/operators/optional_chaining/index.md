@@ -195,7 +195,7 @@ const nameBar = myMap.get("bar")?.name;
 
 ### 处理可选的回调函数或事件处理器
 
-如果使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)来解构的一个对象的回调函数或 fetch 方法，你可能得到不能当做函数直接调用的不存在的值，除非你已经校验了它们的存在性。你可以使用 `?.` 来忽略这些额外的校验：
+如果使用[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)来解构的一个对象的回调函数或 fetch 方法，你可能得到不能当做函数直接调用的不存在的值，除非你已经校验了它们的存在性。你可以使用 `?.` 来忽略这些额外的校验：
 
 ```js
 // 不使用可选链的写法

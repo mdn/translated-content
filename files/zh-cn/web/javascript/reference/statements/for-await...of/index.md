@@ -35,7 +35,7 @@ for await (variable of iterable)
 ```
 
 - `variable`
-  - : 每次迭代时从序列接收一个值。可以是用 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 或 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 声明的变量，也可以是[赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)目标（例如之前声明的变量、对象属性或[解构赋值模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)）。使用 `var` 声明的变量不会局限于循环内部，即它们与 `for await...of` 循环所在的作用域相同。
+  - : 每次迭代时从序列接收一个值。可以是用 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 或 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 声明的变量，也可以是[赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)目标（例如之前声明的变量、对象属性或[解构模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)）。使用 `var` 声明的变量不会局限于循环内部，即它们与 `for await...of` 循环所在的作用域相同。
 - `iterable`
   - : 异步可迭代对象或同步可迭代对象。循环操作的序列值的来源。
 - `statement`

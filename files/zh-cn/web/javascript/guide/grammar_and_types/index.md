@@ -91,7 +91,7 @@ JavaScript 标识符通常以字母、下划线（`_`）或者美元符号（`$`
 - 使用关键字 {{jsxref("Statements/var", "var")}}。例如 `var x = 42`。这个语法可以用来声明**局部**变量和**全局**变量，具体取决于*执行上下文*。
 - 使用关键字 {{jsxref("Statements/const", "const")}} 或 {{jsxref("Statements/let", "let")}} 。例如 `let y = 13`。这个语法可以用来声明块级作用域的局部变量。（参见下方的[变量作用域](#变量作用域)。）
 
-你可以使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)语法声明用于解包值的变量。例如 `const { bar } = foo`。这会创建一个名为 `bar` 的变量，并且将 `foo` 对象中属性名与之相同的属性的值赋给它。
+你可以使用[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)语法声明用于解包值的变量。例如 `const { bar } = foo`。这会创建一个名为 `bar` 的变量，并且将 `foo` 对象中属性名与之相同的属性的值赋给它。
 
 应该总是在声明变量后使用它们。JavaScript 过去允许给未声明的变量赋值，而这会创建一个**[未声明的全局](/zh-CN/docs/Web/JavaScript/Reference/Statements/var#描述)**变量。这在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode#给未声明的变量赋值)下是一个错误，应该彻底避免使用它。
 

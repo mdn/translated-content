@@ -46,7 +46,7 @@ param => {
 }
 ```
 
-参数部分支持[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)，并且始终需要使用括号：
+参数部分支持[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)，并且始终需要使用括号：
 
 ```js-nolint
 (a, b, ...r) => expression
