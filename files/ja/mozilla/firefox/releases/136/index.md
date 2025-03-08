@@ -30,8 +30,7 @@ l10n:
 
 - 新しいページにリダイレクトするページ更新後のリクエストで、({{httpheader("Referrer-Policy")}} で許可されていれば) {{httpheader("Referer")}} HTTP ヘッダーが送信されるようになりました。また、ナビゲーションの後にリファラーの URL が {{domxref("document.referrer")}} に設定されます。
   ページ更新は {{httpheader("Refresh")}} レスポンスヘッダーや、マークアップにある同等の {{htmlelement("meta")}} (たとえば `<meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />`) で発生するでしょう。
-  同じページの更新はページ内のフラグメントへのナビゲーションと同じように扱われることに注意してください。ページを再要求しないため、{{httpheader("Referer")}} は送信されません 
-  ([Firefox bug 1928291](https://bugzil.la/1928291))。
+  同じページの更新はページ内のフラグメントへのナビゲーションと同じように扱われることに注意してください。ページを再要求しないため、{{httpheader("Referer")}} は送信されません ([Firefox bug 1928291](https://bugzil.la/1928291))。
 
 ### API
 
@@ -49,14 +48,11 @@ l10n:
 #### Media、WebRTC、Web Audio
 
 - WebRTC で、[AV1 コーデック](/ja/docs/Web/Media/Guides/Formats/WebRTC_codecs#av1_table) を使用してエンコードした動画を送受信できるようになりました。
-  送信は、同一のソースから複数のバージョンを送信する方式 ("[サイマルキャスト](/ja/docs/Web/API/WebRTC_API/Protocols#simulcast)") とシングルキャストのどちらも使用できます 
-  ([Firefox bug 1944878](https://bugzil.la/1944878)、[Firefox bug 1932065](https://bugzil.la/1932065))。
+  送信は、同一のソースから複数のバージョンを送信する方式 ("[サイマルキャスト](/ja/docs/Web/API/WebRTC_API/Protocols#simulcast)") とシングルキャストのどちらも使用できます ([Firefox bug 1944878](https://bugzil.la/1944878)、[Firefox bug 1932065](https://bugzil.la/1932065))。
 - WebRTC で、[H264 コーデック](/ja/docs/Web/Media/Guides/Formats/WebRTC_codecs#supported_video_codecs) を使用した画面共有動画のサイマルキャストをサポートしました (AV1、H264、[VP8](/ja/docs/Web/Media/Guides/Formats/WebRTC_codecs#supported_video_codecs) をサイマルキャストで使用できます)。
-  なお、Android では H264 コーデックのハードウェアアクセラレーションが有効です 
-  ([Firefox bug 1210175](https://bugzil.la/1210175))。
+  なお、Android では H264 コーデックのハードウェアアクセラレーションが有効です ([Firefox bug 1210175](https://bugzil.la/1210175))。
 - WebRTC で [Dependency Descriptor (DD) RTP ヘッダー拡張](/ja/docs/Web/API/WebRTC_API/Protocols#dependency_descriptor_rtp_header_extension) をサポートしました。AV1、VP8、VP9 コーデックで使用します。
-  DD ヘッダー拡張はペイロードをエンドツーエンド暗号化 (E2EE) する状況などで、サイマルキャストストリームのコーデックに依存しない転送を可能にします 
-  ([Firefox bug 1945261](https://bugzil.la/1945261))。
+  DD ヘッダー拡張はペイロードをエンドツーエンド暗号化 (E2EE) する状況などで、サイマルキャストストリームのコーデックに依存しない転送を可能にします ([Firefox bug 1945261](https://bugzil.la/1945261))。
 
 ### WebDriver への適合 (WebDriver BiDi, Marionette)
 
@@ -89,14 +85,11 @@ l10n:
   {{CSSXRef("hyphenate-limit-chars")}} CSS プロパティは、ハイフネーションを行う単語の最小の長さ、およびハイフンの前後の最小文字数を指定するために使用します ([Firefox bug 1521723](https://bugzil.la/1521723))。
 - **Error.captureStackTrace()**: `javascript.options.experimental.error_capture_stack_trace`。
   {{jsxref("Error.captureStackTrace()")}} 静的メソッドは、{{jsxref("Error.stack")}} プロパティとして与えられたオブジェクトにスタックトレース情報をインストールします。
-  主な用途は、{{jsxref("Error")}} インターフェイスから派生していない独自のエラーオブジェクトにスタックトレースをインストールすることです 
-  ([Firefox bug 1886820](https://bugzil.la/1886820))。
+  主な用途は、{{jsxref("Error")}} インターフェイスから派生していない独自のエラーオブジェクトにスタックトレースをインストールすることです ([Firefox bug 1886820](https://bugzil.la/1886820))。
 - **Clear-Site-Data: cache**: `privacy.clearSiteDataHeader.cache.enabled`。
-  [`Clear-Site-Data`](/ja/docs/Web/HTTP/Headers/Clear-Site-Data) ヘッダーは [`cache`](/ja/docs/Web/HTTP/Headers/Clear-Site-Data#cache) および `*` ディレクティブと合わせて、ブラウザーのキャッシュを消去するために使用できます 
-  ([Firefox bug 1942272](https://bugzil.la/1942272))。
+  [`Clear-Site-Data`](/ja/docs/Web/HTTP/Headers/Clear-Site-Data) ヘッダーは [`cache`](/ja/docs/Web/HTTP/Headers/Clear-Site-Data#cache) および `*` ディレクティブと合わせて、ブラウザーのキャッシュを消去するために使用できます ([Firefox bug 1942272](https://bugzil.la/1942272))。
 - **SVG アニメーション用の SVG `<discard>` 要素**: `svg.discard.enabled`。
-  {{svgelement("discard")}} SVG 要素は、SVG が DOM に読み込まれてから経過した時間や特定のアニメーションが終了したなど、指定した要素とその子孫を DOM から削除すべききっかけを開発者が指定できるようにします。これは、不要になったアニメーション要素を破棄することで SVG ビューアーがメモリーを節約できます 
-  ([Firefox bug 1069931](https://bugzil.la/1069931))。
+  {{svgelement("discard")}} SVG 要素は、SVG が DOM に読み込まれてから経過した時間や特定のアニメーションが終了したなど、指定した要素とその子孫を DOM から削除すべききっかけを開発者が指定できるようにします。これは、不要になったアニメーション要素を破棄することで SVG ビューアーがメモリーを節約できます ([Firefox bug 1069931](https://bugzil.la/1069931))。
 - **SVG パス API のメソッド**: `dom.svg.pathSegment.enabled`。
   `SVGPathSegment` インターフェイスで `getPathData()`、`setPathData()`、`getPathSegmentAtLength()` メソッドをサポートしました。これらのメソッドは、生の文字列データを解析することに代わって SVG のパスデータを処理する便利な手段を提供します ([Firefox bug 1934525](https://bugzil.la/1934525))。
 
