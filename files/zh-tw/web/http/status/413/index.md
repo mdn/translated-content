@@ -7,14 +7,47 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`413 Content Too Large`** 回應狀態碼表示請求實體大於伺服器定義的限制；伺服器可能會關閉連接或返回一個 {{HTTPHeader("Retry-After")}} 標頭欄位。
+HTTP **`413 Content Too Large`** [用戶端錯誤回應](/en-US/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示請求實體大於伺服器定義的限制。伺服器可能會關閉連接或返回一個 {{HTTPHeader("Retry-After")}} 標頭欄位。
 
-在 RFC 9110 之前，此狀態的回應詞為 **`Payload Too Large`**。這個名稱仍然被廣泛使用。
+在 {{rfc("9110")}} 之前，此狀態的回應詞為 **`Payload Too Large`**。這個訊息仍然被廣泛使用。
 
 ## 狀態
 
 ```http
 413 Content Too Large
+```
+
+## Examples
+
+### File upload limit exceeded
+
+The following example shows what the client may send when an [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file) element includes an image on form submission with `method="post"`:
+
+```http
+POST /upload HTTP/1.1
+Host: example.com
+Content-Type: multipart/form-data; boundary=----Boundary1234
+Content-Length: 4012345
+
+------Boundary1234
+Content-Disposition: form-data; name="file"; filename="myImage.jpg"
+Content-Type: image/jpeg
+
+\xFF\xD8\xFF\xE0\x00...(binary data)
+------Boundary1234--
+```
+
+The server may reject the upload if there is a restriction on the maximum size of files it will process, and the response body includes a `message` with some context:
+
+```http
+HTTP/1.1 413 Content Too Large
+Content-Type: application/json
+Content-Length: 97
+
+{
+  "error": "Upload failed",
+  "message": "Maximum allowed upload size is 4MB",
+}
 ```
 
 ## 規範
@@ -23,5 +56,6 @@ HTTP **`413 Content Too Large`** 回應狀態碼表示請求實體大於伺服�
 
 ## 參見
 
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
 - {{HTTPHeader("Connection")}}
 - {{HTTPHeader("Retry-After")}}
