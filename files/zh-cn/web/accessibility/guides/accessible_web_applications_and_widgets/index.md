@@ -1,12 +1,9 @@
 ---
 title: 无障碍 Web 应用和微件概述
 slug: Web/Accessibility/Guides/Accessible_web_applications_and_widgets
-original_slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 l10n:
   sourceCommit: acad5b9afc0a9e20144d49fd3fbb7f4fa92c9192
 ---
-
-{{AccessibilitySidebar}}
 
 大多数 JavaScript 库提供了客户端微件（widget）库，模拟熟悉的桌面界面的行为。滑块、菜单栏、文件列表视图等可以通过 JavaScript、CSS 和 HTML 的组合来构建。由于 HTML4 规范不提供语义上描述这些微件的内置标签，因此开发人员通常会使用通用元素（如 {{HTMLElement('div')}} 和 {{HTMLElement('span')}}）。虽然这导致了一个看起来像桌面对应的组件，但标记中通常没有足够的辅助技术可用的语义信息。
 

@@ -1,12 +1,9 @@
 ---
 title: ARIA：window 角色
 slug: Web/Accessibility/ARIA/Reference/Roles/window_role
-original_slug: Web/Accessibility/ARIA/Roles/window_role
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
-
-{{AccessibilitySidebar}}
 
 `window` 角色定义了浏览器或应用程序窗口。
 
