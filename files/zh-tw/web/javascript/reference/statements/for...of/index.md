@@ -31,7 +31,7 @@ for (variable of iterable)
 ```
 
 - `variable`
-  - : 在每次迭代中從序列得到一個值，可以是用 [`const`](/zh-TW/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) 或 [`var`](/zh-TW/docs/Web/JavaScript/Reference/Statements/var) 宣告的變數，也可以是[賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment)目標（例如先前宣告的變數、物件屬性或[解構賦值模式](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring)）。使用 `var` 宣告的變數不是迴圈的局部變數，即它們與 `for...of` 迴圈位於同一作用域中。
+  - : 在每次迭代中從序列得到一個值，可以是用 [`const`](/zh-TW/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) 或 [`var`](/zh-TW/docs/Web/JavaScript/Reference/Statements/var) 宣告的變數，也可以是[賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment)目標（例如先前宣告的變數、物件屬性或[解構模式](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring)）。使用 `var` 宣告的變數不是迴圈的局部變數，即它們與 `for...of` 迴圈位於同一作用域中。
 - `iterable`
   - : 可迭代物件，迴圈操作的值序列的來源。
 - `statement`
@@ -67,7 +67,7 @@ for (let value of iterable) {
 > [!NOTE]
 > 每次迭代都會創建一個新的變數。在迴圈主體內重新賦值不會影響可迭代物件（在本例中是一個陣列）中的原始值。
 
-你可以使用[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring)指派多個局部變數，或者使用屬性訪問子（如 `for (x.y of iterable)`）賦值給物件屬性。
+你可以使用[解構](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring)指派多個局部變數，或者使用屬性訪問子（如 `for (x.y of iterable)`）賦值給物件屬性。
 
 然而，有一條特別規則──禁止以 `async` 作為變數名稱，這是無效語法：
 

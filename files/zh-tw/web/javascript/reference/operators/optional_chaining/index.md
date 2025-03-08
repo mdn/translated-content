@@ -78,7 +78,7 @@ let result = someInterface.customMethod?.();
 
 #### 處理回呼函式或事件處理器
 
-如果你使用回呼函式，或是透過[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring#object_destructuring)來擷取物件中的方法，你可能會因為這些方法沒有存在，而無法進行呼叫，除非你事先驗證其存在性。所以，你可以利用 `?.` 來避免這樣的測試：
+如果你使用回呼函式，或是透過[解構](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring#object_destructuring)來擷取物件中的方法，你可能會因為這些方法沒有存在，而無法進行呼叫，除非你事先驗證其存在性。所以，你可以利用 `?.` 來避免這樣的測試：
 
 ```js
 // 在 ES2019 下撰寫

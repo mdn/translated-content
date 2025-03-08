@@ -46,9 +46,9 @@ function f(a, b) {
 function f(a, b, ...args) {}
 ```
 
-### 解構其餘參數 rest parameters
+### 解構其餘參數
 
-其餘參數可以被解構，換句話說，可以把這個陣列解開，並將各個元素取出成為個別的變數。請參考[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring)。
+其餘參數可以被解構，換句話說，可以把這個陣列解開，並將各個元素取出成為個別的變數。請參考[解構](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring)。
 
 ```js
 function f(...[a, b, c]) {

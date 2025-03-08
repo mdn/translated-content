@@ -70,7 +70,7 @@ JavaScript 同時具有二元運算子及一元運算子， 以及一種特殊�
 
 #### 解構
 
-為了進行更複雜的賦值，[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring)是 JavaScript 用來從陣列或物件中提取資料的語法。
+為了進行更複雜的賦值，[解構](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring)是 JavaScript 用來從陣列或物件中提取資料的語法。
 
 ```js
 var foo = ["one", "two", "three"];

@@ -186,7 +186,7 @@ new WeakSet(
 
 ### 用於可迭代物件的語法
 
-部分陳述式（statements）及運算式（expressions）為預期用於可迭代物件，例如 [`for-of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 迴圈、[spread syntax](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、[`yield*`](/zh-TW/docs/Web/JavaScript/Reference/Operators/yield*)，及[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring)：
+部分陳述式（statements）及運算式（expressions）為預期用於可迭代物件，例如 [`for-of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 迴圈、[spread syntax](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、[`yield*`](/zh-TW/docs/Web/JavaScript/Reference/Operators/yield*)，及[解構](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring)：
 
 ```js
 for (let value of ["a", "b", "c"]) {

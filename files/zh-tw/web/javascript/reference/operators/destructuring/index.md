@@ -1,14 +1,14 @@
 ---
-title: 解構賦值
+title: 解構
 slug: Web/JavaScript/Reference/Operators/Destructuring
 original_slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
 
 {{jsSidebar("Operators")}}
 
-**解構賦值** (Destructuring assignment) 語法是一種 JavaScript 運算式，可以把陣列或物件中的資料解開擷取成為獨立變數。
+**解構**（destructuring）語法是一種 JavaScript 運算式，可以把陣列或物件中的資料解開擷取成為獨立變數。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Destructuring assignment", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Destructuring", "taller")}}
 
 ```js interactive-example
 let a, b, rest;
@@ -58,7 +58,7 @@ console.log(rest); // {c: 30, d: 40}
 const x = [1, 2, 3, 4, 5];
 ```
 
-解構賦值使用類似語法；不過在指定敘述式的左側，要宣告從來源變數接收解開值之變數。
+解構使用類似語法；不過在指定敘述式的左側，要宣告從來源變數接收解開值之變數。
 
 ```js
 const x = [1, 2, 3, 4, 5];
@@ -84,7 +84,7 @@ console.log(green); // "three"
 
 ### 宣告指派分開敍述
 
-變數可以在宣告式後，再透過解構賦值。
+變數可以在宣告式後，再透過解構。
 
 ```js
 let a, b;
@@ -405,7 +405,7 @@ rest; // { c: 30, d: 40 }
 
 ### 不符合 JavaScript 識別字的屬性名稱
 
-解構賦值可以透過另一個符合 JavaScript [識別字](/zh-TW/docs/Glossary/Identifier)的變數名稱來解出不符合識別字的屬性。
+解構可以透過另一個符合 JavaScript [識別字](/zh-TW/docs/Glossary/Identifier)的變數名稱來解出不符合識別字的屬性。
 
 ```js
 const foo = { "fizz-buzz": true };
