@@ -47,7 +47,7 @@ Content-Length: 97
 
 {
   "error": "Upload failed",
-  "message": "Maximum allowed upload size is 4MB"
+  "message": "最大允許的上傳檔案大小為 4MB。",
 }
 ```
 
