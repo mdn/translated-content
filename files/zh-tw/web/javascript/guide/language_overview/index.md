@@ -1,6 +1,7 @@
 ---
 title: 重新介紹 JavaScript
-slug: Web/JavaScript/Language_overview
+slug: Web/JavaScript/Guide/Language_overview
+original_slug: Web/JavaScript/Language_overview
 ---
 
 {{jsSidebar}}

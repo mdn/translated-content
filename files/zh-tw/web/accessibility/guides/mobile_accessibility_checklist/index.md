@@ -1,6 +1,7 @@
 ---
 title: 行動無障礙檢核清單
-slug: Web/Accessibility/Mobile_accessibility_checklist
+slug: Web/Accessibility/Guides/Mobile_accessibility_checklist
+original_slug: Web/Accessibility/Mobile_accessibility_checklist
 ---
 
 {{AccessibilitySidebar}}

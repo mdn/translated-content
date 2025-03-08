@@ -1,6 +1,7 @@
 ---
 title: 解構賦值
-slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
+slug: Web/JavaScript/Reference/Operators/Destructuring
+original_slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
 
 {{jsSidebar("Operators")}}

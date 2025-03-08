@@ -1,6 +1,7 @@
 ---
 title: 繼承與原型鏈
-slug: Web/JavaScript/Inheritance_and_the_prototype_chain
+slug: Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
+original_slug: Web/JavaScript/Inheritance_and_the_prototype_chain
 ---
 
 {{jsSidebar("Advanced")}}

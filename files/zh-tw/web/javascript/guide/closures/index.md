@@ -1,6 +1,7 @@
 ---
 title: 閉包
-slug: Web/JavaScript/Closures
+slug: Web/JavaScript/Guide/Closures
+original_slug: Web/JavaScript/Closures
 ---
 
 {{jsSidebar("Intermediate")}}
