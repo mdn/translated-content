@@ -1,7 +1,6 @@
 ---
 title: 视频和音频 API
 slug: Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs
-original_slug: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 l10n:
   sourceCommit: d6a792e3adce2c8b29a73a3b407e786091363980
 ---

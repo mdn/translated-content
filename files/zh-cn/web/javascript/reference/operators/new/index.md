@@ -52,7 +52,7 @@ new constructor(arg1, arg2, /* …, */ argN)
    > 因此，通过构造函数创建的所有实例都可以访问添加到构造函数 `prototype` 属性中的属性/对象。
 
 3. 使用给定参数执行构造函数，并将 `newInstance` 绑定为 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的上下文（换句话说，在构造函数中的所有 `this` 引用都指向 `newInstance`）。
-4. 如果构造函数返回[非原始值](/zh-CN/docs/Web/JavaScript/Data_structures#原始值)，则该返回值成为整个 `new` 表达式的结果。否则，如果构造函数未返回任何值或返回了一个原始值，则返回 `newInstance`。（通常构造函数不返回值，但可以选择返回值，以覆盖正常的对象创建过程。）
+4. 如果构造函数返回[非原始值](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#原始值)，则该返回值成为整个 `new` 表达式的结果。否则，如果构造函数未返回任何值或返回了一个原始值，则返回 `newInstance`。（通常构造函数不返回值，但可以选择返回值，以覆盖正常的对象创建过程。）
 
 [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)只能用 `new` 运算符实例化——尝试不使用 `new` 调用一个类将抛出 `TypeError`。
 

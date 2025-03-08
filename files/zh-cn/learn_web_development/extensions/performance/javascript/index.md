@@ -1,7 +1,6 @@
 ---
 title: JavaScript 性能优化
 slug: Learn_web_development/Extensions/Performance/JavaScript
-original_slug: Learn/Performance/JavaScript
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance/HTML", "Learn_web_development/Extensions/Performance")}}

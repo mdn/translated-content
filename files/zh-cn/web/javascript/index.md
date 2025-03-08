@@ -17,12 +17,12 @@ JavaScript 标准是 [ECMAScript 语言规范](https://tc39.es/ecma262/)（ECMA-
 
 不要将 JavaScript 与 [Java 编程语言](https://zh.wikipedia.org/wiki/Java)弄混——**JavaScript _不是_“解释型的 Java”**。“Java”和“JavaScript”都是 Oracle 公司在美国和其他国家注册（或未注册）的商标。然而，这两门编程语言有着非常不同的语法、语义和用途。
 
-JavaScript 核心语言特性（大部分是纯 [ECMAScript](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview)）的文档包含以下内容：
+JavaScript 核心语言特性（大部分是纯 [ECMAScript](/zh-CN/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)）的文档包含以下内容：
 
 - [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)
 - [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference)
 
-有关 JavaScript 规范和相关技术的更多信息，请参阅 [JavaScript 技术概述](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview)。
+有关 JavaScript 规范和相关技术的更多信息，请参阅 [JavaScript 技术概述](/zh-CN/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)。
 
 ## 教程
 
@@ -52,24 +52,24 @@ JavaScript 核心语言特性（大部分是纯 [ECMAScript](/zh-CN/docs/Web/Jav
 
 - [理解客户端 Javascript 框架](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
   - : JavaScript 框架是现代前端 Web 开发必不可少的一部分，为开发者构建可扩展、交互式的 Web 应用程序提供了经过验证的工具。这个模块讨论一些客户端框架如何工作以及如何集成到工具集的基础背景知识，接着是一个讨论现在最流行框架的系列教程。
-- [JavaScript 语言概述](/zh-CN/docs/Web/JavaScript/Language_overview)
+- [JavaScript 语言概述](/zh-CN/docs/Web/JavaScript/Guide/Language_overview)
   - : JavaScript 基础语法和语义概述：帮助来自其他编程语言的读者加速学习。
-- [JavaScript 数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)
+- [JavaScript 数据结构](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)
   - : JavaScript 数据结构概述。
-- [相等比较和相同](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- [相等比较和相同](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
   - : JavaScript 提供了三种不同的值比较运算：严格相等运算符 `===`、非严格相等运算符 `==`，以及 {{jsxref("Global_Objects/Object/is", "Object.is()")}} 方法。
-- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
   - : 不同的处理属性的可枚举性和所有权的方法——一个接着一个的访问一组对象属性。
-- [闭包](/zh-CN/docs/Web/JavaScript/Closures)
+- [闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)
   - : 闭包是由函数及其声明所在的词法环境结合而成。
 
 ### 高级
 
-- [继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [继承与原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
   - : 解释被广泛误解与低估的基于原型的继承。
-- [内存管理](/zh-CN/docs/Web/JavaScript/Memory_management)
+- [内存管理](/zh-CN/docs/Web/JavaScript/Guide/Memory_management)
   - : JavaScript 的内存生命周期和垃圾回收。
-- [事件循环](/zh-CN/docs/Web/JavaScript/Event_loop)
+- [事件循环](/zh-CN/docs/Web/JavaScript/Reference/Execution_model)
   - : JavaScript 拥有基于“事件循环”的运行时模型。
 
 ## 参考

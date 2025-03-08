@@ -132,7 +132,7 @@ p {
       <th scope="row">隐式 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles#有_html_等价形式的结构角色">subscript</a
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#有_html_等价形式的结构角色">subscript</a
           ></code
         >
       </td>

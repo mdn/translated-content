@@ -1,7 +1,6 @@
 ---
 title: CSS 值和单位
 slug: Learn_web_development/Core/Styling_basics/Values_and_units
-original_slug: Learn/CSS/Building_blocks/Values_and_units
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}

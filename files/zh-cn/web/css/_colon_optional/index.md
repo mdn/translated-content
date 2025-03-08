@@ -106,7 +106,7 @@ input:optional {
 
 此外，还应在视觉上指示必填输入，通常使用描述性文本和/或图标，以避免仅依赖于颜色来传达含义。
 
-- [MDN 理解 WCAG，指南 3.3 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
+- [MDN 理解 WCAG，指南 3.3 解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
 - [了解成功标准 3.3.2 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
 
 ## 规范

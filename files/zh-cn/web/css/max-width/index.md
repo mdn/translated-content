@@ -58,7 +58,7 @@ max-width: unset;
 
 确保设置了 `max-width` 的元素在页面缩放以增大文字大小时不会被截断和/或遮挡其他内容。
 
-- [MDN 理解 WCAG 准则 1.4](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#准则_1.4：让用户更容易看到和听到内容，包括将前景与背景分开)
+- [MDN 理解 WCAG 准则 1.4](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#准则_1.4：让用户更容易看到和听到内容，包括将前景与背景分开)
 - [理解成功标准 1.4.4 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## 形式定义

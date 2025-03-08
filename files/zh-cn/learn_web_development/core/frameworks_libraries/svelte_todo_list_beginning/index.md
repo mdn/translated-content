@@ -1,7 +1,6 @@
 ---
 title: 开始编写我们的 Svelte 待办事项列表应用程序
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning
 l10n:
   sourceCommit: 289d6314f3368aa3e28524e7d090f6e9c704e3b1
 ---

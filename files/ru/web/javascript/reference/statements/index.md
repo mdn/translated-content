@@ -34,9 +34,9 @@ slug: Web/JavaScript/Reference/Statements
 
 - {{jsxref("Statements/var", "var")}}
   - : Объявляет переменную, необязательно инициализирует её значением.
-- {{experimental_inline}} {{jsxref("Statements/let", "let")}}
+- {{jsxref("Statements/let", "let")}}
   - : Объявляет локальную переменную в области видимости блока, необязательно инициализирует её значением.
-- {{experimental_inline}} {{jsxref("Statements/const", "const")}}
+- {{jsxref("Statements/const", "const")}}
   - : Объявляет именованную константу только для чтения.
 
 ### Функции

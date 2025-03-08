@@ -1,7 +1,6 @@
 ---
 title: 部署我们的应用
 slug: Learn_web_development/Extensions/Client-side_tools/Deployment
-original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Deployment
 l10n:
   sourceCommit: 13c2df5af92c04e57a2e882e92306fcf6949b239
 ---
