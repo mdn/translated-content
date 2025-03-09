@@ -21,7 +21,6 @@ HTTP **`410 Gone`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶�
 
 ### 請求過時資源
 
-
 以下的 `GET` 請求是針對一個已經無效的促銷內容頁面：
 
 ```http
@@ -53,4 +52,4 @@ Content-Length: 212
 
 - [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
 - {{HTTPStatus(404)}}
-- [410 gone](https://zh.wikipedia.org/zh-tw/HTTP%E7%8A%B6%E6%80%81%E7%A0%81#410)
+- [410 gone](https://zh.wikipedia.org/wiki/HTTP状态码#410)
