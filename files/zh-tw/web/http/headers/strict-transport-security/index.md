@@ -102,7 +102,7 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 ## 參見
 
 - [僅限安全上下文的功能](/zh-TW/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
-- [HTTP 嚴格傳輸安全性已經推出！](https://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html) 在 blog.sidstamm.com（2010）上 
+- [HTTP 嚴格傳輸安全性已經推出！](https://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html) 在 blog.sidstamm.com（2010）上
 - [HTTP 嚴格傳輸安全性（強制使用 HTTPS）](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/) 在 hacks.mozilla.org（2010）上
 - [HTTP 嚴格傳輸安全性](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html) 在 owasp.org 上的速查表
 - [HTTP 嚴格傳輸安全性](https://zh.wikipedia.org/wiki/HTTP严格传输安全)在維基百科上
