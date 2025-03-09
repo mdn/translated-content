@@ -32,8 +32,7 @@ ETag: W/"0815"
 ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
-當將更改保存到 wiki 頁面（發送資料）時，{{HTTPMethod("POST")}} 請求將包含 {{HTTPHeader("If-Match")}} 標頭，其中包含用於檢查新鮮度的 `ETag` 值。
-在將變更儲存至維基頁面（提交資料）時，{{HTTPMethod("POST")}} 請求將包含 {{HTTPHeader("If-Match")}} 標頭，該標頭包含用戶端從上次編輯時儲存的 ETag 值，以檢查伺服器上資源的新鮮度：
+當將更改保存到 wiki 頁面（發送資料）時，{{HTTPMethod("POST")}} 請求將包含 {{HTTPHeader("If-Match")}} 標頭，其中包含用於檢查新鮮度的 `ETag` 值。在將變更儲存至維基頁面（提交資料）時，{{HTTPMethod("POST")}} 請求將包含 {{HTTPHeader("If-Match")}} 標頭，該標頭包含用戶端從上次編輯時儲存的 ETag 值，以檢查伺服器上資源的新鮮度：
 
 ```http
 If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
