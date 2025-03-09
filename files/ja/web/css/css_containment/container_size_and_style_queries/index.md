@@ -75,7 +75,7 @@ form {
 
 `<container-condition>` にはオプションで、大文字小文字を区別する {{cssxref("container-name")}} を指定することができます。フォームの例では、 `<container-condition>` に名前を追加し、 `container-name` プロパティの値を照合したいフォーム要素の同じ名前に設定することで、クエリーで照合する要素を制限することができます。
 
- {{cssxref("container-name")}} プロパティは、 `@container` ルールで使用することができるクエリーコンテナー名のリストを指定します。コンテナー名は大文字小文字の区別のある {{cssxref("ident")}} 値です。コンテナー名を使用することで、コンテナーが直接の親でない場合でも、特定のコンテナーの詳細を問い合わせることができます。
+{{cssxref("container-name")}} プロパティは、 `@container` ルールで使用することができるクエリーコンテナー名のリストを指定します。コンテナー名は大文字小文字の区別のある {{cssxref("ident")}} 値です。コンテナー名を使用することで、コンテナーが直接の親でない場合でも、特定のコンテナーの詳細を問い合わせることができます。
 
 ```css
 @container [ [ <container-name> ]? <container-query> ]# {
