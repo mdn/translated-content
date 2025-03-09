@@ -2,7 +2,7 @@
 title: ExtendableCookieChangeEvent：changed 属性
 slug: Web/API/ExtendableCookieChangeEvent/changed
 l10n:
-  sourceCommit: 08f7d7ef89c04b824fa246e6fd35d47aebef7b51
+  sourceCommit: 775df1c62a1cbe555c4374ff9122d4ef15bd6f60
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("service")}}
