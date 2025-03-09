@@ -1,14 +1,13 @@
 ---
 title: CSS display の複数キーワード構文の使用
 slug: Web/CSS/CSS_display/multi-keyword_syntax_of_display
-original_slug: Web/CSS/display/multi-keyword_syntax_of_display
 l10n:
-  sourceCommit: afaf3aeeffa8408cf0a8a46c3d8fb0d347aad9f5
+  sourceCommit: b8f45350a203be9e6e83c6fcb83c93576d8d5d9c
 ---
 
 {{CSSRef}}
 
-[CSS 表示モジュール](/ja/docs/Web/CSS/CSS_display)は、 CSS [`display`](/ja/docs/Web/CSS/display) プロパティの複数キーワード構文を定義しています。このガイドでは、複数キーワード構文を解説します。
+[CSS 表示方法モジュール](/ja/docs/Web/CSS/CSS_display)は、 CSS の [`display`](/ja/docs/Web/CSS/display) プロパティの複数キーワード構文を定義しています。このガイドでは、複数キーワード構文を解説します。
 
 > [!NOTE]
 > 複数キーワード構文は、「2 値構文」または「複数値構文」とも呼ばれています。
@@ -31,11 +30,50 @@ h1 {
 
 以下のライブサンプルでは、`<span>` に `display: flex` を適用しています。これはブロックレベルのボックスとなり、インライン方向に利用可能なすべての空間を占有します。ここで、 `justify-content: space-between;` を使用すると、 2 つのフレックスアイテムの間にこの空間を入れることができます。
 
-{{EmbedGHLiveSample("css-examples/display/multi-keyword/span-flex.html", '100%', 440)}}
+```html live-sample___span-flex
+<span class="flex"> いくつかのテキスト <em>強調テキスト</em> </span>
+```
+
+```css live-sample___span-flex
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.flex {
+  border: 5px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+```
+
+{{EmbedLiveSample("span-flex")}}
 
 インラインフレックスコンテナーを作成することができます。 `inline-flex` という単一の値を使ってフレックスコンテナーを作成すると、インラインレベルのボックスとフレックスの子が作成されます。この子はブロックレベルコンテナーのフレックスの子と同じように動作します。唯一変わったことは、親がインラインレベルボックスになったということです。したがって、他のインラインレベルのものと同様に動作し、ブロックレベルのボックスのように完全な幅（またはインライン軸のサイズ）を取りません。つまり、次のようなテキストがフレックスコンテナーと一緒に表示される可能性があります。
 
-{{EmbedGHLiveSample("css-examples/display/multi-keyword/inline-flex.html", '100%', 440)}}
+```html live-sample___inline-flex
+<div class="flex">
+  <div>One</div>
+  <div>Two</div>
+</div>
+フレックスコンテナーに続くテキストです。
+```
+
+```css live-sample___inline-flex
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.flex > div {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
+.flex {
+  border: 5px solid #ccc;
+  display: inline-flex;
+}
+```
+
+{{EmbedLiveSample("inline-flex")}}
 
 グリッドレイアウトで作業する場合も同様です。 `display: grid` を使用すると、ブロックレベルのボックスが表示され、直接の子にはグリッド整形コンテキストが作成されます。 `display: inline-grid` を使用すると、インラインレベルのボックスが作成され、子要素にグリッド整形コンテキストが作成されます。
 
@@ -45,7 +83,50 @@ h1 {
 
 つまり、 `display: flex` を設定して、フレックスの子を持つブロックレベルのボックスを作成する代わりに、 `display: block flex` を使用することになります。フレックスの子要素を持つインラインレベルのボックスを作成するには、 `display: inline-flex` の代わりに `display: inline flex` を使用します。
 
-{{EmbedGHLiveSample("css-examples/display/multi-keyword/multi-keyword-flex.html", '100%', 640)}}
+```html live-sample___multi-keyword-flex
+<h1>display の複数の値</h1>
+
+<div class="flex flex1">
+  <div>Item One</div>
+  <div>Item Two</div>
+  <div>Item Three</div>
+</div>
+
+<p>最初の例は、フレックスの子要素を持つブロック要素です。</p>
+
+<div class="flex flex2">
+  <div>Item One</div>
+  <div>Item Two</div>
+  <div>Item Three</div>
+</div>
+2 つ目の例は、フレックス子要素を持つインライン要素です。
+```
+
+```css live-sample___multi-keyword-flex
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.flex {
+  border: 5px solid #ccc;
+  gap: 10px;
+}
+
+.flex > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
+.flex1 {
+  display: block flex;
+}
+
+.flex2 {
+  display: inline flex;
+}
+```
+
+{{EmbedLiveSample("multi-keyword-flex", "", "300px")}}
 
 `display` の既存のすべての値に対応するものがあります。最も一般的なものを以下の表に示します。最も一般的なものを下の表に示します。完全なリストを見るには、 [`display` property specification](https://drafts.csswg.org/css-display/#display-value-summary) にある表を参照してください。
 
@@ -71,13 +152,13 @@ h1 {
 このレイアウトで注目すべき点は、親要素と子要素の間にコンテンツがないことと、子要素に上マージンが適用されていることです。
 上マージンが効果的に子要素を親要素内に押し下げると思うかもしれませんが、代わりに起こるのは[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)と呼ばれる現象です。
 この場合、子要素のマージンは親の外接ボックスよりかなり上まで広がり、親要素をページのさらに下に押し下げます。
-これは、子要素のボックスモデルを[ブラウザーの開発者ツール](/ja/docs/Learn/CSS/Building_blocks/The_box_model#ブラウザーの開発ツールを利用して、ボックスモデルを見てみる)で検査するとわかります。
+これは、子要素のボックスモデルを[ブラウザーの開発者ツール](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ブラウザーの開発ツールを利用して、ボックスモデルを見てみる)で検査するとわかります。
 
 `<select>` 要素の選択オプションを変更して、様々な `display` 値の効果を確認してみてください。
 任意の値と `flow-root` を使用すると、親の新しい整形コンテキストを作成し、子要素のマージンを親の外縁に対して相対的に配置することができ、マージンの崩れを避けることができます。
 `flow-root` と `display: block flow-root` を切り替えると、 1 つの値の `flow-root` キーワードと同じ効果を得ることができます。
 
-```js hidden
+```js hidden live-sample___display_block_flow-root_and_display_inline_flow-root
 function changeDisplayType() {
   var parentDiv = document.getElementById("parent");
   var siblingDiv = document.getElementById("sibling");
@@ -88,7 +169,7 @@ function changeDisplayType() {
 }
 ```
 
-```css hidden
+```css hidden live-sample___display_block_flow-root_and_display_inline_flow-root
 #controls {
   padding: 1rem;
   outline: 2px dashed black;
@@ -99,7 +180,7 @@ body {
 }
 ```
 
-```css
+```css live-sample___display_block_flow-root_and_display_inline_flow-root
 div,
 p {
   outline: 2px solid black;
@@ -123,7 +204,7 @@ p {
 }
 ```
 
-```html hidden
+```html hidden live-sample___display_block_flow-root_and_display_inline_flow-root
 <div id="controls">
   <label for="displayType">display:</label>
   <select id="displayType" onchange="changeDisplayType()">
@@ -136,7 +217,7 @@ p {
 </div>
 ```
 
-```html
+```html live-sample___display_block_flow-root_and_display_inline_flow-root
 <div id="parent">
   <p id="child">#child の段落（#parent の内側）です。</p>
 </div>
@@ -145,15 +226,39 @@ p {
 
 {{EmbedLiveSample("display_block_flow-root_and_display_inline_flow-root", '90%', 380)}}
 
-`flow-root` の値は、ブロックとインラインのレイアウトについて考えれば、理にかなっています。これは、[通常フロー](/ja/docs/Learn/CSS/CSS_layout/Normal_Flow)と呼ばれることもあるようです。 HTML ページは新しい整形コンテキストを作成し（浮動要素やマージンが境界からはみ出さない）、コンテンツはブロックとインラインレイアウトを使用して、通常のフローで表示されます。グリッドやフレックスのコンテナーを作成すると、新しい整形コンテキスト（それぞれグリッド整形コンテキストとフレックス整形コンテキスト）も作成されます。しかし、浮動要素やマージンを含めてもブロックやインラインレイアウトを使い続けたい場合は、新しいフロールートを作成し、ブロックやインラインレイアウトでやり直すことができます。その位置から下方向は、すべて新しいフロールートの中に含まれます。
+`flow-root` の値は、ブロックとインラインのレイアウトについて考えれば、理にかなっています。これは、[通常フロー](/ja/docs/Learn_web_development/Core/CSS_layout/Introduction#通常フロー)と呼ばれることもあるようです。 HTML ページは新しい整形コンテキストを作成し（浮動ボックスやマージンが境界からはみ出さない）、コンテンツはブロックとインラインレイアウトを使用して、通常のフローで表示されます。グリッドやフレックスのコンテナーを作成すると、新しい整形コンテキスト（それぞれグリッド整形コンテキストとフレックス整形コンテキスト）も作成されます。しかし、浮動ボックスやマージンを含めてもブロックやインラインレイアウトを使い続けたい場合は、新しいフロールートを作成し、ブロックやインラインレイアウトでやり直すことができます。その位置から下方向は、すべて新しいフロールートの中に含まれます。
 
 したがって、`display: flow-root` の 2 値構文が `display: block flow-root` であることは、非常に理にかなっていると言えます。ブロックレベルのボックスと通常のフローに参加する子オブジェクトを持つ、ブロック整形コンテキストを作成しているのです。対応する組である `display: inline flow-root` についてはどうでしょうか？これは `display: inline-block` を記述する新しい方法です。
 
 `display: inline-block` という値は、 CSS の初期から存在しています。この値を使用する理由は、例えばナビゲーションアイテムを作成する際に、インラインアイテムを要素から離して距離を置くことができるようにするため、または以下の例のようにインライン要素にパディング付きの背景を追加したい場合です。
 
-{{EmbedGHLiveSample("css-examples/display/multi-keyword/inline-block.html", '100%', 440)}}
+```html live-sample___inline-block
+<p>
+  This paragraph has a span <span class="inline-block">with padding</span> it is
+  an inline-block so the padding is contained and pushes the other line boxes
+  away.
+</p>
+```
 
-しかし、 `display: inline-block` を持つ要素は、浮動要素も含むことになります。それは、インラインレベルのボックスの中にあるすべてのものを含みます。したがって、 `display: inline-block` は `display: flow-root` と全く同じですが、ブロックレベルのボックスではなく、インラインレベルのボックスで行います。新しい構文は、この値で何が起こっているかを正確に表現しています。上記の例では、 Firefox で `display: inline-block` を `display: inline flow-root` に変更しても同じ結果になります。
+```css live-sample___inline-block
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+p {
+  border: 2px dashed;
+  width: 300px;
+}
+.inline-block {
+  background-color: rgb(0 0 0 / 0.4);
+  color: #fff;
+  padding: 10px;
+  display: inline-block;
+}
+```
+
+{{EmbedLiveSample("inline-block", "", "200px")}}
+
+しかし、 `display: inline-block` を持つ要素は、浮動ボックスも含むことになります。それは、インラインレベルのボックスの中にあるすべてのものを含みます。したがって、 `display: inline-block` は `display: flow-root` と全く同じですが、ブロックレベルのボックスではなく、インラインレベルのボックスで行います。新しい構文は、この値で何が起こっているかを正確に表現しています。上記の例では、 Firefox で `display: inline-block` を `display: inline flow-root` に変更しても同じ結果になります。
 
 ## display の古い値について
 
