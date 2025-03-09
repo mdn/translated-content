@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Statements/var
 
 **`var`** 문은 변수를 선언하고, 선택적으로 초기화할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/statement-var.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Var")}}
+
+```js interactive-example
+var x = 1;
+
+if (x === 1) {
+  var x = 2;
+
+  console.log(x);
+  // Expected output: 2
+}
+
+console.log(x);
+// Expected output: 2
+```
 
 ## 구문
 

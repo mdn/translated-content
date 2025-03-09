@@ -19,16 +19,16 @@ l10n:
 
 对于某些元素，它们的无障碍名称来源于它们的属性，比如说 {{HTMLElement("img")}} 的 `alt` 属性，例如 `<img src="grape.jpg" alt="banana"/>` 的无障碍名称就是“banana”。
 
-要创建可见内容或多个文本节点与元素之间的关系，可以使用 [`aria-labeledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 属性。如果没有将可见文本与一个需要无障碍名称的元素相关联，则可以使用 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性。行级文本不应该拥有无障碍名称，比如 {{HTMLElement("code")}}、{{HTMLElement("del")}} 和 {{HTMLElement("mark")}}。
+要创建可见内容或多个文本节点与元素之间的关系，可以使用 [`aria-labeledby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性。如果没有将可见文本与一个需要无障碍名称的元素相关联，则可以使用 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性。行级文本不应该拥有无障碍名称，比如 {{HTMLElement("code")}}、{{HTMLElement("del")}} 和 {{HTMLElement("mark")}}。
 
 大多数的元素，比如一节文本内容，并不需要无障碍名称。所有的控件都应该有无障碍名称。所有传递了信息且不纯粹是展示性质的图片也应该这样。
 
-辅助技术能给用户提供无障碍名称属性（也就是无障碍名称以及元素的角色）。虽然很多元素不需要无障碍名称，但为了替换或补充具有指定[角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)的元素的内容，提供无障碍名称是必要的。比如说，[`tabpanel`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) 是一块会在用户激活了与 [`tab`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tab_role) 角色相关联的元素之后展示出来的内容。可以将这个角色可以设置到不需要无障碍名称的元素上，例如 {{HTMLElement("div")}} 元素。`tabpanel` 是 `tab` 的后代（内容部分）。给 `tabpanel` 添加 `aria-labelledby` 是最佳实践。
+辅助技术能给用户提供无障碍名称属性（也就是无障碍名称以及元素的角色）。虽然很多元素不需要无障碍名称，但为了替换或补充具有指定[角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles)的元素的内容，提供无障碍名称是必要的。比如说，[`tabpanel`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role) 是一块会在用户激活了与 [`tab`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) 角色相关联的元素之后展示出来的内容。可以将这个角色可以设置到不需要无障碍名称的元素上，例如 {{HTMLElement("div")}} 元素。`tabpanel` 是 `tab` 的后代（内容部分）。给 `tabpanel` 添加 `aria-labelledby` 是最佳实践。
 
 ## 参见
 
-- [ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
-- [ARIA 属性](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)
+- [ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles)
+- [ARIA 属性](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes)
 - [无障碍名称与描述计算 1.2（accname）](https://w3c.github.io/accname/#mapping_additional_nd_description)
 - [无障碍](/zh-CN/docs/Web/Accessibility)
 - [学习无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility)

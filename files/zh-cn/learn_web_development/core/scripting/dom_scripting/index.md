@@ -1,9 +1,8 @@
 ---
-title: 操作文档
+title: DOM 脚本简介
 slug: Learn_web_development/Core/Scripting/DOM_scripting
-original_slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 l10n:
-  sourceCommit: 7e97f3c5ada65b6638909bde92881a4b8d46a2b8
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Object_basics","Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Core/Scripting")}}
@@ -81,7 +80,7 @@ Web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
 - **子节点**: *直接*位于另一个节点内的节点。例如上面例子中，`IMG` 是 `SECTION` 的子节点。
 - **后代节点**: 位于另一个节点内*任意位置*的节点。例如 上面例子中，`IMG` 是 `SECTION` 的子节点，也是一个后代节点。`IMG` 不是 `BODY` 的子节点，因为它在树中比 `BODY` 低了两级，但它是 `BODY` 的后代之一。
 - **父节点**: 里面有另一个节点的节点。例如上面的例子中 `BODY` 是 `SECTION` 的父节点。
-- **兄弟节点**: DOM 树中位于同一等级的节点。例如上面例子中，`IMG` 和 `P` 是兄弟。
+- **兄弟节点**: DOM 树中位于同一父节点下同一等级的节点。例如上面例子中，`IMG` 和 `P` 是兄弟。
 
 在使用 DOM 之前，熟悉这些术语是很有用的，因为你会遇到的一些代码术语都会用到它们。如果你学习过 CSS，你可能也会遇到它们（例如，子孙选择器、子选择器）。
 

@@ -9,7 +9,21 @@ l10n:
 
 **`let`** 声明用于声明可重新赋值的块级作用域局部变量，并且可以选择将其初始化为一个值。
 
-{{EmbedInteractiveExample("pages/js/statement-let.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Let")}}
+
+```js interactive-example
+let x = 1;
+
+if (x === 1) {
+  let x = 2;
+
+  console.log(x);
+  // Expected output: 2
+}
+
+console.log(x);
+// Expected output: 1
+```
 
 ## 语法
 
@@ -24,7 +38,7 @@ let name1 = value1, name2, /* …, */ nameN = valueN;
 ### 参数
 
 - `nameN`
-  - : 要声明的变量的名称。必须是合法的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)或[解构绑定模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
+  - : 要声明的变量的名称。必须是合法的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)或[解构绑定模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
 - `valueN` {{optional_inline}}
   - : 变量的初始值。可以是任意合法的表达式。默认值为 `undefined`。
 
@@ -273,7 +287,7 @@ let [, a, b, c] = result;
 console.log(a, b, c); // "aaa" "b" "cc"
 ```
 
-更多信息，参见[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
+更多信息，参见[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
 
 ## 规范
 

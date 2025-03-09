@@ -61,14 +61,14 @@ article {
 }
 ```
 
-布局通常限定在整个文档范围，这意味着如果移动一个元素，整个文档需要被视为可能有任何元素移动。通过使用 `contain: layout`，你可以告诉浏览器它只需要检查这个元素——元素内部的所有内容都限定在该元素内，并且不影响页面的其余部分，包含盒子建立了一个独立的[格式化上下文](/zh-CN/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)。
+布局通常限定在整个文档范围，这意味着如果移动一个元素，整个文档需要被视为可能有任何元素移动。通过使用 `contain: layout`，你可以告诉浏览器它只需要检查这个元素——元素内部的所有内容都限定在该元素内，并且不影响页面的其余部分，包含盒子建立了一个独立的[格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)。
 
 此外：
 
 - {{cssxref("float")}} 布局将在指定元素内独立执行。
 - 外边距不会跨越布局局限边界折叠。
-- 布局容器是 `absolute` 和 `fixed` 定位子元素的[包含块](/zh-CN/docs/Web/CSS/Containing_block)。
-- 包含盒子创建了一个[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)，因此可以使用 {{cssxref("z-index")}}。
+- 布局容器是 `absolute` 和 `fixed` 定位子元素的[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)。
+- 包含盒子创建了一个[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)，因此可以使用 {{cssxref("z-index")}}。
 
 > [!NOTE]
 > 当使用 {{cssxref("container-type")}} 和 {{cssxref("container-name")}} 属性时，`contain` 的 `style` 和 `layout` 值会自动应用。

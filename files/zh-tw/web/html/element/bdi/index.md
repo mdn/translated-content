@@ -7,7 +7,33 @@ slug: Web/HTML/Element/bdi
 
 **`<bdi>`** [HTML](/zh-TW/docs/Web/HTML) 元素告訴瀏覽器的雙向算法，要將其包含的文本與周圍的文本隔離處理。當網站動態插入某些文本但不知道插入文本的方向性時，這尤其有用。
 
-{{EmbedInteractiveExample("pages/tabbed/bdi.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;bdi&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>World wrestling championships</h1>
+
+<ul>
+  <li><bdi class="name">Evil Steven</bdi>: 1st place</li>
+  <li><bdi class="name">François fatale</bdi>: 2nd place</li>
+  <li><span class="name">سما</span>: 3rd place</li>
+  <li><bdi class="name">الرجل القوي إيان</bdi>: 4th place</li>
+  <li><span class="name" dir="auto">سما</span>: 5th place</li>
+</ul>
+```
+
+```css interactive-example
+html {
+  font-family: sans-serif;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+bdi {
+}
+
+.name {
+  color: red;
+}
+```
 
 雙向文本是可能包含從左到右（LTR）排列的字符序列和從右到左（RTL）排列的字符序列的文本，例如嵌入在英文字符串中的阿拉伯引用。瀏覽器實現了 [Unicode 雙向算法](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics)來處理這一問題。在這個算法中，字符被賦予隱式方向性：例如，拉丁字符被視為 LTR，而阿拉伯字符被視為 RTL。一些其他字符（例如空格和一些標點符號）被視為中性，其方向性基於周圍字符的方向性而分配。
 
@@ -153,7 +179,7 @@ body {
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/generic_role"
+          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
             >generic</a
           ></code
         >

@@ -1,7 +1,6 @@
 ---
 title: 一个漂亮的盒子
 slug: Learn_web_development/Core/Styling_basics/Cool-looking_box
-original_slug: Learn/CSS/Building_blocks/A_cool_looking_box
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}

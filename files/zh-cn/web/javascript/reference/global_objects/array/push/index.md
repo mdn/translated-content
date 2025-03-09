@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/push
 
 **`push()`** 方法将指定的元素添加到数组的末尾，并返回新的数组长度。
 
-{{EmbedInteractiveExample("pages/js/array-push.html")}}
+{{InteractiveExample("JavaScript Demo: Array.push()")}}
+
+```js interactive-example
+const animals = ["pigs", "goats", "sheep"];
+
+const count = animals.push("cows");
+console.log(count);
+// Expected output: 4
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+animals.push("chickens", "cats", "dogs");
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+```
 
 ## 语法
 

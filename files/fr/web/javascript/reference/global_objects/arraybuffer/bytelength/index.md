@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
 
 L'accesseur **`byteLength`** est une propriété représentant la longueur d'un {{jsxref("ArrayBuffer")}} en octets.
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-bytelength.html")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer.byteLength")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+
+// Use byteLength to check the size
+const bytes = buffer.byteLength;
+
+console.log(bytes);
+// Expected output: 8
+```
 
 ## Syntaxe
 

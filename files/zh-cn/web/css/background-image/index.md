@@ -25,11 +25,8 @@ slug: Web/CSS/background-image
 可以提供由逗号分隔的多个值来指定多个背景图像：
 
 ```css
-background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 0, 0.5),
-    rgba(0, 0, 255, 0.5)
-  ),
+background-image:
+  linear-gradient(to bottom, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)),
   url("cat-front.png");
 ```
 
@@ -87,7 +84,7 @@ div {
 
 浏览器不会向辅助技术提供有关背景图像的任何特殊信息。这对于屏幕阅读器来说非常重要，因为屏幕阅读器不会告知用户它的存在，因而不能向用户传达任何信息。如果图像包含对理解页面总体目的至关重要的信息，则最好在文档中作出语义性地描述（describe it semantically）。
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content)
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## 规范

@@ -1,7 +1,6 @@
 ---
 title: Express 教程：本地图书馆网站
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website
-original_slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

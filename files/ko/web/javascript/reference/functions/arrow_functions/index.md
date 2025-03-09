@@ -13,7 +13,14 @@ l10n:
 - 화살표 함수는 [생성자](/ko/docs/Glossary/Constructor)로 사용할 수 없습니다. [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로 호출하면 {{jsxref("TypeError")}}가 반환됩니다. [`new.target`](/ko/docs/Web/JavaScript/Reference/Operators/new.target) 키워드에 대한 액세스 권한도 없습니다.
 - 화살표 함수는 함수 내부에서 [`yield`](/ko/docs/Web/JavaScript/Reference/Operators/yield)를 사용할 수 없으며 제너레이터 함수로 생성할 수 없습니다.
 
-{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
+{{InteractiveExample("JavaScript Demo: Functions =>")}}
+
+```js interactive-example
+const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+
+console.log(materials.map((material) => material.length));
+// Expected output: Array [8, 6, 7, 9]
+```
 
 ## 구문
 

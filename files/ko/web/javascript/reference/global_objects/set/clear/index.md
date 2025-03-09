@@ -9,7 +9,21 @@ l10n:
 
 {{jsxref("Set")}} 인스턴스의 **`clear()`** 메서드는 이 Set의 모든 요소를 삭제합니다.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-clear.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.clear()")}}
+
+```js interactive-example
+const set1 = new Set();
+set1.add(1);
+set1.add("foo");
+
+console.log(set1.size);
+// Expected output: 2
+
+set1.clear();
+
+console.log(set1.size);
+// Expected output: 0
+```
 
 ## 구문
 

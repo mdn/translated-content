@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/length
 
 **`length`** 是 {{jsxref("Array")}} 的实例属性，表示该数组中元素的个数。该值是一个无符号 32 位整数，并且其数值总是大于数组最大索引。
 
-{{EmbedInteractiveExample("pages/js/array-length.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.length", "shorter")}}
+
+```js interactive-example
+const clothing = ["shoes", "shirts", "socks", "sweaters"];
+
+console.log(clothing.length);
+// Expected output: 4
+```
 
 ## 值
 

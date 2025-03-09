@@ -9,7 +9,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/Date
 `Date` 객체는 1970년 1월 1일 UTC(국제표준시) 자정으로부터 지난 시간을 밀리초로 나타내는 UNIX 타임스탬프를
 담습니다.
 
-{{EmbedInteractiveExample("pages/js/date-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Date Constructor")}}
+
+```js interactive-example
+const date1 = new Date("December 17, 1995 03:24:00");
+// Sun Dec 17 1995 03:24:00 GMT...
+
+const date2 = new Date("1995-12-17T03:24:00");
+// Sun Dec 17 1995 03:24:00 GMT...
+
+console.log(date1 === date2);
+// Expected output: false
+
+console.log(date1 - date2);
+// Expected output: 0
+```
 
 ## 구문
 

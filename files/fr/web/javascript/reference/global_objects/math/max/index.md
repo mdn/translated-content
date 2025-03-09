@@ -9,7 +9,20 @@ l10n:
 
 La méthode statique **`Math.max()`** renvoie le plus grand nombre parmi ceux passés en paramètres, ou [`-Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity) si aucun paramètre n'est fourni.
 
-{{EmbedInteractiveExample("pages/js/math-max.html")}}
+{{InteractiveExample("JavaScript Demo: Math.max()")}}
+
+```js interactive-example
+console.log(Math.max(1, 3, 2));
+// Expected output: 3
+
+console.log(Math.max(-1, -3, -2));
+// Expected output: -1
+
+const array1 = [1, 3, 2];
+
+console.log(Math.max(...array1));
+// Expected output: 3
+```
 
 ## Syntaxe
 

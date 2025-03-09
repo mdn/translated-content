@@ -1,47 +1,19 @@
 ---
 title: MathML 表
 slug: Web/MathML/Guides/Tables
-original_slug: Learn/MathML/First_steps/Tables
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps/Three_famous_mathematical_formulas", "Learn/MathML/First_steps")}}
+{{MathMLRef}}
+
+{{PreviousMenuNext("Web/MathML/Guides/Scripts", "Web/MathML/Guides/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}
 
 基本的な数式表記がすべてわかったら、あとは行列のような式や他にも高度な数式レイアウトを使用することができる表形式レイアウトを考えることができます。
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提知識:</th>
-      <td>
-        <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >基本的なソフトウェアがインストールされていること</a
-        >、
-        <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >ファイルでの作業</a
-        >に関する基本的な知識、 HTML の基本（
-        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >と <a href="/ja/docs/Learn/HTML/Tables"
-          >HTML 表</a
-        >を学ぶこと）
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">目標:</th>
-      <td>
-        添字要素を作成する基本的な MathML 要素に慣れること。
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## MathML 表形式要素
 
-MathML の表形式要素は [HTML 表](/ja/docs/Learn/HTML/Tables)要素と似ています。 `<mtable>` 要素は数式の表を表し、子要素（行を表す）として `<mtr>` 要素があり、それぞれの子要素（セルを表す）として `<mtd>` 要素があります。 `<mtable>` 要素は MathML の数式のどこにでも挿入することができます。 `<mtd>` 要素は任意の数の MathML の子を格納することができ、それらを `<mrow>` コンテナーとして並べます。
+MathML の表形式要素は [HTML 表](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)要素と似ています。 `<mtable>` 要素は数式の表を表し、子要素（行を表す）として `<mtr>` 要素があり、それぞれの子要素（セルを表す）として `<mtd>` 要素があります。 `<mtable>` 要素は MathML の数式のどこにでも挿入することができます。 `<mtd>` 要素は任意の数の MathML の子を格納することができ、それらを `<mrow>` コンテナーとして並べます。
 
 表は通常、（ベクトルを含む）行列のような表現に使用します。 [CSS の `matrix()` 関数に関する記事](/ja/docs/Web/CSS/transform-function/matrix)から引用した基本的な例を示します。
 
@@ -128,11 +100,11 @@ MathML の表形式要素は [HTML 表](/ja/docs/Learn/HTML/Tables)要素と似�
 
 ## セルを複数の行や列にまたがらせる
 
-これも [HTML の表](/ja/docs/Learn/HTML/Tables/Basics#allowing_cells_to_span_multiple_rows_and_columns)に似ています。 `<mtd>` 要素は `columnspan` 属性と `rowspan` 属性を受け入れ、セルが複数の行と列にまたがることを示します。下記は内側の行列が外側の行列の 2 列にまたがっています。
+これも [HTML の表](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#セルを複数の行や列で結合できるようにする)に似ています。 `<mtd>` 要素は `columnspan` 属性と `rowspan` 属性を受け入れ、セルが複数の行と列にまたがることを示します。下記は内側の行列が外側の行列の 2 列にまたがっています。
 
 ```html hidden
 <!doctype html>
-<html lang="en-US">
+<html lang="ja">
   <head>
     <meta charset="utf-8" />
     <title>columnspan のある行列</title>
@@ -224,7 +196,7 @@ MathML の表形式要素は [HTML 表](/ja/docs/Learn/HTML/Tables)要素と似�
 
 ```html hidden
 <!doctype html>
-<html lang="en-US">
+<html lang="ja">
   <head>
     <meta charset="utf-8" />
     <title>My first matrix</title>
@@ -304,13 +276,13 @@ MathML の表形式要素は [HTML 表](/ja/docs/Learn/HTML/Tables)要素と似�
 
 この記事では、テーブル用の HTML 要素に相当する `<mtable>`、`<mtr>`、`<mtd>` 要素について確認しました。行列のようなオブジェクトを表すために使用する方法や、高度なレイアウトのために使用する方法について見てきました。
 
-このモジュールはまもなく完了します。あと 1 つだけ指定されたことがあります。[三大有名数式の評価](/ja/docs/Learn/MathML/First_steps/Three_famous_mathematical_formulas)では、新しい知識を使用して HTML と MathML を使用して小さな数学の記事を書き直します。
-
-{{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps/Three_famous_mathematical_formulas", "Learn/MathML/First_steps")}}
+このモジュールはまもなく完了します。あと 1 つだけ指定されたことがあります。[三大有名数式の評価](/ja/docs/Web/MathML/Guides/Three_famous_mathematical_formulas)では、新しい知識を使用して HTML と MathML を使用して小さな数学の記事を書き直します。
 
 ## 関連情報
 
-- [HTML テーブルについての学習](/ja/docs/Learn/HTML/Tables)
+- [HTML テーブルについての学習](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - [`<mtable>` 要素](/ja/docs/Web/MathML/Element/mtable)
 - [`<mtr>` 要素](/ja/docs/Web/MathML/Element/mtr)
 - [`<mtd>` 要素](/ja/docs/Web/MathML/Element/mtd)
+
+{{PreviousMenuNext("Web/MathML/Guides/Scripts", "Web/MathML/Guides/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}

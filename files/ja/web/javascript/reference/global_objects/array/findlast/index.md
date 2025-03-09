@@ -20,7 +20,16 @@ l10n:
   こちらも、テスト関数を使用する代わりに、各要素が値と等しいかどうかを調べます。
 - 指定されたテスト関数を満たす要素を得るには {{jsxref("Array/some", "some()")}} を使用してください。
 
-{{EmbedInteractiveExample("pages/js/array-findlast.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.findLast()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 50, 130, 44];
+
+const found = array1.findLast((element) => element > 45);
+
+console.log(found);
+// Expected output: 130
+```
 
 ## 構文
 

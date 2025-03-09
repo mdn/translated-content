@@ -1,7 +1,6 @@
 ---
 title: 视频和音频内容
 slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio
-original_slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 l10n:
   sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
@@ -81,13 +80,13 @@ l10n:
 
 #### 媒体文件的内容
 
-我们先来快速的了解一下相关术语。像 MP3、MP4 还有 WebM 这些格式叫做[**容器格式**](/zh-CN/docs/Web/Media/Formats/Containers)。他们定义了构成媒体文件的音频轨道和视频轨道的储存结构，其中还包含描述这个媒体文件的元数据，以及使用什么编解码器对其通道进行编码等等。
+我们先来快速的了解一下相关术语。像 MP3、MP4 还有 WebM 这些格式叫做[**容器格式**](/zh-CN/docs/Web/Media/Guides/Formats/Containers)。他们定义了构成媒体文件的音频轨道和视频轨道的储存结构，其中还包含描述这个媒体文件的元数据，以及使用什么编解码器对其通道进行编码等等。
 
 一个包含电影的 WebM 文件，其主要包括一个主视频轨道和一个备用视角轨道，以及相应的英语和西班牙语音轨，还有英语解说音轨，如下图所示。文件还包括用于电影的闭路字幕文本轨道、西班牙语字幕以及解说的英文字幕。
 
 ![从轨道级别看待媒体文件内容的图表](containersandtracks.png)
 
-容器中的音频和视频轨道存储着按照相应编解码器格式编码的数据。音频轨道使用不同于视频轨道的格式进行编码。每条音频轨道都采用[音频编解码器](/zh-CN/docs/Web/Media/Formats/Audio_codecs)编码，而视频轨道则使用（你可能已经猜到了）[视频编解码器](/zh-CN/docs/Web/Media/Formats/Video_codecs)编码。我们之前提到过，不同浏览器支持不同的视频和音频格式，以及不同的容器格式，如 MP3、MP4 和 WebM，这些容器可以包含不同类型的视频和音频。
+容器中的音频和视频轨道存储着按照相应编解码器格式编码的数据。音频轨道使用不同于视频轨道的格式进行编码。每条音频轨道都采用[音频编解码器](/zh-CN/docs/Web/Media/Guides/Formats/Audio_codecs)编码，而视频轨道则使用（你可能已经猜到了）[视频编解码器](/zh-CN/docs/Web/Media/Guides/Formats/Video_codecs)编码。我们之前提到过，不同浏览器支持不同的视频和音频格式，以及不同的容器格式，如 MP3、MP4 和 WebM，这些容器可以包含不同类型的视频和音频。
 
 例如：
 
@@ -112,7 +111,7 @@ l10n:
 
 由于每种浏览器支持的容器文件格式和编解码器都有所不同，情况变得更加复杂。为了尽可能确保你的网站或应用能在用户的浏览器上正常工作，你可能需要提供多种格式的媒体文件。如果你的网站没有提供任何用户的浏览器支持的格式，那么你的媒体内容将无法播放。
 
-由于确保你的应用程序中的媒体内容能在你想要覆盖的每一种浏览器、平台和设备上都正常显示有些复杂，因此选择最合适的编解码器和容器组合可能会是一项挑战。为了选择最适合你需求的容器文件格式，请参考[选择正确的容器](/zh-CN/docs/Web/Media/Formats/Containers#选择正确的容器)；要为你的内容和目标受众选择合适的媒体编解码器，请参考[选择视频编解码器](/zh-CN/docs/Web/Media/Formats/Video_codecs#选择视频编解码器)以及[选择音频编解码器](/zh-CN/docs/Web/Media/Formats/Audio_codecs#选择音频编解码器)。
+由于确保你的应用程序中的媒体内容能在你想要覆盖的每一种浏览器、平台和设备上都正常显示有些复杂，因此选择最合适的编解码器和容器组合可能会是一项挑战。为了选择最适合你需求的容器文件格式，请参考[选择正确的容器](/zh-CN/docs/Web/Media/Guides/Formats/Containers#选择正确的容器)；要为你的内容和目标受众选择合适的媒体编解码器，请参考[选择视频编解码器](/zh-CN/docs/Web/Media/Guides/Formats/Video_codecs#选择视频编解码器)以及[选择音频编解码器](/zh-CN/docs/Web/Media/Guides/Formats/Audio_codecs#选择音频编解码器)。
 
 当然，这里有一点需要注意：移动浏览器和桌面浏览器对格式的支持可能不一样。此外，桌面和移动浏览器都*可能*外包媒体播放处理（可能是全部媒体也可能是仅仅是那些它无法内部处理的特定类型）。因此，媒体支持在一定程度上依赖于用户安装了哪些软件。
 
@@ -130,7 +129,7 @@ l10n:
 
 每个 `<source>` 元素都含有 [`type`](/zh-CN/docs/Web/HTML/Element/source#type) 属性，这个属性是可选的，但是建议你添加这个属性——它包含了 `<source>` 指定的 {{glossary("MIME type","MIME 类型")}}，同时浏览器也会通过检查这个属性来迅速的跳过那些不支持的格式。如果你没有添加 `type` 属性，浏览器会尝试加载每一个文件，直到找到一个能正确播放的格式，但是这样会消耗掉大量的时间和资源。
 
-请参考我们的[媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)，以选择最适合你的需求的容器和编解码器，同时查找合适的 MIME 类型以指定每种媒体类型。
+请参考我们的[媒体类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats)，以选择最适合你的需求的容器和编解码器，同时查找合适的 MIME 类型以指定每种媒体类型。
 
 ### 其他 \<video> 特性
 
@@ -262,7 +261,7 @@ WEBVTT
 
 ![视频播放器带有标准的控制功能，如播放、停止、音量和字幕开关。播放的视频显示了一名男子手持长矛状武器的场景，标题为“Esta hoja tiene pasado oscuro”。](video-player-with-captions.png)
 
-更多细节，包括如何添加标签，请阅读[为 HTML 视频添加标题和字幕](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。在 Github 上可以找到[与本文相关的样例](https://iandevlin.github.io/mdn/video-player-with-captions/)，它们由 Ian Devlin 编写（或者[查看源代码](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)）。这个样例使用了 JavaScript 代码，用户借此可以选择不同的字幕。注意，若想要显示字幕，你需要点击“CC”按钮，并且选择某个选项（English、Deutsch 或 Español）。
+更多细节，包括如何添加标签，请阅读[为 HTML 视频添加标题和字幕](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。在 Github 上可以找到[与本文相关的样例](https://iandevlin.github.io/mdn/video-player-with-captions/)，它们由 Ian Devlin 编写（或者[查看源代码](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)）。这个样例使用了 JavaScript 代码，用户借此可以选择不同的字幕。注意，若想要显示字幕，你需要点击“CC”按钮，并且选择某个选项（English、Deutsch 或 Español）。
 
 > [!NOTE]
 > 文本轨道还可以帮助你进行 {{glossary("SEO")}}，因为搜索引擎对文字特别感兴趣。搜索引擎甚至可以借助文本轨道直接链接到视频中的某个位置。
@@ -294,11 +293,11 @@ WEBVTT
 ## 参见
 
 - HTML 媒体元素：{{htmlelement("audio")}}、{{htmlelement("video")}}、{{htmlelement("source")}} 和 {{htmlelement("track")}}
-- [向视频添加字幕和标题](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
-- [音频和视频传送](/zh-CN/docs/Web/Media/Audio_and_video_delivery)：使用 HTML 和 JavaScript 在网页上放置音频和视频的详细信息。
-- [音频和视频操作](/zh-CN/docs/Web/Media/Audio_and_video_manipulation)：使用 JavaScript 对音频和视频进行详细操作的指南（例如添加滤镜）。
+- [向视频添加字幕和标题](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+- [音频和视频传送](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery)：使用 HTML 和 JavaScript 在网页上放置音频和视频的详细信息。
+- [音频和视频操作](/zh-CN/docs/Web/Media/Guides/Audio_and_video_manipulation)：使用 JavaScript 对音频和视频进行详细操作的指南（例如添加滤镜）。
 - [Web 媒体技术](/zh-CN/docs/Web/Media)
-- [web 上的媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)
+- [web 上的媒体类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats)
 - [事件参考 > 媒体](/zh-CN/docs/Web/Events#media)
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content")}}

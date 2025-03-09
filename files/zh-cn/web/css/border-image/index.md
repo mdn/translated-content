@@ -50,7 +50,7 @@ border-image: unset;
 `border-image` 属性可以用下面列出的 1 到 5 个值中的任意值指定。
 
 > [!NOTE]
-> 如果 {{cssxref("border-image-source")}} 的[计算值](/zh-CN/docs/Web/CSS/computed_value)为 `none`，或图像无法显示，则将显示 {{cssxref("border-style")}}。
+> 如果 {{cssxref("border-image-source")}} 的[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)为 `none`，或图像无法显示，则将显示 {{cssxref("border-style")}}。
 
 ### 值
 
@@ -69,7 +69,7 @@ border-image: unset;
 
 辅助技术无法解析边框图像。如果图像包含对理解页面的整体内容至关重要的信息，最好在文档中对其进行语义描述。
 
-- [MDN 理解 WCAG，指南 1.1 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [MDN 理解 WCAG，指南 1.1 解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [理解成功标准 1.1.1 | 理解 WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## 形式定义

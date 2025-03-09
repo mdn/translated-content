@@ -9,7 +9,23 @@ l10n:
 
 **`Number.NaN`** 静的データプロパティは非数 (Not-A-Number) を表す値であり、{{jsxref("NaN")}} と同じです。`NaN` の動作についての詳しい情報は、[グローバルプロパティの説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN)を参照してください。
 
-{{EmbedInteractiveExample("pages/js/number-nan.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Number.NaN", "taller")}}
+
+```js interactive-example
+function clean(x) {
+  // eslint-disable-next-line use-isnan
+  if (x === Number.NaN) {
+    // Can never be true
+    return null;
+  }
+  if (isNaN(x)) {
+    return 0;
+  }
+}
+
+console.log(clean(Number.NaN));
+// Expected output: 0
+```
 
 ## 値
 

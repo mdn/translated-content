@@ -25,7 +25,7 @@ l10n:
 
 ## 参见
 
-- [JavaScript 数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)
+- [JavaScript 数据类型](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)
 - [原始数据类型](https://zh.wikipedia.org/wiki/原始型別)（维基百科）
 - [术语表](/zh-CN/docs/Glossary)
 

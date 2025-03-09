@@ -48,7 +48,7 @@ l10n:
   （[Firefox bug 1823757](https://bugzil.la/1823757)、[Firefox bug 1866993](https://bugzil.la/1866993)）。
 
 - 现已支持 {{domxref("RTCIceTransport")}} 的 {{domxref("RTCIceTransport/state","state")}} 和 {{domxref("RTCIceTransport/gatheringState","gatheringState")}} 属性及与之关联的 {{domxref("RTCIceTransport/statechange_event","statechange")}} 和 {{domxref("RTCIceTransport/gatheringstatechange_event","gatheringstatechange")}} 事件，以及 {{domxref("RTCDtlsTransport.iceTransport")}} 属性（返回 {{domxref("RTCDtlsTransport")}} 的底层 `RTCIceTransport`）。这些特性提供了比 {{domxref("RTCPeerConnection")}} 的 {{domxref("RTCPeerConnection.iceGatheringState","iceGatheringState")}} 和 {{domxref("RTCPeerConnection.connectionState","connectionState")}} 属性更细粒度的监控。（[Firefox bug 1811912](https://bugzil.la/1811912)）。
-- 现已支持 {{domxref("Element.ariaBrailleLabel")}} 和 {{domxref("Element.ariaBrailleRoleDescription")}}，它们分别反映了全局 ARIA HTML 属性 [`aria-braillelabel`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) 和 [`aria-brailleroledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription)。（[Firefox bug 1861201](https://bugzil.la/1861201)）。
+- 现已支持 {{domxref("Element.ariaBrailleLabel")}} 和 {{domxref("Element.ariaBrailleRoleDescription")}}，它们分别反映了全局 ARIA HTML 属性 [`aria-braillelabel`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel) 和 [`aria-brailleroledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription)。（[Firefox bug 1861201](https://bugzil.la/1861201)）。
 
 - 添加了允许 Web 应用程序在画布临时丢失其 2D 上下文时进行优雅恢复的支持。这可能发生在画布使用 GPU 进行硬件加速而出现驱动程序崩溃的情况下。（[Firefox bug 1887729](https://bugzil.la/1887729)）。以下是有关丢失和恢复画布上下文的事件的一些额外细节：
 
@@ -61,7 +61,7 @@ l10n:
 
 #### Media、WebRTC 和 Web Audio
 
-- 现已为[加密媒体扩展](/zh-CN/docs/Web/API/Encrypted_Media_Extensions_API) 提供 [AV1](/zh-CN/docs/Web/Media/Formats/Video_codecs#av1) 编解码器的支持，其用于播放来自视频流提供商的更高质量的视频。（[Firefox bug 1601817](https://bugzil.la/1601817)）。
+- 现已为[加密媒体扩展](/zh-CN/docs/Web/API/Encrypted_Media_Extensions_API) 提供 [AV1](/zh-CN/docs/Web/Media/Guides/Formats/Video_codecs#av1) 编解码器的支持，其用于播放来自视频流提供商的更高质量的视频。（[Firefox bug 1601817](https://bugzil.la/1601817)）。
 
 #### 移除
 
@@ -69,7 +69,7 @@ l10n:
 
 ### WebAssembly
 
-- 已添加对 Wasm 模块使用多个独立线性内存的支持。多内存区域使模块之间的互操作更高效，并为即将到来的 Wasm 标准提供更好的 polyfill。例如，它们可以用于为内部和共享数据、临时和持久数据或需要在线程之间共享的数据创建单独的内存。内存可以在 JavaScript 中创建并导入到 Wasm 模块中，或在 Wasm 模块中创建并导出。Wasm 实例中的每个新的线性内存区域都会被赋予一个从零开始的顺序索引。WebAssembly 的[内存指令](/zh-CN/docs/WebAssembly/Reference/Memory)使用索引引用它们正在操作的内存，如果未指定索引，则默认为第一块定义的内存区域。有关更多信息，请参阅*理解 WebAssembly 文本格式*中的 [WebAssembly Memory](/zh-CN/docs/WebAssembly/Understanding_the_text_format#webassembly_内存)。（[Firefox bug 1860816](https://bugzil.la/1860816)）。
+- 已添加对 Wasm 模块使用多个独立线性内存的支持。多内存区域使模块之间的互操作更高效，并为即将到来的 Wasm 标准提供更好的 polyfill。例如，它们可以用于为内部和共享数据、临时和持久数据或需要在线程之间共享的数据创建单独的内存。内存可以在 JavaScript 中创建并导入到 Wasm 模块中，或在 Wasm 模块中创建并导出。Wasm 实例中的每个新的线性内存区域都会被赋予一个从零开始的顺序索引。WebAssembly 的[内存指令](/zh-CN/docs/WebAssembly/Reference/Memory)使用索引引用它们正在操作的内存，如果未指定索引，则默认为第一块定义的内存区域。有关更多信息，请参阅*理解 WebAssembly 文本格式*中的 [WebAssembly Memory](/zh-CN/docs/WebAssembly/Guides/Understanding_the_text_format#webassembly_内存)。（[Firefox bug 1860816](https://bugzil.la/1860816)）。
 
 ### WebDriver 一致性（WebDriver BiDi、Marionette）
 

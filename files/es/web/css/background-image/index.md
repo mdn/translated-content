@@ -27,11 +27,8 @@ Cada imagen de fondo se especifica como la palabra clave `none` o como un valor 
 Para especificar varias imágenes de fondo, proporcione varios valores, separados por una coma:
 
 ```css
-background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 0, 0.5),
-    rgba(0, 0, 255, 0.5)
-  ),
+background-image:
+  linear-gradient(to bottom, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)),
   url("cat-front.png");
 
 /* Valores globales */

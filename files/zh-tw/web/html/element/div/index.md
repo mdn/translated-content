@@ -7,7 +7,35 @@ slug: Web/HTML/Element/div
 
 **`<div>`** [HTML](/zh-TW/docs/Web/HTML) 元素是流內容的通用容器。除非以某種方式使用 {{glossary("CSS")}} 進行樣式化（例如直接應用樣式或應用某種佈局模型，如 [Flexbox](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout) 到其父元素上），否則它對內容或佈局沒有影響。
 
-{{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<div class="warning">
+  <img
+    src="/shared-assets/images/examples/leopard.jpg"
+    alt="An intimidating leopard." />
+  <p>Beware of the leopard</p>
+</div>
+```
+
+```css interactive-example
+.warning {
+  border: 10px ridge #f00;
+  background-color: #ff0;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.warning img {
+  width: 100%;
+}
+
+.warning p {
+  font: small-caps bold 1.2rem sans-serif;
+  text-align: center;
+}
+```
 
 作為「純粹」的容器，`<div>` 元素本身並不具有代表性。相反，它用於將內容分組，以便可以輕鬆地使用 [`class`](/zh-TW/docs/Web/HTML/Global_attributes#class) 或 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id) 屬性進行樣式化，標記文件的某一部分為使用不同語言編寫（使用 [`lang`](/zh-TW/docs/Web/HTML/Global_attributes#lang) 屬性），等等。
 
@@ -115,7 +143,7 @@ slug: Web/HTML/Element/div
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/generic_role"
+          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
             >generic</a
           ></code
         >

@@ -3,8 +3,6 @@ title: 代码示例
 slug: MDN/Writing_guidelines/Page_structures/Code_examples
 ---
 
-{{MDNSidebar}}
-
 在 MDN 上，你会看到整个页面中有许多代码示例插入，以展示 web 平台功能的使用。本文讨论了在页面中添加代码示例的不同机制，以及你应该使用哪些机制和何时使用。
 
 > [!NOTE]

@@ -1,7 +1,6 @@
 ---
 title: CSS 性能优化
 slug: Learn_web_development/Extensions/Performance/CSS
-original_slug: Learn/Performance/CSS
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/html", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
@@ -284,7 +283,7 @@ article {
 
 ## 参见
 
-- [CSS 动画性能](/zh-CN/docs/Web/Performance/CSS_JavaScript_animation_performance)
+- [CSS 动画性能](/zh-CN/docs/Web/Performance/Guides/CSS_JavaScript_animation_performance)
 - [字体最佳实践](https://web.developers.google.cn/articles/font-best-practices)（来自 web.developers.google.cn，2022）
 - [content-visibility：提升渲染性能的新 CSS 属性](https://web.developers.google.cn/articles/content-visibility)（来自 web.developers.google.cn，2022）
 

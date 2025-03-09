@@ -1,5 +1,5 @@
 ---
-title: ":empty"
+title: :empty
 slug: Web/CSS/:empty
 ---
 
@@ -7,7 +7,25 @@ slug: Web/CSS/:empty
 
 **`:empty`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)用于选择不包含任何子元素的元素。子元素可以是元素节点或文本（包括空格）。但是注释、处理指令和 CSS {{cssxref("content")}} 不会影响元素是否被认定为空。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-empty.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :empty", "tabbed-shorter")}}
+
+```css interactive-example
+div:empty {
+  outline: 2px solid deeppink;
+  height: 1em;
+}
+```
+
+```html interactive-example
+<p>Element with no content:</p>
+<div></div>
+
+<p>Element with comment:</p>
+<div><!-- Simple Comment --></div>
+
+<p>Element with nested empty element:</p>
+<div><p></p></div>
+```
 
 > [!NOTE]
 > 在[选择器 Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo) 中，`:empty` 伪类被更改为与 {{CSSxRef(":-moz-only-whitespace")}} 类似一样的行为，但目前还没有浏览器支持它。
@@ -70,7 +88,7 @@ body {
 
 - [什么是无障碍名称？ | The Paciello Group](https://www.tpgi.com/what-is-an-accessible-name/)
 - [隐藏内容以获得更好的辅助功能 | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
-- [MDN 理解 WCAG，指南 2.4 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN 理解 WCAG，指南 2.4 解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [理解成功标准 2.4.4 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html)
 
 ## 规范

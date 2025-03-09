@@ -5,7 +5,7 @@ slug: Web/CSS/grid-row
 
 {{CSSRef}}
 
-**`grid-row`** 属性是一种 {{cssxref("grid-row-start")}} 和 {{cssxref("grid-row-end")}} 的缩写（[shorthand](/zh-CN/docs/Web/CSS/Shorthand_properties)）形式，它定义了网格单元与网格行（row）相关的尺寸和位置，可以通过在网格布局中的基线（line），跨度（span），或者什么也不做（自动），从而指定 {{glossary("grid areas", "grid area")}} 的行起始与行结束。
+**`grid-row`** 属性是一种 {{cssxref("grid-row-start")}} 和 {{cssxref("grid-row-end")}} 的缩写（[shorthand](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)）形式，它定义了网格单元与网格行（row）相关的尺寸和位置，可以通过在网格布局中的基线（line）、跨度（span），或者什么也不做（自动），从而指定{{glossary("grid areas", "网格区域")}}的行起始与行结束。
 
 {{EmbedInteractiveExample("pages/css/grid-row.html")}}
 
@@ -15,19 +15,19 @@ slug: Web/CSS/grid-row
 
 ```css
 /* 不同类型的属性值 */
-/* Keyword values */
+/* 关键字值 */
 grid-row: auto;
 grid-row: auto / auto;
 
-/* <custom-ident> values */
+/* <custom-ident> 值 */
 grid-row: somegridarea;
 grid-row: somegridarea / someothergridarea;
 
-/* <integer> + <custom-ident> values */
+/* <integer> + <custom-ident> 值 */
 grid-row: somegridarea 4;
 grid-row: 4 somegridarea / 6;
 
-/* span + <integer> + <custom-ident> values */
+/* span + <integer> + <custom-ident> 值 */
 grid-row: span 3;
 grid-row: span somegridarea;
 grid-row: 5 somegridarea span;
@@ -35,7 +35,7 @@ grid-row: span 3 / 6;
 grid-row: span somegridarea / span someothergridarea;
 grid-row: 5 somegridarea span / 2 span;
 
-/* Global values */
+/* 全局值 */
 grid-row: inherit;
 grid-row: initial;
 grid-row: unset;

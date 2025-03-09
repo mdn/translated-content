@@ -1,5 +1,5 @@
 ---
-title: "::placeholder"
+title: ::placeholder
 slug: Web/CSS/::placeholder
 l10n:
   sourceCommit: 59ef5b046557b45a515b654458667e6da6d0f4aa
@@ -9,7 +9,31 @@ l10n:
 
 **`::placeholder`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の[プレイスホルダーテキスト](/ja/docs/Web/HTML/Element/input#placeholder)を表します。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-placeholder.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::placeholder", "tabbed-shorter")}}
+
+```css interactive-example
+input {
+  margin-top: 0.5rem;
+}
+
+input::placeholder {
+  font-weight: bold;
+  opacity: 0.5;
+  color: red;
+}
+```
+
+```html interactive-example
+<label for="first-name">Your phone number:</label><br />
+
+<input
+  id="first-name"
+  type="tel"
+  name="phone"
+  minlength="9"
+  maxlength="9"
+  placeholder="It must be 9 digits" />
+```
 
 セレクターに `::placeholder` を使ったルールを使用できるのは、 {{cssxref("::first-line")}} 擬似要素が適用できる CSS プロパティだけです。
 

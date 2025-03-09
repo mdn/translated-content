@@ -1,7 +1,6 @@
 ---
 title: 图片库
 slug: Learn_web_development/Core/Scripting/Image_gallery
-original_slug: Learn/JavaScript/Building_blocks/Image_gallery
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Core/Scripting")}}
@@ -70,7 +69,7 @@ JavaScript 部分则需要实现：
 
 ## 声明图像文件名数组
 
-你需要创建一个用于列出所有需要包含在图片库中的图像的文件名。这个数组应该以常量的形式声明。
+你需要创建一个数组，用于列出所有需要包含在图片库中的图像的文件名。这个数组应该以常量的形式声明。
 
 ### 迭代照片
 

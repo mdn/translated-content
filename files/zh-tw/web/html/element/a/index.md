@@ -9,7 +9,23 @@ slug: Web/HTML/Element/a
 
 每個 `<a>` 元素內的內容*應該*指示連結的目的地。如果存在 `href` 屬性，則在焦點位於 `<a>` 元素上時按下 Enter 鍵將激活它。
 
-{{EmbedInteractiveExample("pages/tabbed/a.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;a&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul>
+```
+
+```css interactive-example
+li {
+  margin-bottom: 0.5rem;
+}
+```
 
 ## 屬性
 
@@ -23,7 +39,7 @@ slug: Web/HTML/Element/a
 
       - {{HTTPHeader("Content-Disposition")}} HTTP 標頭
       - URL [路徑](/zh-TW/docs/Web/API/URL/pathname)中的最終段落
-      - {{HTTPHeader("Content-Type")}} 標頭中的{{Glossary("MIME_type", "媒體類型")}}，以及 [`data:` URL](/zh-TW/docs/Web/URI/Schemes/data) 的開頭，或是 [`blob:` URL](/zh-TW/docs/Web/API/URL/createObjectURL_static) 的 {{domxref("Blob.type")}}。
+      - {{HTTPHeader("Content-Type")}} 標頭中的{{Glossary("MIME_type", "媒體類型")}}，以及 [`data:` URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 的開頭，或是 [`blob:` URL](/zh-TW/docs/Web/API/URL/createObjectURL_static) 的 {{domxref("Blob.type")}}。
 
     - `filename`：定義值可建議作為文件名。`/` 和 `\` 字符將轉換為底線（`_`）。檔案系統可能禁止文件名中的其他字符，因此如果需要，瀏覽器將調整建議的名稱。
 
@@ -41,7 +57,7 @@ slug: Web/HTML/Element/a
   - : 超連結指向的 URL。連結不限於基於 HTTP 的 URL——它們可以使用瀏覽器支持的任何 URL 方案：
 
     - 具有文件片段的頁面部分
-    - 具有[文字片段](/zh-TW/docs/Web/URI/Fragment/Text_fragments)的特定文本部分
+    - 具有[文字片段](/zh-TW/docs/Web/URI/Reference/Fragment/Text_fragments)的特定文本部分
     - 具有媒體片段的媒體文件部分
     - 使用 `tel:` URL 的電話號碼
     - 使用 `mailto:` URL 的電子郵件地址
@@ -355,7 +371,7 @@ document
 {{EmbedLiveSample('鏈接到非 HTML 資源')}}
 
 - [WebAIM: 鏈接和超文本——超文本鏈接](https://webaim.org/techniques/hypertext/hypertext_links)
-- [MDN / 了解 WCAG，指導方針 3.2](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+- [MDN / 了解 WCAG，指導方針 3.2](/zh-TW/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
 - [G200: 僅在必要時從鏈接中打開新窗口和新標籤](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
 - [G201: 在打開新窗口時給予用戶高級警告](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 
@@ -395,7 +411,7 @@ document
 
 - [WebAIM：「跳轉導航」鏈接](https://webaim.org/techniques/skipnav/)
 - [如何使用跳過導航鏈接](https://www.a11yproject.com/posts/skip-nav-links/)
-- [MDN / 了解 WCAG，指導方針 2.4 說明](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN / 了解 WCAG，指導方針 2.4 說明](/zh-TW/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [理解成功標準 2.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 
 ### 尺寸與相近性
@@ -472,8 +488,8 @@ document
     <tr>
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
-        當存在 <code>href</code> 屬性時為 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>，否則為
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/generic_role"><code>generic</code></a>
+        當存在 <code>href</code> 屬性時為 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a>，否則為
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>
     <tr>
@@ -481,16 +497,16 @@ document
       <td>
         <p>當存在 <code>href</code> 屬性時：</p>
         <ul>
-          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></li>
-          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a></li>
-          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a></li>
-          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
-          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
-          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a></li>
-          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a></li>
-          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a></li>
-          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a></li>
-          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"><code>checkbox</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role"><code>switch</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role"><code>treeitem</code></a></li>
         </ul>
         <p>當不存在 <code>href</code> 屬性時：</p>
         <ul>
@@ -519,4 +535,4 @@ document
 - {{CSSxRef(":link")}} 是一個 CSS 虛擬類，將匹配 `<a>` 元素，其中 `href` 屬性中的 URL 尚未被用戶訪問過。
 - {{CSSxRef(":visited")}} 是一個 CSS 虛擬類，將匹配 `<a>` 元素，其中 `href` 屬性中的 URL 曾經被用戶訪問過。
 - {{CSSxRef(":any-link")}} 是一個 CSS 虛擬類，將匹配具有 `href` 屬性的 `<a>` 元素。
-- [文字片段](/zh-TW/docs/Web/URI/Fragment/Text_fragments)是添加到 URL 中的用戶代理指令，允許內容作者鏈接到頁面上的特定文本，而不需要 ID。
+- [文字片段](/zh-TW/docs/Web/URI/Reference/Fragment/Text_fragments)是添加到 URL 中的用戶代理指令，允許內容作者鏈接到頁面上的特定文本，而不需要 ID。

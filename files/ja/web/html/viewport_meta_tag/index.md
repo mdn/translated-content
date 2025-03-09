@@ -21,7 +21,7 @@ l10n:
 
 ## ビューポートの基本
 
-一般的なモバイルに最適化されたサイトには、以下のようなものがあります。
+viewport は機能と値のペアをカンマで区切ったリストです。一般的なモバイルに最適化されたサイトには、以下のようなものがあります。
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -80,6 +80,10 @@ l10n:
   - : {{Glossary("viewport", "ビューポート")}}が対話型ウィジェットによってリサイズされます。
 - `overlays-content`
   - : {{Glossary("viewport", "ビューポート")}}と{{Glossary("visual viewport", "視覚ビューポート")}}のどちらも対話型ウィジェットによってリサイズされません。
+
+```html
+<meta name="viewport" content="interactive-widget=resizes-content" />
+```
 
 {{Glossary("viewport", "ビューポート")}}がリサイズされると、初期の[包含ブロック](/ja/docs/Web/CSS/Containing_block)もリサイズされ、[ビューポート単位](/ja/docs/Web/CSS/length#ビューポートに基づく相対的な長さの単位)の計算されたサイズに影響を与えます。
 

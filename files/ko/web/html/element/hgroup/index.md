@@ -7,7 +7,37 @@ slug: Web/HTML/Element/hgroup
 
 **HTML `<hgroup>` 요소**는 문서 구획의 다단계 제목을 나타냅니다. 다수의 `{{htmlelement("Heading_Elements", "&lt;h1&gt;-&lt;h6&gt;")}}` 요소를 묶을 때 사용합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<hgroup>
+  <h1>Frankenstein</h1>
+  <p>Or: The Modern Prometheus</p>
+</hgroup>
+<p>
+  Victor Frankenstein, a Swiss scientist, has a great ambition: to create
+  intelligent life. But when his creature first stirs, he realizes he has made a
+  monster. A monster which, abandoned by his master and shunned by everyone who
+  sees it, follows Dr Frankenstein to the very ends of the earth.
+</p>
+```
+
+```css interactive-example
+hgroup {
+  text-align: right;
+  padding-right: 16px;
+  border-right: 10px solid #00c8d7;
+}
+
+hgroup h1 {
+  margin-bottom: 0;
+}
+
+hgroup p {
+  margin: 0;
+  font-weight: bold;
+}
+```
 
 <table class="properties">
   <tbody>

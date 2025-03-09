@@ -11,7 +11,21 @@ La función **`Math.log()`** devuelve la base neutral de un número (base {{jsxr
 
 La función en JavaScrcrip **`Math.log()`** es equivalente a _ln(x)_ en matematicas.
 
-{{EmbedInteractiveExample("pages/js/math-log.html")}}
+{{InteractiveExample("JavaScript Demo: Math.log()")}}
+
+```js interactive-example
+function getBaseLog(x, y) {
+  return Math.log(y) / Math.log(x);
+}
+
+// 2 x 2 x 2 = 8
+console.log(getBaseLog(2, 8));
+// Expected output: 3
+
+// 5 x 5 x 5 x 5 = 625
+console.log(getBaseLog(5, 625));
+// Expected output: 4
+```
 
 ## Sintaxis
 

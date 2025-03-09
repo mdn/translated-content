@@ -9,7 +9,23 @@ l10n:
 
 [HTML](/zh-CN/docs/Web/HTML) **`<sub>`** 元素用于指定应显示为下标的行内文本，这完全是出于排版的原因。下标通常使用较小的文本以较低的基线显示。
 
-{{EmbedInteractiveExample("pages/tabbed/sub.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;sub&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  Almost every developer's favorite molecule is
+  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as
+  "caffeine."
+</p>
+```
+
+```css interactive-example
+p {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+```
 
 ## 属性
 
@@ -116,7 +132,7 @@ l10n:
       <th scope="row">隐式 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles#有_html_等价形式的结构角色">subscript</a
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#有_html_等价形式的结构角色">subscript</a
           ></code
         >
       </td>

@@ -9,7 +9,25 @@ l10n:
 
 [HTML](/zh-CN/docs/Web/HTML) **`<sup>` 元素**定义仅出于排版目的而显示为上标的行内文本。上标通常以较小的文本在高出基线的位置呈现。
 
-{{EmbedInteractiveExample("pages/tabbed/sup.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;sup&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The <em>Pythagorean theorem</em> is often expressed as the following equation:
+</p>
+
+<p>
+  <var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var>
+</p>
+```
+
+```css interactive-example
+p {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+```
 
 ## 属性
 
@@ -115,7 +133,7 @@ l10n:
       <th scope="row">隐式 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles#具有_html_等效元素的结构角色">superscript</a
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#具有_html_等效元素的结构角色">superscript</a
           ></code
         >
       </td>

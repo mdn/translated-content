@@ -1,5 +1,5 @@
 ---
-title: ":valid"
+title: :valid
 slug: Web/CSS/:valid
 ---
 
@@ -28,7 +28,7 @@ input:valid {
 
 绿色常用于表示有效输入。但某些色盲的人将无法确定输入的状态（颜色），除非使用不依赖于颜色来传达意义的附加指示器。通常，指示器使用描述性文本和（或）图标。
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 
 ## 规范

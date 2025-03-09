@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/String/match
 
 **`match()`** 方法检索字符串与[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)进行匹配的结果。
 
-{{EmbedInteractiveExample("pages/js/string-match.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.match()", "shorter")}}
+
+```js interactive-example
+const paragraph = "The quick brown fox jumps over the lazy dog. It barked.";
+const regex = /[A-Z]/g;
+const found = paragraph.match(regex);
+
+console.log(found);
+// Expected output: Array ["T", "I"]
+```
 
 ## 语法
 

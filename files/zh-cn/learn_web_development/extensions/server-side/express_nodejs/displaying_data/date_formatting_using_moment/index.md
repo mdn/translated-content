@@ -1,7 +1,6 @@
 ---
 title: 使用 luxon 做日期格式化
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
-original_slug: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
 l10n:
   sourceCommit: 8d5440dbd259fd6eea32b4f4a200f25257d1bf41
 ---

@@ -7,7 +7,40 @@ slug: Web/HTML/Element/map
 
 **HTML `<map>` 요소**는 {{htmlelement("area")}} 요소와 함께 이미지 맵(클릭 가능한 링크 영역)을 정의할 때 사용합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/map.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;map&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<map name="infographic">
+  <area
+    shape="poly"
+    coords="130,147,200,107,254,219,130,228"
+    href="https://developer.mozilla.org/docs/Web/HTML"
+    alt="HTML" />
+  <area
+    shape="poly"
+    coords="130,147,130,228,6,219,59,107"
+    href="https://developer.mozilla.org/docs/Web/CSS"
+    alt="CSS" />
+  <area
+    shape="poly"
+    coords="130,147,200,107,130,4,59,107"
+    href="https://developer.mozilla.org/docs/Web/JavaScript"
+    alt="JavaScript" />
+</map>
+<img
+  usemap="#infographic"
+  src="/shared-assets/images/examples/mdn-info2.png"
+  alt="MDN infographic" />
+```
+
+```css interactive-example
+img {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 232px;
+}
+```
 
 <table class="properties">
   <tbody>

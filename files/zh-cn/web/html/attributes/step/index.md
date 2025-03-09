@@ -116,7 +116,7 @@ input:invalid {
 
 ## 无障碍考虑
 
-提供说明，帮助用户了解如何填写表单和使用各个表单控件。说明任何必需和可选的输入、数据格式以及其他相关信息。使用 `min` 属性时，应确保用户理解这一最低要求。在 {{htmlelement('label')}} 中提供说明可能就足够了。如果在标签之外提供说明，这样可以更灵活地定位和设计，可以考虑使用 [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 或 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)。
+提供说明，帮助用户了解如何填写表单和使用各个表单控件。说明任何必需和可选的输入、数据格式以及其他相关信息。使用 `min` 属性时，应确保用户理解这一最低要求。在 {{htmlelement('label')}} 中提供说明可能就足够了。如果在标签之外提供说明，这样可以更灵活地定位和设计，可以考虑使用 [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 或 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)。
 
 ## 规范
 

@@ -56,7 +56,7 @@ l10n:
   - : WebDriver 是一种浏览器自动化机制，可通过模拟真人使用浏览器的操作远程控制浏览器。被广泛应用于 Web 应用的跨浏览器测试。
 - [Web 扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions)
   - : Web 扩展是一种在浏览器中为用户提供增强功能的方式——用于阻止广告和其他内容、定制页面的外观以及更多行为。
-- [Web 应用清单](/zh-CN/docs/Web/Manifest)
+- [Web 应用清单](/zh-CN/docs/Web/Progressive_web_apps/Manifest)
   - : Web 应用清单能让用户将 Web 应用安装到其设备主屏幕上，并预先设置好屏幕方向（纵向或横向）和显示模式（如全屏）等内容。
 - [渐进式 Web 应用（PWA）](/zh-CN/docs/Web/Progressive_web_apps)
   - : 渐进式 Web 应用能提供类似原生移动应用的用户体验。
@@ -64,12 +64,12 @@ l10n:
   - : OpenSearch 允许网站描述自身的搜索引擎，以便浏览器或客户端应用程序能使用该搜索引擎。
 - [XML](/zh-CN/docs/Web/XML)
   - : 可扩展标记语言是可由[文档对象模型](/zh-CN/docs/Web/API/Document_Object_Model)严格序列化的一种语言。
-- [XSLT](/zh-CN/docs/Web/XSLT)
+- [XSLT](/zh-CN/docs/Web/XML/XSLT)
   - : 可扩展样式表语言转换是一种基于 [XML](/zh-CN/docs/Web/XML/XML_introduction) 的语言，和专门的处理软件一起使用，用于 XML 文档转换。
-- [XPath](/zh-CN/docs/Web/XPath)
+- [XPath](/zh-CN/docs/Web/XML/XPath)
   - : XPath 使用非 XML 语法来提供一种灵活地定位（指向）[XML](/zh-CN/docs/Web/XML) 文档的不同部分的方法。它也可以用于检查文档中某个定位节点是否与某个模式（pattern）匹配。
 - [EXSLT](/zh-CN/docs/Web/EXSLT)
-  - : EXSLT 是一组 [XSLT](/zh-CN/docs/Web/XSLT) 的扩展。
+  - : EXSLT 是一组 [XSLT](/zh-CN/docs/Web/XML/XSLT) 的扩展。
 
 ## 开发者工具文档
 

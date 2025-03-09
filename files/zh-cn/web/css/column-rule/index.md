@@ -5,11 +5,11 @@ slug: Web/CSS/column-rule
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) `column-rule` [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)可以在多列布局中设定分割线的宽度、样式和颜色。
+[CSS](/zh-CN/docs/Web/CSS) `column-rule` [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)可以在多列布局中设定分割线的宽度、样式和颜色。
 
 {{EmbedInteractiveExample("pages/css/column-rule.html")}}
 
-该[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)使用简单方便的声明形式将各个 `column-rule-*` 属性放在了一起：{{Cssxref("column-rule-width")}}、{{Cssxref("column-rule-style")}} 和 {{Cssxref("column-rule-color")}}。
+该[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)使用简单方便的声明形式将各个 `column-rule-*` 属性放在了一起：{{Cssxref("column-rule-width")}}、{{Cssxref("column-rule-style")}} 和 {{Cssxref("column-rule-color")}}。
 
 > [!NOTE]
 > 和所有简写属性一样，任何没有指定的单独值会设置为相应初始值（可能会覆盖非简写属性设置的值）。

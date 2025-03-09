@@ -1,7 +1,6 @@
 ---
 title: 为列表添加样式
 slug: Learn_web_development/Core/Text_styling/Styling_lists
-original_slug: Learn/CSS/Styling_text/Styling_lists
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}

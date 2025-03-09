@@ -3,8 +3,6 @@ title: 文档写作规范
 slug: MDN/Writing_guidelines/Writing_style_guide
 ---
 
-{{MDNSidebar}}
-
 本篇写作风格指南描述了 MDN Web 文档上的内容应该如何书写、组织、拼写和格式化。
 
 这些指南是为了确保整个网站的语言和风格的一致性。也就是说，我们对内容而不是格式更感兴趣，所以不必在为 MDN Web 文档贡献前学习整个写作风格指南。然而，如果其他贡献者后来编辑你的作品以符合该指南，请不要感到不安或惊讶。当你提交内容拉取请求时，审稿人也可能将你指向这个风格指南。
@@ -527,10 +525,10 @@ MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章
 
 #### 链接文字
 
-- 链接文本应与被链接的页面或章节的标题相同。例如，这个 [ARIA](/zh-CN/docs/Web/Accessibility/ARIA/Attributes) 页面的链接文本将是：
-  - **正确**：[ARIA 状态和属性](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)
-- 在链接文本中使用句子大小写，即使它与链接的页面标题或章节标题不同。这可能是页面或章节标题中使用的大小写不正确。例如，[WAI-ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)页面的链接文本将是：
-  - **正确**：[WAI-ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
+- 链接文本应与被链接的页面或章节的标题相同。例如，这个 [ARIA](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes) 页面的链接文本将是：
+  - **正确**：[ARIA 状态和属性](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes)
+- 在链接文本中使用句子大小写，即使它与链接的页面标题或章节标题不同。这可能是页面或章节标题中使用的大小写不正确。例如，[WAI-ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles)页面的链接文本将是：
+  - **正确**：[WAI-ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles)
 - 对于外部链接也要使用句子的大小写，即使目标文章页面上的大小写不同。这是为了确保整个 MDN Web 文档的一致性。例外情况包括书籍的名称。
 - 使用适当的宏来链接到[参考文档页面](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#链接到_mdn_的参考文档页面)。使用宏将为链接文本中的关键词添加代码格式，如前面的例子所示。
 - 链接列表项的开头不需要冠词（"A"、"An"、"The"）。链接文本后不需要标点符号，因为它必然是一个术语或一个短语。
@@ -561,7 +559,7 @@ MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章
 - [JavaScript/指南](/zh-CN/docs/Web/JavaScript/Guide)——主目录页
 - [JavaScript/指南/JavaScript 概述](/zh-CN/docs/Web/JavaScript/Guide/Introduction)
 - [JavaScript/指南/函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)
-- [JavaScript/指南/对象模型的细节](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JavaScript/指南/对象模型的细节](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 
 尽量避免把文章内容放置在层次结构的顶层，这会降低网站的访问速度，同时搜索和导航的效率也会下降。
 

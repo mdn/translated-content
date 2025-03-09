@@ -9,7 +9,7 @@ l10n:
 
 **`PageRevealEvent`** イベントオブジェクトは、{{domxref("Window.pagereveal_event", "pagereveal")}} イベントのハンドラー関数内で利用できます。
 
-文書間の移動中、ナビゲーションによってビュー遷移が起動された場合、移動先の文書から関連する[ビュー遷移](/ja/docs/Web/API/View_Transitions_API)（関連の {{domxref("ViewTransition")}} オブジェクトにアクセスする）を操作することができます。
+文書間の移動中、ナビゲーションによってビュー遷移が起動された場合、移動先の文書から関連する[ビュー遷移](/ja/docs/Web/API/View_Transition_API)（関連の {{domxref("ViewTransition")}} オブジェクトにアクセスする）を操作することができます。
 
 ビュー遷移以外にも、このイベントは、開始アニメーションの起動やページビューの報告などの場合に役立ちます。これは、文書の {{htmlelement("head")}} 内で `requestAnimationFrame()` を起動した場合、文書間移動後に最初の {{domxref("Window.requestAnimationFrame()")}} が実行されるのと同じです。例えば、次の `reveal()` 関数を `<head>` 内で実行した場合:
 
@@ -100,4 +100,4 @@ window.addEventListener("pagereveal", async (e) => {
 
 ## 関連情報
 
-- [ビュー遷移 API](/ja/docs/Web/API/View_Transitions_API)
+- [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)

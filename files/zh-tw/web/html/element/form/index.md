@@ -7,7 +7,43 @@ slug: Web/HTML/Element/form
 
 **`<form>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表了一個包含用於提交信息的交互式控制項的文件章節。
 
-{{EmbedInteractiveExample("pages/tabbed/form.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;form&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<form action="" method="get" class="form-example">
+  <div class="form-example">
+    <label for="name">Enter your name: </label>
+    <input type="text" name="name" id="name" required />
+  </div>
+  <div class="form-example">
+    <label for="email">Enter your email: </label>
+    <input type="email" name="email" id="email" required />
+  </div>
+  <div class="form-example">
+    <input type="submit" value="Subscribe!" />
+  </div>
+</form>
+```
+
+```css interactive-example
+form.form-example {
+  display: table;
+}
+
+div.form-example {
+  display: table-row;
+}
+
+label,
+input {
+  display: table-cell;
+  margin-bottom: 10px;
+}
+
+label {
+  padding-right: 10px;
+}
+```
 
 可以使用 {{cssxref(':valid')}} 和 {{cssxref(':invalid')}} CSS [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)根據表單內的{{domxref("HTMLFormElement.elements", "元素", "", 1)}}是否有效來設置 `<form>` 元素的樣式。
 
@@ -150,14 +186,14 @@ slug: Web/HTML/Element/form
     <tr>
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
-        <code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/form_role">form</a></code>
+        <code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/form_role">form</a></code>
       </td>
     </tr>
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
       <td>
-        <code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code>、
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a> 或 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+        <code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/search_role">search</a></code>、
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a> 或 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -180,5 +216,5 @@ slug: Web/HTML/Element/form
 - [HTML 表單指南](/zh-TW/docs/Learn_web_development/Extensions/Forms)
 - 在創建表單時使用的其他元素：{{HTMLElement("button")}}、{{HTMLElement("datalist")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("input")}}、{{HTMLElement("label")}}、{{HTMLElement("legend")}}、{{HTMLElement("meter")}}、{{HTMLElement("optgroup")}}、{{HTMLElement("option")}}、{{HTMLElement("output")}}、{{HTMLElement("progress")}}、{{HTMLElement("select")}}、{{HTMLElement("textarea")}}。
 - 獲取表單中元素的列表：{{domxref("HTMLFormElement.elements")}}
-- [ARIA：表單角色](/zh-TW/docs/Web/Accessibility/ARIA/Roles/form_role)
-- [ARIA：搜索角色](/zh-TW/docs/Web/Accessibility/ARIA/Roles/search_role)
+- [ARIA：表單角色](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/form_role)
+- [ARIA：搜索角色](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)

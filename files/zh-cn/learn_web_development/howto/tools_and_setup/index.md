@@ -1,7 +1,6 @@
 ---
 title: 工具和安装
 slug: Learn_web_development/Howto/Tools_and_setup
-original_slug: Learn/Common_questions/Tools_and_setup
 ---
 
 {{LearnSidebar}}

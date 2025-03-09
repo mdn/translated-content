@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Statements/function*
 
 **`function*`** 선언 (끝에 별표가 있는 `function` keyword) 은 _generator function_ 을 정의하는데, 이 함수는 {{jsxref("Global_Objects/Generator","Generator")}} 객체를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Function*")}}
+
+```js interactive-example
+function* generator(i) {
+  yield i;
+  yield i + 10;
+}
+
+const gen = generator(10);
+
+console.log(gen.next().value);
+// Expected output: 10
+
+console.log(gen.next().value);
+// Expected output: 20
+```
 
 generator function 은 {{jsxref("Global_Objects/GeneratorFunction", "GeneratorFunction")}} 생성자와 {{jsxref("Operators/function*", "function* expression")}} 을 사용해서 정의할 수 있습니다.
 

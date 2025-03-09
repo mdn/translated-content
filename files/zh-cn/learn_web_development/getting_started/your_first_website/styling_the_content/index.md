@@ -1,7 +1,6 @@
 ---
 title: CSS 基础
 slug: Learn_web_development/Getting_started/Your_first_website/Styling_the_content
-original_slug: Learn/Getting_started_with_the_web/CSS_basics
 l10n:
   sourceCommit: cde9330e9bbaddea72febf44dcc3a7db16fe1a11
 ---
@@ -165,7 +164,8 @@ h1 {
    ```css
    html {
      font-size: 10px; /* px 表示“像素（pixel）”: 基础字号为 10 像素 */
-     font-family: "Open Sans", sans-serif; /* 这应该是你从 Google Fonts 得到的其余输出。 */
+     font-family:
+       "Open Sans", sans-serif; /* 这应该是你从 Google Fonts 得到的其余输出。 */
    }
    ```
 

@@ -9,7 +9,23 @@ slug: Web/HTML/Element/a
 
 `<a>` 中的内容*应该*指明链接的目标。如果存在 `href` 属性，当 `<a>` 元素聚焦时按下回车键就会激活它。
 
-{{EmbedInteractiveExample("pages/tabbed/a.html")}}
+{{InteractiveExample("HTML Demo: &lt;a&gt;")}}
+
+```html interactive-example
+<p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul>
+```
+
+```css interactive-example
+li {
+  margin-bottom: 0.5rem;
+}
+```
 
 ## 属性
 
@@ -23,7 +39,7 @@ slug: Web/HTML/Element/a
 
       - {{HTTPHeader("Content-Disposition")}} HTTP 标头。
       - URL [路径](/zh-CN/docs/Web/API/URL/pathname)的最后一段。
-      - {{Glossary("MIME_type", "媒体类型")}}。来自 {{HTTPHeader("Content-Type")}} 标头，[`data:` URL](/zh-CN/docs/Web/URI/Schemes/data) 的开头，或 [`blob:` URL](/zh-CN/docs/Web/API/URL/createObjectURL_static) 的 {{domxref("Blob.type")}}。
+      - {{Glossary("MIME_type", "媒体类型")}}。来自 {{HTTPHeader("Content-Type")}} 标头，[`data:` URL](/zh-CN/docs/Web/URI/Reference/Schemes/data) 的开头，或 [`blob:` URL](/zh-CN/docs/Web/API/URL/createObjectURL_static) 的 {{domxref("Blob.type")}}。
 
     - `filename`：决定文件名的值。`/` 和 `\` 被转化为下划线（`_`）。文件系统可能会阻止文件名中其他的字符，因此浏览器会在必要时适当调整文件名。
 
@@ -41,7 +57,7 @@ slug: Web/HTML/Element/a
   - : 超链接所指向的 URL。链接不限于基于 HTTP 的 URL——它们可以使用浏览器支持的任何 URL 协议：
 
     - 使用文档片段链接到页面的某一段
-    - 使用[文本片段](/zh-CN/docs/Web/URI/Fragment/Text_fragments)链接到某一段文字
+    - 使用[文本片段](/zh-CN/docs/Web/URI/Reference/Fragment/Text_fragments)链接到某一段文字
     - 使用媒体片段链接到某个媒体文件
     - 使用 `tel:` URL 链接到一个电话号码
     - 使用 `mailto:` URL 链接到一个邮箱地址
@@ -351,7 +367,7 @@ document
 {{EmbedLiveSample('链接至非 HTML 资源')}}
 
 - [WebAIM: 链接和超文本 - 超文本链接](https://webaim.org/techniques/hypertext/hypertext_links)
-- [MDN / 理解 WCAG，准则 3.2](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+- [MDN / 理解 WCAG，准则 3.2](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
 - [G200：只有在必要时才从链接中打开新窗口和标签](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
 - [G201：在打开新窗口时给用户预先警告](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 
@@ -391,7 +407,7 @@ document
 
 - [WebAIM：“跳过导航”链接](https://webaim.org/techniques/skipnav/)
 - [如何使用跳过导航链接](https://www.a11yproject.com/posts/skip-nav-links/)
-- [MDN / 理解 WCAG，准则 2.4](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN / 理解 WCAG，准则 2.4](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [理解成功标准 2.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 
 ### 尺寸和距离
@@ -472,7 +488,7 @@ document
     <tr>
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
-        当 <code>href</code> 属性存在时，为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>，否则<a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        当 <code>href</code> 属性存在时，为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a>，否则<a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
           >没有相应的角色</a
         >
       </td>
@@ -482,16 +498,16 @@ document
       <td>
         <p>当 <code>href</code> 属性存在时：</p>
         <ul>
-          <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></li>
-          <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a></li>
-          <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a></li>
-          <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
-          <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
-          <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a></li>
-          <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a></li>
-          <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a></li>
-          <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a></li>
-          <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a></li>
+          <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a></li>
+          <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"><code>checkbox</code></a></li>
+          <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a></li>
+          <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
+          <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
+          <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a></li>
+          <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a></li>
+          <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role"><code>switch</code></a></li>
+          <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a></li>
+          <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role"><code>treeitem</code></a></li>
         </ul>
         <p>当 <code>href</code> 属性不存在时：</p>
         <ul>
@@ -520,4 +536,4 @@ document
 - {{CSSxRef(":link")}} 是一个 CSS 伪类，将匹配 `<a>` 元素，其 `href` 属性中的 URL 用户尚未访问。
 - {{CSSxRef(":visited")}} 是一个 CSS 伪类，将匹配 `<a>` 元素，其 `href` 属性中的 URL 被用户在过去访问过。
 - {{CSSxRef(":any-link")}} 是一个 CSS 伪类，将匹配带有 `href` 属性的 `<a>` 元素。
-- [文本片段](/zh-CN/docs/Web/URI/Fragment/Text_fragments)是添加到 URL 的用户代理指令，允许内容作者链接到页面上的特定文本，而不需要 ID。
+- [文本片段](/zh-CN/docs/Web/URI/Reference/Fragment/Text_fragments)是添加到 URL 的用户代理指令，允许内容作者链接到页面上的特定文本，而不需要 ID。

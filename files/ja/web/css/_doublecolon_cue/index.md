@@ -1,5 +1,5 @@
 ---
-title: "::cue"
+title: ::cue
 slug: Web/CSS/::cue
 ---
 
@@ -14,7 +14,33 @@ slug: Web/CSS/::cue
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-cue.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::cue", "tabbed-shorter")}}
+
+```css interactive-example
+video {
+  width: 100%;
+}
+
+video::cue {
+  font-size: 1rem;
+  color: yellow;
+}
+
+::cue(u) {
+  color: red;
+}
+```
+
+```html interactive-example
+<video controls src="/shared-assets/videos/friday.mp4">
+  <track
+    default
+    kind="captions"
+    srclang="en"
+    src="/shared-assets/misc/friday.vtt" />
+  Sorry, your browser doesn't support embedded videos.
+</video>
+```
 
 このプロパティは、あたかも 1 つの部品であるかのように、一連のキュー全体に適用されます。 `background` とその個別指定だけは例外で、各キューに個別に適用されます。これは、ボックスが生成されて予期せずメディアの大きな領域を占めることを避けるためです。
 

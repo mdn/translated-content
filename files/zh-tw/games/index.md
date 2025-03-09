@@ -2,7 +2,7 @@
 title: 遊戲開發
 slug: Games
 l10n:
-  sourceCommit: b0d4232c133f19213742db2286d2c293ce71f674
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{GamesSidebar}}
@@ -16,7 +16,7 @@ l10n:
 我們還包含了一個參考區域，讓你能輕鬆找到有關遊戲開發中常用 API 的資訊。
 
 > [!NOTE]
-> 在 Web 上創建遊戲需要使用多種核心 Web 技術，例如 HTML、CSS 和 JavaScript。初學者可以先參考[學習區域](/zh-TW/docs/Learn_web_development)，了解基礎知識。
+> 在 Web 上創建遊戲需要使用多種核心 Web 技術，例如 HTML、CSS 和 JavaScript。初學者可以先參考[學習 Web 開發](/zh-TW/docs/Learn_web_development)章節，了解基礎知識。
 
 ## 將原生遊戲移植到 Web
 

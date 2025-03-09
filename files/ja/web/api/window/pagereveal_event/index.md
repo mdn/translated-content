@@ -10,7 +10,7 @@ l10n:
 
 **`pagereveal`** イベントは、ネットワークから新しい文書を読み込んだり、文書（[バック/フォワードキャッシュ](/ja/docs/Glossary/bfcache) (bfcache) または[事前レンダリング](/ja/docs/Glossary/Prerender)）をアクティブにしたりして、文書が最初にレンダリングされたときに発行されます。
 
-これは、文書間 (MPA) の移動の[ビュー遷移](/ja/docs/Web/API/View_Transitions_API)において、移動の流入ページからのアクティブな遷移を操作する場合に便利です。例えば、遷移をスキップしたり、JavaScript で流入遷移アニメーションをカスタマイズしたりしたい場合などです。
+これは、文書間 (MPA) の移動の[ビュー遷移](/ja/docs/Web/API/View_Transition_API)において、移動の流入ページからのアクティブな遷移を操作する場合に便利です。例えば、遷移をスキップしたり、JavaScript で流入遷移アニメーションをカスタマイズしたりしたい場合などです。
 
 ## 構文
 
@@ -98,5 +98,5 @@ window.addEventListener("pagereveal", async (e) => {
 
 ## 関連情報
 
-- [ビュー遷移 API の使用](/ja/docs/Web/API/View_Transitions_API/Using)
+- [ビュー遷移 API の使用](/ja/docs/Web/API/View_Transition_API/Using)
 - {{domxref("Window.pageswap_event", "pageswap")}} event

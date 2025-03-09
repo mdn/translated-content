@@ -1,7 +1,6 @@
 ---
 title: 视频和音频 API
 slug: Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs
-original_slug: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 l10n:
   sourceCommit: d6a792e3adce2c8b29a73a3b407e786091363980
 ---
@@ -458,9 +457,9 @@ clearInterval(intervalFwd);
 
 - {{domxref("HTMLMediaElement")}}
 - [视频和音频内容](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)：`<video>` 和 `<audio>` 的简单指南。
-- [音频与视频传输](/zh-CN/docs/Web/Media/Audio_and_video_delivery)：给浏览器传输音频和视频的详细指南，包括很多提示、技巧和指向更深层次教程的相关链接。
-- [音频与视频操作](/zh-CN/docs/Web/Media/Audio_and_video_manipulation)：操作音频和视频的详细指南，例如：使用 [Canvas API](/zh-CN/docs/Web/API/Canvas_API)、[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 等。
+- [音频与视频传输](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery)：给浏览器传输音频和视频的详细指南，包括很多提示、技巧和指向更深层次教程的相关链接。
+- [音频与视频操作](/zh-CN/docs/Web/Media/Guides/Audio_and_video_manipulation)：操作音频和视频的详细指南，例如：使用 [Canvas API](/zh-CN/docs/Web/API/Canvas_API)、[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 等。
 - {{htmlelement("video")}}、{{htmlelement("audio")}} 参考。
-- [Web 上的媒体类型与格式教程](/zh-CN/docs/Web/Media/Formats)
+- [Web 上的媒体类型与格式教程](/zh-CN/docs/Web/Media/Guides/Formats)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Introduction", "Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs")}}

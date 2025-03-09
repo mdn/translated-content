@@ -9,7 +9,18 @@ l10n:
 
 {{jsxref("DataView")}} 인스턴스의 **`setFloat32()`** 메서드는 숫자를 받아 이 `DataView`의 지정된 바이트 오프셋의 4 바이트의 공간에 32비트 실수로 저장합니다. 정렬 제약 조건은 없으며, 범위 내의 모든 오프셋에서 멀티바이트 값을 저장할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/dataview-setfloat32.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.setFloat32()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setFloat32(1, Math.PI);
+
+console.log(view.getFloat32(1));
+// Expected output: 3.1415927410125732
+```
 
 ## 구문
 

@@ -98,7 +98,7 @@ import styles from "https://example.com/styles.css" with { type: "css" };
 
 ## 例
 
-### JSOM モジュールを type 属性でインポート
+### JSON モジュールを type 属性でインポート
 
 `data.json`:
 

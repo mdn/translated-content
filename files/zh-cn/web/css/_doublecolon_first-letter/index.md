@@ -1,5 +1,5 @@
 ---
-title: "::first-letter"
+title: ::first-letter
 slug: Web/CSS/::first-letter
 l10n:
   sourceCommit: 190e65c92aa1d1be81106fd431f49230f98b8224
@@ -9,7 +9,28 @@ l10n:
 
 **`::first-letter`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)将样式应用于[区块容器](/zh-CN/docs/Web/CSS/Visual_formatting_model#区块容器)第一行的第一个字母，但仅当其前面没有其他内容（例如图像或行内表格）时才有效。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-first-letter.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::first-letter", "tabbed-shorter")}}
+
+```css interactive-example
+p::first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: brown;
+}
+```
+
+```html interactive-example
+<p>
+  Scientists exploring the depths of Monterey Bay unexpectedly encountered a
+  rare and unique species of dragonfish. This species is the rarest of its
+  species.
+</p>
+
+<p>
+  When Robison and a team of researchers discovered this fish, they were aboard
+  a week-long expedition.
+</p>
+```
 
 元素的第一个字母并不总是容易识别：
 

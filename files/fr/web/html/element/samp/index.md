@@ -9,7 +9,21 @@ l10n:
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<samp>`** est un élément qui permet de représenter un résultat produit par un programme informatique en incise dans du texte. Il est généralement affiché avec la police à chasse fixe du navigateur (par exemple en [Courier](<https://fr.wikipedia.org/wiki/Courier_(police_d'écriture)>) ou en Lucida Console).
 
-{{EmbedInteractiveExample("pages/tabbed/samp.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;samp&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>I was trying to boot my computer, but I got this hilarious message:</p>
+
+<p>
+  <samp>Keyboard not found <br />Press F1 to continue</samp>
+</p>
+```
+
+```css interactive-example
+samp {
+  font-weight: bold;
+}
+```
 
 <table class="properties">
   <tbody>

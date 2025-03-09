@@ -9,7 +9,50 @@ slug: Web/HTML/Element/area
 
 此元素僅在 {{HTMLElement("map")}} 元素內使用。
 
-{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;area&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<map name="infographic">
+  <area
+    shape="poly"
+    coords="129,0,260,95,129,138"
+    href="https://developer.mozilla.org/docs/Web/HTTP"
+    alt="HTTP" />
+  <area
+    shape="poly"
+    coords="260,96,209,249,130,138"
+    href="https://developer.mozilla.org/docs/Web/HTML"
+    alt="HTML" />
+  <area
+    shape="poly"
+    coords="209,249,49,249,130,139"
+    href="https://developer.mozilla.org/docs/Web/JavaScript"
+    alt="JavaScript" />
+  <area
+    shape="poly"
+    coords="48,249,0,96,129,138"
+    href="https://developer.mozilla.org/docs/Web/API"
+    alt="Web APIs" />
+  <area
+    shape="poly"
+    coords="0,95,128,0,128,137"
+    href="https://developer.mozilla.org/docs/Web/CSS"
+    alt="CSS" />
+</map>
+<img
+  usemap="#infographic"
+  src="/shared-assets/images/examples/mdn-info.png"
+  alt="MDN infographic" />
+```
+
+```css interactive-example
+img {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 260px;
+}
+```
 
 ## 屬性
 
@@ -118,7 +161,7 @@ slug: Web/HTML/Element/area
     <tr>
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
-        當存在 <a href="/zh-TW/docs/Web/HTML/Element/area#href"><code>href</code></a> 屬性時，為<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>，否則為 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/generic_role"><code>generic</code></a>
+        當存在 <a href="/zh-TW/docs/Web/HTML/Element/area#href"><code>href</code></a> 屬性時，為<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a>，否則為 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>
     <tr>

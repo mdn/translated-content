@@ -1,7 +1,6 @@
 ---
 title: 组织 CSS
 slug: Learn_web_development/Core/Styling_basics/Organizing
-original_slug: Learn/CSS/Building_blocks/Organizing
 ---
 
 {{LearnSidebar}}
@@ -346,7 +345,7 @@ BEM 在大些的 Web 项目中被广泛使用，许多人用这种方式写他�
 
 #### 定义变量
 
-CSS 现在有原生的[自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)，所以这个功能越来越没那么重要了，但是你使用 Sass 的可能原因之一为，能够作为设置定义用于一个项目的所有颜色和字体，之后这些变量在项目中可用。这意味着如果你意识到你用了错误的蓝色阴影，你只需要在一个地方修改。
+CSS 现在有原生的[自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)，所以这个功能越来越没那么重要了，但是你使用 Sass 的可能原因之一为，能够作为设置定义用于一个项目的所有颜色和字体，之后这些变量在项目中可用。这意味着如果你意识到你用了错误的蓝色阴影，你只需要在一个地方修改。
 
 如果我们创建了在下面的第一行里面叫做 `$base-color` 的变量，我们之后可以在样式表的任何需要这一颜色的地方使用它。
 
