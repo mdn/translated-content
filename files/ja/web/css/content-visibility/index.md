@@ -277,7 +277,7 @@ function showHide() {
 
 ## 関連情報
 
-- [CSS 拘束](/ja/docs/Web/CSS/CSS_containment)
+- [CSS コンテナー](/ja/docs/Web/CSS/CSS_containment)
 - [`contain-intrinsic-size`](/ja/docs/Web/CSS/contain-intrinsic-size)
 - {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
 - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) (web.dev)

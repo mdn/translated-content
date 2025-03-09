@@ -1,5 +1,5 @@
 ---
-title: CSS 拘束
+title: CSS コンテナー
 slug: Web/CSS/CSS_containment
 l10n:
   sourceCommit: 559e1fa9e8d13e5b49862ebb1d53c6f39b55d79d
@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**CSS 拘束** (CSS Containment) モジュールでは、拘束とコンテナークエリーを定義しています。
+**CSS コンテナー** (CSS Containment) モジュールでは、拘束とコンテナークエリーを定義しています。
 
 拘束によって、ページのサブツリーを DOM の残りの部分から分離することができます。ブラウザーは、これらの独立した部分のレンダリングを最適化することで、パフォーマンスを向上させることができます。
 
@@ -62,7 +62,7 @@ l10n:
 
   - : コンテナーコンテキストに名前を付けることを含む、 `@container` でコンテナクエリーを使用するガイドです。
 
-- [CSS 拘束の使用](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment)
+- [CSS コンテナーの使用](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment)
 
   - : CSS コンテナーの基本的な目的と、より良いユーザー体験のために `contain` と `content-visibility` を活用する方法を記述しています。
 

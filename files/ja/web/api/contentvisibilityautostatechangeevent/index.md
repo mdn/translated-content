@@ -67,6 +67,6 @@ function stopCanvasUpdates(canvas) {
 ## 関連情報
 
 - {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} イベント
-- [CSS 拘束](/ja/docs/Web/CSS/CSS_containment)
+- [CSS コンテナー](/ja/docs/Web/CSS/CSS_containment)
 - {{cssxref("content-visibility")}} プロパティ
 - {{cssxref("contain")}} プロパティ

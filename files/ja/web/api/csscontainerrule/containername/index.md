@@ -112,6 +112,6 @@ log(`CSSContainerRule.containerName: "${containerRule.containerName}"`);
 ## 関連情報
 
 - CSS の {{cssxref("container")}} 一括指定プロパティ
-- [CSS 拘束モジュール](/ja/docs/Web/CSS/CSS_containment)
+- [CSS コンテナーモジュール](/ja/docs/Web/CSS/CSS_containment)
 - [コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
 - [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
