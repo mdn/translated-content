@@ -2,7 +2,7 @@
 title: 406 Not Acceptable
 slug: Web/HTTP/Status/406
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
 ---
 
 {{HTTPSidebar}}
@@ -15,10 +15,9 @@ HTTP **`406 Not Acceptable`** [用戶端錯誤回應](/en-US/docs/Web/HTTP/Statu
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Accept-Language")}}
 
-A server may return responses that differ from the request's accept headers.
-In such cases, a {{HTTPStatus("200")}} response with a default resource that doesn't match the client's list of acceptable content negotiation values may be preferable to sending a 406 response.
+伺服器可能會傳回與請求的 `Accept` 標頭不同的回應。在這種情況下，傳回一個 {{HTTPStatus("200")}} 狀態碼，並提供與用戶端可接受內容協商值清單不匹配的默認資源，可能比傳回 406 回應更合適。
 
-If a server returns a 406, the body of the message should contain the list of available representations for the resource, allowing the user to choose, although no standard way for this is defined.
+如果伺服器傳回 406，則應在回應主體中包含該資源的可用表示清單，以便使用者選擇，儘管目前沒有定義標準的方法來執行此操作。
 
 ## 狀態
 
@@ -26,11 +25,11 @@ If a server returns a 406, the body of the message should contain the list of av
 406 Not Acceptable
 ```
 
-## Examples
+## 範例
 
-### Content type not available
+### 不支援的內容類型
 
-The following request assumes that `www.example.com/docs/doc1` supports sending a document back as `application/rtf`:
+以下請求假設 `www.example.com/docs/doc1` 支援以 `application/rtf` 格式回傳文件：
 
 ```http
 GET /docs/doc1 HTTP/1.1
@@ -38,7 +37,7 @@ Host: example.com
 Accept: application/rtf;
 ```
 
-In this example, the server implementation does not fallback to a default content type like `text/html` or `application/json`, but returns a 406 instead:
+在這個例子中，伺服器實作並未退回到預設的內容類型，例如 `text/html` 或 `application/json`，而是返回了一個 406 回應：
 
 ```http
 HTTP/1.1 406 Not Acceptable
@@ -48,7 +47,7 @@ Content-Type: application/json
 
 {
   "code": "UnsupportedType",
-  "message": "Only 'text/html' or 'application/json' content types supported.",
+  "message": "只支援「text/html」或「application/json」內容類型。",
 }
 ```
 
@@ -58,7 +57,7 @@ Content-Type: application/json
 
 ## 參見
 
-- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
 - {{HTTPHeader("Accept")}}
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Accept-Language")}}
