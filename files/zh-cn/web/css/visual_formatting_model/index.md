@@ -1,6 +1,8 @@
 ---
 title: 视觉格式化模型
 slug: Web/CSS/Visual_formatting_model
+l10n:
+  sourceCommit: commit/f731452fabde211bee55aedd39fc83d60c4e4918
 ---
 
 {{CSSRef}}
@@ -28,28 +30,24 @@ CSS2 中定义了许多有关视觉格式化模型的信息，但是不同的 CS
 
 **盒子生成**是 CSS 视觉格式化模型的一部分，用于从文档元素生成盒子。生成的盒子有不同的类型，影响它们视觉格式化的东西也不同。生成的盒子的类型取决于 CSS {{cssxref("display")}} 属性的值。
 
-最初定义于 CSS2 中的 `display` 属性在 [CSS 显示模块第 3 版](https://www.w3.org/TR/css-display-3/)中得到了扩展。此外，自 CSS2 以来，一些与显示有关的术语已经得到更新和澄清。
+最初定义于 CSS2 中的 `display` 属性在 [CSS 显示](/zh-CN/docs/Web/CSS/CSS_display)、[CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)、[CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)和 [CSS 旁注布局](/zh-CN/docs/Web/CSS/CSS_ruby_layout)模块中得到了扩展。此外，自 CSS2 以来，一些与显示有关的术语已经得到更新和澄清。
 
 CSS 获取源文档并将其渲染到画布上。为此，它会生成一个中间结构，即**盒子树**，它表示被渲染文档的格式化结构。盒子树中的每一个盒子都表示画布上特定空间和/或时间点所对应的元素（或伪元素），而盒子树中的每个文本流同样表示其对应文本节点的内容。
 
 然后，对于每个元素，CSS 会根据元素 `display` 属性指定的值生成一个个盒子。
 
 > [!NOTE]
-> 盒子通常按其显示类型来指代——例如，由带有 `display: block` 的元素生成的盒子称为“块盒子”或简称为“块”。但请注意，块盒子、块级盒子和盒子容器之间具有细微的差异；有关更多星系信息，请参阅下面的[块盒子](#块盒子)部分。
+> 盒子通常按其显示类型来指代——例如，由带有 `display: block` 的元素生成的盒子称为“区块盒子”或简称为“区块”。但请注意，区块盒子、块级盒子和区块容器之间具有细微的差异；有关更详细的信息，请参阅下面的[区块盒子](#区块盒子)部分。
 
 ### 主盒子
 
 当一个元素生成了一个或多个盒子时，其中的一个盒子是**主盒子**（在盒子树中包含它的后代盒子和生成的内容，它同时也是任何定位方案中涉及的盒子）。
 
-一些元素可能会生成除主盒子以外的其他盒子，例如 `display: list-item` 会生成多个盒子（例如，一个**主块盒子**和一个**子标记盒子**）。而一些值（例如 `none` 或 `contents`）会导致元素及其后代不生成任何盒子。
+一些元素可能会生成除主盒子以外的其他盒子，例如 `display: list-item` 会生成多个盒子（例如，一个**主区块盒子**和一个**子标记盒子**）。而一些值（例如 `none` 或 `contents`）会导致元素及其后代不生成任何盒子。
 
-### 匿名块盒子
+### 匿名盒子
 
-在某些情况下进行视觉格式化时，需要添加一些增补性的盒子，这些盒子不能用 CSS 选择符选中，因此称为匿名盒子（_anonymous boxes）_。
-
-CSS 选择器不能作用于匿名盒子 (_anonymous boxes_)，所以它不能被样式表赋予样式。也就是说，此时所有可继承的 CSS 属性值都为 `inherit` ，而所有不可继承的 CSS 属性值都为 `initial`。
-
-块包含盒子可能只包含行内级盒子，也可能只包含块级盒子，但通常的文档都会同时包含两者，在这种情况下，就会在相邻的行内级盒子外创建匿名块盒子。
+当没有 HTML 元素被用于盒子时，会创建**匿名盒子**。例如，当你在父元素上声明 `display: flex`，且其中直接包含一串未包裹在其他元素中的文本时，会发生这种情况。为了修复盒子树，会围绕这一串文本创建匿名盒子。它会表现得像一个弹性元素，但是，由于没有定位的元素，其无法像常规的盒子那样被选中并添加样式。
 
 ```html live-sample___anonymous-flex
 <div class="flex">
@@ -77,11 +75,7 @@ body {
 
 {{EmbedLiveSample("anonymous-flex")}}
 
-对这两个匿名盒子来说，程序员无法像 {{ HTMLElement("p") }} 元素那样控制它们的样式，因此它们会从 {{ HTMLElement("div") }} 那里继承那些可继承的属性，如 {{ cssxref("color") }}。其他不可继承的属性则会设置为 `initial`，比如，因为没有为它们指定 {{ cssxref("background-color") }}，因此其具有默认的透明背景，而 `<p>` 元素的盒子则能够用 CSS 指定背景颜色。类似地，两个匿名盒子的文本颜色总是一样的。
-
-另一种会创建匿名块盒子的情况是一个行内盒子中包含一或多个块盒子。此时，包含块盒子的盒子会拆分为两个行内盒子，分别位于块盒子的前面和后面。块盒子前面的所有行内盒子会被一个匿名块盒子包裹，块盒子后面的行内盒子也是一样。因此，块盒子将成为这两个匿名块盒子的兄弟盒子。
-
-如果有多个块盒子，而它们中间又没有行内元素，则会在这些盒子的前面和后面创建两个匿名块盒子。
+当文本穿插到块级元素中时，也会发生同样的事情。在下一个示例中，`<div>` 中有一个字符串；字符串之间是一个包含部分文本的 `<p>` 元素。
 
 ```html live-sample___anonymous-block
 <div class="example">
@@ -105,22 +99,24 @@ body {
 
 {{EmbedLiveSample("anonymous-block")}}
 
-### 行内级元素和行内盒子
+在盒子树中，字符串被分割到了三个盒子中。段落元素之前的字符串部分被包裹到一个匿名盒子中，然后 `<p>` 会生成一个盒子，然后是另一个匿名盒子。
 
-如果一个元素的 {{ cssxref("display") }} 属性为 `inline`、`inline-block` 或 `inline-table`，则称该元素为行内级元素。显示时，它不会生成内容块，但是可以与其他行内级内容一起显示为多行。一个典型的例子是包含多种格式内容（如强调文本、图片等）的段落，就可以由行内级元素组成。
+关于这些匿名盒子需要考虑的一点是，它们从其直接父级继承样式，但你无法通过定位匿名盒子来修改它们的外观。在我们的示例中，我们使用直接子元素选择器来定位容器中的子元素。这不会改变匿名盒子，因为它们本身不是“元素”。
 
-> [!WARNING]
-> 该图使用了过时的术语，见下面的“注意”（译注：指图中的“Atomic inline boxes”）。除此之外该图还有一个错误，右边的黄色部分应该完全包含左侧的椭圆（类似于数学上的超集），因为标准所说的是“如果行内级元素生成的盒子参与行内格式化上下文的创建，则该盒子为一个行内级盒子”，见“CSS 2.2 标准的 9.2.2 节”。
+**行内匿名盒子**（inline anonymous box）是在字符串被行级元素分割时创建的，例如，一段文本中包含一个被 `<em></em>` 包裹的句子。这会将句子分割成三个行内盒子——强调（em）部分之前的行内匿名盒子、在 `<em>` 元素中包裹的部分，以及最后的行内匿名盒子。与匿名区块盒子一样，行内匿名盒子不能像 `<em>` 那样单独设置样式，它们只能继承容器的样式。
 
-行内级元素会生成行内级盒子，该盒子同时会参与行内格式化上下文（[inline formatting context](/zh-CN/docs/CSS/Inline_formatting_context)）的创建。行内盒子既是行内级盒子，也是一个其内容会参与创建其容器的行内格式化上下文的盒子，比如所有具有 `display:inline` 样式的非替换盒子。如果一个行内级盒子的内容不参与行内格式化上下文的创建，则称其为原子行内级盒子。而通过替换行内级元素或 `display` 值为 `inline-block` 或 `inline-table` 的元素创建的盒子不会像行内盒子一样可以被拆分为多个盒子。
+其他格式化上下文也会创建匿名盒子。[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)的表现与上述[弹性盒](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)的示例相同，会将文本字符串转换为带有匿名盒子的网格元素。[多列](/zh-CN/docs/Web/CSS/CSS_multicol_layout)布局会在对列创建匿名列盒子，这些盒子也无法设置样式或被定位。[表格布局](/zh-CN/docs/Web/CSS/CSS_table)会添加匿名盒子以创建适当的表格结构——例如，如果没有具有 `display: table-row` 的盒子，则会添加匿名表格行。
 
-> [!NOTE]
-> 开始的时候，原子行内级盒子叫做原子行内盒子，这并不准确，因为它们并不是行内盒子。后来在一次勘误时修正了这一问题。不过，当你见到某些文章中使用了“原子行内盒子”的时候，你尽可以将其理解为“原子行内级盒子”，因为这仅仅是一个名字的修改。
+### 行内盒子
+
+**行内盒子**是包裹每一行文本的盒子。如果你浮动一个元素，然后在其后跟一个具有背景颜色的块，则可以看到行内盒子与其包含区块之间的区别。
+
+在下面的示例中，浮动的 `<div>` 后面的行内盒子被缩短，以包裹浮动。盒子的背景延伸到浮动的后面，因为浮动元素已脱离流。
 
 ```html live-sample___line-boxes
 <div class="float"></div>
 <p class="following">
-  此文本跟随浮动，行级盒子被缩短以便为浮动腾出空间，但元素的盒子仍然在常规流中。
+  此文本跟随浮动，行内盒子被缩短以便为浮动腾出空间，但元素的盒子仍然在常规流中。
 </p>
 ```
 
@@ -145,120 +141,123 @@ body {
 
 {{EmbedLiveSample("line-boxes", "", "250px")}}
 
-#### 匿名行内盒子
+## 定位方案以及应用流和脱离流的元素
 
-类似于块盒子，CSS 引擎有时候也会自动创建一些行内盒子。这些行内盒子无法被选择符选中，因此是匿名的，它们从父元素那里继承那些可继承的属性，其他属性保持默认值 `initial`。一种常见的情况是 CSS 引擎会自动为直接包含在块盒子中的文本创建一个行内格式化上下文，在这种情况下，这些文本会被一个足够大的匿名行内盒子所包含。但是如果仅包含空格则有可能不会生成匿名行内盒子，因为空格有可能会由于 {{ cssxref("white-space") }} 的设置而被移除，从而导致最终的实际内容为空。
+在 CSS 中，盒子可以按照三种定位方案进行布局：**常规流**、**浮动**和**绝对定位**。
 
-> [!NOTE]
-> 示例 TBD
+### 常规流
 
-### 其他类型的盒子
+在 CSS 中，常规流包含块级盒子的区块格式化、行内盒子的行内格式化，也包含块级和行内盒子的相对和粘性定位。
 
-#### 行盒子
-
-行盒子由行内格式化上下文创建，用来显示一行文本。在块盒子内部，行盒子总是从块盒子的一边延伸到另一边（译注：即占据整个块盒子的宽度）。当有浮动元素时，行盒子会从向左浮动的元素的右边缘延伸到向右浮动的元素的左边缘。
-
-行盒子更多是以技术性目的而存在的，Web 开发者通常不需要关心。
-
-#### Run-in 盒子
-
-Run-in 盒子通过 `display:run-in` 来定义，它可以是块盒子，也可以是行内盒子，这取决于紧随其后的盒子的类型。Run-in 盒子可以用来在可能的情况下将标题嵌入文章的第一个段落中。
-
-> [!NOTE]
-> Run-in 盒子已经在 CSS 2.1 的标准中移除了，但可能会在 CSS 3 中作为一个实验性的内容再次加入。因此最好不要将其用于正式项目。
-
-#### 由其他模型引入的盒子
-
-除了行内格式化上下文和块格式化上下文之外，CSS 还定义了几种内容模型，这些模型同样可以应用于元素。这些模型一般用来描述布局，它们可能会定义一些额外的盒子类型：
-
-- [表格内容模型](/zh-CN/docs/Web/CSS/table-layout)可能会创建一个表格包装器盒子和一个表格盒子，以及多个其他盒子如表格标题盒子等
-- [多列内容模型](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)可能会在容器盒子和内容之间创建多个列盒子
-- 实验性的网格内容模型或 flex-box 内容模型同样会创建一些其他种类的盒子
-
-#### 定位规则
-
-一旦生成了盒子以后，CSS 引擎就需要定位它们以完成布局。下面是定位盒子时所使用的规则：
-
-- 普通流：按照次序依次定位每个盒子
-- 浮动：将盒子从普通流中单独拎出来，将其放到外层盒子的某一边
-- 绝对定位：按照绝对位置来定位盒子，其位置根据盒子的包含元素所建立的绝对坐标系来计算，因此绝对定位元素有可能会覆盖其他元素
-
-### 普通流
-
-在普通流中，盒子会依次放置。在块格式化上下文中，盒子在垂直方向依次排列；而在行内格式化上下文中，盒子则水平排列。当 CSS 的 {{ cssxref("position") }} 属性为 `static` 或 `relative`，并且 {{ cssxref("float") }} 为 `none` 时，其布局方式为普通流。
-
-### 示例
-
-> [!NOTE]
-> 在普通流的块格式化上下文中，盒子会垂直依次排列：
->
-> \[TODO 图片]
->
-> 在普通流的行内格式化上下文中，盒子会水平依次排列：
->
-> \[TODO 图片]
-
-> [!NOTE]
-> 普通流又有两种情况：静态定位和相对定位：
->
-> {{ cssxref("position") }} 为 `static` 时为静态定位，此时每个盒子根据普通流所计算出的确切位置来定位。
->
-> \[TODO 图片]
->
-> 当 {{ cssxref("position") }} 为 `relative` 时为相对定位，此时每个盒子还会根据 {{ cssxref("top") }}、{{ cssxref("bottom") }}、{{ cssxref("left") }} 和 {{ cssxref("right") }} 属性的值在其原本所在的位置上产生指定大小的偏移。
+阅读有关 CSS [流式布局](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout)的更多信息。
 
 ### 浮动
 
-在浮动定位中，浮动盒子会浮动到当前行的开始或尾部位置。这会导致普通流中的文本及其他内容会“流”到浮动盒子的边缘处，除非元素通过 {{ cssxref("clear") }} 清除了前面的浮动。
+在浮动模型中，盒子首先按照常规流的方式进行布局，然后从常规流中脱离并进行定位，通常位于左侧或右侧。内容可以沿着浮动的一侧进行排列。
 
-一个盒子的 {{ cssxref("float") }} 值不为 `none`，并且其 {{ cssxref("position") }} 为 `static` 或 `relative` 时，该盒子为浮动定位。如果将 {{ cssxref("float") }} 设置为 `left`，浮动盒子会定位到当前行盒子的开始位置（左侧），如果设置为 `right`，浮动盒子会定位到当前行盒子的尾部位置（右侧）。不管是左浮动还是右浮动，行盒子都会伸缩以适应浮动盒子的大小。
-
-\[TODO 图片]
+查看有关[浮动](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Floats)的更多信息。
 
 ### 绝对定位
 
-在绝对定位中，盒子会完全从当前流中移除，并且不会再与其有任何联系（译注：此处仅指定位和位置计算，而绝对定位的元素在文档树中仍然与其他元素有父子或兄弟等关系），其位置会使用 {{ cssxref("top") }}、{{ cssxref("bottom") }}、{{ cssxref("left") }} 和 {{ cssxref("right") }} 相对其[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)进行计算。
+在绝对定位模型（也包含 `fixed` 定位）中，盒子会从常规流中完全移除，并分配一个相对于包含区块（在固定定位的情况下为视口）或 [CSS 锚点定位](/zh-CN/docs/Web/CSS/CSS_anchor_positioning)中的一个或多个锚点元素的位置。
 
-如果元素的 {{ cssxref("position") }} 为 `absolute` 或 `fixed`，该元素为绝对定位。
+如果元素是浮动或绝对定位的，或是根元素，则该元素被称为是**脱离流**的。如果元素没有脱离流，那么元素被称为是**应用流**的。
 
-对固定位置的元素来说，其包含块为整个视口，该元素相对视口进行绝对定位，因此滚动时元素的位置并不会改变。
+阅读有关 [CSS 定位布局](/zh-CN/docs/Web/CSS/CSS_positioned_layout)的信息。
 
-### 块级元素与块盒子
+## 格式化上下文和 display 属性
 
-当元素的 {{ cssxref("display") }} 为 `block`、`list-item` 或 `table` 时，该元素将成为块级元素。一个块级元素会被格式化成一个块（例如文章的一个段落），默认按照垂直方向依次排列。
+盒子可以描述为具有 `block` 或 `inline` **外部显示类型**。外部显示类型指明盒子如何与其他元素在页面上进行交互。
 
-每个块级盒子都会参与[块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)的创建，而每个块级元素都会至少生成一个块级盒子，即主块级盒子（_principal block-level_ *box）。有*一些元素，比如列表项会生成额外的盒子来放置项目符号，而那些会生成列表项的元素可能会生成更多的盒子。不过，多数元素只生成一个主块级盒子。
+盒子还具有内部显示类型，指明其子元素的行为。对于常规区块和行内布局，或常规流布局，显示类型为 `flow`。这意味着子元素也将是 `block` 或 `inline`。
 
-主块级盒子包含由后代元素生成的盒子以及内容，同时它也会参与[定位方案](/zh-CN/docs/CSS/Positioning_scheme)。
+但是，内部显示类型可能是 `grid` 或 `flex`，在这种情况下，直接子元素将显示为网格或弹性元素。这种情况下的元素被描述为创建了网格或弹性[格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)。在许多方面，这类似于区块格式化上下文，但是，子元素的行为是弹性或网格元素，而不是常规流中的元素。
 
-一个块级盒子可能也是一个块容器盒子。块容器盒子（*block container box）要么*只包含其他块级盒子，要么只包含行内盒子并同时创建一个行内[格式化上下文（inline formatting context）](/zh-CN/docs/CSS/Inline_formatting_context)。
+{{cssxref("display")}} 属性参考中描述了块级盒子和行级盒子之间的交互。
 
-能够注意到块级盒子与块容器盒子是不同的这一点很重要。前者描述了元素与其父元素和兄弟元素之间的行为，而后者描述了元素跟其后代之间的行为。有些块级盒子并不是块容器盒子，比如表格；而有些块容器盒子也不是块级盒子，比如非替换行内块和非替换表格单元格。
+此外，display 具体值的参考解释了这些格式化上下文在盒子布局中如何工作。
 
-一个同时是块容器盒子的块级盒子称为块盒子（_block box）。_
+- [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)模块
+- [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)模块
+- [CSS 多列布局](/zh-CN/docs/Web/CSS/CSS_multicol_layout)模块
+- [CSS 表格](/zh-CN/docs/Web/CSS/CSS_table)模块
+- [CSS 列表和计数器](/zh-CN/docs/Web/CSS/CSS_lists)模块
+
+### 独立格式化上下文
+
+元素要么参与其包含区块的格式化上下文，要么建立独立的格式化上下文。例如，网格容器为其子元素创建新的**网格格式化上下文**。
+
+**独立格式化上下文**包含浮动，且外边距不会跨过格式化上下文的边界被折叠。因此，创建新的区块格式化上下文可以确保浮动与外边距保留在盒子内。要实现这一点，请将 `display: flow-root` 添加到希望创建新的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)的盒子上。
+
+以下示例展示了 `display: flow-root` 的效果。带有黑色背景的盒子看起来会将浮动元素和文本包装在一起。如果删除 `display: flow-root`，则浮动元素会从盒子底部弹出，因为它不再被包含在盒子中。
+
+```html live-sample___block-flow-root
+<div class="container">
+  <div class="item">浮动</div>
+  <p>跟随浮动的文本。</p>
+</div>
+```
+
+```css hidden live-sample___block-flow-root
+body {
+  font: 1.2em sans-serif;
+  margin: 20px;
+}
+.container {
+  background-color: #333;
+  color: #fff;
+}
+
+.item {
+  background-color: #fff;
+  border: 1px solid #999;
+  color: #333;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+```
+
+```css live-sample___block-flow-root
+.container {
+  display: flow-root;
+}
+
+.item {
+  margin: 10px;
+  float: left;
+}
+```
+
+{{EmbedLiveSample("block-flow-root", "", "250px")}}
+
+### 区块盒子
+
+在规范中，区块盒子（block box）、块级盒子（block-level box）以及区块容器（block container）在某些地方都被称为**区块盒子**。它们有一些不同，只有在没有歧义的情况下才应使用区块盒子这个术语。
+
+#### 区块容器
+
+**区块容器**要么仅包含行级盒子，参与行内格式化上下文；要么仅包含块级盒子，参与区块格式化上下文。因此，我们看到了上面解释的行为，其中，引入了匿名盒子以确保所有元素都可以参与区块或行内格式化上下文。只有当元素包含块级或行级盒子时，它才是区块容器。
+
+#### 行级和块级盒子
+
+它们是包含在区块容器内的盒子，分别参与行内或区块布局。
+
+#### 区块盒子
+
+区块盒子是一种块级盒子，它也是一种区块容器。如 CSS `display` 中所描述的，盒子可以是块级盒子，但不能同时是区块容器（例如，它可以是弹性或网格容器）。
 
 ## 参见
 
-- CSS 重要概念：
-
-  - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
-  - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
-  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
-  - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
-  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - 值
-
-    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)
-    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)
-    - [解析值](/zh-CN/docs/Web/CSS/resolved_value)
-    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/specified_value)
-    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
-    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
-
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-  - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
+- [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)指南
+- [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
+- [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
+- [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
+- [层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
+- [区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [盒子模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
+- [外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
+- {{DOMxRef("VisualViewport")}} 接口
+- {{glossary("Scroll container", "滚动容器")}}
