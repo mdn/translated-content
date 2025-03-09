@@ -45,7 +45,7 @@ slug: Web/HTML/Viewport_meta_tag
   - : 指定交互式 UI 组件（如虚拟键盘）对页面视口的影响。有效值：`resizes-visual`、`resizes-content` 或 `overlays-content`。默认值：`resizes-visual`。
 
 > [!WARNING]
-> 使用 `user-scalable=no` 会给有视觉障碍的用户造成无障碍问题，如弱视力。[WCAG](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) 要求至少有 2 倍的缩放；然而，最佳做法是启用 5 倍的缩放。
+> 使用 `user-scalable=no` 会给有视觉障碍的用户造成无障碍问题，如弱视力。[WCAG](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) 要求至少有 2 倍的缩放；然而，最佳做法是启用 5 倍的缩放。
 
 ## 屏幕密度
 

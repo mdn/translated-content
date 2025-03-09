@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.instantiateStreaming()
 slug: WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static
-original_slug: WebAssembly/JavaScript_interface/instantiateStreaming_static
 ---
 
 **`WebAssembly.instantiateStreaming()`** 函数直接从流式底层源编译并实例化 WebAssembly 模块。这是加载 Wasm 代码的最有效、最优化的方式。

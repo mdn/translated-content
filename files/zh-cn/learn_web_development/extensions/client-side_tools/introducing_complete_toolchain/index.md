@@ -1,7 +1,6 @@
 ---
 title: 介绍完整的工具链
 slug: Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain
-original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Package_management","Learn_web_development/Extensions/Client-side_tools/Deployment", "Learn_web_development/Extensions/Client-side_tools")}}

@@ -1,7 +1,6 @@
 ---
 title: 事件冒泡
 slug: Learn_web_development/Core/Scripting/Event_bubbling
-original_slug: Learn/JavaScript/Building_blocks/Event_bubbling
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}

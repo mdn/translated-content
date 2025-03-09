@@ -18,7 +18,7 @@ l10n:
 如果是同名的一组 {{HTMLElement("input/checkbox", "checkbox")}} 输入类型，则只有带有 `required` 属性的复选框是必选的。
 
 > [!NOTE]
-> 设置 [`aria-required="true"`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-required) 会告诉屏幕阅读器某个元素（任何元素）是必需的，但与元素的可选性无关。
+> 设置 [`aria-required="true"`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required) 会告诉屏幕阅读器某个元素（任何元素）是必需的，但与元素的可选性无关。
 
 ### 属性交互
 

@@ -1,7 +1,6 @@
 ---
 title: 发送表单数据
 slug: Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
-original_slug: Learn/Forms/Sending_and_retrieving_form_data
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}

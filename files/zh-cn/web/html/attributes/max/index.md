@@ -121,7 +121,7 @@ max 属性适用于数值类型的输入，包括 {{HTMLElement("input/date", "d
 
 ## 无障碍考虑
 
-提供帮助用户了解如何填写表单并使用各个表单控件的指引。标明任何必填和可选的输入项、数据格式以及其他相关信息。在使用 `max` 属性时，确保用户理解最大值的要求。可以通过 {{htmlelement('label')}} 提供说明。如果需要在标签之外提供上述说明以实现更灵活的布局设计，请考虑使用 [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 或 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)。
+提供帮助用户了解如何填写表单并使用各个表单控件的指引。标明任何必填和可选的输入项、数据格式以及其他相关信息。在使用 `max` 属性时，确保用户理解最大值的要求。可以通过 {{htmlelement('label')}} 提供说明。如果需要在标签之外提供上述说明以实现更灵活的布局设计，请考虑使用 [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 或 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)。
 
 ## 规范
 

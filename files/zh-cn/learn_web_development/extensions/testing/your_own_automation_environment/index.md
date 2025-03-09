@@ -1,7 +1,6 @@
 ---
 title: 搭建自己的自动化测试环境
 slug: Learn_web_development/Extensions/Testing/Your_own_automation_environment
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment
 l10n:
   sourceCommit: d71da812ee94c20658cb1916a123a42254ea545c
 ---

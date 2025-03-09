@@ -96,7 +96,7 @@ dd {
       <th scope="row">允许的 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/listitem_role"
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role"
             >listitem</a
           ></code
         >

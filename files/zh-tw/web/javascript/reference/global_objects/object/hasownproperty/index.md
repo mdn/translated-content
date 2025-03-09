@@ -105,8 +105,8 @@ Object.prototype.hasOwnProperty.call(foo, "bar"); // true
 
 ## 參見
 
-- [Enumerability and ownership of properties](/zh-TW/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/zh-TW/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [JavaScript Guide: Inheritance revisited](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JavaScript Guide: Inheritance revisited](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

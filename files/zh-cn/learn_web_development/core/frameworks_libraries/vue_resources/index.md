@@ -1,7 +1,6 @@
 ---
 title: Vue 资源
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_resources
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management", "Learn_web_development/Core/Frameworks_libraries")}}

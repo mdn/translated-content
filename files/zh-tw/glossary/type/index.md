@@ -14,4 +14,4 @@ slug: Glossary/Type
 ### 基本知識
 
 - 維基百科的[資料型別](https://zh.wikipedia.org/wiki/資料型別)
-- [JavaScript 的資料型別](/zh-TW/docs/Web/JavaScript/Data_structures)
+- [JavaScript 的資料型別](/zh-TW/docs/Web/JavaScript/Guide/Data_structures)

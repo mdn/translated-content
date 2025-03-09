@@ -1,7 +1,6 @@
 ---
 title: 如何在 Google App Engine 上托管你的网站？
 slug: Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
-original_slug: Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 ---
 
 {{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}

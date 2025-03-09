@@ -1,7 +1,6 @@
 ---
 title: 作业：基本布局理解
 slug: Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
-original_slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 ---
 
 {{LearnSidebar}}

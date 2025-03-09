@@ -1,7 +1,6 @@
 ---
 title: MathML 使用入门
 slug: Web/MathML/Guides/Getting_started
-original_slug: Learn/MathML/First_steps/Getting_started
 ---
 
 {{LearnSidebar}}{{NextMenu("Web/MathML/Guides/Text_containers", "Web/MathML/Guides")}}

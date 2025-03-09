@@ -228,7 +228,7 @@ web 最重要的功能之一，就是頁面之間的導航：畢竟它就是相�
 
 ## 框架網站的無障礙議題
 
-讓我們以上一節的內容為基礎，並進一步討論無障礙問題。消除用戶界面的障礙總是需要點思考與努力，而框架會使該過程複雜化。你通常要用上進階的框架 API 來訪問本機瀏覽器功能，例如 ARIA [live region](/zh-TW/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) 或 focus 管理。
+讓我們以上一節的內容為基礎，並進一步討論無障礙問題。消除用戶界面的障礙總是需要點思考與努力，而框架會使該過程複雜化。你通常要用上進階的框架 API 來訪問本機瀏覽器功能，例如 ARIA [live region](/zh-TW/docs/Web/Accessibility/ARIA/Guides/Live_regions) 或 focus 管理。
 
 在某些情況下，框架應用程式會發生在傳統網站不存在的障礙。最明顯的例子，就是前述的客戶端路由。
 

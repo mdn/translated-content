@@ -2,14 +2,14 @@
 title: Accept-Ranges
 slug: Web/HTTP/Headers/Accept-Ranges
 l10n:
-  sourceCommit: eddef03cfbc7f50806a348f4093601033a7976fc
+  sourceCommit: 442db82028668b17b888ee439468ae2ac9d589a5
 ---
 
 {{HTTPSidebar}}
 
-**`Accept-Ranges`** HTTP 回應標頭是伺服器用來通知其支援用戶端對文件下載進行部分請求的標記。此欄位的值表示可以用來定義範圍的單位。
+HTTP **`Accept-Ranges`** {{Glossary("response header", "回應標頭")}}是伺服器用來通知其支援的[範圍請求](/zh-TW/docs/Web/HTTP/Range_requests)，允許用戶端請求資源的一部分或多個部分。此標頭的值表示可用來定義範圍的單位。
 
-如果存在 `Accept-Ranges` 標頭，瀏覽器可能會嘗試**恢復**中斷的下載，而不是重新開始下載。
+例如，回應中若包含 `Accept-Ranges` 標頭，則表示該伺服器能夠在下載中斷後*恢復*下載，而不需用戶端從頭重新傳輸。
 
 <table class="properties">
   <tbody>
@@ -18,7 +18,7 @@ l10n:
       <td>{{Glossary("Response header", "回應標頭")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止的請求標頭")}}</th>
       <td>否</td>
     </tr>
   </tbody>
@@ -34,9 +34,9 @@ Accept-Ranges: none
 ## 指令
 
 - `<range-unit>`
-  - : 定義伺服器支援的範圍單位。雖然 `bytes` 是 {{RFC("7233")}} 正式定義的唯一範圍單位，但其他範圍單位可以在 [HTTP Range Unit Registry](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units) 中註冊。
+  - : 伺服器支援的範圍單位。雖然 `bytes` 是 {{RFC("7233")}} 正式定義的唯一範圍單位。範圍單位在 [HTTP Range Unit Registry](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units) 中註冊。
 - `none`
-  - : 表示不支援任何範圍單位。這使得標頭等效於它自己的缺失，因此很少使用。但在某些瀏覽器中，如 IE9，此設置用於禁用或移除下載管理器中的暫停按鈕。
+  - : 不支援任何範圍單位。這相等於省略標頭，因此很少使用。如果服器不支援範圍請求，傳統瀏覽器會利用該值來禁用或移除下載管理器中的暫停按鈕。
 
 ## 範例
 
@@ -54,6 +54,7 @@ Accept-Ranges: bytes
 
 ## 參見
 
-- {{HTTPHeader("If-Range")}}
-- {{HTTPHeader("Range")}}
+- [HTTP 範圍請求](/zh-TW/docs/Web/HTTP/Range_requests) 指南
+- [HTTP 條件請求](/zh-TW/docs/Web/HTTP/Conditional_requests) 指南
+- {{HTTPHeader("Range")}}、{{HTTPHeader("If-Range")}} 請求標頭
 - [IANA HTTP Range Unit Registry](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units)

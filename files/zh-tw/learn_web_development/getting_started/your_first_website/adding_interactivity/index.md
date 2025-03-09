@@ -107,7 +107,7 @@ let myVariable = 'Bob';
 myVariable = 'Steve';
 ```
 
-請記得這些變數有著不同的[資料型態](/zh-TW/docs/Web/JavaScript/Data_structures)：
+請記得這些變數有著不同的[資料型態](/zh-TW/docs/Web/JavaScript/Guide/Data_structures)：
 
 <table class="standard-table">
   <thead>
