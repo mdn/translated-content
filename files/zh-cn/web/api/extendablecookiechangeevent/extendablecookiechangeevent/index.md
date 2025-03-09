@@ -24,7 +24,7 @@ new ExtendableCookieChangeEvent(type, options)
 - `type`
   - : 事件名称字符串。它区分大小写，并且浏览器始终将其设置为 `cookiechange`。
 - `options` {{optional_inline}}
-  - : 配置对象，_除了在 {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}中定义的属性之外_，还可以具有以下属性：
+  - : 配置对象，_除了在 {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}} 中定义的属性之外_，还可以具有以下属性：
     - `changed` {{optional_inline}}
       - : 包含已更改的 cookie 的数组。
     - `deleted` {{optional_inline}}
