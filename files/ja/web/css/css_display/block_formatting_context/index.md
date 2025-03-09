@@ -2,62 +2,62 @@
 title: ブロック整形コンテキスト
 slug: Web/CSS/CSS_display/Block_formatting_context
 l10n:
-  sourceCommit: afaf3aeeffa8408cf0a8a46c3d8fb0d347aad9f5
+  sourceCommit: 891bc513a3349040a16c4896197d6a3a910ca42b
 ---
 
 {{CSSRef}}
 
-**ブロック整形コンテキスト** (block formatting context, BFC) は、ウェブページにおける CSS の視覚的なレンダリングの一部です。ブロックボックスのレイアウトが行われ、浮動要素が他の要素と相互作用する領域です。
+**ブロック整形コンテキスト** (block formatting context, BFC) は、ウェブページにおける CSS の視覚的なレンダリングの一部です。ブロックボックスのレイアウトが行われ、浮動ボックスが他の要素と相互作用する領域です。
 
 ブロック整形コンテキストは、以下のうちの少なくとも一つから生成されます。
 
 - 文書のルート要素 (`<html>`)
-- 浮動要素 ({{ cssxref("float") }} が `none` 以外である要素)
+- 浮動ボックス ({{ cssxref("float") }} が `none` 以外である要素)
 - 絶対位置指定の要素 ({{ cssxref("position") }} が `absolute` または `fixed` である要素)
-- インラインブロック ({{ cssxref("display") }}`: inline-block` である要素)
-- 表のセル ({{ cssxref("display") }}`: table-cell` を持つ要素。これは HTML の表のセルの既定値です)
-- 表のキャプション ({{ cssxref("display") }}`: table-caption` を持つ要素。HTMLの、表のキャプションの既定値です)
-- {{ cssxref("display") }}`: table`, `table-row`, `table-row-group`, `table-header-group`, `table-footer-group` (つまりそれぞれ HTML の表、表の行、表の本体、表のヘッダー、表のフッターの既定値), `inline-table` のついた要素によって暗黙的に生成された無名の表のセル。
-- {{ cssxref("overflow") }} の値が `visible` 以外であるブロック要素
-- {{ cssxref("display") }}`: flow-root`
-- {{ cssxref("contain") }}`: layout`, `content`, `paint` の付いた要素
-- フレックスアイテム ({{ cssxref("display") }}`: flex` または `inline-flex` である要素の直接の子要素)、[フレックス](/ja/docs/Glossary/Flex_Container)でも[グリッド](/ja/docs/Glossary/Grid_Container)でも[表](/ja/docs/Web/CSS/CSS_table)でもない場合
-- グリッドアイテム ({{ cssxref("display") }}`: grid` または `inline-grid` である要素の直接の子要素)、[フレックス](/ja/docs/Glossary/Flex_Container)でも[グリッド](/ja/docs/Glossary/Grid_Container)でも[表](/ja/docs/Web/CSS/CSS_table)でもない場合
+- インラインブロック ({{cssxref("display", "display: inline-block")}} である要素)
+- 表のセル ({{cssxref("display", "display: table-cell")}} を持つ要素。これは HTML の表のセルの既定値です)
+- 表のキャプション ({{cssxref("display", "display: table-caption")}} を持つ要素。HTMLの、表のキャプションの既定値です)
+- {{cssxref("display", "display: table")}}, `table-row`, `table-row-group`, `table-header-group`, `table-footer-group` (つまりそれぞれ HTML の表、表の行、表の本体、表のヘッダー、表のフッターの既定値), `inline-table` のついた要素によって暗黙的に生成された無名の表のセル。
+- {{ cssxref("overflow") }} の値が `visible` や `clip` 以外であるブロック要素。
+- {{cssxref("display", "display: flow-root")}} である要素。
+- {{htmlelement("button")}} 要素およびボタン型の {{htmlelement("input")}} 要素で既定値の `display: flow-root` であるもの。
+- {{cssxref("contain", "contain: layout")}}, `content`, `paint` の付いた要素
+- フレックスアイテム ({{cssxref("display", "display: flex")}} または `inline-flex` である要素の直接の子要素)、[フレックス](/ja/docs/Glossary/Flex_Container)でも[グリッド](/ja/docs/Glossary/Grid_Container)でも[表](/ja/docs/Web/CSS/CSS_table)でもない場合
+- グリッドアイテム ({{cssxref("display", "display: grid")}} または `inline-grid` である要素の直接の子要素)、[フレックス](/ja/docs/Glossary/Flex_Container)でも[グリッド](/ja/docs/Glossary/Grid_Container)でも[表](/ja/docs/Web/CSS/CSS_table)でもない場合
 - 段組みコンテナー ({{ cssxref("column-count") }} または {{ cssxref("column-width") }} が `auto` ではない要素、 `column-count: 1` の要素も含む)
-- {{ cssxref("column-span") }}`: all` は、 `column-span: all` の要素が段組みコンテナーに含まれていなくても、常に新たな整形コンテキストを生成します ([仕様変更](https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51), [Chrome bug](https://bugs.chromium.org/p/chromium/issues/detail?id=709362))。
+- {{cssxref("column-span", "column-span: all")}} は、 `column-span: all` の要素が段組みコンテナーに含まれていなくても、常に新たな整形コンテキストを生成します。
 
-整形コンテキストはレイアウトに影響を与えますが、通常はレイアウトを変更するのではなく、位置決めと浮動要素の解消のために新しいブロック整形コンテキストを作成します。これは、新しいブロック整形コンテキストを確立する要素が次のようになるからです。
+新しいブロック整形コンテキストを確立する要素は、レイアウトに影響を与えるため、整形コンテキストはレイアウトに影響を与えます。
 
-- 内部の浮動要素を収めます。
-- 外部の浮動要素を追いやります。
+- 内部の浮動ボックスを収めます。
+- 外部の浮動ボックスを追いやります。
 - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)を抑止します。
 
-> [!NOTE]
-> フレックス／グリッドコンテナー ({{ cssxref("display") }}: flex/grid/inline-flex/inline-grid) は新しいフレックス／グリッド整形コンテキストを確立します。これは、レイアウト以外はブロック整形コンテキストに類似しています。フレックス／グリッドコンテナーの中に利用できる浮動子要素はありませんが、外部の浮動要素を除外したり、マージンの折りたたみを抑制したりすることはできます。
+要素の {{ cssxref("display") }} を `flex`、`grid`、`inline-flex`、`inline-grid` のいずれかに設定すると、フレックス／グリッドコンテナーとなり、新しいフレックス／グリッド整形コンテキストを確立します。これらはブロック整形コンテキストに似ていますが、フレックスコンテナーやグリッドコンテナー内では浮動ボックスを利用できないという点が異なります。ただし、これらのコンテキストでは外部浮動ボックスは除外され、マージンの相殺は抑制されます。
 
 ## 例
 
-### 内部の浮動要素を収める
+新しい BFC を作成する効果を見るために、これらのいくつかを見てみましょう。
 
-浮動小数点コンテンツと横に並んだコンテンツの高さを同じにします。
+### 内部の浮動ブロックを収める
 
-新しいBFC を作成する効果を見るために、これらのいくつかを見てみましょう。
-
-以下の例では、`border`が適用された `<div>` の中に浮動要素があります。その `<div>` のコンテンツは浮動要素の横に並んだ状態になっています。浮動要素のコンテンツは横に並んだコンテンツよりも高さがあるため、`<div>` の境界線が浮動要素を貫通してしまいます。[フロー内とフローの外のガイド](/ja/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)で説明しているように、浮動要素がフローから外れたので、 `<div>` の `background` と `border` には浮動要素はなく、コンテンツだけが保持されています。
+以下の例では、`border`が適用された `<div>` の中に浮動ボックスがあります。その `<div>` のコンテンツは浮動ボックスの横に並んだ状態になっています。浮動ボックスのコンテンツは横に並んだコンテンツよりも高さがあるため、`<div>` の境界線が浮動ボックスを貫通してしまいます。[フロー内とフローの外のガイド](/ja/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)で説明しているように、浮動ボックスがフローから外れたので、 `<div>` の `background` と `border` には浮動ボックスはなく、コンテンツだけが保持されています。
 
 **`overflow: auto` の使用**
 
-`overflow: auto` を設定したり、初期値である `overflow: visible` 以外の値を設定すると、浮動要素を含む新しい BFC を作成することができます。これで、`<div>` がレイアウトの中のミニレイアウトになります。子要素はすべてこの中に含まれます。
+`overflow: auto` を設定したり、初期値である `overflow: visible` 以外の値を設定すると、浮動ボックスを含む新しい BFC を作成することができます。これで、`<div>` がレイアウトの中のミニレイアウトになります。子要素はすべてこの中に含まれます。
 
-新しい BFC を作成するために `overflow` を使用することの問題点は、`overflow` プロパティが、はみ出したコンテンツをどのように処理したいかをブラウザーに指示するためのものであることです。このプロパティを純粋に BFC を作成するために使用すると、不要なスクロールバーやクリップドシャドウが返されることがあるようです。さらに、将来的に開発者が読解できない可能性もあります。なぜそのために `overflow` を使用したのかがわからないかもしれないからです。もし `overflow` を使用するのであれば、コードにコメントをつけて説明するとよいでしょう。
+新しい BFC を作成するために `overflow` を使用することの問題点は、`overflow` プロパティが、はみ出したコンテンツをどのように処理したいかをブラウザーに指示するためのものであることです。このプロパティを純粋に BFC を作成するために使用すると、不要なスクロールバーやクリップされたドシャドウが返されることがあるようです。さらに、将来的に開発者が読解できない可能性もあります。なぜそのために `overflow` を使用したのかがわからないかもしれないからです。もし `overflow` を使用するのであれば、コードにコメントをつけて説明するとよいでしょう。
 
 **`display: flow-root` の使用**
 
-より新しい値の `display` を使用すると、他の問題となりうる副作用なしに、新しいBFCを作成することができます。コンテナブロックに `display: flow-root` を使用すると、新しい BFC が作成されます。
+より新しい値の `display` を使用すると、他の問題となりうる副作用なしに、新しいBFCを作成することができます。コンテナーブロックに `display: flow-root` を使用すると、新しい BFC が作成されます。
 
-`display: flow-root;` を `<div>` に指定すると、コンテナーの中にあるすべてのものが、そのコンテナーのブロック整形コンテキストに参加し、浮動要素が要素の下部からはみ出ることはありません。
+`display: flow-root;` を `<div>` に指定すると、コンテナーの中にあるすべてのものが、そのコンテナーのブロック整形コンテキストに参加し、浮動ボックスが要素の下部からはみ出ることはありません。
 
 `flow-root` という値は、`root` 要素（ブラウザーでは `<html>` 要素）のように、その中にフローレイアウトのための新しいコンテキストを作成することを理解すれば、理にかなったものです。
+
+これは、 {{htmlelement("button")}} 要素とボタン型の {{htmlelement("input")}} 要素の既定のレンダリングです。すなわち、ボタンは、 `display` の値が新しい BFC を自動的に作成しない値に設定されていない限り、新しい BFC を作成します。
 
 #### HTML
 
@@ -108,19 +108,19 @@ section {
 
 {{EmbedLiveSample("Contain_internal_floats", 200, 480)}}
 
-### 外部の浮動要素を除外する
+### 外部の浮動ボックスを除外する
 
-以下の例では、 `display:flow-root` と浮動要素を使用して 2 列のレイアウトを実装しています。これは、新しい BFC を確立する通常のフロー内の要素が、その要素自身と同じブロック整形コンテキストにあるどの浮動要素のマージンボックスにも重ならないためです。
+以下の例では、 `display:flow-root` と浮動ボックスを使用して 2 列のレイアウトを実装しています。これは、新しい BFC を確立する通常のフロー内の要素が、その要素自身と同じブロック整形コンテキストにあるどの浮動ボックスのマージンボックスにも重ならないためです。
 
 #### HTML
 
 ```html
 <section>
-  <div class="float">外部の浮動要素の大きさを変えてみてください</div>
+  <div class="float">外部の浮動ボックスの大きさを変えてみてください</div>
   <div class="box"><p>通常</p></div>
 </section>
 <section>
-  <div class="float">外部の浮動要素の大きさを変えてみてください</div>
+  <div class="float">外部の浮動ボックスの大きさを変えてみてください</div>
   <div class="box" style="display:flow-root">
     <p><code>display:flow-root</code></p>
   </div>
@@ -156,24 +156,20 @@ section {
 
 {{EmbedLiveSample("Exclude_external_floats", 200, 330)}}
 
-inline-block で width:\<percentage> を使用するよりも、この場合は右側の div の幅を指定する必要がありません。
-
-なお、最近の CSS では、フレックスボックスの方が効率的に複数列のレイアウトを搭載することができます。
-
-### マージンの相殺を防止する
+### マージンの相殺を抑止する
 
 新しい BFC を作成すると、隣接する 2 つの div 間の[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)を避けることができます。
 
 #### マージンの相殺の例
 
-この例では、隣接する 2 つの {{HTMLElement("div")}} 要素があり、それぞれの垂直マージンは `10px` です。マージンが相殺されるため、両要素間の垂直方向のギャップは 10 ピクセルとなり、期待される 20 ピクセルにはなりません。
+この例では、隣接する 2 つの {{HTMLElement("div")}} 要素があり、それぞれの垂直マージンは `10px` です。マージンが相殺されるため、両要素間の垂直方向の間隔は `10px` となり、期待される `20px` にはなりません。
 
-```html
+```html live-sample___margin_collapsing_example
 <div class="blue"></div>
 <div class="red"></div>
 ```
 
-```css
+```css live-sample___margin_collapsing_example
 .blue,
 .red {
   height: 50px;
@@ -189,20 +185,20 @@ inline-block で width:\<percentage> を使用するよりも、この場合は�
 }
 ```
 
-{{EmbedLiveSample("マージンの相殺の例", 120, 170)}}
+{{EmbedLiveSample("Margin collapsing example", 120, 170)}}
 
-#### マージンの相殺の防止
+#### マージンの相殺の抑止
 
-この例では、2つ目の `<div>` を外側の `<div>` で囲み、新しい BFC を作成し、マージンの相殺を防いでいます。
+この例では、 2 つ目の `<div>` を外側の `<div>` で囲み、外側の `<div>` に `overflow: hidden` を使用して新しい BFC を作成します。この新しい BFC は、入れ子になった `<div>` のマージンが外側の `<div>` のマージンと相殺されるのを防ぎます。
 
-```html
+```html live-sample___preventing_margin_collapsing
 <div class="blue"></div>
 <div class="outer">
   <div class="red"></div>
 </div>
 ```
 
-```css
+```css live-sample___preventing_margin_collapsing
 .blue,
 .red {
   height: 50px;
@@ -223,7 +219,7 @@ inline-block で width:\<percentage> を使用するよりも、この場合は�
 }
 ```
 
-{{EmbedLiveSample("マージンの相殺の防止", 120, 170)}}
+{{EmbedLiveSample("Preventing margin collapsing", 120, 170)}}
 
 ## 仕様書
 
@@ -231,22 +227,13 @@ inline-block で width:\<percentage> を使用するよりも、この場合は�
 
 ## 関連情報
 
-- {{ cssxref("float") }}, {{ cssxref("clear") }}
-- CSS の主要概念:
-  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
-  - [アットルール](/ja/docs/Web/CSS/At-rule)
-  - [コメント](/ja/docs/Web/CSS/Comments)
-  - [詳細度](/ja/docs/Web/CSS/Specificity)
-  - [継承](/ja/docs/Web/CSS/Inheritance)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
-  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
-  - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - 値
-    - [初期値](/ja/docs/Web/CSS/initial_value)
-    - [計算値](/ja/docs/Web/CSS/computed_value)
-    - [使用値](/ja/docs/Web/CSS/used_value)
-    - [実効値](/ja/docs/Web/CSS/actual_value)
-  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
-  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
-  - [置換要素](/ja/docs/Web/CSS/Replaced_element)
+- [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
+- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
+- [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
+- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
+- [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+- [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)、[計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)、[使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)、[実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
+- [値定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [置換要素](/ja/docs/Web/CSS/Replaced_element)
