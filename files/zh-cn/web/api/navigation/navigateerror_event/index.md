@@ -2,7 +2,7 @@
 title: Navigation：navigateerror 事件
 slug: Web/API/Navigation/navigateerror_event
 l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+  sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
 ---
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
