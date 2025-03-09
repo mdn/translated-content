@@ -2,7 +2,7 @@
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
 l10n:
-  sourceCommit: ed041385cf874deec203e820fd415bdcd6f98a19
+  sourceCommit: 442db82028668b17b888ee439468ae2ac9d589a5
 ---
 
 {{HTTPSidebar}}
@@ -19,7 +19,7 @@ HTTP **User-Agent** {{Glossary("request header", "請求標頭")}}是一個讓�
       <td>{{Glossary("Request header", "請求標頭")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止的請求標頭")}}</th>
       <td>否</td>
     </tr>
   </tbody>

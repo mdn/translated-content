@@ -2,7 +2,7 @@
 title: X-Robots-Tag
 slug: Web/HTTP/Headers/X-Robots-Tag
 l10n:
-  sourceCommit: 24d8a34da576f86b10923e426f66df48ab6201b9
+  sourceCommit: 442db82028668b17b888ee439468ae2ac9d589a5
 ---
 
 {{HTTPSidebar}}
@@ -22,7 +22,7 @@ l10n:
       <td>{{Glossary("Response header", "回應標頭")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁用標頭名稱")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止的請求標頭")}}</th>
       <td>否</td>
     </tr>
   </tbody>
