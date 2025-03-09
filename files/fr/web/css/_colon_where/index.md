@@ -9,7 +9,51 @@ l10n:
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:where()`** prend une liste de sélecteurs en argument et cible tout élément qui peut être sélectionné par l'un des sélecteurs de la liste.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-where.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :where", "tabbed-shorter")}}
+
+```css interactive-example
+ol {
+  list-style-type: upper-alpha;
+  color: darkblue;
+}
+
+/* Not applied to ol, because of lower specificity */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:where(ol, ul, menu:unsupported) :where(ol, ul) {
+  color: green;
+}
+
+:where(ol, ul) :where(ol, ul) ol {
+  list-style-type: lower-greek;
+  color: chocolate;
+}
+```
+
+```html interactive-example
+<ol>
+  <li>Saturn</li>
+  <li>
+    <ul>
+      <li>Mimas</li>
+      <li>Enceladus</li>
+      <li>
+        <ol>
+          <li>Voyager</li>
+          <li>Cassini</li>
+        </ol>
+      </li>
+      <li>Tethys</li>
+    </ul>
+  </li>
+  <li>Uranus</li>
+  <li>
+    <ol>
+      <li>Titania</li>
+      <li>Oberon</li>
+    </ol>
+  </li>
+</ol>
+```
 
 `:where()` a toujours une spécificité de 0, tandis que `:is()` participe à la spécificité du sélecteur en prenant la spécificité de son argument le plus spécifique.
 

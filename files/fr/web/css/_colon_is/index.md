@@ -12,7 +12,50 @@ La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/W
 > [!NOTE]
 > Cette pseudo-classe avait d'abord été intitulée `:matches()` (puis `:any()`), avant d'être renommée en `:is()` avec [le ticket CSSWG n°3258](https://github.com/w3c/csswg-drafts/issues/3258).
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-is.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :is", "tabbed-shorter")}}
+
+```css interactive-example
+ol {
+  list-style-type: upper-alpha;
+  color: darkblue;
+}
+
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:is(ol, ul, menu:unsupported) :is(ol, ul) {
+  color: green;
+}
+
+:is(ol, ul) :is(ol, ul) ol {
+  list-style-type: lower-greek;
+  color: chocolate;
+}
+```
+
+```html interactive-example
+<ol>
+  <li>Saturn</li>
+  <li>
+    <ul>
+      <li>Mimas</li>
+      <li>Enceladus</li>
+      <li>
+        <ol>
+          <li>Voyager</li>
+          <li>Cassini</li>
+        </ol>
+      </li>
+      <li>Tethys</li>
+    </ul>
+  </li>
+  <li>Uranus</li>
+  <li>
+    <ol>
+      <li>Titania</li>
+      <li>Oberon</li>
+    </ol>
+  </li>
+</ol>
+```
 
 Les pseudo-éléments ne peuvent pas être utilisés dans la liste de sélecteurs passée à `:is()`.
 

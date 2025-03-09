@@ -7,7 +7,32 @@ slug: Web/CSS/content
 
 La propriété [CSS](/fr/docs/Web/CSS) **`content`** remplace un élément avec une valeur générée. Les objets insérés via la propriété `content` sont des **[éléments remplacés anonymes](/fr/docs/Web/CSS/Replaced_element)**.
 
-{{EmbedInteractiveExample("pages/tabbed/content.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: content", "tabbed-shorter")}}
+
+```css interactive-example
+.topic-games::before {
+  content: "🎮 ";
+}
+
+.topic-weather::before {
+  content: "⛅ ";
+}
+
+.topic-hot::before {
+  content: url("/shared-assets/images/examples/fire.png");
+  margin-right: 6px;
+}
+```
+
+```html interactive-example
+<p class="topic-games">Game News: A new inFamous is not planned</p>
+
+<p class="topic-weather">
+  Weather for Today: Heat, violent storms and twisters
+</p>
+
+<p class="topic-hot">Trending Article: Must-watch videos of the week</p>
+```
 
 ## Syntaxe
 
