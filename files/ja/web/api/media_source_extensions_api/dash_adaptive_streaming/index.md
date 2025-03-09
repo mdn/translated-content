@@ -1,7 +1,7 @@
 ---
 title: HTML 5 ビデオ用の DASH アダプティブストリーミング
-slug: Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video
-original_slug: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
+slug: Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming
+original_slug: Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video
 ---
 
 {{QuickLinksWithSubpages("/ja/docs/Web/Media")}}

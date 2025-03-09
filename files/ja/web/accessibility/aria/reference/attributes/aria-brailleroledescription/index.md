@@ -1,6 +1,7 @@
 ---
 title: aria-brailleroledescription
-slug: Web/Accessibility/ARIA/Attributes/aria-brailleroledescription
+slug: Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription
+original_slug: Web/Accessibility/ARIA/Attributes/aria-brailleroledescription
 l10n:
   sourceCommit: 134f9a1ab341bf9ad30358e5f3a59bd9204078df
 ---
