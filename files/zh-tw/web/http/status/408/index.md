@@ -2,7 +2,7 @@
 title: 408 Request Timeout
 slug: Web/HTTP/Status/408
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
 ---
 
 {{HTTPSidebar}}
@@ -22,11 +22,11 @@ HTTP **`408 Request Timeout`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Stat
 408 Request Timeout
 ```
 
-## Examples
+## 範例
 
-### Timeout in form submission
+### 表單提交的超時
 
-The following example shows what a client may send when an [`<input type="file">`](/zh-TW/docs/Web/HTML/Element/input/file) element uses an image on form submission with `method="post"`:
+以下範例顯示了當 [`<input type="file">`](/zh-TW/docs/Web/HTML/Element/input/file) 元素使用圖片並且表單以 `method="post"` 提交時，用戶端可能發送的內容：
 
 ```http
 POST /upload HTTP/1.1
@@ -42,8 +42,7 @@ Content-Type: image/jpeg
 ------Boundary1234--
 ```
 
-If the data is not received in full due to network issues or latency, the server may timeout the connection.
-Clients may repeat the request again, and a new connection will be used:
+如果由於網路問題或延遲導致數據未能完全接收，伺服器可能會超時連接。用戶端可以重試請求，並且會使用新的連接：
 
 ```http
 HTTP/1.1 408 Request Timeout
@@ -55,7 +54,7 @@ Content-Type: text/html
 </head>
 <body>
   <h1>408 Request Timeout</h1>
-  <p>Failed to process request in time. Please try again.</p>
+  <p>無法及時處理請求。請重新嘗試。</p>
 </body>
 </html>
 ```
