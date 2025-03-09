@@ -1,6 +1,7 @@
 ---
 title: CSS Houdini
-slug: Web/CSS/CSS_Houdini
+slug: Web/CSS/CSS_properties_and_values_API/Houdini
+original_slug: Web/CSS/CSS_Houdini
 ---
 
 {{CSSRef}}

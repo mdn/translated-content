@@ -1,6 +1,7 @@
 ---
 title: 重ね合わせコンテキストの例 1
-slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1
+slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1
+original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1
 l10n:
   sourceCommit: e1b6d7d2d02a07f7e86268c81678713fad4d9a5d
 ---

@@ -1,6 +1,7 @@
 ---
 title: 重ね合わせコンテキスト
-slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
+slug: Web/CSS/CSS_positioned_layout/Stacking_context
+original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
 l10n:
   sourceCommit: 9a06522ff323403f707ddad2cb45e27b53cee41e
 ---

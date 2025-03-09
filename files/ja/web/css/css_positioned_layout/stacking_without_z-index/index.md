@@ -1,6 +1,7 @@
 ---
 title: z-index なしの重ね合わせ
-slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
+slug: Web/CSS/CSS_positioned_layout/Stacking_without_z-index
+original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
 l10n:
   sourceCommit: e1b6d7d2d02a07f7e86268c81678713fad4d9a5d
 ---

@@ -1,6 +1,7 @@
 ---
 title: 浮動要素の重ね合わせ
-slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements
+slug: Web/CSS/CSS_positioned_layout/Stacking_floating_elements
+original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements
 l10n:
   sourceCommit: e1b6d7d2d02a07f7e86268c81678713fad4d9a5d
 ---
