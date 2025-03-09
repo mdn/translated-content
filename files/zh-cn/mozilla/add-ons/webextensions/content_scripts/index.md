@@ -1,5 +1,5 @@
 ---
-title: Content scripts
+title: 内容脚本
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
 
@@ -16,7 +16,7 @@ Content Script 只能访问 WebExtension APIS 的一个小的子集，但是它�
 > [!NOTE]
 > content scripts 在 addons.mozilla.org 现在已被禁止，如果你在这个域名尝试插入一个 Content script 将会失败而这个页面会 LOG 一个 CSP 错误。
 
-## 加载 Content scripts
+## 加载内容脚本
 
 你可以通过两种方法之一在一个页面加载 Content script：
 
@@ -25,7 +25,7 @@ Content Script 只能访问 WebExtension APIS 的一个小的子集，但是它�
 
 在每一个 extension 的每一个 frame 中，只有一个全局作用域。所以在一个 content script 中的变量可以被另外的 content script 访问到，而与 content script 如何被加载无关。
 
-## Content script 环境
+## 内容脚本环境
 
 ### DOM 访问
 
@@ -383,7 +383,7 @@ window.addEventListener("message", function (event) {
 
 更多信心请查看 [Xray vision](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html) 和 [Script security](/zh-CN/docs/Mozilla/Gecko/Script_security).
 
-### 从 content script 中访问 页面脚本对象
+### 从内容脚本中访问页面脚本对象
 
 在 Firefox 中，content script 中的 DOM 对象会获得一个额外的属性 wrappedJSObject。这是一个会包含任何由页面脚本所造成修改的”未包裹“对象。
 
@@ -435,7 +435,7 @@ XPCNativeWrapper(window.wrappedJSObject.foo);
 
 查看 [Xray vision](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html) 文档获取更多。
 
-### 与页面脚本共享 content script 对象
+### 与页面脚本共享内容脚本对象
 
 Firefox 同样提供 APIS 允许 content scripts 是对象对于页面脚本可用。这里是两个主要的 APIS:
 
@@ -541,7 +541,7 @@ window.messenger.notify("Message from the page script!");
 
 详情请看 [`Components.utils.cloneInto`](/zh-CN/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto).
 
-## 在 content script 中使用 eval()
+## 在内容脚本中使用 eval()
 
 在 Chrome 中，`eval()` 总是在 content script 的上下文环境中运行，而不是在页面的上下文环境中运行。
 
