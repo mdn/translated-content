@@ -74,6 +74,6 @@ l10n:
 - [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)ガイド
 - [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)ガイド
 - [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)モジュール
-- [CSS 拘束](/ja/docs/Web/CSS/CSS_containment)モジュール
+- [CSS コンテナー](/ja/docs/Web/CSS/CSS_containment)モジュール
 - [CSS ボックスサイズ](/ja/docs/Web/CSS/CSS_box_sizing)モジュール
 - [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)モジュール
