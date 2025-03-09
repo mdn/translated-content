@@ -1,6 +1,7 @@
 ---
 title: Apilamiento y float
-slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements
+slug: Web/CSS/CSS_positioned_layout/Stacking_floating_elements
+original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements
 ---
 
 {{cssref}}

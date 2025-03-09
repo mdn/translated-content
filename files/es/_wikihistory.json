@@ -6440,6 +6440,13 @@
       "maedca"
     ]
   },
+  "Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming": {
+    "modified": "2019-03-23T22:46:14.015Z",
+    "contributors": [
+      "AzazelN28",
+      "vltamara"
+    ]
+  },
   "Web/API/MessageEvent": {
     "modified": "2019-03-18T21:44:05.386Z",
     "contributors": [
@@ -9710,38 +9717,31 @@
       "davidhbrown"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index": {
-    "modified": "2019-03-18T20:42:17.583Z",
-    "contributors": [
-      "ChipTime",
-      "javichito"
-    ]
-  },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context": {
+  "Web/CSS/CSS_positioned_layout/Stacking_context": {
     "modified": "2019-03-23T22:32:44.958Z",
     "contributors": [
       "javichito"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1": {
+  "Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1": {
     "modified": "2019-03-23T22:32:36.821Z",
     "contributors": [
       "javichito"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2": {
+  "Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2": {
     "modified": "2019-03-23T22:32:34.821Z",
     "contributors": [
       "javichito"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3": {
+  "Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3": {
     "modified": "2019-03-23T22:32:30.208Z",
     "contributors": [
       "javichito"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements": {
+  "Web/CSS/CSS_positioned_layout/Stacking_floating_elements": {
     "modified": "2019-04-26T07:22:46.044Z",
     "contributors": [
       "SphinxKnight",
@@ -9749,13 +9749,20 @@
       "javichito"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index": {
+  "Web/CSS/CSS_positioned_layout/Stacking_without_z-index": {
     "modified": "2019-03-23T22:32:47.571Z",
     "contributors": [
       "javichito"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index": {
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index": {
+    "modified": "2019-03-18T20:42:17.583Z",
+    "contributors": [
+      "ChipTime",
+      "javichito"
+    ]
+  },
+  "Web/CSS/CSS_positioned_layout/Using_z-index": {
     "modified": "2019-03-23T22:32:38.884Z",
     "contributors": [
       "javichito"
@@ -18227,13 +18234,6 @@
     "modified": "2019-03-23T23:25:28.102Z",
     "contributors": [
       "osvaldobaeza"
-    ]
-  },
-  "Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video": {
-    "modified": "2019-03-23T22:46:14.015Z",
-    "contributors": [
-      "AzazelN28",
-      "vltamara"
     ]
   },
   "Web/Performance": {
