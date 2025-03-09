@@ -279,7 +279,7 @@ Firefox DevTools の HTML インスペクターではテキストノードを強
 
 この問題を回避する方法は何通りかあります。
 
-水平方向の項目のリストを生成するのに、 `inline-block` による解決法よりも[フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)を使用します。これは、あなたに代わってすべてを処理するもので、間違いなく望ましい解決策です。
+水平方向の項目のリストを生成するのに、 `inline-block` による解決法よりも[フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)を使用します。これは、あなたに代わってすべてを処理するもので、間違いなく望ましい解決策です。
 
 ```css
 ul {
