@@ -38,10 +38,10 @@ toSorted(compareFn)
 ### Сортировка элементов массива
 
 ```js
-const months = ["Mar", "Jan", "Feb", "Dec"];
+const months = ["Мар", "Янв", "Фев", "Дек"];
 const sortedMonths = months.toSorted();
-console.log(sortedMonths); // ['Dec', 'Feb', 'Jan', 'Mar']
-console.log(months); // ['Mar', 'Jan', 'Feb', 'Dec']
+console.log(sortedMonths); // ["Дек", "Мар", "Фев", "Янв"]
+console.log(months); // ["Мар", "Янв", "Фев", "Дек"]
 
 const values = [1, 10, 21, 2];
 const sortedValues = values.toSorted((a, b) => a - b);
