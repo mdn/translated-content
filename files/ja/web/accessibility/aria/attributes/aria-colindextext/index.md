@@ -11,7 +11,7 @@ l10n:
 
 ## 解説
 
-非常に大きい表の場合、または意図的に表の一部だけを表示したい場合、全ての列がDOMに存在しない場合があります。
+非常に大きい表の場合、または意図的に表の一部だけを表示したい場合、全ての列が DOM に存在しない場合があります。
 このような場合は、整数値の [`aria-colcount`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) 属性を使用して、全ての列が存在する場合に表（またはグリッド）に含まれる列の数を定義し、各列に [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) 属性を追加して、全ての列が表示されている場合の表内の列インデックスに関する情報を提供します。
 
 次の HTML スニペットでは、表に 8 つの列がありますが、表示されているのは 4 つだけです。 "City" 列は、`aria-colindex="5"` で定義されているように、大きな表の 5 番目の列です。
