@@ -2,7 +2,7 @@
 title: 411 Length Required
 slug: Web/HTTP/Status/411
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
 ---
 
 {{HTTPSidebar}}
@@ -18,11 +18,11 @@ HTTP **`411 Length Required`** [用戶錯誤回應](/zh-TW/docs/Web/HTTP/Status#
 411 Length Required
 ```
 
-## Examples
+## 範例
 
-### Chunked POST request
+### 分塊的 POST 請求
 
-The following request is sent chunked, which is the default method of sending data in some cases, such as when [writing to streams](https://nodejs.org/api/http.html#requestwritechunk-encoding-callback):
+以下請求使用分塊傳輸，這在某些情況下是預設的數據傳輸方式（例如[寫入串流](https://nodejs.org/api/http.html#requestwritechunk-encoding-callback)）：
 
 ```http
 POST /translate/de HTTP/1.1
@@ -35,7 +35,7 @@ Transfer-encoding: chunked
 0
 ```
 
-In this case, the server is expecting a request in one part with a {{HTTPHeader("Content-Length")}} header and returns a 411 response:
+在這種情況下，伺服器期望請求包含 {{HTTPHeader("Content-Length")}} 標頭，否則將返回 411 回應：
 
 ```http
 HTTP/1.1 411 Length Required
@@ -43,7 +43,7 @@ Content-Type: application/json
 Content-Length: 110
 
 {
-  "message": "Requests must have a content length header.",
+  "message": "請求必須包含 Content Length 標頭。",
   "documentation": "http://api/example.com/docs/errors",
 }
 ```
