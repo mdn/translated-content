@@ -156,8 +156,7 @@ function storeNewPeriod(startDate, endDate) {
 }
 
 function getAllStoredPeriods() {
-  // ロカルストレージから期間データの文字列を取得
-する
+  // ローカルストレージから期間データの文字列を取得する
   const data = window.localStorage.getItem(STORAGE_KEY);
 
   // もし何も格納されていなければ、空の配列を返す。
