@@ -3657,13 +3657,13 @@
       "teoli"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques": {
+  "Web/Accessibility/ARIA/Guides/Techniques": {
     "modified": "2019-03-18T21:39:54.388Z",
     "contributors": [
       "oooooo"
     ]
   },
-  "Web/Accessibility/Mobile_accessibility_checklist": {
+  "Web/Accessibility/Guides/Mobile_accessibility_checklist": {
     "modified": "2019-03-18T21:32:14.782Z",
     "contributors": [
       "li-liam"
@@ -3837,7 +3837,7 @@
       "foxbrush"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1": {
+  "Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1": {
     "modified": "2019-03-23T22:55:03.379Z",
     "contributors": [
       "jackblackevo",
@@ -4574,46 +4574,6 @@
       "kourge"
     ]
   },
-  "Web/JavaScript/Closures": {
-    "modified": "2020-08-07T04:58:02.421Z",
-    "contributors": [
-      "vincent7293",
-      "shuboc",
-      "iigmir",
-      "roycrxtw",
-      "BigHeadDoggy",
-      "flyinglimao"
-    ]
-  },
-  "Web/JavaScript/Data_structures": {
-    "modified": "2020-08-01T13:14:09.974Z",
-    "contributors": [
-      "nannxnann",
-      "samzzz",
-      "iigmir",
-      "jackblackevo",
-      "eldisa"
-    ]
-  },
-  "Web/JavaScript/Equality_comparisons_and_sameness": {
-    "modified": "2020-03-12T19:44:59.221Z",
-    "contributors": [
-      "jsgao0",
-      "flyinglimao"
-    ]
-  },
-  "Web/JavaScript/Event_loop": {
-    "modified": "2020-03-12T19:44:52.158Z",
-    "contributors": [
-      "xuan0123",
-      "jackblackevo",
-      "roycrxtw",
-      "YuCheng",
-      "Snailpool",
-      "flyinglimao",
-      "enzoyaaaaa"
-    ]
-  },
   "Web/JavaScript/Guide": {
     "modified": "2020-10-12T05:01:38.453Z",
     "contributors": [
@@ -4626,6 +4586,17 @@
       "sycheng"
     ]
   },
+  "Web/JavaScript/Guide/Closures": {
+    "modified": "2020-08-07T04:58:02.421Z",
+    "contributors": [
+      "vincent7293",
+      "shuboc",
+      "iigmir",
+      "roycrxtw",
+      "BigHeadDoggy",
+      "flyinglimao"
+    ]
+  },
   "Web/JavaScript/Guide/Control_flow_and_error_handling": {
     "modified": "2020-03-12T19:44:28.801Z",
     "contributors": [
@@ -4636,6 +4607,23 @@
       "Yuki0916",
       "jwhitlock",
       "Kaiyeh"
+    ]
+  },
+  "Web/JavaScript/Guide/Data_structures": {
+    "modified": "2020-08-01T13:14:09.974Z",
+    "contributors": [
+      "nannxnann",
+      "samzzz",
+      "iigmir",
+      "jackblackevo",
+      "eldisa"
+    ]
+  },
+  "Web/JavaScript/Guide/Equality_comparisons_and_sameness": {
+    "modified": "2020-03-12T19:44:59.221Z",
+    "contributors": [
+      "jsgao0",
+      "flyinglimao"
     ]
   },
   "Web/JavaScript/Guide/Expressions_and_operators": {
@@ -4682,6 +4670,19 @@
       "titan.liu"
     ]
   },
+  "Web/JavaScript/Guide/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-11-20T06:14:21.309Z",
+    "contributors": [
+      "tpps88206",
+      "pmc12thsuki",
+      "osk2",
+      "jackblackevo",
+      "iigmir",
+      "WellyHong",
+      "hiiamyes",
+      "Snailpool"
+    ]
+  },
   "Web/JavaScript/Guide/Introduction": {
     "modified": "2020-03-12T19:35:21.304Z",
     "contributors": [
@@ -4696,12 +4697,41 @@
       "sycheng"
     ]
   },
+  "Web/JavaScript/Guide/Language_overview": {
+    "modified": "2020-03-12T19:36:04.881Z",
+    "contributors": [
+      "kourge",
+      "locker_rj45",
+      "Q3Q",
+      "weihanglo",
+      "teoli",
+      "jackblackevo",
+      "TpWILovePanda",
+      "changyuheng",
+      "ArvinH",
+      "sailplaneTW",
+      "linhomeyeu",
+      "fillano",
+      "fscholz",
+      "Mgjbot",
+      "Smallwow",
+      "BobChao"
+    ]
+  },
   "Web/JavaScript/Guide/Loops_and_iteration": {
     "modified": "2020-03-12T19:44:25.077Z",
     "contributors": [
       "MartinChang0723",
       "jackblackevo",
       "AmamiyaLee"
+    ]
+  },
+  "Web/JavaScript/Guide/Memory_management": {
+    "modified": "2020-12-04T15:05:56.547Z",
+    "contributors": [
+      "chengr4",
+      "ballfish",
+      "mybaseball52"
     ]
   },
   "Web/JavaScript/Guide/Numbers_and_strings": {
@@ -4747,57 +4777,6 @@
     "contributors": [
       "HamiltonWang",
       "flyinglimao"
-    ]
-  },
-  "Web/JavaScript/Inheritance_and_the_prototype_chain": {
-    "modified": "2020-11-20T06:14:21.309Z",
-    "contributors": [
-      "tpps88206",
-      "pmc12thsuki",
-      "osk2",
-      "jackblackevo",
-      "iigmir",
-      "WellyHong",
-      "hiiamyes",
-      "Snailpool"
-    ]
-  },
-  "Web/JavaScript/JavaScript_technologies_overview": {
-    "modified": "2020-03-12T19:35:23.439Z",
-    "contributors": [
-      "jackblackevo",
-      "fscholz",
-      "irvinfly",
-      "chiayuan"
-    ]
-  },
-  "Web/JavaScript/Language_overview": {
-    "modified": "2020-03-12T19:36:04.881Z",
-    "contributors": [
-      "kourge",
-      "locker_rj45",
-      "Q3Q",
-      "weihanglo",
-      "teoli",
-      "jackblackevo",
-      "TpWILovePanda",
-      "changyuheng",
-      "ArvinH",
-      "sailplaneTW",
-      "linhomeyeu",
-      "fillano",
-      "fscholz",
-      "Mgjbot",
-      "Smallwow",
-      "BobChao"
-    ]
-  },
-  "Web/JavaScript/Memory_management": {
-    "modified": "2020-12-04T15:05:56.547Z",
-    "contributors": [
-      "chengr4",
-      "ballfish",
-      "mybaseball52"
     ]
   },
   "Web/JavaScript/Reference": {
@@ -4906,6 +4885,18 @@
       "andytwmvp",
       "iigmir",
       "kimi1111"
+    ]
+  },
+  "Web/JavaScript/Reference/Execution_model": {
+    "modified": "2020-03-12T19:44:52.158Z",
+    "contributors": [
+      "xuan0123",
+      "jackblackevo",
+      "roycrxtw",
+      "YuCheng",
+      "Snailpool",
+      "flyinglimao",
+      "enzoyaaaaa"
     ]
   },
   "Web/JavaScript/Reference/Functions/Arrow_functions": {
@@ -5628,6 +5619,15 @@
       "nyngwang"
     ]
   },
+  "Web/JavaScript/Reference/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:35:23.439Z",
+    "contributors": [
+      "jackblackevo",
+      "fscholz",
+      "irvinfly",
+      "chiayuan"
+    ]
+  },
   "Web/JavaScript/Reference/Lexical_grammar": {
     "modified": "2020-10-15T22:00:27.351Z",
     "contributors": [
@@ -5651,7 +5651,7 @@
       "liaocCM"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Destructuring_assignment": {
+  "Web/JavaScript/Reference/Operators/Destructuring": {
     "modified": "2020-10-15T21:51:08.444Z",
     "contributors": [
       "DexterLeung",

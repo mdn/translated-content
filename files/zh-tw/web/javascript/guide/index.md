@@ -80,26 +80,26 @@ JavaScript 指南會讓你了解如何使用 [JavaScript](/zh-TW/docs/Web/JavaSc
 
 ## 數字與日期
 
-概述：[數字與日期](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates)
+概述：[數字與日期](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings)
 
-- [數字書寫法](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates#numbers)
-- [`Number` 物件](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates#number_object)
-- [`Math` 物件](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates#math_object)
-- [`Date` 物件](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates#date_object)
+- [數字書寫法](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings#numbers)
+- [`Number` 物件](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings#number_object)
+- [`Math` 物件](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings#math_object)
+- [`Date` 物件](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings#date_object)
 
 ## 文字格式
 
-概述：[文字格式](/zh-TW/docs/Web/JavaScript/Guide/Text_formatting)
+概述：[文字格式](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings)
 
-- [字串書寫法](/zh-TW/docs/Web/JavaScript/Guide/Text_formatting#String_literals)
-- [`String` 物件](/zh-TW/docs/Web/JavaScript/Guide/Text_formatting#String_objects)
-- [模板書寫法](/zh-TW/docs/Web/JavaScript/Guide/Text_formatting#Multi-line_template_literals)
-- [國際化](/zh-TW/docs/Web/JavaScript/Guide/Text_formatting#Internationalization)
+- [字串書寫法](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings#String_literals)
+- [`String` 物件](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings#String_objects)
+- [模板書寫法](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings#Multi-line_template_literals)
+- [國際化](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings#Internationalization)
 - [正規表示法](/zh-TW/docs/Web/JavaScript/Guide/Regular_expressions)
 
 ## 具索引的集合
 
-概述：[文字格式](/zh-TW/docs/Web/JavaScript/Guide/Text_formatting)
+概述：[文字格式](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings)
 
 - [陣列](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#Array_object)
 - [型態化陣列](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#Typed_Arrays)
@@ -124,11 +124,11 @@ JavaScript 指南會讓你了解如何使用 [JavaScript](/zh-TW/docs/Web/JavaSc
 
 ## 深入了解物件模型
 
-概述：[深入了解物件模型](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+概述：[深入了解物件模型](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 
-- [以原形（Prototype）為基礎的 OOP](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#class-based_vs._prototype-based_languages)
-- [建立物件層級](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#creating_the_hierarchy)
-- [繼承](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#property_inheritance_revisited)
+- [以原形（Prototype）為基礎的 OOP](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#class-based_vs._prototype-based_languages)
+- [建立物件層級](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#creating_the_hierarchy)
+- [繼承](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#property_inheritance_revisited)
 
 ## 迭代器與產生器
 

@@ -1,7 +1,6 @@
 ---
 title: UI 伪类
 slug: Learn_web_development/Extensions/Forms/UI_pseudo-classes
-original_slug: Learn/Forms/UI_pseudo-classes
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}

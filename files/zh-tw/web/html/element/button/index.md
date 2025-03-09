@@ -175,7 +175,7 @@ slug: Web/HTML/Element/button
 如果要在視覺上隱藏按鈕的文本，可以使用[一系列 CSS 屬性](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link)將其從螢幕上去除，但保持輔助技術可解析。然而，值得注意的是，保留按鈕文本的視覺呈現有助於可能不熟悉圖標含義或不了解按鈕目的的人群。對於技術不熟悉的人，或者對按鈕使用的圖標具有不同文化解釋的人來說，這尤其重要。
 
 - [什麼是可訪問名稱？| The Paciello Group](https://www.tpgi.com/what-is-an-accessible-name/)
-- [MDN 理解 WCAG，指南 4.1 解釋](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Robust#guideline_4.1_—_compatible_maximize_compatibility_with_current_and_future_user_agents_including_assistive_technologies)
+- [MDN 理解 WCAG，指南 4.1 解釋](/zh-TW/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust#guideline_4.1_—_compatible_maximize_compatibility_with_current_and_future_user_agents_including_assistive_technologies)
 - [理解成功標準 4.1.2 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
 
 ### 尺寸和接近性
@@ -198,7 +198,7 @@ slug: Web/HTML/Element/button
 
 ### ARIA 狀態資訊
 
-要描述按鈕的狀態，正確使用的 ARIA 屬性是 [`aria-pressed`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)，而不是 [`aria-checked`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-checked) 或 [`aria-selected`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-selected)。要了解更多信息，請閱讀有關 [ARIA 按鈕角色](/zh-TW/docs/Web/Accessibility/ARIA/Roles/button_role) 的信息。
+要描述按鈕的狀態，正確使用的 ARIA 屬性是 [`aria-pressed`](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed)，而不是 [`aria-checked`](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) 或 [`aria-selected`](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)。要了解更多信息，請閱讀有關 [ARIA 按鈕角色](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/button_role) 的信息。
 
 ### Firefox
 
@@ -209,7 +209,7 @@ Firefox 會在焦點位於按鈕上時添加一個小虛點邊框。這個邊框
 顏色對比度是通過比較按鈕文本和背景顏色值相對於按鈕放置在其上的背景的亮度來確定的。為了滿足當前的 [網頁內容無障礙性指南（WCAG）](https://www.w3.org/WAI/standards-guidelines/wcag/)，文本內容需要達到 4.5:1 的比率，大文本則需要 3:1。 （大文本被定義為 18.66px 和 {{cssxref("font-weight", "bold")}} 或更大，或者 24px 或更大。）
 
 - [WebAIM: 顏色對比度檢查器](https://webaim.org/resources/contrastchecker/)
-- [MDN 了解 WCAG，指南 1.4 說明](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN 了解 WCAG，指南 1.4 說明](/zh-TW/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [了解成功標準 1.4.3 | W3C 了解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ### 點擊和焦點
@@ -274,7 +274,7 @@ Firefox 會在焦點位於按鈕上時添加一個小虛點邊框。這個邊框
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/button_role"
+          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"
             >button</a
           ></code
         >
@@ -283,7 +283,7 @@ Firefox 會在焦點位於按鈕上時添加一個小虛點邊框。這個邊框
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"><code>checkbox</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role"><code>switch</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a>
       </td>
     </tr>
     <tr>

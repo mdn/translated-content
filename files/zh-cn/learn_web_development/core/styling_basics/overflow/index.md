@@ -1,7 +1,6 @@
 ---
 title: 溢出的内容
 slug: Learn_web_development/Core/Styling_basics/Overflow
-original_slug: Learn/CSS/Building_blocks/Overflowing_content
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}

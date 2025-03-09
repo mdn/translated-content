@@ -186,14 +186,14 @@ label {
     <tr>
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
-        <code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/form_role">form</a></code>
+        <code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/form_role">form</a></code>
       </td>
     </tr>
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
       <td>
-        <code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code>、
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a> 或 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+        <code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/search_role">search</a></code>、
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a> 或 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -216,5 +216,5 @@ label {
 - [HTML 表單指南](/zh-TW/docs/Learn_web_development/Extensions/Forms)
 - 在創建表單時使用的其他元素：{{HTMLElement("button")}}、{{HTMLElement("datalist")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("input")}}、{{HTMLElement("label")}}、{{HTMLElement("legend")}}、{{HTMLElement("meter")}}、{{HTMLElement("optgroup")}}、{{HTMLElement("option")}}、{{HTMLElement("output")}}、{{HTMLElement("progress")}}、{{HTMLElement("select")}}、{{HTMLElement("textarea")}}。
 - 獲取表單中元素的列表：{{domxref("HTMLFormElement.elements")}}
-- [ARIA：表單角色](/zh-TW/docs/Web/Accessibility/ARIA/Roles/form_role)
-- [ARIA：搜索角色](/zh-TW/docs/Web/Accessibility/ARIA/Roles/search_role)
+- [ARIA：表單角色](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/form_role)
+- [ARIA：搜索角色](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)

@@ -1,7 +1,6 @@
 ---
 title: Web 性能的重要性
 slug: Learn_web_development/Extensions/Performance/why_web_performance
-original_slug: Learn/Performance/why_web_performance
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance")}}

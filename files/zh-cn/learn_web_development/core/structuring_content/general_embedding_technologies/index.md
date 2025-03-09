@@ -1,7 +1,6 @@
 ---
 title: 从 object 到 iframe——其他嵌入技术
 slug: Learn_web_development/Core/Structuring_content/General_embedding_technologies
-original_slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 l10n:
   sourceCommit: be3f184d89979d413204b8f9cbecfc8dd0e5ecf9
 ---

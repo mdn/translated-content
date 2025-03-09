@@ -1,7 +1,6 @@
 ---
 title: 使用 Vue event、method 和 model 添加一个新的 todo 表单
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists","Learn_web_development/Core/Frameworks_libraries/Vue_styling", "Learn_web_development/Core/Frameworks_libraries")}}

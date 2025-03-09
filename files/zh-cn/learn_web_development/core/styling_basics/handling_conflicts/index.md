@@ -1,7 +1,6 @@
 ---
 title: 层叠、优先级与继承
 slug: Learn_web_development/Core/Styling_basics/Handling_conflicts
-original_slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics")}}

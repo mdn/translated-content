@@ -1,7 +1,6 @@
 ---
 title: 高级区块效果
 slug: Learn_web_development/Core/Styling_basics/Advanced_styling_effects
-original_slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 ---
 
 {{LearnSidebar}}

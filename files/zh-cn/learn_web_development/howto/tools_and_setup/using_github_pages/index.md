@@ -1,7 +1,6 @@
 ---
 title: 应该如何使用 Github Pages?
 slug: Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages
-original_slug: Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
 l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
