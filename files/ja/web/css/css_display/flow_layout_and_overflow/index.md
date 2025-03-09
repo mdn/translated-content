@@ -166,8 +166,7 @@ body {
 
 すでに学んだように、 `visible` という既定値以外のいずれかの値を使用すると、新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)が作成されます。
 
-> [!NOTE]
-> [オーバーフローレベル 3](https://www.w3.org/TR/css-overflow-3/) の草案では、 `overflow: clip` という追加の値があります。これは `overflow: hidden` のような動作をしますが、プログラムによるスクロールは許可されず、ボックスはスクロール不可能になります。さらに、ブロック整形コンテキストも作成されません。
+> **メモ:** [オーバーフローレベル 3](https://www.w3.org/TR/css-overflow-3/) の草案では、 `overflow: clip` という追加の値があります。これは `overflow: hidden` のような動作をしますが、プログラムによるスクロールは許可されず、ボックスはスクロール不可能になります。さらに、ブロック整形コンテキストも作成されません。
 
 `overflow` プロパティは、実際には [`overflow-x`](/ja/docs/Web/CSS/overflow-x) および [`overflow-y`](/ja/docs/Web/CSS/overflow-y) プロパティの一括指定です。 overflow に 1 つの値のみを指定した場合、この値は両方の軸に使用されます。しかし、どちらの値も指定することができます。その場合、最初の値は `overflow-x` （つまり水平方向）に使用され、 2 番目の値は `overflow-y` （つまり垂直方向）に使用されます。例えば、下記では `overflow-y: scroll` のみを指定しています。そのため、不要な水平スクロールバーは表示されません。
 
