@@ -2,7 +2,7 @@
 title: CookieStore：delete() 方法
 slug: Web/API/CookieStore/delete
 l10n:
-  sourceCommit: 01e7af5aeee7833c129ddfa41eb719b123a8cdcc
+  sourceCommit: 775df1c62a1cbe555c4374ff9122d4ef15bd6f60
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
@@ -54,7 +54,7 @@ delete(options)
 在此示例中，通过将 cookie 名称传递给 `delete()` 方法来删除 cookie。
 
 ```js
-const result = cookieStore.delete("cookie1");
+const result = await cookieStore.delete("cookie1");
 
 console.log(result);
 ```
