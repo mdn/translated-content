@@ -13,7 +13,7 @@ slug: Web/CSS/perspective
 
 默认情况下，*消失点*位于元素的中心，但是可以通过设置 {{cssxref("perspective-origin")}} 属性来改变其位置。
 
-当该属性值不为 `0` 和 `none` 时，会创建新的 [层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)。在这种情况下，容器内元素的层叠关系像是使用了 `position: fixed` 一样。
+当该属性值不为 `0` 和 `none` 时，会创建新的 [层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。在这种情况下，容器内元素的层叠关系像是使用了 `position: fixed` 一样。
 
 ## 语法
 

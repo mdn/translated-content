@@ -17,7 +17,7 @@ slug: Web/HTML/Element/search
 
 ## 可訪問性注意事項
 
-`<search>` 元素定義了一個[搜索](/zh-TW/docs/Web/Accessibility/ARIA/Roles/search_role)標誌。這消除了向 {{HTMLElement('form')}} 元素添加 `role=search` 的需要。
+`<search>` 元素定義了一個[搜索](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)標誌。這消除了向 {{HTMLElement('form')}} 元素添加 `role=search` 的需要。
 
 ## 範例
 
@@ -134,13 +134,13 @@ slug: Web/HTML/Element/search
     <tr>
       <th scope="row">隱含 ARIA 角色</th>
       <td>
-        <code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code>
+        <code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/search_role">search</a></code>
       </td>
     </tr>
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/form_role"><code>form</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/region_role"><code>region</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/search_role"><code>search</code></a>
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/form_role"><code>form</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/region_role"><code>region</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/search_role"><code>search</code></a>
       </td>
     </tr>
     <tr>
@@ -161,4 +161,4 @@ slug: Web/HTML/Element/search
 ## 參閱
 
 - 其他與搜尋相關的元素：{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("aside")}}、{{HTMLElement("nav")}}、{{HTMLElement("form")}}
-- [ARIA：Search 角色](/zh-TW/docs/Web/Accessibility/ARIA/Roles/search_role)
+- [ARIA：Search 角色](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)

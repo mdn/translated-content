@@ -1,7 +1,6 @@
 ---
 title: worker 简介
 slug: Learn_web_development/Extensions/Async_JS/Introducing_workers
-original_slug: Learn/JavaScript/Asynchronous/Introducing_workers
 ---
 
 {{LearnSidebar}}

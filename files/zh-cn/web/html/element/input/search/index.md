@@ -228,7 +228,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 但是，这可能会使屏幕阅读器用户感到困惑，因为它们不会对搜索输入内容有任何口头指示。解决此问题而不会影响你的视觉设计的一种方法是使用 [WAI-ARIA](/zh-CN/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) 功能：
 
 - `<form>` 元素上， `search` 值的 `role` 属性向屏幕阅读器用户声明该表单是搜索表单。
-- 还可以在 {{HTMLElement("input")}} 本身使用 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性。这应该是一个描述性的文本标签，屏幕阅读器会读出该标签；它用作 `<label>` 的非可视等效项。
+- 还可以在 {{HTMLElement("input")}} 本身使用 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性。这应该是一个描述性的文本标签，屏幕阅读器会读出该标签；它用作 `<label>` 的非可视等效项。
 
 让我们看一个例子：
 

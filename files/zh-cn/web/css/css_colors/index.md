@@ -84,9 +84,9 @@ l10n:
   - : 色彩理论及资源，包括找到合适的颜色以创建无障碍的调色板、对比度以及彩色打印。
 - [使用相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors)
   - : 本文解释了相对 CSS 颜色语法，展示了不同的选项，并给出了一些说明性的示例。
-- [理解颜色和亮度](/zh-CN/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
+- [理解颜色和亮度](/zh-CN/docs/Web/Accessibility/Guides/Colors_and_Luminance)
   - : 色彩感知以及考虑到色弱（色盲）用户、视力减退用户以及患有前庭障碍或其他神经障碍的用户如何使用色彩。
-- [WCAG 1.4.1：颜色对比度](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
+- [WCAG 1.4.1：颜色对比度](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
   - : 解释背景与前景内容之间的对比度要求，以确保可读性。
 
 ## 相关概念

@@ -7,7 +7,7 @@ l10n:
 
 {{JsSidebar("Classes")}}
 
-类是用于创建对象的模板。它们用代码封装数据以对其进行处理。JS 中的类建立在[原型](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)之上，同时还具有一些类独有的语法和语义。
+类是用于创建对象的模板。它们用代码封装数据以对其进行处理。JS 中的类建立在[原型](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)之上，同时还具有一些类独有的语法和语义。
 
 更多的示例和释义，参见[使用类](/zh-CN/docs/Web/JavaScript/Guide/Using_classes)教程。
 

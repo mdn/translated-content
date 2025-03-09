@@ -41,7 +41,7 @@ PWA 清单文件是一个 JSON 文件，它提供了关于该应用程序的特�
 当 `name` 和 `short_name` 都存在时，大多数情况下都会使用 `name`，在显示应用程序名称的空间有限时使用 `short_name`。
 
 - [`description`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/description)
-  - : 说明应用程序的功能。它提供了一个关于应用程序目的和功能的[无障碍描述](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-description)。
+  - : 说明应用程序的功能。它提供了一个关于应用程序目的和功能的[无障碍描述](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description)。
 
 ### 任务
 

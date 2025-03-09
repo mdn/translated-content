@@ -113,7 +113,7 @@ background-size: 25% 25%;
 
 浏览器不向辅助技术提供任何关于背景图像的特殊信息。这主要对屏幕阅读器来说很重要，因为屏幕阅读器不会宣布其存在，因此不会向用户传达任何信息。虽然可以创建饼图、棋盘和其他带有圆锥梯度的效果，但 CSS 图像不提供指定替代文本的原生方式，因此屏幕阅读器用户无法访问由锥形渐变表示的图像。如果图像包含对理解页面的总体用途至关重要的信息，那么最好在文档中对其进行语义描述。
 
-- [MDN 理解 WCAG，指南 1.1 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [MDN 理解 WCAG，指南 1.1 解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [理解成功标准 1.1.1 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## 示例

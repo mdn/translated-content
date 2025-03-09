@@ -1,7 +1,6 @@
 ---
 title: 运用你的新知识
 slug: Learn_web_development/Core/Styling_basics/Styling_a_bio_page
-original_slug: Learn/CSS/First_steps/Styling_a_biography_page
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}

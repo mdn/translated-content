@@ -1,7 +1,6 @@
 ---
 title: 使用 CSS 为 Vue 组件添加样式
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_styling
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models","Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties", "Learn_web_development/Core/Frameworks_libraries")}}

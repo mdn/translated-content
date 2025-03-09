@@ -171,7 +171,7 @@ if (httpRequest.status === 200) {
 > 如果我們沒有設定 header `Cache-Control: no-cache`，那瀏覽器將會藏匿 response 並且不再重新傳送 request，造成除錯上的挑戰。我們也可以增加一個 always-different GET 參數，像是 timestamp 或 random number（詳見[避開快取](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#避開快取)）
 
 > [!NOTE]
-> If the `httpRequest` variable is used globally, competing functions calling `makeRequest()` can overwrite each other, causing a race condition. Declaring the `httpRequest` variable local to a [closure](/zh-TW/docs/Web/JavaScript/Closures) containing the AJAX functions avoids this.
+> If the `httpRequest` variable is used globally, competing functions calling `makeRequest()` can overwrite each other, causing a race condition. Declaring the `httpRequest` variable local to a [closure](/zh-TW/docs/Web/JavaScript/Guide/Closures) containing the AJAX functions avoids this.
 
 In the event of a communication error (such as the server going down), an exception will be thrown in the `onreadystatechange` method when accessing the response status. To mitigate this problem, you could wrap your `if...then` statement in a `try...catch`:
 

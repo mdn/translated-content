@@ -1,7 +1,6 @@
 ---
 title: “头”里有什么——HTML 元信息
 slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
-original_slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content")}}

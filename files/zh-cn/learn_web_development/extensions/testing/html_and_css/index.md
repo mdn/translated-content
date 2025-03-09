@@ -1,7 +1,6 @@
 ---
 title: 处理常见的 HTML 和 CSS 问题
 slug: Learn_web_development/Extensions/Testing/HTML_and_CSS
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 l10n:
   sourceCommit: 56fc816a9fb8e96a6b69cd19be03f62b582c06ae
 ---

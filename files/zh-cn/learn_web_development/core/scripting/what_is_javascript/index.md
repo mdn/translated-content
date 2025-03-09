@@ -1,7 +1,6 @@
 ---
 title: 什么是 JavaScript？
 slug: Learn_web_development/Core/Scripting/What_is_JavaScript
-original_slug: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}

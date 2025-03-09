@@ -61,7 +61,7 @@ text-align: unset;
 
 对于有阅读障碍等认知问题的人来说，对齐的文本产生的单词之间的间距不一致可能会出现问题。
 
-- [MDN 了解 WCAG，准则 1.4 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN 了解 WCAG，准则 1.4 解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [理解成功标准 1.4.8 | 了解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## 形式定义

@@ -27,7 +27,7 @@ Chrome:
 
 - {{jsxref("Functions/Default_parameters", "默认参数", "", 1)}}
 - {{jsxref("Functions/rest_parameters", "剩余参数", "", 1)}}
-- {{jsxref("Operators/Destructuring_assignment", "解构赋值", "", 1)}}
+- {{jsxref("Operators/Destructuring", "解构", "", 1)}}
 
 根据 ECMAScript 规范，不允许在这些函数的顶部使用“use strict”指令。
 

@@ -136,7 +136,7 @@ while (i <= 3) {
 
 ### 初始化块中的词法声明
 
-在初始化块中声明变量与在上层[作用域](/zh-CN/docs/Glossary/Scope)中声明它有着重要的区别，尤其是在循环体中创建[闭包](/zh-CN/docs/Web/JavaScript/Closures)时。例如，对于以下代码：
+在初始化块中声明变量与在上层[作用域](/zh-CN/docs/Glossary/Scope)中声明它有着重要的区别，尤其是在循环体中创建[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)时。例如，对于以下代码：
 
 ```js
 for (let i = 0; i < 3; i++) {

@@ -46,14 +46,14 @@ slug: Web/HTML/Element/dialog
     <tr>
       <th scope="row">隐式 ARIA 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/dialog_role"
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role"
           >dialog</a
         >
       </td>
     </tr>
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
-      <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/alertdialog_role"><code>alertdialog</code></a></td>
+      <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role"><code>alertdialog</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 接口</th>
@@ -79,7 +79,7 @@ slug: Web/HTML/Element/dialog
 
 确保给予用户关闭对话框的机制。最有力的方法是给用户提供一个明确的按钮，如确认、取消或关闭按钮。此外，对于那些使用键盘设备的人来说，<kbd>Escape</kbd> 键通常也会用来关闭模态对话框。默认情况下，一个由 `showModal()` 方法调用的 `<dialog>` 将允许其被 <kbd>Escape</kbd> 关闭。非模态对话框默认不会通过 <kbd>Escape</kbd> 键来关闭，而且根据非模态对话框所代表的内容，它可能不希望有这种行为。如果打开了多个模态对话框，<kbd>Escape</kbd> 只应该关闭最后一个可见对话框。
 
-浏览器使用 ARIA [role="dialog"](/zh-CN/docs/Web/Accessibility/ARIA/Roles/dialog_role) 属性对 `<dialog>` 元素进行了类似于自定义对话框的暴露。由 `showModal()` 方法调用的 `<dialog>` 元素将有一个隐含的 [aria-modal="true"](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-modal)。而由 `show()` 方法调用的 `<dialog>` 元素，或通过使用 `open` 属性，或改变 `<dialog>` 的默认 `display` 而呈现的，将被暴露为 `[aria-modal="false"]`。建议使用适当的 `showModal()` 或 `show()` 方法来渲染对话框。
+浏览器使用 ARIA [role="dialog"](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role) 属性对 `<dialog>` 元素进行了类似于自定义对话框的暴露。由 `showModal()` 方法调用的 `<dialog>` 元素将有一个隐含的 [aria-modal="true"](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)。而由 `show()` 方法调用的 `<dialog>` 元素，或通过使用 `open` 属性，或改变 `<dialog>` 的默认 `display` 而呈现的，将被暴露为 `[aria-modal="false"]`。建议使用适当的 `showModal()` 或 `show()` 方法来渲染对话框。
 
 确保你的对话框实现不会破坏预期的默认行为，并遵循正确的标签建议。
 

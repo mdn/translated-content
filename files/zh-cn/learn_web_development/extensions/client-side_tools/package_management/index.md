@@ -1,7 +1,6 @@
 ---
 title: 软件包管理基础
 slug: Learn_web_development/Extensions/Client-side_tools/Package_management
-original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Package_management
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Overview","Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain", "Learn_web_development/Extensions/Client-side_tools")}}
