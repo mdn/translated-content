@@ -7,14 +7,14 @@ l10n:
 
 {{ APIRef("Web Crypto API") }}
 
-当使用 [AES-CBC](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-cbc) 算法时，[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`AesCbcParams`** 字典表示应作为 `algorithm` 参数传递给 {{domxref("SubtleCrypto.encrypt()")}}、{{domxref("SubtleCrypto.decrypt()")}}、{{domxref("SubtleCrypto.wrapKey()")}} 或 {{domxref("SubtleCrypto.unwrapKey()")}} 的对象。
+[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`AesCbcParams`** 字典表示当使用 [AES-CBC](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-cbc) 算法时，应作为 `algorithm` 参数传递给 {{domxref("SubtleCrypto.encrypt()")}}、{{domxref("SubtleCrypto.decrypt()")}}、{{domxref("SubtleCrypto.wrapKey()")}} 或 {{domxref("SubtleCrypto.unwrapKey()")}} 的对象。
 
 ## 实例属性
 
 - `name`
   - : 一个字符串，应设置为 `AES-CBC`。
 - `iv`
-  - : 一个 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}}。初始化向量，必须为 16 字节长，不可预测，且最好具有密码学上的随机性。然而它无需保密（例如，可以与密文一起未加密传输）。
+  - : 一个 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}}。初始化向量，必须为 16 字节长，不可预测，且最好具有密码学上的随机性。然而它无需保密（例如，可以在未加密的情况下与密文一起传输）。
 
 ## 示例
 

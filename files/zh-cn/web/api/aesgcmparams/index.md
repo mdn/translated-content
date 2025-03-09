@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("Web Crypto API") }}
 
-当使用 [AES-GCM](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-gcm) 算法时，[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`AesGcmParams`** 字典表示应作为 `algorithm` 参数传递给 {{domxref("SubtleCrypto.encrypt()")}}、{{domxref("SubtleCrypto.decrypt()")}}、{{domxref("SubtleCrypto.wrapKey()")}} 或 {{domxref("SubtleCrypto.unwrapKey()")}} 的对象。
+[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`AesGcmParams`** 字典表示当使用 [AES-GCM](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-gcm) 算法时，应作为 `algorithm` 参数传递给 {{domxref("SubtleCrypto.encrypt()")}}、{{domxref("SubtleCrypto.decrypt()")}}、{{domxref("SubtleCrypto.wrapKey()")}} 或 {{domxref("SubtleCrypto.unwrapKey()")}} 的对象。
 
 有关如何为此参数提供合适值的详细信息，请参阅 AES-GCM 规范：[NIST SP800-38D](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf)，特别是关于输入数据的 5.2.1.1 节。
 
@@ -17,7 +17,7 @@ l10n:
   - : 一个字符串，应设置为 `AES-GCM`。
 - `iv`
 
-  - : 一个 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}} 初始化向量。对于使用给定密钥执行的每次加密操作，此值必须是唯一的。换句话说：切勿使用相同的密钥重复使用 IV。AES-GCM 规范建议 IV 应为 96 位长，并且通常包含来自随机数生成器的位。[规范的第 8.2 节](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf#%5B%7B%22num%22%3A65%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C0%2C792%2Cnull%5D) 概述了构造 IV 的方法。请注意，IV 不需要保密，只需保持唯一性：因此，例如，可以将其与加密消息一起以明文形式传输。
+  - : 一个具有初始化向量的 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}}。对于使用给定密钥执行的每次加密操作，此值必须是唯一的。换句话说：切勿使用相同的密钥重复使用 IV。AES-GCM 规范建议 IV 应为 96 位长，并且通常包含来自随机数生成器的位。[规范的第 8.2 节](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf#%5B%7B%22num%22%3A65%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C0%2C792%2Cnull%5D)概述了构造 IV 的方法。请注意，IV 不需要保密，只需保持唯一性：因此，例如，可以将其与加密消息一起以明文形式传输。
 
 - `additionalData` {{optional_inline}}
 
