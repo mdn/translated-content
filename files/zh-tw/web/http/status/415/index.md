@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`415 Unsupported Media Type`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示伺服器拒絕接受請求，因為訊息的{{Glossary("HTTP Content", "內容")}}是不受支援的。
+HTTP **`415 Unsupported Media Type`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示伺服器拒絕接受請求，因為訊息的{{Glossary("HTTP Content", "內容")}}格式是不受支援的。
 
 格式問題可能是由於請求中指定的 {{HTTPHeader("Content-Type")}} 或 {{HTTPHeader("Content-Encoding")}}，或是處理請求訊息內容時導致的。有些伺服器對於請求的 `Content-Type` 可能有嚴格的要求。例如，使用 `UTF8` 而非 `UTF-8` 來指定 {{glossary("UTF-8")}} 字元編碼可能會導致伺服器認為媒體類型無效。
 
