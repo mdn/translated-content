@@ -7,7 +7,33 @@ slug: Web/CSS/filter-function/brightness
 
 **`brightness()`** [CSS](/ko/docs/Web/CSS) 함수는 주어진 이미지에 선형 계수를 적용해 더 밝거나 어둡게 만듭니다. 반환 값은 {{cssxref("&lt;filter-function&gt;")}}입니다.
 
-{{EmbedInteractiveExample("pages/css/function-brightness.html")}}
+{{InteractiveExample("CSS Demo: brightness()")}}
+
+```css interactive-example-choice
+filter: brightness(1);
+```
+
+```css interactive-example-choice
+filter: brightness(1.75);
+```
+
+```css interactive-example-choice
+filter: brightness(50%);
+```
+
+```css interactive-example-choice
+filter: brightness(0);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## 구문
 

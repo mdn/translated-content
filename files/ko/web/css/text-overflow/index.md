@@ -9,7 +9,48 @@ l10n:
 
 **`text-overflow`** [CSS](/ko/docs/Web/CSS) 속성은 숨겨진 넘치는 콘텐츠를 사용자에게 어떻게 표시할지 설정합니다. 이는 말줄임표 (`…`)를 표시하여 생략되거나, 사용자 지정 문자열로 대체될 수 있습니다.
 
-{{EmbedInteractiveExample("pages/css/text-overflow.html")}}
+{{InteractiveExample("CSS Demo: text-overflow")}}
+
+```css interactive-example-choice
+text-overflow: clip;
+```
+
+```css interactive-example-choice
+text-overflow: ellipsis;
+```
+
+```css interactive-example-choice
+text-overflow: "-";
+```
+
+```css interactive-example-choice
+text-overflow: "";
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element-container">
+    <p id="example-element">"Is there any tea on this spaceship?" he asked.</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element-container {
+  width: 100%;
+  max-width: 18em;
+}
+
+#example-element {
+  line-height: 50px;
+  border: 1px solid #c5c5c5;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: sans-serif;
+  padding: 0 0.5em;
+  text-align: left;
+}
+```
 
 `text-overflow` 속성은 넘침을 유발하지는 않습니다. 컨테이너에서 텍스트가 넘치게 하려면 {{cssxref("overflow")}} 나 {{cssxref("white-space")}} 와 같은 다른 CSS 속성들을 적용해야 합니다. 아래는 예시입니다.
 

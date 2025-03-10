@@ -7,7 +7,46 @@ slug: Web/CSS/border-bottom-width
 
 [CSS](/ko/docs/Web/CSS) **`border-bottom-width`** 속성은 요소의 아래 테두리 너비를 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/border-bottom-width.html")}}
+{{InteractiveExample("CSS Demo: border-bottom-width")}}
+
+```css interactive-example-choice
+border-bottom-width: thick;
+```
+
+```css interactive-example-choice
+border-bottom-width: 2em;
+```
+
+```css interactive-example-choice
+border-bottom-width: 4px;
+```
+
+```css interactive-example-choice
+border-bottom-width: 2ex;
+```
+
+```css interactive-example-choice
+border-bottom-width: 0;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 구문
 

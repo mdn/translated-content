@@ -9,7 +9,51 @@ l10n:
 
 **`transition-duration`** [CSS](/ko/docs/Web/CSS) 속성은 트랜지션 애니메이션이 완료되는 데 걸리는 시간을 설정합니다. 기본값은 `0s` 로, 애니메이션이 발생하지 않습니다.
 
-{{EmbedInteractiveExample("pages/css/transition-duration.html")}}
+{{InteractiveExample("CSS Demo: transition-duration")}}
+
+```css interactive-example-choice
+transition-duration: 500ms;
+transition-property: margin-right;
+```
+
+```css interactive-example-choice
+transition-duration: 2s;
+transition-property: background-color;
+```
+
+```css interactive-example-choice
+transition-duration: 2s;
+transition-property: margin-right, color;
+```
+
+```css interactive-example-choice
+transition-duration: 3s, 1s;
+transition-property: margin-right, color;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">Hover to see<br />the transition.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #e4f0f5;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 1em monospace;
+  width: 100%;
+  transition: margin-right 2s;
+}
+
+#default-example:hover > #example-element {
+  background-color: #909;
+  color: #fff;
+  margin-right: 40%;
+}
+```
 
 여러 개의 지속 시간을 지정할 수 있으며, 각 지속 시간은 마스터 목록 역할을 하는 {{ cssxref("transition-property") }} 속성에 지정된 대로 해당 프로퍼티에 적용됩니다. 지정된 지속 시간 수가 마스터 목록보다 적으면 사용자 에이전트는 지속 시간 목록을 반복합니다. 지정된 기간의 수가 마스터 목록보다 많으면 목록이 적절한 크기로 잘립니다. 두 경우 모두 CSS 선언은 유효하게 유지됩니다.
 

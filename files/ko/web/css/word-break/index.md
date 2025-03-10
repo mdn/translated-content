@@ -7,7 +7,42 @@ slug: Web/CSS/word-break
 
 [CSS](/ko/docs/Web/CSS) **`word-break`** 속성은 텍스트가 자신의 콘텐츠 박스 밖으로 오버플로 할 때 줄을 바꿀 지 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/word-break.html")}}
+{{InteractiveExample("CSS Demo: word-break")}}
+
+```css interactive-example-choice
+word-break: normal;
+```
+
+```css interactive-example-choice
+word-break: break-all;
+```
+
+```css interactive-example-choice
+word-break: keep-all;
+```
+
+```css interactive-example-choice
+word-break: break-word;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Honorificabilitudinitatibus califragilisticexpialidocious
+    Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+    グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  padding: 20px;
+  text-align: start;
+  border: solid 1px darkgray;
+}
+```
 
 ## 구문
 

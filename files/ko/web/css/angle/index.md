@@ -7,7 +7,41 @@ slug: Web/CSS/angle
 
 [CSS](/ko/docs/Web/CSS) **`<angle>`** [자료형](/ko/docs/Web/CSS/CSS_Types)은 각도의 값을 도, 그레이드, 라디안 또는 회전수로 표현합니다. {{cssxref("&lt;gradient&gt;")}}나 일부 {{cssxref("transform")}} 함수에서 사용합니다..
 
-{{EmbedInteractiveExample("pages/css/type-angle.html")}}
+{{InteractiveExample("CSS Demo: &amp;lt;angle&amp;gt;")}}
+
+```css interactive-example-choice
+transform: rotate(45deg);
+```
+
+```css interactive-example-choice
+transform: rotate(3.1416rad);
+```
+
+```css interactive-example-choice
+transform: rotate(-50grad);
+```
+
+```css interactive-example-choice
+transform: rotate(1.75turn);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This box can rotate to different angles.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #0118f3;
+  padding: 0.75em;
+  width: 180px;
+  height: 120px;
+  color: white;
+}
+```
 
 ## 구문
 

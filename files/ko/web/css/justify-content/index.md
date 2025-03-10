@@ -11,7 +11,55 @@ l10n:
 
 아래의 상호작용하는 예제는 그리드 레이아웃을 사용할 때의 일부 값들을 설명합니다.
 
-{{EmbedInteractiveExample("pages/css/justify-content.html")}}
+{{InteractiveExample("CSS Demo: justify-content")}}
+
+```css interactive-example-choice
+justify-content: start;
+```
+
+```css interactive-example-choice
+justify-content: center;
+```
+
+```css interactive-example-choice
+justify-content: space-between;
+```
+
+```css interactive-example-choice
+justify-content: space-around;
+```
+
+```css interactive-example-choice
+justify-content: space-evenly;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 220px;
+  display: grid;
+  grid-template-columns: 60px 60px;
+  grid-auto-rows: 40px;
+  row-gap: 10px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 자동 바깥 여백과 길이가 적용된 이후에 정렬이 적용됩니다. 즉, [Flexbox layout](/ko/docs/Web/CSS/CSS_flexible_box_layout) 안에서 최소 하나의 플렉스 요소가 `0`이 아닌 {{cssxref("flex-grow")}} 값을 갖는다면, 더 이상 사용할 수 있는 공간이 없기 때문에 아무 효과가 없습니다.
 

@@ -11,7 +11,48 @@ l10n:
 
 > [!NOTE] > {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} 이벤트는 `content-visibility: auto` 가 적용된 어떠한 요소든 렌더링 작업이 생략되기 시작하거나 끝날 때에 발생합니다. 이는 애플리케이션 코드에 렌더링 절차가 필요하지 않을 때 (예시, {{htmlelement("canvas")}} 에 그림을 그리는 경우) 이 작업을 시작하거나 중단하여 처리 능력을 최적화할 수 있는 편리한 방법을 제공합니다.
 
-{{EmbedInteractiveExample("pages/css/content-visibility.html")}}
+{{InteractiveExample("CSS Demo: content-visibility")}}
+
+```css interactive-example-choice
+content-visibility: visible;
+```
+
+```css interactive-example-choice
+content-visibility: hidden;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="container" id="example-element">
+    <div class="child">
+      <span>This is an inner div</span>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.container {
+  width: 140px;
+  height: 140px;
+  border: 3px solid rgb(64, 28, 163);
+  background-color: rgb(135, 136, 184);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.child {
+  border: 3px solid rgb(64, 28, 163);
+  background-color: wheat;
+  color: black;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+```
 
 ## 구문
 
