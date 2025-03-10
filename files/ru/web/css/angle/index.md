@@ -7,7 +7,41 @@ slug: Web/CSS/angle
 
 [Тип данных](/ru/docs/Web/CSS/CSS_Types) [CSS](/ru/docs/Web/CSS) **`<angle>`** представляет собой значение угла, выраженное в градусах, градах, радианах или оборотах. Он используется, например, в {{cssxref ("&lt;gradient&gt;")}} и в некоторых функциях {{cssxref ("transform")}}.
 
-{{EmbedInteractiveExample("pages/css/type-angle.html")}}
+{{InteractiveExample("CSS Demo: &amp;lt;angle&amp;gt;")}}
+
+```css interactive-example-choice
+transform: rotate(45deg);
+```
+
+```css interactive-example-choice
+transform: rotate(3.1416rad);
+```
+
+```css interactive-example-choice
+transform: rotate(-50grad);
+```
+
+```css interactive-example-choice
+transform: rotate(1.75turn);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This box can rotate to different angles.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #0118f3;
+  padding: 0.75em;
+  width: 180px;
+  height: 120px;
+  color: white;
+}
+```
 
 ## Синтаксис
 

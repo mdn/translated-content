@@ -7,7 +7,51 @@ slug: Web/CSS/text-shadow
 
 CSS-свойство **`text-shadow`** добавляет тени к тексту. Свойство задаётся разделённым запятыми списком теней, которые будут применены к тексту и к любым его свойствам [`decorations`](/ru/docs/Web/CSS/text-decoration). Любая тень описывается комбинацией смещений по осям X и Y относительно элемента, радиусом размытия и цветом.
 
-{{EmbedInteractiveExample("pages/css/text-shadow.html")}}
+{{InteractiveExample("CSS Demo: text-shadow")}}
+
+```css interactive-example-choice
+text-shadow: 1px 1px 2px pink;
+```
+
+```css interactive-example-choice
+text-shadow: #fc0 1px 0 10px;
+```
+
+```css interactive-example-choice
+text-shadow: 5px 5px #558abb;
+```
+
+```css interactive-example-choice
+text-shadow: red 2px 5px;
+```
+
+```css interactive-example-choice
+text-shadow: 5px 10px;
+```
+
+```css interactive-example-choice
+text-shadow:
+  1px 1px 2px red,
+  0 0 1em blue,
+  0 0 0.2em blue;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    Far out in the uncharted backwaters of the unfashionable end of the western
+    spiral arm of the Galaxy...
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font:
+    1.5em Georgia,
+    serif;
+}
+```
 
 ## Syntax
 

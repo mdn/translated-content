@@ -7,7 +7,51 @@ slug: Web/CSS/column-gap
 
 Свойство [CSS](/ru/docs/Web/CSS) **`column-gap`** задаёт {{glossary("gutters","отступ")}} между колонками.
 
-{{EmbedInteractiveExample("pages/css/column-gap.html")}}
+{{InteractiveExample("CSS Demo: column-gap")}}
+
+```css interactive-example-choice
+column-gap: 0;
+```
+
+```css interactive-example-choice
+column-gap: 10%;
+```
+
+```css interactive-example-choice
+column-gap: 1em;
+```
+
+```css interactive-example-choice
+column-gap: 20px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 200px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 Изначально свойство появилось в [многоколоночной раскладке](/ru/docs/Web/CSS/CSS_multicol_layout). Позже оно перекочевало в другие методы раскладки, и теперь `column-gap` определено в спецификации [Box Alignment](/ru/docs/Web/CSS/CSS_box_alignment). А значит может использоваться в многоколоночной, флексбокс- и грид-раскладках.
 

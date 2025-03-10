@@ -7,7 +7,42 @@ slug: Web/CSS/max-height
 
 Свойство [CSS](/ru/docs/Web/CSS) **`max-height`** устанавливает максимальную высоту элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("height") }} от становления больше, чем значение, указанное для `max-height`.
 
-{{EmbedInteractiveExample("pages/css/max-height.html")}}
+{{InteractiveExample("CSS Demo: max-height")}}
+
+```css interactive-example-choice
+max-height: 150px;
+```
+
+```css interactive-example-choice
+max-height: 7em;
+```
+
+```css interactive-example-choice
+max-height: 75%;
+```
+
+```css interactive-example-choice
+max-height: 10px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the maximum height. <br />This will limit
+    how tall the box can be, potentially causing an overflow.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 {{ Cssxref("max-height") }} перекрывает {{cssxref("height")}}, но {{ Cssxref("min-height") }} перекрывает {{ Cssxref("max-height") }}.
 

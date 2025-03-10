@@ -9,7 +9,51 @@ slug: Web/CSS/align-content
 
 The interactive example below use Grid Layout to demonstrate some of the values of this property.
 
-{{EmbedInteractiveExample("pages/css/align-content.html")}}
+{{InteractiveExample("CSS Demo: align-content")}}
+
+```css interactive-example-choice
+align-content: start;
+```
+
+```css interactive-example-choice
+align-content: center;
+```
+
+```css interactive-example-choice
+align-content: space-between;
+```
+
+```css interactive-example-choice
+align-content: space-around;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 60px 60px;
+  grid-auto-rows: 40px;
+  column-gap: 10px;
+  height: 180px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 Это свойство не влияет на однострочные flex-контейнеры (т.е. с `flex-wrap: nowrap`)
 

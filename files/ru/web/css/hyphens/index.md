@@ -7,7 +7,34 @@ slug: Web/CSS/hyphens
 
 [CSS](/ru/docs/Web/CSS) свойство **`hyphens`** указывает, как следует переносить слова через дефис, когда текст переносится на несколько строк. Оно может полностью запретить перенос, делать перенос в местах, заданных вручную или позволять браузеру автоматически расставлять переносы, где это необходимо.
 
-{{EmbedInteractiveExample("pages/css/hyphens.html")}}
+{{InteractiveExample("CSS Demo: hyphens")}}
+
+```css interactive-example-choice
+hyphens: none;
+```
+
+```css interactive-example-choice
+hyphens: manual;
+```
+
+```css interactive-example-choice
+hyphens: auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">An extra­ordinarily long English word!</p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 2px dashed #999;
+  font-size: 1.5rem;
+  text-align: left;
+  width: 7rem;
+}
+```
 
 Правила расстановки переносов зависят от языка. В HTML язык определяется атрибутом [`lang`](/ru/docs/Web/HTML/Global_attributes/lang), и браузеры применяют правила переноса только при присутствии данного атрибута и доступности соответствующего словаря для расстановки переносов. В XML необходимо использовать атрибут [`xml:lang`](/ru/docs/Web/SVG/Attribute/xml:lang).
 

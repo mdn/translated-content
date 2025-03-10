@@ -7,7 +7,45 @@ slug: Web/CSS/border-bottom
 
 [Сокращённое свойство](/ru/docs/Web/CSS/Shorthand_properties) [CSS](/ru/docs/Web/CSS) **`border-bottom`** описывает нижнюю границу элемента [border](/ru/docs/Web/CSS/border). Оно устанавливает значения {{cssxref("border-bottom-width")}}, {{cssxref("border-bottom-style")}} и {{cssxref("border-bottom-color")}}.
 
-{{EmbedInteractiveExample("pages/css/border-bottom.html")}}
+{{InteractiveExample("CSS Demo: border-bottom")}}
+
+```css interactive-example-choice
+border-bottom: solid;
+```
+
+```css interactive-example-choice
+border-bottom: dashed red;
+```
+
+```css interactive-example-choice
+border-bottom: 1rem solid;
+```
+
+```css interactive-example-choice
+border-bottom: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border-bottom: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 Как и все сокращённые свойства, `border-bottom` устанавливает значения всех свойств, которые он может установить, даже если они не указаны. Для тех свойств, которые не указаны оно устанавливает значения по умолчанию. Это означает, что ...
 

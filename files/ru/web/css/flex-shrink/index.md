@@ -9,7 +9,45 @@ slug: Web/CSS/flex-shrink
 
 flex-shrink используется вместе со свойствами flex {{cssxref("flex-grow")}} и {{cssxref("flex-basis")}}. Обычно определяется с помощью сокращения {{cssxref("flex")}}.
 
-{{EmbedInteractiveExample("pages/css/flex-shrink.html")}}
+{{InteractiveExample("CSS Demo: flex-shrink")}}
+
+```css interactive-example-choice
+flex-shrink: 0;
+```
+
+```css interactive-example-choice
+flex-shrink: 1;
+```
+
+```css interactive-example-choice
+flex-shrink: 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">I shrink</div>
+  <div>Item Two</div>
+  <div>Item Three</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  border: 1px solid #c5c5c5;
+  width: auto;
+  max-height: 300px;
+  display: flex;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 300px;
+}
+```
 
 ## Синтаксис
 

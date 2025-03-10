@@ -7,7 +7,43 @@ slug: Web/CSS/column-rule
 
 [Краткая форма записи](/ru/docs/Web/CSS/Shorthand_properties) [CSS](/ru/docs/Web/CSS) свойств **`column-rule`** устанавливает ширину, стиль и цвет линии, находящейся между колонками в мультиколоночной вёрстке.
 
-{{EmbedInteractiveExample("pages/css/column-rule.html")}}
+{{InteractiveExample("CSS Demo: column-rule")}}
+
+```css interactive-example-choice
+column-rule: dotted;
+```
+
+```css interactive-example-choice
+column-rule: solid 6px;
+```
+
+```css interactive-example-choice
+column-rule: solid blue;
+```
+
+```css interactive-example-choice
+column-rule: thick inset blue;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  columns: 3;
+  column-rule: solid;
+  text-align: left;
+}
+```
 
 Эта краткая форма записи задаёт индивидуальные `column-rule-*` свойства, обычно задаваемые: {{Cssxref("column-rule-width")}}, {{Cssxref("column-rule-style")}}, и {{Cssxref("column-rule-color")}}.
 
