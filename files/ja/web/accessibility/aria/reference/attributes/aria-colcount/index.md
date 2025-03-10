@@ -1,6 +1,7 @@
 ---
 title: aria-colcount
-slug: Web/Accessibility/ARIA/Attributes/aria-colcount
+slug: Web/Accessibility/ARIA/Reference/Attributes/aria-colcount
+original_slug: Web/Accessibility/ARIA/Attributes/aria-colcount
 l10n:
   sourceCommit: 18c1fa17e3caf296af274d787c4e57e911969364
 ---
