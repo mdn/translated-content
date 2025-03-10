@@ -9,7 +9,55 @@ l10n:
 
 **`place-content`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、ブロック方向とインライン方向の内容物の配置 (すなわち {{CSSxRef("align-content")}} および {{CSSxRef("justify-content")}}) を、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)や[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)などのレイアウトシステムにおいて、一度に指定することができます。
 
-{{EmbedInteractiveExample("pages/css/place-content.html")}}
+{{InteractiveExample("CSS Demo: place-content")}}
+
+```css interactive-example-choice
+place-content: end space-between;
+```
+
+```css interactive-example-choice
+place-content: space-around start;
+```
+
+```css interactive-example-choice
+place-content: start space-evenly;
+```
+
+```css interactive-example-choice
+place-content: end center;
+```
+
+```css interactive-example-choice
+place-content: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 60px 60px;
+  grid-auto-rows: 40px;
+  height: 180px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## 構成要素のプロパティ
 

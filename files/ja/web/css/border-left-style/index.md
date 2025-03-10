@@ -9,7 +9,54 @@ l10n:
 
 **`border-left-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の境界線 ({{cssxref("border")}}) のスタイルを設定します。
 
-{{EmbedInteractiveExample("pages/css/border-left-style.html")}}
+{{InteractiveExample("CSS Demo: border-left-style")}}
+
+```css interactive-example-choice
+border-left-style: none;
+```
+
+```css interactive-example-choice
+border-left-style: dotted;
+```
+
+```css interactive-example-choice
+border-left-style: dashed;
+```
+
+```css interactive-example-choice
+border-left-style: solid;
+```
+
+```css interactive-example-choice
+border-left-style: groove;
+```
+
+```css interactive-example-choice
+border-left-style: inset;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+
+body {
+  background-color: #fff;
+}
+```
 
 > [!NOTE]
 > 仕様書では、異なるスタイルの境界線を角でどの様に接続するかを定義していません。
