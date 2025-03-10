@@ -1,6 +1,8 @@
 ---
 title: mask-composite
 slug: Web/CSS/mask-composite
+l10n:
+  sourceCommit: b64538dc77e9a6181b882bd54bdbb307c1430ba8
 ---
 
 {{CSSRef}}
