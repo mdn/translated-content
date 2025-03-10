@@ -2,7 +2,7 @@
 title: 视觉格式化模型
 slug: Web/CSS/Visual_formatting_model
 l10n:
-  sourceCommit: commit/f731452fabde211bee55aedd39fc83d60c4e4918
+  sourceCommit: 96157fa574bc2cd9f55ff1205198f24addc00104
 ---
 
 {{CSSRef}}
