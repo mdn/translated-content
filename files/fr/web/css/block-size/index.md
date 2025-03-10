@@ -7,7 +7,45 @@ slug: Web/CSS/block-size
 
 La propriété **`block-size`** est une propriété _logique_ qui permet de définir la taille de l'élément dans la direction orthogonale au sens de lecture. Selon la valeur de la propriété {{cssxref("writing-mode")}}, elle correspondra à la propriété physique {{cssxref("width")}} ou {{cssxref("height")}}.
 
-{{EmbedInteractiveExample("pages/css/block-size.html")}}
+{{InteractiveExample("CSS Demo: block-size")}}
+
+```css interactive-example-choice
+block-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+block-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+block-size: auto;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+block-size: auto;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the block-size.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 Si le mode d'écriture est vertical, la valeur de `block-size` fera référence à la largeur de l'élément et sinon, elle fera référence à sa hauteur.
 

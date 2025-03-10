@@ -9,7 +9,68 @@ La [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) [CSS](/fr/doc
 
 On peut aussi utiliser les valeurs de la propriété `font-variant` définies avec la spécification CSS de niveau 2 (première révision), `normal` ou `small-caps`, en utilisant la propriété raccourcie [`font`](/fr/docs/Web/CSS/font).
 
-{{EmbedInteractiveExample("pages/css/font-variant.html")}}
+{{InteractiveExample("CSS Demo: font-variant")}}
+
+```css interactive-example-choice
+font-variant: normal;
+```
+
+```css interactive-example-choice
+font-variant: no-common-ligatures proportional-nums;
+```
+
+```css interactive-example-choice
+font-variant: common-ligatures tabular-nums;
+```
+
+```css interactive-example-choice
+font-variant: small-caps slashed-zero;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>Difficult waffles</p>
+    <table>
+      <tr>
+        <td><span class="tabular">0O</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">3.14</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">2.71</span></td>
+      </tr>
+    </table>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+section {
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+#example-element table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabular {
+  border: 1px solid;
+}
+```
 
 ## Propriétés détaillées correspondantes
 

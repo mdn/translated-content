@@ -7,7 +7,46 @@ slug: Web/CSS/border-bottom-left-radius
 
 La propriété **`border-bottom-left-radius`** définit le rayon de courbure de la bordure pour le coin en bas à gauche de la boîte.
 
-{{EmbedInteractiveExample("pages/css/border-bottom-left-radius.html")}}
+{{InteractiveExample("CSS Demo: border-bottom-left-radius")}}
+
+```css interactive-example-choice
+border-bottom-left-radius: 80px 80px;
+```
+
+```css interactive-example-choice
+border-bottom-left-radius: 250px 100px;
+```
+
+```css interactive-example-choice
+border-bottom-left-radius: 50%;
+```
+
+```css interactive-example-choice
+border-bottom-left-radius: 50%;
+border: black 10px double;
+background-clip: content-box;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a bottom left rounded corner.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  color: white;
+  padding: 10px;
+}
+```
 
 L'arrondi peut être un fragment de cercle ou d'ellipse. Si une des valeurs vaut 0, aucun arrondi n'a lieu et le coin est un angle droit.Un arrière-plan (que ce soit une couleur ou une image) sera rogné selon la bordure même si celle-ci est arrondie. L'endroit du rognage est défini selon la valeur de {{cssxref("background-clip")}}.
 

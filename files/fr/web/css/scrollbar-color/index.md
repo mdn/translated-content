@@ -7,7 +7,39 @@ slug: Web/CSS/scrollbar-color
 
 La propriété **`scrollbar-color`** permet à un auteur de définir la couleur utilisée pour le curseur et la piste (la ligne sur laquelle se déplace le curseur) de la barre de défilement.
 
-{{EmbedInteractiveExample("pages/css/scrollbar-color.html")}}
+{{InteractiveExample("CSS Demo: scrollbar-color")}}
+
+```css interactive-example-choice
+scrollbar-color: yellow blue;
+```
+
+```css interactive-example-choice
+scrollbar-color: #87ceeb #ff5621;
+```
+
+```css interactive-example-choice
+scrollbar-color: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
+    corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts
+    fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
+    earthnut pea peanut soko zucchini.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 300px;
+  height: 100px;
+  overflow-y: scroll;
+}
+```
 
 ## Syntaxe
 
