@@ -7,7 +7,56 @@ slug: Web/CSS/float
 
 La propiedad CSS `float` ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los elementos de texto y en línea aparecer a su costado. El elemento es removido del normal flujo de la página, aunque aún sigue siendo parte del flujo (a diferencia del [posicionamiento absoluto](/es/docs/Web/CSS/position#absolute_positioning)).
 
-{{EmbedInteractiveExample("pages/css/float.html")}}
+{{InteractiveExample("CSS Demo: float")}}
+
+```css interactive-example-choice
+float: none;
+```
+
+```css interactive-example-choice
+float: left;
+```
+
+```css interactive-example-choice
+float: right;
+```
+
+```css interactive-example-choice
+float: inline-start;
+```
+
+```css interactive-example-choice
+float: inline-end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">Float me</div>
+    As much mud in the streets as if the waters had but newly retired from the
+    face of the earth, and it would not be wonderful to meet a Megalosaurus,
+    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  padding: 0.75em;
+  text-align: left;
+  width: 80%;
+  line-height: normal;
+}
+
+#example-element {
+  border: solid 10px #efac09;
+  background-color: #040d46;
+  color: white;
+  padding: 1em;
+  width: 40%;
+}
+```
 
 La fuente de este ejemplo interactivo está almacenada en un repositorio de GitHub. Si deseas contribuír a los ejemplos interactivos del proyecto, por favor clonar <https://github.com/mdn/interactive-examples> y enviarnos una solicitud de extracción -pull request-.
 

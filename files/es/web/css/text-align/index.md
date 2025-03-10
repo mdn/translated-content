@@ -9,7 +9,49 @@ l10n:
 
 La propiedad **`text-align`** de [CSS](/es/docs/Web/CSS) establece la alineación horizontal del contenido a nivel de línea dentro de un elemento de bloque o caja de celda-tabla. Esto significa que funciona como {{cssxref("vertical-align")}} pero en dirección horizontal.
 
-{{EmbedInteractiveExample("pages/css/text-align.html")}}
+{{InteractiveExample("CSS Demo: text-align")}}
+
+```css interactive-example-choice
+text-align: start;
+```
+
+```css interactive-example-choice
+text-align: end;
+```
+
+```css interactive-example-choice
+text-align: center;
+```
+
+```css interactive-example-choice
+text-align: justify;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  font-size: 1.5em;
+}
+
+#default-example > div {
+  width: 250px;
+}
+```
 
 ## Sintaxis
 
