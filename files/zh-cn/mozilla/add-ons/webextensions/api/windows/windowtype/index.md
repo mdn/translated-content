@@ -1,6 +1,8 @@
 ---
 title: windows.WindowType
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
+l10n:
+    sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}
@@ -9,7 +11,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
 
 ## 类型
 
-类型的值是字符串类型。可能的值如下：
+该类型的取值是 `string`，可能取值包括：
 
 - `"normal"`
 - `"popup"`
