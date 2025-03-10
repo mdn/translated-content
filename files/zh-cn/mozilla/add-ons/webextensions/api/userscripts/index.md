@@ -23,7 +23,7 @@ l10n:
 
 ## 运行环境
 
-当用户脚本被注册或更新（使用 {{WebExtAPIRef("userScripts.register()")}} 或 {{WebExtAPIRef("userScripts.update()")}}）时，你的扩展可以将其设置为在隔离的 `USER_SCRIPT` 环境（word）或 `MAIN` 环境中运行。
+当用户脚本被注册或更新（使用 {{WebExtAPIRef("userScripts.register()")}} 或 {{WebExtAPIRef("userScripts.update()")}}）时，你的扩展可以将其设置为在隔离的 `USER_SCRIPT` 环境（world）或 `MAIN` 环境中运行。
 
 `USER_SCRIPT` 环境提供了隔离的运行环境，无法访问宿主页面和其他扩展。这种隔离与[内容脚本环境](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#内容脚本环境)类似，除了 `USER_SCRIPT` 环境不能访问扩展 API。
 
