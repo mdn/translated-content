@@ -9,7 +9,43 @@ l10n:
 
 **`column-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで理想的な段の幅を設定します。コンテナーは `column-width` の値よりも狭い段がないように、できるだけ多くの段を配置します。コンテナーの幅が指定された値よりも狭い場合、指定された幅よりも狭い単一の段になることがあります。
 
-{{EmbedInteractiveExample("pages/css/column-width.html")}}
+{{InteractiveExample("CSS Demo: column-width")}}
+
+```css interactive-example-choice
+column-width: auto;
+```
+
+```css interactive-example-choice
+column-width: 6rem;
+```
+
+```css interactive-example-choice
+column-width: 120px;
+```
+
+```css interactive-example-choice
+column-width: 18ch;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 100%;
+  columns: auto;
+  text-align: left;
+}
+```
 
 このプロパティは様々な画面の大きさに合うレスポンシブデザインを作成するのに役立ちます。特に (優先度の高い) {{cssxref("column-count")}} プロパティがある場合、正確な段の幅を設定するには、すべての幅の値を指定する必要があります。横書きでは、これらは {{cssxref('width')}}, `column-width`, {{cssxref('column-gap')}}, {{cssxref('column-rule-width')}} です。
 

@@ -9,7 +9,39 @@ l10n:
 
 **`opacity`** は CSS のプロパティで、要素の不透明度を設定します。不透明度は要素の裏にあるコンテンツが隠れる度合いであり、透明度の逆です。
 
-{{EmbedInteractiveExample("pages/css/opacity.html")}}
+{{InteractiveExample("CSS Demo: opacity")}}
+
+```css interactive-example-choice
+opacity: 0;
+```
+
+```css interactive-example-choice
+opacity: 0.33;
+```
+
+```css interactive-example-choice
+opacity: 1;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #963770;
+  color: white;
+  padding: 1em;
+}
+```
 
 ## 構文
 

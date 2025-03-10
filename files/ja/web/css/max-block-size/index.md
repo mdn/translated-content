@@ -13,7 +13,46 @@ slug: Web/CSS/max-block-size
 
 ふつう `max-height` または `max-width` を使用する場面でいつでも、代わりに `max-block-size` をコンテンツの最大の「高さ」を設定するために使用し (これは垂直の値ではない可能性がありますが)、 `max-inline-size`をコンテンツの最大の「幅」を設定するために使用してください (これが横書きではなく縦書きである場合であっても)。様々な書字方向を表す {{cssxref("writing-mode")}} の [例](/ja/docs/Web/CSS/writing-mode#例)をご覧ください。
 
-{{EmbedInteractiveExample("pages/css/max-block-size.html")}}
+{{InteractiveExample("CSS Demo: max-block-size")}}
+
+```css interactive-example-choice
+max-block-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-block-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+max-block-size: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-block-size: 75%;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the maximum block size. <br />This will
+    limit the size in the block dimension, potentially causing an overflow.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## 構文
 

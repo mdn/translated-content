@@ -9,7 +9,51 @@ l10n:
 
 [CSS](/ja/docs/Web/CSS) の **`place-items`** は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、アイテムをブロック方向とインライン方向の両方に一度に配置します。これは {{CSSxRef("align-items")}} および {{CSSxRef("justify-items")}} プロパティの値を設定します。 2 つ目の値が設定されていない場合、1 つ目の値が使用されます。
 
-{{EmbedInteractiveExample("pages/css/place-items.html")}}
+{{InteractiveExample("CSS Demo: place-items")}}
+
+```css interactive-example-choice
+place-items: center stretch;
+```
+
+```css interactive-example-choice
+place-items: center start;
+```
+
+```css interactive-example-choice
+place-items: start end;
+```
+
+```css interactive-example-choice
+place-items: end center;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## 構成要素のプロパティ
 

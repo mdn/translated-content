@@ -9,7 +9,60 @@ l10n:
 
 **`counter-reset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)を指定された値で初期化します。要素の数値から 1 までカウントアップするカウンター、および要素の数値から 1 までカウントダウンするカウンターを作成することができます。
 
-{{EmbedInteractiveExample("pages/css/counter-reset.html")}}
+{{InteractiveExample("CSS Demo: counter-reset")}}
+
+```css interactive-example-choice
+counter-reset: none;
+```
+
+```css interactive-example-choice
+counter-reset: chapter-count 0;
+```
+
+```css interactive-example-choice
+counter-reset: chapter-count;
+```
+
+```css interactive-example-choice
+counter-reset: chapter-count 5;
+```
+
+```css interactive-example-choice
+counter-reset: chapter-count -5;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="chapters">
+    <h1>Alice's Adventures in Wonderland</h1>
+    <h2>Down the Rabbit-Hole</h2>
+    <h2 id="example-element">The Pool of Tears</h2>
+    <h2>A Caucus-Race and a Long Tale</h2>
+    <h2>The Rabbit Sends in a Little Bill</h2>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  text-align: left;
+  counter-reset: chapter-count;
+}
+
+#example-element {
+  background-color: lightblue;
+  color: black;
+}
+
+h2 {
+  counter-increment: chapter-count;
+  font-size: 1em;
+}
+
+h2::before {
+  content: "Chapter " counters(chapter-count, ".") ": ";
+}
+```
 
 ## 構文
 

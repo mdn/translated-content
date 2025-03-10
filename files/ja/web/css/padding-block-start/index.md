@@ -9,7 +9,51 @@ l10n:
 
 **`padding-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のブロック方向の論理的な先頭側のパディングを定義し、それが要素の書字方向やテキストの方向に応じて物理的なパディングに対応づけられます。
 
-{{EmbedInteractiveExample("pages/css/padding-block-start.html")}}
+{{InteractiveExample("CSS Demo: padding-block-start")}}
+
+```css interactive-example-choice
+padding-block-start: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-block-start: 20px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+padding-block-start: 5em;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-block-start: 5em;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## 構文
 

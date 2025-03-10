@@ -9,7 +9,49 @@ l10n:
 
 **`translateY()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を二次元平面上の垂直方向で再配置します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-{{EmbedInteractiveExample("pages/css/function-translateY.html")}}
+{{InteractiveExample("CSS Demo: translateY()")}}
+
+```css interactive-example-choice
+transform: translateY(0);
+```
+
+```css interactive-example-choice
+transform: translateY(42px);
+```
+
+```css interactive-example-choice
+transform: translateY(-2.1rem);
+```
+
+```css interactive-example-choice
+transform: translateY(3ch);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="static-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
+
+```css interactive-example
+#static-element {
+  opacity: 0.4;
+  position: absolute;
+}
+
+#example-element {
+  position: absolute;
+}
+```
 
 > **メモ:** `translateY(ty)` は `translate(0, ty)` または `translate3d(0, ty, 0)` と等価です。
 

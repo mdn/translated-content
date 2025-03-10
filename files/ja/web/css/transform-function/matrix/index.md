@@ -9,7 +9,33 @@ l10n:
 
 **`matrix()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、二次元同次変換行列を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-{{EmbedInteractiveExample("pages/css/function-matrix.html")}}
+{{InteractiveExample("CSS Demo: matrix()")}}
+
+```css interactive-example-choice
+transform: matrix(1.2, 0.2, -1, 0.9, 0, 20);
+```
+
+```css interactive-example-choice
+transform: matrix(0.4, 0, 0.5, 1.2, 60, 10);
+```
+
+```css interactive-example-choice
+transform: matrix(0, 1, 1, 0, 0, 0);
+```
+
+```css interactive-example-choice
+transform: matrix(0.1, 1, -0.3, 1, 0, 0);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 > **メモ:** `matrix(a, b, c, d, tx, ty)` は `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)` の短縮形です。
 

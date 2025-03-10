@@ -7,7 +7,51 @@ slug: Web/CSS/border-spacing
 
 **`border-spacing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{htmlelement("table")}} における隣り合うセルの境界同士の間隔を定めます。このプロパティは {{cssxref("border-collapse")}} が `separate` のときのみ適用されます。
 
-{{EmbedInteractiveExample("pages/css/border-spacing.html")}}
+{{InteractiveExample("CSS Demo: border-spacing")}}
+
+```css interactive-example-choice
+border-spacing: 0;
+```
+
+```css interactive-example-choice
+border-spacing: 5px;
+```
+
+```css interactive-example-choice
+border-spacing: 5px 1rem;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <table class="transition-all" id="example-element">
+    <tr>
+      <td>Cell 1.1</td>
+      <td>Cell 1.2</td>
+    </tr>
+    <tr>
+      <td>Cell 2.1</td>
+      <td>Cell 2.2</td>
+    </tr>
+    <tr>
+      <td>Cell 3.1</td>
+      <td>Cell 3.2</td>
+    </tr>
+  </table>
+</section>
+```
+
+```css interactive-example
+table {
+  width: 15rem;
+  table-layout: fixed;
+}
+
+td {
+  border: 5px solid;
+  border-color: crimson dodgerblue;
+  padding: 0.75rem;
+}
+```
 
 `border-spacing` の値は、表の外周部分にも使用され、表の境界線と最初/最後の列または行との間の距離は、 (縦または横の) 対応する `border-spacing` と、表の対応する側 (上下左右のいずれか) の {{cssxref("padding")}} の合計になります。
 

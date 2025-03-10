@@ -9,7 +9,37 @@ l10n:
 
 **`repeating-radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、原点から広がり反復するグラデーションから成る画像を生成します。 {{cssxref("gradient/radial-gradient", "radial-gradient()")}} と似ており、同じ引数を取りますが、 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} と同様にすべての方向に色経由点を無限に繰り返してコンテナー全体を埋めます。関数の返値は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("&lt;image&gt;")}} の特殊型です。
 
-{{EmbedInteractiveExample("pages/css/function-repeating-radial-gradient.html")}}
+{{InteractiveExample("CSS Demo: repeating-radial-gradient()")}}
+
+```css interactive-example-choice
+background: repeating-radial-gradient(#e66465, #9198e5 20%);
+```
+
+```css interactive-example-choice
+background: repeating-radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
+```
+
+```css interactive-example-choice
+background: repeating-radial-gradient(
+  circle at 100%,
+  #333,
+  #333 10px,
+  #eee 10px,
+  #eee 20px
+);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 それぞれの繰り返しにおいて、色経由点の位置は基本的な放射グラデーションの寸法 (最初と最後の色経由点の間の距離) の倍数だけずらしたものになります。この結果、グラデーションの最初と最後の色は常に隣り合わせになります。 2 つが異なる色であれば、視覚的に明確な変わり目ができるので、最初の色を最後の色として繰り返すことで緩和できます。
 

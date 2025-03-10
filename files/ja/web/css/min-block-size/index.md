@@ -9,7 +9,47 @@ slug: Web/CSS/min-block-size
 
 書字方向が垂直方向であった場合、 `min-block-size` の値は要素の最小幅に対応します。そうでなければ、要素の最小の高さに対応します。関連プロパティの {{cssxref("min-inline-size")}} が要素のもう一方の寸法を定義します。
 
-{{EmbedInteractiveExample("pages/css/min-block-size.html")}}
+{{InteractiveExample("CSS Demo: min-block-size")}}
+
+```css interactive-example-choice
+min-block-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+min-block-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+min-block-size: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+min-block-size: 15em;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the minimum block size. <br />If there is
+    more content than the minimum the box will grow in the block dimension as
+    needed by the content.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## 構文
 

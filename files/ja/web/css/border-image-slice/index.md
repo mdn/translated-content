@@ -9,7 +9,48 @@ l10n:
 
 **`border-image-slice`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("border-image-source")}} で指定された画像を複数の領域に分割します。これらの領域は[境界画像](/ja/docs/Web/CSS/border-image)の部品を構成します。
 
-{{EmbedInteractiveExample("pages/css/border-image-slice.html")}}
+{{InteractiveExample("CSS Demo: border-image-slice")}}
+
+```css interactive-example-choice
+border-image-slice: 30;
+```
+
+```css interactive-example-choice
+border-image-slice: 30 fill;
+```
+
+```css interactive-example-choice
+border-image-slice: 44;
+```
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-florid.svg") round;
+border-image-slice: calc(50 / 184 * 100%) calc(80 / 284 * 100%) fill;
+border-image-width: 30px 48px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 分割する過程で、4 つの角、4 つの辺、それに中央領域の計 9 つの領域を作成します。それぞれの辺からの距離で設定される 4 本の分割線が、領域の寸法を制御します。
 

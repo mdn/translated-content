@@ -9,7 +9,54 @@ l10n:
 
 **`border-right-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の境界線 ({{cssxref("border")}}) のスタイルを設定します。
 
-{{EmbedInteractiveExample("pages/css/border-right-style.html")}}
+{{InteractiveExample("CSS Demo: border-right-style")}}
+
+```css interactive-example-choice
+border-right-style: none;
+```
+
+```css interactive-example-choice
+border-right-style: dotted;
+```
+
+```css interactive-example-choice
+border-right-style: dashed;
+```
+
+```css interactive-example-choice
+border-right-style: solid;
+```
+
+```css interactive-example-choice
+border-right-style: groove;
+```
+
+```css interactive-example-choice
+border-right-style: inset;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+
+body {
+  background-color: #fff;
+}
+```
 
 > [!NOTE]
 > 仕様書では、異なるスタイルの境界線を角でどの様に接続するかを定義していません。

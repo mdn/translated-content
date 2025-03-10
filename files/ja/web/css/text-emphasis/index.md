@@ -9,7 +9,39 @@ l10n:
 
 **`text-emphasis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 (空白や制御文字を除く) テキストに圏点を適用します。これは {{cssxref("text-emphasis-style")}} と {{cssxref("text-emphasis-color")}} の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)です。
 
-{{EmbedInteractiveExample("pages/css/text-emphasis.html")}}
+{{InteractiveExample("CSS Demo: text-emphasis")}}
+
+```css interactive-example-choice
+text-emphasis: none;
+```
+
+```css interactive-example-choice
+text-emphasis: filled red;
+```
+
+```css interactive-example-choice
+text-emphasis: "x";
+```
+
+```css interactive-example-choice
+text-emphasis: filled double-circle #ffb703;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+```
 
 `text-emphasis` プロパティは、 {{cssxref("text-decoration")}} とは大きく異なります。 `text-decoration` プロパティは継承されず、指定される装飾は要素全体にわたって適用されます。しかし、 `text-emphasis` は継承されます。これは、子孫に対して圏点を変更できることを意味します。
 

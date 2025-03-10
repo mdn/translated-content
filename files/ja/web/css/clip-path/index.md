@@ -9,7 +9,68 @@ l10n:
 
 **`clip-path`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のどの部分を表示するかを設定するクリッピング領域を作ります。具体的には、領域の内部の部分は表示され、外側の部分は非表示になります。
 
-{{EmbedInteractiveExample("pages/css/clip-path.html")}}
+{{InteractiveExample("CSS Demo: clip-path")}}
+
+```css interactive-example-choice
+clip-path: circle(40%);
+```
+
+```css interactive-example-choice
+clip-path: ellipse(130px 140px at 10% 20%);
+```
+
+```css interactive-example-choice
+clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+```
+
+```css interactive-example-choice
+clip-path: path("M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z");
+```
+
+```css interactive-example-choice
+clip-path: rect(5px 145px 160px 5px round 20%);
+```
+
+```css interactive-example-choice
+clip-path: xywh(0 5px 100% 75% round 15% 0);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <img
+      class="transition-all"
+      id="example-element"
+      src="/shared-assets/images/examples/balloon-small.jpg"
+      width="150" />
+    We had agreed, my companion and I, that I should call for him at his house,
+    after dinner, not later than eleven o’clock. This athletic young Frenchman
+    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
+    as a pastime. After having exhausted all the sensations that are to be found
+    in ordinary sports, even those of “automobiling” at a breakneck speed, the
+    members of the “Aéro Club” now seek in the air, where they indulge in all
+    kinds of daring feats, the nerve-racking excitement that they have ceased to
+    find on earth.
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  align-items: flex-start;
+}
+
+.example-container {
+  text-align: left;
+  padding: 20px;
+}
+
+#example-element {
+  float: left;
+  width: 150px;
+  margin: 20px;
+}
+```
 
 ## 構文
 

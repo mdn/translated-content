@@ -9,7 +9,40 @@ l10n:
 
 **`background-blend-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景画像が相互にどのように混合されるか、また要素の背景色とどのように混合されるかを設定します。
 
-{{EmbedInteractiveExample("pages/css/background-blend-mode.html")}}
+{{InteractiveExample("CSS Demo: background-blend-mode")}}
+
+```css interactive-example-choice
+background-blend-mode: normal;
+```
+
+```css interactive-example-choice
+background-blend-mode: multiply;
+```
+
+```css interactive-example-choice
+background-blend-mode: hard-light;
+```
+
+```css interactive-example-choice
+background-blend-mode: difference;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: green;
+  background-image: url("/shared-assets/images/examples/balloon.jpg");
+  width: 250px;
+  height: 305px;
+}
+```
 
 混合モードは {{cssxref("background-image")}} プロパティと同じ順番で定義してください。混合モードのリストと背景画像のリストの長さが異なる場合は、長さが合うまで繰り返しや切り落としが行われます。
 

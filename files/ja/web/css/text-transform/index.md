@@ -9,7 +9,57 @@ l10n:
 
 **`text-transform`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のテキストを大文字表記する方法を指定します。テキストをすべて大文字にしたり、すべて小文字にしたり、各単語の先頭を大文字にしたりすることを指定します。フリガナの読みやすさを向上するのにも役立ちます。
 
-{{EmbedInteractiveExample("pages/css/text-transform.html")}}
+{{InteractiveExample("CSS Demo: text-transform")}}
+
+```css interactive-example-choice
+text-transform: capitalize;
+```
+
+```css interactive-example-choice
+text-transform: uppercase;
+```
+
+```css interactive-example-choice
+text-transform: lowercase;
+```
+
+```css interactive-example-choice
+text-transform: none;
+```
+
+```css interactive-example-choice
+text-transform: full-width;
+```
+
+```css interactive-example-choice
+text-transform: full-size-kana;
+```
+
+```css interactive-example-choice
+text-transform: math-auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <p>
+      LONDON. Michaelmas term lately over, and the Lord Chancellor sitting in
+      Lincoln's Inn Hall.
+    </p>
+    <p lang="el">
+      Σ is a Greek letter and appears in ΟΔΥΣΣΕΥΣ. Θα πάμε στο "Θεϊκό φαΐ" ή στη
+      "Νεράιδα"
+    </p>
+    <p lang="ja">ァィゥェ ォヵㇰヶ</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.2em;
+}
+```
 
 `text-transform` プロパティは、以下のように言語固有の大文字小文字の扱いを考慮します。
 

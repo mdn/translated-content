@@ -9,7 +9,42 @@ l10n:
 
 **`max-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最大幅を設定します。これは {{Cssxref("width")}} プロパティの[使用値](/ja/docs/Web/CSS/used_value)が、 `max-width` で指定した値を上回ることを防ぎます。
 
-{{EmbedInteractiveExample("pages/css/max-width.html")}}
+{{InteractiveExample("CSS Demo: max-width")}}
+
+```css interactive-example-choice
+max-width: 150px;
+```
+
+```css interactive-example-choice
+max-width: 20em;
+```
+
+```css interactive-example-choice
+max-width: 75%;
+```
+
+```css interactive-example-choice
+max-width: 20ch;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Change the maximum width.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 `max-width` は {{cssxref("width")}} を上書きしますが、 {{cssxref("min-width")}} は `max-width` を上書きします。
 

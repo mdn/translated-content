@@ -9,7 +9,40 @@ l10n:
 
 [CSS](/ja/docs/Web/CSS) の **`outline-width`** プロパティは、要素の輪郭線の太さを設定します。輪郭線とは要素の周りに描かれる線のことで、 {{cssxref("border")}} よりも外側です。
 
-{{EmbedInteractiveExample("pages/css/outline-width.html")}}
+{{InteractiveExample("CSS Demo: outline-width")}}
+
+```css interactive-example-choice
+outline-width: 12px;
+```
+
+```css interactive-example-choice
+outline-width: thin;
+```
+
+```css interactive-example-choice
+outline-width: medium;
+```
+
+```css interactive-example-choice
+outline-width: thick;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  outline: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 たいていの場合、輪郭線の見た目を定義するときは一括指定プロパティ {{cssxref("outline")}} を使ったほうが便利です。
 

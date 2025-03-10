@@ -7,7 +7,40 @@ slug: Web/CSS/mix-blend-mode
 
 **`mix-blend-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の内容物と親要素の内容物や要素の背景をどのように混合するかを設定します。
 
-{{EmbedInteractiveExample("pages/css/mix-blend-mode.html")}}
+{{InteractiveExample("CSS Demo: mix-blend-mode")}}
+
+```css interactive-example-choice
+mix-blend-mode: normal;
+```
+
+```css interactive-example-choice
+mix-blend-mode: multiply;
+```
+
+```css interactive-example-choice
+mix-blend-mode: hard-light;
+```
+
+```css interactive-example-choice
+mix-blend-mode: difference;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <img
+      id="example-element"
+      src="/shared-assets/images/examples/firefox-logo.svg"
+      width="200" />
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-color: sandybrown;
+}
+```
 
 ## 構文
 

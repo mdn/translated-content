@@ -7,7 +7,43 @@ slug: Web/CSS/border-inline-end-width
 
 **`border-inline-end-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の終端側の境界の幅を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界の幅に対応づけられます。これは {{cssxref("border-top-width")}}、{{cssxref("border-right-width")}}、{{cssxref("border-bottom-width")}}、{{cssxref("border-left-width")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
 
-{{EmbedInteractiveExample("pages/css/border-inline-end-width.html")}}
+{{InteractiveExample("CSS Demo: border-inline-end-width")}}
+
+```css interactive-example-choice
+border-inline-end-width: thick;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-inline-end-width: thick;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-inline-end-width: 4px;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## 構文
 

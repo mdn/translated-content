@@ -9,7 +9,32 @@ l10n:
 
 **`text-decoration-skip-ink`** は [CSS](/ja/docs/Web/CSS) のプロパティで、上線や下線が文字のアセンダーやディセンダーを通過するときにどのように引くのかを指定します。
 
-{{EmbedInteractiveExample("pages/css/text-decoration-skip-ink.html")}}
+{{InteractiveExample("CSS Demo: text-decoration-skip-ink")}}
+
+```css interactive-example-choice
+text-decoration-skip-ink: auto;
+```
+
+```css interactive-example-choice
+text-decoration-skip-ink: none;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    <span class="transition-all" id="example-element">parapsychologists</span>
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font:
+    1.9em Georgia,
+    serif;
+  text-decoration: underline;
+}
+```
 
 `text-decoration-skip-ink` は {{cssxref("text-decoration")}} 一括指定の一部ではありません。
 

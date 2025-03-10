@@ -9,7 +9,43 @@ l10n:
 
 **`text-decoration`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、テキストの装飾的な線の表示を設定します。これは {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} およびさらに新しい {{cssxref("text-decoration-thickness")}} プロパティの一括指定です。
 
-{{EmbedInteractiveExample("pages/css/text-decoration.html")}}
+{{InteractiveExample("CSS Demo: text-decoration")}}
+
+```css interactive-example-choice
+text-decoration: underline;
+```
+
+```css interactive-example-choice
+text-decoration: underline dotted;
+```
+
+```css interactive-example-choice
+text-decoration: underline dotted red;
+```
+
+```css interactive-example-choice
+text-decoration: green wavy underline;
+```
+
+```css interactive-example-choice
+text-decoration: underline overline #ff3028;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+```
 
 文字列の装飾は、子孫の文字列要素に適用されます。つまり、要素に文字列装飾が指定されれば、子要素では装飾を外すことができません。例えば、`<p>This text has <em>some emphasized words</em> in it.</p>` というマークアップと、 `p { text-decoration: underline; }` のスタイル規則では、段落全体に下線が引かれます。 `em { text-decoration: none; }` のスタイル規則を適用しても変化せず、段落全体に下線が引かれたままになります。しかし、 `em { text-decoration: overline; }` の規則で "some emphasized words" に第二の装飾が施されます。
 

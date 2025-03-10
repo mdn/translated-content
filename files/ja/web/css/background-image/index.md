@@ -9,7 +9,43 @@ l10n:
 
 **`background-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に 1 つ以上の背景画像を設定します。
 
-{{EmbedInteractiveExample("pages/css/background-image.html")}}
+{{InteractiveExample("CSS Demo: background-image")}}
+
+```css interactive-example-choice
+background-image: url("/shared-assets/images/examples/lizard.png");
+```
+
+```css interactive-example-choice
+background-image:
+  url("/shared-assets/images/examples/lizard.png"),
+  url("/shared-assets/images/examples/star.png");
+```
+
+```css interactive-example-choice
+background-image:
+  url("/shared-assets/images/examples/star.png"),
+  url("/shared-assets/images/examples/lizard.png");
+```
+
+```css interactive-example-choice
+background-image:
+  linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+  url("/shared-assets/images/examples/lizard.png");
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 画像はお互いの上に積み重ねるコンテキストレイヤーに描画されます。最初に指定されたレイヤーが、ユーザーに対し最も手前にあるかのように描画されます。
 

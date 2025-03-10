@@ -9,7 +9,84 @@ l10n:
 
 **`list-style-type`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リスト項目要素のマーカーを設定します (円、文字、独自のカウンタースタイルなど)。
 
-{{EmbedInteractiveExample("pages/css/list-style-type.html")}}
+{{InteractiveExample("CSS Demo: list-style-type")}}
+
+```css interactive-example-choice
+list-style-type: space-counter;
+```
+
+```css interactive-example-choice
+list-style-type: disc;
+```
+
+```css interactive-example-choice
+list-style-type: circle;
+```
+
+```css interactive-example-choice
+list-style-type: "\1F44D";
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div>
+    <p>NASA Notable Missions</p>
+    <ul class="transition-all unhighlighted" id="example-element">
+      <li>Apollo</li>
+      <li>Hubble</li>
+      <li>Chandra</li>
+      <li>Cassini-Huygens</li>
+    </ul>
+  </div>
+  <hr />
+  <div class="note">
+    <p>
+      <code>space-counter</code> is defined with
+      <a
+        href="//developer.mozilla.org/docs/Web/CSS/@counter-style"
+        target="_parent"
+        ><code>@counter-style</code></a
+      >
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  font-size: 1.2rem;
+}
+
+#example-element {
+  width: 100%;
+  background: #be094b;
+  color: white;
+}
+
+section {
+  text-align: left;
+  flex-direction: column;
+}
+
+hr {
+  width: 50%;
+  color: lightgray;
+  margin: 0.5em;
+}
+
+.note {
+  font-size: 0.8rem;
+}
+
+.note a {
+  color: #009e5f;
+}
+
+@counter-style space-counter {
+  symbols: "\1F680" "\1F6F8" "\1F6F0" "\1F52D";
+  suffix: " ";
+}
+```
 
 マーカーは [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_キーワード)となり、適用先の要素の[色](/ja/docs/Web/CSS/color_value)の計算値と同じになります。
 

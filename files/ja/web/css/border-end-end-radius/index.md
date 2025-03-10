@@ -23,7 +23,47 @@ border-end-end-radius: revert;
 border-end-end-radius: unset;
 ```
 
-{{EmbedInteractiveExample("pages/css/border-end-end-radius.html")}}
+{{InteractiveExample("CSS Demo: border-end-end-radius")}}
+
+```css interactive-example-choice
+border-end-end-radius: 80px 80px;
+```
+
+```css interactive-example-choice
+border-end-end-radius: 250px 100px;
+direction: rtl;
+```
+
+```css interactive-example-choice
+border-end-end-radius: 50%;
+writing-mode: vertical-lr;
+```
+
+```css interactive-example-choice
+border-end-end-radius: 50%;
+writing-mode: vertical-rl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a bottom right rounded corner.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  color: white;
+  padding: 10px;
+}
+```
 
 このプロパティは、要素の block-end と inline-end の間の角に影響します。すなわち、書字方向が `horizontal-tb` で `ltr` の方向であれば、 {{CSSxRef("border-bottom-right-radius")}} プロパティに対応します。
 

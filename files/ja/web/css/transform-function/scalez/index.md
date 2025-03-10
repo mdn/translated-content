@@ -9,7 +9,93 @@ l10n:
 
 **`scaleZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を Z 軸に沿って変倍する座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-{{EmbedInteractiveExample("pages/css/function-scaleZ.html")}}
+{{InteractiveExample("CSS Demo: scaleZ()")}}
+
+```css interactive-example-choice
+transform: scaleZ(1);
+```
+
+```css interactive-example-choice
+transform: scaleZ(1.4);
+```
+
+```css interactive-example-choice
+transform: scaleZ(0.5);
+```
+
+```css interactive-example-choice
+transform: scaleZ(-1.4);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+  perspective: 800px;
+  perspective-origin: 150% 150%;
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  perspective: 550px;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgba(210, 0, 0, 0.7);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  background: rgba(0, 0, 210, 0.7);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+  background: rgba(210, 210, 0, 0.7);
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgba(210, 0, 210, 0.7);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 これは要素のそれぞれの点の Z 座標を一定の係数で修正しますが、係数が 1 である場合はこの関数が恒等変換になるので例外です。変倍は等方性ではなく、要素の角度は保存されません。 `scaleZ(-1)` は[軸の線対称](https://en.wikipedia.org/wiki/Axial_symmetry)を定義し、Z 軸は ({{cssxref("transform-origin")}} プロパティの指定通りに) 原点を通過します。
 

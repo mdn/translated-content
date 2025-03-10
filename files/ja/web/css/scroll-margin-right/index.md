@@ -7,7 +7,70 @@ slug: Web/CSS/scroll-margin-right
 
 `scroll-margin-right` プロパティは、スクロールスナップ領域の右側のマージンを定義し、このボックスをスナップポートにスナップするために使用されます。スクロールスナップ領域は変換された境界ボックスによって定義され、四角形の囲みボックスを探して (スクロールコンテナーの座標空間における軸に合わせられ)、それから指定された外部距離が追加されます。
 
-{{EmbedInteractiveExample("pages/css/scroll-margin-right.html")}}
+{{InteractiveExample("CSS Demo: scroll-margin-right")}}
+
+```css interactive-example-choice
+scroll-margin-right: 0;
+```
+
+```css interactive-example-choice
+scroll-margin-right: 20px;
+```
+
+```css interactive-example-choice
+scroll-margin-right: 2em;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="scroller">
+    <div>1</div>
+    <div id="example-element">2</div>
+    <div>3</div>
+  </div>
+  <div class="info">Scroll »</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  flex-wrap: wrap;
+}
+
+.default-example .info {
+  width: 100%;
+  padding: 0.5em 0;
+  font-size: 90%;
+}
+
+.scroller {
+  text-align: left;
+  width: 250px;
+  height: 250px;
+  overflow-x: scroll;
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid black;
+  scroll-snap-type: x mandatory;
+}
+
+.scroller > div {
+  flex: 0 0 250px;
+  width: 250px;
+  background-color: rebeccapurple;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: end;
+}
+
+.scroller > div:nth-child(even) {
+  background-color: #fff;
+  color: rebeccapurple;
+}
+```
 
 ## 構文
 

@@ -9,7 +9,37 @@ l10n:
 
 **`radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、二つ以上の色の連続的な推移が原点から放射状に広がる画像を生成します。形状は円形または楕円形になります。関数の結果は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("&lt;image&gt;")}} の特殊形です。
 
-{{EmbedInteractiveExample("pages/css/function-radial-gradient.html")}}
+{{InteractiveExample("CSS Demo: radial-gradient()")}}
+
+```css interactive-example-choice
+background: radial-gradient(#e66465, #9198e5);
+```
+
+```css interactive-example-choice
+background: radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
+```
+
+```css interactive-example-choice
+background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
+```
+
+```css interactive-example-choice
+background:
+  radial-gradient(ellipse at top, #e66465, transparent),
+  radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 ## 構文
 

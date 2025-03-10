@@ -9,7 +9,57 @@ l10n:
 
 **`margin-inline-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のインライン方向の論理的な末尾側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。これは {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}} の何れかのプロパティに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
 
-{{EmbedInteractiveExample("pages/css/margin-inline-end.html")}}
+{{InteractiveExample("CSS Demo: margin-inline-end")}}
+
+```css interactive-example-choice
+margin-inline-end: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+margin-inline-end: 20px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+margin-inline-end: 20%;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="col">One</div>
+    <div class="col transition-all" id="example-element">Two</div>
+    <div class="col">Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+.col {
+  width: 33.33%;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  color: white;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## 構文
 

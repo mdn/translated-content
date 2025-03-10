@@ -9,7 +9,33 @@ l10n:
 
 **`rotateX()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素の形を変化させずに横座標 (水平軸) の周りを回転させる座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-{{EmbedInteractiveExample("pages/css/function-rotateX.html")}}
+{{InteractiveExample("CSS Demo: rotateX()")}}
+
+```css interactive-example-choice
+transform: rotateX(0);
+```
+
+```css interactive-example-choice
+transform: rotateX(45deg);
+```
+
+```css interactive-example-choice
+transform: rotateX(-0.2turn);
+```
+
+```css interactive-example-choice
+transform: rotateX(3.142rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 回転軸は、CSS の {{ cssxref("transform-origin") }} プロパティで定義される原点を通ります。
 

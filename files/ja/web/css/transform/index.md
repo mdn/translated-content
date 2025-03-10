@@ -10,7 +10,41 @@ l10n:
 **`transform`** は [CSS](/ja/docs/Web/CSS) のプロパティで、与えられた要素を回転、拡大縮小、傾斜、移動することできます。
 これは、 CSS の[視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)の座標空間を変更します。
 
-{{EmbedInteractiveExample("pages/css/transform.html")}}
+{{InteractiveExample("CSS Demo: transform")}}
+
+```css interactive-example-choice
+transform: matrix(1, 2, 3, 4, 5, 6);
+```
+
+```css interactive-example-choice
+transform: translate(120px, 50%);
+```
+
+```css interactive-example-choice
+transform: scale(2, 0.5);
+```
+
+```css interactive-example-choice
+transform: rotate(0.5turn);
+```
+
+```css interactive-example-choice
+transform: skew(30deg, 20deg);
+```
+
+```css interactive-example-choice
+transform: scale(0.5) translate(-100%, -100%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 このプロパティに `none` とは異なる値が設定されていると、[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)が作成されます。
 この場合、その要素はその中に含まれる `position: fixed;` または `position: absolute;` であるすべての要素の[包含ブロック](/ja/docs/Web/CSS/Containing_block)として扱われます。

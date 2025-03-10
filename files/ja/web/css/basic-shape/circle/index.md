@@ -9,7 +9,45 @@ l10n:
 
 **`circle()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Types)の一つです。
 
-{{EmbedInteractiveExample("pages/css/function-circle.html")}}
+{{InteractiveExample("CSS Demo: circle()")}}
+
+```css interactive-example-choice
+clip-path: circle(50px);
+```
+
+```css interactive-example-choice
+clip-path: circle(6rem at right center);
+```
+
+```css interactive-example-choice
+clip-path: circle(10% at 2rem 90%);
+```
+
+```css interactive-example-choice
+clip-path: circle(closest-side at 5rem 6rem);
+```
+
+```css interactive-example-choice
+clip-path: circle(farthest-side);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## 構文
 

@@ -9,7 +9,49 @@ l10n:
 
 **`place-self`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、アイテムのブロック軸およびインライン軸に沿ったアイテムの配置 (すなわち {{cssxref("align-self")}} および {{cssxref("justify-self")}} プロパティ) を一度に指定することができます。このプロパティは、ブロックレベルのボックス、絶対位置指定のボックス、グリッドアイテムに適用されます。 2 番目の値が設定されていない場合、最初の値がそちらにも使用されます。
 
-{{EmbedInteractiveExample("pages/css/place-self.html")}}
+{{InteractiveExample("CSS Demo: place-self")}}
+
+```css interactive-example-choice
+place-self: stretch center;
+```
+
+```css interactive-example-choice
+place-self: center start;
+```
+
+```css interactive-example-choice
+place-self: start end;
+```
+
+```css interactive-example-choice
+place-self: end center;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 220px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## 構成要素のプロパティ
 

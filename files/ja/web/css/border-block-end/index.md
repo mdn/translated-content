@@ -7,7 +7,46 @@ slug: Web/CSS/border-block-end
 
 **`border-block-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理的なブロック方向の末尾側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)です。
 
-{{EmbedInteractiveExample("pages/css/border-block-end.html")}}
+{{InteractiveExample("CSS Demo: border-block-end")}}
+
+```css interactive-example-choice
+border-block-end: solid;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-end: dashed red;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-block-end: 1rem solid;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-end: thick double #32a1ce;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## 構成要素のプロパティ
 

@@ -10,7 +10,93 @@ l10n:
 **`scale3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 3D 空間において要素を変倍する座標変換を定義します。
 変倍量はベクトルで定義されるため、それぞれの次元ごとに異なる倍率で変倍することができます。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-{{EmbedInteractiveExample("pages/css/function-scale3d.html")}}
+{{InteractiveExample("CSS Demo: scale3d()")}}
+
+```css interactive-example-choice
+transform: scale3d(1, 1, 1);
+```
+
+```css interactive-example-choice
+transform: scale3d(1.3, 1.3, 1.3);
+```
+
+```css interactive-example-choice
+transform: scale3d(0.5, 1, 1.7);
+```
+
+```css interactive-example-choice
+transform: scale3d(-1.4, 0.4, 0.7);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+  perspective: 800px;
+  perspective-origin: 150% 150%;
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  perspective: 550px;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgba(210, 0, 0, 0.7);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  background: rgba(0, 0, 210, 0.7);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+  background: rgba(210, 210, 0, 0.7);
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgba(210, 0, 210, 0.7);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 この変倍座標変換は、三次元ののベクトルであることが特徴です。この座標は、それぞれの方向にどれだけ変倍を行うかを定義します。3 つすべての座標が等しい場合、変倍は一様 (_等方的_) で、要素の形が保たれます (これは[相似変換](https://ja.wikipedia.org/wiki/%E8%A1%8C%E5%88%97%E3%81%AE%E7%9B%B8%E4%BC%BC)です)。
 

@@ -9,7 +9,46 @@ l10n:
 
 **`border-width`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の幅を設定します。
 
-{{EmbedInteractiveExample("pages/css/border-width.html")}}
+{{InteractiveExample("CSS Demo: border-width")}}
+
+```css interactive-example-choice
+border-width: thick;
+```
+
+```css interactive-example-choice
+border-width: 1em;
+```
+
+```css interactive-example-choice
+border-width: 4px 1.25em;
+```
+
+```css interactive-example-choice
+border-width: 2ex 1.25ex 0.5ex;
+```
+
+```css interactive-example-choice
+border-width: 0 4px 8px 12px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 構成要素のプロパティ
 

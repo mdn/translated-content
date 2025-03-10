@@ -11,7 +11,35 @@ l10n:
 
 自動ハイフネーション、ソフトハイフネーションのどちらでも、指定された hyphenate-character の値に従って表示されます。
 
-{{EmbedInteractiveExample("pages/css/hyphenate-character.html")}}
+{{InteractiveExample("CSS Demo: hyphenate-character")}}
+
+```css interactive-example-choice
+hyphenate-character: auto;
+```
+
+```css interactive-example-choice
+hyphenate-character: "=";
+```
+
+```css interactive-example-choice
+hyphenate-character: "—";
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">An extra­ordinarily long English word!</p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 2px dashed #999;
+  font-size: 1.5rem;
+  text-align: left;
+  width: 7rem;
+  hyphens: auto;
+}
+```
 
 ## 構文
 

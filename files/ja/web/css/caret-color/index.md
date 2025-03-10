@@ -9,7 +9,34 @@ l10n:
 
 **`caret-color`** は CSS のプロパティで、次に入力された文字が挿入される位置を示す可視マーカーである**入力キャレット**の色を設定します。これは**テキスト入力カーソル**と呼ばれることもあります。キャレットは {{HTMLElement("input")}} または [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable)ML/Global_attributes#contenteditable) 属性のついた要素などの中に現れます。ふつうキャレットは細い垂直線で、気づきやすくなるように点滅します。既定では黒ですが、このプロパティで色を変更することができます。
 
-{{EmbedInteractiveExample("pages/css/caret-color.html")}}
+{{InteractiveExample("CSS Demo: caret-color")}}
+
+```css interactive-example-choice
+caret-color: red;
+```
+
+```css interactive-example-choice
+caret-color: auto;
+```
+
+```css interactive-example-choice
+caret-color: transparent;
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <div>
+    <p>Enter text in the field to see the caret:</p>
+    <p><input id="example-element" type="text" /></p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.2rem;
+}
+```
 
 なお、入力キャレットはキャレットのうちの一種類にすぎません。例えば、多くのブラウザーには「ナビゲーションキャレット」があり、入力キャレットと同様に動きますが、編集できないテキストの中を移動できるものがあります。一方、マウスカーソルが、 {{cssxref("cursor")}} プロパティが `auto` のときにテキスト上に移動した場合や、 `cursor` プロパティが `text` または `vertical-text` の場合に、キャレットのように見えることがありますが、キャレットではありません (カーソルです)。
 

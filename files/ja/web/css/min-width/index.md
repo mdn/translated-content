@@ -9,7 +9,42 @@ l10n:
 
 **`min-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最小幅を設定します。これは {{Cssxref("width")}} プロパティの[使用値](/ja/docs/Web/CSS/used_value)が、`min-width` で指定した値を下回ることを防ぎます。
 
-{{EmbedInteractiveExample("pages/css/min-width.html")}}
+{{InteractiveExample("CSS Demo: min-width")}}
+
+```css interactive-example-choice
+min-width: 150px;
+```
+
+```css interactive-example-choice
+min-width: 20em;
+```
+
+```css interactive-example-choice
+min-width: 75%;
+```
+
+```css interactive-example-choice
+min-width: 40ch;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Change the minimum width.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 `min-width` の値が {{Cssxref("max-width")}} および {{Cssxref("width")}} の値より大きい場合は、`min-width` の値が要素の幅になります。
 

@@ -9,7 +9,48 @@ l10n:
 
 **`flex-direction`** は [CSS](/ja/docs/Web/CSS) のプロパティで、主軸の方向や向き（通常または逆方向）を定義することにより、フレックスコンテナー内でフレックスアイテムを配置する方法を設定します。
 
-{{EmbedInteractiveExample("pages/css/flex-direction.html")}}
+{{InteractiveExample("CSS Demo: flex-direction")}}
+
+```css interactive-example-choice
+flex-direction: row;
+```
+
+```css interactive-example-choice
+flex-direction: row-reverse;
+```
+
+```css interactive-example-choice
+flex-direction: column;
+```
+
+```css interactive-example-choice
+flex-direction: column-reverse;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div>Item One</div>
+    <div>Item Two</div>
+    <div>Item Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 80%;
+  display: flex;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  width: 60px;
+  margin: 10px;
+}
+```
 
 なお、 `row` および `row-reverse` の値は、フレックスコンテナーの書字方向に影響されます。 [`dir`](/ja/docs/Web/HTML/Global_attributes/dir) 属性が `ltr` である場合は、 `row` は左から右へ向かう水平軸を表し、また `row-reverse` は右から左へ向かう水平軸を表します。一方、 `dir` 属性が `rtl` である場合は、 `row` は右から左へ向かう水平軸を表し、また `row-reverse` は左から右へ向かう水平軸を表します。
 

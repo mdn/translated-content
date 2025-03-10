@@ -7,7 +7,42 @@ slug: Web/CSS/border-block
 
 The **`border-block`** は [CSS](/ja/docs/Web/CSS) のプロパティで、論理的なブロック方向のそれぞれの境界プロパティをスタイルシートの 1 ヶ所で設定する[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)です。
 
-{{EmbedInteractiveExample("pages/css/border-block.html")}}
+{{InteractiveExample("CSS Demo: border-block")}}
+
+```css interactive-example-choice
+border-block: solid;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block: dashed red;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-block: 1rem solid;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 `border-block` は {{cssxref("border-block-width")}}, {{cssxref("border-block-style")}}, {{cssxref("border-block-color")}} のうちの1つ以上の値を、インライン方向の先頭側と末尾側の両方に対して一度に設定するために使用することができます。割り当て先の物理的な境界は、要素の書字方向によって決まります。 {{cssxref("border-top")}} と {{cssxref("border-bottom")}}、または {{cssxref("border-right")}} と {{cssxref("border-left")}} のどちらかの組み合わせに対して、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に設定された値に応じて対応づけられます。
 

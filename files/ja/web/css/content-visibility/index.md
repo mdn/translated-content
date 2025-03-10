@@ -11,7 +11,48 @@ l10n:
 
 > **メモ:** {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} イベントは、 `content-visibility: auto` が設定されている要素で、そのレンダリング作業が始まるか、またはスキップされなくなったときに発行されます。これは、アプリのコードがレンダリング処理（例えば {{htmlelement("canvas")}} に描画する）を不要なときに開始または停止する便利な方法を提供し、処理能力を節約します。
 
-{{EmbedInteractiveExample("pages/css/content-visibility.html")}}
+{{InteractiveExample("CSS Demo: content-visibility")}}
+
+```css interactive-example-choice
+content-visibility: visible;
+```
+
+```css interactive-example-choice
+content-visibility: hidden;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="container" id="example-element">
+    <div class="child">
+      <span>This is an inner div</span>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.container {
+  width: 140px;
+  height: 140px;
+  border: 3px solid rgb(64, 28, 163);
+  background-color: rgb(135, 136, 184);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.child {
+  border: 3px solid rgb(64, 28, 163);
+  background-color: wheat;
+  color: black;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+```
 
 ## 構文
 

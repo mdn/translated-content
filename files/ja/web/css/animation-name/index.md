@@ -9,7 +9,68 @@ l10n:
 
 **`animation-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に適用されるアニメーションを記述する 1 つまたは複数の {{cssxref("@keyframes")}} アットルールの名前を指定します。複数の `@keyframe` アットルールをカンマ区切りの文字列で指定します。指定した名前がどの `@keyframe` アットルールにも一致しない場合、プロパティはアニメーションしません。
 
-{{EmbedInteractiveExample("pages/css/animation-name.html")}}
+{{InteractiveExample("CSS Demo: animation-name")}}
+
+```css interactive-example-choice
+animation-name: none;
+```
+
+```css interactive-example-choice
+animation-name: slide;
+```
+
+```css interactive-example-choice
+animation-name: bounce;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div class="animating" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  animation-direction: alternate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  background-color: #1766aa;
+  border-radius: 50%;
+  border: 5px solid #333;
+  color: white;
+  height: 150px;
+  margin: auto;
+  margin-left: 0;
+  width: 150px;
+}
+
+@keyframes slide {
+  from {
+    background-color: orange;
+    color: black;
+    margin-left: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-left: 80%;
+  }
+}
+
+@keyframes bounce {
+  from {
+    background-color: orange;
+    color: black;
+    margin-top: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-top: 40%;
+  }
+}
+```
 
 アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
 

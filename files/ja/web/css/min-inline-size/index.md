@@ -7,7 +7,44 @@ slug: Web/CSS/min-inline-size
 
 **`min-inline-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、書字方向に応じて要素ブロックの水平または垂直方向の最小の寸法を定義します。これは {{cssxref("min-width")}} または {{cssxref("min-height")}} のどちらかのプロパティと、 {{cssxref("writing-mode")}} の値に応じて対応します。
 
-{{EmbedInteractiveExample("pages/css/min-inline-size.html")}}
+{{InteractiveExample("CSS Demo: min-inline-size")}}
+
+```css interactive-example-choice
+min-inline-size: 200px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+min-inline-size: 200px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+min-inline-size: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+min-inline-size: 75%;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Change min-inline-size</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## 構文
 

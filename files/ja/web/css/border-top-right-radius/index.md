@@ -9,7 +9,46 @@ l10n:
 
 **`border-top-right-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、角の曲率を定義する楕円の半径 (または半長軸と半短軸) を指定することで、要素の右上の角を丸めます。
 
-{{EmbedInteractiveExample("pages/css/border-top-right-radius.html")}}
+{{InteractiveExample("CSS Demo: border-top-right-radius")}}
+
+```css interactive-example-choice
+border-top-right-radius: 80px 80px;
+```
+
+```css interactive-example-choice
+border-top-right-radius: 250px 100px;
+```
+
+```css interactive-example-choice
+border-top-right-radius: 50%;
+```
+
+```css interactive-example-choice
+border-top-right-radius: 50%;
+border: black 10px double;
+background-clip: content-box;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a top right rounded corner.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  color: white;
+  padding: 10px;
+}
+```
 
 丸みは円または楕円にすることができ、値のうちの一つが `0` であれば、丸めは行われずに角は四角くなります。
 

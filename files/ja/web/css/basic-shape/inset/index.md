@@ -9,7 +9,41 @@ l10n:
 
 **`inset()`** は [CSS](/ja/docs/Web/CSS) の関数は、参照ボックスの各辺から指定された内側への距離に矩形を定義します。これは、 {{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Types)の一つを定義するために使用される基本図形関数です。
 
-{{EmbedInteractiveExample("pages/css/function-inset.html")}}
+{{InteractiveExample("CSS Demo: inset()")}}
+
+```css interactive-example-choice
+clip-path: inset(30px);
+```
+
+```css interactive-example-choice
+clip-path: inset(1rem 2rem 3rem 4rem);
+```
+
+```css interactive-example-choice
+clip-path: inset(20% 30% round 20px);
+```
+
+```css interactive-example-choice
+clip-path: inset(4rem 20% round 1rem 2rem 3rem 4rem);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## 構文
 

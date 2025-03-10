@@ -9,7 +9,50 @@ l10n:
 
 **`border-image-source`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[境界画像](/ja/docs/Web/CSS/border-image)に使われる元の画像を設定します。
 
-{{EmbedInteractiveExample("pages/css/border-image-source.html")}}
+{{InteractiveExample("CSS Demo: border-image-source")}}
+
+```css interactive-example-choice
+border-image-source: url("/shared-assets/images/examples/border-diamonds.png");
+```
+
+```css interactive-example-choice
+border-image-source: url("/shared-assets/images/examples/border-stars.png");
+```
+
+```css interactive-example-choice
+border-image-source: repeating-linear-gradient(
+  45deg,
+  transparent,
+  #4d9f0c 20px
+);
+```
+
+```css interactive-example-choice
+border-image-source: none;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 元の画像を最終的な境界画像に動的に適用する上で、複数の領域に分割するために {{cssxref("border-image-slice")}} プロパティが使用されます。
 

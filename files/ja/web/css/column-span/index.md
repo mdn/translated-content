@@ -9,7 +9,51 @@ l10n:
 
 **`column-span`** は [CSS](/ja/docs/Web/CSS) のプロパティで、値に `all` を設定した場合、段組みレイアウトで要素をすべての段にまたがらせることができます。
 
-{{EmbedInteractiveExample("pages/css/column-span.html")}}
+{{InteractiveExample("CSS Demo: column-span")}}
+
+```css interactive-example-choice
+column-span: none;
+```
+
+```css interactive-example-choice
+column-span: all;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="multicol-element">
+    <p>
+      London. Michaelmas term lately over, and the Lord Chancellor sitting in
+      Lincoln's Inn Hall.
+    </p>
+    <div id="example-element">Spanner?</div>
+    <p>
+      Implacable November weather. As much mud in the streets as if the waters
+      had but newly retired from the face of the earth, and it would not be
+      wonderful to meet a Megalosaurus, forty feet long or so, waddling like an
+      elephantine lizard up Holborn Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.multicol-element {
+  width: 100%;
+  text-align: left;
+  column-count: 3;
+}
+
+.multicol-element p {
+  margin: 0;
+}
+
+#example-element {
+  background-color: rebeccapurple;
+  padding: 10px;
+  color: #fff;
+}
+```
 
 複数の段にまたがる要素は**段抜き要素** (spanning element) と呼びます。
 

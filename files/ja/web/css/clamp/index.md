@@ -9,7 +9,28 @@ slug: Web/CSS/clamp
 
 `clamp(MIN, VAL, MAX)` は `{{CSSxRef("max()")}}(MIN, {{CSSxRef("min()")}}(VAL, MAX))` と同等です。
 
-{{EmbedInteractiveExample("pages/css/function-clamp.html")}}
+{{InteractiveExample("CSS Demo: clamp()")}}
+
+```css interactive-example-choice
+font-size: clamp(1rem, 2.5vw, 2rem);
+```
+
+```css interactive-example-choice
+font-size: clamp(1.5rem, 2.5vw, 4rem);
+```
+
+```css interactive-example-choice
+font-size: clamp(1rem, 10vw, 2rem);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    The font-size of this text varies depending on the base font of the page,
+    and the size of the viewport.
+  </div>
+</section>
+```
 
 これらの例のように、フォントの大きさに `clamp()` を使用すると、ビューポートの大きさに合わせてフォントの大きさを設定することができますが、最小フォントサイズを下回ったり、最大フォントサイズを上回ったりすることはありません。これは [Fluid Typography](https://css-tricks.com/snippets/css/fluid-typography/) のコードと同じ効果がありますが、1 行で済み、メディアクエリーも使用しません。
 

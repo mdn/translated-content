@@ -9,7 +9,46 @@ slug: Web/CSS/max-inline-size
 
 書字方向が垂直方向であった場合、 `max-inline-size` の値は要素の最大の高さに対応します。そうでなければ、要素の最大幅に対応します。関連プロパティとして、 {{cssxref("max-block-size")}} が要素のもう一方の寸法を定義します。
 
-{{EmbedInteractiveExample("pages/css/max-inline-size.html")}}
+{{InteractiveExample("CSS Demo: max-inline-size")}}
+
+```css interactive-example-choice
+max-inline-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-inline-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+max-inline-size: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-inline-size: 75%;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the max-inline-size.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## 構文
 

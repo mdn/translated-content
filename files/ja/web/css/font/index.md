@@ -9,7 +9,68 @@ l10n:
 
 **`font`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素のフォントの様々なプロパティをすべて設定します。また、要素のフォントにシステムフォントを設定することもできます。
 
-{{EmbedInteractiveExample("pages/css/font.html")}}
+{{InteractiveExample("CSS Demo: font")}}
+
+```css interactive-example-choice
+font:
+  1.2rem "Fira Sans",
+  sans-serif;
+```
+
+```css interactive-example-choice
+font:
+  italic 1.2rem "Fira Sans",
+  serif;
+```
+
+```css interactive-example-choice
+font: italic small-caps bold 16px/2 cursive;
+```
+
+```css interactive-example-choice
+font: small-caps bold 24px/1 sans-serif;
+```
+
+```css interactive-example-choice
+font: caption;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Italic"),
+    url("/shared-assets/fonts/FiraSans-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+section {
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+```
 
 他の一括指定プロパティ同様、個別の値が指定されなかった場合は、それぞれの初期値が設定されます (おそらく一括指定ではないプロパティを使用して設定された以前の値を上書きします)。 `font` によって直接設定できない個別指定の {{cssxref("font-size-adjust")}}, {{cssxref("font-kerning")}} も初期値に設定されます。
 

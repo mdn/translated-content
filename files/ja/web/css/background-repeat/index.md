@@ -9,7 +9,45 @@ l10n:
 
 **`background-repeat`** は [CSS](/ja/docs/Web/CSS) のプロパティで、背景画像をどのように繰り返すかを設定します。背景画像は水平軸方向と垂直軸方向に繰り返したり、まったく繰り返さないようにしたりすることができます。
 
-{{EmbedInteractiveExample("pages/css/background-repeat.html")}}
+{{InteractiveExample("CSS Demo: background-repeat")}}
+
+```css interactive-example-choice
+background-repeat: repeat-x;
+```
+
+```css interactive-example-choice
+background-repeat: repeat;
+```
+
+```css interactive-example-choice
+background-repeat: space;
+```
+
+```css interactive-example-choice
+background-repeat: round;
+```
+
+```css interactive-example-choice
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-repeat: space repeat;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background: #ccc url("/shared-assets/images/examples/moon.jpg") center / 120px;
+  min-width: 100%;
+  min-height: 100%;
+}
+```
 
 ## 構文
 

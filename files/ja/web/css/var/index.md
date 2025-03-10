@@ -7,7 +7,41 @@ slug: Web/CSS/var
 
 [CSS](/ja/docs/Web/CSS) の **`var()`** 関数は、他のプロパティの値の一部に代わって[カスタムプロパティ](/ja/docs/Web/CSS/--*) (「CSS 変数」と呼ばれることもあります) の値を挿入できます。
 
-{{EmbedInteractiveExample("pages/css/var.html")}}
+{{InteractiveExample("CSS Demo: var()")}}
+
+```css interactive-example-choice
+border-color: var(--color-a);
+```
+
+```css interactive-example-choice
+border-color: var(--color-b);
+```
+
+```css interactive-example-choice
+border-color: var(--color-c);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">
+    Three color options have been set on the :root use these to change the
+    border color.
+  </div>
+</section>
+```
+
+```css interactive-example
+:root {
+  --color-a: pink;
+  --color-b: green;
+  --color-c: rebeccapurple;
+}
+
+#example-element {
+  border: 10px solid #000;
+  padding: 10px;
+}
+```
 
 `var()` 関数は、プロパティ名、セレクター、またはプロパティ値以外のところでは使用できません。 (使用してしまうと、無効な構文が生成されるか、もしくはその変数に接続していない値が生成されてしまいます。)
 

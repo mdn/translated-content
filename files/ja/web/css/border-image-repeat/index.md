@@ -9,7 +9,50 @@ l10n:
 
 [CSS](/ja/docs/Web/CSS) の **`border-image-repeat`** プロパティは、元画像の[辺の領域](/ja/docs/Web/CSS/border-image-slice#edge-regions)と[中央の領域](/ja/docs/Web/CSS/border-image-slice#middle-region)を、どうやって要素の[境界画像](/ja/docs/Web/CSS/border-image)に合うように合わせるかを定義します。 border-image-slice プロパティでキーワード "fill" を使用することで、中央の領域を表示することができます。
 
-{{EmbedInteractiveExample("pages/css/border-image-repeat.html")}}
+{{InteractiveExample("CSS Demo: border-image-repeat")}}
+
+```css interactive-example-choice
+border-image-repeat: stretch;
+```
+
+```css interactive-example-choice
+border-image-repeat: repeat;
+```
+
+```css interactive-example-choice
+border-image-repeat: round;
+```
+
+```css interactive-example-choice
+border-image-repeat: space;
+```
+
+```css interactive-example-choice
+border-image-repeat: round stretch;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 ## 構文
 

@@ -9,7 +9,43 @@ l10n:
 
 **`column-rule-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の太さを設定します。
 
-{{EmbedInteractiveExample("pages/css/column-rule-width.html")}}
+{{InteractiveExample("CSS Demo: column-rule-width")}}
+
+```css interactive-example-choice
+column-rule-width: thin;
+```
+
+```css interactive-example-choice
+column-rule-width: medium;
+```
+
+```css interactive-example-choice
+column-rule-width: thick;
+```
+
+```css interactive-example-choice
+column-rule-width: 12px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  columns: 3;
+  column-rule: solid;
+  text-align: left;
+}
+```
 
 ## 構文
 

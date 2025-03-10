@@ -11,7 +11,68 @@ l10n:
 
 正式には、 **`display`** プロパティは要素の内側と外側の表示種別を設定します。外側の型は要素の[フローレイアウト](/ja/docs/Web/CSS/CSS_flow_layout)への参加方法を設定し、内側の型は子要素のレイアウトを設定します。 `display` のいくつかの値は、それ自身の個別の仕様書で完全に定義されています。例えば、 `display: flex` が宣言されたときに何が起こるかの詳細は、 CSS Flexible Box Model 仕様書で定義されています。
 
-{{EmbedInteractiveExample("pages/css/display.html")}}
+{{InteractiveExample("CSS Demo: display")}}
+
+```css interactive-example-choice
+display: block;
+```
+
+```css interactive-example-choice
+display: inline-block;
+```
+
+```css interactive-example-choice
+display: none;
+```
+
+```css interactive-example-choice
+display: flex;
+```
+
+```css interactive-example-choice
+display: grid;
+```
+
+```html interactive-example
+<p>
+  Apply different <code>display</code> values on the dashed orange-bordered
+  <code>div</code>, which contains three child elements.
+</p>
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    Some text A.
+    <div id="example-element">
+      <div class="child">Child 1</div>
+      <div class="child">Child 2</div>
+      <div class="child">Child 3</div>
+    </div>
+    Some text B.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  width: 100%;
+  height: 100%;
+}
+
+code {
+  background: #8888;
+}
+
+#example-element {
+  border: 3px dashed orange;
+}
+
+.child {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #ccccff;
+  border: 1px solid #ababab;
+  color: black;
+}
+```
 
 ## 構文
 

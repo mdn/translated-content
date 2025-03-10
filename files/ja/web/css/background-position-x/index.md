@@ -9,7 +9,42 @@ l10n:
 
 **`background-position-x`** は [CSS](/ja/docs/Web/CSS) のプロパティで、各背景画像における水平の初期位置を設定します。位置は {{cssxref("background-origin")}} によって設定された位置レイヤーに対する相対位置です。
 
-{{EmbedInteractiveExample("pages/css/background-position-x.html")}}
+{{InteractiveExample("CSS Demo: background-position-x")}}
+
+```css interactive-example-choice
+background-position-x: left;
+```
+
+```css interactive-example-choice
+background-position-x: center;
+```
+
+```css interactive-example-choice
+background-position-x: 25%;
+```
+
+```css interactive-example-choice
+background-position-x: 2rem;
+```
+
+```css interactive-example-choice
+background-position-x: right 32px;
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: navajowhite;
+  background-image: url("/shared-assets/images/examples/star.png");
+  background-repeat: no-repeat;
+  height: 100%;
+}
+```
 
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 

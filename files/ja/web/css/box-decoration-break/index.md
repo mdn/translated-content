@@ -9,7 +9,46 @@ l10n:
 
 **`box-decoration-break`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[断片](/ja/docs/Web/CSS/CSS_fragmentation)が複数の行、段、ページに渡る場合に描画する方法を指定します。
 
-{{EmbedInteractiveExample("pages/css/box-decoration-break.html")}}
+{{InteractiveExample("CSS Demo: box-decoration-break")}}
+
+```css interactive-example-choice
+-webkit-box-decoration-break: slice;
+box-decoration-break: slice;
+```
+
+```css interactive-example-choice
+-webkit-box-decoration-break: clone;
+box-decoration-break: clone;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-container">
+    <span id="example-element">This text breaks across multiple lines.</span>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-container {
+  width: 14rem;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #6f6f6f, #000);
+  color: white;
+  box-shadow:
+    8px 8px 10px 0 #ff1492,
+    -5px -5px 5px 0 #00f,
+    5px 5px 15px 0 #ff0;
+  padding: 0 1em;
+  border-radius: 16px;
+  border-style: solid;
+  margin-left: 10px;
+  font: 24px sans-serif;
+  line-height: 2;
+}
+```
 
 指定された値は、次のプロパティの表示方法に影響を与えます。
 

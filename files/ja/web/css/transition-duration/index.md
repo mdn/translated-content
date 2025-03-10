@@ -9,7 +9,51 @@ l10n:
 
 **`transition-duration`** は [CSS](/ja/docs/Web/CSS) のプロパティで、トランジションによるアニメーションが完了するまでの再生時間を秒数またはミリ秒数で指定します。既定値は `0s` であり、これはアニメーションを実行しないことを示します。
 
-{{EmbedInteractiveExample("pages/css/transition-duration.html")}}
+{{InteractiveExample("CSS Demo: transition-duration")}}
+
+```css interactive-example-choice
+transition-duration: 500ms;
+transition-property: margin-right;
+```
+
+```css interactive-example-choice
+transition-duration: 2s;
+transition-property: background-color;
+```
+
+```css interactive-example-choice
+transition-duration: 2s;
+transition-property: margin-right, color;
+```
+
+```css interactive-example-choice
+transition-duration: 3s, 1s;
+transition-property: margin-right, color;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">Hover to see<br />the transition.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #e4f0f5;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 1em monospace;
+  width: 100%;
+  transition: margin-right 2s;
+}
+
+#default-example:hover > #example-element {
+  background-color: #909;
+  color: #fff;
+  margin-right: 40%;
+}
+```
 
 複数の再生時間を指定することができます; それぞれの再生時間は、マスターリストとして機能する {{ cssxref("transition-property") }} プロパティによって指定された、対応するプロパティに適用されます。指定する再生時間の数がマスターリストより少ない場合、ユーザーエージェントは再生時間のリストを繰り返します。指定した再生時間の数がマスターリストより多い場合、リストは正しいサイズに切り詰められます。どちらの場合でも、 CSS 宣言は有効です。
 

@@ -9,7 +9,56 @@ l10n:
 
 **`box-sizing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の全体の幅と高さをどのように計算するのかを設定します。
 
-{{EmbedInteractiveExample("pages/css/box-sizing.html")}}
+{{InteractiveExample("CSS Demo: box-sizing")}}
+
+```css interactive-example-choice
+box-sizing: content-box;
+width: 100%;
+```
+
+```css interactive-example-choice
+box-sizing: content-box;
+width: 100%;
+border: solid #5b6dcd 10px;
+padding: 5px;
+```
+
+```css interactive-example-choice
+box-sizing: border-box;
+width: 100%;
+border: solid #5b6dcd 10px;
+padding: 5px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element-parent">
+    <p>Parent container</p>
+    <div class="transition-all" id="example-element">
+      <p>Child container</p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element-parent {
+  width: 220px;
+  height: 200px;
+  border: solid 10px #ffc129;
+  margin: 0.8em;
+}
+
+#example-element {
+  height: 60px;
+  margin: 2em auto;
+  background-color: rgba(81, 81, 81, 0.6);
+}
+
+#example-element > p {
+  margin: 0;
+}
+```
 
 [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)の既定では、要素に割り当てられた `width` および `height` は、要素のコンテンツ領域のみに適用されます。要素に境界やパディングがある場合、画面に表示される矩形の大きさは `width` および `height` にこれらを加えたものになります。つまり、`width` および `height` を設定する際には、境界やパディングが加えられるように値を調整しなければなりません。例えば、`width: 25%;` で左や右のパディングまたは左や右の境界がある 4 つのボックスを並べた場合、既定では親コンテナーの制約の中で 1 行には並びません。
 

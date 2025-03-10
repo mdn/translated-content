@@ -10,7 +10,42 @@ l10n:
 **`background-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景画像の寸法を設定します。
 画像は自然な寸法になったり、引き伸ばされたり、利用可能な領域に収まるように縮小されたりします。
 
-{{EmbedInteractiveExample("pages/css/background-size.html")}}
+{{InteractiveExample("CSS Demo: background-size")}}
+
+```css interactive-example-choice
+background-size: contain;
+```
+
+```css interactive-example-choice
+background-size: contain;
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-size: cover;
+```
+
+```css interactive-example-choice
+background-size: 30%;
+```
+
+```css interactive-example-choice
+background-size: 200px 100px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-image: url("/shared-assets/images/examples/hand.jpg");
+  min-width: 100%;
+  min-height: 100%;
+}
+```
 
 背景画像に覆われていない領域は {{cssxref("background-color")}} プロパティで埋められ、背景画像の後ろに見える背景色は透過性があります。
 

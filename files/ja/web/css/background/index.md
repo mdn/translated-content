@@ -9,7 +9,45 @@ l10n:
 
 **`background`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、色、画像、原点と寸法、反復方法など、背景に関するすべてのスタイルプロパティを一括で設定します。 `background` 一括指定プロパティの値宣言で設定されていない成分のプロパティは、既定値に設定されます。
 
-{{EmbedInteractiveExample("pages/css/background.html")}}
+{{InteractiveExample("CSS Demo: background")}}
+
+```css interactive-example-choice
+background: green;
+```
+
+```css interactive-example-choice
+background: content-box radial-gradient(crimson, skyblue);
+```
+
+```css interactive-example-choice
+background: no-repeat url("/shared-assets/images/examples/lizard.png");
+```
+
+```css interactive-example-choice
+background: left 5% / 15% 60% repeat-x
+  url("/shared-assets/images/examples/star.png");
+```
+
+```css interactive-example-choice
+background:
+  center / contain no-repeat
+    url("/shared-assets/images/examples/firefox-logo.svg"),
+  #eee 35% url("/shared-assets/images/examples/lizard.png");
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 ## 構成要素のプロパティ
 

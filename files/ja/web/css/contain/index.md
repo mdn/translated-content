@@ -10,7 +10,69 @@ l10n:
 **`contain`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素とそのコンテンツが文書ツリーの残りの部分から可能な限り独立していることを示します。
 拘束によって DOM のサブセクションを分離することができ、レイアウト、スタイル、描画、サイズ、または任意の組み合わせの計算をページ全体ではなく DOM サブツリーに制限することによって、性能上で有利になります。拘束は、CSS カウンターや引用のスコープにも使用することができます。
 
-{{EmbedInteractiveExample("pages/css/contain.html")}}
+{{InteractiveExample("CSS Demo: contain")}}
+
+```css interactive-example-choice
+contain: none;
+```
+
+```css interactive-example-choice
+contain: size;
+```
+
+```css interactive-example-choice
+contain: layout;
+```
+
+```css interactive-example-choice
+contain: paint;
+```
+
+```css interactive-example-choice
+contain: strict;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="card" id="example-element">
+    <h2>Element with '<code>contain</code>'</h2>
+    <p>
+      The Goldfish is a species of domestic fish best known for its bright
+      colors and patterns.
+    </p>
+    <div class="fixed"><p>Fixed right 4px</p></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+h2 {
+  margin-top: 0;
+}
+
+#default-example {
+  text-align: left;
+  padding: 4px;
+  font-size: 16px;
+}
+
+.card {
+  text-align: left;
+  border: 3px dotted;
+  padding: 20px;
+  margin: 10px;
+  width: 85%;
+  min-height: 150px;
+}
+
+.fixed {
+  position: fixed;
+  border: 3px dotted;
+  right: 4px;
+  padding: 4px;
+  margin: 4px;
+}
+```
 
 CSS 拘束には、サイズ、レイアウト、スタイル、描画の 4 種類があり、コンテナーに設定します。
 プロパティは、5 つの標準値のサブセットか、2 つの一括指定値のうちの 1 つをスペースで区切ったリストです。

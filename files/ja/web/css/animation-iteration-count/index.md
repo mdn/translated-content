@@ -9,7 +9,104 @@ l10n:
 
 **`animation-iteration-count`** は [CSS](/ja/docs/Web/CSS) のプロパティで、停止するまでにアニメーション周期が再生される回数を指定します。
 
-{{EmbedInteractiveExample("pages/css/animation-iteration-count.html")}}
+{{InteractiveExample("CSS Demo: animation-iteration-count")}}
+
+```css interactive-example-choice
+animation-iteration-count: 0;
+```
+
+```css interactive-example-choice
+animation-iteration-count: 2;
+```
+
+```css interactive-example-choice
+animation-iteration-count: 1.5;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div>Animation <span id="playstatus"></span></div>
+  <div id="example-element">Select a count to start!</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  align-items: center;
+  background-color: #1766aa;
+  border-radius: 50%;
+  border: 5px solid #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  justify-content: center;
+  margin: auto;
+  margin-left: 0;
+  width: 150px;
+}
+
+#playstatus {
+  font-weight: bold;
+}
+
+.animating {
+  animation-name: slide;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes slide {
+  from {
+    background-color: orange;
+    color: black;
+    margin-left: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-left: 80%;
+  }
+}
+```
+
+```js interactive-example
+"use strict";
+
+window.addEventListener("load", () => {
+  const el = document.getElementById("example-element");
+  const status = document.getElementById("playstatus");
+
+  function update() {
+    status.textContent = "delaying";
+    el.className = "";
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        el.className = "animating";
+      });
+    });
+  }
+
+  el.addEventListener("animationstart", () => {
+    status.textContent = "playing";
+  });
+
+  el.addEventListener("animationend", () => {
+    status.textContent = "finished";
+  });
+
+  const observer = new MutationObserver(() => {
+    update();
+  });
+
+  observer.observe(el, {
+    attributes: true,
+    attributeFilter: ["style"],
+  });
+
+  update();
+});
+```
 
 アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
 

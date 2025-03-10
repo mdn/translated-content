@@ -9,7 +9,48 @@ l10n:
 
 **`fit-content()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、指定された寸法を `min(最大サイズ, max(最小サイズ, 引数))` の式に従って有効な範囲の寸法に収めます。
 
-{{EmbedInteractiveExample("pages/css/function-fit-content.html")}}
+{{InteractiveExample("CSS Demo: fit-content()")}}
+
+```css interactive-example-choice
+grid-template-columns: fit-content(8ch) fit-content(8ch) 1fr;
+```
+
+```css interactive-example-choice
+grid-template-columns: fit-content(100px) fit-content(100px) 1fr;
+```
+
+```css interactive-example-choice
+grid-template-columns: fit-content(40%) fit-content(40%) 1fr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One. This column has more text in it.</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-gap: 10px;
+  width: 250px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  text-align: left;
+}
+```
 
 この関数は [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)のプロパティにおいて、トラックの寸法を `max-content` で定義された最大寸法と `auto` で定義された最小寸法との間で、 `auto` と似た方法（すなわち [`minmax(auto, max-content)`](/ja/docs/Web/CSS/minmax)）で計算しますが、 `auto` の最小値よりも大きい場合は*引数*がトラックの寸法になるという点が異なります。
 

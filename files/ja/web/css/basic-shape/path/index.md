@@ -8,7 +8,42 @@ original_slug: Web/CSS/path
 
 **`path()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 SVG のパス文字列を受け取り、 [CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes)や CSS モーションパスで描画される形状を有効にするために使用します。
 
-{{EmbedInteractiveExample("pages/css/function-path.html")}}
+{{InteractiveExample("CSS Demo: path()")}}
+
+```css interactive-example-choice
+clip-path: path(
+  "M  20  240 \
+ L  20  80 L 160  80 \
+ L 160  20 L 280 100 \
+ L 160 180 L 160 120 \
+ L  60 120 L  60 240 Z"
+);
+```
+
+```css interactive-example-choice
+clip-path: path(
+  "M 20 240 \
+ C 20 0 300 0 300 240 Z"
+);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## 構文
 
