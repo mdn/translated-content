@@ -7,7 +7,40 @@ slug: Web/CSS/background-blend-mode
 
 La propriété CSS **`background-blend-mode`** définit la façon dont les images d'arrière-plan doivent être fusionnées entre elles et avec la couleur d'arrière-plan.
 
-{{EmbedInteractiveExample("pages/css/background-blend-mode.html")}}
+{{InteractiveExample("CSS Demo: background-blend-mode")}}
+
+```css interactive-example-choice
+background-blend-mode: normal;
+```
+
+```css interactive-example-choice
+background-blend-mode: multiply;
+```
+
+```css interactive-example-choice
+background-blend-mode: hard-light;
+```
+
+```css interactive-example-choice
+background-blend-mode: difference;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: green;
+  background-image: url("/shared-assets/images/examples/balloon.jpg");
+  width: 250px;
+  height: 305px;
+}
+```
 
 Les modes de fusions (<i lang="en">blending modes</i>) doivent être définis dans le même ordre que les images sont définies avec [`background-image`](/fr/docs/Web/CSS/background-image). Si la liste des modes de fusion et la liste des images d'arrière-plan ne sont pas de la même longueur, la première liste sera répétée ou tronquée pour que les longueurs soient égales.
 

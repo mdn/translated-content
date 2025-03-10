@@ -7,7 +7,46 @@ slug: Web/CSS/border-image-width
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-image-width`** définit la largeur de [l'image de bordure](/fr/docs/Web/CSS/border-image) d'un élément.
 
-{{EmbedInteractiveExample("pages/css/border-image-width.html")}}
+{{InteractiveExample("CSS Demo: border-image-width")}}
+
+```css interactive-example-choice
+border-image-width: 30px;
+```
+
+```css interactive-example-choice
+border-image-width: 15px 40px;
+```
+
+```css interactive-example-choice
+border-image-width: 2.6rem;
+```
+
+```css interactive-example-choice
+border-image-width: 20% 8%;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 Si la valeur de cette propriété est supérieure à [`border-width`](/fr/docs/Web/CSS/border-width), la bordure imagée s'étendra au-delà du remplissage (<i lang="en">padding</i>) voire du contenu.
 

@@ -7,7 +7,39 @@ slug: Web/CSS/text-emphasis
 
 La propriété **`text-emphasis`** est une propriété raccourcie qui permet de définir {{cssxref("text-emphasis-style")}} et {{cssxref("text-emphasis-color")}} avec une seule déclaration. Cette propriété appliquera les marques d'emphase définies sur chaque caractères du texte de l'élément sauf pour les séparateurs (comme les espaces) et les caractères de contrôle.
 
-{{EmbedInteractiveExample("pages/css/text-emphasis.html")}}
+{{InteractiveExample("CSS Demo: text-emphasis")}}
+
+```css interactive-example-choice
+text-emphasis: none;
+```
+
+```css interactive-example-choice
+text-emphasis: filled red;
+```
+
+```css interactive-example-choice
+text-emphasis: "x";
+```
+
+```css interactive-example-choice
+text-emphasis: filled double-circle #ffb703;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+```
 
 La propriété `text-emphasis` est différente de {{cssxref("text-decoration")}}. La propriété `text-decoration` n'a pas d'héritage et la décoration est appliquée sur tout l'élément. Cependant, `text-emphasis` a un héritage et il est donc possible de changer la marque selon les « descendants » d'un élément.
 

@@ -7,7 +7,33 @@ slug: Web/CSS/filter-function/contrast
 
 La fonction CSS **`contrast()`** permet d'ajuster le contraste d'une image. Le résultat de cette fonction est une valeur de type [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
 
-{{EmbedInteractiveExample("pages/css/function-contrast.html")}}
+{{InteractiveExample("CSS Demo: contrast()")}}
+
+```css interactive-example-choice
+filter: contrast(1);
+```
+
+```css interactive-example-choice
+filter: contrast(1.75);
+```
+
+```css interactive-example-choice
+filter: contrast(50%);
+```
+
+```css interactive-example-choice
+filter: contrast(0);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## Syntaxe
 

@@ -9,7 +9,60 @@ l10n:
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`all`** permet de réinitialiser toutes les propriétés d'un élément, à l'exception de [`unicode-bidi`](/fr/docs/Web/CSS/unicode-bidi), [`direction`](/fr/docs/Web/CSS/direction), et des [propriétés personnalisées](/fr/docs/Web/CSS/Using_CSS_custom_properties), avec leurs valeurs initiales, héritées ou qui proviennent d'une autre couche de la cascade voire d'une autre feuille de style.
 
-{{EmbedInteractiveExample("pages/css/all.html")}}
+{{InteractiveExample("CSS Demo: all")}}
+
+```css interactive-example-choice
+/*no all property*/
+```
+
+```css interactive-example-choice
+all: initial;
+```
+
+```css interactive-example-choice
+all: inherit;
+```
+
+```css interactive-example-choice
+all: unset;
+```
+
+```css interactive-example-choice
+all: revert;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container-bg">
+    <div class="example-container">
+      <p id="example-element">
+        This paragraph has a font size of 1.5rem and a color of gold. It also
+        has 1rem of vertical margin set by the user-agent. The parent of the
+        paragraph is a &lt;div&gt; with a dashed blue border.
+      </p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  color: gold;
+  padding: 10px;
+  font-size: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+.example-container {
+  border: 2px dashed #2d5ae1;
+}
+
+.example-container-bg {
+  background-color: #77767b;
+  padding: 20px;
+}
+```
 
 ## Syntaxe
 

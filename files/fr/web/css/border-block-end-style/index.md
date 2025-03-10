@@ -7,7 +7,47 @@ slug: Web/CSS/border-block-end-style
 
 La propriété **`border-block-end-style`** définit le style de la bordure utilisé pour le côté de la fin de l'élément dans l'axe orthogonal au sens de lecture. Cette propriété logique correspondra à une propriété physique selon le mode d'écriture, la directionnalité et l'orientation du texte. Autrement dit, elle correspond à {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}} ou à {{cssxref("border-left-style")}} selon les valeurs de {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
-{{EmbedInteractiveExample("pages/css/border-block-end-style.html")}}
+{{InteractiveExample("CSS Demo: border-block-end-style")}}
+
+```css interactive-example-choice
+border-block-end-style: dotted;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-end-style: dotted;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-block-end-style: groove;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-end-style: dashed;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 Les autres propriétés logiques permettant de définir le style de la bordure sont les suivantes :
 

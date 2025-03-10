@@ -7,7 +7,51 @@ slug: Web/CSS/justify-self
 
 La propriété CSS **`justify-self`** définit la façon dont une boîte est alignée sur l'axe en ligne du conteneur.
 
-{{EmbedInteractiveExample("pages/css/justify-self.html")}}L'effet de cette propriété varie selon le mode de disposition utilisé :
+{{InteractiveExample("CSS Demo: justify-self")}}
+
+```css interactive-example-choice
+justify-self: stretch;
+```
+
+```css interactive-example-choice
+justify-self: center;
+```
+
+```css interactive-example-choice
+justify-self: start;
+```
+
+```css interactive-example-choice
+justify-self: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 220px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
+
+L'effet de cette propriété varie selon le mode de disposition utilisé :
 
 - Pour les dispositions de bloc : elle permet d'aligner un élément sur l'axe en ligne par rapport à son bloc englobant.
 - Pour les éléments positionnés de façon absolue : elle permet d'aligner un élément dans le bloc englobant par rapport à l'axe en ligne en prenant en compte les valeurs de décalage pour les côtés haut, gauche, bas et droit.

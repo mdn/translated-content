@@ -7,7 +7,43 @@ slug: Web/CSS/background-image
 
 La propriété **`background-image`** permet de définir une ou plusieurs images comme arrière(s)-plan(s) pour un élément.
 
-{{EmbedInteractiveExample("pages/css/background-image.html")}}
+{{InteractiveExample("CSS Demo: background-image")}}
+
+```css interactive-example-choice
+background-image: url("/shared-assets/images/examples/lizard.png");
+```
+
+```css interactive-example-choice
+background-image:
+  url("/shared-assets/images/examples/lizard.png"),
+  url("/shared-assets/images/examples/star.png");
+```
+
+```css interactive-example-choice
+background-image:
+  url("/shared-assets/images/examples/star.png"),
+  url("/shared-assets/images/examples/lizard.png");
+```
+
+```css interactive-example-choice
+background-image:
+  linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+  url("/shared-assets/images/examples/lizard.png");
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 Les images sont dessinées les unes au-dessus des autres. La première image indiquée est dessinée comme étant la plus proche de l'utilisateur.
 

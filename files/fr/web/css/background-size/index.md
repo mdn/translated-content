@@ -7,7 +7,42 @@ slug: Web/CSS/background-size
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background-size`** définit la taille des images d'arrière-plan pour l'élément. La taille de l'image peut être contrainte, complètement ou partiellement afin de conserver ses proportions.
 
-{{EmbedInteractiveExample("pages/css/background-size.html")}}
+{{InteractiveExample("CSS Demo: background-size")}}
+
+```css interactive-example-choice
+background-size: contain;
+```
+
+```css interactive-example-choice
+background-size: contain;
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-size: cover;
+```
+
+```css interactive-example-choice
+background-size: 30%;
+```
+
+```css interactive-example-choice
+background-size: 200px 100px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-image: url("/shared-assets/images/examples/hand.jpg");
+  min-width: 100%;
+  min-height: 100%;
+}
+```
 
 > [!NOTE]
 > L'espace qui n'est pas rempli par l'image d'arrière-plan aura la couleur définie par la propriété [`background-color`](/fr/docs/Web/CSS/background-color). De plus, la couleur d'arrière-plan sera visible si l'image d'arrière-plan est transparente.

@@ -9,7 +9,37 @@ l10n:
 
 La notation fonctionnelle **`rgb()`** exprime une couleur selon ses composantes rouge, verte et bleue. Une composante alpha optionnelle représente l'opacité de la couleur.
 
-{{EmbedInteractiveExample("pages/css/function-rgb.html")}}
+{{InteractiveExample("CSS Demo: rgb()")}}
+
+```css interactive-example-choice
+background: rgb(31 120 50);
+```
+
+```css interactive-example-choice
+background: rgb(30% 20% 50%);
+```
+
+```css interactive-example-choice
+background: rgb(255 122 127 / 80%);
+```
+
+```css interactive-example-choice
+background: rgb(255 122 127 / 0.2);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 > [!NOTE]
 > Le niveau 4 du module de spécification <i lang="en">CSS Color</i> a apporté certaines modifications à `rgb()`. Pour les navigateurs qui prennent en charge la notation standard [`rgba()`](/fr/docs/Web/CSS/color_value/rgb), `rgb()` est désormais un synonyme de `rgba()`, les deux acceptent les mêmes paramètres et se comportent de la même façon.

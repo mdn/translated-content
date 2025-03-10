@@ -7,7 +7,58 @@ slug: Web/CSS/grid-auto-rows
 
 La propriété **`grid-auto-rows`** définit la taille d'une ligne de grille créée de façon implicite.
 
-{{EmbedInteractiveExample("pages/css/grid-auto-rows.html")}}
+{{InteractiveExample("CSS Demo: grid-auto-rows")}}
+
+```css interactive-example-choice
+grid-auto-rows: auto;
+```
+
+```css interactive-example-choice
+grid-auto-rows: 50px;
+```
+
+```css interactive-example-choice
+grid-auto-rows: min-content;
+```
+
+```css interactive-example-choice
+grid-auto-rows: minmax(30px, auto);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  font-size: 22px;
+}
+
+#example-element div:last-child {
+  font-size: 13px;
+}
+```
 
 Si un élément de la grille est positionné sur une ligne dont la taille n'est pas explicitement définie avec {{cssxref("grid-template-rows")}}, une piste implicite est créée pour contenir l'élément. Cela peut se produire lorsqu'on positionne un élément sur une ligne inexistante ou lorsque l'algorithme de placement automatique ajoute des lignes supplémentaires.
 

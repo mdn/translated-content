@@ -9,7 +9,46 @@ l10n:
 
 La propriété [CSS](/fr/docs/Web/CSS) **`overflow-x`** permet de définir les mécanismes à utiliser (rognage, ascenseurs, dépassement, etc.) lorsque le contenu dépasse des bords droit et gauche de la boîte de contenu. Cette propriété peut aussi être définie par la propriété raccourcie [`overflow`](/fr/docs/Web/CSS/overflow).
 
-{{EmbedInteractiveExample("pages/css/overflow-x.html")}}
+{{InteractiveExample("CSS Demo: overflow-x")}}
+
+```css interactive-example-choice
+overflow-x: visible;
+```
+
+```css interactive-example-choice
+overflow-x: hidden;
+```
+
+```css interactive-example-choice
+overflow-x: clip;
+```
+
+```css interactive-example-choice
+overflow-x: scroll;
+```
+
+```css interactive-example-choice
+overflow-x: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">
+    The value of Pi is 3.1415926535897932384626433832795029. The value of e is
+    2.7182818284590452353602874713526625.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 15em;
+  height: 9em;
+  border: medium dotted;
+  padding: 0.75em;
+  text-align: left;
+}
+```
 
 ## Syntaxe
 

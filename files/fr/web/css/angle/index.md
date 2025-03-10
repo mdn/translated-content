@@ -7,7 +7,41 @@ slug: Web/CSS/angle
 
 Le type de données CSS **`<angle>`** permet de représenter des angles exprimés en degrés, radians, grades ou tours. Les angles positifs sont des angles allant dans le sens horaire et les valeurs négatives sont des angles allant dans le sens anti-horaire. Les angles sont par exemples utilisés pour les transformations CSS ({{cssxref("transform")}}) ou les dégradés ({{cssxref("&lt;gradient&gt;")}}).
 
-{{EmbedInteractiveExample("pages/css/type-angle.html")}}
+{{InteractiveExample("CSS Demo: &amp;lt;angle&amp;gt;")}}
+
+```css interactive-example-choice
+transform: rotate(45deg);
+```
+
+```css interactive-example-choice
+transform: rotate(3.1416rad);
+```
+
+```css interactive-example-choice
+transform: rotate(-50grad);
+```
+
+```css interactive-example-choice
+transform: rotate(1.75turn);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This box can rotate to different angles.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #0118f3;
+  padding: 0.75em;
+  width: 180px;
+  height: 120px;
+  color: white;
+}
+```
 
 ## Syntaxe
 

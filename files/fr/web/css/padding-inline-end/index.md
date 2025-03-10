@@ -9,7 +9,47 @@ La propriété **`padding-inline-end`** définit le décalage avec la fin de la 
 
 Les autres parties « logiques » du remplissage sont définies grâce aux propriétés {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}} et {{cssxref("padding-inline-start")}}.
 
-{{EmbedInteractiveExample("pages/css/padding-inline-end.html")}}
+{{InteractiveExample("CSS Demo: padding-inline-end")}}
+
+```css interactive-example-choice
+padding-inline-end: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-inline-end: 20px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+padding-inline-end: 5em;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## Syntaxe
 

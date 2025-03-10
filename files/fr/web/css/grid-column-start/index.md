@@ -9,7 +9,54 @@ l10n:
 
 La propriété **`grid-column-start`** définit la position du début d'un élément au sein de la grille de façon automatique, absolue ou relative par rapport à la fin de l'élément. La position de début définit le bord de la [zone de grille](/fr/docs/Glossary/Grid_Areas) selon l'axe logique de bloc (celui orthogonal au sens de lecteur).
 
-{{EmbedInteractiveExample("pages/css/grid-column-start.html")}}
+{{InteractiveExample("CSS Demo: grid-column-start")}}
+
+```css interactive-example-choice
+grid-column-start: auto;
+```
+
+```css interactive-example-choice
+grid-column-start: 2;
+```
+
+```css interactive-example-choice
+grid-column-start: -1;
+```
+
+```css interactive-example-choice
+grid-column-start: span 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: repeat(3, minmax(40px, auto));
+  grid-gap: 10px;
+  width: 200px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 ## Syntaxe
 

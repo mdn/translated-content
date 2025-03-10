@@ -9,7 +9,38 @@ l10n:
 
 La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`repeating-linear-gradient()`** créé une image composée de dégradés qui se répètent. Cela fonctionne de manière similaire aux dégradés linéaires simples représentés par [`linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient), mais les arrêts de couleurs sont automatiquement répétés, indéfiniment, dans toutes les directions pour couvrir l'ensemble du conteneur. Le résultat de cette fonction est un objet de type [`<gradient>`](/fr/docs/Web/CSS/gradient), un type spécifique d'[image](/fr/docs/Web/CSS/image).
 
-{{EmbedInteractiveExample("pages/css/function-repeating-linear-gradient.html")}}
+{{InteractiveExample("CSS Demo: repeating-linear-gradient()")}}
+
+```css interactive-example-choice
+background: repeating-linear-gradient(
+  #e66465,
+  #e66465 20px,
+  #9198e5 20px,
+  #9198e5 25px
+);
+```
+
+```css interactive-example-choice
+background: repeating-linear-gradient(45deg, #3f87a6, #ebf8e1 15%, #f69d3c 20%);
+```
+
+```css interactive-example-choice
+background:
+  repeating-linear-gradient(transparent, #4d9f0c 40px),
+  repeating-linear-gradient(0.25turn, transparent, #3f87a6 20px);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 La longueur du dégradé répété est la distance entre le premier et le dernier arrêt de couleur. Si la première couleur n'a pas de longueur explicite pour placer l'arrêt, celle-ci vaut 0 par défaut. Pour chaque répétition, les positions des arrêts de couleur sont décalées d'un multiple de la longueur du dégradé unitaire. Par conséquent, la ligne de la couleur de fin coïncide toujours avec la ligne de la couleur de début. Si les deux ne sont pas identiques, on obtiendra alors une transition abrupte. On peut résoudre ce point en réutilisant la première couleur comme dernière couleur.
 

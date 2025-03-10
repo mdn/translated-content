@@ -7,7 +7,55 @@ slug: Web/CSS/animation-play-state
 
 La propriété **`animation-play-state`** définit si une animation est en cours d'exécution ou si elle est en pause.
 
-{{EmbedInteractiveExample("pages/css/animation-play-state.html")}}
+{{InteractiveExample("CSS Demo: animation-play-state")}}
+
+```css interactive-example-choice
+animation-play-state: paused;
+```
+
+```css interactive-example-choice
+animation-play-state: running;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div class="animating" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #1766aa;
+  color: white;
+  margin: auto;
+  margin-left: 0;
+  border: 5px solid #333;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.animating {
+  animation-name: slide;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes slide {
+  from {
+    background-color: orange;
+    color: black;
+    margin-left: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-left: 80%;
+  }
+}
+```
 
 Lorsqu'on reprend une animation en pause, celle-ci reprendra où elle avait été interrompue (elle ne recommencera pas depuis le début de la séquence).
 

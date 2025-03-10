@@ -7,7 +7,43 @@ slug: Web/CSS/column-width
 
 La propriété **`column-width`** définit une largeur de colonne idéale lorsqu'on utilise une disposition en colonnes. Aussi, on aura le plus de colonnes possible et pour lesquelles aucune n'est moins large que `column-width`. La colonne réelle peut être plus petite que cette taille si son conteneur est moins large que cette valeur.
 
-{{EmbedInteractiveExample("pages/css/column-width.html")}}
+{{InteractiveExample("CSS Demo: column-width")}}
+
+```css interactive-example-choice
+column-width: auto;
+```
+
+```css interactive-example-choice
+column-width: 6rem;
+```
+
+```css interactive-example-choice
+column-width: 120px;
+```
+
+```css interactive-example-choice
+column-width: 18ch;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 100%;
+  columns: auto;
+  text-align: left;
+}
+```
 
 Ainsi, si on a une colonne large de 300px avec un écart de 0px, on pourrait placer une seule colonne sur 599px mais avoir deux colonnes avec 600px. Ce réglage permet donc d'obtenir des effets qui s'adaptent aux différentes tailles d'écrans. Manipulée avec la propriété {{cssxref("column-count")}} qui a la précédence, il est nécessaire de définir toutes les valeurs de longueur pour avoir une largeur de colonne CSS exacte. Pour du texte horizontal, ces propriétés sont {{cssxref('width')}}, {{cssxref('column-width')}}, {{cssxref('column-gap')}} et {{cssxref('column-rule-width')}}.
 

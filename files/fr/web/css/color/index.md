@@ -7,7 +7,53 @@ slug: Web/CSS/color
 
 La propriété **`color`** définit la couleur de premier plan d'un élément texte et de ses éventuelles [décorations](/fr/docs/Web/CSS/text-decoration). Elle définit également la valeur de {{cssxref("currentColor")}} qui peut être utilisée pour d'autres propriétés (par exemple comme valeur par défaut pour {{cssxref("border-color")}}).
 
-{{EmbedInteractiveExample("pages/css/color.html")}}
+{{InteractiveExample("CSS Demo: color")}}
+
+```css interactive-example-choice
+color: rebeccapurple;
+```
+
+```css interactive-example-choice
+color: #00a400;
+```
+
+```css interactive-example-choice
+color: rgb(214, 122, 127);
+```
+
+```css interactive-example-choice
+color: hsl(30deg 82% 43%);
+```
+
+```css interactive-example-choice
+color: hsla(237deg 74% 33% / 61%);
+```
+
+```css interactive-example-choice
+color: hwb(152deg 0% 58% / 70%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <p id="example-element">
+      London. Michaelmas term lately over, and the Lord Chancellor sitting in
+      Lincoln's Inn Hall. Implacable November weather.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.5em;
+}
+
+.example-container {
+  background-color: white;
+  padding: 10px;
+}
+```
 
 La valeur de cette propriété doit être une couleur uniforme. Celle-ci peut contenir des informations de transparences à partir de CSS3 mais ce ne doit pas être un dégradé ({{cssxref("&lt;gradient&gt;")}}) car en CSS un dégradé est considéré comme une image (type {{cssxref("&lt;image&gt;")}}) et pas comme une couleur.
 

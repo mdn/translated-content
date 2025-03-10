@@ -7,7 +7,47 @@ slug: Web/CSS/text-decoration-line
 
 La propriété **`text-decoration-line`** définit la façon dont les décorations linéaires sont ajoutées à un élément et notamment leur position (sous le texte, au-dessus ou en travers de celui-ci).
 
-{{EmbedInteractiveExample("pages/css/text-decoration-line.html")}}
+{{InteractiveExample("CSS Demo: text-decoration-line")}}
+
+```css interactive-example-choice
+text-decoration-line: none;
+```
+
+```css interactive-example-choice
+text-decoration-line: underline;
+```
+
+```css interactive-example-choice
+text-decoration-line: overline;
+```
+
+```css interactive-example-choice
+text-decoration-line: line-through;
+```
+
+```css interactive-example-choice
+text-decoration-line: underline overline;
+```
+
+```css interactive-example-choice
+text-decoration-line: underline line-through;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+```
 
 La propriété raccourcie {{cssxref("text-decoration")}} permet de paramétrer cette propriété et d'autres propriétés associées aux décorations.
 

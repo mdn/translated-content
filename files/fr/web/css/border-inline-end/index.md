@@ -7,7 +7,42 @@ slug: Web/CSS/border-inline-end
 
 La propriété **`border-inline-end`** est une propriété raccourcie qui permet de définir la bordure d'un élément pour le côté correspondant à la fin de l'élément dans le sens de lecture. Elle peut être utilisée pour définir les valeurs de {{cssxref("border-inline-end-width")}}, {{cssxref("border-inline-end-style")}} et {{cssxref("border-inline-end-color")}}.
 
-{{EmbedInteractiveExample("pages/css/border-inline-end.html")}}
+{{InteractiveExample("CSS Demo: border-inline-end")}}
+
+```css interactive-example-choice
+border-inline-end: solid;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-inline-end: dashed red;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-inline-end: 1rem solid;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 Cette propriété logique correspond à l'une des propriété physique équivalente selon le mode d'écriture, la directionnalité et l'orientation du texte. Autrement dit, elle correspond à l'une des propriétés {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}} ou {{cssxref("border-left")}} selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
