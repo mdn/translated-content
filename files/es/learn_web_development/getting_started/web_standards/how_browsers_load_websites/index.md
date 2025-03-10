@@ -14,7 +14,7 @@ En el artículo anterior, vimos una [visión general de las tecnologías](/es/do
 <table>
   <tbody>
     <tr>
-      <th scope="row">Requisitos Previos:</th>
+      <th scope="row">Requisitos previos:</th>
       <td>
         Familiaridad básica con el sistema operativo de tu computadora, los navegadores web y las tecnologías web.
       </td>
@@ -96,7 +96,7 @@ A continuación, veamos cómo se maneja el CSS.
 
 1. El navegador analiza el CSS que se encuentra en la página (ya sea incluido en el archivo HTML o obtenido de hojas de estilo externas) y clasifica las diferentes reglas de estilo CSS en diferentes "contenedores" según a qué elementos HTML (representados en el DOM como elementos llamados **nodos**) se aplicarán. Luego, el navegador adjunta estilos a los diferentes elementos según sea necesario (este paso intermedio se llama árbol de renderizado).
 2. El árbol de renderizado se presenta en la estructura en la que debería aparecer después de que se hayan aplicado las reglas. Esto incluye cualquier imagen y otros archivos multimedia que se van a incrustar en la página.
-3. La visualización visual de la página se muestra en la pantalla (esta etapa se llama pintura).
+3. La visualización visual de la página se muestra en la pantalla (esta etapa se llama pintar).
 
 El siguiente diagrama ofrece una visualización del proceso del que hemos hablado hasta ahora:
 
@@ -128,7 +128,7 @@ La salida actualizada es la siguiente:
 
 ## Manejo de JavaScript
 
-Cualquier JavaScript que se encuentre en la página (ya sea incluido en el archivo HTML o obtenido de archivos de script externos) se analiza, interpreta, compila y ejecuta. Esto sucede en algún momento antes de que se complete la renderización final de la página; después de todo, algún JavaScript puede afectar la renderización, por ejemplo, agregando nodos al DOM o modificando los existentes.
+Cualquier JavaScript que se encuentre en la página (ya sea incluido en el archivo HTML u obtenido de archivos de script externos) se analiza, interpreta, compila y ejecuta. Esto sucede en algún momento antes de que se complete la renderización final de la página; después de todo, algún JavaScript puede afectar la renderización, por ejemplo, agregando nodos al DOM o modificando los existentes.
 
 Volviendo a nuestro ejemplo, digamos que el siguiente JavaScript se encuentra en el archivo HTML:
 
@@ -172,7 +172,7 @@ Aprenderás más sobre esto más adelante, en nuestro módulo de [Accesibilidad]
 
 El desarrollo web front-end a veces puede ser frustrante, y algunas personas consideran que el navegador es un entorno de programación hostil. Esto se debe a que, a diferencia de otros entornos de programación, es mucho más difícil hacer garantías sobre el entorno en el que se ejecutará tu código. No puedes saber de antemano todas las diferentes combinaciones de sistema operativo, navegador, idioma, ubicación, conexión de red, CPU, GPU, memoria, duración de la batería, etc., que tendrán tus usuarios, por lo tanto, no puedes garantizar una experiencia de usuario perfecta para todos ellos.
 
-Los navegadores modernos tienden a implementar los estándares web de manera bastante consistente, pero todavía hay mucha incertidumbre que sortear. Como desarrollador web, deberás aceptar esa incertidumbre, programar a la defensiva y ser conservador con las características que uses. Esto se basa en adherirse a las [mejores prácticas](/es/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#web_best_practices) descritas en el artículo anterior.
+Los navegadores modernos tienden a implementar los estándares web de manera bastante consistente, pero todavía hay mucha incertidumbre por navegar. Como desarrollador web, deberás aceptar esa incertidumbre, programar a la defensiva y ser conservador con las características que uses. Esto se basa en adherirse a las [mejores prácticas](/es/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#web_best_practices) descritas en el artículo anterior.
 
 Por otro lado, la web también es un entorno de programación increíble, por muchas razones.
 
