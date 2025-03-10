@@ -143,21 +143,21 @@ h2 {
     <tr>
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
-        如果元素有<a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/">可訪問的名稱</a>，則是<code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/region_role">region</a></code>，否則是<code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/generic_role">generic</a></code>
+        如果元素有<a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/">可訪問的名稱</a>，則是<code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/region_role">region</a></code>，否則是<code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role">generic</a></code>
       </td>
     </tr>
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/alert_role"><code>alert</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/alertdialog_role"><code>alertdialog</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/application_role"
-        ><code>application</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/banner_role"><code>banner</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/complementary_role"
-        ><code>complementary</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/contentinfo_role"
-        ><code>contentinfo</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/dialog_role"><code>dialog</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/document_role"
-        ><code>document</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/feed_role"><code>feed</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/log_role"
-        ><code>log</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/main_role"><code>main</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/marquee_role"
-        ><code>marquee</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/navigation_role"><code>navigation</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role"
-        ><code>none</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/note_role"><code>note</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role"
-        ><code>presentation</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/search_role"><code>search</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/status_role"><code>status</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/tabpanel_role"><code>tabpanel</code></a>
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role"><code>alert</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role"><code>alertdialog</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"
+        ><code>application</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role"><code>banner</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role"
+        ><code>complementary</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role"
+        ><code>contentinfo</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role"><code>dialog</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"
+        ><code>document</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role"><code>feed</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/log_role"
+        ><code>log</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/main_role"><code>main</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/marquee_role"
+        ><code>marquee</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role"><code>navigation</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"
+        ><code>none</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/note_role"><code>note</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"
+        ><code>presentation</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/search_role"><code>search</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/status_role"><code>status</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role"><code>tabpanel</code></a>
       </td>
     </tr>
     <tr>
@@ -179,5 +179,5 @@ h2 {
 
 - 其他與區段相關的元素：{{HTMLElement("body")}}、{{HTMLElement("nav")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_lements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("address")}}
 - [使用 HTML 章節和大綱](/zh-TW/docs/Web/HTML/Element/Heading_Elements)
-- [ARIA: Region 角色](/zh-TW/docs/Web/Accessibility/ARIA/Roles/region_role)
+- [ARIA: Region 角色](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/region_role)
 - [為什麼應該選擇 HTML5 article 而不是 section](https://www.smashingmagazine.com/2020/01/html5-article-section/)，作者：Bruce Lawson

@@ -1,7 +1,6 @@
 ---
 title: 使用 HTML 解决常见问题
 slug: Learn_web_development/Howto/Solve_HTML_problems
-original_slug: Learn/HTML/Howto
 ---
 
 {{LearnSidebar}}

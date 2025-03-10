@@ -34,11 +34,11 @@ Content-Type: text/html
 
 <html>
 <head>
-<title>需要進行網路身份驗證</title>
+  <title>Network Authentication Required</title>
 <meta http-equiv="refresh" content="10; url=https://login.example.net/">
 </head>
 <body>
-<p>你需要<a href="https://login.example.net/">在本地網路進行身份驗證</a>才能獲得訪問權限。</p>
+  <p>你需要<a href="https://login.example.net/">在本地網路進行身份驗證</a>才能獲得訪問權限。</p>
 </body>
 </html>
 ```

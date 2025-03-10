@@ -16,7 +16,51 @@ l10n:
 > [!NOTE]
 > これは、シャドウ DOM の外で使用しても効果はありません。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-host-context.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :host-context()", "tabbed-shorter")}}
+
+```css interactive-example
+/* Following CSS is being applied inside the shadow DOM. */
+
+:host-context(.container) {
+  border: 5px dashed green;
+}
+
+:host-context(h1) {
+  color: red;
+}
+```
+
+```html interactive-example
+<!-- elements outside shadow dom -->
+<div class="container">
+  <h1 id="shadow-dom-host"></h1>
+</div>
+```
+
+```js interactive-example
+const shadowDom = init();
+
+// add a <span> element in the shadow DOM
+const span = document.createElement("span");
+span.textContent = "Inside shadow DOM";
+shadowDom.appendChild(span);
+
+// attach shadow DOM to the #shadow-dom-host element
+function init() {
+  const host = document.getElementById("shadow-dom-host");
+  const shadowDom = host.attachShadow({ mode: "open" });
+
+  const cssTab = document.querySelector("#css-output");
+  const shadowStyle = document.createElement("style");
+  shadowStyle.textContent = cssTab.textContent;
+  shadowDom.appendChild(shadowStyle);
+
+  cssTab.addEventListener("change", () => {
+    shadowStyle.textContent = cssTab.textContent;
+  });
+  return shadowDom;
+}
+```
 
 ```css
 /* 指定されたセレクター引数の子孫である場合にのみ、

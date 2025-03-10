@@ -91,7 +91,7 @@ clip-path: unset;
   - : 不创建剪切路径。
 
 > [!NOTE]
-> CSS 计算值不为 **`none`** 时，会创建新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)，就像 CSS {{cssxref("opacity")}} 的值不为 `1` 时那样。
+> CSS 计算值不为 **`none`** 时，会创建新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)，就像 CSS {{cssxref("opacity")}} 的值不为 `1` 时那样。
 
 ## 形式定义
 

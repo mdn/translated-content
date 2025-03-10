@@ -9,7 +9,33 @@ l10n:
 
 **`<bdi>`** は [HTML](/ja/docs/Web/HTML) の要素で、ブラウザーの書字方向アルゴリズムにこのテキストが周囲のテキストから独立しているものと扱うよう指示します。これは特に、ウェブサイトがテキストを動的に挿入するとき、挿入されるテキストの書字方向が不明な場合に便利です。
 
-{{EmbedInteractiveExample("pages/tabbed/bdi.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;bdi&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>World wrestling championships</h1>
+
+<ul>
+  <li><bdi class="name">Evil Steven</bdi>: 1st place</li>
+  <li><bdi class="name">François fatale</bdi>: 2nd place</li>
+  <li><span class="name">سما</span>: 3rd place</li>
+  <li><bdi class="name">الرجل القوي إيان</bdi>: 4th place</li>
+  <li><span class="name" dir="auto">سما</span>: 5th place</li>
+</ul>
+```
+
+```css interactive-example
+html {
+  font-family: sans-serif;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+bdi {
+}
+
+.name {
+  color: red;
+}
+```
 
 双方向のテキストとは、文字の並びが左から右（左書き、LTR）のものと、右から左（右書き、RTL）のものの両方を含むテキストであり、英語の文字列の中に埋め込まれたアラビア語の引用などがあります。ブラウザーはこれを扱うために、 [Unicode Bidirectional Algorithm](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics) を実装しています。このアルゴリズムでは、文字には暗黙の書字方向が与えられます。例えば、ラテン文字は左書きとして扱われるのに対し、アラビア文字は右書きとして扱われます。その他の一部の文字（空白や一部の区切り文字など）は中立として扱われ、周囲の文字に従って書字方向が割り当てられます。
 

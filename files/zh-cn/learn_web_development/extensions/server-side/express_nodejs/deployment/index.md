@@ -1,7 +1,6 @@
 ---
 title: Express 教程 7：部署到生产环境
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment
-original_slug: Learn/Server-side/Express_Nodejs/deployment
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

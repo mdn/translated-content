@@ -111,7 +111,7 @@ div.menu-bar li:hover > ul {
 - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
 - [解释器](/zh-CN/docs/Glossary/CSS_Descriptor)
 - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
-- [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
+- [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
 - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
 - [值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 - [CSS 单位与取值类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)
@@ -134,7 +134,7 @@ div.menu-bar li:hover > ul {
 - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
 - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
-- [层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+- [层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
 - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM

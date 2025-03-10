@@ -1,7 +1,6 @@
 ---
 title: 关系选择器
 slug: Learn_web_development/Core/Styling_basics/Combinators
-original_slug: Learn/CSS/Building_blocks/Selectors/Combinators
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}

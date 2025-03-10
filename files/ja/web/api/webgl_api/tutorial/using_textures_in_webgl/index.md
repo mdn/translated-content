@@ -343,7 +343,7 @@ drawScene(gl, programInfo, buffers, texture, cubeRotation);
 
 WebGL のテクスチャの読み込みは、ドメイン間アクセス制御に従います。コンテンツで他のドメインからテクスチャを読み込むためには、 CORS で許可を得なければなりません。 CORS について詳しくは、 [HTTP アクセス制御](/ja/docs/Web/HTTP/CORS) をご覧ください。
 
-WebGL は安全なコンテキストからテクスチャを読み込む必要があるため、 WebGL で `file:///` の URL から読み込んだテクスチャを使用することはできません。つまり、コードのテストと展開には、安全なウェブサーバーが必要だということです。ローカルでテストする場合は[ローカルテストサーバーを用意するには](/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)を参照してください。
+WebGL は保護されたコンテキストからテクスチャを読み込む必要があるため、 WebGL で `file:///` の URL から読み込んだテクスチャを使用することはできません。つまり、コードのテストと展開には、安全なウェブサーバーが必要だということです。ローカルでテストする場合は[ローカルテストサーバーを用意するには](/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)を参照してください。
 
 CORS で許可された画像を WebGL のテクスチャとして使用する方法の説明を、[こちらの hacks.mozilla.org の記事](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/)に掲載しています。
 

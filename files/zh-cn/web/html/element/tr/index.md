@@ -408,7 +408,7 @@ th {
 {{EmbedLiveSample('点击表头单元格以进行排序', '650', '100')}}
 
 > [!NOTE]
-> 为了保证可用性和无障碍性，每个可排序列的标题单元格都必须可识别为排序按钮，并且每个标题单元格都必须以可视方式定义列当前是按升序还是降序排序，并使用 [`aria-sort`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-sort) 属性。更多信息请参阅 [ARIA 创作实践指南](https://www.w3.org/WAI/ARIA/apg/)的[可排序表格示例](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/)。
+> 为了保证可用性和无障碍性，每个可排序列的标题单元格都必须可识别为排序按钮，并且每个标题单元格都必须以可视方式定义列当前是按升序还是降序排序，并使用 [`aria-sort`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) 属性。更多信息请参阅 [ARIA 创作实践指南](https://www.w3.org/WAI/ARIA/apg/)的[可排序表格示例](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/)。
 
 ## 技术概要
 

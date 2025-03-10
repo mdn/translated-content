@@ -1,7 +1,6 @@
 ---
 title: 开始我们的 React 待办清单
 slug: Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}

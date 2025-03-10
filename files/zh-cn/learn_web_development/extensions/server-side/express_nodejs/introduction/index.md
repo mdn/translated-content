@@ -1,7 +1,6 @@
 ---
 title: Express/Node 入门
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction
-original_slug: Learn/Server-side/Express_Nodejs/Introduction
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

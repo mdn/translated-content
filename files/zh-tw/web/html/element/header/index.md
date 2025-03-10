@@ -52,7 +52,7 @@ header > time {
 
 ## 使用注意事項
 
-除了嵌套在章節內容中以外，`<header>` 元素的含義與站點範圍內的 [`banner`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/banner_role) 地標角色相同。然後，`<header>` 元素不是地標。
+除了嵌套在章節內容中以外，`<header>` 元素的含義與站點範圍內的 [`banner`](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) 地標角色相同。然後，`<header>` 元素不是地標。
 
 `<header>` 元素可以定義全域網站頁首，描述為可存取樹中的 `banner`。它通常包括標誌、公司名稱、搜索功能，可能還有全域導覽或標語。它通常位於頁面的頂部。
 
@@ -105,7 +105,7 @@ header > time {
 
 ## 無障礙議題
 
-`<header>` 元素在其上下文為 {{HTMLElement('body')}} 元素時定義了一個 [`banner`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/banner_role) 地標。當 HTML 頁首元素是 {{HTMLElement('article')}}、{{HTMLElement('aside')}}、{{HTMLElement('main')}}、{{HTMLElement('nav')}} 或 {{HTMLElement('section')}} 元素的後代時，HTML 頁首元素不被認為是橫幅地標。
+`<header>` 元素在其上下文為 {{HTMLElement('body')}} 元素時定義了一個 [`banner`](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) 地標。當 HTML 頁首元素是 {{HTMLElement('article')}}、{{HTMLElement('aside')}}、{{HTMLElement('main')}}、{{HTMLElement('nav')}} 或 {{HTMLElement('section')}} 元素的後代時，HTML 頁首元素不被認為是橫幅地標。
 
 ## 技術摘要
 
@@ -138,13 +138,13 @@ header > time {
     <tr>
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/banner_role">banner</a>，或如果是 <code><a href="/zh-TW/docs/Web/HTML/Element/article">article</a></code>、<code><a href="/zh-TW/docs/Web/HTML/Element/aside">aside</a></code>、<code><a href="/zh-TW/docs/Web/HTML/Element/main">main</a></code>、<code><a href="/zh-TW/docs/Web/HTML/Element/nav">nav</a></code> 或 <code><a href="/zh-TW/docs/Web/HTML/Element/section">section</a></code> 元素的後代，或具有 <code>role=<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/article_role">article</a></code>、<code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/complementary_role">complementary</a></code>、<code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/main_role">main</a></code>、<code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/navigation_role">navigation</a></code> 或 <code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/region_role">region</a></code> 的元素，則為 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/generic_role">generic</a>。
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role">banner</a>，或如果是 <code><a href="/zh-TW/docs/Web/HTML/Element/article">article</a></code>、<code><a href="/zh-TW/docs/Web/HTML/Element/aside">aside</a></code>、<code><a href="/zh-TW/docs/Web/HTML/Element/main">main</a></code>、<code><a href="/zh-TW/docs/Web/HTML/Element/nav">nav</a></code> 或 <code><a href="/zh-TW/docs/Web/HTML/Element/section">section</a></code> 元素的後代，或具有 <code>role=<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/article_role">article</a></code>、<code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role">complementary</a></code>、<code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/main_role">main</a></code>、<code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role">navigation</a></code> 或 <code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/region_role">region</a></code> 的元素，則為 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role">generic</a>。
       </td>
     </tr>
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> 或 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a> 或 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>

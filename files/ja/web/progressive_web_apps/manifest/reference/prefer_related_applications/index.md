@@ -1,32 +1,67 @@
 ---
 title: prefer_related_applications
 slug: Web/Progressive_web_apps/Manifest/Reference/prefer_related_applications
-original_slug: Web/Manifest/Reference/prefer_related_applications
+l10n:
+  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
+{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">型</th>
-      <td><code>Boolean</code></td>
-    </tr>
-    <tr>
-      <th scope="row">必須</th>
-      <td>いいえ</td>
-    </tr>
-  </tbody>
-</table>
+`prefer_related_applications` マニフェストメンバーは、 [`related_applications`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/related_applications) マニフェストメンバーで指定されたネイティブアプリケーションをウェブアプリケーションよりも優先してインストールするかどうかをブラウザーに指定するためのヒントを提供するために使用されます。
 
-`prefer_related_applications` メンバーは論理値で、 [`related_applications`](/ja/docs/Web/Manifest/related_applications) で挙がっているアプリケーションがこのウェブアプリケーションよりも推奨されることを示します。 `prefer_related_applications` メンバーが `true` に設定されていた場合、ユーザーエージェントはこのウェブアプリの代わりに関連アプリケーションのうちの一つをインストールするよう勧めるかもしれません。
+## 構文
 
-省略された場合は、 `prefer_related_applications` の既定値は `false` になります。
+```json-nolint
+/* 論理値 */
+"prefer_related_applications": true
+"prefer_related_applications": false
+```
+
+### 値
+
+- `prefer_related_applications`
+  - : 論理値:
+    - `true` に設定すると、ブラウザーはユーザーにウェブアプリの代わりに [`related_applications`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/related_applications) に掲載されているアプリケーションのいずれかをインストールするよう促すことがあります。
+    - `false` に設定するか、省略すると、ブラウザーは関連のネイティブアプリケーションよりもウェブアプリをインストールすることを推奨します。
+      > [!NOTE]
+      > Chromium ベースのブラウザーでは、ウェブアプリをインストール可能にするには、`prefer_related_applications` を `false` に設定するか、省略するかしてください。
 
 ## 例
 
+### ウェブアプリのインストール環境設定を指定
+
+Google Play Store と Windows Store の両方で、ウェブアプリとネイティブアプリの両方を保有している状況を考えてみましょう。相対するネイティブアプリをオプションとして提供したいが、ユーザーにはウェブアプリをインストールすることを推奨したい場合、下記のようにマニフェストファイルで設定することができます。 ブラウザーウィンドウにウェブアプリのインストールを促します。 ネイティブアプリは引き続き代替案として利用できます。
+
 ```json
-"prefer_related_applications": true
+{
+  "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "com.example.hiking-app"
+    },
+    {
+      "platform": "windows",
+      "url": "https://apps.microsoft.com/detail/9nqx6sv74srz"
+    }
+  ]
+}
+```
+
+### 関連のネイティブアプリのインストールに関する環境設定を指定
+
+ウェブアプリのマニフェストファイルを下記に示す方法で構成することで、ユーザーに、ウェブアプリよりも Google Play ストアから Android ネイティブのハイキングアプリをインストールすることを推奨することができます。
+
+```json
+{
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "com.example.hiking-app"
+    }
+  ]
+}
 ```
 
 ## 仕様書
@@ -36,3 +71,8 @@ original_slug: Web/Manifest/Reference/prefer_related_applications
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- [`related_applications`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/related_applications) マニフェストメンバー
+- [ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest)で、ウェブアプリをインストール可能にする

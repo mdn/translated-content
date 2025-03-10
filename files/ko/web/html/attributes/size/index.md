@@ -14,7 +14,29 @@ l10n:
 
 `size` 특성은 제약 조건 유효성 검사에는 영향을 미치지 않습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-size.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: size", "tabbed-standard")}}
+
+```html interactive-example
+<label for="firstName">First Name:</label>
+<input id="firstName" name="firstName" type="text" size="10" />
+
+<label for="lastName">Last Name:</label>
+<input id="lastName" name="lastName" type="text" size="20" />
+
+<label for="fruit">Favourite fruit:</label>
+<select id="fruit" name="fruit" size="2">
+  <option>Orange</option>
+  <option>Banana</option>
+  <option>Apple</option>
+</select>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1rem;
+}
+```
 
 ## 예제
 
