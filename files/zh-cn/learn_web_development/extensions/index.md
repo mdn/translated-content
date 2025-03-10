@@ -26,7 +26,7 @@ l10n:
 - [Web 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)
   - : 本模块提供一系列文章，帮助你掌握 Web 表单的基本要素。Web 表单是与用户交互的一个非常强大的工具，最常用于收集用户数据或让用户控制用户界面。然而，由于历史和技术原因，如何充分发挥表单的潜力并不总是很明显。在以下文章中，我们将介绍 Web 表单的所有基本方面，包括标记 HTML 结构、表单控件样式、验证表单数据以及向服务器提交数据。
 - [理解客户端 web 开发工具](/zh-CN/docs/Learn_web_development/Extensions/Client-side_tools)
-  - : 客户端工具可能会让人望而生畏，但本系列文章旨在说明一些最常见的客户端工具类型的用途，解释可以串联在一起的工具，如何使用软件包管理器安装它们，以及如何使用命令行控制它们。最后，我们将提供一个完整的工具链示例，向您展示如何提高工作效率。
+  - : 客户端工具可能会让人望而生畏，但本系列文章旨在说明一些最常见的客户端工具类型的用途，解释可以串联在一起的工具，如何使用软件包管理器安装它们，以及如何使用命令行控制它们。最后，我们将提供一个完整的工具链示例，向你展示如何提高工作效率。
 - [服务端网站编程](/zh-CN/docs/Learn_web_development/Extensions/Server-side)
   - : 本系列模块介绍了如何创建服务器端网站，即根据 HTTP 请求提供定制信息的网站。这些模块提供了服务器端编程的一般介绍，以及如何使用 Django（Python）和 Express（Node.js/JavaScript）web 框架创建基本应用程序的初级指南。
 - [Web 性能](/zh-CN/docs/Learn_web_development/Extensions/Performance)
