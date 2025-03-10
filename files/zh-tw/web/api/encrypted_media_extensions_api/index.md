@@ -36,7 +36,7 @@ l10n:
   - : 提供一個 {{domxref("MediaKeys")}} 物件，代表這個元素在播放時可以用來解密媒體資料的金鑰集合。
 - {{domxref("HTMLMediaElement.setMediaKeys()")}}
   - : 設定 {{domxref("MediaKeys")}} ，讓這個元素在播放時能夠解密媒體內容。
-- [`encrypted` event](/en-US/docs/Web/API/HTMLMediaElement/encrypted_event)
+- [`encrypted` event](/zh-TW/docs/Web/API/HTMLMediaElement/encrypted_event)
   - : 當媒體內含的初始化資料被偵測到時，會觸發 {{domxref("HTMLMediaElement")}} 這個事件，表示該媒體已加密。
 
 #### Navigator
