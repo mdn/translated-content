@@ -23,24 +23,24 @@ l10n:
 ## 属性
 
 - {{WebExtAPIRef("windows.WINDOW_ID_NONE")}}
-  - : `windowId` 值表示不存在浏览器窗口。
+  - : 表示不存在浏览器窗口的 `windowId` 值。
 - {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}
-  - : `windowId` 值表示当前窗口。
+  - : 可以在部分 API 中作为 `windowId` 参数用以表示当前窗口的值。
 
 ## 函数
 
 - {{WebExtAPIRef("windows.get()")}}
-  - : 获取给定 id 的窗口信息。
+  - : 获取给定 ID 的窗口信息。
 - {{WebExtAPIRef("windows.getCurrent()")}}
   - : 获取当前窗口。
 - {{WebExtAPIRef("windows.getLastFocused()")}}
-  - : 获取最近获得焦点的窗口 —— 通常是“最上层”的窗口。
+  - : 获取最近获得焦点的窗口（通常是“最上层”的窗口）。
 - {{WebExtAPIRef("windows.getAll()")}}
   - : 获取所有窗口。
 - {{WebExtAPIRef("windows.create()")}}
   - : 创建新窗口。
 - {{WebExtAPIRef("windows.update()")}}
-  - : 更新一个窗口的属性。使用此项对移动、调整大小、聚焦/取消聚焦等。
+  - : 更新一个窗口的属性。使用该函数移动窗口、调整窗口大小、聚焦/取消聚焦窗口等。
 - {{WebExtAPIRef("windows.remove()")}}
   - : 关闭一个窗口及其所有标签页。
 
@@ -53,7 +53,7 @@ l10n:
 - {{WebExtAPIRef("windows.onRemoved")}}
   - : 一个窗口关闭时触发。
 - {{WebExtAPIRef("windows.onFocusChanged")}}
-  - : 当前有焦点的窗口改变时触发。
+  - : 当前聚焦的窗口改变时触发。
 
 ## 浏览器兼容性
 
