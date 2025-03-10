@@ -16,7 +16,7 @@ l10n:
 - `origins` {{optional_inline}}
   - : 用于表示一系列的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)的[匹配模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)的数组。
 - `permissions` {{optional_inline}}
-  - : 具名权限的数组，包含 [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)和[剪贴板权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#剪贴板权限)。
+  - : 具名权限的数组，包含 [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)和[剪贴板权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#剪贴板访问)。
 
 ## 浏览器兼容性
 
