@@ -9,10 +9,9 @@ l10n:
 
 判断扩展是否有给定 {{WebExtAPIRef("permissions.Permissions")}} 对象中列出的权限。
 
-`Permissions` 参数可以包含一个一系列[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)数组的 `origins` 属性；或者可以包含一个一系列 [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)数组的 `permissions` 属性；又或者同时包含两个属性的数组。
+`Permissions` 参数可以包含一个一系列[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)数组的 `origins` 属性；或者可以包含一个一系列 [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)数组的 `permissions` 属性；又或者同时包含两个属性的数组。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。如果扩展已经有了指定的权限，那么该 Promise 将会被兑现为 `true`。对于主机权限，如果扩展的权限[模式匹配](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `origins` 中列出的权限，那么它们被认为是匹配的。
-
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。如果扩展已经有了指定的权限，那么会兑现为 `true`。对于主机权限，如果扩展的权限[模式匹配](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `origins` 中列出的权限，那么它们被认为是匹配的。
 
 ## 语法
 
@@ -38,7 +37,7 @@ let getContains = browser.permissions.contains(
 ## 示例
 
 ```js
-// 扩展包含如下的权限：
+// 扩展已取得的权限：
 // "webRequest", "tabs", "*://*.mozilla.org/*"
 
 let testPermissions1 = {
