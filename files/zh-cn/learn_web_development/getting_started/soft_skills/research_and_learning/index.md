@@ -2,7 +2,7 @@
 title: 研究与学习
 slug: Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 l10n:
-  sourceCommit: bc189699de65d47506372588cad935b7bffa5097
+  sourceCommit: b6dacb9087010826a5a7d5b2d7c428e89d8135cf
 ---
 
 {{LearnSidebar}}
