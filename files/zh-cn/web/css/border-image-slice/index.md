@@ -9,7 +9,48 @@ l10n:
 
 **`border-image-slice`** [CSS](/zh-CN/docs/Web/CSS) 属性将使用 {{cssxref("border-image-source")}} 引用的图像划分为多个区域。这些区域组成了一个元素的[边框图像](/zh-CN/docs/Web/CSS/border-image)。
 
-{{EmbedInteractiveExample("pages/css/border-image-slice.html")}}
+{{InteractiveExample("CSS Demo: border-image-slice")}}
+
+```css interactive-example-choice
+border-image-slice: 30;
+```
+
+```css interactive-example-choice
+border-image-slice: 30 fill;
+```
+
+```css interactive-example-choice
+border-image-slice: 44;
+```
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-florid.svg") round;
+border-image-slice: calc(50 / 184 * 100%) calc(80 / 284 * 100%) fill;
+border-image-width: 30px 48px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 切分过程会将图像分割为 9 个区域：四个角、四个边（edge）以及中心区域。四条切片线，从它们各自的侧面设置给定距离，控制区域的大小。
 

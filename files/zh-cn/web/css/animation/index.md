@@ -7,7 +7,49 @@ slug: Web/CSS/animation
 
 [CSS](/zh-CN/docs/Web/CSS) **animation** 属性是 {{cssxref("animation-name")}}，{{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}，{{cssxref("animation-delay")}}，{{cssxref("animation-iteration-count")}}，{{cssxref("animation-direction")}}，{{cssxref("animation-fill-mode")}} 和 {{cssxref("animation-play-state")}} 属性的一个简写属性形式。
 
-{{EmbedInteractiveExample("pages/css/animation.html")}}
+{{InteractiveExample("CSS Demo: animation")}}
+
+```css interactive-example-choice
+animation: 3s ease-in 1s infinite reverse both running slidein;
+```
+
+```css interactive-example-choice
+animation: 3s linear 1s infinite running slidein;
+```
+
+```css interactive-example-choice
+animation: 3s linear 1s infinite alternate slidein;
+```
+
+```css interactive-example-choice
+animation: 0.5s linear 1s infinite alternate slidein;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #1766aa;
+  margin: 20px;
+  border: 5px solid #333;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+```
 
 ## 语法
 

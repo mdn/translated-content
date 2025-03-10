@@ -9,7 +9,41 @@ l10n:
 
 **`inset()`** [CSS](/zh-CN/docs/Web/CSS) 函数定义了一个矩形，其位于参考框的每一边内侧的指定的距离处。它是用于定义 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)之一的基本形状函数。
 
-{{EmbedInteractiveExample("pages/css/function-inset.html")}}
+{{InteractiveExample("CSS Demo: inset()")}}
+
+```css interactive-example-choice
+clip-path: inset(30px);
+```
+
+```css interactive-example-choice
+clip-path: inset(1rem 2rem 3rem 4rem);
+```
+
+```css interactive-example-choice
+clip-path: inset(20% 30% round 20px);
+```
+
+```css interactive-example-choice
+clip-path: inset(4rem 20% round 1rem 2rem 3rem 4rem);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## 语法
 

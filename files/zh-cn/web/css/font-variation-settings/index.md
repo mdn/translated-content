@@ -9,7 +9,45 @@ l10n:
 
 **`font-variation-settings`** CSS 属性为[可变字体](/zh-CN/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)特性提供了底层控制，让你可以指定要改变的特性的四字母轴名称及其值。
 
-{{EmbedInteractiveExample("pages/css/font-variation-settings.html")}}
+{{InteractiveExample("CSS Demo: font-variation-settings")}}
+
+```css interactive-example-choice
+font-variation-settings: "wght" 50;
+```
+
+```css interactive-example-choice
+font-variation-settings: "wght" 850;
+```
+
+```css interactive-example-choice
+font-variation-settings: "wdth" 25;
+```
+
+```css interactive-example-choice
+font-variation-settings: "wdth" 75;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    ...it would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  font-family: Amstelvar;
+  font-style: normal;
+}
+
+p {
+  font-size: 1.5rem;
+  font-family: Amstelvar;
+}
+```
 
 ## 语法
 

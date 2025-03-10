@@ -11,7 +11,68 @@ l10n:
 
 形式上，**`display`** 属性设置元素的内部和外部的*显示类型*。外部类型设置元素参与[流式布局](/zh-CN/docs/Web/CSS/CSS_display/flow_layout)；内部类型设置子元素的布局。一些 `display` 值在它们自己的单独规范中完整定义；例如，在 CSS 弹性盒模型的规范中，定义了声明 `display: flex` 时会发生的细节。
 
-{{EmbedInteractiveExample("pages/css/display.html")}}
+{{InteractiveExample("CSS Demo: display")}}
+
+```css interactive-example-choice
+display: block;
+```
+
+```css interactive-example-choice
+display: inline-block;
+```
+
+```css interactive-example-choice
+display: none;
+```
+
+```css interactive-example-choice
+display: flex;
+```
+
+```css interactive-example-choice
+display: grid;
+```
+
+```html interactive-example
+<p>
+  Apply different <code>display</code> values on the dashed orange-bordered
+  <code>div</code>, which contains three child elements.
+</p>
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    Some text A.
+    <div id="example-element">
+      <div class="child">Child 1</div>
+      <div class="child">Child 2</div>
+      <div class="child">Child 3</div>
+    </div>
+    Some text B.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  width: 100%;
+  height: 100%;
+}
+
+code {
+  background: #8888;
+}
+
+#example-element {
+  border: 3px dashed orange;
+}
+
+.child {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #ccccff;
+  border: 1px solid #ababab;
+  color: black;
+}
+```
 
 ## 语法
 

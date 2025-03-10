@@ -9,7 +9,55 @@ slug: Web/CSS/justify-content
 
 下面的交互示例演示了使用网格布局的一些值。
 
-{{EmbedInteractiveExample("pages/css/justify-content.html")}}
+{{InteractiveExample("CSS Demo: justify-content")}}
+
+```css interactive-example-choice
+justify-content: start;
+```
+
+```css interactive-example-choice
+justify-content: center;
+```
+
+```css interactive-example-choice
+justify-content: space-between;
+```
+
+```css interactive-example-choice
+justify-content: space-around;
+```
+
+```css interactive-example-choice
+justify-content: space-evenly;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 220px;
+  display: grid;
+  grid-template-columns: 60px 60px;
+  grid-auto-rows: 40px;
+  row-gap: 10px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 当 length 属性和自动外边距属性生效之后，对齐已经完成了。也就是说，如果[弹性布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)中存在至少一个弹性元素，而且这个元素的 {{cssxref("flex-grow")}} 属性不等于 `0`，那么对齐方式不会生效，就像没有多余空间的情况。
 

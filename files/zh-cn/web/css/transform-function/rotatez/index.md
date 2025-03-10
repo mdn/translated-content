@@ -7,7 +7,33 @@ slug: Web/CSS/transform-function/rotateZ
 
 **`rotateZ()`** 函数定义了一个转换，它可以让一个元素围绕横 Z 轴旋转，而不会对其进行变形。它的结果是一个{{cssxref("&lt;transform-function&gt;")}}数据类型。
 
-{{EmbedInteractiveExample("pages/css/function-rotateZ.html")}}
+{{InteractiveExample("CSS Demo: rotateZ()")}}
+
+```css interactive-example-choice
+transform: rotateZ(0);
+```
+
+```css interactive-example-choice
+transform: rotateZ(90deg);
+```
+
+```css interactive-example-choice
+transform: rotateZ(-0.25turn);
+```
+
+```css interactive-example-choice
+transform: rotateZ(3.142rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 旋转轴围绕原点旋转，而这个原点通过{{cssxref("transform-origin")}} 属性来定义。
 

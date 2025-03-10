@@ -9,7 +9,38 @@ l10n:
 
 **`outline-offset`** CSS 属性设置[轮廓](/zh-CN/docs/Web/CSS/outline)与元素边缘或边框之间的间距。
 
-{{EmbedInteractiveExample("pages/css/outline-offset.html")}}
+{{InteractiveExample("CSS Demo: outline-offset")}}
+
+```css interactive-example-choice
+outline-offset: 4px;
+```
+
+```css interactive-example-choice
+outline-offset: 0.6rem;
+```
+
+```css interactive-example-choice
+outline-offset: 12px;
+outline: 5px dashed blue;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 2px solid crimson;
+  outline: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 语法
 

@@ -7,7 +7,34 @@ slug: Web/CSS/caret-color
 
 **`caret-color`** 属性用来定义**插入光标**（caret）的颜色，这里说的插入光标，就是那个在网页的可编辑器区域内，用来指示用户的输入具体会插入到哪里的那个一闪一闪的形似竖杠 `|` 的东西。
 
-{{EmbedInteractiveExample("pages/css/caret-color.html")}}
+{{InteractiveExample("CSS Demo: caret-color")}}
+
+```css interactive-example-choice
+caret-color: red;
+```
+
+```css interactive-example-choice
+caret-color: auto;
+```
+
+```css interactive-example-choice
+caret-color: transparent;
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <div>
+    <p>Enter text in the field to see the caret:</p>
+    <p><input id="example-element" type="text" /></p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.2rem;
+}
+```
 
 附注：上面说的“插入光标”（insertion caret）只是光标（caret）的其中一种。比如一些浏览器有一种光标叫做“导航光标“（navigation caret），它可以在不可编辑区域内来回移动。此外，当鼠标指针移动到一段 {{cssxref("cursor")}} 属性是 `auto` 的文本上方时，或移动到 {{cssxref("cursor")}} 属性是 `text`、 `vertical-text` 的內容上方時，虽然看起来有点像插入光标，但它不是插入光标（caret），而是鼠标指针光标（cursor）。
 

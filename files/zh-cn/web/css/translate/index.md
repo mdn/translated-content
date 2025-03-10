@@ -7,7 +7,97 @@ slug: Web/CSS/translate
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`translate`** 允许你单独声明平移变换，并独立于 {{cssxref("transform")}} 属性。这在一些典型的用户界面上更好用，而且这样就无需在 `transform` 中声明该函数并记住转换函数的确切顺序了。
 
-{{EmbedInteractiveExample("pages/css/translate.html")}}
+{{InteractiveExample("CSS Demo: translate")}}
+
+```css interactive-example-choice
+translate: none;
+```
+
+```css interactive-example-choice
+translate: 40px;
+```
+
+```css interactive-example-choice
+translate: 50% -40%;
+```
+
+```css interactive-example-choice
+translate: 20px 4rem;
+```
+
+```css interactive-example-choice
+translate: 20px 4rem 150px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+  perspective: 800px;
+  perspective-origin: 150% 150%;
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  perspective: 550px;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgba(210, 0, 0, 0.7);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  background: rgba(0, 0, 210, 0.7);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+  background: rgba(210, 210, 0, 0.7);
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgba(210, 0, 210, 0.7);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 ## 语法
 

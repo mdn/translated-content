@@ -9,7 +9,41 @@ l10n:
 
 **`ellipse()`** [CSS](/zh-CN/docs/Web/CSS) 函数是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)之一。
 
-{{EmbedInteractiveExample("pages/css/function-ellipse.html")}}
+{{InteractiveExample("CSS Demo: ellipse()")}}
+
+```css interactive-example-choice
+clip-path: ellipse(20px 50px);
+```
+
+```css interactive-example-choice
+clip-path: ellipse(4rem 50% at right center);
+```
+
+```css interactive-example-choice
+clip-path: ellipse(closest-side closest-side at 5rem 6rem);
+```
+
+```css interactive-example-choice
+clip-path: ellipse(closest-side farthest-side);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## 语法
 

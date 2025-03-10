@@ -7,7 +7,39 @@ slug: Web/CSS/font-size
 
 **`font-size`** [CSS](/zh-CN/docs/Web/docs/CSS) 属性设置字体大小。更改字体大小还会更新字体大小相关的 {{cssxref("&lt;length&gt;")}} 单位，例如 `em`、`ex` 等。
 
-{{EmbedInteractiveExample("pages/css/font-size.html")}}
+{{InteractiveExample("CSS Demo: font-size")}}
+
+```css interactive-example-choice
+font-size: 1.2rem;
+```
+
+```css interactive-example-choice
+font-size: x-small;
+```
+
+```css interactive-example-choice
+font-size: smaller;
+```
+
+```css interactive-example-choice
+font-size: 12px;
+```
+
+```css interactive-example-choice
+font-size: 80%;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
 
 ## 语法
 

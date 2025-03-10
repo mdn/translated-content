@@ -7,7 +7,44 @@ slug: Web/CSS/font-variant-ligatures
 
 **`font-variant-ligatures`** 属性控制着其所应用元素文本的 {{Glossary("ligature", "ligatures")}} 与 {{Glossary("contextual forms")}} 。会使文字最终的表现形式更加统一。
 
-{{EmbedInteractiveExample("pages/css/font-variant-ligatures.html")}}
+{{InteractiveExample("CSS Demo: font-variant-ligatures")}}
+
+```css interactive-example-choice
+font-variant-ligatures: normal;
+```
+
+```css interactive-example-choice
+font-variant-ligatures: no-common-ligatures;
+```
+
+```css interactive-example-choice
+font-variant-ligatures: common-ligatures;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>Difficult waffles</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+section {
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+```
 
 ## Syntax
 

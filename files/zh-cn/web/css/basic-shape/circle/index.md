@@ -9,7 +9,45 @@ l10n:
 
 **`circle()`** CSS [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)定义了一个圆形，使用半径和位置来描述。它是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型之一。
 
-{{EmbedInteractiveExample("pages/css/function-circle.html")}}
+{{InteractiveExample("CSS Demo: circle()")}}
+
+```css interactive-example-choice
+clip-path: circle(50px);
+```
+
+```css interactive-example-choice
+clip-path: circle(6rem at right center);
+```
+
+```css interactive-example-choice
+clip-path: circle(10% at 2rem 90%);
+```
+
+```css interactive-example-choice
+clip-path: circle(closest-side at 5rem 6rem);
+```
+
+```css interactive-example-choice
+clip-path: circle(farthest-side);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## 语法
 

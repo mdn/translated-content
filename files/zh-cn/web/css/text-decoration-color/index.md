@@ -9,7 +9,47 @@ slug: Web/CSS/text-decoration-color
 
 修饰线包括下划线、上划线、删除线和波浪线，波浪线的典型用途是标明内容拼写错误（仅举例）。被指定的颜色会作用到该属性值有效范围内的所有修饰线上。
 
-{{EmbedInteractiveExample("pages/css/text-decoration-color.html")}}
+{{InteractiveExample("CSS Demo: text-decoration-color")}}
+
+```css interactive-example-choice
+text-decoration-color: red;
+```
+
+```css interactive-example-choice
+text-decoration-color: #21ff21;
+```
+
+```css interactive-example-choice
+text-decoration-color: rgb(255, 90, 255);
+```
+
+```css interactive-example-choice
+text-decoration-color: hsl(70, 100%, 40%);
+```
+
+```css interactive-example-choice
+text-decoration-color: currentColor;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+
+#example-element {
+  text-decoration-line: underline;
+}
+```
 
 CSS 没有直接的机制为每种线型指定唯一的颜色，不过可以通过嵌套元素的方法来实现这种效果：用 {{cssxref("text-decoration-line")}} 属性为每个元素应用一种线型，再用 `text-decoration-color` 指定线的颜色。
 

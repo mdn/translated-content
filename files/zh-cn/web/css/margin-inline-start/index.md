@@ -7,7 +7,57 @@ slug: Web/CSS/margin-inline-start
 
 **`margin-inline-start`** [CSS](/zh-CN/docs/Web/CSS) 属性定义元素的逻辑行首外边距，根据元素的书写模式、行内方向和文本朝向映射为实体的外边距。它根据 {{cssxref("writing-mode")}}、{{cssxref("direction")}} 和 {{cssxref("text-orientation")}} 属性的值对应于 {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}} 或 {{cssxref("margin-left")}} 属性。
 
-{{EmbedInteractiveExample("pages/css/margin-inline-start.html")}}
+{{InteractiveExample("CSS Demo: margin-inline-start")}}
+
+```css interactive-example-choice
+margin-inline-start: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+margin-inline-start: 20px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+margin-inline-start: 20%;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="col">One</div>
+    <div class="col transition-all" id="example-element">Two</div>
+    <div class="col">Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+.col {
+  width: 33.33%;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  color: white;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## 语法
 

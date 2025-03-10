@@ -7,7 +7,45 @@ slug: Web/CSS/flex-basis
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`flex-basis`** 指定了 flex 元素在主轴方向上的初始大小。如果不使用 {{Cssxref("box-sizing")}} 改变盒模型的话，那么这个属性就决定了 flex 元素的内容盒（content-box）的尺寸。
 
-{{EmbedInteractiveExample("pages/css/flex-basis.html")}}
+{{InteractiveExample("CSS Demo: flex-basis")}}
+
+```css interactive-example-choice
+flex-basis: auto;
+```
+
+```css interactive-example-choice
+flex-basis: 0;
+```
+
+```css interactive-example-choice
+flex-basis: 200px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Item One</div>
+  <div>Item Two</div>
+  <div>Item Three</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  border: 1px solid #c5c5c5;
+  width: auto;
+  max-height: 300px;
+  display: flex;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+```
 
 > [!NOTE]
 > 当一个元素同时被设置了 `flex-basis` (除值为 `auto` 外) 和 `width` (或者在 `flex-direction: column` 情况下设置了`height`) , `flex-basis` 具有更高的优先级。

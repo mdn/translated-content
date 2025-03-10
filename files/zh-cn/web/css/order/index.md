@@ -9,7 +9,60 @@ l10n:
 
 **`order`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置弹性或网格容器中项的布局顺序。容器中的项按 `order` 值升序排列，然后按它们的源代码顺序排列。未明确指定 `order` 值的项会被赋予默认值 `0`。
 
-{{EmbedInteractiveExample("pages/css/order.html")}}
+{{InteractiveExample("CSS Demo: order")}}
+
+```css interactive-example-choice
+order: 0;
+```
+
+```css interactive-example-choice
+order: 3;
+```
+
+```css interactive-example-choice
+order: -1;
+```
+
+```css interactive-example-choice
+order: 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Box 1:</div>
+  <div style="order: 1">Box 2: <code>order: 1;</code></div>
+  <div style="order: 2">Box 3: <code>order: 2;</code></div>
+  <div style="order: 2">Box 4: <code>order: 2;</code></div>
+  <div style="order: 3">Box 5: <code>order: 3;</code></div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  max-height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  flex: 1;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+
+#example-element::after {
+  content: attr(style);
+  outline: 2px dashed;
+  font-family: monospace;
+}
+```
 
 在上面的演示中，请选择左侧的选项来更改粉色盒子的 `order` 属性值。浅蓝色的盒子已被赋予了固定的 `order` 值。
 

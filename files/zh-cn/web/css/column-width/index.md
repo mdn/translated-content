@@ -9,7 +9,43 @@ l10n:
 
 **`column-width`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置多列布局中的理想列宽。容器会被尽可能多的列填充，其中，列的宽度不小于 `column-width` 值。如果容器的宽度比指定的值小，那么单列的宽度比会声明的列宽小。
 
-{{EmbedInteractiveExample("pages/css/column-width.html")}}
+{{InteractiveExample("CSS Demo: column-width")}}
+
+```css interactive-example-choice
+column-width: auto;
+```
+
+```css interactive-example-choice
+column-width: 6rem;
+```
+
+```css interactive-example-choice
+column-width: 120px;
+```
+
+```css interactive-example-choice
+column-width: 18ch;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 100%;
+  columns: auto;
+  text-align: left;
+}
+```
 
 此属性可以创建响应式设计，帮助你适配不同的屏幕尺寸。特别是在存在 {{cssxref("column-count")}} 属性（具有高优先级）的情况下，为了得到精确的列宽，你必须指定所有相关的长度。在水平文本中，需要指定 {{cssxref('width')}}、`column-width`、{{cssxref('column-gap')}} 和 {{cssxref('column-rule-width')}}。
 

@@ -9,7 +9,84 @@ l10n:
 
 **`break-inside`** [CSS](/zh-CN/docs/Web/CSS) 属性设置生成的盒子内部的页面、栏或区域应有的中断行为。如果没有生成盒子，则该属性将被忽略。
 
-{{EmbedInteractiveExample("pages/css/break-inside.html")}}
+{{InteractiveExample("CSS Demo: break-inside")}}
+
+```css interactive-example-choice
+break-inside: auto;
+```
+
+```css interactive-example-choice
+break-inside: avoid;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div>
+    <p>
+      The effect of this property can be noticed when the document is being
+      printed or a preview of a print is displayed.
+    </p>
+    <button id="print-btn">Show Print Preview</button>
+    <div class="box-container">
+      <div class="box">Content before the property</div>
+      <div class="box" id="example-element">Content with 'break-inside'</div>
+      <div class="box">Content after the property</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.box {
+  border: solid #5b6dcd 5px;
+  background-color: #5b6dcd;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+#example-element {
+  border: solid 5px #ffc129;
+  background-color: #ffc129;
+  color: black;
+}
+
+.hide-element {
+  display: none;
+}
+
+@media print {
+  #example-element {
+    height: 25cm;
+  }
+}
+```
+
+```js interactive-example
+const btn = document.getElementById("print-btn");
+const editorContainer = document.getElementsByClassName(
+  "css-editor-container",
+)[0];
+const exampleHTMLElement = document.getElementById("default-example");
+
+const printableSection = document.createElement("div");
+printableSection.setAttribute("id", "printable-section");
+printableSection.classList.add("hide-element");
+document.body.appendChild(printableSection);
+
+btn.addEventListener("click", () => {
+  const exampleContent = exampleHTMLElement.innerHTML;
+
+  editorContainer.classList.add("hide-element");
+  printableSection.innerHTML = exampleContent;
+  printableSection.classList.remove("hide-element");
+
+  window.print();
+
+  printableSection.classList.add("hide-element");
+  printableSection.innerHTML = "";
+  editorContainer.classList.remove("hide-element");
+});
+```
 
 ## 语法
 

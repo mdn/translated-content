@@ -9,7 +9,50 @@ l10n:
 
 **`padding-top`** [CSS](/zh-CN/docs/Web/CSS) 属性设置了元素顶部[内边距区域](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#内边距区域)的高度。
 
-{{EmbedInteractiveExample("pages/css/padding-top.html")}}
+{{InteractiveExample("CSS Demo: padding-top")}}
+
+```css interactive-example-choice
+padding-top: 1em;
+```
+
+```css interactive-example-choice
+padding-top: 10%;
+```
+
+```css interactive-example-choice
+padding-top: 20px;
+```
+
+```css interactive-example-choice
+padding-top: 1ch;
+```
+
+```css interactive-example-choice
+padding-top: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+}
+```
 
 内边距区域是指一个元素的内容和边框之间的区域。
 

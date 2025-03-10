@@ -7,7 +7,68 @@ slug: Web/CSS/font-variant
 
 **font-variant** 属性是{{cssxref("font-variant-caps")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-east-asian")}}等属性的简写。你也可以使用简写 {{cssxref("font")}} 设定`font-variant`在 CSS Level 2 (Revision 1) 中的值（即`normal` 或 `small-caps`）。
 
-{{EmbedInteractiveExample("pages/css/font-variant.html")}}
+{{InteractiveExample("CSS Demo: font-variant")}}
+
+```css interactive-example-choice
+font-variant: normal;
+```
+
+```css interactive-example-choice
+font-variant: no-common-ligatures proportional-nums;
+```
+
+```css interactive-example-choice
+font-variant: common-ligatures tabular-nums;
+```
+
+```css interactive-example-choice
+font-variant: small-caps slashed-zero;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>Difficult waffles</p>
+    <table>
+      <tr>
+        <td><span class="tabular">0O</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">3.14</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">2.71</span></td>
+      </tr>
+    </table>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+section {
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+#example-element table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabular {
+  border: 1px solid;
+}
+```
 
 ## 语法
 

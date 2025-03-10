@@ -9,7 +9,68 @@ l10n:
 
 CSS [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) `font` 可设置某元素字体的不同属性，或将元素的字体设置为系统字体。
 
-{{EmbedInteractiveExample("pages/css/font.html")}}
+{{InteractiveExample("CSS Demo: font")}}
+
+```css interactive-example-choice
+font:
+  1.2rem "Fira Sans",
+  sans-serif;
+```
+
+```css interactive-example-choice
+font:
+  italic 1.2rem "Fira Sans",
+  serif;
+```
+
+```css interactive-example-choice
+font: italic small-caps bold 16px/2 cursive;
+```
+
+```css interactive-example-choice
+font: small-caps bold 24px/1 sans-serif;
+```
+
+```css interactive-example-choice
+font: caption;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Italic"),
+    url("/shared-assets/fonts/FiraSans-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+section {
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+```
 
 与任何简写属性一样，任何未指定的值都将设置为其对应的初始值（可能覆盖先前使用非简写属性设置的值）。虽然不能通过 `font` 直接设置，但是 {{cssxref("font-size-adjust")}} 和 {{cssxref("font-kerning")}} 也会重置为初始值。
 

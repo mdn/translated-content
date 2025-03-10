@@ -7,7 +7,58 @@ slug: Web/CSS/grid-auto-rows
 
 CSS 属性 **`grid-auto-rows`** 用于指定隐式创建的行轨道大小。
 
-{{EmbedInteractiveExample("pages/css/grid-auto-rows.html")}}
+{{InteractiveExample("CSS Demo: grid-auto-rows")}}
+
+```css interactive-example-choice
+grid-auto-rows: auto;
+```
+
+```css interactive-example-choice
+grid-auto-rows: 50px;
+```
+
+```css interactive-example-choice
+grid-auto-rows: min-content;
+```
+
+```css interactive-example-choice
+grid-auto-rows: minmax(30px, auto);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  font-size: 22px;
+}
+
+#example-element div:last-child {
+  font-size: 13px;
+}
+```
 
 如果定位到某行中的网格元素没有使用 {{cssxref("grid-template-rows")}}来指定大小，则会隐式创建{{glossary("grid", "grid")}} 轨道来保存它。这可能在显示定位到超出范围的行，或者由自动放置算法创建额外的行时发生。
 

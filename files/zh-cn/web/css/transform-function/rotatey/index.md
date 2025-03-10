@@ -7,7 +7,33 @@ slug: Web/CSS/transform-function/rotateY
 
 **`rotateY()`** 函数定义了一个转换，它可以让一个元素围绕纵坐标 (垂直轴) 旋转，而不会对其进行变形。它的结果是一个{{cssxref("&lt;transform-function&gt;")}} 数据类型。
 
-{{EmbedInteractiveExample("pages/css/function-rotateY.html")}}
+{{InteractiveExample("CSS Demo: rotateY()")}}
+
+```css interactive-example-choice
+transform: rotateY(0);
+```
+
+```css interactive-example-choice
+transform: rotateY(45deg);
+```
+
+```css interactive-example-choice
+transform: rotateY(-0.2turn);
+```
+
+```css interactive-example-choice
+transform: rotateY(3.142rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 旋转轴围绕原点旋转，而这个原点通过{{cssxref("transform-origin")}} 属性来定义。
 

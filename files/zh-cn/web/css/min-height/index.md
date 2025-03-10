@@ -7,7 +7,43 @@ slug: Web/CSS/min-height
 
 CSS 属性 **`min-height`** 能够设置元素的最小高度。这样能够防止 `{{cssxref("height")}}` 属性的[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)小于 `min-height` 的值。
 
-{{EmbedInteractiveExample("pages/css/min-height.html")}}
+{{InteractiveExample("CSS Demo: min-height")}}
+
+```css interactive-example-choice
+min-height: 150px;
+```
+
+```css interactive-example-choice
+min-height: 7em;
+```
+
+```css interactive-example-choice
+min-height: 75%;
+```
+
+```css interactive-example-choice
+min-height: 10px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the minimum height. <br />If there is
+    more content than the minimum the box will grow to the height needed by the
+    content.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 当 `min-height` 大于 {{cssxref("max-height")}} 或 {{cssxref("height")}} 时，元素的高度会设置为 `min-height` 的值。
 

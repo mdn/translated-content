@@ -7,7 +7,51 @@ slug: Web/CSS/justify-items
 
 [CSS](/zh-CN/docs/Web/CSS) 的 **`justify-items`** 属性为所有盒中的项目定义了默认的 {{CSSxRef("justify-self")}} ，可以使这些项目以默认方式沿适当轴线对齐到每个盒子。
 
-{{EmbedInteractiveExample("pages/css/justify-items.html")}}
+{{InteractiveExample("CSS Demo: justify-items")}}
+
+```css interactive-example-choice
+justify-items: stretch;
+```
+
+```css interactive-example-choice
+justify-items: center;
+```
+
+```css interactive-example-choice
+justify-items: start;
+```
+
+```css interactive-example-choice
+justify-items: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 该属性的作用效果取决于我们使用的布局模式：
 

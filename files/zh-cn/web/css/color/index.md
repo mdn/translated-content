@@ -7,7 +7,53 @@ slug: Web/CSS/color
 
 CSS **`color`** 属性设置元素的文本以及[文本装饰](/zh-CN/docs/Web/CSS/text-decoration)的前景色[颜色值](/zh-CN/docs/Web/CSS/color_value)，并设置 [`currentcolor`](/zh-CN/docs/Web/CSS/color_value#currentcolor_关键字) 值。`currentcolor` 可以用作*其他*属性的间接值，且为其他颜色属性（如 {{cssxref("border-color")}}）的默认值。
 
-{{EmbedInteractiveExample("pages/css/color.html")}}
+{{InteractiveExample("CSS Demo: color")}}
+
+```css interactive-example-choice
+color: rebeccapurple;
+```
+
+```css interactive-example-choice
+color: #00a400;
+```
+
+```css interactive-example-choice
+color: rgb(214, 122, 127);
+```
+
+```css interactive-example-choice
+color: hsl(30deg 82% 43%);
+```
+
+```css interactive-example-choice
+color: hsla(237deg 74% 33% / 61%);
+```
+
+```css interactive-example-choice
+color: hwb(152deg 0% 58% / 70%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <p id="example-element">
+      London. Michaelmas term lately over, and the Lord Chancellor sitting in
+      Lincoln's Inn Hall. Implacable November weather.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.5em;
+}
+
+.example-container {
+  background-color: white;
+  padding: 10px;
+}
+```
 
 对于在 HTML 中使用颜色的概述，请参考[使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)。
 

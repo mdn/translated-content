@@ -7,7 +7,46 @@ slug: Web/CSS/background-position
 
 **`background-position`** [CSS](/zh-CN/docs/Web/CSS) 属性为每一个背景图片设置初始位置。这个位置是相对于由 {{cssxref("background-origin")}} 定义的位置图层的。
 
-{{EmbedInteractiveExample("pages/css/background-position.html")}}
+{{InteractiveExample("CSS Demo: background-position")}}
+
+```css interactive-example-choice
+background-position: top;
+```
+
+```css interactive-example-choice
+background-position: left;
+```
+
+```css interactive-example-choice
+background-position: center;
+```
+
+```css interactive-example-choice
+background-position: 25% 75%;
+```
+
+```css interactive-example-choice
+background-position: bottom 50px right 100px;
+```
+
+```css interactive-example-choice
+background-position: right 35% bottom 45%;
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: navajowhite;
+  background-image: url("/shared-assets/images/examples/star.png");
+  background-repeat: no-repeat;
+  height: 100%;
+}
+```
 
 ## 语法
 

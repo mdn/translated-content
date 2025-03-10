@@ -7,7 +7,60 @@ slug: Web/CSS/inset-block
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`inset-block`** 定义了元素的逻辑块首和块末偏移，并根据元素的书写模式、行内方向和文本朝向对应至实体偏移。根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("top")}} 和 {{CSSXref("bottom")}}，或者 {{CSSXref("right")}} 和 {{CSSXref("left")}} 属性。
 
-{{EmbedInteractiveExample("pages/css/inset-block.html")}}
+{{InteractiveExample("CSS Demo: inset-block")}}
+
+```css interactive-example-choice
+inset-block: 10px 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+inset-block: 20px 40px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+inset-block: 5% 20%;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+inset-block: 1rem auto;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <div id="example-element">I am absolutely positioned.</div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 0.75em solid #ad1457;
+  padding: 0.75em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+#example-element {
+  background-color: #07136c;
+  border: 6px solid #ffa000;
+  color: white;
+  position: absolute;
+  inset: 0;
+}
+```
 
 ## 属性构成
 

@@ -9,7 +9,42 @@ l10n:
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`max-height`** 设置元素的最大高度。它防止 {{cssxref("height")}} 属性的[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)大于 `max-height` 指定的值。
 
-{{EmbedInteractiveExample("pages/css/max-height.html")}}
+{{InteractiveExample("CSS Demo: max-height")}}
+
+```css interactive-example-choice
+max-height: 150px;
+```
+
+```css interactive-example-choice
+max-height: 7em;
+```
+
+```css interactive-example-choice
+max-height: 75%;
+```
+
+```css interactive-example-choice
+max-height: 10px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the maximum height. <br />This will limit
+    how tall the box can be, potentially causing an overflow.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 `max-height` 会覆盖 {{cssxref("height")}}，而 {{cssxref("min-height")}} 会覆盖 `max-height`。
 

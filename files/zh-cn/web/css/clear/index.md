@@ -7,7 +7,62 @@ slug: Web/CSS/clear
 
 **`clear`** [CSS](/zh-CN/docs/Web/CSS) 属性指定一个元素是否必须移动 (清除浮动后) 到在它之前的浮动元素下面。`clear` 属性适用于浮动和非浮动元素。
 
-{{EmbedInteractiveExample("pages/css/clear.html")}}
+{{InteractiveExample("CSS Demo: clear")}}
+
+```css interactive-example-choice
+clear: none;
+```
+
+```css interactive-example-choice
+clear: left;
+```
+
+```css interactive-example-choice
+clear: right;
+```
+
+```css interactive-example-choice
+clear: both;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="floated-left">Left</div>
+    <div class="floated-right">Right</div>
+    <div class="transition-all" id="example-element">
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  padding: 0.75em;
+  text-align: left;
+  line-height: normal;
+}
+
+.floated-left {
+  border: solid 10px #ffc129;
+  background-color: rgba(81, 81, 81, 0.6);
+  padding: 1em;
+  float: left;
+}
+
+.floated-right {
+  border: solid 10px #ffc129;
+  background-color: rgba(81, 81, 81, 0.6);
+  padding: 1em;
+  float: right;
+  height: 150px;
+}
+```
 
 当应用于非浮动块时，它将非浮动块的[边框边界](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)移动到所有相关浮动元素[外边界](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)的下方。这个非浮动块的顶部外边距会折叠。
 

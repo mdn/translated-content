@@ -7,7 +7,73 @@ slug: Web/CSS/backface-visibility
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`backface-visibility`** 指定当元素背面朝向观察者时是否可见。
 
-{{EmbedInteractiveExample("pages/css/backface-visibility.html")}}
+{{InteractiveExample("CSS Demo: backface-visibility")}}
+
+```css interactive-example-choice
+backface-visibility: visible;
+```
+
+```css interactive-example-choice
+backface-visibility: hidden;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  perspective: 550px;
+  perspective-origin: 220% 220%;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgb(230, 0, 0);
+  color: white;
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgba(0, 0, 0, 0.6);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgba(0, 0, 0, 0.6);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 元素的背面是其正面的镜像。虽然在 2D 中不可见，但是当变换导致元素在 3D 空间中旋转时，背面可以变得可见。 （此属性对 2D 变换没有影响，它没有透视。）
 

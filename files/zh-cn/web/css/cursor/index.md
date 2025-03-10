@@ -7,7 +7,53 @@ slug: Web/CSS/cursor
 
 **`cursor`** [CSS](/zh-CN/docs/Web/CSS) 属性设置光标的类型（如果有），在鼠标指针悬停在元素上时显示相应样式。
 
-{{EmbedInteractiveExample("pages/css/cursor.html")}}
+{{InteractiveExample("CSS Demo: cursor")}}
+
+```css interactive-example-choice
+cursor: help;
+```
+
+```css interactive-example-choice
+cursor: wait;
+```
+
+```css interactive-example-choice
+cursor: crosshair;
+```
+
+```css interactive-example-choice
+cursor: not-allowed;
+```
+
+```css interactive-example-choice
+cursor: zoom-in;
+```
+
+```css interactive-example-choice
+cursor: grab;
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <div id="example-element">
+    Move over this element to see the cursor style.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  background-color: #1766aa;
+  color: white;
+  height: 180px;
+  width: 360px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14pt;
+  padding: 5px;
+}
+```
 
 ## 语法
 

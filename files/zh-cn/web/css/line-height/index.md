@@ -7,7 +7,43 @@ slug: Web/CSS/line-height
 
 **`line-height`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置多行元素的空间量，如多行文本的间距。对于块级元素，它指定元素行盒（line boxes）的最小高度。对于非[替代](/zh-CN/docs/Web/CSS/Replaced_element)的 inline 元素，它用于计算行盒（line box）的高度。
 
-{{EmbedInteractiveExample("pages/css/line-height.html")}}
+{{InteractiveExample("CSS Demo: line-height")}}
+
+```css interactive-example-choice
+line-height: normal;
+```
+
+```css interactive-example-choice
+line-height: 2.5;
+```
+
+```css interactive-example-choice
+line-height: 3em;
+```
+
+```css interactive-example-choice
+line-height: 150%;
+```
+
+```css interactive-example-choice
+line-height: 32px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    Far out in the uncharted backwaters of the unfashionable end of the western
+    spiral arm of the Galaxy lies a small unregarded yellow sun.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-family: Georgia, sans-serif;
+  max-width: 200px;
+}
+```
 
 ## 语法
 

@@ -9,7 +9,53 @@ l10n:
 
 **`border-image`** [CSS](/zh-CN/docs/Web/CSS) 属性在给定元素的周围绘制图像，取代元素的常规[边框](/zh-CN/docs/Web/CSS/border)。
 
-{{EmbedInteractiveExample("pages/css/border-image.html")}}
+{{InteractiveExample("CSS Demo: border-image")}}
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-diamonds.png") 30;
+```
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-diamonds.png") 30 /
+  19px round;
+```
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+  fill / 30px / 30px space;
+```
+
+```css interactive-example-choice
+border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
+```
+
+```css interactive-example-choice
+border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px)
+  60;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 > [!NOTE]
 > 你应该另外指定 {{cssxref("border-style")}} 以防边框图像没能加载。虽然规范并没有严格要求这一点，但当 {{cssxref("border-style")}} 为 `none` 或 {{cssxref("border-width")}} 为 `0` 时，某些浏览器不会渲染边框图像。

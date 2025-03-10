@@ -9,7 +9,42 @@ l10n:
 
 **`max-width`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素的最大宽度。它可防止 {{cssxref("width")}} 属性的[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)大于 `max-width` 指定的值。
 
-{{EmbedInteractiveExample("pages/css/max-width.html")}}
+{{InteractiveExample("CSS Demo: max-width")}}
+
+```css interactive-example-choice
+max-width: 150px;
+```
+
+```css interactive-example-choice
+max-width: 20em;
+```
+
+```css interactive-example-choice
+max-width: 75%;
+```
+
+```css interactive-example-choice
+max-width: 20ch;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Change the maximum width.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 `max-width` 会覆盖 {{cssxref("width")}} 的设置，但 {{ Cssxref("min-width") }} 的设置会覆盖 `max-width`。
 

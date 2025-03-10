@@ -9,7 +9,41 @@ l10n:
 
 **`polygon()`** [CSS](/zh-CN/docs/Web/CSS) 函数是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)之一。它用于通过提供一个或多个坐标对（每一个坐标代表形状的一个顶点）来绘制[多边形](https://zh.wikipedia.org/wiki/多边形)。
 
-{{EmbedInteractiveExample("pages/css/function-polygon.html")}}
+{{InteractiveExample("CSS Demo: polygon()")}}
+
+```css interactive-example-choice
+clip-path: polygon(
+  0% 20%,
+  60% 20%,
+  60% 0%,
+  100% 50%,
+  60% 100%,
+  60% 80%,
+  0% 80%
+);
+```
+
+```css interactive-example-choice
+clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## 语法
 
