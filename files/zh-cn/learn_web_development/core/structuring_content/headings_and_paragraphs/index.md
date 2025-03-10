@@ -2,7 +2,7 @@
 title: HTML 的标题和段落
 slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 4b6716ede3cfde38122835a3af0c9b8c9c22f14f
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content")}}
