@@ -2,14 +2,14 @@
 title: Authorization
 slug: Web/HTTP/Headers/Authorization
 l10n:
-  sourceCommit: 997a0ec66e1514b7269076195b2419db334e876e
+  sourceCommit: 442db82028668b17b888ee439468ae2ac9d589a5
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`Authorization`** 請求標頭可以用來提供憑證，以便用戶代理與伺服器進行身份驗證，從而訪問受保護的資源。
+HTTP **`Authorization`** {{Glossary("request header", "請求標頭")}}可以用來提供憑證，以便用戶代理與伺服器進行身份驗證，從而訪問受保護的資源。
 
-**`Authorization`** 標頭通常（但不總是）在用戶代理第一次嘗試在沒有憑證的情況下請求受保護的資源後發送。伺服器會返回一個 {{HTTPStatus("401")}} `Unauthorized` 訊息，其中包含至少一個 {{HTTPHeader("WWW-Authenticate")}} 標頭。這個標頭指出可以使用哪些身份驗證方案來訪問資源（以及用戶端使用這些方案所需的任何附加訊息）。用戶代理應從提供的方案中選擇其支持的最安全的身份驗證方案，提示用戶輸入憑證，然後重新請求資源（在 **`Authorization`** 標頭中包含編碼的憑證）。
+`Authorization` 標頭通常（但不總是）在用戶代理第一次嘗試在沒有憑證的情況下請求受保護的資源後發送。伺服器會返回一個 {{HTTPStatus("401", "401 Unauthorized")}} 訊息，其中包含至少一個 {{HTTPHeader("WWW-Authenticate")}} 標頭。這個標頭指出可以使用哪些身份驗證方案來訪問資源以及用戶端使用這些方案所需的任何附加訊息。用戶代理應從提供的方案中選擇其支持的最安全的身份驗證方案，提示用戶輸入憑證，然後使用編碼後的憑證在 `Authorization` 標頭中重新請求該資源。
 
 這個標頭會在跨源重定向中被刪除。
 
@@ -23,7 +23,7 @@ HTTP **`Authorization`** 請求標頭可以用來提供憑證，以便用戶代�
       <td>{{Glossary("Request header", "請求標頭")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止的請求標頭")}}</th>
       <td>否</td>
     </tr>
   </tbody>
@@ -33,17 +33,11 @@ HTTP **`Authorization`** 請求標頭可以用來提供憑證，以便用戶代�
 
 ```http
 Authorization: <auth-scheme> <authorization-parameters>
-```
 
-基本身份驗證
-
-```http
+// 基本身份驗證
 Authorization: Basic <credentials>
-```
 
-摘要身份驗證
-
-```http
+// 摘要身份驗證
 Authorization: Digest username=<username>,
     realm="<realm>",
     uri="<url>",
@@ -67,18 +61,18 @@ Authorization: Digest username=<username>,
 
 除了 `<auth-scheme>` 之外，其餘指令是特定於每個[身份驗證方案](/zh-TW/docs/Web/HTTP/Authentication#身份驗證方案)的。一般來說，你需要檢查相關的規範（以下列出了一小部分方案的關鍵字）。
 
-### 基本
+### 基本身份驗證
 
-- \<credentials>
+- `<credentials>`
 
   - : 根據指定方案編碼的憑證。
 
     > [!NOTE]
     > 有關編碼演算法的訊息，請參見以下範例：在 {{HTTPHeader("WWW-Authenticate")}} 中，在 [HTTP Authentication](/zh-TW/docs/Web/HTTP/Authentication) 中，以及在相關規範中。
 
-### 摘要
+### 摘要身份驗證
 
-- \<response>
+- `<response>`
   - : 一串十六進位數字，用於證明用戶知道密碼。該演算法編碼用戶名和密碼、realm、cnonce、qop、nc 等。規範中有詳細描述。
 - `username`
   - : 一個包含用戶名的帶引號字串，用於指定的 `realm`，可以是純文本或十六進位表示的雜湊碼。如果名稱包含在字段中不允許的字符，則可以使用 `username*`（而不是「以及」）。
@@ -107,13 +101,13 @@ Authorization: Digest username=<username>,
 
 ### 基本身份驗證
 
-對於 `"Basic"` 身份驗證，憑證首先通過用冒號組合用戶名和密碼（`aladdin:opensesame`），然後將生成的字串編碼為 [`base64`](/zh-TW/docs/Glossary/Base64)（`YWxhZGRpbjpvcGVuc2VzYW1l`）。
+對於 `"Basic"` 身份驗證，憑證首先通過用冒號組合用戶名和密碼（例如 `aladdin:opensesame`），然後將生成的字串編碼為 [`base64`](/zh-TW/docs/Glossary/Base64)（例如 `YWxhZGRpbjpvcGVuc2VzYW1l`）。
 
 ```http
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-> **警告：** {{Glossary("Base64")}} 編碼可以很容易地反轉以獲取原始名稱和密碼，因此基本身份驗證是完全不安全的。使用 {{Glossary("HTTPS")}} 是被推薦的，尤其是在使用 `Basic` 身份驗證時。
+> **警告：** {{Glossary("Base64")}} 編碼可以很容易地反轉以獲取原始名稱和密碼，因此 `Basic` 身份驗證不提供任何加密安全性。使用 {{Glossary("HTTPS")}} 是被推薦的，尤其是在使用 `Basic` 身份驗證時。
 
 另見 [HTTP authentication](/zh-TW/docs/Web/HTTP/Authentication)，瞭解如何配置 Apache 或 Nginx 伺服器以使用 HTTP 基本身份驗證來保護你的網站。
 
