@@ -2,7 +2,7 @@
 title: r
 slug: Web/SVG/Attribute/r
 l10n:
-  sourceCommit: 86d2da199cf9705310c61cada97ed4e9b921fc47
+  sourceCommit: 64d85b74ce1cce6a24ae8979da4f3f4a01a47229
 ---
 
 {{SVGRef}}
@@ -14,7 +14,7 @@ l10n:
 - {{SVGElement("circle")}}
 - {{SVGElement("radialGradient")}}
 
-値がパーセント値で設定されている場合、現在の SVG ビューポートの正規化された対角線を参照します。
+パーセント値は、現在の SVG ビューポートの正規化された対角線に対する割合です。これは、 <math><mfrac><msqrt><mrow><msup><mi>&lt;width&gt;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&lt;height&gt;</mi><mn>2</mn></msup></mrow></msqrt><msqrt><mn>2</mn></msqrt></mfrac></math> で計算されたものです。
 
 ## 例
 
@@ -87,7 +87,7 @@ svg {
 </table>
 
 > [!NOTE]
-> SVG2 からは、`r` は _幾何プロパティ (Geometry Property)_ です。すなわち、この属性をは円に対して CSS プロパティとしても使うことができます。
+> `<circle>` の半径の大きさは、 {{cssxref("r")}} 幾何プロパティで定義することもできます。
 
 ## radialGradient
 
@@ -103,12 +103,6 @@ svg {
         <strong
           ><a href="/ja/docs/Web/SVG/Content_type#length"
             >&#x3C;length></a
-          ></strong
-        >
-        |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
-            >&#x3C;percentage></a
           ></strong
         >
       </td>
@@ -127,3 +121,11 @@ svg {
 ## 仕様書
 
 {{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- CSS の {{cssxref("r")}} プロパティ
