@@ -308,7 +308,7 @@ display: unset;
 
 - [关于 CSS display 属性对表格语义的影响的简短说明——The Paciello Group](https://www.tpgi.com/short-note-on-what-css-display-properties-do-to-table-semantics/)
 - [隐藏内容以获得更好的无障碍 | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
-- [MDN 理解 WCAG，指南 1.3 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#指南_1.3：创建可以以不同方式呈现的内容)
+- [MDN 理解 WCAG，指南 1.3 解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#指南_1.3：创建可以以不同方式呈现的内容)
 - [了解成功标准 1.3.1 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
 ## 形式定义

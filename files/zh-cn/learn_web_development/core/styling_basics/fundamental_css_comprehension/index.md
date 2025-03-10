@@ -1,7 +1,6 @@
 ---
 title: 基本的 CSS 理解
 slug: Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
-original_slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Styling_basics")}}

@@ -61,14 +61,14 @@ input::placeholder {
 色彩对比度是通过比较占位文本和输入背景的颜色的亮度来确定的。为了满足当前的 [Web 内容无障碍指南（WCAG）](https://www.w3.org/WAI/standards-guidelines/wcag/)，文本内容需要达到 4.5:1 的对比度，而较大的文本（如标题）需要达到 3:1 的对比度。大文本定义为 18.66px 及以上的粗体文本，或 24px 及以上的文本。
 
 - [WebAIM：色彩对比度检查器](https://webaim.org/resources/contrastchecker/)
-- [MDN：了解 WCAG，指南 1.4 的解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#指南_1.4：使用户更容易看到和听到内容，包括将前景与背景区分开)
+- [MDN：了解 WCAG，指南 1.4 的解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#指南_1.4：使用户更容易看到和听到内容，包括将前景与背景区分开)
 - [了解成功标准 1.4.3 | W3C：了解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 #### 可用性
 
 具有足够色彩对比度的占位文本可能会被理解为输入的内容。占位文本在用户向 {{htmlelement("input")}} 元素输入内容后也会消失。这两种情况都可能影响表单的成功填写，尤其是对于存在认知障碍的人。
 
-另一种方法是在输入框外部的视觉接近位置包含占位信息，然后使用 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 以编程的方式将 {{HTMLElement("input")}} 与其提示关联起来。
+另一种方法是在输入框外部的视觉接近位置包含占位信息，然后使用 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 以编程的方式将 {{HTMLElement("input")}} 与其提示关联起来。
 
 通过这种方式，即使在输入框中输入了信息，提示内容也是可用的，而且在加载页面时，输入框看起来是没有预先存在的输入内容的。大多数屏幕阅读技术会在输入的标签文本被宣告后使用 `aria-describedby` 读取提示内容，并且使用屏幕阅读器的人可以在确定额外信息并不必要时将其静音。
 

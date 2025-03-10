@@ -128,8 +128,8 @@ aside > p {
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/feed_role"><code>feed</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/note_role"><code>note</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/region_role"><code>region</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/search_role"><code>search</code></a>
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role"><code>feed</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>、
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/note_role"><code>note</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/region_role"><code>region</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/search_role"><code>search</code></a>
       </td>
     </tr>
     <tr>
@@ -151,4 +151,4 @@ aside > p {
 
 - 其他與節相關的元素：{{HTMLElement("body")}}、{{HTMLElement("article")}}、{{HTMLElement("section")}}、{{HTMLElement("nav")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("address")}}；
 - [使用 HTML 章節和大綱](/zh-TW/docs/Web/HTML/Element/Heading_Elements)
-- [ARIA：補充角色](/zh-TW/docs/Web/Accessibility/ARIA/Roles/complementary_role)
+- [ARIA：補充角色](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role)

@@ -1,7 +1,6 @@
 ---
 title: 跨浏览器测试介绍
 slug: Learn_web_development/Extensions/Testing/Introduction
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 l10n:
   sourceCommit: f7856d2fbfadb97180aa651ba6a03820643ea6ec
 ---

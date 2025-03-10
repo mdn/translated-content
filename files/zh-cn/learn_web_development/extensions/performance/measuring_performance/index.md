@@ -1,7 +1,6 @@
 ---
 title: 测量性能
 slug: Learn_web_development/Extensions/Performance/Measuring_performance
-original_slug: Learn/Performance/Measuring_performance
 ---
 
 {{LearnSidebar}} {{PreviousMenuNext("Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance")}}

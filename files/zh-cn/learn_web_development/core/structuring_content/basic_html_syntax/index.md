@@ -1,7 +1,6 @@
 ---
 title: 开始学习 HTML
 slug: Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
-original_slug: Learn/HTML/Introduction_to_HTML/Getting_started
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content")}}

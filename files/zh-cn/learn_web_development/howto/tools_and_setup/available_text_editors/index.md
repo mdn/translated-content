@@ -1,7 +1,6 @@
 ---
 title: 什么文本编辑器比较好用？
 slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
-original_slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
 ---
 
 {{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}

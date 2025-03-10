@@ -1,7 +1,6 @@
 ---
 title: Django 教程 5：主页构建
 slug: Learn_web_development/Extensions/Server-side/Django/Home_page
-original_slug: Learn/Server-side/Django/Home_page
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django")}}

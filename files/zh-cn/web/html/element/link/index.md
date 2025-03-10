@@ -393,7 +393,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">隐式 ARIA 角色</th>
-      <td>具有 <code>href</code> 属性的 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>
+      <td>具有 <code>href</code> 属性的 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a>
     </tr>
     <tr>
       <th scope="row">允许的 ARIA 角色</th>

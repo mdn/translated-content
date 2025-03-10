@@ -1,7 +1,6 @@
 ---
 title: MathML 表格
 slug: Web/MathML/Guides/Tables
-original_slug: Learn/MathML/First_steps/Tables
 ---
 
 {{MathMLRef}}

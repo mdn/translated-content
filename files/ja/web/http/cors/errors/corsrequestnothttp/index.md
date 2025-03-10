@@ -29,7 +29,7 @@ Reason: CORS request not HTTP
 Firefox や Chrome を含む多くのブラウザーは現在、（既定では）すべてのローカルファイルを不透明なオリジンとして扱います。
 その結果、ローカルリソースが含まれたローカルファイルを読み込むと、CORS エラーが発生します。
 
-テストをローカルで実行する必要がある開発者は、[ローカルサーバーを構築する](/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)必要がでてきました。
+テストをローカルで実行する必要がある開発者は、[ローカルサーバーを構築する](/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)必要がでてきました。
 すべてのファイルが同じスキームとドメイン (`localhost`) から提供されるため、すべて同じオリジンを持ち、オリジン間エラーは発生しません。
 
 > [!NOTE]

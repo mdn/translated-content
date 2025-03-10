@@ -1,7 +1,6 @@
 ---
 title: "Django Tutorial Part 2: 创建网站的地基"
 slug: Learn_web_development/Extensions/Server-side/Django/skeleton_website
-original_slug: Learn/Server-side/Django/skeleton_website
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}

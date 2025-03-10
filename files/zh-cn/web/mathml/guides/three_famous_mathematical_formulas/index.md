@@ -1,7 +1,6 @@
 ---
 title: 三个著名的数学公式
 slug: Web/MathML/Guides/Three_famous_mathematical_formulas
-original_slug: Learn/MathML/First_steps/Three_famous_mathematical_formulas
 ---
 
 {{MathMLRef}}

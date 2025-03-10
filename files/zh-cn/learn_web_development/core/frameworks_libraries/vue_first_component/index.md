@@ -1,7 +1,6 @@
 ---
 title: 创建第一个 Vue 组件
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_first_component
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_getting_started","Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists", "Learn_web_development/Core/Frameworks_libraries")}}
