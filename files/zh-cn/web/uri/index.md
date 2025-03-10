@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
 ---
 
-**统一资源标识符（URI）** 用于标识网络上的“资源”。URI 通常用作 [HTTP](/zh-CN/docs/Web/HTTP)请求的目标，在这种情况下，URI 代表物理资源的位置，如文档、照片、二进制数据。最常见的 URI 类型是统一资源定位符（{{glossary("URL")}}），它被称为 _web 地址_。
+**统一资源标识符**（URI）用于标识网络上的“资源”。URI 通常用作 [HTTP](/zh-CN/docs/Web/HTTP) 请求的目标，在这种情况下，URI 代表物理资源的位置，如文档、照片、二进制数据。最常见的 URI 类型是统一资源定位符（{{glossary("URL")}}），它被称为 _web 地址_。
 
 URI 在其他地方使用时，如 HTML `<a>` 链接的 [`href`](/zh-CN/docs/Web/HTML/Element/a#href)，可用于触发获取资源以外的行为，包括打开电子邮件客户端、发送文本信息或执行 JavaScript。
 
@@ -53,15 +53,15 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 
 ![协议](mdn-url-protocol@x2.png)
 
-`http://` 是 URL 的 [_scheme_](/zh-CN/docs/Web/URI/Reference/Schemes)，表示浏览器必须使用的协议。通常是 HTTP 协议或其安全版本 HTTPS。Web 要求使用这两种协议之一，但浏览器也知道如何处理其他协议，如 `mailto:`（打开邮件客户端）或 `ftp:`（处理文件传输）。[scheme](/zh-CN/docs/Web/URI/Reference/Schemes) 参考资料提供了最常见的协议列表以及其中一些协议的文档。
+`http://` 是 URL 的[_方案_](/zh-CN/docs/Web/URI/Reference/Schemes)，表示浏览器必须使用的协议。通常是 HTTP 协议或其安全版本 HTTPS。Web 要求使用这两种协议之一，但浏览器也知道如何处理其他协议，如 `mailto:`（打开邮件客户端）或 `ftp:`（处理文件传输）。[方案](/zh-CN/docs/Web/URI/Reference/Schemes)参考资料提供了最常见的协议列表以及其中一些协议的文档。
 
 在 {{Glossary("HTML")}} 内容中使用 URL 时，一般只应使用其中几种 URL 方案。在引用子资源（即作为较大文档的一部分加载的文件）时，只能使用 HTTP 和 HTTPS 方案。出于安全考虑，越来越多的浏览器不再支持使用 FTP 加载子资源。
 
 虽然某些浏览器可能会委托其他应用程序加载 FTP 内容，但在最高级别（如直接在浏览器的 URL 栏中键入，或作为链接的目标），FTP 仍然是可以接受的。
 
-### 权限
+### 权威
 
-URI 的 [_authority_](/zh-CN/docs/Web/URI/Reference/Authority) 由用户信息（可选，通常未指定）、主机名和端口组成。
+URI 的[_权威_](/zh-CN/docs/Web/URI/Reference/Authority) 由用户信息（可选，通常未指定）、主机名和端口组成。
 
 ![域名](mdn-url-domain@x2.png)
 
@@ -87,7 +87,7 @@ URI 的 [_authority_](/zh-CN/docs/Web/URI/Reference/Authority) 由用户信息�
 
 ![锚点](mdn-url-anchor@x2.png)
 
-`#SomewhereInTheDocument` 是 URL 的[_片段_](/zh-CN/docs/Web/URI/Reference/Fragment)，是指向资源本身另一部分的锚点。锚点代表资源内部的一种“书签”，为浏览器提供了显示位于该“书签”位置的内容的方向。例如，在 HTML 文档中，浏览器会滚动到定义了锚点的位置；在视频或音频文档中，浏览器会尝试转到锚点所代表的时间。值得注意的是，#后面的部分（也称为片段标识符）永远不会随请求发送到服务器。
+`#SomewhereInTheDocument` 是 URL 的[_片段_](/zh-CN/docs/Web/URI/Reference/Fragment)，是指向资源本身另一部分的锚点。锚点代表资源内部的一种“书签”，为浏览器提供了显示位于该“书签”位置的内容的方向。例如，在 HTML 文档中，浏览器会滚动到定义了锚点的位置；在视频或音频文档中，浏览器会尝试转到锚点所代表的时间。值得注意的是，# 后面的部分（也称为片段标识符）永远不会随请求发送到服务器。
 
 有一种特殊的[文本片段](/zh-CN/docs/Web/URI/Reference/Fragment/Text_fragments)特性，可以链接到网页中由文本内容标识的特定部分。
 
