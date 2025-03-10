@@ -9,15 +9,22 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 
 ## 类型
 
-类型的值是字符串类型。可能的值如下：
+该类型的取值是 `string`，可能取值包括：
 
 - `"normal"`
+  - : 窗口处于默认大小或用户选择的大小。
 - `"minimized"`
+  - : 窗口只显示为任务栏中的图标。
 - `"maximized"`
+  - : 窗口充满了显示它的屏幕，不包括操作系统保留的任何屏幕区域。
 - `"fullscreen"`
+  - : 窗口正在作为全屏应用程序运行，或者标签中的内容正在使用 [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API)。
 - `"docked"`
+  - : 靠边窗口占据了相对于同一应用程序拥有的其他窗口的固定位置。
 
-## 浏览器适配
+macOS 兼容性；自 macOS 10.10 开始，窗口的默认最大化行为已更改为将应用程序作为全屏应用程序运行，而不是“缩放”窗口。`fullscreen` 既指浏览器作为全屏应用程序运行，也指标签中的内容使用 Fullscreen API。
+
+## 浏览器兼容性
 
 {{Compat}}
 
