@@ -55,8 +55,7 @@ steps(10, jump-both)
 
         ![入力の進行から出力の進行へのグラフで、原点から (1, 1) まで延びる直線を表示しています。](linear.svg)
 
-        > [!NOTE]
-        > `linear` キーワードは常に `linear(0, 1)` として解釈されます。ここで関数 `linear(0, 1)` は `linear(0 0%, 1 100%)` と解釈されます。
+        > **メモ:** `linear` キーワードは常に `linear(0, 1)` として解釈されます。ここで関数 `linear(0, 1)` は `linear(0 0%, 1 100%)` と解釈されます。
 
     - {{cssxref("easing-function/linear", "linear()")}}
       - : 複数の進行の点を {{cssxref("&lt;number&gt;")}} 値で定義し、オプションの {{cssxref("&lt;percentage&gt;")}} 値でそのタイミングを制御します。
