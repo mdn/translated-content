@@ -9,7 +9,47 @@ l10n:
 
 **`overflow`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、コンテンツが要素のパディングボックスに収まらない（はみ出す）場合に、水平方向および垂直方向の望ましい動作を設定します。
 
-{{EmbedInteractiveExample("pages/css/overflow.html")}}
+{{InteractiveExample("CSS Demo: overflow")}}
+
+```css interactive-example-choice
+overflow: visible;
+```
+
+```css interactive-example-choice
+overflow: hidden;
+```
+
+```css interactive-example-choice
+overflow: clip;
+```
+
+```css interactive-example-choice
+overflow: scroll;
+```
+
+```css interactive-example-choice
+overflow: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p id="example-element">
+    Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln's
+    Inn Hall. Implacable November weather. As much mud in the streets as if the
+    waters had but newly retired from the face of the earth.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 15em;
+  height: 9em;
+  border: medium dotted;
+  padding: 0.75em;
+  text-align: left;
+}
+```
 
 ## 構成要素のプロパティ
 

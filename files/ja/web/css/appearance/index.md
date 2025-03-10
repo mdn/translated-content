@@ -9,7 +9,34 @@ l10n:
 
 **`appearance`** は CSS のプロパティで、オペレーティングシステムのテーマに基づいた、プラットフォーム固有のスタイル設定で UI 要素を表示するために使用します。
 
-{{EmbedInteractiveExample("pages/css/appearance.html")}}
+{{InteractiveExample("CSS Demo: appearance")}}
+
+```css interactive-example-choice
+appearance: none;
+```
+
+```css interactive-example-choice
+appearance: auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="background">
+    <button id="example-element">button</button>
+  </div>
+</section>
+```
+
+```css interactive-example
+.background {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+}
+```
 
 標準化以前は、このプロパティによって、ボタンやチェックボックスのような要素をウィジェットとして表示できました。しかし、これは誤った機能であると考えられ、現在では標準的なキーワードのみを使用することが推奨されています。
 
