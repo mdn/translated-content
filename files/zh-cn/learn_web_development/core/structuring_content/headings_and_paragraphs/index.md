@@ -124,7 +124,7 @@ HTML 的主要工作之一是赋予文本结构，使浏览器能够按照开发
 </p>
 
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
-静夜思 床前明月光 疑是地上霜 举头望明月 低头思故乡
+静夜思 床前明月光，疑是地上霜。举头望明月，低头思故乡。
 </textarea>
 
 <div class="playable-buttons">
@@ -168,8 +168,8 @@ function updateCode() {
 }
 
 const htmlSolution = `<h1>静夜思</h1>
-<p>床前明月光 疑是地上霜</p>
-<p>举头望明月 低头思故乡</p>`;
+<p>床前明月光，疑是地上霜。</p>
+<p>举头望明月，低头思故乡。</p>`;
 
 let solutionEntry = htmlSolution;
 
@@ -239,7 +239,7 @@ textarea.onkeyup = function () {
 };
 ```
 
-{{ EmbedLiveSample('主动学习：为我们的内容赋予结构', 700, 400, "", "") }}
+{{ EmbedLiveSample('主动学习：为我们的内容赋予结构', 700, 400) }}
 
 ## 为什么我们需要语义？
 
