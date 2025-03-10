@@ -7,7 +7,45 @@ slug: Web/CSS/border-top
 
 CSS 属性 **border-top**是属性 {{Cssxref("border-top-color")}}, {{Cssxref("border-top-style")}}, 和{{Cssxref("border-top-width")}} 的三者的缩写。这些属性都是在描述一个元素的上方的边框[`border`](/zh-CN/docs/Web/CSS/border)。
 
-{{EmbedInteractiveExample("pages/css/border-top.html")}}
+{{InteractiveExample("CSS Demo: border-top")}}
+
+```css interactive-example-choice
+border-top: solid;
+```
+
+```css interactive-example-choice
+border-top: dashed red;
+```
+
+```css interactive-example-choice
+border-top: 1rem solid;
+```
+
+```css interactive-example-choice
+border-top: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border-top: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 与所有缩写属性（shorthand properties）一样，**border-top**始终设置它可以设置的所有属性的值，即使未指定它们也是如此。它将未指定的那些设置为其默认值。这意味着
 
