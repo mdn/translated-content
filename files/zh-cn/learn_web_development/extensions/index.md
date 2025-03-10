@@ -22,7 +22,7 @@ l10n:
 - [客户端 Web API](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs)
   - : **应用编程接口**（**API**）是一种编程功能，用于操作浏览器和网站所运行操作系统的不同方面，或操作来自其他网站或服务的数据。本模块涵盖了我们以前没有详细介绍过的一些最常见的 web 应用程序接口类别的常见方面，为想要深入学习浏览器应用程序接口用法的人提供了一个有用的基础。
 - [异步 JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)
-  - : 在本模块中，我们将介绍什么是{{Glossary("asynchronous", "异步")}} {{Glossary("JavaScript")}}，它为何重要，以及如何用于有效处理潜在的阻塞操作，例如从服务器获取资源。
+  - : 在本模块中，我们将介绍什么是{{Glossary("Asynchronous", "异步")}} {{Glossary("JavaScript")}}，它为何重要，以及如何用于有效处理潜在的阻塞操作，例如从服务器获取资源。
 - [Web 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)
   - : 本模块提供一系列文章，帮助你掌握 Web 表单的基本要素。Web 表单是与用户交互的一个非常强大的工具，最常用于收集用户数据或让用户控制用户界面。然而，由于历史和技术原因，如何充分发挥表单的潜力并不总是很明显。在以下文章中，我们将介绍 Web 表单的所有基本方面，包括标记 HTML 结构、表单控件样式、验证表单数据以及向服务器提交数据。
 - [理解客户端 web 开发工具](/zh-CN/docs/Learn_web_development/Extensions/Client-side_tools)
