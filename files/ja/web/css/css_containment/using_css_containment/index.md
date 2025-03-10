@@ -1,5 +1,5 @@
 ---
-title: CSS 拘束の使用
+title: CSS コンテナーの使用
 slug: Web/CSS/CSS_containment/Using_CSS_containment
 l10n:
   sourceCommit: 4bf03c104b1bca2068dbff927020e7f802c4af7e
@@ -7,15 +7,15 @@ l10n:
 
 {{CSSRef}}
 
-CSS 拘束 (CSS Containment) は、ウェブページの表示性能を向上させるために、開発者がページの任意のサブツリーをページのそれ以外の部分から独立させることができます。もしページの一部が独立していることをブラウザーが知っていれば、レンダリングを最適化し、表示性能を向上させることができます。
+CSS コンテナー (CSS Containment) は、ウェブページの表示性能を向上させるために、開発者がページの任意のサブツリーをページのそれ以外の部分から独立させることができます。もしページの一部が独立していることをブラウザーが知っていれば、レンダリングを最適化し、表示性能を向上させることができます。
 
 {{cssxref("contain")}} と {{cssxref("content-visibility")}} プロパティを使うことで、開発者はユーザーエージェントに、要素がコンテンツをすべて表示すべきかどうか、また画面外にあるときにコンテンツを表示すべきかどうかを知らせることができます。ユーザーエージェントは、必要に応じて要素に拘束を適用し、必要なときまでレイアウトやレンダリングを延期することができます。
 
-このガイドでは、 CSS 拘束の基本的な目的と、 `contain` と `content-visibility` を活用してユーザー体験を向上させる方法について記述しています。
+このガイドでは、 CSS コンテナーの基本的な目的と、 `contain` と `content-visibility` を活用してユーザー体験を向上させる方法について記述しています。
 
 ## 基本的な例
 
-ウェブページには、論理的には互いに独立した複数の節が含まれていることがよくあります。 CSS 拘束により、レンダリング時に他のセクションを本当に独立して扱うことができます。
+ウェブページには、論理的には互いに独立した複数の節が含まれていることがよくあります。 CSS コンテナーにより、レンダリング時に他のセクションを本当に独立して扱うことができます。
 
 例えば、ブログは通常複数の記事を含み、それぞれが下記のマークアップのように見出しとコンテンツを含みます。
 
@@ -189,7 +189,7 @@ article {
 
 ## 関連情報
 
-- [CSS 拘束モジュール](/ja/docs/Web/CSS/CSS_containment)
+- [CSS コンテナーモジュール](/ja/docs/Web/CSS/CSS_containment)
 - [学習: CSS のパフォーマンス最適化](/ja/docs/Learn/Performance/CSS)
 - [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
 - [An Introduction to CSS Containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/) (Igalia.com, 2019)

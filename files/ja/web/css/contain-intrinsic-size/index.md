@@ -361,6 +361,6 @@ HTML は 2 つのボタン、`content-visibility` プロパティによって拘
 
 - {{CSSxRef("contain-intrinsic-block-size")}}
 - {{CSSxRef("contain-intrinsic-inline-size")}}
-- [CSS 拘束の使用](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment)
-- [CSS 拘束](/ja/docs/Web/CSS/CSS_containment)モジュール
+- [CSS コンテナーの使用](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment)
+- [CSS コンテナー](/ja/docs/Web/CSS/CSS_containment)モジュール
 - [`content-visibility`: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) (web.dev, 2020)

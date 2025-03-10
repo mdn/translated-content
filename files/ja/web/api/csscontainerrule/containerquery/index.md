@@ -110,6 +110,6 @@ log(`CSSContainerRule.containerQuery: "${containerRule.containerQuery}"`);
 
 ## 関連情報
 
-- [CSS 拘束モジュール](/ja/docs/Web/CSS/CSS_containment)
+- [CSS コンテナーモジュール](/ja/docs/Web/CSS/CSS_containment)
 - [コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
 - [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
