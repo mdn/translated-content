@@ -1,7 +1,6 @@
 ---
 title: aria-description
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-description
-original_slug: Web/Accessibility/ARIA/Attributes/aria-description
 l10n:
   sourceCommit: 96157fa574bc2cd9f55ff1205198f24addc00104
 ---
