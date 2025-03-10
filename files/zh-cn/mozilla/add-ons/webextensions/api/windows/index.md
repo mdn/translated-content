@@ -1,6 +1,8 @@
 ---
 title: windows
 slug: Mozilla/Add-ons/WebExtensions/API/windows
+l10n:
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}
@@ -28,11 +30,11 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows
 ## 函数
 
 - {{WebExtAPIRef("windows.get()")}}
-  - : 指定其 ID，获取一个窗口的细节。
+  - : 获取给定 id 的窗口信息。
 - {{WebExtAPIRef("windows.getCurrent()")}}
   - : 获取当前窗口。
 - {{WebExtAPIRef("windows.getLastFocused()")}}
-  - : 获取最近获得焦点的窗口，通常它是“顶部”的窗口。
+  - : 获取最近获得焦点的窗口 —— 通常是“最上层”的窗口。
 - {{WebExtAPIRef("windows.getAll()")}}
   - : 获取所有窗口。
 - {{WebExtAPIRef("windows.create()")}}
@@ -44,6 +46,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows
 
 ## 事件
 
+- {{WebExtAPIRef("windows.onBoundsChanged")}}
+  - : 当一个窗口被调整大小或移动时触发。
 - {{WebExtAPIRef("windows.onCreated")}}
   - : 一个窗口创建时触发。
 - {{WebExtAPIRef("windows.onRemoved")}}
@@ -55,16 +59,10 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows
 
 {{Compat}}
 
-### Edge 的不兼容
-
-Edge 中不支持 Promises。需使用回调。
-
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
 > 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows) API。此文档基于 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
->
-> Microsoft Edge 兼容性数据由微软公司提供，并包含在创作共用 署名 3.0 美国许可证下。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
