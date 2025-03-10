@@ -10,7 +10,47 @@ La propiedad [CSS](/es/docs/Web/CSS) **`overflow-y`** define qué se debe mostra
 > [!NOTE]
 > Si {{cssxref("overflow-x")}} es `hidden`, `scroll` o `auto` y esta propiedad es `visible` (por defecto) se calculará implícitamente como `auto`.
 
-{{EmbedInteractiveExample("pages/css/overflow-y.html")}}
+{{InteractiveExample("CSS Demo: overflow-y")}}
+
+```css interactive-example-choice
+overflow-y: visible;
+```
+
+```css interactive-example-choice
+overflow-y: hidden;
+```
+
+```css interactive-example-choice
+overflow-y: clip;
+```
+
+```css interactive-example-choice
+overflow-y: scroll;
+```
+
+```css interactive-example-choice
+overflow-y: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p id="example-element">
+    Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln's
+    Inn Hall. Implacable November weather. As much mud in the streets as if the
+    waters had but newly retired from the face of the earth.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 15em;
+  height: 9em;
+  border: medium dotted;
+  padding: 0.75em;
+  text-align: left;
+}
+```
 
 El código para este ejemplo interactivo está almacenado en un repositorio de GitHub. Si quieres contribuir con el proyecto de ejemplos interactivos, por favor clone <https://github.com/mdn/interactive-examples> y envíanos un pull request.
 
