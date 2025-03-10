@@ -15,7 +15,7 @@ HTTP **`414 URI Too Long`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#
 - 用戶端進入了重導迴圈（例如，重導的 URI 前綴指向自身的一部分）。
 - 伺服器遭受來自用戶端的攻擊，試圖利用潛在的安全漏洞。
 
-一些系統將 `414 URI 過長` 實作為 `414 Request-URI Too Large`。
+一些系統將 `414 URI Too Long` 實作為 `414 Request-URI Too Large`。
 
 ## 狀態
 
