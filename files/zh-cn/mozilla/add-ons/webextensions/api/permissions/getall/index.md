@@ -23,7 +23,7 @@ let gettingAll = browser.permissions.getAll()
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将以包含当前授予给扩展的所有权限的 {{WebExtAPIRef("permissions.Permissions")}} 对象兑现。这包括扩展在 [`permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 键中列出的所有权限，以及扩展通过调用 {{WebExtAPIRef("permissions.request()")}} 获得的 [`optional_permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) 中列出的任何权限。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现为包含当前授予给扩展的所有权限的 {{WebExtAPIRef("permissions.Permissions")}} 对象。这包括扩展在 [`permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 键中列出的所有权限，以及扩展通过调用 {{WebExtAPIRef("permissions.request()")}} 获得的 [`optional_permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) 中列出的任何权限。
 
 ## 浏览器兼容性
 
@@ -32,7 +32,7 @@ let gettingAll = browser.permissions.getAll()
 ## 示例
 
 ```js
-// 扩展的权限包括：
+// 扩展已取得的权限：
 // "webRequest", "tabs", "*://*.mozilla.org/*"
 
 const currentPermissions = await browser.permissions.getAll();
