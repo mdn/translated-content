@@ -11,7 +11,7 @@ l10n:
 
 `Permissions` 参数可以包含一个一系列[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)数组的 `origins` 属性；或者可以包含一个一系列 [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)数组的 `permissions` 属性；又或者同时包含两个属性。
 
-这些要请求授予的权限必须来自在 [`optional_permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest.json 键中定义的权限集合中。`origins` 属性可以包含与可选权限匹配的主机的子集的权限：例如，如果可选权限包括 "*://mozilla.org/"，则 `permissions.origins` 可以包括 "https://developer.mozilla.org/"。
+这些要请求授予的权限必须来自在 [`optional_permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest.json 键中定义的权限集合中。`origins` 属性可以包含与可选权限匹配的主机的子集的权限：例如，如果可选权限包括 `*://mozilla.org/`，则 `permissions.origins` 可以包括 `https://developer.mozilla.org/`。
 
 请求[仅可选的权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions#仅可选的权限)的请求不能同时包含任何其他可选权限。
 
