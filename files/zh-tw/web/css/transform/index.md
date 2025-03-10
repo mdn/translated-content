@@ -7,7 +7,41 @@ slug: Web/CSS/transform
 
 **`transform`** [CSS](/zh-TW/docs/Web/CSS) 屬性可以讓你修改 CSS 可視化格式模型（visual formatting model）的空間維度。使用此屬性，元素可以被平移、旋轉、縮放和傾斜。
 
-{{EmbedInteractiveExample("pages/css/transform.html")}}
+{{InteractiveExample("CSS Demo: transform")}}
+
+```css interactive-example-choice
+transform: matrix(1, 2, 3, 4, 5, 6);
+```
+
+```css interactive-example-choice
+transform: translate(120px, 50%);
+```
+
+```css interactive-example-choice
+transform: scale(2, 0.5);
+```
+
+```css interactive-example-choice
+transform: rotate(0.5turn);
+```
+
+```css interactive-example-choice
+transform: skew(30deg, 20deg);
+```
+
+```css interactive-example-choice
+transform: scale(0.5) translate(-100%, -100%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 如果這個屬性的值不是 `none`，將會建立一個 [stacking context](/zh-TW/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。在這個情況下，此元素將被其所包含的 `position: fixed` 元素當成一個 containing block。
 

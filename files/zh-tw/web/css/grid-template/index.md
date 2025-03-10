@@ -7,7 +7,67 @@ slug: Web/CSS/grid-template
 
 CSS 的 **`grid-template`** 屬性是一個用於定義{{glossary("grid column","網格欄")}}、{{glossary("grid rows","列")}}和{{glossary("grid areas","區域")}}的[簡寫屬性](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)。
 
-{{EmbedInteractiveExample("pages/css/grid-template.html")}}
+{{InteractiveExample("CSS Demo: grid-template")}}
+
+```css interactive-example-choice
+grid-template:
+  "a a a" 40px
+  "b c c" 40px
+  "b c c" 40px / 1fr 1fr 1fr;
+```
+
+```css interactive-example-choice
+grid-template:
+  "b b a" auto
+  "b b c" 2ch
+  "b b c" 1em / 20% 20px 1fr;
+```
+
+```css interactive-example-choice
+grid-template:
+  "a a ." minmax(50px, auto)
+  "a a ." 80px
+  "b b c" auto / 2em 3em auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-gap: 10px;
+  width: 200px;
+}
+
+#example-element :nth-child(1) {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  grid-area: a;
+}
+
+#example-element :nth-child(2) {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+  grid-area: b;
+}
+
+#example-element :nth-child(3) {
+  background-color: rgba(94, 255, 0, 0.2);
+  border: 3px solid green;
+  grid-area: c;
+}
+```
 
 作者可以為長期屬性設置值：{{cssxref("grid-template-rows")}}、{{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-areas ")}}。
 

@@ -7,7 +7,46 @@ slug: Web/CSS/border-left-color
 
 **`border-left-color`** 是一種 CSS 屬性，用來設定元件左側[邊框](/zh-TW/docs/Web/CSS/border)的顏色。也可由含括此屬性功能的簡寫屬性 {{cssxref("border-color")}} 或 {{cssxref("border-left")}} 設定該屬性值。
 
-{{EmbedInteractiveExample("pages/css/border-left-color.html")}}
+{{InteractiveExample("CSS Demo: border-left-color")}}
+
+```css interactive-example-choice
+border-left-color: red;
+```
+
+```css interactive-example-choice
+border-left-color: #32a1ce;
+```
+
+```css interactive-example-choice
+border-left-color: rgb(170, 50, 220, 0.6);
+```
+
+```css interactive-example-choice
+border-left-color: hsl(60, 90%, 50%, 0.8);
+```
+
+```css interactive-example-choice
+border-left-color: transparent;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 語法
 
