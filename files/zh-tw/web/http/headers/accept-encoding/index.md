@@ -2,7 +2,7 @@
 title: Accept-Encoding
 slug: Web/HTTP/Headers/Accept-Encoding
 l10n:
-  sourceCommit: f341bd4728d3448faf6b9fc3b45980c35c067f25
+  sourceCommit: 442db82028668b17b888ee439468ae2ac9d589a5
 ---
 
 {{HTTPSidebar}}
@@ -26,7 +26,7 @@ HTTP **`Accept-Encoding`** {{glossary("request header", "請求")}}和{{glossary
       <td>{{Glossary("Request header", "請求標頭")}}、{{Glossary("Response header", "回應標頭")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止的請求標頭")}}</th>
       <td>是</td>
     </tr>
   </tbody>
