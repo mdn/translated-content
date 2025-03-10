@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
 
 浏览器窗口的类型。
 
-## Type
+## 类型
 
 类型的值是字符串类型。可能的值如下：
 
@@ -16,14 +16,14 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
 - `"panel"`
 - `"devtools"`
 
-## 浏览器适配
+## 浏览器兼容性
 
 {{Compat}}
 
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#type-WindowType) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#type-WindowType) API。此文档基于 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
