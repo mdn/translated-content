@@ -45,7 +45,7 @@ Content-Type: application/json
 Content-Length: 97
 
 {
-  "error": "Upload failed",
+  "error": "上傳失敗",
   "message": "最大允許的上傳檔案大小為 4MB。",
 }
 ```
