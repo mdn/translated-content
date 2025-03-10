@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}} {{PreviousMenuNext("Learn_web_development/Extensions/Performance/Javascript", "Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance")}}
 
-HTML은 기본적으로 빠르고 접근하기 쉽습니다. HTML 코드를 작성하거나 수정할 때 이 두 가지 속성을 유지하도록 보장하는 것이 개발자로서의 업무입니다. 복잡한 문제가 발생 하기도 하는데, 삽입된 {{htmlelement("video")}} 파일 용량이 너무 크거나 JavaScript 파싱이 중요한 페이지 요소의 렌더링을 차단하는 상황이 일어날 수 있습니다. 이 기사에서는 웹 페이지 품질을 극적으로 향상시킬 수 있는 주요한 HTML 성능 기능을 살펴봅니다.
+HTML은 기본적으로 빠르고 접근하기 쉽습니다. HTML 코드를 작성하거나 수정할 때 이 두 가지 속성을 유지하도록 보장하는 것이 개발자로서의 업무입니다. 복잡한 문제가 발생 하기도 하는데, 삽입된 {{htmlelement("video")}} 파일 용량이 너무 크거나 JavaScript 파싱이 중요한 페이지 요소의 렌더링을 차단하는 상황이 일어날 수 있습니다. 이번 글에서는 웹 페이지 품질을 극적으로 향상시킬 수 있는 주요한 HTML 성능 기능을 살펴봅니다.
 
 <table>
   <tbody>
