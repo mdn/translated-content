@@ -9,8 +9,6 @@ l10n:
 
 当扩展的部分权限被移除时触发。
 
-Fired when some permissions are removed from the extension.
-
 ## 语法
 
 ```js-nolint
