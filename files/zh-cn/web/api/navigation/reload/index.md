@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-{{domxref("Navigation")}} 接口的 **`reload()`** 方法重新加载当前 URL，更新历史记录条目列表中提供的任何状态。
+{{domxref("Navigation")}} 接口的 **`reload()`** 方法重新加载当前 URL，同时更新历史记录条目列表中对应的条目的状态。
 
 ## 语法
 
