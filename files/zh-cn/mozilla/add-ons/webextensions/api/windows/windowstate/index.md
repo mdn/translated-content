@@ -1,6 +1,8 @@
 ---
 title: windows.WindowState
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
+l10n:
+    sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}
@@ -16,13 +18,13 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 - `"minimized"`
   - : 窗口只显示为任务栏中的图标。
 - `"maximized"`
-  - : 窗口充满了显示它的屏幕，不包括操作系统保留的任何屏幕区域。
+  - : 窗口充满显示它的屏幕（但不包括操作系统保留的任何屏幕区域)。
 - `"fullscreen"`
-  - : 窗口正在作为全屏应用程序运行，或者标签中的内容正在使用 [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API)。
+  - : 窗口正在作为全屏应用程序运行，或者标签页中的内容正在使用 [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API)。
 - `"docked"`
   - : 靠边窗口占据了相对于同一应用程序拥有的其他窗口的固定位置。
 
-macOS 兼容性；自 macOS 10.10 开始，窗口的默认最大化行为已更改为将应用程序作为全屏应用程序运行，而不是“缩放”窗口。`fullscreen` 既指浏览器作为全屏应用程序运行，也指标签中的内容使用 Fullscreen API。
+macOS 兼容性：自 macOS 10.10 开始，窗口的默认最大化行为已变为将应用程序作为全屏应用程序运行而非“缩放”窗口。`fullscreen` 既指浏览器作为全屏应用程序运行，也指标签中的内容使用 Fullscreen API。
 
 ## 浏览器兼容性
 
