@@ -1,7 +1,7 @@
 ---
 title: Transmisión Adaptativa DASH para Video en HTML 5
-slug: Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video
-original_slug: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
+slug: Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming
+original_slug: Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video
 l10n:
   sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
