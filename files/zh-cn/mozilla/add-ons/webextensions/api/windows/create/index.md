@@ -38,7 +38,7 @@ let creating = browser.windows.create(
       - : `boolean`。当窗口打开时，它将包含一个标签页（如果提供了 `url` 参数并且值是包含一个包含多个 URL 的数组，则将包含多个标签页）。默认情况下，运行在这些页面中的脚本不允许使用 [`window.close()`](/zh-CN/docs/Web/API/Window/close) 来关闭它们所在的标签页。如果你包括 `allowScriptsToClose` 并将其设置为 `true`，那么这个默认行为将被更改，此时脚本才可以关闭它们所在的标签页。注意：
 
         - 这仅适用于在创建窗口时打开的标签页。如果用户在此窗口中打开了更多标签页，则脚本将无法关闭这些新标签页。
-        - 如果 `url` 中给出的 URL 指向[扩展页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)（即，它们是包含在此扩展中并使用“moz-extension:”协议加载的页面），则脚本将_被_默认允许关闭这些标签页。
+        - 如果 `url` 中给出的 URL 指向[扩展页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)（即，它们是包含在此扩展中并使用“moz-extension:”协议加载的页面），则脚本将*被*默认允许关闭这些标签页。
 
     - `cookieStoreId` {{optional_inline}}
       - : `integer`。如果指定该参数，则将为打开的所有标签页指定 `CookieStoreId`。有关使用 `cookieStoreId` 的更多信息，请参见[使用上下文标识](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
