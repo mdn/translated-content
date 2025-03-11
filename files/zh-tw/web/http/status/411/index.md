@@ -10,7 +10,7 @@ l10n:
 HTTP **`411 Length Required`** [用戶錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶錯誤回應)狀態碼表示伺服器拒絕接受沒有定義 {{HTTPHeader("Content-Length")}} 標頭的請求。
 
 > [!NOTE]
-> 在以一系列塊發送數據時，會省略 `Content-Length` 標頭，而在每個塊的開頭，當前塊的長度需要包含在十六進制格式。詳情請參見 {{HTTPHeader("Transfer-Encoding")}}。
+> 在以一系列分塊發送數據時，會省略 `Content-Length` 標頭，而在每個分塊的開頭，當前分塊的長度需要以十六進制格式包含。詳情請參見 {{HTTPHeader("Transfer-Encoding")}}。
 
 ## 狀態
 
