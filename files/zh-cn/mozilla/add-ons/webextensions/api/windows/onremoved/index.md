@@ -9,7 +9,7 @@ l10n:
 
 当窗口被关闭时触发。
 
-## Syntax
+## 语法
 
 ```js-nolint
 browser.windows.onRemoved.addListener(listener)
