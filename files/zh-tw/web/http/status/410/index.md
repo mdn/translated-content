@@ -35,10 +35,10 @@ Content-Length: 212
 
 <html>
 <head>
-  <title>Promotion expired</title>
+  <title>促銷已結束</title>
 </head>
 <body>
-  <h1>Promotion expired</h1>
+  <h1>促銷已結束</h1>
   <p>促銷活動已結束！請查看<a href="/offers">最新優惠</a>。</p>
 </body>
 </html>
