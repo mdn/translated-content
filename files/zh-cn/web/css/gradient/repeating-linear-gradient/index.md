@@ -7,7 +7,38 @@ slug: Web/CSS/gradient/repeating-linear-gradient
 
 [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) **`repeating-linear-gradient()`** 创建一个由重复线性渐变组成的 {{cssxref("&lt;image&gt;")}}，类似于 {{cssxref("linear-gradient")}}，并且采用相同的参数，但是它会在所有方向上重复渐变以覆盖其整个容器。这个函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{cssxref("&lt;image&gt;")}} 类型。
 
-{{EmbedInteractiveExample("pages/css/function-repeating-linear-gradient.html")}}
+{{InteractiveExample("CSS Demo: repeating-linear-gradient()")}}
+
+```css interactive-example-choice
+background: repeating-linear-gradient(
+  #e66465,
+  #e66465 20px,
+  #9198e5 20px,
+  #9198e5 25px
+);
+```
+
+```css interactive-example-choice
+background: repeating-linear-gradient(45deg, #3f87a6, #ebf8e1 15%, #f69d3c 20%);
+```
+
+```css interactive-example-choice
+background:
+  repeating-linear-gradient(transparent, #4d9f0c 40px),
+  repeating-linear-gradient(0.25turn, transparent, #3f87a6 20px);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 重复渐变的长度是第一个色标和最后一个色标之间的距离。如果第一种颜色没有色标长度，则色标长度默认为 0。每次重复时，色标的位置都会以基本线性渐变长度的倍数移动。因此，每个结束色标的位置都会与起始色标的位置重合；如果色值不同，就会产生鲜明的视觉过渡。可以通过重复第一种颜色值作为最后一种颜色值来改变这种情况。
 

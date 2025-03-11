@@ -9,7 +9,32 @@ l10n:
 
 **`@layer`** [CSS](/ko/docs/Web/CSS) [at-rule](/ko/docs/Web/CSS/At-rule)은 캐스케이드 레이어를 선언하는 데 사용되며, 여러 캐스케이드 레이어가 있을 경우 우선순위를 정의하는 데도 사용할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-layer.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
+
+```css interactive-example
+@layer module, state;
+
+@layer state {
+  .alert {
+    background-color: brown;
+  }
+  p {
+    border: medium solid limegreen;
+  }
+}
+
+@layer module {
+  .alert {
+    border: medium solid violet;
+    background-color: yellow;
+    color: white;
+  }
+}
+```
+
+```html interactive-example
+<p class="alert">Beware of the zombies</p>
+```
 
 ## 구문
 

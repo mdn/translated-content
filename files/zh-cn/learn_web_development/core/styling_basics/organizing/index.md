@@ -1,7 +1,6 @@
 ---
 title: 组织 CSS
 slug: Learn_web_development/Core/Styling_basics/Organizing
-original_slug: Learn/CSS/Building_blocks/Organizing
 ---
 
 {{LearnSidebar}}

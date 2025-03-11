@@ -7,7 +7,43 @@ slug: Web/CSS/border-inline-style
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-inline-style`** 定义了元素的逻辑行向的边框线型，并根据元素的书写模式、行内方向和文本朝向对应至实体边框线型。根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("border-top-style")}} 和 {{CSSXref("border-bottom-style")}}，或者 {{CSSXref("border-left-style")}} 和 {{CSSXref("border-right-style")}} 属性。
 
-{{EmbedInteractiveExample("pages/css/border-inline-style.html")}}
+{{InteractiveExample("CSS Demo: border-inline-style")}}
+
+```css interactive-example-choice
+border-inline-style: dotted;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-inline-style: dotted;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-inline-style: groove;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 另一方向的边框线型可用 {{CSSXref("border-block-style")}} 设置，此属性会设置 {{CSSXref("border-block-start-style")}} 和 {{CSSXref("border-block-end-style")}}。
 

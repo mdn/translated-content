@@ -1,7 +1,6 @@
 ---
 title: 旧式浏览器中的 HTML 表单
 slug: Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers
-original_slug: Learn/Forms/HTML_forms_in_legacy_browsers
 ---
 
 {{LearnSidebar}}

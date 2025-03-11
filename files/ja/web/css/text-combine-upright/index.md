@@ -11,7 +11,33 @@ l10n:
 
 これは、日本語の縦中横、中国語の <i lang="zh-CN">直書橫向</i> として知られる効果をもたらすために使用されます。
 
-{{EmbedInteractiveExample("pages/css/text-combine-upright.html")}}
+{{InteractiveExample("CSS Demo: text-combine-upright")}}
+
+```css interactive-example-choice
+text-combine-upright: none;
+```
+
+```css interactive-example-choice
+text-combine-upright: all;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div>
+    <p>
+      <span class="transition-all" id="example-element"
+        >2022<span>年</span>12<span>月</span>8</span
+      >日から楽しい
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+p {
+  writing-mode: vertical-rl;
+}
+```
 
 ## 構文
 

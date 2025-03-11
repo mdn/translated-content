@@ -1,7 +1,6 @@
 ---
 title: 创建精美的信纸
 slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
-original_slug: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics/Cool-looking_box", "Learn_web_development/Core/Styling_basics")}}

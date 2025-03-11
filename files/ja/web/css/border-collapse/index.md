@@ -9,7 +9,47 @@ l10n:
 
 **`border-collapse`** は [CSS](/ja/docs/Web/CSS) のプロパティで、表 ({{htmlElement("table")}}) の中のセルが境界を共有するか分離するかを設定します。
 
-{{EmbedInteractiveExample("pages/css/border-collapse.html")}}
+{{InteractiveExample("CSS Demo: border-collapse")}}
+
+```css interactive-example-choice
+border-collapse: collapse;
+```
+
+```css interactive-example-choice
+border-collapse: separate;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <table class="transition-all" id="example-element">
+    <tr>
+      <td>Cell 1.1</td>
+      <td>Cell 1.2</td>
+    </tr>
+    <tr>
+      <td>Cell 2.1</td>
+      <td>Cell 2.2</td>
+    </tr>
+    <tr>
+      <td>Cell 3.1</td>
+      <td>Cell 3.2</td>
+    </tr>
+  </table>
+</section>
+```
+
+```css interactive-example
+table {
+  width: 15rem;
+  table-layout: fixed;
+}
+
+td {
+  border: 5px solid;
+  border-color: crimson dodgerblue orange limegreen;
+  padding: 0.75rem;
+}
+```
 
 セルが折り畳まれている場合 (collapse)、 {{cssxref("border-style")}} の値で `inset` が `ridge` のように動作し、 `outset` が `groove` のように動作します。
 

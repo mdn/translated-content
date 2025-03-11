@@ -159,8 +159,8 @@ if (Object.hasOwn(foo, "prop")) {
 
 - [在 `core-js` 中 `Object.hasOwn` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.hasOwnProperty()")}}
-- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [JavaScript 指南：重新审视继承](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JavaScript 指南：重新审视继承](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

@@ -94,7 +94,7 @@ console.log(result.get(restock));
 // [{ name: "香蕉", type: "水果", quantity: 5 }]
 ```
 
-请注意，函数参数 `{ quantity }` 是[函数参数的对象解构语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#从作为函数参数传递的对象中提取属性)的一个基本示例。这会解构作为参数传递的对象的 `quantity` 属性，并将其赋值给函数体中名为 `quantity` 的变量。这是一种非常简洁的访问函数中相关元素的值的方式。
+请注意，函数参数 `{ quantity }` 是[函数参数的对象解构语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring#从作为函数参数传递的对象中提取属性)的一个基本示例。这会解构作为参数传递的对象的 `quantity` 属性，并将其赋值给函数体中名为 `quantity` 的变量。这是一种非常简洁的访问函数中相关元素的值的方式。
 
 `Map` 的键在修改后仍可以使用。但是，你不能重新创建键并仍然使用它。因此，任何需要使用映射的内容都保留对其键的引用是非常重要的。
 

@@ -9,7 +9,7 @@ JavaScript 是一个基于原型的语言——一个对象的行为取决于它
 
 在许多其他语言中，_类_（或构造函数）与*对象*（或实例），是两个不同的概念。在 JavaScript 中，类可以看作是已有的原型继承机制的一种抽象——所有语法都可以转换为原型继承。类本身也是不过是 JavaScript 里一种普通的值，它们有其自己的原型链。事实上，大多数 JavaScript 纯函数都可用作构造函数——你可以用 `new` 运算符来调用一个构造函数以创建出一个新的对象。
 
-本教程中，我们将研究类模型的方方面面。如果你想深入了解底层原型系统，请参阅[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)指南。
+本教程中，我们将研究类模型的方方面面。如果你想深入了解底层原型系统，请参阅[继承与原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)指南。
 
 本章节假定你已熟悉 JavaScript 并能使用常规的对象。
 
@@ -263,7 +263,7 @@ class Color {
 console.log(new Color().getRed === new Color().getRed); // false
 ```
 
-与之相反地，如果你使用方法，它将在所有实例之间共享。一个函数可以在所有实例之间共享，且在不同实例调用时其行为也不同，因为 `this` 的值不同。你也许好奇这个方法存储在*哪里*——它被定义在所有实例的原型上，即 `Color.prototype`，详情参阅[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。
+与之相反地，如果你使用方法，它将在所有实例之间共享。一个函数可以在所有实例之间共享，且在不同实例调用时其行为也不同，因为 `this` 的值不同。你也许好奇这个方法存储在*哪里*——它被定义在所有实例的原型上，即 `Color.prototype`，详情参阅[继承与原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)。
 
 相似的，我们也可以添加一个 `setRed` 方法来设置红色值：
 

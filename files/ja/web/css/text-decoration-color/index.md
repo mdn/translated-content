@@ -11,7 +11,47 @@ l10n:
 
 色はプロパティ値のスコープにある装飾、すなわち下線、上線、打消し線、それにスペルミスに印をつけるために使われるような波線などに適用されます。
 
-{{EmbedInteractiveExample("pages/css/text-decoration-color.html")}}
+{{InteractiveExample("CSS Demo: text-decoration-color")}}
+
+```css interactive-example-choice
+text-decoration-color: red;
+```
+
+```css interactive-example-choice
+text-decoration-color: #21ff21;
+```
+
+```css interactive-example-choice
+text-decoration-color: rgb(255, 90, 255);
+```
+
+```css interactive-example-choice
+text-decoration-color: hsl(70, 100%, 40%);
+```
+
+```css interactive-example-choice
+text-decoration-color: currentColor;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+
+#example-element {
+  text-decoration-line: underline;
+}
+```
 
 CSS はそれぞれの線種ごとに固有の色を指定する仕組みを直接は持っていません。しかしながら、この効果は要素を入れ子にして、それぞれの要素毎に ({{cssxref("text-decoration-line")}} プロパティで) 異なる線種を適用し、 (`text-decoration-color` で) 線の色を指定することで実現できます。
 

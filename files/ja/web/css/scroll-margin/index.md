@@ -7,7 +7,67 @@ slug: Web/CSS/scroll-margin
 
 **`scroll-margin`** は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素のスクロールマージンを一度にすべて、ちょうど `margin` プロパティが個別指定の `margin-*` に値を割り当てるように、値を割り当てます。
 
-{{EmbedInteractiveExample("pages/css/scroll-margin.html")}}
+{{InteractiveExample("CSS Demo: scroll-margin")}}
+
+```css interactive-example-choice
+scroll-margin: 0;
+```
+
+```css interactive-example-choice
+scroll-margin: 20px;
+```
+
+```css interactive-example-choice
+scroll-margin: 2em;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="scroller">
+    <div>1</div>
+    <div id="example-element">2</div>
+    <div>3</div>
+  </div>
+  <div class="info">Scroll »</div>
+</section>
+```
+
+```css interactive-example
+.default-example .info {
+  inline-size: 100%;
+  padding: 0.5em 0;
+  font-size: 90%;
+  writing-mode: vertical-rl;
+}
+
+.scroller {
+  text-align: left;
+  height: 250px;
+  width: 270px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid black;
+  scroll-snap-type: y mandatory;
+}
+
+.scroller > div {
+  flex: 0 0 250px;
+  background-color: rebeccapurple;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.scroller > div:nth-child(even) {
+  background-color: #fff;
+  color: rebeccapurple;
+}
+```
 
 ## 構成要素のプロパティ
 

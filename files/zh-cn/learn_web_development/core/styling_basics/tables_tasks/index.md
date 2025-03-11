@@ -1,7 +1,6 @@
 ---
 title: 技能测试：表格
 slug: Learn_web_development/Core/Styling_basics/Tables_tasks
-original_slug: Learn/CSS/Building_blocks/Tables_tasks
 ---
 
 {{LearnSidebar}}

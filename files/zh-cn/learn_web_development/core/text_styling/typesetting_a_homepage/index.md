@@ -1,7 +1,6 @@
 ---
 title: 作业：排版社区大学首页
 slug: Learn_web_development/Core/Text_styling/Typesetting_a_homepage
-original_slug: Learn/CSS/Styling_text/Typesetting_a_homepage
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/CSS_layout", "Learn_web_development/Core/Text_styling")}}

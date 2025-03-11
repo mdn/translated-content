@@ -36,7 +36,7 @@ slug: Web/HTML/Element/html
 
 在 `<html>` 元素上包含有效的 `lang` 声明也確保了頁面的 {{HTMLElement("head")}} 中包含的重要元數據，例如頁面的 {{HTMLElement("title")}}，也被正確宣告。
 
-- [MDN理解 WCAG，指南3.1解釋](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.1_%e2%80%94_readable_make_text_content_readable_and_understandable)
+- [MDN理解 WCAG，指南3.1解釋](/zh-TW/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.1_%e2%80%94_readable_make_text_content_readable_and_understandable)
 - [理解成功標準3.1.1 | W3C理解 WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
 
 ## 技術摘要
@@ -70,7 +70,7 @@ slug: Web/HTML/Element/html
     <tr>
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/document_role"
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"
           >document</a
         >
       </td>
