@@ -7,13 +7,13 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("service")}}
 
-{{domxref("Cookie Store API", "Cookie 存储 API", "", "nocode")}} 的 **`ExtendableCookieChangeEvent`** 接口是传递给 {{domxref("ServiceWorkerGlobalScope/cookiechange_event", "cookiechange")}} 事件的事件类型，当发生任何与 service worker 的 cookie 更改订阅列表匹配的 cookie 更改时，该事件在 {{domxref("ServiceWorkerGlobalScope")}} 上触发。Cookie 更改事件由 cookie 和 type 组成。（“changed”或“deleted”）
+{{domxref("Cookie Store API", "Cookie 存储 API", "", "nocode")}} 的 **`ExtendableCookieChangeEvent`** 接口是传递给 {{domxref("ServiceWorkerGlobalScope/cookiechange_event", "cookiechange")}} 事件的事件类型，当发生任何与 service worker 的 cookie 更改订阅列表匹配的 cookie 更改时，该事件在 {{domxref("ServiceWorkerGlobalScope")}} 上触发。cookie 更改事件由 cookie 和 type 组成。（“changed”或“deleted”）
 
-导致派发 `ExtendableCookieChangeEvent` 的 Cookie 更改包括：
+导致派发 `ExtendableCookieChangeEvent` 的 cookie 更改包括：
 
-- 新建一个 Cookie，但不会立即删除。在这种情况下，`type` 为“changed”。
-- 新建一个 Cookie，但会立即删除。在这种情况下，`type` 为“deleted”。
-- 删除一个 Cookie。在这种情况下，`type` 为“deleted”。
+- 新建一个 cookie，但不会立即删除。在这种情况下，`type` 为“changed”。
+- 新建一个 cookie，但会立即删除。在这种情况下，`type` 为“deleted”。
+- 删除一个 cookie。在这种情况下，`type` 为“deleted”。
 
 > [!NOTE]
 > 由于插入另一个具有相同名称、域和路径的 cookie 而被替换的 cookie 将被忽略并且不会触发更改事件。
