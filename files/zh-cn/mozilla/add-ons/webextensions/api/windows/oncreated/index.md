@@ -9,7 +9,7 @@ l10n:
 
 当窗口创建时触发。
 
-## Syntax
+## 语法
 
 ```js-nolint
 browser.windows.onCreated.addListener(listener)
