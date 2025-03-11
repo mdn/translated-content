@@ -1,6 +1,7 @@
 ---
 title: aria-checked
-slug: Web/Accessibility/ARIA/Attributes/aria-checked
+slug: Web/Accessibility/ARIA/Reference/Attributes/aria-checked
+original_slug: Web/Accessibility/ARIA/Attributes/aria-checked
 l10n:
   sourceCommit: 134f9a1ab341bf9ad30358e5f3a59bd9204078df
 ---

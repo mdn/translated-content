@@ -1,6 +1,7 @@
 ---
 title: El contexto de apilamiento
-slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
+slug: Web/CSS/CSS_positioned_layout/Stacking_context
+original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
 ---
 
 {{CSSRef}}

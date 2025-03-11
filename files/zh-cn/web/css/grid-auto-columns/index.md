@@ -7,7 +7,60 @@ slug: Web/CSS/grid-auto-columns
 
 CSS 属性 **`grid-auto-columns`** 指定了隐式创建的网格纵向轨道（{{glossary("grid tracks", "track")}}）的宽度。
 
-{{EmbedInteractiveExample("pages/css/grid-auto-columns.html")}}
+{{InteractiveExample("CSS Demo: grid-auto-columns")}}
+
+```css interactive-example-choice
+grid-auto-columns: auto;
+```
+
+```css interactive-example-choice
+grid-auto-columns: 1fr;
+```
+
+```css interactive-example-choice
+grid-auto-columns: min-content;
+```
+
+```css interactive-example-choice
+grid-auto-columns: minmax(10px, auto);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div></div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+
+#example-element > div:nth-child(1) {
+  grid-column: 1 / 3;
+}
+
+#example-element > div:nth-child(2) {
+  grid-column: 2;
+}
+```
 
 如果一个表格项目被定位在没有使用 {{cssxref("grid-template-columns")}} 显式指定尺寸的列中，隐式的 {{glossary("grid", "grid")}} 轨道就会被创建出来支撑它。显式地定位到超出范围的列中，或者通过自动布局算法创建额外的列，就会发生上述情况。
 

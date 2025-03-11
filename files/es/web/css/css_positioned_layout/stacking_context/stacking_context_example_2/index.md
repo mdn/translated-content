@@ -1,6 +1,7 @@
 ---
 title: Ejemplo 2 del contexto de apilamiento
-slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2
+slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2
+original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2
 ---
 
 {{CSSRef}}
