@@ -9,7 +9,34 @@ CSS-свойство **`-moz-appearance`** используется в Gecko (Fi
 
 Свойство **`-webkit-appearance`** используется в браузерах WebKit-based (например, Safari) и Blink-based (например, Chrome, Opera) для того же эффекта. Заметьте, что Firefox и Edge также поддерживают `-webkit-appearance`, для обеспечения совместимости.
 
-{{EmbedInteractiveExample("pages/css/appearance.html")}}
+{{InteractiveExample("CSS Demo: appearance")}}
+
+```css interactive-example-choice
+appearance: none;
+```
+
+```css interactive-example-choice
+appearance: auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="background">
+    <button id="example-element">button</button>
+  </div>
+</section>
+```
+
+```css interactive-example
+.background {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+}
+```
 
 Это свойство часто используется в таблицах стилей [XUL](/ru/docs/Mozilla/Tech/XUL/Tutorial) для разработки пользовательских виджетов в стиле, соответствующем платформе. Оно, также, используется в реализации [XBL](/ru/docs/XBL) виджетов, которые поставляются с платформой Mozilla.
 
