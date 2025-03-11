@@ -9,7 +9,7 @@ l10n:
 
 当窗口被调整大小或移动时触发。此事件在新的边界被提交时触发，而不会对正在进行中的更改触发。
 
-## Syntax
+## 语法
 
 ```js-nolint
 browser.windows.onBoundsChanged.addListener(listener)
