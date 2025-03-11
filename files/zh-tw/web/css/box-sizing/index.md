@@ -9,7 +9,56 @@ l10n:
 
 **`box-sizing`** [CSS](/zh-TW/docs/Web/CSS) 屬性設定如何計算元素的總寬度與高度。
 
-{{EmbedInteractiveExample("pages/css/box-sizing.html")}}
+{{InteractiveExample("CSS Demo: box-sizing")}}
+
+```css interactive-example-choice
+box-sizing: content-box;
+width: 100%;
+```
+
+```css interactive-example-choice
+box-sizing: content-box;
+width: 100%;
+border: solid #5b6dcd 10px;
+padding: 5px;
+```
+
+```css interactive-example-choice
+box-sizing: border-box;
+width: 100%;
+border: solid #5b6dcd 10px;
+padding: 5px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element-parent">
+    <p>Parent container</p>
+    <div class="transition-all" id="example-element">
+      <p>Child container</p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element-parent {
+  width: 220px;
+  height: 200px;
+  border: solid 10px #ffc129;
+  margin: 0.8em;
+}
+
+#example-element {
+  height: 60px;
+  margin: 2em auto;
+  background-color: rgba(81, 81, 81, 0.6);
+}
+
+#example-element > p {
+  margin: 0;
+}
+```
 
 在 [CSS 盒模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)中，預設情況下，你為元素指定的 `width` 和 `height` 只應用於元素的內容區域。如果元素有邊框或內邊距，這些會加到 `width` 和 `height` 上，從而得出畫面上呈現的盒子大小。這意味著當你設定 `width` 和 `height` 時，必須調整你給的值以考慮邊框或內邊距。例如，如果你有四個設為 `width: 25%;` 的盒子，若其中任何一個有左右內邊距或左右邊框，預設情況下它們將無法在父容器的限制內排成一行。
 
