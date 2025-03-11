@@ -7,7 +7,43 @@ slug: Web/CSS/column-rule
 
 [CSS](/zh-CN/docs/Web/CSS) `column-rule` [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)可以在多列布局中设定分割线的宽度、样式和颜色。
 
-{{EmbedInteractiveExample("pages/css/column-rule.html")}}
+{{InteractiveExample("CSS Demo: column-rule")}}
+
+```css interactive-example-choice
+column-rule: dotted;
+```
+
+```css interactive-example-choice
+column-rule: solid 6px;
+```
+
+```css interactive-example-choice
+column-rule: solid blue;
+```
+
+```css interactive-example-choice
+column-rule: thick inset blue;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  columns: 3;
+  column-rule: solid;
+  text-align: left;
+}
+```
 
 该[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)使用简单方便的声明形式将各个 `column-rule-*` 属性放在了一起：{{Cssxref("column-rule-width")}}、{{Cssxref("column-rule-style")}} 和 {{Cssxref("column-rule-color")}}。
 

@@ -7,7 +7,33 @@ slug: Web/CSS/transform-function/scale
 
 CSS 函数 `scale()` 用于修改元素的大小。可以通过向量形式定义的缩放值来放大或缩小元素，同时可以在不同的方向设置不同的缩放值。
 
-{{EmbedInteractiveExample("pages/css/function-scale.html")}}
+{{InteractiveExample("CSS Demo: scale()")}}
+
+```css interactive-example-choice
+transform: scale(1);
+```
+
+```css interactive-example-choice
+transform: scale(0.7);
+```
+
+```css interactive-example-choice
+transform: scale(1.3, 0.4);
+```
+
+```css interactive-example-choice
+transform: scale(-0.5, 1);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 该变换通过一个二维向量确定在一个方向缩放的多少。如果缩放向量的两个坐标是相等的，那么所讲是均等的，或者说是各向同的，同时元素的形状是被保持的。这种情况下进行的是位似变换。
 

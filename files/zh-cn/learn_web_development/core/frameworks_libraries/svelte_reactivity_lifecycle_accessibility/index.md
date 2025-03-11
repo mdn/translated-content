@@ -1,7 +1,6 @@
 ---
 title: Svelte 进阶：响应式、生命周期以及无障碍
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_reactivity_lifecycle_accessibility
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility
 ---
 
 {{LearnSidebar}}

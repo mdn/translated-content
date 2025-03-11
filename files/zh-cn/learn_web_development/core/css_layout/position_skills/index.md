@@ -1,7 +1,6 @@
 ---
 title: "Test your skills: position"
 slug: Learn_web_development/Core/CSS_layout/Position_skills
-original_slug: Learn/CSS/CSS_layout/Position_skills
 ---
 
 {{LearnSidebar}}

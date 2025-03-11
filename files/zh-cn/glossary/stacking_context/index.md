@@ -11,4 +11,4 @@ l10n:
 
 ## 参见
 
-- [层叠上下文的解释与示例](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+- [层叠上下文的解释与示例](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)

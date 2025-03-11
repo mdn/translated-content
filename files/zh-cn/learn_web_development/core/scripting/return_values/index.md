@@ -1,7 +1,6 @@
 ---
 title: 函数返回值
 slug: Learn_web_development/Core/Scripting/Return_values
-original_slug: Learn/JavaScript/Building_blocks/Return_values
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}

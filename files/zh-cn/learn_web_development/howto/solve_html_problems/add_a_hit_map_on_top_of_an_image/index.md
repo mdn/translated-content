@@ -1,7 +1,6 @@
 ---
 title: Add a hit map on top of an image
 slug: Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image
-original_slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 ---
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Learn/HTML/Howto")}}

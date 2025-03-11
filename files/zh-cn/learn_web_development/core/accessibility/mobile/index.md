@@ -1,7 +1,6 @@
 ---
 title: 移动端无障碍
 slug: Learn_web_development/Core/Accessibility/Mobile
-original_slug: Learn/Accessibility/Mobile
 ---
 
 {{LearnSidebar}}

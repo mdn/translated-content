@@ -9,7 +9,71 @@ l10n:
 
 **`background-attachment`** [CSS](/zh-TW/docs/Web/CSS) 屬性設定背景圖片的位置是否固定在{{glossary("viewport", "視區")}}內，或者跟隨其包含區塊一起滑動。
 
-{{EmbedInteractiveExample("pages/css/background-attachment.html")}}
+{{InteractiveExample("CSS Demo: background-attachment")}}
+
+```css interactive-example-choice
+background-attachment: scroll;
+```
+
+```css interactive-example-choice
+background-attachment: fixed;
+```
+
+```css interactive-example-choice
+background-attachment: local;
+```
+
+```css interactive-example-choice
+background-attachment: local, scroll;
+```
+
+```css interactive-example-choice
+background-attachment: scroll, local;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill. London. Michaelmas term
+    lately over, and the Lord Chancellor sitting in Lincoln's Inn Hall.
+    Implacable November weather. As much mud in the streets as if the waters had
+    but newly retired from the face of the earth, and it would not be wonderful
+    to meet a Megalosaurus, forty feet long or so, waddling like an elephantine
+    lizard up Holborn Hill.
+  </div>
+</section>
+```
+
+```css interactive-example
+body {
+  overflow: scroll;
+}
+
+#default-example {
+  height: 600px;
+}
+
+#example-element {
+  max-width: 20rem;
+  height: 100%;
+  background:
+    url("/shared-assets/images/examples/lizard.png") right 3rem top 1rem / 15rem
+      no-repeat,
+    url("/shared-assets/images/examples/moon.jpg") center / 10rem;
+  color: #ff5454;
+  font-size: 1.5em;
+  font-weight: bold;
+  overflow: auto;
+  padding: 20px;
+  text-shadow:
+    0 0 0.6rem #000,
+    0 0 0.6rem #000;
+}
+```
 
 ## 語法
 

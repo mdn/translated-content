@@ -277,7 +277,7 @@ console.log(sameOriginContext.origin);
 如果在上下文发生极端变化之前就明确指出，那么用户就可以决定是否要继续使用，或者为这种变化做好准备：他们不仅不会感到困惑或迷失方向，而且更有经验的用户还可以更好地决定如何打开这些链接（是否在新窗口、是否在同一窗口、是否在新标签页、是否“在后台”）。
 
 - [WebAIM：链接与超文本——超文本链接](https://webaim.org/techniques/hypertext/hypertext_links)
-- [MDN / 理解 WCAG，指南 3.2](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+- [MDN / 理解 WCAG，指南 3.2](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
 - [G200：只在必要时从链接打开新窗口和标签页](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
 - [G201：打开新窗口时，给用户额外提示](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 

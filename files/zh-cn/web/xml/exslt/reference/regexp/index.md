@@ -1,7 +1,6 @@
 ---
 title: 正则表达式（regexp）
 slug: Web/XML/EXSLT/Reference/regexp
-original_slug: Web/EXSLT/regexp
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/zh-CN/docs/Web/EXSLT")}}

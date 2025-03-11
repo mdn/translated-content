@@ -9,7 +9,42 @@ l10n:
 
 **`background-position-y`** は [CSS](/ja/docs/Web/CSS) のプロパティで、各背景画像における垂直の初期位置を設定します。位置は {{cssxref("background-origin")}} によって設定された位置レイヤーに対する相対位置です。
 
-{{EmbedInteractiveExample("pages/css/background-position-y.html")}}
+{{InteractiveExample("CSS Demo: background-position-y")}}
+
+```css interactive-example-choice
+background-position-y: top;
+```
+
+```css interactive-example-choice
+background-position-y: center;
+```
+
+```css interactive-example-choice
+background-position-y: 25%;
+```
+
+```css interactive-example-choice
+background-position-y: 2rem;
+```
+
+```css interactive-example-choice
+background-position-y: bottom 32px;
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: navajowhite;
+  background-image: url("/shared-assets/images/examples/star.png");
+  background-repeat: no-repeat;
+  height: 100%;
+}
+```
 
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 

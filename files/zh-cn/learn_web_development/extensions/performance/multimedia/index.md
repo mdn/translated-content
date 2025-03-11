@@ -1,7 +1,6 @@
 ---
 title: 多媒体：图片
 slug: Learn_web_development/Extensions/Performance/Multimedia
-original_slug: Learn/Performance/Multimedia
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}

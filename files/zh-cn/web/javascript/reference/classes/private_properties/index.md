@@ -9,7 +9,7 @@ l10n:
 
 **私有属性**是常规的类的公有属性（包括[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)、类方法等）的对应。私有属性通过添加 `#` 前缀来创建，在类的外部无法合法地引用。这些类属性的私有封装由 JavaScript 本身强制执行。
 
-在这种语法出现之前，JavaScript 语言本身并没有原生支持私有属性。在原型继承中，可以通过使用 [`WeakMap`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#模拟私有成员) 对象或者[闭包](/zh-CN/docs/Web/JavaScript/Closures#用闭包模拟私有方法)的方式来模拟私有属性的行为，但就易用性而言，它们无法与 `#` 语法相提并论。
+在这种语法出现之前，JavaScript 语言本身并没有原生支持私有属性。在原型继承中，可以通过使用 [`WeakMap`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#模拟私有成员) 对象或者[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures#用闭包模拟私有方法)的方式来模拟私有属性的行为，但就易用性而言，它们无法与 `#` 语法相提并论。
 
 ## 语法
 
@@ -113,7 +113,7 @@ console.log(C.getX({})); // "obj 必须是 C 的实例"
 
 请注意，私有名称始终需要提前声明并且不可删除：如果你发现一个对象具有当前类的一个私有属性（无论是通过 `try...catch` 还是 `in` 检查），那么它一定具有其他所有的私有属性。通常情况下，一个对象具有一个类的私有属性意味着它是由该类构造的（尽管[并非总是如此](#返回重写对象)）。
 
-私有属性不是[原型继承](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)模型的一部分，因为它们只能在当前类内部被访问，而且不能被子类继承。不同类的私有属性名称之间没有任何交互。它们是附加在每个实例上的外部元数据，由类本身管理。因此，{{jsxref("Object.freeze()")}} 和 {{jsxref("Object.seal()")}} 对私有属性没有影响。
+私有属性不是[原型继承](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)模型的一部分，因为它们只能在当前类内部被访问，而且不能被子类继承。不同类的私有属性名称之间没有任何交互。它们是附加在每个实例上的外部元数据，由类本身管理。因此，{{jsxref("Object.freeze()")}} 和 {{jsxref("Object.seal()")}} 对私有属性没有影响。
 
 关于如何以及何时初始化私有字段的更多信息，请参阅[公有类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)。
 

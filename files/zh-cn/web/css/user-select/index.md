@@ -7,7 +7,31 @@ slug: Web/CSS/user-select
 
 **`user-select`** [CSS](/zh-CN/docs/Web/CSS) 属性用于控制用户是否可以选择文本。这不会对作为浏览器用户界面（即 {{Glossary("Chrome", "chrome")}}）的一部分的内容加载产生任何影响，除非是在文本框中。
 
-{{EmbedInteractiveExample("pages/css/user-select.html")}}
+{{InteractiveExample("CSS Demo: user-select")}}
+
+```css interactive-example-choice
+user-select: none;
+```
+
+```css interactive-example-choice
+user-select: text;
+```
+
+```css interactive-example-choice
+user-select: all;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">Try to select this text</p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.5rem;
+}
+```
 
 ## 语法
 

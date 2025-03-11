@@ -1,7 +1,6 @@
 ---
 title: Web 性能基础
 slug: Learn_web_development/Extensions/Performance/Web_Performance_Basics
-original_slug: Learn/Performance/Web_Performance_Basics
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
