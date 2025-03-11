@@ -1,6 +1,7 @@
 ---
 title: aria-controls
-slug: Web/Accessibility/ARIA/Attributes/aria-controls
+slug: Web/Accessibility/ARIA/Reference/Attributes/aria-controls
+original_slug: Web/Accessibility/ARIA/Attributes/aria-controls
 l10n:
   sourceCommit: 18c1fa17e3caf296af274d787c4e57e911969364
 ---

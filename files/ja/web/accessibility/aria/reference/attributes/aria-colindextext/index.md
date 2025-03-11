@@ -1,6 +1,7 @@
 ---
 title: aria-colindextext
-slug: Web/Accessibility/ARIA/Attributes/aria-colindextext
+slug: Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext
+original_slug: Web/Accessibility/ARIA/Attributes/aria-colindextext
 l10n:
   sourceCommit: 18c1fa17e3caf296af274d787c4e57e911969364
 ---
