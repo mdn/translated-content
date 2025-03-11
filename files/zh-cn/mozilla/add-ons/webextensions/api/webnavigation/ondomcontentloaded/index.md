@@ -20,7 +20,7 @@ browser.webNavigation.onDOMContentLoaded.removeListener(listener)
 browser.webNavigation.onDOMContentLoaded.hasListener(listener)
 ```
 
-事件有三个方法：
+事件有三个函数：
 
 - `addListener(callback)`
   - : 为此事件添加监听方法。

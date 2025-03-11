@@ -18,7 +18,7 @@ l10n:
 
 此函数还接受一个可选参数 `interactive`：如果省略或设置为假时，则强制流程在没有任何用户交互的情况下完成。在这种情况下，如果用户需要进行身份验证或授权，则操作将失败。
 
-此函数返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。如果身份验证和授权成功，该 Promise 将兑现为一个包含一些 URL 参数的重定向 URL。根据服务提供商实现的 OAuth2 流程，扩展需要进一步的步骤来获取有效的访问代码，然后扩展可以使用该访问代码来访问用户的数据。
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。如果身份验证和授权成功，该 Promise 将兑现为一个包含一些 URL 参数的重定向 URL。根据服务提供商实现的 OAuth2 流程，扩展需要进一步的步骤来获取有效的访问代码，然后扩展可以使用该访问代码来访问用户的数据。
 
 如果出现任何错误，Promise 将被拒绝并返回一个错误消息。错误条件可能包括：
 

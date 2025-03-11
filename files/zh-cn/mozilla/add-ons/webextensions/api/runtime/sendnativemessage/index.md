@@ -9,7 +9,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
 
 它需要两个强制的参数：native application 的名字和要发送给它的 JSON 对象。浏览器将会加载 native application 然后发送这个消息。
 
-这是一个异步函数，返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)对象。native application 发送的第一条消息将被当作`sendNativeMessage()` 的回复，并且 promise 将这个消息作为参数.。注意你不能使用 {{WebExtAPIRef("runtime.onMessage")}} 从应用获取回复：你必须使用回调函数来替代。
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。native application 发送的第一条消息将被当作`sendNativeMessage()` 的回复，并且 promise 将这个消息作为参数.。注意你不能使用 {{WebExtAPIRef("runtime.onMessage")}} 从应用获取回复：你必须使用回调函数来替代。
 
 每次调用 `runtime.sendNativeMessage()`都会生成一个新的实例。浏览器将会在收到回复后结束这个 native application。为了结束这个 native application，浏览器将会关闭 pipe，并给进程几秒的时间优雅的退出，如果它没有关闭就杀死它。
 

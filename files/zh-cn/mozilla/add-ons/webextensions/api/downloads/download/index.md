@@ -10,7 +10,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
 - 如果指定的 `url` 使用 HTTP 或者 HTTPS 协议，那么下载请求将会包含当前为该域名所设置的所有 cookie。
 - 如果`filename` 和 `saveAs` 都已经指定，那么将会弹出“保存为”对话框，并且默认名称显示为`filename`.
 
-这是一个异步函数，其返回值为 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 语法
 
