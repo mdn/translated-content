@@ -38,7 +38,7 @@ let creating = browser.windows.create(
       - : `boolean`。当窗口打开时，它将包含一个标签页（如果提供了 `url` 参数并且值是包含一个包含多个 URL 的数组，则将包含多个标签页）。默认情况下，运行在这些页面中的脚本不允许使用 [`window.close()`](/zh-CN/docs/Web/API/Window/close) 来关闭它们所在的标签页。如果你包括 `allowScriptsToClose` 并将其设置为 `true`，那么这个默认行为将被更改，此时脚本才可以关闭它们所在的标签页。注意：
 
         - 这仅适用于在创建窗口时打开的标签页。如果用户在此窗口中打开了更多标签页，则脚本将无法关闭这些新标签页。
-        - 如果 `url` 中给出的 URL 指向[扩展页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)（即，它们是包含在此扩展中并使用“moz-extension:”协议加载的页面），则脚本默认允许关闭这些标签页。
+        - 如果 `url` 中给出的 URL 指向[扩展页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)（即，它们是包含在此扩展中并使用“moz-extension:”协议加载的页面），则脚本将_被_默认允许关闭这些标签页。
 
     - `cookieStoreId` {{optional_inline}}
       - : `integer`。如果指定该参数，则将为打开的所有标签页指定 `CookieStoreId`。有关使用 `cookieStoreId` 的更多信息，请参见[使用上下文标识](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
@@ -47,7 +47,7 @@ let creating = browser.windows.create(
     - `height` {{optional_inline}}
       - : `integer`。新窗口的像素高度，包含框架。如果未指定，则窗口将被设为默认高度。
     - `incognito` {{optional_inline}}
-      - : `boolean`。设置新窗口是否应为隐私窗口。请注意，如果指定了 `incognito` 和 `tabId`，则指定的标签页 ID 必须指向是隐私标签 —— 你不能将非隐私标签页移动到隐私窗口中。
+      - : `boolean`。设置新窗口是否应为隐私窗口。请注意，如果指定了 `incognito` 和 `tabId`，则指定的标签页 ID 必须指向是隐私标签——你不能将非隐私标签页移动到隐私窗口中。
     - `left` {{optional_inline}}
       - : `integer`。新窗口从屏幕左边缘的像素位置。如果未指定，新窗口将按照上一个获得焦点的窗口自然偏移。（在 Firefox 108 或更早版本中，对于 `panel` 或 `popup` 窗口类型，该值不起作用；作为代替，你可以使用 {{WebExtAPIRef("windows.update()")}} 来定位窗口。）
     - `state` {{optional_inline}}
@@ -67,7 +67,7 @@ let creating = browser.windows.create(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现包含新窗口细节的 {{WebExtAPIRef('windows.Window')}} 对象。该 {{WebExtAPIRef('windows.Window')}} 将总是包含其 `tabs` 属性集，而不像 {{WebExtAPIRef("windows.get()")}} 和相似的 API 返回的窗口对象那样，如果传递了 `populate` 项则仅包含标签。如果发生了错误则该 promise 将以错误消息拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现包含新窗口细节的 {{WebExtAPIRef('windows.Window')}} 对象。该 {{WebExtAPIRef('windows.Window')}} 将总是包含其 `tabs` 属性集，而不像 {{WebExtAPIRef("windows.get()")}} 和相似的 API 返回的窗口对象那样只在传递了 `populate` 参数时才会包含标签。如果发生了错误则该 Promise 将以错误消息拒绝。
 
 ## 示例
 
