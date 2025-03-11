@@ -7,14 +7,14 @@ l10n:
 
 {{DefaultAPISidebar("Encrypted Media Extensions")}} {{securecontext_header}}
 
-加密媒體擴充 API（Encrypted Media Extensions API） 提供介面，用以控制受數位版權管理（DRM）機制保護的影音內容播放。
+加密媒體擴充 API 提供用以控制受數位版權管理（DRM）機制保護的影音內容播放的介面。
 
 可以透過 {{domxref("Navigator.requestMediaKeySystemAccess()")}} 存取此 API。
 
 ## 介面
 
 - {{domxref("MediaEncryptedEvent")}}
-  - : 表示當 {{domxref('HTMLMediaElement')}} 偵測到初始化資料時觸發的 {{domxref("HTMLMediaElement/encrypted_event", "encrypted")}} 特定加密事件 。
+  - : 表示當 {{domxref('HTMLMediaElement')}} 偵測到初始化資料時觸發的 {{domxref("HTMLMediaElement/encrypted_event", "encrypted")}} 特定加密事件。
 - {{domxref("MediaKeyMessageEvent")}}
   - : 提供當內容解密模組（CDM）為會話產生訊息時所包含的內容與相關資料。
 - {{domxref("MediaKeys")}}
@@ -26,9 +26,9 @@ l10n:
 - {{domxref("MediaKeySystemAccess")}}
   - : 提供可用於解密或內容保護的金鑰系統存取權限。
 
-### Extensions to other interfaces
+### 擴充其他介面
 
-加密媒體擴充 API（Encrypted Media Extensions API） 會擴充以下 API，並加上這些功能。
+加密媒體擴充 API 會擴充以下 API，並加上這些功能。
 
 #### HTMLMediaElement
 
