@@ -38,7 +38,7 @@ Content-Length: 4012345
 Content-Disposition: form-data; name="file"; filename="myImage.jpg"
 Content-Type: image/jpeg
 
-\xFF\xD8\xFF\xE0\x00...(binary data)
+\xFF\xD8\xFF\xE0\x00...（二進位資料）
 ------Boundary1234--
 ```
 
