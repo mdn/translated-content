@@ -25,6 +25,8 @@ l10n:
   - : `boolean`。窗口是否为隐身窗口。
 - `left` {{optional_inline}}
   - : `integer`。窗口距离屏幕左边缘的偏移量（以像素为单位）。
+- `sessionId` {{optional_inline}}
+  - : `string`。从 {{WebExtAPIRef('sessions')}} API 中取得的用于唯一表示一个窗口的会话 ID。
 - `state` {{optional_inline}}
   - : {{WebExtAPIRef('windows.WindowState')}} 值，表示此浏览器窗口的状态（最大化、最小化等）。
 - `tabs` {{optional_inline}}
@@ -36,7 +38,7 @@ l10n:
 - `type` {{optional_inline}}
   - : 表示此浏览器窗口类型的 {{WebExtAPIRef('windows.WindowType')}} 值。
 - `width` {{optional_inline}}
-  - : `integer`。窗口的宽度，包括框架，以像素为单位。
+  - : `integer`。包括框架的窗口的宽度（以像素为单位）。
 
 ## 浏览器兼容性
 
