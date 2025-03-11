@@ -87,8 +87,7 @@ svg {
   </tbody>
 </table>
 
-> [!NOTE]
-> `<ellipse>` の中心の X 座標は {{cssxref("cx")}} 幾何プロパティでも定義できます。 CSS で設定した場合、 `cx` プロパティの値がこの `cx` 属性の値を上書きします。
+> **メモ:** `<ellipse>` の中心の X 座標は {{cssxref("cx")}} 幾何プロパティでも定義できます。 CSS で設定した場合、 `cx` プロパティの値がこの `cx` 属性の値を上書きします。
 
 ## radialGradient
 
