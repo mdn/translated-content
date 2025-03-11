@@ -7,7 +7,44 @@ slug: Web/CSS/font-variant-caps
 
 [CSS](/zh-CN/docs/Web/CSS)属性 **`font-variant-caps`** 使你可以控制大写字母特殊字符的使用。
 
-{{EmbedInteractiveExample("pages/css/font-variant-caps.html")}}
+{{InteractiveExample("CSS Demo: font-variant-caps")}}
+
+```css interactive-example-choice
+font-variant-caps: normal;
+```
+
+```css interactive-example-choice
+font-variant-caps: small-caps;
+```
+
+```css interactive-example-choice
+font-variant-caps: all-small-caps;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>Difficult waffles</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+section {
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+```
 
 如果项目的字体库中包含不同大小的大写字母特殊字符，该属性将选择其中最接近指定大小的字符。例如，如果字体中没有“特小”(petite) 型大写字母，该字符将会被以“小”(small) 型大写字母进行渲染。如果这些字符均不存在，浏览器将用默认大写字符集进行尺寸加工。
 

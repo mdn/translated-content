@@ -11,7 +11,55 @@ l10n:
 
 规范的早期版本将该属性命名为 `grid-gap`，且为了保持与旧网站的兼容性，浏览器仍然会接受 `grid-gap` 作为 `gap` 的别名。
 
-{{EmbedInteractiveExample("pages/css/gap.html")}}
+{{InteractiveExample("CSS Demo: gap")}}
+
+```css interactive-example-choice
+gap: 0;
+```
+
+```css interactive-example-choice
+gap: 10%;
+```
+
+```css interactive-example-choice
+gap: 1em;
+```
+
+```css interactive-example-choice
+gap: 10px 20px;
+```
+
+```css interactive-example-choice
+gap: calc(20px + 10%);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 200px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## 组成属性
 

@@ -9,7 +9,44 @@ slug: Web/CSS/object-fit
 
 你可以通过使用 {{cssxref("object-position")}} 属性来切换被替换元素的内容对象在元素框内的对齐方式。
 
-{{EmbedInteractiveExample("pages/css/object-fit.html")}}
+{{InteractiveExample("CSS Demo: object-fit")}}
+
+```css interactive-example-choice
+object-fit: fill;
+```
+
+```css interactive-example-choice
+object-fit: contain;
+```
+
+```css interactive-example-choice
+object-fit: cover;
+```
+
+```css interactive-example-choice
+object-fit: none;
+```
+
+```css interactive-example-choice
+object-fit: scale-down;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/plumeria-146x200.jpg" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 100%;
+  width: 100%;
+  border: 2px dotted #888;
+}
+```
 
 ## 语法
 
