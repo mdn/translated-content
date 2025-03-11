@@ -12,7 +12,7 @@ l10n:
 > [!NOTE]
 > 在 Windows 和部分 Linux 窗口管理器中，将始终在从一个浏览器窗口切换到另一个浏览器窗口之前立即发送 `WINDOW_ID_NONE`。
 
-## Syntax
+## 语法
 
 ```js-nolint
 browser.windows.onFocusChanged.addListener(listener)
