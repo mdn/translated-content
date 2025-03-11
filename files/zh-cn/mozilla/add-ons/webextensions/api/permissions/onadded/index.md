@@ -20,11 +20,11 @@ browser.permissions.onAdded.hasListener(listener)
 事件有三个函数：
 
 - `addListener(listener)`
-  - : 添加一个监听器到这个事件。
+  - : 为该事件添加一个监听器。
 - `removeListener(listener)`
-  - : 停止监听这个事件。`listener` 参数是要移除的监听器。
+  - : 停止监听该事件。`listener` 参数用于指定要移除的监听器。
 - `hasListener(listener)`
-  - : 检查 `listener` 是否已注册到这个事件。若在监听，返回 `true`，否则返回 `false`。
+  - : 检查 `listener` 是否有注册到该事件的上。若正在监听，返回 `true`，否则返回 `false`。
 
 ## addListener 语法
 
