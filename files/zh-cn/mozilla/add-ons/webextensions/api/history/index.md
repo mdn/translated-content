@@ -64,7 +64,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/history
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.history`](https://developer.chrome.google.cn/docs/extensions/reference/api/history) API。该文档由 Chromium 代码中的 [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) 衍生而来。
+> 此 API 基于 Chromium 的 [`chrome.history`](https://developer.chrome.google.cn/docs/extensions/reference/api/history) API。该文档由 Chromium 代码中的 [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) 衍生而来。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

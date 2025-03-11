@@ -35,7 +35,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> 这个 API 是基于 Chromium 的 [`chrome.i18n`](https://developer.chrome.google.cn/docs/extensions/reference/api/i18n) API，这个文档源自 Chromium 代码中的 [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) 。
+> 此 API 基于 Chromium 的 [`chrome.i18n`](https://developer.chrome.google.cn/docs/extensions/reference/api/i18n) API，这个文档源自 Chromium 代码中的 [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) 。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

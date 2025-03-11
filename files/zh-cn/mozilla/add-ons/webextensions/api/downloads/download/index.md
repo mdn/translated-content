@@ -94,7 +94,7 @@ downloading.then(onStartedDownload, onFailed);
 {{WebExtExamples}}
 
 > [!NOTE]
-> 这个 API 基于 Chromium 的 [`chrome.downloads`](https://developer.chrome.google.cn/docs/extensions/reference/api/downloads#method-download) API.
+> 此 API 基于 Chromium 的 [`chrome.downloads`](https://developer.chrome.google.cn/docs/extensions/reference/api/downloads#method-download) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
