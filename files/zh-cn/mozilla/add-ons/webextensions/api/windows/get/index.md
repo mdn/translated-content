@@ -29,11 +29,12 @@ let getting = browser.windows.get(
   - : `object`。包含用于筛选窗口类型的选项。
 
     - `populate` {{optional_inline}}
-      - : `boolean`。若为真，则 {{WebExtAPIRef('windows.Window')}} 对象将包含一个 `tabs` 属性，其中包含表示窗口中打开的标签页的 {{WebExtAPIRef('tabs.Tab')}} 对象列表。如果扩展的清单文件包含 `"tabs"` 权限或匹配的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)，则 `Tab` 对象仅包含 `url`、`title` 和 `favIconUrl` 属性。
+      - : `boolean`。若为真，则 {{WebExtAPIRef('windows.Window')}} 对象将包含一个 `tabs` 属性，其中包含表示窗口中打开的标签页的 {{WebExtAPIRef('tabs.Tab')}} 对象列表。只有在扩展的清单文件包含 `"tabs"` 权限或匹配的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)时 `Tab` 对象才会包含 `url`、`title` 和 `favIconUrl` 属性。
     - `windowTypes` {{optional_inline}}
-      - : {{WebExtAPIRef('windows.WindowType')}} 对象的数组（`array`）。如果给出该参数，则将基于该参数对窗口类型进行筛选返回的 {{WebExtAPIRef('windows.Window')}} 对象。如果未设置，则默认筛选器取 `['normal', 'panel', 'popup']`，其中 `'panel'` 窗口类型仅限于扩展自己的窗口。
+      - : {{WebExtAPIRef('windows.WindowType')}} 对象的数组（`array`）。如果给出该参数，则将基于该参数对窗口类型进行筛选返回的 {{WebExtAPIRef('windows.Window')}} 对象。如果未设置，则默认筛选器取 `['normal', 'panel', 'popup']` 且 `'panel'` 窗口类型将局限于扩展自己的窗口。
 
-> [!NOTE] > `getInfo` 中的 `windowTypes` 属性将被忽略：自 Firefox 62 起，已弃用 `windowTypes` 的使用。
+> [!NOTE]
+> `getInfo` 中的 `windowTypes` 属性将被忽略：自 Firefox 62 起，已弃用 `windowTypes` 的使用。
 
 ### 返回值
 
