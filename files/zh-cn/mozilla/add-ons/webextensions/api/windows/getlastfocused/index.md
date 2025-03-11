@@ -30,7 +30,8 @@ let gettingWindow = browser.windows.getLastFocused(
     - `windowTypes` {{optional_inline}}
       - : {{WebExtAPIRef('windows.WindowType')}} 对象的数组（`array`）。如果给出该参数，则将基于该参数对窗口类型进行筛选返回的 {{WebExtAPIRef('windows.Window')}} 对象。如果未设置，则默认筛选器取 `['normal', 'panel', 'popup']`，其中 `'panel'` 窗口类型仅限于扩展自己的窗口。
 
-> [!NOTE] > `getInfo` 中的 `windowTypes` 属性将被忽略：自 Firefox 62 起，已弃用 `windowTypes` 的使用。
+> [!NOTE]
+> `getInfo` 中的 `windowTypes` 属性将被忽略：自 Firefox 62 起，已弃用 `windowTypes` 的使用。
 
 ### 返回值
 
