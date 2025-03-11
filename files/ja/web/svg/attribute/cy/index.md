@@ -87,8 +87,7 @@ svg {
   </tbody>
 </table>
 
-> [!NOTE]
-> `<ellipse>` の中心の Y 座標は {{cssxref("cy")}} 幾何プロパティでも定義できます。 CSS で設定した場合、 `cy` プロパティの値がこの `cy` 属性の値を上書きします。
+> **メモ:** `<ellipse>` の中心の Y 座標は {{cssxref("cy")}} 幾何プロパティでも定義できます。 CSS で設定した場合、 `cy` プロパティの値がこの `cy` 属性の値を上書きします。
 
 ## radialGradient
 
