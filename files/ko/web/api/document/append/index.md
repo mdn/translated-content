@@ -41,7 +41,8 @@ append(param1, param2, /* …, */ paramN)
 
 ### 문서의 최상위 요소에 추가하기
 
-HTML 문서에 요소를 추가하려 하면 주어진 {{HTMLElement("html")}} 요소가 이미 존재한다는 `HierarchyRequestError` {{domxref("DOMException")}} 예외가 발생할 수 있습니다.
+HTML 문서에 요소를 추가하려 하면 주어진 {{HTMLElement("html")}} 요소가 이미 존재한다는
+`HierarchyRequestError` {{domxref("DOMException")}} 예외가 발생할 수 있습니다.
 
 ```js
 let html = document.createElement("html");
