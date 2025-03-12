@@ -9,7 +9,7 @@ l10n:
 
 HTTP **`407 Proxy Authentication Required`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示請求不成功，因為網站缺少對於位於用戶端與可訪問所請求資源的伺服器之間的{{Glossary("proxy server", "代理伺服器")}}的有效認證憑證。
 
-此回應隨著一個含有如何正確授權的 {{HTTPHeader("Proxy-Authenticate")}} 請求標頭一同發送。用戶端可以重新發送請求，並帶上一個新的或更換過的 {{HTTPHeader("Proxy-Authorization")}} 標頭欄位。
+此回應隨著一個含有如何正確認證的 {{HTTPHeader("Proxy-Authenticate")}} 請求標頭一同發送。用戶端可以重新發送請求，並帶上一個新的或更換過的 {{HTTPHeader("Proxy-Authorization")}} 標頭欄位。
 
 ## 狀態
 
