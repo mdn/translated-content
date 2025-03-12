@@ -107,7 +107,7 @@ Authorization: Digest username=<username>,
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-> **警告：** {{Glossary("Base64")}} 編碼可以很容易地反轉以獲取原始名稱和密碼，因此 `Basic` 身份驗證不提供任何加密安全性。使用 {{Glossary("HTTPS")}} 是被推薦的，尤其是在使用 `Basic` 身份驗證時。
+> **警告：** {{Glossary("Base64")}} 編碼可以很容易地反轉以獲取原始名稱和密碼，因此 `Basic` 身份驗證不提供任何密碼學安全性。使用 {{Glossary("HTTPS")}} 是被推薦的，尤其是在使用 `Basic` 身份驗證時。
 
 另見 [HTTP authentication](/zh-TW/docs/Web/HTTP/Authentication)，瞭解如何配置 Apache 或 Nginx 伺服器以使用 HTTP 基本身份驗證來保護你的網站。
 
