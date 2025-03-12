@@ -1,6 +1,7 @@
 ---
 title: "Document: append() method"
 short-title: append()
+slug: Web/API/Document/append
 l10n:
   sourceCommit: bd15d43260b7e72b1066c04d9d9f3b79129c619c
 ---
