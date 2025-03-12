@@ -8,7 +8,10 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`Document.append()`** 메서드는 {{domxref("Node")}} 객체 혹은 문자열의 집합을 문서의 마지막 요소에 삽입합니다. 문자열은 {{domxref("Text")}} 노드들과 동등하게 삽입됩니다.
+**`Document.append()`** 메서드는
+{{domxref("Node")}} 객체 혹은 문자열의 집합을
+문서의 마지막 요소에 삽입합니다.
+문자열은 {{domxref("Text")}} 노드들과 동등하게 삽입됩니다.
 
 이 메서드는 `Document` 의 자식 메서드입니다. 트리에 임의의 요소를 삽입하려면 {{domxref("Element.append()")}} 를 참고하세요.
 
