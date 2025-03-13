@@ -13,14 +13,14 @@ l10n:
 
 ## 实例属性
 
-_从其父类 {{domxref("HTMLElement")}} 继承属性。_
+_从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 - {{domxref("HTMLDivElement.align")}} {{deprecated_inline}}
   - : 一个字符串，表示指示元素内容相对于周围上下文对齐方式的枚举属性。可能的值为 `"left"`、`"right"`、`"justify"` 和 `"center"`。
 
 ## 实例方法
 
-_无特定方法；从其父类 {{domxref("HTMLElement")}} 继承方法。_
+_无特定方法；从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 
 ## 规范
 
