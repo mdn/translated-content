@@ -11,11 +11,11 @@ l10n:
 
 오디오와 비디오는 개별적으로 또는 함께 녹화할 수 있습니다. 이 글은 해당 API를 제공하는 MediaRecorder 인터페이스의 사용법에 대한 기본 가이드를 제공하는 것을 목적으로 합니다.
 
-## 예제 애플리케이션: 웹 딕터폰
+## 예제 애플리케이션: 웹 음성 녹음기
 
-![웹 딕터폰 샘플 앱의 이미지: 사인파 소리 시각화, 녹음 및 정지 버튼, 그리고 녹음된 트랙을 재생할 수 있는 오디오 주크박스](web-dictaphone.png)
+![웹 음성 녹음기 샘플 앱의 이미지: 사인파 소리 시각화, 녹음 및 정지 버튼, 그리고 녹음된 트랙을 재생할 수 있는 오디오 주크박스](web-dictaphone.png)
 
-MediaStream Recording API의 기본 사용법을 시연하기 위해, 웹 기반의 딕터폰(녹음기)을 제작했습니다. 이 도구는 오디오 일부를 녹음한 후 재생할 수 있으며, Web Audio API를 사용해 기기의 사운드 입력을 시각화합니다. 이번 글에서는 녹음 및 재생 기능에 초점을 맞출 예정입니다.
+MediaStream Recording API의 기본 사용법을 시연하기 위해, 웹 기반의 음성 녹음기를 제작했습니다. 이 도구는 오디오 일부를 녹음한 후 재생할 수 있으며, Web Audio API를 사용해 기기의 사운드 입력을 시각화합니다. 이번 글에서는 녹음 및 재생 기능에 초점을 맞출 예정입니다.
 
 이 [데모를 실시간으로 확인](https://mdn.github.io/dom-examples/media/web-dictaphone/)하거나 GitHub에서 [소스 코드를 받아볼](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone) 수 있습니다.
 
@@ -27,7 +27,7 @@ MediaStream Recording API의 기본 사용법을 시연하기 위해, 웹 기반
 
 {{cssxref("calc", "calc()")}} 함수는 처음에는 별다른 것 없어 보이지만, "와, 이 기능이 왜 지금까지 없었을까? CSS2 레이아웃이 왜 이렇게 불편했을까?"라는 생각을 하게 만드는 유용한 도구 중 하나입니다. 이 함수는 서로 다른 단위를 혼합하여 CSS 단위의 계산된 값을 산출할 수 있도록 도와줍니다.
 
-예를 들어, 웹 딕터폰에서는 세 개의 주요 UI 영역이 수직으로 배치되어 있습니다. 우리는 처음 두 영역(헤더와 컨트롤)에 고정된 높이를 부여하고자 했습니다.
+예를 들어, 웹 음성 녹음기에서는 세 개의 주요 UI 영역이 수직으로 배치되어 있습니다. 우리는 처음 두 영역(헤더와 컨트롤)에 고정된 높이를 부여하고자 했습니다.
 
 ```css
 header {
@@ -53,7 +53,7 @@ header {
 
 ### 체크박스 해킹을 이용한 표시/숨기기
 
-이 기법은 이미 꽤 잘 문서화되어 있지만, 체크박스의 {{htmlelement("label")}}을 클릭하면 체크/언체크 상태가 전환된다는 점을 활용한 체크박스 해킹을 언급해 보고자 합니다. 웹 딕터폰에서는 오른쪽 상단의 물음표 아이콘을 클릭하면 정보 화면이 표시되거나 숨겨지는데, 이때 이 기법이 사용됩니다. 우선, `<label>`에 원하는 스타일을 적용하여 다른 요소들보다 항상 위에 표시되도록 z-index를 충분히 높게 설정해, 포커스 및 클릭이 가능하게 합니다.
+이 기법은 이미 꽤 잘 문서화되어 있지만, 체크박스의 {{htmlelement("label")}}을 클릭하면 체크/언체크 상태가 전환된다는 점을 활용한 체크박스 해킹을 언급해 보고자 합니다. 웹 음성 녹음기에서는 오른쪽 상단의 물음표 아이콘을 클릭하면 정보 화면이 표시되거나 숨겨지는데, 이때 이 기법이 사용됩니다. 우선, `<label>`에 원하는 스타일을 적용하여 다른 요소들보다 항상 위에 표시되도록 z-index를 충분히 높게 설정해, 포커스 및 클릭이 가능하게 합니다.
 
 ```css
 label {
@@ -144,7 +144,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 
 전체 코드는 다른 작업을 실행하기 전 `getUserMedia` 지원 여부를 확인하는 테스트로 감싸져 있습니다. 다음으로 `getUserMedia()`를 호출하고 그 내부를 정의합니다.
 
-- **제약 조건**: 딕터폰에서는 오직 오디오만 캡처합니다.
+- **제약 조건**: 음성 녹음기에서는 오직 오디오만 캡처합니다.
 - **성공 콜백**: `getUserMedia` 호출이 성공적으로 완료되면 실행되는 코드입니다.
 - **오류/실패 콜백**: `getUserMedia` 호출이 어떤 이유로 실패할 때 실행되는 코드입니다.
 
@@ -159,7 +159,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 const mediaRecorder = new MediaRecorder(stream);
 ```
 
-{{domxref("MediaRecorder")}} 인터페이스에는 미디어 스트림 녹화를 제어할 수 있는 다양한 메서드들이 있으며, 웹 딕터폰에서는 이 중 두 가지 메서드와 몇 가지 이벤트만을 사용합니다. 우선, 녹음 버튼을 누르면 {{domxref("MediaRecorder.start()")}}를 호출하여 스트림의 녹화를 시작합니다.
+{{domxref("MediaRecorder")}} 인터페이스에는 미디어 스트림 녹화를 제어할 수 있는 다양한 메서드들이 있으며, 웹 음성 녹음기에서는 이 중 두 가지 메서드와 몇 가지 이벤트만을 사용합니다. 우선, 녹음 버튼을 누르면 {{domxref("MediaRecorder.start()")}}를 호출하여 스트림의 녹화를 시작합니다.
 
 ```js
 record.onclick = () => {
@@ -265,5 +265,5 @@ mediaRecorder.onstop = (e) => {
 
 ## 같이 보기
 
-- [Media Capture and Streams API](/ko/docs/Web/API/Media_Capture_and_Streams_API) landing page
+- [Media Capture and Streams API](/ko/docs/Web/API/Media_Capture_and_Streams_API) 랜딩 페이지
 - {{domxref("MediaDevices.getUserMedia()")}}

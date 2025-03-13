@@ -35,7 +35,7 @@ MediaStream Recording API는 단일 주요 인터페이스인 {{domxref("MediaRe
 ```js
 const canvas = document.querySelector("canvas");
 
-// 초당 프레임 수(Optional argument)
+// 선택적 초당 프레임 수
 const stream = canvas.captureStream(25);
 const recordedChunks = [];
 
