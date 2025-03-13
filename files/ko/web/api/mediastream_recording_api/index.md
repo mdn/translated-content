@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("MediaStream Recording")}}
 
-**MediaStream Recording API**는 때때로 _Media Recording API_ 또는 _MediaRecorder API_ 라고도 불리며, [Media Capture and Streams API](/ko/docs/Web/API/Media_Capture_and_Streams_API), [WebRTC API](/ko/docs/Web/API/WebRTC_API)와 밀접한 관련이 있습니다. MediaStream Recording API를 사용하면 {{domxref("MediaStream")}}이나 {{domxref("HTMLMediaElement")}} 객체가 생성한 데이터를 분석, 처리, 또는 디스크에 저장할 목적으로 캡처할 수 있습니다. 또한, 사용하기도 상당히 쉽습니다.
+**MediaStream Recording API**는 때때로 Media Recording API 또는 MediaRecorder API 라고도 불리며, [Media Capture and Streams API](/ko/docs/Web/API/Media_Capture_and_Streams_API), [WebRTC API](/ko/docs/Web/API/WebRTC_API)와 밀접한 관련이 있습니다. MediaStream Recording API를 사용하면 {{domxref("MediaStream")}}이나 {{domxref("HTMLMediaElement")}} 객체가 생성한 데이터를 분석, 처리, 또는 디스크에 저장할 목적으로 캡처할 수 있습니다. 또한, 사용하기도 상당히 쉽습니다.
 
 ## 개념 및 사용 방법
 
