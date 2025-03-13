@@ -46,9 +46,7 @@ slug: Web/JavaScript/Reference/Statements
 - {{jsxref("Statements/async_function", "async function")}}
   - : Объявляет асинхронную функцию с указанными параметрами.
 - {{jsxref("Statements/async_function*", "async function*")}}
-
   - : Асинхронные функции-генераторы, упрощающие написание [итераторов](/ru/docs/Web/JavaScript/Reference/Iteration_protocols).
-
 - {{jsxref("Statements/class", "class")}}
   - : Объявляет класс.
 
@@ -72,13 +70,9 @@ slug: Web/JavaScript/Reference/Statements
 - {{jsxref("Statements/Empty", "Пустая инструкция", "", 1)}}
   - : Пустая инструкция используется тогда, когда никакой инструкции быть не должно, а по синтаксису JavaScript она требуется.
 - {{jsxref("Statements/block", "Блок", "", 1)}}
-
   - : Блок используется для группировки нуля и более инструкций. Блок отделяется парой фигурных скобок.
-
 - {{jsxref("Statements/Expression_statement", "Выражение")}}
-
   - : Вычисляет выражение и игнорирует результат. Это позволяет использовать побочные эффекты, такие как вызов функции, обновление переменной.
-
 - {{jsxref("Statements/debugger", "debugger")}}
   - : Вызывает любую доступную функциональность отладки. Если функциональность отладки не доступна, эта инструкция ничего не делает.
 - {{jsxref("Statements/export", "export")}}
