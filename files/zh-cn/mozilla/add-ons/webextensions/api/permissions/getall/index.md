@@ -33,7 +33,7 @@ let gettingAll = browser.permissions.getAll()
 
 ```js
 // 扩展已取得的权限：
-// "webRequest", "tabs", "*://*.mozilla.org/*"
+// “webRequest”、“tabs”、“*://*.mozilla.org/*”
 
 const currentPermissions = await browser.permissions.getAll();
 
@@ -44,4 +44,4 @@ console.log(currentPermissions.origins); // [ "*://*.mozilla.org/*" ]
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.permissions`](https://developer.chrome.google.cn/docs/extensions/reference/api/permissions) API。
+> 此 API 基于 Chromium 的 [`chrome.permissions`](https://developer.chrome.google.cn/docs/extensions/reference/api/permissions) API。
