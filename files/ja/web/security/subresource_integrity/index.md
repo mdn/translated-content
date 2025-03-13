@@ -71,7 +71,7 @@ pause
 
 このコードを使用するには、次のようにしてください。
 
-1.こののコードを、 `sri-hash.bat` という名前で、自分の環境の Windows の「送る」フォルダー内（例えば、 `C:\Users\USER\AppData\Roaming\Microsoft\Windows\SendTo`）に保存してください。
+1. こののコードを、 `sri-hash.bat` という名前で、自分の環境の Windows の「送る」フォルダー内（例えば、 `C:\Users\USER\AppData\Roaming\Microsoft\Windows\SendTo`）に保存してください。
 2. ファイルエクスプローラーでファイルを右クリックし、**送る**を選択してから `sri-hash` を選択します。コマンドボックスに完全性の値が表示されます。
 3. 完全性の値を選択し、右クリックしてクリップボードにコピーします。
 4. 任意のキーを押し、コマンドボックスを閉じます。
