@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("Document")}} 接口的 **`elementsFromPoint()`** 方法返回一个包含指定坐标（相对于视口）处所有元素的数组。元素按照从视口最顶部到最底部的顺序排列。
+{{domxref("Document")}} 接口的 **`elementsFromPoint()`** 方法返回一个包含指定坐标（相对于视口）处所有元素的数组。元素按照从视口最顶层到最底层的顺序排列。
 
 它的操作方式与 {{domxref("Document.elementFromPoint", "elementFromPoint()")}} 方法类似。
 
@@ -26,7 +26,7 @@ elementsFromPoint(x, y)
 
 ### 返回值
 
-一个由 {{domxref('Element')}} 对象组成的数组，按照从视口最顶部到最底部的顺序排列。
+一个由 {{domxref('Element')}} 对象组成的数组，按照从视口最顶层到最底层的顺序排列。
 
 ## 示例
 
