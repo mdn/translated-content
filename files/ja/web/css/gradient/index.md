@@ -9,7 +9,39 @@ l10n:
 
 **`<gradient>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 2 色以上の連続的な色の変化で構成される特殊な型の {{cssxref("&lt;image&gt;")}} です。
 
-{{EmbedInteractiveExample("pages/css/type-gradient.html")}}
+{{InteractiveExample("CSS Demo: &amp;lt;gradient&amp;gt;")}}
+
+```css interactive-example-choice
+background: linear-gradient(#f69d3c, #3f87a6);
+```
+
+```css interactive-example-choice
+background: radial-gradient(#f69d3c, #3f87a6);
+```
+
+```css interactive-example-choice
+background: repeating-linear-gradient(#f69d3c, #3f87a6 50px);
+```
+
+```css interactive-example-choice
+background: repeating-radial-gradient(#f69d3c, #3f87a6 50px);
+```
+
+```css interactive-example-choice
+background: conic-gradient(#f69d3c, #3f87a6);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 CSS グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/image#description)。つまり、自然または推奨される寸法や、推奨される縦横比を持ちません。実際の寸法は適用される要素に一致します。
 

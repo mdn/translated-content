@@ -9,7 +9,40 @@ l10n:
 
 En CSS, **`::after`** crée un [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) qui sera le dernier enfant de l'élément sélectionné. Il est souvent utilisé pour ajouter du contenu esthétique à un élément, en utilisant la propriété CSS [`content`](/fr/docs/Web/CSS/content). Par défaut, ce contenu est de type [en ligne (<i lang="en">inline</i> en anglais)](/fr/docs/Glossary/Inline-level_content).
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-after.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: ::after", "tabbed-standard")}}
+
+```css interactive-example
+a::after {
+  content: " (" attr(href) ")";
+}
+
+.dead-link {
+  text-decoration: line-through;
+}
+
+.dead-link::after {
+  content: url("/shared-assets/images/examples/warning.svg");
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+}
+```
+
+```html interactive-example
+<p>
+  The sailfish is named for its sail-like dorsal fin and is widely considered
+  the fastest fish in the ocean.
+  <a href="https://en.wikipedia.org/wiki/Sailfish"
+    >You can read more about it here</a
+  >.
+</p>
+
+<p>
+  The red lionfish is a predatory scorpionfish that lives on coral reefs of the
+  Indo-Pacific Ocean and more recently in the western Atlantic.
+  <a href="" class="dead-link">You can read more about it here</a>.
+</p>
+```
 
 > [!NOTE]
 > Les pseudo-éléments générés par `::before` et `::after` sont [contenus dans la boîte de mise en forme de l'élément](https://www.w3.org/TR/CSS2/generate.html#before-after-content). Aussi, [`::before`](/fr/docs/Web/CSS/::before) et `::after` ne s'appliquent pas aux _[éléments remplacés](/fr/docs/Web/CSS/Replaced_element)_ tels que les éléments [`<img>`](/fr/docs/Web/HTML/Element/img) ou [`<br>`](/fr/docs/Web/HTML/Element/br).

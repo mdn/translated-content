@@ -9,7 +9,45 @@ l10n:
 
 **`border`** は [一括指定](/ja/docs/Web/CSS/Shorthand_properties) の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界を設定します。これは {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}} の値を設定します。
 
-{{EmbedInteractiveExample("pages/css/border.html")}}
+{{InteractiveExample("CSS Demo: border")}}
+
+```css interactive-example-choice
+border: solid;
+```
+
+```css interactive-example-choice
+border: dashed red;
+```
+
+```css interactive-example-choice
+border: 1rem solid;
+```
+
+```css interactive-example-choice
+border: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 構成要素のプロパティ
 

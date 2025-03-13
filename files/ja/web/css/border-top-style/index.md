@@ -9,7 +9,54 @@ l10n:
 
 **`border-top-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界 ({{CSSxRef("border")}}) における線のスタイルを設定します。
 
-{{EmbedInteractiveExample("pages/css/border-top-style.html")}}
+{{InteractiveExample("CSS Demo: border-top-style")}}
+
+```css interactive-example-choice
+border-top-style: none;
+```
+
+```css interactive-example-choice
+border-top-style: dotted;
+```
+
+```css interactive-example-choice
+border-top-style: dashed;
+```
+
+```css interactive-example-choice
+border-top-style: solid;
+```
+
+```css interactive-example-choice
+border-top-style: groove;
+```
+
+```css interactive-example-choice
+border-top-style: inset;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+
+body {
+  background-color: #fff;
+}
+```
 
 > [!NOTE]
 > 仕様書では、異なるスタイルの境界線を角でどのように接続するかを定義していません。

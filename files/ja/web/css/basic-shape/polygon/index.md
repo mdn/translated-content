@@ -9,7 +9,41 @@ l10n:
 
 **`polygon()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Types)の一つです。[多角形](https://ja.wikipedia.org/wiki/多角形)を描画するために使用します。 1 つ以上の座標のペアを指定し、それぞれが形状の頂点を表します。
 
-{{EmbedInteractiveExample("pages/css/function-polygon.html")}}
+{{InteractiveExample("CSS Demo: polygon()")}}
+
+```css interactive-example-choice
+clip-path: polygon(
+  0% 20%,
+  60% 20%,
+  60% 0%,
+  100% 50%,
+  60% 100%,
+  60% 80%,
+  0% 80%
+);
+```
+
+```css interactive-example-choice
+clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## 構文
 

@@ -7,7 +7,61 @@ slug: Web/CSS/margin
 
 **`margin`** CSS 속성은 요소의 네 방향 [바깥 여백 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)을 설정합니다. {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}의 단축 속성입니다.
 
-{{EmbedInteractiveExample("pages/css/margin.html")}}
+{{InteractiveExample("CSS Demo: margin")}}
+
+```css interactive-example-choice
+margin: 1em;
+```
+
+```css interactive-example-choice
+margin: 5% 0;
+```
+
+```css interactive-example-choice
+margin: 10px 50px 20px;
+```
+
+```css interactive-example-choice
+margin: 10px 50px 20px 0;
+```
+
+```css interactive-example-choice
+margin: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="row"></div>
+    <div class="row transition-all" id="example-element"></div>
+    <div class="row"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  height: 33.33%;
+  display: inline-block;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+}
+```
 
 위와 아래 여백은 [대체 요소](/ko/docs/Web/CSS/Replaced_element)가 아닌 {{HTMLElement("span")}}, {{HTMLElement("code")}} 등 인라인 요소에선 아무 효과도 없습니다.
 

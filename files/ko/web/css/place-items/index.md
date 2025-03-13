@@ -9,7 +9,51 @@ l10n:
 
 [CSS](/ko/docs/Web/CSS) 의 **`place-items`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties) 은 [그리드](/ko/docs/Web/CSS/CSS_grid_layout) 혹은 [플렉스박스](/ko/docs/Web/CSS/CSS_flexible_box_layout) 같은 관계형 레이아웃 시스템에서 블록 방향과 인라인 방향에서 (예를 들어, {{CSSxRef("align-items")}} 와 {{CSSxRef("justify-items")}} 속성) 한번에 요소들을 정렬합니다. 만일 두번째 값이 지정되지 않는다면, 첫번째 값이 두번째 값으로도 사용됩니다.
 
-{{EmbedInteractiveExample("pages/css/place-items.html")}}
+{{InteractiveExample("CSS Demo: place-items")}}
+
+```css interactive-example-choice
+place-items: center stretch;
+```
+
+```css interactive-example-choice
+place-items: center start;
+```
+
+```css interactive-example-choice
+place-items: start end;
+```
+
+```css interactive-example-choice
+place-items: end center;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## 구성 속성
 
