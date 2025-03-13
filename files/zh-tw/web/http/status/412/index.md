@@ -38,7 +38,7 @@ ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
-如果雜湊值不匹配，文件已在其中編輯，並且會拋出 412 Precondition 錯誤。
+如果雜湊值不匹配，文件已在其中編輯，並且會拋出 `412 Precondition Failed` 錯誤。
 
 ## 規範
 
