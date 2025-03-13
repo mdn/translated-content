@@ -24,7 +24,7 @@ l10n:
 
 ## 实例属性
 
-_继承自其父类 {{DOMxRef("CSSValue")}} 的属性_。
+_继承自其父接口 {{DOMxRef("CSSValue")}} 的属性_。
 
 - {{DOMxRef("CSSValueList.length")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : 一个 `unsigned long` 类型的值，表示列表中 `CSSValues` 的数量。
@@ -36,7 +36,7 @@ _继承自其父类 {{DOMxRef("CSSValue")}} 的属性_。
 
 ## 规范
 
-此特性最初定义于 [DOM 第 2 版样式](https://www.w3.org/TR/DOM-Level-2-Style/)规范中，但自那以后已被从任何标准化工作中移除。
+此特性最初定义于 [DOM 样式第 2 版](https://www.w3.org/TR/DOM-Level-2-Style/)规范中，但自那以后已被从任何标准化工作中移除。
 
 它已被现代但不兼容的 [CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Typed_OM_API) 所取代，后者现已进入标准轨道。
 
