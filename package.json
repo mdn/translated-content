@@ -33,7 +33,7 @@
     "front-matter": "^4.0.2",
     "html-to-text": "^9.0.5",
     "husky": "9.1.7",
-    "lint-staged": "15.4.3",
+    "lint-staged": "15.5.0",
     "markdown-it": "^14.1.0",
     "markdownlint-cli2": "0.17.2",
     "markdownlint-rule-search-replace": "1.2.0",
