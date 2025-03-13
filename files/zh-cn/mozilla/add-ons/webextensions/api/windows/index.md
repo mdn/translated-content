@@ -25,7 +25,7 @@ l10n:
 - {{WebExtAPIRef("windows.WINDOW_ID_NONE")}}
   - : 表示不存在浏览器窗口的 `windowId` 值。
 - {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}
-  - : 可以在部分 API 中作为 `windowId` 参数用以表示当前窗口的值。
+  - : 可以在部分 API 中用作 `windowId` 参数用以表示当前窗口的值。
 
 ## 函数
 
@@ -62,7 +62,7 @@ l10n:
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows) API。此文档基于 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
+> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows) API。该文档衍生自 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
