@@ -72,6 +72,7 @@ slug: Web/JavaScript/Reference/Statements
 - {{jsxref("Statements/Empty", "Пустая инструкция", "", 1)}}
   - : Пустая инструкция используется тогда, когда никакой инструкции быть не должно, а по синтаксису JavaScript она требуется.
 - {{jsxref("Statements/block", "Блок", "", 1)}}
+
   - : Блок используется для группировки нуля и более инструкций. Блок отделяется парой фигурных скобок.
 
 - {{jsxref("Statements/Expression_statement", "Выражение")}}
