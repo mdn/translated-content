@@ -1,5 +1,5 @@
 ---
-title: "Document：elementsFromPoint() 方法"
+title: Document：elementsFromPoint() 方法
 slug: Web/API/Document/elementsFromPoint
 l10n:
   sourceCommit: b21df53ffbb066cfb9347d7f0e5aebb792ed73e5
