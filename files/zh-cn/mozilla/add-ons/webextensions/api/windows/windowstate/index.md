@@ -24,7 +24,7 @@ l10n:
 - `"docked"`
   - : 靠边窗口占据了相对于同一应用程序拥有的其他窗口的固定位置。
 
-macOS 兼容性：自 macOS 10.10 开始，窗口的默认最大化行为已变为将应用程序作为全屏应用程序运行而非“缩放”窗口。`fullscreen` 既指浏览器作为全屏应用程序运行，也指标签中的内容使用 Fullscreen API。
+macOS 兼容性：自 macOS 10.10 窗口的默认最大化行为已变为将应用程序作为全屏应用程序运行而非“缩放”窗口。`fullscreen` 既指浏览器作为全屏应用程序运行，也指标签中的内容使用 Fullscreen API。
 
 ## 浏览器兼容性
 
@@ -33,7 +33,7 @@ macOS 兼容性：自 macOS 10.10 开始，窗口的默认最大化行为已变�
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#type-WindowState) API。此文档源于 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
+> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#type-WindowState) API。该文档衍生自 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
