@@ -130,11 +130,11 @@ MediaStream Recording API의 사용법에 대해 더 알아보려면, 오디오 
 
 - [Media Capture and Streams API (미디어 스트림)](/ko/docs/Web/API/Media_Capture_and_Streams_API) 랜딩 페이지
 - {{domxref("MediaDevices.getUserMedia()")}}
-- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://github.com/samdutton)
-- [HTML5's Media Recorder API in Action on Chrome and Firefox](https://blog.addpipe.com/mediarecorder-api/)
-- [MediaRecorder polyfill](https://github.com/ai/audio-recorder-polyfill) for Safari and Edge
-- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): HTML video capture/playback/download using getUserMedia and the MediaStream Recording API ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))
-- [Simple video recording demo](https://codepen.io/anon/pen/gpmPzm)
-- [Advanced media stream recorder sample](https://quickblox.github.io/javascript-media-recorder/sample/)
-- [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML video language lab web application using MediaDevices and the MediaStream Recording API for video recording ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))
-- [MediaStream Recorder API Now Available in Safari Technology Preview 73](https://blog.addpipe.com/safari-technology-preview-73-adds-limited-mediastream-recorder-api-support/)
+- [simpl.info MediaStream 녹화 데모](https://simpl.info/mediarecorder/), [Sam Dutton](https://github.com/samdutton) 제작
+- [Chrome 및 Firefox에서 작동하는 HTML5 Media Recorder](https://blog.addpipe.com/mediarecorder-api/)
+- Safari와 Edge용 [MediaRecorder 폴리필](https://github.com/ai/audio-recorder-polyfill)
+- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): getUserMedia와 MediaStream를 이용한 HTML 비디오 캡처/재생/다운로드 ([GitHub 소스](https://github.com/chrisjohndigital/TutorRoom))
+- [간단한 비디오 녹화 데모](https://codepen.io/anon/pen/gpmPzm)
+- [고급 미디어 스트림 녹화 샘플](https://quickblox.github.io/javascript-media-recorder/sample/)
+- [OpenLang](https://github.com/chrisjohndigital/OpenLang): MediaStream Recording API를 활용한 HTML 비디오 언어 연구실 웹 애플리케이션 ([GitHub 소스](https://github.com/chrisjohndigital/OpenLang))
+- [Safari Technology Preview 73에서 MediaStream Recorder API 사용 가능](https://blog.addpipe.com/safari-technology-preview-73-adds-limited-mediastream-recorder-api-support/)
