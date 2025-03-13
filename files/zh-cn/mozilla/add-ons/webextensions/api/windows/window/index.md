@@ -32,7 +32,7 @@ l10n:
 - `tabs` {{optional_inline}}
   - : 包含窗口中当前标签页的 {{WebExtAPIRef('tabs.Tab')}} 对象数组。
 - `title` {{optional_inline}}
-  - : 浏览器窗口的标题。需要“tabs”权限或[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)以访问活动标签页的 URL。只读。
+  - : 浏览器窗口的标题。需要“tabs”权限或[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)以访问活动标签页的 URL。只读属性。
 - `top` {{optional_inline}}
   - : `integer`。窗口距离屏幕顶部的偏移量（以像素为单位）。
 - `type` {{optional_inline}}
@@ -47,7 +47,7 @@ l10n:
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#type-Window) API。本文衍生自 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
+> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#type-Window) API。该文档衍生自 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
