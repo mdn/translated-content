@@ -9,7 +9,62 @@ l10n:
 
 The **`margin-block`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、論理的なブロックの先頭と末尾のマージンを設定します。これは要素の書字方向やテキストの向きに応じて物理的なマージンに変換されます。
 
-{{EmbedInteractiveExample("pages/css/margin-block.html")}}
+{{InteractiveExample("CSS Demo: margin-block")}}
+
+```css interactive-example-choice
+margin-block: 10px 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+margin-block: 20px 40px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+margin-block: 5% 20%;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+margin-block: 1rem auto;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="row">One</div>
+    <div class="row transition-all" id="example-element">Two</div>
+    <div class="row">Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  height: 33.33%;
+  display: inline-block;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+}
+```
 
 ## 構成要素のプロパティ
 

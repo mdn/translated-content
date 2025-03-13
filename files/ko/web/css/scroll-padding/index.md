@@ -9,7 +9,67 @@ l10n:
 
 **`scroll-padding`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 {{cssxref("padding")}} 속성이 요소의 안쪽 여백을 설정하는 것처럼, 요소의 모든 측면에서의 스크롤 안쪽 여백을 한번에 정의합니다.
 
-{{EmbedInteractiveExample("pages/css/scroll-padding.html")}}
+{{InteractiveExample("CSS Demo: scroll-padding")}}
+
+```css interactive-example-choice
+scroll-padding: 0;
+```
+
+```css interactive-example-choice
+scroll-padding: 20px;
+```
+
+```css interactive-example-choice
+scroll-padding: 2em;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="scroller" id="example-element">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <div class="info">Scroll »</div>
+</section>
+```
+
+```css interactive-example
+.default-example .info {
+  inline-size: 100%;
+  padding: 0.5em 0;
+  font-size: 90%;
+  writing-mode: vertical-rl;
+}
+
+.scroller {
+  text-align: left;
+  height: 250px;
+  width: 270px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid black;
+  scroll-snap-type: y mandatory;
+}
+
+.scroller > div {
+  flex: 0 0 250px;
+  background-color: rebeccapurple;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.scroller > div:nth-child(even) {
+  background-color: #fff;
+  color: rebeccapurple;
+}
+```
 
 `scroll-padding-*` 속성은 스크롤 포트의 최적화된 가시 영역에 대한 오프셋을 설정합니다. 이 영역은 사용자의 시야에 요소를 위치시키기 위한 타겟 영역으로 사용됩니다. 이는 작성자는 다른 콘텐츠 (위치가 고정된 툴바 혹은 사이드바 등)에 가려진 스크롤 포트의 영역을 제외하거나 타겟 요소와 스크롤 포트 가장자리 사이에 더 많은 여백을 둘 수 있습니다.
 

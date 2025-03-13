@@ -9,7 +9,62 @@ l10n:
 
 **`text-indent`** CSS 属性设置区块元素中文本行前面空格（缩进）的长度。
 
-{{EmbedInteractiveExample("pages/css/text-indent.html")}}
+{{InteractiveExample("CSS Demo: text-indent")}}
+
+```css interactive-example-choice
+text-indent: 0;
+```
+
+```css interactive-example-choice
+text-indent: 30%;
+```
+
+```css interactive-example-choice
+text-indent: -3em;
+```
+
+```css interactive-example-choice
+text-indent: 3em each-line;
+```
+
+```css interactive-example-choice
+text-indent: 3em hanging;
+```
+
+```css interactive-example-choice
+text-indent: 3em hanging each-line;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>
+      This text is contained within a single paragraph. This paragraph is two
+      sentences long.
+    </p>
+    <p>
+      This is a new paragraph. There is a line break element
+      <code>&lt;br&gt;</code> after this sentence.<br />There it is! Notice how
+      it affects the indentation.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  font-size: 1.25em;
+  background-color: #483d8b;
+  align-items: start;
+}
+
+#example-element {
+  text-align: left;
+  margin: 0 0 0 3em;
+  background-color: #6a5acd;
+  color: white;
+}
+```
 
 水平间距是指相对于包含区块级元素内容框的左侧（或右侧，对于从右到左的布局）边缘的距离。
 

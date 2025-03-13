@@ -9,7 +9,54 @@ l10n:
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`text-emphasis-position`** 设置强调标记的位置。强调标记（如注音字符）在没有足够空间时，会自动增加行高。
 
-{{EmbedInteractiveExample("pages/css/text-emphasis-position.html")}}
+{{InteractiveExample("CSS Demo: text-emphasis-position")}}
+
+```css interactive-example-choice
+text-emphasis-position: auto;
+```
+
+```css interactive-example-choice
+text-emphasis-position: over right;
+```
+
+```css interactive-example-choice
+text-emphasis-position: under right;
+```
+
+```css interactive-example-choice
+text-emphasis-position: auto;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+text-emphasis-position: over left;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+text-emphasis-position: over right;
+writing-mode: vertical-rl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+
+#example-element {
+  text-emphasis: filled double-circle #ffb703;
+}
+```
 
 ## 语法
 

@@ -9,7 +9,55 @@ l10n:
 
 **`animation-play-state`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションが実行中か停止中かを設定します。
 
-{{EmbedInteractiveExample("pages/css/animation-play-state.html")}}
+{{InteractiveExample("CSS Demo: animation-play-state")}}
+
+```css interactive-example-choice
+animation-play-state: paused;
+```
+
+```css interactive-example-choice
+animation-play-state: running;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div class="animating" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #1766aa;
+  color: white;
+  margin: auto;
+  margin-left: 0;
+  border: 5px solid #333;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.animating {
+  animation-name: slide;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes slide {
+  from {
+    background-color: orange;
+    color: black;
+    margin-left: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-left: 80%;
+  }
+}
+```
 
 停止したアニメーションを再開すると、アニメーションの流れの最初からではなく、停止した位置からアニメーションが始まります。
 

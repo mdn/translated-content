@@ -9,7 +9,97 @@ l10n:
 
 **`perspective()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、ユーザーと z=0 平面との間の距離を定義し、閲覧者からの視点は二次元のインターフェイスが三次元であったかのようになります。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-{{EmbedInteractiveExample("pages/css/function-perspective.html")}}
+{{InteractiveExample("CSS Demo: perspective()")}}
+
+```css interactive-example-choice
+transform: perspective(0);
+```
+
+```css interactive-example-choice
+transform: perspective(none);
+```
+
+```css interactive-example-choice
+transform: perspective(800px);
+```
+
+```css interactive-example-choice
+transform: perspective(23rem);
+```
+
+```css interactive-example-choice
+transform: perspective(6.5cm);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+  perspective: 800px;
+  perspective-origin: 150% 150%;
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  perspective: 550px;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgba(210, 0, 0, 0.7);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  background: rgba(0, 0, 210, 0.7);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+  background: rgba(210, 210, 0, 0.7);
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgba(210, 0, 210, 0.7);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 `perspective()` 座標変換関数は {{cssxref('transform')}} 値の一部で、座標変換される要素に適用されます。これは {{cssxref('perspective')}} および {{cssxref('perspective-origin')}} の各プロパティが三次元空間に座標変換される子の親に付けられるのとは異なります。
 
