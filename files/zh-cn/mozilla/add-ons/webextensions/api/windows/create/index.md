@@ -14,7 +14,7 @@ l10n:
 - 加载一个或多个新的标签页到该窗口中。
 - 将一个现有窗口的标签页移动到新的窗口中
 - 设置窗口的大小和位置
-- 创建一个“面板”样式的窗口 —— 没有任何浏览器 UI（地址栏，工具栏等）的窗口。
+- 创建一个“面板”样式（没有任何浏览器 UI（如地址栏、工具栏等））的窗口。
 - 设置窗口的多种属性，如获得焦点或设为隐私窗口。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步方法。
@@ -140,7 +140,7 @@ browser.browserAction.onClicked.addListener((tab) => {
 {{Compat}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#method-create) API。此文档源于 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
+> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#method-create) API。该文档衍生自 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
