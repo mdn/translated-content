@@ -7,7 +7,22 @@ slug: WebAssembly/Reference/Control_flow/nop
 
 **`nop`** 源於 no-operation（沒有任何操作），顧名思義，它不會執行任何動作。
 
-{{EmbedInteractiveExample("pages/wat/nop.html", "tabbed-shorter")}}
+{{InteractiveExample("Wat Demo: nop", "tabbed-shorter")}}
+
+```wat interactive-example
+(module
+  (func (export "do_nothing")
+    nop
+  )
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url)).then((result) => {
+  result.instance.exports.do_nothing();
+});
+```
 
 ## 語法
 

@@ -1,7 +1,6 @@
 ---
 title: MathML 入门概述
 slug: Web/MathML/Guides
-original_slug: Learn/MathML/First_steps
 ---
 
 {{LearnSidebar}}

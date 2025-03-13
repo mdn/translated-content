@@ -1,7 +1,6 @@
 ---
 title: 将我们的 Svelte 应用组件化
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_components
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components
 l10n:
   sourceCommit: e9be22eaa7416206e3f263a058f0d509a7f81f88
 ---

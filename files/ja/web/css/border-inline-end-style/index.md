@@ -7,7 +7,43 @@ slug: Web/CSS/border-inline-end-style
 
 **`border-inline-end-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の終端側の境界のスタイルを定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界のスタイルに対応づけられます。これは {{cssxref("border-top-style")}}、{{cssxref("border-right-style")}}、{{cssxref("border-bottom-style")}}、{{cssxref("border-left-style")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
 
-{{EmbedInteractiveExample("pages/css/border-inline-end-style.html")}}
+{{InteractiveExample("CSS Demo: border-inline-end-style")}}
+
+```css interactive-example-choice
+border-inline-end-style: dotted;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-inline-end-style: dotted;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-inline-end-style: groove;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## 構文
 

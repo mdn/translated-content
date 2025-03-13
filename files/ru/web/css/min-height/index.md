@@ -7,7 +7,43 @@ slug: Web/CSS/min-height
 
 Свойство [CSS](/ru/docs/Web/CSS) **`min-height`** устанавливает минимальную высоту элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("height") }} от становления меньше, чем значение, указанное для `min-height`.
 
-{{EmbedInteractiveExample("pages/css/min-height.html")}}
+{{InteractiveExample("CSS Demo: min-height")}}
+
+```css interactive-example-choice
+min-height: 150px;
+```
+
+```css interactive-example-choice
+min-height: 7em;
+```
+
+```css interactive-example-choice
+min-height: 75%;
+```
+
+```css interactive-example-choice
+min-height: 10px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the minimum height. <br />If there is
+    more content than the minimum the box will grow to the height needed by the
+    content.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 Высота элемента принимает значение `min-height` всякий раз, когда `min-height` больше чем {{ Cssxref("max-height") }} или {{Cssxref("height")}}.
 

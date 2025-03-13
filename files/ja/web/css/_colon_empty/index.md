@@ -9,7 +9,25 @@ l10n:
 
 **`:empty`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、子を持たない要素を表します。子とは要素のノードまたは文字列 (ホワイトスペースを含む) です。コメント、処理指示、 CSS の {{cssxref("content")}} は要素が空であるかどうかの判断には影響しません。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-empty.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :empty", "tabbed-shorter")}}
+
+```css interactive-example
+div:empty {
+  outline: 2px solid deeppink;
+  height: 1em;
+}
+```
+
+```html interactive-example
+<p>Element with no content:</p>
+<div></div>
+
+<p>Element with comment:</p>
+<div><!-- Simple Comment --></div>
+
+<p>Element with nested empty element:</p>
+<div><p></p></div>
+```
 
 > **メモ:** [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo) では、 `:empty` 擬似クラスは {{CSSxRef(":-moz-only-whitespace")}} のような動作に変更されましたが、現在これに対応しているブラウザーはありません。
 

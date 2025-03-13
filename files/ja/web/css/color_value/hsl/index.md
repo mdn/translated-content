@@ -12,7 +12,37 @@ l10n:
 > [!NOTE]
 > 古い `hsla()` 構文は `hsl()` の別名です。同じ引数を受け付け、同じように動作します。
 
-{{EmbedInteractiveExample("pages/css/function-hsl.html")}}
+{{InteractiveExample("CSS Demo: hsl()")}}
+
+```css interactive-example-choice
+background: hsl(50 80% 40%);
+```
+
+```css interactive-example-choice
+background: hsl(150deg 30% 60%);
+```
+
+```css interactive-example-choice
+background: hsl(0.3turn 60% 45% / 0.7);
+```
+
+```css interactive-example-choice
+background: hsl(0 80% 50% / 25%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 `hsl()` による _補色_ の定義は、{{glossary("color wheel", "色相環")}}の同じ直径に配置されるため、単一の式で計算することができます。ある色の色相角を `θ` とすれば、その補色の色相角は `180deg - θ` となります。
 

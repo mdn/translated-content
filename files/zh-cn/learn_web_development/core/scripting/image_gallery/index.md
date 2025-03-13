@@ -1,7 +1,6 @@
 ---
 title: 图片库
 slug: Learn_web_development/Core/Scripting/Image_gallery
-original_slug: Learn/JavaScript/Building_blocks/Image_gallery
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Core/Scripting")}}

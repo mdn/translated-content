@@ -10683,20 +10683,20 @@
       "asasin"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques": {
+  "Web/Accessibility/ARIA/Guides/Techniques": {
     "modified": "2019-03-18T21:40:55.887Z",
     "contributors": [
       "zbralex",
       "fscholz"
     ]
   },
-  "Web/Accessibility/ARIA/Roles/checkbox_role": {
+  "Web/Accessibility/ARIA/Reference/Roles/checkbox_role": {
     "modified": "2019-03-19T11:13:31.955Z",
     "contributors": [
       "viktoryiakuzmitskaya"
     ]
   },
-  "Web/Accessibility/Keyboard-navigable_JavaScript_widgets": {
+  "Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets": {
     "modified": "2019-03-18T21:11:39.809Z",
     "contributors": [
       "DianaGalter",
@@ -10712,19 +10712,19 @@
       "Jifeon"
     ]
   },
-  "Web/Accessibility/Mobile_accessibility_checklist": {
+  "Web/Accessibility/Guides/Mobile_accessibility_checklist": {
     "modified": "2019-04-03T18:12:38.914Z",
     "contributors": [
       "mbalabash"
     ]
   },
-  "Web/Accessibility/Understanding_WCAG/Keyboard": {
+  "Web/Accessibility/Guides/Understanding_WCAG/Keyboard": {
     "modified": "2020-11-17T11:48:31.223Z",
     "contributors": [
       "ukhin.miha"
     ]
   },
-  "Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast": {
+  "Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast": {
     "modified": "2019-03-18T20:58:10.794Z",
     "contributors": [
       "iamvector"
@@ -11409,6 +11409,12 @@
       "BychekRU"
     ]
   },
+  "Web/CSS/CSS_cascade/Shorthand_properties": {
+    "modified": "2019-03-23T22:04:06.155Z",
+    "contributors": [
+      "brolnickij"
+    ]
+  },
   "Web/CSS/CSS_cascade/Specificity": {
     "modified": "2019-03-23T22:31:13.059Z",
     "contributors": [
@@ -11730,6 +11736,25 @@
       "at940266"
     ]
   },
+  "Web/CSS/CSS_positioned_layout/Stacking_context": {
+    "modified": "2019-03-23T22:44:33.535Z",
+    "contributors": [
+      "haritonasty",
+      "dima74",
+      "alfaslash",
+      "mutius",
+      "ViktorPalansky",
+      "lerniri"
+    ]
+  },
+  "Web/CSS/CSS_positioned_layout/Stacking_without_z-index": {
+    "modified": "2020-04-16T01:00:44.047Z",
+    "contributors": [
+      "pelyp47",
+      "batareechka",
+      "SphinxKnight"
+    ]
+  },
   "Web/CSS/CSS_positioned_layout/Understanding_z-index": {
     "modified": "2020-04-16T00:54:23.175Z",
     "contributors": [
@@ -11741,26 +11766,7 @@
       "Jeremie"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context": {
-    "modified": "2019-03-23T22:44:33.535Z",
-    "contributors": [
-      "haritonasty",
-      "dima74",
-      "alfaslash",
-      "mutius",
-      "ViktorPalansky",
-      "lerniri"
-    ]
-  },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index": {
-    "modified": "2020-04-16T01:00:44.047Z",
-    "contributors": [
-      "pelyp47",
-      "batareechka",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index": {
+  "Web/CSS/CSS_positioned_layout/Using_z-index": {
     "modified": "2020-04-16T01:16:28.675Z",
     "contributors": [
       "pelyp47"
@@ -11967,12 +11973,6 @@
     "modified": "2020-10-15T22:26:00.077Z",
     "contributors": [
       "opereverzeva"
-    ]
-  },
-  "Web/CSS/Shorthand_properties": {
-    "modified": "2019-03-23T22:04:06.155Z",
-    "contributors": [
-      "brolnickij"
     ]
   },
   "Web/CSS/Subsequent-sibling_combinator": {
@@ -15509,7 +15509,29 @@
       "Knyaz Vladimir"
     ]
   },
-  "Web/JavaScript/Closures": {
+  "Web/JavaScript/Guide": {
+    "modified": "2020-10-30T03:49:38.404Z",
+    "contributors": [
+      "ksam",
+      "callisto1337",
+      "VerkholaAlex",
+      "T1mL3arn",
+      "pk.prog",
+      "BychekRU",
+      "xmalinov",
+      "Saviloff",
+      "HaukIce",
+      "pashutk",
+      "astra1",
+      "Yuriy-Ka",
+      "Aleksej",
+      "fscholz",
+      "dtretyakov",
+      "teoli",
+      "danielgn96"
+    ]
+  },
+  "Web/JavaScript/Guide/Closures": {
     "modified": "2020-11-13T09:42:08.066Z",
     "contributors": [
       "chmsv",
@@ -15541,7 +15563,20 @@
       "CJohn"
     ]
   },
-  "Web/JavaScript/Data_structures": {
+  "Web/JavaScript/Guide/Control_flow_and_error_handling": {
+    "modified": "2020-11-06T04:41:33.787Z",
+    "contributors": [
+      "ksam",
+      "Japaka90",
+      "pk.prog",
+      "igor4949i",
+      "fscholz",
+      "IgorGilyazov",
+      "teoli",
+      "uleming"
+    ]
+  },
+  "Web/JavaScript/Guide/Data_structures": {
     "modified": "2020-10-08T08:53:54.371Z",
     "contributors": [
       "nikolasmelui",
@@ -15573,13 +15608,13 @@
       "uleming"
     ]
   },
-  "Web/JavaScript/Enumerability_and_ownership_of_properties": {
+  "Web/JavaScript/Guide/Enumerability_and_ownership_of_properties": {
     "modified": "2020-03-12T19:43:05.408Z",
     "contributors": [
       "Saviloff"
     ]
   },
-  "Web/JavaScript/Equality_comparisons_and_sameness": {
+  "Web/JavaScript/Guide/Equality_comparisons_and_sameness": {
     "modified": "2020-03-12T19:42:53.063Z",
     "contributors": [
       "HTMan",
@@ -15588,64 +15623,6 @@
       "Zarwlar",
       "Saviloff",
       "Witadol"
-    ]
-  },
-  "Web/JavaScript/Event_loop": {
-    "modified": "2020-03-29T11:58:13.454Z",
-    "contributors": [
-      "GalustOsipyan",
-      "nemrosim",
-      "cgehuzi",
-      "AnDeVerin",
-      "letovlive",
-      "rgrtuleague",
-      "IlyaMokin",
-      "thefasttracker",
-      "RusPosevkin",
-      "6thSence",
-      "andrIvash",
-      "ivanlemeshev",
-      "beskrovnykh",
-      "forestbird",
-      "Saviloff",
-      "pashutk",
-      "fscholz",
-      "im7mortal"
-    ]
-  },
-  "Web/JavaScript/Guide": {
-    "modified": "2020-10-30T03:49:38.404Z",
-    "contributors": [
-      "ksam",
-      "callisto1337",
-      "VerkholaAlex",
-      "T1mL3arn",
-      "pk.prog",
-      "BychekRU",
-      "xmalinov",
-      "Saviloff",
-      "HaukIce",
-      "pashutk",
-      "astra1",
-      "Yuriy-Ka",
-      "Aleksej",
-      "fscholz",
-      "dtretyakov",
-      "teoli",
-      "danielgn96"
-    ]
-  },
-  "Web/JavaScript/Guide/Control_flow_and_error_handling": {
-    "modified": "2020-11-06T04:41:33.787Z",
-    "contributors": [
-      "ksam",
-      "Japaka90",
-      "pk.prog",
-      "igor4949i",
-      "fscholz",
-      "IgorGilyazov",
-      "teoli",
-      "uleming"
     ]
   },
   "Web/JavaScript/Guide/Expressions_and_operators": {
@@ -15744,6 +15721,28 @@
       "magetor"
     ]
   },
+  "Web/JavaScript/Guide/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-08-29T20:34:02.593Z",
+    "contributors": [
+      "sozdanbogom40",
+      "shevchenko",
+      "SadTomCat",
+      "Nick_Pershin",
+      "dudinsky",
+      "Shemil95",
+      "SedovDP",
+      "aliaksandr-s",
+      "ChesterFobitt",
+      "Saviloff",
+      "Kapiroska",
+      "fscholz",
+      "xxxxx0438",
+      "SRastrigin",
+      "Natalya_Surikova",
+      "Rast1234",
+      "teoli"
+    ]
+  },
   "Web/JavaScript/Guide/Introduction": {
     "modified": "2020-03-12T19:40:55.089Z",
     "contributors": [
@@ -15781,6 +15780,36 @@
       "alitskevich"
     ]
   },
+  "Web/JavaScript/Guide/Language_overview": {
+    "modified": "2020-10-21T01:20:45.167Z",
+    "contributors": [
+      "chimit",
+      "korefusha",
+      "Kamil-Zakiev",
+      "EgorChernik",
+      "aleshkanet",
+      "CeH9",
+      "MerkurevSergei",
+      "shtorin",
+      "Megabyteceer",
+      "gudkovdanila",
+      "pk.prog",
+      "fscholz",
+      "forestbird",
+      "Saviloff",
+      "Instigator",
+      "shapoval",
+      "AlexChuev",
+      "razarusu",
+      "kolyuchii",
+      "PavelGrishaev",
+      "teoli",
+      "franza",
+      "PROgrammaster",
+      "sergey_tikhonov",
+      "Dart"
+    ]
+  },
   "Web/JavaScript/Guide/Loops_and_iteration": {
     "modified": "2020-03-12T19:42:44.557Z",
     "contributors": [
@@ -15795,6 +15824,21 @@
       "BychekRU",
       "Dvakseno",
       "TARTIGA"
+    ]
+  },
+  "Web/JavaScript/Guide/Memory_management": {
+    "modified": "2020-07-14T20:08:19.176Z",
+    "contributors": [
+      "irustm",
+      "ZeroUnderscoreOu",
+      "nikolaifedorov",
+      "vaeum",
+      "sashashakun",
+      "fscholz",
+      "vitkarpov",
+      "teoli",
+      "Nick_Pershin",
+      "nurbek.ab"
     ]
   },
   "Web/JavaScript/Guide/Meta_programming": {
@@ -15939,89 +15983,6 @@
       "dimko_desu",
       "Vlad.Abdullin",
       "uleming"
-    ]
-  },
-  "Web/JavaScript/Inheritance_and_the_prototype_chain": {
-    "modified": "2020-08-29T20:34:02.593Z",
-    "contributors": [
-      "sozdanbogom40",
-      "shevchenko",
-      "SadTomCat",
-      "Nick_Pershin",
-      "dudinsky",
-      "Shemil95",
-      "SedovDP",
-      "aliaksandr-s",
-      "ChesterFobitt",
-      "Saviloff",
-      "Kapiroska",
-      "fscholz",
-      "xxxxx0438",
-      "SRastrigin",
-      "Natalya_Surikova",
-      "Rast1234",
-      "teoli"
-    ]
-  },
-  "Web/JavaScript/JavaScript_technologies_overview": {
-    "modified": "2020-03-12T19:37:57.231Z",
-    "contributors": [
-      "jynweythek",
-      "chrisdavidmills",
-      "miirinjej",
-      "kulakowka",
-      "curdwithraisins",
-      "sersalex",
-      "fscholz",
-      "kichik",
-      "askhat",
-      "ixidor",
-      "uleming"
-    ]
-  },
-  "Web/JavaScript/Language_overview": {
-    "modified": "2020-10-21T01:20:45.167Z",
-    "contributors": [
-      "chimit",
-      "korefusha",
-      "Kamil-Zakiev",
-      "EgorChernik",
-      "aleshkanet",
-      "CeH9",
-      "MerkurevSergei",
-      "shtorin",
-      "Megabyteceer",
-      "gudkovdanila",
-      "pk.prog",
-      "fscholz",
-      "forestbird",
-      "Saviloff",
-      "Instigator",
-      "shapoval",
-      "AlexChuev",
-      "razarusu",
-      "kolyuchii",
-      "PavelGrishaev",
-      "teoli",
-      "franza",
-      "PROgrammaster",
-      "sergey_tikhonov",
-      "Dart"
-    ]
-  },
-  "Web/JavaScript/Memory_management": {
-    "modified": "2020-07-14T20:08:19.176Z",
-    "contributors": [
-      "irustm",
-      "ZeroUnderscoreOu",
-      "nikolaifedorov",
-      "vaeum",
-      "sashashakun",
-      "fscholz",
-      "vitkarpov",
-      "teoli",
-      "Nick_Pershin",
-      "nurbek.ab"
     ]
   },
   "Web/JavaScript/Reference": {
@@ -16557,6 +16518,29 @@
     "modified": "2020-03-12T19:48:36.606Z",
     "contributors": [
       "MakarovDs777"
+    ]
+  },
+  "Web/JavaScript/Reference/Execution_model": {
+    "modified": "2020-03-29T11:58:13.454Z",
+    "contributors": [
+      "GalustOsipyan",
+      "nemrosim",
+      "cgehuzi",
+      "AnDeVerin",
+      "letovlive",
+      "rgrtuleague",
+      "IlyaMokin",
+      "thefasttracker",
+      "RusPosevkin",
+      "6thSence",
+      "andrIvash",
+      "ivanlemeshev",
+      "beskrovnykh",
+      "forestbird",
+      "Saviloff",
+      "pashutk",
+      "fscholz",
+      "im7mortal"
     ]
   },
   "Web/JavaScript/Reference/Functions": {
@@ -19983,6 +19967,22 @@
       "hindmost"
     ]
   },
+  "Web/JavaScript/Reference/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:37:57.231Z",
+    "contributors": [
+      "jynweythek",
+      "chrisdavidmills",
+      "miirinjej",
+      "kulakowka",
+      "curdwithraisins",
+      "sersalex",
+      "fscholz",
+      "kichik",
+      "askhat",
+      "ixidor",
+      "uleming"
+    ]
+  },
   "Web/JavaScript/Reference/Lexical_grammar": {
     "modified": "2020-10-09T04:21:50.644Z",
     "contributors": [
@@ -20075,7 +20075,7 @@
       "dikovinki"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Destructuring_assignment": {
+  "Web/JavaScript/Reference/Operators/Destructuring": {
     "modified": "2019-03-18T20:41:31.882Z",
     "contributors": [
       "zziger",
@@ -22005,13 +22005,6 @@
       "Ivan961",
       "fedev",
       "Tortik217"
-    ]
-  },
-  "conflicting/MDN/Community": {
-    "modified": "2019-01-17T00:00:52.853Z",
-    "contributors": [
-      "wbamberg",
-      "warsan"
     ]
   },
   "conflicting/Web/API/console": {

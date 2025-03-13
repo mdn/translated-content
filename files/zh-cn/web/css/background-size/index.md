@@ -7,7 +7,42 @@ slug: Web/CSS/background-size
 
 `background-size` 设置背景图片大小。图片可以保有其原有的尺寸，或者拉伸到新的尺寸，或者在保持其原有比例的同时缩放到元素的可用空间的尺寸。
 
-{{EmbedInteractiveExample("pages/css/background-size.html")}}
+{{InteractiveExample("CSS Demo: background-size")}}
+
+```css interactive-example-choice
+background-size: contain;
+```
+
+```css interactive-example-choice
+background-size: contain;
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-size: cover;
+```
+
+```css interactive-example-choice
+background-size: 30%;
+```
+
+```css interactive-example-choice
+background-size: 200px 100px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-image: url("/shared-assets/images/examples/hand.jpg");
+  min-width: 100%;
+  min-height: 100%;
+}
+```
 
 ```css
 /* 关键字 */
@@ -173,5 +208,5 @@ background-size: unset;
 ## 参见
 
 - [调整背景图片的大小](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-- [SVG 背景缩放](/zh-CN/docs/Web/CSS/Scaling_of_SVG_backgrounds)
+- [SVG 背景缩放](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
 - {{cssxref("object-fit")}}

@@ -7,7 +7,45 @@ slug: Web/CSS/background-repeat
 
 **`background-repeat`** [CSS](/zh-CN/docs/Web/CSS) 属性定义背景图像的重复方式。背景图像可以沿着水平轴，垂直轴，两个轴重复，或者根本不重复。
 
-{{EmbedInteractiveExample("pages/css/background-repeat.html")}}
+{{InteractiveExample("CSS Demo: background-repeat")}}
+
+```css interactive-example-choice
+background-repeat: repeat-x;
+```
+
+```css interactive-example-choice
+background-repeat: repeat;
+```
+
+```css interactive-example-choice
+background-repeat: space;
+```
+
+```css interactive-example-choice
+background-repeat: round;
+```
+
+```css interactive-example-choice
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-repeat: space repeat;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background: #ccc url("/shared-assets/images/examples/moon.jpg") center / 120px;
+  min-width: 100%;
+  min-height: 100%;
+}
+```
 
 默认情况下，重复的图像被剪裁为元素的大小，但它们可以缩放 (使用 `round`) 或者均匀地分布 (使用 `space`).
 

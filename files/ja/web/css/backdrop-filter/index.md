@@ -9,7 +9,48 @@ l10n:
 
 **`backdrop-filter`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背後の領域に、ぼかしや色変化のようなグラフィック効果を適用することができます。要素の背後にあるすべてに適用されるため、要素またはその背景が透明または部分的に透明である必要があります。
 
-{{EmbedInteractiveExample("pages/css/backdrop-filter.html")}}
+{{InteractiveExample("CSS Demo: backdrop-filter()")}}
+
+```css interactive-example-choice
+backdrop-filter: blur(10px);
+```
+
+```css interactive-example-choice
+backdrop-filter: invert(80%);
+```
+
+```css interactive-example-choice
+backdrop-filter: sepia(90%);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div id="example-element">Example</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-image: url("/shared-assets/images/examples/balloon.jpg");
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+#example-element {
+  font-weight: bold;
+  flex: 1;
+  text-align: center;
+  padding: 20px 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+```
 
 ## 構文
 

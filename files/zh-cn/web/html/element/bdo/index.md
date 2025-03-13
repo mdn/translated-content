@@ -108,7 +108,7 @@ HTML 4 规范未指定此元素的事件。它们是在 XHTML 中添加的。这
       <th scope="row">隐式 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/generic_role"
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
             >generic</a
           ></code
         >

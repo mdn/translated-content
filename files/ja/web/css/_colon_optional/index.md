@@ -14,7 +14,42 @@ input:optional {
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-optional.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: :optional", "tabbed-standard")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+.req {
+  color: red;
+}
+
+*:optional {
+  background-color: palegreen;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="name">Name: <span class="req">*</span></label>
+  <input id="name" name="name" type="text" required />
+
+  <label for="birth">Date of Birth:</label>
+  <input id="birth" name="birth" type="date" />
+
+  <label for="origin"
+    >How did you find out about us? <span class="req">*</span></label
+  >
+  <select id="origin" name="origin" required>
+    <option>Google</option>
+    <option>Facebook</option>
+    <option>Advertisement</option>
+  </select>
+  <p><span class="req">*</span> - Required field</p>
+</form>
+```
 
 この擬似クラスは。フォームを送信するにあたって必須ではない入力欄にスタイルを適用するのに便利です。
 

@@ -1,7 +1,6 @@
 ---
 title: View Transitions API
 slug: Web/API/View_Transition_API
-original_slug: Web/API/View_Transitions_API
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("View Transitions API")}}

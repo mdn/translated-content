@@ -1,7 +1,6 @@
 ---
 title: Svelte 中的动态行为：变量和属性
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props
 ---
 
 {{LearnSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: 定位实例练习
 slug: Learn_web_development/Core/CSS_layout/Practical_positioning_examples
-original_slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 ---
 
 {{LearnSidebar}}

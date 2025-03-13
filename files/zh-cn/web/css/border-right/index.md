@@ -7,9 +7,47 @@ l10n:
 
 {{CSSRef}}
 
-**`border-right`** [CSS](/zh-CN/docs/Web/CSS) [简写](/zh-CN/docs/Web/CSS/Shorthand_properties)属性用于设置元素右[边框](/zh-CN/docs/Web/CSS/border)的所有属性。
+**`border-right`** [CSS](/zh-CN/docs/Web/CSS) [简写](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)属性用于设置元素右[边框](/zh-CN/docs/Web/CSS/border)的所有属性。
 
-{{EmbedInteractiveExample("pages/css/border-right.html")}}
+{{InteractiveExample("CSS Demo: border-right")}}
+
+```css interactive-example-choice
+border-right: solid;
+```
+
+```css interactive-example-choice
+border-right: dashed red;
+```
+
+```css interactive-example-choice
+border-right: 1rem solid;
+```
+
+```css interactive-example-choice
+border-right: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border-right: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 与所有简写属性一样，`border-right` 始终设置它可以设置的所有属性的值，即使这些属性未被明确指定。它将那些未指定的值设置为默认值。请看下面的代码：
 

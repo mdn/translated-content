@@ -1,7 +1,6 @@
 ---
 title: 多媒体无障碍
 slug: Learn_web_development/Core/Accessibility/Multimedia
-original_slug: Learn/Accessibility/Multimedia
 ---
 
 {{LearnSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: 布局和包含块
 slug: Web/CSS/CSS_display/Containing_block
-original_slug: Web/CSS/Containing_block
 ---
 
 {{CSSRef}}
@@ -272,7 +271,7 @@ p {
     - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
 
   - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-  - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
+  - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
 
 - {{cssxref("all")}} 属性可将所有 CSS 声明重置为它所指定的状态

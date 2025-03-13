@@ -7,7 +7,57 @@ slug: Web/CSS/text-transform
 
 **text-transform** CSS 属性指定如何将元素的文本大写。它可以用于使文本显示为全大写或全小写，也可单独对每一个单词进行操作。
 
-{{EmbedInteractiveExample("pages/css/text-transform.html")}}
+{{InteractiveExample("CSS Demo: text-transform")}}
+
+```css interactive-example-choice
+text-transform: capitalize;
+```
+
+```css interactive-example-choice
+text-transform: uppercase;
+```
+
+```css interactive-example-choice
+text-transform: lowercase;
+```
+
+```css interactive-example-choice
+text-transform: none;
+```
+
+```css interactive-example-choice
+text-transform: full-width;
+```
+
+```css interactive-example-choice
+text-transform: full-size-kana;
+```
+
+```css interactive-example-choice
+text-transform: math-auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <p>
+      LONDON. Michaelmas term lately over, and the Lord Chancellor sitting in
+      Lincoln's Inn Hall.
+    </p>
+    <p lang="el">
+      Σ is a Greek letter and appears in ΟΔΥΣΣΕΥΣ. Θα πάμε στο "Θεϊκό φαΐ" ή στη
+      "Νεράιδα"
+    </p>
+    <p lang="ja">ァィゥェ ォヵㇰヶ</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.2em;
+}
+```
 
 `text-transform` 属性考虑特定于语言的案例映射规则，如：
 
@@ -69,7 +119,7 @@ text-transform: unset;
 
 大段将文字 `text-transform` 值设置为 `uppercase`，对于有认知障碍的人（比如阅读障碍）来说可能难以阅读。
 
-- [MDN：理解 WCAG，条例 1.4 的解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN：理解 WCAG，条例 1.4 的解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [W3C：理解 WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## 形式定义

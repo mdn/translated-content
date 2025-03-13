@@ -38,7 +38,7 @@ l10n:
 
 在 `<html>` 元素中包含一个有效的 `lang` 声明，还可以确保页面的 {{HTMLElement("head")}} 中包含的重要元数据（如页面的 {{HTMLElement("title")}}）也会被正确地宣告。
 
-- [MDN | 理解 WCAG，准则 3.1 的解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Understandable#准则_3.1——可读性：使文本内容可读，可理解)
+- [MDN | 理解 WCAG，准则 3.1 的解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#准则_3.1——可读性：使文本内容可读，可理解)
 - [理解成功标准 3.1.1 | W3C 理解 WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
 
 ## 技术概要

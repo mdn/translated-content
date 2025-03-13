@@ -9,7 +9,46 @@ l10n:
 
 **`border-color`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)を行う [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の色を設定します。
 
-{{EmbedInteractiveExample("pages/css/border-color.html")}}
+{{InteractiveExample("CSS Demo: border-color")}}
+
+```css interactive-example-choice
+border-color: red;
+```
+
+```css interactive-example-choice
+border-color: red #32a1ce;
+```
+
+```css interactive-example-choice
+border-color: red rgba(170, 50, 220, 0.6) green;
+```
+
+```css interactive-example-choice
+border-color: red yellow green hsla(60, 90%, 50%, 0.8);
+```
+
+```css interactive-example-choice
+border-color: red yellow green transparent;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 各辺を個々に設定する場合は、 {{CSSxRef("border-top-color")}}、 {{CSSxRef("border-right-color")}}、 {{CSSxRef("border-bottom-color")}}、 {{CSSxRef("border-left-color")}}、 または書字方向を意識した{{CSSxRef("border-block-start-color")}}、 {{CSSxRef("border-block-end-color")}}、 {{CSSxRef("border-inline-start-color")}}、 {{CSSxRef("border-inline-end-color")}} を使用します。
 

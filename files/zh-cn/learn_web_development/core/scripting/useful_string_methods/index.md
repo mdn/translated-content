@@ -1,7 +1,6 @@
 ---
 title: 有用的字符串方法
 slug: Learn_web_development/Core/Scripting/Useful_string_methods
-original_slug: Learn/JavaScript/First_steps/Useful_string_methods
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}

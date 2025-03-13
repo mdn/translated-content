@@ -7,7 +7,60 @@ slug: Web/CSS/inset
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`inset`** 为简写属性，对应于 {{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("bottom")}} 和 {{cssxref("left")}} 属性。其与 {{cssxref("margin")}} 简写属性具有相同的多值语法。
 
-{{EmbedInteractiveExample("pages/css/inset.html")}}
+{{InteractiveExample("CSS Demo: inset")}}
+
+```css interactive-example-choice
+inset: 1em;
+```
+
+```css interactive-example-choice
+inset: 5% 0;
+```
+
+```css interactive-example-choice
+inset: 2em 50px 20px;
+```
+
+```css interactive-example-choice
+inset: 10px 30% 20px 0;
+```
+
+```css interactive-example-choice
+inset: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <div id="example-element">I am absolutely positioned.</div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 0.75em solid #ad1457;
+  padding: 0.75em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+#example-element {
+  background-color: #07136c;
+  border: 6px solid #ffa000;
+  color: white;
+  position: absolute;
+  inset: 0;
+}
+```
 
 此属性虽然为 *CSS 逻辑属性*规范的一部分，但是无论元素的书写模式、行内方向和文本朝向如何，其所定义的都不是*逻辑*偏移而是*实体*偏移。
 

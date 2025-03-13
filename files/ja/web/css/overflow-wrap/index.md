@@ -12,7 +12,42 @@ l10n:
 > [!NOTE]
 > このプロパティはもともと、標準外かつ接頭辞のない `word-wrap` と呼ばれる Microsoft 拡張であり、多くのブラウザーはこの名前で実装していました。 `overflow-wrap` に改名されたため、 `word-wrap` は別名になりました。
 
-{{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}
+{{InteractiveExample("CSS Demo: overflow-wrap")}}
+
+```css interactive-example-choice
+overflow-wrap: normal;
+```
+
+```css interactive-example-choice
+overflow-wrap: anywhere;
+```
+
+```css interactive-example-choice
+overflow-wrap: break-word;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    Most words are short &amp; don't need to break. But
+    <strong class="transition-all" id="example-element"
+      >Antidisestablishmentarianism</strong
+    >
+    is long. The width is set to min-content, with a max-width of 11em.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid #663399;
+  padding: 0.75em;
+  width: min-content;
+  max-width: 11em;
+  height: 200px;
+}
+```
 
 > **メモ:** {{cssxref("word-break")}} とは対照的に、 `overflow-wrap` は単語全体があふれずに行内に配置できない場合にのみ、改行を生成します。
 
