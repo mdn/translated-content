@@ -172,7 +172,7 @@ function startRecording(stream, lengthInMS) {
 }
 ```
 
-`startRecording()` 함수는 두 개의 입력 매개변수를 받습니다. 녹음할 {{domxref("MediaStream")}}과 녹음할 시간(밀리초 단위)입니다. 항상 지정된 시간 내에서만 미디어를 녹음하며, 만약 그 시간보다 먼저 미디어가 중단되면 {{domxref("MediaRecorder")}}가 자동으로 녹음을 멈춥니다.
+`startRecording()` 함수는 두 개의 입력 매개변수를 받습니다. 녹음할 {{domxref("MediaStream")}}과 밀리초 단위의 녹음할 시간입니다. 항상 지정된 시간 내에서만 미디어를 녹음하며, 만약 그 시간보다 먼저 미디어가 중단되면 {{domxref("MediaRecorder")}}가 자동으로 녹음을 멈춥니다.
 
 - 먼저 입력된 `stream`의 녹화를 처리할 `MediaRecorder`를 생성합니다.
 - `data`는 초기에 빈 배열이며, {{domxref("MediaRecorder.dataavailable_event", "ondataavailable")}} 이벤트 핸들러에 의해 제공된 미디어 데이터의 {{domxref("Blob")}}들을 저장합니다.
