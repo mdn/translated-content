@@ -46,6 +46,7 @@ slug: Web/JavaScript/Reference/Statements
 - {{jsxref("Statements/async_function", "async function")}}
   - : Объявляет асинхронную функцию с указанными параметрами.
 - {{jsxref("Statements/async_function*", "async function*")}}
+
   - : Асинхронные функции-генераторы, упрощающие написание [итераторов](/ru/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 - {{jsxref("Statements/class", "class")}}
