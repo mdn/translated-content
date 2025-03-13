@@ -1,6 +1,7 @@
 ---
 title: aria-colspan
-slug: Web/Accessibility/ARIA/Attributes/aria-colspan
+slug: Web/Accessibility/ARIA/Reference/Attributes/aria-colspan
+original_slug: Web/Accessibility/ARIA/Attributes/aria-colspan
 l10n:
   sourceCommit: 18c1fa17e3caf296af274d787c4e57e911969364
 ---

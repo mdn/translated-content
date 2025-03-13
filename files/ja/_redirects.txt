@@ -3867,6 +3867,7 @@
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-colcount	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-colindex	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext
+/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colspan	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-controls	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-disabled	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled
