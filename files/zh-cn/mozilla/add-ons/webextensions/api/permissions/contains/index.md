@@ -69,7 +69,7 @@ let testPermissions4 = {
 };
 
 const testResult4 = await browser.permissions.contains(testPermissions4);
-console.log(testResult4); // false：`origins` 的“https://example.org/” 并不匹配
+console.log(testResult4); // false：`origins` 的“https://example.org/”并不匹配
 ```
 
 {{WebExtExamples}}
