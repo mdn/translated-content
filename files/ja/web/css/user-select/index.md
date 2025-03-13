@@ -9,7 +9,31 @@ l10n:
 
 **`user-select`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ユーザーがテキストを範囲選択できるかどうかを制御します。これは、テキストボックスを除いて、{{Glossary("Chrome", "クローム")}}として読み込まれたコンテンツには影響を与えません。
 
-{{EmbedInteractiveExample("pages/css/user-select.html")}}
+{{InteractiveExample("CSS Demo: user-select")}}
+
+```css interactive-example-choice
+user-select: none;
+```
+
+```css interactive-example-choice
+user-select: text;
+```
+
+```css interactive-example-choice
+user-select: all;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">Try to select this text</p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.5rem;
+}
+```
 
 ## 構文
 

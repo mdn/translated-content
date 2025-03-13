@@ -1,7 +1,6 @@
 ---
 title: 弹性盒子
 slug: Learn_web_development/Core/CSS_layout/Flexbox
-original_slug: Learn/CSS/CSS_layout/Flexbox
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}

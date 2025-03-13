@@ -9,7 +9,62 @@ l10n:
 
 **`text-indent`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロック内のテキストの行の前に置く空白（字下げ）の幅を設定します。
 
-{{EmbedInteractiveExample("pages/css/text-indent.html")}}
+{{InteractiveExample("CSS Demo: text-indent")}}
+
+```css interactive-example-choice
+text-indent: 0;
+```
+
+```css interactive-example-choice
+text-indent: 30%;
+```
+
+```css interactive-example-choice
+text-indent: -3em;
+```
+
+```css interactive-example-choice
+text-indent: 3em each-line;
+```
+
+```css interactive-example-choice
+text-indent: 3em hanging;
+```
+
+```css interactive-example-choice
+text-indent: 3em hanging each-line;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>
+      This text is contained within a single paragraph. This paragraph is two
+      sentences long.
+    </p>
+    <p>
+      This is a new paragraph. There is a line break element
+      <code>&lt;br&gt;</code> after this sentence.<br />There it is! Notice how
+      it affects the indentation.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  font-size: 1.25em;
+  background-color: #483d8b;
+  align-items: start;
+}
+
+#example-element {
+  text-align: left;
+  margin: 0 0 0 3em;
+  background-color: #6a5acd;
+  color: white;
+}
+```
 
 包含ブロック要素のコンテンツボックスの左端（右書きの場合は右端）に、水平に空白が挿入されます。
 

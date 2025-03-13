@@ -371,7 +371,7 @@ document
 {{EmbedLiveSample('鏈接到非 HTML 資源')}}
 
 - [WebAIM: 鏈接和超文本——超文本鏈接](https://webaim.org/techniques/hypertext/hypertext_links)
-- [MDN / 了解 WCAG，指導方針 3.2](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+- [MDN / 了解 WCAG，指導方針 3.2](/zh-TW/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
 - [G200: 僅在必要時從鏈接中打開新窗口和新標籤](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
 - [G201: 在打開新窗口時給予用戶高級警告](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 
@@ -411,7 +411,7 @@ document
 
 - [WebAIM：「跳轉導航」鏈接](https://webaim.org/techniques/skipnav/)
 - [如何使用跳過導航鏈接](https://www.a11yproject.com/posts/skip-nav-links/)
-- [MDN / 了解 WCAG，指導方針 2.4 說明](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN / 了解 WCAG，指導方針 2.4 說明](/zh-TW/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [理解成功標準 2.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 
 ### 尺寸與相近性
@@ -488,8 +488,8 @@ document
     <tr>
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
-        當存在 <code>href</code> 屬性時為 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>，否則為
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/generic_role"><code>generic</code></a>
+        當存在 <code>href</code> 屬性時為 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a>，否則為
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>
     <tr>
@@ -497,16 +497,16 @@ document
       <td>
         <p>當存在 <code>href</code> 屬性時：</p>
         <ul>
-          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></li>
-          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a></li>
-          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a></li>
-          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
-          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
-          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a></li>
-          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a></li>
-          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a></li>
-          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a></li>
-          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"><code>checkbox</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role"><code>switch</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a></li>
+          <li><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role"><code>treeitem</code></a></li>
         </ul>
         <p>當不存在 <code>href</code> 屬性時：</p>
         <ul>

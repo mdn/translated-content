@@ -1,7 +1,6 @@
 ---
 title: Vue 中的计算属性
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_styling","Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering", "Learn_web_development/Core/Frameworks_libraries")}}

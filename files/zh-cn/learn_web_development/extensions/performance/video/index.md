@@ -1,7 +1,6 @@
 ---
 title: 多媒体：视频
 slug: Learn_web_development/Extensions/Performance/video
-original_slug: Learn/Performance/video
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance/Javascript", "Learn_web_development/Extensions/Performance")}}

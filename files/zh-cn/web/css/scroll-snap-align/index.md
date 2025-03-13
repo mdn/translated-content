@@ -7,7 +7,69 @@ slug: Web/CSS/scroll-snap-align
 
 **`scroll-snap-align`** 属性将盒子的吸附位置指定为其吸附区域（作为对齐对象）在其吸附容器的吸附口（作为对齐容器）中的对齐方式。其两值分别指定了在块向轴盒行向轴上的吸附对齐方式。若仅指定一值，则第二值默认为同一值。
 
-{{EmbedInteractiveExample("pages/css/scroll-snap-align.html")}}
+{{InteractiveExample("CSS Demo: scroll-snap-align")}}
+
+```css interactive-example-choice
+scroll-snap-align: start;
+```
+
+```css interactive-example-choice
+scroll-snap-align: end;
+```
+
+```css interactive-example-choice
+scroll-snap-align: center;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-parent">
+    <div>1</div>
+    <div id="example-element">2</div>
+    <div>3</div>
+  </div>
+  <div class="info">Scroll »</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  flex-wrap: wrap;
+}
+
+.default-example .info {
+  width: 100%;
+  padding: 0.5em 0;
+  font-size: 90%;
+}
+
+#example-parent {
+  text-align: left;
+  width: 250px;
+  height: 250px;
+  overflow-x: scroll;
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid black;
+  scroll-snap-type: x mandatory;
+}
+
+#example-parent > div {
+  flex: 0 0 66%;
+  width: 250px;
+  background-color: rebeccapurple;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#example-parent > div:nth-child(even) {
+  background-color: #fff;
+  color: rebeccapurple;
+}
+```
 
 ## 语法
 

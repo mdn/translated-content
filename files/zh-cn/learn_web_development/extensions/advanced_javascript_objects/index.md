@@ -1,7 +1,6 @@
 ---
 title: JavaScript 对象入门
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects
-original_slug: Learn/JavaScript/Objects
 ---
 
 {{LearnSidebar}}

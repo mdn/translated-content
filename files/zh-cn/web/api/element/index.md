@@ -92,85 +92,85 @@ _`Element` 从其父接口 {{DOMxRef("Node")}} 以及该接口的父接口 {{DOM
 _`Element` 接口包括以下在 `ARIAMixin` 混入中定义的属性。_
 
 - {{domxref("Element.ariaAtomic")}}
-  - : 反映 [`aria-atomic`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) 属性的字符串，表示辅助技术是否将根据 [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) 属性定义的变更通知，显示全部或仅部分变更区域。
+  - : 反映 [`aria-atomic`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) 属性的字符串，表示辅助技术是否将根据 [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) 属性定义的变更通知，显示全部或仅部分变更区域。
 - {{domxref("Element.ariaAutoComplete")}}
-  - : 反映 [`aria-autocomplete`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) 属性的字符串，表示输入文本是否会触发显示一个或多个用户对组合框、搜索框或文本框的预期值的预测，并指定如果进行了预测将如何显示。
+  - : 反映 [`aria-autocomplete`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete) 属性的字符串，表示输入文本是否会触发显示一个或多个用户对组合框、搜索框或文本框的预期值的预测，并指定如果进行了预测将如何显示。
 - {{domxref("Element.ariaBusy")}}
-  - : 反映 [`aria-busy`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-busy) 属性的字符串，表示元素是否正在被修改，因为辅助技术可能希望等到修改完成后再向用户展示。
+  - : 反映 [`aria-busy`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) 属性的字符串，表示元素是否正在被修改，因为辅助技术可能希望等到修改完成后再向用户展示。
 - {{domxref("Element.ariaChecked")}}
-  - : 反映 [`aria-checked`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-checked)属性的字符串，表示复选框、单选按钮和其他具有选中状态的部件的当前“选中”状态。
+  - : 反映 [`aria-checked`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)属性的字符串，表示复选框、单选按钮和其他具有选中状态的部件的当前“选中”状态。
 - {{domxref("Element.ariaColCount")}}
-  - : 反映 [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) 属性的字符串，该属性定义了表格、网格或树状网格中的列数。
+  - : 反映 [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount) 属性的字符串，该属性定义了表格、网格或树状网格中的列数。
 - {{domxref("Element.ariaColIndex")}}
-  - : 反映 [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) 属性的字符串，该属性定义了元素的列索引或相对于表格、网格或树状网格中列总数的位置。
+  - : 反映 [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) 属性的字符串，该属性定义了元素的列索引或相对于表格、网格或树状网格中列总数的位置。
 - {{domxref("Element.ariaColIndexText")}} {{experimental_inline}}
-  - : 反映 [`aria-colindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext) 属性的字符串，该属性定义了 aria-colindex 的人类可读文本替代。
+  - : 反映 [`aria-colindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext) 属性的字符串，该属性定义了 aria-colindex 的人类可读文本替代。
 - {{domxref("Element.ariaColSpan")}}
-  - : 反映 [`aria-colspan`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) 属性的字符串，该属性定义了表格、网格或树型网格中单元格或网格单元格所跨列数。
+  - : 反映 [`aria-colspan`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan) 属性的字符串，该属性定义了表格、网格或树型网格中单元格或网格单元格所跨列数。
 - {{domxref("Element.ariaCurrent")}}
-  - : 反映 [`aria-current`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-current) 属性的字符串，表示在一个容器或一组相关元素中代表当前项目的元素。
+  - : 反映 [`aria-current`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current) 属性的字符串，表示在一个容器或一组相关元素中代表当前项目的元素。
 - {{domxref("Element.ariaDescription")}}
-  - : 反映 [`aria-description`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-description) 属性的字符串，该属性定义了描述或注释当前元素的字符串值。
+  - : 反映 [`aria-description`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description) 属性的字符串，该属性定义了描述或注释当前元素的字符串值。
 - {{domxref("Element.ariaDisabled")}}
-  - : 反映 [`aria-disabled`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) 属性的字符串，表示该元素可感知但已禁用，因此不可编辑或以其他方式操作。
+  - : 反映 [`aria-disabled`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) 属性的字符串，表示该元素可感知但已禁用，因此不可编辑或以其他方式操作。
 - {{domxref("Element.ariaExpanded")}}
-  - : 反映 [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) 属性的字符串，表示该元素拥有或控制的分组元素是展开还是折叠状态。
+  - : 反映 [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) 属性的字符串，表示该元素拥有或控制的分组元素是展开还是折叠状态。
 - {{domxref("Element.ariaHasPopup")}}
-  - : 反映 [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) 属性的字符串，表示可由元素触发的交互式弹出元素（如菜单或对话框）的可用性和类型。
+  - : 反映 [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) 属性的字符串，表示可由元素触发的交互式弹出元素（如菜单或对话框）的可用性和类型。
 - {{domxref("Element.ariaHidden")}}
-  - : 反映 [`aria-hidden`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) 属性的字符串，表示元素是否暴露于无障碍 API。
+  - : 反映 [`aria-hidden`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) 属性的字符串，表示元素是否暴露于无障碍 API。
 - {{domxref("Element.ariaKeyShortcuts")}}
-  - : 反映 [`aria-keyshortcuts`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-keyshortcuts) 属性的字符串，表示作者为激活元素或将焦点赋予元素而实施的键盘快捷方式。
+  - : 反映 [`aria-keyshortcuts`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts) 属性的字符串，表示作者为激活元素或将焦点赋予元素而实施的键盘快捷方式。
 - {{domxref("Element.ariaLabel")}}
-  - : 反映 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性的字符串，该属性定义了标示当前元素的字符串值。
+  - : 反映 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性的字符串，该属性定义了标示当前元素的字符串值。
 - {{domxref("Element.ariaLevel")}}
-  - : 反映 [`aria-level`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-level) 属性的字符串，该属性定义了结构中元素的层次级别。
+  - : 反映 [`aria-level`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level) 属性的字符串，该属性定义了结构中元素的层次级别。
 - {{domxref("Element.ariaLive")}}
-  - : 反映 [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-live) 属性的字符串，表示元素将被更新，并描述了用户代理、辅助技术和用户可期望从实时区域获得的更新类型。
+  - : 反映 [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) 属性的字符串，表示元素将被更新，并描述了用户代理、辅助技术和用户可期望从实时区域获得的更新类型。
 - {{domxref("Element.ariaModal")}}
-  - : 反映 [`aria-modal`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-modal) 属性的字符串，表示元素在显示时是否为模态元素。
+  - : 反映 [`aria-modal`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal) 属性的字符串，表示元素在显示时是否为模态元素。
 - {{domxref("Element.ariaMultiline")}}
-  - : 反映 [`aria-multiline`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-multiline) 属性的字符串，表示文本框是接受多行输入还是只接受单行输入。
+  - : 反映 [`aria-multiline`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline) 属性的字符串，表示文本框是接受多行输入还是只接受单行输入。
 - {{domxref("Element.ariaMultiSelectable")}}
-  - : 反映 [`aria-multiselectable`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) 属性的字符串，表示用户可以从当前可选后代中选择多个项目。
+  - : 反映 [`aria-multiselectable`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable) 属性的字符串，表示用户可以从当前可选后代中选择多个项目。
 - {{domxref("Element.ariaOrientation")}}
-  - : 反映 [`aria-orientation`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) 属性的字符串，表示元素的方向是水平、垂直还是未知/模糊。
+  - : 反映 [`aria-orientation`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation) 属性的字符串，表示元素的方向是水平、垂直还是未知/模糊。
 - {{domxref("Element.ariaPlaceholder")}}
-  - : 反映 [`aria-placeholder`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder) 属性的字符串，它定义了一个简短的提示，目的是在控件无值时帮助用户输入数据。
+  - : 反映 [`aria-placeholder`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-placeholder) 属性的字符串，它定义了一个简短的提示，目的是在控件无值时帮助用户输入数据。
 - {{domxref("Element.ariaPosInSet")}}
-  - : 反映 [`aria-posinset`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) 属性的字符串，它定义了元素在当前列表项或树状项集合中的编号或位置。
+  - : 反映 [`aria-posinset`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) 属性的字符串，它定义了元素在当前列表项或树状项集合中的编号或位置。
 - {{domxref("Element.ariaPressed")}}
-  - : 反映 [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) 属性的字符串，表示切换按钮当前的“按下”状态。
+  - : 反映 [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed) 属性的字符串，表示切换按钮当前的“按下”状态。
 - {{domxref("Element.ariaReadOnly")}}
-  - : 反映 [`aria-readonly`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) 属性的字符串，表示该元素不可编辑，但在其他方面是可操作的。
+  - : 反映 [`aria-readonly`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly) 属性的字符串，表示该元素不可编辑，但在其他方面是可操作的。
 - {{domxref("Element.ariaRelevant")}} {{Non-standard_Inline}}
-  - : 反映 [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) 属性的字符串，表示当实时区域内的无障碍树被修改时，用户代理将触发哪些通知。该属性用于描述 `aria-live` 区域中哪些变化是相关的，应予以公布。
+  - : 反映 [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) 属性的字符串，表示当实时区域内的无障碍树被修改时，用户代理将触发哪些通知。该属性用于描述 `aria-live` 区域中哪些变化是相关的，应予以公布。
 - {{domxref("Element.ariaRequired")}}
-  - : [`aria-required`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-required) 属性的字符串，表示在提交表单前需要用户输入。
+  - : [`aria-required`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required) 属性的字符串，表示在提交表单前需要用户输入。
 - {{domxref("Element.ariaRoleDescription")}}
-  - : 反映 [`aria-roledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) 属性的字符串，它定义了一个元素的角色的人类可读、作者本地化描述。
+  - : 反映 [`aria-roledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription) 属性的字符串，它定义了一个元素的角色的人类可读、作者本地化描述。
 - {{domxref("Element.ariaRowCount")}}
-  - : 反映 [`aria-rowcount`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) 属性的字符串，该属性定义了表格、网格或树状网格中的总行数。
+  - : 反映 [`aria-rowcount`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount) 属性的字符串，该属性定义了表格、网格或树状网格中的总行数。
 - {{domxref("Element.ariaRowIndex")}}
-  - : 反映 [`aria-rowindex`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) 属性的字符串，它定义了元素的行索引或相对于表格、网格或树状网格中总行数的位置。
+  - : 反映 [`aria-rowindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex) 属性的字符串，它定义了元素的行索引或相对于表格、网格或树状网格中总行数的位置。
 - {{domxref("Element.ariaRowIndexText")}} {{experimental_inline}}
-  - : 反映 [`aria-rowindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext) 属性的字符串，它定义了 aria-rowindex 的人类可读文本替代。
+  - : 反映 [`aria-rowindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext) 属性的字符串，它定义了 aria-rowindex 的人类可读文本替代。
 - {{domxref("Element.ariaRowSpan")}}
-  - : 反映 [`aria-rowspan`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) 属性的字符串，该属性定义了表格、网格或树型网格中单元格或网格单元格所跨行数。
+  - : 反映 [`aria-rowspan`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan) 属性的字符串，该属性定义了表格、网格或树型网格中单元格或网格单元格所跨行数。
 - {{domxref("Element.ariaSelected")}}
-  - : 反映 [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 属性的字符串，表示具有选定状态的元素的当前“选定”状态。
+  - : 反映 [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) 属性的字符串，表示具有选定状态的元素的当前“选定”状态。
 - {{domxref("Element.ariaSetSize")}}
-  - : 反映 [`aria-setsize`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) 属性的字符串，该属性定义了当前列表项或树状项集合中的项数。
+  - : 反映 [`aria-setsize`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) 属性的字符串，该属性定义了当前列表项或树状项集合中的项数。
 - {{domxref("Element.ariaSort")}}
-  - : 反映 [`aria-sort`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-sort) 属性的字符串，表示表格或网格中的项目是按升序还是降序排序。
+  - : 反映 [`aria-sort`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) 属性的字符串，表示表格或网格中的项目是按升序还是降序排序。
 - {{domxref("Element.ariaValueMax")}}
-  - : 反映 [`aria-valueMax`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) 属性的字符串，该属性定义了范围部件允许的最大值。
+  - : 反映 [`aria-valueMax`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) 属性的字符串，该属性定义了范围部件允许的最大值。
 - {{domxref("Element.ariaValueMin")}}
-  - : 反映 [`aria-valueMin`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) 属性的字符串，该属性定义了范围部件的最小允许值。
+  - : 反映 [`aria-valueMin`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) 属性的字符串，该属性定义了范围部件的最小允许值。
 - {{domxref("Element.ariaValueNow")}}
-  - : 反映 [`aria-valueNow`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) 属性的字符串，该属性定义了范围部件的当前值。
+  - : 反映 [`aria-valueNow`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) 属性的字符串，该属性定义了范围部件的当前值。
 - {{domxref("Element.ariaValueText")}}
-  - : 反映 [`aria-valuetext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) 属性的字符串，该属性为范围部件定义了 aria-valuenow 的人类可读文本替代值。
+  - : 反映 [`aria-valuetext`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) 属性的字符串，该属性为范围部件定义了 aria-valuenow 的人类可读文本替代值。
 
 ## 实例方法
 

@@ -29,7 +29,7 @@ x >> y
 
 ## 描述
 
-`>>` 运算符针对这两种操作数的类型进行了重载：数值和 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)。对于数值，该运算符返回一个 32 位整数；对于 BigInt 类型，该运算符返回一个 BigInt。右移运算符首先[将两个操作数强制转换为数值](/zh-CN/docs/Web/JavaScript/Data_structures#强制数字类型转换)并测试它们的类型。如果两个操作数都转换成 BigInt，则执行 BigInt 右移；否则，它将两个操作数都转换为 [32 位整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#固定宽度数值转换)并执行数值右移。如果一个操作数变为 BigInt 而另一个变为数值，则会抛出 {{jsxref("TypeError")}}。
+`>>` 运算符针对这两种操作数的类型进行了重载：数值和 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)。对于数值，该运算符返回一个 32 位整数；对于 BigInt 类型，该运算符返回一个 BigInt。右移运算符首先[将两个操作数强制转换为数值](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#强制数字类型转换)并测试它们的类型。如果两个操作数都转换成 BigInt，则执行 BigInt 右移；否则，它将两个操作数都转换为 [32 位整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#固定宽度数值转换)并执行数值右移。如果一个操作数变为 BigInt 而另一个变为数值，则会抛出 {{jsxref("TypeError")}}。
 
 由于新的数字最左边位与之前数字的最左边位是相同值，故符号位（最左边的位）不会改变，因此被称为“符号位传播”（sign-propagating）。
 

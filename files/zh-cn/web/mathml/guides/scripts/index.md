@@ -1,7 +1,6 @@
 ---
 title: MathML 附加符号
 slug: Web/MathML/Guides/Scripts
-original_slug: Learn/MathML/First_steps/Scripts
 ---
 
 {{MathMLRef}}

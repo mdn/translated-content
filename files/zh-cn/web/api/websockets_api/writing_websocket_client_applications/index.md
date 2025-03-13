@@ -72,7 +72,7 @@ var exampleSocket = new WebSocket("ws://www.example.com/socketserver", [
 exampleSocket.send("Here's some text that the server is urgently awaiting!");
 ```
 
-你可以把数据作为字符串，{{ domxref("Blob") }}，或者[`ArrayBuffer`](/zh-CN/docs/JavaScript_typed_arrays/ArrayBuffer)来发送。
+你可以把数据作为字符串，{{ domxref("Blob") }}，或者[`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)来发送。
 
 因为连接的建立是异步的，而且容易失败，所以不能保证刚创建 WebSocket 对象时使用 `send()` 方法会成功。我们至少可以确定企图在链接建立起来之后立马发送数据，可以通过注册 `onopen` 事件处理器解决：
 
@@ -171,7 +171,7 @@ exampleSocket.onmessage = function (event) {
 };
 ```
 
-这里我们使用 [`JSON.parse()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/JSON/parse) 来将 JSON 转换回原始对象，然后检查并根据其内容做下一步动作。
+这里我们使用 [`JSON.parse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) 来将 JSON 转换回原始对象，然后检查并根据其内容做下一步动作。
 
 ### 文本数据的格式
 

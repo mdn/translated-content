@@ -1,7 +1,6 @@
 ---
 title: 标记信件
 slug: Learn_web_development/Core/Structuring_content/Marking_up_a_letter
-original_slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content")}}

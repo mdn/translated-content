@@ -7,7 +7,33 @@ slug: Web/CSS/text-underline-offset
 
 [CSS](/zh-CN/docs/Web/CSS) 的 **`text-underline-offset`** 属性设置文本装饰下划线（使用 {{cssxref("text-decoration")}} 应用）与其原始位置的偏移距离。
 
-{{EmbedInteractiveExample("pages/css/text-underline-offset.html")}}
+{{InteractiveExample("CSS Demo: text-underline-offset")}}
+
+```css interactive-example-choice
+text-underline-offset: auto;
+```
+
+```css interactive-example-choice
+text-underline-offset: 8px;
+```
+
+```css interactive-example-choice
+text-underline-offset: -0.5rem;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">And after all we are only ordinary</p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+  text-decoration-line: underline;
+  text-decoration-color: #ff0000;
+}
+```
 
 `text-underline-offset` 不是 {{cssxref('text-decoration')}} 简写的一部分。虽然元素可以有多条 `text-decoration` 线，但 `text-underline-offset` 只影响下划线，而**不**影响其他可能的线装饰选项，例如 `overline` 或 `line-through`。
 

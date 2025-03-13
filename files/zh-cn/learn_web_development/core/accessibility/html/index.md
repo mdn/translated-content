@@ -1,7 +1,6 @@
 ---
 title: HTML：无障碍的良好基础
 slug: Learn_web_development/Core/Accessibility/HTML
-original_slug: Learn/Accessibility/HTML
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}

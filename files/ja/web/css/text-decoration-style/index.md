@@ -9,7 +9,47 @@ l10n:
 
 **`text-decoration-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{ cssxref("text-decoration-line") }} で指定された線の種類を設定します。線の種類はすべての線に適用され `text-decoration-line` で定義された線ごとに異なる種類を定義する方法はありません。
 
-{{EmbedInteractiveExample("pages/css/text-decoration-style.html")}}
+{{InteractiveExample("CSS Demo: text-decoration-style")}}
+
+```css interactive-example-choice
+text-decoration-style: solid;
+```
+
+```css interactive-example-choice
+text-decoration-style: double;
+```
+
+```css interactive-example-choice
+text-decoration-style: dotted;
+```
+
+```css interactive-example-choice
+text-decoration-style: dashed;
+```
+
+```css interactive-example-choice
+text-decoration-style: wavy;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+
+#example-element {
+  text-decoration-line: underline;
+}
+```
 
 文字列を貫く線で文字列が削除されたことを示すように、指定された装飾が特定の意味を持つ場合は、 {{ HTMLElement("del") }} や {{ HTMLElement("s") }} といった HTML タグでその意味を示すことが推奨されます。ブラウザーはスタイルを無効にする場合がありますが、そのようなときでも意味論上の意味が失われません。
 

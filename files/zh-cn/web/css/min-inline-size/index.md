@@ -7,7 +7,44 @@ slug: Web/CSS/min-inline-size
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`min-inline-size`** 根据元素的书写模式定义了元素区块的横向或纵向最小尺寸。根据 {{CSSXref("writing-mode")}} 的值，此属性对应于 {{CSSXref("min-width")}} 或 {{CSSXref("min-height")}} 属性。
 
-{{EmbedInteractiveExample("pages/css/min-inline-size.html")}}
+{{InteractiveExample("CSS Demo: min-inline-size")}}
+
+```css interactive-example-choice
+min-inline-size: 200px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+min-inline-size: 200px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+min-inline-size: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+min-inline-size: 75%;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Change min-inline-size</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## 语法
 

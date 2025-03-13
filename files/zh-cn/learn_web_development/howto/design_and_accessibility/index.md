@@ -1,7 +1,6 @@
 ---
 title: 设计与无障碍
 slug: Learn_web_development/Howto/Design_and_accessibility
-original_slug: Learn/Common_questions/Design_and_accessibility
 ---
 
 {{LearnSidebar}}
