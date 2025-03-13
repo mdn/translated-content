@@ -9,7 +9,7 @@ l10n:
 
 请求授予给定 {{WebExtAPIRef("permissions.Permissions")}} 对象中列出的权限。
 
-`Permissions` 参数可以包含一个一系列[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)数组的 `origins` 属性；或者可以包含一个一系列 [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)数组的 `permissions` 属性；又或者同时包含两个属性。
+`Permissions` 参数可以包含 `origins` 属性（[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)数组），或者可以包含 `permissions` 属性（[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)数组），又或者同时包含两个属性。
 
 这些要请求授予的权限必须来自在 [`optional_permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest.json 键中定义的权限集合中。`origins` 属性可以包含与可选权限匹配的主机的子集的权限：例如，如果可选权限包括 `*://mozilla.org/`，则 `permissions.origins` 可以包括 `https://developer.mozilla.org/`。
 
@@ -17,7 +17,7 @@ l10n:
 
 该请求只可以在[用户操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_actions)的处理器中进行。除非所有请求的权限都是静默授予的权限，浏览器会询问用户是否授予请求的权限。对于所有请求的权限，浏览器只会询问用户一次：要么授予所有权限，要么不授予任何权限。
 
-扩展将一直持有授予的所有权限，即使在升级和禁用/启用循环中也是如此。
+扩展将一直持有授予的所有权限，即使经过升级或来回禁用/启用后仍然还被授予这些权限。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -76,4 +76,4 @@ document
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.permissions`](https://developer.chrome.google.cn/docs/extensions/reference/api/permissions) API。
+> 此 API 基于 Chromium 的 [`chrome.permissions`](https://developer.chrome.google.cn/docs/extensions/reference/api/permissions) API。
