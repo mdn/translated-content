@@ -2,14 +2,14 @@
 title: 407 Proxy Authentication Required
 slug: Web/HTTP/Status/407
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`407 Proxy Authentication Required`** 用戶端錯誤狀態回應碼表示請求未被應用，因為它缺少對於位於瀏覽器與可訪問所請求資源的伺服器之間的{{Glossary("proxy server", "代理伺服器")}}的有效認證憑證。
+HTTP **`407 Proxy Authentication Required`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示請求不成功，因為網站缺少對於位於用戶端與可訪問所請求資源的伺服器之間的{{Glossary("proxy server", "代理伺服器")}}的有效認證憑證。
 
-此狀態隨著一個含有如何正確授權的 {{HTTPHeader("Proxy-Authenticate")}} 標頭一同發送。
+此回應隨著一個含有如何正確認證的 {{HTTPHeader("Proxy-Authenticate")}} 請求標頭一同發送。用戶端可以重新發送請求，並帶上一個新的或更換過的 {{HTTPHeader("Proxy-Authorization")}} 標頭欄位。
 
 ## 狀態
 
@@ -18,6 +18,17 @@ HTTP **`407 Proxy Authentication Required`** 用戶端錯誤狀態回應碼表�
 ```
 
 ## 範例
+
+### 代理驗證
+
+向 `example.com/admin` 發出一個 GET 請求：
+
+```http
+GET /admin HTTP/1.1
+Host: example.com
+```
+
+在傳輸過程中，一個中介者通知用戶端必須進行身份驗證，並提供有關驗證方案的資訊：
 
 ```http
 HTTP/1.1 407 Proxy Authentication Required
@@ -29,12 +40,9 @@ Proxy-Authenticate: Basic realm="Access to internal site"
 
 {{Specifications}}
 
-## 瀏覽器相容性
-
-{{Compat}}
-
 ## 參見
 
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
 - [HTTP 認證](/zh-TW/docs/Web/HTTP/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Authorization")}}

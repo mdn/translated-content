@@ -7,7 +7,55 @@ slug: Web/CSS/gap
 
 Свойство **`gap`** [CSS](/ru/docs/Web/CSS) задаёт {{glossary("gutters","отступы")}} между колонками и рядами. Является [сокращением](/ru/docs/Web/CSS/Shorthand_properties) для свойств {{CSSxRef("row-gap")}} и {{CSSxRef("column-gap")}}.
 
-{{EmbedInteractiveExample("pages/css/gap.html")}}
+{{InteractiveExample("CSS Demo: gap")}}
+
+```css interactive-example-choice
+gap: 0;
+```
+
+```css interactive-example-choice
+gap: 10%;
+```
+
+```css interactive-example-choice
+gap: 1em;
+```
+
+```css interactive-example-choice
+gap: 10px 20px;
+```
+
+```css interactive-example-choice
+gap: calc(20px + 10%);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 200px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 Обратите внимание, что `grid-gap` является псевдонимом для этого свойства.
 

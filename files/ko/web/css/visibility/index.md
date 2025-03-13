@@ -7,7 +7,51 @@ slug: Web/CSS/visibility
 
 **`visibility`** CSS 속성은 문서의 레이아웃을 변경하지 않고 요소를 보이거나 숨깁니다. `visibility`로 {{htmlelement("table")}}의 행이나 열을 숨길 수도 있습니다.
 
-{{EmbedInteractiveExample("pages/css/visibility.html")}}
+{{InteractiveExample("CSS Demo: visibility")}}
+
+```css interactive-example-choice
+visibility: visible;
+```
+
+```css interactive-example-choice
+visibility: hidden;
+```
+
+```css interactive-example-choice
+visibility: collapse;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">Hide me</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  padding: 0.75em;
+  width: 80%;
+  max-height: 300px;
+  display: flex;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex: 1;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 문서를 숨기고, **레이아웃에서도 제외**하려면, `visibility`를 사용하는 대신 {{cssxref("display")}} 속성을 `none`으로 설정하세요.
 

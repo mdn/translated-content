@@ -7,7 +7,30 @@ slug: Web/CSS/min
 
 **`min()`** は [CSS](/ja/docs/Web/CSS) 関数で、 CSS プロパティの値としてカンマで区切られた式のリストから最小の (最も負である) 値を設定できます。 `min()` 関数は {{CSSxRef("&lt;length&gt;")}}、{{CSSxRef("&lt;frequency&gt;")}},、{{CSSxRef("&lt;angle&gt;")}}、{{CSSxRef("&lt;time&gt;")}}、{{CSSxRef("&lt;percentage&gt;")}}、{{CSSxRef("&lt;number&gt;")}}、{{CSSxRef("&lt;integer&gt;")}} が利用できるところならばどこでも使用することができます。
 
-{{EmbedInteractiveExample("pages/css/function-min.html")}}
+{{InteractiveExample("CSS Demo: min()")}}
+
+```css interactive-example-choice
+width: min(50vw, 200px);
+```
+
+```css interactive-example-choice
+width: min(100vw, 4000px);
+```
+
+```css interactive-example-choice
+width: min(150vw, 100px);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <img
+      alt="Firefox logo"
+      class="logo"
+      src="/shared-assets/images/examples/firefox-logo.svg" />
+  </div>
+</section>
+```
 
 上の例では、幅は最大 80px ですが、ビューポートの幅が 800px 未満または em の幅が 20px 未満の場合は狭くなります。言い換えれば、最大幅は 80px です。 `min()` の値はプロパティが取りうる*最大の*値を提供するものとして考えてください。
 

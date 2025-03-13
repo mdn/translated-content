@@ -9,7 +9,44 @@ l10n:
 
 [CSS-свойство](/ru/docs/Web/CSS) **`outline-style`** задаёт стиль обводки элемента. Обводка — линия вокруг элемента за пределами рамки ({{cssxref("border")}}).
 
-{{EmbedInteractiveExample("pages/css/outline-style.html")}}
+{{InteractiveExample("CSS Demo: outline-style")}}
+
+```css interactive-example-choice
+outline-style: none;
+```
+
+```css interactive-example-choice
+outline-style: dotted;
+```
+
+```css interactive-example-choice
+outline-style: solid;
+```
+
+```css interactive-example-choice
+outline-style: groove;
+```
+
+```css interactive-example-choice
+outline-style: inset;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  outline: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 При определении внешнего вида обводки зачастую удобнее всего воспользоваться сокращённым свойством {{cssxref("outline")}}.
 

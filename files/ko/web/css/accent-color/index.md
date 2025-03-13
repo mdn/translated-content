@@ -9,7 +9,49 @@ l10n:
 
 **`accent-color`** [CSS](/ko/docs/Web/CSS) 속성은 일부 요소에 의하여 생성된 사용자 인터페이스 컨트롤의 {{Glossary("accent", "강조")}} 색상을 설정합니다.
 
-{{EmbedInteractiveExample("pages/css/accent-color.html")}}
+{{InteractiveExample("CSS Demo: accent-color")}}
+
+```css interactive-example-choice
+accent-color: red;
+```
+
+```css interactive-example-choice
+accent-color: #74992e;
+```
+
+```css interactive-example-choice
+accent-color: rgb(255, 255, 128);
+```
+
+```css interactive-example-choice
+accent-color: hsl(250, 100%, 34%);
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <div>
+    <input checked="" id="example-element" type="checkbox" />
+    <label for="example-element" id="example-label">Example Label</label>
+  </div>
+</section>
+```
+
+```css interactive-example
+.container > div {
+  display: flex;
+  align-items: center;
+}
+
+#example-element {
+  width: 40px;
+  height: 40px;
+}
+
+#example-label {
+  margin-left: 10px;
+  font-size: x-large;
+}
+```
 
 현재 `accent-color` 를 지원하는 브라우저에서는 다음 HTML 요소들에 이를 적용합니다.
 

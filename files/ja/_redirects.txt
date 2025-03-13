@@ -3863,7 +3863,11 @@
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-busy	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy
+/ja/docs/Web/Accessibility/ARIA/Attributes/aria-checked	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked
+/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colcount	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-colindex	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex
+/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext
+/ja/docs/Web/Accessibility/ARIA/Attributes/aria-controls	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-disabled	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled
 /ja/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage	/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage
