@@ -7,7 +7,34 @@ slug: Web/CSS/appearance
 
 **`appearance`** CSS 属性用于控制 UI 控件的基于操作系统主题的原生外观。
 
-{{EmbedInteractiveExample("pages/css/appearance.html")}}
+{{InteractiveExample("CSS Demo: appearance")}}
+
+```css interactive-example-choice
+appearance: none;
+```
+
+```css interactive-example-choice
+appearance: auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="background">
+    <button id="example-element">button</button>
+  </div>
+</section>
+```
+
+```css interactive-example
+.background {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+}
+```
 
 在标准化之前，这个属性允许将简单的元素显示为控件，例如按钮或复选框。这被认为是一个缺陷，现在鼓励开发者仅使用标准关键字。
 

@@ -9,7 +9,57 @@ l10n:
 
 **`transition`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{ cssxref("transition-property") }}、 {{ cssxref("transition-duration") }}、 {{ cssxref("transition-timing-function") }}、 {{ cssxref("transition-delay") }}、 {{ cssxref("transition-behavior") }} の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)です。
 
-{{EmbedInteractiveExample("pages/css/transition.html")}}
+{{InteractiveExample("CSS Demo: transition")}}
+
+```css interactive-example-choice
+transition: margin-right 2s;
+```
+
+```css interactive-example-choice
+transition: margin-right 2s 0.5s;
+```
+
+```css interactive-example-choice
+transition: margin-right 2s ease-in-out;
+```
+
+```css interactive-example-choice
+transition: margin-right 2s ease-in-out 0.5s;
+```
+
+```css interactive-example-choice
+transition:
+  margin-right 2s,
+  color 1s;
+```
+
+```css interactive-example-choice
+transition: all 1s ease-out;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">Hover to see<br />the transition.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #e4f0f5;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 1em monospace;
+  width: 100%;
+  transition: margin-right 2s;
+}
+
+#default-example:hover > #example-element {
+  background-color: #909;
+  color: #fff;
+  margin-right: 40%;
+}
+```
 
 トランジション (transition) は、要素の 2 つの状態間の変化を定義するためのものです。それぞれの状態は {{cssxref(":hover")}} や {{cssxref(":active")}} のような[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で定義されたり、 JavaScript を使用して動的に設定されたりします。
 

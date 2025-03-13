@@ -9,7 +9,41 @@ slug: Web/CSS/object-position
 
 你还可以使用 {{cssxref("object-fit")}} 属性来改变可替换元素的对象的内在的大小（即它看上去的大小）的调整方式，借助拉伸与缩放等使对象更好地适应元素的内容框。
 
-{{EmbedInteractiveExample("pages/css/object-position.html")}}
+{{InteractiveExample("CSS Demo: object-position")}}
+
+```css interactive-example-choice
+object-position: 50% 50%;
+```
+
+```css interactive-example-choice
+object-position: right top;
+```
+
+```css interactive-example-choice
+object-position: left bottom;
+```
+
+```css interactive-example-choice
+object-position: 250px 125px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/moon.jpg" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 250px;
+  width: 250px;
+  object-fit: none;
+  border: 1px solid red;
+}
+```
 
 ## 语法
 

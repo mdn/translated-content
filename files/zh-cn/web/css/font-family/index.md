@@ -7,7 +7,49 @@ slug: Web/CSS/font-family
 
 CSS 属性 `font-family` 允许你通过给定一个有先后顺序的，由字体名或者字体族名组成的列表来为选定的元素设置字体。
 
-{{EmbedInteractiveExample("pages/css/font-family.html")}}
+{{InteractiveExample("CSS Demo: font-family")}}
+
+```css interactive-example-choice
+font-family: Georgia, serif;
+```
+
+```css interactive-example-choice
+font-family: "Gill Sans", sans-serif;
+```
+
+```css interactive-example-choice
+font-family: sans-serif;
+```
+
+```css interactive-example-choice
+font-family: serif;
+```
+
+```css interactive-example-choice
+font-family: cursive;
+```
+
+```css interactive-example-choice
+font-family: system-ui;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+section {
+  font-size: 1.2em;
+}
+```
 
 属性值用逗号隔开。浏览器会选择列表中第一个该计算机上有安装的字体，或者是通过 {{cssxref("@font-face")}} 指定的可以直接下载的字体。
 

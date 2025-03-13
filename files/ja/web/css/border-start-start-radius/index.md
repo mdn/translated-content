@@ -23,7 +23,47 @@ border-start-start-radius: revert;
 border-start-start-radius: unset;
 ```
 
-{{EmbedInteractiveExample("pages/css/border-start-start-radius.html")}}
+{{InteractiveExample("CSS Demo: border-start-start-radius")}}
+
+```css interactive-example-choice
+border-start-start-radius: 80px 80px;
+```
+
+```css interactive-example-choice
+border-start-start-radius: 250px 100px;
+direction: rtl;
+```
+
+```css interactive-example-choice
+border-start-start-radius: 50%;
+writing-mode: vertical-lr;
+```
+
+```css interactive-example-choice
+border-start-start-radius: 50%;
+writing-mode: vertical-rl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a top left rounded corner.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  color: white;
+  padding: 10px;
+}
+```
 
 このプロパティは、要素の block-start と inline-start の間の角に影響します。すなわち、書字方向が `horizontal-tb` で `ltr` の方向であれば、 {{CSSxRef("border-top-left-radius")}} プロパティに対応します。
 
