@@ -104,7 +104,7 @@ label {
 需要注意的是：显示的日期和时间的格式与实际 `value` 中的格式不同，显示的日期和时间格式以用户操作系统所的区域设置信息为准，而控件的日期/时间值 `value` 总是 `yyyy-MM-ddThh:mm` 格式。例如，当上例中的值被提供到服务器之后，将会像这样 `partydate=2017-06-01T08:30`。
 
 > [!NOTE]
-> 另外请注意，如果这样的数据以 HTTP [`GET`](/zh-CN/docs/Web/HTTP/Methods/GET) 提交，时间部分的冒号需要编码之后才能放在 URL 参数中，例如 `partydate=2017-06-01T08%3A30`。编码方法请参见 {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}。
+> 另外请注意，如果这样的数据以 HTTP [`GET`](/zh-CN/docs/Web/HTTP/Reference/Methods/GET) 提交，时间部分的冒号需要编码之后才能放在 URL 参数中，例如 `partydate=2017-06-01T08%3A30`。编码方法请参见 {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}。
 
 你也可以在 JavaScript 中使用 {{domxref("HTMLInputElement")}} 的 `value` 属性来获取和设置日期的值，例如：
 

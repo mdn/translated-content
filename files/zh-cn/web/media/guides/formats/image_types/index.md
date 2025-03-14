@@ -1028,7 +1028,7 @@ SVG 文件是包含源代码的文本文件，解释后可绘制所需的图像�
     <tr>
       <th scope="row">压缩</th>
       <td>
-        SVG 源可以在传输过程中使用 <a href="/zh-CN/docs/Web/HTTP/Compression">HTTP 压缩技术</a>进行压缩，也可以在磁盘上以 <code>.svgz</code> 文件的形式进行压缩。
+        SVG 源可以在传输过程中使用 <a href="/zh-CN/docs/Web/HTTP/Guides/Compression">HTTP 压缩技术</a>进行压缩，也可以在磁盘上以 <code>.svgz</code> 文件的形式进行压缩。
       </td>
     </tr>
     <tr>

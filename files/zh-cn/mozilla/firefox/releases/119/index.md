@@ -32,7 +32,7 @@ l10n:
 
 ### HTTP
 
-- HTTP 响应标头 {{HTTPHeader("Cross-Origin-Embedder-Policy")}} 的 [`credentialless`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy#credentialless) 指令现已在桌面平台（以及除安卓以外的移动平台）上得到支持，其允许在未明确选择的跨源服务器上进行 `no-cors` 资源请求，尽管没有 cookie 或其他凭据（[Firefox bug 1851467](https://bugzil.la/1851467)）。
+- HTTP 响应标头 {{HTTPHeader("Cross-Origin-Embedder-Policy")}} 的 [`credentialless`](/zh-CN/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy#credentialless) 指令现已在桌面平台（以及除安卓以外的移动平台）上得到支持，其允许在未明确选择的跨源服务器上进行 `no-cors` 资源请求，尽管没有 cookie 或其他凭据（[Firefox bug 1851467](https://bugzil.la/1851467)）。
 
 ### API
 

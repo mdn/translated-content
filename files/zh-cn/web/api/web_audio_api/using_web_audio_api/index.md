@@ -58,7 +58,7 @@ const audioContext = new AudioContext();
 ```
 
 > [!NOTE]
-> 如果你要加载的声音文件保留在其他域中，则需要使用 `crossorigin` 属性；查看 [Cross Origin Resource Sharing (CORS)](/zh-CN/docs/Web/HTTP/CORS) 取得更多信息。
+> 如果你要加载的声音文件保留在其他域中，则需要使用 `crossorigin` 属性；查看 [Cross Origin Resource Sharing (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS) 取得更多信息。
 
 为了使用 Web Audio API 的优秀特性，我们需要从该元素中获取源并将其传入我们创建的上下文中。幸运的是，有一个方法可以让我们做到这一点 — {{domxref("AudioContext.createMediaElementSource")}}:
 

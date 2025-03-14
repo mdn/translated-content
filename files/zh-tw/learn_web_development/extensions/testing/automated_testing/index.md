@@ -1,7 +1,6 @@
 ---
 title: 自動化測試介紹
 slug: Learn_web_development/Extensions/Testing/Automated_testing
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing/Your_own_automation_environment", "Learn_web_development/Extensions/Testing")}}

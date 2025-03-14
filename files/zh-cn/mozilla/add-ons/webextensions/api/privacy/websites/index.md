@@ -43,7 +43,7 @@ l10n:
 - `protectedContentEnabled`
   - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。仅在 Windows 中可用。若为 `true`，则浏览器将为插件提供一个唯一的 ID 以运行受保护的内容。
 - `referrersEnabled`
-  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若启用，浏览器将在你的请求中附送 [referer](/zh-CN/docs/Web/HTTP/Headers/Referer) 标头。
+  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若启用，浏览器将在你的请求中附送 [referer](/zh-CN/docs/Web/HTTP/Reference/Headers/Referer) 标头。
 - `resistFingerprinting`
 
   - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。

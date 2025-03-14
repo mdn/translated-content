@@ -78,7 +78,7 @@ slug: Web/HTML/Element/button
 
 - `formmethod`
 
-  - : 如果按鈕是提交按鈕（它在 `<form>` 內部且沒有 `type="button"`），則此屬性指定用於提交表單的 [HTTP 方法](/zh-TW/docs/Web/HTTP/Methods)。可能的值有：
+  - : 如果按鈕是提交按鈕（它在 `<form>` 內部且沒有 `type="button"`），則此屬性指定用於提交表單的 [HTTP 方法](/zh-TW/docs/Web/HTTP/Reference/Methods)。可能的值有：
 
     - `post`：當將數據提交到服務器時，表單的數據將包含在 HTTP 請求的主體中。在表單包含不應該是公開的信息（例如登錄憑證）時使用。
     - `get`：將表單數據附加到表單的 `action` URL 中，使用 `?` 作為分隔符，並將生成的 URL 發送到服務器。當表單[沒有副作用](/zh-TW/docs/Glossary/Idempotent)時使用，例如搜索表單。

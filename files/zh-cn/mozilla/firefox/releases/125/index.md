@@ -88,7 +88,7 @@ l10n:
 
 ## 为附加组件开发者带来的变化
 
-- {{WebExtAPIRef("proxy.ProxyInfo")}} 的 `proxyAuthorization` 属性的内容现在会作为 [CONNECT](/zh-CN/docs/Web/HTTP/Methods/CONNECT) 请求的 {{httpheader("Proxy-Authorization")}} 请求标头的值传递给 HTTP 代理（除了现有的对 HTTPS 代理的支持）（[Firefox bug 1794464](https://bugzil.la/1794464)）。
+- {{WebExtAPIRef("proxy.ProxyInfo")}} 的 `proxyAuthorization` 属性的内容现在会作为 [CONNECT](/zh-CN/docs/Web/HTTP/Reference/Methods/CONNECT) 请求的 {{httpheader("Proxy-Authorization")}} 请求标头的值传递给 HTTP 代理（除了现有的对 HTTPS 代理的支持）（[Firefox bug 1794464](https://bugzil.la/1794464)）。
 
 ## 实验性 Web 特性
 

@@ -88,10 +88,10 @@ Supports-Loading-Mode: fenced-frame
 
 围栏框架对 HTTP 标头字段的其他影响如下：
 
-- [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#用户代理客户端提示)在围栏框架中不可用，因为它们依赖于[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)委托，这可能会被用来泄露数据。
-- 对从封闭框架内部打开的新浏览上下文强制执行严格的 [`Cross-Origin-Opener-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) 设置，否则它们可能会被用来向其他源泄露信息。从围栏框架内部打开的任何新窗口都将设置 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Attributes/rel/noopener) 和`Cross-Origin-Opener-Policy: same-origin`，以确保 {{domxref("Window.opener")}} 返回 `null` 并将其置于自己的浏览上下文组中。
-- 添加 [`Content-Security-Policy: fenced-frame-src`](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/fenced-frame-src) 来指定加载到 `<fencedframe>` 元素中的嵌套浏览上下文的有效来源。
-- 为了缓解隐私问题，[`Content-Security-Policy: sandbox`](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox) 自定义设置不能被围栏框架继承。要加载围栏框架，需要指定无 `sandbox` CSP（这意味着以下值），或者指定以下沙箱值：
+- [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#用户代理客户端提示)在围栏框架中不可用，因为它们依赖于[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)委托，这可能会被用来泄露数据。
+- 对从封闭框架内部打开的新浏览上下文强制执行严格的 [`Cross-Origin-Opener-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy) 设置，否则它们可能会被用来向其他源泄露信息。从围栏框架内部打开的任何新窗口都将设置 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Attributes/rel/noopener) 和`Cross-Origin-Opener-Policy: same-origin`，以确保 {{domxref("Window.opener")}} 返回 `null` 并将其置于自己的浏览上下文组中。
+- 添加 [`Content-Security-Policy: fenced-frame-src`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/fenced-frame-src) 来指定加载到 `<fencedframe>` 元素中的嵌套浏览上下文的有效来源。
+- 为了缓解隐私问题，[`Content-Security-Policy: sandbox`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox) 自定义设置不能被围栏框架继承。要加载围栏框架，需要指定无 `sandbox` CSP（这意味着以下值），或者指定以下沙箱值：
   - `allow-same-origin`
   - `allow-forms`
   - `allow-scripts`

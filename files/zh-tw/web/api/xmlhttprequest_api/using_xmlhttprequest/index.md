@@ -5,7 +5,7 @@ slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 
 {{DefaultAPISidebar("XMLHttpRequest API")}}
 
-要送出一個 HTTP 請求，需要建立一個 {{domxref("XMLHttpRequest")}} 物件、開啟一個 URL，並發起一個請求。在交易（transaction）完成後，`XMLHttpRequest` 物件將會包含如回應內容（response body）及 [HTTP 狀態](/zh-TW/docs/Web/HTTP/Status)等等請求結果中的有用資訊。本頁概述了一些常見的、甚至略為難理解的 `XMLHttpRequest` 物件使用案例。
+要送出一個 HTTP 請求，需要建立一個 {{domxref("XMLHttpRequest")}} 物件、開啟一個 URL，並發起一個請求。在交易（transaction）完成後，`XMLHttpRequest` 物件將會包含如回應內容（response body）及 [HTTP 狀態](/zh-TW/docs/Web/HTTP/Reference/Status)等等請求結果中的有用資訊。本頁概述了一些常見的、甚至略為難理解的 `XMLHttpRequest` 物件使用案例。
 
 ```js
 function reqListener() {
@@ -842,7 +842,7 @@ ifHasChanged("yourpage.html", function (nModif, nVisit) {
 
 ## 跨網域 XMLHttpRequest
 
-現代瀏覽器支援跨網域（cross-site）請求並實作了網路應用程式工作小組（Web Applications (WebApps) Working Group）提出的[跨網域請求存取控制](/zh-TW/docs/Web/HTTP/CORS)標準。只要伺服器被設定為允許來自你的網路應用程式來源（origin）網域之請求，`XMLHttpRequest` 便能正常運作。否則，將會拋出一個 `INVALID_ACCESS_ERR` 例外。
+現代瀏覽器支援跨網域（cross-site）請求並實作了網路應用程式工作小組（Web Applications (WebApps) Working Group）提出的[跨網域請求存取控制](/zh-TW/docs/Web/HTTP/Guides/CORS)標準。只要伺服器被設定為允許來自你的網路應用程式來源（origin）網域之請求，`XMLHttpRequest` 便能正常運作。否則，將會拋出一個 `INVALID_ACCESS_ERR` 例外。
 
 ## 避開快取
 
@@ -895,7 +895,7 @@ var oReq = new XMLHttpRequest();
 ## 參見
 
 - [XMLHttpRequest 中的 HTML](/zh-TW/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
-- [HTTP 存取控制](/zh-TW/docs/Web/HTTP/CORS)
+- [HTTP 存取控制](/zh-TW/docs/Web/HTTP/Guides/CORS)
 - [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
 - ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
 - [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)
