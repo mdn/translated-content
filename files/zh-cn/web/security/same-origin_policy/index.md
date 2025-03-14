@@ -54,7 +54,7 @@ document.domain = "company.com";
 
 端口号是由浏览器另行检查的。任何对 `document.domain` 的赋值操作，包括 `document.domain = document.domain` 都会导致端口号被覆盖为 `null` 。因此 `company.com:8080` **不能**仅通过设置 `document.domain = "company.com"` 来与 `company.com` 通信。必须在它们双方中都进行赋值，以确保端口号都为 `null` 。
 
-该机制有一些局限性。如果启用了 [`document-domain`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/document-domain) [`Permissions-Policy`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy)，或该文档在沙箱 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe) 下，它将抛出一个“`SecurityError`” [`DOMException`](/zh-CN/docs/Web/API/DOMException)，并且用这种方法改变源并不影响 Web API 使用的源检查（例如 [`localStorage`](/zh-CN/docs/Web/API/Window/localStorage)、[`indexedDB`](/zh-CN/docs/Web/API/IndexedDB_API)、[`BroadcastChannel`](/zh-CN/docs/Web/API/BroadcastChannel)、[`SharedWorker`](/zh-CN/docs/Web/API/SharedWorker)）。更详尽的失败案例列表可以在 [Document.domain 的错误章节](/zh-CN/docs/Web/API/Document/domain#异常)找到。
+该机制有一些局限性。如果启用了 [`document-domain`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/document-domain) [`Permissions-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy)，或该文档在沙箱 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe) 下，它将抛出一个“`SecurityError`” [`DOMException`](/zh-CN/docs/Web/API/DOMException)，并且用这种方法改变源并不影响 Web API 使用的源检查（例如 [`localStorage`](/zh-CN/docs/Web/API/Window/localStorage)、[`indexedDB`](/zh-CN/docs/Web/API/IndexedDB_API)、[`BroadcastChannel`](/zh-CN/docs/Web/API/BroadcastChannel)、[`SharedWorker`](/zh-CN/docs/Web/API/SharedWorker)）。更详尽的失败案例列表可以在 [Document.domain 的错误章节](/zh-CN/docs/Web/API/Document/domain#异常)找到。
 
 > [!NOTE]
 > 使用 `document.domain` 来允许子域安全访问其父域时，需要在父域和子域中设置 `document.domain` 为*相同*的值。这是必要的，即使这样做只是将父域设置回其原始值。不这样做可能会导致权限错误。
@@ -63,7 +63,7 @@ document.domain = "company.com";
 
 同源策略控制不同源之间的交互，例如在使用 {{domxref("XMLHttpRequest")}} 或 {{htmlelement("img")}} 标签时则会受到同源策略的约束。这些交互通常分为三类：
 
-- 跨源**写操作**（Cross-origin writes）一般是被允许的。例如链接、重定向以及表单提交。特定少数的 HTTP 请求需要添加[预检请求](/zh-CN/docs/Web/HTTP/CORS#预检请求)。
+- 跨源**写操作**（Cross-origin writes）一般是被允许的。例如链接、重定向以及表单提交。特定少数的 HTTP 请求需要添加[预检请求](/zh-CN/docs/Web/HTTP/Guides/CORS#预检请求)。
 - 跨源**资源嵌入**（Cross-origin embedding）一般是被允许的（后面会举例说明）。
 - 跨源**读操作**（Cross-origin reads）一般是不被允许的，但常可以通过内嵌资源来巧妙的进行读取访问。例如，你可以读取嵌入图片的高度和宽度，调用内嵌脚本的方法，或[得知内嵌资源的可用性](https://bugzil.la/629094)。
 
@@ -79,7 +79,7 @@ document.domain = "company.com";
 
 ### 如何允许跨源访问
 
-可以使用 [CORS](/zh-CN/docs/Web/HTTP/CORS) 来允许跨源访问。CORS 是 {{Glossary("HTTP")}} 的一部分，它允许服务端来指定哪些主机可以从这个服务端加载资源。
+可以使用 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) 来允许跨源访问。CORS 是 {{Glossary("HTTP")}} 的一部分，它允许服务端来指定哪些主机可以从这个服务端加载资源。
 
 ### 如何阻止跨源访问
 

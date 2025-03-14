@@ -19,7 +19,7 @@ l10n:
 <link rel="preconnect" href="https://example.com" />
 ```
 
-你也可以将预连接作为 HTTP [Link](/zh-CN/docs/Web/HTTP/Headers/Link) 标头来实现：
+你也可以将预连接作为 HTTP [Link](/zh-CN/docs/Web/HTTP/Reference/Headers/Link) 标头来实现：
 
 ```http
 Link: <https://example.com>; rel="preconnect"

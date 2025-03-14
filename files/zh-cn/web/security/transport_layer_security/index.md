@@ -98,4 +98,4 @@ TLS 1.3 中取消了重新协商功能，这可能会影响到一些依赖使用
 - Mozilla 运营安全（OpSec）团队维护了一个带有[参考的 TLS 配置](https://wiki.mozilla.org/Security/Server_Side_TLS)的 wiki 页面。
 - [Mozilla Observatory](https://observatory.mozilla.org/)、[SSL Labs](https://www.ssllabs.com/ssltest/) 以及 [Cipherscan](https://github.com/mozilla/cipherscan) 可以帮助你测试站点以了解其 TLS 配置的安全性。
 - [安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)
-- [Strict-Transport-Security](/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security) HTTP 标头
+- [Strict-Transport-Security](/zh-CN/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) HTTP 标头

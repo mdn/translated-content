@@ -13,5 +13,5 @@ l10n:
 
 - 维基百科上的[数学标记语言](https://zh.wikipedia.org/wiki/数学置标语言)
 - [MathML](/zh-CN/docs/Web/MathML)
-- [编写 MathML](/zh-CN/docs/Web/MathML/Authoring)
+- [编写 MathML](/zh-CN/docs/Web/MathML/Guides/Authoring)
 - [什么是 MathML](https://www.w3.org/Math/whatIsMathML.html)

@@ -31,7 +31,7 @@ getBattery()
 ### 异常
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : 对该特性的使用被[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止。
+  - : 对该特性的使用被[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)阻止。
 - `SecurityError`
   - : 用户代理不会向不安全上下文暴露电池信息，而此方法在不安全的上下文中被调用了。
 
