@@ -1,10 +1,7 @@
 ---
 title: MathML 附加符号
 slug: Web/MathML/Tutorials/For_beginners/Scripts
-original_slug: Web/MathML/Guides/Scripts
 ---
-
-{{MathMLRef}}
 
 {{PreviousMenuNext("Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
 

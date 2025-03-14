@@ -1,12 +1,9 @@
 ---
 title: 证明勾股定理
 slug: Web/MathML/Guides/Proving_the_Pythagorean_theorem
-original_slug: Web/MathML/Examples/MathML_Pythagorean_Theorem
 l10n:
   sourceCommit: 8eece0b998c23e8ea35f936d7371a169974130f5
 ---
-
-{{MathMLRef}}
 
 现在我们将证明[勾股定理](https://zh.wikipedia.org/wiki/勾股定理)：
 

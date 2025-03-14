@@ -1,12 +1,9 @@
 ---
 title: <msub>
 slug: Web/MathML/Reference/Element/msub
-original_slug: Web/MathML/Element/msub
 l10n:
   sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
 ---
-
-{{MathMLRef}}
 
 **`<msub>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于为表达式附加下标。
 

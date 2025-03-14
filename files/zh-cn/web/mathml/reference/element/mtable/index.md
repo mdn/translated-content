@@ -1,12 +1,9 @@
 ---
 title: <mtable>
 slug: Web/MathML/Reference/Element/mtable
-original_slug: Web/MathML/Element/mtable
 l10n:
   sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
 ---
-
-{{MathMLRef}}
 
 **`<mtable>`** [MathML](/zh-CN/docs/Web/MathML) 元素允许你创建表格或矩阵。其子元素是 {{MathMLElement("mtr")}} 元素（表示行），每个子元素都有 {{MathMLElement("mtd")}} 元素作为其子元素（表示单元格）。这些元素类似于 [HTML](/zh-CN/docs/Web/HTML) 中的 {{HTMLElement("table")}}、{{HTMLElement("tr")}} 和 {{HTMLElement("td")}}元素。
 

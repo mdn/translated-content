@@ -1,12 +1,9 @@
 ---
 title: <mn>
 slug: Web/MathML/Reference/Element/mn
-original_slug: Web/MathML/Element/mn
 l10n:
   sourceCommit: 8eece0b998c23e8ea35f936d7371a169974130f5
 ---
-
-{{MathMLRef}}
 
 **`<mn>`** [MathML](/zh-CN/docs/Web/MathML) 元素表示一个**数字**字面量，通常是一个可能包含分隔符（点号或逗号）的数字序列。然而，也允许在其中包含任意文本，该文本实际上是一个数字量，例如“eleven”。
 

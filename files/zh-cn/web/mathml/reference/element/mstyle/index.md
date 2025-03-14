@@ -1,12 +1,9 @@
 ---
 title: <mstyle>
 slug: Web/MathML/Reference/Element/mstyle
-original_slug: Web/MathML/Element/mstyle
 l10n:
   sourceCommit: d377045efe5d13531b73f8823301f8cc1dc58f84
 ---
-
-{{MathMLRef}}
 
 **`<mstyle>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于更改其子元素的样式。
 

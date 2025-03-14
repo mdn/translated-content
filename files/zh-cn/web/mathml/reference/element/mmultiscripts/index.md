@@ -1,12 +1,9 @@
 ---
 title: <mmultiscripts>
 slug: Web/MathML/Reference/Element/mmultiscripts
-original_slug: Web/MathML/Element/mmultiscripts
 l10n:
   sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
 ---
-
-{{MathMLRef}}
 
 **`<mmultiscripts>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于一次性将任意数量的下标和上标附加到表达式上，将 {{ MathMLElement("msubsup") }} 元素泛化。附加符号可以是前置的附加符号（放置在表达式之前）或后置的附加符号（放置在表达式之后）。
 

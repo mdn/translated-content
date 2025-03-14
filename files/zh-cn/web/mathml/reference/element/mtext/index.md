@@ -1,12 +1,9 @@
 ---
 title: <mtext>
 slug: Web/MathML/Reference/Element/mtext
-original_slug: Web/MathML/Element/mtext
 l10n:
   sourceCommit: 8eece0b998c23e8ea35f936d7371a169974130f5
 ---
-
-{{MathMLRef}}
 
 **`<mtext>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于呈现*没有*符号意义的任意文本，例如注释或注解。
 

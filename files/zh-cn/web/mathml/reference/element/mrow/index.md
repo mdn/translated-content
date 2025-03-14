@@ -1,12 +1,9 @@
 ---
 title: <mrow>
 slug: Web/MathML/Reference/Element/mrow
-original_slug: Web/MathML/Element/mrow
 l10n:
   sourceCommit: 67cbfbf7a408e7180137b286247025bc40716642
 ---
-
-{{MathMLRef}}
 
 **`<mrow>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于对子表达式进行分组，子表达式通常包含一个或多个[运算符](/zh-CN/docs/Web/MathML/Reference/Element/mo)及其操作数（比如 {{ MathMLElement("mi") }} 和 {{ MathMLElement("mn") }}）。此元素呈现为包含其内容的水平行。
 

@@ -1,12 +1,9 @@
 ---
 title: 全局属性
 slug: Web/MathML/Reference/Global_attributes
-original_slug: Web/MathML/Global_attributes
 l10n:
   sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
 ---
-
-{{MathMLRef}}
 
 **全局属性**是所有 MathML 元素通用的属性；它们可以用于所有元素，尽管可能对某些元素没有影响。
 

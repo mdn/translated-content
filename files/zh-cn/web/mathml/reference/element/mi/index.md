@@ -1,12 +1,9 @@
 ---
 title: <mi>
 slug: Web/MathML/Reference/Element/mi
-original_slug: Web/MathML/Element/mi
 l10n:
   sourceCommit: 5486568b63db66b729a756a7a66e2fb8dfe177e1
 ---
-
-{{MathMLRef}}
 
 **`<mi>`** [MathML](/zh-CN/docs/Web/MathML) 元素指示内容应渲染为**标识符**，如函数名、变量或符号常量。
 

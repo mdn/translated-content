@@ -1,12 +1,9 @@
 ---
 title: <mover>
 slug: Web/MathML/Reference/Element/mover
-original_slug: Web/MathML/Element/mover
 l10n:
   sourceCommit: 07f0cf4375aaa02e1071d8bd0e8518db7609b7a9
 ---
-
-{{MathMLRef}}
 
 **`<mover>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于在表达式上方着重标识或界限符号。使用以下语法：`<mover> base overscript </mover>`。
 

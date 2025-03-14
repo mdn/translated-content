@@ -1,12 +1,9 @@
 ---
 title: <mtd>
 slug: Web/MathML/Reference/Element/mtd
-original_slug: Web/MathML/Element/mtd
 l10n:
   sourceCommit: a66ead0df0c9c0fd615ce926e459d7c4e279f8e1
 ---
-
-{{MathMLRef}}
 
 **`<mtd>`** [MathML](/zh-CN/docs/Web/MathML) 元素表示表格或矩阵中的单元格。它只能出现在 {{ MathMLElement("mtr") }} 元素中。该元素类似于 [HTML](/zh-CN/docs/Web/HTML) 中的 {{ HTMLElement("td") }} 元素。
 

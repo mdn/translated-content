@@ -1,12 +1,9 @@
 ---
 title: <mspace>
 slug: Web/MathML/Reference/Element/mspace
-original_slug: Web/MathML/Element/mspace
 l10n:
   sourceCommit: 67cbfbf7a408e7180137b286247025bc40716642
 ---
-
-{{MathMLRef}}
 
 **`<mspace>`** [MathML](/zh-CN/docs/Web/MathML) 元素用来显示一段空白，空白的大小由它自身的属性设置。
 

@@ -1,12 +1,9 @@
 ---
 title: <msup>
 slug: Web/MathML/Reference/Element/msup
-original_slug: Web/MathML/Element/msup
 l10n:
   sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
 ---
-
-{{MathMLRef}}
 
 [MathML](/zh-CN/docs/Web/MathML) **`<msup>`** 元素用于为表达式附加上标。
 

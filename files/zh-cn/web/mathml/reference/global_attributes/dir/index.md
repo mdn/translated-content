@@ -1,12 +1,9 @@
 ---
 title: dir
 slug: Web/MathML/Reference/Global_attributes/dir
-original_slug: Web/MathML/Global_attributes/dir
 l10n:
   sourceCommit: 8eece0b998c23e8ea35f936d7371a169974130f5
 ---
-
-{{MathMLRef}}
 
 **`dir`** [全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)是一个表示 MathML 元素的方向的[枚举](/zh-CN/docs/Glossary/Enumerated)属性。
 

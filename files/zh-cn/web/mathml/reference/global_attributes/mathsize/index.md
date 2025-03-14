@@ -1,12 +1,11 @@
 ---
 title: mathsize
 slug: Web/MathML/Reference/Global_attributes/mathsize
-original_slug: Web/MathML/Global_attributes/mathsize
 l10n:
   sourceCommit: 07f0cf4375aaa02e1071d8bd0e8518db7609b7a9
 ---
 
-{{MathMLRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 **`mathsize`** [全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)设置 MathML 元素的[字体大小](/zh-CN/docs/Web/CSS/font-size)。
 

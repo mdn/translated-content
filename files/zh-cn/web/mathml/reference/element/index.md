@@ -1,12 +1,9 @@
 ---
 title: MathML 元素参考
 slug: Web/MathML/Reference/Element
-original_slug: Web/MathML/Element
 l10n:
   sourceCommit: 3558f9be9acfcfd4b625229962b6f1b38f1b85af
 ---
-
-{{MathMLRef}}
 
 这是一份按字母排序的 MathML 元素列表。所有这些元素都实现了 {{domxref("MathMLElement")}} 类。
 

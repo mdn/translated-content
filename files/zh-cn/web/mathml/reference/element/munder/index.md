@@ -1,12 +1,9 @@
 ---
 title: <munder>
 slug: Web/MathML/Reference/Element/munder
-original_slug: Web/MathML/Element/munder
 l10n:
   sourceCommit: 07f0cf4375aaa02e1071d8bd0e8518db7609b7a9
 ---
-
-{{MathMLRef}}
 
 **`<munder>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于在表达式下方附加着重标识或界限。它使用以下语法：`<munder> base underscript </munder>`。
 

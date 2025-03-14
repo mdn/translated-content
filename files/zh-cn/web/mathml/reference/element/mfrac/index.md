@@ -1,12 +1,9 @@
 ---
 title: <mfrac>
 slug: Web/MathML/Reference/Element/mfrac
-original_slug: Web/MathML/Element/mfrac
 l10n:
   sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
 ---
-
-{{MathMLRef}}
 
 **`<mfrac>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于显示分数。它还可以用于标记类似分数的对象，例如[二项式系数](https://zh.wikipedia.org/wiki/二項式係數)和[勒让德符号](https://zh.wikipedia.org/wiki/勒让德符号)。
 

@@ -1,12 +1,11 @@
 ---
 title: <mfenced>
 slug: Web/MathML/Reference/Element/mfenced
-original_slug: Web/MathML/Element/mfenced
 l10n:
   sourceCommit: e3faa375b0179de77a5eff00074e3d168a0a904c
 ---
 
-{{MathMLRef}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{Deprecated_Header}}{{Non-standard_Header}}
 
 `<mfenced>` [MathML](/zh-CN/docs/Web/MathML) 元素提供了向表达式添加自定义开和闭括号（如圆括号）以及分隔符（如逗号或分号）的可能。
 

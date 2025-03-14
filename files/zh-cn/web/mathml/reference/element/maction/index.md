@@ -1,12 +1,11 @@
 ---
 title: <maction>
 slug: Web/MathML/Reference/Element/maction
-original_slug: Web/MathML/Element/maction
 l10n:
   sourceCommit: 024a9231e504e2c0d4051f47de36567e82ca432f
 ---
 
-{{MathMLRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 **`<maction>`** [MathML](/zh-CN/docs/Web/MathML) 元素允许将行为绑定到数学表达式上。默认情况下，只有第一个子元素会被渲染，但是一些浏览器可能会根据 `actiontype` 和 `selection` 属性来实现自定义行为。
 

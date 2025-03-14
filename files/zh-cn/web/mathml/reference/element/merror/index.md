@@ -1,12 +1,9 @@
 ---
 title: <merror>
 slug: Web/MathML/Reference/Element/merror
-original_slug: Web/MathML/Element/merror
 l10n:
   sourceCommit: 8eece0b998c23e8ea35f936d7371a169974130f5
 ---
-
-{{MathMLRef}}
 
 **`<merror>`** [MathML](/zh-CN/docs/Web/MathML)元素用于将内容显示为错误消息。该元素的目的是为从其他输入生成 MathML 的程序提供一种标准方法来报告语法错误。
 

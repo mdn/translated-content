@@ -1,12 +1,11 @@
 ---
 title: mathbackground
 slug: Web/MathML/Reference/Global_attributes/mathbackground
-original_slug: Web/MathML/Global_attributes/mathbackground
 l10n:
   sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
 ---
 
-{{MathMLRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 **`mathbackground`** [全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)设置 MathML 元素的[背景颜色](/zh-CN/docs/Web/CSS/background-color)。
 

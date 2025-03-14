@@ -1,12 +1,11 @@
 ---
 title: href
 slug: Web/MathML/Reference/Global_attributes/href
-original_slug: Web/MathML/Global_attributes/href
 l10n:
   sourceCommit: 8eece0b998c23e8ea35f936d7371a169974130f5
 ---
 
-{{MathMLRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 **`href`** [全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)在 MathML 元素上创建一个指向指定 URL 的超链接。
 

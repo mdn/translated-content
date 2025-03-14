@@ -1,12 +1,9 @@
 ---
 title: <semantics>
 slug: Web/MathML/Reference/Element/semantics
-original_slug: Web/MathML/Element/semantics
 l10n:
   sourceCommit: 8eece0b998c23e8ea35f936d7371a169974130f5
 ---
-
-{{MathMLRef}}
 
 **`<semantics>`** [MathML](/zh-CN/docs/Web/MathML) 元素将注释与一个 MathML 表达式关联起来，例如其文本源作为[轻量级标记语言](https://zh.wikipedia.org/wiki/轻量级标记语言)或以特殊的 {{glossary("XML")}} 语言表示的数学含义。通常，它的结构是：
 

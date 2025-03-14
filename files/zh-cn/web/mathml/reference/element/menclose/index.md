@@ -1,12 +1,11 @@
 ---
 title: <menclose>
 slug: Web/MathML/Reference/Element/menclose
-original_slug: Web/MathML/Element/menclose
 l10n:
   sourceCommit: 8eece0b998c23e8ea35f936d7371a169974130f5
 ---
 
-{{MathMLRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 **`<menclose>`** [MathML](/zh-CN/docs/Web/MathML) 元素根据 `notation` 属性指定的符号，在其内部渲染内容。
 

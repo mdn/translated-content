@@ -1,12 +1,9 @@
 ---
 title: 用于 MathML 的字体
 slug: Web/MathML/Guides/Fonts
-original_slug: Web/MathML/Fonts
 l10n:
   sourceCommit: 8eece0b998c23e8ea35f936d7371a169974130f5
 ---
-
-{{MathMLRef}}
 
 需要具有适当 Unicode 覆盖范围和 Open Font Format 特性的字体才能实现良好的数学渲染。本页面描述了用户如何安装此类数学字体以在浏览器中正确显示 MathML。
 

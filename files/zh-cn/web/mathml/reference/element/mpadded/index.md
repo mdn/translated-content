@@ -1,12 +1,9 @@
 ---
 title: <mpadded>
 slug: Web/MathML/Reference/Element/mpadded
-original_slug: Web/MathML/Element/mpadded
 l10n:
   sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
 ---
-
-{{MathMLRef}}
 
 **`<mpadded>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于添加额外的内边距，并设置封闭内容的位置和大小的一般调整。
 

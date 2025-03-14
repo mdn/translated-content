@@ -1,10 +1,7 @@
 ---
 title: <math>
 slug: Web/MathML/Reference/Element/math
-original_slug: Web/MathML/Element/math
 ---
-
-{{MathMLRef}}
 
 **`<math>`** [MathML](/zh-CN/docs/Web/MathML) 元素是顶级的 MathML 元素，用于编写单个数学公式。可以将其放在允许[流式内容](/zh-CN/docs/Web/HTML/Content_categories#流式内容)的 HTML 内容中。
 

@@ -1,12 +1,9 @@
 ---
 title: <ms>
 slug: Web/MathML/Reference/Element/ms
-original_slug: Web/MathML/Element/ms
 l10n:
   sourceCommit: 8eece0b998c23e8ea35f936d7371a169974130f5
 ---
-
-{{MathMLRef}}
 
 **`<ms>`** [MathML](/zh-CN/docs/Web/MathML) 元素表示要由编程语言和计算机代数系统解释的**字符串**字面量。
 

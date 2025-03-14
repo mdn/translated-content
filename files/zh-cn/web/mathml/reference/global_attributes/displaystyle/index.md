@@ -1,12 +1,9 @@
 ---
 title: displaystyle
 slug: Web/MathML/Reference/Global_attributes/displaystyle
-original_slug: Web/MathML/Global_attributes/displaystyle
 l10n:
   sourceCommit: 8eece0b998c23e8ea35f936d7371a169974130f5
 ---
-
-{{MathMLRef}}
 
 **`displaystyle`** [全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)是一个用于设置 MathML 元素的 [math-style](/zh-CN/docs/Web/CSS/math-style) 的布尔值。
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6e0504e4a750ac4f495086c7aec3bfd293ad6417
 ---
 
-{{MathMLRef}}
-
 **数学标记语言**（MathML）是一种基于 [XML](/zh-CN/docs/Web/XML) 的，用于描述数学符号的语言。
 
 [MathML](https://w3c.github.io/mathml/) 最初被设计为用于浏览器、办公套件、[计算机代数系统](https://zh.wikipedia.org/wiki/計算機代數系統)、[EPUB](https://www.w3.org/publishing/epub33/) 阅读器和基于 [LaTeX](https://zh.wikipedia.org/wiki/LaTeX) 的生成器的通用规范。然而，这种方法并不非常适用于 Web：[专注于语义的子集](https://w3c.github.io/mathml/#contm)从未在浏览器中实现，而[专注于数学布局](https://w3c.github.io/mathml/#presm)的子集导致了不完整和不一致的浏览器实现。

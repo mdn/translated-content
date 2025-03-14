@@ -1,12 +1,9 @@
 ---
 title: 属性
 slug: Web/MathML/Reference/Attribute
-original_slug: Web/MathML/Attribute
 l10n:
   sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
 ---
-
-{{MathMLRef}}
 
 此页面是 MathML 属性的字母表。要了解每个属性的更多详细信息，请参见 [MathML 元素页面](/zh-CN/docs/Web/MathML/Reference/Element)和[全局属性页面](/zh-CN/docs/Web/MathML/Reference/Global_attributes)。[值](/zh-CN/docs/Web/MathML/Reference/Values)页面也介绍了有关 MathML 属性常用值的一些说明。
 

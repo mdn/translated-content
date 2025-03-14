@@ -1,10 +1,7 @@
 ---
 title: 三个著名的数学公式
 slug: Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas
-original_slug: Web/MathML/Guides/Three_famous_mathematical_formulas
 ---
-
-{{MathMLRef}}
 
 {{PreviousMenu("Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
 

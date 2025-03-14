@@ -1,12 +1,9 @@
 ---
 title: <munderover>
 slug: Web/MathML/Reference/Element/munderover
-original_slug: Web/MathML/Element/munderover
 l10n:
   sourceCommit: 07f0cf4375aaa02e1071d8bd0e8518db7609b7a9
 ---
-
-{{MathMLRef}}
 
 **`<munderover>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于在表达式上方和下方同时附加符号。
 

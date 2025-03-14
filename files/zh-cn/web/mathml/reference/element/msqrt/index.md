@@ -1,10 +1,7 @@
 ---
 title: <msqrt>
 slug: Web/MathML/Reference/Element/msqrt
-original_slug: Web/MathML/Element/msqrt
 ---
-
-{{MathMLRef}}
 
 [MathML](/zh-CN/docs/Web/MathML) **`<msqrt>`** 元素用于表示平方根（不显示根指数）。它只接受一个参数，语法如下：`<msqrt> base </msqrt>`。
 

@@ -1,10 +1,7 @@
 ---
 title: MathML 表格
 slug: Web/MathML/Tutorials/For_beginners/Tables
-original_slug: Web/MathML/Guides/Tables
 ---
-
-{{MathMLRef}}
 
 {{PreviousMenuNext("Web/MathML/Guides/Scripts", "Web/MathML/Guides/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}
 

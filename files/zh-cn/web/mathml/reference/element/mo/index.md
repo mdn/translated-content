@@ -1,12 +1,9 @@
 ---
 title: <mo>
 slug: Web/MathML/Reference/Element/mo
-original_slug: Web/MathML/Element/mo
 l10n:
   sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
 ---
-
-{{MathMLRef}}
 
 **`<mo>`** [MathML](/zh-CN/docs/Web/MathML) 元素表示广义上的**运算符**。除了严格数学意义上的运算符外，该元素还包括像括号、分隔符（如，逗号和分号）或“绝对值”符号这一类的“运算符”。
 

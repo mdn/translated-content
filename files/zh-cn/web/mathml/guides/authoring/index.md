@@ -1,12 +1,9 @@
 ---
 title: 编写 MathML
 slug: Web/MathML/Guides/Authoring
-original_slug: Web/MathML/Authoring
 l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
-
-{{MathMLRef}}
 
 本文解释了如何利用 MathML 语言编写数学公式。就像 HTML 或 SVG 一样，MathML 是用标签和属性描述的。当你的文档包含了较为复杂的内容时，文本会变得很冗长，因此需要[适当的编写工具](https://www.w3.org/wiki/Math_Tools#Authoring_tools)，例如从[轻量级标记语言](https://zh.wikipedia.org/wiki/轻量级标记语言)转换，或[所见即所得](https://zh.wikipedia.org/wiki/所见即所得)的公式编辑器。有很多类似的工具可用，我们无法给出一个详尽的清单。相反，本文重点介绍常见的方法和示例。
 

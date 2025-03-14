@@ -1,10 +1,7 @@
 ---
 title: <mroot>
 slug: Web/MathML/Reference/Element/mroot
-original_slug: Web/MathML/Element/mroot
 ---
-
-{{MathMLRef}}
 
 [MathML](/zh-CN/docs/Web/MathML) **`<mroot>`** 元素用来表示一个有明确根指数的根式。它接受两个参数，语法如下：`<mroot> base index </mroot>`。
 

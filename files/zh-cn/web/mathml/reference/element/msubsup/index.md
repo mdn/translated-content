@@ -1,12 +1,9 @@
 ---
 title: <msubsup>
 slug: Web/MathML/Reference/Element/msubsup
-original_slug: Web/MathML/Element/msubsup
 l10n:
   sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
 ---
-
-{{MathMLRef}}
 
 [MathML](/zh-CN/docs/Web/MathML) **`<msubsup>`** 元素用于为表达式同时附加上标和下标。
 

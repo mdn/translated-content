@@ -1,12 +1,9 @@
 ---
 title: scriptlevel
 slug: Web/MathML/Reference/Global_attributes/scriptlevel
-original_slug: Web/MathML/Global_attributes/scriptlevel
 l10n:
   sourceCommit: 8eece0b998c23e8ea35f936d7371a169974130f5
 ---
-
-{{MathMLRef}}
 
 **`scriptlevel`** [全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)设置 MathML 元素的[数学深度](/zh-CN/docs/Web/CSS/math-depth)。它允许覆盖[用户代理样式表](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#用户代理样式表)中定义的在 MathML 公式中自动计算[字体大小](/zh-CN/docs/Web/CSS/font-size)的规则。
 

@@ -1,10 +1,7 @@
 ---
 title: MathML 文本容器
 slug: Web/MathML/Tutorials/For_beginners/Text_containers
-original_slug: Web/MathML/Guides/Text_containers
 ---
-
-{{MathMLRef}}
 
 {{PreviousMenuNext("Web/MathML/Guides/Getting_started", "Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides")}}
 

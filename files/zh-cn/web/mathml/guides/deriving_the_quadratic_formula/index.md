@@ -1,10 +1,7 @@
 ---
 title: 推导二次方程求根公式
 slug: Web/MathML/Guides/Deriving_the_quadratic_formula
-original_slug: Web/MathML/Examples/Deriving_the_Quadratic_Formula
 ---
-
-{{MathMLRef}}
 
 本页概述了[二次方程求根公式](https://en.wikipedia.org/wiki/Quadratic_formula)的推导过程。
 

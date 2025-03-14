@@ -1,10 +1,7 @@
 ---
 title: MathML 分数和根号
 slug: Web/MathML/Tutorials/For_beginners/Fractions_and_roots
-original_slug: Web/MathML/Guides/Fractions_and_roots
 ---
-
-{{MathMLRef}}
 
 {{PreviousMenuNext("Web/MathML/Guides/Text_containers", "Web/MathML/Guides/Scripts", "Web/MathML/Guides")}}
 
