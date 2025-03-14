@@ -1,7 +1,6 @@
 ---
 title: 506 Variant Also Negotiates
 slug: Web/HTTP/Reference/Status/506
-original_slug: Web/HTTP/Status/506
 l10n:
   sourceCommit: dae4a066bdf3900056bb4e8e6af85f50e4d1fd71
 ---

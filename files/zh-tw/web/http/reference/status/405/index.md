@@ -1,7 +1,6 @@
 ---
 title: 405 Method Not Allowed
 slug: Web/HTTP/Reference/Status/405
-original_slug: Web/HTTP/Status/405
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---

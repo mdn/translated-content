@@ -1,7 +1,6 @@
 ---
 title: 408 Request Timeout
 slug: Web/HTTP/Reference/Status/408
-original_slug: Web/HTTP/Status/408
 l10n:
   sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
 ---

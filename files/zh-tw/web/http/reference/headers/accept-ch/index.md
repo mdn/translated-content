@@ -1,7 +1,6 @@
 ---
 title: Accept-CH
 slug: Web/HTTP/Reference/Headers/Accept-CH
-original_slug: Web/HTTP/Headers/Accept-CH
 l10n:
   sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
 ---

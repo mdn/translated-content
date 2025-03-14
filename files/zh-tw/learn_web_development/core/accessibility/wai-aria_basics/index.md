@@ -1,7 +1,6 @@
 ---
 title: WAI-ARIA基礎
 slug: Learn_web_development/Core/Accessibility/WAI-ARIA_basics
-original_slug: Learn/Accessibility/WAI-ARIA_basics
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/Multimedia", "Learn_web_development/Core/Accessibility")}}

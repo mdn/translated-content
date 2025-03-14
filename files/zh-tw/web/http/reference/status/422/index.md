@@ -1,7 +1,6 @@
 ---
 title: 422 Unprocessable Content
 slug: Web/HTTP/Reference/Status/422
-original_slug: Web/HTTP/Status/422
 l10n:
   sourceCommit: 6d4fc564c9428eb242470b2bdf4f7db22d91612f
 ---

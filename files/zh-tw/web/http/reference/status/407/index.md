@@ -1,7 +1,6 @@
 ---
 title: 407 Proxy Authentication Required
 slug: Web/HTTP/Reference/Status/407
-original_slug: Web/HTTP/Status/407
 l10n:
   sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
 ---

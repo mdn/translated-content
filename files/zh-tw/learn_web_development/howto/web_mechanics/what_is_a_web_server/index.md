@@ -1,7 +1,6 @@
 ---
 title: 何謂網路伺服器？
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
-original_slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 ---
 
 {{QuicklinksWithSubPages("Learn_web_development/Howto")}}

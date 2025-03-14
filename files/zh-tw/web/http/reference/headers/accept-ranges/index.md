@@ -1,7 +1,6 @@
 ---
 title: Accept-Ranges
 slug: Web/HTTP/Reference/Headers/Accept-Ranges
-original_slug: Web/HTTP/Headers/Accept-Ranges
 l10n:
   sourceCommit: 442db82028668b17b888ee439468ae2ac9d589a5
 ---

@@ -1,7 +1,6 @@
 ---
 title: 429 Too Many Requests
 slug: Web/HTTP/Reference/Status/429
-original_slug: Web/HTTP/Status/429
 l10n:
   sourceCommit: 332bbd7d5079f418175e68a13db8c38f4636cee9
 ---

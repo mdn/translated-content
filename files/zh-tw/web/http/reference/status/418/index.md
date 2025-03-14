@@ -1,7 +1,6 @@
 ---
 title: 418 I'm a teapot
 slug: Web/HTTP/Reference/Status/418
-original_slug: Web/HTTP/Status/418
 l10n:
   sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
 ---

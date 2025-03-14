@@ -1,7 +1,6 @@
 ---
 title: PATCH
 slug: Web/HTTP/Reference/Methods/PATCH
-original_slug: Web/HTTP/Methods/PATCH
 l10n:
   sourceCommit: 3138c50f08e9fba1176aa77dbbfdb33e22357ddd
 ---

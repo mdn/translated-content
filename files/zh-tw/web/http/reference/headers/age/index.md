@@ -1,7 +1,6 @@
 ---
 title: Age
 slug: Web/HTTP/Reference/Headers/Age
-original_slug: Web/HTTP/Headers/Age
 l10n:
   sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
 ---

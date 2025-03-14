@@ -1,7 +1,6 @@
 ---
 title: 跨來源資源政策（CORP）
 slug: Web/HTTP/Guides/Cross-Origin_Resource_Policy
-original_slug: Web/HTTP/Cross-Origin_Resource_Policy
 l10n:
   sourceCommit: b0870830e4c02596ca6c501f8f8b468a917eafc2
 ---

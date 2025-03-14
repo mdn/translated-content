@@ -1,7 +1,6 @@
 ---
 title: 典型的 HTTP 會話
 slug: Web/HTTP/Guides/Session
-original_slug: Web/HTTP/Session
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---

@@ -1,7 +1,6 @@
 ---
 title: 使用 HTTP Cookie
 slug: Web/HTTP/Guides/Cookies
-original_slug: Web/HTTP/Cookies
 l10n:
   sourceCommit: a86c551ce8f5c6936b14640357eaa4da71a857d7
 ---

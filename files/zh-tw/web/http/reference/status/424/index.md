@@ -1,7 +1,6 @@
 ---
 title: 424 Failed Dependency
 slug: Web/HTTP/Reference/Status/424
-original_slug: Web/HTTP/Status/424
 l10n:
   sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
 ---

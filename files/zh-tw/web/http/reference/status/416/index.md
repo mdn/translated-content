@@ -1,7 +1,6 @@
 ---
 title: 416 Range Not Satisfiable
 slug: Web/HTTP/Reference/Status/416
-original_slug: Web/HTTP/Status/416
 l10n:
   sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
 ---

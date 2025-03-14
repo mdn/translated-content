@@ -1,7 +1,6 @@
 ---
 title: CONNECT
 slug: Web/HTTP/Reference/Methods/CONNECT
-original_slug: Web/HTTP/Methods/CONNECT
 l10n:
   sourceCommit: 8a9085b96d0135920be9b281d4500ff72a7a8369
 ---

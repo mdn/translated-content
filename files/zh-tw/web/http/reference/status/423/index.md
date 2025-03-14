@@ -1,7 +1,6 @@
 ---
 title: 423 Locked
 slug: Web/HTTP/Reference/Status/423
-original_slug: Web/HTTP/Status/423
 l10n:
   sourceCommit: 783ffd9c1cf35421242e028a1b8743cf2b1918dd
 ---

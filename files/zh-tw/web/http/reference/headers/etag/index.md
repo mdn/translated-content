@@ -1,7 +1,6 @@
 ---
 title: ETag
 slug: Web/HTTP/Reference/Headers/ETag
-original_slug: Web/HTTP/Headers/ETag
 ---
 
 {{HTTPSidebar}}

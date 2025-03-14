@@ -1,7 +1,6 @@
 ---
 title: POST
 slug: Web/HTTP/Reference/Methods/POST
-original_slug: Web/HTTP/Methods/POST
 l10n:
   sourceCommit: 369b8ec2c87b6c5b01d1527fddb6810ded3be782
 ---

@@ -1,7 +1,6 @@
 ---
 title: 208 Already Reported
 slug: Web/HTTP/Reference/Status/208
-original_slug: Web/HTTP/Status/208
 l10n:
   sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---

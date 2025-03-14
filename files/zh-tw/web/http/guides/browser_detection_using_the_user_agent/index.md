@@ -1,7 +1,6 @@
 ---
 title: 透過用戶代理偵測瀏覽器
 slug: Web/HTTP/Guides/Browser_detection_using_the_user_agent
-original_slug: Web/HTTP/Browser_detection_using_the_user_agent
 ---
 
 {{HTTPSidebar}}

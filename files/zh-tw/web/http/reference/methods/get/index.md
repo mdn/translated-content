@@ -1,7 +1,6 @@
 ---
 title: GET
 slug: Web/HTTP/Reference/Methods/GET
-original_slug: Web/HTTP/Methods/GET
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---

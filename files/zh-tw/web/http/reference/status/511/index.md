@@ -1,7 +1,6 @@
 ---
 title: 511 Network Authentication Required
 slug: Web/HTTP/Reference/Status/511
-original_slug: Web/HTTP/Status/511
 l10n:
   sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
 ---

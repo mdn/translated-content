@@ -1,7 +1,6 @@
 ---
 title: 510 Not Extended
 slug: Web/HTTP/Reference/Status/510
-original_slug: Web/HTTP/Status/510
 l10n:
   sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
 ---

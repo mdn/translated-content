@@ -1,7 +1,6 @@
 ---
 title: 你的網站看起來會是什麼樣子？
 slug: Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like
-original_slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website")}}

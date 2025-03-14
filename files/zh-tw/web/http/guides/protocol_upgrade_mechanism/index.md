@@ -1,7 +1,6 @@
 ---
 title: 協議升級機制
 slug: Web/HTTP/Guides/Protocol_upgrade_mechanism
-original_slug: Web/HTTP/Protocol_upgrade_mechanism
 ---
 
 {{HTTPSidebar}}

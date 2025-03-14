@@ -1,7 +1,6 @@
 ---
 title: 421 Misdirected Request
 slug: Web/HTTP/Reference/Status/421
-original_slug: Web/HTTP/Status/421
 l10n:
   sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
 ---

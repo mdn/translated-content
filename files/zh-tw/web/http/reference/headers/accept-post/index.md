@@ -1,7 +1,6 @@
 ---
 title: Accept-Post
 slug: Web/HTTP/Reference/Headers/Accept-Post
-original_slug: Web/HTTP/Headers/Accept-Post
 l10n:
   sourceCommit: 3c29ffa78c551ea6a61bbb795a5f97a66c6868c0
 ---

@@ -1,7 +1,6 @@
 ---
 title: 505 HTTP Version Not Supported
 slug: Web/HTTP/Reference/Status/505
-original_slug: Web/HTTP/Status/505
 l10n:
   sourceCommit: 6bef243050a1f49bf5b7f37e9c4552f7aa30e24d
 ---

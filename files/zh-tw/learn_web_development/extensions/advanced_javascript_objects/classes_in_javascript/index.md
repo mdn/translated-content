@@ -1,7 +1,6 @@
 ---
 title: JavaScript 中的「繼承」
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript
-original_slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

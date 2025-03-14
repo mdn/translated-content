@@ -1,7 +1,6 @@
 ---
 title: 406 Not Acceptable
 slug: Web/HTTP/Reference/Status/406
-original_slug: Web/HTTP/Status/406
 l10n:
   sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
 ---

@@ -1,7 +1,6 @@
 ---
 title: X-Robots-Tag
 slug: Web/HTTP/Reference/Headers/X-Robots-Tag
-original_slug: Web/HTTP/Headers/X-Robots-Tag
 l10n:
   sourceCommit: 24d8a34da576f86b10923e426f66df48ab6201b9
 ---

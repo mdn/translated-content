@@ -1,7 +1,6 @@
 ---
 title: 410 Gone
 slug: Web/HTTP/Reference/Status/410
-original_slug: Web/HTTP/Status/410
 l10n:
   sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
 ---

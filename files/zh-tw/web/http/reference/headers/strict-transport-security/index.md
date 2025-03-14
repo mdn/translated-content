@@ -1,7 +1,6 @@
 ---
 title: Strict-Transport-Security
 slug: Web/HTTP/Reference/Headers/Strict-Transport-Security
-original_slug: Web/HTTP/Headers/Strict-Transport-Security
 l10n:
   sourceCommit: f0f30c318c2a318552a753759fa0a09f6690f2a5
 ---

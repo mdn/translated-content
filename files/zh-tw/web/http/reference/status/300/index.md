@@ -1,7 +1,6 @@
 ---
 title: 300 Multiple Choices
 slug: Web/HTTP/Reference/Status/300
-original_slug: Web/HTTP/Status/300
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---

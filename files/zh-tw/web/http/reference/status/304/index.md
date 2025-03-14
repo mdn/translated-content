@@ -1,7 +1,6 @@
 ---
 title: 304 Not Modified
 slug: Web/HTTP/Reference/Status/304
-original_slug: Web/HTTP/Status/304
 l10n:
   sourceCommit: fb8c438501d119fb897a9667ee85c1486f2c03d6
 ---

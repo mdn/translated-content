@@ -1,7 +1,6 @@
 ---
 title: 測試你的技能：多媒體和嵌入
 slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding
-original_slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding
 ---
 
 {{learnsidebar}}

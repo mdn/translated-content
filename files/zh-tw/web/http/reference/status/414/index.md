@@ -1,7 +1,6 @@
 ---
 title: 414 URI Too Long
 slug: Web/HTTP/Reference/Status/414
-original_slug: Web/HTTP/Status/414
 l10n:
   sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
 ---

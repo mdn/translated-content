@@ -1,7 +1,6 @@
 ---
 title: CSS 入門
 slug: Learn_web_development/Core/Styling_basics
-original_slug: Learn/CSS/First_steps
 ---
 
 {{LearnSidebar}}

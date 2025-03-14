@@ -1,7 +1,6 @@
 ---
 title: 411 Length Required
 slug: Web/HTTP/Reference/Status/411
-original_slug: Web/HTTP/Status/411
 l10n:
   sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
 ---

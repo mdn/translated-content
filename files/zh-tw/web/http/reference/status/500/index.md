@@ -1,7 +1,6 @@
 ---
 title: 500 Internal Server Error
 slug: Web/HTTP/Reference/Status/500
-original_slug: Web/HTTP/Status/500
 l10n:
   sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
 ---

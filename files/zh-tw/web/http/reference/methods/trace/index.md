@@ -1,7 +1,6 @@
 ---
 title: TRACE
 slug: Web/HTTP/Reference/Methods/TRACE
-original_slug: Web/HTTP/Methods/TRACE
 l10n:
   sourceCommit: f1177f3b139cce429083f12bb4b3dca8e9140f58
 ---

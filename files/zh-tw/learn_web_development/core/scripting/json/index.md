@@ -1,7 +1,6 @@
 ---
 title: 使用 JSON 資料
 slug: Learn_web_development/Core/Scripting/JSON
-original_slug: Learn/JavaScript/Objects/JSON
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}

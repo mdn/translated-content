@@ -1,7 +1,6 @@
 ---
 title: Cookie
 slug: Web/HTTP/Reference/Headers/Cookie
-original_slug: Web/HTTP/Headers/Cookie
 ---
 
 {{HTTPSidebar}}

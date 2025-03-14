@@ -1,7 +1,6 @@
 ---
 title: 503 Service Unavailable
 slug: Web/HTTP/Reference/Status/503
-original_slug: Web/HTTP/Status/503
 l10n:
   sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
 ---

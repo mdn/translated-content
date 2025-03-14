@@ -1,7 +1,6 @@
 ---
 title: 507 Insufficient Storage
 slug: Web/HTTP/Reference/Status/507
-original_slug: Web/HTTP/Status/507
 l10n:
   sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
 ---

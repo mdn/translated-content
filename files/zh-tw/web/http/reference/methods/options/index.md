@@ -1,7 +1,6 @@
 ---
 title: OPTIONS
 slug: Web/HTTP/Reference/Methods/OPTIONS
-original_slug: Web/HTTP/Methods/OPTIONS
 l10n:
   sourceCommit: 38fb31b12de1019a538e868a90dd4dd4858e4871
 ---

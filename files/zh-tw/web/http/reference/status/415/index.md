@@ -1,7 +1,6 @@
 ---
 title: 415 Unsupported Media Type
 slug: Web/HTTP/Reference/Status/415
-original_slug: Web/HTTP/Status/415
 l10n:
   sourceCommit: ae86913908651e6008079242691e06b5e01d1c78
 ---

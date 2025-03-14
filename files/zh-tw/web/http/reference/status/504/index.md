@@ -1,7 +1,6 @@
 ---
 title: 504 Gateway Timeout
 slug: Web/HTTP/Reference/Status/504
-original_slug: Web/HTTP/Status/504
 l10n:
   sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
 ---

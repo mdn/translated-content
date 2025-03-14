@@ -1,7 +1,6 @@
 ---
 title: HTTP 回應狀態碼
 slug: Web/HTTP/Reference/Status
-original_slug: Web/HTTP/Status
 l10n:
   sourceCommit: e39a9f516b1a994590c9bdf622b60244739060ad
 ---

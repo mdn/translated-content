@@ -1,7 +1,6 @@
 ---
 title: 226 IM Used
 slug: Web/HTTP/Reference/Status/226
-original_slug: Web/HTTP/Status/226
 l10n:
   sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---

@@ -1,7 +1,6 @@
 ---
 title: 404 Not Found
 slug: Web/HTTP/Reference/Status/404
-original_slug: Web/HTTP/Status/404
 l10n:
   sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
