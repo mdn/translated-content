@@ -46,7 +46,7 @@ age: 3194
 etag: "e27d81b845c3716cdb5d4220d78e2799"
 ```
 
-當包含來自上述回應的 [ETag](/zh-TW/docs/Web/HTTP/Headers/ETag) 的 {{HTTPHeader("If-None-Match")}} 標頭的 {{HTTPMethod("GET")}} 請求中存在 `etag` 時，也會返回一個 `304 Not Modified` 回應。因為 `etag` 存在，匹配的實體標籤未能滿足條件，因此返回了 `304` 回應：
+當包含來自上述回應的 [ETag](/zh-TW/docs/Web/HTTP/Reference/Headers/ETag) 的 {{HTTPHeader("If-None-Match")}} 標頭的 {{HTTPMethod("GET")}} 請求中存在 `etag` 時，也會返回一個 `304 Not Modified` 回應。因為 `etag` 存在，匹配的實體標籤未能滿足條件，因此返回了 `304` 回應：
 
 ```bash
 curl -v --header 'If-None-Match: "e27d81b845c3716cdb5d4220d78e2799"' \
@@ -79,11 +79,11 @@ etag: "e27d81b845c3716cdb5d4220d78e2799"
 
 ### 相容性注意事項
 
-- 如果此回應在持久連接上錯誤地包含主體，瀏覽器行為會有所不同。有關更多詳細訊息，請參見 [204 No Content](/zh-TW/docs/Web/HTTP/Status/204)。
+- 如果此回應在持久連接上錯誤地包含主體，瀏覽器行為會有所不同。有關更多詳細訊息，請參見 [204 No Content](/zh-TW/docs/Web/HTTP/Reference/Status/204)。
 
 ## 參見
 
 - {{HTTPHeader("If-Modified-Since")}}
 - {{HTTPHeader("If-None-Match")}}
-- [HTTP 條件請求](/zh-TW/docs/Web/HTTP/Conditional_requests)
-- [204 No Content](/zh-TW/docs/Web/HTTP/Status/204)
+- [HTTP 條件請求](/zh-TW/docs/Web/HTTP/Guides/Conditional_requests)
+- [204 No Content](/zh-TW/docs/Web/HTTP/Reference/Status/204)

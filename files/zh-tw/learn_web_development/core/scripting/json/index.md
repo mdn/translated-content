@@ -191,7 +191,7 @@ var section = document.querySelector("section");
 
    這樣就顧到至少 2 個參數。當然也有其他參數可選擇。但這個簡易範例只需要 2 個強制參數：
 
-   - 在設立網路請求時，應使用 HTTP 函式。因為這裡只要檢索簡單的資料，所以用 [`GET`](/zh-TW/docs/Web/HTTP/Methods/GET) 就可以。
+   - 在設立網路請求時，應使用 HTTP 函式。因為這裡只要檢索簡單的資料，所以用 [`GET`](/zh-TW/docs/Web/HTTP/Reference/Methods/GET) 就可以。
    - URL 提供請求目的地 — 這也就是我們剛剛儲存的 JSON 檔案網址。
 
 4. 接著加入下面 2 行程式碼。我們為 JSON 設定了 [`responseType`](/zh-TW/docs/Web/API/XMLHttpRequest/responseType)，告知伺服器應回傳 JSON 物件，再以 [`send()`](/zh-TW/docs/Web/API/XMLHttpRequest/send) 函式傳送請求：
@@ -338,6 +338,6 @@ myString;
 - [JSON 物件參考頁面](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - [XMLHttpRequest 物件參考頁面](/zh-TW/docs/Web/API/XMLHttpRequest)
 - [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [HTTP 請求函式](/zh-TW/docs/Web/HTTP/Methods)
+- [HTTP 請求函式](/zh-TW/docs/Web/HTTP/Reference/Methods)
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}

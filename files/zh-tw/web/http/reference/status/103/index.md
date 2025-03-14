@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`103 Early Hints`** [資訊回應碼](/zh-TW/docs/Web/HTTP/Status#information_responses)可能會在伺服器仍在準備回應時發送，提供有關伺服器預期的最終回應將連接到的站點和資源的提示。這允許瀏覽器在伺服器準備和發送最終回應之前進行[預連接](/zh-TW/docs/Web/HTML/Attributes/rel/preconnect)到站點或開始[預加載](/zh-TW/docs/Web/HTML/Attributes/rel/preload)資源。
+HTTP **`103 Early Hints`** [資訊回應碼](/zh-TW/docs/Web/HTTP/Reference/Status#information_responses)可能會在伺服器仍在準備回應時發送，提供有關伺服器預期的最終回應將連接到的站點和資源的提示。這允許瀏覽器在伺服器準備和發送最終回應之前進行[預連接](/zh-TW/docs/Web/HTML/Attributes/rel/preconnect)到站點或開始[預加載](/zh-TW/docs/Web/HTML/Attributes/rel/preload)資源。
 
 早期提示回應主要用於 {{HTTPHeader("Link")}} 標頭，指示該標頭要加載的資源。它還可以包含一個 `Content-Security-Policy` 標頭，在處理早期提示時強制執行。
 
@@ -41,7 +41,7 @@ Link: <https://cdn.example.com>; rel=preconnect, <https://cdn.example.com>; rel=
 這個例子預連接到 `https://cdn.example.com` 兩次：
 
 - 第一次連接將用於加載無需 CORS 的資源，例如圖像。
-- 第二次連接包括 [`crossorigin`](/zh-TW/docs/Web/HTML/Attributes/crossorigin) 屬性，將用於加載 [CORS](/zh-TW/docs/Web/HTTP/CORS) 保護的資源，例如字型。
+- 第二次連接包括 [`crossorigin`](/zh-TW/docs/Web/HTML/Attributes/crossorigin) 屬性，將用於加載 [CORS](/zh-TW/docs/Web/HTTP/Guides/CORS) 保護的資源，例如字型。
 
 受 CORS 保護的資源必須通過完全獨立的連接進行提取。如果你只需要從來源獲取一類資源，則只需預先連接一次。
 

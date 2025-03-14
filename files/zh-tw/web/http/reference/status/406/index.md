@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`406 Not Acceptable`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示伺服器無法產生與請求的[主動內容協商](/zh-TW/docs/Web/HTTP/Content_negotiation#服務器驅動的內容協商)標頭中定義的可接受值清單匹配的回應，並且伺服器不願意提供默認表示。
+HTTP **`406 Not Acceptable`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器無法產生與請求的[主動內容協商](/zh-TW/docs/Web/HTTP/Guides/Content_negotiation#服務器驅動的內容協商)標頭中定義的可接受值清單匹配的回應，並且伺服器不願意提供默認表示。
 
 主動內容協商標頭包括：
 
@@ -58,8 +58,8 @@ Content-Type: application/json
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
 - {{HTTPHeader("Accept")}}
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Accept-Language")}}
-- HTTP [內容協商](/zh-TW/docs/Web/HTTP/Content_negotiation)
+- HTTP [內容協商](/zh-TW/docs/Web/HTTP/Guides/Content_negotiation)

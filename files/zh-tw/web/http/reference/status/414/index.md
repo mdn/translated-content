@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`414 URI Too Long`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示用戶端請求的 URI 長度超過伺服器願意解析的範圍。
+HTTP **`414 URI Too Long`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示用戶端請求的 URI 長度超過伺服器願意解析的範圍。
 
 此錯誤可能發生於以下幾種罕見情況：
 
@@ -60,5 +60,5 @@ Content-Length: 1234
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
 - {{Glossary("URI")}}

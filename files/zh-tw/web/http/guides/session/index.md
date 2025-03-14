@@ -62,7 +62,7 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 
 ### 請求方法
 
-HTTP 定義了一組[請求方法](/zh-TW/docs/Web/HTTP/Methods)，指示對資源執行的所需操作。雖然它們也可以是名詞，但這些請求方法有時被稱為 HTTP 動詞。最常見的請求是 `GET` 和 `POST`：
+HTTP 定義了一組[請求方法](/zh-TW/docs/Web/HTTP/Reference/Methods)，指示對資源執行的所需操作。雖然它們也可以是名詞，但這些請求方法有時被稱為 HTTP 動詞。最常見的請求是 `GET` 和 `POST`：
 
 - {{HTTPMethod("GET")}} 方法請求指定資源的數據表示。使用 `GET` 的請求應僅檢索數據。
 - {{HTTPMethod("POST")}} 方法將數據發送到伺服器，以便它可以更改其狀態。這是通常用於 [HTML 表單](/zh-TW/docs/Learn_web_development/Extensions/Forms)的方法。
@@ -150,7 +150,7 @@ X-Cache: Error from cloudfront
 
 ### 回應狀態碼
 
-[HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)指示特定的 HTTP 請求是否成功完成。回應分為五類：資訊回應、成功回應、重新導向訊息、用戶端錯誤回應和伺服器錯誤回應。
+[HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)指示特定的 HTTP 請求是否成功完成。回應分為五類：資訊回應、成功回應、重新導向訊息、用戶端錯誤回應和伺服器錯誤回應。
 
 - {{HTTPStatus(200)}}: OK。請求已成功。
 - {{HTTPStatus(301)}}: Moved Permanently。此回應碼表示所請求的資源的 URI 已更改。
@@ -159,6 +159,6 @@ X-Cache: Error from cloudfront
 ## 參見
 
 - [URL](/zh-TW/docs/Web/URI)
-- [HTTP 標頭](/zh-TW/docs/Web/HTTP/Headers)
-- [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Methods)
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
+- [HTTP 標頭](/zh-TW/docs/Web/HTTP/Reference/Headers)
+- [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Reference/Methods)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)

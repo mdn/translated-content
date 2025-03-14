@@ -27,10 +27,10 @@ ETag: "<etag_value>"
 ## Directives
 
 - `W/` {{optional_inline}}
-  - : `'W/'` （區分大小寫）表示資源使用 [Weak etags](/zh-TW/docs/Web/HTTP/Conditional_requests#weak_validation)。
+  - : `'W/'` （區分大小寫）表示資源使用 [Weak etags](/zh-TW/docs/Web/HTTP/Guides/Conditional_requests#weak_validation)。
     Weak etags 很容易產生，但較不適合用在版本比對；Strong etags 很難有效率的產生，但很適合用在版本比對。
     同一資源的兩個 weak etags 一致時，可以視為是同個版本，但其內容並非分毫不差。
-    比如說 weak etags 可以用在 [byte range requests](/zh-TW/docs/Web/HTTP/Headers/Accept-Ranges) 上預防快取，不過帶有 strong etags 的請求仍然可能被快取住。
+    比如說 weak etags 可以用在 [byte range requests](/zh-TW/docs/Web/HTTP/Reference/Headers/Accept-Ranges) 上預防快取，不過帶有 strong etags 的請求仍然可能被快取住。
 - "\<etag_value>"
   - : 代表資源的版本。它的格式是由雙引號包著的 ASCII 字元組成的，像是： `"675af34563dc-tr34"`。
     產生 `ETag` 值的方式沒有一定。不過通常會是資料的 hash 值、最後修改時間的 hash 值，或者是版本號。

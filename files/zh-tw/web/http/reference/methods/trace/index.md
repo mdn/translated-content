@@ -59,4 +59,4 @@ TRACE /index.html
 
 ## 參見
 
-- [HTTP 方法](/zh-TW/docs/Web/HTTP/Methods)
+- [HTTP 方法](/zh-TW/docs/Web/HTTP/Reference/Methods)

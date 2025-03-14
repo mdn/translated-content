@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`500 Internal Server Error`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Status#伺服器錯誤回應)狀態碼表示伺服器遇到了一個意外情況，導致無法完成請求。該錯誤是一種通用的「全方位」回應，表示伺服器找不到更適當的 [5XX 錯誤](/zh-TW/docs/Web/HTTP/Status#伺服器錯誤回應)來回應請求。
+HTTP **`500 Internal Server Error`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#伺服器錯誤回應)狀態碼表示伺服器遇到了一個意外情況，導致無法完成請求。該錯誤是一種通用的「全方位」回應，表示伺服器找不到更適當的 [5XX 錯誤](/zh-TW/docs/Web/HTTP/Reference/Status#伺服器錯誤回應)來回應請求。
 
 如果你是訪客並在瀏覽網頁時看到 `500` 錯誤，這通常需要伺服器擁有者或管理員進行調查與修復。`500` 錯誤可能由多種因素引起，例如伺服器配置錯誤、記憶體不足（OOM）、未處理的異常錯誤、檔案權限設定不當，或其他更複雜的技術問題。伺服器管理員可以主動記錄伺服器錯誤回應的發生情況（例如 500 狀態碼）及相關請求的詳細資訊，以便日後改善服務的穩定性。
 
@@ -56,4 +56,4 @@ Content-Length: 123
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)

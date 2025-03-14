@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`408 Request Timeout`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示伺服器希望關閉這個未使用的連接。408 在一些伺服器上發送，_即使用戶端沒有任何先前的請求也會這樣_。
+HTTP **`408 Request Timeout`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器希望關閉這個未使用的連接。408 在一些伺服器上發送，_即使用戶端沒有任何先前的請求也會這樣_。
 
 在回應中伺服器應該發送 {{HTTPHeader("Connection", "Connection: close")}} 標頭欄位，因為 `408` 表示伺服器決定關閉連接，而不是繼續等待。
 
@@ -66,6 +66,6 @@ Content-Type: text/html
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
 - {{HTTPHeader("Connection")}}
 - {{HTTPHeader("X-DNS-Prefetch-Control")}}

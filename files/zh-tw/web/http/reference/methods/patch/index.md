@@ -18,7 +18,7 @@ l10n:
 
 `PATCH`（像 {{HTTPMethod("POST")}} 一樣）*可能*會對其他資源產生副作用。
 
-要找出伺服器是否支持 `PATCH`，伺服器可以通過將其添加到 {{HTTPHeader("Allow")}} 或 {{HTTPHeader("Access-Control-Allow-Methods")}}（對於 [CORS](/zh-TW/docs/Web/HTTP/CORS)）回應標頭中的列表來宣告其支持。
+要找出伺服器是否支持 `PATCH`，伺服器可以通過將其添加到 {{HTTPHeader("Allow")}} 或 {{HTTPHeader("Access-Control-Allow-Methods")}}（對於 [CORS](/zh-TW/docs/Web/HTTP/Guides/CORS)）回應標頭中的列表來宣告其支持。
 
 另一個（隱式）表明 `PATCH` 被允許的指示是 {{HTTPHeader("Accept-Patch")}} 標頭的存在，該標頭指定伺服器接受的修補程式文件格式。
 

@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`451 Unavailable For Legal Reasons`** [用戶端回應錯誤](/zh-TW/docs/Web/HTTP/Status#用戶端回應錯誤)狀態碼表示用戶請求的資源由於法律原因而無法提供，例如遭受法律訴訟的網頁。
+HTTP **`451 Unavailable For Legal Reasons`** [用戶端回應錯誤](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端回應錯誤)狀態碼表示用戶請求的資源由於法律原因而無法提供，例如遭受法律訴訟的網頁。
 
 ## 狀態
 
@@ -46,6 +46,6 @@ Content-Type: text/html
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
 - [維基百科：HTTP 451](https://zh.wikipedia.org/wiki/HTTP_451)
 - [維基百科：華氏 451 度](https://zh.wikipedia.org/wiki/華氏451度)（該回應碼的數字詞源）

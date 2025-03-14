@@ -35,4 +35,4 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## 參見
 
-- [HTTP 認證](/zh-TW/docs/Web/HTTP/Authentication)
+- [HTTP 認證](/zh-TW/docs/Web/HTTP/Guides/Authentication)

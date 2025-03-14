@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`416 Range Not Satisfiable`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示伺服器無法提供請求的範圍。該回應最可能的原因是文件不包含這樣的[範圍](/zh-TW/docs/Web/HTTP/Range_requests)，或者 {{HTTPHeader("Range")}} 標頭值雖然語法正確，但卻毫無意義。
+HTTP **`416 Range Not Satisfiable`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器無法提供請求的範圍。該回應最可能的原因是文件不包含這樣的[範圍](/zh-TW/docs/Web/HTTP/Guides/Range_requests)，或者 {{HTTPHeader("Range")}} 標頭值雖然語法正確，但卻毫無意義。
 
 `416` 回應訊息應包含一個 {{HTTPHeader("Content-Range")}} 標頭，指出一個無法滿足的範圍（即 `'*'`），後面跟著一個 `'/'` 以及資源當前的長度。例如 `Content-Range: bytes */12777`
 
@@ -46,8 +46,8 @@ Content-Range: bytes */800
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("206", "206 Partial Content")}}
-- [HTTP 範圍請求](/zh-TW/docs/Web/HTTP/Range_requests)
+- [HTTP 範圍請求](/zh-TW/docs/Web/HTTP/Guides/Range_requests)
 - {{HTTPHeader("Content-Range")}}
 - {{HTTPHeader("Range")}}

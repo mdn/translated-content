@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`511 Network Authentication Required`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Status#伺服器錯誤回應)狀態碼表示用戶端需要進行驗證以獲得網路訪問權限。此狀態不是由原始伺服器產生，而是由攔截流量的{{Glossary("Proxy_server", "代理伺服器")}}發送，以控制對網路的訪問。
+HTTP **`511 Network Authentication Required`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#伺服器錯誤回應)狀態碼表示用戶端需要進行驗證以獲得網路訪問權限。此狀態不是由原始伺服器產生，而是由攔截流量的{{Glossary("Proxy_server", "代理伺服器")}}發送，以控制對網路的訪問。
 
 網路運營商有時需要某些驗證、接受條款或其他用戶互動才能授予訪問權限（例如在網吧或機場）。他們通常使用媒體存取控制（MAC）位址來識別未執行此操作的用戶端。
 
@@ -50,5 +50,5 @@ Content-Type: text/html
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
 - {{Glossary("Proxy server", "代理伺服器")}}

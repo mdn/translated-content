@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`505 HTTP Version Not Supported`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Status#伺服器錯誤回應)狀態碼表示伺服器不支援請求中使用的 HTTP 版本。
+HTTP **`505 HTTP Version Not Supported`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#伺服器錯誤回應)狀態碼表示伺服器不支援請求中使用的 HTTP 版本。
 
 當請求行格式不正確時，這種錯誤可能會發生。例如請求行為 `GET /path to resource HTTP/1.1` 或以 `\n` 作為結尾而非 `\r\n`。例如，中介設備（如負載平衡器）可能無法正確處理轉發請求中的請求行，如以下範例。
 
@@ -53,5 +53,5 @@ Content-Length: 123
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
 - {{HTTPHeader("Upgrade")}} 標頭

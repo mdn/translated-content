@@ -99,7 +99,7 @@ HTTP 回應狀態碼表示特定的 [HTTP](/zh-TW/docs/Web/HTTP) 請求是否已
 - {{HTTPStatus(405, "405 Method Not Allowed")}}
   - : 伺服器知道請求方法，但不支援目標資源。例如，API 可能不允許調用 `DELETE` 來刪除資源。
 - {{HTTPStatus(406, "406 Not Acceptable")}}
-  - : 當網路伺服器在[伺服器驅動的內容協商](/zh-TW/docs/Web/HTTP/Content_negotiation#server-driven_negotiation)後，找不到符合用戶代理給定標準的內容時，就會發送此回應。
+  - : 當網路伺服器在[伺服器驅動的內容協商](/zh-TW/docs/Web/HTTP/Guides/Content_negotiation#server-driven_negotiation)後，找不到符合用戶代理給定標準的內容時，就會發送此回應。
 - {{HTTPStatus(407, "407 Proxy Authentication Required")}}
   - : 這與 `401 Unauthorized` 類似，但需要代理進行驗證。
 - {{HTTPStatus(408, "408 Request Timeout")}}

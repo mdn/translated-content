@@ -24,5 +24,5 @@ HTTP **`418 I'm a teapot`** 錯誤回應碼表示伺服器拒絕沖泡咖啡，�
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
 - [維基百科：超文字咖啡壺控制協定](https://zh.wikipedia.org/wiki/超文本咖啡壶控制协议)

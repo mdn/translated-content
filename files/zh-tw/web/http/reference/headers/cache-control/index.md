@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Cache-Control
 
 {{HTTPSidebar}}
 
-**`Cache-Control`** 標頭中的*指令*用來控制 HTTP 請求、回應的[快取](/zh-TW/docs/Web/HTTP/Caching)行為。HTTP 請求跟回應可以擁有不同的快取控制指令。
+**`Cache-Control`** 標頭中的*指令*用來控制 HTTP 請求、回應的[快取](/zh-TW/docs/Web/HTTP/Guides/Caching)行為。HTTP 請求跟回應可以擁有不同的快取控制指令。
 
 | Header type                                     | {{Glossary("General header")}} |
 | ----------------------------------------------- | ------------------------------ |
@@ -94,7 +94,7 @@ Cache-Control: stale-if-error=<秒數>
 ### 驗證與重新讀取
 
 - `must-revalidate`
-  - : 表示一旦過期，必須向後端伺服器做[驗證](/zh-TW/docs/Web/HTTP/Caching#cache_validation)。
+  - : 表示一旦過期，必須向後端伺服器做[驗證](/zh-TW/docs/Web/HTTP/Guides/Caching#cache_validation)。
 - `proxy-revalidate`
   - : 跟 `must-revalidate` 類似，不過只對共用快取軟體生效（比如 nginx）。私有快取會無視這個指令。
 - `immutable`
@@ -157,7 +157,7 @@ Cache-Control: max-age=0, must-revalidate
 
 ## See also
 
-- [HTTP Caching FAQ](/zh-TW/docs/Web/HTTP/Caching)
+- [HTTP Caching FAQ](/zh-TW/docs/Web/HTTP/Guides/Caching)
 - [Caching Tutorial for Web Authors and Webmasters](https://www.mnot.net/cache_docs/)
 - Guide: _[`Cache-Control` for civilians](https://csswizardry.com/2019/03/cache-control-for-civilians/)_
 - {{HTTPHeader("Age")}}

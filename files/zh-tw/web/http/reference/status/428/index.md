@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`428 Precondition Required`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示伺服器要求請求是[有條件的](/zh-TW/docs/Web/HTTP/Conditional_requests)。
+HTTP **`428 Precondition Required`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器要求請求是[有條件的](/zh-TW/docs/Web/HTTP/Guides/Conditional_requests)。
 
 通常 428 回應意味著必要的先決條件標頭（例如 {{HTTPHeader("If-Match")}}）的**缺失**。當先決條件標頭與伺服器端狀態**不匹配**時，回應應為 {{HTTPStatus("412", "412 Precondition Failed")}}。
 
@@ -53,7 +53,7 @@ Content-Type: application/json
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
-- [HTTP 條件請求](/zh-TW/docs/Web/HTTP/Conditional_requests)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
+- [HTTP 條件請求](/zh-TW/docs/Web/HTTP/Guides/Conditional_requests)
 - 條件標頭：{{HTTPHeader("If-Match")}}、{{HTTPHeader("If-None-Match")}}、{{HTTPHeader("If-Modified-Since")}}、{{HTTPHeader("If-Unmodified-Since")}}、{{HTTPHeader("If-Range")}}
 - {{HTTPStatus(412)}}

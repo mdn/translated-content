@@ -33,7 +33,7 @@ original_slug: Learn/Server-side/First_steps/Introduction
 
 網頁瀏覽器使用超文本傳輸協定（**H**yper**T**ext **T**ransfer **P**rotocol, {{glossary("HTTP")}}）與網頁伺服器（[web servers](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)）溝通。當你點選網頁上的連結、送出表單，或者執行搜尋，一段 **HTTP 請求**（**request**）會由你的瀏覽器送至目標伺服器。
 
-該請求（request）包含一個用來指定受影響資源的 URL、一個定義行為的請求方法（例如對資源進行 get、delete 或 post）與當進行[HTTP POST 方法](/zh-TW/docs/Web/HTTP/Methods/POST)時可能包含編碼於 URL 參數中的額外資訊（經由一段[查詢字串](https://en.wikipedia.org/wiki/Query_string)送出的各個鍵值對），或是在關聯的{{glossary("Cookie", "cookies")}}中。
+該請求（request）包含一個用來指定受影響資源的 URL、一個定義行為的請求方法（例如對資源進行 get、delete 或 post）與當進行[HTTP POST 方法](/zh-TW/docs/Web/HTTP/Reference/Methods/POST)時可能包含編碼於 URL 參數中的額外資訊（經由一段[查詢字串](https://en.wikipedia.org/wiki/Query_string)送出的各個鍵值對），或是在關聯的{{glossary("Cookie", "cookies")}}中。
 
 網頁伺服器等待用戶端的請求訊息、獲得後處理它們，並以一個**HTTP 回應**（**response**）訊息回覆至網頁瀏覽器。該回應包含一個狀態訊息說明本次請求是否達成（例如："HTTP/1.1 200 OK"表示成功）。
 
@@ -43,7 +43,7 @@ original_slug: Learn/Server-side/First_steps/Introduction
 
 以下的靜態網站（static site）圖展示一個基本的網頁伺服器架構，其中靜態網站意謂當無論何時有個特定資源的請求，伺服器始終回傳相同的硬編碼內容（hard-coded content）。當一個使用者想要引導到一個網頁時，瀏覽器送出的 HTTP "GET" 請求指的就是該資源的 URL。
 
-此伺服器從它的檔案系統取回被請求的文件，並回傳一個包含此文件以及[成功狀態碼](/zh-TW/docs/Web/HTTP/Status#成功回應)（通常為 200 OK）的 HTTP 回應。若檔案因某些原因無法被取回，則回傳一個錯誤狀態（參見 [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應) 與 [伺服器端錯誤回應](/zh-TW/docs/Web/HTTP/Status#伺服器端錯誤回應)）。
+此伺服器從它的檔案系統取回被請求的文件，並回傳一個包含此文件以及[成功狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status#成功回應)（通常為 200 OK）的 HTTP 回應。若檔案因某些原因無法被取回，則回傳一個錯誤狀態（參見 [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應) 與 [伺服器端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#伺服器端錯誤回應)）。
 
 ![A simplified diagram of a static web server.](basic_static_app_server.png)
 

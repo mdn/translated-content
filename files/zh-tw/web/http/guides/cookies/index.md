@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**HTTP Cookie**（Web Cookie、瀏覽器 Cookie）是伺服器發送到使用者瀏覽器的一小段資料。瀏覽器可能會儲存這個 Cookie，並在之後的請求中將其發送回同一個伺服器。通常，HTTP Cookie 用於判斷兩個請求是否來自同一個瀏覽器，例如保持使用者登錄狀態。它為[無狀態](/zh-TW/docs/Web/HTTP/Overview#http_is_stateless_but_not_sessionless)的 HTTP 協定記住了有狀態的資訊。
+**HTTP Cookie**（Web Cookie、瀏覽器 Cookie）是伺服器發送到使用者瀏覽器的一小段資料。瀏覽器可能會儲存這個 Cookie，並在之後的請求中將其發送回同一個伺服器。通常，HTTP Cookie 用於判斷兩個請求是否來自同一個瀏覽器，例如保持使用者登錄狀態。它為[無狀態](/zh-TW/docs/Web/HTTP/Guides/Overview#http_is_stateless_but_not_sessionless)的 HTTP 協定記住了有狀態的資訊。
 
 Cookie 主要用於三個目的：
 
@@ -136,7 +136,7 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 
 #### SameSite 屬性
 
-[`SameSite`](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 屬性允許伺服器指定 Cookie 是否/何時與跨站請求一起發送（其中 {{Glossary("Site")}} 由可註冊域和*方案*：http 或 https 定義）。這提供了一些保護，防止跨站請求偽造攻擊（{{Glossary("CSRF")}}）。
+[`SameSite`](/zh-TW/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 屬性允許伺服器指定 Cookie 是否/何時與跨站請求一起發送（其中 {{Glossary("Site")}} 由可註冊域和*方案*：http 或 https 定義）。這提供了一些保護，防止跨站請求偽造攻擊（{{Glossary("CSRF")}}）。
 它有三個可能的值：`Strict`、`Lax` 和 `None`。
 
 使用 `Strict` 時，瀏覽器僅在來自 Cookie 原始站點的請求中發送 Cookie。`Lax` 類似，但瀏覽器在用戶*導航*到 Cookie 原始站點時（即使用戶來自不同站點）也會發送 Cookie。例如，通過從外部站點跟踪連接。 `None` 指定在原始和跨站點請求中都發送 Cookie，但僅在*安全上下文*中（即，如果 `SameSite=None`，則必須還設置 `Secure` 屬性）。如果沒有設置 `SameSite` 屬性，則將 Cookie 視為 `Lax`。
@@ -148,7 +148,7 @@ Set-Cookie: mykey=myvalue; SameSite=Strict
 ```
 
 > [!NOTE]
-> 關於 `SameSite` 的相關標準最近發生了變化（MDN 文件記錄了上述新行為）。請參見 cookie 的[瀏覽器相容性](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie#瀏覽器相容性)表，了解特定瀏覽器版本中如何處理該屬性的訊息：
+> 關於 `SameSite` 的相關標準最近發生了變化（MDN 文件記錄了上述新行為）。請參見 cookie 的[瀏覽器相容性](/zh-TW/docs/Web/HTTP/Reference/Headers/Set-Cookie#瀏覽器相容性)表，了解特定瀏覽器版本中如何處理該屬性的訊息：
 >
 > - 如果未指定 `SameSite`，則 `SameSite=Lax` 是新的默認值。以前，默認情況下會將 Cookie 發送給所有請求。
 > - 現在，具有 `SameSite=None` 的 Cookie 還必須指定 `Secure` 屬性（它們需要安全上下文）。
@@ -172,7 +172,7 @@ Set-Cookie: mykey=myvalue; SameSite=Strict
 > [!NOTE]
 > 在應用伺服器上，網路應用程式*必須*檢查包括前綴的完整 Cookie 名稱。用戶代理*不會*在將其在請求的 {{HTTPHeader("Cookie")}} 標頭中發送之前從 Cookie 中刪除前綴。
 
-有關 Cookie 前綴的更多訊息以及目前瀏覽器支持的情況，請參見 [Set-Cookie 參考文章的前綴部分](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie#cookie_prefixes)。
+有關 Cookie 前綴的更多訊息以及目前瀏覽器支持的情況，請參見 [Set-Cookie 參考文章的前綴部分](/zh-TW/docs/Web/HTTP/Reference/Headers/Set-Cookie#cookie_prefixes)。
 
 #### 使用 Document.cookie 進行 JavaScript 訪問
 
@@ -197,7 +197,7 @@ console.log(document.cookie);
 減少涉及 Cookie 的攻擊的方法：
 
 - 使用 `HttpOnly` 屬性防止通過 JavaScript 訪問 Cookie 值。
-- 用於敏感訊息（例如指示身份驗證的 Cookie）的 Cookie 應具有較短的生命期，並將 `SameSite` 屬性設置為 `Strict` 或 `Lax`。（請參見 [SameSite 屬性](#samesite_屬性)）在[支持 SameSite 的瀏覽器](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie#瀏覽器相容性)中，這確保了身份驗證 Cookie 不會隨跨站請求發送。這將使應用伺服器對請求有效地未經身份驗證。
+- 用於敏感訊息（例如指示身份驗證的 Cookie）的 Cookie 應具有較短的生命期，並將 `SameSite` 屬性設置為 `Strict` 或 `Lax`。（請參見 [SameSite 屬性](#samesite_屬性)）在[支持 SameSite 的瀏覽器](/zh-TW/docs/Web/HTTP/Reference/Headers/Set-Cookie#瀏覽器相容性)中，這確保了身份驗證 Cookie 不會隨跨站請求發送。這將使應用伺服器對請求有效地未經身份驗證。
 
 ## 追蹤和隱私
 
@@ -219,7 +219,7 @@ Cookie 與特定域和方案（如 `http` 或 `https`）相關，如果 {{HTTPHe
 
 開發人員希望尊重用戶隱私並最小化第三方跟蹤的場景中提供了一些有用的功能：
 
-- 伺服器可以（並且應該）設置 Cookie 的 [SameSite 屬性](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value)，以指定是否可以發送第三方 Cookie。
+- 伺服器可以（並且應該）設置 Cookie 的 [SameSite 屬性](/zh-TW/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value)，以指定是否可以發送第三方 Cookie。
 - [獨立分區狀態的 Cookie（CHIPS）](/zh-TW/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)允許開發人員將其 Cookie 選擇性地選擇為分區儲存，每個頂級站點都有一個獨立的 Cookie 庫。這使得不跟蹤用途的第三方 Cookie 在不允許用於第三方跟蹤的瀏覽器中繼續工作。
 
 ### 與 Cookie 相關的法規

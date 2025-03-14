@@ -28,4 +28,4 @@ HTTP **`201 Created`** 成功回應碼表示請求已成功並導致資源的創
 
 ## 參見
 
-- [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Methods)
+- [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Reference/Methods)

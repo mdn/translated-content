@@ -35,4 +35,4 @@ HTTP **`200 OK`** 成功回應碼表示請求已成功。默認情況下，200 �
 
 ## 參見
 
-- [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Methods)
+- [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Reference/Methods)

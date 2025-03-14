@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`410 Gone`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示目標資源在原始伺服器上已不再可用，且此狀況可能是永久性的。410 回應是預設可快取的。
+HTTP **`410 Gone`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示目標資源在原始伺服器上已不再可用，且此狀況可能是永久性的。410 回應是預設可快取的。
 
 用戶端不應重複請求返回 410 回應的資源，網站擁有者應移除或替換返回此狀態碼的連結。如果伺服器擁有者是不知道這種情況是暫時的還是永久的，則應改用 {{HTTPStatus(404)}} 狀態碼。
 
@@ -51,6 +51,6 @@ Content-Length: 212
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus(404)}}
 - [410 gone](https://zh.wikipedia.org/wiki/HTTP状态码#410)

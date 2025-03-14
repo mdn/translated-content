@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`Allow`** {{Glossary("response header", "回應標頭")}}列出了資源所支援的[請求方法](/zh-TW/docs/Web/HTTP/Methods)集合。如果伺服器回應 {{HTTPStatus("405", "405 Method Not Allowed")}} 狀態碼，則必須傳送此標頭以指示哪些請求方法可以替代使用。空的 `Allow` 值表示資源不允許任何請求方法，這可能暫時發生在某些特定的資源上。
+HTTP **`Allow`** {{Glossary("response header", "回應標頭")}}列出了資源所支援的[請求方法](/zh-TW/docs/Web/HTTP/Reference/Methods)集合。如果伺服器回應 {{HTTPStatus("405", "405 Method Not Allowed")}} 狀態碼，則必須傳送此標頭以指示哪些請求方法可以替代使用。空的 `Allow` 值表示資源不允許任何請求方法，這可能暫時發生在某些特定的資源上。
 
 <table class="properties">
   <tbody>

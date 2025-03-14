@@ -38,7 +38,7 @@ WWW-Authenticate: Basic realm="Access to staging site"
 
 ## 參見
 
-- [HTTP 驗證](/zh-TW/docs/Web/HTTP/Authentication)
+- [HTTP 驗證](/zh-TW/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Authorization")}}
 - {{HTTPHeader("Proxy-Authorization")}}

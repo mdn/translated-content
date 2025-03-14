@@ -39,7 +39,7 @@ Access-Control-Allow-Headers: *
 - `<header-name>`
   - : 支援的請求標頭名稱。標頭可以列出任意數量的標頭名稱，以逗號分隔。
 - `*`（萬用字元）
-  - : 值 `*` 僅在無憑證的請求（無 [HTTP cookie](/zh-TW/docs/Web/HTTP/Cookies) 或 HTTP 認證資訊的請求）中作為特別的萬用字元值。在有憑證的請求中，它被視為字面標頭名稱 `*`，沒有特別語意。請注意，{{HTTPHeader("Authorization")}} 標頭不能使用萬用字元，必須明確列出。
+  - : 值 `*` 僅在無憑證的請求（無 [HTTP cookie](/zh-TW/docs/Web/HTTP/Guides/Cookies) 或 HTTP 認證資訊的請求）中作為特別的萬用字元值。在有憑證的請求中，它被視為字面標頭名稱 `*`，沒有特別語意。請注意，{{HTTPHeader("Authorization")}} 標頭不能使用萬用字元，必須明確列出。
 
 ## 範例
 

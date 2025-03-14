@@ -15,7 +15,7 @@ HTTP **`Authorization`** 請求標頭可以用來提供憑證，以便用戶代�
 這個標頭會在跨源重定向中被刪除。
 
 > [!NOTE]
-> 此標頭是[通用 HTTP 身份驗證框架](/zh-TW/docs/Web/HTTP/Authentication#通用_HTTP_身份驗證框架)的一部分。它可以與多種[身份驗證方案](/zh-TW/docs/Web/HTTP/Authentication#身份驗證方案)一起使用。
+> 此標頭是[通用 HTTP 身份驗證框架](/zh-TW/docs/Web/HTTP/Guides/Authentication#通用_HTTP_身份驗證框架)的一部分。它可以與多種[身份驗證方案](/zh-TW/docs/Web/HTTP/Guides/Authentication#身份驗證方案)一起使用。
 
 <table class="properties">
   <tbody>
@@ -61,12 +61,12 @@ Authorization: Digest username=<username>,
 
 - `<auth-scheme>`
 
-  - : 定義如何編碼憑證的[身份驗證方案](/zh-TW/docs/Web/HTTP/Authentication#身份驗證方案)。一些更常見的類型（不區分大小寫）包括：[`Basic`](/zh-TW/docs/Web/HTTP/Authentication#基本身份驗證方案)、`Digest`、`Negotiate` 和 `AWS4-HMAC-SHA256`。
+  - : 定義如何編碼憑證的[身份驗證方案](/zh-TW/docs/Web/HTTP/Guides/Authentication#身份驗證方案)。一些更常見的類型（不區分大小寫）包括：[`Basic`](/zh-TW/docs/Web/HTTP/Guides/Authentication#基本身份驗證方案)、`Digest`、`Negotiate` 和 `AWS4-HMAC-SHA256`。
 
     > [!NOTE]
-    > 有關更多訊息/選項，請參見 [HTTP Authentication > Authentication schemes](/zh-TW/docs/Web/HTTP/Authentication#身份驗證方案)
+    > 有關更多訊息/選項，請參見 [HTTP Authentication > Authentication schemes](/zh-TW/docs/Web/HTTP/Guides/Authentication#身份驗證方案)
 
-除了 `<auth-scheme>` 之外，其餘指令是特定於每個[身份驗證方案](/zh-TW/docs/Web/HTTP/Authentication#身份驗證方案)的。一般來說，你需要檢查相關的規範（以下列出了一小部分方案的關鍵字）。
+除了 `<auth-scheme>` 之外，其餘指令是特定於每個[身份驗證方案](/zh-TW/docs/Web/HTTP/Guides/Authentication#身份驗證方案)的。一般來說，你需要檢查相關的規範（以下列出了一小部分方案的關鍵字）。
 
 ### 基本
 
@@ -75,7 +75,7 @@ Authorization: Digest username=<username>,
   - : 根據指定方案編碼的憑證。
 
     > [!NOTE]
-    > 有關編碼演算法的訊息，請參見以下範例：在 {{HTTPHeader("WWW-Authenticate")}} 中，在 [HTTP Authentication](/zh-TW/docs/Web/HTTP/Authentication) 中，以及在相關規範中。
+    > 有關編碼演算法的訊息，請參見以下範例：在 {{HTTPHeader("WWW-Authenticate")}} 中，在 [HTTP Authentication](/zh-TW/docs/Web/HTTP/Guides/Authentication) 中，以及在相關規範中。
 
 ### 摘要
 
@@ -116,7 +116,7 @@ Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 
 > **警告：** {{Glossary("Base64")}} 編碼可以很容易地反轉以獲取原始名稱和密碼，因此基本身份驗證是完全不安全的。使用 {{Glossary("HTTPS")}} 是被推薦的，尤其是在使用 `Basic` 身份驗證時。
 
-另見 [HTTP authentication](/zh-TW/docs/Web/HTTP/Authentication)，瞭解如何配置 Apache 或 Nginx 伺服器以使用 HTTP 基本身份驗證來保護你的網站。
+另見 [HTTP authentication](/zh-TW/docs/Web/HTTP/Guides/Authentication)，瞭解如何配置 Apache 或 Nginx 伺服器以使用 HTTP 基本身份驗證來保護你的網站。
 
 ## 規範
 
@@ -128,7 +128,7 @@ Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 
 ## 參見
 
-- [HTTP authentication](/zh-TW/docs/Web/HTTP/Authentication)
+- [HTTP authentication](/zh-TW/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Proxy-Authorization")}}
 - {{HTTPHeader("Proxy-Authenticate")}}

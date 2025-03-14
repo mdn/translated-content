@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`Accept-Encoding`** {{glossary("request header", "請求")}}和{{glossary("response header", "回應標頭")}}表示發送方可以理解的內容編碼（通常是壓縮演算法）。在請求中，伺服器使用[內容協商](/zh-TW/docs/Web/HTTP/Content_negotiation)從用戶端的編碼提案中選擇一個，並使用 {{HTTPHeader("Content-Encoding")}} 回應標頭通知用戶端選擇。在回應中，它提供有關伺服器可以理解的內容編碼的訊息，以便在後續對資源的請求中使用該編碼。例如，如果對資源的請求（例如 {{HTTPMethod("PUT")}}）使用了不支援的編碼，則 `Accept-Encoding` 會包含在 {{HTTPStatus("415", "415 Unsupported Media Type")}} 回應中。
+HTTP **`Accept-Encoding`** {{glossary("request header", "請求")}}和{{glossary("response header", "回應標頭")}}表示發送方可以理解的內容編碼（通常是壓縮演算法）。在請求中，伺服器使用[內容協商](/zh-TW/docs/Web/HTTP/Guides/Content_negotiation)從用戶端的編碼提案中選擇一個，並使用 {{HTTPHeader("Content-Encoding")}} 回應標頭通知用戶端選擇。在回應中，它提供有關伺服器可以理解的內容編碼的訊息，以便在後續對資源的請求中使用該編碼。例如，如果對資源的請求（例如 {{HTTPMethod("PUT")}}）使用了不支援的編碼，則 `Accept-Encoding` 會包含在 {{HTTPStatus("415", "415 Unsupported Media Type")}} 回應中。
 
 即使用戶端和伺服器都支援相同的壓縮演算法，如果是 `identity` 值也是可接受的，伺服器可能選擇不壓縮回應的主體。這在兩種常見情況下發生：
 
@@ -98,7 +98,7 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 ## 參見
 
 - {{HTTPStatus("415", "415 Unsupported Media Type")}}
-- HTTP [內容協商](/zh-TW/docs/Web/HTTP/Content_negotiation)
+- HTTP [內容協商](/zh-TW/docs/Web/HTTP/Guides/Content_negotiation)
 - 有關內容協商結果的標頭：{{HTTPHeader("Content-Encoding")}}
 - 其他類似的標頭：{{HTTPHeader("TE")}}、{{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}}
 - {{Glossary("Brotli compression", "Brotli 壓縮")}}

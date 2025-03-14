@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`429 Too Many Requests`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示用戶端在一定時間內發送了太多請求。要求用戶端降低請求頻率的這種機制通常被稱為「{{glossary("rate limit", "速率限制")}}」。
+HTTP **`429 Too Many Requests`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示用戶端在一定時間內發送了太多請求。要求用戶端降低請求頻率的這種機制通常被稱為「{{glossary("rate limit", "速率限制")}}」。
 
 此回應可能包含一個 {{HTTPHeader("Retry-After")}} 標頭，用以指示用戶端應等待多長時間後才能重新發送請求。
 
@@ -55,6 +55,6 @@ Retry-After: 3600
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
 - {{HTTPHeader("Retry-After")}}
 - Python 解決方案：[如何避免 HTTP 錯誤 429 python](https://stackoverflow.com/questions/22786068/how-to-avoid-http-error-429-too-many-requests-python)

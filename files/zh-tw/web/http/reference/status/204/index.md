@@ -34,4 +34,4 @@ HTTP **`204 No Content`** 成功回應碼表示請求已成功，但用戶端不
 
 ## 參見
 
-- [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Methods)
+- [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Reference/Methods)

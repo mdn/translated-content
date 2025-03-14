@@ -58,6 +58,6 @@ GET /index.html
 
 ## 參見
 
-- [HTTP 標頭](/zh-TW/docs/Web/HTTP/Headers)
+- [HTTP 標頭](/zh-TW/docs/Web/HTTP/Reference/Headers)
 - {{HTTPHeader("Range")}}
 - {{HTTPMethod("POST")}}

@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`503 Service Unavailable`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Status#伺服器錯誤回應)狀態碼表示伺服器尚未準備好處理請求。
+HTTP **`503 Service Unavailable`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#伺服器錯誤回應)狀態碼表示伺服器尚未準備好處理請求。
 
 常見的原因包括伺服器正在維護或過載。在維護期間，伺服器管理員可能會暫時將所有流量導向 `503` 頁面，或者在軟體更新期間自動發生這種情況。在過載的情況下，一些伺服器端應用程式會在記憶體、CPU 或連接池等資源達到上限時，以 `503` 狀態拒絕請求。丟棄傳入的請求可以產生背壓，防止伺服器的計算資源被完全耗盡，從而避免更嚴重的故障。如果特定用戶端的請求受到{{Glossary("Rate_limit", "速率限制")}}的影響，則應返回適當的回應狀態碼 {{HTTPStatus("429", "429 Too Many Requests")}}。
 
@@ -63,5 +63,5 @@ Content-Length: 123
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
 - {{HTTPHeader("Retry-After")}}

@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`504 Gateway Timeout`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Status#伺服器錯誤回應)狀態碼表示當伺服器充當閘道器或{{Glossary("Proxy_server", "代理")}}時，未能及時從上游伺服器獲得回應，以完成請求。這與 {{HTTPStatus("502", "502 Bad Gateway")}} 類似，不同之處在於 `504` 狀態碼表示代理或閘道器在一定時間內未從源伺服器接收到任何 HTTP 回應。
+HTTP **`504 Gateway Timeout`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#伺服器錯誤回應)狀態碼表示當伺服器充當閘道器或{{Glossary("Proxy_server", "代理")}}時，未能及時從上游伺服器獲得回應，以完成請求。這與 {{HTTPStatus("502", "502 Bad Gateway")}} 類似，不同之處在於 `504` 狀態碼表示代理或閘道器在一定時間內未從源伺服器接收到任何 HTTP 回應。
 
 導致 `504` 錯誤的原因有很多，解決此類問題通常需要伺服器管理員進行調查和偵錯，或者該網站可能在稍後自行恢復。例外情況是用戶端的網路錯誤，特別是如果該服務對其他訪客仍然有效，且用戶端使用 VPN 或其他自訂網路設定。在這種情況下，用戶端應檢查網路設定、防火牆配置、代理設定、DNS 組態等。
 
@@ -55,5 +55,5 @@ Content-Length: 123
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("502", "502 Bad Gateway")}}

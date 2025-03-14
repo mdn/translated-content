@@ -32,7 +32,7 @@ CORS 機制支持瀏覽器和伺服器之間的安全跨來源請求和數據傳
 
 ## 功能概述
 
-跨來源資源共享標準通過新增 [HTTP 標頭](/zh-TW/docs/Web/HTTP/Headers)來工作，這些標頭讓伺服器描述哪些來源被允許從 Web 瀏覽器讀取該訊息。此外，對於可能對伺服器數據產生副作用的 HTTP 請求方法（特別是 {{HTTPMethod("GET")}} 以外的 HTTP 方法，或具有特定 [MIME 類型](/zh-TW/docs/Web/HTTP/MIME_types)的 {{HTTPMethod("POST")}} 方法），規範要求瀏覽器「預檢」該請求，通過 HTTP {{HTTPMethod("OPTIONS")}} 請求方法向伺服器詢問支持的方法，然後在獲得伺服器「批准」後發送實際請求。伺服器還可以通知用戶端是否應該與請求一起發送「憑證」（例如 [Cookie](/zh-TW/docs/Web/HTTP/Cookies) 和 [HTTP 身份驗證](/zh-TW/docs/Web/HTTP/Authentication)）。
+跨來源資源共享標準通過新增 [HTTP 標頭](/zh-TW/docs/Web/HTTP/Reference/Headers)來工作，這些標頭讓伺服器描述哪些來源被允許從 Web 瀏覽器讀取該訊息。此外，對於可能對伺服器數據產生副作用的 HTTP 請求方法（特別是 {{HTTPMethod("GET")}} 以外的 HTTP 方法，或具有特定 [MIME 類型](/zh-TW/docs/Web/HTTP/Guides/MIME_types)的 {{HTTPMethod("POST")}} 方法），規範要求瀏覽器「預檢」該請求，通過 HTTP {{HTTPMethod("OPTIONS")}} 請求方法向伺服器詢問支持的方法，然後在獲得伺服器「批准」後發送實際請求。伺服器還可以通知用戶端是否應該與請求一起發送「憑證」（例如 [Cookie](/zh-TW/docs/Web/HTTP/Guides/Cookies) 和 [HTTP 身份驗證](/zh-TW/docs/Web/HTTP/Guides/Authentication)）。
 
 CORS 失敗會導致錯誤，但出於安全原因，關於錯誤的具體訊息對 JavaScript 是不可用的。代碼只知道發生了錯誤。確定具體錯誤的唯一方法是查看瀏覽器的控制台以獲取詳細訊息。
 
@@ -220,7 +220,7 @@ Access-Control-Max-Age: 86400
 
 伺服器還發送了帶有值「`X-PINGOTHER, Content-Type`」的 `Access-Control-Allow-Headers`，確認這些是允許與實際請求一起使用的標頭。像 `Access-Control-Allow-Methods` 一樣，`Access-Control-Allow-Headers` 是一個以逗號分隔的可接受標頭列表。
 
-最後，{{HTTPHeader("Access-Control-Max-Age")}} 給出了預檢請求的回應可以在不發送另一個預檢請求的情況下緩存的秒數值。默認值為 5 秒。在本例中，最大年齡是 86400 秒（= 24 小時）。請注意，每個瀏覽器都有一個[最大內部值](/zh-TW/docs/Web/HTTP/Headers/Access-Control-Max-Age)，當 `Access-Control-Max-Age` 超過該值時，該值優先。
+最後，{{HTTPHeader("Access-Control-Max-Age")}} 給出了預檢請求的回應可以在不發送另一個預檢請求的情況下緩存的秒數值。默認值為 5 秒。在本例中，最大年齡是 86400 秒（= 24 小時）。請注意，每個瀏覽器都有一個[最大內部值](/zh-TW/docs/Web/HTTP/Reference/Headers/Access-Control-Max-Age)，當 `Access-Control-Max-Age` 超過該值時，該值優先。
 
 一旦預檢請求完成，真正的請求就會被發送：
 
@@ -282,7 +282,7 @@ CORS 協定最初要求該行為，但[後來已更改為不再需要](https://g
 > [!NOTE]
 > 當對不同域進行帶憑證的請求時，仍將適用第三方 Cookie 政策。無論伺服器和用戶端的任何設置如本章所述，該政策始終會強制執行。
 
-由 {{domxref("fetch()")}} 或 {{domxref("XMLHttpRequest")}} 和 CORS 公開的最有趣的功能是能夠發出「帶憑證」的請求，這些請求會考慮到 [HTTP cookies](/zh-TW/docs/Web/HTTP/Cookies) 和 HTTP 認證訊息。默認情況下，在跨源 `fetch()` 或 `XMLHttpRequest` 調用中，瀏覽器將*不*發送憑證。
+由 {{domxref("fetch()")}} 或 {{domxref("XMLHttpRequest")}} 和 CORS 公開的最有趣的功能是能夠發出「帶憑證」的請求，這些請求會考慮到 [HTTP cookies](/zh-TW/docs/Web/HTTP/Guides/Cookies) 和 HTTP 認證訊息。默認情況下，在跨源 `fetch()` 或 `XMLHttpRequest` 調用中，瀏覽器將*不*發送憑證。
 
 要求 `fetch()` 請求包括憑證，請在 {{domxref("Request.Request()", "Request()")}} 構造函數中的 `credentials` 選項設置為 `"include"`。
 
@@ -370,7 +370,7 @@ CORS 預檢請求絕不能包含憑證。預檢請求的*回應*必須指定 `Ac
 
 在正常的第三方 Cookie 政策下，請求中的 Cookie（第 10 行）也可能被屏蔽。因此，強制執行的 Cookie 政策可能會使本章節中描述的功能無效，有效地阻止你進行攜帶憑證的請求。
 
-關於 [SameSite](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 屬性的 Cookie 政策將適用。
+關於 [SameSite](/zh-TW/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 屬性的 Cookie 政策將適用。
 
 ## HTTP 回應標頭
 
@@ -497,7 +497,7 @@ Access-Control-Request-Headers: <field-name>[,<field-name>]*
 
 ## 參見
 
-- [CORS 錯誤](/zh-TW/docs/Web/HTTP/CORS/Errors)
+- [CORS 錯誤](/zh-TW/docs/Web/HTTP/Guides/CORS/Errors)
 - [啟用 CORS：我想為我的伺服器添加 CORS 支持](https://enable-cors.org/server.html)
 - [Fetch API](/zh-TW/docs/Web/API/Fetch_API)
 - {{domxref("XMLHttpRequest")}}

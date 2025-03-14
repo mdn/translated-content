@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**跨來源資源政策**是透過 [`Cross-Origin-Resource-Policy` HTTP 標頭](/zh-TW/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy)設定的一項政策，允許網站和應用程式選擇保護自己免受其他來源（例如使用 `<script>` 和 `<img>` 元素發出的請求）的某些請求，以減輕推測性側信道攻擊（例如[幽靈漏洞](https://zh.wikipedia.org/wiki/幽灵漏洞)）以及跨網站腳本包含攻擊。
+**跨來源資源政策**是透過 [`Cross-Origin-Resource-Policy` HTTP 標頭](/zh-TW/docs/Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy)設定的一項政策，允許網站和應用程式選擇保護自己免受其他來源（例如使用 `<script>` 和 `<img>` 元素發出的請求）的某些請求，以減輕推測性側信道攻擊（例如[幽靈漏洞](https://zh.wikipedia.org/wiki/幽灵漏洞)）以及跨網站腳本包含攻擊。
 
 CORP 是超越預設的{{Glossary("same-origin policy", "同源政策")}}的另一層保護。跨來源資源政策補充了[跨來源讀取封鎖](https://fetch.spec.whatwg.org/#corb)（CORB），這是一種防止某些跨來源讀取的機制。
 
@@ -52,7 +52,7 @@ Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
 
 2018 年初，兩個名為 _Meltdown_ 和 _Spectre_ 的側信道硬體漏洞被披露。這些漏洞由於推測執行功能中的競爭條件導致敏感數據洩漏，而推測執行旨在提高性能。
 
-作為回應，Chromium 推出了 [Cross-Origin Read Blocking](https://fetch.spec.whatwg.org/#corb)，自動保護某些資源（`Content-Type` 為 HTML、JSON 和 XML）免受跨來源讀取。如果應用程式未提供 [`no-sniff` 指令](/zh-TW/docs/Web/HTTP/Headers/X-Content-Type-Options)，Chromium 將嘗試猜測 `Content-Type` 並應用保護。
+作為回應，Chromium 推出了 [Cross-Origin Read Blocking](https://fetch.spec.whatwg.org/#corb)，自動保護某些資源（`Content-Type` 為 HTML、JSON 和 XML）免受跨來源讀取。如果應用程式未提供 [`no-sniff` 指令](/zh-TW/docs/Web/HTTP/Reference/Headers/X-Content-Type-Options)，Chromium 將嘗試猜測 `Content-Type` 並應用保護。
 
 `Cross-Origin-Resource-Policy` 是一個選擇性啟用的回應標頭，可以保護*任何*資源；瀏覽器無需嗅探 MIME 類型。
 

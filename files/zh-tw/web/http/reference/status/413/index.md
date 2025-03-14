@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`413 Content Too Large`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示請求實體大於伺服器定義的限制。伺服器可能會關閉連接或返回一個 {{HTTPHeader("Retry-After")}} 標頭欄位。
+HTTP **`413 Content Too Large`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示請求實體大於伺服器定義的限制。伺服器可能會關閉連接或返回一個 {{HTTPHeader("Retry-After")}} 標頭欄位。
 
 在 {{rfc("9110")}} 之前，此狀態的回應詞為 **`Payload Too Large`**。這個訊息仍然被廣泛使用。
 
@@ -57,6 +57,6 @@ Content-Length: 97
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
 - {{HTTPHeader("Connection")}}
 - {{HTTPHeader("Retry-After")}}

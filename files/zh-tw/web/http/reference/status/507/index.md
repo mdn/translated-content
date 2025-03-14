@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`507 Insufficient Storage`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Status#伺服器錯誤回應)狀態碼表示伺服器無法執行某個動作，因為它沒有足夠的可用儲存空間以成功完成該請求。
+HTTP **`507 Insufficient Storage`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#伺服器錯誤回應)狀態碼表示伺服器無法執行某個動作，因為它沒有足夠的可用儲存空間以成功完成該請求。
 
 該狀態碼最初在基於 Web 的分散式編寫和版本控制（{{Glossary("WebDAV")}}）情境中使用，但後來擴展至其他情境，用以描述伺服器資源耗盡的狀況。導致此錯誤的常見原因可能包括伺服器目錄的可用空間耗盡、執行操作時可用記憶體不足，或達到內部限制（例如應用程式專用記憶體限制等）。導致此錯誤的請求不一定必須包含內容，因為該請求在成功時可能會在伺服器上建立資源。
 
@@ -60,5 +60,5 @@ Content-Length: 230
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("413", "413 Content Too Large")}}
