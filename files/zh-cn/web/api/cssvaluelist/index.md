@@ -24,7 +24,7 @@ l10n:
 
 ## 实例属性
 
-_继承自其父接口 {{DOMxRef("CSSValue")}} 的属性_。
+_继承其父接口 {{DOMxRef("CSSValue")}} 的属性_。
 
 - {{DOMxRef("CSSValueList.length")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : 一个 `unsigned long` 类型的值，表示列表中 `CSSValues` 的数量。
