@@ -27,5 +27,4 @@ l10n:
 ## 関連情報
 
 - その他の座標プロパティ: {{domxref("DOMPoint.x", "x")}},
-  {{domxref("DOMPoint.z", "z")}}, および視点位置である {{domxref("DOMPoint.w",
-    "w")}}
+  {{domxref("DOMPoint.z", "z")}}, および視点位置である {{domxref("DOMPoint.w", "w")}}
