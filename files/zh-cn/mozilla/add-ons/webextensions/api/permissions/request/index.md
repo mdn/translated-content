@@ -44,7 +44,7 @@ let requesting = browser.permissions.request(
 
 ## 示例
 
-下述代码添加了用于请求各种权限，并在请求完成后记录请求的结果和扩展的权限的点击器。
+下述代码添加了用于请求各种权限，并在请求完成后记录请求的结果和扩展的权限的点击处理器。
 
 ```js
 const permissionsToRequest = {
