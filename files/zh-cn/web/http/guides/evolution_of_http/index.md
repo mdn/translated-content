@@ -1,7 +1,6 @@
 ---
 title: HTTP 的发展
 slug: Web/HTTP/Guides/Evolution_of_HTTP
-original_slug: Web/HTTP/Evolution_of_HTTP
 ---
 
 {{HTTPSidebar}}

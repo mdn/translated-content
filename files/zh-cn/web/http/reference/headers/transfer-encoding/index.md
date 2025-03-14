@@ -1,7 +1,6 @@
 ---
 title: Transfer-Encoding
 slug: Web/HTTP/Reference/Headers/Transfer-Encoding
-original_slug: Web/HTTP/Headers/Transfer-Encoding
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---

@@ -1,7 +1,6 @@
 ---
 title: 原因：invalid token 'xyz' in CORS header 'Access-Control-Allow-Headers'
 slug: Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowHeader
-original_slug: Web/HTTP/CORS/Errors/CORSInvalidAllowHeader
 ---
 
 {{HTTPSidebar}}

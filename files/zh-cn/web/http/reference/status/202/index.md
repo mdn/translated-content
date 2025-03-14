@@ -1,7 +1,6 @@
 ---
 title: 202 Accepted
 slug: Web/HTTP/Reference/Status/202
-original_slug: Web/HTTP/Status/202
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: 431 Request Header Fields Too Large
 slug: Web/HTTP/Reference/Status/431
-original_slug: Web/HTTP/Status/431
 ---
 
 {{HTTPSidebar}}

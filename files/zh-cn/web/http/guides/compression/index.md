@@ -1,7 +1,6 @@
 ---
 title: HTTP 协议中的数据压缩
 slug: Web/HTTP/Guides/Compression
-original_slug: Web/HTTP/Compression
 l10n:
   sourceCommit: f2f16cd329788046c2ee97097377d7529983c742
 ---

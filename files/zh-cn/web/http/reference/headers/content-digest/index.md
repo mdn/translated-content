@@ -1,7 +1,6 @@
 ---
 title: Content-Digest
 slug: Web/HTTP/Reference/Headers/Content-Digest
-original_slug: Web/HTTP/Headers/Content-Digest
 l10n:
   sourceCommit: a8f881645d776d1303a0a25bd884f95e1b2805e1
 ---

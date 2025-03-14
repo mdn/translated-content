@@ -1,7 +1,6 @@
 ---
 title: Content-Language
 slug: Web/HTTP/Reference/Headers/Content-Language
-original_slug: Web/HTTP/Headers/Content-Language
 l10n:
   sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
 ---

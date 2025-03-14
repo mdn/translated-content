@@ -1,7 +1,6 @@
 ---
 title: 原因：Multiple CORS header 'Access-Control-Allow-Origin' not allowed
 slug: Web/HTTP/Guides/CORS/Errors/CORSMultipleAllowOriginNotAllowed
-original_slug: Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed
 ---
 
 {{HTTPSidebar}}

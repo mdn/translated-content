@@ -1,7 +1,6 @@
 ---
 title: Access-Control-Expose-Headers
 slug: Web/HTTP/Reference/Headers/Access-Control-Expose-Headers
-original_slug: Web/HTTP/Headers/Access-Control-Expose-Headers
 ---
 
 {{HTTPSidebar}}

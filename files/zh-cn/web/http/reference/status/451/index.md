@@ -1,7 +1,6 @@
 ---
 title: 451 Unavailable For Legal Reasons
 slug: Web/HTTP/Reference/Status/451
-original_slug: Web/HTTP/Status/451
 ---
 
 {{HTTPSidebar}}

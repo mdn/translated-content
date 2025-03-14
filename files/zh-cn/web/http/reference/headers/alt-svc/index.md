@@ -1,7 +1,6 @@
 ---
 title: Alt-Svc
 slug: Web/HTTP/Reference/Headers/Alt-Svc
-original_slug: Web/HTTP/Headers/Alt-Svc
 ---
 
 {{HTTPSidebar}}

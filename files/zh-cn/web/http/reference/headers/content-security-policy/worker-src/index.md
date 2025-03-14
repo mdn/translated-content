@@ -1,7 +1,6 @@
 ---
 title: "CSP: worker-src"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/worker-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/worker-src
 ---
 
 {{HTTPSidebar}}

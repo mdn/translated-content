@@ -1,7 +1,6 @@
 ---
 title: 303 See Other
 slug: Web/HTTP/Reference/Status/303
-original_slug: Web/HTTP/Status/303
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Retry-After
 slug: Web/HTTP/Reference/Headers/Retry-After
-original_slug: Web/HTTP/Headers/Retry-After
 ---
 
 {{HTTPSidebar}}

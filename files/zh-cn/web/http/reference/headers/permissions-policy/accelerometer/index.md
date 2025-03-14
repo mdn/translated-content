@@ -1,7 +1,6 @@
 ---
 title: "Permissions-Policy: accelerometer"
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/accelerometer
-original_slug: Web/HTTP/Headers/Permissions-Policy/accelerometer
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---

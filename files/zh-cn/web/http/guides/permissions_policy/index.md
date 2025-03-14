@@ -1,7 +1,6 @@
 ---
 title: 权限策略
 slug: Web/HTTP/Guides/Permissions_Policy
-original_slug: Web/HTTP/Permissions_Policy
 ---
 
 {{HTTPSidebar}}

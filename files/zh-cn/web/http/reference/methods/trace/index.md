@@ -1,7 +1,6 @@
 ---
 title: TRACE
 slug: Web/HTTP/Reference/Methods/TRACE
-original_slug: Web/HTTP/Methods/TRACE
 ---
 
 {{HTTPSidebar}}

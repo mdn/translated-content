@@ -1,7 +1,6 @@
 ---
 title: Access-Control-Allow-Methods
 slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Methods
-original_slug: Web/HTTP/Headers/Access-Control-Allow-Methods
 l10n:
   sourceCommit: 3eea6ef9070a54ffd6379164ff9fd39db66b5172
 ---

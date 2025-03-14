@@ -1,7 +1,6 @@
 ---
 title: OPTIONS
 slug: Web/HTTP/Reference/Methods/OPTIONS
-original_slug: Web/HTTP/Methods/OPTIONS
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: HTTP 请求方法
 slug: Web/HTTP/Reference/Methods
-original_slug: Web/HTTP/Methods
 ---
 
 {{HTTPSidebar}}

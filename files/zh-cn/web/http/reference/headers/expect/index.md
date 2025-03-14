@@ -1,7 +1,6 @@
 ---
 title: Expect
 slug: Web/HTTP/Reference/Headers/Expect
-original_slug: Web/HTTP/Headers/Expect
 ---
 
 {{HTTPSidebar}}

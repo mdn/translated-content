@@ -1,7 +1,6 @@
 ---
 title: HTTP 概述
 slug: Web/HTTP/Guides/Overview
-original_slug: Web/HTTP/Overview
 l10n:
   sourceCommit: 5f0ee8a970aded9221273700aa8c5be964d6c1c1
 ---

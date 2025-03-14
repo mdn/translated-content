@@ -1,7 +1,6 @@
 ---
 title: 302 Found
 slug: Web/HTTP/Reference/Status/302
-original_slug: Web/HTTP/Status/302
 l10n:
   sourceCommit: 6d81ba6606ce5473cadd085c37eaf4960e99a238
 ---

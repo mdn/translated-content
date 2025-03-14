@@ -1,7 +1,6 @@
 ---
 title: Content-Location
 slug: Web/HTTP/Reference/Headers/Content-Location
-original_slug: Web/HTTP/Headers/Content-Location
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---

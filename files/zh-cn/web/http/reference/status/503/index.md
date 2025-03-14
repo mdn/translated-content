@@ -1,7 +1,6 @@
 ---
 title: 503 Service Unavailable
 slug: Web/HTTP/Reference/Status/503
-original_slug: Web/HTTP/Status/503
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: HTTP/1.x 的连接管理
 slug: Web/HTTP/Guides/Connection_management_in_HTTP_1.x
-original_slug: Web/HTTP/Connection_management_in_HTTP_1.x
 ---
 
 {{HTTPSidebar}}

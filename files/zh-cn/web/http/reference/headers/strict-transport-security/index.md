@@ -1,7 +1,6 @@
 ---
 title: Strict-Transport-Security
 slug: Web/HTTP/Reference/Headers/Strict-Transport-Security
-original_slug: Web/HTTP/Headers/Strict-Transport-Security
 ---
 
 {{HTTPSidebar}}

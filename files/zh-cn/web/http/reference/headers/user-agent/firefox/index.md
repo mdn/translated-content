@@ -1,7 +1,6 @@
 ---
 title: Firefox 用户代理字符串参考
 slug: Web/HTTP/Reference/Headers/User-Agent/Firefox
-original_slug: Web/HTTP/Headers/User-Agent/Firefox
 l10n:
   sourceCommit: 3a0b2df4396eac14f3439c1e517707a2f442c7ee
 ---

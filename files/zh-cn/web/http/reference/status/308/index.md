@@ -1,7 +1,6 @@
 ---
 title: 308 Permanent Redirect
 slug: Web/HTTP/Reference/Status/308
-original_slug: Web/HTTP/Status/308
 ---
 
 {{HTTPSidebar}}

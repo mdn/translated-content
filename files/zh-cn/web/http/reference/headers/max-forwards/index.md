@@ -1,7 +1,6 @@
 ---
 title: Max-Forwards
 slug: Web/HTTP/Reference/Headers/Max-Forwards
-original_slug: Web/HTTP/Headers/Max-Forwards
 ---
 
 {{HTTPSidebar}}

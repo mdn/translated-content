@@ -1,7 +1,6 @@
 ---
 title: 307 Temporary Redirect
 slug: Web/HTTP/Reference/Status/307
-original_slug: Web/HTTP/Status/307
 ---
 
 {{HTTPSidebar}}

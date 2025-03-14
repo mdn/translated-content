@@ -1,7 +1,6 @@
 ---
 title: Referrer-Policy
 slug: Web/HTTP/Reference/Headers/Referrer-Policy
-original_slug: Web/HTTP/Headers/Referrer-Policy
 ---
 
 {{HTTPSidebar}}

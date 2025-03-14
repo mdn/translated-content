@@ -1,7 +1,6 @@
 ---
 title: CONNECT
 slug: Web/HTTP/Reference/Methods/CONNECT
-original_slug: Web/HTTP/Methods/CONNECT
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Access-Control-Max-Age
 slug: Web/HTTP/Reference/Headers/Access-Control-Max-Age
-original_slug: Web/HTTP/Headers/Access-Control-Max-Age
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---

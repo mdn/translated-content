@@ -1,7 +1,6 @@
 ---
 title: HTTP 身份验证
 slug: Web/HTTP/Guides/Authentication
-original_slug: Web/HTTP/Authentication
 ---
 
 {{HTTPSidebar}}

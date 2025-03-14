@@ -1,7 +1,6 @@
 ---
 title: Forwarded
 slug: Web/HTTP/Reference/Headers/Forwarded
-original_slug: Web/HTTP/Headers/Forwarded
 ---
 
 {{HTTPSidebar}}

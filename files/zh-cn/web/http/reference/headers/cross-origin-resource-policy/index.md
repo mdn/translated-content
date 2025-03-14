@@ -1,7 +1,6 @@
 ---
 title: Cross-Origin-Resource-Policy
 slug: Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy
-original_slug: Web/HTTP/Headers/Cross-Origin-Resource-Policy
 l10n:
   sourceCommit: b54373ab9025ceb6eb404bd2538ebd4c01576c60
 ---

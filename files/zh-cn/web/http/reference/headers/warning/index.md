@@ -1,7 +1,6 @@
 ---
 title: Warning
 slug: Web/HTTP/Reference/Headers/Warning
-original_slug: Web/HTTP/Headers/Warning
 ---
 
 {{HTTPSidebar}}

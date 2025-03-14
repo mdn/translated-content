@@ -1,7 +1,6 @@
 ---
 title: Timing-Allow-Origin
 slug: Web/HTTP/Reference/Headers/Timing-Allow-Origin
-original_slug: Web/HTTP/Headers/Timing-Allow-Origin
 ---
 
 {{HTTPSidebar}}

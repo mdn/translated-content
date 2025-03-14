@@ -1,7 +1,6 @@
 ---
 title: X-DNS-Prefetch-Control
 slug: Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control
-original_slug: Web/HTTP/Headers/X-DNS-Prefetch-Control
 ---
 
 {{HTTPSidebar}}

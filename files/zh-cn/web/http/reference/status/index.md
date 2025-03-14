@@ -1,7 +1,6 @@
 ---
 title: HTTP 响应状态码
 slug: Web/HTTP/Reference/Status
-original_slug: Web/HTTP/Status
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: 301 Moved Permanently
 slug: Web/HTTP/Reference/Status/301
-original_slug: Web/HTTP/Status/301
 ---
 
 {{HTTPSidebar}}

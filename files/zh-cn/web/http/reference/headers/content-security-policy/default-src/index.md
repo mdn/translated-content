@@ -1,7 +1,6 @@
 ---
 title: CSP：default-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/default-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/default-src
 ---
 
 {{HTTPSidebar}}

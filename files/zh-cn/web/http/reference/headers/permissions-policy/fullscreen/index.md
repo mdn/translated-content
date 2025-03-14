@@ -1,7 +1,6 @@
 ---
 title: "Permissions-Policy: fullscreen"
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/fullscreen
-original_slug: Web/HTTP/Headers/Permissions-Policy/fullscreen
 l10n:
   sourceCommit: 7cd4706990ab95794415aee05ba0a9662e742a17
 ---

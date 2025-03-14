@@ -1,7 +1,6 @@
 ---
 title: "CSP: base-uri"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/base-uri
-original_slug: Web/HTTP/Headers/Content-Security-Policy/base-uri
 ---
 
 {{HTTPSidebar}}

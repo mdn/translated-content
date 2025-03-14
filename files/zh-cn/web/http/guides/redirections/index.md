@@ -1,7 +1,6 @@
 ---
 title: HTTP 的重定向
 slug: Web/HTTP/Guides/Redirections
-original_slug: Web/HTTP/Redirections
 l10n:
   sourceCommit: f2f16cd329788046c2ee97097377d7529983c742
 ---

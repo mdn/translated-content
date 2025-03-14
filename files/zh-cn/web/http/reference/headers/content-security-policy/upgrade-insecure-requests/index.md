@@ -1,7 +1,6 @@
 ---
 title: "CSP: upgrade-insecure-requests"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests
-original_slug: Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
 ---
 
 {{HTTPSidebar}}

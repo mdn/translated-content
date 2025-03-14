@@ -1,7 +1,6 @@
 ---
 title: Accept-Patch
 slug: Web/HTTP/Reference/Headers/Accept-Patch
-original_slug: Web/HTTP/Headers/Accept-Patch
 l10n:
   sourceCommit: 48d9e84c6473101112582296ee4c6e3d960a2f79
 ---

@@ -1,7 +1,6 @@
 ---
 title: HTTP 缓存
 slug: Web/HTTP/Guides/Caching
-original_slug: Web/HTTP/Caching
 ---
 
 {{HTTPSidebar}}

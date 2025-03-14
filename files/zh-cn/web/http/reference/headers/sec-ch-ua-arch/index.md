@@ -1,7 +1,6 @@
 ---
 title: Sec-CH-UA-Arch
 slug: Web/HTTP/Reference/Headers/Sec-CH-UA-Arch
-original_slug: Web/HTTP/Headers/Sec-CH-UA-Arch
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}

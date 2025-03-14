@@ -1,7 +1,6 @@
 ---
 title: 原因：CORS request not HTTP
 slug: Web/HTTP/Guides/CORS/Errors/CORSRequestNotHttp
-original_slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 ---
 
 {{HTTPSidebar}}

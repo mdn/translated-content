@@ -1,7 +1,6 @@
 ---
 title: Permissions-Policy
 slug: Web/HTTP/Reference/Headers/Permissions-Policy
-original_slug: Web/HTTP/Headers/Permissions-Policy
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}}

@@ -1,7 +1,6 @@
 ---
 title: TE
 slug: Web/HTTP/Reference/Headers/TE
-original_slug: Web/HTTP/Headers/TE
 ---
 
 {{HTTPSidebar}}

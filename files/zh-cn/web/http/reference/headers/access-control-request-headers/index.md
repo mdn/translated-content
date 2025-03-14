@@ -1,7 +1,6 @@
 ---
 title: Access-Control-Request-Headers
 slug: Web/HTTP/Reference/Headers/Access-Control-Request-Headers
-original_slug: Web/HTTP/Headers/Access-Control-Request-Headers
 l10n:
   sourceCommit: 38fb31b12de1019a538e868a90dd4dd4858e4871
 ---

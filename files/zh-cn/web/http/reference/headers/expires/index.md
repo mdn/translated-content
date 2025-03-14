@@ -1,7 +1,6 @@
 ---
 title: Expires
 slug: Web/HTTP/Reference/Headers/Expires
-original_slug: Web/HTTP/Headers/Expires
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---

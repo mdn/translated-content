@@ -1,7 +1,6 @@
 ---
 title: Content-DPR
 slug: Web/HTTP/Reference/Headers/Content-DPR
-original_slug: Web/HTTP/Headers/Content-DPR
 l10n:
   sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
 ---

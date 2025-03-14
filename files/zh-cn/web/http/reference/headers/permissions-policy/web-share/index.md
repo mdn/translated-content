@@ -1,7 +1,6 @@
 ---
 title: "Permissions-Policy: web-share"
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/web-share
-original_slug: Web/HTTP/Headers/Permissions-Policy/web-share
 l10n:
   sourceCommit: 7cd4706990ab95794415aee05ba0a9662e742a17
 ---

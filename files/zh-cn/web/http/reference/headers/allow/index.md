@@ -1,7 +1,6 @@
 ---
 title: Allow
 slug: Web/HTTP/Reference/Headers/Allow
-original_slug: Web/HTTP/Headers/Allow
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---

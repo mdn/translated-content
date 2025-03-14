@@ -1,7 +1,6 @@
 ---
 title: Via
 slug: Web/HTTP/Reference/Headers/Via
-original_slug: Web/HTTP/Headers/Via
 ---
 
 {{HTTPSidebar}}

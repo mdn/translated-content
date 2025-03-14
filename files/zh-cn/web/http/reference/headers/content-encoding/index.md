@@ -1,7 +1,6 @@
 ---
 title: Content-Encoding
 slug: Web/HTTP/Reference/Headers/Content-Encoding
-original_slug: Web/HTTP/Headers/Content-Encoding
 l10n:
   sourceCommit: ae86913908651e6008079242691e06b5e01d1c78
 ---

@@ -1,7 +1,6 @@
 ---
 title: 跨源资源共享（CORS）
 slug: Web/HTTP/Guides/CORS
-original_slug: Web/HTTP/CORS
 l10n:
   sourceCommit: a19e6ab98874804411266067ccdb9898b2afa7bf
 ---

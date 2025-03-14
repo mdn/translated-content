@@ -1,7 +1,6 @@
 ---
 title: 代理服务器与隧道
 slug: Web/HTTP/Guides/Proxy_servers_and_tunneling
-original_slug: Web/HTTP/Proxy_servers_and_tunneling
 l10n:
   sourceCommit: 83f30ecaaeb6227dc0d4551f71eb8be1cacb8e94
 ---

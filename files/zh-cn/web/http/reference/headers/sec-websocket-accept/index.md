@@ -1,7 +1,6 @@
 ---
 title: Sec-WebSocket-Accept
 slug: Web/HTTP/Reference/Headers/Sec-WebSocket-Accept
-original_slug: Web/HTTP/Headers/Sec-WebSocket-Accept
 ---
 
 {{HTTPSidebar}}

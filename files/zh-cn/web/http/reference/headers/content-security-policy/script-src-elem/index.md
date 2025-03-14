@@ -1,7 +1,6 @@
 ---
 title: "CSP: script-src-elem"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-elem
-original_slug: Web/HTTP/Headers/Content-Security-Policy/script-src-elem
 ---
 
 {{HTTPSidebar}}

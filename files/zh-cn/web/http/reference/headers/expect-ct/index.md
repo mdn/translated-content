@@ -1,7 +1,6 @@
 ---
 title: Expect-CT
 slug: Web/HTTP/Reference/Headers/Expect-CT
-original_slug: Web/HTTP/Headers/Expect-CT
 ---
 
 {{HTTPSidebar}}

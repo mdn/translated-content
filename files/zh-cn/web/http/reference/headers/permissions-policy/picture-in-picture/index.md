@@ -1,7 +1,6 @@
 ---
 title: "Permissions-Policy: picture-in-picture"
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/picture-in-picture
-original_slug: Web/HTTP/Headers/Permissions-Policy/picture-in-picture
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---

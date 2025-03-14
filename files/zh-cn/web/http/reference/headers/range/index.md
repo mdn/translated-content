@@ -1,7 +1,6 @@
 ---
 title: Range
 slug: Web/HTTP/Reference/Headers/Range
-original_slug: Web/HTTP/Headers/Range
 ---
 
 {{HTTPSidebar}}

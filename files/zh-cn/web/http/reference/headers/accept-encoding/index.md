@@ -1,7 +1,6 @@
 ---
 title: Accept-Encoding
 slug: Web/HTTP/Reference/Headers/Accept-Encoding
-original_slug: Web/HTTP/Headers/Accept-Encoding
 l10n:
   sourceCommit: ad2254c776cebeec3ff0a390a70886a4c4b57fb7
 ---

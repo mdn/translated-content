@@ -1,7 +1,6 @@
 ---
 title: 原因：CORS disabled
 slug: Web/HTTP/Guides/CORS/Errors/CORSDisabled
-original_slug: Web/HTTP/CORS/Errors/CORSDisabled
 ---
 
 {{HTTPSidebar}}

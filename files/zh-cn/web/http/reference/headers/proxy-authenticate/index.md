@@ -1,7 +1,6 @@
 ---
 title: Proxy-Authenticate
 slug: Web/HTTP/Reference/Headers/Proxy-Authenticate
-original_slug: Web/HTTP/Headers/Proxy-Authenticate
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: 428 Precondition Required
 slug: Web/HTTP/Reference/Status/428
-original_slug: Web/HTTP/Status/428
 ---
 
 {{HTTPSidebar}}

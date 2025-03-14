@@ -1,7 +1,6 @@
 ---
 title: 原因：CORS request did not succeed
 slug: Web/HTTP/Guides/CORS/Errors/CORSDidNotSucceed
-original_slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
 ---
 
 {{HTTPSidebar}}

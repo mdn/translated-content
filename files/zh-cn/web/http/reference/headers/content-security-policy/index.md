@@ -1,7 +1,6 @@
 ---
 title: Content-Security-Policy (CSP)
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy
-original_slug: Web/HTTP/Headers/Content-Security-Policy
 l10n:
   sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
 ---

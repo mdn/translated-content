@@ -1,7 +1,6 @@
 ---
 title: 内容协商
 slug: Web/HTTP/Guides/Content_negotiation
-original_slug: Web/HTTP/Content_negotiation
 ---
 
 {{HTTPSidebar}}

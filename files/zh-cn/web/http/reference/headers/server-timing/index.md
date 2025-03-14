@@ -1,7 +1,6 @@
 ---
 title: Server-Timing
 slug: Web/HTTP/Reference/Headers/Server-Timing
-original_slug: Web/HTTP/Headers/Server-Timing
 ---
 
 {{HTTPSidebar}}

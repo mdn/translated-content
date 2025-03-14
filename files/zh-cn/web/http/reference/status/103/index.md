@@ -1,7 +1,6 @@
 ---
 title: 103 Early Hints
 slug: Web/HTTP/Reference/Status/103
-original_slug: Web/HTTP/Status/103
 ---
 
 {{HTTPSidebar}}

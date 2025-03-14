@@ -1,7 +1,6 @@
 ---
 title: Sec-CH-UA-Bitness
 slug: Web/HTTP/Reference/Headers/Sec-CH-UA-Bitness
-original_slug: Web/HTTP/Headers/Sec-CH-UA-Bitness
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}

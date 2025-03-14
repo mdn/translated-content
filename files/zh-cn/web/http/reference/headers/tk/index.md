@@ -1,7 +1,6 @@
 ---
 title: Tk
 slug: Web/HTTP/Reference/Headers/Tk
-original_slug: Web/HTTP/Headers/Tk
 ---
 
 {{HTTPSidebar}}

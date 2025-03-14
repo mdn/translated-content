@@ -1,7 +1,6 @@
 ---
 title: "CSP: connect-src"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/connect-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
 ---
 
 {{HTTPSidebar}}

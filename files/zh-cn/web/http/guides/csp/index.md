@@ -1,7 +1,6 @@
 ---
 title: 内容安全策略（CSP）
 slug: Web/HTTP/Guides/CSP
-original_slug: Web/HTTP/CSP
 ---
 
 {{HTTPSidebar}}

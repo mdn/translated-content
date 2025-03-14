@@ -1,7 +1,6 @@
 ---
 title: 408 Request Timeout
 slug: Web/HTTP/Reference/Status/408
-original_slug: Web/HTTP/Status/408
 ---
 
 {{HTTPSidebar}}

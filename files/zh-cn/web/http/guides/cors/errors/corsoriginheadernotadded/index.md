@@ -1,7 +1,6 @@
 ---
 title: 原因：CORS header 'Origin' cannot be added
 slug: Web/HTTP/Guides/CORS/Errors/CORSOriginHeaderNotAdded
-original_slug: Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
 ---
 
 {{HTTPSidebar}}

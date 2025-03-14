@@ -1,7 +1,6 @@
 ---
 title: Accept
 slug: Web/HTTP/Reference/Headers/Accept
-original_slug: Web/HTTP/Headers/Accept
 l10n:
   sourceCommit: f75b2c86ae4168e59416aed4c7121f222afc201d
 ---

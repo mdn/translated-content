@@ -1,7 +1,6 @@
 ---
 title: X-Forwarded-Host
 slug: Web/HTTP/Reference/Headers/X-Forwarded-Host
-original_slug: Web/HTTP/Headers/X-Forwarded-Host
 ---
 
 {{HTTPSidebar}}

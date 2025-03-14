@@ -1,7 +1,6 @@
 ---
 title: NEL
 slug: Web/HTTP/Reference/Headers/NEL
-original_slug: Web/HTTP/Headers/NEL
 l10n:
   sourceCommit: 7ef65e18c747d5a6e109a0babf5c1ee3cb32a0a2
 ---

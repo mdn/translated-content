@@ -1,7 +1,6 @@
 ---
 title: Date
 slug: Web/HTTP/Reference/Headers/Date
-original_slug: Web/HTTP/Headers/Date
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---

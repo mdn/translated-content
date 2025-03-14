@@ -1,7 +1,6 @@
 ---
 title: X-Frame-Options
 slug: Web/HTTP/Reference/Headers/X-Frame-Options
-original_slug: Web/HTTP/Headers/X-Frame-Options
 ---
 
 {{HTTPSidebar}}

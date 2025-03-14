@@ -1,7 +1,6 @@
 ---
 title: 400 Bad Request
 slug: Web/HTTP/Reference/Status/400
-original_slug: Web/HTTP/Status/400
 ---
 
 {{HTTPSidebar}}

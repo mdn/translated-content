@@ -1,7 +1,6 @@
 ---
 title: DPR
 slug: Web/HTTP/Reference/Headers/DPR
-original_slug: Web/HTTP/Headers/DPR
 l10n:
   sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
 ---

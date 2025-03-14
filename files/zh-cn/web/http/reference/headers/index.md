@@ -1,7 +1,6 @@
 ---
 title: HTTP 标头
 slug: Web/HTTP/Reference/Headers
-original_slug: Web/HTTP/Headers
 l10n:
   sourceCommit: 217e25f9d2c39d2031ecf50f891c27e7f5b96e06
 ---

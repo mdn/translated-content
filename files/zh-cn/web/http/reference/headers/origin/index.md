@@ -1,7 +1,6 @@
 ---
 title: Origin
 slug: Web/HTTP/Reference/Headers/Origin
-original_slug: Web/HTTP/Headers/Origin
 ---
 
 {{HTTPSidebar}}

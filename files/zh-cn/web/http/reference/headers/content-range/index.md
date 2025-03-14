@@ -1,7 +1,6 @@
 ---
 title: Content-Range
 slug: Web/HTTP/Reference/Headers/Content-Range
-original_slug: Web/HTTP/Headers/Content-Range
 l10n:
   sourceCommit: beb5d4126bd1e5c838d0fa0eea3e996eb0a9e0b9
 ---

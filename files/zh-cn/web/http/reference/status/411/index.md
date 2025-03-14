@@ -1,7 +1,6 @@
 ---
 title: 411 Length Required
 slug: Web/HTTP/Reference/Status/411
-original_slug: Web/HTTP/Status/411
 ---
 
 {{HTTPSidebar}}

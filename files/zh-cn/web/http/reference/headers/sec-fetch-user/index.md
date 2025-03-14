@@ -1,7 +1,6 @@
 ---
 title: Sec-Fetch-User
 slug: Web/HTTP/Reference/Headers/Sec-Fetch-User
-original_slug: Web/HTTP/Headers/Sec-Fetch-User
 ---
 
 {{HTTPSidebar}}

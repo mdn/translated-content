@@ -1,7 +1,6 @@
 ---
 title: "CSP: form-action"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/form-action
-original_slug: Web/HTTP/Headers/Content-Security-Policy/form-action
 ---
 
 {{HTTPSidebar}}

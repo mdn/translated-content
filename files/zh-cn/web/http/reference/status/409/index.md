@@ -1,7 +1,6 @@
 ---
 title: 409 Conflict
 slug: Web/HTTP/Reference/Status/409
-original_slug: Web/HTTP/Status/409
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Clear-Site-Data
 slug: Web/HTTP/Reference/Headers/Clear-Site-Data
-original_slug: Web/HTTP/Headers/Clear-Site-Data
 ---
 
 {{HTTPSidebar}}

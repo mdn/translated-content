@@ -1,7 +1,6 @@
 ---
 title: Accept 默认值
 slug: Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values
-original_slug: Web/HTTP/Content_negotiation/List_of_default_Accept_values
 l10n:
   sourceCommit: 354d2d81c34e3fc1cddeaab42ef0e50b920da806
 ---

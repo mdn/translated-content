@@ -1,7 +1,6 @@
 ---
 title: 代理自动配置文件（PAC）文件
 slug: Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
-original_slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 ---
 
 {{HTTPSidebar}}

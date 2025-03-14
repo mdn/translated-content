@@ -1,7 +1,6 @@
 ---
 title: "CSP: block-all-mixed-content"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/block-all-mixed-content
-original_slug: Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content
 ---
 
 {{HTTPSidebar}}

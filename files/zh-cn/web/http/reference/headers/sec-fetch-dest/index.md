@@ -1,7 +1,6 @@
 ---
 title: Sec-Fetch-Dest
 slug: Web/HTTP/Reference/Headers/Sec-Fetch-Dest
-original_slug: Web/HTTP/Headers/Sec-Fetch-Dest
 ---
 
 {{HTTPSidebar}}

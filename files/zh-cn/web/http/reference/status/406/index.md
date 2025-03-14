@@ -1,7 +1,6 @@
 ---
 title: 406 Not Acceptable
 slug: Web/HTTP/Reference/Status/406
-original_slug: Web/HTTP/Status/406
 ---
 
 {{HTTPSidebar}}

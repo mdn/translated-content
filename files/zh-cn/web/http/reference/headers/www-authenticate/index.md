@@ -1,7 +1,6 @@
 ---
 title: WWW-Authenticate
 slug: Web/HTTP/Reference/Headers/WWW-Authenticate
-original_slug: Web/HTTP/Headers/WWW-Authenticate
 ---
 
 {{HTTPSidebar}}

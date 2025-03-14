@@ -1,7 +1,6 @@
 ---
 title: "Permissions-Policy: camera"
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/camera
-original_slug: Web/HTTP/Headers/Permissions-Policy/camera
 ---
 
 {{HTTPSidebar}}

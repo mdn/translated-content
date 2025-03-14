@@ -1,7 +1,6 @@
 ---
 title: Location
 slug: Web/HTTP/Reference/Headers/Location
-original_slug: Web/HTTP/Headers/Location
 ---
 
 {{HTTPSidebar}}

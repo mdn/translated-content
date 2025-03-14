@@ -1,7 +1,6 @@
 ---
 title: Sec-CH-UA-Full-Version
 slug: Web/HTTP/Reference/Headers/Sec-CH-UA-Full-Version
-original_slug: Web/HTTP/Headers/Sec-CH-UA-Full-Version
 ---
 
 {{HTTPSidebar}} {{deprecated_header}} {{securecontext_header}}

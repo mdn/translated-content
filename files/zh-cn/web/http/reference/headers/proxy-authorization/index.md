@@ -1,7 +1,6 @@
 ---
 title: Proxy-Authorization
 slug: Web/HTTP/Reference/Headers/Proxy-Authorization
-original_slug: Web/HTTP/Headers/Proxy-Authorization
 ---
 
 {{HTTPSidebar}}

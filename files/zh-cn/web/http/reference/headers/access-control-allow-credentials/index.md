@@ -1,7 +1,6 @@
 ---
 title: Access-Control-Allow-Credentials
 slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Credentials
-original_slug: Web/HTTP/Headers/Access-Control-Allow-Credentials
 l10n:
   sourceCommit: 369b8ec2c87b6c5b01d1527fddb6810ded3be782
 ---

@@ -1,7 +1,6 @@
 ---
 title: Trailer
 slug: Web/HTTP/Reference/Headers/Trailer
-original_slug: Web/HTTP/Headers/Trailer
 ---
 
 {{HTTPSidebar}}

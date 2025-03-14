@@ -1,7 +1,6 @@
 ---
 title: 404 Not Found
 slug: Web/HTTP/Reference/Status/404
-original_slug: Web/HTTP/Status/404
 ---
 
 {{HTTPSidebar}}

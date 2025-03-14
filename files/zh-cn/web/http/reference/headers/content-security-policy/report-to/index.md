@@ -1,7 +1,6 @@
 ---
 title: report-to
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/report-to
-original_slug: Web/HTTP/Headers/Content-Security-Policy/report-to
 ---
 
 {{HTTPSidebar}}

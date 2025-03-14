@@ -1,7 +1,6 @@
 ---
 title: "CSP: sandbox"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox
-original_slug: Web/HTTP/Headers/Content-Security-Policy/sandbox
 ---
 
 {{HTTPSidebar}}

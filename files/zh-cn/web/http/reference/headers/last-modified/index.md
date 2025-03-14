@@ -1,7 +1,6 @@
 ---
 title: Last-Modified
 slug: Web/HTTP/Reference/Headers/Last-Modified
-original_slug: Web/HTTP/Headers/Last-Modified
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Content-Disposition
 slug: Web/HTTP/Reference/Headers/Content-Disposition
-original_slug: Web/HTTP/Headers/Content-Disposition
 ---
 
 {{HTTPSidebar}}

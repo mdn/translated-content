@@ -1,7 +1,6 @@
 ---
 title: Early-Data
 slug: Web/HTTP/Reference/Headers/Early-Data
-original_slug: Web/HTTP/Headers/Early-Data
 ---
 
 {{SeeCompatTable}}{{HTTPSidebar}}

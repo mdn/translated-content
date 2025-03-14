@@ -1,7 +1,6 @@
 ---
 title: X-Forwarded-Proto
 slug: Web/HTTP/Reference/Headers/X-Forwarded-Proto
-original_slug: Web/HTTP/Headers/X-Forwarded-Proto
 ---
 
 {{HTTPSidebar}}

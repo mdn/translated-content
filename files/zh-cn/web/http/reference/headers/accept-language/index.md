@@ -1,7 +1,6 @@
 ---
 title: Accept-Language
 slug: Web/HTTP/Reference/Headers/Accept-Language
-original_slug: Web/HTTP/Headers/Accept-Language
 l10n:
   sourceCommit: 9cf66d1b65a11aff2e158fc090dd62a0862aeec8
 ---

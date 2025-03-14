@@ -1,7 +1,6 @@
 ---
 title: 使用用户代理字段进行浏览器检测
 slug: Web/HTTP/Guides/Browser_detection_using_the_user_agent
-original_slug: Web/HTTP/Browser_detection_using_the_user_agent
 ---
 
 {{HTTPSidebar}}为不同浏览器提供不同的网页或服务通常是一个坏主意。互联网的本意是让任何人都可以访问，无论他们使用哪个浏览器或设备。有一些方法可以根据功能的可用性而不是针对特定的浏览器来开发你的网站以逐步增强自身。

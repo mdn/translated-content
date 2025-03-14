@@ -1,7 +1,6 @@
 ---
 title: HTTP Cookie
 slug: Web/HTTP/Guides/Cookies
-original_slug: Web/HTTP/Cookies
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: "Permissions-Policy: attribution-reporting"
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/attribution-reporting
-original_slug: Web/HTTP/Headers/Permissions-Policy/attribution-reporting
 l10n:
   sourceCommit: ba5f28ab10ef1af48a55f363c8facc04a1f94479
 ---

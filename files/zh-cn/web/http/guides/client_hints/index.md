@@ -1,7 +1,6 @@
 ---
 title: HTTP 客户端提示（Client Hint）
 slug: Web/HTTP/Guides/Client_hints
-original_slug: Web/HTTP/Client_hints
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Link
 slug: Web/HTTP/Reference/Headers/Link
-original_slug: Web/HTTP/Headers/Link
 ---
 
 {{HTTPSidebar}}

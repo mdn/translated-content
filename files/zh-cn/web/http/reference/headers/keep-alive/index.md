@@ -1,7 +1,6 @@
 ---
 title: Keep-Alive
 slug: Web/HTTP/Reference/Headers/Keep-Alive
-original_slug: Web/HTTP/Headers/Keep-Alive
 l10n:
   sourceCommit: edefa50f18613599b92e2eb3e9556fbde220b360
 ---

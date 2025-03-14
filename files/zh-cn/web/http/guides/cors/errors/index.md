@@ -1,7 +1,6 @@
 ---
 title: CORS 错误
 slug: Web/HTTP/Guides/CORS/Errors
-original_slug: Web/HTTP/CORS/Errors
 ---
 
 {{HTTPSidebar}}

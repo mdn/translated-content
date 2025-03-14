@@ -1,7 +1,6 @@
 ---
 title: 典型的 HTTP 会话
 slug: Web/HTTP/Guides/Session
-original_slug: Web/HTTP/Session
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Save-Data
 slug: Web/HTTP/Reference/Headers/Save-Data
-original_slug: Web/HTTP/Headers/Save-Data
 ---
 
 {{HTTPSidebar}}

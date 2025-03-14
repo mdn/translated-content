@@ -1,7 +1,6 @@
 ---
 title: Access-Control-Request-Method
 slug: Web/HTTP/Reference/Headers/Access-Control-Request-Method
-original_slug: Web/HTTP/Headers/Access-Control-Request-Method
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
