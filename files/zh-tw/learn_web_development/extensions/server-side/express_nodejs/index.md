@@ -1,7 +1,6 @@
 ---
 title: Express web framework (Node.js/JavaScript)
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs
-original_slug: Learn/Server-side/Express_Nodejs
 ---
 
 {{LearnSidebar}}
