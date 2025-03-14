@@ -40,7 +40,7 @@ createSyncAccessHandle(options)
 ### 异常
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : 如果在读写（`readwrite`）模式下句柄的 {{domxref("PermissionStatus.state")}} 不是 `granted`，则抛出该错误。
+  - : 如果在读写（`readwrite`）模式下句柄的 {{domxref("PermissionStatus.state")}} 不是 `granted`，抛出此异常。
 - `InvalidStateError` {{domxref("DOMException")}}
   - : 如果 {{domxref('FileSystemSyncAccessHandle')}} 对象代表的不是[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)上的文件，抛出此异常。
 - `NotFoundError` {{domxref("DOMException")}}
