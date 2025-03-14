@@ -16,7 +16,7 @@ l10n:
 
 #### HTML 网页中的 MathML
 
-每个 MathML 公式都由一个根元素 [`math`](/zh-CN/docs/Web/MathML/Element/math) 表示，其可以直接嵌入到 HTML 网页中。默认情况下，公式将被内联渲染，并进行额外的调整以将其高度最小化。可以使用 `display="block"` 属性，以在独立的段落中渲染复杂的公式。
+每个 MathML 公式都由一个根元素 [`math`](/zh-CN/docs/Web/MathML/Reference/Element/math) 表示，其可以直接嵌入到 HTML 网页中。默认情况下，公式将被内联渲染，并进行额外的调整以将其高度最小化。可以使用 `display="block"` 属性，以在独立的段落中渲染复杂的公式。
 
 ```html
 <!doctype html>
@@ -82,11 +82,11 @@ l10n:
 ```
 
 > [!NOTE]
-> 这些脚本会执行特性检测（探测 [mspace](/zh-CN/docs/Web/MathML/Element/mspace) 元素和 [mpadded](/zh-CN/docs/Web/MathML/Element/mpadded) 元素），这优于[浏览器嗅探](/zh-CN/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)。此外，它们是在开源许可证下分发的，因此可以自由地将它们复制到你自己的服务器上，并根据需要进行调整。
+> 这些脚本会执行特性检测（探测 [mspace](/zh-CN/docs/Web/MathML/Reference/Element/mspace) 元素和 [mpadded](/zh-CN/docs/Web/MathML/Reference/Element/mpadded) 元素），这优于[浏览器嗅探](/zh-CN/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)。此外，它们是在开源许可证下分发的，因此可以自由地将它们复制到你自己的服务器上，并根据需要进行调整。
 
 #### 数学公式字体
 
-正如 [MathML 字体](/zh-CN/docs/Web/MathML/Fonts)中所解释的，数学公式字体有助于更好地渲染 MathML 的内容。因此，选择分享[此类字体的安装说明](/zh-CN/docs/Web/MathML/Fonts#installation_instructions)或以 [Web 字体](/zh-CN/docs/Learn_web_development/Core/Text_styling/Web_fonts)的形式提供它们是一个不错的主意。
+正如 [MathML 字体](/zh-CN/docs/Web/MathML/Guides/Fonts)中所解释的，数学公式字体有助于更好地渲染 MathML 的内容。因此，选择分享[此类字体的安装说明](/zh-CN/docs/Web/MathML/Guides/Fonts#installation_instructions)或以 [Web 字体](/zh-CN/docs/Learn_web_development/Core/Text_styling/Web_fonts)的形式提供它们是一个不错的主意。
 
 [MathFonts 页面](https://fred-wang.github.io/MathFonts/)提供了此类 Web 字体，以及适合的样式表。例如，只要在文档 head 下插入以下内容，即可选择带有回退的 Web 字体的拉丁现代字体：
 

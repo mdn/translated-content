@@ -119,6 +119,6 @@ original_slug: Web/MathML/Guides/Three_famous_mathematical_formulas
 - 别忘了使用 `<mrow>` 对子表达式进行分组。
 - 注意可伸缩和大型运算符！
 - 使用 [W3C 验证器](https://validator.w3.org/nu/)检查你的 HTML/MathML 标记中是否有意外的错误。
-- 如果你陷入困境，或感到手动编写 MathML 有多么痛苦，请随时使用[编写 MathML 的工具](/zh-CN/docs/Web/MathML/Authoring)（如 [TeXZilla](https://fred-wang.github.io/TeXZilla/)）。
+- 如果你陷入困境，或感到手动编写 MathML 有多么痛苦，请随时使用[编写 MathML 的工具](/zh-CN/docs/Web/MathML/Guides/Authoring)（如 [TeXZilla](https://fred-wang.github.io/TeXZilla/)）。
 
 {{PreviousMenu("Web/MathML/Guides/Tables", "Web/MathML/Guides")}}

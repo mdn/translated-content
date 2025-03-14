@@ -12,7 +12,7 @@ l10n:
 
 ## 属性
 
-此元素包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)。
+此元素包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)。
 
 某些浏览器还可能支持以下已弃用属性，并将 `<ms>` 元素的内容用指定的开引号和闭引号包围起来：
 

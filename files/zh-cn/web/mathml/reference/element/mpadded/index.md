@@ -12,7 +12,7 @@ l10n:
 
 ## 属性
 
-该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)以及以下属性：
+该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)以及以下属性：
 
 - `depth`
   - : 一个 {{cssxref("length-percentage")}}，指示 `<mpadded>` 元素的期望深度（基线以下）。
@@ -30,10 +30,10 @@ l10n:
 对于 `depth`、`height`、`lspace`、`voffset` 和 `width` 属性，一些浏览器可能接受更复杂的语法：
 
 1. 可选的 `+` 或 `-` 符号作为前缀，指定对应维度的增量或减量（如果缺失，则对应维度直接设置为指定值）。
-2. 后跟一个 [`<unsigned-number>`](/zh-CN/docs/Web/MathML/Values#mathml_特定类型)（下面称为 α）。
+2. 后跟一个 [`<unsigned-number>`](/zh-CN/docs/Web/MathML/Reference/Values#mathml_特定类型)（下面称为 α）。
 3. 可选地跟随一个值（如果缺失，则指定值被解释为“α 的百分比的 100 倍”）。
-   - 一个[单位](/zh-CN/docs/Web/MathML/Values#单位)。指定值的解释方式与旧版 MathML 长度相同。
-   - 一个[命名空间常量](/zh-CN/docs/Web/MathML/Values#常数)。指定值被解释为 α 乘以常量。
+   - 一个[单位](/zh-CN/docs/Web/MathML/Reference/Values#单位)。指定值的解释方式与旧版 MathML 长度相同。
+   - 一个[命名空间常量](/zh-CN/docs/Web/MathML/Reference/Values#常数)。指定值被解释为 α 乘以常量。
    - 一个伪单位 `width`、`height` 或 `depth`。指定值被解释为内容的对应维度的 α 倍。
    - 一个百分号后跟伪单位 `width`、`height` 或 `depth`。指定值被解释为内容的对应维度的 α%。
 

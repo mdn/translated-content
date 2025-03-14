@@ -38,7 +38,7 @@ original_slug: Web/MathML/Guides/Fractions_and_roots
 
 ## \<mfrac>、\<msqrt> 和 \<mroot> 的子树
 
-在 [MathML 使用入门](/zh-CN/docs/Web/MathML/Guides/Getting_started)文章中，我们学习了用于描述分数的 `<mfrac>` 元素。现在让我们看一个基本示例，其中还添加了用于根号（`<msqrt>` 和 `<mroot>`）的新元素：
+在 [MathML 使用入门](/zh-CN/docs/Web/MathML/Tutorials/For_beginners/Getting_started)文章中，我们学习了用于描述分数的 `<mfrac>` 元素。现在让我们看一个基本示例，其中还添加了用于根号（`<msqrt>` 和 `<mroot>`）的新元素：
 
 ```html
 <math>
@@ -70,7 +70,7 @@ original_slug: Web/MathML/Guides/Fractions_and_roots
 ![mfrac、msqrt 和 mroot 的屏幕截图](mfrac-msqrt-mroot.png)
 
 - 我们知道 `<mfrac>` 元素被渲染为一个分数：第一个子元素（分子）被绘制于第二个子元素（分母）的上方，并由一条水平线分隔。
-- `<msqrt>` 被渲染为一个平方根：其子元素呈现为一个 [`<mrow>`](/zh-CN/docs/Web/MathML/Guides/Getting_started#使用_mrow_元素进行分组)，前缀为根号√，并完全被一条横线覆盖。
+- `<msqrt>` 被渲染为一个平方根：其子元素呈现为一个 [`<mrow>`](/zh-CN/docs/Web/MathML/Tutorials/For_beginners/Getting_started#使用_mrow_元素进行分组)，前缀为根号√，并完全被一条横线覆盖。
 - 最后，`<mroot>` 元素被渲染为一个 n 次方根：第一个元素被根号符号覆盖，而第二个元素被用作根的次数，并作为前缀上标呈现。
 
 ### 主动练习：内嵌不同元素
@@ -254,7 +254,7 @@ checkboxes.forEach((checkbox) => {
 {{EmbedLiveSample('可伸缩的根号符号', 700, 200)}}
 
 > [!WARNING]
-> 通常需要特殊的[数学字体](/zh-CN/docs/Web/MathML/Fonts)才能实现该拉伸效果，上面的示例依赖于 [Web 字体](/zh-CN/docs/Learn_web_development/Core/Text_styling/Web_fonts)。
+> 通常需要特殊的[数学字体](/zh-CN/docs/Web/MathML/Guides/Fonts)才能实现该拉伸效果，上面的示例依赖于 [Web 字体](/zh-CN/docs/Learn_web_development/Core/Text_styling/Web_fonts)。
 
 ## 无横线的分数
 
@@ -293,12 +293,12 @@ checkboxes.forEach((checkbox) => {
 
 ## 总结
 
-在本文中，我们学习了如何使用 `<mfrac>`、`<msqrt>` 和 `<mroot>` 元素来构建分数和根式。我们注意到了这些元素的一些特殊功能，即分数和根号符号。我们还学习了如何使用 `linethickness` 属性绘制无横线的分数。在下一篇文章中，我们将继续介绍基本的数学符号，并学习[上下标记](/zh-CN/docs/Web/MathML/Guides/Scripts)的使用。
+在本文中，我们学习了如何使用 `<mfrac>`、`<msqrt>` 和 `<mroot>` 元素来构建分数和根式。我们注意到了这些元素的一些特殊功能，即分数和根号符号。我们还学习了如何使用 `linethickness` 属性绘制无横线的分数。在下一篇文章中，我们将继续介绍基本的数学符号，并学习[上下标记](/zh-CN/docs/Web/MathML/Tutorials/For_beginners/Scripts)的使用。
 
 ## 参见
 
-- [`<mfrac>` 元素](/zh-CN/docs/Web/MathML/Element/mfrac)
-- [`<msqrt>` 元素](/zh-CN/docs/Web/MathML/Element/msqrt)
-- [`<mroot>` 元素](/zh-CN/docs/Web/MathML/Element/mroot)
+- [`<mfrac>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/mfrac)
+- [`<msqrt>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/msqrt)
+- [`<mroot>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/mroot)
 
 {{PreviousMenuNext("Web/MathML/Guides/Text_containers", "Web/MathML/Guides/Scripts", "Web/MathML/Guides")}}

@@ -18,7 +18,7 @@ l10n:
 
 ## 属性
 
-这个元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)以及以下属性：
+这个元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)以及以下属性：
 
 - `denomalign` {{deprecated_inline}} {{Non-standard_Inline}}
   - : 分数下的分母对齐方式。可能的值包括：`left`、`center`（默认）和 `right`。
@@ -28,7 +28,7 @@ l10n:
   - : 分数上的分子对齐方式。可能的值包括：`left`、`center`（默认）和 `right`。
 
 > [!NOTE]
-> 对于 `linethickness` 属性，一些浏览器可能还接受不推荐使用的值 `medium`、`thin` 和 `thick`（其确切解释留给实现者）或[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
+> 对于 `linethickness` 属性，一些浏览器可能还接受不推荐使用的值 `medium`、`thin` 和 `thick`（其确切解释留给实现者）或[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Reference/Values#旧版_mathml_长度)。
 
 ## 示例
 

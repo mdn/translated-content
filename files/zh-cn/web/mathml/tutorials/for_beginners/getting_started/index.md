@@ -64,7 +64,7 @@ MathML 使用与 HTML 相同的语法来表示元素和属性的树形结构。�
 {{ EmbedLiveSample('Inserting_formulas_in_HTML', 700, 100, "", "") }}
 
 > [!WARNING]
-> 如果你只看到“1 3”而不是一个分数，那么你的浏览器可能不支持 MathML。请查看[浏览器兼容性表格](/zh-CN/docs/Web/MathML/Element/math#浏览器兼容性)获取进一步的详细信息。
+> 如果你只看到“1 3”而不是一个分数，那么你的浏览器可能不支持 MathML。请查看[浏览器兼容性表格](/zh-CN/docs/Web/MathML/Reference/Element/math#浏览器兼容性)获取进一步的详细信息。
 
 ### display 属性
 
@@ -193,14 +193,14 @@ MathML 使用与 HTML 相同的语法来表示元素和属性的树形结构。�
 
 ## 总结
 
-本文中，我们介绍了如何使用 `<math>` 元素将数学公式插入 HTML 文档中。我们了解了使用 `display="block"` 和不使用它的 `<math>` 元素之间的渲染差异。此外，我们还介绍了几个其他的 MathML 元素：`<mfrac>` 用于表示分数，`<mrow>` 用于分组，以及一些文本元素。在下一篇文章中，我们将进一步分析这些[文本容器](/zh-CN/docs/Web/MathML/Guides/Text_containers)。
+本文中，我们介绍了如何使用 `<math>` 元素将数学公式插入 HTML 文档中。我们了解了使用 `display="block"` 和不使用它的 `<math>` 元素之间的渲染差异。此外，我们还介绍了几个其他的 MathML 元素：`<mfrac>` 用于表示分数，`<mrow>` 用于分组，以及一些文本元素。在下一篇文章中，我们将进一步分析这些[文本容器](/zh-CN/docs/Web/MathML/Tutorials/For_beginners/Text_containers)。
 
 ## 参见
 
-- [使用 MathML](/zh-CN/docs/Web/MathML/Authoring#使用_mathml)
-- [`<math>` 元素](/zh-CN/docs/Web/MathML/Element/math)
-- [`<mfrac>` 元素](/zh-CN/docs/Web/MathML/Element/mfrac)
-- [`<mrow>` 元素](/zh-CN/docs/Web/MathML/Element/mrow)
+- [使用 MathML](/zh-CN/docs/Web/MathML/Guides/Authoring#使用_mathml)
+- [`<math>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/math)
+- [`<mfrac>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/mfrac)
+- [`<mrow>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/mrow)
 - [`math-style` 属性](/zh-CN/docs/Web/CSS/math-style)
 - [`math-depth` 属性](/zh-CN/docs/Web/CSS/math-depth)
 

@@ -144,4 +144,4 @@ l10n:
 ## 参见
 
 - [MathML](/zh-CN/docs/Web/MathML)
-- [MathML 属性参考](/zh-CN/docs/Web/MathML/Attribute)
+- [MathML 属性参考](/zh-CN/docs/Web/MathML/Reference/Attribute)

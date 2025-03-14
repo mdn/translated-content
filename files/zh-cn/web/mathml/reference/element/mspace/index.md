@@ -12,7 +12,7 @@ l10n:
 
 ## 属性
 
-该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)以及下列属性：
+该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)以及下列属性：
 
 - `depth`
   - : [`<length-percentage>`](/zh-CN/docs/Web/CSS/length-percentage) 值，表示空白（在基线下方）的深度。
@@ -22,7 +22,7 @@ l10n:
   - : [`<length-percentage>`](/zh-CN/docs/Web/CSS/length-percentage) 值，表示空白的宽度。
 
 > [!NOTE]
-> 对于 `depth`、`height`、`width` 属性，一些浏览器可能也接受[旧版 MathML 长度值](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
+> 对于 `depth`、`height`、`width` 属性，一些浏览器可能也接受[旧版 MathML 长度值](/zh-CN/docs/Web/MathML/Reference/Values#旧版_mathml_长度)。
 
 ## 示例
 

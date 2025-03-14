@@ -10,7 +10,7 @@ original_slug: Web/MathML/Element/mroot
 
 ## 属性
 
-该元素接受[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)。
+该元素接受[全局 MathML 属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)。
 
 ## 示例
 

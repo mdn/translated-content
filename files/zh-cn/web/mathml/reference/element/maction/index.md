@@ -15,7 +15,7 @@ l10n:
 
 ## 属性
 
-该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)以及以下属性：
+该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)以及以下属性：
 
 - `actiontype` {{Deprecated_Inline}} {{Non-standard_Inline}}
 

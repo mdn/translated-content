@@ -31,7 +31,7 @@ MathML 使用以下语法，即一个基本表达式，后跟任意数量的后�
 
 ## 属性
 
-该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)以及以下已弃用的属性：
+该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)以及以下已弃用的属性：
 
 - `subscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
   - : 表示将下标基线向下移动的最小量的 {{cssxref("length-percentage")}}。
@@ -39,7 +39,7 @@ MathML 使用以下语法，即一个基本表达式，后跟任意数量的后�
   - : 表示将上标基线向上移动的最小量的 {{cssxref("length-percentage")}}。
 
 > [!NOTE]
-> 对于 `subscriptshift` 和 `superscriptshift` 属性，一些浏览器可能还接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
+> 对于 `subscriptshift` 和 `superscriptshift` 属性，一些浏览器可能还接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Reference/Values#旧版_mathml_长度)。
 
 ## 示例
 

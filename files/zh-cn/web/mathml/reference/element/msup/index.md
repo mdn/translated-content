@@ -14,13 +14,13 @@ l10n:
 
 ## 属性
 
-该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)和以下已弃用的属性：
+该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)和以下已弃用的属性：
 
 - `superscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
   - : {{cssxref("length-percentage")}} 值，表示上标基线向上移动的最小距离。
 
 > [!NOTE]
-> 对于 `superscriptshift` 属性，一些浏览器可能也会接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
+> 对于 `superscriptshift` 属性，一些浏览器可能也会接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Reference/Values#旧版_mathml_长度)。
 
 ## 示例
 

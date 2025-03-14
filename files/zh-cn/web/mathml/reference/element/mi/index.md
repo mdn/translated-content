@@ -63,7 +63,7 @@ l10n:
     - `stretched` {{deprecated_inline}}
       - : 尝试使用带有伸展样式的字符，例如“𞹢”。
 
-该元素还接受[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)。
+该元素还接受[全局 MathML 属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)。
 
 ## 示例
 

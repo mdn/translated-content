@@ -15,7 +15,7 @@ l10n:
 
 ## 属性
 
-该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)。
+该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)。
 
 - `close`
   - : 用于闭分隔符的字符串。默认值为 `")"`，任何空白都将被裁剪。

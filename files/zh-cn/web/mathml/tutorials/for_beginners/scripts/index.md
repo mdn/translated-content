@@ -36,7 +36,7 @@ original_slug: Web/MathML/Guides/Scripts
 
 ## 下标和上标
 
-类似于我们在[上一篇文章](/zh-CN/docs/Web/MathML/Guides/Fractions_and_roots)中所学习的，`<msub>`、`<msup>` 和 `<msubsup>` 具有特殊的结构，它们恰好有两个元素（`<msub>`、`<msup>`）或三个元素（`<msubsup>`）：
+类似于我们在[上一篇文章](/zh-CN/docs/Web/MathML/Tutorials/For_beginners/Fractions_and_roots)中所学习的，`<msub>`、`<msup>` 和 `<msubsup>` 具有特殊的结构，它们恰好有两个元素（`<msub>`、`<msup>`）或三个元素（`<msubsup>`）：
 
 ```html
 <p>
@@ -257,7 +257,7 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 
 ## 其他运算符属性
 
-我们之前已经了解了 `<mo>` 元素的一些[属性](/zh-CN/docs/Web/MathML/Guides/Text_containers#mo_的运算符属性)，包括在垂直方向上的拉伸和间距。现在有了附加符号元素，我们可以扩展该列表。我们将通过修改我们的[上一个示例](#主动学习：识别附加符号元素)来实现这一点。
+我们之前已经了解了 `<mo>` 元素的一些[属性](/zh-CN/docs/Web/MathML/Tutorials/For_beginners/Text_containers#mo_的运算符属性)，包括在垂直方向上的拉伸和间距。现在有了附加符号元素，我们可以扩展该列表。我们将通过修改我们的[上一个示例](#主动学习：识别附加符号元素)来实现这一点。
 
 ### 在水平方向上的拉伸
 
@@ -361,14 +361,14 @@ math {
 
 {{EmbedLiveSample('在水平方向上的拉伸', 700, 200)}}
 
-可以看出底部括号“⎵”和右箭头“→”在水平方向上会延伸以覆盖被替代值的宽度。回想一下，[一些竖直运算符可以伸展](/zh-CN/docs/Web/MathML/Guides/Text_containers#主动学习：可伸缩运算符)，以覆盖 `<mrow>` 中非伸展兄弟节点的高度。类似地，一些水平运算符可以伸展以覆盖 `<munder>`、`<mover>` 或 `<munderover>` 元素中非伸展兄弟节点的宽度。
+可以看出底部括号“⎵”和右箭头“→”在水平方向上会延伸以覆盖被替代值的宽度。回想一下，[一些竖直运算符可以伸展](/zh-CN/docs/Web/MathML/Tutorials/For_beginners/Text_containers#主动学习：可伸缩运算符)，以覆盖 `<mrow>` 中非伸展兄弟节点的高度。类似地，一些水平运算符可以伸展以覆盖 `<munder>`、`<mover>` 或 `<munderover>` 元素中非伸展兄弟节点的宽度。
 
 > [!NOTE]
 > 伸展适用于 `<munder>`、`<mover>` 或 `<munderover>` 元素的任何子元素，不仅仅是正下标或正上标。
 
 ### 大型运算符和极限
 
-到目前为止，我们的示例实际上是使用 [`display="block"`](/zh-CN/docs/Web/MathML/Guides/Getting_started#display_属性) 属性呈现的。让我们看一下同一个示例，在没有该属性的情况下渲染的效果：
+到目前为止，我们的示例实际上是使用 [`display="block"`](/zh-CN/docs/Web/MathML/Tutorials/For_beginners/Getting_started#display_属性) 属性呈现的。让我们看一下同一个示例，在没有该属性的情况下渲染的效果：
 
 ```html hidden
 <!doctype html>
@@ -477,15 +477,15 @@ math {
 
 ## 总结
 
-在本文中，我们完成了对引入下标、上标、正下标和正上标的基本布局元素 `<msub>`、`<msup>`、`<msubsup>`、`<munder>`、`<mover>` 以及 `<munderover>` 的介绍。在介绍这些元素的过程中，我们顺便介绍了 `<mo>` 元素的新属性。在下一篇文章中，我们将继续关注[表格布局](/zh-CN/docs/Web/MathML/Guides/Tables)。
+在本文中，我们完成了对引入下标、上标、正下标和正上标的基本布局元素 `<msub>`、`<msup>`、`<msubsup>`、`<munder>`、`<mover>` 以及 `<munderover>` 的介绍。在介绍这些元素的过程中，我们顺便介绍了 `<mo>` 元素的新属性。在下一篇文章中，我们将继续关注[表格布局](/zh-CN/docs/Web/MathML/Tutorials/For_beginners/Tables)。
 
 ## 参见
 
-- [<msub> 元素](/zh-CN/docs/Web/MathML/Element/msub)
-- [<msup> 元素](/zh-CN/docs/Web/MathML/Element/msup)
-- [<msubsup> 元素](/zh-CN/docs/Web/MathML/Element/msubsup)
-- [<munder> 元素](/zh-CN/docs/Web/MathML/Element/munder)
-- [<mover> 元素](/zh-CN/docs/Web/MathML/Element/mover)
-- [<munderover> 元素](/zh-CN/docs/Web/MathML/Element/munderover)
+- [<msub> 元素](/zh-CN/docs/Web/MathML/Reference/Element/msub)
+- [<msup> 元素](/zh-CN/docs/Web/MathML/Reference/Element/msup)
+- [<msubsup> 元素](/zh-CN/docs/Web/MathML/Reference/Element/msubsup)
+- [<munder> 元素](/zh-CN/docs/Web/MathML/Reference/Element/munder)
+- [<mover> 元素](/zh-CN/docs/Web/MathML/Reference/Element/mover)
+- [<munderover> 元素](/zh-CN/docs/Web/MathML/Reference/Element/munderover)
 
 {{PreviousMenuNext("Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides/Tables", "Web/MathML/Guides")}}

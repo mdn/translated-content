@@ -8,7 +8,7 @@ l10n:
 
 {{MathMLRef}}{{Non-standard_header}}
 
-**`href`** [全局属性](/zh-CN/docs/Web/MathML/Global_attributes)在 MathML 元素上创建一个指向指定 URL 的超链接。
+**`href`** [全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)在 MathML 元素上创建一个指向指定 URL 的超链接。
 
 ## 示例
 
@@ -44,4 +44,4 @@ href 属性在任何面向浏览器的规范中都没有定义，但你可以在
 
 ## 参见
 
-- 所有 [全局属性](/zh-CN/docs/Web/MathML/Global_attributes)
+- 所有 [全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)

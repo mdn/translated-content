@@ -12,7 +12,7 @@ l10n:
 
 ## 属性
 
-这个元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)。
+这个元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)。
 
 - `notation` {{Non-standard_Inline}}
 

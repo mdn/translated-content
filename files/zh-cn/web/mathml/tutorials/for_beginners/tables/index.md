@@ -297,19 +297,19 @@ MathML 表格元素与 [HTML 表格](/zh-CN/docs/Learn_web_development/Core/Stru
 
 {{ EmbedLiveSample('高级布局用法', 700, 200) }}
 
-> **警告：** [`<mtable>`](/zh-CN/docs/Web/MathML/Element/mtable) 文档中记录了更多高级布局选项，如对齐或间距等特殊属性。这些属性起源于 CSS 一类事物之前，最初设计用于不支持 CSS 的渲染器。然而，并非所有浏览器都实现了这些属性。将来，可能会用基于 CSS 的替代方案取代仅用于布局目的（即非实际矩阵对象）的 `<mtable>` 的用法。
+> **警告：** [`<mtable>`](/zh-CN/docs/Web/MathML/Reference/Element/mtable) 文档中记录了更多高级布局选项，如对齐或间距等特殊属性。这些属性起源于 CSS 一类事物之前，最初设计用于不支持 CSS 的渲染器。然而，并非所有浏览器都实现了这些属性。将来，可能会用基于 CSS 的替代方案取代仅用于布局目的（即非实际矩阵对象）的 `<mtable>` 的用法。
 
 ## 总结
 
 在本文中，我们回顾了 `<mtable>`、`<mtr>` 和 `<mtd>` 元素，它们是用于表格的 HTML 元素的等效元素。我们学习了如何使用它们表示类似矩阵的对象，以及如何用它们实现高级布局。
 
-你已经接近完成本单元了——我们只剩下最后一件事要做。在[三个著名数学公式测验](/zh-CN/docs/Web/MathML/Guides/Three_famous_mathematical_formulas)中，你需要运用新学到的知识，使用 HTML 和 MathML 重写一个小型数学文章。
+你已经接近完成本单元了——我们只剩下最后一件事要做。在[三个著名数学公式测验](/zh-CN/docs/Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas)中，你需要运用新学到的知识，使用 HTML 和 MathML 重写一个小型数学文章。
 
 ## 参见
 
 - [学习 HTML 表格](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
-- [`<mtable>` 元素](/zh-CN/docs/Web/MathML/Element/mtable)
-- [`<mtr>` 元素](/zh-CN/docs/Web/MathML/Element/mtr)
-- [`<mtd>` 元素](/zh-CN/docs/Web/MathML/Element/mtd)
+- [`<mtable>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/mtable)
+- [`<mtr>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/mtr)
+- [`<mtd>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/mtd)
 
 {{PreviousMenuNext("Web/MathML/Guides/Scripts", "Web/MathML/Guides/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}

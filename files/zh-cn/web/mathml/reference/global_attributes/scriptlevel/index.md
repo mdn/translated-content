@@ -8,7 +8,7 @@ l10n:
 
 {{MathMLRef}}
 
-**`scriptlevel`** [全局属性](/zh-CN/docs/Web/MathML/Global_attributes)设置 MathML 元素的[数学深度](/zh-CN/docs/Web/CSS/math-depth)。它允许覆盖[用户代理样式表](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#用户代理样式表)中定义的在 MathML 公式中自动计算[字体大小](/zh-CN/docs/Web/CSS/font-size)的规则。
+**`scriptlevel`** [全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)设置 MathML 元素的[数学深度](/zh-CN/docs/Web/CSS/math-depth)。它允许覆盖[用户代理样式表](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#用户代理样式表)中定义的在 MathML 公式中自动计算[字体大小](/zh-CN/docs/Web/CSS/font-size)的规则。
 
 ## 示例
 
@@ -55,8 +55,8 @@ l10n:
 
 ## 参见
 
-- 所有[全局属性](/zh-CN/docs/Web/MathML/Global_attributes)
-- [displaystyle](/zh-CN/docs/Web/MathML/Global_attributes/displaystyle) 全局属性
+- 所有[全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)
+- [displaystyle](/zh-CN/docs/Web/MathML/Reference/Global_attributes/displaystyle) 全局属性
 - {{cssxref("font-size")}}
 - {{cssxref("math-depth")}}
 - {{cssxref("math-style")}}

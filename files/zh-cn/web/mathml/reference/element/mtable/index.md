@@ -12,7 +12,7 @@ l10n:
 
 ## 属性
 
-该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)。某些浏览器还可能支持以下属性：
+该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)。某些浏览器还可能支持以下属性：
 
 - `align` {{Non-standard_Inline}}
 
@@ -47,7 +47,7 @@ l10n:
   - : 一个用于指定整个表格的宽度的 {{cssxref("length-percentage")}}。
 
 > [!NOTE]
-> 对于 `width` 属性，某些浏览器还可能接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
+> 对于 `width` 属性，某些浏览器还可能接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Reference/Values#旧版_mathml_长度)。
 
 ## 示例
 

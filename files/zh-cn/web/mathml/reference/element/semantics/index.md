@@ -32,7 +32,7 @@ l10n:
 
 ## 属性
 
-`<semantics>`、`<annotation>` 和 `<annotation-xml>` 元素接受[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)。此外，可以在 `<annotation>` 和 `<annotation-xml>` 元素上设置以下属性：
+`<semantics>`、`<annotation>` 和 `<annotation-xml>` 元素接受[全局 MathML 属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)。此外，可以在 `<annotation>` 和 `<annotation-xml>` 元素上设置以下属性：
 
 - `encoding`
   - : 注释中语义信息的编码（例如 `"MathML-Content"`、`"MathML-Presentation"`、`"application/openmath+xml"`、`"image/png"`）
