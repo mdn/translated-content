@@ -20,9 +20,9 @@ blendColor(red, green, blue, alpha)
 - `red`
   - : {{domxref("WebGL_API/Types", "GLclampf")}}，表示红色分量，范围为 0 到 1。默认值为 0。
 - `green`
-  - : A {{domxref("WebGL_API/Types", "GLclampf")}}，表示绿色分量，范围为 0 到 1。默认值为 0。
+  - : {{domxref("WebGL_API/Types", "GLclampf")}}，表示绿色分量，范围为 0 到 1。默认值为 0。
 - `blue`
-  - : A {{domxref("WebGL_API/Types", "GLclampf")}}，表示蓝色分量，范围为 0 到 1。默认值为 0。
+  - : {{domxref("WebGL_API/Types", "GLclampf")}}，表示蓝色分量，范围为 0 到 1。默认值为 0。
 - `alpha`
   - : {{domxref("WebGL_API/Types", "GLclampf")}}，表示 alpha 分量（透明度），范围为 0 到 1。默认值为 0。
 
