@@ -21,7 +21,7 @@ HTTP **`Content-DPR`** {{Glossary("response header", "响应标头")}}用于在�
     <tr>
       <th scope="row">标头类型</th>
       <td>
-        {{Glossary("Response header", "响应标头")}}、<a href="/zh-CN/docs/Web/HTTP/Client_hints">客户端提示</a>
+        {{Glossary("Response header", "响应标头")}}、<a href="/zh-CN/docs/Web/HTTP/Guides/Client_hints">客户端提示</a>
       </td>
     </tr>
     <tr>
@@ -50,7 +50,7 @@ Content-DPR: <number>
 
 ## 示例
 
-请参阅 [`DPR`](/zh-CN/docs/Web/HTTP/Headers/DPR#示例) 标头示例。
+请参阅 [`DPR`](/zh-CN/docs/Web/HTTP/Reference/Headers/DPR#示例) 标头示例。
 
 ## 浏览器兼容性
 
@@ -64,5 +64,5 @@ Content-DPR: <number>
   - {{HTTPHeader("Viewport-Width")}}
   - {{HTTPHeader("Width")}}
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP 缓存：Vary](/zh-CN/docs/Web/HTTP/Caching#vary) 和 {{HTTPHeader("Vary")}}
+- [HTTP 缓存：Vary](/zh-CN/docs/Web/HTTP/Guides/Caching#vary) 和 {{HTTPHeader("Vary")}}
 - developer.chrome.google.cn 上的[利用用户代理客户端提示改善用户隐私并提升开发者体验](https://developer.chrome.google.cn/docs/privacy-security/user-agent-client-hints)（2020）

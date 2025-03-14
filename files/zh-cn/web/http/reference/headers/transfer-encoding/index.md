@@ -12,7 +12,7 @@ l10n:
 
 > **备注：** [HTTP/2](https://zh.wikipedia.org/wiki/HTTP/2) 禁止使用除 HTTP/2 特有的 `"trailers"` 以外的所有 Transfer-Encoding 标头。HTTP 2 提供了比分块传输更有效的数据流机制，并禁止使用该标头。在 HTTP/2 中使用该标头可能会导致特定的 `protocol error`，因为 HTTP/2 协议禁止使用该标头。
 
-`Transfer-Encoding` 是一个[逐跳传输标头](/zh-CN/docs/Web/HTTP/Headers#逐跳（hop-by-hop）标头)，即仅应用于两个节点之间的消息传递，而不是所请求的资源本身。一个多节点连接中的每一段都可以应用不同的 `Transfer-Encoding` 值。如果你想要将压缩后的数据应用于整个连接，那么请使用端到端标头 {{HTTPHeader("Content-Encoding")}}。
+`Transfer-Encoding` 是一个[逐跳传输标头](/zh-CN/docs/Web/HTTP/Reference/Headers#逐跳（hop-by-hop）标头)，即仅应用于两个节点之间的消息传递，而不是所请求的资源本身。一个多节点连接中的每一段都可以应用不同的 `Transfer-Encoding` 值。如果你想要将压缩后的数据应用于整个连接，那么请使用端到端标头 {{HTTPHeader("Content-Encoding")}}。
 
 当这个标头出现在 {{HTTPMethod("HEAD")}} 请求的响应中，而这样的响应没有消息体，那么它其实指的是应用在相应的 {{HTTPMethod("GET")}} 请求的应答的值。
 

@@ -6,12 +6,12 @@ original_slug: Web/HTTP/Headers/WWW-Authenticate
 
 {{HTTPSidebar}}
 
-HTTP **`WWW-Authenticate`** 响应标头定义了 [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Authentication)的方法（“质询”），它用于获取特定资源的访问权限。
+HTTP **`WWW-Authenticate`** 响应标头定义了 [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Guides/Authentication)的方法（“质询”），它用于获取特定资源的访问权限。
 
 > [!NOTE]
-> 该标头是[通用的 HTTP 认证框架](/zh-CN/docs/Web/HTTP/Authentication#通用的_http_认证框架)的一部分，可用于多种[身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)。每个“质询”都列出了服务器支持的方案以及为该方案类型添加的额外参数。
+> 该标头是[通用的 HTTP 认证框架](/zh-CN/docs/Web/HTTP/Guides/Authentication#通用的_http_认证框架)的一部分，可用于多种[身份验证方案](/zh-CN/docs/Web/HTTP/Guides/Authentication#身份验证方案)。每个“质询”都列出了服务器支持的方案以及为该方案类型添加的额外参数。
 
-使用 [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Authentication)的服务器将以 {{HTTPStatus("401")}} `Unauthorized` 响应去响应受保护资源的请求。该响应必须包含至少一个 `WWW-Authenticate` 标头和至少一个{{Glossary("challenge","质询")}}，以指示使用哪些身份验证方案访问资源（以及每个特定方案的任意额外的数据）。
+使用 [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Guides/Authentication)的服务器将以 {{HTTPStatus("401")}} `Unauthorized` 响应去响应受保护资源的请求。该响应必须包含至少一个 `WWW-Authenticate` 标头和至少一个{{Glossary("challenge","质询")}}，以指示使用哪些身份验证方案访问资源（以及每个特定方案的任意额外的数据）。
 
 一个 `WWW-Authenticate` 标头中允许多个质询，并且一个响应中允许多个 `WWW-Authenticate` 标头。服务器也可以在其他的响应消息中包含 `WWW-Authenticate` 标头，以指示提供的凭据可能会影响响应。
 
@@ -58,7 +58,7 @@ WWW-Authenticate: <auth-scheme> realm=<realm> auth-param1=auth-param1-token, ...
 WWW-Authenticate: <auth-scheme> token68 auth-param1=auth-param1-token, ..., auth-paramN=auth-paramN-token
 ```
 
-例如，[Basic 身份验证](/zh-CN/docs/Web/HTTP/Authentication#basic_验证方案)允许可选的 `realm` 和 `charset` 密钥，但是并不支持 `token68`。
+例如，[Basic 身份验证](/zh-CN/docs/Web/HTTP/Guides/Authentication#basic_验证方案)允许可选的 `realm` 和 `charset` 密钥，但是并不支持 `token68`。
 
 ```http
 WWW-Authenticate: Basic
@@ -70,17 +70,17 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 
 - `<auth-scheme>`
 
-  - : [身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)。一些更常见的类型是（不区分大小写）：[`Basic`](/zh-CN/docs/Web/HTTP/Authentication#basic_验证方案)、`Digest`、`Negotiate` 和 `AWS4-HMAC-SHA256`。
+  - : [身份验证方案](/zh-CN/docs/Web/HTTP/Guides/Authentication#身份验证方案)。一些更常见的类型是（不区分大小写）：[`Basic`](/zh-CN/docs/Web/HTTP/Guides/Authentication#basic_验证方案)、`Digest`、`Negotiate` 和 `AWS4-HMAC-SHA256`。
 
     > [!NOTE]
-    > 更多信息和选项，请参见 [HTTP 身份验证 > 身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)
+    > 更多信息和选项，请参见 [HTTP 身份验证 > 身份验证方案](/zh-CN/docs/Web/HTTP/Guides/Authentication#身份验证方案)
 
 - **realm=**\<realm> {{optional_inline}}
   - : 描述受保护区域的字符串。realm 允许服务器对它受保护的区域进行区分（如果允许支持这种划分方案），并通知用户需要哪个特定的用户名/密码。如果未指定 realm，客户端通常会显示格式化的主机名。
 - `<token68>` {{optional_inline}}
   - : 一个 token，可能对某些方案有用。该 token 允许使用 66 个未保留的 URI 字符以及其他的一些字符。根据规范，它可以支持 base64、base64url、base32 或者 base16（十六进制）编码，有或者没有填充，但是不包括空格。
 
-除了 `<auth-scheme>` 和关键字 `realm`，authorization 参数特定于每个[身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)。总的来说，你将需要为这些检查相关的规范（下面列出了一小部分方案的关键字）。
+除了 `<auth-scheme>` 和关键字 `realm`，authorization 参数特定于每个[身份验证方案](/zh-CN/docs/Web/HTTP/Guides/Authentication#身份验证方案)。总的来说，你将需要为这些检查相关的规范（下面列出了一小部分方案的关键字）。
 
 ### Basic
 
@@ -131,7 +131,7 @@ Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 对于 `"Basic"` 身份验证，凭据的构造方式是，首先将用户名和密码与冒号组合（`aladdin:opensesame`），然后将结果字符串编码为 [`base64`](/zh-CN/docs/Glossary/Base64)（`YWxhZGRpbjpvcGVuc2VzYW1l`）。
 
 > [!NOTE]
-> 有关如何配置 Apache 或 Nginx 服务器以使用 HTTP 基本身份验证密码保护你站点的示例，另请参阅 [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Authentication)。
+> 有关如何配置 Apache 或 Nginx 服务器以使用 HTTP 基本身份验证密码保护你站点的示例，另请参阅 [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Guides/Authentication)。
 
 ### 使用 SHA-256 和 MD5 的 Digest 身份验证
 
@@ -199,7 +199,7 @@ Authorization: Digest username="Mufasa",
 
 ## 参见
 
-- [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Authentication)
+- [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("Authorization")}}
 - {{HTTPHeader("Proxy-Authorization")}}
 - {{HTTPHeader("Proxy-Authenticate")}}

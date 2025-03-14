@@ -106,7 +106,7 @@ window.onload = () => {
 
 ## Seekable
 
-`seekable` 属性返回一个 {{domxref("TimeRanges")}} 对象，告诉我们媒体的哪一部分可以不经过延迟直接播放；这与该部分是否已被下载无关。如果服务器上启用了字节范围请求，媒体的一些部分可能是可查找（seekable）但又没有缓冲的，字节范围请求允许服务器分发媒体文件的某一部分，因此可以几乎立即准备好播放——故它们是可查找的。有关字节范围请求的更多信息，请参见 [HTTP 范围请求](/zh-CN/docs/Web/HTTP/Range_requests)。
+`seekable` 属性返回一个 {{domxref("TimeRanges")}} 对象，告诉我们媒体的哪一部分可以不经过延迟直接播放；这与该部分是否已被下载无关。如果服务器上启用了字节范围请求，媒体的一些部分可能是可查找（seekable）但又没有缓冲的，字节范围请求允许服务器分发媒体文件的某一部分，因此可以几乎立即准备好播放——故它们是可查找的。有关字节范围请求的更多信息，请参见 [HTTP 范围请求](/zh-CN/docs/Web/HTTP/Guides/Range_requests)。
 
 ```js
 const seekableTimeRanges = audio.seekable;

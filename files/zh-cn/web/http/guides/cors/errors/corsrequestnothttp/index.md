@@ -31,6 +31,6 @@ original_slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 
 ## 参见
 
-- [CORS 错误](/zh-CN/docs/Web/HTTP/CORS/Errors)
-- [CORS 介绍](/zh-CN/docs/Web/HTTP/CORS)
+- [CORS 错误](/zh-CN/docs/Web/HTTP/Guides/CORS/Errors)
+- [CORS 介绍](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [什么是 URL？](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)

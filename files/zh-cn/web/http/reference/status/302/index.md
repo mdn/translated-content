@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**`302 Found`** [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Status#重定向消息)表示请求的资源已临时移动到 {{HTTPHeader("Location")}} 标头中的 URL。
+**`302 Found`** [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Reference/Status#重定向消息)表示请求的资源已临时移动到 {{HTTPHeader("Location")}} 标头中的 URL。
 
 浏览器收到此状态后，将自动请求 `Location` 标头中的 URL 资源，将用户重定向到新页面。搜索引擎收到此响应后，不会将原始 URL 的链接归属于新资源，这意味着不会将任何 {{Glossary("SEO")}} 值传递给新 URL。
 
@@ -45,8 +45,8 @@ Content-Length: 0
 
 ## 参见
 
-- [HTTP 的重定向](/zh-CN/docs/Web/HTTP/Redirections)
-- [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Status)
+- [HTTP 的重定向](/zh-CN/docs/Web/HTTP/Guides/Redirections)
+- [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("307", "307 Temporary Redirect")}}，相当于 `302`，但请求方法未作修改。
 - {{HTTPStatus("303", "303 See Other")}}，临时重定向，并将方法更改为 {{HTTPMethod("GET")}}
 - {{HTTPStatus("301", "301 Moved Permanently")}}，永久重定向。

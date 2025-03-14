@@ -63,6 +63,6 @@ Content-Length: 1241
 
 ## 参见
 
-- [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Methods)
+- [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Reference/Methods)
 - {{HTTPStatus("204")}}
 - {{HTTPStatus("403")}}

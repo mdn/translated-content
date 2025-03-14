@@ -33,4 +33,4 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## 参见
 
-- [HTTP 认证](/zh-CN/docs/Web/HTTP/Authentication)
+- [HTTP 认证](/zh-CN/docs/Web/HTTP/Guides/Authentication)

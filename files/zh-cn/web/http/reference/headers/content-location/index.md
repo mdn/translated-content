@@ -8,9 +8,9 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`Content-Location`** {{Glossary("representation header", "表示标头")}}指定返回数据的备用地址。最主要的用途是用来指定要访问的资源经过[内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)后的结果的 URL。
+HTTP **`Content-Location`** {{Glossary("representation header", "表示标头")}}指定返回数据的备用地址。最主要的用途是用来指定要访问的资源经过[内容协商](/zh-CN/docs/Web/HTTP/Guides/Content_negotiation)后的结果的 URL。
 
-`Content-Location` 标头和 {{HTTPHeader("Location")}} 标头是不同的。`Content-Location` 表示在[内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)发生时访问资源的直接 URL，允许客户端绕过该资源未来的内容协商。相比之下，`Location` 则表示 `3XX` 重定向的目标或者 {{HTTPStatus("201", "201 Created")}} 响应中新创建的资源的 URL。
+`Content-Location` 标头和 {{HTTPHeader("Location")}} 标头是不同的。`Content-Location` 表示在[内容协商](/zh-CN/docs/Web/HTTP/Guides/Content_negotiation)发生时访问资源的直接 URL，允许客户端绕过该资源未来的内容协商。相比之下，`Location` 则表示 `3XX` 重定向的目标或者 {{HTTPStatus("201", "201 Created")}} 响应中新创建的资源的 URL。
 
 <table class="properties">
   <tbody>
@@ -52,7 +52,7 @@ Content-Location: <url>
 
 这样，客户端就能记住 JSON 版本在这个 URL。下次请求该文档时，就可以跳过内容协商。
 
-服务器也可以考虑使用其他[内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)标头，例如 {{HTTPHeader("Accept-Language")}}。
+服务器也可以考虑使用其他[内容协商](/zh-CN/docs/Web/HTTP/Guides/Content_negotiation)标头，例如 {{HTTPHeader("Accept-Language")}}。
 
 ### 表示交易结果的 URL
 

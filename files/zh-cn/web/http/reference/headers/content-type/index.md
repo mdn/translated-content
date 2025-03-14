@@ -52,7 +52,7 @@ Content-Type: multipart/form-data; boundary=something
 ## 指令
 
 - `media-type`
-  - : 资源或数据的 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)。
+  - : 资源或数据的 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)。
 - charset
   - : 字符编码标准。不区分大小写，推荐使用小写。
 - boundary

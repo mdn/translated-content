@@ -6,9 +6,9 @@ original_slug: Web/HTTP/Client_hints
 
 {{HTTPSidebar}}
 
-**客户端提示**是一组 [HTTP 请求标头](/zh-CN/docs/Web/HTTP/Headers)字段，服务器可以主动地用它来获取关于设备、网络、用户以及用户代理指定的首选项的信息。然后，服务器可以根据客户端选择提供的信息来确定发送哪些资源。
+**客户端提示**是一组 [HTTP 请求标头](/zh-CN/docs/Web/HTTP/Reference/Headers)字段，服务器可以主动地用它来获取关于设备、网络、用户以及用户代理指定的首选项的信息。然后，服务器可以根据客户端选择提供的信息来确定发送哪些资源。
 
-“提示”（hint）标头集在 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers#客户端提示（client_hint）)话题中列出并[总结如下](#提示类型)。
+“提示”（hint）标头集在 [HTTP 标头](/zh-CN/docs/Web/HTTP/Reference/Headers#客户端提示（client_hint）)话题中列出并[总结如下](#提示类型)。
 
 ## 概述
 
@@ -39,7 +39,7 @@ Accept-CH: Width, Downlink, Sec-CH-UA
 Vary: Accept, Width, ECT
 ```
 
-对于值变化很大的客户端提示标头时，最好不要指定 {{HTTPHeader("Vary")}} 或者使用其他的策略，因为这会使资源无法有效缓存。（为每个唯一值创建新的缓存条目。）这尤其适用于网络客户端提示，像 {{HTTPHeader("Downlink")}} 和 {{HTTPHeader("RTT")}}。更多信息请参见 [HTTP 缓存 > Vary 响应](/zh-CN/docs/Web/HTTP/Caching#vary_响应)。
+对于值变化很大的客户端提示标头时，最好不要指定 {{HTTPHeader("Vary")}} 或者使用其他的策略，因为这会使资源无法有效缓存。（为每个唯一值创建新的缓存条目。）这尤其适用于网络客户端提示，像 {{HTTPHeader("Downlink")}} 和 {{HTTPHeader("RTT")}}。更多信息请参见 [HTTP 缓存 > Vary 响应](/zh-CN/docs/Web/HTTP/Guides/Caching#vary_响应)。
 
 ## 提示（hint）的生命周期
 
@@ -109,8 +109,8 @@ Sec-CH-Prefers-Reduced-Motion: "reduce"
 
 ## 参见
 
-- [客户端提示标头](/zh-CN/docs/Web/HTTP/Headers#客户端提示（client_hint）)
-- [`Vary` HTTP 标头](/zh-CN/docs/Web/HTTP/Headers/Vary)
+- [客户端提示标头](/zh-CN/docs/Web/HTTP/Reference/Headers#客户端提示（client_hint）)
+- [`Vary` HTTP 标头](/zh-CN/docs/Web/HTTP/Reference/Headers/Vary)
 - [客户端提示的基础架构](https://wicg.github.io/client-hints-infrastructure/)
 - [用户代理客户端提示 API](/zh-CN/docs/Web/API/User-Agent_Client_Hints_API)
 - [使用用户代理客户端提示改善用户隐私和开发人员体验](https://developer.chrome.google.cn/docs/privacy-security/user-agent-client-hints)（developer.chrome.google.cn）

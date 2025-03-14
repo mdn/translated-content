@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**`Accept-Post`** HTTP 响应标头用于告知客户端服务器在接受 HTTP 的 POST 请求时能处理哪些[媒体类型](/zh-CN/docs/Web/HTTP/MIME_types)。
+**`Accept-Post`** HTTP 响应标头用于告知客户端服务器在接受 HTTP 的 POST 请求时能处理哪些[媒体类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)。
 
 响应中对于任何方法的 **`Accept-Post`** 字段意味着允许在请求的资源上执行 `POST` 操作（标头中任何提及的文档或媒体格式进一步表明该格式的文档也被允许）。
 

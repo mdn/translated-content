@@ -20,7 +20,7 @@ original_slug: Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed
 
 ## 参见
 
-- [CORS 错误](/zh-CN/docs/Web/HTTP/CORS/Errors)
+- [CORS 错误](/zh-CN/docs/Web/HTTP/Guides/CORS/Errors)
 - 术语：{{Glossary("CORS")}}
-- [CORS 介绍](/zh-CN/docs/Web/HTTP/CORS)
+- [CORS 介绍](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [启用 CORS：我想让自己的服务支持 CORS](https://enable-cors.org/server.html)

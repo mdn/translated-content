@@ -39,4 +39,4 @@ NEL: { "report_to": "name_of_reporting_group", "max_age": 12345, "include_subdom
 
 ## 参见
 
-- [网络错误日志（NEL）说明](/zh-CN/docs/Web/HTTP/Network_Error_Logging)
+- [网络错误日志（NEL）说明](/zh-CN/docs/Web/HTTP/Guides/Network_Error_Logging)

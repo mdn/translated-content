@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLMediaElement")}} 的 **`canPlayType()`** 方法用于报告当前浏览器播放指定 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)媒体的可能性。
+{{domxref("HTMLMediaElement")}} 的 **`canPlayType()`** 方法用于报告当前浏览器播放指定 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)媒体的可能性。
 
 ## 语法
 
@@ -18,7 +18,7 @@ canPlayType(type)
 ### 参数
 
 - `type`
-  - : 一个指定媒体的 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)字符串，并可选包含一个 [`codecs` 参数](/zh-CN/docs/Web/Media/Guides/Formats/codecs_parameter)，该参数是一个用逗号分隔的支持的编解码器列表。
+  - : 一个指定媒体的 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)字符串，并可选包含一个 [`codecs` 参数](/zh-CN/docs/Web/Media/Guides/Formats/codecs_parameter)，该参数是一个用逗号分隔的支持的编解码器列表。
 
 ### 返回值
 

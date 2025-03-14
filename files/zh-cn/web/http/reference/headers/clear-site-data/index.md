@@ -30,7 +30,7 @@ Clear-Site-Data: "*"
 ## 指令
 
 - `"cache"`
-  - : 表示服务端希望删除本 URL 原始响应的本地缓存数据（即：浏览器缓存，请参阅 [HTTP 缓存](/zh-CN/docs/Web/HTTP/Caching)）。根据浏览器的不同，可能还会清除预渲染页面，脚本缓存，WebGL 着色器缓存或地址栏建议等内容。
+  - : 表示服务端希望删除本 URL 原始响应的本地缓存数据（即：浏览器缓存，请参阅 [HTTP 缓存](/zh-CN/docs/Web/HTTP/Guides/Caching)）。根据浏览器的不同，可能还会清除预渲染页面，脚本缓存，WebGL 着色器缓存或地址栏建议等内容。
 - `"cookies"`
   - : 表示服务端希望删除 URL 响应的所有 cookie。HTTP 身份验证凭据也会被清除。会影响整个主域，包括子域。所以 `https://example.com` 以及 `https://stage.example.com` 的 Cookie 都会被清除。
 - `"storage"`

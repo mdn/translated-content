@@ -75,4 +75,4 @@ Server: Apache
 ## 参见
 
 - {{HTTPHeader("Connection")}}
-- [HTTP/1.x 的连接管理](/zh-CN/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
+- [HTTP/1.x 的连接管理](/zh-CN/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x)

@@ -57,4 +57,4 @@ TRACE /index.html
 
 ## 参见
 
-- [HTTP 方法](/zh-CN/docs/Web/HTTP/Methods)
+- [HTTP 方法](/zh-CN/docs/Web/HTTP/Reference/Methods)

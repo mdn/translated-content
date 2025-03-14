@@ -24,7 +24,7 @@ Permissions-Policy: fullscreen=<allowlist>;
 ```
 
 - `<allowlist>`
-  - : 允许使用该特性的来源列表。有关更多详细信息，参阅 [`Permissions-Policy` > 语法](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#语法)。
+  - : 允许使用该特性的来源列表。有关更多详细信息，参阅 [`Permissions-Policy` > 语法](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy#语法)。
 
 ## 默认策略
 
@@ -67,4 +67,4 @@ iframe 属性可以选择性地在某些框架中的启用特性，而不在其�
 ## 参见
 
 - {{HTTPHeader("Permissions-Policy")}} 标头
-- [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)
+- [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)

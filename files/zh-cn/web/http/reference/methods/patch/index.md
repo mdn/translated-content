@@ -16,7 +16,7 @@ original_slug: Web/HTTP/Methods/PATCH
 
 `PATCH` 像 {{HTTPMethod("POST")}} 一样，*可能*会对其他资源产生副作用。
 
-要知道一个服务器是否支持 `PATCH`，服务器可以通过将其加入 {{HTTPHeader("Allow")}} 或 {{HTTPHeader("Access-Control-Allow-Methods")}}（用于 [CORS](/zh-CN/docs/Web/HTTP/CORS)）响应标头中的列表来宣告其支持。
+要知道一个服务器是否支持 `PATCH`，服务器可以通过将其加入 {{HTTPHeader("Allow")}} 或 {{HTTPHeader("Access-Control-Allow-Methods")}}（用于 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS)）响应标头中的列表来宣告其支持。
 
 另外一个（隐式）表明允许 `PATCH` 方法的指示为 {{HTTPHeader("Accept-Patch")}} 标头的存在，这个标头明确了服务器端可以接受补丁文档的格式。
 

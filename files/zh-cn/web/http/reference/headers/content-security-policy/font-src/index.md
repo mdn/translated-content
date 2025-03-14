@@ -38,9 +38,9 @@ Content-Security-Policy: font-src <source> <source>;
 
 ### 源代码
 
-`<source>` 可以是 [CSP 源值](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources)列出来的任意一个。
+`<source>` 可以是 [CSP 源值](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax)列出来的任意一个。
 
-注意，这套相同的值可以用于所有 {{Glossary("fetch directive", "fetch 指令")}}（以及[许多其他指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#relevant_directives)）。
+注意，这套相同的值可以用于所有 {{Glossary("fetch directive", "fetch 指令")}}（以及[许多其他指令](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax)）。
 
 ## 示例
 

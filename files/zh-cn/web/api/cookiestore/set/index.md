@@ -43,7 +43,7 @@ set(options)
       - : 记录 cookie 路径的字符串。默认为 `/`。
     - `sameSite` {{Optional_Inline}}
 
-      - : 以下 [`SameSite`](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 的值之一：
+      - : 以下 [`SameSite`](/zh-CN/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 的值之一：
 
         - `"strict"`
           - : Cookie 只会在第一方上下文中发送，不会与第三方网站发起的请求一起发送。

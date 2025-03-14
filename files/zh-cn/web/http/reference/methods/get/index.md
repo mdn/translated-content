@@ -56,6 +56,6 @@ GET /index.html
 
 ## 参见
 
-- [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)
+- [HTTP 标头](/zh-CN/docs/Web/HTTP/Reference/Headers)
 - {{HTTPHeader("Range")}}
 - {{HTTPMethod("POST")}}

@@ -8,7 +8,7 @@ original_slug: Web/HTTP/Headers/Content-Security-Policy-Report-Only
 
 HTTP **`Content-Security-Policy-Report-Only`**响应头允许 web 开发人员通过监测 (但不强制执行) 政策的影响来尝试政策。这些违反报告由 {{Glossary("JSON")}} 文档组成通过一个 HTTP POST 请求发送到指定的 URI。
 
-更多相关信息，可参见这篇文章 [Content Security Policy (CSP)](/zh-CN/docs/Web/HTTP/CSP).
+更多相关信息，可参见这篇文章 [Content Security Policy (CSP)](/zh-CN/docs/Web/HTTP/Guides/CSP).
 
 <table class="properties">
   <tbody>

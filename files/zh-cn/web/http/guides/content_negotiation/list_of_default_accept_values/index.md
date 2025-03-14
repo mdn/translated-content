@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-本文介绍了在一些特定输入和浏览器版本下的 HTTP [`Accept`](/zh-CN/docs/Web/HTTP/Headers/Accept) 标头的默认值。
+本文介绍了在一些特定输入和浏览器版本下的 HTTP [`Accept`](/zh-CN/docs/Web/HTTP/Reference/Headers/Accept) 标头的默认值。
 
 ## 默认值
 

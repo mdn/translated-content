@@ -13,7 +13,7 @@ l10n:
 > [!WARNING]
 > 根据 Fetch 规范，`Set-Cookie` 是一个[禁止修改的响应标头](https://fetch.spec.whatwg.org/#forbidden-response-header-name)，对应的响应在被暴露给前端代码前，[必须滤除](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0)这一响应标头，即浏览器会阻止前端 JavaScript 代码访问该标头。
 
-更多信息请查阅指南：[使用 HTTP cookie](/zh-CN/docs/Web/HTTP/Cookies)。
+更多信息请查阅指南：[使用 HTTP cookie](/zh-CN/docs/Web/HTTP/Guides/Cookies)。
 
 <table class="properties">
   <tbody>
@@ -227,7 +227,7 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 
 ## 参见
 
-- [HTTP cookie](/zh-CN/docs/Web/HTTP/Cookies)
+- [HTTP cookie](/zh-CN/docs/Web/HTTP/Guides/Cookies)
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - [SameSite Cookie 说明](https://web.developers.google.cn/articles/samesite-cookies-explained)（web.developers.google.cn 博客）

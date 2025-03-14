@@ -28,4 +28,4 @@ Apple Safari 拒绝任何此类数据。Google Chrome 和 Microsoft Edge 在得�
 
 ## 参见
 
-- [HTTP request methods](/zh-CN/docs/Web/HTTP/Methods)
+- [HTTP request methods](/zh-CN/docs/Web/HTTP/Reference/Methods)

@@ -16,5 +16,5 @@ l10n:
 
 ## 参见
 
-- [代理服务器和隧道](/zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling)
+- [代理服务器和隧道](/zh-CN/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling)
 - 维基百科上的[代理服务器](https://zh.wikipedia.org/wiki/代理服务器)

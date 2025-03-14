@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Vary
 
 {{HTTPSidebar}}
 
-**`Vary`** HTTP 响应标头描述了除方法和 URL 之外影响响应内容的请求消息。大多数情况下，这用于在使用[内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)时创建缓存键。
+**`Vary`** HTTP 响应标头描述了除方法和 URL 之外影响响应内容的请求消息。大多数情况下，这用于在使用[内容协商](/zh-CN/docs/Web/HTTP/Guides/Content_negotiation)时创建缓存键。
 
 给定 URL 的所有响应都应使用相同的 `Vary` 标头值，包括 {{HTTPStatus("304")}} `Not Modified` 响应和“默认”响应。
 
@@ -53,4 +53,4 @@ Vary: <header-name>, <header-name>, ...
 
 - [理解 Vary 标头 - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
 - [使用 Vary 标头的最佳实践 – fastly.com](https://www.fastly.com/blog/best-practices-using-vary-header)
-- [内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)
+- [内容协商](/zh-CN/docs/Web/HTTP/Guides/Content_negotiation)

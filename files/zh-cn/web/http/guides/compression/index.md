@@ -38,7 +38,7 @@ l10n:
 
 所有的现代浏览器及服务器都支持该技术，唯一需要协商的是所采用的压缩算法。这些压缩算法是为文本内容进行过优化的。在上世纪 90 年代，压缩技术快速发展，为数众多的算法相继出现，扩大了可选的范围。如今只有两种算法有着举足轻重的地位：`gzip` 应用最广泛，`br` 则是新的挑战者。
 
-为了选择要采用的压缩算法，浏览器和服务器之间会使用[主动协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation)。浏览器发送 {{HTTPHeader("Accept-Encoding")}} 标头，其中包含有它所支持的压缩算法，以及各自的优先级，服务器则从中选择一种，使用该算法对响应的消息主体进行压缩，并且发送 {{HTTPHeader("Content-Encoding")}} 标头来告知浏览器它选择了哪一种算法。由于该内容协商过程是基于编码类型来选择资源的展现形式的，在响应时，服务器至少发送一个包含 {{HTTPHeader("Accept-Encoding")}} 的 {{HTTPHeader("Vary")}} 标头以及该标头；这样的话，缓存服务器就可以对资源的不同展现形式进行缓存。
+为了选择要采用的压缩算法，浏览器和服务器之间会使用[主动协商机制](/zh-CN/docs/Web/HTTP/Guides/Content_negotiation)。浏览器发送 {{HTTPHeader("Accept-Encoding")}} 标头，其中包含有它所支持的压缩算法，以及各自的优先级，服务器则从中选择一种，使用该算法对响应的消息主体进行压缩，并且发送 {{HTTPHeader("Content-Encoding")}} 标头来告知浏览器它选择了哪一种算法。由于该内容协商过程是基于编码类型来选择资源的展现形式的，在响应时，服务器至少发送一个包含 {{HTTPHeader("Accept-Encoding")}} 的 {{HTTPHeader("Vary")}} 标头以及该标头；这样的话，缓存服务器就可以对资源的不同展现形式进行缓存。
 
 ![客户端使用“Accept-Encoding:br, gzip”标头请求内容。服务器使用 Brotli 算法压缩的主体以及所需的“Content-Encoding”和“Vary”标头进行响应。](httpcompression1.svg)
 

@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**HTTP 标头**（header）允许客户端和服务器通过 HTTP 请求（request）或者响应（response）传递附加信息。在 HTTP/1.X，一个标头包括它的名称（不区分大小写），一个冒号（`:`），可选且会被忽略的空格，最后是它的值（例如 `Allow: POST`）。在 HTTP/2 或更高的版本中，标头在开发者工具中展示为小写（`accept: */*`），对于特殊的[伪标头](/zh-CN/docs/Web/HTTP/Messages#伪标头)组则会以冒号作为前缀（`:status: 200`）。你可以在 [HTTP 消息](/zh-CN/docs/Web/HTTP/Messages)页面找到每个协议版本的有关信息和语法。
+**HTTP 标头**（header）允许客户端和服务器通过 HTTP 请求（request）或者响应（response）传递附加信息。在 HTTP/1.X，一个标头包括它的名称（不区分大小写），一个冒号（`:`），可选且会被忽略的空格，最后是它的值（例如 `Allow: POST`）。在 HTTP/2 或更高的版本中，标头在开发者工具中展示为小写（`accept: */*`），对于特殊的[伪标头](/zh-CN/docs/Web/HTTP/Guides/Messages#伪标头)组则会以冒号作为前缀（`:status: 200`）。你可以在 [HTTP 消息](/zh-CN/docs/Web/HTTP/Guides/Messages)页面找到每个协议版本的有关信息和语法。
 
 自定义专用的标头之前可以与 `X-` 前缀一起使用，但是这种用法在 2012 年被弃用，因为当非标准字段在 [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648) 中成为标准时，它会带来很多不便；其他的标头在 [IANA HTTP 字段名注册表](https://www.iana.org/assignments/http-fields/http-fields.xhtml)中列出，其原始内容在 [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229) 中定义。IANA 注册表列出了标头及其[状态信息](https://github.com/protocol-registries/http-fields?tab=readme-ov-file#choosing-the-right-status)。
 
@@ -19,7 +19,7 @@ l10n:
 - {{Glossary("Response header", "响应标头")}}
   - : 包含有关响应的额外信息，例如响应的位置或者提供响应的服务器。
 - {{Glossary("Representation header", "表示标头")}}
-  - : 包含资源体的信息，例如其 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)或者应用的编码/压缩方案。
+  - : 包含资源体的信息，例如其 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)或者应用的编码/压缩方案。
 - {{Glossary("Payload header","负载标头")}}
   - : 包含与负载数据的形式无关的表示信息，包含内容长度和用于传输的编码。
 
@@ -80,30 +80,30 @@ l10n:
 
 ## 内容协商
 
-更多详情请见[内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)。
+更多详情请见[内容协商](/zh-CN/docs/Web/HTTP/Guides/Content_negotiation)。
 
 - {{HTTPHeader("Accept")}}
   - : 通知服务器可以发回的数据{{Glossary("MIME_type", "类型")}}。
 - {{HTTPHeader("Accept-Encoding")}}
-  - : 可用于返回的资源的编码算法，通常是[压缩算法](/zh-CN/docs/Web/HTTP/Compression)。
+  - : 可用于返回的资源的编码算法，通常是[压缩算法](/zh-CN/docs/Web/HTTP/Guides/Compression)。
 - {{HTTPHeader("Accept-Language")}}
   - : 通知希望服务器返回的人类语言。这是仅仅一个提示而不一定由用户完全控制：服务器应该始终注意不要覆盖用户的明确选择（比如从下拉列表中选择的语言）。
 - {{HTTPHeader("Accept-Patch")}}
-  - : *请求内容协商*响应标头，在 {{HTTPMethod("PATCH")}} 请求中用于通告服务器能够理解的[媒体类型](/zh-CN/docs/Web/HTTP/MIME_types)。
+  - : *请求内容协商*响应标头，在 {{HTTPMethod("PATCH")}} 请求中用于通告服务器能够理解的[媒体类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)。
 - {{HTTPHeader("Accept-Post")}}
-  - : *请求内容协商*响应标头，在 {{HTTPMethod("POST")}} 请求中用于通告服务器能够理解的[媒体类型](/zh-CN/docs/Web/HTTP/MIME_types)。
+  - : *请求内容协商*响应标头，在 {{HTTPMethod("POST")}} 请求中用于通告服务器能够理解的[媒体类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)。
 
 ## 控制
 
 - {{HTTPHeader("Expect")}}
   - : 表示服务器正确处理请求需要满足的期望。
 - {{HTTPHeader("Max-Forwards")}}
-  - : 使用 [`TRACE`](/zh-CN/docs/Web/HTTP/Methods/TRACE) 时，指示请求在被反映到发送方之前可以执行的最大跃点数。
+  - : 使用 [`TRACE`](/zh-CN/docs/Web/HTTP/Reference/Methods/TRACE) 时，指示请求在被反映到发送方之前可以执行的最大跃点数。
 
 ## Cookie
 
 - {{HTTPHeader("Cookie")}}
-  - : 包含先前由服务器使用 {{HTTPHeader("Set-Cookie")}} 标头发送然后被存储的 [HTTP cookie](/zh-CN/docs/Web/HTTP/Cookies)。
+  - : 包含先前由服务器使用 {{HTTPHeader("Set-Cookie")}} 标头发送然后被存储的 [HTTP cookie](/zh-CN/docs/Web/HTTP/Guides/Cookies)。
 - {{HTTPHeader("Set-Cookie")}}
   - : 将 cookie 从服务器发送到用户代理。
 
@@ -126,7 +126,7 @@ l10n:
 - {{HTTPHeader("Access-Control-Request-Headers")}}
   - : 用于发起一个预检请求，告知服务器正式请求会使用哪些 HTTP 标头。
 - {{HTTPHeader("Access-Control-Request-Method")}}
-  - : 用于发起一个预检请求，告知服务器正式请求会使用哪一种 [HTTP 方法](/zh-CN/docs/Web/HTTP/Methods)。
+  - : 用于发起一个预检请求，告知服务器正式请求会使用哪一种 [HTTP 方法](/zh-CN/docs/Web/HTTP/Reference/Methods)。
 - {{HTTPHeader("Origin")}}
   - : 指示获取请求是从什么源发起的。
 - {{HTTPHeader("Timing-Allow-Origin")}}
@@ -173,7 +173,7 @@ l10n:
 
 ## 范围请求
 
-HTTP [范围请求](/zh-CN/docs/Web/HTTP/Range_requests)允许客户端向服务器请求资源的一部分。范围请求可用于支持随机访问的媒体播放器、知道只需要大文件的一部分的数据工具以及允许用户暂停和恢复下载的下载管理器等应用程序。
+HTTP [范围请求](/zh-CN/docs/Web/HTTP/Guides/Range_requests)允许客户端向服务器请求资源的一部分。范围请求可用于支持随机访问的媒体播放器、知道只需要大文件的一部分的数据工具以及允许用户暂停和恢复下载的下载管理器等应用程序。
 
 - {{HTTPHeader("Accept-Ranges")}}
   - : 指示服务器是否支持范围请求，如果支持，范围可以用哪个单位表示。
@@ -218,7 +218,7 @@ HTTP [范围请求](/zh-CN/docs/Web/HTTP/Range_requests)允许客户端向服务
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}}（COOP）
   - : 防止其他域打开/控制窗口。
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}}（CORP）
-  - : 防止从其他域读取应用了此标头的资源的响应。见 [CORP 的解释文章](/zh-CN/docs/Web/HTTP/Cross-Origin_Resource_Policy)。
+  - : 防止从其他域读取应用了此标头的资源的响应。见 [CORP 的解释文章](/zh-CN/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy)。
 - {{HTTPHeader("Content-Security-Policy")}}（{{Glossary("CSP")}}）
   - : 控制用户代理可以为给定页面加载哪些资源。
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
@@ -339,20 +339,20 @@ HTTP [范围请求](/zh-CN/docs/Web/HTTP/Range_requests)允许客户端向服务
 
 ### 客户端提示
 
-HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头，可提供有关客户端的有用信息，例如设备类型和网络条件，并允许服务器优化针对这些条件提供的服务。
+HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints)是一组请求标头，可提供有关客户端的有用信息，例如设备类型和网络条件，并允许服务器优化针对这些条件提供的服务。
 
 服务器使用 {{HTTPHeader("Accept-CH")}} 主动向客户端请求它们感兴趣的客户端提示标头。客户端可以选择在后续的请求中包含请求的标头。
 
 - {{HTTPHeader("Accept-CH")}}
   - : 服务器可以使用 `Accept-CH` 标头字段或具有 [`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#http-equiv) 属性的等效 HTML `<meta>` 元素来宣告对客户端提示的支持。
 - {{HTTPHeader("Critical-CH")}}
-  - : 服务器使用 `Critical-CH` 和 {{HttpHeader("Accept-CH")}} 来指定接受的客户端提示，也是[重要的客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#重要客户端提示)。
+  - : 服务器使用 `Critical-CH` 和 {{HttpHeader("Accept-CH")}} 来指定接受的客户端提示，也是[重要的客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#重要客户端提示)。
 
 下面列出了不同类别的客户端提示。
 
 #### 用户代理客户端提示
 
-[用户代理客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#用户代理客户端提示)是请求标头，其提供有关用户代理、它运行的平台/架构以及在用户代理或平台上设置的用户首选项信息：
+[用户代理客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#用户代理客户端提示)是请求标头，其提供有关用户代理、它运行的平台/架构以及在用户代理或平台上设置的用户首选项信息：
 
 - {{HTTPHeader("Sec-CH-UA")}} {{experimental_inline}}
   - : 用户代理的品牌（brand）和版本。
@@ -384,7 +384,7 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
   - : 请求标头指示用户代理对降低透明度的偏好。
 
 > [!NOTE]
-> 用户代理客户端提示在[围栏框架](/zh-CN/docs/Web/API/Fenced_frame_API)内不可用，因为它们依赖于[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)委派，这可能会被用来泄露数据。
+> 用户代理客户端提示在[围栏框架](/zh-CN/docs/Web/API/Fenced_frame_API)内不可用，因为它们依赖于[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)委派，这可能会被用来泄露数据。
 
 #### 设备客户端提示
 

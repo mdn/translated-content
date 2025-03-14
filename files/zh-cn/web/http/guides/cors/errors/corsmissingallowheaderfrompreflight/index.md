@@ -20,7 +20,7 @@ original_slug: Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight
 
 ## 参见
 
-- [CORS 错误](/zh-CN/docs/Web/HTTP/CORS/Errors)
+- [CORS 错误](/zh-CN/docs/Web/HTTP/Guides/CORS/Errors)
 - 术语：{{Glossary("CORS")}}
-- [CORS 介绍](/zh-CN/docs/Web/HTTP/CORS)
-- [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)
+- [CORS 介绍](/zh-CN/docs/Web/HTTP/Guides/CORS)
+- [HTTP 标头](/zh-CN/docs/Web/HTTP/Reference/Headers)

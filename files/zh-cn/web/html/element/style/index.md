@@ -53,7 +53,7 @@ p {
 - `media`
   - : 该属性规定该样式适用于哪个媒体。属性的取值为[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)，如果属性缺失，则默认为 `all`。
 - `nonce`
-  - : 用于允许在 [style-src Content-Security-Policy](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) 中使用内联样式的密码学 nonce（只使用一次的数字）。每次传输策略时，服务器都必须生成一个唯一的 nonce 值。提供一个无法猜测的 nonce 值至关重要，否则绕过资源策略将变得微不足道。
+  - : 用于允许在 [style-src Content-Security-Policy](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src) 中使用内联样式的密码学 nonce（只使用一次的数字）。每次传输策略时，服务器都必须生成一个唯一的 nonce 值。提供一个无法猜测的 nonce 值至关重要，否则绕过资源策略将变得微不足道。
 - `title`
   - : 该属性指定[替代样式表](/zh-CN/docs/Web/HTML/Attributes/rel/Alternate_stylesheet)集。
 

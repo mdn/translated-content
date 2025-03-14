@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}{{securecontext_header}}
 
-**`Accept-CH`** 标头由服务器设置，以指定客户端应在后续请求中应包含哪些客户端[客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)提示标头。
+**`Accept-CH`** 标头由服务器设置，以指定客户端应在后续请求中应包含哪些客户端[客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints)提示标头。
 
 <table class="properties">
   <tbody>
@@ -46,7 +46,7 @@ Vary: Viewport-Width, Width
 ```
 
 > [!NOTE]
-> 请牢记要根据所接受的客户端提示[更改响应](/zh-CN/docs/Web/HTTP/Client_hints#缓存和客户端提示)。
+> 请牢记要根据所接受的客户端提示[更改响应](/zh-CN/docs/Web/HTTP/Guides/Client_hints#缓存和客户端提示)。
 
 ## 规范
 

@@ -134,8 +134,8 @@ Highlights:
 
 ## Security
 
-- The [CSP](/zh-CN/docs/Web/HTTP/CSP) 1.1 `manifest-src` [directive](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy) 已经被支持 ([Firefox bug 1089255](https://bugzil.la/1089255)).
-- Previous versions of Firefox incorrectly expected the [Content Security Policy](/zh-CN/docs/Web/HTTP/CSP) [referrer](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy#referrer)directive's value `origin-when-cross-origin` to be spelled `origin-when-crossorigin`. This has been corrected to include the missing dash character.
+- The [CSP](/zh-CN/docs/Web/HTTP/Guides/CSP) 1.1 `manifest-src` [directive](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) 已经被支持 ([Firefox bug 1089255](https://bugzil.la/1089255)).
+- Previous versions of Firefox incorrectly expected the [Content Security Policy](/zh-CN/docs/Web/HTTP/Guides/CSP) [referrer](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#referrer)directive's value `origin-when-cross-origin` to be spelled `origin-when-crossorigin`. This has been corrected to include the missing dash character.
 
 ## Changes for add-on and Mozilla developers
 

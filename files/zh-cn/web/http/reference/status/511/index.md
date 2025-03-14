@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`511 Network Authentication Required`** [服务端错误响应](/zh-CN/docs/Web/HTTP/Status#服务端错误响应)状态码表示客户端需要进行认证才能获得网络访问权限。此状态不是由源服务器生成的，而是由控制网络访问的{{Glossary("Proxy_server", "代理服务器")}}拦截生成的。
+HTTP **`511 Network Authentication Required`** [服务端错误响应](/zh-CN/docs/Web/HTTP/Reference/Status#服务端错误响应)状态码表示客户端需要进行认证才能获得网络访问权限。此状态不是由源服务器生成的，而是由控制网络访问的{{Glossary("Proxy_server", "代理服务器")}}拦截生成的。
 
 网络运营商有时会要求用户进行一些身份验证、接受条款或其他互动，才能授予访问权限（例如在网吧或机场）。他们通常使用客户端的媒体访问控制（MAC）地址来识别尚未完成上述操作的用户。
 
@@ -50,5 +50,5 @@ Content-Type: text/html
 
 ## 参见
 
-- [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Status)
+- [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Reference/Status)
 - {{Glossary("Proxy server", "代理服务器")}}

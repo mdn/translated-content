@@ -15,7 +15,7 @@ Permissions-Policy: camera=<allowlist>;
 ```
 
 - \<allowlist>
-  - : 允许使用此特性的来源（origin）列表。参见 [`Permissions-Policy`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#语法)。
+  - : 允许使用此特性的来源（origin）列表。参见 [`Permissions-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy#语法)。
 
 ## 默认策略
 
@@ -32,5 +32,5 @@ Permissions-Policy: camera=<allowlist>;
 ## 参见
 
 - {{HTTPHeader("Permissions-Policy")}} 标头
-- [Feature Policy](/zh-CN/docs/Web/HTTP/Permissions_Policy)
+- [Feature Policy](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)
 - [使用 Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

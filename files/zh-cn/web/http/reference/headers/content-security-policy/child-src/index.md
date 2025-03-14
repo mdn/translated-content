@@ -38,9 +38,9 @@ Content-Security-Policy: child-src <source> <source>;
 
 ### 源
 
-`<source>` 可以是 [CSP 源值](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources)中的任意一个。
+`<source>` 可以是 [CSP 源值](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax)中的任意一个。
 
-请注意，这套相同的值可以用于所有 {{Glossary("fetch directive", "fetch 指令")}}（以及[许多其他的指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#relevant_directives)）。
+请注意，这套相同的值可以用于所有 {{Glossary("fetch directive", "fetch 指令")}}（以及[许多其他的指令](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax)）。
 
 ## 示例
 

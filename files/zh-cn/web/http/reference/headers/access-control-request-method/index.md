@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**`Access-Control-Request-Method`** 请求标头会由浏览器在发出{{glossary("preflight request", "预检请求")}}时使用，通知服务器在实际请求中发出时将会采用哪种 [HTTP 方法](/zh-CN/docs/Web/HTTP/Methods)。此标头是必需的，因为预检请求总是采用 {{HTTPMethod("OPTIONS")}} 方法，这与实际请求所使用的方法并不相同。
+**`Access-Control-Request-Method`** 请求标头会由浏览器在发出{{glossary("preflight request", "预检请求")}}时使用，通知服务器在实际请求中发出时将会采用哪种 [HTTP 方法](/zh-CN/docs/Web/HTTP/Reference/Methods)。此标头是必需的，因为预检请求总是采用 {{HTTPMethod("OPTIONS")}} 方法，这与实际请求所使用的方法并不相同。
 
 <table class="properties">
   <tbody>
@@ -32,7 +32,7 @@ Access-Control-Request-Method: <method>
 ## 指令
 
 - \<method>
-  - : 一种 [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Methods)，例如 {{HTTPMethod("GET")}}、{{HTTPMethod("POST")}} 或 {{HTTPMethod("DELETE")}}。
+  - : 一种 [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Reference/Methods)，例如 {{HTTPMethod("GET")}}、{{HTTPMethod("POST")}} 或 {{HTTPMethod("DELETE")}}。
 
 ## 示例
 

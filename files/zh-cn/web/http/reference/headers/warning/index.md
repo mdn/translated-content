@@ -70,4 +70,4 @@ Warning: 112 - "cache down" "Wed, 21 Oct 2015 07:28:00 GMT"
 ## 参见
 
 - {{HTTPHeader("Date")}}
-- [HTTP respnose status codes](/zh-CN/docs/Web/HTTP/Status)
+- [HTTP respnose status codes](/zh-CN/docs/Web/HTTP/Reference/Status)

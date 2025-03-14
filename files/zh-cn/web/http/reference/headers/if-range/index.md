@@ -78,4 +78,4 @@ If-Range: Wed, 21 Oct 2015 07:28:00 GMT
 - {{HTTPHeader("If-Match")}}
 - {{HTTPHeader("If-None-Match")}}
 - {{HTTPStatus("206", "206 Partial Content")}}
-- [HTTP 条件请求](/zh-CN/docs/Web/HTTP/Conditional_requests)
+- [HTTP 条件请求](/zh-CN/docs/Web/HTTP/Guides/Conditional_requests)

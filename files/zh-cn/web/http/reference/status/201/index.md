@@ -22,4 +22,4 @@ original_slug: Web/HTTP/Status/201
 
 ## 参见
 
-- [HTTP request methods](/zh-CN/docs/Web/HTTP/Methods)
+- [HTTP request methods](/zh-CN/docs/Web/HTTP/Reference/Methods)

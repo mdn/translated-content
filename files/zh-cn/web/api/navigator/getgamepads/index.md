@@ -28,7 +28,7 @@ getGamepads()
 ### 异常
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止了此特性的使用。
+  - : [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)阻止了此特性的使用。
 
 ## 示例
 

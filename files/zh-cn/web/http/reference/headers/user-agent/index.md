@@ -11,7 +11,7 @@ l10n:
 **User-Agent** {{Glossary("request header", "请求标头")}}是一个特征字符串，使得服务器和对等网络能够识别发出请求的{{Glossary("user agent", "用户代理")}}的应用程序、操作系统、供应商或版本信息。
 
 > [!WARNING]
-> 请阅读[使用用户代理字段进行浏览器检测](/zh-CN/docs/Web/HTTP/Browser_detection_using_the_user_agent)来了解为什么为不同的浏览器提供不同的页面或者服务通常不是一个好主意。
+> 请阅读[使用用户代理字段进行浏览器检测](/zh-CN/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)来了解为什么为不同的浏览器提供不同的页面或者服务通常不是一个好主意。
 
 <table class="properties">
   <tbody>
@@ -49,7 +49,7 @@ User-Agent: Mozilla/5.0 (<system-information>) <platform> (<platform-details>) <
 
 ## Firefox 用户代理字符串
 
-关于更多 Firefox 和基于 Gecko 的用户代理字符串的信息，请参阅 [Firefox 用户代理字符串参考](/zh-CN/docs/Web/HTTP/Headers/User-Agent/Firefox)。Firefox 的用户代理字符串分为 4 个组成部分：
+关于更多 Firefox 和基于 Gecko 的用户代理字符串的信息，请参阅 [Firefox 用户代理字符串参考](/zh-CN/docs/Web/HTTP/Reference/Headers/User-Agent/Firefox)。Firefox 的用户代理字符串分为 4 个组成部分：
 
 ```plain
 Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion
@@ -150,6 +150,6 @@ PostmanRuntime/7.26.5
 ## 参见
 
 - [用户代理检测、历史记录和清单](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/)
-- [Firefox 用户代理字符串参考](/zh-CN/docs/Web/HTTP/Headers/User-Agent/Firefox)
-- [使用用户代理字段进行浏览器检测](/zh-CN/docs/Web/HTTP/Browser_detection_using_the_user_agent)
-- [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)
+- [Firefox 用户代理字符串参考](/zh-CN/docs/Web/HTTP/Reference/Headers/User-Agent/Firefox)
+- [使用用户代理字段进行浏览器检测](/zh-CN/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)
+- [客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints)

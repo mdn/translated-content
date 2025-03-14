@@ -29,4 +29,4 @@ original_slug: Web/HTTP/Status/200
 
 ## 参见
 
-- [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Methods)
+- [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Reference/Methods)

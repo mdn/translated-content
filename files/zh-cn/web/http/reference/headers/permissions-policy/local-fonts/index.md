@@ -19,7 +19,7 @@ Permissions-Policy: local-fonts=<allowlist>;
 ```
 
 - `<allowlist>`
-  - : 允许使用该特性的来源列表。参见 [`Permissions-Policy`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#语法)。
+  - : 允许使用该特性的来源列表。参见 [`Permissions-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy#语法)。
 
 ## 默认策略
 
@@ -37,4 +37,4 @@ Permissions-Policy: local-fonts=<allowlist>;
 
 - {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}}
 - {{HTTPHeader("Permissions-Policy")}} 标头
-- [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)
+- [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)

@@ -296,7 +296,7 @@ _`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}}
 - {{domxref("Element/scrollend_event", "scrollend")}}
   - : 当文档视图完成滚动时触发此事件。
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
-  - : 当违反[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)时触发此事件。
+  - : 当违反[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)时触发此事件。
 - {{domxref("Element/wheel_event","wheel")}}
   - : 当用户旋转指向设备（通常是鼠标）上的滚轮按钮时触发此事件。
 

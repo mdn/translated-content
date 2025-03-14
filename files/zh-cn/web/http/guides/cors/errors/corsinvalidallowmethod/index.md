@@ -22,7 +22,7 @@ original_slug: Web/HTTP/CORS/Errors/CORSInvalidAllowMethod
 
 ## 参见
 
-- [CORS 错误](/zh-CN/docs/Web/HTTP/CORS/Errors)
+- [CORS 错误](/zh-CN/docs/Web/HTTP/Guides/CORS/Errors)
 - 术语：{{Glossary("CORS")}}
-- [CORS 介绍](/zh-CN/docs/Web/HTTP/CORS)
-- [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Methods)
+- [CORS 介绍](/zh-CN/docs/Web/HTTP/Guides/CORS)
+- [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Reference/Methods)

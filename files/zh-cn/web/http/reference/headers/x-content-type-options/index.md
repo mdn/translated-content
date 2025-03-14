@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/X-Content-Type-Options
 
 {{HTTPSidebar}}
 
-**`X-Content-Type-Options`** HTTP 消息头相当于一个提示标志，被服务器用来提示客户端一定要遵循在 {{HTTPHeader("Content-Type")}} 首部中对 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types) 的设定，而不能对其进行修改。这就禁用了客户端的 [MIME 类型嗅探](/zh-CN/docs/Web/HTTP/MIME_types#mime_嗅探)行为，换句话说，也就是意味着网站管理员确定自己的设置没有问题。
+**`X-Content-Type-Options`** HTTP 消息头相当于一个提示标志，被服务器用来提示客户端一定要遵循在 {{HTTPHeader("Content-Type")}} 首部中对 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types) 的设定，而不能对其进行修改。这就禁用了客户端的 [MIME 类型嗅探](/zh-CN/docs/Web/HTTP/Guides/MIME_types#mime_嗅探)行为，换句话说，也就是意味着网站管理员确定自己的设置没有问题。
 
 该消息头最初是由微软在 IE 8 浏览器中引入的，提供给网站管理员用作禁用内容嗅探的手段，内容嗅探技术可能会把不可执行的 MIME 类型转变为可执行的 MIME 类型。在此之后，其他浏览器也相继引入了这个消息头，尽管它们的 MIME 嗅探算法没有那么有侵略性。
 

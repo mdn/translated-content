@@ -17,7 +17,7 @@ l10n:
 
 ## 原理
 
-在 HTTP 协议中，重定向操作由服务器向请求发送特殊的重定向响应而触发。重定向响应包含以 `3` 开头的[状态码](/zh-CN/docs/Web/HTTP/Status)，以及 {{ httpheader("Location") }} 标头，其保存着重定向的 URL。
+在 HTTP 协议中，重定向操作由服务器向请求发送特殊的重定向响应而触发。重定向响应包含以 `3` 开头的[状态码](/zh-CN/docs/Web/HTTP/Reference/Status)，以及 {{ httpheader("Location") }} 标头，其保存着重定向的 URL。
 
 浏览器在接收到重定向时，它们会立刻加载 `Location` 标头中提供的新 URL。除了额外的往返操作中会有一小部分性能损失之外，重定向操作对于用户来说是不可见的。
 

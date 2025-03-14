@@ -17,7 +17,7 @@ original_slug: Web/HTTP/Headers/Location
 
 除了重定向响应之外，状态码为 {{HTTPHeader("201")}} (Created) 的消息也会带有 Location 首部。它指向的是新创建的资源的地址。
 
-[`Location`](/zh-CN/docs/Web/HTTP/Headers/Location) 与 `Content-Location`是不同的，前者（[`Location`](/zh-CN/docs/Web/HTTP/Headers/Location) ）指定的是一个重定向请求的目的地址（或者新创建的文件的 URL），而后者（ `Content-Location`）指向的是经过内容协商后的资源的直接地址，不需要进行进一步的内容协商。Location 对应的是响应，而 Content-Location 对应的是要返回的实体。
+[`Location`](/zh-CN/docs/Web/HTTP/Reference/Headers/Location) 与 `Content-Location`是不同的，前者（[`Location`](/zh-CN/docs/Web/HTTP/Reference/Headers/Location) ）指定的是一个重定向请求的目的地址（或者新创建的文件的 URL），而后者（ `Content-Location`）指向的是经过内容协商后的资源的直接地址，不需要进行进一步的内容协商。Location 对应的是响应，而 Content-Location 对应的是要返回的实体。
 
 | Header type                           | {{Glossary("Response header")}} |
 | ------------------------------------- | ------------------------------- |

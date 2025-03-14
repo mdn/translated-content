@@ -44,9 +44,9 @@ Content-Security-Policy: default-src <source> <source>;
 
 ### 源
 
-`<source>` 可以是 [CSP 源值](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#%e6%ba%90)中列出的任何值。
+`<source>` 可以是 [CSP 源值](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax)中列出的任何值。
 
-注意，这些值可以在所有的 {{Glossary("fetch directive", "fetch 指令")}}（以及[其他指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#%e7%9b%b8%e5%85%b3%e6%8c%87%e4%bb%a4)）中使用。
+注意，这些值可以在所有的 {{Glossary("fetch directive", "fetch 指令")}}（以及[其他指令](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax)）中使用。
 
 ## 示例
 

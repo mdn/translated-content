@@ -48,7 +48,7 @@ original_slug: Web/HTTP/Permissions_Policy
 
 为了控制每个特性，会撰写包含以下这些方面的策略：
 
-- **指令**确定了要控制的特性名称。见[不同的可用指令列表](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#指令)。
+- **指令**确定了要控制的特性名称。见[不同的可用指令列表](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy#指令)。
 - **允许列表**是该特性应该被控制的源列表。你可以为所有或特定的源启用一种特性，或者阻止它在所有源中的使用。
 
 请看下面的多个示例。
@@ -57,7 +57,7 @@ original_slug: Web/HTTP/Permissions_Policy
 
 权限策略和{{domxref("Permissions API", "权限 API", "", 1)}}密切相关，但又有所不同。由这两种技术控制其权限的特性是重叠的。
 
-- 权限策略允许服务器设置某项特性是否可以在特定的文档中使用（或在文档中嵌入`<frame>`）。这些被称为**策略控制的**特性————见[权限策略指令列表](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#指令)。
+- 权限策略允许服务器设置某项特性是否可以在特定的文档中使用（或在文档中嵌入`<frame>`）。这些被称为**策略控制的**特性————见[权限策略指令列表](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy#指令)。
 - 权限 API 根据用户授予的权限对特性的访问进行把关。这些特性被记录在[权限注册表](https://w3c.github.io/permissions-registry/)中。
 
 每种特性使用的识别字符串在两者之间保持一致，例如，`geolocation` 代表{{domxref("Geolocation API", "地理位置 API", "", 1)}}。权限注册表中的大多数 API 特性也有相应的权限策略指令。一个例外是{{domxref("Notifications API", "通知 API", "", 1)}}。
@@ -79,7 +79,7 @@ original_slug: Web/HTTP/Permissions_Policy
 值 `*` 和 `()` 只能单独使用，而 `self` 和 `src` 可以与一个或多个源结合使用。
 
 > [!NOTE]
-> 指令有一个默认的允许列表，对于 `Permissions-Policy` HTTP 标头来说，它总是 `*`'、`self` 或 `none` 之一，如果它们没有明确地列在策略中，则管理默认行为。这些都是在各个[指令参考页](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#指令)中指定的。对于 `<iframe>` 的 `allow` 属性，默认行为总是 `src`。
+> 指令有一个默认的允许列表，对于 `Permissions-Policy` HTTP 标头来说，它总是 `*`'、`self` 或 `none` 之一，如果它们没有明确地列在策略中，则管理默认行为。这些都是在各个[指令参考页](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy#指令)中指定的。对于 `<iframe>` 的 `allow` 属性，默认行为总是 `src`。
 
 在支持的情况下，你可以在权限策略源中包括通配符。这意味着你不必在允许列表中明确指定几个不同的子域，而是可以用通配符在一个单一的源中指定它们。
 

@@ -33,7 +33,7 @@ HTTP 请求和响应具有相似的结构，由以下部分组成：
 
 HTTP 请求是由客户端发出的消息，用来使服务器执行动作。_起始行_（start-line）包含三个元素：
 
-1. 一个 _[HTTP 方法](/zh-CN/docs/Web/HTTP/Methods)_，一个动词（像 {{HTTPMethod("GET")}}、{{HTTPMethod("PUT")}} 或者 {{HTTPMethod("POST")}}）或者一个名词（像 {{HTTPMethod("HEAD")}} 或者 {{HTTPMethod("OPTIONS")}}），描述要执行的动作。例如，`GET` 表示要获取资源，`POST` 表示向服务器推送数据（创建或修改资源，或者产生要返回的临时文件）。
+1. 一个 _[HTTP 方法](/zh-CN/docs/Web/HTTP/Reference/Methods)_，一个动词（像 {{HTTPMethod("GET")}}、{{HTTPMethod("PUT")}} 或者 {{HTTPMethod("POST")}}）或者一个名词（像 {{HTTPMethod("HEAD")}} 或者 {{HTTPMethod("OPTIONS")}}），描述要执行的动作。例如，`GET` 表示要获取资源，`POST` 表示向服务器推送数据（创建或修改资源，或者产生要返回的临时文件）。
 2. _请求目标_（request target），通常是一个 {{glossary("URL")}}，或者是协议、端口和域名的绝对路径，通常以请求的环境为特征。请求的格式因不同的 HTTP 方法而异。它可以是：
 
    - 一个绝对路径，末尾跟上一个 `'?'` 和查询字符串。这是最常见的形式，称为*原始形式*（origin form），被 `GET`、`POST`、`HEAD` 和 `OPTIONS` 方法所使用。
@@ -49,7 +49,7 @@ HTTP 请求是由客户端发出的消息，用来使服务器执行动作。_�
 
 ### 标头（Header）
 
-来自请求的 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)遵循和 HTTP 标头相同的基本结构：不区分大小写的字符串，紧跟着的冒号（`':'`）和一个结构取决于标头的值。整个标头（包括值）由一行组成，这一行可以相当长。
+来自请求的 [HTTP 标头](/zh-CN/docs/Web/HTTP/Reference/Headers)遵循和 HTTP 标头相同的基本结构：不区分大小写的字符串，紧跟着的冒号（`':'`）和一个结构取决于标头的值。整个标头（包括值）由一行组成，这一行可以相当长。
 
 有许多请求标头可用，它们可以分为几组：
 
@@ -66,7 +66,7 @@ HTTP 请求是由客户端发出的消息，用来使服务器执行动作。_�
 主体大致可分为两类：
 
 - 单一资源（Single-resource）主体，由一个单文件组成。该类型的主体由两个标头定义：{{HTTPHeader("Content-Type")}} 和 {{HTTPHeader("Content-Length")}}。
-- [多资源（Multiple-resource）主体](/zh-CN/docs/Web/HTTP/MIME_types#multipartform-data)，由多部分主体组成，每一部分包含不同的信息位。通常是和 [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)连系在一起。
+- [多资源（Multiple-resource）主体](/zh-CN/docs/Web/HTTP/Guides/MIME_types#multipartform-data)，由多部分主体组成，每一部分包含不同的信息位。通常是和 [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)连系在一起。
 
 ## HTTP 响应
 
@@ -82,7 +82,7 @@ HTTP 响应的起始行被称作*状态行*（status line），包含以下信�
 
 ### 标头（Header）
 
-响应的 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)遵循和任何其他标头相同的结构：不区分大小写的字符串，紧跟着的冒号（`':'`）和一个结构取决于标头类型的值。整个标头（包括其值）表现为单行形式。
+响应的 [HTTP 标头](/zh-CN/docs/Web/HTTP/Reference/Headers)遵循和任何其他标头相同的结构：不区分大小写的字符串，紧跟着的冒号（`':'`）和一个结构取决于标头类型的值。整个标头（包括其值）表现为单行形式。
 
 许多不同的标头可能会出现在响应中。这些可以分为几组：
 
@@ -100,7 +100,7 @@ HTTP 响应的起始行被称作*状态行*（status line），包含以下信�
 
 - 单资源（Single-resource）主体，由**已知**长度的单个文件组成。该类型主体由两个标头定义：{{HTTPHeader("Content-Type")}} 和 {{HTTPHeader("Content-Length")}}。
 - 单资源（Single-resource）主体，由**未知**长度的单个文件组成。通过将 {{HTTPHeader("Transfer-Encoding")}} 设置为 `chunked` 来使用分块编码。
-- [多资源（Multiple-resource）主体](/zh-CN/docs/Web/HTTP/MIME_types#multipartform-data)，由多部分 body 组成，每部分包含不同的信息段。但这是比较少见的。
+- [多资源（Multiple-resource）主体](/zh-CN/docs/Web/HTTP/Guides/MIME_types#multipartform-data)，由多部分 body 组成，每部分包含不同的信息段。但这是比较少见的。
 
 ## HTTP/2 帧
 

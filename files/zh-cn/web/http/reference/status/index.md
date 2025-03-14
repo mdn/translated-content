@@ -97,7 +97,7 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
 - {{HTTPStatus(405, "405 Method Not Allowed")}}
   - : 服务器知道请求方法，但目标资源不支持该方法。例如，API 可能不允许调用`DELETE`来删除资源。
 - {{HTTPStatus(406, "406 Not Acceptable")}}
-  - : 当 web 服务器在执行[服务端驱动型内容协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation#服务端驱动型内容协商机制)后，没有发现任何符合用户代理给定标准的内容时，就会发送此响应。
+  - : 当 web 服务器在执行[服务端驱动型内容协商机制](/zh-CN/docs/Web/HTTP/Guides/Content_negotiation#服务端驱动型内容协商机制)后，没有发现任何符合用户代理给定标准的内容时，就会发送此响应。
 - {{HTTPStatus(407, "407 Proxy Authentication Required")}}
   - : 类似于 `401 Unauthorized` 但是认证需要由代理完成。
 - {{HTTPStatus(408, "408 Request Timeout")}}

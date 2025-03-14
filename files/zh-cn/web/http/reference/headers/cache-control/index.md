@@ -66,7 +66,7 @@ Cache-control: stale-if-error=<seconds>
 ### 可缓存性
 
 - `public`
-  - : 表明响应可以被任何对象（包括：发送请求的客户端，代理服务器，等等）缓存，即使是通常不可缓存的内容。（例如：1.该响应没有`max-age`指令或`Expires`消息头；2. 该响应对应的请求方法是 [POST](/zh-CN/docs/Web/HTTP/Methods/POST) 。）
+  - : 表明响应可以被任何对象（包括：发送请求的客户端，代理服务器，等等）缓存，即使是通常不可缓存的内容。（例如：1.该响应没有`max-age`指令或`Expires`消息头；2. 该响应对应的请求方法是 [POST](/zh-CN/docs/Web/HTTP/Reference/Methods/POST) 。）
 - `private`
   - : 表明响应只能被单个用户缓存，不能作为共享缓存（即代理服务器不能缓存它）。私有缓存可以缓存响应内容，比如：对应用户的本地浏览器。
 - `no-cache`
@@ -151,7 +151,7 @@ Cache-Control: max-age=0
 
 ## 参见
 
-- [HTTP Caching FAQ](/zh-CN/docs/Web/HTTP/Caching)
+- [HTTP Caching FAQ](/zh-CN/docs/Web/HTTP/Guides/Caching)
 - [Caching Tutorial for Web Authors and Webmasters](https://www.mnot.net/cache_docs/)
 - Guide: _[`Cache-Control` for civilians](https://csswizardry.com/2019/03/cache-control-for-civilians)_
 - {{HTTPHeader("Age")}}

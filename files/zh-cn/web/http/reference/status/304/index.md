@@ -25,7 +25,7 @@ HTTP **`304 Not Modified`** 说明无需再次传输请求的内容，也就是�
 
 ## 兼容性提醒
 
-- 如果响应错误的携带了响应体，那么浏览器会有不同的行为，详情请见 [204 No Content](/zh-CN/docs/Web/HTTP/Status/204) 。
+- 如果响应错误的携带了响应体，那么浏览器会有不同的行为，详情请见 [204 No Content](/zh-CN/docs/Web/HTTP/Reference/Status/204) 。
 
 ## 更多
 

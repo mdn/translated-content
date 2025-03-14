@@ -32,7 +32,7 @@ CORS 机制允许 Web 应用服务器进行跨源访问控制，从而使跨源�
 
 ## 功能概述
 
-跨源资源共享标准新增了一组 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)字段，允许服务器声明哪些源站通过浏览器有权限访问哪些资源。另外，规范要求，对那些可能对服务器数据产生副作用的 HTTP 请求方法（特别是 {{HTTPMethod("GET")}} 以外的 HTTP 请求，或者搭配某些 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)的 {{HTTPMethod("POST")}} 请求），浏览器必须首先使用 {{HTTPMethod("OPTIONS")}} 方法发起一个预检请求（preflight request），从而获知服务端是否允许该跨源请求。服务器确认允许之后，才发起实际的 HTTP 请求。在预检请求的返回中，服务器端也可以通知客户端，是否需要携带身份凭证（例如 [Cookie](/zh-CN/docs/Web/HTTP/Cookies) 和 [HTTP 认证](/zh-CN/docs/Web/HTTP/Authentication)相关数据）。
+跨源资源共享标准新增了一组 [HTTP 标头](/zh-CN/docs/Web/HTTP/Reference/Headers)字段，允许服务器声明哪些源站通过浏览器有权限访问哪些资源。另外，规范要求，对那些可能对服务器数据产生副作用的 HTTP 请求方法（特别是 {{HTTPMethod("GET")}} 以外的 HTTP 请求，或者搭配某些 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)的 {{HTTPMethod("POST")}} 请求），浏览器必须首先使用 {{HTTPMethod("OPTIONS")}} 方法发起一个预检请求（preflight request），从而获知服务端是否允许该跨源请求。服务器确认允许之后，才发起实际的 HTTP 请求。在预检请求的返回中，服务器端也可以通知客户端，是否需要携带身份凭证（例如 [Cookie](/zh-CN/docs/Web/HTTP/Guides/Cookies) 和 [HTTP 认证](/zh-CN/docs/Web/HTTP/Guides/Authentication)相关数据）。
 
 CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层面*无法*获知到底具体是哪里出了问题。你只能查看浏览器的控制台以得知具体是哪里出现了错误。
 
@@ -220,7 +220,7 @@ Access-Control-Max-Age: 86400
 
 标头字段 `Access-Control-Allow-Headers` 表明服务器允许请求中携带字段 `X-PINGOTHER` 与 `Content-Type`。与 `Access-Control-Allow-Methods` 一样，`Access-Control-Allow-Headers` 的值为逗号分割的列表。
 
-最后，标头字段 {{HTTPHeader("Access-Control-Max-Age")}} 给定了该预检请求可供缓存的时间长短，单位为秒，默认值是 5 秒。在有效时间内，浏览器无须为同一请求再次发起预检请求。以上例子中，该响应的有效时间为 86400 秒，也就是 24 小时。请注意，浏览器自身维护了一个[最大有效时间](/zh-CN/docs/Web/HTTP/Headers/Access-Control-Max-Age)，如果该标头字段的值超过了最大有效时间，将不会生效。
+最后，标头字段 {{HTTPHeader("Access-Control-Max-Age")}} 给定了该预检请求可供缓存的时间长短，单位为秒，默认值是 5 秒。在有效时间内，浏览器无须为同一请求再次发起预检请求。以上例子中，该响应的有效时间为 86400 秒，也就是 24 小时。请注意，浏览器自身维护了一个[最大有效时间](/zh-CN/docs/Web/HTTP/Reference/Headers/Access-Control-Max-Age)，如果该标头字段的值超过了最大有效时间，将不会生效。
 
 预检请求完成之后，发送实际请求：
 
@@ -282,7 +282,7 @@ CORS 最初要求浏览器具有该行为，不过在后续的[修订](https://g
 > [!NOTE]
 > 当发出跨源请求时，第三方 cookie 策略仍将适用。无论如何改变本章节中描述的服务器和客户端的设置，该策略都会强制执行。
 
-{{domxref("XMLHttpRequest")}} 或 [Fetch](/zh-CN/docs/Web/API/Fetch_API) 与 CORS 的一个有趣的特性是，可以基于 [HTTP cookies](/zh-CN/docs/Web/HTTP/Cookies) 和 HTTP 认证信息发送身份凭证。一般而言，对于跨源 `XMLHttpRequest` 或 [Fetch](/zh-CN/docs/Web/API/Fetch_API) 请求，浏览器**不会**发送身份凭证信息。如果要发送凭证信息，需要设置 `XMLHttpRequest` 对象的某个特殊标志位，或在构造 {{domxref("Request")}} 对象时设置。
+{{domxref("XMLHttpRequest")}} 或 [Fetch](/zh-CN/docs/Web/API/Fetch_API) 与 CORS 的一个有趣的特性是，可以基于 [HTTP cookies](/zh-CN/docs/Web/HTTP/Guides/Cookies) 和 HTTP 认证信息发送身份凭证。一般而言，对于跨源 `XMLHttpRequest` 或 [Fetch](/zh-CN/docs/Web/API/Fetch_API) 请求，浏览器**不会**发送身份凭证信息。如果要发送凭证信息，需要设置 `XMLHttpRequest` 对象的某个特殊标志位，或在构造 {{domxref("Request")}} 对象时设置。
 
 本例中，`https://foo.example` 的某脚本向 `https://bar.other` 发起一个 GET 请求，并设置 Cookies。在 `foo.example` 中可能包含这样的 JavaScript 代码：
 
@@ -364,7 +364,7 @@ CORS 预检请求不能包含凭据。预检请求的*响应*必须指定 `Acces
 
 请求中的 cookie（第 10 行）也可能在正常的第三方 cookie 策略下被阻止。因此，强制执行的 cookie 策略可能会使本节描述的内容无效（阻止你发出任何携带凭据的请求）。
 
-Cookie 策略受 [SameSite](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 属性控制。
+Cookie 策略受 [SameSite](/zh-CN/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 属性控制。
 
 ## HTTP 响应标头字段
 
@@ -493,7 +493,7 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 
 ## 参见
 
-- [CORS 错误](/zh-CN/docs/Web/HTTP/CORS/Errors)
+- [CORS 错误](/zh-CN/docs/Web/HTTP/Guides/CORS/Errors)
 - [启用 CORS：如何在服务器中添加 CORS 支持](https://enable-cors.org/server.html)
 - {{domxref("XMLHttpRequest")}}
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)

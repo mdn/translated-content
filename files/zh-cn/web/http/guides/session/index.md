@@ -60,7 +60,7 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 
 ### 请求方法
 
-HTTP 定义了一组[请求方法](/zh-CN/docs/Web/HTTP/Methods)用来指定对目标资源的行为。它们一般是名词，但这些请求方法有时会被叫做 HTTP 动词。最常用的请求方法是 `GET` 和 `POST`：
+HTTP 定义了一组[请求方法](/zh-CN/docs/Web/HTTP/Reference/Methods)用来指定对目标资源的行为。它们一般是名词，但这些请求方法有时会被叫做 HTTP 动词。最常用的请求方法是 `GET` 和 `POST`：
 
 - {{HTTPMethod("GET")}} 方法请求指定的资源。`GET` 请求应该只被用于获取数据。
 - {{HTTPMethod("POST")}} 方法向服务器发送数据，因此会改变服务器状态。这个方法常在 [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)中使用。
@@ -147,7 +147,7 @@ X-Cache: Error from cloudfront
 
 ### 响应状态码
 
-[HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Status)用来表示一个 HTTP 请求是否成功完成。响应被分为 5 种类型：信息型响应，成功响应，重定向，客户端错误和服务端错误。
+[HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Reference/Status)用来表示一个 HTTP 请求是否成功完成。响应被分为 5 种类型：信息型响应，成功响应，重定向，客户端错误和服务端错误。
 
 - {{HTTPStatus(200)}}：OK。请求成功。
 - {{HTTPStatus(301)}}：Moved Permanently。请求资源的 URI 已被改变。
@@ -156,6 +156,6 @@ X-Cache: Error from cloudfront
 ## 参见
 
 - [URL](/zh-CN/docs/Web/URI)
-- [HTTP 标头（header）](/zh-CN/docs/Web/HTTP/Headers)
-- [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Methods)
-- [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Status)
+- [HTTP 标头（header）](/zh-CN/docs/Web/HTTP/Reference/Headers)
+- [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Reference/Methods)
+- [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Reference/Status)

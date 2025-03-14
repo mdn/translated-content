@@ -19,9 +19,9 @@ HTTP 的传输协议主要依赖于 TCP 来提供从客户端到服务器端之�
 > [!NOTE]
 > HTTP/2 新增了其他连接管理模型。
 
-要注意的一个重点是 HTTP 的连接管理适用于两个连续节点之间的连接，它是[逐跳（Hop-by-hop）标头](/zh-CN/docs/Web/HTTP/Headers#逐跳（hop-by-hop）标头)，而不是[端到端（End-to-end）标头](/zh-CN/docs/Web/HTTP/Headers#端到端（end-to-end）标头)。当模型用于从客户端到第一个代理服务器的连接和从代理服务器到目标服务器之间的连接时（或者任意中间代理）效果可能是不一样的。HTTP 协议头受不同连接模型的影响，比如 {{HTTPHeader("Connection")}} 和 {{HTTPHeader("Keep-Alive")}}，就是[逐跳标头](/zh-CN/docs/Web/HTTP/Headers#逐跳（hop-by-hop）标头)标头，它们的值是可以被中间节点修改的。
+要注意的一个重点是 HTTP 的连接管理适用于两个连续节点之间的连接，它是[逐跳（Hop-by-hop）标头](/zh-CN/docs/Web/HTTP/Reference/Headers#逐跳（hop-by-hop）标头)，而不是[端到端（End-to-end）标头](/zh-CN/docs/Web/HTTP/Reference/Headers#端到端（end-to-end）标头)。当模型用于从客户端到第一个代理服务器的连接和从代理服务器到目标服务器之间的连接时（或者任意中间代理）效果可能是不一样的。HTTP 协议头受不同连接模型的影响，比如 {{HTTPHeader("Connection")}} 和 {{HTTPHeader("Keep-Alive")}}，就是[逐跳标头](/zh-CN/docs/Web/HTTP/Reference/Headers#逐跳（hop-by-hop）标头)标头，它们的值是可以被中间节点修改的。
 
-一个相关的话题是 HTTP 连接升级的概念，其中 HTTP/1.1 连接升级为一个不同的协议，比如 TLS/1.0、Websocket、甚至明文形式的 HTTP/2。更多细节参阅[协议升级机制](/zh-CN/docs/Web/HTTP/Protocol_upgrade_mechanism)。
+一个相关的话题是 HTTP 连接升级的概念，其中 HTTP/1.1 连接升级为一个不同的协议，比如 TLS/1.0、Websocket、甚至明文形式的 HTTP/2。更多细节参阅[协议升级机制](/zh-CN/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)。
 
 ## 短连接
 

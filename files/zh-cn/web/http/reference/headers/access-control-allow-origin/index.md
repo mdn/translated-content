@@ -32,7 +32,7 @@ Access-Control-Allow-Origin: null
 ## 指令
 
 - `*`
-  - : 对于*不包含凭据*的请求，服务器会以“`*`”作为通配符，从而允许任意来源的请求代码都具有访问资源的权限。尝试使用通配符来响应包含凭据的请求[会导致错误](/zh-CN/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials)。
+  - : 对于*不包含凭据*的请求，服务器会以“`*`”作为通配符，从而允许任意来源的请求代码都具有访问资源的权限。尝试使用通配符来响应包含凭据的请求[会导致错误](/zh-CN/docs/Web/HTTP/Guides/CORS/Errors/CORSNotSupportingCredentials)。
 - `<origin>`
   - : 指定一个来源（只能指定一个）。如果服务器支持多个来源的客户端，其必须以与指定客户端匹配的来源来响应请求。
 - `null`
@@ -78,5 +78,5 @@ Vary: Origin
 
 - {{HTTPHeader("Origin")}}
 - {{HTTPHeader("Vary")}}
-- [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/CORS)
+- [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - {{httpheader("Cross-Origin-Resource-Policy")}}

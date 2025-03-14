@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Methods/HEAD
 
 {{HTTPSidebar}}
 
-**HTTP `HEAD` 方法**请求资源的[标头](/zh-CN/docs/Web/HTTP/Headers)信息，并且这些标头与 HTTP {{HTTPMethod("GET")}} 方法请求时返回的一致。该请求方法的一个使用场景是在下载一个大文件前先通过 `HEAD` 请求读取其 {{HTTPHeader("Content-Length")}} 标头的值获取文件的大小，而无需实际下载文件，以此可以节约带宽资源。
+**HTTP `HEAD` 方法**请求资源的[标头](/zh-CN/docs/Web/HTTP/Reference/Headers)信息，并且这些标头与 HTTP {{HTTPMethod("GET")}} 方法请求时返回的一致。该请求方法的一个使用场景是在下载一个大文件前先通过 `HEAD` 请求读取其 {{HTTPHeader("Content-Length")}} 标头的值获取文件的大小，而无需实际下载文件，以此可以节约带宽资源。
 
 > **警告：** `HEAD` 方法的响应*不应*包含响应主体。即使包含了响应主体，也*必须*忽略掉：任何（可能用于描述错误响应主体的）{{glossary("Representation header", "表示标头")}}会被假定为在发送相似的 `GET` 请求时也会接收到。
 

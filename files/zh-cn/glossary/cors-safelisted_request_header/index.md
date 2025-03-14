@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-[**列入 CORS 白名单的请求标头**](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)（CORS-safelisted request header，也被称作“简单标头”）包含以下 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)：
+[**列入 CORS 白名单的请求标头**](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)（CORS-safelisted request header，也被称作“简单标头”）包含以下 [HTTP 标头](/zh-CN/docs/Web/HTTP/Reference/Headers)：
 
 - {{HTTPHeader("Accept")}}
 - {{HTTPHeader("Accept-Language")}}

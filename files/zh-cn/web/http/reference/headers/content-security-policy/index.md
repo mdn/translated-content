@@ -10,7 +10,7 @@ l10n:
 
 HTTP 响应标头 **`Content-Security-Policy`** 允许站点管理者控制用户代理能够为指定的页面加载哪些资源。除了少数例外情况，设置的政策主要涉及指定源服务器和脚本端点。这将帮助防止{{Glossary("cross-site scripting", "跨站脚本攻击")}}。
 
-参见[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/CSP)，以查看 CSP 发送到浏览器的细节，它长什么样，及其用例和部署策略。
+参见[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/Guides/CSP)，以查看 CSP 发送到浏览器的细节，它长什么样，及其用例和部署策略。
 
 <table class="properties">
   <tbody>
@@ -185,7 +185,7 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 
 如果指令中同时包含 nonce 和 `unsafe-inline`，浏览器会忽略 `unsafe-inline`。
 
-有关更多用法信息，请参阅 CSP 指南中的 [Nonce](/zh-CN/docs/Web/HTTP/CSP#nonces)。
+有关更多用法信息，请参阅 CSP 指南中的 [Nonce](/zh-CN/docs/Web/HTTP/Guides/CSP#nonces)。
 
 > [!NOTE]
 > Nonce 来源表达式仅适用于 {{htmlelement("script")}} 和 {{htmlelement("style")}} 元素。
@@ -209,7 +209,7 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 
 如果指令中同时包含哈希和 `unsafe-inline`，浏览器会忽略 `unsafe-inline`。
 
-有关更多用法信息，请参阅 CSP 指南中的[哈希值](/zh-CN/docs/Web/HTTP/CSP#hash)。
+有关更多用法信息，请参阅 CSP 指南中的[哈希值](/zh-CN/docs/Web/HTTP/Guides/CSP#hash)。
 
 > [!NOTE]
 > 哈希来源表达式仅适用于 {{htmlelement("script")}} 和 {{htmlelement("style")}} 元素。
@@ -266,7 +266,7 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 > [!WARNING]
 > 开发人员应避免使用`'unsafe-eval'`，因为它破坏了 CSP 的大部分保护目的。
 
-有关更多用法信息，请参阅 CSP 指南中的 [`eval()` 和类似的 API](/zh-CN/docs/Web/HTTP/CSP#eval_and_similar_apis)。
+有关更多用法信息，请参阅 CSP 指南中的 [`eval()` 和类似的 API](/zh-CN/docs/Web/HTTP/Guides/CSP#eval_and_similar_apis)。
 
 ### 'wasm-unsafe-eval'
 
@@ -292,7 +292,7 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 > [!WARNING]
 > 开发人员应避免使用 `'unsafe-inline'`，因为它破坏了 CSP 的大部分保护目的。
 
-有关更多用法信息，请参阅 CSP 指南中的[内联 JavaScript](/zh-CN/docs/Web/HTTP/CSP#inline_javascript)。
+有关更多用法信息，请参阅 CSP 指南中的[内联 JavaScript](/zh-CN/docs/Web/HTTP/Guides/CSP#inline_javascript)。
 
 ### 'unsafe-hashes'
 
@@ -335,11 +335,11 @@ script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 - [`'self'`](#self)
 - [`'unsafe-inline'`](#unsafe-inline)
 
-有关更多用法信息，请参阅 CSP 指南中的 [`strict-dynamic` 关键字](/zh-CN/docs/Web/HTTP/CSP#the_strict-dynamic_keyword)。
+有关更多用法信息，请参阅 CSP 指南中的 [`strict-dynamic` 关键字](/zh-CN/docs/Web/HTTP/Guides/CSP#the_strict-dynamic_keyword)。
 
 ### 'report-sample'
 
-如果此表达式包含在控制脚本或样式的指令中，并且该指令导致浏览器阻止任何内联脚本、内联样式或事件处理程序属性的执行，则浏览器生成的[违规报告](/zh-CN/docs/Web/HTTP/CSP#violation_reporting)将包含一个 {{domxref("CSPViolationReportBody.sample", "sample")}} 属性，其中包含被阻止资源的前 40 个字符。
+如果此表达式包含在控制脚本或样式的指令中，并且该指令导致浏览器阻止任何内联脚本、内联样式或事件处理程序属性的执行，则浏览器生成的[违规报告](/zh-CN/docs/Web/HTTP/Guides/CSP#violation_reporting)将包含一个 {{domxref("CSPViolationReportBody.sample", "sample")}} 属性，其中包含被阻止资源的前 40 个字符。
 
 ## Worker 中的 CSP
 
@@ -415,7 +415,7 @@ Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violati
 ## 参见
 
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
-- [内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/CSP)
+- [内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/Guides/CSP)
 - [浏览器插件中的 CSP](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
 - [采用严格的策略](https://csp.withgoogle.com/docs/strict-csp.html)
 - [CSP 评估器](https://github.com/google/csp-evaluator)——评估你的内容安全策略

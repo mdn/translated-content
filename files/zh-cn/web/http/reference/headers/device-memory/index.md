@@ -8,14 +8,14 @@ l10n:
 
 {{HTTPSidebar}}{{securecontext_header}}
 
-**`Device-Memory`** [设备客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#设备客户端提示)请求标头的字段指示客户端设备上可用内存的近似大小。该标头属于{{DOMxRef("Device Memory API", "设备内存 API", "", "nocode")}}。
+**`Device-Memory`** [设备客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#设备客户端提示)请求标头的字段指示客户端设备上可用内存的近似大小。该标头属于{{DOMxRef("Device Memory API", "设备内存 API", "", "nocode")}}。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">标头类型</th>
       <td>
-        {{Glossary("Request header", "请求标头")}}、<a href="/zh-CN/docs/Web/HTTP/Client_hints">客户端提示</a>
+        {{Glossary("Request header", "请求标头")}}、<a href="/zh-CN/docs/Web/HTTP/Guides/Client_hints">客户端提示</a>
       </td>
     </tr>
     <tr>
@@ -80,4 +80,4 @@ Device-Memory: 1
   - {{HTTPHeader("Width")}}
 
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP 缓存 > Vary 响应](/zh-CN/docs/Web/HTTP/Caching#vary_响应)和 {{HTTPHeader("Vary")}}
+- [HTTP 缓存 > Vary 响应](/zh-CN/docs/Web/HTTP/Guides/Caching#vary_响应)和 {{HTTPHeader("Vary")}}

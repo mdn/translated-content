@@ -22,7 +22,7 @@ Permissions-Policy: autoplay=<allowlist>;
 ```
 
 - `<allowlist>`
-  - : 允许使用该特性的来源列表。请参阅 [`Permissions-Policy` > 语法](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#语法)了解更多详细信息。
+  - : 允许使用该特性的来源列表。请参阅 [`Permissions-Policy` > 语法](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy#语法)了解更多详细信息。
 
 ## 默认策略
 
@@ -39,4 +39,4 @@ Permissions-Policy: autoplay=<allowlist>;
 ## 参见
 
 - {{HTTPHeader("Permissions-Policy")}} 标头
-- [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)
+- [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)

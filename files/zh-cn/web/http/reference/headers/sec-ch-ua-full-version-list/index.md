@@ -6,14 +6,14 @@ original_slug: Web/HTTP/Headers/Sec-CH-UA-Full-Version-List
 
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
-**`Sec-CH-UA-Full-Version-List`** [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#user-agent_client_hints)请求标头提供用户代理的品牌和完整版本信息。
+**`Sec-CH-UA-Full-Version-List`** [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints)请求标头提供用户代理的品牌和完整版本信息。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">标头类型</th>
       <td>
-        {{Glossary("Request header", "请求标头")}}、<a href="/zh-CN/docs/Web/HTTP/Client_hints">客户端提示</a>
+        {{Glossary("Request header", "请求标头")}}、<a href="/zh-CN/docs/Web/HTTP/Guides/Client_hints">客户端提示</a>
       </td>
     </tr>
     <tr>
@@ -81,8 +81,8 @@ Sec-CH-UA-Platform: "Linux"
 
 ## 参见
 
-- [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)
+- [客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints)
 - [用户代理客户端提示 API](/zh-CN/docs/Web/API/User-Agent_Client_Hints_API)
 - [通过用户代理客户端提示改善用户隐私和开发人员体验](https://developer.chrome.google.cn/docs/privacy-security/user-agent-client-hints)（developer.chrome.google.cn）
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP 缓存 > Vary 响应](/zh-CN/docs/Web/HTTP/Caching#vary_响应)和 {{HTTPHeader("Vary")}}
+- [HTTP 缓存 > Vary 响应](/zh-CN/docs/Web/HTTP/Guides/Caching#vary_响应)和 {{HTTPHeader("Vary")}}

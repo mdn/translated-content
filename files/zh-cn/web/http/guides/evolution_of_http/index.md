@@ -164,7 +164,7 @@ Tim Berners-Lee 对于 Web 的最初设想不是一个只读媒体。他设想�
 
 ### 放松安全措施——基于当前的 Web 模型
 
-HTTP 和 Web 安全模型——[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)是互不相关的。事实上，当前的 Web 安全模型是在 HTTP 被创造出来后才被发展的！这些年来，已经证实了它如果能通过在特定的约束下移除一些这个策略的限制来管的宽松些的话，将会更有用。这些策略导致大量的成本和时间被花费在通过转交到服务端来添加一些新的 HTTP 头来发送。这些被定义在了[跨源资源共享](/zh-CN/docs/Glossary/CORS)（CORS）和[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)（CSP）规范里。
+HTTP 和 Web 安全模型——[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)是互不相关的。事实上，当前的 Web 安全模型是在 HTTP 被创造出来后才被发展的！这些年来，已经证实了它如果能通过在特定的约束下移除一些这个策略的限制来管的宽松些的话，将会更有用。这些策略导致大量的成本和时间被花费在通过转交到服务端来添加一些新的 HTTP 头来发送。这些被定义在了[跨源资源共享](/zh-CN/docs/Glossary/CORS)（CORS）和[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)（CSP）规范里。
 
 不只是这大量的扩展，很多的其他的头也被加了进来，有些只是实验性的。比较著名的有 {{HTTPHeader("DNT")}}（Do Not Track）来控制隐私，{{HTTPHeader("X-Frame-Options")}}，还有很多。
 
@@ -188,7 +188,7 @@ HTTP/2 在 HTTP/1.1 有几处基本的不同：
 随着 HTTP/2.的发布，就像先前的 HTTP/1.x 一样，HTTP 没有停止进化，HTTP 的扩展性依然被用来添加新的功能。特别的，我们能列举出 2016 年里 HTTP 的新扩展：
 
 - 对 Alt-Svc 的支持允许了给定资源的位置和资源鉴定，允许了更智能的 CDN 缓冲机制。
-- [客户端提示（client hint）](/zh-CN/docs/Web/HTTP/Client_hints)的引入允许浏览器或者客户端来主动交流它的需求，或者是硬件约束的信息给服务端。
+- [客户端提示（client hint）](/zh-CN/docs/Web/HTTP/Guides/Client_hints)的引入允许浏览器或者客户端来主动交流它的需求，或者是硬件约束的信息给服务端。
 - 在 Cookie 标头中引入安全相关的前缀，现在帮助保证一个安全的 Cookie 没被更改过。
 
 ## HTTP/3——基于 QUIC 的 HTTP

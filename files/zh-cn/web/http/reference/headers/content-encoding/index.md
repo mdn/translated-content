@@ -12,7 +12,7 @@ l10n:
 
 一般建议服务器应对数据尽可能地进行压缩，并在适当情况下对内容进行编码。对一种压缩过的媒体类型如 .zip 或 .jpeg 进行额外的压缩并不合适，因为这反而有可能会使内容增大。如果原始媒体以某种方式编码（例如 .zip 文件），则该信息不应该被包含在 `Content-Encoding` 标头内。
 
-当存在 `Content-Encoding` 标头时，其他元数据（例如 {{HTTPHeader("Content-Type")}}）指示的是数据编码后的形式，而不是原始数据的形式（除非显式声明）。内容编码与 {{HTTPHeader("Transfer-Encoding")}} 不同，因为 `Transfer-Encoding` 处理的是 HTTP 消息本身如何在网络上[逐跳](/zh-CN/docs/Web/HTTP/Headers#逐跳（hop-by-hop）标头)传输。
+当存在 `Content-Encoding` 标头时，其他元数据（例如 {{HTTPHeader("Content-Type")}}）指示的是数据编码后的形式，而不是原始数据的形式（除非显式声明）。内容编码与 {{HTTPHeader("Transfer-Encoding")}} 不同，因为 `Transfer-Encoding` 处理的是 HTTP 消息本身如何在网络上[逐跳](/zh-CN/docs/Web/HTTP/Reference/Headers#逐跳（hop-by-hop）标头)传输。
 
 <table class="properties">
  <tbody>

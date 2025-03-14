@@ -62,7 +62,7 @@ HTTP 是一个客户端—服务器协议：请求由一个实体，即用户代
 
 ### HTTP 是可扩展的
 
-在 HTTP/1.0 中引入的 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)让该协议易于扩展和实验。只要服务器客户端之间对新标头的语义经过简单协商，新功能就可以被加入进来。
+在 HTTP/1.0 中引入的 [HTTP 标头](/zh-CN/docs/Web/HTTP/Reference/Headers)让该协议易于扩展和实验。只要服务器客户端之间对新标头的语义经过简单协商，新功能就可以被加入进来。
 
 ### HTTP 无状态，但并非无会话
 
@@ -84,10 +84,10 @@ HTTP 是无状态的：在同一个连接中，两个执行成功的请求之间
 
 以下是可以被 HTTP 控制的常见特性。
 
-- _[缓存](/zh-CN/docs/Web/HTTP/Caching)_：文档如何被缓存可以通过 HTTP 来控制。服务端能指示代理和客户端缓存哪些内容以及缓存多长时间，客户端能够指示中间的缓存代理来忽略已存储的文档。
+- _[缓存](/zh-CN/docs/Web/HTTP/Guides/Caching)_：文档如何被缓存可以通过 HTTP 来控制。服务端能指示代理和客户端缓存哪些内容以及缓存多长时间，客户端能够指示中间的缓存代理来忽略已存储的文档。
 - _开放同源限制_：为了阻止网络窥听和其它侵犯隐私的问题，Web 浏览器强制在不同网站之间做了严格分割。只有来自于**相同来源**（same origin）的网页才能够获取一个网页的全部信息。这种限制有时对服务器是一种负担，服务器的 HTTP 标头可以减弱此类严格分离，使得一个网页可以是由源自不同地址的信息拼接而成。某些情况下，放开这些限制还有安全相关的考虑。
-- _认证_：一些页面可能会被保护起来，仅让特定的用户进行访问。基本的认证功能可以直接由 HTTP 提供，既可以使用 {{HTTPHeader("WWW-Authenticate")}} 或其他类似的标头，也可以用 [HTTP cookie](/zh-CN/docs/Web/HTTP/Cookies) 来设置一个特定的会话。
-- _[代理服务器和隧道](/zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling)_：服务器或客户端常常是处于内网的，对其他计算机隐藏真实 IP 地址。因此 HTTP 请求就要通过代理服务器越过这个网络屏障。并非所有的代理都是 HTTP 代理，例如，SOCKS 协议就运作在更底层。其他的协议，比如 ftp，也能够被这些代理处理。
+- _认证_：一些页面可能会被保护起来，仅让特定的用户进行访问。基本的认证功能可以直接由 HTTP 提供，既可以使用 {{HTTPHeader("WWW-Authenticate")}} 或其他类似的标头，也可以用 [HTTP cookie](/zh-CN/docs/Web/HTTP/Guides/Cookies) 来设置一个特定的会话。
+- _[代理服务器和隧道](/zh-CN/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling)_：服务器或客户端常常是处于内网的，对其他计算机隐藏真实 IP 地址。因此 HTTP 请求就要通过代理服务器越过这个网络屏障。并非所有的代理都是 HTTP 代理，例如，SOCKS 协议就运作在更底层。其他的协议，比如 ftp，也能够被这些代理处理。
 - _会话_：使用 HTTP Cookie 可以利用服务端的状态将不同请求联系在一起。这就创建了会话，尽管 HTTP 本身是无状态协议。这不仅仅对电商平台购物车很有用，也让任何网站都能够允许用户自由定制内容了。
 
 ## HTTP 流
@@ -136,10 +136,10 @@ HTTP 请求的一个例子：
 
 请求由以下元素组成：
 
-- HTTP [方法](/zh-CN/docs/Web/HTTP/Methods)，通常是由一个动词，像 {{HTTPMethod("GET")}}、{{HTTPMethod("POST")}} 等，或者一个名词，像 {{HTTPMethod("OPTIONS")}}、{{HTTPMethod("HEAD")}} 等，来定义客户端执行的动作。典型场景有：客户端意图获取某个资源（使用 `GET`）；发送 [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)的参数值（使用 `POST`）；以及其他情况下需要的那些其他操作。
+- HTTP [方法](/zh-CN/docs/Web/HTTP/Reference/Methods)，通常是由一个动词，像 {{HTTPMethod("GET")}}、{{HTTPMethod("POST")}} 等，或者一个名词，像 {{HTTPMethod("OPTIONS")}}、{{HTTPMethod("HEAD")}} 等，来定义客户端执行的动作。典型场景有：客户端意图获取某个资源（使用 `GET`）；发送 [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)的参数值（使用 `POST`）；以及其他情况下需要的那些其他操作。
 - 要获取的那个资源的路径——去除了当前上下文中显而易见的信息之后的 URL，比如说，它不包括{{glossary("protocol","协议")}}（`http://`）、{{glossary("domain","域名")}}（这里是 `developer.mozilla.org`），或是 TCP 的{{glossary("port","端口")}}（这里是 `80`）。
 - HTTP 协议版本号。
-- 为服务端表达其他信息的可选[标头](/zh-CN/docs/Web/HTTP/Headers)。
+- 为服务端表达其他信息的可选[标头](/zh-CN/docs/Web/HTTP/Reference/Headers)。
 - 请求体（body），类似于响应中的请求体，一些像 `POST` 这样的方法，请求体内包含需要了发送的资源。
 
 ### 响应
@@ -151,9 +151,9 @@ HTTP 响应的一个例子：
 响应报文包含了下面的元素：
 
 - HTTP 协议版本号。
-- [状态码](/zh-CN/docs/Web/HTTP/Status)，来指明对应请求已成功执行与否，以及不成功时相应的原因。
+- [状态码](/zh-CN/docs/Web/HTTP/Reference/Status)，来指明对应请求已成功执行与否，以及不成功时相应的原因。
 - 状态信息，这个信息是一个不权威、简短的状态码描述。
-- HTTP [标头](/zh-CN/docs/Web/HTTP/Headers)，与请求标头类似。
+- HTTP [标头](/zh-CN/docs/Web/HTTP/Reference/Headers)，与请求标头类似。
 - 可选项，一个包含了被获取资源的主体。
 
 ## 基于 HTTP 的 API

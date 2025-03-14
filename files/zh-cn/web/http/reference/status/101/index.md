@@ -9,7 +9,7 @@ original_slug: Web/HTTP/Status/101
 HTTP **`101 Switching Protocol`**（协议切换）状态码表示服务器应客户端升级协议的请求（{{HTTPHeader("Upgrade")}}请求头）正在切换协议。
 
 服务器会发送一个{{HTTPHeader("Upgrade")}}响应头来表明其正在切换过去的协议。
-该过程在协议升级机制（[Protocol upgrade mechanism](/zh-CN/docs/Web/HTTP/Protocol_upgrade_mechanism)）中详细描述。
+该过程在协议升级机制（[Protocol upgrade mechanism](/zh-CN/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)）中详细描述。
 
 ## 状态
 
@@ -33,7 +33,7 @@ Connection: Upgrade
 
 ## 参见
 
-- [Protocol upgrade mechanism](/zh-CN/docs/Web/HTTP/Protocol_upgrade_mechanism)
+- [Protocol upgrade mechanism](/zh-CN/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)
 - [WebSockets](/zh-CN/docs/Web/API/WebSockets_API)
 - {{HTTPHeader("Upgrade")}}
 - {{HTTPStatus("426")}} `Upgrade Required`

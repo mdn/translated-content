@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**`Accept-Encoding`** 请求 HTTP 标头表示客户端能够理解的内容编码（通常是某种压缩算法）。服务器使用[内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)从中选择一个提议，并通过 {{HTTPHeader("Content-Encoding")}} 响应标头告知客户端这一选择。
+**`Accept-Encoding`** 请求 HTTP 标头表示客户端能够理解的内容编码（通常是某种压缩算法）。服务器使用[内容协商](/zh-CN/docs/Web/HTTP/Guides/Content_negotiation)从中选择一个提议，并通过 {{HTTPHeader("Content-Encoding")}} 响应标头告知客户端这一选择。
 
 即使客户端和服务器都支持相同的压缩算法，在 `identity` 值可以被接受的情况下，服务器也可以选择不对响应体进行压缩。导致出现这种情况的常见原因有两个：
 
@@ -91,7 +91,7 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 
 ## 参见
 
-- HTTP [内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)
+- HTTP [内容协商](/zh-CN/docs/Web/HTTP/Guides/Content_negotiation)
 - 包含有内容协商结果的响应标头：{{HTTPHeader("Content-Encoding")}}
 - 其他相似的请求标头：{{HTTPHeader("TE")}}、{{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}}
 - {{Glossary("Brotli compression", "Brotli 压缩")}}

@@ -82,7 +82,7 @@ l10n:
 ```
 
 > [!NOTE]
-> 这些脚本会执行特性检测（探测 [mspace](/zh-CN/docs/Web/MathML/Element/mspace) 元素和 [mpadded](/zh-CN/docs/Web/MathML/Element/mpadded) 元素），这优于[浏览器嗅探](/zh-CN/docs/Web/HTTP/Browser_detection_using_the_user_agent)。此外，它们是在开源许可证下分发的，因此可以自由地将它们复制到你自己的服务器上，并根据需要进行调整。
+> 这些脚本会执行特性检测（探测 [mspace](/zh-CN/docs/Web/MathML/Element/mspace) 元素和 [mpadded](/zh-CN/docs/Web/MathML/Element/mpadded) 元素），这优于[浏览器嗅探](/zh-CN/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)。此外，它们是在开源许可证下分发的，因此可以自由地将它们复制到你自己的服务器上，并根据需要进行调整。
 
 #### 数学公式字体
 

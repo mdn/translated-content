@@ -34,7 +34,7 @@ Allow: <http-methods>
 ## 指令
 
 - \<http-methods>
-  - : 以逗号分隔的允许 [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Methods)列表。
+  - : 以逗号分隔的允许 [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Reference/Methods)列表。
 
 ## 示例
 

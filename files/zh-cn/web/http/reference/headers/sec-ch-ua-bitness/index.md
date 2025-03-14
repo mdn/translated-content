@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Sec-CH-UA-Bitness
 
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
-**`Sec-CH-UA-Bitness`** [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#user-agent_client_hints)请求标头提供用户代理底层 CPU 架构（architecture）的“位数”。这是一种以位为单位的指示内存地址大小的整数，通常为 64 位或 32 位。
+**`Sec-CH-UA-Bitness`** [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints)请求标头提供用户代理底层 CPU 架构（architecture）的“位数”。这是一种以位为单位的指示内存地址大小的整数，通常为 64 位或 32 位。
 
 这个标头可能被服务器用作类似选择并提供可执行文件的正确二进制格式供用户下载等用途。
 
@@ -15,7 +15,7 @@ original_slug: Web/HTTP/Headers/Sec-CH-UA-Bitness
     <tr>
       <th scope="row">标头类型</th>
       <td>
-        {{Glossary("Request header", "请求标头")}}、<a href="/zh-CN/docs/Web/HTTP/Client_hints">客户端提示</a>
+        {{Glossary("Request header", "请求标头")}}、<a href="/zh-CN/docs/Web/HTTP/Guides/Client_hints">客户端提示</a>
       </td>
     </tr>
     <tr>
@@ -67,8 +67,8 @@ Sec-CH-UA-Bitness: "64"
 
 ## 参见
 
-- [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)
+- [客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints)
 - [用户代理客户端提示 API](/zh-CN/docs/Web/API/User-Agent_Client_Hints_API)
 - [通过用户代理客户端提示改善用户隐私和开发人员体验](https://developer.chrome.google.cn/docs/privacy-security/user-agent-client-hints)（developer.chrome.google.cn）
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP 缓存 > Vary 响应](/zh-CN/docs/Web/HTTP/Caching#vary_响应)和 {{HTTPHeader("Vary")}}
+- [HTTP 缓存 > Vary 响应](/zh-CN/docs/Web/HTTP/Guides/Caching#vary_响应)和 {{HTTPHeader("Vary")}}

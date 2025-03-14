@@ -35,7 +35,7 @@ CSP 通过指定有效域——即浏览器认可的可执行脚本的有效来�
 
 ### 缓解数据包嗅探攻击
 
-除限制可以加载内容的域，服务器还可指明哪种协议允许使用；比如（从理想化的安全角度来说），服务器可指定所有内容必须通过 HTTPS 加载。一个完整的数据安全传输策略不仅强制使用 HTTPS 进行数据传输，也为所有的 [cookie 标记 `secure` 标识](/zh-CN/docs/Web/HTTP/Cookies)，并且提供自动的重定向使得 HTTP 页面导向 HTTPS 版本。网站也可以使用 {{HTTPHeader("Strict-Transport-Security")}} HTTP 标头确保连接它的浏览器只使用加密通道。
+除限制可以加载内容的域，服务器还可指明哪种协议允许使用；比如（从理想化的安全角度来说），服务器可指定所有内容必须通过 HTTPS 加载。一个完整的数据安全传输策略不仅强制使用 HTTPS 进行数据传输，也为所有的 [cookie 标记 `secure` 标识](/zh-CN/docs/Web/HTTP/Guides/Cookies)，并且提供自动的重定向使得 HTTP 页面导向 HTTPS 版本。网站也可以使用 {{HTTPHeader("Strict-Transport-Security")}} HTTP 标头确保连接它的浏览器只使用加密通道。
 
 ## 使用 CSP
 
@@ -212,6 +212,6 @@ Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-u
 - {{HTTPHeader("Content-Security-Policy")}} HTTP 标头
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}} HTTP 标头
 - [WebExtensions 中的安全策略](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
-- [Web Worker 中的 CSP](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy#csp_in_workers)
+- [Web Worker 中的 CSP](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#csp_in_workers)
 - [隐私、权限和信息安全](/zh-CN/docs/Web/Privacy)
 - [CSP 评估器](https://github.com/google/csp-evaluator)——评估你的内容安全策略

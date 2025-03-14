@@ -8,14 +8,14 @@ l10n:
 
 {{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
 
-**`DPR`** [设备客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)请求标头提供客户端设备的像素比。该比例是与每个 {{Glossary("CSS pixel", "CSS 像素")}}相对应的物理设备像素的数量。
+**`DPR`** [设备客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints)请求标头提供客户端设备的像素比。该比例是与每个 {{Glossary("CSS pixel", "CSS 像素")}}相对应的物理设备像素的数量。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">标头类型</th>
       <td>
-        {{Glossary("Request header", "请求标头")}}、<a href="/zh-CN/docs/Web/HTTP/Client_hints">客户端提示</a>
+        {{Glossary("Request header", "请求标头")}}、<a href="/zh-CN/docs/Web/HTTP/Guides/Client_hints">客户端提示</a>
       </td>
     </tr>
     <tr>
@@ -84,4 +84,4 @@ Content-DPR: 2.0
   - {{HTTPHeader("Width")}}
 
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP 缓存 > Vary 响应](/zh-CN/docs/Web/HTTP/Caching#vary_响应)和 {{HTTPHeader("Vary")}}
+- [HTTP 缓存 > Vary 响应](/zh-CN/docs/Web/HTTP/Guides/Caching#vary_响应)和 {{HTTPHeader("Vary")}}

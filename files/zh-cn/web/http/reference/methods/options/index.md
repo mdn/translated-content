@@ -68,7 +68,7 @@ Server: EOS (lax004/2813)
 
 ### CORS 中的预检请求
 
-在 [CORS](/zh-CN/docs/Web/HTTP/CORS) 中，可以使用 OPTIONS 方法发起一个[预检请求](/zh-CN/docs/Glossary/Preflight_request)，以检测实际请求是否可以被服务器所接受。在这个示例中，我们会为这些参数请求权限：
+在 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) 中，可以使用 OPTIONS 方法发起一个[预检请求](/zh-CN/docs/Glossary/Preflight_request)，以检测实际请求是否可以被服务器所接受。在这个示例中，我们会为这些参数请求权限：
 
 - 在预检请求中发送的 {{HTTPHeader("Access-Control-Request-Method")}} 标头告知服务器实际请求所使用的 HTTP 方法，在这里将实际使用 {{HTTPMethod("POST")}} 请求方法。
 - {{HTTPHeader("Access-Control-Request-Headers")}} 标头告知服务器实际请求所携带的自定义标头，在这里会使用 `X-PINGOTHER` 和 `Content-Type` 标头。
@@ -90,7 +90,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
   - : `https://foo.example` 源被允许通过以下方式请求 `bar.example/resources/post-here/` URL：
 - {{HTTPHeader("Access-Control-Allow-Methods")}}
-  - : {{HTTPMethod("POST")}}、{{HTTPMethod("GET")}} 和 `OPTIONS` 是该 URL 允许的方法（该标头类似于 {{HTTPHeader("Allow")}} 响应标头，但只用于 [CORS](/zh-CN/docs/Web/HTTP/CORS)）。
+  - : {{HTTPMethod("POST")}}、{{HTTPMethod("GET")}} 和 `OPTIONS` 是该 URL 允许的方法（该标头类似于 {{HTTPHeader("Allow")}} 响应标头，但只用于 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS)）。
 - {{HTTPHeader("Access-Control-Allow-Headers")}}
   - : `X-PINGOTHER` 和 `Content-Type` 是该 URL 允许的请求标头。
 - {{HTTPHeader("Access-Control-Max-Age")}}
@@ -124,4 +124,4 @@ Connection: Keep-Alive
 ## 参见
 
 - {{HTTPHeader("Allow")}} 标头
-- [CORS](/zh-CN/docs/Web/HTTP/CORS)
+- [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS)

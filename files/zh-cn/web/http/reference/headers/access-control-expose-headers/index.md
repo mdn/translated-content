@@ -33,9 +33,9 @@ Access-Control-Expose-Headers: *
 ## 指令
 
 - \<header-name>
-  - : 允许客户端从响应中访问的 0 个或多个使用逗号分隔的[标头名称](/zh-CN/docs/Web/HTTP/Headers)列表。这些标头是对{{Glossary("CORS-safelisted response header", "列入 CORS 白名单的请求标头")}}的*补充*。
+  - : 允许客户端从响应中访问的 0 个或多个使用逗号分隔的[标头名称](/zh-CN/docs/Web/HTTP/Reference/Headers)列表。这些标头是对{{Glossary("CORS-safelisted response header", "列入 CORS 白名单的请求标头")}}的*补充*。
 - `*`（通配符）
-  - : 若请求没有携带凭据（请求没有 [HTTP Cookie](/zh-CN/docs/Web/HTTP/Cookies)或认证信息），“`*`”才会被当作一个特殊的通配符。对于带有凭据的请求，会被简单地当作标头名称“`*`”，没有特殊的语义。
+  - : 若请求没有携带凭据（请求没有 [HTTP Cookie](/zh-CN/docs/Web/HTTP/Guides/Cookies)或认证信息），“`*`”才会被当作一个特殊的通配符。对于带有凭据的请求，会被简单地当作标头名称“`*`”，没有特殊的语义。
 
 ## 示例
 

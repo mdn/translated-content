@@ -49,6 +49,6 @@ Cross-Origin-Resource-Policy: same-origin
 
 ## 参见
 
-- [跨源资源策略（CORP）说明](/zh-CN/docs/Web/HTTP/Cross-Origin_Resource_Policy)
+- [跨源资源策略（CORP）说明](/zh-CN/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy)
 - [考虑部署跨源资源策略](https://resourcepolicy.fyi/)
 - {{httpheader("Access-Control-Allow-Origin")}}

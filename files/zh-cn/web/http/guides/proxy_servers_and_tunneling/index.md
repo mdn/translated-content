@@ -59,7 +59,7 @@ HTTP 协议指定了一种名为 {{HTTPMethod("CONNECT")}} 的请求方法。该
 
 ## 代理自动配置（PAC）
 
-[代理自动配置（PAC）](/zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) 文件是一个 [JavaScript](/zh-CN/docs/Web/JavaScript) 函数，用于确定 web 浏览器请求（HTTP、HTTPS 和 FTP）是直接连接到目的地还是转发到 web 代理服务器。PAC 文件中包含的 JavaScript 函数定义了该函数：
+[代理自动配置（PAC）](/zh-CN/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) 文件是一个 [JavaScript](/zh-CN/docs/Web/JavaScript) 函数，用于确定 web 浏览器请求（HTTP、HTTPS 和 FTP）是直接连接到目的地还是转发到 web 代理服务器。PAC 文件中包含的 JavaScript 函数定义了该函数：
 
 自动配置文件应保存为扩展名为 `.pac` 的文件：`proxy.pac`。
 
@@ -76,7 +76,7 @@ function FindProxyForURL(url, host) {
 }
 ```
 
-参见[代理自动配置（PAC）](/zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file)以获取更多示例。
+参见[代理自动配置（PAC）](/zh-CN/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file)以获取更多示例。
 
 ## 参见
 

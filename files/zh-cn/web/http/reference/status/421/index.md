@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`421 Misdirected Request`** [客户端错误响应](/zh-CN/docs/Web/HTTP/Status#客户端错误响应)状态码表示请求被定向到了一个无法生成响应的服务器。此响应可以由未配置为针对请求 URI 中包含的 [scheme](/zh-CN/docs/Web/URI/Reference/Schemes) 和 [authority](/zh-CN/docs/Web/URI/Reference/Authority) 组合生成响应的服务器发送。
+HTTP **`421 Misdirected Request`** [客户端错误响应](/zh-CN/docs/Web/HTTP/Reference/Status#客户端错误响应)状态码表示请求被定向到了一个无法生成响应的服务器。此响应可以由未配置为针对请求 URI 中包含的 [scheme](/zh-CN/docs/Web/URI/Reference/Schemes) 和 [authority](/zh-CN/docs/Web/URI/Reference/Authority) 组合生成响应的服务器发送。
 
 客户端可以通过不同的连接重试请求。
 
@@ -43,7 +43,7 @@ Server: Apache/2.4.1 (Unix)
 
 ## 参见
 
-- [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Status)
+- [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Reference/Status)
 - [多主机和错误定向请求的](https://httpd.apache.org/docs/2.4/mod/mod_http2.html#misdirected) Apache 服务器文档
 - [TLS 1.3](/zh-CN/docs/Web/Security/Transport_Layer_Security#tls_1.3)
 - [服务器名称指示（SNI）](https://zh.wikipedia.org/wiki/服务器名称指示)

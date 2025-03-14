@@ -29,7 +29,7 @@ importScripts(path0, path1, /* …, */ pathN)
 ### 异常
 
 - `NetworkError`
-  - : 要导入的脚本没有按有效的 JavaScript MIME 类型（有效的类型如 `text/javascript`）或允许的[旧版 JavaScript MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types#遗留的_javascript_mime_类型)提供。
+  - : 要导入的脚本没有按有效的 JavaScript MIME 类型（有效的类型如 `text/javascript`）或允许的[旧版 JavaScript MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types#遗留的_javascript_mime_类型)提供。
 - {{jsxref("TypeError")}}
   - : 如果当前的 {{domxref("WorkerGlobalScope")}} 是一个模块，则抛出此异常。请改用 [`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)。
 
