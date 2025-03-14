@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}{{Deprecated_header}}
 
-{{domxref("CSSValueList")}} 接口的 **`length`** 只读属性表示列表中 {{domxref("CSSValue")}} 的数量。索引的有效值范围是 `0`  到 `length-1`。
+{{domxref("CSSValueList")}} 接口的 **`length`** 只读属性表示列表中 {{domxref("CSSValue")}} 的数量。索引的有效值范围是 `0` 到 `length-1`。
 
 > [!NOTE]
 > 此属性曾是创建类型化 CSS 对象模型尝试的一部分。该尝试已被放弃，大多数浏览器并未实现它。
